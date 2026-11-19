@@ -131,12 +131,44 @@ fn a_refused_wall_is_no_step() {
     assert_eq!(count(&m, "wall"), 0);
 }
 
+/// What a file from an older build holds: a material named only as text. Current builds add the
+/// material row with the element, so the case is written in, on the first table that has one.
+fn orphan_one_material(m: &Model) {
+    let tables: Vec<String> = m
+        .sql()
+        .prepare(
+            "SELECT m.name FROM sqlite_master m, pragma_table_info(m.name) p \
+             WHERE m.type='table' AND p.name='material' AND upper(p.type)='TEXT' \
+             AND m.name<>'material' AND m.name NOT LIKE 'sqlite_%' AND m.name NOT LIKE 'src_%' \
+             AND m.name NOT LIKE '%_qty' ORDER BY m.name",
+        )
+        .unwrap()
+        .query_map([], |r| r.get::<_, String>(0))
+        .unwrap()
+        .map(|x| x.unwrap())
+        .collect();
+    for t in tables {
+        let sql = format!(
+            "UPDATE \"{t}\" SET material='Legacy lime plaster' \
+             WHERE rowid=(SELECT min(rowid) FROM \"{t}\" WHERE typeof(material)='text')"
+        );
+        // a WITHOUT ROWID table has no rowid: the next table is used
+        if m.sql().execute(&sql, []).is_ok_and(|n| n == 1) {
+            return;
+        }
+    }
+    panic!("no table names a material as text");
+}
+
 /// Material texts without a row stay without one when a current file is reopened: opening adds
 /// nothing outside the undo journal, so the saves are byte for byte the same.
 #[test]
 fn reopen_adds_no_rows_to_a_project_without_material_rows() {
     for name in ["office", "residential"] {
         let m = build_raw(name);
+        if showcase::unmaterialized(&m).is_empty() {
+            orphan_one_material(&m);
+        }
         assert!(!showcase::unmaterialized(&m).is_empty(), "{name} lacks no material row");
         save_reopen(&m, name).unwrap();
     }

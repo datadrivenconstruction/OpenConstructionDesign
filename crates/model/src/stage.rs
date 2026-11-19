@@ -465,9 +465,9 @@ impl Model {
         let guard = Untrusted::new(&self.db)?;
         if let Err(e) = self.db.execute("ATTACH DATABASE ?1 AS stg", [p]) {
             guard.restore(&self.db);
-            return Err(e.into());
+            return Err(damaged_copy(e.into()));
         }
-        let r = self.stage_insert(base, drop_level);
+        let r = self.stage_insert(base, drop_level).map_err(damaged_copy);
         // once committed the Add stands with its undo step: a failed DETACH is no failed Add,
         // it is retried by the next Add ([`Self::stage_note`] tells meanwhile)
         let _ = detach(&self.db);
@@ -673,6 +673,19 @@ impl Model {
             }
             Ok(())
         })
+    }
+}
+
+/// SQLite refuses a copy whose stored schema does not parse ("malformed database schema") as
+/// corrupt: that is a damaged copy, the same refusal as a schema statement our guard rejects.
+fn damaged_copy(e: Error) -> Error {
+    match e {
+        Error::Db(rusqlite::Error::SqliteFailure(f, m))
+            if matches!(f.code, rusqlite::ErrorCode::NotADatabase | rusqlite::ErrorCode::DatabaseCorrupt) =>
+        {
+            Error::Corrupt(format!("staged copy: {}", m.unwrap_or_else(|| f.to_string())))
+        }
+        e => e,
     }
 }
 

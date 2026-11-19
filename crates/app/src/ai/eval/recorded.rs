@@ -12,7 +12,7 @@ use super::oracle::{evaluate, EvalCx};
 use crate::editor::Editor;
 use serde_json::Value as J;
 use std::path::Path;
-use std::time::Instant;
+use web_time::Instant;
 
 /// What `result.json` says about the run: answer text, tool names, failed tools, tokens, cost.
 #[derive(Debug, Default, PartialEq)]

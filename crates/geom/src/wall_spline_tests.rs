@@ -93,6 +93,23 @@ fn rot(v: V2, a: f64) -> V2 {
 }
 
 #[test]
+fn a_gentle_axis_through_many_points_keeps_pieces_longer_than_its_point_spacing() {
+    // 25 points 0.5 m apart: a fit cut at the knots could not exceed about 0.28 m a piece
+    let p: Vec<V2> = (0..=24).map(|i| v2(i as f64 * 0.5, (i as f64 * 0.25).sin())).collect();
+    let s = SplineAxis::through(&p).unwrap();
+    let tol = 2e-3;
+    let ps = s.biarcs(tol).unwrap();
+    let longest = ps.iter().map(|q| crate::arc::axis_length(q.0, q.1, q.2)).fold(0.0, f64::max);
+    assert!(longest > 0.6, "{longest} in {} pieces", ps.len());
+    let (ta, tb) = s.curve().domain();
+    for k in 0..=4000 {
+        let q = s.point(ta + (tb - ta) * k as f64 / 4000.0);
+        let d = ps.iter().map(|x| piece_dist(q, *x)).fold(f64::INFINITY, f64::min);
+        assert!(d <= 1.01 * tol, "{k}: {d}");
+    }
+}
+
+#[test]
 fn biarcs_follow_the_axis_tangent_continuously() {
     let s = wave();
     let tol = 1e-4;

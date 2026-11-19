@@ -5102,7 +5102,7 @@ END-ISO-10303-21;
     fn mutated_bytes_never_panic() {
         use std::sync::atomic::{AtomicUsize, Ordering};
         use std::sync::{mpsc, Arc};
-        use std::time::{Duration, Instant};
+        use web_time::{Duration, Instant};
         const PER_INPUT: Duration = Duration::from_secs(10);
         const TOTAL: Duration = Duration::from_secs(150);
         const WORKERS: usize = 4;

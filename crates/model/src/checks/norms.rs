@@ -95,6 +95,81 @@ pub fn starter_pack() -> Result<Vec<NormRule>, Error> {
     Ok(pack.legacy_rules())
 }
 
+/// Every rule of `pack` as a panel row: its engine rules first, as they are, then one row per
+/// rule of the other kinds (formula, ratio, ...). Those rows describe the rule for the table;
+/// [`run_pack_norms`] runs them through the pack checker, never through `def`.
+pub fn pack_norm_rules(pack: &super::norm_pack::NormPack) -> Vec<NormRule> {
+    use super::norm_pack::PackCheck;
+    let mut out = pack.legacy_rules();
+    for r in &pack.rules {
+        if let PackCheck::Kind(_) = r.check {
+            let doc = pack.source(&r.source).map_or(r.source.clone(), |s| s.title.clone());
+            out.push(NormRule {
+                def: RuleDef {
+                    id: r.id.clone(),
+                    title: r.text("en").to_string(),
+                    source_text: Some(format!("{doc} {}", r.clause)),
+                    severity: r.severity,
+                    scope: super::RuleScope { cats: vec![], levels: None, type_name: None, when: None },
+                    // never run: the pack checker evaluates the kind
+                    check: super::RuleCheck::ParamPresent { param: String::new() },
+                },
+                title_ru: r.text.get("ru").cloned().unwrap_or_default(),
+                doc,
+                clause: r.clause.clone(),
+                example: r.example || !r.verified,
+            });
+        }
+    }
+    out
+}
+
+/// The fixed unit names a finding can carry.
+const UNITS: [&str; 14] = ["m", "m2", "m3", "count", "ratio", "h", "W/m2K", "dB", "kN/m2", "C", "m3/h", "m3/h m2", "min", ""];
+
+/// Runs `rules` (from [`pack_norm_rules`] of `pack`): engine rules as [`run_norms`] does, the
+/// other kinds through the pack checker for `ctx`; one list in the same order as `run_norms`.
+pub fn run_pack_norms(
+    m: &Model,
+    pack: &super::norm_pack::NormPack,
+    rules: &[NormRule],
+    scope: &CheckScope,
+    ctx: &super::norm_kinds::PackCtx,
+) -> Result<Vec<NormFinding>, Error> {
+    use super::norm_pack::PackCheck;
+    let engine = pack.legacy_rules();
+    let mut out = run_norms(m, &rules[..engine.len().min(rules.len())], scope)?;
+    let kinds: Vec<&str> = pack
+        .rules
+        .iter()
+        .filter(|r| matches!(r.check, PackCheck::Kind(_)))
+        .map(|r| r.id.as_str())
+        .collect();
+    for f in super::norm_kinds::run_pack(m, pack, scope, ctx)?.findings {
+        if !kinds.contains(&f.rule_id.as_str()) {
+            continue;
+        }
+        let Some(i) = rules.iter().position(|r| r.def.id == f.rule_id) else {
+            continue;
+        };
+        out.push(NormFinding {
+            rule_id: f.rule_id,
+            severity: f.severity,
+            elements: f.elements,
+            at: None,
+            measured: f.measured,
+            required: f.required,
+            unit: UNITS.iter().find(|u| **u == f.unit.as_str()).copied().unwrap_or(""),
+            rule_index: i,
+            clause: None,
+        });
+    }
+    out.sort_by(|a, b| {
+        (a.severity, a.rule_index, &a.elements).cmp(&(b.severity, b.rule_index, &b.elements))
+    });
+    Ok(out)
+}
+
 /// One broken rule on one element (or on the whole scope when `elements` is empty).
 #[derive(Clone, Debug, PartialEq)]
 pub struct NormFinding {
@@ -176,6 +251,12 @@ fn severity_name(s: Severity) -> &'static str {
 /// Topics in the BCF shape (title, priority, components) with the rule, clause and numbers.
 /// The topic id is derived from the rule and elements, so an export is repeatable.
 pub fn findings_json(rules: &[NormRule], findings: &[NormFinding]) -> String {
+    findings_json_for(rules, findings, None)
+}
+
+/// [`findings_json`] that names the project's norm pack; a partial pack says so
+/// (`complete: false` and the keys it lacks), so a clean report is not read as full coverage.
+pub fn findings_json_for(rules: &[NormRule], findings: &[NormFinding], pack: Option<&super::norm_pack::NormPack>) -> String {
     let topics: Vec<J> = findings
         .iter()
         .filter_map(|f| {
@@ -203,7 +284,10 @@ pub fn findings_json(rules: &[NormRule], findings: &[NormFinding]) -> String {
             }))
         })
         .collect();
-    let doc = json!({"format": "ddc-norm-findings", "version": 1, "topics": topics});
+    let mut doc = json!({"format": "ddc-norm-findings", "version": 1, "topics": topics});
+    if let Some(p) = pack {
+        doc["pack"] = json!({"id": p.id, "version": p.meta["version"], "complete": p.complete(), "missing": p.missing()});
+    }
     serde_json::to_string_pretty(&doc).unwrap_or_default()
 }
 

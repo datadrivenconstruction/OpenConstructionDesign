@@ -1569,7 +1569,8 @@ mod tests {
         // a project parameter on another wall
         let p = m
             .add_param(&ParamSpec {
-                name: "Fire rating".into(),
+                // a name of its own: the property above is "Fire Rating"
+                name: "Fire resistance".into(),
                 ptype: ParamType::Text,
                 per_type: false,
                 unit: String::new(),
@@ -1598,7 +1599,7 @@ mod tests {
                 name: "EI30 param".into(),
                 categories: vec![],
                 any: false,
-                rules: vec![rule("fire rating",RuleOp::Eq, "EI30")],
+                rules: vec![rule("fire resistance", RuleOp::Eq, "EI30")],
             })
             .unwrap();
         let v = ViewKey::Plan(lv);

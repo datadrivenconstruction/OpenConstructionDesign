@@ -492,7 +492,7 @@ pub use stairs::{put_railing, put_stair, RailingHost, RailingSpec, StairSpec};
 pub use stats::{category_counts, LevelTotals, Totals, COUNTED_CATEGORIES};
 pub use struct_ext::{density, StructBody, StructQty, TakeoffRow, STRUCT_KINDS};
 pub use struct_views::{StructClass, StructPrim};
-pub use steel_conn::{steel_conn_rebuilds, SteelConnReport, SteelConnSpec, STEEL_MEMBER_KINDS};
+pub use steel_conn::{steel_conn_rebuilds, ConnSkip, SteelConnReport, SteelConnSpec, STEEL_MEMBER_KINDS};
 pub use steel_frame::SteelFrameIds;
 pub use gridshell::{
     FormFind, FormFindReport, GridForm, GridKind, GridPattern, GridShellNode, GridShellReport,

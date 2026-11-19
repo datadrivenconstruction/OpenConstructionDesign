@@ -741,18 +741,35 @@ pub(crate) fn candidates(
             }
         }
     }
-    out.extend(brace_nodes(members, kind, level));
+    out.extend(brace_nodes(members, kind, level, &mut vec![]));
     out
+}
+
+/// A brace end the candidate search offers no connection for, and why: the connection audit
+/// lists these, so no end goes without one silently.
+#[derive(Clone, Debug, PartialEq)]
+pub struct ConnSkip {
+    pub member: (String, i64),
+    /// The member the connection would sit on, when there is one.
+    pub host: Option<(String, i64)>,
+    pub reason: String,
 }
 
 /// Gusset plates where braces end: on a column or beam through the node (bracing gusset), or,
 /// where only braces meet (K and X nodes), on one of them as the chord (truss gusset). One
-/// plate per plane and side of the host; a node the gusset cannot be built on is left out.
-fn brace_nodes(members: &[Built], kind: Option<ConnKind>, level: Option<i64>) -> Vec<SteelConnSpec> {
+/// plate per plane and side of the host. A brace in line with the host is spliced to it
+/// (column or beam splice). An end that gets nothing goes to `skips` with the reason.
+fn brace_nodes(
+    members: &[Built],
+    kind: Option<ConnKind>,
+    level: Option<i64>,
+    skips: &mut Vec<ConnSkip>,
+) -> Vec<SteelConnSpec> {
     let braces: Vec<&Built> = members.iter().filter(|b| b.kind == "brace").collect();
     if braces.is_empty() {
         return vec![];
     }
+    let offer = |k: ConnKind| kind.is_none_or(|x| x == k);
     // hosts by the 2 m cells of points along them
     let cell = |p: V3| ((p.x / 2.0).floor() as i64, (p.y / 2.0).floor() as i64, (p.z / 2.0).floor() as i64);
     let mut cells: HashMap<(i64, i64, i64), Vec<&Built>> = HashMap::new();
@@ -790,20 +807,48 @@ fn brace_nodes(members: &[Built], kind: Option<ConnKind>, level: Option<i64>) ->
             Some(h) => (h, ConnKind::BracingGusset, 4),
             None => (here.iter().map(|e| e.0).min_by_key(|b| b.id).unwrap(), ConnKind::TrussGusset, 7),
         };
-        if kind.is_some_and(|x| x != k) || level.is_some_and(|l| l != host.level) {
+        if level.is_some_and(|l| l != host.level) {
             continue;
         }
-        let Some((a, t)) = ends(&host.m) else { continue };
+        let skip = |b: &Built, why: String| ConnSkip { member: reff(b), host: Some(reff(host)), reason: why };
+        let Some((a, t)) = ends(&host.m) else {
+            skips.extend(here.iter().filter(|e| e.0.id != host.id || e.0.kind != host.kind).map(|e| skip(e.0, "the host has no axis".into())));
+            continue;
+        };
         let u = (t - a).normalized();
         // webs by the side of the host they lie on: the plane normal with its sign
         let mut sides: BTreeMap<(i64, i64, i64), Vec<(&Built, f64)>> = BTreeMap::new();
+        let mut in_line: Vec<&Built> = vec![];
         for (b, _, away) in here {
-            if (b.kind == host.kind && b.id == host.id) || away.dot(u).abs() > 0.98 {
+            if b.kind == host.kind && b.id == host.id {
+                continue;
+            }
+            if away.dot(u).abs() > 0.98 {
+                in_line.push(*b);
                 continue;
             }
             let n = u.cross(*away).normalized();
             let q = |x: f64| (x * 20.0).round() as i64;
             sides.entry((q(n.x), q(n.y), q(n.z))).or_default().push((*b, away.dot(u).abs()));
+        }
+        // a brace along the host continues it: no gusset plane, a splice joins them
+        let sk = if host.kind == "column" { ConnKind::ColumnSplice } else { ConnKind::BeamSplice };
+        for b in in_line {
+            if !offer(sk) {
+                continue;
+            }
+            match build(sk, &[host.m.clone(), b.m.clone()], &Params::default()) {
+                Ok(_) => out.push(SteelConnSpec {
+                    level: host.level,
+                    kind: sk,
+                    members: vec![reff(host), reff(b)],
+                    params: Params::default(),
+                }),
+                Err(e) => skips.push(skip(b, format!("in line with the {}, no {}: {e}", host.kind, sk.key()))),
+            }
+        }
+        if !offer(k) {
+            continue;
         }
         for webs in sides.values_mut() {
             // the gusset reads a second member square to the host as a corner host: steep
@@ -811,15 +856,30 @@ fn brace_nodes(members: &[Built], kind: Option<ConnKind>, level: Option<i64>) ->
             webs.sort_by(|x, y| y.1.total_cmp(&x.1));
             let per = if webs[0].1 < 0.1 { 1 } else { max_webs };
             let webs: Vec<&Built> = webs.iter().map(|w| w.0).collect();
-            for chunk in webs.chunks(per) {
+            let builds = |chunk: &[&Built]| {
                 let mut ms = vec![host.m.clone()];
                 ms.extend(chunk.iter().map(|b| b.m.clone()));
-                if build(k, &ms, &Params::default()).is_err() {
-                    continue;
+                build(k, &ms, &Params::default()).map(|_| ()).map_err(|e| e.to_string())
+            };
+            for chunk in webs.chunks(per) {
+                // one web the shared plate cannot take must not cost the others theirs: a
+                // refused group falls back to a plate per web, and a refused web is reported
+                let mut groups: Vec<Vec<&Built>> = vec![];
+                if builds(chunk).is_ok() {
+                    groups.push(chunk.to_vec());
+                } else {
+                    for b in chunk.iter().copied() {
+                        match builds(std::slice::from_ref(&b)) {
+                            Ok(()) => groups.push(vec![b]),
+                            Err(e) => skips.push(skip(b, format!("no {} on the {}: {e}", k.key(), host.kind))),
+                        }
+                    }
                 }
-                let mut refs = vec![reff(host)];
-                refs.extend(chunk.iter().map(|b| reff(b)));
-                out.push(SteelConnSpec { level: host.level, kind: k, members: refs, params: Params::default() });
+                for g in groups {
+                    let mut refs = vec![reff(host)];
+                    refs.extend(g.iter().map(|b| reff(b)));
+                    out.push(SteelConnSpec { level: host.level, kind: k, members: refs, params: Params::default() });
+                }
             }
         }
     }
@@ -1017,6 +1077,15 @@ impl Model {
             .into_iter()
             .filter(|s| !have.contains(&sorted(&s.members)))
             .collect())
+    }
+
+    /// The connection audit: every brace end at a node that no candidate connection takes,
+    /// with the member, its host and the reason.
+    pub fn steel_conn_audit(&self) -> Result<Vec<ConnSkip>, Error> {
+        let built = conn_members(&self.db)?;
+        let mut skips = vec![];
+        brace_nodes(&built, None, None, &mut skips);
+        Ok(skips)
     }
 }
 

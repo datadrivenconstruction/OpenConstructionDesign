@@ -61,6 +61,9 @@ fn lookup_finds_rules_dims_and_packs_with_their_sources() {
     // the French pack has no drawing standard of its own: it inherits the generic one
     assert_eq!(r[3].0["pack"], "fr");
     assert_eq!(r[3].0["drawing"]["titleblock"], "iso7200");
+    // a partial pack is labelled so in every answer, with the norms it lacks
+    assert_eq!(r[3].0["complete"], false);
+    assert!(r[3].0["missing"].as_array().unwrap().iter().any(|k| k == "envelope.u_wall"), "{}", r[3].0);
     assert!(r[4].1, "an unknown pack is an error: {:?}", r[4]);
     assert_eq!(live_hash(&ed.model), before, "read only");
 }
@@ -170,7 +173,8 @@ fn programme_answers_for_presets_through_their_base_typology() {
         assert!(r[i].0["preset"]["built_as"].is_string(), "{:?}", r[i]);
         assert!(!r[i].0["variants"].as_array().unwrap().is_empty(), "{:?}", r[i]);
     }
-    assert_eq!(r[1].0["preset"]["name"], "clinic", "an alias finds its preset");
+    // `hospital` is an alias of the hospital_wing preset (gen presets test `find("hospital")`)
+    assert_eq!(r[1].0["preset"]["name"], "hospital_wing", "an alias finds its preset");
     assert!(r[3].1, "an unknown name stays an error");
     assert!(r[3].0.to_string().contains("it has:"), "the error names what the pack offers: {:?}", r[3]);
 }

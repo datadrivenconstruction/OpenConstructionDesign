@@ -737,6 +737,13 @@ fn run(db: &Connection, mut p: Plan, idx: &mut Index) -> Result<Inv, Error> {
             if !p.room_levels.contains(&l) {
                 continue;
             }
+            // a level without rooms has no room rows to redo: skip collecting its footprints
+            let any_room: bool = db
+                .prepare_cached("SELECT EXISTS(SELECT 1 FROM room WHERE level=?1)")?
+                .query_row([l], |r| r.get(0))?;
+            if !any_room {
+                continue;
+            }
             if let Some(c) = idx.levels.get(&l) {
                 rp.push(crate::walls::pieces_polys(l, e, &c.pieces));
             } else {

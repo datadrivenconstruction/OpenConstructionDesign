@@ -1180,7 +1180,7 @@ fn mark_checkpoint(c: &mut Core, a: &J, cx: &CallCx<'_>) -> Result<Done, String>
 }
 
 fn run_checks(c: &mut Core, a: &J, cx: &CallCx<'_>) -> Result<Done, String> {
-    let started = std::time::Instant::now();
+    let started = web_time::Instant::now();
     let ids = str_list(&a["rules"]);
     let since = match a["since"].as_str() {
         Some(s) => Some(c.checkpoints.since(&c.ed.model, s)?),

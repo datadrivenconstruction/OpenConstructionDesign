@@ -291,6 +291,19 @@ mod tests {
         }
     }
 
+    /// Ring section r in [0.5, 1], z in [0, 1], each side halved: revolved by `MAX_SEG` (the
+    /// revolve clamp) it has 8 * 256 faces, over `csg2::MIN_FACES`, so the pair is large.
+    const RING: [(f64, f64); 8] = [
+        (0.5, 0.0),
+        (0.75, 0.0),
+        (1.0, 0.0),
+        (1.0, 0.5),
+        (1.0, 1.0),
+        (0.75, 1.0),
+        (0.5, 1.0),
+        (0.5, 0.5),
+    ];
+
     /// A 4x4x3 block and a 1x1 post through it.
     fn setup() -> (Model, i64, i64, i64) {
         let mut m = Model::open(":memory:").unwrap();
@@ -659,10 +672,10 @@ mod tests {
                 void: false,
                 inplace: false,
                 form: Form::Revolve {
-                    profile: vec![(0.5, 0.0), (1.0, 0.0), (1.0, 1.0), (0.5, 1.0)],
+                    profile: RING.to_vec(),
                     axis: (0.0, 0.0),
                     angle: std::f64::consts::TAU,
-                    seg: 520,
+                    seg: ddc_geom::mass::MAX_SEG,
                     ids: vec![],
                 },
             })
@@ -676,8 +689,8 @@ mod tests {
         assert_eq!(super::super::planar_bools(), planar, "planar boolean ran");
         body.check_closed(TOL).unwrap();
         body.validate(TOL).unwrap();
-        // 520-gon areas; the bar removes two annulus strips |y| < 0.2, z in [0.2, 0.8]
-        let n = 520.0;
+        // MAX_SEG-gon areas; the bar removes two annulus strips |y| < 0.2, z in [0.2, 0.8]
+        let n = ddc_geom::mass::MAX_SEG as f64;
         let poly = |r: f64| 0.5 * n * r * r * (std::f64::consts::TAU / n).sin();
         let k = 4000;
         let strip: f64 = (0..k)
@@ -708,10 +721,10 @@ mod tests {
         };
         let ring = m
             .add_mass(&mass(Form::Revolve {
-                profile: vec![(0.5, 0.0), (1.0, 0.0), (1.0, 1.0), (0.5, 1.0)],
+                profile: RING.to_vec(),
                 axis: (0.0, 0.0),
                 angle: std::f64::consts::TAU,
-                seg: 520,
+                seg: ddc_geom::mass::MAX_SEG,
                 ids: vec![],
             }))
             .unwrap();

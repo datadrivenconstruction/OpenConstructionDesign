@@ -360,7 +360,9 @@ mod tests {
     #[test]
     fn tower_300_has_stairs_lifts_and_platform_levels() {
         // the H01 counts by construction, on the detail-1 path run_generator takes (no outfit)
-        let f = tower::lattice_tower_300(&tower::TowerParams::default()).unwrap();
+        // TowerParams::default() has no lifts; run_generator sets them from rule steel.out.lifts (2)
+        let p = tower::TowerParams { lifts: 2, ..tower::TowerParams::default() };
+        let f = tower::lattice_tower_300(&p).unwrap();
         let mut m = Model::open(":memory:").unwrap();
         let lv = m.add_level("L0", 0.0).unwrap();
         let ids = m.add_steel_frame(lv, &f).unwrap();

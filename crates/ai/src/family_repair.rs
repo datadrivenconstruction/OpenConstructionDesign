@@ -10,7 +10,7 @@ use crate::family_draft::{draft, Drafted, Refusal};
 use crate::refusal;
 use ddc_model::refusal::RefusalCode;
 use std::collections::HashMap;
-use std::time::{Duration, Instant};
+use web_time::{Duration, Instant};
 use serde_json::{json, Value as J};
 
 /// The family DSL reference for the model: the docstrings of the parser, verbatim.

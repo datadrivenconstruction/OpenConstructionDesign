@@ -46,7 +46,7 @@ pub struct State {
     /// `.ddclink` registration was requested for the current on-state of the link.
     assoc_done: bool,
     /// When a throttled request may be repeated; the status line counts down to it.
-    retry_at: Option<std::time::Instant>,
+    retry_at: Option<web_time::Instant>,
 }
 
 impl State {
@@ -95,7 +95,7 @@ fn fail(a: &mut EditorApp, f: &Fail) {
     a.erp.status = Some((Level::Error, text));
     a.erp.action = action;
     a.erp.retry_at = match f {
-        Fail::Link(LinkError::Throttled { retry_after: Some(s) }) => Some(std::time::Instant::now() + std::time::Duration::from_secs(*s)),
+        Fail::Link(LinkError::Throttled { retry_after: Some(s) }) => Some(web_time::Instant::now() + std::time::Duration::from_secs(*s)),
         _ => None,
     };
 }
@@ -237,7 +237,7 @@ fn throttle_line(c: &ddc_ui::i18n::Catalog, left: u64) -> String {
 }
 
 /// Whole seconds from `now` to `at`, rounded up.
-fn secs_left(at: std::time::Instant, now: std::time::Instant) -> u64 {
+fn secs_left(at: web_time::Instant, now: web_time::Instant) -> u64 {
     let d = at.saturating_duration_since(now);
     d.as_secs() + u64::from(d.subsec_nanos() > 0)
 }
@@ -245,7 +245,7 @@ fn secs_left(at: std::time::Instant, now: std::time::Instant) -> u64 {
 /// Ticks the throttle countdown; the status turns to "try again" when it ends.
 fn tick_retry(a: &mut EditorApp, ctx: &egui::Context) {
     let Some(at) = a.erp.retry_at else { return };
-    let left = secs_left(at, std::time::Instant::now());
+    let left = secs_left(at, web_time::Instant::now());
     let line = throttle_line(&a.sh.cat, left);
     if left == 0 {
         a.erp.retry_at = None;
@@ -546,7 +546,7 @@ mod assoc_tests {
 mod tests {
     use super::*;
     use ddc_ui::i18n::{Catalog, Lang};
-    use std::time::{Duration, Instant};
+    use web_time::{Duration, Instant};
 
     const BASE: &str = "https://erp.example/";
 

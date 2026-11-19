@@ -4,7 +4,7 @@ use ddc_geom::csg::ftag;
 
 use crate::measure::{Anchor, MeasureKind, MeasureSpec, MeasureState, Pin, Reason, Value};
 use crate::views::tests::room_6x4;
-use crate::{DimRef, Form, MassSpec, Model, RoomSpec, ViewKey};
+use crate::{DimRef, Form, MassSpec, Model, ViewKey};
 
 fn walls(m: &Model, lv: i64) -> Vec<i64> {
     let mut st = m
@@ -165,15 +165,11 @@ fn measure_mass_face_tag_survives_vertex_insert() {
 
 #[test]
 fn measure_area_room_matches_rooms() {
+    // the fixture already places a room at (3, 2); a second room there is a zero-count duplicate
     let (mut m, lv) = room_6x4(&[("Brick", 0.2)]);
-    let r = m
-        .add_room(&RoomSpec {
-            level: lv,
-            name: "Hall".into(),
-            number: "1".into(),
-            point: (3.0, 2.0),
-            height: 2.7,
-        })
+    let r: i64 = m
+        .sql()
+        .query_row("SELECT id FROM room WHERE level=?1", [lv], |r| r.get(0))
         .unwrap();
     let q = m.room_quantities(r).unwrap().unwrap();
     let mk = |m: &mut Model, k| {
@@ -468,7 +464,8 @@ fn drive_level_gap_moves_upper_levels() {
     use crate::{ConstraintKind, ConstraintSpec};
     use crate::MeasureSide;
     let mut m = Model::open(":memory:").unwrap();
-    let l: Vec<i64> = [0.0, 3.0, 6.0].iter().map(|z| m.add_level("L", *z).unwrap()).collect();
+    // level names are UNIQUE in the schema
+    let l: Vec<i64> = [0.0, 3.0, 6.0].iter().map(|z| m.add_level(&format!("L{z}"), *z).unwrap()).collect();
     m.add_constraint(&ConstraintSpec { kind: ConstraintKind::LevelGap, walls: vec![l[1], l[2]], value: None })
         .unwrap();
     let anchors = [Anchor::Level { id: l[0] }, Anchor::Level { id: l[1] }];
@@ -591,8 +588,11 @@ fn drive_budget_200_linked_walls() {
     let t = std::time::Instant::now();
     m.drive_measure(ids[100], 3.5, MeasureSide::B).unwrap();
     let dt = t.elapsed();
-    assert!((axis_y(&m, w[101]) - 300.5).abs() < 1e-5);
-    assert!((axis_y(&m, w[199]) - 598.5).abs() < 1e-5, "the walls beyond keep their gaps");
+    // walls stand 3 m apart (y = 3k); the far support w[101] moves by 3.5 - 3 off the fixed
+    // w[100] at y = 300, and the 98 locked gaps beyond carry w[199] along by the same 0.5
+    assert!((axis_y(&m, w[100]) - 300.0).abs() < 1e-9, "the fixed support stays");
+    assert!((axis_y(&m, w[101]) - 303.5).abs() < 1e-5);
+    assert!((axis_y(&m, w[199]) - 597.5).abs() < 1e-5, "the walls beyond keep their gaps");
     let k: u128 = if cfg!(debug_assertions) { 20 } else { 1 };
     assert!(dt.as_millis() < 30 * k, "drive of 200 linked walls took {dt:?}");
 }

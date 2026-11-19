@@ -295,6 +295,7 @@ fn truss_gusset_takes_skewed_web_members() {
     assert_eq!(count(&c, Role::Gusset), 1);
     assert_eq!(c.bolts.len(), 6);
     assert_eq!(c.trims.len(), 3);
+    knife_plated(&c, 3);
 }
 
 #[test]
@@ -318,6 +319,7 @@ fn bracing_gusset_at_mid_beam_and_at_a_corner() {
         &Params::default(),
     );
     assert_eq!(c.bolts.len(), 4);
+    knife_plated(&c, 2);
     let column = col(0.0, 0.0, 0.0, 4.0, heb200());
     let top = bar(v3(0.0, 0.0, 4.0), v3(0.0, 5.0, 4.0), ipe300(), false);
     let brace = bar(
@@ -332,8 +334,46 @@ fn bracing_gusset_at_mid_beam_and_at_a_corner() {
         &Params::default(),
     );
     assert_eq!(count(&c, Role::Gusset), 1);
-    // welded to both hosts
-    assert!(count(&c, Role::Weld) >= 4);
+    // welded to both hosts, and the brace into its slot
+    assert!(count(&c, Role::Weld) >= 4 + 4);
+    knife_plated(&c, 1);
+    // a 300 mm box brace on a column: the bolts still take only the two plates
+    let column = col(0.0, 0.0, 0.0, 6.0, heb200());
+    let boxes = Shape::Tube {
+        h: 0.3,
+        b: 0.3,
+        t: 0.0125,
+    };
+    let brace = bar(v3(0.0, 0.0, 3.0), v3(0.0, 6.0, 0.0), boxes, false);
+    let c = sound(
+        ConnKind::BracingGusset,
+        &[column, brace],
+        &Params::default(),
+    );
+    knife_plated(&c, 1);
+}
+
+/// Hollow braces are never bolted through: every bolt takes the gusset and a knife plate only,
+/// a stock length covers it, and each knife plate is welded into its slot along both walls.
+fn knife_plated(c: &Conn, braces: usize) {
+    let cat = catalog();
+    let t = |i: usize| match &c.parts[i].qty {
+        PartQty::Plate { t, .. } => *t,
+        _ => panic!("bolt ply {i} is not a plate"),
+    };
+    assert!(!c.bolts.is_empty());
+    for (_, b) in &c.bolts {
+        let kinds: Vec<Role> = b.plies.iter().map(|i| c.parts[*i].role).collect();
+        assert_eq!(kinds, [Role::Gusset, Role::Plate]);
+        let plies: f64 = b.plies.iter().map(|i| t(*i)).sum();
+        assert!((b.grip - plies).abs() < 1e-9, "grip {} over {plies}", b.grip);
+        let need = cat.bolt_need(&b.size, b.grip);
+        assert!(cat.bolt_length(need).is_some(), "grip {} has no stock bolt", b.grip);
+    }
+    assert_eq!(count(c, Role::Plate), braces);
+    assert!(count(c, Role::Weld) >= 4 * braces, "two walls, both plate faces");
+    let notes = c.notes.iter().filter(|n| n.contains("knife plate")).count();
+    assert_eq!(notes, braces);
 }
 
 #[test]

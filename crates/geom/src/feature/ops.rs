@@ -266,7 +266,13 @@ impl FeatureOp for PushRegion {
         match pts.len() {
             0 => gm::push_pull_keyed(b, f[0], d, op, k, TOL).map_err(err),
             1 | 2 => Err("a region needs at least 3 points".into()),
-            _ => gm::push_region(b, f[0], &pts, d, op, TOL).map_err(err),
+            _ => {
+                // the region was drawn on the face as it was built; an upstream edit that moves
+                // the face along its normal carries the region with it
+                let pl = gm::planar_face(b, f[0], TOL.length).map_err(err)?;
+                let pts: Vec<V3> = pts.iter().map(|q| *q - pl.n * pl.dist(*q)).collect();
+                gm::push_region(b, f[0], &pts, d, op, TOL).map_err(err)
+            }
         }
     }
 }

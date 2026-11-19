@@ -283,6 +283,8 @@
    "unit": "m",
    "source": "sa-sbc201-2007-copy",
    "verified": false,
+   "url": "https://fkec.com.sa/website/uploads/Architectural_Requirements.pdf",
+   "accessed": "2026-11-15",
    "note": "na: buildings are grouped by occupancy and construction type with height and area tables; high-rise is building.high_rise_height",
    "text": {
     "en": "No 13 m building class.",

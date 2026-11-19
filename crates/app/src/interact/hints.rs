@@ -455,7 +455,7 @@ mod tests {
     fn building_the_rows_is_cheap() {
         let ed = Editor::new_in_memory().unwrap();
         let n = 400u32;
-        let t = std::time::Instant::now();
+        let t = web_time::Instant::now();
         for _ in 0..n {
             std::hint::black_box((ed.ix.hint_rows(&ed), ed.ix.value_rows(&ed)));
         }

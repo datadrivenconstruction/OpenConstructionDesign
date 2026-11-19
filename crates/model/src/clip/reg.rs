@@ -256,6 +256,12 @@ pub(super) const EXCLUDED: &[(&str, &str)] = &[
     ("calc_settings", "project level"),
     ("calc_run", "analysis results, outside undo"),
     ("calc_blob", "analysis results, outside undo"),
+    ("asm_joint", "joints tie instances by id; a copied instance is a loose part"),
+    ("solid_comp", "role tag of a recipe solid; a copy is a plain solid"),
+    ("opening_comp", "door/window link of an opening; a pasted opening is a plain cut"),
+    ("freeform", "its control net has no clipboard transform; made by the freeform ops"),
+    ("panel_system", "derived from its host freeform on every read; goes with the host"),
+    ("shell_elem", "follows its host freeform patch; its surface is a copy of the host"),
 ];
 
 #[cfg(test)]

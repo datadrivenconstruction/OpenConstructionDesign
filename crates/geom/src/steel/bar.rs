@@ -149,6 +149,28 @@ impl Bar {
         }
     }
 
+    /// The body cut square `setback` from `node` at end `e`, as a trim leaves it (never lengthened).
+    pub fn cut_back(&mut self, node: V3, e: End, setback: f64) {
+        let tn = self.local(node).x;
+        match e {
+            End::Start if tn + setback > self.t0 => {
+                self.t0 = tn + setback;
+                self.caps.0 = Cap {
+                    p: self.axis(self.t0),
+                    n: -self.u,
+                };
+            }
+            End::End if tn - setback < self.t1 => {
+                self.t1 = tn - setback;
+                self.caps.1 = Cap {
+                    p: self.axis(self.t1),
+                    n: self.u,
+                };
+            }
+            _ => {}
+        }
+    }
+
     pub fn cap(&self, e: End) -> Cap {
         match e {
             End::Start => self.caps.0,

@@ -153,7 +153,8 @@ mod tests {
         assert!(Date::parse("2100-02-29").is_none());
         assert_eq!(d(1970, 1, 1).days(), 0);
         assert_eq!(d(2000, 3, 1).days() - d(2000, 2, 28).days(), 2);
-        for z in [-800_000, -1, 0, 1, 11_016, 20_000, 2_000_000] {
+        // strict YYYY: years 1..=9999 only (-800_000 days is year -221, outside the format)
+        for z in [-700_000, -1, 0, 1, 11_016, 20_000, 2_000_000] {
             let x = Date::from_days(z);
             assert_eq!(x.days(), z, "{x}");
             assert_eq!(Date::parse(&x.to_string()), Some(x));

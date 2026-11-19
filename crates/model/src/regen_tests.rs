@@ -514,6 +514,69 @@ fn neighbourhood_matches_full_on_grid() {
     set_verify(false);
 }
 
+/// Arc walls on a level keep the neighbourhood recompute (an arc's box covers its bulge), and
+/// it still equals the full one: bulging, straightening, openings and undo on a grid with arcs.
+#[test]
+fn neighbourhood_with_arcs_matches_full() {
+    set_verify(true);
+    let (mut m, b) = base();
+    let (n, step) = (4i32, 3.0);
+    let spec = |a: (f64, f64), e: (f64, f64)| WallSpec {
+        a,
+        b: e,
+        level: b.lv[0],
+        base_offset: 0.0,
+        height: 3.0,
+        wall_type: b.wt,
+        offset0: None,
+    };
+    let mut ws = vec![];
+    for i in 0..n {
+        for j in 0..=n {
+            let (x, y) = (i as f64 * step, j as f64 * step);
+            ws.push(spec((x, y), (x + step, y)));
+            ws.push(spec((y, x), (y, x + step)));
+        }
+    }
+    let walls = m.add_walls(&ws).unwrap();
+    m.add_room(&RoomSpec {
+        level: b.lv[0],
+        name: "R".into(),
+        number: "1".into(),
+        point: (1.5, 1.5),
+        height: 3.0,
+    })
+    .unwrap();
+    for k in 0..6 {
+        m.set_wall_bulge(walls[(k * 7) % walls.len()], 0.1).unwrap();
+    }
+    let near0 = near_passes();
+    let mut r = Rng(0x5DEE_CE66_D1CE_4E5B);
+    let mut done = 0;
+    for _ in 0..30 {
+        let w = walls[r.below(walls.len())];
+        let k = r.below(4);
+        if k == 3 {
+            // only this test's own edits are undone
+            if done > 0 {
+                m.undo().unwrap();
+                done -= 1;
+            }
+            continue;
+        }
+        let res = match k {
+            0 => m.set_wall_bulge(w, if r.below(2) == 0 { 0.1 } else { -0.1 }),
+            1 => m.set_wall_bulge(w, 0.0),
+            _ => m.add_opening(w, &opening(&mut r)).map(drop),
+        };
+        if res.is_ok() {
+            done += 1;
+        }
+    }
+    assert!(near_passes() - near0 > 10, "local passes: {}", near_passes() - near0);
+    set_verify(false);
+}
+
 /// Timing: 10k walls on 20 levels, 500 columns, one slab per level; single edits.
 #[test]
 #[ignore]

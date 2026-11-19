@@ -310,3 +310,53 @@ fn an_unreadable_row_does_not_stop_the_others_from_being_rebuilt() {
     let issues = steel_issues(&g.m);
     assert!(issues.iter().any(|i| i.starts_with(&ids[0].to_string())), "{issues:?}");
 }
+
+/// A brace in line with a column (no gusset plane) is spliced to it; any brace end at the
+/// column that gets no connection is named by the audit with its reason, never dropped.
+#[test]
+fn a_brace_in_line_with_a_column_is_spliced_and_no_end_goes_unreported() {
+    let mut m = Model::open(":memory:").unwrap();
+    let l0 = m.add_level("L0", 0.0).unwrap();
+    let t = m
+        .add_member_type("IPE 200", &Shape::I { h: 0.2, b: 0.1, tw: 0.0056, tf: 0.0085 }, "S355")
+        .unwrap();
+    let col = m
+        .add_columns(&[ColumnSpec {
+            level: l0,
+            top_level: None,
+            member_type: t,
+            structural: true,
+            at: (0.0, 0.0),
+            base_offset: 0.0,
+            top_offset: 3.0,
+            rotation: 0.0,
+            top_at: None,
+        }])
+        .unwrap()[0];
+    let brace = |a: (f64, f64, f64), b: (f64, f64, f64)| ddc_model::BraceSpec {
+        level: l0,
+        member_type: t,
+        a,
+        b,
+        start: None,
+        end: None,
+        rotation: 0.0,
+    };
+    // above the column top, along its axis; and one along the axis inside the column's height
+    let ids = m.add_braces(&[brace((0.0, 0.0, 3.0), (0.0, 0.0, 5.0)), brace((0.0, 0.0, 1.0), (0.0, 0.0, 2.0))]).unwrap();
+    let all = m.steel_conn_candidates(None, None).unwrap();
+    let audit = m.steel_conn_audit().unwrap();
+    let col_ref = ("column".to_string(), col);
+    let splice = all
+        .iter()
+        .find(|s| s.kind == ConnKind::ColumnSplice && s.members == [col_ref.clone(), ("brace".to_string(), ids[0])])
+        .unwrap_or_else(|| panic!("in-line brace spliced: {all:?} {audit:?}"));
+    let id = m.add_steel_conn(splice).unwrap();
+    assert!(m.steel_conn_report(id).unwrap().error.is_none());
+    assert!(!m.steel_conn_parts(id).unwrap().is_empty());
+    for b in &ids {
+        let joined = all.iter().any(|s| s.members.contains(&("brace".to_string(), *b)));
+        let told = audit.iter().any(|s| s.member == ("brace".to_string(), *b) && !s.reason.is_empty());
+        assert!(joined || told, "brace {b}: a connection or a reason, {all:?} {audit:?}");
+    }
+}

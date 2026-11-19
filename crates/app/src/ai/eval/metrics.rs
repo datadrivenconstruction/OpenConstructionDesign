@@ -117,8 +117,8 @@ pub fn ledger_line(info: &RunInfo, cases: &[CaseMetrics]) -> J {
             *refusals.entry(k.as_str()).or_default() += n;
         }
     }
-    let ts = std::time::SystemTime::now()
-        .duration_since(std::time::UNIX_EPOCH)
+    let ts = web_time::SystemTime::now()
+        .duration_since(web_time::UNIX_EPOCH)
         .map(|d| d.as_secs())
         .unwrap_or(0);
     json!({

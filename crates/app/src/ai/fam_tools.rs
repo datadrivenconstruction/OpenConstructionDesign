@@ -51,7 +51,7 @@ fn family_validate(c: &mut Core, a: &J, _cx: &CallCx<'_>) -> Result<Done, String
 pub fn family_draft(c: &mut Core, a: &J, cx: &CallCx<'_>) -> Result<Done, String> {
     // refusals of a text come back as the repair loop's report: excerpts, bounded rounds
     let mut book = std::mem::take(&mut c.fam_repair);
-    let repair = book.state(cx.actor, std::time::Instant::now());
+    let repair = book.state(cx.actor, web_time::Instant::now());
     let before = (repair.rounds, repair.tokens);
     let d = repair.draft(a, &|n| project_def(&c.ed.model, n));
     let (rounds, tokens) = if d.is_ok() { before } else { (repair.rounds, repair.tokens) };

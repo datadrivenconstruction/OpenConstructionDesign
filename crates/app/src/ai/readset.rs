@@ -568,7 +568,7 @@ mod tests {
         let mut noting = std::time::Duration::MAX;
         for _ in 0..3 {
             let top = ed.model.op_top().unwrap();
-            let t = std::time::Instant::now();
+            let t = web_time::Instant::now();
             replay(&mut st, &mut ed, &Sets::default(), &[], &[]).unwrap();
             compile = compile.min(t.elapsed());
             assert!(st.items.iter().all(|i| i.conflict.is_none() && !i.sets.writes.is_empty()));
@@ -576,7 +576,7 @@ mod tests {
             ed.reload().unwrap();
             // the same bookkeeping alone
             let head = ed.model.change_head();
-            let t = std::time::Instant::now();
+            let t = web_time::Instant::now();
             for (it, w) in st.items.iter().zip(&walls) {
                 let ((), r) = record(|| {
                     note(|r| r.keys(ed.model.sql(), &[Key { cat: "wall", id: *w }]))

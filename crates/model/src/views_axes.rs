@@ -116,7 +116,9 @@ mod tests {
         };
         assert_eq!(tier(Side::South, 2), 1, "first to last axis");
         assert_eq!(tier(Side::South, 3), 1, "overall moved out twice");
-        assert_eq!(tier(Side::North, 3), 1);
+        // the fixture has no North overall size to move out, only the axis span
+        assert_eq!(tier(Side::North, 2), 1);
+        assert_eq!(tier(Side::North, 3), 0);
         assert_eq!(tier(Side::West, 2), 0, "one axis: no span");
         assert_eq!(tier(Side::South, 1), 2, "two bays");
         assert_eq!(tier(Side::North, 1), 2);

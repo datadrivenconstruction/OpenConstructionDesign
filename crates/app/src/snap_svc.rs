@@ -507,7 +507,7 @@ mod tests {
     #[test]
     fn query_10k_walls() {
         let ix = grid_index(10_000);
-        let t = std::time::Instant::now();
+        let t = web_time::Instant::now();
         for i in 0..200 {
             let p = v2(100.0 + (i % 50) as f64 * 3.1, 80.0 + (i % 7) as f64);
             ix.hits(p, Some(v2(90.0, 85.0)), 0.0, 0.12, None, None, Guides::ALL);
@@ -524,7 +524,7 @@ mod tests {
     fn query_10k_walls_with_7_acquired() {
         let ix = grid_index(10_000);
         let acq: Vec<V2> = (0..7).map(|i| v2(100.0 + i as f64 * 7.0, 90.0)).collect();
-        let t = std::time::Instant::now();
+        let t = web_time::Instant::now();
         for i in 0..200 {
             let p = v2(100.0 + (i % 50) as f64 * 3.1, 80.0 + (i % 7) as f64);
             let mut l = ix.hits(p, Some(v2(90.0, 85.0)), 0.0, 0.12, None, None, Guides::ALL);

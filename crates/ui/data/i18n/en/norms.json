@@ -47,5 +47,7 @@
  "ai.check.rule.undefined": "Rule {1}: the norm does not define this case; decide it with the designer",
  "norms.pack": "Norm pack (country)",
  "norms.pack_auto": "Auto: {pack}",
- "norms.pack_tip": "Rules, room programmes and dimensions come from this pack. Auto follows the interface language."
+ "norms.pack_tip": "Rules, room programmes and dimensions come from this pack. Auto follows the interface language.",
+ "norms.pack_partial": "Partial pack: {pack} does not state every norm yet, so a clean check is not full coverage.",
+ "norms.sheet_pack": "Pack"
 }

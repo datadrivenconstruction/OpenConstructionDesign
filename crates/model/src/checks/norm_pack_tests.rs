@@ -1188,8 +1188,8 @@ fn the_main_packs_carry_design_climate_and_outdoor_air_with_their_documents() {
     assert_eq!(display_value(-40.0, "C", "imperial"), (-40.0, "F"));
 }
 
-/// Countries that state every key of the reference pack `de`: a number, a no-limit entry,
-/// or `"na": true` with the reason.
+/// Countries written against the full key set of `de`, still partial: each lists what it lacks
+/// (the gap lists below).
 const FULL_PACKS: [&str; 5] = ["us", "uk", "fr", "es", "za"];
 
 fn check_signature(r: &PackRule) -> String {
@@ -1201,26 +1201,20 @@ fn check_signature(r: &PackRule) -> String {
     }
 }
 
-#[test]
-fn full_packs_state_every_key_of_the_reference_pack() {
-    let set = PackSet::embedded();
-    assert!(set.problems.is_empty(), "{:?}", set.problems);
-    let de = set.resolve("de").unwrap();
+/// A number, a no-limit entry or `"na": true` with the reason for every key of `de`: what is
+/// left is the pack's gap list (dims by key, rules as `de.<id>`).
+fn gaps_against_reference(set: &PackSet, de: &NormPack, id: &str) -> Vec<String> {
     let keys: Vec<&DimItem> = de.dims.iter().filter(|d| d.pack == "de").collect();
     let checks: Vec<&PackRule> = de.rules.iter().filter(|r| r.pack == "de").collect();
-    assert!(keys.len() >= 14 && checks.len() >= 16, "reference pack: {} keys, {} rules", keys.len(), checks.len());
-    for k in ["stair.riser_max", "stair.going_min", "guard.height_min"] {
-        assert!(de.dim(k).is_some_and(|d| d.pack == "de"), "reference pack states {k}");
-    }
     let mut gaps = vec![];
-    for id in FULL_PACKS {
+    {
         let p = set.resolve(id).unwrap_or_else(|e| panic!("{id}: {e}"));
         let own = |pack: &str| pack == id || pack.starts_with(&format!("{id}-"));
         for d in &keys {
             let stated = p.dim(&d.key).is_some_and(|x| own(&x.pack));
             let na = p.na.get(&d.key).is_some_and(|why| !why.trim().is_empty());
             if !stated && !na {
-                gaps.push(format!("{id}: dim {}", d.key));
+                gaps.push(d.key.clone());
             }
             if let Some(x) = p.dim(&d.key).filter(|x| own(&x.pack)) {
                 assert!(p.source(&x.source).is_some() && !x.clause.is_empty(), "{id}: {} cites document and clause", d.key);
@@ -1235,11 +1229,98 @@ fn full_packs_state_every_key_of_the_reference_pack() {
                 .any(|o| own(&o.pack) && check_signature(o) == check_signature(r) && overlap(&o.applies.typology));
             let na = p.na.get(&format!("{id}.{suffix}")).is_some_and(|why| !why.trim().is_empty());
             if !covered && !na {
-                gaps.push(format!("{id}: rule like {}", r.id));
+                gaps.push(r.id.clone());
             }
         }
     }
-    assert!(gaps.is_empty(), "{} gaps:\n{}", gaps.len(), gaps.join("\n"));
+    gaps
+}
+
+#[test]
+fn complete_packs_state_every_key_and_partial_ones_list_their_gaps() {
+    let set = PackSet::embedded();
+    assert!(set.problems.is_empty(), "{:?}", set.problems);
+    let de = set.resolve("de").unwrap();
+    let keys = de.dims.iter().filter(|d| d.pack == "de").count();
+    let checks = de.rules.iter().filter(|r| r.pack == "de").count();
+    assert!(keys >= 14 && checks >= 16, "reference pack: {keys} keys, {checks} rules");
+    for k in ["stair.riser_max", "stair.going_min", "guard.height_min"] {
+        assert!(de.dim(k).is_some_and(|d| d.pack == "de"), "reference pack states {k}");
+    }
+    assert!(de.complete(), "the reference pack is complete by definition");
+    let mut bad = vec![];
+    for id in set.ids() {
+        let p = set.resolve(id).unwrap_or_else(|e| panic!("{id}: {e}"));
+        if p.complete() {
+            // a complete pack states every key: nothing missing, nothing listed as missing
+            let gaps = gaps_against_reference(&set, &de, id);
+            if !gaps.is_empty() || !p.missing().is_empty() {
+                bad.push(format!("{id} claims complete; gaps {gaps:?}"));
+            }
+        } else {
+            // partial means a list, and the list is exact: a filled key leaves it, a new gap
+            // joins it, an empty list is a complete pack
+            let gaps = gaps_against_reference(&set, &de, id);
+            if gaps.is_empty() || gaps != p.missing() {
+                bad.push(format!("{id}: missing lists {:?}, gaps are {gaps:?}", p.missing()));
+            }
+        }
+    }
+    assert!(bad.is_empty(), "{}", bad.join("\n"));
+    for id in FULL_PACKS {
+        let p = set.resolve(id).unwrap();
+        assert!(p.complete() || !p.missing().is_empty(), "{id}: complete, or partial with its gap list");
+    }
+    let total: usize = FULL_PACKS.iter().map(|id| set.resolve(id).unwrap().missing().len()).sum();
+    // ratchet: the gap lists only shrink
+    assert!(total <= 57, "{total} gaps, the data card lists 57");
+}
+
+#[test]
+fn every_shipped_pack_declares_whether_it_is_complete() {
+    let root = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("data/norms/packs");
+    let mut seen = 0;
+    for e in std::fs::read_dir(&root).unwrap() {
+        let p = e.unwrap().path().join("pack.json");
+        if !p.is_file() {
+            continue;
+        }
+        let v: serde_json::Value = serde_json::from_str(&std::fs::read_to_string(&p).unwrap()).unwrap();
+        assert!(v["complete"].is_boolean(), "{} declares `complete`", p.display());
+        seen += 1;
+    }
+    assert_eq!(seen, PackSet::embedded().ids().len(), "every pack folder read");
+}
+
+#[test]
+fn completeness_is_the_packs_own_and_checked() {
+    let with_meta = |id: &str, extra: serde_json::Value| -> serde_json::Value {
+        let parent = if id == "generic" { None } else { Some("eu") };
+        let mut m = meta(id, parent);
+        for (k, v) in extra.as_object().unwrap() {
+            m[k] = v.clone();
+        }
+        m
+    };
+    // the parent's claim does not pass down
+    let mut f = tiny();
+    f.retain(|(p, _)| *p != "generic/pack.json");
+    f.push(("generic/pack.json", with_meta("generic", json!({"complete": true}))));
+    let s = PackSet::from_files(&files(&f));
+    assert!(s.problems.is_empty(), "{:?}", s.problems);
+    assert!(s.resolve("generic").unwrap().complete());
+    let de = s.resolve("de").unwrap();
+    assert!(!de.complete() && de.missing().is_empty(), "absent means partial");
+    let s = with("de/pack.json", with_meta("de", json!({"complete": false, "missing": ["envelope.u_wall"]})));
+    assert_eq!(s.resolve("de").unwrap().missing(), ["envelope.u_wall"]);
+    for (bad, why) in [
+        (json!({"complete": "yes"}), "`complete` must be true or false"),
+        (json!({"complete": true, "missing": ["a"]}), "`missing` belongs to a pack with `complete: false`"),
+        (json!({"complete": false, "missing": [""]}), "`missing` must list key names"),
+    ] {
+        let s = with("de/pack.json", with_meta("de", bad));
+        assert!(err_of(&s, "de").contains(why), "{why}: {}", err_of(&s, "de"));
+    }
 }
 
 #[test]

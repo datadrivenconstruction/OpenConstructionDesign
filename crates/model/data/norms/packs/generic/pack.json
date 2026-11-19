@@ -18,6 +18,31 @@
   "source": null
  },
  "status": "generic",
+ "complete": false,
+ "missing": [
+  "ramp.slope_max",
+  "building.high_rise_height",
+  "building.class5_height",
+  "fire.wall_spacing_max",
+  "envelope.u_wall",
+  "envelope.u_roof",
+  "envelope.u_ground",
+  "acoustic.rw_party",
+  "acoustic.rw_floor",
+  "stair.riser_max",
+  "stair.going_min",
+  "guard.height_min",
+  "de.res.riser",
+  "de.res.tread",
+  "de.res.sw",
+  "de.stair.sw_house",
+  "de.off.riser",
+  "de.off.tread",
+  "de.off.sw",
+  "de.res.h",
+  "de.off.h",
+  "de.off.a"
+ ],
  "climate": {
   "zones": [],
   "default": null

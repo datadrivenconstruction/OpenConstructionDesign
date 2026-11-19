@@ -10,9 +10,12 @@ use super::kit::{self, space, Button, Tone};
 use super::{Action, Cx, PanelUi};
 use crate::shell::EditorApp;
 use crate::units::{self, Units};
-use ddc_model::checks::norms::{findings_json, run_norms, starter_pack, NormFinding, NormRule};
+use ddc_model::checks::norm_kinds::PackCtx;
+use ddc_model::checks::norms::{
+    findings_json_for, pack_norm_rules, run_norms, run_pack_norms, starter_pack, NormFinding, NormRule,
+};
 use ddc_model::checks::{CheckScope, Severity};
-use ddc_model::checks::norm_pack::{country_for_locale, nearest_pack, PackSet};
+use ddc_model::checks::norm_pack::{country_for_locale, nearest_pack, NormPack, PackSet};
 use ddc_model::checks::{NormLocale, NormProject, FIRE_CLASSES};
 use ddc_model::{ElKey, Model};
 use ddc_ui::notify::Level;
@@ -64,6 +67,8 @@ pub struct Norms {
     pub(crate) locale: NormLocale,
     /// The pack the UI language points to, shown on the Auto entry.
     pub(crate) auto_pack: String,
+    /// The pack in use, resolved once per choice: labels a partial pack, goes into the export.
+    chosen: Option<NormPack>,
 }
 
 impl Default for Norms {
@@ -88,11 +93,35 @@ impl Default for Norms {
             packs: PackSet::embedded().ids().iter().map(|s| s.to_string()).collect(),
             locale: NormLocale::default(),
             auto_pack: String::new(),
+            chosen: None,
         }
     }
 }
 
 impl Norms {
+    /// Resolves the project's pack (`Model::effective_norm_pack`) when it changed, not every frame.
+    pub(crate) fn refresh_chosen(&mut self, id: &str) {
+        if self.chosen.as_ref().is_some_and(|p| p.id == id) {
+            return;
+        }
+        // the rules, the label and the export all come from this one pack; old rows go
+        match shipped_packs().resolve(id) {
+            Ok(p) => {
+                self.rules = pack_norm_rules(&p);
+                self.load_error = None;
+                self.chosen = Some(p);
+            }
+            Err(e) => {
+                self.rules.clear();
+                self.load_error = Some(e.to_string());
+                self.chosen = None;
+            }
+        }
+        self.findings.clear();
+        self.ran = false;
+        self.failed = false;
+    }
+
     #[cfg(test)]
     pub(crate) fn ran_on(m: &Model) -> Self {
         let mut n = Norms::default();
@@ -102,7 +131,19 @@ impl Norms {
 
     pub fn run(&mut self, m: &Model) {
         self.ran = true;
-        match run_norms(m, &self.rules, &CheckScope::All) {
+        let found = match &self.chosen {
+            Some(p) => {
+                // the same context the AI check builds from the stored project
+                let ctx = PackCtx {
+                    typology: (!self.locale.typology.is_empty()).then(|| self.locale.typology.clone()),
+                    region: (!self.locale.region.is_empty()).then(|| self.locale.region.clone()),
+                    ..PackCtx::default()
+                };
+                run_pack_norms(m, p, &self.rules, &CheckScope::All, &ctx)
+            }
+            None => run_norms(m, &self.rules, &CheckScope::All),
+        };
+        match found {
             Ok(f) => {
                 self.findings = f;
                 self.failed = false;
@@ -167,6 +208,8 @@ pub fn section(
     nm.people_upper = cx.ed.model.people_upper_floor().ok().flatten();
     nm.locale = cx.ed.model.norm_locale().unwrap_or_default();
     nm.auto_pack = auto_pack(cx.cat.lang.code());
+    let in_effect = cx.ed.model.effective_norm_pack(shipped_packs(), cx.cat.lang.code(), None);
+    nm.refresh_chosen(&in_effect.unwrap_or_else(|_| nm.auto_pack.clone()));
     if view(ui, nm, cx.th, cx.cat, units::active_units(), acts, hot) {
         nm.run(&cx.ed.model);
     }
@@ -310,6 +353,14 @@ fn pack_choice(ui: &mut Ui, nm: &Norms, th: &Theme, cat: &Catalog, acts: &mut Ve
         acts.push(Action::Norms(Do::Pack(i.checked_sub(1))));
     }
     note(ui, th, &cat.t("norms.pack_tip"));
+    if let Some(t) = nm.chosen.as_ref().and_then(|p| partial_note(cat, p)) {
+        note(ui, th, &t);
+    }
+}
+
+/// The label of a pack that does not state every key of the reference set; None when complete.
+pub(crate) fn partial_note(cat: &Catalog, p: &NormPack) -> Option<String> {
+    (!p.complete()).then(|| cat.tf("norms.pack_partial", &[("pack", &p.id)]))
 }
 
 fn building(ui: &mut Ui, nm: &mut Norms, th: &Theme, cat: &Catalog, acts: &mut Vec<Action>) {
@@ -514,10 +565,23 @@ pub fn write_xlsx(
     cat: &Catalog,
     rules: &[NormRule],
     findings: &[NormFinding],
+    pack: Option<&NormPack>,
     path: &Path,
 ) -> Result<(), String> {
     let (head, rows) = sheet_rows(cat, rules, findings);
-    ddc_io::requirements::save_table(path, &cat.t("norms.sheet"), &head, &rows)
+    let Some(p) = pack else {
+        return ddc_io::requirements::save_table(path, &cat.t("norms.sheet"), &head, &rows);
+    };
+    // the findings sheet is unchanged; the pack and its coverage go on a sheet of their own
+    let missing = p.missing();
+    let info = [
+        ("pack".to_string(), p.id.clone()),
+        ("version".to_string(), p.meta["version"].as_str().unwrap_or("").to_string()),
+        ("complete".to_string(), p.complete().to_string()),
+        ("missing".to_string(), missing.len().to_string()),
+        ("missing_keys".to_string(), missing.join(", ")),
+    ];
+    ddc_io::requirements::save_table_with_info(path, &cat.t("norms.sheet"), &head, &rows, &cat.t("norms.sheet_pack"), &info)
 }
 
 impl ddc_io::requirements::ToCell for Cell {
@@ -531,8 +595,9 @@ impl ddc_io::requirements::ToCell for Cell {
     }
 }
 
-pub fn write_json(rules: &[NormRule], findings: &[NormFinding], path: &Path) -> Result<(), String> {
-    std::fs::write(path, findings_json(rules, findings)).map_err(|e| e.to_string())
+/// Findings with the pack in use; a partial pack is labelled `complete: false` in the file.
+pub fn write_json(rules: &[NormRule], findings: &[NormFinding], pack: Option<&NormPack>, path: &Path) -> Result<(), String> {
+    std::fs::write(path, findings_json_for(rules, findings, pack)).map_err(|e| e.to_string())
 }
 
 /// Asks for a file name and writes the findings; false when the person cancelled.
@@ -551,8 +616,8 @@ fn export(app: &mut EditorApp, nm: &Norms, d: Do) -> Result<bool, String> {
         return Ok(false);
     };
     match d {
-        Do::Xlsx => write_xlsx(&app.sh.cat, &nm.rules, &nm.findings, &path)?,
-        Do::Json => write_json(&nm.rules, &nm.findings, &path)?,
+        Do::Xlsx => write_xlsx(&app.sh.cat, &nm.rules, &nm.findings, nm.chosen.as_ref(), &path)?,
+        Do::Json => write_json(&nm.rules, &nm.findings, nm.chosen.as_ref(), &path)?,
         _ => {}
     }
     Ok(true)
@@ -719,6 +784,8 @@ mod tests {
             "norms.pack",
             "norms.pack_auto",
             "norms.pack_tip",
+            "norms.pack_partial",
+            "norms.sheet_pack",
             "ai.check.rule.compare",
             "ai.check.rule.unset",
             "ai.check.rule.unique",
@@ -780,12 +847,82 @@ mod tests {
         let dir = std::env::temp_dir().join(format!("ddc_chk1_{}", std::process::id()));
         std::fs::create_dir_all(&dir).unwrap();
         let (x, j) = (dir.join("f.xlsx"), dir.join("f.json"));
-        write_xlsx(&Catalog::new(Lang::Ru), &nm.rules, &nm.findings, &x).unwrap();
-        write_json(&nm.rules, &nm.findings, &j).unwrap();
+        write_xlsx(&Catalog::new(Lang::Ru), &nm.rules, &nm.findings, None, &x).unwrap();
+        let us = shipped_packs().resolve("us").unwrap();
+        write_json(&nm.rules, &nm.findings, Some(&us), &j).unwrap();
         assert_eq!(&std::fs::read(&x).unwrap()[..2], b"PK");
         let text = std::fs::read_to_string(&j).unwrap();
         let v: serde_json::Value = serde_json::from_str(&text).unwrap();
         assert_eq!(v["topics"].as_array().unwrap().len(), nm.findings.len());
+        assert_eq!((&v["pack"]["id"], &v["pack"]["complete"]), (&serde_json::json!("us"), &serde_json::json!(false)));
+        let _ = std::fs::remove_dir_all(&dir);
+    }
+
+    #[test]
+    fn a_partial_pack_is_labelled_in_the_panel() {
+        let cat = Catalog::new(Lang::En);
+        let mut nm = Norms::default();
+        // the label follows the pack the project uses: the stored choice, else the UI language
+        let mut m = Model::open(":memory:").unwrap();
+        assert!(m.set_norm_locale(&NormLocale { pack: "us".into(), ..NormLocale::default() }).unwrap());
+        nm.refresh_chosen(&m.effective_norm_pack(shipped_packs(), "ru", None).unwrap());
+        let us = nm.chosen.as_ref().unwrap();
+        assert_eq!(us.id, "us");
+        let t = partial_note(&cat, us).expect("us is partial");
+        assert!(t.contains("us") && t != "norms.pack_partial", "{t}");
+        let de = shipped_packs().resolve("de").unwrap();
+        assert_eq!(partial_note(&cat, &de), None, "the complete pack has no label");
+        // a new choice resolves again
+        nm.refresh_chosen("de");
+        assert_eq!(nm.chosen.as_ref().map(|p| p.id.as_str()), Some("de"));
+    }
+
+    #[test]
+    fn the_chosen_pack_runs_its_rules_and_both_exports_name_it() {
+        use calamine::{open_workbook, Data, Reader, Xlsx};
+        let mut m = Model::open(":memory:").unwrap();
+        let l0 = m.add_level("L0", 0.0).unwrap();
+        let l1 = m.add_level("L1", 3.0).unwrap();
+        // risers over 0.197 m and a width under 0.914 m: the us house stair rules
+        let mut s = ddc_model::StairSpec::straight(l0, l1, (1.0, 2.0), 0.0);
+        s.max_riser = 0.22;
+        s.width = 0.9;
+        m.add_stair(&s).unwrap();
+        let mut nm = Norms::default();
+        nm.locale.typology = "house".into();
+        nm.refresh_chosen("us");
+        nm.run(&m);
+        let us = nm.chosen.clone().unwrap();
+        assert!(nm.findings.iter().any(|f| f.rule_id.starts_with("us.")), "{:?}", nm.findings);
+        for f in &nm.findings {
+            let from = f.rule_id.split('.').next().unwrap_or("");
+            assert!(us.chain.iter().any(|c| c == from), "{} is a rule of the us chain", f.rule_id);
+            assert_eq!(nm.rules[f.rule_index].id(), f.rule_id);
+        }
+        let dir = std::env::temp_dir().join(format!("ddc_chk_us_{}", std::process::id()));
+        std::fs::create_dir_all(&dir).unwrap();
+        let (x, j) = (dir.join("f.xlsx"), dir.join("f.json"));
+        write_json(&nm.rules, &nm.findings, nm.chosen.as_ref(), &j).unwrap();
+        let v: serde_json::Value = serde_json::from_str(&std::fs::read_to_string(&j).unwrap()).unwrap();
+        assert_eq!(v["pack"]["id"], "us");
+        assert!(v["topics"].as_array().unwrap().iter().any(|t| t["rule"]["id"].as_str().unwrap().starts_with("us.")));
+        let cat = Catalog::new(Lang::En);
+        write_xlsx(&cat, &nm.rules, &nm.findings, nm.chosen.as_ref(), &x).unwrap();
+        let mut wb: Xlsx<_> = open_workbook(&x).unwrap();
+        assert_eq!(wb.sheet_names(), [cat.t("norms.sheet"), cat.t("norms.sheet_pack")]);
+        let info = wb.worksheet_range(&cat.t("norms.sheet_pack")).unwrap();
+        let field = |k: &str| {
+            info.rows()
+                .find(|r| r[0] == Data::String(k.into()))
+                .map(|r| r[1].to_string())
+                .unwrap_or_default()
+        };
+        assert_eq!(field("pack"), "us");
+        assert_eq!(field("complete"), "false");
+        assert_eq!(field("missing"), us.missing().len().to_string());
+        // the findings sheet keeps one row per finding under its header
+        let data = wb.worksheet_range(&cat.t("norms.sheet")).unwrap();
+        assert_eq!(data.height(), nm.findings.len() + 1);
         let _ = std::fs::remove_dir_all(&dir);
     }
 

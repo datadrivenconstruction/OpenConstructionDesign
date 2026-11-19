@@ -18,6 +18,32 @@
   "source": null
  },
  "status": "tier1",
+ "complete": false,
+ "missing": [
+  "egress.door_width_per_person",
+  "egress.stair_width_per_person",
+  "ramp.slope_max",
+  "building.high_rise_height",
+  "fire.wall_spacing_max",
+  "envelope.u_ground",
+  "guard.height_min",
+  "de.res.riser",
+  "de.res.tread",
+  "de.res.sw",
+  "de.stair.sw_house",
+  "de.off.riser",
+  "de.off.tread",
+  "de.off.sw",
+  "de.step",
+  "de.off.corr",
+  "de.acc.corr",
+  "de.res.h",
+  "de.off.h",
+  "de.off.a",
+  "de.egr.res",
+  "de.egr.off",
+  "de.day"
+ ],
  "climate": {
   "zones": [],
   "default": null

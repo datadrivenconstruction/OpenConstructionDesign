@@ -6,7 +6,7 @@
 //! node until they clear the host faces and each other; the setbacks come back as trims.
 
 use super::bar::{across, meet, Bar};
-use super::catalog::BoltSize;
+use super::catalog::{fmt_mm, BoltSize};
 use super::kit::{hull, Kit};
 use super::part::Role;
 use super::ConnError;
@@ -36,8 +36,19 @@ struct Web<'a> {
     /// Unit direction away from the node, in the gusset plane (2D) and in the world.
     d: V2,
     dw: V3,
-    /// Half width of the member across its axis in the plane.
+    /// Half width of the member across its axis in the plane (of its knife plate, if any).
     half: f64,
+    /// Hollow member: never bolted through, it takes a knife plate in a slotted end.
+    knife: Option<Knife>,
+}
+
+/// Knife plate of a hollow web member: lapped on the gusset (bolts through both plates
+/// only), welded into the slot along the two walls it passes.
+struct Knife {
+    /// Across the member in the plane, unit, and the outer wall faces along it at the plate.
+    perp: V3,
+    walls: (f64, f64),
+    leg: f64,
 }
 
 fn node(k: &mut Kit, hosts: &[&Bar], webs: &[&Bar], first: usize) -> Result<(), ConnError> {
@@ -115,13 +126,29 @@ fn node(k: &mut Kit, hosts: &[&Bar], webs: &[&Bar], first: usize) -> Result<(), 
             let d = d * (1.0 / d.len().max(1e-12));
             let perp = nrm.cross(dw);
             let ps = v2(perp.dot(w.ey), perp.dot(w.ez));
-            let half = w.reach(ps).max(w.reach(-ps));
+            let mut half = w.reach(ps).max(w.reach(-ps));
+            // the knife plate (gusset thickness) laps the gusset on the +normal side
+            let knife = w.dims.hollow().then(|| {
+                let q = w.local(node + nrm * tg);
+                let ps = ps * (1.0 / ps.len().max(1e-12));
+                let cuts = w.cut_line(v2(q.y, q.z), ps);
+                let lo = cuts.iter().map(|c| c.0).fold(-w.dims.thin(), f64::min);
+                let hi = cuts.iter().map(|c| c.1).fold(w.dims.thin(), f64::max);
+                let leg = k.leg(tg, w.dims.thin());
+                half = (-lo).max(hi) + 2.0 * leg;
+                Knife {
+                    perp: perp.normalized(),
+                    walls: (lo, hi),
+                    leg,
+                }
+            });
             Web {
                 bar: w,
                 index: first + i,
                 d,
                 dw,
                 half,
+                knife,
             }
         })
         .collect();
@@ -158,6 +185,7 @@ fn node(k: &mut Kit, hosts: &[&Bar], webs: &[&Bar], first: usize) -> Result<(), 
     }
     let mut pts: Vec<V2> = vec![];
     let mut groups = vec![];
+    let mut ends = vec![];
     for (i, w) in ws.iter().enumerate() {
         let size = &sizes[i];
         let (e, p) = (k.cat.e_layout(size.hole), k.cat.p_layout(size.hole));
@@ -170,8 +198,16 @@ fn node(k: &mut Kit, hosts: &[&Bar], webs: &[&Bar], first: usize) -> Result<(), 
                 pts.push(w.d * s + lat * (e * sg));
             }
         }
+        // a hollow member ends past its bolts, clear of the nuts, over its knife plate
+        let end = if w.knife.is_some() {
+            let r = size.hex_r().max(size.w_od / 2.0) + k.cat.spacing.face_clear;
+            k.cat.round_up(ss[n - 1] + e.max(r))
+        } else {
+            sb[i]
+        };
         groups.push(ss);
-        k.trim(w.index, w.bar.end_near(node).0, sb[i]);
+        ends.push(end);
+        k.trim(w.index, w.bar.end_near(node).0, end);
     }
     // the gusset runs along the host faces under the web members
     let mut xa = pts.iter().map(|p| p.x).fold(f64::MAX, f64::min);
@@ -227,6 +263,10 @@ fn node(k: &mut Kit, hosts: &[&Bar], webs: &[&Bar], first: usize) -> Result<(), 
     }
     // bolts across the plane through the gusset and each member
     for (i, w) in ws.iter().enumerate() {
+        if let Some(kn) = &w.knife {
+            knife(k, f, w, kn, &groups[i], ends[i], (gp, tg), &sizes[i])?;
+            continue;
+        }
         for s in &groups[i] {
             let c = node + w.dw * *s;
             let q = w.bar.local(c);
@@ -244,6 +284,52 @@ fn node(k: &mut Kit, hosts: &[&Bar], webs: &[&Bar], first: usize) -> Result<(), 
         }
     }
     k.note("web members are modelled on the gusset plane: they lap or straddle it".to_string());
+    Ok(())
+}
+
+/// Knife plate of a hollow web member on the +normal face of the gusset `gp` (`tg` thick):
+/// bolted to the gusset at `ss`, from there into the member's slotted `end`, welded along both
+/// walls. The four slot fillets (throat 0.7 leg) develop the plate section at equal strength.
+#[allow(clippy::too_many_arguments)]
+fn knife(
+    k: &mut Kit,
+    f: Frame,
+    w: &Web,
+    kn: &Knife,
+    ss: &[f64],
+    end: f64,
+    (gp, tg): (usize, f64),
+    size: &BoltSize,
+) -> Result<(), ConnError> {
+    let (node, nrm) = (f.o, f.z);
+    let flat = |p: V3| p - nrm * p.dot(nrm);
+    let (tk, leg) = (tg, kn.leg);
+    let need = tk * 2.0 * w.half * 3f64.sqrt() / (4.0 * 0.7 * leg);
+    let lw = k.cat.round_up(need.max(k.cat.weld_len_min(leg)));
+    let (s0, s1) = (ss[0] - k.cat.e_layout(size.hole), end + lw);
+    let lat = v2(-w.d.y, w.d.x) * w.half;
+    let outline = vec![
+        w.d * s0 - lat,
+        w.d * s1 - lat,
+        w.d * s1 + lat,
+        w.d * s0 + lat,
+    ];
+    let holes = ss.iter().map(|s| (w.d * *s, size.hole)).collect();
+    let kp = k.plate(Role::Plate, f, outline, holes, tk, tg / 2.0);
+    for s in ss {
+        let o = node + flat(w.dw * *s) - nrm * (tg / 2.0);
+        k.bolt(size, o, nrm, tg + tk, vec![gp, kp], w.dw)?;
+    }
+    for (x, sg) in [(kn.walls.0, -1.0), (kn.walls.1, 1.0)] {
+        let c = node + flat(w.dw * end) + nrm * tg + kn.perp * x;
+        k.weld_both_sides(c, w.dw, lw, nrm, kn.perp * sg, tk, leg);
+    }
+    k.note(format!(
+        "member {}: hollow, slotted end over a {} mm knife plate, slot welds {} mm",
+        w.index + 1,
+        fmt_mm(tk),
+        fmt_mm(lw)
+    ));
     Ok(())
 }
 

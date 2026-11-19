@@ -663,8 +663,15 @@ pub(crate) fn sync(db: &Connection, mut inv: Inv, only: Option<&[i64]>) -> Resul
                 cache.insert(id, context_of(db, id)?);
             }
             let Some(ctx) = cache.get(&id).and_then(|x| x.as_ref()) else { continue };
-            let reaches = by_plane || bottom(ctx).is_some_and(|lo| flat >= lo - rl.reach);
-            if reaches && plan_box(ctx).is_some_and(|b| overlaps(b, wb)) {
+            if !plan_box(ctx).is_some_and(|b| overlaps(b, wb)) {
+                continue;
+            }
+            // the contour's lowest point (an overhang edge) is only a bound: the underside over
+            // this wall's own axis must come within reach of its top
+            let reaches = by_plane
+                || (bottom(ctx).is_some_and(|lo| flat >= lo - rl.reach)
+                    && segments(ctx, &c, false).iter().any(|s| flat >= s[1].min(s[3]) - rl.reach));
+            if reaches {
                 near_ids.push(id);
             }
         }

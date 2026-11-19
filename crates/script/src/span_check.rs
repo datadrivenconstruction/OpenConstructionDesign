@@ -11,7 +11,7 @@
 
 use std::collections::{HashMap, HashSet};
 use std::f64::consts::PI;
-use std::time::Instant;
+use web_time::Instant;
 
 use ddc_fem::{solve, Combo, Frame, Load, LoadCase, Material, Member, Options, Restraint, Section, Support};
 

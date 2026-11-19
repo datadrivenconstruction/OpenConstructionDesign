@@ -560,7 +560,7 @@ mod tests {
         let cam = Cam::new(&c, Rect::from_min_size(pos2(0.0, 0.0), vec2(800.0, 600.0)));
         let s = Scene::default();
         let on = pos2(400.0, 300.0);
-        let t = std::time::Instant::now();
+        let t = web_time::Instant::now();
         for _ in 0..50 {
             candidates(&mut b, &s, &input(&cam, on, None));
         }
@@ -876,7 +876,7 @@ mod budget {
         candidates(&mut b, &s, &inp);
         let mut worst = 0.0f64;
         for _ in 0..20 {
-            let t = std::time::Instant::now();
+            let t = web_time::Instant::now();
             candidates(&mut b, &s, &inp);
             worst = worst.max(t.elapsed().as_secs_f64() * 1000.0);
         }

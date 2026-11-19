@@ -440,6 +440,17 @@ impl NormPack {
         let id = a["id"].as_str().unwrap_or(role);
         Some((v, format!("{} assembly {id}: {title}, {field}{mark}", self.id)))
     }
+    /// The pack claims every key of the reference pack (`"complete": true` in its own pack.json).
+    /// A partial pack is labelled so wherever it is shown or exported.
+    pub fn complete(&self) -> bool {
+        self.meta["complete"].as_bool().unwrap_or(false)
+    }
+
+    /// Keys a partial pack knows it lacks (its own `missing` list), for the label and export.
+    pub fn missing(&self) -> Vec<String> {
+        strs(&self.meta["missing"])
+    }
+
     /// Storey numbering and area measurement of the country; `generic` gives the defaults.
     pub fn conventions(&self) -> Conventions {
         let c = &self.meta["conventions"];
@@ -974,6 +985,10 @@ impl PackSet {
         if !problems.is_empty() {
             return Err(fail(problems));
         }
+        // completeness is the pack's own claim: a child never inherits its parent's
+        let own = &self.layers[id].meta;
+        meta["complete"] = json!(own["complete"].as_bool().unwrap_or(false));
+        meta["missing"] = own["missing"].clone();
         Ok(NormPack {
             id: id.to_string(),
             chain,
@@ -1038,6 +1053,18 @@ fn check_layer(id: &str, l: &Layer) -> Vec<String> {
     }
     if !(l.meta["parent"].is_null() || l.meta["parent"].is_string()) {
         out.push(format!("{at}: `parent` must be a pack id or null"));
+    }
+    let (complete, missing) = (&l.meta["complete"], &l.meta["missing"]);
+    if !(complete.is_null() || complete.is_boolean()) {
+        out.push(format!("{at}: `complete` must be true or false"));
+    }
+    if !missing.is_null() {
+        if complete.as_bool() != Some(false) {
+            out.push(format!("{at}: `missing` belongs to a pack with `complete: false`"));
+        }
+        if !missing.as_array().is_some_and(|a| a.iter().all(|k| k.as_str().is_some_and(|k| !k.is_empty()))) {
+            out.push(format!("{at}: `missing` must list key names"));
+        }
     }
     if let Some(d) = l.meta["units"].get("display").filter(|d| !d.is_null()) {
         if !d.as_str().is_some_and(|d| DISPLAY_SYSTEMS.contains(&d)) {

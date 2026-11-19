@@ -4,7 +4,7 @@
 //! text (click a finding to see its lines), the changes against the earlier version by statement
 //! with a reject button each, and a load that stays blocked while the report has errors.
 
-use std::time::{Duration, Instant};
+use web_time::{Duration, Instant};
 
 use ddc_geom::component::doc::{op_diff, FamDoc, OpChange};
 use ddc_geom::component::validate::{validate, Limits, Report, Severity};

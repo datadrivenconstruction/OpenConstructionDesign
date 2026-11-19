@@ -85,7 +85,7 @@ fn dump(m: &Model) -> Vec<(String, Vec<String>)> {
     for t in tables {
         let mut v = vec![];
         let mut q = db
-            .prepare(&format!("SELECT * FROM \"{t}\" ORDER BY rowid"))
+            .prepare(&format!("SELECT * FROM \"{t}\" ORDER BY {}", row_order(db, &t)))
             .unwrap();
         let n = q.column_count();
         // the stamp of a journal row is a nonce: a replay writes another one
@@ -113,6 +113,23 @@ fn dump(m: &Model) -> Vec<(String, Vec<String>)> {
         out.push((t, v));
     }
     out
+}
+
+/// `rowid`, or every column in order for a WITHOUT ROWID table (it has no rowid to sort by).
+fn row_order(db: &rusqlite::Connection, t: &str) -> String {
+    let (keyed, n): (bool, i64) = db
+        .query_row(
+            "SELECT (SELECT sql LIKE '%WITHOUT ROWID%' FROM sqlite_master WHERE name=?1),
+                    (SELECT count(*) FROM pragma_table_info(?1))",
+            [t],
+            |r| Ok((r.get(0)?, r.get(1)?)),
+        )
+        .unwrap();
+    if keyed {
+        (1..=n).map(|i| i.to_string()).collect::<Vec<_>>().join(",")
+    } else {
+        "rowid".into()
+    }
 }
 
 fn diff(a: &[(String, Vec<String>)], b: &[(String, Vec<String>)]) -> String {

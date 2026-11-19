@@ -58,6 +58,20 @@ fn count_area(m: &Model) -> f64 {
     m.sql().query_row("SELECT SUM(plan_area) FROM wall_qty", [], |r| r.get(0)).unwrap()
 }
 
+/// The S wall at 2 cm: at the default 1 mm its arcs are 0.4..0.53 m and hold no door; at
+/// 2 cm the four middle arcs are about 1.57 m long (callers loosen the tolerance like this).
+fn s_wall_for_doors(m: &mut Model) -> (i64, SplineWallSpec) {
+    let lv = m.add_level("L1", 0.0).unwrap();
+    let t = m
+        .add_wall_type("c", &[LayerSpec { material: "concrete".into(), thickness: 0.3 }])
+        .unwrap();
+    let s = SplineWallSpec {
+        tol: 0.02,
+        ..SplineWallSpec::through(lv, t, &[(0., 0.), (4., 1.), (8., -1.), (12., 0.)], 3.0).unwrap()
+    };
+    (m.add_spline_wall(&s).unwrap(), s)
+}
+
 /// The same wall on the level and type `s_wall` made.
 fn s_wall_again(m: &mut Model) -> (i64, SplineWallSpec) {
     let lv: i64 = count(m, "SELECT min(id) FROM level");
@@ -88,7 +102,7 @@ fn add_and_delete_are_one_undo_step_each() {
 #[test]
 fn update_moves_the_pieces_and_keeps_openings_along_the_axis() {
     let mut m = Model::open(":memory:").unwrap();
-    let (id, s) = s_wall(&mut m);
+    let (id, s) = s_wall_for_doors(&mut m);
     let ps = m.spline_wall_pieces(id).unwrap();
     let lens: Vec<f64> = ps.iter().map(|&w| m.wall_length(w).unwrap()).collect();
     let k = (0..ps.len()).max_by(|&a, &b| lens[a].total_cmp(&lens[b])).unwrap();
@@ -156,8 +170,8 @@ fn deleting_a_piece_takes_it_out_of_the_chain() {
 fn bad_spline_walls_are_refused() {
     let mut m = Model::open(":memory:").unwrap();
     let (_, s) = s_wall(&mut m);
-    // a 4 m thick wall folds on the bends
-    let t = m.add_wall_type("thick", &[LayerSpec { material: "c".into(), thickness: 4.0 }]).unwrap();
+    // the tightest bend has a radius of about 3.07 m: a 7 m thick centred wall folds there
+    let t = m.add_wall_type("thick", &[LayerSpec { material: "c".into(), thickness: 7.0 }]).unwrap();
     assert!(m.add_spline_wall(&SplineWallSpec { wall_type: t, ..s.clone() }).is_err());
     assert!(m.add_spline_wall(&SplineWallSpec { tol: 1.0, ..s.clone() }).is_err());
     assert!(m.add_spline_wall(&SplineWallSpec { height: 0.0, ..s.clone() }).is_err());
@@ -232,7 +246,7 @@ fn single_pieces_cannot_be_edited_directly() {
 #[test]
 fn whole_spline_walls_move_turn_and_mirror_with_their_axis() {
     let mut m = Model::open(":memory:").unwrap();
-    let (id, s) = s_wall(&mut m);
+    let (id, s) = s_wall_for_doors(&mut m);
     let ps = m.spline_wall_pieces(id).unwrap();
     let lens: Vec<f64> = ps.iter().map(|&w| m.wall_length(w).unwrap()).collect();
     let total: f64 = lens.iter().sum();
@@ -334,7 +348,8 @@ fn chords_become_one_spline_wall_with_their_openings_moved_by_curve_length() {
         .unwrap();
     let mid_chain = (0..12).map(chord).sum::<f64>() + 0.25;
     let total: f64 = (0..24).map(chord).sum();
-    let s = SplineWallSpec::through(lv, t, &pts, 3.0).unwrap();
+    // 2 mm, the first rung callers try: at 1 mm the arcs are just under the window's 0.4 m
+    let s = SplineWallSpec { tol: 0.002, ..SplineWallSpec::through(lv, t, &pts, 3.0).unwrap() };
     let id = m.spline_from_walls(&walls, &s).unwrap();
     let ps = m.spline_wall_pieces(id).unwrap();
     assert!(!ps.is_empty() && ps.iter().zip(&walls).all(|(p, w)| p == w), "the chords' rows are the pieces");

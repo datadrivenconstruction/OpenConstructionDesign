@@ -18,6 +18,15 @@
   "source": null
  },
  "status": "tier2",
+ "complete": false,
+ "missing": [
+  "fire.wall_spacing_max",
+  "envelope.u_wall",
+  "envelope.u_roof",
+  "envelope.u_ground",
+  "acoustic.rw_party",
+  "acoustic.rw_floor"
+ ],
  "climate": {
   "zones": [],
   "default": null

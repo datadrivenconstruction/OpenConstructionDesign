@@ -10,7 +10,7 @@
 //! Time is checked between steps (`eval_timeout`), not by a killer thread.
 
 use std::collections::BTreeSet;
-use std::time::{Duration, Instant};
+use web_time::{Duration, Instant};
 
 use super::doc::{stmts, Stmt};
 use super::ext::Cons;

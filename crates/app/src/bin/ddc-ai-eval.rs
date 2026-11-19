@@ -17,7 +17,7 @@ use ddc_app::ai::eval::metrics::{scores_json, append_ledger, gate, last_line, le
 use ddc_app::ai::eval::replay::{self, default_root};
 use ddc_app::ai::eval::run::{live_provider, replay_profile, run_all, LiveFactory, Opts, ReplayFactory};
 use std::path::PathBuf;
-use std::time::{Duration, Instant};
+use web_time::{Duration, Instant};
 
 fn arg(args: &[String], name: &str) -> Option<String> {
     args.iter().position(|a| a == name).and_then(|i| args.get(i + 1)).cloned()

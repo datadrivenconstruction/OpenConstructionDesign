@@ -352,7 +352,7 @@ mod tests {
         let (pl, v3d, sec) = (plan(), view3d(), across());
         let mut best = f64::MAX;
         for _ in 0..20 {
-            let t = std::time::Instant::now();
+            let t = web_time::Instant::now();
             let n = draws(&rubber(), &pl).len() + draws(&rubber(), &v3d).len() + draws(&rubber(), &sec).len();
             std::hint::black_box(n);
             best = best.min(t.elapsed().as_secs_f64());

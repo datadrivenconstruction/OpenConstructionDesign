@@ -19,6 +19,31 @@
   "source": null
  },
  "status": "tier3",
+ "complete": false,
+ "missing": [
+  "climate.heating_design_temp",
+  "climate.cooling_design_temp",
+  "ventilation.oa_per_person",
+  "ventilation.oa_per_area",
+  "egress.occupant_area.assembly",
+  "egress.door_width_per_person",
+  "egress.stair_width_per_person",
+  "egress.exit_width_min",
+  "fire.compartment_wall_rating",
+  "fire.stair_enclosure_rating",
+  "fire.stair_enclosure_rating_tall",
+  "building.high_rise_height",
+  "building.class5_height",
+  "fire.wall_spacing_max",
+  "envelope.u_wall",
+  "envelope.u_roof",
+  "envelope.u_ground",
+  "acoustic.rw_party",
+  "acoustic.rw_floor",
+  "stair.riser_max",
+  "stair.going_min",
+  "guard.height_min"
+ ],
  "climate": {
   "zones": [],
   "default": null

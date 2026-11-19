@@ -511,7 +511,7 @@ mod tests {
         let k: u128 = if cfg!(debug_assertions) { 20 } else { 1 };
         let mut worst = 0u128;
         for i in 0..20 {
-            let t = std::time::Instant::now();
+            let t = web_time::Instant::now();
             let a = plan_anchor(&m, lv, (2.0, 6.0 * (50 + i) as f64 + 0.21), 0.05).unwrap();
             let l = Lens::over(&m, Mode::Distance, ViewKey::Plan(lv), &picks, &a);
             worst = worst.max(t.elapsed().as_micros());

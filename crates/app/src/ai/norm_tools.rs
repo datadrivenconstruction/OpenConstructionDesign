@@ -70,6 +70,11 @@ fn head(o: &mut Out, p: &NormPack) {
     o.put("pack", &json!(p.id));
     o.put("chain", &json!(p.chain));
     o.put("status", &p.meta["status"]);
+    // a partial pack says so, so an answer from it is not read as full coverage
+    o.put("complete", &json!(p.complete()));
+    if !p.complete() {
+        o.put("missing", &json!(p.missing()));
+    }
 }
 
 fn depth_of(a: &J) -> Result<u8, String> {

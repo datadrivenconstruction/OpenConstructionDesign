@@ -532,7 +532,7 @@ mod tests {
         let tl = Timeline::new(30, tracks);
         assert_eq!(tl.element_count(), 100_000);
         let _ = tl.sample(100);
-        let t = std::time::Instant::now();
+        let t = web_time::Instant::now();
         let mut keep = 0;
         for f in [50, 100, 150, 5] {
             keep += tl.sample(f).len();

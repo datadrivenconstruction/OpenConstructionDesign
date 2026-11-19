@@ -231,7 +231,7 @@ pub struct Player {
     pos: f32,
     /// 1 forward, -1 backward, 0 paused.
     dir: i8,
-    last: Option<std::time::Instant>,
+    last: Option<web_time::Instant>,
     rev: u64,
     shown: Option<u32>,
     cache: Option<(u32, std::sync::Arc<Frame>)>,
@@ -326,7 +326,7 @@ impl Player {
     }
 
     /// `advance` by clock: the first call after start only records the time.
-    pub fn tick(&mut self, now: std::time::Instant) -> bool {
+    pub fn tick(&mut self, now: web_time::Instant) -> bool {
         if self.dir == 0 {
             return false;
         }
@@ -626,7 +626,7 @@ pub fn controls(a: &mut crate::shell::EditorApp, ctx: &egui::Context) {
         }
     }
     let Some(p) = a.reveal.as_mut() else { return };
-    if p.tick(std::time::Instant::now()) || p.playing() {
+    if p.tick(web_time::Instant::now()) || p.playing() {
         ctx.request_repaint();
     }
     let (th, cat) = (&a.sh.theme, &a.sh.cat);
@@ -971,7 +971,7 @@ mod tests {
             .collect();
         let d = ModelDiff { rows, truncated: false };
         let m = Model::open(":memory:").unwrap();
-        let t = std::time::Instant::now();
+        let t = web_time::Instant::now();
         let steps = from_plan(&d);
         let b = batches(&steps, &m);
         let tl = timeline(&b, &|k| {

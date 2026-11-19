@@ -18,6 +18,7 @@
   "source": null
  },
  "status": "tier2",
+ "complete": true,
  "climate": {
   "zones": [],
   "default": null

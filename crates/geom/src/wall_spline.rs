@@ -305,17 +305,27 @@ impl SplineAxis {
     }
 
     /// Tangent-continuous chain of arcs within `tol` of the axis: biarcs between axis points,
-    /// each interval halved until 7 check points of the axis inside it lie within `tol`.
+    /// the whole domain halved until the axis lies within `tol` at 7 check points of every
+    /// knot span part inside an interval and at its inner knots. Intervals are not cut at the
+    /// knots, so a gentle axis through many points keeps long pieces.
     pub fn biarcs(&self, tol: f64) -> Result<Vec<ArcPiece>, SplineError> {
-        let mut stack: Vec<(f64, f64)> = self.params(2).windows(2).rev().map(|w| (w[0], w[1])).collect();
+        let (ta, tb) = self.curve.domain();
+        let knots = self.spans();
+        let mut stack: Vec<(f64, f64)> = vec![(ta, tb)];
         let mut out: Vec<ArcPiece> = vec![];
         let mut worst: f64 = 0.0;
         while let Some((t0, t1)) = stack.pop() {
             let fit = biarc(self.point(t0), self.tangent(t0), self.point(t1), self.tangent(t1));
             let dev = fit.map_or(f64::INFINITY, |pair| {
-                (1..8)
-                    .map(|k| {
-                        let p = self.point(t0 + (t1 - t0) * k as f64 / 8.0);
+                let mut cuts = vec![t0];
+                cuts.extend(knots.iter().copied().filter(|&k| k > t0 && k < t1));
+                cuts.push(t1);
+                let inner = cuts[1..cuts.len() - 1].to_vec();
+                cuts.windows(2)
+                    .flat_map(|w| (1..8).map(move |k| w[0] + (w[1] - w[0]) * k as f64 / 8.0))
+                    .chain(inner)
+                    .map(|t| {
+                        let p = self.point(t);
                         piece_dist(p, pair[0]).min(piece_dist(p, pair[1]))
                     })
                     .fold(0.0, f64::max)

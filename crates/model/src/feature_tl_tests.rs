@@ -304,6 +304,12 @@ fn east_of(b: &Body, op: u32) -> u32 {
         .tag
 }
 
+/// Side faces named by `op`. A push of a whole face has none: each side is flush with the
+/// face below and continues it (contract in the `mass::push_pull` doc).
+fn sides_of(b: &Body, op: u32) -> usize {
+    b.polys.iter().filter(|p| tag_op(p.tag) == op && p.plane.n.z.abs() < 1e-9).count()
+}
+
 #[test]
 fn stored_face_keys_keep_references_through_ten_edits() {
     let (mut m, l) = model();
@@ -331,7 +337,9 @@ fn stored_face_keys_keep_references_through_ten_edits() {
     // the saved form carries the keys its first build made
     let keys = m.mass_timeline(id).unwrap().unwrap().node(pp).unwrap().keys.clone();
     assert_eq!(keys.len(), 4);
-    let east = east_of(&m.mass_body(id).unwrap(), pp);
+    // the pushed top keeps its sides flush: the east side is the extrusion's, full height
+    assert_eq!(sides_of(&m.mass_body(id).unwrap(), pp), 0);
+    let east = east_of(&m.mass_body(id).unwrap(), e);
     let mut ch = 0;
     m.edit_mass_timeline(id, |t| {
         ch = t.add("", Kind::Modify {
@@ -354,7 +362,8 @@ fn stored_face_keys_keep_references_through_ten_edits() {
         assert_eq!(t.node(pp).unwrap().keys, keys, "edit {i}");
         let r = m.mass_timeline_build(id).unwrap().unwrap();
         assert!(r.status(ch).is_some_and(|s| s.ok()), "edit {i}: {:?}", r.first_error());
-        assert_eq!(east_of(&m.mass_body(id).unwrap(), pp), east, "edit {i}");
+        assert_eq!(east_of(&m.mass_body(id).unwrap(), e), east, "edit {i}");
+        assert_eq!(sides_of(&m.mass_body(id).unwrap(), pp), 0, "edit {i}");
         near(vol(&m, id), w * 1.0 * (1.0 + p) - 0.005 * 1.0);
     }
     // undo walks back through the same names
@@ -374,7 +383,9 @@ fn keyed_direct_edits_convert_with_their_face_names() {
         d: 0.5,
         keys: vec![],
     };
-    let east = east_of(&pushed.eval().unwrap(), 2);
+    // the push continues the cuboid's sides (flush), so the east side is the cuboid's own
+    assert_eq!(sides_of(&pushed.eval().unwrap(), 2), 0);
+    let east = east_of(&pushed.eval().unwrap(), 1);
     let form = Form::Chamfer {
         base: Box::new(pushed),
         faces: (ftag(1, 1), east),

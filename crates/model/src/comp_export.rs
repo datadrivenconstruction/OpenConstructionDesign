@@ -272,7 +272,8 @@ mod tests {
         let r = &r[0];
         assert_eq!((r.id, r.family.as_str()), (id, "Table"));
         assert_eq!(r.category, "furniture");
-        assert_eq!((r.ifc_class.as_str(), r.hosting), (f.ifc.0.as_str(), "none"));
+        // `hosting` is what the family declares (the library table sits on a floor)
+        assert_eq!((r.ifc_class.as_str(), r.hosting), (f.ifc.0.as_str(), "floor"));
         assert_eq!(r.params.len(), f.params.len());
         for (p, d) in r.params.iter().zip(&f.params) {
             assert_eq!((p.name.as_str(), p.instance, p.kind), (d.name.as_str(), d.instance, d.kind));

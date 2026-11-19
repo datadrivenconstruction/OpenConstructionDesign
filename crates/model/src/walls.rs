@@ -1116,7 +1116,6 @@ pub(crate) struct LevelWalls {
 pub(crate) struct Piece {
     /// The wall frame together with its axis: walls with non-intersecting frames do not affect each other's joints.
     pub bb: [f64; 4],
-    pub arc: bool,
     /// `wall_qty` rows before column deduction.
     pub rows: Vec<(i64, i64, String, f64, f64)>,
     pub layers: Vec<WallLayer>,
@@ -1144,11 +1143,18 @@ pub(crate) fn pieces_polys(level: i64, elevation: f64, pieces: &Pieces) -> Level
     )
 }
 
-fn wall_box(s: &Strip, tol: Tol) -> [f64; 4] {
+/// Box of the wall band with its axis; an arc axis bulges past the chord, so its band is the
+/// arc's box grown by the farthest face offset.
+fn wall_box(s: &Strip, bulge: f64, tol: Tol) -> [f64; 4] {
     let bounds = s.bounds();
     let (lo, hi) = (bounds[0], bounds[bounds.len() - 1]);
     let n = s.normal();
     let pad = 10.0 * tol.length;
+    if bulge != 0.0 {
+        if let Ok(ax) = ArcAxis::new(s.a, s.b, bulge, tol) {
+            return ax.bbox(lo.abs().max(hi.abs()) + pad);
+        }
+    }
     [
         s.a,
         s.b,
@@ -1472,8 +1478,7 @@ fn build_walls(
             continue;
         }
         let piece = pieces.entry(walls[i].0).or_default();
-        piece.bb = wall_box(s, tol);
-        piece.arc = bulges[i] != 0.0;
+        piece.bb = wall_box(s, bulges[i], tol);
         let fp = &joined.rings[i];
         polys.extend(fp.iter().flatten().map(|r| r.tessellate(CHORD_SAG)));
         for (k, rings) in fp.iter().enumerate() {
@@ -1903,9 +1908,6 @@ pub(crate) fn regenerate_near(
     pieces: &mut Pieces,
 ) -> Result<Option<Vec<WallLayer>>, Error> {
     use std::collections::{BTreeMap, BTreeSet};
-    if pieces.values().any(|p| p.arc) {
-        return Ok(None);
-    }
     let tol = Tol::default();
     let mut rows: BTreeMap<i64, WallRow> = BTreeMap::new();
     let mut boxes: BTreeMap<i64, [f64; 4]> = BTreeMap::new();
@@ -1917,10 +1919,7 @@ pub(crate) fn regenerate_near(
             .query_row([id, level], wall_row)
             .optional()?;
         let Some(row) = row else { continue };
-        if row.4 != 0.0 {
-            return Ok(None);
-        }
-        let bb = wall_box(&wall_strip(db, &row, elevation)?.0, tol);
+        let bb = wall_box(&wall_strip(db, &row, elevation)?.0, row.4, tol);
         probes.push(bb);
         boxes.insert(id, bb);
         rows.insert(id, row);

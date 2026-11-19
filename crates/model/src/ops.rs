@@ -52,6 +52,8 @@ pub struct Snapshots(
     Inv,
     std::collections::HashSet<(String, String, i64)>,
     std::collections::HashMap<String, i64>,
+    /// (table, rowid) already snapshotted in this batch.
+    std::collections::HashSet<(String, i64)>,
 );
 
 impl Snapshots {
@@ -60,15 +62,25 @@ impl Snapshots {
         if self.1.insert((table.into(), col.into(), id)) {
             // rows above the batch watermark are deleted by undo: a snapshot would bring them back
             let max = self.2.get(table).copied().unwrap_or(i64::MAX);
+            // a row met again under another key (a door moved to a new wall part) keeps its first,
+            // pre-batch snapshot: undo replays in order, so a later one would win
             let inv = std::mem::take(&mut self.0);
-            self.0 = inv.restore_upto(db, table, col, id, max)?;
+            let start = inv.0.len();
+            let mut inv = inv.restore_upto(db, table, col, id, max)?;
+            let new = inv.0.split_off(start);
+            let seen = &mut self.3;
+            inv.0.extend(new.into_iter().filter(|(_, args)| match args.first() {
+                Some(Value::Integer(r)) => seen.insert((table.to_string(), *r)),
+                _ => true,
+            }));
+            self.0 = inv;
         }
         Ok(())
     }
 
     /// Batch watermarks known before the batch body runs (tables of `batch_in`).
     pub(crate) fn with_marks(marks: std::collections::HashMap<String, i64>) -> Self {
-        Snapshots(Inv::default(), Default::default(), marks)
+        Snapshots(Inv::default(), Default::default(), marks, Default::default())
     }
 
     /// Inverse command run before the snapshots: later edits of one batch undo first.
@@ -111,7 +123,7 @@ impl Snapshots {
 
     /// An empty snapshot set for a single operation outside a batch (each row is snapshotted once).
     pub(crate) fn new() -> Self {
-        Snapshots(Inv::default(), Default::default(), Default::default())
+        Snapshots(Inv::default(), Default::default(), Default::default(), Default::default())
     }
 
     pub(crate) fn into_inv(self) -> Inv {

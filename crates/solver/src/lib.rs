@@ -125,6 +125,19 @@ fn residuals(rule: &Rule, x: &[f64], out: &mut Vec<f64>) {
     }
 }
 
+/// Points whose coordinates `residuals` of the rule read.
+fn points(rule: &Rule, out: &mut Vec<P>) {
+    match rule {
+        Rule::Dist(a, b, _) => out.extend([*a, *b]),
+        Rule::Fix(_) => {}
+        Rule::Parallel(l1, l2)
+        | Rule::Perp(l1, l2)
+        | Rule::Collinear(l1, l2)
+        | Rule::LineDist(l1, l2, _) => out.extend([l1.0, l1.1, l2.0, l2.1]),
+        Rule::Equal(ls) => out.extend(ls.iter().flat_map(|l| [l.0, l.1])),
+    }
+}
+
 fn all(cs: &[Constraint], x: &[f64]) -> (Vec<f64>, Vec<usize>) {
     let (mut r, mut owner) = (vec![], vec![]);
     for (k, c) in cs.iter().enumerate() {
@@ -197,6 +210,34 @@ pub fn solve(cs: &[Constraint], x0: &[f64], pinned: &[P]) -> Result<Vec<f64>, Co
         }
     }
     let free: Vec<usize> = (0..x0.len()).filter(|&i| !fixed[i]).collect();
+    let mut col = vec![usize::MAX; x0.len()];
+    for (c, &i) in free.iter().enumerate() {
+        col[i] = c;
+    }
+    // each rule reads only its own points: its Jacobian rows are zero elsewhere, so they are
+    // built from its free variables alone (same numbers as differencing every rule)
+    let vars: Vec<Vec<usize>> = cs
+        .iter()
+        .map(|c| {
+            let mut ps = vec![];
+            points(&c.rule, &mut ps);
+            let mut v: Vec<usize> = ps
+                .into_iter()
+                .flat_map(|p| [2 * p, 2 * p + 1])
+                .filter(|&i| i < x0.len() && !fixed[i])
+                .collect();
+            v.sort_unstable();
+            v.dedup();
+            v
+        })
+        .collect();
+    // first residual row of each rule (a rule always gives the same number of rows)
+    let mut row0 = Vec::with_capacity(cs.len());
+    let (mut rp, mut rm) = (vec![], vec![]);
+    for c in cs {
+        row0.push(rp.len());
+        residuals(&c.rule, x0, &mut rp);
+    }
     let mut x = x0.to_vec();
     let scale = x0.iter().fold(1.0f64, |m, v| m.max(v.abs()));
     for _ in 0..100 {
@@ -208,29 +249,43 @@ pub fn solve(cs: &[Constraint], x0: &[f64], pinned: &[P]) -> Result<Vec<f64>, Co
         let m = r.len();
         let n = free.len();
         let h = 1e-7 * scale;
-        let mut jac = vec![0.0; m * n];
-        for (c, &i) in free.iter().enumerate() {
-            let old = x[i];
-            x[i] = old + h;
-            let (rp, _) = all(cs, &x);
-            x[i] = old - h;
-            let (rm, _) = all(cs, &x);
-            x[i] = old;
-            for k in 0..m {
-                jac[k * n + c] = (rp[k] - rm[k]) / (2.0 * h);
+        // sparse Jacobian by column: (row, value), rows ascending
+        let mut by_col: Vec<Vec<(usize, f64)>> = vec![vec![]; n];
+        for (k, c) in cs.iter().enumerate() {
+            for &i in &vars[k] {
+                let old = x[i];
+                x[i] = old + h;
+                rp.clear();
+                residuals(&c.rule, &x, &mut rp);
+                x[i] = old - h;
+                rm.clear();
+                residuals(&c.rule, &x, &mut rm);
+                x[i] = old;
+                for (j, (p, q)) in rp.iter().zip(&rm).enumerate() {
+                    let v = (p - q) / (2.0 * h);
+                    if v != 0.0 {
+                        by_col[col[i]].push((row0[k] + j, v));
+                    }
+                }
             }
         }
-        // (J Jᵀ + λI) y = −r, dx = Jᵀ y — minimum-norm step
+        // minimum-norm step (J J^T + lambda I) y = -r, dx = J^T y; the sums run over the
+        // columns in order, as the dense products did
         let mut jj = vec![0.0; m * m];
-        for a in 0..m {
-            for b in 0..m {
-                jj[a * m + b] = (0..n).map(|c| jac[a * n + c] * jac[b * n + c]).sum();
+        for list in &by_col {
+            for &(a, va) in list {
+                for &(b, vb) in list {
+                    jj[a * m + b] += va * vb;
+                }
             }
+        }
+        for a in 0..m {
             jj[a * m + a] += 1e-10;
         }
         let y = gauss(jj, r.iter().map(|v| -v).collect(), m);
-        let dx: Vec<f64> = (0..n)
-            .map(|c| (0..m).map(|k| jac[k * n + c] * y[k]).sum())
+        let dx: Vec<f64> = by_col
+            .iter()
+            .map(|list| list.iter().map(|&(k, v)| v * y[k]).sum())
             .collect();
         let mut t = 1.0;
         let mut ok = false;

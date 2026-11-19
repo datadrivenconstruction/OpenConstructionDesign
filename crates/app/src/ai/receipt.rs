@@ -218,7 +218,7 @@ mod tests {
         let qty: Vec<QtyDelta> = (0..40)
             .map(|i| QtyDelta { key: format!("volume:m{i}"), level: Some(1), before: 1.0, after: 2.0 })
             .collect();
-        let t = std::time::Instant::now();
+        let t = web_time::Instant::now();
         let r = WriteReceipt::build(&diff, &qty, &[], 1, true, "AI");
         let ms = t.elapsed().as_secs_f64() * 1e3;
         eprintln!("receipt of 1000 changes: {ms:.2} ms");

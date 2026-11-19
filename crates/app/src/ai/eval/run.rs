@@ -18,7 +18,7 @@ use ddc_ai::{build_provider, AuthKind, EgressGuard, Limits, Mode, Profile, Proto
 use std::path::{Path, PathBuf};
 use std::sync::atomic::{AtomicBool, AtomicU64, AtomicUsize, Ordering};
 use std::sync::{Arc, Mutex};
-use std::time::{Duration, Instant};
+use web_time::{Duration, Instant};
 
 static SESSION: AtomicU64 = AtomicU64::new(0);
 

@@ -131,9 +131,6 @@ pub(crate) fn regenerate(
     }
     let pad = 4.0 * Tol::default().length;
     for (level, elev, base_polys, faces) in levels {
-        // leaning walls bound rooms by their section at the room cut height
-        let cut = crate::walls::leaning_section(db, *level, *elev)?;
-        let polys = cut.as_ref().unwrap_or(base_polys);
         if scoped {
             db.execute(
                 "DELETE FROM room_qty WHERE room IN (SELECT id FROM room WHERE level=?1)",
@@ -152,6 +149,10 @@ pub(crate) fn regenerate(
         if rooms.is_empty() {
             continue;
         }
+        // leaning walls bound rooms by their section at the room cut height; read after the
+        // room check, since it scans every wall of the level
+        let cut = crate::walls::leaning_section(db, *level, *elev)?;
+        let polys = cut.as_ref().unwrap_or(base_polys);
         let lines = level_lines(db, *level)?;
         let boxes: Vec<Bbox> = polys
             .iter()

@@ -351,7 +351,7 @@ mod tests {
         let mut m = Model::open(p.to_str().unwrap()).unwrap();
         rich(&mut m, 10_000, 500);
         let k = if cfg!(debug_assertions) { 25.0 } else { 1.0 };
-        let t = std::time::Instant::now();
+        let t = web_time::Instant::now();
         let mut w = Model::journal_walk(&p, &d.join("c.ddc"), 1, &mut go).unwrap();
         let first = w.next().unwrap().unwrap();
         let first_ms = t.elapsed().as_secs_f64() * 1000.0;

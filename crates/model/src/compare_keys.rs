@@ -531,8 +531,9 @@ mod tests {
             thickness: 0.2,
         }];
         let t = m.add_wall_type("std", &layer).unwrap();
-        for (i, w) in walls.iter().enumerate() {
-            let y = 10.0 * i as f64;
+        for w in walls {
+            // the row follows its key, not its order: a renumbered wall stays where it was
+            let y = 10.0 * w.0.trim_start_matches('k').parse::<f64>().unwrap();
             let id = m
                 .add_wall(&WallSpec {
                     a: (w.1, y),

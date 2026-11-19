@@ -57,7 +57,14 @@ pub fn check(c: &Conn, members: &[Member]) -> Vec<Finding> {
     let mut out = vec![];
     bolt_rules(c, &mut out);
     plate_rules(c, &mut out);
-    let bars: Vec<Bar> = members.iter().filter_map(|m| Bar::new(m).ok()).collect();
+    // members as the detail leaves them: a trimmed end no longer holds what sits past it
+    let mut bars: Vec<Option<Bar>> = members.iter().map(|m| Bar::new(m).ok()).collect();
+    for t in &c.trims {
+        if let Some(Some(b)) = bars.get_mut(t.member) {
+            b.cut_back(c.node, t.end, t.setback);
+        }
+    }
+    let bars: Vec<Bar> = bars.into_iter().flatten().collect();
     clashes(c, &bars, &mut out);
     out
 }

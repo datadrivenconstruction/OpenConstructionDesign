@@ -374,7 +374,7 @@ mod tests {
         for a in adapters {
             let mut best = f64::MAX;
             for _ in 0..3 {
-                let t = std::time::Instant::now();
+                let t = web_time::Instant::now();
                 let mut acc = 0.0;
                 for i in 0..N {
                     let p = a.pointer([(i % 800) as f32, (i % 600) as f32]);

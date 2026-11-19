@@ -416,6 +416,29 @@ pub fn save_table<C: ToCell>(
     wb.save(path).map_err(err)
 }
 
+/// [`save_table`] with a second sheet `info_name` of (field, value) lines about the book; the
+/// table sheet is laid out exactly as by `save_table`.
+pub fn save_table_with_info<C: ToCell>(
+    path: &Path,
+    name: &str,
+    headers: &[String],
+    rows: &[Vec<C>],
+    info_name: &str,
+    info: &[(String, String)],
+) -> Result<(), String> {
+    let mut wb = Workbook::new();
+    let ws = wb.add_worksheet();
+    ws.set_name(name).map_err(err)?;
+    write_table(ws, headers, rows)?;
+    let wi = wb.add_worksheet();
+    wi.set_name(info_name).map_err(err)?;
+    for (r, (k, v)) in info.iter().enumerate() {
+        wi.write_string(r as u32, 0, k).map_err(err)?;
+        wi.write_string(r as u32, 1, v).map_err(err)?;
+    }
+    wb.save(path).map_err(err)
+}
+
 /// A drop-down that offers words without refusing others; skipped when the list is too long.
 fn offer(ws: &mut Worksheet, col: u16, items: &[String]) -> Result<(), String> {
     let total: usize = items.iter().map(|s| s.chars().count() + 1).sum();

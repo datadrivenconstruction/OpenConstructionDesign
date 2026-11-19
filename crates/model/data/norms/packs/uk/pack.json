@@ -18,6 +18,12 @@
   "source": null
  },
  "status": "tier2",
+ "complete": false,
+ "missing": [
+  "fire.stair_enclosure_rating_tall",
+  "acoustic.rw_party",
+  "acoustic.rw_floor"
+ ],
  "climate": {
   "zones": [],
   "default": null

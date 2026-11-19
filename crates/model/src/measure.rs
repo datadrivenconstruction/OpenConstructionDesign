@@ -931,17 +931,13 @@ fn write_geo(db: &Connection, id: i64, out: &Out, last: Option<f64>) -> Result<(
         Value::Unavailable(Reason::Orphan(_)) => ("orphan", last),
         Value::Unavailable(_) => ("unavail", last),
     };
+    let geom = pts_text(&out.pts);
+    // the memory follows the found points, so it is mostly the same text
+    let fb = if out.fb == out.pts { geom.clone() } else { pts_text(&out.fb) };
     db.prepare_cached(
         "INSERT OR REPLACE INTO measure_geo(measure,state,value,geom,fb,reason) VALUES (?1,?2,?3,?4,?5,?6)",
     )?
-    .execute(params![
-        id,
-        state,
-        value,
-        pts_text(&out.pts),
-        pts_text(&out.fb),
-        reason_text(&out.value)
-    ])?;
+    .execute(params![id, state, value, geom, fb, reason_text(&out.value)])?;
     Ok(())
 }
 

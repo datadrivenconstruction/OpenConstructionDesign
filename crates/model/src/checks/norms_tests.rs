@@ -376,6 +376,17 @@ fn json_export_carries_rule_clause_elements_and_numbers() {
     assert_eq!(t["measured"], 0.7);
     assert_eq!(t["required"], 0.8);
     assert_eq!(t["title_ru"], "T-ru");
+    assert!(v.get("pack").is_none(), "no pack named");
+    // the pack's coverage travels with the findings: a partial pack is labelled partial
+    let set = super::norm_pack::PackSet::embedded();
+    let us = set.resolve("us").unwrap();
+    let v: serde_json::Value = serde_json::from_str(&findings_json_for(&rules, &f, Some(&us))).unwrap();
+    assert_eq!(v["pack"]["id"], "us");
+    assert_eq!(v["pack"]["complete"], false);
+    assert!(v["pack"]["missing"].as_array().unwrap().iter().any(|k| k == "envelope.u_wall"));
+    let de = set.resolve("de").unwrap();
+    let v: serde_json::Value = serde_json::from_str(&findings_json_for(&rules, &f, Some(&de))).unwrap();
+    assert_eq!((&v["pack"]["complete"], v["pack"]["missing"].as_array().unwrap().len()), (&serde_json::json!(true), 0));
 }
 
 fn rooms_with(b: &mut B, name: &str, number: &str, at: (f64, f64), height: f64) {

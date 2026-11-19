@@ -19,6 +19,31 @@
   "source": null
  },
  "status": "tier3",
+ "complete": false,
+ "missing": [
+  "room.height_min",
+  "corridor.width_min",
+  "daylight.window_floor_ratio",
+  "corridor.width_min.accessible",
+  "accessible.turning_circle",
+  "fire.compartment_area_max",
+  "building.high_rise_height",
+  "building.class5_height",
+  "envelope.u_wall",
+  "envelope.u_roof",
+  "envelope.u_ground",
+  "acoustic.rw_party",
+  "acoustic.rw_floor",
+  "stair.going_min",
+  "guard.height_min",
+  "de.step",
+  "de.off.corr",
+  "de.acc.corr",
+  "de.res.h",
+  "de.off.h",
+  "de.off.a",
+  "de.day"
+ ],
  "climate": {
   "zones": [],
   "default": null
