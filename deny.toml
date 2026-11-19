@@ -21,11 +21,9 @@ unknown-git = "deny"
 # vulnerabilities and unsound notices always fail; unmaintained fails for every crate in the graph
 unmaintained = "all"
 yanked = "deny"
-ignore = [
-    { id = "RUSTSEC-2026-0543", reason = "transitive via parquet 60; unmaintained notice, no known vulnerability; review by 2026-12-19 or when parquet drops chrono" },
-]
 # Only unmaintained crates with no maintained release to move to. Recheck on every egui/wgpu bump.
 ignore = [
+    { id = "RUSTSEC-2026-0543", reason = "transitive via parquet 60; unmaintained notice, no known vulnerability; review by 2026-12-19 or when parquet drops chrono" },
     { id = "RUSTSEC-2024-0436", reason = "paste: macOS only, pulled by metal <- wgpu-hal; compile-time macro, no maintained wgpu release without metal yet" },
     { id = "RUSTSEC-2026-0371", reason = "zbus_names: Linux only, accessibility bus via zbus <- accesskit_unix (egui); no fixed zbus release" },
     { id = "RUSTSEC-2026-0370", reason = "zvariant: Linux only, same zbus/accesskit_unix chain; no fixed release" },
