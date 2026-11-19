@@ -206,11 +206,12 @@ pub fn param_check(t: &Timeline, name: &str, text: &str, u: crate::units::Units)
 }
 
 pub fn panel(ui: &mut egui::Ui, ed: &mut Editor, id: i64) {
+    let th = ddc_ui::theme::of(ui.ctx());
     let s = seen(ui, ed, id);
     let Some(t) = s.t else {
         if ui_kit::heading(ui, &tr("features.history", &[])) {
             ui.colored_label(ui_kit::weak(ui), tr("features.plain", &[]));
-            if ui.button(tr("features.convert", &[])).clicked() {
+            if ddc_ui::widgets::Button::secondary(&tr("features.convert", &[])).show(ui, &th).clicked() {
                 commit(ed, id, TlEdit::Convert);
             }
         }
@@ -219,8 +220,8 @@ pub fn panel(ui: &mut egui::Ui, ed: &mut Editor, id: i64) {
     let mut todo = None;
     params(ui, ed, id, &t, &mut todo);
     features(ui, ed, id, &t, &s.state, &mut todo);
-    let fam = ui
-        .button(tr("cmd.mass.timeline_family", &[]))
+    let fam = ddc_ui::widgets::Button::secondary(&tr("cmd.mass.timeline_family", &[]))
+        .show(ui, &th)
         .on_hover_text(tr("cmd.mass.timeline_family.desc", &[]))
         .clicked();
     if let Some(e) = todo {
@@ -256,8 +257,9 @@ fn params(ui: &mut egui::Ui, ed: &Editor, id: i64, t: &Timeline, todo: &mut Opti
                     {
                         *todo = Some(TlEdit::Param(p.name.clone(), b.clone()));
                     }
-                    if ui
-                        .small_button("\u{d7}")
+                    if ddc_ui::widgets::Button::quiet("\u{d7}")
+                        .small()
+                        .show(ui, &th)
                         .on_hover_text(tr("features.drop_param", &[]))
                         .clicked()
                     {
@@ -331,6 +333,7 @@ fn features(
         return;
     }
     let rev = ed.revision;
+    let th = ddc_ui::theme::of(ui.ctx());
     let marker = t.marker_index();
     let last = t.nodes.len().saturating_sub(1);
     for (i, n) in t.nodes.iter().enumerate() {
@@ -379,20 +382,29 @@ fn features(
                             *todo = Some(TlEdit::Move(n.id, i + 1));
                         }
                         let mut off = n.suppressed;
-                        if ui.checkbox(&mut off, tr("features.suppress", &[])).changed() {
+                        if ddc_ui::widgets::checkbox(ui, &th, &mut off, &tr("features.suppress", &[])).changed() {
                             *todo = Some(TlEdit::Suppress(n.id, off));
                         }
-                        if ui.button(tr("features.roll_here", &[])).clicked() {
+                        if ddc_ui::widgets::Button::secondary(&tr("features.roll_here", &[])).show(ui, &th).clicked() {
                             *todo = Some(TlEdit::Marker(Some(n.id)));
                         }
-                        if ui.button(tr("features.remove", &[])).clicked() {
+                        if ddc_ui::widgets::Button::secondary(&tr("features.remove", &[])).show(ui, &th).clicked() {
                             *todo = Some(TlEdit::Remove(n.id));
                         }
                     });
                     if n.kind.class() != Kind0::Sketch {
-                        ui.menu_button(tr("mass_family.add_modifier", &[]), |ui| {
+                        let add = ddc_ui::widgets::Button::quiet(&tr("mass_family.add_modifier", &[])).small().show(ui, &th);
+                        egui::Popup::menu(&add).show(|ui| {
                             for (k, free) in modifier_menu() {
-                                let r = ui.add_enabled(free, egui::Button::new(kind_label(k)));
+                                let r = ddc_ui::widgets::menu_item_icon(
+                                    ui,
+                                    &th,
+                                    None,
+                                    &kind_label(k),
+                                    "",
+                                    ddc_ui::widgets::MenuTone::Normal,
+                                    free,
+                                );
                                 let r = if free { r } else { r.on_disabled_hover_text(tr("mass_family.needs_faces", &[])) };
                                 if r.clicked() {
                                     *todo = Some(TlEdit::Modify(n.id, k.to_string()));
@@ -406,7 +418,7 @@ fn features(
         if i + 1 == marker && marker < t.nodes.len() {
             ui.horizontal(|ui| {
                 ui.colored_label(ui.visuals().warn_fg_color, tr("features.marker", &[]));
-                if ui.button(tr("features.roll_end", &[])).clicked() {
+                if ddc_ui::widgets::Button::secondary(&tr("features.roll_end", &[])).show(ui, &th).clicked() {
                     *todo = Some(TlEdit::Marker(None));
                 }
             });

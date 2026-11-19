@@ -43,7 +43,6 @@ MANUAL = [
      "libsqlite3-sys wrappers are MIT-licensed and listed with the crates above."),
     ("Lua", "5.4 bundled via mlua", "MIT",
      "Copyright (C) 1994-2024 Lua.org, PUC-Rio.\n\n" + MIT_BODY),
-    ("Phosphor Icons", "2.1.1", "MIT", "Copyright (c) 2023 Phosphor Icons\n\n" + MIT_BODY),
     ("DDC Sans (derived from Inter)", "font files", "OFL-1.1", "@crates/ui/assets/fonts/OFL.txt"),
     ("IBM Plex Sans", "font files", "OFL-1.1", "@crates/ui/assets/fonts/OFL-IBMPlexSans.txt"),
     ("Noto Sans", "PDF export font", "OFL-1.1", "@crates/io/assets/fonts/OFL.txt"),

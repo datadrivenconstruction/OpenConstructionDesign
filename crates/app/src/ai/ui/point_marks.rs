@@ -324,13 +324,13 @@ pub fn code_of(e: &crate::ai::AiError) -> RefusalCode {
 /// Bubble radius, pixels.
 pub const R: f32 = 9.0;
 
-pub fn colour(s: &MarkState) -> Color32 {
+pub fn colour(th: &ddc_ui::theme::Theme, s: &MarkState) -> Color32 {
     match s {
-        MarkState::Pending => Color32::from_rgb(214, 158, 46),
-        MarkState::Answered => Color32::from_rgb(66, 133, 224),
-        MarkState::Applied => Color32::from_rgb(56, 161, 105),
-        MarkState::Cancelled => Color32::from_rgb(140, 140, 150),
-        MarkState::Failed(..) => Color32::from_rgb(214, 69, 65),
+        MarkState::Pending => th.c("warning"),
+        MarkState::Answered => th.c("accent"),
+        MarkState::Applied => th.c("success"),
+        MarkState::Cancelled => th.c("text.secondary"),
+        MarkState::Failed(..) => th.c("danger"),
     }
 }
 
@@ -383,9 +383,11 @@ pub fn overlay(
         let hit = Rect::from_center_size(p, egui::Vec2::splat(R * 2.0));
         let resp = ui.interact(hit, egui::Id::new(("ask_mark", three_d, id)), egui::Sense::click());
         let painter = ui.painter_at(rect);
-        painter.circle_filled(p, R, colour(&st));
-        painter.circle_stroke(p, R, egui::Stroke::new(1.5, Color32::WHITE));
-        painter.text(p, egui::Align2::CENTER_CENTER, glyph(&st), egui::FontId::proportional(11.0), Color32::WHITE);
+        let th = ddc_ui::theme::of(ui.ctx());
+        let on = th.c("accent.text_on");
+        painter.circle_filled(p, R, colour(&th, &st));
+        painter.circle_stroke(p, R, egui::Stroke::new(1.5, on));
+        painter.text(p, egui::Align2::CENTER_CENTER, glyph(&st), ddc_ui::typo::font(ddc_ui::typo::Role::Caption), on);
         if resp.clicked() {
             FOCUS.with(|f| f.set(true));
             clicked = Some(id);

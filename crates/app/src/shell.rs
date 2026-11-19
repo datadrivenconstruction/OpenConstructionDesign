@@ -670,7 +670,7 @@ impl EditorApp {
         if let Some(m) = &self.plan.b.ms {
             use crate::edit3d::measure_saved::Mode;
             return Some(match m.mode {
-                Mode::Clear => "ann.measure_clear",
+                Mode::Clear => "ann.measure_gap",
                 Mode::Angle => "ann.measure_angle",
                 Mode::Area => "ann.measure_area",
                 _ => "ann.measure_distance",

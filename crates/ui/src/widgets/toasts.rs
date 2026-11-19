@@ -320,7 +320,7 @@ mod tests {
 
     #[test]
     fn close_target_is_24_and_both_controls_take_keyboard_focus() {
-        let ctx = egui::Context::default();
+        let ctx = crate::theme::headless_ctx();
         let mut th = Theme::new(crate::theme::Mode::Light, crate::theme::Density::Compact);
         let cat = Catalog::new(crate::Lang::En);
         let mut q = Toasts::default();
@@ -369,7 +369,7 @@ mod tests {
 
     #[test]
     fn measured_stack_height_two_line_toast() {
-        let ctx = egui::Context::default();
+        let ctx = crate::theme::headless_ctx();
         let mut q = Toasts::default();
         q.push(crate::notify::Level::Info, "Saved", None);
         frames(&ctx, &mut q);
@@ -377,7 +377,7 @@ mod tests {
         let mut q2 = Toasts::default();
         let long = "A long message that needs several lines to fit inside one toast card ".repeat(3);
         q2.push(crate::notify::Level::Info, long, Some("Undo".into()));
-        let ctx2 = egui::Context::default();
+        let ctx2 = crate::theme::headless_ctx();
         frames(&ctx2, &mut q2);
         let two = stack_height_in(&ctx2, 1, false);
         assert!(one > 0.0 && two > one);
@@ -386,7 +386,7 @@ mod tests {
 
     #[test]
     fn stack_height_zero_without_toasts() {
-        let ctx = egui::Context::default();
+        let ctx = crate::theme::headless_ctx();
         let mut q = Toasts::default();
         q.push(crate::notify::Level::Info, "Saved", None);
         frames(&ctx, &mut q);
@@ -478,7 +478,7 @@ mod tests {
 
     #[test]
     fn error_toast_copies_exact_text_with_details() {
-        let ctx = egui::Context::default();
+        let ctx = crate::theme::headless_ctx();
         let mut q = Toasts::default();
         q.push_details(Level::Error, "Import failed", "line 1\nline 2");
         frames(&ctx, &mut q);
@@ -491,7 +491,7 @@ mod tests {
 
     #[test]
     fn only_errors_get_copy_and_undo_action_still_runs() {
-        let ctx = egui::Context::default();
+        let ctx = crate::theme::headless_ctx();
         let mut q = Toasts::default();
         q.push_step(Level::Success, "Deleted", "Undo", "edit.undo", Some(7));
         frames(&ctx, &mut q);
@@ -503,7 +503,7 @@ mod tests {
         assert!(q.live.is_empty(), "a clicked step toast is spent");
         assert_eq!(copied, None);
 
-        let ctx = egui::Context::default();
+        let ctx = crate::theme::headless_ctx();
         let mut q = Toasts::default();
         q.push_cmd(Level::Error, "Save failed", "Retry", "file.save");
         frames(&ctx, &mut q);
@@ -517,7 +517,7 @@ mod tests {
 
     #[test]
     fn escape_dismisses_the_hovered_toast() {
-        let ctx = egui::Context::default();
+        let ctx = crate::theme::headless_ctx();
         let mut q = Toasts::default();
         q.push(Level::Error, "bad", None);
         frames(&ctx, &mut q);
@@ -566,7 +566,7 @@ mod tests {
 
     #[test]
     fn an_error_toast_alone_asks_for_no_repaint() {
-        let ctx = egui::Context::default();
+        let ctx = crate::theme::headless_ctx();
         let mut q = Toasts::default();
         q.push(Level::Error, "bad", None);
         for i in 0..4 {
@@ -578,16 +578,17 @@ mod tests {
 
     #[test]
     fn a_timed_toast_wakes_once_at_its_expiry_then_stops() {
-        let ctx = egui::Context::default();
+        let ctx = crate::theme::headless_ctx();
         let mut q = Toasts::default();
         q.push(Level::Info, "Saved", None);
         for i in 0..4 {
             idle_at(&ctx, &mut q, i as f64 * 0.01);
         }
-        // the area fades in for egui's animation_time (1/12 s) and egui keeps an immediate
-        // repaint for one more frame, so the first idle frame comes after that
-        idle_at(&ctx, &mut q, 0.15);
-        let idle = 0.2;
+        // the card slides in over ENTER_S and egui keeps an immediate repaint for one frame
+        // after the last animated one, so the first idle frame comes one frame after the slide
+        let end = f64::from(ENTER_S);
+        idle_at(&ctx, &mut q, end);
+        let idle = end + 0.05;
         let d = idle_at(&ctx, &mut q, idle).as_secs_f64();
         assert!(d > 3.0 && d <= crate::notify::LIFE + EXPIRY_SLACK, "wake at expiry: {d}");
         // the asked wake comes: the toast is gone and nothing more is asked

@@ -30,6 +30,6 @@
  "collab_diff.reveal.back": "Backwards",
  "collab_diff.reveal.close": "Close",
  "collab_diff.reveal.nothing": "Nothing to show: no changed element is in the 3D scene.",
- "collab_diff.reveal.journal_busy": "Reading the journal...",
+ "collab_diff.reveal.journal_busy": "Reading the journal…",
  "collab_diff.reveal.journal_play": "Play journal"
 }

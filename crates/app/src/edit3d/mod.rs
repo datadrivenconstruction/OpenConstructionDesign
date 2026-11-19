@@ -1681,7 +1681,7 @@ pub fn register(a: &mut EditorApp) {
             open(a, Tool::Measure);
         }
     });
-    a.register_command("e3d.measure.clear", |a| {
+    a.register_command("e3d.measure.gap", |a| {
         a.view.e3.ms.mode = measure_saved::Mode::Clear;
         if a.view.e3.tool != Tool::Measure {
             open(a, Tool::Measure);
@@ -1755,7 +1755,7 @@ pub const COMMANDS: [&str; 19] = [
     "e3d.box",
     "e3d.measure",
     "e3d.measure.distance",
-    "e3d.measure.clear",
+    "e3d.measure.gap",
     "e3d.measure.angle",
     "e3d.measure.area",
     "e3d.measure.volume",

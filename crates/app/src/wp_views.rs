@@ -62,7 +62,7 @@ fn paint(p: &egui::Painter, a: Pos2, b: Pos2, name: &str, t: &Tokens) {
     // the name sits at the visible end nearer the top left, inside the view
     let at = if (a.x, a.y) <= (b.x, b.y) { a } else { b };
     let clip = p.clip_rect().shrink(4.0);
-    let font = egui::FontId::proportional(12.0);
+    let font = ddc_ui::typo::font(ddc_ui::typo::Role::Small);
     let g = p.layout_no_wrap(name.to_string(), font, t.accent);
     let size = g.size();
     let mut pos = at + egui::vec2(6.0, -size.y - 4.0);

@@ -895,7 +895,7 @@ mod tests {
         for c in cats() {
             let plain = attach_label(&c, None);
             let sized = attach_label(&c, Some(13_000_000));
-            assert!(!plain.starts_with("update_check.") && !sized.starts_with("update_check."));
+            assert!(!plain.contains("update_check") && !sized.contains("update_check"));
             assert!(!plain.contains(char::is_numeric));
         }
         assert!(attach_label(&cats()[0], Some(13_000_000)).contains("12.4\u{a0}MB"));

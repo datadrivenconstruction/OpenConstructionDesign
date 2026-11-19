@@ -250,10 +250,17 @@ fn all_masks(d: Direction, px: u32) -> Vec<(&'static str, Vec<f32>)> {
     names().iter().map(|n| (*n, mask(d, n, px))).collect()
 }
 
+/// Glyphs drawn the same on purpose (one AI glyph); mirrors `TWINS` in tools/icons/check.py.
+const TWINS: &[(&str, &str)] = &[("spark", "ai-chat")];
+
 fn alike(m: &[(&str, Vec<f32>)], bar: f32) -> Vec<String> {
+    let twin = |a: &str, b: &str| TWINS.iter().any(|t| *t == (a, b) || *t == (b, a));
     let mut bad = Vec::new();
     for (i, (a, ma)) in m.iter().enumerate() {
         for (b, mb) in &m[i + 1..] {
+            if twin(*a, *b) {
+                continue;
+            }
             let d = share_differing(ma, mb);
             if d < bar {
                 bad.push(format!("{a} ~ {b}: {d:.3}"));
@@ -359,7 +366,7 @@ fn size_picks_its_optical_master() {
     }
     for n in ["wall", "select", "close"] {
         let s20 = svg(Direction::Outline, 20, n).unwrap();
-        let img = rasterize(n, 20).unwrap();
+        let img = rasterize_as(Direction::Outline, n, 20, Layer::All).unwrap();
         assert_eq!(img.pixels, rasterize_svg(s20, 20).unwrap().pixels, "{n}");
         let s24 = svg(Direction::Outline, 24, n).unwrap();
         assert_ne!(img.pixels, rasterize_svg(s24, 20).unwrap().pixels, "{n}");
@@ -528,15 +535,19 @@ fn style_is_one_data_switch() {
     assert_eq!(
         st,
         Style {
-            base: Direction::Outline,
-            active: Direction::Filled,
+            base: Direction::Duotone,
+            active: Direction::Duotone,
             large: Direction::Duotone
         },
-        "icon style: outline everywhere, filled for the active tool, duotone for illustrations"
+        "icon style: the two-tone set (A3) is the default everywhere"
     );
-    assert_eq!(resolve("wall", 20), (Direction::Outline, "wall"));
-    assert_eq!(resolve("wall.fill", 20), (Direction::Filled, "wall"));
+    assert_eq!(resolve("wall", 20), (Direction::Duotone, "wall"));
+    assert_eq!(resolve("wall.fill", 20), (Direction::Duotone, "wall"));
     assert_eq!(resolve("wall", 48), (Direction::Duotone, "wall"));
+    let studio = set("studio").unwrap().style();
+    assert_eq!(resolve_with(studio, "wall", 20), (Direction::Outline, "wall"));
+    assert_eq!(resolve_with(studio, "wall.fill", 20), (Direction::Filled, "wall"));
+    assert_eq!(resolve_with(studio, "wall", 48), (Direction::Duotone, "wall"));
     let b: Style =
         serde_json::from_str(r#"{"base":"duotone","active":"duotone","large":"duotone"}"#).unwrap();
     for (n, px) in [("wall", 16), ("wall.fill", 20), ("wall", 32)] {

@@ -341,6 +341,13 @@ def table_(g):
     return table(g, 2.75, 3.75, 21.25, 20.25, rows=(8.75, 14.25), cols=(9.75,))
 
 
+@icon("schedules", "Schedules")
+def schedules(g):
+    return [("S", g.rect(2.75, 3.75, 21.25, 20.25, 1)),
+            ("D", g.p(("M", 2.75, 9.25), ("H", 21.25))), ("D", g.p(("M", 2.75, 14.75), ("H", 21.25))),
+            ("D", g.p(("M", 9.25, 9.25), ("V", 20.25)))]
+
+
 @icon("table-open", "Table open")
 def table_open(g):
     return [("S", notch(g, 2.75, 3.75, 21.25, 20.25, ny=13.75)),
@@ -425,21 +432,47 @@ def xlsx_delta(g):
     return ngrid(g) + tri_badge(g)
 
 
+def _out_arrow(g):
+    return [("L", g.p(("M", 16.75, 15.25), ("H", 21.25))),
+            ("L", g.poly([(18.75, 12.75), (21.25, 15.25), (18.75, 17.75)]))]
+
+
 @icon("gltf-out", "Gltf out")
 def gltf_out(g):
-    c, _top = core.cube(g)
-    hex_ = c[0][1]
-    a, b = g.sx(2.75), g.sx(14.75)
-    cx, hw = (a + b) / 2, (b - a) / 2
-    yt = g.sy(8.75)
-    hh = round(6.5 * g.k * 2) / 2
-    ys = yt + hw / 2
-    mid = (cx, yt + hw / 2 + hh / 2)
-    spokes = "".join(f"M{fmt(mid[0])} {fmt(mid[1])}L{fmt(x)} {fmt(y)}"
-                     for x, y in ((cx, yt), (b, ys + hh), (a, ys + hh)))
-    return [("SF", hex_), ("D", spokes),
-            ("L", g.p(("M", 16.75, 15.25), ("H", 21.25))),
-            ("L", g.poly([(18.75, 12.75), (21.25, 15.25), (18.75, 17.75)]))]
+    """Node scene: a parent node linked to two children."""
+    return [("S", ring(g, 8.75, 6.25, 3)), ("S", ring(g, 5.5, 17.5, 2.75)), ("S", ring(g, 12, 17.5, 2.75)),
+            ("D", g.p(("M", 8.75, 9.25), ("V", 12.25), ("M", 5.5, 14.75), ("V", 12.25), ("H", 12),
+                      ("V", 14.75)))] + _out_arrow(g)
+
+
+@icon("stl-out", "Stl out")
+def stl_out(g):
+    """One triangle facet with its median."""
+    return [("S", g.poly([(2.75, 20.25), (8.75, 3.75), (14.75, 20.25)], True)),
+            ("D", g.p(("M", 8.75, 3.75), ("V", 20.25)))] + _out_arrow(g)
+
+
+@icon("obj-out", "Obj out")
+def obj_out(g):
+    """Wireframe mesh patch, no fill."""
+    return [("L", g.poly([(2.75, 7.25), (14.75, 3.75), (14.75, 17.25), (2.75, 20.75)], True)),
+            ("L", g.p(("M", 2.75, 7.25), ("L", 14.75, 17.25))),
+            ("L", g.p(("M", 8.75, 5.5), ("V", 19)))] + _out_arrow(g)
+
+
+@icon("step-out", "Step out")
+def step_out(g):
+    """B-rep block with a stepped corner and its marked edge."""
+    return [("S", g.poly([(2.75, 20.25), (2.75, 3.75), (9.25, 3.75), (9.25, 10.25), (14.75, 10.25),
+                          (14.75, 20.25)], True)),
+            ("K", g.p(("M", 9.25, 10.25), ("V", 20.25)))] + _out_arrow(g)
+
+
+@icon("3mf-out", "3mf out")
+def mf3_out(g):
+    """Printed layer stack: three slabs."""
+    return [("S", g.rect(2.75, 3.75, 14.75, 6.75, 1)), ("S", g.rect(2.75, 10.25, 14.75, 13.25, 1)),
+            ("S", g.rect(2.75, 16.75, 14.75, 20.25, 1))] + _out_arrow(g)
 
 
 def pips(g, n):

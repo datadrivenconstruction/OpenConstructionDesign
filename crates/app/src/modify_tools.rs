@@ -2777,7 +2777,7 @@ pub fn register(a: &mut EditorApp) {
         ("ann.tag_all", h_tag_all),
         ("ann.number", h_number),
         ("ann.measure_distance", h_ms_distance),
-        ("ann.measure_clear", h_ms_clear),
+        ("ann.measure_gap", h_ms_clear),
         ("ann.measure_angle", h_ms_angle),
         ("ann.measure_area", h_ms_area),
         ("mod.distribute", h_distribute),

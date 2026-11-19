@@ -33,7 +33,7 @@ pub fn frame(app: &mut EditorApp, ctx: &egui::Context) {
                 if let Some(o) = &offer {
                     ui.horizontal_wrapped(|ui| {
                         for (f, l) in o.fixes.iter().zip(&labels) {
-                            if ui.button(l).clicked() {
+                            if ddc_ui::widgets::Button::secondary(l).show(ui, &app.sh.theme).clicked() {
                                 chosen = Some(f.clone());
                             }
                         }

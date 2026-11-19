@@ -117,7 +117,6 @@
  "settings.lang_desc": "すぐに適用されます",
  "settings.lang.auto": "システム",
  "settings.lang.ru": "Русский",
- "settings.lang.en": "English",
  "settings.units": "長さの単位",
  "settings.units_desc": "すべてのパネルと新しい要素に適用",
  "settings.units.metric": "メートル法",

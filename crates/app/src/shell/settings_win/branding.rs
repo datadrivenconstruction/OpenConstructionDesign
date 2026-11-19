@@ -23,10 +23,10 @@ pub(super) const DEFAULT: K = K("branding.default", "branding.default_desc");
 /// Height of the drop zone.
 const ZONE_H: f32 = 150.0;
 /// The two backgrounds the logo is previewed on: a white sheet and a dark screen.
-const PAPER: Color32 = Color32::from_rgb(0xFF, 0xFF, 0xFF);
-const NIGHT: Color32 = Color32::from_rgb(0x1E, 0x20, 0x24);
-const ON_PAPER: Color32 = Color32::from_rgb(0x5B, 0x61, 0x6B);
-const ON_NIGHT: Color32 = Color32::from_rgb(0xA8, 0xAE, 0xB8);
+const PAPER: Color32 = Color32::from_rgb(0xFF, 0xFF, 0xFF); // design-lint: data (fixed preview backdrop)
+const NIGHT: Color32 = Color32::from_rgb(0x1E, 0x20, 0x24); // design-lint: data (fixed preview backdrop)
+const ON_PAPER: Color32 = Color32::from_rgb(0x5B, 0x61, 0x6B); // design-lint: data (caption ink on the fixed backdrop)
+const ON_NIGHT: Color32 = Color32::from_rgb(0xA8, 0xAE, 0xB8); // design-lint: data (caption ink on the fixed backdrop)
 /// Room around the logo inside a swatch, and the strip under it for the caption.
 const PAD: f32 = 14.0;
 const CAPTION_H: f32 = 22.0;
@@ -211,7 +211,7 @@ fn swatch(ui: &egui::Ui, th: &Theme, rect: egui::Rect, pic: &Pic, bg: Color32, i
         let size = Vec2::new(pic.w as f32 * k, pic.h as f32 * k);
         let at = egui::Rect::from_center_size(area.center(), size);
         let uv = egui::Rect::from_min_max(egui::pos2(0.0, 0.0), egui::pos2(1.0, 1.0));
-        p.image(pic.tex.id(), at, uv, Color32::WHITE);
+        p.image(pic.tex.id(), at, uv, Color32::WHITE); // design-lint: data (identity image tint)
     }
     let g = shell_kit::elided(ui, label, th.font(Role::Caption), ink, rect.width() - 2.0 * PAD);
     let pos = egui::pos2(rect.min.x + PAD, rect.max.y - PAD / 2.0 - g.size().y - 2.0);

@@ -431,8 +431,8 @@ mod tests {
         assert_eq!(texts(&q), ["e2", "e3", "e4"], "newest errors, at most three");
         assert_eq!(q.overflow(), 2);
         // an info toast still gets a slot and expires on its own
-        q.push(Level::Info, "saved", None);
-        assert_eq!(texts(&q), ["e3", "e4", "saved"]);
+        q.push(Level::Info, "Saved", None);
+        assert_eq!(texts(&q), ["e3", "e4", "Saved"]);
         assert_eq!(q.overflow(), 3);
         q.tick(LIFE + 0.1, None);
         assert_eq!(texts(&q), ["e2", "e3", "e4"]);

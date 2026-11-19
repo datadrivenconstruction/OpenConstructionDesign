@@ -127,6 +127,15 @@ fn lone_group(int: &str, frac: &str) -> bool {
 /// One number in canonical form for `str::parse::<f64>`: optional `-`, digits, optional
 /// `.digits`, optional `e[+-]digits`; groups removed. Surrounding spaces are ignored.
 pub fn canonical(s: &str, mark: DecimalMark) -> Result<String, NumError> {
+    // the Arabic thousands separator only ever groups: read as a group space, never as a comma
+    // that a comma-decimal locale would take for the decimal mark
+    let grouped;
+    let s = if s.contains('\u{66C}') {
+        grouped = s.replace('\u{66C}', "\u{202f}");
+        grouped.as_str()
+    } else {
+        s
+    };
     let folded = fold_digits(s);
     let t = folded.trim_matches(|c: char| c.is_whitespace() || is_group_space(c));
     if t.is_empty() {

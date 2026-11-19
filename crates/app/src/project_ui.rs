@@ -1455,10 +1455,10 @@ pub const EXPORT_ROWS: [(&str, &str, &str); 8] = [
     ("data.export_ifc4x3", "fmenu.export.ifc4x3", "ifc-out-4x3"),
     ("data.export_ifc2x3", "fmenu.export.ifc2x3", "ifc-out-2x3"),
     ("data.export_gltf", "fmenu.export.glb", "gltf-out"),
-    ("data.export_stl", "fmenu.export.stl", "gltf-out"),
-    ("data.export_obj", "fmenu.export.obj", "gltf-out"),
-    ("data.export_step", "fmenu.export.step", "gltf-out"),
-    ("data.export_3mf", "fmenu.export.3mf", "gltf-out"),
+    ("data.export_stl", "fmenu.export.stl", "stl-out"),
+    ("data.export_obj", "fmenu.export.obj", "obj-out"),
+    ("data.export_step", "fmenu.export.step", "step-out"),
+    ("data.export_3mf", "fmenu.export.3mf", "3mf-out"),
     ("data.export_pdf", "fmenu.export.pdf", "pdf-out"),
 ];
 

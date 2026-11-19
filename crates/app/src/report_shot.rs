@@ -78,7 +78,7 @@ thread_local! {
 
 /// The 3D ground while a report image is painted on this thread: plain white.
 pub fn paper() -> Option<Color32> {
-    PAPER.with(Cell::get).then_some(Color32::WHITE)
+    PAPER.with(Cell::get).then_some(Color32::WHITE) // design-lint: data (report paper is white in both modes)
 }
 
 /// The plan level: `pick` is a level name or a storey number counted from the ground floor

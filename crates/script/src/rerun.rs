@@ -134,6 +134,19 @@ fn with_slot(op: &Op, slot: u32) -> Op {
     }
 }
 
+/// Component tag of a solid (only the first part of a placed group carries one).
+fn role_of(op: &Op) -> Option<&ddc_ops::RoleTag> {
+    match op {
+        Op::Geometry(GeoOp::Solid { role, .. }) => role.as_ref(),
+        _ => None,
+    }
+}
+
+/// The placed group a part key belongs to: `blade1` for `blade1/section2`.
+fn group_of(key: &str) -> Option<&str> {
+    key.rsplit_once('/').map(|(g, _)| g)
+}
+
 fn is_mass(op: &Op) -> bool {
     matches!(op, Op::Geometry(GeoOp::Mass { .. }))
 }
@@ -206,6 +219,21 @@ pub fn rerun_envelope(
         slot += 1;
     };
     let keys: BTreeSet<&str> = new.parts.iter().map(|p| p.key.as_str()).collect();
+    // groups whose component tag moves: every part of the group is made again with the new
+    // tag, none is reshaped in place under the old one
+    let moved: BTreeSet<&str> = new
+        .parts
+        .iter()
+        .filter_map(|p| {
+            let (o, n) = (old_op.get(p.key.as_str())?, op_of(new, p.slot)?);
+            let tagged = role_of(o).is_some() || role_of(n).is_some();
+            if tagged && role_of(o) != role_of(n) {
+                group_of(&p.key)
+            } else {
+                None
+            }
+        })
+        .collect();
     for p in &new.parts {
         let op = op_of(new, p.slot).ok_or("internal: part without op")?;
         let Some(l) = link.get(p.key.as_str()) else {
@@ -213,8 +241,9 @@ pub fn rerun_envelope(
             continue;
         };
         let target = Ref::id(l.cat, l.id);
+        let stale = group_of(&p.key).is_some_and(|g| moved.contains(g));
         match old_op.get(p.key.as_str()) {
-            Some(o) if same(o, op) => plan.kept += 1,
+            Some(o) if same(o, op) && !stale => plan.kept += 1,
             Some(o) if is_mass(o) || is_mass(op) => {
                 return Err(format!(
                     "part `{}` is a mass cut or joined by a boolean and the new params change \
@@ -222,7 +251,7 @@ pub fn rerun_envelope(
                     p.key
                 ))
             }
-            Some(o) if reshape(o, op).is_some() => {
+            Some(o) if !stale && reshape(o, op).is_some() => {
                 let form = reshape(o, op).ok_or("internal")?;
                 // reshape keeps the id: undo, links and references stay valid
                 ops.push(Op::Geometry(GeoOp::Reshape { target, form }));

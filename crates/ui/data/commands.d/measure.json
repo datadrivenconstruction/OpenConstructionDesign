@@ -10,7 +10,7 @@
     "group": "edit3d"
   },
   {
-    "id": "e3d.measure.clear",
+    "id": "e3d.measure.gap",
     "icon": "",
     "mnemonic": null,
     "shortcuts": [],
@@ -80,7 +80,7 @@
     "group": "text"
   },
   {
-    "id": "ann.measure_clear",
+    "id": "ann.measure_gap",
     "icon": "",
     "mnemonic": null,
     "shortcuts": [],

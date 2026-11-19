@@ -12,7 +12,7 @@
    "font": "inter",
    "text_size": 1.0,
    "ui_scale": 1.0,
-   "icons": "studio",
+   "icons": "duotone_all",
    "ribbon": "full",
    "light": {},
    "dark": {}

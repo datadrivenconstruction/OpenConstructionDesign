@@ -424,9 +424,26 @@ mod tests {
 
     #[test]
     fn regional_locale_falls_back_to_base_then_en() {
+        // keys picked from the data, so a new regional translation never stales the check
         let c = Catalog::new(Lang::EsMx);
-        assert_eq!(c.t("settings.lang.en"), "English");
-        assert_eq!(c.t_in(Lang::PtBr, "settings.lang.en"), "English");
+        let (mx, es, en) = (c.table(Lang::EsMx), c.table(Lang::Es), c.table(Lang::En));
+        let text = |v: &Value| v.as_str().map(str::to_owned);
+        let base = es
+            .iter()
+            .find(|(k, v)| !mx.contains_key(*k) && v.is_string() && en.get(*k) != Some(*v))
+            .expect("a key es-MX leaves to es");
+        assert_eq!(Some(c.t(base.0)), text(base.1), "{}", base.0);
+        let last = en
+            .iter()
+            .find(|(k, v)| v.is_string() && !mx.contains_key(*k) && !es.contains_key(*k))
+            .expect("a key neither es-MX nor es has");
+        assert_eq!(Some(c.t(last.0)), text(last.1), "{}", last.0);
+        let (br, pt) = (c.table(Lang::PtBr), c.table(Lang::Pt));
+        let last = en
+            .iter()
+            .find(|(k, v)| v.is_string() && !br.contains_key(*k) && !pt.contains_key(*k))
+            .expect("a key neither pt-BR nor pt has");
+        assert_eq!(Some(c.t_in(Lang::PtBr, last.0)), text(last.1), "{}", last.0);
         assert_eq!(plural_category(Lang::Ar, 11), "many");
         assert_eq!(plural_category(Lang::Pl, 22), "few");
         assert_eq!(plural_category(Lang::Ja, 1), "other");

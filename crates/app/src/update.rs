@@ -908,7 +908,7 @@ mod tests {
         for c in cats() {
             let (_, body) = phase_text(&c, Phase::Error, Some(&o));
             assert!(body.contains("connection refused"));
-            assert!(!c.t(primary_key(Primary::Retry)).starts_with("update_check."));
+            assert!(!c.t(primary_key(Primary::Retry)).contains("update_check"));
         }
         assert_eq!(primary_for(Phase::Error), Some(Primary::Retry));
     }

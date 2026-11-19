@@ -3,23 +3,21 @@
 """The 24 masters of the v2 set (wall ... model-check): the reference drawings for every family."""
 import math
 
-from core import V, chevron, cube, fmt, g_poly, icon, model, px_circ
+from core import V, chevron, cube, cursor, fmt, g_poly, icon, model, px_circ
 
 
 @icon("select", "Select")
 def select(g):
-    if g.n == 16 and g.ident:  # redrawn for 1 px: vertical spine and 45/2:1 edges stay solid
-        return [("S", g_poly([(3.5, 2.5), (3.5, 13.5), (6.5, 10.5), (8.5, 14.5), (10.5, 13.5),
-                               (8.5, 9.5), (10.5, 9.5)]))]
-    pts = [(4.5, 4.5), (19.5, 9.6), (14.15, 11.65), (19.55, 17.05), (17.05, 19.55), (11.65, 14.15),
-           (9.6, 19.5)]
-    return [("S", g.poly(pts, True))]
+    if g.n == 16 and g.ident:  # 1 px master: the dart on whole-pixel corners
+        return [("S", g_poly([(3.5, 3.5), (13.5, 8.5), (8.5, 8.5), (8.5, 13.5)]))]
+    return [cursor(g, 4.5, 4.5, 1.0)]
 
 
 @icon("undo", "Undo")
 def undo(g):
-    return [("L", g.poly([(8.25, 3.75), (3.75, 8.25), (8.25, 12.75)])),
-            ("L", g.p(("M", 3.75, 8.25), ("H", 14.25), ("A", None, 0, 1, 14.25, 20.25), ("H", 8.25)))]
+    """A rising hook into a solid head pointing back (left)."""
+    return [("L", g.p(("M", 20.25, 19.25), ("Q", 20.25, 8.75, 10.75, 8.75))),
+            ("K", g.poly([(3.25, 8.75), (10.75, 3.75), (10.75, 13.75)], True))]
 
 
 @icon("wall", "Wall")

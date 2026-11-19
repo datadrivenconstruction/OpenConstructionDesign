@@ -217,7 +217,7 @@ fn rules_catch_planted_names() {
     for k in ["ux67i.title", "g8.cube", "a.b", "xl.msg.xs6_extra", "tl2fam.done"] {
         assert!(bad_key(&r, k), "{k} should be caught");
     }
-    for k in ["v3d.cube", "mep3d.deleted", "ux.m2_unit", "sched.ifc4x3", "view_gfx.title"] {
+    for k in ["v3d.cube", "mep3d.removed", "ux.m2_unit", "sched.ifc4x3", "view_gfx.title"] {
         assert!(!bad_key(&r, k), "{k} should pass");
     }
     assert!(bad_file(&r, "ux67i") && bad_file(&r, "ai1_tiers") && bad_file(&r, "b"));

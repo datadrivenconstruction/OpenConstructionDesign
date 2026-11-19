@@ -1,7 +1,7 @@
 [
  {
   "id": "mgr.schedules",
-  "icon": "project-params",
+  "icon": "schedules",
   "mnemonic": "SM",
   "shortcuts": [],
   "tab": "manage",

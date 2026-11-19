@@ -116,7 +116,7 @@
  "topo.import.layers": "Lag med terreng",
  "topo.import.layer": "{name} – {n} objekter, {z} med kote",
  "topo.import.keep_flat": "Også objekter på kote 0 (rammer og annotasjon ligger vanligvis der)",
- "topo.import.inserts": "Innsettingspunkter for blokker som måle­punkter",
+ "topo.import.inserts": "Innsettingspunkter for blokker som målepunkter",
  "topo.import.breaklines": "Høydekurver og polylinjer som bruddlinjer",
  "topo.import.ok": "Importer",
  "topo.import.cancel": "Avbryt",

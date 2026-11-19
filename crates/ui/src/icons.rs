@@ -2,6 +2,8 @@
 //! (`tools/icons/gen.py`, ICONS_V4.md). Each size draws the optical master that matches its
 //! physical pixels (16 / 20 / 24, 1:1), rasterized to a white alpha mask, cached as an egui
 //! texture and tinted at draw time (`currentColor` = the caller's ink).
+//! The ribbon set `assets/icons3/<master>/<name>.svg` (`tools/icons/ribbon.py`) carries its own
+//! role colours: the light `icon.*` token values, swapped for the theme's at rasterization.
 use egui::{Color32, ColorImage, TextureHandle, TextureOptions};
 use resvg::{tiny_skia, usvg};
 use std::collections::HashMap;
@@ -14,16 +16,46 @@ pub enum Direction {
     Outline,
     Duotone,
     Filled,
+    /// Full colour from role tokens (the former default), `assets/icons3`.
+    Ribbon,
+    /// One ink at three opacities, tinted at draw time (`assets/icons_pick/hierarchical`).
+    Hierarchical,
+    /// Role-coloured surfaces with an ink edge (`assets/icons_pick/color`).
+    Color,
+    /// Thin single-weight strokes in role colours (`assets/icons_pick/monoline`).
+    Monoline,
+    /// Role-coloured glyph on an isometric plate (`assets/icons_pick/isometric`).
+    Isometric,
 }
 
 impl Direction {
+    /// The monochrome directions of `docs/design/icons_v4` (the other sets live apart).
     pub const ALL: [Direction; 3] = [Direction::Outline, Direction::Duotone, Direction::Filled];
     pub fn dir(self) -> &'static str {
         match self {
             Direction::Outline => "outline",
             Direction::Duotone => "duotone",
             Direction::Filled => "filled",
+            Direction::Ribbon => "ribbon",
+            Direction::Hierarchical => "hierarchical",
+            Direction::Color => "color",
+            Direction::Monoline => "monoline",
+            Direction::Isometric => "isometric",
         }
+    }
+    /// Files carry their own role colours (swapped for the dark theme at rasterization).
+    pub fn is_colour(self) -> bool {
+        matches!(
+            self,
+            Direction::Ribbon | Direction::Color | Direction::Monoline | Direction::Isometric
+        )
+    }
+    /// Directions of the style pack `assets/icons_pick`.
+    pub fn is_pick(self) -> bool {
+        matches!(
+            self,
+            Direction::Hierarchical | Direction::Color | Direction::Monoline | Direction::Isometric
+        )
     }
 }
 
@@ -50,6 +82,9 @@ pub struct IconSet {
     pub base: Direction,
     pub active: Direction,
     pub large: Direction,
+    /// Kept so saved preferences and looks still resolve; not offered by the pickers.
+    #[serde(default)]
+    pub legacy: bool,
 }
 
 impl IconSet {
@@ -74,14 +109,20 @@ fn style_file() -> &'static StyleFile {
     S.get_or_init(|| serde_json::from_str(STYLE_JSON).expect("data/icon_style.json"))
 }
 
-/// Every icon set the settings offer, in their order.
+/// Every icon set the pickers offer (onboarding, settings), in their order.
 pub fn sets() -> &'static [IconSet] {
+    static V: OnceLock<Vec<IconSet>> = OnceLock::new();
+    V.get_or_init(|| style_file().sets.iter().copied().filter(|s| !s.legacy).collect())
+}
+
+/// Every set that resolves, the retired ones included.
+pub fn all_sets() -> &'static [IconSet] {
     &style_file().sets
 }
 
 /// The set with `id`; None for an unknown id.
 pub fn set(id: &str) -> Option<&'static IconSet> {
-    sets().iter().find(|s| s.id == id)
+    all_sets().iter().find(|s| s.id == id)
 }
 
 /// The product default set.
@@ -113,8 +154,26 @@ fn table() -> &'static HashMap<&'static str, &'static str> {
     T.get_or_init(|| crate::fragments::ICONS_V4.iter().copied().collect())
 }
 
+fn ribbon_table() -> &'static HashMap<&'static str, &'static str> {
+    static T: OnceLock<HashMap<&'static str, &'static str>> = OnceLock::new();
+    T.get_or_init(|| crate::fragments::ICONS_RIBBON.iter().copied().collect())
+}
+
+fn pick_table() -> &'static HashMap<&'static str, &'static str> {
+    static T: OnceLock<HashMap<&'static str, &'static str>> = OnceLock::new();
+    T.get_or_init(|| crate::fragments::ICONS_PICK.iter().copied().collect())
+}
+
 /// The file `<direction>/<master>/<name>.svg`.
 pub fn svg(dir: Direction, master: u32, name: &str) -> Option<&'static str> {
+    if dir == Direction::Ribbon {
+        return ribbon_table().get(format!("{master}/{name}").as_str()).copied();
+    }
+    if dir.is_pick() {
+        return pick_table()
+            .get(format!("{}/{master}/{name}", dir.dir()).as_str())
+            .copied();
+    }
     table()
         .get(format!("{}/{master}/{name}", dir.dir()).as_str())
         .copied()
@@ -163,11 +222,15 @@ pub enum IconError {
 
 /// Which part of a file a texture holds: everything, the ink without the duotone accent, or the
 /// accent alone (surface at its 20 % and the spark solid, tinted with the theme accent).
+/// `Colour` / `Gray`: a ribbon file in its own colours for the light (`false`) or dark theme,
+/// grey for a disabled command.
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
 pub enum Layer {
     All,
     Ink,
     Accent,
+    Colour(bool),
+    Gray(bool),
 }
 
 /// Rasterize an icon reference at `px` physical pixels (logical = physical) as one mask.
@@ -184,8 +247,14 @@ pub fn rasterize_as(
     layer: Layer,
 ) -> Result<ColorImage, IconError> {
     let svg = svg(dir, master_for(px), name).ok_or_else(|| IconError::Unknown(name.into()))?;
-    let svg = split_layer(svg, layer);
-    rasterize_svg(&svg, px).map_err(|e| match e {
+    let res = match layer {
+        Layer::Colour(dark) => rasterize_colour(svg, px, dark),
+        Layer::Gray(dark) => rasterize_colour(svg, px, dark).map(grey),
+        // the coverage of a ribbon file as a white mask, like every other direction
+        Layer::All if dir.is_colour() => rasterize_colour(svg, px, false).map(white),
+        _ => rasterize_svg(&split_layer(svg, layer), px),
+    };
+    res.map_err(|e| match e {
         IconError::Parse(_, m) => IconError::Parse(name.into(), m),
         e => e,
     })
@@ -223,12 +292,70 @@ pub fn split_layer(svg: &str, layer: Layer) -> String {
     out
 }
 
+/// `(light, theme)` values of the `icon.*` role tokens: a ribbon file is drawn in the light
+/// values, the dark theme swaps each for its own.
+pub fn role_colours(dark: bool) -> &'static [(String, String)] {
+    static P: OnceLock<[Vec<(String, String)>; 2]> = OnceLock::new();
+    let p = P.get_or_init(|| {
+        use crate::theme::{Mode, Tokens};
+        let t = Tokens::embedded().expect("embedded tokens.json is validated by tests");
+        let of = |m| {
+            t.palette(Mode::Light)
+                .iter()
+                .filter(|(k, _)| k.starts_with("icon."))
+                .map(|(k, v)| (v.clone(), t.palette(m)[k].clone()))
+                .collect::<Vec<_>>()
+        };
+        [of(Mode::Light), of(Mode::Dark)]
+    });
+    &p[usize::from(dark)]
+}
+
+/// A ribbon glyph without role colours (controls): drawn as a mask in the caller's ink.
+pub fn is_mono(svg: &str) -> bool {
+    svg.contains("currentColor")
+}
+
+/// A ribbon file in the theme's role colours at `px` (premultiplied RGBA).
+pub fn rasterize_colour(svg: &str, px: u32, dark: bool) -> Result<ColorImage, IconError> {
+    let mut s = svg.to_string();
+    if dark {
+        for (light, theme) in role_colours(true) {
+            s = s.replace(light.as_str(), theme);
+        }
+    }
+    render_svg(&s.replace("currentColor", "#FFFFFF"), px)
+}
+
+/// Coverage only: every pixel white at its own alpha.
+fn white(mut img: ColorImage) -> ColorImage {
+    for p in &mut img.pixels {
+        let a = p.a();
+        *p = Color32::from_rgba_premultiplied(a, a, a, a);
+    }
+    img
+}
+
+/// Luminance only: the disabled look of a coloured glyph.
+fn grey(mut img: ColorImage) -> ColorImage {
+    for p in &mut img.pixels {
+        let l = 0.3 * p.r() as f32 + 0.59 * p.g() as f32 + 0.11 * p.b() as f32;
+        let l = l.round().min(p.a() as f32) as u8;
+        *p = Color32::from_rgba_premultiplied(l, l, l, p.a());
+    }
+    img
+}
+
 /// White mask of `svg` scaled to `px` (1:1 when `px` is the file's master).
 pub fn rasterize_svg(svg: &str, px: u32) -> Result<ColorImage, IconError> {
     let svg = svg
         .replace("currentColor", "#FFFFFF")
         .replace(FILE_ACCENT, "#FFFFFF");
-    let tree = usvg::Tree::from_str(&svg, &usvg::Options::default())
+    render_svg(&svg, px)
+}
+
+fn render_svg(svg: &str, px: u32) -> Result<ColorImage, IconError> {
+    let tree = usvg::Tree::from_str(svg, &usvg::Options::default())
         .map_err(|e| IconError::Parse(String::new(), e.to_string()))?;
     let mut pm = tiny_skia::Pixmap::new(px, px).ok_or(IconError::Size(px))?;
     let s = px as f32 / tree.size().width().max(1.0);
@@ -256,6 +383,8 @@ pub enum Tint {
 
 /// Opacity of a disabled icon.
 pub const DISABLED_INK: f32 = 0.4;
+/// Ink alpha under which a coloured ribbon glyph paints grey (a disabled command).
+pub const DISABLED_BELOW: u8 = 128;
 
 pub fn tint(th: &crate::Theme, t: Tint) -> Color32 {
     match t {
@@ -346,6 +475,17 @@ impl IconCache {
         let uv = egui::Rect::from_min_max(egui::pos2(0.0, 0.0), egui::pos2(1.0, 1.0));
         let ctx = ui.ctx().clone();
         let (dir, bare) = self.resolve(name, logical);
+        if dir.is_colour() && svg(dir, master_for(logical), bare).is_some_and(|s| !is_mono(s)) {
+            // own colours: the caller's ink only fades them; a faint ink is a disabled command
+            let dark = crate::theme::of(&ctx).mode == crate::theme::Mode::Dark;
+            let off = color.a() < DISABLED_BELOW;
+            let layer = if off { Layer::Gray(dark) } else { Layer::Colour(dark) };
+            let fade = if off { color.a() as f32 / 255.0 } else { 1.0 };
+            if let Some(t) = self.layer(&ctx, name, dir, bare, logical, layer) {
+                ui.painter().image(t.id(), rect, uv, Color32::WHITE.gamma_multiply(fade));
+            }
+            return;
+        }
         if dir != Direction::Duotone {
             let t = self.get(&ctx, name, logical);
             ui.painter().image(t.id(), rect, uv, color);
@@ -394,4 +534,12 @@ fn placeholder(px: u32) -> ColorImage {
 #[cfg(test)]
 #[path = "icons_tests.rs"]
 mod tests;
+
+#[cfg(test)]
+#[path = "icons_ribbon_tests.rs"]
+mod ribbon_tests;
+
+#[cfg(test)]
+#[path = "icons_pick_tests.rs"]
+mod pick_tests;
 

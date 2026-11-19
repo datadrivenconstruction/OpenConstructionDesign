@@ -574,6 +574,27 @@ def ungroup(g):
             + [("S", g.rect(5.75, 5.75, 10.25, 10.25)), ("S", g.circ(13.75, 13.75, 18.25, 18.25))])
 
 
+# ---------------------------------------------------------------- assemblies
+
+def asm_base(g):
+    """An assembly: a base plate carrying two parts of different height."""
+    return [("S", g.rect(2.75, 15.75, 21.25, 20.25)), ("S", g.rect(4.75, 4.75, 9.25, 15.75)),
+            ("S", g.rect(14.75, 8.75, 19.25, 15.75))]
+
+
+reg("asm-select", "Выбрать все экземпляры сборки", _badged(asm_base, "cursor"))
+reg("asm-exclude", "Исключить деталь из экземпляра", _badged(asm_base, "minus"))
+reg("asm-restore", "Вернуть исключённые детали", _badged(asm_base, "refresh"))
+
+
+@icon("asm-disassemble", "Разобрать сборку")
+def asm_disassemble(g):
+    """The assembly exploded: parts lifted off the plate, an arrow between them."""
+    return [("S", g.rect(2.75, 17.75, 21.25, 21.25)), ("S", g.rect(2.75, 2.75, 7.25, 12.25)),
+            ("S", g.rect(16.75, 5.75, 21.25, 12.25)),
+            ("L", g.p(("M", 11.75, 15.25), ("V", 4.75))), chevron(g, 11.75, 4.75, "u", 2.5)]
+
+
 # ---------------------------------------------------------------- visibility
 
 @icon("hide", "Hide")
@@ -625,8 +646,9 @@ reg("measure-3d", "Measure 3d", _badged(measure, "cube", (2, 7, 19, 24)))
 
 @icon("redo", "Redo")
 def redo(g):
-    return [("L", g.poly([(15.75, 3.75), (20.25, 8.25), (15.75, 12.75)])),
-            ("L", g.p(("M", 20.25, 8.25), ("H", 9.75), ("A", None, 0, 0, 9.75, 20.25), ("H", 15.75)))]
+    """The undo hook mirrored: a solid head pointing forward (right)."""
+    return [("L", g.p(("M", 3.75, 19.25), ("Q", 3.75, 8.75, 13.25, 8.75))),
+            ("K", g.poly([(20.75, 8.75), (13.25, 3.75), (13.25, 13.75)], True))]
 
 
 @icon("repeat", "Repeat")

@@ -72,7 +72,35 @@ fn icons_v4(root: &str) -> String {
     format!("pub const ICONS_V4: &[(&str, &str)] = &[\n{body}];\n")
 }
 
-/// `I18N_ALL`: `(locale code, fragments)` for every folder `data/i18n/<code>/`, sorted by code.
+/// The ribbon set `assets/icons3/<master>/<name>.svg` keyed `master/name`
+/// (tools/icons/ribbon.py writes it; ICONS_V4.md).
+fn icons_ribbon(root: &str) -> String {
+    let mut body = String::new();
+    for px in ["16", "20", "24"] {
+        for f in list_ext(&format!("{root}/{px}"), "svg") {
+            let stem = Path::new(&f).file_stem().unwrap().to_string_lossy().into_owned();
+            body += &format!("    ({:?}, {}),\n", format!("{px}/{stem}"), include(&f));
+        }
+    }
+    format!("pub const ICONS_RIBBON: &[(&str, &str)] = &[\n{body}];\n")
+}
+
+/// The style pack `assets/icons_pick/<style>/<master>/<name>.svg` keyed `style/master/name`
+/// (tools/icons/styles.py writes it).
+fn icons_pick(root: &str) -> String {
+    let mut body = String::new();
+    for style in ["hierarchical", "color", "monoline", "isometric"] {
+        for px in ["16", "20", "24"] {
+            for f in list_ext(&format!("{root}/{style}/{px}"), "svg") {
+                let stem = Path::new(&f).file_stem().unwrap().to_string_lossy().into_owned();
+                body += &format!("    ({:?}, {}),\n", format!("{style}/{px}/{stem}"), include(&f));
+            }
+        }
+    }
+    format!("pub const ICONS_PICK: &[(&str, &str)] = &[\n{body}];\n")
+}
+
+/// `I18N_ALL`:`(locale code, fragments)` for every folder `data/i18n/<code>/`, sorted by code.
 fn i18n_all(root: &str) -> String {
     println!("cargo:rerun-if-changed={root}");
     let dir = Path::new(&manifest_dir()).join(root);
@@ -107,6 +135,8 @@ fn main() {
     s += &arr("HELP_EN_FRAGMENTS",&list_ext("data/help/en", "md"));
     s += &arr("HELP_RU_FRAGMENTS", &list_ext("data/help/ru", "md"));
     s += &icons_v4("../../docs/design/icons_v4");
+    s += &icons_ribbon("../../assets/icons3");
+    s += &icons_pick("../../assets/icons_pick");
     println!("cargo:rerun-if-changed=data/icon_style.json");
     let out = Path::new(&env::var("OUT_DIR").unwrap()).join("fragments.rs");
     fs::write(out, s).unwrap();

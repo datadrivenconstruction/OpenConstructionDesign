@@ -138,7 +138,8 @@ fn raised_controls_share_the_elevated_surface() {
         assert_eq!(st.visuals.window_stroke.color, s.border_overlay);
         let h = colors(s, Variant::Secondary, Visual::Hover);
         assert_eq!(h.fill, s.bg_hover);
-        assert_eq!(h.stroke, s.border_strong);
+        // v3 (2b70f8c8a): the secondary edge is border.control in every state
+        assert_eq!(h.stroke, s.border_control);
     }
 }
 
@@ -209,7 +210,11 @@ fn shadows_are_restrained_and_ordered() {
         assert!(a.blur < b.blur && b.blur < c.blur, "{mode:?}");
         assert!(a.offset[1] < b.offset[1] && b.offset[1] < c.offset[1], "{mode:?}");
         assert!(a.color.a() < b.color.a() && b.color.a() < c.color.a(), "{mode:?}");
-        let cap = if mode == Mode::Dark { 80 } else { 45 };
+        // the deepest shadow stays within its elevation token: no code path makes it louder
+        let v: serde_json::Value = serde_json::from_str(crate::theme::TOKENS_JSON).unwrap();
+        let key = if mode == Mode::Dark { "dark" } else { "light" };
+        let alpha = v["elevation"][key]["3"]["alpha"].as_f64().unwrap();
+        let cap = (alpha * 255.0).round() as u8;
         assert!(c.color.a() <= cap, "{mode:?} deepest shadow is loud: {}", c.color.a());
     }
 }

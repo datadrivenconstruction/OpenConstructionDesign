@@ -1,0 +1,6 @@
+{
+ "mod.asm_select": "asm-select",
+ "mod.asm_exclude": "asm-exclude",
+ "mod.asm_restore": "asm-restore",
+ "mod.asm_disassemble": "asm-disassemble"
+}

@@ -413,9 +413,10 @@ pub const GRAPHIC_PAIRS: &[Pair] = &[
 ];
 
 /// Named alphas for faded canvas graphics; call sites use these, `FADED_PAIRS` checks them.
-/// ZONE_EDGE and MESH_EDGE are 0.7 (0.6 gave 2.55 and 2.59 on the light paper, below 3:1).
+/// ZONE_EDGE is 0.8: the v3 `preview` (#9A5BE0) at 0.7 gives 2.64 on the light paper, below 3:1.
+/// MESH_EDGE is 0.7 (0.6 gave 2.59).
 pub mod fade {
-    pub const ZONE_EDGE: f32 = 0.7;
+    pub const ZONE_EDGE: f32 = 0.8;
     pub const INVALID: f32 = 0.2;
     pub const MESH_EDGE: f32 = 0.7;
 }

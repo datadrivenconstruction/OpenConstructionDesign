@@ -405,7 +405,6 @@ mod tests {
             "SIL OPEN FONT LICENSE",
             "Lua.org, PUC-Rio",
             "SQLite",
-            "Phosphor Icons",
             "Noto Emoji",
             "Poly Haven",
         ] {

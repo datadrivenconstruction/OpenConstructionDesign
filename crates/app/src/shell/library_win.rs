@@ -553,7 +553,7 @@ fn card(
     );
     // A child ui, not a scope: a scope would advance the wrapped row's cursor and stagger the cards.
     let mut tui = ui.new_child(egui::UiBuilder::new().max_rect(text));
-    tui.spacing_mut().item_spacing.y = 0.0;
+    tui.spacing_mut().item_spacing.y = space::XXS;
     widgets::elided_label(&mut tui, &family_label(cat, &e.fam.name), th.font(Role::Small), s.text_primary);
     kit::elided_weak(&mut tui, &category_label(cat, e.fam.category.name()));
     if let Some(pk) = pick_of(e, None) {
@@ -622,7 +622,7 @@ fn paint_thumb(
     match tex.flatten() {
         Some(t) => {
             let uv = egui::Rect::from_min_max(egui::pos2(0.0, 0.0), egui::pos2(1.0, 1.0));
-            ui.painter().image(t.id(), rect, uv, egui::Color32::WHITE);
+            ui.painter().image(t.id(), rect, uv, egui::Color32::WHITE); // design-lint: data (identity image tint)
         }
         None => {
             ui.painter().rect_filled(rect, th.radius("lg"), th.sem().bg_sunken);

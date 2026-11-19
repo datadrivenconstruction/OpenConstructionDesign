@@ -232,10 +232,10 @@ fn conflicts(ui: &mut egui::Ui, a: &EditorApp, r: &mut Review, out: &mut Vec<Row
             "merge.resolve",
             &[("n", &r.plan.conflicts.len().to_string())],
         ));
-        if ui.button(c.t("merge.all_mine")).clicked() {
+        if ddc_ui::widgets::Button::secondary(&c.t("merge.all_mine")).show(ui, &a.sh.theme).clicked() {
             r.picks.clear();
         }
-        if ui.button(c.t("merge.all_theirs")).clicked() {
+        if ddc_ui::widgets::Button::secondary(&c.t("merge.all_theirs")).show(ui, &a.sh.theme).clicked() {
             for cf in &r.plan.conflicts {
                 r.picks.insert((cf.table.clone(), cf.id), Pick::Theirs);
             }
@@ -260,8 +260,12 @@ fn conflicts(ui: &mut egui::Ui, a: &EditorApp, r: &mut Review, out: &mut Vec<Row
                         }
                         ui.label(RichText::new(case_text(a, cf)).color(a.sh.theme.c("warning")));
                         ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
-                            ui.selectable_value(&mut pick, Pick::Theirs, c.t("merge.theirs"));
-                            ui.selectable_value(&mut pick, Pick::Mine, c.t("merge.mine"));
+                            let items = [c.t("merge.mine"), c.t("merge.theirs")];
+                            let refs: Vec<&str> = items.iter().map(String::as_str).collect();
+                            let cur = usize::from(matches!(pick, Pick::Theirs));
+                            if let Some(i) = ddc_ui::widgets::segmented(ui, &a.sh.theme, &refs, cur) {
+                                pick = if i == 1 { Pick::Theirs } else { Pick::Mine };
+                            }
                         });
                     });
                     if !cf.fields.is_empty() {
@@ -374,7 +378,7 @@ pub fn frame(w: &mut MergeWin, a: &mut EditorApp, ctx: &egui::Context) {
                         ui.label(a.sh.cat.t("merge.nothing"));
                     } else {
                         counts(ui, a, &r.plan);
-                        if ui.button(a.sh.cat.t("collab_diff.reveal.start")).clicked() {
+                        if ddc_ui::widgets::Button::secondary(&a.sh.cat.t("collab_diff.reveal.start")).show(ui, &a.sh.theme).clicked() {
                             crate::reveal::request(crate::reveal::from_merge(&r.plan), false);
                         }
                     }

@@ -174,7 +174,7 @@ fn card(ui: &egui::Ui, th: &Theme, l: &Look, r: Rect, preview_h: f32, name: &str
             .get(n)
             .and_then(|v| parse_hex(v))
             .or_else(|| base.color(mode, n).ok())
-            .unwrap_or(Color32::GRAY)
+            .unwrap_or_else(|| th.c("text.disabled"))
     };
     let painter = ui.painter_at(r.expand(2.0));
     let rad = th.radius("md");
@@ -328,6 +328,7 @@ cmds! {
     h_density_normal => "ui.density.normal", |a| a.set_pref(|p| p.density = "normal".into());
     h_density_comfortable => "ui.density.comfortable", |a| a.set_pref(|p| p.density = "comfortable".into());
     h_density_auto => "ui.density.auto", |a| a.set_pref(|p| p.density = "auto".into());
+    h_icons_ribbon => "ui.icons.ribbon", |a| icons(a, "ribbon");
     h_icons_studio => "ui.icons.studio", |a| icons(a, "studio");
     h_icons_outline => "ui.icons.outline", |a| icons(a, "outline");
     h_icons_duotone => "ui.icons.duotone", |a| icons(a, "duotone");
@@ -335,6 +336,10 @@ cmds! {
     h_icons_outline_duotone => "ui.icons.outline_duotone", |a| icons(a, "outline_duotone");
     h_icons_duotone_all => "ui.icons.duotone_all", |a| icons(a, "duotone_all");
     h_icons_filled_outline => "ui.icons.filled_outline", |a| icons(a, "filled_outline");
+    h_icons_color => "ui.icons.color", |a| icons(a, "color");
+    h_icons_hierarchical => "ui.icons.hierarchical", |a| icons(a, "hierarchical");
+    h_icons_isometric => "ui.icons.isometric", |a| icons(a, "isometric");
+    h_icons_monoline => "ui.icons.monoline", |a| icons(a, "monoline");
     h_ribbon_full => "ui.ribbon.full", |a| { a.set_ribbon_look(RibbonLook::Full); a.prefs.save() };
     h_ribbon_tabs => "ui.ribbon.tabs", |a| { a.set_ribbon_look(RibbonLook::Tabs); a.prefs.save() };
     h_ribbon_toolbar => "ui.ribbon.toolbar", |a| { a.set_ribbon_look(RibbonLook::Toolbar); a.prefs.save() };

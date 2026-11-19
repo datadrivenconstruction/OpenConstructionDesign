@@ -20,5 +20,7 @@
  "cmd.ui.onboarding.short": "Set up…",
  "cmd.mod.distribute.short": "Distribute",
  "cmd.data.src_delta.short": "Changes to XLSX…",
- "cmd.data.import_xlsx.short": "Import from XLSX…"
+ "cmd.data.import_xlsx.short": "Import from XLSX…",
+ "cmd.data.export_xlsx.short": "Export to XLSX…",
+ "cmd.data.sync_xlsx.short": "Sync with XLSX…"
 }

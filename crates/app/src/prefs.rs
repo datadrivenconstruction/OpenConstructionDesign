@@ -203,7 +203,7 @@ impl Default for Prefs {
             accent: String::new(),
             font: "inter".into(),
             text_size: 1.0,
-            icon_set: "studio".into(),
+            icon_set: "duotone_all".into(),
             mode_layouts: Default::default(),
             focus: String::new(),
             onboarded: false,

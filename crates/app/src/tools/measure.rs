@@ -184,7 +184,7 @@ pub fn draw_tool(p: &egui::Painter, ed: &Editor, tool: &MeasureTool, to_s: &dyn 
             to_s(tool.cursor) + egui::vec2(16.0, 16.0),
             egui::Align2::LEFT_TOP,
             txt,
-            egui::FontId::proportional(12.0),
+            ddc_ui::typo::font(ddc_ui::typo::Role::Small),
             t.text,
         );
     }
@@ -280,7 +280,7 @@ fn paint(p: &egui::Painter, ed: &Editor, view: ViewKey, to_s: &dyn Fn([f64; 3]) 
                 a.lerp(*b, 0.5)
             }
         };
-        p.text(at, egui::Align2::CENTER_BOTTOM, text, egui::FontId::proportional(12.0), col);
+        p.text(at, egui::Align2::CENTER_BOTTOM, text, ddc_ui::typo::font(ddc_ui::typo::Role::Small), col);
     }
     list.len()
 }

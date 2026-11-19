@@ -336,9 +336,9 @@ fn consent_window(a: &mut EditorApp, ctx: &egui::Context) {
     let r = egui::Modal::new(egui::Id::new("erp.consent")).show(ctx, |ui| {
         ui.set_width(440.0);
         ui.heading(c.t("erp.consent.title"));
-        ui.add_space(6.0);
+        ui.add_space(ddc_ui::sem::space::SM);
         ui.label(egui::RichText::new(c.t("erp.consent.body")).color(th.c("text.secondary")));
-        ui.add_space(12.0);
+        ui.add_space(ddc_ui::sem::space::MD);
         ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
             yes = crate::ui_kit::primary_click(ui, c.t("erp.consent.yes"), None);
             no = crate::ui_kit::cancel_button(ui, c.t("erp.consent.no")).clicked();
@@ -449,9 +449,9 @@ fn panel(a: &mut EditorApp, ctx: &egui::Context) {
                 ui.strong(name);
                 ui.label(rev);
                 ui.label(egui::RichText::new(lt).color(level_color(&th, *lv)));
-                ui.add_space(6.0);
+                ui.add_space(ddc_ui::sem::space::SM);
                 ui.add(egui::TextEdit::singleline(&mut message).hint_text(c.t("erp.message.hint")).desired_width(f32::INFINITY));
-                ui.add_space(6.0);
+                ui.add_space(ddc_ui::sem::space::SM);
                 ui.horizontal(|ui| {
                     k.publish = crate::ui_kit::primary_click(ui, c.t("erp.publish"), blocked.as_deref());
                     if *lost && busy.is_none() {

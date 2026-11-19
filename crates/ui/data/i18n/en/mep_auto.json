@@ -1,4 +1,4 @@
 {
  "gen.mep_auto": "Automatic building services",
- "gen.mep_auto_hint": "Lets the generator and the assistant lay out pipes, ducts and wiring on their own. Disabled by default for this region; you can turn it on. Manual routing is always available."
+ "gen.mep_auto_hint": "Lets the generator and the AI assistant lay out pipes, ducts and wiring on their own. Disabled by default for this region; you can turn it on. Manual routing is always available."
 }

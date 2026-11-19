@@ -328,6 +328,7 @@ impl<'a> TextField<'a> {
                 .frame(false)
                 .margin(margin)
                 .desired_width(rect.width())
+                .min_size(Vec2::new(0.0, rect.height()))
                 .font(font)
                 .text_color(text_col)
                 .horizontal_align(self.align)
@@ -392,7 +393,7 @@ impl<'a> TextField<'a> {
         let mut committed = false;
         let mut cancelled = false;
         if resp.has_focus() {
-            // the field border marks focus (error border too): no global ring on top
+            // the field paints its own ring around its frame: no global ring on top
             super::own_focus(ui.ctx(), resp.id);
             if self.search.is_some() && !self.buf.is_empty() {
                 // egui drops focus on Esc before the field runs: keep it so Esc can clear the text

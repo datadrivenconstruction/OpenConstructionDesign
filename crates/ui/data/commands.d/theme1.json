@@ -356,6 +356,15 @@
   "stage": "M1"
  },
  {
+  "id": "ui.icons.ribbon",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
   "id": "ui.ribbon.full",
   "icon": "",
   "mnemonic": null,

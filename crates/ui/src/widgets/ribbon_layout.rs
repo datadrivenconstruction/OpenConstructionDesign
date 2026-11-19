@@ -726,7 +726,7 @@ mod tests {
         assert_eq!((w.split, w.w), (1, 50.0));
         // split button: caret after line 2, or alone under one line
         let w = wrap2(&[50.0, 45.0], 3.0, true, &m);
-        assert_eq!(w.w, 57.0);
+        assert_eq!(w.w, 45.0 + m.caret_w);
         let w = wrap2(&[30.0], 3.0, true, &m);
         assert_eq!(w.w, 30.0);
     }

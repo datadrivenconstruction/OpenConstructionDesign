@@ -1,0 +1,38 @@
+[
+ {
+  "id": "ui.icons.color",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.icons.hierarchical",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.icons.isometric",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.icons.monoline",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ }
+]

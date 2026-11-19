@@ -1,12 +1,17 @@
 {
- "default": "studio",
+ "default": "duotone_all",
  "sets": [
-  {"id": "studio", "base": "outline", "active": "filled", "large": "duotone"},
-  {"id": "outline", "base": "outline", "active": "outline", "large": "outline"},
-  {"id": "duotone", "base": "duotone", "active": "filled", "large": "duotone"},
-  {"id": "filled", "base": "filled", "active": "filled", "large": "filled"},
-  {"id": "outline_duotone", "base": "outline", "active": "duotone", "large": "duotone"},
   {"id": "duotone_all", "base": "duotone", "active": "duotone", "large": "duotone"},
-  {"id": "filled_outline", "base": "filled", "active": "outline", "large": "outline"}
+  {"id": "outline", "base": "outline", "active": "outline", "large": "outline"},
+  {"id": "color", "base": "color", "active": "color", "large": "color"},
+  {"id": "hierarchical", "base": "hierarchical", "active": "hierarchical", "large": "hierarchical"},
+  {"id": "isometric", "base": "isometric", "active": "isometric", "large": "isometric"},
+  {"id": "monoline", "base": "monoline", "active": "monoline", "large": "monoline"},
+  {"id": "ribbon", "base": "ribbon", "active": "ribbon", "large": "ribbon", "legacy": true},
+  {"id": "studio", "base": "outline", "active": "filled", "large": "duotone", "legacy": true},
+  {"id": "duotone", "base": "duotone", "active": "filled", "large": "duotone", "legacy": true},
+  {"id": "filled", "base": "filled", "active": "filled", "large": "filled", "legacy": true},
+  {"id": "outline_duotone", "base": "outline", "active": "duotone", "large": "duotone", "legacy": true},
+  {"id": "filled_outline", "base": "filled", "active": "outline", "large": "outline", "legacy": true}
  ]
 }

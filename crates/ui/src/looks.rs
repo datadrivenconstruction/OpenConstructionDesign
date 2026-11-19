@@ -419,14 +419,15 @@ mod tests {
     }
 
     #[test]
-    fn seven_icon_sets_and_three_faces() {
+    fn six_icon_sets_and_three_faces() {
         let ids: Vec<&str> = crate::icons::sets().iter().map(|s| s.id).collect();
-        assert_eq!(ids.len(), 7, "{ids:?}");
+        assert_eq!(ids.len(), 6, "{ids:?}");
         let mut u = ids.clone();
         u.sort_unstable();
         u.dedup();
-        assert_eq!(u.len(), 7);
-        assert_eq!(crate::icons::style(), crate::icons::set("studio").unwrap().style());
+        assert_eq!(u.len(), 6);
+        assert_eq!(crate::icons::all_sets().len(), 12);
+        assert_eq!(crate::icons::style(), crate::icons::set("duotone_all").unwrap().style());
         for f in UiFont::ALL {
             let fd = crate::theme::font_definitions_for(f);
             assert_eq!(fd.font_data.len() >= 3, true, "{f:?}");

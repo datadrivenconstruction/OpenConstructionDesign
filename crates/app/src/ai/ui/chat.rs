@@ -577,10 +577,10 @@ fn family_offers(ui: &mut Ui, st: &PanelUi, cx: &Cx<'_>) {
     for (name, _, _, _) in &st.family_offers {
         ui.horizontal_wrapped(|ui| {
             ui.label(cx.cat.tf("ai.fam_offer", &[("name", name)]));
-            if ui.button(cx.cat.t("ai.fam_offer.open")).clicked() {
+            if widgets::Button::secondary(&cx.cat.t("ai.fam_offer.open")).show(ui, cx.th).clicked() {
                 ui.ctx().data_mut(|d| d.insert_temp(egui::Id::new("ddc.fam_offer"), (name.clone(), true)));
             }
-            if ui.button(cx.cat.t("ai.fam_offer.dismiss")).clicked() {
+            if widgets::Button::quiet(&cx.cat.t("ai.fam_offer.dismiss")).show(ui, cx.th).clicked() {
                 ui.ctx().data_mut(|d| d.insert_temp(egui::Id::new("ddc.fam_offer"), (name.clone(), false)));
             }
         });

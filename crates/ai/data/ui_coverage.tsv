@@ -479,14 +479,14 @@ ui.clean_screen	view	-	hide panels around the canvas
 ui.ai.work	session	-	AI work panel
 ui.ai.preview	session	-	AI preview panel
 e3d.measure.distance	api	measure_save:distance	3D measure tool; saves a distance
-e3d.measure.clear	api	measure_save:clear	3D measure tool; saves a clearance
+e3d.measure.gap	api	measure_save:clear	3D measure tool; saves a clearance
 e3d.measure.angle	api	measure_save:angle	3D measure tool; saves an angle
 e3d.measure.area	api	measure_save:area	3D measure tool; saves an area
 e3d.measure.volume	api	measure_save:volume	3D measure tool; saves a volume
 e3d.measure.slope	api	measure_save:slope	3D measure tool; saves a slope
 e3d.measure.chain	view	-	3D point chain; shows lengths, writes nothing
 ann.measure_distance	api	measure_save:distance	view measure tool; saves a distance
-ann.measure_clear	api	measure_save:clear	view measure tool; saves a clearance
+ann.measure_gap	api	measure_save:clear	view measure tool; saves a clearance
 ann.measure_angle	api	measure_save:angle	view measure tool; saves an angle
 ann.measure_area	api	measure_save:area	view measure tool; saves an area
 str.gridshell	api	ops_propose:geometry.gridshell	gridshell on a surface
@@ -535,6 +535,11 @@ ui.icons.filled	view	-	switches the icon style
 ui.icons.outline_duotone	view	-	switches the icon style
 ui.icons.duotone_all	view	-	switches the icon style
 ui.icons.filled_outline	view	-	switches the icon style
+ui.icons.ribbon	view	-	switches the icon style
+ui.icons.color	view	-	switches the icon style
+ui.icons.hierarchical	view	-	switches the icon style
+ui.icons.isometric	view	-	switches the icon style
+ui.icons.monoline	view	-	switches the icon style
 ui.ribbon.full	view	-	switches the ribbon style
 ui.ribbon.tabs	view	-	switches the ribbon style
 ui.ribbon.toolbar	view	-	switches the ribbon style

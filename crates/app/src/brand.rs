@@ -93,7 +93,7 @@ pub fn family_block(ui: &mut egui::Ui, th: &Theme, c: &Catalog) {
                 ui.add(egui::Image::new((t.id(), Vec2::splat(24.0))));
             }
             ui.vertical(|ui| {
-                ui.spacing_mut().item_spacing.y = 0.0;
+                ui.spacing_mut().item_spacing.y = space::XXS;
                 match url {
                     Some(u) => {
                         let r = ui.link(RichText::new(name).font(th.font(Role::BodyStrong)));

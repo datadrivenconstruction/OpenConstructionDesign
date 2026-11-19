@@ -153,9 +153,10 @@ fn bubble_colour_follows_state() {
         MarkState::Cancelled,
         MarkState::Failed(RefusalCode::Internal, "x".into()),
     ];
+    let th = ddc_ui::theme::of(&ddc_ui::theme::headless_ctx());
     for (i, a) in all.iter().enumerate() {
         for b in &all[i + 1..] {
-            assert_ne!(colour(a), colour(b));
+            assert_ne!(colour(&th, a), colour(&th, b));
         }
     }
 }

@@ -237,7 +237,8 @@ impl Palette {
                     .shadow(th.shadow(3))
                     .stroke(outline)
                     .show(ui, |ui| {
-                        ui.set_width(WIDTH - 2.0 * PAD);
+                        // the frame's outline takes layout room too: WIDTH is the outer edge
+                        ui.set_width(WIDTH - 2.0 * (PAD + outline.width));
                         let before = self.query.clone();
                         let te = egui::TextEdit::singleline(&mut self.query)
                             .hint_text(cat.t("palette.placeholder"))

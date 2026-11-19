@@ -6,6 +6,14 @@ use serde::Deserialize;
 use std::collections::BTreeMap;
 
 pub const COMMANDS_JSON: &str = include_str!("../data/commands.json");
+/// `command id -> icon` for commands whose fragment leaves `icon` empty: icons are bound
+/// here without editing the command fragment itself. An explicit `icon` in a fragment wins.
+pub const COMMAND_ICONS_JSON: &str = include_str!("../data/command_icons.json");
+
+pub fn command_icons() -> &'static BTreeMap<String, String> {
+    static M: std::sync::OnceLock<BTreeMap<String, String>> = std::sync::OnceLock::new();
+    M.get_or_init(|| serde_json::from_str(COMMAND_ICONS_JSON).expect("data/command_icons.json"))
+}
 use crate::fragments::COMMAND_FRAGMENTS;
 /// Mnemonic sequence timeout, seconds (SHELL_AND_COMMANDS §4).
 pub const MNEMONIC_TIMEOUT: f64 = 1.5;
@@ -199,7 +207,16 @@ impl Registry {
     pub fn builtin() -> Self {
         let mut srcs = vec![COMMANDS_JSON];
         srcs.extend(COMMAND_FRAGMENTS.iter().map(|f| f.1));
-        Self::from_sources(&srcs).expect("commands.json and fragments are validated by tests")
+        let mut r =
+            Self::from_sources(&srcs).expect("commands.json and fragments are validated by tests");
+        for c in &mut r.cmds {
+            if c.icon.is_empty() {
+                if let Some(i) = command_icons().get(c.id.as_str()) {
+                    c.icon = i.clone();
+                }
+            }
+        }
+        r
     }
     /// Command a click on `id` actually runs (follows `alias`).
     pub fn resolve<'a>(&'a self, id: &'a str) -> &'a str {

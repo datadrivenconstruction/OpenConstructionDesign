@@ -174,17 +174,22 @@ fn rules_section(ui: &mut egui::Ui, ed: &mut Editor, cat: &Catalog) {
         let was = v;
         ui.label(cat.t(&format!("why.rt_{}", r.key)));
         let mut reset = false;
-        let resp = ui
+        let th = ddc_ui::theme::of(ui.ctx());
+        let committed = ui
             .horizontal(|ui| {
-                let resp = ui.add(egui::DragValue::new(&mut v).speed(0.01).range(r.min..=r.max).max_decimals(3));
-                reset = ui.small_button(cat.t("why.rt_reset")).clicked();
-                resp
+                let out = ddc_ui::widgets::NumberField::new(("why.rt", r.key), &mut v, ddc_ui::widgets::NumberFormat::for_lang(cat.lang))
+                    .decimals(3)
+                    .step(0.01)
+                    .range(r.min, r.max)
+                    .show(ui, &th);
+                reset = ddc_ui::widgets::Button::quiet(&cat.t("why.rt_reset")).small().show(ui, &th).clicked();
+                out.committed
             })
             .inner;
         if reset {
             v = r.default;
         }
-        if reset || ((resp.drag_stopped() || resp.lost_focus()) && (v - was).abs() > 1e-12) {
+        if reset || (committed && (v - was).abs() > 1e-12) {
             if ed.model.set_roof_rule(r.key, v).is_ok() {
                 let _ = ed.reload();
             }

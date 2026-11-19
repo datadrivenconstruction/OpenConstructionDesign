@@ -1,0 +1,14 @@
+{
+ "theme.icons.color": "Цветные",
+ "cmd.ui.icons.color": "Цветные значки",
+ "cmd.ui.icons.color.desc": "Стиль рисунка значков",
+ "theme.icons.hierarchical": "Иерархические",
+ "cmd.ui.icons.hierarchical": "Иерархические значки",
+ "cmd.ui.icons.hierarchical.desc": "Стиль рисунка значков",
+ "theme.icons.isometric": "Изометрические",
+ "cmd.ui.icons.isometric": "Изометрические значки",
+ "cmd.ui.icons.isometric.desc": "Стиль рисунка значков",
+ "theme.icons.monoline": "Тонкая линия",
+ "cmd.ui.icons.monoline": "Значки тонкой линией",
+ "cmd.ui.icons.monoline.desc": "Стиль рисунка значков"
+}

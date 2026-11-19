@@ -62,7 +62,8 @@ pub fn colors(s: &Sem, v: Variant, st: Visual) -> ButtonColors {
             fill: match st {
                 Visual::Hover => hover,
                 Visual::Pressed => press,
-                Visual::Rest | Visual::Disabled => s.bg_input,
+                // one raised surface with egui buttons and segmented thumbs (polish_tests)
+                Visual::Rest | Visual::Disabled => s.bg_elevated,
             },
             stroke: s.border_control,
             text: s.text_primary,
@@ -432,7 +433,16 @@ mod tests {
                 .iter()
                 .map(|s| th.control_h(*s))
                 .collect();
-            assert_eq!(hs, vec![24.0, 28.0, 32.0]);
+            // heights come from the density block of tokens.json, the one source the code reads
+            let v: serde_json::Value = serde_json::from_str(crate::theme::TOKENS_JSON).unwrap();
+            let d = &v["density"]["compact"];
+            let want: Vec<f32> = ["control_sm", "control", "control_lg"]
+                .iter()
+                .map(|k| d[*k].as_f64().unwrap() as f32)
+                .collect();
+            assert_eq!(hs, want);
+            assert!(hs.windows(2).all(|w| w[0] < w[1]), "{hs:?}");
+            assert!(hs.iter().all(|h| h % 4.0 == 0.0), "on the 4 px grid: {hs:?}");
         }
         assert_eq!(pad_x(ControlSize::Small), 8.0);
         assert_eq!(pad_x(ControlSize::Medium), 12.0);

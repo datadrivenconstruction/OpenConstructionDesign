@@ -131,7 +131,7 @@ pub fn panel(ui: &mut egui::Ui, th: &Theme, cat: &Catalog, s: &mut Session) {
             let (n, t) = (meta.repair.0.to_string(), meta.repair.1.to_string());
             ui.label(cat.tf("fe.ai.repair", &[("n", &n), ("tokens", &t)]));
         }
-        if ui.button(cat.t("fe.ai.check_values")).clicked() {
+        if ddc_ui::widgets::Button::secondary(&cat.t("fe.ai.check_values")).show(ui, th).clicked() {
             s.tab = Tab::Flex;
         }
     });
@@ -139,7 +139,9 @@ pub fn panel(ui: &mut egui::Ui, th: &Theme, cat: &Catalog, s: &mut Session) {
         let tag = if f.severity == Severity::Error { "!" } else { "~" };
         let at: Vec<String> = f.lines.iter().map(|l| l.to_string()).collect();
         let head = format!("{tag} {}  {}", cat.t(&f.key()), cat.tf("fe.ai.lines", &[("n", &at.join(", "))]));
-        if ui.selectable_label(meta.focus == f.lines, head).on_hover_text(&f.msg).clicked() {
+        let on = meta.focus == f.lines;
+        let btn = if on { ddc_ui::widgets::Button::secondary(&head) } else { ddc_ui::widgets::Button::quiet(&head) };
+        if btn.show(ui, th).on_hover_text(&f.msg).clicked() {
             meta.focus = f.lines.clone();
         }
     }
@@ -167,7 +169,7 @@ pub fn panel(ui: &mut egui::Ui, th: &Theme, cat: &Catalog, s: &mut Session) {
         };
         ui.horizontal(|ui| {
             ui.label(RichText::new(cat.tf(key, &[("head", &st.head), ("name", &st.name)])).color(color));
-            if ui.small_button(cat.t("fe.ai.reject")).clicked() {
+            if ddc_ui::widgets::Button::quiet(&cat.t("fe.ai.reject")).small().show(ui, th).clicked() {
                 reject = Some(k);
             }
         });

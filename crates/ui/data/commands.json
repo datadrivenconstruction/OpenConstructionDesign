@@ -2184,7 +2184,7 @@
  {
   "id": "data.export_stl",
   "dialog": true,
-  "icon": "gltf-out",
+  "icon": "stl-out",
   "mnemonic": "XL",
   "shortcuts": [],
   "tab": "data",
@@ -2198,7 +2198,7 @@
  {
   "id": "data.export_obj",
   "dialog": true,
-  "icon": "gltf-out",
+  "icon": "obj-out",
   "mnemonic": "XO",
   "shortcuts": [],
   "tab": "data",
@@ -2212,7 +2212,7 @@
  {
   "id": "data.export_step",
   "dialog": true,
-  "icon": "gltf-out",
+  "icon": "step-out",
   "mnemonic": "XT",
   "shortcuts": [],
   "tab": "data",
@@ -2226,7 +2226,7 @@
  {
   "id": "data.export_3mf",
   "dialog": true,
-  "icon": "gltf-out",
+  "icon": "3mf-out",
   "mnemonic": "XM",
   "shortcuts": [],
   "tab": "data",

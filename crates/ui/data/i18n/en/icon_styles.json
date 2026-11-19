@@ -1,0 +1,14 @@
+{
+ "theme.icons.color": "Colour",
+ "cmd.ui.icons.color": "Colour icons",
+ "cmd.ui.icons.color.desc": "Drawing style of the icons",
+ "theme.icons.hierarchical": "Hierarchical",
+ "cmd.ui.icons.hierarchical": "Hierarchical icons",
+ "cmd.ui.icons.hierarchical.desc": "Drawing style of the icons",
+ "theme.icons.isometric": "Isometric",
+ "cmd.ui.icons.isometric": "Isometric icons",
+ "cmd.ui.icons.isometric.desc": "Drawing style of the icons",
+ "theme.icons.monoline": "Monoline",
+ "cmd.ui.icons.monoline": "Monoline icons",
+ "cmd.ui.icons.monoline.desc": "Drawing style of the icons"
+}

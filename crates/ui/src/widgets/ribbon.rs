@@ -1926,7 +1926,7 @@ mod tests {
 
     #[test]
     fn long_labels_wrap_to_two_rows() {
-        let ctx = egui::Context::default();
+        let ctx = crate::theme::headless_ctx();
         let _ = ctx.run(Default::default(), |ctx| {
             let f = crate::typo::font(Role::RibbonLabel);
             let g = ctx.fonts(|fo| {

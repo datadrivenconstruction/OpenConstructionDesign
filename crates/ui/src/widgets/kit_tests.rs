@@ -942,13 +942,21 @@ fn disclosure_is_one_small_square_in_both_themes() {
 // ---- keyboard focus ring: own layer, clipped, keyboard only ----
 
 fn ring_count(out: &egui::FullOutput, th: &Theme) -> usize {
+    ring_rects(out, th).len()
+}
+
+/// Focus rings drawn this frame: their inner rect and corner radius.
+fn ring_rects(out: &egui::FullOutput, th: &Theme) -> Vec<(Rect, egui::CornerRadius)> {
     let col = th.c("focus.ring");
     out.shapes
         .iter()
-        .filter(|c| {
-            matches!(&c.shape, egui::Shape::Rect(r) if r.stroke.width == stroke::FOCUS && r.stroke.color == col)
+        .filter_map(|c| match &c.shape {
+            egui::Shape::Rect(r) if r.stroke.width == stroke::FOCUS && r.stroke.color == col => {
+                Some((r.rect, r.corner_radius))
+            }
+            _ => None,
         })
-        .count()
+        .collect()
 }
 
 fn ring_frame(
@@ -1093,16 +1101,21 @@ fn ring_is_hidden_when_scrolled_out() {
 fn own_focus_widget_gets_no_second_ring() {
     let (ctx, th) = ready(Mode::Light, Density::Compact);
     let mut v = 1.0_f64;
-    let mut n = 9;
+    let mut rings = vec![];
+    let mut field = Rect::NOTHING;
     for input in [RawInput::default(), key(Key::Tab), RawInput::default(), RawInput::default()] {
-        n = ring_frame(&ctx, &th, input, |c| {
+        let out = ctx.run(input, |c| {
             egui::CentralPanel::default().show(c, |ui| {
-                NumberField::new("n", &mut v, NumberFormat::EN).show(ui, &th);
+                field = NumberField::new("n", &mut v, NumberFormat::EN).show(ui, &th).rect;
             });
+            focus_ring(c, &th);
         });
+        rings = ring_rects(&out, &th);
     }
     assert!(ctx.memory(|m| m.focused()).is_some(), "the field took focus");
-    assert_eq!(n, 0);
+    // since 06b2512ad the field draws the one shared ring itself; the global ring stays away
+    let own = crate::theme::focus::ring(field, th.radius("sm"));
+    assert_eq!(rings, vec![own], "exactly the field's own ring");
 }
 
 #[test]

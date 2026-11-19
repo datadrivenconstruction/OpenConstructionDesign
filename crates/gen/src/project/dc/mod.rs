@@ -201,8 +201,7 @@ impl GDc {
     }
 
     /// What each system's built units give: `2N`, `N+k`, `N`, `short`, `dual` (two mains per
-    /// hall into a ring) or `none`; the UI words them as `gen.dc.red.<system>` and
-    /// `gen.dc.red.scheme.<code>`, `N+k` as `gen.dc.red.scheme.spare`.
+    /// hall into a ring) or `none`; the tool reply carries the codes, `redundancy` words them.
     pub fn redundancy_codes(&self) -> Vec<(&'static str, String)> {
         let scheme = |x: Option<(usize, usize)>| match x {
             None => "none".to_string(),

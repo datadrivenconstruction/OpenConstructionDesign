@@ -1,6 +1,6 @@
 {
  "cmd.str.rebar_schedule": "Ведомость гибки",
- "cmd.str.rebar_delete": "Удалить армирование",
+ "cmd.str.rebar_delete": "Удалить арматуру",
  "cmd.str.rebar_toggle": "Показ арматуры",
  "cmd.str.analytical_export": "Выгрузить аналитическую модель…",
  "cmd.str.rebar_schedule.desc": "Открывает ведомость гибки арматуры: марки, формы, длины с крюками и массы; выгрузка CSV.",

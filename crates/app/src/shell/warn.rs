@@ -411,7 +411,7 @@ impl EditorApp {
                     RichText::new(c.plural("warn.count", n as u64)).color(th.c("text.secondary")),
                 );
                 ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
-                    export = ui.button(c.t("warn.export")).clicked();
+                    export = ddc_ui::widgets::Button::secondary(&c.t("warn.export")).show(ui, th).clicked();
                 });
             });
             ui.separator();
@@ -429,8 +429,13 @@ impl EditorApp {
                                         ui.label(RichText::new("⚠").color(th.c("warning")));
                                         let on = self.ed.selection.contains(&Sel::Wall(w.id));
                                         let name = self.warn_labels.get(w.table, w.id);
-                                        let r = ui.selectable_label(on, name);
-                                        if ui.small_button(c.t("warn.show")).clicked()
+                                        let nb = if on {
+                                            ddc_ui::widgets::Button::secondary(&name)
+                                        } else {
+                                            ddc_ui::widgets::Button::quiet(&name)
+                                        };
+                                        let r = nb.show(ui, th);
+                                        if ddc_ui::widgets::Button::quiet(&c.t("warn.show")).small().show(ui, th).clicked()
                                             || r.clicked()
                                         {
                                             show = Some((w.table.to_string(), w.id));
@@ -465,13 +470,14 @@ impl EditorApp {
     /// "Model" block: "All levels / Current" toggle and totals.
     pub(super) fn model_totals(&mut self, ui: &mut egui::Ui, _t: &Tokens) {
         ui.horizontal(|ui| {
-            for (all, name) in [
-                (true, crate::tr("type_dialog.warn.all_levels", &[])),
-                (false, crate::tr("type_dialog.warn.current", &[])),
-            ] {
-                if ui.selectable_label(self.totals_all == all, name).clicked() {
-                    self.totals_all = all;
-                }
+            let items = [
+                crate::tr("type_dialog.warn.all_levels", &[]),
+                crate::tr("type_dialog.warn.current", &[]),
+            ];
+            let refs: Vec<&str> = items.iter().map(String::as_str).collect();
+            let th = ddc_ui::theme::of(ui.ctx());
+            if let Some(i) = ddc_ui::widgets::segmented(ui, &th, &refs, usize::from(!self.totals_all)) {
+                self.totals_all = i == 0;
             }
         });
         let cur = self.ed.level;

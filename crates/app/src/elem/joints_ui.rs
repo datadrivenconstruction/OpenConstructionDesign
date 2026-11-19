@@ -209,8 +209,9 @@ fn joint_rows(
     ui_kit::kv_widget(ui, &j.name, |ui| {
         ui.horizontal(|ui| {
             ui.label(format!("{} \u{b7} {partner}", kind_label(j.kind)));
-            if ui
-                .small_button("\u{d7}")
+            if ddc_ui::widgets::Button::quiet("\u{d7}")
+                .small()
+                .show(ui, &ddc_ui::theme::of(ui.ctx()))
                 .on_hover_text(tr("features.joint_delete", &[]))
                 .clicked()
             {
@@ -271,24 +272,21 @@ fn add_row(ui: &mut egui::Ui, ed: &Editor, id: i64, todo: &mut Option<Act>) {
     let ak = egui::Id::new(("features.new_axis", id));
     let mut kind = ui.data(|d| d.get_temp::<JointKind>(kk)).unwrap_or(JointKind::Revolute);
     let mut axis = ui.data(|d| d.get_temp::<Axis>(ak)).unwrap_or(Axis::Vertical);
+    let th = ddc_ui::theme::of(ui.ctx());
     ui_kit::props(ui, &format!("param1.new_joint.{id}"), |ui| {
         ui_kit::kv_widget(ui, &tr("features.new_kind", &[]), |ui| {
-            egui::ComboBox::from_id_salt(kk)
-                .selected_text(kind_label(kind))
-                .show_ui(ui, |ui| {
-                    for k in JointKind::ALL {
-                        ui.selectable_value(&mut kind, k, kind_label(k));
-                    }
-                });
+            let labels: Vec<String> = JointKind::ALL.iter().map(|k| kind_label(*k)).collect();
+            let items: Vec<&str> = labels.iter().map(String::as_str).collect();
+            let mut sel = JointKind::ALL.iter().position(|k| *k == kind).unwrap_or(0);
+            ddc_ui::widgets::dropdown(ui, &th, kk, &mut sel, &items, None);
+            kind = JointKind::ALL[sel];
         });
         ui_kit::kv_widget(ui, &tr("features.new_axis", &[]), |ui| {
-            egui::ComboBox::from_id_salt(ak)
-                .selected_text(axis.label())
-                .show_ui(ui, |ui| {
-                    for a in Axis::ALL {
-                        ui.selectable_value(&mut axis, a, a.label());
-                    }
-                });
+            let labels: Vec<String> = Axis::ALL.iter().map(|a| a.label()).collect();
+            let items: Vec<&str> = labels.iter().map(String::as_str).collect();
+            let mut sel = Axis::ALL.iter().position(|a| *a == axis).unwrap_or(0);
+            ddc_ui::widgets::dropdown(ui, &th, ak, &mut sel, &items, None);
+            axis = Axis::ALL[sel];
         });
         let to = partner.map_or_else(|| tr("features.ground", &[]), |b| format!("#{b}"));
         ui_kit::kv(ui, &tr("features.new_partner", &[]), to);
@@ -297,8 +295,8 @@ fn add_row(ui: &mut egui::Ui, ed: &Editor, id: i64, todo: &mut Option<Act>) {
         d.insert_temp(kk, kind);
         d.insert_temp(ak, axis);
     });
-    if ui
-        .button(tr("features.add_joint", &[]))
+    if ddc_ui::widgets::Button::secondary(&tr("features.add_joint", &[]))
+        .show(ui, &th)
         .on_hover_text(tr("features.add_joint_tip", &[]))
         .clicked()
     {

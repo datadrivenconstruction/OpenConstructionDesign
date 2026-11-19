@@ -80,7 +80,8 @@ pub const ROW_COMPACT_H: f32 = 24.0;
 
 /// True once the pointer has rested `SUB_DELAY_S` on a submenu row (`since` = hover start).
 pub fn sub_delay_elapsed(since: Option<f64>, now: f64) -> bool {
-    since.is_some_and(|t| now - t >= SUB_DELAY_S as f64)
+    // compared in f32: 0.15f32 widened to f64 is above 0.15, so the exact delay would never pass
+    since.is_some_and(|t| (now - t) as f32 >= SUB_DELAY_S)
 }
 
 /// Fade + scale-in of the popover `ui` belongs to: restarts whenever the popup was not drawn
@@ -455,7 +456,8 @@ mod tests {
             egui::CentralPanel::default().show(c, |ui| {
                 let y = ui.cursor().top();
                 menu_section(ui, &th, "Edit");
-                h = ui.cursor().top() - y;
+                // the cursor also moves by the ui's item spacing, which is not part of the row
+                h = ui.cursor().top() - y - ui.spacing().item_spacing.y;
             });
         });
         assert_eq!(h, control::MENU_ROW_H);

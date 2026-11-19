@@ -308,10 +308,11 @@ def chevron(g, x, y, d, h=3.0, role="L"):
 
 
 def cursor(g, x=4.5, y=4.5, s=1.0, role="S"):
-    """Selection arrow (the select glyph) with its tip at (x, y), scaled by s."""
-    base = [(0, 0), (15, 5.1), (9.65, 7.15), (15.05, 12.55), (12.55, 15.05), (7.15, 9.65),
-            (5.1, 15)]
-    return (role, g.poly([(x + px * s, y + py * s) for px, py in base], True))
+    """Selection dart (the select glyph): 2:1 outer edges, a square notch, tip at (x, y)."""
+    base = [(0, 0), (14, 7), (7, 7), (7, 14)]
+    # edge-marked: the tip is a low-side corner (.75), the notch and wings high-side (.25)
+    q = [lambda v: math.floor(v) + 0.75] + [lambda v: math.floor(v) + 0.25] * 3
+    return (role, g.poly([(f(x + px * s), f(y + py * s)) for f, (px, py) in zip(q, base)], True))
 
 
 def page(g, x0=4.75, y0=2.75, x1=19.25, y1=21.25, f=4.5):

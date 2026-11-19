@@ -472,14 +472,14 @@ gen.rules | P R | - | ? | ? | todo |
 arch.grid_pick | P R | - | ? | ? | todo |
 struct.beam_pick | P R | - | ? | ? | todo |
 e3d.measure.distance | P | - | ? | ? | todo |
-e3d.measure.clear | P | - | ? | ? | todo |
+e3d.measure.gap | P | - | ? | ? | todo |
 e3d.measure.angle | P | - | ? | ? | todo |
 e3d.measure.area | P | - | ? | ? | todo |
 e3d.measure.volume | P | - | ? | ? | todo |
 e3d.measure.slope | P | - | ? | ? | todo |
 e3d.measure.chain | P | - | ? | ? | todo |
 ann.measure_distance | P | - | ? | ? | todo |
-ann.measure_clear | P | - | ? | ? | todo |
+ann.measure_gap | P | - | ? | ? | todo |
 ann.measure_angle | P | - | ? | ? | todo |
 ann.measure_area | P | - | ? | ? | todo |
 mod.match_type | P R C | wall,floor,column,beam | ? | ? | todo |
@@ -529,6 +529,7 @@ ui.density.compact | P | - | ? | ? | todo |
 ui.density.normal | P | - | ? | ? | todo |
 ui.density.comfortable | P | - | ? | ? | todo |
 ui.density.auto | P | - | ? | ? | todo |
+ui.icons.ribbon | P | - | 0 | once | run |
 ui.icons.studio | P | - | ? | ? | todo |
 ui.icons.outline | P | - | ? | ? | todo |
 ui.icons.duotone | P | - | ? | ? | todo |
@@ -536,6 +537,10 @@ ui.icons.filled | P | - | ? | ? | todo |
 ui.icons.outline_duotone | P | - | ? | ? | todo |
 ui.icons.duotone_all | P | - | ? | ? | todo |
 ui.icons.filled_outline | P | - | ? | ? | todo |
+ui.icons.color | P | - | 0 | once | run |
+ui.icons.hierarchical | P | - | 0 | once | run |
+ui.icons.isometric | P | - | 0 | once | run |
+ui.icons.monoline | P | - | 0 | once | run |
 ui.ribbon.full | P | - | ? | ? | todo |
 ui.ribbon.tabs | P | - | ? | ? | todo |
 ui.ribbon.toolbar | P | - | ? | ? | todo |
@@ -555,5 +560,5 @@ browser.row_open | P D | - | ? | ? | todo |
 browser.row_rename | P D | - | ? | ? | todo |
 browser.row_delete | P D | - | ? | ? | todo |
 file.publish_pdf | P | - | ? | ? | skip | opens a dialog needing input
-xs50.undo_apply | P | - | ? | ? | todo |
-xs57.undo_import | P | - | ? | ? | todo |
+xlsx.undo_apply | P | - | ? | ? | todo |
+keys.undo_import | P | - | ? | ? | todo |

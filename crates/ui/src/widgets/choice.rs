@@ -433,8 +433,9 @@ mod tests {
 
     #[test]
     fn thumb_travels_between_two_inset_stops() {
-        let (ctx, th) = ready(Mode::Light);
         for (on, left) in [(false, true), (true, false)] {
+            // a fresh context per state: a reused one would show the thumb mid-animation
+            let (ctx, th) = ready(Mode::Light);
             let sh = shapes(&ctx, &th, on, |ui, th, v| {
                 toggle_bare(ui, th, v, "x");
             });
