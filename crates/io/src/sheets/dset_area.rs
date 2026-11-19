@@ -121,8 +121,14 @@ fn finish_name(id: &str, text: Text) -> String {
 /// The floor finish of every room tag of `d` in the sheet's language.
 pub(super) fn localize_finish(d: &mut ddc_model::PlanView, text: Text) {
     for p in &mut d.prims {
-        if let ddc_model::ViewPrim::RoomTag { finish: Some(f), .. } = p {
-            *f = finish_name(f, text);
+        match p {
+            ddc_model::ViewPrim::RoomTag { finish: Some(f), .. } => *f = finish_name(f, text),
+            ddc_model::ViewPrim::Tag { tag } => {
+                if let Some(f) = &mut tag.text.finish {
+                    *f = finish_name(f, text);
+                }
+            }
+            _ => {}
         }
     }
 }

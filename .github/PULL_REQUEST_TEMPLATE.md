@@ -8,7 +8,7 @@
 
 ## Checklist
 
-- [ ] I signed the CLA and every commit has a `Signed-off-by:` line (`git commit -s`).
+- [ ] I agree to the CLA: every commit has a `Signed-off-by:` line (`git commit -s`), and on my first pull request I commented "I have read the CLA and I agree".
 - [ ] Formatting, clippy and the tests of the changed crates pass; I ran the full workspace.
 - [ ] New behaviour has tests; a fixed bug has a regression test.
 - [ ] No third-party product or company names (file formats by extension or open standard only).

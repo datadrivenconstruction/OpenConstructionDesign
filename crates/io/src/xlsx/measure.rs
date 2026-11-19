@@ -198,11 +198,12 @@ mod tests {
         let wt = m
             .add_wall_type("W", &[LayerSpec { material: "B".into(), thickness: 0.2 }])
             .unwrap();
-        let specs: Vec<WallSpec> = [0.0, 4.0]
+        // opposite runs, as in a room loop: face 1 of each is its inner face, 3.6 m apart
+        let specs: Vec<WallSpec> = [((0.0, 0.0), (6.0, 0.0)), ((6.0, 4.0), (0.0, 4.0))]
             .iter()
-            .map(|y| WallSpec {
-                a: (0.0, *y),
-                b: (6.0, *y),
+            .map(|&(a, b)| WallSpec {
+                a,
+                b,
                 level: lv,
                 base_offset: 0.0,
                 height: 3.0,

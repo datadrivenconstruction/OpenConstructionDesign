@@ -211,7 +211,8 @@ fn ops_create_edit_thicken_trim_convert() {
         trim: Some(UvTrim { outer: None, holes: vec![vec![[0.4, 0.4], [0.6, 0.4], [0.6, 0.6], [0.4, 0.6]]] }),
     });
     let r = m.apply_envelope(&envelope(vec![edit, thick, trim])).unwrap();
-    assert_eq!(r.changed.len(), 3);
+    // three edits of one surface: the receipt lists the changed element once
+    assert_eq!(r.changed, vec![ff.clone()]);
     let s2 = m.freeform(id).unwrap();
     assert_eq!(s2.surface.ctrl()[s2.surface.nv() + 1], v3(5.0, 5.0, 7.0));
     assert!((s2.thickness - 0.12).abs() < 1e-12 && s2.side == ShellSide::Center);
@@ -303,7 +304,7 @@ fn network_surface_meets_its_curves_and_rebuild_undoes() {
 #[test]
 fn step_54_adds_the_freeform_tables_to_a_53_file() {
     assert!(crate::schema::STEPS.contains(&54));
-    assert_eq!(crate::schema::VERSION, 54);
+    assert!(crate::schema::VERSION >= 54);
     let d = std::env::temp_dir().join(format!("ddc_s54_mig_{}", std::process::id()));
     let _ = std::fs::remove_dir_all(&d);
     std::fs::create_dir_all(&d).unwrap();
@@ -334,7 +335,8 @@ fn step_54_adds_the_freeform_tables_to_a_53_file() {
             .unwrap();
         assert_eq!(n, 1, "{t} is back after step 54");
     }
-    assert_eq!(m.schema_version().unwrap(), 54);
+    // a 53 file runs step 54 and every later step
+    assert_eq!(m.schema_version().unwrap(), crate::schema::VERSION);
     drop(m);
     let _ = std::fs::remove_dir_all(&d);
 }

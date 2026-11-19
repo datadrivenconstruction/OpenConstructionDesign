@@ -914,5 +914,25 @@ fn perforated_panel(lua: &Lua, t: Option<Table>) -> Out {
         });
         em.solid("plate", &f, &mat)?;
     }
+    // fixings: three flat brackets on each panel edge, welded to the post and bolted through
+    // the panel; a base plate with four anchors under every post
+    let (bt, lap, bolt_d) = (0.008, 0.08, 0.016);
+    let face = z.scale(thick / 2.0 + bt / 2.0);
+    for k in 0..=count {
+        let s = k as f64 * (w + pw) + pw / 2.0;
+        for side in [-1.0, 1.0] {
+            // a panel on this side of the post
+            if (side < 0.0 && k == 0) || (side > 0.0 && k == count) {
+                continue;
+            }
+            for f in [0.15, 0.5, 0.85] {
+                let h = base + height * f;
+                em.cleat("bracket", at(s, h), at(s + side * (pw / 2.0 + lap), h).add(face), bt, &pmat)?;
+                let c = at(s + side * (pw / 2.0 + lap / 2.0), h);
+                em.bolt(c.sub(z.scale(thick / 2.0)), z, thick + bt, bolt_d, &pmat)?;
+            }
+        }
+        em.post_base(at(s, 0.0), x, z, pw, &pmat)?;
+    }
     em.finish(&name)
 }

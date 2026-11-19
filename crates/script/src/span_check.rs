@@ -580,6 +580,11 @@ fn used(lat: &Lat, g: usize) -> bool {
     lat.mems.iter().any(|m| m.g == g)
 }
 
+/// Total member length of group `g`, m.
+fn len_of(lat: &Lat, g: usize) -> f64 {
+    lat.mems.iter().filter(|m| m.g == g).map(|m| lat.nodes[m.a].sub(lat.nodes[m.b]).len()).sum()
+}
+
 /// Sizes the groups of `lat` (their `idx` is set) and checks the criteria.
 pub(crate) fn design(lat: &Lat, groups: &mut [Group], crit: &Crit, r: &Rules, budget: f64) -> Design {
     let lads: Vec<Vec<Sec>> = groups
@@ -661,7 +666,8 @@ pub(crate) fn design(lat: &Lat, groups: &mut [Group], crit: &Crit, r: &Rules, bu
     // frequency drives at most FREQ_STEPS extra rounds: past them the footbridge is flagged
     // for a dynamic check rather than stiffened without end.
     let mut fsteps = 0;
-    for _ in 0..30 {
+    // one group a stiffening round, so more rounds than when every stiff group stepped
+    for _ in 0..80 {
         if d.secs > budget {
             d.notes.push("sizing stopped at its time budget; the sections reached are kept".into());
             break;
@@ -680,24 +686,91 @@ pub(crate) fn design(lat: &Lat, groups: &mut [Group], crit: &Crit, r: &Rules, bu
         }
         let defl_ok = x.defl <= crit.limit;
         let freq_ok = crit.f_min <= 0.0 || x.f1 >= crit.f_min;
-        if defl_ok && (freq_ok || fsteps >= FREQ_STEPS) {
+        // FREQ_STEPS rungs of every stiff group, now taken one group at a time
+        if defl_ok && (freq_ok || fsteps >= FREQ_STEPS * crit.stiff.len().max(1)) {
             last = Some(x);
             break;
         }
         if defl_ok {
             fsteps += 1;
         }
+        // stiffen the group whose next rung closes most of the shortfall per tonne added: a
+        // truss may gain more from its web than from its chords
+        let short = |y: &Result_| if y.defl > crit.limit { y.defl / crit.limit } else { crit.f_min / y.f1.max(1e-9) };
+        let s0 = short(&x);
+        let mut best: Option<(usize, f64)> = None;
+        for g in 0..groups.len() {
+            if groups[g].fixed || !used(lat, g) || groups[g].idx + 1 >= lads[g].len() || d.secs > budget {
+                continue;
+            }
+            let dm = (lads[g][groups[g].idx + 1].a - lads[g][groups[g].idx].a) * len_of(lat, g) * DENSITY;
+            groups[g].idx += 1;
+            let tried = analyse(lat, groups, &lads, crit, r);
+            groups[g].idx -= 1;
+            d.solves += 1;
+            d.secs = t0.elapsed().as_secs_f64();
+            if let Ok(y) = tried {
+                let gain = (s0 - short(&y)) / dm.max(1e-6);
+                if gain > 0.0 && best.is_none_or(|b| gain > b.1) {
+                    best = Some((g, gain));
+                }
+            }
+        }
         let mut moved = false;
-        for &g in &crit.stiff {
-            if g < groups.len() && !groups[g].fixed && used(lat, g) && groups[g].idx + 1 < lads[g].len() {
-                groups[g].idx += 1;
-                moved = true;
+        if let Some((g, _)) = best {
+            groups[g].idx += 1;
+            moved = true;
+        } else {
+            for &g in &crit.stiff {
+                if g < groups.len() && !groups[g].fixed && used(lat, g) && groups[g].idx + 1 < lads[g].len() {
+                    groups[g].idx += 1;
+                    moved = true;
+                }
             }
         }
         last = Some(x);
         if !moved {
             break;
         }
+    }
+    // 3. back off: a group goes one rung lighter wherever strength, stiffness and the vibration
+    // state reached above still hold, so the stiffening rounds cannot leave a design heavier
+    // than a stricter one that never needed them. A rung taken early for stiffness can be
+    // spare once later rungs land elsewhere: back off to a fixed point, not a few rounds.
+    if let Some(mut cur) = last.take() {
+        let f_ref = if crit.f_min > 0.0 && cur.f1 >= crit.f_min { crit.f_min } else { cur.f1 };
+        for _ in 0..lads.iter().map(Vec::len).max().unwrap_or(0) {
+            let mut trimmed = false;
+            for g in 0..groups.len() {
+                if d.secs > budget {
+                    break;
+                }
+                if groups[g].fixed || !used(lat, g) || groups[g].idx == 0 {
+                    continue;
+                }
+                groups[g].idx -= 1;
+                let kept = match analyse(lat, groups, &lads, crit, r) {
+                    Ok(x) => {
+                        d.solves += 1;
+                        let ok = x.util.iter().all(|u| *u <= umax + 1e-9) && x.defl <= crit.limit && x.f1 >= f_ref - 1e-9;
+                        ok.then_some(x)
+                    }
+                    Err(_) => None,
+                };
+                d.secs = t0.elapsed().as_secs_f64();
+                match kept {
+                    Some(x) => {
+                        cur = x;
+                        trimmed = true;
+                    }
+                    None => groups[g].idx += 1,
+                }
+            }
+            if !trimmed {
+                break;
+            }
+        }
+        last = Some(cur);
     }
     let x = last.unwrap_or_else(|| Result_ { util: vec![0.0; groups.len()], nmax: vec![0.0; groups.len()], defl: 0.0, f1: 0.0, react: vec![] });
     d.util_max = x.util.iter().cloned().fold(0.0, f64::max);

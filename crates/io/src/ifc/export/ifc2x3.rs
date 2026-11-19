@@ -95,6 +95,7 @@ fn component_type(class: &str) -> bool {
             | "IFCFIRESUPPRESSIONTERMINALTYPE"
             | "IFCLAMPTYPE"
             | "IFCELECTRICAPPLIANCETYPE"
+            | "IFCMEDICALDEVICETYPE"
             // the other component types (air terminal box, covering, member, railing, slab,
             // fittings) keep the IFC4 layout in IFC2X3
             | "IFCGEOGRAPHICELEMENTTYPE"
@@ -118,6 +119,7 @@ fn component_type_2x3<'a>(class: &'a str, a: &mut Vec<Value>) -> &'a str {
         "IFCELECTRICDISTRIBUTIONBOARDTYPE"
         | "IFCGEOGRAPHICELEMENTTYPE"
         | "IFCSHADINGDEVICETYPE"
+        | "IFCMEDICALDEVICETYPE"
         | "IFCSTAIRTYPE" => {
             a.push(Value::Enum("NOTDEFINED".into()));
             "IFCBUILDINGELEMENTPROXYTYPE"

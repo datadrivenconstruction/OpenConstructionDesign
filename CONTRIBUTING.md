@@ -1,24 +1,29 @@
 # Contributing
 
-Thank you for helping improve OpenConstructionDesign. This document describes how to set up a
-development environment and how changes get merged.
+Thank you for helping improve OpenConstructionDesign, a CAD-BIM editor written in Rust. This
+document explains how to build and test the project, the rules the code follows, and how
+changes get merged.
 
 ## Contributor License Agreement
 
 Before your first pull request can be merged you must sign the
 [Contributor License Agreement](CLA.md). You keep the copyright in your work; the agreement
 lets the copyright holder license your contribution under the AGPL and under the commercial
-terms described in [COMMERCIAL.md](COMMERCIAL.md). Every commit also carries a
-`Signed-off-by:` line (`git commit -s`).
+terms described in [COMMERCIAL.md](COMMERCIAL.md). You assent by signing off on
+each commit with `Signed-off-by:` (`git commit -s`, using the email address of your GitHub
+account) and, for your first pull request, by commenting "I have read the CLA and I agree"
+(section 11 of the agreement).
 
 By participating you agree to follow the [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Development setup
 
-1. Install the toolchain described in [docs/BUILDING.md](docs/BUILDING.md) (stable Rust with
-   `rustfmt` and `clippy`, a C compiler; optionally PowerShell 7, Python 3, `cargo-deny`).
+1. Install the toolchain described in [docs/BUILDING.md](docs/BUILDING.md): stable Rust 1.89
+   or newer with `rustfmt` and `clippy`, and a C compiler (MSVC build tools on Windows).
+   Optional: PowerShell 7, Python 3, `cargo-deny`.
 2. Fork the repository and clone your fork.
-3. Build and run the editor: `cargo run --release -p ddc-app`.
+3. Build and run the editor: `cargo run --release -p ddc-app` (Windows). On Linux only the
+   library crates and the headless CLI are supported: `cargo build -p ddc-cli`.
 4. Read [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md). Each crate's `lib.rs` starts with a map
    of its modules; each file starts with a doc comment saying what it owns.
 
@@ -40,6 +45,9 @@ By participating you agree to follow the [Code of Conduct](CODE_OF_CONDUCT.md).
 - A new source file starts with an SPDX licence header; `python tools/spdx_headers.py`
   lists files that lack one.
 - Source code, comments, documentation and commit messages are in English.
+- The model is the source of truth and geometry is derived from it. Every change reaches the
+  model as one journaled, undoable operation; never write to the database around the journal.
+- The geometry kernel (`ddc-geom`) does not depend on the model.
 - Do not use third-party product names or trademarks in code, documentation, UI or commit
   messages. Refer to file formats by extension (`.dwg`, `.rvt`) or by open standard name
   (IFC, glTF, STEP).
@@ -49,8 +57,10 @@ By participating you agree to follow the [Code of Conduct](CODE_OF_CONDUCT.md).
 - **Every rule is a test.** Behaviour that the code promises — a geometric invariant, a
   format rule, a UI contract, a limit — has a test that fails if the promise breaks.
 - **Every fixed bug gets a regression test** that fails before the fix.
-- Run the tests of the crate you changed (`pwsh tools/check.ps1 <crate>` or
-  `cargo test -q -p ddc-<crate>`); run the full workspace before you open a pull request.
+- Run the tests of the crate you changed, for example `cargo test -q -p ddc-model` or
+  `pwsh tools/check.ps1 model` (format, tests and clippy in one command; a test name can
+  follow the crate). Run the full workspace (`cargo test -q --workspace`) before you open a
+  pull request.
 - Changes to the AI assistant must keep all recorded assistant cases passing (the check
   script replays them offline).
 - Test fixtures must be created by you or be under a licence that allows redistribution. Do
@@ -71,12 +81,17 @@ Keep the subject under 72 characters. One logical change per commit.
 
 ## Issues
 
+Issues are written by users. Maintainers do not open issues on your behalf, so a good report
+is the only thing the project has to work with.
+
 - Search existing issues first.
-- **Bug reports:** version or commit, platform, steps to reproduce, expected and actual
-  result, and a minimal file if possible (only files you are allowed to share).
+- **Bug reports:** use the bug form. Give the version (`ddc --version`) or commit, the
+  platform, steps to reproduce, the expected and the actual result, and a minimal file if
+  possible (only files you are allowed to share).
 - **Feature requests:** the workflow you are trying to complete and why the current tools do
   not cover it.
-- Security issues are never reported publicly; see [SECURITY.md](SECURITY.md).
+- **Security issues are never reported in public issues.** Use GitHub private vulnerability
+  reporting as described in [SECURITY.md](SECURITY.md).
 
 ## Pull requests
 

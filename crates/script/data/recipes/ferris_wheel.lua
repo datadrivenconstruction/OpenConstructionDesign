@@ -19,11 +19,13 @@ for _, x in ipairs({-3, 3}) do
   member("leg", vec3(x, -base, 0), vec3(x, 0, hubz), main, "brace")
   member("leg", vec3(x, base, 0), vec3(x, 0, hubz), main, "brace")
 end
+-- the cabin hangs beside the wheel plane from a hanger off its rim node, clear of rim and spokes
+local side = 1.6
 local cabin = define_component("gondola", {
-  extrude(profile.rect(1.6, 1.6), vec3(0, 0, -2.4), vec3(0, 0, -0.6)),
+  extrude(profile.rect(1.6, 1.6), vec3(side, 0, -1.8), vec3(side, 0, 0)),
 })
 for k = 0, n - 1 do
-  member("hanger", node[k], node[k] - vec3(0, 0, 0.6), light, "brace")
+  member("hanger", node[k], node[k] + vec3(side, 0, 0), light, "brace")
   place(cabin, node[k], "gondola")
 end
 audit{strict = true}

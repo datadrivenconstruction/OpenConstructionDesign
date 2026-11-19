@@ -1736,6 +1736,14 @@ pub(crate) fn import_extra(
             .chain(created_col)
             .chain(demol_col)
             .collect();
+        // rows the creating edits marked, looked up per row: a scan of all edits per row is O(n^2)
+        let marked: HashSet<u32> = edits
+            .iter()
+            .filter_map(|e| match e {
+                Edit::Mark { kind, row } if kind.as_str() == sc.kind => Some(*row),
+                _ => None,
+            })
+            .collect();
         for (r, cells) in v.rows {
             let r = *r;
             let get = |j: usize| cells.get(j).filter(|d| !blank(d) && !gone.contains(&(r, j)));
@@ -1746,11 +1754,7 @@ pub(crate) fn import_extra(
             let Some(idd) = get(id_col) else {
                 // a new row: its parameter values go in with the creating edit, found by the
                 // row mark the creating edit carries
-                let n = (!sc.per_type
-                    && edits
-                        .iter()
-                        .any(|e| matches!(e, Edit::Mark { kind, row } if kind.as_str() == sc.kind && *row == r)))
-                .then_some(r);
+                let n = (!sc.per_type && marked.contains(&r)).then_some(r);
                 // category of the new row: an opening takes it from its kind cell (a void has none)
                 let new_cat: Option<String> = if sc.kind == "opening" {
                     kind_col

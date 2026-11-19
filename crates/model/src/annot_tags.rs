@@ -89,6 +89,8 @@ pub struct TagText {
     pub mark: String,
     pub name: String,
     pub area: Option<f64>,
+    /// Floor finish id of a room, filled by `Model::plan_view` like its untagged `RoomTag`.
+    pub finish: Option<String>,
 }
 
 #[derive(Clone, Debug, PartialEq)]
@@ -228,6 +230,7 @@ fn host_info(cx: &mut Ctx, h: TagHost) -> Result<Option<HostInfo>, Error> {
                     mark: number,
                     name,
                     area,
+                    finish: None,
                 },
             })
         }

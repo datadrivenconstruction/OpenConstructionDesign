@@ -3159,15 +3159,19 @@ mod tests {
             s.axis = Curve::arc(v3(0.0, 0.0, 0.0), x, y, 5.0, 0.0, 1.5).unwrap();
         }
         let sid = m.add_spline_wall(&s).unwrap();
+        // an opening sits inside one piece of the arc chain: the longest one, centred
         let pieces = m.spline_wall_pieces(sid).unwrap();
+        let lens: Vec<f64> = pieces.iter().map(|&w| m.wall_length(w).unwrap()).collect();
+        let k = (0..pieces.len()).max_by(|&a, &b| lens[a].total_cmp(&lens[b])).unwrap();
+        assert!(lens[k] > 1.0, "{lens:?}");
         let door = OpeningSpec {
-            along: 0.5,
+            along: (lens[k] - 0.9) / 2.0,
             width: 0.9,
             sill: 0.0,
             height: 2.1,
             kind: "door".into(),
         };
-        m.add_opening(pieces[pieces.len() / 2], &door).unwrap();
+        m.add_opening(pieces[k], &door).unwrap();
         (m, sid)
     }
 

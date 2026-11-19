@@ -137,9 +137,71 @@ fn deflection_limit_is_met_for_girders_with_piers() {
 }
 
 #[test]
+fn railings_stand_clear_of_stays_hangers_and_truss_webs() {
+    for call in [
+        "bridge{kind = 'truss', span = 36, width = 3.5, depth = 3, bays = 9, deck_z = 4}",
+        H10,
+        "bridge{kind = 'cable_stayed', span = 80, width = 4, bays = 16, pylon_h = 30, pylon_at = 0.3, deck_z = 6}",
+        "bridge{kind = 'girder', span = 30, width = 3, bays = 6, deck_z = 5, ramp_slope = 0.05}",
+    ] {
+        let r = ok(&format!("{call}\naudit{{strict = true}}"));
+        assert!(role(&r, "handrail") > 0 && role(&r, "baluster") > 0, "{call}");
+    }
+}
+
+/// Axis ends (start, end) in metres of every extruded part named after `role`.
+fn axes(r: &ScriptRun, role: &str) -> Vec<([f64; 3], [f64; 3])> {
+    r.env.groups[0]
+        .ops
+        .iter()
+        .filter_map(|op| match op {
+            Op::Geometry(GeoOp::Solid { form: ddc_ops::Form::Extrude { frame, start, end, .. }, name: Some(n), .. })
+                if n.split(' ').next() == Some(role) =>
+            {
+                let (o, z) = (frame.origin.to_m(), frame.z);
+                let at = |t: f64| [o[0] + z.x * t, o[1] + z.y * t, o[2] + z.z * t];
+                Some((at(start.to_m()), at(end.to_m())))
+            }
+            _ => None,
+        })
+        .collect()
+}
+
+/// Members meet at nodes, so a pylon leg is split where stays reach it: `legs` vertical chains
+/// from the ground to one top, unbroken, and every stay's upper end is a node of a leg.
+fn legs_carry_the_stays_at_nodes(r: &ScriptRun, legs: usize) {
+    let eq = |a: f64, b: f64| (a - b).abs() < 1e-3;
+    let mut chains: Vec<([f64; 2], Vec<(f64, f64)>)> = vec![];
+    let pylon = axes(r, "pylon");
+    for (a, b) in &pylon {
+        assert!(eq(a[0], b[0]) && eq(a[1], b[1]), "a leg piece is vertical: {a:?} {b:?}");
+        let seg = (a[2].min(b[2]), a[2].max(b[2]));
+        match chains.iter_mut().find(|c| eq(c.0[0], a[0]) && eq(c.0[1], a[1])) {
+            Some(c) => c.1.push(seg),
+            None => chains.push(([a[0], a[1]], vec![seg])),
+        }
+    }
+    assert_eq!(chains.len(), legs, "legs {chains:?}");
+    let top = pylon.iter().map(|(a, b)| a[2].max(b[2])).fold(f64::MIN, f64::max);
+    for (at, segs) in &mut chains {
+        segs.sort_by(|p, q| p.0.total_cmp(&q.0));
+        assert!(eq(segs[0].0, 0.0), "leg at {at:?} stands on the ground: {segs:?}");
+        assert!(segs.windows(2).all(|w| eq(w[0].1, w[1].0)), "leg at {at:?} is unbroken: {segs:?}");
+        assert!(eq(segs[segs.len() - 1].1, top), "leg at {at:?} reaches the top {top}: {segs:?}");
+    }
+    let node = |p: [f64; 3]| pylon.iter().any(|(a, b)| [a, b].iter().any(|q| (0..3).all(|k| eq(q[k], p[k]))));
+    let stays = axes(r, "stay");
+    assert!(!stays.is_empty() && stays.len() == role(r, "stay"), "every stay is a straight member");
+    for (a, b) in stays {
+        let up = if a[2] > b[2] { a } else { b };
+        assert!(node(up), "stay ends off a leg node at {up:?}");
+    }
+}
+
+#[test]
 fn cable_stayed_stays_are_tension_rods_and_pylon_stands_on_the_ground() {
     let r = probe("bridge{kind = 'cable_stayed', span = 80, width = 4, bays = 16, pylon_h = 30, pylon_at = 0.3, deck_z = 6}");
-    assert_eq!(role(&r, "pylon"), 4);
+    legs_carry_the_stays_at_nodes(&r, 2);
     assert!(role(&r, "stay") >= 20);
     assert!(num(&r, "util") <= 0.95 + 1e-9);
     assert!(num(&r, "defl") <= num(&r, "limit") + 1e-9);

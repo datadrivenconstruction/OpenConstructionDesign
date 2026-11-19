@@ -625,11 +625,9 @@ fn open_refuses_two_exports_to_one_file_even_with_other_case() {
     let o = ddc(&[
         "open", s(&proj), "--export", "csv", s(&a), "--export", "xlsx", s(&b), "--json",
     ]);
-    if cfg!(windows) {
-        assert_eq!(o.status.code(), Some(2));
-        assert!(json(&o)["error"].as_str().unwrap().contains("same file"));
-        assert!(!a.exists());
-    }
+    assert_eq!(o.status.code(), Some(2));
+    assert!(json(&o)["error"].as_str().unwrap().contains("same file"));
+    assert!(!a.exists() && !b.exists());
     let o = ddc(&[
         "open", s(&proj), "--export", "csv", s(&a), "--export", "xlsx", s(&a), "--json",
     ]);

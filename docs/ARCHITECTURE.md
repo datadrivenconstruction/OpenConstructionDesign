@@ -1,6 +1,6 @@
 # Architecture
 
-OpenConstructionDesign is a Cargo workspace of focused crates. The model lives in SQLite,
+OpenConstructionDesign is a CAD-BIM editor: a Cargo workspace of focused crates. The model lives in SQLite,
 geometry is computed by an in-house kernel, and every change — from a mouse gesture, a
 spreadsheet, a script, the AI assistant or an external agent — reaches the model as a journaled
 operation.

@@ -57,7 +57,7 @@ jobs:
       - name: build
         run: cargo build -p ${{ matrix.crate }} --all-targets --locked
       - name: test
-        run: cargo test -p ${{ matrix.crate }} --locked
+        run: cargo test -p ${{ matrix.crate }} --locked --no-fail-fast
 
   fmt:
     name: fmt (advisory)

@@ -668,6 +668,9 @@ mod tests {
 
     fn file(data: &str) -> String {
         let head = header("m.ifc", IfcSchema::Ifc4x3, "2026-01-01T00:00:00");
+        // the exporter writes one entity per line starting at column 0; indentation of a
+        // multi-line literal is not part of the file
+        let data: String = data.lines().map(|l| format!("{}\n", l.trim_start())).collect();
         format!("{head}{data}{TRAILER}")
     }
 

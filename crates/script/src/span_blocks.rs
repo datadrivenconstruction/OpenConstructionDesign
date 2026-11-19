@@ -253,14 +253,13 @@ fn slab_box(
     em.slab(role, &outer, &[], lw(v(0.0, 0.0, top)).z, t, mat)
 }
 
-/// Balusters at the middle of each segment of `pts` (a girder line: their feet stand on its
-/// axis) and handrails between their tops.
+/// Balusters standing on `pts` (cross-beam nodes inboard of the girder line, so stays,
+/// hangers and truss webs rising from the girder pass clear) and handrails between their tops.
 fn rail(em: &mut Em, pts: &[V3], post: &Profile, mat: &str) -> LResult<()> {
     let mut prev: Option<V3> = None;
-    for w in pts.windows(2) {
-        let m = lerp(w[0], w[1], 0.5);
+    for m in pts {
         let top = m.add(UP.scale(1.1));
-        em.member("baluster", post, m, top, mat)?;
+        em.member("baluster", post, *m, top, mat)?;
         if let Some(p) = prev {
             em.member("handrail", post, p, top, mat)?;
         }
@@ -304,7 +303,9 @@ fn gussets(
                 for k in 0..j.bolts {
                     let side = if k % 2 == 0 { -1.0 } else { 1.0 };
                     let at = p.add(u.scale(2.0 * j.pitch / 3.0 * 1.5 + (k / 2) as f64 * j.pitch)).add(w.scale(side * j.w / 4.0));
-                    let (a, b) = (at.sub(nrm.scale(j.t / 2.0)), at.add(nrm.scale(j.t / 2.0)));
+                    // head and nut stand half a diameter proud of the plate faces
+                    let half = j.t / 2.0 + 0.5 * j.d;
+                    let (a, b) = (at.sub(nrm.scale(half)), at.add(nrm.scale(half)));
                     if em.member("bolt", &bolt, lw(a), lw(b), mat)? {
                         bolts += 1;
                     }
@@ -608,6 +609,19 @@ fn bridge(lua: &Lua, t: Option<Table>) -> Out {
         }
     }
 
+    // railings stand inboard of the girder line, clear of every section rising in its plane
+    let rail_p = prof_text("CHS 48.3x4").map_err(mlua::Error::RuntimeError)?;
+    let reach = [B_GIRDER, B_CHORD, B_WEB, B_ARCH, B_HANGER, B_STAY]
+        .iter()
+        .filter(|g| els.iter().any(|e| e.g == **g))
+        .map(|g| half_depth(&profs[*g]))
+        .chain(rprofs.first().map(half_depth))
+        .fold(0.0, f64::max);
+    let inset = reach + half_depth(&rail_p) + 0.05;
+    if railing && inset >= w2 {
+        return err("bridge: the girder sections leave no walkway between the railings; widen the deck or set railing = false");
+    }
+
     // ---- emit
     let mut em = Em::new(lua, "bridge");
     for e in &els {
@@ -710,19 +724,17 @@ fn bridge(lua: &Lua, t: Option<Table>) -> Out {
                 }
             }
             if railing {
-                let rp = prof_text("CHS 48.3x4").map_err(mlua::Error::RuntimeError)?;
                 for s in [-1.0, 1.0] {
-                    let pts: Vec<V3> = (0..=nb).map(|t| lw(m(t, s, ra.zs[t]))).collect();
-                    rail(&mut em, &pts, &rp, &mat)?;
+                    let pts: Vec<V3> = (0..=nb).map(|t| lw(m(t, s * (w2 - inset) / w2, ra.zs[t]))).collect();
+                    rail(&mut em, &pts, &rail_p, &mat)?;
                 }
             }
         }
     }
     if railing {
-        let rp = prof_text("CHS 48.3x4").map_err(mlua::Error::RuntimeError)?;
         for s in [-1.0, 1.0] {
-            let pts: Vec<V3> = (0..=bays).map(|i| lw(v(xs[i], s * w2, deck_z))).collect();
-            rail(&mut em, &pts, &rp, &mat)?;
+            let pts: Vec<V3> = (0..=bays).map(|i| lw(v(xs[i], s * (w2 - inset), deck_z))).collect();
+            rail(&mut em, &pts, &rail_p, &mat)?;
         }
     }
     let (g, info) = em.finish(&name)?;

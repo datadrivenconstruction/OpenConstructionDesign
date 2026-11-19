@@ -1345,10 +1345,10 @@ mod tests {
         ] {
             assert!(t1.iter().any(|t| t == want), "{want} in {t1:?}");
         }
-        assert!(
-            t1.iter().any(|t| t.starts_with(ru("as_word"))),
-            "as indicated: {t1:?}"
-        );
+        // form 3 of the gost title block has no scale cell (scales stand under the view
+        // titles): the mixed scales are still named "as indicated" in the stamp fields
+        let fa = auto_fields(&m, a, &m.sheet(a).unwrap(), &m.viewports(a).unwrap(), &c).unwrap();
+        assert_eq!(fa.get("scale"), Some(&ru_text("sheets.paper.as_indicated")), "{fa:?}");
         assert!(t1.iter().any(|t| t == "2"), "sheets total");
         for want in [ru("doors_schedule"), "900", "A-102", "2/2", "1:200"] {
             assert!(t2.iter().any(|t| t == want), "{want} in {t2:?}");

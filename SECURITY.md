@@ -15,6 +15,8 @@ Include:
   (only files you are allowed to share);
 - the impact as you understand it.
 
+Please allow us reasonable time to fix the problem before you disclose it publicly.
+
 You will get an acknowledgement in the advisory thread. We will keep you informed while the
 problem is investigated and fixed, and we will credit you in the advisory if you wish.
 

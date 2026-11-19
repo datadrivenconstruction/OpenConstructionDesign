@@ -334,6 +334,13 @@ fn helix_ramp(lua: &Lua, t: Option<Table>) -> Out {
     em.finish(&name)
 }
 
+/// Least offset of a fin end off its rail line that takes a cleat, m (the shortest member a
+/// block makes); a nearer end is brought onto the rail line and meets the rail axis there.
+const CLEAT_MIN: f64 = 0.01;
+/// Least slope of a cleat off the rail line (sine, about 1.1 deg): a flatter one would lie
+/// along the rail, so the fin end is brought onto the rail line instead.
+const CLEAT_FLAT: f64 = 0.02;
+
 /// Facade fins or louvres along a line, turned by an attractor point or the sun.
 fn fins(lua: &Lua, t: Option<Table>) -> Out {
     let o = Opts::new("fins", t, lua)?;
@@ -412,29 +419,63 @@ fn fins(lua: &Lua, t: Option<Table>) -> Out {
         depth_min + (depth - depth_min) * 0.5 * (1.0 - (2.0 * PI * waves * t).cos())
     };
     let fin_at = |d: f64| ddc_ops::Profile::Rect { w: ddc_ops::Len::m(thick), h: ddc_ops::Len::m(d) };
-    // the profile is centred on the axis: move the axis out by half the projected depth so
-    // the fin grows from the facade line outward, not both ways
-    let out = |p: V3, d: f64, rot: f64| p.add(nrm.scale(d / 2.0 * rot.cos()));
+    // the profile is centred on the axis and its depth runs along the normal turned by `rot`
+    // about the vertical: move the axis out by half the depth along that direction, so the
+    // inner end of the fin stays on its rail point whatever the turn
+    let out = |p: V3, d: f64, rot: f64| p.add(nrm.scale(d / 2.0 * rot.cos()).add(u.scale(d / 2.0 * rot.sin())));
     let mut em = Em::new(lua, "fins");
     let base = |s: f64| a.add(u.scale(s));
     let up = |p: V3, z: f64| v(p.x, p.y, a.z + z);
     if dir == "vertical" {
         let step = l / count as f64;
+        // rail extent along `u` from `a`: from the first fin attachment to the last (a cleat's
+        // rail node, or a fin end on the rail line), so both rail ends are nodes
+        let (mut s0, mut s1) = (f64::MAX, f64::MIN);
         for k in 0..=count {
             let p = base(k as f64 * step);
             let mid = up(p, height / 2.0);
             // the roll that points the fin's depth along the facade normal
             let face = (-nrm.x).atan2(nrm.y);
             let (d, rot) = (depth_at(k, count), rot_at(mid));
-            let (f0, f1) = (out(up(p, 0.0), d, rot), out(up(p, height), d, rot));
+            // the axis end is half the depth out from the rail point; an offset that barely
+            // leaves the rail line (too short or too flat for a cleat) is brought onto it
+            let off = out(p, d, rot).sub(p);
+            let perp = off.dot(nrm);
+            let on_line = perp.abs() < CLEAT_MIN.max(CLEAT_FLAT * off.len());
+            let (f0, f1) = if on_line {
+                // the end lies on the rail axis, which the audit takes as a node; the rail is
+                // not cut there, as pieces shorter than three rail depths (fins 0.6 m apart on
+                // a 200 mm rail) would no longer count as members and their ends would miss
+                let s = (k as f64 * step) + off.dot(u);
+                (s0, s1) = (s0.min(s), s1.max(s));
+                (up(base(s), 0.0), up(base(s), height))
+            } else {
+                let s = k as f64 * step;
+                (s0, s1) = (s0.min(s), s1.max(s));
+                (up(p, 0.0).add(off), up(p, height).add(off))
+            };
             em.member_roll("fin", &fin_at(d), f0, f1, &mat, face + rot)?;
+            // off the rail line: a cleat along the fin's end edge ties the rail node to the
+            // fin's axis end
+            if !on_line {
+                for (rp, f) in [(up(p, 0.0), f0), (up(p, height), f1)] {
+                    em.cleat("cleat", rp, f, thick, &fmat)?;
+                }
+            }
         }
-        em.member("rail", &frame, up(a, 0.0), up(base(l), 0.0), &fmat)?;
-        em.member("rail", &frame, up(a, height), up(base(l), height), &fmat)?;
+        for z in [0.0, height] {
+            em.member("rail", &frame, up(base(s0), z), up(base(s1), z), &fmat)?;
+        }
     } else {
         let step = height / count as f64;
-        em.member("post", &frame, up(a, 0.0), up(a, height), &fmat)?;
-        em.member("post", &frame, up(base(l), 0.0), up(base(l), height), &fmat)?;
+        let e = crate::audit::extents(&frame);
+        let (pw, face) = ((e[1] - e[0]).max(e[3] - e[2]), (e[1] - e[0]).min(e[3] - e[2]) / 2.0);
+        for s in [0.0, l] {
+            em.member("post", &frame, up(base(s), 0.0), up(base(s), height), &fmat)?;
+            em.post_base(up(base(s), 0.0), u, nrm, pw, &fmat)?;
+        }
+        // each blade's end plate is bolted through the post wall: wall and plate 8 mm each
+        let (wall, bolt_d) = (0.008, 0.012);
         for k in 1..count {
             let z = k as f64 * step;
             let mid = up(base(l / 2.0), z);
@@ -442,6 +483,9 @@ fn fins(lua: &Lua, t: Option<Table>) -> Out {
             // blade ends stay on the posts: only the vertical fins move out
             let (f0, f1) = (up(a, z), up(base(l), z));
             em.member_roll("louvre", &fin_at(d), f0, f1, &mat, PI / 2.0 - rot)?;
+            for (p, n) in [(f0, u), (f1, u.scale(-1.0))] {
+                em.bolt(p.add(n.scale(face - wall)), n, 2.0 * wall, bolt_d, &fmat)?;
+            }
         }
     }
     em.finish(&name)

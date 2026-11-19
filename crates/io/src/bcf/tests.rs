@@ -174,8 +174,12 @@ fn export_then_import_keeps_every_field_in_both_versions() {
         assert_eq!(rep.unmatched.len(), 1);
         assert_eq!(rep.unmatched[0].reference, "3vB$Unmatched0000000000");
 
-        let before = a.topic_get(ida).unwrap();
+        let mut before = a.topic_get(ida).unwrap();
         let after = b.topic_get(b.topic_by_guid(&t.guid).unwrap().unwrap()).unwrap();
+        if v == BcfVersion::V21 {
+            // the 2.1 camera schema has no aspect ratio: another project reads none
+            before.viewpoint.as_mut().unwrap().aspect = 0.0;
+        }
         same_fields(&before, &after);
         assert_eq!(after.elements[0].id, wb[1], "matched by guid, not by id");
         assert_eq!(after.source, "bcf");
@@ -254,7 +258,9 @@ fn an_orthogonal_camera_survives() {
         ..Viewpoint::default()
     });
     let id = a.topic_add(&t).unwrap();
-    let want = a.topic_get(id).unwrap().viewpoint;
+    let mut want = a.topic_get(id).unwrap().viewpoint;
+    // 3.0 requires an aspect ratio: a view without one is written with the default
+    want.as_mut().unwrap().aspect = write::DEFAULT_ASPECT;
     let bytes = export_bytes(&a, None, BcfVersion::V30).unwrap();
     let (b, _) = model(1);
     import_bytes(&b, &bytes).unwrap();

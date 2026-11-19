@@ -5,7 +5,7 @@ local segs = 24
 for i = 0, segs - 1 do
   local z0, z1 = height * i / segs, height * (i + 1) / segs
   local r = 2.0 - 0.8 * (i + 0.5) / segs
-  part("tower", extrude(profile.circle(r), vec3(0, 0, z0), vec3(0, 0, z1)))
+  part("tower", extrude(profile.circle(r), vec3(0, 0, z0), vec3(0, 0, z1)), {ifc = "IfcColumn", predefined = "COLUMN"})
 end
 part("nacelle", extrude(profile.rect(3, 3), vec3(-3, 0, height), vec3(3, 0, height)))
 local hub = vec3(4.5, 0, height)

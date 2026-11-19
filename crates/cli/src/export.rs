@@ -108,13 +108,11 @@ fn resolved(p: &Path) -> PathBuf {
         .unwrap_or_else(|_| p.to_path_buf())
 }
 
+/// Paths that differ only by case count as one file on every OS: projects move between
+/// case-insensitive and case-sensitive file systems, where such twins would collide.
 pub fn same_file(a: &Path, b: &Path) -> bool {
     let (x, y) = (resolved(a), resolved(b));
-    if cfg!(windows) {
-        x.to_string_lossy().to_lowercase() == y.to_string_lossy().to_lowercase()
-    } else {
-        x == y
-    }
+    x.to_string_lossy().to_lowercase() == y.to_string_lossy().to_lowercase()
 }
 
 /// Refuses an output that is (or may be) one of the inputs. Returns the reason.

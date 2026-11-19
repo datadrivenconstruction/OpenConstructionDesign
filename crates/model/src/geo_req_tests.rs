@@ -443,8 +443,14 @@ fn spiral_handrail_stays_upright() {
     let len = ((2.0 * PI * turns).powi(2) + rise * rise).sqrt();
     let q = m.solid_quantities(id).unwrap().unwrap();
     assert!(close(q.volume, a * len, 1e-9 * a * len), "{} vs {}", q.volume, a * len);
+    // the mesh sweeps the faceted ring: each circle is two half arcs cut at the view sag
+    let facets = |r: f64| {
+        let n = 2.0 * (PI / ddc_geom::gsolid::step_for(r, ddc_geom::gsolid::VIEW_SAG)).ceil();
+        n / 2.0 * r * r * (2.0 * PI / n).sin()
+    };
+    let af = facets(o / 2.0) - facets(o / 2.0 - t);
     let mesh = m.solid_mesh(id).unwrap();
-    assert!(close(mesh.volume(), a * len, 1e-2 * a * len), "mesh {}", mesh.volume());
+    assert!(close(mesh.volume(), af * len, 1e-2 * af * len), "mesh {} vs {}", mesh.volume(), af * len);
     // the top end sits where the helix ends
     let top = mesh.positions.iter().map(|p| p.z).fold(f64::MIN, f64::max);
     assert!(close(top, 0.9 + rise + o / 2.0, 0.02), "{top}");

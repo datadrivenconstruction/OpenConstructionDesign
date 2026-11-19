@@ -874,6 +874,7 @@ pub fn patch_file(
             .count() as u64;
         o.remove = c.removed;
     }
+    props::drop_sets_of_removed(&ix, src, &mut o, ctl)?;
 
     let u = if work.geom.is_empty()
         && work.added.is_empty()

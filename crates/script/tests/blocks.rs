@@ -60,7 +60,18 @@ fn recipes_carry_the_parts_their_summary_promises() {
     assert_eq!(role(&r, "diagonal"), 12 * 12 * 2);
     assert_eq!(role(&r, "core"), 24);
     let r = ok(recipe("cable_stayed_footbridge").unwrap());
-    assert_eq!(role(&r, "pylon"), 4);
+    // an H-pylon: two legs, each split into pieces at the stay nodes (span.rs checks the chains)
+    let mut legs: Vec<[f64; 2]> = vec![];
+    for op in &r.env.groups[0].ops {
+        if let Op::Geometry(GeoOp::Solid { form: ddc_ops::Form::Extrude { frame, .. }, name: Some(n), .. }) = op {
+            let o = frame.origin.to_m();
+            if n.split(' ').next() == Some("pylon") && !legs.iter().any(|l| (l[0] - o[0]).hypot(l[1] - o[1]) < 1e-3) {
+                legs.push([o[0], o[1]]);
+            }
+        }
+    }
+    assert_eq!(legs.len(), 2, "pylon legs {legs:?}");
+    assert!(role(&r, "pylon") >= 4);
     assert!(role(&r, "stay") >= 20);
     assert_eq!(role(&r, "deck"), 16);
     let r = ok(recipe("membrane_canopy").unwrap());
@@ -69,6 +80,15 @@ fn recipes_carry_the_parts_their_summary_promises() {
     assert!(role(&r, "membrane") >= 8 * 24);
     let r = ok(recipe("voronoi_screen").unwrap());
     assert_eq!((role(&r, "plate"), role(&r, "post")), (4, 5));
+    // fixings: three brackets and bolts on each of the 8 panel edges, a base plate and four
+    // anchors under each post
+    assert_eq!((role(&r, "bracket"), role(&r, "bolt")), (24, 24));
+    assert_eq!((role(&r, "base_plate"), role(&r, "anchor")), (5, 20));
+    let c = |cl: &str, p: Option<&str>| Some((cl.to_string(), p.map(str::to_string)));
+    assert_eq!(class(&r, "bolt"), c("IfcMechanicalFastener", Some("BOLT")));
+    assert_eq!(class(&r, "anchor"), c("IfcMechanicalFastener", Some("ANCHORBOLT")));
+    assert_eq!(class(&r, "bracket"), c("IfcMember", Some("MEMBER")));
+    assert_eq!(class(&r, "base_plate"), c("IfcPlate", None));
     let r = ok(recipe("hypar_umbrellas").unwrap());
     assert_eq!(role(&r, "column"), 6);
 }
@@ -110,7 +130,13 @@ fn parts_carry_the_ifc_class_of_their_role() {
         let classed = r.env.groups[0]
             .ops
             .iter()
-            .filter(|op| matches!(op, Op::Geometry(GeoOp::Solid { ifc: Some(_), .. })))
+            // member and plate rows lower onto beam, brace, slab and wall rows: classed by kind
+            .filter(|op| {
+                matches!(
+                    op,
+                    Op::Geometry(GeoOp::Solid { ifc: Some(_), .. } | GeoOp::Member { .. } | GeoOp::Plate { .. })
+                )
+            })
             .count();
         assert!(classed > 0, "{name}: no classed part");
     }
@@ -231,6 +257,31 @@ fn sections_of(r: &ScriptRun, role: &str) -> std::collections::BTreeSet<String> 
         .collect()
 }
 
+/// Every fin end meets its rail at a node at any turn and depth: a cleat when the end leaves
+/// the rail line, the rail axis itself when a fin turned flat puts it on the line.
+#[test]
+fn fin_ends_meet_the_rails_at_any_turn() {
+    for depth in ["0.05 m", "0.3 m"] {
+        for (lo, hi) in [("0 deg", "0 deg"), ("90 deg", "90 deg"), ("-90 deg", "-90 deg"), ("-90 deg", "90 deg"), ("-30 deg", "70 deg")] {
+            let src = format!(
+                "fins{{from = vec3(0, 0, 0), to = vec3(12, 0, 0), height = 4, depth = '{depth}', thickness = '0.01 m',
+                       attractor = vec3(6, -3, 2), min_rotation = '{lo}', max_rotation = '{hi}'}}\naudit{{strict = true}}"
+            );
+            let r = ok(&src);
+            let (fins, cleats, rails) = (role(&r, "fin"), role(&r, "cleat"), role(&r, "rail"));
+            let case = format!("{depth} {lo}..{hi}");
+            match (lo, hi) {
+                ("0 deg", _) => assert_eq!((cleats, rails), (2 * fins, 2), "{case}: a cleat at both ends, rails whole"),
+                (_, "90 deg") | (_, "-90 deg") if lo == hi => {
+                    // flat fins stand on the rail axis; the rail runs on past the last one
+                    assert_eq!((cleats, rails), (0, 2), "{case}: flat fins sit on the rail line");
+                }
+                _ => assert!(cleats > 0 && rails >= 2, "{case}"),
+            }
+        }
+    }
+}
+
 #[test]
 fn fin_depth_swings_between_its_bounds() {
     let flat = ok("fins{from = vec3(0, 0, 0), to = vec3(30, 0, 0), height = 3, depth = '0.9 m', mode = 'fixed'}");
@@ -278,7 +329,8 @@ fn a_script_can_recurse_into_a_branching_tree() {
                     end
                   end
                 end
-                branch(vec3(0, 0, 0), vec3(0, 0, 1), 4, 1)
+                -- the trunk is generation 0: four splitting generations follow it
+                branch(vec3(0, 0, 0), vec3(0, 0, 1), 4, 0)
                 assert(made == 1 + 3 + 9 + 27 + 81, made)");
     assert_eq!(r.parts.len(), 121);
 }

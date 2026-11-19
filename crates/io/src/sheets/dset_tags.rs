@@ -121,6 +121,10 @@ pub(super) fn settle_tags(
     views: &[SectionSpec],
     marks: &PlanMarks,
 ) -> Result<Vec<TagSpec>, SheetError> {
+    // sized with the finish words the sheet prints
+    let mut shown = d.clone();
+    super::dset_area::localize_finish(&mut shown, ctx.text);
+    let d = &shown;
     let mut bare = d.clone();
     bare.bbox = extent(d);
     let mut tags: Vec<&ddc_model::Tag> = d
@@ -147,7 +151,8 @@ pub(super) fn settle_tags(
     let mut placed: Vec<Box4> = vec![];
     let mut out = vec![];
     for t in tags {
-        let lines = tag_lines(t, &unit, &sep);
+        let show = st["tag_finish_max_scale"].as_f64().is_some_and(|m| scale <= m);
+        let lines = tag_lines(t, &unit, &sep, show);
         let (hw, hh) = tag_half(&lines, th);
         let wing = if t.cat == TagCat::Window {
             hh * 0.6

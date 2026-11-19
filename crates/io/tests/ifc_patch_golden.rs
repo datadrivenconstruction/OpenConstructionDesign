@@ -431,9 +431,10 @@ fn deleting_a_host_takes_its_dependents_and_nothing_else() {
         );
         assert!(out.contains(SKIPPED), "{s}");
         let gone: HashSet<u32> = lost(&src, &out).iter().filter_map(|x| id_of(x)).collect();
+        // the wall's own set #102 and its values go with it; the shared set #111 stays
         assert_eq!(
             gone,
-            HashSet::from([41, 56, 57, 73, 74, 70, 75, 103, 112]),
+            HashSet::from([41, 56, 57, 73, 74, 70, 75, 100, 101, 102, 103, 112]),
             "{s}"
         );
         assert_refs_valid(&out);

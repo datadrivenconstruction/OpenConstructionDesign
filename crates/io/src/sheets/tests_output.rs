@@ -674,5 +674,7 @@ fn sheet_orphan_measure_says_why_never_zero() {
     let f = long(0);
     let c = compose_sheet(&m, s, &ctx(&f)).unwrap();
     let got = texts(&c.drawing, None);
-    assert!(got.iter().any(|t| t.starts_with("n/a: orphan")), "{got:?}");
+    // an orphan keeps its last number (measure_text, Model::measure_info `last`), marked with why
+    let why = got.iter().find(|t| t.ends_with("(orphan:1)")).unwrap_or_else(|| panic!("{got:?}"));
+    assert!(!why.starts_with("0 "), "{got:?}");
 }

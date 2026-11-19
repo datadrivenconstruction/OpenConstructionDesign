@@ -150,12 +150,13 @@ const CASES: &[Case] = &[
         -0.05,
         true,
     ),
+    // height and axis of an existing curtain wall are locked to the editor (tests_locks)
     case(
         "Curtain walls",
-        "height [m]",
+        "base_offset [m]",
         "SELECT id FROM curtain_wall ORDER BY id LIMIT 1",
-        "SELECT height FROM curtain_wall WHERE id=?1",
-        -0.2,
+        "SELECT base_offset FROM curtain_wall WHERE id=?1",
+        0.1,
         true,
     ),
     // a layer row is keyed by its type: one-layer types only
@@ -220,7 +221,9 @@ fn one_edit(m: &mut Model, name: &str, c: &Case, u: Units) -> Result<(), String>
         let v1 = v0 + c.delta;
         xlsx::patch_cell(&src, &dst, c.sheet, id, c.header, shown(c, v1, u))?;
         let pre = xlsx::import_xlsx_with(m, &dst, opts(false))?;
-        let hit = pre.changes.iter().all(|x| x.sheet == c.sheet && x.id == Some(id));
+        // a layer row is keyed by type and position; type_row maps it back to the type
+        let row_of = |x: &xlsx::Change| x.id.map(|k| xlsx::type_row(&x.sheet, k).map_or(k, |t| t.1));
+        let hit = pre.changes.iter().all(|x| x.sheet == c.sheet && row_of(x) == Some(id));
         if pre.changes.len() != 1 || !hit || !pre.rejected.is_empty() {
             return Err(format!("{ctx}: preview of one edit:{}", noise(&pre)));
         }

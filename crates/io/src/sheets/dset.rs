@@ -1168,7 +1168,7 @@ fn plan_signature(d: &PlanView) -> u64 {
                     if tag.cat != ddc_model::TagCat::Room {
                         t.mark.hash(h);
                     }
-                    (tag.cat, &t.name, t.area.map(mm), tag.spec.leader).hash(h);
+                    (tag.cat, &t.name, t.area.map(mm), &t.finish, tag.spec.leader).hash(h);
                     (pt(tag.head), pt(tag.anchor)).hash(h);
                 }
                 ViewPrim::SectionCut {

@@ -363,13 +363,42 @@ pub(super) fn drop_quantities(
             dropped += 1;
         }
     }
-    if emptied.is_empty() {
-        return Ok(dropped);
+    sweep_sets(src, &emptied, o, ctl)?;
+    Ok(dropped)
+}
+
+/// Sets of the removed relations: a deleted element's own sets leave with it, shared ones stay.
+pub(super) fn drop_sets_of_removed(
+    ix: &Index,
+    src: &Path,
+    o: &mut Out,
+    ctl: Option<&Arc<Progress>>,
+) -> Result<(), PatchError> {
+    let sets: HashSet<u32> = ix
+        .rels
+        .iter()
+        .filter(|r| r.ty == DEFINES && o.remove.contains(&r.id))
+        .filter_map(|r| split_top(&r.args).get(5).and_then(|v| single_ref(v)))
+        .filter(|s| !o.remove.contains(s))
+        .collect();
+    sweep_sets(src, &sets, o, ctl)
+}
+
+/// A set every user of which is removed goes, and so do its lines nothing else uses.
+fn sweep_sets(
+    src: &Path,
+    sets: &HashSet<u32>,
+    o: &mut Out,
+    ctl: Option<&Arc<Progress>>,
+) -> Result<(), PatchError> {
+    if sets.is_empty() {
+        return Ok(());
     }
     let mut lines: HashSet<u32> = HashSet::new();
-    for (set, p) in probe(src, &emptied, ctl)? {
+    for (set, p) in probe(src, sets, ctl)? {
         if p.referrers.iter().all(|r| o.remove.contains(r)) {
             o.remove.insert(set);
+            o.replace.remove(&set);
             lines.extend(items_of(&p));
         }
     }
@@ -377,10 +406,11 @@ pub(super) fn drop_quantities(
         for (line, p) in probe(src, &lines, ctl)? {
             if p.referrers.iter().all(|r| o.remove.contains(r)) {
                 o.remove.insert(line);
+                o.replace.remove(&line);
             }
         }
     }
-    Ok(dropped)
+    Ok(())
 }
 
 /// A set whose only user is this owner is edited in place; otherwise the owner gets a copy.

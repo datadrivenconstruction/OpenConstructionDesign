@@ -78,9 +78,13 @@ fn pbox(p: &PMesh) -> (V3, V3) {
 }
 
 /// Each written body read back by the own importer: volume within 1 %, bounding box within
-/// `tol`; matched by volume.
+/// `tol`; matched by volume. The own file comes back as exact solid rows; the geometry is read
+/// as another program would, with the editor's property set renamed away.
 fn read_back(m: &Model, ids: &[i64], t: &str, tol: f64) {
-    let plan = plan_bytes(t.as_bytes()).unwrap();
+    let own = plan_bytes(t.as_bytes()).unwrap();
+    assert_eq!(own.solids.len(), ids.len(), "{:?}", own.report.warnings);
+    let foreign = t.replace("'DDC_GenericSolid'", "'Foreign_Solid'");
+    let plan = plan_bytes(foreign.as_bytes()).unwrap();
     assert_eq!(plan.meshes.len(), ids.len(), "{:?}", plan.report.skipped);
     for id in ids {
         let want = m.solid_quantities(*id).unwrap().unwrap().volume;

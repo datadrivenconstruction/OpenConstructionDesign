@@ -458,7 +458,8 @@ fn text_w(s: &str, h: f64) -> f64 {
 
 /// Lines of a tag as a sheet shows it: a room's number and name over its area; a door or
 /// window mark ("?" when it has none).
-pub(super) fn tag_lines(tag: &ddc_model::Tag, unit: &str, sep: &str) -> Vec<String> {
+/// Lines of a tag; a room's floor finish only when `finish` (the scale allows it).
+pub(super) fn tag_lines(tag: &ddc_model::Tag, unit: &str, sep: &str, finish: bool) -> Vec<String> {
     let mark = if tag.text.mark.trim().is_empty() {
         "?"
     } else {
@@ -469,6 +470,9 @@ pub(super) fn tag_lines(tag: &ddc_model::Tag, unit: &str, sep: &str) -> Vec<Stri
         lines.push(format!("{mark} {}", tag.text.name).trim().to_string());
         if let Some(a) = tag.text.area {
             lines.push(format!("{} {unit}", fmt_num(a, 2, sep)));
+        }
+        if let (true, Some(f)) = (finish, tag.text.finish.as_deref().filter(|f| !f.is_empty())) {
+            lines.push(f.to_string());
         }
     } else {
         lines.push(mark.to_string());
@@ -821,7 +825,8 @@ pub fn compose_styled(
                     pen.text([mid[0] - text_w(&s, th) / 2.0, mid[1] + num(&dim, "text_gap")], th, 0.0, &s, DIMS);
                 }
                 ViewPrim::Tag { tag } => {
-                    let lines = tag_lines(tag, &unit, &sep);
+                    let show = st["tag_finish_max_scale"].as_f64().is_some_and(|m| vp.scale <= m);
+                    let lines = tag_lines(tag, &unit, &sep, show);
                     let th = wt.tag;
                     let (c, at) = (tf(tag.head), tf(tag.anchor));
                     let (hw, hh) = tag_half(&lines, th);

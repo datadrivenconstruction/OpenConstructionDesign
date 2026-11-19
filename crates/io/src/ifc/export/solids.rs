@@ -1131,7 +1131,11 @@ extrude Marker rect(-Size, -Size, Size, Size) z(0, Size)
         ];
         let t = export_ifc(&m).unwrap();
         assert_eq!(count(&t, "IFCFIXEDREFERENCESWEPTAREASOLID"), 2);
-        let plan = crate::ifc::plan_bytes(t.as_bytes()).unwrap();
+        let own = crate::ifc::plan_bytes(t.as_bytes()).unwrap();
+        assert_eq!(own.solids.len(), 2, "exact rows: {:?}", own.report.warnings);
+        // the swept geometry as another program reads it: without the editor's property set
+        let foreign = t.replace("'DDC_GenericSolid'", "'Foreign_Solid'");
+        let plan = crate::ifc::plan_bytes(foreign.as_bytes()).unwrap();
         assert_eq!(plan.meshes.len(), 2, "{:?}", plan.report.skipped);
         let sorted = |mut v: Vec<f64>| {
             v.sort_by(f64::total_cmp);

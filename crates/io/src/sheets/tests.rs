@@ -562,8 +562,9 @@ fn sheet_model_dims_exact_and_no_label_overlap() {
             _ => None,
         })
         .collect();
-    assert_eq!(first[0], [r6(170.0 - text_width("101", 3.5) / 2.0), 177.2]);
-    assert_ne!(tags[0], [r6(172.0 - text_width("102", 3.5) / 2.0), 177.2]);
+    // four lines at 1:50 (name, number, area, floor finish: within tag_finish_max_scale)
+    assert_eq!(first[0], [r6(170.0 - text_width("101", 3.5) / 2.0), 180.0]);
+    assert_ne!(tags[0], [r6(172.0 - text_width("102", 3.5) / 2.0), 180.0]);
     assert_eq!(make().to_pdf().unwrap(), s.to_pdf().unwrap());
     let a = crate::dxf::write_string(&s.to_dxf());
     assert_eq!(a, crate::dxf::write_string(&make().to_dxf()));

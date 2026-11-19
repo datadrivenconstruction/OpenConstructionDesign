@@ -256,7 +256,8 @@ fn polar(c: V2, r: f64, a: f64) -> V2 {
     c + v2(a.cos(), a.sin()) * r
 }
 
-fn step_for(r: f64, sag: f64) -> f64 {
+/// Angle step of the facets of an arc of radius `r` at chord sag `sag` (at most pi/8).
+pub fn step_for(r: f64, sag: f64) -> f64 {
     if r <= sag {
         return PI / 8.0;
     }

@@ -281,21 +281,33 @@ mod tests {
         let mut h = DefaultHasher::new();
         for t in names {
             t.hash(&mut h);
-            let cols = if t.ends_with("_qty") { "*" } else { "rowid, *" };
-            let mut st = db
-                .prepare(&format!("SELECT {cols} FROM {t} ORDER BY rowid"))
+            // a WITHOUT ROWID table has no rowid: its rows count by content, in sorted order
+            let sql: String = db
+                .query_row("SELECT sql FROM sqlite_master WHERE type='table' AND name=?1", [&t], |r| r.get(0))
                 .unwrap();
+            let rowless = sql.to_ascii_uppercase().contains("WITHOUT ROWID");
+            let q = match (t.ends_with("_qty"), rowless) {
+                (_, true) => format!("SELECT * FROM {t}"),
+                (true, false) => format!("SELECT * FROM {t} ORDER BY rowid"),
+                (false, false) => format!("SELECT rowid, * FROM {t} ORDER BY rowid"),
+            };
+            let mut st = db.prepare(&q).unwrap();
             let n = st.column_count();
-            let rows = st
+            let mut rows: Vec<String> = st
                 .query_map([], |r| {
                     Ok((0..n)
                         .map(|i| format!("{:?}", r.get::<_, V>(i).unwrap()))
                         .collect::<Vec<_>>()
                         .join("|"))
                 })
-                .unwrap();
+                .unwrap()
+                .map(|r| r.unwrap())
+                .collect();
+            if rowless {
+                rows.sort();
+            }
             for r in rows {
-                r.unwrap().hash(&mut h);
+                r.hash(&mut h);
             }
         }
         h.finish()

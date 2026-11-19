@@ -339,7 +339,7 @@ mod tests {
             }
         }
         assert_eq!(i, total, "one step per journal record");
-        assert!(["wall_add", "opening_add", "slab_add"].iter().all(|k| kinds.iter().any(|x| x.starts_with(&k[..4]))), "{kinds:?}");
+        assert!(["wall_add", "wall_opening_add", "slab_add"].iter().all(|k| kinds.contains(*k)), "{kinds:?}");
     }
 
     /// Budget: a 500-operation journal on a 10k-wall model, timeline <= 3 s, first step <= 300 ms.

@@ -689,7 +689,14 @@ impl Model {
                 reason,
             });
         }
-        let tags = self.tags(spec.level)?;
+        let finishes = self.plan_room_finishes(spec.level);
+        let mut tags = self.tags(spec.level)?;
+        // a tagged room names its finish on its tag, as an untagged one on its RoomTag
+        for t in &mut tags {
+            if let crate::TagHost::Room(id) = t.spec.host {
+                t.text.finish = finishes.get(&id).cloned();
+            }
+        }
         // a room with a tag element is labelled by the tag (as in the editor)
         let tagged: Vec<i64> = tags
             .iter()
@@ -713,7 +720,6 @@ impl Model {
                     cut: None,
                 })
             })?;
-            let finishes = self.plan_room_finishes(spec.level);
             for r in rows {
                 let mut r = r?;
                 if let ViewPrim::RoomTag { room, finish, .. } = &mut r {

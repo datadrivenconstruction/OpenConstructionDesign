@@ -1,5 +1,13 @@
 # User guide
 
+This guide covers the core workflows of the 0.9.0 preview. It assumes the Windows desktop
+editor; the `ddc` command line also runs on Linux. For a first model step by step, start with
+[getting-started](user/getting-started.md).
+
+The editor is a CAD-BIM tool: drawings, 3D geometry and building data live in one project.
+Walls, rooms, ducts and structural members are elements with parameters; plans, sections,
+sheets and schedules are views of the same model.
+
 This guide covers the core workflows. Commands live on the ribbon tabs (Architecture,
 Structure, Systems, Annotate, View, Data, Manage); any command can also be found with the
 command palette (**Ctrl+K**). **F1** opens help. Press **Esc** twice to leave any tool.
@@ -137,3 +145,11 @@ ddc batch jobs.json                            # many independent jobs
 ```
 
 `ddc --help` lists all commands, export formats and exit codes.
+
+## Where to go next
+
+- [docs/user/ai-assistant.md](user/ai-assistant.md): providers, preview and Apply.
+- [docs/user/formats.md](user/formats.md): supported formats and the IFC round trip.
+- [docs/user/families.md](user/families.md): parametric families.
+- [ARCHITECTURE.md](ARCHITECTURE.md): how the editor works inside.
+- Problems or ideas: open an issue; vulnerabilities go through [SECURITY.md](../SECURITY.md).

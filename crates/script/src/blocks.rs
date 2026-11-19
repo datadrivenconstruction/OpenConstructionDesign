@@ -515,6 +515,7 @@ pub const ROLE_IFC: &[(&str, &str, &str)] = &[
     ("panel", "IfcPlate", "CURTAIN_PANEL"),
     ("plate", "IfcPlate", "SHEET"),
     ("bolt", "IfcMechanicalFastener", "BOLT"),
+    ("anchor", "IfcMechanicalFastener", "ANCHORBOLT"),
     ("tread", "IfcPlate", "SHEET"),
     ("membrane", "IfcCovering", "MEMBRANE"),
     ("cover", "IfcCovering", "ROOFING"),
@@ -631,6 +632,36 @@ impl<'l> Em<'l> {
         self.node(b);
         self.put(PartKind::Member, role, &f, mat)?;
         Ok(true)
+    }
+
+    /// A flat bar fixing a part to a member: from the node `a` on the member's axis to `b` on
+    /// the part, `thick` thick, at most 80 mm deep and short enough a section to stay a member.
+    pub fn cleat(&mut self, role: &str, a: V3, b: V3, thick: f64, mat: &str) -> LResult<bool> {
+        let h = (b.sub(a).len() / 3.5).min(0.08);
+        let p = Profile::Rect { w: Len::m(thick.min(h)), h: Len::m(h) };
+        self.member(role, &p, a, b, mat)
+    }
+
+    /// A bolt of diameter `d` through a grip of `grip` from `at` along the unit `n`, head and
+    /// nut half a diameter proud of the faces.
+    pub fn bolt(&mut self, at: V3, n: V3, grip: f64, d: f64, mat: &str) -> LResult<bool> {
+        let rod = Profile::Circle { r: Len::m(d / 2.0) };
+        self.member("bolt", &rod, at.sub(n.scale(0.5 * d)), at.add(n.scale(grip + 0.5 * d)), mat)
+    }
+
+    /// The base of a post standing at `p`: a square plate under it (top at the foot) and four
+    /// anchors at its corners, set out along the plan directions `x` and `y`; `pw` is the
+    /// post's largest section side. The anchors stand clear of the post's near-miss reach.
+    pub fn post_base(&mut self, p: V3, x: V3, y: V3, pw: f64, mat: &str) -> LResult<()> {
+        let (bp, tp, r) = (pw / 2.0 + 0.09, 0.02, pw / 2.0 + 0.04);
+        let c = |dx: f64, dy: f64, h: f64| p.add(x.scale(dx)).add(y.scale(dy)).add(UP.scale(h));
+        let h = -tp / 2.0;
+        self.panel("base_plate", &[c(-bp, -bp, h), c(bp, -bp, h), c(bp, bp, h), c(-bp, bp, h)], tp, mat)?;
+        let rod = Profile::Circle { r: Len::m(0.008) };
+        for (dx, dy) in [(-r, -r), (r, -r), (r, r), (-r, r)] {
+            self.member("anchor", &rod, c(dx, dy, 0.0), c(dx, dy, -0.3), mat)?;
+        }
+        Ok(())
     }
 
     /// A flat panel of thickness `t` centred on the polygon `pts`; a warped quad becomes two
