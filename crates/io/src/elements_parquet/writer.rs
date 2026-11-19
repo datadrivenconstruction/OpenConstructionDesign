@@ -194,7 +194,7 @@ pub fn write_parquet<W: Write + Send>(rows: &[ElementRow], out: W) -> Result<Vec
         WriterProperties::builder()
             .set_compression(Compression::ZSTD(ZstdLevel::try_new(3).map_err(err)?))
             .set_created_by("ddc-elements/1".into())
-            .set_max_row_group_size(ROW_GROUP_MAX)
+            .set_max_row_group_row_count(Some(ROW_GROUP_MAX))
             .build(),
     );
     let mut w = SerializedFileWriter::new(out, schema, props).map_err(err)?;

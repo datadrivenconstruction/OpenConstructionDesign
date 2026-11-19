@@ -200,6 +200,27 @@ fn malformed_rows_are_refused_and_nothing_is_written() {
     assert!(e.contains("twice"), "{e}");
 }
 
+fn footer_file(meta: &[u8], declared_len: u32) -> Vec<u8> {
+    let mut f = b"PAR1".to_vec();
+    f.extend_from_slice(meta);
+    f.extend_from_slice(&declared_len.to_le_bytes());
+    f.extend_from_slice(b"PAR1");
+    f
+}
+
+#[test]
+fn a_file_declaring_a_huge_length_is_refused_without_allocating_it() {
+    // version field, then created_by (a string) declaring about 2^40 bytes with none present
+    let meta = [0x15, 0x02, 0x58, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0x1F, b'x'];
+    let e = read_parquet(footer_file(&meta, meta.len() as u32)).unwrap_err();
+    assert!(!e.is_empty());
+    // a footer longer than the whole file
+    assert!(read_parquet(footer_file(&meta, u32::MAX)).is_err());
+    // a footer whose list claims billions of schema elements
+    let list = [0x29, 0xFC, 0xFF, 0xFF, 0xFF, 0x0F];
+    assert!(read_parquet(footer_file(&list, list.len() as u32)).is_err());
+}
+
 #[test]
 fn global_id_characters_are_keys() {
     for k in ["2Gx1$_ab-CD0123456789", "b1/s03/u-2B/room-kitchen#1", "a.b:c"] {
