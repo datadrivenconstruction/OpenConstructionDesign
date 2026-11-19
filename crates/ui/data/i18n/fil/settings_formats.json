@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "Ano ang mangyayari pagkatapos i-export ang workbook",
+ "settings.area_decimals_desc": "Mga digit pagkatapos ng decimal separator sa mga area",
+ "settings.volume_decimals_desc": "Mga digit pagkatapos ng decimal separator sa mga volume",
+ "settings.frac_desc": "Pinakamaliit na fraction ng inch sa imperial na haba",
+ "settings.small_area_desc": "Ipakita sa square inch ang area na mas maliit sa isang square foot",
+ "settings.sample_desc": "Itsura ng mga numero sa kasalukuyang pagpili",
+ "autosave.title_desc": "Magtago ng recovery copy ng bukas na proyekto",
+ "autosave.interval_desc": "Oras sa pagitan ng mga recovery copy",
+ "autosave.keep_desc": "Tinatanggal ang mas lumang recovery copy",
+ "autosave.folder_desc": "Kapag walang laman, gagamitin ang default na folder",
+ "autosave.remind_desc": "Paalala na i-save ang proyektong wala pang file",
+ "settings.backend_desc": "Graphics adapter na ginagamit",
+ "settings.news_desc": "Ano ang nagbago sa bersyong ito",
+ "settings.assoc_default_desc": "Gawing default ang app na ito para sa model file",
+ "settings.data_dir_desc": "Dito nakalagay ang cache, recovery copy at log."
+}

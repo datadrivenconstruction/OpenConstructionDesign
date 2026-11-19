@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "Rendszer neve",
+ "mep_browser.add_blocked": "Előbb adjon meg rendszernevet",
+ "mep_browser.col.insulation": "Szigetelés",
+ "mep_browser.cancel": "Mégse",
+ "mep_browser.delete.title": "Törli ezt a rendszert?",
+ "mep_browser.delete.body": "A(z) \"{name}\" rendszer és a hozzá tartozó {n} vezetékszakasza törlődik.",
+ "mep_browser.delete.undo": "Ez egy Visszavonással visszavonható.",
+ "mep_browser.delete.confirm": "Rendszer törlése"
+}

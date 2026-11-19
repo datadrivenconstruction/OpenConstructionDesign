@@ -1,0 +1,8 @@
+{
+ "script_rec.started": "Yozuv: shu paytdan boshlab qilgan tahrirlaringiz skriptga tushadi. To'xtatish uchun “Harakatlarni skriptga yozish”ni yana tanlang.",
+ "script_rec.saved": "“{name}” skripti saqlandi: tahrirlar — {n}.",
+ "script_rec.skipped": "Skript shakli bo'lmagan asboblar bilan qilingan {k} ta tahrir yozilmadi.",
+ "script_rec.nothing": "Yozuv to'xtatildi: saqlash uchun tahrirlar yo'q.",
+ "script_rec.failed": "Yozuv saqlanmadi: {why}",
+ "script_rec.no_folder": "skriptlar uchun sozlamalar papkasi yo'q"
+}

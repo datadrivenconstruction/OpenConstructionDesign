@@ -1,0 +1,5 @@
+{
+ "start_recent.unavailable": "Şu an kullanılamıyor (sürücü veya ağ konumu yanıt vermiyor): {path}",
+ "start_recent.unavailable_short": "Şu an kullanılamıyor",
+ "start_recent.retry": "Yeniden dene"
+}

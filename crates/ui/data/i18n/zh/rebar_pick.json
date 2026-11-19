@@ -1,0 +1,7 @@
+{
+ "rebar_pick.pick.empty": "钢筋：请选择柱、梁、墙、楼板或基础",
+ "rebar_pick.pick.unsupported": "此所选内容无法布置钢筋。请选择柱、梁、墙、楼板或基础",
+ "rebar_pick.pick.keys": "点击选择，按 Shift 追加 · Enter 打开表单 · Esc 取消",
+ "rebar_pick.pick.open": "打开表单",
+ "rebar_pick.pick.cancel": "取消"
+}

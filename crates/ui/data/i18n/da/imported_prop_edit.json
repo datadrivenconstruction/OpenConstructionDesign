@@ -1,0 +1,6 @@
+{
+ "imported_prop_edit.remove": "Fjern egenskab",
+ "imported_prop_edit.remove.tip": "Fjerner egenskaben fra {n} valgt(e) element(er) i ét fortrydelsestrin; den fjernes fra IFC-filen ved gem",
+ "imported_prop_edit.done": "{key} fjernet fra {n} element(er)",
+ "imported_prop_edit.warn.reload": "Udført, men visningen blev ikke opdateret; åbn panelet igen eller fortryd, hvis det ser forkert ud"
+}

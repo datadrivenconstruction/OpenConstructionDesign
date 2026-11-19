@@ -1,0 +1,6 @@
+{
+ "imported_prop_edit.remove": "Odebrat vlastnost",
+ "imported_prop_edit.remove.tip": "Odebere vlastnost z {n} vybraných prvků v jednom kroku zpět; při uložení se vyřadí ze souboru IFC",
+ "imported_prop_edit.done": "{key} odebráno z {n} prvku(ů)",
+ "imported_prop_edit.warn.reload": "Hotovo, ale pohled se neobnovil; znovu otevřete panel, nebo vraťte zpět, pokud to vypadá špatně"
+}

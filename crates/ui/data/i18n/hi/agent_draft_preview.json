@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "पूर्वावलोकन",
+ "agent_draft.ag.preview.desc": "जब पॉइंटर बटन पर हो, इस ड्राफ़्ट के तत्वों की रूपरेखा कैनवास पर दिखाएं। कुछ नहीं बदलता।",
+ "agent_draft.type.column": "कॉलम",
+ "agent_draft.type.roof": "रूफ़",
+ "agent_draft.type.ceiling": "सीलिंग",
+ "agent_draft.type.stair": "मोनोलिथिक",
+ "agent_draft.type.railing": "रेलिंग",
+ "agent_draft.type.shaft": "शाफ़्ट",
+ "agent_draft.type.axis": "अक्ष 6.5 mm",
+ "agent_draft.type.refplane": "संदर्भ तल"
+}

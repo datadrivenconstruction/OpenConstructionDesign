@@ -1,0 +1,19 @@
+{
+ "undo.entry_later": "Nu s-a anulat: după ea s-a făcut altă modificare. Anulează mai întâi pe aceea.",
+ "undo.entry_gone": "Nu s-a anulat: această modificare este deja anulată sau nu mai este în istoric.",
+ "undo.entry_busy": "Termină sau anulează mai întâi desenarea curentă, apoi anulează.",
+ "quick.hud.more": "Mai multe în Proprietăți: {names}",
+ "sheet_tools.sheet.more": "Mai multe instrumente pentru foaie",
+ "job.of": "{d} din {t}",
+ "job.of.mb": "{d} din {t} MB",
+ "job.left.under_minute": "mai puțin de un minut",
+ "job.left.minutes": "mai rămân aproximativ {n} min",
+ "sheet_tools.start.units": "Unități",
+ "sheet_tools.print.save": {
+  "one": "Salvează # foaie",
+  "few": "Salvează # foi",
+  "other": "Salvează # de foi"
+ },
+ "sheet_tools.sets.delete_ask": "Ștergi setul „{name}”? Foile lui rămân în proiect.",
+ "sheet_tools.keep": "Păstrează"
+}

@@ -1,0 +1,9 @@
+{
+ "prop_head.of_type": {
+  "one": "# tätä tyyppiä",
+  "other": "# tätä tyyppiä"
+ },
+ "prop_head.override_tip": "Poikkeaa tyypistä, napsauta palauttaaksesi",
+ "prop_head.reset_done": "“{name}” palautettu tyypin arvoon",
+ "prop_head.copy_id": "Napsauta kopioidaksesi numeron"
+}

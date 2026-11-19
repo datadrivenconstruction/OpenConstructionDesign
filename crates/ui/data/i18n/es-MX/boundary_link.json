@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "Elegir todo el bucle de muros",
+ "cmd.sketch.link_unlink": "Desvincular borde del muro",
+ "cmd.sketch.link_repick": "Volver a elegir el muro del borde",
+ "cmd.ctx.floor.link_unlink": "Desvincular bordes de muros",
+ "cmd.ctx.floor.link_accept": "Aceptar bordes de muros borrados",
+ "boundary_link.hint.loop": "Haga clic en un muro: el tramo cerrado de muros pasa a ser bordes vinculados",
+ "boundary_link.hint.repick": "Haga clic en un muro paralelo al borde: el borde lo seguirá",
+ "boundary_link.need_sketch": "Abra primero el boceto del contorno",
+ "boundary_link.need_edge": "Señale un borde del boceto",
+ "boundary_link.need_straight": "Solo un borde recto puede seguir a un muro",
+ "boundary_link.need_floor": "Seleccione un forjado",
+ "boundary_link.no_wall": "No hay ningún muro bajo el cursor",
+ "boundary_link.not_parallel": "El muro no es paralelo al borde",
+ "boundary_link.not_linked": "Este borde no está vinculado a un muro",
+ "boundary_link.unlinked": "Borde desvinculado: se queda en su sitio y ya no sigue al muro",
+ "boundary_link.accepted": "Bordes aceptados: quedan en su sitio como bordes normales",
+ "boundary_link.failed": "No se pudo aplicar",
+ "boundary_link.lost": "muro de origen borrado",
+ "boundary_link.blocked": "no puede seguir el muro"
+}

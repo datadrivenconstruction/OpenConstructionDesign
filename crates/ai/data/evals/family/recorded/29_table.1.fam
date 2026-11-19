@@ -1,0 +1,30 @@
+# Built-in component library. Families are separated by a '---' line.
+# Insertion point: furniture - center of the footprint on the floor; wall-mounted - wall face, body toward +y.
+# Bodies are visible in 3D and on elevations; plan view shows symbols.
+
+family Table
+category furniture
+host floor
+ifc IfcFurniture TABLE
+param Width length type 1600mm
+param Depth length type 800mm
+param Height length type 750mm
+param Top length type 40mm
+param Leg length type 60mm
+param LegH length type = Height - Top
+param Wood material type "Oak"
+param Seats int type = 2 * floor(Width / 600mm) + if(Depth >= 900mm, 2, 0)
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Back y = Depth / 2
+type "1600x800" Width=1600mm, Depth=800mm
+type "1200x800" Width=1200mm, Depth=800mm
+type "1200x500" Width=1200mm, Depth=500mm
+type "60x30in" Width=60in, Depth=30in, Height=29in, Top=1.5in, Leg=2.5in
+extrude Top rect(Left, Front, Right, Back) z(LegH, Height) mat(Wood) show(3d, elev)
+extrude Leg1 rect(Left, Front, Left + Leg, Front + Leg) z(0, LegH) mat(Wood) show(medium, fine, 3d, elev)
+extrude Leg2 rect(Right - Leg, Front, Right, Front + Leg) z(0, LegH) mat(Wood) show(medium, fine, 3d, elev)
+extrude Leg3 rect(Right - Leg, Back - Leg, Right, Back) z(0, LegH) mat(Wood) show(medium, fine, 3d, elev)
+extrude Leg4 rect(Left, Back - Leg, Left + Leg, Back) z(0, LegH) mat(Wood) show(medium, fine, 3d, elev)
+symbol rect(Left, Front, Right, Back)

@@ -1,0 +1,6 @@
+{
+ "xlsx_no_base.title": "Tento sešit nemá porovnávací data",
+ "xlsx_no_base.detail": "Skrytý porovnávací list chybí nebo je poškozen (sešit uložil jiný program nebo byl vytvořen ručně). Každá odlišná buňka nahradí hodnotu modelu; úpravy modelu provedené od exportu nelze zjistit. Řádky chybějící v sešitu se nemažou.",
+ "xlsx_no_base.confirm": "Změny jsem zkontroloval: nahradit hodnoty modelu ({n})",
+ "xlsx_no_base.confirm_first": "Nejprve potvrďte import sešitu bez porovnávacích dat"
+}

@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "วาดผนัง",
+ "empty.totals.action": "วาดผนัง",
+ "empty.schedule.action": "เพิ่มช่อง",
+ "empty.schedule_filtered.action": "ล้างตัวกรอง",
+ "empty.library.action": "รีเซ็ตการค้นหา",
+ "empty.library.load": "โหลดแฟมิลี",
+ "empty.schedule_fields.title": "ไม่มีช่องที่แสดง",
+ "empty.schedule_fields.action": "เพิ่มช่อง",
+ "empty.schedule_fields.hint": "เปิดอย่างน้อยหนึ่งช่องเพื่อดูตาราง"
+}

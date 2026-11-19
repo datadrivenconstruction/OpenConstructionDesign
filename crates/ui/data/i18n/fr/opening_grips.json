@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "Retourner le côté de la charnière",
+ "cmd.edit.flip_hand.desc": "Symétrise les portes et fenêtres sélectionnées le long du mur pour déplacer les charnières à l’autre extrémité de l’ouverture.",
+ "cmd.edit.flip_facing": "Retourner le côté d’ouverture",
+ "cmd.edit.flip_facing.desc": "Fait pivoter les portes et fenêtres sélectionnées vers l’autre côté du mur.",
+ "opening_grips.flip_hand": "Retourner la charnière",
+ "opening_grips.flip_hand.tip": "Charnières de l’autre côté de l’ouverture (Maj+F)",
+ "opening_grips.flip_facing": "Retourner le côté",
+ "opening_grips.flip_facing.tip": "Ouverture de l’autre côté du mur (Maj+G)",
+ "opening_grips.flip.done": "Retourné : {n}",
+ "opening_grips.flip.none": "Sélectionnez une porte ou une fenêtre à retourner",
+ "opening_grips.flip.fail": "Non retourné : {why}"
+}

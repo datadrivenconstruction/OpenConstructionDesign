@@ -1,0 +1,10 @@
+{
+ "wall_stack.we.stack_caption": "Sammansatt typ",
+ "wall_stack.we.side_left": "Vänster sida",
+ "wall_stack.we.side_right": "Höger sida",
+ "wall_stack.we.from": "Från",
+ "wall_stack.we.to": "Till",
+ "wall_stack.we.bottom": "Underkant",
+ "wall_stack.we.delete_tip": "Ta bort den här profilen",
+ "wall_stack.we.from_after_to": "”Från” måste vara före ”Till”"
+}

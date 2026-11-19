@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "Ось X",
+ "fe.axis.y": "Ось Y",
+ "fe.axis.z": "Ось Z",
+ "fe.col.axis": "Ось",
+ "fe.col.at": "Положение",
+ "fe.col.mode": "Режим",
+ "fe.mode.fixed": "Закреплена",
+ "fe.mode.free": "Свободна",
+ "fe.types.inherited": "Значение по умолчанию из параметра",
+ "fe.csv.more": "Другие действия с CSV",
+ "fe.ref.selected": "Плоскость: {name}"
+}

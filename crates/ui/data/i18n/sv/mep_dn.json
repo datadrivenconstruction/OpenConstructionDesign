@@ -1,0 +1,5 @@
+{
+ "mep_dn.dn.unset": "Inte angivet",
+ "mep_dn.slope.err": "Ange en lutning i %, t.ex. 1.5",
+ "mep_dn.err.rejected": "värdet godtas inte"
+}

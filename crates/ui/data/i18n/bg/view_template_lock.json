@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "Управлява се от шаблона {name}",
+ "view_template.edit_template": "Редактиране на шаблона",
+ "view_template.locked_tip": "Зададено от шаблона за изглед {name}. Променете го в шаблона.",
+ "view_template.no_filters": "Няма филтри в този изглед"
+}

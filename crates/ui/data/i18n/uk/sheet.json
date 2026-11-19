@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "Довідка з гарячих клавіш",
+ "cmd.help.shortcuts.desc": "Показує всі гарячі клавіші, як вони налаштовані зараз, за контекстом. Натисніть ? будь-де поза текстовим полем.",
+ "sheet.title": "Гарячі клавіші",
+ "sheet.filter": "Фільтр за командою або клавішею",
+ "sheet.filter_label": "Фільтр гарячих клавіш",
+ "sheet.customize": "Налаштувати…",
+ "sheet.close": "Закрити",
+ "sheet.esc_close": "щоб закрити",
+ "sheet.none": "Немає відповідних гарячих клавіш",
+ "sheet.none_hint": "Спробуйте інше слово або клавішу.",
+ "sheet.sec.general": "Загальні",
+ "sheet.sec.plan": "План",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "Специфікації",
+ "sheet.sec.sheets": "Аркуші",
+ "sheet.sec.ai": "AI"
+}

@@ -1,0 +1,42 @@
+{
+ "ai.tool.show_elements": "Elementen tonen",
+ "ai.tool.isolate_elements": "Elementen isoleren",
+ "ai.tool.color_by": "Kleuren op waarde",
+ "ai.tool.reset_view": "Weergave resetten",
+ "ai_found.found.query": "Gevonden",
+ "ai_found.found.show": "Getoond",
+ "ai_found.found.isolate": "Geïsoleerd",
+ "ai_found.found.hide": "Verborgen",
+ "ai_found.found.color": "Ingekleurd",
+ "ai_found.found.count": "{n} van {m}",
+ "ai_found.found.none": "Niets komt overeen. Probeer een ruimer filter.",
+ "ai_found.found.show_btn": "Tonen",
+ "ai_found.found.show_tip": "Selecteer deze elementen en zoom er in plattegrond en 3D naartoe",
+ "ai_found.found.isolate_btn": "Isoleren",
+ "ai_found.found.isolate_tip": "Toon alleen deze elementen tot Weergave resetten",
+ "ai_found.found.select_btn": "Selecteren",
+ "ai_found.found.select_tip": "Selecteer deze elementen zonder het beeld te verplaatsen",
+ "ai_found.legend.title": "Kleur op {by}",
+ "ai_found.legend.row_tip": "Klik om deze elementen te selecteren",
+ "ai_found.legend.empty_value": "Geen waarde",
+ "ai_found.legend.other": {
+  "one": "# waarde meer",
+  "other": "# waarden meer"
+ },
+ "ai_found.view.title": "Weergave van de AI-assistent",
+ "ai_found.view.reset": "Weergave resetten",
+ "ai_found.view.reset_tip": "Herstel de weergave van vóór de AI-assistent haar wijzigde",
+ "ai_found.view.shown": {
+  "one": "# element getoond",
+  "other": "# elementen getoond"
+ },
+ "ai_found.view.isolated": {
+  "one": "# element geïsoleerd",
+  "other": "# elementen geïsoleerd"
+ },
+ "ai_found.view.hidden": {
+  "one": "# element verborgen",
+  "other": "# elementen verborgen"
+ },
+ "ai_found.found.line": "{what}: {count}"
+}

@@ -1,0 +1,15 @@
+{
+ "text_style.lbl.text_style": "Metin stili",
+ "text_style.lbl.align": "Hizalama",
+ "text_style.lbl.head": "Ok ucu",
+ "text_style.lbl.line_style": "Çizgi stili",
+ "text_style.lbl.fill": "Dolgu",
+ "text_style.lbl.detail": "Detay",
+ "text_style.lbl.width": "Genişlik",
+ "text_style.bad_number": "{min} ile {max} arasında bir sayı girin",
+ "text_style.tip.next_ring": "Bu konturu kapat ve aynı bölgede yenisini başlat",
+ "text_style.tip.edit_text": "Metni yerinde düzenle",
+ "text_style.tip.add_leader": "Bu metne önder çizgi ekle",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°"
+}

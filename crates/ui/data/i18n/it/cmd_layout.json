@@ -1,0 +1,4 @@
+{
+ "cmd.data.sync_xlsx": "Sincronizza con un foglio di calcolo…",
+ "cmd.data.sync_xlsx.desc": "Rilegge la cartella di lavoro collegata e mostra le differenze dal modello."
+}

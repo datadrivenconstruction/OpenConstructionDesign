@@ -1,0 +1,4 @@
+{
+ "topo_import.topo.ambiguous": "{n} rader hoppet over: et tall leses på to måter (1,250 = 1.25 eller 1250?) og filen viser ikke noe desimaltegn",
+ "topo_import.topo.grouped": "{n} punkter lest med siffergrupper (1 250,5 eller 1,234.5)"
+}

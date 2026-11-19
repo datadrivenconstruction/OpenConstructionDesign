@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "Филтърен ред под заглавията. Текст: частично съвпадение; числа: >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "Показва или скрива колони",
+ "sched_toolbar.groups_tip": "Групира редовете по колони, с междинни суми",
+ "sched_toolbar.formulas_tip": "Изчислими колони",
+ "sched_toolbar.phase": "Фаза",
+ "sched_toolbar.phase_tip": "От коя фаза се взимат редовете",
+ "sched_toolbar.copy_tip": "Избраните редове (или всички видими) като TSV",
+ "sched_toolbar.import_tip": "Прочита върнатата спецификация: редове по Id, колони по заглавие; първо броят, после една стъпка за отмяна",
+ "sched_toolbar.export_tip": "Видимите редове и колони с обобщения; числата остават числа",
+ "sched_toolbar.need_table": "Първо отворете спецификация",
+ "sched_toolbar.busy_open": "Диалогът за файлове вече е отворен",
+ "sched_toolbar.busy_save": "Диалогът за запис вече е отворен",
+ "sched_toolbar.clear_filter": "Изчисти филтъра",
+ "sched_toolbar.fields_title": "Колони"
+}

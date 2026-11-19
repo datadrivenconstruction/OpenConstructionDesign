@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "Udrží tuto stěnu při každé úpravě na aktuální délce",
+ "constraints.con.tip.lock_dist": "Udrží vzdálenost mezi dvěma stěnami při každé úpravě",
+ "constraints.con.tip.equal": "Udrží stejné rozestupy mezi vybranými stěnami",
+ "constraints.con.tip.align": "Udrží obě stěny na jedné čáře",
+ "constraints.con.tip.parallel": "Udrží stěny rovnoběžné",
+ "constraints.con.tip.perp": "Udrží stěny v pravém úhlu",
+ "constraints.con.tip.align_grid": "Udrží stěnu na nejbližší ose",
+ "constraints.con.tip.lock_dist_grid": "Udrží vzdálenost stěny od nejbližší osy",
+ "constraints.con.tip.level_gap": "Udrží odstup mezi podlažími",
+ "constraints.con.tip.top_to_level": "Udrží horní hranu stěny na úrovni podlaží nad ní"
+}

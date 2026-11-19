@@ -1,0 +1,14 @@
+{
+ "save_guard.save.empty_over_full": "Nichts wurde gespeichert: Das Modell ist leer, und die Datei enthält bereits Inhalt. Die Datei bleibt unverändert. Verwenden Sie „Speichern unter“, um unter einem anderen Namen zu speichern.",
+ "save_guard.refuse.body": "Nichts wurde gespeichert: Das Modell ist leer, und {name} enthält bereits Inhalt. Die Datei bleibt unverändert.",
+ "save_guard.refuse.foreign": "Dies ist keine DDC-Editor-Datei und kann daher nicht ersetzt werden. Verwenden Sie „Speichern unter“, um unter einem anderen Namen zu speichern.",
+ "save_guard.refuse.ask": "{name} ersetzen? Die Datei enthält {what}. Sie wird zuvor in den Ordner _archive daneben verschoben, danach wird das leere Modell geschrieben.",
+ "save_guard.refuse.holds_db": "{n} Elemente und Inhaltszeilen",
+ "save_guard.refuse.holds_ifc": "IFC mit Produkten",
+ "save_guard.refuse.replace": "Trotzdem ersetzen…",
+ "save_guard.refuse.replace_yes": "Verschieben und ersetzen",
+ "save_guard.refuse.save_as": "Speichern unter…",
+ "save_guard.refuse.cancel": "Abbrechen",
+ "save_guard.replace.moved": "Die vorherige Datei wurde nach {path} verschoben",
+ "save_guard.replace.move_failed": "{name} konnte nicht beiseitegeschoben werden: {error}. Es wurde nichts geschrieben."
+}

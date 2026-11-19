@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "{name} muuttui levyllä.",
+ "src.watch.update": "Päivitä malli",
+ "src.watch.compare": "Vertaa",
+ "src.watch.ignore": "Ohita tämä versio",
+ "src.watch.missing": "{name}: lähdetiedostoa ei löydy. Työ jatkuu.",
+ "src.watch.locate": "Etsi…",
+ "src.watch.dismiss": "Sulje",
+ "src.watch.more": "ja {n} muuta lähdetiedostoa",
+ "src.watch.done": "Päivitetty kohteesta {name}: {updated} muutettu, {kept} kenttää säilytetty muokattuina, {conflicts} ristiriitaa, {locked} lukittua arvoa säilytetty"
+}

@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "Freie Fläche",
+ "cmd.mass.panelize": "In Paneele teilen",
+ "cmd.mass.surface_shell": "Dach auf Fläche",
+ "cmd.mass.thicken": "Dicke geben",
+ "hint.mass.freeform.first": "Freie Fläche: ersten Eckpunkt des Rechtecks im Plan · Zahl — Höhe · Esc — abbrechen",
+ "hint.mass.freeform.next": "Freie Fläche: gegenüberliegende Ecke · Zahl — Höhe · Esc — abbrechen",
+ "hint.mass.panelize.first": "Paneele: freie Fläche im 3D wählen · Esc — abbrechen",
+ "hint.mass.panelize.value": "Paneele: Paneelgröße eingeben · Enter — anwenden · Esc — abbrechen",
+ "hint.mass.surface_shell.first": "Dach auf Fläche: freie Fläche im 3D wählen · Esc — abbrechen",
+ "hint.mass.surface_shell.value": "Dach auf Fläche: Dicke eingeben · Enter — anwenden · Esc — abbrechen",
+ "hint.mass.thicken.first": "Dicke geben: freie Fläche im 3D wählen · Esc — abbrechen",
+ "hint.mass.thicken.value": "Dicke geben: Dicke eingeben (0 — nur Fläche) · Enter — anwenden · Esc — abbrechen",
+ "status.mass.pick_surface": "Freie Fläche wählen",
+ "status.mass.freeform_small": "Das Rechteck ist zu klein: mindestens 0,5 m in jede Richtung",
+ "name.mass.freeform": "Freie Fläche",
+ "rgroup.mass_free": "Erweitert"
+}

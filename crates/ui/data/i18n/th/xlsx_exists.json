@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "มีสมุดงานนี้อยู่แล้ว",
+ "xlsx_exists.foreign": "ไม่ใช่สมุดงานของโปรเจกต์นี้ จึงจะไม่ถูกแทนที่",
+ "xlsx_exists.pending": "มี {n} การแก้ไขที่ยังไม่ได้นำไปใช้กับโมเดล",
+ "xlsx_exists.outside": "มี {n} แถวที่การส่งออกใหม่ไม่มี",
+ "xlsx_exists.new_name": "ส่งออกไปยัง {name}",
+ "xlsx_exists.apply_first": "นำไปใช้ก่อน",
+ "xlsx_exists.replace": "แทนที่ (ย้ายสมุดงานเก่าไปที่ _archive)",
+ "xlsx_exists.archived": "ย้ายสมุดงานเก่าไปที่ {path} แล้ว",
+ "xlsx_exists.archive_failed": "ย้ายสมุดงานเก่าไม่ได้ ยังไม่ได้ส่งออกอะไร: {error}"
+}

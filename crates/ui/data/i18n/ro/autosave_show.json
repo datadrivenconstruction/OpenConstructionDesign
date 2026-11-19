@@ -1,0 +1,4 @@
+{
+ "cmd.mgr.autosave_show": "Afișează salvarea automată",
+ "cmd.mgr.autosave_show.desc": "Deschide fereastra salvării automate; rămâne deschisă dacă este deja afișată."
+}

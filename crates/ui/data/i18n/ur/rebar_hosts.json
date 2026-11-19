@@ -1,0 +1,40 @@
+{
+ "rebar_hosts.hosts": "ہوسٹس: {list}",
+ "rebar_hosts.kind.column": "ستون",
+ "rebar_hosts.kind.beam": "شہتیر",
+ "rebar_hosts.kind.wall": "دیوار",
+ "rebar_hosts.kind.slab": "سلیب",
+ "rebar_hosts.kind.footing": "فاؤنڈیشن",
+ "rebar_hosts.kind.raft": "فاؤنڈیشن سلیب",
+ "rebar_hosts.n.column": {
+  "one": "# ستون",
+  "other": "# ستون"
+ },
+ "rebar_hosts.n.beam": {
+  "one": "# شہتیر",
+  "other": "# شہتیر"
+ },
+ "rebar_hosts.n.wall": {
+  "one": "# دیوار",
+  "other": "# دیواریں"
+ },
+ "rebar_hosts.n.slab": {
+  "one": "# سلیب",
+  "other": "# سلیبز"
+ },
+ "rebar_hosts.n.footing": {
+  "one": "# فاؤنڈیشن",
+  "other": "# فاؤنڈیشنز"
+ },
+ "rebar_hosts.n.raft": {
+  "one": "# فاؤنڈیشن سلیب",
+  "other": "# فاؤنڈیشن سلیبز"
+ },
+ "rebar_hosts.mixed_note": "ستون اور شہتیر بار اور اسٹرپس لیتے ہیں؛ دیواریں، سلیبز اور فاؤنڈیشنز میش لیتی ہیں۔ ریبار شامل کرنے کے لیے ایک گروپ منتخب کریں۔",
+ "rebar_hosts.why.mixed": "منتخب میں ستون یا شہتیر دیواروں، سلیبز یا فاؤنڈیشنز کے ساتھ ملے ہیں۔ ایک گروپ منتخب کریں۔",
+ "rebar_hosts.why.area_linear": "میش دیواروں، سلیبز اور فاؤنڈیشنز میں جاتا ہے، ستونوں یا شہتیروں میں نہیں۔",
+ "rebar_hosts.why.bars_plate": "طولی بار اور اسٹرپس ستونوں اور شہتیروں میں جاتے ہیں، دیواروں، سلیبز یا فاؤنڈیشنز میں نہیں۔",
+ "rebar_hosts.why.no_common_face": "منتخب ہوسٹس کا کوئی مشترک کور فیس نہیں۔ ایک ہی قسم کے ہوسٹس منتخب کریں۔",
+ "rebar_hosts.why.no_type": "بار کی قسم منتخب کریں۔",
+ "rebar_hosts.kind_type": "{kind} · {type}"
+}

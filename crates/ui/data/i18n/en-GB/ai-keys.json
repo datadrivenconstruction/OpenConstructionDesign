@@ -1,0 +1,14 @@
+{
+ "ai_keys.header_is_key": "Keys go in the Key field — headers are saved in plain text",
+ "ai_keys.move": "Move to Key",
+ "ai_keys.remove_line": "Remove from headers",
+ "ai_keys.save_blocked": "Move the key out of the headers to save",
+ "ai_keys.show": "Show",
+ "ai_keys.hide": "Hide",
+ "ai_keys.copy": "Copy",
+ "ai_keys.tokens": "tokens",
+ "ai_keys.presets": "Presets",
+ "ai_keys.preset_k": "{n}k",
+ "ai_keys.preset_m": "{n}M",
+ "ai_keys.images_on": "Supported"
+}

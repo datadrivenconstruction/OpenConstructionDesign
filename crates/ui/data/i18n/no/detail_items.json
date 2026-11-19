@@ -1,0 +1,16 @@
+{
+ "cmd.drawing.to_detail": "Tegning til detalj",
+ "cmd.drawing.to_detail.desc": "Gjør de valgte tegningselementene, eller hele tegningen på denne etasjen, om til detaljlinjer, tekstnotater og flater på planen. Tegningen forblir som den er.",
+ "detail_items.st.no_drawing": "Ingen tegning på denne etasjen",
+ "detail_items.st.nothing": "Ingenting å konvertere: ingen linjer, buer, tekster eller fyll på viste lag",
+ "detail_items.st.done": "Detaljelementer lagt til: linjer {lines}, tekster {texts}, flater {regions}",
+ "detail_items.st.failed": "Kunne ikke legge til detaljelementer: {e}",
+ "detail_items.st.warn": "Detaljelementer lagt til, men visningen kunne ikke oppdateres (linjer {lines}, tekster {texts}, flater {regions}): {e}. Angre fjerner dem.",
+ "detail_items.st.bad_view": "Detaljelementer krever en plan- eller snittvisning",
+ "detail_items.st.no_transform": "Denne visningen har ingen brukbar koordinatsystem for tegningen; ingenting ble lagt til",
+ "drafting_tools.free.plan_only": "Denne kommandoen virker på planelementer; åpne en plan",
+ "drafting_tools.free.zero": "De to punktene faller sammen; ingenting ble lagt til",
+ "drafting_tools.free.select_first": "Velg elementene i denne visningen som skal fordeles først",
+ "drafting_tools.free.pick_item": "Klikk på et element i denne visningen for å merke det",
+ "drafting_tools.free.dim_kind": "Bare lineære mål fungerer i en tegnevisning"
+}

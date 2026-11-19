@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "Gambar garis tepi tertutup: klik titik, lalu Enter atau Selesai untuk membuat",
+ "sketch_hints.sk_finish": "Selesai",
+ "sketch_hints.sk_cancel": "Batal",
+ "sketch_hints.import_warn": "peringatan pemeriksaan model: {n} (pertama: {first})",
+ "sketch_hints.ai.offline.schedule": "Buka jadwal",
+ "sketch_hints.ai.offline.check": "Periksa terhadap aturan",
+ "sketch_hints.ai.offline.warnings": "Tampilkan peringatan",
+ "cmd.file.publish_pdf": "Terbitkan lembar sebagai PDF…",
+ "cmd.file.publish_pdf.desc": "Menerbitkan lembar yang dipilih ke PDF. Sama dengan Ekspor lembar ke PDF/SVG.",
+ "sketch_hints.verify_none": "Tidak ada yang diatur asisten AI pada pilihan untuk diverifikasi",
+ "sketch_hints.contours_none": "Tidak ada toposolid di model: kontur muncul setelah dibuat",
+ "sketch_hints.contours_off": "Kontur toposolid disembunyikan",
+ "sketch_hints.contours_on": "Kontur toposolid ditampilkan"
+}

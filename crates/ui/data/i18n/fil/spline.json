@@ -1,0 +1,7 @@
+{
+ "spline.opt.spline": "Spline",
+ "spline.opt.spline_tip": "Spline na pader: i-click ang mga punto na dinadaanan nito, Enter o Esc para tapusin",
+ "spline.wt.three_points": "kailangan ng spline na pader ng tatlo o higit pang punto",
+ "spline.wt.no_curtain": "walang spline axis ang curtain wall",
+ "spline.wt.added": "naidagdag ang spline na pader"
+}

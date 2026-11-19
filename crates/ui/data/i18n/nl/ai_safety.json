@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "Sleutel in het adres",
+ "ai_safety.auth.query_name": "Adresparameter",
+ "ai_safety.need_query_name": "Noem de adresparameter die de sleutel draagt",
+ "ai_safety.apply_unlogged": "Toegepast, maar het wijzigingslogboek is niet geschreven",
+ "ai_safety.audit_unlogged": "Het logboek van de AI-assistent kon niet worden geschreven",
+ "ai_safety.chat_not_saved": "Het gesprek kon niet in het project worden opgeslagen. Er wordt opnieuw geprobeerd.",
+ "ai_safety.clip_clears": "Het klembord wordt na 30 s leeggemaakt",
+ "ai_safety.copied_clears": "Gekopieerd. Het klembord wordt na 30 s leeggemaakt",
+ "ai_safety.key_session_only": "Sleutel bewaard tot de app sluit",
+ "ai.settings.no_data_dir": "dit systeem geeft geen map voor app-instellingen"
+}

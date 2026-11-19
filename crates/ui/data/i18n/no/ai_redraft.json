@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "Revidert",
+ "ai.redraft.added": "+{n} lagt til",
+ "ai.redraft.removed": "−{n} fjernet",
+ "ai.redraft.changed": "~{n} endret",
+ "ai.redraft.strip": "{what} siden sist du så på",
+ "ai.redraft.note": "Revidert plan gjennomgått: {what}",
+ "ai.redraft.more": "+{n} til",
+ "ai.redraft.ack": "Forstått",
+ "ai.redraft.ack.tip": "Merk denne revisjonen som sett; Bruk gjelder den da",
+ "ai.redraft.removed_list": "Fjernede punkter: {n}",
+ "ai.redraft.review_first": "Planen endret seg etter meldingen din: gjennomgå endringene først",
+ "ai.redraft.mark.tip": "Nytt eller endret siden sist du så på",
+ "ai.redraft.emptied": "Oppfølgingen fjernet alle punkter: utkastet er tomt"
+}

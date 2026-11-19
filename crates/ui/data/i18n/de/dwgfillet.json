@@ -1,0 +1,20 @@
+{
+ "dwgfillet.fillet": "Verrundung",
+ "dwgfillet.cancel": "Verrundung beenden",
+ "dwgfillet.tip": "Zwei Linien auf den Seiten anklicken, die bleiben sollen: beide werden auf die Ecke gekürzt oder verlängert, mit einem Tangentenbogen bei Radius größer als null",
+ "dwgfillet.radius": "Verrundungsradius",
+ "dwgfillet.radius_tip": "Radius des Bogens in Zeichnungseinheiten; 0 ergibt eine scharfe Ecke",
+ "dwgfillet.st.arm_first": "Die erste Linie auf der Seite anklicken, die bleiben soll",
+ "dwgfillet.st.arm_second": "Die zweite Linie auf der Seite anklicken, die bleiben soll",
+ "dwgfillet.st.not_armed": "Zuerst Verrundung wählen",
+ "dwgfillet.st.click_line": "Eine einzelne Linie der Zeichnung anklicken",
+ "dwgfillet.st.other_drawing": "Beide Linien müssen zur selben Zeichnung gehören: neu beginnen",
+ "dwgfillet.st.changed": "Die erste Linie hat sich geändert: neu beginnen",
+ "dwgfillet.st.same_line": "Eine andere zweite Linie wählen",
+ "dwgfillet.st.parallel": "Die Linien sind parallel und treffen sich nie: keine Ecke möglich",
+ "dwgfillet.st.degenerate": "Eine Linie hat keine Länge",
+ "dwgfillet.st.no_side": "Die angeklickte Seite hat keine Länge ab der Ecke",
+ "dwgfillet.st.too_big": "Der Radius ist für diese Linien zu groß: einen kleineren wählen",
+ "dwgfillet.st.radius_bad": "Der Radius muss null oder positiv sein",
+ "dwgfillet.st.done": "Ecke erstellt"
+}

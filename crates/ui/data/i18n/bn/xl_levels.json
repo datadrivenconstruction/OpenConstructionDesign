@@ -1,0 +1,5 @@
+{
+ "xl.msg.level_name_x_is_already_used": "লেভেলের নাম '{}' আগে থেকেই ব্যবহৃত",
+ "xl.msg.unreadable_id_elements_without_a_row_not_deleted": "পড়া যায় না এমন আইডি: এই আমদানিতে সারিহীন উপাদান মোছা হয় না",
+ "xl.msg.wall_type_name_x_is_already_used": "দেয়াল টাইপের নাম '{}' আগে থেকেই ব্যবহৃত"
+}

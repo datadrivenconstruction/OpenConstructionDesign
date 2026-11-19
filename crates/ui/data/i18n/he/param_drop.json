@@ -1,0 +1,8 @@
+{
+ "param_drop.title": "להסיר ערכי פרמטר?",
+ "param_drop.intro": "{name} כבר אינו מקושר לקטגוריות האלה:",
+ "param_drop.line": "{category}: {values} יוסרו",
+ "param_drop.undo": "Ctrl+Z אחד מחזיר את כולם.",
+ "param_drop.confirm": "הסר ערכים ושמור",
+ "param_drop.cancel": "ביטול"
+}

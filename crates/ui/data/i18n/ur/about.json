@@ -1,0 +1,33 @@
+{
+ "cmd.help.licenses": "اوپن سورس لائسنسز",
+ "cmd.help.licenses.desc": "اس بلڈ میں استعمال ہونے والی اوپن سورس لائبریریاں اور ان کے لائسنس دکھاتا ہے۔",
+ "about.product": "DDC Editor",
+ "about.version": "ورژن",
+ "about.build": "بلڈ",
+ "about.schema": "ماڈل اسکیما",
+ "about.system": "سسٹم",
+ "about.gpu": "گرافکس اڈاپٹر",
+ "about.language": "زبان",
+ "about.copy": "ورژن کی معلومات نقل کریں",
+ "about.copy_desc": "بگ رپورٹ کے لیے ورژن، بلڈ، سسٹم اور گرافکس اڈاپٹر۔ فائل کے راستے شامل نہیں۔",
+ "about.copied": "ورژن کی معلومات نقل ہو گئیں",
+ "about.licenses": "اوپن سورس لائسنسز",
+ "about.licenses_desc": "اس بلڈ میں استعمال ہونے والی لائبریریاں اور ان کے لائسنس",
+ "about.licenses.open": "دیکھیں",
+ "about.licenses.title": "اوپن سورس لائسنسز",
+ "about.licenses.note": "DDC Editor درج ذیل لائبریریاں شامل کرتا ہے۔ ہر ایک اپنے لائسنس اور کاپی رائٹ نوٹس کے تحت رہتی ہے۔ مکمل لائسنس متن: ایپلیکیشن کے ساتھ THIRD_PARTY_LICENSES.txt۔",
+ "about.licenses.full": "مکمل لائسنس متن",
+ "about.licenses.list": "اجزا کی فہرست",
+ "about.licenses.close": "بند کریں",
+ "about.licenses.col_name": "جزو",
+ "about.licenses.col_license": "لائسنس",
+ "about.licenses.count": {
+  "one": "# جزو",
+  "other": "# اجزا"
+ },
+ "about.licenses.count_of": "{total} میں سے {shown} اجزا",
+ "about.licenses.search_hint": "نام یا لائسنس سے تلاش…",
+ "about.licenses.search_clear": "تلاش صاف کریں",
+ "about.licenses.none": "کچھ نہیں ملا",
+ "about.licenses.none_hint": "لائبریری کے نام کا کوئی حصہ یا MIT جیسا لائسنس آزمائیں۔"
+}

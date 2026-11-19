@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "Pannello",
+ "curtain_props.cw.panel_cell": "Cella {i}×{j} · facciata continua n. {id}",
+ "curtain_props.cw.kind": "Tipo",
+ "curtain_props.cw.kind.glazed": "Vetro",
+ "curtain_props.cw.kind.solid": "Pieno",
+ "curtain_props.cw.kind.door": "Porta",
+ "curtain_props.cw.kind.window": "Finestra",
+ "curtain_props.cw.kind.empty": "Vuoto",
+ "curtain_props.cw.name": "Nome",
+ "curtain_props.cw.swing_side": "Apre verso l'altro lato",
+ "curtain_props.cw.swing_hinge": "Cerniera sul lato della cella",
+ "curtain_props.cw.size": "Dimensione",
+ "curtain_props.cw.cell_area": "Area cella",
+ "curtain_props.cw.panel_area": "Area pannello",
+ "curtain_props.cw.prev": "Pannello precedente",
+ "curtain_props.cw.next": "Pannello successivo",
+ "curtain_props.cw.wall": "Seleziona il muro",
+ "curtain_props.cw.panel_hint": "Esc — selezione · Ctrl+Z — annulla",
+ "curtain_props.cw.status.panel": "Pannello {i}×{j} → {kind}",
+ "e3d.err.cw_height": "l'altezza della facciata continua deve superare 100 mm"
+}

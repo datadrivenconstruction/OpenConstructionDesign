@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "محدوده نما",
+ "view_range.range": "محدوده نما",
+ "view_range.cut": "صفحه برش",
+ "view_range.bottom": "پایین",
+ "view_range.depth": "عمق نما",
+ "view_range.cut.hint": "ارتفاع صفحه برش بالای تراز. عناصری که از آن عبور می‌کنند به‌صورت برش‌خورده رسم می‌شوند.",
+ "view_range.bottom.hint": "پایین محدوده، نسبت به تراز. مقادیر صفر یا منفی مجاز است.",
+ "view_range.depth.hint": "نما تا چه اندازه زیر پایین را می‌بیند. صفر یا بیشتر.",
+ "view_range.err.number": "در هر فیلد یک طول وارد کنید",
+ "view_range.err.not_finite": "در هر فیلد یک طول وارد کنید",
+ "view_range.err.cut_not_above_bottom": "صفحه برش باید بالای پایین باشد",
+ "view_range.err.negative_depth": "عمق نما نمی‌تواند منفی باشد",
+ "view_range.err.top_below_cut": "بالای محدوده نباید زیر صفحه برش باشد"
+}

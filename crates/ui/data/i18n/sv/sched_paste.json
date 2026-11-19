@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "Klistrade in {n} celler",
+ "sched_edit.pasted_skipped": "Klistrade in {n} celler, hoppade över {k}: {why}",
+ "sched_edit.filled": "Fyllde {n} celler",
+ "sched_edit.filled_skipped": "Fyllde {n} celler, hoppade över {k}: {why}",
+ "sched_edit.why_ro": "{n} skrivskyddade",
+ "sched_edit.why_bad": "{n} ogiltigt värde",
+ "sched_edit.no_cell": "Klicka först på en cell i schemat",
+ "sched_edit.nothing": "Inget att skriva",
+ "sched_edit.not_refreshed": "Skrivet, men vyn uppdaterades inte: {e}",
+ "sched_edit.failed": "inte ändrat: {e}",
+ "sched_edit.no_changes": "Inga ändringar: {u} celler innehåller redan dessa värden",
+ "sched_edit.same_tail": ", {u} redan lika"
+}

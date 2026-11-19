@@ -1,0 +1,10 @@
+{
+ "type_pick.pick.search": "Αναζήτηση τύπων ή πάχους",
+ "type_pick.pick.empty": "Δεν υπάρχουν αντίστοιχοι τύποι",
+ "type_pick.pick.edit": "Επεξεργασία τύπου…",
+ "type_pick.pick.mixed": "Μικτό",
+ "type_pick.pick.layers": {
+  "one": "# στρώμα",
+  "other": "# στρώματα"
+ }
+}

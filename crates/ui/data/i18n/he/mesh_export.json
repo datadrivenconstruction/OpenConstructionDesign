@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "שומר את כל המודל או את הבחירה כ-STL בינארי, במטרים או במילימטרים.",
+ "cmd.data.export_obj.desc": "שומר את כל המודל או את הבחירה כ-OBJ עם קובץ MTL: קבוצה אחת לכל אלמנט, צבעים לפי חומר.",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "OBJ עם חומרים (.obj)",
+ "open_file.filter.mesh": "רשתות תלת-ממד (glTF, STEP, STL, OBJ)",
+ "mx.title": "ייצוא {fmt}",
+ "mx.scope": "מה לייצא",
+ "mx.scope.all": "כל המודל",
+ "mx.scope.sel": "הבחירה ({n} אלמנטים)",
+ "mx.units": "יחידות בקובץ",
+ "mx.units.m": "מטרים",
+ "mx.units.mm": "מילימטרים",
+ "mx.export": "ייצא…",
+ "mx.saved": "{fmt} נשמר: {path} ({parts} אלמנטים, {tris} משולשים)",
+ "mx.partial": "{fmt} נשמר עם {n} בעיות, ייתכן שחלק מהגופים חסרים: {path}",
+ "mx.failed": "ייצוא {fmt} נכשל: {error}",
+ "mx.imported": "{file}: יובאו {n} אלמנטים ({tris} משולשים)",
+ "mx.imported_notes": "{file}: יובאו {n} אלמנטים ({tris} משולשים), {w} הערות: {first}"
+}

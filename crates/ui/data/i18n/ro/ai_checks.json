@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "măsurat {value}, limită {limit}",
+ "ai_checks.check.cap": "Se arată {shown} din {total} constatări. Erorile vin primele: remediază-le și rulează din nou.",
+ "ai_checks.check.run_again": "Rulează din nou",
+ "ai_checks.check.goto": "Selectează și apropie",
+ "ai_checks.check.never_title": "Nu s-a verificat încă",
+ "ai_checks.check.never_hint": "Rulează verificările și constatările apar aici.",
+ "ai_checks.check.sec.error": "Erori",
+ "ai_checks.check.sec.warning": "Avertismente",
+ "ai_checks.check.sec.info": "Note"
+}

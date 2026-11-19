@@ -1,0 +1,7 @@
+{
+ "gen.pin.room": "You changed a room of the generated project. Pin it so a revision keeps it where it is.",
+ "gen.pin.storey": "You changed a storey of the generated project. Pin it so a revision keeps its walls and openings.",
+ "gen.pin.action": "Pin",
+ "gen.pin.done": "Pinned: a revision of the project keeps it and places the rest around it",
+ "gen.pin.failed": "Could not pin"
+}

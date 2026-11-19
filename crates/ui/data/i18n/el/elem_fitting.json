@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "Εξάρτημα",
+ "elem.mep_fitting.many": "Εξαρτήματα",
+ "elem.mep_fitting.kind.elbow": "Καμπύλη",
+ "elem.mep_fitting.kind.tee": "Ταυ",
+ "elem.mep_fitting.kind.cross": "Σταυρός",
+ "elem.mep_fitting.kind.transition": "Μετάβαση",
+ "elem.mep_fitting.kind.cap": "Τάπα",
+ "elem.mep_fitting.size": "Μέγεθος",
+ "elem.mep_fitting.at": "Θέση",
+ "elem.mep_fitting.runs": "Διαδρομή {n}",
+ "elem.mep_fitting.edit_run": "Επεξεργασία διαδρομής",
+ "elem.mep_fitting.select_runs": "Επιλογή των διαδρομών του",
+ "elem.mep_fitting.derived": "Ένα εξάρτημα ακολουθεί τις διαδρομές του: αλλάξτε μια διαδρομή και το εξάρτημα αλλάζει μαζί της.",
+ "elem.mep_fitting.no_delete": "Ένα εξάρτημα δεν μπορεί να διαγραφεί ή να μετακινηθεί μόνο του. Επεξεργαστείτε ή διαγράψτε τις διαδρομές του.",
+ "elem.mep_fitting.hint": "Κάντε κλικ σε εξάρτημα στην κάτοψη για να δείτε τις διαδρομές του.",
+ "elem.mep_fitting.picked": "Επιλεγμένα εξαρτήματα: {n}"
+}

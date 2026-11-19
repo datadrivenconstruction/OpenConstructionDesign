@@ -1,0 +1,20 @@
+{
+ "faults.errors": {
+  "one": "# שגיאה במודל. לחץ להצגתה.",
+  "two": "# שגיאות במודל. לחץ לצפייה ברשימה.",
+  "other": "# שגיאות במודל. לחץ לצפייה ברשימה."
+ },
+ "faults.warnings": {
+  "one": "# אזהרה במודל. לחץ להצגתה.",
+  "two": "# אזהרות במודל. לחץ לצפייה ברשימה.",
+  "other": "# אזהרות במודל. לחץ לצפייה ברשימה."
+ },
+ "faults.title": "תקלות מודל: {n}",
+ "faults.none": "אין שגיאות או אזהרות.",
+ "faults.cat.wall": "קיר",
+ "faults.cat.slab": "רצפה",
+ "faults.cat.opening": "פתח",
+ "faults.cat.curtain_wall": "קיר מסך",
+ "faults.cat.ramp": "רמפה",
+ "faults.cat.zone": "אזור"
+}

@@ -1,0 +1,31 @@
+{
+ "schema": "gen_bench.v1",
+ "group": "free_form",
+ "spec": {
+  "typology": "office",
+  "name": "Stepped Block",
+  "floors": 8,
+  "footprint": {
+   "shape": "rectangle",
+   "width": 48,
+   "depth": 36,
+   "rotation": 25
+  },
+  "rules": {
+   "massing.step_every": 3,
+   "massing.step_setback": 3
+  }
+ },
+ "adjacency": [
+  [
+   "office",
+   "meeting",
+   1
+  ],
+  [
+   "meeting",
+   "lobby",
+   1
+  ]
+ ]
+}

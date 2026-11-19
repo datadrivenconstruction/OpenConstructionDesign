@@ -1,0 +1,10 @@
+{
+ "cmd.view.axes_full": "Celé osy",
+ "cmd.view.axes_full.desc": "Zobrazí osy X a Y jako celé čáry přes půdorys. Podržením F9 je zobrazíte jen po dobu stisku.",
+ "settings.axes_full": "Osy",
+ "settings.axes_full_desc": "Osy půdorysu jako celé čáry přes list. Podržením F9 se rychle podíváte.",
+ "settings.axes_full_on": "Zobrazit celé osy",
+ "plan.hud.axes_tip": "Podržte {key} pro zobrazení celých os",
+ "status.axes_full.on": "Celé osy zapnuty",
+ "status.axes_full.off": "Celé osy vypnuty"
+}

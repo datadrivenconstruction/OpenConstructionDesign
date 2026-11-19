@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "Tastenkürzelübersicht",
+ "cmd.help.shortcuts.desc": "Zeigt alle Tastenkürzel so, wie Sie sie jetzt haben, nach Kontext. Drücken Sie ? überall außerhalb eines Textfelds.",
+ "sheet.title": "Tastenkürzel",
+ "sheet.filter": "Nach Befehl oder Taste filtern",
+ "sheet.filter_label": "Tastenkürzel filtern",
+ "sheet.customize": "Anpassen…",
+ "sheet.close": "Schließen",
+ "sheet.esc_close": "zum Schließen",
+ "sheet.none": "Keine Tastenkürzel gefunden",
+ "sheet.none_hint": "Versuchen Sie ein anderes Wort oder eine andere Taste.",
+ "sheet.sec.general": "Allgemein",
+ "sheet.sec.plan": "Plan",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "Listen",
+ "sheet.sec.sheets": "Blätter",
+ "sheet.sec.ai": "KI"
+}

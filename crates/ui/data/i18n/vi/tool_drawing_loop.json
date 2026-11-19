@@ -1,0 +1,4 @@
+{
+ "tool.err.drawing_open": "Các đường bản vẽ quanh điểm này không khép thành vòng",
+ "tool.err.drawing_crossing": "Vòng vẽ quanh điểm này tự cắt chính nó"
+}

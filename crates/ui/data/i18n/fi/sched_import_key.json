@@ -1,0 +1,6 @@
+{
+ "sched_import.no_key": "Tässä työkirjassa ei ole vientitietuetta (vanhempi vienti): solut, jotka muutettiin mallissa tämän viennin jälkeen, voidaan korvata. Tarkista muuttuneet solut ennen käyttöä.",
+ "sched_import.n_kept": "Muutettu mallissa viennin jälkeen, säilytetty: {n}",
+ "sched_import.n_conflict": "Muutettu sekä työkirjassa että mallissa, ei käytetty: {n}",
+ "sched_import.why_conflict": "muutettu mallissa viennin jälkeen (nyt {model}), ei käytetty"
+}

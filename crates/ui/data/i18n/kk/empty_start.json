@@ -1,0 +1,8 @@
+{
+ "empty.start_recent.title": "Әзірге соңғы жобалар жоқ",
+ "empty.start_recent.hint": "Ашқан жобаларыңыз осында көрінеді. Үлгі модельмен бастаңыз.",
+ "empty.start_recent.action": "Үлгіні ашу",
+ "start.recent_open_file": "Файлды ашу…",
+ "start.forgot": "Соңғылардан алынды: {name}",
+ "start.forgot_undo": "Болдырмау"
+}

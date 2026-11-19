@@ -1,0 +1,29 @@
+{
+ "recover.ago_now": "just nüüd",
+ "recover.ago_min": {
+  "one": "# min tagasi",
+  "other": "# min tagasi"
+ },
+ "recover.ago_hour": {
+  "one": "# tund tagasi",
+  "other": "# tundi tagasi"
+ },
+ "recover.ago_yesterday": "eile",
+ "recover.ago_day": {
+  "one": "# päev tagasi",
+  "other": "# päeva tagasi"
+ },
+ "recover.empty": "Taastamiseks koopiaid pole",
+ "recover.empty_hint": "Selle projekti jaoks pole midagi taastada.",
+ "recover.all_damaged": "Kõik koopiad on rikutud, ühtegi ei saa taastada.",
+ "recover.keys_hint": "Nooled üles ja alla valivad koopia, Enter viib nupule Taasta",
+ "recover.row_tip": "Salvestatud {time}",
+ "recover.row_damaged_tip": "Ei saa taastada: {reason}",
+ "recover.archive_ask": "Kas viia see koopia arhiivi?",
+ "recover.discard_ask": {
+  "one": "Kas viia koopia arhiivi? Seda ei pakuta enam.",
+  "other": "Kas viia kõik # koopiat arhiivi? Neid ei pakuta enam."
+ },
+ "recover.confirm_yes": "Vii arhiivi",
+ "recover.confirm_no": "Säilita koopiad"
+}

@@ -1,0 +1,6 @@
+{
+ "cmd.file.import_again": "Importer på nytt",
+ "cmd.file.import_again.desc": "Bygger et nytt prosjekt fra kildefilen slik den er nå.",
+ "cmd.file.open_kept": "Åpne lagret import",
+ "cmd.file.open_kept.desc": "Åpner den ferdige importen som ble beholdt da dialogen for ulagrede endringer ble avbrutt."
+}

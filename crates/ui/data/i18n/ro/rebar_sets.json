@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "Adaugă 1 set",
+ "rebar_sets.add_n": "Adaugă {n} seturi",
+ "rebar_sets.pick.search": "Caută tipuri de bare",
+ "rebar_sets.pick.empty": "Niciun tip de bară care să corespundă",
+ "rebar_sets.unit.deg": "°"
+}

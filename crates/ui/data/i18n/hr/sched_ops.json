@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "vrijednost mora biti veća od nule",
+ "sched_ops.not_number": "nije broj",
+ "sched_ops.no_host": "nema zida domaćina",
+ "sched_ops.wall_length": "duljina ovog zida ne može se tako postaviti",
+ "sched_ops.no_wall": "nema takvog zida",
+ "sched_ops.no_opening": "nema takvog otvora",
+ "sched_ops.no_curtain": "nema takvog zavjesnog zida",
+ "sched_ops.no_panel": "nema takvog panela",
+ "sched_ops.no_slab": "nema takve ploče",
+ "sched_ops.no_room": "nema takve prostorije",
+ "sched_ops.slope_range": "nagib izvan raspona",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

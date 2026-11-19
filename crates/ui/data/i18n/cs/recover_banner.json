@@ -1,0 +1,7 @@
+{
+ "recover.untitled_note": "Tento projekt nebyl nikdy uložen",
+ "recover.file_missing": "Soubor projektu nebyl nalezen",
+ "recover.banner": "Byla nalezena neuložená práce z dřívější relace pro {name}",
+ "recover.banner_review": "Zkontrolovat",
+ "recover.later_archived": "Odloženo {n}krát: snímky přesunuty do archivu"
+}

@@ -1,0 +1,41 @@
+id = "G31_suspension_footbridge__de"
+tier = "hard"
+group = "Any geometry"
+title = "Suspension footbridge"
+lang = "de"
+base = "empty"
+
+[[turn]]
+say = "Eine Fußgänger-Hängebrücke mit 60 m Spannweite zwischen zwei 14 m hohen Stahlpylonen, zwei Tragseile mit 6 m Durchhang, senkrechte Hänger alle 3 m, 3 m breites Deck mit Geländer, Ankerblöcke an beiden Enden."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "col"
+min = 2.0
+
+[[oracle.count]]
+spec = "beam+brace+truss"
+min = 30.0
+
+[[oracle.count]]
+spec = "railing"
+min = 1.0
+
+[[oracle.geom]]
+kind = "clear_span"
+target = 60.0
+tol = 0.1
+
+[[oracle.geom]]
+kind = "height"
+min = 12.0
+max = 20.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

@@ -1,0 +1,4 @@
+{
+ "vv_conflict.vv.switched": "Die aktive Ansicht hat sich geändert. Diese Änderungen gehören zu {view} und sind noch nicht übernommen: Übernehmen schreibt sie nach {view}, Verwerfen löscht sie.",
+ "vv_conflict.vv.discard": "Änderungen verwerfen"
+}

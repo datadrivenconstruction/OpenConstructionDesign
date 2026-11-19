@@ -1,0 +1,2 @@
+# Pipe run with a bend: one run, one record
+tool(mep.pipe) click(0,0) click(5,0) click(5,4) key(Enter) → rows(mep_run)=1 journal=+1

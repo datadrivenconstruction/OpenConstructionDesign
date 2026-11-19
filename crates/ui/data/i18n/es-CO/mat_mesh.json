@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "Mallas importadas",
+ "mat_mesh.mesh.none_selected": "Seleccione mallas importadas en la vista 3D para darles este material.",
+ "mat_mesh.mesh.current": "Primera malla seleccionada: {material}",
+ "mat_mesh.mesh.current_none": "La primera malla seleccionada no tiene material.",
+ "mat_mesh.mesh.assign": "Asignar a {n} seleccionados",
+ "mat_mesh.mesh.assign_tip": "El estilo Realista muestra la textura de este material en las mallas seleccionadas",
+ "mat_mesh.mesh.assign_cat": "Asignar a la categoría {category}",
+ "mat_mesh.mesh.assign_cat_tip": "Cada malla importada de esa categoría sin material propio",
+ "mat_mesh.mesh.clear": "Borrar seleccionadas",
+ "mat_mesh.mesh.clear_tip": "Las mallas seleccionadas vuelven al material de su categoría o al color liso",
+ "mat_mesh.mesh.clear_cat": "Borrar categoría"
+}

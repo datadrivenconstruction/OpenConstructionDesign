@@ -1,0 +1,12 @@
+{
+ "opt.stair.straight": "Düz",
+ "opt.stair.l": "L",
+ "opt.stair.u": "U",
+ "opt.stair.gap": "Boşluklu",
+ "hint.stair.corner": "L merdiven: dönüş köşesini seçin · Backspace — son noktayı kaldır · Esc — son noktayı kaldır; nokta yoksa — iptal",
+ "hint.stair.side": "Merdiven: ikinci kolun tarafını seçin · Backspace — son noktayı kaldır · Esc — son noktayı kaldır; nokta yoksa — iptal",
+ "tool.stair.flights": "{n} basamak (toplam {m})",
+ "tool.stair.err_split": "Her kolda en az 2 basamak olmalı: ilk kolda {n} / {m}",
+ "tool.stair.err_comfort": "Basamak yüksekliği ve basış konfor kuralını (2R + T) bozuyor",
+ "tool.stair.err_input": "Merdiven boyutu aralık dışında: genişliği, yüksekliği ve sahanlığı kontrol edin"
+}

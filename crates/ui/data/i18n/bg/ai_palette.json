@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "Питай AI: {q}",
+ "ai.palette.connect": "Свържете AI, за да питате",
+ "ai.palette.draft.apply": "Приложи черновата ({n})",
+ "ai.palette.draft.reject": "Отхвърли черновата",
+ "ai.palette.draft.next": "Следваща промяна в черновата",
+ "ai.palette.draft.show": "Покажи черновата в изгледа",
+ "cmd.ai.next_change": "Следваща промяна в черновата",
+ "cmd.ai.next_change.desc": "Премества изгледа към следващия елемент, който черновата променя.",
+ "cmd.ai.show_draft": "Покажи черновата на AI в изгледа",
+ "cmd.ai.show_draft.desc": "Побира изгледа върху всичко, което черновата променя."
+}

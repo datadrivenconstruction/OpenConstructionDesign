@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "อุปกรณ์เชื่อม",
+ "elem.mep_fitting.many": "อุปกรณ์เชื่อม",
+ "elem.mep_fitting.kind.elbow": "ข้องอ",
+ "elem.mep_fitting.kind.tee": "สามทาง",
+ "elem.mep_fitting.kind.cross": "สี่ทาง",
+ "elem.mep_fitting.kind.transition": "ตัวเปลี่ยนขนาด",
+ "elem.mep_fitting.kind.cap": "ฝาปิด",
+ "elem.mep_fitting.size": "ขนาด",
+ "elem.mep_fitting.at": "ตำแหน่ง",
+ "elem.mep_fitting.runs": "เส้นทาง {n}",
+ "elem.mep_fitting.edit_run": "แก้ไขเส้นทาง",
+ "elem.mep_fitting.select_runs": "เลือกเส้นทางของมัน",
+ "elem.mep_fitting.derived": "อุปกรณ์เชื่อมจะตามเส้นทาง: เปลี่ยนเส้นทางแล้วอุปกรณ์เชื่อมจะเปลี่ยนตาม",
+ "elem.mep_fitting.no_delete": "ไม่สามารถลบหรือย้ายอุปกรณ์เชื่อมได้โดยลำพัง แก้ไขหรือลบเส้นทางของมัน",
+ "elem.mep_fitting.hint": "คลิกอุปกรณ์เชื่อมบนแปลนเพื่อดูเส้นทางของมัน",
+ "elem.mep_fitting.picked": "เลือกอุปกรณ์เชื่อมแล้ว: {n}"
+}

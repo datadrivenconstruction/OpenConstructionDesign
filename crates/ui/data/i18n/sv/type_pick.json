@@ -1,0 +1,10 @@
+{
+ "type_pick.pick.search": "Sök typer eller tjocklek",
+ "type_pick.pick.empty": "Inga matchande typer",
+ "type_pick.pick.edit": "Redigera typ…",
+ "type_pick.pick.mixed": "Blandat",
+ "type_pick.pick.layers": {
+  "one": "# lager",
+  "other": "# lager"
+ }
+}

@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "стойността трябва да е по-голяма от нула",
+ "sched_ops.not_number": "не е число",
+ "sched_ops.no_host": "няма стена-носител",
+ "sched_ops.wall_length": "дължината на тази стена не може да се зададе така",
+ "sched_ops.no_wall": "няма такава стена",
+ "sched_ops.no_opening": "няма такъв отвор",
+ "sched_ops.no_curtain": "няма такава фасадна стена",
+ "sched_ops.no_panel": "няма такъв панел",
+ "sched_ops.no_slab": "няма такава плоча",
+ "sched_ops.no_room": "няма такова помещение",
+ "sched_ops.slope_range": "наклонът е извън допустимите граници",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

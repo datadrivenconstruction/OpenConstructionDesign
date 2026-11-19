@@ -1,0 +1,16 @@
+{
+ "xlsx_recover.title": "Uma exportação para a pasta de trabalho vinculada foi interrompida",
+ "xlsx_recover.both": "A exportação parou entre mover a pasta de trabalho anterior para o lado e colocar a nova no lugar. Nada foi perdido: a nova pasta de trabalho está completa em {part}, a anterior foi mantida em {bak}.",
+ "xlsx_recover.part_only": "A exportação parou antes de a nova pasta de trabalho ser colocada no lugar. Ela está completa em {part}.",
+ "xlsx_recover.bak_only": "A exportação parou antes de a nova pasta de trabalho ficar pronta. A pasta de trabalho anterior foi mantida em {bak}.",
+ "xlsx_recover.finish": "Concluir a exportação interrompida",
+ "xlsx_recover.restore": "Restaurar a pasta de trabalho anterior",
+ "xlsx_recover.finished": "A exportação interrompida foi concluída: a nova pasta de trabalho está no lugar.",
+ "xlsx_recover.finished_kept": "A exportação interrompida foi concluída: a nova pasta de trabalho está no lugar, a anterior foi mantida em {bak}.",
+ "xlsx_recover.restored": "A pasta de trabalho anterior voltou ao lugar.",
+ "xlsx_recover.restore_failed": "A pasta de trabalho anterior não pôde ser movida de volta ({err}). Ela foi mantida em {path}.",
+ "xlsx_recover.not_restored": "A nova pasta de trabalho não pôde ser colocada no lugar e a anterior não pôde ser movida de volta. Nada foi perdido: a pasta de trabalho anterior foi mantida em {path}; Sincronizar oferece concluir ou restaurar.",
+ "xlsx_recover.finish_failed": "A nova pasta de trabalho não pôde ser colocada no lugar ({err}). Ela permanece em {path}.",
+ "xlsx_recover.dest_back": "Uma pasta de trabalho voltou para {path}: nada foi movido.",
+ "xlsx_recover.nothing": "Nada da exportação interrompida resta para mover."
+}

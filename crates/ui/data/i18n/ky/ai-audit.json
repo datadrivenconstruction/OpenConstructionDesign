@@ -1,0 +1,22 @@
+{
+ "ai.audit.tokens": "{n} токен",
+ "ai.audit.filter.all": "Баары",
+ "ai.audit.filter.ai": "AI",
+ "ai.audit.filter.me": "Мен",
+ "ai.audit.search": "Өзгөртүүлөрдү издөө",
+ "ai.audit.search.clear": "Издөөнү тазалоо",
+ "ai.audit.show_all": "Баарын көрсөтүү",
+ "ai.audit.empty.hint": "Модель же агент тарабынан даярдалган же колдонулган өзгөртүүлөр кайтаруу жолу менен ушул жерде чыгат.",
+ "ai.audit.no_match": "Чыпкага туура келген өзгөртүүлөр жок.",
+ "ai.audit.show.tip": "Бул өзгөртүү таасир эткен элементтерди тандап көрсөтүү",
+ "ai.audit.revert.ask": "“{what}” өзгөртүүсүн кайтарасызбы? {change}.",
+ "ai.audit.revert.elements": {
+  "one": "# элементтин өзгөртүүсү",
+  "other": "# элементтин өзгөртүүсү"
+ },
+ "ai.audit.revert.keeps": "Жаңы өзгөртүүлөр сакталат. Кайтаруу бир кайтаруу кадамы болот.",
+ "ai.audit.cancel": "Жокко чыгаруу",
+ "ai.audit.toast.reverted": "Кайтарып алынды: {what}",
+ "ai.audit.toast.undone": "Жокко чыгарылды: {what}",
+ "ai.audit.redo": "Кайра кайтаруу"
+}

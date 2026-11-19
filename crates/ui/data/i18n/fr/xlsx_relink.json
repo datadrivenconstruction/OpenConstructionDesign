@@ -1,0 +1,14 @@
+{
+ "xlsx_relink.title": "Le classeur lié a été déplacé ou renommé",
+ "xlsx_relink.body": "Le classeur « {file} » n'est plus dans {folder}. Les modifications saisies dedans ne reviennent qu'après un nouveau lien.",
+ "xlsx_relink.found_one": "« {file} » trouvé dans {folder} : même projet et même export. Le lier ?",
+ "xlsx_relink.found_many": "{n} classeurs de ce projet et de cet export ont été trouvés. Choisissez celui à lier :",
+ "xlsx_relink.found_none": "Aucun classeur de cet export n'a été trouvé à côté. Retrouvez-le, ou exportez un nouveau classeur.",
+ "xlsx_relink.link": "Lier « {file} »",
+ "xlsx_relink.find": "Le retrouver…",
+ "xlsx_relink.find_title": "Retrouver le classeur lié",
+ "xlsx_relink.export_new": "Exporter un nouveau classeur",
+ "xlsx_relink.close": "Fermer",
+ "xlsx_relink.gone": "Le classeur « {file} » n'est plus dans son dossier. Les modifications saisies dedans ne reviennent qu'après un nouveau lien.",
+ "xlsx_relink.found_one_short": "« {file} » trouvé : même projet et même export. Le lier ?"
+}

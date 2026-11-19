@@ -1,0 +1,6 @@
+{
+ "xl.msg.filter_on_sheet_x": "শিট '{}'-এর ফিল্টার",
+ "xl.msg.sort_settings_on_sheet_x": "শিট '{}'-এর সাজানোর সেটিংস",
+ "xl.msg.hidden_rows_on_sheet_x": "শিট '{}'-এর লুকানো সারি",
+ "xl.msg.hidden_columns_on_sheet_x": "শিট '{}'-এর লুকানো কলাম"
+}

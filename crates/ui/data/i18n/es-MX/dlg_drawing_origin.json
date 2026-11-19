@@ -1,0 +1,4 @@
+{
+ "dlg.dw.near_origin": "Mover un dibujo alejado al origen",
+ "dlg.dw.moved_far": "; movido al origen desde ({x}, {y}) m, desplazamiento conservado"
+}

@@ -1,0 +1,6 @@
+{
+ "geom.length": "Lengte",
+ "sched.cat.room_seps": "Ruimtescheiders",
+ "room.err.point_leave": "Ruimte {n}: punt zou buiten de grens vallen",
+ "room.err.point_taken": "Ruimte {n}: punt zou in ruimte {other} terechtkomen"
+}

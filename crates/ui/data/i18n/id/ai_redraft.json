@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "Direvisi",
+ "ai.redraft.added": "+{n} ditambahkan",
+ "ai.redraft.removed": "−{n} dihapus",
+ "ai.redraft.changed": "~{n} diubah",
+ "ai.redraft.strip": "{what} sejak terakhir Anda lihat",
+ "ai.redraft.note": "Rencana revisi ditinjau: {what}",
+ "ai.redraft.more": "+{n} lainnya",
+ "ai.redraft.ack": "Mengerti",
+ "ai.redraft.ack.tip": "Tandai revisi ini sudah dilihat; Terapkan kemudian menargetkannya",
+ "ai.redraft.removed_list": "Item yang dihapus: {n}",
+ "ai.redraft.review_first": "Rencana berubah setelah pesan Anda: tinjau perubahannya terlebih dahulu",
+ "ai.redraft.mark.tip": "Baru atau diubah sejak terakhir Anda lihat",
+ "ai.redraft.emptied": "Tindak lanjut menghapus semua item: draf kosong"
+}

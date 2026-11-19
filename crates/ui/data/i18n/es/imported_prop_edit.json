@@ -1,0 +1,6 @@
+{
+ "imported_prop_edit.remove": "Eliminar propiedad",
+ "imported_prop_edit.remove.tip": "Elimina la propiedad de {n} elemento(s) seleccionado(s) en un solo paso de deshacer; se quita del archivo IFC al guardar",
+ "imported_prop_edit.done": "{key} eliminada de {n} elemento(s)",
+ "imported_prop_edit.warn.reload": "Hecho, pero la vista no se ha actualizado; reabra el panel o deshaga si algo parece incorrecto"
+}

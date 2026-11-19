@@ -1,0 +1,7 @@
+{
+ "ai.retry.countdown": "Proovin uuesti {n} s pärast",
+ "ai.retry.try": "Automaatne katse {i} / {max}. Sama päring saadetakse uuesti.",
+ "ai.retry.now": "Proovi kohe uuesti",
+ "ai.retry.gave_up": "Vastust pole ikka veel {max} automaatse katse järel.",
+ "ai.retry.shorten": "Lühenda päringut"
+}

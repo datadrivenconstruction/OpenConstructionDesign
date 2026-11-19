@@ -1,0 +1,22 @@
+{
+ "ai.audit.tokens": "{n} トークン",
+ "ai.audit.filter.all": "すべて",
+ "ai.audit.filter.ai": "AI",
+ "ai.audit.filter.me": "自分",
+ "ai.audit.search": "変更を検索",
+ "ai.audit.search.clear": "検索をクリア",
+ "ai.audit.show_all": "すべて表示",
+ "ai.audit.empty.hint": "モデルやエージェントがドラフトした、または適用した変更がここに表示され、それぞれ元に戻せます。",
+ "ai.audit.no_match": "フィルタに一致する変更はありません。",
+ "ai.audit.show.tip": "この変更が触れた要素を選択して表示",
+ "ai.audit.revert.ask": "「{what}」を取り消しますか? {change}。",
+ "ai.audit.revert.elements": {
+  "one": "# 要素の変更",
+  "other": "# 要素の変更"
+ },
+ "ai.audit.revert.keeps": "新しい変更は残ります。取り消しは 1 回の元に戻す操作です。",
+ "ai.audit.cancel": "キャンセル",
+ "ai.audit.toast.reverted": "取り消しました: {what}",
+ "ai.audit.toast.undone": "元に戻しました: {what}",
+ "ai.audit.redo": "やり直す"
+}

@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "{n} нүд наагдлаа",
+ "sched_edit.pasted_skipped": "{n} нүд наагдлаа, {k} алгасагдлаа: {why}",
+ "sched_edit.filled": "{n} нүд бөглөгдлөө",
+ "sched_edit.filled_skipped": "{n} нүд бөглөгдлөө, {k} алгасагдлаа: {why}",
+ "sched_edit.why_ro": "{n} зөвхөн уншихад",
+ "sched_edit.why_bad": "{n} буруу утга",
+ "sched_edit.no_cell": "Эхлээд хүснэгтийн нүдийг дарна уу",
+ "sched_edit.nothing": "Бичих зүйл байхгүй",
+ "sched_edit.not_refreshed": "Бичигдсэн, харагдац шинэчлэгдсэнгүй: {e}",
+ "sched_edit.failed": "өөрчлөгдөөгүй: {e}",
+ "sched_edit.no_changes": "Өөрчлөлт байхгүй: {u} нүдэнд аль хэдийн эдгээр утга байна",
+ "sched_edit.same_tail": ", {u} аль хэдийн тэнцүү"
+}

@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "捕捉半径",
+ "snap_refine.settings.snap_px_desc": "光标须距点或线多近才会捕捉，以屏幕像素计。在触摸屏和高像素密度显示器上可设置得更大。",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "水平",
+ "snap_refine.hint.vertical": "竖直",
+ "snap_refine.hint.perpendicular": "与上一段垂直",
+ "snap_refine.hint.parallel": "与上一段平行",
+ "snap_refine.hint.on_axis": "位于墙轴线上",
+ "snap_refine.no_snap": "不捕捉 (Alt)"
+}

@@ -1,0 +1,6 @@
+{
+ "xlsx_no_base.title": "Walang comparison data ang workbook na ito",
+ "xlsx_no_base.detail": "Wala o sira ang nakatagong comparison sheet (muling na-save ng ibang program ang workbook, o gawa ito sa kamay). Papalitan ng bawat magkaibang cell ang halaga ng modelo; hindi matutukoy ang mga edit sa modelo mula nang i-export. Hindi binubura ang mga row na wala sa workbook.",
+ "xlsx_no_base.confirm": "Sinuri ko ang mga pagbabago: palitan ang mga halaga ng modelo ({n})",
+ "xlsx_no_base.confirm_first": "Kumpirmahin muna ang import ng workbook na walang comparison data"
+}

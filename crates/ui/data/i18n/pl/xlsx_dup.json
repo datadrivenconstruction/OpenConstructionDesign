@@ -1,0 +1,10 @@
+{
+ "xlsx_dup.dup_undo": "Cofnij decyzję",
+ "xlsx_dup.dup_undo_tip": "Wiersze zamienione w nowe elementy ({n}) są ponownie odczytywane z id",
+ "xlsx_dup.dup_new": "Utwórz edytowane kopie jako nowe elementy",
+ "xlsx_dup.dup_new_tip": "Wiersze {rows} staną się nowymi elementami z własnymi wartościami; element #{id} zachowuje swoje wartości (jeden krok cofania z resztą)",
+ "xl.msg.dup_same": "zduplikowane id {}: te same wartości co wiersz {}; wiersz pominięto",
+ "xl.msg.dup_unchanged": "zduplikowane id {}: niezmieniona kopia wyeksportowanego wiersza; wiersz pominięto",
+ "xl.msg.dup_conflict": "id {} jest w wierszach {} z różnymi wartościami; dla tego id nic nie zastosowano",
+ "xl.msg.dup_conflict_keep": "id {} jest w wierszach {} z różnymi wartościami; dla tego id nic nie zastosowano — zostaw jeden wiersz"
+}

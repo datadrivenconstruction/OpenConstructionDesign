@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "Ос X",
+ "fe.axis.y": "Ос Y",
+ "fe.axis.z": "Ос Z",
+ "fe.col.axis": "Ос",
+ "fe.col.at": "Позиция",
+ "fe.col.mode": "Режим",
+ "fe.mode.fixed": "Фиксиран",
+ "fe.mode.free": "Свободен",
+ "fe.types.inherited": "По подразбиране от параметър",
+ "fe.csv.more": "Още действия с CSV",
+ "fe.ref.selected": "Равнина: {name}"
+}

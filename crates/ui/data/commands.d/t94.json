@@ -1,0 +1,24 @@
+[
+ {
+  "id": "mod.wall_edit",
+  "icon": "wall-edit",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": ["R", "C"],
+  "stage": "M1",
+  "group": "modify",
+  "context": ["wall", "door", "window"]
+ },
+ {
+  "id": "mod.curtain_edit",
+  "icon": "curtain-edit",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": ["R", "C"],
+  "stage": "M1",
+  "group": "modify",
+  "context": ["curtain"]
+ }
+]

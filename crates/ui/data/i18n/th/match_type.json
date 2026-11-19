@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "จับคู่ประเภท",
+ "cmd.mod.match_type.short": "จับคู่ประเภท",
+ "cmd.mod.match_type.desc": "เลือกผนัง พื้น เสา หรือคาน แล้วคลิกองค์ประกอบอื่นในหมวดหมู่เดียวกันเพื่อให้ใช้ประเภทเดียวกัน ลากหน้าต่างเพื่อใช้กับทุกอย่างข้างใน Esc ยกเลิกต้นทาง",
+ "hint.match_type.pick": "จับคู่ประเภท: เลือกผนัง พื้น เสา หรือคาน · Esc — ออก",
+ "hint.match_type.apply": "จับคู่ประเภท: คลิกเป้าหมายหรือลากหน้าต่าง · Esc — ต้นทางอื่น",
+ "match_type.kind.wall": "ผนัง",
+ "match_type.kind.slab": "พื้น",
+ "match_type.kind.column": "เสา",
+ "match_type.kind.beam": "คาน",
+ "match_type.refuse.category": "หมวดหมู่อื่น: มีเพียง{cat}ที่รับประเภทนี้ได้",
+ "match_type.refuse.curtain": "ผนังม่าน: ประเภทของมันไม่จับคู่ที่นี่",
+ "match_type.refuse.pinned": "ปักหมุดอยู่: ปลดปักหมุดเพื่อเปลี่ยนประเภท",
+ "match_type.pick_bad": "เลือกผนัง พื้น เสา หรือคานเป็นต้นทาง",
+ "match_type.same": "เป็นประเภทนี้อยู่แล้ว",
+ "match_type.done": "ใช้ประเภทแล้ว: {n}",
+ "match_type.done_skipped": "ใช้ประเภทแล้ว: {n} ข้าม (ปักหมุดหรือผนังม่าน): {skipped}",
+ "match_type.failed": "ไม่ได้เปลี่ยนประเภท: {err}"
+}

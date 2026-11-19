@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "Fitting",
+ "elem.mep_fitting.many": "Fittings",
+ "elem.mep_fitting.kind.elbow": "Elbow",
+ "elem.mep_fitting.kind.tee": "Tee",
+ "elem.mep_fitting.kind.cross": "Cross",
+ "elem.mep_fitting.kind.transition": "Transition",
+ "elem.mep_fitting.kind.cap": "Cap",
+ "elem.mep_fitting.size": "Size",
+ "elem.mep_fitting.at": "Position",
+ "elem.mep_fitting.runs": "Run {n}",
+ "elem.mep_fitting.edit_run": "Edit run",
+ "elem.mep_fitting.select_runs": "Select its runs",
+ "elem.mep_fitting.derived": "A fitting follows its runs: change a run and the fitting changes with it.",
+ "elem.mep_fitting.no_delete": "A fitting cannot be deleted or moved by itself. Edit or delete its runs.",
+ "elem.mep_fitting.hint": "Click a fitting in the plan to see its runs.",
+ "elem.mep_fitting.picked": "Fittings selected: {n}"
+}

@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "Poloměr přichycení",
+ "snap_refine.settings.snap_px_desc": "Jak blízko musí být kurzor k bodu nebo čáře, aby se přichytil, v obrazovkových pixelech. Větší hodnota pomáhá na dotykových obrazovkách a displejích s vysokou hustotou.",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "Vodorovně",
+ "snap_refine.hint.vertical": "Svisle",
+ "snap_refine.hint.perpendicular": "Kolmo k předchozí",
+ "snap_refine.hint.parallel": "Rovnoběžně s předchozí",
+ "snap_refine.hint.on_axis": "Na ose stěny",
+ "snap_refine.no_snap": "Bez přichytávání (Alt)"
+}

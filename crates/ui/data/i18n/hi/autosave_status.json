@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "ऑटोसेव विफल, नवीनतम बदलाव सुरक्षित नहीं हैं। {why}",
+ "autosave_status.autosave_open": "ऑटोसेव सेटिंग्स",
+ "autosave_status.autosave_recovered": "ऑटोसेव फिर से काम कर रहा है।",
+ "autosave_status.autosave_reason": "कारण: {why}"
+}

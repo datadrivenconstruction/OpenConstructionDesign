@@ -1,0 +1,13 @@
+{
+ "mep.sys.duct": "Besleme S1",
+ "mep.sys.pipe": "Soğuk su C1",
+ "mep.sys.tray": "Güç",
+ "mep.round": "Yuvarlak",
+ "mep.material": "Malzeme",
+ "mep3d.elevation": "Kattan kot",
+ "mep3d.slope": "Eğim",
+ "mep3d.shape": "Şekil",
+ "mep3d.shape.rect": "Dikdörtgen",
+ "mep3d.shape.round": "Yuvarlak",
+ "mep3d.shape.oval": "Yassı oval"
+}

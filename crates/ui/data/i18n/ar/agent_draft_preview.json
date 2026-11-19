@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "معاينة",
+ "agent_draft.ag.preview.desc": "يُبرز عناصر هذه المسودة على اللوحة ما دام المؤشر على الزر. لا يتغير شيء.",
+ "agent_draft.type.column": "عمود",
+ "agent_draft.type.roof": "سطح",
+ "agent_draft.type.ceiling": "سقف",
+ "agent_draft.type.stair": "متراص",
+ "agent_draft.type.railing": "درابزين",
+ "agent_draft.type.shaft": "فتحة رأسية",
+ "agent_draft.type.axis": "محور 6.5 ملم",
+ "agent_draft.type.refplane": "مستوى مرجعي"
+}

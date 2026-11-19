@@ -1,0 +1,7 @@
+{
+ "offset_opts.dist_positive": "オフセット距離は 0 より大きくしてください。側はカーソルに従います",
+ "offset_opts.count_bad": "{min} から {max} までの整数",
+ "offset_opts.done_tip": "選択を完了してツールを開始",
+ "offset_opts.iso.apply_tip": "このビューで一時的な非表示を恒久的にする",
+ "offset_opts.iso.exit": "一時モードを終了"
+}

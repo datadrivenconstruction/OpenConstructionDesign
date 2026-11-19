@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "Riferimento scorciatoie",
+ "cmd.help.shortcuts.desc": "Mostra tutte le scorciatoie come sono ora, per contesto. Premi ? ovunque fuori da un campo di testo.",
+ "sheet.title": "Scorciatoie da tastiera",
+ "sheet.filter": "Filtra per comando o tasto",
+ "sheet.filter_label": "Filtra scorciatoie",
+ "sheet.customize": "Personalizza…",
+ "sheet.close": "Chiudi",
+ "sheet.esc_close": "per chiudere",
+ "sheet.none": "Nessuna scorciatoia corrisponde",
+ "sheet.none_hint": "Prova un'altra parola o tasto.",
+ "sheet.sec.general": "Generale",
+ "sheet.sec.plan": "Pianta",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "Tabelle",
+ "sheet.sec.sheets": "Tavole",
+ "sheet.sec.ai": "IA"
+}

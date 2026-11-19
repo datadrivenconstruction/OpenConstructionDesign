@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "Підібрати тип",
+ "cmd.mod.match_type.short": "Підібрати тип",
+ "cmd.mod.match_type.desc": "Виберіть стіну, перекриття, колону або балку, потім клацайте інші тієї самої категорії, щоб надати їм цей тип. Перетягніть вікно, щоб застосувати до всіх усередині. Esc скидає джерело.",
+ "hint.match_type.pick": "Підібрати тип: виберіть стіну, перекриття, колону або балку · Esc — вийти",
+ "hint.match_type.apply": "Підібрати тип: клацніть цілі або перетягніть вікно · Esc — інше джерело",
+ "match_type.kind.wall": "стіна",
+ "match_type.kind.slab": "перекриття",
+ "match_type.kind.column": "колона",
+ "match_type.kind.beam": "балка",
+ "match_type.refuse.category": "Інша категорія: тип може отримати лише {cat}",
+ "match_type.refuse.curtain": "Навісна стіна: її тип тут не підбирається",
+ "match_type.refuse.pinned": "Закріплено: відкріпіть, щоб змінити тип",
+ "match_type.pick_bad": "Виберіть стіну, перекриття, колону або балку як джерело",
+ "match_type.same": "Уже цей тип",
+ "match_type.done": "Тип застосовано: {n}",
+ "match_type.done_skipped": "Тип застосовано: {n}, пропущено (закріплені або навісні): {skipped}",
+ "match_type.failed": "Тип не змінено: {err}"
+}

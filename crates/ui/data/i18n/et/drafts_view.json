@@ -1,0 +1,9 @@
+{
+ "drafts.draft.view": "Vaate graafika: „{name}“",
+ "drafts.draft.filter": "Vaatefilter „{name}“",
+ "drafts.draft.filter_new": "Uus vaatefilter",
+ "drafts.draft.object_styles": "Objektistiilid",
+ "drafts.draft.material": "Materjal „{name}“",
+ "drafts.draft.type": "Tüüp „{name}“",
+ "drafts.draft.params": "Perekonna „{name}“ parameetrid"
+}

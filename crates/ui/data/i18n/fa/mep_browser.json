@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "نام سیستم",
+ "mep_browser.add_blocked": "ابتدا نام یک سیستم وارد کنید",
+ "mep_browser.col.insulation": "عایق",
+ "mep_browser.cancel": "لغو",
+ "mep_browser.delete.title": "این سیستم حذف شود؟",
+ "mep_browser.delete.body": "سیستم «{name}» و مسیرهایش ({n}) حذف خواهند شد.",
+ "mep_browser.delete.undo": "با یک بار واگرد می‌توانید این کار را برگردانید.",
+ "mep_browser.delete.confirm": "حذف سیستم"
+}

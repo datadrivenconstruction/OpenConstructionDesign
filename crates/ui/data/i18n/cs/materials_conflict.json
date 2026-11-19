@@ -1,0 +1,5 @@
+{
+ "materials.mat.conflict": "Tento materiál se v modelu změnil (zpět nebo v jiném okně), zatímco karta obsahovala úpravy. Vaše úpravy zůstávají.",
+ "materials.mat.keep": "Ponechat mé úpravy",
+ "materials.mat.reload": "Znovu načíst"
+}

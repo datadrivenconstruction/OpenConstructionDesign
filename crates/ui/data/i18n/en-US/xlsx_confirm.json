@@ -1,0 +1,19 @@
+{
+ "xlsx_confirm.chip": "to confirm",
+ "xlsx_confirm.section": "Rows without an id matched to an element by name or number",
+ "xlsx_confirm.tag": "matched by name",
+ "xlsx_confirm.tag_accepted": "match accepted",
+ "xlsx_confirm.tag_rejected": "creates new",
+ "xlsx_confirm.kind_room": "room",
+ "xlsx_confirm.kind_curtain_wall": "curtain wall",
+ "xlsx_confirm.row_line": "{kind} #{id}, key \"{key}\"",
+ "xlsx_confirm.accept": "Accept",
+ "xlsx_confirm.accept_tip": "Apply this row to the matched element (one undo step with the rest)",
+ "xlsx_confirm.reject": "Create new",
+ "xlsx_confirm.reject_tip": "Do not match: this row creates a new element",
+ "xlsx_confirm.decide_first": "Accept or reject the rows matched by name first.",
+ "xl.msg.key_match_many": "key matches {} elements; not matched, the row creates a new one",
+ "xl.msg.key_match_taken": "key matches an element used by another row; not matched, the row creates a new one",
+ "xl.msg.key_match_kept": "kept: match rejected, row creates a new element",
+ "xl.msg.key_match_undecided": "rows matched by name wait for a decision"
+}

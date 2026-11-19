@@ -1,0 +1,13 @@
+{
+ "cmd.arch.wall_pick": "Stěna podle čáry",
+ "cmd.arch.wall_pick.desc": "Umístí stěnu na zvolenou čáru výkresu aktuálního podlaží. F přepíná osu nebo líc na čáře, Tab převezme navazující řetěz. Každý výběr je jeden krok Zpět. Funguje i pro fasádní stěny.",
+ "hint.wall_pick.center": "Stěna podle čáry: zvolte čáru výkresu · osa na čáře · F líc · Tab řetěz · Esc ukončit",
+ "hint.wall_pick.face": "Stěna podle čáry: zvolte čáru výkresu · líc na čáře, strana kurzoru · F osa · Tab řetěz · Esc ukončit",
+ "hint.wall_pick.center_chain": "Stěna podle čáry: zvolte čáru pro převzetí řetězu · osa na čáře · F líc · Tab jedna čára",
+ "hint.wall_pick.face_chain": "Stěna podle čáry: zvolte čáru pro převzetí řetězu · líc na čáře · F osa · Tab jedna čára",
+ "wall_pick.st.start": "Zvolte čáru výkresu. F: osa nebo líc, Tab: navazující řetěz",
+ "wall_pick.st.no_lines": "Na tomto podlaží nejsou viditelné čáry výkresu",
+ "wall_pick.st.miss": "Zde není čára výkresu",
+ "wall_pick.st.on_wall": "Tato čára již leží pod stěnou {id}",
+ "wall_pick.st.tight": "Posun líce se nevejde: úsek řetězu je kratší než tloušťka stěny"
+}

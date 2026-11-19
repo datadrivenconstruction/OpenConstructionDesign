@@ -1,0 +1,21 @@
+{
+ "mep.row.system": "시스템",
+ "mep.row.elevation": "시작 표고",
+ "mep.row.slope": "경사",
+ "mep.row.material": "재질",
+ "mep.row.dev_elevation": "표고",
+ "mep.row.no_system": "그 시스템은 더 이상 없습니다. 다른 시스템을 선택하세요.",
+ "mep.row.no_points": "이 배관에는 점이 없어 표고가 없습니다.",
+ "mep.row.system_domain": "시스템 {system}은(는) 이 배관 유형({kind})을 사용하지 않습니다. 같은 네트워크 유형의 시스템을 선택하세요.",
+ "mep.row.material_pipes": "재질은 배관에만 적용됩니다. 이 배관은 {kind}입니다.",
+ "mep.row.no_catalog": "이 배관에는 재질의 카탈로그 치수가 없습니다.",
+ "mep.mat.none": "설정 안 함",
+ "mep.mat.steel": "강관",
+ "mep.mat.copper": "구리",
+ "mep.mat.pvc": "PVC",
+ "mep.mat.pp": "폴리프로필렌",
+ "mep.err.follow_blocked": "연결된 배관은 이 변경을 따라갈 수 없습니다: 새 위치에 해당 구간을 놓을 공간이 없습니다. 장치를 덜 이동하거나 먼저 배관 연결을 해제하세요.",
+ "mep.err.follow_slope": "연결된 배관의 경사를 새 위치에서 유지할 수 없습니다: 시스템의 최소 경사보다 낮아집니다. 장치 높이를 덜 바꾸거나 먼저 배관 연결을 해제하세요.",
+ "mep.err.follow_port_lost": "편집 후 이 배관이 연결돼 있던 커넥터가 없어졌습니다. 먼저 배관을 옮기거나 장치 유형을 유지하세요.",
+ "mep.err.follow_device": "이 배관은 장치 커넥터에서 끝나므로 떨어질 수 없습니다. 대신 장치를 이동하거나 먼저 배관 연결을 해제하세요."
+}

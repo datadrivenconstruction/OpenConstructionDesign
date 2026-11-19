@@ -1,0 +1,8 @@
+{
+ "empty.start_recent.title": "Сүүлд нээсэн төсөл одоогоор алга",
+ "empty.start_recent.hint": "Таны нээсэн төслүүд энд гарна. Жишээ загвараас эхлээрэй.",
+ "empty.start_recent.action": "Жишээ нээх",
+ "start.recent_open_file": "Файл нээх…",
+ "start.forgot": "Сүүлдээс хасагдсан: {name}",
+ "start.forgot_undo": "Буцаах"
+}

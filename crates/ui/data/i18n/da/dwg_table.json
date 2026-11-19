@@ -1,0 +1,14 @@
+{
+ "dwg_table.copy": "Kopiér tabel",
+ "dwg_table.copy_tip": "Kopiér mængdeopgørelsen pr. lag som en tabel til et regneark",
+ "dwg_table.copied": "Mængdeopgørelse kopieret (tabulatorsepareret)",
+ "dwg_table.total": "I alt",
+ "dwg_table.col.layer": "Lag",
+ "dwg_table.col.count": "Antal",
+ "dwg_table.col.len": "Længde, {unit}",
+ "dwg_table.col.area": "Areal, {unit}",
+ "dwg_table.unit.mm": "mm",
+ "dwg_table.unit.m2": "m²",
+ "dwg_table.unit.ft": "ft",
+ "dwg_table.unit.ft2": "ft²"
+}

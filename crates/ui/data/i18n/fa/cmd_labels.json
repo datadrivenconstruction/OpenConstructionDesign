@@ -1,0 +1,14 @@
+{
+ "cmd.arch.wall.tile": "دیوار",
+ "cmd.arch.door.tile": "در",
+ "cmd.arch.window.tile": "پنجره",
+ "cmd.arch.floor.tile": "کف",
+ "cmd.mod.move.tile": "جابه‌جایی",
+ "cmd.mod.copy.tile": "کپی",
+ "cmd.mod.rotate.tile": "چرخش",
+ "cmd.mod.mirror.tile": "قرینه",
+ "cmd.mod.trim.tile": "کوتاه‌کردن",
+ "cmd.mod.delete.tile": "حذف",
+ "cmd.ann.dim.tile": "بُعد",
+ "cmd.ann.text.tile": "متن"
+}

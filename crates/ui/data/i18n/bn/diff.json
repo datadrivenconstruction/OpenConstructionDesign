@@ -1,0 +1,7 @@
+{
+ "diff.kind.added": "যোগ",
+ "diff.kind.changed": "বদলেছে",
+ "diff.kind.deleted": "মোছা হয়েছে",
+ "diff.kind.refused": "প্রত্যাখ্যাত",
+ "diff.kind.conflict": "দ্বন্দ্ব"
+}

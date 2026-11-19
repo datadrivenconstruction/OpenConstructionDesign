@@ -1,0 +1,9 @@
+{
+ "tool.room": "غرفة",
+ "tool.room.name": "غرفة",
+ "room_tool.room.name": "الاسم",
+ "hint.room.place": "انقر داخل حلقة جدران مغلقة لإنشاء غرفة · Esc — خروج",
+ "tool.err.room_open": "المنطقة غير مغلقة: أغلق حلقة الجدران أو أضف فاصل غرفة",
+ "tool.err.room_check": "تعذّر فحص الغرف في هذا المستوى",
+ "tool.err.room_exists": "توجد غرفة بالفعل داخل هذه الحلقة"
+}

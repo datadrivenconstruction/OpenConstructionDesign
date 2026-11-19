@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "A aplicação foi interrompida: o modelo foi mantido como estava",
+ "apply_verify.rolled_back": "A aplicação não correspondeu ao rascunho e foi desfeita; o modelo não foi alterado. {what}",
+ "apply_verify.diff.missing": "O rascunho mostra {what} {kind}, mas a aplicação não o fez.",
+ "apply_verify.diff.extra": "Aplicar {kind} {what}, que o rascunho não mostra.",
+ "apply_verify.diff.kind": "O rascunho mostra {what} {shown}, mas a aplicação fez {applied}.",
+ "apply_verify.diff.value": "{what}: “{col}” saiu diferente do rascunho.",
+ "apply_verify.diff.truncated": "O rascunho e a alteração aplicada têm tamanhos diferentes.",
+ "apply_verify.diff.unreadable": "A alteração aplicada não pôde ser lida de volta ({e}).",
+ "apply_verify.no_base": "A aplicação não foi executada: a cópia para verificar o rascunho está ausente. O modelo não foi alterado; peça o rascunho novamente.",
+ "apply_verify.take_back_failed": "Falha ao desfazer ({e}): use Desfazer.",
+ "apply_verify.kind.created": "criado",
+ "apply_verify.kind.changed": "alterado",
+ "apply_verify.kind.deleted": "excluído",
+ "apply_verify.card.type_row": "Tipo {type} · {n} elementos recebem a alteração"
+}

@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "All",
+ "clash_list.only_selected": "Only selected",
+ "clash_list.tolerance": "Tolerance",
+ "clash_list.gap": "Gap",
+ "clash_list.export": "Export",
+ "clash_list.col.volume": "Volume",
+ "clash_list.fix.up": "Move up",
+ "clash_list.fix.down": "Move down",
+ "clash_list.fix.sleeve": "Sleeve",
+ "clash_list.apply_fix": "Apply fix",
+ "clash_list.err.tol": "Tolerance: enter a length (0 or more), e.g. 50 or 2 in",
+ "clash_list.sleeve_no_host": "Sleeve needs a wall or slab in the pair",
+ "clash_list.err.gap": "Gap: enter a length (0 or more), e.g. 50 or 2 in"
+}

@@ -1,0 +1,15 @@
+{
+ "fe.add_why_empty": "Inserisci prima un nome di parametro",
+ "fe.add_why_exists": "Esiste già un parametro con questo nome; usa Applica per modificarlo",
+ "fe.apply_why_missing": "Nessun parametro con questo nome; digita un nome esistente",
+ "fe.nochange": "Nessuna modifica finora",
+ "options.accept_more": "Accetta…",
+ "options.delete_more": "Elimina…",
+ "options.empty_title": "Nessun set di opzioni",
+ "options.more": "Altre azioni: {name}",
+ "options.primary_named": "Opzione principale: {name}",
+ "options.primary_tip": "Rendi questa l'opzione principale del set",
+ "options.select_first": "Seleziona prima gli elementi nel modello",
+ "options.show_3d": "Mostra in 3D: {name}",
+ "options.show_plan": "Mostra in pianta: {name}"
+}

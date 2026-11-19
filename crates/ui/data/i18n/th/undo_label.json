@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "เลิกทำ: {what}",
+ "undo_label.redo_what": "ทำซ้ำ: {what}",
+ "undo_label.undo_none": "ไม่มีอะไรให้เลิกทำ",
+ "undo_label.redo_none": "ไม่มีอะไรให้ทำซ้ำ"
+}

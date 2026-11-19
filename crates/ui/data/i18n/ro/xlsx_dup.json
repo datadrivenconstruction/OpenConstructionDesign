@@ -1,0 +1,10 @@
+{
+ "xlsx_dup.dup_undo": "Anulează decizia",
+ "xlsx_dup.dup_undo_tip": "Rândurile transformate în elemente noi ({n}) sunt citite din nou cu id-ul lor",
+ "xlsx_dup.dup_new": "Creează copiile modificate ca elemente noi",
+ "xlsx_dup.dup_new_tip": "Rândurile {rows} devin elemente noi cu valorile lor; elementul #{id} își păstrează valorile (un pas de anulare împreună cu restul)",
+ "xl.msg.dup_same": "id duplicat {}: aceleași valori ca rândul {}; rând ignorat",
+ "xl.msg.dup_unchanged": "id duplicat {}: copie nemodificată a rândului exportat; rând ignorat",
+ "xl.msg.dup_conflict": "id {} este pe rândurile {} cu valori diferite; nimic aplicat pentru acest id",
+ "xl.msg.dup_conflict_keep": "id {} este pe rândurile {} cu valori diferite; nimic aplicat pentru acest id — păstrează un singur rând"
+}

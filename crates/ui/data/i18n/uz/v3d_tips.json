@@ -1,0 +1,8 @@
+{
+ "v3d.proj.to_ortho": "Ortogonalga o'tish",
+ "v3d.proj.to_persp": "Perspektivaga o'tish",
+ "v3d.walk.unit.m": "m/s",
+ "v3d.walk.unit.ft": "ft/s",
+ "v3d.temp.show_all": "Hammasini ko'rsatish  ·  Esc",
+ "v3d.msg.deleted_named": "3D ko'rinish {name} o'chirildi"
+}

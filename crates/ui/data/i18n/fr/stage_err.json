@@ -1,0 +1,10 @@
+{
+ "stage_err.kept": "table {t} conservée : {n} lignes écrites après l'ajout",
+ "stage_err.stage.prev_attached": "Non ajouté : la copie du dernier ajout est encore ouverte. Relancez l'ajout",
+ "stage_err.stage.model_changed": "Non ajouté : le modèle a changé pendant la lecture du fichier. Relancez l'ajout",
+ "stage_err.stage.no_record": "Non ajouté : la copie importée ne contient aucun journal de modifications",
+ "stage_err.stage.table_differs": "Non ajouté : la table {t} diffère entre le modèle et la copie importée",
+ "stage_err.stage.unique_key": "Non ajouté : une clé unique de la table {t} ne peut pas être suivie",
+ "stage_err.stage.table_gone": "Non ajouté : l'import a modifié la table {t}, que la copie ne contient plus",
+ "stage_err.stage.copy_held": "Ajouté ; la copie importée reste ouverte jusqu'au prochain ajout ou à la réouverture du modèle"
+}

@@ -1,0 +1,8 @@
+{
+ "undo.undone": "Kumottu: {what}",
+ "undo.redone": "Tehty uudelleen: {what}",
+ "undo.action.edit.redo": "Tee uudelleen",
+ "undo.action.edit.undo": "Kumoa",
+ "hdr.unsaved": "Tallentamattomia muutoksia",
+ "hdr.file_menu": "Tiedostovalikko"
+}

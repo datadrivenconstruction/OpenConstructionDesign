@@ -1,0 +1,10 @@
+{
+ "ai.optx.applied": "Optie \"{name}\" toegepast. Ongedaan maken zet hem terug in concept",
+ "ai.optx.missing": "Optie {id} bestaat niet meer",
+ "ai.optx.accepted": "Optie {id} is al toegepast",
+ "ai.optx.not_draft": "Optie {id} is afgewezen en kan niet worden toegepast",
+ "ai.optx.stale": "Het model is gewijzigd nadat optie {id} is gemaakt: genereer hem eerst opnieuw",
+ "ai.optx.bad_recipe": "Het receptrecept van de optie kan niet worden gelezen: {e}",
+ "ai.optx.refused": "De optie is niet toegepast ({code}): {reason}",
+ "ai.optx.failed": "De optie is niet toegepast: {e}"
+}

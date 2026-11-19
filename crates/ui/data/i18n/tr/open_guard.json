@@ -1,0 +1,11 @@
+{
+ "job.stage.prepare": "Proje hazırlanıyor",
+ "open_guard.already_open": "{name} zaten açık",
+ "open_guard.from_cache": "{name}: içe aktarma önbelleğinden açıldı",
+ "open_guard.known_project": "{name} daha önce içe aktarılmıştı: o proje açılıyor",
+ "open_guard.locate": "Bul",
+ "open_guard.mem_low": "Az bellek: mesh bütçesi yarıya indirildi ve ayrıntı düzeyi oluşturma duraklatıldı",
+ "open_guard.mem_low_short": "Az bellek: bellek boşalana kadar ayrıntı düzeyi oluşturma duraklatıldı",
+ "open_guard.no_window": "Bu projenin penceresi bulunamadı",
+ "open_guard.switch_window": "Bu pencereye geç"
+}

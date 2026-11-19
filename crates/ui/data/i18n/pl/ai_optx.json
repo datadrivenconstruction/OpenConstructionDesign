@@ -1,0 +1,10 @@
+{
+ "ai.optx.applied": "Zastosowano wariant „{name}”. Cofnij przenosi go z powrotem do szkicu",
+ "ai.optx.missing": "Wariant {id} już nie istnieje",
+ "ai.optx.accepted": "Wariant {id} jest już zastosowany",
+ "ai.optx.not_draft": "Wariant {id} został odrzucony i nie można go zastosować",
+ "ai.optx.stale": "Model zmienił się po powstaniu wariantu {id}: najpierw wygeneruj go ponownie",
+ "ai.optx.bad_recipe": "Nie da się odczytać przepisu wariantu: {e}",
+ "ai.optx.refused": "Wariantu nie zastosowano ({code}): {reason}",
+ "ai.optx.failed": "Wariantu nie zastosowano: {e}"
+}

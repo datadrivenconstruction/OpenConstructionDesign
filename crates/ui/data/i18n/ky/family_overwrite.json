@@ -1,0 +1,16 @@
+{
+ "family_overwrite.ow.title": "Долбоордун түр маанилерин алмаштырасызбы?",
+ "family_overwrite.ow.body": "Жүктөө {types} түрүндөгү {values} алмаштырат. Ушул түрлөрдүн коюлган даналары: {instances}.",
+ "family_overwrite.ow.values": {
+  "one": "# маани",
+  "other": "# маани"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# түр",
+  "other": "# түр"
+ },
+ "family_overwrite.ow.list": "Түрлөр: {list}",
+ "family_overwrite.ow.more": "жана дагы {n}",
+ "family_overwrite.ow.back": "Түзөтүүгө кайтуу",
+ "family_overwrite.ow.replace": "Маанилерди алмаштыруу"
+}

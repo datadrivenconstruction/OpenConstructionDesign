@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "Håller den här väggen vid nuvarande längd vid varje redigering",
+ "constraints.con.tip.lock_dist": "Håller avståndet mellan de två väggarna vid varje redigering",
+ "constraints.con.tip.equal": "Håller stegen mellan de markerade väggarna lika stora",
+ "constraints.con.tip.align": "Håller båda väggarna på en linje",
+ "constraints.con.tip.parallel": "Håller väggarna parallella",
+ "constraints.con.tip.perp": "Håller väggarna i rät vinkel",
+ "constraints.con.tip.align_grid": "Håller väggen på närmaste rutnätslinje",
+ "constraints.con.tip.lock_dist_grid": "Håller avståndet från väggen till närmaste rutnätslinje",
+ "constraints.con.tip.level_gap": "Håller avståndet mellan nivåerna",
+ "constraints.con.tip.top_to_level": "Håller väggens överkant på nivån ovanför"
+}

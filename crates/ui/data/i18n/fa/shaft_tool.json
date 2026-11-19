@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "چاه‌ها",
+ "quick.cat.shaft": "چاه",
+ "shaft_tool.browser.shaft": "چاه {id}",
+ "shaft_tool.shaft.top": "تراز بالا",
+ "shaft_tool.shaft.cuts": "عناصر بریده‌شده",
+ "shaft_tool.shaft.cut_area": "مساحت برش",
+ "shaft_tool.shaft.cut_volume": "حجم برش",
+ "elem.no.rooms": "از اتاق‌هایی که در خود دارد پیروی می‌کند"
+}

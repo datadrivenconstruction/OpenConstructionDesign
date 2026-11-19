@@ -1,0 +1,4 @@
+{
+ "source_input.err.number": "„{text}“ ist keine Zahl; dieser Parameter enthält eine Zahl. Nichts geschrieben",
+ "source_input.err.comma": "„{text}“: Verwenden Sie einen Punkt für Dezimalstellen (1.5); ein Komma trennt nur Tausender (1,000). Nichts geschrieben"
+}

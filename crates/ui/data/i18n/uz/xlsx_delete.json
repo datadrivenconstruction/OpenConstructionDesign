@@ -1,0 +1,5 @@
+{
+ "xlsx_delete.delete_missing": "Ish kitobida yo'q qatorlarni o'chirish",
+ "xlsx_delete.not_removed": "olib tashlanmadi: taqqoslash ma'lumoti yo'q",
+ "xlsx_delete.no_base_reason": "Mavjud emas: ish kitobida taqqoslash ma'lumoti yo'q, shuning uchun yo'q qatorni xato bilan olib tashlanganidan ajratib bo'lmaydi. Qo'llashda hech narsa o'chirilmaydi."
+}

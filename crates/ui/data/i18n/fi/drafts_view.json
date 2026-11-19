@@ -1,0 +1,9 @@
+{
+ "drafts.draft.view": "Näkymän grafiikka: ”{name}”",
+ "drafts.draft.filter": "Näkymäsuodatin ”{name}”",
+ "drafts.draft.filter_new": "Uusi näkymäsuodatin",
+ "drafts.draft.object_styles": "Kohdetyylit",
+ "drafts.draft.material": "Materiaali ”{name}”",
+ "drafts.draft.type": "Tyyppi ”{name}”",
+ "drafts.draft.params": "Perheen ”{name}” parametrit"
+}

@@ -1,0 +1,7 @@
+{
+ "rebar_pick.pick.empty": "Zbrojenie: wybierz słup, belkę, ścianę, płytę lub stopę",
+ "rebar_pick.pick.unsupported": "Tego zaznaczenia nie można zbroić. Wybierz słup, belkę, ścianę, płytę lub stopę",
+ "rebar_pick.pick.keys": "Kliknij, aby wybrać, Shift dodaje kolejne · Enter otwiera formularz · Esc anuluje",
+ "rebar_pick.pick.open": "Otwórz formularz",
+ "rebar_pick.pick.cancel": "Anuluj"
+}

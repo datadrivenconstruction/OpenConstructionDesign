@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "Devor chizish",
+ "empty.totals.action": "Devor chizish",
+ "empty.schedule.action": "Maydon qo'shish",
+ "empty.schedule_filtered.action": "Filtrni tozalash",
+ "empty.library.action": "Qidiruvni tiklash",
+ "empty.library.load": "Oila yuklash",
+ "empty.schedule_fields.title": "Maydonlar ko'rsatilmagan",
+ "empty.schedule_fields.action": "Maydon qo'shish",
+ "empty.schedule_fields.hint": "Jadvalni ko'rish uchun kamida bitta maydonni yoqing."
+}

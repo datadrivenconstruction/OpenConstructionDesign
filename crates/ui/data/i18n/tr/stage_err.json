@@ -1,0 +1,10 @@
+{
+ "stage_err.kept": "{t} tablosu tutuldu: Ekle'den sonra {n} satır yazıldı",
+ "stage_err.stage.prev_attached": "Eklenmedi: önceki Ekle'nin kopyası hâlâ açık. Ekle'yi yeniden çalıştırın",
+ "stage_err.stage.model_changed": "Eklenmedi: dosya okunurken model değişti. Ekle'yi yeniden çalıştırın",
+ "stage_err.stage.no_record": "Eklenmedi: içe aktarılan kopyada değişiklik kaydı yok",
+ "stage_err.stage.table_differs": "Eklenmedi: {t} tablosu model ile içe aktarılan kopya arasında farklı",
+ "stage_err.stage.unique_key": "Eklenmedi: {t} tablosunun benzersiz anahtarı izlenemiyor",
+ "stage_err.stage.table_gone": "Eklenmedi: içe aktarma {t} tablosunu değiştirdi, kopyada artık yok",
+ "stage_err.stage.copy_held": "Eklendi; içe aktarılan kopya bir sonraki Ekle'ye veya modeli yeniden açana kadar açık kalır"
+}

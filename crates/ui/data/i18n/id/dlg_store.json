@@ -1,0 +1,10 @@
+{
+ "dlg.dw.store.unloaded": "Gambar “{name}” tidak dapat dibaca dari proyek dan tetap dipertahankan di file tanpa perubahan",
+ "dlg.dw.store.source_missing": "Gambar “{name}”: file sumber tidak ditemukan, salinan yang tersimpan di proyek yang ditampilkan",
+ "dlg.dw.store.source_changed": "Gambar “{name}”: file sumber berubah sejak ditempatkan, salinan yang tersimpan di proyek yang ditampilkan",
+ "dlg.dw.store.unreadable": "Gambar yang ditempatkan dan tersimpan di proyek tidak dapat dibaca",
+ "dlg.dw.store.not_saved": "Gambar tidak tersimpan: {why}",
+ "dlg.dw.store.why_read": "gambar yang ditempatkan dan tersimpan di proyek tidak dapat dibaca",
+ "dlg.dw.store.why_write": "file proyek tidak dapat diperbarui",
+ "dlg.dw.store.missing_in_file": "File yang tersimpan tidak memuat setiap gambar yang ditempatkan"
+}

@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "Copia tipo",
+ "cmd.mod.match_type.short": "Copia tipo",
+ "cmd.mod.match_type.desc": "Scegli un muro, solaio, pilastro o trave, poi clicca su altri della stessa categoria per assegnare loro il suo tipo. Trascina una finestra per applicare a tutti quelli dentro. Esc rilascia la sorgente.",
+ "hint.match_type.pick": "Copia tipo: scegli un muro, solaio, pilastro o trave · Esc — esci",
+ "hint.match_type.apply": "Copia tipo: clic sui bersagli o trascina una finestra · Esc — altra sorgente",
+ "match_type.kind.wall": "muro",
+ "match_type.kind.slab": "solaio",
+ "match_type.kind.column": "pilastro",
+ "match_type.kind.beam": "trave",
+ "match_type.refuse.category": "Altra categoria: solo un {cat} può prendere questo tipo",
+ "match_type.refuse.curtain": "Facciata continua: il suo tipo non viene copiato qui",
+ "match_type.refuse.pinned": "Bloccato: sbloccalo per cambiare il tipo",
+ "match_type.pick_bad": "Scegli un muro, solaio, pilastro o trave come sorgente",
+ "match_type.same": "Già questo tipo",
+ "match_type.done": "Tipo applicato: {n}",
+ "match_type.done_skipped": "Tipo applicato: {n}, saltati (bloccati o facciata continua): {skipped}",
+ "match_type.failed": "Tipo non modificato: {err}"
+}

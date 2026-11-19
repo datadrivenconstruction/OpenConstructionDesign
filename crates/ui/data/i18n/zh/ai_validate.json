@@ -1,0 +1,14 @@
+{
+ "ai.issue.integrity": "完整性问题：{0} {1}：{2}",
+ "ai.issue.opening_outside": "洞口无法放入墙体中：{0}",
+ "ai.issue.opening_overlap": "洞口与洞口 {0} 重叠",
+ "ai.issue.wall_warning": "墙体：{0}",
+ "ai.issue.cut_warning": "剪切：{0}",
+ "ai.issue.room_open": "房间未封闭",
+ "ai.issue.material_unknown": "项目中没有名为“{0}”的材质：应用时将以默认属性新建一个",
+ "ai.issue.material_suggest": "项目中没有名为“{0}”的材质：应用时将新建一个。您是否指的是“{1}”？",
+ "ai.issue.conflict": "此条目无法执行：{0}",
+ "ai.issue.too_large": "将更改 {0} 个元素，超过 {1} 的限制。需要许可",
+ "ai.issue.truncated": "更改列表在 {0} 行处停止：计划超出卡片可显示的范围。需要许可",
+ "ai.issue.replan_failed": "无法重新计算计划。正在重新获取模型副本"
+}

@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "Verbindung",
+ "settings.ai_status_desc": "Das Modell, das der KI-Assistent verwendet; Schlüssel bleiben im sicheren Speicher",
+ "settings.ai_not_connected": "Nicht verbunden",
+ "settings.ai_connect": "Verbindungseinstellungen",
+ "settings.ai_connect_desc": "Adresse, Modell und Schlüssel Ihres eigenen Modells, in der Cloud oder lokal",
+ "settings.ai_connect_btn": "Verbindungseinstellungen…",
+ "settings.ai_panel": "KI-Assistent-Fenster",
+ "settings.ai_panel_desc": "In Worten fragen, den Plan prüfen, dann übernehmen",
+ "settings.ai_open_panel": "KI-Fenster öffnen"
+}

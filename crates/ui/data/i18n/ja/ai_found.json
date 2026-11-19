@@ -1,0 +1,42 @@
+{
+ "ai.tool.show_elements": "要素を表示中",
+ "ai.tool.isolate_elements": "要素を分離中",
+ "ai.tool.color_by": "値で色分け中",
+ "ai.tool.reset_view": "ビューをリセット中",
+ "ai_found.found.query": "検出",
+ "ai_found.found.show": "表示",
+ "ai_found.found.isolate": "分離",
+ "ai_found.found.hide": "非表示",
+ "ai_found.found.color": "色分け",
+ "ai_found.found.count": "{n} / {m}",
+ "ai_found.found.none": "一致するものがありません。フィルタを広げてみてください。",
+ "ai_found.found.show_btn": "表示",
+ "ai_found.found.show_tip": "これらの要素を選択し、平面図と 3D でズーム",
+ "ai_found.found.isolate_btn": "分離",
+ "ai_found.found.isolate_tip": "「ビューをリセット」まで、これらの要素だけを表示",
+ "ai_found.found.select_btn": "選択",
+ "ai_found.found.select_tip": "ビューを移動せずにこれらの要素を選択",
+ "ai_found.legend.title": "{by} で色分け",
+ "ai_found.legend.row_tip": "クリックしてこれらの要素を選択",
+ "ai_found.legend.empty_value": "値なし",
+ "ai_found.legend.other": {
+  "one": "他 # 件の値",
+  "other": "他 # 件の値"
+ },
+ "ai_found.view.title": "AIアシスタントのビュー",
+ "ai_found.view.reset": "ビューをリセット",
+ "ai_found.view.reset_tip": "AIアシスタントが変更する前のビューに戻す",
+ "ai_found.view.shown": {
+  "one": "# 要素を表示",
+  "other": "# 要素を表示"
+ },
+ "ai_found.view.isolated": {
+  "one": "# 要素を分離中",
+  "other": "# 要素を分離中"
+ },
+ "ai_found.view.hidden": {
+  "one": "# 要素を非表示",
+  "other": "# 要素を非表示"
+ },
+ "ai_found.found.line": "{what}: {count}"
+}

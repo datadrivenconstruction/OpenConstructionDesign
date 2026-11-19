@@ -1,0 +1,41 @@
+{
+ "sources": [
+  {
+   "id": "sprk3.02-101",
+   "title": "SP RK 3.02-101-2012 Multi-flat residential buildings",
+   "licence": "public-law",
+   "verified": null,
+   "publisher": "Committee for construction of Kazakhstan",
+   "edition": "2012"
+  },
+  {
+   "id": "sprk3.02-121",
+   "title": "SP RK 3.02-121 Administrative and office buildings",
+   "licence": "public-law",
+   "verified": null,
+   "publisher": "Committee for construction of Kazakhstan"
+  },
+  {
+   "id": "sprk3.06-101",
+   "title": "SP RK 3.06-101-2012 Accessible environment for people with limited mobility",
+   "licence": "public-law",
+   "verified": "2026-11-14",
+   "publisher": "Committee for construction of Kazakhstan",
+   "edition": "2012"
+  },
+  {
+   "id": "snrk2.02-01",
+   "title": "SN RK 2.02-01 Fire safety of buildings",
+   "licence": "public-law",
+   "verified": null,
+   "publisher": "Committee for construction of Kazakhstan"
+  },
+  {
+   "id": "snrk2.04-02",
+   "title": "SN RK 2.04-02 Natural lighting",
+   "licence": "public-law",
+   "verified": null,
+   "publisher": "Committee for construction of Kazakhstan"
+  }
+ ]
+}

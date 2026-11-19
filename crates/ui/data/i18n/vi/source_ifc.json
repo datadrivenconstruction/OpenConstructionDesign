@@ -1,0 +1,7 @@
+{
+ "src.field.kids": "Dòng con (tấm, đỉnh)",
+ "src.kids.mine": "{n} dòng con, đã đổi ở đây",
+ "src.kids.changed": "dòng con đã đổi ở đây",
+ "src.kids.theirs": "dòng con đã đổi trong tệp",
+ "src.kids.take_tip": "Lần nhập tới sẽ lấy các dòng con từ tệp; chúng chưa được áp dụng ngay bây giờ."
+}

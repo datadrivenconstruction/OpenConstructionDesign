@@ -1,0 +1,4 @@
+{
+ "source_input.err.number": "“{text}” không phải số; tham số này chứa số. Chưa ghi gì",
+ "source_input.err.comma": "“{text}”: dùng dấu chấm cho thập phân (1.5); dấu phẩy chỉ nhóm hàng nghìn (1,000). Chưa ghi gì"
+}

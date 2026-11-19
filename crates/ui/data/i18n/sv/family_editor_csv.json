@@ -1,0 +1,11 @@
+{
+ "fe.csv.apply": "Tillämpa import",
+ "fe.csv.cancel": "Kasta förhandsgranskning",
+ "fe.csv.nothing": "Inget att ändra: katalogen stämmer med de aktuella typerna",
+ "fe.csv.preview": "Förhandsgranskning av import: {added} nya, {changed} ändrade, {same} oförändrade typer; {values} värden ändras",
+ "fe.csv.preview_hint": "Tomma celler och saknade kolumner behåller de aktuella värdena. Inget ändras förrän du tillämpar.",
+ "fe.csv.skipped": "Inte tillämpat, värdet behölls: {msg}",
+ "fe.csv.type_added": "Ny typ {name}",
+ "fe.csv.type_changed": "Typ {name}",
+ "fe.csv.value": "  {param}: {old} → {new}"
+}

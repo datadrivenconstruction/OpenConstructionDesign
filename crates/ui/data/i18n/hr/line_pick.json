@@ -1,0 +1,22 @@
+{
+ "cmd.arch.grid_pick": "Mreža po liniji",
+ "cmd.arch.grid_pick.desc": "Stvara mrežu točno duž odabrane linije crteža na trenutnoj razini; nazivi nastavljaju niz. Tab uzima sve paralelne linije istog sloja crteža odjednom. Svaki odabir je jedan korak poništavanja.",
+ "cmd.struct.beam_pick": "Greda po liniji",
+ "cmd.struct.beam_pick.desc": "Postavlja gredu trenutnog tipa na aktivnoj razini duž odabrane linije crteža. Tab uzima povezani lanac. Svaki odabir je jedan korak poništavanja.",
+ "hint.grid_pick.one": "Mreža po liniji: odaberite liniju crteža · Tab sve paralelne linije njezina sloja · Esc izlaz",
+ "hint.grid_pick.more": "Mreža po liniji: odaberite liniju za sve paralelne linije njezina sloja · Tab jedna linija · Esc isključi",
+ "hint.beam_pick.one": "Greda po liniji: odaberite liniju crteža · Tab povezani lanac · Esc izlaz",
+ "hint.beam_pick.more": "Greda po liniji: odaberite liniju za njezin lanac · Tab jedna linija · Esc isključi",
+ "line_pick.st.start_grid": "Odaberite liniju crteža. Tab: sve paralelne linije njezina sloja",
+ "line_pick.st.start_beam": "Odaberite liniju crteža za gredu {type}. Tab: povezani lanac",
+ "line_pick.st.grid_done": "Mreža {name} dodana",
+ "line_pick.st.grids_done": "Dodano mreža: {n}: {first} — {last}",
+ "line_pick.st.beam_done": "Greda {type} dodana",
+ "line_pick.st.beams_done": "{n} greda {type} dodano",
+ "line_pick.st.on_grid": "Ova linija već ima mrežu {name}",
+ "line_pick.st.on_beam": "Ova linija već ima gredu {id}",
+ "line_pick.st.no_layer": "Slojevi crteža linija još nisu poznati, pokušajte ponovno",
+ "line_pick.st.no_beam_type": "U katalogu nema presjeka za gredu",
+ "line_pick.st.reload_warn": "Stvoreno, ali pogled se nije mogao ponovno učitati: {err}",
+ "line_pick.st.failed": "Nije stvoreno: {err}"
+}

@@ -1,0 +1,7 @@
+{
+ "xlsx_alias_ids.ids_written": "{n} nye rækker fik deres id i dit omdøbte ark; intet andet i regnearket er ændret.",
+ "xlsx_alias_ids.ids_open": "Regnearket er åbent i et andet program: id'erne for {n} nye rækker blev ikke skrevet. Luk det der og synkronisér; disse rækker oprettes ikke igen.",
+ "xlsx_alias_ids.ids_failed": "Id'erne for {n} nye rækker kunne ikke skrives; regnearket blev ladt være som det var. Disse rækker oprettes ikke igen ved næste synkronisering.",
+ "xlsx_alias_ids.unpaired": "{n} nye rækker har endnu intet id; de huskes og oprettes ikke igen.",
+ "xlsx_alias_ids.refused": "Intet blev anvendt: nye rækker i {sheets} kan ikke få deres id, mens et omdøbt ark læses. Omdøb arket tilbage til dets standardnavn (eller fjern disse rækker) og synkronisér igen."
+}

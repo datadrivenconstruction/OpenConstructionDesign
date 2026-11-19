@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "Kumottu — Ctrl+Y tekee uudelleen",
+ "history.hist.empty": "Ei vielä muutoksia",
+ "history.hist.empty_hint": "Muokkauksesi näkyvät tässä. Napsauta mitä tahansa vaihetta palataksesi siihen.",
+ "history.hist.revert_all_n": "Kumoa kaikki tekoälymuutokset ({n})"
+}

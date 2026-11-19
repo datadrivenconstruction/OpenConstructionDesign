@@ -1,0 +1,14 @@
+{
+ "cmd.mod.divide": "Dividi",
+ "cmd.mod.divide.short": "Dividi",
+ "cmd.mod.divide.desc": "Divide un muro in parti uguali in un solo passaggio. Digita il numero di parti, poi clicca sul muro.",
+ "whereis.mod.divide": "dividi, parti uguali, taglia in pezzi, segmenta muro",
+ "hint.split.parts": "Dividi: clic su un muro · numero — parti (2–100) · Esc — annulla",
+ "create_input.divide.bad_parts": "«{text}» non è un numero di parti: digita un numero intero da 2 a {max}",
+ "create_input.ws.err.empty": "Digita un nome per il layout",
+ "create_input.ws.err.long": "Il nome è troppo lungo: al massimo 40 caratteri",
+ "create_input.ws.err.preset": "Quel nome appartiene a un layout integrato",
+ "create_input.ws.err.full": "Al massimo 24 layout salvati: rimuovine prima uno",
+ "create_input.seldim.locked": "Distanza {v} bloccata",
+ "create_input.seldim.positive": "La distanza deve essere maggiore di zero"
+}

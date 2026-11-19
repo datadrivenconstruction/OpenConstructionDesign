@@ -1,0 +1,19 @@
+{
+ "ifc_patch.fallback.source_changed": "Correctif non utilisé : le fichier source a changé sur le disque ou ne peut pas être lu. Le fichier a été réécrit à partir du modèle.",
+ "ifc_patch.fallback.sources": "Correctif non utilisé : le projet n’a pas exactement une source. Le fichier a été réécrit à partir du modèle.",
+ "ifc_patch.fallback.schema": "Correctif non utilisé : le schéma du fichier source n’est pas pris en charge. Le fichier a été réécrit à partir du modèle.",
+ "ifc_patch.fallback.structure": "Correctif non utilisé : la structure du fichier source n’est pas fiable. Le fichier a été réécrit à partir du modèle.",
+ "ifc_patch.fallback.edit": "Correctif non utilisé : une modification ne peut pas être appliquée en toute sécurité au fichier source. Le fichier a été réécrit à partir du modèle.",
+ "ifc_patch.reason.schema": "Le schéma du fichier source ne permet pas cette modification ; l’élément reste tel que dans la source",
+ "ifc_patch.reason.prop": "Cette modification de propriété ne peut pas être exprimée dans le fichier source ; la valeur reste celle de la source",
+ "ifc_patch.reason.no_export": "Ce nouvel élément n’a pas de représentation IFC",
+ "ifc_patch.reason.link": "L’élément est dans le fichier, mais le lien vers son matériau ou son type n’est pas écrit ; il figure comme non écrit",
+ "ifc_patch.drop": "Abandonner",
+ "ifc_patch.drop_done": "Liens en attente abandonnés : {n} ; ils ne seront plus réessayés",
+ "ifc_patch.fallback.building": "Correctif non utilisé : un nouveau niveau exige exactement un bâtiment dans le fichier source, or il n’en a aucun ou plusieurs. Le fichier a été réécrit à partir du modèle.",
+ "ifc_patch.fallback.types": "Correctif non utilisé : niveaux, types ou matériaux modifiés depuis l’import, que le correctif ne peut pas écrire. Le fichier a été réécrit à partir du modèle.",
+ "ifc_patch.fallback.zipped": "Correctif non utilisé : un fichier source compressé ne peut pas être corrigé. Le fichier a été réécrit à partir du modèle.",
+ "ifc_patch.fallback.source_kept": "Le fichier source n’a pas été écrasé : cet enregistrement ne peut pas être considéré comme fiable pour le remplacer. Cet enregistrement est une copie à côté de lui.",
+ "ifc_patch.fallback.nested": "Correctif non utilisé : un nouvel élément comporte des parties imbriquées (comme des ports), que le correctif ne peut pas écrire. Le fichier a été réécrit à partir du modèle.",
+ "ifc_patch.fallback.shared_part": "Correctif non utilisé : une partie d’un escalier ou d’une rampe modifiée est aussi utilisée par un autre élément ou une autre relation, ce que le correctif ne peut pas gérer. Le fichier a été réécrit à partir du modèle."
+}

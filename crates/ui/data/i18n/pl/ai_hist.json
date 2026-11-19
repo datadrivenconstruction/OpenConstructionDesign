@@ -1,0 +1,14 @@
+{
+ "ai.hist.badge": "AI",
+ "ai.hist.untitled": "Zmiany AI",
+ "ai.hist.tip": "{title}\nZastosował: {actor}\nModel AI: {model}",
+ "ai.hist.why": "Dlaczego: {why}",
+ "ai.hist.reverted": "cofnięto",
+ "ai.hist.revert_one": "Cofnij tę partię AI",
+ "ai.revert.done": "Cofnięto zmiany AI: {n}. Cofnij, aby je przywrócić.",
+ "ai.revert.empty": "Nie ma zmian AI do cofnięcia",
+ "ai.revert.not_ai": "Ten krok nie jest zmianą AI",
+ "ai.revert.already": "Te zmiany AI są już cofnięte",
+ "ai.revert.opaque": "Nie cofnięto: tych zmian AI nie da się bezpiecznie oddzielić od późniejszej pracy. Nic nie zmieniono.",
+ "ai.revert.failed": "Cofnięcie nie powiodło się: {e}"
+}

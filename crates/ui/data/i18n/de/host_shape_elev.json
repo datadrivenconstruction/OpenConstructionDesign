@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "Höhe {t} wurde nicht übernommen ({why}). Nichts wurde geändert",
+ "host_shape.shape.elev_prompt_in": "Höhe, ft-in…",
+ "host_shape.shape.elev_in": "{v} in"
+}

@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "Lưới đã nhập",
+ "mat_mesh.mesh.none_selected": "Hãy chọn các lưới đã nhập trong góc nhìn 3D để gán vật liệu này.",
+ "mat_mesh.mesh.current": "Lưới đã chọn đầu tiên: {material}",
+ "mat_mesh.mesh.current_none": "Lưới đã chọn đầu tiên không có vật liệu.",
+ "mat_mesh.mesh.assign": "Gán cho {n} đã chọn",
+ "mat_mesh.mesh.assign_tip": "Kiểu Thực tế hiển thị kết cấu bề mặt của vật liệu này trên các lưới đã chọn",
+ "mat_mesh.mesh.assign_cat": "Gán cho loại {category}",
+ "mat_mesh.mesh.assign_cat_tip": "Mọi lưới đã nhập thuộc loại đó mà chưa có vật liệu riêng",
+ "mat_mesh.mesh.clear": "Xóa lưới đã chọn",
+ "mat_mesh.mesh.clear_tip": "Các lưới đã chọn trở về vật liệu của loại hoặc màu thường",
+ "mat_mesh.mesh.clear_cat": "Xóa loại"
+}

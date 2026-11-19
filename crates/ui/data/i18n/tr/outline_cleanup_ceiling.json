@@ -1,0 +1,11 @@
+{
+ "cmd.ctx.ceiling.clean_outline": "Konturu temizle",
+ "cmd.ctx.ceiling.clean_outline.desc": "Tavan konturunun kendi üzerine döndüğü dar uçları kaldırır. Önce önizleme gösterir; tek geri alma adımı.",
+ "cmd.ctx.shaft.clean_outline": "Konturu temizle",
+ "cmd.ctx.shaft.clean_outline.desc": "Boşluk (şaft) konturunun kendi üzerine döndüğü dar uçları kaldırır. Önce önizleme gösterir; tek geri alma adımı.",
+ "outline_cleanup.intro_ceiling": "Bu tavanın konturu dar uçlar oluşturarak kendi üzerine dönüyor: {n}. Temizleme bunları kaldırır; diğer her şey olduğu gibi kalır.",
+ "outline_cleanup.intro_shaft": "Bu boşluğun (şaft) konturu dar uçlar oluşturarak kendi üzerine dönüyor: {n}. Temizleme bunları kaldırır; diğer her şey olduğu gibi kalır.",
+ "outline_cleanup.none_ceiling": "Bu tavanın konturunda uç yok",
+ "outline_cleanup.none_shaft": "Bu boşluğun konturunda uç yok",
+ "outline_cleanup.need_host": "Bir kat, tavan veya boşluk seçin"
+}

@@ -1,0 +1,7 @@
+{
+ "messages.title": "Messages",
+ "messages.desc": "History of notices. No new warnings or errors.",
+ "messages.desc_new": "{n} new warnings or errors. Click to read them.",
+ "messages.copy": "Copy all",
+ "messages.clear": "Clear all"
+}

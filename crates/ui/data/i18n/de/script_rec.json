@@ -1,0 +1,8 @@
+{
+ "script_rec.started": "Aufnahme: Ihre ab jetzt vorgenommenen Änderungen werden in ein Skript aufgenommen. Wählen Sie „Aktionen in Skript aufnehmen“ erneut, um zu beenden.",
+ "script_rec.saved": "Skript „{name}“ gespeichert: Änderungen — {n}.",
+ "script_rec.skipped": "Änderungen durch Werkzeuge ohne Skriptform wurden nicht aufgenommen: {k}.",
+ "script_rec.nothing": "Aufnahme beendet: keine Änderungen zum Speichern.",
+ "script_rec.failed": "Die Aufnahme wurde nicht gespeichert: {why}",
+ "script_rec.no_folder": "kein Einstellungsordner für Skripte"
+}

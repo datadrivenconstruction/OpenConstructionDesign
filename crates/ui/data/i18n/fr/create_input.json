@@ -1,0 +1,14 @@
+{
+ "cmd.mod.divide": "Diviser",
+ "cmd.mod.divide.short": "Diviser",
+ "cmd.mod.divide.desc": "Divise un mur en parties égales en une seule étape. Saisissez le nombre de parties, puis cliquez sur le mur.",
+ "whereis.mod.divide": "diviser, parties égales, découper, segmenter mur",
+ "hint.split.parts": "Diviser : cliquez sur un mur · nombre — parties (2–100) · Échap — annuler",
+ "create_input.divide.bad_parts": "«{text}» n'est pas un nombre de parties : saisissez un nombre entier de 2 à {max}",
+ "create_input.ws.err.empty": "Saisissez un nom pour la disposition",
+ "create_input.ws.err.long": "Le nom est trop long : 40 caractères au maximum",
+ "create_input.ws.err.preset": "Ce nom correspond à une disposition intégrée",
+ "create_input.ws.err.full": "24 dispositions enregistrées au maximum : supprimez-en une d'abord",
+ "create_input.seldim.locked": "Distance {v} verrouillée",
+ "create_input.seldim.positive": "La distance doit être supérieure à zéro"
+}

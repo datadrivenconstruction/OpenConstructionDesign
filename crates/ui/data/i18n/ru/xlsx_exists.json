@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "Такая книга уже есть",
+ "xlsx_exists.foreign": "Это не книга этого проекта, поэтому её не заменяют.",
+ "xlsx_exists.pending": "В ней {n} правок, ещё не применённых к модели.",
+ "xlsx_exists.outside": "В ней {n} строк, которых нет в новой выгрузке.",
+ "xlsx_exists.new_name": "Выгрузить в {name}",
+ "xlsx_exists.apply_first": "Сначала применить",
+ "xlsx_exists.replace": "Заменить (старая книга в _archive)",
+ "xlsx_exists.archived": "Старая книга перенесена в {path}",
+ "xlsx_exists.archive_failed": "Старую книгу не удалось перенести, выгрузка не выполнена: {error}"
+}

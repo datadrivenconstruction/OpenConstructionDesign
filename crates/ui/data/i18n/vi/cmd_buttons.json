@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}, trên cao độ",
+ "cmd_buttons.purge.undo": "Xóa là một bước hoàn tác.",
+ "cmd_buttons.unpin.none": "Không có cấu kiện nào được chọn đang ghim",
+ "cmd_buttons.change_type.none": "Chọn tường trước: loại của chúng đổi trong một bước",
+ "cmd_buttons.units.metric": "Đơn vị: mét",
+ "cmd_buttons.units.imperial": "Đơn vị: foot và inch",
+ "cmd_buttons.units.back": "Chuyển lại",
+ "cmd_buttons.underlay.on": "Lớp nền đang bật: cao độ bên dưới được hiển thị mờ",
+ "cmd_buttons.underlay.off": "Lớp nền đã tắt",
+ "cmd_buttons.underlay.none": "Lớp nền đang bật, nhưng cao độ bên dưới không có gì để hiển thị",
+ "cmd_buttons.zoom_sel.no_shape": "Vùng chọn không có hình dạng để khung trong góc nhìn này",
+ "cmd_buttons.close.base": "Các tab mặt bằng và 3D vẫn mở; mở mặt cắt, bản vẽ hoặc góc nhìn chi tiết để đóng nó",
+ "tool.equipment": "Thiết bị",
+ "hint.equipment.place": "Thiết bị: chọn vị trí · Esc để thoát",
+ "cmd_buttons.table.opened": "Đã mở bảng bên cạnh mô hình",
+ "cmd_buttons.circuits.tip": "Mở danh sách mạch điện của mô hình này"
+}

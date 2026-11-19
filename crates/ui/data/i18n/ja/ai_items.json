@@ -1,0 +1,16 @@
+{
+ "ai.items.all": {
+  "one": "プランの # 項目をすべて",
+  "other": "プランの # 項目をすべて"
+ },
+ "ai.items.all.tip": "プランのすべての項目をチェックまたはチェック解除",
+ "ai.items.checked": "{n} / {m} をチェック済み",
+ "ai.items.check.tip": "「{title}」を適用に含める",
+ "ai.items.expand": "要素を表示",
+ "ai.items.collapse": "要素を隠す",
+ "ai.items.apply": {
+  "one": "# 項目を適用",
+  "other": "# 項目を適用"
+ },
+ "ai.items.apply_none": "適用"
+}

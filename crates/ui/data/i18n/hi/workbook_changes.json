@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "वर्कबुक के बदलाव लागू नहीं हुए",
+ "workbook_changes.wb.body": "बंद करने या प्रोजेक्ट बदलने पर ये हट जाते हैं।",
+ "workbook_changes.wb.line": "वर्कबुक आयात: {n} बदलाव लागू नहीं हुए",
+ "workbook_changes.wb.review": "समीक्षा करें",
+ "workbook_changes.wb.discard": "छोड़ें"
+}

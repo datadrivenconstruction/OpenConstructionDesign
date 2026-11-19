@@ -1,0 +1,42 @@
+{
+ "ai.tool.show_elements": "Elemente werden angezeigt",
+ "ai.tool.isolate_elements": "Elemente werden isoliert",
+ "ai.tool.color_by": "Färbung nach Wert",
+ "ai.tool.reset_view": "Ansicht wird zurückgesetzt",
+ "ai_found.found.query": "Gefunden",
+ "ai_found.found.show": "Angezeigt",
+ "ai_found.found.isolate": "Isoliert",
+ "ai_found.found.hide": "Ausgeblendet",
+ "ai_found.found.color": "Gefärbt",
+ "ai_found.found.count": "{n} von {m}",
+ "ai_found.found.none": "Keine Treffer. Filter erweitern.",
+ "ai_found.found.show_btn": "Anzeigen",
+ "ai_found.found.show_tip": "Diese Elemente auswählen und im Grundriss und 3D heranzoomen",
+ "ai_found.found.isolate_btn": "Isolieren",
+ "ai_found.found.isolate_tip": "Nur diese Elemente anzeigen, bis die Ansicht zurückgesetzt wird",
+ "ai_found.found.select_btn": "Auswählen",
+ "ai_found.found.select_tip": "Diese Elemente auswählen, ohne die Ansicht zu verschieben",
+ "ai_found.legend.title": "Färben nach {by}",
+ "ai_found.legend.row_tip": "Klicken, um diese Elemente auszuwählen",
+ "ai_found.legend.empty_value": "Kein Wert",
+ "ai_found.legend.other": {
+  "one": "# weiterer Wert",
+  "other": "# weitere Werte"
+ },
+ "ai_found.view.title": "Ansicht des KI-Assistenten",
+ "ai_found.view.reset": "Ansicht zurücksetzen",
+ "ai_found.view.reset_tip": "Ansicht von vor der Änderung durch den KI-Assistenten wiederherstellen",
+ "ai_found.view.shown": {
+  "one": "# Element angezeigt",
+  "other": "# Elemente angezeigt"
+ },
+ "ai_found.view.isolated": {
+  "one": "# Element isoliert",
+  "other": "# Elemente isoliert"
+ },
+ "ai_found.view.hidden": {
+  "one": "# Element ausgeblendet",
+  "other": "# Elemente ausgeblendet"
+ },
+ "ai_found.found.line": "{what}: {count}"
+}

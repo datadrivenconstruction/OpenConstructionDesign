@@ -1,0 +1,33 @@
+{
+ "cmd.help.licenses": "Licenze open source",
+ "cmd.help.licenses.desc": "Elenca le librerie open source usate da questa build con le relative licenze.",
+ "about.product": "DDC Editor",
+ "about.version": "Versione",
+ "about.build": "Build",
+ "about.schema": "Schema del modello",
+ "about.system": "Sistema",
+ "about.gpu": "Scheda grafica",
+ "about.language": "Lingua",
+ "about.copy": "Copia informazioni sulla versione",
+ "about.copy_desc": "Versione, build, sistema e scheda grafica per una segnalazione di errore. Nessun percorso di file.",
+ "about.copied": "Informazioni sulla versione copiate",
+ "about.licenses": "Licenze open source",
+ "about.licenses_desc": "Librerie usate in questa build e relative licenze",
+ "about.licenses.open": "Visualizza",
+ "about.licenses.title": "Licenze open source",
+ "about.licenses.note": "DDC Editor include le librerie sotto. Ciascuna resta soggetta alla propria licenza e al proprio avviso di copyright. Testi completi delle licenze: THIRD_PARTY_LICENSES.txt accanto all'applicazione.",
+ "about.licenses.full": "Testi completi delle licenze",
+ "about.licenses.list": "Elenco componenti",
+ "about.licenses.close": "Chiudi",
+ "about.licenses.col_name": "Componente",
+ "about.licenses.col_license": "Licenza",
+ "about.licenses.count": {
+  "one": "# componente",
+  "other": "# componenti"
+ },
+ "about.licenses.count_of": "{shown} di {total} componenti",
+ "about.licenses.search_hint": "Cerca per nome o licenza…",
+ "about.licenses.search_clear": "Cancella ricerca",
+ "about.licenses.none": "Nessun risultato",
+ "about.licenses.none_hint": "Prova una parte del nome di una libreria o una licenza come MIT."
+}

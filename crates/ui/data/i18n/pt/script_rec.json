@@ -1,0 +1,8 @@
+{
+ "script_rec.started": "A gravar: as alterações que fizer a partir de agora irão para um script. Para parar, escolha novamente «Gravar ações no script».",
+ "script_rec.saved": "Script «{name}» guardado: {n} alterações.",
+ "script_rec.skipped": "Alterações feitas por ferramentas sem formulário de script não foram gravadas: {k}.",
+ "script_rec.nothing": "Gravação parada: não há alterações para guardar.",
+ "script_rec.failed": "A gravação não foi guardada: {why}",
+ "script_rec.no_folder": "não existe pasta de definições para scripts"
+}

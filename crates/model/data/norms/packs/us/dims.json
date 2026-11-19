@@ -1,0 +1,536 @@
+{
+ "items": [
+  {
+   "key": "door.clear_min",
+   "value": 0.813,
+   "unit": "m",
+   "source": "ibc2021",
+   "clause": "1010.1.1 clear width of egress door",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: codes.iccsafe.org (HTTP 403 to automated fetch; browser tool unavailable), web search for state-hosted text; only secondary summaries found, not read in primary text; secondary summaries agree on 32 in (813 mm) clear width"
+  },
+  {
+   "key": "door.clear_min.accessible",
+   "value": 0.813,
+   "unit": "m",
+   "source": "ada-2010",
+   "clause": "404.2.3 clear width of door openings, 32 in",
+   "verified": true,
+   "note": "read 2026-11-13: ada.gov/assets/pdfs/2010-design-standards.pdf; value also in ICC A117.1"
+  },
+  {
+   "key": "accessible.turning_circle",
+   "value": 1.524,
+   "unit": "m",
+   "source": "ada-2010",
+   "clause": "304.3.1 circular turning space, 60 in",
+   "verified": true,
+   "note": "read 2026-11-13: ada.gov/assets/pdfs/2010-design-standards.pdf; value also in ICC A117.1"
+  },
+  {
+   "key": "ramp.slope_max",
+   "value": 0.0833,
+   "unit": "ratio",
+   "source": "ada-2010",
+   "clause": "405.2 ramp running slope not steeper than 1:12",
+   "verified": true,
+   "note": "read 2026-11-13: ada.gov/assets/pdfs/2010-design-standards.pdf; value also in ICC A117.1"
+  },
+  {
+   "key": "ramp.width_min",
+   "value": 0.914,
+   "unit": "m",
+   "source": "ada-2010",
+   "clause": "405.5 clear width of ramp run, 36 in",
+   "verified": true,
+   "note": "read 2026-11-13: ada.gov/assets/pdfs/2010-design-standards.pdf; value also in ICC A117.1"
+  },
+  {
+   "key": "room.height_min",
+   "value": 2.134,
+   "unit": "m",
+   "source": "irc2021",
+   "clause": "R305.1",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: codes.iccsafe.org (HTTP 403 to automated fetch; browser tool unavailable), web search for state-hosted text; only secondary summaries found, not read in primary text; secondary summaries agree on 7 ft (2.134 m) habitable ceiling for R305.1"
+  },
+  {
+   "key": "egress.travel_max",
+   "value": 91.44,
+   "unit": "m",
+   "source": "ibc2021",
+   "clause": "Table 1017.2 group B, sprinklered",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: codes.iccsafe.org (HTTP 403 to automated fetch; browser tool unavailable), web search for state-hosted text; only secondary summaries found, not read in primary text"
+  },
+  {
+   "key": "building.high_rise_height",
+   "value": 22.86,
+   "unit": "m",
+   "source": "ibc2021",
+   "clause": "202 definition of high-rise (75 ft)",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: codes.iccsafe.org (HTTP 403 to automated fetch; browser tool unavailable), web search for state-hosted text; only secondary summaries found, not read in primary text"
+  },
+  {
+   "key": "daylight.window_floor_ratio",
+   "value": 0.08,
+   "unit": "ratio",
+   "source": "ibc2021",
+   "clause": "1204.2, glazing of 8 % of the room floor",
+   "verified": true,
+   "note": "read 2026-11-14: up.codes/viewer/virginia/ibc-2021/chapter/12/interior-environment (IBC 2021 as adopted by Virginia); codes.iccsafe.org refused the fetcher"
+  },
+  {
+   "key": "corridor.width_min.accessible",
+   "value": 0.915,
+   "unit": "m",
+   "source": "ada-2010",
+   "clause": "403.5.1, walking surfaces 915 mm (36 in) wide",
+   "verified": true,
+   "note": "read 2026-11-14: ada.gov/assets/pdfs/2010-design-standards.pdf"
+  },
+  {
+   "key": "fire.compartment_area_max",
+   "value": 2137,
+   "unit": "m2",
+   "source": "ibc2021",
+   "clause": "table 506.2, business, type II-B, unsprinklered: 23,000 sq ft per storey",
+   "verified": true,
+   "note": "read 2026-11-14: up.codes/viewer/virginia/ibc-2021/chapter/5/general-building-heights-and-areas (IBC 2021 as adopted by Virginia; same row on a California copy); was 1115 m2, the 903.2 sprinkler trigger, not an area limit; type II-A 37,500, sprinklered S1 92,000 sq ft"
+  },
+  {
+   "key": "climate.heating_design_temp",
+   "value": -18.0,
+   "unit": "C",
+   "source": "us-design-baseline",
+   "clause": "dims, heating design temperature where the jurisdiction states none",
+   "url": "https://codes.iccsafe.org/content/IRC2021P2",
+   "accessed": "2026-11-15",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-15: IRC 2021 table R301.2 leaves the winter design temperature to the jurisdiction; editor default for a cold northern site (0 F)"
+  },
+  {
+   "key": "climate.cooling_design_temp",
+   "value": 35.0,
+   "unit": "C",
+   "source": "us-design-baseline",
+   "clause": "dims, cooling design temperature where the jurisdiction states none",
+   "url": "https://codes.iccsafe.org/content/IMC2021P2",
+   "accessed": "2026-11-15",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-15: no national document sets it; editor default (95 F)"
+  },
+  {
+   "key": "ventilation.oa_per_person",
+   "value": 8.5,
+   "unit": "m3/h",
+   "source": "imc2021",
+   "clause": "table 403.3.1.1, office space, people outdoor airflow rate",
+   "orig": {
+    "value": 5,
+    "unit": "cfm"
+   },
+   "url": "https://codes.iccsafe.org/content/IMC2021P2",
+   "accessed": "2026-11-15",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-15: codes.iccsafe.org refuses automated fetch; secondary summaries agree on 5 cfm per person for office space"
+  },
+  {
+   "key": "ventilation.oa_per_area",
+   "value": 1.1,
+   "unit": "m3/h m2",
+   "source": "imc2021",
+   "clause": "table 403.3.1.1, office space, area outdoor airflow rate",
+   "orig": {
+    "value": 0.06,
+    "unit": "cfm/ft2"
+   },
+   "url": "https://codes.iccsafe.org/content/IMC2021P2",
+   "accessed": "2026-11-15",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-15: codes.iccsafe.org refuses automated fetch; secondary summaries agree on 0.06 cfm per ft2 for office space"
+  },
+  {
+   "key": "egress.occupant_area.office",
+   "value": 13.94,
+   "unit": "m2",
+   "source": "ibc2021",
+   "clause": "Table 1004.5, business areas",
+   "verified": true,
+   "url": "https://up.codes/viewer/virginia/ibc-2021/chapter/10/means-of-egress",
+   "accessed": "2026-11-14",
+   "paraphrase": "Floor area allowed per occupant for this use when computing occupant load.",
+   "note": "read 2026-11-14: up.codes Virginia VCC 2021 (IBC 2021 text); gross ",
+   "orig": {
+    "value": 150,
+    "unit": "ft2"
+   }
+  },
+  {
+   "key": "egress.occupant_area.assembly",
+   "value": 1.39,
+   "unit": "m2",
+   "source": "ibc2021",
+   "clause": "Table 1004.5, assembly unconcentrated (tables and chairs)",
+   "verified": true,
+   "url": "https://up.codes/viewer/virginia/ibc-2021/chapter/10/means-of-egress",
+   "accessed": "2026-11-14",
+   "paraphrase": "Floor area allowed per occupant for this use when computing occupant load.",
+   "note": "read 2026-11-14: up.codes Virginia VCC 2021 (IBC 2021 text); net ",
+   "orig": {
+    "value": 15,
+    "unit": "ft2"
+   }
+  },
+  {
+   "key": "egress.occupant_area.classroom",
+   "value": 1.86,
+   "unit": "m2",
+   "source": "ibc2021",
+   "clause": "Table 1004.5, educational classroom area",
+   "verified": true,
+   "url": "https://up.codes/viewer/virginia/ibc-2021/chapter/10/means-of-egress",
+   "accessed": "2026-11-14",
+   "paraphrase": "Floor area allowed per occupant for this use when computing occupant load.",
+   "note": "read 2026-11-14: up.codes Virginia VCC 2021 (IBC 2021 text); net ",
+   "orig": {
+    "value": 20,
+    "unit": "ft2"
+   }
+  },
+  {
+   "key": "egress.occupant_area.retail",
+   "value": 5.57,
+   "unit": "m2",
+   "source": "ibc2021",
+   "clause": "Table 1004.5, mercantile",
+   "verified": true,
+   "url": "https://up.codes/viewer/virginia/ibc-2021/chapter/10/means-of-egress",
+   "accessed": "2026-11-14",
+   "paraphrase": "Floor area allowed per occupant for this use when computing occupant load.",
+   "note": "read 2026-11-14: up.codes Virginia VCC 2021 (IBC 2021 text); gross ",
+   "orig": {
+    "value": 60,
+    "unit": "ft2"
+   }
+  },
+  {
+   "key": "egress.occupant_area.residential",
+   "value": 18.58,
+   "unit": "m2",
+   "source": "ibc2021",
+   "clause": "Table 1004.5, residential",
+   "verified": true,
+   "url": "https://up.codes/viewer/virginia/ibc-2021/chapter/10/means-of-egress",
+   "accessed": "2026-11-14",
+   "paraphrase": "Floor area allowed per occupant for this use when computing occupant load.",
+   "note": "read 2026-11-14: up.codes Virginia VCC 2021 (IBC 2021 text); gross ",
+   "orig": {
+    "value": 200,
+    "unit": "ft2"
+   }
+  },
+  {
+   "key": "egress.occupant_area.ward",
+   "value": 22.3,
+   "unit": "m2",
+   "source": "ibc2021",
+   "clause": "Table 1004.5, institutional inpatient treatment areas",
+   "verified": true,
+   "url": "https://up.codes/viewer/virginia/ibc-2021/chapter/10/means-of-egress",
+   "accessed": "2026-11-14",
+   "paraphrase": "Floor area allowed per occupant for this use when computing occupant load.",
+   "note": "read 2026-11-14: up.codes Virginia VCC 2021 (IBC 2021 text); gross (sleeping areas row is 120 ft2 = 11.15 m2 gross)",
+   "orig": {
+    "value": 240,
+    "unit": "ft2"
+   }
+  },
+  {
+   "key": "egress.occupant_area.industrial",
+   "value": 9.29,
+   "unit": "m2",
+   "source": "ibc2021",
+   "clause": "Table 1004.5, industrial areas",
+   "verified": true,
+   "url": "https://up.codes/viewer/virginia/ibc-2021/chapter/10/means-of-egress",
+   "accessed": "2026-11-14",
+   "paraphrase": "Floor area allowed per occupant for this use when computing occupant load.",
+   "note": "read 2026-11-14: up.codes Virginia VCC 2021 (IBC 2021 text); gross ",
+   "orig": {
+    "value": 100,
+    "unit": "ft2"
+   }
+  },
+  {
+   "key": "egress.occupant_area.storage",
+   "value": 27.87,
+   "unit": "m2",
+   "source": "ibc2021",
+   "clause": "Table 1004.5, storage, stock, shipping areas",
+   "verified": true,
+   "url": "https://up.codes/viewer/virginia/ibc-2021/chapter/10/means-of-egress",
+   "accessed": "2026-11-14",
+   "paraphrase": "Floor area allowed per occupant for this use when computing occupant load.",
+   "note": "read 2026-11-14: up.codes Virginia VCC 2021 (IBC 2021 text); gross (warehouses row is 500 ft2 = 46.45 m2)",
+   "orig": {
+    "value": 300,
+    "unit": "ft2"
+   }
+  },
+  {
+   "key": "egress.occupant_area.exercise",
+   "value": 4.65,
+   "unit": "m2",
+   "source": "ibc2021",
+   "clause": "Table 1004.5, exercise rooms",
+   "verified": true,
+   "url": "https://up.codes/viewer/virginia/ibc-2021/chapter/10/means-of-egress",
+   "accessed": "2026-11-14",
+   "paraphrase": "Floor area allowed per occupant for this use when computing occupant load.",
+   "note": "read 2026-11-14: up.codes Virginia VCC 2021 (IBC 2021 text); gross ",
+   "orig": {
+    "value": 50,
+    "unit": "ft2"
+   }
+  },
+  {
+   "key": "egress.single_exit_occupants_max",
+   "value": 50,
+   "unit": "count",
+   "source": "ibc2021",
+   "clause": "Table 1006.3.4(2), Group B first story",
+   "verified": true,
+   "url": "https://up.codes/viewer/virginia/ibc-2021/chapter/10/means-of-egress",
+   "accessed": "2026-11-14",
+   "paraphrase": "A first-storey business space may have one exit up to this many occupants (29 on the second storey, none higher).",
+   "note": "read 2026-11-14: up.codes Virginia VCC 2021 (IBC 2021 text); unsprinklered base; travel distance 75 ft (sprinklered 100 ft)"
+  },
+  {
+   "key": "egress.three_exits_occupants",
+   "value": 500,
+   "unit": "count",
+   "source": "ibc2021",
+   "clause": "Table 1006.3.3, 501-1,000 occupants",
+   "verified": true,
+   "url": "https://up.codes/viewer/virginia/ibc-2021/chapter/10/means-of-egress",
+   "accessed": "2026-11-14",
+   "paraphrase": "Three exits are needed once a storey's occupant load exceeds 500.",
+   "note": "read 2026-11-14: up.codes Virginia VCC 2021 (IBC 2021 text); threshold is 'above 500'"
+  },
+  {
+   "key": "egress.four_exits_occupants",
+   "value": 1000,
+   "unit": "count",
+   "source": "ibc2021",
+   "clause": "Table 1006.3.3, more than 1,000 occupants",
+   "verified": true,
+   "url": "https://up.codes/viewer/virginia/ibc-2021/chapter/10/means-of-egress",
+   "accessed": "2026-11-14",
+   "paraphrase": "Four exits are needed once a storey's occupant load exceeds 1000.",
+   "note": "read 2026-11-14: up.codes Virginia VCC 2021 (IBC 2021 text); threshold is 'above 1000'"
+  },
+  {
+   "key": "egress.door_width_per_person",
+   "value": 0.0051,
+   "unit": "m",
+   "source": "ibc2021",
+   "clause": "1005.3.2 other egress components",
+   "verified": true,
+   "url": "https://up.codes/viewer/virginia/ibc-2021/chapter/10/means-of-egress",
+   "accessed": "2026-11-14",
+   "paraphrase": "Capacity factor for doors and level components is 0.2 in per occupant.",
+   "note": "read 2026-11-14: up.codes Virginia VCC 2021 (IBC 2021 text); unsprinklered base 0.2 in; sprinklered (not H, I-2) 0.15 in = 0.0038 m",
+   "orig": {
+    "value": 0.2,
+    "unit": "in"
+   }
+  },
+  {
+   "key": "egress.stair_width_per_person",
+   "value": 0.0076,
+   "unit": "m",
+   "source": "ibc2021",
+   "clause": "1005.3.1 stairways",
+   "verified": true,
+   "url": "https://up.codes/viewer/virginia/ibc-2021/chapter/10/means-of-egress",
+   "accessed": "2026-11-14",
+   "paraphrase": "Capacity factor for stairways is 0.3 in per occupant.",
+   "note": "read 2026-11-14: up.codes Virginia VCC 2021 (IBC 2021 text); unsprinklered base 0.3 in; sprinklered (not H, I-2) 0.2 in = 0.0051 m",
+   "orig": {
+    "value": 0.3,
+    "unit": "in"
+   }
+  },
+  {
+   "key": "egress.exit_width_min",
+   "value": 0.813,
+   "unit": "m",
+   "source": "ibc2021",
+   "clause": "1010.1.1 size of doors",
+   "verified": true,
+   "url": "https://up.codes/viewer/virginia/ibc-2021/chapter/10/means-of-egress",
+   "accessed": "2026-11-14",
+   "paraphrase": "Egress doors need at least 32 in clear opening width.",
+   "note": "read 2026-11-14: up.codes Virginia VCC 2021 (IBC 2021 text); measured door face to stop at 90 degrees; 80 in clear height",
+   "orig": {
+    "value": 32,
+    "unit": "in"
+   }
+  },
+  {
+   "key": "egress.dead_end_max",
+   "value": 6.096,
+   "unit": "m",
+   "source": "ibc2021",
+   "clause": "1020.5 dead ends",
+   "verified": true,
+   "url": "https://up.codes/viewer/virginia/ibc-2021/chapter/10/means-of-egress",
+   "accessed": "2026-11-14",
+   "paraphrase": "Dead-end corridors may not exceed 20 ft where more than one exit is required.",
+   "note": "read 2026-11-14: up.codes Virginia VCC 2021 (IBC 2021 text); unsprinklered base; 50 ft (15.24 m) for B, R-1, R-2 etc. with 903.3.1.1 sprinklers",
+   "orig": {
+    "value": 20,
+    "unit": "ft"
+   }
+  },
+  {
+   "key": "egress.exit_separation_ratio",
+   "value": 0.5,
+   "unit": "ratio",
+   "source": "ibc2021",
+   "clause": "1007.1.1 two exits or exit access doorways",
+   "verified": true,
+   "url": "https://up.codes/viewer/virginia/ibc-2021/chapter/10/means-of-egress",
+   "accessed": "2026-11-14",
+   "paraphrase": "Two exits must be at least half the maximum overall diagonal of the served area apart.",
+   "note": "read 2026-11-14: up.codes Virginia VCC 2021 (IBC 2021 text); unsprinklered base; the sprinkler exception on this mirror reads one-fourth (Virginia text; model-code figure may differ, check before use)"
+  },
+  {
+   "key": "fire.compartment_wall_rating",
+   "value": 120,
+   "unit": "min",
+   "source": "ibc2021",
+   "clause": "Table 707.3.10, groups A, B, ... R: 2 h",
+   "verified": true,
+   "url": "https://up.codes/viewer/virginia/ibc-2021/chapter/7/fire-and-smoke-protection-features",
+   "accessed": "2026-11-14",
+   "paraphrase": "Fire barriers separating fire areas of a business occupancy need a 2-hour rating.",
+   "note": "read 2026-11-14: up.codes Virginia VCC 2021 (IBC 2021 text); also 708.3: fire partitions (tenant/dwelling separations) 1 h = 60 min"
+  },
+  {
+   "key": "fire.stair_enclosure_rating",
+   "value": 60,
+   "unit": "min",
+   "source": "ibc2021",
+   "clause": "1023.2 interior exit stairways",
+   "verified": true,
+   "url": "https://up.codes/viewer/virginia/ibc-2021/chapter/10/means-of-egress",
+   "accessed": "2026-11-14",
+   "paraphrase": "Stair enclosures connecting fewer than four storeys need a 1-hour rating.",
+   "note": "read 2026-11-14: up.codes Virginia VCC 2021 (IBC 2021 text); basements count, mezzanines do not"
+  },
+  {
+   "key": "fire.stair_enclosure_rating_tall",
+   "value": 120,
+   "unit": "min",
+   "source": "ibc2021",
+   "clause": "1023.2 interior exit stairways",
+   "verified": true,
+   "url": "https://up.codes/viewer/virginia/ibc-2021/chapter/10/means-of-egress",
+   "accessed": "2026-11-14",
+   "paraphrase": "Stair enclosures connecting four or more storeys need a 2-hour rating.",
+   "note": "read 2026-11-14: up.codes Virginia VCC 2021 (IBC 2021 text); basements count, mezzanines do not"
+  },
+  {
+   "key": "fire.stair_tall_storeys",
+   "value": 4,
+   "unit": "count",
+   "source": "ibc2021",
+   "clause": "1023.2 interior exit stairways",
+   "verified": true,
+   "url": "https://up.codes/viewer/virginia/ibc-2021/chapter/10/means-of-egress",
+   "accessed": "2026-11-14",
+   "paraphrase": "The 2-hour stair enclosure rating applies from four connected storeys.",
+   "note": "read 2026-11-14: up.codes Virginia VCC 2021 (IBC 2021 text); storeys connected by the stair"
+  },
+  {
+   "key": "corridor.width_min",
+   "value": 1.118,
+   "unit": "m",
+   "orig": {
+    "value": 44,
+    "unit": "in"
+   },
+   "source": "ibc2021",
+   "clause": "1020.2 table, corridor width 44 in in general (36 in below 50 occupants)",
+   "verified": false,
+   "url": "https://up.codes/viewer/virginia/ibc-2021",
+   "accessed": "2026-11-15",
+   "paraphrase": "A corridor is at least 44 in wide, 36 in where fewer than 50 people use it.",
+   "note": "to_verify: number from the published model code as known to the editor; clause not opened in this pass (publisher site refuses automated fetch), adopted editions differ by state"
+  },
+  {
+   "key": "stair.riser_max",
+   "value": 0.1778,
+   "unit": "m",
+   "orig": {
+    "value": 7,
+    "unit": "in"
+   },
+   "source": "ibc2021",
+   "clause": "1011.5.2 riser height at most 7 in (one- and two-family dwellings 7.75 in under the residential code)",
+   "verified": false,
+   "url": "https://up.codes/viewer/virginia/ibc-2021",
+   "accessed": "2026-11-15",
+   "paraphrase": "A stair riser in a building under the building code is at most 7 in.",
+   "note": "to_verify: number from the published model code as known to the editor; clause not opened in this pass (publisher site refuses automated fetch), adopted editions differ by state"
+  },
+  {
+   "key": "stair.going_min",
+   "value": 0.2794,
+   "unit": "m",
+   "orig": {
+    "value": 11,
+    "unit": "in"
+   },
+   "source": "ibc2021",
+   "clause": "1011.5.2 tread depth at least 11 in (one- and two-family dwellings 10 in under the residential code)",
+   "verified": false,
+   "url": "https://up.codes/viewer/virginia/ibc-2021",
+   "accessed": "2026-11-15",
+   "paraphrase": "A stair tread under the building code is at least 11 in deep.",
+   "note": "to_verify: number from the published model code as known to the editor; clause not opened in this pass (publisher site refuses automated fetch), adopted editions differ by state"
+  },
+  {
+   "key": "guard.height_min",
+   "value": 1.067,
+   "unit": "m",
+   "orig": {
+    "value": 42,
+    "unit": "in"
+   },
+   "source": "ibc2021",
+   "clause": "1015.3 guard height at least 42 in (36 in inside a dwelling unit under the residential code)",
+   "verified": false,
+   "url": "https://up.codes/viewer/virginia/ibc-2021",
+   "accessed": "2026-11-15",
+   "paraphrase": "A guard at an open edge is at least 42 in high.",
+   "note": "to_verify: number from the published model code as known to the editor; clause not opened in this pass (publisher site refuses automated fetch), adopted editions differ by state"
+  },
+  {
+   "key": "building.class5_height",
+   "na": true,
+   "value": null,
+   "unit": "m",
+   "source": "ibc2021",
+   "verified": false,
+   "note": "na: the code groups buildings by construction type and occupancy with height tables (chapter 5), not by a height class; high-rise is building.high_rise_height",
+   "text": {
+    "en": "No building height class: height limits come from construction type and occupancy tables.",
+    "ru": "Нет класса здания по высоте: пределы высоты задают таблицы по типу конструкции и классу функциональной опасности."
+   }
+  }
+ ]
+}

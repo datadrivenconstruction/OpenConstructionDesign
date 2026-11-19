@@ -1,0 +1,18 @@
+data: {"id":"c2","choices":[{"index":0,"delta":{"role":"assistant","content":"Ищу."},"finish_reason":null}]}
+
+data: {"id":"c2","choices":[{"index":0,"delta":{"tool_calls":[{"index":0,"id":"call_a","type":"function","function":{"name":"query_elements","arguments":""}}]},"finish_reason":null}]}
+
+data: {"id":"c2","choices":[{"index":0,"delta":{"tool_calls":[{"index":0,"function":{"arguments":"{\"filter\":"}}]},"finish_reason":null}]}
+
+data: {"id":"c2","choices":[{"index":0,"delta":{"tool_calls":[{"index":0,"function":{"arguments":"\"дверь level=3\"}"}}]},"finish_reason":null}]}
+
+data: {"id":"c2","choices":[{"index":0,"delta":{"tool_calls":[{"index":1,"id":"call_b","type":"function","function":{"name":"get_element","arguments":""}}]},"finish_reason":null}]}
+
+data: {"id":"c2","choices":[{"index":0,"delta":{"tool_calls":[{"index":1,"function":{"arguments":"{\"ref\":\"door:55\"}"}}]},"finish_reason":null}]}
+
+data: {"id":"c2","choices":[{"index":0,"delta":{},"finish_reason":"tool_calls"}]}
+
+data: {"id":"c2","choices":[],"usage":{"prompt_tokens":200,"completion_tokens":31,"total_tokens":231}}
+
+data: [DONE]
+

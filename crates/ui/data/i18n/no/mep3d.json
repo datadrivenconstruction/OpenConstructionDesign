@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "Kanal",
+ "mep3d.pipe": "Rør",
+ "mep3d.tray": "Kabelbro",
+ "mep3d.conduit": "Rør",
+ "mep3d.system": "System",
+ "mep3d.length": "Lengde",
+ "mep3d.diameter": "Diameter",
+ "mep3d.width": "Bredde",
+ "mep3d.height": "Høyde",
+ "mep3d.insulation": "Isolasjon",
+ "mep3d.tip": "Enter – bruk; fittinger beregnes på nytt",
+ "mep3d.size_positive": "størrelsen må være større enn null",
+ "mep3d.not_changed": "ikke endret: {e}",
+ "mep3d.copied": "strekk kopiert",
+ "mep3d.changed": "strekk endret",
+ "mep3d.deleted": "elementer slettet: {n}",
+ "mep3d.not_deleted": "ikke slettet: {e}",
+ "mep3d.no_wall_type": "ingen vegg type",
+ "mep3d.demo.supply": "Tilluft S1",
+ "mep3d.demo.heating": "Varme",
+ "mep3d.demo.power": "Kraft"
+}

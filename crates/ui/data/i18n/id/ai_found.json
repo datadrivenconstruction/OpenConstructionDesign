@@ -1,0 +1,42 @@
+{
+ "ai.tool.show_elements": "Menampilkan elemen",
+ "ai.tool.isolate_elements": "Mengisolasi elemen",
+ "ai.tool.color_by": "Memberi warna menurut nilai",
+ "ai.tool.reset_view": "Mereset tampilan",
+ "ai_found.found.query": "Ditemukan",
+ "ai_found.found.show": "Ditampilkan",
+ "ai_found.found.isolate": "Diisolasi",
+ "ai_found.found.hide": "Disembunyikan",
+ "ai_found.found.color": "Diwarnai",
+ "ai_found.found.count": "{n} dari {m}",
+ "ai_found.found.none": "Tidak ada yang cocok. Coba filter yang lebih luas.",
+ "ai_found.found.show_btn": "Tampilkan",
+ "ai_found.found.show_tip": "Pilih elemen ini dan zoom ke elemen tersebut di denah dan 3D",
+ "ai_found.found.isolate_btn": "Isolasi",
+ "ai_found.found.isolate_tip": "Tampilkan hanya elemen ini sampai Reset tampilan",
+ "ai_found.found.select_btn": "Pilih",
+ "ai_found.found.select_tip": "Pilih elemen ini tanpa memindahkan tampilan",
+ "ai_found.legend.title": "Warna menurut {by}",
+ "ai_found.legend.row_tip": "Klik untuk memilih elemen ini",
+ "ai_found.legend.empty_value": "Tidak ada nilai",
+ "ai_found.legend.other": {
+  "one": "# nilai lainnya",
+  "other": "# nilai lainnya"
+ },
+ "ai_found.view.title": "Tampilan asisten AI",
+ "ai_found.view.reset": "Reset tampilan",
+ "ai_found.view.reset_tip": "Kembalikan tampilan dari sebelum asisten AI mengubahnya",
+ "ai_found.view.shown": {
+  "one": "# elemen ditampilkan",
+  "other": "# elemen ditampilkan"
+ },
+ "ai_found.view.isolated": {
+  "one": "# elemen diisolasi",
+  "other": "# elemen diisolasi"
+ },
+ "ai_found.view.hidden": {
+  "one": "# elemen disembunyikan",
+  "other": "# elemen disembunyikan"
+ },
+ "ai_found.found.line": "{what}: {count}"
+}

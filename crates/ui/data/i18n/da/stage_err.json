@@ -1,0 +1,10 @@
+{
+ "stage_err.kept": "tabel {t} beholdt: {n} rækker skrevet efter Tilføj",
+ "stage_err.stage.prev_attached": "Ikke tilføjet: kopien fra det forrige Tilføj er stadig åben. Kør Tilføj igen",
+ "stage_err.stage.model_changed": "Ikke tilføjet: modellen blev ændret, mens filen blev læst. Kør Tilføj igen",
+ "stage_err.stage.no_record": "Ikke tilføjet: den importerede kopi har ingen ændringsoptegnelse",
+ "stage_err.stage.table_differs": "Ikke tilføjet: tabel {t} er forskellig i modellen og den importerede kopi",
+ "stage_err.stage.unique_key": "Ikke tilføjet: en unik nøgle i tabel {t} kan ikke følges",
+ "stage_err.stage.table_gone": "Ikke tilføjet: importen ændrede tabel {t}, som kopien ikke længere har",
+ "stage_err.stage.copy_held": "Tilføjet; den importerede kopi forbliver åben, indtil næste Tilføj eller genåbning af modellen"
+}

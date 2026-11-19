@@ -1,0 +1,23 @@
+{
+ "roof_edge.err.number": "Voer een getal in",
+ "roof_edge.err.positive": "Moet groter zijn dan nul",
+ "roof_edge.err.nonneg": "Mag niet negatief zijn",
+ "roof_edge.err.max": "Mag {max} niet overschrijden",
+ "roof_edge.list.empty_hint": "Voeg lateien, goten, soffitten of dakramen toe met de dakopdrachten",
+ "roof_edge.edit_tip": "Eigenschappen bewerken",
+ "roof_edge.delete_tip": "Verwijderen",
+ "roof_edge.pe.del_tip": "Dit punt verwijderen (een doorsnede houdt er minstens 3)",
+ "roof_edge.pe.up_tip": "Dit punt omhoog verplaatsen",
+ "roof_edge.confirm_edge": "{name} verwijderen? Ctrl+Z brengt hem terug.",
+ "roof_edge.confirm_profile": "Profiel {name} verwijderen? Ctrl+Z brengt het terug.",
+ "roof_edge.deleted_one": "{name} verwijderd",
+ "roof_edge.deleted_n": {
+  "one": "# element verwijderd",
+  "other": "# elementen verwijderd"
+ },
+ "roof_edge.profile_deleted": "Profiel verwijderd",
+ "roof_edge.profile_in_use": {
+  "one": "Gebruikt door # randelement: verwijder of wijzig het eerst",
+  "other": "Gebruikt door # randelementen: verwijder of wijzig ze eerst"
+ }
+}

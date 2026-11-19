@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "আনডু হয়েছে — Ctrl+Y রিডু করে",
+ "history.hist.empty": "এখনো কোনো পরিবর্তন নেই",
+ "history.hist.empty_hint": "আপনার সম্পাদনা এখানে দেখাবে। যেকোনো ধাপে ক্লিক করে সেখানে ফিরুন।",
+ "history.hist.revert_all_n": "সব AI পরিবর্তন ফেরান ({n})"
+}

@@ -1,0 +1,5 @@
+{
+ "elem.panel_select_wall": "Odaberi zid",
+ "cmd.elem.panel_select_wall": "Odaberi zid",
+ "elem.left_in_place": "Ostavljeno na mjestu: {kinds}. Panel pripada svom zidu; mase i bilješke brišu se same od sebe."
+}

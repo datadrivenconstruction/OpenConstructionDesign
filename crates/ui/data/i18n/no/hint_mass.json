@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "Fri flate",
+ "cmd.mass.panelize": "Del i paneler",
+ "cmd.mass.surface_shell": "Tak på flate",
+ "cmd.mass.thicken": "Gi tykkelse",
+ "hint.mass.freeform.first": "Fri flate: første hjørne av rektangelet i planen · skriv hevhøyden · Esc — avbryt",
+ "hint.mass.freeform.next": "Fri flate: motsatt hjørne · skriv hevhøyden · Esc — avbryt",
+ "hint.mass.panelize.first": "Paneler: velg en fri flate i 3D · Esc — avbryt",
+ "hint.mass.panelize.value": "Paneler: skriv panelstørrelsen · Enter — bruk · Esc — avbryt",
+ "hint.mass.surface_shell.first": "Tak på flate: velg en fri flate i 3D · Esc — avbryt",
+ "hint.mass.surface_shell.value": "Tak på flate: skriv tykkelsen · Enter — bruk · Esc — avbryt",
+ "hint.mass.thicken.first": "Gi tykkelse: velg en fri flate i 3D · Esc — avbryt",
+ "hint.mass.thicken.value": "Gi tykkelse: skriv tykkelsen (0 — bare flaten) · Enter — bruk · Esc — avbryt",
+ "status.mass.pick_surface": "Velg en fri flate",
+ "status.mass.freeform_small": "Rektangelet er for lite: minst 0,5 m i hver retning",
+ "name.mass.freeform": "Fri flate",
+ "rgroup.mass_free": "Avansert"
+}

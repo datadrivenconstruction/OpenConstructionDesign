@@ -1,0 +1,6 @@
+{
+ "cmd.xlsx.undo_apply": "Angre siste bruk av regneark",
+ "xlsx_undo.later": "Ikke angret: modellen ble redigert etter denne bruken av regnearket. Bruk Ctrl+Z trinn for trinn eller historikkpanelet.",
+ "xlsx_undo.gone": "Ingenting å angre: denne bruken av regnearket er allerede angret.",
+ "xlsx_undo.busy": "Fullfør eller avbryt den pågående tegningen først, og angre deretter bruken av regnearket."
+}

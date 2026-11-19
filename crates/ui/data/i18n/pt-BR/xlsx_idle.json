@@ -1,0 +1,8 @@
+{
+ "xlsx_idle.idle_title": "Nenhuma alteração para importar",
+ "xlsx_idle.export_name": "Exportar",
+ "xlsx_idle.export_body": "Grava o modelo em uma pasta de trabalho. Edite os valores nela e depois sincronize.",
+ "xlsx_idle.sync_name": "Sincronizar",
+ "xlsx_idle.sync_body": "Relê a pasta de trabalho e lista as diferenças. O modelo só muda ao aplicar.",
+ "xlsx_idle.last_sync": "Última sincronização: {when}"
+}

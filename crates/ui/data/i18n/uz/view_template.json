@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "Avval shablon nomini kiriting",
+ "view_template.name_taken": "Bunday nomli shablon allaqachon mavjud",
+ "view_template.pick_blocked": "Avval kamida bitta ko'rinishni belgilang",
+ "view_template.views.one": "{n} ta ko'rinish",
+ "view_template.views.few": "{n} ta ko'rinish",
+ "view_template.views.many": "{n} ta ko'rinish",
+ "view_template.delete.title": "Bu shablon o'chirilsinmi?",
+ "view_template.delete.body": "“{name}” shabloni o'chiriladi. Ishlatilgan: {used}.",
+ "view_template.delete.unused": "“{name}” shabloni o'chiriladi. Hech bir ko'rinish uni ishlatmaydi.",
+ "view_template.delete.keeps": "Bu ko'rinishlar joriy grafikani saqlaydi, lekin bog'lanish yo'qoladi.",
+ "view_template.delete.undo": "Buni bitta Bekor qilish bilan qaytarish mumkin.",
+ "view_template.delete.confirm": "Shablonni o'chirish"
+}

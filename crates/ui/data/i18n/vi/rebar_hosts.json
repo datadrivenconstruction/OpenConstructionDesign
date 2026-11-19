@@ -1,0 +1,40 @@
+{
+ "rebar_hosts.hosts": "Phần chủ: {list}",
+ "rebar_hosts.kind.column": "Cột",
+ "rebar_hosts.kind.beam": "Dầm",
+ "rebar_hosts.kind.wall": "Tường",
+ "rebar_hosts.kind.slab": "Sàn",
+ "rebar_hosts.kind.footing": "Móng đơn",
+ "rebar_hosts.kind.raft": "Sàn móng",
+ "rebar_hosts.n.column": {
+  "one": "# cột",
+  "other": "# cột"
+ },
+ "rebar_hosts.n.beam": {
+  "one": "# dầm",
+  "other": "# dầm"
+ },
+ "rebar_hosts.n.wall": {
+  "one": "# tường",
+  "other": "# tường"
+ },
+ "rebar_hosts.n.slab": {
+  "one": "# sàn",
+  "other": "# sàn"
+ },
+ "rebar_hosts.n.footing": {
+  "one": "# móng đơn",
+  "other": "# móng đơn"
+ },
+ "rebar_hosts.n.raft": {
+  "one": "# sàn móng",
+  "other": "# sàn móng"
+ },
+ "rebar_hosts.mixed_note": "Cột và dầm nhận thép dọc và cốt đai; tường, sàn và móng nhận lưới thép. Chọn một nhóm để thêm cốt thép.",
+ "rebar_hosts.why.mixed": "Lựa chọn lẫn cột hoặc dầm với tường, sàn hoặc móng. Hãy chọn một nhóm.",
+ "rebar_hosts.why.area_linear": "Lưới thép đặt vào tường, sàn và móng, không phải cột hay dầm.",
+ "rebar_hosts.why.bars_plate": "Thép dọc và cốt đai đặt vào cột và dầm, không phải tường, sàn hay móng.",
+ "rebar_hosts.why.no_common_face": "Các phần chủ đã chọn không có mặt bảo vệ chung. Hãy chọn phần chủ cùng loại.",
+ "rebar_hosts.why.no_type": "Chọn một loại thanh.",
+ "rebar_hosts.kind_type": "{kind} · {type}"
+}

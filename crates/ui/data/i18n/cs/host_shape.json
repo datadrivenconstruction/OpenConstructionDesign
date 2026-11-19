@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "Otvor vikýře",
+ "cmd.arch.roof_opening": "Otvor ve střeše",
+ "cmd.arch.roof_extrusion": "Střecha vytažením",
+ "cmd.arch.ceiling_opening": "Otvor ve stropu",
+ "cmd.str.slab_opening": "Otvor v podlaze",
+ "cmd.ctx.wall.detach": "Odpojit horní hranu",
+ "cmd.ctx.floor.sketch": "Upravit hranici",
+ "cmd.ctx.floor.shape": "Upravit tvar",
+ "host_shape.shape.elev_prompt": "kóta, mm…",
+ "host_shape.shape.elev_mm": "{v} mm",
+ "host_shape.sketch.no_host": "pod hranicí na tomto podlaží není hostitel",
+ "host_shape.issue.roof": "střecha {id}: {e}",
+ "host_shape.issue.ceiling": "strop {id}: {e}",
+ "host_shape.status.select_slab": "vyberte desku",
+ "host_shape.status.select_walls": "vyberte stěny",
+ "host_shape.status.no_roof_or_level": "není střecha ani podlaží nad",
+ "host_shape.status.top_attached": "horní hrany stěn připojeny",
+ "host_shape.status.top_detached": "horní hrany stěn odpojeny",
+ "host_shape.status.straight_wall": "vyžadována přímá stěna",
+ "host_shape.status.roof_extruded": "střecha vytažením vytvořena",
+ "warn.kind.cut": "Řez nebo připojení nebylo vytvořeno"
+}

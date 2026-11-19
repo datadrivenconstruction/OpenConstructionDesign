@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "Speichert das ganze Modell oder die Auswahl als binäre STL in Metern oder Millimetern.",
+ "cmd.data.export_obj.desc": "Speichert das ganze Modell oder die Auswahl als OBJ mit MTL-Datei: eine Gruppe je Element, Farben nach Material.",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "OBJ mit Materialien (.obj)",
+ "open_file.filter.mesh": "3D-Netze (glTF, STEP, STL, OBJ)",
+ "mx.title": "{fmt} exportieren",
+ "mx.scope": "Was exportiert wird",
+ "mx.scope.all": "Ganzes Modell",
+ "mx.scope.sel": "Auswahl ({n} Elemente)",
+ "mx.units": "Einheiten in der Datei",
+ "mx.units.m": "Meter",
+ "mx.units.mm": "Millimeter",
+ "mx.export": "Exportieren…",
+ "mx.saved": "{fmt} gespeichert: {path} ({parts} Elemente, {tris} Dreiecke)",
+ "mx.partial": "{fmt} mit {n} Problemen gespeichert, einige Körper können fehlen: {path}",
+ "mx.failed": "{fmt}-Export fehlgeschlagen: {error}",
+ "mx.imported": "{file}: {n} Elemente importiert ({tris} Dreiecke)",
+ "mx.imported_notes": "{file}: {n} Elemente importiert ({tris} Dreiecke), {w} Hinweise: {first}"
+}

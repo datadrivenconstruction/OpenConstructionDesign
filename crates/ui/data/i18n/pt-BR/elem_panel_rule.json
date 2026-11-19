@@ -1,0 +1,5 @@
+{
+ "elem.panel_select_wall": "Selecionar parede",
+ "cmd.elem.panel_select_wall": "Selecionar parede",
+ "elem.left_in_place": "Mantido no lugar: {kinds}. Um painel pertence à sua parede; massas e anotações são excluídas por conta própria."
+}

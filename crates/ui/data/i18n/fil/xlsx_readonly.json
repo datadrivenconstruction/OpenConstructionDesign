@@ -1,0 +1,6 @@
+{
+ "xlsx_readonly.read_only": "Read-only ang workbook (property ng file o permiso ng folder). I-export sa kopya, o alisin ang Read-only sa properties ng file at subukan muli.",
+ "xlsx_readonly.export_copy": "I-export sa kopya",
+ "xlsx_readonly.no_copy_name": "Walang bakanteng pangalan para sa kopya sa tabi ng workbook.",
+ "xlsx_readonly.copied": "Iniwan ang workbook gaya ng dati. Nagsulat ng bagong kopya sa tabi nito at naka-link na ito ngayon: {path}"
+}

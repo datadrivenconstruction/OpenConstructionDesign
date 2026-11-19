@@ -1,0 +1,11 @@
+{
+ "sketch.points": "Noktalar",
+ "sketch.rect": "Dikdörtgen",
+ "sketch.circle": "Daire",
+ "sketch.polygon": "Çokgen",
+ "sketch.radius": "R",
+ "sketch.sides": "Kenarlar",
+ "sketch.circum": "Çevrel",
+ "sketch.shape.tip": "Eskiz şekli (değiştirmek için A). Dikdörtgen: iki köşe. Daire ve çokgen: merkez, sonra yarıçap. Boyut yazıp Enter'a basarak sabitleyin.",
+ "tool.err.zero_size": "Sıfır boyut: ikinci noktayı birinciden uzaklaştırın"
+}

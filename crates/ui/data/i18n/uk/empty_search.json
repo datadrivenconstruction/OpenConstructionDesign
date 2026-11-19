@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "Нічого не знайдено",
+ "empty.browser_search.hint": "Жоден вид, рівень, тип або кімната не відповідає пошуку.",
+ "empty.browser_search.action": "Очистити пошук",
+ "empty.xl_filtered.title": "Жоден запис не відповідає фільтрам",
+ "empty.xl_filtered.hint": "Увімкніть більше типів, оберіть інший аркуш або змініть текст пошуку.",
+ "empty.xl_filtered.action": "Очистити фільтри",
+ "empty.xl_nochanges.title": "Змін у книзі немає",
+ "empty.xl_nochanges.hint": "Книга збігається з моделлю: імпорт нічого не змінить.",
+ "empty.version_same.title": "Моделі ідентичні",
+ "empty.version_same.hint": "Відмінностей між відкритою моделлю та обраною версією не знайдено.",
+ "empty.templates.title": "Шаблонів видів ще немає",
+ "empty.templates.hint": "Створіть його з поточного виду, щоб повторно використати налаштування в інших видах.",
+ "empty.templates.action": "Назвати шаблон",
+ "empty.fe_params.title": "Параметрів ще немає",
+ "empty.fe_params.hint": "Додайте параметр нижче, щоб керувати розмірами, матеріалами або видимістю.",
+ "empty.fe_params.action": "Додати параметр"
+}

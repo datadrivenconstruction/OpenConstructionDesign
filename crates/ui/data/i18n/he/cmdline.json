@@ -1,0 +1,13 @@
+{
+ "cmdl.mode_cmd": "פקודה",
+ "cmdl.mode_ai": "AI",
+ "cmdl.toggle": "פקודות או עוזר ה-AI (Ctrl+J)",
+ "cmdl.hint": "פקודה או קיצור (W, L, M, RO), נקודה #x;y, @dx;dy, d<זווית. Ctrl+J: שאל את עוזר ה-AI",
+ "cmdl.hint_ai": "שאל את עוזר ה-AI על המודל או בקש שינוי. Ctrl+J: חזרה לפקודות",
+ "cmdl.sent": "נשלח לעוזר ה-AI",
+ "cmdl.failed": "לא ניתן להפעיל כאן את “{text}”",
+ "cmdl.no_tool": "התחל קודם בפקודת שרטוט, ואז הקלד את הנקודות שלה",
+ "cmdl.unknown": "אין פקודה “{text}”. Ctrl+J שולח אותה לעוזר ה-AI",
+ "cmdl.bad": "לא ניתן לקרוא את “{text}”: {e}",
+ "cmdl.shape": "“{text}” אינה נקודה: הקלד x;y, #x;y, @dx;dy או מרחק חיובי<זווית"
+}

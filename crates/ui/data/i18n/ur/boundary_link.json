@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "پوری دیوار کا لوپ چنیں",
+ "cmd.sketch.link_unlink": "کنارے کو دیوار سے الگ کریں",
+ "cmd.sketch.link_repick": "کنارے کی دیوار دوبارہ چنیں",
+ "cmd.ctx.floor.link_unlink": "کناروں کو دیواروں سے الگ کریں",
+ "cmd.ctx.floor.link_accept": "حذف شدہ دیواروں کے کنارے قبول کریں",
+ "boundary_link.hint.loop": "ایک دیوار پر کلک کریں: بند دیواروں کا سلسلہ منسلک کناروں میں بدل جائے گا",
+ "boundary_link.hint.repick": "کنارے کے متوازی دیوار پر کلک کریں: کنارہ اس کی پیروی کرے گا",
+ "boundary_link.need_sketch": "پہلے باؤنڈری اسکیچ کھولیں",
+ "boundary_link.need_edge": "اسکیچ کے کنارے کی طرف اشارہ کریں",
+ "boundary_link.need_straight": "صرف سیدھا کنارہ دیوار کی پیروی کر سکتا ہے",
+ "boundary_link.need_floor": "فرش منتخب کریں",
+ "boundary_link.no_wall": "کرسر کے نیچے کوئی دیوار نہیں",
+ "boundary_link.not_parallel": "دیوار کنارے کے متوازی نہیں",
+ "boundary_link.not_linked": "یہ کنارہ کسی دیوار سے منسلک نہیں",
+ "boundary_link.unlinked": "کنارہ الگ کیا گیا: یہ اپنی جگہ رہتا ہے اور دیوار کی پیروی نہیں کرتا",
+ "boundary_link.accepted": "کنارے قبول: یہ عام کناروں کے طور پر اپنی جگہ رہتے ہیں",
+ "boundary_link.failed": "لاگو نہیں ہو سکا",
+ "boundary_link.lost": "ماخذ دیوار حذف ہو چکی",
+ "boundary_link.blocked": "دیوار کی پیروی نہیں کر سکتا"
+}

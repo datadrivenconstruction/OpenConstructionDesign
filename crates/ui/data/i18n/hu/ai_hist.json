@@ -1,0 +1,14 @@
+{
+ "ai.hist.badge": "MI",
+ "ai.hist.untitled": "MI-módosítások",
+ "ai.hist.tip": "{title}\nAlkalmazta: {actor}\nMI-modell: {model}",
+ "ai.hist.why": "Ok: {why}",
+ "ai.hist.reverted": "visszavonva",
+ "ai.hist.revert_one": "Ennek az MI-kötegnek a visszavonása",
+ "ai.revert.done": "MI-módosítások visszavonva: {n}. A visszavonás-visszavonással visszahozhatók.",
+ "ai.revert.empty": "Nincs visszavonható MI-módosítás",
+ "ai.revert.not_ai": "Ez a lépés nem MI-módosítás",
+ "ai.revert.already": "Ezek az MI-módosítások már vissza vannak vonva",
+ "ai.revert.opaque": "Nem lett visszavonva: ezeket az MI-módosításokat nem lehet biztonságosan elválasztani a későbbi munkától. Semmi nem változott.",
+ "ai.revert.failed": "A visszavonás nem sikerült: {e}"
+}

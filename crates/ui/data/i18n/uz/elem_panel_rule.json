@@ -1,0 +1,5 @@
+{
+ "elem.panel_select_wall": "Devorni tanlash",
+ "cmd.elem.panel_select_wall": "Devorni tanlash",
+ "elem.left_in_place": "Joyida qoldi: {kinds}. Panel o'z devoriga tegishli; massalar va izohlar o'z-o'zidan o'chiriladi."
+}

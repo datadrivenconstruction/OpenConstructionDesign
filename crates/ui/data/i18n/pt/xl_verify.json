@@ -1,0 +1,9 @@
+{
+ "xl.msg.base_value": "verificação de releitura falhou, a pasta de trabalho antiga foi mantida: {} ({}) esperado '{}', lido '{}'",
+ "xl.msg.base_missing": "verificação de releitura falhou, a pasta de trabalho antiga foi mantida: a folha {} não tem linha para o id {}",
+ "xl.msg.base_extra": "verificação de releitura falhou, a pasta de trabalho antiga foi mantida: a linha {} não está no modelo",
+ "xl.msg.base_refused": "verificação de releitura falhou, a pasta de trabalho antiga foi mantida: {} ({}) foi recusado: {}",
+ "xl.msg.base_sheet": "verificação de releitura falhou, a pasta de trabalho antiga foi mantida: a folha {} está ausente, vazia ou ilegível",
+ "xl.msg.base_newer": "verificação de releitura falhou, a pasta de trabalho antiga foi mantida: {} células não contêm o valor do modelo",
+ "xl.msg.base_unreadable": "verificação de releitura falhou, a pasta de trabalho antiga foi mantida: a nova pasta de trabalho não pode ser lida ({})"
+}

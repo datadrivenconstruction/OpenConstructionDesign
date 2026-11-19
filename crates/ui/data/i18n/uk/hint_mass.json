@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "Вільна поверхня",
+ "cmd.mass.panelize": "Розбити на панелі",
+ "cmd.mass.surface_shell": "Покрівля по поверхні",
+ "cmd.mass.thicken": "Товщина",
+ "hint.mass.freeform.first": "Вільна поверхня: перший кут прямокутника в плані · число — підйом · Esc — скасувати",
+ "hint.mass.freeform.next": "Вільна поверхня: протилежний кут · число — підйом · Esc — скасувати",
+ "hint.mass.panelize.first": "Панелі: виберіть вільну поверхню в 3D · Esc — скасувати",
+ "hint.mass.panelize.value": "Панелі: введіть розмір панелі · Enter — застосувати · Esc — скасувати",
+ "hint.mass.surface_shell.first": "Покрівля по поверхні: виберіть вільну поверхню в 3D · Esc — скасувати",
+ "hint.mass.surface_shell.value": "Покрівля по поверхні: введіть товщину · Enter — застосувати · Esc — скасувати",
+ "hint.mass.thicken.first": "Товщина: виберіть вільну поверхню в 3D · Esc — скасувати",
+ "hint.mass.thicken.value": "Товщина: введіть товщину (0 — без товщини) · Enter — застосувати · Esc — скасувати",
+ "status.mass.pick_surface": "Виберіть вільну поверхню",
+ "status.mass.freeform_small": "Прямокутник занадто малий: не менше 0,5 м в кожен бік",
+ "name.mass.freeform": "Вільна поверхня",
+ "rgroup.mass_free": "Додатково"
+}

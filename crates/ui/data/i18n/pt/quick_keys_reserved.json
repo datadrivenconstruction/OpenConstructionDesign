@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key} é reservada ({why}) e não pode ser reatribuída",
+ "quick.keys.res_copy": "copiar",
+ "quick.keys.res_paste": "colar",
+ "quick.keys.res_cut": "recortar",
+ "quick.keys.res_undo": "desfazer / refazer",
+ "quick.keys.res_save": "salvar",
+ "quick.keys.res_palette": "paleta de comandos",
+ "quick.keys.reserved_conflict": "{key} já é usada por “{cmd}”. Esc mantém ali.",
+ "quick.keys.reserved_swap": "Trocar",
+ "quick.keys.reserved_take": "Usar esta",
+ "quick.keys.reserved_keep": "Manter",
+ "quick.keys.reserved_os": "Usada pelo sistema:"
+}

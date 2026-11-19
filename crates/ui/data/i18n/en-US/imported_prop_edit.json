@@ -1,0 +1,6 @@
+{
+ "imported_prop_edit.remove": "Remove property",
+ "imported_prop_edit.remove.tip": "Removes the property from {n} selected element(s) in one undo step; it is dropped from the IFC file on save",
+ "imported_prop_edit.done": "{key} removed from {n} element(s)",
+ "imported_prop_edit.warn.reload": "Done, but the view was not refreshed; reopen the panel or undo if it looks wrong"
+}

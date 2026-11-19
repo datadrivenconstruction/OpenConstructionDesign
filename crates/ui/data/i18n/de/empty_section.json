@@ -1,0 +1,11 @@
+{
+ "empty.sv_notfound.title": "Ansicht nicht gefunden",
+ "empty.sv_notfound.hint": "Diese Ansicht wurde gelöscht oder gehört nicht mehr zum Projekt.",
+ "empty.sv_notfound.action": "Ansicht schließen",
+ "empty.sv_cuts_nothing.title": "Dieser Schnitt schneidet nichts",
+ "empty.sv_cuts_nothing.hint": "Die Schnittlinie trifft innerhalb ihrer Tiefe keine Wände, Decken oder Öffnungen. Verschieben Sie die Linie oder vergrößern Sie die Ansichtstiefe.",
+ "empty.sv_cuts_nothing.action": "Im Plan anzeigen",
+ "empty.sv_shows_nothing.title": "Diese Ansicht zeigt nichts",
+ "empty.sv_shows_nothing.hint": "Innerhalb der Ansichtstiefe liegen keine Wände, Decken oder Öffnungen. Verschieben Sie die Ansichtslinie oder vergrößern Sie die Ansichtstiefe.",
+ "empty.sv_shows_nothing.action": "Im Plan anzeigen"
+}

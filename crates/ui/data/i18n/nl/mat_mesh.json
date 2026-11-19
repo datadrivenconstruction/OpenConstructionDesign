@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "Geïmporteerde meshes",
+ "mat_mesh.mesh.none_selected": "Selecteer geïmporteerde meshes in de 3D-weergave om ze dit materiaal te geven.",
+ "mat_mesh.mesh.current": "Eerste geselecteerde mesh: {material}",
+ "mat_mesh.mesh.current_none": "Eerste geselecteerde mesh heeft geen materiaal.",
+ "mat_mesh.mesh.assign": "Toewijzen aan {n} geselecteerde",
+ "mat_mesh.mesh.assign_tip": "De Realistische stijl toont de textuur van dit materiaal op de geselecteerde meshes",
+ "mat_mesh.mesh.assign_cat": "Toewijzen aan categorie {category}",
+ "mat_mesh.mesh.assign_cat_tip": "Elk geïmporteerd mesh van die categorie zonder eigen materiaal",
+ "mat_mesh.mesh.clear": "Geselecteerde wissen",
+ "mat_mesh.mesh.clear_tip": "Geselecteerde meshes keren terug naar het materiaal van hun categorie of de egale kleur",
+ "mat_mesh.mesh.clear_cat": "Categorie wissen"
+}

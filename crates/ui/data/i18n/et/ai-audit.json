@@ -1,0 +1,22 @@
+{
+ "ai.audit.tokens": "{n} žetooni",
+ "ai.audit.filter.all": "Kõik",
+ "ai.audit.filter.ai": "AI",
+ "ai.audit.filter.me": "Mina",
+ "ai.audit.search": "Otsi muudatusi",
+ "ai.audit.search.clear": "Tühista otsing",
+ "ai.audit.show_all": "Näita kõiki",
+ "ai.audit.empty.hint": "Siia ilmuvad mudeli või agendi koostatud või rakendatud muudatused, igaühel tagasiteega.",
+ "ai.audit.no_match": "Filtrile ei vasta ükski muudatus.",
+ "ai.audit.show.tip": "Vali ja näita elemente, keda see muudatus puudutas",
+ "ai.audit.revert.ask": "Kas võtta tagasi „{what}”? {change}.",
+ "ai.audit.revert.elements": {
+  "one": "# elemendi muudatus",
+  "other": "# elemendi muudatust"
+ },
+ "ai.audit.revert.keeps": "Uuemad muudatused jäävad alles. Tagasivõtt on üks tagasivõtu samm.",
+ "ai.audit.cancel": "Loobu",
+ "ai.audit.toast.reverted": "Tagasi võetud: {what}",
+ "ai.audit.toast.undone": "Tühistatud: {what}",
+ "ai.audit.redo": "Tee uuesti"
+}

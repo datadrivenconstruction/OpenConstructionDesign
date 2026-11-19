@@ -1,0 +1,4 @@
+{
+ "elem.spreadsheet.applied": "XLSX 스프레드시트에서 가져옴: {what}",
+ "elem.spreadsheet.failed": "XLSX 스프레드시트 가져오기 실패: {e}"
+}

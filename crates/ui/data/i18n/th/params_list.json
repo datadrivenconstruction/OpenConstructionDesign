@@ -1,0 +1,23 @@
+{
+ "params_list.n_params": {
+  "one": "# พารามิเตอร์",
+  "other": "# พารามิเตอร์"
+ },
+ "params_list.n_values": {
+  "one": "# ค่า",
+  "other": "# ค่า"
+ },
+ "params_list.n_elements": {
+  "one": "# องค์ประกอบ",
+  "other": "# องค์ประกอบ"
+ },
+ "params_list.exported": "ส่งออก {params} ไปยัง {file} แล้ว",
+ "params_list.export_failed": "ยังไม่ได้ส่งออกพารามิเตอร์: {why}",
+ "params_list.open_folder": "เปิดโฟลเดอร์",
+ "params_list.delete_tip": "ลบพารามิเตอร์และค่าของมัน",
+ "params_list.confirm": "ลบ {name} และ {values} ของมันบน {elements} หรือไม่",
+ "params_list.confirm_btn": "ลบ",
+ "params_list.cancel": "ยกเลิก",
+ "params_list.deleted": "ลบพารามิเตอร์ {name} ({values}) แล้ว",
+ "params_list.undo": "เลิกทำ"
+}

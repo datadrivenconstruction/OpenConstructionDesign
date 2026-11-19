@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "Omhoog verplaatsen",
+ "rebar_list.move_down": "Omlaag verplaatsen",
+ "rebar_list.remove": "Verwijderen",
+ "rebar_list.zone_remove_last": "Een zone heeft minstens één ruimte nodig: verwijder de zone om de laatste te verwijderen",
+ "rebar_list.rebar_empty_title": "Geen wapening in dit model",
+ "rebar_list.rebar_empty_hint": "Plaats wapening in een dragend element en die wordt hier opgenomen in de lijst.",
+ "rebar_list.rebar_empty_action": "Wapening plaatsen"
+}

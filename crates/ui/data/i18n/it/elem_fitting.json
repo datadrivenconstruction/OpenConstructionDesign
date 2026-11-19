@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "Raccordo",
+ "elem.mep_fitting.many": "Raccordi",
+ "elem.mep_fitting.kind.elbow": "Gomito",
+ "elem.mep_fitting.kind.tee": "T",
+ "elem.mep_fitting.kind.cross": "Croce",
+ "elem.mep_fitting.kind.transition": "Riduzione",
+ "elem.mep_fitting.kind.cap": "Tappo",
+ "elem.mep_fitting.size": "Dimensione",
+ "elem.mep_fitting.at": "Posizione",
+ "elem.mep_fitting.runs": "Tratta {n}",
+ "elem.mep_fitting.edit_run": "Modifica tratta",
+ "elem.mep_fitting.select_runs": "Seleziona le sue tratte",
+ "elem.mep_fitting.derived": "Un raccordo segue le sue tratte: se cambi una tratta, il raccordo cambia con essa.",
+ "elem.mep_fitting.no_delete": "Un raccordo non può essere eliminato o spostato da solo. Modifica o elimina le sue tratte.",
+ "elem.mep_fitting.hint": "Clicca un raccordo in pianta per vederne le tratte.",
+ "elem.mep_fitting.picked": "Raccordi selezionati: {n}"
+}

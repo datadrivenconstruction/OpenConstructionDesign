@@ -1,0 +1,10 @@
+{
+ "stage_err.kept": "tabell {t} beholdt: {n} rader skrevet etter Legg til",
+ "stage_err.stage.prev_attached": "Ikke lagt til: kopien fra forrige Legg til er fortsatt åpen. Kjør Legg til på nytt",
+ "stage_err.stage.model_changed": "Ikke lagt til: modellen ble endret mens filen ble lest. Kjør Legg til på nytt",
+ "stage_err.stage.no_record": "Ikke lagt til: den importerte kopien har ingen endringslogg",
+ "stage_err.stage.table_differs": "Ikke lagt til: tabell {t} er forskjellig mellom modellen og den importerte kopien",
+ "stage_err.stage.unique_key": "Ikke lagt til: en unik nøkkel i tabell {t} kan ikke følges",
+ "stage_err.stage.table_gone": "Ikke lagt til: importen endret tabell {t}, som kopien ikke lenger har",
+ "stage_err.stage.copy_held": "Lagt til; den importerte kopien forblir åpen til neste Legg til eller til modellen åpnes på nytt"
+}

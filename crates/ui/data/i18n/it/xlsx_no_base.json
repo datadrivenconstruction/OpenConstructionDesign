@@ -1,0 +1,6 @@
+{
+ "xlsx_no_base.title": "Questa cartella non ha dati di confronto",
+ "xlsx_no_base.detail": "La tavola di confronto nascosta manca o è danneggiata (un altro programma ha risalvato la cartella, oppure è stata fatta a mano). Ogni cella diversa sostituisce il valore del modello; le modifiche al modello fatte dopo l'esportazione non possono essere rilevate. Le righe mancanti nella cartella non vengono eliminate.",
+ "xlsx_no_base.confirm": "Ho verificato le modifiche: sostituisci i valori del modello ({n})",
+ "xlsx_no_base.confirm_first": "Conferma prima l'importazione di una cartella senza dati di confronto"
+}

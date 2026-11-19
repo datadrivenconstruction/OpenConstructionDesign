@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key} este rezervat ({why}) și nu poate fi reatribuit",
+ "quick.keys.res_copy": "copiază",
+ "quick.keys.res_paste": "lipește",
+ "quick.keys.res_cut": "taie",
+ "quick.keys.res_undo": "anulare / refacere",
+ "quick.keys.res_save": "salvează",
+ "quick.keys.res_palette": "paleta de comenzi",
+ "quick.keys.reserved_conflict": "{key} este deja folosit de „{cmd}”. Esc îl păstrează acolo.",
+ "quick.keys.reserved_swap": "Schimbă",
+ "quick.keys.reserved_take": "Ia-o",
+ "quick.keys.reserved_keep": "Păstrează",
+ "quick.keys.reserved_os": "Ocupat de sistem:"
+}

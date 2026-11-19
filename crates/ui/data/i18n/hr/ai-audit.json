@@ -1,0 +1,23 @@
+{
+ "ai.audit.tokens": "{n} tokena",
+ "ai.audit.filter.all": "Sve",
+ "ai.audit.filter.ai": "AI",
+ "ai.audit.filter.me": "Ja",
+ "ai.audit.search": "Traži promjene",
+ "ai.audit.search.clear": "Očisti pretragu",
+ "ai.audit.show_all": "Prikaži sve",
+ "ai.audit.empty.hint": "Promjene koje su izradili ili primijenili model ili agent pojavljuju se ovdje, svaka s putem natrag.",
+ "ai.audit.no_match": "Nijedna promjena ne odgovara filtru.",
+ "ai.audit.show.tip": "Odaberi i prikaži elemente koje je ova promjena dotaknula",
+ "ai.audit.revert.ask": "Vratiti „{what}“? {change}.",
+ "ai.audit.revert.elements": {
+  "one": "# promjena elementa",
+  "few": "# promjene elemenata",
+  "other": "# promjena elemenata"
+ },
+ "ai.audit.revert.keeps": "Novije promjene ostaju. Vraćanje je jedan korak poništavanja.",
+ "ai.audit.cancel": "Odustani",
+ "ai.audit.toast.reverted": "Vraćeno: {what}",
+ "ai.audit.toast.undone": "Poništeno: {what}",
+ "ai.audit.redo": "Ponovi"
+}

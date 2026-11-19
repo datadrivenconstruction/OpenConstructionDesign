@@ -1,0 +1,20 @@
+{
+ "dwgfillet.fillet": "Pembulatan sudut",
+ "dwgfillet.cancel": "Hentikan pembulatan",
+ "dwgfillet.tip": "Klik dua garis di sisi yang dipertahankan: keduanya dipotong atau diperpanjang sampai sudut, dengan busur tangen jika jari-jari lebih dari nol",
+ "dwgfillet.radius": "Jari-jari pembulatan",
+ "dwgfillet.radius_tip": "Jari-jari busur dalam satuan gambar; 0 membuat sudut tajam",
+ "dwgfillet.st.arm_first": "Klik garis pertama di sisi yang dipertahankan",
+ "dwgfillet.st.arm_second": "Klik garis kedua di sisi yang dipertahankan",
+ "dwgfillet.st.not_armed": "Pilih Pembulatan sudut dulu",
+ "dwgfillet.st.click_line": "Klik satu garis gambar",
+ "dwgfillet.st.other_drawing": "Kedua garis harus berasal dari gambar yang sama: mulai ulang",
+ "dwgfillet.st.changed": "Garis pertama berubah: mulai ulang",
+ "dwgfillet.st.same_line": "Pilih garis kedua yang berbeda",
+ "dwgfillet.st.parallel": "Garis-garis sejajar dan tidak pernah bertemu: sudut tidak dapat dibuat",
+ "dwgfillet.st.degenerate": "Garis tidak memiliki panjang",
+ "dwgfillet.st.no_side": "Sisi yang diklik tidak memiliki panjang dari sudut",
+ "dwgfillet.st.too_big": "Jari-jari terlalu besar untuk garis ini: gunakan jari-jari yang lebih kecil",
+ "dwgfillet.st.radius_bad": "Jari-jari harus nol atau positif",
+ "dwgfillet.st.done": "Sudut dibuat"
+}

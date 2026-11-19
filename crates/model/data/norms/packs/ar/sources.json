@@ -1,0 +1,31 @@
+{
+ "sources": [
+  {
+   "id": "ar-caba-ce",
+   "title": "Buenos Aires city Building Code (Law 6100, separata of the official gazette)",
+   "publisher": "Gobierno de la Ciudad de Buenos Aires",
+   "url": "https://documentosboletinoficial.buenosaires.gob.ar/publico/PL-LEY-LCABA-LCBA-6100-18-ANX.pdf",
+   "edition": "2018 (in force 2019; court challenges reported 2024-2025)",
+   "licence": "public-law",
+   "verified": "2026-11-14"
+  },
+  {
+   "id": "ar-dec914",
+   "title": "Decree 914/97 regulating accessibility articles of Law 22.431 as amended by Law 24.314",
+   "publisher": "Poder Ejecutivo Nacional, via the Buenos Aires city gazette",
+   "url": "https://boletinoficial.buenosaires.gob.ar/normativaba/norma/45091",
+   "edition": "1997 original text",
+   "licence": "public-law",
+   "verified": "2026-11-14"
+  },
+  {
+   "id": "ar-dec351",
+   "title": "Decree 351/79 regulating Law 19587 (occupational hygiene and safety), incl. fire annex VII",
+   "publisher": "Poder Ejecutivo Nacional",
+   "url": "https://www1.ing.unlp.edu.ar/sitio/administracion/concursos/archivos/Decreto-351-79.pdf",
+   "edition": "1979, university copy",
+   "licence": "public-law",
+   "verified": null
+  }
+ ]
+}

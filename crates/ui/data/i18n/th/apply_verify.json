@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "หยุดการนำไปใช้: โมเดลถูกคงไว้ตามเดิม",
+ "apply_verify.rolled_back": "การนำไปใช้ไม่ตรงกับฉบับร่างและถูกย้อนกลับ โมเดลไม่เปลี่ยน {what}",
+ "apply_verify.diff.missing": "ฉบับร่างแสดง {what} {kind} แต่การนำไปใช้ไม่ได้ทำ",
+ "apply_verify.diff.extra": "นำไปใช้ {kind} {what} ซึ่งฉบับร่างไม่แสดง",
+ "apply_verify.diff.kind": "ฉบับร่างแสดง {what} {shown} แต่การนำไปใช้เป็น {applied}",
+ "apply_verify.diff.value": "{what}: “{col}” ออกมาต่างจากฉบับร่าง",
+ "apply_verify.diff.truncated": "ฉบับร่างและการเปลี่ยนแปลงที่นำไปใช้มีขนาดต่างกัน",
+ "apply_verify.diff.unreadable": "อ่านการเปลี่ยนแปลงที่นำไปใช้กลับมาไม่ได้ ({e})",
+ "apply_verify.no_base": "ไม่ได้รันการนำไปใช้: สำเนาสำหรับตรวจฉบับร่างหายไป โมเดลไม่เปลี่ยน ขอฉบับร่างใหม่",
+ "apply_verify.take_back_failed": "การย้อนกลับไม่สำเร็จ ({e}) ใช้เลิกทำ",
+ "apply_verify.kind.created": "สร้าง",
+ "apply_verify.kind.changed": "เปลี่ยน",
+ "apply_verify.kind.deleted": "ลบ",
+ "apply_verify.card.type_row": "ประเภท {type} · องค์ประกอบ {n} รับการเปลี่ยนแปลง"
+}

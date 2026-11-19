@@ -1,0 +1,21 @@
+{
+ "ai.receipt.title": {
+  "one": "Đã áp dụng # thay đổi",
+  "other": "Đã áp dụng # thay đổi"
+ },
+ "ai.receipt.more": "+{n} nữa",
+ "ai.receipt.list": "Phần tử",
+ "ai.receipt.show": "Hiện",
+ "ai.receipt.show.tip": "Chọn và khung các phần tử đã thay đổi",
+ "ai.receipt.undo": "Hoàn tác",
+ "ai.receipt.undo.tip": "Hoàn lại đúng lần áp dụng này",
+ "ai.receipt.undone": "Đã hoàn tác",
+ "ai.receipt.later": "Đã có chỉnh sửa sau đó",
+ "ai.receipt.toast_undone": "Kế hoạch đã áp dụng đã được hoàn tác",
+ "ai.receipt.draft_family": "Họ bản nháp: {name}",
+ "ai.receipt.promote": "Chuyển thành đang làm việc",
+ "ai.receipt.promote.tip": "Biến họ bản nháp thành họ đang làm việc (một bước hoàn tác)",
+ "ai.receipt.promoted": "Họ hiện đã đang làm việc",
+ "ai.receipt.promote_failed": "Không thể chuyển họ thành đang làm việc",
+ "cmd.ai.receipt_undo": "Hoàn tác kế hoạch AI gần nhất"
+}

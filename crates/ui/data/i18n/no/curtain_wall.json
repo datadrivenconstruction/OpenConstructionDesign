@@ -1,0 +1,12 @@
+{
+ "curtain_wall.cw.issue.slab": "plate {id}: {e}",
+ "curtain_wall.cw.issue.body": "legeme {id}: {e}",
+ "curtain_wall.cw.added": "Glassfasader lagt til: {n}",
+ "curtain_wall.cw.add_failed": "Glassfasade ikke bygget: {e}",
+ "curtain_wall.cw.edited_warn": "Glassfasade #{id} endret: {w}",
+ "curtain_wall.cw.edited": "Glassfasade #{id} endret",
+ "curtain_wall.cw.not_changed": "Ikke endret: {e}",
+ "curtain_wall.cw.room_edited": "Rom #{id} endret",
+ "curtain_wall.cw.slope_range": "Ikke endret: fall utenfor området",
+ "curtain_wall.cw.slope_set": "Plate #{id}: fall {pct}"
+}

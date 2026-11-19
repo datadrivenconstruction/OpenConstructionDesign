@@ -1,0 +1,6 @@
+{
+ "cmd.file.import_again": "Import again",
+ "cmd.file.import_again.desc": "Build a new project from the source file as it is now.",
+ "cmd.file.open_kept": "Open kept import",
+ "cmd.file.open_kept.desc": "Open the finished import that was kept when the unsaved-changes prompt was cancelled."
+}

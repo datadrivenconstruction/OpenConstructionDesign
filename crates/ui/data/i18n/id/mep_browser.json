@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "Nama sistem",
+ "mep_browser.add_blocked": "Masukkan nama sistem dulu",
+ "mep_browser.col.insulation": "Isolasi",
+ "mep_browser.cancel": "Batal",
+ "mep_browser.delete.title": "Hapus sistem ini?",
+ "mep_browser.delete.body": "Sistem \"{name}\" dan rangkaiannya ({n}) akan dihapus.",
+ "mep_browser.delete.undo": "Anda dapat mengurungkannya dengan satu Urungkan.",
+ "mep_browser.delete.confirm": "Hapus sistem"
+}

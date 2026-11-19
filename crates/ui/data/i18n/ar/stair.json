@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "سلالم",
+ "selcat.railing": "درابزينات",
+ "quick.cat.stair": "سلالم",
+ "quick.cat.railing": "درابزينات",
+ "stair.risers": "الدرجات",
+ "stair.riser": "ارتفاع الدرجة",
+ "stair.comfort": "2 ع + ن",
+ "stair.tread_auto": "النجلة حسب القاعدة",
+ "stair.tread_auto_tip": "تجاهل النجلة المكتوبة ودع قاعدة (2 ع + ن) تحددها",
+ "stair.broken": "هذا السلم لا يتطابق مع مستوياته",
+ "railing.host_stair": "مستضاف على السلم رقم #{id}",
+ "railing.host_path": "رسم درابزين",
+ "railing.length": "الطول",
+ "stair.deleted_with": "مع {n} درابزينات مستضافة"
+}

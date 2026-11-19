@@ -1,0 +1,9 @@
+{
+ "xl.msg.base_value": "kontrollen efter återläsning misslyckades, den gamla arbetsboken behålls: {} ({}) väntades '{}', lästes '{}'",
+ "xl.msg.base_missing": "kontrollen efter återläsning misslyckades, den gamla arbetsboken behålls: bladet {} saknar rad för id {}",
+ "xl.msg.base_extra": "kontrollen efter återläsning misslyckades, den gamla arbetsboken behålls: rad {} finns inte i modellen",
+ "xl.msg.base_refused": "kontrollen efter återläsning misslyckades, den gamla arbetsboken behålls: {} ({}) avvisades: {}",
+ "xl.msg.base_sheet": "kontrollen efter återläsning misslyckades, den gamla arbetsboken behålls: bladet {} saknas, är tomt eller kan inte läsas",
+ "xl.msg.base_newer": "kontrollen efter återläsning misslyckades, den gamla arbetsboken behålls: {} celler innehåller inte modellvärdet",
+ "xl.msg.base_unreadable": "kontrollen efter återläsning misslyckades, den gamla arbetsboken behålls: den nya arbetsboken kan inte läsas ({})"
+}

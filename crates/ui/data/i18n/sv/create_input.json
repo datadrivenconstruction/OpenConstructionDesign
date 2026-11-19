@@ -1,0 +1,14 @@
+{
+ "cmd.mod.divide": "Dela upp",
+ "cmd.mod.divide.short": "Dela upp",
+ "cmd.mod.divide.desc": "Delar upp en vägg i lika delar i ett steg. Skriv antalet delar och klicka sedan på väggen.",
+ "whereis.mod.divide": "dela upp, lika delar, skär i bitar, segmentera vägg",
+ "hint.split.parts": "Dela upp: klicka på en vägg · siffra — delar (2–100) · Esc — avbryt",
+ "create_input.divide.bad_parts": "«{text}» är inget antal delar: skriv ett heltal från 2 till {max}",
+ "create_input.ws.err.empty": "Skriv ett namn för layouten",
+ "create_input.ws.err.long": "Namnet är för långt: högst 40 tecken",
+ "create_input.ws.err.preset": "Det namnet tillhör en inbyggd layout",
+ "create_input.ws.err.full": "Högst 24 sparade layouter: ta bort en först",
+ "create_input.seldim.locked": "Avstånd {v} låst",
+ "create_input.seldim.positive": "Avståndet måste vara större än noll"
+}

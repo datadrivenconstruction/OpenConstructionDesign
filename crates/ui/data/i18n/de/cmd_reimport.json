@@ -1,0 +1,6 @@
+{
+ "cmd.file.import_again": "Erneut importieren",
+ "cmd.file.import_again.desc": "Erstellt ein neues Projekt aus der Quelldatei in ihrem jetzigen Stand.",
+ "cmd.file.open_kept": "Behaltenen Import öffnen",
+ "cmd.file.open_kept.desc": "Öffnet den abgeschlossenen Import, der behalten wurde, als die Abfrage nicht gespeicherter Änderungen abgebrochen wurde."
+}

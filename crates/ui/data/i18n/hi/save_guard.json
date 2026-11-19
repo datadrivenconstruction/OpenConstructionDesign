@@ -1,0 +1,14 @@
+{
+ "save_guard.save.empty_over_full": "कुछ सहेजा नहीं गया: मॉडल खाली है, और फ़ाइल में पहले से सामग्री है। फ़ाइल अछूती है। किसी और नाम से लिखने के लिए इस रूप में सहेजें उपयोग करें।",
+ "save_guard.refuse.body": "कुछ सहेजा नहीं गया: मॉडल खाली है, और {name} में पहले से सामग्री है। फ़ाइल अछूती है।",
+ "save_guard.refuse.foreign": "यह DDC Editor की फ़ाइल नहीं है, इसलिए इसे बदला नहीं जा सकता। किसी और नाम से लिखने के लिए इस रूप में सहेजें उपयोग करें।",
+ "save_guard.refuse.ask": "{name} बदलें? उसमें {what} है। पहले उसे बगल के _archive फ़ोल्डर में ले जाया जाएगा, फिर खाली मॉडल लिखा जाएगा।",
+ "save_guard.refuse.holds_db": "{n} तत्व और सामग्री पंक्तियाँ",
+ "save_guard.refuse.holds_ifc": "उत्पादों वाली IFC",
+ "save_guard.refuse.replace": "फिर भी बदलें…",
+ "save_guard.refuse.replace_yes": "ले जाएँ और बदलें",
+ "save_guard.refuse.save_as": "इस रूप में सहेजें…",
+ "save_guard.refuse.cancel": "रद्द करें",
+ "save_guard.replace.moved": "पिछली फ़ाइल {path} में ले जाई गई",
+ "save_guard.replace.move_failed": "{name} को किनारे नहीं ले जा सका: {error}। कुछ नहीं लिखा गया।"
+}

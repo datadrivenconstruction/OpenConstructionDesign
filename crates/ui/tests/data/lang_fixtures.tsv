@@ -1,0 +1,114 @@
+# key<TAB>value: Russian fixture text for tests (see src/test_fx.rs)
+wall	стена
+window	окно
+column	колонна
+concrete	бетон
+cm	см
+mm	мм
+m	м
+level	Этаж
+level_lc	этаж
+roof	Кровля
+roof_pre	кров
+basement	подвал
+w_a_keys	Цф
+walls	стены
+wall_pre	стен
+plan	План
+plan_abbr	спл
+wall_keys	цфдд
+export	экспорт
+hello	привет
+spruce	ёлка
+facade	Фасад
+nomatch	ъъъъъъ
+help_press	Нажмите
+help_or	или
+help_see	см.
+help_bold	важно
+help_title	Стены
+help_tag1	стена
+help_tag3	несущая стена
+help_intro	Введение продолжение.
+help_step	Первый перенос
+help_notitle	нет заголовка
+help_small	мелкий
+
+hc_k1	Щелчок
+hc_t1	следующая точка стены или ввод длины цифрами
+hc_k2	Цифры
+hc_t2	точная длина текущего сегмента в выбранных единицах
+hc_t3	дуга по трём точкам, второй щелчок задаёт стрелу
+hc_t4	замкнуть контур и закончить цепочку стен
+hc_t5	отменить последнюю точку, второй раз — выйти
+hc_l1	Тип
+hc_v1	Кладка 200 с утеплением и облицовкой
+hc_l2	Привязка
+hc_v2	середина
+hc_warn	Проём 900 шире стены 600
+sel_0	Ничего не выбрано
+sel_1	Выбран 1 элемент
+sel_2	Выбрано 2 элемента
+sel_5	Выбрано 5 элементов
+sel_11	Выбрано 11 элементов
+sel_21	Выбран 21 элемент
+sel_22	Выбрано 22 элемента
+sel_100	Выбрано 100 элементов
+sel_112	Выбрано 112 элементов
+font_bg	Български: щъьюя ✓
+font_ru	Русский: ёЁ ✓
+font_uk	Українська: ґєіїҐЄІЇ ✓
+font_kk	Қазақша: ӘәҒғҚқҢңӨөҰұҮүҺһІі ✓
+font_ky	Кыргызча: ҢңӨөҮү ✓
+font_mn	Монгол: ӨөҮү ✓
+nt_1	нечего повторять
+nt_1c	Нечего повторять
+nt_2	выберите стены
+nt_2c	Выберите стены
+nt_3	нечего отменять
+nt_3c	Нечего отменять
+ws_my	Моя
+ws_my_lc	моя
+ws_layout	раскладка
+ws_est	Сметы
+ws_two_tabs	Две вкладки
+palette_q	стены
+sh_typed	перем
+bad_hex	ЖЖЖЖЖЖ
+layout_name	Мой
+width	ширина
+kt_text	Текст
+kt_name	Имя
+kt_len	Длина
+kt_apply	Применить
+kt_cancel	Отмена
+kt_more	Ещё
+kt_delete	Удалить
+kt_no	Нет
+kt_m2	м²
+kt_one	Один
+kt_two	Два
+kt_grid	Сетка
+kt_snap	Привязка
+kt_mixed	Разные
+kt_general	Общие
+kt_view	Вид
+kt_sizes	Размеры
+kt_height	Высота
+kt_longname	Очень длинное имя элемента модели
+kt_mode	Режим
+kt_wall_cap	Стена
+kt_card	Карточка
+kt_selected	Выбранная
+kt_ready	Готово
+kt_nosheets	Нет листов
+kt_makesheet	Создайте лист
+kt_create	Создать
+kt_loading	Загрузка
+kt_error	Ошибка
+kt_retry_hint	Повторите
+kt_retry	Повторить
+kt_import	Импорт
+kt_sig	Подпись подлиннее
+kt_long	Сохранить изменения во всех открытых видах и листах проекта
+kt_yes	Да

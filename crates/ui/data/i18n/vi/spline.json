@@ -1,0 +1,7 @@
+{
+ "spline.opt.spline": "Spline",
+ "spline.opt.spline_tip": "Tường spline: nhấp các điểm mà nó đi qua, Enter hoặc Esc để kết thúc",
+ "spline.wt.three_points": "tường spline cần ba điểm trở lên",
+ "spline.wt.no_curtain": "tường rèm không có trục spline",
+ "spline.wt.added": "đã thêm tường spline"
+}

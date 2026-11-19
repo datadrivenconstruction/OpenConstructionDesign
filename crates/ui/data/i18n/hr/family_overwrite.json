@@ -1,0 +1,18 @@
+{
+ "family_overwrite.ow.title": "Zamijeniti vrijednosti tipova projekta?",
+ "family_overwrite.ow.body": "Učitavanje zamjenjuje {values} u {types}. Postavljeni primjerci ovih tipova: {instances}.",
+ "family_overwrite.ow.values": {
+  "one": "# vrijednost",
+  "few": "# vrijednosti",
+  "other": "# vrijednosti"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# tip",
+  "few": "# tipa",
+  "other": "# tipova"
+ },
+ "family_overwrite.ow.list": "Tipovi: {list}",
+ "family_overwrite.ow.more": "i još {n}",
+ "family_overwrite.ow.back": "Natrag na uređivanje",
+ "family_overwrite.ow.replace": "Zamijeni vrijednosti"
+}

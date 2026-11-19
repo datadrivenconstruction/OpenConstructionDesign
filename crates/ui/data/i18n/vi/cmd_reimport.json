@@ -1,0 +1,6 @@
+{
+ "cmd.file.import_again": "Nhập lại",
+ "cmd.file.import_again.desc": "Tạo dự án mới từ tệp nguồn ở trạng thái hiện tại.",
+ "cmd.file.open_kept": "Mở bản nhập đã giữ",
+ "cmd.file.open_kept.desc": "Mở bản nhập đã hoàn tất được giữ lại khi hộp thoại thay đổi chưa lưu bị hủy."
+}

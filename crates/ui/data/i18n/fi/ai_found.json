@@ -1,0 +1,42 @@
+{
+ "ai.tool.show_elements": "Näytetään elementtejä",
+ "ai.tool.isolate_elements": "Eristetään elementtejä",
+ "ai.tool.color_by": "Värjätään arvon mukaan",
+ "ai.tool.reset_view": "Palautetaan näkymää",
+ "ai_found.found.query": "Löydetty",
+ "ai_found.found.show": "Näytetty",
+ "ai_found.found.isolate": "Eristetty",
+ "ai_found.found.hide": "Piilotettu",
+ "ai_found.found.color": "Värjätty",
+ "ai_found.found.count": "{n} / {m}",
+ "ai_found.found.none": "Mikään ei täsmää. Kokeile laajempaa suodatinta.",
+ "ai_found.found.show_btn": "Näytä",
+ "ai_found.found.show_tip": "Valitse nämä elementit ja zoomaa niihin pohjapiirroksessa ja 3D-näkymässä",
+ "ai_found.found.isolate_btn": "Eristä",
+ "ai_found.found.isolate_tip": "Näytä vain nämä elementit, kunnes näkymä palautetaan",
+ "ai_found.found.select_btn": "Valitse",
+ "ai_found.found.select_tip": "Valitse nämä elementit siirtämättä näkymää",
+ "ai_found.legend.title": "Väritys: {by}",
+ "ai_found.legend.row_tip": "Napsauta valitaksesi nämä elementit",
+ "ai_found.legend.empty_value": "Ei arvoa",
+ "ai_found.legend.other": {
+  "one": "# muu arvo",
+  "other": "# muuta arvoa"
+ },
+ "ai_found.view.title": "Tekoälyavustajan näkymä",
+ "ai_found.view.reset": "Palauta näkymä",
+ "ai_found.view.reset_tip": "Palauta näkymä, jonka tekoälyavustaja muutti ennen tätä",
+ "ai_found.view.shown": {
+  "one": "# elementti näytetty",
+  "other": "# elementtiä näytetty"
+ },
+ "ai_found.view.isolated": {
+  "one": "# elementti eristetty",
+  "other": "# elementtiä eristetty"
+ },
+ "ai_found.view.hidden": {
+  "one": "# elementti piilotettu",
+  "other": "# elementtiä piilotettu"
+ },
+ "ai_found.found.line": "{what}: {count}"
+}

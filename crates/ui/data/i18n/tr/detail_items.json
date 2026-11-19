@@ -1,0 +1,16 @@
+{
+ "cmd.drawing.to_detail": "Çizimi detaya dönüştür",
+ "cmd.drawing.to_detail.desc": "Seçilen çizim öğelerini ya da bu kattaki tüm çizimi plan üzerinde detay çizgilerine, metin notlarına ve bölgelere dönüştürür. Çizim olduğu gibi kalır.",
+ "detail_items.st.no_drawing": "Bu katta çizim yok",
+ "detail_items.st.nothing": "Dönüştürülecek bir şey yok: görünen katmanlarda çizgi, yay, metin veya dolgu yok",
+ "detail_items.st.done": "Detay öğeleri eklendi: çizgi {lines}, metin {texts}, bölge {regions}",
+ "detail_items.st.failed": "Detay öğeleri eklenemedi: {e}",
+ "detail_items.st.warn": "Detay öğeleri eklendi, ama görünüm yenilenemedi (çizgi {lines}, metin {texts}, bölge {regions}): {e}. Geri al komutu bunları kaldırır.",
+ "detail_items.st.bad_view": "Detay öğeleri için plan veya kesit görünümü gerekir",
+ "detail_items.st.no_transform": "Bu görünümde çizim için kullanılabilir bir koordinat sistemi yok; hiçbir şey eklenmedi",
+ "drafting_tools.free.plan_only": "Bu komut plan öğeleriyle çalışır; bir plan açın",
+ "drafting_tools.free.zero": "İki nokta çakışık; hiçbir şey eklenmedi",
+ "drafting_tools.free.select_first": "Önce dağıtılacak bu görünümün öğelerini seçin",
+ "drafting_tools.free.pick_item": "Etiketlemek için bu görünümün bir öğesine tıklayın",
+ "drafting_tools.free.dim_kind": "Çizim görünümünde yalnızca doğrusal ölçüler çalışır"
+}

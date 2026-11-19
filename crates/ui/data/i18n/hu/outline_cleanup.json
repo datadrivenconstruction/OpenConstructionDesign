@@ -1,0 +1,15 @@
+{
+ "cmd.ctx.floor.clean_outline": "Körvonal tisztítása",
+ "cmd.ctx.floor.clean_outline.desc": "Eltávolítja a keskeny csúcsokat, ahol a padló körvonala visszafordul önmagába. Előbb előnézetet mutat; egy visszavonási lépés.",
+ "outline_cleanup.title": "Körvonal tisztítása",
+ "outline_cleanup.intro": "Ennek a padlónak a körvonala keskeny csúcsokban fordul vissza önmagába: {n}. A tisztítás eltávolítja őket; minden más marad, ahogy van.",
+ "outline_cleanup.legend_before": "Vastag vonal: a jelenlegi körvonal",
+ "outline_cleanup.legend_after": "Vékony vonal: a körvonal a tisztítás után",
+ "outline_cleanup.undo": "Ezt egy lépésben visszavonhatja.",
+ "outline_cleanup.apply": "Tisztítás",
+ "outline_cleanup.cancel": "Mégse",
+ "outline_cleanup.done": "A körvonal megtisztítva, eltávolított csúcsok: {n}",
+ "outline_cleanup.none": "Ennek a padlónak a körvonalán nincsenek csúcsok",
+ "outline_cleanup.failed": "A körvonalat nem sikerült megtisztítani",
+ "outline_cleanup.changed": "A körvonal az előnézet óta módosult; semmi nem íródott. Ellenőrizze az új előnézetet."
+}

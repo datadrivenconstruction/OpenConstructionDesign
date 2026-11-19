@@ -1,0 +1,23 @@
+{
+ "params_list.n_params": {
+  "one": "# parameter",
+  "other": "# parametre"
+ },
+ "params_list.n_values": {
+  "one": "# værdi",
+  "other": "# værdier"
+ },
+ "params_list.n_elements": {
+  "one": "# element",
+  "other": "# elementer"
+ },
+ "params_list.exported": "{params} eksporteret til {file}",
+ "params_list.export_failed": "Parametrene blev ikke eksporteret: {why}",
+ "params_list.open_folder": "Åbn mappe",
+ "params_list.delete_tip": "Slet parameter og dens værdier",
+ "params_list.confirm": "Slet {name} og dens {values} på {elements}?",
+ "params_list.confirm_btn": "Slet",
+ "params_list.cancel": "Annuller",
+ "params_list.deleted": "Parameter {name} slettet ({values})",
+ "params_list.undo": "Fortryd"
+}

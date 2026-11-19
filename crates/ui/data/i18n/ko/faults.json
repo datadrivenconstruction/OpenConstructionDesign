@@ -1,0 +1,18 @@
+{
+ "faults.errors": {
+  "one": "모델에 오류 #건. 클릭하여 표시.",
+  "other": "모델에 오류 #건. 클릭하여 목록 보기."
+ },
+ "faults.warnings": {
+  "one": "모델에 경고 #건. 클릭하여 표시.",
+  "other": "모델에 경고 #건. 클릭하여 목록 보기."
+ },
+ "faults.title": "모델 결함: {n}",
+ "faults.none": "오류나 경고가 없습니다.",
+ "faults.cat.wall": "벽",
+ "faults.cat.slab": "바닥",
+ "faults.cat.opening": "개구부",
+ "faults.cat.curtain_wall": "커튼월",
+ "faults.cat.ramp": "경사로",
+ "faults.cat.zone": "영역"
+}

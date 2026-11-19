@@ -1,0 +1,7 @@
+{
+ "rebar_pick.pick.empty": "Raudoitus: valitse pilari, palkki, seinä, laatta tai perustus",
+ "rebar_pick.pick.unsupported": "Tätä valintaa ei voi raudoittaa. Valitse pilari, palkki, seinä, laatta tai perustus",
+ "rebar_pick.pick.keys": "Napsauta valitaksesi, Shift lisää · Enter avaa lomakkeen · Esc peruuttaa",
+ "rebar_pick.pick.open": "Avaa lomake",
+ "rebar_pick.pick.cancel": "Peruuta"
+}

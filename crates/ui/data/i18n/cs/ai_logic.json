@@ -1,0 +1,6 @@
+{
+ "ai_toast.toast_not_refreshed": "Použito jako krok zpět {n} (Ctrl+Z jej vrátí), ale pohled se neobnovil. Načtěte pohled znovu.",
+ "ai.optx.reload_failed": "Varianta „{name}“ je použita a uložena, ale pohled se nenačetl znovu: {e}",
+ "ai.cmp.stale": "Zastaralé",
+ "ai.cmp.stale_tip": "Tato varianta byla vytvořena ze staršího stavu modelu. Pro použití ji vygenerujte znovu."
+}

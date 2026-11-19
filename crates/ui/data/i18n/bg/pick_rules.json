@@ -1,0 +1,11 @@
+{
+ "pick_rules.filter": "Избор: всички",
+ "pick_rules.filter.on": "Избор: без {n}",
+ "pick_rules.filter.title": "Категории, които може да се избират с щракване",
+ "pick_rules.filter.all": "Избор на всички категории",
+ "pick_rules.filter.tip": "Филтър за избор: непоставените категории се пропускат при щракване и посочване",
+ "pick_rules.here": "Елементи тук",
+ "pick_rules.here.selected": "избрани",
+ "pick_rules.pinned": "Избери фиксираните елементи",
+ "pick_rules.here.row": "{cat} · {len}"
+}

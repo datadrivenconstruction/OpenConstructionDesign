@@ -1,0 +1,10 @@
+{
+ "dlg.dw.store.unloaded": "Bản vẽ “{name}” không đọc được từ dự án và được giữ nguyên trong tệp",
+ "dlg.dw.store.source_missing": "Bản vẽ “{name}”: không tìm thấy tệp nguồn, hiển thị bản sao được lưu trong dự án",
+ "dlg.dw.store.source_changed": "Bản vẽ “{name}”: tệp nguồn đã thay đổi kể từ khi được đặt, hiển thị bản sao được lưu trong dự án",
+ "dlg.dw.store.unreadable": "Các bản vẽ đã đặt được lưu trong dự án không thể đọc",
+ "dlg.dw.store.not_saved": "Bản vẽ chưa được lưu: {why}",
+ "dlg.dw.store.why_read": "các bản vẽ đã đặt được lưu trong dự án không thể đọc",
+ "dlg.dw.store.why_write": "không thể cập nhật tệp dự án",
+ "dlg.dw.store.missing_in_file": "Tệp đã lưu không giữ đủ mọi bản vẽ đã đặt"
+}

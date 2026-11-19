@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "Áp dụng đã dừng: mô hình được giữ nguyên",
+ "apply_verify.rolled_back": "Áp dụng không khớp với bản nháp và đã được hoàn lại; mô hình không đổi. {what}",
+ "apply_verify.diff.missing": "Bản nháp hiển thị {what} {kind}, nhưng Áp dụng không thực hiện.",
+ "apply_verify.diff.extra": "Áp dụng {kind} {what}, mà bản nháp không hiển thị.",
+ "apply_verify.diff.kind": "Bản nháp hiển thị {what} {shown}, nhưng Áp dụng {applied} nó.",
+ "apply_verify.diff.value": "{what}: “{col}” khác với bản nháp.",
+ "apply_verify.diff.truncated": "Bản nháp và thay đổi đã áp dụng khác nhau về kích thước.",
+ "apply_verify.diff.unreadable": "Không đọc lại được thay đổi đã áp dụng ({e}).",
+ "apply_verify.no_base": "Áp dụng chưa chạy: thiếu bản sao để kiểm tra bản nháp. Mô hình không đổi; hãy yêu cầu bản nháp lại.",
+ "apply_verify.take_back_failed": "Hoàn lại thất bại ({e}): hãy dùng Hoàn tác.",
+ "apply_verify.kind.created": "đã tạo",
+ "apply_verify.kind.changed": "đã đổi",
+ "apply_verify.kind.deleted": "đã xóa",
+ "apply_verify.card.type_row": "Loại {type} · {n} cấu kiện nhận thay đổi"
+}

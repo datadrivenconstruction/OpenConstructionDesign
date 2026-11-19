@@ -1,0 +1,10 @@
+{
+ "wall_stack.we.stack_caption": "Sammensat type",
+ "wall_stack.we.side_left": "Venstre flade",
+ "wall_stack.we.side_right": "Højre flade",
+ "wall_stack.we.from": "Fra",
+ "wall_stack.we.to": "Til",
+ "wall_stack.we.bottom": "Underside",
+ "wall_stack.we.delete_tip": "Slet denne profil",
+ "wall_stack.we.from_after_to": "„Fra“ skal være før „Til“"
+}

@@ -1,0 +1,499 @@
+{
+ "items": [
+  {
+   "key": "door.clear_min",
+   "value": 0.775,
+   "unit": "m",
+   "source": "ad-m",
+   "clause": "1.14a and 1.9a, M4(1) entrance doors 775 mm clear opening",
+   "verified": true,
+   "note": "read 2026-11-13: gov.uk Approved Document M vol 1, 2015 ed. with 2016 amendments; M4(2) Table 2.1 allows 750 to 800 by corridor width"
+  },
+  {
+   "key": "door.clear_min.accessible",
+   "value": 0.85,
+   "unit": "m",
+   "source": "ad-m",
+   "clause": "3.24d, M4(3) every door 850 mm clear opening; 2.20d M4(2) entrance 850 mm",
+   "verified": true,
+   "note": "read 2026-11-13: gov.uk Approved Document M vol 1, 2015 ed. with 2016 amendments"
+  },
+  {
+   "key": "accessible.turning_circle",
+   "value": 1.5,
+   "unit": "m",
+   "source": "ad-m",
+   "clause": "3.43e, M4(3) bathroom 1500 mm clear turning circle; 3.45 outdoor paths",
+   "verified": true,
+   "note": "read 2026-11-13: gov.uk Approved Document M vol 1, 2015 ed. with 2016 amendments"
+  },
+  {
+   "key": "ramp.slope_max",
+   "value": 0.05,
+   "unit": "ratio",
+   "source": "ad-m-v2",
+   "clause": "1.26(b) and Table 1: ramp gradient 1:20 for a flight with going up to 10 m (rise 500 mm); steeper 1:15 at 5 m, 1:12 at 2 m",
+   "verified": true,
+   "url": "https://assets.publishing.service.gov.uk/media/66f6c5eec71e42688b65ee11/ADM__V2_with_2024_amendments.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "A ramped access complies if gradient and going follow Table 1; the shallowest limit is 1:20 (5 percent) for goings up to 10 m, steeper only for shorter flights.",
+   "note": "read 2026-11-14: assets.publishing.service.gov.uk/media/66f6c5eec71e42688b65ee11/ADM__V2_with_2024_amendments.pdf; 0.05 is the long-flight (10 m) limit; 0.0833 allowed for 2 m going"
+  },
+  {
+   "key": "building.second_stair_height",
+   "value": 18.0,
+   "unit": "m",
+   "source": "ad-b-v1",
+   "clause": "second stair for residential buildings above this height, from 30 Sep 2026",
+   "verified": true
+  },
+  {
+   "key": "dwelling.area.1b2p",
+   "value": 50.0,
+   "unit": "m2",
+   "source": "ndss",
+   "clause": "table 1",
+   "verified": true
+  },
+  {
+   "key": "dwelling.area.2b4p",
+   "value": 70.0,
+   "unit": "m2",
+   "source": "ndss",
+   "clause": "table 1",
+   "verified": true
+  },
+  {
+   "key": "dwelling.area.3b5p",
+   "value": 86.0,
+   "unit": "m2",
+   "source": "ndss",
+   "clause": "table 1",
+   "verified": true
+  },
+  {
+   "key": "bedroom.area_double",
+   "value": 11.5,
+   "unit": "m2",
+   "source": "ndss",
+   "clause": "para. 10 double bedroom (width 2.75 m)",
+   "verified": true
+  },
+  {
+   "key": "workplace.volume_per_person",
+   "value": 11.0,
+   "unit": "m3",
+   "source": "whsw1992",
+   "clause": "ACOP L24 to regulation 10, room volume per person at least 11 m3",
+   "verified": true,
+   "note": "read 2026-11-13: hse.gov.uk/contact/faqs/roomspace.htm quoting the ACOP"
+  },
+  {
+   "key": "egress.travel_max",
+   "value": 45.0,
+   "unit": "m",
+   "source": "ad-b-v2",
+   "clause": "table 2.1, office, escape in more than one direction: 45 m (one direction 18 m)",
+   "verified": true,
+   "note": "read 2026-11-14: assets.publishing.service.gov.uk/media/6aa3bb7492e72b8ac437f145/AD_B2_2026.pdf (2019 edition, amended to 2026)"
+  },
+  {
+   "key": "corridor.width_min.accessible",
+   "value": 1.2,
+   "unit": "m",
+   "source": "ad-m-v2",
+   "clause": "3.14(b), corridors 1200 mm clear with passing places",
+   "verified": true,
+   "note": "read 2026-11-14: assets.publishing.service.gov.uk/media/66f6c5eec71e42688b65ee11/ADM__V2_with_2024_amendments.pdf"
+  },
+  {
+   "key": "fire.compartment_area_max",
+   "value": null,
+   "unit": "m2",
+   "source": "ad-b-v2",
+   "clause": "table 8.1, offices: compartment area not limited",
+   "verified": true,
+   "note": "read 2026-11-14: assets.publishing.service.gov.uk/media/6aa3bb7492e72b8ac437f145/AD_B2_2026.pdf; 2000 m2 is the unsprinklered shop and assembly row, not offices",
+   "unlimited": true
+  },
+  {
+   "key": "climate.heating_design_temp",
+   "value": -4.0,
+   "unit": "C",
+   "source": "uk-design-baseline",
+   "clause": "dims, heating design outdoor temperature, southern England",
+   "url": "https://assets.publishing.service.gov.uk/media/62a761edd3bf7f03667c667e/ADF2_revised.pdf",
+   "accessed": "2026-11-15",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-15: the Building Regulations set no design temperature; editor default for London"
+  },
+  {
+   "key": "climate.cooling_design_temp",
+   "value": 28.0,
+   "unit": "C",
+   "source": "uk-design-baseline",
+   "clause": "dims, cooling design outdoor temperature, southern England",
+   "url": "https://assets.publishing.service.gov.uk/media/62a761edd3bf7f03667c667e/ADF2_revised.pdf",
+   "accessed": "2026-11-15",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-15: the Building Regulations set no design temperature; editor default for London"
+  },
+  {
+   "key": "ventilation.oa_per_person",
+   "value": 36.0,
+   "unit": "m3/h",
+   "source": "adf-v2",
+   "clause": "para 1.32(a), outdoor air for occupiable rooms in offices",
+   "orig": {
+    "value": 10,
+    "unit": "l/s"
+   },
+   "url": "https://assets.publishing.service.gov.uk/media/62a761edd3bf7f03667c667e/ADF2_revised.pdf",
+   "accessed": "2026-11-15",
+   "paraphrase": "Office rooms get the larger total of 10 l/s per person or 1 l/s per m2 of floor.",
+   "verified": true,
+   "note": "read 2026-11-15 in the official PDF, section 1; the higher of the per person and per area totals applies"
+  },
+  {
+   "key": "ventilation.oa_per_area",
+   "value": 3.6,
+   "unit": "m3/h m2",
+   "source": "adf-v2",
+   "clause": "para 1.32(b), outdoor air for occupiable rooms in offices",
+   "orig": {
+    "value": 1,
+    "unit": "l/s m2"
+   },
+   "url": "https://assets.publishing.service.gov.uk/media/62a761edd3bf7f03667c667e/ADF2_revised.pdf",
+   "accessed": "2026-11-15",
+   "verified": true,
+   "note": "read 2026-11-15 in the official PDF, section 1; the higher total governs"
+  },
+  {
+   "key": "egress.occupant_area.office",
+   "value": 6.0,
+   "unit": "m2",
+   "source": "ad-b-v2",
+   "clause": "Appendix D Table D1 item 9 Office",
+   "verified": true,
+   "url": "https://assets.publishing.service.gov.uk/media/6aa3bb7492e72b8ac437f145/AD_B2_2026.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Office floor space factor is six square metres per person.",
+   "note": "read 2026-11-14: assets.publishing.service.gov.uk AD_B2_2026.pdf (Approved Document B Vol 2, 2019 edition text, page footer); area excludes stairs, lifts, WCs, fixed structure (D2); counters/display units included"
+  },
+  {
+   "key": "egress.occupant_area.assembly",
+   "value": 1.0,
+   "unit": "m2",
+   "source": "ad-b-v2",
+   "clause": "Appendix D Table D1 item 4 (meeting room, dining room, restaurant, conference room)",
+   "verified": true,
+   "url": "https://assets.publishing.service.gov.uk/media/6aa3bb7492e72b8ac437f145/AD_B2_2026.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Rooms with tables or loose seating such as meeting or dining rooms use one square metre per person.",
+   "note": "read 2026-11-14: assets.publishing.service.gov.uk AD_B2_2026.pdf (Approved Document B Vol 2, 2019 edition text, page footer); net area per D2; assembly hall/dance floor without fixed seating is 0.5 (item 2); standing/bar 0.3; fixed seats may count by seat number (note 5)"
+  },
+  {
+   "key": "egress.occupant_area.retail",
+   "value": 2.0,
+   "unit": "m2",
+   "source": "ad-b-v2",
+   "clause": "Appendix D Table D1 item 7 Shop sales area (note 6)",
+   "verified": true,
+   "url": "https://assets.publishing.service.gov.uk/media/6aa3bb7492e72b8ac437f145/AD_B2_2026.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "General shop sales areas use two square metres per person.",
+   "note": "read 2026-11-14: assets.publishing.service.gov.uk AD_B2_2026.pdf (Approved Document B Vol 2, 2019 edition text, page footer); net area per D2; bulky-goods shops 7.0 (item 10)"
+  },
+  {
+   "key": "egress.occupant_area.residential",
+   "value": 8.0,
+   "unit": "m2",
+   "source": "ad-b-v2",
+   "clause": "Appendix D Table D1 item 12 Bedroom or study-bedroom",
+   "verified": true,
+   "url": "https://assets.publishing.service.gov.uk/media/6aa3bb7492e72b8ac437f145/AD_B2_2026.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Bedrooms and study-bedrooms use eight square metres per person.",
+   "note": "read 2026-11-14: assets.publishing.service.gov.uk AD_B2_2026.pdf (Approved Document B Vol 2, 2019 edition text, page footer); Table D1 is for non-dwellings; dwellings are counted by design capacity (D1a). Bed-sitting room 10.0. Used as nearest residential row"
+  },
+  {
+   "key": "egress.occupant_area.industrial",
+   "value": 5.0,
+   "unit": "m2",
+   "source": "ad-b-v2",
+   "clause": "Appendix D Table D1 item 8 Factory production area / workshop",
+   "verified": true,
+   "url": "https://assets.publishing.service.gov.uk/media/6aa3bb7492e72b8ac437f145/AD_B2_2026.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Factory production areas and workshops use five square metres per person.",
+   "note": "read 2026-11-14: assets.publishing.service.gov.uk AD_B2_2026.pdf (Approved Document B Vol 2, 2019 edition text, page footer); net area per D2"
+  },
+  {
+   "key": "egress.occupant_area.storage",
+   "value": 30.0,
+   "unit": "m2",
+   "source": "ad-b-v2",
+   "clause": "Appendix D Table D1 item 14 Storage and warehousing",
+   "verified": true,
+   "url": "https://assets.publishing.service.gov.uk/media/6aa3bb7492e72b8ac437f145/AD_B2_2026.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Storage and warehousing use thirty square metres per person.",
+   "note": "read 2026-11-14: assets.publishing.service.gov.uk AD_B2_2026.pdf (Approved Document B Vol 2, 2019 edition text, page footer); net area per D2"
+  },
+  {
+   "key": "egress.single_exit_occupants_max",
+   "value": 60,
+   "unit": "count",
+   "source": "ad-b-v2",
+   "clause": "Table 2.2 (paras 2.6, 2.9): max 60 people, 1 escape route/exit",
+   "verified": true,
+   "url": "https://assets.publishing.service.gov.uk/media/6aa3bb7492e72b8ac437f145/AD_B2_2026.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "A room, tier or storey with up to 60 people may have one escape route or exit, subject to travel distance limits.",
+   "note": "read 2026-11-14: assets.publishing.service.gov.uk AD_B2_2026.pdf (Approved Document B Vol 2, 2019 edition text, page footer); applies to any room/tier/storey; assembly/bars limit of 60 per room in 2.6a(i)"
+  },
+  {
+   "key": "egress.three_exits_occupants",
+   "value": 600,
+   "unit": "count",
+   "source": "ad-b-v2",
+   "clause": "Table 2.2: more than 600 people need 3 exits",
+   "verified": true,
+   "url": "https://assets.publishing.service.gov.uk/media/6aa3bb7492e72b8ac437f145/AD_B2_2026.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Above 600 occupants a room, tier or storey needs at least three escape routes.",
+   "note": "read 2026-11-14: assets.publishing.service.gov.uk AD_B2_2026.pdf (Approved Document B Vol 2, 2019 edition text, page footer); 2 exits from 61 to 600; threshold is 'more than 600'"
+  },
+  {
+   "key": "egress.door_width_per_person",
+   "value": 0.005,
+   "unit": "m",
+   "source": "ad-b-v2",
+   "clause": "Table 2.3 row 'more than 220' (5 mm per person, note 5)",
+   "verified": true,
+   "url": "https://assets.publishing.service.gov.uk/media/6aa3bb7492e72b8ac437f145/AD_B2_2026.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Above 220 people, escape route and exit width is five millimetres per person.",
+   "note": "read 2026-11-14: assets.publishing.service.gov.uk AD_B2_2026.pdf (Approved Document B Vol 2, 2019 edition text, page footer); for up to 220 people stepped minima apply (750/850/1050 mm for 60/110/220); largest exit discounted (2.21)"
+  },
+  {
+   "key": "egress.stair_width_per_person",
+   "value": 0.005,
+   "unit": "m",
+   "source": "ad-b-v2",
+   "clause": "para 3.18 formula P=200W+50(W-0.3)(N-1), Table 3.2 (single storey served)",
+   "verified": true,
+   "url": "https://assets.publishing.service.gov.uk/media/6aa3bb7492e72b8ac437f145/AD_B2_2026.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "For stairs 1.1 m or wider serving one storey, capacity is 200 people per metre, i.e. 5 mm per person; more storeys served raise capacity.",
+   "note": "read 2026-11-14: assets.publishing.service.gov.uk AD_B2_2026.pdf (Approved Document B Vol 2, 2019 edition text, page footer); simultaneous evacuation; phased evacuation (Table 3.3) needs ~10 mm per person on most occupied storey plus 100 mm; stair min widths Table 3.1 (800 mm general, 1000 mm over 50 people basis)"
+  },
+  {
+   "key": "egress.exit_width_min",
+   "value": 0.75,
+   "unit": "m",
+   "source": "ad-b-v2",
+   "clause": "Table 2.3 first row: up to 60 people, 750 mm",
+   "verified": true,
+   "url": "https://assets.publishing.service.gov.uk/media/6aa3bb7492e72b8ac437f145/AD_B2_2026.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Escape route or exit serving up to 60 people needs at least 750 mm width.",
+   "note": "read 2026-11-14: assets.publishing.service.gov.uk AD_B2_2026.pdf (Approved Document B Vol 2, 2019 edition text, page footer); may be 530 mm only for gangways between fixed storage racking; Approved Document M may require more; 850 mm for up to 110"
+  },
+  {
+   "key": "egress.dead_end_max",
+   "value": 18.0,
+   "unit": "m",
+   "source": "ad-b-v2",
+   "clause": "Table 2.1 Office, one direction only: 18 m (also para 2.6a)",
+   "verified": true,
+   "url": "https://assets.publishing.service.gov.uk/media/6aa3bb7492e72b8ac437f145/AD_B2_2026.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Office travel distance where escape is possible in one direction only is 18 m.",
+   "note": "read 2026-11-14: assets.publishing.service.gov.uk AD_B2_2026.pdf (Approved Document B Vol 2, 2019 edition text, page footer); travel distance in a dead-end condition, not corridor length; 45 m where more than one direction; corridor dead ends over 4.5 m need fire door separation (2.28); unsprinklered/sprinkler not distinguished"
+  },
+  {
+   "key": "fire.wall_spacing_max",
+   "value": null,
+   "unit": "m",
+   "source": "ad-b-v2",
+   "clause": "Table 8.1 Office: no limit on floor area per compartment, any height",
+   "verified": true,
+   "url": "https://assets.publishing.service.gov.uk/media/6aa3bb7492e72b8ac437f145/AD_B2_2026.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "The guidance sets no maximum compartment floor area or length for offices.",
+   "note": "read 2026-11-14: assets.publishing.service.gov.uk AD_B2_2026.pdf (Approved Document B Vol 2, 2019 edition text, page footer); expressed as area table; no length limit in guidance. Shops unsprinklered 2000 m2, industrial 7000 m2 (<=18 m)",
+   "unlimited": true
+  },
+  {
+   "key": "fire.compartment_wall_rating",
+   "value": 60,
+   "unit": "min",
+   "source": "ad-b-v2",
+   "clause": "Table B2 office without sprinkler, top floor up to 18 m (and up to 11 m); Table B1 item 7 compartment walls follow Table B2",
+   "verified": true,
+   "url": "https://assets.publishing.service.gov.uk/media/6aa3bb7492e72b8ac437f145/AD_B2_2026.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Compartment walls in an unsprinklered office up to 18 m high need 60 minutes.",
+   "note": "read 2026-11-14: assets.publishing.service.gov.uk AD_B2_2026.pdf (Approved Document B Vol 2, 2019 edition text, page footer); 90 min for up to 30 m; not permitted above 30 m unsprinklered; 30 min with sprinklers up to 18 m; walls separating occupancies (item 6) also follow Table B2"
+  },
+  {
+   "key": "fire.stair_enclosure_rating",
+   "value": 30,
+   "unit": "min",
+   "source": "ad-b-v2",
+   "clause": "Table B1 item 9a: enclosure to protected stairway not forming part of compartment wall or protected shaft, REI 30",
+   "verified": true,
+   "url": "https://assets.publishing.service.gov.uk/media/6aa3bb7492e72b8ac437f145/AD_B2_2026.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "A protected stairway enclosure that is not also a compartment wall or protected shaft needs 30 minutes.",
+   "note": "read 2026-11-14: assets.publishing.service.gov.uk AD_B2_2026.pdf (Approved Document B Vol 2, 2019 edition text, page footer); where the stair wall is also a compartment wall or shaft the Table B2 period applies (60 min office <=18 m); Table B1 reading from layout and page image, cross-checked via block positions"
+  },
+  {
+   "key": "envelope.u_wall",
+   "value": 0.26,
+   "unit": "W/m2K",
+   "source": "ad-l-v1",
+   "clause": "table 4.1, limiting U-values of new fabric",
+   "verified": false,
+   "note": "not read against the clause: value recalled from the edition named, an engineer checks it before relying on it",
+   "paraphrase": "A new external wall of a dwelling may not exceed U 0.26 W/m2K."
+  },
+  {
+   "key": "envelope.u_roof",
+   "value": 0.16,
+   "unit": "W/m2K",
+   "source": "ad-l-v1",
+   "clause": "table 4.1, limiting U-values of new fabric",
+   "verified": false,
+   "note": "not read against the clause: value recalled from the edition named, an engineer checks it before relying on it",
+   "paraphrase": "A new roof of a dwelling may not exceed U 0.16 W/m2K."
+  },
+  {
+   "key": "envelope.u_ground",
+   "value": 0.18,
+   "unit": "W/m2K",
+   "source": "ad-l-v1",
+   "clause": "table 4.1, limiting U-values of new fabric",
+   "verified": false,
+   "note": "not read against the clause: value recalled from the edition named, an engineer checks it before relying on it",
+   "paraphrase": "A new ground floor of a dwelling may not exceed U 0.18 W/m2K."
+  },
+  {
+   "key": "room.height_min",
+   "na": true,
+   "value": null,
+   "unit": "m",
+   "source": "ndss",
+   "verified": false,
+   "note": "na: the building regulations set no minimum room height; the space standard asks 2.3 m over at least 75 % of a dwelling's floor area, which rule uk.low.share checks",
+   "text": {
+    "en": "No minimum room height in the regulations; the space standard's 2.3 m over 75 % of the floor is checked as a share.",
+    "ru": "В регламенте нет минимальной высоты помещения; стандарт площадей требует 2,3 м на 75 % площади, это проверяется как доля."
+   }
+  },
+  {
+   "key": "corridor.width_min",
+   "value": 0.75,
+   "unit": "m",
+   "orig": {
+    "value": 750,
+    "unit": "mm"
+   },
+   "source": "ad-b-v2",
+   "clause": "table 2.3, escape route serving up to 60 people at least 750 mm (wider for more people)",
+   "verified": false,
+   "url": "https://assets.publishing.service.gov.uk/media/6aa3bb7492e72b8ac437f145/AD_B2_2026.pdf",
+   "accessed": "2026-11-15",
+   "paraphrase": "An escape route for up to 60 people is at least 750 mm wide.",
+   "note": "to_verify: number from the published approved document as known to the editor; clause not opened in this pass"
+  },
+  {
+   "key": "building.high_rise_height",
+   "value": 18.0,
+   "unit": "m",
+   "source": "ba1984",
+   "clause": "s.120D(2)(a), higher-risk building: at least 18 m high or at least 7 storeys",
+   "verified": true,
+   "url": "https://www.legislation.gov.uk/ukpga/1984/55/section/120D",
+   "accessed": "2026-11-15",
+   "paraphrase": "A building of 18 m or seven storeys and more is a higher-risk building.",
+   "note": "read 2026-11-15: legislation.gov.uk/ukpga/1984/55/section/120D"
+  },
+  {
+   "key": "building.class5_height",
+   "na": true,
+   "value": null,
+   "unit": "m",
+   "source": "ad-b-v2",
+   "verified": false,
+   "note": "na: no building class by height; height bands appear per measure (18 m higher-risk, building.high_rise_height; 11 m and 30 m in the fire guidance)",
+   "text": {
+    "en": "No building height class; individual measures use their own height bands.",
+    "ru": "Нет класса здания по высоте; отдельные требования используют свои пороги высоты."
+   }
+  },
+  {
+   "key": "daylight.window_floor_ratio",
+   "value": null,
+   "unlimited": true,
+   "unit": "ratio",
+   "source": "br2010",
+   "clause": "Schedule 1, no part sets a daylight or glazing-to-floor requirement",
+   "verified": false,
+   "url": "https://www.legislation.gov.uk/uksi/2010/2214/schedule/1",
+   "accessed": "2026-11-15",
+   "paraphrase": "The regulations set no glazing share of the floor area.",
+   "note": "to_verify: schedule parts A to S as known to the editor; planning daylight guidance is not a building regulation"
+  },
+  {
+   "key": "stair.riser_max",
+   "value": 0.17,
+   "unit": "m",
+   "orig": {
+    "value": 170,
+    "unit": "mm"
+   },
+   "source": "ad-k",
+   "clause": "section 1 table 1.1, general access stair rise at most 170 mm (private stair 220 mm)",
+   "verified": false,
+   "url": "https://www.gov.uk/government/publications/protection-from-falling-collision-and-impact-approved-document-k",
+   "accessed": "2026-11-15",
+   "paraphrase": "A general access stair rises at most 170 mm per step.",
+   "note": "same clause as rule uk.off.riser, read 2026-11-13 by an earlier pass; not re-read here"
+  },
+  {
+   "key": "stair.going_min",
+   "value": 0.25,
+   "unit": "m",
+   "orig": {
+    "value": 250,
+    "unit": "mm"
+   },
+   "source": "ad-k",
+   "clause": "section 1 table 1.1, general access stair going at least 250 mm (private stair 220 mm)",
+   "verified": false,
+   "url": "https://www.gov.uk/government/publications/protection-from-falling-collision-and-impact-approved-document-k",
+   "accessed": "2026-11-15",
+   "paraphrase": "A general access stair going is at least 250 mm.",
+   "note": "same clause as rule uk.off.tread, read 2026-11-13 by an earlier pass; not re-read here"
+  },
+  {
+   "key": "guard.height_min",
+   "value": 1.1,
+   "unit": "m",
+   "orig": {
+    "value": 1100,
+    "unit": "mm"
+   },
+   "source": "ad-k",
+   "clause": "section 3, guarding of balconies and edges 1100 mm (900 mm for stairs and landings inside a dwelling)",
+   "verified": false,
+   "url": "https://www.gov.uk/government/publications/protection-from-falling-collision-and-impact-approved-document-k",
+   "accessed": "2026-11-15",
+   "paraphrase": "Guarding at a balcony or open edge is at least 1100 mm high.",
+   "note": "to_verify: number from the published approved document as known to the editor; clause not opened in this pass"
+  }
+ ]
+}

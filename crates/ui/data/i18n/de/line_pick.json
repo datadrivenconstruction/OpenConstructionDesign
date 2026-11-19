@@ -1,0 +1,22 @@
+{
+ "cmd.arch.grid_pick": "Achse entlang Linie",
+ "cmd.arch.grid_pick.desc": "Erstellt eine Achse genau entlang einer gewählten Zeichnungslinie des aktuellen Geschosses; die Namen setzen die Reihe fort. Tab übernimmt alle parallelen Linien derselben Zeichnungsebene auf einmal. Jede Wahl ist ein Rückgängig-Schritt.",
+ "cmd.struct.beam_pick": "Träger entlang Linie",
+ "cmd.struct.beam_pick.desc": "Setzt einen Träger des aktuellen Typs auf dem aktiven Geschoss entlang einer gewählten Zeichnungslinie. Tab übernimmt die verbundene Kette. Jede Wahl ist ein Rückgängig-Schritt.",
+ "hint.grid_pick.one": "Achse entlang Linie: eine Zeichnungslinie wählen · Tab alle parallelen Linien ihrer Ebene · Esc beendet",
+ "hint.grid_pick.more": "Achse entlang Linie: eine Linie wählen, um alle parallelen Linien ihrer Ebene zu übernehmen · Tab eine Linie · Esc — Modus verlassen",
+ "hint.beam_pick.one": "Träger entlang Linie: eine Zeichnungslinie wählen · Tab verbundene Kette · Esc beendet",
+ "hint.beam_pick.more": "Träger entlang Linie: eine Linie wählen, um ihre Kette zu übernehmen · Tab eine Linie · Esc — Modus verlassen",
+ "line_pick.st.start_grid": "Eine Zeichnungslinie wählen. Tab: alle parallelen Linien ihrer Ebene",
+ "line_pick.st.start_beam": "Eine Zeichnungslinie für einen Träger {type} wählen. Tab: verbundene Kette",
+ "line_pick.st.grid_done": "Achse {name} hinzugefügt",
+ "line_pick.st.grids_done": "{n} Achsen hinzugefügt: {first} — {last}",
+ "line_pick.st.beam_done": "Träger {type} hinzugefügt",
+ "line_pick.st.beams_done": "{n} Träger {type} hinzugefügt",
+ "line_pick.st.on_grid": "Diese Linie hat bereits Achse {name}",
+ "line_pick.st.on_beam": "Diese Linie hat bereits Träger {id}",
+ "line_pick.st.no_layer": "Die Zeichnungsebenen der Linien sind noch nicht bekannt, erneut versuchen",
+ "line_pick.st.no_beam_type": "Im Katalog kein Trägerquerschnitt",
+ "line_pick.st.reload_warn": "Erstellt, aber die Ansicht konnte nicht neu geladen werden: {err}",
+ "line_pick.st.failed": "Nicht erstellt: {err}"
+}

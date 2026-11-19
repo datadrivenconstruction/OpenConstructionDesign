@@ -1,0 +1,22 @@
+family Facade Fin
+category generic
+host floor
+ifc IfcShadingDevice NOTDEFINED
+param Height length type 3000mm
+param Depth length type 400mm
+param Thick length type 60mm
+param Fin material type "Anodised Aluminium Bronze"
+type "H2.7" Height=2700mm
+type "H3.0" Height=3000mm
+type "H3.3" Height=3300mm
+type "H3.6" Height=3600mm
+type "H3.9" Height=3900mm
+type "H4.2" Height=4200mm
+type "H4.5" Height=4500mm
+type "H4.8" Height=4800mm
+type "H5.1" Height=5100mm
+type "H5.4" Height=5400mm
+type "H5.7" Height=5700mm
+type "H6.0" Height=6000mm
+extrude Body rect(-Thick / 2, 0, Thick / 2, Depth) z(0, Height) mat(Fin) show(3d, elev)
+symbol rect(-Thick / 2, 0, Thick / 2, Depth)

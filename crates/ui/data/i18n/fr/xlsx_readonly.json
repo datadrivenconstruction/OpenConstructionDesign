@@ -1,0 +1,6 @@
+{
+ "xlsx_readonly.read_only": "Le classeur est en lecture seule (propriété du fichier ou droits du dossier). Exportez vers une copie, ou décochez Lecture seule dans les propriétés du fichier et réessayez.",
+ "xlsx_readonly.export_copy": "Exporter vers une copie",
+ "xlsx_readonly.no_copy_name": "Aucun nom libre pour une copie à côté du classeur.",
+ "xlsx_readonly.copied": "Le classeur est resté tel quel. Une copie actualisée a été écrite à côté et est désormais liée : {path}"
+}

@@ -1,0 +1,6 @@
+{
+ "pair_input.pair_hint": "To værdier adskilles med semikolon: @1000;500",
+ "pair_input.old_pair": "Et komma mellem to hele tal laver ikke længere et par: skriv 6000;4000 for to værdier eller 6000,5 for et decimaltal",
+ "pair_input.op.bad_length": "Ikke en længde: {text} ({why}). Intet blev ændret",
+ "pair_input.op.bad_count": "Antal {text} blev ikke overtaget: et heltal fra {min} til {max}"
+}

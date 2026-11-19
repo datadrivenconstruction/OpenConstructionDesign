@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "واگرد: {what}",
+ "undo_label.redo_what": "بازانجام: {what}",
+ "undo_label.undo_none": "چیزی برای واگرد نیست",
+ "undo_label.redo_none": "چیزی برای بازانجام نیست"
+}

@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "Automatické ukládání selhalo, nejnovější změny nejsou chráněny. {why}",
+ "autosave_status.autosave_open": "Nastavení automatického ukládání",
+ "autosave_status.autosave_recovered": "Automatické ukládání znovu funguje.",
+ "autosave_status.autosave_reason": "Důvod: {why}"
+}

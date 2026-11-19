@@ -1,0 +1,26 @@
+{
+ "params_list.n_params": {
+  "one": "# parametru",
+  "few": "# parametri",
+  "other": "# de parametri"
+ },
+ "params_list.n_values": {
+  "one": "# valoare",
+  "few": "# valori",
+  "other": "# de valori"
+ },
+ "params_list.n_elements": {
+  "one": "# element",
+  "few": "# elemente",
+  "other": "# de elemente"
+ },
+ "params_list.exported": "{params} exportați în {file}",
+ "params_list.export_failed": "Parametrii nu au fost exportați: {why}",
+ "params_list.open_folder": "Deschide dosarul",
+ "params_list.delete_tip": "Șterge parametrul și valorile lui",
+ "params_list.confirm": "Ștergeți {name} și cele {values} ale sale de pe {elements}?",
+ "params_list.confirm_btn": "Șterge",
+ "params_list.cancel": "Renunță",
+ "params_list.deleted": "Parametrul {name} șters ({values})",
+ "params_list.undo": "Anulare"
+}

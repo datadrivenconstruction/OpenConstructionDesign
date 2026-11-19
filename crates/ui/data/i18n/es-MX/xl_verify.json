@@ -1,0 +1,9 @@
+{
+ "xl.msg.base_value": "falló la comprobación de relectura, se conserva el libro anterior: {} ({}) se esperaba '{}', se leyó '{}'",
+ "xl.msg.base_missing": "falló la comprobación de relectura, se conserva el libro anterior: la lámina {} no tiene fila para el id {}",
+ "xl.msg.base_extra": "falló la comprobación de relectura, se conserva el libro anterior: la fila {} no está en el modelo",
+ "xl.msg.base_refused": "falló la comprobación de relectura, se conserva el libro anterior: {} ({}) fue rechazado: {}",
+ "xl.msg.base_sheet": "falló la comprobación de relectura, se conserva el libro anterior: la lámina {} falta, está vacía o no se puede leer",
+ "xl.msg.base_newer": "falló la comprobación de relectura, se conserva el libro anterior: {} celdas no contienen el valor del modelo",
+ "xl.msg.base_unreadable": "falló la comprobación de relectura, se conserva el libro anterior: el libro nuevo no se puede leer ({})"
+}

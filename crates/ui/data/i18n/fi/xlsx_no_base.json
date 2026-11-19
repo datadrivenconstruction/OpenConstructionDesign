@@ -1,0 +1,6 @@
+{
+ "xlsx_no_base.title": "Tässä työkirjassa ei ole vertailutietoja",
+ "xlsx_no_base.detail": "Piilotettu vertailuarkki puuttuu tai on vaurioitunut (toinen ohjelma tallensi työkirjan uudelleen tai se tehtiin käsin). Jokainen eroava solu korvaa mallin arvon; vientiä myöhemmin tehtyjä mallimuokkauksia ei voi tunnistaa. Työkirjasta puuttuvia rivejä ei poisteta.",
+ "xlsx_no_base.confirm": "Olen tarkistanut muutokset: korvaa mallin arvot ({n})",
+ "xlsx_no_base.confirm_first": "Vahvista ensin vertailutiedotta puuttuvan työkirjan tuonti"
+}

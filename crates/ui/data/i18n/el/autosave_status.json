@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "Η αυτόματη αποθήκευση απέτυχε, οι τελευταίες αλλαγές δεν προστατεύονται. {why}",
+ "autosave_status.autosave_open": "Ρυθμίσεις αυτόματης αποθήκευσης",
+ "autosave_status.autosave_recovered": "Η αυτόματη αποθήκευση λειτουργεί ξανά.",
+ "autosave_status.autosave_reason": "Αιτία: {why}"
+}

@@ -1,0 +1,4 @@
+{
+ "xl.msg.x_formulas_in_column_x_on_sheet_x_replaced_by_values": "'{}' sayfasındaki '{}' sütunundaki {} formül değerlerle değiştirildi",
+ "xl.msg.formula_in_a_model_column_not_applied": "Model sütunundaki formül: sonucu uygulanmaz, model değeri kalır; değiştirmek için bir değer yazın"
+}

@@ -1,0 +1,22 @@
+{
+ "ai.audit.tokens": "{n} токен",
+ "ai.audit.filter.all": "Барлығы",
+ "ai.audit.filter.ai": "AI",
+ "ai.audit.filter.me": "Мен",
+ "ai.audit.search": "Өзгерістерді іздеу",
+ "ai.audit.search.clear": "Іздеуді тазалау",
+ "ai.audit.show_all": "Барлығын көрсету",
+ "ai.audit.empty.hint": "Модель немесе агент жасаған немесе қолданған өзгерістер осында пайда болады, әрқайсысы кері қайтару мүмкіндігімен.",
+ "ai.audit.no_match": "Сүзгіге сай өзгерістер жоқ.",
+ "ai.audit.show.tip": "Осы өзгерістің әсер еткен элементтерін таңдап көрсету",
+ "ai.audit.revert.ask": "«{what}» өзгерісін қайтару керек пе? {change}.",
+ "ai.audit.revert.elements": {
+  "one": "# элемент өзгерісі",
+  "other": "# элемент өзгерісі"
+ },
+ "ai.audit.revert.keeps": "Жаңа өзгерістер сақталады. Қайтару бір қайтару қадамы.",
+ "ai.audit.cancel": "Бас тарту",
+ "ai.audit.toast.reverted": "Кері қайтарылды: {what}",
+ "ai.audit.toast.undone": "Қайтарылды: {what}",
+ "ai.audit.redo": "Қайталау"
+}

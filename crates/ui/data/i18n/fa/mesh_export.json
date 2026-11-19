@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "کل مدل یا انتخاب را به‌صورت STL باینری در متر یا میلی‌متر ذخیره می‌کند.",
+ "cmd.data.export_obj.desc": "کل مدل یا انتخاب را به‌صورت OBJ همراه فایل MTL ذخیره می‌کند: یک گروه برای هر عنصر، رنگ‌ها بر اساس متریال.",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "OBJ با متریال (.obj)",
+ "open_file.filter.mesh": "مش‌های سه‌بعدی (glTF, STEP, STL, OBJ)",
+ "mx.title": "صدور {fmt}",
+ "mx.scope": "چه چیزی صادر شود",
+ "mx.scope.all": "کل مدل",
+ "mx.scope.sel": "انتخاب ({n} عنصر)",
+ "mx.units": "واحدها در فایل",
+ "mx.units.m": "متر",
+ "mx.units.mm": "میلی‌متر",
+ "mx.export": "صدور…",
+ "mx.saved": "{fmt} ذخیره شد: {path} ({parts} عنصر، {tris} مثلث)",
+ "mx.partial": "{fmt} با {n} مشکل ذخیره شد؛ ممکن است برخی بدنه‌ها وجود نداشته باشند: {path}",
+ "mx.failed": "صدور {fmt} ناموفق بود: {error}",
+ "mx.imported": "{file}: {n} عنصر وارد شد ({tris} مثلث)",
+ "mx.imported_notes": "{file}: {n} عنصر وارد شد ({tris} مثلث)، {w} یادداشت: {first}"
+}

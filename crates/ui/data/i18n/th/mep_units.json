@@ -1,0 +1,8 @@
+{
+ "mep_units.unit.mm": "mm",
+ "mep_units.unit.in": "in",
+ "mep_units.dn": "DN",
+ "mep_units.diameter": "เส้นผ่านศูนย์กลาง",
+ "mep_units.system.new": "ระบบใหม่",
+ "mep_units.system.none": "ไม่มีระบบ"
+}

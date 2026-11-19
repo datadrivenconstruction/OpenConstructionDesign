@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "เลิกทำแล้ว — Ctrl+Y ทำซ้ำ",
+ "history.hist.empty": "ยังไม่มีการเปลี่ยนแปลง",
+ "history.hist.empty_hint": "การแก้ไขของคุณจะปรากฏที่นี่ คลิกขั้นตอนใดก็ได้เพื่อกลับไปยังขั้นนั้น",
+ "history.hist.revert_all_n": "ย้อนการเปลี่ยนแปลงของ AI ทั้งหมด ({n})"
+}

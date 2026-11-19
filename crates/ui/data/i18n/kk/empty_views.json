@@ -1,0 +1,19 @@
+{
+ "empty.v3d_gpu.title": "Бұл график адаптерінде 3D қолжетімсіз",
+ "empty.v3d_gpu.hint": "Модель қауіпсіз, жоспар жұмыс істейді. 3D-ны қайтадан көру үшін қауіпсіз графикамен қайта іске қосыңыз.",
+ "empty.v3d_gpu.action": "Қауіпсіз графикамен қайта іске қосу",
+ "empty.v3d_loading.title": "3D құрылуда…",
+ "empty.v3d_loading.pct": "Ашылуда… {pct} %",
+ "empty.plan_hidden.title": "Бұл жоспардағы барлық элементтер жасырын",
+ "empty.plan_hidden.hint": "Уақытша жасыру немесе оқшаулау ешнәрсені көрсетпейді.",
+ "empty.plan_hidden.action": "Барлығын көрсету",
+ "empty.plan_graphics.title": "Көрініс графикасы барлық санатты жасырады",
+ "empty.plan_graphics.hint": "Бұл көріністің санат ережелері көрсетуге ештеңе қалдырмайды.",
+ "empty.plan_graphics.action": "Көрініс графикасын ашу",
+ "empty.plan_phase.title": "Кезең сүзгісі барлығын жасырады",
+ "empty.plan_phase.hint": "Бұл деңгейде осы көрініс көрсететін кезеңде ештеңе жоқ.",
+ "empty.plan_phase.action": "Кезеңді өзгерту",
+ "empty.plan_level.title": "Бұл деңгейде элементтер жоқ",
+ "empty.plan_level.hint": "Модельдің басқа деңгейлерінде элементтер бар.",
+ "empty.plan_level.action": "Элементтері бар деңгейге өту"
+}

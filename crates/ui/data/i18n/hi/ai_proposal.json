@@ -1,0 +1,13 @@
+{
+ "ai.proposal.title": "एजेंट प्रस्ताव",
+ "ai.proposal.meta": "{actor} · ऑपरेशन: {ops}",
+ "ai.proposal.apply.desc": "पूरा प्रस्ताव एक चरण में लागू करता है; Ctrl+Z इसे पलटता है",
+ "ai.proposal.applying": "लागू हो रहा है…",
+ "ai.proposal.applied": "प्रस्ताव लागू हुआ। Ctrl+Z इसे पलटता है।",
+ "ai.proposal.applied_resync": "प्रस्ताव लागू हुआ, पर दृश्य अभी अपडेट नहीं हुआ। वह अपने आप ताज़ा होगा; Ctrl+Z इस चरण को पलटता है।",
+ "ai.proposal.stale": "प्रीव्यू के बाद मॉडल बदल गया। एजेंट से इस प्रस्ताव को फिर से बनाने को कहें।",
+ "ai.proposal.toast.applied": "प्रस्ताव लागू हुआ। Ctrl+Z इसे पलटता है।",
+ "ai.proposal.toast.stale": "प्रीव्यू के बाद मॉडल बदल गया, इसलिए कुछ लागू नहीं हुआ। फिर से प्रीव्यू करें: एजेंट से नया प्रस्ताव माँगें।",
+ "ai.proposal.toast.refused": "प्रस्ताव लागू नहीं हुआ: {reason}",
+ "ai.proposal.rejected": "प्रस्ताव अस्वीकार किया गया।"
+}

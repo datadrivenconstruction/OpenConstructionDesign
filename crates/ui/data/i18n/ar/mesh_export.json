@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "يحفظ النموذج كاملاً أو التحديد بصيغة STL ثنائية بالمتر أو الميليمتر.",
+ "cmd.data.export_obj.desc": "يحفظ النموذج كاملاً أو التحديد بصيغة OBJ مع ملف MTL: مجموعة لكل عنصر، والألوان حسب المادة.",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "OBJ مع المواد (.obj)",
+ "open_file.filter.mesh": "شبكات ثلاثية الأبعاد (glTF وSTEP وSTL وOBJ)",
+ "mx.title": "تصدير {fmt}",
+ "mx.scope": "ما الذي يُصدَّر",
+ "mx.scope.all": "النموذج كاملاً",
+ "mx.scope.sel": "التحديد ({n} عناصر)",
+ "mx.units": "الوحدات في الملف",
+ "mx.units.m": "أمتار",
+ "mx.units.mm": "ميليمترات",
+ "mx.export": "تصدير…",
+ "mx.saved": "تم حفظ {fmt}: {path} ({parts} عناصر، {tris} مثلثات)",
+ "mx.partial": "تم حفظ {fmt} مع {n} مشكلات، وقد تكون بعض الأجسام مفقودة: {path}",
+ "mx.failed": "فشل تصدير {fmt}: {error}",
+ "mx.imported": "{file}: تم استيراد {n} عناصر ({tris} مثلثات)",
+ "mx.imported_notes": "{file}: تم استيراد {n} عناصر ({tris} مثلثات)، و{w} ملاحظات: {first}"
+}

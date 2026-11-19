@@ -1,0 +1,7 @@
+{
+ "rebar_pick.pick.empty": "Armadura: elija un pilar, viga, muro, forjado o zapata",
+ "rebar_pick.pick.unsupported": "Esta selección no puede armarse. Elija un pilar, viga, muro, forjado o zapata",
+ "rebar_pick.pick.keys": "Clic para elegir, Mayús para añadir más · Intro para abrir el formulario · Esc para cancelar",
+ "rebar_pick.pick.open": "Abrir formulario",
+ "rebar_pick.pick.cancel": "Cancelar"
+}

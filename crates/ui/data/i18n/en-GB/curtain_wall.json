@@ -1,0 +1,12 @@
+{
+ "curtain_wall.cw.issue.slab": "slab {id}: {e}",
+ "curtain_wall.cw.issue.body": "body {id}: {e}",
+ "curtain_wall.cw.added": "Curtain walls added: {n}",
+ "curtain_wall.cw.add_failed": "Curtain wall not built: {e}",
+ "curtain_wall.cw.edited_warn": "Curtain wall #{id} changed: {w}",
+ "curtain_wall.cw.edited": "Curtain wall #{id} changed",
+ "curtain_wall.cw.not_changed": "Not changed: {e}",
+ "curtain_wall.cw.room_edited": "Room #{id} changed",
+ "curtain_wall.cw.slope_range": "Not changed: slope out of range",
+ "curtain_wall.cw.slope_set": "Slab #{id}: slope {pct}"
+}

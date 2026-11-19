@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D",
+ "phases.current_mark": "当前",
+ "phases.make_current": "设为当前",
+ "phases.col_phase": "阶段",
+ "phases.col_filter": "过滤器",
+ "phases.presets": "计划预设",
+ "phases.del_title": "删除阶段",
+ "phases.del_text": "删除阶段“{name}”？其元素将移至下方所选阶段。",
+ "phases.del_into": "将元素移至",
+ "phases.del_ok": "删除",
+ "phases.col_kind": "元素类型",
+ "phases.col_count": "数量",
+ "phases.col_volume": "体积"
+}

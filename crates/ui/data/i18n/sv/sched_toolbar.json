@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "Filterrad under rubrikerna. Text: delsträng; tal: >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "Visa eller dölj kolumner",
+ "sched_toolbar.groups_tip": "Gruppera rader efter kolumner, med delsummor",
+ "sched_toolbar.formulas_tip": "Beräknade kolumner",
+ "sched_toolbar.phase": "Fas",
+ "sched_toolbar.phase_tip": "Vilken fas raderna hämtas från",
+ "sched_toolbar.copy_tip": "Valda rader (eller alla synliga) som TSV",
+ "sched_toolbar.import_tip": "Läs in ett exporterat schema igen: rader via Id, kolumner via rubrik; antal först, sedan ett steg att ångra",
+ "sched_toolbar.export_tip": "Synliga rader och kolumner med summor; tal förblir tal",
+ "sched_toolbar.need_table": "Öppna ett schema först",
+ "sched_toolbar.busy_open": "En fildialog är redan öppen",
+ "sched_toolbar.busy_save": "En sparadialog är redan öppen",
+ "sched_toolbar.clear_filter": "Rensa filter",
+ "sched_toolbar.fields_title": "Kolumner"
+}

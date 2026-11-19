@@ -1,0 +1,19 @@
+{
+ "names.level": "লেভেল {n}",
+ "names.slab": "স্ল্যাব 200",
+ "names.roof_slab": "ছাদ 200",
+ "names.sheet.plan_section": "মেঝে 1 পরিকল্পনা ও সেকশন",
+ "names.sheet.plan_view": "মেঝে 1 পরিকল্পনা",
+ "names.sheet.site_plan": "সাইট পরিকল্পনা",
+ "names.sheet_set.issue": "সংস্করণ 1",
+ "names.title.owner": "প্রকল্প লিমিটেড",
+ "names.title.creator": "এ. ইভানোভ",
+ "names.title.approver": "পি. পেত্রোভ",
+ "names.title.document_type": "অঙ্কন",
+ "names.title.status": "চলমান",
+ "names.revision.date": "4 নভেম্বর, 2026",
+ "names.revision.description": "পর্যালোচনার জন্য জারি",
+ "names.revision.author": "AI",
+ "names.demo.no_levels": "কোনো লেভেল নেই",
+ "names.demo.no_sheet": "শিট"
+}

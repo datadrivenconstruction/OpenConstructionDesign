@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "Выше",
+ "rebar_list.move_down": "Ниже",
+ "rebar_list.zone_remove_last": "В зоне должно остаться хотя бы одно помещение: чтобы убрать последнее, удалите зону",
+ "rebar_list.remove": "Удалить",
+ "rebar_list.rebar_empty_title": "В модели нет арматуры",
+ "rebar_list.rebar_empty_hint": "Разместите арматуру в элементе, и она появится в этой спецификации.",
+ "rebar_list.rebar_empty_action": "Разместить арматуру"
+}

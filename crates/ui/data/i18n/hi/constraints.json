@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "हर संपादन पर इस दीवार की मौजूदा लंबाई रखता है",
+ "constraints.con.tip.lock_dist": "हर संपादन पर दो दीवारों के बीच की दूरी रखता है",
+ "constraints.con.tip.equal": "चुनी दीवारों के बीच के अंतराल बराबर रखता है",
+ "constraints.con.tip.align": "दोनों दीवारें एक रेखा पर रखता है",
+ "constraints.con.tip.parallel": "दीवारों को समानांतर रखता है",
+ "constraints.con.tip.perp": "दीवारों को समकोण पर रखता है",
+ "constraints.con.tip.align_grid": "दीवार को निकटतम ग्रिड रेखा पर रखता है",
+ "constraints.con.tip.lock_dist_grid": "दीवार और निकटतम ग्रिड रेखा के बीच की दूरी रखता है",
+ "constraints.con.tip.level_gap": "स्तरों के बीच का अंतर रखता है",
+ "constraints.con.tip.top_to_level": "दीवार का ऊपरी सिरा ऊपर के स्तर पर रखता है"
+}

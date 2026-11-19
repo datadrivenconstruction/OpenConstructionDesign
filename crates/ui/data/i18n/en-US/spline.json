@@ -1,0 +1,7 @@
+{
+ "spline.opt.spline": "Spline",
+ "spline.opt.spline_tip": "Spline wall: click the points it passes through, Enter or Esc to finish",
+ "spline.wt.three_points": "a spline wall needs three points or more",
+ "spline.wt.no_curtain": "a curtain wall has no spline axis",
+ "spline.wt.added": "spline wall added"
+}

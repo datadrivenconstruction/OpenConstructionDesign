@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "Fangeradius",
+ "snap_refine.settings.snap_px_desc": "Hvor tæt markøren skal komme på et punkt eller en linje, før der fanges, målt i skærmpixels. Større værdi hjælper på touchskærme og skærme med høj opløsning.",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "Vandret",
+ "snap_refine.hint.vertical": "Lodret",
+ "snap_refine.hint.perpendicular": "Vinkelret på forrige",
+ "snap_refine.hint.parallel": "Parallel med forrige",
+ "snap_refine.hint.on_axis": "På væggens akse",
+ "snap_refine.no_snap": "Ingen fangst (Alt)"
+}

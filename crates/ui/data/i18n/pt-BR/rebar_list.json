@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "Mover para cima",
+ "rebar_list.move_down": "Mover para baixo",
+ "rebar_list.remove": "Remover",
+ "rebar_list.zone_remove_last": "Uma zona precisa de pelo menos um ambiente: exclua a zona para remover a última",
+ "rebar_list.rebar_empty_title": "Nenhuma armadura neste modelo",
+ "rebar_list.rebar_empty_hint": "Posicione armadura em um elemento hospedeiro e ela será programada aqui.",
+ "rebar_list.rebar_empty_action": "Posicionar armadura"
+}

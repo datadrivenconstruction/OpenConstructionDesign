@@ -1,0 +1,7 @@
+{
+ "xlsx_project.title": "Ce classeur a été exporté depuis un autre projet",
+ "xlsx_project.body": "Le classeur « {file} » appartient à un autre projet. Les id d'éléments diffèrent d'un projet à l'autre : ses lignes modifieraient ici des éléments sans rapport. Rien n'a été lu dans ce projet.",
+ "xlsx_project.export_new": "Exporter ce projet vers un nouveau classeur",
+ "xlsx_project.close": "Fermer",
+ "xlsx_project.no_project": "Ce classeur n'indique pas à quel projet il appartient : vérifiez qu'il a été exporté depuis ce projet."
+}

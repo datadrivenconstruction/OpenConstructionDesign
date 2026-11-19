@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "แกน X",
+ "fe.axis.y": "แกน Y",
+ "fe.axis.z": "แกน Z",
+ "fe.col.axis": "แกน",
+ "fe.col.at": "ตำแหน่ง",
+ "fe.col.mode": "โหมด",
+ "fe.mode.fixed": "คงที่",
+ "fe.mode.free": "อิสระ",
+ "fe.types.inherited": "ค่าเริ่มต้นจากพารามิเตอร์",
+ "fe.csv.more": "การดำเนินการ CSV เพิ่มเติม",
+ "fe.ref.selected": "ระนาบ: {name}"
+}

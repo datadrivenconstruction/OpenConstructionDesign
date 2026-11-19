@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "Szűrősor a fejlécek alatt. Szöveg: részszó; számok: >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "Oszlopok megjelenítése vagy elrejtése",
+ "sched_toolbar.groups_tip": "Sorok csoportosítása oszlopok szerint, részösszegekkel",
+ "sched_toolbar.formulas_tip": "Számított oszlopok",
+ "sched_toolbar.phase": "Fázis",
+ "sched_toolbar.phase_tip": "Melyik fázisból származnak a sorok",
+ "sched_toolbar.copy_tip": "A kijelölt sorok (vagy mind a látható) TSV-formátumban",
+ "sched_toolbar.import_tip": "Egy exportált kimutatás visszaolvasása: sorok Id szerint, oszlopok fejléc szerint; először a darabszámok, majd egy visszavonási lépés",
+ "sched_toolbar.export_tip": "A látható sorok és oszlopok összegekkel; a számok számok maradnak",
+ "sched_toolbar.need_table": "Előbb nyisson meg egy kimutatást",
+ "sched_toolbar.busy_open": "Fájlválasztó párbeszédablak már nyitva van",
+ "sched_toolbar.busy_save": "Mentési párbeszédablak már nyitva van",
+ "sched_toolbar.clear_filter": "Szűrő törlése",
+ "sched_toolbar.fields_title": "Oszlopok"
+}

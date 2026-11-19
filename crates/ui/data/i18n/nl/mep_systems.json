@@ -1,0 +1,21 @@
+{
+ "mep.row.system": "Systeem",
+ "mep.row.elevation": "Beginhoogteligging",
+ "mep.row.slope": "Verval",
+ "mep.row.material": "Materiaal",
+ "mep.row.dev_elevation": "Hoogteligging",
+ "mep.row.no_system": "Dat systeem bestaat niet meer. Kies een ander.",
+ "mep.row.no_points": "Het tracé heeft geen punten, dus geen hoogteligging.",
+ "mep.row.system_domain": "Systeem {system} past niet bij dit tracétype ({kind}). Kies een systeem van hetzelfde netwerktype.",
+ "mep.row.material_pipes": "Een materiaal geldt alleen voor leidingen; dit tracé is een {kind}.",
+ "mep.row.no_catalog": "Het materiaal heeft geen catalogusmaten voor dit tracé.",
+ "mep.mat.none": "Niet ingesteld",
+ "mep.mat.steel": "Staal",
+ "mep.mat.copper": "Koper",
+ "mep.mat.pvc": "PVC",
+ "mep.mat.pp": "Polypropyleen",
+ "mep.err.follow_blocked": "Een aangesloten tracé kan deze wijziging niet volgen: er is op de nieuwe plek geen ruimte voor het been. Verplaats het apparaat minder ver, of koppel het tracé eerst los.",
+ "mep.err.follow_slope": "Een aangesloten tracé heeft een verval dat op de nieuwe plek niet kan worden behouden: het zou onder het minimale verval van zijn systeem zakken. Verplaats het apparaat minder in hoogte, of koppel het tracé eerst los.",
+ "mep.err.follow_port_lost": "Een aansluiting waar dit tracé op zat bestaat na de bewerking niet meer. Verplaats het tracé eerst weg, of behoud het apparaattype.",
+ "mep.err.follow_device": "Dit tracé eindigt op een apparaataansluiting en kan die niet verlaten. Verplaats het apparaat, of koppel het tracé eerst los."
+}

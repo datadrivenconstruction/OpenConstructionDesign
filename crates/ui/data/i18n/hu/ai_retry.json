@@ -1,0 +1,7 @@
+{
+ "ai.retry.countdown": "Újrapróbálkozás {n} mp múlva",
+ "ai.retry.try": "Automatikus próbálkozás: {i} / {max}. Ugyanazt a kérést küldi újra.",
+ "ai.retry.now": "Újrapróbálkozás most",
+ "ai.retry.gave_up": "Még mindig nincs válasz {max} automatikus próbálkozás után.",
+ "ai.retry.shorten": "Kérés rövidítése"
+}

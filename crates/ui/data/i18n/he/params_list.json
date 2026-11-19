@@ -1,0 +1,26 @@
+{
+ "params_list.n_params": {
+  "one": "# פרמטר",
+  "two": "# פרמטרים",
+  "other": "# פרמטרים"
+ },
+ "params_list.n_values": {
+  "one": "# ערך",
+  "two": "# ערכים",
+  "other": "# ערכים"
+ },
+ "params_list.n_elements": {
+  "one": "# אלמנט",
+  "two": "# אלמנטים",
+  "other": "# אלמנטים"
+ },
+ "params_list.exported": "{params} יוצאו אל {file}",
+ "params_list.export_failed": "הפרמטרים לא יוצאו: {why}",
+ "params_list.open_folder": "פתח תיקייה",
+ "params_list.delete_tip": "מחק פרמטר וערכים שלו",
+ "params_list.confirm": "למחוק את {name} ואת {values} שלו על {elements}?",
+ "params_list.confirm_btn": "מחק",
+ "params_list.cancel": "ביטול",
+ "params_list.deleted": "הפרמטר {name} נמחק ({values})",
+ "params_list.undo": "בטל"
+}

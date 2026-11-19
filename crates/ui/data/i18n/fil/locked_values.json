@@ -1,0 +1,8 @@
+{
+ "cmd.props.param_lock": "I-lock o i-unlock ang halaga ng parameter",
+ "locked_values.kept": "{n} na naka-lock na halaga ang itinira",
+ "locked_values.locked": "Naka-lock ang “{name}”: pinananatili ito ng spreadsheet na XLSX import, malawakang pag-edit at AI",
+ "locked_values.unlocked": "Na-unlock ang “{name}”",
+ "locked_values.locked_tip": "Naka-lock: pinananatili ng spreadsheet na XLSX import, malawakang pag-edit at AI ang halagang ito. I-click para i-unlock  ·  Ctrl+L",
+ "locked_values.no_row": "Ituro ang hilera ng parameter sa Properties, saka pindutin ang Ctrl+L"
+}

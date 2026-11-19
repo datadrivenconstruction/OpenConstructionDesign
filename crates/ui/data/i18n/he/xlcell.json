@@ -1,0 +1,15 @@
+{
+ "xl.msg.cell_clipped": "הטקסט קוצר כדי להיכנס למגבלת התא; לקריאה בלבד, העריכה לא הוחלה",
+ "xlcell.status": "יוצא. {count} תאים קוצרו או נותרו ריקים — ראה את חלון הפרטים.",
+ "xlcell.title": "תאים ששונו על ידי הייצוא",
+ "xlcell.intro": "לא ניתן היה לכתוב את התאים האלה כפי שהם. הערך המלא נשאר במודל; התא נעול ואי אפשר לערוך אותו בחוברת.",
+ "xlcell.col_sheet": "גיליון",
+ "xlcell.col_row": "שורה",
+ "xlcell.col_col": "עמודה",
+ "xlcell.col_id": "מזהה רכיב",
+ "xlcell.col_what": "מה קרה",
+ "xlcell.what_clipped": "טקסט קוצר למגבלת התא",
+ "xlcell.what_blank": "לא מספר סופי, התא נותר ריק",
+ "xlcell.more": "… ועוד {count}",
+ "xlcell.close": "סגור"
+}

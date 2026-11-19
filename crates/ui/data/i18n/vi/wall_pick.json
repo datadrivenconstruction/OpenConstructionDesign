@@ -1,0 +1,13 @@
+{
+ "cmd.arch.wall_pick": "Tường theo đường",
+ "cmd.arch.wall_pick.desc": "Đặt tường trên một đường bản vẽ đã chọn của cao độ hiện tại. F chuyển trục hoặc mặt trên đường, Tab lấy chuỗi liên kết. Mỗi lần chọn là một bước hoàn tác. Cũng áp dụng cho tường rèm.",
+ "hint.wall_pick.center": "Tường theo đường: chọn đường bản vẽ · trục trên đường · F mặt · Tab chuỗi · Esc thoát",
+ "hint.wall_pick.face": "Tường theo đường: chọn đường bản vẽ · mặt trên đường, phía con trỏ · F trục · Tab chuỗi · Esc thoát",
+ "hint.wall_pick.center_chain": "Tường theo đường: chọn một đường để lấy chuỗi · trục trên đường · F mặt · Tab một đường",
+ "hint.wall_pick.face_chain": "Tường theo đường: chọn một đường để lấy chuỗi · mặt trên đường · F trục · Tab một đường",
+ "wall_pick.st.start": "Chọn một đường bản vẽ. F: trục hoặc mặt, Tab: chuỗi liên kết",
+ "wall_pick.st.no_lines": "Không có đường bản vẽ nhìn thấy trên cao độ này",
+ "wall_pick.st.miss": "Không có đường bản vẽ ở đây",
+ "wall_pick.st.on_wall": "Đường này đã nằm dưới tường {id}",
+ "wall_pick.st.tight": "Độ lệch mặt không vừa: một đoạn của chuỗi ngắn hơn độ dày tường"
+}

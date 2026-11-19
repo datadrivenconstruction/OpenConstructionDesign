@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "προσαρμοσμένο",
+ "draw_quality.custom.tip": "{name}: καταχώρηση αυτού του έργου",
+ "draw_quality.custom_note": "Οι καταχωρήσεις με σήμανση «προσαρμοσμένο» ανήκουν σε αυτό το έργο.",
+ "draw_quality.unsaved.lib_body": "Να αποθηκευτούν στη βιβλιοθήκη ή να απορριφθούν;",
+ "draw_quality.unsaved.styles_body": "Να εφαρμοστούν στην προβολή ή να απορριφθούν;",
+ "draw_quality.unsaved.both_body": "Να εφαρμοστούν ή να απορριφθούν;",
+ "draw_quality.halftone": "Ημίτονο {category}",
+ "draw_quality.styles.name": "Στυλ γραμμών",
+ "draw_quality.styles.other_level": "Μη αποθηκευμένες αλλαγές στυλ του επιπέδου {level}: εφαρμόστε ή αναιρέστε τις για να επεξεργαστείτε αυτό το επίπεδο."
+}

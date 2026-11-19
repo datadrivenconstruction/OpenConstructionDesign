@@ -1,0 +1,20 @@
+{
+ "family_overwrite.ow.title": "Замінити значення типів проєкту?",
+ "family_overwrite.ow.body": "Завантаження замінює {values} у {types}. Розміщені екземпляри цих типів: {instances}.",
+ "family_overwrite.ow.values": {
+  "one": "# значення",
+  "other": "# значень",
+  "few": "# значення",
+  "many": "# значень"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# тип",
+  "other": "# типів",
+  "few": "# типи",
+  "many": "# типів"
+ },
+ "family_overwrite.ow.list": "Типи: {list}",
+ "family_overwrite.ow.more": "і ще {n}",
+ "family_overwrite.ow.back": "Повернутися до редагування",
+ "family_overwrite.ow.replace": "Замінити значення"
+}

@@ -1,0 +1,13 @@
+{
+ "mep.sys.duct": "Беру S1",
+ "mep.sys.pipe": "Суық су C1",
+ "mep.sys.tray": "Қуат",
+ "mep.round": "Дөңгелек",
+ "mep.material": "Материал",
+ "mep3d.elevation": "Деңгейден биіктік",
+ "mep3d.slope": "Көлбеу",
+ "mep3d.shape": "Пішіні",
+ "mep3d.shape.rect": "Тік төртбұрыш",
+ "mep3d.shape.round": "Дөңгелек",
+ "mep3d.shape.oval": "Жалпақ сопақ"
+}

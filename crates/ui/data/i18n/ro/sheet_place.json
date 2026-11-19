@@ -1,0 +1,15 @@
+{
+ "sheet_place.place_view_tip": "Plasează o vedere sau un tabel pe planșă",
+ "sheet_place.properties_tip": "Numărul planșei, numele, hârtia și reviziile",
+ "sheet_place.print_tip": "Tipărește sau exportă planșa",
+ "sheet_place.fit_tip": "Potrivește planșa în fereastră",
+ "sheet_place.activate_tip": "Editați vederea direct pe planșă: deplasare, zoom și decupare",
+ "sheet_place.open_view_tip": "Deschide vederea în propria filă",
+ "sheet_place.done_tip": "Terminați editarea vederii pe planșă",
+ "sheet_place.reset_crop_tip": "Elimină decuparea și arată întreaga vedere",
+ "sheet_place.scale_tip": "Scara vederii selectate pe planșă",
+ "sheet_place.title_tip": "Titlu afișat sub vedere pe planșă",
+ "sheet_place.banner": "Editarea vederii pe planșă",
+ "sheet_place.new_set_tip": "Creați un set de planșe de tipărit împreună",
+ "sheet_place.new_sheet_tip": "Adăugați o planșă în proiect"
+}

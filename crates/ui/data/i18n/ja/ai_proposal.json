@@ -1,0 +1,13 @@
+{
+ "ai.proposal.title": "AI アシスタントの提案",
+ "ai.proposal.meta": "{actor} · 操作: {ops}",
+ "ai.proposal.apply.desc": "提案全体を 1 つの手順として適用します。Ctrl+Z で元に戻せます",
+ "ai.proposal.applying": "適用中…",
+ "ai.proposal.applied": "提案を適用しました。Ctrl+Z で元に戻せます。",
+ "ai.proposal.applied_resync": "提案を適用しましたが、ビューはまだ更新されていません。自動的に更新されます。Ctrl+Z で手順を元に戻せます。",
+ "ai.proposal.stale": "プレビュー後にモデルが変更されました。AI アシスタントに提案を作り直すよう依頼してください。",
+ "ai.proposal.toast.applied": "提案を適用しました。Ctrl+Z で元に戻せます。",
+ "ai.proposal.toast.stale": "プレビュー後にモデルが変更されたため、何も適用されませんでした。もう一度プレビューしてください: AI アシスタントに新しい提案を依頼してください。",
+ "ai.proposal.toast.refused": "提案は適用されませんでした: {reason}",
+ "ai.proposal.rejected": "提案は却下されました。"
+}

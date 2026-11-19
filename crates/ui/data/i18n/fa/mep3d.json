@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "کانال هوا",
+ "mep3d.pipe": "لوله",
+ "mep3d.tray": "سینی کابل",
+ "mep3d.conduit": "کانال",
+ "mep3d.system": "سیستم",
+ "mep3d.length": "طول",
+ "mep3d.diameter": "قطر",
+ "mep3d.width": "عرض",
+ "mep3d.height": "ارتفاع",
+ "mep3d.insulation": "عایق",
+ "mep3d.tip": "Enter — اعمال؛ اتصالات دوباره محاسبه می‌شوند",
+ "mep3d.size_positive": "اندازه باید بزرگ‌تر از صفر باشد",
+ "mep3d.not_changed": "تغییر نکرد: {e}",
+ "mep3d.copied": "مسیر کپی شد",
+ "mep3d.changed": "مسیر تغییر کرد",
+ "mep3d.deleted": "عناصر حذف شدند: {n}",
+ "mep3d.not_deleted": "حذف نشد: {e}",
+ "mep3d.no_wall_type": "نوع دیوار ندارد",
+ "mep3d.demo.supply": "تأمین S1",
+ "mep3d.demo.heating": "گرمایش",
+ "mep3d.demo.power": "برق"
+}

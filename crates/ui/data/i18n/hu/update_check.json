@@ -1,0 +1,21 @@
+{
+ "cmd.help.check_update": "Frissítések keresése",
+ "update_check.title": "Frissítés-ellenőrzés",
+ "update_check.desc": "Alapértelmezetten kikapcsolva. Csak a verziót, az operációs rendszert, az architektúrát és a telepítés típusát küldi el a szerverünkre. Soha nem tölt le és nem telepít semmit.",
+ "update_check.freq.startup": "Indításkor",
+ "update_check.freq.daily": "Naponta",
+ "update_check.freq.weekly": "Hetente",
+ "update_check.freq.never": "Soha",
+ "update_check.check_now": "Keresés most",
+ "update_check.dialog.title": "Frissítés-ellenőrzés",
+ "update_check.unknown.title": "A frissítések nem ellenőrizhetők",
+ "update_check.unknown.body": "{e}. Ez nem jelenti azt, hogy a verzió naprakész. Próbáld újra később.",
+ "update_check.current": "A legfrissebb verziót használod ({v}).",
+ "update_check.newer": "A(z) {v} verzió elérhető",
+ "update_check.date": "Megjelent: {d}",
+ "update_check.unfit": "Ez a verzió ({v}) régebbi, mint az ajánlott minimális verzió: {f}. A frissítés javasolt.",
+ "update_check.close": "Bezárás",
+ "update_check.open_failed": "A kiadási oldal nem nyitható meg.",
+ "update_check.toast.newer": "A(z) {v} verzió elérhető. Súgó > Frissítések keresése.",
+ "update_check.toast.unfit": "Ez a verzió ({v}) régebbi, mint az ajánlott minimális verzió: {f}."
+}

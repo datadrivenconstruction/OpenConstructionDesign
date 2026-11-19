@@ -1,0 +1,90 @@
+{
+  "note": "Every value the services builder uses, with its source. confidence: secondary = quoted from the standard by a secondary reference source; unverified = the source is not a quotation of the standard; mapped = no row for this room kind, the cited row named in 'basis' is used.",
+  "lux": [
+    {"room": "office", "res": false, "lx": 500, "doc": "EN 12464-1:2021 office writing, typing, reading", "confidence": "secondary"},
+    {"room": "meeting", "res": false, "lx": 500, "doc": "EN 12464-1 conference and meeting rooms", "confidence": "unverified"},
+    {"room": "classroom", "res": false, "lx": 300, "doc": "EN 12464-1 classrooms in primary and secondary schools", "confidence": "secondary"},
+    {"room": "lab", "res": false, "lx": 500, "doc": "EN 12464-1 practice rooms and laboratories", "confidence": "secondary"},
+    {"room": "workshop", "res": false, "lx": 500, "doc": "EN 12464-1 preparation rooms and workshops", "confidence": "secondary"},
+    {"room": "staff", "res": false, "lx": 300, "doc": "EN 12464-1 staff rooms (schools)", "confidence": "secondary"},
+    {"room": "kitchen", "res": false, "lx": 500, "doc": "EN 12464-1 kitchens", "confidence": "secondary"},
+    {"room": "dining", "res": false, "lx": 200, "doc": "EN 12464-1 canteens", "confidence": "secondary"},
+    {"room": "gym", "res": false, "lx": 300, "doc": "EN 12464-1 sports halls, gymnasia (general use)", "confidence": "secondary"},
+    {"room": "retail", "res": false, "lx": 300, "doc": "UNE-EN 12464-1 sales area", "confidence": "secondary"},
+    {"room": "ward", "res": false, "lx": 100, "doc": "EN 12464-1 wards, general lighting", "confidence": "secondary"},
+    {"room": "wc", "res": false, "lx": 200, "doc": "EN 12464-1:2021 washrooms, bathrooms, toilets", "confidence": "secondary"},
+    {"room": "bath", "res": false, "lx": 200, "doc": "EN 12464-1:2021 washrooms, bathrooms, toilets", "confidence": "secondary"},
+    {"room": "corridor", "res": false, "lx": 100, "doc": "DIN EN 12464-1:2011 5.1.1 circulation areas and corridors", "confidence": "secondary"},
+    {"room": "stair", "res": false, "lx": 100, "doc": "DIN EN 12464-1:2011 5.1.2 stairs", "confidence": "secondary"},
+    {"room": "lobby", "res": false, "lx": 100, "doc": "DIN EN 12464-1:2011 entrance halls", "confidence": "unverified"},
+    {"room": "hall", "res": false, "lx": 100, "doc": "DIN EN 12464-1:2011 5.1.1 circulation areas", "confidence": "mapped", "basis": "corridor"},
+    {"room": "storage", "res": false, "lx": 100, "doc": "DIN EN 12464-1:2011 5.4.1 stock rooms", "confidence": "secondary"},
+    {"room": "technical", "res": false, "lx": 200, "doc": "DIN EN 12464-1:2011 5.3.1 plant rooms", "confidence": "secondary"},
+    {"room": "parking", "res": false, "lx": 100, "doc": "DIN EN 12464-1:2011 5.1.1 circulation areas", "confidence": "mapped", "basis": "corridor"},
+    {"room": "living", "res": true, "lx": 150, "doc": "SP 52.13330.2016 table L.1 living rooms", "confidence": "secondary"},
+    {"room": "bedroom", "res": true, "lx": 150, "doc": "SP 52.13330.2016 table L.1 bedrooms", "confidence": "secondary"},
+    {"room": "kitchen", "res": true, "lx": 150, "doc": "SP 52.13330.2016 table L.1 kitchens", "confidence": "secondary"},
+    {"room": "bath", "res": true, "lx": 50, "doc": "SNiP 23-05-95 bathrooms and toilets of dwellings", "confidence": "unverified"},
+    {"room": "wc", "res": true, "lx": 50, "doc": "SNiP 23-05-95 bathrooms and toilets of dwellings", "confidence": "unverified"}
+  ],
+  "lumen": {
+    "uf": [[1.0, 0.45], [3.0, 0.61], [5.0, 0.65]],
+    "uf_doc": "Utilisation factor of a recessed 600x600 luminaire, reflectances 0.7/0.5/0.2, by room index",
+    "uf_confidence": "secondary",
+    "room_index_doc": "k = a*b / (h*(a+b)), h above the working plane",
+    "mf": 0.8,
+    "mf_doc": "Maintenance factor of a clean interior without a maintenance plan",
+    "mf_confidence": "unverified"
+  },
+  "sockets": {
+    "wall_reach": 1.8,
+    "wall_reach_doc": "NEC 210.52(A)(1): no point along the floor line more than 1.8 m (6 ft) from a receptacle",
+    "worktop_reach": 0.6,
+    "worktop_reach_doc": "NEC 210.52(C)(1): no point along a worktop more than 0.6 m (24 in) from a receptacle",
+    "basin_reach": 0.9,
+    "basin_reach_doc": "NEC 210.52(D): a receptacle within 0.9 m (3 ft) of each basin",
+    "confidence": "secondary",
+    "zone2": 0.6,
+    "zone12_height": 2.25,
+    "zone_doc": "IEC 60364-7-701 (BS 7671 section 701.32): zone 2 extends 0.6 m beyond the bath or shower, zones 1 and 2 up to 2.25 m; no sockets in zones 0 to 2; RCD 30 mA",
+    "rcd_ma": 30
+  },
+  "heights": {
+    "socket": 0.30,
+    "switch": 1.05,
+    "worktop_socket": 1.15,
+    "corner_zone": [0.10, 0.30],
+    "doc": "DIN 18015-3:2016-09 installation zones: sockets 30 cm, switches 105 cm, above worktops 115 cm to the centre; vertical zones 10-30 cm beside doors, windows and corners",
+    "confidence": "secondary"
+  },
+  "dedicated": {
+    "kinds": ["Cooker", "Dishwasher", "Washing Machine", "Water Heater", "Refrigerator"],
+    "doc": "DIN 18015-1/-2: cooker, oven, dishwasher, washing machine, dryer and electric water heater each on their own circuit; the refrigerator on its own circuit is a design choice, so a socket fault never stops it",
+    "confidence": "secondary"
+  },
+  "drain": {
+    "du": {"Washbasin": 0.5, "Shower Tray": 0.6, "Bathtub": 0.8, "Washing Machine": 0.8, "WC": 2.0, "Urinal": 0.5, "Sink": 0.8, "Dishwasher": 0.8},
+    "du_doc": "EN 12056-2 table 2, system I: washbasin 0.5, shower without plug 0.6, bath 0.8, washing machine 6 kg 0.8, WC 6 l 2.0 l/s",
+    "du_mapped": "Urinal: washbasin row (0.5); Sink and Dishwasher: bath row (0.8), same DN 50 branch class",
+    "k": {"res": 0.5, "office": 0.5, "public": 1.0, "hotel": 0.7},
+    "k_doc": "EN 12056-2 table 3: dwellings and offices 0.5, hotels and restaurants 0.7, public toilets 1.0",
+    "branch_dn": {"Washbasin": 50, "Shower Tray": 50, "Bathtub": 50, "Washing Machine": 50, "WC": 100, "Urinal": 50, "Sink": 50, "Dishwasher": 50},
+    "branch_doc": "DIN 1986-100 / EN 12056-2 branch pipes: washbasin DN 40, bath, shower, sink, dishwasher and washing machine DN 50, WC DN 80 to 100; never below the connector size, so DN 50 and DN 100 here",
+    "slope": {"50": 3.0, "100": 2.0},
+    "slope_doc": "SP 30.13330.2020 17.3: gradient 0.03 for DN 50, 0.02 for DN 100",
+    "vent_above_roof": 0.2,
+    "vent_above_terrace": 3.0,
+    "vent_doc": "SP 30.13330.2016: stack vent 0.2 m above a flat unused or a pitched roof; above a used roof 3 m (SNiP 2.04.01-85 17.18)",
+    "confidence": "secondary"
+  },
+  "supply": {
+    "lu": {"Washbasin": 1, "WC": 1, "Bathtub": 4, "Shower Tray": 2, "Sink": 2, "Washing Machine": 2, "Dishwasher": 2, "Urinal": 1},
+    "lu_doc": "EN 806-3:2006 table 2 loading units; urinal: washbasin row",
+    "confidence": "secondary"
+  },
+  "fixtures": {
+    "wc_side": 0.20,
+    "wc_side_doc": "Free distance from the WC to a side wall or object, at least 20 cm (DIN 18022 practice)",
+    "confidence": "secondary"
+  }
+}

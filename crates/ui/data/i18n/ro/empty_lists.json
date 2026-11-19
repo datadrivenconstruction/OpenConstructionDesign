@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "Desenează perete",
+ "empty.totals.action": "Desenează perete",
+ "empty.schedule.action": "Adaugă câmp",
+ "empty.schedule_filtered.action": "Șterge filtrul",
+ "empty.library.action": "Resetează căutarea",
+ "empty.library.load": "Încarcă familia",
+ "empty.schedule_fields.title": "Niciun câmp afișat",
+ "empty.schedule_fields.action": "Adaugă câmp",
+ "empty.schedule_fields.hint": "Activați cel puțin un câmp pentru a vedea tabelul."
+}

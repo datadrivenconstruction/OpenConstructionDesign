@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "Izvoz u proračunsku tablicu: opseg",
+ "xlsx_scope.intro": "Odaberite što ide u radnu knjigu. Vraćanje uvozom mijenja samo ove elemente.",
+ "xlsx_scope.base_whole": "Cijeli model",
+ "xlsx_scope.base_level": "Aktivna razina",
+ "xlsx_scope.base_selection": "Odabir",
+ "xlsx_scope.categories": "Kategorije",
+ "xlsx_scope.cat_walls": "zidovi",
+ "xlsx_scope.cat_openings": "vrata",
+ "xlsx_scope.cat_rooms": "prostorije",
+ "xlsx_scope.cat_slabs": "ploče",
+ "xlsx_scope.cat_curtains": "zavjesni zidovi",
+ "xlsx_scope.nothing_selected": "Ništa nije odabrano: prvo odaberite elemente ili odaberite drugi opseg.",
+ "xlsx_scope.no_categories": "Označite barem jednu kategoriju.",
+ "xlsx_scope.no_level": "Aktivna razina nije pronađena.",
+ "xlsx_scope.export": "Izvoz",
+ "xlsx_scope.preview_scope": "Izvezeni opseg: {scope}. Elementi izvan njega nikada se ne mijenjaju niti brišu."
+}

@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "Una masa no puede girarse ni reflejarse: su historial de forma no tiene paso de giro. Muévala o cópiela, o vuelva a dibujarla en la nueva dirección.",
+ "sched_cats.col.name": "Nombre",
+ "sched_cats.col.material": "Material",
+ "sched_cats.col.void": "Hueco",
+ "sched_cats.col.inplace": "In situ",
+ "sched_cats.col.volume": "Volumen neto",
+ "sched_cats.col.area": "Superficie",
+ "sched_cats.col.floor_area": "Superficie de planta",
+ "sched_cats.col.thickness": "Espesor",
+ "sched_cats.col.points": "Puntos",
+ "elem.toposolid.points": "Puntos topográficos",
+ "elem.toposolid.count": "Puntos",
+ "elem.toposolid.low": "Más bajo",
+ "elem.toposolid.high": "Más alto",
+ "elem.toposolid.edit": "Editar puntos",
+ "elem.toposolid.edit_tip": "Elija, arrastre y fije la cota de los puntos topográficos en planta",
+ "elem.toposolid.pick_hint": "Haga clic en un punto de la planta para elegirlo. Haga clic de nuevo para añadirlo o quitarlo.",
+ "elem.toposolid.z": "Cota ({n})",
+ "elem.toposolid.mixed": "Los puntos elegidos difieren; un valor nuevo los fija todos.",
+ "elem.toposolid.edit_help": "Arrastre un punto para moverlo. Escriba un valor y pulse Intro para fijar la cota. Retroceso elimina los puntos elegidos; Esc sale.",
+ "elem.toposolid.done": "Hecho"
+}

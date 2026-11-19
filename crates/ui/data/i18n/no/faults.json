@@ -1,0 +1,18 @@
+{
+ "faults.errors": {
+  "one": "# feil i modellen. Klikk for å vise den.",
+  "other": "# feil i modellen. Klikk for å se listen."
+ },
+ "faults.warnings": {
+  "one": "# advarsel i modellen. Klikk for å vise den.",
+  "other": "# advarsler i modellen. Klikk for å se listen."
+ },
+ "faults.title": "Modellfeil: {n}",
+ "faults.none": "Ingen feil eller advarsler.",
+ "faults.cat.wall": "Vegg",
+ "faults.cat.slab": "Plate",
+ "faults.cat.opening": "Åpning",
+ "faults.cat.curtain_wall": "Glassfasade",
+ "faults.cat.ramp": "Rampe",
+ "faults.cat.zone": "Sone"
+}

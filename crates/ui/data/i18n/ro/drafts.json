@@ -1,0 +1,8 @@
+{
+ "drafts.drafts.head": "Editoarele deschise conțin modificări care nu sunt încă în proiect:",
+ "drafts.draft.family": "Familia „{name}”",
+ "drafts.draft.line": "Biblioteca de linii: {name}",
+ "drafts.draft.styles": "Stiluri de linie ale intervalului de vedere",
+ "drafts.btn.save_all": "Salvează tot",
+ "drafts.drafts.refused": "O ciornă nu a putut fi salvată. Nimic nu s-a închis; editorul cu ciorna este deschis."
+}

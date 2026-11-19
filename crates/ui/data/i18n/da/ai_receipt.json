@@ -1,0 +1,21 @@
+{
+ "ai.receipt.title": {
+  "one": "Anvendt # ændring",
+  "other": "Anvendt # ændringer"
+ },
+ "ai.receipt.more": "+{n} flere",
+ "ai.receipt.list": "Elementer",
+ "ai.receipt.show": "Vis",
+ "ai.receipt.show.tip": "Vælg og indrammer de ændrede elementer",
+ "ai.receipt.undo": "Fortryd",
+ "ai.receipt.undo.tip": "Tag præcis denne anvendelse tilbage",
+ "ai.receipt.undone": "Fortrudt",
+ "ai.receipt.later": "Senere redigeringer er foretaget",
+ "ai.receipt.toast_undone": "Den anvendte plan blev fortrudt",
+ "ai.receipt.draft_family": "Udkastfamilie: {name}",
+ "ai.receipt.promote": "Gør aktiv",
+ "ai.receipt.promote.tip": "Gør udkastfamilien til en aktiv (ét fortrydelsestrin)",
+ "ai.receipt.promoted": "Familien er nu aktiv",
+ "ai.receipt.promote_failed": "Familien kunne ikke gøres aktiv",
+ "cmd.ai.receipt_undo": "Fortryd sidste AI-plan"
+}

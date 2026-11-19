@@ -1,0 +1,59 @@
+{
+ "del.k.door": {
+  "one": "# Tür",
+  "other": "# Türen"
+ },
+ "del.k.window": {
+  "one": "# Fenster",
+  "other": "# Fenster"
+ },
+ "del.k.opening": {
+  "one": "# Öffnung",
+  "other": "# Öffnungen"
+ },
+ "del.k.comp": {
+  "one": "# eingebettetes Bauteil",
+  "other": "# eingebettete Bauteile"
+ },
+ "del.k.rebar": {
+  "one": "# Bewehrungssatz",
+  "other": "# Bewehrungssätze"
+ },
+ "del.k.port": {
+  "one": "# eingebetteter TGA-Anschluss",
+  "other": "# eingebettete TGA-Anschlüsse"
+ },
+ "del.k.joist": {
+  "one": "# Tragbalken",
+  "other": "# Tragbalken"
+ },
+ "del.k.railing": {
+  "one": "# Geländer",
+  "other": "# Geländer"
+ },
+ "del.k.tag": {
+  "one": "# Kennzeichen",
+  "other": "# Kennzeichen"
+ },
+ "del.k.dim": {
+  "one": "# Bemaßung (gelöst)",
+  "other": "# Bemaßungen (gelöst)"
+ },
+ "del.also": "Außerdem betroffen: {list}",
+ "del.rooms": {
+  "one": "# Raum verliert eine Begrenzungswand",
+  "other": "# Räume verlieren eine Begrenzungswand"
+ },
+ "del.cancelled": "Löschen abgebrochen, nichts geändert",
+ "del.confirm.title": "Mit Abhängigen löschen",
+ "del.confirm.lead": {
+  "one": "# ausgewähltes Element nimmt diese mit:",
+  "other": "# ausgewählte Elemente nehmen diese mit:"
+ },
+ "del.confirm.levels": {
+  "one": "# davon liegt auf einer anderen Ebene",
+  "other": "# davon liegen auf anderen Ebenen"
+ },
+ "del.confirm.all": "Alle löschen",
+ "del.confirm.cancel": "Abbrechen"
+}

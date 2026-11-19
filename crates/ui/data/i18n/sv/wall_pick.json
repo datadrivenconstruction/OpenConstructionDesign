@@ -1,0 +1,13 @@
+{
+ "cmd.arch.wall_pick": "Vägg efter linje",
+ "cmd.arch.wall_pick.desc": "Placerar en vägg på en vald ritningslinje på aktuell nivå. F växlar axel eller sida på linjen, Tab tar den sammanhängande kedjan. Varje val är ett ångra-steg. Fungerar även för gardinväggar.",
+ "hint.wall_pick.center": "Vägg efter linje: välj en ritningslinje · axel på linjen · F sida · Tab kedja · Esc avsluta",
+ "hint.wall_pick.face": "Vägg efter linje: välj en ritningslinje · sida på linjen, markörens sida · F axel · Tab kedja · Esc avsluta",
+ "hint.wall_pick.center_chain": "Vägg efter linje: välj en linje för att ta dess kedja · axel på linjen · F sida · Tab en linje",
+ "hint.wall_pick.face_chain": "Vägg efter linje: välj en linje för att ta dess kedja · sida på linjen · F axel · Tab en linje",
+ "wall_pick.st.start": "Välj en ritningslinje. F: axel eller sida, Tab: sammanhängande kedja",
+ "wall_pick.st.no_lines": "Inga synliga ritningslinjer på den här nivån",
+ "wall_pick.st.miss": "Ingen ritningslinje här",
+ "wall_pick.st.on_wall": "Den här linjen ligger redan under vägg {id}",
+ "wall_pick.st.tight": "Sidoförskjutningen ryms inte: ett segment i kedjan är kortare än väggtjockleken"
+}

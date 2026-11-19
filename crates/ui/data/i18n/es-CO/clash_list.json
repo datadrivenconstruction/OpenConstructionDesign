@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "Todos",
+ "clash_list.only_selected": "Solo seleccionados",
+ "clash_list.tolerance": "Tolerancia",
+ "clash_list.gap": "Separación",
+ "clash_list.export": "Exportar",
+ "clash_list.col.volume": "Volumen",
+ "clash_list.fix.up": "Subir",
+ "clash_list.fix.down": "Bajar",
+ "clash_list.fix.sleeve": "Manguito",
+ "clash_list.apply_fix": "Aplicar corrección",
+ "clash_list.err.tol": "Tolerancia: introduzca una longitud (0 o más), p. ej. 50 o 2 in",
+ "clash_list.sleeve_no_host": "El manguito necesita un muro o forjado en el par",
+ "clash_list.err.gap": "Separación: introduzca una longitud (0 o más), p. ej. 50 o 2 in"
+}

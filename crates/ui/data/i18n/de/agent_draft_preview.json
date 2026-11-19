@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "Vorschau",
+ "agent_draft.ag.preview.desc": "Umreißt die Elemente dieses Entwurfs auf der Zeichenfläche, solange der Zeiger auf der Schaltfläche liegt. Nichts wird geändert.",
+ "agent_draft.type.column": "Stütze",
+ "agent_draft.type.roof": "Dach",
+ "agent_draft.type.ceiling": "Decke",
+ "agent_draft.type.stair": "Monolithisch",
+ "agent_draft.type.railing": "Geländer",
+ "agent_draft.type.shaft": "Schacht",
+ "agent_draft.type.axis": "Achse 6,5 mm",
+ "agent_draft.type.refplane": "Bezugsebene"
+}

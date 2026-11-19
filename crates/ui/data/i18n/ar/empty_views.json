@@ -1,0 +1,19 @@
+{
+ "empty.v3d_gpu.title": "ثلاثية الأبعاد غير متاحة على بطاقة الرسوميات هذه",
+ "empty.v3d_gpu.hint": "النموذج آمن والمخطط يعمل. أعد التشغيل بوضع رسوميات آمن لتجربة ثلاثية الأبعاد مجدداً.",
+ "empty.v3d_gpu.action": "إعادة التشغيل بوضع رسوميات آمن",
+ "empty.v3d_loading.title": "جارٍ بناء ثلاثي الأبعاد…",
+ "empty.v3d_loading.pct": "جارٍ الفتح… {pct} %",
+ "empty.plan_hidden.title": "كل العناصر مخفية في هذا المخطط",
+ "empty.plan_hidden.hint": "الإخفاء أو العزل المؤقت لا يترك شيئاً مرئياً.",
+ "empty.plan_hidden.action": "إظهار الكل",
+ "empty.plan_graphics.title": "رسومات العرض تخفي كل الفئات",
+ "empty.plan_graphics.hint": "قواعد الفئات في هذا العرض لا تترك شيئاً لعرضه.",
+ "empty.plan_graphics.action": "فتح رسومات العرض",
+ "empty.plan_phase.title": "تصفية المراحل تخفي كل شيء",
+ "empty.plan_phase.hint": "لا يوجد في هذا المستوى شيء ضمن المرحلة التي يعرضها هذا العرض.",
+ "empty.plan_phase.action": "تغيير المرحلة",
+ "empty.plan_level.title": "لا توجد عناصر في هذا المستوى",
+ "empty.plan_level.hint": "توجد عناصر في مستويات أخرى من هذا النموذج.",
+ "empty.plan_level.action": "الانتقال إلى المستوى الذي فيه عناصر"
+}

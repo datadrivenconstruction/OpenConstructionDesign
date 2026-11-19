@@ -1,0 +1,15 @@
+{
+ "text_style.lbl.text_style": "文字スタイル",
+ "text_style.lbl.align": "配置",
+ "text_style.lbl.head": "矢印の先端",
+ "text_style.lbl.line_style": "線のスタイル",
+ "text_style.lbl.fill": "塗りつぶし",
+ "text_style.lbl.detail": "詳細",
+ "text_style.lbl.width": "幅",
+ "text_style.bad_number": "{min} から {max} までの数値を入力してください",
+ "text_style.tip.next_ring": "この輪郭を閉じ、同じ領域内に別の輪郭を開始",
+ "text_style.tip.edit_text": "その場で文字を編集",
+ "text_style.tip.add_leader": "この文字に引出線を追加",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°"
+}

@@ -1,0 +1,22 @@
+{
+ "ai.audit.tokens": "{n} tokens",
+ "ai.audit.filter.all": "Todos",
+ "ai.audit.filter.ai": "IA",
+ "ai.audit.filter.me": "Yo",
+ "ai.audit.search": "Buscar cambios",
+ "ai.audit.search.clear": "Borrar búsqueda",
+ "ai.audit.show_all": "Mostrar todo",
+ "ai.audit.empty.hint": "Aquí aparecen los cambios redactados o aplicados por un modelo o un agente, cada uno con una forma de volver atrás.",
+ "ai.audit.no_match": "Ningún cambio coincide con el filtro.",
+ "ai.audit.show.tip": "Seleccionar y mostrar los elementos que tocó este cambio",
+ "ai.audit.revert.ask": "¿Deshacer «{what}»? {change}.",
+ "ai.audit.revert.elements": {
+  "one": "# cambio de elemento",
+  "other": "# cambios de elementos"
+ },
+ "ai.audit.revert.keeps": "Los cambios más recientes se mantienen. La reversión es un solo paso de deshacer.",
+ "ai.audit.cancel": "Cancelar",
+ "ai.audit.toast.reverted": "Revertido: {what}",
+ "ai.audit.toast.undone": "Deshecho: {what}",
+ "ai.audit.redo": "Rehacer"
+}

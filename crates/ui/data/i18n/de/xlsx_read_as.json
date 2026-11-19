@@ -1,0 +1,11 @@
+{
+ "xlsx_read_as.title": "Umbenanntes Blatt?",
+ "xlsx_read_as.detail": "Blatt {found} hat die Spalten von {sheet} ({score} % Übereinstimmung). Es wird nur gelesen, wenn Sie es auswählen.",
+ "xlsx_read_as.detail_many": "Mehr als ein Blatt passt zu {sheet}: {found}. Es wird nichts für Sie ausgewählt; wählen Sie das zu lesende aus.",
+ "xlsx_read_as.read_as": "„{found}“ als {sheet} lesen",
+ "xlsx_read_as.read_as_tip": "Nur für diesen Import. Das Blatt wird nicht umbenannt; „Anwenden“ schreibt nur die Ids neuer Zeilen hinein.",
+ "xlsx_read_as.active": "Blatt „{found}“ wird bei diesem Import als {sheet} gelesen.",
+ "xlsx_read_as.undo": "Nicht als {sheet} lesen",
+ "xlsx_read_as.undo_tip": "Zurück zu den Blattnamen, wie sie in der Arbeitsmappe stehen.",
+ "xlsx_read_as.not_rewritten": "Die Arbeitsmappe wurde nicht neu geschrieben: Ein umbenanntes Blatt wird unter seinem eigenen Namen gelesen. Benennen Sie es zurück, um die Arbeitsmappe synchron zu halten."
+}

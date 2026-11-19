@@ -1,0 +1,6 @@
+{
+ "ai_toast.toast_not_refreshed": "{n} bekor qilish qadami sifatida qo'llandi (Ctrl+Z bekor qiladi), lekin ko'rinish yangilanmadi. Ko'rinishni qayta yuklang.",
+ "ai.optx.reload_failed": "“{name}” varianti qo'llandi va saqlandi, lekin ko'rinish qayta yuklanmadi: {e}",
+ "ai.cmp.stale": "Eskirgan",
+ "ai.cmp.stale_tip": "Bu variant modelning eski holatiga asoslangan. Qo'llash uchun uni qaytadan yarating."
+}

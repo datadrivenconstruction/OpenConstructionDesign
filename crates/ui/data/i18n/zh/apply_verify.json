@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "应用已停止：模型保持原样",
+ "apply_verify.rolled_back": "应用结果与草稿不符，已撤回；模型未更改。{what}",
+ "apply_verify.diff.missing": "草稿显示了{what}{kind}，但应用时未执行。",
+ "apply_verify.diff.extra": "应用了{kind}{what}，但草稿中未显示。",
+ "apply_verify.diff.kind": "草稿显示的是{what}{shown}，但应用的是{applied}。",
+ "apply_verify.diff.value": "{what}：“{col}”与草稿结果不同。",
+ "apply_verify.diff.truncated": "草稿与已应用的更改大小不同。",
+ "apply_verify.diff.unreadable": "无法读回已应用的更改（{e}）。",
+ "apply_verify.no_base": "未执行应用：缺少用于核对草稿的副本。模型未更改；请重新生成草稿。",
+ "apply_verify.take_back_failed": "撤回失败（{e}）：请使用撤销。",
+ "apply_verify.kind.created": "已创建",
+ "apply_verify.kind.changed": "已更改",
+ "apply_verify.kind.deleted": "已删除",
+ "apply_verify.card.type_row": "类型 {type} · {n} 个元素接受此更改"
+}

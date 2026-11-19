@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "Leitung",
+ "mep3d.pipe": "Rohr",
+ "mep3d.tray": "Kabelrinne",
+ "mep3d.conduit": "Leerrohr",
+ "mep3d.system": "System",
+ "mep3d.length": "Länge",
+ "mep3d.diameter": "Durchmesser",
+ "mep3d.width": "Breite",
+ "mep3d.height": "Höhe",
+ "mep3d.insulation": "Dämmung",
+ "mep3d.tip": "Enter — anwenden; Formstücke werden neu berechnet",
+ "mep3d.size_positive": "Nennmaß muss größer als null sein",
+ "mep3d.not_changed": "nicht geändert: {e}",
+ "mep3d.copied": "Leitung kopiert",
+ "mep3d.changed": "Leitung geändert",
+ "mep3d.deleted": "Elemente gelöscht: {n}",
+ "mep3d.not_deleted": "nicht gelöscht: {e}",
+ "mep3d.no_wall_type": "kein Wandtyp",
+ "mep3d.demo.supply": "Zuluft S1",
+ "mep3d.demo.heating": "Heizung",
+ "mep3d.demo.power": "Strom"
+}

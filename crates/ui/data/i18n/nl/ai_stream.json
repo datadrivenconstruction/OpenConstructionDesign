@@ -1,0 +1,14 @@
+{
+ "ai.stream.waiting": "Wachten op het model",
+ "ai.stream.reading": "Het model wordt gelezen",
+ "ai.stream.working": "Bezig",
+ "ai.stream.answering": "Antwoord wordt geschreven",
+ "ai.stream.tools_one": "1 hulpmiddel",
+ "ai.stream.tools_many": "{n} hulpmiddelen",
+ "ai.stream.secs": "{n} s",
+ "ai.stream.stalled": "Nog steeds wachten op de modelservice",
+ "ai.stream.stop": "Stoppen",
+ "ai.stream.cancelled": "Gestopt",
+ "ai.stream.incomplete": "Het concept is onvolledig. Er is niets op het model toegepast.",
+ "ai.stream.sep": " · "
+}

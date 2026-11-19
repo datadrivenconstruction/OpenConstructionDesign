@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key} आरक्षित है ({why}) और इसे दोबारा नहीं सौंपा जा सकता",
+ "quick.keys.res_copy": "कॉपी",
+ "quick.keys.res_paste": "पेस्ट",
+ "quick.keys.res_cut": "कट",
+ "quick.keys.res_undo": "undo / redo",
+ "quick.keys.res_save": "सहेजें",
+ "quick.keys.res_palette": "कमांड पैलेट",
+ "quick.keys.reserved_conflict": "{key} पहले से “{cmd}” के लिए उपयोग में है। Esc इसे वहीं रखता है।",
+ "quick.keys.reserved_swap": "अदला-बदली",
+ "quick.keys.reserved_take": "ले लें",
+ "quick.keys.reserved_keep": "रखें",
+ "quick.keys.reserved_os": "सिस्टम द्वारा लिया गया:"
+}

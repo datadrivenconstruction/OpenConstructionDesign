@@ -1,0 +1,7 @@
+{
+ "xlsx_project.title": "Bu çalışma kitabı başka bir projeden dışa aktarılmış",
+ "xlsx_project.body": "“{file}” çalışma kitabı başka bir projeye ait. Öğe kimlikleri projeler arasında farklı olduğundan satırları buradaki ilgisiz öğeleri değiştirirdi. Bu projeye hiçbir şey okunmadı.",
+ "xlsx_project.export_new": "Bu projeyi yeni bir çalışma kitabına aktar",
+ "xlsx_project.close": "Kapat",
+ "xlsx_project.no_project": "Bu çalışma kitabı hangi projeye ait olduğunu belirtmiyor: bu projeden dışa aktarıldığını kontrol edin."
+}

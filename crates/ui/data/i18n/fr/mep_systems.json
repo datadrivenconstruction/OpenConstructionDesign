@@ -1,0 +1,21 @@
+{
+ "mep.row.system": "Réseau",
+ "mep.row.elevation": "Cote de départ",
+ "mep.row.slope": "Pente",
+ "mep.row.material": "Matériau",
+ "mep.row.dev_elevation": "Cote",
+ "mep.row.no_system": "Ce réseau n'existe plus. Choisissez-en un autre.",
+ "mep.row.no_points": "Le tronçon n'a pas de points, donc pas de cote.",
+ "mep.row.system_domain": "Le réseau {system} n'accepte pas ce type de tronçon ({kind}). Choisissez un réseau du même type.",
+ "mep.row.material_pipes": "Un matériau ne s'applique qu'aux canalisations ; ce tronçon est un {kind}.",
+ "mep.row.no_catalog": "Le matériau n'a pas de dimensions au catalogue pour ce tronçon.",
+ "mep.mat.none": "Non défini",
+ "mep.mat.steel": "Acier",
+ "mep.mat.copper": "Cuivre",
+ "mep.mat.pvc": "PVC",
+ "mep.mat.pp": "Polypropylène",
+ "mep.err.follow_blocked": "Un réseau raccordé ne peut pas suivre ce changement : il n'y a pas de place pour son tronçon au nouvel emplacement. Déplacez l'appareil moins loin, ou débranchez d'abord le réseau.",
+ "mep.err.follow_slope": "Un réseau raccordé a une pente qui ne peut pas être conservée au nouvel emplacement : elle descendrait sous la pente minimale de son réseau. Déplacez moins en hauteur, ou débranchez d'abord le réseau.",
+ "mep.err.follow_port_lost": "Un raccord sur lequel ce réseau s'appuyait n'existe plus après la modification. Éloignez d'abord le réseau, ou conservez le type d'appareil.",
+ "mep.err.follow_device": "Ce réseau se termine sur un raccord d'appareil et ne peut pas le quitter. Déplacez plutôt l'appareil, ou débranchez d'abord le réseau."
+}

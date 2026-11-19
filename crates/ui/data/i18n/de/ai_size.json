@@ -1,0 +1,10 @@
+{
+ "ai.size.count": "etwa {n} / {max} Tokens",
+ "ai.size.block": "Zu lang für dieses Modell: etwa {n} Tokens, bis zu {max} passen und lassen Platz für die Antwort — kürzen oder aufteilen",
+ "ai.size.trim": "Auf Länge kürzen",
+ "ai.size.trim_tip": "Das Ende der Nachricht abschneiden, damit sie passt. Erst nach dem Klick wird gekürzt.",
+ "ai.size.drop_view": "Ansicht weglassen",
+ "ai.size.drop_level": "Geschoss weglassen",
+ "ai.size.drop_selection": "Auswahl weglassen",
+ "ai.size.sep": ","
+}

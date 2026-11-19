@@ -1,0 +1,14 @@
+{
+ "ai_keys.header_is_key": "Khóa đặt vào ô Khóa — tiêu đề được lưu dạng văn bản thường",
+ "ai_keys.move": "Chuyển sang Khóa",
+ "ai_keys.remove_line": "Gỡ khỏi tiêu đề",
+ "ai_keys.save_blocked": "Chuyển khóa ra khỏi tiêu đề để lưu",
+ "ai_keys.show": "Hiện",
+ "ai_keys.hide": "Ẩn",
+ "ai_keys.copy": "Sao chép",
+ "ai_keys.tokens": "token",
+ "ai_keys.presets": "Mẫu cài sẵn",
+ "ai_keys.preset_k": "{n}k",
+ "ai_keys.preset_m": "{n}M",
+ "ai_keys.images_on": "Được hỗ trợ"
+}

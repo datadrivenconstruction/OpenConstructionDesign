@@ -1,0 +1,5 @@
+{
+ "materials.mat.conflict": "Kart düzenlenirken bu malzeme modelde değişti (geri alma veya başka bir pencere). Düzenlemeleriniz korundu.",
+ "materials.mat.keep": "Düzenlemelerimi koru",
+ "materials.mat.reload": "Yeniden yükle"
+}

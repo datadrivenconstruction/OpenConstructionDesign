@@ -1,0 +1,6 @@
+{
+ "quick.keys.rec_hint": "Esc bricht ab · Rücktaste löscht",
+ "quick.keys.row_lost": "{key} gehört jetzt zu „{cmd}“",
+ "quick.keys.row_took": "{key} von „{cmd}“ übernommen",
+ "quick.keys.reset_tip": "Auf Standard zurücksetzen"
+}

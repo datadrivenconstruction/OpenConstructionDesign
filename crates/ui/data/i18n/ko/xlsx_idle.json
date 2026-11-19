@@ -1,0 +1,8 @@
+{
+ "xlsx_idle.idle_title": "가져올 변경 사항 없음",
+ "xlsx_idle.export_name": "내보내기",
+ "xlsx_idle.export_body": "모델을 통합 문서에 씁니다. 거기서 값을 편집한 뒤 동기화하세요.",
+ "xlsx_idle.sync_name": "동기화",
+ "xlsx_idle.sync_body": "통합 문서를 다시 읽고 차이점을 나열합니다. 적용할 때만 모델이 변경됩니다.",
+ "xlsx_idle.last_sync": "마지막 동기화: {when}"
+}

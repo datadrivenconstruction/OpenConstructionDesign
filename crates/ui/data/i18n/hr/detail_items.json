@@ -1,0 +1,16 @@
+{
+ "cmd.drawing.to_detail": "Crtež u detalj",
+ "cmd.drawing.to_detail.desc": "Odabrane primitive crteža ili cijeli crtež na ovoj razini pretvara u detaljne linije, tekstualne bilješke i površine na tlocrtu. Crtež ostaje nepromijenjen.",
+ "detail_items.st.no_drawing": "Na ovoj razini nema crteža",
+ "detail_items.st.nothing": "Nema što pretvoriti: nema linija, lukova, tekstova ni ispuna na prikazanim slojevima",
+ "detail_items.st.done": "Dodani detaljni elementi: linije {lines}, tekstovi {texts}, površine {regions}",
+ "detail_items.st.failed": "Detaljni elementi nisu dodani: {e}",
+ "detail_items.st.warn": "Detaljni elementi dodani, ali pogled nije mogao biti osvježen (linije {lines}, tekstovi {texts}, površine {regions}): {e}. Poništi ih uklanja.",
+ "detail_items.st.bad_view": "Detaljni elementi zahtijevaju pogled tlocrta ili presjeka",
+ "detail_items.st.no_transform": "Ovaj pogled nema upotrebljiv koordinatni sustav za crtež; ništa nije dodano",
+ "drafting_tools.free.plan_only": "Ova naredba radi s elementima tlocrta; otvorite tlocrt",
+ "drafting_tools.free.zero": "Dvije točke se podudaraju; ništa nije dodano",
+ "drafting_tools.free.select_first": "Prvo odaberite elemente ovog pogleda za raspodjelu",
+ "drafting_tools.free.pick_item": "Kliknite element ovog pogleda da ga označite",
+ "drafting_tools.free.dim_kind": "U crtežnom pogledu rade samo linearne kote"
+}

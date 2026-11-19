@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "A futó feladat mögött sorban áll: {n}",
+ "import_queue.queue_full": "A sor megtelt, {n} fájl nem került hozzáadásra",
+ "import_queue.changed": "A(z) {name} a projekt készítése után frissült. Az előző projekt nyílt meg.",
+ "import_queue.import_again": "Újraimportálás",
+ "import_queue.kept": "A befejezett importálás megmarad",
+ "import_queue.open_it": "Megnyitás",
+ "import_queue.sum.head": "importálás: {editable} szerkeszthető (falak {walls}, nyílások {open}, padlók {slabs}, helyiségek {rooms}, egyéb {other}), {meshes} hálóként",
+ "import_queue.sum.unchanged": ", változatlan {n}",
+ "import_queue.sum.updated": ", frissítve {n}",
+ "import_queue.sum.missing": ", a forrásban nincs {n} (megtartva)",
+ "import_queue.sum.skipped": ", kihagyva {n}",
+ "import_queue.sum.warnings": ", figyelmeztetések {n}",
+ "import_queue.import_failed": "az importálás sikertelen: {e}"
+}

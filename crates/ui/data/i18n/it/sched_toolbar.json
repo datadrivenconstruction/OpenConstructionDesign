@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "Riga di filtro sotto le intestazioni. Testo: sottostringa; numeri: >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "Mostra o nascondi colonne",
+ "sched_toolbar.groups_tip": "Raggruppa le righe per colonne, con subtotali",
+ "sched_toolbar.formulas_tip": "Colonne calcolate",
+ "sched_toolbar.phase": "Fase",
+ "sched_toolbar.phase_tip": "Da quale fase sono prese le righe",
+ "sched_toolbar.copy_tip": "Righe selezionate (o tutte le visibili) come TSV",
+ "sched_toolbar.import_tip": "Rileggi un prospetto esportato: righe per Id, colonne per intestazione; prima i conteggi, poi un solo passo di annullamento",
+ "sched_toolbar.export_tip": "Righe e colonne visibili con totali; i numeri restano numeri",
+ "sched_toolbar.need_table": "Apri prima un prospetto",
+ "sched_toolbar.busy_open": "Una finestra di selezione file è già aperta",
+ "sched_toolbar.busy_save": "Una finestra di salvataggio è già aperta",
+ "sched_toolbar.clear_filter": "Cancella filtro",
+ "sched_toolbar.fields_title": "Colonne"
+}

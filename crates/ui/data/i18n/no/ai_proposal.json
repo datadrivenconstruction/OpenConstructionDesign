@@ -1,0 +1,13 @@
+{
+ "ai.proposal.title": "Forslag fra AI-assistent",
+ "ai.proposal.meta": "{actor} · operasjoner: {ops}",
+ "ai.proposal.apply.desc": "Bruker hele forslaget som ett trinn; Ctrl+Z angrer det",
+ "ai.proposal.applying": "Bruker…",
+ "ai.proposal.applied": "Forslaget ble brukt. Ctrl+Z angrer det.",
+ "ai.proposal.applied_resync": "Forslaget ble brukt, men visningen er ikke oppdatert ennå. Den oppdateres selv; Ctrl+Z angrer trinnet.",
+ "ai.proposal.stale": "Modellen endret seg etter at forslaget ble forhåndsvist. Be AI-assistenten foreslå det på nytt.",
+ "ai.proposal.toast.applied": "Forslaget ble brukt. Ctrl+Z angrer det.",
+ "ai.proposal.toast.stale": "Modellen endret seg etter forhåndsvisningen, så ingenting ble brukt. Forhåndsvis på nytt: be AI-assistenten foreslå det på nytt.",
+ "ai.proposal.toast.refused": "Forslaget ble ikke brukt: {reason}",
+ "ai.proposal.rejected": "Forslaget ble avvist."
+}

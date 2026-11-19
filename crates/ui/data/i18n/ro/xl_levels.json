@@ -1,0 +1,5 @@
+{
+ "xl.msg.level_name_x_is_already_used": "numele de nivel '{}' este deja folosit",
+ "xl.msg.unreadable_id_elements_without_a_row_not_deleted": "id ilizibil: elementele fără rând nu se șterg la acest import",
+ "xl.msg.wall_type_name_x_is_already_used": "numele tipului de perete '{}' este deja folosit"
+}

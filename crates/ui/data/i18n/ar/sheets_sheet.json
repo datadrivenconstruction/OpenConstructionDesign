@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "نسخ الورقة مع العروض",
+ "cmd.view.sheet_duplicate_title": "نسخ الورقة (إطار العنوان فقط)",
+ "sheets.dup.menu_views": "نسخ مع العروض",
+ "sheets.dup.menu_title": "نسخ، إطار العنوان فقط",
+ "sheets.dup.done": "أُنشئت الورقة {number} من {src}: {views} عروض، و{sched} جداول ومفاتيح. لا تُنسخ المراجعات؛ والورقة غير مُصدَرة.",
+ "sheets.dup.none": "افتح ورقة لنسخها",
+ "sheets.dup.copy": "نسخة",
+ "cmd.view.sheet_duplicate.short": "نسخ مع العروض",
+ "cmd.view.sheet_duplicate_title.short": "نسخ إطار العنوان"
+}

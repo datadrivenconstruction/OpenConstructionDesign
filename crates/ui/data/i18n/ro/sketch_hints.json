@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "Desenează un contur închis: dă clic pe puncte, apoi Enter sau Termină pentru a crea",
+ "sketch_hints.sk_finish": "Termină",
+ "sketch_hints.sk_cancel": "Anulează",
+ "sketch_hints.import_warn": "avertismente de verificare a modelului: {n} (primul: {first})",
+ "sketch_hints.ai.offline.schedule": "Deschide tabelul",
+ "sketch_hints.ai.offline.check": "Verifică față de reguli",
+ "sketch_hints.ai.offline.warnings": "Arată avertismentele",
+ "cmd.file.publish_pdf": "Publică foile în PDF…",
+ "cmd.file.publish_pdf.desc": "Publică foile alese în PDF. La fel ca Exportă foile în PDF/SVG.",
+ "sketch_hints.verify_none": "Nimic setat de asistentul AI în selecție de verificat",
+ "sketch_hints.contours_none": "Nu există toposuprafață în model: conturele apar după ce creezi una",
+ "sketch_hints.contours_off": "Conturile toposuprafeței sunt ascunse",
+ "sketch_hints.contours_on": "Conturile toposuprafeței sunt arătate"
+}

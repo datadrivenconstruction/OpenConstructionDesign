@@ -1,0 +1,4 @@
+{
+ "room_status.open": "Phòng {room} không còn được khép kín",
+ "warn.kind.room_open": "Phòng chưa khép kín"
+}

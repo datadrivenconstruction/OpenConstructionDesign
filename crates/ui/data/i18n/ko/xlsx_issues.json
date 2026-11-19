@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "건너뛴 행과 셀",
+ "xlsx_issues.conflicts_title": "양쪽에서 변경됨",
+ "xlsx_issues.missing_title": "통합 문서에 시트가 없음",
+ "xlsx_issues.look_alike_title": "시트 이름이 일치하지 않음",
+ "xlsx_issues.mass_title": "대량 삭제에는 확인이 필요합니다",
+ "xlsx_issues.sheets_missing": "시트 {sheets}이(가) 통합 문서에 없어(이름이 바뀌었거나 삭제됨) 행을 비교하지 않았습니다.",
+ "xlsx_issues.keep_model": "모델 유지",
+ "xlsx_issues.take_book": "통합 문서 값 사용",
+ "xlsx_issues.open_book_tip": "해당 앱에서 파일을 엽니다. 모델은 변경되지 않으며, 통합 문서를 저장하면 미리보기가 다시 로드됩니다."
+}

@@ -1,0 +1,19 @@
+{
+ "empty.v3d_gpu.title": "3D недоступен на этом графическом адаптере",
+ "empty.v3d_gpu.hint": "Модель в порядке, план работает. Перезапустите с безопасной графикой, чтобы снова попробовать 3D.",
+ "empty.v3d_gpu.action": "Перезапустить с безопасной графикой",
+ "empty.v3d_loading.title": "Строим 3D…",
+ "empty.v3d_loading.pct": "Открытие… {pct} %",
+ "empty.plan_hidden.title": "Все элементы скрыты на этом плане",
+ "empty.plan_hidden.hint": "Временное скрытие или изоляция ничего не оставляют.",
+ "empty.plan_hidden.action": "Показать все",
+ "empty.plan_graphics.title": "Графика вида скрывает все категории",
+ "empty.plan_graphics.hint": "Правила категорий этого вида ничего не оставляют.",
+ "empty.plan_graphics.action": "Открыть графику вида",
+ "empty.plan_phase.title": "Фильтр стадии скрывает всё",
+ "empty.plan_phase.hint": "На этом уровне ничего нет в стадии, которую показывает вид.",
+ "empty.plan_phase.action": "Сменить стадию",
+ "empty.plan_level.title": "На этом уровне нет элементов",
+ "empty.plan_level.hint": "На других уровнях модели элементы есть.",
+ "empty.plan_level.action": "Перейти на уровень с элементами"
+}

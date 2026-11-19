@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "Άνοιγμα φεγγίτη στέγης",
+ "cmd.arch.roof_opening": "Άνοιγμα στέγης",
+ "cmd.arch.roof_extrusion": "Στέγη με εξώθηση",
+ "cmd.arch.ceiling_opening": "Άνοιγμα οροφής",
+ "cmd.str.slab_opening": "Άνοιγμα δαπέδου",
+ "cmd.ctx.wall.detach": "Αποσύνδεση κορυφής",
+ "cmd.ctx.floor.sketch": "Επεξεργασία ορίου",
+ "cmd.ctx.floor.shape": "Επεξεργασία σχήματος",
+ "host_shape.shape.elev_prompt": "υψόμετρο, mm…",
+ "host_shape.shape.elev_mm": "{v} mm",
+ "host_shape.sketch.no_host": "δεν υπάρχει φιλοξενών στοιχείο κάτω από το όριο σε αυτό το επίπεδο",
+ "host_shape.issue.roof": "στέγη {id}: {e}",
+ "host_shape.issue.ceiling": "οροφή {id}: {e}",
+ "host_shape.status.select_slab": "επιλέξτε πλάκα",
+ "host_shape.status.select_walls": "επιλέξτε τοίχους",
+ "host_shape.status.no_roof_or_level": "δεν υπάρχει στέγη ή επίπεδο από πάνω",
+ "host_shape.status.top_attached": "οι κορυφές τοίχων συνδέθηκαν",
+ "host_shape.status.top_detached": "οι κορυφές τοίχων αποσυνδέθηκαν",
+ "host_shape.status.straight_wall": "απαιτείται ευθύγραμμος τοίχος",
+ "host_shape.status.roof_extruded": "δημιουργήθηκε στέγη με εξώθηση",
+ "warn.kind.cut": "Τομή ή σύνδεση δεν δημιουργήθηκε"
+}

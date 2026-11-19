@@ -1,0 +1,26 @@
+family Washbasin
+category plumbing
+host wall
+ifc IfcSanitaryTerminal WASHHANDBASIN
+param FlowCold number type 0.07
+param FlowHot number type 0.07
+param FlowWaste number type 0.3
+param Radius length type 250mm
+param Bowl length type 180mm
+param Shell length type 15mm
+param Rim length instance 850mm
+param China material type "Vitreous China"
+param Gap length type 30mm
+ref Wall y = 0
+ref Axis y = Gap + Radius
+type "500" Radius=250mm
+type "600" Radius=300mm, Bowl=200mm
+type "20in" Radius=10in, Bowl=7in, Shell=0.6in, Gap=1.2in
+revolve Bowl poly(0, Rim - Bowl, Radius, Rim - Bowl, Radius, Rim, Radius - Shell, Rim, Radius - Shell, Rim - Bowl + Shell, 0, Rim - Bowl + Shell) axis(0, Axis) mat(China) show(3d, elev)
+extrude Bracket rect(-60mm, Wall, 60mm, Gap) z(Rim - Bowl, Rim - 20mm) mat(China) show(medium, fine, 3d, elev)
+symbol circle(0, Axis, Radius)
+symbol circle(0, Axis, Radius - Shell) show(medium, fine)
+symbol line(-60mm, Wall, 60mm, Wall) show(fine)
+connector Waste pipe sanitary at(0, Axis, Rim - Bowl) dir(0, 0, -1) size(40mm)
+connector Cold pipe cold_water at(-50mm, Wall, Rim - Bowl - 100mm) dir(0, -1, 0) size(15mm)
+connector Hot pipe hot_water at(50mm, Wall, Rim - Bowl - 100mm) dir(0, -1, 0) size(15mm)

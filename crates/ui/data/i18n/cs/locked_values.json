@@ -1,0 +1,8 @@
+{
+ "cmd.props.param_lock": "Zamknout nebo odemknout hodnotu parametru",
+ "locked_values.kept": "Zachováno uzamčených hodnot: {n}",
+ "locked_values.locked": "„{name}“ uzamčeno: import z XLSX, hromadná úprava a AI ji zachovají",
+ "locked_values.unlocked": "„{name}“ odemknuto",
+ "locked_values.locked_tip": "Uzamčeno: import z XLSX, hromadná úprava a AI tuto hodnotu zachovají. Klikněte pro odemknutí  ·  Ctrl+L",
+ "locked_values.no_row": "Ukažte na řádek parametru v Vlastnostech a stiskněte Ctrl+L"
+}

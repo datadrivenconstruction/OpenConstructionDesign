@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "Автозбереження не вдалося, останні зміни не захищено. {why}",
+ "autosave_status.autosave_open": "Налаштування автозбереження",
+ "autosave_status.autosave_recovered": "Автозбереження знову працює.",
+ "autosave_status.autosave_reason": "Причина: {why}"
+}

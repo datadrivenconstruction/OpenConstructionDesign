@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "Új család",
+ "family_editor.open_tip": "Család vagy vázlat megnyitása",
+ "family_editor.close_named": "{name} bezárása",
+ "family_editor.unsaved": "Mentetlen módosítások",
+ "family_editor.search": "Keresés",
+ "family_editor.nothing": "Nincs találat",
+ "family_editor.sec_families": "Projektcsaládok",
+ "family_editor.sec_drafts": "Vázlatok",
+ "family_editor.cap_category": "Kategória",
+ "family_editor.cap_host": "Befogadó elem",
+ "family_editor.cap_type": "Előnézeti típus"
+}

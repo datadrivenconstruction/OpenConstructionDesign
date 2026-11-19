@@ -1,0 +1,4 @@
+{
+ "xlsx_write.denied": "Ingen rettigheter til å skrive i denne mappen. Arbeidsboken ble ikke endret. Lagre eksporten i en annen mappe.",
+ "xlsx_write.save_to": "Lagre til…"
+}

@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "Дубалдын бүтүн контурун тандоо",
+ "cmd.sketch.link_unlink": "Четти дубалдан ажыратуу",
+ "cmd.sketch.link_repick": "Четтеги дубалды кайра тандоо",
+ "cmd.ctx.floor.link_unlink": "Четтерди дубалдардан ажыратуу",
+ "cmd.ctx.floor.link_accept": "Өчүрүлгөн дубалдардын четтерин кабыл алуу",
+ "boundary_link.hint.loop": "Дубалды басыңыз: дубалдардын жабык тизмеги байланышкан четтерге айланат",
+ "boundary_link.hint.repick": "Четке параллель дубалды басыңыз: четтер ошону ээрчийт",
+ "boundary_link.need_sketch": "Адегенде чек эскизин ачыңыз",
+ "boundary_link.need_edge": "Эскиздин четин көрсөтүңүз",
+ "boundary_link.need_straight": "Дубалды ээрчий алат түз четтер гана",
+ "boundary_link.need_floor": "Кабатты тандаңыз",
+ "boundary_link.no_wall": "Курсордун астында дубал жок",
+ "boundary_link.not_parallel": "Дубал четке параллель эмес",
+ "boundary_link.not_linked": "Бул четтин дубалга байланышы жок",
+ "boundary_link.unlinked": "Четтин байланышы ажыратылды: ал орнунда калат жана дубалды ээрчибейт",
+ "boundary_link.accepted": "Четтер кабыл алынды: алар орнунда калат, жөнөкөй четтер катары",
+ "boundary_link.failed": "Колдонуу мүмкүн болгон жок",
+ "boundary_link.lost": "булак дубал өчүрүлгөн",
+ "boundary_link.blocked": "дубалды ээрчий албайт"
+}

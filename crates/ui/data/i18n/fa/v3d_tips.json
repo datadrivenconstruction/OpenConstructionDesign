@@ -1,0 +1,8 @@
+{
+ "v3d.proj.to_ortho": "تغییر به تصویر متعامد",
+ "v3d.proj.to_persp": "تغییر به تصویر پرسپکتیو",
+ "v3d.walk.unit.m": "متر بر ثانیه",
+ "v3d.walk.unit.ft": "ft/s",
+ "v3d.temp.show_all": "نمایش همه  ·  Esc",
+ "v3d.msg.deleted_named": "نمای سه‌بعدی {name} حذف شد"
+}

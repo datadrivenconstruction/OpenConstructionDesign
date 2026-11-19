@@ -1,0 +1,28 @@
+family Kitchen Counter
+category casework
+host floor
+ifc IfcFurniture NOTDEFINED
+param Length length type 1200mm
+param Depth length type 600mm
+param Height length type 900mm
+param Worktop length type 38mm
+param Overhang length type 20mm
+param Plinth length type 100mm
+param Toe length type 50mm
+param Carcass material type "Melamine White"
+param Stone material type "Quartz"
+ref Left x = 0
+ref Right x = Length
+ref Front y = 0
+ref Back y = Depth
+type "300" Length=300mm
+type "450" Length=450mm
+type "600" Length=600mm
+type "900" Length=900mm
+type "1200" Length=1200mm
+type "36in" Length=36in, Depth=24in, Height=36in, Worktop=1.5in, Overhang=1in, Plinth=4in, Toe=3in
+extrude Plinth rect(Left, Front + Overhang + Toe, Right, Back) z(0, Plinth) mat(Carcass) show(3d, elev)
+extrude Cabinet rect(Left, Front + Overhang, Right, Back) z(Plinth, Height - Worktop) mat(Carcass) show(3d, elev)
+extrude Worktop rect(Left, Front, Right, Back) z(Height - Worktop, Height) mat(Stone) show(3d, elev)
+symbol rect(Left, Front, Right, Back)
+symbol line(Left, Front + Overhang, Right, Front + Overhang) show(medium, fine)

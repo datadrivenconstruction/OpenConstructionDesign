@@ -1,0 +1,10 @@
+{
+ "xlsx_dup.dup_undo": "Qarorni bekor qilish",
+ "xlsx_dup.dup_undo_tip": "Yangi elementlarga aylantirilgan qatorlar ({n}) yana id bilan o'qiladi",
+ "xlsx_dup.dup_new": "Tahrirlangan nusxalarni yangi elementlar sifatida yaratish",
+ "xlsx_dup.dup_new_tip": "{rows} qatorlar qiymatlari bilan yangi elementlarga aylanadi; #{id} elementi o'z qiymatlarini saqlaydi (qolgani bilan bitta bekor qilish qadami)",
+ "xl.msg.dup_same": "takroriy id {}: {} qator bilan bir xil qiymatlar; qator e'tiborsiz qoldirildi",
+ "xl.msg.dup_unchanged": "takroriy id {}: eksport qilingan qatorning o'zgarishsiz nusxasi; qator e'tiborsiz qoldirildi",
+ "xl.msg.dup_conflict": "id {} {} qatorlarida turli qiymatlar bilan; bu id uchun hech narsa qo'llanmadi",
+ "xl.msg.dup_conflict_keep": "id {} {} qatorlarida turli qiymatlar bilan; bu id uchun hech narsa qo'llanmadi — bitta qatorni saqlang"
+}

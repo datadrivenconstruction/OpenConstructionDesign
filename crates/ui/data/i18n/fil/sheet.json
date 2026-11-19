@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "Gabay sa shortcut",
+ "cmd.help.shortcuts.desc": "Ipinapakita ang bawat shortcut ayon sa kasalukuyang setting, ayon sa konteksto. Pindutin ang ? kahit saan maliban sa text field.",
+ "sheet.title": "Mga keyboard shortcut",
+ "sheet.filter": "Salain ayon sa command o key",
+ "sheet.filter_label": "Salain ang mga shortcut",
+ "sheet.customize": "I-customize…",
+ "sheet.close": "Isara",
+ "sheet.esc_close": "para isara",
+ "sheet.none": "Walang tumutugmang shortcut",
+ "sheet.none_hint": "Subukan ang ibang salita o key.",
+ "sheet.sec.general": "Pangkalahatan",
+ "sheet.sec.plan": "Plano",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "Mga schedule",
+ "sheet.sec.sheets": "Mga sheet",
+ "sheet.sec.ai": "AI"
+}

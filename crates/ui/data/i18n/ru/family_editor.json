@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "Новое семейство",
+ "family_editor.open_tip": "Открыть семейство или черновик",
+ "family_editor.close_named": "Закрыть {name}",
+ "family_editor.unsaved": "Есть несохранённые изменения",
+ "family_editor.search": "Поиск",
+ "family_editor.nothing": "Ничего не найдено",
+ "family_editor.sec_families": "Семейства проекта",
+ "family_editor.sec_drafts": "Черновики",
+ "family_editor.cap_category": "Категория",
+ "family_editor.cap_host": "Основа",
+ "family_editor.cap_type": "Тип предпросмотра"
+}

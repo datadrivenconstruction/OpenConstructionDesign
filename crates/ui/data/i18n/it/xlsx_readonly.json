@@ -1,0 +1,6 @@
+{
+ "xlsx_readonly.read_only": "La cartella è di sola lettura (proprietà del file o permessi della cartella). Esporta in una copia, oppure deseleziona Sola lettura nelle proprietà del file e riprova.",
+ "xlsx_readonly.export_copy": "Esporta in una copia",
+ "xlsx_readonly.no_copy_name": "Nessun nome libero per una copia accanto alla cartella.",
+ "xlsx_readonly.copied": "La cartella è rimasta com'è. Accanto è stata scritta una copia aggiornata ed è ora collegata: {path}"
+}

@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "खाली इनपुट।",
+ "units.err.not_number": "स्थिति {pos} पर संख्या नहीं है।",
+ "units.err.unknown_unit": "अज्ञात इकाई: {unit}।",
+ "units.err.non_positive": "लंबाई शून्य से अधिक होनी चाहिए।",
+ "units.err.too_large": "लंबाई {max} m से अधिक नहीं हो सकती।",
+ "units.err.bad_angle": "कोण डिग्री में एक संख्या है।",
+ "units.err.unknown_name": "अज्ञात नाम: {name}। मान रखा गया।",
+ "units.err.cycle": "{name} पर सूत्र लूप। मान रखा गया।",
+ "units.err.bad_expr": "स्थिति {pos} पर व्यंजक पढ़ा नहीं जा सका। मान रखा गया।",
+ "units.err.div_zero": "स्थिति {pos} पर शून्य से भाग। मान रखा गया।",
+ "units.err.invalid": "अमान्य संख्या।",
+ "units.err.kept": "नहीं बदला: {reason}"
+}

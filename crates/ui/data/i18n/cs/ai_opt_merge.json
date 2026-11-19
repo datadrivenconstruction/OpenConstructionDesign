@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "Sloučit variantu: {name}",
+ "ai_opt_merge.whole": "Sloučit celou variantu",
+ "ai_opt_merge.parts": "Sloučit vybrané části",
+ "ai_opt_merge.note": "Proč tato varianta",
+ "ai_opt_merge.rebased": "Model se změnil po vytvoření této varianty: sloučení bylo přepočítáno proti aktuálnímu modelu. Před použitím zkontrolujte změny.",
+ "ai_opt_merge.left.not_picked": "Nevybráno z varianty",
+ "ai_opt_merge.left.unticked": "Odškrtnuto ve variantě",
+ "ai_opt_merge.left.conflict": "Nelze přidat do aktuálního modelu: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "Tuto variantu nelze sloučit. Zamítnutou variantu je nejprve nutné obnovit.",
+ "ai_opt_merge.refused.stale": "Model se změnil po vytvoření této varianty. Přepočítejte sloučení proti aktuálnímu modelu.",
+ "ai_opt_merge.refused.nothing_picked": "Není vybráno nic ke sloučení.",
+ "ai_opt_merge.refused.unknown_item": "Položka {item} není součástí této varianty.",
+ "ai_opt_merge.refused.not_in_option": "Vybraný prvek není součástí této varianty.",
+ "ai_opt_merge.refused.needs_left_out": "Položka {item} potřebuje položku {needs}. Vyberte ji také, nebo povolte přidání závislostí.",
+ "ai_opt_merge.refused.set_gone": "Položka {item} odkazuje na výběr, který již neexistuje. Vygenerujte variantu znovu.",
+ "ai_opt_merge.refused.busy": "Je otevřen jiný plán. Nejprve jej použijte nebo zamítněte.",
+ "ai_opt_merge.refused.failed": "Sloučení nelze připravit: {reason}",
+ "ai_opt_merge.revive": "Obnovit variantu",
+ "ai_opt_merge.merged": "Sloučeno"
+}

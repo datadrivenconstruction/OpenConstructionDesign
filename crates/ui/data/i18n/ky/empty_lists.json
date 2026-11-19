@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "Дубалды чийүү",
+ "empty.totals.action": "Дубалды чийүү",
+ "empty.schedule.action": "Тилке кошуу",
+ "empty.schedule_filtered.action": "Чыпканы тазалоо",
+ "empty.library.action": "Издөөнү баштапкыга кайтаруу",
+ "empty.library.load": "Үй-бүлөнү жүктөө",
+ "empty.schedule_fields.title": "Тилкелер көрсөтүлгөн жок",
+ "empty.schedule_fields.action": "Тилке кошуу",
+ "empty.schedule_fields.hint": "Таблицаны көрүү үчүн жок дегенде бир тилкени күйгүзүңүз."
+}

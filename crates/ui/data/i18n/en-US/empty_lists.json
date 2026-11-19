@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "Draw wall",
+ "empty.totals.action": "Draw wall",
+ "empty.schedule.action": "Add field",
+ "empty.schedule_filtered.action": "Clear filter",
+ "empty.library.action": "Reset search",
+ "empty.library.load": "Load family",
+ "empty.schedule_fields.title": "No fields shown",
+ "empty.schedule_fields.action": "Add field",
+ "empty.schedule_fields.hint": "Turn on at least one field to see the table."
+}

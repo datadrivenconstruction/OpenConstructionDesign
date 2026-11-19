@@ -1,0 +1,11 @@
+{
+ "empty.sv_notfound.title": "Không tìm thấy góc nhìn",
+ "empty.sv_notfound.hint": "Góc nhìn này đã bị xóa hoặc không còn thuộc dự án.",
+ "empty.sv_notfound.action": "Đóng góc nhìn",
+ "empty.sv_cuts_nothing.title": "Mặt cắt này không cắt gì",
+ "empty.sv_cuts_nothing.hint": "Đường cắt không gặp tường, sàn hay lỗ mở nào trong độ sâu của nó. Hãy di chuyển đường hoặc làm góc nhìn sâu hơn.",
+ "empty.sv_cuts_nothing.action": "Hiện trên mặt bằng",
+ "empty.sv_shows_nothing.title": "Mặt đứng này không hiển thị gì",
+ "empty.sv_shows_nothing.hint": "Không có tường, sàn hay lỗ mở nào nằm trong độ sâu góc nhìn. Hãy di chuyển đường góc nhìn hoặc làm góc nhìn sâu hơn.",
+ "empty.sv_shows_nothing.action": "Hiện trên mặt bằng"
+}

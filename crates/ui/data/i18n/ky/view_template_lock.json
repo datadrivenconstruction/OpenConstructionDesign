@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "{name} шаблону башкарат",
+ "view_template.edit_template": "Шаблонду түзөтүү",
+ "view_template.locked_tip": "{name} көрүнүш шаблону орнотту. Аны шаблондо өзгөртүңүз.",
+ "view_template.no_filters": "Бул көрүнүштө чыпкалар жок"
+}

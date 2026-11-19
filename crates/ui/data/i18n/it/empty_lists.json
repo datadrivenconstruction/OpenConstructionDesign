@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "Disegna muro",
+ "empty.totals.action": "Disegna muro",
+ "empty.schedule.action": "Aggiungi campo",
+ "empty.schedule_filtered.action": "Cancella filtro",
+ "empty.library.action": "Reimposta ricerca",
+ "empty.library.load": "Carica famiglia",
+ "empty.schedule_fields.title": "Nessun campo mostrato",
+ "empty.schedule_fields.action": "Aggiungi campo",
+ "empty.schedule_fields.hint": "Attiva almeno un campo per vedere la tabella."
+}

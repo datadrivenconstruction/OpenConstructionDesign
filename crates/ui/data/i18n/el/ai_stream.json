@@ -1,0 +1,14 @@
+{
+ "ai.stream.waiting": "Αναμονή για το μοντέλο",
+ "ai.stream.reading": "Διάβασμα του μοντέλου",
+ "ai.stream.working": "Εργασία",
+ "ai.stream.answering": "Γράφεται η απάντηση",
+ "ai.stream.tools_one": "1 εργαλείο",
+ "ai.stream.tools_many": "{n} εργαλεία",
+ "ai.stream.secs": "{n} s",
+ "ai.stream.stalled": "Αναμονή ακόμα για την υπηρεσία μοντέλου",
+ "ai.stream.stop": "Διακοπή",
+ "ai.stream.cancelled": "Διακόπηκε",
+ "ai.stream.incomplete": "Το προσχέδιο είναι ημιτελές. Τίποτα δεν εφαρμόστηκε στο μοντέλο.",
+ "ai.stream.sep": " · "
+}

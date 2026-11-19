@@ -1,0 +1,12 @@
+{
+ "opt.stair.straight": "Reta",
+ "opt.stair.l": "L",
+ "opt.stair.u": "U",
+ "opt.stair.gap": "Vão",
+ "hint.stair.corner": "Escada em L: escolha o canto de virada · Backspace — remove o último ponto · Esc — remove o último ponto; sem pontos — cancela",
+ "hint.stair.side": "Escada: escolha o lado do segundo lance · Backspace — remove o último ponto · Esc — remove o último ponto; sem pontos — cancela",
+ "tool.stair.flights": "{n} espelhos (total {m})",
+ "tool.stair.err_split": "Cada lance precisa de pelo menos 2 espelhos: o primeiro lance tem {n} de {m}",
+ "tool.stair.err_comfort": "Espelho e piso violam a regra de conforto (2E + P)",
+ "tool.stair.err_input": "O tamanho da escada está fora do intervalo: verifique a largura, a altura e o patamar"
+}

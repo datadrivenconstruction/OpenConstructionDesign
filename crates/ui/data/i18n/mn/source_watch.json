@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "{name} диск дээр өөрчлөгдсөн.",
+ "src.watch.update": "Загварыг шинэчлэх",
+ "src.watch.compare": "Харьцуулах",
+ "src.watch.ignore": "Энэ хувилбарыг үл тоох",
+ "src.watch.missing": "{name}: эх файл олдсонгүй. Ажил үргэлжилнэ.",
+ "src.watch.locate": "Байрлуулах…",
+ "src.watch.dismiss": "Хаах",
+ "src.watch.more": "мөн өөр {n} эх файл",
+ "src.watch.done": "{name}-с шинэчлэгдлээ: {updated} өөрчлөгдсөн, {kept} талбар засагдсанаар хадгалагдсан, {conflicts} зөрчил, {locked} түгжээтэй утга хадгалагдсан"
+}

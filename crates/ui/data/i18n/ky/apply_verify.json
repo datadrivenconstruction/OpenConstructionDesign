@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "Колдонуу токтотулду: модель мурункудай калды",
+ "apply_verify.rolled_back": "Колдонуу черновикке дал келген жок жана артка кайтарылды; модель өзгөрүүсүз. {what}",
+ "apply_verify.diff.missing": "Черновик {what} {kind} көрсөтөт, бирок колдонуу муну аткарган жок.",
+ "apply_verify.diff.extra": "{kind} {what} колдонулду, аны черновик көрсөткөн эмес.",
+ "apply_verify.diff.kind": "Черновик {what} {shown} көрсөтөт, бирок колдонулганда {applied} болду.",
+ "apply_verify.diff.value": "{what}: “{col}” черновиктен башкача чыкты.",
+ "apply_verify.diff.truncated": "Черновик жана колдонулган өзгөртүү өлчөмү боюнча айырмаланат.",
+ "apply_verify.diff.unreadable": "Колдонулган өзгөртүүнү кайра окуу мүмкүн болгон жок ({e}).",
+ "apply_verify.no_base": "Колдонуу иштеген жок: черновикти текшерүү үчүн көчүрмө жок. Модель өзгөрүүсүз; черновикти кайра сураңыз.",
+ "apply_verify.take_back_failed": "Артка кайтаруу ийгиликсиз ({e}): Артка кайтарууну колдонуңуз.",
+ "apply_verify.kind.created": "түзүлдү",
+ "apply_verify.kind.changed": "өзгөртүлдү",
+ "apply_verify.kind.deleted": "өчүрүлдү",
+ "apply_verify.card.type_row": "Түр {type} · {n} элемент өзгөртүүнү кабыл алат"
+}

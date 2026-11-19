@@ -1,0 +1,19 @@
+{
+ "empty.v3d_gpu.title": "ภาพ 3D ใช้ไม่ได้กับอะแดปเตอร์กราฟิกนี้",
+ "empty.v3d_gpu.hint": "โมเดลปลอดภัยและแปลนทำงานได้ เริ่มใหม่ด้วยกราฟิกปลอดภัยเพื่อลองใช้ 3D อีกครั้ง",
+ "empty.v3d_gpu.action": "เริ่มใหม่ด้วยกราฟิกปลอดภัย",
+ "empty.v3d_loading.title": "กำลังสร้าง 3D…",
+ "empty.v3d_loading.pct": "กำลังเปิด… {pct} %",
+ "empty.plan_hidden.title": "องค์ประกอบทั้งหมดถูกซ่อนในแปลนนี้",
+ "empty.plan_hidden.hint": "การซ่อนหรือแยกชั่วคราวทำให้ไม่มีอะไรแสดง",
+ "empty.plan_hidden.action": "แสดงทั้งหมด",
+ "empty.plan_graphics.title": "กราฟิกมุมมองซ่อนทุกหมวดหมู่",
+ "empty.plan_graphics.hint": "กฎหมวดหมู่ของมุมมองนี้ทำให้ไม่มีอะไรให้แสดง",
+ "empty.plan_graphics.action": "เปิดกราฟิกมุมมอง",
+ "empty.plan_phase.title": "ตัวกรองระยะซ่อนทุกอย่าง",
+ "empty.plan_phase.hint": "ไม่มีอะไรในระดับนี้ที่อยู่ในระยะที่มุมมองนี้แสดง",
+ "empty.plan_phase.action": "เปลี่ยนระยะ",
+ "empty.plan_level.title": "ไม่มีองค์ประกอบในระดับนี้",
+ "empty.plan_level.hint": "ระดับอื่นของโมเดลนี้มีองค์ประกอบ",
+ "empty.plan_level.action": "ไปยังระดับที่มีองค์ประกอบ"
+}

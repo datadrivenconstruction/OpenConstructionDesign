@@ -1,0 +1,14 @@
+{
+ "ai.stream.waiting": "Загварыг хүлээж байна",
+ "ai.stream.reading": "Загварыг уншиж байна",
+ "ai.stream.working": "Ажиллаж байна",
+ "ai.stream.answering": "Хариулт бичиж байна",
+ "ai.stream.tools_one": "1 хэрэгсэл",
+ "ai.stream.tools_many": "{n} хэрэгсэл",
+ "ai.stream.secs": "{n} сек",
+ "ai.stream.stalled": "Загварын үйлчилгээг хүлээсээр байна",
+ "ai.stream.stop": "Зогсоох",
+ "ai.stream.cancelled": "Зогссон",
+ "ai.stream.incomplete": "Ноорог бүрэн биш байна. Загварт юу ч хэрэгжээгүй.",
+ "ai.stream.sep": " · "
+}

@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "Snap radius",
+ "snap_refine.settings.snap_px_desc": "How close the cursor must come to a point or line to snap, in screen pixels. Larger helps on touch screens and high-density displays.",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "Horizontal",
+ "snap_refine.hint.vertical": "Vertical",
+ "snap_refine.hint.perpendicular": "Perpendicular to previous",
+ "snap_refine.hint.parallel": "Parallel to previous",
+ "snap_refine.hint.on_axis": "On wall axis",
+ "snap_refine.no_snap": "No snap (Alt)"
+}

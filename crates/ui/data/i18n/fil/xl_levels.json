@@ -1,0 +1,5 @@
+{
+ "xl.msg.level_name_x_is_already_used": "ginagamit na ang pangalan ng level '{}'",
+ "xl.msg.unreadable_id_elements_without_a_row_not_deleted": "hindi mabasang id: hindi binubura sa import na ito ang mga elementong walang row",
+ "xl.msg.wall_type_name_x_is_already_used": "ginagamit na ang pangalan ng wall type '{}'"
+}

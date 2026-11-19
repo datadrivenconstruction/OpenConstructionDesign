@@ -1,0 +1,18 @@
+{
+ "faults.errors": {
+  "one": "Błąd w modelu: #. Kliknij, aby go pokazać.",
+  "other": "Błędy w modelu: #. Kliknij, aby zobaczyć listę."
+ },
+ "faults.warnings": {
+  "one": "Ostrzeżenie w modelu: #. Kliknij, aby je pokazać.",
+  "other": "Ostrzeżenia w modelu: #. Kliknij, aby zobaczyć listę."
+ },
+ "faults.title": "Usterki modelu: {n}",
+ "faults.none": "Brak błędów i ostrzeżeń.",
+ "faults.cat.wall": "Ściana",
+ "faults.cat.slab": "Płyta",
+ "faults.cat.opening": "Otwór",
+ "faults.cat.curtain_wall": "Ściana osłonowa",
+ "faults.cat.ramp": "Rampa",
+ "faults.cat.zone": "Strefa"
+}

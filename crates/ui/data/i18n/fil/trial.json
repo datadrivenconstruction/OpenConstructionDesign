@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "Punto",
+ "trial.field.distance": "Distansya",
+ "trial.field.target": "Elemento",
+ "trial.refused": "{field}: {reason}. Baguhin ito para mailapat",
+ "trial.preview_off": "Naka-off ang preview: masyadong malaki ang model"
+}

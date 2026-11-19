@@ -1,0 +1,21 @@
+{
+ "cmd.help.check_update": "Verifică actualizările",
+ "update_check.title": "Verificarea actualizărilor",
+ "update_check.desc": "Dezactivată implicit. Trimite doar versiunea, sistemul de operare, arhitectura și tipul instalării către serverul nostru. Nu descarcă și nu instalează nimic.",
+ "update_check.freq.startup": "La pornire",
+ "update_check.freq.daily": "Zilnic",
+ "update_check.freq.weekly": "Săptămânal",
+ "update_check.freq.never": "Niciodată",
+ "update_check.check_now": "Verifică acum",
+ "update_check.dialog.title": "Verificarea actualizărilor",
+ "update_check.unknown.title": "Verificarea actualizărilor nu a putut fi făcută",
+ "update_check.unknown.body": "{e}. Aceasta nu înseamnă că versiunea este la zi. Încercați din nou mai târziu.",
+ "update_check.current": "Aveți ultima versiune ({v}).",
+ "update_check.newer": "Versiunea {v} este disponibilă",
+ "update_check.date": "Lansată {d}",
+ "update_check.unfit": "Această versiune ({v}) este mai veche decât versiunea minimă recomandată {f}. Se recomandă actualizarea.",
+ "update_check.close": "Închide",
+ "update_check.open_failed": "Pagina de lansare nu a putut fi deschisă.",
+ "update_check.toast.newer": "Versiunea {v} este disponibilă. Ajutor > Verifică actualizările.",
+ "update_check.toast.unfit": "Această versiune ({v}) este mai veche decât versiunea minimă recomandată {f}."
+}

@@ -1,0 +1,13 @@
+{
+ "topo.unit.mm": "мм",
+ "topo.unit.metre": "м",
+ "topo.unit.ft": "фут",
+ "topo.opt.material": "Материал",
+ "topo.row.active": "Идэвхтэй гадаргуу",
+ "topo.btn.delete_pad": "Падыг устгах",
+ "topo.info.loading": "Гадаргууг бүтээж байна…",
+ "topo.info.warn_n": "{n} анхааруулга",
+ "topo.info.points_label": "Цэгүүд",
+ "topo.import.all_layers": "Бүх давхарга",
+ "topo.import.need_layer": "Дор хаяж нэг давхарга тэмдэглээрэй"
+}

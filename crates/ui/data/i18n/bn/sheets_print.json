@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "আগের শিট (Page Up)",
+ "sheets.print.next": "পরের শিট (Page Down)",
+ "sheets.print.fit": "পৃষ্ঠায় মানান (ডাবল-ক্লিক)",
+ "sheets.print.no_sheets": "প্রিভিউয়ের জন্য কোনো শিট নেই",
+ "sheets.print.building": "পৃষ্ঠা তৈরি হচ্ছে…",
+ "sheets.print.stop_build": "থামান",
+ "sheets.print.build_stopped": "পৃষ্ঠা তৈরি বন্ধ হয়েছে",
+ "sheets.print.retry": "আবার তৈরি করুন",
+ "sheets.print.build_failed": "প্রিভিউ তৈরি করা যায়নি"
+}

@@ -1,0 +1,15 @@
+{
+ "xlw.hd_never": "Még nincs exportálva",
+ "xlw.hd_now": "az imént",
+ "xlw.hd_min": "{n} perce",
+ "xlw.hd_hour": "{n} órája",
+ "xlw.hd_day": "{n} napja",
+ "xlw.hd_linked": "Csatolva",
+ "xlw.hd_watched": "Figyelve",
+ "xlw.hd_stale": "A modell az exportálás óta módosult",
+ "xlw.ft_export": "Exportálás",
+ "xlw.ft_review": "Áttekintés",
+ "xlw.ft_apply": "{n} módosítás alkalmazása",
+ "xlw.ft_delete_missing": "Hiányzók törlése",
+ "xlw.ft_keep_missing_tip": "A törlés be van kapcsolva: a sor nélküli elemek alkalmazáskor törlődnek. Vegye ki a jelölést, ha meg akarja tartani őket."
+}

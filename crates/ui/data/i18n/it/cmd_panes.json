@@ -1,0 +1,6 @@
+{
+ "cmd.ui.pane.next": "Riquadro successivo",
+ "cmd.ui.pane.next.desc": "Sposta il fuoco della tastiera sul riquadro visibile successivo: browser, area di disegno, proprietà, chat.",
+ "cmd.ui.pane.prev": "Riquadro precedente",
+ "cmd.ui.pane.prev.desc": "Sposta il fuoco della tastiera sul riquadro visibile precedente."
+}

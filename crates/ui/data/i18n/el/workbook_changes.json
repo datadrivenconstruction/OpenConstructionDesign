@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "Αλλαγές βιβλίου εργασίας που δεν εφαρμόστηκαν",
+ "workbook_changes.wb.body": "Το κλείσιμο ή η αλλαγή έργου τα απορρίπτει.",
+ "workbook_changes.wb.line": "Εισαγωγή από βιβλίο εργασίας: {n} αλλαγές δεν εφαρμόστηκαν",
+ "workbook_changes.wb.review": "Έλεγχος",
+ "workbook_changes.wb.discard": "Απόρριψη"
+}

@@ -1,0 +1,19 @@
+{
+ "names.level": "Niveau {n}",
+ "names.slab": "Dalle 200",
+ "names.roof_slab": "Toiture 200",
+ "names.sheet.plan_section": "Plan et coupe du niveau 1",
+ "names.sheet.plan_view": "Plan du niveau 1",
+ "names.sheet.site_plan": "Plan de situation",
+ "names.sheet_set.issue": "Indice 1",
+ "names.title.owner": "Project Ltd",
+ "names.title.creator": "A. Ivanov",
+ "names.title.approver": "P. Petrov",
+ "names.title.document_type": "Plan",
+ "names.title.status": "En cours",
+ "names.revision.date": "4 nov. 2026",
+ "names.revision.description": "Émis pour revue",
+ "names.revision.author": "IA",
+ "names.demo.no_levels": "aucun niveau",
+ "names.demo.no_sheet": "feuille"
+}

@@ -1,0 +1,18 @@
+{
+ "faults.errors": {
+  "one": "# fel i modellen. Klicka för att visa det.",
+  "other": "# fel i modellen. Klicka för att se listan."
+ },
+ "faults.warnings": {
+  "one": "# varning i modellen. Klicka för att visa den.",
+  "other": "# varningar i modellen. Klicka för att se listan."
+ },
+ "faults.title": "Modellfel: {n}",
+ "faults.none": "Inga fel eller varningar.",
+ "faults.cat.wall": "Vägg",
+ "faults.cat.slab": "Golv",
+ "faults.cat.opening": "Öppning",
+ "faults.cat.curtain_wall": "Glasfasad",
+ "faults.cat.ramp": "Lutningsbana",
+ "faults.cat.zone": "Zon"
+}

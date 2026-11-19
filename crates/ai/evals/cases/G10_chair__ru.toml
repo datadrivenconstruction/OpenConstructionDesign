@@ -1,0 +1,23 @@
+id = "G10_chair__ru"
+tier = "hard"
+group = "Любая геометрия"
+title = "Chair"
+lang = "ru"
+base = "empty"
+
+[[turn]]
+say = "Смоделируй обеденный стул: сиденье 45 x 45 см на высоте 45 см, спинка до 90 см, четыре сужающиеся ножки, две перекладины спинки, скруглённый край сиденья."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "col+beam+brace+truss+gridshell_bar+solid+mass+mesh+freeform+shell_elem+gridshell+wall+slab+roof+stair+toposolid+wall_spline+comp:chair|seat|leg"
+min = 5.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

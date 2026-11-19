@@ -1,0 +1,13 @@
+{
+ "tags.gone": "Oznaka više ne postoji",
+ "tags.readonly_wall": "Oznaka zida prikazuje vrstu i ovdje se ne može uređivati: promijenite vrstu zida",
+ "tags.readonly_comp": "Oznaka elementa prikazuje obitelj i ovdje se ne može uređivati: promijenite vrstu",
+ "tags.locked": "Element je zaključan: otključajte ga za uređivanje oznake",
+ "tags.done": "Vrijednost oznake zapisana",
+ "tags.failed": "Oznaka nije promijenjena: {e}",
+ "tags.dup_door": "{mark} također na {n} vrata",
+ "tags.dup_window": "{mark} također na {n} prozora",
+ "tags.dup_room": "{mark} također na {n} prostorija",
+ "tags.hint_mark": "Oznaka",
+ "tags.hint_name": "Naziv prostorije"
+}

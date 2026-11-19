@@ -1,0 +1,26 @@
+{
+ "schema": "gen_bench.v1",
+ "group": "basement",
+ "spec": {
+  "typology": "office",
+  "floors": 3,
+  "basements": 1
+ },
+ "adjacency": [
+  [
+   "meeting",
+   "lobby",
+   1
+  ],
+  [
+   "office",
+   "corridor",
+   2
+  ],
+  [
+   "wc",
+   "corridor",
+   1
+  ]
+ ]
+}

@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "Ny familj",
+ "family_editor.open_tip": "Öppna familj eller utkast",
+ "family_editor.close_named": "Stäng {name}",
+ "family_editor.unsaved": "Osparade ändringar",
+ "family_editor.search": "Sök",
+ "family_editor.nothing": "Inget hittades",
+ "family_editor.sec_families": "Projektfamiljer",
+ "family_editor.sec_drafts": "Utkast",
+ "family_editor.cap_category": "Kategori",
+ "family_editor.cap_host": "Värd",
+ "family_editor.cap_type": "Förhandsvisningstyp"
+}

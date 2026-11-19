@@ -1,0 +1,6 @@
+{
+ "cmd.xlsx.undo_apply": "Deshacer la última aplicación de XLSX",
+ "xlsx_undo.later": "No deshecho: el modelo se editó después de esta aplicación de hoja de cálculo XLSX. Usar Ctrl+Z paso a paso o el panel de Historial.",
+ "xlsx_undo.gone": "Nada que deshacer: esta aplicación de hoja de cálculo XLSX ya está deshecha.",
+ "xlsx_undo.busy": "Terminar o cancelar primero el dibujo actual y luego deshacer la aplicación de hoja de cálculo XLSX."
+}

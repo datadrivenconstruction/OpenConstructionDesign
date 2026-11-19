@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "ডাক্ট",
+ "mep3d.pipe": "পাইপ",
+ "mep3d.tray": "ক্যাবল ট্রে",
+ "mep3d.conduit": "কন্ডুইট",
+ "mep3d.system": "সিস্টেম",
+ "mep3d.length": "দৈর্ঘ্য",
+ "mep3d.diameter": "ব্যাস",
+ "mep3d.width": "প্রস্থ",
+ "mep3d.height": "উচ্চতা",
+ "mep3d.insulation": "অন্তরণ",
+ "mep3d.tip": "Enter — প্রয়োগ; ফিটিংস পুনর্গণনা হয়",
+ "mep3d.size_positive": "আকার শূন্যের বেশি হতে হবে",
+ "mep3d.not_changed": "বদলানো হয়নি: {e}",
+ "mep3d.copied": "রান কপি হয়েছে",
+ "mep3d.changed": "রান বদলেছে",
+ "mep3d.deleted": "মোছা উপাদান: {n}",
+ "mep3d.not_deleted": "মোছা হয়নি: {e}",
+ "mep3d.no_wall_type": "দেয়ালের ধরন নেই",
+ "mep3d.demo.supply": "সরবরাহ S1",
+ "mep3d.demo.heating": "গরম",
+ "mep3d.demo.power": "পাওয়ার"
+}

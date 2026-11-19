@@ -1,0 +1,10 @@
+{
+ "view_gfx.vv.visible_tip": "Widoczne w tym widoku",
+ "view_gfx.vv.enabled_tip": "Zastosuj ten filtr w tym widoku",
+ "view_gfx.vv.reset_tip": "Wróć do domyślnego ustawienia projektu",
+ "view_gfx.vv.col.actions": "Działania",
+ "view_gfx.vv.nothing_to_apply": "Brak zmian do zastosowania",
+ "view_gfx.flt.save_blocked": "Nazwij filtr i wypełnij parametry każdej reguły",
+ "view_gfx.flt.confirm_delete": "Usunąć dla wszystkich widoków?",
+ "view_gfx.flt.param_pick": "Wybierz…"
+}

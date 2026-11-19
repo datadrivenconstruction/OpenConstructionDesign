@@ -1,0 +1,5 @@
+{
+ "legend.legend.empty_hint": "یک نام بالا وارد کنید و Create را بزنید.",
+ "legend.legend.pick_hint": "یک راهنما از فهرست بالا انتخاب کنید.",
+ "legend.legend.taken": "راهنمایی با نام «{name}» از قبل وجود دارد. نام دیگری وارد کنید."
+}

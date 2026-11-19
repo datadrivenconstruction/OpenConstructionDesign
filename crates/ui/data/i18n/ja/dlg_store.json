@@ -1,0 +1,10 @@
+{
+ "dlg.dw.store.unloaded": "図面「{name}」をプロジェクトから読み込めなかったため、ファイル内でそのまま保持されています",
+ "dlg.dw.store.source_missing": "図面「{name}」: 元のファイルが見つからないため、プロジェクトに保存されたコピーを表示しています",
+ "dlg.dw.store.source_changed": "図面「{name}」: 配置後に元のファイルが変更されたため、プロジェクトに保存されたコピーを表示しています",
+ "dlg.dw.store.unreadable": "プロジェクトに保存された配置済みの図面を読み込めません",
+ "dlg.dw.store.not_saved": "図面は保存されていません: {why}",
+ "dlg.dw.store.why_read": "プロジェクトに保存された配置済みの図面を読み込めません",
+ "dlg.dw.store.why_write": "プロジェクトファイルを更新できませんでした",
+ "dlg.dw.store.missing_in_file": "保存されたファイルには、配置されたすべての図面が含まれていません"
+}

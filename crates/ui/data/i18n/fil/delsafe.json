@@ -1,0 +1,6 @@
+{
+ "delsafe.ring.opening_shape": "Tatawid sa sarili o babagsak ang outline ng isang opening",
+ "delsafe.ring.opening_boundary": "Tatawid o didikit ang isang opening sa panlabas na boundary",
+ "delsafe.ring.openings_overlap": "Magsasapawan o didikit sa isa't isa ang mga opening",
+ "xl.msg.delsafe_instance_param_on_types": "ang parameter na '{}' ay instance parameter; i-edit ito sa elements sheet, hindi ito naipatupad"
+}

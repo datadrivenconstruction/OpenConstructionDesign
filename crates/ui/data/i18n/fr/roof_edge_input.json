@@ -1,0 +1,23 @@
+{
+ "roof_edge.err.number": "Saisissez un nombre",
+ "roof_edge.err.positive": "Doit être supérieur à zéro",
+ "roof_edge.err.nonneg": "Ne doit pas être négatif",
+ "roof_edge.err.max": "Ne doit pas dépasser {max}",
+ "roof_edge.list.empty_hint": "Ajoutez des bandeaux, gouttières, sous-faces ou lanterneaux avec les commandes de toiture",
+ "roof_edge.edit_tip": "Modifier les propriétés",
+ "roof_edge.delete_tip": "Supprimer",
+ "roof_edge.pe.del_tip": "Retirer ce point (une section en garde au moins 3)",
+ "roof_edge.pe.up_tip": "Monter ce point",
+ "roof_edge.confirm_edge": "Supprimer {name} ? Ctrl+Z le rétablit.",
+ "roof_edge.confirm_profile": "Supprimer le profil {name} ? Ctrl+Z le rétablit.",
+ "roof_edge.deleted_one": "{name} supprimé",
+ "roof_edge.deleted_n": {
+  "one": "# élément supprimé",
+  "other": "# éléments supprimés"
+ },
+ "roof_edge.profile_deleted": "Profil supprimé",
+ "roof_edge.profile_in_use": {
+  "one": "Utilisé par # élément d'arête : supprimez-le ou modifiez-le d'abord",
+  "other": "Utilisé par # éléments d'arête : supprimez-les ou modifiez-les d'abord"
+ }
+}

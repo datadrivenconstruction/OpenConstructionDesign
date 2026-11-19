@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "Ακτίνα κλειδώματος",
+ "snap_refine.settings.snap_px_desc": "Πόσο κοντά πρέπει να φτάσει ο δείκτης σε σημείο ή γραμμή για να κλειδώσει, σε εικονοστοιχεία οθόνης. Μεγαλύτερη τιμή βοηθά σε οθόνες αφής και πυκνής ανάλυσης.",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "Οριζόντια",
+ "snap_refine.hint.vertical": "Κατακόρυφα",
+ "snap_refine.hint.perpendicular": "Κάθετα στο προηγούμενο",
+ "snap_refine.hint.parallel": "Παράλληλα με το προηγούμενο",
+ "snap_refine.hint.on_axis": "Στον άξονα τοίχου",
+ "snap_refine.no_snap": "Χωρίς κλείδωμα (Alt)"
+}

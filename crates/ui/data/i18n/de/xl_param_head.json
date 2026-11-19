@@ -1,0 +1,7 @@
+{
+ "xl.msg.param_ambiguous": "Spalte '{}' könnte einer der Parameter {} sein; geben Sie den genauen Parameternamen ein, nicht übernommen",
+ "xl.msg.param_tag_stale": "Spalte '{}' nennt einen Parameter, den dieses Projekt nicht hat; nicht übernommen",
+ "xl.msg.dup_col_note": "Spalte '{}' in {} wiederholt Spalte '{}' in {}; gleiche Werte werden einmal übernommen, in einer Zeile mit Abweichung bleibt der Modellwert",
+ "xl.msg.dup_col_differs": "Spalten '{}' und '{}' unterscheiden sich in {} und {}; der Modellwert bleibt — behalten Sie eine Spalte",
+ "xl.msg.dup_col_id": "Spalten '{}' und '{}' unterscheiden sich in {} und {}, die Zeile lässt sich nicht identifizieren; nichts übernommen — behalten Sie eine Spalte"
+}

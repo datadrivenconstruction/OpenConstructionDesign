@@ -1,0 +1,19 @@
+{
+ "ifc_patch.fallback.source_changed": "Parche no usado: el archivo de origen cambió en disco o no se puede leer. El archivo se reescribió desde el modelo.",
+ "ifc_patch.fallback.sources": "Parche no usado: el proyecto no tiene exactamente un origen. El archivo se reescribió desde el modelo.",
+ "ifc_patch.fallback.schema": "Parche no usado: el esquema del archivo de origen no es compatible. El archivo se reescribió desde el modelo.",
+ "ifc_patch.fallback.structure": "Parche no usado: la estructura del archivo de origen no es fiable. El archivo se reescribió desde el modelo.",
+ "ifc_patch.fallback.edit": "Parche no usado: una edición no se puede aplicar con seguridad al archivo de origen. El archivo se reescribió desde el modelo.",
+ "ifc_patch.reason.schema": "El esquema del archivo de origen no admite esta edición; el elemento se mantiene como en el origen",
+ "ifc_patch.reason.prop": "Esta edición de propiedad no se puede expresar en el archivo de origen; el valor se mantiene como en el origen",
+ "ifc_patch.reason.no_export": "Este elemento nuevo no tiene representación en IFC",
+ "ifc_patch.reason.link": "El elemento está en el archivo, pero no se escribe el enlace a su material o tipo; figura como no escrito",
+ "ifc_patch.drop": "Descartar",
+ "ifc_patch.drop_done": "Enlaces pendientes descartados: {n}; ya no se reintentan",
+ "ifc_patch.fallback.building": "Parche no usado: un nivel nuevo necesita exactamente un edificio en el archivo de origen, y no tiene ninguno o tiene varios. El archivo se reescribió desde el modelo.",
+ "ifc_patch.fallback.types": "Parche no usado: los niveles, tipos o materiales cambiaron desde la importación, y el parche no puede escribirlos. El archivo se reescribió desde el modelo.",
+ "ifc_patch.fallback.zipped": "Parche no usado: un archivo de origen comprimido no se puede parchear. El archivo se reescribió desde el modelo.",
+ "ifc_patch.fallback.source_kept": "El archivo de origen no se sobrescribió: no se puede confiar en que este guardado lo reemplace. Este guardado es una copia junto a él.",
+ "ifc_patch.fallback.nested": "Parche no usado: un elemento nuevo tiene partes anidadas (como puertos), que el parche no puede escribir. El archivo se reescribió desde el modelo.",
+ "ifc_patch.fallback.shared_part": "Parche no usado: una parte de una escalera o rampa editada también la usa otro elemento o relación, que el parche no puede tener en cuenta. El archivo se reescribió desde el modelo."
+}

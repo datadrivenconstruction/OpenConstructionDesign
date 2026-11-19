@@ -1,0 +1,11 @@
+{
+ "empty.sv_notfound.title": "ভিউ পাওয়া যায়নি",
+ "empty.sv_notfound.hint": "এই ভিউ মুছে ফেলা হয়েছে বা প্রকল্পের অংশ নেই।",
+ "empty.sv_notfound.action": "ভিউ বন্ধ করুন",
+ "empty.sv_cuts_nothing.title": "এই সেকশন কিছু কাটছে না",
+ "empty.sv_cuts_nothing.hint": "কাট লাইন তার গভীরতার মধ্যে কোনো দেয়াল, স্ল্যাব বা ওপেনিং ছোঁয় না। লাইন সরান বা ভিউ গভীর করুন।",
+ "empty.sv_cuts_nothing.action": "প্ল্যানে দেখান",
+ "empty.sv_shows_nothing.title": "এই এলিভেশনে কিছু দেখাচ্ছে না",
+ "empty.sv_shows_nothing.hint": "ভিউ গভীরতার মধ্যে কোনো দেয়াল, স্ল্যাব বা ওপেনিং নেই। ভিউ লাইন সরান বা ভিউ গভীর করুন।",
+ "empty.sv_shows_nothing.action": "প্ল্যানে দেখান"
+}

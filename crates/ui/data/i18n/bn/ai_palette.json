@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "AI-কে জিজ্ঞাসা: {q}",
+ "ai.palette.connect": "জিজ্ঞাসা করতে AI সংযুক্ত করুন",
+ "ai.palette.draft.apply": "ড্রাফট প্রয়োগ করুন ({n})",
+ "ai.palette.draft.reject": "ড্রাফট বাতিল",
+ "ai.palette.draft.next": "পরের ড্রাফট পরিবর্তন",
+ "ai.palette.draft.show": "ভিউতে ড্রাফট দেখান",
+ "cmd.ai.next_change": "পরের ড্রাফট পরিবর্তন",
+ "cmd.ai.next_change.desc": "ভিউ ড্রাফট যে পরবর্তী উপাদান বদলায় সেখানে সরায়।",
+ "cmd.ai.show_draft": "ভিউতে AI ড্রাফট দেখান",
+ "cmd.ai.show_draft.desc": "ড্রাফট যা বদলায় সবকিছু ভিউয়ে ফিট করে।"
+}

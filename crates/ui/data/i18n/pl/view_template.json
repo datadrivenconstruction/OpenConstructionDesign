@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "Najpierw wpisz nazwę szablonu",
+ "view_template.name_taken": "Szablon o tej nazwie już istnieje",
+ "view_template.pick_blocked": "Najpierw zaznacz co najmniej jeden widok",
+ "view_template.views.one": "{n} widok",
+ "view_template.views.few": "{n} widoki",
+ "view_template.views.many": "{n} widoków",
+ "view_template.delete.title": "Usunąć ten szablon?",
+ "view_template.delete.body": "Szablon „{name}” zostanie usunięty. Używany przez {used}.",
+ "view_template.delete.unused": "Szablon „{name}” zostanie usunięty. Nie używa go żaden widok.",
+ "view_template.delete.keeps": "Te widoki zachowają obecną grafikę i stracą powiązanie.",
+ "view_template.delete.undo": "Możesz to cofnąć jednym Cofnij.",
+ "view_template.delete.confirm": "Usuń szablon"
+}

@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "لا توجد نتائج",
+ "empty.browser_search.hint": "لا يطابق هذا البحث أي منظر أو مستوى أو نوع أو غرفة.",
+ "empty.browser_search.action": "مسح البحث",
+ "empty.xl_filtered.title": "لا توجد مدخلات تطابق الفلاتر",
+ "empty.xl_filtered.hint": "فعّل أنواعًا أكثر، أو اختر ورقة أخرى، أو غيّر نص البحث.",
+ "empty.xl_filtered.action": "مسح الفلاتر",
+ "empty.xl_nochanges.title": "لا تغييرات في ملف العمل",
+ "empty.xl_nochanges.hint": "ملف العمل يطابق النموذج: الاستيراد لن يغيّر شيئًا.",
+ "empty.version_same.title": "النموذجان متطابقان",
+ "empty.version_same.hint": "لم يُعثر على فروق بين النموذج المفتوح والنسخة المختارة.",
+ "empty.templates.title": "لا توجد قوالب مناظر بعد",
+ "empty.templates.hint": "أنشئ قالبًا من المنظر الحالي لإعادة استخدام إعداداته في مناظر أخرى.",
+ "empty.templates.action": "سمِّ قالبًا",
+ "empty.fe_params.title": "لا توجد معاملات بعد",
+ "empty.fe_params.hint": "أضف معاملًا أدناه للتحكم في المقاسات أو المواد أو الظهور.",
+ "empty.fe_params.action": "أضف معاملًا"
+}

@@ -1,0 +1,5 @@
+{
+ "xl.msg.level_name_x_is_already_used": "레벨 이름 '{}'은(는) 이미 사용 중입니다",
+ "xl.msg.unreadable_id_elements_without_a_row_not_deleted": "읽을 수 없는 ID: 행이 없는 요소는 이번 가져오기에서 삭제되지 않습니다",
+ "xl.msg.wall_type_name_x_is_already_used": "벽 유형 이름 '{}'은(는) 이미 사용 중입니다"
+}

@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "階段",
+ "selcat.railing": "手すり",
+ "quick.cat.stair": "階段",
+ "quick.cat.railing": "手すり",
+ "stair.risers": "蹴上げ",
+ "stair.riser": "蹴上げ高さ",
+ "stair.comfort": "2R + T",
+ "stair.tread_auto": "ルールによる踏面",
+ "stair.tread_auto_tip": "入力した踏面を外し、2R + T ルールで設定させます",
+ "stair.broken": "この階段は、そのレベルに適合していません",
+ "railing.host_stair": "階段 #{id} にホスト",
+ "railing.host_path": "スケッチ手すり",
+ "railing.length": "長さ",
+ "stair.deleted_with": "ホストされている手すり {n} 件とともに"
+}

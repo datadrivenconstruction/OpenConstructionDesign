@@ -1,0 +1,6 @@
+{
+ "cmd.ui.pane.next": "Panoul următor",
+ "cmd.ui.pane.next.desc": "Mută focusul de la tastatură la următorul panou vizibil (browser, pânză, proprietăți, chat).",
+ "cmd.ui.pane.prev": "Panoul anterior",
+ "cmd.ui.pane.prev.desc": "Mută focusul de la tastatură la panoul vizibil anterior."
+}

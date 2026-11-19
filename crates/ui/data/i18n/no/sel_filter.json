@@ -1,0 +1,6 @@
+{
+ "sel_filter.flt.all_cats": "Alle kategorier",
+ "sel_filter.flt.in_sel": "I valget",
+ "sel_filter.flt.none": "Kryss av minst én kategori, ellers ville valget blitt tomt",
+ "sel_filter.tg.none": "Kryss av minst én kategori for å merke"
+}

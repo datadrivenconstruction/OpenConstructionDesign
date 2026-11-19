@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "Legenda",
+ "legend.legend.new_hint": "Nama legenda baru",
+ "legend.legend.delete_tip": "Hapus legenda",
+ "legend.legend.delete_placed": "Hapus legenda (ditempatkan pada: {sheets})",
+ "legend.legend.deleted": "Legenda dihapus: {name}",
+ "legend.legend.no_rows": "Belum ada baris. Tambahkan satu atau ambil gaya dari tampilan saat ini",
+ "legend.legend.replace_q": "Ganti {n} baris dengan gaya tampilan ini?",
+ "legend.legend.replace": "Ganti",
+ "legend.legend.keep": "Pertahankan baris",
+ "legend.col.swatch": "Contoh warna",
+ "legend.col.value": "Nilai",
+ "legend.col.label": "Label"
+}

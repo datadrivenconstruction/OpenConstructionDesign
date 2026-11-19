@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}, nasa level",
+ "cmd_buttons.purge.undo": "Ang pagbura ay isang undo step.",
+ "cmd_buttons.unpin.none": "Walang napiling naka-pin",
+ "cmd_buttons.change_type.none": "Pumili muna ng mga pader: magbabago ang type nila sa isang hakbang",
+ "cmd_buttons.units.metric": "Mga unit: metric",
+ "cmd_buttons.units.imperial": "Mga unit: feet at inches",
+ "cmd_buttons.units.back": "Bumalik",
+ "cmd_buttons.underlay.on": "Naka-on ang underlay: ipinapakitang malabo ang level sa ibaba",
+ "cmd_buttons.underlay.off": "Naka-off ang underlay",
+ "cmd_buttons.underlay.none": "Naka-on ang underlay, pero walang maipapakita ang level sa ibaba",
+ "cmd_buttons.zoom_sel.no_shape": "Walang hugis ang pagpili na maisasakop sa view na ito",
+ "cmd_buttons.close.base": "Mananatiling bukas ang plan at 3D tab; magbukas ng section, sheet o drafting view para ito maisara",
+ "tool.equipment": "Kagamitan",
+ "hint.equipment.place": "Kagamitan: pumili ng lokasyon · Esc para lumabas",
+ "cmd_buttons.table.opened": "Nabuksan ang table sa tabi ng model",
+ "cmd_buttons.circuits.tip": "Buksan ang listahan ng mga electrical circuit ng model na ito"
+}

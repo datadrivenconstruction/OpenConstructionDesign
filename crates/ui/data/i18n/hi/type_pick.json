@@ -1,0 +1,10 @@
+{
+ "type_pick.pick.search": "टाइप या मोटाई खोजें",
+ "type_pick.pick.empty": "कोई मेल खाता टाइप नहीं",
+ "type_pick.pick.edit": "टाइप संपादित करें…",
+ "type_pick.pick.mixed": "मिश्रित",
+ "type_pick.pick.layers": {
+  "one": "# परत",
+  "other": "# परतें"
+ }
+}

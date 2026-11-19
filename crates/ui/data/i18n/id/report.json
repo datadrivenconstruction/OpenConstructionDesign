@@ -1,0 +1,23 @@
+{
+ "cmd.app.report": "Laporkan masalah…",
+ "cmd.app.report.desc": "Menjelaskan apa yang salah dan menyimpan paket di komputer ini: teks Anda, fakta build dan sistem, gambar jendela, dan catatan crash terakhir. Tidak ada yang dikirim.",
+ "report.title": "Laporkan masalah",
+ "report.what": "Apa yang terjadi",
+ "report.expected": "Yang Anda harapkan",
+ "report.steps": "Langkah untuk mengulanginya",
+ "report.opt.shot": "Sertakan gambar jendela",
+ "report.opt.model": "Sertakan salinan model",
+ "report.opt.model.note": "Nonaktif secara default. Salinan berisi data proyek Anda, tanpa jurnal AI.",
+ "report.opt.paths": "Pertahankan nama pengguna di jalur file",
+ "report.local": "Paket disimpan di komputer ini saja. Tidak ada yang dikirim secara otomatis.",
+ "report.blocked": "Jelaskan apa yang terjadi terlebih dahulu.",
+ "report.save": "Simpan paket",
+ "report.copy": "Salin teks",
+ "report.cancel": "Batal",
+ "report.copied": "Teks laporan disalin.",
+ "report.saved": "Paket tersimpan: {path}",
+ "report.failed": "Paket tidak dapat disimpan: {err}",
+ "report.model.fail": "Salinan model tidak dapat dibuat, tidak ada yang disimpan: {err}",
+ "report.crash.notice": "Sesi sebelumnya berakhir karena crash.",
+ "report.crash.action": "Laporkan masalah"
+}

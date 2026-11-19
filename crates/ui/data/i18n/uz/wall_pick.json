@@ -1,0 +1,13 @@
+{
+ "cmd.arch.wall_pick": "Chiziq bo'yicha devor",
+ "cmd.arch.wall_pick.desc": "Joriy sathning tanlangan chizma chizig'iga devor joylashtiradi. F chiziqdagi o'q yoki yuzani almashtiradi, Tab ulangan zanjirni oladi. Har bir tanlov bitta bekor qilish qadami. Pardali devorlar uchun ham ishlaydi.",
+ "hint.wall_pick.center": "Chiziq bo'yicha devor: chizma chizig'ini tanlang · chiziqdagi o'q · F yuz · Tab zanjir · Esc chiqish",
+ "hint.wall_pick.face": "Chiziq bo'yicha devor: chizma chizig'ini tanlang · chiziqdagi yuz, kursor tomoni · F o'q · Tab zanjir · Esc chiqish",
+ "hint.wall_pick.center_chain": "Chiziq bo'yicha devor: zanjirini olish uchun chiziqni tanlang · chiziqdagi o'q · F yuz · Tab bitta chiziq",
+ "hint.wall_pick.face_chain": "Chiziq bo'yicha devor: zanjirini olish uchun chiziqni tanlang · chiziqdagi yuz · F o'q · Tab bitta chiziq",
+ "wall_pick.st.start": "Chizma chizig'ini tanlang. F: o'q yoki yuz, Tab: ulangan zanjir",
+ "wall_pick.st.no_lines": "Bu sathda ko'rinadigan chizma chiziqlari yo'q",
+ "wall_pick.st.miss": "Bu yerda chizma chizig'i yo'q",
+ "wall_pick.st.on_wall": "Bu chiziq allaqachon {id} devor ostida",
+ "wall_pick.st.tight": "Yuz siljishi sig'maydi: zanjir segmenti devor qalinligidan qisqa"
+}

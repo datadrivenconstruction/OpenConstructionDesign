@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "Raggio di aggancio",
+ "snap_refine.settings.snap_px_desc": "Quanto il cursore deve avvicinarsi a un punto o a una linea per agganciarsi, in pixel dello schermo. Un valore più alto aiuta su schermi touch e display ad alta densità.",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "Orizzontale",
+ "snap_refine.hint.vertical": "Verticale",
+ "snap_refine.hint.perpendicular": "Perpendicolare al precedente",
+ "snap_refine.hint.parallel": "Parallelo al precedente",
+ "snap_refine.hint.on_axis": "Sull'asse del muro",
+ "snap_refine.no_snap": "Nessun aggancio (Alt)"
+}

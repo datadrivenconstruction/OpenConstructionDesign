@@ -1,0 +1,23 @@
+{
+  "cmd.arch.room_sep.short": "Бөлмө бөлүүчү",
+  "cmd.str.footing.short": "Мамыча негиз",
+  "cmd.str.strip_footing.short": "Тилкелүү негиз",
+  "cmd.str.analytical.short": "Аналитик.",
+  "cmd.mep.terminal.short": "Аба терминалы",
+  "cmd.mod.isolate.short": "Изоляция",
+  "cmd.view.ui.short": "Интерфейс",
+  "cmd.mgr.params.short": "Параметрлер",
+  "cmd.ctx.wall.attach.short": "Тиркөө",
+  "cmd.mass.unjoin.short": "Ажыратуу",
+  "cmd.mod.unjoin.short": "Ажыратуу",
+  "cmd.arch.void_extrusion.short": "Көңдөй экстр.",
+  "cmd.e3d.snap.short": "3D кармоо",
+  "cmd.mgr.open_big.short": "Чоң файл…",
+  "cmd.site.edit_points.short": "Жер чекиттери",
+  "cmd.view.reveal_3d.short": "Категориялар",
+  "cmd.help.check_update.short": "Жаңыртуулар",
+  "cmd.ctx.floor.link_unlink.short": "Четтерди бөлүү",
+  "cmd.ui.onboarding.short": "Орнотуу…",
+  "cmd.mod.distribute.short": "Бөлүштүрүү",
+  "cmd.data.src_delta.short": "XLSX электрондук таблица өзгөр…"
+}

@@ -1,0 +1,8 @@
+{
+ "cmd.arch.room_auto": "Helyiségek automatikus elhelyezése",
+ "cmd.arch.room_auto.desc": "Minden zárt határon, az aktív szinten, ahol nincs helyiség, elhelyez egyet. A nyitott falhurkok kimaradnak, sosem zárják le találgatás alapján. Egy visszavonási lépés.",
+ "room_place.placed": "Elhelyezett helyiségek: {n}. Olyan területek, amelyekben már volt helyiség: {m}. Kihagyott nyitott hurkok: {k}",
+ "room_place.all_had": "Nincs elhelyezés: mind a(z) {m} zárt terület már tartalmaz helyiséget. Kihagyott nyitott hurkok: {k}",
+ "room_place.none": "Nincs elhelyezés: a szinten nincsenek zárt falterületek",
+ "room_place.none_open": "Nincs elhelyezés: a szinten nincsenek zárt falterületek. Kihagyott nyitott hurkok: {k}"
+}

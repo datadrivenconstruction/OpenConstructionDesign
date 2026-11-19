@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "Alle",
+ "clash_list.only_selected": "Nur Ausgewählte",
+ "clash_list.tolerance": "Toleranz",
+ "clash_list.gap": "Lichter Abstand",
+ "clash_list.export": "Exportieren",
+ "clash_list.col.volume": "Volumen",
+ "clash_list.fix.up": "Nach oben",
+ "clash_list.fix.down": "Nach unten",
+ "clash_list.fix.sleeve": "Hülse",
+ "clash_list.apply_fix": "Korrektur anwenden",
+ "clash_list.err.tol": "Toleranz: Länge eingeben (0 oder mehr), z. B. 50 oder 2 in",
+ "clash_list.sleeve_no_host": "Eine Hülse benötigt eine Wand oder Geschossdecke im Paar",
+ "clash_list.err.gap": "Lichter Abstand: Länge eingeben (0 oder mehr), z. B. 50 oder 2 in"
+}

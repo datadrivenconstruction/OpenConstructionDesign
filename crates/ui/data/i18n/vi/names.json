@@ -1,0 +1,19 @@
+{
+ "names.level": "Tầng {n}",
+ "names.slab": "Sàn 200",
+ "names.roof_slab": "Mái 200",
+ "names.sheet.plan_section": "Mặt bằng và mặt cắt tầng 1",
+ "names.sheet.plan_view": "Mặt bằng tầng 1",
+ "names.sheet.site_plan": "Mặt bằng tổng thể",
+ "names.sheet_set.issue": "Phát hành 1",
+ "names.title.owner": "Công ty TNHH Dự án",
+ "names.title.creator": "Trần V. B.",
+ "names.title.approver": "Nguyễn V. A.",
+ "names.title.document_type": "Bản vẽ",
+ "names.title.status": "Đang thực hiện",
+ "names.revision.date": "4 tháng 11, 2026",
+ "names.revision.description": "Phát hành để xem xét",
+ "names.revision.author": "AI",
+ "names.demo.no_levels": "không có cao độ",
+ "names.demo.no_sheet": "bản vẽ"
+}

@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "Το {key} είναι δεσμευμένο ({why}) και δεν μπορεί να ανατεθεί ξανά",
+ "quick.keys.res_copy": "αντιγραφή",
+ "quick.keys.res_paste": "επικόλληση",
+ "quick.keys.res_cut": "αποκοπή",
+ "quick.keys.res_undo": "αναίρεση / επανάληψη",
+ "quick.keys.res_save": "αποθήκευση",
+ "quick.keys.res_palette": "γραμμή εντολών",
+ "quick.keys.reserved_conflict": "Το {key} χρησιμοποιείται ήδη από “{cmd}”. Το Esc το αφήνει εκεί.",
+ "quick.keys.reserved_swap": "Εναλλαγή",
+ "quick.keys.reserved_take": "Αφαίρεση από άλλη",
+ "quick.keys.reserved_keep": "Διατήρηση",
+ "quick.keys.reserved_os": "Δεσμευμένο από το σύστημα:"
+}

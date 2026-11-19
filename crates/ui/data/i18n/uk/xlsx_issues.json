@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "Пропущені рядки й клітинки",
+ "xlsx_issues.conflicts_title": "Змінено в обох місцях",
+ "xlsx_issues.missing_title": "Аркуша немає в книзі",
+ "xlsx_issues.look_alike_title": "Назва аркуша не збігається",
+ "xlsx_issues.mass_title": "Масове видалення потребує підтвердження",
+ "xlsx_issues.sheets_missing": "Аркушів {sheets} немає в книзі (перейменовано або видалено); їхні рядки не порівнювались.",
+ "xlsx_issues.keep_model": "Залишити модель",
+ "xlsx_issues.take_book": "Взяти книгу",
+ "xlsx_issues.open_book_tip": "Відкриває файл у його застосунку. У моделі нічого не змінюється; перегляд оновиться після збереження книги."
+}

@@ -1,0 +1,6 @@
+{
+ "delsafe.ring.opening_shape": "Aukon ääriviiva leikkaisi itsensä tai romahtaisi",
+ "delsafe.ring.opening_boundary": "Aukko leikkaisi tai koskettaisi ulkorajaa",
+ "delsafe.ring.openings_overlap": "Aukot menisivät päällekkäin tai koskettaisivat toisiaan",
+ "xl.msg.delsafe_instance_param_on_types": "parametri '{}' on esiintymäparametri; muokkaa sitä elementtilaskentataulukossa, ei sovellettu"
+}

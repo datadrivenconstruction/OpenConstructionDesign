@@ -1,0 +1,9 @@
+{
+ "xl.msg.base_value": "o'qish tekshiruvi muvaffaqiyatsiz, eski ish kitobi saqlanadi: {} ({}) kutilgan '{}', o'qilgan '{}'",
+ "xl.msg.base_missing": "o'qish tekshiruvi muvaffaqiyatsiz, eski ish kitobi saqlanadi: {} varag'ida {} ID uchun qator yo'q",
+ "xl.msg.base_extra": "o'qish tekshiruvi muvaffaqiyatsiz, eski ish kitobi saqlanadi: {} qator modelda yo'q",
+ "xl.msg.base_refused": "o'qish tekshiruvi muvaffaqiyatsiz, eski ish kitobi saqlanadi: {} ({}) rad etildi: {}",
+ "xl.msg.base_sheet": "o'qish tekshiruvi muvaffaqiyatsiz, eski ish kitobi saqlanadi: {} varag'i yo'q, bo'sh yoki o'qib bo'lmaydi",
+ "xl.msg.base_newer": "o'qish tekshiruvi muvaffaqiyatsiz, eski ish kitobi saqlanadi: {} katakchada model qiymati yo'q",
+ "xl.msg.base_unreadable": "o'qish tekshiruvi muvaffaqiyatsiz, eski ish kitobi saqlanadi: yangi ish kitobini o'qib bo'lmaydi ({})"
+}

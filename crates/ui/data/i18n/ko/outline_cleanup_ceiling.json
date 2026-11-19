@@ -1,0 +1,11 @@
+{
+ "cmd.ctx.ceiling.clean_outline": "외곽선 정리",
+ "cmd.ctx.ceiling.clean_outline.desc": "천장 외곽선이 스스로 되돌아가는 좁은 돌출부를 제거합니다. 먼저 미리보기를 표시하며, 실행 취소 1단계.",
+ "cmd.ctx.shaft.clean_outline": "외곽선 정리",
+ "cmd.ctx.shaft.clean_outline.desc": "샤프트 외곽선이 스스로 되돌아가는 좁은 돌출부를 제거합니다. 먼저 미리보기를 표시하며, 실행 취소 1단계.",
+ "outline_cleanup.intro_ceiling": "이 천장의 외곽선이 좁은 돌출부에서 스스로 되돌아갑니다: {n}개. 정리하면 이들이 제거되고 나머지는 그대로 유지됩니다.",
+ "outline_cleanup.intro_shaft": "이 샤프트의 외곽선이 좁은 돌출부에서 스스로 되돌아갑니다: {n}개. 정리하면 이들이 제거되고 나머지는 그대로 유지됩니다.",
+ "outline_cleanup.none_ceiling": "이 천장의 외곽선에는 돌출부가 없습니다",
+ "outline_cleanup.none_shaft": "이 샤프트의 외곽선에는 돌출부가 없습니다",
+ "outline_cleanup.need_host": "바닥, 천장 또는 샤프트를 선택하세요"
+}

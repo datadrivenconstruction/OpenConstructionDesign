@@ -1,0 +1,21 @@
+{
+ "ai.receipt.title": {
+  "one": "# өөрчлөлт хэрэгжсэн",
+  "other": "# өөрчлөлт хэрэгжсэн"
+ },
+ "ai.receipt.more": "+{n} бусад",
+ "ai.receipt.list": "Элементүүд",
+ "ai.receipt.show": "Харуулах",
+ "ai.receipt.show.tip": "Өөрчлөгдсөн элементүүдийг сонгож хүрээлнэ",
+ "ai.receipt.undo": "Буцаах",
+ "ai.receipt.undo.tip": "Яг энэ хэрэгжүүлэлтийг буцаах",
+ "ai.receipt.undone": "Цуцлагдсан",
+ "ai.receipt.later": "Хожим засвар хийгдсэн",
+ "ai.receipt.toast_undone": "Хэрэгжүүлсэн төлөвлөгөөг цуцаллаа",
+ "ai.receipt.draft_family": "Ноорог бүлэг: {name}",
+ "ai.receipt.promote": "Ажиллах болгох",
+ "ai.receipt.promote.tip": "Ноорог бүлгийг ажиллах болгоно (нэг буцаах алхам)",
+ "ai.receipt.promoted": "Бүлэг одоо ажиллаж байна",
+ "ai.receipt.promote_failed": "Бүлгийг ажиллах болгож чадсангүй",
+ "cmd.ai.receipt_undo": "AI-ийн сүүлийн төлөвлөгөөг буцаах"
+}

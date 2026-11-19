@@ -1,0 +1,8 @@
+{
+ "api.cmd.norms_lookup": "Leia projekti normikomplekti reeglid teema, elemendi või koodi järgi",
+ "api.cmd.norms_check": "Kontrolli mudelit projekti normikomplekti vastu ja loetle leiud",
+ "api.cmd.norms_programme": "Tüüpiline ruumiprogramm projekti riigi jaoks hoonetüübile",
+ "api.cmd.select_similar": "Vali kõik sellised elemendid: sama tüüp või kategooria, sellel korrusel või kogu projektis",
+ "api.cmd.create_drawing_set": "Koosta prinditav joonisekomplekt: plaanid, lõiked, vaated, loendid ja tiitliplokid",
+ "api.cmd.deliver_project": "Lähteülesandest failideni ühe sammuga: projekt ja selle joonisekomplekt, eksporditud pärast rakendamist"
+}

@@ -1,0 +1,312 @@
+{
+ "rules": [
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 1.1
+   },
+   "unit": "m",
+   "value": 1.1,
+   "text": {
+    "en": "Public stair flight clear width at least 1.10 m (two streams of 0.55 m)",
+    "zh": "公共楼梯梯段净宽不小于 1.10 m（两股 0.55 m）"
+   },
+   "source": {
+    "doc": "gb55031",
+    "clause": "5.3.2 public stair flight: 0.55 m per stream, at least two streams, so 1.10 m",
+    "url": "https://gf.cabr-fire.com/m/article-41805.htm",
+    "edition": "2022",
+    "accessed": "2026-11-13",
+    "note": "read 2026-11-13: GB 55031-2022 clause text in the Beijing planning bureau standards excerpt, ghzrzyw.beijing.gov.cn/biaozhunguanli/bzzl/202209/P020220929592779805981.pdf"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "cn.pub.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "width",
+    "min": 1.3
+   },
+   "unit": "m",
+   "value": 1.3,
+   "text": {
+    "en": "Public corridor clear width at least 1.30 m (not housing)",
+    "zh": "公共走道净宽不小于 1.30 m（非住宅）"
+   },
+   "source": {
+    "doc": "gb55031",
+    "clause": "5.3.12 public corridors other than housing at least 1.30 m",
+    "url": "https://gf.cabr-fire.com/m/article-41805.htm",
+    "edition": "2022",
+    "accessed": "2026-11-13",
+    "note": "read 2026-11-13: GB 55031-2022 clause text in the Beijing planning bureau standards excerpt, ghzrzyw.beijing.gov.cn/biaozhunguanli/bzzl/202209/P020220929592779805981.pdf"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "cn.pub.corr"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.0
+   },
+   "unit": "m",
+   "value": 2.0,
+   "text": {
+    "en": "Clear height of public corridors at least 2.00 m",
+    "zh": "公共走道净高不小于 2.00 m"
+   },
+   "source": {
+    "doc": "gb55031",
+    "clause": "3.2.7 lowest clear height of public passages 2.00 m",
+    "url": "https://gf.cabr-fire.com/m/article-41805.htm",
+    "edition": "2022",
+    "accessed": "2026-11-13",
+    "note": "read 2026-11-13: GB 55031-2022 clause text in the Beijing planning bureau standards excerpt, ghzrzyw.beijing.gov.cn/biaozhunguanli/bzzl/202209/P020220929592779805981.pdf"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "cn.corr.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {},
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "headroom",
+    "min": 2.2
+   },
+   "unit": "m",
+   "value": 2.2,
+   "text": {
+    "en": "Public stair flight clear height at least 2.20 m",
+    "zh": "公共楼梯梯段净高不小于 2.20 m"
+   },
+   "source": {
+    "doc": "gb55031",
+    "clause": "5.3.7 flight clear height at least 2.20 m, landing passage 2.00 m",
+    "url": "https://gf.cabr-fire.com/m/article-41805.htm",
+    "edition": "2022",
+    "accessed": "2026-11-13",
+    "note": "read 2026-11-13: GB 55031-2022 clause text in the Beijing planning bureau standards excerpt, ghzrzyw.beijing.gov.cn/biaozhunguanli/bzzl/202209/P020220929592779805981.pdf"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "cn.stair.headroom"
+  },
+  {
+   "id": "generic.stair.headroom",
+   "disabled": true
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.175
+   },
+   "unit": "m",
+   "value": 0.175,
+   "text": {
+    "en": "Residential stair riser at most 0.175 m",
+    "ru": "Подъём ступени жилой лестницы не более 0.175 м"
+   },
+   "source": {
+    "doc": "gb50096",
+    "clause": "6.3.2, riser at most 0.175 m",
+    "url": "https://www.jsxishan.gov.cn/doc/2012/11/14/2321165.shtml",
+    "accessed": "2026-11-15",
+    "paraphrase": "A residential stair rises at most 0.175 m per step.",
+    "note": "read 2026-11-15: jsxishan.gov.cn page with the mandatory clauses of GB 50096-2011"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "cn.res.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.26
+   },
+   "unit": "m",
+   "value": 0.26,
+   "text": {
+    "en": "Residential stair tread at least 0.26 m",
+    "ru": "Проступь жилой лестницы не менее 0.26 м"
+   },
+   "source": {
+    "doc": "gb50096",
+    "clause": "6.3.2, tread at least 0.26 m",
+    "url": "https://www.jsxishan.gov.cn/doc/2012/11/14/2321165.shtml",
+    "accessed": "2026-11-15",
+    "paraphrase": "A residential stair tread is at least 0.26 m.",
+    "note": "read 2026-11-15: jsxishan.gov.cn page with the mandatory clauses of GB 50096-2011"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "cn.res.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 1.1
+   },
+   "unit": "m",
+   "value": 1.1,
+   "text": {
+    "en": "Stair flight clear width at least 1.1 m",
+    "ru": "Ширина марша не менее 1.1 м"
+   },
+   "source": {
+    "doc": "gb50096",
+    "clause": "6.3.1, flight clear width at least 1.10 m (1.00 m up to six storeys with a railing on one side)",
+    "url": "https://www.jsxishan.gov.cn/doc/2012/11/14/2321165.shtml",
+    "accessed": "2026-11-15",
+    "paraphrase": "A residential stair flight is at least 1.10 m wide.",
+    "note": "read 2026-11-15: jsxishan.gov.cn page with the mandatory clauses of GB 50096-2011"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "cn.res.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.4
+   },
+   "unit": "m",
+   "value": 2.4,
+   "text": {
+    "en": "Bedroom and living room clear height at least 2.4 m",
+    "ru": "Высота спальни и гостиной не менее 2.4 м"
+   },
+   "source": {
+    "doc": "gb50096",
+    "clause": "5.5.2, bedrooms and living rooms at least 2.40 m clear (2.10 m locally on up to a third of the area)",
+    "url": "https://www.jsxishan.gov.cn/doc/2012/11/14/2321165.shtml",
+    "accessed": "2026-11-15",
+    "paraphrase": "Bedrooms and living rooms are at least 2.40 m high.",
+    "note": "read 2026-11-15: jsxishan.gov.cn page with the mandatory clauses of GB 50096-2011"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "cn.res.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {},
+   "check": {
+    "kind": "ratio",
+    "per": "element",
+    "cat": "room",
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen"
+    ],
+    "num": "window_area",
+    "den": "area",
+    "min": 0.143
+   },
+   "unit": "ratio",
+   "value": 0.143,
+   "text": {
+    "en": "Window area at least 1/7 of the room floor",
+    "ru": "Площадь окна не менее 1/7 площади пола"
+   },
+   "source": {
+    "doc": "gb50096",
+    "clause": "7.1.5, bedrooms, living rooms and kitchens glazed at 1/7 of the floor",
+    "url": "https://www.jsxishan.gov.cn/doc/2012/11/14/2321165.shtml",
+    "accessed": "2026-11-15",
+    "paraphrase": "Bedrooms, living rooms and kitchens are glazed at one seventh of the floor.",
+    "note": "same clause as dim daylight.window_floor_ratio, read 2026-11-14"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "cn.day"
+  },
+  {
+   "id": "generic.room.daylight",
+   "disabled": true
+  }
+ ]
+}

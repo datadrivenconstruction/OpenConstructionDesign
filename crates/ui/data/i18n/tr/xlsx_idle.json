@@ -1,0 +1,8 @@
+{
+ "xlsx_idle.idle_title": "İçe aktarılacak değişiklik yok",
+ "xlsx_idle.export_name": "Dışa aktar",
+ "xlsx_idle.export_body": "Modeli bir çalışma kitabına yazar. Değerleri orada düzenleyin, sonra eşitleyin.",
+ "xlsx_idle.sync_name": "Eşitle",
+ "xlsx_idle.sync_body": "Çalışma kitabını yeniden okur ve farkları listeler. Model yalnızca uyguladığınızda değişir.",
+ "xlsx_idle.last_sync": "Son eşitleme: {when}"
+}

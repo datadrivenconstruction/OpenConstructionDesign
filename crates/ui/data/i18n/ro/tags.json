@@ -1,0 +1,13 @@
+{
+ "tags.gone": "Eticheta nu mai există",
+ "tags.readonly_wall": "Eticheta unui perete arată tipul și nu poate fi editată aici: schimbați tipul peretelui",
+ "tags.readonly_comp": "Eticheta unui element arată familia și nu poate fi editată aici: schimbați tipul",
+ "tags.locked": "Elementul este blocat: deblocați-l pentru a edita eticheta",
+ "tags.done": "Valoarea etichetei scrisă",
+ "tags.failed": "Eticheta nemodificată: {e}",
+ "tags.dup_door": "{mark} și pe {n} uși",
+ "tags.dup_window": "{mark} și pe {n} ferestre",
+ "tags.dup_room": "{mark} și pe {n} camere",
+ "tags.hint_mark": "Marcă",
+ "tags.hint_name": "Nume cameră"
+}

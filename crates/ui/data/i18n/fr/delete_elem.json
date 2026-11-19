@@ -1,0 +1,9 @@
+{
+ "elem.deleted": "Éléments supprimés : {n}",
+ "elem.deleted_kept": "Éléments supprimés : {n} ; conservés : {k} (panneaux et éléments non supprimables)",
+ "elem.not_deleted": "non supprimé : {e}",
+ "elem.not_deletable": "Cet élément ne peut pas être supprimé",
+ "elem.panel": "panneau de mur-rideau",
+ "elem.panel_refused": "Un panneau fait partie de son mur-rideau et ne peut pas être supprimé seul. Sélectionnez le mur entier pour le supprimer.",
+ "elem.reload_failed": "Supprimé, mais la vue n'a pas été mise à jour : {e}"
+}

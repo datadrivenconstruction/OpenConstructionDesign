@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "ייצוא לגיליון אלקטרוני: היקף",
+ "xlsx_scope.intro": "בחר מה ייכנס לחוברת העבודה. ייבוא שלה בחזרה משנה רק את הרכיבים האלה.",
+ "xlsx_scope.base_whole": "המודל כולו",
+ "xlsx_scope.base_level": "מפלס פעיל",
+ "xlsx_scope.base_selection": "בחירה",
+ "xlsx_scope.categories": "קטגוריות",
+ "xlsx_scope.cat_walls": "קירות",
+ "xlsx_scope.cat_openings": "דלתות",
+ "xlsx_scope.cat_rooms": "חדרים",
+ "xlsx_scope.cat_slabs": "רצפות",
+ "xlsx_scope.cat_curtains": "קירות מסך",
+ "xlsx_scope.nothing_selected": "לא נבחר דבר: בחר קודם רכיבים או בחר היקף אחר.",
+ "xlsx_scope.no_categories": "סמן לפחות קטגוריה אחת.",
+ "xlsx_scope.no_level": "המפלס הפעיל לא נמצא.",
+ "xlsx_scope.export": "ייצוא",
+ "xlsx_scope.preview_scope": "היקף הייצוא: {scope}. רכיבים שמחוצה לו לעולם אינם משתנים או נמחקים."
+}

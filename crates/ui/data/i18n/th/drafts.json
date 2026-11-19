@@ -1,0 +1,8 @@
+{
+ "drafts.drafts.head": "ตัวแก้ไขที่เปิดอยู่มีการแก้ไขที่ยังไม่อยู่ในโปรเจกต์:",
+ "drafts.draft.family": "แฟมิลี “{name}”",
+ "drafts.draft.line": "ไลบรารีเส้น: {name}",
+ "drafts.draft.styles": "สไตล์เส้นของช่วงมุมมอง",
+ "drafts.btn.save_all": "บันทึกทั้งหมด",
+ "drafts.drafts.refused": "บันทึกฉบับร่างไม่ได้ ยังไม่ได้ปิดอะไร ตัวแก้ไขที่มีฉบับร่างยังเปิดอยู่"
+}

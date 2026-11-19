@@ -1,0 +1,8 @@
+{
+ "cmd.file.save_copy": "Kopie für andere speichern…",
+ "cmd.file.save_copy.desc": "Speichert eine Kopie des Projekts ohne KI-Einwilligung und, sofern nicht anders gewählt, ohne KI-Journal. Dieses Projekt bleibt unverändert.",
+ "ai.copy.title": "Kopie speichern",
+ "ai.copy.journal": "KI-Journal in die Kopie aufnehmen? Das Journal enthält Anfragen, Antworten und Adressen. Die Cloud-Einwilligung wird nie kopiert: Die andere Person entscheidet selbst. Nein wählen, um das Journal wegzulassen.",
+ "ai.copy.done": "Kopie gespeichert: {name}",
+ "ai.copy.same": "Andere Datei wählen: eine Kopie kann das geöffnete Projekt nicht ersetzen."
+}

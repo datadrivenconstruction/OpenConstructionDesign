@@ -1,0 +1,23 @@
+{
+ "roof_edge.err.number": "Enter a number",
+ "roof_edge.err.positive": "Must be greater than zero",
+ "roof_edge.err.nonneg": "Must not be negative",
+ "roof_edge.err.max": "Must not exceed {max}",
+ "roof_edge.list.empty_hint": "Add fascias, gutters, soffits or skylights with the roof commands",
+ "roof_edge.edit_tip": "Edit properties",
+ "roof_edge.delete_tip": "Delete",
+ "roof_edge.pe.del_tip": "Remove this point (a section keeps at least 3)",
+ "roof_edge.pe.up_tip": "Move this point up",
+ "roof_edge.confirm_edge": "Delete {name}? Ctrl+Z brings it back.",
+ "roof_edge.confirm_profile": "Delete profile {name}? Ctrl+Z brings it back.",
+ "roof_edge.deleted_one": "Deleted {name}",
+ "roof_edge.deleted_n": {
+  "one": "Deleted # element",
+  "other": "Deleted # elements"
+ },
+ "roof_edge.profile_deleted": "Profile deleted",
+ "roof_edge.profile_in_use": {
+  "one": "Used by # edge element: delete or change it first",
+  "other": "Used by # edge elements: delete or change them first"
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "این دیوار را در هر ویرایش با طول فعلی‌اش نگه می‌دارد",
+ "constraints.con.tip.lock_dist": "فاصله بین دو دیوار را در هر ویرایش نگه می‌دارد",
+ "constraints.con.tip.equal": "فاصله‌های بین دیوارهای انتخاب‌شده را برابر نگه می‌دارد",
+ "constraints.con.tip.align": "هر دو دیوار را روی یک خط نگه می‌دارد",
+ "constraints.con.tip.parallel": "دیوارها را موازی نگه می‌دارد",
+ "constraints.con.tip.perp": "دیوارها را در زاویه قائم نگه می‌دارد",
+ "constraints.con.tip.align_grid": "دیوار را روی نزدیک‌ترین خط شبکه نگه می‌دارد",
+ "constraints.con.tip.lock_dist_grid": "فاصله دیوار تا نزدیک‌ترین خط شبکه را نگه می‌دارد",
+ "constraints.con.tip.level_gap": "فاصله بین ترازها را نگه می‌دارد",
+ "constraints.con.tip.top_to_level": "بالای دیوار را در تراز بالاتر نگه می‌دارد"
+}

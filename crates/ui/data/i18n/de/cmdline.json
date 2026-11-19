@@ -1,0 +1,13 @@
+{
+ "cmdl.mode_cmd": "Befehl",
+ "cmdl.mode_ai": "KI",
+ "cmdl.toggle": "Befehle oder KI-Assistent (Strg+J)",
+ "cmdl.hint": "Befehl oder Kürzel (W, L, M, RO), Punkt #x;y, @dx;dy, d<Winkel. Strg+J: KI-Assistenten fragen",
+ "cmdl.hint_ai": "Fragen Sie den KI-Assistenten zum Modell oder bitten Sie um eine Änderung. Strg+J: zurück zu den Befehlen",
+ "cmdl.sent": "An den KI-Assistenten gesendet",
+ "cmdl.failed": "„{text}“ kann hier nicht ausgeführt werden",
+ "cmdl.no_tool": "Starten Sie zuerst einen Zeichenbefehl, dann geben Sie seine Punkte ein",
+ "cmdl.unknown": "Kein Befehl „{text}“. Strg+J sendet ihn an den KI-Assistenten",
+ "cmdl.bad": "„{text}“ kann nicht gelesen werden: {e}",
+ "cmdl.shape": "„{text}“ ist kein Punkt: geben Sie x;y, #x;y, @dx;dy oder einen positiven Abstand<Winkel ein"
+}

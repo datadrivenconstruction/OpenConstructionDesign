@@ -1,0 +1,8 @@
+{
+ "xlsx_idle.idle_title": "Brak zmian do importu",
+ "xlsx_idle.export_name": "Eksportuj",
+ "xlsx_idle.export_body": "Zapisuje model do skoroszytu. Edytuj wartości tam, potem synchronizuj.",
+ "xlsx_idle.sync_name": "Synchronizuj",
+ "xlsx_idle.sync_body": "Ponownie odczytuje skoroszyt i wypisuje różnice. Model zmienia się dopiero po zastosowaniu.",
+ "xlsx_idle.last_sync": "Ostatnia synchronizacja: {when}"
+}

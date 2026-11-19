@@ -1,0 +1,43 @@
+{
+ "sources": [
+  {
+   "id": "dbn-v2.2-15",
+   "title": "DBN V.2.2-15:2019 Residential buildings (amendment 2)",
+   "licence": "public-law",
+   "verified": "2026-11-14",
+   "publisher": "Ministry of Development of Ukraine",
+   "edition": "2019"
+  },
+  {
+   "id": "dbn-v2.2-9",
+   "title": "DBN V.2.2-9:2018 Public buildings and structures",
+   "licence": "public-law",
+   "verified": null,
+   "publisher": "Ministry of Development of Ukraine",
+   "edition": "2018"
+  },
+  {
+   "id": "dbn-v2.2-40",
+   "title": "DBN V.2.2-40:2018 Inclusivity of buildings and structures",
+   "licence": "public-law",
+   "verified": null,
+   "publisher": "Ministry of Development of Ukraine",
+   "edition": "2018"
+  },
+  {
+   "id": "dbn-v1.1-7",
+   "title": "DBN V.1.1-7 Fire safety of construction objects",
+   "licence": "public-law",
+   "verified": null,
+   "publisher": "Ministry of Development of Ukraine"
+  },
+  {
+   "id": "dbn-v2.5-28",
+   "title": "DBN V.2.5-28:2018 Natural and artificial lighting",
+   "licence": "public-law",
+   "verified": null,
+   "publisher": "Ministry of Development of Ukraine",
+   "edition": "2018"
+  }
+ ]
+}

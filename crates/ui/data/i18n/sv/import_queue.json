@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "Köad bakom det körande jobbet: {n}",
+ "import_queue.queue_full": "Kön är full, {n} filer lades inte till",
+ "import_queue.changed": "{name} uppdaterades efter att projektet skapades. Öppnade det tidigare projektet.",
+ "import_queue.import_again": "Importera igen",
+ "import_queue.kept": "Den färdiga importen behålls",
+ "import_queue.open_it": "Öppna den",
+ "import_queue.sum.head": "import: {editable} redigerbara (väggar {walls}, öppningar {open}, golv {slabs}, rum {rooms}, övriga {other}), {meshes} som mesh",
+ "import_queue.sum.unchanged": ", oförändrade {n}",
+ "import_queue.sum.updated": ", uppdaterade {n}",
+ "import_queue.sum.missing": ", inte i källan {n} (behållna)",
+ "import_queue.sum.skipped": ", överhoppade {n}",
+ "import_queue.sum.warnings": ", varningar {n}",
+ "import_queue.import_failed": "importen misslyckades: {e}"
+}

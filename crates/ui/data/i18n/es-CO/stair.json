@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "Escaleras",
+ "selcat.railing": "Barandillas",
+ "quick.cat.stair": "Escaleras",
+ "quick.cat.railing": "Barandillas",
+ "stair.risers": "Contrahuellas",
+ "stair.riser": "Altura de contrahuella",
+ "stair.comfort": "2C + H",
+ "stair.tread_auto": "Huella según regla",
+ "stair.tread_auto_tip": "Quite la huella escrita y deje que la regla 2C + H la calcule",
+ "stair.broken": "Esta escalera no encaja con sus niveles",
+ "railing.host_stair": "Alojada en la escalera #{id}",
+ "railing.host_path": "Barandilla por boceto",
+ "railing.length": "Longitud",
+ "stair.deleted_with": "con {n} barandillas alojadas"
+}

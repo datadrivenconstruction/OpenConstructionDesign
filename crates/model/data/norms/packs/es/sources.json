@@ -1,0 +1,61 @@
+{
+ "sources": [
+  {
+   "id": "cte-db-sua",
+   "title": "Technical Building Code, basic document on safety of use and accessibility (DB-SUA)",
+   "licence": "public-law",
+   "verified": "2026-11-13",
+   "publisher": "Ministry of Housing",
+   "edition": "2019 with amendments",
+   "url": "https://www.codigotecnico.org/pdf/Documentos/SUA/DBSUA.pdf"
+  },
+  {
+   "id": "cte-db-si",
+   "title": "Technical Building Code, basic document on fire safety (DB-SI)",
+   "licence": "public-law",
+   "verified": "2026-11-13",
+   "publisher": "Ministry of Housing",
+   "url": "https://www.codigotecnico.org/pdf/Documentos/SI/DBSI.pdf"
+  },
+  {
+   "id": "cte-db-sua9",
+   "title": "DB-SUA 9 Accessibility",
+   "licence": "public-law",
+   "verified": "2026-11-14",
+   "publisher": "Ministry of Housing"
+  },
+  {
+   "id": "habitabilidad",
+   "title": "Regional habitability rules for dwellings",
+   "licence": "public-law",
+   "verified": null,
+   "publisher": "Autonomous communities"
+  },
+  {
+   "id": "rd486-1997",
+   "title": "Royal Decree 486/1997 on workplaces",
+   "licence": "public-law",
+   "verified": null,
+   "publisher": "Government of Spain",
+   "edition": "1997"
+  },
+  {
+   "id": "es-orden-1944",
+   "title": "Order of 29 February 1944 on minimum hygiene conditions of dwellings",
+   "publisher": "Ministry of the Interior (BOE)",
+   "url": "https://www.boe.es/gazeta/dias/1944/03/01/pdfs/BOE-1944-61.pdf",
+   "edition": "BOE no. 61, 1944-03-01",
+   "licence": "public-law",
+   "verified": "2026-11-14"
+  },
+  {
+   "id": "cte-db-he",
+   "title": "Technical Building Code, basic document on energy saving (DB-HE)",
+   "licence": "public-law",
+   "verified": null,
+   "publisher": "Ministry of Housing",
+   "edition": "2019",
+   "url": "https://www.codigotecnico.org/pdf/Documentos/HE/DcmHE.pdf"
+  }
+ ]
+}

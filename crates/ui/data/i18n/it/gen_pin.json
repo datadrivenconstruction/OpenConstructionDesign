@@ -1,0 +1,7 @@
+{
+ "gen.pin.room": "Hai modificato un locale del progetto generato. Fissalo in modo che una revisione lo mantenga dov'è.",
+ "gen.pin.storey": "Hai modificato un piano del progetto generato. Fissalo in modo che una revisione mantenga i suoi muri e le sue aperture.",
+ "gen.pin.action": "Fissa",
+ "gen.pin.done": "Fissato: una revisione del progetto lo conserva e dispone il resto attorno",
+ "gen.pin.failed": "Impossibile fissare"
+}

@@ -1,0 +1,112 @@
+{
+ "items": [
+  {
+   "key": "room.height_min",
+   "value": 2.4,
+   "unit": "m",
+   "source": "eu-practice",
+   "clause": "envelope of national practice",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: EU-level acts; no EU act sets this value, eu-practice is an editor envelope of national rules and EN standards are paywalled"
+  },
+  {
+   "key": "door.clear_min",
+   "value": 0.8,
+   "unit": "m",
+   "source": "eu-practice",
+   "clause": "envelope of national practice",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: EU-level acts; no EU act sets this value, eu-practice is an editor envelope of national rules and EN standards are paywalled"
+  },
+  {
+   "key": "door.clear_min.office",
+   "value": 0.9,
+   "unit": "m",
+   "source": "eu-practice",
+   "clause": "envelope of national practice",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: EU-level acts; no EU act sets this value, eu-practice is an editor envelope of national rules and EN standards are paywalled"
+  },
+  {
+   "key": "door.clear_min.accessible",
+   "value": 0.9,
+   "unit": "m",
+   "source": "en17210",
+   "clause": "functional requirements, doors",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: EN 17210 on din.de, bsigroup, accessible-eu-centre; standard is paywalled, no free clause text"
+  },
+  {
+   "key": "corridor.width_min",
+   "value": 1.0,
+   "unit": "m",
+   "source": "eu-practice",
+   "clause": "envelope of national practice",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: EU-level acts; no EU act sets this value, eu-practice is an editor envelope of national rules and EN standards are paywalled"
+  },
+  {
+   "key": "stair.width_min",
+   "value": 1.0,
+   "unit": "m",
+   "source": "eu-practice",
+   "clause": "envelope of national practice",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: EU-level acts; no EU act sets this value, eu-practice is an editor envelope of national rules and EN standards are paywalled"
+  },
+  {
+   "key": "accessible.turning_circle",
+   "value": 1.5,
+   "unit": "m",
+   "source": "en17210",
+   "clause": "functional requirements, manoeuvring space",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: EN 17210 on din.de, bsigroup, accessible-eu-centre; standard is paywalled, no free clause text"
+  },
+  {
+   "key": "ramp.slope_max",
+   "value": 0.06,
+   "unit": "ratio",
+   "source": "en17210",
+   "clause": "functional requirements, ramps",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: EN 17210 on din.de, bsigroup, accessible-eu-centre; standard is paywalled, no free clause text"
+  },
+  {
+   "key": "egress.travel_max",
+   "value": 30.0,
+   "unit": "m",
+   "source": "eu-practice",
+   "clause": "envelope of national practice",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: EU-level acts; no EU act sets this value, eu-practice is an editor envelope of national rules and EN standards are paywalled"
+  },
+  {
+   "key": "daylight.window_floor_ratio",
+   "value": 0.125,
+   "unit": "ratio",
+   "source": "eu-practice",
+   "clause": "envelope of national practice",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: EU-level acts; no EU act sets this value, eu-practice is an editor envelope of national rules and EN standards are paywalled"
+  },
+  {
+   "key": "corridor.width_min.accessible",
+   "value": 1.2,
+   "unit": "m",
+   "source": "en17210",
+   "clause": "horizontal circulation",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: EN 17210 on din.de, bsigroup, accessible-eu-centre; standard is paywalled, no free clause text"
+  },
+  {
+   "key": "fire.compartment_area_max",
+   "value": 2500,
+   "unit": "m2",
+   "source": "eu-practice",
+   "clause": "fire compartment size, typical member state limit",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: EU-level acts; no EU act sets this value, eu-practice is an editor envelope of national rules and EN standards are paywalled"
+  }
+ ]
+}

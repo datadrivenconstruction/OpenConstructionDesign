@@ -1,0 +1,20 @@
+{
+ "dwgfillet.fillet": "Empalme",
+ "dwgfillet.cancel": "Detener empalme",
+ "dwgfillet.tip": "Haga clic en dos líneas, en los lados a conservar: ambas se recortan o alargan hasta la esquina, con un arco tangente si el radio es mayor que cero",
+ "dwgfillet.radius": "Radio de empalme",
+ "dwgfillet.radius_tip": "Radio del arco en unidades del dibujo; 0 hace una esquina viva",
+ "dwgfillet.st.arm_first": "Haga clic en la primera línea, en el lado que se conserva",
+ "dwgfillet.st.arm_second": "Haga clic en la segunda línea, en el lado que se conserva",
+ "dwgfillet.st.not_armed": "Elija primero Empalme",
+ "dwgfillet.st.click_line": "Haga clic en una sola línea del dibujo",
+ "dwgfillet.st.other_drawing": "Ambas líneas deben pertenecer al mismo dibujo: empiece de nuevo",
+ "dwgfillet.st.changed": "La primera línea cambió: empiece de nuevo",
+ "dwgfillet.st.same_line": "Seleccione una segunda línea distinta",
+ "dwgfillet.st.parallel": "Las líneas son paralelas y nunca se cruzan: no se puede crear una esquina",
+ "dwgfillet.st.degenerate": "Una línea no tiene longitud",
+ "dwgfillet.st.no_side": "El lado seleccionado no tiene longitud desde la esquina",
+ "dwgfillet.st.too_big": "El radio es demasiado grande para estas líneas: use un radio menor",
+ "dwgfillet.st.radius_bad": "El radio debe ser cero o positivo",
+ "dwgfillet.st.done": "Esquina creada"
+}

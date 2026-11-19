@@ -1,0 +1,172 @@
+{
+ "items": [
+  {
+   "key": "ramp.slope_max.egress",
+   "value": 0.1,
+   "unit": "ratio",
+   "source": "go-nt11",
+   "clause": "5.6.3.2 a) internal egress ramps 10 % (1:10) for groups A, B, E, F, H",
+   "verified": true
+  },
+  {
+   "key": "door.clear_min.egress",
+   "value": 0.8,
+   "unit": "m",
+   "source": "go-nt11",
+   "clause": "5.5.4.2 a) egress door clear width 80 cm, one passage unit",
+   "verified": true
+  },
+  {
+   "key": "corridor.width_min.egress",
+   "value": 1.2,
+   "unit": "m",
+   "source": "go-nt11",
+   "clause": "5.4.2.1 a) general occupancies",
+   "verified": true
+  },
+  {
+   "key": "ramp.slope_max",
+   "value": 0.0833,
+   "unit": "ratio",
+   "source": "nbr9050-2020-sp",
+   "clause": "6.6.2.1 and Table 4: segments up to 0.80 m rise may be 6.25-8.33 percent (1:12), max 15 segments",
+   "verified": true,
+   "note": "read 2026-11-14: drive.prefeitura.sp.gov.br/cidade/secretarias/upload/NBR9050_20.pdf (2020 text); 6.6.2.2 allows up to 12.5 percent only in renovations",
+   "url": "https://drive.prefeitura.sp.gov.br/cidade/secretarias/upload/NBR9050_20.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Ramp segment gradient is capped at 8.33 percent (1:12) for rises up to 0.80 m; flatter limits apply for larger rises."
+  },
+  {
+   "key": "door.clear_min.accessible",
+   "value": 0.8,
+   "unit": "m",
+   "source": "nbr9050-2020-sp",
+   "clause": "6.11.2.4: open doors give clear width of at least 0.80 m and height 2.10 m; multi-leaf doors need one leaf with 0.80 m",
+   "verified": true,
+   "note": "read 2026-11-14: drive.prefeitura.sp.gov.br/cidade/secretarias/upload/NBR9050_20.pdf",
+   "url": "https://drive.prefeitura.sp.gov.br/cidade/secretarias/upload/NBR9050_20.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Accessible door must give at least 0.80 m clear width and 2.10 m clear height when open."
+  },
+  {
+   "key": "corridor.width_min.accessible",
+   "value": 0.9,
+   "unit": "m",
+   "source": "nbr9050-2020-sp",
+   "clause": "6.11.1(a): common-use corridors up to 4.00 m long min 0.90 m; (b) 1.20 m up to 10 m, 1.50 m beyond; (c) 1.50 m public use (clause is 6.11.1, 6.12.6 is the free-band sizing)",
+   "verified": true,
+   "note": "read 2026-11-14: drive.prefeitura.sp.gov.br/cidade/secretarias/upload/NBR9050_20.pdf; value 0.90 applies only to short common corridors, longer ones need more",
+   "url": "https://drive.prefeitura.sp.gov.br/cidade/secretarias/upload/NBR9050_20.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Common corridors need 0.90 m only up to 4 m length; 1.20 m up to 10 m; 1.50 m beyond or for public use."
+  },
+  {
+   "key": "egress.travel_max",
+   "value": 40.0,
+   "unit": "m",
+   "source": "go-nt11",
+   "clause": "annex B table B1, dwellings, upper storeys, unsprinklered: 40 m",
+   "verified": true,
+   "note": "read 2026-11-14: bombeiros.go.gov.br/wp-content/uploads/2021/04/NT-11_2021-Saidas-de-Emergencia.pdf; offices (group D) 35 m on upper storeys"
+  },
+  {
+   "key": "accessible.turning_circle",
+   "value": 1.5,
+   "unit": "m",
+   "source": "nbr9050-2020-sp",
+   "clause": "4.3.4(c): 360 degree wheelchair rotation needs a circle 1.50 m in diameter (90 degrees 1.20x1.20 m, 180 degrees 1.50x1.20 m)",
+   "verified": true,
+   "note": "read 2026-11-14: drive.prefeitura.sp.gov.br/cidade/secretarias/upload/NBR9050_20.pdf",
+   "url": "https://drive.prefeitura.sp.gov.br/cidade/secretarias/upload/NBR9050_20.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "A full 360 degree wheelchair turn needs a circle of 1.50 m diameter."
+  },
+  {
+   "key": "fire.compartment_area_max",
+   "value": 2500,
+   "unit": "m2",
+   "source": "go-nt09",
+   "clause": "annex A, offices 6 to 12 m high, unsprinklered: 2500 m2",
+   "verified": true,
+   "note": "read 2026-11-14: bombeiros.go.gov.br NT-09_2022 rev1 PDF; unsprinklered, the value falls with height"
+  },
+  {
+   "key": "corridor.width_min",
+   "value": 1.2,
+   "unit": "m",
+   "source": "go-nt11",
+   "clause": "5.4.2.1 a), 1.2 m in general; 5.4.2.2, 1.0 m for corridors serving under 20 people",
+   "verified": true,
+   "url": "https://www.bombeiros.go.gov.br/wp-content/uploads/2021/04/NT-11_2021-Saidas-de-Emergencia.pdf",
+   "accessed": "2026-11-15",
+   "paraphrase": "Escape corridors are 1.2 m wide, 1.0 m when fewer than 20 people use them.",
+   "note": "read 2026-11-15: bombeiros.go.gov.br NT-11/2021 PDF (state fire norm, used as the pack's reference state)"
+  },
+  {
+   "key": "stair.riser_max",
+   "value": 0.18,
+   "unit": "m",
+   "orig": {
+    "value": 18,
+    "unit": "cm"
+   },
+   "source": "go-nt11",
+   "clause": "5.7.3.1 a), riser between 16 and 18 cm",
+   "verified": true,
+   "url": "https://www.bombeiros.go.gov.br/wp-content/uploads/2021/04/NT-11_2021-Saidas-de-Emergencia.pdf",
+   "accessed": "2026-11-15",
+   "paraphrase": "An escape stair riser is between 16 and 18 cm.",
+   "note": "read 2026-11-15: bombeiros.go.gov.br NT-11/2021 PDF (state fire norm, used as the pack's reference state)"
+  },
+  {
+   "key": "stair.going_min",
+   "value": 0.27,
+   "unit": "m",
+   "source": "go-nt11",
+   "clause": "5.7.3.1 b), derived from 63 cm <= 2h + b with h at most 18 cm",
+   "verified": false,
+   "url": "https://www.bombeiros.go.gov.br/wp-content/uploads/2021/04/NT-11_2021-Saidas-de-Emergencia.pdf",
+   "accessed": "2026-11-15",
+   "paraphrase": "With 18 cm risers the step rule asks treads of 27 cm or more.",
+   "note": "derived by the editor from the read clause: riser at most 18 cm and 63 cm <= 2 risers + tread"
+  },
+  {
+   "key": "guard.height_min",
+   "value": 1.05,
+   "unit": "m",
+   "source": "go-nt11",
+   "clause": "5.8.1.2, guards at least 1.05 m (0.92 m on internal stairs measured over the nosings)",
+   "verified": true,
+   "url": "https://www.bombeiros.go.gov.br/wp-content/uploads/2021/04/NT-11_2021-Saidas-de-Emergencia.pdf",
+   "accessed": "2026-11-15",
+   "paraphrase": "Guards on escape routes are at least 1.05 m high.",
+   "note": "read 2026-11-15: bombeiros.go.gov.br NT-11/2021 PDF (state fire norm, used as the pack's reference state)"
+  },
+  {
+   "key": "room.height_min",
+   "na": true,
+   "value": null,
+   "unit": "m",
+   "source": "go-nt11",
+   "verified": false,
+   "note": "na: room heights, office areas and window shares are set by each city's building code; no national or reference-state value in this pack",
+   "text": {
+    "en": "Room height is set by the city building code.",
+    "ru": "Высоту помещения задаёт городской строительный кодекс."
+   }
+  },
+  {
+   "key": "building.class5_height",
+   "na": true,
+   "value": null,
+   "unit": "m",
+   "source": "go-nt11",
+   "verified": false,
+   "note": "na: fire norms classify buildings by height bands, not a 13 m class; the bands were not read in this pass",
+   "text": {
+    "en": "No 13 m building class.",
+    "ru": "Нет класса здания 13 м."
+   }
+  }
+ ]
+}

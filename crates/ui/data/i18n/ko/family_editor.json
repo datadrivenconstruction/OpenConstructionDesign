@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "새 패밀리",
+ "family_editor.open_tip": "패밀리 또는 초안 열기",
+ "family_editor.close_named": "{name} 닫기",
+ "family_editor.unsaved": "저장되지 않은 변경 사항",
+ "family_editor.search": "검색",
+ "family_editor.nothing": "찾은 항목이 없습니다",
+ "family_editor.sec_families": "프로젝트 패밀리",
+ "family_editor.sec_drafts": "초안",
+ "family_editor.cap_category": "카테고리",
+ "family_editor.cap_host": "호스트",
+ "family_editor.cap_type": "미리보기 유형"
+}

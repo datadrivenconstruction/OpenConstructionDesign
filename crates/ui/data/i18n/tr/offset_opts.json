@@ -1,0 +1,7 @@
+{
+ "offset_opts.dist_positive": "Ofset mesafesi sıfırdan büyük olmalı; yan imleci izler",
+ "offset_opts.count_bad": "{min} ile {max} arasında tam sayı",
+ "offset_opts.done_tip": "Seçimi bitir ve aracı başlat",
+ "offset_opts.iso.apply_tip": "Bu görünüm için geçici gizlemeyi kalıcı yap",
+ "offset_opts.iso.exit": "Geçici moddan çık"
+}

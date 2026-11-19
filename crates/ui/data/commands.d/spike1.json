@@ -1,0 +1,17 @@
+[
+ {
+  "id": "ctx.floor.clean_outline",
+  "icon": "outline-clean",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "profile",
+  "context": [
+   "floor"
+  ]
+ }
+]

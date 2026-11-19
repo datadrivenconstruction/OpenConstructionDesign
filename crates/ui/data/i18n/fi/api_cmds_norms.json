@@ -1,0 +1,8 @@
+{
+ "api.cmd.norms_lookup": "Etsi projektin normipaketin säännöt aiheen, elementin tai koodin mukaan",
+ "api.cmd.norms_check": "Tarkista malli projektin normipaketin mukaan ja listaa havainnot",
+ "api.cmd.norms_programme": "Tyypillinen tilaohjelma projektin maassa rakennustyypille",
+ "api.cmd.select_similar": "Valitse jokainen samanlainen elementti: sama tyyppi tai luokka, tällä tasolla tai koko projektissa",
+ "api.cmd.create_drawing_set": "Laadi tulostettava piirustussarja: pohjapiirrokset, leikkaukset, julkisivut, luettelot ja nimiölohkot",
+ "api.cmd.deliver_project": "Lähtötiedoista tiedostoihin yhdellä askeleella: projekti ja sen piirustussarja, vietynä Käytä-painikkeen jälkeen"
+}

@@ -1,0 +1,5 @@
+{
+ "start_recent.unavailable": "Одоо боломжгүй (диск эсвэл сүлжээний байршил хариу өгөхгүй): {path}",
+ "start_recent.unavailable_short": "Одоо боломжгүй",
+ "start_recent.retry": "Дахин оролдох"
+}

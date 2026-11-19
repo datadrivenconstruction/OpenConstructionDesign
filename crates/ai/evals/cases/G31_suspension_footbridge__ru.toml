@@ -1,0 +1,41 @@
+id = "G31_suspension_footbridge__ru"
+tier = "hard"
+group = "Любая геометрия"
+title = "Suspension footbridge"
+lang = "ru"
+base = "empty"
+
+[[turn]]
+say = "Пешеходный висячий мост пролётом 60 м между двумя стальными пилонами высотой 14 м, два несущих каната со стрелой провеса 6 м, вертикальные подвески через 3 м, настил шириной 3 м с перилами, анкерные блоки на обоих концах."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "col"
+min = 2.0
+
+[[oracle.count]]
+spec = "beam+brace+truss"
+min = 30.0
+
+[[oracle.count]]
+spec = "railing"
+min = 1.0
+
+[[oracle.geom]]
+kind = "clear_span"
+target = 60.0
+tol = 0.1
+
+[[oracle.geom]]
+kind = "height"
+min = 12.0
+max = 20.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

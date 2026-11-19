@@ -1,0 +1,8 @@
+{
+ "script_rec.started": "录制中：此后进行的编辑将写入脚本。再次选择“将操作录制到脚本”即可停止。",
+ "script_rec.saved": "脚本“{name}”已保存：编辑 {n} 处。",
+ "script_rec.skipped": "{k} 处由无脚本表单的工具完成的编辑未被记录。",
+ "script_rec.nothing": "录制已停止：没有可保存的编辑。",
+ "script_rec.failed": "录制未保存：{why}",
+ "script_rec.no_folder": "没有脚本的设置文件夹"
+}

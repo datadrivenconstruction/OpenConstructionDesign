@@ -1,0 +1,107 @@
+id = "H01_lattice_tower_300"
+tier = "hard"
+group = "Steel structures"
+title = "300 m lattice tower with curved legs"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "I want a 300 metre tall open-lattice tower in riveted wrought iron, the 19th-century kind. Square base about 125 m wide, four legs that start wide and curve inward as they go up, big arches joining the legs at the bottom, three viewing platforms at roughly 57, 115 and 276 m, x-bracing in every panel with lighter secondary lacing between them, gusset plates and bolted or riveted joints at the nodes, lifts and stairs inside the legs. Check the wind sway at the top and tell me the number. I want real members and joints, not solid blocks."
+
+[[oracle.count]]
+spec = "level"
+min = 3.0
+
+[[oracle.count]]
+spec = "col+beam+brace+truss+gridshell_bar"
+min = 600.0
+
+[[oracle.count]]
+spec = "brace"
+min = 150.0
+
+[[oracle.count]]
+spec = "steel_conn"
+min = 100.0
+
+[[oracle.count]]
+spec = "steel_conn_part"
+min = 200.0
+
+[[oracle.count]]
+spec = "slab"
+min = 3.0
+
+[[oracle.count]]
+spec = "stair+comp:lift|elevator"
+min = 2.0
+
+[[oracle.geom]]
+kind = "height"
+min = 270.0
+max = 330.0
+
+[[oracle.geom]]
+kind = "taper"
+min = 3.0
+
+[[oracle.geom]]
+kind = "curve_dev"
+min = 0.03
+
+[[oracle.geom]]
+kind = "legs"
+min = 4.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[[oracle.text]]
+name = "gives a wind sway number"
+re = "(sway|drift|deflect|displacement|раскачив|прогиб|смещен)[^\\n]{0,160}\\d"
+
+[[oracle.claim]]
+name = "bolts and plates"
+say = "\\b(bolts?|rivets?|gusset|plates?)\\b"
+have = "steel_conn_part"
+min = 20.0
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1
+"IfcColumn" = 1
+"IfcBeam" = 1
+"IfcMember" = 1
+"IfcSlab" = 1
+
+[[oracle.geom]]
+kind = "free_ends"
+max = 0.0
+
+[oracle.checks]
+new_max = 0
+
+[[oracle.geom]]
+kind = "ifc_wellformed"
+
+[[oracle.receipt]]
+field = "created"
+min = 1.0
+
+[[oracle.receipt]]
+field = "blocked"
+max = 0.0
+
+[[oracle.geom]]
+kind = "height_target"
+target = 300.0
+tol = 0.02
+
+[[oracle.geom]]
+kind = "members_connected"
+max = 1.0
+
+[[oracle.geom]]
+kind = "bracing"
+bands = 6.0
+share_min = 0.5
+diagonals_min = 40.0

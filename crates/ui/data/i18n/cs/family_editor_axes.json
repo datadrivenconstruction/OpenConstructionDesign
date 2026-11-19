@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "Osa X",
+ "fe.axis.y": "Osa Y",
+ "fe.axis.z": "Osa Z",
+ "fe.col.axis": "Osa",
+ "fe.col.at": "Poloha",
+ "fe.col.mode": "Režim",
+ "fe.mode.fixed": "Pevný",
+ "fe.mode.free": "Volný",
+ "fe.types.inherited": "Výchozí z parametru",
+ "fe.csv.more": "Další akce CSV",
+ "fe.ref.selected": "Rovina: {name}"
+}

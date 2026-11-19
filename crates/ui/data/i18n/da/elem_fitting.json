@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "Fitting",
+ "elem.mep_fitting.many": "Fittings",
+ "elem.mep_fitting.kind.elbow": "Knæ",
+ "elem.mep_fitting.kind.tee": "T-stykke",
+ "elem.mep_fitting.kind.cross": "Kryds",
+ "elem.mep_fitting.kind.transition": "Overgang",
+ "elem.mep_fitting.kind.cap": "Endestykke",
+ "elem.mep_fitting.size": "Dimension",
+ "elem.mep_fitting.at": "Position",
+ "elem.mep_fitting.runs": "Strækning {n}",
+ "elem.mep_fitting.edit_run": "Redigér strækning",
+ "elem.mep_fitting.select_runs": "Vælg dens strækninger",
+ "elem.mep_fitting.derived": "En fitting følger sine strækninger: ændrer du en strækning, ændrer fittingen sig med den.",
+ "elem.mep_fitting.no_delete": "En fitting kan ikke slettes eller flyttes alene. Redigér eller slet dens strækninger.",
+ "elem.mep_fitting.hint": "Klik på en fitting i planen for at se dens strækninger.",
+ "elem.mep_fitting.picked": "Valgte fittings: {n}"
+}

@@ -1,0 +1,11 @@
+{
+ "fe.csv.apply": "Áp dụng nhập",
+ "fe.csv.cancel": "Bỏ xem trước",
+ "fe.csv.nothing": "Không có gì để thay đổi: danh mục khớp với các loại hiện tại",
+ "fe.csv.preview": "Xem trước nhập: {added} loại mới, {changed} loại đã đổi, {same} loại không đổi; {values} giá trị thay đổi",
+ "fe.csv.preview_hint": "Ô trống và cột thiếu giữ giá trị hiện tại. Không có gì thay đổi cho đến khi bạn áp dụng.",
+ "fe.csv.skipped": "Chưa áp dụng, giữ giá trị: {msg}",
+ "fe.csv.type_added": "Loại mới {name}",
+ "fe.csv.type_changed": "Loại {name}",
+ "fe.csv.value": "  {param}: {old} → {new}"
+}

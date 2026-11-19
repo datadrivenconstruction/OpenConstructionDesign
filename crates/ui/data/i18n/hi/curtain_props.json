@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "पैनल",
+ "curtain_props.cw.panel_cell": "सेल {i}×{j} · कर्टेन वॉल #{id}",
+ "curtain_props.cw.kind": "प्रकार",
+ "curtain_props.cw.kind.glazed": "काँच",
+ "curtain_props.cw.kind.solid": "ठोस",
+ "curtain_props.cw.kind.door": "दरवाज़ा",
+ "curtain_props.cw.kind.window": "खिड़की",
+ "curtain_props.cw.kind.empty": "खाली",
+ "curtain_props.cw.name": "नाम",
+ "curtain_props.cw.swing_side": "दूसरी ओर खुलता है",
+ "curtain_props.cw.swing_hinge": "कब्ज़ा सेल के सिरे पर",
+ "curtain_props.cw.size": "आकार",
+ "curtain_props.cw.cell_area": "सेल क्षेत्रफल",
+ "curtain_props.cw.panel_area": "पैनल क्षेत्रफल",
+ "curtain_props.cw.prev": "पिछला पैनल",
+ "curtain_props.cw.next": "अगला पैनल",
+ "curtain_props.cw.wall": "दीवार चुनें",
+ "curtain_props.cw.panel_hint": "Esc — चयन · Ctrl+Z — वापस",
+ "curtain_props.cw.status.panel": "पैनल {i}×{j} → {kind}",
+ "e3d.err.cw_height": "कर्टेन वॉल की ऊँचाई 100 mm से अधिक होनी चाहिए"
+}

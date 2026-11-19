@@ -1,0 +1,3 @@
+# Component from the library: each click places one, one record each
+tool(arch.component) click(3,3) → rows(comp)=1 journal=+1
+click(5,3) → rows(comp)=2 journal=+2

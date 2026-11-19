@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "점",
+ "trial.field.distance": "거리",
+ "trial.field.target": "요소",
+ "trial.refused": "{field}: {reason}. 적용하려면 바꾸십시오",
+ "trial.preview_off": "미리 보기 꺼짐: 모델이 너무 큼"
+}

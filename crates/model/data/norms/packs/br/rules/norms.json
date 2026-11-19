@@ -1,0 +1,336 @@
+{
+ "rules": [
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.18
+   },
+   "unit": "m",
+   "value": 0.18,
+   "text": {
+    "en": "Emergency stair riser at most 0.18 m (0.16 to 0.18 m, tolerance 0.005 m)",
+    "pt": "Altura do espelho da escada de emergência no máximo 0.18 m (0.16 a 0.18 m, tolerância 0.005 m)"
+   },
+   "source": {
+    "doc": "go-nt11",
+    "clause": "5.7.3.1 a) riser height 16 to 18 cm",
+    "url": "https://www.bombeiros.go.gov.br/wp-content/uploads/2021/04/NT-11_2021-Saidas-de-Emergencia.pdf",
+    "edition": "2021",
+    "accessed": "2026-11-13",
+    "note": "State of Goias fire-brigade technical norm: applies in Goias only, other states have their own norm with different numbers"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "br.egr.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "2*riser+tread",
+    "min": 0.63,
+    "max": 0.64
+   },
+   "unit": "m",
+   "value": [
+    0.63,
+    0.64
+   ],
+   "text": {
+    "en": "Emergency stair step rule 2 x riser + tread between 0.63 and 0.64 m",
+    "pt": "Regra do degrau da escada de emergência: 2 x espelho + piso entre 0.63 e 0.64 m"
+   },
+   "source": {
+    "doc": "go-nt11",
+    "clause": "5.7.3.1 b) Blondel formula 63 cm <= 2h+b <= 64 cm",
+    "url": "https://www.bombeiros.go.gov.br/wp-content/uploads/2021/04/NT-11_2021-Saidas-de-Emergencia.pdf",
+    "edition": "2021",
+    "accessed": "2026-11-13",
+    "note": "State of Goias fire-brigade technical norm: applies in Goias only, other states have their own norm with different numbers"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "br.egr.step"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 1.2
+   },
+   "unit": "m",
+   "value": 1.2,
+   "text": {
+    "en": "Emergency stair flight width at least 1.2 m (office)",
+    "pt": "Largura livre do lance da escada de emergência de no mínimo 1.2 m (escritório)"
+   },
+   "source": {
+    "doc": "go-nt11",
+    "clause": "5.4.2.1 a) 1.2 m for occupancies in general",
+    "url": "https://www.bombeiros.go.gov.br/wp-content/uploads/2021/04/NT-11_2021-Saidas-de-Emergencia.pdf",
+    "edition": "2021",
+    "accessed": "2026-11-13",
+    "note": "State of Goias fire-brigade technical norm: applies in Goias only, other states have their own norm with different numbers; exceptions the norm lists for some occupancies are not modelled"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "br.off.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "width",
+    "min": 1.2
+   },
+   "unit": "m",
+   "value": 1.2,
+   "text": {
+    "en": "Corridor clear width at least 1.2 m (office)",
+    "pt": "Largura livre do corredor de no mínimo 1.2 m (escritório)"
+   },
+   "source": {
+    "doc": "go-nt11",
+    "clause": "5.4.2.1 a) 1.2 m for occupancies in general (5.4.2.2 allows 1.0 m below 20 people)",
+    "url": "https://www.bombeiros.go.gov.br/wp-content/uploads/2021/04/NT-11_2021-Saidas-de-Emergencia.pdf",
+    "edition": "2021",
+    "accessed": "2026-11-13",
+    "note": "State of Goias fire-brigade technical norm: applies in Goias only, other states have their own norm with different numbers"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "br.off.corr"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 40.0,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 40.0,
+   "text": {
+    "en": "Travel distance from a room to an exit or stair at most 40 m (residential, upper floors, no sprinklers or detection)",
+    "pt": "Distância de percurso de um cômodo até uma saída ou escada de no máximo 40 m (residencial, pavimentos superiores, sem chuveiros automáticos nem detecção)"
+   },
+   "source": {
+    "doc": "go-nt11",
+    "clause": "Annex B Table B1 groups A and B, other floors, no sprinklers, no detection",
+    "url": "https://www.bombeiros.go.gov.br/wp-content/uploads/2021/04/NT-11_2021-Saidas-de-Emergencia.pdf",
+    "edition": "2021",
+    "accessed": "2026-11-13",
+    "note": "State of Goias fire-brigade technical norm: applies in Goias only, other states have their own norm with different numbers"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "br.egr.res"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 35.0,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 35.0,
+   "text": {
+    "en": "Travel distance from a room to an exit or stair at most 35 m (office, upper floors, no sprinklers or detection)",
+    "pt": "Distância de percurso de um cômodo até uma saída ou escada de no máximo 35 m (escritório, pavimentos superiores, sem chuveiros automáticos nem detecção)"
+   },
+   "source": {
+    "doc": "go-nt11",
+    "clause": "Annex B Table B1 groups C, D, E, F, G-3 to G-6, H, L, M, other floors, no sprinklers, no detection",
+    "url": "https://www.bombeiros.go.gov.br/wp-content/uploads/2021/04/NT-11_2021-Saidas-de-Emergencia.pdf",
+    "edition": "2021",
+    "accessed": "2026-11-13",
+    "note": "State of Goias fire-brigade technical norm: applies in Goias only, other states have their own norm with different numbers; a plan layout is required or distances drop by 30 % (note b)"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "br.egr.off"
+  },
+  {
+   "id": "generic.stair.step",
+   "disabled": true
+  },
+  {
+   "id": "generic.egress.distance",
+   "disabled": true
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.27
+   },
+   "unit": "m",
+   "value": 0.27,
+   "text": {
+    "en": "Escape stair tread at least 0.27 m (from the step rule)",
+    "ru": "Проступь эвакуационной лестницы не менее 0.27 м (из правила шага)"
+   },
+   "source": {
+    "doc": "go-nt11",
+    "clause": "5.7.3.1 a) and b), riser 16 to 18 cm and 63 cm <= 2h + b <= 64 cm",
+    "url": "https://www.bombeiros.go.gov.br/wp-content/uploads/2021/04/NT-11_2021-Saidas-de-Emergencia.pdf",
+    "accessed": "2026-11-15",
+    "paraphrase": "Treads follow the step rule with risers of 16 to 18 cm.",
+    "note": "derived by the editor from the read clause: riser at most 18 cm and 63 cm <= 2 risers + tread"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "br.egr.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 1.2
+   },
+   "unit": "m",
+   "value": 1.2,
+   "text": {
+    "en": "Escape stair width at least 1.2 m",
+    "ru": "Ширина эвакуационной лестницы не менее 1.2 м"
+   },
+   "source": {
+    "doc": "go-nt11",
+    "clause": "5.4.2.1 a), emergency exits including stairs at least 1.2 m in general occupancies",
+    "url": "https://www.bombeiros.go.gov.br/wp-content/uploads/2021/04/NT-11_2021-Saidas-de-Emergencia.pdf",
+    "accessed": "2026-11-15",
+    "paraphrase": "Escape stairs and exits are at least 1.2 m wide in general occupancies.",
+    "note": "read 2026-11-15: bombeiros.go.gov.br NT-11/2021 PDF (state fire norm, used as the pack's reference state)"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "br.res.sw"
+  },
+  {
+   "id": "br.stair.sw_house",
+   "disabled": true,
+   "na": true,
+   "note": "na: the state fire norm covers buildings other than single-family houses; private house stairs follow the city code (to verify per city)",
+   "text": {
+    "en": "No national stair width for single-family houses.",
+    "ru": "Нет общенациональной ширины лестницы для индивидуального дома."
+   }
+  },
+  {
+   "id": "br.res.h",
+   "disabled": true,
+   "na": true,
+   "note": "na: room heights, office areas and window shares are set by each city's building code; no national or reference-state value in this pack",
+   "text": {
+    "en": "Room height is set by the city building code.",
+    "ru": "Высоту помещения задаёт городской строительный кодекс."
+   }
+  },
+  {
+   "id": "br.off.h",
+   "disabled": true,
+   "na": true,
+   "note": "na: room heights, office areas and window shares are set by each city's building code; no national or reference-state value in this pack",
+   "text": {
+    "en": "Office room height is set by the city building code.",
+    "ru": "Высоту офисного помещения задаёт городской кодекс."
+   }
+  },
+  {
+   "id": "br.off.a",
+   "disabled": true,
+   "na": true,
+   "note": "na: room heights, office areas and window shares are set by each city's building code; no national or reference-state value in this pack",
+   "text": {
+    "en": "Office area per workplace is set by the city building code.",
+    "ru": "Площадь на рабочее место задаёт городской кодекс."
+   }
+  },
+  {
+   "id": "br.day",
+   "disabled": true,
+   "na": true,
+   "note": "na: room heights, office areas and window shares are set by each city's building code; no national or reference-state value in this pack; the generic advice rule stays",
+   "text": {
+    "en": "Window share is set by the city building code.",
+    "ru": "Долю остекления задаёт городской кодекс."
+   }
+  }
+ ]
+}

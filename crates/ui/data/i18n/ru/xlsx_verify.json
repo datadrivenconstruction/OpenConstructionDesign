@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "Применение отменено: модель не совпала с предпросмотром. {what}",
+ "xlsx_verify.not_written": "{row}: изменение не записано.",
+ "xlsx_verify.lost": "{row}: элемент пропал из модели.",
+ "xlsx_verify.not_deleted": "{row}: удаление не выполнено.",
+ "xlsx_verify.extra_deleted": "{row}: удалён элемент, который в предпросмотре остаётся.",
+ "xlsx_verify.created": "{table}: создано {got} вместо {want}.",
+ "xlsx_verify.value": "{row}, {field}: ожидалось {want} (было {old}), получено {got}.",
+ "xlsx_verify.check_failed": "Результат не удалось проверить: {e}",
+ "xlsx_verify.plan_failed": "Применение не начато: проверка не смогла прочитать модель ({e}).",
+ "xlsx_verify.take_back_failed": "Шаг не удалось отменить ({e}): нажмите «Отменить».",
+ "xlsx_verify.t.wall": "Стена",
+ "xlsx_verify.t.opening": "Проём",
+ "xlsx_verify.t.room": "Помещение",
+ "xlsx_verify.t.slab": "Перекрытие",
+ "xlsx_verify.t.level": "Уровень",
+ "xlsx_verify.t.wall_type": "Тип стены",
+ "xlsx_verify.t.slab_type": "Тип перекрытия",
+ "xlsx_verify.t.col": "Колонна",
+ "xlsx_verify.t.beam": "Балка",
+ "xlsx_verify.t.roof": "Крыша",
+ "xlsx_verify.t.curtain_wall": "Витраж"
+}

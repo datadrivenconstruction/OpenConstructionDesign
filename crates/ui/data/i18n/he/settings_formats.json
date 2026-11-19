@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "מה קורה אחרי ייצוא חוברת עבודה",
+ "settings.area_decimals_desc": "ספרות אחרי מפריד העשרוניים בשטחים",
+ "settings.volume_decimals_desc": "ספרות אחרי מפריד העשרוניים בנפחים",
+ "settings.frac_desc": "השבר הקטן ביותר של אינץ' באורכים אימפריאליים",
+ "settings.small_area_desc": "הצג שטחים קטנים מרגל רבוע באינצ'ים רבועים",
+ "settings.sample_desc": "איך נראים מספרים עם הבחירות הנוכחיות",
+ "autosave.title_desc": "שמור עותק שחזור של הפרויקט הפתוח",
+ "autosave.interval_desc": "הזמן בין עותקי השחזור",
+ "autosave.keep_desc": "עותקי שחזור ישנים יותר יימחקו",
+ "autosave.folder_desc": "ריק פירושו התיקייה ברירת המחדל",
+ "autosave.remind_desc": "תזכורת לשמור פרויקט שאין לו עדיין קובץ",
+ "settings.backend_desc": "מתאם הגרפיקה הפעיל",
+ "settings.news_desc": "מה השתנה בגרסה הזו",
+ "settings.assoc_default_desc": "הפוך את היישום הזה לברירת המחדל לקבצי מודל",
+ "settings.data_dir_desc": "מטמון, עותקי שחזור ויומנים נשמרים כאן."
+}

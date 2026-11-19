@@ -1,0 +1,4 @@
+{
+ "tool.err.drawing_open": "Die Zeichnungslinien um diesen Punkt schließen sich nicht zu einer Schleife",
+ "tool.err.drawing_crossing": "Die Zeichnungsschleife um diesen Punkt kreuzt sich selbst"
+}

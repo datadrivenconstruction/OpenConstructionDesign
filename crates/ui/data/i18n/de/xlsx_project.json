@@ -1,0 +1,7 @@
+{
+ "xlsx_project.title": "Diese Arbeitsmappe wurde aus einem anderen Projekt exportiert",
+ "xlsx_project.body": "Die Arbeitsmappe „{file}“ gehört zu einem anderen Projekt. Element-Ids unterscheiden sich zwischen Projekten; ihre Zeilen würden hier unzusammenhängende Elemente ändern. Es wurde nichts in dieses Projekt eingelesen.",
+ "xlsx_project.export_new": "Dieses Projekt in eine neue Arbeitsmappe exportieren",
+ "xlsx_project.close": "Schließen",
+ "xlsx_project.no_project": "Diese Arbeitsmappe gibt nicht an, zu welchem Projekt sie gehört: Prüfen Sie, ob sie aus diesem Projekt exportiert wurde."
+}

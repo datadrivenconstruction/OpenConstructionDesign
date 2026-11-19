@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key} er reserveret ({why}) og kan ikke tildeles igen",
+ "quick.keys.res_copy": "kopiér",
+ "quick.keys.res_paste": "indsæt",
+ "quick.keys.res_cut": "klip",
+ "quick.keys.res_undo": "fortryd / gentag",
+ "quick.keys.res_save": "gem",
+ "quick.keys.res_palette": "kommandopalet",
+ "quick.keys.reserved_conflict": "{key} bruges allerede af „{cmd}”. Esc beholder den der.",
+ "quick.keys.reserved_swap": "Byt",
+ "quick.keys.reserved_take": "Tag den",
+ "quick.keys.reserved_keep": "Behold",
+ "quick.keys.reserved_os": "Optaget af systemet:"
+}

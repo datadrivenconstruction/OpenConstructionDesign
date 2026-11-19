@@ -1,0 +1,4 @@
+{
+ "elem.spreadsheet.applied": "นำเข้าจากสเปรดชีต: {what}",
+ "elem.spreadsheet.failed": "นำเข้าสเปรดชีตไม่สำเร็จ: {e}"
+}

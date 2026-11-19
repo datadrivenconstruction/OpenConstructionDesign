@@ -1,0 +1,7 @@
+{
+ "rebar_pick.pick.empty": "Reinforcement: pumili ng column, beam, pader, slab o footing",
+ "rebar_pick.pick.unsupported": "Hindi maaaring lagyan ng reinforcement ang pagpiling ito. Pumili ng column, beam, pader, slab o footing",
+ "rebar_pick.pick.keys": "I-click para pumili, Shift para magdagdag · Enter para buksan ang form · Esc para kanselahin",
+ "rebar_pick.pick.open": "Buksan ang form",
+ "rebar_pick.pick.cancel": "Kanselahin"
+}

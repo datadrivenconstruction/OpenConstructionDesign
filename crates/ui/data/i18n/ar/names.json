@@ -1,0 +1,19 @@
+{
+ "names.level": "المستوى {n}",
+ "names.slab": "بلاطة 200",
+ "names.roof_slab": "سقف 200",
+ "names.sheet.plan_section": "مسقط وقطاع الطابق 1",
+ "names.sheet.plan_view": "مسقط الطابق 1",
+ "names.sheet.site_plan": "مخطط الموقع",
+ "names.sheet_set.issue": "الإصدار 1",
+ "names.title.owner": "شركة المشروع",
+ "names.title.creator": "أ. إيفانوف",
+ "names.title.approver": "ب. بتروف",
+ "names.title.document_type": "مخطط",
+ "names.title.status": "قيد التنفيذ",
+ "names.revision.date": "4 نوفمبر 2026",
+ "names.revision.description": "صادر للمراجعة",
+ "names.revision.author": "الذكاء الاصطناعي",
+ "names.demo.no_levels": "بلا مستويات",
+ "names.demo.no_sheet": "ورقة"
+}

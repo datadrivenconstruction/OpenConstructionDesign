@@ -1,0 +1,5 @@
+{
+ "legend.legend.empty_hint": "위에 이름을 입력하고 만들기를 누르세요.",
+ "legend.legend.pick_hint": "위 목록에서 범례를 선택하세요.",
+ "legend.legend.taken": "\"{name}\" 범례가 이미 있습니다. 다른 이름을 입력하세요."
+}

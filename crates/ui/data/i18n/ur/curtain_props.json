@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "پینل",
+ "curtain_props.cw.panel_cell": "خانہ {i}×{j} · کرٹین وال #{id}",
+ "curtain_props.cw.kind": "قسم",
+ "curtain_props.cw.kind.glazed": "شیشہ",
+ "curtain_props.cw.kind.solid": "ٹھوس",
+ "curtain_props.cw.kind.door": "دروازہ",
+ "curtain_props.cw.kind.window": "کھڑکی",
+ "curtain_props.cw.kind.empty": "خالی",
+ "curtain_props.cw.name": "نام",
+ "curtain_props.cw.swing_side": "دوسری طرف کھلتا ہے",
+ "curtain_props.cw.swing_hinge": "خانے کے سرے پر ہنج",
+ "curtain_props.cw.size": "سائز",
+ "curtain_props.cw.cell_area": "خانے کا رقبہ",
+ "curtain_props.cw.panel_area": "پینل کا رقبہ",
+ "curtain_props.cw.prev": "پچھلا پینل",
+ "curtain_props.cw.next": "اگلا پینل",
+ "curtain_props.cw.wall": "دیوار منتخب کریں",
+ "curtain_props.cw.panel_hint": "Esc — انتخاب · Ctrl+Z — واپس",
+ "curtain_props.cw.status.panel": "پینل {i}×{j} → {kind}",
+ "e3d.err.cw_height": "کرٹین وال کی اونچائی 100 mm سے زیادہ ہونی چاہیے"
+}

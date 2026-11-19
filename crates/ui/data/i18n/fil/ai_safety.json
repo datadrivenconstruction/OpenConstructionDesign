@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "Key sa address",
+ "ai_safety.auth.query_name": "Parameter ng address",
+ "ai_safety.need_query_name": "Pangalanan ang parameter ng address na may dalang key",
+ "ai_safety.apply_unlogged": "Na-apply, pero hindi naisulat ang log ng pagbabago",
+ "ai_safety.audit_unlogged": "Hindi maisulat ang log ng AI katulong",
+ "ai_safety.chat_not_saved": "Hindi ma-save ang chat sa proyekto. Sinusubukan muli.",
+ "ai_safety.clip_clears": "Mabubura ang clipboard sa loob ng 30 s",
+ "ai_safety.copied_clears": "Nakopya. Mabubura ang clipboard sa loob ng 30 s",
+ "ai_safety.key_session_only": "Nakatago ang key hanggang magsara ang app",
+ "ai.settings.no_data_dir": "walang folder na ibinibigay ng sistemang ito para sa mga setting ng app"
+}

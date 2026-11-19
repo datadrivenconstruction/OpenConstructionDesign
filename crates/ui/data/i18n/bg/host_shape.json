@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "Отвор на мансарда",
+ "cmd.arch.roof_opening": "Отвор в покрив",
+ "cmd.arch.roof_extrusion": "Покрив с изтегляне",
+ "cmd.arch.ceiling_opening": "Отвор в таван",
+ "cmd.str.slab_opening": "Отвор в плоча",
+ "cmd.ctx.wall.detach": "Откачи горната част",
+ "cmd.ctx.floor.sketch": "Редактирай контура",
+ "cmd.ctx.floor.shape": "Редактирай формата",
+ "host_shape.shape.elev_prompt": "кота, mm…",
+ "host_shape.shape.elev_mm": "{v} mm",
+ "host_shape.sketch.no_host": "няма носещ елемент под контура на това ниво",
+ "host_shape.issue.roof": "покрив {id}: {e}",
+ "host_shape.issue.ceiling": "таван {id}: {e}",
+ "host_shape.status.select_slab": "изберете плоча",
+ "host_shape.status.select_walls": "изберете стени",
+ "host_shape.status.no_roof_or_level": "няма покрив или ниво над",
+ "host_shape.status.top_attached": "горните части на стените са прикрепени",
+ "host_shape.status.top_detached": "горните части на стените са откачени",
+ "host_shape.status.straight_wall": "изисква се права стена",
+ "host_shape.status.roof_extruded": "покривът с изтегляне е създаден",
+ "warn.kind.cut": "Изрезът или прикачването не са изградени"
+}

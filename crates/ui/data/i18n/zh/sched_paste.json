@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "已粘贴 {n} 个单元格",
+ "sched_edit.pasted_skipped": "已粘贴 {n} 个单元格，跳过 {k} 个：{why}",
+ "sched_edit.filled": "已填充 {n} 个单元格",
+ "sched_edit.filled_skipped": "已填充 {n} 个单元格，跳过 {k} 个：{why}",
+ "sched_edit.why_ro": "{n} 个只读",
+ "sched_edit.why_bad": "{n} 个无效值",
+ "sched_edit.no_cell": "请先单击明细表中的一个单元格",
+ "sched_edit.nothing": "没有可写入的内容",
+ "sched_edit.not_refreshed": "已写入，但视图未刷新：{e}",
+ "sched_edit.failed": "未更改：{e}",
+ "sched_edit.no_changes": "无更改：{u} 个单元格已包含这些值",
+ "sched_edit.same_tail": "，{u} 个已相等"
+}

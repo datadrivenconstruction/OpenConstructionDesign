@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "В очереди за текущей задачей: {n}",
+ "import_queue.queue_full": "Очередь заполнена, не добавлено файлов: {n}",
+ "import_queue.changed": "Файл {name} изменён после создания проекта. Открыт прежний проект.",
+ "import_queue.import_again": "Импортировать заново",
+ "import_queue.kept": "Готовый импорт сохранён",
+ "import_queue.open_it": "Открыть",
+ "import_queue.sum.head": "импорт: {editable} редактируемых (стен {walls}, проёмов {open}, перекрытий {slabs}, помещений {rooms}, прочих {other}), сеток {meshes}",
+ "import_queue.sum.unchanged": ", без изменений {n}",
+ "import_queue.sum.updated": ", обновлено {n}",
+ "import_queue.sum.missing": ", нет в источнике {n} (оставлены)",
+ "import_queue.sum.skipped": ", пропущено {n}",
+ "import_queue.sum.warnings": ", предупреждений {n}",
+ "import_queue.import_failed": "импорт не удался: {e}"
+}

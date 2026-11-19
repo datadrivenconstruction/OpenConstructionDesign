@@ -1,0 +1,7 @@
+{
+ "xlsx_alias_ids.ids_written": "{n} hàng mới đã có id trong tờ đã đổi tên; không có gì khác trong sổ làm việc thay đổi.",
+ "xlsx_alias_ids.ids_open": "Sổ làm việc đang mở trong chương trình khác: id của {n} hàng mới chưa được ghi. Hãy đóng ở đó rồi Đồng bộ; các hàng này sẽ không được tạo lại.",
+ "xlsx_alias_ids.ids_failed": "Không thể ghi id của {n} hàng mới; sổ làm việc được giữ nguyên. Các hàng này sẽ không được tạo lại ở lần Đồng bộ tiếp theo.",
+ "xlsx_alias_ids.unpaired": "{n} hàng mới chưa có id; chúng được ghi nhớ và sẽ không được tạo lại.",
+ "xlsx_alias_ids.refused": "Chưa áp dụng gì: hàng mới trong {sheets} không thể có id khi đang đọc tờ đã đổi tên. Hãy đổi tên tờ về tên chuẩn (hoặc xóa các hàng này) rồi Đồng bộ lại."
+}

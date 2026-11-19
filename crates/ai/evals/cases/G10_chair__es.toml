@@ -1,0 +1,23 @@
+id = "G10_chair__es"
+tier = "hard"
+group = "Any geometry"
+title = "Chair"
+lang = "es"
+base = "empty"
+
+[[turn]]
+say = "Modela una silla de comedor: asiento de 45 x 45 cm a 45 cm de altura, respaldo hasta 90 cm, cuatro patas cónicas, dos listones en el respaldo, borde del asiento redondeado."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "col+beam+brace+truss+gridshell_bar+solid+mass+mesh+freeform+shell_elem+gridshell+wall+slab+roof+stair+toposolid+wall_spline+comp:chair|seat|leg"
+min = 5.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

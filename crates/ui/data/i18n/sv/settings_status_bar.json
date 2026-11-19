@@ -1,0 +1,10 @@
+{
+ "cmd.view.axes_full": "Fullständiga axlar",
+ "cmd.view.axes_full.desc": "Visar X- och Y-axlarna som hela linjer över planen. Håll F9 för att visa dem endast medan den är nedtryckt.",
+ "settings.axes_full": "Axlar",
+ "settings.axes_full_desc": "Planens axlar som hela linjer över arket. Håll F9 för en snabb titt.",
+ "settings.axes_full_on": "Visa fullständiga axlar",
+ "plan.hud.axes_tip": "Håll {key} för att visa fullständiga axlar",
+ "status.axes_full.on": "Fullständiga axlar på",
+ "status.axes_full.off": "Fullständiga axlar av"
+}

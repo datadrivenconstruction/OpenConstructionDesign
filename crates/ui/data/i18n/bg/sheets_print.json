@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "Предишен лист (Page Up)",
+ "sheets.print.next": "Следващ лист (Page Down)",
+ "sheets.print.fit": "Побиране на страницата (двойно щракване)",
+ "sheets.print.no_sheets": "Няма листове за преглед",
+ "sheets.print.building": "Изграждане на страницата…",
+ "sheets.print.stop_build": "Спиране",
+ "sheets.print.build_stopped": "Изграждането на страницата е спряно",
+ "sheets.print.retry": "Изграждане отново",
+ "sheets.print.build_failed": "Прегледът не можа да бъде изграден"
+}

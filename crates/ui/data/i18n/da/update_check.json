@@ -1,0 +1,21 @@
+{
+ "cmd.help.check_update": "Søg efter opdateringer",
+ "update_check.title": "Opdateringssøgning",
+ "update_check.desc": "Slået fra som standard. Sender kun versionen, operativsystemet og arkitekturen samt installationstypen til vores server. Downloader eller installerer aldrig noget.",
+ "update_check.freq.startup": "Ved opstart",
+ "update_check.freq.daily": "Dagligt",
+ "update_check.freq.weekly": "Ugentligt",
+ "update_check.freq.never": "Aldrig",
+ "update_check.check_now": "Søg nu",
+ "update_check.dialog.title": "Opdateringssøgning",
+ "update_check.unknown.title": "Opdateringer kunne ikke søges",
+ "update_check.unknown.body": "{e}. Det betyder ikke, at denne version er aktuel. Prøv igen senere.",
+ "update_check.current": "Du har den nyeste version ({v}).",
+ "update_check.newer": "Version {v} er tilgængelig",
+ "update_check.date": "Udgivet {d}",
+ "update_check.unfit": "Denne version ({v}) er ældre end den anbefalede minimumsversion {f}. Opdatering anbefales.",
+ "update_check.close": "Luk",
+ "update_check.open_failed": "Udgivelsessiden kunne ikke åbnes.",
+ "update_check.toast.newer": "Version {v} er tilgængelig. Hjælp > Søg efter opdateringer.",
+ "update_check.toast.unfit": "Denne version ({v}) er ældre end den anbefalede minimumsversion {f}."
+}

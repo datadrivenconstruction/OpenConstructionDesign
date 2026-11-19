@@ -1,0 +1,10 @@
+{
+ "view_gfx.vv.visible_tip": "Энэ харагдацад харагдана",
+ "view_gfx.vv.enabled_tip": "Энэ шүүлтүүрийг энэ харагдацад хэрэглэх",
+ "view_gfx.vv.reset_tip": "Төслийн анхдагч руу буцаах",
+ "view_gfx.vv.col.actions": "Үйлдлүүд",
+ "view_gfx.vv.nothing_to_apply": "Хэрэглэх өөрчлөлт алга",
+ "view_gfx.flt.save_blocked": "Шүүлтүүрийн нэр өгч, дүрмийн параметр бүрийг бөглөнө үү",
+ "view_gfx.flt.confirm_delete": "Бүх харагдацаас устгах уу?",
+ "view_gfx.flt.param_pick": "Сонгох…"
+}

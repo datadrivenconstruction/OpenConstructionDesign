@@ -1,0 +1,20 @@
+[
+ {
+  "id": "mod.scale",
+  "repeatable": true,
+  "icon": "scale",
+  "mnemonic": "SK",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R",
+   "M",
+   "C"
+  ],
+  "stage": "M1",
+  "group": "modify",
+  "context": [
+   "*"
+  ]
+ }
+]

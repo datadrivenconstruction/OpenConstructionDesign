@@ -1,0 +1,13 @@
+{
+ "xlw.copy_list": "Copier la liste",
+ "xlw.save_list": "Enregistrer la liste…",
+ "xlw.copy_list_tip": "Copier les lignes affichées (feuille, cellule, id, colonne, valeurs, motif) en texte pour un tableur",
+ "xlw.save_list_tip": "Enregistrer les lignes affichées dans un fichier .csv à côté du classeur ; le classeur lui-même n'est jamais modifié",
+ "xlw.list_book_value": "Valeur du classeur",
+ "xlw.list_model_value": "Valeur du modèle",
+ "xlw.list_reason": "Motif",
+ "xlw.list_copied": "Liste copiée : {n} lignes",
+ "xlw.list_saved": "Liste enregistrée : {n} lignes, {file}",
+ "xlw.list_save_failed": "Liste non enregistrée",
+ "xlw.list_nothing": "Rien à copier : aucune ligne affichée"
+}

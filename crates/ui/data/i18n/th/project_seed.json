@@ -1,0 +1,6 @@
+{
+ "project_seed.seed_level": "ระดับ 1",
+ "project_seed.seed_wall_partition": "ผนังกั้น 100",
+ "project_seed.seed_wall_masonry": "ผนังก่อ 200",
+ "project_seed.seed_wall_exterior": "ผนังภายนอก 380"
+}

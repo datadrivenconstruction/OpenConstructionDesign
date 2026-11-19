@@ -1,0 +1,5 @@
+{
+ "mirror_array.err.count": "개수는 2~200 사이의 정수입니다: 4 3000, 또는 단계가 세 자리일 때 4;300",
+ "mirror_array.err.length": "단계 또는 전체는 양의 길이여야 합니다. 예: 3 000 또는 1.2 m",
+ "mirror_array.err.angle": "스윕은 0이 아니고 360 이하인 도 단위 각도여야 합니다"
+}

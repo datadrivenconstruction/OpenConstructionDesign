@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "ناپا گیا {value}، حد {limit}",
+ "ai_checks.check.cap": "{total} میں سے {shown} نتائج دکھائے جا رہے ہیں۔ خرابیاں پہلے آتی ہیں: انہیں درست کریں اور دوبارہ چلائیں۔",
+ "ai_checks.check.run_again": "دوبارہ چلائیں",
+ "ai_checks.check.goto": "منتخب کریں اور زوم کریں",
+ "ai_checks.check.never_title": "ابھی چیک نہیں ہوا",
+ "ai_checks.check.never_hint": "چیکس چلائیں تو نتائج یہاں ظاہر ہوں گے۔",
+ "ai_checks.check.sec.error": "خرابیاں",
+ "ai_checks.check.sec.warning": "انتباہات",
+ "ai_checks.check.sec.info": "نوٹس"
+}

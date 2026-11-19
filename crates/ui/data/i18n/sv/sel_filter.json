@@ -1,0 +1,6 @@
+{
+ "sel_filter.flt.all_cats": "Alla kategorier",
+ "sel_filter.flt.in_sel": "I markeringen",
+ "sel_filter.flt.none": "Markera minst en kategori, annars skulle markeringen bli tom",
+ "sel_filter.tg.none": "Markera minst en kategori att tagga"
+}

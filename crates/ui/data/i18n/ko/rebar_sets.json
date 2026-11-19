@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "1세트 추가",
+ "rebar_sets.add_n": "{n}세트 추가",
+ "rebar_sets.pick.search": "바 유형 검색",
+ "rebar_sets.pick.empty": "일치하는 바 유형이 없습니다",
+ "rebar_sets.unit.deg": "°"
+}

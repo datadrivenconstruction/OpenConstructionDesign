@@ -1,0 +1,15 @@
+{
+ "text_style.lbl.text_style": "Стиль текста",
+ "text_style.lbl.align": "Выравнивание",
+ "text_style.lbl.head": "Стрелка",
+ "text_style.lbl.line_style": "Стиль линии",
+ "text_style.lbl.fill": "Заливка",
+ "text_style.lbl.detail": "Узел",
+ "text_style.lbl.width": "Ширина",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°",
+ "text_style.bad_number": "Введите число от {min} до {max}",
+ "text_style.tip.next_ring": "Замкнуть этот контур и начать следующий в той же области",
+ "text_style.tip.edit_text": "Править текст на месте",
+ "text_style.tip.add_leader": "Добавить выноску к этому тексту"
+}

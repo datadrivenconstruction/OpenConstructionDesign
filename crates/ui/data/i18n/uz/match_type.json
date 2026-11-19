@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "Turni moslashtirish",
+ "cmd.mod.match_type.short": "Turni moslashtirish",
+ "cmd.mod.match_type.desc": "Devor, qavat, ustun yoki to'sinni tanlang, so'ng shu kategoriyadagi boshqalarni bosing — ularga shu tur beriladi. Ichidagilarning hammasiga qo'llash uchun derazani torting. Esc — manbani tashlaydi.",
+ "hint.match_type.pick": "Turni moslashtirish: devor, qavat, ustun yoki to'sinni tanlang · Esc — chiqish",
+ "hint.match_type.apply": "Turni moslashtirish: nishonlarni bosing yoki derazani torting · Esc — boshqa manba",
+ "match_type.kind.wall": "devor",
+ "match_type.kind.slab": "qavat",
+ "match_type.kind.column": "ustun",
+ "match_type.kind.beam": "to'sin",
+ "match_type.refuse.category": "Boshqa kategoriya: bu turni faqat {cat} olishi mumkin",
+ "match_type.refuse.curtain": "Osma devor: uning turi bu yerda moslashtirilmaydi",
+ "match_type.refuse.pinned": "Mahkamlangan: turni o'zgartirish uchun mahkamlashni olib tashlang",
+ "match_type.pick_bad": "Manba sifatida devor, qavat, ustun yoki to'sinni tanlang",
+ "match_type.same": "Allaqachon shu tur",
+ "match_type.done": "Tur qo'llandi: {n}",
+ "match_type.done_skipped": "Tur qo'llandi: {n}, o'tkazib yuborildi (mahkamlangan yoki osma devor): {skipped}",
+ "match_type.failed": "Tur o'zgarmadi: {err}"
+}

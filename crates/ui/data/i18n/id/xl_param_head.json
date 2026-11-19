@@ -1,0 +1,7 @@
+{
+ "xl.msg.param_ambiguous": "kolom '{}' bisa berupa salah satu parameter {}; ketik nama parameter persis, belum diterapkan",
+ "xl.msg.param_tag_stale": "kolom '{}' menyebut parameter yang tidak dimiliki proyek ini; belum diterapkan",
+ "xl.msg.dup_col_note": "kolom '{}' di {} mengulang kolom '{}' di {}; nilai yang sama diterapkan sekali, baris yang berbeda tetap memakai nilai model",
+ "xl.msg.dup_col_differs": "kolom '{}' dan '{}' berbeda pada {} dan {}; nilai model tetap — simpan satu kolom",
+ "xl.msg.dup_col_id": "kolom '{}' dan '{}' berbeda pada {} dan {}, baris tidak dapat diidentifikasi; tidak ada yang diterapkan — simpan satu kolom"
+}

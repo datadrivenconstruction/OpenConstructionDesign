@@ -1,0 +1,5 @@
+{
+ "xl.msg.level_name_x_is_already_used": "tason nimi '{}' on jo käytössä",
+ "xl.msg.unreadable_id_elements_without_a_row_not_deleted": "tunnus ei ole luettavissa: rivittömiä elementtejä ei poisteta tässä tuonnissa",
+ "xl.msg.wall_type_name_x_is_already_used": "seinätyypin nimi '{}' on jo käytössä"
+}

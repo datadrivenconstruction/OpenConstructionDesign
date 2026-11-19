@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "Mengenali {done} dari {total}",
+ "mesh_recognize.all": "Semua {n}",
+ "mesh_recognize.only_confident": "Hanya yang yakin",
+ "mesh_recognize.confident_tip": "Mencentang baris yang jenisnya sesuai kategori dan keyakinannya minimal {pct}%",
+ "mesh_recognize.row_hint": "Klik baris untuk mencentangnya. Tombol panah bergerak, Enter mencentang.",
+ "mesh_recognize.kind_for": "Jenis untuk {name}",
+ "mesh_recognize.source": "Mesh sumber",
+ "mesh_recognize.keep": "Simpan mesh",
+ "mesh_recognize.replace": "Ganti mesh",
+ "mesh_recognize.convert_keep": "Konversi {n}",
+ "mesh_recognize.convert_remove": "Konversi {n} dan hapus mesh",
+ "mesh_recognize.creates": "Akan membuat {n}: {kinds}",
+ "mesh_recognize.creates_none": "Belum ada yang dicentang",
+ "mesh_recognize.stay": "{n} mesh sumber tetap di model",
+ "mesh_recognize.removed": "{n} mesh sumber akan dihapus. Urungkan untuk mengembalikannya."
+}

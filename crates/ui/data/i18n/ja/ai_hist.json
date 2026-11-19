@@ -1,0 +1,14 @@
+{
+ "ai.hist.badge": "AI",
+ "ai.hist.untitled": "AIの変更",
+ "ai.hist.tip": "{title}\n適用者: {actor}\nAI モデル: {model}",
+ "ai.hist.why": "理由: {why}",
+ "ai.hist.reverted": "取り消し済み",
+ "ai.hist.revert_one": "このAIバッチを取り消す",
+ "ai.revert.done": "AIの変更を {n} 件取り消しました。「元に戻す」で復元できます。",
+ "ai.revert.empty": "取り消すAIの変更がありません",
+ "ai.revert.not_ai": "この操作はAIの変更ではありません",
+ "ai.revert.already": "これらのAIの変更はすでに取り消されています",
+ "ai.revert.opaque": "取り消せません: これらのAIの変更は後の作業から安全に分離できません。何も変更されていません。",
+ "ai.revert.failed": "取り消しに失敗しました: {e}"
+}

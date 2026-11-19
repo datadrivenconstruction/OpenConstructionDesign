@@ -1,0 +1,4 @@
+{
+ "sf.restored": "Settings file {file} was damaged; the last good copy was restored. The damaged file is kept as {broken}.",
+ "sf.reset": "Settings file {file} was damaged and no backup was usable; defaults are used. The damaged file is kept as {broken}."
+}

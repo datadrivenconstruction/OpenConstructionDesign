@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "Punkt",
+ "trial.field.distance": "Avstånd",
+ "trial.field.target": "Objekt",
+ "trial.refused": "{field}: {reason}. Ändra det för att tillämpa",
+ "trial.preview_off": "Förhandsgranskning av: modellen är för stor"
+}

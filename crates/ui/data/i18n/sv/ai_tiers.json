@@ -1,0 +1,4 @@
+{
+ "ai.issue.delete_large": "{0} element skulle tas bort, över gränsen {1}. Tillstånd krävs",
+ "ai.issue.refused_large": "{0} element skulle ändras, över den hårda gränsen {1}. Dela upp planen i mindre delar"
+}

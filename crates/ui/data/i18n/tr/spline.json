@@ -1,0 +1,7 @@
+{
+ "spline.opt.spline": "Spline",
+ "spline.opt.spline_tip": "Spline duvar: geçtiği noktalara tıklayın, bitirmek için Enter veya Esc",
+ "spline.wt.three_points": "spline duvar için en az üç nokta gerekir",
+ "spline.wt.no_curtain": "perde duvarın spline ekseni yoktur",
+ "spline.wt.added": "spline duvar eklendi"
+}

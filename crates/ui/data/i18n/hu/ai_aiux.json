@@ -1,0 +1,19 @@
+{
+ "ai.plan.apply_updated": "Frissített terv alkalmazása",
+ "ai.plan.keys_anywhere": "A Ctrl+Enter alkalmaz, az Esc pedig leállítja a kérést a tervből vagy a 3D-nézetből is, kivéve ha szövegmezőbe gépel.",
+ "ai.plan.rebased": "Frissítve az aktuális modellhez: {what}",
+ "ai.value.bad": "„{text}” nem érvényes érték ehhez: {name}",
+ "ai.value.both": "Az MI-asszisztens erre az értékre változtatta: {agent}, miközben Ön ezt adta meg: {mine}. Válassza ki, melyiket tartsa meg.",
+ "ai.value.choose_first": "Előbb válassza ki a saját értékét vagy az MI-asszisztensét a kártyán",
+ "ai.value.elem": "{n}. elem: {what}",
+ "ai.value.held": "Az Ön értéke, {mine}, a kérés befejezésekor kerül be",
+ "ai.value.keep_agent": "Ezt tartja meg: {agent}",
+ "ai.value.lost": "A(z) „{title}” tételben a(z) {what} érték ({mine}) nem lett felhasználva: az MI-asszisztens levette az értéket a kártyáról",
+ "ai.value.more": "Még {n} érték: bontsa ki a sort",
+ "ai.value.refused": "A terv nem fogadta el ezt az értéket, és megtartja az előzőt: {why}",
+ "ai.value.refused_next": "Adjon meg másik értéket, vagy vegye ki a tételt a jelölésből, hogy ne kerüljön az Alkalmazásba.",
+ "ai.value.tip": "Javítsa az értéket a vázlatban; a modell csak az Alkalmazás után változik. Az Enter megerősít, az Esc visszaállít.",
+ "ai.value.use_mine": "Ezt használja: {mine}",
+ "ai.value.was": "korábban: {old}",
+ "ai.value.bad_len": "A(z) «{name}» mező: {why}"
+}

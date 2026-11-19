@@ -1,0 +1,15 @@
+{
+ "xl.msg.cell_clipped": "テキストがセルの上限に合わせて切り詰められました。読み取り専用のため、編集は適用されません",
+ "xlcell.status": "書き出しました。{count} 個のセルが短縮または空欄になりました。詳細ウィンドウを確認してください。",
+ "xlcell.title": "書き出しで変更されたセル",
+ "xlcell.intro": "これらのセルはそのままでは書き込めませんでした。完全な値はモデルに残り、セルはロックされてブック内では編集できません。",
+ "xlcell.col_sheet": "シート",
+ "xlcell.col_row": "行",
+ "xlcell.col_col": "列",
+ "xlcell.col_id": "要素 ID",
+ "xlcell.col_what": "発生内容",
+ "xlcell.what_clipped": "テキストをセルの上限に合わせて切り詰めました",
+ "xlcell.what_blank": "有限の数値ではないため、セルを空欄にしました",
+ "xlcell.more": "… ほか {count} 件",
+ "xlcell.close": "閉じる"
+}

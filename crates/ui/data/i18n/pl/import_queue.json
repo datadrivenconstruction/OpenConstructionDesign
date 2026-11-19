@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "W kolejce za trwającym zadaniem: {n}",
+ "import_queue.queue_full": "Kolejka jest pełna, {n} plików nie zostało dodanych",
+ "import_queue.changed": "{name} zaktualizowano po utworzeniu tego projektu. Otwarto poprzedni projekt.",
+ "import_queue.import_again": "Importuj ponownie",
+ "import_queue.kept": "Zakończony import jest zachowany",
+ "import_queue.open_it": "Otwórz go",
+ "import_queue.sum.head": "import: {editable} edytowalnych (ściany {walls}, otwory {open}, stropy {slabs}, pomieszczenia {rooms}, inne {other}), {meshes} jako siatka",
+ "import_queue.sum.unchanged": ", bez zmian {n}",
+ "import_queue.sum.updated": ", zaktualizowano {n}",
+ "import_queue.sum.missing": ", brak w źródle {n} (zachowano)",
+ "import_queue.sum.skipped": ", pominięto {n}",
+ "import_queue.sum.warnings": ", ostrzeżenia {n}",
+ "import_queue.import_failed": "import nie powiódł się: {e}"
+}

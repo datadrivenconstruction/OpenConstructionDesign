@@ -1,0 +1,11 @@
+{
+ "cmd.arch.roof_gable.short": "Tatsulok",
+ "cmd.arch.roof_hip.short": "Balakang",
+ "cmd.arch.roof_shed.short": "Isahang dalisdis",
+ "cmd.arch.roof_mansard.short": "Mansardo",
+ "cmd.arch.roof_gambrel.short": "Dobleng dalisdis",
+ "cmd.arch.roof_barrel.short": "Bariles",
+ "cmd.arch.roof_edges.short": "Mga roof edge",
+ "cmd.arch.roof_opening.short": "Butas",
+ "cmd.mass.roof_by_face.short": "Ayon sa face"
+}

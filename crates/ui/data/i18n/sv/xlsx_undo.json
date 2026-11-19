@@ -1,0 +1,6 @@
+{
+ "cmd.xlsx.undo_apply": "Ångra senaste kalkylbladstillämpningen",
+ "xlsx_undo.later": "Inte ångrat: modellen redigerades efter den här kalkylbladstillämpningen. Använd Ctrl+Z steg för steg eller historikpanelen.",
+ "xlsx_undo.gone": "Inget att ångra: den här kalkylbladstillämpningen är redan ångrad.",
+ "xlsx_undo.busy": "Slutför eller avbryt den pågående ritningen först och ångra sedan kalkylbladstillämpningen."
+}

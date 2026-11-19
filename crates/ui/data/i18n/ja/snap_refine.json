@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "スナップ半径",
+ "snap_refine.settings.snap_px_desc": "点または線にスナップするために、カーソルがどれくらい近づく必要があるかを画面ピクセルで指定します。タッチスクリーンや高密度ディスプレイでは大きめにすると便利です。",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "水平",
+ "snap_refine.hint.vertical": "垂直",
+ "snap_refine.hint.perpendicular": "前の線と直交",
+ "snap_refine.hint.parallel": "前の線と平行",
+ "snap_refine.hint.on_axis": "壁の軸上",
+ "snap_refine.no_snap": "スナップなし (Alt)"
+}

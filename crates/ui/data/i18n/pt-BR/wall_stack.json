@@ -1,0 +1,10 @@
+{
+ "wall_stack.we.stack_caption": "Tipo composto",
+ "wall_stack.we.side_left": "Face esquerda",
+ "wall_stack.we.side_right": "Face direita",
+ "wall_stack.we.from": "De",
+ "wall_stack.we.to": "Até",
+ "wall_stack.we.bottom": "Inferior",
+ "wall_stack.we.delete_tip": "Excluir este perfil",
+ "wall_stack.we.from_after_to": "'De' deve vir antes de 'Até'"
+}

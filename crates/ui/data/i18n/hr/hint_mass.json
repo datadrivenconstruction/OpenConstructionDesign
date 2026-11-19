@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "Slobodna ploha",
+ "cmd.mass.panelize": "Podijeli na panele",
+ "cmd.mass.surface_shell": "Krov po plohi",
+ "cmd.mass.thicken": "Debljina",
+ "hint.mass.freeform.first": "Slobodna ploha: prvi kut pravokutnika u tlocrtu · upišite visinu dizanja · Esc — odustani",
+ "hint.mass.freeform.next": "Slobodna ploha: suprotni kut · upišite visinu dizanja · Esc — odustani",
+ "hint.mass.panelize.first": "Paneli: odaberite slobodnu plohu u 3D · Esc — odustani",
+ "hint.mass.panelize.value": "Paneli: upišite veličinu panela · Enter — primijeni · Esc — odustani",
+ "hint.mass.surface_shell.first": "Krov po plohi: odaberite slobodnu plohu u 3D · Esc — odustani",
+ "hint.mass.surface_shell.value": "Krov po plohi: upišite debljinu · Enter — primijeni · Esc — odustani",
+ "hint.mass.thicken.first": "Debljina: odaberite slobodnu plohu u 3D · Esc — odustani",
+ "hint.mass.thicken.value": "Debljina: upišite debljinu (0 — bez debljine) · Enter — primijeni · Esc — odustani",
+ "status.mass.pick_surface": "Odaberite slobodnu plohu",
+ "status.mass.freeform_small": "Pravokutnik je premalen: najmanje 0,5 m u svakom smjeru",
+ "name.mass.freeform": "Slobodna ploha",
+ "rgroup.mass_free": "Napredno"
+}

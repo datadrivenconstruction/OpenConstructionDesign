@@ -1,0 +1,12 @@
+{
+ "curtain_wall.cw.issue.slab": "перекрытие {id}: {e}",
+ "curtain_wall.cw.issue.body": "тело {id}: {e}",
+ "curtain_wall.cw.added": "добавлено навесных стен: {n}",
+ "curtain_wall.cw.add_failed": "навесная стена не построена: {e}",
+ "curtain_wall.cw.edited_warn": "навесная стена #{id} изменена: {w}",
+ "curtain_wall.cw.edited": "навесная стена #{id} изменена",
+ "curtain_wall.cw.not_changed": "не изменено: {e}",
+ "curtain_wall.cw.room_edited": "помещение #{id} изменено",
+ "curtain_wall.cw.slope_range": "не изменено: уклон вне диапазона",
+ "curtain_wall.cw.slope_set": "перекрытие #{id}: уклон {pct}"
+}

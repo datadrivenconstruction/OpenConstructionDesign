@@ -1,0 +1,16 @@
+[
+ {
+  "id": "edit.find_replace",
+  "dialog": true,
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+H"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M5"
+ }
+]

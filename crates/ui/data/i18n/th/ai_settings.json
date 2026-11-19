@@ -1,0 +1,9 @@
+{
+ "ai.settings.num_bad": "ไม่ใช่ตัวเลข พิมพ์ในรูปแบบเช่น 0.5",
+ "ai.settings.num_comma": "ใช้จุดเป็นตัวคั่นทศนิยม เช่น 0.5",
+ "ai.settings.num_negative": "ตัวเลขต้องไม่ติดลบ",
+ "ai.settings.unit_money": "สกุลเงิน",
+ "ai.settings.unit_tokens": "โทเคน",
+ "ai.settings.unit_price": "ต่อ 1M โทเคน",
+ "ai.settings.limits_hint": "0 หมายถึงไม่มีขีดจำกัด ค่าที่ถูกปฏิเสธจะคงขีดจำกัดเดิมไว้"
+}

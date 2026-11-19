@@ -1,0 +1,21 @@
+{
+ "ai.receipt.title": {
+  "one": "Колдонулду: # өзгөртүү",
+  "other": "Колдонулду: # өзгөртүү"
+ },
+ "ai.receipt.more": "+{n} дагы",
+ "ai.receipt.list": "Элементтер",
+ "ai.receipt.show": "Көрсөтүү",
+ "ai.receipt.show.tip": "Өзгөргөн элементтерди тандап, кадрга салуу",
+ "ai.receipt.undo": "Кайтаруу",
+ "ai.receipt.undo.tip": "Ушул колдонууну так кайтаруу",
+ "ai.receipt.undone": "Кайтарылды",
+ "ai.receipt.later": "Кийинки түзөтүүлөр жасалды",
+ "ai.receipt.toast_undone": "Колдонулган план кайтарылды",
+ "ai.receipt.draft_family": "Черновик үй-бүлөсү: {name}",
+ "ai.receipt.promote": "Иштөөчү кылуу",
+ "ai.receipt.promote.tip": "Черновик үй-бүлөсүн иштөөчүгө айландыруу (бир кайтаруу кадамы)",
+ "ai.receipt.promoted": "Үй-бүлө эми иштөөчү",
+ "ai.receipt.promote_failed": "Үй-бүлөнү иштөөчү кылуу мүмкүн болгон жок",
+ "cmd.ai.receipt_undo": "AI-нин акыркы планын кайтаруу"
+}

@@ -1,0 +1,44 @@
+[
+ {
+  "id": "view.grid_toggle",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [
+   "F7"
+  ],
+  "tab": null,
+  "surfaces": [
+   "P"
+  ],
+  "stage": "M1",
+  "group": "view"
+ },
+ {
+  "id": "view.snap_toggle",
+  "icon": "snaps",
+  "mnemonic": null,
+  "shortcuts": [
+   "F3"
+  ],
+  "tab": null,
+  "surfaces": [
+   "P"
+  ],
+  "stage": "M1",
+  "group": "view"
+ },
+ {
+  "id": "view.ortho_toggle",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [
+   "F8"
+  ],
+  "tab": null,
+  "surfaces": [
+   "P"
+  ],
+  "stage": "M1",
+  "group": "view"
+ }
+]

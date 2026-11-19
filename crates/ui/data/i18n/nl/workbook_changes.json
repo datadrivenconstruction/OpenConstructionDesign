@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "Werkboekwijzigingen niet toegepast",
+ "workbook_changes.wb.body": "Sluiten of van project wisselen laat ze vervallen.",
+ "workbook_changes.wb.line": "Werkboekimport: {n} wijzigingen niet toegepast",
+ "workbook_changes.wb.review": "Controleren",
+ "workbook_changes.wb.discard": "Verwerpen"
+}

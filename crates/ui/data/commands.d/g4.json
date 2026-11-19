@@ -1,0 +1,33 @@
+[
+ {
+  "id": "data.mesh_convert",
+  "dialog": true,
+  "icon": "mesh-convert",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "data",
+  "surfaces": [
+   "R",
+   "C",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "exchange",
+  "priority": 6
+ },
+ {
+  "id": "data.mesh_edit",
+  "icon": "mesh-edit",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "data",
+  "surfaces": [
+   "R",
+   "C",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "exchange",
+  "priority": 6
+ }
+]

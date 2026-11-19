@@ -1,0 +1,4 @@
+{
+ "xl.msg.x_cells_above_the_header_on_sheet_x": "{} solua otsikon yläpuolella arkilla '{}'",
+ "xl.msg.book_changed_during_export": "toinen ohjelma tallensi työkirjan viennin aikana, eikä sitä ylikirjoitettu; vie uudelleen"
+}

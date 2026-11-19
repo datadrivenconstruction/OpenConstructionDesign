@@ -1,0 +1,21 @@
+{
+ "cmd.help.check_update": "Шинэчлэлт шалгах",
+ "update_check.title": "Шинэчлэлтийн шалгалт",
+ "update_check.desc": "Анхдагчаар унтраалттай. Зөвхөн хувилбар, OS ба архитектур, суулгалтын төрлийг манай серверт илгээнэ. Юу ч татаж эсвэл суулгахгүй.",
+ "update_check.freq.startup": "Эхлэх үед",
+ "update_check.freq.daily": "Өдөр бүр",
+ "update_check.freq.weekly": "Долоо хоног бүр",
+ "update_check.freq.never": "Хэзээ ч үгүй",
+ "update_check.check_now": "Одоо шалгах",
+ "update_check.dialog.title": "Шинэчлэлтийн шалгалт",
+ "update_check.unknown.title": "Шинэчлэлтийг шалгаж чадсангүй",
+ "update_check.unknown.body": "{e}. Энэ нь хувилбар сүүлийнх гэсэн үг биш. Дараа дахин оролдоно уу.",
+ "update_check.current": "Танд хамгийн сүүлийн хувилбар байна ({v}).",
+ "update_check.newer": "{v} хувилбар бэлэн байна",
+ "update_check.date": "Гарсан {d}",
+ "update_check.unfit": "Энэ хувилбар ({v}) зөвлөсөн хамгийн бага хувилбар {f}-с хуучин байна. Шинэчлэхийг зөвлөж байна.",
+ "update_check.close": "Хаах",
+ "update_check.open_failed": "Хувилбарын хуудсыг нээж чадсангүй.",
+ "update_check.toast.newer": "{v} хувилбар бэлэн байна. Тусламж > Шинэчлэлт шалгах.",
+ "update_check.toast.unfit": "Энэ хувилбар ({v}) зөвлөсөн хамгийн бага хувилбар {f}-с хуучин байна."
+}

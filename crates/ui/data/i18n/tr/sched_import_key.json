@@ -1,0 +1,6 @@
+{
+ "sched_import.no_key": "Bu çalışma kitabında dışa aktarma kaydı yok (eski bir dışa aktarma): o dışa aktarmadan sonra modelde değişen hücrelerin üzerine yazılabilir. Uygulamadan önce değişen hücreleri kontrol edin.",
+ "sched_import.n_kept": "Dışa aktarmadan sonra modelde değişti, korundu: {n}",
+ "sched_import.n_conflict": "Hem çalışma kitabında hem modelde değişti, uygulanmadı: {n}",
+ "sched_import.why_conflict": "dışa aktarmadan sonra modelde değişti (şimdi {model}), uygulanmadı"
+}

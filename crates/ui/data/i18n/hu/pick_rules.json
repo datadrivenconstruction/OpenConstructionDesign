@@ -1,0 +1,11 @@
+{
+ "pick_rules.filter": "Kiválasztás: mind",
+ "pick_rules.filter.on": "Kiválasztás: {n} kikapcsolva",
+ "pick_rules.filter.title": "Kategóriák, amelyeket kattintással ki lehet jelölni",
+ "pick_rules.filter.all": "Minden kategória kiválasztható",
+ "pick_rules.filter.tip": "Kijelölési szűrő: a bepipálatlan kategóriákat a kattintás és a mutató nem veszi figyelembe",
+ "pick_rules.here": "Elemek itt",
+ "pick_rules.here.selected": "kijelölve",
+ "pick_rules.pinned": "Rögzített elemek kijelölése",
+ "pick_rules.here.row": "{cat} · {len}"
+}

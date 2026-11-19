@@ -1,0 +1,4 @@
+{
+ "topo_import.topo.ambiguous": "{n} rânduri omise: un număr se citește în două feluri (1,250 = 1.25 sau 1250?) și fișierul nu arată un separator zecimal",
+ "topo_import.topo.grouped": "{n} puncte citite cu grupuri de cifre (1 250,5 sau 1,234.5)"
+}

@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "Punt",
+ "trial.field.distance": "Afstand",
+ "trial.field.target": "Bouwdeel",
+ "trial.refused": "{field}: {reason}. Wijzig het om toe te passen",
+ "trial.preview_off": "Voorbeeld uit: model is te groot"
+}

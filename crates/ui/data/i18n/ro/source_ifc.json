@@ -1,0 +1,7 @@
+{
+ "src.field.kids": "Rânduri copil (panouri, vârfuri)",
+ "src.kids.mine": "{n} rânduri copil, modificate aici",
+ "src.kids.changed": "rânduri copil modificate aici",
+ "src.kids.theirs": "rânduri copil modificate în fișier",
+ "src.kids.take_tip": "Următorul import preia rândurile copil din fișier; nu se aplică acum."
+}

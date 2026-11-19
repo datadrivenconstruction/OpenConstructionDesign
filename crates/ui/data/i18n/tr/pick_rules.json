@@ -1,0 +1,11 @@
+{
+ "pick_rules.filter": "Seçim: tümü",
+ "pick_rules.filter.on": "Seçim: {n} kapalı",
+ "pick_rules.filter.title": "Tıklamayla seçilebilecek kategoriler",
+ "pick_rules.filter.all": "Tüm kategorileri seç",
+ "pick_rules.filter.tip": "Seçim filtresi: işaretlenmemiş kategoriler tıklama ve üzerine gelmede atlanır",
+ "pick_rules.here": "Buradaki öğeler",
+ "pick_rules.here.selected": "seçili",
+ "pick_rules.pinned": "Sabitlenmiş öğeleri seç",
+ "pick_rules.here.row": "{cat} · {len}"
+}

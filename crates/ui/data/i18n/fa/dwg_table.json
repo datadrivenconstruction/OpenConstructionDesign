@@ -1,0 +1,14 @@
+{
+ "dwg_table.copy": "کپی جدول",
+ "dwg_table.copy_tip": "صورت مقادیر به تفکیک لایه را به صورت جدول برای صفحه‌گسترده کپی کنید",
+ "dwg_table.copied": "صورت مقادیر کپی شد (جداشده با تب)",
+ "dwg_table.total": "جمع",
+ "dwg_table.col.layer": "لایه",
+ "dwg_table.col.count": "تعداد",
+ "dwg_table.col.len": "طول، {unit}",
+ "dwg_table.col.area": "مساحت، {unit}",
+ "dwg_table.unit.mm": "mm",
+ "dwg_table.unit.m2": "m²",
+ "dwg_table.unit.ft": "ft",
+ "dwg_table.unit.ft2": "ft²"
+}

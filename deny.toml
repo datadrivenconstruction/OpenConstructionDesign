@@ -1,0 +1,31 @@
+# Supply-chain gate: `cargo deny check`. Policy source: legal/LICENSE_POLICY.md.
+
+[graph]
+all-features = true
+
+[licenses]
+# Allowed column of legal/LICENSE_POLICY.md; review-only (MPL-2.0, LGPL, CC-BY-4.0) needs an
+# explicit exception after review, forbidden licences are never added here.
+allow = ["MIT", "Apache-2.0", "BSD-2-Clause", "BSD-3-Clause", "ISC", "Zlib", "Unicode-3.0", "BSL-1.0", "CC0-1.0", "MIT-0"]
+confidence-threshold = 0.9
+private = { ignore = true }
+
+[bans]
+multiple-versions = "warn"
+
+[sources]
+unknown-registry = "deny"
+unknown-git = "deny"
+
+[advisories]
+# vulnerabilities and unsound notices always fail; unmaintained fails for every crate in the graph
+unmaintained = "all"
+yanked = "deny"
+# Only unmaintained crates with no maintained release to move to. Recheck on every egui/wgpu bump.
+ignore = [
+    { id = "RUSTSEC-2024-0436", reason = "paste: macOS only, pulled by metal <- wgpu-hal; compile-time macro, no maintained wgpu release without metal yet" },
+    { id = "RUSTSEC-2026-0371", reason = "zbus_names: Linux only, accessibility bus via zbus <- accesskit_unix (egui); no fixed zbus release" },
+    { id = "RUSTSEC-2026-0370", reason = "zvariant: Linux only, same zbus/accesskit_unix chain; no fixed release" },
+    { id = "RUSTSEC-2026-0372", reason = "zvariant_derive: Linux only, same zbus/accesskit_unix chain; no fixed release" },
+    { id = "RUSTSEC-2026-0192", reason = "ttf-parser: also pulled by egui (ab_glyph/owned_ttf_parser), so dropping our direct use would not clear it; our use reads font files (bundled/system) for PDF metrics only, not project data; skrifa port deferred; no fixed release" },
+]

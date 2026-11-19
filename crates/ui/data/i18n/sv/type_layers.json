@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "Infoga lager under",
+ "type_layers.layer.delete": "Ta bort lager",
+ "type_layers.layer.delete_last": "En typ behöver minst ett lager",
+ "type_layers.value.bad": "Inte ett giltigt positivt värde",
+ "type_layers.value.required": "Obligatoriskt",
+ "type_layers.unsaved.title": "Osparade ändringar i {name}",
+ "type_layers.unsaved.body": "Tillämpa dem på typen eller kasta dem?",
+ "type_layers.unsaved.discard": "Kasta"
+}

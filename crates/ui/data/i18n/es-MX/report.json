@@ -1,0 +1,23 @@
+{
+ "cmd.app.report": "Informar de un problema…",
+ "cmd.app.report.desc": "Describe lo ocurrido y guarda un paquete en este equipo: su texto, datos de la compilación y del sistema, una captura de la ventana y el último registro de fallo. No se envía nada.",
+ "report.title": "Informar de un problema",
+ "report.what": "Qué ocurrió",
+ "report.expected": "Lo que esperaba",
+ "report.steps": "Pasos para reproducirlo",
+ "report.opt.shot": "Incluir una captura de la ventana",
+ "report.opt.model": "Incluir una copia del modelo",
+ "report.opt.model.note": "Desactivado por defecto. La copia contiene los datos del proyecto, sin el diario de IA.",
+ "report.opt.paths": "Conservar los nombres de usuario en las rutas de archivo",
+ "report.local": "El paquete se guarda solo en este equipo. No se envía nada automáticamente.",
+ "report.blocked": "Describa primero lo ocurrido.",
+ "report.save": "Guardar paquete",
+ "report.copy": "Copiar texto",
+ "report.cancel": "Cancelar",
+ "report.copied": "Texto del informe copiado.",
+ "report.saved": "Paquete guardado: {path}",
+ "report.failed": "No se pudo guardar el paquete: {err}",
+ "report.model.fail": "No se pudo crear la copia del modelo; no se guardó nada: {err}",
+ "report.crash.notice": "La sesión anterior terminó con un fallo.",
+ "report.crash.action": "Informar de un problema"
+}

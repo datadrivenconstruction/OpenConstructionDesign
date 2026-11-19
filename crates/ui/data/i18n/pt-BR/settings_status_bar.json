@@ -1,0 +1,10 @@
+{
+ "cmd.view.axes_full": "Eixos completos",
+ "cmd.view.axes_full.desc": "Mostra os eixos X e Y como linhas completas na planta. Mantenha F9 pressionada para mostrá-los apenas enquanto a tecla estiver pressionada.",
+ "settings.axes_full": "Eixos",
+ "settings.axes_full_desc": "Eixos da planta como linhas completas na prancha. Mantenha F9 pressionada para uma visualização rápida.",
+ "settings.axes_full_on": "Mostrar eixos completos",
+ "plan.hud.axes_tip": "Mantenha {key} pressionada para mostrar os eixos completos",
+ "status.axes_full.on": "Eixos completos ativados",
+ "status.axes_full.off": "Eixos completos desativados"
+}

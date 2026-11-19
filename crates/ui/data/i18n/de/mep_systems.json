@@ -1,0 +1,21 @@
+{
+ "mep.row.system": "System",
+ "mep.row.elevation": "Anfangshöhe",
+ "mep.row.slope": "Gefälle",
+ "mep.row.material": "Material",
+ "mep.row.dev_elevation": "Höhe",
+ "mep.row.no_system": "Dieses System existiert nicht mehr. Ein anderes wählen.",
+ "mep.row.no_points": "Die Leitung hat keine Punkte und daher keine Höhe.",
+ "mep.row.system_domain": "System {system} nimmt diesen Leitungstyp nicht auf ({kind}). Ein System desselben Netztyps wählen.",
+ "mep.row.material_pipes": "Ein Material gilt nur für Rohre; diese Leitung ist ein {kind}.",
+ "mep.row.no_catalog": "Das Material hat für diese Leitung keine Katalogmaße.",
+ "mep.mat.none": "Nicht festgelegt",
+ "mep.mat.steel": "Stahl",
+ "mep.mat.copper": "Kupfer",
+ "mep.mat.pvc": "PVC",
+ "mep.mat.pp": "Polypropylen",
+ "mep.err.follow_blocked": "Eine angeschlossene Leitung kann dieser Änderung nicht folgen: an der neuen Stelle fehlt Platz für ihren Schenkel. Das Gerät weniger verschieben oder die Leitung zuerst trennen.",
+ "mep.err.follow_slope": "Eine angeschlossene Leitung hat ein Gefälle, das an der neuen Stelle nicht gehalten werden kann: Es würde unter das geringste Gefälle ihres Systems fallen. Das Gerät weniger in der Höhe verschieben oder die Leitung zuerst trennen.",
+ "mep.err.follow_port_lost": "Ein Anschluss, auf dem diese Leitung saß, existiert nach der Änderung nicht mehr. Die Leitung zuerst wegbewegen oder den Gerätetyp beibehalten.",
+ "mep.err.follow_device": "Diese Leitung endet an einem Geräteanschluss und kann ihn nicht verlassen. Stattdessen das Gerät verschieben oder die Leitung zuerst trennen."
+}

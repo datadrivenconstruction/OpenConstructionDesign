@@ -1,0 +1,33 @@
+{
+ "cmd.help.licenses": "ওপেন-সোর্স লাইসেন্স",
+ "cmd.help.licenses.desc": "এই বিল্ডে ব্যবহৃত ওপেন-সোর্স লাইব্রেরি ও তাদের লাইসেন্স দেখায়।",
+ "about.product": "DDC Editor",
+ "about.version": "সংস্করণ",
+ "about.build": "বিল্ড",
+ "about.schema": "মডেল স্কিমা",
+ "about.system": "সিস্টেম",
+ "about.gpu": "গ্রাফিক্স অ্যাডাপ্টার",
+ "about.language": "ভাষা",
+ "about.copy": "সংস্করণের তথ্য কপি করুন",
+ "about.copy_desc": "বাগ রিপোর্টের জন্য সংস্করণ, বিল্ড, সিস্টেম ও গ্রাফিক্স অ্যাডাপ্টার। ফাইলের পাথ নেই।",
+ "about.copied": "সংস্করণের তথ্য কপি হয়েছে",
+ "about.licenses": "ওপেন-সোর্স লাইসেন্স",
+ "about.licenses_desc": "এই বিল্ডে ব্যবহৃত লাইব্রেরি ও তাদের লাইসেন্স",
+ "about.licenses.open": "দেখুন",
+ "about.licenses.title": "ওপেন-সোর্স লাইসেন্স",
+ "about.licenses.note": "DDC Editor নিচের লাইব্রেরিগুলো অন্তর্ভুক্ত করে। প্রতিটি নিজ লাইসেন্স ও কপিরাইট বিজ্ঞপ্তির অধীনে থাকে। সম্পূর্ণ লাইসেন্স টেক্সট: অ্যাপ্লিকেশনের পাশে THIRD_PARTY_LICENSES.txt।",
+ "about.licenses.full": "সম্পূর্ণ লাইসেন্স টেক্সট",
+ "about.licenses.list": "কম্পোনেন্টের তালিকা",
+ "about.licenses.close": "বন্ধ করুন",
+ "about.licenses.col_name": "কম্পোনেন্ট",
+ "about.licenses.col_license": "লাইসেন্স",
+ "about.licenses.count": {
+  "one": "# কম্পোনেন্ট",
+  "other": "# কম্পোনেন্ট"
+ },
+ "about.licenses.count_of": "{total}টির মধ্যে {shown}টি কম্পোনেন্ট",
+ "about.licenses.search_hint": "নাম বা লাইসেন্স দিয়ে খুঁজুন…",
+ "about.licenses.search_clear": "অনুসন্ধান সাফ করুন",
+ "about.licenses.none": "কিছু পাওয়া যায়নি",
+ "about.licenses.none_hint": "লাইব্রেরির নামের অংশ বা MIT-এর মতো লাইসেন্স লিখে দেখুন।"
+}

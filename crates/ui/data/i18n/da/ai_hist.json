@@ -1,0 +1,14 @@
+{
+ "ai.hist.badge": "AI",
+ "ai.hist.untitled": "AI-ændringer",
+ "ai.hist.tip": "{title}\nAnvendt af: {actor}\nAI-model: {model}",
+ "ai.hist.why": "Hvorfor: {why}",
+ "ai.hist.reverted": "tilbagerullet",
+ "ai.hist.revert_one": "Tilbagerul denne AI-batch",
+ "ai.revert.done": "AI-ændringer tilbagerullet: {n}. Fortryd bringer dem tilbage.",
+ "ai.revert.empty": "Der er ingen AI-ændringer at tilbagerulle",
+ "ai.revert.not_ai": "Dette trin er ikke en AI-ændring",
+ "ai.revert.already": "Disse AI-ændringer er allerede tilbagerullet",
+ "ai.revert.opaque": "Ikke tilbagerullet: disse AI-ændringer kan ikke sikkert skilles fra senere arbejde. Intet blev ændret.",
+ "ai.revert.failed": "Tilbagerulning mislykkedes: {e}"
+}

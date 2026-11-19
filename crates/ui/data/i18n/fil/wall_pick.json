@@ -1,0 +1,13 @@
+{
+ "cmd.arch.wall_pick": "Pader ayon sa linya",
+ "cmd.arch.wall_pick.desc": "Naglalagay ng pader sa napiling linya ng drawing sa kasalukuyang level. Pinapalitan ng F ang axis o mukha sa linya, kinukuha ng Tab ang magkakabit na kadena. Bawat pick ay isang undo step. Gumagana rin para sa curtain wall.",
+ "hint.wall_pick.center": "Pader ayon sa linya: pumili ng linya ng drawing · axis sa linya · F mukha · Tab kadena · Esc lumabas",
+ "hint.wall_pick.face": "Pader ayon sa linya: pumili ng linya ng drawing · mukha sa linya, gilid ng cursor · F axis · Tab kadena · Esc lumabas",
+ "hint.wall_pick.center_chain": "Pader ayon sa linya: pumili ng linya para kunin ang kadena nito · axis sa linya · F mukha · Tab isang linya",
+ "hint.wall_pick.face_chain": "Pader ayon sa linya: pumili ng linya para kunin ang kadena nito · mukha sa linya · F axis · Tab isang linya",
+ "wall_pick.st.start": "Pumili ng linya ng drawing. F: axis o mukha, Tab: magkakabit na kadena",
+ "wall_pick.st.no_lines": "Walang nakikitang linya ng drawing sa level na ito",
+ "wall_pick.st.miss": "Walang linya ng drawing dito",
+ "wall_pick.st.on_wall": "Nasa ilalim na ng pader {id} ang linyang ito",
+ "wall_pick.st.tight": "Hindi kasya ang face offset: mas maikli sa kapal ng pader ang isang segment ng kadena"
+}

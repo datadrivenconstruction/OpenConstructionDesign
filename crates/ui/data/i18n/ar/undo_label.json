@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "تراجع: {what}",
+ "undo_label.redo_what": "إعادة: {what}",
+ "undo_label.undo_none": "لا شيء للتراجع عنه",
+ "undo_label.redo_none": "لا شيء لإعادته"
+}

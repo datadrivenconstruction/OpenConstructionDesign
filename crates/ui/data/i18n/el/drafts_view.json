@@ -1,0 +1,9 @@
+{
+ "drafts.draft.view": "Γραφικά προβολής του “{name}”",
+ "drafts.draft.filter": "Φίλτρο προβολής “{name}”",
+ "drafts.draft.filter_new": "Νέο φίλτρο προβολής",
+ "drafts.draft.object_styles": "Στυλ αντικειμένων",
+ "drafts.draft.material": "Υλικό “{name}”",
+ "drafts.draft.type": "Τύπος “{name}”",
+ "drafts.draft.params": "Παράμετροι οικογένειας “{name}”"
+}

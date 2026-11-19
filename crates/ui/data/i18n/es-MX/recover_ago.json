@@ -1,0 +1,29 @@
+{
+ "recover.ago_now": "justo ahora",
+ "recover.ago_min": {
+  "one": "hace # min",
+  "other": "hace # min"
+ },
+ "recover.ago_hour": {
+  "one": "hace # hora",
+  "other": "hace # horas"
+ },
+ "recover.ago_yesterday": "ayer",
+ "recover.ago_day": {
+  "one": "hace # día",
+  "other": "hace # días"
+ },
+ "recover.empty": "No quedan instantáneas",
+ "recover.empty_hint": "No hay nada que restaurar para este proyecto.",
+ "recover.all_damaged": "Todas las instantáneas están dañadas; ninguna se puede restaurar.",
+ "recover.keys_hint": "Arriba y Abajo eligen una instantánea; Intro pasa a Restaurar",
+ "recover.row_tip": "Guardado {time}",
+ "recover.row_damaged_tip": "No se puede restaurar: {reason}",
+ "recover.archive_ask": "¿Mover esta instantánea al archivo?",
+ "recover.discard_ask": {
+  "one": "¿Mover la instantánea al archivo? No se volverá a ofrecer.",
+  "other": "¿Mover las # instantáneas al archivo? No se volverán a ofrecer."
+ },
+ "recover.confirm_yes": "Mover al archivo",
+ "recover.confirm_no": "Conservar instantáneas"
+}

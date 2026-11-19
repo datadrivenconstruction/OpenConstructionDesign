@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "Undo: {what}",
+ "undo_label.redo_what": "Redo: {what}",
+ "undo_label.undo_none": "Nothing to undo",
+ "undo_label.redo_none": "Nothing to redo"
+}

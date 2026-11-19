@@ -1,0 +1,14 @@
+{
+ "xlsx_relink.title": "تم نقل المصنف المرتبط أو إعادة تسميته",
+ "xlsx_relink.body": "المصنف «{file}» لم يعد في {folder}. التعديلات المكتوبة فيه تعود فقط بعد إعادة ربطه.",
+ "xlsx_relink.found_one": "وُجد «{file}» في {folder}: المشروع نفسه والتصدير نفسه. أربطه؟",
+ "xlsx_relink.found_many": "وُجد {n} مصنفات من هذا المشروع وهذا التصدير. اختر المصنف المراد ربطه:",
+ "xlsx_relink.found_none": "لم يُعثر على مصنف من هذا التصدير بجواره. ابحث عنه، أو صدّر مصنفاً جديداً.",
+ "xlsx_relink.link": "اربط «{file}»",
+ "xlsx_relink.find": "ابحث عنه…",
+ "xlsx_relink.find_title": "ابحث عن المصنف المرتبط",
+ "xlsx_relink.export_new": "صدّر مصنفاً جديداً",
+ "xlsx_relink.close": "إغلاق",
+ "xlsx_relink.gone": "المصنف «{file}» لم يعد في مجلده. التعديلات المكتوبة فيه تعود فقط بعد إعادة ربطه.",
+ "xlsx_relink.found_one_short": "وُجد «{file}»: المشروع نفسه والتصدير نفسه. أربطه؟"
+}

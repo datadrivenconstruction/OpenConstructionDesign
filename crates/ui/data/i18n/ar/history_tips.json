@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "تم التراجع — Ctrl+Y للإعادة",
+ "history.hist.empty": "لا توجد تغييرات بعد",
+ "history.hist.empty_hint": "تظهر تعديلاتك هنا. انقر أي خطوة للعودة إليها.",
+ "history.hist.revert_all_n": "التراجع عن كل تغييرات AI ({n})"
+}

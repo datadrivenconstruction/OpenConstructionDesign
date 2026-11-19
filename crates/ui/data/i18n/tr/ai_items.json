@@ -1,0 +1,16 @@
+{
+ "ai.items.all": {
+  "one": "Tüm # öğe",
+  "other": "Tüm # öğe"
+ },
+ "ai.items.all.tip": "Plandaki her öğeyi işaretleyin veya işaretini kaldırın",
+ "ai.items.checked": "{m} içinden {n} işaretli",
+ "ai.items.check.tip": "“{title}” öğesini Uygula'ya dahil et",
+ "ai.items.expand": "Elemanları göster",
+ "ai.items.collapse": "Elemanları gizle",
+ "ai.items.apply": {
+  "one": "# öğeyi uygula",
+  "other": "# öğeyi uygula"
+ },
+ "ai.items.apply_none": "Uygula"
+}

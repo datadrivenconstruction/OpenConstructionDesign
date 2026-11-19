@@ -1,0 +1,19 @@
+{
+  "site": ["участ", "площадк", "site", "plot", "lot "],
+  "total": ["общая площадь", "суммарная площадь", "total area", "gross floor area", "gfa", "итого"],
+  "height": ["высот", "height"],
+  "limit": [
+    "не более", "не менее", "не выше", "не ниже", "минимум", "максимум", "должн", "запрещ",
+    "at least", "at most", "no more than", "not exceed", "maximum", "minimum", "must ", "shall "
+  ],
+  "area_units": ["м²", "м2", "кв.м", "кв. м", "m²", "m2", "sq m", "sqm"],
+  "times": ["x", "х", "×", "*"],
+  "metre": ["м", "m"],
+  "storeys_after": ["этаж", "storey", "stories", "floors", "floor building", "level"],
+  "storeys_key": ["этажность", "storeys", "number of floors", "floors"],
+  "count_after": ["шт", "pcs", "units", "rooms", "кварт"],
+  "norm_heads": ["СП", "СНиП", "ГОСТ Р", "ГОСТ", "СанПиН", "EN", "ISO", "DIN", "BS", "NFPA", "IBC", "ТР ТС"],
+  "name_col": ["помещ", "наимен", "назнач", "room", "name", "space"],
+  "area_col": ["площад", "area", "м2", "m2", "м²", "m²"],
+  "count_col": ["кол", "qty", "count", "шт", "number"]
+}

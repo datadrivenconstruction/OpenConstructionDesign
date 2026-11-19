@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "สิ่งที่เกิดขึ้นหลังส่งออกสมุดงานแล้ว",
+ "settings.area_decimals_desc": "จำนวนหลักหลังจุดทศนิยมของพื้นที่",
+ "settings.volume_decimals_desc": "จำนวนหลักหลังจุดทศนิยมของปริมาตร",
+ "settings.frac_desc": "เศษส่วนที่เล็กที่สุดของนิ้วในหน่วยอิมพีเรียล",
+ "settings.small_area_desc": "แสดงพื้นที่ที่เล็กกว่าหนึ่งตารางฟุตเป็นตารางนิ้ว",
+ "settings.sample_desc": "ตัวเลขจะแสดงอย่างไรด้วยตัวเลือกปัจจุบัน",
+ "autosave.title_desc": "เก็บสำเนากู้คืนของโปรเจกต์ที่เปิดอยู่",
+ "autosave.interval_desc": "เวลาระหว่างสำเนากู้คืน",
+ "autosave.keep_desc": "สำเนากู้คืนที่เก่ากว่าจะถูกลบ",
+ "autosave.folder_desc": "ว่างหมายถึงใช้โฟลเดอร์เริ่มต้น",
+ "autosave.remind_desc": "เตือนให้บันทึกโปรเจกต์ที่ยังไม่มีไฟล์",
+ "settings.backend_desc": "อะแดปเตอร์กราฟิกที่ใช้งานอยู่",
+ "settings.news_desc": "สิ่งที่เปลี่ยนแปลงในเวอร์ชันนี้",
+ "settings.assoc_default_desc": "ตั้งแอปนี้เป็นค่าเริ่มต้นสำหรับไฟล์โมเดล",
+ "settings.data_dir_desc": "แคช สำเนากู้คืน และบันทึกการทำงานอยู่ที่นี่"
+}

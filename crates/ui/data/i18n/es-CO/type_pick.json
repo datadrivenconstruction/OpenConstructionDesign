@@ -1,0 +1,10 @@
+{
+ "type_pick.pick.search": "Buscar tipos o espesor",
+ "type_pick.pick.empty": "Ningún tipo coincide",
+ "type_pick.pick.edit": "Editar tipo…",
+ "type_pick.pick.mixed": "Mixto",
+ "type_pick.pick.layers": {
+  "one": "# capa",
+  "other": "# capas"
+ }
+}

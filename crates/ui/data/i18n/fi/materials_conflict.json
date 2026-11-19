@@ -1,0 +1,5 @@
+{
+ "materials.mat.conflict": "Tämä materiaali muuttui mallissa (kumoaminen tai toinen ikkuna), kun kortissa oli muokkauksia. Muokkauksesi säilyvät.",
+ "materials.mat.keep": "Säilytä muokkaukseni",
+ "materials.mat.reload": "Lataa uudelleen"
+}

@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "کنڈے کی سمت پلٹیں",
+ "cmd.edit.flip_hand.desc": "منتخب دروازوں اور کھڑکیوں کو دیوار کے ساتھ آئینہ کرتا ہے تاکہ کنڈے بازشے کے دوسرے سرے پر چلے جائیں۔",
+ "cmd.edit.flip_facing": "کھولنے کی سمت پلٹیں",
+ "cmd.edit.flip_facing.desc": "منتخب دروازوں اور کھڑکیوں کو دیوار کے دوسرے رخ پر گھماتا ہے۔",
+ "opening_grips.flip_hand": "کنڈا پلٹیں",
+ "opening_grips.flip_hand.tip": "کنڈے بازشے کے دوسرے سرے پر (Shift+F)",
+ "opening_grips.flip_facing": "سمت پلٹیں",
+ "opening_grips.flip_facing.tip": "دیوار کے دوسرے رخ پر کھلنا (Shift+G)",
+ "opening_grips.flip.done": "پلٹ دیا: {n}",
+ "opening_grips.flip.none": "پلٹنے کے لیے دروازہ یا کھڑکی منتخب کریں",
+ "opening_grips.flip.fail": "پلٹا نہیں گیا: {why}"
+}

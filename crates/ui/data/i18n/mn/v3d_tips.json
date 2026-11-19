@@ -1,0 +1,8 @@
+{
+ "v3d.proj.to_ortho": "Ортографи руу шилжих",
+ "v3d.proj.to_persp": "Перспектив рүү шилжих",
+ "v3d.walk.unit.m": "м/с",
+ "v3d.walk.unit.ft": "фут/с",
+ "v3d.temp.show_all": "Бүгдийг харуулах  ·  Esc",
+ "v3d.msg.deleted_named": "3D харагдац {name} устгагдлаа"
+}

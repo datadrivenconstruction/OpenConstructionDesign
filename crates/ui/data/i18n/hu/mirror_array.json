@@ -1,0 +1,5 @@
+{
+ "mirror_array.err.count": "A darabszám 2 és 200 közötti egész szám: 4 3000, vagy 4;300, ha a lépés három számjegyű",
+ "mirror_array.err.length": "A lépés vagy az összeg pozitív hossz, pl. 3 000 vagy 1.2 m",
+ "mirror_array.err.angle": "A söprés szög fokban, nem nulla és legfeljebb 360"
+}

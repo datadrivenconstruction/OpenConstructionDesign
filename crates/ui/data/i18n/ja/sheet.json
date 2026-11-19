@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "ショートカット一覧",
+ "cmd.help.shortcuts.desc": "現在のすべてのショートカットを、コンテキスト別に表示します。テキスト欄の外で ? を押してください。",
+ "sheet.title": "キーボードショートカット",
+ "sheet.filter": "コマンドまたはキーで絞り込み",
+ "sheet.filter_label": "ショートカットを絞り込む",
+ "sheet.customize": "カスタマイズ…",
+ "sheet.close": "閉じる",
+ "sheet.esc_close": "で閉じる",
+ "sheet.none": "一致するショートカットはありません",
+ "sheet.none_hint": "別の語またはキーで試してください。",
+ "sheet.sec.general": "一般",
+ "sheet.sec.plan": "平面図",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "集計表",
+ "sheet.sec.sheets": "シート",
+ "sheet.sec.ai": "AI"
+}

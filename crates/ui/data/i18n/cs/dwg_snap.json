@@ -1,0 +1,5 @@
+{
+ "snap.center": "Střed",
+ "dwg_snap.through": "Bod průchodu",
+ "dwg_snap.through_tip": "Odsazení přes kliknutý bod (přichytává ke koncům, průsečíkům, středům) místo zadané vzdálenosti"
+}

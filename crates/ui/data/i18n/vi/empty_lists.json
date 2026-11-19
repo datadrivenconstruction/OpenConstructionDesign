@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "Vẽ tường",
+ "empty.totals.action": "Vẽ tường",
+ "empty.schedule.action": "Thêm trường",
+ "empty.schedule_filtered.action": "Xóa bộ lọc",
+ "empty.library.action": "Đặt lại tìm kiếm",
+ "empty.library.load": "Tải họ cấu kiện",
+ "empty.schedule_fields.title": "Không có trường nào hiển thị",
+ "empty.schedule_fields.action": "Thêm trường",
+ "empty.schedule_fields.hint": "Bật ít nhất một trường để xem bảng."
+}

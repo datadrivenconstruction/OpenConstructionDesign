@@ -1,0 +1,59 @@
+{
+ "del.k.door": {
+  "one": "# pintu",
+  "other": "# pintu"
+ },
+ "del.k.window": {
+  "one": "# jendela",
+  "other": "# jendela"
+ },
+ "del.k.opening": {
+  "one": "# bukaan",
+  "other": "# bukaan"
+ },
+ "del.k.comp": {
+  "one": "# komponen inang",
+  "other": "# komponen inang"
+ },
+ "del.k.rebar": {
+  "one": "# set tulangan",
+  "other": "# set tulangan"
+ },
+ "del.k.port": {
+  "one": "# port MEP inang",
+  "other": "# port MEP inang"
+ },
+ "del.k.joist": {
+  "one": "# balok rangka",
+  "other": "# balok rangka"
+ },
+ "del.k.railing": {
+  "one": "# pagar",
+  "other": "# pagar"
+ },
+ "del.k.tag": {
+  "one": "# tag",
+  "other": "# tag"
+ },
+ "del.k.dim": {
+  "one": "# dimensi (terlepas)",
+  "other": "# dimensi (terlepas)"
+ },
+ "del.also": "Juga terdampak: {list}",
+ "del.rooms": {
+  "one": "# ruangan kehilangan satu dinding batas",
+  "other": "# ruangan kehilangan dinding batas"
+ },
+ "del.cancelled": "Penghapusan dibatalkan, tidak ada yang berubah",
+ "del.confirm.title": "Hapus dengan dependen",
+ "del.confirm.lead": {
+  "one": "# elemen terpilih membawa ini bersamanya:",
+  "other": "# elemen terpilih membawa ini bersamanya:"
+ },
+ "del.confirm.levels": {
+  "one": "# di antaranya berada di level lain",
+  "other": "# di antaranya berada di level lain"
+ },
+ "del.confirm.all": "Hapus semua",
+ "del.confirm.cancel": "Batal"
+}

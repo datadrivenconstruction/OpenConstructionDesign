@@ -1,0 +1,26 @@
+{
+ "id": "cn",
+ "version": "2026.11",
+ "parent": "generic",
+ "country": "CN",
+ "lang": [
+  "zh"
+ ],
+ "units": {
+  "length": "m",
+  "display": "metric"
+ },
+ "conventions": {
+  "ground_floor": 1,
+  "area_standard": "gross",
+  "net_share": 0.75,
+  "note": "Street level is the 1st floor; dwelling areas are usually building areas with walls and a share of common parts. Our own summary, not checked against a clause.",
+  "source": null
+ },
+ "status": "tier3",
+ "climate": {
+  "zones": [],
+  "default": null
+ },
+ "note": "Numbers with verified=true were checked against the cited clause of a primary text; verified=false numbers come from a secondary reproduction named in the source note. Wording is our own."
+}

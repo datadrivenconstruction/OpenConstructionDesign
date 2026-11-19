@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "Panel",
+ "curtain_props.cw.panel_cell": "Komórka {i}×{j} · ściana osłonowa #{id}",
+ "curtain_props.cw.kind": "Typ",
+ "curtain_props.cw.kind.glazed": "Szkło",
+ "curtain_props.cw.kind.solid": "Pełny",
+ "curtain_props.cw.kind.door": "Drzwi",
+ "curtain_props.cw.kind.window": "Okno",
+ "curtain_props.cw.kind.empty": "Pusty",
+ "curtain_props.cw.name": "Nazwa",
+ "curtain_props.cw.swing_side": "Otwiera się na drugą stronę",
+ "curtain_props.cw.swing_hinge": "Zawias przy końcu komórki",
+ "curtain_props.cw.size": "Rozmiar",
+ "curtain_props.cw.cell_area": "Pole komórki",
+ "curtain_props.cw.panel_area": "Pole panelu",
+ "curtain_props.cw.prev": "Poprzedni panel",
+ "curtain_props.cw.next": "Następny panel",
+ "curtain_props.cw.wall": "Zaznacz ścianę",
+ "curtain_props.cw.panel_hint": "Esc — zaznaczenie · Ctrl+Z — cofnij",
+ "curtain_props.cw.status.panel": "Panel {i}×{j} → {kind}",
+ "e3d.err.cw_height": "wysokość ściany osłonowej musi być większa niż 100 mm"
+}

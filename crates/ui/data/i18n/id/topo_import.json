@@ -1,0 +1,4 @@
+{
+ "topo_import.topo.ambiguous": "{n} baris dilewati: angka dapat dibaca dua cara (1,250 = 1.25 atau 1250?) dan berkas tidak menunjukkan tanda desimal",
+ "topo_import.topo.grouped": "{n} titik dibaca dengan pengelompokan digit (1 250,5 atau 1,234.5)"
+}

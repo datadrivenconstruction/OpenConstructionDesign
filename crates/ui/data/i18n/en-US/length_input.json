@@ -1,0 +1,4 @@
+{
+ "length_input.opt.bad_length": "Not a length: enter mm, or ft-in in imperial units",
+ "length_input.opt.times": "×"
+}

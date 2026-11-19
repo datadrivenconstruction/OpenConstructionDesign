@@ -1,0 +1,42 @@
+{
+ "ai.tool.show_elements": "Elementide näitamine",
+ "ai.tool.isolate_elements": "Elementide isoleerimine",
+ "ai.tool.color_by": "Väärtuse järgi värvimine",
+ "ai.tool.reset_view": "Vaate lähtestamine",
+ "ai_found.found.query": "Leitud",
+ "ai_found.found.show": "Näidatud",
+ "ai_found.found.isolate": "Isoleeritud",
+ "ai_found.found.hide": "Peidetud",
+ "ai_found.found.color": "Värvitud",
+ "ai_found.found.count": "{n} / {m}",
+ "ai_found.found.none": "Vastet ei ole. Proovi laiemat filtrit.",
+ "ai_found.found.show_btn": "Näita",
+ "ai_found.found.show_tip": "Vali need elemendid ja suumi neile plaanil ja 3D-vaates",
+ "ai_found.found.isolate_btn": "Isoleeri",
+ "ai_found.found.isolate_tip": "Näita ainult neid elemente kuni vaate lähtestamiseni",
+ "ai_found.found.select_btn": "Vali",
+ "ai_found.found.select_tip": "Vali need elemendid, liigutamata vaadet",
+ "ai_found.legend.title": "Värvi järgi: {by}",
+ "ai_found.legend.row_tip": "Klõpsa nende elementide valimiseks",
+ "ai_found.legend.empty_value": "Väärtus puudub",
+ "ai_found.legend.other": {
+  "one": "# veel väärtus",
+  "other": "# veel väärtust"
+ },
+ "ai_found.view.title": "Tehisintellekti assistendi vaade",
+ "ai_found.view.reset": "Lähtesta vaade",
+ "ai_found.view.reset_tip": "Too tagasi vaade, mis oli enne, kui tehisintellekti assistent selle muutis",
+ "ai_found.view.shown": {
+  "one": "# element näidatud",
+  "other": "# elementi näidatud"
+ },
+ "ai_found.view.isolated": {
+  "one": "# element isoleeritud",
+  "other": "# elementi isoleeritud"
+ },
+ "ai_found.view.hidden": {
+  "one": "# element peidetud",
+  "other": "# elementi peidetud"
+ },
+ "ai_found.found.line": "{what}: {count}"
+}

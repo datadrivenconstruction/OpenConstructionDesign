@@ -1,0 +1,7 @@
+{
+ "rebar_pick.pick.empty": "Арматур: багана, дам, хана, дал эсвэл суурь сонгоно уу",
+ "rebar_pick.pick.unsupported": "Энэ сонголтод арматур тавих боломжгүй. Багана, дам, хана, дал эсвэл суурь сонгоно уу",
+ "rebar_pick.pick.keys": "Дарж сонгоно, Shift нэмнэ · Enter маягтыг нээнэ · Esc цуцална",
+ "rebar_pick.pick.open": "Маягт нээх",
+ "rebar_pick.pick.cancel": "Цуцлах"
+}

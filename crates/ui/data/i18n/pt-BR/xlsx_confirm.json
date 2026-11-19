@@ -1,0 +1,19 @@
+{
+ "xlsx_confirm.chip": "para confirmar",
+ "xlsx_confirm.section": "Linhas sem id correspondidas a um elemento pelo nome ou número",
+ "xlsx_confirm.tag": "correspondido pelo nome",
+ "xlsx_confirm.tag_accepted": "correspondência aceita",
+ "xlsx_confirm.tag_rejected": "cria novo",
+ "xlsx_confirm.kind_room": "ambiente",
+ "xlsx_confirm.kind_curtain_wall": "fachada-cortina",
+ "xlsx_confirm.row_line": "{kind} #{id}, chave “{key}”",
+ "xlsx_confirm.accept": "Aceitar",
+ "xlsx_confirm.accept_tip": "Aplica esta linha ao elemento correspondente (uma etapa de desfazer junto com as demais)",
+ "xlsx_confirm.reject": "Criar novo",
+ "xlsx_confirm.reject_tip": "Não corresponder: esta linha cria um novo elemento",
+ "xlsx_confirm.decide_first": "Aceite ou rejeite primeiro as linhas correspondidas pelo nome.",
+ "xl.msg.key_match_many": "a chave corresponde a {} elementos; não correspondida, a linha cria um novo",
+ "xl.msg.key_match_taken": "a chave corresponde a um elemento usado por outra linha; não correspondida, a linha cria um novo",
+ "xl.msg.key_match_kept": "mantido: correspondência rejeitada, a linha cria um novo elemento",
+ "xl.msg.key_match_undecided": "linhas correspondidas pelo nome aguardam uma decisão"
+}

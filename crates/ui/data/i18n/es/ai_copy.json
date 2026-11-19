@@ -1,0 +1,8 @@
+{
+ "cmd.file.save_copy": "Guardar una copia para otra persona…",
+ "cmd.file.save_copy.desc": "Guarda una copia del proyecto sin consentimiento de IA y, salvo que elija lo contrario, sin el diario de IA. Este proyecto no cambia.",
+ "ai.copy.title": "Guardar una copia",
+ "ai.copy.journal": "¿Incluir el diario de IA en la copia? El diario contiene solicitudes, respuestas y direcciones. El consentimiento para la nube nunca se copia: la otra persona decide por sí misma. Elija No para dejar el diario fuera.",
+ "ai.copy.done": "Copia guardada: {name}",
+ "ai.copy.same": "Elija otro archivo: una copia no puede reemplazar el proyecto abierto."
+}

@@ -1,0 +1,4 @@
+{
+ "xl.msg.x_formulas_in_column_x_on_sheet_x_replaced_by_values": "{} formler i kolonnen '{}' på ark '{}' erstattet med værdier",
+ "xl.msg.formula_in_a_model_column_not_applied": "formel i en modelkolonne: resultatet anvendes ikke, modelværdien beholdes; skriv en værdi for at ændre den"
+}

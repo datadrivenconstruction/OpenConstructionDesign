@@ -1,0 +1,7 @@
+{
+ "ai.retry.countdown": "{n} s dan keyin qayta uriniladi",
+ "ai.retry.try": "Avtomatik urinish {i} / {max}. Xuddi shu so'rov qayta yuboriladi.",
+ "ai.retry.now": "Hozir qayta urinish",
+ "ai.retry.gave_up": "{max} ta avtomatik urinishdan keyin ham javob yo'q.",
+ "ai.retry.shorten": "So'rovni qisqartirish"
+}

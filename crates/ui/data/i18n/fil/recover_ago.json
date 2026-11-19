@@ -1,0 +1,29 @@
+{
+ "recover.ago_now": "ngayon lang",
+ "recover.ago_min": {
+  "one": "# min na ang nakalipas",
+  "other": "# na min ang nakalipas"
+ },
+ "recover.ago_hour": {
+  "one": "# oras na ang nakalipas",
+  "other": "# na oras ang nakalipas"
+ },
+ "recover.ago_yesterday": "kahapon",
+ "recover.ago_day": {
+  "one": "# araw na ang nakalipas",
+  "other": "# na araw ang nakalipas"
+ },
+ "recover.empty": "Wala nang natitirang snapshot",
+ "recover.empty_hint": "Walang maibabalik para sa proyektong ito.",
+ "recover.all_damaged": "Sira ang lahat ng snapshot, walang maibabalik.",
+ "recover.keys_hint": "Pumili ng snapshot gamit ang Up at Down, lumipat sa Restore gamit ang Enter",
+ "recover.row_tip": "Na-save {time}",
+ "recover.row_damaged_tip": "Hindi maibalik: {reason}",
+ "recover.archive_ask": "Ilipat sa archive ang snapshot na ito?",
+ "recover.discard_ask": {
+  "one": "Ilipat sa archive ang snapshot? Hindi na ito iaalok muli.",
+  "other": "Ilipat sa archive ang lahat ng # na snapshot? Hindi na ito iaalok muli."
+ },
+ "recover.confirm_yes": "Ilipat sa archive",
+ "recover.confirm_no": "Itago ang mga snapshot"
+}

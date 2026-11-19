@@ -1,0 +1,9 @@
+{
+ "ai.settings.num_bad": "Сан емес. 0.5 сияқты теріңіз.",
+ "ai.settings.num_comma": "Оналтық белгі ретінде нүкте қолданыңыз, мысалы 0.5.",
+ "ai.settings.num_negative": "Сан теріс бола алмайды.",
+ "ai.settings.unit_money": "валюта",
+ "ai.settings.unit_tokens": "токен",
+ "ai.settings.unit_price": "1 млн токенге",
+ "ai.settings.limits_hint": "0 — шек жоқ дегенді білдіреді. Қабылданбаған мән алдыңғы шекті қалдырады."
+}

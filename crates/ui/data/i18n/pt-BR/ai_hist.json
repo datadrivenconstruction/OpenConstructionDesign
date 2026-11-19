@@ -1,0 +1,14 @@
+{
+ "ai.hist.badge": "IA",
+ "ai.hist.untitled": "Alterações de IA",
+ "ai.hist.tip": "{title}\nAplicado por: {actor}\nModelo de IA: {model}",
+ "ai.hist.why": "Motivo: {why}",
+ "ai.hist.reverted": "revertido",
+ "ai.hist.revert_one": "Reverter este lote de IA",
+ "ai.revert.done": "Alterações de IA revertidas: {n}. Anular as traz de volta.",
+ "ai.revert.empty": "Não há alterações de IA para reverter",
+ "ai.revert.not_ai": "Este passo não é uma alteração de IA",
+ "ai.revert.already": "Estas alterações de IA já foram revertidas",
+ "ai.revert.opaque": "Não revertido: estas alterações de IA não podem ser separadas do trabalho posterior com segurança. Nada foi alterado.",
+ "ai.revert.failed": "Reversão falhou: {e}"
+}

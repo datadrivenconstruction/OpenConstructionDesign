@@ -1,0 +1,5 @@
+{
+ "xl.msg.level_name_x_is_already_used": "'{}' деңгей атауы бұрын пайдаланылған",
+ "xl.msg.unreadable_id_elements_without_a_row_not_deleted": "оқылмайтын id: жолы жоқ элементтер осы импортта жойылмайды",
+ "xl.msg.wall_type_name_x_is_already_used": "'{}' қабырға түрінің атауы бұрын пайдаланылған"
+}

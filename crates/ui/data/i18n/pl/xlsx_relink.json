@@ -1,0 +1,14 @@
+{
+ "xlsx_relink.title": "Powiązany skoroszyt został przeniesiony lub zmieniono jego nazwę",
+ "xlsx_relink.body": "Skoroszyt „{file}” nie znajduje się już w {folder}. Zmiany wpisane w nim wrócą dopiero po ponownym powiązaniu.",
+ "xlsx_relink.found_one": "Znaleziono „{file}” w {folder}: ten sam projekt i ten sam eksport. Powiązać?",
+ "xlsx_relink.found_many": "Znaleziono {n} skoroszytów tego projektu i tego eksportu. Wybierz ten do powiązania:",
+ "xlsx_relink.found_none": "Obok nie znaleziono skoroszytu z tego eksportu. Znajdź go lub wyeksportuj nowy skoroszyt.",
+ "xlsx_relink.link": "Powiąż „{file}”",
+ "xlsx_relink.find": "Znajdź…",
+ "xlsx_relink.find_title": "Znajdź powiązany skoroszyt",
+ "xlsx_relink.export_new": "Eksportuj nowy skoroszyt",
+ "xlsx_relink.close": "Zamknij",
+ "xlsx_relink.gone": "Skoroszyt „{file}” nie znajduje się już w swoim folderze. Zmiany wpisane w nim wrócą dopiero po ponownym powiązaniu.",
+ "xlsx_relink.found_one_short": "Znaleziono „{file}”: ten sam projekt i ten sam eksport. Powiązać?"
+}

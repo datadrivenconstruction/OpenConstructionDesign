@@ -1,0 +1,9 @@
+{
+ "elem.deleted": "O'chirilgan elementlar: {n}",
+ "elem.deleted_kept": "O'chirilgan elementlar: {n}; joyida qoldi: {k} (panellar va o'chirib bo'lmaydigan elementlar)",
+ "elem.not_deleted": "o'chirilmadi: {e}",
+ "elem.not_deletable": "Bu elementni o'chirib bo'lmaydi",
+ "elem.panel": "shtorli devor paneli",
+ "elem.panel_refused": "Panel o'z shtorli devorining bir qismi va alohida o'chirilmaydi. Uni o'chirish uchun butun devorni tanlang.",
+ "elem.reload_failed": "O'chirildi, lekin ko'rinish yangilanmadi: {e}"
+}

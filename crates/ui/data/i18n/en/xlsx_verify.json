@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "Apply was undone: the model did not match the preview. {what}",
+ "xlsx_verify.not_written": "{row} was not changed.",
+ "xlsx_verify.lost": "{row} disappeared.",
+ "xlsx_verify.not_deleted": "{row} was not deleted.",
+ "xlsx_verify.extra_deleted": "{row} was deleted, though the preview keeps it.",
+ "xlsx_verify.created": "{table}: {got} new instead of {want}.",
+ "xlsx_verify.value": "{row}, {field}: expected {want} (was {old}), got {got}.",
+ "xlsx_verify.check_failed": "The result could not be checked: {e}",
+ "xlsx_verify.plan_failed": "Apply was not started: the check could not read the model ({e}).",
+ "xlsx_verify.take_back_failed": "The step could not be undone ({e}): use Undo.",
+ "xlsx_verify.t.wall": "Wall",
+ "xlsx_verify.t.opening": "Opening",
+ "xlsx_verify.t.room": "Room",
+ "xlsx_verify.t.slab": "Floor",
+ "xlsx_verify.t.level": "Level",
+ "xlsx_verify.t.wall_type": "Wall type",
+ "xlsx_verify.t.slab_type": "Floor type",
+ "xlsx_verify.t.col": "Column",
+ "xlsx_verify.t.beam": "Beam",
+ "xlsx_verify.t.roof": "Roof",
+ "xlsx_verify.t.curtain_wall": "Curtain wall"
+}

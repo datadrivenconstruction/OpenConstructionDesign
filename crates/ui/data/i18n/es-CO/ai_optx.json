@@ -1,0 +1,10 @@
+{
+ "ai.optx.applied": "Opción «{name}» aplicada. Deshacer la devuelve a borrador",
+ "ai.optx.missing": "La opción {id} ya no existe",
+ "ai.optx.accepted": "La opción {id} ya está aplicada",
+ "ai.optx.not_draft": "La opción {id} fue rechazada y no se puede aplicar",
+ "ai.optx.stale": "El modelo cambió después de crear la opción {id}: genérela de nuevo primero",
+ "ai.optx.bad_recipe": "No se puede leer la receta de la opción: {e}",
+ "ai.optx.refused": "La opción no se aplicó ({code}): {reason}",
+ "ai.optx.failed": "La opción no se aplicó: {e}"
+}

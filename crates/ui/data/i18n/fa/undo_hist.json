@@ -1,0 +1,8 @@
+{
+ "undo.undone": "واگرد شد: {what}",
+ "undo.redone": "بازانجام شد: {what}",
+ "undo.action.edit.redo": "بازانجام",
+ "undo.action.edit.undo": "واگرد",
+ "hdr.unsaved": "تغییرات ذخیره نشده",
+ "hdr.file_menu": "منوی فایل"
+}

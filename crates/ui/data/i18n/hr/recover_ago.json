@@ -1,0 +1,33 @@
+{
+ "recover.ago_now": "upravo sada",
+ "recover.ago_min": {
+  "one": "prije # min",
+  "few": "prije # min",
+  "other": "prije # min"
+ },
+ "recover.ago_hour": {
+  "one": "prije # sat",
+  "few": "prije # sata",
+  "other": "prije # sati"
+ },
+ "recover.ago_yesterday": "jučer",
+ "recover.ago_day": {
+  "one": "prije # dan",
+  "few": "prije # dana",
+  "other": "prije # dana"
+ },
+ "recover.empty": "Nema preostalih snimki",
+ "recover.empty_hint": "Za ovaj projekt nema što vratiti.",
+ "recover.all_damaged": "Sve snimke su oštećene, nijedna se ne može vratiti.",
+ "recover.keys_hint": "Strelicama gore i dolje biraju se snimke, Enter prelazi na Vrati",
+ "recover.row_tip": "Spremljeno {time}",
+ "recover.row_damaged_tip": "Ne može se vratiti: {reason}",
+ "recover.archive_ask": "Premjestiti ovu snimku u arhivu?",
+ "recover.discard_ask": {
+  "one": "Premjestiti snimku u arhivu? Neće se više nuditi.",
+  "few": "Premjestiti svih # snimke u arhivu? Neće se više nuditi.",
+  "other": "Premjestiti svih # snimki u arhivu? Neće se više nuditi."
+ },
+ "recover.confirm_yes": "Premjesti u arhivu",
+ "recover.confirm_no": "Zadrži snimke"
+}

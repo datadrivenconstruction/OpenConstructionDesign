@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "XLSX хүснэгт руу экспорт: хүрээ",
+ "xlsx_scope.intro": "Ажлын номонд юу орохыг сонгоно уу. Буцааж импортлоход зөвхөн эдгээр элементүүд өөрчлөгдөнө.",
+ "xlsx_scope.base_whole": "Бүх загвар",
+ "xlsx_scope.base_level": "Идэвхтэй түвшин",
+ "xlsx_scope.base_selection": "Сонголт",
+ "xlsx_scope.categories": "Ангилалууд",
+ "xlsx_scope.cat_walls": "хана",
+ "xlsx_scope.cat_openings": "хаалга",
+ "xlsx_scope.cat_rooms": "өрөө",
+ "xlsx_scope.cat_slabs": "дал",
+ "xlsx_scope.cat_curtains": "бүрээс хана",
+ "xlsx_scope.nothing_selected": "Юу ч сонгоогүй: эхлээд элементүүдээ сонгоно уу эсвэл өөр хүрээ сонгоно уу.",
+ "xlsx_scope.no_categories": "Дор хаяж нэг ангилал тэмдэглээрэй.",
+ "xlsx_scope.no_level": "Идэвхтэй түвшин олдсонгүй.",
+ "xlsx_scope.export": "Экспорт",
+ "xlsx_scope.preview_scope": "Экспортлох хүрээ: {scope}. Түүнээс гадуурх элементүүд хэзээ ч өөрчлөгдөхгүй, устахгүй."
+}

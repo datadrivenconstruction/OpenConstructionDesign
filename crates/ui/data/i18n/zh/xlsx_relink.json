@@ -1,0 +1,14 @@
+{
+ "xlsx_relink.title": "已链接的工作簿已被移动或重命名",
+ "xlsx_relink.body": "工作簿“{file}”已不在 {folder} 中。在其中输入的编辑只有在重新链接后才会恢复。",
+ "xlsx_relink.found_one": "在 {folder} 中找到“{file}”：同一项目、同一次导出。是否链接？",
+ "xlsx_relink.found_many": "找到 {n} 个属于本项目且同次导出的工作簿。请选择要链接的一个：",
+ "xlsx_relink.found_none": "其旁边未找到本次导出的工作簿。请查找，或导出新工作簿。",
+ "xlsx_relink.link": "链接“{file}”",
+ "xlsx_relink.find": "查找…",
+ "xlsx_relink.find_title": "查找已链接的工作簿",
+ "xlsx_relink.export_new": "导出新工作簿",
+ "xlsx_relink.close": "关闭",
+ "xlsx_relink.gone": "工作簿“{file}”已不在其文件夹中。在其中输入的编辑只有在重新链接后才会恢复。",
+ "xlsx_relink.found_one_short": "找到“{file}”：同一项目、同一次导出。是否链接？"
+}

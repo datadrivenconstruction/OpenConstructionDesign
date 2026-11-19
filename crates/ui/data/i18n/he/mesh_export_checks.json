@@ -1,0 +1,15 @@
+{
+ "cmd.data.export_step.desc": "שומר את כל המודל או את הבחירה כ-STEP AP214 או AP242: מוצקים עם פנים מדויקות מישוריות, גליליות, חרוטיות, כדוריות, טוריות ו-B-spline, שאר האלמנטים כפנים מישוריות, צבעים, וצומת הרכבה אחד לכל מפלס.",
+ "cmd.data.export_3mf.desc": "שומר את כל המודל או את הבחירה כ-3MF להדפסה: אובייקט אחד לכל אלמנט, צבעים, יחידות, ובדיקה שכל גוף אטום למים.",
+ "fmenu.export.step": "STEP מוצקים מדויקים (.step)",
+ "fmenu.export.3mf": "3MF להדפסה (.3mf)",
+ "mx.schema": "סכמת STEP",
+ "mx.schema.ap214": "AP214 (התמיכה הרחבה ביותר)",
+ "mx.schema.ap242": "AP242",
+ "mx.watertight": "גופים שאינם אטומים למים",
+ "mx.watertight.report": "כתוב אותם ורשום אותם",
+ "mx.watertight.skip": "השמט",
+ "mx.watertight.require": "בטל את הייצוא",
+ "mx.faceted": "{fmt} נשמר: {path} ({exact} מוצקים מדויקים, {n} נכתבו כפנים מישוריות: {first})",
+ "sheets.print.svg": "SVG"
+}

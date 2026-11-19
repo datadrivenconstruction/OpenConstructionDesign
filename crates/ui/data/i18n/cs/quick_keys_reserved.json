@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key} je vyhrazeno ({why}) a nelze jej přiřadit znovu",
+ "quick.keys.res_copy": "kopírovat",
+ "quick.keys.res_paste": "vložit",
+ "quick.keys.res_cut": "vyjmout",
+ "quick.keys.res_undo": "zpět / znovu",
+ "quick.keys.res_save": "uložit",
+ "quick.keys.res_palette": "paleta příkazů",
+ "quick.keys.reserved_conflict": "{key} je již použito pro „{cmd}“. Esc to ponechá tam.",
+ "quick.keys.reserved_swap": "Prohodit",
+ "quick.keys.reserved_take": "Převzít ji",
+ "quick.keys.reserved_keep": "Ponechat",
+ "quick.keys.reserved_os": "Obsazeno systémem:"
+}

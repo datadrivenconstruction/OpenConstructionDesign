@@ -1,0 +1,9 @@
+{
+ "cmd.mass.timeline_family": "Historikk til familie",
+ "cmd.mass.timeline_family.desc": "Lager en komponentfamilie fra byggehistorikken til den valgte formen. Parametrene i historikken blir familieparametere.",
+ "mass_family.done": "Familien {name} er opprettet med {n} parametere",
+ "mass_family.refused": "Ingen familie opprettet: {e}",
+ "mass_family.no_mass": "Velg først en parametrisk form",
+ "mass_family.add_modifier": "Legg til modifikator",
+ "mass_family.needs_faces": "Krever valgte flater: bruk verktøyet på fanen Volum"
+}

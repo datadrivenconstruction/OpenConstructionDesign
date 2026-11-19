@@ -1,0 +1,8 @@
+{
+ "xlsx_idle.idle_title": "No hay cambios que importar",
+ "xlsx_idle.export_name": "Exportar",
+ "xlsx_idle.export_body": "Escribe el modelo en un libro. Edite los valores allí y luego sincronice.",
+ "xlsx_idle.sync_name": "Sincronizar",
+ "xlsx_idle.sync_body": "Vuelve a leer el libro y muestra lo que difiere. El modelo cambia solo cuando aplica.",
+ "xlsx_idle.last_sync": "Última sincronización: {when}"
+}

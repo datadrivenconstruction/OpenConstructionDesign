@@ -1,0 +1,12 @@
+{
+ "curtain_wall.cw.issue.slab": "plaat {id}: {e}",
+ "curtain_wall.cw.issue.body": "kere {id}: {e}",
+ "curtain_wall.cw.added": "Lisatud kardinaseinu: {n}",
+ "curtain_wall.cw.add_failed": "Kardinasein ei valminud: {e}",
+ "curtain_wall.cw.edited_warn": "Kardinasein #{id} muudetud: {w}",
+ "curtain_wall.cw.edited": "Kardinasein #{id} muudetud",
+ "curtain_wall.cw.not_changed": "Ei muudetud: {e}",
+ "curtain_wall.cw.room_edited": "Ruum #{id} muudetud",
+ "curtain_wall.cw.slope_range": "Ei muudetud: kalle on vahemikust väljas",
+ "curtain_wall.cw.slope_set": "Plaat #{id}: kalle {pct}"
+}

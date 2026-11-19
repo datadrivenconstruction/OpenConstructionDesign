@@ -1,0 +1,5 @@
+{
+ "mirror_array.err.count": "数量为 2 到 200 之间的整数：4 3000，或当步长为三位数时输入 4;300",
+ "mirror_array.err.length": "步长或总长必须为正长度，例如 3 000 或 1.2 m",
+ "mirror_array.err.angle": "扫掠为角度（度），不能为零，且最大为 360"
+}

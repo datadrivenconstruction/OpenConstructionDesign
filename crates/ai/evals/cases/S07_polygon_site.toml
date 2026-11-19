@@ -1,0 +1,22 @@
+id = "S07_polygon_site"
+tier = "smoke"
+group = ""
+title = "Free polygon site (R7)"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "Fit a five-storey office building on the plot with corners (0,0), (72,0), (80,30), (50,55) and (5,40) in metres, keeping 4 m from every plot edge. Rooms along all facades, flat roof. Build it."
+
+[[oracle.count]]
+spec = "level"
+min = 5.0
+
+[[oracle.count]]
+spec = "room"
+min = 30.0
+
+[[oracle.count]]
+spec = "level"
+min = 5.0
+max = 6.0

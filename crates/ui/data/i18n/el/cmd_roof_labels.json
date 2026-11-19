@@ -1,0 +1,11 @@
+{
+ "cmd.arch.roof_gable.short": "Αετωματική",
+ "cmd.arch.roof_hip.short": "Τετράπλευρη",
+ "cmd.arch.roof_shed.short": "Μονόριχτη",
+ "cmd.arch.roof_mansard.short": "Μανσάρδα",
+ "cmd.arch.roof_gambrel.short": "Καμπυλόσχημη",
+ "cmd.arch.roof_barrel.short": "Βαρελωτή",
+ "cmd.arch.roof_edges.short": "Άκρα στέγης",
+ "cmd.arch.roof_opening.short": "Άνοιγμα",
+ "cmd.mass.roof_by_face.short": "Από έδρα"
+}

@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "Họ mới",
+ "family_editor.open_tip": "Mở họ hoặc bản nháp",
+ "family_editor.close_named": "Đóng {name}",
+ "family_editor.unsaved": "Thay đổi chưa lưu",
+ "family_editor.search": "Tìm kiếm",
+ "family_editor.nothing": "Không tìm thấy",
+ "family_editor.sec_families": "Họ trong dự án",
+ "family_editor.sec_drafts": "Bản nháp",
+ "family_editor.cap_category": "Danh mục",
+ "family_editor.cap_host": "Phần chủ",
+ "family_editor.cap_type": "Loại xem trước"
+}

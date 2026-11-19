@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "บันทึกอัตโนมัติล้มเหลว การเปลี่ยนแปลงล่าสุดยังไม่ได้รับการป้องกัน {why}",
+ "autosave_status.autosave_open": "การตั้งค่าบันทึกอัตโนมัติ",
+ "autosave_status.autosave_recovered": "บันทึกอัตโนมัติทำงานอีกครั้งแล้ว",
+ "autosave_status.autosave_reason": "เหตุผล: {why}"
+}

@@ -1,0 +1,10 @@
+{
+ "ai.optx.applied": "Opção \"{name}\" aplicada. Desfazer a devolve a rascunho",
+ "ai.optx.missing": "A opção {id} não existe mais",
+ "ai.optx.accepted": "A opção {id} já está aplicada",
+ "ai.optx.not_draft": "A opção {id} foi rejeitada e não pode ser aplicada",
+ "ai.optx.stale": "O modelo mudou depois que a opção {id} foi criada: gere-a novamente primeiro",
+ "ai.optx.bad_recipe": "Não foi possível ler a receita da opção: {e}",
+ "ai.optx.refused": "A opção não foi aplicada ({code}): {reason}",
+ "ai.optx.failed": "A opção não foi aplicada: {e}"
+}

@@ -1,0 +1,13 @@
+{
+ "cmdl.mode_cmd": "Komento",
+ "cmdl.mode_ai": "TI",
+ "cmdl.toggle": "Komennot tai tekoälyavustaja (Ctrl+J)",
+ "cmdl.hint": "Komento tai lyhenne (W, L, M, RO), piste #x;y, @dx;dy, d<kulma. Ctrl+J: kysy tekoälyavustajalta",
+ "cmdl.hint_ai": "Kysy tekoälyavustajalta mallista tai pyydä muutos. Ctrl+J: takaisin komentoihin",
+ "cmdl.sent": "Lähetetty tekoälyavustajalle",
+ "cmdl.failed": "Komentoa «{text}» ei voi suorittaa tässä",
+ "cmdl.no_tool": "Aloita ensin piirtokomento ja kirjoita sitten sen pisteet",
+ "cmdl.unknown": "Ei komentoa «{text}». Ctrl+J lähettää sen tekoälyavustajalle",
+ "cmdl.bad": "Kohdetta «{text}» ei voi lukea: {e}",
+ "cmdl.shape": "«{text}» ei ole piste: kirjoita x;y, #x;y, @dx;dy tai positiivinen etäisyys<kulma"
+}

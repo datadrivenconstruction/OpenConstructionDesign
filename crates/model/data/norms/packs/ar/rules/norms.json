@@ -1,0 +1,424 @@
+{
+ "rules": [
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.18
+   },
+   "unit": "m",
+   "value": 0.18,
+   "text": {
+    "en": "Common stair riser at most 0.18 m",
+    "ru": "Подъём ступени общей лестницы не более 0.18 м"
+   },
+   "source": {
+    "doc": "ar-caba-ce",
+    "clause": "3.4.3.1(b)",
+    "url": "https://documentosboletinoficial.buenosaires.gob.ar/publico/PL-LEY-LCABA-LCBA-6100-18-ANX.pdf",
+    "edition": "2018 (in force 2019; court challenges reported 2024-2025)",
+    "accessed": "2026-11-14",
+    "paraphrase": "Main stair riser between 0.15 and 0.18 m (0.16 m max for accessible stairs in mass-use buildings); 2R+G must be 0.60-0.63 m."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ar.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.26
+   },
+   "unit": "m",
+   "value": 0.26,
+   "text": {
+    "en": "Common stair tread at least 0.26 m",
+    "ru": "Проступь общей лестницы не менее 0.26 м"
+   },
+   "source": {
+    "doc": "ar-caba-ce",
+    "clause": "3.4.3.1(b)",
+    "url": "https://documentosboletinoficial.buenosaires.gob.ar/publico/PL-LEY-LCABA-LCBA-6100-18-ANX.pdf",
+    "edition": "2018 (in force 2019; court challenges reported 2024-2025)",
+    "accessed": "2026-11-14",
+    "paraphrase": "Main stair tread (going) between 0.26 and 0.30 m."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ar.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 1.2
+   },
+   "unit": "m",
+   "value": 1.2,
+   "text": {
+    "en": "Common stair flight width at least 1.2 m",
+    "ru": "Ширина марша общей лестницы не менее 1.2 м"
+   },
+   "source": {
+    "doc": "ar-caba-ce",
+    "clause": "3.4.3.1(d)1",
+    "url": "https://documentosboletinoficial.buenosaires.gob.ar/publico/PL-LEY-LCABA-LCBA-6100-18-ANX.pdf",
+    "edition": "2018 (in force 2019; court challenges reported 2024-2025)",
+    "accessed": "2026-11-14",
+    "paraphrase": "General minimum clear width of a main stair is 1.20 m (1.10 m on narrow lots up to 8.66 m wide)."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ar.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.18
+   },
+   "unit": "m",
+   "value": 0.18,
+   "text": {
+    "en": "Stair riser in a house at most 0.18 m",
+    "ru": "Подъём ступени в доме не более 0.18 м"
+   },
+   "source": {
+    "doc": "ar-caba-ce",
+    "clause": "3.4.3.1(b)",
+    "url": "https://documentosboletinoficial.buenosaires.gob.ar/publico/PL-LEY-LCABA-LCBA-6100-18-ANX.pdf",
+    "edition": "2018 (in force 2019; court challenges reported 2024-2025)",
+    "accessed": "2026-11-14",
+    "paraphrase": "No separate house value found; the main-stair riser range of 0.15-0.18 m applies."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ar.house.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.26
+   },
+   "unit": "m",
+   "value": 0.26,
+   "text": {
+    "en": "Stair tread in a house at least 0.26 m",
+    "ru": "Проступь в доме не менее 0.26 м"
+   },
+   "source": {
+    "doc": "ar-caba-ce",
+    "clause": "3.4.3.1(b)",
+    "url": "https://documentosboletinoficial.buenosaires.gob.ar/publico/PL-LEY-LCABA-LCBA-6100-18-ANX.pdf",
+    "edition": "2018 (in force 2019; court challenges reported 2024-2025)",
+    "accessed": "2026-11-14",
+    "paraphrase": "No separate house value found; the main-stair going range of 0.26-0.30 m applies."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ar.house.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 1.0
+   },
+   "unit": "m",
+   "value": 1.0,
+   "text": {
+    "en": "Stair flight width in a house at least 1.0 m",
+    "ru": "Ширина марша в доме не менее 1.0 м"
+   },
+   "source": {
+    "doc": "ar-caba-ce",
+    "clause": "3.4.3.1(d)1",
+    "url": "https://documentosboletinoficial.buenosaires.gob.ar/publico/PL-LEY-LCABA-LCBA-6100-18-ANX.pdf",
+    "edition": "2018 (in force 2019; court challenges reported 2024-2025)",
+    "accessed": "2026-11-14",
+    "paraphrase": "A stair serving a single dwelling, or a multi-dwelling plot with four or fewer units, needs only 1.00 m clear width."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ar.house.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.6
+   },
+   "unit": "m",
+   "value": 2.6,
+   "text": {
+    "en": "Clear height of habitable rooms at least 2.6 m",
+    "ru": "Высота жилых помещений не менее 2.6 м"
+   },
+   "source": {
+    "doc": "ar-caba-ce",
+    "clause": "3.3.1.2.1 table",
+    "url": "https://documentosboletinoficial.buenosaires.gob.ar/publico/PL-LEY-LCABA-LCBA-6100-18-ANX.pdf",
+    "edition": "2018 (in force 2019; court challenges reported 2024-2025)",
+    "accessed": "2026-11-14",
+    "paraphrase": "First-class (permanent habitation or work) rooms need clear height of 2.60 m regardless of area; service rooms 2.10-2.30 m."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ar.res.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "room_kind": [
+     "office",
+     "meeting"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.6
+   },
+   "unit": "m",
+   "value": 2.6,
+   "text": {
+    "en": "Clear height of work rooms at least 2.6 m",
+    "ru": "Высота рабочих помещений не менее 2.6 м"
+   },
+   "source": {
+    "doc": "ar-caba-ce",
+    "clause": "3.3.1.2.1 table, class 1; class 3 for commercial work rooms",
+    "url": "https://documentosboletinoficial.buenosaires.gob.ar/publico/PL-LEY-LCABA-LCBA-6100-18-ANX.pdf",
+    "edition": "2018 (in force 2019; court challenges reported 2024-2025)",
+    "accessed": "2026-11-14",
+    "paraphrase": "Permanent work rooms are first class at 2.60 m; third-class rooms for commerce and trade need 2.40 m up to 16 m2, 2.60 to 50 m2, 2.80 above."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ar.off.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ],
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "width",
+    "min": 1.2
+   },
+   "unit": "m",
+   "value": 1.2,
+   "text": {
+    "en": "Accessible-route corridor clear width at least 1.2 m",
+    "ru": "Ширина коридора на доступном маршруте не менее 1.2 м"
+   },
+   "source": {
+    "doc": "ar-dec914",
+    "clause": "Annex I, Art. 21 item A.1.4.1 horizontal circulation",
+    "url": "https://boletinoficial.buenosaires.gob.ar/normativaba/norma/45091",
+    "edition": "1997 original text",
+    "accessed": "2026-11-14",
+    "paraphrase": "Horizontal corridors need a minimum side of 1.20 m with 1.50 m widenings every 20 m; exterior routes 1.50 m."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ar.acc.corr"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 30,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 30,
+   "text": {
+    "en": "Travel distance to an exit or stair at most 30 m (residential)",
+    "ru": "Путь до выхода или лестницы не более 30 м (жилые)"
+   },
+   "source": {
+    "doc": "ar-caba-ce",
+    "clause": "3.4.7.6(b)",
+    "url": "https://documentosboletinoficial.buenosaires.gob.ar/publico/PL-LEY-LCABA-LCBA-6100-18-ANX.pdf",
+    "edition": "2018 (in force 2019; court challenges reported 2024-2025)",
+    "accessed": "2026-11-14",
+    "paraphrase": "On upper floors no point may be farther than 30 m from a protected exit stair, halved in basements."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ar.egr.res"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 30,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 30,
+   "text": {
+    "en": "Travel distance to an exit or stair at most 30 m (office)",
+    "ru": "Путь до выхода или лестницы не более 30 м (офисы)"
+   },
+   "source": {
+    "doc": "ar-caba-ce",
+    "clause": "3.4.7.6(b)",
+    "url": "https://documentosboletinoficial.buenosaires.gob.ar/publico/PL-LEY-LCABA-LCBA-6100-18-ANX.pdf",
+    "edition": "2018 (in force 2019; court challenges reported 2024-2025)",
+    "accessed": "2026-11-14",
+    "paraphrase": "The same 30 m limit to a protected exit stair applies to office floors; no separate office value exists."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ar.egr.off"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {},
+   "check": {
+    "kind": "ratio",
+    "per": "element",
+    "cat": "room",
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen"
+    ],
+    "num": "window_area",
+    "den": "area",
+    "min": 0.0667
+   },
+   "unit": "ratio",
+   "value": 0.0667,
+   "text": {
+    "en": "Window area at least 6.67 % of the floor of a habitable room",
+    "ru": "Площадь окон не менее 6.67 % площади пола жилой комнаты"
+   },
+   "source": {
+    "doc": "ar-caba-ce",
+    "clause": "3.3.2.3(a)",
+    "url": "https://documentosboletinoficial.buenosaires.gob.ar/publico/PL-LEY-LCABA-LCBA-6100-18-ANX.pdf",
+    "edition": "2018 (in force 2019; court challenges reported 2024-2025)",
+    "accessed": "2026-11-14",
+    "paraphrase": "Permanent-use rooms need daylight opening area of floor area divided by 15 for a side opening free of cover (divided by 12 under a covered part)."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ar.day"
+  },
+  {
+   "id": "generic.egress.distance",
+   "disabled": true
+  },
+  {
+   "id": "generic.room.daylight",
+   "disabled": true
+  }
+ ]
+}

@@ -1,0 +1,9 @@
+{
+ "snap.quadrant": "Квадрант",
+ "snap.extension": "Продолжение",
+ "snap.parallel": "∥ стене",
+ "snap.tracking_x": "X захваченной точки",
+ "snap.tracking_y": "Y захваченной точки",
+ "snap.tracking_cross": "Пересечение направляющих",
+ "snap.equal_step": "Равный шаг"
+}

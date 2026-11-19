@@ -1,0 +1,32 @@
+# Golden sample of the canonical ddcf 2 text: fmt must return it byte for byte.
+ddcf 2
+family Shelf
+version 1.2.0
+uid 0123456789abcdef0123456789abcdef
+category furniture
+host floor
+ifc IfcFurniture SHELF
+param Width length type 800mm
+param Depth length type 300mm
+param Height length type 1800mm
+param Board length type 20mm
+param Shelves int type = floor(Height / 400mm)
+param Wood material type "Oak"
+limit Width 300mm 2400mm
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Back y = Depth / 2
+type "800x300" Width=800mm, Depth=300mm
+type "1200x400" Width=1200mm, Depth=400mm # wide
+extrude SideL rect(Left, Front, Left + Board, Back) z(0, Height) mat(Wood) show(3d, elev)
+extrude SideR rect(Right - Board, Front, Right, Back) z(0, Height) mat(Wood) show(3d, elev)
+# top board
+extrude Top rect(Left + Board, Front, Right - Board, Back) z(Height - Board, Height) mat(Wood) show(3d, elev)
+symbol rect(Left, Front, Right, Back)
+nest Foot Foot at(0, 0, 0) set(H = 30mm)
+begin
+family Foot
+param H length type 50mm
+extrude Pad rect(-20mm, -20mm, 20mm, 20mm) z(0, H)
+end

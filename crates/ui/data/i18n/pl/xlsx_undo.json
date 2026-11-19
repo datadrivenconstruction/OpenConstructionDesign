@@ -1,0 +1,6 @@
+{
+ "cmd.xlsx.undo_apply": "Cofnij ostatnie zastosowanie z XLSX-a",
+ "xlsx_undo.later": "Nie cofnięto: model edytowano po tym zastosowaniu z XLSX-a. Użyj Ctrl+Z krok po kroku lub panelu Historia.",
+ "xlsx_undo.gone": "Nie ma czego cofnąć: to zastosowanie z XLSX-a jest już cofnięte.",
+ "xlsx_undo.busy": "Najpierw dokończ lub anuluj bieżący rysunek, potem cofnij zastosowanie z XLSX-a."
+}

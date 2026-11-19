@@ -1,0 +1,15 @@
+{
+ "xlw.hd_never": "עדיין לא יוצא",
+ "xlw.hd_now": "ממש עכשיו",
+ "xlw.hd_min": "לפני {n} דק׳",
+ "xlw.hd_hour": "לפני {n} שעות",
+ "xlw.hd_day": "לפני {n} ימים",
+ "xlw.hd_linked": "מקושר",
+ "xlw.hd_watched": "מנוטר",
+ "xlw.hd_stale": "המודל השתנה מאז הייצוא",
+ "xlw.ft_export": "ייצוא",
+ "xlw.ft_review": "בדוק",
+ "xlw.ft_apply": "החל {n} שינויים",
+ "xlw.ft_delete_missing": "מחק חסרים",
+ "xlw.ft_keep_missing_tip": "המחיקה פעילה: רכיבים ללא שורה יימחקו בהחלה. בטל את הסימון כדי לשמור אותם."
+}

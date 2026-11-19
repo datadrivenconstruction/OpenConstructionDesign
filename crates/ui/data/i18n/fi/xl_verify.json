@@ -1,0 +1,9 @@
+{
+ "xl.msg.base_value": "lukutarkistus epäonnistui, vanha työkirja säilytetään: {} ({}) odotettiin '{}', luettiin '{}'",
+ "xl.msg.base_missing": "lukutarkistus epäonnistui, vanha työkirja säilytetään: taulukosta {} puuttuu rivi tunnisteelle {}",
+ "xl.msg.base_extra": "lukutarkistus epäonnistui, vanha työkirja säilytetään: rivi {} ei ole mallissa",
+ "xl.msg.base_refused": "lukutarkistus epäonnistui, vanha työkirja säilytetään: {} ({}) hylättiin: {}",
+ "xl.msg.base_sheet": "lukutarkistus epäonnistui, vanha työkirja säilytetään: taulukko {} puuttuu, on tyhjä tai ei ole luettavissa",
+ "xl.msg.base_newer": "lukutarkistus epäonnistui, vanha työkirja säilytetään: {} solussa ei ole mallin arvoa",
+ "xl.msg.base_unreadable": "lukutarkistus epäonnistui, vanha työkirja säilytetään: uutta työkirjaa ei voi lukea ({})"
+}

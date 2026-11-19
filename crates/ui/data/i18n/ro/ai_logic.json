@@ -1,0 +1,6 @@
+{
+ "ai_toast.toast_not_refreshed": "Aplicat ca pasul de anulare {n} (Ctrl+Z îl anulează), dar vederea nu s-a reîmprospătat. Reîncarcă vederea.",
+ "ai.optx.reload_failed": "Varianta „{name}” este aplicată și salvată, dar vederea nu s-a reîncărcat: {e}",
+ "ai.cmp.stale": "Învechit",
+ "ai.cmp.stale_tip": "Această variantă a fost făcută pe o stare mai veche a modelului. Generează-o din nou ca s-o aplici."
+}

@@ -1,0 +1,103 @@
+{
+ "sources": [
+  {
+   "id": "office-bim-example",
+   "title": "Office BIM standard (example)",
+   "licence": "own",
+   "verified": null
+  },
+  {
+   "id": "sp1.13130",
+   "title": "SP 1.13130.2020 (amend. 1-3, 2025)",
+   "licence": "public-law",
+   "verified": "2026-11-11",
+   "publisher": "EMERCOM of Russia",
+   "edition": "2020, amend. 2 order 681"
+  },
+  {
+   "id": "sp118.13330",
+   "title": "SP 118.13330.2022",
+   "licence": "public-law",
+   "verified": null,
+   "publisher": "Minstroy of Russia"
+  },
+  {
+   "id": "sp59.13330",
+   "title": "SP 59.13330.2020",
+   "licence": "public-law",
+   "verified": "2026-11-14",
+   "publisher": "Minstroy of Russia"
+  },
+  {
+   "id": "sp54.13330",
+   "title": "SP 54.13330.2022",
+   "licence": "public-law",
+   "verified": "2026-11-11",
+   "publisher": "Minstroy of Russia"
+  },
+  {
+   "id": "sanpin1.2.3685",
+   "title": "SanPiN 1.2.3685-21",
+   "licence": "public-law",
+   "verified": null
+  },
+  {
+   "id": "sp50.13330",
+   "title": "SP 50.13330",
+   "licence": "public-law",
+   "verified": null,
+   "publisher": "Minstroy of Russia"
+  },
+  {
+   "id": "gost-r-21.101",
+   "title": "GOST R 21.101-2020",
+   "licence": "copyright-numbers-only",
+   "verified": "2026-11-11",
+   "publisher": "Rosstandart",
+   "edition": "order 282-st 2020-06-23"
+  },
+  {
+   "id": "sp2.13130",
+   "title": "SP 2.13130 Fire resistance of protected objects",
+   "licence": "public-law",
+   "verified": null,
+   "publisher": "EMERCOM",
+   "edition": "2020"
+  },
+  {
+   "id": "sp131.13330",
+   "title": "SP 131.13330.2020 Building climatology",
+   "publisher": "Ministry of Construction of Russia",
+   "edition": "2020",
+   "url": "https://docs.cntd.ru/document/573659326",
+   "licence": "public-law",
+   "verified": null
+  },
+  {
+   "id": "sp60.13330",
+   "title": "SP 60.13330.2020 Heating, ventilation and air conditioning",
+   "publisher": "Ministry of Construction of Russia",
+   "edition": "2020",
+   "url": "https://docs.cntd.ru/document/573697256",
+   "licence": "public-law",
+   "verified": null
+  },
+  {
+   "id": "fz123",
+   "title": "Federal Law 123-FZ Technical Regulation on Fire Safety Requirements (tables 21, 23)",
+   "licence": "public-law",
+   "publisher": "Russian Federation",
+   "edition": "as shown on consultant.ru, 2026",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_78699/",
+   "verified": "2026-11-14"
+  },
+  {
+   "id": "sp51.13330",
+   "title": "SP 51.13330 Protection against noise",
+   "licence": "public-law",
+   "verified": null,
+   "publisher": "Ministry of Construction",
+   "edition": "2011"
+  }
+ ]
+}

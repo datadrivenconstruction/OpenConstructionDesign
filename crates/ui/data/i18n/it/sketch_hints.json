@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "Disegna un contorno chiuso: clicca i punti, poi Invio o Termina per creare",
+ "sketch_hints.sk_finish": "Termina",
+ "sketch_hints.sk_cancel": "Annulla",
+ "sketch_hints.import_warn": "avvisi di controllo modello: {n} (primo: {first})",
+ "sketch_hints.ai.offline.schedule": "Apri la tabella",
+ "sketch_hints.ai.offline.check": "Verifica con le regole",
+ "sketch_hints.ai.offline.warnings": "Mostra avvisi",
+ "cmd.file.publish_pdf": "Pubblica tavole in PDF…",
+ "cmd.file.publish_pdf.desc": "Pubblica le tavole scelte in PDF. Uguale a Esporta tavole in PDF/SVG.",
+ "sketch_hints.verify_none": "Nessun elemento impostato dall'assistente IA nella selezione da verificare",
+ "sketch_hints.contours_none": "Nessun solido topografico nel modello: le curve di livello compaiono quando ne crei uno",
+ "sketch_hints.contours_off": "Curve di livello nascoste",
+ "sketch_hints.contours_on": "Curve di livello visibili"
+}

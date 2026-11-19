@@ -1,0 +1,13 @@
+{
+ "tags.gone": "Märgist enam ei ole",
+ "tags.readonly_wall": "Seinamärgis näitab tüüpi ja seda ei saa siin muuta: muuda seinatüüpi",
+ "tags.readonly_comp": "Komponendi märgis näitab perekonda ja seda ei saa siin muuta: muuda tüüpi",
+ "tags.locked": "Element on lukus: tühista lukustus, et märgist muuta",
+ "tags.done": "Märgise väärtus kirjutatud",
+ "tags.failed": "Märgist ei muudetud: {e}",
+ "tags.dup_door": "{mark} on veel {n} uksel",
+ "tags.dup_window": "{mark} on veel {n} aknal",
+ "tags.dup_room": "{mark} on veel {n} ruumil",
+ "tags.hint_mark": "Märgis",
+ "tags.hint_name": "Ruumi nimi"
+}

@@ -1,0 +1,518 @@
+{
+ "items": [
+  {
+   "key": "stair.risers_per_flight",
+   "value": [
+    3,
+    16
+   ],
+   "unit": "count",
+   "source": "sp1.13130",
+   "clause": "p.4.4.4",
+   "verified": true
+  },
+  {
+   "key": "stair.flight_width_min",
+   "value": 1.2,
+   "unit": "m",
+   "source": "sp1.13130",
+   "clause": "p.4.4.1",
+   "verified": true
+  },
+  {
+   "key": "stair.flight_width_min_over_200",
+   "value": 1.35,
+   "unit": "m",
+   "source": "sp1.13130",
+   "clause": "p.4.4.1",
+   "verified": true
+  },
+  {
+   "key": "stair.tread_min",
+   "value": 0.25,
+   "unit": "m",
+   "source": "sp1.13130",
+   "clause": "4.4.3, tread width of evacuation stairs as a rule not less than 25 cm (external stairs excepted; curved stair narrow part may be 22 cm)",
+   "verified": true,
+   "note": "read 2026-11-14: www.consultant.ru/document/cons_doc_LAW_351940/8a1a4f1894115399acdbf73bfa34c70c66b39e54/; edition of 16.06.2025",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_351940/8a1a4f1894115399acdbf73bfa34c70c66b39e54/",
+   "accessed": "2026-11-14",
+   "paraphrase": "Evacuation stairs: slope normally not steeper than 1:1, tread at least 25 cm, riser between 5 and 22 cm."
+  },
+  {
+   "key": "stair.riser_max",
+   "value": 0.22,
+   "unit": "m",
+   "source": "sp1.13130",
+   "clause": "4.4.3, step height not more than 22 cm and not less than 5 cm",
+   "verified": true,
+   "note": "read 2026-11-14: www.consultant.ru/document/cons_doc_LAW_351940/8a1a4f1894115399acdbf73bfa34c70c66b39e54/; edition of 16.06.2025",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_351940/8a1a4f1894115399acdbf73bfa34c70c66b39e54/",
+   "accessed": "2026-11-14",
+   "paraphrase": "Evacuation stairs: riser must be between 5 and 22 cm."
+  },
+  {
+   "key": "apartment.area_min",
+   "value": [
+    28,
+    44,
+    56,
+    70,
+    84,
+    103
+   ],
+   "unit": "m2",
+   "source": "sp54.13330",
+   "clause": "table 5.1",
+   "verified": true
+  },
+  {
+   "key": "room.low_height_share_max",
+   "value": 0.5,
+   "unit": "ratio",
+   "source": "sp54.13330",
+   "clause": "App. A.2.2",
+   "verified": true
+  },
+  {
+   "key": "room.living_area_min",
+   "value": 16,
+   "unit": "m2",
+   "source": "sp54.13330",
+   "clause": "5.11 (not 5.7; 5.7 covers equipment of service rooms): general living room at least 16 m2 in flats with two or more living rooms, 14 m2 in a one-room flat",
+   "verified": true,
+   "url": "https://base.garant.ru/404976077/",
+   "accessed": "2026-11-14",
+   "paraphrase": "Minimum areas of rooms in a flat: common living room 14 m2 (one-room flat) or 16 m2 (two or more rooms); bedroom 8 m2 (10 for two people); kitchen 8 m2.",
+   "note": "read 2026-11-14: base.garant.ru/404976077/; clause number should be corrected from 5.7 to 5.11; value 16 applies to flats with 2+ rooms"
+  },
+  {
+   "key": "room.bedroom_area_min",
+   "value": 8,
+   "unit": "m2",
+   "source": "sp54.13330",
+   "clause": "5.11 (not 5.7): bedroom at least 8 m2 (10 m2 for two people); attic bedroom may be 7 m2 if the living room is at least 16 m2",
+   "verified": true,
+   "url": "https://base.garant.ru/404976077/",
+   "accessed": "2026-11-14",
+   "paraphrase": "Bedroom minimum 8 m2, or 10 m2 when meant for two people.",
+   "note": "read 2026-11-14: base.garant.ru/404976077/; clause number should be corrected from 5.7 to 5.11"
+  },
+  {
+   "key": "room.kitchen_area_min",
+   "value": 8,
+   "unit": "m2",
+   "source": "sp54.13330",
+   "clause": "5.11 (not 5.7): kitchen at least 8 m2; kitchen zone of a kitchen-dining room 6 m2; kitchen or niche in a one-room flat 5 m2",
+   "verified": true,
+   "url": "https://base.garant.ru/404976077/",
+   "accessed": "2026-11-14",
+   "paraphrase": "Kitchen minimum 8 m2; smaller (5 m2) only for kitchen or kitchen niche in one-room flats; 6 m2 cooking zone in a kitchen-dining room.",
+   "note": "read 2026-11-14: base.garant.ru/404976077/; clause number should be corrected from 5.7 to 5.11"
+  },
+  {
+   "key": "corridor.width_min",
+   "value": 1.4,
+   "unit": "m",
+   "source": "sp1.13130",
+   "clause": "6.1.9 (multi-apartment houses, class F1.3): escape route along a common corridor at least 1.4 m wide up to 40 m between stairs or from a corridor end to a stair, 1.6 m when longer; galleries 1.2 m",
+   "verified": true,
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_512178/",
+   "accessed": "2026-11-14",
+   "paraphrase": "In apartment buildings a common corridor must be at least 1.4 m wide, or 1.6 m where it runs more than 40 m between stairs; galleries at least 1.2 m.",
+   "note": "read 2026-11-14 in SP 1.13130.2020 as amended to 16.06.2025 (consultant.ru LAW_512178, mirror tiflocentre.ru/documents/sp-1-13130-2020.php); SP 54.13330.2022 6.2.2.2 defers corridor width to SP 1.13130; 1.0 m of 4.3.3 is the generic escape path, not the residential common corridor",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   }
+  },
+  {
+   "key": "insolation.hours",
+   "value": [
+    1.5,
+    2.0,
+    2.5
+   ],
+   "unit": "h",
+   "source": "sanpin1.2.3685",
+   "clause": "table 5.58: continuous insolation at least 2.5 h north of 58 deg N, 2 h in 58-48 deg N, 1.5 h south of 48 deg N (for one room of 1-3 room flats); reduced values (2 / 1.5 / 1.5 h) in specified cases",
+   "verified": true,
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_375839/b9ec1a76bba27a3332d31a98cf26f5029c4790b1/",
+   "accessed": "2026-11-14",
+   "paraphrase": "Required uninterrupted sun hours in dwellings by latitude zone: 1.5 h south, 2 h central, 2.5 h north; lower figures allowed for multi-room flats and reconstruction in historic areas.",
+   "note": "read 2026-11-14: www.consultant.ru/document/cons_doc_LAW_375839/b9ec1a76bba27a3332d31a98cf26f5029c4790b1/; edition of 24.12.2025; rules limited to 1 March 2027; array order is south, central, north"
+  },
+  {
+   "key": "room.height_min",
+   "value": 2.5,
+   "unit": "m",
+   "source": "sp54.13330",
+   "clause": "5.12: floor-to-ceiling height of living rooms and kitchens at least 2.5 m, at least 2.7 m in climatic subregions IA, IB, IG, ID and IVA; flat corridors and halls at least 2.1 m",
+   "verified": true,
+   "url": "https://base.garant.ru/404976077/",
+   "accessed": "2026-11-14",
+   "paraphrase": "Living rooms and kitchens need at least 2.5 m ceiling height, 2.7 m in the coldest and hottest climatic subregions; internal corridors and halls at least 2.1 m.",
+   "note": "read 2026-11-14: base.garant.ru/404976077/ (SP 54.13330.2022); clear room height, not storey height; 2.7 only in the listed subregions; key renamed from room.height_clear so it overrides the generic room.height_min",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   }
+  },
+  {
+   "key": "grid.residential",
+   "value": [
+    3.0,
+    3.6,
+    6.0
+   ],
+   "unit": "m",
+   "source": "intl-baseline",
+   "clause": "grid",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14 SP 54.13330.2022 text (garant) and related public copies for a mandatory residential structural grid; none prescribes 3.0/3.6/6.0 m, so no governing clause exists"
+  },
+  {
+   "key": "egress.travel_max",
+   "value": 40.0,
+   "unit": "m",
+   "source": "sp1.13130",
+   "clause": "6.1.8 table 3, F1.3 degree I-II class C0: 40 m between stairs",
+   "verified": true,
+   "note": "read 2026-11-14 on a public mirror: tiflocentre.ru/documents/sp-1-13130-2020.php (edition with amendments 1-3, orders 1203/2023, 681/2024, 502/2025); official hosts refused connections"
+  },
+  {
+   "key": "daylight.window_floor_ratio",
+   "value": 0.125,
+   "unit": "ratio",
+   "source": "sp54.13330",
+   "clause": "7.13, living rooms and kitchens glazed at 1:8 at least",
+   "verified": true,
+   "note": "read 2026-11-14 on a public mirror: tiflocentre.ru/documents/sp_54.13330.2022.php (edition with amendments 1, 2)"
+  },
+  {
+   "key": "door.clear_min.accessible",
+   "value": 0.9,
+   "unit": "m",
+   "source": "sp59.13330",
+   "clause": "6.1.5, wheelchair doors 0.9 m clear in new buildings",
+   "verified": true,
+   "note": "read 2026-11-14 on a public mirror: tiflocentre.ru/documents/sp59-13330-2020.php (edition with amendments 1-4)"
+  },
+  {
+   "key": "accessible.turning_circle",
+   "value": 1.4,
+   "unit": "m",
+   "source": "sp59.13330",
+   "clause": "6.2.2, wheelchair turning space 1.4 m across",
+   "verified": true,
+   "note": "read 2026-11-14 on a public mirror: tiflocentre.ru/documents/sp59-13330-2020.php (edition with amendments 1-4)"
+  },
+  {
+   "key": "corridor.width_min.accessible",
+   "value": 1.8,
+   "unit": "m",
+   "source": "sp59.13330",
+   "clause": "6.2.1, corridors 1.8 m wide, narrower only with passing pockets",
+   "verified": true,
+   "note": "read 2026-11-14 on a public mirror: tiflocentre.ru/documents/sp59-13330-2020.php (edition with amendments 1-4); was 1.5, the ramp landing value of 5.1.16"
+  },
+  {
+   "key": "fire.compartment_area_max",
+   "value": 2500,
+   "unit": "m2",
+   "source": "sp2.13130",
+   "clause": "6.5.1 with table 6.8: multi-apartment residential (class F1.3), fire resistance I or II with class C0: floor area per compartment 2500 m2 (II/C1 2200, III/C0 1800)",
+   "verified": true,
+   "note": "read 2026-11-14: www.consultant.ru/document/cons_doc_LAW_361298/92501180c99e45c79f1841b4b1751416b91a61c7/; edition of 06.11.2025 (order 999); unsprinklered base case",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_361298/92501180c99e45c79f1841b4b1751416b91a61c7/",
+   "accessed": "2026-11-14",
+   "paraphrase": "Residential floor area per fire compartment is read from table 6.8 by fire resistance degree and structural hazard class; degree II and class C0 gives 2500 m2."
+  },
+  {
+   "key": "climate.heating_design_temp",
+   "value": -25.0,
+   "unit": "C",
+   "source": "sp131.13330",
+   "clause": "table 3.1, Moscow, coldest five-day period, probability 0.92",
+   "url": "https://docs.cntd.ru/document/573659326",
+   "accessed": "2026-11-15",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-15: docs.cntd.ru refused the connection; value from secondary summaries for Moscow (-25 to -26 by edition); the project location overrides it"
+  },
+  {
+   "key": "climate.cooling_design_temp",
+   "value": 26.0,
+   "unit": "C",
+   "source": "sp131.13330",
+   "clause": "table 4.1, Moscow, warm period air temperature, probability 0.98",
+   "url": "https://docs.cntd.ru/document/573659326",
+   "accessed": "2026-11-15",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-15: docs.cntd.ru refused the connection; value from secondary summaries for Moscow; the project location overrides it"
+  },
+  {
+   "key": "ventilation.oa_per_person",
+   "value": 60.0,
+   "unit": "m3/h",
+   "source": "sp60.13330",
+   "clause": "appendix K, table K.1, public and office rooms with people present over 2 h",
+   "url": "https://docs.cntd.ru/document/573697256",
+   "accessed": "2026-11-15",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-15: docs.cntd.ru refused the connection; secondary summaries agree on 60 m3/h per person"
+  },
+  {
+   "key": "ventilation.oa_per_area",
+   "value": 3.0,
+   "unit": "m3/h m2",
+   "source": "sp60.13330",
+   "clause": "appendix K, table K.1, living rooms with under 20 m2 per person",
+   "url": "https://docs.cntd.ru/document/573697256",
+   "accessed": "2026-11-15",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-15: docs.cntd.ru refused the connection; secondary summaries agree on 3 m3/h per m2 of living area"
+  },
+  {
+   "key": "egress.occupant_area.office",
+   "value": 6.0,
+   "unit": "m2",
+   "source": "sp1.13130",
+   "clause": "7.13.2 administrative premises, people present counted at one per 6 m2",
+   "verified": true,
+   "url": "https://tiflocentre.ru/documents/sp-1-13130-2020.php",
+   "accessed": "2026-11-14",
+   "paraphrase": "Occupants simultaneously in office rooms are counted from the floor area at one person per 6 m2.",
+   "note": "read 2026-11-14: tiflocentre.ru/documents/sp-1-13130-2020.php (page text via extraction tool); SP 1.13130.2020 with amendments 1-3; area basis = total area of administrative premises"
+  },
+  {
+   "key": "egress.occupant_area.retail",
+   "value": 3.0,
+   "unit": "m2",
+   "source": "sp1.13130",
+   "clause": "7.6.5 shops, sales floor, one person per 3 m2 (markets 1.6 m2)",
+   "verified": true,
+   "url": "https://tiflocentre.ru/documents/sp-1-13130-2020.php",
+   "accessed": "2026-11-14",
+   "paraphrase": "For shops the evacuee count is taken from the sales floor at one person per 3 m2.",
+   "note": "read 2026-11-14: tiflocentre.ru/documents/sp-1-13130-2020.php; SP 1.13130.2020 amend. 1-3; sales floor area; a human re-check of the exact sentence is advisable"
+  },
+  {
+   "key": "egress.occupant_area.assembly",
+   "value": 2.0,
+   "unit": "m2",
+   "source": "sp1.13130",
+   "clause": "7.7.3 dining halls with dance floor, 2 m2 per person (7.4.1 dance halls 1.35)",
+   "verified": false,
+   "url": "https://tiflocentre.ru/documents/sp-1-13130-2020.php",
+   "accessed": "2026-11-14",
+   "paraphrase": "Dining halls with a dance floor are counted at 2 m2 per person; plain dining/meeting rooms were not located.",
+   "note": "unverifiable_free: searched 2026-11-14: tiflocentre.ru SP 1.13130 page via extraction; value is for dance-floor dining only, plain tables/chairs row not found"
+  },
+  {
+   "key": "egress.occupant_area.exercise",
+   "value": 1.35,
+   "unit": "m2",
+   "source": "sp1.13130",
+   "clause": "7.10.1 consumer service premises 1.35 m2 per person (not gym specific)",
+   "verified": false,
+   "url": "https://tiflocentre.ru/documents/sp-1-13130-2020.php",
+   "accessed": "2026-11-14",
+   "paraphrase": "Only a consumer-service premises figure was seen; no gym-specific area per person found.",
+   "note": "unverifiable_free: searched 2026-11-14: tiflocentre.ru SP 1.13130 page; gym row not located, likely not applicable"
+  },
+  {
+   "key": "egress.single_exit_occupants_max",
+   "value": 20,
+   "unit": "count",
+   "source": "sp1.13130",
+   "clause": "4.2.9 single exit allowed for floor <=15 m high, <=300 m2, small occupant count (Ф4.3 listed); two exits above 500 people on a floor per same clause",
+   "verified": false,
+   "url": "https://tiflocentre.ru/documents/sp-1-13130-2020.php",
+   "accessed": "2026-11-14",
+   "paraphrase": "A floor may have one exit only when it is small (about 300 m2, up to 15 m height) and holds few people; the count read was 20 per stair.",
+   "note": "unverifiable_free: searched 2026-11-14: tiflocentre.ru SP 1.13130; extraction read value 20 with 300 m2 and 15 m but wording ambiguous; recheck 4.2.9 by hand"
+  },
+  {
+   "key": "egress.three_exits_occupants",
+   "value": 500,
+   "unit": "count",
+   "source": "sp1.13130",
+   "clause": "4.2.7 / 4.2.9 rooms and floors with 501-1000 people need at least 3 exits",
+   "verified": true,
+   "url": "https://tiflocentre.ru/documents/sp-1-13130-2020.php",
+   "accessed": "2026-11-14",
+   "paraphrase": "More than 500 occupants requires at least three exits, up to 1000.",
+   "note": "read 2026-11-14: tiflocentre.ru/documents/sp-1-13130-2020.php; value is 'above 500'; page text via extraction"
+  },
+  {
+   "key": "egress.four_exits_occupants",
+   "value": 1000,
+   "unit": "count",
+   "source": "sp1.13130",
+   "clause": "4.2.7 / 4.2.9 more than 1000 people need at least 4 exits",
+   "verified": true,
+   "url": "https://tiflocentre.ru/documents/sp-1-13130-2020.php",
+   "accessed": "2026-11-14",
+   "paraphrase": "More than 1000 occupants requires at least four exits.",
+   "note": "read 2026-11-14: tiflocentre.ru/documents/sp-1-13130-2020.php; value is 'above 1000'"
+  },
+  {
+   "key": "egress.exit_width_min",
+   "value": 0.8,
+   "unit": "m",
+   "source": "sp1.13130",
+   "clause": "4.2.19 clear exit width at least 0.8 m (0.6 for small service rooms; 1.2 where 50+ people use the exit)",
+   "verified": true,
+   "url": "https://tiflocentre.ru/documents/sp-1-13130-2020.php",
+   "accessed": "2026-11-14",
+   "paraphrase": "Clear width of an escape door is at least 0.8 m in general, rising to 1.2 m when 50 or more people pass it.",
+   "note": "read 2026-11-14: tiflocentre.ru/documents/sp-1-13130-2020.php; general minimum 0.8, 1.2 for 50+ occupants"
+  },
+  {
+   "key": "egress.exit_separation_ratio",
+   "value": 0.5,
+   "unit": "ratio",
+   "source": "sp1.13130",
+   "clause": "4.2.16 two farthest exits at least half the maximum diagonal of the room apart (corridors 0.4 of length)",
+   "verified": true,
+   "url": "https://tiflocentre.ru/documents/sp-1-13130-2020.php",
+   "accessed": "2026-11-14",
+   "paraphrase": "Nearest edges of the two most remote exits must be at least half the maximum diagonal of the room apart.",
+   "note": "read 2026-11-14: tiflocentre.ru/documents/sp-1-13130-2020.php; corridor variant 0.4 x length"
+  },
+  {
+   "key": "fire.compartment_wall_rating",
+   "value": 150,
+   "unit": "min",
+   "source": "fz123",
+   "clause": "Table 23, walls type 1 (fire wall) REI 150; type 2 REI 45; partitions type 1 EI 45",
+   "verified": true,
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_78699/36dda4551e83122c0d8a96024dd59f4fce906cfb/",
+   "accessed": "2026-11-14",
+   "paraphrase": "A type 1 fire wall has a fire resistance of 150 minutes; type 2 wall is 45 minutes, type 1 partition 45.",
+   "note": "read 2026-11-14: consultant.ru LAW_78699 table 23; federal law 123-FZ; which type a compartment needs comes from SP 2.13130 / SP 4.13130, not read"
+  },
+  {
+   "key": "fire.stair_enclosure_rating",
+   "value": 90,
+   "unit": "min",
+   "source": "fz123",
+   "clause": "Table 21, internal walls of stair enclosures: degree I REI 120, II REI 90, III REI 60, IV REI 45",
+   "verified": true,
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_78699/82621340ca1a9518ffc84bae9a0442c389a93026/",
+   "accessed": "2026-11-14",
+   "paraphrase": "Stair enclosure walls need 90 minutes for a degree II building, 60 for III, 45 for IV, 120 for I.",
+   "note": "read 2026-11-14: consultant.ru LAW_78699 table 21; value assumes degree II mid-rise office; depends on building fire resistance degree, not storeys"
+  },
+  {
+   "key": "fire.stair_enclosure_rating_tall",
+   "value": 120,
+   "unit": "min",
+   "source": "fz123",
+   "clause": "Table 21, degree I REI 120 (tall buildings need degree I)",
+   "verified": true,
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_78699/82621340ca1a9518ffc84bae9a0442c389a93026/",
+   "accessed": "2026-11-14",
+   "paraphrase": "The highest degree I requires 120 minutes for stair enclosure walls.",
+   "note": "read 2026-11-14: consultant.ru LAW_78699 table 21; step is by degree of fire resistance, linkage of degree I to tall buildings not read"
+  },
+  {
+   "key": "envelope.u_wall",
+   "value": 0.32,
+   "unit": "W/m2K",
+   "source": "sp50.13330",
+   "clause": "table 3, required resistance by degree-days, Moscow",
+   "verified": false,
+   "note": "not read against the clause: value recalled from the edition named, an engineer checks it before relying on it",
+   "paraphrase": "For the degree-days of Moscow a dwelling wall needs a resistance near 3.13 m2K/W, U 0.32 W/m2K."
+  },
+  {
+   "key": "envelope.u_roof",
+   "value": 0.21,
+   "unit": "W/m2K",
+   "source": "sp50.13330",
+   "clause": "table 3, required resistance by degree-days, Moscow",
+   "verified": false,
+   "note": "not read against the clause: value recalled from the edition named, an engineer checks it before relying on it",
+   "paraphrase": "For the degree-days of Moscow a roof covering needs a resistance near 4.7 m2K/W, U 0.21 W/m2K."
+  },
+  {
+   "key": "acoustic.rw_party",
+   "value": 52,
+   "unit": "dB",
+   "source": "sp51.13330",
+   "clause": "table 2, walls between flats, comfort category B",
+   "verified": false,
+   "note": "not read against the clause: value recalled from the edition named, an engineer checks it before relying on it",
+   "paraphrase": "Walls and partitions between flats need an airborne sound index Rw of at least 52 dB."
+  },
+  {
+   "key": "acoustic.rw_floor",
+   "value": 52,
+   "unit": "dB",
+   "source": "sp51.13330",
+   "clause": "table 2, floors between flats, comfort category B",
+   "verified": false,
+   "note": "not read against the clause: value recalled from the edition named, an engineer checks it before relying on it",
+   "paraphrase": "Floors between flats need an airborne sound index Rw of at least 52 dB."
+  },
+  {
+   "value": 0.25,
+   "unit": "m",
+   "source": "sp1.13130",
+   "clause": "4.4.3, tread width of evacuation stairs as a rule not less than 25 cm (external stairs excepted; curved stair narrow part may be 22 cm)",
+   "verified": true,
+   "note": "same clause as dim stair.tread_min; read 2026-11-14: www.consultant.ru/document/cons_doc_LAW_351940/8a1a4f1894115399acdbf73bfa34c70c66b39e54/; edition of 16.06.2025",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_351940/8a1a4f1894115399acdbf73bfa34c70c66b39e54/",
+   "accessed": "2026-11-14",
+   "key": "stair.going_min"
+  },
+  {
+   "key": "building.class5_height",
+   "na": true,
+   "value": null,
+   "unit": "m",
+   "source": "sp2.13130",
+   "verified": false,
+   "note": "na: buildings are classed by fire-resistance degree and functional fire hazard with height limits per class, not by a 13 m class",
+   "text": {
+    "en": "No 13 m building class.",
+    "ru": "Нет класса здания 13 м: классы по степени огнестойкости и функциональной пожарной опасности."
+   }
+  },
+  {
+   "key": "area.factor.loggia",
+   "value": 0.5,
+   "unit": "ratio",
+   "source": "sp54.13330",
+   "clause": "dwelling total area, loggia coefficient",
+   "verified": false,
+   "note": "unverifiable_free: not opened for this key; the coefficient is recalled from the apartment total-area rule of the document, check the clause before relying on it",
+   "paraphrase": "A loggia counts in the total area of a dwelling at half of its area."
+  },
+  {
+   "key": "area.factor.balcony",
+   "value": 0.3,
+   "unit": "ratio",
+   "source": "sp54.13330",
+   "clause": "dwelling total area, balcony coefficient",
+   "verified": false,
+   "note": "unverifiable_free: not opened for this key; recalled from the same total-area rule, check the clause before relying on it",
+   "paraphrase": "A balcony counts in the total area of a dwelling at three tenths of its area."
+  },
+  {
+   "key": "area.factor.terrace",
+   "value": 0.3,
+   "unit": "ratio",
+   "source": "sp54.13330",
+   "clause": "dwelling total area, terrace coefficient",
+   "verified": false,
+   "note": "unverifiable_free: not opened for this key; recalled from the same total-area rule, check the clause before relying on it",
+   "paraphrase": "A terrace counts in the total area of a dwelling at three tenths of its area."
+  }
+ ]
+}

@@ -1,0 +1,6 @@
+{
+ "sel_filter.flt.all_cats": "Toutes les catégories",
+ "sel_filter.flt.in_sel": "Dans la sélection",
+ "sel_filter.flt.none": "Cochez au moins une catégorie, sinon la sélection serait vidée",
+ "sel_filter.tg.none": "Cochez au moins une catégorie à étiqueter"
+}

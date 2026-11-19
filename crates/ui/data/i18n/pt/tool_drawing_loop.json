@@ -1,0 +1,4 @@
+{
+ "tool.err.drawing_open": "As linhas do desenho em volta deste ponto não fecham num ciclo",
+ "tool.err.drawing_crossing": "O ciclo de linhas do desenho em volta deste ponto cruza-se a si próprio"
+}

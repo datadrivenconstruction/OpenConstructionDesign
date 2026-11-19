@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "แผ่นก่อนหน้า (Page Up)",
+ "sheets.print.next": "แผ่นถัดไป (Page Down)",
+ "sheets.print.fit": "พอดีหน้า (ดับเบิลคลิก)",
+ "sheets.print.no_sheets": "ไม่มีแผ่นให้แสดงตัวอย่าง",
+ "sheets.print.building": "กำลังสร้างหน้า…",
+ "sheets.print.stop_build": "หยุด",
+ "sheets.print.build_stopped": "หยุดการสร้างหน้าแล้ว",
+ "sheets.print.retry": "สร้างอีกครั้ง",
+ "sheets.print.build_failed": "ไม่สามารถสร้างตัวอย่างได้"
+}

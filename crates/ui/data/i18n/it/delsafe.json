@@ -1,0 +1,6 @@
+{
+ "delsafe.ring.opening_shape": "Il contorno di un'apertura si incrocerebbe o collasserebbe",
+ "delsafe.ring.opening_boundary": "Un'apertura attraverserebbe o toccherebbe il contorno esterno",
+ "delsafe.ring.openings_overlap": "Le aperture si sovrapporrebbero o si toccherebbero",
+ "xl.msg.delsafe_instance_param_on_types": "il parametro '{}' è un parametro di istanza; modificalo nel foglio degli elementi, non applicato"
+}

@@ -1,0 +1,4 @@
+{
+ "elem.spreadsheet.applied": "Importado de uma planilha: {what}",
+ "elem.spreadsheet.failed": "Falha na importação de uma planilha: {e}"
+}

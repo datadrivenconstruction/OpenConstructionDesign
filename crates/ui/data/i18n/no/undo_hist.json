@@ -1,0 +1,8 @@
+{
+ "undo.undone": "Angret: {what}",
+ "undo.redone": "Gjort om: {what}",
+ "undo.action.edit.redo": "Gjør om",
+ "undo.action.edit.undo": "Angre",
+ "hdr.unsaved": "Ulagrede endringer",
+ "hdr.file_menu": "Filmeny"
+}

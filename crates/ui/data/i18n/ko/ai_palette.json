@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "AI에 질문: {q}",
+ "ai.palette.connect": "질문하려면 AI를 연결하세요",
+ "ai.palette.draft.apply": "초안 적용 ({n})",
+ "ai.palette.draft.reject": "초안 거부",
+ "ai.palette.draft.next": "다음 초안 변경",
+ "ai.palette.draft.show": "뷰에서 초안 보기",
+ "cmd.ai.next_change": "다음 초안 변경",
+ "cmd.ai.next_change.desc": "뷰를 초안이 바꾸는 다음 요소로 옮깁니다.",
+ "cmd.ai.show_draft": "뷰에서 AI 초안 보기",
+ "cmd.ai.show_draft.desc": "뷰를 초안이 바꾸는 모든 것에 맞춥니다."
+}

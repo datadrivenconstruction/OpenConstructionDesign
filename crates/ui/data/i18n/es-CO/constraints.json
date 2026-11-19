@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "Mantiene este muro con su longitud actual en cada edición",
+ "constraints.con.tip.lock_dist": "Mantiene la distancia entre los dos muros en cada edición",
+ "constraints.con.tip.equal": "Mantiene iguales las separaciones entre los muros seleccionados",
+ "constraints.con.tip.align": "Mantiene ambos muros en una línea",
+ "constraints.con.tip.parallel": "Mantiene los muros paralelos",
+ "constraints.con.tip.perp": "Mantiene los muros en ángulo recto",
+ "constraints.con.tip.align_grid": "Mantiene el muro en la línea de eje más cercana",
+ "constraints.con.tip.lock_dist_grid": "Mantiene la distancia del muro a la línea de eje más cercana",
+ "constraints.con.tip.level_gap": "Mantiene la separación entre los niveles",
+ "constraints.con.tip.top_to_level": "Mantiene la parte superior del muro en el nivel superior"
+}

@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "{n} cellen geplakt",
+ "sched_edit.pasted_skipped": "{n} cellen geplakt, {k} overgeslagen: {why}",
+ "sched_edit.filled": "{n} cellen ingevuld",
+ "sched_edit.filled_skipped": "{n} cellen ingevuld, {k} overgeslagen: {why}",
+ "sched_edit.why_ro": "{n} alleen-lezen",
+ "sched_edit.why_bad": "{n} ongeldige waarden",
+ "sched_edit.no_cell": "Klik eerst op een cel in de lijst",
+ "sched_edit.nothing": "Niets om te schrijven",
+ "sched_edit.not_refreshed": "Geschreven, de weergave is niet ververst: {e}",
+ "sched_edit.failed": "niet gewijzigd: {e}",
+ "sched_edit.no_changes": "Geen wijzigingen: {u} cellen hebben deze waarden al",
+ "sched_edit.same_tail": ", {u} al gelijk"
+}

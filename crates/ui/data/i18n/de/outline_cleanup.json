@@ -1,0 +1,15 @@
+{
+ "cmd.ctx.floor.clean_outline": "Umriss bereinigen",
+ "cmd.ctx.floor.clean_outline.desc": "Entfernt schmale Spitzen, an denen der Geschossumriss zu sich selbst zurückläuft. Zeigt zuerst eine Vorschau; ein Rückgängig-Schritt.",
+ "outline_cleanup.title": "Umriss bereinigen",
+ "outline_cleanup.intro": "Der Umriss dieses Geschosses läuft in schmalen Spitzen zu sich selbst zurück: {n}. Die Bereinigung entfernt sie; alles andere bleibt unverändert.",
+ "outline_cleanup.legend_before": "Dicke Linie: der aktuelle Umriss",
+ "outline_cleanup.legend_after": "Dünne Linie: der Umriss nach der Bereinigung",
+ "outline_cleanup.undo": "Dies lässt sich in einem Schritt rückgängig machen.",
+ "outline_cleanup.apply": "Bereinigen",
+ "outline_cleanup.cancel": "Abbrechen",
+ "outline_cleanup.done": "Umriss bereinigt, Spitzen entfernt: {n}",
+ "outline_cleanup.none": "Der Umriss dieses Geschosses hat keine Spitzen",
+ "outline_cleanup.failed": "Der Umriss konnte nicht bereinigt werden",
+ "outline_cleanup.changed": "Der Umriss hat sich seit der Vorschau geändert; nichts wurde geschrieben. Prüfen Sie die neue Vorschau."
+}

@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "บันได",
+ "selcat.railing": "ราวกันตก",
+ "quick.cat.stair": "บันได",
+ "quick.cat.railing": "ราวกันตก",
+ "stair.risers": "ขั้นบันได",
+ "stair.riser": "ความสูงขั้น",
+ "stair.comfort": "2R + T",
+ "stair.tread_auto": "ลูกนอนตามกฎ",
+ "stair.tread_auto_tip": "ปล่อยลูกนอนที่พิมพ์ไว้ แล้วให้กฎ 2R + T กำหนดเอง",
+ "stair.broken": "บันไดนี้ไม่พอดีกับระดับของมัน",
+ "railing.host_stair": "อยู่บนบันได #{id}",
+ "railing.host_path": "ราวกันตกแบบร่าง",
+ "railing.length": "ความยาว",
+ "stair.deleted_with": "พร้อมราวกันตกที่รองรับ {n} ชิ้น"
+}

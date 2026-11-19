@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "Пропущенные строки и ячейки",
+ "xlsx_issues.conflicts_title": "Изменено и в книге, и в модели",
+ "xlsx_issues.missing_title": "В книге нет листа",
+ "xlsx_issues.look_alike_title": "Имя листа не совпадает",
+ "xlsx_issues.mass_title": "Массовое удаление требует подтверждения",
+ "xlsx_issues.sheets_missing": "Листов {sheets} нет в книге (переименованы или удалены); их строки не сравнивались.",
+ "xlsx_issues.keep_model": "Оставить модель",
+ "xlsx_issues.take_book": "Взять из книги",
+ "xlsx_issues.open_book_tip": "Открывает файл в его программе. Модель не меняется; предпросмотр перечитается после сохранения книги."
+}

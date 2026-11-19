@@ -1,0 +1,4 @@
+{
+ "xl.msg.x_formulas_in_column_x_on_sheet_x_replaced_by_values": "{} formler i kolumnen '{}' på bladet '{}' ersattes med värden",
+ "xl.msg.formula_in_a_model_column_not_applied": "formel i en modellkolumn: resultatet tillämpas inte, modellvärdet behålls; skriv ett värde för att ändra det"
+}

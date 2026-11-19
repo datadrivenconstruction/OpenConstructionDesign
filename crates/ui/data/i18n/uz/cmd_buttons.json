@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}, shu qavatda",
+ "cmd_buttons.purge.undo": "O'chirish bitta bekor qilish qadami.",
+ "cmd_buttons.unpin.none": "Tanlangan narsalar orasida mahkamlanganlari yo'q",
+ "cmd_buttons.change_type.none": "Avval devorlarni tanlang: ularning turi bir qadamda o'zgaradi",
+ "cmd_buttons.units.metric": "Birliklar: metrik",
+ "cmd_buttons.units.imperial": "Birliklar: fut va dyuym",
+ "cmd_buttons.units.back": "Qaytish",
+ "cmd_buttons.underlay.on": "Tagqatlam yoqilgan: pastki qavat xira ko'rsatiladi",
+ "cmd_buttons.underlay.off": "Tagqatlam o'chirilgan",
+ "cmd_buttons.underlay.none": "Tagqatlam yoqilgan, lekin pastki qavatda ko'rsatiladigan narsa yo'q",
+ "cmd_buttons.zoom_sel.no_shape": "Tanlovda bu ko'rinishda kadrga olinadigan shakl yo'q",
+ "cmd_buttons.close.base": "Reja va 3D yorliqlar ochiq qoladi; uni yopish uchun kesim, varaq yoki chizma ko'rinishini oching",
+ "tool.equipment": "Jihoz",
+ "hint.equipment.place": "Jihoz: joylashuvni tanlang · Esc — chiqish",
+ "cmd_buttons.table.opened": "Jadval model yonida ochildi",
+ "cmd_buttons.circuits.tip": "Bu modelning elektr zanjirlari ro'yxatini oching"
+}

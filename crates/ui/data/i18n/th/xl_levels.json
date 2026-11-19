@@ -1,0 +1,5 @@
+{
+ "xl.msg.level_name_x_is_already_used": "ชื่อระดับ '{}' ถูกใช้แล้ว",
+ "xl.msg.unreadable_id_elements_without_a_row_not_deleted": "รหัสอ่านไม่ได้: องค์ประกอบที่ไม่มีแถวจะไม่ถูกลบในการนำเข้านี้",
+ "xl.msg.wall_type_name_x_is_already_used": "ชื่อประเภทผนัง '{}' ถูกใช้แล้ว"
+}

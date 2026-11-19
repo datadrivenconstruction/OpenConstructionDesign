@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "Hormigón",
+ "mat.masonry": "Mampostería",
+ "mat.brick": "Ladrillo",
+ "mat.insulation": "Aislamiento",
+ "mat.plaster": "Yeso",
+ "mat.render": "Revestimiento",
+ "mat.gypsum": "Placa de yeso laminado",
+ "mat.glass": "Vidrio",
+ "mat.wood": "Madera",
+ "mat.steel": "Acero",
+ "mat.membrane": "Membrana",
+ "mat.other": "Otro",
+ "warn.cat.wall": "Muro",
+ "warn.cat.slab": "Forjado",
+ "warn.cat.opening": "Hueco",
+ "warn.cat.curtain_wall": "Muro cortina",
+ "td.mat.custom": "Otro…"
+}

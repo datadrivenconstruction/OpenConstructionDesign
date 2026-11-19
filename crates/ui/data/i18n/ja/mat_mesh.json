@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "取り込みメッシュ",
+ "mat_mesh.mesh.none_selected": "3D ビューで取り込みメッシュを選択すると、この材料を設定できます。",
+ "mat_mesh.mesh.current": "最初に選択したメッシュ: {material}",
+ "mat_mesh.mesh.current_none": "最初に選択したメッシュには材料がありません。",
+ "mat_mesh.mesh.assign": "選択した {n} 件に割り当て",
+ "mat_mesh.mesh.assign_tip": "リアルスタイルでは、この材料のテクスチャが選択したメッシュに表示されます",
+ "mat_mesh.mesh.assign_cat": "カテゴリ {category} に割り当て",
+ "mat_mesh.mesh.assign_cat_tip": "独自の材料を持たない、そのカテゴリの取り込みメッシュすべて",
+ "mat_mesh.mesh.clear": "選択をクリア",
+ "mat_mesh.mesh.clear_tip": "選択したメッシュはカテゴリの材料または単色に戻ります",
+ "mat_mesh.mesh.clear_cat": "カテゴリをクリア"
+}

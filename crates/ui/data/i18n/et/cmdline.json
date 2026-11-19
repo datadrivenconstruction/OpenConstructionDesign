@@ -1,0 +1,13 @@
+{
+ "cmdl.mode_cmd": "Käsk",
+ "cmdl.mode_ai": "AI",
+ "cmdl.toggle": "Käsud või AI-abiline (Ctrl+J)",
+ "cmdl.hint": "Käsk või lühend (W, L, M, RO), punkt #x;y, @dx;dy, d<nurk. Ctrl+J: küsi AI-abilisest",
+ "cmdl.hint_ai": "Küsi AI-abilisest mudeli kohta või palu muudatust. Ctrl+J: tagasi käskudesse",
+ "cmdl.sent": "Saadetud AI-abilisele",
+ "cmdl.failed": "Käsku „{text}“ ei saa siin käivitada",
+ "cmdl.no_tool": "Alusta kõigepealt joonistuskäsku, seejärel sisesta selle punktid",
+ "cmdl.unknown": "Käsku „{text}“ ei ole. Ctrl+J saadab selle AI-abilisele",
+ "cmdl.bad": "„{text}“ ei ole loetav: {e}",
+ "cmdl.shape": "„{text}“ ei ole punkt: sisesta x;y, #x;y, @dx;dy või positiivne kaugus<nurk"
+}

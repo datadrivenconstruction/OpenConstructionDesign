@@ -1,0 +1,9 @@
+{
+ "tool.room": "房间",
+ "tool.room.name": "房间",
+ "room_tool.room.name": "名称",
+ "hint.room.place": "在封闭的墙体回路内单击即可创建房间 · Esc — 退出",
+ "tool.err.room_open": "区域未闭合：请闭合墙体回路或添加房间分隔线",
+ "tool.err.room_check": "无法检查此楼层的房间",
+ "tool.err.room_exists": "此回路中已存在房间"
+}

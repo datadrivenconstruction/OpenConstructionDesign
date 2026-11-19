@@ -1,0 +1,36 @@
+[package]
+name = "ddc-ui"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Application shell kit on egui: tokens, icons, commands, ribbon, localization"
+
+[dependencies]
+web-time.workspace = true
+egui = { version = "0.32", default-features = false }
+eframe = { version = "0.32", default-features = false, features = ["wgpu", "accesskit"], optional = true }
+serde = { version = "1", features = ["derive"] }
+serde_json = { workspace = true }
+# SVG rasterizer: Apache-2.0 OR MIT; tiny-skia BSD-3-Clause. No text/system fonts.
+resvg = { version = "0.45", default-features = false }
+# Bidi reordering of right-to-left UI text (MIT OR Apache-2.0).
+unicode-bidi = "0.3"
+
+[dev-dependencies]
+# Glyph lookup in the font-coverage test (MIT OR Apache-2.0, already used by ddc-io).
+ttf-parser = "0.25.1"
+# Naming rules of i18n keys (tests/i18n_names.rs); both already used by ddc-app (MIT OR Apache-2.0).
+regex = "1"
+sha2 = "0.10"
+
+[features]
+default = ["demo"]
+demo = ["dep:eframe"]
+
+[[bin]]
+name = "ddc-ui-demo"
+path = "src/bin/demo.rs"
+required-features = ["demo"]

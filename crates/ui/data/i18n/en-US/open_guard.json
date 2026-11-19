@@ -1,0 +1,11 @@
+{
+ "job.stage.prepare": "Preparing the project",
+ "open_guard.already_open": "{name} is already open",
+ "open_guard.from_cache": "{name}: opened from the import cache",
+ "open_guard.known_project": "{name} was imported before: opening that project",
+ "open_guard.locate": "Locate",
+ "open_guard.mem_low": "Low memory: the mesh budget is halved and the level-of-detail build is paused",
+ "open_guard.mem_low_short": "Low memory: the level-of-detail build is paused until memory frees up",
+ "open_guard.no_window": "The window of that project could not be found",
+ "open_guard.switch_window": "Switch to that window"
+}

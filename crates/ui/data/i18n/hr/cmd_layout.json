@@ -1,0 +1,4 @@
+{
+ "cmd.data.sync_xlsx": "Sinkroniziraj s proračunskom tablicom…",
+ "cmd.data.sync_xlsx.desc": "Ponovno čita povezanu radnu knjigu i prikazuje razlike u odnosu na model."
+}

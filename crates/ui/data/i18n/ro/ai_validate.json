@@ -1,0 +1,14 @@
+{
+ "ai.issue.integrity": "Problemă de integritate: {0} {1}: {2}",
+ "ai.issue.opening_outside": "Golul nu încape în perete: {0}",
+ "ai.issue.opening_overlap": "Golul se suprapune cu golul {0}",
+ "ai.issue.wall_warning": "Perete: {0}",
+ "ai.issue.cut_warning": "Tăiere: {0}",
+ "ai.issue.room_open": "Încăperea nu este închisă",
+ "ai.issue.material_unknown": "Nu există un material numit „{0}” în proiect: Aplică ar adăuga unul nou, cu proprietăți implicite",
+ "ai.issue.material_suggest": "Nu există un material numit „{0}” în proiect: Aplică ar adăuga unul nou. Voiai „{1}”?",
+ "ai.issue.conflict": "Acest element nu poate rula: {0}",
+ "ai.issue.too_large": "{0} elemente s-ar schimba, peste limita de {1}. Este nevoie de permisiune",
+ "ai.issue.truncated": "Lista modificărilor s-a oprit la {0} rânduri: planul este mai mare decât poate afișa cartela. Este nevoie de permisiune",
+ "ai.issue.replan_failed": "Planul nu a putut fi recalculat. Se face o copie nouă a modelului"
+}

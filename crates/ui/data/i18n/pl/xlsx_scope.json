@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "Eksport do XLSX-a: zakres",
+ "xlsx_scope.intro": "Wybierz, co trafi do skoroszytu. Ponowny import zmienia tylko te elementy.",
+ "xlsx_scope.base_whole": "Cały model",
+ "xlsx_scope.base_level": "Aktywny poziom",
+ "xlsx_scope.base_selection": "Zaznaczenie",
+ "xlsx_scope.categories": "Kategorie",
+ "xlsx_scope.cat_walls": "ściany",
+ "xlsx_scope.cat_openings": "drzwi",
+ "xlsx_scope.cat_rooms": "pomieszczenia",
+ "xlsx_scope.cat_slabs": "płyty stropowe",
+ "xlsx_scope.cat_curtains": "ściany osłonowe",
+ "xlsx_scope.nothing_selected": "Nic nie jest zaznaczone: najpierw zaznacz elementy lub wybierz inny zakres.",
+ "xlsx_scope.no_categories": "Zaznacz co najmniej jedną kategorię.",
+ "xlsx_scope.no_level": "Nie znaleziono aktywnego poziomu.",
+ "xlsx_scope.export": "Eksportuj",
+ "xlsx_scope.preview_scope": "Eksportowany zakres: {scope}. Elementy poza nim nigdy nie są zmieniane ani usuwane."
+}

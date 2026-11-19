@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "Далбааны талыг эргүүлэх",
+ "cmd.edit.flip_hand.desc": "Сонгосон хаалга, цонхыг ханын дагуу тусгаж, далбааг нээлтийн нөгөө үзүүр рүү шилжүүлнэ.",
+ "cmd.edit.flip_facing": "Нээлтийн талыг эргүүлэх",
+ "cmd.edit.flip_facing.desc": "Сонгосон хаалга, цонхыг ханын нөгөө тал руу шилжүүлнэ.",
+ "opening_grips.flip_hand": "Далбааг эргүүлэх",
+ "opening_grips.flip_hand.tip": "Далбаа нээлтийн нөгөө үзүүр рүү (Shift+F)",
+ "opening_grips.flip_facing": "Талыг эргүүлэх",
+ "opening_grips.flip_facing.tip": "Ханын нөгөө тал руу нээлт (Shift+G)",
+ "opening_grips.flip.done": "Эргүүлсэн: {n}",
+ "opening_grips.flip.none": "Хаалга эсвэл цонхыг эргүүлэхийн тулд сонгоно уу",
+ "opening_grips.flip.fail": "Эргүүлээгүй: {why}"
+}

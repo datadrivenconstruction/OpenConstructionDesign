@@ -1,0 +1,7 @@
+{
+ "offset_opts.dist_positive": "Udaljenost pomaka mora biti veća od nule; strana slijedi kursor",
+ "offset_opts.count_bad": "Cijeli broj od {min} do {max}",
+ "offset_opts.done_tip": "Završi odabir i pokreni alat",
+ "offset_opts.iso.apply_tip": "Učini privremeno skrivanje trajnim za ovaj pogled",
+ "offset_opts.iso.exit": "Izađi iz privremenog načina"
+}

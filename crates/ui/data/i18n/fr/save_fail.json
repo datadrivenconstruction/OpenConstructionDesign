@@ -1,0 +1,16 @@
+{
+ "save_fail.save_fail.title": "Projet non enregistré",
+ "save_fail.save_fail.kept": "Vos modifications sont toujours ouvertes ici. Rien n'est perdu tant que l'éditeur reste ouvert.",
+ "save_fail.save_fail.details": "Détails",
+ "save_fail.save_fail.copy": "Copier",
+ "save_fail.save_fail.save_as": "Enregistrer sous…",
+ "save_fail.save_fail.retry": "Réessayer",
+ "save_fail.save_fail.close": "Fermer",
+ "save_fail.cause.full": "Le disque est plein. Libérez de l'espace ou enregistrez le projet sur un autre disque.",
+ "save_fail.cause.denied": "Ce dossier ou ce fichier est en lecture seule, ou vous n'avez pas le droit d'écrire ici. Choisissez un autre dossier.",
+ "save_fail.cause.locked": "Le fichier est ouvert dans un autre programme. Fermez-le là-bas, puis appuyez sur Réessayer.",
+ "save_fail.cause.missing": "Le dossier n'existe plus. Choisissez un autre dossier, ou restaurez-le puis appuyez sur Réessayer.",
+ "save_fail.cause.offline": "Le lecteur ou le dossier réseau n'est pas disponible. Reconnectez-le et appuyez sur Réessayer, ou enregistrez ailleurs.",
+ "save_fail.cause.too_long": "Le chemin du fichier est trop long. Choisissez un dossier ou un nom de fichier plus court.",
+ "save_fail.cause.other": "Le fichier n'a pas pu être écrit : {detail}"
+}

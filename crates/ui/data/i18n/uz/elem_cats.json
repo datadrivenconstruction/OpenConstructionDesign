@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "Massani burish yoki aks ettirib bo'lmaydi: uning shakl tarixida aylantirish bosqichi yo'q. Uni siljiting yoki nusxalang, yoki yangi yo'nalishda qaytadan chizing.",
+ "sched_cats.col.name": "Nomi",
+ "sched_cats.col.material": "Material",
+ "sched_cats.col.void": "Bo'shliq",
+ "sched_cats.col.inplace": "Joyida",
+ "sched_cats.col.volume": "Sof hajm",
+ "sched_cats.col.area": "Sirt yuzasi",
+ "sched_cats.col.floor_area": "Qavat yuzasi",
+ "sched_cats.col.thickness": "Qalinlik",
+ "sched_cats.col.points": "Nuqtalar",
+ "elem.toposolid.points": "Geodezik nuqtalar",
+ "elem.toposolid.count": "Nuqtalar",
+ "elem.toposolid.low": "Eng past",
+ "elem.toposolid.high": "Eng yuqori",
+ "elem.toposolid.edit": "Nuqtalarni tahrirlash",
+ "elem.toposolid.edit_tip": "Plandagi geodezik nuqtalarni tanlash, sudrash va sathini o'rnatish",
+ "elem.toposolid.pick_hint": "Tanlash uchun planda nuqtani bosing. Qo'shish yoki olib tashlash uchun yana bosing.",
+ "elem.toposolid.z": "Sath ({n})",
+ "elem.toposolid.mixed": "Tanlangan nuqtalar farq qiladi; yangi qiymat ularning hammasini o'rnatadi.",
+ "elem.toposolid.edit_help": "Nuqtani siljitish uchun sudrang. Sathni o'rnatish uchun qiymat kiriting va Enter bosing. Backspace tanlangan nuqtalarni o'chiradi, Esc chiqadi.",
+ "elem.toposolid.done": "Tayyor"
+}

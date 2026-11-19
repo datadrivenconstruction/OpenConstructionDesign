@@ -1,0 +1,15 @@
+{
+ "mcp.ask.cancel": "取消",
+ "mcp.ask.auto.title": "允许 AI 智能体无需询问即应用更改？",
+ "mcp.ask.auto.body": "已连接的 AI 智能体将立即把更改应用到草稿中，无需等待您确认，因此错误的更改可能在您看到之前已经生效。模型仍只会在您点击“应用”后更改。此设置持续到您将其关闭、关闭编辑器或打开其他模型为止。",
+ "mcp.ask.auto.yes": "无需询问即应用",
+ "mcp.ask.token.title": "签发新令牌？",
+ "mcp.ask.token.body": "当前令牌将立即失效：已连接的 AI 智能体会被断开，并需要新令牌。令牌仅显示一次，请立即复制。",
+ "mcp.ask.token.yes": "新令牌",
+ "mcp.auto.chip": "自动应用已开启",
+ "mcp.auto.chip_tip": "AI 智能体无需询问即可将更改应用到草稿中。本次会话结束时关闭。",
+ "mcp.auto.ask_again": "再次询问",
+ "mcp.token.once": "请立即复制此令牌：之后将不再显示。",
+ "mcp.renewed": "已签发新令牌：旧令牌已失效",
+ "mcp.copied": "已复制"
+}

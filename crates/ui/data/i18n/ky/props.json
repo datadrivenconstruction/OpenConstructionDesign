@@ -1,0 +1,18 @@
+{
+ "props.multi.title": {
+  "one": "# элемент",
+  "other": "# элемент"
+ },
+ "props.multi.cats": {
+  "one": "# категория",
+  "other": "# категория"
+ },
+ "props.multi.varies": {
+  "one": "ар кандай (#)",
+  "other": "ар кандай (#)"
+ },
+ "props.multi.clear": "Тандоону тазалоо",
+ "props.multi.undo": "Кайтаруу",
+ "props.multi.narrowed": "Тандоо: {n} · {name}",
+ "props.multi.chip_tip": "{name}: {n}  ·  Басуу алардын касиеттерин көрсөтөт, Ctrl+басуу ушуларды гана калтырат"
+}

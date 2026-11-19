@@ -1,0 +1,5 @@
+{
+ "xlsx_delete.delete_missing": "Hiányzó sorok törlése a munkafüzetből",
+ "xlsx_delete.not_removed": "nincs eltávolítva: nincsenek összehasonlítási adatok",
+ "xlsx_delete.no_base_reason": "Nem elérhető: a munkafüzetnek nincsenek összehasonlítási adatai, így a hiányzó sor nem különböztethető meg a tévedésből eltávolítottól. Alkalmazáskor semmi sem törlődik."
+}

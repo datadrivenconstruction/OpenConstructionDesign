@@ -1,0 +1,20 @@
+{
+ "api.cmd.move_elements": "Posunout prvky o vzdálenost v metrech",
+ "api.cmd.copy_elements": "Kopírovat prvky o jeden nebo více posunů v metrech",
+ "api.cmd.rotate_elements": "Otočit prvky kolem bodu o úhel ve stupních",
+ "api.cmd.mirror_elements": "Zrcadlit prvky podle osy procházející dvěma body",
+ "api.cmd.scale_elements": "Zvětšit nebo zmenšit prvky vzhledem k bodu podle koeficientu",
+ "api.cmd.array_elements": "Lineární nebo radiální pole prvků",
+ "api.cmd.offset_wall": "Rovnoběžná kopie stěny ve vzdálenosti v metrech",
+ "api.cmd.split_wall": "Rozdělit stěnu na dvě v bodě",
+ "api.cmd.pin_elements": "Připnout nebo odepnout prvky",
+ "api.cmd.flip_openings": "Překlopit stranu závěsu nebo orientaci dveří a oken",
+ "api.cmd.create_level": "Vytvořit podlaží ve výšce v metrech",
+ "api.cmd.edit_level": "Přejmenovat podlaží nebo změnit jeho výšku",
+ "api.cmd.delete_level": "Smazat podlaží",
+ "api.cmd.place_rooms": "Umístit místnost do každé uzavřené oblasti podlaží",
+ "api.cmd.join_elements": "Spojit, rozpojit nebo přepnout spoje geometrie",
+ "api.cmd.place_footings": "Umístit patku pod každý sloup podlaží",
+ "api.cmd.create_terrain": "Vytvořit terén z bodů měření nebo ze šikmé roviny",
+ "api.cmd.script_recipes": "Přečíst stavební bloky skriptů a postupy volných konstrukcí"
+}

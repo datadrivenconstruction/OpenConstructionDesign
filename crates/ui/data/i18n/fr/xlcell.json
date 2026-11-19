@@ -1,0 +1,15 @@
+{
+ "xl.msg.cell_clipped": "le texte a été coupé pour tenir dans la limite de la cellule ; lecture seule, modification non appliquée",
+ "xlcell.status": "Exporté. {count} cellules ont été raccourcies ou laissées vides — voir la fenêtre des détails.",
+ "xlcell.title": "Cellules modifiées par l'export",
+ "xlcell.intro": "Ces cellules n'ont pas pu être écrites telles quelles. La valeur complète reste dans le modèle ; la cellule est verrouillée et ne peut pas être modifiée dans le classeur.",
+ "xlcell.col_sheet": "Feuille",
+ "xlcell.col_row": "Ligne",
+ "xlcell.col_col": "Colonne",
+ "xlcell.col_id": "Id de l'élément",
+ "xlcell.col_what": "Ce qui s'est passé",
+ "xlcell.what_clipped": "Texte coupé à la limite de la cellule",
+ "xlcell.what_blank": "Nombre non fini, cellule laissée vide",
+ "xlcell.more": "… et {count} de plus",
+ "xlcell.close": "Fermer"
+}

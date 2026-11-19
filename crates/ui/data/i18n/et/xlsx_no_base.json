@@ -1,0 +1,6 @@
+{
+ "xlsx_no_base.title": "Sellel töövihikul pole võrdlusandmeid",
+ "xlsx_no_base.detail": "Peidetud võrdlusleht puudub või on rikutud (töövihiku salvestas uuesti teine programm või tehti see käsitsi). Iga erinev lahter asendab mudeli väärtuse; pärast eksporti tehtud mudelimuudatusi ei saa tuvastada. Töövihikust puuduvaid ridu ei kustutata.",
+ "xlsx_no_base.confirm": "Kontrollisin muudatused: asenda mudeli väärtused ({n})",
+ "xlsx_no_base.confirm_first": "Kõigepealt kinnita võrdlusandmeteta töövihiku import"
+}

@@ -1,0 +1,15 @@
+{
+ "mcp.ask.cancel": "Avbryt",
+ "mcp.ask.auto.title": "La AI-agenter bruke endringer uten å spørre?",
+ "mcp.ask.auto.body": "Tilkoblede AI-agenter bruker endringene sine i utkast med en gang, uten å vente på bekreftelsen din, så en feil endring kan havne der før du ser den. Modellen din endres fortsatt bare når du trykker Bruk. Dette varer til du slår det av, lukker editoren eller åpner en annen modell.",
+ "mcp.ask.auto.yes": "Bruk uten å spørre",
+ "mcp.ask.token.title": "Utstede et nytt token?",
+ "mcp.ask.token.body": "Gjeldende token slutter å virke med en gang: tilkoblede AI-agenter kobles fra og må få det nye tokenet. Det vises bare én gang, så kopier det med en gang.",
+ "mcp.ask.token.yes": "Nytt token",
+ "mcp.auto.chip": "Automatisk bruk på",
+ "mcp.auto.chip_tip": "AI-agenter bruker endringer i utkast uten å spørre. Avsluttes med denne økten.",
+ "mcp.auto.ask_again": "Spør igjen",
+ "mcp.token.once": "Kopier dette tokenet nå: det vises ikke igjen.",
+ "mcp.renewed": "Nytt token utstedt: det gamle virker ikke lenger",
+ "mcp.copied": "Kopiert"
+}

@@ -1,0 +1,16 @@
+{
+ "cmd.drawing.to_detail": "Piirustus detaljeiksi",
+ "cmd.drawing.to_detail.desc": "Muuntaa valitut piirustuselementit tai koko tämän kerroksen piirustuksen detaljiviivoiksi, tekstihuomautuksiksi ja alueiksi pohjapiirrokseen. Piirustus säilyy ennallaan.",
+ "detail_items.st.no_drawing": "Tällä kerroksella ei ole piirustusta",
+ "detail_items.st.nothing": "Muunnettavaa ei ole: näkyvillä tasoilla ei ole viivoja, kaaria, tekstejä eikä täyttöjä",
+ "detail_items.st.done": "Detaljikohteita lisätty: viivoja {lines}, tekstejä {texts}, alueita {regions}",
+ "detail_items.st.failed": "Detaljikohteita ei voitu lisätä: {e}",
+ "detail_items.st.warn": "Detaljikohteet lisättiin, mutta näkymää ei voitu päivittää (viivoja {lines}, tekstejä {texts}, alueita {regions}): {e}. Kumoa poistaa ne.",
+ "detail_items.st.bad_view": "Detaljikohteet vaativat pohjapiirros- tai leikkausnäkymän",
+ "detail_items.st.no_transform": "Tässä näkymässä ei ole käytettävissä piirustuksen koordinaatistoa; mitään ei lisätty",
+ "drafting_tools.free.plan_only": "Tämä komento toimii pohjapiirroksen elementeillä; avaa pohjapiirros",
+ "drafting_tools.free.zero": "Kaksi pistettä osuvat yhteen; mitään ei lisätty",
+ "drafting_tools.free.select_first": "Valitse ensin tämän näkymän kohteet, jotka haluat jakaa",
+ "drafting_tools.free.pick_item": "Napsauta tämän näkymän kohdetta merkitäksesi sen",
+ "drafting_tools.free.dim_kind": "Piirustusnäkymässä toimivat vain lineaariset mitoitukset"
+}

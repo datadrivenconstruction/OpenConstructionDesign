@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "o'lchangan {value}, chegara {limit}",
+ "ai_checks.check.cap": "{total} ta topilmadan {shown} tasi ko'rsatilmoqda. Xatolar birinchi: ularni tuzating va qayta ishga tushiring.",
+ "ai_checks.check.run_again": "Qayta ishga tushirish",
+ "ai_checks.check.goto": "Tanlash va yaqinlashtirish",
+ "ai_checks.check.never_title": "Hali tekshirilmagan",
+ "ai_checks.check.never_hint": "Tekshiruvlarni ishga tushiring, natijalar shu yerda chiqadi.",
+ "ai_checks.check.sec.error": "Xatolar",
+ "ai_checks.check.sec.warning": "Ogohlantirishlar",
+ "ai_checks.check.sec.info": "Izohlar"
+}

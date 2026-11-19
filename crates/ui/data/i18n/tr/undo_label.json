@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "Geri al: {what}",
+ "undo_label.redo_what": "Yinele: {what}",
+ "undo_label.undo_none": "Geri alınacak bir şey yok",
+ "undo_label.redo_none": "Yinelenecek bir şey yok"
+}

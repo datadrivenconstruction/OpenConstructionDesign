@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "ওয়ার্কবুক এক্সপোর্টের পর কী ঘটবে",
+ "settings.area_decimals_desc": "ক্ষেত্রফলে দশমিক চিহ্নের পরের অঙ্ক",
+ "settings.volume_decimals_desc": "আয়তনে দশমিক চিহ্নের পরের অঙ্ক",
+ "settings.frac_desc": "ইম্পেরিয়াল দৈর্ঘ্যে ইঞ্চির ক্ষুদ্রতম ভগ্নাংশ",
+ "settings.small_area_desc": "এক বর্গফুটের চেয়ে ছোট ক্ষেত্রফল বর্গইঞ্চিতে দেখান",
+ "settings.sample_desc": "বর্তমান পছন্দে সংখ্যাগুলো কেমন দেখায়",
+ "autosave.title_desc": "খোলা প্রকল্পের একটি পুনরুদ্ধার কপি রাখুন",
+ "autosave.interval_desc": "পুনরুদ্ধার কপির মধ্যের সময়",
+ "autosave.keep_desc": "পুরোনো পুনরুদ্ধার কপি মুছে ফেলা হয়",
+ "autosave.folder_desc": "খালি মানে ডিফল্ট ফোল্ডার",
+ "autosave.remind_desc": "যে প্রকল্পের এখনো ফাইল নেই তা সংরক্ষণের অনুস্মারক",
+ "settings.backend_desc": "ব্যবহৃত গ্রাফিক্স অ্যাডাপ্টার",
+ "settings.news_desc": "এই সংস্করণে কী বদলেছে",
+ "settings.assoc_default_desc": "মডেল ফাইলের জন্য এই অ্যাপটিকে ডিফল্ট করুন",
+ "settings.data_dir_desc": "ক্যাশ, পুনরুদ্ধার কপি ও লগ এখানে থাকে।"
+}

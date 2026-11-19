@@ -1,0 +1,250 @@
+{
+ "items": [
+  {
+   "key": "egress.travel_max",
+   "value": 20,
+   "unit": "m",
+   "source": "tr-fire",
+   "clause": "Art. 48 para 2",
+   "url": "https://www.aile.gov.tr/eyhgm/mevzuat/ulusal-mevzuat/yonetmelikler/binalarin-yangindan-korunmasi-hakkinda-yonetmelik/",
+   "accessed": "2026-11-14",
+   "paraphrase": "In dwellings above four storeys the run from any point inside a unit to its exit door is capped at 20 m, or 30 m if the unit is sprinklered.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ],
+    "sprinklered": false,
+    "min_floors": 5
+   },
+   "verified": true,
+   "note": "read 2026-11-14; this is the leg inside the dwelling, the annex table has no apartment row"
+  },
+  {
+   "key": "egress.travel_max.office",
+   "value": 45,
+   "unit": "m",
+   "source": "tr-fire",
+   "clause": "Annex Ek-5/B, row for office buildings",
+   "url": "https://www.aile.gov.tr/eyhgm/mevzuat/ulusal-mevzuat/yonetmelikler/binalarin-yangindan-korunmasi-hakkinda-yonetmelik/",
+   "accessed": "2026-11-14",
+   "paraphrase": "Offices: 45 m to an exit with two escape directions and no sprinklers (75 m sprinklered); 15 m (30 m) when only one direction exists.",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "sprinklered": false
+   },
+   "verified": true,
+   "note": "read 2026-11-14 in the raw table; columns are single-direction then two-direction, each unsprinklered then sprinklered"
+  },
+  {
+   "key": "corridor.width_min.accessible",
+   "value": 1.5,
+   "unit": "m",
+   "source": "tr-planli",
+   "clause": "Art. 30 para 1",
+   "url": "https://www.alomaliye.com/wp-content/uploads/2017/07/planli-alanlar-01-07-2026.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Entrance corridor up to the main stair or lift is at least 1.5 m wide in ordinary buildings and 2.2 m in public buildings.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14; this is the entrance corridor, not a full accessible-route rule (that sits in TS 9111, not read)"
+  },
+  {
+   "key": "door.clear_min.accessible",
+   "value": 0.9,
+   "unit": "m",
+   "source": "tr-planli",
+   "clause": "Art. 39 para 1",
+   "url": "https://www.alomaliye.com/wp-content/uploads/2017/07/planli-alanlar-01-07-2026.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Clear door width is at least 0.9 m for ordinary doors and 1.0 m for the entrance door of an independent unit.",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14; general minimum for all buildings in planned areas, not an accessibility-only clause"
+  },
+  {
+   "key": "accessible.turning_circle",
+   "value": 1.5,
+   "unit": "m",
+   "source": "tr-ts9111",
+   "clause": "not read",
+   "url": "https://www.tse.org.tr",
+   "accessed": "2026-11-14",
+   "paraphrase": "Turkish accessibility standard uses a 1.5 m turning space for wheelchairs.",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: web search (Turkish) for TS 9111 turning diameter; the standard is sold by TSE, only secondary guides and a tourism communique mirror repeat 150 cm; not read in the primary text"
+  },
+  {
+   "key": "ramp.slope_max",
+   "value": 0.0833,
+   "unit": "ratio",
+   "source": "tr-planli",
+   "clause": "Art. 30 para 12",
+   "url": "https://www.alomaliye.com/wp-content/uploads/2017/07/planli-alanlar-01-07-2026.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Ramp slope is 1:12 for a rise up to 15 cm, then flatter: 1:14 to 50 cm, 1:16 to 100 cm, 1:20 above.",
+   "verified": true,
+   "note": "read 2026-11-14; 1:12 is the steepest case (small rises)"
+  },
+  {
+   "key": "fire.compartment_area_max",
+   "value": 8000,
+   "unit": "m2",
+   "source": "tr-fire",
+   "clause": "Annex Ek-4 and its notes",
+   "url": "https://www.aile.gov.tr/eyhgm/mevzuat/ulusal-mevzuat/yonetmelikler/binalarin-yangindan-korunmasi-hakkinda-yonetmelik/",
+   "accessed": "2026-11-14",
+   "paraphrase": "Office buildings: 8000 m2 per compartment; residential buildings have no limit.",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "sprinklered": false
+   },
+   "verified": true,
+   "note": "read 2026-11-14 in the raw table"
+  },
+  {
+   "key": "fire.compartment_area_max.sprinklered",
+   "value": 16000,
+   "unit": "m2",
+   "source": "tr-fire",
+   "clause": "Annex Ek-4, note 1",
+   "url": "https://www.aile.gov.tr/eyhgm/mevzuat/ulusal-mevzuat/yonetmelikler/binalarin-yangindan-korunmasi-hakkinda-yonetmelik/",
+   "accessed": "2026-11-14",
+   "paraphrase": "With suitable fire control systems (detection, sprinklers, smoke control) the office compartment limit may be doubled.",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "sprinklered": true
+   },
+   "verified": true,
+   "note": "read 2026-11-14; residential stays unlimited"
+  },
+  {
+   "key": "stair.riser_max",
+   "value": 0.16,
+   "unit": "m",
+   "source": "tr-planli",
+   "clause": "Art. 31 para 2 item a",
+   "url": "https://www.alomaliye.com/wp-content/uploads/2017/07/planli-alanlar-01-07-2026.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Riser may not exceed 16 cm in buildings without a lift and 18 cm in buildings with one.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14; value is the no-lift case, 0.18 with lift; escape stairs in the fire regulation (Art. 41 para 7) allow 0.175"
+  },
+  {
+   "key": "stair.tread_min",
+   "value": 0.27,
+   "unit": "m",
+   "source": "tr-planli",
+   "clause": "Art. 31 para 2 item b",
+   "url": "https://www.alomaliye.com/wp-content/uploads/2017/07/planli-alanlar-01-07-2026.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Tread is computed from twice the riser plus the tread being 60 to 64 cm, but never below 27 cm.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14; fire regulation escape stairs: 0.25 m minimum"
+  },
+  {
+   "key": "stair.width_min",
+   "value": 1.2,
+   "unit": "m",
+   "source": "tr-planli",
+   "clause": "Art. 31 para 1 item a",
+   "url": "https://www.alomaliye.com/wp-content/uploads/2017/07/planli-alanlar-01-07-2026.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Common stair flights and landings in housing are at least 1.2 m (1.5 m in other buildings), and not less than the escape width worked out under the fire regulation.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14; offices 1.5 m"
+  },
+  {
+   "key": "stair.width_min.house",
+   "value": 1.0,
+   "unit": "m",
+   "source": "tr-planli",
+   "clause": "Art. 31 para 1 item a",
+   "url": "https://www.alomaliye.com/wp-content/uploads/2017/07/planli-alanlar-01-07-2026.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Stairs inside a single dwelling unit may be as narrow as 1.0 m.",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "room.height_min",
+   "value": 2.6,
+   "unit": "m",
+   "source": "tr-planli",
+   "clause": "Art. 28 para 4",
+   "url": "https://www.alomaliye.com/wp-content/uploads/2017/07/planli-alanlar-01-07-2026.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Occupied storeys need 2.6 m clear height (2.4 m where an aviation limit fixes the storey count); bathrooms, store rooms and passages may drop to 2.2 m.",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "room.height_min.office",
+   "value": 2.6,
+   "unit": "m",
+   "source": "tr-planli",
+   "clause": "Art. 28 para 4",
+   "url": "https://www.alomaliye.com/wp-content/uploads/2017/07/planli-alanlar-01-07-2026.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "The same occupied-storey minimum of 2.6 m applies to offices.",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14"
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "ویوز سمیت شیٹ کی نقل",
+ "cmd.view.sheet_duplicate_title": "شیٹ کی نقل (صرف ٹائٹل بلاک)",
+ "sheets.dup.menu_views": "ویوز سمیت نقل",
+ "sheets.dup.menu_title": "نقل، صرف ٹائٹل بلاک",
+ "sheets.dup.done": "شیٹ {number} بنی {src} سے: {views} ویوز، {sched} شیڈول اور لیجنڈز۔ ریویژنز نقل نہیں ہوتیں؛ شیٹ غیر جاری ہے۔",
+ "sheets.dup.none": "نقل کے لیے شیٹ کھولیں",
+ "sheets.dup.copy": "نقل",
+ "cmd.view.sheet_duplicate.short": "ویوز سمیت نقل",
+ "cmd.view.sheet_duplicate_title.short": "ٹائٹل بلاک کی نقل"
+}

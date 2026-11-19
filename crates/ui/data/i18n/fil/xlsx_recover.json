@@ -1,0 +1,16 @@
+{
+ "xlsx_recover.title": "Naantala ang export sa naka-link na workbook",
+ "xlsx_recover.both": "Huminto ang export sa pagitan ng paglipat ng nakaraang workbook sa gilid at paglalagay ng bago. Walang nawala: kumpleto ang bagong workbook sa {part}, at itinatago ang nakaraan sa {bak}.",
+ "xlsx_recover.part_only": "Huminto ang export bago mailagay ang bagong workbook. Kumpleto ito sa {part}.",
+ "xlsx_recover.bak_only": "Huminto ang export bago handa ang bagong workbook. Itinatago ang nakaraang workbook sa {bak}.",
+ "xlsx_recover.finish": "Tapusin ang naantalang export",
+ "xlsx_recover.restore": "Ibalik ang nakaraang workbook",
+ "xlsx_recover.finished": "Tapos na ang naantalang export: nasa lugar na ang bagong workbook.",
+ "xlsx_recover.finished_kept": "Tapos na ang naantalang export: nasa lugar na ang bagong workbook, at itinatago ang nakaraan sa {bak}.",
+ "xlsx_recover.restored": "Nasa lugar na muli ang nakaraang workbook.",
+ "xlsx_recover.restore_failed": "Hindi maibalik ang nakaraang workbook ({err}). Itinatago ito sa {path}.",
+ "xlsx_recover.not_restored": "Hindi mailagay ang bagong workbook at hindi maibalik ang nakaraan. Walang nawala: itinatago ang nakaraang workbook sa {path}; nag-aalok ang Synchronize na tapusin o ibalik.",
+ "xlsx_recover.finish_failed": "Hindi mailagay ang bagong workbook ({err}). Nananatili ito sa {path}.",
+ "xlsx_recover.dest_back": "May workbook na bumalik sa {path}: walang nailipat.",
+ "xlsx_recover.nothing": "Walang natitirang bahagi ng naantalang export na ililipat."
+}

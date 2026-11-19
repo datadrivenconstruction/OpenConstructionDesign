@@ -1,0 +1,8 @@
+{
+ "undo.undone": "Cofnięto: {what}",
+ "undo.redone": "Ponowiono: {what}",
+ "undo.action.edit.redo": "Ponów",
+ "undo.action.edit.undo": "Cofnij",
+ "hdr.unsaved": "Niezapisane zmiany",
+ "hdr.file_menu": "Menu pliku"
+}

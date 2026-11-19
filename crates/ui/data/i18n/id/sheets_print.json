@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "Lembar sebelumnya (Page Up)",
+ "sheets.print.next": "Lembar berikutnya (Page Down)",
+ "sheets.print.fit": "Sesuaikan halaman (klik dua kali)",
+ "sheets.print.no_sheets": "Tidak ada lembar untuk dipratinjau",
+ "sheets.print.building": "Membuat halaman…",
+ "sheets.print.stop_build": "Hentikan",
+ "sheets.print.build_stopped": "Pembuatan halaman dihentikan",
+ "sheets.print.retry": "Buat ulang",
+ "sheets.print.build_failed": "Pratinjau tidak dapat dibuat"
+}

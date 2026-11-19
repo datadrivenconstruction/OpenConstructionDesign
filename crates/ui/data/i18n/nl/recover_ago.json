@@ -1,0 +1,29 @@
+{
+ "recover.ago_now": "zojuist",
+ "recover.ago_min": {
+  "one": "# min geleden",
+  "other": "# min geleden"
+ },
+ "recover.ago_hour": {
+  "one": "# uur geleden",
+  "other": "# uur geleden"
+ },
+ "recover.ago_yesterday": "gisteren",
+ "recover.ago_day": {
+  "one": "# dag geleden",
+  "other": "# dagen geleden"
+ },
+ "recover.empty": "Geen momentopnamen meer",
+ "recover.empty_hint": "Er is niets om voor dit project te herstellen.",
+ "recover.all_damaged": "Alle momentopnamen zijn beschadigd; geen enkele kan worden hersteld.",
+ "recover.keys_hint": "Omhoog en omlaag kiezen een momentopname, Enter gaat naar Herstellen",
+ "recover.row_tip": "Opgeslagen {time}",
+ "recover.row_damaged_tip": "Kan niet worden hersteld: {reason}",
+ "recover.archive_ask": "Deze momentopname naar het archief verplaatsen?",
+ "recover.discard_ask": {
+  "one": "De momentopname naar het archief verplaatsen? Ze wordt niet opnieuw aangeboden.",
+  "other": "Alle # momentopnamen naar het archief verplaatsen? Ze worden niet opnieuw aangeboden."
+ },
+ "recover.confirm_yes": "Naar archief verplaatsen",
+ "recover.confirm_no": "Momentopnamen bewaren"
+}

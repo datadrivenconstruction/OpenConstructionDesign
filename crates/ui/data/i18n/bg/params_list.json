@@ -1,0 +1,23 @@
+{
+ "params_list.n_params": {
+  "one": "# параметър",
+  "other": "# параметъра"
+ },
+ "params_list.n_values": {
+  "one": "# стойност",
+  "other": "# стойности"
+ },
+ "params_list.n_elements": {
+  "one": "# елемент",
+  "other": "# елемента"
+ },
+ "params_list.exported": "{params} експортирани в {file}",
+ "params_list.export_failed": "Параметрите не са експортирани: {why}",
+ "params_list.open_folder": "Отвори папката",
+ "params_list.delete_tip": "Изтрий параметъра и стойностите му",
+ "params_list.confirm": "Да се изтрие {name} и неговите {values} в {elements}?",
+ "params_list.confirm_btn": "Изтрий",
+ "params_list.cancel": "Отказ",
+ "params_list.deleted": "Параметърът {name} ({values}) е изтрит",
+ "params_list.undo": "Отмени"
+}

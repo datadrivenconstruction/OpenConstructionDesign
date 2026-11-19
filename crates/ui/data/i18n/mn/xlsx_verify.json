@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "Хэрэглэх буцаагдсан: загвар урьдчилсан харагдацтай таарсангүй. {what}",
+ "xlsx_verify.not_written": "{row} өөрчлөгдөөгүй.",
+ "xlsx_verify.lost": "{row} алга болсон.",
+ "xlsx_verify.not_deleted": "{row} устгагдаагүй.",
+ "xlsx_verify.extra_deleted": "{row} устгагдсан, гэвч урьдчилсан харагдац хадгалсан.",
+ "xlsx_verify.created": "{table}: {want}-ийн оронд {got} шинэ.",
+ "xlsx_verify.value": "{row}, {field}: {want} хүлээгдсэн (өмнө нь {old}), {got} авсан.",
+ "xlsx_verify.check_failed": "Үр дүнг шалгаж чадсангүй: {e}",
+ "xlsx_verify.plan_failed": "Хэрэглэх эхлээгүй: загварыг шалгаж чадсангүй ({e}).",
+ "xlsx_verify.take_back_failed": "Алхмыг буцааж чадсангүй ({e}): Буцаах ашиглана уу.",
+ "xlsx_verify.t.wall": "Хана",
+ "xlsx_verify.t.opening": "Нүх",
+ "xlsx_verify.t.room": "Өрөө",
+ "xlsx_verify.t.slab": "Шал",
+ "xlsx_verify.t.level": "Түвшин",
+ "xlsx_verify.t.wall_type": "Ханын төрөл",
+ "xlsx_verify.t.slab_type": "Шалны төрөл",
+ "xlsx_verify.t.col": "Багана",
+ "xlsx_verify.t.beam": "Дам",
+ "xlsx_verify.t.roof": "Дээвэр",
+ "xlsx_verify.t.curtain_wall": "Бүрээс хана"
+}

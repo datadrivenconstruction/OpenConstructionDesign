@@ -1,0 +1,6 @@
+{
+ "delsafe.ring.opening_shape": "Obris otvora bi se sijecao sam sa sobom ili se urušio",
+ "delsafe.ring.opening_boundary": "Otvor bi presijecao ili dodirivao vanjsku granicu",
+ "delsafe.ring.openings_overlap": "Otvori bi se preklapali ili dodirivali",
+ "xl.msg.delsafe_instance_param_on_types": "parametar '{}' je parametar primjerka; uredi ga na listu elemenata, nije primijenjeno"
+}

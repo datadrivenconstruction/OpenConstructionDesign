@@ -1,0 +1,19 @@
+{
+ "ai.plan.apply_updated": "হালনাগাদ প্ল্যান প্রয়োগ করুন",
+ "ai.plan.keys_anywhere": "Ctrl+Enter প্রয়োগ করে এবং Esc অনুরোধ থামায়; প্ল্যান বা 3D ভিউ থেকেও, যদি কোনো লেখার ঘরে টাইপ না হয়।",
+ "ai.plan.rebased": "বর্তমান মডেলের সঙ্গে হালনাগাদ: {what}",
+ "ai.value.bad": "\"{text}\" {name}-এর জন্য বৈধ মান নয়",
+ "ai.value.both": "আপনি {mine} লেখার সময় AI সহকারী এই মান {agent}-এ বদলেছে। কোনটি রাখবেন বাছুন।",
+ "ai.value.choose_first": "আগে কার্ডে আপনার মান বা AI সহকারীর মান বাছুন",
+ "ai.value.elem": "উপাদান {n}: {what}",
+ "ai.value.held": "অনুরোধ শেষ হলে আপনার মান {mine} যোগ হবে",
+ "ai.value.keep_agent": "{agent} রাখুন",
+ "ai.value.lost": "\"{title}\"-এ {what}-এর জন্য আপনার মান {mine} ব্যবহার হয়নি: AI সহকারী কার্ড থেকে সেই মান সরিয়ে দিয়েছে",
+ "ai.value.more": "আরও {n}টি মান: সারিটি বড় করুন",
+ "ai.value.refused": "প্ল্যান এই মান নিতে পারেনি এবং আগেরটি রেখেছে: {why}",
+ "ai.value.refused_next": "অন্য একটি মান লিখুন, অথবা প্রয়োগ থেকে বাদ দিতে আইটেমের টিক খুলুন।",
+ "ai.value.tip": "ড্রাফটে মান সংশোধন করুন; মডেল শুধু প্রয়োগে বদলায়। Enter নিশ্চিত করে, Esc ফেরত আনে।",
+ "ai.value.use_mine": "{mine} ব্যবহার করুন",
+ "ai.value.was": "আগে ছিল {old}",
+ "ai.value.bad_len": "{name}: {why}"
+}

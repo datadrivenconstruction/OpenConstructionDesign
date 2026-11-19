@@ -1,0 +1,8 @@
+{
+ "xlsx_idle.idle_title": "Tidak ada perubahan untuk diimpor",
+ "xlsx_idle.export_name": "Ekspor",
+ "xlsx_idle.export_body": "Menulis model ke buku kerja. Edit nilainya di sana, lalu sinkronkan.",
+ "xlsx_idle.sync_name": "Sinkronkan",
+ "xlsx_idle.sync_body": "Membaca ulang buku kerja dan menampilkan perbedaannya. Model hanya berubah saat Anda menerapkan.",
+ "xlsx_idle.last_sync": "Sinkronisasi terakhir: {when}"
+}

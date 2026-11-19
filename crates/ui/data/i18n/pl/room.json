@@ -1,0 +1,6 @@
+{
+ "geom.length": "Długość",
+ "sched.cat.room_seps": "Separatory pomieszczeń",
+ "room.err.point_leave": "Pomieszczenie {n}: punkt wyszedłby poza swoją granicę",
+ "room.err.point_taken": "Pomieszczenie {n}: punkt trafiłby do pomieszczenia {other}"
+}

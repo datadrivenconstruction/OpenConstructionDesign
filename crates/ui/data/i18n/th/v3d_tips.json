@@ -1,0 +1,8 @@
+{
+ "v3d.proj.to_ortho": "สลับเป็นออร์โธกราฟิก",
+ "v3d.proj.to_persp": "สลับเป็นเปอร์สเปกทีฟ",
+ "v3d.walk.unit.m": "m/s",
+ "v3d.walk.unit.ft": "ฟุต/วินาที",
+ "v3d.temp.show_all": "แสดงทั้งหมด  ·  Esc",
+ "v3d.msg.deleted_named": "ลบมุมมอง 3D {name} แล้ว"
+}

@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key} ist reserviert ({why}) und kann nicht neu zugewiesen werden",
+ "quick.keys.res_copy": "kopieren",
+ "quick.keys.res_paste": "einfügen",
+ "quick.keys.res_cut": "ausschneiden",
+ "quick.keys.res_undo": "rückgängig / wiederholen",
+ "quick.keys.res_save": "speichern",
+ "quick.keys.res_palette": "Befehlspalette",
+ "quick.keys.reserved_conflict": "{key} wird bereits von „{cmd}“ verwendet. Esc behält es dort.",
+ "quick.keys.reserved_swap": "Tauschen",
+ "quick.keys.reserved_take": "Übernehmen",
+ "quick.keys.reserved_keep": "Behalten",
+ "quick.keys.reserved_os": "Vom System belegt:"
+}

@@ -1,0 +1,4 @@
+{
+ "xlsx_write.denied": "Saknar rättigheter att skriva i den här mappen. Arbetsboken ändrades inte. Spara exporten i en annan mapp.",
+ "xlsx_write.save_to": "Spara till…"
+}

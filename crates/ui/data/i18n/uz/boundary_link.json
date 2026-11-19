@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "Butun devor konturini tanlash",
+ "cmd.sketch.link_unlink": "Qirrani devordan ajratish",
+ "cmd.sketch.link_repick": "Qirra devorini qayta tanlash",
+ "cmd.ctx.floor.link_unlink": "Qirralarni devorlardan ajratish",
+ "cmd.ctx.floor.link_accept": "O'chirilgan devorlar qirralarini qabul qilish",
+ "boundary_link.hint.loop": "Devorni bosing: yopiq devorlar zanjiri bog'langan qirralarga aylanadi",
+ "boundary_link.hint.repick": "Qirraga parallel devorni bosing: qirra unga ergashadi",
+ "boundary_link.need_sketch": "Avval chegara eskizini oching",
+ "boundary_link.need_edge": "Eskizning qirrasiga ishora qiling",
+ "boundary_link.need_straight": "Faqat to'g'ri qirra devorga ergasha oladi",
+ "boundary_link.need_floor": "Qavatni tanlang",
+ "boundary_link.no_wall": "Kursor ostida devor yo'q",
+ "boundary_link.not_parallel": "Devor qirraga parallel emas",
+ "boundary_link.not_linked": "Bu qirra devorga bog'lanmagan",
+ "boundary_link.unlinked": "Qirra ajratildi: u joyida qoladi va endi devorga ergashmaydi",
+ "boundary_link.accepted": "Qirralar qabul qilindi: ular joyida oddiy qirralar sifatida qoladi",
+ "boundary_link.failed": "Qo'llab bo'lmadi",
+ "boundary_link.lost": "manba devori o'chirilgan",
+ "boundary_link.blocked": "devorga ergasha olmaydi"
+}

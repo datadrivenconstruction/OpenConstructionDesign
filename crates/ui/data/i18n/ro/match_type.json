@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "Potrivește tipul",
+ "cmd.mod.match_type.short": "Potrivește tipul",
+ "cmd.mod.match_type.desc": "Alegeți un perete, o placă, un stâlp sau o grindă, apoi faceți clic pe altele din aceeași categorie pentru a le da tipul său. Trageți o fereastră pentru a aplica tuturor din interior. Esc renunță la sursă.",
+ "hint.match_type.pick": "Potrivește tipul: alegeți un perete, o placă, un stâlp sau o grindă · Esc — iese",
+ "hint.match_type.apply": "Potrivește tipul: faceți clic pe ținte sau trageți o fereastră · Esc — altă sursă",
+ "match_type.kind.wall": "perete",
+ "match_type.kind.slab": "placă",
+ "match_type.kind.column": "stâlp",
+ "match_type.kind.beam": "grindă",
+ "match_type.refuse.category": "Altă categorie: doar un/o {cat} poate primi acest tip",
+ "match_type.refuse.curtain": "Perete cortină: tipul său nu se potrivește aici",
+ "match_type.refuse.pinned": "Fixat: defixați-l pentru a schimba tipul",
+ "match_type.pick_bad": "Alegeți un perete, o placă, un stâlp sau o grindă ca sursă",
+ "match_type.same": "Deja acest tip",
+ "match_type.done": "Tip aplicat: {n}",
+ "match_type.done_skipped": "Tip aplicat: {n}, omise (fixate sau cortină): {skipped}",
+ "match_type.failed": "Tipul nu a fost modificat: {err}"
+}

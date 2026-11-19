@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "Nume sistem",
+ "mep_browser.add_blocked": "Introdu mai întâi un nume de sistem",
+ "mep_browser.col.insulation": "Izolație",
+ "mep_browser.cancel": "Anulează",
+ "mep_browser.delete.title": "Ștergi acest sistem?",
+ "mep_browser.delete.body": "Sistemul \"{name}\" și rulările sale ({n}) vor fi șterse.",
+ "mep_browser.delete.undo": "Poți anula cu o singură acțiune Anulează.",
+ "mep_browser.delete.confirm": "Șterge sistemul"
+}

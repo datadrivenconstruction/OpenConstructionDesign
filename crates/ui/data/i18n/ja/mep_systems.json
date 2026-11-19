@@ -1,0 +1,21 @@
+{
+ "mep.row.system": "システム",
+ "mep.row.elevation": "始点の標高",
+ "mep.row.slope": "勾配",
+ "mep.row.material": "材質",
+ "mep.row.dev_elevation": "標高",
+ "mep.row.no_system": "そのシステムは存在しません。別のものを選択してください。",
+ "mep.row.no_points": "この配管には点がないため、標高がありません。",
+ "mep.row.system_domain": "システム {system} はこの配管の種類 ({kind}) に対応していません。同じネットワーク種別のシステムを選択してください。",
+ "mep.row.material_pipes": "材質は配管にのみ適用されます。この配管は {kind} です。",
+ "mep.row.no_catalog": "この配管には、この材質のカタログサイズがありません。",
+ "mep.mat.none": "未設定",
+ "mep.mat.steel": "鋼",
+ "mep.mat.copper": "銅",
+ "mep.mat.pvc": "PVC",
+ "mep.mat.pp": "ポリプロピレン",
+ "mep.err.follow_blocked": "接続された配管は、この変更に追従できません: 新しい位置に、その支線を通す余地がありません。機器の移動量を減らすか、先に配管の接続を解除してください。",
+ "mep.err.follow_slope": "接続された配管の勾配を新しい位置で維持できません: システムの最小勾配を下回ってしまいます。高さの移動量を減らすか、先に配管の接続を解除してください。",
+ "mep.err.follow_port_lost": "編集後、この配管が接続していたコネクタが存在しなくなりました。先に配管を移動するか、機器のタイプを維持してください。",
+ "mep.err.follow_device": "この配管は機器のコネクタで終わっており、そこから離れられません。代わりに機器を移動するか、先に配管の接続を解除してください。"
+}

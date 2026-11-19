@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "Επικολλήθηκαν {n} κελιά",
+ "sched_edit.pasted_skipped": "Επικολλήθηκαν {n} κελιά, παραλείφθηκαν {k}: {why}",
+ "sched_edit.filled": "Συμπληρώθηκαν {n} κελιά",
+ "sched_edit.filled_skipped": "Συμπληρώθηκαν {n} κελιά, παραλείφθηκαν {k}: {why}",
+ "sched_edit.why_ro": "{n} μόνο για ανάγνωση",
+ "sched_edit.why_bad": "{n} μη έγκυρη τιμή",
+ "sched_edit.no_cell": "Κάντε πρώτα κλικ σε κελί του πίνακα",
+ "sched_edit.nothing": "Τίποτα για εγγραφή",
+ "sched_edit.not_refreshed": "Εγγράφηκε, η προβολή δεν ανανεώθηκε: {e}",
+ "sched_edit.failed": "δεν άλλαξε: {e}",
+ "sched_edit.no_changes": "Καμία αλλαγή: {u} κελιά έχουν ήδη αυτές τις τιμές",
+ "sched_edit.same_tail": ", {u} ήδη ίδια"
+}

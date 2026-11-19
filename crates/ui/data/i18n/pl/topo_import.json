@@ -1,0 +1,4 @@
+{
+ "topo_import.topo.ambiguous": "{n} wierszy pominięto: liczba czyta się na dwa sposoby (1,250 = 1.25 czy 1250?), a plik nie pokazuje znaku dziesiętnego",
+ "topo_import.topo.grouped": "{n} punktów odczytano z grupami cyfr (1 250,5 lub 1,234.5)"
+}

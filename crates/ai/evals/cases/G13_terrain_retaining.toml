@@ -1,0 +1,31 @@
+id = "G13_terrain_retaining"
+tier = "hard"
+group = "Any geometry"
+title = "Terrain with retaining walls"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "A sloped site 60 x 40 m falling 6 m, terraced in three levels with concrete retaining walls up to 2.5 m, steps between terraces and a ramp."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "toposolid+mesh"
+min = 1.0
+
+[[oracle.count]]
+spec = "wall"
+min = 3.0
+
+[[oracle.count]]
+spec = "stair"
+min = 1.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

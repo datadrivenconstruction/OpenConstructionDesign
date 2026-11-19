@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "Szabad felület",
+ "cmd.mass.panelize": "Panelekre bontás",
+ "cmd.mass.surface_shell": "Tető felületen",
+ "cmd.mass.thicken": "Vastagítás",
+ "hint.mass.freeform.first": "Szabad felület: adja meg az alaprajzi téglalap első sarkát · írjon számot — emelkedés · Esc — mégse",
+ "hint.mass.freeform.next": "Szabad felület: a szemközti sarok · írjon számot — emelkedés · Esc — mégse",
+ "hint.mass.panelize.first": "Panelekre bontás: válasszon szabad felületet 3D-ben · Esc — mégse",
+ "hint.mass.panelize.value": "Panelekre bontás: írja be a panel méretét · Enter — alkalmaz · Esc — mégse",
+ "hint.mass.surface_shell.first": "Tető felületen: válasszon szabad felületet 3D-ben · Esc — mégse",
+ "hint.mass.surface_shell.value": "Tető felületen: írja be a vastagságot · Enter — alkalmaz · Esc — mégse",
+ "hint.mass.thicken.first": "Vastagítás: válasszon szabad felületet 3D-ben · Esc — mégse",
+ "hint.mass.thicken.value": "Vastagítás: írja be a vastagságot (0 — vastagság nélküli felület) · Enter — alkalmaz · Esc — mégse",
+ "status.mass.pick_surface": "Válasszon szabad felületet",
+ "status.mass.freeform_small": "A téglalap túl kicsi: legalább 0,5 m oldalanként",
+ "name.mass.freeform": "Szabad felület",
+ "rgroup.mass_free": "Speciális"
+}

@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "Иштеп жаткан тапшырманын артында кезекте: {n}",
+ "import_queue.queue_full": "Кезек толуп калды, {n} файл кошулган жок",
+ "import_queue.changed": "{name} бул долбоор түзүлгөндөн кийин жаңыртылды. Мурунку долбоор ачылды.",
+ "import_queue.import_again": "Кайра импорттоо",
+ "import_queue.kept": "Аяктаган импорт сакталат",
+ "import_queue.open_it": "Ачуу",
+ "import_queue.sum.head": "импорт: {editable} түзөтүлүүчү (дубалдар {walls}, ачылыштар {open}, кабаттар {slabs}, бөлмөлөр {rooms}, башка {other}), {meshes} меш катары",
+ "import_queue.sum.unchanged": ", өзгөрүүсүз {n}",
+ "import_queue.sum.updated": ", жаңыртылды {n}",
+ "import_queue.sum.missing": ", булакта жок {n} (калды)",
+ "import_queue.sum.skipped": ", өткөрүлүп жиберилди {n}",
+ "import_queue.sum.warnings": ", эскертүүлөр {n}",
+ "import_queue.import_failed": "импорт ийгиликсиз: {e}"
+}

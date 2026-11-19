@@ -1,0 +1,13 @@
+{
+ "tags.gone": "标记已不存在",
+ "tags.readonly_wall": "墙标记显示类型，此处无法编辑：请更改墙类型",
+ "tags.readonly_comp": "构件标记显示族，此处无法编辑：请更改类型",
+ "tags.locked": "图元已锁定：请先解锁再编辑标记",
+ "tags.done": "标记值已写入",
+ "tags.failed": "标记未更改：{e}",
+ "tags.dup_door": "{mark} 也用于 {n} 个门",
+ "tags.dup_window": "{mark} 也用于 {n} 个窗",
+ "tags.dup_room": "{mark} 也用于 {n} 个房间",
+ "tags.hint_mark": "标记",
+ "tags.hint_name": "房间名称"
+}

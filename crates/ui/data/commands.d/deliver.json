@@ -1,0 +1,15 @@
+[
+ {
+  "id": "file.deliver",
+  "icon": "deliver",
+  "mnemonic": "XD",
+  "shortcuts": [],
+  "tab": "data",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M5",
+  "group": "exchange",
+  "priority": 4
+ }
+]

@@ -1,0 +1,21 @@
+{
+ "cmd.help.check_update": "Перевірити оновлення",
+ "update_check.title": "Перевірка оновлень",
+ "update_check.desc": "Вимкнено за замовчуванням. Надсилає на наш сервер лише версію, ОС, архітектуру та тип встановлення. Нічого не завантажує й не встановлює.",
+ "update_check.freq.startup": "Під час запуску",
+ "update_check.freq.daily": "Щодня",
+ "update_check.freq.weekly": "Щотижня",
+ "update_check.freq.never": "Ніколи",
+ "update_check.check_now": "Перевірити зараз",
+ "update_check.dialog.title": "Перевірка оновлень",
+ "update_check.unknown.title": "Не вдалося перевірити оновлення",
+ "update_check.unknown.body": "{e}. Це не означає, що версія актуальна. Спробуйте пізніше.",
+ "update_check.current": "У вас остання версія ({v}).",
+ "update_check.newer": "Доступна версія {v}",
+ "update_check.date": "Випущено {d}",
+ "update_check.unfit": "Ця версія ({v}) старша за мінімально рекомендовану {f}. Рекомендовано оновитися.",
+ "update_check.close": "Закрити",
+ "update_check.open_failed": "Не вдалося відкрити сторінку релізу.",
+ "update_check.toast.newer": "Доступна версія {v}. Довідка > Перевірити оновлення.",
+ "update_check.toast.unfit": "Ця версія ({v}) старша за мінімально рекомендовану {f}."
+}

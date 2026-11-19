@@ -1,0 +1,15 @@
+{
+ "text_style.lbl.text_style": "Stil de text",
+ "text_style.lbl.align": "Aliniere",
+ "text_style.lbl.head": "Vârf de săgeată",
+ "text_style.lbl.line_style": "Stil de linie",
+ "text_style.lbl.fill": "Umplere",
+ "text_style.lbl.detail": "Detaliu",
+ "text_style.lbl.width": "Grosime",
+ "text_style.bad_number": "Introdu un număr de la {min} la {max}",
+ "text_style.tip.next_ring": "Închide acest contur și începe altul în aceeași regiune",
+ "text_style.tip.edit_text": "Editează textul pe loc",
+ "text_style.tip.add_leader": "Adaugă o linie de indicație la acest text",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°"
+}

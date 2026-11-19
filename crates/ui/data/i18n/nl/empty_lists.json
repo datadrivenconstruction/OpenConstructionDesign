@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "Wand tekenen",
+ "empty.totals.action": "Wand tekenen",
+ "empty.schedule.action": "Veld toevoegen",
+ "empty.schedule_filtered.action": "Filter wissen",
+ "empty.library.action": "Zoekopdracht herstellen",
+ "empty.library.load": "Familie laden",
+ "empty.schedule_fields.title": "Geen velden getoond",
+ "empty.schedule_fields.action": "Veld toevoegen",
+ "empty.schedule_fields.hint": "Schakel minstens één veld in om de tabel te zien."
+}

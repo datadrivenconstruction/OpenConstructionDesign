@@ -1,0 +1,11 @@
+{
+ "cmd.ctx.ceiling.clean_outline": "Làm sạch đường viền",
+ "cmd.ctx.ceiling.clean_outline.desc": "Xóa các gai nhọn hẹp nơi đường viền trần quay ngược lại. Hiển thị bản xem trước trước; một bước hoàn tác.",
+ "cmd.ctx.shaft.clean_outline": "Làm sạch đường viền",
+ "cmd.ctx.shaft.clean_outline.desc": "Xóa các gai nhọn hẹp nơi đường viền giếng quay ngược lại. Hiển thị bản xem trước trước; một bước hoàn tác.",
+ "outline_cleanup.intro_ceiling": "Đường viền của trần này quay ngược lại tạo thành các gai nhọn hẹp: {n}. Làm sạch sẽ xóa chúng; mọi thứ khác giữ nguyên.",
+ "outline_cleanup.intro_shaft": "Đường viền của giếng này quay ngược lại tạo thành các gai nhọn hẹp: {n}. Làm sạch sẽ xóa chúng; mọi thứ khác giữ nguyên.",
+ "outline_cleanup.none_ceiling": "Đường viền của trần này không có gai nhọn",
+ "outline_cleanup.none_shaft": "Đường viền của giếng này không có gai nhọn",
+ "outline_cleanup.need_host": "Chọn sàn, trần hoặc giếng"
+}

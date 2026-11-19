@@ -1,0 +1,331 @@
+{
+ "rules": [
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.18
+   },
+   "unit": "m",
+   "value": 0.18,
+   "text": {
+    "en": "Common stair riser at most 0.18 m",
+    "ru": "Подъём ступени общей лестницы не более 0.18 м"
+   },
+   "source": {
+    "doc": "kr-housing-std",
+    "clause": "Art. 16(1) table, row common stairs",
+    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsNm=%EC%A3%BC%ED%83%9D%EA%B1%B4%EC%84%A4%EA%B8%B0%EC%A4%80%20%EB%93%B1%EC%97%90%20%EA%B4%80%ED%95%9C%20%EA%B7%9C%EC%A0%95&joNo=001600000&mode=11",
+    "edition": "as shown on law.go.kr, read 2026-11-14",
+    "accessed": "2026-11-14",
+    "paraphrase": "Common stairs have a riser of at most 18 cm."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "kr.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.26
+   },
+   "unit": "m",
+   "value": 0.26,
+   "text": {
+    "en": "Common stair tread at least 0.26 m",
+    "ru": "Проступь общей лестницы не менее 0.26 м"
+   },
+   "source": {
+    "doc": "kr-housing-std",
+    "clause": "Art. 16(1) table, row common stairs",
+    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsNm=%EC%A3%BC%ED%83%9D%EA%B1%B4%EC%84%A4%EA%B8%B0%EC%A4%80%20%EB%93%B1%EC%97%90%20%EA%B4%80%ED%95%9C%20%EA%B7%9C%EC%A0%95&joNo=001600000&mode=11",
+    "edition": "as shown on law.go.kr, read 2026-11-14",
+    "accessed": "2026-11-14",
+    "paraphrase": "Common stairs have a tread of at least 26 cm."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "kr.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 1.2
+   },
+   "unit": "m",
+   "value": 1.2,
+   "text": {
+    "en": "Common stair flight width at least 1.2 m",
+    "ru": "Ширина марша общей лестницы не менее 1.2 м"
+   },
+   "source": {
+    "doc": "kr-housing-std",
+    "clause": "Art. 16(1) table, row common stairs",
+    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsNm=%EC%A3%BC%ED%83%9D%EA%B1%B4%EC%84%A4%EA%B8%B0%EC%A4%80%20%EB%93%B1%EC%97%90%20%EA%B4%80%ED%95%9C%20%EA%B7%9C%EC%A0%95&joNo=001600000&mode=11",
+    "edition": "as shown on law.go.kr, read 2026-11-14",
+    "accessed": "2026-11-14",
+    "paraphrase": "Common stairs have a clear width of at least 120 cm."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "kr.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.1
+   },
+   "unit": "m",
+   "value": 2.1,
+   "text": {
+    "en": "Clear height of habitable rooms at least 2.1 m",
+    "ru": "Высота жилых помещений не менее 2.1 м"
+   },
+   "source": {
+    "doc": "kr-evac-rule",
+    "clause": "Art. 16(1)",
+    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsNm=%EA%B1%B4%EC%B6%95%EB%AC%BC%EC%9D%98%20%ED%94%BC%EB%82%9C%E3%86%8D%EB%B0%A9%ED%99%94%EA%B5%AC%EC%A1%B0%20%EB%93%B1%EC%9D%98%20%EA%B8%B0%EC%A4%80%EC%97%90%20%EA%B4%80%ED%95%9C%20%EA%B7%9C%EC%B9%99&joNo=001600000&mode=11",
+    "edition": "as shown on law.go.kr, read 2026-11-14",
+    "accessed": "2026-11-14",
+    "paraphrase": "Ceiling of a habitable room is at least 2.1 m, counting beams or the slab underside where no ceiling exists."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "kr.res.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "room_kind": [
+     "office",
+     "meeting"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.1
+   },
+   "unit": "m",
+   "value": 2.1,
+   "text": {
+    "en": "Clear height of work rooms at least 2.1 m",
+    "ru": "Высота рабочих помещений не менее 2.1 м"
+   },
+   "source": {
+    "doc": "kr-evac-rule",
+    "clause": "Art. 16(1) with decree Art. 50",
+    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsNm=%EA%B1%B4%EC%B6%95%EB%AC%BC%EC%9D%98%20%ED%94%BC%EB%82%9C%E3%86%8D%EB%B0%A9%ED%99%94%EA%B5%AC%EC%A1%B0%20%EB%93%B1%EC%9D%98%20%EA%B8%B0%EC%A4%80%EC%97%90%20%EA%B4%80%ED%95%9C%20%EA%B7%9C%EC%B9%99&joNo=001600000&mode=11",
+    "edition": "as shown on law.go.kr, read 2026-11-14",
+    "accessed": "2026-11-14",
+    "paraphrase": "Same 2.1 m ceiling rule applies to offices, which are not in the exempted use list."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "kr.off.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ],
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "width",
+    "min": 1.2
+   },
+   "unit": "m",
+   "value": 1.2,
+   "text": {
+    "en": "Accessible-route corridor clear width at least 1.2 m",
+    "ru": "Ширина коридора на доступном маршруте не менее 1.2 м"
+   },
+   "source": {
+    "doc": "kr-access-rule",
+    "clause": "Annex 1 item 7(a)",
+    "url": "https://www.law.go.kr/LSW//flDownload.do?gubun=&flSeq=135226913&bylClsCd=110201",
+    "edition": "annex amended 2023-12-11",
+    "accessed": "2026-11-14",
+    "paraphrase": "Accessible corridor clear width is at least 1.2 m, and 1.5 m may be used with rooms on both sides."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "kr.acc.corr"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 50,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 50,
+   "text": {
+    "en": "Travel distance to an exit or stair at most 50 m (residential)",
+    "ru": "Путь до выхода или лестницы не более 50 м (жилые)"
+   },
+   "source": {
+    "doc": "kr-bld-decree",
+    "clause": "Art. 34 para 1",
+    "url": "https://elaw.klri.re.kr/kor_service/lawViewMultiContent.do?hseq=69117",
+    "edition": "through Presidential Decree 35082 (2024-12-17)",
+    "accessed": "2026-11-14",
+    "paraphrase": "Walking distance to a direct stair is 30 m generally, raised to 50 m where main structure is fire-resistant or noncombustible; 40 m on floors 16+ of tall apartments."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "kr.egr.res"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 50,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 50,
+   "text": {
+    "en": "Travel distance to an exit or stair at most 50 m (office)",
+    "ru": "Путь до выхода или лестницы не более 50 м (офисы)"
+   },
+   "source": {
+    "doc": "kr-bld-decree",
+    "clause": "Art. 34 para 1",
+    "url": "https://elaw.klri.re.kr/kor_service/lawViewMultiContent.do?hseq=69117",
+    "edition": "through Presidential Decree 35082 (2024-12-17)",
+    "accessed": "2026-11-14",
+    "paraphrase": "Offices of fire-resistant or noncombustible structure use the same 50 m limit."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "kr.egr.off"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {},
+   "check": {
+    "kind": "ratio",
+    "per": "element",
+    "cat": "room",
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen"
+    ],
+    "num": "window_area",
+    "den": "area",
+    "min": 0.1
+   },
+   "unit": "ratio",
+   "value": 0.1,
+   "text": {
+    "en": "Window area at least 10.0 % of the floor of a habitable room",
+    "ru": "Площадь окон не менее 10.0 % площади пола жилой комнаты"
+   },
+   "source": {
+    "doc": "kr-evac-rule",
+    "clause": "Art. 17(1)",
+    "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsNm=%EA%B1%B4%EC%B6%95%EB%AC%BC%EC%9D%98%20%ED%94%BC%EB%82%9C%E3%86%8D%EB%B0%A9%ED%99%94%EA%B5%AC%EC%A1%B0%20%EB%93%B1%EC%9D%98%20%EA%B8%B0%EC%A4%80%EC%97%90%20%EA%B4%80%ED%95%9C%20%EA%B7%9C%EC%B9%99&joNo=001700000&mode=11",
+    "edition": "as shown on law.go.kr, read 2026-11-14",
+    "accessed": "2026-11-14",
+    "paraphrase": "Window area for daylight in a habitable room is at least one tenth of that room's floor area."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "kr.day"
+  },
+  {
+   "id": "generic.egress.distance",
+   "disabled": true
+  },
+  {
+   "id": "generic.room.daylight",
+   "disabled": true
+  }
+ ]
+}

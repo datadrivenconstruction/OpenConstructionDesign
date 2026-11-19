@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "Nie pobrano elewacji {t} ({why}). Nic nie zmieniono",
+ "host_shape.shape.elev_prompt_in": "elewacja, ft-in…",
+ "host_shape.shape.elev_in": "{v} in"
+}

@@ -1,0 +1,45 @@
+{
+ "schema": "gen_bench.v1",
+ "group": "free_form",
+ "spec": {
+  "typology": "office",
+  "name": "Skewed Office",
+  "floors": 5,
+  "roof": {
+   "kind": "shed",
+   "slope": 10
+  },
+  "footprint": {
+   "polygon": [
+    [
+     0,
+     0
+    ],
+    [
+     50,
+     0
+    ],
+    [
+     62,
+     34
+    ],
+    [
+     12,
+     34
+    ]
+   ]
+  }
+ },
+ "adjacency": [
+  [
+   "office",
+   "meeting",
+   1
+  ],
+  [
+   "meeting",
+   "lobby",
+   1
+  ]
+ ]
+}

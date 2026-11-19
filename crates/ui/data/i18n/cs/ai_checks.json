@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "naměřeno {value}, limit {limit}",
+ "ai_checks.check.cap": "Zobrazeno {shown} z {total} nálezů. Chyby jsou první: opravte je a spusťte znovu.",
+ "ai_checks.check.run_again": "Spustit znovu",
+ "ai_checks.check.goto": "Vybrat a přiblížit",
+ "ai_checks.check.never_title": "Zatím nezkontrolováno",
+ "ai_checks.check.never_hint": "Spusťte kontroly a nálezy se zobrazí zde.",
+ "ai_checks.check.sec.error": "Chyby",
+ "ai_checks.check.sec.warning": "Upozornění",
+ "ai_checks.check.sec.info": "Poznámky"
+}

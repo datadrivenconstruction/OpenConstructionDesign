@@ -1,0 +1,7 @@
+{
+ "recover.untitled_note": "Dette projekt er aldrig blevet gemt",
+ "recover.file_missing": "Projektfilen blev ikke fundet",
+ "recover.banner": "Ikke-gemt arbejde fra en tidligere session blev fundet for {name}",
+ "recover.banner_review": "Gennemse",
+ "recover.later_archived": "Udskudt {n} gange: øjebliksbilleder flyttet til arkivet"
+}

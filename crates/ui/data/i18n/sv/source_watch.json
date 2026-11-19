@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "{name} ändrades på disken.",
+ "src.watch.update": "Uppdatera modellen",
+ "src.watch.compare": "Jämför",
+ "src.watch.ignore": "Ignorera den här versionen",
+ "src.watch.missing": "{name}: källfilen hittades inte. Arbetet fortsätter.",
+ "src.watch.locate": "Hitta…",
+ "src.watch.dismiss": "Avfärda",
+ "src.watch.more": "och {n} till källfiler",
+ "src.watch.done": "Uppdaterad från {name}: {updated} ändrade, {kept} fält behållna som redigerade, {conflicts} konflikter, {locked} låsta värden behållna"
+}

@@ -1,0 +1,307 @@
+{
+ "schema": "gen_typology.v1",
+ "name": "plant_hall",
+ "aliases": [
+  "process_hall",
+  "machine_hall",
+  "utility_plant_building"
+ ],
+ "base": "office",
+ "note": "plant hall: a high process hall with pump house, boiler room, switchgear and control room beside it; the equipment, pipes and platforms belong to the plant module, this typology gives the building around them and works out plant briefs from its loads",
+ "brief": {
+  "name": {
+   "en": "Plant hall",
+   "ru": "Машинный зал установки"
+  },
+  "floors": 2,
+  "floor_height": 6.5,
+  "footprint": {
+   "width": 100,
+   "depth": 36
+  }
+ },
+ "rules": {
+  "egress.max_travel": 60,
+  "corridor.width": 3.0,
+  "egress.protected_stairs": "none"
+ },
+ "model": {
+  "title": {
+   "en": "Plant hall",
+   "ru": "Машинный зал установки"
+  },
+  "spaces": [
+   {
+    "class": "control_h",
+    "kind": "office",
+    "name": {
+     "en": "Control room",
+     "ru": "Операторная"
+    },
+    "area": 60,
+    "count": 1,
+    "level": "ground",
+    "zone": "control",
+    "demand": {
+     "ach": 8,
+     "power_w_m2": 40
+    }
+   },
+   {
+    "class": "hall_h",
+    "kind": "workshop",
+    "name": {
+     "en": "Plant hall",
+     "ru": "Машинный зал установки"
+    },
+    "area": 500,
+    "count": 3,
+    "level": "ground",
+    "zone": "process",
+    "light": "none",
+    "height_min": 6.0,
+    "occupancy_m2": 40,
+    "live_load_kpa": 15,
+    "demand": {
+     "supply_m3h_m2": 15,
+     "power_w_m2": 120,
+     "cooling_w_m2": 100
+    }
+   },
+   {
+    "class": "pump_h",
+    "kind": "technical",
+    "name": {
+     "en": "Pump house",
+     "ru": "Насосная"
+    },
+    "area": 120,
+    "count": 2,
+    "level": "ground",
+    "zone": "process",
+    "light": "none",
+    "height_min": 5.0,
+    "live_load_kpa": 12,
+    "demand": {
+     "ach": 10,
+     "power_w_m2": 150,
+     "water_l_day": 20000
+    }
+   },
+   {
+    "class": "boiler_h",
+    "kind": "technical",
+    "name": {
+     "en": "Boiler room",
+     "ru": "Котельная"
+    },
+    "area": 160,
+    "count": 1,
+    "level": "ground",
+    "zone": "process",
+    "light": "none",
+    "height_min": 6.0,
+    "live_load_kpa": 12,
+    "demand": {
+     "ach": 15,
+     "power_w_m2": 80,
+     "backup_power": true
+    }
+   },
+   {
+    "class": "switch_h",
+    "kind": "technical",
+    "name": {
+     "en": "Switchgear room",
+     "ru": "Распределительное устройство"
+    },
+    "area": 90,
+    "count": 2,
+    "level": "ground",
+    "zone": "power",
+    "light": "none",
+    "live_load_kpa": 8,
+    "demand": {
+     "ach": 12,
+     "power_w_m2": 80,
+     "cooling_w_m2": 70,
+     "backup_power": true
+    }
+   },
+   {
+    "class": "lab_h",
+    "kind": "lab",
+    "name": {
+     "en": "Process laboratory",
+     "ru": "Заводская лаборатория"
+    },
+    "area": 55,
+    "count": 1,
+    "level": "ground",
+    "zone": "control",
+    "demand": {
+     "ach": 10,
+     "power_w_m2": 90,
+     "water_l_day": 1500
+    }
+   },
+   {
+    "class": "workshop_h",
+    "kind": "workshop",
+    "name": {
+     "en": "Maintenance workshop",
+     "ru": "Ремонтная мастерская"
+    },
+    "area": 150,
+    "count": 1,
+    "level": "ground",
+    "zone": "service",
+    "light": "none",
+    "height_min": 4.5,
+    "live_load_kpa": 10
+   },
+   {
+    "class": "store_h",
+    "kind": "storage",
+    "name": {
+     "en": "Spares store",
+     "ru": "Склад запасных частей"
+    },
+    "area": 150,
+    "count": 1,
+    "level": "ground",
+    "zone": "service",
+    "live_load_kpa": 10
+   },
+   {
+    "class": "wc_h",
+    "kind": "wc",
+    "name": {
+     "en": "Toilet",
+     "ru": "Санузел"
+    },
+    "area": 5,
+    "count": 3,
+    "level": "ground",
+    "zone": "welfare"
+   },
+   {
+    "class": "office_h",
+    "kind": "office",
+    "name": {
+     "en": "Plant office",
+     "ru": "Кабинет"
+    },
+    "area": 20,
+    "count": 6,
+    "level": "typical",
+    "zone": "control"
+   },
+   {
+    "class": "wc_h2",
+    "kind": "wc",
+    "name": {
+     "en": "Upper toilet",
+     "ru": "Санузел верхнего этажа"
+    },
+    "area": 5,
+    "count": 2,
+    "level": "typical",
+    "zone": "welfare"
+   }
+  ],
+  "zones": [
+   {
+    "id": "process",
+    "name": {
+     "en": "Process",
+     "ru": "Технологическая зона"
+    },
+    "adjacent_to": [
+     {
+      "ref": "power",
+      "weight": 3
+     },
+     {
+      "ref": "service",
+      "weight": 1
+     }
+    ]
+   },
+   {
+    "id": "power",
+    "name": {
+     "en": "Power",
+     "ru": "Электроснабжение"
+    },
+    "adjacent_to": [
+     {
+      "ref": "process",
+      "weight": 3
+     }
+    ]
+   },
+   {
+    "id": "control",
+    "name": {
+     "en": "Control",
+     "ru": "Управление"
+    },
+    "adjacent_to": [
+     {
+      "ref": "process",
+      "weight": 2
+     }
+    ]
+   },
+   {
+    "id": "service",
+    "name": {
+     "en": "Service",
+     "ru": "Обслуживание"
+    },
+    "adjacent_to": []
+   },
+   {
+    "id": "welfare",
+    "name": {
+     "en": "Welfare",
+     "ru": "Бытовая зона"
+    },
+    "adjacent_to": []
+   }
+  ],
+  "egress": {
+   "exits_min": 2
+  },
+  "structure": {
+   "live_load_kpa": {
+    "rule": "typology.live_load_kpa"
+   }
+  },
+  "spare": {
+   "grow_share": 0.6,
+   "kind": "storage",
+   "name": {
+    "en": "Hall store",
+    "ru": "Кладовая"
+   }
+  },
+  "plant": [
+   {
+    "kind": "boiler_house",
+    "duty_kw": 4000,
+    "units": 2
+   },
+   {
+    "kind": "pumping_station",
+    "flow_m3h": {
+     "from": "cooling_water_m3h",
+     "share": 1.0
+    },
+    "head_m": 45,
+    "units": 2
+   }
+  ]
+ }
+}

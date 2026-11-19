@@ -1,0 +1,7 @@
+{
+ "recover.untitled_note": "Ovaj projekt nikad nije spremljen",
+ "recover.file_missing": "Datoteka projekta nije pronađena",
+ "recover.banner": "Pronađen je nespremljeni rad iz ranije sesije za {name}",
+ "recover.banner_review": "Pregledaj",
+ "recover.later_archived": "Odgođeno {n} puta: snimke premještene u arhivu"
+}

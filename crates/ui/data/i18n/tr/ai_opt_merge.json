@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "Seçeneği birleştir: {name}",
+ "ai_opt_merge.whole": "Tüm seçeneği birleştir",
+ "ai_opt_merge.parts": "Seçili parçaları birleştir",
+ "ai_opt_merge.note": "Bu seçenek neden",
+ "ai_opt_merge.rebased": "Model bu seçenek oluşturulduktan sonra değişti: birleştirme mevcut modele göre yeniden hesaplandı. Uygulamadan önce değişiklikleri kontrol edin.",
+ "ai_opt_merge.left.not_picked": "Seçenekten seçilmedi",
+ "ai_opt_merge.left.unticked": "Seçenekte işareti kaldırıldı",
+ "ai_opt_merge.left.conflict": "Mevcut modele eklenemez: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "Bu seçenek birleştirilemez. Reddedilen bir seçenek önce geri yüklenmeli.",
+ "ai_opt_merge.refused.stale": "Model bu seçenek oluşturulduktan sonra değişti. Birleştirmeyi mevcut modele göre yeniden hesaplayın.",
+ "ai_opt_merge.refused.nothing_picked": "Birleştirilecek bir şey seçili değil.",
+ "ai_opt_merge.refused.unknown_item": "{item} öğesi bu seçeneğin parçası değil.",
+ "ai_opt_merge.refused.not_in_option": "Seçili eleman bu seçeneğin parçası değil.",
+ "ai_opt_merge.refused.needs_left_out": "{item} öğesi {needs} öğesini gerektiriyor. Onu da seçin veya bağımlılıkların eklenmesine izin verin.",
+ "ai_opt_merge.refused.set_gone": "{item} öğesi artık var olmayan bir seçime işaret ediyor. Seçeneği yeniden üretin.",
+ "ai_opt_merge.refused.busy": "Başka bir plan açık. Önce onu uygulayın veya reddedin.",
+ "ai_opt_merge.refused.failed": "Birleştirme hazırlanamadı: {reason}",
+ "ai_opt_merge.revive": "Seçeneği geri yükle",
+ "ai_opt_merge.merged": "Birleştirildi"
+}

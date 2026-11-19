@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "Tracez un contour fermé : cliquez les points, puis Entrée ou Terminer pour créer",
+ "sketch_hints.sk_finish": "Terminer",
+ "sketch_hints.sk_cancel": "Annuler",
+ "sketch_hints.import_warn": "avertissements de vérification du modèle : {n} (premier : {first})",
+ "sketch_hints.ai.offline.schedule": "Ouvrir la nomenclature",
+ "sketch_hints.ai.offline.check": "Vérifier selon les règles",
+ "sketch_hints.ai.offline.warnings": "Afficher les avertissements",
+ "cmd.file.publish_pdf": "Publier les feuilles en PDF…",
+ "cmd.file.publish_pdf.desc": "Publie les feuilles choisies en PDF. Identique à Exporter les feuilles en PDF/SVG.",
+ "sketch_hints.verify_none": "Rien défini par l'assistant IA dans la sélection à vérifier",
+ "sketch_hints.contours_none": "Aucune plateforme topographique dans le modèle : les courbes de niveau apparaissent après en avoir créé une",
+ "sketch_hints.contours_off": "Courbes de niveau masquées",
+ "sketch_hints.contours_on": "Courbes de niveau affichées"
+}

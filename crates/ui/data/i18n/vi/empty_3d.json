@@ -1,0 +1,14 @@
+{
+ "empty.v3d_model.title": "Chưa có gì trong 3D",
+ "empty.v3d_model.hint": "Vẽ tường trong mặt bằng và chúng sẽ xuất hiện ở đây.",
+ "empty.v3d_model.action": "Mở mặt bằng",
+ "empty.v3d_hidden.title": "Mọi cấu kiện đều bị ẩn trong góc nhìn này",
+ "empty.v3d_hidden.hint": "Ẩn hoặc cô lập tạm thời không để lại gì hiển thị. Đồ họa góc nhìn giữ nguyên như đã đặt.",
+ "empty.v3d_hidden.action": "Hiện tất cả",
+ "empty.v3d_graphics.title": "Đồ họa góc nhìn ẩn mọi danh mục",
+ "empty.v3d_graphics.hint": "Quy tắc danh mục của góc nhìn này không để lại gì hiển thị. Hãy bật lại danh mục trong Đồ họa góc nhìn.",
+ "empty.v3d_graphics.action": "Mở đồ họa góc nhìn",
+ "empty.v3d_box.title": "Hộp mặt cắt nằm ngoài mô hình",
+ "empty.v3d_box.hint": "Hộp cắt loại bỏ mọi cấu kiện. Hãy căn lại hộp quanh mô hình.",
+ "empty.v3d_box.action": "Đặt lại hộp"
+}

@@ -1,0 +1,13 @@
+{
+ "xlval.pe_hosts": "opening #{id} would no longer fit: {e}",
+ "xlval.walls_refused": "{n} walls not changed ({why})",
+ "xl.msg.opening_has_no_wall_to_sit_in": "opening has no wall to sit in",
+ "xl.msg.opening_size_must_be_0_and_sill_0": "opening size must be > 0 and sill >= 0",
+ "xl.msg.opening_runs_from_x_m_to_x_m_the_wall_is_x_m_long": "opening runs from {} m to {} m, the wall is {} m long",
+ "xl.msg.opening_top_x_m_is_above_the_wall_height_x_m": "opening top {} m is above the wall height {} m",
+ "xl.msg.opening_overlaps_the_new_opening_in_row_x": "opening overlaps the new opening in row {}",
+ "xl.msg.opening_overlaps_opening_x": "opening overlaps opening {}",
+ "xl.msg.wall_height_x_m_is_below_the_top_x_m_of_opening_x": "wall height {} m is below the top {} m of opening {}",
+ "xl.msg.wall_length_x_m_is_shorter_than_the_end_x_m_of_opening_x": "wall length {} m is shorter than the end {} m of opening {}",
+ "xl.msg.opening_x_would_no_longer_fit_the_wall": "opening {} would no longer fit the wall"
+}

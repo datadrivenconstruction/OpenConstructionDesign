@@ -1,0 +1,12 @@
+{
+ "opt.stair.straight": "Egyenes",
+ "opt.stair.l": "L",
+ "opt.stair.u": "U",
+ "opt.stair.gap": "Rés",
+ "hint.stair.corner": "L-lépcső: válassza ki a fordulósarkot · Backspace — az utolsó pont törlése · Esc — az utolsó pont törlése, pontok nélkül — mégse",
+ "hint.stair.side": "Lépcső: válassza ki a második szakasz oldalát · Backspace — az utolsó pont törlése · Esc — az utolsó pont törlése, pontok nélkül — mégse",
+ "tool.stair.flights": "{n} lépcsőfok (összesen {m})",
+ "tool.stair.err_split": "Minden szakasznak legalább 2 lépcsőfok kell: az első szakasznak {n} van, {m} helyett",
+ "tool.stair.err_comfort": "A lépcsőfok és a lépcsőkar sérti a komfortszabályt (2R + T)",
+ "tool.stair.err_input": "A lépcső mérete tartományon kívül van: ellenőrizze a szélességet, a magasságot és a pihenőt"
+}

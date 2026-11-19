@@ -1,0 +1,16 @@
+{
+ "xlsx_recover.title": "Ein Export in die verknüpfte Arbeitsmappe wurde unterbrochen",
+ "xlsx_recover.both": "Der Export wurde beendet, nachdem die vorherige Arbeitsmappe beiseitegelegt und die neue noch nicht eingesetzt war. Nichts ist verloren: Die neue Arbeitsmappe ist vollständig unter {part}, die vorherige bleibt unter {bak} erhalten.",
+ "xlsx_recover.part_only": "Der Export wurde beendet, bevor die neue Arbeitsmappe eingesetzt war. Sie ist vollständig unter {part}.",
+ "xlsx_recover.bak_only": "Der Export wurde beendet, bevor die neue Arbeitsmappe fertig war. Die vorherige Arbeitsmappe bleibt unter {bak} erhalten.",
+ "xlsx_recover.finish": "Unterbrochenen Export abschließen",
+ "xlsx_recover.restore": "Vorherige Arbeitsmappe wiederherstellen",
+ "xlsx_recover.finished": "Der unterbrochene Export ist abgeschlossen: Die neue Arbeitsmappe ist eingesetzt.",
+ "xlsx_recover.finished_kept": "Der unterbrochene Export ist abgeschlossen: Die neue Arbeitsmappe ist eingesetzt, die vorherige bleibt unter {bak} erhalten.",
+ "xlsx_recover.restored": "Die vorherige Arbeitsmappe ist wieder an ihrem Platz.",
+ "xlsx_recover.restore_failed": "Die vorherige Arbeitsmappe konnte nicht zurückverschoben werden ({err}). Sie bleibt unter {path}.",
+ "xlsx_recover.not_restored": "Die neue Arbeitsmappe konnte nicht eingesetzt und die vorherige nicht zurückverschoben werden. Nichts ist verloren: Die vorherige Arbeitsmappe bleibt unter {path}; „Synchronisieren“ bietet an, abzuschließen oder wiederherzustellen.",
+ "xlsx_recover.finish_failed": "Die neue Arbeitsmappe konnte nicht eingesetzt werden ({err}). Sie bleibt unter {path}.",
+ "xlsx_recover.dest_back": "Eine Arbeitsmappe liegt wieder unter {path}: Nichts wurde verschoben.",
+ "xlsx_recover.nothing": "Vom unterbrochenen Export ist nichts zu verschieben."
+}

@@ -1,0 +1,4 @@
+{
+ "number_input.bad_number": "No es un número: use dígitos con punto decimal (1.5)",
+ "number_input.at_grids_tip": "Colocar un pilar en cada intersección de ejes de este nivel"
+}

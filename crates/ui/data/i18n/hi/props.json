@@ -1,0 +1,18 @@
+{
+ "props.multi.title": {
+  "one": "# तत्व",
+  "other": "# तत्व"
+ },
+ "props.multi.cats": {
+  "one": "# श्रेणी",
+  "other": "# श्रेणियाँ"
+ },
+ "props.multi.varies": {
+  "one": "भिन्न (#)",
+  "other": "भिन्न (#)"
+ },
+ "props.multi.clear": "चयन साफ़ करें",
+ "props.multi.undo": "वापस लें",
+ "props.multi.narrowed": "चयन: {n} · {name}",
+ "props.multi.chip_tip": "{name}: {n}  ·  क्लिक करने पर उनके गुण दिखते हैं, Ctrl+क्लिक केवल इन्हें रखता है"
+}

@@ -1,0 +1,28 @@
+id = "G18_fractal_tree__de"
+tier = "hard"
+group = "Any geometry"
+title = "Fractal tree structure"
+lang = "de"
+base = "empty"
+
+[[turn]]
+say = "Ein baumartiges Tragwerksdach: ein Stamm verzweigt sich rekursiv in 4 Generationen, jeder Ast teilt sich in 3, Äste schrumpfen um den Faktor 0.7, Gesamthöhe 12 m, mit einer Dachfläche auf der Krone."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "col+beam+brace+solid"
+min = 80.0
+
+[[oracle.geom]]
+kind = "height"
+min = 10.0
+max = 15.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

@@ -1,0 +1,5 @@
+{
+ "materials.mat.conflict": "Material ini berubah di model (urungkan atau jendela lain) saat kartunya berisi suntingan. Suntingan Anda dipertahankan.",
+ "materials.mat.keep": "Pertahankan suntingan saya",
+ "materials.mat.reload": "Muat ulang"
+}

@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "Liitmik",
+ "elem.mep_fitting.many": "Liitmikud",
+ "elem.mep_fitting.kind.elbow": "Põlv",
+ "elem.mep_fitting.kind.tee": "T-ühend",
+ "elem.mep_fitting.kind.cross": "Rist",
+ "elem.mep_fitting.kind.transition": "Üleminek",
+ "elem.mep_fitting.kind.cap": "Kork",
+ "elem.mep_fitting.size": "Suurus",
+ "elem.mep_fitting.at": "Asukoht",
+ "elem.mep_fitting.runs": "Lõik {n}",
+ "elem.mep_fitting.edit_run": "Muuda lõiku",
+ "elem.mep_fitting.select_runs": "Vali selle lõigud",
+ "elem.mep_fitting.derived": "Liitmik järgib oma lõike: muuda lõiku ja liitmik muutub koos sellega.",
+ "elem.mep_fitting.no_delete": "Liitmikku ei saa eraldi kustutada ega nihutada. Muuda või kustuta selle lõike.",
+ "elem.mep_fitting.hint": "Klõpsa plaanil liitmikul, et näha selle lõike.",
+ "elem.mep_fitting.picked": "Valitud liitmikke: {n}"
+}

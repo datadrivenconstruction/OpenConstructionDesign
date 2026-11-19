@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "Toepassen is ongedaan gemaakt: het model kwam niet overeen met de voorbeeldweergave. {what}",
+ "xlsx_verify.not_written": "{row} is niet gewijzigd.",
+ "xlsx_verify.lost": "{row} is verdwenen.",
+ "xlsx_verify.not_deleted": "{row} is niet verwijderd.",
+ "xlsx_verify.extra_deleted": "{row} is verwijderd, hoewel de voorbeeldweergave hem bewaart.",
+ "xlsx_verify.created": "{table}: {got} nieuw in plaats van {want}.",
+ "xlsx_verify.value": "{row}, {field}: verwacht {want} (was {old}), kreeg {got}.",
+ "xlsx_verify.check_failed": "Het resultaat kon niet worden gecontroleerd: {e}",
+ "xlsx_verify.plan_failed": "Toepassen is niet gestart: de controle kon het model niet lezen ({e}).",
+ "xlsx_verify.take_back_failed": "De stap kon niet ongedaan worden gemaakt ({e}): gebruik Ongedaan maken.",
+ "xlsx_verify.t.wall": "Wand",
+ "xlsx_verify.t.opening": "Doorbreking",
+ "xlsx_verify.t.room": "Ruimte",
+ "xlsx_verify.t.slab": "Vloer",
+ "xlsx_verify.t.level": "Verdieping",
+ "xlsx_verify.t.wall_type": "Wandtype",
+ "xlsx_verify.t.slab_type": "Vloertype",
+ "xlsx_verify.t.col": "Kolom",
+ "xlsx_verify.t.beam": "Balk",
+ "xlsx_verify.t.roof": "Dak",
+ "xlsx_verify.t.curtain_wall": "Gordijngevel"
+}

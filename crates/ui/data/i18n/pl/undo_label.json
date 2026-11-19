@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "Cofnij: {what}",
+ "undo_label.redo_what": "Ponów: {what}",
+ "undo_label.undo_none": "Nie ma czego cofnąć",
+ "undo_label.redo_none": "Nie ma czego ponowić"
+}

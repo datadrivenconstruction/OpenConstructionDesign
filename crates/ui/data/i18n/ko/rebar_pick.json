@@ -1,0 +1,7 @@
+{
+ "rebar_pick.pick.empty": "철근: 기둥, 보, 벽, 슬래브 또는 기초를 선택하세요",
+ "rebar_pick.pick.unsupported": "이 선택에는 철근을 넣을 수 없습니다. 기둥, 보, 벽, 슬래브 또는 기초를 선택하세요",
+ "rebar_pick.pick.keys": "클릭하여 선택, Shift로 추가 선택 · Enter로 양식 열기 · Esc로 취소",
+ "rebar_pick.pick.open": "양식 열기",
+ "rebar_pick.pick.cancel": "취소"
+}

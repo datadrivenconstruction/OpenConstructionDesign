@@ -1,0 +1,4 @@
+{
+ "vv_conflict.vv.switched": "Den aktive visning skiftede. Disse redigeringer hører til {view} og er endnu ikke anvendt: Anvend skriver dem til {view}, Kassér fjerner dem.",
+ "vv_conflict.vv.discard": "Kassér redigeringer"
+}

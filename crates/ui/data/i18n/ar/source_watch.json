@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "تغيّر {name} على القرص.",
+ "src.watch.update": "تحديث النموذج",
+ "src.watch.compare": "مقارنة",
+ "src.watch.ignore": "تجاهل هذه النسخة",
+ "src.watch.missing": "{name}: ملف المصدر غير موجود. العمل مستمر.",
+ "src.watch.locate": "تحديد الموقع…",
+ "src.watch.dismiss": "تجاهل",
+ "src.watch.more": "و{n} ملف مصدر آخر",
+ "src.watch.done": "تم التحديث من {name}: {updated} متغيّر، و{kept} حقل محفوظ كما عُدّل، و{conflicts} تعارض، و{locked} قيمة مقفلة محفوظة"
+}

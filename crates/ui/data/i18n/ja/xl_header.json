@@ -1,0 +1,4 @@
+{
+ "xl.msg.x_cells_above_the_header_on_sheet_x": "シート '{}' のヘッダーより上に {} 個のセルがあります",
+ "xl.msg.book_changed_during_export": "書き出し中に別のプログラムによってブックが保存されたため、上書きしませんでした。もう一度書き出してください"
+}

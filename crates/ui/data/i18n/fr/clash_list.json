@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "Tout",
+ "clash_list.only_selected": "Sélection seulement",
+ "clash_list.tolerance": "Tolérance",
+ "clash_list.gap": "Écart",
+ "clash_list.export": "Exporter",
+ "clash_list.col.volume": "Volume",
+ "clash_list.fix.up": "Monter",
+ "clash_list.fix.down": "Descendre",
+ "clash_list.fix.sleeve": "Fourreau",
+ "clash_list.apply_fix": "Appliquer la correction",
+ "clash_list.err.tol": "Tolérance : saisissez une longueur (0 ou plus), par ex. 50 ou 2 po",
+ "clash_list.sleeve_no_host": "Le fourreau a besoin d'un mur ou d'une dalle dans la paire",
+ "clash_list.err.gap": "Écart : saisissez une longueur (0 ou plus), par ex. 50 ou 2 po"
+}

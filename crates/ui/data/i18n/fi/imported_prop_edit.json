@@ -1,0 +1,6 @@
+{
+ "imported_prop_edit.remove": "Poista ominaisuus",
+ "imported_prop_edit.remove.tip": "Poistaa ominaisuuden {n} valitulta elementiltä yhdellä kumoamisaskeleella; se poistetaan IFC-tiedostosta tallennettaessa",
+ "imported_prop_edit.done": "{key} poistettu {n} elementiltä",
+ "imported_prop_edit.warn.reload": "Valmis, mutta näkymää ei päivitetty; avaa paneeli uudelleen tai kumoa, jos näyttää väärältä"
+}

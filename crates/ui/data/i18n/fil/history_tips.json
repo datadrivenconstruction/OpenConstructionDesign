@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "Na-undo — Ctrl+Y para i-redo",
+ "history.hist.empty": "Wala pang pagbabago",
+ "history.hist.empty_hint": "Lilitaw dito ang iyong mga pag-edit. I-click ang alinmang hakbang para bumalik dito.",
+ "history.hist.revert_all_n": "Ibalik ang lahat ng pagbabago ng AI ({n})"
+}

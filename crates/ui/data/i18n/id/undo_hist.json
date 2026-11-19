@@ -1,0 +1,8 @@
+{
+ "undo.undone": "Dibatalkan: {what}",
+ "undo.redone": "Diulangi: {what}",
+ "undo.action.edit.redo": "Ulangi",
+ "undo.action.edit.undo": "Batalkan",
+ "hdr.unsaved": "Perubahan belum disimpan",
+ "hdr.file_menu": "Menu file"
+}

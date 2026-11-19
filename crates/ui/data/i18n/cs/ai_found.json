@@ -1,0 +1,46 @@
+{
+ "ai.tool.show_elements": "Zobrazení prvků",
+ "ai.tool.isolate_elements": "Izolace prvků",
+ "ai.tool.color_by": "Barvení podle hodnoty",
+ "ai.tool.reset_view": "Obnovení pohledu",
+ "ai_found.found.query": "Nalezeno",
+ "ai_found.found.show": "Zobrazeno",
+ "ai_found.found.isolate": "Izolováno",
+ "ai_found.found.hide": "Skryto",
+ "ai_found.found.color": "Obarveno",
+ "ai_found.found.count": "{n} z {m}",
+ "ai_found.found.none": "Nic neodpovídá. Zkuste širší filtr.",
+ "ai_found.found.show_btn": "Zobrazit",
+ "ai_found.found.show_tip": "Vybrat tyto prvky a přiblížit je v půdorysu i 3D",
+ "ai_found.found.isolate_btn": "Izolovat",
+ "ai_found.found.isolate_tip": "Zobrazit jen tyto prvky do Obnovit pohled",
+ "ai_found.found.select_btn": "Vybrat",
+ "ai_found.found.select_tip": "Vybrat tyto prvky bez posunu pohledu",
+ "ai_found.legend.title": "Barva podle: {by}",
+ "ai_found.legend.row_tip": "Kliknutím vyberete tyto prvky",
+ "ai_found.legend.empty_value": "Bez hodnoty",
+ "ai_found.legend.other": {
+  "one": "# další hodnota",
+  "few": "# další hodnoty",
+  "other": "# dalších hodnot"
+ },
+ "ai_found.view.title": "Pohled AI asistenta",
+ "ai_found.view.reset": "Obnovit pohled",
+ "ai_found.view.reset_tip": "Vrátit pohled z doby před úpravou AI asistentem",
+ "ai_found.view.shown": {
+  "one": "# zobrazený prvek",
+  "few": "# zobrazené prvky",
+  "other": "# zobrazených prvků"
+ },
+ "ai_found.view.isolated": {
+  "one": "# izolovaný prvek",
+  "few": "# izolované prvky",
+  "other": "# izolovaných prvků"
+ },
+ "ai_found.view.hidden": {
+  "one": "# skrytý prvek",
+  "few": "# skryté prvky",
+  "other": "# skrytých prvků"
+ },
+ "ai_found.found.line": "{what}: {count}"
+}

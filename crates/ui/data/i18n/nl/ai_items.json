@@ -1,0 +1,16 @@
+{
+ "ai.items.all": {
+  "one": "Alle # onderdeel",
+  "other": "Alle # onderdelen"
+ },
+ "ai.items.all.tip": "Vink elk onderdeel van het plan aan of uit",
+ "ai.items.checked": "{n} van {m} aangevinkt",
+ "ai.items.check.tip": "“{title}” opnemen in Toepassen",
+ "ai.items.expand": "Elementen tonen",
+ "ai.items.collapse": "Elementen verbergen",
+ "ai.items.apply": {
+  "one": "# onderdeel toepassen",
+  "other": "# onderdelen toepassen"
+ },
+ "ai.items.apply_none": "Toepassen"
+}

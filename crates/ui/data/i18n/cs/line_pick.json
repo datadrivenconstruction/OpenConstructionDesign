@@ -1,0 +1,22 @@
+{
+ "cmd.arch.grid_pick": "Osa podle čáry",
+ "cmd.arch.grid_pick.desc": "Vytvoří osovou síť přesně podle zvolené výkresové čáry aktuálního podlaží; názvy pokračují v řadě. Tab vezme všechny rovnoběžné čáry stejné vrstvy najednou. Každé zvolení je jeden krok zpět.",
+ "cmd.struct.beam_pick": "Trám podle čáry",
+ "cmd.struct.beam_pick.desc": "Umístí trám aktuálního typu na aktivní podlaží podle zvolené výkresové čáry. Tab vezme navazující řetěz. Každé zvolení je jeden krok zpět.",
+ "hint.grid_pick.one": "Osa podle čáry: zvolte výkresovou čáru · Tab všechny rovnoběžné čáry její vrstvy · Esc ukončí",
+ "hint.grid_pick.more": "Osa podle čáry: zvolte čáru pro převzetí všech rovnoběžných čar její vrstvy · Tab jedna čára · Esc vypnout",
+ "hint.beam_pick.one": "Trám podle čáry: zvolte výkresovou čáru · Tab navazující řetěz · Esc ukončí",
+ "hint.beam_pick.more": "Trám podle čáry: zvolte čáru pro převzetí jejího řetězu · Tab jedna čára · Esc vypnout",
+ "line_pick.st.start_grid": "Zvolte výkresovou čáru. Tab: všechny rovnoběžné čáry její vrstvy",
+ "line_pick.st.start_beam": "Zvolte výkresovou čáru pro trám {type}. Tab: navazující řetěz",
+ "line_pick.st.grid_done": "Osa {name} přidána",
+ "line_pick.st.grids_done": "Přidáno os: {n}: {first} — {last}",
+ "line_pick.st.beam_done": "Trám {type} přidán",
+ "line_pick.st.beams_done": "Trámů {type} přidáno: {n}",
+ "line_pick.st.on_grid": "Tato čára už má osu {name}",
+ "line_pick.st.on_beam": "Tato čára už má trám {id}",
+ "line_pick.st.no_layer": "Výkresové vrstvy čar zatím nejsou známy, zkuste to znovu",
+ "line_pick.st.no_beam_type": "V katalogu není průřez trámu",
+ "line_pick.st.reload_warn": "Vytvořeno, ale pohled se nepodařilo znovu načíst: {err}",
+ "line_pick.st.failed": "Nevytvořeno: {err}"
+}

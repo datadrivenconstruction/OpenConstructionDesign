@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "Dit werkboek bestaat al",
+ "xlsx_exists.foreign": "Het is geen werkboek van dit project, dus het wordt nooit vervangen.",
+ "xlsx_exists.pending": "Het bevat {n} bewerkingen die nog niet in het model zijn toegepast.",
+ "xlsx_exists.outside": "Het heeft {n} rijen die de nieuwe export niet bevat.",
+ "xlsx_exists.new_name": "Exporteren naar {name}",
+ "xlsx_exists.apply_first": "Pas ze eerst toe",
+ "xlsx_exists.replace": "Vervangen (oud werkboek naar _archive)",
+ "xlsx_exists.archived": "Oud werkboek verplaatst naar {path}",
+ "xlsx_exists.archive_failed": "Het oude werkboek kon niet worden verplaatst, er is niets geëxporteerd: {error}"
+}

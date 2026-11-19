@@ -1,0 +1,11 @@
+{
+ "xlsx_read_as.title": "Ümbernimetatud leht?",
+ "xlsx_read_as.detail": "Lehel {found} on lehe {sheet} veerud ({score} % vastavus). Seda ei loeta, kui sa seda ise ei vali.",
+ "xlsx_read_as.detail_many": "Lehele {sheet} sobib rohkem kui üks leht: {found}. Midagi ei valita sinu eest; vali loetav.",
+ "xlsx_read_as.read_as": "Loe „{found}“ kui {sheet}",
+ "xlsx_read_as.read_as_tip": "Ainult selle impordi jaoks. Lehte ei nimetata ümber; rakendamine kirjutab sinna ainult uute ridade id-d.",
+ "xlsx_read_as.active": "Leht „{found}“ loetakse selles impordis kui {sheet}.",
+ "xlsx_read_as.undo": "Ära loe kui {sheet}",
+ "xlsx_read_as.undo_tip": "Tagasi lehe nimedele, nagu need töövihikus on.",
+ "xlsx_read_as.not_rewritten": "Töövihikut ei kirjutatud üle: ümbernimetatud lehte loetakse tema enda nime all. Töövihiku sünkroonis hoidmiseks nimeta see tagasi."
+}

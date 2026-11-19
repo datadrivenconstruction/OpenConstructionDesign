@@ -1,0 +1,10 @@
+{
+ "cmd.mod.scale": "Měřítko",
+ "cmd.mod.scale.desc": "Vyberte prvky, pak klikněte na základní bod, referenční délku a novou délku, nebo zadejte koeficient.",
+ "hint.scale.select": "Měřítko: vyberte prvky · Enter — hotovo",
+ "hint.scale.first": "Měřítko: vyberte základní bod · Esc — zrušit",
+ "hint.scale.second": "Měřítko: vyberte referenční délku · číslo — koeficient · Esc — zrušit",
+ "hint.scale.third": "Měřítko: vyberte novou délku · číslo — koeficient · Esc — zrušit",
+ "scl.bad_factor": "Koeficient měřítka musí být číslo větší než nula",
+ "scl.zero_ref": "Referenční délka je nulová: vyberte bod mimo základní bod"
+}

@@ -1,0 +1,11 @@
+{
+ "xlsx_read_as.title": "Omdøpt ark?",
+ "xlsx_read_as.detail": "Ark {found} har kolonnene til {sheet} ({score} % treff). Det leses ikke med mindre du velger det.",
+ "xlsx_read_as.detail_many": "Mer enn ett ark passer til {sheet}: {found}. Ingenting er valgt for deg; velg det som skal leses.",
+ "xlsx_read_as.read_as": "Les “{found}” som {sheet}",
+ "xlsx_read_as.read_as_tip": "Bare for denne importen. Arket får ikke nytt navn; Bruk skriver bare id-ene til nye rader inn i det.",
+ "xlsx_read_as.active": "Arket “{found}” leses som {sheet} i denne importen.",
+ "xlsx_read_as.undo": "Ikke les som {sheet}",
+ "xlsx_read_as.undo_tip": "Tilbake til arknavnene slik de er i arbeidsboken.",
+ "xlsx_read_as.not_rewritten": "Arbeidsboken ble ikke skrevet om: et omdøpt ark leses under sitt eget navn. Gi det tilbake sitt navn for å holde arbeidsboken synkronisert."
+}

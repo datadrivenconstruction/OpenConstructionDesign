@@ -1,0 +1,16 @@
+{
+ "ai.items.all": {
+  "one": "Lahat ng # item",
+  "other": "Lahat ng # item"
+ },
+ "ai.items.all.tip": "Lagyan ng tsek o alisan ng tsek ang bawat item ng plan",
+ "ai.items.checked": "{n} sa {m} ang may tsek",
+ "ai.items.check.tip": "Isama ang “{title}” sa Apply",
+ "ai.items.expand": "Ipakita ang mga elemento",
+ "ai.items.collapse": "Itago ang mga elemento",
+ "ai.items.apply": {
+  "one": "I-apply ang # item",
+  "other": "I-apply ang # item"
+ },
+ "ai.items.apply_none": "I-apply"
+}

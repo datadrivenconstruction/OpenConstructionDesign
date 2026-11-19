@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "Алдын ала қарау",
+ "agent_draft.ag.preview.desc": "Батырма үстінде көрсеткі тұрған кезде осы жобаның элементтерін холстта бөлектейді. Ештеңе өзгермейді.",
+ "agent_draft.type.column": "Баған",
+ "agent_draft.type.roof": "Шатыр",
+ "agent_draft.type.ceiling": "Төбе",
+ "agent_draft.type.stair": "Монолитті",
+ "agent_draft.type.railing": "Қоршау",
+ "agent_draft.type.shaft": "Шахта",
+ "agent_draft.type.axis": "Ось 6.5 мм",
+ "agent_draft.type.refplane": "Анықтамалық жазықтық"
+}

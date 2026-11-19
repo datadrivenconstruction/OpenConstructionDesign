@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "Nézettartomány",
+ "view_range.range": "Nézettartomány",
+ "view_range.cut": "Vágósík",
+ "view_range.bottom": "Alsó",
+ "view_range.depth": "Nézetmélység",
+ "view_range.cut.hint": "A vágósík magassága a szint felett. A síkot metsző elemek átvágva jelennek meg.",
+ "view_range.bottom.hint": "A tartomány alja, a szinthez képest. Nulla vagy negatív érték megengedett.",
+ "view_range.depth.hint": "Milyen mélyre lát a nézet az alja alatt. Nulla vagy több.",
+ "view_range.err.number": "Minden mezőbe adjon meg hosszt",
+ "view_range.err.not_finite": "Minden mezőbe adjon meg hosszt",
+ "view_range.err.cut_not_above_bottom": "A vágósíknak az alja felett kell lennie",
+ "view_range.err.negative_depth": "A nézetmélység nem lehet negatív",
+ "view_range.err.top_below_cut": "A tartomány tetejének nem lehet a vágósík alatt"
+}

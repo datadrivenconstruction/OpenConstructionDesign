@@ -1,0 +1,8 @@
+{
+ "param_drop.title": "Ta bort parametervärden?",
+ "param_drop.intro": "{name} är inte längre kopplad till dessa kategorier:",
+ "param_drop.line": "{category}: {values} tas bort",
+ "param_drop.undo": "Ett Ctrl+Z återställer alla.",
+ "param_drop.confirm": "Ta bort värden och spara",
+ "param_drop.cancel": "Avbryt"
+}

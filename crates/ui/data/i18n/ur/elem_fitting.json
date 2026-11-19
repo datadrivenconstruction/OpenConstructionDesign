@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "فٹنگ",
+ "elem.mep_fitting.many": "فٹنگز",
+ "elem.mep_fitting.kind.elbow": "ایلبو",
+ "elem.mep_fitting.kind.tee": "ٹی",
+ "elem.mep_fitting.kind.cross": "کراس",
+ "elem.mep_fitting.kind.transition": "ٹرانزیشن",
+ "elem.mep_fitting.kind.cap": "کیپ",
+ "elem.mep_fitting.size": "سائز",
+ "elem.mep_fitting.at": "پوزیشن",
+ "elem.mep_fitting.runs": "رن {n}",
+ "elem.mep_fitting.edit_run": "رن میں ترمیم",
+ "elem.mep_fitting.select_runs": "اس کے رنز منتخب کریں",
+ "elem.mep_fitting.derived": "فٹنگ اپنے رنز کی پیروی کرتی ہے: کسی رن کو بدلیں تو فٹنگ اس کے ساتھ بدلتی ہے۔",
+ "elem.mep_fitting.no_delete": "فٹنگ خود حذف یا منتقل نہیں ہو سکتی۔ اس کے رنز میں ترمیم کریں یا انہیں حذف کریں۔",
+ "elem.mep_fitting.hint": "کسی رن کو دیکھنے کے لیے پلان میں فٹنگ پر کلک کریں۔",
+ "elem.mep_fitting.picked": "منتخب فٹنگز: {n}"
+}

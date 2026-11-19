@@ -1,0 +1,7 @@
+brief = "Curved free-form bench: a seat blended between two different profiles and a swept back rail, length and seat height as parameters."
+category = "furniture"
+must = param Length
+must = param SeatH
+must = solids >= 3
+must = bbox x 2000
+must = flex Length 1500 2600

@@ -1,0 +1,33 @@
+{
+ "cmd.help.licenses": "Avatud lähtekoodi litsentsid",
+ "cmd.help.licenses.desc": "Loetleb selle koostes kasutatud avatud lähtekoodiga teegid koos litsentsidega.",
+ "about.product": "DDC Editor",
+ "about.version": "Versioon",
+ "about.build": "Koostenumber",
+ "about.schema": "Mudeli skeem",
+ "about.system": "Süsteem",
+ "about.gpu": "Graafikaadapter",
+ "about.language": "Keel",
+ "about.copy": "Kopeeri versiooniteave",
+ "about.copy_desc": "Versioon, koostenumber, süsteem ja graafikaadapter veateate jaoks. Failiteid ei ole.",
+ "about.copied": "Versiooniteave kopeeriti",
+ "about.licenses": "Avatud lähtekoodi litsentsid",
+ "about.licenses_desc": "Selles koostes kasutatud teegid ja nende litsentsid",
+ "about.licenses.open": "Vaata",
+ "about.licenses.title": "Avatud lähtekoodi litsentsid",
+ "about.licenses.note": "DDC Editor sisaldab allpool loetletud teeke. Igaüks neist jääb oma litsentsi ja autoriõiguse märke alla. Täielikud litsentsitekstid: THIRD_PARTY_LICENSES.txt rakenduse kõrval.",
+ "about.licenses.full": "Täielikud litsentsitekstid",
+ "about.licenses.list": "Komponentide loend",
+ "about.licenses.close": "Sulge",
+ "about.licenses.col_name": "Komponent",
+ "about.licenses.col_license": "Litsents",
+ "about.licenses.count": {
+  "one": "# komponent",
+  "other": "# komponenti"
+ },
+ "about.licenses.count_of": "{shown} / {total} komponenti",
+ "about.licenses.search_hint": "Otsi nime või litsentsi järgi…",
+ "about.licenses.search_clear": "Tühista otsing",
+ "about.licenses.none": "Midagi ei leitud",
+ "about.licenses.none_hint": "Proovi teegi nime osa või litsentsi nime, nt MIT."
+}

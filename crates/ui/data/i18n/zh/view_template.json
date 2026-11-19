@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "请先输入模板名称",
+ "view_template.name_taken": "已存在同名模板",
+ "view_template.pick_blocked": "请先勾选至少一个视图",
+ "view_template.views.one": "{n} 个视图",
+ "view_template.views.few": "{n} 个视图",
+ "view_template.views.many": "{n} 个视图",
+ "view_template.delete.title": "删除此模板？",
+ "view_template.delete.body": "模板“{name}”将被删除。已被 {used} 使用。",
+ "view_template.delete.unused": "模板“{name}”将被删除。没有视图使用它。",
+ "view_template.delete.keeps": "这些视图将保留当前图形，但解除与模板的关联。",
+ "view_template.delete.undo": "可通过一次撤销恢复。",
+ "view_template.delete.confirm": "删除模板"
+}

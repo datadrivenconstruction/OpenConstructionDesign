@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "Previous sheet (Page Up)",
+ "sheets.print.next": "Next sheet (Page Down)",
+ "sheets.print.fit": "Fit page (double-click)",
+ "sheets.print.no_sheets": "No sheets to preview",
+ "sheets.print.building": "Building the page…",
+ "sheets.print.stop_build": "Stop",
+ "sheets.print.build_stopped": "Page build stopped",
+ "sheets.print.retry": "Build again",
+ "sheets.print.build_failed": "The preview could not be built"
+}

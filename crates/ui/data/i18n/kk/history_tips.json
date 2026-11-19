@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "Болдырылды — Ctrl+Y қайта орындайды",
+ "history.hist.empty": "Өзгерістер әзірге жоқ",
+ "history.hist.empty_hint": "Өңдеулеріңіз осында көрінеді. Кез келген қадамды басып, соған оралыңыз.",
+ "history.hist.revert_all_n": "AI өзгерістерінің барлығын қайтару ({n})"
+}

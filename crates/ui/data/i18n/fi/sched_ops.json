@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "arvon on oltava suurempi kuin nolla",
+ "sched_ops.not_number": "ei luku",
+ "sched_ops.no_host": "ei isäntäseinää",
+ "sched_ops.wall_length": "tätä seinän pituutta ei voi asettaa näin",
+ "sched_ops.no_wall": "ei sellaista seinää",
+ "sched_ops.no_opening": "ei sellaista aukkoa",
+ "sched_ops.no_curtain": "ei sellaista verhoseinää",
+ "sched_ops.no_panel": "ei sellaista paneelia",
+ "sched_ops.no_slab": "ei sellaista laattaa",
+ "sched_ops.no_room": "ei sellaista huonetta",
+ "sched_ops.slope_range": "kaltevuus alueen ulkopuolella",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

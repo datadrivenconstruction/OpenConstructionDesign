@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "Was nach dem Export einer Arbeitsmappe geschieht",
+ "settings.area_decimals_desc": "Nachkommastellen bei Flächen",
+ "settings.volume_decimals_desc": "Nachkommastellen bei Volumen",
+ "settings.frac_desc": "Kleinster Bruch eines Zolls bei imperialen Längen",
+ "settings.small_area_desc": "Flächen unter einem Quadratfuß in Quadratzoll anzeigen",
+ "settings.sample_desc": "So sehen Zahlen mit den aktuellen Einstellungen aus",
+ "autosave.title_desc": "Eine Wiederherstellungskopie des geöffneten Projekts behalten",
+ "autosave.interval_desc": "Zeit zwischen den Wiederherstellungskopien",
+ "autosave.keep_desc": "Ältere Wiederherstellungskopien werden entfernt",
+ "autosave.folder_desc": "Leer bedeutet den Standardordner",
+ "autosave.remind_desc": "Erinnerung zum Speichern eines Projekts ohne Datei",
+ "settings.backend_desc": "Verwendeter Grafikadapter",
+ "settings.news_desc": "Was sich in dieser Version geändert hat",
+ "settings.assoc_default_desc": "Diese App als Standard für Modelldateien festlegen",
+ "settings.data_dir_desc": "Caches, Wiederherstellungskopien und Protokolle liegen hier."
+}

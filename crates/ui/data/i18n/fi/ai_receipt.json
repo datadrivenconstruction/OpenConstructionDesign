@@ -1,0 +1,21 @@
+{
+ "ai.receipt.title": {
+  "one": "Käytetty # muutos",
+  "other": "Käytetty # muutosta"
+ },
+ "ai.receipt.more": "+{n} lisää",
+ "ai.receipt.list": "Elementit",
+ "ai.receipt.show": "Näytä",
+ "ai.receipt.show.tip": "Valitse ja kehystä muuttuneet elementit",
+ "ai.receipt.undo": "Kumoa",
+ "ai.receipt.undo.tip": "Peru täsmälleen tämä käyttö",
+ "ai.receipt.undone": "Kumottu",
+ "ai.receipt.later": "Myöhempiä muokkauksia on tehty",
+ "ai.receipt.toast_undone": "Käytetty suunnitelma kumottiin",
+ "ai.receipt.draft_family": "Luonnoksen perhe: {name}",
+ "ai.receipt.promote": "Tee käytettäväksi",
+ "ai.receipt.promote.tip": "Muuta luonnoksen perhe käytettäväksi (yksi kumoamisaskel)",
+ "ai.receipt.promoted": "Perhe on nyt käytettävissä",
+ "ai.receipt.promote_failed": "Perhettä ei voitu tehdä käytettäväksi",
+ "cmd.ai.receipt_undo": "Kumoa viimeisin AI-suunnitelma"
+}

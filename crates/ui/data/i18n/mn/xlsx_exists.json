@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "Энэ ажлын ном аль хэдийн байна",
+ "xlsx_exists.foreign": "Энэ нь энэ төслийн ажлын ном биш тул хэзээ ч солигдохгүй.",
+ "xlsx_exists.pending": "Энэ нь загварт хараахан хэрэглээгүй {n} засвартай.",
+ "xlsx_exists.outside": "Энэ нь шинэ экспортын авч чадахгүй {n} мөртэй.",
+ "xlsx_exists.new_name": "{name} руу экспорт",
+ "xlsx_exists.apply_first": "Эхлээд хэрэглэнэ үү",
+ "xlsx_exists.replace": "Солих (хуучин номыг _archive руу)",
+ "xlsx_exists.archived": "Хуучин ажлын ном {path} руу зөөгдлөө",
+ "xlsx_exists.archive_failed": "Хуучин ажлын номыг зөөж чадсангүй, юу ч экспортлогдоогүй: {error}"
+}

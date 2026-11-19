@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "Contrôlé par le gabarit {name}",
+ "view_template.edit_template": "Modifier le gabarit",
+ "view_template.locked_tip": "Défini par le gabarit de vue {name}. Modifiez-le dans le gabarit.",
+ "view_template.no_filters": "Aucun filtre dans cette vue"
+}

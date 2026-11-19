@@ -1,0 +1,7 @@
+{
+ "recover.untitled_note": "Seda projekti pole kunagi salvestatud",
+ "recover.file_missing": "Projekti faili ei leitud",
+ "recover.banner": "Leiti {name} jaoks varasemast seansist salvestamata töö",
+ "recover.banner_review": "Vaata üle",
+ "recover.later_archived": "Edasi lükatud {n} korda: hetkeseisud viidi arhiivi"
+}

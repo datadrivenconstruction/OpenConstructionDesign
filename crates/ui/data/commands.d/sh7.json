@@ -1,0 +1,28 @@
+[
+ {
+  "id": "view.sheet_duplicate",
+  "icon": "sheet-duplicate",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R",
+   "D"
+  ],
+  "stage": "M5",
+  "group": "sheets"
+ },
+ {
+  "id": "view.sheet_duplicate_title",
+  "icon": "sheet-duplicate-title",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R",
+   "D"
+  ],
+  "stage": "M5",
+  "group": "sheets"
+ }
+]

@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}، لیول پر",
+ "cmd_buttons.purge.undo": "ہٹانا ایک واپسی قدم ہے۔",
+ "cmd_buttons.unpin.none": "منتخب عناصر میں سے کوئی پن نہیں ہے",
+ "cmd_buttons.change_type.none": "پہلے دیواریں منتخب کریں: ان کی قسم ایک قدم میں بدلتی ہے",
+ "cmd_buttons.units.metric": "اکائیاں: میٹرک",
+ "cmd_buttons.units.imperial": "اکائیاں: فٹ اور انچ",
+ "cmd_buttons.units.back": "واپس بدلیں",
+ "cmd_buttons.underlay.on": "انڈرلے آن ہے: نیچے کا لیول مدھم دکھایا جاتا ہے",
+ "cmd_buttons.underlay.off": "انڈرلے آف ہے",
+ "cmd_buttons.underlay.none": "انڈرلے آن ہے، مگر نیچے کے لیول پر دکھانے کے لیے کچھ نہیں",
+ "cmd_buttons.zoom_sel.no_shape": "منتخب عناصر کی اس ویو میں فریم کرنے کے لیے کوئی شکل نہیں",
+ "cmd_buttons.close.base": "پلان اور 3D ٹیبز کھلے رہتے ہیں؛ بند کرنے کے لیے سیکشن، شیٹ یا ڈرافٹنگ ویو کھولیں",
+ "tool.equipment": "سازوسامان",
+ "hint.equipment.place": "سازوسامان: جگہ چنیں · نکلنے کے لیے Esc",
+ "cmd_buttons.table.opened": "ٹیبل ماڈل کے ساتھ کھل گئی",
+ "cmd_buttons.circuits.tip": "اس ماڈل کے برقی سرکٹس کی فہرست کھولتا ہے"
+}

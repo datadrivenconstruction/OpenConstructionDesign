@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "ইনপুট খালি।",
+ "units.err.not_number": "{pos} অবস্থানে সংখ্যা নয়।",
+ "units.err.unknown_unit": "অজানা একক: {unit}।",
+ "units.err.non_positive": "দৈর্ঘ্য শূন্যের বেশি হতে হবে।",
+ "units.err.too_large": "দৈর্ঘ্য {max} m-এর বেশি হবে না।",
+ "units.err.bad_angle": "কোণ হতে হবে ডিগ্রির সংখ্যা।",
+ "units.err.unknown_name": "অজানা নাম: {name}। মান রাখা হয়েছে।",
+ "units.err.cycle": "{name}-এ সূত্রের চক্র। মান রাখা হয়েছে।",
+ "units.err.bad_expr": "{pos} অবস্থানে রাশি পড়া যাচ্ছে না। মান রাখা হয়েছে।",
+ "units.err.div_zero": "{pos} অবস্থানে শূন্য দিয়ে ভাগ। মান রাখা হয়েছে।",
+ "units.err.invalid": "অবৈধ সংখ্যা।",
+ "units.err.kept": "পরিবর্তন হয়নি: {reason}"
+}

@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "personnalisé",
+ "draw_quality.custom.tip": "{name} : une entrée de ce projet",
+ "draw_quality.custom_note": "Les entrées marquées personnalisé appartiennent à ce projet.",
+ "draw_quality.unsaved.lib_body": "Les enregistrer dans la bibliothèque, ou les abandonner ?",
+ "draw_quality.unsaved.styles_body": "Les appliquer à la vue, ou les abandonner ?",
+ "draw_quality.unsaved.both_body": "Les appliquer, ou les abandonner ?",
+ "draw_quality.halftone": "demi-teinte {category}",
+ "draw_quality.styles.name": "Styles de ligne",
+ "draw_quality.styles.other_level": "Modifications de style non enregistrées du niveau {level} : appliquez-les ou annulez-les pour modifier ce niveau."
+}

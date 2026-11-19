@@ -1,0 +1,5 @@
+{
+ "elem.panel_select_wall": "เลือกผนัง",
+ "cmd.elem.panel_select_wall": "เลือกผนัง",
+ "elem.left_in_place": "คงไว้ที่เดิม: {kinds} แผงเป็นของผนังของมัน มวลและคำอธิบายจะถูกลบโดยอัตโนมัติ"
+}

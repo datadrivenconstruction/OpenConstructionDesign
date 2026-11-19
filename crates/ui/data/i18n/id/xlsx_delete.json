@@ -1,0 +1,5 @@
+{
+ "xlsx_delete.delete_missing": "Hapus baris yang tidak ada di buku kerja",
+ "xlsx_delete.not_removed": "tidak dihapus: tidak ada data pembanding",
+ "xlsx_delete.no_base_reason": "Tidak tersedia: buku kerja tidak punya data pembanding, sehingga baris yang hilang tidak dapat dibedakan dari yang terhapus secara tidak sengaja. Tidak ada yang dihapus saat Terapkan."
+}

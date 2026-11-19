@@ -1,0 +1,13 @@
+{
+ "type_change.affects_walls": {
+  "one": "벽 #개에 영향",
+  "other": "벽 #개에 영향"
+ },
+ "type_change.affects": {
+  "one": "요소 #개에 영향",
+  "other": "요소 #개에 영향"
+ },
+ "type_change.tick_types": "이 유형들의 요소 {n}개 전체에 유형 변경을 적용",
+ "type_change.tick_types_first": "먼저 유형 변경을 선택하세요: 해당 유형의 모든 요소가 이를 적용받습니다",
+ "xl.msg.types_first": "먼저 유형 변경을 확인하세요"
+}

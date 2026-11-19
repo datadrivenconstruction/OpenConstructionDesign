@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "Масу не можна повернути або віддзеркалити: в її історії форми немає кроку повороту. Перемістіть або скопіюйте її чи намалюйте заново в новому напрямку.",
+ "sched_cats.col.name": "Назва",
+ "sched_cats.col.material": "Матеріал",
+ "sched_cats.col.void": "Порожнина",
+ "sched_cats.col.inplace": "На місці",
+ "sched_cats.col.volume": "Чистий об’єм",
+ "sched_cats.col.area": "Площа поверхні",
+ "sched_cats.col.floor_area": "Площа поверху",
+ "sched_cats.col.thickness": "Товщина",
+ "sched_cats.col.points": "Точки",
+ "elem.toposolid.points": "Геодезичні точки",
+ "elem.toposolid.count": "Точки",
+ "elem.toposolid.low": "Найнижча",
+ "elem.toposolid.high": "Найвища",
+ "elem.toposolid.edit": "Редагувати точки",
+ "elem.toposolid.edit_tip": "Вибирайте, перетягуйте і задавайте позначку геодезичних точок у плані",
+ "elem.toposolid.pick_hint": "Клацніть точку в плані, щоб вибрати. Повторний клік додає або знімає вибір.",
+ "elem.toposolid.z": "Позначка ({n})",
+ "elem.toposolid.mixed": "Вибрані точки відрізняються; нове значення задасть їм усім однакове.",
+ "elem.toposolid.edit_help": "Перетягніть точку, щоб перемістити. Введіть значення і натисніть Enter, щоб задати позначку. Backspace видаляє вибрані точки, Esc виходить.",
+ "elem.toposolid.done": "Готово"
+}

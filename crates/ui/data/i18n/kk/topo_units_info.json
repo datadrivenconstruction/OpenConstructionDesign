@@ -1,0 +1,13 @@
+{
+ "topo.unit.mm": "мм",
+ "topo.unit.metre": "м",
+ "topo.unit.ft": "фут",
+ "topo.opt.material": "Материал",
+ "topo.row.active": "Белсенді бет",
+ "topo.btn.delete_pad": "Алаңшаны жою",
+ "topo.info.loading": "Бетті құру…",
+ "topo.info.warn_n": "{n} ескерту",
+ "topo.info.points_label": "Нүктелер",
+ "topo.import.all_layers": "Барлық қабаттар",
+ "topo.import.need_layer": "Кем дегенде бір қабатты белгілеңіз"
+}

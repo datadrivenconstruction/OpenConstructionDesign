@@ -1,0 +1,8 @@
+{
+ "xlsx_issues.empty_title": "Prázdný list v sešitu",
+ "xlsx_issues.empty_kept": "List {sheet} je prázdný: nic z něj nebylo načteno, {n} prvků zůstává beze změny. Ostatní listy lze stále použít.",
+ "xlsx_issues.empty_none": "List {sheet} je prázdný: nic z něj nebylo načteno. Ostatní listy lze stále použít.",
+ "xlsx_issues.unreadable_title": "List nelze přečíst",
+ "xlsx_issues.unreadable": "List {sheet} nelze přečíst, jeho část souboru je poškozena: nic z něj nebylo převzato a jeho prvky zůstávají beze změny. Ostatní listy lze stále použít.",
+ "xlsx_issues.formulas": "Vzorce na listu {sheet} nebylo možné přečíst, takže vypočtenou hodnotu nelze odlišit od úpravy: z tohoto listu nic převzato. Ostatní listy lze stále použít."
+}

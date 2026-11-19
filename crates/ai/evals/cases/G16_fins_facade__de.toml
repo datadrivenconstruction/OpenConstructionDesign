@@ -1,0 +1,32 @@
+id = "G16_fins_facade__de"
+tier = "hard"
+group = "Any geometry"
+title = "Parametric fins facade"
+lang = "de"
+base = "empty"
+
+[[turn]]
+say = "Ein sechsgeschossiger Bürobau 30 x 18 m mit parametrischer Fassade aus senkrechten Lamellen: Lamellentiefe variiert sinusförmig von 0.2 bis 0.9 m entlang der Länge, Abstand 600 mm, dahinter Verglasung."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "level"
+min = 6.0
+
+[[oracle.count]]
+spec = "col+beam+brace+truss+gridshell_bar+solid+mass+mesh+freeform+shell_elem+gridshell+wall+slab+roof+stair+toposolid+wall_spline"
+min = 200.0
+
+[[oracle.geom]]
+kind = "height"
+min = 18.0
+max = 24.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

@@ -1,0 +1,5 @@
+{
+ "elem.panel_select_wall": "تحديد الجدار",
+ "cmd.elem.panel_select_wall": "تحديد الجدار",
+ "elem.left_in_place": "تُرك في مكانه: {kinds}. اللوحة تتبع جدارها؛ الكتل والتعليقات تُحذف تلقائيًا."
+}

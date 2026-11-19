@@ -1,0 +1,21 @@
+{
+ "cmd.help.check_update": "Otsi uuendusi",
+ "update_check.title": "Uuenduste kontroll",
+ "update_check.desc": "Vaikimisi väljas. Saadab serverile ainult versiooni, OS-i ja arhitektuuri ning paigaldustüübi. Ei laadi midagi alla ega paigalda.",
+ "update_check.freq.startup": "Käivitamisel",
+ "update_check.freq.daily": "Iga päev",
+ "update_check.freq.weekly": "Iga nädal",
+ "update_check.freq.never": "Mitte kunagi",
+ "update_check.check_now": "Kontrolli kohe",
+ "update_check.dialog.title": "Uuenduste kontroll",
+ "update_check.unknown.title": "Uuenduste kontrollimine ebaõnnestus",
+ "update_check.unknown.body": "{e}. See ei tähenda, et see versioon on uusim. Proovi hiljem uuesti.",
+ "update_check.current": "Sul on uusim versioon ({v}).",
+ "update_check.newer": "Versioon {v} on saadaval",
+ "update_check.date": "Välja antud {d}",
+ "update_check.unfit": "See versioon ({v}) on vanem kui soovitatud miinimumversioon {f}. Uuendamine on soovitatav.",
+ "update_check.close": "Sulge",
+ "update_check.open_failed": "Väljalaske lehte ei õnnestunud avada.",
+ "update_check.toast.newer": "Versioon {v} on saadaval. Abi > Otsi uuendusi.",
+ "update_check.toast.unfit": "See versioon ({v}) on vanem kui soovitatud miinimumversioon {f}."
+}

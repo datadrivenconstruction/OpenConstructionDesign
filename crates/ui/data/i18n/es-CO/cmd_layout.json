@@ -1,0 +1,4 @@
+{
+ "cmd.data.sync_xlsx": "Sincronizar con hoja de cálculo XLSX…",
+ "cmd.data.sync_xlsx.desc": "Vuelve a leer el libro vinculado y muestra las diferencias con el modelo."
+}

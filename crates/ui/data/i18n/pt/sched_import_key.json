@@ -1,0 +1,6 @@
+{
+ "sched_import.no_key": "Esta pasta de trabalho não tem registro de exportação (uma exportação antiga): células alteradas no modelo após essa exportação podem ser sobrescritas. Verifique as células alteradas antes de Aplicar.",
+ "sched_import.n_kept": "Alterado no modelo após a exportação, mantido: {n}",
+ "sched_import.n_conflict": "Alterado tanto na pasta de trabalho quanto no modelo, não aplicado: {n}",
+ "sched_import.why_conflict": "alterado no modelo após a exportação (agora {model}), não aplicado"
+}

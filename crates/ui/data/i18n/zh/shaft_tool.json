@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "竖井",
+ "quick.cat.shaft": "竖井",
+ "shaft_tool.browser.shaft": "竖井 #{id}",
+ "shaft_tool.shaft.top": "顶层",
+ "shaft_tool.shaft.cuts": "被切割的构件",
+ "shaft_tool.shaft.cut_area": "切割面积",
+ "shaft_tool.shaft.cut_volume": "切割体积",
+ "elem.no.rooms": "随其所包含的房间变化"
+}

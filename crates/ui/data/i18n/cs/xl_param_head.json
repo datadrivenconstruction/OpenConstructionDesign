@@ -1,0 +1,7 @@
+{
+ "xl.msg.param_ambiguous": "sloupec '{}' může odpovídat kterémukoli z parametrů {}; zadejte přesný název parametru, nepoužito",
+ "xl.msg.param_tag_stale": "sloupec '{}' označuje parametr, který tento projekt nemá; nepoužito",
+ "xl.msg.dup_col_note": "sloupec '{}' v {} opakuje sloupec '{}' v {}; shodné hodnoty se použijí jednou, řádek, kde se liší, ponechá hodnotu modelu",
+ "xl.msg.dup_col_differs": "sloupce '{}' a '{}' se liší v {} a {}; hodnota modelu zůstává, ponechte jeden sloupec",
+ "xl.msg.dup_col_id": "sloupce '{}' a '{}' se liší v {} a {}, řádek nelze identifikovat; nic nebylo použito, ponechte jeden sloupec"
+}

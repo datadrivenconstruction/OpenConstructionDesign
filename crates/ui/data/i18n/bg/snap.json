@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "Край",
+ "snap.midpoint": "Среда",
+ "snap.perpendicular": "Перпендикуляр",
+ "snap.wall_axis": "Ос на стена",
+ "snap.wall_face": "Лице на стена",
+ "snap.grid": "Мрежа",
+ "snap.intersection": "Пресичане",
+ "snap.grid_axis": "Ос на мрежа",
+ "snap.ref_plane": "Референтна равнина",
+ "snap.nearest": "Най-близка",
+ "snap.align_x": "Подравнено по X с отдалечена точка",
+ "snap.align_y": "Подравнено по Y с отдалечена точка",
+ "snap.align_xy": "Подравнено по X и Y"
+}

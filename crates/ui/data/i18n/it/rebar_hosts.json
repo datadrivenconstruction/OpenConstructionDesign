@@ -1,0 +1,40 @@
+{
+ "rebar_hosts.hosts": "Ospiti: {list}",
+ "rebar_hosts.kind.column": "Pilastro",
+ "rebar_hosts.kind.beam": "Trave",
+ "rebar_hosts.kind.wall": "Muro",
+ "rebar_hosts.kind.slab": "Solaio",
+ "rebar_hosts.kind.footing": "Plinto",
+ "rebar_hosts.kind.raft": "Platea di fondazione",
+ "rebar_hosts.n.column": {
+  "one": "# pilastro",
+  "other": "# pilastri"
+ },
+ "rebar_hosts.n.beam": {
+  "one": "# trave",
+  "other": "# travi"
+ },
+ "rebar_hosts.n.wall": {
+  "one": "# muro",
+  "other": "# muri"
+ },
+ "rebar_hosts.n.slab": {
+  "one": "# solaio",
+  "other": "# solai"
+ },
+ "rebar_hosts.n.footing": {
+  "one": "# plinto",
+  "other": "# plinti"
+ },
+ "rebar_hosts.n.raft": {
+  "one": "# platea di fondazione",
+  "other": "# platee di fondazione"
+ },
+ "rebar_hosts.mixed_note": "Pilastri e travi accolgono barre e staffe; muri, solai e fondazioni accolgono mesh. Seleziona un solo gruppo per aggiungere armature.",
+ "rebar_hosts.why.mixed": "La selezione mescola pilastri o travi con muri, solai o fondazioni. Seleziona un solo gruppo.",
+ "rebar_hosts.why.area_linear": "La mesh va in muri, solai e fondazioni, non in pilastri o travi.",
+ "rebar_hosts.why.bars_plate": "Barre longitudinali e staffe vanno in pilastri e travi, non in muri, solai o fondazioni.",
+ "rebar_hosts.why.no_common_face": "Gli elementi ospitanti selezionati non hanno una faccia di copriferro in comune. Seleziona ospiti dello stesso tipo.",
+ "rebar_hosts.why.no_type": "Scegli un tipo di barra.",
+ "rebar_hosts.kind_type": "{kind} · {type}"
+}

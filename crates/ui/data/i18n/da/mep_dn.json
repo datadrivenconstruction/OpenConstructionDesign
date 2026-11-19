@@ -1,0 +1,5 @@
+{
+ "mep_dn.dn.unset": "Ikke angivet",
+ "mep_dn.slope.err": "Angiv et fald i %, fx 1.5",
+ "mep_dn.err.rejected": "værdien accepteres ikke"
+}

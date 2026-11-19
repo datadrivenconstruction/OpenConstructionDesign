@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "درآمد شدہ میشز",
+ "mat_mesh.mesh.none_selected": "اس مواد کے لیے 3D ویو میں درآمد شدہ میشز منتخب کریں۔",
+ "mat_mesh.mesh.current": "پہلی منتخب میش: {material}",
+ "mat_mesh.mesh.current_none": "پہلی منتخب میش کا کوئی مواد نہیں۔",
+ "mat_mesh.mesh.assign": "{n} منتخب کو تفویض کریں",
+ "mat_mesh.mesh.assign_tip": "حقیقی انداز اس مواد کی ٹیکسچر منتخب میشز پر دکھاتا ہے",
+ "mat_mesh.mesh.assign_cat": "زمرے {category} کو تفویض کریں",
+ "mat_mesh.mesh.assign_cat_tip": "اس زمرے کی ہر درآمد شدہ میش جس کا اپنا مواد نہیں",
+ "mat_mesh.mesh.clear": "منتخب صاف کریں",
+ "mat_mesh.mesh.clear_tip": "منتخب میشز اپنے زمرے کے مواد یا سادہ رنگ پر واپس جاتی ہیں",
+ "mat_mesh.mesh.clear_cat": "زمرہ صاف کریں"
+}

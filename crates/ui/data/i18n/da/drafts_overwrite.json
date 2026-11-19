@@ -1,0 +1,5 @@
+{
+ "drafts_overwrite.ow.project": "Gemning af projektet venter på dette svar. Erstat værdier for at fortsætte med at gemme; Tilbage til redigering beholder alle redigeringer og skriver intet.",
+ "drafts_overwrite.drafts.ow_wait": "Gemning venter på dit svar i familieeditoren: indlæsning af en familie ville erstatte projekttypeværdier. Intet blev lukket.",
+ "drafts_overwrite.drafts.ow_back": "Gemning stoppet: projekttypeværdier blev bevaret, og familieredigeringerne er stadig åbne. Intet blev lukket."
+}

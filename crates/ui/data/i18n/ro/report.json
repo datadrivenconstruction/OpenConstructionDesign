@@ -1,0 +1,23 @@
+{
+ "cmd.app.report": "Raportează o problemă…",
+ "cmd.app.report.desc": "Descrie ce a mers prost și salvează un pachet pe acest computer: textul dvs., datele despre versiune și sistem, o imagine a ferestrei și ultima înregistrare de blocare. Nimic nu este trimis.",
+ "report.title": "Raportează o problemă",
+ "report.what": "Ce s-a întâmplat",
+ "report.expected": "Ce ați așteptat",
+ "report.steps": "Pași pentru a o reproduce",
+ "report.opt.shot": "Include o imagine a ferestrei",
+ "report.opt.model": "Include o copie a modelului",
+ "report.opt.model.note": "Dezactivat implicit. Copia conține datele proiectului, fără jurnalul AI.",
+ "report.opt.paths": "Păstrează numele de utilizator în căile fișierelor",
+ "report.local": "Pachetul este salvat doar pe acest computer. Nimic nu este trimis automat.",
+ "report.blocked": "Descrieți mai întâi ce s-a întâmplat.",
+ "report.save": "Salvează pachetul",
+ "report.copy": "Copiază textul",
+ "report.cancel": "Anulează",
+ "report.copied": "Textul raportului a fost copiat.",
+ "report.saved": "Pachet salvat: {path}",
+ "report.failed": "Pachetul nu a putut fi salvat: {err}",
+ "report.model.fail": "Copia modelului nu a putut fi făcută, nimic nu a fost salvat: {err}",
+ "report.crash.notice": "Sesiunea anterioară s-a încheiat cu o blocare.",
+ "report.crash.action": "Raportează o problemă"
+}

@@ -1,0 +1,7 @@
+{
+ "diff.kind.added": "toegevoegd",
+ "diff.kind.changed": "gewijzigd",
+ "diff.kind.deleted": "verwijderd",
+ "diff.kind.refused": "geweigerd",
+ "diff.kind.conflict": "botsing"
+}

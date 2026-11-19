@@ -1,0 +1,11 @@
+{
+ "cmd.arch.roof_gable.short": "Pignon",
+ "cmd.arch.roof_hip.short": "Croupe",
+ "cmd.arch.roof_shed.short": "Monopente",
+ "cmd.arch.roof_mansard.short": "Mansarde",
+ "cmd.arch.roof_gambrel.short": "Brisis",
+ "cmd.arch.roof_barrel.short": "Voûte",
+ "cmd.arch.roof_edges.short": "Rives de toiture",
+ "cmd.arch.roof_opening.short": "Ouverture",
+ "cmd.mass.roof_by_face.short": "Par face"
+}

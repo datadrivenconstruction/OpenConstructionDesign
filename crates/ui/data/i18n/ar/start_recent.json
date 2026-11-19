@@ -1,0 +1,5 @@
+{
+ "start_recent.unavailable": "غير متاح الآن (المحرك أو الموقع الشبكي لا يستجيب): {path}",
+ "start_recent.unavailable_short": "غير متاح الآن",
+ "start_recent.retry": "إعادة المحاولة"
+}

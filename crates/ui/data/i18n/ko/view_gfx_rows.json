@@ -1,0 +1,10 @@
+{
+ "view_gfx.vv.visible_tip": "이 뷰에서 표시",
+ "view_gfx.vv.enabled_tip": "이 뷰에 이 필터를 적용",
+ "view_gfx.vv.reset_tip": "프로젝트 기본값으로 되돌리기",
+ "view_gfx.vv.col.actions": "작업",
+ "view_gfx.vv.nothing_to_apply": "적용할 변경 사항이 없습니다",
+ "view_gfx.flt.save_blocked": "필터 이름을 입력하고 모든 규칙 매개변수를 채우세요",
+ "view_gfx.flt.confirm_delete": "모든 뷰에서 삭제할까요?",
+ "view_gfx.flt.param_pick": "선택…"
+}

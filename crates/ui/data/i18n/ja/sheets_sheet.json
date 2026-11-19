@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "ビュー付きでシートを複製",
+ "cmd.view.sheet_duplicate_title": "シートを複製 (タイトルブロックのみ)",
+ "sheets.dup.menu_views": "ビュー付きで複製",
+ "sheets.dup.menu_title": "複製、タイトルブロックのみ",
+ "sheets.dup.done": "シート {number} を {src} から作成しました: ビュー {views}、集計表と凡例 {sched}。改訂履歴はコピーされず、シートは未発行です。",
+ "sheets.dup.none": "複製するにはシートを開いてください",
+ "sheets.dup.copy": "コピー",
+ "cmd.view.sheet_duplicate.short": "ビュー付きで複製",
+ "cmd.view.sheet_duplicate_title.short": "タイトルブロックを複製"
+}

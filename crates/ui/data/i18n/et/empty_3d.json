@@ -1,0 +1,14 @@
+{
+ "empty.v3d_model.title": "3D-vaates pole veel midagi",
+ "empty.v3d_model.hint": "Joonista plaanil seinad, ja need ilmuvad siia.",
+ "empty.v3d_model.action": "Ava plaan",
+ "empty.v3d_hidden.title": "Kõik elemendid on selles vaates peidetud",
+ "empty.v3d_hidden.hint": "Ajutine peitmine või isoleerimine ei jäta nähtavaks midagi. Vaate graafika jääb seatud olekusse.",
+ "empty.v3d_hidden.action": "Näita kõiki",
+ "empty.v3d_graphics.title": "Vaate graafika peidab kõik kategooriad",
+ "empty.v3d_graphics.hint": "Selle vaate kategooriareeglid ei jäta nähtavaks midagi. Lülita kategooriad vaate graafikas uuesti sisse.",
+ "empty.v3d_graphics.action": "Ava vaate graafika",
+ "empty.v3d_box.title": "Lõikekast asub mudelist väljaspool",
+ "empty.v3d_box.hint": "Lõikekast lõikab ära kõik elemendid. Sobita kast uuesti mudeli ümber.",
+ "empty.v3d_box.action": "Lähtesta kast"
+}

@@ -1,0 +1,14 @@
+{
+ "cmd.mod.divide": "Verdelen",
+ "cmd.mod.divide.short": "Verdelen",
+ "cmd.mod.divide.desc": "Verdeelt een wand in één stap in gelijke delen. Typ het aantal delen en klik dan op de wand.",
+ "whereis.mod.divide": "verdelen, gelijke delen, in stukken snijden, wand segmenteren",
+ "hint.split.parts": "Verdelen: klik op een wand · getal — delen (2–100) · Esc — annuleren",
+ "create_input.divide.bad_parts": "«{text}» is geen aantal delen: typ een geheel getal van 2 tot {max}",
+ "create_input.ws.err.empty": "Typ een naam voor de indeling",
+ "create_input.ws.err.long": "De naam is te lang: maximaal 40 tekens",
+ "create_input.ws.err.preset": "Deze naam hoort bij een ingebouwde indeling",
+ "create_input.ws.err.full": "Maximaal 24 opgeslagen indelingen: verwijder er eerst één",
+ "create_input.seldim.locked": "Afstand {v} vergrendeld",
+ "create_input.seldim.positive": "De afstand moet groter zijn dan nul"
+}

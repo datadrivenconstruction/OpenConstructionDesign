@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "اختيار حلقة الجدران كاملة",
+ "cmd.sketch.link_unlink": "فصل الحافة عن الجدار",
+ "cmd.sketch.link_repick": "إعادة اختيار جدار الحافة",
+ "cmd.ctx.floor.link_unlink": "فصل الحواف عن الجدران",
+ "cmd.ctx.floor.link_accept": "قبول حواف الجدران المحذوفة",
+ "boundary_link.hint.loop": "انقر على جدار: تصبح سلسلة الجدران المغلقة حوافَّ مرتبطة",
+ "boundary_link.hint.repick": "انقر على جدار موازٍ للحافة: ستتبعه الحافة",
+ "boundary_link.need_sketch": "افتح رسم حدود المساحة أولًا",
+ "boundary_link.need_edge": "أشِر إلى حافة في الرسم التخطيطي",
+ "boundary_link.need_straight": "الحافة المستقيمة فقط يمكن أن تتبع جدارًا",
+ "boundary_link.need_floor": "حدِّد أرضية",
+ "boundary_link.no_wall": "لا يوجد جدار تحت المؤشر",
+ "boundary_link.not_parallel": "الجدار غير موازٍ للحافة",
+ "boundary_link.not_linked": "هذه الحافة غير مرتبطة بجدار",
+ "boundary_link.unlinked": "فُصلت الحافة: تبقى في مكانها ولا تتبع الجدار بعد الآن",
+ "boundary_link.accepted": "قُبلت الحواف: تبقى في مكانها كحواف عادية",
+ "boundary_link.failed": "تعذّر التطبيق",
+ "boundary_link.lost": "الجدار المصدر محذوف",
+ "boundary_link.blocked": "لا يستطيع تتبع الجدار"
+}

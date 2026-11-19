@@ -1,0 +1,6 @@
+{
+ "quick.keys.rec_hint": "Esc скасовує · Backspace очищає",
+ "quick.keys.row_lost": "{key} тепер належить “{cmd}”",
+ "quick.keys.row_took": "{key} взято з “{cmd}”",
+ "quick.keys.reset_tip": "Скинути до типового"
+}

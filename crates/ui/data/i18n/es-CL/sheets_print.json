@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "Lámina anterior (Av Pág)",
+ "sheets.print.next": "Lámina siguiente (Re Pág)",
+ "sheets.print.fit": "Ajustar página (doble clic)",
+ "sheets.print.no_sheets": "No hay láminas para previsualizar",
+ "sheets.print.building": "Creando la página…",
+ "sheets.print.stop_build": "Detener",
+ "sheets.print.build_stopped": "Creación de página detenida",
+ "sheets.print.retry": "Crear de nuevo",
+ "sheets.print.build_failed": "No se pudo crear la vista previa"
+}

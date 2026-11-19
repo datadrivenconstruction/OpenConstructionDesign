@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "Проём слухового окна",
+ "cmd.arch.roof_opening": "Проём в крыше",
+ "cmd.arch.roof_extrusion": "Крыша выдавливанием",
+ "cmd.arch.ceiling_opening": "Проём в потолке",
+ "cmd.str.slab_opening": "Проём в перекрытии",
+ "cmd.ctx.wall.detach": "Отсоединить верх",
+ "cmd.ctx.floor.sketch": "Изменить контур",
+ "cmd.ctx.floor.shape": "Изменить форму",
+ "host_shape.shape.elev_prompt": "отметка, мм…",
+ "host_shape.shape.elev_mm": "{v} мм",
+ "host_shape.sketch.no_host": "под контуром нет хозяина на этом уровне",
+ "host_shape.issue.roof": "крыша {id}: {e}",
+ "host_shape.issue.ceiling": "потолок {id}: {e}",
+ "host_shape.status.select_slab": "выберите перекрытие",
+ "host_shape.status.select_walls": "выберите стены",
+ "host_shape.status.no_roof_or_level": "нет крыши и уровня выше",
+ "host_shape.status.top_attached": "верх стен присоединён",
+ "host_shape.status.top_detached": "верх стен отсоединён",
+ "host_shape.status.straight_wall": "нужна прямая стена",
+ "host_shape.status.roof_extruded": "крыша выдавливанием создана",
+ "warn.kind.cut": "Вырез или привязка не построены"
+}

@@ -1,0 +1,36 @@
+id = "G21_minaret_tower"
+tier = "hard"
+group = "Any geometry"
+title = "Minaret-style tower"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "A slender 60 m tower: octagonal base, cylindrical shaft 4 m across, two balconies at 35 and 48 m, a conical spire with a ball, a spiral staircase inside."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "stair"
+min = 1.0
+
+[[oracle.count]]
+spec = "slab"
+min = 2.0
+
+[[oracle.count]]
+spec = "col+beam+brace+truss+gridshell_bar+solid+mass+mesh+freeform+shell_elem+gridshell+wall+slab+roof+stair+toposolid+wall_spline"
+min = 8.0
+
+[[oracle.geom]]
+kind = "height"
+min = 55.0
+max = 68.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

@@ -1,0 +1,4 @@
+{
+ "vv_conflict.vv.switched": "Az aktív nézet megváltozott. Ezek a módosítások a(z) {view} nézethez tartoznak, és még nincsenek alkalmazva: az Alkalmaz a(z) {view} nézetbe írja őket, az Elvetés eldobja őket.",
+ "vv_conflict.vv.discard": "Módosítások elvetése"
+}

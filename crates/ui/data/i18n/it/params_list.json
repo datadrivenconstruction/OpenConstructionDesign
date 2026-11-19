@@ -1,0 +1,23 @@
+{
+ "params_list.n_params": {
+  "one": "# parametro",
+  "other": "# parametri"
+ },
+ "params_list.n_values": {
+  "one": "# valore",
+  "other": "# valori"
+ },
+ "params_list.n_elements": {
+  "one": "# elemento",
+  "other": "# elementi"
+ },
+ "params_list.exported": "{params} esportati in {file}",
+ "params_list.export_failed": "Parametri non esportati: {why}",
+ "params_list.open_folder": "Apri cartella",
+ "params_list.delete_tip": "Elimina parametro e i suoi valori",
+ "params_list.confirm": "Eliminare {name} e i suoi {values} su {elements}?",
+ "params_list.confirm_btn": "Elimina",
+ "params_list.cancel": "Annulla",
+ "params_list.deleted": "Parametro {name} eliminato ({values})",
+ "params_list.undo": "Annulla"
+}

@@ -1,0 +1,19 @@
+{
+ "ifc_patch.fallback.source_changed": "Không dùng bản vá: tệp nguồn đã thay đổi trên đĩa hoặc không đọc được. Tệp đã được ghi lại từ mô hình.",
+ "ifc_patch.fallback.sources": "Không dùng bản vá: dự án không có đúng một nguồn. Tệp đã được ghi lại từ mô hình.",
+ "ifc_patch.fallback.schema": "Không dùng bản vá: lược đồ của tệp nguồn không được hỗ trợ. Tệp đã được ghi lại từ mô hình.",
+ "ifc_patch.fallback.structure": "Không dùng bản vá: cấu trúc của tệp nguồn không đáng tin. Tệp đã được ghi lại từ mô hình.",
+ "ifc_patch.fallback.edit": "Không dùng bản vá: không thể áp dụng an toàn một chỉnh sửa vào tệp nguồn. Tệp đã được ghi lại từ mô hình.",
+ "ifc_patch.reason.schema": "Cấu trúc tệp nguồn không chứa được chỉnh sửa này; cấu kiện giữ nguyên như trong nguồn",
+ "ifc_patch.reason.prop": "Chỉnh sửa thuộc tính này không thể biểu diễn trong tệp nguồn; giá trị giữ như trong nguồn",
+ "ifc_patch.reason.no_export": "Phần tử mới này chưa có biểu diễn trong IFC",
+ "ifc_patch.reason.link": "Phần tử có trong tệp, nhưng liên kết tới vật liệu hoặc loại của nó không được ghi; nó được liệt kê là chưa ghi",
+ "ifc_patch.drop": "Bỏ",
+ "ifc_patch.drop_done": "Đã bỏ các liên kết đang chờ: {n}; sẽ không thử lại nữa",
+ "ifc_patch.fallback.building": "Không dùng bản vá: cao độ mới cần đúng một tòa nhà trong tệp nguồn, nhưng tệp có không có hoặc có nhiều. Tệp đã được ghi lại từ mô hình.",
+ "ifc_patch.fallback.types": "Không dùng bản vá: cao độ, loại hoặc vật liệu đã thay đổi kể từ khi nhập, và bản vá không ghi được những thứ đó. Tệp đã được ghi lại từ mô hình.",
+ "ifc_patch.fallback.zipped": "Không dùng bản vá: tệp nguồn dạng nén không thể vá. Tệp đã được ghi lại từ mô hình.",
+ "ifc_patch.fallback.source_kept": "Tệp nguồn không bị ghi đè: lần lưu này không đủ tin cậy để thay thế nó. Lần lưu này là một bản sao bên cạnh.",
+ "ifc_patch.fallback.nested": "Không dùng bản vá: một phần tử mới có các phần lồng (như cổng kết nối), mà bản vá không ghi được. Tệp đã được ghi lại từ mô hình.",
+ "ifc_patch.fallback.shared_part": "Không dùng bản vá: một phần của cầu thang hoặc dốc đã sửa cũng được dùng bởi phần tử hoặc quan hệ khác, bản vá không xử lý được. Tệp đã được ghi lại từ mô hình."
+}

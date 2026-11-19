@@ -1,0 +1,4 @@
+walls=[(0,0)-(6,0)]
+zoom=100
+# Extension: on the line of a wall beyond its end
+tool(WA) move(8.0,0.05) → snap=Extension p=(8,0)

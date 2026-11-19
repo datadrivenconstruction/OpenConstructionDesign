@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "Вставити шар нижче",
+ "type_layers.layer.delete": "Видалити шар",
+ "type_layers.layer.delete_last": "Тип потребує щонайменше одного шару",
+ "type_layers.value.bad": "Не дійсне додатне значення",
+ "type_layers.value.required": "Обов’язково",
+ "type_layers.unsaved.title": "Незбережені зміни в {name}",
+ "type_layers.unsaved.body": "Застосувати їх до типу чи відхилити?",
+ "type_layers.unsaved.discard": "Відхилити"
+}

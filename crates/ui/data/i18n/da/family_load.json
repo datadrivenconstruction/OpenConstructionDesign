@@ -1,0 +1,4 @@
+{
+ "family_load.refused": "Familien “{name}” kan ikke indlæses: {msg}. Intet blev indlæst i projektet; dine ændringer er bevaret.",
+ "family_load.loaded_all": "{n} familier indlæst i ét trin: {names}"
+}

@@ -1,0 +1,11 @@
+{
+ "pick_rules.filter": "Pick: all",
+ "pick_rules.filter.on": "Pick: {n} off",
+ "pick_rules.filter.title": "Categories a click can pick",
+ "pick_rules.filter.all": "Pick all categories",
+ "pick_rules.filter.tip": "Selection filter: unchecked categories are skipped by click and hover",
+ "pick_rules.here": "Items here",
+ "pick_rules.here.row": "{cat} · {len}",
+ "pick_rules.here.selected": "selected",
+ "pick_rules.pinned": "Select pinned items"
+}

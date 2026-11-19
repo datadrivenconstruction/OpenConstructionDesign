@@ -1,0 +1,9 @@
+{
+ "empty.props_model.title": "Nothing selected",
+ "empty.props_model.hint": "Click an element in the view to see its properties. Or export all parameters to a workbook, edit them there and apply back.",
+ "empty.props_model.action": "Export to XLSX",
+ "tut.spreadsheet.title": "XLSX spreadsheet round trip",
+ "tut.spreadsheet.1": "Press Export to XLSX spreadsheet below: choose what to include and save the workbook.",
+ "tut.spreadsheet.2": "Open the workbook in a spreadsheet app, change a cell and save it. The preview here shows the change.",
+ "tut.spreadsheet.3": "Check the preview and press Apply to model. Ctrl+Z undoes it."
+}

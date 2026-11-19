@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "ควบคุมโดยเทมเพลต {name}",
+ "view_template.edit_template": "แก้ไขเทมเพลต",
+ "view_template.locked_tip": "กำหนดโดยเทมเพลตมุมมอง {name} เปลี่ยนได้ในเทมเพลต",
+ "view_template.no_filters": "ไม่มีตัวกรองในมุมมองนี้"
+}

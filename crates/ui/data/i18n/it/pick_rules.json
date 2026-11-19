@@ -1,0 +1,11 @@
+{
+ "pick_rules.filter": "Selezione: tutte",
+ "pick_rules.filter.on": "Selezione: {n} escluse",
+ "pick_rules.filter.title": "Categorie selezionabili con un clic",
+ "pick_rules.filter.all": "Seleziona tutte le categorie",
+ "pick_rules.filter.tip": "Filtro di selezione: le categorie non spuntate vengono saltate da clic e passaggio",
+ "pick_rules.here": "Elementi qui",
+ "pick_rules.here.selected": "selezionati",
+ "pick_rules.pinned": "Seleziona gli elementi bloccati",
+ "pick_rules.here.row": "{cat} · {len}"
+}

@@ -1,0 +1,9 @@
+{
+ "elem.deleted": "Elementen verwijderd: {n}",
+ "elem.deleted_kept": "Elementen verwijderd: {n}; op hun plaats gelaten: {k} (panelen en elementen die niet verwijderd kunnen worden)",
+ "elem.not_deleted": "niet verwijderd: {e}",
+ "elem.not_deletable": "Dit element kan niet worden verwijderd",
+ "elem.panel": "gordijngevelpaneel",
+ "elem.panel_refused": "Een paneel maakt deel uit van zijn gordijngevel en kan niet op zichzelf worden verwijderd. Selecteer de hele wand om hem te verwijderen.",
+ "elem.reload_failed": "Verwijderd, maar het beeld is niet bijgewerkt: {e}"
+}

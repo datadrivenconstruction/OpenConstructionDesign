@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "Начертайте затворен контур: щракнете точки, след това Enter или Завършване за създаване",
+ "sketch_hints.sk_finish": "Завършване",
+ "sketch_hints.sk_cancel": "Отказ",
+ "sketch_hints.import_warn": "предупреждения при проверка на модела: {n} (първо: {first})",
+ "sketch_hints.ai.offline.schedule": "Отваряне на спецификацията",
+ "sketch_hints.ai.offline.check": "Проверка по правила",
+ "sketch_hints.ai.offline.warnings": "Показване на предупрежденията",
+ "cmd.file.publish_pdf": "Публикуване на листовете като PDF…",
+ "cmd.file.publish_pdf.desc": "Публикува избраните листове в PDF. Същото като Експорт на листове в PDF/SVG.",
+ "sketch_hints.verify_none": "В избора няма нищо, зададено от AI асистента, за проверка",
+ "sketch_hints.contours_none": "Няма топоповърхнина в модела: контурите се появяват след създаването ѝ",
+ "sketch_hints.contours_off": "Контурите на топоповърхнината са скрити",
+ "sketch_hints.contours_on": "Контурите на топоповърхнината са показани"
+}

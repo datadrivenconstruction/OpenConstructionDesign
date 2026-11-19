@@ -1,0 +1,5 @@
+{
+ "drafts_overwrite.ow.project": "Lagring av prosjektet venter på dette svaret. Erstatt verdier for å fortsette å lagre; Tilbake til redigering beholder alle redigeringer og skriver ingenting.",
+ "drafts_overwrite.drafts.ow_wait": "Lagring venter på svaret ditt i familieredigeringen: å laste inn en familie ville erstatte prosjekttypeverdier. Ingenting ble lukket.",
+ "drafts_overwrite.drafts.ow_back": "Lagring stanset: prosjekttypeverdier ble beholdt, og familieredigeringene er fortsatt åpne. Ingenting ble lukket."
+}

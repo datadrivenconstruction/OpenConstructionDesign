@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "Rita en sluten kontur: klicka på punkter och tryck sedan på Enter eller Slutför",
+ "sketch_hints.sk_finish": "Slutför",
+ "sketch_hints.sk_cancel": "Avbryt",
+ "sketch_hints.import_warn": "modellkontrollvarningar: {n} (första: {first})",
+ "sketch_hints.ai.offline.schedule": "Öppna schemat",
+ "sketch_hints.ai.offline.check": "Kontrollera mot regler",
+ "sketch_hints.ai.offline.warnings": "Visa varningar",
+ "cmd.file.publish_pdf": "Publicera blad som PDF…",
+ "cmd.file.publish_pdf.desc": "Publicerar de valda bladen till PDF. Samma som Exportera blad till PDF/SVG.",
+ "sketch_hints.verify_none": "Inget i markeringen är satt av AI-assistenten att verifiera",
+ "sketch_hints.contours_none": "Ingen terrängyta i modellen: höjdkurvor visas när en skapas",
+ "sketch_hints.contours_off": "Höjdkurvor dolda",
+ "sketch_hints.contours_on": "Höjdkurvor visas"
+}

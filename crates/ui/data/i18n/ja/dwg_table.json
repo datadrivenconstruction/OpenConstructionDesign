@@ -1,0 +1,14 @@
+{
+ "dwg_table.copy": "表をコピー",
+ "dwg_table.copy_tip": "レイヤーごとの数量表を、スプレッドシート用の表としてコピーします",
+ "dwg_table.copied": "数量表をコピーしました (タブ区切り)",
+ "dwg_table.total": "合計",
+ "dwg_table.col.layer": "レイヤー",
+ "dwg_table.col.count": "数量",
+ "dwg_table.col.len": "長さ、{unit}",
+ "dwg_table.col.area": "面積、{unit}",
+ "dwg_table.unit.mm": "mm",
+ "dwg_table.unit.m2": "m²",
+ "dwg_table.unit.ft": "ft",
+ "dwg_table.unit.ft2": "ft²"
+}

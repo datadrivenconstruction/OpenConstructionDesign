@@ -1,0 +1,9 @@
+{
+ "shot_scenes.site": "Terreno",
+ "shot_scenes.lawn": "Césped",
+ "shot_scenes.pad": "Zapata",
+ "shot_scenes.block": "Bloque",
+ "shot_scenes.void": "Hueco",
+ "shot_scenes.tower": "Torre",
+ "shot_scenes.wall_void": "Hueco de muro"
+}

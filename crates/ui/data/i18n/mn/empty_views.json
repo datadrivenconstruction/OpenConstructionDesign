@@ -1,0 +1,19 @@
+{
+ "empty.v3d_gpu.title": "Энэ график адаптер дээр 3D боломжгүй",
+ "empty.v3d_gpu.hint": "Загвар аюулгүй, план ажиллаж байна. 3D-г дахин туршихын тулд аюулгүй графикаар эхлүүлнэ үү.",
+ "empty.v3d_gpu.action": "Аюулгүй графикаар дахин эхлүүлэх",
+ "empty.v3d_loading.title": "3D бүтээж байна…",
+ "empty.v3d_loading.pct": "Нээж байна… {pct} %",
+ "empty.plan_hidden.title": "Энэ планд бүх элемент нуугдсан",
+ "empty.plan_hidden.hint": "Түр нуух эсвэл тусгаарлах нь юу ч харуулахгүй байна.",
+ "empty.plan_hidden.action": "Бүгдийг харуулах",
+ "empty.plan_graphics.title": "Харагдацын график бүх ангиллыг нуусан",
+ "empty.plan_graphics.hint": "Энэ харагдацын ангиллын дүрэм харуулах зүйлгүй орхисон.",
+ "empty.plan_graphics.action": "Харагдацын графикийг нээх",
+ "empty.plan_phase.title": "Үе шатын шүүлтүүр бүгдийг нуусан",
+ "empty.plan_phase.hint": "Энэ түвшний юу ч энэ харагдацад харуулсан үе шатанд байхгүй.",
+ "empty.plan_phase.action": "Үе шат солих",
+ "empty.plan_level.title": "Энэ түвшинд элемент алга",
+ "empty.plan_level.hint": "Энэ загварын бусад түвшинд элементүүд байна.",
+ "empty.plan_level.action": "Элементтэй түвшин рүү очих"
+}

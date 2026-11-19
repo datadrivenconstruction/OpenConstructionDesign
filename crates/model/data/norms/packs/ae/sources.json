@@ -1,0 +1,22 @@
+{
+ "sources": [
+  {
+   "id": "ae-flsc",
+   "title": "UAE Fire and Life Safety Code of Practice (federal civil defence)",
+   "publisher": "General Command of Civil Defence, Ministry of Interior (hosted by Dubai Civil Defence)",
+   "url": "https://web.archive.org/web/20250615020406if_/https://www.dcd.gov.ae/portal/eng/UAEFIRECODE_ENG_SEPTEMBER_2018.pdf",
+   "edition": "September 2018 (CDGH-OP-25, 1348 pages), official PDF read from a web.archive.org snapshot of 2025-06-15",
+   "licence": "copyright-numbers-only",
+   "verified": "2026-11-14"
+  },
+  {
+   "id": "dm-gbr",
+   "title": "Dubai Green Building Regulations and Specifications",
+   "publisher": "Dubai Municipality",
+   "edition": "2011",
+   "url": "https://www.dm.gov.ae/wp-content/uploads/2020/11/GreenBuildingRegulationsandSpeci-2.pdf",
+   "licence": "public-law",
+   "verified": null
+  }
+ ]
+}

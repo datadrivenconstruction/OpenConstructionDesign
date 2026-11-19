@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "Systemnavn",
+ "mep_browser.add_blocked": "Angiv et systemnavn først",
+ "mep_browser.col.insulation": "Isolering",
+ "mep_browser.cancel": "Annullér",
+ "mep_browser.delete.title": "Slet dette system?",
+ "mep_browser.delete.body": "Systemet „{name}“ og dets forløb ({n}) slettes.",
+ "mep_browser.delete.undo": "Du kan fortryde dette med ét Fortryd.",
+ "mep_browser.delete.confirm": "Slet system"
+}

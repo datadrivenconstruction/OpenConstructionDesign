@@ -1,0 +1,7 @@
+{
+ "recover.untitled_note": "Dự án này chưa từng được lưu",
+ "recover.file_missing": "Không tìm thấy tệp dự án",
+ "recover.banner": "Tìm thấy công việc chưa lưu từ phiên trước cho {name}",
+ "recover.banner_review": "Xem lại",
+ "recover.later_archived": "Đã hoãn {n} lần: các bản chụp đã chuyển vào kho lưu trữ"
+}

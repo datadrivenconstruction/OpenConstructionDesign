@@ -1,0 +1,9 @@
+{
+ "cmd.mass.timeline_family": "Építési előzmények családba",
+ "cmd.mass.timeline_family.desc": "Családot készít a kijelölt paraméteres tömeg építési előzményeiből. Az előzmények paraméterei a család paraméterévé válnak.",
+ "mass_family.done": "A(z) {name} család létrehozva {n} paraméterrel",
+ "mass_family.refused": "Nem jött létre család: {e}",
+ "mass_family.no_mass": "Előbb válasszon paraméteres tömeget",
+ "mass_family.add_modifier": "Módosító hozzáadása",
+ "mass_family.needs_faces": "Kijelölt felületek szükségesek: használja az eszközt a Tömegformálás fülön"
+}

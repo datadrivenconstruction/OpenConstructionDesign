@@ -1,0 +1,33 @@
+{
+ "cmd.help.licenses": "Mga open-source na lisensya",
+ "cmd.help.licenses.desc": "Inililista ang mga open-source na library ng build na ito at ang kanilang lisensya.",
+ "about.product": "DDC Editor",
+ "about.version": "Bersyon",
+ "about.build": "Pagbuo",
+ "about.schema": "Schema ng modelo",
+ "about.system": "Sistema",
+ "about.gpu": "Adapter ng graphics",
+ "about.language": "Wika",
+ "about.copy": "Kopyahin ang impormasyon ng bersyon",
+ "about.copy_desc": "Bersyon, build, system at graphics adapter para sa bug report. Walang file path.",
+ "about.copied": "Nakopya ang impormasyon ng bersyon",
+ "about.licenses": "Mga open-source na lisensya",
+ "about.licenses_desc": "Mga library na ginamit sa build na ito at ang kanilang lisensya",
+ "about.licenses.open": "Tingnan",
+ "about.licenses.title": "Mga open-source na lisensya",
+ "about.licenses.note": "Kasama sa DDC Editor ang mga library sa ibaba. Nananatili ang bawat isa sa sarili nitong lisensya at copyright notice. Buong teksto ng lisensya: THIRD_PARTY_LICENSES.txt sa tabi ng application.",
+ "about.licenses.full": "Buong teksto ng lisensya",
+ "about.licenses.list": "Listahan ng component",
+ "about.licenses.close": "Isara",
+ "about.licenses.col_name": "Komponent",
+ "about.licenses.col_license": "Lisensya",
+ "about.licenses.count": {
+  "one": "# component",
+  "other": "# na component"
+ },
+ "about.licenses.count_of": "{shown} sa {total} component",
+ "about.licenses.search_hint": "Maghanap sa pangalan o lisensya…",
+ "about.licenses.search_clear": "Alisin ang paghahanap",
+ "about.licenses.none": "Walang nahanap",
+ "about.licenses.none_hint": "Subukan ang bahagi ng pangalan ng library o lisensya, gaya ng MIT."
+}

@@ -1,0 +1,7 @@
+brief = "Laboratory bench with a shelf; length and height as parameters."
+category = "casework"
+must = param Width
+must = param Depth
+must = solids >= 7
+must = ports 0
+must = flex Width 2400 3750

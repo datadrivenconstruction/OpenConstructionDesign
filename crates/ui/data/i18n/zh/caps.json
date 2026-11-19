@@ -1,0 +1,5 @@
+{
+ "caps.refused": "{kinds}：{reason}。未作任何更改。",
+ "caps.panel": "嵌板随整个幕墙一起移动。请选择墙",
+ "caps.unsupported": "此工具无法编辑这些图元"
+}

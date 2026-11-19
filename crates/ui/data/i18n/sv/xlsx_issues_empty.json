@@ -1,0 +1,8 @@
+{
+ "xlsx_issues.empty_title": "Tomt blad i arbetsboken",
+ "xlsx_issues.empty_kept": "Bladet {sheet} är tomt: inget lästes från det, {n} element behålls som de är. Andra blad kan fortfarande tillämpas.",
+ "xlsx_issues.empty_none": "Bladet {sheet} är tomt: inget lästes från det. Andra blad kan fortfarande tillämpas.",
+ "xlsx_issues.unreadable_title": "Bladet kunde inte läsas",
+ "xlsx_issues.unreadable": "Bladet {sheet} kunde inte läsas, dess del av filen är skadad: inget togs från det och dess element behålls som de är. Andra blad kan fortfarande tillämpas.",
+ "xlsx_issues.formulas": "Formlerna på bladet {sheet} kunde inte läsas, så ett beräknat värde kan inte skiljas från en redigering: inget togs från detta blad. Andra blad kan fortfarande tillämpas."
+}

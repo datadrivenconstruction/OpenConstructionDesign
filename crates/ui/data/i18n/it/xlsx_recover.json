@@ -1,0 +1,16 @@
+{
+ "xlsx_recover.title": "Un'esportazione nella cartella collegata è stata interrotta",
+ "xlsx_recover.both": "L'esportazione si è interrotta tra lo spostamento della cartella precedente e il posizionamento della nuova. Non si perde nulla: la nuova cartella è completa in {part}, la precedente è conservata in {bak}.",
+ "xlsx_recover.part_only": "L'esportazione si è interrotta prima che la nuova cartella fosse posizionata. È completa in {part}.",
+ "xlsx_recover.bak_only": "L'esportazione si è interrotta prima che la nuova cartella fosse pronta. La cartella precedente è conservata in {bak}.",
+ "xlsx_recover.finish": "Completa l'esportazione interrotta",
+ "xlsx_recover.restore": "Ripristina la cartella precedente",
+ "xlsx_recover.finished": "L'esportazione interrotta è completata: la nuova cartella è al suo posto.",
+ "xlsx_recover.finished_kept": "L'esportazione interrotta è completata: la nuova cartella è al suo posto, la precedente è conservata in {bak}.",
+ "xlsx_recover.restored": "La cartella precedente è di nuovo al suo posto.",
+ "xlsx_recover.restore_failed": "La cartella precedente non ha potuto essere rimessa al suo posto ({err}). È conservata in {path}.",
+ "xlsx_recover.not_restored": "La nuova cartella non ha potuto essere posizionata e la precedente non ha potuto essere rimessa al suo posto. Non si perde nulla: la cartella precedente è conservata in {path}; Sincronizza propone di completare o ripristinare.",
+ "xlsx_recover.finish_failed": "La nuova cartella non ha potuto essere posizionata ({err}). Resta in {path}.",
+ "xlsx_recover.dest_back": "Una cartella è di nuovo in {path}: non è stato spostato nulla.",
+ "xlsx_recover.nothing": "Nulla dell'esportazione interrotta è da spostare."
+}

@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "Annullata — Ctrl+Y ripristina",
+ "history.hist.empty": "Nessuna modifica ancora",
+ "history.hist.empty_hint": "Le tue modifiche compaiono qui. Clicca un passaggio per tornarvi.",
+ "history.hist.revert_all_n": "Annulla tutte le modifiche IA ({n})"
+}

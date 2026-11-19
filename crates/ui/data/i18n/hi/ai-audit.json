@@ -1,0 +1,22 @@
+{
+ "ai.audit.tokens": "{n} टोकन",
+ "ai.audit.filter.all": "सभी",
+ "ai.audit.filter.ai": "AI",
+ "ai.audit.filter.me": "मैं",
+ "ai.audit.search": "बदलाव खोजें",
+ "ai.audit.search.clear": "खोज साफ़ करें",
+ "ai.audit.show_all": "सभी दिखाएँ",
+ "ai.audit.empty.hint": "मॉडल या एजेंट द्वारा ड्राफ़्ट या लागू किए गए बदलाव यहाँ दिखेंगे, हर एक के साथ वापसी का रास्ता।",
+ "ai.audit.no_match": "फ़िल्टर से कोई बदलाव मेल नहीं खाता।",
+ "ai.audit.show.tip": "वे तत्व चुनें और दिखाएँ जिन्हें इस बदलाव ने छुआ",
+ "ai.audit.revert.ask": "“{what}” वापस लें? {change}।",
+ "ai.audit.revert.elements": {
+  "one": "# तत्व बदलाव",
+  "other": "# तत्व बदलते हैं"
+ },
+ "ai.audit.revert.keeps": "नए बदलाव बने रहेंगे। वापसी एक पूर्ववत-चरण है।",
+ "ai.audit.cancel": "रद्द करें",
+ "ai.audit.toast.reverted": "वापस लिया गया: {what}",
+ "ai.audit.toast.undone": "पूर्ववत: {what}",
+ "ai.audit.redo": "फिर से करें"
+}

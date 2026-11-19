@@ -1,0 +1,13 @@
+{
+ "topo.unit.mm": "mm",
+ "topo.unit.metre": "m",
+ "topo.unit.ft": "ft",
+ "topo.opt.material": "Material",
+ "topo.row.active": "Superfície ativa",
+ "topo.btn.delete_pad": "Excluir ponto de apoio",
+ "topo.info.loading": "Montando a superfície…",
+ "topo.info.warn_n": "{n} avisos",
+ "topo.info.points_label": "Pontos",
+ "topo.import.all_layers": "Todas as camadas",
+ "topo.import.need_layer": "Marque pelo menos uma camada"
+}

@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "撤销：{what}",
+ "undo_label.redo_what": "重做：{what}",
+ "undo_label.undo_none": "无可撤销内容",
+ "undo_label.redo_none": "无可重做内容"
+}

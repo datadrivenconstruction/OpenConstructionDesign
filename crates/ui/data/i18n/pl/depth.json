@@ -1,0 +1,22 @@
+{
+ "depth.chip": "Głębokość {level}",
+ "depth.chip_tip": "Jak daleko następne uruchomienie opracuje projekt: D1 koncepcja do D5 wykonawstwo, wg dyscypliny",
+ "depth.all_off": "wszystkie dyscypliny wyłączone",
+ "depth.disc.arch": "Arch",
+ "depth.disc.struct": "Konstr",
+ "depth.disc.mep": "MEP",
+ "depth.disc.doc": "Dok",
+ "depth.project": "Głębokość projektu",
+ "depth.level.1": "D1 Koncepcja: bryła, kondygnacje, powierzchnie, jeden arkusz",
+ "depth.level.2": "D2 Szkic: ściany, pomieszczenia wg programu, otwory, siatka, rzuty",
+ "depth.level.3": "D3 Projekt: warstwowe typy, wymiarowana konstrukcja, główne trasy i wyloty MEP, zestawienia",
+ "depth.level.4": "D4 Robocze: detale węzłów, okucia, wykończenia, zbrojenie, odgałęzienia",
+ "depth.level.5": "D5 Wykonawstwo: zestawienia gięcia, połączenia stalowe, prefabrykaty, zestawienie materiałów",
+ "depth.as_project": "Tak samo",
+ "depth.estimate": "Szacunek: około {elements} elementów, {minutes} min, {tokens} tokenów w {calls} wywołaniach, {sheets} arkuszy",
+ "depth.estimate_none": "Szacunek pojawi się wraz z szkicem projektu: model jest jeszcze pusty",
+ "depth.heat": "Mapa głębokości",
+ "depth.heat.row": "Głębokość",
+ "depth.settings": "Głębokość opracowania tego projektu",
+ "depth.settings_desc": "Głębokość, do której pracuje asystent AI, D1 do D5, z przełącznikiem i własną głębokością dla każdej dyscypliny; zapisywana w pliku projektu"
+}

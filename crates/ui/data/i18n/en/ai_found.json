@@ -1,0 +1,42 @@
+{
+ "ai.tool.show_elements": "Showing elements",
+ "ai.tool.isolate_elements": "Isolating elements",
+ "ai.tool.color_by": "Coloring by value",
+ "ai.tool.reset_view": "Resetting the view",
+ "ai_found.found.query": "Found",
+ "ai_found.found.show": "Shown",
+ "ai_found.found.isolate": "Isolated",
+ "ai_found.found.hide": "Hidden",
+ "ai_found.found.color": "Colored",
+ "ai_found.found.count": "{n} of {m}",
+ "ai_found.found.line": "{what}: {count}",
+ "ai_found.found.none": "Nothing matches. Try a wider filter.",
+ "ai_found.found.show_btn": "Show",
+ "ai_found.found.show_tip": "Select these elements and zoom to them in plan and 3D",
+ "ai_found.found.isolate_btn": "Isolate",
+ "ai_found.found.isolate_tip": "Show only these elements until Reset view",
+ "ai_found.found.select_btn": "Select",
+ "ai_found.found.select_tip": "Select these elements without moving the view",
+ "ai_found.legend.title": "Color by {by}",
+ "ai_found.legend.row_tip": "Click to select these elements",
+ "ai_found.legend.empty_value": "No value",
+ "ai_found.legend.other": {
+  "one": "# more value",
+  "other": "# more values"
+ },
+ "ai_found.view.title": "AI assistant view",
+ "ai_found.view.reset": "Reset view",
+ "ai_found.view.reset_tip": "Bring back the view from before the AI assistant changed it",
+ "ai_found.view.shown": {
+  "one": "# element shown",
+  "other": "# elements shown"
+ },
+ "ai_found.view.isolated": {
+  "one": "# element isolated",
+  "other": "# elements isolated"
+ },
+ "ai_found.view.hidden": {
+  "one": "# element hidden",
+  "other": "# elements hidden"
+ }
+}

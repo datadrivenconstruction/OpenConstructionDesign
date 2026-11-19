@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "ölçülen {value}, sınır {limit}",
+ "ai_checks.check.cap": "{total} bulgudan {shown} tanesi gösteriliyor. Önce hatalar gelir: düzeltin ve yeniden çalıştırın.",
+ "ai_checks.check.run_again": "Yeniden çalıştır",
+ "ai_checks.check.goto": "Seç ve yakınlaştır",
+ "ai_checks.check.never_title": "Henüz kontrol edilmedi",
+ "ai_checks.check.never_hint": "Kontrolleri çalıştırın, bulgular burada görünür.",
+ "ai_checks.check.sec.error": "Hatalar",
+ "ai_checks.check.sec.warning": "Uyarılar",
+ "ai_checks.check.sec.info": "Notlar"
+}

@@ -1,0 +1,4 @@
+{
+ "xl.msg.layer_cells_unplaced": "{} hücre ('{}' tipi, katman {}, '{}' sayfası) yerleştirilemedi",
+ "xl.msg.layer_hidden_unplaced": "'{}' tipindeki gizli satır (katman {}, '{}' sayfası) yerleştirilemedi"
+}

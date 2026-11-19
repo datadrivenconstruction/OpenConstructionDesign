@@ -1,0 +1,11 @@
+{
+ "empty.sv_notfound.title": "العرض غير موجود",
+ "empty.sv_notfound.hint": "تم حذف هذا العرض أو لم يعد جزءاً من المشروع.",
+ "empty.sv_notfound.action": "إغلاق العرض",
+ "empty.sv_cuts_nothing.title": "هذا المقطع لا يقطع أي شيء",
+ "empty.sv_cuts_nothing.hint": "خط القطع لا يلتقي بأي جدران أو بلاطات أو فتحات ضمن عمقه. انقل الخط أو زِد عمق العرض.",
+ "empty.sv_cuts_nothing.action": "عرض على المخطط",
+ "empty.sv_shows_nothing.title": "هذا المنظر الجانبي لا يُظهر شيئاً",
+ "empty.sv_shows_nothing.hint": "لا توجد جدران أو بلاطات أو فتحات ضمن عمق العرض. انقل خط العرض أو زِد العمق.",
+ "empty.sv_shows_nothing.action": "عرض على المخطط"
+}

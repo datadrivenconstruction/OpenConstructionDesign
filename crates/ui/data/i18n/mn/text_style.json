@@ -1,0 +1,15 @@
+{
+ "text_style.lbl.text_style": "Текстийн загвар",
+ "text_style.lbl.align": "Зэрэгцүүлэлт",
+ "text_style.lbl.head": "Сумны толгой",
+ "text_style.lbl.line_style": "Шугамын загвар",
+ "text_style.lbl.fill": "Дүүргэлт",
+ "text_style.lbl.detail": "Дэлгэрэнгүй",
+ "text_style.lbl.width": "Өргөн",
+ "text_style.bad_number": "{min}-аас {max} хүртэлх тоо оруулна уу",
+ "text_style.tip.next_ring": "Энэ контурыг хаагаад, нэг бүсэд дараагийнхыг эхлүүлэх",
+ "text_style.tip.edit_text": "Текстийг шууд засах",
+ "text_style.tip.add_leader": "Энэ текстэд удирдагч шугам нэмэх",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°"
+}

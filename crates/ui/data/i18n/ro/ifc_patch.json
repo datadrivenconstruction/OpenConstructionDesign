@@ -1,0 +1,19 @@
+{
+ "ifc_patch.fallback.source_changed": "Patch neutilizat: fișierul sursă s-a modificat pe disc sau nu poate fi citit. Fișierul a fost rescris din model.",
+ "ifc_patch.fallback.sources": "Patch neutilizat: proiectul nu are exact o sursă. Fișierul a fost rescris din model.",
+ "ifc_patch.fallback.schema": "Patch neutilizat: schema fișierului sursă nu este suportată. Fișierul a fost rescris din model.",
+ "ifc_patch.fallback.structure": "Patch neutilizat: structura fișierului sursă nu poate fi considerată de încredere. Fișierul a fost rescris din model.",
+ "ifc_patch.fallback.edit": "Patch neutilizat: o modificare nu poate fi aplicată în siguranță fișierului sursă. Fișierul a fost rescris din model.",
+ "ifc_patch.reason.schema": "Schema fișierului sursă nu poate reține această modificare; elementul rămâne ca în sursă",
+ "ifc_patch.reason.prop": "Această modificare de proprietate nu poate fi exprimată în fișierul sursă; valoarea rămâne ca în sursă",
+ "ifc_patch.reason.no_export": "Acest element nou nu are reprezentare în IFC",
+ "ifc_patch.reason.link": "Elementul este în fișier, dar o legătură către materialul sau tipul său nu se scrie; este listat ca nescris",
+ "ifc_patch.drop": "Renunță",
+ "ifc_patch.drop_done": "Legăturile în așteptare eliminate: {n}; nu mai sunt reîncercate",
+ "ifc_patch.fallback.building": "Patch neutilizat: un nivel nou are nevoie de exact o clădire în fișierul sursă, iar acesta are niciuna sau mai multe. Fișierul a fost rescris din model.",
+ "ifc_patch.fallback.types": "Patch neutilizat: nivelurile, tipurile sau materialele s-au schimbat de la import, iar patch-ul nu le poate scrie. Fișierul a fost rescris din model.",
+ "ifc_patch.fallback.zipped": "Patch neutilizat: un fișier sursă arhivat nu poate fi corectat. Fișierul a fost rescris din model.",
+ "ifc_patch.fallback.source_kept": "Fișierul sursă nu a fost suprascris: această salvare nu poate fi considerată sigură pentru a-l înlocui. Această salvare este o copie alături de el.",
+ "ifc_patch.fallback.nested": "Patch neutilizat: un element nou are piese imbricate (cum sunt porturile), pe care patch-ul nu le poate scrie. Fișierul a fost rescris din model.",
+ "ifc_patch.fallback.shared_part": "Patch neutilizat: o piesă a unei scări sau rampe modificate este folosită și de alt element sau de altă relație, ceea ce patch-ul nu poate ține cont. Fișierul a fost rescris din model."
+}

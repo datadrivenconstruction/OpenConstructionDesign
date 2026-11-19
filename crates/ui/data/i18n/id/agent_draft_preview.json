@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "Pratinjau",
+ "agent_draft.ag.preview.desc": "Tandai garis tepi elemen draf ini di kanvas selama penunjuk ada di tombol. Tidak ada yang diubah.",
+ "agent_draft.type.column": "Kolom",
+ "agent_draft.type.roof": "Atap",
+ "agent_draft.type.ceiling": "Plafon",
+ "agent_draft.type.stair": "Monolitik",
+ "agent_draft.type.railing": "Pagar",
+ "agent_draft.type.shaft": "Shaft",
+ "agent_draft.type.axis": "Sumbu 6.5 mm",
+ "agent_draft.type.refplane": "Bidang referensi"
+}

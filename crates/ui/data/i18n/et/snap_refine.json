@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "Haakumise raadius",
+ "snap_refine.settings.snap_px_desc": "Kui lähedal peab kursor olema punktile või joonele, et haakuda, ekraanipikslites. Suurem sobib puuteekraanidele ja tihedatele ekraanidele.",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "Horisontaalne",
+ "snap_refine.hint.vertical": "Vertikaalne",
+ "snap_refine.hint.perpendicular": "Risti eelmisega",
+ "snap_refine.hint.parallel": "Paralleelne eelmisega",
+ "snap_refine.hint.on_axis": "Seina teljel",
+ "snap_refine.no_snap": "Ilma haakumiseta (Alt)"
+}

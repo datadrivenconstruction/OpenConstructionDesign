@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "{name} er ændret på disken.",
+ "src.watch.update": "Opdatér model",
+ "src.watch.compare": "Sammenlign",
+ "src.watch.ignore": "Ignorér denne version",
+ "src.watch.missing": "{name}: kildefilen blev ikke fundet. Arbejdet fortsætter.",
+ "src.watch.locate": "Find…",
+ "src.watch.dismiss": "Afvis",
+ "src.watch.more": "og {n} flere kildefiler",
+ "src.watch.done": "Opdateret fra {name}: {updated} ændret, {kept} felter beholdt som redigeret, {conflicts} konflikter, {locked} låste værdier beholdt"
+}

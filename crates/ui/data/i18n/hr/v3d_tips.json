@@ -1,0 +1,8 @@
+{
+ "v3d.proj.to_ortho": "Prebaci na ortogonalnu projekciju",
+ "v3d.proj.to_persp": "Prebaci na perspektivu",
+ "v3d.walk.unit.m": "m/s",
+ "v3d.walk.unit.ft": "ft/s",
+ "v3d.temp.show_all": "Prikaži sve  ·  Esc",
+ "v3d.msg.deleted_named": "3D pogled {name} obrisan"
+}

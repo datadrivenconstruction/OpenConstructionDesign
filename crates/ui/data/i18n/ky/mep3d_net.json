@@ -1,0 +1,13 @@
+{
+ "mep.sys.duct": "Берүү S1",
+ "mep.sys.pipe": "Суук суу C1",
+ "mep.sys.tray": "Күч",
+ "mep.round": "Тегерек",
+ "mep.material": "Материал",
+ "mep3d.elevation": "Деңгээлден бийиктик",
+ "mep3d.slope": "Жантайма",
+ "mep3d.shape": "Формасы",
+ "mep3d.shape.rect": "Тик бурчтуу",
+ "mep3d.shape.round": "Тегерек",
+ "mep3d.shape.oval": "Жалпак овал"
+}

@@ -1,0 +1,6 @@
+{
+ "cmd.file.import_again": "Yeniden içe aktar",
+ "cmd.file.import_again.desc": "Kaynak dosyanın şu anki hâlinden yeni bir proje oluşturur.",
+ "cmd.file.open_kept": "Saklanan içe aktarmayı aç",
+ "cmd.file.open_kept.desc": "Kaydedilmemiş değişiklik uyarısı iptal edildiğinde saklanan tamamlanmış içe aktarmayı açar."
+}

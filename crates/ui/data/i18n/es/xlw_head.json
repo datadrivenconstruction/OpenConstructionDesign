@@ -1,0 +1,15 @@
+{
+ "xlw.hd_never": "Todavía no exportado",
+ "xlw.hd_now": "justo ahora",
+ "xlw.hd_min": "hace {n} min",
+ "xlw.hd_hour": "hace {n} h",
+ "xlw.hd_day": "hace {n} d",
+ "xlw.hd_linked": "Vinculado",
+ "xlw.hd_watched": "Vigilado",
+ "xlw.hd_stale": "Modelo cambiado desde la exportación",
+ "xlw.ft_export": "Exportar",
+ "xlw.ft_review": "Revisar",
+ "xlw.ft_apply": "Aplicar {n} cambios",
+ "xlw.ft_delete_missing": "Eliminar faltantes",
+ "xlw.ft_keep_missing_tip": "La eliminación está activa: los elementos sin fila se eliminarán al aplicar. Desmarque para conservarlos."
+}

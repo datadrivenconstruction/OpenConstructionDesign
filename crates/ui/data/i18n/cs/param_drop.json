@@ -1,0 +1,8 @@
+{
+ "param_drop.title": "Odstranit hodnoty parametrů?",
+ "param_drop.intro": "{name} již není navázán na tyto kategorie:",
+ "param_drop.line": "{category}: {values} budou odstraněny",
+ "param_drop.undo": "Jedním Ctrl+Z je všechny obnovíte.",
+ "param_drop.confirm": "Odstranit hodnoty a uložit",
+ "param_drop.cancel": "Zrušit"
+}

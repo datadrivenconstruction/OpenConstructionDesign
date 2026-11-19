@@ -1,0 +1,13 @@
+{
+ "xlw.copy_list": "Lista másolása",
+ "xlw.save_list": "Lista mentése…",
+ "xlw.copy_list_tip": "A megjelenített sorok (lap, cella, azonosító, oszlop, értékek, ok) másolása szövegként táblázatkezelőbe",
+ "xlw.save_list_tip": "A megjelenített sorokat .csv fájlként menti a munkafüzet mellé; magát a munkafüzetet soha nem módosítja",
+ "xlw.list_book_value": "Munkafüzet értéke",
+ "xlw.list_model_value": "Modell értéke",
+ "xlw.list_reason": "Ok",
+ "xlw.list_copied": "Lista másolva: {n} sor",
+ "xlw.list_saved": "Lista elmentve: {n} sor, {file}",
+ "xlw.list_save_failed": "A lista nincs elmentve",
+ "xlw.list_nothing": "Nincs másolandó: nincs megjelenített sor"
+}

@@ -1,0 +1,8 @@
+{
+ "cmd.props.param_lock": "Lås eller lås upp parametervärde",
+ "locked_values.kept": "{n} låsta värden behållna",
+ "locked_values.locked": "“{name}” låst: XLSX-import, massredigering och AI behåller det",
+ "locked_values.unlocked": "“{name}” upplåst",
+ "locked_values.locked_tip": "Låst: XLSX-import, massredigering och AI behåller värdet. Klicka för att låsa upp  ·  Ctrl+L",
+ "locked_values.no_row": "Peka på en parameterrad i Egenskaper och tryck sedan Ctrl+L"
+}

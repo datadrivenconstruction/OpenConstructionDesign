@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "Nuova famiglia",
+ "family_editor.open_tip": "Apri famiglia o bozza",
+ "family_editor.close_named": "Chiudi {name}",
+ "family_editor.unsaved": "Modifiche non salvate",
+ "family_editor.search": "Cerca",
+ "family_editor.nothing": "Nessun risultato",
+ "family_editor.sec_families": "Famiglie di progetto",
+ "family_editor.sec_drafts": "Bozze",
+ "family_editor.cap_category": "Categoria",
+ "family_editor.cap_host": "Elemento ospitante",
+ "family_editor.cap_type": "Tipo di anteprima"
+}

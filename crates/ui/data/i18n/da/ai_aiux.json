@@ -1,0 +1,19 @@
+{
+ "ai.plan.apply_updated": "Anvend opdateret plan",
+ "ai.plan.keys_anywhere": "Ctrl+Enter anvender, og Esc stopper anmodningen også fra planen eller 3D-visningen, medmindre der skrives i et tekstfelt.",
+ "ai.plan.rebased": "Opdateret mod den aktuelle model: {what}",
+ "ai.value.bad": "\"{text}\" er ikke en gyldig værdi for {name}",
+ "ai.value.both": "AI-assistenten ændrede denne værdi til {agent}, mens du indtastede {mine}. Vælg den, der skal beholdes.",
+ "ai.value.choose_first": "Vælg først din værdi eller AI-assistentens på kortet",
+ "ai.value.elem": "Element {n}: {what}",
+ "ai.value.held": "Din værdi {mine} indsættes, når anmodningen er færdig",
+ "ai.value.keep_agent": "Behold {agent}",
+ "ai.value.lost": "Din værdi {mine} for {what} i \"{title}\" blev ikke brugt: AI-assistenten fjernede værdien fra kortet",
+ "ai.value.more": "{n} flere værdier: udvid rækken",
+ "ai.value.refused": "Planen kunne ikke tage denne værdi og beholder den forrige: {why}",
+ "ai.value.refused_next": "Indtast en anden værdi, eller fravælg punktet for at udelade det fra Anvend.",
+ "ai.value.tip": "Ret værdien i udkastet; modellen ændres kun ved Anvend. Enter bekræfter, Esc gendanner.",
+ "ai.value.use_mine": "Brug {mine}",
+ "ai.value.was": "var {old}",
+ "ai.value.bad_len": "{name}: {why}"
+}

@@ -1,0 +1,13 @@
+{
+ "level.err_open": "レベルを開けませんでした: {e}",
+ "level.need_name": "レベルには名前と標高が必要です",
+ "level.created": "レベル「{name}」を作成しました",
+ "level.err_create": "レベルを作成できませんでした: {e}",
+ "level.err_edit": "レベルを変更できませんでした: {e}",
+ "level.edited": "レベル「{name}」を変更しました",
+ "level.edited_stale": "レベル「{name}」を変更しましたが、ビューを更新できませんでした: {e}",
+ "level.last": "最後のレベルは削除できません",
+ "level.deleted": "レベルを削除しました",
+ "level.not_empty": "レベルが空ではありません: 先に要素を削除してください",
+ "level.err_delete": "レベルを削除できませんでした: {e}"
+}

@@ -1,0 +1,15 @@
+{
+ "cmd.ctx.floor.clean_outline": "Linisin ang outline",
+ "cmd.ctx.floor.clean_outline.desc": "Inaalis ang makikitid na tinik kung saan bumabalik sa sarili ang outline ng floor. Nagpapakita muna ng preview; isang undo step.",
+ "outline_cleanup.title": "Linisin ang outline",
+ "outline_cleanup.intro": "Ang outline ng floor na ito ay bumabalik sa sarili sa makikitid na tinik: {n}. Aalisin ng paglilinis ang mga ito; mananatiling pareho ang iba.",
+ "outline_cleanup.legend_before": "Makapal na linya: ang outline ngayon",
+ "outline_cleanup.legend_after": "Manipis na linya: ang outline pagkatapos ng paglilinis",
+ "outline_cleanup.undo": "Maaari itong i-undo sa isang hakbang.",
+ "outline_cleanup.apply": "Linisin",
+ "outline_cleanup.cancel": "Kanselahin",
+ "outline_cleanup.done": "Nalinis ang outline, naalis na ang mga tinik: {n}",
+ "outline_cleanup.none": "Walang tinik ang outline ng floor na ito",
+ "outline_cleanup.failed": "Hindi malinis ang outline",
+ "outline_cleanup.changed": "Nagbago ang outline mula noong preview; walang naisulat. Tingnan ang bagong preview."
+}

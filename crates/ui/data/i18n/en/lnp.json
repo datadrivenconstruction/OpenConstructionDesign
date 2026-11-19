@@ -1,0 +1,14 @@
+{
+ "lnp.why_at": "#{id}: {e}",
+ "lnp.openings_refused": "{n} openings not changed ({why})",
+ "lnp.params_changed": "values changed: {n}",
+ "lnp.params_same": "No changes: {u} elements already hold this value",
+ "lnp.params_tip": "Enter applies the value to every selected element; Esc keeps them",
+ "lnp.locked_hint": "Locked values are kept: {n}",
+ "lnp.panels_one": "Panels are edited one at a time",
+ "lnp.keep_first": "Keep first",
+ "lnp.keep_first_tip": "Select only the first panel to edit it",
+ "lnp.clip_from_wall": "Parameters copied from wall #{id}",
+ "lnp.clip_from_opening": "Parameters copied from opening #{id}",
+ "lnp.match_from": "Properties of #{id} matched to {n} elements"
+}

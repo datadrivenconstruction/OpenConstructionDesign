@@ -1,0 +1,609 @@
+{
+ "rules": [
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.19
+   },
+   "unit": "m",
+   "value": 0.19,
+   "text": {
+    "en": "Residential stair riser at most 0.19 m",
+    "ru": "Подъём ступени жилой лестницы не более 0.19 м"
+   },
+   "source": {
+    "doc": "din18065",
+    "clause": "table 1 (dwelling stairs, riser 14 to 19 cm)",
+    "note": "DIN standard is paywalled, no official free text"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "de.res.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.26
+   },
+   "unit": "m",
+   "value": 0.26,
+   "text": {
+    "en": "Residential stair tread at least 0.26 m",
+    "ru": "Проступь жилой лестницы не менее 0.26 м"
+   },
+   "source": {
+    "doc": "din18065",
+    "clause": "table 1 (tread from 26 cm)",
+    "note": "DIN standard is paywalled, no official free text"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "de.res.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 1.0
+   },
+   "unit": "m",
+   "value": 1.0,
+   "text": {
+    "en": "Stair flight width at least 1 m (apartment/apartment_section)",
+    "ru": "Ширина марша не менее 1 м (apartment/apartment_section)"
+   },
+   "source": {
+    "doc": "din18065",
+    "clause": "table 1 (usable flight width, more than two dwellings)",
+    "note": "DIN standard is paywalled, no official free text"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "de.res.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 0.8
+   },
+   "unit": "m",
+   "value": 0.8,
+   "text": {
+    "en": "Stair flight width at least 0.8 m (house)",
+    "ru": "Ширина марша не менее 0.8 м (house)"
+   },
+   "source": {
+    "doc": "din18065",
+    "clause": "table 1 (usable flight width, up to two dwellings)",
+    "note": "DIN standard is paywalled, no official free text"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "de.stair.sw_house"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.19
+   },
+   "unit": "m",
+   "value": 0.19,
+   "text": {
+    "en": "Office stair riser at most 0.19 m",
+    "ru": "Подъём ступени офисной лестницы не более 0.19 м"
+   },
+   "source": {
+    "doc": "asr-a1.8",
+    "clause": "4.5(4), riser 14 to 19 cm",
+    "note": "read 2026-11-13: baua.de ASR A1.8 (Mar 2022, amended GMBl 2024 p.412), unofficial text"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "de.off.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.26
+   },
+   "unit": "m",
+   "value": 0.26,
+   "text": {
+    "en": "Office stair tread at least 0.26 m",
+    "ru": "Проступь офисной лестницы не менее 0.26 м"
+   },
+   "source": {
+    "doc": "asr-a1.8",
+    "clause": "4.5(4), tread 26 to 32 cm",
+    "note": "read 2026-11-13: baua.de ASR A1.8 (Mar 2022, amended GMBl 2024 p.412), unofficial text"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "de.off.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 1.2
+   },
+   "unit": "m",
+   "value": 1.2,
+   "text": {
+    "en": "Stair flight width at least 1.2 m (office)",
+    "ru": "Ширина марша не менее 1.2 м (office)"
+   },
+   "source": {
+    "doc": "asr-a1.8",
+    "clause": "stairs, flight width",
+    "note": "baua.de returns HTTP 403; value matches an unofficial copy of the ASR text (marked inoffizieller Text), not accepted as primary"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "de.off.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {},
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "2*riser+tread",
+    "min": 0.59,
+    "max": 0.65
+   },
+   "unit": "m",
+   "value": [
+    0.59,
+    0.65
+   ],
+   "text": {
+    "en": "Step rule: 2 risers + tread from 0.59 to 0.65 m",
+    "ru": "Шаг: 2 подъёма + проступь от 0.59 до 0.65 м"
+   },
+   "source": {
+    "doc": "asr-a1.8",
+    "clause": "4.5(4), stride length 2s+a of 59 to 65 cm",
+    "note": "read 2026-11-13: baua.de ASR A1.8 (Mar 2022, amended GMBl 2024 p.412), unofficial text; same rule as in DIN 18065"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "de.step"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "width",
+    "min": 1.2
+   },
+   "unit": "m",
+   "value": 1.2,
+   "text": {
+    "en": "Corridor clear width at least 1.2 m",
+    "ru": "Ширина коридора не менее 1.2 м"
+   },
+   "source": {
+    "doc": "asr-a1.8",
+    "clause": "traffic routes, width by number of users",
+    "note": "baua.de returns HTTP 403; value matches an unofficial copy of the ASR text (marked inoffizieller Text), not accepted as primary"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "de.off.corr"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ],
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "width",
+    "min": 1.5
+   },
+   "unit": "m",
+   "value": 1.5,
+   "text": {
+    "en": "Accessible-route corridor clear width at least 1.5 m",
+    "ru": "Ширина коридора на доступном маршруте не менее 1.5 м"
+   },
+   "source": {
+    "doc": "din18040-2",
+    "clause": "movement areas along routes",
+    "note": "DIN standard is paywalled, no official free text"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "de.acc.corr"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.4
+   },
+   "unit": "m",
+   "value": 2.4,
+   "text": {
+    "en": "Clear height of habitable rooms at least 2.4 m",
+    "ru": "Высота жилых помещений не менее 2.4 м"
+   },
+   "source": {
+    "doc": "mbo2022",
+    "clause": "par. 47(1) clear height of habitable rooms"
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "de.res.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "room_kind": [
+     "office",
+     "meeting"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.5
+   },
+   "unit": "m",
+   "value": 2.5,
+   "text": {
+    "en": "Clear height of work rooms at least 2.5 m",
+    "ru": "Высота рабочих помещений не менее 2.5 м"
+   },
+   "source": {
+    "doc": "asr-a1.2",
+    "clause": "6(2), clear height at least 2.50 m up to 50 m2",
+    "note": "read 2026-11-13: baua.de ASR A1.2 (Sep 2013, amended GMBl 2022 p.241), unofficial text"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "de.off.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "room_kind": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "area",
+    "min": 8.0
+   },
+   "unit": "",
+   "value": 8.0,
+   "text": {
+    "en": "Area of a office room at least 8 m2",
+    "ru": "Площадь помещения «office» не менее 8 м2"
+   },
+   "source": {
+    "doc": "asr-a1.2",
+    "clause": "5(3), at least 8 m2 for one workplace",
+    "note": "read 2026-11-13: baua.de ASR A1.2 (Sep 2013, amended GMBl 2022 p.241), unofficial text"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "de.off.a"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 35.0,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 35.0,
+   "text": {
+    "en": "Travel distance from a room to an exit or stair at most 35 m (residential)",
+    "ru": "Путь от помещения до выхода или лестницы не более 35 м"
+   },
+   "source": {
+    "doc": "mbo2022",
+    "clause": "par. 35(2) distance to a necessary stair room or outside (35 m)",
+    "url": "https://bauministerkonferenz.de/Dokumente/42323530.pdf",
+    "edition": "2020 (MBO Nov 2002, amended 25.09.2020)"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "de.egr.res"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 35.0,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 35.0,
+   "text": {
+    "en": "Travel distance from a room to an exit or stair at most 35 m (office)",
+    "ru": "Путь от помещения до выхода или лестницы не более 35 м"
+   },
+   "source": {
+    "doc": "asr-a2.3",
+    "clause": "5(2) no. 1, main escape route up to 35 m",
+    "note": "read 2026-11-13: baua.de ASR A2.3 (PDF dated 2024-10-29), unofficial text"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "de.egr.off"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {},
+   "check": {
+    "kind": "ratio",
+    "per": "element",
+    "cat": "room",
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen",
+     "office"
+    ],
+    "num": "window_area",
+    "den": "area",
+    "min": 0.125
+   },
+   "unit": "ratio",
+   "value": 0.125,
+   "text": {
+    "en": "Window area at least 12.5 % of the floor of a habitable or work room",
+    "ru": "Площадь окон не менее 12.5 % площади пола жилого или рабочего помещения"
+   },
+   "source": {
+    "doc": "mbo2022",
+    "clause": "par. 47(2) window rough opening at least 1/8 of net floor area (state codes differ)",
+    "url": "https://bauministerkonferenz.de/Dokumente/42323530.pdf",
+    "edition": "2020 (MBO Nov 2002, amended 25.09.2020)"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "de.day"
+  },
+  {
+   "id": "eu.acc.corr",
+   "disabled": true,
+   "source": {
+    "note": "DIN standard is paywalled, no official free text"
+   }
+  },
+  {
+   "id": "eu.day",
+   "disabled": true,
+   "source": {
+    "note": "DIN standard is paywalled, no official free text"
+   }
+  },
+  {
+   "id": "eu.egr.off",
+   "disabled": true,
+   "source": {
+    "note": "DIN standard is paywalled, no official free text"
+   }
+  },
+  {
+   "id": "eu.egr.res",
+   "disabled": true,
+   "source": {
+    "note": "DIN standard is paywalled, no official free text"
+   }
+  },
+  {
+   "id": "eu.off.a",
+   "disabled": true,
+   "source": {
+    "note": "DIN standard is paywalled, no official free text"
+   }
+  },
+  {
+   "id": "eu.off.corr",
+   "disabled": true,
+   "source": {
+    "note": "DIN standard is paywalled, no official free text"
+   }
+  },
+  {
+   "id": "eu.off.h",
+   "disabled": true,
+   "source": {
+    "note": "DIN standard is paywalled, no official free text"
+   }
+  },
+  {
+   "id": "eu.off.riser",
+   "disabled": true,
+   "source": {
+    "note": "DIN standard is paywalled, no official free text"
+   }
+  },
+  {
+   "id": "eu.off.sw",
+   "disabled": true,
+   "source": {
+    "note": "DIN standard is paywalled, no official free text"
+   }
+  },
+  {
+   "id": "eu.off.tread",
+   "disabled": true,
+   "source": {
+    "note": "DIN standard is paywalled, no official free text"
+   }
+  },
+  {
+   "id": "eu.res.h",
+   "disabled": true,
+   "source": {
+    "note": "DIN standard is paywalled, no official free text"
+   }
+  },
+  {
+   "id": "eu.res.riser",
+   "disabled": true,
+   "source": {
+    "note": "DIN standard is paywalled, no official free text"
+   }
+  },
+  {
+   "id": "eu.res.sw",
+   "disabled": true,
+   "source": {
+    "note": "DIN standard is paywalled, no official free text"
+   }
+  },
+  {
+   "id": "eu.res.tread",
+   "disabled": true,
+   "source": {
+    "note": "DIN standard is paywalled, no official free text"
+   }
+  },
+  {
+   "id": "eu.step",
+   "disabled": true,
+   "source": {
+    "note": "DIN standard is paywalled, no official free text"
+   }
+  }
+ ]
+}

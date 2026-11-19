@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "Välj hela väggslingan",
+ "cmd.sketch.link_unlink": "Koppla bort kanten från väggen",
+ "cmd.sketch.link_repick": "Välj kantväggen på nytt",
+ "cmd.ctx.floor.link_unlink": "Koppla bort kanter från väggar",
+ "cmd.ctx.floor.link_accept": "Acceptera kanter från borttagna väggar",
+ "boundary_link.hint.loop": "Klicka på en vägg: den slutna väggkedjan blir länkade kanter",
+ "boundary_link.hint.repick": "Klicka på en vägg parallellt med kanten: kanten följer den",
+ "boundary_link.need_sketch": "Öppna gränsskissen först",
+ "boundary_link.need_edge": "Peka på en kant i skissen",
+ "boundary_link.need_straight": "Endast en rak kant kan följa en vägg",
+ "boundary_link.need_floor": "Välj ett golv",
+ "boundary_link.no_wall": "Ingen vägg under markören",
+ "boundary_link.not_parallel": "Väggen är inte parallell med kanten",
+ "boundary_link.not_linked": "Den här kanten är inte kopplad till en vägg",
+ "boundary_link.unlinked": "Kanten kopplad bort: den står kvar på plats och följer inte längre väggen",
+ "boundary_link.accepted": "Kanter godtagna: de står kvar på plats som vanliga kanter",
+ "boundary_link.failed": "Kunde inte tillämpas",
+ "boundary_link.lost": "källväggen borttagen",
+ "boundary_link.blocked": "kan inte följa väggen"
+}

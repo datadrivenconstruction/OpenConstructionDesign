@@ -1,0 +1,23 @@
+{
+ "params_list.n_params": {
+  "one": "# 개의 매개변수",
+  "other": "# 개의 매개변수"
+ },
+ "params_list.n_values": {
+  "one": "# 개의 값",
+  "other": "# 개의 값"
+ },
+ "params_list.n_elements": {
+  "one": "# 개의 요소",
+  "other": "# 개의 요소"
+ },
+ "params_list.exported": "{params}을(를) {file}로 내보냄",
+ "params_list.export_failed": "매개변수를 내보내지 못했습니다: {why}",
+ "params_list.open_folder": "폴더 열기",
+ "params_list.delete_tip": "매개변수와 그 값 삭제",
+ "params_list.confirm": "{name} 및 {elements}의 {values}을(를) 삭제할까요?",
+ "params_list.confirm_btn": "삭제",
+ "params_list.cancel": "취소",
+ "params_list.deleted": "매개변수 {name} 삭제됨 ({values})",
+ "params_list.undo": "실행 취소"
+}

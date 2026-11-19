@@ -1,0 +1,7 @@
+{
+ "ai.retry.countdown": "Yritetään uudelleen {n} s:n kuluttua",
+ "ai.retry.try": "Automaattinen yritys {i} / {max}. Sama pyyntö lähetetään uudelleen.",
+ "ai.retry.now": "Yritä heti uudelleen",
+ "ai.retry.gave_up": "Vastausta ei vieläkään ole {max} automaattisen yrityksen jälkeen.",
+ "ai.retry.shorten": "Lyhennä pyyntö"
+}

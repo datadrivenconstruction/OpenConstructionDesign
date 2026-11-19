@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "власний",
+ "draw_quality.custom.tip": "{name}: запис цього проєкту",
+ "draw_quality.custom_note": "Записи з позначкою «власний» належать цьому проєкту.",
+ "draw_quality.unsaved.lib_body": "Зберегти їх у бібліотеку чи відхилити?",
+ "draw_quality.unsaved.styles_body": "Застосувати їх до виду чи відхилити?",
+ "draw_quality.unsaved.both_body": "Застосувати їх чи відхилити?",
+ "draw_quality.halftone": "{category}: напівтон",
+ "draw_quality.styles.name": "Стилі ліній",
+ "draw_quality.styles.other_level": "Незбережені зміни стилів рівня {level}: застосуйте або скасуйте їх, щоб редагувати цей рівень."
+}

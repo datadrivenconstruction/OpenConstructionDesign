@@ -1,0 +1,18 @@
+{
+ "props.multi.title": {
+  "one": "# element",
+  "other": "# elementen"
+ },
+ "props.multi.cats": {
+  "one": "# categorie",
+  "other": "# categorieën"
+ },
+ "props.multi.varies": {
+  "one": "varieert (#)",
+  "other": "varieert (#)"
+ },
+ "props.multi.clear": "Selectie wissen",
+ "props.multi.undo": "Ongedaan maken",
+ "props.multi.narrowed": "Selectie: {n} · {name}",
+ "props.multi.chip_tip": "{name}: {n}  ·  Klikken toont hun eigenschappen, Ctrl+klikken houdt alleen deze over"
+}

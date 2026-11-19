@@ -1,0 +1,8 @@
+{
+ "drafts.drafts.head": "Los editores abiertos tienen ediciones que aún no están en el proyecto:",
+ "drafts.draft.family": "Familia «{name}»",
+ "drafts.draft.line": "Biblioteca de líneas: {name}",
+ "drafts.draft.styles": "Estilos de línea del rango de vista",
+ "drafts.btn.save_all": "Guardar todo",
+ "drafts.drafts.refused": "No se pudo guardar un borrador. No se cerró nada; el editor con el borrador sigue abierto."
+}

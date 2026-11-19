@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "Nowa rodzina",
+ "family_editor.open_tip": "Otwórz rodzinę lub szkic",
+ "family_editor.close_named": "Zamknij {name}",
+ "family_editor.unsaved": "Niezapisane zmiany",
+ "family_editor.search": "Szukaj",
+ "family_editor.nothing": "Nic nie znaleziono",
+ "family_editor.sec_families": "Rodziny projektu",
+ "family_editor.sec_drafts": "Szkice",
+ "family_editor.cap_category": "Kategoria",
+ "family_editor.cap_host": "Element nadrzędny",
+ "family_editor.cap_type": "Typ podglądu"
+}

@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "Bod",
+ "trial.field.distance": "Vzdálenost",
+ "trial.field.target": "Prvek",
+ "trial.refused": "{field}: {reason}. Změňte jej pro použití",
+ "trial.preview_off": "Náhled vypnut: model je příliš velký"
+}

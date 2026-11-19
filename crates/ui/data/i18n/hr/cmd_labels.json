@@ -1,0 +1,14 @@
+{
+ "cmd.arch.wall.tile": "Zid",
+ "cmd.arch.door.tile": "Vrata",
+ "cmd.arch.window.tile": "Prozor",
+ "cmd.arch.floor.tile": "Ploča",
+ "cmd.mod.move.tile": "Pomakni",
+ "cmd.mod.copy.tile": "Kopiraj",
+ "cmd.mod.rotate.tile": "Rotiraj",
+ "cmd.mod.mirror.tile": "Zrcali",
+ "cmd.mod.trim.tile": "Skrati",
+ "cmd.mod.delete.tile": "Obriši",
+ "cmd.ann.dim.tile": "Kota",
+ "cmd.ann.text.tile": "Tekst"
+}

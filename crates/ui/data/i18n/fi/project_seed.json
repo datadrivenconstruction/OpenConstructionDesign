@@ -1,0 +1,6 @@
+{
+ "project_seed.seed_level": "Taso 1",
+ "project_seed.seed_wall_partition": "Väliseinä 100",
+ "project_seed.seed_wall_masonry": "Muuraus 200",
+ "project_seed.seed_wall_exterior": "Ulkoseinä 380"
+}

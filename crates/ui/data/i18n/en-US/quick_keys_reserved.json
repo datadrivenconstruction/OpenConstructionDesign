@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key} is reserved ({why}) and cannot be reassigned",
+ "quick.keys.res_copy": "copy",
+ "quick.keys.res_paste": "paste",
+ "quick.keys.res_cut": "cut",
+ "quick.keys.res_undo": "undo / redo",
+ "quick.keys.res_save": "save",
+ "quick.keys.res_palette": "command palette",
+ "quick.keys.reserved_conflict": "{key} is already used by “{cmd}”. Esc keeps it there.",
+ "quick.keys.reserved_swap": "Swap",
+ "quick.keys.reserved_take": "Take it",
+ "quick.keys.reserved_keep": "Keep",
+ "quick.keys.reserved_os": "Taken by the system:"
+}

@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "پہلے ٹیمپلیٹ کا نام درج کریں",
+ "view_template.name_taken": "اس نام کا ٹیمپلیٹ پہلے سے موجود ہے",
+ "view_template.pick_blocked": "پہلے کم از کم ایک ویو منتخب کریں",
+ "view_template.views.one": "{n} ویو",
+ "view_template.views.few": "{n} ویوز",
+ "view_template.views.many": "{n} ویوز",
+ "view_template.delete.title": "یہ ٹیمپلیٹ حذف کریں؟",
+ "view_template.delete.body": "ٹیمپلیٹ “{name}” حذف ہو جائے گا۔ استعمال کرنے والے: {used}۔",
+ "view_template.delete.unused": "ٹیمپلیٹ “{name}” حذف ہو جائے گا۔ کوئی ویو اسے استعمال نہیں کرتا۔",
+ "view_template.delete.keeps": "یہ ویوز اپنی موجودہ گرافکس رکھیں گے مگر لنک کھو دیں گے۔",
+ "view_template.delete.undo": "ایک واپس سے اسے واپس کیا جا سکتا ہے۔",
+ "view_template.delete.confirm": "ٹیمپلیٹ حذف کریں"
+}

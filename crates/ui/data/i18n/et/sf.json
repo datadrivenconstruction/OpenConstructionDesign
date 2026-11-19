@@ -1,0 +1,4 @@
+{
+ "sf.restored": "Seadete fail {file} oli rikutud; taastati viimane korras koopia. Rikutud fail jäeti alles nimega {broken}.",
+ "sf.reset": "Seadete fail {file} oli rikutud ja ükski varukoopia ei sobinud; kasutatakse vaikeseadeid. Rikutud fail jäeti alles nimega {broken}."
+}

@@ -1,0 +1,5 @@
+{
+ "legend.legend.empty_hint": "أدخل اسماً أعلاه واضغط إنشاء.",
+ "legend.legend.pick_hint": "اختر مفتاحاً من القائمة أعلاه.",
+ "legend.legend.taken": "يوجد مفتاح باسم «{name}» بالفعل. أدخل اسماً آخر."
+}

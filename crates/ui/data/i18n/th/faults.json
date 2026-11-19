@@ -1,0 +1,18 @@
+{
+ "faults.errors": {
+  "one": "# ข้อผิดพลาดในโมเดล คลิกเพื่อแสดง",
+  "other": "# ข้อผิดพลาดในโมเดล คลิกเพื่อดูรายการ"
+ },
+ "faults.warnings": {
+  "one": "# คำเตือนในโมเดล คลิกเพื่อแสดง",
+  "other": "# คำเตือนในโมเดล คลิกเพื่อดูรายการ"
+ },
+ "faults.title": "ข้อบกพร่องของโมเดล: {n}",
+ "faults.none": "ไม่มีข้อผิดพลาดหรือคำเตือน",
+ "faults.cat.wall": "ผนัง",
+ "faults.cat.slab": "พื้น",
+ "faults.cat.opening": "ช่องเปิด",
+ "faults.cat.curtain_wall": "ผนังม่าน",
+ "faults.cat.ramp": "ทางลาด",
+ "faults.cat.zone": "โซน"
+}

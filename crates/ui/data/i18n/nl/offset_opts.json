@@ -1,0 +1,7 @@
+{
+ "offset_opts.dist_positive": "De offsetafstand moet groter zijn dan nul; de zijde volgt de cursor",
+ "offset_opts.count_bad": "Geheel getal van {min} tot {max}",
+ "offset_opts.done_tip": "De selectie afronden en het gereedschap starten",
+ "offset_opts.iso.apply_tip": "Het tijdelijk verbergen permanent maken voor deze weergave",
+ "offset_opts.iso.exit": "Tijdelijke modus verlaten"
+}

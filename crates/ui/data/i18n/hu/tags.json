@@ -1,0 +1,13 @@
+{
+ "tags.gone": "A címke már nem létezik",
+ "tags.readonly_wall": "A falcímke a típust mutatja, itt nem szerkeszthető: módosítsa a faltípust",
+ "tags.readonly_comp": "Az elemcímke a családot mutatja, itt nem szerkeszthető: módosítsa a típust",
+ "tags.locked": "Az elem zárolt: a címke szerkesztéséhez oldja fel",
+ "tags.done": "Címke értéke írva",
+ "tags.failed": "A címke nem módosult: {e}",
+ "tags.dup_door": "{mark} még {n} ajtón is",
+ "tags.dup_window": "{mark} még {n} ablakon is",
+ "tags.dup_room": "{mark} még {n} helyiségen is",
+ "tags.hint_mark": "Jel",
+ "tags.hint_name": "Helyiség neve"
+}

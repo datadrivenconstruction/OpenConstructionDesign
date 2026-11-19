@@ -1,0 +1,59 @@
+{
+ "del.k.door": {
+  "one": "# puerta",
+  "other": "# puertas"
+ },
+ "del.k.window": {
+  "one": "# ventana",
+  "other": "# ventanas"
+ },
+ "del.k.opening": {
+  "one": "# hueco",
+  "other": "# huecos"
+ },
+ "del.k.comp": {
+  "one": "# componente alojado",
+  "other": "# componentes alojados"
+ },
+ "del.k.rebar": {
+  "one": "# conjunto de armadura",
+  "other": "# conjuntos de armadura"
+ },
+ "del.k.port": {
+  "one": "# conexión MEP alojada",
+  "other": "# conexiones MEP alojadas"
+ },
+ "del.k.joist": {
+  "one": "# viga de entramado",
+  "other": "# vigas de entramado"
+ },
+ "del.k.railing": {
+  "one": "# barandilla",
+  "other": "# barandillas"
+ },
+ "del.k.tag": {
+  "one": "# etiqueta",
+  "other": "# etiquetas"
+ },
+ "del.k.dim": {
+  "one": "# cota (desvinculada)",
+  "other": "# cotas (desvinculadas)"
+ },
+ "del.also": "También afectados: {list}",
+ "del.rooms": {
+  "one": "# espacio pierde un muro de contorno",
+  "other": "# espacios pierden un muro de contorno"
+ },
+ "del.cancelled": "Borrado cancelado, nada cambiado",
+ "del.confirm.title": "Borrar con dependientes",
+ "del.confirm.lead": {
+  "one": "# elemento seleccionado se lleva consigo:",
+  "other": "# elementos seleccionados se llevan consigo:"
+ },
+ "del.confirm.levels": {
+  "one": "# de ellos está en otro nivel",
+  "other": "# de ellos están en otros niveles"
+ },
+ "del.confirm.all": "Borrar todo",
+ "del.confirm.cancel": "Cancelar"
+}

@@ -1,0 +1,11 @@
+{
+ "cmd.arch.roof_gable.short": "Beşik",
+ "cmd.arch.roof_hip.short": "Kır çatı",
+ "cmd.arch.roof_shed.short": "Tek eğimli",
+ "cmd.arch.roof_mansard.short": "Mansard",
+ "cmd.arch.roof_gambrel.short": "Kırma çatı",
+ "cmd.arch.roof_barrel.short": "Tünel",
+ "cmd.arch.roof_edges.short": "Çatı kenarları",
+ "cmd.arch.roof_opening.short": "Açıklık",
+ "cmd.mass.roof_by_face.short": "Yüzeyden"
+}

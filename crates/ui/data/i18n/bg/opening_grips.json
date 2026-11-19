@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "Обръщане на страната на пантата",
+ "cmd.edit.flip_hand.desc": "Огледално отразява избраните врати и прозорци по стената, така че пантите да се преместят към другия край на отвора.",
+ "cmd.edit.flip_facing": "Обръщане на страната на отвора",
+ "cmd.edit.flip_facing.desc": "Завърта избраните врати и прозорци към другата страна на стената.",
+ "opening_grips.flip_hand": "Обръщане на пантата",
+ "opening_grips.flip_hand.tip": "Панти към другия край на отвора (Shift+F)",
+ "opening_grips.flip_facing": "Обръщане на страната",
+ "opening_grips.flip_facing.tip": "Отвор към другата страна на стената (Shift+G)",
+ "opening_grips.flip.done": "Обърнато: {n}",
+ "opening_grips.flip.none": "Изберете врата или прозорец за обръщане",
+ "opening_grips.flip.fail": "Не е обърнато: {why}"
+}

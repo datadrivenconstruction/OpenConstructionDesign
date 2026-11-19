@@ -1,0 +1,19 @@
+{
+ "empty.v3d_gpu.title": "3D is niet beschikbaar op deze grafische adapter",
+ "empty.v3d_gpu.hint": "Het model is veilig en de plattegrond werkt. Start opnieuw met veilige grafische instellingen om 3D opnieuw te proberen.",
+ "empty.v3d_gpu.action": "Opnieuw starten met veilige grafische instellingen",
+ "empty.v3d_loading.title": "3D wordt opgebouwd…",
+ "empty.v3d_loading.pct": "Openen… {pct} %",
+ "empty.plan_hidden.title": "Alle elementen zijn in deze plattegrond verborgen",
+ "empty.plan_hidden.hint": "Tijdelijk verbergen of isoleren laat niets zichtbaar.",
+ "empty.plan_hidden.action": "Alles tonen",
+ "empty.plan_graphics.title": "De weergave-instellingen verbergen alle categorieën",
+ "empty.plan_graphics.hint": "De categorieregels van deze weergave laten niets zichtbaar.",
+ "empty.plan_graphics.action": "Weergave-instellingen openen",
+ "empty.plan_phase.title": "Het fasefilter verbergt alles",
+ "empty.plan_phase.hint": "Niets op deze verdieping bestaat in de fase die deze weergave toont.",
+ "empty.plan_phase.action": "Fase wijzigen",
+ "empty.plan_level.title": "Geen elementen op deze verdieping",
+ "empty.plan_level.hint": "Andere verdiepingen van dit model hebben elementen.",
+ "empty.plan_level.action": "Naar de verdieping met elementen gaan"
+}

@@ -1,0 +1,19 @@
+{
+ "xlsx_confirm.chip": "at bekræfte",
+ "xlsx_confirm.section": "Rækker uden id matchet til et element efter navn eller nummer",
+ "xlsx_confirm.tag": "matchet på navn",
+ "xlsx_confirm.tag_accepted": "match accepteret",
+ "xlsx_confirm.tag_rejected": "opretter ny",
+ "xlsx_confirm.kind_room": "rum",
+ "xlsx_confirm.kind_curtain_wall": "gardinvæg",
+ "xlsx_confirm.row_line": "{kind} #{id}, nøgle „{key}”",
+ "xlsx_confirm.accept": "Accepter",
+ "xlsx_confirm.accept_tip": "Anvend denne række på det matchede element (ét fortrydelsestrin sammen med resten)",
+ "xlsx_confirm.reject": "Opret ny",
+ "xlsx_confirm.reject_tip": "Match ikke: denne række opretter et nyt element",
+ "xlsx_confirm.decide_first": "Accepter eller afvis først rækkerne, der er matchet på navn.",
+ "xl.msg.key_match_many": "nøglen matcher {} elementer; ikke matchet, rækken opretter et nyt",
+ "xl.msg.key_match_taken": "nøglen matcher et element, der bruges af en anden række; ikke matchet, rækken opretter et nyt",
+ "xl.msg.key_match_kept": "beholdt: match afvist, rækken opretter et nyt element",
+ "xl.msg.key_match_undecided": "rækker matchet på navn venter på en beslutning"
+}

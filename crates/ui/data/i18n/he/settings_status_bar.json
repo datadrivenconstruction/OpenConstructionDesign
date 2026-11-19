@@ -1,0 +1,10 @@
+{
+ "cmd.view.axes_full": "צירים מלאים",
+ "cmd.view.axes_full.desc": "מציג את צירי X ו-Y כקווים מלאים לאורך התוכנית. החזק את F9 כדי להציג אותם רק בזמן הלחיצה.",
+ "settings.axes_full": "צירים",
+ "settings.axes_full_desc": "צירי התוכנית כקווים מלאים לאורך הדף. החזק את F9 להצצה מהירה.",
+ "settings.axes_full_on": "הצג צירים מלאים",
+ "plan.hud.axes_tip": "החזק {key} כדי להציג צירים מלאים",
+ "status.axes_full.on": "צירים מלאים פעילים",
+ "status.axes_full.off": "צירים מלאים כבויים"
+}

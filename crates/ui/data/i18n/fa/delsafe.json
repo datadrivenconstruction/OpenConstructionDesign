@@ -1,0 +1,6 @@
+{
+ "delsafe.ring.opening_shape": "کنتور یک بازشو خودش را قطع می‌کند یا فرو می‌ریزد",
+ "delsafe.ring.opening_boundary": "یک بازشو مرز بیرونی را قطع یا لمس می‌کند",
+ "delsafe.ring.openings_overlap": "بازشوها روی هم می‌افتند یا یکدیگر را لمس می‌کنند",
+ "xl.msg.delsafe_instance_param_on_types": "پارامتر '{}' یک پارامتر نمونه است؛ آن را در صفحهٔ عناصر ویرایش کنید، اعمال نشد"
+}

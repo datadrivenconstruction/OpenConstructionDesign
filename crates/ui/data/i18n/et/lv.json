@@ -1,0 +1,5 @@
+{
+ "lv.level.deleted_attach": "Tase kustutatud; {n} seina kaotasid ülemise kinnituse",
+ "lv.level.rooms": "{n} ruumi võtavad sihtkorruse kõrguse ({dz} m): {names}. Kinnitamiseks vajuta uuesti Teisalda",
+ "lv.level.pinned": "Tase pole kustutatud: kinnitatud elemente ei saa teisele korrusele viia: {names}. Eemalda kõigepealt kinnitus"
+}

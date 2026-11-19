@@ -1,0 +1,5 @@
+{
+ "caps.refused": "{kinds}: {reason}. 변경 사항 없음.",
+ "caps.panel": "패널은 커튼월 전체와 함께 이동합니다. 벽을 선택하세요",
+ "caps.unsupported": "이 도구는 이 요소를 편집하지 않습니다"
+}

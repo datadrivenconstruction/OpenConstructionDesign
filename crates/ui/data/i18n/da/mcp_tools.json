@@ -1,0 +1,5 @@
+{
+ "mcp.set.hide": "Skjul",
+ "mcp.set.copy_config": "Kopiér AI-agentkonfiguration",
+ "mcp.set.no_token": "Intet adgangstoken endnu. Tænd serveren først."
+}

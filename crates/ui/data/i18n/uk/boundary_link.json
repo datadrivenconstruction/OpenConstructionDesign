@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "Вибрати весь контур стін",
+ "cmd.sketch.link_unlink": "Від'єднати край від стіни",
+ "cmd.sketch.link_repick": "Вибрати стіну для краю знову",
+ "cmd.ctx.floor.link_unlink": "Від'єднати краї від стін",
+ "cmd.ctx.floor.link_accept": "Прийняти краї видалених стін",
+ "boundary_link.hint.loop": "Клацніть стіну: замкнений ряд стін стане пов'язаними краями",
+ "boundary_link.hint.repick": "Клацніть стіну, паралельну краю: край піде за нею",
+ "boundary_link.need_sketch": "Спершу відкрийте ескіз межі",
+ "boundary_link.need_edge": "Вкажіть край ескізу",
+ "boundary_link.need_straight": "Лише прямий край може йти за стіною",
+ "boundary_link.need_floor": "Виберіть перекриття",
+ "boundary_link.no_wall": "Під курсором немає стіни",
+ "boundary_link.not_parallel": "Стіна не паралельна краю",
+ "boundary_link.not_linked": "Цей край не пов'язано зі стіною",
+ "boundary_link.unlinked": "Край від'єднано: він лишається на місці й більше не йде за стіною",
+ "boundary_link.accepted": "Краї прийнято: вони лишаються на місці як звичайні краї",
+ "boundary_link.failed": "Не вдалося застосувати",
+ "boundary_link.lost": "вихідну стіну видалено",
+ "boundary_link.blocked": "не може йти за стіною"
+}

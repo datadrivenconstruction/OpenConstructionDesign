@@ -1,0 +1,7 @@
+{
+ "recover.untitled_note": "Bu proje hiç kaydedilmedi",
+ "recover.file_missing": "Proje dosyası bulunamadı",
+ "recover.banner": "{name} için önceki oturumdan kaydedilmemiş çalışma bulundu",
+ "recover.banner_review": "İncele",
+ "recover.later_archived": "{n} kez ertelendi: anlık kopyalar arşive taşındı"
+}

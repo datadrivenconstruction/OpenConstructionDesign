@@ -1,0 +1,6 @@
+{
+ "imported_prop_edit.remove": "حذف ویژگی",
+ "imported_prop_edit.remove.tip": "ویژگی را در یک مرحلهٔ واگرد از {n} عنصر انتخاب‌شده حذف می‌کند؛ هنگام ذخیره از فایل IFC حذف می‌شود",
+ "imported_prop_edit.done": "{key} از {n} عنصر حذف شد",
+ "imported_prop_edit.warn.reload": "انجام شد، اما نما تازه نشد؛ اگر اشتباه به نظر می‌رسد پنل را دوباره باز کنید یا واگرد کنید"
+}

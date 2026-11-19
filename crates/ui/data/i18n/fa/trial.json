@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "نقطه",
+ "trial.field.distance": "فاصله",
+ "trial.field.target": "عنصر",
+ "trial.refused": "{field}: {reason}. برای اعمال آن را تغییر دهید",
+ "trial.preview_off": "پیش‌نمایش خاموش: مدل خیلی بزرگ است"
+}

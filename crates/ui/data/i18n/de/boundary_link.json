@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "Gesamte Wandschleife auswählen",
+ "cmd.sketch.link_unlink": "Kante von Wand lösen",
+ "cmd.sketch.link_repick": "Kantenwand neu auswählen",
+ "cmd.ctx.floor.link_unlink": "Kanten von Wänden lösen",
+ "cmd.ctx.floor.link_accept": "Kanten gelöschter Wände übernehmen",
+ "boundary_link.hint.loop": "Eine Wand anklicken: Der geschlossene Wandverlauf wird zu verknüpften Kanten",
+ "boundary_link.hint.repick": "Eine Wand parallel zur Kante anklicken: Die Kante folgt ihr",
+ "boundary_link.need_sketch": "Zuerst die Umrissskizze öffnen",
+ "boundary_link.need_edge": "Auf eine Kante der Skizze zeigen",
+ "boundary_link.need_straight": "Nur eine gerade Kante kann einer Wand folgen",
+ "boundary_link.need_floor": "Eine Decke auswählen",
+ "boundary_link.no_wall": "Keine Wand unter dem Cursor",
+ "boundary_link.not_parallel": "Die Wand verläuft nicht parallel zur Kante",
+ "boundary_link.not_linked": "Diese Kante ist mit keiner Wand verknüpft",
+ "boundary_link.unlinked": "Kante gelöst: Sie bleibt an ihrer Position und folgt der Wand nicht mehr",
+ "boundary_link.accepted": "Kanten übernommen: Sie bleiben an ihrer Position als gewöhnliche Kanten",
+ "boundary_link.failed": "Konnte nicht angewendet werden",
+ "boundary_link.lost": "Ausgangswand gelöscht",
+ "boundary_link.blocked": "kann der Wand nicht folgen"
+}

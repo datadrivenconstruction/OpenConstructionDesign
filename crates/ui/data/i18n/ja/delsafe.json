@@ -1,0 +1,6 @@
+{
+ "delsafe.ring.opening_shape": "開口の輪郭が自己交差するか潰れてしまいます",
+ "delsafe.ring.opening_boundary": "開口が外周の境界と交差または接触します",
+ "delsafe.ring.openings_overlap": "開口同士が重なるか接触します",
+ "xl.msg.delsafe_instance_param_on_types": "パラメータ '{}' はインスタンス パラメータです。適用せず、要素シートで編集してください"
+}

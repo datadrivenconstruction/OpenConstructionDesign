@@ -1,0 +1,59 @@
+{
+ "del.k.door": {
+  "one": "# dør",
+  "other": "# dører"
+ },
+ "del.k.window": {
+  "one": "# vindu",
+  "other": "# vinduer"
+ },
+ "del.k.opening": {
+  "one": "# åpning",
+  "other": "# åpninger"
+ },
+ "del.k.comp": {
+  "one": "# vertskomponent",
+  "other": "# vertskomponenter"
+ },
+ "del.k.rebar": {
+  "one": "# armeringssett",
+  "other": "# armeringssett"
+ },
+ "del.k.port": {
+  "one": "# vert-MEP-tilkobling",
+  "other": "# vert-MEP-tilkoblinger"
+ },
+ "del.k.joist": {
+  "one": "# konstruksjonsbjelke",
+  "other": "# konstruksjonsbjelker"
+ },
+ "del.k.railing": {
+  "one": "# rekkverk",
+  "other": "# rekkverk"
+ },
+ "del.k.tag": {
+  "one": "# merke",
+  "other": "# merker"
+ },
+ "del.k.dim": {
+  "one": "# dimensjon (frakoblet)",
+  "other": "# dimensjoner (frakoblet)"
+ },
+ "del.also": "Berørt også: {list}",
+ "del.rooms": {
+  "one": "# rom mister en omsluttende vegg",
+  "other": "# rom mister en omsluttende vegg"
+ },
+ "del.cancelled": "Sletting avbrutt, ingenting endret",
+ "del.confirm.title": "Slett med avhengige",
+ "del.confirm.lead": {
+  "one": "# valgt element tar med seg dette:",
+  "other": "# valgte elementer tar med seg dette:"
+ },
+ "del.confirm.levels": {
+  "one": "# av dem er på en annen etasje",
+  "other": "# av dem er på andre etasjer"
+ },
+ "del.confirm.all": "Slett alle",
+ "del.confirm.cancel": "Avbryt"
+}

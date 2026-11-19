@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "Laag hieronder invoegen",
+ "type_layers.layer.delete": "Laag verwijderen",
+ "type_layers.layer.delete_last": "Een type heeft minstens één laag nodig",
+ "type_layers.value.bad": "Geen geldige positieve waarde",
+ "type_layers.value.required": "Verplicht",
+ "type_layers.unsaved.title": "Niet-opgeslagen wijzigingen in {name}",
+ "type_layers.unsaved.body": "Toepassen op het type, of verwerpen?",
+ "type_layers.unsaved.discard": "Verwerpen"
+}

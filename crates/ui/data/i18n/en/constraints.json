@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "Keeps this wall at its current length on every edit",
+ "constraints.con.tip.lock_dist": "Keeps the distance between the two walls on every edit",
+ "constraints.con.tip.equal": "Keeps the steps between the selected walls equal",
+ "constraints.con.tip.align": "Keeps both walls on one line",
+ "constraints.con.tip.parallel": "Keeps the walls parallel",
+ "constraints.con.tip.perp": "Keeps the walls at a right angle",
+ "constraints.con.tip.align_grid": "Keeps the wall on the nearest grid line",
+ "constraints.con.tip.lock_dist_grid": "Keeps the distance from the wall to the nearest grid line",
+ "constraints.con.tip.level_gap": "Keeps the gap between the levels",
+ "constraints.con.tip.top_to_level": "Keeps the top of the wall at the level above"
+}

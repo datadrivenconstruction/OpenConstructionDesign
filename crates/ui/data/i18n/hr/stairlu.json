@@ -1,0 +1,12 @@
+{
+ "opt.stair.straight": "Ravno",
+ "opt.stair.l": "L",
+ "opt.stair.u": "U",
+ "opt.stair.gap": "Otvor",
+ "hint.stair.corner": "L stubište: odaberite kut zaokreta · Backspace — ukloni zadnju točku · Esc — ukloni zadnju točku; bez točaka — odustani",
+ "hint.stair.side": "Stubište: odaberite stranu drugog kraka · Backspace — ukloni zadnju točku · Esc — ukloni zadnju točku; bez točaka — odustani",
+ "tool.stair.flights": "{n} stuba (ukupno {m})",
+ "tool.stair.err_split": "Svaki krak treba najmanje 2 stube: prvi krak ima {n} od {m}",
+ "tool.stair.err_comfort": "Visina i gaz krše pravilo udobnosti (2R + T)",
+ "tool.stair.err_input": "Veličina stubišta izvan raspona: provjerite širinu, visinu i podest"
+}

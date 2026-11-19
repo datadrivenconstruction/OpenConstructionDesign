@@ -1,0 +1,6 @@
+{
+ "geom.length": "দৈর্ঘ্য",
+ "sched.cat.room_seps": "কক্ষের বিভাজক",
+ "room.err.point_leave": "কক্ষ {n}: বিন্দুটি তার সীমানা ছেড়ে যাবে",
+ "room.err.point_taken": "কক্ষ {n}: বিন্দুটি কক্ষ {other}-এ পড়বে"
+}

@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "צייר קו מתאר סגור: לחץ על נקודות, ואז Enter או סיים ליצירה",
+ "sketch_hints.sk_finish": "סיים",
+ "sketch_hints.sk_cancel": "ביטול",
+ "sketch_hints.import_warn": "אזהרות בדיקת מודל: {n} (ראשונה: {first})",
+ "sketch_hints.ai.offline.schedule": "פתח את הלוח",
+ "sketch_hints.ai.offline.check": "בדוק מול הכללים",
+ "sketch_hints.ai.offline.warnings": "הצג אזהרות",
+ "cmd.file.publish_pdf": "פרסם גיליונות כ-PDF…",
+ "cmd.file.publish_pdf.desc": "מפרסם את הגיליונות שנבחרו ל-PDF. זהה לייצוא גיליונות ל-PDF/SVG.",
+ "sketch_hints.verify_none": "אין בבחירה דבר שהוגדר על ידי עוזר ה-AI לאימות",
+ "sketch_hints.contours_none": "אין משטח טופוגרפי במודל: קווי גובה מופיעים ברגע שנוצר אחד",
+ "sketch_hints.contours_off": "קווי הגובה של המשטח הטופוגרפי מוסתרים",
+ "sketch_hints.contours_on": "קווי הגובה של המשטח הטופוגרפי מוצגים"
+}

@@ -1,0 +1,4 @@
+{
+ "topo_import.topo.ambiguous": "{n} Zeilen übersprungen: Eine Zahl lässt sich auf zwei Arten lesen (1,250 = 1.25 oder 1250?) und die Datei zeigt kein Dezimalzeichen",
+ "topo_import.topo.grouped": "{n} Punkte mit Zifferngruppen gelesen (1 250,5 oder 1,234.5)"
+}

@@ -1,0 +1,36 @@
+id = "G27_pylon"
+tier = "hard"
+group = "Any geometry"
+title = "Strommast"
+lang = "de"
+base = "empty"
+
+[[turn]]
+say = "Ein Hochspannungsmast 45 m hoch, Gitterstahl mit Tragwerk, drei Traversen übereinander, Isolatorketten, vier Fundamente, Querstreben."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "col+brace+beam"
+min = 120.0
+
+[[oracle.count]]
+spec = "iso_footing+raft+solid"
+min = 4.0
+
+[[oracle.count]]
+spec = "comp:insulator"
+min = 9.0
+
+[[oracle.geom]]
+kind = "height"
+min = 40.0
+max = 52.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

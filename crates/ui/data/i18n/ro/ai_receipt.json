@@ -1,0 +1,22 @@
+{
+ "ai.receipt.title": {
+  "one": "# modificare aplicată",
+  "few": "# modificări aplicate",
+  "other": "# de modificări aplicate"
+ },
+ "ai.receipt.more": "+{n} în plus",
+ "ai.receipt.list": "Elemente",
+ "ai.receipt.show": "Arată",
+ "ai.receipt.show.tip": "Selectează și încadrează elementele modificate",
+ "ai.receipt.undo": "Anulează",
+ "ai.receipt.undo.tip": "Anulează exact această aplicare",
+ "ai.receipt.undone": "Anulat",
+ "ai.receipt.later": "S-au făcut modificări ulterioare",
+ "ai.receipt.toast_undone": "Planul aplicat a fost anulat",
+ "ai.receipt.draft_family": "Familia din ciornă: {name}",
+ "ai.receipt.promote": "Fă de lucru",
+ "ai.receipt.promote.tip": "Transformă familia din ciornă într-una de lucru (un singur pas de anulare)",
+ "ai.receipt.promoted": "Familia este acum de lucru",
+ "ai.receipt.promote_failed": "Familia nu a putut fi făcută de lucru",
+ "cmd.ai.receipt_undo": "Anulează ultimul plan AI"
+}

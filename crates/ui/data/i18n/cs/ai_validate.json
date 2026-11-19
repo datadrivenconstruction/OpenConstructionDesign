@@ -1,0 +1,14 @@
+{
+ "ai.issue.integrity": "Problém integrity: {0} {1}: {2}",
+ "ai.issue.opening_outside": "Otvor se do stěny nevejde: {0}",
+ "ai.issue.opening_overlap": "Otvor se překrývá s otvorem {0}",
+ "ai.issue.wall_warning": "Stěna: {0}",
+ "ai.issue.cut_warning": "Řez: {0}",
+ "ai.issue.room_open": "Místnost není uzavřená",
+ "ai.issue.material_unknown": "V projektu není materiál „{0}“: Použít přidá nový s výchozími vlastnostmi",
+ "ai.issue.material_suggest": "V projektu není materiál „{0}“: Použít přidá nový. Mysleli jste „{1}“?",
+ "ai.issue.conflict": "Tuto položku nelze spustit: {0}",
+ "ai.issue.too_large": "{0} prvků by se změnilo, což překračuje limit {1}. Je potřeba oprávnění",
+ "ai.issue.truncated": "Seznam změn se zastavil na {0} řádcích: plán je větší, než může karta zobrazit. Je potřeba oprávnění",
+ "ai.issue.replan_failed": "Plán nelze přepočítat. Pořizuje se nová kopie modelu"
+}

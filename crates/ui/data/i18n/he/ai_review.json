@@ -1,0 +1,5 @@
+{
+ "ai.plan.apply_n": "החל {n} שאושרו",
+ "ai.plan.will_apply": "{n} מתוך {m} שינויים יוחלו",
+ "ai.plan.keys_hint": "J/K או Alt+למעלה/למטה מזיזים · A מאשר · R דוחה · רווח מחליף · Shift+A / Shift+R קבוצה שלמה · Ctrl+Enter מחיל · Esc חוזר למבט (שומר את הטיוטה)"
+}

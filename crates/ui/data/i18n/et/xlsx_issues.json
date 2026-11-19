@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "Vahele jäetud read ja lahtrid",
+ "xlsx_issues.conflicts_title": "Muudetud mõlemas kohas",
+ "xlsx_issues.missing_title": "Leht puudub töövihikust",
+ "xlsx_issues.look_alike_title": "Lehe nimi ei sobi",
+ "xlsx_issues.mass_title": "Massiline kustutamine vajab kinnitust",
+ "xlsx_issues.sheets_missing": "Lehed {sheets} puuduvad töövihikust (ümber nimetatud või kustutatud); nende ridu ei võrreldud.",
+ "xlsx_issues.keep_model": "Säilita mudel",
+ "xlsx_issues.take_book": "Võta töövihik",
+ "xlsx_issues.open_book_tip": "Avab faili selle rakenduses. Mudelis midagi ei muutu; eelvaade laaditakse uuesti, kui töövihiku salvestad."
+}

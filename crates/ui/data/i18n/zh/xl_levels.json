@@ -1,0 +1,5 @@
+{
+ "xl.msg.level_name_x_is_already_used": "楼层名称“{}”已被使用",
+ "xl.msg.unreadable_id_elements_without_a_row_not_deleted": "ID 无法读取：本次导入不会删除没有对应行的元素",
+ "xl.msg.wall_type_name_x_is_already_used": "墙类型名称“{}”已被使用"
+}

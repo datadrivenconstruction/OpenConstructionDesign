@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "{total} में से {done} पहचाने जा रहे हैं",
+ "mesh_recognize.all": "सभी {n}",
+ "mesh_recognize.only_confident": "केवल भरोसेमंद",
+ "mesh_recognize.confident_tip": "उन पंक्तियों पर टिक करता है जिनका प्रकार श्रेणी से मेल खाता है और विश्वास कम से कम {pct}% है",
+ "mesh_recognize.row_hint": "पंक्ति पर क्लिक करके टिक करें। तीर कुंजियाँ चलाती हैं, Enter टिक करता है।",
+ "mesh_recognize.kind_for": "{name} का प्रकार",
+ "mesh_recognize.source": "स्रोत मेश",
+ "mesh_recognize.keep": "मेश रखें",
+ "mesh_recognize.replace": "मेश बदलें",
+ "mesh_recognize.convert_keep": "{n} बदलें",
+ "mesh_recognize.convert_remove": "{n} बदलें और मेश हटाएँ",
+ "mesh_recognize.creates": "{n} बनेंगे: {kinds}",
+ "mesh_recognize.creates_none": "अभी कुछ टिक नहीं किया",
+ "mesh_recognize.stay": "{n} स्रोत मेश मॉडल में रहते हैं",
+ "mesh_recognize.removed": "{n} स्रोत मेश हटाए जाएँगे। वापस लें से वे लौट आएँगे।"
+}

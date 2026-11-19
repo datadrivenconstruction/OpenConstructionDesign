@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "Lägg till 1 uppsättning",
+ "rebar_sets.add_n": "Lägg till {n} uppsättningar",
+ "rebar_sets.pick.search": "Sök armeringsjärntyper",
+ "rebar_sets.pick.empty": "Inga matchande armeringsjärntyper",
+ "rebar_sets.unit.deg": "°"
+}

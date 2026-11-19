@@ -1,0 +1,21 @@
+{
+ "mep.row.system": "系统",
+ "mep.row.elevation": "起点标高",
+ "mep.row.slope": "坡度",
+ "mep.row.material": "材质",
+ "mep.row.dev_elevation": "标高",
+ "mep.row.no_system": "该系统已不存在，请选择其他系统。",
+ "mep.row.no_points": "该管线没有节点，因此没有标高。",
+ "mep.row.system_domain": "系统 {system} 不适用于此管线类型（{kind}）。请选择同类网络的系统。",
+ "mep.row.material_pipes": "材质仅适用于管道；此管线为{kind}。",
+ "mep.row.no_catalog": "该材质在此管线中没有目录规格。",
+ "mep.mat.none": "未设置",
+ "mep.mat.steel": "钢",
+ "mep.mat.copper": "铜",
+ "mep.mat.pvc": "PVC",
+ "mep.mat.pp": "聚丙烯",
+ "mep.err.follow_blocked": "已连接的管线无法跟随此更改：新位置没有足够空间容纳其分支。请减少设备移动距离，或先断开管线连接。",
+ "mep.err.follow_slope": "已连接的管线在新位置无法保持坡度：其坡度将低于系统的最小坡度。请减小设备高度变化，或先断开管线连接。",
+ "mep.err.follow_port_lost": "编辑后，此管线所连接的接口已不存在。请先将管线移开，或保留设备类型。",
+ "mep.err.follow_device": "此管线终止于设备接口，无法离开。请改为移动设备，或先断开管线连接。"
+}

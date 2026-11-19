@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "في الانتظار خلف المهمة الجارية: {n}",
+ "import_queue.queue_full": "قائمة الانتظار ممتلئة، ولم تُضَف {n} ملفات",
+ "import_queue.changed": "تم تحديث {name} بعد إنشاء هذا المشروع. فُتح المشروع السابق.",
+ "import_queue.import_again": "استيراد مرة أخرى",
+ "import_queue.kept": "يُحتفظ بالاستيراد المكتمل",
+ "import_queue.open_it": "فتحه",
+ "import_queue.sum.head": "استيراد: {editable} قابل للتحرير (جدران {walls}، فتحات {open}، بلاطات {slabs}، غرف {rooms}، أخرى {other})، {meshes} كشبكة",
+ "import_queue.sum.unchanged": "، بدون تغيير {n}",
+ "import_queue.sum.updated": "، تم تحديث {n}",
+ "import_queue.sum.missing": "، غير موجود في المصدر {n} (محفوظ)",
+ "import_queue.sum.skipped": "، تم تخطي {n}",
+ "import_queue.sum.warnings": "، تحذيرات {n}",
+ "import_queue.import_failed": "فشل الاستيراد: {e}"
+}

@@ -1,0 +1,19 @@
+{
+ "ai.plan.apply_updated": "I-apply ang na-update na plan",
+ "ai.plan.keys_anywhere": "Ina-apply ng Ctrl+Enter at itinitigil ng Esc ang kahilingan pati sa plan o 3D view, maliban kung may tina-type sa text field.",
+ "ai.plan.rebased": "Na-update laban sa kasalukuyang model: {what}",
+ "ai.value.bad": "Hindi wastong halaga para sa {name} ang “{text}”",
+ "ai.value.both": "Binago ng AI katulong ang halagang ito tungo sa {agent} habang inilagay mo ang {mine}. Piliin ang itatago.",
+ "ai.value.choose_first": "Piliin muna ang iyong halaga o ang sa AI katulong sa card",
+ "ai.value.elem": "Elemento {n}: {what}",
+ "ai.value.held": "Papasok ang iyong halagang {mine} pagkatapos matapos ang kahilingan",
+ "ai.value.keep_agent": "Itago ang {agent}",
+ "ai.value.lost": "Hindi nagamit ang iyong halagang {mine} para sa {what} sa “{title}”: inalis ng AI katulong ang halagang iyon sa card",
+ "ai.value.more": "{n} pang halaga: palawakin ang row",
+ "ai.value.refused": "Hindi tinanggap ng plan ang halagang ito at pinanatili ang nauna: {why}",
+ "ai.value.refused_next": "Maglagay ng ibang halaga, o alisan ng tsek ang item para hindi ito isama sa Apply.",
+ "ai.value.tip": "Itama ang halaga sa draft; nagbabago lang ang model sa Apply. Kinukumpirma ng Enter, ibinabalik ng Esc.",
+ "ai.value.use_mine": "Gamitin ang {mine}",
+ "ai.value.was": "dati {old}",
+ "ai.value.bad_len": "{name}: {why}"
+}

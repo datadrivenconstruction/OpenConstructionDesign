@@ -1,0 +1,4 @@
+zoom=10
+walls=[(0,0)-(6,0)]
+# SNAP-3: 10 px/m widens the radius to 1.2 m, the far end still holds
+tool(WA) move(5.0,0.5) → snap=Endpoint p=(6,0)

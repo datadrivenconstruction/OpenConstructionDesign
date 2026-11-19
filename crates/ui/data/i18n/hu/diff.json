@@ -1,0 +1,7 @@
+{
+ "diff.kind.added": "hozzáadva",
+ "diff.kind.changed": "módosítva",
+ "diff.kind.deleted": "törölve",
+ "diff.kind.refused": "elutasítva",
+ "diff.kind.conflict": "ütközés"
+}

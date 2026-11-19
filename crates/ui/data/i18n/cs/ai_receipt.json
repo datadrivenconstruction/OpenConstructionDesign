@@ -1,0 +1,22 @@
+{
+ "ai.receipt.title": {
+  "one": "Použita # změna",
+  "few": "Použity # změny",
+  "other": "Použito # změn"
+ },
+ "ai.receipt.more": "+{n} dalších",
+ "ai.receipt.list": "Prvky",
+ "ai.receipt.show": "Zobrazit",
+ "ai.receipt.show.tip": "Vybrat a zarámovat změněné prvky",
+ "ai.receipt.undo": "Zpět",
+ "ai.receipt.undo.tip": "Vrátit přesně toto použití",
+ "ai.receipt.undone": "Vráceno zpět",
+ "ai.receipt.later": "Byly provedeny pozdější úpravy",
+ "ai.receipt.toast_undone": "Použitý plán byl vrácen zpět",
+ "ai.receipt.draft_family": "Rodina návrhu: {name}",
+ "ai.receipt.promote": "Zprovoznit",
+ "ai.receipt.promote.tip": "Převede rodinu návrhu na pracovní (jeden krok zpět)",
+ "ai.receipt.promoted": "Rodina je nyní pracovní",
+ "ai.receipt.promote_failed": "Rodinu nelze zprovoznit",
+ "cmd.ai.receipt_undo": "Vrátit zpět poslední plán AI"
+}

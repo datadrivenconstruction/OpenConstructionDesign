@@ -1,0 +1,16 @@
+{
+ "ai.items.all": {
+  "one": "Todos os # item",
+  "other": "Todos os # itens"
+ },
+ "ai.items.all.tip": "Check or uncheck every item of the plan",
+ "ai.items.checked": "{n} of {m} checked",
+ "ai.items.check.tip": "Include “{title}” in Apply",
+ "ai.items.expand": "Show elements",
+ "ai.items.collapse": "Hide elements",
+ "ai.items.apply": {
+  "one": "Aplicar # item",
+  "other": "Aplicar # itens"
+ },
+ "ai.items.apply_none": "Apply"
+}

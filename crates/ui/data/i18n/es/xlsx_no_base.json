@@ -1,0 +1,6 @@
+{
+ "xlsx_no_base.title": "Este libro no tiene datos de comparación",
+ "xlsx_no_base.detail": "La hoja oculta de comparación falta o está dañada (otro programa volvió a guardar el libro, o se hizo a mano). Cada celda distinta reemplaza el valor del modelo; las ediciones del modelo hechas desde la exportación no se pueden detectar. Las filas que faltan en el libro no se eliminan.",
+ "xlsx_no_base.confirm": "He revisado los cambios: reemplazar los valores del modelo ({n})",
+ "xlsx_no_base.confirm_first": "Confirme primero la importación de un libro sin datos de comparación"
+}

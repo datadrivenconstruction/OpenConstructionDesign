@@ -1,0 +1,14 @@
+{
+ "ai.hist.badge": "KI",
+ "ai.hist.untitled": "KI-Änderungen",
+ "ai.hist.tip": "{title}\nAngewendet von: {actor}\nKI-Modell: {model}",
+ "ai.hist.why": "Grund: {why}",
+ "ai.hist.reverted": "zurückgenommen",
+ "ai.hist.revert_one": "Diesen KI-Stapel zurücknehmen",
+ "ai.revert.done": "KI-Änderungen zurückgenommen: {n}. Rückgängig bringt sie zurück.",
+ "ai.revert.empty": "Es gibt keine KI-Änderungen zum Zurücknehmen",
+ "ai.revert.not_ai": "Dieser Schritt ist keine KI-Änderung",
+ "ai.revert.already": "Diese KI-Änderungen sind bereits zurückgenommen",
+ "ai.revert.opaque": "Nicht zurückgenommen: Diese KI-Änderungen lassen sich von späteren Arbeiten nicht sicher trennen. Nichts wurde geändert.",
+ "ai.revert.failed": "Zurücknehmen fehlgeschlagen: {e}"
+}

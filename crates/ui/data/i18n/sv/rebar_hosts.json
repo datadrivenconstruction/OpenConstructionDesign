@@ -1,0 +1,40 @@
+{
+ "rebar_hosts.hosts": "Värdar: {list}",
+ "rebar_hosts.kind.column": "Pelare",
+ "rebar_hosts.kind.beam": "Balk",
+ "rebar_hosts.kind.wall": "Vägg",
+ "rebar_hosts.kind.slab": "Platta",
+ "rebar_hosts.kind.footing": "Grund",
+ "rebar_hosts.kind.raft": "Grundplatta",
+ "rebar_hosts.n.column": {
+  "one": "# pelare",
+  "other": "# pelare"
+ },
+ "rebar_hosts.n.beam": {
+  "one": "# balk",
+  "other": "# balkar"
+ },
+ "rebar_hosts.n.wall": {
+  "one": "# vägg",
+  "other": "# väggar"
+ },
+ "rebar_hosts.n.slab": {
+  "one": "# platta",
+  "other": "# plattor"
+ },
+ "rebar_hosts.n.footing": {
+  "one": "# grund",
+  "other": "# grunder"
+ },
+ "rebar_hosts.n.raft": {
+  "one": "# grundplatta",
+  "other": "# grundplattor"
+ },
+ "rebar_hosts.mixed_note": "Pelare och balkar tar stänger och bygel; väggar, plattor och grundplattor tar nät. Markera en grupp för att lägga till armering.",
+ "rebar_hosts.why.mixed": "Markeringen blandar pelare eller balkar med väggar, plattor eller grunder. Markera en grupp.",
+ "rebar_hosts.why.area_linear": "Nät läggs i väggar, plattor och grundplattor, inte i pelare eller balkar.",
+ "rebar_hosts.why.bars_plate": "Längsgående stänger och bygel läggs i pelare och balkar, inte i väggar, plattor eller grunder.",
+ "rebar_hosts.why.no_common_face": "De valda värdarna har ingen gemensam täckyta. Markera värdar av en typ.",
+ "rebar_hosts.why.no_type": "Välj en stångtyp.",
+ "rebar_hosts.kind_type": "{kind} · {type}"
+}

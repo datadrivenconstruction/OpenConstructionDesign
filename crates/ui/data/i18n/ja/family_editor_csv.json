@@ -1,0 +1,11 @@
+{
+ "fe.csv.apply": "取り込みを適用",
+ "fe.csv.cancel": "プレビューを破棄",
+ "fe.csv.nothing": "変更はありません: カタログは現在のタイプと一致しています",
+ "fe.csv.preview": "取り込みプレビュー: 新規 {added}、変更 {changed}、変更なしのタイプ {same}; 値の変更 {values}",
+ "fe.csv.preview_hint": "空欄の セルや欠けた列は現在の値を保持します。適用するまで何も変わりません。",
+ "fe.csv.skipped": "適用されず、値は保持されました: {msg}",
+ "fe.csv.type_added": "新しいタイプ {name}",
+ "fe.csv.type_changed": "タイプ {name}",
+ "fe.csv.value": "  {param}: {old} → {new}"
+}

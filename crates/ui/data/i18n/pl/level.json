@@ -1,0 +1,13 @@
+{
+ "level.err_open": "Nie otwarto poziomu: {e}",
+ "level.need_name": "Poziom wymaga nazwy i rzędnej",
+ "level.created": "Utworzono poziom „{name}”",
+ "level.err_create": "Nie utworzono poziomu: {e}",
+ "level.err_edit": "Nie zmieniono poziomu: {e}",
+ "level.edited": "Zmieniono poziom „{name}”",
+ "level.edited_stale": "Zmieniono poziom „{name}”, widok nie został odświeżony: {e}",
+ "level.last": "Ostatniego poziomu nie można usunąć",
+ "level.deleted": "Usunięto poziom",
+ "level.not_empty": "Poziom nie jest pusty: najpierw usuń jego elementy",
+ "level.err_delete": "Nie usunięto poziomu: {e}"
+}

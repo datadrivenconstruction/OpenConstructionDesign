@@ -1,0 +1,5 @@
+{
+ "xl.msg.level_name_x_is_already_used": "korruse nimi '{}' on juba kasutusel",
+ "xl.msg.unreadable_id_elements_without_a_row_not_deleted": "loetamatu id: elemente ilma reata ei kustutata selles importimises",
+ "xl.msg.wall_type_name_x_is_already_used": "seinatüübi nimi '{}' on juba kasutusel"
+}

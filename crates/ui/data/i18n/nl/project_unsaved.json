@@ -1,0 +1,7 @@
+{
+ "project_unsaved.unsaved.model": "Modelwijzigingen zijn niet opgeslagen.",
+ "project_unsaved.unsaved.drawings": {
+  "one": "# getekende tekening is niet opgeslagen in het project: de wijzigingen gaan verloren.",
+  "other": "# getekende tekeningen zijn niet opgeslagen in het project: de wijzigingen gaan verloren."
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "empty.v3d_model.title": "Ingenting i 3D ennå",
+ "empty.v3d_model.hint": "Tegn vegger i planen, så vises de her.",
+ "empty.v3d_model.action": "Åpne plan",
+ "empty.v3d_hidden.title": "Alle elementer er skjult i denne visningen",
+ "empty.v3d_hidden.hint": "Midlertidig skjul eller isoler etterlater ingenting synlig. Visningsgrafikken beholdes slik den er satt.",
+ "empty.v3d_hidden.action": "Vis alle",
+ "empty.v3d_graphics.title": "Visningsgrafikken skjuler alle kategorier",
+ "empty.v3d_graphics.hint": "Kategoriregler i denne visningen skjuler alt. Slå kategoriene på igjen i visningsgrafikk.",
+ "empty.v3d_graphics.action": "Åpne visningsgrafikk",
+ "empty.v3d_box.title": "Snittboksen ligger utenfor modellen",
+ "empty.v3d_box.hint": "Snittboksen kutter bort alle elementer. Tilpass den rundt modellen igjen.",
+ "empty.v3d_box.action": "Tilbakestill boks"
+}

@@ -1,0 +1,29 @@
+{
+ "recover.ago_now": "এইমাত্র",
+ "recover.ago_min": {
+  "one": "# মিনিট আগে",
+  "other": "# মিনিট আগে"
+ },
+ "recover.ago_hour": {
+  "one": "# ঘণ্টা আগে",
+  "other": "# ঘণ্টা আগে"
+ },
+ "recover.ago_yesterday": "গতকাল",
+ "recover.ago_day": {
+  "one": "# দিন আগে",
+  "other": "# দিন আগে"
+ },
+ "recover.empty": "আর কোনো স্ন্যাপশট নেই",
+ "recover.empty_hint": "এই প্রকল্পের জন্য পুনরুদ্ধার করার কিছু নেই।",
+ "recover.all_damaged": "প্রতিটি স্ন্যাপশট ক্ষতিগ্রস্ত, কোনোটিই পুনরুদ্ধার করা যাবে না।",
+ "recover.keys_hint": "Up ও Down দিয়ে স্ন্যাপশট বাছুন, Enter চাপলে Restore-এ যান",
+ "recover.row_tip": "সংরক্ষিত {time}",
+ "recover.row_damaged_tip": "পুনরুদ্ধার করা যাবে না: {reason}",
+ "recover.archive_ask": "এই স্ন্যাপশট আর্কাইভে সরাবেন?",
+ "recover.discard_ask": {
+  "one": "স্ন্যাপশটটি আর্কাইভে সরাবেন? এরপর এটি আর দেখানো হবে না।",
+  "other": "সব # টি স্ন্যাপশট আর্কাইভে সরাবেন? এরপর এগুলো আর দেখানো হবে না।"
+ },
+ "recover.confirm_yes": "আর্কাইভে সরান",
+ "recover.confirm_no": "স্ন্যাপশট রাখুন"
+}

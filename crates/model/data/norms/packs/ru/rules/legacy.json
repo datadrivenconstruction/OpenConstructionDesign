@@ -1,0 +1,1047 @@
+{
+ "rules": [
+  {
+   "id": "ex.wall.thickness",
+   "text": {
+    "en": "Wall thickness at least 0.1 m",
+    "ru": "Толщина стены не менее 0,1 м"
+   },
+   "source": {
+    "doc": "office-bim-example",
+    "clause": "sec. 3, schedule completeness 3.1"
+   },
+   "severity": "warning",
+   "scope": {
+    "cats": [
+     "wall"
+    ],
+    "levels": null,
+    "type_name": null
+   },
+   "check": {
+    "kind": "param_range",
+    "param": "thickness",
+    "min": 0.1,
+    "max": null
+   },
+   "applies": {},
+   "example": true,
+   "verified": false,
+   "depth": 1,
+   "discipline": "bim"
+  },
+  {
+   "id": "ex.door.mark",
+   "text": {
+    "en": "Door has a mark",
+    "ru": "У двери задана марка"
+   },
+   "source": {
+    "doc": "office-bim-example",
+    "clause": "sec. 3, schedule completeness 3.2"
+   },
+   "severity": "warning",
+   "scope": {
+    "cats": [
+     "door"
+    ],
+    "levels": null,
+    "type_name": null
+   },
+   "check": {
+    "kind": "param_present",
+    "param": "Mark"
+   },
+   "applies": {},
+   "example": true,
+   "verified": false,
+   "depth": 1,
+   "discipline": "bim"
+  },
+  {
+   "id": "ex.window.mark",
+   "text": {
+    "en": "Window has a mark",
+    "ru": "У окна задана марка"
+   },
+   "source": {
+    "doc": "office-bim-example",
+    "clause": "sec. 3, schedule completeness 3.3"
+   },
+   "severity": "warning",
+   "scope": {
+    "cats": [
+     "window"
+    ],
+    "levels": null,
+    "type_name": null
+   },
+   "check": {
+    "kind": "param_present",
+    "param": "Mark"
+   },
+   "applies": {},
+   "example": true,
+   "verified": false,
+   "depth": 1,
+   "discipline": "bim"
+  },
+  {
+   "id": "ex.room.name",
+   "text": {
+    "en": "Room has a name",
+    "ru": "У помещения задано имя"
+   },
+   "source": {
+    "doc": "office-bim-example",
+    "clause": "sec. 3, schedule completeness 3.4"
+   },
+   "severity": "warning",
+   "scope": {
+    "cats": [
+     "room"
+    ],
+    "levels": null,
+    "type_name": null
+   },
+   "check": {
+    "kind": "param_present",
+    "param": "name"
+   },
+   "applies": {},
+   "example": true,
+   "verified": false,
+   "depth": 1,
+   "discipline": "bim"
+  },
+  {
+   "id": "ex.room.number",
+   "text": {
+    "en": "Room has a number",
+    "ru": "У помещения задан номер"
+   },
+   "source": {
+    "doc": "office-bim-example",
+    "clause": "sec. 3, schedule completeness 3.5"
+   },
+   "severity": "warning",
+   "scope": {
+    "cats": [
+     "room"
+    ],
+    "levels": null,
+    "type_name": null
+   },
+   "check": {
+    "kind": "param_present",
+    "param": "number"
+   },
+   "applies": {},
+   "example": true,
+   "verified": false,
+   "depth": 1,
+   "discipline": "bim"
+  },
+  {
+   "id": "ex.door.fire",
+   "text": {
+    "en": "Door has a fire rating",
+    "ru": "У двери задан предел огнестойкости"
+   },
+   "source": {
+    "doc": "office-bim-example",
+    "clause": "sec. 3, schedule completeness 3.6"
+   },
+   "severity": "info",
+   "scope": {
+    "cats": [
+     "door"
+    ],
+    "levels": null,
+    "type_name": null
+   },
+   "check": {
+    "kind": "param_present",
+    "param": "FireRating"
+   },
+   "applies": {},
+   "example": true,
+   "verified": false,
+   "depth": 1,
+   "discipline": "bim"
+  },
+  {
+   "id": "ex.door.evac",
+   "text": {
+    "en": "Door has the EvacuationExit property (yes or no) so exit rules can apply",
+    "ru": "У двери задано свойство EvacuationExit (yes или no), чтобы применялись правила выходов"
+   },
+   "source": {
+    "doc": "office-bim-example",
+    "clause": "sec. 3, schedule completeness 3.10"
+   },
+   "severity": "info",
+   "scope": {
+    "cats": [
+     "door"
+    ],
+    "levels": null,
+    "type_name": null
+   },
+   "check": {
+    "kind": "param_present",
+    "param": "EvacuationExit"
+   },
+   "applies": {},
+   "example": true,
+   "verified": false,
+   "depth": 1,
+   "discipline": "bim"
+  },
+  {
+   "id": "ex.door.mark_unique",
+   "text": {
+    "en": "Door marks are unique",
+    "ru": "Марки дверей уникальны"
+   },
+   "source": {
+    "doc": "office-bim-example",
+    "clause": "sec. 3, schedule completeness 3.7"
+   },
+   "severity": "error",
+   "scope": {
+    "cats": [
+     "door"
+    ],
+    "levels": null,
+    "type_name": null
+   },
+   "check": {
+    "kind": "unique",
+    "param": "Mark",
+    "case_sensitive": false
+   },
+   "applies": {},
+   "example": true,
+   "verified": false,
+   "depth": 1,
+   "discipline": "bim"
+  },
+  {
+   "id": "ex.window.mark_unique",
+   "text": {
+    "en": "Window marks are unique",
+    "ru": "Марки окон уникальны"
+   },
+   "source": {
+    "doc": "office-bim-example",
+    "clause": "sec. 3, schedule completeness 3.8"
+   },
+   "severity": "error",
+   "scope": {
+    "cats": [
+     "window"
+    ],
+    "levels": null,
+    "type_name": null
+   },
+   "check": {
+    "kind": "unique",
+    "param": "Mark",
+    "case_sensitive": false
+   },
+   "applies": {},
+   "example": true,
+   "verified": false,
+   "depth": 1,
+   "discipline": "bim"
+  },
+  {
+   "id": "ex.room.number_unique",
+   "text": {
+    "en": "Room numbers are unique",
+    "ru": "Номера помещений уникальны"
+   },
+   "source": {
+    "doc": "office-bim-example",
+    "clause": "sec. 3, schedule completeness 3.9"
+   },
+   "severity": "error",
+   "scope": {
+    "cats": [
+     "room"
+    ],
+    "levels": null,
+    "type_name": null
+   },
+   "check": {
+    "kind": "unique",
+    "param": "number",
+    "case_sensitive": false
+   },
+   "applies": {},
+   "example": true,
+   "verified": false,
+   "depth": 1,
+   "discipline": "bim"
+  },
+  {
+   "id": "ex.door.width",
+   "text": {
+    "en": "Evacuation exit (EvacuationExit = yes), opening width at least 0.8 m (general case; 0.6 m for technical, storage, sanitary rooms and single workplaces; 1.2 m from 50 people)",
+    "ru": "Эвакуационный выход (EvacuationExit = yes), ширина проёма не менее 0,8 м (общий случай; 0,6 м для технических, складских, санитарных помещений и одиночных мест; 1,2 м при 50 и более человек)"
+   },
+   "source": {
+    "doc": "sp1.13130",
+    "clause": "p.4.2.19",
+    "note": "checked 2026-11-13 only on a mirror (tiflocentre.ru, SP 1.13130.2020 with amendments 1-3), value matches; official text hosts refused connections, so not marked verified"
+   },
+   "severity": "error",
+   "scope": {
+    "cats": [
+     "door"
+    ],
+    "levels": null,
+    "type_name": null,
+    "when": {
+     "param": "EvacuationExit",
+     "eq": "yes"
+    }
+   },
+   "check": {
+    "kind": "param_range",
+    "param": "width",
+    "min": 0.8,
+    "max": null
+   },
+   "applies": {},
+   "example": true,
+   "verified": false,
+   "depth": 2,
+   "discipline": "fire"
+  },
+  {
+   "id": "ex.door.height",
+   "text": {
+    "en": "Evacuation exit (EvacuationExit = yes), opening height at least 1.9 m (general case; 1.8 m for rooms without permanent occupancy and single workplaces)",
+    "ru": "Эвакуационный выход (EvacuationExit = yes), высота проёма не менее 1,9 м (общий случай; 1,8 м для помещений без постоянного пребывания людей и одиночных рабочих мест)"
+   },
+   "source": {
+    "doc": "sp1.13130",
+    "clause": "p.4.2.18",
+    "note": "checked 2026-11-13 only on a mirror (tiflocentre.ru, SP 1.13130.2020 with amendments 1-3), value matches; official text hosts refused connections, so not marked verified"
+   },
+   "severity": "warning",
+   "scope": {
+    "cats": [
+     "door"
+    ],
+    "levels": null,
+    "type_name": null,
+    "when": {
+     "param": "EvacuationExit",
+     "eq": "yes"
+    }
+   },
+   "check": {
+    "kind": "param_range",
+    "param": "height",
+    "min": 1.9,
+    "max": null
+   },
+   "applies": {},
+   "example": true,
+   "verified": false,
+   "depth": 2,
+   "discipline": "fire"
+  },
+  {
+   "id": "ex.stair.riser",
+   "text": {
+    "en": "Stair riser from 0.05 m to 0.22 m",
+    "ru": "Высота ступени от 0,05 до 0,22 м"
+   },
+   "source": {
+    "doc": "sp1.13130",
+    "clause": "p.4.4.3",
+    "note": "checked 2026-11-13 only on a mirror (tiflocentre.ru, SP 1.13130.2020 with amendments 1-3), value matches; official text hosts refused connections, so not marked verified"
+   },
+   "severity": "error",
+   "scope": {
+    "cats": [
+     "stair"
+    ],
+    "levels": null,
+    "type_name": null
+   },
+   "check": {
+    "kind": "param_range",
+    "param": "riser",
+    "min": 0.05,
+    "max": 0.22
+   },
+   "applies": {},
+   "example": true,
+   "verified": false,
+   "depth": 2,
+   "discipline": "fire"
+  },
+  {
+   "id": "ex.stair.tread",
+   "text": {
+    "en": "Stair tread at least 0.25 m",
+    "ru": "Проступь не менее 0,25 м"
+   },
+   "source": {
+    "doc": "sp1.13130",
+    "clause": "p.4.4.3",
+    "note": "checked 2026-11-13 only on a mirror (tiflocentre.ru, SP 1.13130.2020 with amendments 1-3), value matches; official text hosts refused connections, so not marked verified"
+   },
+   "severity": "error",
+   "scope": {
+    "cats": [
+     "stair"
+    ],
+    "levels": null,
+    "type_name": null
+   },
+   "check": {
+    "kind": "param_range",
+    "param": "tread",
+    "min": 0.25,
+    "max": null
+   },
+   "applies": {},
+   "example": true,
+   "verified": false,
+   "depth": 2,
+   "discipline": "fire"
+  },
+  {
+   "id": "ex.stair.risers",
+   "text": {
+    "en": "A flight has from 3 to 16 risers (counts all risers of the stair: check turning stairs by flight)",
+    "ru": "В марше от 3 до 16 подъёмов (считаются все подъёмы лестницы: многомаршевые проверяйте по маршам)"
+   },
+   "source": {
+    "doc": "sp1.13130",
+    "clause": "p.4.4.4"
+   },
+   "severity": "error",
+   "scope": {
+    "cats": [
+     "stair"
+    ],
+    "levels": null,
+    "type_name": null
+   },
+   "check": {
+    "kind": "param_range",
+    "param": "risers",
+    "min": 3,
+    "max": 16
+   },
+   "applies": {},
+   "example": true,
+   "verified": true,
+   "depth": 2,
+   "discipline": "fire"
+  },
+  {
+   "id": "ex.stair.flight_width",
+   "text": {
+    "en": "Evacuation stair flight width by building: fire class, height and people on a floor above the first (sub-items b, a, g, v, d, e of the clause in priority order; exit-width part not checked)",
+    "ru": "Ширина марша эвакуационной лестницы по зданию: класс пожарной опасности, высота и число людей на этаже выше первого (подпункты б, а, г, в, д, е по приоритету; часть про ширину выхода не проверяется)"
+   },
+   "source": {
+    "doc": "sp1.13130",
+    "clause": "p.4.4.1"
+   },
+   "severity": "error",
+   "scope": {
+    "cats": [
+     "stair"
+    ],
+    "levels": null,
+    "type_name": null
+   },
+   "check": {
+    "kind": "cases",
+    "value": "width",
+    "require": [
+     "project.fire_class",
+     "project.height",
+     "project.people_upper"
+    ],
+    "cases": [
+     {
+      "if": [
+       {
+        "param": "project.people_upper",
+        "op": ">",
+        "value": 600
+       }
+      ],
+      "min": 1.6,
+      "clause": "p.4.4.1 б)"
+     },
+     {
+      "if": [
+       {
+        "param": "project.fire_class",
+        "in": [
+         "Ф1.1",
+         "Ф2.1",
+         "Ф2.2",
+         "Ф3.4",
+         "Ф4.1"
+        ]
+       }
+      ],
+      "min": 1.35,
+      "clause": "p.4.4.1 а)"
+     },
+     {
+      "if": [
+       {
+        "param": "project.people_upper",
+        "op": ">",
+        "value": 200
+       }
+      ],
+      "min": 1.35,
+      "clause": "p.4.4.1 а)"
+     },
+     {
+      "if": [
+       {
+        "param": "project.fire_class",
+        "in": [
+         "Ф2.1",
+         "Ф2.2",
+         "Ф2.3",
+         "Ф2.4",
+         "Ф3.1",
+         "Ф3.2",
+         "Ф3.3",
+         "Ф3.4",
+         "Ф3.5",
+         "Ф3.6",
+         "Ф4.1",
+         "Ф4.2",
+         "Ф4.3",
+         "Ф4.4"
+        ]
+       },
+       {
+        "param": "project.height",
+        "op": ">",
+        "value": 50
+       }
+      ],
+      "min": 1.35,
+      "clause": "p.4.4.1 а)"
+     },
+     {
+      "if": [
+       {
+        "param": "project.fire_class",
+        "eq": "Ф1.3"
+       },
+       {
+        "param": "project.height",
+        "op": "<",
+        "value": 75
+       }
+      ],
+      "min": 1.05,
+      "clause": "p.4.4.1 г)"
+     },
+     {
+      "if": [
+       {
+        "param": "project.fire_class",
+        "eq": "Ф1.3"
+       },
+       {
+        "param": "project.height",
+        "op": ">=",
+        "value": 75
+       },
+       {
+        "param": "project.height",
+        "op": "<=",
+        "value": 75
+       }
+      ],
+      "min": null,
+      "clause": "p.4.4.1 г)",
+      "undefined": true
+     },
+     {
+      "if": [
+       {
+        "param": "project.fire_class",
+        "in": [
+         "Ф1.4",
+         "Ф5.1",
+         "Ф5.2",
+         "Ф5.3",
+         "Ф5.4",
+         "Ф5.5",
+         "Ф5.6",
+         "Ф5.7"
+        ]
+       }
+      ],
+      "min": null,
+      "clause": "p.4.4.1 в)",
+      "undefined": true
+     },
+     {
+      "if": [
+       {
+        "param": "project.fire_class",
+        "not_in": [
+         "Ф1.3",
+         "Ф1.4",
+         "Ф5.1",
+         "Ф5.2",
+         "Ф5.3",
+         "Ф5.4",
+         "Ф5.5",
+         "Ф5.6",
+         "Ф5.7"
+        ]
+       }
+      ],
+      "min": 1.2,
+      "clause": "p.4.4.1 в)"
+     },
+     {
+      "if": [
+       {
+        "param": "project.people_upper",
+        "op": "<=",
+        "value": 5
+       }
+      ],
+      "min": 0.7,
+      "clause": "p.4.4.1 д)"
+     },
+     {
+      "if": [],
+      "min": 0.9,
+      "clause": "p.4.4.1 е)"
+     }
+    ]
+   },
+   "applies": {},
+   "example": true,
+   "verified": false,
+   "depth": 2,
+   "discipline": "fire"
+  },
+  {
+   "id": "ex.stair.headroom",
+   "text": {
+    "en": "Headroom on the stair at least 2.2 m (stair parameter Headroom, typed: the model does not compute it)",
+    "ru": "Высота пути эвакуации по лестнице не менее 2,2 м (параметр лестницы Headroom, вводится вручную: модель её не вычисляет)"
+   },
+   "source": {
+    "doc": "sp1.13130",
+    "clause": "p.4.4.1",
+    "note": "checked 2026-11-13 only on a mirror (tiflocentre.ru, SP 1.13130.2020 with amendments 1-3), value matches; official text hosts refused connections, so not marked verified"
+   },
+   "severity": "error",
+   "scope": {
+    "cats": [
+     "stair"
+    ],
+    "levels": null,
+    "type_name": null
+   },
+   "check": {
+    "kind": "cases",
+    "value": "Headroom",
+    "require": [
+     "Headroom"
+    ],
+    "cases": [
+     {
+      "if": [],
+      "min": 2.2
+     }
+    ]
+   },
+   "applies": {},
+   "example": true,
+   "verified": false,
+   "depth": 2,
+   "discipline": "fire"
+  },
+  {
+   "id": "ex.door.column",
+   "text": {
+    "en": "Door at least 0.3 m from a column",
+    "ru": "Дверь не ближе 0,3 м к колонне"
+   },
+   "source": {
+    "doc": "office-bim-example",
+    "clause": "sec. 4, clearances 4.1"
+   },
+   "severity": "info",
+   "scope": {
+    "cats": [
+     "door"
+    ],
+    "levels": null,
+    "type_name": null
+   },
+   "check": {
+    "kind": "clearance",
+    "other": [
+     "col"
+    ],
+    "min_m": 0.3
+   },
+   "applies": {},
+   "example": true,
+   "verified": false,
+   "depth": 1,
+   "discipline": "bim"
+  },
+  {
+   "id": "ex.window.width",
+   "text": {
+    "en": "Window width at least 0.4 m",
+    "ru": "Ширина окна не менее 0,4 м"
+   },
+   "source": {
+    "doc": "office-bim-example",
+    "clause": "sec. 4, openings 4.2"
+   },
+   "severity": "info",
+   "scope": {
+    "cats": [
+     "window"
+    ],
+    "levels": null,
+    "type_name": null
+   },
+   "check": {
+    "kind": "param_range",
+    "param": "width",
+    "min": 0.4,
+    "max": null
+   },
+   "applies": {},
+   "example": true,
+   "verified": false,
+   "depth": 1,
+   "discipline": "bim"
+  },
+  {
+   "id": "ex.stair.landing",
+   "text": {
+    "en": "Landing at least as wide as the flight",
+    "ru": "Площадка не уже марша"
+   },
+   "source": {
+    "doc": "sp1.13130",
+    "clause": "p.4.4.2",
+    "note": "checked 2026-11-13 only on a mirror (tiflocentre.ru, SP 1.13130.2020 with amendments 1-3), value matches; official text hosts refused connections, so not marked verified"
+   },
+   "severity": "error",
+   "scope": {
+    "cats": [
+     "stair"
+    ],
+    "levels": null,
+    "type_name": null
+   },
+   "check": {
+    "kind": "compare",
+    "a": "landing",
+    "op": ">=",
+    "b": "width",
+    "factor": 1.0
+   },
+   "applies": {},
+   "example": true,
+   "verified": false,
+   "depth": 2,
+   "discipline": "fire"
+  },
+  {
+   "id": "ex.stair.slope",
+   "text": {
+    "en": "Stair slope not steeper than 1:1 (riser not above tread)",
+    "ru": "Уклон лестницы не круче 1:1 (подступёнок не выше проступи)"
+   },
+   "source": {
+    "doc": "sp1.13130",
+    "clause": "p.4.4.3",
+    "note": "checked 2026-11-13 only on a mirror (tiflocentre.ru, SP 1.13130.2020 with amendments 1-3), value matches; official text hosts refused connections, so not marked verified"
+   },
+   "severity": "error",
+   "scope": {
+    "cats": [
+     "stair"
+    ],
+    "levels": null,
+    "type_name": null
+   },
+   "check": {
+    "kind": "compare",
+    "a": "riser",
+    "op": "<=",
+    "b": "tread",
+    "factor": 1.0
+   },
+   "applies": {},
+   "example": true,
+   "verified": false,
+   "depth": 2,
+   "discipline": "fire"
+  },
+  {
+   "id": "ex.corridor.width",
+   "text": {
+    "en": "Corridor width at least 1.0 m, at least 1.2 m for more than 50 people (Purpose = corridor, Occupants = people served)",
+    "ru": "Ширина коридора не менее 1,0 м, не менее 1,2 м при более чем 50 людях (Purpose = corridor, Occupants = число людей)"
+   },
+   "source": {
+    "doc": "sp1.13130",
+    "clause": "p.4.3.3"
+   },
+   "severity": "error",
+   "scope": {
+    "cats": [
+     "room"
+    ],
+    "levels": null,
+    "type_name": null,
+    "when": {
+     "param": "Purpose",
+     "eq": "corridor"
+    }
+   },
+   "check": {
+    "kind": "cases",
+    "value": "min_width",
+    "cases": [
+     {
+      "if": [
+       {
+        "param": "Occupants",
+        "op": ">",
+        "value": 50
+       }
+      ],
+      "min": 1.2
+     },
+     {
+      "if": [
+       {
+        "param": "Occupants",
+        "op": "<=",
+        "value": 50
+       }
+      ],
+      "min": 1.0
+     }
+    ]
+   },
+   "applies": {},
+   "example": true,
+   "verified": false,
+   "depth": 2,
+   "discipline": "fire"
+  },
+  {
+   "id": "ex.corridor.workplace",
+   "text": {
+    "en": "Passage to single workplaces at least 0.7 m, 1.2 m for more than 50 people (Purpose = workplace_passage)",
+    "ru": "Проход к одиночным рабочим местам не менее 0,7 м, не менее 1,2 м при более чем 50 людях (Purpose = workplace_passage)"
+   },
+   "source": {
+    "doc": "sp1.13130",
+    "clause": "p.4.3.3"
+   },
+   "severity": "error",
+   "scope": {
+    "cats": [
+     "room"
+    ],
+    "levels": null,
+    "type_name": null,
+    "when": {
+     "param": "Purpose",
+     "eq": "workplace_passage"
+    }
+   },
+   "check": {
+    "kind": "cases",
+    "value": "min_width",
+    "cases": [
+     {
+      "if": [
+       {
+        "param": "Occupants",
+        "op": ">",
+        "value": 50
+       }
+      ],
+      "min": 1.2
+     },
+     {
+      "if": [
+       {
+        "param": "Occupants",
+        "op": "<=",
+        "value": 50
+       }
+      ],
+      "min": 0.7
+     }
+    ]
+   },
+   "applies": {},
+   "example": true,
+   "verified": false,
+   "depth": 2,
+   "discipline": "fire"
+  },
+  {
+   "id": "ex.room.height_public",
+   "text": {
+    "en": "Public room height at least 3.0 m (Purpose = public)",
+    "ru": "Высота общественного помещения не менее 3,0 м (Purpose = public)"
+   },
+   "source": {
+    "doc": "sp118.13330",
+    "clause": "p.4.26"
+   },
+   "severity": "error",
+   "scope": {
+    "cats": [
+     "room"
+    ],
+    "levels": null,
+    "type_name": null,
+    "when": {
+     "param": "Purpose",
+     "eq": "public"
+    }
+   },
+   "check": {
+    "kind": "param_range",
+    "param": "height",
+    "min": 3.0,
+    "max": null
+   },
+   "applies": {},
+   "example": true,
+   "verified": false,
+   "depth": 2,
+   "discipline": "arch"
+  },
+  {
+   "id": "ex.room.height_service",
+   "text": {
+    "en": "Service room height at least 2.7 m (Purpose = service)",
+    "ru": "Высота служебного помещения не менее 2,7 м (Purpose = service)"
+   },
+   "source": {
+    "doc": "sp118.13330",
+    "clause": "p.4.27"
+   },
+   "severity": "error",
+   "scope": {
+    "cats": [
+     "room"
+    ],
+    "levels": null,
+    "type_name": null,
+    "when": {
+     "param": "Purpose",
+     "eq": "service"
+    }
+   },
+   "check": {
+    "kind": "param_range",
+    "param": "height",
+    "min": 2.7,
+    "max": null
+   },
+   "applies": {},
+   "example": true,
+   "verified": false,
+   "depth": 2,
+   "discipline": "arch"
+  },
+  {
+   "id": "ex.door.accessible_width",
+   "text": {
+    "en": "Door for people with reduced mobility at least 0.9 m wide (Accessible = yes); opening width, not clear width",
+    "ru": "Дверь для МГН шириной не менее 0,9 м (Accessible = yes); ширина проёма, не в свету"
+   },
+   "source": {
+    "doc": "sp59.13330",
+    "clause": "p.6.1.5"
+   },
+   "severity": "error",
+   "scope": {
+    "cats": [
+     "door"
+    ],
+    "levels": null,
+    "type_name": null,
+    "when": {
+     "param": "Accessible",
+     "eq": "yes"
+    }
+   },
+   "check": {
+    "kind": "param_range",
+    "param": "width",
+    "min": 0.9,
+    "max": null
+   },
+   "applies": {},
+   "example": true,
+   "verified": false,
+   "depth": 2,
+   "discipline": "access"
+  },
+  {
+   "id": "ex.room.purpose",
+   "text": {
+    "en": "Room has a Purpose so purpose-based rules can apply",
+    "ru": "У помещения задано назначение Purpose, чтобы применялись правила по назначению"
+   },
+   "source": {
+    "doc": "office-bim-example",
+    "clause": "sec. 3, schedule completeness 3.11"
+   },
+   "severity": "info",
+   "scope": {
+    "cats": [
+     "room"
+    ],
+    "levels": null,
+    "type_name": null
+   },
+   "check": {
+    "kind": "param_present",
+    "param": "Purpose"
+   },
+   "applies": {},
+   "example": true,
+   "verified": false,
+   "depth": 1,
+   "discipline": "bim"
+  }
+ ]
+}

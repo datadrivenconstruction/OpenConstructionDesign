@@ -1,0 +1,36 @@
+id = "G25_wind_turbine__ru"
+tier = "hard"
+group = "Любая геометрия"
+title = "Wind turbine"
+lang = "ru"
+base = "empty"
+
+[[turn]]
+say = "Ветротурбина: конусная трубчатая стальная башня 90 м, гондола, ступица и три лопасти по 50 м с закрученными аэродинамическими сечениями, круглый фундамент, дверь и внутренняя лестница."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "comp:blade|rotor"
+min = 3.0
+
+[[oracle.count]]
+spec = "col+solid+mass"
+min = 3.0
+
+[[oracle.count]]
+spec = "iso_footing+raft+solid"
+min = 1.0
+
+[[oracle.geom]]
+kind = "height"
+min = 85.0
+max = 145.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "立面 {t} は取得されませんでした（{why}）。変更はありません",
+ "host_shape.shape.elev_prompt_in": "立面、ft-in…",
+ "host_shape.shape.elev_in": "{v} in"
+}

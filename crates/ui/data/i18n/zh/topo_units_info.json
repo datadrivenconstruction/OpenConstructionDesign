@@ -1,0 +1,13 @@
+{
+ "topo.unit.mm": "mm",
+ "topo.unit.metre": "m",
+ "topo.unit.ft": "英尺",
+ "topo.opt.material": "材质",
+ "topo.row.active": "活动曲面",
+ "topo.btn.delete_pad": "删除平台",
+ "topo.info.loading": "正在生成曲面…",
+ "topo.info.warn_n": "{n} 个警告",
+ "topo.info.points_label": "点",
+ "topo.import.all_layers": "所有图层",
+ "topo.import.need_layer": "请至少勾选一个图层"
+}

@@ -1,0 +1,4 @@
+{
+ "xl.msg.x_formulas_in_column_x_on_sheet_x_replaced_by_values": "{} formula u stupcu '{}' na listu '{}' zamijenjeno je vrijednostima",
+ "xl.msg.formula_in_a_model_column_not_applied": "formula u stupcu modela: rezultat nije primijenjen, vrijednost modela ostaje; upišite vrijednost da je promijenite"
+}

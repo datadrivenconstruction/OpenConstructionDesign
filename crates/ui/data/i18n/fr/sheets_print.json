@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "Feuille précédente (Page précédente)",
+ "sheets.print.next": "Feuille suivante (Page suivante)",
+ "sheets.print.fit": "Ajuster la page (double-clic)",
+ "sheets.print.no_sheets": "Aucune feuille à prévisualiser",
+ "sheets.print.building": "Création de la page…",
+ "sheets.print.stop_build": "Arrêter",
+ "sheets.print.build_stopped": "Création de la page interrompue",
+ "sheets.print.retry": "Recréer",
+ "sheets.print.build_failed": "L'aperçu n'a pas pu être créé"
+}

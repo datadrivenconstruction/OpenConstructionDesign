@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "پانل",
+ "curtain_props.cw.panel_cell": "سلول {i}×{j} · دیوار پرده‌ای #{id}",
+ "curtain_props.cw.kind": "نوع",
+ "curtain_props.cw.kind.glazed": "شیشه",
+ "curtain_props.cw.kind.solid": "توپر",
+ "curtain_props.cw.kind.door": "در",
+ "curtain_props.cw.kind.window": "پنجره",
+ "curtain_props.cw.kind.empty": "خالی",
+ "curtain_props.cw.name": "نام",
+ "curtain_props.cw.swing_side": "به سمت دیگر باز می‌شود",
+ "curtain_props.cw.swing_hinge": "لولا در انتهای سلول",
+ "curtain_props.cw.size": "اندازه",
+ "curtain_props.cw.cell_area": "مساحت سلول",
+ "curtain_props.cw.panel_area": "مساحت پانل",
+ "curtain_props.cw.prev": "پانل قبلی",
+ "curtain_props.cw.next": "پانل بعدی",
+ "curtain_props.cw.wall": "دیوار را انتخاب کنید",
+ "curtain_props.cw.panel_hint": "Esc — انتخاب · Ctrl+Z — واگرد",
+ "curtain_props.cw.status.panel": "پانل {i}×{j} → {kind}",
+ "e3d.err.cw_height": "ارتفاع دیوار پرده‌ای باید بیشتر از 100 mm باشد"
+}

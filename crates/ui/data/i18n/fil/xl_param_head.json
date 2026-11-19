@@ -1,0 +1,7 @@
+{
+ "xl.msg.param_ambiguous": "maaaring maging alinman sa mga parameter na {} ang column na '{}'; i-type ang eksaktong pangalan ng parameter, hindi ito inilapat",
+ "xl.msg.param_tag_stale": "tumutukoy ang column na '{}' sa parameter na wala sa proyektong ito; hindi inilapat",
+ "xl.msg.dup_col_note": "inuulit ng column na '{}' sa {} ang column na '{}' sa {}; minsang inilalapat ang magkakatulad na value, ang row na magkaiba ay nananatili sa value ng model",
+ "xl.msg.dup_col_differs": "magkaiba ang column na '{}' at '{}' sa {} at {}; nananatili ang value ng model; panatilihin ang isang column",
+ "xl.msg.dup_col_id": "magkaiba ang column na '{}' at '{}' sa {} at {}, hindi matukoy ang row; walang inilapat; panatilihin ang isang column"
+}

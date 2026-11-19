@@ -1,0 +1,9 @@
+{
+ "xl.msg.base_value": "Prüfung beim Zurücklesen fehlgeschlagen, die alte Arbeitsmappe bleibt: {} ({}) erwartet '{}', gelesen '{}'",
+ "xl.msg.base_missing": "Prüfung beim Zurücklesen fehlgeschlagen, die alte Arbeitsmappe bleibt: Blatt {} hat keine Zeile für Id {}",
+ "xl.msg.base_extra": "Prüfung beim Zurücklesen fehlgeschlagen, die alte Arbeitsmappe bleibt: Zeile {} ist nicht im Modell",
+ "xl.msg.base_refused": "Prüfung beim Zurücklesen fehlgeschlagen, die alte Arbeitsmappe bleibt: {} ({}) wurde abgelehnt: {}",
+ "xl.msg.base_sheet": "Prüfung beim Zurücklesen fehlgeschlagen, die alte Arbeitsmappe bleibt: Blatt {} fehlt, ist leer oder nicht lesbar",
+ "xl.msg.base_newer": "Prüfung beim Zurücklesen fehlgeschlagen, die alte Arbeitsmappe bleibt: {} Zellen enthalten nicht den Modellwert",
+ "xl.msg.base_unreadable": "Prüfung beim Zurücklesen fehlgeschlagen, die alte Arbeitsmappe bleibt: Die neue Arbeitsmappe kann nicht gelesen werden ({})"
+}

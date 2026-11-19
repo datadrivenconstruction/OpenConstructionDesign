@@ -1,0 +1,9 @@
+{
+ "ai.plan.reject_ask": {
+  "one": "# wijziging afwijzen?",
+  "other": "# wijzigingen afwijzen?"
+ },
+ "ai.plan.reject_ask.hint": "Het concept en uw vinkjes vervallen. Het model blijft zoals het is.",
+ "ai.plan.reject_confirm": "Afwijzen",
+ "ai.plan.reject_keep": "Behouden"
+}

@@ -1,0 +1,15 @@
+{
+ "text_style.lbl.text_style": "Text style",
+ "text_style.lbl.align": "Alignment",
+ "text_style.lbl.head": "Arrowhead",
+ "text_style.lbl.line_style": "Line style",
+ "text_style.lbl.fill": "Fill",
+ "text_style.lbl.detail": "Detail",
+ "text_style.lbl.width": "Width",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°",
+ "text_style.bad_number": "Enter a number from {min} to {max}",
+ "text_style.tip.next_ring": "Close this contour and start another one in the same region",
+ "text_style.tip.edit_text": "Edit the text in place",
+ "text_style.tip.add_leader": "Add a leader line to this text"
+}

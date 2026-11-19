@@ -1,0 +1,8 @@
+{
+ "empty.start_recent.title": "هنوز پروژه اخیری نیست",
+ "empty.start_recent.hint": "پروژه‌هایی که باز می‌کنید اینجا نشان داده می‌شوند. با مدل نمونه شروع کنید.",
+ "empty.start_recent.action": "باز کردن نمونه",
+ "start.recent_open_file": "باز کردن فایل…",
+ "start.forgot": "از فهرست اخیر حذف شد: {name}",
+ "start.forgot_undo": "واگرد"
+}

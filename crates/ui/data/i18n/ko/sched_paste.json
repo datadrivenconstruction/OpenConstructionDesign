@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "셀 {n}개를 붙여넣었습니다",
+ "sched_edit.pasted_skipped": "셀 {n}개를 붙여넣었고, {k}개는 건너뜀: {why}",
+ "sched_edit.filled": "셀 {n}개를 채웠습니다",
+ "sched_edit.filled_skipped": "셀 {n}개를 채웠고, {k}개는 건너뜀: {why}",
+ "sched_edit.why_ro": "읽기 전용 {n}개",
+ "sched_edit.why_bad": "잘못된 값 {n}개",
+ "sched_edit.no_cell": "먼저 일람표에서 셀을 클릭하세요",
+ "sched_edit.nothing": "기록할 내용이 없습니다",
+ "sched_edit.not_refreshed": "기록됨, 뷰가 갱신되지 않음: {e}",
+ "sched_edit.failed": "변경되지 않음: {e}",
+ "sched_edit.no_changes": "변경 없음: 셀 {u}개가 이미 이 값을 가지고 있습니다",
+ "sched_edit.same_tail": ", {u}개는 이미 같음"
+}

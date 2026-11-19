@@ -1,0 +1,10 @@
+{
+ "view_gfx.vv.visible_tip": "Hiển thị trong góc nhìn này",
+ "view_gfx.vv.enabled_tip": "Áp dụng bộ lọc này trong góc nhìn này",
+ "view_gfx.vv.reset_tip": "Trở về mặc định của dự án",
+ "view_gfx.vv.col.actions": "Thao tác",
+ "view_gfx.vv.nothing_to_apply": "Không có thay đổi để áp dụng",
+ "view_gfx.flt.save_blocked": "Đặt tên bộ lọc và điền mọi tham số quy tắc",
+ "view_gfx.flt.confirm_delete": "Xóa cho mọi góc nhìn?",
+ "view_gfx.flt.param_pick": "Chọn…"
+}

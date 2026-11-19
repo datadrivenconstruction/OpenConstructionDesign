@@ -1,0 +1,4 @@
+{
+ "xl.msg.layer_cells_unplaced": "{} sel tipe '{}' lapisan {} pada lembar '{}' tidak dapat ditempatkan",
+ "xl.msg.layer_hidden_unplaced": "baris tersembunyi tipe '{}' lapisan {} pada lembar '{}' tidak dapat ditempatkan"
+}

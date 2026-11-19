@@ -1,0 +1,7 @@
+brief = "Two-door wardrobe; width and height as parameters."
+category = "casework"
+must = param Width
+must = param Depth
+must = solids >= 2
+must = ports 0
+must = flex Width 800 1250

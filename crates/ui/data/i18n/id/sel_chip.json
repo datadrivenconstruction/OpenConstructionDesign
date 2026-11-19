@@ -1,0 +1,5 @@
+{
+ "sel_chip.opt.sel_hint": "Klik elemen untuk memilihnya. Ctrl menambah, Shift menghapus.",
+ "sel_chip.opt.units": "Satuan",
+ "sel_chip.sel_chip": "{name}: {n}"
+}

@@ -1,0 +1,7 @@
+{
+ "gen.pin.room": "Muutsite genereeritud projekti ruumi. Kinnitage see, et projekti parandus jätaks selle kohale.",
+ "gen.pin.storey": "Muutsite genereeritud projekti korrust. Kinnitage see, et projekti parandus säilitaks selle seinad ja avad.",
+ "gen.pin.action": "Kinnita",
+ "gen.pin.done": "Kinnitatud: projekti parandus jätab selle alles ja paigutab ülejäänud selle ümber",
+ "gen.pin.failed": "Kinnitamine ei õnnestunud"
+}

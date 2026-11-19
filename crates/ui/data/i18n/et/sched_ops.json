@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "väärtus peab olema suurem kui null",
+ "sched_ops.not_number": "pole arv",
+ "sched_ops.no_host": "pole kandvat seina",
+ "sched_ops.wall_length": "selle seina pikkust ei saa nii määrata",
+ "sched_ops.no_wall": "sellist seina pole",
+ "sched_ops.no_opening": "sellist avaust pole",
+ "sched_ops.no_curtain": "sellist kardinseina pole",
+ "sched_ops.no_panel": "sellist paneeli pole",
+ "sched_ops.no_slab": "sellist plaati pole",
+ "sched_ops.no_room": "sellist ruumi pole",
+ "sched_ops.slope_range": "kalle on vahemikust väljas",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

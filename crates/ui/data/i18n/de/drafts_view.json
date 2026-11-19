@@ -1,0 +1,9 @@
+{
+ "drafts.draft.view": "Ansichtsgrafik von „{name}“",
+ "drafts.draft.filter": "Ansichtsfilter „{name}“",
+ "drafts.draft.filter_new": "Neuer Ansichtsfilter",
+ "drafts.draft.object_styles": "Objektstile",
+ "drafts.draft.material": "Material „{name}“",
+ "drafts.draft.type": "Typ „{name}“",
+ "drafts.draft.params": "Parameter der Familie „{name}“"
+}

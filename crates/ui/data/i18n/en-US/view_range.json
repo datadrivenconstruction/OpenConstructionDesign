@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "View range",
+ "view_range.range": "View range",
+ "view_range.cut": "Cut plane",
+ "view_range.bottom": "Bottom",
+ "view_range.depth": "View depth",
+ "view_range.cut.hint": "Height of the cut plane above the level. Elements crossing it are drawn cut.",
+ "view_range.bottom.hint": "Bottom of the range, relative to the level. Zero or negative values are allowed.",
+ "view_range.depth.hint": "How far the view looks below the bottom. Zero or more.",
+ "view_range.err.number": "Enter a length in each field",
+ "view_range.err.not_finite": "Enter a length in each field",
+ "view_range.err.cut_not_above_bottom": "The cut plane must be above the bottom",
+ "view_range.err.negative_depth": "View depth cannot be negative",
+ "view_range.err.top_below_cut": "The top of the range must not be below the cut plane"
+}

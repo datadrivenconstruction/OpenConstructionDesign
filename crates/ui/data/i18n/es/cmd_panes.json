@@ -1,0 +1,6 @@
+{
+ "cmd.ui.pane.next": "Panel siguiente",
+ "cmd.ui.pane.next.desc": "Mueve el foco del teclado al siguiente panel visible (navegador, lienzo, propiedades o chat).",
+ "cmd.ui.pane.prev": "Panel anterior",
+ "cmd.ui.pane.prev.desc": "Mueve el foco del teclado al panel visible anterior."
+}

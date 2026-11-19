@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "پتے میں کلید",
+ "ai_safety.auth.query_name": "پتے کا پیرامیٹر",
+ "ai_safety.need_query_name": "وہ پتے کا پیرامیٹر نام دیں جو کلید لے جاتا ہے",
+ "ai_safety.apply_unlogged": "لاگو ہو گیا، لیکن تبدیلیوں کا لاگ نہیں لکھا گیا",
+ "ai_safety.audit_unlogged": "AI معاون کا لاگ نہیں لکھا جا سکا",
+ "ai_safety.chat_not_saved": "چیٹ پروجیکٹ میں محفوظ نہیں ہو سکی۔ دوبارہ کوشش ہو رہی ہے۔",
+ "ai_safety.clip_clears": "کلپ بورڈ 30 سیکنڈ میں صاف ہو جائے گا",
+ "ai_safety.copied_clears": "نقل ہو گیا۔ کلپ بورڈ 30 سیکنڈ میں صاف ہو جائے گا",
+ "ai_safety.key_session_only": "کلید ایپ بند ہونے تک رکھی جائے گی",
+ "ai.settings.no_data_dir": "اس سسٹم میں ایپ کی ترتیبات کے لیے فولڈر نہیں"
+}

@@ -1,0 +1,14 @@
+{
+ "cmd.arch.wall.tile": "Ściana",
+ "cmd.arch.door.tile": "Drzwi",
+ "cmd.arch.window.tile": "Okno",
+ "cmd.arch.floor.tile": "Strop",
+ "cmd.mod.move.tile": "Przesuń",
+ "cmd.mod.copy.tile": "Kopiuj",
+ "cmd.mod.rotate.tile": "Obróć",
+ "cmd.mod.mirror.tile": "Odbij",
+ "cmd.mod.trim.tile": "Przytnij",
+ "cmd.mod.delete.tile": "Usuń",
+ "cmd.ann.dim.tile": "Wymiar",
+ "cmd.ann.text.tile": "Tekst"
+}

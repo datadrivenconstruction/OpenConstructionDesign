@@ -1,0 +1,14 @@
+[
+ {
+  "id": "file.publish_pdf",
+  "icon": "pdf-out",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "data",
+  "surfaces": [],
+  "stage": "M5",
+  "alias": "data.export_pdf",
+  "group": "exchange",
+  "dialog": true
+ }
+]

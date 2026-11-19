@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "Kanał",
+ "mep3d.pipe": "Rura",
+ "mep3d.tray": "Korytko kablowe",
+ "mep3d.conduit": "Przewód",
+ "mep3d.system": "System",
+ "mep3d.length": "Długość",
+ "mep3d.diameter": "Średnica",
+ "mep3d.width": "Szerokość",
+ "mep3d.height": "Wysokość",
+ "mep3d.insulation": "Izolacja",
+ "mep3d.tip": "Enter — zastosuj; kształtki są przeliczane",
+ "mep3d.size_positive": "rozmiar musi być większy od zera",
+ "mep3d.not_changed": "nie zmieniono: {e}",
+ "mep3d.copied": "trasa skopiowana",
+ "mep3d.changed": "trasa zmieniona",
+ "mep3d.deleted": "usunięto elementów: {n}",
+ "mep3d.not_deleted": "nie usunięto: {e}",
+ "mep3d.no_wall_type": "brak typu ściany",
+ "mep3d.demo.supply": "Nawiew S1",
+ "mep3d.demo.heating": "Ogrzewanie",
+ "mep3d.demo.power": "Zasilanie"
+}

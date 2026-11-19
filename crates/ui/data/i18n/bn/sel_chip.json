@@ -1,0 +1,5 @@
+{
+ "sel_chip.opt.sel_hint": "উপাদান বাছতে ক্লিক করুন। Ctrl যোগ করে, Shift সরায়।",
+ "sel_chip.opt.units": "এককসমূহ",
+ "sel_chip.sel_chip": "{name}: {n}"
+}

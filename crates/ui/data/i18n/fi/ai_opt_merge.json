@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "Yhdistä vaihtoehto: {name}",
+ "ai_opt_merge.whole": "Yhdistä koko vaihtoehto",
+ "ai_opt_merge.parts": "Yhdistä valitut osat",
+ "ai_opt_merge.note": "Miksi tämä vaihtoehto",
+ "ai_opt_merge.rebased": "Malli muuttui tämän vaihtoehdon tekemisen jälkeen: yhdistäminen laskettiin uudelleen nykyistä mallia vastaan. Tarkista muutokset ennen käyttöä.",
+ "ai_opt_merge.left.not_picked": "Ei valittu vaihtoehdosta",
+ "ai_opt_merge.left.unticked": "Poistettu valinnasta vaihtoehdossa",
+ "ai_opt_merge.left.conflict": "Ei voida lisätä nykyiseen malliin: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "Tätä vaihtoehtoa ei voi yhdistää. Hylätty vaihtoehto täytyy ensin palauttaa.",
+ "ai_opt_merge.refused.stale": "Malli muuttui tämän vaihtoehdon tekemisen jälkeen. Laske yhdistäminen nykyistä mallia vastaan uudelleen.",
+ "ai_opt_merge.refused.nothing_picked": "Mitään ei ole valittu yhdistettäväksi.",
+ "ai_opt_merge.refused.unknown_item": "Kohta {item} ei kuulu tähän vaihtoehtoon.",
+ "ai_opt_merge.refused.not_in_option": "Valittu elementti ei kuulu tähän vaihtoehtoon.",
+ "ai_opt_merge.refused.needs_left_out": "Kohta {item} tarvitsee kohdan {needs}. Valitse myös se tai salli riippuvuuksien lisääminen.",
+ "ai_opt_merge.refused.set_gone": "Kohta {item} viittaa valintaan, jota ei enää ole. Luo vaihtoehto uudelleen.",
+ "ai_opt_merge.refused.busy": "Toinen suunnitelma on auki. Käytä tai hylkää se ensin.",
+ "ai_opt_merge.refused.failed": "Yhdistämistä ei voitu valmistella: {reason}",
+ "ai_opt_merge.revive": "Palauta vaihtoehto",
+ "ai_opt_merge.merged": "Yhdistetty"
+}

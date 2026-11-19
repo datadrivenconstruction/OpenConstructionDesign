@@ -1,0 +1,23 @@
+{
+ "ai.audit.tokens": "{n} טוקנים",
+ "ai.audit.filter.all": "הכול",
+ "ai.audit.filter.ai": "AI",
+ "ai.audit.filter.me": "אני",
+ "ai.audit.search": "חפש שינויים",
+ "ai.audit.search.clear": "נקה חיפוש",
+ "ai.audit.show_all": "הצג הכול",
+ "ai.audit.empty.hint": "שינויים שנוסחו או הוחלו על ידי מודל או סוכן מופיעים כאן, כל אחד עם דרך חזרה.",
+ "ai.audit.no_match": "אין שינויים שתואמים לסינון.",
+ "ai.audit.show.tip": "בחר והצג את האלמנטים שהשינוי נגע בהם",
+ "ai.audit.revert.ask": "לבטל את “{what}”? {change}.",
+ "ai.audit.revert.elements": {
+  "one": "# שינוי באלמנט",
+  "two": "# שינויים באלמנטים",
+  "other": "# שינויים באלמנטים"
+ },
+ "ai.audit.revert.keeps": "שינויים חדשים יותר נשארים. ההחזרה היא שלב ביטול אחד.",
+ "ai.audit.cancel": "בטל",
+ "ai.audit.toast.reverted": "הוחזר לאחור: {what}",
+ "ai.audit.toast.undone": "בוטל: {what}",
+ "ai.audit.redo": "בצע שוב"
+}

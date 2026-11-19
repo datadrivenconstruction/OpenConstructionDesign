@@ -1,0 +1,16 @@
+{
+ "ai.items.all": {
+  "one": "Todo # elemento",
+  "other": "Todos los # elementos"
+ },
+ "ai.items.all.tip": "Marcar o desmarcar cada elemento del plan",
+ "ai.items.checked": "{n} de {m} marcados",
+ "ai.items.check.tip": "Incluir «{title}» en Aplicar",
+ "ai.items.expand": "Mostrar elementos",
+ "ai.items.collapse": "Ocultar elementos",
+ "ai.items.apply": {
+  "one": "Aplicar # elemento",
+  "other": "Aplicar # elementos"
+ },
+ "ai.items.apply_none": "Aplicar"
+}

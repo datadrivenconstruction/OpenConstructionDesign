@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "অপশন একীভূত করুন: {name}",
+ "ai_opt_merge.whole": "পুরো অপশন একীভূত করুন",
+ "ai_opt_merge.parts": "নির্বাচিত অংশ একীভূত করুন",
+ "ai_opt_merge.note": "এই অপশন কেন",
+ "ai_opt_merge.rebased": "এই অপশন তৈরির পর মডেল বদলেছে: একীভূতকরণ বর্তমান মডেলের সঙ্গে পুনর্গণনা হয়েছে। প্রয়োগের আগে পরিবর্তনগুলো যাচাই করুন।",
+ "ai_opt_merge.left.not_picked": "অপশন থেকে বাছা হয়নি",
+ "ai_opt_merge.left.unticked": "অপশনে টিক খোলা",
+ "ai_opt_merge.left.conflict": "বর্তমান মডেলে যোগ করা যাবে না: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "এই অপশন একীভূত করা যাবে না। বাতিল অপশন আগে ফেরত আনতে হবে।",
+ "ai_opt_merge.refused.stale": "এই অপশন তৈরির পর মডেল বদলেছে। বর্তমান মডেলের সঙ্গে একীভূতকরণ পুনর্গণনা করুন।",
+ "ai_opt_merge.refused.nothing_picked": "একীভূত করার জন্য কিছু নির্বাচিত নেই।",
+ "ai_opt_merge.refused.unknown_item": "আইটেম {item} এই অপশনের অংশ নয়।",
+ "ai_opt_merge.refused.not_in_option": "নির্বাচিত উপাদানটি এই অপশনের অংশ নয়।",
+ "ai_opt_merge.refused.needs_left_out": "আইটেম {item}-এর জন্য আইটেম {needs} লাগে। সেটিও নির্বাচন করুন, অথবা নির্ভরতা যোগ করার অনুমতি দিন।",
+ "ai_opt_merge.refused.set_gone": "আইটেম {item} এমন একটি নির্বাচনের দিকে নির্দেশ করে যা আর নেই। অপশনটি আবার তৈরি করুন।",
+ "ai_opt_merge.refused.busy": "আরেকটি প্ল্যান খোলা। আগে সেটি প্রয়োগ বা বাতিল করুন।",
+ "ai_opt_merge.refused.failed": "একীভূতকরণ প্রস্তুত করা যায়নি: {reason}",
+ "ai_opt_merge.revive": "অপশন ফেরত আনুন",
+ "ai_opt_merge.merged": "একীভূত"
+}

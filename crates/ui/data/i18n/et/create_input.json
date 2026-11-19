@@ -1,0 +1,14 @@
+{
+ "cmd.mod.divide": "Jaga",
+ "cmd.mod.divide.short": "Jaga",
+ "cmd.mod.divide.desc": "Jagab seina ühe sammuga võrdseteks osadeks. Sisesta osade arv ja klõpsa seinal.",
+ "whereis.mod.divide": "jaga, võrdsed osad, lõika tükkideks, jaga sein",
+ "hint.split.parts": "Jaga: klõpsa seinale · arv — osad (2–100) · Esc — tühista",
+ "create_input.divide.bad_parts": "«{text}» ei ole osade arv: sisesta täisarv vahemikus 2 kuni {max}",
+ "create_input.ws.err.empty": "Sisesta paigutuse nimi",
+ "create_input.ws.err.long": "Nimi on liiga pikk: kuni 40 märki",
+ "create_input.ws.err.preset": "See nimi kuulub sisseehitatud paigutusele",
+ "create_input.ws.err.full": "Salvestatud paigutusi on kuni 24: eemalda enne üks",
+ "create_input.seldim.locked": "Kaugus {v} lukus",
+ "create_input.seldim.positive": "Kaugus peab olema suurem kui null"
+}

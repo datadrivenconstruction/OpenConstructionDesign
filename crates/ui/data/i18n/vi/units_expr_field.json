@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "Dữ liệu nhập trống.",
+ "units.err.not_number": "Không phải số tại vị trí {pos}.",
+ "units.err.unknown_unit": "Đơn vị không xác định: {unit}.",
+ "units.err.non_positive": "Chiều dài phải lớn hơn 0.",
+ "units.err.too_large": "Chiều dài không được vượt quá {max} m.",
+ "units.err.bad_angle": "Góc phải là số độ.",
+ "units.err.unknown_name": "Tên không xác định: {name}. Giữ nguyên giá trị.",
+ "units.err.cycle": "Vòng lặp công thức tại {name}. Giữ nguyên giá trị.",
+ "units.err.bad_expr": "Không đọc được biểu thức tại vị trí {pos}. Giữ nguyên giá trị.",
+ "units.err.div_zero": "Chia cho 0 tại vị trí {pos}. Giữ nguyên giá trị.",
+ "units.err.invalid": "Số không hợp lệ.",
+ "units.err.kept": "Chưa thay đổi: {reason}"
+}

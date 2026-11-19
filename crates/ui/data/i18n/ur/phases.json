@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D",
+ "phases.current_mark": "موجودہ",
+ "phases.make_current": "موجودہ بنائیں",
+ "phases.col_phase": "فیز",
+ "phases.col_filter": "فلٹر",
+ "phases.presets": "پلان پری سیٹس",
+ "phases.del_title": "فیز حذف کریں",
+ "phases.del_text": "فیز “{name}” حذف کریں؟ اس کے عناصر نیچے چنے گئے فیز میں منتقل ہوں گے۔",
+ "phases.del_into": "عناصر منتقل کریں",
+ "phases.del_ok": "حذف کریں",
+ "phases.col_kind": "عنصر کی قسم",
+ "phases.col_count": "تعداد",
+ "phases.col_volume": "حجم"
+}

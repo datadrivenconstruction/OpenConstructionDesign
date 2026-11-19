@@ -1,0 +1,12 @@
+{
+ "opt.stair.straight": "Recht",
+ "opt.stair.l": "L",
+ "opt.stair.u": "U",
+ "opt.stair.gap": "Gat",
+ "hint.stair.corner": "L-trap: kies het keerpunt · Backspace — laatste punt verwijderen · Esc — laatste punt verwijderen; zonder punten — annuleren",
+ "hint.stair.side": "Trap: kies de zijde van de tweede loop · Backspace — laatste punt verwijderen · Esc — laatste punt verwijderen; zonder punten — annuleren",
+ "tool.stair.flights": "{n} optreden (totaal {m})",
+ "tool.stair.err_split": "Elke loop heeft minstens 2 optreden nodig: eerste loop heeft {n} van {m}",
+ "tool.stair.err_comfort": "Optrede en aantrede overschrijden de comfortregel (2R + T)",
+ "tool.stair.err_input": "Tafelmaat buiten bereik: controleer breedte, hoogte en bordes"
+}

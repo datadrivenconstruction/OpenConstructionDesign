@@ -1,0 +1,14 @@
+{
+ "ai_keys.header_is_key": "Klíče patří do pole Klíč — hlavičky se ukládají jako čistý text",
+ "ai_keys.move": "Přesunout do Klíče",
+ "ai_keys.remove_line": "Odebrat z hlaviček",
+ "ai_keys.save_blocked": "Pro uložení přesuňte klíč z hlaviček",
+ "ai_keys.show": "Zobrazit",
+ "ai_keys.hide": "Skrýt",
+ "ai_keys.copy": "Kopírovat",
+ "ai_keys.tokens": "tokeny",
+ "ai_keys.presets": "Předvolby",
+ "ai_keys.preset_k": "{n} tis.",
+ "ai_keys.preset_m": "{n} mil.",
+ "ai_keys.images_on": "Podporováno"
+}

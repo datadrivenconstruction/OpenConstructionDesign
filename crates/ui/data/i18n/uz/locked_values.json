@@ -1,0 +1,8 @@
+{
+ "cmd.props.param_lock": "Parametr qiymatini qulflash yoki ochish",
+ "locked_values.kept": "{n} ta qulflangan qiymat saqlandi",
+ "locked_values.locked": "“{name}” qulflandi: XLSX jadval import, ommaviy tahrir va AI uni saqlaydi",
+ "locked_values.unlocked": "“{name}” qulfi ochildi",
+ "locked_values.locked_tip": "Qulflangan: XLSX jadval import, ommaviy tahrir va AI bu qiymatni saqlaydi. Ochish uchun bosing  ·  Ctrl+L",
+ "locked_values.no_row": "Xususiyatlardagi parametr qatoriga ko'rsating, so'ng Ctrl+L bosing"
+}

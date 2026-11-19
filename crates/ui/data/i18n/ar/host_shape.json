@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "فتحة بروز السطح",
+ "cmd.arch.roof_opening": "فتحة السطح",
+ "cmd.arch.roof_extrusion": "سطح بالبثق",
+ "cmd.arch.ceiling_opening": "فتحة السقف",
+ "cmd.str.slab_opening": "فتحة البلاطة",
+ "cmd.ctx.wall.detach": "فصل القمة",
+ "cmd.ctx.floor.sketch": "تحرير الحدود",
+ "cmd.ctx.floor.shape": "تحرير الشكل",
+ "host_shape.shape.elev_prompt": "المنسوب، مم…",
+ "host_shape.shape.elev_mm": "{v} مم",
+ "host_shape.sketch.no_host": "لا يوجد عنصر حامل تحت الحدود على هذا الطابق",
+ "host_shape.issue.roof": "السطح {id}: {e}",
+ "host_shape.issue.ceiling": "السقف {id}: {e}",
+ "host_shape.status.select_slab": "حدّد بلاطة",
+ "host_shape.status.select_walls": "حدّد الجدران",
+ "host_shape.status.no_roof_or_level": "لا يوجد سطح أو طابق فوقه",
+ "host_shape.status.top_attached": "تم وصل قمم الجدران",
+ "host_shape.status.top_detached": "تم فصل قمم الجدران",
+ "host_shape.status.straight_wall": "يلزم جدار مستقيم",
+ "host_shape.status.roof_extruded": "تم إنشاء السطح بالبثق",
+ "warn.kind.cut": "القطع أو الوصلة غير مُنشأ"
+}

@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "Kuilut",
+ "quick.cat.shaft": "Kuilu",
+ "shaft_tool.browser.shaft": "Kuilu #{id}",
+ "shaft_tool.shaft.top": "Ylin taso",
+ "shaft_tool.shaft.cuts": "Leikatut elementit",
+ "shaft_tool.shaft.cut_area": "Leikkauksen pinta-ala",
+ "shaft_tool.shaft.cut_volume": "Leikkauksen tilavuus",
+ "elem.no.rooms": "Seuraa siinä olevia huoneita"
+}

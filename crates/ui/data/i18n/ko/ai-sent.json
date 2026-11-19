@@ -1,0 +1,8 @@
+{
+ "ai_sent.summary": "이 요청의 프로젝트 데이터: 메시지 {messages}개, 도구 결과 {tools}개, 이미지 {images}개",
+ "ai_sent.copy": "복사",
+ "ai_sent.filter": "전송된 요청에서 찾기",
+ "ai_sent.no_match": "일치하는 요청이 없습니다.",
+ "ai_sent.instructions": "지시 및 도구",
+ "ai_sent.local_note": "이 세션 동안만 이 컴퓨터에 보관됩니다. 키와 비밀번호는 절대 표시되지 않습니다."
+}

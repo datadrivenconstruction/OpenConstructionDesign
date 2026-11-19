@@ -1,0 +1,9 @@
+{
+ "ai.settings.num_bad": "Це не число. Введіть, наприклад, 0.5.",
+ "ai.settings.num_comma": "Для десяткового знака використовуйте крапку, наприклад 0.5.",
+ "ai.settings.num_negative": "Число не може бути від'ємним.",
+ "ai.settings.unit_money": "валюта",
+ "ai.settings.unit_tokens": "токенів",
+ "ai.settings.unit_price": "за 1 млн токенів",
+ "ai.settings.limits_hint": "0 означає без ліміту. Відхилене значення залишає попередній ліміт."
+}

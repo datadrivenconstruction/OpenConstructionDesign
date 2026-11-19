@@ -1,0 +1,6 @@
+{
+ "quick.keys.rec_hint": "Esc でキャンセル · Backspace でクリア",
+ "quick.keys.row_lost": "{key} は今「{cmd}」に割り当てられています",
+ "quick.keys.row_took": "{key} を「{cmd}」から取り上げました",
+ "quick.keys.reset_tip": "既定値に戻す"
+}

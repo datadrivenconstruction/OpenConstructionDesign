@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D",
+ "phases.current_mark": "huidige",
+ "phases.make_current": "Huidige maken",
+ "phases.col_phase": "Fase",
+ "phases.col_filter": "Selectie",
+ "phases.presets": "Plattegrondvoorinstellingen",
+ "phases.del_title": "Fase verwijderen",
+ "phases.del_text": "Fase “{name}” verwijderen? De elementen gaan naar de fase die hieronder is gekozen.",
+ "phases.del_into": "Elementen verplaatsen naar",
+ "phases.del_ok": "Verwijderen",
+ "phases.col_kind": "Elementtype",
+ "phases.col_count": "Aantal",
+ "phases.col_volume": "Inhoud"
+}

@@ -1,0 +1,14 @@
+{
+ "save_guard.save.empty_over_full": "Mitään ei tallennettu: malli on tyhjä, ja tiedosto sisältää jo sisältöä. Tiedostoa ei muutettu. Käytä Tallenna nimellä kirjoittaaksesi toiselle nimelle.",
+ "save_guard.refuse.body": "Mitään ei tallennettu: malli on tyhjä, ja {name} sisältää jo sisältöä. Tiedostoa ei muutettu.",
+ "save_guard.refuse.foreign": "Tämä ei ole DDC Editor -tiedosto, joten sitä ei voi korvata. Käytä Tallenna nimellä kirjoittaaksesi toiselle nimelle.",
+ "save_guard.refuse.ask": "Korvataanko {name}? Se sisältää {what}. Se siirretään ensin viereiseen kansioon _archive, minkä jälkeen kirjoitetaan tyhjä malli.",
+ "save_guard.refuse.holds_db": "{n} elementtiä ja sisältörivejä",
+ "save_guard.refuse.holds_ifc": "IFC tuotteilla",
+ "save_guard.refuse.replace": "Korvaa silti…",
+ "save_guard.refuse.replace_yes": "Siirrä ja korvaa",
+ "save_guard.refuse.save_as": "Tallenna nimellä…",
+ "save_guard.refuse.cancel": "Peruuta",
+ "save_guard.replace.moved": "Edellinen tiedosto siirrettiin kohteeseen {path}",
+ "save_guard.replace.move_failed": "{name} ei voitu siirtää sivuun: {error}. Mitään ei kirjoitettu."
+}

@@ -1,0 +1,11 @@
+{
+ "fe.csv.apply": "درآمد لاگو کریں",
+ "fe.csv.cancel": "پیش نظارہ رد کریں",
+ "fe.csv.nothing": "تبدیل کرنے کو کچھ نہیں: کیٹلاگ موجودہ قسموں سے میل کھاتا ہے",
+ "fe.csv.preview": "درآمد کا پیش نظارہ: {added} نئی، {changed} تبدیل، {same} بغیر تبدیلی قسمیں؛ {values} قدریں بدلیں گی",
+ "fe.csv.preview_hint": "خالی خانے اور غائب کالم موجودہ قدریں رکھتے ہیں۔ لاگو کرنے تک کچھ نہیں بدلتا۔",
+ "fe.csv.skipped": "لاگو نہیں، قدر رکھی گئی: {msg}",
+ "fe.csv.type_added": "نئی قسم {name}",
+ "fe.csv.type_changed": "قسم {name}",
+ "fe.csv.value": "  {param}: {old} → {new}"
+}

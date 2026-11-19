@@ -1,0 +1,21 @@
+{
+ "ai.receipt.title": {
+  "one": "# módosítás alkalmazva",
+  "other": "# módosítás alkalmazva"
+ },
+ "ai.receipt.more": "+{n} további",
+ "ai.receipt.list": "Elemek",
+ "ai.receipt.show": "Megjelenítés",
+ "ai.receipt.show.tip": "Kijelöli és beállítja a nézetet a módosított elemekre",
+ "ai.receipt.undo": "Visszavonás",
+ "ai.receipt.undo.tip": "Pontosan ezt az alkalmazást vonja vissza",
+ "ai.receipt.undone": "Visszavonva",
+ "ai.receipt.later": "Később módosítások történtek",
+ "ai.receipt.toast_undone": "Az alkalmazott terv visszavonva",
+ "ai.receipt.draft_family": "Vázlatcsalád: {name}",
+ "ai.receipt.promote": "Működőképessé tétel",
+ "ai.receipt.promote.tip": "A vázlatcsaládot működő családdá alakítja (egy visszavonási lépés)",
+ "ai.receipt.promoted": "A család mostantól működőképes",
+ "ai.receipt.promote_failed": "A családot nem lehetett működőképessé tenni",
+ "cmd.ai.receipt_undo": "Utolsó MI-terv visszavonása"
+}

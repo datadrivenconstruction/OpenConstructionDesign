@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "Goluri verticale",
+ "quick.cat.shaft": "Gol vertical",
+ "shaft_tool.browser.shaft": "Gol vertical #{id}",
+ "shaft_tool.shaft.top": "Nivel superior",
+ "shaft_tool.shaft.cuts": "Elemente tăiate",
+ "shaft_tool.shaft.cut_area": "Suprafața tăiată",
+ "shaft_tool.shaft.cut_volume": "Volumul tăiat",
+ "elem.no.rooms": "Urmează încăperile pe care le conține"
+}

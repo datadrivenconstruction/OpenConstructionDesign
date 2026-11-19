@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "Saisissez d'abord un nom de gabarit",
+ "view_template.name_taken": "Un gabarit portant ce nom existe déjà",
+ "view_template.pick_blocked": "Cochez d'abord au moins une vue",
+ "view_template.views.one": "{n} vue",
+ "view_template.views.few": "{n} vues",
+ "view_template.views.many": "{n} vues",
+ "view_template.delete.title": "Supprimer ce gabarit ?",
+ "view_template.delete.body": "Le gabarit « {name} » sera supprimé. Utilisé par {used}.",
+ "view_template.delete.unused": "Le gabarit « {name} » sera supprimé. Aucune vue ne l'utilise.",
+ "view_template.delete.keeps": "Ces vues conservent leurs graphiques actuels et perdent le lien.",
+ "view_template.delete.undo": "Vous pouvez annuler cette action d'un seul Annuler.",
+ "view_template.delete.confirm": "Supprimer le gabarit"
+}

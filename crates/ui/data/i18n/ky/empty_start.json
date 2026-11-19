@@ -1,0 +1,8 @@
+{
+ "empty.start_recent.title": "Акыркы долбоорлор али жок",
+ "empty.start_recent.hint": "Ачкан долбоорлоруңуз ушул жерде көрсөтүлөт. Үлгү модель менен баштаңыз.",
+ "empty.start_recent.action": "Үлгүнү ачуу",
+ "start.recent_open_file": "Файлды ачуу…",
+ "start.forgot": "Акыркылардан алынып салынды: {name}",
+ "start.forgot_undo": "Кайтаруу"
+}

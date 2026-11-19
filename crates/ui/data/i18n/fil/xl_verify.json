@@ -1,0 +1,9 @@
+{
+ "xl.msg.base_value": "nabigo ang read-back check, itinatago ang lumang workbook: {} ({}) inaasahan '{}', nabasa '{}'",
+ "xl.msg.base_missing": "nabigo ang read-back check, itinatago ang lumang workbook: walang row para sa id {} ang sheet {}",
+ "xl.msg.base_extra": "nabigo ang read-back check, itinatago ang lumang workbook: wala sa model ang row {}",
+ "xl.msg.base_refused": "nabigo ang read-back check, itinatago ang lumang workbook: tinanggihan ang {} ({}): {}",
+ "xl.msg.base_sheet": "nabigo ang read-back check, itinatago ang lumang workbook: nawawala, walang laman, o hindi mabasa ang sheet {}",
+ "xl.msg.base_newer": "nabigo ang read-back check, itinatago ang lumang workbook: hindi taglay ng {} cell ang value ng model",
+ "xl.msg.base_unreadable": "nabigo ang read-back check, itinatago ang lumang workbook: hindi mabasa ang bagong workbook ({})"
+}

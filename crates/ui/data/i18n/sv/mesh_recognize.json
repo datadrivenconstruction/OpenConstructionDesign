@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "Känner igen {done} av {total}",
+ "mesh_recognize.all": "Alla {n}",
+ "mesh_recognize.only_confident": "Endast säkra",
+ "mesh_recognize.confident_tip": "Markerar rader vars typ stämmer med kategorin och vars säkerhet är minst {pct} %",
+ "mesh_recognize.row_hint": "Klicka på en rad för att markera den. Piltangenterna flyttar, Enter markerar.",
+ "mesh_recognize.kind_for": "Typ för {name}",
+ "mesh_recognize.source": "Källnät",
+ "mesh_recognize.keep": "Behåll nät",
+ "mesh_recognize.replace": "Ersätt nät",
+ "mesh_recognize.convert_keep": "Konvertera {n}",
+ "mesh_recognize.convert_remove": "Konvertera {n} och ta bort nät",
+ "mesh_recognize.creates": "Skapar {n}: {kinds}",
+ "mesh_recognize.creates_none": "Inget markerat ännu",
+ "mesh_recognize.stay": "{n} källnät finns kvar i modellen",
+ "mesh_recognize.removed": "{n} källnät tas bort. Ångra återställer dem."
+}

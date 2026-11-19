@@ -1,0 +1,10 @@
+{
+ "stage_err.kept": "tabella {t} mantenuta: {n} righe scritte dopo l'Aggiungi",
+ "stage_err.stage.prev_attached": "Non aggiunto: la copia del precedente Aggiungi è ancora aperta. Esegui di nuovo Aggiungi",
+ "stage_err.stage.model_changed": "Non aggiunto: il modello è cambiato mentre il file veniva letto. Esegui di nuovo Aggiungi",
+ "stage_err.stage.no_record": "Non aggiunto: la copia importata non ha un registro delle modifiche",
+ "stage_err.stage.table_differs": "Non aggiunto: la tabella {t} è diversa tra il modello e la copia importata",
+ "stage_err.stage.unique_key": "Non aggiunto: non è possibile seguire una chiave univoca della tabella {t}",
+ "stage_err.stage.table_gone": "Non aggiunto: l'importazione ha modificato la tabella {t}, che la copia non contiene più",
+ "stage_err.stage.copy_held": "Aggiunto; la copia importata resta aperta fino al prossimo Aggiungi o alla riapertura del modello"
+}

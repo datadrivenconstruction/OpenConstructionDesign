@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "Массаны буруга же чагылдырууга болбойт: анын форма тарыхында айлануу кадамы жок. Жылдырыңыз же көчүрүңүз, же жаңы багытта кайра тартыңыз.",
+ "sched_cats.col.name": "Аталышы",
+ "sched_cats.col.material": "Материал",
+ "sched_cats.col.void": "Боштук",
+ "sched_cats.col.inplace": "Жеринде куюлган",
+ "sched_cats.col.volume": "Таза көлөм",
+ "sched_cats.col.area": "Беттик аянты",
+ "sched_cats.col.floor_area": "Кабаттын аянты",
+ "sched_cats.col.thickness": "Калыңдыгы",
+ "sched_cats.col.points": "Чекиттер",
+ "elem.toposolid.points": "Сүрөмдөө чекиттери",
+ "elem.toposolid.count": "Чекиттер",
+ "elem.toposolid.low": "Эң төмөнкү",
+ "elem.toposolid.high": "Эң жогорку",
+ "elem.toposolid.edit": "Чекиттерди түзөтүү",
+ "elem.toposolid.edit_tip": "Планда сүрөмдөө чекиттерин тандоо, сүйрөө жана бийиктигин коюу",
+ "elem.toposolid.pick_hint": "Тандоо үчүн планда чекитти басыңыз. Кошуу же алып салуу үчүн дагы басыңыз.",
+ "elem.toposolid.z": "Бийиктик ({n})",
+ "elem.toposolid.mixed": "Тандалган чекиттер ар башка; жаңы маани алардын баарын коёт.",
+ "elem.toposolid.edit_help": "Чекитти жылдыруу үчүн сүйрөңүз. Бийиктикти коюу үчүн маанини жазып Enter басыңыз. Backspace тандалган чекиттерди алып салат, Esc чыгат.",
+ "elem.toposolid.done": "Бүттү"
+}

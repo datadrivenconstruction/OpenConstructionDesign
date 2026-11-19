@@ -1,0 +1,65 @@
+{
+ "sources": [
+  {
+   "id": "it-dm1975",
+   "title": "Ministerial decree 5 July 1975 on minimum heights and hygiene of dwellings",
+   "publisher": "Italian Ministry of Health (Gazzetta Ufficiale n.190, 1975)",
+   "url": "https://www.gazzettaufficiale.it/eli/id/1975/08/18/075M0001/sg",
+   "edition": "with later amendments (read on aggregator)",
+   "licence": "public-law",
+   "verified": null
+  },
+  {
+   "id": "it-dm236",
+   "title": "Ministerial decree 236/1989 on accessibility of private buildings",
+   "publisher": "Italian Ministry of Public Works (GU n.145, 1989)",
+   "url": "https://www.gazzettaufficiale.it/eli/id/1989/06/23/089G0298/sg",
+   "edition": "1989 with amendments (read on aggregator)",
+   "licence": "public-law",
+   "verified": null
+  },
+  {
+   "id": "it-ntc",
+   "title": "Technical standards for construction NTC 2018, imposed-load table",
+   "publisher": "Italian Ministry of Infrastructure",
+   "url": "https://www.gazzettaufficiale.it/eli/id/2018/02/20/18A00716/sg",
+   "edition": "DM 17 Jan 2018",
+   "licence": "public-law",
+   "verified": null
+  },
+  {
+   "id": "it-dm1975-mirror",
+   "title": "Ministerial decree on minimum hygiene requirements of dwellings, 1975, full text copy",
+   "publisher": "bosettiegatti.eu legal text archive",
+   "url": "https://www.bosettiegatti.eu/info/norme/statali/1975_dm_05_07.htm",
+   "edition": "1975",
+   "licence": "public-law",
+   "verified": "2026-11-14"
+  },
+  {
+   "id": "it-dm236-mirror",
+   "title": "Ministerial decree 236/1989 on accessibility, full text copy",
+   "publisher": "University of Parma (PDF)",
+   "url": "https://www.unipr.it/sites/default/files/2026-01/DM%2014%20giugno%201989%20n.%20236%20Barriere%20architettoniche.pdf",
+   "edition": "1989",
+   "licence": "public-law",
+   "verified": "2026-11-14"
+  },
+  {
+   "id": "it-dlgs81",
+   "title": "Legislative decree 81/2008 on health and safety at work, annex IV",
+   "licence": "public-law",
+   "publisher": "Italian Republic",
+   "edition": "as amended",
+   "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2008-04-09;81"
+  },
+  {
+   "id": "it-dm2006-uffici",
+   "title": "Order of 22 February 2006, fire rules for offices",
+   "licence": "public-law",
+   "publisher": "Italian Republic",
+   "edition": "coordinated text",
+   "url": "https://www.vigilfuoco.it/sites/default/files/coordinated-text/COORD_DM_22_02_2006.pdf"
+  }
+ ]
+}

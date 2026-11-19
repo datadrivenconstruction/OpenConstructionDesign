@@ -1,0 +1,23 @@
+{
+ "params_list.n_params": {
+  "one": "#টি প্যারামিটার",
+  "other": "#টি প্যারামিটার"
+ },
+ "params_list.n_values": {
+  "one": "#টি মান",
+  "other": "#টি মান"
+ },
+ "params_list.n_elements": {
+  "one": "#টি উপাদান",
+  "other": "#টি উপাদান"
+ },
+ "params_list.exported": "{params} রপ্তানি হয়েছে {file}-এ",
+ "params_list.export_failed": "প্যারামিটার রপ্তানি হয়নি: {why}",
+ "params_list.open_folder": "ফোল্ডার খুলুন",
+ "params_list.delete_tip": "প্যারামিটার ও এর মান মুছুন",
+ "params_list.confirm": "{name} এবং {elements}-এর উপর এর {values} মুছবেন?",
+ "params_list.confirm_btn": "মুছুন",
+ "params_list.cancel": "বাতিল",
+ "params_list.deleted": "প্যারামিটার {name} মুছে ফেলা হয়েছে ({values})",
+ "params_list.undo": "ফিরিয়ে আনুন"
+}

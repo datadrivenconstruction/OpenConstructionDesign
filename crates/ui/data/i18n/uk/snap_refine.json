@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "Радіус прив'язки",
+ "snap_refine.settings.snap_px_desc": "Наскільки близько має бути курсор до точки або лінії, щоб прив'язатися, у пікселях екрана. Більше значення зручніше на сенсорних екранах і дисплеях високої щільності.",
+ "snap_refine.settings.px_suffix": " пкс",
+ "snap_refine.hint.horizontal": "Горизонтально",
+ "snap_refine.hint.vertical": "Вертикально",
+ "snap_refine.hint.perpendicular": "Перпендикулярно до попереднього",
+ "snap_refine.hint.parallel": "Паралельно попередньому",
+ "snap_refine.hint.on_axis": "По осі стіни",
+ "snap_refine.no_snap": "Без прив'язки (Alt)"
+}

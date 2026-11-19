@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "Gemmer hele modellen eller valget som binær STL i meter eller millimeter.",
+ "cmd.data.export_obj.desc": "Gemmer hele modellen eller valget som OBJ med en MTL-fil: én gruppe pr. element, farver efter materiale.",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "OBJ med materialer (.obj)",
+ "open_file.filter.mesh": "3D-mesh (glTF, STEP, STL, OBJ)",
+ "mx.title": "Eksportér {fmt}",
+ "mx.scope": "Hvad der eksporteres",
+ "mx.scope.all": "Hele modellen",
+ "mx.scope.sel": "Valg ({n} elementer)",
+ "mx.units": "Enheder i filen",
+ "mx.units.m": "Meter",
+ "mx.units.mm": "Millimeter",
+ "mx.export": "Eksportér…",
+ "mx.saved": "{fmt} gemt: {path} ({parts} elementer, {tris} trekanter)",
+ "mx.partial": "{fmt} gemt med {n} problemer, nogle legemer kan mangle: {path}",
+ "mx.failed": "{fmt}-eksport mislykkedes: {error}",
+ "mx.imported": "{file}: {n} elementer importeret ({tris} trekanter)",
+ "mx.imported_notes": "{file}: {n} elementer importeret ({tris} trekanter), {w} noter: {first}"
+}

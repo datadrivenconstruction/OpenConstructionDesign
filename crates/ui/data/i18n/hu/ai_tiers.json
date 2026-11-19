@@ -1,0 +1,4 @@
+{
+ "ai.issue.delete_large": "{0} elem törlődne, ami meghaladja a(z) {1} korlátot. Engedély szükséges",
+ "ai.issue.refused_large": "{0} elem változna, ami meghaladja a(z) {1} végső korlátot. Bontsa a tervet kisebb részekre"
+}

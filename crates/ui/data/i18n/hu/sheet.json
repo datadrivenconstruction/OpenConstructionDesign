@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "Billentyűparancs-áttekintés",
+ "cmd.help.shortcuts.desc": "Megjeleníti az összes billentyűparancsot a jelenlegi beállítás szerint, környezetenként. A ? gombbal bárhol megnyithatja, szövegmezőn kívül.",
+ "sheet.title": "Billentyűparancsok",
+ "sheet.filter": "Szűrés parancs vagy billentyű szerint",
+ "sheet.filter_label": "Billentyűparancsok szűrése",
+ "sheet.customize": "Testreszabás…",
+ "sheet.close": "Bezárás",
+ "sheet.esc_close": "bezáráshoz",
+ "sheet.none": "Nincs illeszkedő billentyűparancs",
+ "sheet.none_hint": "Próbáljon másik szót vagy billentyűt.",
+ "sheet.sec.general": "Általános",
+ "sheet.sec.plan": "Alaprajz",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "Kimutatások",
+ "sheet.sec.sheets": "Lapok",
+ "sheet.sec.ai": "MI"
+}

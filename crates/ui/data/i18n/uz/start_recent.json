@@ -1,0 +1,5 @@
+{
+ "start_recent.unavailable": "Hozir mavjud emas (disk yoki tarmoq joyi javob bermayapti): {path}",
+ "start_recent.unavailable_short": "Hozir mavjud emas",
+ "start_recent.retry": "Qayta urinish"
+}

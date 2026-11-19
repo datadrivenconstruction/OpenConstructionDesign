@@ -1,0 +1,32 @@
+family Lattice Section
+category generic
+host none
+param Width length type 1200mm
+param Height length type 3000mm
+param Post length type 100mm
+ref Left x ~ -600mm
+ref Mid x = 0
+ref Right x ~ 600mm
+ref Front y = -Width / 2
+ref Back y = Width / 2
+dim Width Left Right
+eq Left Mid Right
+type "1200x3000" Width=1200mm
+nest PostA Post at(Left, Front, 0) set(H = Height, S = Post)
+nest PostB Post at(Right, Front, 0) set(H = Height, S = Post)
+nest PostC Post at(Left, Back, 0) set(H = Height, S = Post)
+nest PostD Post at(Right, Back, 0) set(H = Height, S = Post)
+sweep BraceF circle(0, 0, 15mm) path(Left, Front, 0, Right, Front, Height)
+sweep BraceB circle(0, 0, 15mm) path(Left, Back, 0, Right, Back, Height)
+sweep BraceL circle(0, 0, 15mm) path(Left, Front, 0, Left, Back, Height)
+sweep BraceR circle(0, 0, 15mm) path(Right, Front, 0, Right, Back, Height)
+symbol rect(Left, Front, Right, Back)
+begin
+family Post
+category generic
+host none
+param H length type 3000mm
+param S length type 100mm
+type "Post" H=3000mm
+extrude Stem rect(-S / 2, -S / 2, S / 2, S / 2) z(0, H)
+end

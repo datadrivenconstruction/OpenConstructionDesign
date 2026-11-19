@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "راهنما",
+ "legend.legend.new_hint": "نام راهنمای جدید",
+ "legend.legend.delete_tip": "حذف راهنما",
+ "legend.legend.delete_placed": "حذف راهنما (قرار گرفته روی: {sheets})",
+ "legend.legend.deleted": "راهنما حذف شد: {name}",
+ "legend.legend.no_rows": "هنوز ردیفی نیست. یکی اضافه کنید یا سبک‌های نمای فعلی را بردارید",
+ "legend.legend.replace_q": "{n} ردیف با سبک‌های این نما جایگزین شود؟",
+ "legend.legend.replace": "جایگزینی",
+ "legend.legend.keep": "نگه‌داشتن ردیف‌ها",
+ "legend.col.swatch": "نمونه رنگ",
+ "legend.col.value": "مقدار",
+ "legend.col.label": "برچسب"
+}

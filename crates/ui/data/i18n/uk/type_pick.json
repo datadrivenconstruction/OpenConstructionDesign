@@ -1,0 +1,12 @@
+{
+ "type_pick.pick.search": "Пошук типів або товщини",
+ "type_pick.pick.empty": "Немає відповідних типів",
+ "type_pick.pick.edit": "Редагувати тип…",
+ "type_pick.pick.mixed": "Змішано",
+ "type_pick.pick.layers": {
+  "one": "# шар",
+  "other": "# шарів",
+  "few": "# шари",
+  "many": "# шарів"
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "ai.issue.integrity": "Integritätsproblem: {0} {1}: {2}",
+ "ai.issue.opening_outside": "Die Öffnung passt nicht in die Wand: {0}",
+ "ai.issue.opening_overlap": "Die Öffnung überschneidet Öffnung {0}",
+ "ai.issue.wall_warning": "Wand: {0}",
+ "ai.issue.cut_warning": "Ausschnitt: {0}",
+ "ai.issue.room_open": "Der Raum ist nicht geschlossen",
+ "ai.issue.material_unknown": "Kein Material „{0}“ im Projekt: Anwenden würde ein neues mit Standardeigenschaften anlegen",
+ "ai.issue.material_suggest": "Kein Material „{0}“ im Projekt: Anwenden würde ein neues anlegen. Meinten Sie „{1}“?",
+ "ai.issue.conflict": "Dieser Punkt kann nicht ausgeführt werden: {0}",
+ "ai.issue.too_large": "{0} Elemente würden geändert, über dem Grenzwert von {1}. Freigabe ist nötig",
+ "ai.issue.truncated": "Die Änderungsliste endet bei {0} Zeilen: Der Plan ist größer, als die Karte zeigen kann. Freigabe ist nötig",
+ "ai.issue.replan_failed": "Der Plan konnte nicht neu berechnet werden. Eine neue Kopie des Modells wird erstellt"
+}

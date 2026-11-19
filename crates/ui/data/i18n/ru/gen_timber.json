@@ -1,0 +1,13 @@
+{
+ "fam.name.clt_floor_panel": "Панель перекрытия CLT",
+ "fam.name.glulam_beam": "Балка из клеёного бруса",
+ "fam.name.glulam_column": "Колонна из клеёного бруса",
+ "gen.group.timber": "Деревянный каркас",
+ "gen.group.structure": "Конструкция",
+ "gen.rule.timber.beam_span_max.desc": "Наибольший пролёт балки из клеёного бруса между колоннами.",
+ "gen.rule.timber.beam_span_max.title": "Предельный пролёт балки",
+ "gen.rule.timber.panel_w.desc": "Наибольшая ширина панели перекрытия из CLT; между панелями шов.",
+ "gen.rule.timber.panel_w.title": "Ширина панели CLT",
+ "gen.rule.timber.span_depth.desc": "Отношение пролёта к высоте балки; выбирает сечение.",
+ "gen.rule.timber.span_depth.title": "Пролёт к высоте балки"
+}

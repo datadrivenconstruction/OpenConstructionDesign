@@ -1,0 +1,13 @@
+{
+ "mep.sys.duct": "Befúvás S1",
+ "mep.sys.pipe": "Hidegvíz C1",
+ "mep.sys.tray": "Erősáram",
+ "mep.round": "Kör",
+ "mep.material": "Anyag",
+ "mep3d.elevation": "Magasság a szinttől",
+ "mep3d.slope": "Lejtés",
+ "mep3d.shape": "Alak",
+ "mep3d.shape.rect": "Téglalap",
+ "mep3d.shape.round": "Kör",
+ "mep3d.shape.oval": "Lapos ovális"
+}

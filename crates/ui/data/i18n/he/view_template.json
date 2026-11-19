@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "הזן קודם שם לתבנית",
+ "view_template.name_taken": "כבר קיימת תבנית בשם הזה",
+ "view_template.pick_blocked": "סמן קודם לפחות מבט אחד",
+ "view_template.views.one": "{n} מבט",
+ "view_template.views.few": "{n} מבטים",
+ "view_template.views.many": "{n} מבטים",
+ "view_template.delete.title": "למחוק את התבנית הזו?",
+ "view_template.delete.body": "התבנית \"{name}\" תימחק. בשימוש: {used}.",
+ "view_template.delete.unused": "התבנית \"{name}\" תימחק. אף מבט אינו משתמש בה.",
+ "view_template.delete.keeps": "המבטים האלה ישמרו על הגרפיקה הנוכחית שלהם ויאבדו את הקישור.",
+ "view_template.delete.undo": "אפשר לבטל זאת בבטל אחד.",
+ "view_template.delete.confirm": "מחק תבנית"
+}

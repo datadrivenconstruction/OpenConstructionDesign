@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}, түвшинд",
+ "cmd_buttons.purge.undo": "Устгах нь нэг Буцаах алхам.",
+ "cmd_buttons.unpin.none": "Сонгосон зүйлд бэхэлсэн зүйл алга",
+ "cmd_buttons.change_type.none": "Эхлээд хана сонгоно уу: төрөл нь нэг алхмаар солигдоно",
+ "cmd_buttons.units.metric": "Нэгжүүд: метрийн",
+ "cmd_buttons.units.imperial": "Нэгжүүд: фут ба инч",
+ "cmd_buttons.units.back": "Буцаан солих",
+ "cmd_buttons.underlay.on": "Доорх давхарга асаалттай: доорх түвшин бүдгэрүүлэн харагдана",
+ "cmd_buttons.underlay.off": "Доорх давхарга унтраалттай",
+ "cmd_buttons.underlay.none": "Доорх давхарга асаалттай, гэвч доорх түвшинд харуулах зүйл алга",
+ "cmd_buttons.zoom_sel.no_shape": "Сонголт энэ харагдцад хүрээлэх хэлбэргүй байна",
+ "cmd_buttons.close.base": "План ба 3D таб нээлттэй үлдэнэ; хаахын тулд огтлолт, хуудас эсвэл зургийн харагдцыг нээнэ үү",
+ "tool.equipment": "Тоног төхөөрөмж",
+ "hint.equipment.place": "Тоног төхөөрөмж: байршлыг заа · Esc — гарах",
+ "cmd_buttons.table.opened": "Хүснэгт загварын хажууд нээгдлээ",
+ "cmd_buttons.circuits.tip": "Энэ загварын цахилгаан хэлхээний жагсаалтыг нээнэ"
+}

@@ -1,0 +1,19 @@
+{
+ "note": "Finishes a room gets when neither the room's finish parameters nor its norm pack name one. A rule matches by the room kind of the pack vocabulary first, then by the use class of area_methods.json. Values are finish ids; the sheets name them with the catalog keys dset.finish.<id>. Own summary of common practice, not taken from a standard.",
+ "default": {"floor": "laminate", "walls": "paint", "ceiling": "paint"},
+ "rules": [
+  {"kinds": ["bath", "wc"], "floor": "tile", "walls": "tile", "ceiling": "paint_moisture"},
+  {"kinds": ["kitchen"], "floor": "tile", "walls": "paint_washable", "ceiling": "paint"},
+  {"kinds": ["living", "bedroom"], "floor": "parquet", "walls": "wallpaper", "ceiling": "paint"},
+  {"kinds": ["hall", "corridor", "lobby", "stair", "lift"], "floor": "tile", "walls": "paint_washable", "ceiling": "paint"},
+  {"kinds": ["office", "meeting", "staff"], "floor": "carpet_tile", "walls": "paint", "ceiling": "suspended_tile"},
+  {"kinds": ["classroom", "lab"], "floor": "linoleum", "walls": "paint_washable", "ceiling": "suspended_tile"},
+  {"kinds": ["technical", "storage"], "floor": "concrete_sealed", "walls": "paint", "ceiling": "paint"},
+  {"classes": ["balcony", "loggia", "terrace"], "floor": "tile_frost", "walls": "plaster", "ceiling": "plaster"},
+  {"classes": ["circulation"], "floor": "tile", "walls": "paint_washable", "ceiling": "paint"},
+  {"classes": ["technical"], "floor": "concrete_sealed", "walls": "paint", "ceiling": "paint"},
+  {"classes": ["service"], "floor": "tile", "walls": "paint_washable", "ceiling": "paint"},
+  {"classes": ["work"], "floor": "carpet_tile", "walls": "paint", "ceiling": "suspended_tile"},
+  {"classes": ["living"], "floor": "parquet", "walls": "wallpaper", "ceiling": "paint"}
+ ]
+}

@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "Endepunkt",
+ "snap.midpoint": "Midtpunkt",
+ "snap.perpendicular": "Vinkelrett",
+ "snap.wall_axis": "Veggakse",
+ "snap.wall_face": "Veggflate",
+ "snap.grid": "Rutenett",
+ "snap.intersection": "Skjæringspunkt",
+ "snap.grid_axis": "Akselinje",
+ "snap.ref_plane": "Referanseplan",
+ "snap.nearest": "Nærmeste",
+ "snap.align_x": "Justert i X mot et fjernt punkt",
+ "snap.align_y": "Justert i Y mot et fjernt punkt",
+ "snap.align_xy": "Justert i X og Y"
+}

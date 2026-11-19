@@ -1,0 +1,14 @@
+{
+ "lnp.openings_refused": "Nie zmieniono otworów: {n} ({why})",
+ "lnp.params_changed": "zmienionych wartości: {n}",
+ "lnp.params_same": "Brak zmian: {u} elementów ma już tę wartość",
+ "lnp.params_tip": "Enter stosuje wartość do wszystkich zaznaczonych elementów; Esc je zachowuje",
+ "lnp.locked_hint": "Zachowane zablokowane wartości: {n}",
+ "lnp.panels_one": "Panele edytuje się po jednym",
+ "lnp.keep_first": "Zachowaj pierwszy",
+ "lnp.keep_first_tip": "Zaznacz tylko pierwszy panel, aby go edytować",
+ "lnp.clip_from_wall": "Skopiowano parametry ze ściany nr {id}",
+ "lnp.clip_from_opening": "Skopiowano parametry z otworu nr {id}",
+ "lnp.match_from": "Właściwości nr {id} dopasowano do elementów: {n}",
+ "lnp.why_at": "#{id}: {e}"
+}

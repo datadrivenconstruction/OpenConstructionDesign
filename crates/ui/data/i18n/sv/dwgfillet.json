@@ -1,0 +1,20 @@
+{
+ "dwgfillet.fillet": "Hörnavrundning",
+ "dwgfillet.cancel": "Avbryt hörnavrundning",
+ "dwgfillet.tip": "Klicka på två linjer på sidorna som ska behållas: båda trimmas eller förlängs till hörnet, med en tangentbåge när radien är större än noll",
+ "dwgfillet.radius": "Avrundningsradie",
+ "dwgfillet.radius_tip": "Bågens radie i ritningsenheter; 0 ger ett skarpt hörn",
+ "dwgfillet.st.arm_first": "Klicka på den första linjen på sidan som ska behållas",
+ "dwgfillet.st.arm_second": "Klicka på den andra linjen på sidan som ska behållas",
+ "dwgfillet.st.not_armed": "Välj Hörnavrundning först",
+ "dwgfillet.st.click_line": "Klicka på en enskild linje i ritningen",
+ "dwgfillet.st.other_drawing": "Båda linjerna måste tillhöra samma ritning: börja om",
+ "dwgfillet.st.changed": "Den första linjen ändrades: börja om",
+ "dwgfillet.st.same_line": "Välj en annan andra linje",
+ "dwgfillet.st.parallel": "Linjerna är parallella och möts aldrig: inget hörn kan skapas",
+ "dwgfillet.st.degenerate": "En linje har ingen längd",
+ "dwgfillet.st.no_side": "Den klickade sidan har ingen längd från hörnet",
+ "dwgfillet.st.too_big": "Radien är för stor för dessa linjer: använd en mindre radie",
+ "dwgfillet.st.radius_bad": "Radien måste vara noll eller positiv",
+ "dwgfillet.st.done": "Hörn skapat"
+}

@@ -1,0 +1,6 @@
+{
+ "xl.msg.filter_on_sheet_x": "シート '{}' のフィルタ",
+ "xl.msg.sort_settings_on_sheet_x": "シート '{}' の並べ替え設定",
+ "xl.msg.hidden_rows_on_sheet_x": "シート '{}' の非表示行",
+ "xl.msg.hidden_columns_on_sheet_x": "シート '{}' の非表示列"
+}

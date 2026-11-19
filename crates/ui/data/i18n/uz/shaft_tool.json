@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "Shaxtalar",
+ "quick.cat.shaft": "Shaxta",
+ "shaft_tool.browser.shaft": "Shaxta #{id}",
+ "shaft_tool.shaft.top": "Yuqori qavat",
+ "shaft_tool.shaft.cuts": "Kesilgan elementlar",
+ "shaft_tool.shaft.cut_area": "Kesilgan maydon",
+ "shaft_tool.shaft.cut_volume": "Kesilgan hajm",
+ "elem.no.rooms": "U ichidagi xonalarga ergashadi"
+}

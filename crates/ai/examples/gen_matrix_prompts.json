@@ -1,0 +1,643 @@
+[
+ {
+  "id": "house_L1",
+  "type": "house",
+  "level": "L1",
+  "typology": "house",
+  "prompt": "Single-storey box house, 10 x 8 m, 3 rooms, flat roof.",
+  "features": [],
+  "expect": {
+   "storeys": [
+    1,
+    1
+   ],
+   "footprint": [
+    10,
+    8
+   ],
+   "gfa": [
+    70,
+    90
+   ],
+   "typology": "house"
+  }
+ },
+ {
+  "id": "house_L2",
+  "type": "house",
+  "level": "L2",
+  "typology": "house",
+  "prompt": "Two-storey family house, 4 bedrooms, kitchen-living room, 2 bathrooms, garage, pitched roof.",
+  "features": [
+   "pitched_roof",
+   "multi_floor"
+  ],
+  "expect": {
+   "storeys": [
+    2,
+    2
+   ],
+   "rooms": {
+    "bedroom": 4,
+    "bath": 2
+   },
+   "typology": "house"
+  }
+ },
+ {
+  "id": "house_L3",
+  "type": "house",
+  "level": "L3",
+  "typology": "house",
+  "prompt": "L-shaped house with a terrace, balcony on the upper floor, internal stairs and a pitched roof.",
+  "features": [
+   "l_shape",
+   "balcony",
+   "stairs",
+   "pitched_roof",
+   "multi_floor"
+  ],
+  "expect": {
+   "typology": "house"
+  }
+ },
+ {
+  "id": "house_L4",
+  "type": "house",
+  "level": "L4",
+  "typology": "house",
+  "prompt": "Villa with a curved glass facade, cantilevered upper floor, double-height atrium, green sloped roof, underfloor heating and ventilation.",
+  "features": [
+   "curved",
+   "cantilever",
+   "atrium",
+   "sloped_roof",
+   "mep",
+   "multi_floor"
+  ],
+  "expect": {
+   "typology": "house"
+  }
+ },
+ {
+  "id": "apartment_L1",
+  "type": "apartment",
+  "level": "L1",
+  "typology": "apartment_section",
+  "prompt": "One-floor apartment section with 4 flats and a stair.",
+  "features": [
+   "stairs"
+  ],
+  "expect": {
+   "storeys": [
+    1,
+    1
+   ],
+   "apartments": 4,
+   "typology": "apartment_section"
+  }
+ },
+ {
+  "id": "apartment_L2",
+  "type": "apartment",
+  "level": "L2",
+  "typology": "apartment_section",
+  "prompt": "5-storey apartment block, 4 flats per floor, central stair and lift, flat roof.",
+  "features": [
+   "stairs",
+   "lift",
+   "multi_floor"
+  ],
+  "expect": {
+   "storeys": [
+    5,
+    5
+   ],
+   "apartments": 20,
+   "typology": "apartment_section"
+  }
+ },
+ {
+  "id": "apartment_L3",
+  "type": "apartment",
+  "level": "L3",
+  "typology": "apartment_section",
+  "prompt": "U-shaped apartment block around a courtyard, 6 floors, balconies on every flat, two stair cores and lifts, setback top floor.",
+  "features": [
+   "u_shape",
+   "courtyard",
+   "balcony",
+   "stairs",
+   "lift",
+   "setback",
+   "multi_floor"
+  ],
+  "expect": {
+   "storeys": [
+    6,
+    6
+   ],
+   "typology": "apartment_section"
+  }
+ },
+ {
+  "id": "apartment_L4",
+  "type": "apartment",
+  "level": "L4",
+  "typology": "apartment_section",
+  "prompt": "Curved 12-storey apartment tower with cantilevered sky terraces, central atrium, sloped green roof, full MEP risers and sprinklers.",
+  "features": [
+   "curved",
+   "cantilever",
+   "atrium",
+   "sloped_roof",
+   "mep",
+   "multi_floor"
+  ],
+  "expect": {
+   "storeys": [
+    12,
+    12
+   ],
+   "typology": "apartment_section"
+  }
+ },
+ {
+  "id": "school_L1",
+  "type": "school",
+  "level": "L1",
+  "typology": "school",
+  "prompt": "Single-storey school box with 4 classrooms and a corridor.",
+  "features": [],
+  "expect": {
+   "storeys": [
+    1,
+    1
+   ],
+   "rooms": {
+    "classroom": 4
+   },
+   "typology": "school"
+  }
+ },
+ {
+  "id": "school_L2",
+  "type": "school",
+  "level": "L2",
+  "typology": "school",
+  "prompt": "3-storey school: 12 classrooms, library, canteen, staff rooms, stairs and a lift.",
+  "features": [
+   "stairs",
+   "lift",
+   "multi_floor"
+  ],
+  "expect": {
+   "storeys": [
+    3,
+    3
+   ],
+   "rooms": {
+    "classroom": 12
+   },
+   "typology": "school"
+  }
+ },
+ {
+  "id": "school_L3",
+  "type": "school",
+  "level": "L3",
+  "typology": "school",
+  "prompt": "U-shaped school around a courtyard, 3 floors, covered walkway, gym wing, two stair cores, curtain wall entrance.",
+  "features": [
+   "u_shape",
+   "courtyard",
+   "stairs",
+   "curtain_wall",
+   "multi_floor"
+  ],
+  "expect": {
+   "storeys": [
+    3,
+    3
+   ],
+   "typology": "school"
+  }
+ },
+ {
+  "id": "school_L4",
+  "type": "school",
+  "level": "L4",
+  "typology": "school",
+  "prompt": "School with a curved freeform facade, cantilevered assembly hall, central atrium, sloped sawtooth roof, full HVAC and sprinkler system.",
+  "features": [
+   "curved",
+   "cantilever",
+   "atrium",
+   "sloped_roof",
+   "mep"
+  ],
+  "expect": {
+   "typology": "school"
+  }
+ },
+ {
+  "id": "office_L1",
+  "type": "office",
+  "level": "L1",
+  "typology": "office",
+  "prompt": "Single-floor office box 24 x 15 m with open space and meeting rooms.",
+  "features": [],
+  "expect": {
+   "storeys": [
+    1,
+    1
+   ],
+   "footprint": [
+    24,
+    15
+   ],
+   "gfa": [
+    324,
+    396
+   ],
+   "rooms": {
+    "meeting": 1
+   },
+   "typology": "office"
+  }
+ },
+ {
+  "id": "office_L2",
+  "type": "office",
+  "level": "L2",
+  "typology": "office",
+  "prompt": "4-storey office: open plan floors, meeting rooms, WCs, one stair and a lift, flat roof.",
+  "features": [
+   "stairs",
+   "lift",
+   "multi_floor"
+  ],
+  "expect": {
+   "storeys": [
+    4,
+    4
+   ],
+   "rooms": {
+    "meeting": 1
+   },
+   "typology": "office"
+  }
+ },
+ {
+  "id": "office_L3",
+  "type": "office",
+  "level": "L3",
+  "typology": "office",
+  "prompt": "L-shaped 5-storey office with setbacks on the top two floors, curtain wall facade, balconies, two cores.",
+  "features": [
+   "l_shape",
+   "setback",
+   "curtain_wall",
+   "balcony",
+   "stairs",
+   "lift",
+   "multi_floor"
+  ],
+  "expect": {
+   "storeys": [
+    5,
+    5
+   ],
+   "typology": "office"
+  }
+ },
+ {
+  "id": "office_L4",
+  "type": "office",
+  "level": "L4",
+  "typology": "office",
+  "prompt": "Office tower with a curved freeform glass facade, cantilevers, 5-floor atrium, sloped roof with solar canopy and full MEP.",
+  "features": [
+   "curved",
+   "cantilever",
+   "atrium",
+   "curtain_wall",
+   "sloped_roof",
+   "mep",
+   "multi_floor"
+  ],
+  "expect": {
+   "typology": "office"
+  }
+ },
+ {
+  "id": "hotel_L1",
+  "type": "hotel",
+  "level": "L1",
+  "typology": "hotel",
+  "prompt": "Single-storey motel with 8 identical rooms along a corridor.",
+  "features": [],
+  "expect": {
+   "storeys": [
+    1,
+    1
+   ],
+   "typology": "hotel"
+  }
+ },
+ {
+  "id": "hotel_L2",
+  "type": "hotel",
+  "level": "L2",
+  "typology": "hotel",
+  "prompt": "4-storey hotel: 10 rooms per floor, lobby and restaurant on the ground floor, stair and lift.",
+  "features": [
+   "stairs",
+   "lift",
+   "multi_floor"
+  ],
+  "expect": {
+   "storeys": [
+    4,
+    4
+   ],
+   "typology": "hotel"
+  }
+ },
+ {
+  "id": "hotel_L3",
+  "type": "hotel",
+  "level": "L3",
+  "typology": "hotel",
+  "prompt": "U-shaped 5-storey hotel around a courtyard, balconies on guest rooms, curtain wall lobby, two cores, setback top floor.",
+  "features": [
+   "u_shape",
+   "courtyard",
+   "balcony",
+   "curtain_wall",
+   "stairs",
+   "lift",
+   "setback",
+   "multi_floor"
+  ],
+  "expect": {
+   "storeys": [
+    5,
+    5
+   ],
+   "typology": "hotel"
+  }
+ },
+ {
+  "id": "hotel_L4",
+  "type": "hotel",
+  "level": "L4",
+  "typology": "hotel",
+  "prompt": "Resort hotel with a curved freeform facade, cantilevered pool deck, atrium lobby, sloped complex roof, full MEP.",
+  "features": [
+   "curved",
+   "cantilever",
+   "atrium",
+   "sloped_roof",
+   "mep"
+  ],
+  "expect": {
+   "typology": "hotel"
+  }
+ },
+ {
+  "id": "clinic_L1",
+  "type": "clinic",
+  "level": "L1",
+  "typology": "clinic",
+  "prompt": "Single-storey clinic box: reception, 4 consulting rooms, WC.",
+  "features": [],
+  "expect": {
+   "storeys": [
+    1,
+    1
+   ],
+   "rooms": {
+    "office": 4
+   },
+   "typology": "clinic"
+  }
+ },
+ {
+  "id": "clinic_L2",
+  "type": "clinic",
+  "level": "L2",
+  "typology": "clinic",
+  "prompt": "3-storey clinic: reception, 12 consulting rooms, treatment rooms, wards, stairs and a bed lift.",
+  "features": [
+   "stairs",
+   "lift",
+   "multi_floor"
+  ],
+  "expect": {
+   "storeys": [
+    3,
+    3
+   ],
+   "typology": "clinic"
+  }
+ },
+ {
+  "id": "clinic_L3",
+  "type": "clinic",
+  "level": "L3",
+  "typology": "clinic",
+  "prompt": "Hospital with an H-shaped plan, courtyards, 4 floors, operating theatres, two cores, covered ambulance entrance with a cantilever.",
+  "features": [
+   "courtyard",
+   "cantilever",
+   "stairs",
+   "lift",
+   "multi_floor"
+  ],
+  "expect": {
+   "storeys": [
+    4,
+    4
+   ],
+   "typology": "clinic"
+  }
+ },
+ {
+  "id": "clinic_L4",
+  "type": "clinic",
+  "level": "L4",
+  "typology": "clinic",
+  "prompt": "Hospital with a curved freeform facade, central atrium, helipad on a sloped roof, full MEP with medical gases.",
+  "features": [
+   "curved",
+   "atrium",
+   "sloped_roof",
+   "mep"
+  ],
+  "expect": {
+   "typology": "clinic"
+  }
+ },
+ {
+  "id": "warehouse_L1",
+  "type": "warehouse",
+  "level": "L1",
+  "typology": "warehouse",
+  "prompt": "Single-storey warehouse 40 x 20 m, flat roof, office corner.",
+  "features": [],
+  "expect": {
+   "storeys": [
+    1,
+    1
+   ],
+   "footprint": [
+    40,
+    20
+   ],
+   "gfa": [
+    720,
+    960
+   ],
+   "typology": "warehouse"
+  }
+ },
+ {
+  "id": "warehouse_L2",
+  "type": "warehouse",
+  "level": "L2",
+  "typology": "warehouse",
+  "prompt": "Warehouse 60 x 30 m with an office mezzanine, loading dock doors and a gable roof.",
+  "features": [
+   "pitched_roof",
+   "stairs"
+  ],
+  "expect": {
+   "footprint": [
+    60,
+    30
+   ],
+   "typology": "warehouse"
+  }
+ },
+ {
+  "id": "warehouse_L3",
+  "type": "warehouse",
+  "level": "L3",
+  "typology": "warehouse",
+  "prompt": "L-shaped logistics building with a two-floor office wing, canopy over loading bays, curtain wall office facade, stairs.",
+  "features": [
+   "l_shape",
+   "cantilever",
+   "curtain_wall",
+   "stairs",
+   "multi_floor"
+  ],
+  "expect": {
+   "typology": "warehouse"
+  }
+ },
+ {
+  "id": "warehouse_L4",
+  "type": "warehouse",
+  "level": "L4",
+  "typology": "warehouse",
+  "prompt": "Industrial hall with a curved sawtooth roof, crane beams, cantilevered canopy, internal atrium office, full MEP and sprinklers.",
+  "features": [
+   "curved",
+   "sloped_roof",
+   "cantilever",
+   "atrium",
+   "mep"
+  ],
+  "expect": {
+   "typology": "warehouse"
+  }
+ },
+ {
+  "id": "tower_L1",
+  "type": "tower",
+  "level": "L1",
+  "typology": "mixed_use",
+  "prompt": "Two-floor mixed-use block: shops on the ground floor, offices above.",
+  "features": [
+   "multi_floor"
+  ],
+  "expect": {
+   "storeys": [
+    2,
+    2
+   ],
+   "rooms": {
+    "retail": 1
+   },
+   "typology": "mixed_use"
+  }
+ },
+ {
+  "id": "tower_L2",
+  "type": "tower",
+  "level": "L2",
+  "typology": "mixed_use",
+  "prompt": "6-storey mixed-use building: shops and a cafe on the ground floor, offices on floors 2-3, flats above, stair and lift.",
+  "features": [
+   "stairs",
+   "lift",
+   "multi_floor"
+  ],
+  "expect": {
+   "storeys": [
+    6,
+    6
+   ],
+   "rooms": {
+    "retail": 1
+   },
+   "typology": "mixed_use"
+  }
+ },
+ {
+  "id": "tower_L3",
+  "type": "tower",
+  "level": "L3",
+  "typology": "mixed_use",
+  "prompt": "15-storey mixed-use tower with a podium, setback tower, balconies on the flats, curtain wall offices, two cores.",
+  "features": [
+   "setback",
+   "balcony",
+   "curtain_wall",
+   "stairs",
+   "lift",
+   "multi_floor"
+  ],
+  "expect": {
+   "storeys": [
+    15,
+    15
+   ],
+   "typology": "mixed_use"
+  }
+ },
+ {
+  "id": "tower_L4",
+  "type": "tower",
+  "level": "L4",
+  "typology": "mixed_use",
+  "prompt": "30-storey mixed-use tower with a twisting curved facade, cantilevered sky lobby, atrium, sloped crown roof, full MEP.",
+  "features": [
+   "curved",
+   "cantilever",
+   "atrium",
+   "sloped_roof",
+   "mep",
+   "multi_floor"
+  ],
+  "expect": {
+   "storeys": [
+    30,
+    30
+   ],
+   "typology": "mixed_use"
+  }
+ }
+]

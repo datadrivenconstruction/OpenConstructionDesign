@@ -1,0 +1,14 @@
+{
+ "xlsx_relink.title": "Nalipat o napalitan ng pangalan ang naka-link na workbook",
+ "xlsx_relink.body": "Wala na sa {folder} ang workbook na “{file}”. Babalik lang ang mga edit na itinype dito pagkatapos itong ma-link muli.",
+ "xlsx_relink.found_one": "Nahanap ang “{file}” sa {folder}: parehong proyekto at parehong export. I-link ito?",
+ "xlsx_relink.found_many": "Nahanap ang {n} na workbook ng proyektong ito at export na ito. Pumili ng i-link:",
+ "xlsx_relink.found_none": "Walang nahanap na workbook ng export na ito sa tabi nito. Hanapin ito, o mag-export ng bagong workbook.",
+ "xlsx_relink.link": "I-link ang “{file}”",
+ "xlsx_relink.find": "Hanapin ito…",
+ "xlsx_relink.find_title": "Hanapin ang naka-link na workbook",
+ "xlsx_relink.export_new": "I-export ang bagong workbook",
+ "xlsx_relink.close": "Isara",
+ "xlsx_relink.gone": "Wala na sa folder nito ang workbook na “{file}”. Babalik lang ang mga edit na itinype dito pagkatapos itong ma-link muli.",
+ "xlsx_relink.found_one_short": "Nahanap ang “{file}”: parehong proyekto at parehong export. I-link ito?"
+}

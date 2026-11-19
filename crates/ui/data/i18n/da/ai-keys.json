@@ -1,0 +1,14 @@
+{
+ "ai_keys.header_is_key": "Nøgler skal i feltet Nøgle — headere gemmes i klartekst",
+ "ai_keys.move": "Flyt til Nøgle",
+ "ai_keys.remove_line": "Fjern fra headere",
+ "ai_keys.save_blocked": "Flyt nøglen ud af headerne for at gemme",
+ "ai_keys.show": "Vis",
+ "ai_keys.hide": "Skjul",
+ "ai_keys.copy": "Kopiér",
+ "ai_keys.tokens": "tokens",
+ "ai_keys.presets": "Forudindstillinger",
+ "ai_keys.preset_k": "{n}k",
+ "ai_keys.preset_m": "{n}M",
+ "ai_keys.images_on": "Understøttet"
+}

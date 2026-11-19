@@ -1,0 +1,14 @@
+{
+ "xlsx_relink.title": "El libro vinculado se movió o renombró",
+ "xlsx_relink.body": "El libro «{file}» ya no está en {folder}. Las ediciones escritas en él solo vuelven después de volver a vincularlo.",
+ "xlsx_relink.found_one": "Se encontró «{file}» en {folder}: mismo proyecto y misma exportación. ¿Vincularlo?",
+ "xlsx_relink.found_many": "Se encontraron {n} libros de este proyecto y de esta exportación. Elegir el que vincular:",
+ "xlsx_relink.found_none": "No se encontró ningún libro de esta exportación junto a él. Buscarlo o exportar un libro nuevo.",
+ "xlsx_relink.link": "Vincular «{file}»",
+ "xlsx_relink.find": "Buscarlo…",
+ "xlsx_relink.find_title": "Buscar el libro vinculado",
+ "xlsx_relink.export_new": "Exportar libro nuevo",
+ "xlsx_relink.close": "Cerrar",
+ "xlsx_relink.gone": "El libro «{file}» ya no está en su carpeta. Las ediciones escritas en él solo vuelven después de volver a vincularlo.",
+ "xlsx_relink.found_one_short": "Se encontró «{file}»: mismo proyecto y misma exportación. ¿Vincularlo?"
+}

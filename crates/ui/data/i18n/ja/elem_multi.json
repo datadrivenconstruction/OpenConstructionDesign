@@ -1,0 +1,10 @@
+{
+ "elem.multi.title": "{n} 個の要素",
+ "elem.multi.varies": "さまざま",
+ "elem.multi.tip": "Enter で選択したすべての要素に設定",
+ "elem.multi.hidden": "{n} 行は一部の要素のみ",
+ "elem.multi.none": "選択した要素に共通の行はありません",
+ "elem.multi.range": "値が許容範囲外です",
+ "elem.multi.changed": "{n} 個の要素を変更 · Ctrl+Z で元に戻す",
+ "elem.multi.same": "選択したすべての要素で既にこの値です"
+}

@@ -1,0 +1,4 @@
+{
+ "sf.restored": "Plik ustawień {file} był uszkodzony; przywrócono ostatnią dobrą kopię. Uszkodzony plik zachowano jako {broken}.",
+ "sf.reset": "Plik ustawień {file} był uszkodzony i żadna kopia zapasowa nie nadawała się do użytku; użyto ustawień domyślnych. Uszkodzony plik zachowano jako {broken}."
+}

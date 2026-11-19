@@ -1,0 +1,5 @@
+{
+ "sel_chip.opt.sel_hint": "برای انتخاب عنصر کلیک کنید. Ctrl افزودن و Shift حذف می‌کند.",
+ "sel_chip.opt.units": "واحدها",
+ "sel_chip.sel_chip": "{name}: {n}"
+}

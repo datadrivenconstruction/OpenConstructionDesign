@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "Nova família",
+ "family_editor.open_tip": "Abrir família ou rascunho",
+ "family_editor.close_named": "Fechar {name}",
+ "family_editor.unsaved": "Alterações não salvas",
+ "family_editor.search": "Pesquisar",
+ "family_editor.nothing": "Nada encontrado",
+ "family_editor.sec_families": "Famílias do projeto",
+ "family_editor.sec_drafts": "Rascunhos",
+ "family_editor.cap_category": "Categoria",
+ "family_editor.cap_host": "Hospedeiro",
+ "family_editor.cap_type": "Tipo de prévia"
+}

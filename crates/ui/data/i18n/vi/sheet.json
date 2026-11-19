@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "Bảng phím tắt",
+ "cmd.help.shortcuts.desc": "Hiển thị mọi phím tắt như hiện tại, theo ngữ cảnh. Nhấn ? ở bất kỳ đâu ngoài ô nhập văn bản.",
+ "sheet.title": "Phím tắt",
+ "sheet.filter": "Lọc theo lệnh hoặc phím",
+ "sheet.filter_label": "Lọc phím tắt",
+ "sheet.customize": "Tùy chỉnh…",
+ "sheet.close": "Đóng",
+ "sheet.esc_close": "để đóng",
+ "sheet.none": "Không có phím tắt phù hợp",
+ "sheet.none_hint": "Thử từ khác hoặc phím khác.",
+ "sheet.sec.general": "Chung",
+ "sheet.sec.plan": "Mặt bằng",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "Bảng thống kê",
+ "sheet.sec.sheets": "Tờ",
+ "sheet.sec.ai": "AI"
+}

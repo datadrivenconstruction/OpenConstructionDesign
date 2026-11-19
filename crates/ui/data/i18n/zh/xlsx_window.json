@@ -1,0 +1,5 @@
+{
+ "xlw.open_elsewhere": "工作簿已在其他位置打开——请先在该处保存。",
+ "xlw.read_anyway": "仍然读取",
+ "xlw.owner_stale": "工作簿旁边残留了其他程序的锁文件；已读取保存的文件。"
+}

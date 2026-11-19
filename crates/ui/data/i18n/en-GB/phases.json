@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D",
+ "phases.current_mark": "current",
+ "phases.make_current": "Make current",
+ "phases.col_phase": "Phase",
+ "phases.col_filter": "Filter",
+ "phases.presets": "Plan presets",
+ "phases.del_title": "Delete phase",
+ "phases.del_text": "Delete phase \"{name}\"? Its elements move to the phase chosen below.",
+ "phases.del_into": "Move elements to",
+ "phases.del_ok": "Delete",
+ "phases.col_kind": "Element type",
+ "phases.col_count": "Count",
+ "phases.col_volume": "Volume"
+}

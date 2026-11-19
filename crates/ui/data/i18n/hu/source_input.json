@@ -1,0 +1,4 @@
+{
+ "source_input.err.number": "„{text}” nem szám; ez a paraméter számot tárol. Semmi sem íródott",
+ "source_input.err.comma": "„{text}”: tizedesekhez pontot használjon (1.5); a vessző csak ezreseket csoportosít (1,000). Semmi sem íródott"
+}

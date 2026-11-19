@@ -1,0 +1,7 @@
+{
+ "rebar_pick.pick.empty": "Tulangan: pilih kolom, balok, dinding, pelat, atau pondasi tapak",
+ "rebar_pick.pick.unsupported": "Pilihan ini tidak dapat diberi tulangan. Pilih kolom, balok, dinding, pelat, atau pondasi tapak",
+ "rebar_pick.pick.keys": "Klik untuk memilih, Shift untuk menambah · Enter untuk membuka formulir · Esc untuk membatalkan",
+ "rebar_pick.pick.open": "Buka formulir",
+ "rebar_pick.pick.cancel": "Batal"
+}

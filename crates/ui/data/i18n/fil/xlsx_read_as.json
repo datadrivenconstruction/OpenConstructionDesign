@@ -1,0 +1,11 @@
+{
+ "xlsx_read_as.title": "Pinalitang sheet?",
+ "xlsx_read_as.detail": "May mga column ng {sheet} ang sheet na {found} ({score}% ang tugma). Hindi ito binabasa maliban kung pipiliin mo.",
+ "xlsx_read_as.detail_many": "Mahigit isang sheet ang tumutugma sa {sheet}: {found}. Walang pinili para sa iyo; pumili ng babasahin.",
+ "xlsx_read_as.read_as": "Basahin ang “{found}” bilang {sheet}",
+ "xlsx_read_as.read_as_tip": "Para sa import na ito lang. Hindi pinapalitan ang pangalan ng sheet; isinusulat lang ng Apply ang mga id ng bagong row dito.",
+ "xlsx_read_as.active": "Ang sheet na “{found}” ay binabasa bilang {sheet} sa import na ito.",
+ "xlsx_read_as.undo": "Huwag basahin bilang {sheet}",
+ "xlsx_read_as.undo_tip": "Balik sa mga pangalan ng sheet gaya ng nasa workbook.",
+ "xlsx_read_as.not_rewritten": "Hindi isinulat muli ang workbook: binabasa ang pinalitang sheet sa sarili nitong pangalan. Ibalik ang pangalan para manatiling naka-sync ang workbook."
+}

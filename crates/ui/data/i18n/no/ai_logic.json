@@ -1,0 +1,6 @@
+{
+ "ai_toast.toast_not_refreshed": "Brukt som angrertrinn {n} (Ctrl+Z angrer det), men visningen ble ikke oppdatert. Last visningen på nytt.",
+ "ai.optx.reload_failed": "Alternativ «{name}» er brukt og lagret, men visningen ble ikke lastet på nytt: {e}",
+ "ai.cmp.stale": "Utdatert",
+ "ai.cmp.stale_tip": "Dette alternativet ble laget på en eldre modelltilstand. Generer det på nytt for å bruke det."
+}

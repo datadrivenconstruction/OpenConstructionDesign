@@ -1,0 +1,8 @@
+{
+ "cmd.arch.room_auto": "Umieść pomieszczenia automatycznie",
+ "cmd.arch.room_auto.desc": "Umieszcza pomieszczenie w każdym zamkniętym obrysie aktywnego poziomu, który go nie ma. Otwarte obiegi ścian są pomijane, nigdy nie są zamykane domysłem. Jeden krok cofania.",
+ "room_place.placed": "Umieszczone pomieszczenia: {n}. Obszary, które już miały pomieszczenie: {m}. Pominięte otwarte obiegi: {k}",
+ "room_place.all_had": "Nic nie umieszczono: wszystkie {m} zamknięte obszary już mają pomieszczenie. Pominięte otwarte obiegi: {k}",
+ "room_place.none": "Nic nie umieszczono: poziom nie ma zamkniętych obszarów ścian",
+ "room_place.none_open": "Nic nie umieszczono: poziom nie ma zamkniętych obszarów ścian. Pominięte otwarte obiegi: {k}"
+}

@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "คำอธิบายสัญลักษณ์",
+ "legend.legend.new_hint": "ชื่อคำอธิบายสัญลักษณ์ใหม่",
+ "legend.legend.delete_tip": "ลบคำอธิบายสัญลักษณ์",
+ "legend.legend.delete_placed": "ลบคำอธิบายสัญลักษณ์ (วางบน: {sheets})",
+ "legend.legend.deleted": "ลบคำอธิบายสัญลักษณ์แล้ว: {name}",
+ "legend.legend.no_rows": "ยังไม่มีแถว เพิ่มหนึ่งแถวหรือใช้สไตล์ของมุมมองปัจจุบัน",
+ "legend.legend.replace_q": "แทนที่ {n} แถวด้วยสไตล์ของมุมมองนี้หรือไม่",
+ "legend.legend.replace": "แทนที่",
+ "legend.legend.keep": "เก็บแถว",
+ "legend.col.swatch": "ตัวอย่างสี",
+ "legend.col.value": "ค่า",
+ "legend.col.label": "ป้ายกำกับ"
+}

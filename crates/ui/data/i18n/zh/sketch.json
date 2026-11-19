@@ -1,0 +1,11 @@
+{
+ "sketch.points": "点",
+ "sketch.rect": "矩形",
+ "sketch.circle": "圆",
+ "sketch.polygon": "多边形",
+ "sketch.radius": "R",
+ "sketch.sides": "边数",
+ "sketch.circum": "外接",
+ "sketch.shape.tip": "草图形状（A 切换）。矩形：两个角点。圆和多边形：圆心，然后半径。输入尺寸并按 Enter 固定。",
+ "tool.err.zero_size": "尺寸为零：请将第二点移离第一点"
+}

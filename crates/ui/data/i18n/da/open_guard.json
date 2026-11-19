@@ -1,0 +1,11 @@
+{
+ "job.stage.prepare": "Forbereder projektet",
+ "open_guard.already_open": "{name} er allerede åben",
+ "open_guard.from_cache": "{name}: åbnet fra importcachen",
+ "open_guard.known_project": "{name} blev importeret før: åbner det projekt",
+ "open_guard.locate": "Find",
+ "open_guard.mem_low": "Lidt hukommelse: mesh-budgettet halveres, og opbygningen af detaljeniveauer er sat på pause",
+ "open_guard.mem_low_short": "Lidt hukommelse: opbygningen af detaljeniveauer er sat på pause, indtil der er ledig hukommelse",
+ "open_guard.no_window": "Vinduet for dette projekt kunne ikke findes",
+ "open_guard.switch_window": "Skift til det vindue"
+}

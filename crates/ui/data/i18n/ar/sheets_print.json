@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "الورقة السابقة (Page Up)",
+ "sheets.print.next": "الورقة التالية (Page Down)",
+ "sheets.print.fit": "ملاءمة الصفحة (انقر مرتين)",
+ "sheets.print.no_sheets": "لا توجد أوراق للمعاينة",
+ "sheets.print.building": "جارٍ إنشاء الصفحة…",
+ "sheets.print.stop_build": "إيقاف",
+ "sheets.print.build_stopped": "توقف إنشاء الصفحة",
+ "sheets.print.retry": "إعادة الإنشاء",
+ "sheets.print.build_failed": "تعذّر إنشاء المعاينة"
+}

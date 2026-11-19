@@ -1,0 +1,16 @@
+{
+ "xlsx_recover.title": "Export do propojeného sešitu byl přerušen",
+ "xlsx_recover.both": "Export se zastavil mezi odsunutím předchozího sešitu a umístěním nového. Nic se neztratilo: nový sešit je kompletní v {part}, předchozí je ponechán v {bak}.",
+ "xlsx_recover.part_only": "Export se zastavil dříve, než byl nový sešit umístěn. Je kompletní v {part}.",
+ "xlsx_recover.bak_only": "Export se zastavil dříve, než byl nový sešit připraven. Předchozí sešit je ponechán v {bak}.",
+ "xlsx_recover.finish": "Dokončit přerušený export",
+ "xlsx_recover.restore": "Obnovit předchozí sešit",
+ "xlsx_recover.finished": "Přerušený export je dokončen: nový sešit je na místě.",
+ "xlsx_recover.finished_kept": "Přerušený export je dokončen: nový sešit je na místě, předchozí je ponechán v {bak}.",
+ "xlsx_recover.restored": "Předchozí sešit je zpět na místě.",
+ "xlsx_recover.restore_failed": "Předchozí sešit nelze vrátit zpět ({err}). Je ponechán v {path}.",
+ "xlsx_recover.not_restored": "Nový sešit nelze umístit na místo a předchozí nelze vrátit zpět. Nic se neztratilo: předchozí sešit je ponechán v {path}; Synchronizovat nabídne dokončení nebo obnovení.",
+ "xlsx_recover.finish_failed": "Nový sešit nelze umístit na místo ({err}). Zůstává v {path}.",
+ "xlsx_recover.dest_back": "Sešit je zpět v {path}: nic nebylo přesunuto.",
+ "xlsx_recover.nothing": "Z přerušeného exportu už nezbývá nic k přesunutí."
+}

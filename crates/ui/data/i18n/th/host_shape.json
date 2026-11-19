@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "ช่องเปิดหน้าต่างใต้หลังคา",
+ "cmd.arch.roof_opening": "ช่องเปิดหลังคา",
+ "cmd.arch.roof_extrusion": "หลังคาแบบอัดรีด",
+ "cmd.arch.ceiling_opening": "ช่องเปิดเพดาน",
+ "cmd.str.slab_opening": "ช่องเปิดพื้น",
+ "cmd.ctx.wall.detach": "แยกส่วนบน",
+ "cmd.ctx.floor.sketch": "แก้ไขขอบเขต",
+ "cmd.ctx.floor.shape": "แก้ไขรูปร่าง",
+ "host_shape.shape.elev_prompt": "ระดับความสูง มม.…",
+ "host_shape.shape.elev_mm": "{v} มม.",
+ "host_shape.sketch.no_host": "ไม่มีองค์ประกอบรองรับใต้ขอบเขตในระดับนี้",
+ "host_shape.issue.roof": "หลังคา {id}: {e}",
+ "host_shape.issue.ceiling": "เพดาน {id}: {e}",
+ "host_shape.status.select_slab": "เลือกพื้น",
+ "host_shape.status.select_walls": "เลือกผนัง",
+ "host_shape.status.no_roof_or_level": "ไม่มีหลังคาหรือระดับเหนือขึ้นไป",
+ "host_shape.status.top_attached": "ต่อปลายผนังแล้ว",
+ "host_shape.status.top_detached": "แยกปลายผนังแล้ว",
+ "host_shape.status.straight_wall": "ต้องใช้ผนังตรง",
+ "host_shape.status.roof_extruded": "สร้างหลังคาแบบอัดรีดแล้ว",
+ "warn.kind.cut": "ยังไม่ได้สร้างการตัดหรือการยึด"
+}

@@ -1,0 +1,8 @@
+{
+ "ai_sent.summary": "Dữ liệu dự án trong yêu cầu này: {messages} tin nhắn, {tools} kết quả công cụ, {images} hình ảnh",
+ "ai_sent.copy": "Sao chép",
+ "ai_sent.filter": "Tìm trong các yêu cầu đã gửi",
+ "ai_sent.no_match": "Không có yêu cầu nào khớp.",
+ "ai_sent.instructions": "Chỉ dẫn và công cụ",
+ "ai_sent.local_note": "Chỉ lưu trên máy tính này, cho phiên này. Khóa và mật khẩu không bao giờ được hiện."
+}

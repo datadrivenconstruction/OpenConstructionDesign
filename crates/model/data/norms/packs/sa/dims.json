@@ -1,0 +1,293 @@
+{
+ "items": [
+  {
+   "key": "stair.width_min",
+   "value": 1.2,
+   "unit": "m",
+   "source": "sa-momrah-res",
+   "clause": "section 5-1-12 item 2 (page 29 of the PDF)",
+   "url": "https://momah.gov.sa/sites/default/files/2024-07/ashtratat%20a%27nsha%20almbany%20alsknyt%20almnshwrt%20%60ly%20mwq%60%20alwzart%20.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "In residential apartment buildings (group R2) the main stair and its landing must be at least 1.2 m clear; the landing may not be narrower than the flight.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 from a rendered page image of the Arabic PDF"
+  },
+  {
+   "key": "stair.width_min.house",
+   "value": 0.9,
+   "unit": "m",
+   "source": "sa-momrah-res",
+   "clause": "section 5-1-12 item 2 (page 29 of the PDF)",
+   "url": "https://momah.gov.sa/sites/default/files/2024-07/ashtratat%20a%27nsha%20almbany%20alsknyt%20almnshwrt%20%60ly%20mwq%60%20alwzart%20.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "In villas (group R3) the main stair and landing need only 0.9 m clear.",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 from a rendered page image of the Arabic PDF"
+  },
+  {
+   "key": "ramp.slope_max",
+   "value": 0.0833,
+   "unit": "ratio",
+   "source": "sa-sbc201-2007-copy",
+   "clause": "2007 SBC 201 section 8.10 (egress ramp slope)",
+   "url": "https://fkec.com.sa/website/uploads/Architectural_Requirements.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Ramps in the means of egress may be no steeper than 1 in 12.",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: sbc.gov.sa (official 2018/2024 SBC 201 full text is paid), web search for the Saudi clause; only an unofficial hosted copy of the 2007 edition exists, which does not count as official; not verified by me"
+  },
+  {
+   "key": "accessible.turning_circle",
+   "value": 1.5,
+   "unit": "m",
+   "source": "sa-sbc",
+   "clause": "SBC 201 chapter 11 (accessibility), not read",
+   "url": "https://sbc.gov.sa/En/BC/Pages/BuildingCode/BCDetails.aspx?codeId=201&year=2024",
+   "accessed": "2026-11-14",
+   "paraphrase": "Wheelchair turning space of about 1.5 m diameter, as in the international code that SBC 201 follows.",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: sbc.gov.sa (official 2018/2024 SBC 201 full text is paid), web search for the Saudi clause; only an unofficial hosted copy of the 2007 edition exists, which does not count as official; not verified by me; also read expro.gov.sa/api/uploads/Universal Accessibility Guidelines.pdf: no numeric turning value"
+  },
+  {
+   "key": "egress.travel_max",
+   "value": 61,
+   "unit": "m",
+   "source": "sa-sbc201-2007-copy",
+   "clause": "2007 SBC 201 Table 8.15.1, group R",
+   "url": "https://fkec.com.sa/website/uploads/Architectural_Requirements.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Residential travel distance to an exit without sprinklers is about 61 m (76 m with sprinklers).",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ],
+    "sprinklered": false
+   },
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: sbc.gov.sa (official 2018/2024 SBC 201 full text is paid), web search for the Saudi clause; only an unofficial hosted copy of the 2007 edition exists, which does not count as official; not verified by me"
+  },
+  {
+   "key": "egress.travel_max.office",
+   "value": 61,
+   "unit": "m",
+   "source": "sa-sbc201-2007-copy",
+   "clause": "2007 SBC 201 Table 8.15.1, group B",
+   "url": "https://fkec.com.sa/website/uploads/Architectural_Requirements.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Business occupancy without sprinklers about 61 m (about 92 m with sprinklers).",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "sprinklered": false
+   },
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: sbc.gov.sa (official 2018/2024 SBC 201 full text is paid), web search for the Saudi clause; only an unofficial hosted copy of the 2007 edition exists, which does not count as official; not verified by me"
+  },
+  {
+   "key": "daylight.window_floor_ratio",
+   "value": 0.08,
+   "unit": "ratio",
+   "source": "sa-sbc201-2007-copy",
+   "clause": "2007 SBC 201 section 7.5.2",
+   "url": "https://fkec.com.sa/website/uploads/Architectural_Requirements.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Net glazed area for natural light must be at least 8 percent of the floor area of the room.",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: sbc.gov.sa (official 2018/2024 SBC 201 full text is paid), web search for the Saudi clause; only an unofficial hosted copy of the 2007 edition exists, which does not count as official; not verified by me"
+  },
+  {
+   "key": "door.clear_min.accessible",
+   "value": 0.81,
+   "unit": "m",
+   "source": "sa-sbc201-2007-copy",
+   "clause": "2007 SBC 201 section 8.6 size of doors",
+   "url": "https://fkec.com.sa/website/uploads/Architectural_Requirements.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Egress doors need at least 810 mm clear width.",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: sbc.gov.sa (official 2018/2024 SBC 201 full text is paid), web search for the Saudi clause; only an unofficial hosted copy of the 2007 edition exists, which does not count as official; not verified by me"
+  },
+  {
+   "key": "stair.riser_max",
+   "value": 0.18,
+   "unit": "m",
+   "source": "sa-sbc201-2007-copy",
+   "clause": "2007 SBC 201 section 8.9.3",
+   "url": "https://fkec.com.sa/website/uploads/Architectural_Requirements.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Common stair risers 180 mm maximum, 100 mm minimum.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: sbc.gov.sa (official 2018/2024 SBC 201 full text is paid), web search for the Saudi clause; only an unofficial hosted copy of the 2007 edition exists, which does not count as official; not verified by me"
+  },
+  {
+   "key": "stair.tread_min",
+   "value": 0.28,
+   "unit": "m",
+   "source": "sa-sbc201-2007-copy",
+   "clause": "2007 SBC 201 section 8.9.3",
+   "url": "https://fkec.com.sa/website/uploads/Architectural_Requirements.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Common stair tread depth at least 280 mm.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: sbc.gov.sa (official 2018/2024 SBC 201 full text is paid), web search for the Saudi clause; only an unofficial hosted copy of the 2007 edition exists, which does not count as official; not verified by me"
+  },
+  {
+   "key": "stair.riser_max.house",
+   "value": 0.2,
+   "unit": "m",
+   "source": "sa-sbc201-2007-copy",
+   "clause": "2007 SBC 201 section 8.9.3 exception 5",
+   "url": "https://fkec.com.sa/website/uploads/Architectural_Requirements.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "In villas and inside dwelling units the riser may be up to 200 mm.",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: sbc.gov.sa (official 2018/2024 SBC 201 full text is paid), web search for the Saudi clause; only an unofficial hosted copy of the 2007 edition exists, which does not count as official; not verified by me"
+  },
+  {
+   "key": "stair.tread_min.house",
+   "value": 0.25,
+   "unit": "m",
+   "source": "sa-sbc201-2007-copy",
+   "clause": "2007 SBC 201 section 8.9.3 exception 5",
+   "url": "https://fkec.com.sa/website/uploads/Architectural_Requirements.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "In villas and inside dwelling units the tread may be as little as 250 mm.",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: sbc.gov.sa (official 2018/2024 SBC 201 full text is paid), web search for the Saudi clause; only an unofficial hosted copy of the 2007 edition exists, which does not count as official; not verified by me"
+  },
+  {
+   "key": "room.height_min",
+   "value": 2.3,
+   "unit": "m",
+   "source": "sa-sbc201-2007-copy",
+   "clause": "2007 SBC 201 section 7.8.2",
+   "url": "https://fkec.com.sa/website/uploads/Architectural_Requirements.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Habitable spaces and corridors need at least 2.3 m ceiling height; kitchens and baths 2.2 m.",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: sbc.gov.sa (official 2018/2024 SBC 201 full text is paid), web search for the Saudi clause; only an unofficial hosted copy of the 2007 edition exists, which does not count as official; not verified by me"
+  },
+  {
+   "key": "room.height_min.office",
+   "value": 2.3,
+   "unit": "m",
+   "source": "sa-sbc201-2007-copy",
+   "clause": "2007 SBC 201 section 7.8.2",
+   "url": "https://fkec.com.sa/website/uploads/Architectural_Requirements.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Occupiable spaces including work rooms need at least 2.3 m ceiling height.",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: sbc.gov.sa (official 2018/2024 SBC 201 full text is paid), web search for the Saudi clause; only an unofficial hosted copy of the 2007 edition exists, which does not count as official; not verified by me"
+  },
+  {
+   "key": "corridor.width_min",
+   "value": 1.1,
+   "unit": "m",
+   "source": "sa-sbc201-2007-copy",
+   "clause": "8.16.2, corridor at least 1.1 m (900 mm for 50 occupants or fewer and inside a dwelling)",
+   "verified": false,
+   "url": "https://fkec.com.sa/website/uploads/Architectural_Requirements.pdf",
+   "accessed": "2026-11-15",
+   "paraphrase": "A corridor is at least 1.1 m wide, 900 mm for small loads or inside a dwelling.",
+   "note": "read 2026-11-15 in a copy of the 2007 SBC 201 edition; the 2024 edition was not opened, so the number stays unverified"
+  },
+  {
+   "key": "building.high_rise_height",
+   "value": 23.0,
+   "unit": "m",
+   "source": "sa-sbc201-2007-copy",
+   "clause": "2.15.3, high-rise: occupied floor more than 23 m above fire department access",
+   "verified": false,
+   "url": "https://fkec.com.sa/website/uploads/Architectural_Requirements.pdf",
+   "accessed": "2026-11-15",
+   "paraphrase": "A building with an occupied floor over 23 m above fire access is high-rise.",
+   "note": "read 2026-11-15 in a copy of the 2007 SBC 201 edition; the 2024 edition was not opened, so the number stays unverified"
+  },
+  {
+   "key": "stair.going_min",
+   "value": 0.28,
+   "unit": "m",
+   "source": "sa-sbc201-2007-copy",
+   "clause": "8.9.3, tread at least 280 mm (250 mm in dwellings, exception 5)",
+   "verified": false,
+   "url": "https://fkec.com.sa/website/uploads/Architectural_Requirements.pdf",
+   "accessed": "2026-11-15",
+   "paraphrase": "A stair tread is at least 280 mm.",
+   "note": "same clause as dim stair.tread_min"
+  },
+  {
+   "key": "guard.height_min",
+   "value": 1.1,
+   "unit": "m",
+   "source": "sa-sbc201-2007-copy",
+   "clause": "8.12.2, guards at least 1.1 m (860 to 960 mm on stairs inside dwellings)",
+   "verified": false,
+   "url": "https://fkec.com.sa/website/uploads/Architectural_Requirements.pdf",
+   "accessed": "2026-11-15",
+   "paraphrase": "A guard is at least 1.1 m high.",
+   "note": "read 2026-11-15 in a copy of the 2007 SBC 201 edition; the 2024 edition was not opened, so the number stays unverified"
+  },
+  {
+   "key": "building.class5_height",
+   "na": true,
+   "value": null,
+   "unit": "m",
+   "source": "sa-sbc201-2007-copy",
+   "verified": false,
+   "note": "na: buildings are grouped by occupancy and construction type with height and area tables; high-rise is building.high_rise_height",
+   "text": {
+    "en": "No 13 m building class.",
+    "ru": "Нет класса здания 13 м."
+   }
+  }
+ ]
+}

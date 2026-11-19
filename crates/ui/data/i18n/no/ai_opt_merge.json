@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "Slå sammen alternativ: {name}",
+ "ai_opt_merge.whole": "Slå sammen hele alternativet",
+ "ai_opt_merge.parts": "Slå sammen valgte deler",
+ "ai_opt_merge.note": "Hvorfor dette alternativet",
+ "ai_opt_merge.rebased": "Modellen ble endret etter at dette alternativet ble laget: sammenslåingen ble beregnet på nytt mot gjeldende modell. Kontroller endringene før du bruker dem.",
+ "ai_opt_merge.left.not_picked": "Ikke valgt fra alternativet",
+ "ai_opt_merge.left.unticked": "Fjernet haken i alternativet",
+ "ai_opt_merge.left.conflict": "Kan ikke legges til i gjeldende modell: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "Dette alternativet kan ikke slås sammen. Et avvist alternativ må gjenopprettes først.",
+ "ai_opt_merge.refused.stale": "Modellen ble endret etter at dette alternativet ble laget. Beregn sammenslåingen på nytt mot gjeldende modell.",
+ "ai_opt_merge.refused.nothing_picked": "Ingenting er valgt for sammenslåing.",
+ "ai_opt_merge.refused.unknown_item": "Element {item} er ikke en del av dette alternativet.",
+ "ai_opt_merge.refused.not_in_option": "Det valgte elementet er ikke en del av dette alternativet.",
+ "ai_opt_merge.refused.needs_left_out": "Element {item} krever element {needs}. Velg det også, eller tillat at avhengigheter legges til.",
+ "ai_opt_merge.refused.set_gone": "Element {item} viser til et utvalg som ikke finnes lenger. Generer alternativet på nytt.",
+ "ai_opt_merge.refused.busy": "En annen plan er åpen. Bruk eller avvis den først.",
+ "ai_opt_merge.refused.failed": "Sammenslåingen kunne ikke forberedes: {reason}",
+ "ai_opt_merge.revive": "Gjenopprett alternativ",
+ "ai_opt_merge.merged": "Sammenslått"
+}

@@ -1,0 +1,18 @@
+{
+ "props.multi.title": {
+  "one": "# องค์ประกอบ",
+  "other": "# องค์ประกอบ"
+ },
+ "props.multi.cats": {
+  "one": "# หมวดหมู่",
+  "other": "# หมวดหมู่"
+ },
+ "props.multi.varies": {
+  "one": "ต่างกัน (#)",
+  "other": "ต่างกัน (#)"
+ },
+ "props.multi.clear": "ล้างการเลือก",
+ "props.multi.undo": "เลิกทำ",
+ "props.multi.narrowed": "การเลือก: {n} · {name}",
+ "props.multi.chip_tip": "{name}: {n}  ·  คลิกเพื่อดูคุณสมบัติ, Ctrl+คลิกเพื่อเก็บเฉพาะรายการเหล่านี้"
+}

@@ -1,0 +1,4 @@
+{
+ "cmd.mgr.autosave_show": "Automatisch opslaan tonen",
+ "cmd.mgr.autosave_show.desc": "Opent het venster voor automatisch opslaan; het blijft open als het al zichtbaar is."
+}

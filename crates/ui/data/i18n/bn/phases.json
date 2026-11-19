@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D",
+ "phases.current_mark": "বর্তমান",
+ "phases.make_current": "বর্তমান করুন",
+ "phases.col_phase": "ফেজ",
+ "phases.col_filter": "ফিল্টার",
+ "phases.presets": "প্ল্যান প্রিসেট",
+ "phases.del_title": "ফেজ মুছুন",
+ "phases.del_text": "ফেজ \"{name}\" মুছবেন? এর উপাদানগুলো নিচে বাছা ফেজে সরে যাবে।",
+ "phases.del_into": "উপাদান সরান",
+ "phases.del_ok": "মুছুন",
+ "phases.col_kind": "উপাদানের ধরন",
+ "phases.col_count": "সংখ্যা",
+ "phases.col_volume": "আয়তন"
+}

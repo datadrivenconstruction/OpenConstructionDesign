@@ -1,0 +1,8 @@
+{
+ "v3d.home.tip": "홈 뷰",
+ "v3d.compass.n": "북",
+ "v3d.compass.e": "동",
+ "v3d.compass.s": "남",
+ "v3d.compass.w": "서",
+ "v3d.compass.tip": "나침반 — 끌어서 수직축 기준으로 뷰 회전"
+}

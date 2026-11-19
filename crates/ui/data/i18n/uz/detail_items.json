@@ -1,0 +1,16 @@
+{
+ "cmd.drawing.to_detail": "Chizmani detallarga",
+ "cmd.drawing.to_detail.desc": "Tanlangan chizma elementlarini yoki shu qavatdagi butun chizmani planda detal chiziqlari, matn izohlari va sohalarga aylantiradi. Chizma o'zgarishsiz qoladi.",
+ "detail_items.st.no_drawing": "Bu qavatda chizma yo'q",
+ "detail_items.st.nothing": "Aylantirish uchun hech narsa yo'q: ko'rsatilgan qatlamlarda chiziq, yoy, matn yoki to'ldirish yo'q",
+ "detail_items.st.done": "Detal elementlari qo'shildi: chiziqlar {lines}, matnlar {texts}, sohalar {regions}",
+ "detail_items.st.failed": "Detal elementlarini qo'shib bo'lmadi: {e}",
+ "detail_items.st.warn": "Detal elementlari qo'shildi, ammo ko'rinishni yangilash imkoni bo'lmadi (chiziqlar {lines}, matnlar {texts}, sohalar {regions}): {e}. Bekor qilish ularni olib tashlaydi.",
+ "detail_items.st.bad_view": "Detal elementlari uchun reja yoki kesim ko'rinishi kerak",
+ "detail_items.st.no_transform": "Bu ko'rinishda chizma uchun yaroqli koordinatalar tizimi yo'q; hech narsa qo'shilmadi",
+ "drafting_tools.free.plan_only": "Bu buyruq reja elementlari bilan ishlaydi; rejani oching",
+ "drafting_tools.free.zero": "Ikki nuqta ustma-ust tushadi; hech narsa qo'shilmadi",
+ "drafting_tools.free.select_first": "Avval taqsimlanadigan ko'rinish elementlarini tanlang",
+ "drafting_tools.free.pick_item": "Belgilash uchun bu ko'rinish elementini bosing",
+ "drafting_tools.free.dim_kind": "Chizma ko'rinishida faqat chiziqli o'lchamlar ishlaydi"
+}

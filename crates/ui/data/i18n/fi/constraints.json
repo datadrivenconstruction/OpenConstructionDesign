@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "Pitää tämän seinän nykyisen pituuden jokaisessa muokkauksessa",
+ "constraints.con.tip.lock_dist": "Pitää kahden seinän välisen etäisyyden jokaisessa muokkauksessa",
+ "constraints.con.tip.equal": "Pitää valittujen seinien väliset välit yhtä suurina",
+ "constraints.con.tip.align": "Pitää molemmat seinät samalla linjalla",
+ "constraints.con.tip.parallel": "Pitää seinät yhdensuuntaisina",
+ "constraints.con.tip.perp": "Pitää seinät suorassa kulmassa",
+ "constraints.con.tip.align_grid": "Pitää seinän lähimmällä ruudukkoviivalla",
+ "constraints.con.tip.lock_dist_grid": "Pitää seinän etäisyyden lähimpään ruudukkoviivaan",
+ "constraints.con.tip.level_gap": "Pitää tasojen välisen välin",
+ "constraints.con.tip.top_to_level": "Pitää seinän yläreunan tason yläpuolella"
+}

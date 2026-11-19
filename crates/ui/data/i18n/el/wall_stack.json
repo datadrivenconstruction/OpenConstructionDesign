@@ -1,0 +1,10 @@
+{
+ "wall_stack.we.stack_caption": "Σύνθετος τύπος",
+ "wall_stack.we.side_left": "Αριστερή όψη",
+ "wall_stack.we.side_right": "Δεξιά όψη",
+ "wall_stack.we.from": "Από",
+ "wall_stack.we.to": "Έως",
+ "wall_stack.we.bottom": "Κάτω",
+ "wall_stack.we.delete_tip": "Διαγραφή αυτού του προφίλ",
+ "wall_stack.we.from_after_to": "Το «Από» πρέπει να είναι πριν από το «Έως»"
+}

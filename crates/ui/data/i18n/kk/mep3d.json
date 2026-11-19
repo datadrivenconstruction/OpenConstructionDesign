@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "Желдеткіш арна",
+ "mep3d.pipe": "Құбыр",
+ "mep3d.tray": "Кабель эстакадасы",
+ "mep3d.conduit": "Кабель құбыры",
+ "mep3d.system": "Жүйе",
+ "mep3d.length": "Ұзындық",
+ "mep3d.diameter": "Диаметр",
+ "mep3d.width": "Ені",
+ "mep3d.height": "Биіктік",
+ "mep3d.insulation": "Оқшаулау",
+ "mep3d.tip": "Enter — қолдану; фитингтер қайта есептеледі",
+ "mep3d.size_positive": "өлшем нөлден үлкен болуы керек",
+ "mep3d.not_changed": "өзгертілмеді: {e}",
+ "mep3d.copied": "желі көшірілді",
+ "mep3d.changed": "желі өзгертілді",
+ "mep3d.deleted": "элементтер жойылды: {n}",
+ "mep3d.not_deleted": "жойылмады: {e}",
+ "mep3d.no_wall_type": "қабырға түрі жоқ",
+ "mep3d.demo.supply": "Беру S1",
+ "mep3d.demo.heating": "Жылыту",
+ "mep3d.demo.power": "Қуат"
+}

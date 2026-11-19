@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "Pominięte wiersze i komórki",
+ "xlsx_issues.conflicts_title": "Zmienione w obu miejscach",
+ "xlsx_issues.missing_title": "Brak arkusza w skoroszycie",
+ "xlsx_issues.look_alike_title": "Nazwa arkusza się nie zgadza",
+ "xlsx_issues.mass_title": "Masowe usunięcie wymaga potwierdzenia",
+ "xlsx_issues.sheets_missing": "Brakuje arkuszy {sheets} w skoroszycie (zmieniono nazwę lub usunięto); ich wierszy nie porównano.",
+ "xlsx_issues.keep_model": "Zachowaj model",
+ "xlsx_issues.take_book": "Przyjmij skoroszyt",
+ "xlsx_issues.open_book_tip": "Otwiera plik w jego aplikacji. Model się nie zmienia; podgląd odświeża się po zapisaniu skoroszytu."
+}

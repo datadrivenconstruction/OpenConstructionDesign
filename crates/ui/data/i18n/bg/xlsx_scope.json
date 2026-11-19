@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "Експорт към електронна таблица: обхват",
+ "xlsx_scope.intro": "Изберете какво да влезе в работната книга. Обратният импорт променя само тези елементи.",
+ "xlsx_scope.base_whole": "Целият модел",
+ "xlsx_scope.base_level": "Активно ниво",
+ "xlsx_scope.base_selection": "Избор",
+ "xlsx_scope.categories": "Категории",
+ "xlsx_scope.cat_walls": "стени",
+ "xlsx_scope.cat_openings": "врати",
+ "xlsx_scope.cat_rooms": "помещения",
+ "xlsx_scope.cat_slabs": "плочи",
+ "xlsx_scope.cat_curtains": "витринни стени",
+ "xlsx_scope.nothing_selected": "Нищо не е избрано: първо изберете елементи или друг обхват.",
+ "xlsx_scope.no_categories": "Отметнете поне една категория.",
+ "xlsx_scope.no_level": "Активното ниво не е намерено.",
+ "xlsx_scope.export": "Експорт",
+ "xlsx_scope.preview_scope": "Експортиран обхват: {scope}. Елементите извън него никога не се променят и не се изтриват."
+}

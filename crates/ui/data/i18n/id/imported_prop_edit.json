@@ -1,0 +1,6 @@
+{
+ "imported_prop_edit.remove": "Hapus properti",
+ "imported_prop_edit.remove.tip": "Menghapus properti dari {n} elemen terpilih dalam satu langkah undo; akan dibuang dari file IFC saat disimpan",
+ "imported_prop_edit.done": "{key} dihapus dari {n} elemen",
+ "imported_prop_edit.warn.reload": "Selesai, tetapi tampilan tidak disegarkan; buka ulang panel atau batalkan jika tampak salah"
+}

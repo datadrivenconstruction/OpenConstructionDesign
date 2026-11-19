@@ -1,0 +1,16 @@
+{
+ "save_fail.save_fail.title": "Project niet opgeslagen",
+ "save_fail.save_fail.kept": "Uw wijzigingen staan hier nog open. Er gaat niets verloren zolang de editor open blijft.",
+ "save_fail.save_fail.details": "Toelichting",
+ "save_fail.save_fail.copy": "Kopiëren",
+ "save_fail.save_fail.save_as": "Opslaan als…",
+ "save_fail.save_fail.retry": "Opnieuw proberen",
+ "save_fail.save_fail.close": "Sluiten",
+ "save_fail.cause.full": "De schijf is vol. Maak ruimte vrij of sla het project op een andere schijf op.",
+ "save_fail.cause.denied": "Deze map of dit bestand is alleen-lezen, of u hebt hier geen schrijfrechten. Kies een andere map.",
+ "save_fail.cause.locked": "Het bestand is open in een ander programma. Sluit het daar en druk op Opnieuw proberen.",
+ "save_fail.cause.missing": "De map bestaat niet meer. Kies een andere map, of herstel hem en druk op Opnieuw proberen.",
+ "save_fail.cause.offline": "De schijf of netwerkmap is niet beschikbaar. Verbind hem opnieuw en druk op Opnieuw proberen, of sla elders op.",
+ "save_fail.cause.too_long": "Het bestandspad is te lang. Kies een kortere map- of bestandsnaam.",
+ "save_fail.cause.other": "Het bestand kon niet worden geschreven: {detail}"
+}

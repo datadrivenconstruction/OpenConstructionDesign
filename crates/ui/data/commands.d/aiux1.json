@@ -1,0 +1,32 @@
+[
+ {
+  "id": "ai.mode_chat",
+  "icon": "ai-chat",
+  "mnemonic": null,
+  "shortcuts": ["Ctrl+Shift+J"],
+  "tab": null,
+  "surfaces": ["P"],
+  "stage": "M2",
+  "group": "ai"
+ },
+ {
+  "id": "ai.mode_build",
+  "icon": "ai-build",
+  "mnemonic": null,
+  "shortcuts": ["Ctrl+Shift+B"],
+  "tab": null,
+  "surfaces": ["P"],
+  "stage": "M2",
+  "group": "ai"
+ },
+ {
+  "id": "ai.mode_review",
+  "icon": "ai-review",
+  "mnemonic": null,
+  "shortcuts": ["Ctrl+Shift+R"],
+  "tab": null,
+  "surfaces": ["P"],
+  "stage": "M2",
+  "group": "ai"
+ }
+]

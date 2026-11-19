@@ -1,0 +1,5 @@
+{
+ "lv.level.deleted_attach": "Kat silindi; {n} duvarın üst bağlantısı kayboldu",
+ "lv.level.rooms": "{n} oda hedef kat yüksekliğini alır ({dz} m): {names}. Onaylamak için Taşı'ya yeniden basın",
+ "lv.level.pinned": "Kat silinmedi: sabitlenmiş elemanlar başka kata taşınamaz: {names}. Önce sabitlemeyi kaldırın"
+}

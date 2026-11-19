@@ -1,0 +1,8 @@
+brief = "Variable air volume box with an inlet connection; size types by inlet diameter."
+category = "equipment"
+must = param Length
+must = param Width
+must = solids >= 1
+must = ports 1
+must = port duct 1
+must = flex Length 720 1125

@@ -1,0 +1,21 @@
+{
+ "ai.receipt.title": {
+  "one": "# টি পরিবর্তন প্রয়োগ হয়েছে",
+  "other": "# টি পরিবর্তন প্রয়োগ হয়েছে"
+ },
+ "ai.receipt.more": "+{n}টি আরও",
+ "ai.receipt.list": "উপাদান",
+ "ai.receipt.show": "দেখান",
+ "ai.receipt.show.tip": "পরিবর্তিত উপাদান নির্বাচন ও ফ্রেম করুন",
+ "ai.receipt.undo": "পূর্বাবস্থা",
+ "ai.receipt.undo.tip": "ঠিক এই প্রয়োগটি ফিরিয়ে নিন",
+ "ai.receipt.undone": "পূর্বাবস্থা হয়েছে",
+ "ai.receipt.later": "এরপর সম্পাদনা হয়েছে",
+ "ai.receipt.toast_undone": "প্রয়োগ করা প্ল্যানটির পূর্বাবস্থা হয়েছে",
+ "ai.receipt.draft_family": "ড্রাফট ফ্যামিলি: {name}",
+ "ai.receipt.promote": "কার্যকর করুন",
+ "ai.receipt.promote.tip": "ড্রাফট ফ্যামিলিকে কার্যকর ফ্যামিলিতে রূপান্তর করুন (এক পূর্বাবস্থা ধাপ)",
+ "ai.receipt.promoted": "ফ্যামিলি এখন কার্যকর",
+ "ai.receipt.promote_failed": "ফ্যামিলিটি কার্যকর করা যায়নি",
+ "cmd.ai.receipt_undo": "শেষ AI প্ল্যান পূর্বাবস্থা"
+}

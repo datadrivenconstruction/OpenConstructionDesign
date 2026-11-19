@@ -1,0 +1,4 @@
+{
+ "vv_conflict.vv.switched": "Den aktiva vyn har ändrats. Dessa ändringar hör till {view} och är inte tillämpade ännu. Tillämpa skriver dem till {view}, Kassera tar bort dem.",
+ "vv_conflict.vv.discard": "Kassera ändringar"
+}

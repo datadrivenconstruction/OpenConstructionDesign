@@ -1,0 +1,14 @@
+{
+ "empty.v3d_model.title": "Nulla in 3D per ora",
+ "empty.v3d_model.hint": "Disegna muri nella pianta e compariranno qui.",
+ "empty.v3d_model.action": "Apri pianta",
+ "empty.v3d_hidden.title": "Tutti gli elementi sono nascosti in questa vista",
+ "empty.v3d_hidden.hint": "Il nascondimento o l'isolamento temporaneo non lascia nulla visibile. La grafica di vista resta com'è.",
+ "empty.v3d_hidden.action": "Mostra tutto",
+ "empty.v3d_graphics.title": "La grafica di vista nasconde tutte le categorie",
+ "empty.v3d_graphics.hint": "Le regole di categoria di questa vista non lasciano nulla visibile. Riattiva le categorie in Grafica di vista.",
+ "empty.v3d_graphics.action": "Apri grafica di vista",
+ "empty.v3d_box.title": "Il box di sezione è fuori dal modello",
+ "empty.v3d_box.hint": "Il box taglia via ogni elemento. Riportalo attorno al modello.",
+ "empty.v3d_box.action": "Ripristina box"
+}

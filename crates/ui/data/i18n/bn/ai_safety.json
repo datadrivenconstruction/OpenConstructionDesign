@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "ঠিকানায় কী",
+ "ai_safety.auth.query_name": "ঠিকানার প্যারামিটার",
+ "ai_safety.need_query_name": "কী বহনকারী ঠিকানার প্যারামিটারের নাম দিন",
+ "ai_safety.apply_unlogged": "প্রয়োগ হয়েছে, কিন্তু পরিবর্তনের লগ লেখা হয়নি",
+ "ai_safety.audit_unlogged": "AI সহকারীর লগ লেখা যায়নি",
+ "ai_safety.chat_not_saved": "চ্যাট প্রকল্পে সংরক্ষণ করা যায়নি। আবার চেষ্টা হচ্ছে।",
+ "ai_safety.clip_clears": "ক্লিপবোর্ড ৩০ সেকেন্ডে খালি হবে",
+ "ai_safety.copied_clears": "কপি হয়েছে। ক্লিপবোর্ড ৩০ সেকেন্ডে খালি হবে",
+ "ai_safety.key_session_only": "অ্যাপ বন্ধ হওয়া পর্যন্ত কী রাখা থাকবে",
+ "ai.settings.no_data_dir": "এই সিস্টেম অ্যাপ সেটিংসের জন্য কোনো ফোল্ডার দেয় না"
+}

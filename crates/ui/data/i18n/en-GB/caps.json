@@ -1,0 +1,5 @@
+{
+ "caps.refused": "{kinds}: {reason}. Nothing changed.",
+ "caps.panel": "A panel moves with its whole curtain wall. Select the wall",
+ "caps.unsupported": "This tool does not edit these elements"
+}

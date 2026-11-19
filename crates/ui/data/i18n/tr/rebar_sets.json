@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "1 takım ekle",
+ "rebar_sets.add_n": "{n} takım ekle",
+ "rebar_sets.pick.search": "Donatı tiplerinde ara",
+ "rebar_sets.pick.empty": "Eşleşen donatı tipi yok",
+ "rebar_sets.unit.deg": "°"
+}

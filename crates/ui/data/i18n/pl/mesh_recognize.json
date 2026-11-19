@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "Rozpoznano {done} z {total}",
+ "mesh_recognize.all": "Wszystkie {n}",
+ "mesh_recognize.only_confident": "Tylko pewne",
+ "mesh_recognize.confident_tip": "Zaznacza wiersze, których rodzaj pasuje do kategorii, a pewność wynosi co najmniej {pct}%",
+ "mesh_recognize.row_hint": "Kliknij wiersz, aby go zaznaczyć. Strzałki poruszają, Enter zaznacza.",
+ "mesh_recognize.kind_for": "Rodzaj dla {name}",
+ "mesh_recognize.source": "Siatki źródłowe",
+ "mesh_recognize.keep": "Zachowaj siatki",
+ "mesh_recognize.replace": "Zastąp siatki",
+ "mesh_recognize.convert_keep": "Konwertuj {n}",
+ "mesh_recognize.convert_remove": "Konwertuj {n} i usuń siatki",
+ "mesh_recognize.creates": "Utworzy {n}: {kinds}",
+ "mesh_recognize.creates_none": "Nic jeszcze nie zaznaczono",
+ "mesh_recognize.stay": "{n} siatek źródłowych pozostaje w modelu",
+ "mesh_recognize.removed": "{n} siatek źródłowych zostanie usuniętych. Cofnij je przywróci."
+}

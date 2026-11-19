@@ -1,0 +1,19 @@
+{
+ "ai.plan.apply_updated": "Apply updated plan",
+ "ai.plan.keys_anywhere": "Ctrl+Enter applies and Esc stops the request also from the plan or 3D view, unless a text field is being typed in.",
+ "ai.plan.rebased": "Updated against the current model: {what}",
+ "ai.value.bad": "\"{text}\" is not a valid value for {name}",
+ "ai.value.bad_len": "{name}: {why}",
+ "ai.value.both": "The AI assistant changed this value to {agent} while you entered {mine}. Pick the one to keep.",
+ "ai.value.choose_first": "Pick your value or the AI assistant's on the card first",
+ "ai.value.elem": "Element {n}: {what}",
+ "ai.value.held": "Your value {mine} goes in when the request finishes",
+ "ai.value.keep_agent": "Keep {agent}",
+ "ai.value.lost": "Your value {mine} for {what} in \"{title}\" was not used: the AI assistant took that value off the card",
+ "ai.value.more": "{n} more values: expand the row",
+ "ai.value.refused": "The plan could not take this value and keeps the previous one: {why}",
+ "ai.value.refused_next": "Enter another value, or untick the item to leave it out of Apply.",
+ "ai.value.tip": "Correct the value in the draft; the model changes only on Apply. Enter confirms, Esc restores.",
+ "ai.value.use_mine": "Use {mine}",
+ "ai.value.was": "was {old}"
+}

@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "Šachty",
+ "quick.cat.shaft": "Šachta",
+ "shaft_tool.browser.shaft": "Šachta č. {id}",
+ "shaft_tool.shaft.top": "Horní podlaží",
+ "shaft_tool.shaft.cuts": "Prvky řezané šachtou",
+ "shaft_tool.shaft.cut_area": "Plocha řezu",
+ "shaft_tool.shaft.cut_volume": "Objem řezu",
+ "elem.no.rooms": "Řídí se místnostmi, které obsahuje"
+}

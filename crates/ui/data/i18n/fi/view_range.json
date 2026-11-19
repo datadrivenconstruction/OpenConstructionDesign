@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "Näkymän väli",
+ "view_range.range": "Näkymän väli",
+ "view_range.cut": "Leikkaustaso",
+ "view_range.bottom": "Alareuna",
+ "view_range.depth": "Näkymän syvyys",
+ "view_range.cut.hint": "Leikkaustason korkeus tason yläpuolella. Sitä leikkaavat elementit piirretään leikattuina.",
+ "view_range.bottom.hint": "Välin alareuna tasoon nähden. Nolla tai negatiiviset arvot sallittu.",
+ "view_range.depth.hint": "Kuinka pitkälle näkymä katsoo alareunan alapuolelle. Nolla tai enemmän.",
+ "view_range.err.number": "Anna pituus jokaiseen kenttään",
+ "view_range.err.not_finite": "Anna pituus jokaiseen kenttään",
+ "view_range.err.cut_not_above_bottom": "Leikkaustason on oltava alareunan yläpuolella",
+ "view_range.err.negative_depth": "Näkymän syvyys ei voi olla negatiivinen",
+ "view_range.err.top_below_cut": "Välin yläreuna ei saa olla leikkaustason alapuolella"
+}

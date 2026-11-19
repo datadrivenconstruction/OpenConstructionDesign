@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "自由曲面",
+ "cmd.mass.panelize": "划分为板块",
+ "cmd.mass.surface_shell": "沿曲面的屋盖",
+ "cmd.mass.thicken": "加厚",
+ "hint.mass.freeform.first": "自由曲面：平面矩形的第一个角点 · 输入矢高 · Esc — 取消",
+ "hint.mass.freeform.next": "自由曲面：对角点 · 输入矢高 · Esc — 取消",
+ "hint.mass.panelize.first": "划分板块：在 3D 中选择自由曲面 · Esc — 取消",
+ "hint.mass.panelize.value": "划分板块：输入板块尺寸 · Enter — 应用 · Esc — 取消",
+ "hint.mass.surface_shell.first": "沿曲面的屋盖：在 3D 中选择自由曲面 · Esc — 取消",
+ "hint.mass.surface_shell.value": "沿曲面的屋盖：输入厚度 · Enter — 应用 · Esc — 取消",
+ "hint.mass.thicken.first": "加厚：在 3D 中选择自由曲面 · Esc — 取消",
+ "hint.mass.thicken.value": "加厚：输入厚度（0 — 仅曲面）· Enter — 应用 · Esc — 取消",
+ "status.mass.pick_surface": "请选择自由曲面",
+ "status.mass.freeform_small": "矩形太小：每个方向至少 0.5 米",
+ "name.mass.freeform": "自由曲面",
+ "rgroup.mass_free": "高级"
+}

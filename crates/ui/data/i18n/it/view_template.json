@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "Inserisci prima un nome per il modello",
+ "view_template.name_taken": "Esiste già un modello con questo nome",
+ "view_template.pick_blocked": "Seleziona almeno una vista",
+ "view_template.views.one": "{n} vista",
+ "view_template.views.few": "{n} viste",
+ "view_template.views.many": "{n} viste",
+ "view_template.delete.title": "Eliminare questo modello?",
+ "view_template.delete.body": "Il modello \"{name}\" verrà eliminato. Usato da {used}.",
+ "view_template.delete.unused": "Il modello \"{name}\" verrà eliminato. Nessuna vista lo usa.",
+ "view_template.delete.keeps": "Queste viste mantengono la grafica attuale e perdono il collegamento.",
+ "view_template.delete.undo": "Puoi annullare con un solo Annulla.",
+ "view_template.delete.confirm": "Elimina modello"
+}

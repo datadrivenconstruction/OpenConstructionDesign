@@ -1,0 +1,4 @@
+{
+ "family_load.refused": "Rodziny “{name}” nie można wczytać: {msg}. Nic nie wczytano do projektu; Twoje zmiany zostały zachowane.",
+ "family_load.loaded_all": "Wczytano {n} rodzin w jednym kroku: {names}"
+}

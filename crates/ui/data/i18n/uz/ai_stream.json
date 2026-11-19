@@ -1,0 +1,14 @@
+{
+ "ai.stream.waiting": "Model javobi kutilmoqda",
+ "ai.stream.reading": "Model o'qilmoqda",
+ "ai.stream.working": "Ishlamoqda",
+ "ai.stream.answering": "Javob yozilmoqda",
+ "ai.stream.tools_one": "1 ta vosita",
+ "ai.stream.tools_many": "{n} ta vosita",
+ "ai.stream.secs": "{n} s",
+ "ai.stream.stalled": "Hali ham model xizmati javobi kutilmoqda",
+ "ai.stream.stop": "To'xtatish",
+ "ai.stream.cancelled": "To'xtatildi",
+ "ai.stream.incomplete": "Qoralama to'liq emas. Modelga hech narsa qo'llanmadi.",
+ "ai.stream.sep": " · "
+}

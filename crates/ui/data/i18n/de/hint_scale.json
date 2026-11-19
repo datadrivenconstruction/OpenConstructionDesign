@@ -1,0 +1,10 @@
+{
+ "cmd.mod.scale": "Skalieren",
+ "cmd.mod.scale.desc": "Elemente auswählen, dann Basispunkt, Bezugslänge und neue Länge anklicken oder einen Faktor eingeben.",
+ "hint.scale.select": "Skalieren: Elemente auswählen · Enter — fertig",
+ "hint.scale.first": "Skalieren: Basispunkt wählen · Esc — abbrechen",
+ "hint.scale.second": "Skalieren: Bezugslänge wählen · Zahl — Faktor · Esc — abbrechen",
+ "hint.scale.third": "Skalieren: neue Länge wählen · Zahl — Faktor · Esc — abbrechen",
+ "scl.bad_factor": "Der Skalierungsfaktor muss eine Zahl größer als null sein",
+ "scl.zero_ref": "Die Bezugslänge ist null: Wählen Sie einen Punkt abseits des Basispunkts"
+}

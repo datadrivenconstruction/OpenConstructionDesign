@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "mätt {value}, gräns {limit}",
+ "ai_checks.check.cap": "Visar {shown} av {total} fynd. Fel visas först: rätta dem och kör på nytt.",
+ "ai_checks.check.run_again": "Kör igen",
+ "ai_checks.check.goto": "Markera och zooma",
+ "ai_checks.check.never_title": "Inte kontrollerad ännu",
+ "ai_checks.check.never_hint": "Kör kontrollerna så visas fynden här.",
+ "ai_checks.check.sec.error": "Fel",
+ "ai_checks.check.sec.warning": "Varningar",
+ "ai_checks.check.sec.info": "Noteringar"
+}

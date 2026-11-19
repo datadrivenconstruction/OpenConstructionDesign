@@ -1,0 +1,23 @@
+{
+  "cmd.arch.room_sep.short": "Роздільник",
+  "cmd.str.footing.short": "Фунд. колони",
+  "cmd.str.strip_footing.short": "Стрічк. фунд.",
+  "cmd.str.analytical.short": "Аналітичний",
+  "cmd.mep.terminal.short": "Повітр. вихід",
+  "cmd.mod.isolate.short": "Ізолювати",
+  "cmd.view.ui.short": "Інтерфейс",
+  "cmd.mgr.params.short": "Параметри",
+  "cmd.ctx.wall.attach.short": "Приєднати",
+  "cmd.mass.unjoin.short": "Роз'єднати",
+  "cmd.mod.unjoin.short": "Роз'єднати",
+  "cmd.arch.void_extrusion.short": "Екстр. порож.",
+  "cmd.e3d.snap.short": "3D прив'язки",
+  "cmd.mgr.open_big.short": "Великий файл…",
+  "cmd.site.edit_points.short": "Точки рельєфу",
+  "cmd.view.reveal_3d.short": "Категорії",
+  "cmd.help.check_update.short": "Оновлення",
+  "cmd.ctx.floor.link_unlink.short": "Від'єд. ребра",
+  "cmd.ui.onboarding.short": "Налаштувати…",
+  "cmd.mod.distribute.short": "Розподілити",
+  "cmd.data.src_delta.short": "Зміни в XLSX…"
+}

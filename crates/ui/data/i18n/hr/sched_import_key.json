@@ -1,0 +1,6 @@
+{
+ "sched_import.no_key": "Ova knjiga nema zapis izvoza (stariji izvoz): ćelije promijenjene u modelu nakon tog izvoza mogu se prepisati. Provjerite promijenjene ćelije prije primjene.",
+ "sched_import.n_kept": "Promijenjeno u modelu nakon izvoza, zadržano: {n}",
+ "sched_import.n_conflict": "Promijenjeno i u knjizi i u modelu, nije primijenjeno: {n}",
+ "sched_import.why_conflict": "promijenjeno u modelu nakon izvoza (sada {model}), nije primijenjeno"
+}

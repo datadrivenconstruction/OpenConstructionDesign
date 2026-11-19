@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "Застосування скасовано: модель не відповідала перегляду. {what}",
+ "xlsx_verify.not_written": "{row} не змінено.",
+ "xlsx_verify.lost": "{row} зник.",
+ "xlsx_verify.not_deleted": "{row} не видалено.",
+ "xlsx_verify.extra_deleted": "{row} видалено, хоча в перегляді його збережено.",
+ "xlsx_verify.created": "{table}: {got} нових замість {want}.",
+ "xlsx_verify.value": "{row}, {field}: очікувалось {want} (було {old}), отримано {got}.",
+ "xlsx_verify.check_failed": "Результат не вдалося перевірити: {e}",
+ "xlsx_verify.plan_failed": "Застосування не запущено: перевірка не змогла прочитати модель ({e}).",
+ "xlsx_verify.take_back_failed": "Крок не вдалося скасувати ({e}): скористайтеся «Скасувати».",
+ "xlsx_verify.t.wall": "Стіна",
+ "xlsx_verify.t.opening": "Отвір",
+ "xlsx_verify.t.room": "Приміщення",
+ "xlsx_verify.t.slab": "Перекриття",
+ "xlsx_verify.t.level": "Рівень",
+ "xlsx_verify.t.wall_type": "Тип стіни",
+ "xlsx_verify.t.slab_type": "Тип перекриття",
+ "xlsx_verify.t.col": "Колона",
+ "xlsx_verify.t.beam": "Балка",
+ "xlsx_verify.t.roof": "Дах",
+ "xlsx_verify.t.curtain_wall": "Навісна стіна"
+}

@@ -1,0 +1,4 @@
+{
+ "cmd.data.sync_xlsx": "Sincronizar com uma planilha…",
+ "cmd.data.sync_xlsx.desc": "Relê a planilha vinculada e mostra as diferenças em relação ao modelo."
+}

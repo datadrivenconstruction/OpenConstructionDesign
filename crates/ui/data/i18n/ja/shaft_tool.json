@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "シャフト",
+ "quick.cat.shaft": "シャフト",
+ "shaft_tool.browser.shaft": "シャフト #{id}",
+ "shaft_tool.shaft.top": "上端レベル",
+ "shaft_tool.shaft.cuts": "切り取る要素",
+ "shaft_tool.shaft.cut_area": "切り取り面積",
+ "shaft_tool.shaft.cut_volume": "切り取り体積",
+ "elem.no.rooms": "保持している部屋に追従します"
+}

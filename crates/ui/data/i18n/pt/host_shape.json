@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "Abertura de água-furtada",
+ "cmd.arch.roof_opening": "Abertura na cobertura",
+ "cmd.arch.roof_extrusion": "Cobertura por extrusão",
+ "cmd.arch.ceiling_opening": "Abertura no teto",
+ "cmd.str.slab_opening": "Abertura na laje",
+ "cmd.ctx.wall.detach": "Desprender topo",
+ "cmd.ctx.floor.sketch": "Editar contorno",
+ "cmd.ctx.floor.shape": "Editar forma",
+ "host_shape.shape.elev_prompt": "cota, mm…",
+ "host_shape.shape.elev_mm": "{v} mm",
+ "host_shape.sketch.no_host": "nenhum elemento hospedeiro sob o contorno neste nível",
+ "host_shape.issue.roof": "cobertura {id}: {e}",
+ "host_shape.issue.ceiling": "teto {id}: {e}",
+ "host_shape.status.select_slab": "selecione uma laje",
+ "host_shape.status.select_walls": "selecione paredes",
+ "host_shape.status.no_roof_or_level": "nenhuma cobertura ou nível acima",
+ "host_shape.status.top_attached": "topos das paredes presos",
+ "host_shape.status.top_detached": "topos das paredes soltos",
+ "host_shape.status.straight_wall": "é necessária uma parede reta",
+ "host_shape.status.roof_extruded": "cobertura por extrusão criada",
+ "warn.kind.cut": "Corte ou fixação não criados"
+}

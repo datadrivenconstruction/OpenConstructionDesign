@@ -1,0 +1,8 @@
+{
+ "undo.undone": "Αναιρέθηκε: {what}",
+ "undo.redone": "Έγινε επανάληψη: {what}",
+ "undo.action.edit.redo": "Επανάληψη",
+ "undo.action.edit.undo": "Αναίρεση",
+ "hdr.unsaved": "Μη αποθηκευμένες αλλαγές",
+ "hdr.file_menu": "Μενού αρχείου"
+}

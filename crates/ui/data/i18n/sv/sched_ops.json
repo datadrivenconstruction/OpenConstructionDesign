@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "värdet måste vara större än noll",
+ "sched_ops.not_number": "inte ett tal",
+ "sched_ops.no_host": "ingen värdvägg",
+ "sched_ops.wall_length": "den här väggens längd kan inte sättas så",
+ "sched_ops.no_wall": "ingen sådan vägg",
+ "sched_ops.no_opening": "ingen sådan öppning",
+ "sched_ops.no_curtain": "ingen sådan glasvägg",
+ "sched_ops.no_panel": "ingen sådan panel",
+ "sched_ops.no_slab": "ingen sådan platta",
+ "sched_ops.no_room": "inget sådant rum",
+ "sched_ops.slope_range": "lutningen ligger utanför intervallet",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

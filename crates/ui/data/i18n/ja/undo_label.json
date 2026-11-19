@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "元に戻す: {what}",
+ "undo_label.redo_what": "やり直し: {what}",
+ "undo_label.undo_none": "元に戻す操作がありません",
+ "undo_label.redo_none": "やり直す操作がありません"
+}

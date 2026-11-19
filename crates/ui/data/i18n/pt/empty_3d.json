@@ -1,0 +1,14 @@
+{
+ "empty.v3d_model.title": "Nada em 3D ainda",
+ "empty.v3d_model.hint": "Desenhe paredes na planta e elas aparecerão aqui.",
+ "empty.v3d_model.action": "Abrir planta",
+ "empty.v3d_hidden.title": "Todos os elementos estão ocultos nesta vista",
+ "empty.v3d_hidden.hint": "Ocultar ou isolar temporariamente não deixa nada visível. Os gráficos da vista permanecem como definidos.",
+ "empty.v3d_hidden.action": "Mostrar tudo",
+ "empty.v3d_graphics.title": "Os gráficos da vista ocultam todas as categorias",
+ "empty.v3d_graphics.hint": "As regras de categoria desta vista não deixam nada visível. Reative as categorias em Gráficos da vista.",
+ "empty.v3d_graphics.action": "Abrir gráficos da vista",
+ "empty.v3d_box.title": "A caixa de corte está fora do modelo",
+ "empty.v3d_box.hint": "A caixa corta todos os elementos. Ajuste-a de volta ao redor do modelo.",
+ "empty.v3d_box.action": "Redefinir caixa"
+}

@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "Nyckel i adressen",
+ "ai_safety.auth.query_name": "Adressparameter",
+ "ai_safety.need_query_name": "Ange adressparametern som bär nyckeln",
+ "ai_safety.apply_unlogged": "Tillämpad, men ändringsloggen skrevs inte",
+ "ai_safety.audit_unlogged": "AI-assistentens logg kunde inte skrivas",
+ "ai_safety.chat_not_saved": "Chatten kunde inte sparas i projektet. Försöker igen.",
+ "ai_safety.clip_clears": "Urklipp rensas om 30 s",
+ "ai_safety.copied_clears": "Kopierad. Urklipp rensas om 30 s",
+ "ai_safety.key_session_only": "Nyckeln behålls till appen stängs",
+ "ai.settings.no_data_dir": "systemet ger ingen mapp för appinställningar"
+}

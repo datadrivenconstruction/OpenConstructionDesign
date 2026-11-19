@@ -1,0 +1,8 @@
+{
+ "api.cmd.norms_lookup": "Trouver les règles du jeu de normes du projet par thème, élément ou code",
+ "api.cmd.norms_check": "Vérifier le modèle selon le jeu de normes du projet et lister les constats",
+ "api.cmd.norms_programme": "Programme type de locaux du pays du projet pour un type de bâtiment",
+ "api.cmd.select_similar": "Sélectionner tous les éléments semblables : même type ou catégorie, à ce niveau ou dans tout le projet",
+ "api.cmd.create_drawing_set": "Préparer un jeu de dessins imprimable : plans, coupes, élévations, tableaux et cartouches",
+ "api.cmd.deliver_project": "Du brief aux fichiers en une étape : le projet et son jeu de dessins, exportés après Appliquer"
+}

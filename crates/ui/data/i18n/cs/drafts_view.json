@@ -1,0 +1,9 @@
+{
+ "drafts.draft.view": "Grafika pohledu „{name}“",
+ "drafts.draft.filter": "Filtr pohledu „{name}“",
+ "drafts.draft.filter_new": "Nový filtr pohledu",
+ "drafts.draft.object_styles": "Styly objektů",
+ "drafts.draft.material": "Materiál „{name}“",
+ "drafts.draft.type": "Typ „{name}“",
+ "drafts.draft.params": "Parametry rodiny „{name}“"
+}

@@ -1,0 +1,4 @@
+{
+ "tool.err.drawing_open": "Čáry výkresu kolem tohoto bodu se neuzavírají do smyčky",
+ "tool.err.drawing_crossing": "Kontura výkresu kolem tohoto bodu se protíná sama se sebou"
+}

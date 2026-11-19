@@ -1,0 +1,8 @@
+{
+ "script_rec.started": "Nagrywanie: zmiany wykonane od tej chwili trafią do skryptu. Aby zakończyć, ponownie wybierz „Zapisz działania do skryptu”.",
+ "script_rec.saved": "Skrypt „{name}” zapisany: zmian — {n}.",
+ "script_rec.skipped": "Zmiany narzędzi bez formy skryptowej nie zostały zapisane: {k}.",
+ "script_rec.nothing": "Nagrywanie zatrzymane: brak zmian do zapisania.",
+ "script_rec.failed": "Nagranie nie zostało zapisane: {why}",
+ "script_rec.no_folder": "brak folderu ustawień dla skryptów"
+}

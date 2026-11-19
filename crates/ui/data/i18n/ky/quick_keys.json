@@ -1,0 +1,6 @@
+{
+ "quick.keys.rec_hint": "Esc жокко чыгарат · Backspace тазалайт",
+ "quick.keys.row_lost": "{key} эми “{cmd}” буйругуна таандык",
+ "quick.keys.row_took": "{key} “{cmd}” буйругунан алынды",
+ "quick.keys.reset_tip": "Демейкиге кайтаруу"
+}

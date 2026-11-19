@@ -1,0 +1,7 @@
+{
+ "messages.title": "Zprávy",
+ "messages.desc": "Historie oznámení. Žádná nová upozornění ani chyby.",
+ "messages.desc_new": "Nových upozornění nebo chyb: {n}. Kliknutím je přečtete.",
+ "messages.copy": "Kopírovat vše",
+ "messages.clear": "Vymazat vše"
+}

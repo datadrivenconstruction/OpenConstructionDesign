@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "Importerade meshar",
+ "mat_mesh.mesh.none_selected": "Välj importerade meshar i 3D-vyn för att ge dem det här materialet.",
+ "mat_mesh.mesh.current": "Första valda mesh: {material}",
+ "mat_mesh.mesh.current_none": "Första valda mesh har inget material.",
+ "mat_mesh.mesh.assign": "Tilldela {n} valda",
+ "mat_mesh.mesh.assign_tip": "Realistisk stil visar materialets struktur på de valda mesharna",
+ "mat_mesh.mesh.assign_cat": "Tilldela kategorin {category}",
+ "mat_mesh.mesh.assign_cat_tip": "Varje importerad mesh i kategorin utan eget material",
+ "mat_mesh.mesh.clear": "Rensa valda",
+ "mat_mesh.mesh.clear_tip": "Valda meshar går tillbaka till sitt kategorimaterial eller den vanliga färgen",
+ "mat_mesh.mesh.clear_cat": "Rensa kategori"
+}

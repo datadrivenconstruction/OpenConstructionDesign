@@ -1,0 +1,6 @@
+{
+ "sched_import.no_key": "Dit werkboek heeft geen exportrecord (een oudere export): cellen die na die export in het model zijn gewijzigd, kunnen worden overschreven. Controleer de gewijzigde cellen voor Toepassen.",
+ "sched_import.n_kept": "Na de export in het model gewijzigd, behouden: {n}",
+ "sched_import.n_conflict": "In zowel het werkboek als het model gewijzigd, niet toegepast: {n}",
+ "sched_import.why_conflict": "na de export in het model gewijzigd (nu {model}), niet toegepast"
+}

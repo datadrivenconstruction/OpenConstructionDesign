@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "Pasted {n} cells",
+ "sched_edit.pasted_skipped": "Pasted {n} cells, skipped {k}: {why}",
+ "sched_edit.filled": "Filled {n} cells",
+ "sched_edit.filled_skipped": "Filled {n} cells, skipped {k}: {why}",
+ "sched_edit.why_ro": "{n} read-only",
+ "sched_edit.why_bad": "{n} bad value",
+ "sched_edit.no_cell": "Click a cell in the schedule first",
+ "sched_edit.nothing": "Nothing to write",
+ "sched_edit.not_refreshed": "Written, the view did not refresh: {e}",
+ "sched_edit.failed": "not changed: {e}",
+ "sched_edit.no_changes": "No changes: {u} cells already hold these values",
+ "sched_edit.same_tail": ", {u} already equal"
+}

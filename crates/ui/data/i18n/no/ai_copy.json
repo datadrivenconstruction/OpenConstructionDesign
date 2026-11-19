@@ -1,0 +1,8 @@
+{
+ "cmd.file.save_copy": "Lagre en kopi til andre…",
+ "cmd.file.save_copy.desc": "Lagrer en kopi av prosjektet uten AI-samtykke og, med mindre du velger noe annet, uten AI-loggen. Dette prosjektet forblir uendret.",
+ "ai.copy.title": "Lagre en kopi",
+ "ai.copy.journal": "Ta med AI-loggen i kopien? Loggen inneholder forespørsler, svar og adresser. Samtykke til sky kopieres aldri: den andre personen bestemmer selv. Velg Nei for å utelate loggen.",
+ "ai.copy.done": "Kopi lagret: {name}",
+ "ai.copy.same": "Velg en annen fil: en kopi kan ikke erstatte det åpne prosjektet."
+}

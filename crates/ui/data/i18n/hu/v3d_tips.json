@@ -1,0 +1,8 @@
+{
+ "v3d.proj.to_ortho": "Váltás ortogonális vetítésre",
+ "v3d.proj.to_persp": "Váltás perspektivikus vetítésre",
+ "v3d.walk.unit.m": "m/s",
+ "v3d.walk.unit.ft": "ft/s",
+ "v3d.temp.show_all": "Összes megjelenítése  ·  Esc",
+ "v3d.msg.deleted_named": "A(z) {name} 3D-nézet törölve"
+}

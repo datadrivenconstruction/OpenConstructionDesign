@@ -1,0 +1,13 @@
+{
+ "topo.unit.mm": "mm",
+ "topo.unit.metre": "m",
+ "topo.unit.ft": "fot",
+ "topo.opt.material": "Materialtyp",
+ "topo.row.active": "Aktiv yta",
+ "topo.btn.delete_pad": "Ta bort platta",
+ "topo.info.loading": "Bygger ytan…",
+ "topo.info.warn_n": "{n} varningar",
+ "topo.info.points_label": "Punkter",
+ "topo.import.all_layers": "Alla lager",
+ "topo.import.need_layer": "Markera minst ett lager"
+}

@@ -1,0 +1,379 @@
+[
+ {
+  "id": "mass.extrude",
+  "icon": "solid-extrude",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "mass",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "mass",
+  "repeatable": true,
+  "size": "large",
+  "variants": [
+   "mass.revolve",
+   "mass.sweep",
+   "mass.blend",
+   "mass.swept_blend"
+  ]
+ },
+ {
+  "id": "mass.revolve",
+  "icon": "solid-revolve",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "mass",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "mass",
+  "repeatable": true
+ },
+ {
+  "id": "mass.sweep",
+  "icon": "solid-sweep",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "mass",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "mass",
+  "repeatable": true
+ },
+ {
+  "id": "mass.blend",
+  "icon": "solid-blend",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "mass",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "mass",
+  "repeatable": true
+ },
+ {
+  "id": "mass.swept_blend",
+  "icon": "solid-swept-blend",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "mass",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "mass",
+  "repeatable": true
+ },
+ {
+  "id": "mass.void",
+  "icon": "void-form",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "mass",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "mass",
+  "repeatable": true,
+  "priority": 4
+ },
+ {
+  "id": "mass.push_pull",
+  "icon": "push-pull",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "mass",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "mass_edit",
+  "size": "large"
+ },
+ {
+  "id": "mass.fillet",
+  "icon": "fillet",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "mass",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "mass_edit",
+  "priority": 5
+ },
+ {
+  "id": "mass.chamfer",
+  "icon": "chamfer",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "mass",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "mass_edit",
+  "priority": 5
+ },
+ {
+  "id": "mass.shell",
+  "icon": "shell",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "mass",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "mass_edit",
+  "priority": 5
+ },
+ {
+  "id": "mass.offset",
+  "icon": "offset-face",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "mass",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "mass_edit",
+  "priority": 5
+ },
+ {
+  "id": "mass.split_face",
+  "icon": "split-face",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "mass",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "mass_edit",
+  "priority": 5
+ },
+ {
+  "id": "mass.push_region",
+  "icon": "push-region",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "mass",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "mass_edit",
+  "priority": 5
+ },
+ {
+  "id": "mass.draft",
+  "icon": "draft",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "mass",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "mass_edit",
+  "priority": 5
+ },
+ {
+  "id": "mass.paint",
+  "icon": "paint",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "mass",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "mass_edit",
+  "priority": 4
+ },
+ {
+  "id": "mass.union",
+  "icon": "mass-union",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "mass",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "mass_join",
+  "priority": 4
+ },
+ {
+  "id": "mass.subtract",
+  "icon": "mass-subtract",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "mass",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "mass_join",
+  "priority": 4
+ },
+ {
+  "id": "mass.intersect",
+  "icon": "mass-intersect",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "mass",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "mass_join",
+  "priority": 4
+ },
+ {
+  "id": "mass.join",
+  "icon": "join-geom",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "mass",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "mass_join",
+  "priority": 6
+ },
+ {
+  "id": "mass.unjoin",
+  "once": true,
+  "icon": "unjoin-geom",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "mass",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "mass_join",
+  "priority": 6
+ },
+ {
+  "id": "mass.cut",
+  "icon": "cut-geom",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "mass",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "mass_join",
+  "priority": 6
+ },
+ {
+  "id": "mass.wall_by_face",
+  "icon": "wall-face",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "mass",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "mass_face",
+  "repeatable": true,
+  "priority": 4
+ },
+ {
+  "id": "mass.curtain_by_face",
+  "icon": "curtain-face",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "mass",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "mass_face",
+  "repeatable": true,
+  "priority": 4
+ },
+ {
+  "id": "mass.slab_by_face",
+  "icon": "slab-face",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "mass",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "mass_face",
+  "repeatable": true,
+  "priority": 4
+ },
+ {
+  "id": "mass.roof_by_face",
+  "icon": "roof-face",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "mass",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "mass_face",
+  "repeatable": true,
+  "priority": 4
+ },
+ {
+  "id": "mass.floors",
+  "icon": "mass-floors",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "mass",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "mass_face",
+  "priority": 4
+ }
+]

@@ -1,0 +1,19 @@
+{
+ "names.level": "레벨 {n}",
+ "names.slab": "슬래브 200",
+ "names.roof_slab": "지붕 200",
+ "names.sheet.plan_section": "1층 평면 및 단면",
+ "names.sheet.plan_view": "1층 평면",
+ "names.sheet.site_plan": "배치도",
+ "names.sheet_set.issue": "발행 1",
+ "names.title.owner": "프로젝트 유한회사",
+ "names.title.creator": "A. Ivanov",
+ "names.title.approver": "P. Petrov",
+ "names.title.document_type": "도면",
+ "names.title.status": "진행 중",
+ "names.revision.date": "2026년 11월 4일",
+ "names.revision.description": "검토를 위해 발행",
+ "names.revision.author": "AI",
+ "names.demo.no_levels": "레벨 없음",
+ "names.demo.no_sheet": "시트"
+}

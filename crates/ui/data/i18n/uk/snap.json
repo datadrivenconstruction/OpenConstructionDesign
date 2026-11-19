@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "Кінець",
+ "snap.midpoint": "Середина",
+ "snap.perpendicular": "Перпендикуляр",
+ "snap.wall_axis": "Вісь стіни",
+ "snap.wall_face": "Грань стіни",
+ "snap.grid": "Сітка",
+ "snap.intersection": "Перетин",
+ "snap.grid_axis": "Лінія сітки",
+ "snap.ref_plane": "Опорна площина",
+ "snap.nearest": "Найближча",
+ "snap.align_x": "Вирівняно по X з віддаленою точкою",
+ "snap.align_y": "Вирівняно по Y з віддаленою точкою",
+ "snap.align_xy": "Вирівняно по X і Y"
+}

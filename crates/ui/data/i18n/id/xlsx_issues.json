@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "Baris dan sel yang dilewati",
+ "xlsx_issues.conflicts_title": "Diubah di kedua tempat",
+ "xlsx_issues.missing_title": "Lembar tidak ada di buku kerja",
+ "xlsx_issues.look_alike_title": "Nama lembar tidak cocok",
+ "xlsx_issues.mass_title": "Penghapusan massal perlu konfirmasi",
+ "xlsx_issues.sheets_missing": "Lembar {sheets} tidak ada di buku kerja (diganti nama atau dihapus); barisnya tidak dibandingkan.",
+ "xlsx_issues.keep_model": "Simpan model",
+ "xlsx_issues.take_book": "Ambil buku kerja",
+ "xlsx_issues.open_book_tip": "Membuka berkas di aplikasinya. Tidak ada yang berubah di model; pratinjau dimuat ulang setelah Anda menyimpan buku kerja."
+}

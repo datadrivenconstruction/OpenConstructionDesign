@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "Υπόμνημα",
+ "legend.legend.new_hint": "Όνομα νέου υπομνήματος",
+ "legend.legend.delete_tip": "Διαγραφή υπομνήματος",
+ "legend.legend.delete_placed": "Διαγραφή υπομνήματος (τοποθετημένο σε: {sheets})",
+ "legend.legend.deleted": "Το υπόμνημα διαγράφηκε: {name}",
+ "legend.legend.no_rows": "Δεν υπάρχουν γραμμές ακόμα. Προσθέστε μία ή πάρτε τα στυλ της τρέχουσας προβολής",
+ "legend.legend.replace_q": "Αντικατάσταση {n} γραμμών με τα στυλ αυτής της προβολής;",
+ "legend.legend.replace": "Αντικατάσταση",
+ "legend.legend.keep": "Διατήρηση γραμμών",
+ "legend.col.swatch": "Δείγμα",
+ "legend.col.value": "Τιμή",
+ "legend.col.label": "Ετικέτα"
+}

@@ -1,0 +1,10 @@
+{
+ "wall_stack.we.stack_caption": "Typ złożony",
+ "wall_stack.we.side_left": "Lewe lico",
+ "wall_stack.we.side_right": "Prawe lico",
+ "wall_stack.we.from": "Od",
+ "wall_stack.we.to": "Do",
+ "wall_stack.we.bottom": "Dół",
+ "wall_stack.we.delete_tip": "Usuń ten profil",
+ "wall_stack.we.from_after_to": "„Od” musi być przed „Do”"
+}

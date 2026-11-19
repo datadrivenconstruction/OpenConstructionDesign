@@ -1,0 +1,6 @@
+{
+ "imported_prop_edit.remove": "Tulajdonság eltávolítása",
+ "imported_prop_edit.remove.tip": "Eltávolítja a tulajdonságot a {n} kijelölt elemről egy visszavonási lépésben; mentéskor törlődik az IFC-fájlból",
+ "imported_prop_edit.done": "{key} eltávolítva {n} elemről",
+ "imported_prop_edit.warn.reload": "Kész, de a nézet nem frissült; nyissa újra a panelt, vagy vonja vissza, ha rossznak tűnik"
+}

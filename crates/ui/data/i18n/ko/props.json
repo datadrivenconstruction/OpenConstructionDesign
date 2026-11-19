@@ -1,0 +1,18 @@
+{
+ "props.multi.title": {
+  "one": "# 요소",
+  "other": "# 요소"
+ },
+ "props.multi.cats": {
+  "one": "# 카테고리",
+  "other": "# 카테고리"
+ },
+ "props.multi.varies": {
+  "one": "다양함 (#)",
+  "other": "다양함 (#)"
+ },
+ "props.multi.clear": "선택 지우기",
+ "props.multi.undo": "실행 취소",
+ "props.multi.narrowed": "선택: {n} · {name}",
+ "props.multi.chip_tip": "{name}: {n}  ·  클릭하면 해당 속성 표시, Ctrl+클릭하면 이것만 남김"
+}

@@ -1,0 +1,31 @@
+id = "G30_blob_museum__ru"
+tier = "hard"
+group = "Любая геометрия"
+title = "Organic blob museum"
+lang = "ru"
+base = "empty"
+
+[[turn]]
+say = "Музей искусств органической «каплевидной» формы: гладкая свободная оболочка двоякой кривизны около 70 x 45 м, высота 18 м, остеклённые щели, зенитный фонарь, галереи на двух уровнях, входной козырёк."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "freeform+shell_elem+mesh+solid+wall_spline+gridshell+roof"
+min = 1.0
+
+[[oracle.count]]
+spec = "level"
+min = 2.0
+
+[[oracle.count]]
+spec = "slab"
+min = 2.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

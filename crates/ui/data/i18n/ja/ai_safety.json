@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "アドレス内のキー",
+ "ai_safety.auth.query_name": "アドレスのパラメータ",
+ "ai_safety.need_query_name": "キーを運ぶアドレスのパラメータ名を入力してください",
+ "ai_safety.apply_unlogged": "適用しましたが、変更ログは書き込まれませんでした",
+ "ai_safety.audit_unlogged": "AIアシスタントのログを書き込めませんでした",
+ "ai_safety.chat_not_saved": "チャットをプロジェクトに保存できませんでした。再試行しています。",
+ "ai_safety.clip_clears": "クリップボードは 30 秒後に消去されます",
+ "ai_safety.copied_clears": "コピーしました。クリップボードは 30 秒後に消去されます",
+ "ai_safety.key_session_only": "キーはアプリを閉じるまで保持されます",
+ "ai.settings.no_data_dir": "このシステムではアプリ設定のフォルダがありません"
+}

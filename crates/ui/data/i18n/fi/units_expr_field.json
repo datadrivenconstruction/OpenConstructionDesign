@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "Tyhjä syöte.",
+ "units.err.not_number": "Ei ole luku kohdassa {pos}.",
+ "units.err.unknown_unit": "Tuntematon yksikkö: {unit}.",
+ "units.err.non_positive": "Pituuden on oltava suurempi kuin nolla.",
+ "units.err.too_large": "Pituus ei saa ylittää {max} m.",
+ "units.err.bad_angle": "Kulma on asteluku.",
+ "units.err.unknown_name": "Tuntematon nimi: {name}. Arvo säilytetty.",
+ "units.err.cycle": "Kaavan silmukka kohdassa {name}. Arvo säilytetty.",
+ "units.err.bad_expr": "Lauseketta ei voi lukea kohdassa {pos}. Arvo säilytetty.",
+ "units.err.div_zero": "Nollalla jakaminen kohdassa {pos}. Arvo säilytetty.",
+ "units.err.invalid": "Virheellinen luku.",
+ "units.err.kept": "Ei muutettu: {reason}"
+}

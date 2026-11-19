@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "{n} セルを貼り付けました",
+ "sched_edit.pasted_skipped": "{n} セルを貼り付け、{k} 件をスキップ: {why}",
+ "sched_edit.filled": "{n} セルに入力しました",
+ "sched_edit.filled_skipped": "{n} セルに入力、{k} 件をスキップ: {why}",
+ "sched_edit.why_ro": "読み取り専用 {n} 件",
+ "sched_edit.why_bad": "不正な値 {n} 件",
+ "sched_edit.no_cell": "先に集計表のセルをクリックしてください",
+ "sched_edit.nothing": "書き込む内容がありません",
+ "sched_edit.not_refreshed": "書き込みましたが、ビューは更新されませんでした: {e}",
+ "sched_edit.failed": "変更されていません: {e}",
+ "sched_edit.no_changes": "変更なし: {u} セルには既にこれらの値があります",
+ "sched_edit.same_tail": "、{u} 件は既に同じ"
+}

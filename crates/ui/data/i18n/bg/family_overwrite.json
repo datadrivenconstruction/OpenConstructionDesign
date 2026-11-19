@@ -1,0 +1,16 @@
+{
+ "family_overwrite.ow.title": "Да се заменят ли стойностите на типовете в проекта?",
+ "family_overwrite.ow.body": "Зареждането замества {values} в {types}. Поставени екземпляри на тези типове: {instances}.",
+ "family_overwrite.ow.values": {
+  "one": "# стойност",
+  "other": "# стойности"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# тип",
+  "other": "# типа"
+ },
+ "family_overwrite.ow.list": "Типове: {list}",
+ "family_overwrite.ow.more": "и още {n}",
+ "family_overwrite.ow.back": "Назад към редактирането",
+ "family_overwrite.ow.replace": "Замяна на стойностите"
+}

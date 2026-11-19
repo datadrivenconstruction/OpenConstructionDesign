@@ -1,0 +1,6 @@
+{
+ "cmd.xlsx.undo_apply": "Undo the last XLSX spreadsheet apply",
+ "xlsx_undo.later": "Not undone: the model was edited after this XLSX spreadsheet apply. Use Ctrl+Z step by step or the History panel.",
+ "xlsx_undo.gone": "Nothing to undo: this XLSX spreadsheet apply is already undone.",
+ "xlsx_undo.busy": "Finish or cancel the current drawing first, then undo the XLSX spreadsheet apply."
+}

@@ -1,0 +1,13 @@
+{
+ "type_change.affects_walls": {
+  "other": "影响 # 面墙",
+  "one": "影响 # 面墙"
+ },
+ "type_change.affects": {
+  "other": "影响 # 个元素",
+  "one": "影响 # 个元素"
+ },
+ "type_change.tick_types": "将类型更改应用于这些类型的全部 {n} 个元素",
+ "type_change.tick_types_first": "请先勾选类型更改：该类型的每个元素都将采用它",
+ "xl.msg.types_first": "请先确认类型更改"
+}

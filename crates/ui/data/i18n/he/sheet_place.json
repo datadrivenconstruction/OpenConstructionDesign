@@ -1,0 +1,15 @@
+{
+ "sheet_place.place_view_tip": "מקם מבט או טבלה על הגיליון",
+ "sheet_place.properties_tip": "מספר גיליון, שם, נייר וגרסאות",
+ "sheet_place.print_tip": "הדפס או ייצא את הגיליון",
+ "sheet_place.fit_tip": "התאם את הגיליון לחלון",
+ "sheet_place.activate_tip": "ערוך את המבט במקומו על הגיליון: הזז, הגדל וחתוך אותו",
+ "sheet_place.open_view_tip": "פתח את המבט בלשונית שלו",
+ "sheet_place.done_tip": "סיים עריכת מבט על הגיליון",
+ "sheet_place.reset_crop_tip": "הסר את החיתוך והצג את המבט השלם",
+ "sheet_place.scale_tip": "קנה המידה של המבט הנבחר על הגיליון",
+ "sheet_place.title_tip": "כותרת המוצגת מתחת למבט על הגיליון",
+ "sheet_place.banner": "עריכת המבט על הגיליון",
+ "sheet_place.new_set_tip": "צור סט גיליונות להדפסה משותפת",
+ "sheet_place.new_sheet_tip": "הוסף גיליון לפרויקט"
+}

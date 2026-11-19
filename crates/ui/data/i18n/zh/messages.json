@@ -1,0 +1,7 @@
+{
+ "messages.title": "消息",
+ "messages.desc": "通知历史。没有新的警告或错误。",
+ "messages.desc_new": "新增 {n} 条警告或错误。点击查看。",
+ "messages.copy": "全部复制",
+ "messages.clear": "全部清除"
+}

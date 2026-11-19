@@ -1,0 +1,7 @@
+{
+ "offset_opts.dist_positive": "Odległość przesunięcia musi być większa od zera; strona podąża za kursorem",
+ "offset_opts.count_bad": "Liczba całkowita od {min} do {max}",
+ "offset_opts.done_tip": "Zakończ zaznaczenie i uruchom narzędzie",
+ "offset_opts.iso.apply_tip": "Zamień tymczasowe ukrycie na stałe w tym widoku",
+ "offset_opts.iso.exit": "Wyjdź z trybu tymczasowego"
+}

@@ -1,0 +1,4 @@
+{
+ "xlsx_write.denied": "Droits insuffisants pour écrire dans ce dossier. Le classeur n'a pas été modifié. Enregistrez l'export dans un autre dossier.",
+ "xlsx_write.save_to": "Enregistrer dans…"
+}

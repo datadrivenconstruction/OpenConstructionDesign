@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "Dibujar muro",
+ "empty.totals.action": "Dibujar muro",
+ "empty.schedule.action": "Añadir campo",
+ "empty.schedule_filtered.action": "Quitar filtro",
+ "empty.library.action": "Restablecer búsqueda",
+ "empty.library.load": "Cargar familia",
+ "empty.schedule_fields.title": "No hay campos visibles",
+ "empty.schedule_fields.action": "Añadir campo",
+ "empty.schedule_fields.hint": "Active al menos un campo para ver la tabla."
+}

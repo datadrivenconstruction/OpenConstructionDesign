@@ -1,0 +1,15 @@
+{
+ "sheet_place.place_view_tip": "Umieść widok lub zestawienie na arkuszu",
+ "sheet_place.properties_tip": "Numer arkusza, nazwa, format papieru i rewizje",
+ "sheet_place.print_tip": "Wydrukuj lub wyeksportuj arkusz",
+ "sheet_place.fit_tip": "Dopasuj arkusz do okna",
+ "sheet_place.activate_tip": "Edytuj widok na arkuszu w miejscu: przesuwaj, powiększaj i kadruj go",
+ "sheet_place.open_view_tip": "Otwórz widok we własnej karcie",
+ "sheet_place.done_tip": "Zakończ edycję widoku na arkuszu",
+ "sheet_place.reset_crop_tip": "Usuń kadrowanie i pokaż cały widok",
+ "sheet_place.scale_tip": "Skala zaznaczonego widoku na arkuszu",
+ "sheet_place.title_tip": "Tytuł wyświetlany pod widokiem na arkuszu",
+ "sheet_place.banner": "Edycja widoku na arkuszu",
+ "sheet_place.new_set_tip": "Utwórz zestaw arkuszy do wspólnego wydruku",
+ "sheet_place.new_sheet_tip": "Dodaj arkusz do projektu"
+}

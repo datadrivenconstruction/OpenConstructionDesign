@@ -1,0 +1,31 @@
+id = "G14_pipe_rack__de"
+tier = "hard"
+group = "Any geometry"
+title = "Pipe rack"
+lang = "de"
+base = "empty"
+
+[[turn]]
+say = "Eine Stahl-Rohrbrücke 60 m lang, zwei Ebenen bei 5 und 8 m, Feldweite 6 m, darauf 8 Rohrleitungen unterschiedlicher Durchmesser, eine 90-Grad-Abwinklung, Auflager und ein Dehnungsbogen."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "col"
+min = 18.0
+
+[[oracle.count]]
+spec = "beam"
+min = 20.0
+
+[[oracle.count]]
+spec = "mep:pipe"
+min = 8.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

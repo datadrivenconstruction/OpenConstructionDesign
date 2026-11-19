@@ -1,0 +1,5 @@
+{
+ "xlsx_readonly.read_only_head": "Schreibgeschützt — Anwenden schreibt eine Kopie",
+ "xlsx_readonly.show_in_folder": "Im Ordner zeigen",
+ "xlsx_readonly.copy_exists": "Die Kopiedatei existiert bereits. Wählen Sie einen anderen Namen oder entfernen Sie sie."
+}

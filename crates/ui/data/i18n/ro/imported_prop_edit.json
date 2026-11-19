@@ -1,0 +1,6 @@
+{
+ "imported_prop_edit.remove": "Elimină proprietatea",
+ "imported_prop_edit.remove.tip": "Elimină proprietatea din {n} element(e) selectat(e) într-un singur pas de anulare; se șterge din fișierul IFC la salvare",
+ "imported_prop_edit.done": "{key} eliminat din {n} element(e)",
+ "imported_prop_edit.warn.reload": "Gata, dar vederea nu a fost reîmprospătată; redeschideți panoul sau anulați dacă arată greșit"
+}

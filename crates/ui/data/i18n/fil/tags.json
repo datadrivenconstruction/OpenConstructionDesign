@@ -1,0 +1,13 @@
+{
+ "tags.gone": "Wala na ang tag",
+ "tags.readonly_wall": "Ipinapakita ng wall tag ang uri at hindi ito maie-edit dito: palitan ang uri ng pader",
+ "tags.readonly_comp": "Ipinapakita ng component tag ang family at hindi ito maie-edit dito: palitan ang uri",
+ "tags.locked": "Naka-lock ang elemento: i-unlock ito para i-edit ang tag",
+ "tags.done": "Naisulat ang halaga ng tag",
+ "tags.failed": "Hindi nabago ang tag: {e}",
+ "tags.dup_door": "{mark} ay nasa {n} pang pinto",
+ "tags.dup_window": "{mark} ay nasa {n} pang bintana",
+ "tags.dup_room": "{mark} ay nasa {n} pang kuwarto",
+ "tags.hint_mark": "Marka",
+ "tags.hint_name": "Pangalan ng kuwarto"
+}

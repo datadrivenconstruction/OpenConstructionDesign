@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "Ühikud",
+ "topo_units.unit": "Ühikud failis",
+ "topo_units.unit.m": "m",
+ "topo_units.unit.cm": "cm",
+ "topo_units.unit.mm": "mm",
+ "topo_units.unit.ft": "ft",
+ "topo_units.unit.usft": "USA maamõõdu jalg",
+ "topo_units.unit.in": "in",
+ "topo_units.unit.from_file": "Fail nimetab oma ühikud: {unit}",
+ "topo_units.unit.suggested": "Fail ei nimeta ühikuid. Ulatuse järgi soovitatud: {unit} — kontrolli allolevat tulemust",
+ "topo_units.extent": "Tulemus projekti ühikutes: {x} × {y} {u} plaanil, kõrguste vahemik {z} {u}",
+ "topo_units.extent.none": "Tulemus: nende valikutega pole midagi importida",
+ "topo_units.extent.check": "See ei näe välja nagu krunt: kontrolli ühikuid"
+}

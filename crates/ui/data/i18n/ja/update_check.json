@@ -1,0 +1,21 @@
+{
+ "cmd.help.check_update": "更新を確認",
+ "update_check.title": "更新の確認",
+ "update_check.desc": "既定ではオフです。バージョン、OS とアーキテクチャ、インストールの種類だけを当社のサーバーに送信します。何かをダウンロードまたはインストールすることはありません。",
+ "update_check.freq.startup": "起動時",
+ "update_check.freq.daily": "毎日",
+ "update_check.freq.weekly": "毎週",
+ "update_check.freq.never": "しない",
+ "update_check.check_now": "今すぐ確認",
+ "update_check.dialog.title": "更新の確認",
+ "update_check.unknown.title": "更新を確認できませんでした",
+ "update_check.unknown.body": "{e}。これは、このバージョンが最新であることを意味しません。後でもう一度お試しください。",
+ "update_check.current": "最新バージョン（{v}）を使用しています。",
+ "update_check.newer": "バージョン {v} が利用可能です",
+ "update_check.date": "{d} にリリース",
+ "update_check.unfit": "このバージョン（{v}）は、推奨される最低バージョン {f} より古いです。更新をおすすめします。",
+ "update_check.close": "閉じる",
+ "update_check.open_failed": "リリースページを開けませんでした。",
+ "update_check.toast.newer": "バージョン {v} が利用可能です。ヘルプ > 更新を確認 を選んでください。",
+ "update_check.toast.unfit": "このバージョン（{v}）は、推奨される最低バージョン {f} より古いです。"
+}

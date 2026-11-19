@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "แถวตัวกรองใต้หัวตาราง ข้อความ: ข้อความย่อย; ตัวเลข: >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "แสดงหรือซ่อนคอลัมน์",
+ "sched_toolbar.groups_tip": "จัดกลุ่มแถวตามคอลัมน์ พร้อมผลรวมย่อย",
+ "sched_toolbar.formulas_tip": "คอลัมน์คำนวณ",
+ "sched_toolbar.phase": "เฟส",
+ "sched_toolbar.phase_tip": "แถวดึงข้อมูลจากเฟสใด",
+ "sched_toolbar.copy_tip": "แถวที่เลือก (หรือทั้งหมดที่มองเห็น) เป็น TSV",
+ "sched_toolbar.import_tip": "อ่านตารางที่ส่งออกกลับเข้ามา: แถวตาม Id คอลัมน์ตามหัวตาราง นับก่อน แล้วเลิกทำได้หนึ่งขั้น",
+ "sched_toolbar.export_tip": "แถวและคอลัมน์ที่มองเห็น พร้อมผลรวม ตัวเลขยังคงเป็นตัวเลข",
+ "sched_toolbar.need_table": "เปิดตารางก่อน",
+ "sched_toolbar.busy_open": "มีกล่องโต้ตอบเปิดไฟล์อยู่แล้ว",
+ "sched_toolbar.busy_save": "มีกล่องโต้ตอบบันทึกอยู่แล้ว",
+ "sched_toolbar.clear_filter": "ล้างตัวกรอง",
+ "sched_toolbar.fields_title": "คอลัมน์"
+}

@@ -1,0 +1,9 @@
+{
+ "elem.deleted": "Obrisano elemenata: {n}",
+ "elem.deleted_kept": "Obrisano elemenata: {n}; ostavljeno na mjestu: {k} (paneli i elementi koji se ne mogu obrisati)",
+ "elem.not_deleted": "nije obrisano: {e}",
+ "elem.not_deletable": "Ovaj element se ne može obrisati",
+ "elem.panel": "panel zavjese",
+ "elem.panel_refused": "Panel je dio svoje zavjesne stijene i ne može se obrisati zasebno. Odaberi cijeli zid za brisanje.",
+ "elem.reload_failed": "Obrisano, ali pogled nije osvježen: {e}"
+}

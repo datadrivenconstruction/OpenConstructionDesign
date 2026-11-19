@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "Työkirjan muutoksia ei käytetty",
+ "workbook_changes.wb.body": "Projektin sulkeminen tai vaihtaminen hylkää ne.",
+ "workbook_changes.wb.line": "Työkirjan tuonti: {n} muutosta ei käytetty",
+ "workbook_changes.wb.review": "Tarkista",
+ "workbook_changes.wb.discard": "Hylkää"
+}

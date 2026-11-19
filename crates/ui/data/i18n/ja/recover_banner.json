@@ -1,0 +1,7 @@
+{
+ "recover.untitled_note": "このプロジェクトは一度も保存されていません",
+ "recover.file_missing": "プロジェクトファイルが見つかりませんでした",
+ "recover.banner": "{name} について、以前のセッションの未保存の作業が見つかりました",
+ "recover.banner_review": "確認",
+ "recover.later_archived": "{n} 回延期されました: スナップショットはアーカイブに移動しました"
+}

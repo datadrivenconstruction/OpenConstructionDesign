@@ -1,0 +1,14 @@
+{
+ "_doc": "Naming rules for i18n keys and fragment files (tests/i18n_names.rs, tools/i18n/rename_keys.py). id_pattern: a first key segment or a file-name part (split at - and _) that is a work id: one letter, or any digit except a word ending in 3d. deep_id_pattern: a work id inside a later key segment. id_ok: words the patterns would catch that are not ids. product_sha256: SHA-256 of lowercase product names beyond tools/name_lint/terms.txt. allow_*: names awaiting rename, each with its reason; the lists only shrink.",
+ "id_pattern": "^(?:[a-z]|(?![a-z]*3d$).*[0-9].*)$",
+ "deep_id_pattern": "^(?:ag|ri|qa|ux|xs|xl)[0-9]{1,3}[a-z]?$",
+ "id_ok": ["m2", "m3", "in2", "ifc4", "ifc2x3", "ifc4x3", "e3d", "v3d", "x3d", "mep3d", "i18n"],
+ "product_sha256": ["faba1e00af8e6c89837f711eeb6f67c0d1bdb573c63abcdcdb2fbf7ab5ad2295"],
+ "allow_key_prefixes": [],
+ "allow_keys": [],
+ "allow_files": [],
+ "reasons": {
+  "A": "work-id key prefix, renamed through tools/i18n/key_renames.tsv",
+  "F": "work-id file name, renamed through tools/i18n/key_renames.tsv"
+ }
+}

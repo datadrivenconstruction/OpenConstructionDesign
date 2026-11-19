@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "ถาม AI: {q}",
+ "ai.palette.connect": "เชื่อมต่อ AI เพื่อถาม",
+ "ai.palette.draft.apply": "นำฉบับร่างไปใช้ ({n})",
+ "ai.palette.draft.reject": "ปฏิเสธฉบับร่าง",
+ "ai.palette.draft.next": "การเปลี่ยนแปลงฉบับร่างถัดไป",
+ "ai.palette.draft.show": "แสดงฉบับร่างในมุมมอง",
+ "cmd.ai.next_change": "การเปลี่ยนแปลงฉบับร่างถัดไป",
+ "cmd.ai.next_change.desc": "เลื่อนมุมมองไปยังองค์ประกอบถัดไปที่ฉบับร่างเปลี่ยน",
+ "cmd.ai.show_draft": "แสดงฉบับร่าง AI ในมุมมอง",
+ "cmd.ai.show_draft.desc": "ปรับมุมมองให้พอดีกับทุกอย่างที่ฉบับร่างเปลี่ยน"
+}

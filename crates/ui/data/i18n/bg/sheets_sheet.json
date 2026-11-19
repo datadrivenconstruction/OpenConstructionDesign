@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "Дублирай лист с изгледи",
+ "cmd.view.sheet_duplicate_title": "Дублирай лист (само блок с надписи)",
+ "sheets.dup.menu_views": "Дублирай с изгледи",
+ "sheets.dup.menu_title": "Дублирай, само блок с надписи",
+ "sheets.dup.done": "Лист {number} е създаден от {src}: {views} изгледа, {sched} спецификации и легенди. Ревизиите не се копират; листът е непубликуван.",
+ "sheets.dup.none": "Отворете лист, за да го дублирате",
+ "sheets.dup.copy": "копие",
+ "cmd.view.sheet_duplicate.short": "Дублирай с изгледи",
+ "cmd.view.sheet_duplicate_title.short": "Дублирай блок с надписи"
+}

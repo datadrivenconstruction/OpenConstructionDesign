@@ -1,0 +1,10 @@
+{
+ "type_pick.pick.search": "Hae tyyppejä tai paksuutta",
+ "type_pick.pick.empty": "Ei vastaavia tyyppejä",
+ "type_pick.pick.edit": "Muokkaa tyyppiä…",
+ "type_pick.pick.mixed": "Sekalaiset",
+ "type_pick.pick.layers": {
+  "one": "# kerros",
+  "other": "# kerrosta"
+ }
+}

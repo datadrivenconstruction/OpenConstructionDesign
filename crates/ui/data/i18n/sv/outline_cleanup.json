@@ -1,0 +1,15 @@
+{
+ "cmd.ctx.floor.clean_outline": "Rensa konturen",
+ "cmd.ctx.floor.clean_outline.desc": "Tar bort smala spikar där golvkonturen viker tillbaka på sig själv. Visar en förhandsvisning först; ett steg att ångra.",
+ "outline_cleanup.title": "Rensa kontur",
+ "outline_cleanup.intro": "Konturen för golvet viker tillbaka på sig själv i smala spikar: {n}. Rensningen tar bort dem; allt annat förblir oförändrat.",
+ "outline_cleanup.legend_before": "Tjock linje: konturen nu",
+ "outline_cleanup.legend_after": "Tunn linje: konturen efter rensning",
+ "outline_cleanup.undo": "Du kan ångra detta i ett steg.",
+ "outline_cleanup.apply": "Rensa",
+ "outline_cleanup.cancel": "Avbryt",
+ "outline_cleanup.done": "Konturen rensad, spikar borttagna: {n}",
+ "outline_cleanup.none": "Konturen för golvet har inga spikar",
+ "outline_cleanup.failed": "Konturen kunde inte rensas",
+ "outline_cleanup.changed": "Konturen ändrades sedan förhandsvisningen; inget skrevs. Kontrollera den nya förhandsvisningen."
+}

@@ -1,0 +1,14 @@
+{
+ "save_guard.save.empty_over_full": "Ingenting ble lagret: modellen er tom, og filen har allerede innhold. Filen er urørt. Bruk Lagre som for å skrive til et annet navn.",
+ "save_guard.refuse.body": "Ingenting ble lagret: modellen er tom, og {name} har allerede innhold. Filen er urørt.",
+ "save_guard.refuse.foreign": "Dette er ikke en DDC Editor-fil, så den kan ikke erstattes. Bruk Lagre som for å skrive til et annet navn.",
+ "save_guard.refuse.ask": "Erstatte {name}? Den inneholder {what}. Den flyttes først til _archive-mappen ved siden av, og deretter skrives den tomme modellen.",
+ "save_guard.refuse.holds_db": "{n} elementer og innholdsrader",
+ "save_guard.refuse.holds_ifc": "IFC med produkter",
+ "save_guard.refuse.replace": "Erstatt likevel…",
+ "save_guard.refuse.replace_yes": "Flytt den og erstatt",
+ "save_guard.refuse.save_as": "Lagre som…",
+ "save_guard.refuse.cancel": "Avbryt",
+ "save_guard.replace.moved": "Den forrige filen ble flyttet til {path}",
+ "save_guard.replace.move_failed": "Kunne ikke flytte {name} til side: {error}. Ingenting ble skrevet."
+}

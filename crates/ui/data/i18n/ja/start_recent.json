@@ -1,0 +1,5 @@
+{
+ "start_recent.unavailable": "現在利用できません (ドライブまたはネットワークの場所が応答しません): {path}",
+ "start_recent.unavailable_short": "現在利用できません",
+ "start_recent.retry": "再試行"
+}

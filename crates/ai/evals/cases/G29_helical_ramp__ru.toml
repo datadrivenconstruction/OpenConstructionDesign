@@ -1,0 +1,31 @@
+id = "G29_helical_ramp__ru"
+tier = "hard"
+group = "Любая геометрия"
+title = "Helical ramp garage"
+lang = "ru"
+base = "empty"
+
+[[turn]]
+say = "Шестиуровневый паркинг с двойной винтовой рампой (подъём и спуск переплетены) в центре плана 40 x 40 м, уклон 5%, парковочные места 2.5 x 5 м на каждом этаже, колонны с шагом 8 м."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "level"
+min = 6.0
+
+[[oracle.count]]
+spec = "slab"
+min = 6.0
+
+[[oracle.count]]
+spec = "col"
+min = 25.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

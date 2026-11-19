@@ -1,0 +1,14 @@
+{
+ "ai_keys.header_is_key": "Ключовете отиват в полето Ключ — хедърите се записват в явен вид",
+ "ai_keys.move": "Премести в Ключ",
+ "ai_keys.remove_line": "Премахни от хедърите",
+ "ai_keys.save_blocked": "За запис преместете ключа извън хедърите",
+ "ai_keys.show": "Покажи",
+ "ai_keys.hide": "Скрий",
+ "ai_keys.copy": "Копирай",
+ "ai_keys.tokens": "токени",
+ "ai_keys.presets": "Предварителни настройки",
+ "ai_keys.preset_k": "{n}k",
+ "ai_keys.preset_m": "{n}M",
+ "ai_keys.images_on": "Поддържа се"
+}

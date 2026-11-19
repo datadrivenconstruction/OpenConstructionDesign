@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "aangepast",
+ "draw_quality.custom.tip": "{name}: een invoer van dit project",
+ "draw_quality.custom_note": "Invoer met de markering aangepast hoort bij dit project.",
+ "draw_quality.unsaved.lib_body": "Opslaan in de bibliotheek, of verwerpen?",
+ "draw_quality.unsaved.styles_body": "Toepassen op de weergave, of verwerpen?",
+ "draw_quality.unsaved.both_body": "Toepassen, of verwerpen?",
+ "draw_quality.halftone": "{category} halftoon",
+ "draw_quality.styles.name": "Lijnstijlen",
+ "draw_quality.styles.other_level": "Niet-opgeslagen stijlwijzigingen van verdieping {level}: pas ze toe of draai ze terug om deze verdieping te bewerken."
+}

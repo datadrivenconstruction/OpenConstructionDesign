@@ -1,0 +1,7 @@
+{
+ "recover.untitled_note": "הפרויקט מעולם לא נשמר",
+ "recover.file_missing": "קובץ הפרויקט לא נמצא",
+ "recover.banner": "נמצאה עבודה שלא נשמרה מסשן קודם עבור {name}",
+ "recover.banner_review": "בדוק",
+ "recover.later_archived": "נדחה {n} פעמים: התמונות הועברו לארכיון"
+}

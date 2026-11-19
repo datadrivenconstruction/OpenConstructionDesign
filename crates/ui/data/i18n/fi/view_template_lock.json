@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "Mallin {name} hallinnassa",
+ "view_template.edit_template": "Muokkaa mallia",
+ "view_template.locked_tip": "Asetettu näkymämallilla {name}. Muuta sitä mallissa.",
+ "view_template.no_filters": "Ei suodattimia tässä näkymässä"
+}

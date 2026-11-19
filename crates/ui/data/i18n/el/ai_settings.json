@@ -1,0 +1,9 @@
+{
+ "ai.settings.num_bad": "Δεν είναι αριθμός. Πληκτρολογήστε τον όπως 0.5.",
+ "ai.settings.num_comma": "Χρησιμοποιήστε τελεία ως δεκαδικό διαχωριστικό, όπως 0.5.",
+ "ai.settings.num_negative": "Ο αριθμός δεν μπορεί να είναι αρνητικός.",
+ "ai.settings.unit_money": "νόμισμα",
+ "ai.settings.unit_tokens": "διακριτικά",
+ "ai.settings.unit_price": "ανά 1M tokens",
+ "ai.settings.limits_hint": "0 σημαίνει χωρίς όριο. Μια τιμή που απορρίπτεται αφήνει σε ισχύ το προηγούμενο όριο."
+}

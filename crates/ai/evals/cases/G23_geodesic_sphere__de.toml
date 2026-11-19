@@ -1,0 +1,28 @@
+id = "G23_geodesic_sphere__de"
+tier = "hard"
+group = "Any geometry"
+title = "Geodesic sphere"
+lang = "de"
+base = "empty"
+
+[[turn]]
+say = "Eine geodätische Kugel mit 30 m Durchmesser, ikosaedrische Frequenz 4, Stäbe und Knoten, verglaste Haut aus dreieckigen Paneelen, Eingang und Auflagerring."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "beam+brace+gridshell_bar"
+min = 200.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1
+
+[[oracle.geom]]
+kind = "sphere_fit"
+radius = 15.0
+extent_min = 0.75

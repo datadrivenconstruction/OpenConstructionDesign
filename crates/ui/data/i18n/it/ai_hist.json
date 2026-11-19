@@ -1,0 +1,14 @@
+{
+ "ai.hist.badge": "IA",
+ "ai.hist.untitled": "Modifiche IA",
+ "ai.hist.tip": "{title}\nApplicato da: {actor}\nModello IA: {model}",
+ "ai.hist.why": "Motivo: {why}",
+ "ai.hist.reverted": "annullato",
+ "ai.hist.revert_one": "Annulla questo lotto IA",
+ "ai.revert.done": "Modifiche IA annullate: {n}. Annulla le riporta indietro.",
+ "ai.revert.empty": "Non ci sono modifiche IA da annullare",
+ "ai.revert.not_ai": "Questo passaggio non è una modifica IA",
+ "ai.revert.already": "Queste modifiche IA sono già state annullate",
+ "ai.revert.opaque": "Non annullato: queste modifiche IA non si possono separare in sicurezza dal lavoro successivo. Non è stato cambiato nulla.",
+ "ai.revert.failed": "Ripristino non riuscito: {e}"
+}

@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "Angre: {what}",
+ "undo_label.redo_what": "Gjør om: {what}",
+ "undo_label.undo_none": "Ingenting å angre",
+ "undo_label.redo_none": "Ingenting å gjøre om"
+}

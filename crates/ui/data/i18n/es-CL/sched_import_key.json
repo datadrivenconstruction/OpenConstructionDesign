@@ -1,0 +1,6 @@
+{
+ "sched_import.no_key": "Este libro no tiene registro de exportación (una exportación anterior): las celdas cambiadas en el modelo después de esa exportación pueden sobrescribirse. Revisar las celdas modificadas antes de Aplicar.",
+ "sched_import.n_kept": "Cambiado en el modelo después de la exportación, conservado: {n}",
+ "sched_import.n_conflict": "Cambiado tanto en el libro como en el modelo, no aplicado: {n}",
+ "sched_import.why_conflict": "cambiado en el modelo después de la exportación (ahora {model}), no aplicado"
+}

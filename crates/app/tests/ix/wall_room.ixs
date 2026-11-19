@@ -1,0 +1,4 @@
+# Room by typed lengths, closed with C
+tool(WA) click(0,0) move(1,0.02) type("6000") key(Enter) move(6.03,1) type("4000") key(Enter)
+move(3,4.04) type("6000") key(Enter) key(Close) → walls=4 joints=4 journal=+1 state=Drafting{0}
+key(Escape) → state=Idle

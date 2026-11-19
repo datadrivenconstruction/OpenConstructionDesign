@@ -1,0 +1,14 @@
+{
+ "ai.hist.badge": "AI",
+ "ai.hist.untitled": "AI promjene",
+ "ai.hist.tip": "{title}\nPrimijenio: {actor}\nAI model: {model}",
+ "ai.hist.why": "Zašto: {why}",
+ "ai.hist.reverted": "vraćeno",
+ "ai.hist.revert_one": "Vrati ovu AI seriju",
+ "ai.revert.done": "AI promjene vraćene: {n}. Poništi ih vraća.",
+ "ai.revert.empty": "Nema AI promjena za vraćanje",
+ "ai.revert.not_ai": "Ovaj korak nije AI promjena",
+ "ai.revert.already": "Ove AI promjene su već vraćene",
+ "ai.revert.opaque": "Nije vraćeno: ove AI promjene nije sigurno odvojiti od kasnijeg rada. Ništa nije promijenjeno.",
+ "ai.revert.failed": "Vraćanje nije uspjelo: {e}"
+}

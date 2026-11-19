@@ -1,0 +1,7 @@
+{
+ "gen.pin.room": "Je hebt een ruimte van het gegenereerde project gewijzigd. Vergrendel die zodat een herziening hem op zijn plaats houdt.",
+ "gen.pin.storey": "Je hebt een laag van het gegenereerde project gewijzigd. Vergrendel die zodat een herziening de wanden en openingen behoudt.",
+ "gen.pin.action": "Vergrendelen",
+ "gen.pin.done": "Vergrendeld: een herziening van het project behoudt dit en plaatst de rest eromheen",
+ "gen.pin.failed": "Kon niet vergrendelen"
+}

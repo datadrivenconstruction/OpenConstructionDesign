@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "מזהה {done} מתוך {total}",
+ "mesh_recognize.all": "הכול {n}",
+ "mesh_recognize.only_confident": "רק בוודאות",
+ "mesh_recognize.confident_tip": "מסמן שורות שהסוג שלהן תואם לקטגוריה ושהוודאות שלהן לפחות {pct}%",
+ "mesh_recognize.row_hint": "לחץ על שורה כדי לסמן אותה. מקשי החיצים מנווטים, Enter מסמן.",
+ "mesh_recognize.kind_for": "סוג עבור {name}",
+ "mesh_recognize.source": "רשתות מקור",
+ "mesh_recognize.keep": "שמור רשתות",
+ "mesh_recognize.replace": "החלף רשתות",
+ "mesh_recognize.convert_keep": "המר {n}",
+ "mesh_recognize.convert_remove": "המר {n} והסר רשתות",
+ "mesh_recognize.creates": "ייווצרו {n}: {kinds}",
+ "mesh_recognize.creates_none": "עדיין לא סומן דבר",
+ "mesh_recognize.stay": "{n} רשתות מקור נשארות במודל",
+ "mesh_recognize.removed": "{n} רשתות מקור יוסרו. ביטול יחזיר אותן."
+}

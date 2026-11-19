@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "매스는 회전하거나 대칭할 수 없습니다: 형상 이력에 회전 단계가 없습니다. 이동하거나 복사하거나, 새 방향으로 다시 그리세요.",
+ "sched_cats.col.name": "이름",
+ "sched_cats.col.material": "재질",
+ "sched_cats.col.void": "빈 공간",
+ "sched_cats.col.inplace": "현장 타설",
+ "sched_cats.col.volume": "순 부피",
+ "sched_cats.col.area": "표면적",
+ "sched_cats.col.floor_area": "바닥 면적",
+ "sched_cats.col.thickness": "두께",
+ "sched_cats.col.points": "점",
+ "elem.toposolid.points": "측량점",
+ "elem.toposolid.count": "점",
+ "elem.toposolid.low": "최저",
+ "elem.toposolid.high": "최고",
+ "elem.toposolid.edit": "점 편집",
+ "elem.toposolid.edit_tip": "평면에서 측량점을 선택, 드래그하고 표고를 설정합니다",
+ "elem.toposolid.pick_hint": "평면에서 점을 클릭해 선택합니다. 다시 클릭하면 추가하거나 제외합니다.",
+ "elem.toposolid.z": "표고 ({n})",
+ "elem.toposolid.mixed": "선택한 점의 값이 다릅니다. 새 값을 입력하면 모두 같아집니다.",
+ "elem.toposolid.edit_help": "점을 끌어서 이동합니다. 값을 입력하고 Enter를 누르면 표고가 설정됩니다. Backspace는 선택한 점을 삭제하고, Esc는 나갑니다.",
+ "elem.toposolid.done": "완료"
+}

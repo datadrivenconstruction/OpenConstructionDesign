@@ -1,0 +1,11 @@
+{
+ "fe.csv.apply": "आयात लागू करें",
+ "fe.csv.cancel": "पूर्वावलोकन हटाएँ",
+ "fe.csv.nothing": "बदलने को कुछ नहीं: कैटलॉग मौजूदा प्रकारों से मेल खाता है",
+ "fe.csv.preview": "आयात पूर्वावलोकन: {added} नए, {changed} बदले, {same} अपरिवर्तित प्रकार; {values} मान बदलेंगे",
+ "fe.csv.preview_hint": "खाली सेल और गायब कॉलम मौजूदा मान रखते हैं। लागू करने तक कुछ नहीं बदलता।",
+ "fe.csv.skipped": "लागू नहीं, मान रखा गया: {msg}",
+ "fe.csv.type_added": "नया प्रकार {name}",
+ "fe.csv.type_changed": "प्रकार {name}",
+ "fe.csv.value": "  {param}: {old} → {new}"
+}

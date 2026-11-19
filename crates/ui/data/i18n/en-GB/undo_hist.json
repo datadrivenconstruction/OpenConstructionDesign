@@ -1,0 +1,8 @@
+{
+ "undo.undone": "Undone: {what}",
+ "undo.redone": "Redone: {what}",
+ "undo.action.edit.redo": "Redo",
+ "undo.action.edit.undo": "Undo",
+ "hdr.unsaved": "Unsaved changes",
+ "hdr.file_menu": "File menu"
+}

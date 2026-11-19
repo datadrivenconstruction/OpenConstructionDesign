@@ -1,0 +1,40 @@
+id = "G35_ski_jump__ru"
+tier = "hard"
+group = "Любая геометрия"
+title = "Ski jump"
+lang = "ru"
+base = "empty"
+
+[[turn]]
+say = "Трамплин для прыжков на лыжах: стальной ферменный разгон длиной 90 м под углом 35 градусов на колоннах, стартовая башня с лестницей, стол отрыва на высоте 25 м над подножием горы приземления, профиль склона приземления длиной 120 м, судейская вышка рядом."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "col"
+min = 6.0
+
+[[oracle.count]]
+spec = "beam+brace+truss"
+min = 30.0
+
+[[oracle.count]]
+spec = "stair"
+min = 1.0
+
+[[oracle.count]]
+spec = "slab+toposolid+freeform+solid+mesh+roof"
+min = 1.0
+
+[[oracle.geom]]
+kind = "height"
+min = 65.0
+max = 90.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

@@ -1,0 +1,8 @@
+{
+ "cmd.file.save_copy": "Zapisz kopię dla kogoś innego…",
+ "cmd.file.save_copy.desc": "Zapisuje kopię projektu bez zgody AI i, chyba że zdecydujesz inaczej, bez dziennika AI. Ten projekt pozostaje bez zmian.",
+ "ai.copy.title": "Zapisz kopię",
+ "ai.copy.journal": "Dołączyć dziennik AI do kopii? Dziennik zawiera zapytania, odpowiedzi i adresy. Zgoda na chmurę nigdy nie jest kopiowana: druga osoba decyduje sama. Wybierz Nie, aby pominąć dziennik.",
+ "ai.copy.done": "Kopia zapisana: {name}",
+ "ai.copy.same": "Wybierz inny plik: kopia nie może zastąpić otwartego projektu."
+}

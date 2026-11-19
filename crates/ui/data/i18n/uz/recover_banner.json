@@ -1,0 +1,7 @@
+{
+ "recover.untitled_note": "Bu loyiha hech qachon saqlanmagan",
+ "recover.file_missing": "Loyiha fayli topilmadi",
+ "recover.banner": "{name} uchun oldingi seansdan saqlanmagan ish topildi",
+ "recover.banner_review": "Ko'rib chiqish",
+ "recover.later_archived": "{n} marta keyinga qoldirildi: nusxalar arxivga ko'chirildi"
+}

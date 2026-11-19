@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "ذخیرهٔ خودکار ناموفق بود، آخرین تغییرات محافظت نمی‌شوند. {why}",
+ "autosave_status.autosave_open": "تنظیمات ذخیرهٔ خودکار",
+ "autosave_status.autosave_recovered": "ذخیرهٔ خودکار دوباره کار می‌کند.",
+ "autosave_status.autosave_reason": "دلیل: {why}"
+}

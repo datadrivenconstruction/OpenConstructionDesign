@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "Автосактоо ийгиликсиз болду, акыркы өзгөртүүлөр корголгон эмес. {why}",
+ "autosave_status.autosave_open": "Автосактоо жөндөөлөрү",
+ "autosave_status.autosave_recovered": "Автосактоо кайра иштеп жатат.",
+ "autosave_status.autosave_reason": "Себеби: {why}"
+}

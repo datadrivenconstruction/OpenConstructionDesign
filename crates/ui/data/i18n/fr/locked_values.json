@@ -1,0 +1,8 @@
+{
+ "cmd.props.param_lock": "Verrouiller ou déverrouiller la valeur du paramètre",
+ "locked_values.kept": "{n} valeurs verrouillées conservées",
+ "locked_values.locked": "« {name} » verrouillé : l’import tableur XLSX, la modification en masse et l’IA le conservent",
+ "locked_values.unlocked": "« {name} » déverrouillé",
+ "locked_values.locked_tip": "Verrouillé : l’import tableur XLSX, la modification en masse et l’IA conservent cette valeur. Cliquer pour déverrouiller  ·  Ctrl+L",
+ "locked_values.no_row": "Pointez une ligne de paramètre dans Propriétés, puis appuyez sur Ctrl+L"
+}

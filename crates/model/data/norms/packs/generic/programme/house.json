@@ -1,0 +1,362 @@
+{
+ "typology": "house",
+ "source": "intl-baseline",
+ "clause": "programme.house",
+ "variants": [
+  {
+   "code": "1b",
+   "select": {
+    "room_kind": [
+     "bedroom"
+    ],
+    "count": 1
+   },
+   "rooms": [
+    {
+     "kind": "living",
+     "min_area": 14,
+     "daylight": true
+    },
+    {
+     "kind": "kitchen",
+     "min_area": 6,
+     "daylight": true,
+     "wet": true
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 11.5,
+     "daylight": true
+    },
+    {
+     "kind": "bath",
+     "min_area": 3.5,
+     "wet": true
+    },
+    {
+     "kind": "hall"
+    }
+   ],
+   "adjacency": [
+    [
+     "kitchen",
+     "living"
+    ]
+   ],
+   "forbidden": [
+    [
+     "wc",
+     "kitchen"
+    ]
+   ],
+   "wet_core": "stack",
+   "allowed": [
+    "storage",
+    "corridor",
+    "wc",
+    "stair",
+    "technical"
+   ],
+   "circulation_max": 0.18,
+   "storage_max": 0.05,
+   "verified": false
+  },
+  {
+   "code": "2b",
+   "select": {
+    "room_kind": [
+     "bedroom"
+    ],
+    "count": 2
+   },
+   "rooms": [
+    {
+     "kind": "living",
+     "min_area": 14,
+     "daylight": true
+    },
+    {
+     "kind": "kitchen",
+     "min_area": 6,
+     "daylight": true,
+     "wet": true
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 11.5,
+     "daylight": true
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 8,
+     "daylight": true
+    },
+    {
+     "kind": "bath",
+     "min_area": 3.5,
+     "wet": true
+    },
+    {
+     "kind": "hall"
+    }
+   ],
+   "adjacency": [
+    [
+     "kitchen",
+     "living"
+    ]
+   ],
+   "forbidden": [
+    [
+     "wc",
+     "kitchen"
+    ]
+   ],
+   "wet_core": "stack",
+   "allowed": [
+    "storage",
+    "corridor",
+    "wc",
+    "stair",
+    "technical"
+   ],
+   "circulation_max": 0.18,
+   "storage_max": 0.05,
+   "verified": false
+  },
+  {
+   "code": "3b",
+   "select": {
+    "room_kind": [
+     "bedroom"
+    ],
+    "count": 3
+   },
+   "rooms": [
+    {
+     "kind": "living",
+     "min_area": 14,
+     "daylight": true
+    },
+    {
+     "kind": "kitchen",
+     "min_area": 6,
+     "daylight": true,
+     "wet": true
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 11.5,
+     "daylight": true
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 8,
+     "daylight": true
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 8,
+     "daylight": true
+    },
+    {
+     "kind": "bath",
+     "min_area": 3.5,
+     "wet": true
+    },
+    {
+     "kind": "hall"
+    },
+    {
+     "kind": "wc",
+     "min_area": 1.2,
+     "wet": true
+    }
+   ],
+   "adjacency": [
+    [
+     "kitchen",
+     "living"
+    ]
+   ],
+   "forbidden": [
+    [
+     "wc",
+     "kitchen"
+    ]
+   ],
+   "wet_core": "stack",
+   "allowed": [
+    "storage",
+    "corridor",
+    "wc",
+    "stair",
+    "technical"
+   ],
+   "circulation_max": 0.18,
+   "storage_max": 0.05,
+   "verified": false
+  },
+  {
+   "code": "4b",
+   "select": {
+    "room_kind": [
+     "bedroom"
+    ],
+    "count": 4
+   },
+   "rooms": [
+    {
+     "kind": "living",
+     "min_area": 14,
+     "daylight": true
+    },
+    {
+     "kind": "kitchen",
+     "min_area": 6,
+     "daylight": true,
+     "wet": true
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 11.5,
+     "daylight": true
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 8,
+     "daylight": true
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 8,
+     "daylight": true
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 8,
+     "daylight": true
+    },
+    {
+     "kind": "bath",
+     "min_area": 3.5,
+     "wet": true
+    },
+    {
+     "kind": "hall"
+    },
+    {
+     "kind": "wc",
+     "min_area": 1.2,
+     "wet": true
+    }
+   ],
+   "adjacency": [
+    [
+     "kitchen",
+     "living"
+    ]
+   ],
+   "forbidden": [
+    [
+     "wc",
+     "kitchen"
+    ]
+   ],
+   "wet_core": "stack",
+   "allowed": [
+    "storage",
+    "corridor",
+    "wc",
+    "stair",
+    "technical"
+   ],
+   "circulation_max": 0.18,
+   "storage_max": 0.05,
+   "verified": false
+  },
+  {
+   "code": "5b",
+   "select": {
+    "room_kind": [
+     "bedroom"
+    ],
+    "count": 5
+   },
+   "rooms": [
+    {
+     "kind": "living",
+     "min_area": 14,
+     "daylight": true
+    },
+    {
+     "kind": "kitchen",
+     "min_area": 6,
+     "daylight": true,
+     "wet": true
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 11.5,
+     "daylight": true
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 8,
+     "daylight": true
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 8,
+     "daylight": true
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 8,
+     "daylight": true
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 8,
+     "daylight": true
+    },
+    {
+     "kind": "bath",
+     "min_area": 3.5,
+     "wet": true
+    },
+    {
+     "kind": "hall"
+    },
+    {
+     "kind": "wc",
+     "min_area": 1.2,
+     "wet": true
+    }
+   ],
+   "adjacency": [
+    [
+     "kitchen",
+     "living"
+    ]
+   ],
+   "forbidden": [
+    [
+     "wc",
+     "kitchen"
+    ]
+   ],
+   "wet_core": "stack",
+   "allowed": [
+    "storage",
+    "corridor",
+    "wc",
+    "stair",
+    "technical"
+   ],
+   "circulation_max": 0.18,
+   "storage_max": 0.05,
+   "verified": false
+  }
+ ]
+}

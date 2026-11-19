@@ -1,0 +1,19 @@
+{
+ "empty.v3d_gpu.title": "سه‌بعدی روی این آداپتور گرافیکی در دسترس نیست",
+ "empty.v3d_gpu.hint": "مدل سالم است و پلان کار می‌کند. برای امتحان دوباره سه‌بعدی، با گرافیک ایمن راه‌اندازی مجدد کنید.",
+ "empty.v3d_gpu.action": "راه‌اندازی مجدد با گرافیک ایمن",
+ "empty.v3d_loading.title": "در حال ساخت سه‌بعدی…",
+ "empty.v3d_loading.pct": "در حال باز شدن… {pct} %",
+ "empty.plan_hidden.title": "همه عناصر در این پلان پنهان‌اند",
+ "empty.plan_hidden.hint": "پنهان‌سازی موقت یا جداسازی، چیزی را قابل‌مشاهده نگذاشته است.",
+ "empty.plan_hidden.action": "نمایش همه",
+ "empty.plan_graphics.title": "گرافیک نما همه دسته‌ها را پنهان کرده است",
+ "empty.plan_graphics.hint": "قواعد دسته‌بندی این نما چیزی برای نمایش نگذاشته است.",
+ "empty.plan_graphics.action": "باز کردن گرافیک نما",
+ "empty.plan_phase.title": "فیلتر فاز همه چیز را پنهان می‌کند",
+ "empty.plan_phase.hint": "چیزی در این تراز در فازی که این نما نشان می‌دهد وجود ندارد.",
+ "empty.plan_phase.action": "تغییر فاز",
+ "empty.plan_level.title": "در این تراز عنصری نیست",
+ "empty.plan_level.hint": "تراز‌های دیگر این مدل عنصر دارند.",
+ "empty.plan_level.action": "رفتن به تراز دارای عنصر"
+}

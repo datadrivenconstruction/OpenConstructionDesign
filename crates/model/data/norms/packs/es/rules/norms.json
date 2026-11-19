@@ -1,0 +1,654 @@
+{
+ "rules": [
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.185
+   },
+   "unit": "m",
+   "value": 0.185,
+   "text": {
+    "en": "Residential stair riser at most 0.185 m",
+    "ru": "Подъём ступени жилой лестницы не более 0.185 м"
+   },
+   "source": {
+    "doc": "cte-db-sua",
+    "clause": "SUA 1 table 4.1 (stairs of general use, dwellings: riser 13 to 18.5 cm)"
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "es.res.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.28
+   },
+   "unit": "m",
+   "value": 0.28,
+   "text": {
+    "en": "Residential stair tread at least 0.28 m",
+    "ru": "Проступь жилой лестницы не менее 0.28 м"
+   },
+   "source": {
+    "doc": "cte-db-sua",
+    "clause": "SUA 1 table 4.1 (tread from 28 cm)"
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "es.res.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 1.0
+   },
+   "unit": "m",
+   "value": 1.0,
+   "text": {
+    "en": "Stair flight width at least 1 m (house/apartment/apartment_section)",
+    "ru": "Ширина марша не менее 1 м (house/apartment/apartment_section)"
+   },
+   "source": {
+    "doc": "cte-db-sua",
+    "clause": "SUA 1 par. 4.2.2 table 4.1 (dwelling stair width 1.00 m)",
+    "url": "https://www.codigotecnico.org/pdf/Documentos/SUA/DBSUA.pdf",
+    "edition": 2022
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "es.res.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.175
+   },
+   "unit": "m",
+   "value": 0.175,
+   "text": {
+    "en": "Office stair riser at most 0.175 m",
+    "ru": "Подъём ступени офисной лестницы не более 0.175 м"
+   },
+   "source": {
+    "doc": "cte-db-sua",
+    "clause": "SUA 1 par. 4.2.1 (riser 13-18.5 cm; max 17.5 cm in public-use zones or without lift alternative)",
+    "url": "https://www.codigotecnico.org/pdf/Documentos/SUA/DBSUA.pdf",
+    "edition": 2022
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "es.off.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.28
+   },
+   "unit": "m",
+   "value": 0.28,
+   "text": {
+    "en": "Office stair tread at least 0.28 m",
+    "ru": "Проступь офисной лестницы не менее 0.28 м"
+   },
+   "source": {
+    "doc": "cte-db-sua",
+    "clause": "SUA 1 table 4.1 (tread from 28 cm)"
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "es.off.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 1.0
+   },
+   "unit": "m",
+   "value": 1.0,
+   "text": {
+    "en": "Stair flight width at least 1 m (office)",
+    "ru": "Ширина марша не менее 1 м (office)"
+   },
+   "source": {
+    "doc": "cte-db-sua",
+    "clause": "SUA 1 par. 4.2.2 table 4.1 (1.00 m for up to 100 persons; 1.10 m public assembly/commercial above 100)",
+    "url": "https://www.codigotecnico.org/pdf/Documentos/SUA/DBSUA.pdf",
+    "edition": 2022
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "es.off.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {},
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "2*riser+tread",
+    "min": 0.54,
+    "max": 0.7
+   },
+   "unit": "m",
+   "value": [
+    0.54,
+    0.7
+   ],
+   "text": {
+    "en": "Step rule: 2 risers + tread from 0.54 to 0.7 m",
+    "ru": "Шаг: 2 подъёма + проступь от 0.54 до 0.7 м"
+   },
+   "source": {
+    "doc": "cte-db-sua",
+    "clause": "SUA 1 par. 4.2.1 (54 cm <= 2 risers + tread <= 70 cm)"
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "es.step"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "width",
+    "min": 1.0
+   },
+   "unit": "m",
+   "value": 1.0,
+   "text": {
+    "en": "Corridor clear width at least 1 m",
+    "ru": "Ширина коридора не менее 1 м"
+   },
+   "source": {
+    "doc": "habitabilidad",
+    "clause": "regional habitability decrees (differ by region)",
+    "note": "regional habitability decrees; no single official national value found"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "es.res.corr"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "width",
+    "min": 1.0
+   },
+   "unit": "m",
+   "value": 1.0,
+   "text": {
+    "en": "Corridor clear width at least 1.0 m",
+    "ru": "Ширина коридора не менее 1.0 м"
+   },
+   "source": {
+    "doc": "cte-db-si",
+    "clause": "SI 3 table 4.1 (passages: width max of 1.00 m and P/200)",
+    "url": "https://www.codigotecnico.org/pdf/Documentos/SI/DBSI.pdf",
+    "edition": 2025
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "es.off.corr"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ],
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "width",
+    "min": 1.2
+   },
+   "unit": "m",
+   "value": 1.2,
+   "text": {
+    "en": "Accessible-route corridor clear width at least 1.2 m",
+    "ru": "Ширина коридора на доступном маршруте не менее 1.2 м"
+   },
+   "source": {
+    "doc": "cte-db-sua9",
+    "clause": "SUA 9 annex A (accessible passages free width 1.20 m)",
+    "url": "https://www.codigotecnico.org/pdf/Documentos/SUA/DBSUA.pdf",
+    "edition": 2022
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "es.acc.corr"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.5
+   },
+   "unit": "m",
+   "value": 2.5,
+   "text": {
+    "en": "Clear height of habitable rooms at least 2.5 m",
+    "ru": "Высота жилых помещений не менее 2.5 м"
+   },
+   "source": {
+    "doc": "habitabilidad",
+    "clause": "regional habitability decrees (differ by region)",
+    "note": "regional habitability decrees; no single official national value found"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "es.res.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "room_kind": [
+     "office",
+     "meeting"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.5
+   },
+   "unit": "m",
+   "value": 2.5,
+   "text": {
+    "en": "Clear height of work rooms at least 2.5 m",
+    "ru": "Высота рабочих помещений не менее 2.5 м"
+   },
+   "source": {
+    "doc": "rd486-1997",
+    "clause": "annex I (offices and services, clear height 2.5 m)",
+    "url": "https://www.boe.es/buscar/act.php?id=BOE-A-1997-8669",
+    "edition": 1997
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "es.off.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "room_kind": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "area",
+    "min": 10.0
+   },
+   "unit": "",
+   "value": 10.0,
+   "text": {
+    "en": "Area of a office room at least 10 m2",
+    "ru": "Площадь помещения «office» не менее 10 м2"
+   },
+   "source": {
+    "doc": "rd486-1997",
+    "clause": "annex I (2 m2 free area and 10 m3 per worker; guide value for gross area)",
+    "note": "official text gives 2 m2 free and 10 m3 per worker, not a 10 m2 area; value is a guide"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "es.off.a"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "bedroom"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "area",
+    "min": 6.0
+   },
+   "unit": "",
+   "value": 6.0,
+   "text": {
+    "en": "Area of a bedroom room at least 6 m2",
+    "ru": "Площадь помещения «bedroom» не менее 6 м2"
+   },
+   "source": {
+    "doc": "habitabilidad",
+    "clause": "regional habitability decrees (single bedroom)",
+    "note": "regional habitability decrees; no single official national value found"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "es.bed.a"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "living"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "area",
+    "min": 14.0
+   },
+   "unit": "",
+   "value": 14.0,
+   "text": {
+    "en": "Area of a living room at least 14 m2",
+    "ru": "Площадь помещения «living» не менее 14 м2"
+   },
+   "source": {
+    "doc": "habitabilidad",
+    "clause": "regional habitability decrees",
+    "note": "regional habitability decrees; no single official national value found"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "es.liv.a"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 35.0,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 35.0,
+   "text": {
+    "en": "Travel distance from a room to an exit or stair at most 35 m (residential)",
+    "ru": "Путь от помещения до выхода или лестницы не более 35 м"
+   },
+   "source": {
+    "doc": "cte-db-si",
+    "clause": "SI 3 table 3.1 (more than one exit: 50 m, but 35 m where occupants sleep)",
+    "url": "https://www.codigotecnico.org/pdf/Documentos/SI/DBSI.pdf",
+    "edition": 2025
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "es.egr.res"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 50.0,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 50.0,
+   "text": {
+    "en": "Travel distance from a room to an exit or stair at most 50 m (office)",
+    "ru": "Путь от помещения до выхода или лестницы не более 50 м"
+   },
+   "source": {
+    "doc": "cte-db-si",
+    "clause": "SI 3 table 3.1 (more than one exit: 50 m)",
+    "url": "https://www.codigotecnico.org/pdf/Documentos/SI/DBSI.pdf",
+    "edition": 2025
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "es.egr.off"
+  },
+  {
+   "id": "eu.acc.corr",
+   "disabled": true
+  },
+  {
+   "id": "eu.bed.a",
+   "disabled": true
+  },
+  {
+   "id": "eu.egr.off",
+   "disabled": true
+  },
+  {
+   "id": "eu.egr.res",
+   "disabled": true
+  },
+  {
+   "id": "eu.liv.a",
+   "disabled": true
+  },
+  {
+   "id": "eu.off.a",
+   "disabled": true
+  },
+  {
+   "id": "eu.off.corr",
+   "disabled": true
+  },
+  {
+   "id": "eu.off.h",
+   "disabled": true
+  },
+  {
+   "id": "eu.off.riser",
+   "disabled": true
+  },
+  {
+   "id": "eu.off.sw",
+   "disabled": true
+  },
+  {
+   "id": "eu.off.tread",
+   "disabled": true
+  },
+  {
+   "id": "eu.res.corr",
+   "disabled": true
+  },
+  {
+   "id": "eu.res.h",
+   "disabled": true
+  },
+  {
+   "id": "eu.res.riser",
+   "disabled": true
+  },
+  {
+   "id": "eu.res.sw",
+   "disabled": true
+  },
+  {
+   "id": "eu.res.tread",
+   "disabled": true
+  },
+  {
+   "id": "eu.step",
+   "disabled": true
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {},
+   "check": {
+    "kind": "ratio",
+    "per": "element",
+    "cat": "room",
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen"
+    ],
+    "num": "window_area",
+    "den": "area",
+    "min": 0.167
+   },
+   "unit": "ratio",
+   "value": 0.167,
+   "text": {
+    "en": "Window area at least one sixth of the room floor",
+    "ru": "Площадь окна не менее 1/6 площади пола помещения"
+   },
+   "source": {
+    "doc": "es-orden-1944",
+    "clause": "Rule 3: every habitable room has direct ventilation to the outside through an opening of at least 1/6 of the room floor area",
+    "url": "https://www.boe.es/gazeta/dias/1944/03/01/pdfs/BOE-1944-61.pdf",
+    "accessed": "2026-11-15",
+    "note": "same clause as dim daylight.window_floor_ratio, read 2026-11-14; regional habitability codes may differ"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "es.day"
+  },
+  {
+   "id": "eu.day",
+   "disabled": true
+  }
+ ]
+}

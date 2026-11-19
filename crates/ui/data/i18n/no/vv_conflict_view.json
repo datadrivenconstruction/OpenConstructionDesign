@@ -1,0 +1,4 @@
+{
+ "vv_conflict.vv.switched": "Den aktive visningen endret seg. Disse redigeringene hører til {view} og er ikke brukt ennå: Bruk skriver dem til {view}, Forkast fjerner dem.",
+ "vv_conflict.vv.discard": "Forkast redigeringer"
+}

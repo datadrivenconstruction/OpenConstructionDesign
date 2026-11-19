@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "X ekseni",
+ "fe.axis.y": "Y ekseni",
+ "fe.axis.z": "Z ekseni",
+ "fe.col.axis": "Eksen",
+ "fe.col.at": "Konum",
+ "fe.col.mode": "Mod",
+ "fe.mode.fixed": "Sabit",
+ "fe.mode.free": "Serbest",
+ "fe.types.inherited": "Parametreden varsayılan",
+ "fe.csv.more": "Diğer CSV işlemleri",
+ "fe.ref.selected": "Düzlem: {name}"
+}

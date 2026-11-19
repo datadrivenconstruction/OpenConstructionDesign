@@ -1,0 +1,22 @@
+{
+ "sources": [
+  {
+   "id": "nbcs2026-f",
+   "title": "National Building Construction Standards 2026, Part F Fire and Life Safety",
+   "licence": "copyright-numbers-only",
+   "verified": "2026-11-13",
+   "publisher": "Bureau of Indian Standards",
+   "edition": "2026",
+   "url": "https://dfes.goa.gov.in/wp-content/uploads/2026/05/sp7_2026_nbcs-212-1480.pdf"
+  },
+  {
+   "id": "hg-india-2021",
+   "title": "Harmonised Guidelines and Standards for Universal Accessibility in India",
+   "licence": "public-law",
+   "verified": "2026-11-14",
+   "publisher": "Ministry of Housing and Urban Affairs",
+   "edition": "2021",
+   "url": "https://divyangjan.depwd.gov.in/upload/uploadfiles/2262.pdf"
+  }
+ ]
+}

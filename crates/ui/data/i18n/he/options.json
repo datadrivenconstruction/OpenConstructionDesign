@@ -1,0 +1,15 @@
+{
+ "fe.add_why_empty": "הזן קודם שם פרמטר",
+ "fe.add_why_exists": "פרמטר בשם זה כבר קיים; השתמש בהחל כדי לשנות אותו",
+ "fe.apply_why_missing": "אין פרמטר בשם זה; הקלד שם קיים",
+ "fe.nochange": "עדיין אין שינויים",
+ "options.accept_more": "קבל…",
+ "options.delete_more": "מחק…",
+ "options.empty_title": "עדיין אין סטים של אפשרויות",
+ "options.more": "פעולות נוספות: {name}",
+ "options.primary_named": "אפשרות ראשית: {name}",
+ "options.primary_tip": "הפוך לאפשרות הראשית של הסט",
+ "options.select_first": "בחר תחילה אלמנטים במודל",
+ "options.show_3d": "הצג בתלת-מימד: {name}",
+ "options.show_plan": "הצג בתוכנית: {name}"
+}

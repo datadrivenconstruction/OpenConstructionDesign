@@ -1,0 +1,42 @@
+{
+ "id": "ae-du",
+ "version": "2026.11",
+ "parent": "ae",
+ "country": "AE",
+ "lang": [
+  "en",
+  "ar"
+ ],
+ "units": {
+  "length": "m",
+  "display": "metric"
+ },
+ "conventions": {
+  "ground_floor": 0,
+  "area_standard": "gross",
+  "net_share": 0.85,
+  "note": "Dubai code measures gross floor area (GFA) and built-up area from the outer faces of the building; net room areas are used only for room-size checks. Net share is our own estimate.",
+  "source": "ae-du-dbc"
+ },
+ "status": "tier3",
+ "climate": {
+  "zones": [],
+  "default": null
+ },
+ "research": {
+  "date": "2026-11-14",
+  "missing": [
+   "egress.travel_max",
+   "egress.travel_max.office",
+   "fire.compartment_area_max",
+   "fire.compartment_area_max.sprinklered",
+   "load.floor_residential",
+   "load.floor_office"
+  ],
+  "unreachable": [
+   "https://www.dcd.gov.ae/ (national fire code host, connection refused)",
+   "https://dm.gov.ae/ page host serves a bot-check page to scripted fetches; the same PDF was read from dmpmedia.dm.gov.ae"
+  ]
+ },
+ "note": "Numbers with verified=true were read in the cited clause; the rest are hints with a note of where we looked. Wording is our own; no text of a standard is stored."
+}

@@ -1,0 +1,8 @@
+{
+ "cmd.file.save_copy": "Simpan salinan untuk orang lain…",
+ "cmd.file.save_copy.desc": "Menyimpan salinan proyek tanpa persetujuan AI dan, kecuali Anda memilih lain, tanpa jurnal AI. Proyek ini tetap seperti semula.",
+ "ai.copy.title": "Simpan salinan",
+ "ai.copy.journal": "Sertakan jurnal AI dalam salinan? Jurnal berisi permintaan, jawaban, dan alamat. Persetujuan cloud tidak pernah disalin: orang lain memutuskan sendiri. Pilih Tidak untuk tidak menyertakan jurnal.",
+ "ai.copy.done": "Salinan tersimpan: {name}",
+ "ai.copy.same": "Pilih file lain: salinan tidak boleh menggantikan proyek yang terbuka."
+}

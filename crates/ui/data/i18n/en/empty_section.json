@@ -1,0 +1,11 @@
+{
+ "empty.sv_notfound.title": "View not found",
+ "empty.sv_notfound.hint": "This view was deleted or is no longer part of the project.",
+ "empty.sv_notfound.action": "Close view",
+ "empty.sv_cuts_nothing.title": "This section cuts nothing",
+ "empty.sv_cuts_nothing.hint": "The cut line meets no walls, slabs or openings within its depth. Move the line or make the view deeper.",
+ "empty.sv_cuts_nothing.action": "Show on plan",
+ "empty.sv_shows_nothing.title": "This elevation shows nothing",
+ "empty.sv_shows_nothing.hint": "No walls, slabs or openings fall inside the view depth. Move the view line or make the view deeper.",
+ "empty.sv_shows_nothing.action": "Show on plan"
+}

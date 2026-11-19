@@ -1,0 +1,13 @@
+id = "S11_rule_conflict"
+tier = "smoke"
+group = ""
+title = "Conflicting rules: refuse or ask"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "Office building, 8 storeys. These are hard rules, do not relax any of them: building depth at most 9 m; corridor exactly 2.4 m wide; offices on both sides of the corridor, each office at least 6 m deep; floor height 2.4 m. Build it."
+
+[[oracle.text]]
+name = "names the conflict instead of building"
+re = "(conflict|contradict|incompatib|impossible|cannot|can.t|not possible|trade.?off|relax|противореч|несовмест|нельзя|невозможно|ослаб)"

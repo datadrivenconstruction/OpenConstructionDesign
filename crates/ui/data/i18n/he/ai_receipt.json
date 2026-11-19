@@ -1,0 +1,22 @@
+{
+ "ai.receipt.title": {
+  "one": "הוחל # שינוי",
+  "two": "הוחלו # שינויים",
+  "other": "הוחלו # שינויים"
+ },
+ "ai.receipt.more": "+{n} נוספים",
+ "ai.receipt.list": "אלמנטים",
+ "ai.receipt.show": "הצג",
+ "ai.receipt.show.tip": "בחר ומקד את האלמנטים ששונו",
+ "ai.receipt.undo": "בטל",
+ "ai.receipt.undo.tip": "מחזיר בדיוק את ההחלה הזו",
+ "ai.receipt.undone": "בוטל",
+ "ai.receipt.later": "בוצעו עריכות מאוחרות יותר",
+ "ai.receipt.toast_undone": "התוכנית שהוחלה בוטלה",
+ "ai.receipt.draft_family": "משפחת טיוטה: {name}",
+ "ai.receipt.promote": "הפוך לפעילה",
+ "ai.receipt.promote.tip": "הפוך את משפחת הטיוטה למשפחה פעילה (שלב ביטול אחד)",
+ "ai.receipt.promoted": "המשפחה פעילה עכשיו",
+ "ai.receipt.promote_failed": "לא ניתן היה להפוך את המשפחה לפעילה",
+ "cmd.ai.receipt_undo": "בטל את תוכנית ה-AI האחרונה"
+}

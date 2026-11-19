@@ -1,0 +1,11 @@
+{
+ "xlsx_read_as.title": "Tavola rinominata?",
+ "xlsx_read_as.detail": "La tavola {found} ha le colonne di {sheet} (corrispondenza {score}%). Non viene letta a meno che tu non la scelga.",
+ "xlsx_read_as.detail_many": "Più di una tavola corrisponde a {sheet}: {found}. Nessuna è scelta per te; scegli quella da leggere.",
+ "xlsx_read_as.read_as": "Leggi “{found}” come {sheet}",
+ "xlsx_read_as.read_as_tip": "Solo per questa importazione. La tavola non viene rinominata; Applica scrive solo gli id delle nuove righe.",
+ "xlsx_read_as.active": "La tavola “{found}” viene letta come {sheet} in questa importazione.",
+ "xlsx_read_as.undo": "Non leggere come {sheet}",
+ "xlsx_read_as.undo_tip": "Torna ai nomi delle tavole come sono nella cartella",
+ "xlsx_read_as.not_rewritten": "La cartella non è stata riscritta: una tavola rinominata viene letta con il proprio nome. Rinominala come prima per mantenere la cartella sincronizzata."
+}

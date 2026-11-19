@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "A(z) {t} homlokzatmagasság nem lett figyelembe véve ({why}). Semmi nem változott",
+ "host_shape.shape.elev_prompt_in": "homlokzatmagasság, láb-hüvelyk…",
+ "host_shape.shape.elev_in": "{v} in"
+}

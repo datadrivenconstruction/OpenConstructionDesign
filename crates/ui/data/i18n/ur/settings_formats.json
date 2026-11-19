@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "ورک بک برآمد ہونے کے بعد کیا ہوگا",
+ "settings.area_decimals_desc": "رقبے میں اعشاری علامت کے بعد ہندسے",
+ "settings.volume_decimals_desc": "حجم میں اعشاری علامت کے بعد ہندسے",
+ "settings.frac_desc": "امپیریل لمبائیوں میں انچ کا سب سے چھوٹا حصہ",
+ "settings.small_area_desc": "ایک مربع فٹ سے کم رقبے مربع انچ میں دکھائیں",
+ "settings.sample_desc": "موجودہ انتخاب کے ساتھ اعداد کیسے نظر آتے ہیں",
+ "autosave.title_desc": "کھلے پروجیکٹ کی بحالی کی نقل رکھیں",
+ "autosave.interval_desc": "بحالی کی نقلوں کے درمیان وقفہ",
+ "autosave.keep_desc": "پرانی بحالی کی نقلیں حذف ہو جاتی ہیں",
+ "autosave.folder_desc": "خالی ہو تو ڈیفالٹ فولڈر",
+ "autosave.remind_desc": "ایسے پروجیکٹ کو محفوظ کرنے کی یاددہانی جس کی ابھی فائل نہیں",
+ "settings.backend_desc": "زیر استعمال گرافکس اڈاپٹر",
+ "settings.news_desc": "اس ورژن میں کیا بدلا",
+ "settings.assoc_default_desc": "ماڈل فائلوں کے لیے اس ایپ کو ڈیفالٹ بنائیں",
+ "settings.data_dir_desc": "کیشے، بحالی کی نقلیں اور لاگز یہاں رہتے ہیں۔"
+}

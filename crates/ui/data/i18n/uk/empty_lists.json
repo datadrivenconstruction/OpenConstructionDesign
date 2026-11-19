@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "Накреслити стіну",
+ "empty.totals.action": "Накреслити стіну",
+ "empty.schedule.action": "Додати поле",
+ "empty.schedule_filtered.action": "Очистити фільтр",
+ "empty.library.action": "Скинути пошук",
+ "empty.library.load": "Завантажити сімейство",
+ "empty.schedule_fields.title": "Полів не показано",
+ "empty.schedule_fields.action": "Додати поле",
+ "empty.schedule_fields.hint": "Увімкніть щонайменше одне поле, щоб побачити таблицю."
+}

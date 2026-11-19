@@ -1,0 +1,21 @@
+{
+ "cmd.help.check_update": "Yangilanishlarni tekshirish",
+ "update_check.title": "Yangilanishni tekshirish",
+ "update_check.desc": "Standart bo'yicha o'chiq. Serverimizga faqat versiya, OS va arxitektura hamda o'rnatish turi yuboriladi. Hech narsa yuklab olinmaydi va o'rnatilmaydi.",
+ "update_check.freq.startup": "Ishga tushganda",
+ "update_check.freq.daily": "Har kuni",
+ "update_check.freq.weekly": "Har hafta",
+ "update_check.freq.never": "Hech qachon",
+ "update_check.check_now": "Hozir tekshirish",
+ "update_check.dialog.title": "Yangilanishni tekshirish",
+ "update_check.unknown.title": "Yangilanishlarni tekshirib bo'lmadi",
+ "update_check.unknown.body": "{e}. Bu versiya joriy ekanligini anglatmaydi. Keyinroq qayta urinib ko'ring.",
+ "update_check.current": "Sizda eng so'nggi versiya bor ({v}).",
+ "update_check.newer": "{v} versiya mavjud",
+ "update_check.date": "Chiqarilgan: {d}",
+ "update_check.unfit": "Bu versiya ({v}) tavsiya etilgan minimal versiya {f} dan eski. Yangilash tavsiya etiladi.",
+ "update_check.close": "Yopish",
+ "update_check.open_failed": "Reliz sahifasini ochib bo'lmadi.",
+ "update_check.toast.newer": "{v} versiya mavjud. Yordam > Yangilanishlarni tekshirish.",
+ "update_check.toast.unfit": "Bu versiya ({v}) tavsiya etilgan minimal versiya {f} dan eski."
+}

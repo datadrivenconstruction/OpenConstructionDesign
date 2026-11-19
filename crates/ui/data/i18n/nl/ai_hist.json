@@ -1,0 +1,14 @@
+{
+ "ai.hist.badge": "AI",
+ "ai.hist.untitled": "AI-wijzigingen",
+ "ai.hist.tip": "{title}\nToegepast door: {actor}\nAI-model: {model}",
+ "ai.hist.why": "Waarom: {why}",
+ "ai.hist.reverted": "teruggedraaid",
+ "ai.hist.revert_one": "Deze AI-batch terugdraaien",
+ "ai.revert.done": "AI-wijzigingen teruggedraaid: {n}. Ongedaan maken brengt ze terug.",
+ "ai.revert.empty": "Er zijn geen AI-wijzigingen om terug te draaien",
+ "ai.revert.not_ai": "Deze stap is geen AI-wijziging",
+ "ai.revert.already": "Deze AI-wijzigingen zijn al teruggedraaid",
+ "ai.revert.opaque": "Niet teruggedraaid: deze AI-wijzigingen kunnen niet veilig worden gescheiden van later werk. Er is niets gewijzigd.",
+ "ai.revert.failed": "Terugdraaien mislukt: {e}"
+}

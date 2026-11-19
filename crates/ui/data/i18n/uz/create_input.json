@@ -1,0 +1,14 @@
+{
+ "cmd.mod.divide": "Bo'lish",
+ "cmd.mod.divide.short": "Bo'lish",
+ "cmd.mod.divide.desc": "Devorni bir qadamda teng qismlarga bo'ladi. Qismlar sonini kiriting, so'ng devorni bosing.",
+ "whereis.mod.divide": "bo'lish, teng qismlar, bo'laklarga kesish, devorni segmentlash",
+ "hint.split.parts": "Bo'lish: devorni bosing · raqam — qismlar (2–100) · Esc — bekor qilish",
+ "create_input.divide.bad_parts": "«{text}» qismlar soni emas: 2 dan {max} gacha butun son kiriting",
+ "create_input.ws.err.empty": "Maketga nom kiriting",
+ "create_input.ws.err.long": "Nom juda uzun: eng ko'pi 40 belgi",
+ "create_input.ws.err.preset": "Bu nom o'rnatilgan maketga tegishli",
+ "create_input.ws.err.full": "Eng ko'pi 24 ta saqlangan maket: avval birini o'chiring",
+ "create_input.seldim.locked": "Masofa {v} qulflangan",
+ "create_input.seldim.positive": "Masofa noldan katta bo'lishi kerak"
+}

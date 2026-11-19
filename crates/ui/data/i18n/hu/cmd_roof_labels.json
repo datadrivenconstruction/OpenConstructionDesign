@@ -1,0 +1,11 @@
+{
+ "cmd.arch.roof_gable.short": "Nyereg",
+ "cmd.arch.roof_hip.short": "Kontyolt",
+ "cmd.arch.roof_shed.short": "Pultos",
+ "cmd.arch.roof_mansard.short": "Mansard",
+ "cmd.arch.roof_gambrel.short": "Mansard nyereg",
+ "cmd.arch.roof_barrel.short": "Hordó",
+ "cmd.arch.roof_edges.short": "Tetőélek",
+ "cmd.arch.roof_opening.short": "Nyílás",
+ "cmd.mass.roof_by_face.short": "Felületről"
+}

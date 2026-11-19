@@ -1,0 +1,15 @@
+{
+ "mcp.ask.cancel": "Annuler",
+ "mcp.ask.auto.title": "Laisser les agents IA appliquer les modifications sans demander ?",
+ "mcp.ask.auto.body": "Les agents IA connectés appliqueront leurs modifications aux brouillons immédiatement, sans attendre votre confirmation : une mauvaise modification peut donc passer avant que vous ne la voyiez. Votre modèle ne change qu'après que vous appuyez sur Appliquer. Ce réglage dure jusqu'à ce que vous le désactiviez, fermiez l'éditeur ou ouvriez un autre modèle.",
+ "mcp.ask.auto.yes": "Appliquer sans demander",
+ "mcp.ask.token.title": "Émettre un nouveau jeton ?",
+ "mcp.ask.token.body": "Le jeton actuel cesse de fonctionner immédiatement : les agents IA connectés sont coupés et devront utiliser le nouveau jeton. Il n'est affiché qu'une seule fois, copiez-le tout de suite.",
+ "mcp.ask.token.yes": "Nouveau jeton",
+ "mcp.auto.chip": "Application auto activée",
+ "mcp.auto.chip_tip": "Les agents IA appliquent les modifications aux brouillons sans demander. Prend fin avec cette session.",
+ "mcp.auto.ask_again": "Redemander",
+ "mcp.token.once": "Copiez ce jeton maintenant : il ne sera plus affiché.",
+ "mcp.renewed": "Nouveau jeton émis : l'ancien ne fonctionne plus",
+ "mcp.copied": "Copié"
+}

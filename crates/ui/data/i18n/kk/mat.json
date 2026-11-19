@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "Бетон",
+ "mat.masonry": "Қалау",
+ "mat.brick": "Кірпіш",
+ "mat.insulation": "Оқшаулау",
+ "mat.plaster": "Сылақ",
+ "mat.render": "Сылау",
+ "mat.gypsum": "Гипсокартон",
+ "mat.glass": "Шыны",
+ "mat.wood": "Ағаш",
+ "mat.steel": "Болат",
+ "mat.membrane": "Мембрана",
+ "mat.other": "Басқа",
+ "warn.cat.wall": "Қабырға",
+ "warn.cat.slab": "Плита",
+ "warn.cat.opening": "Ойық",
+ "warn.cat.curtain_wall": "Шынылы қабырға",
+ "td.mat.custom": "Басқа…"
+}

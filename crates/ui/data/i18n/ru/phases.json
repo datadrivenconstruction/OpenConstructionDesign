@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D",
+ "phases.current_mark": "тек.",
+ "phases.make_current": "Сделать текущей",
+ "phases.col_phase": "Стадия",
+ "phases.col_filter": "Фильтр",
+ "phases.presets": "Пресеты плана",
+ "phases.del_title": "Удалить стадию",
+ "phases.del_text": "Удалить стадию «{name}»? Её элементы перейдут в стадию, выбранную ниже.",
+ "phases.del_into": "Перенести элементы в",
+ "phases.del_ok": "Удалить",
+ "phases.col_kind": "Тип элемента",
+ "phases.col_count": "Количество",
+ "phases.col_volume": "Объём"
+}

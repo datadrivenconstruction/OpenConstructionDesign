@@ -1,0 +1,11 @@
+{
+ "pick_rules.filter": "الاختيار: الكل",
+ "pick_rules.filter.on": "الاختيار: إيقاف {n}",
+ "pick_rules.filter.title": "الفئات التي يمكن اختيارها بالنقر",
+ "pick_rules.filter.all": "اختيار جميع الفئات",
+ "pick_rules.filter.tip": "مرشح الاختيار: الفئات غير المحددة تُتخطى بالنقر والتمرير",
+ "pick_rules.here": "العناصر هنا",
+ "pick_rules.here.selected": "محدد",
+ "pick_rules.pinned": "اختيار العناصر المثبتة",
+ "pick_rules.here.row": "{cat} · {len}"
+}

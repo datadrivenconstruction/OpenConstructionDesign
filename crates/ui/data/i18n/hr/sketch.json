@@ -1,0 +1,11 @@
+{
+ "sketch.points": "Točke",
+ "sketch.rect": "Pravokutnik",
+ "sketch.circle": "Krug",
+ "sketch.polygon": "Mnogokut",
+ "sketch.radius": "R",
+ "sketch.sides": "Stranice",
+ "sketch.circum": "Opisana",
+ "sketch.shape.tip": "Oblik skice (A mijenja). Pravokutnik: dva kuta. Krug i mnogokut: središte, zatim polumjer. Upišite veličinu i pritisnite Enter za fiksiranje.",
+ "tool.err.zero_size": "Nulta veličina: pomaknite drugu točku dalje od prve"
+}

@@ -1,0 +1,6 @@
+{
+ "xlsx_readonly.read_only": "A pasta de trabalho é somente leitura (propriedade do arquivo ou permissão da pasta). Exporte para uma cópia, ou desmarque Somente leitura nas propriedades do arquivo e tente novamente.",
+ "xlsx_readonly.export_copy": "Exportar para uma cópia",
+ "xlsx_readonly.no_copy_name": "Nenhum nome livre para uma cópia ao lado da pasta de trabalho.",
+ "xlsx_readonly.copied": "A pasta de trabalho foi mantida como está. Uma cópia atualizada foi gravada ao lado dela e agora está vinculada: {path}"
+}

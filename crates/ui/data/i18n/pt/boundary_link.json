@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "Escolher o laço inteiro de paredes",
+ "cmd.sketch.link_unlink": "Desvincular a borda da parede",
+ "cmd.sketch.link_repick": "Escolher novamente a parede da borda",
+ "cmd.ctx.floor.link_unlink": "Desvincular bordas das paredes",
+ "cmd.ctx.floor.link_accept": "Aceitar bordas de paredes excluídas",
+ "boundary_link.hint.loop": "Clique em uma parede: o trecho fechado de paredes torna-se bordas vinculadas",
+ "boundary_link.hint.repick": "Clique em uma parede paralela à borda: a borda a seguirá",
+ "boundary_link.need_sketch": "Abra primeiro o esboço do contorno",
+ "boundary_link.need_edge": "Aponte para uma borda do esboço",
+ "boundary_link.need_straight": "Somente uma borda reta pode seguir uma parede",
+ "boundary_link.need_floor": "Selecione uma laje",
+ "boundary_link.no_wall": "Nenhuma parede sob o cursor",
+ "boundary_link.not_parallel": "A parede não é paralela à borda",
+ "boundary_link.not_linked": "Esta borda não está vinculada a uma parede",
+ "boundary_link.unlinked": "Borda desvinculada: permanece no lugar e não segue mais a parede",
+ "boundary_link.accepted": "Bordas aceitas: permanecem no lugar como bordas comuns",
+ "boundary_link.failed": "Não foi possível aplicar",
+ "boundary_link.lost": "parede de origem excluída",
+ "boundary_link.blocked": "não consegue seguir a parede"
+}

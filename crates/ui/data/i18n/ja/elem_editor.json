@@ -1,0 +1,4 @@
+{
+ "elem.spreadsheet.applied": "XLSX スプレッドシート から取り込みました: {what}",
+ "elem.spreadsheet.failed": "XLSX スプレッドシート の取り込みに失敗しました: {e}"
+}

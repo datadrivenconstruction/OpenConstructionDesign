@@ -1,0 +1,14 @@
+{
+ "cmd.arch.wall.tile": "Seinä",
+ "cmd.arch.door.tile": "Ovi",
+ "cmd.arch.window.tile": "Ikkuna",
+ "cmd.arch.floor.tile": "Lattia",
+ "cmd.mod.move.tile": "Siirrä",
+ "cmd.mod.copy.tile": "Kopioi",
+ "cmd.mod.rotate.tile": "Kierrä",
+ "cmd.mod.mirror.tile": "Peilaa",
+ "cmd.mod.trim.tile": "Leikkaa",
+ "cmd.mod.delete.tile": "Poista",
+ "cmd.ann.dim.tile": "Mitta",
+ "cmd.ann.text.tile": "Teksti"
+}

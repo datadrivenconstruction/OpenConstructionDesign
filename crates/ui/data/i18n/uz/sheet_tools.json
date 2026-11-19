@@ -1,0 +1,18 @@
+{
+ "undo.entry_later": "Qaytarilmadi: undan keyin boshqa o'zgarish qilingan. Avval uni qaytaring.",
+ "undo.entry_gone": "Qaytarilmadi: bu o'zgarish allaqachon qaytarilgan yoki tarixda yo'q.",
+ "undo.entry_busy": "Avval joriy chizmani tugating yoki bekor qiling, so'ng qaytaring.",
+ "quick.hud.more": "Xususiyatlarda ko'proq: {names}",
+ "sheet_tools.sheet.more": "Varaq uchun qo'shimcha asboblar",
+ "job.of": "{t} dan {d}",
+ "job.of.mb": "{t} MB dan {d}",
+ "job.left.under_minute": "1 daqiqadan kam qoldi",
+ "job.left.minutes": "taxminan {n} daq. qoldi",
+ "sheet_tools.start.units": "Birliklar",
+ "sheet_tools.print.save": {
+  "one": "# varaqni saqlash",
+  "other": "# varaqni saqlash"
+ },
+ "sheet_tools.sets.delete_ask": "“{name}” to'plami o'chirilsinmi? Uning varaqlari loyihada qoladi.",
+ "sheet_tools.keep": "Saqlash"
+}

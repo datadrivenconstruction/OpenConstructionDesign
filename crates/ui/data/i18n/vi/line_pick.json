@@ -1,0 +1,22 @@
+{
+ "cmd.arch.grid_pick": "Lưới theo đường",
+ "cmd.arch.grid_pick.desc": "Tạo lưới chính xác dọc theo một đường bản vẽ đã chọn trên tầng hiện tại; tên tiếp tục theo chuỗi. Tab lấy mọi đường song song cùng lớp bản vẽ một lúc. Mỗi lần chọn là một bước hoàn tác.",
+ "cmd.struct.beam_pick": "Dầm theo đường",
+ "cmd.struct.beam_pick.desc": "Đặt dầm thuộc loại hiện tại trên tầng đang hoạt động theo một đường bản vẽ đã chọn. Tab lấy cả chuỗi liên kết. Mỗi lần chọn là một bước hoàn tác.",
+ "hint.grid_pick.one": "Lưới theo đường: chọn một đường bản vẽ · Tab mọi đường song song trong lớp · Esc thoát",
+ "hint.grid_pick.more": "Lưới theo đường: chọn một đường để lấy mọi đường song song trong lớp của nó · Tab một đường · Esc tắt",
+ "hint.beam_pick.one": "Dầm theo đường: chọn một đường bản vẽ · Tab chuỗi liên kết · Esc thoát",
+ "hint.beam_pick.more": "Dầm theo đường: chọn một đường để lấy chuỗi · Tab một đường · Esc tắt",
+ "line_pick.st.start_grid": "Chọn một đường bản vẽ. Tab: mọi đường song song trong lớp",
+ "line_pick.st.start_beam": "Chọn một đường bản vẽ cho dầm {type}. Tab: chuỗi liên kết",
+ "line_pick.st.grid_done": "Đã thêm lưới {name}",
+ "line_pick.st.grids_done": "Đã thêm {n} lưới: {first} — {last}",
+ "line_pick.st.beam_done": "Đã thêm dầm {type}",
+ "line_pick.st.beams_done": "Đã thêm {n} dầm {type}",
+ "line_pick.st.on_grid": "Đường này đã có lưới {name}",
+ "line_pick.st.on_beam": "Đường này đã có dầm {id}",
+ "line_pick.st.no_layer": "Chưa biết lớp bản vẽ của các đường, hãy thử lại",
+ "line_pick.st.no_beam_type": "Không có tiết diện dầm trong danh mục",
+ "line_pick.st.reload_warn": "Đã tạo, nhưng góc nhìn không tải lại được: {err}",
+ "line_pick.st.failed": "Chưa tạo: {err}"
+}

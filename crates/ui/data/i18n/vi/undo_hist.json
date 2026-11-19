@@ -1,0 +1,8 @@
+{
+ "undo.undone": "Đã hoàn tác: {what}",
+ "undo.redone": "Đã làm lại: {what}",
+ "undo.action.edit.redo": "Làm lại",
+ "undo.action.edit.undo": "Hoàn tác",
+ "hdr.unsaved": "Thay đổi chưa lưu",
+ "hdr.file_menu": "Menu tệp"
+}

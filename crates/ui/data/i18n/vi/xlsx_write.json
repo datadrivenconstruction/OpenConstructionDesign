@@ -1,0 +1,4 @@
+{
+ "xlsx_write.denied": "Không có quyền ghi trong thư mục này. Sổ làm việc không bị thay đổi. Hãy lưu bản xuất vào thư mục khác.",
+ "xlsx_write.save_to": "Lưu vào…"
+}

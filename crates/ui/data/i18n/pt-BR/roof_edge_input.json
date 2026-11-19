@@ -1,0 +1,23 @@
+{
+ "roof_edge.err.number": "Informe um número",
+ "roof_edge.err.positive": "Deve ser maior que zero",
+ "roof_edge.err.nonneg": "Não deve ser negativo",
+ "roof_edge.err.max": "Não deve exceder {max}",
+ "roof_edge.list.empty_hint": "Adicione frisos, calhas, forros ou claraboias com os comandos de cobertura",
+ "roof_edge.edit_tip": "Editar propriedades",
+ "roof_edge.delete_tip": "Excluir",
+ "roof_edge.pe.del_tip": "Remover este ponto (uma seção mantém pelo menos 3)",
+ "roof_edge.pe.up_tip": "Mover este ponto para cima",
+ "roof_edge.confirm_edge": "Excluir {name}? Ctrl+Z o traz de volta.",
+ "roof_edge.confirm_profile": "Excluir o perfil {name}? Ctrl+Z o traz de volta.",
+ "roof_edge.deleted_one": "{name} excluído",
+ "roof_edge.deleted_n": {
+  "one": "# elemento excluído",
+  "other": "# elementos excluídos"
+ },
+ "roof_edge.profile_deleted": "Perfil excluído",
+ "roof_edge.profile_in_use": {
+  "one": "Usado por # elemento de borda: exclua ou altere-o primeiro",
+  "other": "Usado por # elementos de borda: exclua ou altere-os primeiro"
+ }
+}

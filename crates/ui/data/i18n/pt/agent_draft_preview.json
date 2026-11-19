@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "Pré-visualizar",
+ "agent_draft.ag.preview.desc": "Destaca os elementos deste rascunho na área de desenho enquanto o ponteiro estiver sobre o botão. Nada é alterado.",
+ "agent_draft.type.column": "Pilar",
+ "agent_draft.type.roof": "Cobertura",
+ "agent_draft.type.ceiling": "Teto",
+ "agent_draft.type.stair": "Monolítica",
+ "agent_draft.type.railing": "Guarda-corpo",
+ "agent_draft.type.shaft": "Poço",
+ "agent_draft.type.axis": "Eixo 6,5 mm",
+ "agent_draft.type.refplane": "Plano de referência"
+}

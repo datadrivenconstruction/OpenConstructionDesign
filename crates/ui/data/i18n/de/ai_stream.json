@@ -1,0 +1,14 @@
+{
+ "ai.stream.waiting": "Warten auf das Modell",
+ "ai.stream.reading": "Modell wird gelesen",
+ "ai.stream.working": "Arbeitet",
+ "ai.stream.answering": "Antwort wird geschrieben",
+ "ai.stream.tools_one": "1 Werkzeug",
+ "ai.stream.tools_many": "{n} Werkzeuge",
+ "ai.stream.secs": "{n} s",
+ "ai.stream.stalled": "Wartet immer noch auf den Modelldienst",
+ "ai.stream.stop": "Stopp",
+ "ai.stream.cancelled": "Gestoppt",
+ "ai.stream.incomplete": "Der Entwurf ist unvollständig. Am Modell wurde nichts angewendet.",
+ "ai.stream.sep": " · "
+}

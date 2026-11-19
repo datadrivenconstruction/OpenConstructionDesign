@@ -1,0 +1,11 @@
+{
+ "cmd.arch.roof_gable.short": "Saltak",
+ "cmd.arch.roof_hip.short": "Valmtak",
+ "cmd.arch.roof_shed.short": "Pulttak",
+ "cmd.arch.roof_mansard.short": "Mansardtak",
+ "cmd.arch.roof_gambrel.short": "Bøyd saltak",
+ "cmd.arch.roof_barrel.short": "Tønne",
+ "cmd.arch.roof_edges.short": "Takkanter",
+ "cmd.arch.roof_opening.short": "Åpning",
+ "cmd.mass.roof_by_face.short": "Etter flate"
+}

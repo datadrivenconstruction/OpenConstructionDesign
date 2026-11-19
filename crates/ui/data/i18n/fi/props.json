@@ -1,0 +1,18 @@
+{
+ "props.multi.title": {
+  "one": "# elementti",
+  "other": "# elementtiä"
+ },
+ "props.multi.cats": {
+  "one": "# luokka",
+  "other": "# luokkaa"
+ },
+ "props.multi.varies": {
+  "one": "vaihtelee (#)",
+  "other": "vaihtelee (#)"
+ },
+ "props.multi.clear": "Tyhjennä valinta",
+ "props.multi.undo": "Kumoa",
+ "props.multi.narrowed": "Valinta: {n} · {name}",
+ "props.multi.chip_tip": "{name}: {n}  ·  Napsautus näyttää niiden ominaisuudet, Ctrl+napsautus pitää vain nämä"
+}

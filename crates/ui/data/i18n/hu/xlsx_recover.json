@@ -1,0 +1,16 @@
+{
+ "xlsx_recover.title": "A csatolt munkafüzetbe irányuló exportálás megszakadt",
+ "xlsx_recover.both": "Az exportálás leállt az előző munkafüzet félretétele és az új helyére helyezése között. Semmi sem veszett el: az új munkafüzet teljes a(z) {part} helyen, az előző pedig megmarad itt: {bak}.",
+ "xlsx_recover.part_only": "Az exportálás az új munkafüzet elhelyezése előtt leállt. Teljes a(z) {part} helyen.",
+ "xlsx_recover.bak_only": "Az exportálás az új munkafüzet elkészülte előtt leállt. Az előző munkafüzet megmarad itt: {bak}.",
+ "xlsx_recover.finish": "A megszakadt exportálás befejezése",
+ "xlsx_recover.restore": "Az előző munkafüzet visszaállítása",
+ "xlsx_recover.finished": "A megszakadt exportálás befejeződött: az új munkafüzet a helyén van.",
+ "xlsx_recover.finished_kept": "A megszakadt exportálás befejeződött: az új munkafüzet a helyén van, az előző pedig megmarad itt: {bak}.",
+ "xlsx_recover.restored": "Az előző munkafüzet visszakerült a helyére.",
+ "xlsx_recover.restore_failed": "Az előző munkafüzetet nem lehetett visszahelyezni ({err}). Megmarad itt: {path}.",
+ "xlsx_recover.not_restored": "Az új munkafüzetet nem lehetett a helyére tenni, az előzőt pedig nem lehetett visszahelyezni. Semmi sem veszett el: az előző munkafüzet megmarad itt: {path}; a Szinkronizálás a befejezést vagy a visszaállítást ajánlja fel.",
+ "xlsx_recover.finish_failed": "Az új munkafüzetet nem lehetett a helyére tenni ({err}). Itt marad: {path}.",
+ "xlsx_recover.dest_back": "Munkafüzet van újra itt: {path}: semmi sem lett áthelyezve.",
+ "xlsx_recover.nothing": "A megszakadt exportálásból nem maradt áthelyezni való."
+}

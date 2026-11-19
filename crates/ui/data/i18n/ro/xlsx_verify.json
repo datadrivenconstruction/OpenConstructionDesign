@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "Aplicarea a fost anulată: modelul nu corespundea previzualizării. {what}",
+ "xlsx_verify.not_written": "{row} nu a fost modificat.",
+ "xlsx_verify.lost": "{row} a dispărut.",
+ "xlsx_verify.not_deleted": "{row} nu a fost șters.",
+ "xlsx_verify.extra_deleted": "{row} a fost șters, deși previzualizarea îl păstrează.",
+ "xlsx_verify.created": "{table}: {got} noi în loc de {want}.",
+ "xlsx_verify.value": "{row}, {field}: se aștepta {want} (era {old}), s-a primit {got}.",
+ "xlsx_verify.check_failed": "Rezultatul nu a putut fi verificat: {e}",
+ "xlsx_verify.plan_failed": "Aplicarea nu a fost pornită: verificarea nu a putut citi modelul ({e}).",
+ "xlsx_verify.take_back_failed": "Pasul nu a putut fi anulat ({e}): folosește Anulează.",
+ "xlsx_verify.t.wall": "Perete",
+ "xlsx_verify.t.opening": "Gol",
+ "xlsx_verify.t.room": "Încăpere",
+ "xlsx_verify.t.slab": "Planșeu",
+ "xlsx_verify.t.level": "Nivel",
+ "xlsx_verify.t.wall_type": "Tip de perete",
+ "xlsx_verify.t.slab_type": "Tip de planșeu",
+ "xlsx_verify.t.col": "Stâlp",
+ "xlsx_verify.t.beam": "Grindă",
+ "xlsx_verify.t.roof": "Acoperiș",
+ "xlsx_verify.t.curtain_wall": "Perete cortină"
+}

@@ -1,0 +1,15 @@
+{
+ "fe.add_why_empty": "پہلے پیرامیٹر کا نام درج کریں",
+ "fe.add_why_exists": "اس نام کا پیرامیٹر موجود ہے؛ تبدیل کرنے کے لیے لاگو استعمال کریں",
+ "fe.apply_why_missing": "اس نام کا کوئی پیرامیٹر نہیں؛ موجودہ نام درج کریں",
+ "fe.nochange": "ابھی کوئی تبدیلی نہیں",
+ "options.accept_more": "قبول کریں…",
+ "options.delete_more": "حذف کریں…",
+ "options.empty_title": "ابھی کوئی اختیاری سیٹ نہیں",
+ "options.more": "مزید اعمال: {name}",
+ "options.primary_named": "بنیادی اختیار: {name}",
+ "options.primary_tip": "اسے سیٹ کا بنیادی اختیار بنائیں",
+ "options.select_first": "پہلے ماڈل میں عناصر منتخب کریں",
+ "options.show_3d": "3D میں دکھائیں: {name}",
+ "options.show_plan": "پلان میں دکھائیں: {name}"
+}

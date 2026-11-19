@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "سطح حر",
+ "cmd.mass.panelize": "تقسيم إلى ألواح",
+ "cmd.mass.surface_shell": "سقف على سطح",
+ "cmd.mass.thicken": "إعطاء سماكة",
+ "hint.mass.freeform.first": "سطح حر: الزاوية الأولى لمستطيل المسقط · اكتب الارتفاع · Esc — إلغاء",
+ "hint.mass.freeform.next": "سطح حر: الزاوية المقابلة · اكتب الارتفاع · Esc — إلغاء",
+ "hint.mass.panelize.first": "تقسيم إلى ألواح: اختر سطحًا حرًا في ثلاثي الأبعاد · Esc — إلغاء",
+ "hint.mass.panelize.value": "تقسيم إلى ألواح: اكتب حجم اللوح · Enter — تطبيق · Esc — إلغاء",
+ "hint.mass.surface_shell.first": "سقف على سطح: اختر سطحًا حرًا في ثلاثي الأبعاد · Esc — إلغاء",
+ "hint.mass.surface_shell.value": "سقف على سطح: اكتب السماكة · Enter — تطبيق · Esc — إلغاء",
+ "hint.mass.thicken.first": "إعطاء سماكة: اختر سطحًا حرًا في ثلاثي الأبعاد · Esc — إلغاء",
+ "hint.mass.thicken.value": "إعطاء سماكة: اكتب السماكة (0 — سطح بلا سماكة) · Enter — تطبيق · Esc — إلغاء",
+ "status.mass.pick_surface": "اختر سطحًا حرًا",
+ "status.mass.freeform_small": "المستطيل صغير جدًا: 0.5 م على الأقل في كل اتجاه",
+ "name.mass.freeform": "سطح حر",
+ "rgroup.mass_free": "متقدم"
+}

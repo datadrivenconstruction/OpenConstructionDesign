@@ -1,0 +1,42 @@
+{
+ "ai.tool.show_elements": "عناصر دکھائے جا رہے ہیں",
+ "ai.tool.isolate_elements": "عناصر الگ کیے جا رہے ہیں",
+ "ai.tool.color_by": "قدر کے لحاظ سے رنگ دیا جا رہا ہے",
+ "ai.tool.reset_view": "منظر ری سیٹ ہو رہا ہے",
+ "ai_found.found.query": "ملا",
+ "ai_found.found.show": "دکھایا گیا",
+ "ai_found.found.isolate": "الگ کیا گیا",
+ "ai_found.found.hide": "چھپا دیا گیا",
+ "ai_found.found.color": "رنگ دیا گیا",
+ "ai_found.found.count": "{m} میں سے {n}",
+ "ai_found.found.none": "کوئی میل نہیں کھاتا۔ وسیع فلٹر آزمائیں۔",
+ "ai_found.found.show_btn": "دکھائیں",
+ "ai_found.found.show_tip": "یہ عناصر منتخب کریں اور پلان اور 3D میں ان پر زوم کریں",
+ "ai_found.found.isolate_btn": "الگ کریں",
+ "ai_found.found.isolate_tip": "منظر ری سیٹ ہونے تک صرف یہ عناصر دکھائیں",
+ "ai_found.found.select_btn": "منتخب کریں",
+ "ai_found.found.select_tip": "منظر حرکت کیے بغیر یہ عناصر منتخب کریں",
+ "ai_found.legend.title": "{by} کے لحاظ سے رنگ",
+ "ai_found.legend.row_tip": "ان عناصر کو منتخب کرنے کے لیے کلک کریں",
+ "ai_found.legend.empty_value": "کوئی قدر نہیں",
+ "ai_found.legend.other": {
+  "one": "# مزید قدر",
+  "other": "# مزید قدریں"
+ },
+ "ai_found.view.title": "AI معاون کا منظر",
+ "ai_found.view.reset": "منظر ری سیٹ کریں",
+ "ai_found.view.reset_tip": "AI معاون کی تبدیلی سے پہلے کا منظر واپس لائیں",
+ "ai_found.view.shown": {
+  "one": "# عنصر دکھایا گیا",
+  "other": "# عناصر دکھائے گئے"
+ },
+ "ai_found.view.isolated": {
+  "one": "# عنصر الگ کیا گیا",
+  "other": "# عناصر الگ کیے گئے"
+ },
+ "ai_found.view.hidden": {
+  "one": "# عنصر چھپا ہوا",
+  "other": "# عناصر چھپے ہوئے"
+ },
+ "ai_found.found.line": "{what}: {count}"
+}

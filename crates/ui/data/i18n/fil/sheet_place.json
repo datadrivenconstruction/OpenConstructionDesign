@@ -1,0 +1,15 @@
+{
+ "sheet_place.place_view_tip": "Ilagay ang view o schedule sa sheet",
+ "sheet_place.properties_tip": "Numero, pangalan, papel at revision ng sheet",
+ "sheet_place.print_tip": "I-print o i-export ang sheet",
+ "sheet_place.fit_tip": "Ayusin ang sheet sa window",
+ "sheet_place.activate_tip": "I-edit ang view sa lugar sa sheet: i-pan, i-zoom at i-crop ito",
+ "sheet_place.open_view_tip": "Buksan ang view sa sarili nitong tab",
+ "sheet_place.done_tip": "Tapusin ang pag-edit ng view sa sheet",
+ "sheet_place.reset_crop_tip": "Alisin ang crop at ipakita ang buong view",
+ "sheet_place.scale_tip": "Scale ng napiling view sa sheet",
+ "sheet_place.title_tip": "Pamagat na ipinapakita sa ilalim ng view sa sheet",
+ "sheet_place.banner": "Ine-edit ang view sa sheet",
+ "sheet_place.new_set_tip": "Gumawa ng set ng mga sheet na sabay i-print",
+ "sheet_place.new_sheet_tip": "Magdagdag ng sheet sa proyekto"
+}

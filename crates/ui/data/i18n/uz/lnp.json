@@ -1,0 +1,14 @@
+{
+ "lnp.openings_refused": "{n} ta teshik o'zgarmadi ({why})",
+ "lnp.params_changed": "o'zgargan qiymatlar: {n}",
+ "lnp.params_same": "O'zgarish yo'q: {u} ta element bu qiymatga ega",
+ "lnp.params_tip": "Enter qiymatni tanlangan barcha elementlarga qo'llaydi; Esc ularni saqlaydi",
+ "lnp.locked_hint": "Qulflangan qiymatlar saqlanadi: {n}",
+ "lnp.panels_one": "Panellar bir vaqtda bittadan tahrirlanadi",
+ "lnp.keep_first": "Birinchisini saqlash",
+ "lnp.keep_first_tip": "Tahrirlash uchun faqat birinchi panelni tanlang",
+ "lnp.clip_from_wall": "Devor #{id} dan parametrlar nusxalandi",
+ "lnp.clip_from_opening": "Teshik #{id} dan parametrlar nusxalandi",
+ "lnp.match_from": "#{id} xususiyatlari {n} ta elementga moslashtirildi",
+ "lnp.why_at": "#{id}: {e}"
+}

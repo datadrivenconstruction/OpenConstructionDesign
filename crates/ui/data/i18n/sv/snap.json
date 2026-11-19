@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "Ändpunkt",
+ "snap.midpoint": "Mittpunkt",
+ "snap.perpendicular": "Vinkelrät",
+ "snap.wall_axis": "Väggaxel",
+ "snap.wall_face": "Väggyta",
+ "snap.grid": "Rutnät",
+ "snap.intersection": "Skärning",
+ "snap.grid_axis": "Axellinje",
+ "snap.ref_plane": "Referensplan",
+ "snap.nearest": "Närmaste",
+ "snap.align_x": "Justerad i X mot en fjärrpunkt",
+ "snap.align_y": "Justerad i Y mot en fjärrpunkt",
+ "snap.align_xy": "Justerad i X och Y"
+}

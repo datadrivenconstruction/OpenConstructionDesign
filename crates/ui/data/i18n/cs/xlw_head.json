@@ -1,0 +1,15 @@
+{
+ "xlw.hd_never": "Zatím neexportováno",
+ "xlw.hd_now": "právě teď",
+ "xlw.hd_min": "před {n} min",
+ "xlw.hd_hour": "před {n} h",
+ "xlw.hd_day": "před {n} d",
+ "xlw.hd_linked": "Propojeno",
+ "xlw.hd_watched": "Sledováno",
+ "xlw.hd_stale": "Model se od exportu změnil",
+ "xlw.ft_export": "Export",
+ "xlw.ft_review": "Zkontrolovat",
+ "xlw.ft_apply": "Použít {n} změn",
+ "xlw.ft_delete_missing": "Smazat chybějící",
+ "xlw.ft_keep_missing_tip": "Mazání je zapnuto: prvky bez řádku se při použití smažou. Odškrtněte, chcete-li je ponechat."
+}

@@ -1,0 +1,27 @@
+{
+ "id": "kz",
+ "version": "2026.11",
+ "parent": "generic",
+ "country": "KZ",
+ "lang": [
+  "kk",
+  "ru"
+ ],
+ "units": {
+  "length": "m",
+  "display": "metric"
+ },
+ "conventions": {
+  "ground_floor": 1,
+  "area_standard": "net",
+  "net_share": 1.0,
+  "note": "Street level is the 1st floor; total dwelling area is the sum of the room areas. Our own summary, not checked against a clause.",
+  "source": null
+ },
+ "status": "tier3",
+ "climate": {
+  "zones": [],
+  "default": null
+ },
+ "note": "Numbers with verified=true were checked against the cited clause; the rest are hints to verify by an engineer against the current edition. Wording is our own."
+}

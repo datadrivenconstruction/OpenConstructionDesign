@@ -1,0 +1,14 @@
+{
+ "save_guard.save.empty_over_full": "کچھ محفوظ نہیں ہوا: ماڈل خالی ہے، اور فائل میں پہلے سے مواد ہے۔ فائل بالکل نہیں چھوئی گئی۔ کسی اور نام سے لکھنے کے لیے بطور محفوظ کریں استعمال کریں۔",
+ "save_guard.refuse.body": "کچھ محفوظ نہیں ہوا: ماڈل خالی ہے، اور {name} میں پہلے سے مواد ہے۔ فائل بالکل نہیں چھوئی گئی۔",
+ "save_guard.refuse.foreign": "یہ DDC Editor کی فائل نہیں، اس لیے بدلی نہیں جا سکتی۔ کسی اور نام سے لکھنے کے لیے بطور محفوظ کریں استعمال کریں۔",
+ "save_guard.refuse.ask": "{name} بدلیں؟ اس میں {what} ہے۔ خالی ماڈل لکھنے سے پہلے یہ اس کے ساتھ _archive فولڈر میں منتقل ہوگی۔",
+ "save_guard.refuse.holds_db": "{n} عناصر اور مواد کی قطاریں",
+ "save_guard.refuse.holds_ifc": "پروڈکٹس والا IFC",
+ "save_guard.refuse.replace": "پھر بھی بدلیں…",
+ "save_guard.refuse.replace_yes": "منتقل کریں اور بدلیں",
+ "save_guard.refuse.save_as": "بطور محفوظ کریں…",
+ "save_guard.refuse.cancel": "منسوخ",
+ "save_guard.replace.moved": "پچھلی فائل {path} میں منتقل ہو گئی",
+ "save_guard.replace.move_failed": "{name} کو الگ نہیں کیا جا سکا: {error}۔ کچھ نہیں لکھا گیا۔"
+}

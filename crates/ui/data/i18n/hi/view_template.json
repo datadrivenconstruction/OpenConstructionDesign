@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "पहले टेम्पलेट का नाम लिखें",
+ "view_template.name_taken": "इस नाम का टेम्पलेट पहले से है",
+ "view_template.pick_blocked": "पहले कम से कम एक व्यू चुनें",
+ "view_template.views.one": "{n} व्यू",
+ "view_template.views.few": "{n} व्यू",
+ "view_template.views.many": "{n} व्यू",
+ "view_template.delete.title": "यह टेम्पलेट हटाएँ?",
+ "view_template.delete.body": "टेम्पलेट “{name}” हटाया जाएगा। उपयोग: {used}।",
+ "view_template.delete.unused": "टेम्पलेट “{name}” हटाया जाएगा। कोई व्यू इसका उपयोग नहीं करता।",
+ "view_template.delete.keeps": "ये व्यू अपने मौजूदा ग्राफ़िक्स रखेंगे, पर लिंक खो देंगे।",
+ "view_template.delete.undo": "इसे एक बार वापस लें से वापस ले सकते हैं।",
+ "view_template.delete.confirm": "टेम्पलेट हटाएँ"
+}

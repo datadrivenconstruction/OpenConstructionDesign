@@ -1,0 +1,4 @@
+# Raw menu constructions per file: path count. Only goes down; see menu_lint.rs.
+crates/app/src/ai/ui/settings.rs 1
+crates/app/src/shell/start_win.rs 1
+crates/app/src/tools/core_items.rs 1

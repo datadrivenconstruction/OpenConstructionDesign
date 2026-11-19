@@ -1,0 +1,4 @@
+{
+ "vv_conflict.vv.switched": "アクティブなビューが変更されました。これらの編集は {view} に属し、まだ適用されていません: 適用すると {view} に書き込み、破棄すると削除します。",
+ "vv_conflict.vv.discard": "編集を破棄"
+}

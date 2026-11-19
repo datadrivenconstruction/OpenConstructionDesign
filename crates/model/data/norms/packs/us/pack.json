@@ -1,0 +1,26 @@
+{
+ "id": "us",
+ "version": "2026.11",
+ "parent": "generic",
+ "country": "US",
+ "lang": [
+  "en"
+ ],
+ "units": {
+  "length": "m",
+  "display": "imperial"
+ },
+ "conventions": {
+  "ground_floor": 1,
+  "area_standard": "gross",
+  "net_share": 0.85,
+  "note": "Street level is the 1st floor; dwelling areas are usually measured to the outside of exterior walls. Our own summary, not checked against a clause.",
+  "source": null
+ },
+ "status": "tier2",
+ "climate": {
+  "zones": [],
+  "default": null
+ },
+ "note": "Numbers with verified=true were checked against the cited clause; the rest are hints to verify by an engineer against the current edition. Wording is our own."
+}

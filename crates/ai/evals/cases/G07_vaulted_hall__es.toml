@@ -1,0 +1,31 @@
+id = "G07_vaulted_hall__es"
+tier = "hard"
+group = "Any geometry"
+title = "Vaulted hall"
+lang = "es"
+base = "empty"
+
+[[turn]]
+say = "Una sala con bóvedas de crucería de 30 x 12 m, altura de la nave 14 m, seis tramos, columnas y arcos apuntados, de piedra, con ventanas altas en el claristorio."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "col"
+min = 10.0
+
+[[oracle.count]]
+spec = "opening"
+min = 6.0
+
+[[oracle.count]]
+spec = "col+beam+brace+truss+gridshell_bar+solid+mass+mesh+freeform+shell_elem+gridshell+wall+slab+roof+stair+toposolid+wall_spline"
+min = 40.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

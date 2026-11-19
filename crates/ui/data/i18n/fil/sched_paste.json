@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "Naidikit ang {n} cell",
+ "sched_edit.pasted_skipped": "Naidikit ang {n} cell, nilaktawan ang {k}: {why}",
+ "sched_edit.filled": "Napunan ang {n} cell",
+ "sched_edit.filled_skipped": "Napunan ang {n} cell, nilaktawan ang {k}: {why}",
+ "sched_edit.why_ro": "{n} basa lang",
+ "sched_edit.why_bad": "{n} maling halaga",
+ "sched_edit.no_cell": "Mag-click muna ng cell sa schedule",
+ "sched_edit.nothing": "Walang isusulat",
+ "sched_edit.not_refreshed": "Naisulat, pero hindi na-refresh ang view: {e}",
+ "sched_edit.failed": "hindi nabago: {e}",
+ "sched_edit.no_changes": "Walang pagbabago: may ganitong halaga na ang {u} cell",
+ "sched_edit.same_tail": ", {u} na pareho na"
+}

@@ -1,0 +1,5 @@
+{
+ "start_recent.unavailable": "Saat ini tidak tersedia (drive atau lokasi jaringan tidak merespons): {path}",
+ "start_recent.unavailable_short": "Saat ini tidak tersedia",
+ "start_recent.retry": "Coba lagi"
+}

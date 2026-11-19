@@ -1,0 +1,6 @@
+{
+ "imported_prop_edit.remove": "प्रॉपर्टी हटाएँ",
+ "imported_prop_edit.remove.tip": "चुने गए {n} एलिमेंट से प्रॉपर्टी एक पूर्ववत-चरण में हटाता है; सहेजने पर IFC फ़ाइल से हट जाती है",
+ "imported_prop_edit.done": "{n} एलिमेंट से {key} हटाया गया",
+ "imported_prop_edit.warn.reload": "हो गया, लेकिन व्यू ताज़ा नहीं हुआ; पैनल फिर खोलें, या गलत लगे तो पूर्ववत करें"
+}

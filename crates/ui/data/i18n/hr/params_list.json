@@ -1,0 +1,26 @@
+{
+ "params_list.n_params": {
+  "one": "# parametar",
+  "few": "# parametra",
+  "other": "# parametara"
+ },
+ "params_list.n_values": {
+  "one": "# vrijednost",
+  "few": "# vrijednosti",
+  "other": "# vrijednosti"
+ },
+ "params_list.n_elements": {
+  "one": "# element",
+  "few": "# elementa",
+  "other": "# elemenata"
+ },
+ "params_list.exported": "{params} izvezeno u {file}",
+ "params_list.export_failed": "Parametri nisu izvezeni: {why}",
+ "params_list.open_folder": "Otvori mapu",
+ "params_list.delete_tip": "Obriši parametar i njegove vrijednosti",
+ "params_list.confirm": "Obrisati {name} i njegove {values} na {elements}?",
+ "params_list.confirm_btn": "Obriši",
+ "params_list.cancel": "Odustani",
+ "params_list.deleted": "Obrisan parametar {name} ({values})",
+ "params_list.undo": "Poništi"
+}

@@ -1,0 +1,19 @@
+{
+ "names.level": "标高 {n}",
+ "names.slab": "楼板 200",
+ "names.roof_slab": "屋面板 200",
+ "names.sheet.plan_section": "一层平面及剖面",
+ "names.sheet.plan_view": "一层平面",
+ "names.sheet.site_plan": "总平面图",
+ "names.sheet_set.issue": "第 1 次发布",
+ "names.title.owner": "Project Ltd",
+ "names.title.creator": "A. Ivanov",
+ "names.title.approver": "P. Petrov",
+ "names.title.document_type": "图纸",
+ "names.title.status": "进行中",
+ "names.revision.date": "2026年11月4日",
+ "names.revision.description": "已发布供审核",
+ "names.revision.author": "AI",
+ "names.demo.no_levels": "无楼层",
+ "names.demo.no_sheet": "图纸"
+}

@@ -1,0 +1,38 @@
+id = "G28_cooling_tower__de"
+tier = "hard"
+group = "Any geometry"
+title = "Hyperboloid cooling tower"
+lang = "de"
+base = "empty"
+
+[[turn]]
+say = "Ein hyperboloider Kühlturm: Höhe 120 m, Basisdurchmesser 90 m, Kehle 55 m auf 90 m Höhe, Oberrand 58 m, gerippte Schale mit V-förmigen Stützen am Fuß."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "col"
+min = 24.0
+
+[[oracle.count]]
+spec = "shell_elem+freeform+wall_spline+mesh+solid+wall"
+min = 1.0
+
+[[oracle.geom]]
+kind = "height"
+min = 110.0
+max = 130.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1
+
+[[oracle.geom]]
+kind = "waist"
+ratio_max = 0.8
+at_min = 0.5
+at_max = 0.9

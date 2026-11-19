@@ -1,0 +1,9 @@
+{
+ "empty.props_model.title": "Nada selecionado",
+ "empty.props_model.hint": "Clique em um elemento na vista para ver suas propriedades. Ou exporte todos os parâmetros para uma planilha, edite-os lá e aplique de volta.",
+ "empty.props_model.action": "Exportar para o XLSX",
+ "tut.spreadsheet.title": "Ida e volta com o XLSX",
+ "tut.spreadsheet.1": "Pressione Exportar para o planilha XLSX abaixo: escolha o que incluir e salve a planilha.",
+ "tut.spreadsheet.2": "Abra a planilha no planilha XLSX, altere uma célula e salve. A prévia aqui mostra a alteração.",
+ "tut.spreadsheet.3": "Confira a prévia e pressione Aplicar ao modelo. Ctrl+Z desfaz."
+}

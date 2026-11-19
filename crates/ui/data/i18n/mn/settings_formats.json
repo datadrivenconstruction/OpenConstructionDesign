@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "Ажлын номыг экспортлосны дараа юу болохыг заана",
+ "settings.area_decimals_desc": "Талбайн аравтын таслалын дараах цифр",
+ "settings.volume_decimals_desc": "Эзлэхүүний аравтын таслалын дараах цифр",
+ "settings.frac_desc": "Империйн уртын хамгийн бага бутархай",
+ "settings.small_area_desc": "Нэг квадрат футээс бага талбайг квадрат инчээр харуулах",
+ "settings.sample_desc": "Одоогийн сонголтоор тоонууд ямар харагдахыг харуулна",
+ "autosave.title_desc": "Нээлттэй төслийн сэргээх хуулбарыг хадгалах",
+ "autosave.interval_desc": "Сэргээх хуулбаруудын хоорондох хугацаа",
+ "autosave.keep_desc": "Хуучин сэргээх хуулбарууд устгагдана",
+ "autosave.folder_desc": "Хоосон байвал анхдагч фолдер",
+ "autosave.remind_desc": "Файлгүй төслийг хадгалах сануулга",
+ "settings.backend_desc": "Ашиглагдаж буй график адаптер",
+ "settings.news_desc": "Энэ хувилбарт юу өөрчлөгдсөн",
+ "settings.assoc_default_desc": "Энэ аппыг загварын файлуудын анхдагч болгох",
+ "settings.data_dir_desc": "Кэш, сэргээх хуулбар, бүртгэл энд хадгалагдана."
+}

@@ -1,0 +1,6 @@
+{
+ "xl.msg.filter_on_sheet_x": "filtr w arkuszu '{}'",
+ "xl.msg.sort_settings_on_sheet_x": "ustawienia sortowania w arkuszu '{}'",
+ "xl.msg.hidden_rows_on_sheet_x": "ukryte wiersze w arkuszu '{}'",
+ "xl.msg.hidden_columns_on_sheet_x": "ukryte kolumny w arkuszu '{}'"
+}

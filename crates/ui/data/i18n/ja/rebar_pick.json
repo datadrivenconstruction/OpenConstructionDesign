@@ -1,0 +1,7 @@
+{
+ "rebar_pick.pick.empty": "鉄筋: 柱、梁、壁、スラブ、または基礎を選択してください",
+ "rebar_pick.pick.unsupported": "この選択には鉄筋を配置できません。柱、梁、壁、スラブ、または基礎を選択してください",
+ "rebar_pick.pick.keys": "クリックで選択、Shift で追加 · Enter でフォームを開く · Esc でキャンセル",
+ "rebar_pick.pick.open": "フォームを開く",
+ "rebar_pick.pick.cancel": "キャンセル"
+}

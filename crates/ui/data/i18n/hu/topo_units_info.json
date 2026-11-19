@@ -1,0 +1,13 @@
+{
+ "topo.unit.mm": "mm",
+ "topo.unit.metre": "m",
+ "topo.unit.ft": "ft",
+ "topo.opt.material": "Anyag",
+ "topo.row.active": "Aktív felület",
+ "topo.btn.delete_pad": "Terület törlése",
+ "topo.info.loading": "Felület készítése…",
+ "topo.info.warn_n": "{n} figyelmeztetés",
+ "topo.info.points_label": "Pontok",
+ "topo.import.all_layers": "Minden réteg",
+ "topo.import.need_layer": "Jelöljön be legalább egy réteget"
+}

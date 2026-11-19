@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}, på etagen",
+ "cmd_buttons.purge.undo": "Fjernelse er ét fortrydelsestrin.",
+ "cmd_buttons.unpin.none": "Intet valgt er låst",
+ "cmd_buttons.change_type.none": "Vælg først vægge: deres type ændres i ét trin",
+ "cmd_buttons.units.metric": "Enheder: metrisk",
+ "cmd_buttons.units.imperial": "Enheder: fod og tommer",
+ "cmd_buttons.units.back": "Skift tilbage",
+ "cmd_buttons.underlay.on": "Underlag til: etagen under vises nedtonet",
+ "cmd_buttons.underlay.off": "Underlag fra",
+ "cmd_buttons.underlay.none": "Underlag til, men etagen under har intet at vise",
+ "cmd_buttons.zoom_sel.no_shape": "Valget har ingen form at indramme i denne visning",
+ "cmd_buttons.close.base": "Plan- og 3D-fanerne forbliver åbne; åbn et snit, et ark eller en tegnevisning for at lukke dem",
+ "tool.equipment": "Udstyr",
+ "hint.equipment.place": "Udstyr: vælg placeringen · Esc for at afslutte",
+ "cmd_buttons.table.opened": "Tabel åbnet ved siden af modellen",
+ "cmd_buttons.circuits.tip": "Åbner listen over elektriske kredsløb i denne model"
+}

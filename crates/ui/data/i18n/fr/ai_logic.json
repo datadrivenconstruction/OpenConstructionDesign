@@ -1,0 +1,6 @@
+{
+ "ai_toast.toast_not_refreshed": "Appliqué en tant qu'étape d'annulation {n} (Ctrl+Z l'annule), mais la vue ne s'est pas actualisée. Rechargez la vue.",
+ "ai.optx.reload_failed": "L'option « {name} » est appliquée et enregistrée, mais la vue n'a pas été rechargée : {e}",
+ "ai.cmp.stale": "Périmée",
+ "ai.cmp.stale_tip": "Cette option a été établie sur un état antérieur du modèle. Générez-la de nouveau pour l'appliquer."
+}

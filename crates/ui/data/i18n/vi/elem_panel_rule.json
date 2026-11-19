@@ -1,0 +1,5 @@
+{
+ "elem.panel_select_wall": "Chọn tường",
+ "cmd.elem.panel_select_wall": "Chọn tường",
+ "elem.left_in_place": "Giữ nguyên: {kinds}. Tấm thuộc về tường của nó; khối và chú thích tự được xóa."
+}

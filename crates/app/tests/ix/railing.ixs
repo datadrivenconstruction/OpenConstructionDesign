@@ -1,0 +1,2 @@
+# Railing along a path, Enter ends it
+tool(arch.railing) click(0,0) click(4,0) click(4,3) key(Enter) → rows(railing)=1 journal=+1

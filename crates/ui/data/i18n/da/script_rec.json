@@ -1,0 +1,8 @@
+{
+ "script_rec.started": "Optagelse: de ændringer, du foretager fra nu af, går ind i et script. Vælg “Optag handlinger til script” igen for at stoppe.",
+ "script_rec.saved": "Scriptet “{name}” er gemt: {n} ændringer.",
+ "script_rec.skipped": "{k} ændringer foretaget af værktøjer uden scriptform blev ikke optaget.",
+ "script_rec.nothing": "Optagelsen er stoppet: der er ingen ændringer at gemme.",
+ "script_rec.failed": "Optagelsen blev ikke gemt: {why}",
+ "script_rec.no_folder": "ingen indstillingsmappe til scripts"
+}

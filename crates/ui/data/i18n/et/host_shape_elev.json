@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "Vaadet {t} ei võetud ({why}). Midagi ei muudetud",
+ "host_shape.shape.elev_prompt_in": "vaade, ft-in…",
+ "host_shape.shape.elev_in": "{v} tolli"
+}

@@ -1,0 +1,16 @@
+{
+ "ai.items.all": {
+  "one": "Alla # post",
+  "other": "Alla # poster"
+ },
+ "ai.items.all.tip": "Markera eller avmarkera varje post i planen",
+ "ai.items.checked": "{n} av {m} markerade",
+ "ai.items.check.tip": "Ta med “{title}” i Tillämpa",
+ "ai.items.expand": "Visa element",
+ "ai.items.collapse": "Dölj element",
+ "ai.items.apply": {
+  "one": "Tillämpa # post",
+  "other": "Tillämpa # poster"
+ },
+ "ai.items.apply_none": "Tillämpa"
+}

@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "自由曲面",
+ "cmd.mass.panelize": "パネルに分割",
+ "cmd.mass.surface_shell": "面上の屋根",
+ "cmd.mass.thicken": "厚み",
+ "hint.mass.freeform.first": "自由曲面: 平面の長方形の最初の角 · 数値 — 立ち上がり · Esc — キャンセル",
+ "hint.mass.freeform.next": "自由曲面: 対角の角 · 数値 — 立ち上がり · Esc — キャンセル",
+ "hint.mass.panelize.first": "パネル: 3Dで自由曲面を選択 · Esc — キャンセル",
+ "hint.mass.panelize.value": "パネル: パネルのサイズを入力 · Enter — 適用 · Esc — キャンセル",
+ "hint.mass.surface_shell.first": "面上の屋根: 3Dで自由曲面を選択 · Esc — キャンセル",
+ "hint.mass.surface_shell.value": "面上の屋根: 厚みを入力 · Enter — 適用 · Esc — キャンセル",
+ "hint.mass.thicken.first": "厚み: 3Dで自由曲面を選択 · Esc — キャンセル",
+ "hint.mass.thicken.value": "厚み: 厚みを入力（0 — 厚みなし） · Enter — 適用 · Esc — キャンセル",
+ "status.mass.pick_surface": "自由曲面を選択してください",
+ "status.mass.freeform_small": "長方形が小さすぎます: 各方向 0.5 m 以上にしてください",
+ "name.mass.freeform": "自由曲面",
+ "rgroup.mass_free": "詳細"
+}

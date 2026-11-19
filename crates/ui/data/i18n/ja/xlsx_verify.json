@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "適用を取り消しました: モデルがプレビューと一致しませんでした。{what}",
+ "xlsx_verify.not_written": "{row} は変更されませんでした。",
+ "xlsx_verify.lost": "{row} が消えました。",
+ "xlsx_verify.not_deleted": "{row} は削除されませんでした。",
+ "xlsx_verify.extra_deleted": "{row} は削除されましたが、プレビューでは残る予定でした。",
+ "xlsx_verify.created": "{table}: 新規 {got} 件 (期待は {want} 件)。",
+ "xlsx_verify.value": "{row}、{field}: 期待値 {want} (変更前 {old})、実際 {got}。",
+ "xlsx_verify.check_failed": "結果を確認できませんでした: {e}",
+ "xlsx_verify.plan_failed": "適用は開始されませんでした: 確認のためにモデルを読み込めませんでした ({e})。",
+ "xlsx_verify.take_back_failed": "この手順を元に戻せませんでした ({e})。元に戻すを使用してください。",
+ "xlsx_verify.t.wall": "壁",
+ "xlsx_verify.t.opening": "開口",
+ "xlsx_verify.t.room": "部屋",
+ "xlsx_verify.t.slab": "床",
+ "xlsx_verify.t.level": "レベル",
+ "xlsx_verify.t.wall_type": "壁タイプ",
+ "xlsx_verify.t.slab_type": "床タイプ",
+ "xlsx_verify.t.col": "柱",
+ "xlsx_verify.t.beam": "梁",
+ "xlsx_verify.t.roof": "屋根",
+ "xlsx_verify.t.curtain_wall": "カーテンウォール"
+}

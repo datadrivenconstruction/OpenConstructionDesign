@@ -1,0 +1,26 @@
+{
+ "schema": "gen_bench.v1",
+ "group": "free_form",
+ "spec": {
+  "typology": "office",
+  "name": "Round Tower",
+  "floors": 10,
+  "lift": true,
+  "footprint": {
+   "shape": "circle",
+   "width": 36
+  }
+ },
+ "adjacency": [
+  [
+   "office",
+   "meeting",
+   1
+  ],
+  [
+   "meeting",
+   "lobby",
+   1
+  ]
+ ]
+}

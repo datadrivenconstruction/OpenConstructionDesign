@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "값은 0보다 커야 합니다",
+ "sched_ops.not_number": "숫자가 아닙니다",
+ "sched_ops.no_host": "호스트 벽이 없습니다",
+ "sched_ops.wall_length": "이 벽 길이는 이렇게 설정할 수 없습니다",
+ "sched_ops.no_wall": "해당 벽이 없습니다",
+ "sched_ops.no_opening": "해당 개구부가 없습니다",
+ "sched_ops.no_curtain": "해당 커튼월이 없습니다",
+ "sched_ops.no_panel": "해당 패널이 없습니다",
+ "sched_ops.no_slab": "해당 슬래브가 없습니다",
+ "sched_ops.no_room": "해당 룸이 없습니다",
+ "sched_ops.slope_range": "경사가 범위를 벗어남",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

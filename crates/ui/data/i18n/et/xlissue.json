@@ -1,0 +1,13 @@
+{
+ "xlw.copy_list": "Kopeeri loend",
+ "xlw.save_list": "Salvesta loend…",
+ "xlw.copy_list_tip": "Kopeeri näidatud read (leht, lahter, id, veerg, väärtused, põhjus) tekstina tabelarvutusse",
+ "xlw.save_list_tip": "Salvesta näidatud read .csv-failina töövihiku kõrvale; töövihikut endat ei muudeta kunagi",
+ "xlw.list_book_value": "Töövihiku väärtus",
+ "xlw.list_model_value": "Mudeli väärtus",
+ "xlw.list_reason": "Põhjus",
+ "xlw.list_copied": "Loend kopeeriti: {n} rida",
+ "xlw.list_saved": "Loend salvestati: {n} rida, {file}",
+ "xlw.list_save_failed": "Loendit ei salvestatud",
+ "xlw.list_nothing": "Kopeerida pole midagi: ridu ei näidata"
+}

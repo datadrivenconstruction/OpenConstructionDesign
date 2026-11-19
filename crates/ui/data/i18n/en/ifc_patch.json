@@ -1,0 +1,19 @@
+{
+  "ifc_patch.fallback.source_changed": "Patch not used: the source file changed on disk or cannot be read. The file was rewritten from the model.",
+  "ifc_patch.fallback.sources": "Patch not used: the project does not have exactly one source. The file was rewritten from the model.",
+  "ifc_patch.fallback.schema": "Patch not used: the source file's schema is not supported. The file was rewritten from the model.",
+  "ifc_patch.fallback.structure": "Patch not used: the source file's structure could not be trusted. The file was rewritten from the model.",
+  "ifc_patch.fallback.edit": "Patch not used: an edit cannot be applied safely to the source file. The file was rewritten from the model.",
+  "ifc_patch.reason.schema": "The source file's schema cannot hold this edit; the element stays as in the source",
+  "ifc_patch.reason.prop": "This property edit cannot be expressed in the source file; the value stays as in the source",
+  "ifc_patch.reason.no_export": "This new element has no representation in IFC",
+  "ifc_patch.reason.link": "The element is in the file, but a link to its material or type is not written; it is listed as not written",
+  "ifc_patch.drop": "Drop",
+  "ifc_patch.drop_done": "Pending links dropped: {n}; they are no longer retried",
+  "ifc_patch.fallback.building": "Patch not used: a new level needs exactly one building in the source file, and it has none or several. The file was rewritten from the model.",
+  "ifc_patch.fallback.types": "Patch not used: levels, types or materials changed since the import, and the patch cannot write those. The file was rewritten from the model.",
+  "ifc_patch.fallback.zipped": "Patch not used: a zipped source file cannot be patched. The file was rewritten from the model.",
+  "ifc_patch.fallback.source_kept": "The source file was not overwritten: this save could not be trusted to replace it. This save is a copy beside it.",
+  "ifc_patch.fallback.nested": "Patch not used: a new element has nested parts (such as ports), which the patch cannot write. The file was rewritten from the model.",
+  "ifc_patch.fallback.shared_part": "Patch not used: a part of an edited stair or ramp is also used by another element or relation, which the patch cannot account for. The file was rewritten from the model."
+}

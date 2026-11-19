@@ -1,0 +1,11 @@
+{
+ "fe.csv.apply": "Aplică importul",
+ "fe.csv.cancel": "Renunță la previzualizare",
+ "fe.csv.nothing": "Nimic de modificat: catalogul corespunde tipurilor curente",
+ "fe.csv.preview": "Previzualizare import: {added} noi, {changed} modificate, {same} tipuri neschimbate; {values} valori se schimbă",
+ "fe.csv.preview_hint": "Celulele goale și coloanele lipsă păstrează valorile curente. Nimic nu se schimbă până nu aplici.",
+ "fe.csv.skipped": "Neaplicat, valoarea păstrată: {msg}",
+ "fe.csv.type_added": "Tip nou {name}",
+ "fe.csv.type_changed": "Tip {name}",
+ "fe.csv.value": "  {param}: {old} → {new}"
+}

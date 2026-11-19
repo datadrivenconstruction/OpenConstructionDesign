@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "ऊँचाई {t} नहीं ली गई ({why})। कुछ नहीं बदला गया",
+ "host_shape.shape.elev_prompt_in": "ऊँचाई, फ़ुट-इंच…",
+ "host_shape.shape.elev_in": "{v} in"
+}

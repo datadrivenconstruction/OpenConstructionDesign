@@ -1,0 +1,11 @@
+{
+ "cmd.ctx.ceiling.clean_outline": "Siisti ulkoviiva",
+ "cmd.ctx.ceiling.clean_outline.desc": "Poistaa kapeat piikit kohdissa, joissa katon ulkoviiva kääntyy takaisin itseensä. Näyttää ensin esikatselun; yksi kumoamisvaihe.",
+ "cmd.ctx.shaft.clean_outline": "Siisti ulkoviiva",
+ "cmd.ctx.shaft.clean_outline.desc": "Poistaa kapeat piikit kohdissa, joissa kuilun ulkoviiva kääntyy takaisin itseensä. Näyttää ensin esikatselun; yksi kumoamisvaihe.",
+ "outline_cleanup.intro_ceiling": "Tämän katon ulkoviiva kääntyy takaisin itseensä kapeina piikkeinä: {n}. Siistiminen poistaa ne; muu pysyy ennallaan.",
+ "outline_cleanup.intro_shaft": "Tämän kuilun ulkoviiva kääntyy takaisin itseensä kapeina piikkeinä: {n}. Siistiminen poistaa ne; muu pysyy ennallaan.",
+ "outline_cleanup.none_ceiling": "Tämän katon ulkoviivassa ei ole piikkejä",
+ "outline_cleanup.none_shaft": "Tämän kuilun ulkoviivassa ei ole piikkejä",
+ "outline_cleanup.need_host": "Valitse lattia, katto tai kuilu"
+}

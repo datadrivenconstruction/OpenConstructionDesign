@@ -1,0 +1,4 @@
+{
+ "topo_import.topo.ambiguous": "{n} hàng bị bỏ qua: một số được đọc theo hai cách (1,250 = 1.25 hoặc 1250?) và tệp không có dấu thập phân",
+ "topo_import.topo.grouped": "{n} điểm được đọc với nhóm chữ số (1 250,5 hoặc 1,234.5)"
+}

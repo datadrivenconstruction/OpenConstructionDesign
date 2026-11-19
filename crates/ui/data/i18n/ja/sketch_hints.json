@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "閉じた輪郭を描いてください: 点をクリックし、Enter または「完了」で作成",
+ "sketch_hints.sk_finish": "完了",
+ "sketch_hints.sk_cancel": "キャンセル",
+ "sketch_hints.import_warn": "モデルチェックの警告: {n} 件 (最初: {first})",
+ "sketch_hints.ai.offline.schedule": "集計表を開く",
+ "sketch_hints.ai.offline.check": "ルールで確認",
+ "sketch_hints.ai.offline.warnings": "警告を表示",
+ "cmd.file.publish_pdf": "シートを PDF で公開…",
+ "cmd.file.publish_pdf.desc": "選択したシートを PDF に公開します。「シートを PDF/SVG に書き出し」と同じです。",
+ "sketch_hints.verify_none": "選択内に AI アシスタントが設定した確認対象はありません",
+ "sketch_hints.contours_none": "モデルに toposolid がありません。作成すると等高線が表示されます",
+ "sketch_hints.contours_off": "toposolid の等高線を非表示にしました",
+ "sketch_hints.contours_on": "toposolid の等高線を表示しました"
+}

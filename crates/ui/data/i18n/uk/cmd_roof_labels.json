@@ -1,0 +1,11 @@
+{
+ "cmd.arch.roof_gable.short": "Двосхилий",
+ "cmd.arch.roof_hip.short": "Чотирисхилий",
+ "cmd.arch.roof_shed.short": "Односхилий",
+ "cmd.arch.roof_mansard.short": "Мансардний",
+ "cmd.arch.roof_gambrel.short": "Ламаний",
+ "cmd.arch.roof_barrel.short": "Циліндричний",
+ "cmd.arch.roof_edges.short": "Краї даху",
+ "cmd.arch.roof_opening.short": "Отвір",
+ "cmd.mass.roof_by_face.short": "За гранню"
+}

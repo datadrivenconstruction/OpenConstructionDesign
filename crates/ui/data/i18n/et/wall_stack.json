@@ -1,0 +1,10 @@
+{
+ "wall_stack.we.stack_caption": "Liittüüp",
+ "wall_stack.we.side_left": "Vasak külg",
+ "wall_stack.we.side_right": "Parem külg",
+ "wall_stack.we.from": "Algus",
+ "wall_stack.we.to": "Lõpp",
+ "wall_stack.we.bottom": "Alumine",
+ "wall_stack.we.delete_tip": "Kustuta see profiil",
+ "wall_stack.we.from_after_to": "„Algus“ peab jääma enne „Lõppu“"
+}

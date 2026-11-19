@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "Primjena je poništena: model se nije podudarao s pregledom. {what}",
+ "xlsx_verify.not_written": "{row} nije promijenjen.",
+ "xlsx_verify.lost": "{row} je nestao.",
+ "xlsx_verify.not_deleted": "{row} nije izbrisan.",
+ "xlsx_verify.extra_deleted": "{row} je izbrisan, iako ga pregled zadržava.",
+ "xlsx_verify.created": "{table}: {got} novih umjesto {want}.",
+ "xlsx_verify.value": "{row}, {field}: očekivano {want} (bilo {old}), dobiveno {got}.",
+ "xlsx_verify.check_failed": "Rezultat se nije mogao provjeriti: {e}",
+ "xlsx_verify.plan_failed": "Primjena nije pokrenuta: provjera nije mogla pročitati model ({e}).",
+ "xlsx_verify.take_back_failed": "Korak nije mogao biti poništen ({e}): upotrijebite Poništi.",
+ "xlsx_verify.t.wall": "Zid",
+ "xlsx_verify.t.opening": "Otvor",
+ "xlsx_verify.t.room": "Prostorija",
+ "xlsx_verify.t.slab": "Podna ploča",
+ "xlsx_verify.t.level": "Razina",
+ "xlsx_verify.t.wall_type": "Tip zida",
+ "xlsx_verify.t.slab_type": "Tip podne ploče",
+ "xlsx_verify.t.col": "Stup",
+ "xlsx_verify.t.beam": "Greda",
+ "xlsx_verify.t.roof": "Krov",
+ "xlsx_verify.t.curtain_wall": "Zavjesni zid"
+}

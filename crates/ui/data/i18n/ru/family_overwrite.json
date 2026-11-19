@@ -1,0 +1,10 @@
+{
+ "family_overwrite.ow.title": "Заменить значения типов проекта?",
+ "family_overwrite.ow.body": "Загрузка заменит {values} в {types}. Размещено экземпляров этих типов: {instances}.",
+ "family_overwrite.ow.values": { "one": "# значение", "few": "# значения", "many": "# значений", "other": "# значения" },
+ "family_overwrite.ow.types": { "one": "# типе", "few": "# типах", "many": "# типах", "other": "# типах" },
+ "family_overwrite.ow.list": "Типы: {list}",
+ "family_overwrite.ow.more": "и ещё {n}",
+ "family_overwrite.ow.back": "Вернуться к правке",
+ "family_overwrite.ow.replace": "Заменить значения"
+}

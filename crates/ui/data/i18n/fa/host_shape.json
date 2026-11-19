@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "بازشوی دورمر",
+ "cmd.arch.roof_opening": "بازشوی بام",
+ "cmd.arch.roof_extrusion": "بام با اکستروژن",
+ "cmd.arch.ceiling_opening": "بازشوی سقف",
+ "cmd.str.slab_opening": "بازشوی کف",
+ "cmd.ctx.wall.detach": "جدا کردن بالا",
+ "cmd.ctx.floor.sketch": "ویرایش مرز",
+ "cmd.ctx.floor.shape": "ویرایش شکل",
+ "host_shape.shape.elev_prompt": "ارتفاع، mm…",
+ "host_shape.shape.elev_mm": "{v} mm",
+ "host_shape.sketch.no_host": "میزبانی زیر مرز در این تراز نیست",
+ "host_shape.issue.roof": "بام {id}: {e}",
+ "host_shape.issue.ceiling": "سقف {id}: {e}",
+ "host_shape.status.select_slab": "یک دال انتخاب کنید",
+ "host_shape.status.select_walls": "دیوارها را انتخاب کنید",
+ "host_shape.status.no_roof_or_level": "بامی یا تراز بالاتری نیست",
+ "host_shape.status.top_attached": "سر دیوارها متصل شد",
+ "host_shape.status.top_detached": "سر دیوارها جدا شد",
+ "host_shape.status.straight_wall": "دیوار مستقیم لازم است",
+ "host_shape.status.roof_extruded": "بام با اکستروژن ساخته شد",
+ "warn.kind.cut": "برش یا اتصال ساخته نشد"
+}

@@ -1,0 +1,11 @@
+{
+ "sketch.points": "نقاط",
+ "sketch.rect": "مستطيل",
+ "sketch.circle": "دائرة",
+ "sketch.polygon": "مضلع",
+ "sketch.radius": "نق",
+ "sketch.sides": "الأضلاع",
+ "sketch.circum": "محيطي",
+ "sketch.shape.tip": "شكل الرسم (A للتبديل). مستطيل: زاويتان. دائرة ومضلع: المركز ثم نصف القطر. اكتب القياس واضغط Enter لتثبيته.",
+ "tool.err.zero_size": "حجم صفري: ابعد النقطة الثانية عن الأولى"
+}

@@ -1,0 +1,6 @@
+{
+ "sched_import.no_key": "Diese Arbeitsmappe hat keinen Exportnachweis (älterer Export): Zellen, die nach diesem Export im Modell geändert wurden, können überschrieben werden. Prüfen Sie die geänderten Zellen vor dem Anwenden.",
+ "sched_import.n_kept": "Nach dem Export im Modell geändert, behalten: {n}",
+ "sched_import.n_conflict": "In Arbeitsmappe und Modell geändert, nicht übernommen: {n}",
+ "sched_import.why_conflict": "nach dem Export im Modell geändert (jetzt {model}), nicht übernommen"
+}

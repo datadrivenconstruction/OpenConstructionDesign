@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key} dicadangkan ({why}) dan tidak dapat ditetapkan ulang",
+ "quick.keys.res_copy": "salin",
+ "quick.keys.res_paste": "tempel",
+ "quick.keys.res_cut": "potong",
+ "quick.keys.res_undo": "urungkan / ulangi",
+ "quick.keys.res_save": "simpan",
+ "quick.keys.res_palette": "palet perintah",
+ "quick.keys.reserved_conflict": "{key} sudah dipakai oleh “{cmd}”. Esc mempertahankannya di sana.",
+ "quick.keys.reserved_swap": "Tukar",
+ "quick.keys.reserved_take": "Ambil",
+ "quick.keys.reserved_keep": "Pertahankan",
+ "quick.keys.reserved_os": "Dipakai oleh sistem:"
+}

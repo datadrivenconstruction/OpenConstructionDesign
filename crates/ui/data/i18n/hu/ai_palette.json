@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "Kérdezés az MI-től: {q}",
+ "ai.palette.connect": "Csatlakoztassa az MI-t a kérdezéshez",
+ "ai.palette.draft.apply": "Vázlat alkalmazása ({n})",
+ "ai.palette.draft.reject": "Vázlat elutasítása",
+ "ai.palette.draft.next": "Következő vázlatmódosítás",
+ "ai.palette.draft.show": "Vázlat megjelenítése a nézetben",
+ "cmd.ai.next_change": "Következő vázlatmódosítás",
+ "cmd.ai.next_change.desc": "A nézetet a vázlat következő módosított elemére viszi.",
+ "cmd.ai.show_draft": "MI-vázlat megjelenítése a nézetben",
+ "cmd.ai.show_draft.desc": "A nézetet az összes vázlat által módosított elemhez igazítja."
+}

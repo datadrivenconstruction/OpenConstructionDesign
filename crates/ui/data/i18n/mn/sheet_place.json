@@ -1,0 +1,15 @@
+{
+ "sheet_place.place_view_tip": "Хуудсан дээр харагдац эсвэл хүснэгт байрлуулах",
+ "sheet_place.properties_tip": "Хуудасны дугаар, нэр, цаас, засварууд",
+ "sheet_place.print_tip": "Хуудсыг хэвлэх эсвэл экспортлох",
+ "sheet_place.fit_tip": "Хуудсыг цонхонд тохируулах",
+ "sheet_place.activate_tip": "Харагдацыг хуудсан дээр шууд засна: шилжүүлэх, томруулах, тайрах",
+ "sheet_place.open_view_tip": "Харагдацыг өөрийн табд нээх",
+ "sheet_place.done_tip": "Хуудсан дээрх харагдацын засварыг дуусгах",
+ "sheet_place.reset_crop_tip": "Тайралтыг арилгаж бүх харагдацыг харуулах",
+ "sheet_place.scale_tip": "Хуудсан дээрх сонгосон харагдацын масштаб",
+ "sheet_place.title_tip": "Хуудсан дээр харагдацын доор харуулах гарчиг",
+ "sheet_place.banner": "Харагдацыг хуудсан дээр засаж байна",
+ "sheet_place.new_set_tip": "Хамт хэвлэх хуудасны багц үүсгэх",
+ "sheet_place.new_sheet_tip": "Төсөлд хуудас нэмэх"
+}

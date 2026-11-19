@@ -1,0 +1,8 @@
+{
+ "undo.undone": "Geri alındı: {what}",
+ "undo.redone": "Yinelendi: {what}",
+ "undo.action.edit.redo": "Yinele",
+ "undo.action.edit.undo": "Geri al",
+ "hdr.unsaved": "Kaydedilmemiş değişiklikler",
+ "hdr.file_menu": "Dosya menüsü"
+}

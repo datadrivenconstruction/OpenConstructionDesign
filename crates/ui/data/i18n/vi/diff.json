@@ -1,0 +1,7 @@
+{
+ "diff.kind.added": "đã thêm",
+ "diff.kind.changed": "đã thay đổi",
+ "diff.kind.deleted": "đã xóa",
+ "diff.kind.refused": "bị từ chối",
+ "diff.kind.conflict": "xung đột"
+}

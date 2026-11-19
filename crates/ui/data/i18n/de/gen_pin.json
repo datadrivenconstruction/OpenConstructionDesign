@@ -1,0 +1,7 @@
+{
+ "gen.pin.room": "Sie haben einen Raum des erzeugten Projekts geändert. Fixieren Sie ihn, damit eine Überarbeitung ihn an seiner Stelle belässt.",
+ "gen.pin.storey": "Sie haben ein Geschoss des erzeugten Projekts geändert. Fixieren Sie es, damit eine Überarbeitung seine Wände und Öffnungen beibehält.",
+ "gen.pin.action": "Fixieren",
+ "gen.pin.done": "Fixiert: Eine Überarbeitung des Projekts behält dies bei und platziert den Rest darum herum",
+ "gen.pin.failed": "Fixieren nicht möglich"
+}

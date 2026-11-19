@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "измерено {value}, предел {limit}",
+ "ai_checks.check.cap": "Показано {shown} из {total} замечаний. Сначала ошибки: исправьте их и запустите снова.",
+ "ai_checks.check.run_again": "Проверить снова",
+ "ai_checks.check.goto": "Выделить и показать",
+ "ai_checks.check.never_title": "Проверка ещё не запускалась",
+ "ai_checks.check.never_hint": "Запустите проверки: замечания появятся здесь.",
+ "ai_checks.check.sec.error": "Ошибки",
+ "ai_checks.check.sec.warning": "Предупреждения",
+ "ai_checks.check.sec.info": "Примечания"
+}

@@ -1,0 +1,8 @@
+{
+ "xlsx_idle.idle_title": "درآمد کے لیے کوئی تبدیلی نہیں",
+ "xlsx_idle.export_name": "برآمد",
+ "xlsx_idle.export_body": "ماڈل کو ورک بک میں لکھتا ہے۔ وہاں قدریں بدلیں، پھر ہم آہنگ کریں۔",
+ "xlsx_idle.sync_name": "ہم آہنگ کریں",
+ "xlsx_idle.sync_body": "ورک بک دوبارہ پڑھتا ہے اور فرق دکھاتا ہے۔ ماڈل صرف لاگو کرنے پر بدلتا ہے۔",
+ "xlsx_idle.last_sync": "آخری ہم آہنگی: {when}"
+}

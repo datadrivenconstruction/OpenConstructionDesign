@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "Gaubenöffnung",
+ "cmd.arch.roof_opening": "Dachöffnung",
+ "cmd.arch.roof_extrusion": "Dach durch Extrusion",
+ "cmd.arch.ceiling_opening": "Deckenöffnung",
+ "cmd.str.slab_opening": "Öffnung in Geschossdecke",
+ "cmd.ctx.wall.detach": "Oberkante lösen",
+ "cmd.ctx.floor.sketch": "Begrenzung bearbeiten",
+ "cmd.ctx.floor.shape": "Form bearbeiten",
+ "host_shape.shape.elev_prompt": "Höhe, mm…",
+ "host_shape.shape.elev_mm": "{v} mm",
+ "host_shape.sketch.no_host": "kein Träger unter der Begrenzung auf dieser Ebene",
+ "host_shape.issue.roof": "Dach {id}: {e}",
+ "host_shape.issue.ceiling": "Decke {id}: {e}",
+ "host_shape.status.select_slab": "Geschossdecke auswählen",
+ "host_shape.status.select_walls": "Wände auswählen",
+ "host_shape.status.no_roof_or_level": "kein Dach und keine Ebene darüber",
+ "host_shape.status.top_attached": "Wandoberkanten angeschlossen",
+ "host_shape.status.top_detached": "Wandoberkanten gelöst",
+ "host_shape.status.straight_wall": "Eine gerade Wand ist erforderlich",
+ "host_shape.status.roof_extruded": "Dach durch Extrusion erstellt",
+ "warn.kind.cut": "Ausschnitt oder Anschluss nicht erstellt"
+}

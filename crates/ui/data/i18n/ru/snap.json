@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "Конец",
+ "snap.midpoint": "Середина",
+ "snap.perpendicular": "Перпендикуляр",
+ "snap.wall_axis": "Ось стены",
+ "snap.wall_face": "Грань стены",
+ "snap.grid": "Сетка",
+ "snap.intersection": "Пересечение",
+ "snap.grid_axis": "Ось сетки",
+ "snap.ref_plane": "Опорная плоскость",
+ "snap.nearest": "Ближайшая",
+ "snap.align_x": "Выравнивание по X с удалённой точкой",
+ "snap.align_y": "Выравнивание по Y с удалённой точкой",
+ "snap.align_xy": "Выравнивание по X и Y"
+}

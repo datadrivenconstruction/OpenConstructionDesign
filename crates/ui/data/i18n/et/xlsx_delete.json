@@ -1,0 +1,5 @@
+{
+ "xlsx_delete.delete_missing": "Kustuta read, mis töövihikust puuduvad",
+ "xlsx_delete.not_removed": "ei eemaldatud: võrdlusandmed puuduvad",
+ "xlsx_delete.no_base_reason": "Pole saadaval: töövihikul pole võrdlusandmeid, seega puuduvat rida ei saa eristada kogemata eemaldatud reast. Rakendamisel midagi ei kustutata."
+}

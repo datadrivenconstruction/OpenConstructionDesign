@@ -1,0 +1,13 @@
+{
+ "ai.proposal.title": "Proposta dell'agente",
+ "ai.proposal.meta": "{actor} · operazioni: {ops}",
+ "ai.proposal.apply.desc": "Applica l'intera proposta come un unico passo; Ctrl+Z la annulla",
+ "ai.proposal.applying": "Applicazione…",
+ "ai.proposal.applied": "La proposta è stata applicata. Ctrl+Z la annulla.",
+ "ai.proposal.applied_resync": "La proposta è stata applicata, ma la vista non si è ancora aggiornata. Si aggiorna da sola; Ctrl+Z annulla il passo.",
+ "ai.proposal.stale": "Il modello è cambiato dopo l'anteprima di questa proposta. Chiedi all'agente di proporla di nuovo.",
+ "ai.proposal.toast.applied": "Proposta applicata. Ctrl+Z la annulla.",
+ "ai.proposal.toast.stale": "Il modello è cambiato dopo l'anteprima, quindi nulla è stato applicato. Crea di nuovo l'anteprima: chiedi all'agente di proporla di nuovo.",
+ "ai.proposal.toast.refused": "Proposta non applicata: {reason}",
+ "ai.proposal.rejected": "La proposta è stata rifiutata."
+}

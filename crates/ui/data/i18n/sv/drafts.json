@@ -1,0 +1,8 @@
+{
+ "drafts.drafts.head": "Öppna redigerare innehåller redigeringar som ännu inte finns i projektet:",
+ "drafts.draft.family": "Familj “{name}”",
+ "drafts.draft.line": "Linjebibliotek: {name}",
+ "drafts.draft.styles": "Linjestilar för visningsintervall",
+ "drafts.btn.save_all": "Spara alla",
+ "drafts.drafts.refused": "Ett utkast kunde inte sparas. Inget stängdes; redigeraren med utkastet är öppen."
+}

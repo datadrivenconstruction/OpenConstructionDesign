@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "自动保存失败，最新更改未受保护。{why}",
+ "autosave_status.autosave_open": "自动保存设置",
+ "autosave_status.autosave_recovered": "自动保存已恢复正常。",
+ "autosave_status.autosave_reason": "原因：{why}"
+}

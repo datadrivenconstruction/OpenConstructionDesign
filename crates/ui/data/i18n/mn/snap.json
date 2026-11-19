@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "Төгсгөлийн цэг",
+ "snap.midpoint": "Дундын цэг",
+ "snap.perpendicular": "Перпендикуляр",
+ "snap.wall_axis": "Ханын тэнхлэг",
+ "snap.wall_face": "Ханын гадаргуу",
+ "snap.grid": "Тор",
+ "snap.intersection": "Огтлолцол",
+ "snap.grid_axis": "Тор шугам",
+ "snap.ref_plane": "Лавлах хавтгай",
+ "snap.nearest": "Ойр",
+ "snap.align_x": "Алслагдсан цэгтэй X-ээр тэгшлэгдсэн",
+ "snap.align_y": "Алслагдсан цэгтэй Y-ээр тэгшлэгдсэн",
+ "snap.align_xy": "X ба Y-ээр тэгшлэгдсэн"
+}

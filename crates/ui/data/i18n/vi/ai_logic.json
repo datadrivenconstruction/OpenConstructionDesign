@@ -1,0 +1,6 @@
+{
+ "ai_toast.toast_not_refreshed": "Đã áp dụng như bước hoàn tác {n} (Ctrl+Z để hoàn tác), nhưng góc nhìn chưa làm mới. Hãy tải lại góc nhìn.",
+ "ai.optx.reload_failed": "Phương án “{name}” đã được áp dụng và lưu, nhưng góc nhìn chưa tải lại: {e}",
+ "ai.cmp.stale": "Cũ",
+ "ai.cmp.stale_tip": "Phương án này được tạo trên trạng thái mô hình cũ hơn. Hãy tạo lại để áp dụng."
+}

@@ -1,0 +1,16 @@
+{
+ "xlsx_recover.title": "Bog'langan ish kitobiga eksport uzildi",
+ "xlsx_recover.both": "Eksport oldingi ish kitobini chetga surib, yangisini joyiga qo'yish oralig'ida to'xtadi. Hech narsa yo'qolmadi: yangi ish kitobi {part} da to'liq, oldingisi {bak} da saqlanadi.",
+ "xlsx_recover.part_only": "Eksport yangi ish kitobini joyiga qo'yishdan oldin to'xtadi. U {part} da to'liq.",
+ "xlsx_recover.bak_only": "Yangi ish kitobi tayyor bo'lishidan oldin eksport to'xtadi. Oldingi ish kitobi {bak} da saqlanadi.",
+ "xlsx_recover.finish": "Uzilgan eksportni yakunlash",
+ "xlsx_recover.restore": "Oldingi ish kitobini tiklash",
+ "xlsx_recover.finished": "Uzilgan eksport yakunlandi: yangi ish kitobi joyida.",
+ "xlsx_recover.finished_kept": "Uzilgan eksport yakunlandi: yangi ish kitobi joyida, oldingisi {bak} da saqlanadi.",
+ "xlsx_recover.restored": "Oldingi ish kitobi joyiga qaytarildi.",
+ "xlsx_recover.restore_failed": "Oldingi ish kitobini qaytarib bo'lmadi ({err}). U {path} da saqlanadi.",
+ "xlsx_recover.not_restored": "Yangi ish kitobini joyiga qo'yib bo'lmadi va oldingisini qaytarib bo'lmadi. Hech narsa yo'qolmadi: oldingi ish kitobi {path} da saqlanadi; Sinxronlash uni yakunlash yoki tiklashni taklif qiladi.",
+ "xlsx_recover.finish_failed": "Yangi ish kitobini joyiga qo'yib bo'lmadi ({err}). U {path} da qoladi.",
+ "xlsx_recover.dest_back": "Ish kitobi {path} ga qaytdi: hech narsa ko'chirilmadi.",
+ "xlsx_recover.nothing": "Uzilgan eksportdan ko'chiriladigan hech narsa qolmagan."
+}

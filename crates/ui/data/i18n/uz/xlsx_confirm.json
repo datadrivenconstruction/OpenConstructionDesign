@@ -1,0 +1,19 @@
+{
+ "xlsx_confirm.chip": "tasdiqlash uchun",
+ "xlsx_confirm.section": "ID siz qatorlar nomi yoki raqami bo'yicha elementga moslashtirildi",
+ "xlsx_confirm.tag": "nomi bo'yicha moslashtirilgan",
+ "xlsx_confirm.tag_accepted": "moslashtirish qabul qilindi",
+ "xlsx_confirm.tag_rejected": "yangisini yaratadi",
+ "xlsx_confirm.kind_room": "xona",
+ "xlsx_confirm.kind_curtain_wall": "pardali devor",
+ "xlsx_confirm.row_line": "{kind} #{id}, kalit \"{key}\"",
+ "xlsx_confirm.accept": "Qabul qilish",
+ "xlsx_confirm.accept_tip": "Bu qatorni mos elementga qo'llash (qolganlari bilan bitta bekor qilish qadami)",
+ "xlsx_confirm.reject": "Yangisini yaratish",
+ "xlsx_confirm.reject_tip": "Moslashtirmaslik: bu qator yangi element yaratadi",
+ "xlsx_confirm.decide_first": "Avval nomi bo'yicha mos kelgan qatorlarni qabul qiling yoki rad eting.",
+ "xl.msg.key_match_many": "kalit {} ta elementga mos; moslashtirilmadi, qator yangisini yaratadi",
+ "xl.msg.key_match_taken": "kalit boshqa qator tomonidan ishlatilgan elementga mos; moslashtirilmadi, qator yangisini yaratadi",
+ "xl.msg.key_match_kept": "saqlandi: moslashtirish rad etildi, qator yangi element yaratadi",
+ "xl.msg.key_match_undecided": "nomi bo'yicha moslashtirilgan qatorlar qarorni kutmoqda"
+}

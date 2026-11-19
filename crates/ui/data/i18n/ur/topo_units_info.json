@@ -1,0 +1,13 @@
+{
+ "topo.unit.mm": "mm",
+ "topo.unit.metre": "m",
+ "topo.unit.ft": "ft",
+ "topo.opt.material": "مواد",
+ "topo.row.active": "فعال سطح",
+ "topo.btn.delete_pad": "پیڈ حذف کریں",
+ "topo.info.loading": "سطح بنائی جا رہی ہے…",
+ "topo.info.warn_n": "{n} انتباہات",
+ "topo.info.points_label": "نقاط",
+ "topo.import.all_layers": "تمام تہیں",
+ "topo.import.need_layer": "کم از کم ایک تہہ منتخب کریں"
+}

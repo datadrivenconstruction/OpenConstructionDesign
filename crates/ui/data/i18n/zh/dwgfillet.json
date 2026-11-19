@@ -1,0 +1,20 @@
+{
+ "dwgfillet.fillet": "圆角",
+ "dwgfillet.cancel": "停止圆角",
+ "dwgfillet.tip": "点击要保留一侧的两条线：二者都会被修剪或延伸至角点；半径大于零时生成相切圆弧",
+ "dwgfillet.radius": "圆角半径",
+ "dwgfillet.radius_tip": "图纸单位下的圆弧半径；0 表示尖角",
+ "dwgfillet.st.arm_first": "请点击要保留一侧的第一条线",
+ "dwgfillet.st.arm_second": "请点击要保留一侧的第二条线",
+ "dwgfillet.st.not_armed": "请先选择圆角",
+ "dwgfillet.st.click_line": "请点击图纸中的单条线",
+ "dwgfillet.st.other_drawing": "两条线必须属于同一张图纸：请重新开始",
+ "dwgfillet.st.changed": "第一条线已更改：请重新开始",
+ "dwgfillet.st.same_line": "请选择不同的第二条线",
+ "dwgfillet.st.parallel": "两条线平行，永不相交，无法形成角点",
+ "dwgfillet.st.degenerate": "线段长度为零",
+ "dwgfillet.st.no_side": "所点击的一侧与角点之间没有长度",
+ "dwgfillet.st.too_big": "该半径对这两条线而言过大：请使用更小的半径",
+ "dwgfillet.st.radius_bad": "半径必须为零或正数",
+ "dwgfillet.st.done": "已完成圆角"
+}

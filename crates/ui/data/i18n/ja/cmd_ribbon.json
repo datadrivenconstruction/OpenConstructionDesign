@@ -1,0 +1,23 @@
+{
+  "cmd.arch.room_sep.short": "部屋区切り",
+  "cmd.str.footing.short": "柱基礎",
+  "cmd.str.strip_footing.short": "布基礎",
+  "cmd.str.analytical.short": "解析",
+  "cmd.mep.terminal.short": "エアターミナル",
+  "cmd.mod.isolate.short": "分離",
+  "cmd.view.ui.short": "インターフェース",
+  "cmd.mgr.params.short": "パラメータ",
+  "cmd.ctx.wall.attach.short": "アタッチ",
+  "cmd.mass.unjoin.short": "結合解除",
+  "cmd.mod.unjoin.short": "結合解除",
+  "cmd.arch.void_extrusion.short": "ボイド押し出し",
+  "cmd.e3d.snap.short": "3Dスナップ",
+  "cmd.mgr.open_big.short": "大容量ファイル…",
+  "cmd.site.edit_points.short": "トポソリッド点",
+  "cmd.view.reveal_3d.short": "カテゴリ表示",
+  "cmd.help.check_update.short": "アップデート",
+  "cmd.ctx.floor.link_unlink.short": "辺の結合解除",
+  "cmd.ui.onboarding.short": "セットアップ…",
+  "cmd.mod.distribute.short": "均等配置",
+  "cmd.data.src_delta.short": "XLSX スプレッドシート変更…"
+}

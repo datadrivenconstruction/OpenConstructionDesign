@@ -1,0 +1,7 @@
+{
+ "recover.untitled_note": "لم يُحفظ هذا المشروع قط",
+ "recover.file_missing": "ملف المشروع غير موجود",
+ "recover.banner": "وُجد عمل غير محفوظ من جلسة سابقة للملف {name}",
+ "recover.banner_review": "مراجعة",
+ "recover.later_archived": "تأجّل {n} مرات: نُقلت اللقطات إلى الأرشيف"
+}

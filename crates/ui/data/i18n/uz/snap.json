@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "Uchi",
+ "snap.midpoint": "O'rta nuqta",
+ "snap.perpendicular": "Perpendikulyar",
+ "snap.wall_axis": "Devor o'qi",
+ "snap.wall_face": "Devor yuzi",
+ "snap.grid": "To'r",
+ "snap.intersection": "Kesishma",
+ "snap.grid_axis": "To'r chizig'i",
+ "snap.ref_plane": "Havola tekisligi",
+ "snap.nearest": "Eng yaqin",
+ "snap.align_x": "Uzoq nuqta bilan X bo'yicha tekislangan",
+ "snap.align_y": "Uzoq nuqta bilan Y bo'yicha tekislangan",
+ "snap.align_xy": "X va Y bo'yicha tekislangan"
+}

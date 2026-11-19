@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "Betoni",
+ "mat.masonry": "Muuraus",
+ "mat.brick": "Tiili",
+ "mat.insulation": "Eriste",
+ "mat.plaster": "Rappaus",
+ "mat.render": "Pinnoite",
+ "mat.gypsum": "Kipsilevy",
+ "mat.glass": "Lasi",
+ "mat.wood": "Puu",
+ "mat.steel": "Teräs",
+ "mat.membrane": "Kalvo",
+ "mat.other": "Muu",
+ "warn.cat.wall": "Seinä",
+ "warn.cat.slab": "Laatta",
+ "warn.cat.opening": "Aukko",
+ "warn.cat.curtain_wall": "Verhoseinä",
+ "td.mat.custom": "Muu…"
+}

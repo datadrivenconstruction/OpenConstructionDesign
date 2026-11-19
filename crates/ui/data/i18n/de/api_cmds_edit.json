@@ -1,0 +1,20 @@
+{
+ "api.cmd.move_elements": "Elemente um einen Versatz in Metern verschieben",
+ "api.cmd.copy_elements": "Elemente um einen oder mehrere Versätze in Metern kopieren",
+ "api.cmd.rotate_elements": "Elemente um einen Punkt um einen Winkel in Grad drehen",
+ "api.cmd.mirror_elements": "Elemente an einer Achse durch zwei Punkte spiegeln",
+ "api.cmd.scale_elements": "Elemente um einen Punkt mit einem Faktor skalieren",
+ "api.cmd.array_elements": "Lineares oder radiales Array von Elementen",
+ "api.cmd.offset_wall": "Parallele Kopie einer Wand in einem Abstand in Metern",
+ "api.cmd.split_wall": "Eine Wand an einem Punkt in zwei teilen",
+ "api.cmd.pin_elements": "Elemente fixieren oder lösen",
+ "api.cmd.flip_openings": "Anschlagseite oder Richtung von Türen und Fenstern umdrehen",
+ "api.cmd.create_level": "Ein Geschoss auf einer Kote in Metern erstellen",
+ "api.cmd.edit_level": "Ein Geschoss umbenennen oder seine Kote ändern",
+ "api.cmd.delete_level": "Ein Geschoss löschen",
+ "api.cmd.place_rooms": "In jedem geschlossenen Bereich eines Geschosses einen Raum setzen",
+ "api.cmd.join_elements": "Geometrien verbinden, trennen oder Verbindungen umschalten",
+ "api.cmd.place_footings": "Unter jeder Stütze eines Geschosses ein Fundament setzen",
+ "api.cmd.create_terrain": "Gelände aus Vermessungspunkten oder einer geneigten Ebene erstellen",
+ "api.cmd.script_recipes": "Bausteine und Rezepte freier Konstruktionen aus Skripten lesen"
+}

@@ -1,0 +1,5 @@
+{
+ "mep_dn.dn.unset": "Nicht festgelegt",
+ "mep_dn.slope.err": "Geben Sie eine Neigung in % ein, z. B. 1.5",
+ "mep_dn.err.rejected": "der Wert wird nicht akzeptiert"
+}

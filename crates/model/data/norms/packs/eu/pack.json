@@ -1,0 +1,26 @@
+{
+ "id": "eu",
+ "version": "2026.11",
+ "parent": "generic",
+ "country": null,
+ "lang": [
+  "en"
+ ],
+ "units": {
+  "length": "m",
+  "display": "metric"
+ },
+ "conventions": {
+  "ground_floor": 0,
+  "area_standard": "net",
+  "net_share": 1.0,
+  "note": "Most member states number the street-level storey 0 and state dwelling areas as room areas. Our own summary, not checked against a clause.",
+  "source": null
+ },
+ "status": "tier2",
+ "climate": {
+  "zones": [],
+  "default": null
+ },
+ "note": "Numbers with verified=true were checked against the cited clause; the rest are hints to verify by an engineer against the current edition. Wording is our own."
+}

@@ -1,0 +1,11 @@
+{
+ "sketch.points": "Điểm",
+ "sketch.rect": "Hình chữ nhật",
+ "sketch.circle": "Đường tròn",
+ "sketch.polygon": "Đa giác",
+ "sketch.radius": "R",
+ "sketch.sides": "Số cạnh",
+ "sketch.circum": "Ngoại tiếp",
+ "sketch.shape.tip": "Hình phác thảo (A để chuyển). Hình chữ nhật: hai góc. Đường tròn và đa giác: tâm, rồi bán kính. Nhập kích thước và nhấn Enter để cố định.",
+ "tool.err.zero_size": "Kích thước bằng 0: hãy đưa điểm thứ hai ra xa điểm thứ nhất"
+}

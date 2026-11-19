@@ -1,0 +1,40 @@
+{
+ "rebar_hosts.hosts": "Негиздер: {list}",
+ "rebar_hosts.kind.column": "Колонна",
+ "rebar_hosts.kind.beam": "Тирөө",
+ "rebar_hosts.kind.wall": "Дубал",
+ "rebar_hosts.kind.slab": "Плита",
+ "rebar_hosts.kind.footing": "Фундамент",
+ "rebar_hosts.kind.raft": "Фундаменттик плита",
+ "rebar_hosts.n.column": {
+  "one": "# колонна",
+  "other": "# колонна"
+ },
+ "rebar_hosts.n.beam": {
+  "one": "# тирөө",
+  "other": "# тирөө"
+ },
+ "rebar_hosts.n.wall": {
+  "one": "# дубал",
+  "other": "# дубал"
+ },
+ "rebar_hosts.n.slab": {
+  "one": "# плита",
+  "other": "# плита"
+ },
+ "rebar_hosts.n.footing": {
+  "one": "# фундамент",
+  "other": "# фундамент"
+ },
+ "rebar_hosts.n.raft": {
+  "one": "# фундаменттик плита",
+  "other": "# фундаменттик плита"
+ },
+ "rebar_hosts.mixed_note": "Колонналар жана тирөөлөр бойлук арматурасы жана хомуттар менен; дубалдар, плиталар жана фундаменттер тор менен. Арматура кошуу үчүн бир топту тандаңыз.",
+ "rebar_hosts.why.mixed": "Тандоодо колонна же тирөөлөр дубал, плита же фундаменттер менен аралашкан. Бир топту тандаңыз.",
+ "rebar_hosts.why.area_linear": "Тор дубалдарга, плиталарга жана фундаменттерге кирет, колонна же тирөөлөргө эмес.",
+ "rebar_hosts.why.bars_plate": "Бойлук арматура жана хомуттар колонна жана тирөөлөргө кирет, дубал, плита же фундаменттерге эмес.",
+ "rebar_hosts.why.no_common_face": "Тандалган негиздердин жалпы коргоо бети жок. Бир түрдөгү негиздерди тандаңыз.",
+ "rebar_hosts.why.no_type": "Арматура түрүн тандаңыз.",
+ "rebar_hosts.kind_type": "{kind} · {type}"
+}

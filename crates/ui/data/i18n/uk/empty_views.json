@@ -1,0 +1,19 @@
+{
+ "empty.v3d_gpu.title": "3D недоступний на цьому графічному адаптері",
+ "empty.v3d_gpu.hint": "Модель у безпеці, план працює. Перезапустіть із безпечною графікою, щоб спробувати 3D знову.",
+ "empty.v3d_gpu.action": "Перезапустити з безпечною графікою",
+ "empty.v3d_loading.title": "Побудова 3D…",
+ "empty.v3d_loading.pct": "Відкриття… {pct} %",
+ "empty.plan_hidden.title": "Усі елементи в цьому плані приховано",
+ "empty.plan_hidden.hint": "Тимчасове приховування або ізоляція не лишає видимих елементів.",
+ "empty.plan_hidden.action": "Показати все",
+ "empty.plan_graphics.title": "Графіка виду приховує всі категорії",
+ "empty.plan_graphics.hint": "Правила категорій цього виду нічого не лишають для показу.",
+ "empty.plan_graphics.action": "Відкрити графіку виду",
+ "empty.plan_phase.title": "Фільтр стадій приховує все",
+ "empty.plan_phase.hint": "На цьому рівні немає нічого зі стадією, яку показує цей вид.",
+ "empty.plan_phase.action": "Змінити стадію",
+ "empty.plan_level.title": "На цьому рівні немає елементів",
+ "empty.plan_level.hint": "На інших рівнях цієї моделі є елементи.",
+ "empty.plan_level.action": "Перейти до рівня з елементами"
+}

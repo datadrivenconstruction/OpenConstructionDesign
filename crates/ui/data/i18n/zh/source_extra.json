@@ -1,0 +1,5 @@
+{
+ "src.more": "更多",
+ "src.cf.chosen": "已选 {n} / {m}",
+ "src.opt.allow_mass_warn": "注意：该文件与大多数导入元素不匹配，合并可能会更改大量数据。"
+}

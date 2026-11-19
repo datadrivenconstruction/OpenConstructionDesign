@@ -1,0 +1,14 @@
+{
+ "xlsx_relink.title": "연결된 통합 문서가 이동되었거나 이름이 바뀌었습니다",
+ "xlsx_relink.body": "통합 문서 “{file}”이(가) 더 이상 {folder}에 없습니다. 여기서 입력한 편집은 다시 연결한 뒤에야 반영됩니다.",
+ "xlsx_relink.found_one": "{folder}에서 “{file}”을 찾았습니다: 같은 프로젝트, 같은 내보내기입니다. 연결할까요?",
+ "xlsx_relink.found_many": "이 프로젝트와 이 내보내기의 통합 문서 {n}개를 찾았습니다. 연결할 파일을 고르세요:",
+ "xlsx_relink.found_none": "옆에서 이 내보내기의 통합 문서를 찾지 못했습니다. 찾아보거나 새 통합 문서를 내보내세요.",
+ "xlsx_relink.link": "“{file}” 연결",
+ "xlsx_relink.find": "찾기…",
+ "xlsx_relink.find_title": "연결된 통합 문서 찾기",
+ "xlsx_relink.export_new": "새 통합 문서 내보내기",
+ "xlsx_relink.close": "닫기",
+ "xlsx_relink.gone": "통합 문서 “{file}”이(가) 폴더에 더 이상 없습니다. 여기서 입력한 편집은 다시 연결한 뒤에야 반영됩니다.",
+ "xlsx_relink.found_one_short": "“{file}”을 찾았습니다: 같은 프로젝트, 같은 내보내기입니다. 연결할까요?"
+}

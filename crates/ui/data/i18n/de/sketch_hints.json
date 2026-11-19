@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "Geschlossenen Umriss zeichnen: Punkte anklicken, dann Enter oder Fertig zum Erstellen",
+ "sketch_hints.sk_finish": "Fertig",
+ "sketch_hints.sk_cancel": "Abbrechen",
+ "sketch_hints.import_warn": "Warnungen der Modellprüfung: {n} (erste: {first})",
+ "sketch_hints.ai.offline.schedule": "Liste öffnen",
+ "sketch_hints.ai.offline.check": "Gegen Regeln prüfen",
+ "sketch_hints.ai.offline.warnings": "Warnungen anzeigen",
+ "cmd.file.publish_pdf": "Blätter als PDF veröffentlichen…",
+ "cmd.file.publish_pdf.desc": "Veröffentlicht die gewählten Blätter als PDF. Entspricht „Blätter als PDF/SVG exportieren“.",
+ "sketch_hints.verify_none": "In der Auswahl ist nichts vom KI-Assistenten gesetzt, das geprüft werden könnte",
+ "sketch_hints.contours_none": "Kein Geländemodell im Modell: Höhenlinien erscheinen, sobald eines erstellt wird",
+ "sketch_hints.contours_off": "Höhenlinien des Geländemodells ausgeblendet",
+ "sketch_hints.contours_on": "Höhenlinien des Geländemodells angezeigt"
+}

@@ -1,0 +1,6 @@
+{
+ "cmd.xlsx.undo_apply": "Fortryd den seneste regnearksanvendelse",
+ "xlsx_undo.later": "Ikke fortrudt: modellen blev redigeret efter denne regnearksanvendelse. Brug Ctrl+Z trin for trin eller historikpanelet.",
+ "xlsx_undo.gone": "Intet at fortryde: denne regnearksanvendelse er allerede fortrudt.",
+ "xlsx_undo.busy": "Afslut eller annullér den aktuelle tegning først, og fortryd derefter regnearksanvendelsen."
+}

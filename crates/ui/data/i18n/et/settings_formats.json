@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "Mis juhtub pärast töövihiku eksportimist",
+ "settings.area_decimals_desc": "Pindade komaeraldaja järel olevad numbrid",
+ "settings.volume_decimals_desc": "Mahtude komaeraldaja järel olevad numbrid",
+ "settings.frac_desc": "Väikseim murdosa tollides inglise mõõtühikutes",
+ "settings.small_area_desc": "Näita alla ühe ruutjala pindu ruuttollides",
+ "settings.sample_desc": "Kuidas arvud praeguste valikutega välja näevad",
+ "autosave.title_desc": "Hoia avatud projektist taastekoopiat",
+ "autosave.interval_desc": "Taastekoopiate vaheline aeg",
+ "autosave.keep_desc": "Vanemad taastekoopiad eemaldatakse",
+ "autosave.folder_desc": "Tühi tähendab vaikekausta",
+ "autosave.remind_desc": "Meeldetuletus salvestada projekt, millel veel faili pole",
+ "settings.backend_desc": "Kasutusel olev graafikaadapter",
+ "settings.news_desc": "Mis selles versioonis muutus",
+ "settings.assoc_default_desc": "Määra see rakendus mudelifailide vaikerakenduseks",
+ "settings.data_dir_desc": "Siin asuvad vahemälu, taastekoopiad ja logid."
+}

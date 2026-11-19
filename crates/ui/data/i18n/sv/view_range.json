@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "Visningsintervall",
+ "view_range.range": "Visningsintervall",
+ "view_range.cut": "Snittplan",
+ "view_range.bottom": "Underkant",
+ "view_range.depth": "Vydjup",
+ "view_range.cut.hint": "Höjd för snittplanet över nivån. Element som korsar det visas skurna.",
+ "view_range.bottom.hint": "Underkant av intervallet, relativt nivån. Noll eller negativa värden är tillåtna.",
+ "view_range.depth.hint": "Hur långt vyn ser under underkanten. Noll eller mer.",
+ "view_range.err.number": "Ange en längd i varje fält",
+ "view_range.err.not_finite": "Ange en längd i varje fält",
+ "view_range.err.cut_not_above_bottom": "Snittplanet måste ligga över underkanten",
+ "view_range.err.negative_depth": "Vydjupet kan inte vara negativt",
+ "view_range.err.top_below_cut": "Intervallets överkant får inte ligga under snittplanet"
+}

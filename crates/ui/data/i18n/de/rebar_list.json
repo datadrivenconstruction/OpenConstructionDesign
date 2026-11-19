@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "Nach oben",
+ "rebar_list.move_down": "Nach unten",
+ "rebar_list.remove": "Entfernen",
+ "rebar_list.zone_remove_last": "Eine Zone braucht mindestens einen Raum: Löschen Sie die Zone, um den letzten zu entfernen",
+ "rebar_list.rebar_empty_title": "Keine Bewehrung in diesem Modell",
+ "rebar_list.rebar_empty_hint": "Platzieren Sie Bewehrung in einem Trägerelement, dann wird sie hier eingeplant.",
+ "rebar_list.rebar_empty_action": "Bewehrung platzieren"
+}

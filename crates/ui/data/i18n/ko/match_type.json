@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "유형 일치",
+ "cmd.mod.match_type.short": "유형 일치",
+ "cmd.mod.match_type.desc": "벽, 바닥, 기둥 또는 보를 선택한 뒤 같은 범주의 다른 요소를 클릭하면 그 유형을 적용합니다. 창을 드래그하면 안의 모든 요소에 적용합니다. Esc는 원본을 해제합니다.",
+ "hint.match_type.pick": "유형 일치: 벽, 바닥, 기둥 또는 보 선택 · Esc — 종료",
+ "hint.match_type.apply": "유형 일치: 대상 클릭 또는 창 드래그 · Esc — 다른 원본",
+ "match_type.kind.wall": "벽",
+ "match_type.kind.slab": "바닥",
+ "match_type.kind.column": "기둥",
+ "match_type.kind.beam": "보",
+ "match_type.refuse.category": "다른 범주: {cat}만 이 유형을 받을 수 있습니다",
+ "match_type.refuse.curtain": "커튼월: 여기서는 유형이 일치되지 않습니다",
+ "match_type.refuse.pinned": "고정됨: 유형을 바꾸려면 고정을 해제하세요",
+ "match_type.pick_bad": "원본으로 벽, 바닥, 기둥 또는 보를 선택하세요",
+ "match_type.same": "이미 이 유형입니다",
+ "match_type.done": "유형 적용됨: {n}",
+ "match_type.done_skipped": "유형 적용됨: {n}, 건너뜀 (고정 또는 커튼월): {skipped}",
+ "match_type.failed": "유형이 변경되지 않음: {err}"
+}

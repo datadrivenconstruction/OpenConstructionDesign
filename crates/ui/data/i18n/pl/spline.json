@@ -1,0 +1,7 @@
+{
+ "spline.opt.spline": "Spline",
+ "spline.opt.spline_tip": "Ściana spline: kliknij punkty, przez które przechodzi; Enter lub Esc kończy",
+ "spline.wt.three_points": "ściana spline wymaga co najmniej trzech punktów",
+ "spline.wt.no_curtain": "ściana osłonowa nie ma osi spline",
+ "spline.wt.added": "dodano ścianę spline"
+}

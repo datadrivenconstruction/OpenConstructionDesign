@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "маани нөлдөн чоң болушу керек",
+ "sched_ops.not_number": "сан эмес",
+ "sched_ops.no_host": "негизги дубал жок",
+ "sched_ops.wall_length": "бул дубалдын узундугун мындай койууга болбойт",
+ "sched_ops.no_wall": "мындай дубал жок",
+ "sched_ops.no_opening": "мындай ачылыш жок",
+ "sched_ops.no_curtain": "мындай шаар дубалы жок",
+ "sched_ops.no_panel": "мындай панель жок",
+ "sched_ops.no_slab": "мындай плита жок",
+ "sched_ops.no_room": "мындай бөлмө жок",
+ "sched_ops.slope_range": "жантайыш диапазондон сыртта",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

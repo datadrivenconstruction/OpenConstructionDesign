@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "กรอกชื่อเทมเพลตก่อน",
+ "view_template.name_taken": "มีเทมเพลตที่ใช้ชื่อนี้อยู่แล้ว",
+ "view_template.pick_blocked": "ทำเครื่องหมายอย่างน้อยหนึ่งมุมมองก่อน",
+ "view_template.views.one": "{n} มุมมอง",
+ "view_template.views.few": "{n} มุมมอง",
+ "view_template.views.many": "{n} มุมมอง",
+ "view_template.delete.title": "ลบเทมเพลตนี้หรือไม่",
+ "view_template.delete.body": "เทมเพลต \"{name}\" จะถูกลบ ใช้โดย {used}",
+ "view_template.delete.unused": "เทมเพลต \"{name}\" จะถูกลบ ไม่มีมุมมองใดใช้อยู่",
+ "view_template.delete.keeps": "มุมมองเหล่านี้จะคงกราฟิกปัจจุบันไว้และสูญเสียการเชื่อมโยง",
+ "view_template.delete.undo": "คุณสามารถเลิกทำได้ด้วยการเลิกทำครั้งเดียว",
+ "view_template.delete.confirm": "ลบเทมเพลต"
+}

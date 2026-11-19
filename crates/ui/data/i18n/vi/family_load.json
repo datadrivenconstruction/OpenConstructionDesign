@@ -1,0 +1,4 @@
+{
+ "family_load.refused": "Không thể tải họ “{name}”: {msg}. Chưa tải gì vào dự án; các chỉnh sửa của bạn được giữ lại.",
+ "family_load.loaded_all": "Đã tải {n} họ cấu kiện trong một bước: {names}"
+}

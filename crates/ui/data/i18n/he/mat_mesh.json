@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "רשתות מיובאות",
+ "mat_mesh.mesh.none_selected": "בחר רשתות מיובאות במבט התלת-מימדי כדי להקצות להן חומר זה.",
+ "mat_mesh.mesh.current": "הרשת הנבחרת הראשונה: {material}",
+ "mat_mesh.mesh.current_none": "לרשת הנבחרת הראשונה אין חומר.",
+ "mat_mesh.mesh.assign": "הקצה ל-{n} הנבחרים",
+ "mat_mesh.mesh.assign_tip": "הסגנון הריאליסטי מציג את מרקם החומר הזה על הרשתות הנבחרות",
+ "mat_mesh.mesh.assign_cat": "הקצה לקטגוריה {category}",
+ "mat_mesh.mesh.assign_cat_tip": "כל רשת מיובאת מאותה קטגוריה ללא חומר משלה",
+ "mat_mesh.mesh.clear": "נקה נבחרים",
+ "mat_mesh.mesh.clear_tip": "הרשתות הנבחרות חוזרות לחומר של הקטגוריה או לצבע הרגיל",
+ "mat_mesh.mesh.clear_cat": "נקה קטגוריה"
+}

@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "適用を停止しました: モデルはそのまま残ります",
+ "apply_verify.rolled_back": "適用が下書きと一致しなかったため取り消しました。モデルは変更されていません。{what}",
+ "apply_verify.diff.missing": "下書きは {what} を {kind} と表示していますが、適用では実行されませんでした。",
+ "apply_verify.diff.extra": "下書きには表示されていない {kind} {what} を適用しました。",
+ "apply_verify.diff.kind": "下書きは {what} を {shown} と表示していますが、適用では {applied} になりました。",
+ "apply_verify.diff.value": "{what}: 「{col}」が下書きと異なる結果になりました。",
+ "apply_verify.diff.truncated": "下書きと適用された変更で件数が異なります。",
+ "apply_verify.diff.unreadable": "適用された変更を読み戻せませんでした ({e})。",
+ "apply_verify.no_base": "適用は実行されませんでした: 下書きを照合するためのコピーがありません。モデルは変更されていません。下書きを再度要求してください。",
+ "apply_verify.take_back_failed": "取り消しに失敗しました ({e})。元に戻すを使用してください。",
+ "apply_verify.kind.created": "作成",
+ "apply_verify.kind.changed": "変更",
+ "apply_verify.kind.deleted": "削除",
+ "apply_verify.card.type_row": "タイプ {type} · {n} 個の要素に変更が適用されます"
+}

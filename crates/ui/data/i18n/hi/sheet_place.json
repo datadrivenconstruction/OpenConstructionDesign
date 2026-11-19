@@ -1,0 +1,15 @@
+{
+ "sheet_place.place_view_tip": "शीट पर दृश्य या शेड्यूल लगाएँ",
+ "sheet_place.properties_tip": "शीट नंबर, नाम, कागज़ और संशोधन",
+ "sheet_place.print_tip": "शीट प्रिंट करें या एक्सपोर्ट करें",
+ "sheet_place.fit_tip": "शीट को विंडो में फिट करें",
+ "sheet_place.activate_tip": "शीट पर ही दृश्य संपादित करें: पैन, ज़ूम और काट-छाँट",
+ "sheet_place.open_view_tip": "दृश्य को उसके अपने टैब में खोलें",
+ "sheet_place.done_tip": "शीट पर दृश्य का संपादन समाप्त करें",
+ "sheet_place.reset_crop_tip": "कट हटाएँ और पूरा दृश्य दिखाएँ",
+ "sheet_place.scale_tip": "शीट पर चुने गए दृश्य का पैमाना",
+ "sheet_place.title_tip": "शीट पर दृश्य के नीचे दिखने वाला शीर्षक",
+ "sheet_place.banner": "शीट पर दृश्य संपादित हो रहा है",
+ "sheet_place.new_set_tip": "एक साथ प्रिंट होने वाली शीटों का सेट बनाएँ",
+ "sheet_place.new_sheet_tip": "प्रोजेक्ट में शीट जोड़ें"
+}

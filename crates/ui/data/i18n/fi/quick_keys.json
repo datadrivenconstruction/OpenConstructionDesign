@@ -1,0 +1,6 @@
+{
+ "quick.keys.rec_hint": "Esc peruuttaa · Backspace tyhjentää",
+ "quick.keys.row_lost": "{key} kuuluu nyt komennolle “{cmd}”",
+ "quick.keys.row_took": "{key} otettu komennolta “{cmd}”",
+ "quick.keys.reset_tip": "Palauta oletus"
+}

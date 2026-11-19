@@ -1,0 +1,5 @@
+{
+ "xlsx_delete.delete_missing": "Izbriši retke koji nedostaju u radnoj knjizi",
+ "xlsx_delete.not_removed": "nije uklonjeno: nema podataka za usporedbu",
+ "xlsx_delete.no_base_reason": "Nedostupno: radna knjiga nema podatke za usporedbu, pa se redak koji nedostaje ne može razlikovati od onog uklonjenog greškom. Pri primjeni se ništa ne briše."
+}

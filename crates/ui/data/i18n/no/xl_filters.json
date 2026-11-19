@@ -1,0 +1,6 @@
+{
+ "xl.msg.filter_on_sheet_x": "filter på ark '{}'",
+ "xl.msg.sort_settings_on_sheet_x": "sorteringsinnstillinger på ark '{}'",
+ "xl.msg.hidden_rows_on_sheet_x": "skjulte rader på ark '{}'",
+ "xl.msg.hidden_columns_on_sheet_x": "skjulte kolonner på ark '{}'"
+}

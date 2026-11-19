@@ -1,0 +1,6 @@
+{
+ "cmd.file.import_again": "取り込み直す",
+ "cmd.file.import_again.desc": "現在の状態の元ファイルから新しいプロジェクトを作成します。",
+ "cmd.file.open_kept": "保持した取り込みを開く",
+ "cmd.file.open_kept.desc": "未保存の変更の確認でキャンセルされたときに保持された、完了済みの取り込みを開きます。"
+}

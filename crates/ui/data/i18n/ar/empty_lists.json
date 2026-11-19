@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "ارسم جدارًا",
+ "empty.totals.action": "ارسم جدارًا",
+ "empty.schedule.action": "أضف حقلًا",
+ "empty.schedule_filtered.action": "مسح الفلتر",
+ "empty.library.action": "إعادة ضبط البحث",
+ "empty.library.load": "تحميل عائلة",
+ "empty.schedule_fields.title": "لا توجد حقول معروضة",
+ "empty.schedule_fields.action": "أضف حقلًا",
+ "empty.schedule_fields.hint": "فعّل حقلًا واحدًا على الأقل لعرض الجدول."
+}

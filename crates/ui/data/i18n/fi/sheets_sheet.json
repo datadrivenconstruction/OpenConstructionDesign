@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "Kopioi lehti näkymineen",
+ "cmd.view.sheet_duplicate_title": "Kopioi lehti (vain nimiölohko)",
+ "sheets.dup.menu_views": "Kopioi näkymineen",
+ "sheets.dup.menu_title": "Kopioi, vain nimiölohko",
+ "sheets.dup.done": "Lehti {number} luotu lähteestä {src}: {views} näkymää, {sched} luetteloa ja selitettä. Revisioita ei kopioida; lehti on julkaisematon.",
+ "sheets.dup.none": "Avaa lehti kopioidaksesi sen",
+ "sheets.dup.copy": "kopio",
+ "cmd.view.sheet_duplicate.short": "Kopioi näkymineen",
+ "cmd.view.sheet_duplicate_title.short": "Kopioi nimiölohko"
+}

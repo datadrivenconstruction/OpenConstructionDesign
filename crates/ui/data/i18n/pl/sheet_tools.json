@@ -1,0 +1,18 @@
+{
+ "undo.entry_later": "Nie cofnięto: po niej wykonano inną zmianę. Najpierw cofnij tamtą.",
+ "undo.entry_gone": "Nie cofnięto: ta zmiana jest już cofnięta lub nie ma jej w historii.",
+ "undo.entry_busy": "Najpierw dokończ lub anuluj bieżący rysunek, potem cofnij.",
+ "quick.hud.more": "Więcej we Właściwościach: {names}",
+ "sheet_tools.sheet.more": "Więcej narzędzi arkusza",
+ "job.of": "{d} z {t}",
+ "job.of.mb": "{d} z {t} MB",
+ "job.left.under_minute": "mniej niż minuta pozostała",
+ "job.left.minutes": "około {n} min pozostało",
+ "sheet_tools.start.units": "Jednostki",
+ "sheet_tools.print.save": {
+  "one": "Zapisz # arkusz",
+  "other": "Zapisz # arkuszy"
+ },
+ "sheet_tools.sets.delete_ask": "Usunąć zestaw „{name}”? Jego arkusze pozostaną w projekcie.",
+ "sheet_tools.keep": "Zachowaj"
+}

@@ -1,0 +1,28 @@
+[
+ {
+  "id": "ann.spot_coord",
+  "repeatable": true,
+  "icon": "spot-coord",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "annotate",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M5",
+  "group": "dims"
+ },
+ {
+  "id": "ann.dim_chain",
+  "repeatable": true,
+  "icon": "dim-chain",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "annotate",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M5",
+  "group": "dims"
+ }
+]

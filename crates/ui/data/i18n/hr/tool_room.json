@@ -1,0 +1,9 @@
+{
+ "tool.room": "Prostorija",
+ "tool.room.name": "Prostorija",
+ "room_tool.room.name": "Naziv",
+ "hint.room.place": "Klikni unutar zatvorene petlje zidova za stvaranje prostorije · Esc — izlaz",
+ "tool.err.room_open": "Područje nije zatvoreno: zatvori petlju zidova ili dodaj razdjelnik prostorije",
+ "tool.err.room_check": "Nije moguće provjeriti prostorije ove razine",
+ "tool.err.room_exists": "U ovoj petlji već postoji prostorija"
+}

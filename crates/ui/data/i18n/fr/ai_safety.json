@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "Clé dans l’adresse",
+ "ai_safety.auth.query_name": "Paramètre d’adresse",
+ "ai_safety.need_query_name": "Indiquez le paramètre d’adresse qui transporte la clé",
+ "ai_safety.apply_unlogged": "Appliqué, mais le journal des modifications n’a pas été écrit",
+ "ai_safety.audit_unlogged": "Le journal de l’assistant IA n’a pas pu être écrit",
+ "ai_safety.chat_not_saved": "La conversation n’a pas pu être enregistrée dans le projet. Nouvelle tentative.",
+ "ai_safety.clip_clears": "Le presse-papiers se vide dans 30 s",
+ "ai_safety.copied_clears": "Copié. Le presse-papiers se vide dans 30 s",
+ "ai_safety.key_session_only": "Clé conservée jusqu’à la fermeture de l’application",
+ "ai.settings.no_data_dir": "ce système ne fournit aucun dossier pour les paramètres de l’application"
+}

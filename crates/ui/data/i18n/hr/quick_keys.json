@@ -1,0 +1,6 @@
+{
+ "quick.keys.rec_hint": "Esc otkazuje · Backspace briše",
+ "quick.keys.row_lost": "{key} sada pripada naredbi „{cmd}“",
+ "quick.keys.row_took": "{key} preuzet iz naredbe „{cmd}“",
+ "quick.keys.reset_tip": "Vrati na zadano"
+}

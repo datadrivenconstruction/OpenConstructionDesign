@@ -1,0 +1,9 @@
+{
+ "shot_scenes.site": "Terrein",
+ "shot_scenes.lawn": "Gazon",
+ "shot_scenes.pad": "Plateau",
+ "shot_scenes.block": "Blok",
+ "shot_scenes.void": "Holte",
+ "shot_scenes.tower": "Toren",
+ "shot_scenes.wall_void": "Wandholte"
+}

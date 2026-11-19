@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "Okreni stranu šarki",
+ "cmd.edit.flip_hand.desc": "Zrcali odabrana vrata i prozore duž zida tako da se šarke pomaknu na drugi kraj otvora.",
+ "cmd.edit.flip_facing": "Okreni stranu otvaranja",
+ "cmd.edit.flip_facing.desc": "Okreće odabrana vrata i prozore na drugu stranu zida.",
+ "opening_grips.flip_hand": "Okreni šarke",
+ "opening_grips.flip_hand.tip": "Šarke na drugi kraj otvora (Shift+F)",
+ "opening_grips.flip_facing": "Okreni stranu",
+ "opening_grips.flip_facing.tip": "Otvaranje na drugu stranu zida (Shift+G)",
+ "opening_grips.flip.done": "Okrenuto: {n}",
+ "opening_grips.flip.none": "Odaberi vrata ili prozor za okretanje",
+ "opening_grips.flip.fail": "Nije okrenuto: {why}"
+}

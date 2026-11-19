@@ -1,0 +1,4 @@
+{
+ "room_watch.room.dup": "Místnost {room} je v oblasti místnosti {other}: plocha a objem se počítají pouze v místnosti {other}",
+ "ai.issue.room_dup": "Místnost je v oblasti místnosti {0}: její plocha se počítá tam"
+}

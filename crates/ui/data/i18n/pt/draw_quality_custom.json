@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "personalizado",
+ "draw_quality.custom.tip": "{name}: um item deste projeto",
+ "draw_quality.custom_note": "Itens marcados como personalizados pertencem a este projeto.",
+ "draw_quality.unsaved.lib_body": "Salvá-las na biblioteca ou descartá-las?",
+ "draw_quality.unsaved.styles_body": "Aplicá-las à vista ou descartá-las?",
+ "draw_quality.unsaved.both_body": "Aplicá-las ou descartá-las?",
+ "draw_quality.halftone": "meio-tom de {category}",
+ "draw_quality.styles.name": "Estilos de linha",
+ "draw_quality.styles.other_level": "Edições de estilo não salvas do nível {level}: aplique ou reverta-as para editar este nível."
+}

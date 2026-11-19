@@ -1,0 +1,15 @@
+{
+ "text_style.lbl.text_style": "สไตล์ข้อความ",
+ "text_style.lbl.align": "การจัดแนว",
+ "text_style.lbl.head": "หัวลูกศร",
+ "text_style.lbl.line_style": "สไตล์เส้น",
+ "text_style.lbl.fill": "การเติม",
+ "text_style.lbl.detail": "รายละเอียด",
+ "text_style.lbl.width": "ความกว้าง",
+ "text_style.bad_number": "กรอกตัวเลขตั้งแต่ {min} ถึง {max}",
+ "text_style.tip.next_ring": "ปิดเส้นรอบรูปนี้แล้วเริ่มอีกเส้นในพื้นที่เดียวกัน",
+ "text_style.tip.edit_text": "แก้ไขข้อความในตำแหน่งเดิม",
+ "text_style.tip.add_leader": "เพิ่มเส้นชี้ไปยังข้อความนี้",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°"
+}

@@ -1,0 +1,4 @@
+{
+ "topo_import.topo.ambiguous": "{n} lignes ignorées : un nombre se lit de deux façons (1,250 = 1.25 ou 1250 ?) et le fichier n'indique pas de séparateur décimal",
+ "topo_import.topo.grouped": "{n} points lus avec des groupes de chiffres (1 250,5 ou 1,234.5)"
+}

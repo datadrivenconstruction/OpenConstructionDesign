@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "Fråga AI: {q}",
+ "ai.palette.connect": "Anslut AI för att fråga",
+ "ai.palette.draft.apply": "Tillämpa utkast ({n})",
+ "ai.palette.draft.reject": "Avvisa utkast",
+ "ai.palette.draft.next": "Nästa utkaständring",
+ "ai.palette.draft.show": "Visa utkast i vyn",
+ "cmd.ai.next_change": "Nästa utkaständring",
+ "cmd.ai.next_change.desc": "Flyttar vyn till nästa element som utkastet ändrar.",
+ "cmd.ai.show_draft": "Visa AI-utkast i vyn",
+ "cmd.ai.show_draft.desc": "Anpassar vyn till allt som utkastet ändrar."
+}

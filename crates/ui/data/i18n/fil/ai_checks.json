@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "nasukat {value}, limitasyon {limit}",
+ "ai_checks.check.cap": "Ipinapakita ang {shown} sa {total} na natuklasan. Mauuna ang mga error: ayusin ang mga ito at patakbuhin muli.",
+ "ai_checks.check.run_again": "Patakbuhin muli",
+ "ai_checks.check.goto": "Piliin at i-zoom",
+ "ai_checks.check.never_title": "Hindi pa nasusuri",
+ "ai_checks.check.never_hint": "Patakbuhin ang mga check at lilitaw dito ang mga natuklasan.",
+ "ai_checks.check.sec.error": "Mga error",
+ "ai_checks.check.sec.warning": "Mga babala",
+ "ai_checks.check.sec.info": "Mga tala"
+}

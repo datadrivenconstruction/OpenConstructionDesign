@@ -1,0 +1,10 @@
+{
+ "type_pick.pick.search": "Cerca tipi o spessore",
+ "type_pick.pick.empty": "Nessun tipo corrispondente",
+ "type_pick.pick.edit": "Modifica tipo…",
+ "type_pick.pick.mixed": "Misto",
+ "type_pick.pick.layers": {
+  "one": "# strato",
+  "other": "# strati"
+ }
+}

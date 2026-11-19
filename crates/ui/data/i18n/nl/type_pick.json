@@ -1,0 +1,10 @@
+{
+ "type_pick.pick.search": "Typen of dikte zoeken",
+ "type_pick.pick.empty": "Geen overeenkomende typen",
+ "type_pick.pick.edit": "Type bewerken…",
+ "type_pick.pick.mixed": "Gemengd",
+ "type_pick.pick.layers": {
+  "one": "# laag",
+  "other": "# lagen"
+ }
+}

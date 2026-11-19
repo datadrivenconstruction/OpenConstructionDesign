@@ -1,0 +1,11 @@
+{
+ "pick_rules.filter": "Velg: alle",
+ "pick_rules.filter.on": "Velg: {n} av",
+ "pick_rules.filter.title": "Kategorier et klikk kan velge",
+ "pick_rules.filter.all": "Velg alle kategorier",
+ "pick_rules.filter.tip": "Valgfilter: avkryssede kategorier hoppes over ved klikk og når du holder musen over",
+ "pick_rules.here": "Elementer her",
+ "pick_rules.here.selected": "valgt",
+ "pick_rules.pinned": "Velg låste elementer",
+ "pick_rules.here.row": "{cat} · {len}"
+}

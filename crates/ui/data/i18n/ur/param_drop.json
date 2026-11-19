@@ -1,0 +1,8 @@
+{
+ "param_drop.title": "پیرامیٹر کی قدریں ہٹائیں؟",
+ "param_drop.intro": "{name} اب ان زمروں سے منسلک نہیں:",
+ "param_drop.line": "{category}: {values} ہٹائی جائیں گی",
+ "param_drop.undo": "ایک Ctrl+Z سب واپس لاتا ہے۔",
+ "param_drop.confirm": "قدریں ہٹائیں اور محفوظ کریں",
+ "param_drop.cancel": "منسوخ کریں"
+}

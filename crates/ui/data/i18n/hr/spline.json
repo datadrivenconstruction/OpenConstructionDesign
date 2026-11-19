@@ -1,0 +1,7 @@
+{
+ "spline.opt.spline": "Spline",
+ "spline.opt.spline_tip": "Spline zid: kliknite točke kroz koje prolazi, Enter ili Esc za završetak",
+ "spline.wt.three_points": "spline zid treba tri ili više točaka",
+ "spline.wt.no_curtain": "zavjesni zid nema spline os",
+ "spline.wt.added": "spline zid dodan"
+}

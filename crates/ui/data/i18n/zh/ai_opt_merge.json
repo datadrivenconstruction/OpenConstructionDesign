@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "合并方案：{name}",
+ "ai_opt_merge.whole": "合并整个方案",
+ "ai_opt_merge.parts": "合并所选部分",
+ "ai_opt_merge.note": "此方案的原因",
+ "ai_opt_merge.rebased": "此方案创建后模型已更改：合并已针对当前模型重新计算。应用前请检查更改。",
+ "ai_opt_merge.left.not_picked": "未从方案中选取",
+ "ai_opt_merge.left.unticked": "在方案中已取消勾选",
+ "ai_opt_merge.left.conflict": "无法添加到当前模型中：{reason}",
+ "ai_opt_merge.refused.not_mergeable": "此方案无法合并。须先恢复已拒绝的方案。",
+ "ai_opt_merge.refused.stale": "此方案创建后模型已更改。请针对当前模型重新计算合并。",
+ "ai_opt_merge.refused.nothing_picked": "未选择任何要合并的内容。",
+ "ai_opt_merge.refused.unknown_item": "条目 {item} 不属于此方案。",
+ "ai_opt_merge.refused.not_in_option": "所选元素不属于此方案。",
+ "ai_opt_merge.refused.needs_left_out": "条目 {item} 需要条目 {needs}。请一并选中，或允许添加依赖项。",
+ "ai_opt_merge.refused.set_gone": "条目 {item} 引用的选择集已不存在。请重新生成此方案。",
+ "ai_opt_merge.refused.busy": "已有另一个计划打开。请先应用或拒绝它。",
+ "ai_opt_merge.refused.failed": "无法准备合并：{reason}",
+ "ai_opt_merge.revive": "恢复方案",
+ "ai_opt_merge.merged": "已合并"
+}

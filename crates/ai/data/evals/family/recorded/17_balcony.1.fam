@@ -1,0 +1,20 @@
+family Balcony
+category generic
+host floor
+ifc IfcSlab NOTDEFINED
+param Width length type 3000mm
+param Depth length type 1500mm
+param Slab length type 200mm
+param Rail length type 1100mm
+param Glass length type 20mm
+param Deck material type "Concrete"
+param Pane material type "Glass Clear"
+type "W2400" Width=2400mm
+type "W3000" Width=3000mm
+type "W3600" Width=3600mm
+type "W4800" Width=4800mm
+extrude Deck rect(-Width / 2, 0, Width / 2, Depth) z(-Slab, 0) mat(Deck) show(3d, elev)
+extrude Front rect(-Width / 2, Depth - Glass, Width / 2, Depth) z(0, Rail) mat(Pane) show(3d, elev)
+extrude Left rect(-Width / 2, 0, -Width / 2 + Glass, Depth - Glass) z(0, Rail) mat(Pane) show(3d, elev)
+extrude Right rect(Width / 2 - Glass, 0, Width / 2, Depth - Glass) z(0, Rail) mat(Pane) show(3d, elev)
+symbol rect(-Width / 2, 0, Width / 2, Depth)

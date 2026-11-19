@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "תצוגה מקדימה",
+ "agent_draft.ag.preview.desc": "מסמן את רכיבי הטיוטה הזו על הקנבס בזמן שהמצביע על הכפתור. שום דבר אינו משתנה.",
+ "agent_draft.type.column": "עמוד",
+ "agent_draft.type.roof": "גג",
+ "agent_draft.type.ceiling": "תקרה",
+ "agent_draft.type.stair": "מונוליטי",
+ "agent_draft.type.railing": "מעקה",
+ "agent_draft.type.shaft": "פיר",
+ "agent_draft.type.axis": "ציר 6.5 mm",
+ "agent_draft.type.refplane": "מישור ייחוס"
+}

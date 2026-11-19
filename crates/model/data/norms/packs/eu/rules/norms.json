@@ -1,0 +1,632 @@
+{
+ "rules": [
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.19
+   },
+   "unit": "m",
+   "value": 0.19,
+   "text": {
+    "en": "Residential stair riser at most 0.19 m",
+    "ru": "Подъём ступени жилой лестницы не более 0.19 м"
+   },
+   "source": {
+    "doc": "eu-practice",
+    "clause": "envelope of national practice (de, fr, es, pl packs)",
+    "note": "EU envelope of national practice, no single norm to cite"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "eu.res.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.25
+   },
+   "unit": "m",
+   "value": 0.25,
+   "text": {
+    "en": "Residential stair tread at least 0.25 m",
+    "ru": "Проступь жилой лестницы не менее 0.25 м"
+   },
+   "source": {
+    "doc": "eu-practice",
+    "clause": "envelope of national practice",
+    "note": "EU envelope of national practice, no single norm to cite"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "eu.res.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 1.0
+   },
+   "unit": "m",
+   "value": 1.0,
+   "text": {
+    "en": "Stair flight width at least 1 m (house/apartment/apartment_section)",
+    "ru": "Ширина марша не менее 1 м (house/apartment/apartment_section)"
+   },
+   "source": {
+    "doc": "eu-practice",
+    "clause": "envelope of national practice",
+    "note": "EU envelope of national practice, no single norm to cite"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "eu.res.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.18
+   },
+   "unit": "m",
+   "value": 0.18,
+   "text": {
+    "en": "Office stair riser at most 0.18 m",
+    "ru": "Подъём ступени офисной лестницы не более 0.18 м"
+   },
+   "source": {
+    "doc": "eu-practice",
+    "clause": "envelope of national practice",
+    "note": "EU envelope of national practice, no single norm to cite"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "eu.off.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.26
+   },
+   "unit": "m",
+   "value": 0.26,
+   "text": {
+    "en": "Office stair tread at least 0.26 m",
+    "ru": "Проступь офисной лестницы не менее 0.26 м"
+   },
+   "source": {
+    "doc": "eu-practice",
+    "clause": "envelope of national practice",
+    "note": "EU envelope of national practice, no single norm to cite"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "eu.off.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 1.2
+   },
+   "unit": "m",
+   "value": 1.2,
+   "text": {
+    "en": "Stair flight width at least 1.2 m (office)",
+    "ru": "Ширина марша не менее 1.2 м (office)"
+   },
+   "source": {
+    "doc": "eu-practice",
+    "clause": "envelope of national practice",
+    "note": "EU envelope of national practice, no single norm to cite"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "eu.off.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {},
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "2*riser+tread",
+    "min": 0.59,
+    "max": 0.65
+   },
+   "unit": "m",
+   "value": [
+    0.59,
+    0.65
+   ],
+   "text": {
+    "en": "Step rule: 2 risers + tread from 0.59 to 0.65 m",
+    "ru": "Шаг: 2 подъёма + проступь от 0.59 до 0.65 м"
+   },
+   "source": {
+    "doc": "eu-practice",
+    "clause": "stair comfort formula, common to the member-state codes",
+    "note": "EU envelope of national practice, no single norm to cite"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "eu.step"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "width",
+    "min": 1.0
+   },
+   "unit": "m",
+   "value": 1.0,
+   "text": {
+    "en": "Corridor clear width at least 1 m",
+    "ru": "Ширина коридора не менее 1 м"
+   },
+   "source": {
+    "doc": "eu-practice",
+    "clause": "envelope of national practice",
+    "note": "EU envelope of national practice, no single norm to cite"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "eu.res.corr"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "width",
+    "min": 1.2
+   },
+   "unit": "m",
+   "value": 1.2,
+   "text": {
+    "en": "Corridor clear width at least 1.2 m",
+    "ru": "Ширина коридора не менее 1.2 м"
+   },
+   "source": {
+    "doc": "eu-practice",
+    "clause": "envelope of national practice",
+    "note": "EU envelope of national practice, no single norm to cite"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "eu.off.corr"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ],
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "width",
+    "min": 1.5
+   },
+   "unit": "m",
+   "value": 1.5,
+   "text": {
+    "en": "Accessible-route corridor clear width at least 1.5 m",
+    "ru": "Ширина коридора на доступном маршруте не менее 1.5 м"
+   },
+   "source": {
+    "doc": "en17210",
+    "clause": "functional requirements, circulation",
+    "note": "EU envelope of national practice, no single norm to cite"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "eu.acc.corr"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.4
+   },
+   "unit": "m",
+   "value": 2.4,
+   "text": {
+    "en": "Clear height of habitable rooms at least 2.4 m",
+    "ru": "Высота жилых помещений не менее 2.4 м"
+   },
+   "source": {
+    "doc": "eu-practice",
+    "clause": "envelope of national practice",
+    "note": "EU envelope of national practice, no single norm to cite"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "eu.res.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "room_kind": [
+     "office",
+     "meeting"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.5
+   },
+   "unit": "m",
+   "value": 2.5,
+   "text": {
+    "en": "Clear height of work rooms at least 2.5 m",
+    "ru": "Высота рабочих помещений не менее 2.5 м"
+   },
+   "source": {
+    "doc": "eu-practice",
+    "clause": "envelope of national practice",
+    "note": "EU envelope of national practice, no single norm to cite"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "eu.off.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "bedroom"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "area",
+    "min": 8.0
+   },
+   "unit": "",
+   "value": 8.0,
+   "text": {
+    "en": "Area of a bedroom room at least 8 m2",
+    "ru": "Площадь помещения «bedroom» не менее 8 м2"
+   },
+   "source": {
+    "doc": "eu-practice",
+    "clause": "envelope of national practice",
+    "note": "EU envelope of national practice, no single norm to cite"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "eu.bed.a"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "living"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "area",
+    "min": 12.0
+   },
+   "unit": "",
+   "value": 12.0,
+   "text": {
+    "en": "Area of a living room at least 12 m2",
+    "ru": "Площадь помещения «living» не менее 12 м2"
+   },
+   "source": {
+    "doc": "eu-practice",
+    "clause": "envelope of national practice",
+    "note": "EU envelope of national practice, no single norm to cite"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "eu.liv.a"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "kitchen"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "area",
+    "min": 5.0
+   },
+   "unit": "",
+   "value": 5.0,
+   "text": {
+    "en": "Area of a kitchen room at least 5 m2",
+    "ru": "Площадь помещения «kitchen» не менее 5 м2"
+   },
+   "source": {
+    "doc": "eu-practice",
+    "clause": "envelope of national practice",
+    "note": "EU envelope of national practice, no single norm to cite"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "eu.kit.a"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "room_kind": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "area",
+    "min": 8.0
+   },
+   "unit": "",
+   "value": 8.0,
+   "text": {
+    "en": "Area of a office room at least 8 m2",
+    "ru": "Площадь помещения «office» не менее 8 м2"
+   },
+   "source": {
+    "doc": "eu-practice",
+    "clause": "per workplace, envelope of national practice",
+    "note": "EU envelope of national practice, no single norm to cite"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "eu.off.a"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 30.0,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 30.0,
+   "text": {
+    "en": "Travel distance from a room to an exit or stair at most 30 m (residential)",
+    "ru": "Путь от помещения до выхода или лестницы не более 30 м"
+   },
+   "source": {
+    "doc": "eu-practice",
+    "clause": "envelope of national practice",
+    "note": "EU envelope of national practice, no single norm to cite"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "eu.egr.res"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 35.0,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 35.0,
+   "text": {
+    "en": "Travel distance from a room to an exit or stair at most 35 m (office)",
+    "ru": "Путь от помещения до выхода или лестницы не более 35 м"
+   },
+   "source": {
+    "doc": "eu-practice",
+    "clause": "envelope of national practice",
+    "note": "EU envelope of national practice, no single norm to cite"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "eu.egr.off"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {},
+   "check": {
+    "kind": "ratio",
+    "per": "element",
+    "cat": "room",
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen",
+     "office"
+    ],
+    "num": "window_area",
+    "den": "area",
+    "min": 0.125
+   },
+   "unit": "ratio",
+   "value": 0.125,
+   "text": {
+    "en": "Window area at least 12.5 % of the floor of a habitable or work room",
+    "ru": "Площадь окон не менее 12.5 % площади пола жилого или рабочего помещения"
+   },
+   "source": {
+    "doc": "eu-practice",
+    "clause": "envelope of national practice",
+    "note": "EU envelope of national practice, no single norm to cite"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "eu.day"
+  },
+  {
+   "id": "generic.egress.distance",
+   "disabled": true,
+   "source": {
+    "note": "EU envelope of national practice, no single norm to cite"
+   }
+  },
+  {
+   "id": "generic.room.daylight",
+   "disabled": true,
+   "source": {
+    "note": "EU envelope of national practice, no single norm to cite"
+   }
+  },
+  {
+   "id": "generic.stair.step",
+   "disabled": true,
+   "source": {
+    "note": "EU envelope of national practice, no single norm to cite"
+   }
+  }
+ ]
+}

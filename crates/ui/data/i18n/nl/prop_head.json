@@ -1,0 +1,9 @@
+{
+ "prop_head.of_type": {
+  "one": "# van dit type",
+  "other": "# van dit type"
+ },
+ "prop_head.override_tip": "Wijkt af van het type, klik om te herstellen",
+ "prop_head.reset_done": "“{name}” hersteld naar de typewaarde",
+ "prop_head.copy_id": "Klik om het nummer te kopiëren"
+}

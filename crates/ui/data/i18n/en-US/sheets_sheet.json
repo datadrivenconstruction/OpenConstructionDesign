@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "Duplicate sheet with views",
+ "cmd.view.sheet_duplicate_title": "Duplicate sheet (title block only)",
+ "sheets.dup.menu_views": "Duplicate with views",
+ "sheets.dup.menu_title": "Duplicate, title block only",
+ "sheets.dup.done": "Sheet {number} created from {src}: {views} views, {sched} schedules and legends. Revisions are not copied; the sheet is unissued.",
+ "sheets.dup.none": "Open a sheet to duplicate it",
+ "sheets.dup.copy": "copy",
+ "cmd.view.sheet_duplicate.short": "Duplicate with views",
+ "cmd.view.sheet_duplicate_title.short": "Duplicate title block"
+}

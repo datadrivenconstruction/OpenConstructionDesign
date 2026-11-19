@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "Beton",
+ "mat.masonry": "Zdivo",
+ "mat.brick": "Cihla",
+ "mat.insulation": "Izolace",
+ "mat.plaster": "Omítka",
+ "mat.render": "Omítka",
+ "mat.gypsum": "Sádrokarton",
+ "mat.glass": "Sklo",
+ "mat.wood": "Dřevo",
+ "mat.steel": "Ocel",
+ "mat.membrane": "Membrána",
+ "mat.other": "Jiné",
+ "warn.cat.wall": "Stěna",
+ "warn.cat.slab": "Deska",
+ "warn.cat.opening": "Otvor",
+ "warn.cat.curtain_wall": "Prosklená stěna",
+ "td.mat.custom": "Jiné…"
+}

@@ -1,0 +1,15 @@
+{
+ "sheet_place.place_view_tip": "Placera en vy eller ett schema på bladet",
+ "sheet_place.properties_tip": "Bladnummer, namn, papper och revisioner",
+ "sheet_place.print_tip": "Skriv ut eller exportera bladet",
+ "sheet_place.fit_tip": "Anpassa bladet till fönstret",
+ "sheet_place.activate_tip": "Redigera vyn på bladet: panorera, zooma och beskär den",
+ "sheet_place.open_view_tip": "Öppna vyn i en egen flik",
+ "sheet_place.done_tip": "Avsluta redigeringen av vyn på bladet",
+ "sheet_place.reset_crop_tip": "Ta bort beskärningen och visa hela vyn",
+ "sheet_place.scale_tip": "Skala för den valda vyn på bladet",
+ "sheet_place.title_tip": "Rubrik som visas under vyn på bladet",
+ "sheet_place.banner": "Redigerar vyn på bladet",
+ "sheet_place.new_set_tip": "Skapa en uppsättning blad att skriva ut tillsammans",
+ "sheet_place.new_sheet_tip": "Lägg till ett blad i projektet"
+}

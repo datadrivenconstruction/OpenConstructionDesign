@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "Valitse koko seinäsilmukka",
+ "cmd.sketch.link_unlink": "Irrota reuna seinästä",
+ "cmd.sketch.link_repick": "Valitse reunaseinä uudelleen",
+ "cmd.ctx.floor.link_unlink": "Irrota reunat seinistä",
+ "cmd.ctx.floor.link_accept": "Hyväksy poistettujen seinien reunat",
+ "boundary_link.hint.loop": "Napsauta seinää: seinien suljettu jakso muuttuu linkitetyiksi reunoiksi",
+ "boundary_link.hint.repick": "Napsauta reunan suuntaista seinää: reuna seuraa sitä",
+ "boundary_link.need_sketch": "Avaa ensin rajaluonnos",
+ "boundary_link.need_edge": "Osoita luonnoksen reunaa",
+ "boundary_link.need_straight": "Vain suora reuna voi seurata seinää",
+ "boundary_link.need_floor": "Valitse lattia",
+ "boundary_link.no_wall": "Kohdistimen alla ei ole seinää",
+ "boundary_link.not_parallel": "Seinä ei ole reunan suuntainen",
+ "boundary_link.not_linked": "Tämä reuna ei ole linkitetty seinään",
+ "boundary_link.unlinked": "Reuna irrotettu: se pysyy paikallaan eikä enää seuraa seinää",
+ "boundary_link.accepted": "Reunat hyväksytty: ne pysyvät paikallaan tavallisina reunoina",
+ "boundary_link.failed": "Ei voitu käyttää",
+ "boundary_link.lost": "lähdeseinä poistettu",
+ "boundary_link.blocked": "ei voi seurata seinää"
+}

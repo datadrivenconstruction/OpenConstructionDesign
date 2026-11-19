@@ -1,0 +1,8 @@
+{
+ "api.cmd.norms_lookup": "Loyihaning me'yorlar to'plami qoidalarini mavzu, element yoki kod bo'yicha topish",
+ "api.cmd.norms_check": "Modelni loyihaning me'yorlar to'plami bilan tekshirish va topilmalar ro'yxati",
+ "api.cmd.norms_programme": "Bino turi uchun loyiha mamlakatidagi tipik xonalar dasturi",
+ "api.cmd.select_similar": "Shunga o'xshash barcha elementlarni tanlash: bir xil tur yoki kategoriya, shu sathda yoki butun loyihada",
+ "api.cmd.create_drawing_set": "Chop etiladigan chizmalar to'plamini qoralama qilish: rejalar, kesimlar, fasadlar, jadvallar va sarlavha bloklari",
+ "api.cmd.deliver_project": "Brifdan bir qadamda fayllargacha: loyiha va uning chizmalar to'plami, Apply dan keyin eksport qilinadi"
+}

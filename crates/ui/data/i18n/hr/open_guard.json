@@ -1,0 +1,11 @@
+{
+ "job.stage.prepare": "Priprema projekta",
+ "open_guard.already_open": "{name} je već otvoren",
+ "open_guard.from_cache": "{name}: otvoreno iz predmemorije uvoza",
+ "open_guard.known_project": "{name} je ranije uvezen: otvaram taj projekt",
+ "open_guard.locate": "Pronađi",
+ "open_guard.mem_low": "Malo memorije: proračun mreža je prepolovljen, a izgradnja razina detalja je pauzirana",
+ "open_guard.mem_low_short": "Malo memorije: izgradnja razina detalja pauzirana je dok se memorija ne oslobodi",
+ "open_guard.no_window": "Prozor tog projekta nije pronađen",
+ "open_guard.switch_window": "Prebaci se na taj prozor"
+}

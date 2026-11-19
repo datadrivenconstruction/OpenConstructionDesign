@@ -1,0 +1,13 @@
+{
+ "mep.sys.duct": "Alimentare S1",
+ "mep.sys.pipe": "Apă rece C1",
+ "mep.sys.tray": "Forță",
+ "mep.round": "Rotund",
+ "mep.material": "Material",
+ "mep3d.elevation": "Elevație de la nivel",
+ "mep3d.slope": "Pantă",
+ "mep3d.shape": "Formă",
+ "mep3d.shape.rect": "Dreptunghiular",
+ "mep3d.shape.round": "Rotund",
+ "mep3d.shape.oval": "Oval plat"
+}

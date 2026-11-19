@@ -1,0 +1,7 @@
+{
+ "src.field.kids": "Underrader (paneler, hörn)",
+ "src.kids.mine": "{n} underrader, ändrade här",
+ "src.kids.changed": "underrader ändrade här",
+ "src.kids.theirs": "underrader ändrade i filen",
+ "src.kids.take_tip": "Nästa import tar filens underrader; de tillämpas inte nu."
+}

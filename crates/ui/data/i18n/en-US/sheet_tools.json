@@ -1,0 +1,18 @@
+{
+ "undo.entry_later": "Not undone: another change was made after it. Undo that one first.",
+ "undo.entry_gone": "Not undone: this change is already undone or no longer in the history.",
+ "undo.entry_busy": "Finish or cancel the current drawing first, then undo.",
+ "quick.hud.more": "More in Properties: {names}",
+ "sheet_tools.sheet.more": "More sheet tools",
+ "job.of": "{d} of {t}",
+ "job.of.mb": "{d} of {t} MB",
+ "job.left.under_minute": "less than a minute left",
+ "job.left.minutes": "about {n} min left",
+ "sheet_tools.start.units": "Units",
+ "sheet_tools.print.save": {
+  "one": "Save # sheet",
+  "other": "Save # sheets"
+ },
+ "sheet_tools.sets.delete_ask": "Delete the set “{name}”? Its sheets stay in the project.",
+ "sheet_tools.keep": "Keep"
+}

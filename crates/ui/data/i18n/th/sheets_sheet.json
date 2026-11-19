@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "ทำสำเนาแผ่นพร้อมมุมมอง",
+ "cmd.view.sheet_duplicate_title": "ทำสำเนาแผ่น (เฉพาะบล็อกชื่อเรื่อง)",
+ "sheets.dup.menu_views": "ทำสำเนาพร้อมมุมมอง",
+ "sheets.dup.menu_title": "ทำสำเนา เฉพาะบล็อกชื่อเรื่อง",
+ "sheets.dup.done": "สร้างแผ่น {number} จาก {src}: {views} มุมมอง {sched} ตารางและคำอธิบายสัญลักษณ์ ไม่คัดลอกการแก้ไข แผ่นยังไม่ได้ออกให้ใช้งาน",
+ "sheets.dup.none": "เปิดแผ่นก่อนทำสำเนา",
+ "sheets.dup.copy": "สำเนา",
+ "cmd.view.sheet_duplicate.short": "ทำสำเนาพร้อมมุมมอง",
+ "cmd.view.sheet_duplicate_title.short": "ทำสำเนาบล็อกชื่อเรื่อง"
+}

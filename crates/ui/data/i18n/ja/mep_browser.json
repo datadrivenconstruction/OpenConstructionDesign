@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "システム名",
+ "mep_browser.add_blocked": "先にシステム名を入力してください",
+ "mep_browser.col.insulation": "断熱",
+ "mep_browser.cancel": "キャンセル",
+ "mep_browser.delete.title": "このシステムを削除しますか？",
+ "mep_browser.delete.body": "システム「{name}」とその系統 ({n}) を削除します。",
+ "mep_browser.delete.undo": "元に戻すで 1 回戻せます。",
+ "mep_browser.delete.confirm": "システムを削除"
+}

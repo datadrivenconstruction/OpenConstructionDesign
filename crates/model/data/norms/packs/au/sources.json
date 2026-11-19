@@ -1,0 +1,40 @@
+{
+ "sources": [
+  {
+   "id": "au-ncc22-v1",
+   "title": "National Construction Code 2022, Volume One (Class 2-9 buildings)",
+   "publisher": "Australian Building Codes Board",
+   "url": "https://ncc.abcb.gov.au/editions/ncc-2022/adopted/volume-one",
+   "edition": "NCC 2022",
+   "licence": "public-law",
+   "verified": "2026-11-14"
+  },
+  {
+   "id": "au-ncc22-hp",
+   "title": "NCC 2022 Housing Provisions (Class 1 and 10)",
+   "publisher": "Australian Building Codes Board",
+   "url": "https://ncc.abcb.gov.au/editions/ncc-2022/adopted/housing-provisions",
+   "edition": "NCC 2022",
+   "licence": "public-law",
+   "verified": "2026-11-14"
+  },
+  {
+   "id": "au-as1428-1",
+   "title": "Design for access and mobility, general requirements (referenced by NCC)",
+   "publisher": "Standards Australia",
+   "url": "https://www.standards.org.au",
+   "edition": "AS 1428.1",
+   "licence": "copyright-numbers-only",
+   "verified": null
+  },
+  {
+   "id": "au-lhds-2022-preview",
+   "title": "Livable Housing Design Standard (preview)",
+   "publisher": "Australian Building Codes Board",
+   "url": "https://codemark.abcb.gov.au/sites/default/files/resources/2022/Livable-housing-design-preview-2022.pdf",
+   "edition": "2022 preview",
+   "licence": "public-law",
+   "verified": "2026-11-14"
+  }
+ ]
+}

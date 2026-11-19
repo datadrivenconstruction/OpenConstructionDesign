@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "Forrige ark (Page Up)",
+ "sheets.print.next": "Neste ark (Page Down)",
+ "sheets.print.fit": "Tilpass side (dobbeltklikk)",
+ "sheets.print.no_sheets": "Ingen ark å forhåndsvise",
+ "sheets.print.building": "Bygger siden…",
+ "sheets.print.stop_build": "Stopp",
+ "sheets.print.build_stopped": "Sidebygging stoppet",
+ "sheets.print.retry": "Bygg på nytt",
+ "sheets.print.build_failed": "Forhåndsvisningen kunne ikke bygges"
+}

@@ -1,0 +1,15 @@
+{
+ "cmd.data.export_step.desc": "Butun modelni yoki tanlovni STEP AP214 yoki AP242 sifatida saqlaydi: aniq tekis, silindrik, konus, sferik, torus va B-spline yuzli jismlar, boshqa elementlar tekis yuz sifatida, ranglar va har bir qavat uchun bitta yig'ma tugun bilan.",
+ "cmd.data.export_3mf.desc": "Butun modelni yoki tanlovni chop etish uchun 3MF sifatida saqlaydi: har bir element uchun bitta obyekt, ranglar, birliklar va har bir jismning yopiqligini tekshirish.",
+ "fmenu.export.step": "STEP aniq jismlar (.step)",
+ "fmenu.export.3mf": "Chop etish uchun 3MF (.3mf)",
+ "mx.schema": "STEP sxemasi",
+ "mx.schema.ap214": "AP214 (eng keng qo'llab-quvvatlanadi)",
+ "mx.schema.ap242": "AP242",
+ "mx.watertight": "Yopiq bo'lmagan jismlar",
+ "mx.watertight.report": "Ularni yozish va ro'yxatini chiqarish",
+ "mx.watertight.skip": "Ularni chiqarib tashlash",
+ "mx.watertight.require": "Eksportni bekor qilish",
+ "mx.faceted": "{fmt} saqlandi: {path} ({exact} ta aniq jism, {n} tasi tekis yuzlar sifatida yozildi: {first})",
+ "sheets.print.svg": "SVG"
+}

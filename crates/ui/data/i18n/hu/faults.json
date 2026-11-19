@@ -1,0 +1,18 @@
+{
+ "faults.errors": {
+  "one": "# hiba a modellben. Kattints a megjelenítéséhez.",
+  "other": "# hiba a modellben. Kattints a lista megtekintéséhez."
+ },
+ "faults.warnings": {
+  "one": "# figyelmeztetés a modellben. Kattints a megjelenítéséhez.",
+  "other": "# figyelmeztetés a modellben. Kattints a lista megtekintéséhez."
+ },
+ "faults.title": "Modellhibák: {n}",
+ "faults.none": "Nincs hiba vagy figyelmeztetés.",
+ "faults.cat.wall": "Fal",
+ "faults.cat.slab": "Födém",
+ "faults.cat.opening": "Nyílás",
+ "faults.cat.curtain_wall": "Függönyfal",
+ "faults.cat.ramp": "Rámpa",
+ "faults.cat.zone": "Zóna"
+}

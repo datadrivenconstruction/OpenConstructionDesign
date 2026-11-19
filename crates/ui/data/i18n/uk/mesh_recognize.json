@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "Розпізнано {done} з {total}",
+ "mesh_recognize.all": "Усі {n}",
+ "mesh_recognize.only_confident": "Лише впевнені",
+ "mesh_recognize.confident_tip": "Позначає рядки, тип яких відповідає категорії, а впевненість не менша за {pct}%",
+ "mesh_recognize.row_hint": "Клацніть рядок, щоб позначити його. Стрілки переміщують, Enter позначає.",
+ "mesh_recognize.kind_for": "Тип для {name}",
+ "mesh_recognize.source": "Вихідні сітки",
+ "mesh_recognize.keep": "Зберегти сітки",
+ "mesh_recognize.replace": "Замінити сітки",
+ "mesh_recognize.convert_keep": "Перетворити {n}",
+ "mesh_recognize.convert_remove": "Перетворити {n} і видалити сітки",
+ "mesh_recognize.creates": "Створить {n}: {kinds}",
+ "mesh_recognize.creates_none": "Ще нічого не позначено",
+ "mesh_recognize.stay": "{n} вихідних сіток залишаються в моделі",
+ "mesh_recognize.removed": "{n} вихідних сіток буде видалено. Скасування їх поверне."
+}

@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "연결",
+ "settings.ai_status_desc": "AI 어시스턴트가 사용하는 모델. 키는 보안 저장소에 보관됩니다",
+ "settings.ai_not_connected": "연결되지 않음",
+ "settings.ai_connect": "연결 설정",
+ "settings.ai_connect_desc": "사용자 모델(클라우드 또는 로컬)의 주소, 모델, 키",
+ "settings.ai_connect_btn": "연결 설정…",
+ "settings.ai_panel": "AI 어시스턴트 패널",
+ "settings.ai_panel_desc": "말로 요청하고, 계획을 검토한 뒤 적용하세요",
+ "settings.ai_open_panel": "AI 패널 열기"
+}

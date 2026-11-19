@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "اوپر لے جائیں",
+ "rebar_list.move_down": "نیچے لے جائیں",
+ "rebar_list.remove": "ہٹائیں",
+ "rebar_list.zone_remove_last": "زون میں کم از کم ایک کمرہ ہونا چاہیے: آخری کو ہٹانے کے لیے زون حذف کریں",
+ "rebar_list.rebar_empty_title": "اس ماڈل میں کوئی ری بار نہیں",
+ "rebar_list.rebar_empty_hint": "کسی میزبان عنصر میں ری بار رکھیں تو وہ یہاں شیڈول ہوگا۔",
+ "rebar_list.rebar_empty_action": "ری بار رکھیں"
+}

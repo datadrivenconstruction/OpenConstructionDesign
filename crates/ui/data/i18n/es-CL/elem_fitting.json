@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "Accesorio",
+ "elem.mep_fitting.many": "Accesorios",
+ "elem.mep_fitting.kind.elbow": "Codo",
+ "elem.mep_fitting.kind.tee": "Te",
+ "elem.mep_fitting.kind.cross": "Cruz",
+ "elem.mep_fitting.kind.transition": "Transición",
+ "elem.mep_fitting.kind.cap": "Tapa",
+ "elem.mep_fitting.size": "Tamaño",
+ "elem.mep_fitting.at": "Posición",
+ "elem.mep_fitting.runs": "Tramo {n}",
+ "elem.mep_fitting.edit_run": "Editar tramo",
+ "elem.mep_fitting.select_runs": "Seleccionar sus tramos",
+ "elem.mep_fitting.derived": "Un accesorio sigue a sus tramos: si cambia un tramo, el accesorio cambia con él.",
+ "elem.mep_fitting.no_delete": "Un accesorio no se puede borrar ni mover por sí solo. Edite o borre sus tramos.",
+ "elem.mep_fitting.hint": "Haga clic en un accesorio del plano para ver sus tramos.",
+ "elem.mep_fitting.picked": "Accesorios seleccionados: {n}"
+}

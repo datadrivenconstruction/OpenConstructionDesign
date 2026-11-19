@@ -1,0 +1,6 @@
+{
+ "xlsx_readonly.read_only": "Registrul este doar pentru citire (proprietatea fișierului sau permisiunea folderului). Exportă într-o copie sau debifează Doar citire în proprietățile fișierului și încearcă din nou.",
+ "xlsx_readonly.export_copy": "Exportă într-o copie",
+ "xlsx_readonly.no_copy_name": "Niciun nume liber pentru o copie lângă registru.",
+ "xlsx_readonly.copied": "Registrul a rămas așa cum este. A fost scrisă alături o copie reîmprospătată și este legată acum: {path}"
+}

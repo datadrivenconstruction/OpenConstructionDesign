@@ -1,0 +1,14 @@
+{
+ "lnp.openings_refused": "{n} ava ei muudetud ({why})",
+ "lnp.params_changed": "muudetud väärtusi: {n}",
+ "lnp.params_same": "Muudatusi pole: {u} elemendil on see väärtus juba",
+ "lnp.params_tip": "Enter rakendab väärtuse kõigile valitud elementidele; Esc jätab need",
+ "lnp.locked_hint": "Lukustatud väärtused jäetakse alles: {n}",
+ "lnp.panels_one": "Paneele muudetakse ükshaaval",
+ "lnp.keep_first": "Jäta esimene",
+ "lnp.keep_first_tip": "Muutmiseks vali ainult esimene paneel",
+ "lnp.clip_from_wall": "Parameetrid kopeeritud seinalt #{id}",
+ "lnp.clip_from_opening": "Parameetrid kopeeritud avalt #{id}",
+ "lnp.match_from": "#{id} omadused sobitati {n} elemendile",
+ "lnp.why_at": "#{id}: {e}"
+}

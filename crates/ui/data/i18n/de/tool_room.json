@@ -1,0 +1,9 @@
+{
+ "tool.room": "Raum",
+ "tool.room.name": "Raum",
+ "room_tool.room.name": "Name",
+ "hint.room.place": "In eine geschlossene Wandkontur klicken, um einen Raum zu erstellen · Esc — beenden",
+ "tool.err.room_open": "Die Fläche ist nicht geschlossen: Wandkontur schließen oder einen Raumtrenner hinzufügen",
+ "tool.err.room_check": "Die Räume dieses Geschosses können nicht geprüft werden",
+ "tool.err.room_exists": "In dieser Kontur gibt es bereits einen Raum"
+}

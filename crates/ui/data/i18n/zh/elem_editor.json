@@ -1,0 +1,4 @@
+{
+ "elem.spreadsheet.applied": "已从 XLSX 电子表格 导入：{what}",
+ "elem.spreadsheet.failed": "XLSX 电子表格 导入失败：{e}"
+}

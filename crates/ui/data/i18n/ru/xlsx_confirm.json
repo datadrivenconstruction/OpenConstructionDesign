@@ -1,0 +1,19 @@
+{
+ "xlsx_confirm.chip": "ждут решения",
+ "xlsx_confirm.section": "Строки без id, сопоставленные с элементом по имени или номеру",
+ "xlsx_confirm.tag": "найдено по имени",
+ "xlsx_confirm.tag_accepted": "совпадение принято",
+ "xlsx_confirm.tag_rejected": "создаст новый",
+ "xlsx_confirm.kind_room": "помещение",
+ "xlsx_confirm.kind_curtain_wall": "витраж",
+ "xlsx_confirm.row_line": "{kind} №{id}, ключ \"{key}\"",
+ "xlsx_confirm.accept": "Принять",
+ "xlsx_confirm.accept_tip": "Применить строку к найденному элементу (один шаг отмены со всем остальным)",
+ "xlsx_confirm.reject": "Создать новый",
+ "xlsx_confirm.reject_tip": "Не сопоставлять: строка создаст новый элемент",
+ "xlsx_confirm.decide_first": "Сначала примите или отклоните строки, найденные по имени.",
+ "xl.msg.key_match_many": "ключ совпал с элементами ({}); связь не создана, строка создаст новый элемент",
+ "xl.msg.key_match_taken": "ключ совпал с элементом, который занят другой строкой; связь не создана, строка создаст новый элемент",
+ "xl.msg.key_match_kept": "оставлен: совпадение отклонено, строка создаст новый элемент",
+ "xl.msg.key_match_undecided": "строки, найденные по имени, ждут решения"
+}

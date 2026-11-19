@@ -1,0 +1,9 @@
+{
+ "elem.deleted": "삭제된 요소: {n}",
+ "elem.deleted_kept": "삭제된 요소: {n}; 그대로 둔 요소: {k} (패널 및 삭제할 수 없는 요소)",
+ "elem.not_deleted": "삭제되지 않음: {e}",
+ "elem.not_deletable": "이 요소는 삭제할 수 없습니다",
+ "elem.panel": "커튼월 패널",
+ "elem.panel_refused": "패널은 커튼월의 일부이므로 단독으로 삭제할 수 없습니다. 벽 전체를 선택해 삭제하세요.",
+ "elem.reload_failed": "삭제됨, 하지만 뷰가 갱신되지 않음: {e}"
+}

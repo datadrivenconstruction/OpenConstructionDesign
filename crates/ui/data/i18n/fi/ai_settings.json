@@ -1,0 +1,9 @@
+{
+ "ai.settings.num_bad": "Ei luku. Kirjoita se muodossa 0.5.",
+ "ai.settings.num_comma": "Käytä pistettä desimaalierottimena, esimerkiksi 0.5.",
+ "ai.settings.num_negative": "Luku ei voi olla negatiivinen.",
+ "ai.settings.unit_money": "valuutta",
+ "ai.settings.unit_tokens": "tokenia",
+ "ai.settings.unit_price": "per 1 M tokenia",
+ "ai.settings.limits_hint": "0 tarkoittaa ei rajaa. Hylätty arvo jättää edellisen rajan voimaan."
+}

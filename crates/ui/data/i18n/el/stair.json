@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "Σκάλες",
+ "selcat.railing": "Κιγκλιδώματα",
+ "quick.cat.stair": "Σκάλες",
+ "quick.cat.railing": "Κιγκλιδώματα",
+ "stair.risers": "Αναβαθμοί",
+ "stair.riser": "Ύψος αναβαθμού",
+ "stair.comfort": "2R + T",
+ "stair.tread_auto": "Πάτημα κατά κανόνα",
+ "stair.tread_auto_tip": "Αφήνει το πληκτρολογημένο πάτημα και αφήνει τον κανόνα 2R + T να το ορίσει",
+ "stair.broken": "Αυτή η σκάλα δεν ταιριάζει στα επίπεδά της",
+ "railing.host_stair": "Φιλοξενείται στη σκάλα #{id}",
+ "railing.host_path": "Κιγκλίδωμα με σκαρίφημα",
+ "railing.length": "Μήκος",
+ "stair.deleted_with": "με {n} φιλοξενούμενα κιγκλιδώματα"
+}

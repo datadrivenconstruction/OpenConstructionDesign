@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "prilagođeno",
+ "draw_quality.custom.tip": "{name}: unos ovog projekta",
+ "draw_quality.custom_note": "Unosi označeni kao prilagođeni pripadaju ovom projektu.",
+ "draw_quality.unsaved.lib_body": "Spremiti ih u biblioteku ili odbaciti?",
+ "draw_quality.unsaved.styles_body": "Primijeniti ih na pogled ili odbaciti?",
+ "draw_quality.unsaved.both_body": "Primijeniti ih ili odbaciti?",
+ "draw_quality.halftone": "{category} polutonalno",
+ "draw_quality.styles.name": "Stilovi linija",
+ "draw_quality.styles.other_level": "Nespremljene izmjene stilova razine {level}: primijenite ih ili vratite da biste uredili ovu razinu."
+}

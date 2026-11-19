@@ -1,0 +1,14 @@
+{
+ "ai.issue.integrity": "Masalah integritas: {0} {1}: {2}",
+ "ai.issue.opening_outside": "Bukaan tidak muat di dinding: {0}",
+ "ai.issue.opening_overlap": "Bukaan tumpang tindih dengan bukaan {0}",
+ "ai.issue.wall_warning": "Dinding: {0}",
+ "ai.issue.cut_warning": "Potongan: {0}",
+ "ai.issue.room_open": "Ruang tidak tertutup",
+ "ai.issue.material_unknown": "Tidak ada material bernama \"{0}\" di proyek: Terapkan akan menambahkan yang baru dengan properti default",
+ "ai.issue.material_suggest": "Tidak ada material bernama \"{0}\" di proyek: Terapkan akan menambahkan yang baru. Maksud Anda \"{1}\"?",
+ "ai.issue.conflict": "Item ini tidak dapat dijalankan: {0}",
+ "ai.issue.too_large": "{0} elemen akan berubah, melebihi batas {1}. Diperlukan izin",
+ "ai.issue.truncated": "Daftar perubahan berhenti di {0} baris: rencana lebih besar dari yang bisa ditampilkan kartu. Diperlukan izin",
+ "ai.issue.replan_failed": "Rencana tidak dapat dihitung ulang. Salinan model baru sedang diambil"
+}

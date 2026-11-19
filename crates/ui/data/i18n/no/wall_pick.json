@@ -1,0 +1,13 @@
+{
+ "cmd.arch.wall_pick": "Vegg etter linje",
+ "cmd.arch.wall_pick.desc": "Plasserer en vegg på en valgt tegningslinje på gjeldende etasje. F bytter akse eller flate på linjen, Tab tar den sammenhengende kjeden. Hvert valg er ett angrestegg. Fungerer også for gardinvegger.",
+ "hint.wall_pick.center": "Vegg etter linje: velg en tegningslinje · akse på linjen · F flate · Tab kjede · Esc avslutt",
+ "hint.wall_pick.face": "Vegg etter linje: velg en tegningslinje · flate på linjen, markørens side · F akse · Tab kjede · Esc avslutt",
+ "hint.wall_pick.center_chain": "Vegg etter linje: velg en linje for å ta kjeden · akse på linjen · F flate · Tab én linje",
+ "hint.wall_pick.face_chain": "Vegg etter linje: velg en linje for å ta kjeden · flate på linjen · F akse · Tab én linje",
+ "wall_pick.st.start": "Velg en tegningslinje. F: akse eller flate, Tab: sammenhengende kjede",
+ "wall_pick.st.no_lines": "Ingen synlige tegningslinjer på denne etasjen",
+ "wall_pick.st.miss": "Ingen tegningslinje her",
+ "wall_pick.st.on_wall": "Denne linjen er allerede under vegg {id}",
+ "wall_pick.st.tight": "Flateforskyvningen passer ikke: et segment i kjeden er kortere enn veggtykkelsen"
+}

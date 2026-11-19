@@ -1,0 +1,4 @@
+{
+ "room_watch.room.dup": "실 {room}은(는) 실 {other}의 영역 안에 있어 면적과 체적은 실 {other}에서만 집계됩니다",
+ "ai.issue.room_dup": "이 실은 실 {0}의 영역 안에 있어 면적이 그곳에 집계됩니다"
+}

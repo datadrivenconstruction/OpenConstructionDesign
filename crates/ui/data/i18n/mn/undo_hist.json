@@ -1,0 +1,8 @@
+{
+ "undo.undone": "Буцаагдлаа: {what}",
+ "undo.redone": "Сэргээгдлээ: {what}",
+ "undo.action.edit.redo": "Сэргээх",
+ "undo.action.edit.undo": "Буцаах",
+ "hdr.unsaved": "Хадгалаагүй өөрчлөлтүүд",
+ "hdr.file_menu": "Файлын цэс"
+}

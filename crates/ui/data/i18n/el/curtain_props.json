@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "Πάνελ",
+ "curtain_props.cw.panel_cell": "Κελί {i}×{j} · κουρτινοτοίχος #{id}",
+ "curtain_props.cw.kind": "Τύπος",
+ "curtain_props.cw.kind.glazed": "Υαλοπίνακας",
+ "curtain_props.cw.kind.solid": "Συμπαγές",
+ "curtain_props.cw.kind.door": "Πόρτα",
+ "curtain_props.cw.kind.window": "Παράθυρο",
+ "curtain_props.cw.kind.empty": "Κενό",
+ "curtain_props.cw.name": "Όνομα",
+ "curtain_props.cw.swing_side": "Ανοίγει προς την άλλη πλευρά",
+ "curtain_props.cw.swing_hinge": "Μεντεσές στο άκρο του κελιού",
+ "curtain_props.cw.size": "Μέγεθος",
+ "curtain_props.cw.cell_area": "Εμβαδόν κελιού",
+ "curtain_props.cw.panel_area": "Εμβαδόν πάνελ",
+ "curtain_props.cw.prev": "Προηγούμενο πάνελ",
+ "curtain_props.cw.next": "Επόμενο πάνελ",
+ "curtain_props.cw.wall": "Επιλέξτε τον τοίχο",
+ "curtain_props.cw.panel_hint": "Esc — επιλογή · Ctrl+Z — αναίρεση",
+ "curtain_props.cw.status.panel": "Πάνελ {i}×{j} → {kind}",
+ "e3d.err.cw_height": "το ύψος του κουρτινοτοίχου πρέπει να είναι πάνω από 100 mm"
+}

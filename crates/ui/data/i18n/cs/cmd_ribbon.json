@@ -1,0 +1,23 @@
+{
+  "cmd.arch.room_sep.short": "Oddělovač",
+  "cmd.str.footing.short": "Patka sloupu",
+  "cmd.str.strip_footing.short": "Pásový základ",
+  "cmd.str.analytical.short": "Analytický",
+  "cmd.mep.terminal.short": "Vyústění",
+  "cmd.mod.isolate.short": "Izolovat",
+  "cmd.view.ui.short": "Rozhraní",
+  "cmd.mgr.params.short": "Parametry",
+  "cmd.ctx.wall.attach.short": "Připojit",
+  "cmd.mass.unjoin.short": "Odpojit",
+  "cmd.mod.unjoin.short": "Odpojit",
+  "cmd.arch.void_extrusion.short": "Vyříznutí",
+  "cmd.e3d.snap.short": "3D uchopení",
+  "cmd.mgr.open_big.short": "Velký soubor…",
+  "cmd.site.edit_points.short": "Body terénu",
+  "cmd.view.reveal_3d.short": "Kategorie",
+  "cmd.help.check_update.short": "Aktualizace",
+  "cmd.ctx.floor.link_unlink.short": "Odpojit hrany",
+  "cmd.ui.onboarding.short": "Nastavit…",
+  "cmd.mod.distribute.short": "Rozmístit",
+  "cmd.data.src_delta.short": "Změny tabulka XLSX…"
+}

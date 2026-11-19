@@ -1,0 +1,7 @@
+{
+ "xlsx_alias_ids.ids_written": "{n} nouvelles lignes ont reçu leur id dans votre feuille renommée ; rien d'autre du classeur n'a changé.",
+ "xlsx_alias_ids.ids_open": "Le classeur est ouvert dans un autre programme : les id de {n} nouvelles lignes n'ont pas été écrits. Fermez-le là-bas et synchronisez ; ces lignes ne seront pas recréées.",
+ "xlsx_alias_ids.ids_failed": "Les id de {n} nouvelles lignes n'ont pas pu être écrits ; le classeur est resté tel quel. Ces lignes ne seront pas recréées lors de la prochaine synchronisation.",
+ "xlsx_alias_ids.unpaired": "{n} nouvelles lignes n'ont pas encore d'id ; elles sont mémorisées et ne seront pas recréées.",
+ "xlsx_alias_ids.refused": "Rien n'a été appliqué : les nouvelles lignes de {sheets} ne peuvent pas recevoir d'id tant qu'une feuille renommée est lue. Renommez la feuille à son nom standard (ou supprimez ces lignes), puis resynchronisez."
+}

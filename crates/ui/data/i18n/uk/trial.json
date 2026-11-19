@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "Точка",
+ "trial.field.distance": "Відстань",
+ "trial.field.target": "Елемент",
+ "trial.refused": "{field}: {reason}. Змініть значення, щоб застосувати",
+ "trial.preview_off": "Попередній перегляд вимкнено: модель завелика"
+}

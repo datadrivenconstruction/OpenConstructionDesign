@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "عائلة جديدة",
+ "family_editor.open_tip": "فتح عائلة أو مسودة",
+ "family_editor.close_named": "إغلاق {name}",
+ "family_editor.unsaved": "تغييرات غير محفوظة",
+ "family_editor.search": "بحث",
+ "family_editor.nothing": "لم يُعثر على شيء",
+ "family_editor.sec_families": "عائلات المشروع",
+ "family_editor.sec_drafts": "المسودات",
+ "family_editor.cap_category": "الفئة",
+ "family_editor.cap_host": "المضيف",
+ "family_editor.cap_type": "نوع المعاينة"
+}

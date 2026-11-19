@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "楼梯",
+ "selcat.railing": "栏杆",
+ "quick.cat.stair": "楼梯",
+ "quick.cat.railing": "栏杆",
+ "stair.risers": "踢面",
+ "stair.riser": "踢面高度",
+ "stair.comfort": "2R + T",
+ "stair.tread_auto": "按规则确定踏面",
+ "stair.tread_auto_tip": "忽略输入的踏面，由 2R + T 规则确定",
+ "stair.broken": "此楼梯与其标高不匹配",
+ "railing.host_stair": "依附于楼梯 #{id}",
+ "railing.host_path": "草绘栏杆",
+ "railing.length": "长度",
+ "stair.deleted_with": "连同 {n} 个依附栏杆"
+}

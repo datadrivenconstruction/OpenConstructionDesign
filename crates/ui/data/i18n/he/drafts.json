@@ -1,0 +1,8 @@
+{
+ "drafts.drafts.head": "לעורכים הפתוחים יש עריכות שעדיין לא נמצאות בפרויקט:",
+ "drafts.draft.family": "משפחה “{name}”",
+ "drafts.draft.line": "ספריית קווים: {name}",
+ "drafts.draft.styles": "סגנונות קו של טווח המבט",
+ "drafts.btn.save_all": "שמור הכול",
+ "drafts.drafts.refused": "לא ניתן היה לשמור טיוטה. דבר לא נסגר; העורך עם הטיוטה פתוח."
+}

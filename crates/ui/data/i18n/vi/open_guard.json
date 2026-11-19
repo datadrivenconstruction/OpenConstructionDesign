@@ -1,0 +1,11 @@
+{
+ "job.stage.prepare": "Đang chuẩn bị dự án",
+ "open_guard.already_open": "{name} đã được mở",
+ "open_guard.from_cache": "{name}: đã mở từ bộ nhớ đệm nhập",
+ "open_guard.known_project": "{name} đã được nhập trước đó: đang mở dự án đó",
+ "open_guard.locate": "Tìm",
+ "open_guard.mem_low": "Bộ nhớ thấp: ngân sách lưới giảm một nửa và việc dựng mức chi tiết bị tạm dừng",
+ "open_guard.mem_low_short": "Bộ nhớ thấp: việc dựng mức chi tiết bị tạm dừng đến khi có bộ nhớ trống",
+ "open_guard.no_window": "Không tìm thấy cửa sổ của dự án đó",
+ "open_guard.switch_window": "Chuyển sang cửa sổ đó"
+}

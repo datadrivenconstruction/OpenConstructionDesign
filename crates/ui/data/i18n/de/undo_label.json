@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "Rückgängig: {what}",
+ "undo_label.redo_what": "Wiederholen: {what}",
+ "undo_label.undo_none": "Nichts zum Rückgängigmachen",
+ "undo_label.redo_none": "Nichts zum Wiederholen"
+}

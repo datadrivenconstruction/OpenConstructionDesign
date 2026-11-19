@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "Mga shaft",
+ "quick.cat.shaft": "Poso",
+ "shaft_tool.browser.shaft": "Poso #{id}",
+ "shaft_tool.shaft.top": "Pinakamataas na antas",
+ "shaft_tool.shaft.cuts": "Mga hiniwang elemento",
+ "shaft_tool.shaft.cut_area": "Lugar ng hiwa",
+ "shaft_tool.shaft.cut_volume": "Volume ng hiwa",
+ "elem.no.rooms": "Sumusunod sa mga kuwartong hawak nito"
+}

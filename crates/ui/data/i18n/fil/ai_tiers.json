@@ -1,0 +1,4 @@
+{
+ "ai.issue.delete_large": "{0} elemento ang mabubura, lampas sa limitasyon na {1}. Kailangan ng pahintulot",
+ "ai.issue.refused_large": "{0} elemento ang magbabago, lampas sa mahigpit na limitasyon na {1}. Hatiin ang plan sa mas maliliit na bahagi"
+}

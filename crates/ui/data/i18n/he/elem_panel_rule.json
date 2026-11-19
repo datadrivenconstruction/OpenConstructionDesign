@@ -1,0 +1,5 @@
+{
+ "elem.panel_select_wall": "בחר קיר",
+ "cmd.elem.panel_select_wall": "בחר קיר",
+ "elem.left_in_place": "נשאר במקומו: {kinds}. לוח שייך לקיר שלו; מסות והערות נמחקות בנפרד."
+}

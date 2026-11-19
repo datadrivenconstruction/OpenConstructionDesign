@@ -1,0 +1,16 @@
+{
+ "save_fail.save_fail.title": "Projeto não salvo",
+ "save_fail.save_fail.kept": "Suas edições continuam abertas aqui. Nada se perde enquanto o editor permanecer aberto.",
+ "save_fail.save_fail.details": "Detalhes",
+ "save_fail.save_fail.copy": "Copiar",
+ "save_fail.save_fail.save_as": "Salvar como…",
+ "save_fail.save_fail.retry": "Tentar novamente",
+ "save_fail.save_fail.close": "Fechar",
+ "save_fail.cause.full": "O disco está cheio. Libere espaço ou salve o projeto em outra unidade.",
+ "save_fail.cause.denied": "Esta pasta ou arquivo é somente leitura, ou você não tem permissão para gravar aqui. Escolha outra pasta.",
+ "save_fail.cause.locked": "O arquivo está aberto em outro programa. Feche-o lá e pressione Tentar novamente.",
+ "save_fail.cause.missing": "A pasta não existe mais. Escolha outra pasta, ou restaure-a e pressione Tentar novamente.",
+ "save_fail.cause.offline": "A unidade ou a pasta de rede não está disponível. Reconecte-a e pressione Tentar novamente, ou salve em outro local.",
+ "save_fail.cause.too_long": "O caminho do arquivo é longo demais. Escolha uma pasta ou um nome de arquivo mais curto.",
+ "save_fail.cause.other": "Não foi possível gravar o arquivo: {detail}"
+}

@@ -1,0 +1,72 @@
+# Defaults of the parametric connections. Sizes in mm unless the unit says otherwise.
+# Bolt diameter by the depth of the connected section (largest of the joined members).
+[bolt_by_depth]
+depth_max,d
+160,12
+260,16
+450,20
+600,22
+800,24
+10000,27
+
+# End plate thickness by bolt diameter.
+[end_plate_t]
+d,t
+12,10
+16,12
+20,15
+22,16
+24,20
+27,25
+30,25
+36,30
+
+# Anchor rods of a column base by the larger side of the column section.
+[anchors]
+size_max,d,count
+180,20,4
+300,24,4
+450,30,4
+600,30,6
+10000,36,8
+
+# Ball diameters of a sphere node.
+[balls]
+d
+80
+100
+120
+140
+160
+180
+200
+220
+250
+280
+300
+350
+400
+
+# Ball node bolt by the outside diameter of the tube: bolt, sleeve across flats and length.
+[sphere_bolt]
+tube_max,d,sleeve_s,sleeve_len
+60,16,27,40
+89,20,34,45
+114,24,41,50
+140,27,46,55
+168,30,50,60
+1000,36,60,70
+
+# Other defaults.
+[rules]
+key,value,unit
+grout,50,mm
+anchor_embed,20,d
+anchor_above,3,pitch
+gap,10,mm
+bolt_class,8.8,text
+anchor_class,5.6,text
+fin_depth_share,0.6,ratio
+cone_len,1.0,tube_d
+ball_gap_deg,4,deg
+ball_thread,1.1,d

@@ -1,0 +1,10 @@
+{
+ "cmd.mod.scale": "Escalar",
+ "cmd.mod.scale.desc": "Seleccione elementos y luego haga clic en el punto base, una longitud de referencia y la nueva longitud, o escriba un factor.",
+ "hint.scale.select": "Escalar: seleccione elementos · Intro — terminar",
+ "hint.scale.first": "Escalar: elija el punto base · Esc — cancelar",
+ "hint.scale.second": "Escalar: elija la longitud de referencia · número — factor · Esc — cancelar",
+ "hint.scale.third": "Escalar: elija la nueva longitud · número — factor · Esc — cancelar",
+ "scl.bad_factor": "El factor de escala debe ser un número mayor que cero",
+ "scl.zero_ref": "La longitud de referencia es cero: elija un punto alejado de la base"
+}

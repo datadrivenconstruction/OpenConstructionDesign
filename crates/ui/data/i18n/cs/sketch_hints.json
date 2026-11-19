@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "Nakreslete uzavřený obrys: klikejte body, poté Enter nebo Dokončit pro vytvoření",
+ "sketch_hints.sk_finish": "Dokončit",
+ "sketch_hints.sk_cancel": "Zrušit",
+ "sketch_hints.import_warn": "upozornění kontroly modelu: {n} (první: {first})",
+ "sketch_hints.ai.offline.schedule": "Otevřít výkaz",
+ "sketch_hints.ai.offline.check": "Zkontrolovat podle pravidel",
+ "sketch_hints.ai.offline.warnings": "Zobrazit upozornění",
+ "cmd.file.publish_pdf": "Publikovat listy do PDF…",
+ "cmd.file.publish_pdf.desc": "Publikuje vybrané listy do PDF. Stejné jako Exportovat listy do PDF/SVG.",
+ "sketch_hints.verify_none": "Ve výběru nejsou žádné prvky nastavené AI asistentem k ověření",
+ "sketch_hints.contours_none": "V modelu není žádná topoplocha: vrstevnice se zobrazí po jejím vytvoření",
+ "sketch_hints.contours_off": "Vrstevnice topoplochy skryty",
+ "sketch_hints.contours_on": "Vrstevnice topoplochy zobrazeny"
+}

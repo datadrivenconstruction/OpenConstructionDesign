@@ -1,0 +1,22 @@
+{
+ "depth.chip": "Profondeur {level}",
+ "depth.chip_tip": "Jusqu'où le prochain passage développe le projet : D1 concept à D5 fabrication, par discipline",
+ "depth.all_off": "toutes les disciplines désactivées",
+ "depth.disc.arch": "Archi",
+ "depth.disc.struct": "Struct.",
+ "depth.disc.mep": "MEP",
+ "depth.disc.doc": "Docs",
+ "depth.project": "Profondeur du projet",
+ "depth.level.1": "D1 Concept : volumétrie, niveaux, surfaces, une feuille",
+ "depth.level.2": "D2 Esquisse : murs, pièces selon le programme, ouvertures, trame, plans",
+ "depth.level.3": "D3 Avant-projet : types en couches, structure dimensionnée, réseaux principaux et terminaux, nomenclatures",
+ "depth.level.4": "D4 Exécution : détails de jonction, quincaillerie, finitions, armatures, dérivations",
+ "depth.level.5": "D5 Fabrication : plans de ferraillage, assemblages acier, préfabrication, bordereau de matériaux",
+ "depth.as_project": "Identique",
+ "depth.estimate": "Estimation : environ {elements} éléments, {minutes} min, {tokens} jetons en {calls} appels, {sheets} feuilles",
+ "depth.estimate_none": "L'estimation accompagne le projet établi : le modèle est encore vide",
+ "depth.heat": "Carte de chaleur des profondeurs",
+ "depth.heat.row": "Profondeur",
+ "depth.settings": "Profondeur de conception de ce projet",
+ "depth.settings_desc": "Profondeur de travail de l'assistant IA, D1 à D5, avec un interrupteur et une profondeur propre à chaque discipline ; enregistrée dans le fichier de projet"
+}

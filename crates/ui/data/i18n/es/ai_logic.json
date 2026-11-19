@@ -1,0 +1,6 @@
+{
+ "ai_toast.toast_not_refreshed": "Aplicado como paso de deshacer {n} (Ctrl+Z lo deshace), pero la vista no se actualizó. Recargue la vista.",
+ "ai.optx.reload_failed": "La opción «{name}» se aplicó y guardó, pero la vista no se recargó: {e}",
+ "ai.cmp.stale": "Desactualizada",
+ "ai.cmp.stale_tip": "Esta opción se creó sobre un estado anterior del modelo. Vuelva a generarla para aplicarla."
+}

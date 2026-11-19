@@ -1,0 +1,8 @@
+{
+ "mep_units.unit.mm": "mm",
+ "mep_units.unit.in": "in",
+ "mep_units.dn": "DN",
+ "mep_units.diameter": "קוטר",
+ "mep_units.system.new": "מערכת חדשה",
+ "mep_units.system.none": "אין מערכת"
+}

@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "Uusi perhe",
+ "family_editor.open_tip": "Avaa perhe tai luonnos",
+ "family_editor.close_named": "Sulje {name}",
+ "family_editor.unsaved": "Tallentamattomia muutoksia",
+ "family_editor.search": "Hae",
+ "family_editor.nothing": "Ei löytynyt mitään",
+ "family_editor.sec_families": "Projektin perheet",
+ "family_editor.sec_drafts": "Luonnokset",
+ "family_editor.cap_category": "Luokka",
+ "family_editor.cap_host": "Isäntä",
+ "family_editor.cap_type": "Esikatselun tyyppi"
+}

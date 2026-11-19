@@ -1,0 +1,5 @@
+{
+ "start_recent.unavailable": "Ikke tilgængelig lige nu (drev eller netværksplacering svarer ikke): {path}",
+ "start_recent.unavailable_short": "Ikke tilgængelig lige nu",
+ "start_recent.retry": "Prøv igen"
+}

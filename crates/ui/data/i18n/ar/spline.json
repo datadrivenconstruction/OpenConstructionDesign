@@ -1,0 +1,7 @@
+{
+ "spline.opt.spline": "منحنٍ",
+ "spline.opt.spline_tip": "جدار منحنٍ: انقر على النقاط التي يمرّ بها، وEnter أو Esc للإنهاء",
+ "spline.wt.three_points": "الجدار المنحني يحتاج إلى ثلاث نقاط أو أكثر",
+ "spline.wt.no_curtain": "الحائط الستائري لا يملك محور منحنٍ",
+ "spline.wt.added": "تمت إضافة الجدار المنحني"
+}

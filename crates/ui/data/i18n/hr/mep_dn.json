@@ -1,0 +1,5 @@
+{
+ "mep_dn.dn.unset": "Nije postavljeno",
+ "mep_dn.slope.err": "Unesite nagib u %, npr. 1.5",
+ "mep_dn.err.rejected": "vrijednost nije prihvaćena"
+}

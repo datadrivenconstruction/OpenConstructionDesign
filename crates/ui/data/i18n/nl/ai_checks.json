@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "gemeten {value}, grens {limit}",
+ "ai_checks.check.cap": "{shown} van {total} bevindingen worden getoond. Fouten staan eerst: los ze op en voer opnieuw uit.",
+ "ai_checks.check.run_again": "Opnieuw uitvoeren",
+ "ai_checks.check.goto": "Selecteren en inzoomen",
+ "ai_checks.check.never_title": "Nog niet gecontroleerd",
+ "ai_checks.check.never_hint": "Voer de controles uit en de bevindingen verschijnen hier.",
+ "ai_checks.check.sec.error": "Fouten",
+ "ai_checks.check.sec.warning": "Waarschuwingen",
+ "ai_checks.check.sec.info": "Opmerkingen"
+}

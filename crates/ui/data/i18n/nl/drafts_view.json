@@ -1,0 +1,9 @@
+{
+ "drafts.draft.view": "Weergave-instellingen van “{name}”",
+ "drafts.draft.filter": "Weergavefilter “{name}”",
+ "drafts.draft.filter_new": "Nieuw weergavefilter",
+ "drafts.draft.object_styles": "Objectstijlen",
+ "drafts.draft.material": "Materiaal “{name}”",
+ "drafts.draft.type": "Concepttype “{name}”",
+ "drafts.draft.params": "Parameters van familie “{name}”"
+}

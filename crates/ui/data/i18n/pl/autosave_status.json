@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "Autozapis nie powiódł się, najnowsze zmiany nie są zabezpieczone. {why}",
+ "autosave_status.autosave_open": "Ustawienia autozapisu",
+ "autosave_status.autosave_recovered": "Autozapis znów działa.",
+ "autosave_status.autosave_reason": "Powód: {why}"
+}

@@ -1,0 +1,3006 @@
+[
+ {
+  "id": "ai.home",
+  "icon": "spark",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M2",
+  "group": "ai",
+  "alias": "ai.ask",
+  "priority": 1
+ },
+ {
+  "id": "arch.wall",
+  "repeatable": true,
+  "icon": "wall",
+  "mnemonic": "WA",
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "build",
+  "size": "large",
+  "priority": 1,
+  "variants": [
+   "arch.wall_room",
+   "arch.curtain_wall"
+  ]
+ },
+ {
+  "id": "arch.wall_room",
+  "repeatable": true,
+  "icon": "wall-room",
+  "mnemonic": "WR",
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M3",
+  "group": "build"
+ },
+ {
+  "id": "arch.door",
+  "repeatable": true,
+  "icon": "door",
+  "mnemonic": "DO",
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "M",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "build",
+  "size": "large",
+  "priority": 1
+ },
+ {
+  "id": "arch.window",
+  "repeatable": true,
+  "icon": "window",
+  "mnemonic": "WN",
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "M",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "build",
+  "size": "large",
+  "priority": 1
+ },
+ {
+  "id": "arch.component",
+  "repeatable": true,
+  "icon": "component",
+  "mnemonic": "CM",
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M3",
+  "group": "build",
+  "size": "large",
+  "priority": 3
+ },
+ {
+  "id": "arch.column",
+  "repeatable": true,
+  "icon": "column",
+  "mnemonic": "CL",
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M3",
+  "group": "build",
+  "size": "large"
+ },
+ {
+  "id": "arch.roof",
+  "repeatable": true,
+  "icon": "roof",
+  "mnemonic": "RF",
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M3",
+  "group": "build",
+  "size": "large",
+  "variants": [
+   "arch.roof_gable",
+   "arch.roof_hip",
+   "arch.roof_shed",
+   "arch.roof_mansard",
+   "arch.roof_gambrel",
+   "arch.roof_barrel",
+   "arch.roof_extrusion"
+  ]
+ },
+ {
+  "id": "arch.ceiling",
+  "repeatable": true,
+  "icon": "ceiling",
+  "mnemonic": "CG",
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M3",
+  "group": "build",
+  "priority": 3
+ },
+ {
+  "id": "arch.floor",
+  "repeatable": true,
+  "icon": "floor",
+  "mnemonic": "FL",
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M3",
+  "group": "build",
+  "size": "large",
+  "priority": 1
+ },
+ {
+  "id": "arch.curtain_wall",
+  "repeatable": true,
+  "icon": "curtain",
+  "mnemonic": "CW",
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M3",
+  "group": "build"
+ },
+ {
+  "id": "arch.stair",
+  "repeatable": true,
+  "icon": "stair",
+  "mnemonic": "ST",
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "circ",
+  "size": "large"
+ },
+ {
+  "id": "arch.railing",
+  "repeatable": true,
+  "icon": "railing",
+  "mnemonic": "RL",
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "circ",
+  "priority": 4
+ },
+ {
+  "id": "arch.ramp",
+  "repeatable": true,
+  "icon": "ramp",
+  "mnemonic": "RA",
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "circ",
+  "priority": 4
+ },
+ {
+  "id": "arch.shaft",
+  "repeatable": true,
+  "icon": "shaft",
+  "mnemonic": "SH",
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M3",
+  "group": "opening",
+  "priority": 6
+ },
+ {
+  "id": "arch.opening",
+  "repeatable": true,
+  "icon": "opening",
+  "mnemonic": "OP",
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "opening",
+  "priority": 6,
+  "variants": [
+   "arch.roof_opening",
+   "arch.ceiling_opening"
+  ]
+ },
+ {
+  "id": "arch.room",
+  "repeatable": true,
+  "icon": "room",
+  "mnemonic": "RM",
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M3",
+  "group": "rooms",
+  "size": "large",
+  "priority": 1
+ },
+ {
+  "id": "arch.room_sep",
+  "repeatable": true,
+  "icon": "room-sep",
+  "mnemonic": "RS",
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M3",
+  "group": "rooms",
+  "priority": 3
+ },
+ {
+  "id": "arch.zone",
+  "repeatable": true,
+  "icon": "zone",
+  "mnemonic": "ZN",
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "rooms",
+  "priority": 4
+ },
+ {
+  "id": "arch.level",
+  "repeatable": true,
+  "icon": "level",
+  "mnemonic": "LL",
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "datum",
+  "priority": 3
+ },
+ {
+  "id": "arch.grid",
+  "repeatable": true,
+  "icon": "grid",
+  "mnemonic": "GR",
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "datum",
+  "priority": 3
+ },
+ {
+  "id": "arch.refplane",
+  "repeatable": true,
+  "icon": "ref-plane",
+  "mnemonic": "RP",
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "datum"
+ },
+ {
+  "id": "str.beam",
+  "repeatable": true,
+  "icon": "beam",
+  "mnemonic": "BM",
+  "shortcuts": [],
+  "tab": "struct",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M3",
+  "group": "struct",
+  "size": "large",
+  "priority": 1
+ },
+ {
+  "id": "str.column",
+  "repeatable": true,
+  "icon": "column-str",
+  "mnemonic": "SC",
+  "shortcuts": [],
+  "tab": "struct",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M3",
+  "group": "struct",
+  "size": "large",
+  "priority": 1
+ },
+ {
+  "id": "str.wall",
+  "repeatable": true,
+  "icon": "wall-bearing",
+  "mnemonic": "SW",
+  "shortcuts": [],
+  "tab": "struct",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M3",
+  "group": "struct",
+  "size": "large"
+ },
+ {
+  "id": "str.slab",
+  "repeatable": true,
+  "icon": "slab",
+  "mnemonic": "SB",
+  "shortcuts": [],
+  "tab": "struct",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M3",
+  "group": "struct",
+  "size": "large",
+  "priority": 1,
+  "variants": [
+   "str.slab_edge",
+   "str.slab_opening"
+  ]
+ },
+ {
+  "id": "str.footing",
+  "repeatable": true,
+  "icon": "footing",
+  "mnemonic": "FT",
+  "shortcuts": [],
+  "tab": "struct",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "found",
+  "priority": 3,
+  "variants": [
+   "str.footing_all"
+  ]
+ },
+ {
+  "id": "str.beam_system",
+  "repeatable": true,
+  "icon": "beam-grid",
+  "mnemonic": "BS",
+  "shortcuts": [],
+  "tab": "struct",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "struct",
+  "priority": 4
+ },
+ {
+  "id": "str.brace",
+  "repeatable": true,
+  "icon": "brace",
+  "mnemonic": "BR",
+  "shortcuts": [],
+  "tab": "struct",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "struct",
+  "priority": 4
+ },
+ {
+  "id": "str.grid",
+  "repeatable": true,
+  "icon": "grid",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "struct",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "grids",
+  "alias": "arch.grid",
+  "priority": 3
+ },
+ {
+  "id": "str.at_grids",
+  "repeatable": true,
+  "icon": "at-grids",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "struct",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "grids"
+ },
+ {
+  "id": "str.strip_footing",
+  "repeatable": true,
+  "icon": "footing-strip",
+  "mnemonic": "SF",
+  "shortcuts": [],
+  "tab": "struct",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "found",
+  "priority": 4
+ },
+ {
+  "id": "str.raft",
+  "repeatable": true,
+  "icon": "raft",
+  "mnemonic": "FR",
+  "shortcuts": [],
+  "tab": "struct",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "found",
+  "priority": 4
+ },
+ {
+  "id": "str.rebar",
+  "repeatable": true,
+  "icon": "rebar",
+  "mnemonic": "RB",
+  "shortcuts": [],
+  "tab": "struct",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "rebar",
+  "size": "large"
+ },
+ {
+  "id": "str.analytical",
+  "repeatable": true,
+  "icon": "analytical",
+  "mnemonic": "AN",
+  "shortcuts": [],
+  "tab": "struct",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "rebar",
+  "variants": [
+   "str.analytical_export"
+  ]
+ },
+ {
+  "id": "str.level",
+  "repeatable": true,
+  "icon": "level",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "struct",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "datum",
+  "alias": "arch.level",
+  "priority": 3
+ },
+ {
+  "id": "str.refplane",
+  "repeatable": true,
+  "icon": "ref-plane",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "struct",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "datum",
+  "alias": "arch.refplane"
+ },
+ {
+  "id": "mep.duct",
+  "repeatable": true,
+  "icon": "duct",
+  "mnemonic": "DT",
+  "shortcuts": [],
+  "tab": "systems",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "Mx",
+  "group": "hvac",
+  "size": "large",
+  "priority": 1
+ },
+ {
+  "id": "mep.fitting",
+  "repeatable": true,
+  "icon": "fitting",
+  "mnemonic": "FI",
+  "shortcuts": [],
+  "tab": "systems",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "Mx",
+  "group": "hvac",
+  "priority": 3
+ },
+ {
+  "id": "mep.equipment",
+  "repeatable": true,
+  "icon": "equipment",
+  "mnemonic": "ME",
+  "shortcuts": [],
+  "tab": "systems",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "hvac",
+  "priority": 3
+ },
+ {
+  "id": "mep.terminal",
+  "repeatable": true,
+  "icon": "air-terminal",
+  "mnemonic": "AT",
+  "shortcuts": [],
+  "tab": "systems",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "hvac",
+  "priority": 3
+ },
+ {
+  "id": "mep.pipe",
+  "repeatable": true,
+  "icon": "pipe",
+  "mnemonic": "PI",
+  "shortcuts": [],
+  "tab": "systems",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "Mx",
+  "group": "plumb",
+  "size": "large",
+  "priority": 1
+ },
+ {
+  "id": "mep.fixture",
+  "repeatable": true,
+  "icon": "fixture",
+  "mnemonic": "PF",
+  "shortcuts": [],
+  "tab": "systems",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "plumb",
+  "priority": 3
+ },
+ {
+  "id": "mep.tray",
+  "repeatable": true,
+  "icon": "tray",
+  "mnemonic": "CT",
+  "shortcuts": [],
+  "tab": "systems",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "elec",
+  "priority": 3
+ },
+ {
+  "id": "mep.device",
+  "repeatable": true,
+  "icon": "device",
+  "mnemonic": "ED",
+  "shortcuts": [],
+  "tab": "systems",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "elec",
+  "priority": 3
+ },
+ {
+  "id": "mep.light",
+  "repeatable": true,
+  "icon": "light",
+  "mnemonic": "LF",
+  "shortcuts": [],
+  "tab": "systems",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "elec",
+  "size": "large"
+ },
+ {
+  "id": "mep.conduit",
+  "repeatable": true,
+  "icon": "conduit",
+  "mnemonic": "CU",
+  "shortcuts": [],
+  "tab": "systems",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "elec",
+  "priority": 3
+ },
+ {
+  "id": "mep.connect",
+  "repeatable": true,
+  "icon": "connect",
+  "mnemonic": "CN",
+  "shortcuts": [],
+  "tab": "systems",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "systems",
+  "priority": 4,
+  "variants": [
+   "mep.disconnect"
+  ]
+ },
+ {
+  "id": "mep.system",
+  "icon": "system",
+  "mnemonic": "SY",
+  "shortcuts": [],
+  "tab": "systems",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "Mx",
+  "group": "systems",
+  "priority": 4
+ },
+ {
+  "id": "mep.check_system",
+  "icon": "system",
+  "mnemonic": "CS",
+  "shortcuts": [],
+  "tab": "systems",
+  "surfaces": [],
+  "stage": "Mx",
+  "group": "systems",
+  "priority": 4,
+  "alias": "mep.system"
+ },
+ {
+  "id": "mep.route",
+  "repeatable": true,
+  "icon": "route",
+  "mnemonic": "RU",
+  "shortcuts": [],
+  "tab": "systems",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "Mx",
+  "group": "systems",
+  "priority": 4
+ },
+ {
+  "id": "ann.dim",
+  "repeatable": true,
+  "icon": "dimension",
+  "mnemonic": "DI",
+  "shortcuts": [],
+  "tab": "annotate",
+  "surfaces": [
+   "R",
+   "M",
+   "C"
+  ],
+  "stage": "M5",
+  "group": "dims",
+  "size": "large",
+  "priority": 1,
+  "variants": [
+   "ann.dim_chain",
+   "ann.dim_angular",
+   "ann.dim_radial"
+  ]
+ },
+ {
+  "id": "ann.dim_angular",
+  "repeatable": true,
+  "icon": "dim-angular",
+  "mnemonic": "DA",
+  "shortcuts": [],
+  "tab": "annotate",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "dims"
+ },
+ {
+  "id": "ann.dim_radial",
+  "repeatable": true,
+  "icon": "dim-radial",
+  "mnemonic": "DR",
+  "shortcuts": [],
+  "tab": "annotate",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "dims"
+ },
+ {
+  "id": "ann.spot_elev",
+  "repeatable": true,
+  "icon": "spot-elev",
+  "mnemonic": "SE",
+  "shortcuts": [],
+  "tab": "annotate",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M5",
+  "group": "dims",
+  "priority": 3,
+  "variants": [
+   "ann.spot_coord"
+  ]
+ },
+ {
+  "id": "ann.dim_auto",
+  "repeatable": true,
+  "icon": "dim-auto",
+  "mnemonic": "AD",
+  "shortcuts": [],
+  "tab": "annotate",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M5",
+  "group": "dims",
+  "priority": 3
+ },
+ {
+  "id": "ann.text",
+  "repeatable": true,
+  "icon": "text",
+  "mnemonic": "TX",
+  "shortcuts": [],
+  "tab": "annotate",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M5",
+  "group": "text",
+  "size": "large",
+  "priority": 1
+ },
+ {
+  "id": "ann.tag",
+  "repeatable": true,
+  "icon": "tag",
+  "mnemonic": "TG",
+  "shortcuts": [],
+  "tab": "annotate",
+  "surfaces": [
+   "R",
+   "M",
+   "C"
+  ],
+  "stage": "M5",
+  "group": "text",
+  "size": "large",
+  "variants": [
+   "ann.tag_all"
+  ]
+ },
+ {
+  "id": "ann.tag_all",
+  "dialog": true,
+  "once": true,
+  "icon": "tag-all",
+  "mnemonic": "TA",
+  "shortcuts": [],
+  "tab": "annotate",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M5",
+  "group": "text"
+ },
+ {
+  "id": "ann.leader",
+  "repeatable": true,
+  "icon": "leader",
+  "mnemonic": "LD",
+  "shortcuts": [],
+  "tab": "annotate",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M5",
+  "group": "text",
+  "priority": 3
+ },
+ {
+  "id": "ann.detail",
+  "repeatable": true,
+  "icon": "detail-comp",
+  "mnemonic": "DC",
+  "shortcuts": [],
+  "tab": "annotate",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "symbols",
+  "priority": 4
+ },
+ {
+  "id": "ann.region",
+  "repeatable": true,
+  "icon": "region",
+  "mnemonic": "FG",
+  "shortcuts": [],
+  "tab": "annotate",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M5",
+  "group": "symbols",
+  "priority": 4
+ },
+ {
+  "id": "ann.detail_line",
+  "repeatable": true,
+  "icon": "detail-line",
+  "mnemonic": "DL",
+  "shortcuts": [],
+  "tab": "annotate",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M5",
+  "group": "symbols",
+  "priority": 4
+ },
+ {
+  "id": "ann.cloud",
+  "repeatable": true,
+  "icon": "cloud",
+  "mnemonic": "RC",
+  "shortcuts": [],
+  "tab": "annotate",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M5",
+  "group": "symbols"
+ },
+ {
+  "id": "ann.legend",
+  "icon": "legend",
+  "mnemonic": "LG",
+  "shortcuts": [],
+  "tab": "annotate",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "symbols"
+ },
+ {
+  "id": "mod.paste",
+  "icon": "paste",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "clip",
+  "alias": "edit.paste",
+  "context": [
+   "*"
+  ],
+  "size": "large",
+  "variants": [
+   "edit.paste_levels"
+  ]
+ },
+ {
+  "id": "mod.cut",
+  "icon": "cut",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "clip",
+  "alias": "edit.cut",
+  "context": [
+   "*"
+  ],
+  "size": "small",
+  "priority": 4
+ },
+ {
+  "id": "mod.copy_clip",
+  "icon": "clip-copy",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "clip",
+  "alias": "edit.copy",
+  "context": [
+   "*"
+  ],
+  "size": "small",
+  "priority": 4
+ },
+ {
+  "id": "mod.match",
+  "repeatable": true,
+  "icon": "eyedropper",
+  "mnemonic": "MA",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M1",
+  "group": "clip",
+  "context": [
+   "*"
+  ],
+  "priority": 5
+ },
+ {
+  "id": "mod.join",
+  "repeatable": true,
+  "icon": "join",
+  "mnemonic": "JN",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M1",
+  "group": "geometry",
+  "context": [
+   "*"
+  ],
+  "priority": 4,
+  "variants": [
+   "mod.unjoin",
+   "mod.switch_join"
+  ]
+ },
+ {
+  "id": "mod.cut_geom",
+  "repeatable": true,
+  "icon": "cut-geom",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "alias": "mass.cut",
+  "group": "geometry",
+  "context": [
+   "*"
+  ]
+ },
+ {
+  "id": "mod.align",
+  "repeatable": true,
+  "icon": "align",
+  "mnemonic": "AL",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "modify",
+  "context": [
+   "*"
+  ],
+  "priority": 2
+ },
+ {
+  "id": "mod.offset",
+  "repeatable": true,
+  "icon": "offset",
+  "mnemonic": "OF",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "modify",
+  "context": [
+   "*"
+  ],
+  "priority": 3
+ },
+ {
+  "id": "mod.mirror",
+  "repeatable": true,
+  "icon": "mirror",
+  "mnemonic": "MM",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M1",
+  "group": "modify",
+  "context": [
+   "*"
+  ],
+  "size": "large",
+  "variants": [
+   "mod.mirror_draw"
+  ]
+ },
+ {
+  "id": "mod.mirror_draw",
+  "repeatable": true,
+  "icon": "mirror-draw",
+  "mnemonic": "DM",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "modify",
+  "context": [
+   "*"
+  ]
+ },
+ {
+  "id": "mod.move",
+  "repeatable": true,
+  "icon": "move",
+  "mnemonic": "MV",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R",
+   "M",
+   "C"
+  ],
+  "stage": "M1",
+  "group": "modify",
+  "context": [
+   "*"
+  ],
+  "size": "large",
+  "priority": 1
+ },
+ {
+  "id": "mod.copy",
+  "repeatable": true,
+  "icon": "copy",
+  "mnemonic": "CO",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R",
+   "M",
+   "C"
+  ],
+  "stage": "M1",
+  "group": "modify",
+  "context": [
+   "*"
+  ],
+  "size": "large",
+  "priority": 1
+ },
+ {
+  "id": "mod.rotate",
+  "repeatable": true,
+  "icon": "rotate",
+  "mnemonic": "RO",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R",
+   "M",
+   "C"
+  ],
+  "stage": "M1",
+  "group": "modify",
+  "context": [
+   "*"
+  ],
+  "size": "large",
+  "priority": 1
+ },
+ {
+  "id": "mod.trim",
+  "repeatable": true,
+  "icon": "trim-extend",
+  "mnemonic": "TR",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "modify",
+  "context": [
+   "*"
+  ],
+  "priority": 2
+ },
+ {
+  "id": "mod.extend",
+  "repeatable": true,
+  "icon": "extend",
+  "mnemonic": "EX",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "modify",
+  "context": [
+   "*"
+  ],
+  "priority": 3
+ },
+ {
+  "id": "mod.split",
+  "repeatable": true,
+  "icon": "split",
+  "mnemonic": "SL",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "modify",
+  "context": [
+   "*"
+  ],
+  "priority": 3
+ },
+ {
+  "id": "mod.array",
+  "repeatable": true,
+  "icon": "array",
+  "mnemonic": "AR",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M3",
+  "group": "modify",
+  "context": [
+   "*"
+  ],
+  "priority": 3
+ },
+ {
+  "id": "mod.pin",
+  "icon": "pin",
+  "mnemonic": "PN",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M1",
+  "group": "modify",
+  "context": [
+   "*"
+  ],
+  "priority": 5,
+  "variants": [
+   "mod.unpin"
+  ]
+ },
+ {
+  "id": "mod.unpin",
+  "icon": "unpin",
+  "mnemonic": "UP",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "modify",
+  "context": [
+   "*"
+  ]
+ },
+ {
+  "id": "mod.delete",
+  "once": true,
+  "icon": "delete",
+  "mnemonic": "DE",
+  "shortcuts": [
+   "Del"
+  ],
+  "tab": "modify",
+  "surfaces": [
+   "R",
+   "M",
+   "C"
+  ],
+  "stage": "M1",
+  "group": "modify",
+  "context": [
+   "*"
+  ],
+  "priority": 3
+ },
+ {
+  "id": "mod.group",
+  "dialog": true,
+  "icon": "group",
+  "mnemonic": "GP",
+  "shortcuts": [
+   "Ctrl+G"
+  ],
+  "tab": "modify",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "modify",
+  "priority": 4,
+  "variants": [
+   "mod.group_select",
+   "mod.group_edit",
+   "mod.group_add",
+   "mod.group_remove",
+   "mod.group_place",
+   "mod.group_finish",
+   "mod.group_cancel",
+   "mod.group_delete"
+  ]
+ },
+ {
+  "id": "mod.hide",
+  "icon": "hide",
+  "mnemonic": "HH",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "C",
+   "M",
+   "R"
+  ],
+  "stage": "M1",
+  "group": "visib",
+  "context": [
+   "*"
+  ],
+  "priority": 3,
+  "variants": [
+   "view.hide_cat_3d"
+  ]
+ },
+ {
+  "id": "mod.isolate",
+  "icon": "isolate",
+  "mnemonic": "HI",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "C",
+   "M",
+   "R"
+  ],
+  "stage": "M1",
+  "group": "visib",
+  "context": [
+   "*"
+  ],
+  "priority": 3,
+  "variants": [
+   "view.isolate_cat_3d"
+  ]
+ },
+ {
+  "id": "mod.reveal",
+  "icon": "reveal",
+  "mnemonic": "HR",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "visib",
+  "context": [
+   "*"
+  ],
+  "priority": 3,
+  "variants": [
+   "view.reveal_3d"
+  ]
+ },
+ {
+  "id": "mod.measure",
+  "repeatable": true,
+  "icon": "measure",
+  "mnemonic": "MS",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "alias": "e3d.measure",
+  "group": "measure",
+  "context": [
+   "*"
+  ],
+  "size": "large",
+  "priority": 3
+ },
+ {
+  "id": "view.filters",
+  "icon": "layers",
+  "mnemonic": "VV",
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R",
+   "D"
+  ],
+  "stage": "M1",
+  "group": "graphics",
+  "priority": 4
+ },
+ {
+  "id": "view.template",
+  "icon": "template",
+  "mnemonic": "VT",
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R",
+   "D"
+  ],
+  "stage": "M5",
+  "group": "graphics",
+  "priority": 4
+ },
+ {
+  "id": "view.detail_level",
+  "icon": "detail-level",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "graphics",
+  "priority": 3
+ },
+ {
+  "id": "view.style",
+  "icon": "shading",
+  "mnemonic": "VS",
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "graphics",
+  "priority": 3,
+  "variants": [
+   "view.style_shaded",
+   "view.style_shaded_plain",
+   "view.style_consistent",
+   "view.style_realistic",
+   "view.style_hidden",
+   "view.style_wireframe",
+   "view.style_xray"
+  ]
+ },
+ {
+  "id": "view.thin_lines",
+  "icon": "thin-lines",
+  "mnemonic": "TL",
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "graphics",
+  "priority": 4
+ },
+ {
+  "id": "view.3d",
+  "icon": "3d-view",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+3"
+  ],
+  "tab": "view",
+  "surfaces": [
+   "R",
+   "A"
+  ],
+  "stage": "M1",
+  "group": "create",
+  "size": "large",
+  "priority": 1,
+  "variants": [
+   "view.level_3d",
+   "view.save_3d"
+  ]
+ },
+ {
+  "id": "view.section",
+  "icon": "section",
+  "mnemonic": "SN",
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M5",
+  "group": "create",
+  "size": "large"
+ },
+ {
+  "id": "view.plan",
+  "icon": "plan-view",
+  "mnemonic": "PL",
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R",
+   "D"
+  ],
+  "stage": "M1",
+  "group": "create",
+  "size": "large",
+  "priority": 1
+ },
+ {
+  "id": "view.schedule",
+  "icon": "table",
+  "mnemonic": "TB",
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R",
+   "D"
+  ],
+  "stage": "M2",
+  "group": "create",
+  "priority": 3
+ },
+ {
+  "id": "view.elevation",
+  "icon": "elevation",
+  "mnemonic": "EV",
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M5",
+  "group": "create",
+  "priority": 3
+ },
+ {
+  "id": "view.tabs",
+  "icon": "tabs",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "windows"
+ },
+ {
+  "id": "view.tile",
+  "icon": "tile",
+  "mnemonic": "WT",
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "windows"
+ },
+ {
+  "id": "view.ui",
+  "icon": "layout-settings",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "windows",
+  "alias": "ui.layout.settings",
+  "priority": 6
+ },
+ {
+  "id": "view.zoom_fit",
+  "icon": "zoom-fit",
+  "mnemonic": "ZF",
+  "shortcuts": [
+   "Ctrl+0"
+  ],
+  "tab": "view",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "nav",
+  "priority": 3
+ },
+ {
+  "id": "view.level_up",
+  "icon": "level-up",
+  "mnemonic": "LU",
+  "shortcuts": [
+   "Ctrl+PageUp"
+  ],
+  "tab": "view",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "nav",
+  "priority": 4
+ },
+ {
+  "id": "view.level_down",
+  "icon": "level-down",
+  "mnemonic": "LN",
+  "shortcuts": [
+   "Ctrl+PageDown"
+  ],
+  "tab": "view",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "nav",
+  "priority": 4
+ },
+ {
+  "id": "view.underlay",
+  "icon": "underlay",
+  "mnemonic": "UL",
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "nav",
+  "priority": 4
+ },
+ {
+  "id": "view.section_box",
+  "icon": "section-box",
+  "mnemonic": "BX",
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "C",
+   "M",
+   "R"
+  ],
+  "stage": "M1",
+  "group": "nav",
+  "priority": 4
+ },
+ {
+  "id": "view.diff",
+  "icon": "diff",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [],
+  "stage": "M4",
+  "alias": "data.compare_version",
+  "group": "nav"
+ },
+ {
+  "id": "view.sheet",
+  "dialog": true,
+  "icon": "sheet",
+  "mnemonic": "SS",
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R",
+   "D"
+  ],
+  "stage": "M5",
+  "group": "sheets",
+  "size": "large"
+ },
+ {
+  "id": "view.place",
+  "dialog": true,
+  "icon": "place-view",
+  "mnemonic": "PV",
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R",
+   "D"
+  ],
+  "stage": "M5",
+  "group": "sheets",
+  "priority": 3,
+  "variants": [
+   "view.place_sheet_list",
+   "view.place_legend"
+  ]
+ },
+ {
+  "id": "mgr.units",
+  "icon": "units",
+  "mnemonic": "UN",
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "settings",
+  "priority": 4
+ },
+ {
+  "id": "mgr.snaps",
+  "icon": "snaps",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "alias": "view.snap_toggle",
+  "group": "settings",
+  "priority": 4
+ },
+ {
+  "id": "mgr.materials",
+  "icon": "material",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "settings",
+  "priority": 4
+ },
+ {
+  "id": "mgr.object_styles",
+  "icon": "object-styles",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "settings",
+  "priority": 4
+ },
+ {
+  "id": "mgr.keymap",
+  "icon": "keyboard",
+  "mnemonic": "KS",
+  "shortcuts": [
+   "Ctrl+Alt+K"
+  ],
+  "tab": "manage",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "settings",
+  "priority": 6
+ },
+ {
+  "id": "mgr.project_info",
+  "icon": "project-info",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "project",
+  "priority": 4
+ },
+ {
+  "id": "mgr.phases",
+  "icon": "phases",
+  "mnemonic": "PH",
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "project"
+ },
+ {
+  "id": "mgr.level",
+  "dialog": true,
+  "icon": "level",
+  "mnemonic": "LV",
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R",
+   "D"
+  ],
+  "stage": "M1",
+  "group": "project",
+  "priority": 5
+ },
+ {
+  "id": "mgr.grid",
+  "icon": "grid-edit",
+  "mnemonic": "GD",
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "project",
+  "priority": 5
+ },
+ {
+  "id": "mgr.coords",
+  "icon": "project-info",
+  "mnemonic": "GC",
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [],
+  "stage": "M3",
+  "group": "project",
+  "priority": 5,
+  "alias": "mgr.project_info"
+ },
+ {
+  "id": "mgr.library",
+  "icon": "library",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "components",
+  "size": "large"
+ },
+ {
+  "id": "mgr.load",
+  "icon": "library",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [],
+  "stage": "Mx",
+  "group": "components",
+  "priority": 3,
+  "alias": "mgr.library"
+ },
+ {
+  "id": "mgr.types",
+  "icon": "types",
+  "mnemonic": "TY",
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R",
+   "D"
+  ],
+  "stage": "M2",
+  "group": "components",
+  "priority": 3
+ },
+ {
+  "id": "mgr.params",
+  "icon": "params",
+  "mnemonic": "PA",
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M2",
+  "group": "components",
+  "priority": 4
+ },
+ {
+  "id": "mgr.purge",
+  "dialog": true,
+  "once": true,
+  "icon": "purge",
+  "mnemonic": "PU",
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M2",
+  "group": "components",
+  "priority": 6
+ },
+ {
+  "id": "mgr.autosave",
+  "icon": "autosave",
+  "mnemonic": "AU",
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "file"
+ },
+ {
+  "id": "mgr.warnings",
+  "icon": "warning",
+  "mnemonic": "WW",
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "file",
+  "alias": "view.warnings",
+  "priority": 4
+ },
+ {
+  "id": "mgr.links",
+  "icon": "links",
+  "mnemonic": "LK",
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R",
+   "D"
+  ],
+  "stage": "M3",
+  "group": "model",
+  "size": "large",
+  "priority": 3
+ },
+ {
+  "id": "mgr.import_cad",
+  "dialog": true,
+  "icon": "import-cad",
+  "mnemonic": "IC",
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "model",
+  "priority": 3,
+  "variants": [
+   "mgr.import_pdf"
+  ]
+ },
+ {
+  "id": "mgr.import_pdf",
+  "dialog": true,
+  "icon": "import-pdf",
+  "mnemonic": "IP",
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M3",
+  "group": "model"
+ },
+ {
+  "id": "mgr.workplane",
+  "icon": "workplane",
+  "mnemonic": "WP",
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M1",
+  "group": "model",
+  "priority": 6
+ },
+ {
+  "id": "mgr.scripts",
+  "icon": "script",
+  "mnemonic": "SR",
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M6",
+  "group": "tools"
+ },
+ {
+  "id": "mgr.record",
+  "icon": "record",
+  "mnemonic": "RE",
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M6",
+  "group": "tools"
+ },
+ {
+  "id": "data.export_xlsx",
+  "dialog": true,
+  "icon": "xlsx-out",
+  "mnemonic": "XE",
+  "shortcuts": [
+   "Ctrl+E"
+  ],
+  "tab": "data",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M2",
+  "group": "exchange",
+  "size": "large",
+  "priority": 1
+ },
+ {
+  "id": "data.import_xlsx",
+  "dialog": true,
+  "icon": "xlsx-in",
+  "mnemonic": "XI",
+  "shortcuts": [],
+  "tab": "data",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M2",
+  "group": "exchange",
+  "size": "large",
+  "priority": 1
+ },
+ {
+  "id": "data.export_ifc",
+  "dialog": true,
+  "icon": "ifc-out",
+  "mnemonic": "IF",
+  "shortcuts": [],
+  "tab": "data",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "exchange",
+  "size": "large"
+ },
+ {
+  "id": "data.export_ifc4",
+  "dialog": true,
+  "icon": "ifc-out-4",
+  "mnemonic": "IV",
+  "shortcuts": [],
+  "tab": "data",
+  "surfaces": [
+   "C"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "data.export_ifc4x3",
+  "dialog": true,
+  "icon": "ifc-out-4x3",
+  "mnemonic": "IX",
+  "shortcuts": [],
+  "tab": "data",
+  "surfaces": [
+   "C"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "data.export_ifc2x3",
+  "dialog": true,
+  "icon": "ifc-out-2x3",
+  "mnemonic": "IT",
+  "shortcuts": [],
+  "tab": "data",
+  "surfaces": [
+   "C"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "data.export_pdf",
+  "dialog": true,
+  "icon": "pdf-out",
+  "mnemonic": "XP",
+  "shortcuts": [],
+  "tab": "data",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M5",
+  "group": "exchange",
+  "priority": 3
+ },
+ {
+  "id": "data.export_gltf",
+  "dialog": true,
+  "icon": "gltf-out",
+  "mnemonic": "XG",
+  "shortcuts": [],
+  "tab": "data",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M2",
+  "group": "exchange",
+  "priority": 3
+ },
+ {
+  "id": "data.export_stl",
+  "dialog": true,
+  "icon": "gltf-out",
+  "mnemonic": "XL",
+  "shortcuts": [],
+  "tab": "data",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M2",
+  "group": "exchange",
+  "priority": 3
+ },
+ {
+  "id": "data.export_obj",
+  "dialog": true,
+  "icon": "gltf-out",
+  "mnemonic": "XO",
+  "shortcuts": [],
+  "tab": "data",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M2",
+  "group": "exchange",
+  "priority": 3
+ },
+ {
+  "id": "data.export_step",
+  "dialog": true,
+  "icon": "gltf-out",
+  "mnemonic": "XT",
+  "shortcuts": [],
+  "tab": "data",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M2",
+  "group": "exchange",
+  "priority": 3
+ },
+ {
+  "id": "data.export_3mf",
+  "dialog": true,
+  "icon": "gltf-out",
+  "mnemonic": "XM",
+  "shortcuts": [],
+  "tab": "data",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M2",
+  "group": "exchange",
+  "priority": 3
+ },
+ {
+  "id": "data.table",
+  "icon": "table-open",
+  "mnemonic": "TD",
+  "shortcuts": [],
+  "tab": "data",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M2",
+  "group": "check",
+  "size": "large"
+ },
+ {
+  "id": "data.compare",
+  "icon": "diff",
+  "mnemonic": "DF",
+  "shortcuts": [],
+  "tab": "data",
+  "surfaces": [],
+  "stage": "M4",
+  "group": "check",
+  "alias": "data.compare_version",
+  "priority": 3
+ },
+ {
+  "id": "data.check",
+  "icon": "check",
+  "mnemonic": "CK",
+  "shortcuts": [],
+  "tab": "data",
+  "surfaces": [
+   "R",
+   "I"
+  ],
+  "stage": "M2",
+  "group": "check",
+  "priority": 3
+ },
+ {
+  "id": "data.clash",
+  "icon": "clash",
+  "mnemonic": "CH",
+  "shortcuts": [],
+  "tab": "data",
+  "surfaces": [
+   "R",
+   "I"
+  ],
+  "stage": "Mx",
+  "group": "check",
+  "priority": 3,
+  "variants": [
+   "data.clash_report"
+  ]
+ },
+ {
+  "id": "data.query",
+  "icon": "query",
+  "mnemonic": "QY",
+  "shortcuts": [],
+  "tab": "data",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M2",
+  "group": "check",
+  "priority": 4
+ },
+ {
+  "id": "data.classify",
+  "icon": "classify",
+  "mnemonic": "CF",
+  "shortcuts": [],
+  "tab": "data",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M2",
+  "group": "check",
+  "priority": 4
+ },
+ {
+  "id": "ai.ask",
+  "icon": "spark",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+J"
+  ],
+  "tab": "data",
+  "surfaces": [
+   "J",
+   "P"
+  ],
+  "stage": "M2",
+  "group": "ai"
+ },
+ {
+  "id": "ai.explain",
+  "icon": "spark-why",
+  "mnemonic": "AE",
+  "shortcuts": [],
+  "tab": "data",
+  "surfaces": [
+   "C",
+   "J",
+   "R"
+  ],
+  "stage": "M2",
+  "group": "ai",
+  "priority": 3
+ },
+ {
+  "id": "ctx.wall.profile",
+  "icon": "wall-profile",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "profile",
+  "context": [
+   "wall"
+  ]
+ },
+ {
+  "id": "ctx.wall.attach",
+  "icon": "wall-attach",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "profile",
+  "context": [
+   "wall"
+  ]
+ },
+ {
+  "id": "ctx.mep.fitting",
+  "icon": "fitting",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "mepedit",
+  "context": [
+   "duct",
+   "pipe"
+  ]
+ },
+ {
+  "id": "arch.section",
+  "repeatable": true,
+  "icon": "section",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "M"
+  ],
+  "stage": "M5"
+ },
+ {
+  "id": "mod.change_type",
+  "dialog": true,
+  "icon": "swap-type",
+  "mnemonic": "CY",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "C",
+   "M"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "mod.select_similar",
+  "icon": "select-similar",
+  "mnemonic": "SA",
+  "shortcuts": [
+   "Ctrl+Shift+A"
+  ],
+  "tab": "modify",
+  "surfaces": [
+   "C",
+   "M"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "mod.select_filter",
+  "icon": "filter",
+  "mnemonic": "SX",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "C",
+   "H"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "mod.ungroup",
+  "icon": "ungroup",
+  "mnemonic": "UG",
+  "shortcuts": [
+   "Ctrl+Shift+G"
+  ],
+  "tab": "modify",
+  "surfaces": [
+   "C"
+  ],
+  "stage": "M3"
+ },
+ {
+  "id": "mod.explain",
+  "icon": "why",
+  "mnemonic": "WY",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "C",
+   "E"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "view.warnings",
+  "icon": "warning",
+  "mnemonic": "WG",
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "C",
+   "M"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "view.zoom_sel",
+  "icon": "zoom-sel",
+  "mnemonic": "ZS",
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "C"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "view.hide_cat",
+  "icon": "hide-cat",
+  "mnemonic": "HC",
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "C"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "view.sync_sel",
+  "icon": "link",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "H"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "view.maximize",
+  "icon": "maximize",
+  "mnemonic": null,
+  "shortcuts": [
+   "F11"
+  ],
+  "tab": "view",
+  "surfaces": [
+   "F"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "mgr.level_rename",
+  "dialog": true,
+  "icon": "level-edit",
+  "mnemonic": "LR",
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "D"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "mgr.level_delete",
+  "once": true,
+  "icon": "level-delete",
+  "mnemonic": "LX",
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "D"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "mgr.settings",
+  "icon": "settings",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+,"
+  ],
+  "tab": "manage",
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "ai.fix",
+  "icon": "spark-fix",
+  "mnemonic": "AF",
+  "shortcuts": [],
+  "tab": "data",
+  "surfaces": [
+   "I",
+   "J"
+  ],
+  "stage": "M2"
+ },
+ {
+  "id": "app.palette",
+  "icon": "palette",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+K",
+   "Ctrl+Shift+P"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "app.where_is",
+  "dialog": true,
+  "icon": "where-is",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+Shift+K"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "file.new",
+  "icon": "file-new",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+N"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "file.open",
+  "dialog": true,
+  "icon": "open",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+O"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "file.save",
+  "icon": "save",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+S"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "file.save_as",
+  "dialog": true,
+  "icon": "save-as",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+Shift+S"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "edit.undo",
+  "icon": "undo",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+Z"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "edit.redo",
+  "icon": "redo",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+Y",
+   "Ctrl+Shift+Z"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "edit.cut",
+  "icon": "cut",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+X"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "edit.copy",
+  "icon": "clip-copy",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+C"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "edit.paste",
+  "icon": "paste",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+V"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "edit.paste_aligned",
+  "icon": "paste-aligned",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+Shift+V"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "edit.select_all",
+  "once": true,
+  "icon": "select-all",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+A"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "app.find",
+  "icon": "find",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+F"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "view.goto",
+  "icon": "goto",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "view.close",
+  "icon": "close-tab",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "view.next",
+  "icon": "next-tab",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "view.plan_here",
+  "icon": "plan-here",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+1"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "view.section_here",
+  "icon": "section-here",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "app.history",
+  "icon": "history",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+Shift+H"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "panel.browser",
+  "icon": "browser",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1",
+  "alias": "ui.panel.browser"
+ },
+ {
+  "id": "panel.properties",
+  "icon": "properties",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+Alt+P"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1",
+  "alias": "ui.panel.props"
+ },
+ {
+  "id": "panel.issues",
+  "icon": "issues",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+Alt+I"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.layout.set.1",
+  "icon": "layout-ribbon",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+Alt+1"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.layout.set.2",
+  "icon": "layout-context",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+Alt+2"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.layout.set.3",
+  "icon": "layout-split",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+Alt+3"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.layout.set.4",
+  "icon": "layout-focus",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+Alt+4"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.layout.set.5",
+  "icon": "layout-table",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+Alt+5"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.layout.next",
+  "icon": "layout-next",
+  "mnemonic": null,
+  "shortcuts": [
+   "F4",
+   "Ctrl+Alt+L"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.layout.prev",
+  "icon": "layout-prev",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+Alt+Shift+L"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.layout.settings",
+  "icon": "layout-settings",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "app.help",
+  "icon": "help",
+  "mnemonic": null,
+  "shortcuts": [
+   "F1"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "app.repeat",
+  "icon": "repeat",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ }
+]

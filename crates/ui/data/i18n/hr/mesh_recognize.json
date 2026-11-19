@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "Prepoznajem {done} od {total}",
+ "mesh_recognize.all": "Svih {n}",
+ "mesh_recognize.only_confident": "Samo pouzdane",
+ "mesh_recognize.confident_tip": "Označava retke čija vrsta odgovara kategoriji i čija je pouzdanost najmanje {pct} %",
+ "mesh_recognize.row_hint": "Kliknite redak za označavanje. Strelice pomiču, Enter označava.",
+ "mesh_recognize.kind_for": "Vrsta za {name}",
+ "mesh_recognize.source": "Izvorne mreže",
+ "mesh_recognize.keep": "Zadrži mreže",
+ "mesh_recognize.replace": "Zamijeni mreže",
+ "mesh_recognize.convert_keep": "Pretvori {n}",
+ "mesh_recognize.convert_remove": "Pretvori {n} i ukloni mreže",
+ "mesh_recognize.creates": "Stvorit će {n}: {kinds}",
+ "mesh_recognize.creates_none": "Još ništa nije označeno",
+ "mesh_recognize.stay": "{n} izvornih mreža ostaje u modelu",
+ "mesh_recognize.removed": "{n} izvornih mreža bit će uklonjeno. Poništi ih vraća."
+}

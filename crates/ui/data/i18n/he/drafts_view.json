@@ -1,0 +1,9 @@
+{
+ "drafts.draft.view": "גרפיקת המבט של “{name}”",
+ "drafts.draft.filter": "מסנן מבט “{name}”",
+ "drafts.draft.filter_new": "מסנן מבט חדש",
+ "drafts.draft.object_styles": "סגנונות אובייקטים",
+ "drafts.draft.material": "חומר “{name}”",
+ "drafts.draft.type": "סוג “{name}”",
+ "drafts.draft.params": "פרמטרים של המשפחה “{name}”"
+}

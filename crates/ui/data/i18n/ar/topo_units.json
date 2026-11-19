@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "الوحدات",
+ "topo_units.unit": "الوحدات في الملف",
+ "topo_units.unit.m": "م",
+ "topo_units.unit.cm": "سم",
+ "topo_units.unit.mm": "مم",
+ "topo_units.unit.ft": "قدم",
+ "topo_units.unit.usft": "قدم المسح الأمريكي",
+ "topo_units.unit.in": "بوصة",
+ "topo_units.unit.from_file": "الملف يحدد وحداته: {unit}",
+ "topo_units.unit.suggested": "الملف لا يحدد وحدات. المقترح حسب المدى: {unit} — تحقّق من النتيجة أدناه",
+ "topo_units.extent": "النتيجة بوحدات المشروع: {x} × {y} {u} في المسقط، ونطاق الارتفاع {z} {u}",
+ "topo_units.extent.none": "النتيجة: لا يوجد ما يُستورد بهذه الخيارات",
+ "topo_units.extent.check": "لا يبدو هذا موقعاً: تحقّق من الوحدات"
+}

@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D",
+ "phases.current_mark": "ปัจจุบัน",
+ "phases.make_current": "ตั้งเป็นปัจจุบัน",
+ "phases.col_phase": "ระยะ",
+ "phases.col_filter": "ตัวกรอง",
+ "phases.presets": "ค่าที่ตั้งไว้ของแปลน",
+ "phases.del_title": "ลบระยะ",
+ "phases.del_text": "ลบระยะ \"{name}\" หรือไม่ องค์ประกอบจะย้ายไปยังระยะที่เลือกด้านล่าง",
+ "phases.del_into": "ย้ายองค์ประกอบไปยัง",
+ "phases.del_ok": "ลบ",
+ "phases.col_kind": "ชนิดองค์ประกอบ",
+ "phases.col_count": "จำนวน",
+ "phases.col_volume": "ปริมาตร"
+}

@@ -1,0 +1,14 @@
+{
+ "ai.stream.waiting": "กำลังรอโมเดล",
+ "ai.stream.reading": "กำลังอ่านโมเดล",
+ "ai.stream.working": "กำลังทำงาน",
+ "ai.stream.answering": "กำลังเขียนคำตอบ",
+ "ai.stream.tools_one": "1 เครื่องมือ",
+ "ai.stream.tools_many": "{n} เครื่องมือ",
+ "ai.stream.secs": "{n} วินาที",
+ "ai.stream.stalled": "ยังรอบริการโมเดลอยู่",
+ "ai.stream.stop": "หยุด",
+ "ai.stream.cancelled": "หยุดแล้ว",
+ "ai.stream.incomplete": "ฉบับร่างไม่สมบูรณ์ ยังไม่มีอะไรถูกนำไปใช้กับโมเดล",
+ "ai.stream.sep": " · "
+}

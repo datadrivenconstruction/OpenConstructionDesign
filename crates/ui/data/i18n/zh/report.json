@@ -1,0 +1,23 @@
+{
+ "cmd.app.report": "报告问题…",
+ "cmd.app.report.desc": "描述出错情况，并在本机保存一个报告包：您的文字、版本与系统信息、窗口截图及最近的崩溃记录。不会发送任何内容。",
+ "report.title": "报告问题",
+ "report.what": "发生了什么",
+ "report.expected": "您的预期",
+ "report.steps": "重现步骤",
+ "report.opt.shot": "包含窗口截图",
+ "report.opt.model": "包含模型副本",
+ "report.opt.model.note": "默认关闭。副本包含项目数据，不含 AI 日志。",
+ "report.opt.paths": "在文件路径中保留用户名",
+ "report.local": "报告包仅保存在本机，不会自动发送。",
+ "report.blocked": "请先描述发生的情况。",
+ "report.save": "保存报告包",
+ "report.copy": "复制文字",
+ "report.cancel": "取消",
+ "report.copied": "报告文字已复制。",
+ "report.saved": "报告包已保存：{path}",
+ "report.failed": "无法保存报告包：{err}",
+ "report.model.fail": "无法创建模型副本，未保存任何内容：{err}",
+ "report.crash.notice": "上一次会话因崩溃而结束。",
+ "report.crash.action": "报告问题"
+}

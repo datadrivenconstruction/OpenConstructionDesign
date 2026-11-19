@@ -1,0 +1,5 @@
+{
+ "mirror_array.err.count": "Le nombre est un entier de 2 à 200 : 4 3000, ou 4;300 lorsque le pas a trois chiffres",
+ "mirror_array.err.length": "Le pas ou le total est une longueur positive, par ex. 3 000 ou 1.2 m",
+ "mirror_array.err.angle": "Le balayage est un angle en degrés, non nul et au plus 360"
+}

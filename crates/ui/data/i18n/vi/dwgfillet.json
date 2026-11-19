@@ -1,0 +1,20 @@
+{
+ "dwgfillet.fillet": "Bo góc",
+ "dwgfillet.cancel": "Dừng bo góc",
+ "dwgfillet.tip": "Nhấp vào hai đường ở các phía cần giữ: cả hai được cắt hoặc kéo dài đến góc, kèm cung tiếp tuyến khi bán kính lớn hơn 0",
+ "dwgfillet.radius": "Bán kính bo góc",
+ "dwgfillet.radius_tip": "Bán kính cung theo đơn vị bản vẽ; 0 tạo góc nhọn",
+ "dwgfillet.st.arm_first": "Nhấp vào đường thứ nhất ở phía cần giữ",
+ "dwgfillet.st.arm_second": "Nhấp vào đường thứ hai ở phía cần giữ",
+ "dwgfillet.st.not_armed": "Hãy chọn Bo góc trước",
+ "dwgfillet.st.click_line": "Nhấp vào một đường đơn của bản vẽ",
+ "dwgfillet.st.other_drawing": "Hai đường phải thuộc cùng một bản vẽ: hãy làm lại từ đầu",
+ "dwgfillet.st.changed": "Đường thứ nhất đã thay đổi: hãy làm lại từ đầu",
+ "dwgfillet.st.same_line": "Chọn một đường thứ hai khác",
+ "dwgfillet.st.parallel": "Hai đường song song và không bao giờ gặp nhau: không thể tạo góc",
+ "dwgfillet.st.degenerate": "Đường có chiều dài bằng 0",
+ "dwgfillet.st.no_side": "Phía đã nhấp không có chiều dài tính từ góc",
+ "dwgfillet.st.too_big": "Bán kính quá lớn đối với các đường này: hãy dùng bán kính nhỏ hơn",
+ "dwgfillet.st.radius_bad": "Bán kính phải bằng 0 hoặc dương",
+ "dwgfillet.st.done": "Đã tạo góc"
+}

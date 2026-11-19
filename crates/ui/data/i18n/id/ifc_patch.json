@@ -1,0 +1,19 @@
+{
+ "ifc_patch.fallback.source_changed": "Patch tidak dipakai: file sumber berubah di disk atau tidak dapat dibaca. File ditulis ulang dari model.",
+ "ifc_patch.fallback.sources": "Patch tidak dipakai: proyek tidak memiliki tepat satu sumber. File ditulis ulang dari model.",
+ "ifc_patch.fallback.schema": "Patch tidak dipakai: skema file sumber tidak didukung. File ditulis ulang dari model.",
+ "ifc_patch.fallback.structure": "Patch tidak dipakai: struktur file sumber tidak dapat dipercaya. File ditulis ulang dari model.",
+ "ifc_patch.fallback.edit": "Patch tidak dipakai: suatu edit tidak dapat diterapkan dengan aman ke file sumber. File ditulis ulang dari model.",
+ "ifc_patch.reason.schema": "Skema file sumber tidak dapat menampung suntingan ini; elemen tetap seperti di sumber",
+ "ifc_patch.reason.prop": "Suntingan properti ini tidak dapat dinyatakan di file sumber; nilainya tetap seperti di sumber",
+ "ifc_patch.reason.no_export": "Elemen baru ini tidak memiliki representasi di IFC",
+ "ifc_patch.reason.link": "Elemen ada di file, tetapi tautan ke material atau tipenya tidak ditulis; dicantumkan sebagai tidak tertulis",
+ "ifc_patch.drop": "Buang",
+ "ifc_patch.drop_done": "Tautan tertunda dibuang: {n}; tidak akan dicoba lagi",
+ "ifc_patch.fallback.building": "Patch tidak dipakai: level baru membutuhkan tepat satu bangunan di file sumber, sedangkan di sana tidak ada atau lebih dari satu. File ditulis ulang dari model.",
+ "ifc_patch.fallback.types": "Patch tidak dipakai: level, tipe, atau material berubah sejak impor, dan patch tidak dapat menulisnya. File ditulis ulang dari model.",
+ "ifc_patch.fallback.zipped": "Patch tidak dipakai: file sumber yang di-zip tidak dapat di-patch. File ditulis ulang dari model.",
+ "ifc_patch.fallback.source_kept": "File sumber tidak ditimpa: penyimpanan ini tidak dapat dipercaya untuk menggantinya. Penyimpanan ini menjadi salinan di sebelahnya.",
+ "ifc_patch.fallback.nested": "Patch tidak dipakai: elemen baru memiliki bagian bersarang (seperti port), yang tidak dapat ditulis patch. File ditulis ulang dari model.",
+ "ifc_patch.fallback.shared_part": "Patch tidak dipakai: bagian dari tangga atau ramp yang diedit juga dipakai oleh elemen atau relasi lain, dan patch tidak dapat memperhitungkannya. File ditulis ulang dari model."
+}

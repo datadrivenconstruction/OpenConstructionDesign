@@ -1,0 +1,10 @@
+{
+ "elem.multi.title": "{n} elemento",
+ "elem.multi.varies": "nagbabago",
+ "elem.multi.tip": "Ang pag-Enter ay nagtatakda sa lahat ng napiling elemento",
+ "elem.multi.hidden": "{n} row lamang sa ilang elemento",
+ "elem.multi.none": "Walang row na magkapareho ang mga napiling elemento",
+ "elem.multi.range": "Nasa labas ng pinapayagang saklaw ang halaga",
+ "elem.multi.changed": "Nabago ang {n} elemento · Ctrl+Z para i-undo",
+ "elem.multi.same": "Ganito na ang halaga sa lahat ng napiling elemento"
+}

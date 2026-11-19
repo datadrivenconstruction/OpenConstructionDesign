@@ -1,0 +1,16 @@
+{
+ "ai.items.all": {
+  "one": "تمام # آئٹم",
+  "other": "تمام # آئٹمز"
+ },
+ "ai.items.all.tip": "پلان کا ہر آئٹم نشان زد یا غیر نشان زد کریں",
+ "ai.items.checked": "{m} میں سے {n} نشان زد",
+ "ai.items.check.tip": "“{title}” کو Apply میں شامل کریں",
+ "ai.items.expand": "عناصر دکھائیں",
+ "ai.items.collapse": "عناصر چھپائیں",
+ "ai.items.apply": {
+  "one": "# آئٹم لاگو کریں",
+  "other": "# آئٹمز لاگو کریں"
+ },
+ "ai.items.apply_none": "لاگو کریں"
+}

@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "Az alkalmazás visszavonva: a modell nem egyezett az előnézettel. {what}",
+ "xlsx_verify.not_written": "{row} nincs módosítva.",
+ "xlsx_verify.lost": "{row} eltűnt.",
+ "xlsx_verify.not_deleted": "{row} nincs törölve.",
+ "xlsx_verify.extra_deleted": "{row} törölve lett, pedig az előnézet megtartja.",
+ "xlsx_verify.created": "{table}: {got} új {want} helyett.",
+ "xlsx_verify.value": "{row}, {field}: várt érték: {want} (volt: {old}), kapott: {got}.",
+ "xlsx_verify.check_failed": "Az eredmény nem ellenőrizhető: {e}",
+ "xlsx_verify.plan_failed": "Az alkalmazás nem indult el: az ellenőrzés nem tudta beolvasni a modellt ({e}).",
+ "xlsx_verify.take_back_failed": "A lépés nem vonható vissza ({e}): használja a Visszavonást.",
+ "xlsx_verify.t.wall": "Fal",
+ "xlsx_verify.t.opening": "Nyílás",
+ "xlsx_verify.t.room": "Helyiség",
+ "xlsx_verify.t.slab": "Födém",
+ "xlsx_verify.t.level": "Szint",
+ "xlsx_verify.t.wall_type": "Falfajta",
+ "xlsx_verify.t.slab_type": "Födémtípus",
+ "xlsx_verify.t.col": "Pillér",
+ "xlsx_verify.t.beam": "Gerenda",
+ "xlsx_verify.t.roof": "Tető",
+ "xlsx_verify.t.curtain_wall": "Függönyfal"
+}

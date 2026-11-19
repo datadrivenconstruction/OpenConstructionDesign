@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "วาง {n} เซลล์แล้ว",
+ "sched_edit.pasted_skipped": "วาง {n} เซลล์ ข้าม {k}: {why}",
+ "sched_edit.filled": "เติม {n} เซลล์แล้ว",
+ "sched_edit.filled_skipped": "เติม {n} เซลล์ ข้าม {k}: {why}",
+ "sched_edit.why_ro": "อ่านอย่างเดียว {n} รายการ",
+ "sched_edit.why_bad": "ค่าไม่ถูกต้อง {n} รายการ",
+ "sched_edit.no_cell": "คลิกเซลล์ในตารางก่อน",
+ "sched_edit.nothing": "ไม่มีอะไรให้เขียน",
+ "sched_edit.not_refreshed": "เขียนแล้ว แต่มุมมองไม่ได้รีเฟรช: {e}",
+ "sched_edit.failed": "ไม่ได้เปลี่ยน: {e}",
+ "sched_edit.no_changes": "ไม่มีการเปลี่ยนแปลง: {u} เซลล์มีค่าเหล่านี้อยู่แล้ว",
+ "sched_edit.same_tail": ", {u} เท่ากันอยู่แล้ว"
+}

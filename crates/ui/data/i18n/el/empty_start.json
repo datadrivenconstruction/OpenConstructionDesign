@@ -1,0 +1,8 @@
+{
+ "empty.start_recent.title": "Δεν υπάρχουν ακόμα πρόσφατα έργα",
+ "empty.start_recent.hint": "Τα έργα που ανοίγετε εμφανίζονται εδώ. Ξεκινήστε με το μοντέλο δείγματος.",
+ "empty.start_recent.action": "Άνοιγμα δείγματος",
+ "start.recent_open_file": "Άνοιγμα αρχείου…",
+ "start.forgot": "Αφαιρέθηκε από τα πρόσφατα: {name}",
+ "start.forgot_undo": "Αναίρεση"
+}

@@ -1,0 +1,10 @@
+{
+ "ai.optx.applied": "Opzione \"{name}\" applicata. Annulla la riporta a bozza",
+ "ai.optx.missing": "L'opzione {id} non esiste più",
+ "ai.optx.accepted": "L'opzione {id} è già applicata",
+ "ai.optx.not_draft": "L'opzione {id} è stata rifiutata e non può essere applicata",
+ "ai.optx.stale": "Il modello è cambiato dopo la creazione dell'opzione {id}: rigenerala prima",
+ "ai.optx.bad_recipe": "La ricetta dell'opzione non si può leggere: {e}",
+ "ai.optx.refused": "L'opzione non è stata applicata ({code}): {reason}",
+ "ai.optx.failed": "L'opzione non è stata applicata: {e}"
+}

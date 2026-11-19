@@ -1,0 +1,4 @@
+{
+ "topo_import.topo.ambiguous": "{n} na row ang nilaktawan: may dalawang basa ang numero (1,250 = 1.25 o 1250?) at walang decimal mark ang file",
+ "topo_import.topo.grouped": "{n} na punto ang nabasa na may digit group (1 250,5 o 1,234.5)"
+}

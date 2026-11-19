@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "Tegn væg",
+ "empty.totals.action": "Tegn væg",
+ "empty.schedule.action": "Tilføj felt",
+ "empty.schedule_filtered.action": "Ryd filter",
+ "empty.library.action": "Nulstil søgning",
+ "empty.library.load": "Indlæs familie",
+ "empty.schedule_fields.title": "Ingen felter vist",
+ "empty.schedule_fields.action": "Tilføj felt",
+ "empty.schedule_fields.hint": "Slå mindst ét felt til for at se tabellen."
+}

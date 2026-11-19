@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "Calcestruzzo",
+ "mat.masonry": "Muratura",
+ "mat.brick": "Mattone",
+ "mat.insulation": "Isolante",
+ "mat.plaster": "Intonaco",
+ "mat.render": "Rasatura",
+ "mat.gypsum": "Cartongesso",
+ "mat.glass": "Vetro",
+ "mat.wood": "Legno",
+ "mat.steel": "Acciaio",
+ "mat.membrane": "Membrana",
+ "mat.other": "Altro",
+ "warn.cat.wall": "Muro",
+ "warn.cat.slab": "Solaio",
+ "warn.cat.opening": "Apertura",
+ "warn.cat.curtain_wall": "Facciata continua",
+ "td.mat.custom": "Altro…"
+}

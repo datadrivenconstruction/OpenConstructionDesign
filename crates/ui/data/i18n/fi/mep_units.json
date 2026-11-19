@@ -1,0 +1,8 @@
+{
+ "mep_units.unit.mm": "mm",
+ "mep_units.unit.in": "in",
+ "mep_units.dn": "DN",
+ "mep_units.diameter": "Halkaisija",
+ "mep_units.system.new": "Uusi järjestelmä",
+ "mep_units.system.none": "Ei järjestelmää"
+}

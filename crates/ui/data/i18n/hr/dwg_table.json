@@ -1,0 +1,14 @@
+{
+ "dwg_table.copy": "Kopiraj tablicu",
+ "dwg_table.copy_tip": "Kopira obračun po slojevima kao tablicu za proračunsku tablicu",
+ "dwg_table.copied": "Obračun kopiran (odvojeno tabulatorom)",
+ "dwg_table.total": "Ukupno",
+ "dwg_table.col.layer": "Sloj",
+ "dwg_table.col.count": "Broj",
+ "dwg_table.col.len": "Duljina, {unit}",
+ "dwg_table.col.area": "Površina, {unit}",
+ "dwg_table.unit.mm": "mm",
+ "dwg_table.unit.m2": "m²",
+ "dwg_table.unit.ft": "ft",
+ "dwg_table.unit.ft2": "ft²"
+}

@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "نیچے تہہ داخل کریں",
+ "type_layers.layer.delete": "تہہ حذف کریں",
+ "type_layers.layer.delete_last": "قسم میں کم از کم ایک تہہ ہونی چاہیے",
+ "type_layers.value.bad": "درست مثبت قدر نہیں",
+ "type_layers.value.required": "ضروری",
+ "type_layers.unsaved.title": "{name} میں غیر محفوظ تبدیلیاں",
+ "type_layers.unsaved.body": "انہیں قسم پر لاگو کریں، یا رد کریں؟",
+ "type_layers.unsaved.discard": "رد کریں"
+}

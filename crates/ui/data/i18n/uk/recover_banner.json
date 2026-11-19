@@ -1,0 +1,7 @@
+{
+ "recover.untitled_note": "Цей проєкт ще не було збережено",
+ "recover.file_missing": "Файл проєкту не знайдено",
+ "recover.banner": "Знайдено незбережені зміни з попереднього сеансу для {name}",
+ "recover.banner_review": "Переглянути",
+ "recover.later_archived": "Відкладено {n} разів: знімки переміщено в архів"
+}

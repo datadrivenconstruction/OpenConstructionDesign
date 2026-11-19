@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "Чекит",
+ "trial.field.distance": "Аралык",
+ "trial.field.target": "Элемент",
+ "trial.refused": "{field}: {reason}. Колдонуу үчүн өзгөртүңүз",
+ "trial.preview_off": "Алдын ала көрүү өчүк: модель өтө чоң"
+}

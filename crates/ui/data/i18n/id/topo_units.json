@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "Satuan",
+ "topo_units.unit": "Satuan dalam berkas",
+ "topo_units.unit.m": "m",
+ "topo_units.unit.cm": "cm",
+ "topo_units.unit.mm": "mm",
+ "topo_units.unit.ft": "ft",
+ "topo_units.unit.usft": "US survey ft",
+ "topo_units.unit.in": "in",
+ "topo_units.unit.from_file": "Berkas menyebutkan satuannya: {unit}",
+ "topo_units.unit.suggested": "Berkas tidak menyebutkan satuan. Disarankan oleh cakupan: {unit} — periksa hasil di bawah",
+ "topo_units.extent": "Hasil dalam satuan proyek: {x} × {y} {u} pada denah, rentang tinggi {z} {u}",
+ "topo_units.extent.none": "Hasil: tidak ada yang diimpor dengan pilihan ini",
+ "topo_units.extent.check": "Ini tidak tampak seperti tapak: periksa satuannya"
+}

@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "Lưu toàn bộ mô hình hoặc vùng chọn dưới dạng STL nhị phân, đơn vị mét hoặc milimét.",
+ "cmd.data.export_obj.desc": "Lưu toàn bộ mô hình hoặc vùng chọn dưới dạng OBJ kèm tệp MTL: mỗi cấu kiện một nhóm, màu theo vật liệu.",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "OBJ kèm vật liệu (.obj)",
+ "open_file.filter.mesh": "Lưới 3D (glTF, STEP, STL, OBJ)",
+ "mx.title": "Xuất {fmt}",
+ "mx.scope": "Xuất gì",
+ "mx.scope.all": "Toàn bộ mô hình",
+ "mx.scope.sel": "Vùng chọn ({n} cấu kiện)",
+ "mx.units": "Đơn vị trong tệp",
+ "mx.units.m": "Mét",
+ "mx.units.mm": "Milimét",
+ "mx.export": "Xuất…",
+ "mx.saved": "Đã lưu {fmt}: {path} ({parts} cấu kiện, {tris} tam giác)",
+ "mx.partial": "Đã lưu {fmt} với {n} vấn đề, một số khối có thể bị thiếu: {path}",
+ "mx.failed": "Xuất {fmt} thất bại: {error}",
+ "mx.imported": "{file}: đã nhập {n} cấu kiện ({tris} tam giác)",
+ "mx.imported_notes": "{file}: đã nhập {n} cấu kiện ({tris} tam giác), {w} ghi chú: {first}"
+}

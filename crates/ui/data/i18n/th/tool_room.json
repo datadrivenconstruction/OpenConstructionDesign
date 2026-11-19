@@ -1,0 +1,9 @@
+{
+ "tool.room": "ห้อง",
+ "tool.room.name": "ห้อง",
+ "room_tool.room.name": "ชื่อ",
+ "hint.room.place": "คลิกภายในลูปผนังปิดเพื่อสร้างห้อง · Esc — ออก",
+ "tool.err.room_open": "พื้นที่ไม่ปิด: ปิดลูปผนังหรือเพิ่มตัวแบ่งห้อง",
+ "tool.err.room_check": "ไม่สามารถตรวจสอบห้องของระดับนี้ได้",
+ "tool.err.room_exists": "มีห้องอยู่ในลูปนี้แล้ว"
+}

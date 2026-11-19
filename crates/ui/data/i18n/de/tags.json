@@ -1,0 +1,13 @@
+{
+ "tags.gone": "Das Kennzeichen existiert nicht mehr",
+ "tags.readonly_wall": "Ein Wand-Kennzeichen zeigt den Typ und ist hier nicht bearbeitbar: Ändern Sie den Wandtyp",
+ "tags.readonly_comp": "Ein Bauteil-Kennzeichen zeigt die Familie und ist hier nicht bearbeitbar: Ändern Sie den Typ",
+ "tags.locked": "Das Element ist gesperrt: Entsperren Sie es, um das Kennzeichen zu bearbeiten",
+ "tags.done": "Kennzeichenwert geschrieben",
+ "tags.failed": "Kennzeichen nicht geändert: {e}",
+ "tags.dup_door": "{mark} auch bei {n} Türen",
+ "tags.dup_window": "{mark} auch bei {n} Fenstern",
+ "tags.dup_room": "{mark} auch bei {n} Räumen",
+ "tags.hint_mark": "Marke",
+ "tags.hint_name": "Raumname"
+}

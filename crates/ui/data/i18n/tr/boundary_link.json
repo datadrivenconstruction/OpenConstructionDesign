@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "Tüm duvar döngüsünü seç",
+ "cmd.sketch.link_unlink": "Kenarın duvar bağlantısını kaldır",
+ "cmd.sketch.link_repick": "Kenar duvarını yeniden seç",
+ "cmd.ctx.floor.link_unlink": "Kenarların duvar bağlantısını kaldır",
+ "cmd.ctx.floor.link_accept": "Silinen duvarların kenarlarını kabul et",
+ "boundary_link.hint.loop": "Bir duvara tıklayın: kapalı duvar dizisi bağlantılı kenarlara dönüşür",
+ "boundary_link.hint.repick": "Kenara paralel bir duvara tıklayın: kenar onu takip edecek",
+ "boundary_link.need_sketch": "Önce sınır eskizini açın",
+ "boundary_link.need_edge": "Eskizin bir kenarını gösterin",
+ "boundary_link.need_straight": "Yalnızca düz bir kenar duvarı takip edebilir",
+ "boundary_link.need_floor": "Bir döşeme seçin",
+ "boundary_link.no_wall": "İmlecin altında duvar yok",
+ "boundary_link.not_parallel": "Duvar kenara paralel değil",
+ "boundary_link.not_linked": "Bu kenar bir duvara bağlı değil",
+ "boundary_link.unlinked": "Kenarın bağlantısı kaldırıldı: yerinde kalır ve artık duvarı takip etmez",
+ "boundary_link.accepted": "Kenarlar kabul edildi: olağan kenarlar olarak yerinde kalırlar",
+ "boundary_link.failed": "Uygulanamadı",
+ "boundary_link.lost": "kaynak duvar silindi",
+ "boundary_link.blocked": "duvarı takip edemiyor"
+}

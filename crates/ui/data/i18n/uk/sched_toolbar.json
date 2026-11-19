@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "Фільтр рядка під заголовками. Текст: підрядок; числа: >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "Показати або сховати стовпці",
+ "sched_toolbar.groups_tip": "Групувати рядки за стовпцями з проміжними підсумками",
+ "sched_toolbar.formulas_tip": "Обчислювані стовпці",
+ "sched_toolbar.phase": "Стадія",
+ "sched_toolbar.phase_tip": "Зі стадії беруться рядки",
+ "sched_toolbar.copy_tip": "Вибрані рядки (або всі видимі) як TSV",
+ "sched_toolbar.import_tip": "Прочитати експортовану відомість назад: рядки за Id, стовпці за заголовком; спершу кількість, потім один крок відміни",
+ "sched_toolbar.export_tip": "Видимі рядки й стовпці з підсумками; числа лишаються числами",
+ "sched_toolbar.need_table": "Спершу відкрийте відомість",
+ "sched_toolbar.busy_open": "Діалог відкриття файлу вже відкрито",
+ "sched_toolbar.busy_save": "Діалог збереження вже відкрито",
+ "sched_toolbar.clear_filter": "Очистити фільтр",
+ "sched_toolbar.fields_title": "Стовпці"
+}

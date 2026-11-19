@@ -1,0 +1,6 @@
+{
+ "xl.msg.filter_on_sheet_x": "bộ lọc trên tờ '{}'",
+ "xl.msg.sort_settings_on_sheet_x": "cài đặt sắp xếp trên tờ '{}'",
+ "xl.msg.hidden_rows_on_sheet_x": "hàng ẩn trên tờ '{}'",
+ "xl.msg.hidden_columns_on_sheet_x": "cột ẩn trên tờ '{}'"
+}

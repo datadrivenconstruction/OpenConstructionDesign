@@ -1,0 +1,4 @@
+{
+ "cmd.mgr.autosave_show": "ऑटोसेव दिखाएँ",
+ "cmd.mgr.autosave_show.desc": "ऑटोसेव विंडो खोलें; पहले से खुली हो तो खुली रहती है।"
+}

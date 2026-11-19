@@ -1,0 +1,7 @@
+{
+ "recover.untitled_note": "Проект ещё не сохранялся",
+ "recover.file_missing": "Файл проекта не найден",
+ "recover.banner": "Для {name} найдена несохранённая работа прошлого сеанса",
+ "recover.banner_review": "Посмотреть",
+ "recover.later_archived": "Отложены {n} раза: снимки в архиве"
+}

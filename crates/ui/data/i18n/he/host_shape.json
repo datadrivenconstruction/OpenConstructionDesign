@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "פתח דורמר",
+ "cmd.arch.roof_opening": "פתח בגג",
+ "cmd.arch.roof_extrusion": "גג בהבלטה",
+ "cmd.arch.ceiling_opening": "פתח בתקרה",
+ "cmd.str.slab_opening": "פתח ברצפה",
+ "cmd.ctx.wall.detach": "נתק חלק עליון",
+ "cmd.ctx.floor.sketch": "ערוך גבול",
+ "cmd.ctx.floor.shape": "ערוך צורה",
+ "host_shape.shape.elev_prompt": "גובה, mm…",
+ "host_shape.shape.elev_mm": "{v} mm",
+ "host_shape.sketch.no_host": "אין מארח מתחת לגבול במפלס זה",
+ "host_shape.issue.roof": "גג {id}: {e}",
+ "host_shape.issue.ceiling": "תקרה {id}: {e}",
+ "host_shape.status.select_slab": "בחר רצפה",
+ "host_shape.status.select_walls": "בחר קירות",
+ "host_shape.status.no_roof_or_level": "אין גג או מפלס מעליו",
+ "host_shape.status.top_attached": "ראשי הקירות חוברו",
+ "host_shape.status.top_detached": "ראשי הקירות נותקו",
+ "host_shape.status.straight_wall": "נדרש קיר ישר",
+ "host_shape.status.roof_extruded": "נוצר גג בהבלטה",
+ "warn.kind.cut": "חיתוך או חיבור לא נבנו"
+}

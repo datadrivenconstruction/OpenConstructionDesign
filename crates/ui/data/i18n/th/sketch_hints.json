@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "วาดเส้นรอบรูปปิด: คลิกจุด แล้วกด Enter หรือเสร็จสิ้นเพื่อสร้าง",
+ "sketch_hints.sk_finish": "เสร็จสิ้น",
+ "sketch_hints.sk_cancel": "ยกเลิก",
+ "sketch_hints.import_warn": "คำเตือนการตรวจโมเดล: {n} (รายการแรก: {first})",
+ "sketch_hints.ai.offline.schedule": "เปิดตาราง",
+ "sketch_hints.ai.offline.check": "ตรวจตามกฎ",
+ "sketch_hints.ai.offline.warnings": "แสดงคำเตือน",
+ "cmd.file.publish_pdf": "เผยแพร่แผ่นเป็น PDF…",
+ "cmd.file.publish_pdf.desc": "เผยแพร่แผ่นที่เลือกเป็น PDF เหมือนกับส่งออกแผ่นเป็น PDF/SVG",
+ "sketch_hints.verify_none": "ไม่มีรายการที่ผู้ช่วย AI ตั้งค่าไว้ในการเลือกให้ตรวจ",
+ "sketch_hints.contours_none": "ไม่มีพื้นผิวภูมิประเทศในโมเดล เส้นชั้นความสูงจะปรากฏเมื่อสร้างแล้ว",
+ "sketch_hints.contours_off": "ซ่อนเส้นชั้นความสูงของพื้นผิวแล้ว",
+ "sketch_hints.contours_on": "แสดงเส้นชั้นความสูงของพื้นผิวแล้ว"
+}

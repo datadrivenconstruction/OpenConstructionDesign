@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "בטון",
+ "mat.masonry": "בנייה",
+ "mat.brick": "לבנה",
+ "mat.insulation": "בידוד",
+ "mat.plaster": "טיח",
+ "mat.render": "טיח חיצוני",
+ "mat.gypsum": "לוח גבס",
+ "mat.glass": "זכוכית",
+ "mat.wood": "עץ",
+ "mat.steel": "פלדה",
+ "mat.membrane": "קרום",
+ "mat.other": "אחר",
+ "warn.cat.wall": "קיר",
+ "warn.cat.slab": "רצפה",
+ "warn.cat.opening": "פתח",
+ "warn.cat.curtain_wall": "קיר מסך",
+ "td.mat.custom": "אחר…"
+}

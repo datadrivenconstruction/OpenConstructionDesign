@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "свой",
+ "draw_quality.custom.tip": "{name}: запись этого проекта",
+ "draw_quality.custom_note": "Записи с пометкой «свой» относятся к этому проекту.",
+ "draw_quality.unsaved.lib_body": "Сохранить их в библиотеке или отменить?",
+ "draw_quality.unsaved.styles_body": "Применить их к виду или отменить?",
+ "draw_quality.unsaved.both_body": "Применить их или отменить?",
+ "draw_quality.halftone": "Полутон: {category}",
+ "draw_quality.styles.name": "Стили линий",
+ "draw_quality.styles.other_level": "Несохранённые стили уровня {level}: примените или отмените их, чтобы править этот уровень."
+}

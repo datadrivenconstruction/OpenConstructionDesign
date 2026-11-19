@@ -1,0 +1,23 @@
+{
+ "ai.audit.tokens": "{n} tokeni",
+ "ai.audit.filter.all": "Toate",
+ "ai.audit.filter.ai": "AI",
+ "ai.audit.filter.me": "Eu",
+ "ai.audit.search": "Caută modificări",
+ "ai.audit.search.clear": "Șterge căutarea",
+ "ai.audit.show_all": "Arată tot",
+ "ai.audit.empty.hint": "Modificările propuse sau aplicate de un model sau de un agent apar aici, fiecare cu o cale de întoarcere.",
+ "ai.audit.no_match": "Nicio modificare nu corespunde filtrului.",
+ "ai.audit.show.tip": "Selectează și arată elementele atinse de această modificare",
+ "ai.audit.revert.ask": "Anulezi „{what}”? {change}.",
+ "ai.audit.revert.elements": {
+  "one": "# modificare de element",
+  "few": "# modificări de element",
+  "other": "# de modificări de element"
+ },
+ "ai.audit.revert.keeps": "Modificările mai noi rămân. Revenirea este un singur pas de anulare.",
+ "ai.audit.cancel": "Anulează",
+ "ai.audit.toast.reverted": "Revenit: {what}",
+ "ai.audit.toast.undone": "Anulat: {what}",
+ "ai.audit.redo": "Refă"
+}

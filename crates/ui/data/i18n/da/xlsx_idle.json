@@ -1,0 +1,8 @@
+{
+ "xlsx_idle.idle_title": "Ingen ændringer at importere",
+ "xlsx_idle.export_name": "Eksportér",
+ "xlsx_idle.export_body": "Skriver modellen til et regneark. Redigér værdierne der, og synkronisér derefter.",
+ "xlsx_idle.sync_name": "Synkronisér",
+ "xlsx_idle.sync_body": "Læser regnearket igen og viser, hvad der afviger. Modellen ændres først, når du anvender.",
+ "xlsx_idle.last_sync": "Sidst synkroniseret: {when}"
+}

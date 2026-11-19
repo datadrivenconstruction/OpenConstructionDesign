@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "Takvindu-åpning",
+ "cmd.arch.roof_opening": "Åpning i tak",
+ "cmd.arch.roof_extrusion": "Tak ved ekstrudering",
+ "cmd.arch.ceiling_opening": "Åpning i tak",
+ "cmd.str.slab_opening": "Åpning i gulv",
+ "cmd.ctx.wall.detach": "Koble fra toppen",
+ "cmd.ctx.floor.sketch": "Rediger avgrensning",
+ "cmd.ctx.floor.shape": "Rediger form",
+ "host_shape.shape.elev_prompt": "kote, mm…",
+ "host_shape.shape.elev_mm": "{v} mm",
+ "host_shape.sketch.no_host": "ingen vert under avgrensningen på denne etasjen",
+ "host_shape.issue.roof": "tak {id}: {e}",
+ "host_shape.issue.ceiling": "tak {id}: {e}",
+ "host_shape.status.select_slab": "velg en plate",
+ "host_shape.status.select_walls": "velg vegger",
+ "host_shape.status.no_roof_or_level": "ingen tak eller etasje over",
+ "host_shape.status.top_attached": "veggtopper festet",
+ "host_shape.status.top_detached": "veggtopper koblet fra",
+ "host_shape.status.straight_wall": "en rett vegg kreves",
+ "host_shape.status.roof_extruded": "tak ved ekstrudering opprettet",
+ "warn.kind.cut": "Utskjæring eller feste ikke bygget"
+}

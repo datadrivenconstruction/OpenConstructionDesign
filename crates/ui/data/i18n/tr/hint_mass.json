@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "Serbest yüzey",
+ "cmd.mass.panelize": "Panellere ayır",
+ "cmd.mass.surface_shell": "Yüzey üzerine çatı",
+ "cmd.mass.thicken": "Kalınlaştır",
+ "hint.mass.freeform.first": "Serbest yüzey: planda dikdörtgenin ilk köşesi · sayı yazın — yükselme · Esc — iptal",
+ "hint.mass.freeform.next": "Serbest yüzey: karşı köşe · sayı yazın — yükselme · Esc — iptal",
+ "hint.mass.panelize.first": "Panellere ayır: 3B'de serbest bir yüzey seçin · Esc — iptal",
+ "hint.mass.panelize.value": "Panellere ayır: panel boyutunu yazın · Enter — uygula · Esc — iptal",
+ "hint.mass.surface_shell.first": "Yüzey üzerine çatı: 3B'de serbest bir yüzey seçin · Esc — iptal",
+ "hint.mass.surface_shell.value": "Yüzey üzerine çatı: kalınlığı yazın · Enter — uygula · Esc — iptal",
+ "hint.mass.thicken.first": "Kalınlaştır: 3B'de serbest bir yüzey seçin · Esc — iptal",
+ "hint.mass.thicken.value": "Kalınlaştır: kalınlığı yazın (0 — yalnızca yüzey) · Enter — uygula · Esc — iptal",
+ "status.mass.pick_surface": "Serbest bir yüzey seçin",
+ "status.mass.freeform_small": "Dikdörtgen çok küçük: her yönde en az 0,5 m olmalı",
+ "name.mass.freeform": "Serbest yüzey",
+ "rgroup.mass_free": "Gelişmiş"
+}

@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "Котата {t} не беше взета ({why}). Нищо не беше променено",
+ "host_shape.shape.elev_prompt_in": "кота, фут-инч…",
+ "host_shape.shape.elev_in": "{v} инч"
+}

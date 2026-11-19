@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "Çalışan işin ardında kuyrukta: {n}",
+ "import_queue.queue_full": "Kuyruk dolu, {n} dosya eklenmedi",
+ "import_queue.changed": "{name} bu proje oluşturulduktan sonra güncellendi. Önceki proje açıldı.",
+ "import_queue.import_again": "Yeniden içe aktar",
+ "import_queue.kept": "Tamamlanan içe aktarma korunuyor",
+ "import_queue.open_it": "Aç",
+ "import_queue.sum.head": "içe aktarma: {editable} düzenlenebilir (duvar {walls}, açıklık {open}, döşeme {slabs}, oda {rooms}, diğer {other}), {meshes} mesh olarak",
+ "import_queue.sum.unchanged": ", değişmeyen {n}",
+ "import_queue.sum.updated": ", güncellenen {n}",
+ "import_queue.sum.missing": ", kaynakta yok {n} (korundu)",
+ "import_queue.sum.skipped": ", atlandı {n}",
+ "import_queue.sum.warnings": ", uyarılar {n}",
+ "import_queue.import_failed": "içe aktarma başarısız: {e}"
+}

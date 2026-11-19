@@ -1,0 +1,9 @@
+{
+ "prop_head.of_type": {
+  "one": "# nito sa ganitong uri",
+  "other": "# nito sa ganitong uri"
+ },
+ "prop_head.override_tip": "Iba sa uri; i-click para i-reset",
+ "prop_head.reset_done": "Ni-reset ang “{name}” sa halaga ng uri",
+ "prop_head.copy_id": "I-click para kopyahin ang numero"
+}

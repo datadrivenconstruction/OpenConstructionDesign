@@ -1,0 +1,6 @@
+{
+ "quick.keys.rec_hint": "Esc — отмена · Backspace — снять",
+ "quick.keys.row_lost": "{key} теперь у «{cmd}»",
+ "quick.keys.row_took": "{key} отнято у «{cmd}»",
+ "quick.keys.reset_tip": "Вернуть стандартное"
+}

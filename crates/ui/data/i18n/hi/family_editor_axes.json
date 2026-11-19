@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "X अक्ष",
+ "fe.axis.y": "Y अक्ष",
+ "fe.axis.z": "Z अक्ष",
+ "fe.col.axis": "अक्ष",
+ "fe.col.at": "स्थिति",
+ "fe.col.mode": "मोड",
+ "fe.mode.fixed": "स्थिर",
+ "fe.mode.free": "मुक्त",
+ "fe.types.inherited": "पैरामीटर से डिफ़ॉल्ट",
+ "fe.csv.more": "और CSV क्रियाएँ",
+ "fe.ref.selected": "तल: {name}"
+}

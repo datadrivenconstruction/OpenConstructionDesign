@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "Шинэ бүлэг",
+ "family_editor.open_tip": "Бүлэг эсвэл ноорог нээх",
+ "family_editor.close_named": "{name}-ийг хаах",
+ "family_editor.unsaved": "Хадгалаагүй өөрчлөлтүүд",
+ "family_editor.search": "Хайх",
+ "family_editor.nothing": "Юу ч олдсонгүй",
+ "family_editor.sec_families": "Төслийн бүлгүүд",
+ "family_editor.sec_drafts": "Ноорогууд",
+ "family_editor.cap_category": "Ангилал",
+ "family_editor.cap_host": "Хост",
+ "family_editor.cap_type": "Урьдчилсан харагдацын төрөл"
+}

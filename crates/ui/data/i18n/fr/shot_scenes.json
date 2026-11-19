@@ -1,0 +1,9 @@
+{
+ "shot_scenes.site": "Terrain",
+ "shot_scenes.lawn": "Pelouse",
+ "shot_scenes.pad": "Plot",
+ "shot_scenes.block": "Bloc",
+ "shot_scenes.void": "Vide",
+ "shot_scenes.tower": "Tour",
+ "shot_scenes.wall_void": "Vide de mur"
+}

@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "کنکشن",
+ "settings.ai_status_desc": "AI معاون جو ماڈل استعمال کرتا ہے؛ کلیدیں محفوظ اسٹور میں رہتی ہیں",
+ "settings.ai_not_connected": "منسلک نہیں",
+ "settings.ai_connect": "کنکشن کی ترتیبات",
+ "settings.ai_connect_desc": "آپ کے اپنے ماڈل کا پتہ، ماڈل اور کلید، کلاؤڈ یا لوکل",
+ "settings.ai_connect_btn": "کنکشن کی ترتیبات…",
+ "settings.ai_panel": "AI معاون پینل",
+ "settings.ai_panel_desc": "الفاظ میں پوچھیں، پلان کا جائزہ لیں، پھر لاگو کریں",
+ "settings.ai_open_panel": "AI پینل کھولیں"
+}

@@ -1,0 +1,10 @@
+{
+ "wall_stack.we.stack_caption": "סוג מורכב",
+ "wall_stack.we.side_left": "פאה שמאלית",
+ "wall_stack.we.side_right": "פאה ימנית",
+ "wall_stack.we.from": "מ",
+ "wall_stack.we.to": "עד",
+ "wall_stack.we.bottom": "תחתית",
+ "wall_stack.we.delete_tip": "מחק את הפרופיל הזה",
+ "wall_stack.we.from_after_to": "“מ” חייב להיות לפני “עד”"
+}

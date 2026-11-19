@@ -1,0 +1,5 @@
+{
+ "ai.plan.apply_n": "Aplică {n} acceptate",
+ "ai.plan.will_apply": "Vor fi aplicate {n} din {m} modificări",
+ "ai.plan.keys_hint": "J/K sau Alt+Sus/Jos mută · A acceptă · R respinge · Spațiu comută · Shift+A / Shift+R întregul grup · Ctrl+Enter aplică · Esc înapoi la vedere (păstrează ciorna)"
+}

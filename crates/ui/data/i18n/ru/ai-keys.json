@@ -1,0 +1,14 @@
+{
+ "ai_keys.header_is_key": "Ключи вводятся в поле «Ключ» — заголовки хранятся открытым текстом",
+ "ai_keys.move": "Перенести в «Ключ»",
+ "ai_keys.remove_line": "Убрать из заголовков",
+ "ai_keys.save_blocked": "Чтобы сохранить, перенесите ключ из заголовков",
+ "ai_keys.show": "Показать",
+ "ai_keys.hide": "Скрыть",
+ "ai_keys.copy": "Копировать",
+ "ai_keys.tokens": "токенов",
+ "ai_keys.presets": "Варианты",
+ "ai_keys.preset_k": "{n} тыс.",
+ "ai_keys.preset_m": "{n} млн",
+ "ai_keys.images_on": "Поддерживаются"
+}

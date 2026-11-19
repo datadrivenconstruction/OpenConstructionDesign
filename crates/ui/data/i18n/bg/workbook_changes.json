@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "Промените в работната книга не са приложени",
+ "workbook_changes.wb.body": "Затварянето или смяната на проекта ги премахва.",
+ "workbook_changes.wb.line": "Импорт от работна книга: {n} промени не са приложени",
+ "workbook_changes.wb.review": "Преглед",
+ "workbook_changes.wb.discard": "Отхвърляне"
+}

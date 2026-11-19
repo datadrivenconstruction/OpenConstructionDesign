@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "Käyttö kumottiin: malli ei vastannut esikatselua. {what}",
+ "xlsx_verify.not_written": "{row} ei muutettu.",
+ "xlsx_verify.lost": "{row} katosi.",
+ "xlsx_verify.not_deleted": "{row} ei poistettu.",
+ "xlsx_verify.extra_deleted": "{row} poistettiin, vaikka esikatselu säilyttää sen.",
+ "xlsx_verify.created": "{table}: {got} uutta, odotettiin {want}.",
+ "xlsx_verify.value": "{row}, {field}: odotettiin {want} (oli {old}), saatiin {got}.",
+ "xlsx_verify.check_failed": "Tulosta ei voitu tarkistaa: {e}",
+ "xlsx_verify.plan_failed": "Käyttöä ei aloitettu: tarkistus ei voinut lukea mallia ({e}).",
+ "xlsx_verify.take_back_failed": "Vaihetta ei voitu kumota ({e}): käytä Kumoa-toimintoa.",
+ "xlsx_verify.t.wall": "Seinä",
+ "xlsx_verify.t.opening": "Aukko",
+ "xlsx_verify.t.room": "Huone",
+ "xlsx_verify.t.slab": "Lattia",
+ "xlsx_verify.t.level": "Taso",
+ "xlsx_verify.t.wall_type": "Seinätyyppi",
+ "xlsx_verify.t.slab_type": "Lattiatyyppi",
+ "xlsx_verify.t.col": "Pilari",
+ "xlsx_verify.t.beam": "Palkki",
+ "xlsx_verify.t.roof": "Vesikatto",
+ "xlsx_verify.t.curtain_wall": "Verhoseinä"
+}

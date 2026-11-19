@@ -1,0 +1,4 @@
+{
+ "xl.msg.x_cells_above_the_header_on_sheet_x": "{} ćelija iznad zaglavlja na listu '{}'",
+ "xl.msg.book_changed_during_export": "radnu knjigu je tijekom izvoza spremio drugi program i nije prepisana; izvezite ponovno"
+}

@@ -1,0 +1,4 @@
+{
+ "tool.err.drawing_open": "Tegningslinjene rundt dette punktet lukker seg ikke til en sløyfe",
+ "tool.err.drawing_crossing": "Tegningssløyfen rundt dette punktet krysser seg selv"
+}

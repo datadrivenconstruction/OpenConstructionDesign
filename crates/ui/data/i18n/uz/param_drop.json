@@ -1,0 +1,8 @@
+{
+ "param_drop.title": "Parametr qiymatlari olib tashlansinmi?",
+ "param_drop.intro": "{name} endi quyidagi kategoriyalarga bog'lanmagan:",
+ "param_drop.line": "{category}: {values} olib tashlanadi",
+ "param_drop.undo": "Bitta Ctrl+Z ularning hammasini qaytaradi.",
+ "param_drop.confirm": "Qiymatlarni olib tashlash va saqlash",
+ "param_drop.cancel": "Bekor qilish"
+}

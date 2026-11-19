@@ -1,0 +1,9 @@
+{
+ "ai.plan.reject_ask": {
+  "one": "Reject # change?",
+  "other": "Reject # changes?"
+ },
+ "ai.plan.reject_ask.hint": "The draft and your check marks are dropped. The model stays as it is.",
+ "ai.plan.reject_confirm": "Reject",
+ "ai.plan.reject_keep": "Keep"
+}

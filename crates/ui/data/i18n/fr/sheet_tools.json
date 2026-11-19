@@ -1,0 +1,18 @@
+{
+ "undo.entry_later": "Non annulé : une autre modification a été faite après. Annulez-la d'abord.",
+ "undo.entry_gone": "Non annulé : cette modification est déjà annulée ou n'est plus dans l'historique.",
+ "undo.entry_busy": "Terminez ou annulez d'abord le dessin en cours, puis annulez.",
+ "quick.hud.more": "Autres dans Propriétés : {names}",
+ "sheet_tools.sheet.more": "Autres outils de feuille",
+ "job.of": "{d} sur {t}",
+ "job.of.mb": "{d} sur {t} Mo",
+ "job.left.under_minute": "moins d'une minute restante",
+ "job.left.minutes": "encore environ {n} min",
+ "sheet_tools.start.units": "Unités",
+ "sheet_tools.print.save": {
+  "one": "# feuille à enregistrer",
+  "other": "# feuilles à enregistrer"
+ },
+ "sheet_tools.sets.delete_ask": "Supprimer le jeu « {name} » ? Ses feuilles restent dans le projet.",
+ "sheet_tools.keep": "Garder"
+}

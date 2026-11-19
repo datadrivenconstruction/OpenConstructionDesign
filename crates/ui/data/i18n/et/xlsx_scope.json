@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "Eksport XLSX-tabelisse: ulatus",
+ "xlsx_scope.intro": "Vali, mis läheb töövihikusse. Selle tagasi importimine muudab ainult neid elemente.",
+ "xlsx_scope.base_whole": "Terve mudel",
+ "xlsx_scope.base_level": "Aktiivne korrus",
+ "xlsx_scope.base_selection": "Valik",
+ "xlsx_scope.categories": "Kategooriad",
+ "xlsx_scope.cat_walls": "seinad",
+ "xlsx_scope.cat_openings": "uksed",
+ "xlsx_scope.cat_rooms": "ruumid",
+ "xlsx_scope.cat_slabs": "plaadid",
+ "xlsx_scope.cat_curtains": "klaasfassaadid",
+ "xlsx_scope.nothing_selected": "Midagi pole valitud: vali kõigepealt elemendid või vali teine ulatus.",
+ "xlsx_scope.no_categories": "Märgi vähemalt üks kategooria.",
+ "xlsx_scope.no_level": "Aktiivset korrust ei leitud.",
+ "xlsx_scope.export": "Ekspordi",
+ "xlsx_scope.preview_scope": "Eksporditav ulatus: {scope}. Selle väliseid elemente ei muudeta ega kustutata kunagi."
+}

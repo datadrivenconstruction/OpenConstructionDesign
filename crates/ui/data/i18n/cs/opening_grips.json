@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "Překlopit stranu závěsu",
+ "cmd.edit.flip_hand.desc": "Zrcadlí vybrané dveře a okna podél stěny, takže se závěsy přesunou na druhý konec otvoru.",
+ "cmd.edit.flip_facing": "Překlopit stranu otevření",
+ "cmd.edit.flip_facing.desc": "Otočí vybrané dveře a okna na druhou stranu stěny.",
+ "opening_grips.flip_hand": "Překlopit závěs",
+ "opening_grips.flip_hand.tip": "Závěsy na druhý konec otvoru (Shift+F)",
+ "opening_grips.flip_facing": "Překlopit stranu",
+ "opening_grips.flip_facing.tip": "Otevření na druhou stranu stěny (Shift+G)",
+ "opening_grips.flip.done": "Překlopeno: {n}",
+ "opening_grips.flip.none": "Vyberte dveře nebo okno k překlopení",
+ "opening_grips.flip.fail": "Nepřeklopeno: {why}"
+}

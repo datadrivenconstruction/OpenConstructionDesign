@@ -1,0 +1,10 @@
+{
+ "ai.optx.applied": "Vaihtoehto \"{name}\" käytetty. Kumoaminen palauttaa sen luonnokseksi",
+ "ai.optx.missing": "Vaihtoehtoa {id} ei enää ole",
+ "ai.optx.accepted": "Vaihtoehto {id} on jo käytetty",
+ "ai.optx.not_draft": "Vaihtoehto {id} hylättiin, eikä sitä voi käyttää",
+ "ai.optx.stale": "Malli muuttui vaihtoehdon {id} tekemisen jälkeen: luo se ensin uudelleen",
+ "ai.optx.bad_recipe": "Vaihtoehdon reseptiä ei voi lukea: {e}",
+ "ai.optx.refused": "Vaihtoehtoa ei käytetty ({code}): {reason}",
+ "ai.optx.failed": "Vaihtoehtoa ei käytetty: {e}"
+}

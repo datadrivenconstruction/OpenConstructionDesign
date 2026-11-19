@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "Error de autoguardado; los últimos cambios no están protegidos. {why}",
+ "autosave_status.autosave_open": "Ajustes de autoguardado",
+ "autosave_status.autosave_recovered": "El autoguardado vuelve a funcionar.",
+ "autosave_status.autosave_reason": "Motivo: {why}"
+}

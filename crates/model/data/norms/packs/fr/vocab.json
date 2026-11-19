@@ -1,0 +1,43 @@
+{
+ "room_kinds": {
+  "living": [
+   "séjour",
+   "sejour",
+   "salon",
+   "salle de séjour"
+  ],
+  "bedroom": [
+   "chambre"
+  ],
+  "kitchen": [
+   "cuisine"
+  ],
+  "bath": [
+   "salle de bain",
+   "salle d'eau"
+  ],
+  "wc": [
+   "wc",
+   "toilettes"
+  ],
+  "hall": [
+   "entrée",
+   "entree"
+  ],
+  "corridor": [
+   "couloir",
+   "dégagement"
+  ],
+  "storage": [
+   "cellier",
+   "rangement",
+   "placard"
+  ],
+  "office": [
+   "bureau"
+  ],
+  "meeting": [
+   "salle de réunion"
+  ]
+ }
+}

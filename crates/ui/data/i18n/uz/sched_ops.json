@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "qiymat noldan katta bo'lishi kerak",
+ "sched_ops.not_number": "son emas",
+ "sched_ops.no_host": "tayanch devor yo'q",
+ "sched_ops.wall_length": "bu devor uzunligini shunday o'rnatib bo'lmaydi",
+ "sched_ops.no_wall": "bunday devor yo'q",
+ "sched_ops.no_opening": "bunday teshik yo'q",
+ "sched_ops.no_curtain": "bunday parda devor yo'q",
+ "sched_ops.no_panel": "bunday panel yo'q",
+ "sched_ops.no_slab": "bunday plita yo'q",
+ "sched_ops.no_room": "bunday xona yo'q",
+ "sched_ops.slope_range": "nishablik diapazondan tashqarida",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D",
+ "phases.current_mark": "τρέχον",
+ "phases.make_current": "Ορισμός ως τρέχον",
+ "phases.col_phase": "Φάση",
+ "phases.col_filter": "Φίλτρο",
+ "phases.presets": "Προκαθορισμένα κάτοψης",
+ "phases.del_title": "Διαγραφή φάσης",
+ "phases.del_text": "Διαγραφή της φάσης «{name}»; Τα στοιχεία της μεταφέρονται στη φάση που επιλέγεται παρακάτω.",
+ "phases.del_into": "Μετακίνηση στοιχείων σε",
+ "phases.del_ok": "Διαγραφή",
+ "phases.col_kind": "Τύπος στοιχείου",
+ "phases.col_count": "Πλήθος",
+ "phases.col_volume": "Όγκος"
+}

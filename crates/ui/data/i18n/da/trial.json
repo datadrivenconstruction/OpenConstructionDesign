@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "Punkt",
+ "trial.field.distance": "Afstand",
+ "trial.field.target": "Element",
+ "trial.refused": "{field}: {reason}. Ændr det for at anvende",
+ "trial.preview_off": "Forhåndsvisning fra: model for stor"
+}

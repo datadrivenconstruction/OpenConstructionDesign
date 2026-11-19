@@ -1,0 +1,9 @@
+{
+ "ai.plan.reject_ask": {
+  "one": "Rifiutare # modifica?",
+  "other": "Rifiutare # modifiche?"
+ },
+ "ai.plan.reject_ask.hint": "La bozza e i segni di spunta vengono scartati. Il modello resta com'è.",
+ "ai.plan.reject_confirm": "Rifiuta",
+ "ai.plan.reject_keep": "Mantieni"
+}

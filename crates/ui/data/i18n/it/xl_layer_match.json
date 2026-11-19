@@ -1,0 +1,4 @@
+{
+ "xl.msg.layer_cells_unplaced": "{} celle del tipo '{}' strato {} sulla tavola '{}' non sono state posizionate",
+ "xl.msg.layer_hidden_unplaced": "riga nascosta del tipo '{}' strato {} sulla tavola '{}' non è stata posizionata"
+}

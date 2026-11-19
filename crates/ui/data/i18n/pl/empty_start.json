@@ -1,0 +1,8 @@
+{
+ "empty.start_recent.title": "Brak ostatnich projektów",
+ "empty.start_recent.hint": "Projekty, które otworzysz, pojawią się tutaj. Zacznij od przykładowego modelu.",
+ "empty.start_recent.action": "Otwórz przykład",
+ "start.recent_open_file": "Otwórz plik…",
+ "start.forgot": "Usunięto z ostatnich: {name}",
+ "start.forgot_undo": "Cofnij"
+}

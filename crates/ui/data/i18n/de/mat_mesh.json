@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "Importierte Netze",
+ "mat_mesh.mesh.none_selected": "Wählen Sie importierte Netze in der 3D-Ansicht, um ihnen dieses Material zuzuweisen.",
+ "mat_mesh.mesh.current": "Erstes ausgewähltes Netz: {material}",
+ "mat_mesh.mesh.current_none": "Das erste ausgewählte Netz hat kein Material.",
+ "mat_mesh.mesh.assign": "Auf {n} Ausgewählte anwenden",
+ "mat_mesh.mesh.assign_tip": "Der Stil „Realistisch“ zeigt die Textur dieses Materials auf den ausgewählten Netzen",
+ "mat_mesh.mesh.assign_cat": "Auf Kategorie {category} anwenden",
+ "mat_mesh.mesh.assign_cat_tip": "Jedes importierte Netz dieser Kategorie ohne eigenes Material",
+ "mat_mesh.mesh.clear": "Auswahl leeren",
+ "mat_mesh.mesh.clear_tip": "Ausgewählte Netze kehren zum Material ihrer Kategorie oder zur einfachen Farbe zurück",
+ "mat_mesh.mesh.clear_cat": "Kategorie leeren"
+}

@@ -1,0 +1,50 @@
+id = "H13_zh_museum_freeform"
+tier = "hard"
+group = "Free-form shapes"
+title = "Free-form museum (Chinese)"
+lang = "zh"
+base = "empty"
+
+[[turn]]
+say = "设计一座艺术博物馆，外壳是流线型的双向曲面，像波浪一样，外墙和屋顶都没有直线。内部有高大的中庭，五到六个大小不同的展厅，咖啡厅、商店、办公室和库房。总面积约8000平方米，三层。玻璃幕墙顺着曲面。请直接建模。"
+
+[[oracle.count]]
+spec = "level"
+min = 2.0
+
+[[oracle.count]]
+spec = "doubly"
+min = 10.0
+
+[[oracle.count]]
+spec = "curved"
+min = 40.0
+
+[[oracle.count]]
+spec = "roof+shell_elem+freeform+gridshell"
+min = 1.0
+
+[[oracle.count]]
+spec = "room"
+min = 12.0
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1
+"IfcWall" = 1
+"IfcSlab" = 1
+"IfcRoof" = 1
+
+[[oracle.geom]]
+kind = "double_curve"
+min = 0.05
+
+[[oracle.geom]]
+kind = "free_ends"
+max = 0.0
+
+[[oracle.geom]]
+kind = "ifc_wellformed"
+
+[[oracle.geom]]
+kind = "gaussian_curve"
+share_min = 0.3

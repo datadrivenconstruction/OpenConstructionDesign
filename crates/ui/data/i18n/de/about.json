@@ -1,0 +1,33 @@
+{
+ "cmd.help.licenses": "Open-Source-Lizenzen",
+ "cmd.help.licenses.desc": "Listet die in diesem Build verwendeten Open-Source-Bibliotheken mit ihren Lizenzen auf.",
+ "about.product": "OpenConstructionDesign",
+ "about.version": "Version",
+ "about.build": "Build",
+ "about.schema": "Modellschema",
+ "about.system": "System",
+ "about.gpu": "Grafikadapter",
+ "about.language": "Sprache",
+ "about.copy": "Versionsinfo kopieren",
+ "about.copy_desc": "Version, Build, System und Grafikadapter für einen Fehlerbericht. Ohne Dateipfade.",
+ "about.copied": "Versionsinfo kopiert",
+ "about.licenses": "Open-Source-Lizenzen",
+ "about.licenses_desc": "Bibliotheken dieses Builds und ihre Lizenzen",
+ "about.licenses.open": "Anzeigen",
+ "about.licenses.title": "Open-Source-Lizenzen",
+ "about.licenses.note": "OpenConstructionDesign enthält die folgenden Bibliotheken. Jede unterliegt weiterhin ihrer eigenen Lizenz und ihrem Copyright-Hinweis. Vollständige Lizenztexte: THIRD_PARTY_LICENSES.txt neben der Anwendung.",
+ "about.licenses.full": "Vollständige Lizenztexte",
+ "about.licenses.list": "Komponentenliste",
+ "about.licenses.close": "Schließen",
+ "about.licenses.col_name": "Komponente",
+ "about.licenses.col_license": "Lizenz",
+ "about.licenses.count": {
+  "one": "# Komponente",
+  "other": "# Komponenten"
+ },
+ "about.licenses.count_of": "{shown} von {total} Komponenten",
+ "about.licenses.search_hint": "Nach Name oder Lizenz suchen…",
+ "about.licenses.search_clear": "Suche löschen",
+ "about.licenses.none": "Nichts gefunden",
+ "about.licenses.none_hint": "Versuchen Sie einen Teil eines Bibliotheksnamens oder eine Lizenz wie MIT."
+}

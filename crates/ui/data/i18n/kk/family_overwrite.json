@@ -1,0 +1,16 @@
+{
+ "family_overwrite.ow.title": "Жоба түрлерінің мәндерін ауыстырасыз ба?",
+ "family_overwrite.ow.body": "Жүктеу {types} түріндегі {values} ауыстырады. Осы түрлердегі орналастырылған элементтер: {instances}.",
+ "family_overwrite.ow.values": {
+  "one": "# мән",
+  "other": "# мән"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# түр",
+  "other": "# түр"
+ },
+ "family_overwrite.ow.list": "Түрлер: {list}",
+ "family_overwrite.ow.more": "және тағы {n}",
+ "family_overwrite.ow.back": "Өңдеуге оралу",
+ "family_overwrite.ow.replace": "Мәндерді ауыстыру"
+}

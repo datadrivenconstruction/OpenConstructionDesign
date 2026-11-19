@@ -1,0 +1,6 @@
+{
+ "project_seed.seed_level": "レベル 1",
+ "project_seed.seed_wall_partition": "間仕切り壁 100",
+ "project_seed.seed_wall_masonry": "組積壁 200",
+ "project_seed.seed_wall_exterior": "外壁 380"
+}

@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "نقطہ",
+ "trial.field.distance": "فاصلہ",
+ "trial.field.target": "عنصر",
+ "trial.refused": "{field}: {reason}۔ لاگو کرنے کے لیے بدلیں",
+ "trial.preview_off": "پیش نظارہ بند: ماڈل بہت بڑا ہے"
+}

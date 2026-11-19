@@ -1,0 +1,4 @@
+{
+ "xl.msg.x_formulas_in_column_x_on_sheet_x_replaced_by_values": "{} 个公式，列“{}”，图纸“{}”已替换为数值",
+ "xl.msg.formula_in_a_model_column_not_applied": "模型列中的公式：其结果未应用，保留模型值；输入数值即可更改"
+}

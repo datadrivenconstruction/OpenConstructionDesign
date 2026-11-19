@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "Попередній перегляд",
+ "agent_draft.ag.preview.desc": "Поки вказівник на кнопці, обводить елементи цієї чернетки на полотні. Нічого не змінюється.",
+ "agent_draft.type.column": "Колона",
+ "agent_draft.type.roof": "Дах",
+ "agent_draft.type.ceiling": "Стеля",
+ "agent_draft.type.stair": "Монолітні",
+ "agent_draft.type.railing": "Огорожа",
+ "agent_draft.type.shaft": "Шахта",
+ "agent_draft.type.axis": "Вісь 6,5 мм",
+ "agent_draft.type.refplane": "Опорна площина"
+}

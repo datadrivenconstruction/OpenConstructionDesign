@@ -1,0 +1,14 @@
+{
+ "dwg_table.copy": "Копиране на таблицата",
+ "dwg_table.copy_tip": "Копира количествената справка по слоеве като таблица за електронна таблица",
+ "dwg_table.copied": "Количествената справка е копирана (с разделител табулация)",
+ "dwg_table.total": "Общо",
+ "dwg_table.col.layer": "Слой",
+ "dwg_table.col.count": "Брой",
+ "dwg_table.col.len": "Дължина, {unit}",
+ "dwg_table.col.area": "Площ, {unit}",
+ "dwg_table.unit.mm": "mm",
+ "dwg_table.unit.m2": "m²",
+ "dwg_table.unit.ft": "ft",
+ "dwg_table.unit.ft2": "ft²"
+}

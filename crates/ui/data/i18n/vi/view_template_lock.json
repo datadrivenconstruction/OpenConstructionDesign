@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "Do mẫu {name} kiểm soát",
+ "view_template.edit_template": "Sửa mẫu",
+ "view_template.locked_tip": "Đặt bởi mẫu góc nhìn {name}. Hãy đổi trong mẫu.",
+ "view_template.no_filters": "Không có bộ lọc trong góc nhìn này"
+}

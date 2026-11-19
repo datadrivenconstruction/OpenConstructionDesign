@@ -1,0 +1,7 @@
+{
+ "project_unsaved.unsaved.model": "Thay đổi mô hình chưa được lưu.",
+ "project_unsaved.unsaved.drawings": {
+  "one": "# bản vẽ đã đặt chưa được lưu trong dự án: các thay đổi sẽ bị mất.",
+  "other": "# bản vẽ đã đặt chưa được lưu trong dự án: các thay đổi sẽ bị mất."
+ }
+}

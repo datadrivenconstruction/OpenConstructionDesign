@@ -1,0 +1,11 @@
+{
+ "materials.mat.name_empty": "Enter a material name",
+ "materials.mat.empty_title": "No materials yet",
+ "materials.mat.empty_hint": "Type a name below and press Add",
+ "materials.mat.nothing_hint": "No material matches the search",
+ "materials.mat.clear_search": "Clear search",
+ "materials.mat.replace_with": "Replace with",
+ "materials.mat.delete_refused": "Cannot delete: the material is used in {n} places. Replace it first.",
+ "materials.mat.delete_confirm": "Delete material “{name}”? You can undo this.",
+ "materials.mat.replace_confirm": "Replace “{from}” with “{to}” in {n} elements? “{from}” is removed. You can undo this."
+}

@@ -1,0 +1,3 @@
+{
+ "sched_edit.refused": "第 {row} 行，{col}：{why}"
+}

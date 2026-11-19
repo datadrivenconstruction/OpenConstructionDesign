@@ -1,0 +1,22 @@
+{
+ "depth.chip": "Dybde {level}",
+ "depth.chip_tip": "Hvor langt neste kjøring arbeider prosjektet ut: D1 konsept til D5 fabrikasjon, per fag",
+ "depth.all_off": "alle fag av",
+ "depth.disc.arch": "Arkit.",
+ "depth.disc.struct": "Konstr.",
+ "depth.disc.mep": "MEP",
+ "depth.disc.doc": "Dok.",
+ "depth.project": "Prosjektdybde",
+ "depth.level.1": "D1 Konsept: volum, etasjer, arealer, ett ark",
+ "depth.level.2": "D2 Skisse: vegger, rom etter program, åpninger, akser, planer",
+ "depth.level.3": "D3 Prosjektering: lagdelte typer, dimensjonert konstruksjon, VVS-hovedledninger og terminaler, lister",
+ "depth.level.4": "D4 Arbeidstegning: knutepunktdetaljer, beslag, overflater, armering, grener",
+ "depth.level.5": "D5 Fabrikasjon: bøyelister, stålforbindelser, prefab, materialliste",
+ "depth.as_project": "Samme",
+ "depth.estimate": "Anslag: ca. {elements} elementer, {minutes} min, {tokens} tokens i {calls} kall, {sheets} ark",
+ "depth.estimate_none": "Anslaget kommer med det utarbeidede prosjektet: modellen er fortsatt tom",
+ "depth.heat": "Dybdekart",
+ "depth.heat.row": "Dybde",
+ "depth.settings": "Prosjekteringsdybde for dette prosjektet",
+ "depth.settings_desc": "Dybden AI-assistenten arbeider til, D1 til D5, med en bryter og egen dybde per fag; lagres i prosjektfilen"
+}

@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "Ілгек жағын аудару",
+ "cmd.edit.flip_hand.desc": "Таңдалған есіктер мен терезелерді қабырға бойымен айнадағыдай аударады, сонда ілгектер ашылудың басқа шетіне көшеді.",
+ "cmd.edit.flip_facing": "Ашылу жағын аудару",
+ "cmd.edit.flip_facing.desc": "Таңдалған есіктер мен терезелерді қабырғаның басқа жағына аударады.",
+ "opening_grips.flip_hand": "Ілгекті аудару",
+ "opening_grips.flip_hand.tip": "Ілгектер ашылудың басқа шетіне көшеді (Shift+F)",
+ "opening_grips.flip_facing": "Жағын аудару",
+ "opening_grips.flip_facing.tip": "Қабырғаның басқа жағына ашылу (Shift+G)",
+ "opening_grips.flip.done": "Аударылды: {n}",
+ "opening_grips.flip.none": "Аудару үшін есікті немесе терезені таңдаңыз",
+ "opening_grips.flip.fail": "Аударылмады: {why}"
+}

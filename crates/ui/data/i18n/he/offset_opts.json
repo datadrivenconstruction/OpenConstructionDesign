@@ -1,0 +1,7 @@
+{
+ "offset_opts.dist_positive": "מרחק ההיסט חייב להיות גדול מאפס; הצד עוקב אחרי הסמן",
+ "offset_opts.count_bad": "מספר שלם מ-{min} עד {max}",
+ "offset_opts.done_tip": "סיים את הבחירה והפעל את הכלי",
+ "offset_opts.iso.apply_tip": "הפוך את ההסתרה הזמנית לקבועה במבט הזה",
+ "offset_opts.iso.exit": "צא ממצב זמני"
+}

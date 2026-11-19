@@ -1,0 +1,58 @@
+id = "H06_museum_freeform__es"
+tier = "hard"
+group = "Free-form shapes"
+title = "Free-form museum with double-curved shell (es)"
+lang = "es"
+base = "empty"
+
+[[turn]]
+say = "Un museo de arte con una envolvente escultórica fluida: los muros exteriores y la cubierta están curvados en dos direcciones como una ola, sin muros exteriores rectos. En el interior un atrio alto, cinco o seis galerías de distintos tamaños, una cafetería, una tienda, oficinas y almacén. Unos 8000 m2 en tres niveles. El acristalamiento sigue las curvas."
+
+[[oracle.count]]
+spec = "level"
+min = 2.0
+
+[[oracle.count]]
+spec = "room:gallery|exhibit|hall"
+min = 4.0
+
+[[oracle.count]]
+spec = "room:atrium|foyer|lobby"
+min = 1.0
+
+[[oracle.count]]
+spec = "doubly"
+min = 10.0
+
+[[oracle.count]]
+spec = "curved"
+min = 40.0
+
+[[oracle.count]]
+spec = "roof+shell_elem+freeform+gridshell"
+min = 1.0
+
+[[oracle.count]]
+spec = "room"
+min = 12.0
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1
+"IfcWall" = 1
+"IfcSlab" = 1
+"IfcRoof" = 1
+
+[[oracle.geom]]
+kind = "double_curve"
+min = 0.05
+
+[[oracle.geom]]
+kind = "free_ends"
+max = 0.0
+
+[[oracle.geom]]
+kind = "ifc_wellformed"
+
+[[oracle.geom]]
+kind = "gaussian_curve"
+share_min = 0.3

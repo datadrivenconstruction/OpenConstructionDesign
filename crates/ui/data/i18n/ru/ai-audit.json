@@ -1,0 +1,19 @@
+{
+ "ai.audit.tokens": "{n} ток.",
+ "ai.audit.filter.all": "Все",
+ "ai.audit.filter.ai": "ИИ",
+ "ai.audit.filter.me": "Мои",
+ "ai.audit.search": "Поиск по изменениям",
+ "ai.audit.search.clear": "Очистить поиск",
+ "ai.audit.show_all": "Показать все",
+ "ai.audit.empty.hint": "Здесь появятся изменения, которые подготовила или применила модель или агент, с возможностью их отменить.",
+ "ai.audit.no_match": "Нет изменений под этот фильтр.",
+ "ai.audit.show.tip": "Выделить и показать элементы, которые затронуло это изменение",
+ "ai.audit.revert.ask": "Вернуть «{what}»? {change}.",
+ "ai.audit.revert.elements": {"one": "Изменится # элемент", "few": "Изменятся # элемента", "many": "Изменятся # элементов", "other": "Изменятся # элемента"},
+ "ai.audit.revert.keeps": "Более новые изменения останутся. Возврат — один шаг отмены.",
+ "ai.audit.cancel": "Отмена",
+ "ai.audit.toast.reverted": "Возвращено: {what}",
+ "ai.audit.toast.undone": "Отменено: {what}",
+ "ai.audit.redo": "Повторить"
+}

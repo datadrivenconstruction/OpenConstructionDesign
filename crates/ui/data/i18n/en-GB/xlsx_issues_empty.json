@@ -1,0 +1,8 @@
+{
+ "xlsx_issues.empty_title": "Empty sheet in the workbook",
+ "xlsx_issues.empty_kept": "Sheet {sheet} is empty: nothing was read from it, {n} elements stay as they are. Other sheets can still be applied.",
+ "xlsx_issues.empty_none": "Sheet {sheet} is empty: nothing was read from it. Other sheets can still be applied.",
+ "xlsx_issues.unreadable_title": "Sheet could not be read",
+ "xlsx_issues.unreadable": "Sheet {sheet} could not be read, its part of the file is damaged: nothing was taken from it and its elements stay as they are. Other sheets can still be applied.",
+ "xlsx_issues.formulas": "The formulas on sheet {sheet} could not be read, so a calculated value cannot be told from an edit: nothing was taken from this sheet. Other sheets can still be applied."
+}

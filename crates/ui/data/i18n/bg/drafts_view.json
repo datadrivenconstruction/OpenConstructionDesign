@@ -1,0 +1,9 @@
+{
+ "drafts.draft.view": "Графика на изглед „{name}“",
+ "drafts.draft.filter": "Филтър на изглед „{name}“",
+ "drafts.draft.filter_new": "Нов филтър на изглед",
+ "drafts.draft.object_styles": "Стилове на обекти",
+ "drafts.draft.material": "Материал „{name}“",
+ "drafts.draft.type": "Тип „{name}“",
+ "drafts.draft.params": "Параметри на семейство „{name}“"
+}

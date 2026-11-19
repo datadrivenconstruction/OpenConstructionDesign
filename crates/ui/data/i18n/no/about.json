@@ -1,0 +1,33 @@
+{
+ "cmd.help.licenses": "Åpen kildekode-lisenser",
+ "cmd.help.licenses.desc": "Viser åpen kildekode-bibliotekene som brukes i dette bygget, med lisensene deres.",
+ "about.product": "DDC Editor",
+ "about.version": "Versjon",
+ "about.build": "Bygg",
+ "about.schema": "Modellskjema",
+ "about.system": "System",
+ "about.gpu": "Grafikkadapter",
+ "about.language": "Språk",
+ "about.copy": "Kopier versjonsinfo",
+ "about.copy_desc": "Versjon, bygg, system og grafikkadapter for en feilrapport. Ingen filstier.",
+ "about.copied": "Versjonsinfo kopiert",
+ "about.licenses": "Åpen kildekode-lisenser",
+ "about.licenses_desc": "Biblioteker brukt i dette bygget og deres lisenser",
+ "about.licenses.open": "Vis",
+ "about.licenses.title": "Åpen kildekode-lisenser",
+ "about.licenses.note": "DDC Editor inneholder bibliotekene nedenfor. Hvert av dem er fortsatt underlagt sin egen lisens og copyright-merknad. Fullstendige lisenstekster: THIRD_PARTY_LICENSES.txt ved siden av programmet.",
+ "about.licenses.full": "Fullstendige lisenstekster",
+ "about.licenses.list": "Komponentliste",
+ "about.licenses.close": "Lukk",
+ "about.licenses.col_name": "Komponent",
+ "about.licenses.col_license": "Lisens",
+ "about.licenses.count": {
+  "one": "# komponent",
+  "other": "# komponenter"
+ },
+ "about.licenses.count_of": "{shown} av {total} komponenter",
+ "about.licenses.search_hint": "Søk etter navn eller lisens…",
+ "about.licenses.search_clear": "Fjern søk",
+ "about.licenses.none": "Ingen treff",
+ "about.licenses.none_hint": "Prøv en del av et biblioteksnavn eller en lisens som MIT."
+}

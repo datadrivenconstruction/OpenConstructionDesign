@@ -1,0 +1,8 @@
+{
+ "ai_sent.summary": "Data projektu v tomto požadavku: zpráv {messages}, výsledků nástrojů {tools}, obrázků {images}",
+ "ai_sent.copy": "Kopírovat",
+ "ai_sent.filter": "Hledat v odeslaných požadavcích",
+ "ai_sent.no_match": "Žádný požadavek neodpovídá.",
+ "ai_sent.instructions": "Pokyny a nástroje",
+ "ai_sent.local_note": "Uchováno jen na tomto počítači, pro tuto relaci. Klíče a hesla se nikdy nezobrazují."
+}

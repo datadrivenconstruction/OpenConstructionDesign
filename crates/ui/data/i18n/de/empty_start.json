@@ -1,0 +1,8 @@
+{
+ "empty.start_recent.title": "Noch keine zuletzt verwendeten Projekte",
+ "empty.start_recent.hint": "Geöffnete Projekte erscheinen hier. Beginnen Sie mit dem Beispielmodell.",
+ "empty.start_recent.action": "Beispiel öffnen",
+ "start.recent_open_file": "Datei öffnen…",
+ "start.forgot": "Aus den zuletzt verwendeten entfernt: {name}",
+ "start.forgot_undo": "Rückgängig"
+}

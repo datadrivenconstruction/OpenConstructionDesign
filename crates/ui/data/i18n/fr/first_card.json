@@ -1,0 +1,9 @@
+{
+ "first_card.card.title": "Essayez l'aller-retour avec un tableur",
+ "first_card.card.step1": "Sélectionnez un mur",
+ "first_card.card.step2": "Modifiez l'une de ses propriétés",
+ "first_card.card.step3": "Modifiez dans un tableur, vérifiez l'aperçu, puis Appliquer",
+ "first_card.card.spreadsheet": "Modifier dans un tableur",
+ "first_card.card.skip": "Passer",
+ "first_card.card.done": "Terminé : le modèle et le classeur concordent"
+}

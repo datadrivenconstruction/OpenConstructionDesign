@@ -1,0 +1,9 @@
+{
+ "ai.settings.num_bad": "Son emas. 0.5 kabi yozing.",
+ "ai.settings.num_comma": "Kasr belgisi sifatida nuqtadan foydalaning, masalan 0.5.",
+ "ai.settings.num_negative": "Son manfiy bo'lishi mumkin emas.",
+ "ai.settings.unit_money": "valyuta",
+ "ai.settings.unit_tokens": "token",
+ "ai.settings.unit_price": "1M token uchun",
+ "ai.settings.limits_hint": "0 — chegarasiz. Rad etilgan qiymat oldingi chegarani saqlab qoladi."
+}

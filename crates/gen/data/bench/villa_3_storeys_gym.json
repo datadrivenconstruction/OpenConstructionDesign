@@ -1,0 +1,48 @@
+{
+ "schema": "gen_bench.v1",
+ "group": "villa",
+ "spec": {
+  "typology": "house",
+  "floors": 3,
+  "rooms": [
+   {
+    "kind": "living",
+    "area": 40
+   },
+   {
+    "kind": "kitchen",
+    "area": 16
+   },
+   {
+    "kind": "gym",
+    "area": 20
+   },
+   {
+    "kind": "bedroom",
+    "area": 16,
+    "count": 4
+   },
+   {
+    "kind": "bath",
+    "area": 6,
+    "count": 2
+   },
+   {
+    "kind": "wc",
+    "area": 2
+   }
+  ]
+ },
+ "adjacency": [
+  [
+   "kitchen",
+   "living",
+   3
+  ],
+  [
+   "bedroom",
+   "bath",
+   2
+  ]
+ ]
+}

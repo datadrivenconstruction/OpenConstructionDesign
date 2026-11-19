@@ -1,0 +1,14 @@
+{
+ "ai_keys.header_is_key": "Ključevi idu u polje Ključ — zaglavlja se spremaju u običnom tekstu",
+ "ai_keys.move": "Premjesti u Ključ",
+ "ai_keys.remove_line": "Ukloni iz zaglavlja",
+ "ai_keys.save_blocked": "Za spremanje premjesti ključ iz zaglavlja",
+ "ai_keys.show": "Prikaži",
+ "ai_keys.hide": "Sakrij",
+ "ai_keys.copy": "Kopiraj",
+ "ai_keys.tokens": "tokeni",
+ "ai_keys.presets": "Predlošci",
+ "ai_keys.preset_k": "{n}k",
+ "ai_keys.preset_m": "{n}M",
+ "ai_keys.images_on": "Podržano"
+}

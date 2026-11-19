@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "Uvezene mreže",
+ "mat_mesh.mesh.none_selected": "Odaberite uvezene mreže u 3D pogledu da im dodijelite ovaj materijal.",
+ "mat_mesh.mesh.current": "Prva odabrana mreža: {material}",
+ "mat_mesh.mesh.current_none": "Prva odabrana mreža nema materijala.",
+ "mat_mesh.mesh.assign": "Dodijeli {n} odabranih",
+ "mat_mesh.mesh.assign_tip": "Realistični stil prikazuje teksturu ovog materijala na odabranim mrežama",
+ "mat_mesh.mesh.assign_cat": "Dodijeli kategoriji {category}",
+ "mat_mesh.mesh.assign_cat_tip": "Svaka uvezena mreža te kategorije bez vlastitog materijala",
+ "mat_mesh.mesh.clear": "Očisti odabrane",
+ "mat_mesh.mesh.clear_tip": "Odabrane mreže vraćaju se na materijal kategorije ili običnu boju",
+ "mat_mesh.mesh.clear_cat": "Očisti kategoriju"
+}

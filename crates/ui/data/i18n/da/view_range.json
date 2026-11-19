@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "Visningsområde",
+ "view_range.range": "Visningsområde",
+ "view_range.cut": "Snitplan",
+ "view_range.bottom": "Underside",
+ "view_range.depth": "Visningsdybde",
+ "view_range.cut.hint": "Højde for snitplanen over etagen. Elementer der krydser den tegnes skåret.",
+ "view_range.bottom.hint": "Underkant af området i forhold til etagen. Nul eller negative værdier er tilladt.",
+ "view_range.depth.hint": "Hvor langt visningen ser under undersiden. Nul eller mere.",
+ "view_range.err.number": "Angiv en længde i hvert felt",
+ "view_range.err.not_finite": "Angiv en længde i hvert felt",
+ "view_range.err.cut_not_above_bottom": "Snitplanen skal være over undersiden",
+ "view_range.err.negative_depth": "Visningsdybden kan ikke være negativ",
+ "view_range.err.top_below_cut": "Toppen af området må ikke være under snitplanen"
+}

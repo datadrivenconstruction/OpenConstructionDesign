@@ -1,0 +1,19 @@
+{
+ "ifc_patch.fallback.source_changed": "Patch non usata: il file di origine è cambiato su disco o non si può leggere. Il file è stato riscritto dal modello.",
+ "ifc_patch.fallback.sources": "Patch non usata: il progetto non ha esattamente un'origine. Il file è stato riscritto dal modello.",
+ "ifc_patch.fallback.schema": "Patch non usata: lo schema del file di origine non è supportato. Il file è stato riscritto dal modello.",
+ "ifc_patch.fallback.structure": "Patch non usata: la struttura del file di origine non è affidabile. Il file è stato riscritto dal modello.",
+ "ifc_patch.fallback.edit": "Patch non usata: una modifica non può essere applicata in sicurezza al file di origine. Il file è stato riscritto dal modello.",
+ "ifc_patch.reason.schema": "Lo schema del file sorgente non può contenere questa modifica; l'elemento resta come nel sorgente",
+ "ifc_patch.reason.prop": "Questa modifica di proprietà non può essere espressa nel file di origine; il valore resta come nell'origine",
+ "ifc_patch.reason.no_export": "Questo nuovo elemento non ha una rappresentazione in IFC",
+ "ifc_patch.reason.link": "L'elemento è nel file, ma il collegamento al suo materiale o tipo non viene scritto; è elencato come non scritto",
+ "ifc_patch.drop": "Scarta",
+ "ifc_patch.drop_done": "Collegamenti in attesa scartati: {n}; non vengono più ritentati",
+ "ifc_patch.fallback.building": "Patch non usata: un nuovo livello richiede esattamente un edificio nel file di origine, e ne ha nessuno o più d'uno. Il file è stato riscritto dal modello.",
+ "ifc_patch.fallback.types": "Patch non usata: livelli, tipi o materiali sono cambiati dall'importazione, e la patch non può scriverli. Il file è stato riscritto dal modello.",
+ "ifc_patch.fallback.zipped": "Patch non usata: un file di origine compresso non può essere patchato. Il file è stato riscritto dal modello.",
+ "ifc_patch.fallback.source_kept": "Il file di origine non è stato sovrascritto: questo salvataggio non può sostituirlo con sicurezza. Questo salvataggio è una copia accanto ad esso.",
+ "ifc_patch.fallback.nested": "Patch non usata: un nuovo elemento ha parti annidate (come i port), che la patch non può scrivere. Il file è stato riscritto dal modello.",
+ "ifc_patch.fallback.shared_part": "Patch non usata: una parte di una scala o rampa modificata è usata anche da un altro elemento o relazione, che la patch non può gestire. Il file è stato riscritto dal modello."
+}

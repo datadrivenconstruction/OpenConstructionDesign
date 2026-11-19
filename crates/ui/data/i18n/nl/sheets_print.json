@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "Vorig blad (Page Up)",
+ "sheets.print.next": "Volgend blad (Page Down)",
+ "sheets.print.fit": "Pagina passend maken (dubbelklik)",
+ "sheets.print.no_sheets": "Geen bladen om te bekijken",
+ "sheets.print.building": "Pagina wordt opgebouwd…",
+ "sheets.print.stop_build": "Stoppen",
+ "sheets.print.build_stopped": "Paginaopbouw gestopt",
+ "sheets.print.retry": "Opnieuw opbouwen",
+ "sheets.print.build_failed": "De voorbeeldweergave kon niet worden opgebouwd"
+}

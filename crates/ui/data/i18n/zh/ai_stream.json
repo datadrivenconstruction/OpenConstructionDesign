@@ -1,0 +1,14 @@
+{
+ "ai.stream.waiting": "正在等待模型",
+ "ai.stream.reading": "正在读取模型",
+ "ai.stream.working": "处理中",
+ "ai.stream.answering": "正在撰写回复",
+ "ai.stream.tools_one": "1 个工具",
+ "ai.stream.tools_many": "{n} 个工具",
+ "ai.stream.secs": "{n} 秒",
+ "ai.stream.stalled": "仍在等待模型服务",
+ "ai.stream.stop": "停止",
+ "ai.stream.cancelled": "已停止",
+ "ai.stream.incomplete": "草稿不完整。未向模型应用任何内容。",
+ "ai.stream.sep": " · "
+}

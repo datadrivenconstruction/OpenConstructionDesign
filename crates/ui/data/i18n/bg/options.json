@@ -1,0 +1,15 @@
+{
+ "fe.add_why_empty": "Първо въведете име на параметър",
+ "fe.add_why_exists": "Параметър с това име вече съществува; използвайте „Приложи“, за да го промените",
+ "fe.apply_why_missing": "Няма параметър с това име; въведете съществуващо име",
+ "fe.nochange": "Още няма промени",
+ "options.accept_more": "Приеми…",
+ "options.delete_more": "Изтрий…",
+ "options.empty_title": "Още няма набори опции",
+ "options.more": "Още действия: {name}",
+ "options.primary_named": "Основна опция: {name}",
+ "options.primary_tip": "Направи това основна опция на набора",
+ "options.select_first": "Първо изберете елементи в модела",
+ "options.show_3d": "Покажи в 3D: {name}",
+ "options.show_plan": "Покажи в плана: {name}"
+}

@@ -1,0 +1,9 @@
+{
+ "ai.settings.num_bad": "Ikke et tall. Skriv det slik: 0.5.",
+ "ai.settings.num_comma": "Bruk punktum som desimaltegn, f.eks. 0.5.",
+ "ai.settings.num_negative": "Tallet kan ikke være negativt.",
+ "ai.settings.unit_money": "valuta",
+ "ai.settings.unit_tokens": "tokens",
+ "ai.settings.unit_price": "per 1 M tokens",
+ "ai.settings.limits_hint": "0 betyr ingen grense. En verdi som avvises, beholder den forrige grensen."
+}

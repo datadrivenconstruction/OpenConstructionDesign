@@ -1,0 +1,6 @@
+{
+ "xlsx_readonly.read_only": "El libro es de solo lectura (propiedad del archivo o permiso de carpeta). Exportar a una copia o desactivar «Solo lectura» en las propiedades del archivo e intentarlo de nuevo.",
+ "xlsx_readonly.export_copy": "Exportar a una copia",
+ "xlsx_readonly.no_copy_name": "No hay ningún nombre libre para una copia junto al libro.",
+ "xlsx_readonly.copied": "El libro se dejó como está. Junto a él se escribió una copia actualizada, que ya está vinculada: {path}"
+}

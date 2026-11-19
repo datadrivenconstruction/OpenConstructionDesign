@@ -1,0 +1,10 @@
+{
+ "elem.multi.title": "{n} elementer",
+ "elem.multi.varies": "varierer",
+ "elem.multi.tip": "Skriv inn for å sette alle valgte elementer",
+ "elem.multi.hidden": "{n} rader bare på noen elementer",
+ "elem.multi.none": "De valgte elementene har ingen felles rader",
+ "elem.multi.range": "Verdien er utenfor det tillatte området",
+ "elem.multi.changed": "Endret {n} elementer · Ctrl+Z angrer",
+ "elem.multi.same": "Allerede denne verdien på alle valgte elementer"
+}

@@ -1,0 +1,15 @@
+{
+ "fe.add_why_empty": "Nejprve zadejte název parametru",
+ "fe.add_why_exists": "Parametr s tímto názvem již existuje; pro změnu použijte Použít",
+ "fe.apply_why_missing": "Parametr s tímto názvem neexistuje; zadejte existující název",
+ "fe.nochange": "Zatím žádné změny",
+ "options.accept_more": "Přijmout…",
+ "options.delete_more": "Smazat…",
+ "options.empty_title": "Zatím žádné sady variant",
+ "options.more": "Další akce: {name}",
+ "options.primary_named": "Hlavní varianta: {name}",
+ "options.primary_tip": "Nastavit jako hlavní variantu sady",
+ "options.select_first": "Nejprve vyberte prvky v modelu",
+ "options.show_3d": "Zobrazit ve 3D: {name}",
+ "options.show_plan": "Zobrazit v půdorysu: {name}"
+}

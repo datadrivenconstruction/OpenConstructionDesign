@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "Velg hele veggsløyfen",
+ "cmd.sketch.link_unlink": "Koble kant fra vegg",
+ "cmd.sketch.link_repick": "Velg kantveggen på nytt",
+ "cmd.ctx.floor.link_unlink": "Koble kanter fra vegger",
+ "cmd.ctx.floor.link_accept": "Godta kanter fra slettede vegger",
+ "boundary_link.hint.loop": "Klikk på en vegg: den lukkede rekken av vegger blir koblede kanter",
+ "boundary_link.hint.repick": "Klikk på en vegg parallell med kanten: kanten vil følge den",
+ "boundary_link.need_sketch": "Åpne grenseskissen først",
+ "boundary_link.need_edge": "Pek på en kant i skissen",
+ "boundary_link.need_straight": "Bare en rett kant kan følge en vegg",
+ "boundary_link.need_floor": "Velg et gulv",
+ "boundary_link.no_wall": "Ingen vegg under markøren",
+ "boundary_link.not_parallel": "Veggen er ikke parallell med kanten",
+ "boundary_link.not_linked": "Denne kanten er ikke koblet til en vegg",
+ "boundary_link.unlinked": "Kant frakoblet: den blir stående på plass og følger ikke veggen lenger",
+ "boundary_link.accepted": "Kanter godtatt: de blir stående på plass som vanlige kanter",
+ "boundary_link.failed": "Kunne ikke brukes",
+ "boundary_link.lost": "kildeveggen er slettet",
+ "boundary_link.blocked": "kan ikke følge veggen"
+}

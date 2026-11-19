@@ -1,0 +1,21 @@
+{
+ "ai.receipt.title": {
+  "one": "# endring brukt",
+  "other": "# endringer brukt"
+ },
+ "ai.receipt.more": "+{n} til",
+ "ai.receipt.list": "Elementer",
+ "ai.receipt.show": "Vis",
+ "ai.receipt.show.tip": "Velg og ramme inn de endrede elementene",
+ "ai.receipt.undo": "Angre",
+ "ai.receipt.undo.tip": "Ta tilbake nøyaktig denne bruken",
+ "ai.receipt.undone": "Angret",
+ "ai.receipt.later": "Senere redigeringer er gjort",
+ "ai.receipt.toast_undone": "Den brukte planen ble angret",
+ "ai.receipt.draft_family": "Utkastfamilie: {name}",
+ "ai.receipt.promote": "Gjør arbeidsbar",
+ "ai.receipt.promote.tip": "Gjør utkastfamilien til en arbeidsbar en (ett angrertrinn)",
+ "ai.receipt.promoted": "Familien er nå arbeidsbar",
+ "ai.receipt.promote_failed": "Familien kunne ikke gjøres arbeidsbar",
+ "cmd.ai.receipt_undo": "Angre siste AI-plan"
+}

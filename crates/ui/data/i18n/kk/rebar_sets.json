@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "1 жиынтық қосу",
+ "rebar_sets.add_n": "{n} жиынтық қосу",
+ "rebar_sets.pick.search": "Арматура түрлерін іздеу",
+ "rebar_sets.pick.empty": "Сай арматура түрі жоқ",
+ "rebar_sets.unit.deg": "°"
+}

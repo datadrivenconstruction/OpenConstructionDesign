@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "1 セットを追加",
+ "rebar_sets.add_n": "{n} セットを追加",
+ "rebar_sets.pick.search": "鉄筋タイプを検索",
+ "rebar_sets.pick.empty": "一致する鉄筋タイプはありません",
+ "rebar_sets.unit.deg": "°"
+}

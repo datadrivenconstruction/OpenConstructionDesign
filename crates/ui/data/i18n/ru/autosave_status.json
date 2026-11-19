@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "Автосохранение не удалось, последние правки не защищены. {why}",
+ "autosave_status.autosave_open": "Настройки автосохранения",
+ "autosave_status.autosave_recovered": "Автосохранение снова работает.",
+ "autosave_status.autosave_reason": "Причина: {why}"
+}

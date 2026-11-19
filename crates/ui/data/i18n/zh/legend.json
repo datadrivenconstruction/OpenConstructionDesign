@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "图例",
+ "legend.legend.new_hint": "新图例名称",
+ "legend.legend.delete_tip": "删除图例",
+ "legend.legend.delete_placed": "删除图例（已放置于：{sheets}）",
+ "legend.legend.deleted": "已删除图例：{name}",
+ "legend.legend.no_rows": "暂无行。请添加一行，或采用当前视图的样式",
+ "legend.legend.replace_q": "用此视图的样式替换 {n} 行？",
+ "legend.legend.replace": "替换",
+ "legend.legend.keep": "保留行",
+ "legend.col.swatch": "色块",
+ "legend.col.value": "值",
+ "legend.col.label": "标签"
+}

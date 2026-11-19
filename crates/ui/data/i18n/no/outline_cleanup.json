@@ -1,0 +1,15 @@
+{
+ "cmd.ctx.floor.clean_outline": "Rydd opp konturen",
+ "cmd.ctx.floor.clean_outline.desc": "Fjerner smale topper der gulvkonturen svinger tilbake på seg selv. Viser en forhåndsvisning først; ett angrasteg.",
+ "outline_cleanup.title": "Rydd opp konturen",
+ "outline_cleanup.intro": "Konturen til dette gulvet svinger tilbake på seg selv i smale topper: {n}. Opprydding fjerner dem; alt annet forblir som det er.",
+ "outline_cleanup.legend_before": "Tykk linje: konturen nå",
+ "outline_cleanup.legend_after": "Tynn linje: konturen etter opprydding",
+ "outline_cleanup.undo": "Dette kan angres i ett steg.",
+ "outline_cleanup.apply": "Rydd opp",
+ "outline_cleanup.cancel": "Avbryt",
+ "outline_cleanup.done": "Kontur ryddet opp, topper fjernet: {n}",
+ "outline_cleanup.none": "Konturen til dette gulvet har ingen topper",
+ "outline_cleanup.failed": "Kunne ikke rydde opp konturen",
+ "outline_cleanup.changed": "Konturen er endret siden forhåndsvisningen; ingenting ble skrevet. Sjekk den nye forhåndsvisningen."
+}

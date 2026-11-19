@@ -1,0 +1,38 @@
+family Hospital Bed
+category furniture
+host floor
+ifc IfcFurniture BED
+param Width length type 900mm
+param Length length type 2100mm
+param LegH length type 250mm
+param Frame length type 120mm
+param MattressH length type 150mm
+param Leg length type 50mm
+param Board length type 40mm
+param HeadH length type 900mm
+param FootH length type 700mm
+param RailH length type 350mm
+param RailT length type 30mm
+param Steel material type "Steel White"
+param Mattress material type "Textile"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Foot y = -Length / 2
+ref HeadEnd y = Length / 2
+type "900x2100" Width=900mm, Length=2100mm
+type "36x84in" Width=36in, Length=84in, LegH=10in, Frame=4.5in, MattressH=6in, Leg=2in, Board=1.5in, HeadH=36in, FootH=28in, RailH=14in, RailT=1.2in
+extrude Leg1 rect(Left + 40mm, Foot + 40mm, Left + 40mm + Leg, Foot + 40mm + Leg) z(0, LegH) mat(Steel) show(medium, fine, 3d, elev)
+extrude Leg2 rect(Right - 40mm - Leg, Foot + 40mm, Right - 40mm, Foot + 40mm + Leg) z(0, LegH) mat(Steel) show(medium, fine, 3d, elev)
+extrude Leg3 rect(Right - 40mm - Leg, HeadEnd - 40mm - Leg, Right - 40mm, HeadEnd - 40mm) z(0, LegH) mat(Steel) show(medium, fine, 3d, elev)
+extrude Leg4 rect(Left + 40mm, HeadEnd - 40mm - Leg, Left + 40mm + Leg, HeadEnd - 40mm) z(0, LegH) mat(Steel) show(medium, fine, 3d, elev)
+extrude Frame rect(Left + 20mm, Foot + 20mm, Right - 20mm, HeadEnd - 20mm) z(LegH, LegH + Frame) mat(Steel) show(3d, elev)
+extrude Mattress rect(Left + 40mm, Foot + Board, Right - 40mm, HeadEnd - Board) z(LegH + Frame, LegH + Frame + MattressH) mat(Mattress) show(3d, elev)
+extrude Headboard rect(Left + 20mm, HeadEnd - Board, Right - 20mm, HeadEnd) z(LegH, HeadH) mat(Steel) show(3d, elev)
+extrude Footboard rect(Left + 20mm, Foot, Right - 20mm, Foot + Board) z(LegH, FootH) mat(Steel) show(3d, elev)
+extrude RailL rect(Left, Foot + Length / 4, Left + RailT, HeadEnd - Length / 6) z(LegH + Frame + MattressH, LegH + Frame + MattressH + RailH) mat(Steel) show(3d, elev)
+extrude RailR rect(Right - RailT, Foot + Length / 4, Right, HeadEnd - Length / 6) z(LegH + Frame + MattressH, LegH + Frame + MattressH + RailH) mat(Steel) show(3d, elev)
+symbol rect(Left, Foot, Right, HeadEnd)
+symbol line(Left, HeadEnd - Board, Right, HeadEnd - Board)
+symbol rect(Left + 100mm, HeadEnd - Board - 450mm, Right - 100mm, HeadEnd - Board - 100mm) show(medium, fine)
+symbol line(Left, Foot + Length / 4, Left, HeadEnd - Length / 6) show(medium, fine)
+symbol line(Right, Foot + Length / 4, Right, HeadEnd - Length / 6) show(medium, fine)

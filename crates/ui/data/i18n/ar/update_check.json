@@ -1,0 +1,21 @@
+{
+ "cmd.help.check_update": "التحقق من التحديثات",
+ "update_check.title": "التحقق من التحديث",
+ "update_check.desc": "معطّل افتراضيًا. يرسل فقط رقم الإصدار ونظام التشغيل والمعمارية ونوع التثبيت إلى خادمنا. لا يُنزّل ولا يُثبّت شيئًا أبدًا.",
+ "update_check.freq.startup": "عند بدء التشغيل",
+ "update_check.freq.daily": "يوميًا",
+ "update_check.freq.weekly": "أسبوعيًا",
+ "update_check.freq.never": "أبدًا",
+ "update_check.check_now": "تحقق الآن",
+ "update_check.dialog.title": "التحقق من التحديث",
+ "update_check.unknown.title": "تعذّر التحقق من التحديثات",
+ "update_check.unknown.body": "{e}. هذا لا يعني أن الإصدار الحالي هو الأحدث. أعد المحاولة لاحقًا.",
+ "update_check.current": "لديك أحدث إصدار ({v}).",
+ "update_check.newer": "الإصدار {v} متاح",
+ "update_check.date": "صدر في {d}",
+ "update_check.unfit": "هذا الإصدار ({v}) أقدم من الحد الأدنى الموصى به {f}. يُنصح بالتحديث.",
+ "update_check.close": "إغلاق",
+ "update_check.open_failed": "تعذّر فتح صفحة الإصدار.",
+ "update_check.toast.newer": "الإصدار {v} متاح. المساعدة > التحقق من التحديثات.",
+ "update_check.toast.unfit": "هذا الإصدار ({v}) أقدم من الحد الأدنى الموصى به {f}."
+}

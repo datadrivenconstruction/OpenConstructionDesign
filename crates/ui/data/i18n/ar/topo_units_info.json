@@ -1,0 +1,13 @@
+{
+ "topo.unit.mm": "مم",
+ "topo.unit.metre": "م",
+ "topo.unit.ft": "ft",
+ "topo.opt.material": "المادة",
+ "topo.row.active": "السطح النشط",
+ "topo.btn.delete_pad": "حذف الوسادة",
+ "topo.info.loading": "جارٍ بناء السطح…",
+ "topo.info.warn_n": "{n} تحذيرات",
+ "topo.info.points_label": "النقاط",
+ "topo.import.all_layers": "كل الطبقات",
+ "topo.import.need_layer": "حدّد طبقة واحدة على الأقل"
+}

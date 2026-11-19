@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "Bağlantı parçası",
+ "elem.mep_fitting.many": "Bağlantı parçaları",
+ "elem.mep_fitting.kind.elbow": "Dirsek",
+ "elem.mep_fitting.kind.tee": "Te",
+ "elem.mep_fitting.kind.cross": "Haç",
+ "elem.mep_fitting.kind.transition": "Geçiş",
+ "elem.mep_fitting.kind.cap": "Kapak",
+ "elem.mep_fitting.size": "Boyut",
+ "elem.mep_fitting.at": "Konum",
+ "elem.mep_fitting.runs": "Hat {n}",
+ "elem.mep_fitting.edit_run": "Hattı düzenle",
+ "elem.mep_fitting.select_runs": "Hatlarını seç",
+ "elem.mep_fitting.derived": "Bağlantı parçası hatlarını izler: bir hattı değiştirirseniz parça da onunla değişir.",
+ "elem.mep_fitting.no_delete": "Bir bağlantı parçası tek başına silinemez veya taşınamaz. Hatlarını düzenleyin veya silin.",
+ "elem.mep_fitting.hint": "Hatlarını görmek için planda bir bağlantı parçasına tıklayın.",
+ "elem.mep_fitting.picked": "Seçili bağlantı parçaları: {n}"
+}

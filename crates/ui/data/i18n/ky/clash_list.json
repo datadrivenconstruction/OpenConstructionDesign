@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "Бардыгы",
+ "clash_list.only_selected": "Тандалгандар гана",
+ "clash_list.tolerance": "Төзөмдүк",
+ "clash_list.gap": "Аралык",
+ "clash_list.export": "Экспорттоо",
+ "clash_list.col.volume": "Көлөм",
+ "clash_list.fix.up": "Жогору жылдыруу",
+ "clash_list.fix.down": "Төмөн жылдыруу",
+ "clash_list.fix.sleeve": "Гильза",
+ "clash_list.apply_fix": "Оңдоону колдонуу",
+ "clash_list.err.tol": "Төзөмдүк: узундукту (0 же андан көп) киргизиңиз, мисалы 50 же 2 in",
+ "clash_list.sleeve_no_host": "Гильза үчүн жуптагы дубал же плита керек",
+ "clash_list.err.gap": "Аралык: узундукту (0 же андан көп) киргизиңиз, мисалы 50 же 2 in"
+}

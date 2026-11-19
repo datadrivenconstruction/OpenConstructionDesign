@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "Fortrudt — Ctrl+Y gentager",
+ "history.hist.empty": "Ingen ændringer endnu",
+ "history.hist.empty_hint": "Dine redigeringer vises her. Klik på et trin for at gå tilbage til det.",
+ "history.hist.revert_all_n": "Fortryd alle AI-ændringer ({n})"
+}

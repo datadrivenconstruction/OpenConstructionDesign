@@ -1,0 +1,10 @@
+{
+ "elem.multi.title": "{n} ta element",
+ "elem.multi.varies": "turlicha",
+ "elem.multi.tip": "Enter barcha tanlangan elementlarga qo'yadi",
+ "elem.multi.hidden": "{n} ta qator faqat ba'zi elementlarda",
+ "elem.multi.none": "Tanlangan elementlarda umumiy qatorlar yo'q",
+ "elem.multi.range": "Qiymat ruxsat etilgan diapazondan tashqarida",
+ "elem.multi.changed": "{n} ta element o'zgartirildi · Ctrl+Z bekor qiladi",
+ "elem.multi.same": "Barcha tanlangan elementlarda allaqachon shu qiymat"
+}

@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "Қолдану болдырылды: модель алдын ала қараумен сай келмеді. {what}",
+ "xlsx_verify.not_written": "{row} өзгертілмеді.",
+ "xlsx_verify.lost": "{row} жоғалды.",
+ "xlsx_verify.not_deleted": "{row} жойылмады.",
+ "xlsx_verify.extra_deleted": "{row} жойылды, бірақ алдын ала қарау оны сақтайды.",
+ "xlsx_verify.created": "{table}: {want} орнына {got} жаңа.",
+ "xlsx_verify.value": "{row}, {field}: {want} күтілді (бұрын {old}), {got} алынды.",
+ "xlsx_verify.check_failed": "Нәтиже тексерілмеді: {e}",
+ "xlsx_verify.plan_failed": "Қолдану басталмады: тексеру модельді оқи алмады ({e}).",
+ "xlsx_verify.take_back_failed": "Қадамды болдыру мүмкін болмады ({e}): Болдыруды пайдаланыңыз.",
+ "xlsx_verify.t.wall": "Қабырға",
+ "xlsx_verify.t.opening": "Ойық",
+ "xlsx_verify.t.room": "Бөлме",
+ "xlsx_verify.t.slab": "Еден",
+ "xlsx_verify.t.level": "Деңгей",
+ "xlsx_verify.t.wall_type": "Қабырға түрі",
+ "xlsx_verify.t.slab_type": "Еден түрі",
+ "xlsx_verify.t.col": "Баған",
+ "xlsx_verify.t.beam": "Арқалық",
+ "xlsx_verify.t.roof": "Шатыр",
+ "xlsx_verify.t.curtain_wall": "Шынылы қабырға"
+}

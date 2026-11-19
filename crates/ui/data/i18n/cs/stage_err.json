@@ -1,0 +1,10 @@
+{
+ "stage_err.kept": "tabulka {t} ponechána: {n} řádků zapsáno po Přidat",
+ "stage_err.stage.prev_attached": "Nepřidáno: kopie předchozího Přidat je stále otevřená. Spusťte Přidat znovu",
+ "stage_err.stage.model_changed": "Nepřidáno: model se změnil během čtení souboru. Spusťte Přidat znovu",
+ "stage_err.stage.no_record": "Nepřidáno: importovaná kopie nemá záznam o změnách",
+ "stage_err.stage.table_differs": "Nepřidáno: tabulka {t} se liší mezi modelem a importovanou kopií",
+ "stage_err.stage.unique_key": "Nepřidáno: jedinečný klíč tabulky {t} nelze sledovat",
+ "stage_err.stage.table_gone": "Nepřidáno: import změnil tabulku {t}, kterou kopie již nemá",
+ "stage_err.stage.copy_held": "Přidáno; importovaná kopie zůstane otevřená do dalšího Přidat nebo do znovuotevření modelu"
+}

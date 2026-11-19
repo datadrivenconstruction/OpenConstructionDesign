@@ -1,0 +1,11 @@
+{
+ "sketch.points": "Punti",
+ "sketch.rect": "Rettangolo",
+ "sketch.circle": "Cerchio",
+ "sketch.polygon": "Poligono",
+ "sketch.radius": "R",
+ "sketch.sides": "Lati",
+ "sketch.circum": "Circoscritto",
+ "sketch.shape.tip": "Forma dello schizzo (A cambia). Rettangolo: due angoli. Cerchio e poligono: centro, poi raggio. Digita una dimensione e premi Invio per fissarla.",
+ "tool.err.zero_size": "Dimensione zero: allontana il secondo punto dal primo"
+}

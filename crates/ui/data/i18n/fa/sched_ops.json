@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "مقدار باید بزرگ‌تر از صفر باشد",
+ "sched_ops.not_number": "عدد نیست",
+ "sched_ops.no_host": "دیوار میزبان وجود ندارد",
+ "sched_ops.wall_length": "طول این دیوار را نمی‌توان این‌گونه تنظیم کرد",
+ "sched_ops.no_wall": "چنین دیواری وجود ندارد",
+ "sched_ops.no_opening": "چنین بازشویی وجود ندارد",
+ "sched_ops.no_curtain": "چنین دیوار پرده‌ای وجود ندارد",
+ "sched_ops.no_panel": "چنین پانلی وجود ندارد",
+ "sched_ops.no_slab": "چنین دالی وجود ندارد",
+ "sched_ops.no_room": "چنین اتاقی وجود ندارد",
+ "sched_ops.slope_range": "شیب خارج از محدوده است",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

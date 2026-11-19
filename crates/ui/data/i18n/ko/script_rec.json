@@ -1,0 +1,8 @@
+{
+ "script_rec.started": "녹화 중: 지금부터 하는 수정이 스크립트에 기록됩니다. 중지하려면 “동작을 스크립트로 기록”을 다시 선택하세요.",
+ "script_rec.saved": "스크립트 “{name}” 저장됨: 수정 {n}건.",
+ "script_rec.skipped": "스크립트 양식이 없는 도구로 한 수정 {k}건은 기록되지 않았습니다.",
+ "script_rec.nothing": "녹화 중지됨: 저장할 수정이 없습니다.",
+ "script_rec.failed": "녹화가 저장되지 않았습니다: {why}",
+ "script_rec.no_folder": "스크립트용 설정 폴더가 없습니다"
+}

@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "ردیف فیلتر زیر سرستون‌ها. متن: زیررشته؛ عدد: >5، <=3000، =2.5، <>0",
+ "sched_toolbar.columns_tip": "نمایش یا پنهان کردن ستون‌ها",
+ "sched_toolbar.groups_tip": "گروه‌بندی ردیف‌ها بر اساس ستون‌ها، همراه با جمع‌های جزئی",
+ "sched_toolbar.formulas_tip": "ستون‌های محاسباتی",
+ "sched_toolbar.phase": "فاز",
+ "sched_toolbar.phase_tip": "ردیف‌ها از کدام فاز گرفته شوند",
+ "sched_toolbar.copy_tip": "ردیف‌های انتخاب‌شده (یا همه‌ی ردیف‌های قابل‌نمایش) به‌صورت TSV",
+ "sched_toolbar.import_tip": "یک جدول خروجی‌گرفته‌شده را برگردانید: ردیف‌ها بر اساس Id، ستون‌ها بر اساس سرستون؛ اول شمارش، سپس یک مرحله واگرد",
+ "sched_toolbar.export_tip": "ردیف‌ها و ستون‌های قابل‌نمایش همراه با جمع‌ها؛ عددها عدد می‌مانند",
+ "sched_toolbar.need_table": "ابتدا یک جدول را باز کنید",
+ "sched_toolbar.busy_open": "یک پنجرهٔ انتخاب فایل از قبل باز است",
+ "sched_toolbar.busy_save": "یک پنجرهٔ ذخیره از قبل باز است",
+ "sched_toolbar.clear_filter": "پاک کردن فیلتر",
+ "sched_toolbar.fields_title": "ستون‌ها"
+}

@@ -1,0 +1,7 @@
+{
+ "ai.retry.countdown": "Opnieuw proberen over {n} s",
+ "ai.retry.try": "Automatische poging {i} van {max}. Hetzelfde verzoek wordt opnieuw verzonden.",
+ "ai.retry.now": "Nu opnieuw proberen",
+ "ai.retry.gave_up": "Nog steeds geen antwoord na {max} automatische pogingen.",
+ "ai.retry.shorten": "Verzoek inkorten"
+}

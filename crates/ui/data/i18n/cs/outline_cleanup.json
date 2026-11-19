@@ -1,0 +1,15 @@
+{
+ "cmd.ctx.floor.clean_outline": "Vyčistit obrys",
+ "cmd.ctx.floor.clean_outline.desc": "Odstraní úzké výstupky, kde se obrys podlahy vrací sám do sebe. Nejprve zobrazí náhled; jeden krok zpět.",
+ "outline_cleanup.title": "Vyčistit obrys",
+ "outline_cleanup.intro": "Obrys této podlahy se vrací sám do sebe v úzkých výstupcích: {n}. Čištění je odstraní; vše ostatní zůstane beze změny.",
+ "outline_cleanup.legend_before": "Tlustá čára: obrys nyní",
+ "outline_cleanup.legend_after": "Tenká čára: obrys po vyčištění",
+ "outline_cleanup.undo": "Tento krok lze vrátit jedním krokem zpět.",
+ "outline_cleanup.apply": "Vyčistit",
+ "outline_cleanup.cancel": "Zrušit",
+ "outline_cleanup.done": "Obrys vyčištěn, odstraněno výstupků: {n}",
+ "outline_cleanup.none": "Obrys této podlahy nemá žádné výstupky",
+ "outline_cleanup.failed": "Obrys nelze vyčistit",
+ "outline_cleanup.changed": "Obrys se od náhledu změnil; nic nebylo zapsáno. Zkontrolujte nový náhled."
+}

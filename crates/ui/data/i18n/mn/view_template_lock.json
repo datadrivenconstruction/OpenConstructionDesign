@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "{name} загвараар удирдагдана",
+ "view_template.edit_template": "Загвар засах",
+ "view_template.locked_tip": "{name} харагдацын загвараар тохирсон. Загварт өөрчилнө үү.",
+ "view_template.no_filters": "Энэ харагдацад шүүлтүүр алга"
+}

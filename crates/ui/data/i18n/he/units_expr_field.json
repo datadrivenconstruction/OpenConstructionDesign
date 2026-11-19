@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "קלט ריק.",
+ "units.err.not_number": "לא מספר במיקום {pos}.",
+ "units.err.unknown_unit": "יחידה לא מוכרת: {unit}.",
+ "units.err.non_positive": "אורך חייב להיות גדול מאפס.",
+ "units.err.too_large": "האורך לא יכול לעלות על {max} m.",
+ "units.err.bad_angle": "זווית היא מספר מעלות.",
+ "units.err.unknown_name": "שם לא מוכר: {name}. הערך נשמר.",
+ "units.err.cycle": "לולאת נוסחה ב-{name}. הערך נשמר.",
+ "units.err.bad_expr": "לא ניתן לקרוא את הביטוי במיקום {pos}. הערך נשמר.",
+ "units.err.div_zero": "חלוקה באפס במיקום {pos}. הערך נשמר.",
+ "units.err.invalid": "מספר לא תקין.",
+ "units.err.kept": "לא שונה: {reason}"
+}

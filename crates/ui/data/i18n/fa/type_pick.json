@@ -1,0 +1,10 @@
+{
+ "type_pick.pick.search": "جست‌وجوی نوع‌ها یا ضخامت",
+ "type_pick.pick.empty": "نوع مطابقی نیست",
+ "type_pick.pick.edit": "ویرایش نوع…",
+ "type_pick.pick.mixed": "ترکیبی",
+ "type_pick.pick.layers": {
+  "one": "# لایه",
+  "other": "# لایه"
+ }
+}

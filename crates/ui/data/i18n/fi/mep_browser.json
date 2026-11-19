@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "Järjestelmän nimi",
+ "mep_browser.add_blocked": "Anna ensin järjestelmän nimi",
+ "mep_browser.col.insulation": "Eristys",
+ "mep_browser.cancel": "Peruuta",
+ "mep_browser.delete.title": "Poistetaanko tämä järjestelmä?",
+ "mep_browser.delete.body": "Järjestelmä ”{name}” ja sen ajot ({n}) poistetaan.",
+ "mep_browser.delete.undo": "Voit kumota tämän yhdellä Kumoa-toiminnolla.",
+ "mep_browser.delete.confirm": "Poista järjestelmä"
+}

@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "Nach XLSX-Tabelle exportieren: Umfang",
+ "xlsx_scope.intro": "Wählen Sie, was in die Arbeitsmappe kommt. Beim Zurückimportieren ändern sich nur diese Elemente.",
+ "xlsx_scope.base_whole": "Ganzes Modell",
+ "xlsx_scope.base_level": "Aktive Ebene",
+ "xlsx_scope.base_selection": "Auswahl",
+ "xlsx_scope.categories": "Kategorien",
+ "xlsx_scope.cat_walls": "Wände",
+ "xlsx_scope.cat_openings": "Türen",
+ "xlsx_scope.cat_rooms": "Räume",
+ "xlsx_scope.cat_slabs": "Geschossdecken",
+ "xlsx_scope.cat_curtains": "Vorhangfassaden",
+ "xlsx_scope.nothing_selected": "Nichts ist ausgewählt: Wählen Sie zuerst Elemente oder einen anderen Umfang.",
+ "xlsx_scope.no_categories": "Markieren Sie mindestens eine Kategorie.",
+ "xlsx_scope.no_level": "Die aktive Ebene wurde nicht gefunden.",
+ "xlsx_scope.export": "Exportieren",
+ "xlsx_scope.preview_scope": "Exportierter Umfang: {scope}. Elemente außerhalb davon werden nie geändert oder gelöscht."
+}

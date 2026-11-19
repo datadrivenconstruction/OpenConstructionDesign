@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "Přesunout nahoru",
+ "rebar_list.move_down": "Přesunout dolů",
+ "rebar_list.remove": "Odebrat",
+ "rebar_list.zone_remove_last": "Zóna potřebuje alespoň jednu místnost: smažte zónu, abyste odebrali poslední",
+ "rebar_list.rebar_empty_title": "V tomto modelu není žádná výztuž",
+ "rebar_list.rebar_empty_hint": "Umístěte výztuž do hostitelského prvku a zde se naplánuje.",
+ "rebar_list.rebar_empty_action": "Umístit výztuž"
+}

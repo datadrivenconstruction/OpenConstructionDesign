@@ -1,0 +1,15 @@
+{
+ "xlw.hd_never": "まだ書き出していません",
+ "xlw.hd_now": "たった今",
+ "xlw.hd_min": "{n} 分前",
+ "xlw.hd_hour": "{n} 時間前",
+ "xlw.hd_day": "{n} 日前",
+ "xlw.hd_linked": "リンク済み",
+ "xlw.hd_watched": "監視中",
+ "xlw.hd_stale": "書き出し後にモデルが変更されました",
+ "xlw.ft_export": "書き出し",
+ "xlw.ft_review": "確認",
+ "xlw.ft_apply": "{n} 件の変更を適用",
+ "xlw.ft_delete_missing": "不足分を削除",
+ "xlw.ft_keep_missing_tip": "削除が有効です: 行のない要素は適用時に削除されます。チェックを外すと残ります。"
+}

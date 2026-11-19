@@ -1,0 +1,10 @@
+{
+ "type_pick.pick.search": "유형 또는 두께 검색",
+ "type_pick.pick.empty": "일치하는 유형이 없습니다",
+ "type_pick.pick.edit": "유형 편집…",
+ "type_pick.pick.mixed": "혼합",
+ "type_pick.pick.layers": {
+  "one": "# 레이어",
+  "other": "# 레이어"
+ }
+}

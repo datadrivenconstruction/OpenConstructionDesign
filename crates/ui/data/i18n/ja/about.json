@@ -1,0 +1,33 @@
+{
+ "cmd.help.licenses": "オープンソースライセンス",
+ "cmd.help.licenses.desc": "このビルドで使用しているオープンソースライブラリとそのライセンスを一覧表示します。",
+ "about.product": "DDC Editor",
+ "about.version": "バージョン",
+ "about.build": "ビルド",
+ "about.schema": "モデルスキーマ",
+ "about.system": "システム",
+ "about.gpu": "グラフィックアダプタ",
+ "about.language": "言語",
+ "about.copy": "バージョン情報をコピー",
+ "about.copy_desc": "不具合報告用のバージョン、ビルド、システム、グラフィックアダプタ。ファイルパスは含みません。",
+ "about.copied": "バージョン情報をコピーしました",
+ "about.licenses": "オープンソースライセンス",
+ "about.licenses_desc": "このビルドで使用しているライブラリとそのライセンス",
+ "about.licenses.open": "表示",
+ "about.licenses.title": "オープンソースライセンス",
+ "about.licenses.note": "DDC Editor には以下のライブラリが含まれます。各ライブラリはそれぞれのライセンスと著作権表示に従います。ライセンス全文はアプリケーションと同じフォルダの THIRD_PARTY_LICENSES.txt にあります。",
+ "about.licenses.full": "ライセンス全文",
+ "about.licenses.list": "コンポーネント一覧",
+ "about.licenses.close": "閉じる",
+ "about.licenses.col_name": "コンポーネント",
+ "about.licenses.col_license": "ライセンス",
+ "about.licenses.count": {
+  "one": "# 個のコンポーネント",
+  "other": "# 個のコンポーネント"
+ },
+ "about.licenses.count_of": "{total} 件中 {shown} 件のコンポーネント",
+ "about.licenses.search_hint": "名前またはライセンスで検索…",
+ "about.licenses.search_clear": "検索をクリア",
+ "about.licenses.none": "該当なし",
+ "about.licenses.none_hint": "ライブラリ名の一部または MIT などのライセンス名で検索してください。"
+}

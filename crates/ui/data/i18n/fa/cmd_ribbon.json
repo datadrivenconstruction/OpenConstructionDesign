@@ -1,0 +1,23 @@
+{
+  "cmd.arch.room_sep.short": "جداکننده اتاق",
+  "cmd.str.footing.short": "پی ستون",
+  "cmd.str.strip_footing.short": "پی نواری",
+  "cmd.str.analytical.short": "تحلیلی",
+  "cmd.mep.terminal.short": "ترمینال هوا",
+  "cmd.mod.isolate.short": "جداسازی",
+  "cmd.view.ui.short": "رابط کاربری",
+  "cmd.mgr.params.short": "پارامترها",
+  "cmd.ctx.wall.attach.short": "پیوست",
+  "cmd.mass.unjoin.short": "جدا کردن",
+  "cmd.mod.unjoin.short": "جدا کردن",
+  "cmd.arch.void_extrusion.short": "اکستروژن خالی",
+  "cmd.e3d.snap.short": "گیره 3D",
+  "cmd.mgr.open_big.short": "فایل بزرگ…",
+  "cmd.site.edit_points.short": "نقاط زمین",
+  "cmd.view.reveal_3d.short": "نمایش دسته‌ها",
+  "cmd.help.check_update.short": "به‌روزرسانی",
+  "cmd.ctx.floor.link_unlink.short": "جدا کردن لبه",
+  "cmd.ui.onboarding.short": "تنظیم…",
+  "cmd.mod.distribute.short": "توزیع",
+  "cmd.data.src_delta.short": "تغییرات اکسل…"
+}

@@ -1,0 +1,9 @@
+{
+ "shot_scenes.site": "Telek",
+ "shot_scenes.lawn": "Gyep",
+ "shot_scenes.pad": "Alapsík",
+ "shot_scenes.block": "Tömb",
+ "shot_scenes.void": "Üreg",
+ "shot_scenes.tower": "Torony",
+ "shot_scenes.wall_void": "Falüreg"
+}

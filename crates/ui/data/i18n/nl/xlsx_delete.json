@@ -1,0 +1,5 @@
+{
+ "xlsx_delete.delete_missing": "Rijen die in het werkboek ontbreken verwijderen",
+ "xlsx_delete.not_removed": "niet verwijderd: geen vergelijkingsgegevens",
+ "xlsx_delete.no_base_reason": "Niet beschikbaar: het werkboek heeft geen vergelijkingsgegevens, dus een ontbrekende rij kan niet worden onderscheiden van een per ongeluk verwijderde. Er wordt bij Toepassen niets verwijderd."
+}

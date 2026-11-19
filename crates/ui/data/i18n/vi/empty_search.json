@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "Không tìm thấy gì",
+ "empty.browser_search.hint": "Không có góc nhìn, cao độ, loại hoặc phòng nào khớp với tìm kiếm này.",
+ "empty.browser_search.action": "Xóa tìm kiếm",
+ "empty.xl_filtered.title": "Không có mục nào khớp bộ lọc",
+ "empty.xl_filtered.hint": "Bật thêm loại, chọn trang khác hoặc đổi nội dung tìm kiếm.",
+ "empty.xl_filtered.action": "Xóa bộ lọc",
+ "empty.xl_nochanges.title": "Sổ không có thay đổi",
+ "empty.xl_nochanges.hint": "Sổ khớp với mô hình: nhập sổ này sẽ không thay đổi gì.",
+ "empty.version_same.title": "Các mô hình giống hệt nhau",
+ "empty.version_same.hint": "Không tìm thấy khác biệt giữa mô hình đang mở và phiên bản đã chọn.",
+ "empty.templates.title": "Chưa có mẫu góc nhìn nào",
+ "empty.templates.hint": "Tạo mẫu từ góc nhìn hiện tại để dùng lại thiết lập trên các góc nhìn khác.",
+ "empty.templates.action": "Đặt tên mẫu",
+ "empty.fe_params.title": "Chưa có tham số nào",
+ "empty.fe_params.hint": "Thêm tham số bên dưới để điều khiển kích thước, vật liệu hoặc độ hiển thị.",
+ "empty.fe_params.action": "Thêm tham số"
+}

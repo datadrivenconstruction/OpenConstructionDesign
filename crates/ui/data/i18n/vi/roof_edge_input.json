@@ -1,0 +1,23 @@
+{
+ "roof_edge.err.number": "Nhập một số",
+ "roof_edge.err.positive": "Phải lớn hơn không",
+ "roof_edge.err.nonneg": "Không được âm",
+ "roof_edge.err.max": "Không được vượt quá {max}",
+ "roof_edge.list.empty_hint": "Thêm diềm mái, máng xối, trần mái hoặc giếng trời bằng lệnh mái",
+ "roof_edge.edit_tip": "Sửa thuộc tính",
+ "roof_edge.delete_tip": "Xóa",
+ "roof_edge.pe.del_tip": "Bỏ điểm này (một tiết diện giữ ít nhất 3)",
+ "roof_edge.pe.up_tip": "Dịch điểm này lên",
+ "roof_edge.confirm_edge": "Xóa {name}? Ctrl+Z sẽ khôi phục.",
+ "roof_edge.confirm_profile": "Xóa biên dạng {name}? Ctrl+Z sẽ khôi phục.",
+ "roof_edge.deleted_one": "Đã xóa {name}",
+ "roof_edge.deleted_n": {
+  "one": "Đã xóa # cấu kiện",
+  "other": "Đã xóa # cấu kiện"
+ },
+ "roof_edge.profile_deleted": "Đã xóa biên dạng",
+ "roof_edge.profile_in_use": {
+  "one": "Đang dùng bởi # cấu kiện cạnh: hãy xóa hoặc đổi nó trước",
+  "other": "Đang dùng bởi # cấu kiện cạnh: hãy xóa hoặc đổi chúng trước"
+ }
+}

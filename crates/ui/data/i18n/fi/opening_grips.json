@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "Käännä saranapuoli",
+ "cmd.edit.flip_hand.desc": "Peilaa valitut ovet ja ikkunat seinän suhteen, jolloin saranat siirtyvät aukon toiseen päähän.",
+ "cmd.edit.flip_facing": "Käännä aukon puoli",
+ "cmd.edit.flip_facing.desc": "Kääntää valitut ovet ja ikkunat seinän toiselle puolelle.",
+ "opening_grips.flip_hand": "Käännä saranat",
+ "opening_grips.flip_hand.tip": "Saranat aukon toiseen päähän (Shift+F)",
+ "opening_grips.flip_facing": "Käännä puoli",
+ "opening_grips.flip_facing.tip": "Aukko seinän toiselle puolelle (Shift+G)",
+ "opening_grips.flip.done": "Käännetty: {n}",
+ "opening_grips.flip.none": "Valitse ovi tai ikkuna käännettäväksi",
+ "opening_grips.flip.fail": "Ei käännetty: {why}"
+}

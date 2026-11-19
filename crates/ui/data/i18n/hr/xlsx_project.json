@@ -1,0 +1,7 @@
+{
+ "xlsx_project.title": "Ova radna knjiga izvezena je iz drugog projekta",
+ "xlsx_project.body": "Radna knjiga „{file}“ pripada drugom projektu. Id-evi elemenata razlikuju se među projektima, pa bi njezini redci ovdje promijenili nepovezane elemente. Ništa nije pročitano u ovaj projekt.",
+ "xlsx_project.export_new": "Izvezi ovaj projekt u novu radnu knjigu",
+ "xlsx_project.close": "Zatvori",
+ "xlsx_project.no_project": "Ova radna knjiga ne navodi kojem projektu pripada: provjerite je li izvezena iz ovog projekta."
+}

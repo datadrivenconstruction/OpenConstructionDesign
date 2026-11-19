@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "Позначку {t} не прийнято ({why}). Нічого не змінено",
+ "host_shape.shape.elev_prompt_in": "позначка, фут-дюйм…",
+ "host_shape.shape.elev_in": "{v} дюйм"
+}

@@ -1,0 +1,4 @@
+{
+ "source_input.err.number": "“{text}” não é um número; este parâmetro guarda um número. Nada gravado",
+ "source_input.err.comma": "“{text}”: use ponto para decimais (1.5); a vírgula só agrupa milhares (1,000). Nada gravado"
+}

@@ -1,0 +1,10 @@
+{
+ "cmd.view.axes_full": "Koko akselit",
+ "cmd.view.axes_full.desc": "Näyttää X- ja Y-akselit viivoina koko pohjapiirroksen yli. Pidä F9 painettuna, jos haluat näyttää ne vain painalluksen ajan.",
+ "settings.axes_full": "Akselit",
+ "settings.axes_full_desc": "Pohjapiirroksen akselit viivoina koko arkin yli. Pidä F9 painettuna nopeaa katselua varten.",
+ "settings.axes_full_on": "Näytä koko akselit",
+ "plan.hud.axes_tip": "Pidä {key} painettuna, jos haluat näyttää koko akselit",
+ "status.axes_full.on": "Koko akselit päällä",
+ "status.axes_full.off": "Koko akselit pois"
+}

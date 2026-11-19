@@ -1,0 +1,23 @@
+id = "G10_chair"
+tier = "hard"
+group = "Any geometry"
+title = "Chair"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "Model a dining chair: seat 45 x 45 cm at 45 cm height, backrest to 90 cm, four tapered legs, two back slats, rounded seat edge."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "col+beam+brace+truss+gridshell_bar+solid+mass+mesh+freeform+shell_elem+gridshell+wall+slab+roof+stair+toposolid+wall_spline+comp:chair|seat|leg"
+min = 5.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

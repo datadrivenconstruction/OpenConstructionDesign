@@ -1,0 +1,6 @@
+{
+ "pair_input.pair_hint": "Two values are separated by a semicolon: @1000;500",
+ "pair_input.old_pair": "A comma between two whole numbers no longer makes a pair: type 6000;4000 for two values or 6000,5 for a decimal",
+ "pair_input.op.bad_length": "Not a length: {text} ({why}). Nothing was changed",
+ "pair_input.op.bad_count": "Count {text} was not taken: a whole number from {min} to {max}"
+}

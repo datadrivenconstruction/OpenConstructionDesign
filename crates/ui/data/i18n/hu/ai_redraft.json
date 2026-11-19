@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "Felülvizsgálva",
+ "ai.redraft.added": "+{n} hozzáadva",
+ "ai.redraft.removed": "−{n} eltávolítva",
+ "ai.redraft.changed": "~{n} módosítva",
+ "ai.redraft.strip": "{what} az utolsó megtekintés óta",
+ "ai.redraft.note": "Felülvizsgált terv átnézve: {what}",
+ "ai.redraft.more": "+{n} további",
+ "ai.redraft.ack": "Értettem",
+ "ai.redraft.ack.tip": "Jelölje ezt a változatot megtekintettnek; az Alkalmazás ezután erre vonatkozik",
+ "ai.redraft.removed_list": "Eltávolított tételek: {n}",
+ "ai.redraft.review_first": "A terv az üzenete után változott: előbb nézze át a módosításokat",
+ "ai.redraft.mark.tip": "Új vagy módosult az utolsó megtekintése óta",
+ "ai.redraft.emptied": "A követés minden tételt eltávolított: a vázlat üres"
+}

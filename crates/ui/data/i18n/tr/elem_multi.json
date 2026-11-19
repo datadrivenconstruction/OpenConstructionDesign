@@ -1,0 +1,10 @@
+{
+ "elem.multi.title": "{n} öğe",
+ "elem.multi.varies": "değişir",
+ "elem.multi.tip": "Enter, seçili tüm öğelere uygular",
+ "elem.multi.hidden": "{n} satır yalnızca bazı öğelerde var",
+ "elem.multi.none": "Seçili öğelerin ortak satırı yok",
+ "elem.multi.range": "Değer izin verilen aralığın dışında",
+ "elem.multi.changed": "{n} öğe değiştirildi · geri almak için Ctrl+Z",
+ "elem.multi.same": "Seçili tüm öğelerde zaten bu değer var"
+}

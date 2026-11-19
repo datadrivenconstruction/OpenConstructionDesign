@@ -1,0 +1,9 @@
+{
+ "elem.deleted": "Elementer slettet: {n}",
+ "elem.deleted_kept": "Elementer slettet: {n}; ladet være: {k} (paneler og elementer, der ikke kan slettes)",
+ "elem.not_deleted": "ikke slettet: {e}",
+ "elem.not_deletable": "Dette element kan ikke slettes",
+ "elem.panel": "gardinvægspanel",
+ "elem.panel_refused": "Et panel er en del af sin gardinvæg og kan ikke slettes alene. Markér hele væggen for at slette den.",
+ "elem.reload_failed": "Slettet, men visningen blev ikke opdateret: {e}"
+}

@@ -1,0 +1,7 @@
+{
+ "project_unsaved.unsaved.model": "Zmiany modelu nie są zapisane.",
+ "project_unsaved.unsaved.drawings": {
+  "one": "# umieszczony rysunek nie jest zapisany w projekcie: jego zmiany zostaną utracone.",
+  "other": "# umieszczone rysunki nie są zapisane w projekcie: ich zmiany zostaną utracone."
+ }
+}

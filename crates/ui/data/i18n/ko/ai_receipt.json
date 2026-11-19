@@ -1,0 +1,21 @@
+{
+ "ai.receipt.title": {
+  "one": "변경 #건 적용됨",
+  "other": "변경 #건 적용됨"
+ },
+ "ai.receipt.more": "+{n}개 더",
+ "ai.receipt.list": "요소",
+ "ai.receipt.show": "보기",
+ "ai.receipt.show.tip": "바뀐 요소를 선택하고 화면에 맞춥니다",
+ "ai.receipt.undo": "실행 취소",
+ "ai.receipt.undo.tip": "이 적용만 정확히 되돌립니다",
+ "ai.receipt.undone": "실행 취소됨",
+ "ai.receipt.later": "이후 편집이 이루어짐",
+ "ai.receipt.toast_undone": "적용된 계획이 실행 취소되었습니다",
+ "ai.receipt.draft_family": "초안 패밀리: {name}",
+ "ai.receipt.promote": "작업용으로 만들기",
+ "ai.receipt.promote.tip": "초안 패밀리를 작업용으로 전환합니다 (실행 취소 한 단계)",
+ "ai.receipt.promoted": "패밀리가 이제 작업용입니다",
+ "ai.receipt.promote_failed": "패밀리를 작업용으로 만들 수 없음",
+ "cmd.ai.receipt_undo": "마지막 AI 계획 실행 취소"
+}

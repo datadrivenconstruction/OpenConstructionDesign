@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "Ключ в адресі",
+ "ai_safety.auth.query_name": "Параметр адреси",
+ "ai_safety.need_query_name": "Назвіть параметр адреси, який передає ключ",
+ "ai_safety.apply_unlogged": "Застосовано, але журнал змін не записано",
+ "ai_safety.audit_unlogged": "Не вдалося записати журнал асистента ШІ",
+ "ai_safety.chat_not_saved": "Чат не вдалося зберегти в проєкт. Повторна спроба.",
+ "ai_safety.clip_clears": "Буфер обміну очиститься через 30 с",
+ "ai_safety.copied_clears": "Скопійовано. Буфер обміну очиститься через 30 с",
+ "ai_safety.key_session_only": "Ключ зберігається до закриття застосунку",
+ "ai.settings.no_data_dir": "ця система не надає папки для налаштувань застосунку"
+}

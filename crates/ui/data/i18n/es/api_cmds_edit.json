@@ -1,0 +1,20 @@
+{
+ "api.cmd.move_elements": "Mover elementos un desplazamiento en metros",
+ "api.cmd.copy_elements": "Copiar elementos con uno o más desplazamientos en metros",
+ "api.cmd.rotate_elements": "Girar elementos respecto a un punto un ángulo en grados",
+ "api.cmd.mirror_elements": "Reflejar elementos respecto a un eje por dos puntos",
+ "api.cmd.scale_elements": "Escalar elementos respecto a un punto con un factor",
+ "api.cmd.array_elements": "Matriz lineal o radial de elementos",
+ "api.cmd.offset_wall": "Copia paralela de un muro a una distancia en metros",
+ "api.cmd.split_wall": "Dividir un muro en dos en un punto",
+ "api.cmd.pin_elements": "Fijar o liberar elementos",
+ "api.cmd.flip_openings": "Invertir el lado de bisagra o el sentido de puertas y ventanas",
+ "api.cmd.create_level": "Crear una planta a una cota en metros",
+ "api.cmd.edit_level": "Renombrar una planta o cambiar su cota",
+ "api.cmd.delete_level": "Eliminar una planta",
+ "api.cmd.place_rooms": "Colocar un espacio en cada región cerrada de una planta",
+ "api.cmd.join_elements": "Unir, separar o cambiar las uniones de geometría",
+ "api.cmd.place_footings": "Colocar una zapata bajo cada pilar de una planta",
+ "api.cmd.create_terrain": "Crear un terreno a partir de puntos de levantamiento o de un plano inclinado",
+ "api.cmd.script_recipes": "Leer los bloques de script y las recetas de estructuras libres"
+}

@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "la valeur doit être supérieure à zéro",
+ "sched_ops.not_number": "ce n'est pas un nombre",
+ "sched_ops.no_host": "aucun mur hôte",
+ "sched_ops.wall_length": "cette longueur de mur ne peut pas être définie ainsi",
+ "sched_ops.no_wall": "aucun mur de ce type",
+ "sched_ops.no_opening": "aucune ouverture de ce type",
+ "sched_ops.no_curtain": "aucun mur-rideau de ce type",
+ "sched_ops.no_panel": "aucun panneau de ce type",
+ "sched_ops.no_slab": "aucune dalle de ce type",
+ "sched_ops.no_room": "aucune pièce de ce type",
+ "sched_ops.slope_range": "pente hors plage",
+ "sched_ops.place": "#{id} : {why}",
+ "sched_ops.model": "{e}"
+}

@@ -1,0 +1,8 @@
+{
+ "xlsx_issues.empty_title": "Folha vazia na pasta de trabalho",
+ "xlsx_issues.empty_kept": "A folha {sheet} está vazia: nada foi lido dela, {n} elementos permanecem como estão. Outras folhas ainda podem ser aplicadas.",
+ "xlsx_issues.empty_none": "A folha {sheet} está vazia: nada foi lido dela. Outras folhas ainda podem ser aplicadas.",
+ "xlsx_issues.unreadable_title": "Folha não pôde ser lida",
+ "xlsx_issues.unreadable": "A folha {sheet} não pôde ser lida, a parte dela no arquivo está danificada: nada foi obtido e os elementos dela permanecem como estão. Outras folhas ainda podem ser aplicadas.",
+ "xlsx_issues.formulas": "As fórmulas da folha {sheet} não puderam ser lidas, então um valor calculado não pode ser distinguido de uma edição: nada foi obtido desta folha. Outras folhas ainda podem ser aplicadas."
+}

@@ -1,0 +1,9 @@
+{
+ "prop_head.of_type": {
+  "one": "اس قسم کا # عنصر",
+  "other": "اس قسم کے # عناصر"
+ },
+ "prop_head.override_tip": "قسم سے مختلف، ری سیٹ کے لیے کلک کریں",
+ "prop_head.reset_done": "“{name}” قسم کی قدر پر ری سیٹ",
+ "prop_head.copy_id": "نمبر کاپی کرنے کے لیے کلک کریں"
+}

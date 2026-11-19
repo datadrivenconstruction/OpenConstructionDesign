@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "Trepid",
+ "selcat.railing": "Piired",
+ "quick.cat.stair": "Trepid",
+ "quick.cat.railing": "Piired",
+ "stair.risers": "Astmed",
+ "stair.riser": "Astme kõrgus",
+ "stair.comfort": "2R + T",
+ "stair.tread_auto": "Astmepind reegli järgi",
+ "stair.tread_auto_tip": "Loobu sisestatud astmepinnast ja lase reeglil 2R + T see määrata",
+ "stair.broken": "See trepp ei sobi oma tasemetega",
+ "railing.host_stair": "Kinnitatud trepile #{id}",
+ "railing.host_path": "Joonistatud piire",
+ "railing.length": "Pikkus",
+ "stair.deleted_with": "koos {n} kinnitatud piirdega"
+}

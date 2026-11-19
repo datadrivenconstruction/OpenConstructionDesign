@@ -1,0 +1,14 @@
+{
+ "ai_keys.header_is_key": "Schlüssel gehören ins Feld Schlüssel — Header werden im Klartext gespeichert",
+ "ai_keys.move": "In Schlüssel verschieben",
+ "ai_keys.remove_line": "Aus Headern entfernen",
+ "ai_keys.save_blocked": "Zum Speichern den Schlüssel aus den Headern entfernen",
+ "ai_keys.show": "Anzeigen",
+ "ai_keys.hide": "Ausblenden",
+ "ai_keys.copy": "Kopieren",
+ "ai_keys.tokens": "Tokens",
+ "ai_keys.presets": "Voreinstellungen",
+ "ai_keys.preset_k": "{n} Tsd.",
+ "ai_keys.preset_m": "{n} Mio.",
+ "ai_keys.images_on": "Unterstützt"
+}

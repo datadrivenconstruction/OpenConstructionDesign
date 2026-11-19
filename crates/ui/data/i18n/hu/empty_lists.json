@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "Fal rajzolása",
+ "empty.totals.action": "Fal rajzolása",
+ "empty.schedule.action": "Mező hozzáadása",
+ "empty.schedule_filtered.action": "Szűrő törlése",
+ "empty.library.action": "Keresés törlése",
+ "empty.library.load": "Család betöltése",
+ "empty.schedule_fields.title": "Nincs megjelenített mező",
+ "empty.schedule_fields.action": "Mező hozzáadása",
+ "empty.schedule_fields.hint": "Kapcsoljon be legalább egy mezőt a táblázat megtekintéséhez."
+}

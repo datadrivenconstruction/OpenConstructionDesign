@@ -1,0 +1,22 @@
+{
+ "depth.chip": "깊이 {level}",
+ "depth.chip_tip": "다음 실행이 분야별로 프로젝트를 얼마나 상세히 작업할지: 개념 D1부터 제작 D5까지",
+ "depth.all_off": "모든 분야 끔",
+ "depth.disc.arch": "건축",
+ "depth.disc.struct": "구조",
+ "depth.disc.mep": "MEP",
+ "depth.disc.doc": "문서",
+ "depth.project": "프로젝트 깊이",
+ "depth.level.1": "D1 개념: 매스, 층, 면적, 시트 1장",
+ "depth.level.2": "D2 스케치: 벽, 프로그램별 실, 개구부, 그리드, 평면",
+ "depth.level.3": "D3 설계: 층별 유형, 크기가 정해진 구조, MEP 주관과 말단, 일람표",
+ "depth.level.4": "D4 작업: 접합부 상세, 철물, 마감, 철근, 분기",
+ "depth.level.5": "D5 제작: 굽힘 일람표, 강재 접합, 프리캐스트, 자재명세서",
+ "depth.as_project": "같음",
+ "depth.estimate": "예상: 요소 약 {elements}개, {minutes}분, {calls}회 호출에 토큰 {tokens}, 시트 {sheets}장",
+ "depth.estimate_none": "예상치는 초안 프로젝트와 함께 나옵니다. 모델은 아직 비어 있습니다",
+ "depth.heat": "깊이 히트맵",
+ "depth.heat.row": "깊이",
+ "depth.settings": "이 프로젝트의 설계 깊이",
+ "depth.settings_desc": "AI 어시스턴트가 작업할 깊이 D1~D5, 분야별 스위치와 개별 깊이 설정; 프로젝트 파일에 저장"
+}

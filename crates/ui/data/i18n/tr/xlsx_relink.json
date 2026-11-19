@@ -1,0 +1,14 @@
+{
+ "xlsx_relink.title": "Bağlı çalışma kitabı taşındı veya yeniden adlandırıldı",
+ "xlsx_relink.body": "“{file}” çalışma kitabı artık {folder} içinde değil. Ona yazılan düzenlemeler, yeniden bağlanmadan geri gelmez.",
+ "xlsx_relink.found_one": "{folder} içinde “{file}” bulundu: aynı proje ve aynı dışa aktarım. Bağlansın mı?",
+ "xlsx_relink.found_many": "Bu projenin ve bu dışa aktarımın {n} çalışma kitabı bulundu. Bağlanacağını seçin:",
+ "xlsx_relink.found_none": "Yanında bu dışa aktarıma ait çalışma kitabı bulunamadı. Bulun ya da yeni bir çalışma kitabı dışa aktarın.",
+ "xlsx_relink.link": "“{file}” dosyasını bağla",
+ "xlsx_relink.find": "Bul…",
+ "xlsx_relink.find_title": "Bağlı çalışma kitabını bul",
+ "xlsx_relink.export_new": "Yeni çalışma kitabına aktar",
+ "xlsx_relink.close": "Kapat",
+ "xlsx_relink.gone": "“{file}” çalışma kitabı klasöründe artık yok. Ona yazılan düzenlemeler, yeniden bağlanmadan geri gelmez.",
+ "xlsx_relink.found_one_short": "“{file}” bulundu: aynı proje ve aynı dışa aktarım. Bağlansın mı?"
+}

@@ -1,0 +1,13 @@
+{
+ "cmdl.mode_cmd": "Naredba",
+ "cmdl.mode_ai": "AI",
+ "cmdl.toggle": "Naredbe ili AI pomoćnik (Ctrl+J)",
+ "cmdl.hint": "Naredba ili prečac (W, L, M, RO), točka #x;y, @dx;dy, d<kut. Ctrl+J: pitaj AI pomoćnika",
+ "cmdl.hint_ai": "Pitaj AI pomoćnika o modelu ili zatraži izmjenu. Ctrl+J: natrag na naredbe",
+ "cmdl.sent": "Poslano AI pomoćniku",
+ "cmdl.failed": "Nije moguće izvršiti „{text}“ ovdje",
+ "cmdl.no_tool": "Najprije pokrenite naredbu crtanja, zatim unosite njezine točke",
+ "cmdl.unknown": "Nema naredbe „{text}“. Ctrl+J šalje je AI pomoćniku",
+ "cmdl.bad": "Ne mogu pročitati „{text}“: {e}",
+ "cmdl.shape": "„{text}“ nije točka: upišite x;y, #x;y, @dx;dy ili pozitivnu udaljenost<kut"
+}

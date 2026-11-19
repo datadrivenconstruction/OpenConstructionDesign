@@ -1,0 +1,8 @@
+{
+ "empty.start_recent.title": "Nessun progetto recente",
+ "empty.start_recent.hint": "I progetti aperti compaiono qui. Inizia con il modello di esempio.",
+ "empty.start_recent.action": "Apri esempio",
+ "start.recent_open_file": "Apri file…",
+ "start.forgot": "Rimosso dai recenti: {name}",
+ "start.forgot_undo": "Annulla"
+}

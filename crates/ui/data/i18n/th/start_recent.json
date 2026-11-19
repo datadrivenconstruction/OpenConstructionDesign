@@ -1,0 +1,5 @@
+{
+ "start_recent.unavailable": "ใช้งานไม่ได้ในขณะนี้ (ไดรฟ์หรือตำแหน่งเครือข่ายไม่ตอบสนอง): {path}",
+ "start_recent.unavailable_short": "ใช้งานไม่ได้ในขณะนี้",
+ "start_recent.retry": "ลองอีกครั้ง"
+}

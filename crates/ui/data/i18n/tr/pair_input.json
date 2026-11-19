@@ -1,0 +1,6 @@
+{
+ "pair_input.pair_hint": "İki değer noktalı virgülle ayrılır: @1000;500",
+ "pair_input.old_pair": "İki tam sayı arasındaki virgül artık çift oluşturmaz: iki değer için 6000;4000, ondalık için 6000,5 yazın",
+ "pair_input.op.bad_length": "Uzunluk değil: {text} ({why}). Hiçbir şey değiştirilmedi",
+ "pair_input.op.bad_count": "{text} adedi alınmadı: {min} ile {max} arasında bir tam sayı olmalı"
+}

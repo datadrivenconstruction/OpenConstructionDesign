@@ -1,0 +1,22 @@
+{
+ "ai.audit.tokens": "{n} διακριτικά",
+ "ai.audit.filter.all": "Όλα",
+ "ai.audit.filter.ai": "AI",
+ "ai.audit.filter.me": "Εγώ",
+ "ai.audit.search": "Αναζήτηση αλλαγών",
+ "ai.audit.search.clear": "Εκκαθάριση αναζήτησης",
+ "ai.audit.show_all": "Εμφάνιση όλων",
+ "ai.audit.empty.hint": "Οι αλλαγές που προτείνει ή εφαρμόζει μοντέλο ή πράκτορας εμφανίζονται εδώ, καθεμιά με τρόπο επιστροφής.",
+ "ai.audit.no_match": "Καμία αλλαγή δεν ταιριάζει με το φίλτρο.",
+ "ai.audit.show.tip": "Επιλογή και εμφάνιση των αντικειμένων που άγγιξε αυτή η αλλαγή",
+ "ai.audit.revert.ask": "Να ανακληθεί το «{what}»; {change}.",
+ "ai.audit.revert.elements": {
+  "one": "# αλλαγή αντικειμένου",
+  "other": "# αλλαγές αντικειμένων"
+ },
+ "ai.audit.revert.keeps": "Οι νεότερες αλλαγές παραμένουν. Η αναστροφή είναι ένα βήμα αναίρεσης.",
+ "ai.audit.cancel": "Ακύρωση",
+ "ai.audit.toast.reverted": "Αναστράφηκε: {what}",
+ "ai.audit.toast.undone": "Αναιρέθηκε: {what}",
+ "ai.audit.redo": "Επανάληψη"
+}

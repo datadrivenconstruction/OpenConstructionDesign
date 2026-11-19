@@ -1,0 +1,11 @@
+{
+ "fe.csv.apply": "Použít import",
+ "fe.csv.cancel": "Zahodit náhled",
+ "fe.csv.nothing": "Není co měnit: katalog odpovídá aktuálním typům",
+ "fe.csv.preview": "Náhled importu: {added} nových, {changed} změněných, {same} nezměněných typů; mění se {values} hodnot",
+ "fe.csv.preview_hint": "Prázdné buňky a chybějící sloupce ponechávají aktuální hodnoty. Nic se nemění, dokud nepoužijete.",
+ "fe.csv.skipped": "Nepoužito, hodnota ponechána: {msg}",
+ "fe.csv.type_added": "Nový typ {name}",
+ "fe.csv.type_changed": "Typ {name}",
+ "fe.csv.value": "  {param}: {old} → {new}"
+}

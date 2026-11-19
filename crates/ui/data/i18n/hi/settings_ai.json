@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "कनेक्शन",
+ "settings.ai_status_desc": "वह मॉडल जिसे AI सहायक उपयोग करता है; कुंजियां सुरक्षित स्टोर में रहती हैं",
+ "settings.ai_not_connected": "कनेक्ट नहीं है",
+ "settings.ai_connect": "कनेक्शन सेटिंग्स",
+ "settings.ai_connect_desc": "आपके अपने मॉडल का पता, मॉडल और कुंजी, क्लाउड या स्थानीय",
+ "settings.ai_connect_btn": "कनेक्शन सेटिंग्स…",
+ "settings.ai_panel": "AI सहायक पैनल",
+ "settings.ai_panel_desc": "शब्दों में पूछें, प्लान देखें, फिर लागू करें",
+ "settings.ai_open_panel": "AI पैनल खोलें"
+}

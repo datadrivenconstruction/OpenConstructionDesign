@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "Η εφαρμογή αναιρέθηκε: το μοντέλο δεν ταίριαζε με την προεπισκόπηση. {what}",
+ "xlsx_verify.not_written": "Το {row} δεν άλλαξε.",
+ "xlsx_verify.lost": "Το {row} εξαφανίστηκε.",
+ "xlsx_verify.not_deleted": "Το {row} δεν διαγράφηκε.",
+ "xlsx_verify.extra_deleted": "Το {row} διαγράφηκε, αν και η προεπισκόπηση το κρατούσε.",
+ "xlsx_verify.created": "{table}: {got} νέα αντί για {want}.",
+ "xlsx_verify.value": "{row}, {field}: αναμενόταν {want} (ήταν {old}), βρέθηκε {got}.",
+ "xlsx_verify.check_failed": "Το αποτέλεσμα δεν μπόρεσε να ελεγχθεί: {e}",
+ "xlsx_verify.plan_failed": "Η εφαρμογή δεν ξεκίνησε: ο έλεγχος δεν μπόρεσε να διαβάσει το μοντέλο ({e}).",
+ "xlsx_verify.take_back_failed": "Το βήμα δεν μπόρεσε να αναιρεθεί ({e}): χρησιμοποιήστε την Αναίρεση.",
+ "xlsx_verify.t.wall": "Τοίχος",
+ "xlsx_verify.t.opening": "Άνοιγμα",
+ "xlsx_verify.t.room": "Χώρος",
+ "xlsx_verify.t.slab": "Δάπεδο",
+ "xlsx_verify.t.level": "Επίπεδο",
+ "xlsx_verify.t.wall_type": "Τύπος τοίχου",
+ "xlsx_verify.t.slab_type": "Τύπος δαπέδου",
+ "xlsx_verify.t.col": "Κολώνα",
+ "xlsx_verify.t.beam": "Δοκός",
+ "xlsx_verify.t.roof": "Στέγη",
+ "xlsx_verify.t.curtain_wall": "Κουρτινοτοίχος"
+}

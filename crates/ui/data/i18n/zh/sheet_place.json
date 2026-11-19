@@ -1,0 +1,15 @@
+{
+ "sheet_place.place_view_tip": "在图纸上放置视图或明细表",
+ "sheet_place.properties_tip": "图纸编号、名称、图幅和修订",
+ "sheet_place.print_tip": "打印或导出图纸",
+ "sheet_place.fit_tip": "将图纸适配到窗口",
+ "sheet_place.activate_tip": "在图纸上就地编辑视图：平移、缩放和裁剪",
+ "sheet_place.open_view_tip": "在独立标签页中打开视图",
+ "sheet_place.done_tip": "完成在图纸上编辑视图",
+ "sheet_place.reset_crop_tip": "移除裁剪，显示整个视图",
+ "sheet_place.scale_tip": "图纸上所选视图的比例",
+ "sheet_place.title_tip": "显示在图纸上视图下方的标题",
+ "sheet_place.banner": "正在图纸上编辑视图",
+ "sheet_place.new_set_tip": "创建一组图纸，以便一起打印",
+ "sheet_place.new_sheet_tip": "向项目添加图纸"
+}

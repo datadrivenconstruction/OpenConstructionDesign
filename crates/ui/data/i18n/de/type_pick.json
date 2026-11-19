@@ -1,0 +1,10 @@
+{
+ "type_pick.pick.search": "Typen oder Stärke suchen",
+ "type_pick.pick.empty": "Keine passenden Typen",
+ "type_pick.pick.edit": "Typ bearbeiten…",
+ "type_pick.pick.mixed": "Gemischt",
+ "type_pick.pick.layers": {
+  "one": "# Schicht",
+  "other": "# Schichten"
+ }
+}

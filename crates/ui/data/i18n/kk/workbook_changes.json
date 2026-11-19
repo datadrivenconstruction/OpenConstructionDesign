@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "Қолданылмаған жұмыс кітабы өзгерістері",
+ "workbook_changes.wb.body": "Жобаны жабу немесе ауыстыру оларды жояды.",
+ "workbook_changes.wb.line": "Жұмыс кітабын импорттау: қолданылмаған {n} өзгеріс",
+ "workbook_changes.wb.review": "Қарау",
+ "workbook_changes.wb.discard": "Тастау"
+}

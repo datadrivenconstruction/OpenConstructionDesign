@@ -1,0 +1,17 @@
+family Distribution Board
+category electrical
+host wall
+ifc IfcElectricDistributionBoard DISTRIBUTIONBOARD
+param Width length type 400mm
+param Height length type 600mm
+param Depth length type 120mm
+param Source number type 1
+param Casing material type "Steel White"
+type "400x600" Width=400mm, Height=600mm
+type "600x800" Width=600mm, Height=800mm, Depth=200mm
+type "24x32 in" Width=610mm, Height=813mm, Depth=200mm
+type "Sub 400x600" Width=400mm, Height=600mm, Source=0
+extrude Body rect(-Width / 2, 0mm, Width / 2, Depth) z(0mm, Height) mat(Casing) show(3d, elev)
+symbol rect(-Width / 2, 0mm, Width / 2, Depth)
+symbol line(-Width / 2, 0mm, Width / 2, Depth) show(medium, fine)
+connector Main conduit power at(0, Depth / 2, Height) dir(0, 0, 1) size(50mm)

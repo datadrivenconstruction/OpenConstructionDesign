@@ -1,0 +1,7 @@
+{
+ "recover.untitled_note": "Este projeto nunca foi salvo",
+ "recover.file_missing": "O arquivo do projeto não foi encontrado",
+ "recover.banner": "Trabalho não salvo de uma sessão anterior foi encontrado para {name}",
+ "recover.banner_review": "Revisar",
+ "recover.later_archived": "Adiado {n} vezes: instantâneos movidos para o arquivo"
+}

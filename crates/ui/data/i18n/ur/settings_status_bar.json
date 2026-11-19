@@ -1,0 +1,10 @@
+{
+ "cmd.view.axes_full": "مکمل محور",
+ "cmd.view.axes_full.desc": "X اور Y محور نقشے پر مکمل لکیروں کے طور پر دکھاتا ہے۔ صرف دباتے وقت دیکھنے کے لیے F9 دبائے رکھیں۔",
+ "settings.axes_full": "محور",
+ "settings.axes_full_desc": "شیٹ پر نقشے کے محور مکمل لکیروں کے طور پر۔ فوری دیکھنے کے لیے F9 دبائے رکھیں۔",
+ "settings.axes_full_on": "مکمل محور دکھائیں",
+ "plan.hud.axes_tip": "مکمل محور دیکھنے کے لیے {key} دبائے رکھیں",
+ "status.axes_full.on": "مکمل محور آن",
+ "status.axes_full.off": "مکمل محور بند"
+}

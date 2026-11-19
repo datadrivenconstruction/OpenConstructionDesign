@@ -1,0 +1,19 @@
+{
+ "xlsx_confirm.chip": "da confermare",
+ "xlsx_confirm.section": "Righe senza id abbinate a un elemento per nome o numero",
+ "xlsx_confirm.tag": "abbinato per nome",
+ "xlsx_confirm.tag_accepted": "abbinamento accettato",
+ "xlsx_confirm.tag_rejected": "crea nuovo",
+ "xlsx_confirm.kind_room": "locale",
+ "xlsx_confirm.kind_curtain_wall": "facciata continua",
+ "xlsx_confirm.row_line": "{kind} #{id}, chiave \"{key}\"",
+ "xlsx_confirm.accept": "Accetta",
+ "xlsx_confirm.accept_tip": "Applica questa riga all'elemento abbinato (un passo di annulla con le altre)",
+ "xlsx_confirm.reject": "Crea nuovo",
+ "xlsx_confirm.reject_tip": "Non abbinare: questa riga crea un nuovo elemento",
+ "xlsx_confirm.decide_first": "Prima accetta o rifiuta le righe abbinate per nome.",
+ "xl.msg.key_match_many": "la chiave corrisponde a {} elementi; non abbinata, la riga ne crea uno nuovo",
+ "xl.msg.key_match_taken": "la chiave corrisponde a un elemento usato da un'altra riga; non abbinata, la riga ne crea uno nuovo",
+ "xl.msg.key_match_kept": "mantenuto: abbinamento rifiutato, la riga crea un nuovo elemento",
+ "xl.msg.key_match_undecided": "le righe abbinate per nome attendono una decisione"
+}

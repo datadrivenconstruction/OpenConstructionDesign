@@ -1,0 +1,8 @@
+{
+ "v3d.home.tip": "初始视图",
+ "v3d.compass.n": "北",
+ "v3d.compass.e": "东",
+ "v3d.compass.s": "南",
+ "v3d.compass.w": "西",
+ "v3d.compass.tip": "指北针 — 拖动以使视图绕竖直轴旋转"
+}

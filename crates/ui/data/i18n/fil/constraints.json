@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "Pinapanatili ang kasalukuyang haba ng pader na ito sa bawat pag-edit",
+ "constraints.con.tip.lock_dist": "Pinapanatili ang distansya ng dalawang pader sa bawat pag-edit",
+ "constraints.con.tip.equal": "Pinapanatiling pantay ang agwat ng mga napiling pader",
+ "constraints.con.tip.align": "Pinapanatiling nasa iisang linya ang dalawang pader",
+ "constraints.con.tip.parallel": "Pinapanatiling magkapareho ang direksyon ng mga pader",
+ "constraints.con.tip.perp": "Pinapanatili ang mga pader sa tamang anggulo",
+ "constraints.con.tip.align_grid": "Pinapanatili ang pader sa pinakamalapit na grid line",
+ "constraints.con.tip.lock_dist_grid": "Pinapanatili ang distansya ng pader sa pinakamalapit na grid line",
+ "constraints.con.tip.level_gap": "Pinapanatili ang agwat ng mga level",
+ "constraints.con.tip.top_to_level": "Pinapanatili ang tuktok ng pader sa level sa itaas"
+}

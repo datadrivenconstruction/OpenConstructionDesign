@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "الإدخال فارغ.",
+ "units.err.not_number": "ليس رقمًا عند الموضع {pos}.",
+ "units.err.unknown_unit": "وحدة غير معروفة: {unit}.",
+ "units.err.non_positive": "يجب أن يكون الطول أكبر من صفر.",
+ "units.err.too_large": "يجب ألا يتجاوز الطول {max} م.",
+ "units.err.bad_angle": "الزاوية عدد من الدرجات.",
+ "units.err.unknown_name": "اسم غير معروف: {name}. القيمة محفوظة.",
+ "units.err.cycle": "حلقة صيغ عند {name}. القيمة محفوظة.",
+ "units.err.bad_expr": "تعذّر قراءة التعبير عند الموضع {pos}. القيمة محفوظة.",
+ "units.err.div_zero": "قسمة على صفر عند الموضع {pos}. القيمة محفوظة.",
+ "units.err.invalid": "رقم غير صالح.",
+ "units.err.kept": "لم يتغير شيء: {reason}"
+}

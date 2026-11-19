@@ -1,0 +1,5 @@
+{
+ "mirror_array.err.count": "Määrä on kokonaisluku väliltä 2–200: 4 3000, tai 4;300, kun askeleessa on kolme numeroa",
+ "mirror_array.err.length": "Askel tai kokonaismitta on positiivinen pituus, esim. 3 000 tai 1.2 m",
+ "mirror_array.err.angle": "Pyyhkäisy on kulma asteina, ei nolla ja enintään 360"
+}

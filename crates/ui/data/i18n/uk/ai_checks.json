@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "виміряно {value}, ліміт {limit}",
+ "ai_checks.check.cap": "Показано {shown} з {total} знахідок. Спочатку помилки: виправте їх і запустіть знову.",
+ "ai_checks.check.run_again": "Запустити знову",
+ "ai_checks.check.goto": "Вибрати і наблизити",
+ "ai_checks.check.never_title": "Ще не перевірено",
+ "ai_checks.check.never_hint": "Запустіть перевірки, і знахідки з’являться тут.",
+ "ai_checks.check.sec.error": "Помилки",
+ "ai_checks.check.sec.warning": "Попередження",
+ "ai_checks.check.sec.info": "Примітки"
+}

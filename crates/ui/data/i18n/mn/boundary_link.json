@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "Ханын бүх контурыг сонгох",
+ "cmd.sketch.link_unlink": "Ирмэгийг ханаас салгах",
+ "cmd.sketch.link_repick": "Ирмэгийн ханыг дахин сонгох",
+ "cmd.ctx.floor.link_unlink": "Ирмэгүүдийг ханаас салгах",
+ "cmd.ctx.floor.link_accept": "Устгасан хананы ирмэгүүдийг хүлээн авах",
+ "boundary_link.hint.loop": "Ханыг дарна уу: хаалттай ханын хэсэг холбогдсон ирмэг болно",
+ "boundary_link.hint.repick": "Ирмэгтэй параллель ханыг дарна уу: ирмэг түүнийг дагана",
+ "boundary_link.need_sketch": "Эхлээд хязгаарын зургийг нээнэ үү",
+ "boundary_link.need_edge": "Зургийн ирмэг дээр заана уу",
+ "boundary_link.need_straight": "Зөвхөн шулуун ирмэг хананы дагуу явж чадна",
+ "boundary_link.need_floor": "Шалыг сонгоно уу",
+ "boundary_link.no_wall": "Курсорын доор хана байхгүй",
+ "boundary_link.not_parallel": "Хана ирмэгтэй параллель биш",
+ "boundary_link.not_linked": "Энэ ирмэг ханатай холбогдоогүй",
+ "boundary_link.unlinked": "Ирмэг салгагдлаа: тэр байрандаа үлдэж, ханыг дагахаа больсон",
+ "boundary_link.accepted": "Ирмэгүүд хүлээн авагдлаа: тэдгээр тэр байрандаа энгийн ирмэг хэвээр үлдэнэ",
+ "boundary_link.failed": "Хэрэглэж чадсангүй",
+ "boundary_link.lost": "эх хана устгагдсан",
+ "boundary_link.blocked": "хананы дагуу явж чадахгүй"
+}

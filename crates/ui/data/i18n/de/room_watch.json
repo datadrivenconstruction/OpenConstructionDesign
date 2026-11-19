@@ -1,0 +1,4 @@
+{
+ "room_watch.room.dup": "Raum {room} liegt im Bereich von Raum {other}: Fläche und Volumen werden nur in Raum {other} gezählt",
+ "ai.issue.room_dup": "Der Raum liegt im Bereich von Raum {0}: seine Fläche wird dort mitgezählt"
+}

@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "{name} muutus kettal.",
+ "src.watch.update": "Uuenda mudelit",
+ "src.watch.compare": "Võrdle",
+ "src.watch.ignore": "Ignoreeri seda versiooni",
+ "src.watch.missing": "{name}: lähtefaili ei leitud. Töö jätkub.",
+ "src.watch.locate": "Leia…",
+ "src.watch.dismiss": "Sulge",
+ "src.watch.more": "ja veel {n} lähtefaili",
+ "src.watch.done": "Uuendatud failist {name}: {updated} muudetud, {kept} välja jäeti muudetuna alles, {conflicts} konflikti, {locked} lukustatud väärtust jäeti alles"
+}

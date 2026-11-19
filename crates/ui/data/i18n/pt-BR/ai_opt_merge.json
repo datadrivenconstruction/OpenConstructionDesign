@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "Mesclar opção: {name}",
+ "ai_opt_merge.whole": "Mesclar opção inteira",
+ "ai_opt_merge.parts": "Mesclar partes selecionadas",
+ "ai_opt_merge.note": "Por que esta opção",
+ "ai_opt_merge.rebased": "O modelo mudou depois que esta opção foi criada: a mesclagem foi recalculada com o modelo atual. Verifique as alterações antes de aplicar.",
+ "ai_opt_merge.left.not_picked": "Não selecionado na opção",
+ "ai_opt_merge.left.unticked": "Desmarcado na opção",
+ "ai_opt_merge.left.conflict": "Não pode ser adicionado ao modelo atual: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "Esta opção não pode ser mesclada. Uma opção rejeitada precisa ser restaurada primeiro.",
+ "ai_opt_merge.refused.stale": "O modelo mudou depois que esta opção foi criada. Recalcule a mesclagem com o modelo atual.",
+ "ai_opt_merge.refused.nothing_picked": "Nada selecionado para mesclar.",
+ "ai_opt_merge.refused.unknown_item": "O item {item} não faz parte desta opção.",
+ "ai_opt_merge.refused.not_in_option": "O elemento selecionado não faz parte desta opção.",
+ "ai_opt_merge.refused.needs_left_out": "O item {item} precisa do item {needs}. Selecione-o também ou permita a adição de dependências.",
+ "ai_opt_merge.refused.set_gone": "O item {item} refere-se a uma seleção que não existe mais. Gere a opção novamente.",
+ "ai_opt_merge.refused.busy": "Outro plano está aberto. Aplique-o ou rejeite-o primeiro.",
+ "ai_opt_merge.refused.failed": "Não foi possível preparar a mesclagem: {reason}",
+ "ai_opt_merge.revive": "Restaurar opção",
+ "ai_opt_merge.merged": "Mesclado"
+}

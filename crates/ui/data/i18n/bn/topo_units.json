@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "এককসমূহ",
+ "topo_units.unit": "ফাইলের এককসমূহ",
+ "topo_units.unit.m": "m",
+ "topo_units.unit.cm": "cm",
+ "topo_units.unit.mm": "mm",
+ "topo_units.unit.ft": "ft",
+ "topo_units.unit.usft": "US survey ft",
+ "topo_units.unit.in": "in",
+ "topo_units.unit.from_file": "ফাইল এককের নাম দিয়েছে: {unit}",
+ "topo_units.unit.suggested": "ফাইলে কোনো একক নেই। পরিধি অনুযায়ী প্রস্তাব: {unit} — নিচের ফলাফল যাচাই করুন",
+ "topo_units.extent": "প্রকল্পের এককে ফলাফল: প্ল্যানে {x} × {y} {u}, উচ্চতার পরিসর {z} {u}",
+ "topo_units.extent.none": "ফলাফল: এই বাছাইয়ে আমদানির কিছু নেই",
+ "topo_units.extent.check": "এটি সাইটের মতো দেখাচ্ছে না: এককগুলো যাচাই করুন"
+}

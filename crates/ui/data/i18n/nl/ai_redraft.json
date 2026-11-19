@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "Herzien",
+ "ai.redraft.added": "+{n} toegevoegd",
+ "ai.redraft.removed": "−{n} verwijderd",
+ "ai.redraft.changed": "~{n} gewijzigd",
+ "ai.redraft.strip": "{what} sinds uw laatste blik",
+ "ai.redraft.note": "Herzien plan beoordeeld: {what}",
+ "ai.redraft.more": "+{n} meer",
+ "ai.redraft.ack": "Begrepen",
+ "ai.redraft.ack.tip": "Markeer deze herziening als gezien; Toepassen richt zich dan erop",
+ "ai.redraft.removed_list": "Verwijderde onderdelen: {n}",
+ "ai.redraft.review_first": "Het plan is gewijzigd na uw bericht: beoordeel eerst de wijzigingen",
+ "ai.redraft.mark.tip": "Nieuw of gewijzigd sinds uw laatste blik",
+ "ai.redraft.emptied": "De vervolgvraag heeft alle onderdelen verwijderd: het concept is leeg"
+}

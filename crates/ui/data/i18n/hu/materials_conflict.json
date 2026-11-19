@@ -1,0 +1,5 @@
+{
+ "materials.mat.conflict": "Ez az anyag a modellben módosult (visszavonás vagy másik ablak) közben, amíg a kártyán szerkesztések voltak. Az Ön szerkesztései megmaradnak.",
+ "materials.mat.keep": "Szerkesztéseim megtartása",
+ "materials.mat.reload": "Újratöltés"
+}

@@ -1,0 +1,4 @@
+{
+ "elem.spreadsheet.applied": "XLSX'dan import qilindi: {what}",
+ "elem.spreadsheet.failed": "XLSX jadval importi amalga oshmadi: {e}"
+}

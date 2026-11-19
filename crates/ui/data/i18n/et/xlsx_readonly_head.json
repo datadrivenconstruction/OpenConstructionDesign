@@ -1,0 +1,5 @@
+{
+ "xlsx_readonly.read_only_head": "Kirjutuskaitstud — rakendamine kirjutab koopia",
+ "xlsx_readonly.show_in_folder": "Näita kaustas",
+ "xlsx_readonly.copy_exists": "Koopia fail on juba olemas. Vali teine nimi või eemalda see."
+}

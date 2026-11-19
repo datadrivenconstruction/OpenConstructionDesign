@@ -1,0 +1,15 @@
+{
+ "xl.msg.cell_clipped": "teksten blev beskåret til cellegrænsen; skrivebeskyttet, redigering ikke anvendt",
+ "xlcell.status": "Eksporteret. {count} celler blev forkortet eller tømt — se detaljevinduet.",
+ "xlcell.title": "Celler ændret af eksporten",
+ "xlcell.intro": "Disse celler kunne ikke skrives som de er. Hele værdien findes stadig i modellen; cellen er låst og kan ikke redigeres i regnearket.",
+ "xlcell.col_sheet": "Ark",
+ "xlcell.col_row": "Række",
+ "xlcell.col_col": "Kolonne",
+ "xlcell.col_id": "Element-id",
+ "xlcell.col_what": "Hvad skete",
+ "xlcell.what_clipped": "Tekst beskåret til cellegrænsen",
+ "xlcell.what_blank": "Ikke et endeligt tal, cellen tømt",
+ "xlcell.more": "… og {count} flere",
+ "xlcell.close": "Luk"
+}

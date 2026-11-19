@@ -1,0 +1,9 @@
+{
+ "elem.deleted": "Smazané prvky: {n}",
+ "elem.deleted_kept": "Smazané prvky: {n}; ponechány na místě: {k} (panely a prvky, které nelze smazat)",
+ "elem.not_deleted": "nesmazáno: {e}",
+ "elem.not_deletable": "Tento prvek nelze smazat",
+ "elem.panel": "panel fasády",
+ "elem.panel_refused": "Panel je součástí své fasády a nelze jej smazat samostatně. Pro smazání vyberte celou stěnu.",
+ "elem.reload_failed": "Smazáno, ale pohled se neaktualizoval: {e}"
+}

@@ -1,0 +1,33 @@
+{
+ "cmd.help.licenses": "Лицензи с отворен код",
+ "cmd.help.licenses.desc": "Показва библиотеките с отворен код, използвани в тази компилация, с техните лицензи.",
+ "about.product": "DDC Editor",
+ "about.version": "Версия",
+ "about.build": "Компилация",
+ "about.schema": "Схема на модела",
+ "about.system": "Система",
+ "about.gpu": "Графичен адаптер",
+ "about.language": "Език",
+ "about.copy": "Копиране на информацията за версията",
+ "about.copy_desc": "Версия, компилация, система и графичен адаптер за доклад за грешка. Без пътища до файлове.",
+ "about.copied": "Информацията за версията е копирана",
+ "about.licenses": "Лицензи с отворен код",
+ "about.licenses_desc": "Библиотеки, използвани в тази компилация, и техните лицензи",
+ "about.licenses.open": "Преглед",
+ "about.licenses.title": "Лицензи с отворен код",
+ "about.licenses.note": "DDC Editor включва библиотеките по-долу. Всяка остава под собствения си лиценз и уведомление за авторски права. Пълните текстове на лицензите: THIRD_PARTY_LICENSES.txt до приложението.",
+ "about.licenses.full": "Пълни текстове на лицензите",
+ "about.licenses.list": "Списък на компонентите",
+ "about.licenses.close": "Затваряне",
+ "about.licenses.col_name": "Компонент",
+ "about.licenses.col_license": "Лиценз",
+ "about.licenses.count": {
+  "one": "# компонент",
+  "other": "# компонента"
+ },
+ "about.licenses.count_of": "{shown} от {total} компонента",
+ "about.licenses.search_hint": "Търсене по име или лиценз…",
+ "about.licenses.search_clear": "Изчистване на търсенето",
+ "about.licenses.none": "Нищо не е намерено",
+ "about.licenses.none_hint": "Опитайте част от името на библиотека или лиценз, например MIT."
+}

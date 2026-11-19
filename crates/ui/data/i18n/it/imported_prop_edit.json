@@ -1,0 +1,6 @@
+{
+ "imported_prop_edit.remove": "Rimuovi proprietà",
+ "imported_prop_edit.remove.tip": "Rimuove la proprietà da {n} elemento/i selezionato/i in un solo passo di annullamento; al salvataggio viene tolta dal file IFC",
+ "imported_prop_edit.done": "{key} rimosso da {n} elemento/i",
+ "imported_prop_edit.warn.reload": "Fatto, ma la vista non è stata aggiornata; riapri il pannello o annulla se sembra sbagliato"
+}

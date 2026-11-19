@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "משטח חופשי",
+ "cmd.mass.panelize": "חלק לפאנלים",
+ "cmd.mass.surface_shell": "גג על משטח",
+ "cmd.mass.thicken": "עובי",
+ "hint.mass.freeform.first": "משטח חופשי: פינה ראשונה של מלבן התוכנית · הקלד את הגובה · Esc — ביטול",
+ "hint.mass.freeform.next": "משטח חופשי: הפינה הנגדית · הקלד את הגובה · Esc — ביטול",
+ "hint.mass.panelize.first": "חלוקה לפאנלים: בחר משטח חופשי בתלת-ממד · Esc — ביטול",
+ "hint.mass.panelize.value": "חלוקה לפאנלים: הקלד את גודל הפאנל · Enter — החל · Esc — ביטול",
+ "hint.mass.surface_shell.first": "גג על משטח: בחר משטח חופשי בתלת-ממד · Esc — ביטול",
+ "hint.mass.surface_shell.value": "גג על משטח: הקלד את העובי · Enter — החל · Esc — ביטול",
+ "hint.mass.thicken.first": "עובי: בחר משטח חופשי בתלת-ממד · Esc — ביטול",
+ "hint.mass.thicken.value": "עובי: הקלד את העובי (0 — משטח בלבד) · Enter — החל · Esc — ביטול",
+ "status.mass.pick_surface": "בחר משטח חופשי",
+ "status.mass.freeform_small": "המלבן קטן מדי: לפחות 0.5 מ׳ בכל כיוון",
+ "name.mass.freeform": "משטח חופשי",
+ "rgroup.mass_free": "מתקדם"
+}

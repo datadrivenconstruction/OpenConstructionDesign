@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "Sichtbereich",
+ "view_range.range": "Sichtbereich",
+ "view_range.cut": "Schnittebene",
+ "view_range.bottom": "Unten",
+ "view_range.depth": "Ansichtstiefe",
+ "view_range.cut.hint": "Höhe der Schnittebene über der Ebene. Elemente, die sie kreuzen, werden geschnitten dargestellt.",
+ "view_range.bottom.hint": "Unterkante des Bereichs relativ zur Ebene. Null oder negative Werte sind zulässig.",
+ "view_range.depth.hint": "Wie weit die Ansicht unter die Unterkante blickt. Null oder mehr.",
+ "view_range.err.number": "Geben Sie in jedem Feld eine Länge ein",
+ "view_range.err.not_finite": "Geben Sie in jedem Feld eine Länge ein",
+ "view_range.err.cut_not_above_bottom": "Die Schnittebene muss über der Unterkante liegen",
+ "view_range.err.negative_depth": "Die Ansichtstiefe darf nicht negativ sein",
+ "view_range.err.top_below_cut": "Die Oberkante des Bereichs darf nicht unter der Schnittebene liegen"
+}

@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "Эхлээд загварын нэрийг оруулна уу",
+ "view_template.name_taken": "Ийм нэртэй загвар аль хэдийн байна",
+ "view_template.pick_blocked": "Эхлээд дор хаяж нэг харагдац тэмдэглээрэй",
+ "view_template.views.one": "{n} харагдац",
+ "view_template.views.few": "{n} харагдац",
+ "view_template.views.many": "{n} харагдац",
+ "view_template.delete.title": "Энэ загварыг устгах уу?",
+ "view_template.delete.body": "“{name}” загварыг устгана. Ашигласан: {used}.",
+ "view_template.delete.unused": "“{name}” загварыг устгана. Ашиглаж буй харагдац алга.",
+ "view_template.delete.keeps": "Эдгээр харагдац одоогийн графикаа хадгалж, холбоосоо алдана.",
+ "view_template.delete.undo": "Үүнийг нэг Буцаах-аар буцаах боломжтой.",
+ "view_template.delete.confirm": "Загварыг устгах"
+}

@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "Sparar hela modellen eller markeringen som binär STL i meter eller millimeter.",
+ "cmd.data.export_obj.desc": "Sparar hela modellen eller markeringen som OBJ med en MTL-fil: en grupp per element, färger efter material.",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "OBJ med material (.obj)",
+ "open_file.filter.mesh": "3D-nät (glTF, STEP, STL, OBJ)",
+ "mx.title": "Exportera {fmt}",
+ "mx.scope": "Vad som ska exporteras",
+ "mx.scope.all": "Hela modellen",
+ "mx.scope.sel": "Markering ({n} element)",
+ "mx.units": "Enheter i filen",
+ "mx.units.m": "Meter",
+ "mx.units.mm": "Millimeter",
+ "mx.export": "Exportera…",
+ "mx.saved": "{fmt} sparad: {path} ({parts} element, {tris} trianglar)",
+ "mx.partial": "{fmt} sparad med {n} problem, vissa kroppar kan saknas: {path}",
+ "mx.failed": "Exporten av {fmt} misslyckades: {error}",
+ "mx.imported": "{file}: {n} element importerade ({tris} trianglar)",
+ "mx.imported_notes": "{file}: {n} element importerade ({tris} trianglar), {w} anmärkningar: {first}"
+}

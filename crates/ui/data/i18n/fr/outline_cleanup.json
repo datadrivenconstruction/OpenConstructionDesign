@@ -1,0 +1,15 @@
+{
+ "cmd.ctx.floor.clean_outline": "Nettoyer le contour",
+ "cmd.ctx.floor.clean_outline.desc": "Supprime les pointes étroites où le contour de la dalle revient sur lui-même. Affiche d'abord un aperçu ; une étape d'annulation.",
+ "outline_cleanup.title": "Nettoyer le contour",
+ "outline_cleanup.intro": "Le contour de cette dalle revient sur lui-même en pointes étroites : {n}. Le nettoyage les supprime ; le reste ne change pas.",
+ "outline_cleanup.legend_before": "Trait épais : le contour actuel",
+ "outline_cleanup.legend_after": "Trait fin : le contour après nettoyage",
+ "outline_cleanup.undo": "Vous pouvez annuler cette opération en une étape.",
+ "outline_cleanup.apply": "Nettoyer",
+ "outline_cleanup.cancel": "Annuler",
+ "outline_cleanup.done": "Contour nettoyé, pointes supprimées : {n}",
+ "outline_cleanup.none": "Le contour de cette dalle n'a aucune pointe",
+ "outline_cleanup.failed": "Impossible de nettoyer le contour",
+ "outline_cleanup.changed": "Le contour a changé depuis l'aperçu ; rien n'a été écrit. Vérifiez le nouvel aperçu."
+}

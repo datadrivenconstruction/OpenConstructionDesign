@@ -1,0 +1,68 @@
+[
+ {
+  "id": "data.src_panel",
+  "icon": "source",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "data",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M3",
+  "group": "source"
+ },
+ {
+  "id": "data.src_reimport",
+  "icon": "reimport",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "data",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M3",
+  "group": "source",
+  "priority": 6
+ },
+ {
+  "id": "data.src_conflicts",
+  "icon": "merge-conflict",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "data",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M3",
+  "group": "source",
+  "priority": 6
+ },
+ {
+  "id": "data.src_delta",
+  "dialog": true,
+  "icon": "xlsx-delta",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "data",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M3",
+  "group": "source",
+  "priority": 6
+ },
+ {
+  "id": "data.src_ifc",
+  "dialog": true,
+  "icon": "ifc-delta",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "data",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M3",
+  "group": "source",
+  "priority": 6
+ }
+]

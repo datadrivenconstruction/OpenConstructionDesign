@@ -1,0 +1,9 @@
+{
+ "ai.settings.num_bad": "Geen getal. Typ het zoals 0.5.",
+ "ai.settings.num_comma": "Gebruik een punt als decimaalteken, zoals 0.5.",
+ "ai.settings.num_negative": "Het getal kan niet negatief zijn.",
+ "ai.settings.unit_money": "valuta",
+ "ai.settings.unit_tokens": "tokens",
+ "ai.settings.unit_price": "per 1 miljoen tokens",
+ "ai.settings.limits_hint": "0 betekent geen limiet. Een geweigerde waarde laat de vorige limiet staan."
+}

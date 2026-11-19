@@ -1,0 +1,8 @@
+{
+ "empty.start_recent.title": "Belum ada proyek terbaru",
+ "empty.start_recent.hint": "Proyek yang Anda buka akan muncul di sini. Mulai dengan model contoh.",
+ "empty.start_recent.action": "Buka contoh",
+ "start.recent_open_file": "Buka berkas…",
+ "start.forgot": "Dihapus dari daftar terbaru: {name}",
+ "start.forgot_undo": "Urungkan"
+}

@@ -1,0 +1,6 @@
+{
+ "ai_toast.toast_not_refreshed": "Diterapkan sebagai langkah urung {n} (Ctrl+Z membatalkannya), tetapi tampilan tidak diperbarui. Muat ulang tampilan.",
+ "ai.optx.reload_failed": "Opsi \"{name}\" diterapkan dan disimpan, tetapi tampilan tidak dimuat ulang: {e}",
+ "ai.cmp.stale": "Usang",
+ "ai.cmp.stale_tip": "Opsi ini dibuat dari keadaan model yang lebih lama. Buat ulang untuk menerapkan."
+}

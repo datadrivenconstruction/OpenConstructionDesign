@@ -1,0 +1,23 @@
+{
+ "cmd.app.report": "Een probleem melden…",
+ "cmd.app.report.desc": "Beschrijft wat er misging en slaat een bundel op deze computer op: uw tekst, build- en systeemgegevens, een venstervoorbeeld en het laatste crashverslag. Er wordt niets verzonden.",
+ "report.title": "Een probleem melden",
+ "report.what": "Wat er is gebeurd",
+ "report.expected": "Wat u verwachtte",
+ "report.steps": "Stappen om het te herhalen",
+ "report.opt.shot": "Een afbeelding van het venster meenemen",
+ "report.opt.model": "Een kopie van het model meenemen",
+ "report.opt.model.note": "Standaard uit. De kopie bevat uw projectgegevens, zonder het AI-logboek.",
+ "report.opt.paths": "Gebruikersnamen in bestandspaden behouden",
+ "report.local": "De bundel wordt alleen op deze computer opgeslagen. Er wordt niets automatisch verzonden.",
+ "report.blocked": "Beschrijf eerst wat er is gebeurd.",
+ "report.save": "Bundel opslaan",
+ "report.copy": "Tekst kopiëren",
+ "report.cancel": "Annuleren",
+ "report.copied": "Rapporttekst gekopieerd.",
+ "report.saved": "Bundel opgeslagen: {path}",
+ "report.failed": "De bundel kon niet worden opgeslagen: {err}",
+ "report.model.fail": "De kopie van het model kon niet worden gemaakt; er is niets opgeslagen: {err}",
+ "report.crash.notice": "De vorige sessie is met een crash beëindigd.",
+ "report.crash.action": "Een probleem melden"
+}

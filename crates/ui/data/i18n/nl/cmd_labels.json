@@ -1,0 +1,14 @@
+{
+ "cmd.arch.wall.tile": "Wand",
+ "cmd.arch.door.tile": "Deur",
+ "cmd.arch.window.tile": "Raam",
+ "cmd.arch.floor.tile": "Vloer",
+ "cmd.mod.move.tile": "Verplaatsen",
+ "cmd.mod.copy.tile": "Kopiëren",
+ "cmd.mod.rotate.tile": "Draaien",
+ "cmd.mod.mirror.tile": "Spiegelen",
+ "cmd.mod.trim.tile": "Bijsnijden",
+ "cmd.mod.delete.tile": "Verwijderen",
+ "cmd.ann.dim.tile": "Maat",
+ "cmd.ann.text.tile": "Tekst"
+}

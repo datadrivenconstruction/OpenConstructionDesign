@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "Hinter dem laufenden Vorgang eingereiht: {n}",
+ "import_queue.queue_full": "Die Warteschlange ist voll, {n} Dateien wurden nicht hinzugefügt",
+ "import_queue.changed": "{name} wurde nach der Erstellung dieses Projekts aktualisiert. Das vorherige Projekt wurde geöffnet.",
+ "import_queue.import_again": "Erneut importieren",
+ "import_queue.kept": "Der abgeschlossene Import bleibt erhalten",
+ "import_queue.open_it": "Öffnen",
+ "import_queue.sum.head": "Import: {editable} bearbeitbar (Wände {walls}, Öffnungen {open}, Decken {slabs}, Räume {rooms}, sonstige {other}), {meshes} als Netz",
+ "import_queue.sum.unchanged": ", unverändert {n}",
+ "import_queue.sum.updated": ", aktualisiert {n}",
+ "import_queue.sum.missing": ", in der Quelle nicht vorhanden {n} (behalten)",
+ "import_queue.sum.skipped": ", übersprungen {n}",
+ "import_queue.sum.warnings": ", Warnungen {n}",
+ "import_queue.import_failed": "Import fehlgeschlagen: {e}"
+}

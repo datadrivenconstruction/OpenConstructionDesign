@@ -1,0 +1,15 @@
+{
+ "type_change.affects_walls": {
+  "one": "utječe na # zid",
+  "few": "utječe na # zida",
+  "other": "utječe na # zidova"
+ },
+ "type_change.affects": {
+  "one": "utječe na # element",
+  "few": "utječe na # elementa",
+  "other": "utječe na # elemenata"
+ },
+ "type_change.tick_types": "Primijeni promjene tipova na svih {n} elemenata ovih tipova",
+ "type_change.tick_types_first": "Prvo označite promjenu tipa: svaki element tipa preuzima tu promjenu",
+ "xl.msg.types_first": "prvo potvrdite promjene tipova"
+}

@@ -1,0 +1,7 @@
+{
+ "spline.opt.spline": "Spline",
+ "spline.opt.spline_tip": "Splinen seinä: napsauta pisteet, joiden kautta se kulkee; Enter tai Esc lopettaa",
+ "spline.wt.three_points": "splinen seinä tarvitsee vähintään kolme pistettä",
+ "spline.wt.no_curtain": "verhoseinällä ei ole splinen akselia",
+ "spline.wt.added": "splinen seinä lisätty"
+}

@@ -1,0 +1,4 @@
+{
+ "xl.msg.layer_cells_unplaced": "{} 个单元格，类型“{}”图层 {}，图纸“{}”无法放置",
+ "xl.msg.layer_hidden_unplaced": "类型“{}”图层 {} 中的隐藏行（图纸“{}”）无法放置"
+}

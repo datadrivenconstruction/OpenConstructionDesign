@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "Vælg hele vægløkken",
+ "cmd.sketch.link_unlink": "Frakobl kant fra væg",
+ "cmd.sketch.link_repick": "Vælg kantvæg igen",
+ "cmd.ctx.floor.link_unlink": "Frakobl kanter fra vægge",
+ "cmd.ctx.floor.link_accept": "Accepter kanter fra slettede vægge",
+ "boundary_link.hint.loop": "Klik på en væg: den lukkede række af vægge bliver til koblede kanter",
+ "boundary_link.hint.repick": "Klik på en væg parallel med kanten: kanten følger den",
+ "boundary_link.need_sketch": "Åbn først afgrænsningsskitsen",
+ "boundary_link.need_edge": "Peg på en kant i skitsen",
+ "boundary_link.need_straight": "Kun en lige kant kan følge en væg",
+ "boundary_link.need_floor": "Vælg et gulv",
+ "boundary_link.no_wall": "Ingen væg under markøren",
+ "boundary_link.not_parallel": "Væggen er ikke parallel med kanten",
+ "boundary_link.not_linked": "Denne kant er ikke koblet til en væg",
+ "boundary_link.unlinked": "Kant frakoblet: den bliver på plads og følger ikke længere væggen",
+ "boundary_link.accepted": "Kanter accepteret: de bliver på plads som almindelige kanter",
+ "boundary_link.failed": "Kunne ikke anvendes",
+ "boundary_link.lost": "kildevæggen er slettet",
+ "boundary_link.blocked": "kan ikke følge væggen"
+}

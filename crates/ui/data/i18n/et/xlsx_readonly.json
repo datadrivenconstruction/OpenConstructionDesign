@@ -1,0 +1,6 @@
+{
+ "xlsx_readonly.read_only": "Töövihik on kirjutuskaitstud (failiomadus või kausta õigus). Ekspordi koopiasse või eemalda failiomaduste seast kirjutuskaitse ja proovi uuesti.",
+ "xlsx_readonly.export_copy": "Ekspordi koopiasse",
+ "xlsx_readonly.no_copy_name": "Töövihiku kõrvale koopia jaoks vaba nime pole.",
+ "xlsx_readonly.copied": "Töövihik jäeti samaks. Selle kõrvale kirjutati värskendatud koopia ja see on nüüd seotud: {path}"
+}

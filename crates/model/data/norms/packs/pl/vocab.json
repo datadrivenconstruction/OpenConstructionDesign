@@ -1,0 +1,45 @@
+{
+ "room_kinds": {
+  "living": [
+   "pokój dzienny",
+   "pokoj dzienny",
+   "salon",
+   "pokój"
+  ],
+  "bedroom": [
+   "sypialnia"
+  ],
+  "kitchen": [
+   "kuchnia",
+   "aneks kuchenny"
+  ],
+  "bath": [
+   "łazienka",
+   "lazienka"
+  ],
+  "wc": [
+   "wc",
+   "toaleta"
+  ],
+  "hall": [
+   "przedpokój",
+   "przedpokoj",
+   "hol"
+  ],
+  "corridor": [
+   "korytarz"
+  ],
+  "storage": [
+   "komórka",
+   "spiżarnia",
+   "schowek"
+  ],
+  "office": [
+   "biuro",
+   "pokój biurowy"
+  ],
+  "meeting": [
+   "sala konferencyjna"
+  ]
+ }
+}

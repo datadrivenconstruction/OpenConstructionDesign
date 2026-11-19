@@ -1,0 +1,6 @@
+{
+ "xl.msg.filter_on_sheet_x": "Filter auf Blatt '{}'",
+ "xl.msg.sort_settings_on_sheet_x": "Sortiereinstellungen auf Blatt '{}'",
+ "xl.msg.hidden_rows_on_sheet_x": "ausgeblendete Zeilen auf Blatt '{}'",
+ "xl.msg.hidden_columns_on_sheet_x": "ausgeblendete Spalten auf Blatt '{}'"
+}

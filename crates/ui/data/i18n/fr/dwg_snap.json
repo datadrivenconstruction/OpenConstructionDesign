@@ -1,0 +1,5 @@
+{
+ "snap.center": "Centre",
+ "dwg_snap.through": "Point de passage",
+ "dwg_snap.through_tip": "Décaler par le point cliqué (accroche aux extrémités, croisements, centres) au lieu de la distance saisie"
+}

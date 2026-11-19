@@ -1,0 +1,8 @@
+{
+ "param_drop.title": "Parameterwaarden verwijderen?",
+ "param_drop.intro": "{name} is niet meer aan deze categorieën gekoppeld:",
+ "param_drop.line": "{category}: {values} worden verwijderd",
+ "param_drop.undo": "Eén Ctrl+Z brengt ze allemaal terug.",
+ "param_drop.confirm": "Waarden verwijderen en opslaan",
+ "param_drop.cancel": "Annuleren"
+}

@@ -1,0 +1,9 @@
+{
+ "tool.room": "Huone",
+ "tool.room.name": "Huone",
+ "room_tool.room.name": "Nimi",
+ "hint.room.place": "Napsauta suljetun seinäsilmukan sisällä luodaksesi huoneen · Esc — poistu",
+ "tool.err.room_open": "Alue ei ole suljettu: sulje seinäsilmukka tai lisää huoneen erotin",
+ "tool.err.room_check": "Tämän tason huoneita ei voi tarkistaa",
+ "tool.err.room_exists": "Tässä silmukassa on jo huone"
+}

@@ -1,0 +1,15 @@
+{
+ "xl.msg.cell_clipped": "văn bản bị cắt để vừa giới hạn ô; chỉ đọc, chưa áp dụng chỉnh sửa",
+ "xlcell.status": "Đã xuất. {count} ô bị rút gọn hoặc để trống — xem cửa sổ chi tiết.",
+ "xlcell.title": "Ô bị thay đổi bởi lần xuất",
+ "xlcell.intro": "Các ô này không thể ghi nguyên trạng. Giá trị đầy đủ vẫn nằm trong mô hình; ô bị khóa và không thể sửa trong sổ làm việc.",
+ "xlcell.col_sheet": "Tờ",
+ "xlcell.col_row": "Hàng",
+ "xlcell.col_col": "Cột",
+ "xlcell.col_id": "Id cấu kiện",
+ "xlcell.col_what": "Điều đã xảy ra",
+ "xlcell.what_clipped": "Văn bản bị cắt theo giới hạn ô",
+ "xlcell.what_blank": "Không phải số hữu hạn, ô để trống",
+ "xlcell.more": "… và {count} nữa",
+ "xlcell.close": "Đóng"
+}

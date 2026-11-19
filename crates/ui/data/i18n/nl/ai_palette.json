@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "Aan AI vragen: {q}",
+ "ai.palette.connect": "Verbind AI om te vragen",
+ "ai.palette.draft.apply": "Concept toepassen ({n})",
+ "ai.palette.draft.reject": "Concept afwijzen",
+ "ai.palette.draft.next": "Volgende conceptwijziging",
+ "ai.palette.draft.show": "Concept in weergave tonen",
+ "cmd.ai.next_change": "Volgende conceptwijziging",
+ "cmd.ai.next_change.desc": "Verplaatst de weergave naar het volgende element dat het concept wijzigt.",
+ "cmd.ai.show_draft": "AI-concept in weergave tonen",
+ "cmd.ai.show_draft.desc": "Past de weergave aan op alles wat het concept wijzigt."
+}

@@ -1,0 +1,14 @@
+{
+ "ai.hist.badge": "AI",
+ "ai.hist.untitled": "Зміни AI",
+ "ai.hist.tip": "{title}\nЗастосував: {actor}\nAI-модель: {model}",
+ "ai.hist.why": "Причина: {why}",
+ "ai.hist.reverted": "відкочено",
+ "ai.hist.revert_one": "Відкотити цю пакетну зміну AI",
+ "ai.revert.done": "Зміни AI відкочено: {n}. Скасування їх поверне.",
+ "ai.revert.empty": "Немає змін AI для відкату",
+ "ai.revert.not_ai": "Цей крок не є зміною AI",
+ "ai.revert.already": "Ці зміни AI вже відкочено",
+ "ai.revert.opaque": "Не відкочено: ці зміни AI не можна безпечно відокремити від подальшої роботи. Нічого не змінено.",
+ "ai.revert.failed": "Відкат не вдався: {e}"
+}

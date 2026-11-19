@@ -1,0 +1,17 @@
+[
+ {
+  "id": "mass.timeline_family",
+  "once": true,
+  "icon": "timeline-family",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "mass",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "mass_free",
+  "priority": 6
+ }
+]

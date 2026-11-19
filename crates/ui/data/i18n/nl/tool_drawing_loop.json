@@ -1,0 +1,4 @@
+{
+ "tool.err.drawing_open": "De tekenlijnen rond dit punt sluiten niet tot een lus",
+ "tool.err.drawing_crossing": "De tekenlus rond dit punt kruist zichzelf"
+}

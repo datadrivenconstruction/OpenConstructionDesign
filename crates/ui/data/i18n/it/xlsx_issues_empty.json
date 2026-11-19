@@ -1,0 +1,8 @@
+{
+ "xlsx_issues.empty_title": "Foglio vuoto nella cartella di lavoro",
+ "xlsx_issues.empty_kept": "Il foglio {sheet} è vuoto: non è stato letto nulla, {n} elementi restano invariati. Gli altri fogli possono comunque essere applicati.",
+ "xlsx_issues.empty_none": "Il foglio {sheet} è vuoto: non è stato letto nulla. Gli altri fogli possono comunque essere applicati.",
+ "xlsx_issues.unreadable_title": "Foglio non leggibile",
+ "xlsx_issues.unreadable": "Il foglio {sheet} non può essere letto, la sua parte del file è danneggiata: non è stato preso nulla e i suoi elementi restano invariati. Gli altri fogli possono comunque essere applicati.",
+ "xlsx_issues.formulas": "Le formule del foglio {sheet} non possono essere lette, quindi un valore calcolato non si distingue da una modifica: non è stato preso nulla da questo foglio. Gli altri fogli possono comunque essere applicati."
+}

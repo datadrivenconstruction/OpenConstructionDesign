@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "Veza",
+ "settings.ai_status_desc": "Model koji koristi AI asistent; ključevi ostaju u sigurnoj pohrani",
+ "settings.ai_not_connected": "Nije povezano",
+ "settings.ai_connect": "Postavke veze",
+ "settings.ai_connect_desc": "Adresa, model i ključ vašeg modela, u oblaku ili lokalno",
+ "settings.ai_connect_btn": "Postavke veze…",
+ "settings.ai_panel": "Panel AI asistenta",
+ "settings.ai_panel_desc": "Pitajte riječima, pregledajte plan, zatim primijenite",
+ "settings.ai_open_panel": "Otvori AI panel"
+}

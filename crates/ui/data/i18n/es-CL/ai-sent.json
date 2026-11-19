@@ -1,0 +1,8 @@
+{
+ "ai_sent.summary": "Datos del proyecto en esta solicitud: {messages} mensajes, {tools} resultados de herramientas, {images} imágenes",
+ "ai_sent.copy": "Copiar",
+ "ai_sent.filter": "Buscar en solicitudes enviadas",
+ "ai_sent.no_match": "Ninguna solicitud coincide.",
+ "ai_sent.instructions": "Instrucciones y herramientas",
+ "ai_sent.local_note": "Se guarda solo en este equipo, durante esta sesión. Las claves y contraseñas nunca se muestran."
+}

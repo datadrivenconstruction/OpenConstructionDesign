@@ -1,0 +1,22 @@
+{
+ "cmd.arch.grid_pick": "רשת לפי קו",
+ "cmd.arch.grid_pick.desc": "יוצר רשת בדיוק לאורך קו שרטוט שנבחר במפלס הנוכחי; השמות ממשיכים את הסדרה. Tab לוקח בבת אחת כל קו מקביל מאותה שכבת שרטוט. כל בחירה היא צעד ביטול אחד.",
+ "cmd.struct.beam_pick": "קורה לפי קו",
+ "cmd.struct.beam_pick.desc": "מציב קורה מהטיפוס הנוכחי במפלס הפעיל לאורך קו שרטוט שנבחר. Tab לוקח את השרשרת המחוברת. כל בחירה היא צעד ביטול אחד.",
+ "hint.grid_pick.one": "רשת לפי קו: בחרו קו שרטוט · Tab כל הקווים המקבילים בשכבה שלו · Esc — יציאה",
+ "hint.grid_pick.more": "רשת לפי קו: בחרו קו כדי לקחת את כל הקווים המקבילים של השכבה שלו · Tab קו אחד · Esc — ביטול הפעלה",
+ "hint.beam_pick.one": "קורה לפי קו: בחרו קו שרטוט · Tab שרשרת מחוברת · Esc — יציאה",
+ "hint.beam_pick.more": "קורה לפי קו: בחרו קו כדי לקחת את שרשרתו · Tab קו אחד · Esc — ביטול הפעלה",
+ "line_pick.st.start_grid": "בחרו קו שרטוט. Tab: כל הקווים המקבילים בשכבה שלו",
+ "line_pick.st.start_beam": "בחרו קו שרטוט לקורה {type}. Tab: שרשרת מחוברת",
+ "line_pick.st.grid_done": "הרשת {name} נוספה",
+ "line_pick.st.grids_done": "נוספו {n} רשתות: {first} — {last}",
+ "line_pick.st.beam_done": "קורה {type} נוספה",
+ "line_pick.st.beams_done": "{n} קורות {type} נוספו",
+ "line_pick.st.on_grid": "לקו זה כבר יש רשת {name}",
+ "line_pick.st.on_beam": "לקו זה כבר יש קורה {id}",
+ "line_pick.st.no_layer": "שכבות השרטוט של הקווים עדיין לא ידועות, נסו שוב",
+ "line_pick.st.no_beam_type": "אין חתך קורה בקטלוג",
+ "line_pick.st.reload_warn": "נוצר, אך המבט לא נטען מחדש: {err}",
+ "line_pick.st.failed": "לא נוצר: {err}"
+}

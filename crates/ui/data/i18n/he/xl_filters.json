@@ -1,0 +1,6 @@
+{
+ "xl.msg.filter_on_sheet_x": "מסנן בגיליון '{}'",
+ "xl.msg.sort_settings_on_sheet_x": "הגדרות מיון בגיליון '{}'",
+ "xl.msg.hidden_rows_on_sheet_x": "שורות מוסתרות בגיליון '{}'",
+ "xl.msg.hidden_columns_on_sheet_x": "עמודות מוסתרות בגיליון '{}'"
+}

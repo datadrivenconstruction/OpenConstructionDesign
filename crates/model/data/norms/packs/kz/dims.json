@@ -1,0 +1,133 @@
+{
+ "items": [
+  {
+   "key": "room.height_min",
+   "value": 2.7,
+   "unit": "m",
+   "source": "sprk3.02-101",
+   "clause": "table 1*: height of living rooms floor to ceiling by housing class: class I at least 3.0 m, class II at least 2.7 m, class III at least 2.5 m, class IV 2.5 to 2.7 m",
+   "verified": true,
+   "url": "https://new-shop.ksm.kz/media/egfntd/ntdgo/%D0%A1%D0%9F_%D0%A0%D0%9A_3_iRUFCC1.02-101-2012.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Living room height depends on housing class: 3.0 m (I), 2.7 m (II), 2.5 m (III), 2.5 to 2.7 m (IV).",
+   "note": "read 2026-11-14: new-shop.ksm.kz/media/egfntd/ntdgo/%D0%A1%D0%9F_%D0%A0%D0%9A_3_iRUFCC1.02-101-2012.pdf; value 2.7 is class II, lower classes allow 2.5"
+  },
+  {
+   "key": "door.clear_min.accessible",
+   "value": 0.9,
+   "unit": "m",
+   "source": "sprk3.06-101",
+   "clause": "4.3.2.14: width of a door in a room at least 0.9 m",
+   "verified": true,
+   "url": "https://www.gov.kz/uploads/2021/5/14/0111e832e36e8e3348a4f8cce36aebf5_original.1102336.doc",
+   "accessed": "2026-11-14",
+   "paraphrase": "Room doors must be at least 0.9 m wide for accessibility.",
+   "note": "read 2026-11-14: www.gov.kz/uploads/2021/5/14/0111e832e36e8e3348a4f8cce36aebf5_original.1102336.doc; text amended to 27.11.2019, door width stated generally, not explicitly as clear width"
+  },
+  {
+   "key": "accessible.turning_circle",
+   "value": 1.5,
+   "unit": "m",
+   "source": "sprk3.06-101",
+   "clause": "4.3.2.43: diameter of zone for a wheelchair user to turn 90 to 180 degrees 1.5 to 1.7 m; 4.1.3 states turning space width 1.8 m",
+   "verified": true,
+   "url": "https://www.gov.kz/uploads/2021/5/14/0111e832e36e8e3348a4f8cce36aebf5_original.1102336.doc",
+   "accessed": "2026-11-14",
+   "paraphrase": "Wheelchair turning zone diameter 1.5 to 1.7 m in the detailed clause; the general clause quotes 1.8 m of turning width.",
+   "note": "read 2026-11-14: www.gov.kz/uploads/2021/5/14/0111e832e36e8e3348a4f8cce36aebf5_original.1102336.doc; 1.5 is lower bound of 4.3.2.43, general 4.1.3 gives 1.8 m"
+  },
+  {
+   "key": "ramp.slope_max",
+   "value": 0.05,
+   "unit": "ratio",
+   "source": "sprk3.06-101",
+   "clause": "4.3.2.30: longitudinal slope of a ramp not more than 5 percent (1:20); only in cramped places up to 8 percent (1:12) with rise not over 0.8 m",
+   "verified": true,
+   "url": "https://www.gov.kz/uploads/2021/5/14/0111e832e36e8e3348a4f8cce36aebf5_original.1102336.doc",
+   "accessed": "2026-11-14",
+   "paraphrase": "Ramp slope normally at most 5 percent; 8 percent allowed only exceptionally in cramped conditions for rises up to 0.8 m.",
+   "note": "read 2026-11-14: www.gov.kz/uploads/2021/5/14/0111e832e36e8e3348a4f8cce36aebf5_original.1102336.doc; 0.08 only as exceptional case"
+  },
+  {
+   "key": "corridor.width_min",
+   "value": 1.2,
+   "unit": "m",
+   "source": "sprk3.02-101",
+   "clause": "4.2.21: horizontal evacuation paths at least 1.2 m for common corridors; corridor-type houses 1.4 m (up to 40 m) or 1.6 m (longer); galleries 1.2 m",
+   "verified": true,
+   "url": "https://new-shop.ksm.kz/media/egfntd/ntdgo/%D0%A1%D0%9F_%D0%A0%D0%9A_3_iRUFCC1.02-101-2012.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Common corridors on evacuation routes are at least 1.2 m wide; corridor-type houses 1.4 or 1.6 m by length.",
+   "note": "read 2026-11-14: new-shop.ksm.kz/media/egfntd/ntdgo/%D0%A1%D0%9F_%D0%A0%D0%9A_3_iRUFCC1.02-101-2012.pdf; applies to common corridors, no in-flat corridor width value found (hallway width 1.2 m only in a footnote of flat area table)"
+  },
+  {
+   "key": "corridor.width_min.corridor_type",
+   "value": 1.4,
+   "unit": "m",
+   "source": "sprk3.02-101",
+   "clause": "4.2.21: in corridor-type residential houses the horizontal evacuation path is at least 1.4 m for corridors up to 40 m long and 1.6 m for longer ones",
+   "verified": true,
+   "url": "https://new-shop.ksm.kz/media/egfntd/ntdgo/%D0%A1%D0%9F_%D0%A0%D0%9A_3_iRUFCC1.02-101-2012.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Corridors of corridor-type houses: 1.4 m up to 40 m long, 1.6 m beyond; the general 1.2 m of corridor.width_min does not apply to them.",
+   "note": "read 2026-11-14: new-shop.ksm.kz/media/egfntd/ntdgo/%D0%A1%D0%9F_%D0%A0%D0%9A_3_iRUFCC1.02-101-2012.pdf, clause 4.2.21 numbers 1.2 / 1.4 / 1.6 and the 40 m threshold confirmed in the extracted text; 1.2 m stays the value for common corridors and galleries"
+  },
+  {
+   "key": "stair.width_min",
+   "value": 1.05,
+   "unit": "m",
+   "source": "sprk3.02-101",
+   "clause": "4.4.3.6 table 6: flights to residential floors of sectional buildings at least 1.05 m (slope 1:1.5 two-storey, 1:1.75 three storeys and more); corridor-type 1.2 m; flat-internal and basement 0.9 m",
+   "verified": true,
+   "url": "https://new-shop.ksm.kz/media/egfntd/ntdgo/%D0%A1%D0%9F_%D0%A0%D0%9A_3_iRUFCC1.02-101-2012.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Minimum stair flight width: 1.05 m in sectional buildings, 1.2 m in corridor-type buildings, 0.9 m for basement and in-flat stairs.",
+   "note": "read 2026-11-14: new-shop.ksm.kz/media/egfntd/ntdgo/%D0%A1%D0%9F_%D0%A0%D0%9A_3_iRUFCC1.02-101-2012.pdf"
+  },
+  {
+   "key": "egress.travel_max",
+   "value": 40.0,
+   "unit": "m",
+   "source": "sprk3.02-101",
+   "clause": "4.2.32: in corridor or gallery type houses the distance from the flat entrance to the stair-lift node is not more than 40 m (between nodes 80 m)",
+   "verified": true,
+   "note": "read 2026-11-14: new-shop.ksm.kz/media/egfntd/ntdgo/%D0%A1%D0%9F_%D0%A0%D0%9A_3_iRUFCC1.02-101-2012.pdf; condition: corridor or gallery type house; source id should be sprk3.02-101 instead of snrk2.02-01",
+   "url": "https://new-shop.ksm.kz/media/egfntd/ntdgo/%D0%A1%D0%9F_%D0%A0%D0%9A_3_iRUFCC1.02-101-2012.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "In corridor or gallery type apartment houses the flat door must be within 40 m of a stair and lift node."
+  },
+  {
+   "key": "daylight.window_floor_ratio",
+   "value": 0.125,
+   "unit": "ratio",
+   "source": "sprk3.02-101",
+   "clause": "4.4.4.15: ratio of glazed opening area to floor area of living rooms and kitchens not more than 1:5.5 and not less than 1:8 (attic 1:10); same 1:8 in SP RK 2.04-104-2012 clause 4.2.12",
+   "verified": true,
+   "note": "read 2026-11-14: new-shop.ksm.kz/media/egfntd/ntdgo/%D0%A1%D0%9F_%D0%A0%D0%9A_3_iRUFCC1.02-101-2012.pdf and new-shop.ksm.kz/media/egfntd/ntdgo/SP_RK_2.04-104-2012.pdf",
+   "url": "https://new-shop.ksm.kz/media/egfntd/ntdgo/%D0%A1%D0%9F_%D0%A0%D0%9A_3_iRUFCC1.02-101-2012.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Window area must be between one eighth and 1/5.5 of room floor area for living rooms and kitchens; one tenth for attic floors."
+  },
+  {
+   "key": "corridor.width_min.accessible",
+   "value": 1.5,
+   "unit": "m",
+   "source": "sprk3.06-101",
+   "clause": "4.3.2.38, accessible corridors of public buildings 1.5 m wide",
+   "verified": true,
+   "note": "read 2026-11-14: gov.kz/uploads/2021/5/14/0111e832e36e8e3348a4f8cce36aebf5_original.1102336.doc (edition with amendments to 2019-11-27); 1.8 m where two wheelchairs pass"
+  },
+  {
+   "key": "fire.compartment_area_max",
+   "value": 2500,
+   "unit": "m2",
+   "source": "sprk3.02-101",
+   "clause": "4.2.1 table 2: largest floor area of a fire compartment by fire resistance and class: degree I class C0 3000 m2, degree II class C0 2500 m2 (C1 2200), degree III C0/C1 1800",
+   "verified": true,
+   "note": "read 2026-11-14: new-shop.ksm.kz/media/egfntd/ntdgo/%D0%A1%D0%9F_%D0%A0%D0%9A_3_iRUFCC1.02-101-2012.pdf; condition: degree II, class C0; source id should be sprk3.02-101 instead of snrk2.02-01",
+   "url": "https://new-shop.ksm.kz/media/egfntd/ntdgo/%D0%A1%D0%9F_%D0%A0%D0%9A_3_iRUFCC1.02-101-2012.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "For apartment buildings the largest fire compartment floor area depends on fire resistance: 3000 m2 for I/C0, 2500 m2 for II/C0, 1800 m2 for III."
+  }
+ ]
+}

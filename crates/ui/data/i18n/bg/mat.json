@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "Бетон",
+ "mat.masonry": "Зидария",
+ "mat.brick": "Тухла",
+ "mat.insulation": "Изолация",
+ "mat.plaster": "Мазилка",
+ "mat.render": "Шпакловка",
+ "mat.gypsum": "Гипсокартон",
+ "mat.glass": "Стъкло",
+ "mat.wood": "Дърво",
+ "mat.steel": "Стомана",
+ "mat.membrane": "Мембрана",
+ "mat.other": "Други",
+ "warn.cat.wall": "Стена",
+ "warn.cat.slab": "Плоча",
+ "warn.cat.opening": "Отвор",
+ "warn.cat.curtain_wall": "Фасадна стена",
+ "td.mat.custom": "Друг…"
+}

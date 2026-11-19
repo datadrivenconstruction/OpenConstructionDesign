@@ -1,0 +1,10 @@
+{
+ "stage_err.kept": "テーブル {t} を保持: 追加の後に {n} 行を書き込みました",
+ "stage_err.stage.prev_attached": "未追加: 前回の追加のコピーがまだ開いています。もう一度追加を実行してください",
+ "stage_err.stage.model_changed": "未追加: ファイルの読み込み中にモデルが変更されました。もう一度追加を実行してください",
+ "stage_err.stage.no_record": "未追加: 取り込んだコピーに変更記録がありません",
+ "stage_err.stage.table_differs": "未追加: テーブル {t} がモデルと取り込んだコピーで異なります",
+ "stage_err.stage.unique_key": "未追加: テーブル {t} の一意キーを追跡できません",
+ "stage_err.stage.table_gone": "未追加: 取り込みでテーブル {t} が変更されましたが、コピーにはもうありません",
+ "stage_err.stage.copy_held": "追加しました。取り込んだコピーは次の追加またはモデルを開き直すまで開いたままです"
+}

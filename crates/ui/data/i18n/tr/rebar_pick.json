@@ -1,0 +1,7 @@
+{
+ "rebar_pick.pick.empty": "Donatı: bir kolon, kiriş, duvar, döşeme veya temel seçin",
+ "rebar_pick.pick.unsupported": "Bu seçime donatı eklenemez. Bir kolon, kiriş, duvar, döşeme veya temel seçin",
+ "rebar_pick.pick.keys": "Seçmek için tıklayın, daha fazlası için Shift · Formu açmak için Enter · İptal için Esc",
+ "rebar_pick.pick.open": "Formu aç",
+ "rebar_pick.pick.cancel": "İptal"
+}

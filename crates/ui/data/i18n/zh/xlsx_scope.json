@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "导出到 XLSX 电子表格：范围",
+ "xlsx_scope.intro": "选择要放入工作簿的内容。重新导入时只会更改这些元素。",
+ "xlsx_scope.base_whole": "整个模型",
+ "xlsx_scope.base_level": "当前楼层",
+ "xlsx_scope.base_selection": "所选内容",
+ "xlsx_scope.categories": "类别",
+ "xlsx_scope.cat_walls": "墙",
+ "xlsx_scope.cat_openings": "门",
+ "xlsx_scope.cat_rooms": "房间",
+ "xlsx_scope.cat_slabs": "楼板",
+ "xlsx_scope.cat_curtains": "幕墙",
+ "xlsx_scope.nothing_selected": "未选择任何内容：请先选择元素或选择其他范围。",
+ "xlsx_scope.no_categories": "请至少勾选一个类别。",
+ "xlsx_scope.no_level": "未找到当前楼层。",
+ "xlsx_scope.export": "导出",
+ "xlsx_scope.preview_scope": "导出范围：{scope}。此范围之外的元素绝不会被更改或删除。"
+}

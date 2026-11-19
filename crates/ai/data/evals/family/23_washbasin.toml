@@ -1,0 +1,8 @@
+brief = "Wall washbasin with waste and water connections."
+category = "plumbing"
+must = param FlowCold
+must = param FlowHot
+must = solids >= 2
+must = ports 3
+must = port pipe 3
+must = flex Radius 200 312

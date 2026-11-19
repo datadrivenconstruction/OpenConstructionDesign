@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "{n} Zellen eingefügt",
+ "sched_edit.pasted_skipped": "{n} Zellen eingefügt, {k} übersprungen: {why}",
+ "sched_edit.filled": "{n} Zellen ausgefüllt",
+ "sched_edit.filled_skipped": "{n} Zellen ausgefüllt, {k} übersprungen: {why}",
+ "sched_edit.why_ro": "{n} schreibgeschützt",
+ "sched_edit.why_bad": "{n} ungültige Werte",
+ "sched_edit.no_cell": "Klicken Sie zuerst auf eine Zelle der Liste",
+ "sched_edit.nothing": "Nichts zu schreiben",
+ "sched_edit.not_refreshed": "Geschrieben, die Ansicht wurde nicht aktualisiert: {e}",
+ "sched_edit.failed": "nicht geändert: {e}",
+ "sched_edit.no_changes": "Keine Änderungen: {u} Zellen enthalten diese Werte bereits",
+ "sched_edit.same_tail": ", {u} bereits gleich"
+}

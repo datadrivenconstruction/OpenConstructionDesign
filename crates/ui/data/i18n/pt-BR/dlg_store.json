@@ -1,0 +1,10 @@
+{
+ "dlg.dw.store.unloaded": "O desenho “{name}” não pôde ser lido do projeto e foi mantido no arquivo sem alterações",
+ "dlg.dw.store.source_missing": "Desenho “{name}”: o arquivo de origem não foi encontrado; é mostrada a cópia salva no projeto",
+ "dlg.dw.store.source_changed": "Desenho “{name}”: o arquivo de origem mudou desde que foi colocado; é mostrada a cópia salva no projeto",
+ "dlg.dw.store.unreadable": "Os desenhos colocados salvos no projeto não podem ser lidos",
+ "dlg.dw.store.not_saved": "Os desenhos não foram salvos: {why}",
+ "dlg.dw.store.why_read": "os desenhos colocados salvos no projeto não podem ser lidos",
+ "dlg.dw.store.why_write": "o arquivo do projeto não pôde ser atualizado",
+ "dlg.dw.store.missing_in_file": "O arquivo salvo não contém todos os desenhos colocados"
+}

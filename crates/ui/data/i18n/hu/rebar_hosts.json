@@ -1,0 +1,40 @@
+{
+ "rebar_hosts.hosts": "Befogadó elemek: {list}",
+ "rebar_hosts.kind.column": "Pillér",
+ "rebar_hosts.kind.beam": "Gerenda",
+ "rebar_hosts.kind.wall": "Fal",
+ "rebar_hosts.kind.slab": "Födém",
+ "rebar_hosts.kind.footing": "Alap",
+ "rebar_hosts.kind.raft": "Alaplemez",
+ "rebar_hosts.n.column": {
+  "one": "# pillér",
+  "other": "# pillér"
+ },
+ "rebar_hosts.n.beam": {
+  "one": "# gerenda",
+  "other": "# gerenda"
+ },
+ "rebar_hosts.n.wall": {
+  "one": "# fal",
+  "other": "# fal"
+ },
+ "rebar_hosts.n.slab": {
+  "one": "# födém",
+  "other": "# födém"
+ },
+ "rebar_hosts.n.footing": {
+  "one": "# alap",
+  "other": "# alap"
+ },
+ "rebar_hosts.n.raft": {
+  "one": "# alaplemez",
+  "other": "# alaplemez"
+ },
+ "rebar_hosts.mixed_note": "A pillérek és gerendák rúdacélt és kengyeleket kapnak; a falak, födémek és alapok hálót. Betonacél hozzáadásához válasszon ki egy csoportot.",
+ "rebar_hosts.why.mixed": "A kijelölés pillérekből vagy gerendákból és falakból, födémekből vagy alapokból áll. Válasszon ki egy csoportot.",
+ "rebar_hosts.why.area_linear": "A háló falakba, födémekbe és alapokba kerül, nem pillérekbe vagy gerendákba.",
+ "rebar_hosts.why.bars_plate": "A hosszanti rudak és kengyelek pillérekbe és gerendákba kerülnek, nem falakba, födémekbe vagy alapokba.",
+ "rebar_hosts.why.no_common_face": "A kijelölt befogadó elemeknek nincs közös betonfedési oldala. Válasszon egy fajtájú befogadó elemeket.",
+ "rebar_hosts.why.no_type": "Válasszon rúdtípust.",
+ "rebar_hosts.kind_type": "{kind} · {type}"
+}

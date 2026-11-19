@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "รอต่อจากงานที่กำลังทำงาน: {n}",
+ "import_queue.queue_full": "คิวเต็ม ไม่ได้เพิ่มไฟล์ {n} ไฟล์",
+ "import_queue.changed": "{name} ถูกอัปเดตหลังสร้างโครงการนี้ เปิดโครงการก่อนหน้าแล้ว",
+ "import_queue.import_again": "นำเข้าอีกครั้ง",
+ "import_queue.kept": "การนำเข้าที่เสร็จแล้วถูกเก็บไว้",
+ "import_queue.open_it": "เปิด",
+ "import_queue.sum.head": "นำเข้า: แก้ไขได้ {editable} (ผนัง {walls}, ช่องเปิด {open}, พื้น {slabs}, ห้อง {rooms}, อื่น ๆ {other}), เมช {meshes}",
+ "import_queue.sum.unchanged": ", ไม่เปลี่ยน {n}",
+ "import_queue.sum.updated": ", อัปเดต {n}",
+ "import_queue.sum.missing": ", ไม่อยู่ในต้นทาง {n} (เก็บไว้)",
+ "import_queue.sum.skipped": ", ข้าม {n}",
+ "import_queue.sum.warnings": ", คำเตือน {n}",
+ "import_queue.import_failed": "นำเข้าล้มเหลว: {e}"
+}

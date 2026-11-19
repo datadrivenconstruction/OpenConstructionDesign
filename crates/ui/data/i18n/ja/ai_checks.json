@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "測定値 {value}、上限 {limit}",
+ "ai_checks.check.cap": "{total} 件中 {shown} 件を表示しています。エラーを優先して表示します。修正してから再実行してください。",
+ "ai_checks.check.run_again": "再実行",
+ "ai_checks.check.goto": "選択してズーム",
+ "ai_checks.check.never_title": "まだチェックしていません",
+ "ai_checks.check.never_hint": "チェックを実行すると結果がここに表示されます。",
+ "ai_checks.check.sec.error": "エラー",
+ "ai_checks.check.sec.warning": "警告",
+ "ai_checks.check.sec.info": "注記"
+}

@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "Төрөл тохируулах",
+ "cmd.mod.match_type.short": "Төрөл тохируулах",
+ "cmd.mod.match_type.desc": "Хана, шал, багана эсвэл дам сонгоод, ижил ангиллын бусдыг дарж түүний төрлийг өгнө. Цонх чирээд дотор байгаа бүгдэд хэрэглэнэ. Esc эх сурвалжийг хасна.",
+ "hint.match_type.pick": "Төрөл тохируулах: хана, шал, багана эсвэл дам сонгоно · Esc — гарах",
+ "hint.match_type.apply": "Төрөл тохируулах: зорилтууд дээр дарах эсвэл цонх чирэх · Esc — өөр эх",
+ "match_type.kind.wall": "хана",
+ "match_type.kind.slab": "шал",
+ "match_type.kind.column": "багана",
+ "match_type.kind.beam": "дам",
+ "match_type.refuse.category": "Өөр ангилал: зөвхөн {cat} энэ төрлийг авч чадна",
+ "match_type.refuse.curtain": "Шилэн хана: түүний төрлийг энд тохируулах боломжгүй",
+ "match_type.refuse.pinned": "Бэхэлсэн: төрлийг солихын тулд тайлна уу",
+ "match_type.pick_bad": "Эх сурвалж болгож хана, шал, багана эсвэл дам сонгоно уу",
+ "match_type.same": "Аль хэдийн энэ төрөл",
+ "match_type.done": "Төрөл хэрэглэгдлээ: {n}",
+ "match_type.done_skipped": "Төрөл хэрэглэгдлээ: {n}, алгасав (бэхэлсэн эсвэл шилэн хана): {skipped}",
+ "match_type.failed": "Төрөл өөрчлөгдсөнгүй: {err}"
+}

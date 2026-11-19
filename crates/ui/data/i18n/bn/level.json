@@ -1,0 +1,13 @@
+{
+ "level.err_open": "লেভেল খোলা হয়নি: {e}",
+ "level.need_name": "লেভেলের নাম ও উচ্চতা লাগে",
+ "level.created": "লেভেল \"{name}\" তৈরি হয়েছে",
+ "level.err_create": "লেভেল তৈরি হয়নি: {e}",
+ "level.err_edit": "লেভেল বদলানো হয়নি: {e}",
+ "level.edited": "লেভেল \"{name}\" বদলেছে",
+ "level.edited_stale": "লেভেল \"{name}\" বদলেছে, ভিউ রিফ্রেশ হয়নি: {e}",
+ "level.last": "শেষ লেভেল মোছা যায় না",
+ "level.deleted": "লেভেল মোছা হয়েছে",
+ "level.not_empty": "লেভেল খালি নয়: আগে এর উপাদান মুছুন",
+ "level.err_delete": "লেভেল মোছা হয়নি: {e}"
+}

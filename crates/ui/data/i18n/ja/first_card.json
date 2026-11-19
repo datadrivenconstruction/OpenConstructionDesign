@@ -1,0 +1,9 @@
+{
+ "first_card.card.title": "XLSX スプレッドシート の往復を試す",
+ "first_card.card.step1": "壁を選択",
+ "first_card.card.step2": "そのプロパティを 1 つ変更",
+ "first_card.card.step3": "XLSX スプレッドシート で編集し、プレビューを確認して適用",
+ "first_card.card.spreadsheet": "XLSX スプレッドシート で編集",
+ "first_card.card.skip": "スキップ",
+ "first_card.card.done": "完了: モデルとワークブックが一致しています"
+}

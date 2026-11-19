@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "XLSX اسپریڈشیٹ میں برآمد: دائرہ",
+ "xlsx_scope.intro": "چنیں کہ ورک بک میں کیا جائے۔ واپس درآمد کرنے سے صرف یہی عناصر بدلتے ہیں۔",
+ "xlsx_scope.base_whole": "پورا ماڈل",
+ "xlsx_scope.base_level": "فعال سطح",
+ "xlsx_scope.base_selection": "انتخاب",
+ "xlsx_scope.categories": "زمرے",
+ "xlsx_scope.cat_walls": "دیواریں",
+ "xlsx_scope.cat_openings": "دروازے",
+ "xlsx_scope.cat_rooms": "کمرے",
+ "xlsx_scope.cat_slabs": "سلیبز",
+ "xlsx_scope.cat_curtains": "پردہ دیواریں",
+ "xlsx_scope.nothing_selected": "کچھ منتخب نہیں: پہلے عناصر منتخب کریں یا کوئی اور دائرہ چنیں۔",
+ "xlsx_scope.no_categories": "کم از کم ایک زمرہ منتخب کریں۔",
+ "xlsx_scope.no_level": "فعال سطح نہیں ملی۔",
+ "xlsx_scope.export": "برآمد",
+ "xlsx_scope.preview_scope": "برآمد شدہ دائرہ: {scope}۔ اس سے باہر کے عناصر کبھی نہیں بدلتے یا حذف ہوتے۔"
+}

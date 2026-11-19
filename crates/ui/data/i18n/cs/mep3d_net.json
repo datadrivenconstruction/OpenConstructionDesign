@@ -1,0 +1,13 @@
+{
+ "mep.sys.duct": "Přívod S1",
+ "mep.sys.pipe": "Studená voda C1",
+ "mep.sys.tray": "Silnoproud",
+ "mep.round": "Kruhový",
+ "mep.material": "Materiál",
+ "mep3d.elevation": "Kóta od podlaží",
+ "mep3d.slope": "Sklon",
+ "mep3d.shape": "Tvar",
+ "mep3d.shape.rect": "Obdélníkový",
+ "mep3d.shape.round": "Kruhový",
+ "mep3d.shape.oval": "Ploché oválné"
+}

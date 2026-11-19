@@ -1,0 +1,13 @@
+{
+ "mep.sys.duct": "Подаване S1",
+ "mep.sys.pipe": "Студена вода C1",
+ "mep.sys.tray": "Силова",
+ "mep.round": "Кръгъл",
+ "mep.material": "Материал",
+ "mep3d.elevation": "Кота от ниво",
+ "mep3d.slope": "Наклон",
+ "mep3d.shape": "Форма",
+ "mep3d.shape.rect": "Правоъгълен",
+ "mep3d.shape.round": "Кръгъл",
+ "mep3d.shape.oval": "Плосък овал"
+}

@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "Энэ ханыг засвар бүрт одоогийн уртаар нь хадгална",
+ "constraints.con.tip.lock_dist": "Хоёр ханы хоорондох зайг засвар бүрт хадгална",
+ "constraints.con.tip.equal": "Сонгосон ханы хоорондох зайг тэнцүү байлгана",
+ "constraints.con.tip.align": "Хоёр ханыг нэг шугамд байлгана",
+ "constraints.con.tip.parallel": "Ханыг параллель байлгана",
+ "constraints.con.tip.perp": "Ханыг перпендикуляр байлгана",
+ "constraints.con.tip.align_grid": "Ханыг ойрын тор шугамд байлгана",
+ "constraints.con.tip.lock_dist_grid": "Ханы ойрын тор шугамтай зайг хадгална",
+ "constraints.con.tip.level_gap": "Түвшний хоорондох зайг байлгана",
+ "constraints.con.tip.top_to_level": "Ханын дээд хэсгийг дээд түвшинд байлгана"
+}

@@ -1,0 +1,4 @@
+{
+ "elem.spreadsheet.applied": "Importerat från kalkylblad: {what}",
+ "elem.spreadsheet.failed": "Import från kalkylblad misslyckades: {e}"
+}

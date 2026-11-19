@@ -1,0 +1,16 @@
+{
+ "complib.fam.mast_lift": "Мачтовый подъёмник",
+ "fam.name.mast_lift": "Мачтовый подъёмник",
+ "gen.rule.steel.check.self_weight.desc": "Вес башни выше сечения на метр высоты.",
+ "gen.rule.steel.check.self_weight.title": "Вес стали на метр",
+ "gen.rule.steel.check.strut_share.desc": "Доля усилия пояса, которую держит распорка в узле.",
+ "gen.rule.steel.check.strut_share.title": "Доля распорки",
+ "gen.rule.steel.out.lift_box_d.desc": "Глубина в плане для подъёмника с мачтой; перекрытия над ним открыты.",
+ "gen.rule.steel.out.lift_box_d.title": "Глубина места подъёмника",
+ "gen.rule.steel.out.lift_box_w.desc": "Ширина в плане для мачтового подъёмника; перекрытия над ним открыты.",
+ "gen.rule.steel.out.lift_box_w.title": "Ширина места подъёмника",
+ "gen.rule.steel.out.lift_offset.desc": "Расстояние подъёмника от оси башни в стороне от горизонтальной связи.",
+ "gen.rule.steel.out.lift_offset.title": "Смещение подъёмника от оси",
+ "gen.rule.steel.out.lifts.desc": "Подъёмники в ядре: до второй площадки и далее до верхней.",
+ "gen.rule.steel.out.lifts.title": "Подъёмники"
+}

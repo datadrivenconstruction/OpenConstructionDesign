@@ -1,0 +1,23 @@
+{
+  "cmd.arch.room_sep.short": "Raumtrenner",
+  "cmd.str.footing.short": "Einzelfund.",
+  "cmd.str.strip_footing.short": "Streifenfund.",
+  "cmd.str.analytical.short": "Analytisch",
+  "cmd.mep.terminal.short": "Luftauslass",
+  "cmd.mod.isolate.short": "Isolieren",
+  "cmd.view.ui.short": "Oberfläche",
+  "cmd.mgr.params.short": "Parameter",
+  "cmd.ctx.wall.attach.short": "Anfügen",
+  "cmd.mass.unjoin.short": "Trennen",
+  "cmd.mod.unjoin.short": "Trennen",
+  "cmd.arch.void_extrusion.short": "Aussparung",
+  "cmd.e3d.snap.short": "3D-Fang",
+  "cmd.mgr.open_big.short": "Große Datei…",
+  "cmd.site.edit_points.short": "Geländepunkte",
+  "cmd.view.reveal_3d.short": "Kategorien",
+  "cmd.help.check_update.short": "Updates",
+  "cmd.ctx.floor.link_unlink.short": "Kanten lösen",
+  "cmd.ui.onboarding.short": "Einrichten…",
+  "cmd.mod.distribute.short": "Verteilen",
+  "cmd.data.src_delta.short": "XLSX-Änd.…"
+}

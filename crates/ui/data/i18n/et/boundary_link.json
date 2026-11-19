@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "Vali kogu seinasilmus",
+ "cmd.sketch.link_unlink": "Eralda serv seinast",
+ "cmd.sketch.link_repick": "Vali servaseina uuesti",
+ "cmd.ctx.floor.link_unlink": "Eralda servad seintest",
+ "cmd.ctx.floor.link_accept": "Võta kustutatud seinte servad vastu",
+ "boundary_link.hint.loop": "Klõpsa seinal: seinte suletud jada muutub seotud servadeks",
+ "boundary_link.hint.repick": "Klõpsa servaga paralleelsel seinal: serv järgib seda",
+ "boundary_link.need_sketch": "Ava kõigepealt piirjoone eskiis",
+ "boundary_link.need_edge": "Osuta eskiisi servale",
+ "boundary_link.need_straight": "Seinale saab järgneda ainult sirge serv",
+ "boundary_link.need_floor": "Vali põrand",
+ "boundary_link.no_wall": "Kursori all pole seina",
+ "boundary_link.not_parallel": "Sein pole servaga paralleelne",
+ "boundary_link.not_linked": "See serv pole seinaga seotud",
+ "boundary_link.unlinked": "Serv eraldatud: see jääb paika ega järgi enam seinale",
+ "boundary_link.accepted": "Servad võetud vastu: need jäävad paika tavaliste servadena",
+ "boundary_link.failed": "Ei õnnestunud rakendada",
+ "boundary_link.lost": "lähtesein kustutatud",
+ "boundary_link.blocked": "ei saa seinale järgneda"
+}

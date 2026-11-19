@@ -1,0 +1,8 @@
+{
+ "v3d.proj.to_ortho": "Переключить на ортогональную проекцию",
+ "v3d.proj.to_persp": "Переключить на перспективу",
+ "v3d.walk.unit.m": "м/с",
+ "v3d.walk.unit.ft": "фт/с",
+ "v3d.temp.show_all": "Показать всё  ·  Esc",
+ "v3d.msg.deleted_named": "3D-вид «{name}» удалён"
+}

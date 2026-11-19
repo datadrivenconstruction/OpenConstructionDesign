@@ -1,0 +1,4 @@
+{
+ "xl.msg.x_formulas_in_column_x_on_sheet_x_replaced_by_values": "{} formuł w kolumnie '{}' w arkuszu '{}' zastąpiono wartościami",
+ "xl.msg.formula_in_a_model_column_not_applied": "formuła w kolumnie modelu: jej wynik nie jest stosowany, wartość modelu zostaje; wpisz wartość, aby ją zmienić"
+}

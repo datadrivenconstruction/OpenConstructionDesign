@@ -1,0 +1,8 @@
+{
+ "undo.undone": "Poništeno: {what}",
+ "undo.redone": "Ponovljeno: {what}",
+ "undo.action.edit.redo": "Ponovi",
+ "undo.action.edit.undo": "Poništi",
+ "hdr.unsaved": "Nespremljene promjene",
+ "hdr.file_menu": "Izbornik datoteke"
+}

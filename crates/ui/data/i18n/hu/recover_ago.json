@@ -1,0 +1,29 @@
+{
+ "recover.ago_now": "az imént",
+ "recover.ago_min": {
+  "one": "# perccel ezelőtt",
+  "other": "# perccel ezelőtt"
+ },
+ "recover.ago_hour": {
+  "one": "# órával ezelőtt",
+  "other": "# órával ezelőtt"
+ },
+ "recover.ago_yesterday": "tegnap",
+ "recover.ago_day": {
+  "one": "# nappal ezelőtt",
+  "other": "# nappal ezelőtt"
+ },
+ "recover.empty": "Nincs több pillanatkép",
+ "recover.empty_hint": "Ehhez a projekthez nincs visszaállítható adat.",
+ "recover.all_damaged": "Minden pillanatkép sérült, egyik sem állítható vissza.",
+ "recover.keys_hint": "A Fel és Le nyilakkal választhat pillanatképet, az Enter a Visszaállításra lép",
+ "recover.row_tip": "Mentve: {time}",
+ "recover.row_damaged_tip": "Nem állítható vissza: {reason}",
+ "recover.archive_ask": "Áthelyezi ezt a pillanatképet az archívumba?",
+ "recover.discard_ask": {
+  "one": "Áthelyezi a pillanatképet az archívumba? Többet nem lesz felajánlva.",
+  "other": "Áthelyezi mind a # pillanatképet az archívumba? Többet nem lesznek felajánlva."
+ },
+ "recover.confirm_yes": "Áthelyezés az archívumba",
+ "recover.confirm_no": "Pillanatképek megtartása"
+}

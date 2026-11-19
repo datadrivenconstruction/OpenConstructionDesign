@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "Korkeutta {t} ei otettu huomioon ({why}). Mitään ei muutettu",
+ "host_shape.shape.elev_prompt_in": "korkeus, ft-in…",
+ "host_shape.shape.elev_in": "{v} in"
+}

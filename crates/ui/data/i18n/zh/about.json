@@ -1,0 +1,33 @@
+{
+ "cmd.help.licenses": "开源许可证",
+ "cmd.help.licenses.desc": "列出此版本使用的开源库及其许可证。",
+ "about.product": "DDC Editor",
+ "about.version": "版本",
+ "about.build": "构建",
+ "about.schema": "模型架构",
+ "about.system": "系统",
+ "about.gpu": "图形适配器",
+ "about.language": "语言",
+ "about.copy": "复制版本信息",
+ "about.copy_desc": "版本、构建、系统和图形适配器信息，用于错误报告。不含文件路径。",
+ "about.copied": "版本信息已复制",
+ "about.licenses": "开源许可证",
+ "about.licenses_desc": "此版本使用的库及其许可证",
+ "about.licenses.open": "查看",
+ "about.licenses.title": "开源许可证",
+ "about.licenses.note": "DDC Editor 包含下列库。每个库仍受其各自的许可证和版权声明约束。完整许可证文本：应用程序旁的 THIRD_PARTY_LICENSES.txt。",
+ "about.licenses.full": "完整许可证文本",
+ "about.licenses.list": "组件列表",
+ "about.licenses.close": "关闭",
+ "about.licenses.col_name": "组件",
+ "about.licenses.col_license": "许可证",
+ "about.licenses.count": {
+  "other": "# 个组件",
+  "one": "# 个组件"
+ },
+ "about.licenses.count_of": "共 {total} 个组件中的 {shown} 个",
+ "about.licenses.search_hint": "按名称或许可证搜索…",
+ "about.licenses.search_clear": "清除搜索",
+ "about.licenses.none": "未找到",
+ "about.licenses.none_hint": "请尝试输入库名称的一部分或许可证名称，例如 MIT。"
+}

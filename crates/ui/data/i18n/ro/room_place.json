@@ -1,0 +1,8 @@
+{
+ "cmd.arch.room_auto": "Plasează camerele automat",
+ "cmd.arch.room_auto.desc": "Plasează o cameră în fiecare contur închis al nivelului activ care nu are niciuna. Conturile deschise sunt ignorate, nu sunt închise prin ghicire. Un singur pas de anulare.",
+ "room_place.placed": "Camere plasate: {n}. Regiuni care aveau deja o cameră: {m}. Bucle deschise ignorate: {k}",
+ "room_place.all_had": "Nimic plasat: toate cele {m} regiuni închise au deja o cameră. Bucle deschise ignorate: {k}",
+ "room_place.none": "Nimic plasat: nivelul nu are regiuni de pereți închise",
+ "room_place.none_open": "Nimic plasat: nivelul nu are regiuni de pereți închise. Bucle deschise ignorate: {k}"
+}

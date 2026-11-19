@@ -1,0 +1,20 @@
+{
+ "schema": "gen_bench.v1",
+ "group": "hotel",
+ "spec": {
+  "typology": "hotel",
+  "floors": 6
+ },
+ "adjacency": [
+  [
+   "bedroom",
+   "bath",
+   3
+  ],
+  [
+   "bedroom",
+   "corridor",
+   1
+  ]
+ ]
+}

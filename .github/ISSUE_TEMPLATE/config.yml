@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question or idea
+    url: https://github.com/datadrivenconstruction/OpenConstructionDesign/discussions
+    about: Ask questions and share ideas in Discussions.
+  - name: Report a security problem
+    url: https://github.com/datadrivenconstruction/OpenConstructionDesign/security/advisories/new
+    about: Private disclosure through GitHub security advisories; see SECURITY.md.

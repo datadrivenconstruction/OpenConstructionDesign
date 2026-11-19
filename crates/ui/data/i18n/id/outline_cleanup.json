@@ -1,0 +1,15 @@
+{
+ "cmd.ctx.floor.clean_outline": "Bersihkan kontur",
+ "cmd.ctx.floor.clean_outline.desc": "Menghapus duri sempit tempat kontur lantai berbalik ke dirinya sendiri. Pratinjau ditampilkan dulu; satu langkah batal.",
+ "outline_cleanup.title": "Bersihkan kontur",
+ "outline_cleanup.intro": "Kontur lantai ini berbalik ke dirinya sendiri dalam duri sempit: {n}. Pembersihan menghapusnya; yang lain tetap seperti semula.",
+ "outline_cleanup.legend_before": "Garis tebal: kontur sekarang",
+ "outline_cleanup.legend_after": "Garis tipis: kontur setelah dibersihkan",
+ "outline_cleanup.undo": "Ini dapat dibatalkan dalam satu langkah.",
+ "outline_cleanup.apply": "Bersihkan",
+ "outline_cleanup.cancel": "Batal",
+ "outline_cleanup.done": "Kontur dibersihkan, duri dihapus: {n}",
+ "outline_cleanup.none": "Kontur lantai ini tidak memiliki duri",
+ "outline_cleanup.failed": "Kontur tidak dapat dibersihkan",
+ "outline_cleanup.changed": "Kontur berubah sejak pratinjau; tidak ada yang ditulis. Periksa pratinjau baru."
+}

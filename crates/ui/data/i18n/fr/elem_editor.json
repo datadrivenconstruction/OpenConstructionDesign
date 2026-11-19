@@ -1,0 +1,4 @@
+{
+ "elem.spreadsheet.applied": "Importé depuis tableur XLSX : {what}",
+ "elem.spreadsheet.failed": "Échec de l'importation tableur XLSX : {e}"
+}

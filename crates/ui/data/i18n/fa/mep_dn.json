@@ -1,0 +1,5 @@
+{
+ "mep_dn.dn.unset": "تنظیم نشده",
+ "mep_dn.slope.err": "شیب را به % وارد کنید، مثلاً 1.5",
+ "mep_dn.err.rejected": "مقدار پذیرفته نشد"
+}

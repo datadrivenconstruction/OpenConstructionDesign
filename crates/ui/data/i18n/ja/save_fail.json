@@ -1,0 +1,16 @@
+{
+ "save_fail.save_fail.title": "プロジェクトを保存できませんでした",
+ "save_fail.save_fail.kept": "編集内容はこのエディタに残っています。エディタを開いている間は何も失われません。",
+ "save_fail.save_fail.details": "詳細",
+ "save_fail.save_fail.copy": "コピー",
+ "save_fail.save_fail.save_as": "名前を付けて保存…",
+ "save_fail.save_fail.retry": "再試行",
+ "save_fail.save_fail.close": "閉じる",
+ "save_fail.cause.full": "ディスクの空き容量がありません。容量を空けるか、別のドライブに保存してください。",
+ "save_fail.cause.denied": "このフォルダまたはファイルは読み取り専用か、書き込み権限がありません。別のフォルダを選択してください。",
+ "save_fail.cause.locked": "ファイルが別のプログラムで開かれています。そのプログラムで閉じてから「再試行」を押してください。",
+ "save_fail.cause.missing": "フォルダが存在しません。別のフォルダを選ぶか、復元して「再試行」を押してください。",
+ "save_fail.cause.offline": "ドライブまたはネットワークフォルダが利用できません。再接続して「再試行」を押すか、別の場所に保存してください。",
+ "save_fail.cause.too_long": "ファイルのパスが長すぎます。短いフォルダ名またはファイル名を選択してください。",
+ "save_fail.cause.other": "ファイルを書き込めませんでした: {detail}"
+}

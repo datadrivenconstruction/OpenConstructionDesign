@@ -1,0 +1,5 @@
+{
+ "sel_chip.opt.sel_hint": "คลิกองค์ประกอบเพื่อเลือก Ctrl เพิ่ม Shift ลบ",
+ "sel_chip.opt.units": "หน่วย",
+ "sel_chip.sel_chip": "{name}: {n}"
+}

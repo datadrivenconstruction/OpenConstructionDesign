@@ -1,0 +1,15 @@
+{
+ "mcp.ask.cancel": "Cancelar",
+ "mcp.ask.auto.title": "¿Permitir que los agentes de IA apliquen cambios sin preguntar?",
+ "mcp.ask.auto.body": "Los agentes de IA conectados aplicarán sus cambios a los borradores de inmediato, sin esperar su confirmación; por tanto, un cambio erróneo puede aplicarse antes de que lo vea. Su modelo solo cambia cuando pulsa Aplicar. Esto se mantiene hasta que lo desactive, cierre el editor o abra otro modelo.",
+ "mcp.ask.auto.yes": "Aplicar sin preguntar",
+ "mcp.ask.token.title": "¿Emitir un nuevo token?",
+ "mcp.ask.token.body": "El token actual deja de funcionar de inmediato: los agentes de IA conectados se desconectan y necesitarán el nuevo token. Se muestra una sola vez, así que cópielo enseguida.",
+ "mcp.ask.token.yes": "Nuevo token",
+ "mcp.auto.chip": "Aplicación automática activa",
+ "mcp.auto.chip_tip": "Los agentes de IA aplican cambios a los borradores sin preguntar. Termina al cerrar esta sesión.",
+ "mcp.auto.ask_again": "Preguntar de nuevo",
+ "mcp.token.once": "Copie este token ahora: no se volverá a mostrar.",
+ "mcp.renewed": "Nuevo token emitido: el anterior ya no funciona",
+ "mcp.copied": "Copiado"
+}

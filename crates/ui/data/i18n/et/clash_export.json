@@ -1,0 +1,9 @@
+{
+ "clash.col.x": "X",
+ "clash.col.y": "Y",
+ "clash.col.z": "Z",
+ "clash.unit.ft3": "ft³",
+ "clash.exported_n": "Aruanne salvestatud: {n} / {m}, {path}",
+ "clash.exported_f": "Aruanne salvestatud: {n} / {m} (filter: {filter}), {path}",
+ "clash.col.unit": "{name}, {unit}"
+}

@@ -1,0 +1,8 @@
+{
+ "undo.undone": "আনডু হয়েছে: {what}",
+ "undo.redone": "রিডু হয়েছে: {what}",
+ "undo.action.edit.redo": "রিডু",
+ "undo.action.edit.undo": "আনডু",
+ "hdr.unsaved": "অসংরক্ষিত পরিবর্তন",
+ "hdr.file_menu": "ফাইল মেনু"
+}

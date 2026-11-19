@@ -1,0 +1,7 @@
+{
+ "recover.untitled_note": "Tätä projektia ei ole koskaan tallennettu",
+ "recover.file_missing": "Projektitiedostoa ei löytynyt",
+ "recover.banner": "Tallentamatonta työtä edellisestä istunnosta löytyi kohteelle {name}",
+ "recover.banner_review": "Tarkista",
+ "recover.later_archived": "Lykätty {n} kertaa: tilannekuvat siirretty arkistoon"
+}

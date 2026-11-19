@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "נמדד {value}, גבול {limit}",
+ "ai_checks.check.cap": "מוצגים {shown} מתוך {total} ממצאים. שגיאות מופיעות ראשונות: תקן אותן והפעל שוב.",
+ "ai_checks.check.run_again": "הפעל שוב",
+ "ai_checks.check.goto": "בחר והתקרב",
+ "ai_checks.check.never_title": "עדיין לא נבדק",
+ "ai_checks.check.never_hint": "הפעל את הבדיקות והממצאים יופיעו כאן.",
+ "ai_checks.check.sec.error": "שגיאות",
+ "ai_checks.check.sec.warning": "אזהרות",
+ "ai_checks.check.sec.info": "הערות"
+}

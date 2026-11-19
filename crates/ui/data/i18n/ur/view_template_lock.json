@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "ٹیمپلیٹ {name} کے کنٹرول میں",
+ "view_template.edit_template": "ٹیمپلیٹ میں ترمیم",
+ "view_template.locked_tip": "ویو ٹیمپلیٹ {name} نے سیٹ کیا۔ اسے ٹیمپلیٹ میں بدلیں۔",
+ "view_template.no_filters": "اس ویو میں کوئی فلٹر نہیں"
+}

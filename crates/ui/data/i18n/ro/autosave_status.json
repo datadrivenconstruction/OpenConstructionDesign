@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "Salvarea automată a eșuat, ultimele modificări nu sunt protejate. {why}",
+ "autosave_status.autosave_open": "Setări salvare automată",
+ "autosave_status.autosave_recovered": "Salvarea automată funcționează din nou.",
+ "autosave_status.autosave_reason": "Motiv: {why}"
+}

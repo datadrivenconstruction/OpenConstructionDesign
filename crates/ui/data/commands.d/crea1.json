@@ -1,0 +1,20 @@
+[
+ {
+  "id": "mod.divide",
+  "repeatable": true,
+  "icon": "divide",
+  "mnemonic": "DV",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M1",
+  "group": "modify",
+  "context": [
+   "*"
+  ],
+  "priority": 3
+ }
+]

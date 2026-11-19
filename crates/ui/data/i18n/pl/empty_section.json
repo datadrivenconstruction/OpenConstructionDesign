@@ -1,0 +1,11 @@
+{
+ "empty.sv_notfound.title": "Nie znaleziono widoku",
+ "empty.sv_notfound.hint": "Ten widok został usunięty lub nie jest już częścią projektu.",
+ "empty.sv_notfound.action": "Zamknij widok",
+ "empty.sv_cuts_nothing.title": "Ten przekrój nic nie przecina",
+ "empty.sv_cuts_nothing.hint": "Linia przekroju nie przecina ścian, płyt ani otworów w swojej głębokości. Przesuń linię lub zwiększ głębokość widoku.",
+ "empty.sv_cuts_nothing.action": "Pokaż w planie",
+ "empty.sv_shows_nothing.title": "Ta elewacja nic nie pokazuje",
+ "empty.sv_shows_nothing.hint": "W głębokości widoku nie ma ścian, płyt ani otworów. Przesuń linię widoku lub zwiększ jego głębokość.",
+ "empty.sv_shows_nothing.action": "Pokaż w planie"
+}

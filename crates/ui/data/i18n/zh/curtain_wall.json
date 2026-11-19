@@ -1,0 +1,12 @@
+{
+ "curtain_wall.cw.issue.slab": "楼板 {id}：{e}",
+ "curtain_wall.cw.issue.body": "主体 {id}：{e}",
+ "curtain_wall.cw.added": "已添加幕墙：{n}",
+ "curtain_wall.cw.add_failed": "未生成幕墙：{e}",
+ "curtain_wall.cw.edited_warn": "幕墙 #{id} 已更改：{w}",
+ "curtain_wall.cw.edited": "幕墙 #{id} 已更改",
+ "curtain_wall.cw.not_changed": "未更改：{e}",
+ "curtain_wall.cw.room_edited": "房间 #{id} 已更改",
+ "curtain_wall.cw.slope_range": "未更改：坡度超出范围",
+ "curtain_wall.cw.slope_set": "楼板 #{id}：坡度 {pct}"
+}

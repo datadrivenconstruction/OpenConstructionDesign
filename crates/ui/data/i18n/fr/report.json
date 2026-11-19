@@ -1,0 +1,23 @@
+{
+ "cmd.app.report": "Signaler un problème…",
+ "cmd.app.report.desc": "Décrit ce qui s'est mal passé et enregistre un dossier sur cet ordinateur : votre texte, les informations de version et de système, une capture de la fenêtre et le dernier enregistrement de plantage. Rien n'est envoyé.",
+ "report.title": "Signaler un problème",
+ "report.what": "Ce qui s'est passé",
+ "report.expected": "Ce que vous attendiez",
+ "report.steps": "Étapes pour reproduire",
+ "report.opt.shot": "Inclure une capture de la fenêtre",
+ "report.opt.model": "Inclure une copie du modèle",
+ "report.opt.model.note": "Désactivé par défaut. La copie contient les données de votre projet, sans le journal IA.",
+ "report.opt.paths": "Conserver les noms d'utilisateur dans les chemins de fichiers",
+ "report.local": "Le dossier est enregistré uniquement sur cet ordinateur. Rien n'est envoyé automatiquement.",
+ "report.blocked": "Décrivez d'abord ce qui s'est passé.",
+ "report.save": "Enregistrer le dossier",
+ "report.copy": "Copier le texte",
+ "report.cancel": "Annuler",
+ "report.copied": "Texte du rapport copié.",
+ "report.saved": "Dossier enregistré : {path}",
+ "report.failed": "Le dossier n'a pas pu être enregistré : {err}",
+ "report.model.fail": "La copie du modèle n'a pas pu être créée, rien n'a été enregistré : {err}",
+ "report.crash.notice": "La session précédente s'est terminée par un plantage.",
+ "report.crash.action": "Signaler un problème"
+}

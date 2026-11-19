@@ -1,0 +1,10 @@
+{
+ "ai.optx.applied": "Opsi \"{name}\" diterapkan. Urungkan mengembalikannya ke draf",
+ "ai.optx.missing": "Opsi {id} tidak lagi ada",
+ "ai.optx.accepted": "Opsi {id} sudah diterapkan",
+ "ai.optx.not_draft": "Opsi {id} ditolak dan tidak dapat diterapkan",
+ "ai.optx.stale": "Model berubah setelah opsi {id} dibuat: buat ulang terlebih dahulu",
+ "ai.optx.bad_recipe": "Resep opsi tidak dapat dibaca: {e}",
+ "ai.optx.refused": "Opsi tidak diterapkan ({code}): {reason}",
+ "ai.optx.failed": "Opsi tidak diterapkan: {e}"
+}

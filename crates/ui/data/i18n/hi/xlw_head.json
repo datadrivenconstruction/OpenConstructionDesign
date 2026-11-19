@@ -1,0 +1,15 @@
+{
+ "xlw.hd_never": "अभी तक निर्यात नहीं",
+ "xlw.hd_now": "अभी-अभी",
+ "xlw.hd_min": "{n} मिनट पहले",
+ "xlw.hd_hour": "{n} घं. पहले",
+ "xlw.hd_day": "{n} दिन पहले",
+ "xlw.hd_linked": "लिंक किया गया",
+ "xlw.hd_watched": "निगरानी में",
+ "xlw.hd_stale": "निर्यात के बाद मॉडल बदला",
+ "xlw.ft_export": "निर्यात",
+ "xlw.ft_review": "समीक्षा",
+ "xlw.ft_apply": "{n} बदलाव लागू करें",
+ "xlw.ft_delete_missing": "गायब हटाएँ",
+ "xlw.ft_keep_missing_tip": "हटाना चालू है: बिना पंक्ति वाले तत्व लागू करने पर हटेंगे। रखने के लिए चुनाव हटाएँ।"
+}

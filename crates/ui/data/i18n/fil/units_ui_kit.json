@@ -1,0 +1,6 @@
+{
+ "units.err.parse": "Hindi haba: nanatili ang lumang halaga. Maglagay ng numero na may opsyonal na unit, halimbawa 2500 o 8'-2\"",
+ "ui.scale.set": "Sukat ng interface: {pct}%",
+ "cmd.ui.scale_up": "Dagdagan ang interface scale",
+ "cmd.ui.scale_down": "Bawasan ang interface scale"
+}

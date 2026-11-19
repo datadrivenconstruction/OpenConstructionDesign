@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "벽 루프 전체 선택",
+ "cmd.sketch.link_unlink": "벽에서 모서리 연결 해제",
+ "cmd.sketch.link_repick": "모서리 벽 다시 선택",
+ "cmd.ctx.floor.link_unlink": "벽에서 모서리 연결 해제",
+ "cmd.ctx.floor.link_accept": "삭제된 벽의 모서리 수락",
+ "boundary_link.hint.loop": "벽을 클릭하면 닫힌 벽 구간이 연결된 모서리가 됩니다",
+ "boundary_link.hint.repick": "모서리와 평행한 벽을 클릭하면 모서리가 그 벽을 따릅니다",
+ "boundary_link.need_sketch": "먼저 경계 스케치를 여세요",
+ "boundary_link.need_edge": "스케치의 모서리를 가리키세요",
+ "boundary_link.need_straight": "직선 모서리만 벽을 따를 수 있습니다",
+ "boundary_link.need_floor": "바닥을 선택하세요",
+ "boundary_link.no_wall": "커서 아래에 벽이 없습니다",
+ "boundary_link.not_parallel": "벽이 모서리와 평행하지 않습니다",
+ "boundary_link.not_linked": "이 모서리는 벽에 연결되어 있지 않습니다",
+ "boundary_link.unlinked": "모서리 연결 해제됨: 제자리에 남고 더 이상 벽을 따르지 않습니다",
+ "boundary_link.accepted": "모서리 수락됨: 일반 모서리로 제자리에 유지됩니다",
+ "boundary_link.failed": "적용할 수 없음",
+ "boundary_link.lost": "원본 벽이 삭제됨",
+ "boundary_link.blocked": "벽을 따를 수 없음"
+}

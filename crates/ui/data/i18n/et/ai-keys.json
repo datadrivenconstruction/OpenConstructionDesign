@@ -1,0 +1,14 @@
+{
+ "ai_keys.header_is_key": "Võtmed lähevad väljale Key — päised salvestatakse lihtteksti",
+ "ai_keys.move": "Teisalda väljale Key",
+ "ai_keys.remove_line": "Eemalda päistest",
+ "ai_keys.save_blocked": "Salvestamiseks teisalda võti päistest välja",
+ "ai_keys.show": "Näita",
+ "ai_keys.hide": "Peida",
+ "ai_keys.copy": "Kopeeri",
+ "ai_keys.tokens": "žetoonid",
+ "ai_keys.presets": "Eelseaded",
+ "ai_keys.preset_k": "{n}k",
+ "ai_keys.preset_m": "{n}M",
+ "ai_keys.images_on": "Toetatud"
+}

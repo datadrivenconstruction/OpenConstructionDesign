@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "Sprema cijeli model ili odabir kao binarni STL u metrima ili milimetrima.",
+ "cmd.data.export_obj.desc": "Sprema cijeli model ili odabir kao OBJ s MTL datotekom: jedna grupa po elementu, boje prema materijalu.",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "OBJ s materijalima (.obj)",
+ "open_file.filter.mesh": "3D mreže (glTF, STEP, STL, OBJ)",
+ "mx.title": "Izvezi {fmt}",
+ "mx.scope": "Što izvesti",
+ "mx.scope.all": "Cijeli model",
+ "mx.scope.sel": "Odabir ({n} elemenata)",
+ "mx.units": "Jedinice u datoteci",
+ "mx.units.m": "Metri",
+ "mx.units.mm": "Milimetri",
+ "mx.export": "Izvezi…",
+ "mx.saved": "{fmt} spremljen: {path} ({parts} elemenata, {tris} trokuta)",
+ "mx.partial": "{fmt} spremljen s {n} problema, neka tijela mogu nedostajati: {path}",
+ "mx.failed": "Izvoz {fmt} nije uspio: {error}",
+ "mx.imported": "{file}: uvezeno {n} elemenata ({tris} trokuta)",
+ "mx.imported_notes": "{file}: uvezeno {n} elemenata ({tris} trokuta), {w} napomena: {first}"
+}

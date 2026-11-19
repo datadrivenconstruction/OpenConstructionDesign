@@ -1,0 +1,12 @@
+{
+ "curtain_wall.cw.issue.slab": "laje {id}: {e}",
+ "curtain_wall.cw.issue.body": "corpo {id}: {e}",
+ "curtain_wall.cw.added": "Fachadas-cortina adicionadas: {n}",
+ "curtain_wall.cw.add_failed": "Pano de vidro não construído: {e}",
+ "curtain_wall.cw.edited_warn": "Fachada-cortina #{id} alterada: {w}",
+ "curtain_wall.cw.edited": "Fachada-cortina #{id} alterada",
+ "curtain_wall.cw.not_changed": "Não alterado: {e}",
+ "curtain_wall.cw.room_edited": "Ambiente #{id} alterado",
+ "curtain_wall.cw.slope_range": "Não alterado: caimento fora do intervalo",
+ "curtain_wall.cw.slope_set": "Laje #{id}: caimento {pct}"
+}

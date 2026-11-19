@@ -1,0 +1,8 @@
+{
+ "undo.undone": "تم التراجع: {what}",
+ "undo.redone": "أُعيد: {what}",
+ "undo.action.edit.redo": "إعادة",
+ "undo.action.edit.undo": "تراجع",
+ "hdr.unsaved": "تغييرات غير محفوظة",
+ "hdr.file_menu": "قائمة الملف"
+}

@@ -1,0 +1,11 @@
+{
+ "job.stage.prepare": "正在准备项目",
+ "open_guard.already_open": "{name} 已打开",
+ "open_guard.from_cache": "{name}：已从导入缓存打开",
+ "open_guard.known_project": "{name} 之前已导入过：正在打开该项目",
+ "open_guard.locate": "定位",
+ "open_guard.mem_low": "内存不足：网格预算减半，细节层次构建已暂停",
+ "open_guard.mem_low_short": "内存不足：细节层次构建已暂停，直到释放内存",
+ "open_guard.no_window": "找不到该项目的窗口",
+ "open_guard.switch_window": "切换到该窗口"
+}

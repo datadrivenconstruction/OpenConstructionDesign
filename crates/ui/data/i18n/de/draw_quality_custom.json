@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "benutzerdefiniert",
+ "draw_quality.custom.tip": "{name}: ein Eintrag dieses Projekts",
+ "draw_quality.custom_note": "Mit „benutzerdefiniert“ markierte Einträge gehören zu diesem Projekt.",
+ "draw_quality.unsaved.lib_body": "In der Bibliothek speichern oder verwerfen?",
+ "draw_quality.unsaved.styles_body": "Auf die Ansicht anwenden oder verwerfen?",
+ "draw_quality.unsaved.both_body": "Übernehmen oder verwerfen?",
+ "draw_quality.halftone": "{category} Halbton",
+ "draw_quality.styles.name": "Linienstile",
+ "draw_quality.styles.other_level": "Nicht gespeicherte Stiländerungen der Ebene {level}: Übernehmen oder verwerfen, um diese Ebene zu bearbeiten."
+}

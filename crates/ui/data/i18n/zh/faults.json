@@ -1,0 +1,18 @@
+{
+ "faults.errors": {
+  "other": "模型中有 # 个错误。单击查看列表。",
+  "one": "模型中有 # 个错误。单击查看列表。"
+ },
+ "faults.warnings": {
+  "other": "模型中有 # 个警告。单击查看列表。",
+  "one": "模型中有 # 个警告。单击查看列表。"
+ },
+ "faults.title": "模型问题：{n}",
+ "faults.none": "没有错误或警告。",
+ "faults.cat.wall": "墙",
+ "faults.cat.slab": "楼板",
+ "faults.cat.opening": "洞口",
+ "faults.cat.curtain_wall": "幕墙",
+ "faults.cat.ramp": "坡道",
+ "faults.cat.zone": "区域"
+}

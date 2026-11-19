@@ -1,0 +1,18 @@
+{
+ "ai.items.all": {
+  "one": "Vše: # položka",
+  "few": "Vše: # položky",
+  "other": "Vše: # položek"
+ },
+ "ai.items.all.tip": "Zaškrtnout nebo odškrtnout každou položku plánu",
+ "ai.items.checked": "zaškrtnuto {n} z {m}",
+ "ai.items.check.tip": "Zahrnout „{title}“ do Použít",
+ "ai.items.expand": "Zobrazit prvky",
+ "ai.items.collapse": "Skrýt prvky",
+ "ai.items.apply": {
+  "one": "Použít # položku",
+  "few": "Použít # položky",
+  "other": "Použít # položek"
+ },
+ "ai.items.apply_none": "Použít"
+}

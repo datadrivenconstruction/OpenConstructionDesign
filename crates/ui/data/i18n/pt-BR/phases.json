@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D",
+ "phases.current_mark": "atual",
+ "phases.make_current": "Tornar atual",
+ "phases.col_phase": "Fase",
+ "phases.col_filter": "Filtro",
+ "phases.presets": "Predefinições de planta",
+ "phases.del_title": "Excluir fase",
+ "phases.del_text": "Excluir a fase \"{name}\"? Os elementos dela serão movidos para a fase escolhida abaixo.",
+ "phases.del_into": "Mover elementos para",
+ "phases.del_ok": "Excluir",
+ "phases.col_kind": "Tipo de elemento",
+ "phases.col_count": "Quantidade",
+ "phases.col_volume": "Volume"
+}

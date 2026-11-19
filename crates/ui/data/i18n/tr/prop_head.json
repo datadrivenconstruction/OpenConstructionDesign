@@ -1,0 +1,9 @@
+{
+ "prop_head.of_type": {
+  "one": "Bu tipten # tane",
+  "other": "Bu tipten # tane"
+ },
+ "prop_head.override_tip": "Tipten farklı, sıfırlamak için tıklayın",
+ "prop_head.reset_done": "“{name}” tip değerine sıfırlandı",
+ "prop_head.copy_id": "Numarayı kopyalamak için tıklayın"
+}

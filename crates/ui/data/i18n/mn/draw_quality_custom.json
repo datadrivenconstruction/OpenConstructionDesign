@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "тусгай",
+ "draw_quality.custom.tip": "{name}: энэ төслийн бичлэг",
+ "draw_quality.custom_note": "“Тусгай” тэмдэгтэй бичлэгүүд энэ төслийнх.",
+ "draw_quality.unsaved.lib_body": "Санд хадгалах уу, эсвэл хаях уу?",
+ "draw_quality.unsaved.styles_body": "Харагдацад хэрэглэх үү, эсвэл хаях уу?",
+ "draw_quality.unsaved.both_body": "Хэрэглэх үү, эсвэл хаях уу?",
+ "draw_quality.halftone": "{category} хагас өнгө",
+ "draw_quality.styles.name": "Шугамын загварууд",
+ "draw_quality.styles.other_level": "{level} түвшний хадгалаагүй загварын засвар: энэ түвшинг засахын тулд хэрэглэх эсвэл буцаана уу."
+}

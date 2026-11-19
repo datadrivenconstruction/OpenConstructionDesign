@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "Merge option: {name}",
+ "ai_opt_merge.whole": "Merge whole option",
+ "ai_opt_merge.parts": "Merge selected parts",
+ "ai_opt_merge.note": "Why this option",
+ "ai_opt_merge.rebased": "The model changed after this option was made: the merge was recalculated against the current model. Check the changes before applying.",
+ "ai_opt_merge.left.not_picked": "Not picked from the option",
+ "ai_opt_merge.left.unticked": "Unticked in the option",
+ "ai_opt_merge.left.conflict": "Can't be added to the current model: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "This option can't be merged. A rejected option has to be restored first.",
+ "ai_opt_merge.refused.stale": "The model changed after this option was made. Recalculate the merge against the current model.",
+ "ai_opt_merge.refused.nothing_picked": "Nothing is selected to merge.",
+ "ai_opt_merge.refused.unknown_item": "Item {item} isn't part of this option.",
+ "ai_opt_merge.refused.not_in_option": "The selected element isn't part of this option.",
+ "ai_opt_merge.refused.needs_left_out": "Item {item} needs item {needs}. Select it too, or allow dependencies to be added.",
+ "ai_opt_merge.refused.set_gone": "Item {item} refers to a selection that no longer exists. Generate the option again.",
+ "ai_opt_merge.refused.busy": "Another plan is open. Apply or reject it first.",
+ "ai_opt_merge.refused.failed": "The merge couldn't be prepared: {reason}",
+ "ai_opt_merge.revive": "Restore option",
+ "ai_opt_merge.merged": "Merged"
+}

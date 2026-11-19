@@ -1,0 +1,17 @@
+[
+ {
+  "id": "str.gridshell",
+  "icon": "gridshell",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "struct",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "str_space",
+  "repeatable": true,
+  "size": "large",
+  "priority": 6
+ }
+]

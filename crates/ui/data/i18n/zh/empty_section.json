@@ -1,0 +1,11 @@
+{
+ "empty.sv_notfound.title": "未找到视图",
+ "empty.sv_notfound.hint": "此视图已被删除，或不再属于本项目。",
+ "empty.sv_notfound.action": "关闭视图",
+ "empty.sv_cuts_nothing.title": "此剖面未切到任何内容",
+ "empty.sv_cuts_nothing.hint": "剖切线在其深度范围内未与任何墙、楼板或开洞相交。请移动剖切线或加深视图。",
+ "empty.sv_cuts_nothing.action": "在平面中显示",
+ "empty.sv_shows_nothing.title": "此立面不显示任何内容",
+ "empty.sv_shows_nothing.hint": "视图深度范围内没有墙、楼板或开洞。请移动视图线或加深视图。",
+ "empty.sv_shows_nothing.action": "在平面中显示"
+}

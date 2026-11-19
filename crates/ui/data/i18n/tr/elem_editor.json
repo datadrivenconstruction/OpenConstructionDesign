@@ -1,0 +1,4 @@
+{
+ "elem.spreadsheet.applied": "XLSX'den içe aktarıldı: {what}",
+ "elem.spreadsheet.failed": "XLSX tablosu içe aktarma başarısız: {e}"
+}

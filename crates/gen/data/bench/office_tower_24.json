@@ -1,0 +1,47 @@
+{
+ "schema": "gen_bench.v1",
+ "group": "office_tower",
+ "spec": {
+  "typology": "office",
+  "floors": 24,
+  "lift": true,
+  "rooms": [
+   {
+    "kind": "office",
+    "area": 40,
+    "count": 6
+   },
+   {
+    "kind": "meeting",
+    "area": 30,
+    "count": 2
+   },
+   {
+    "kind": "wc",
+    "area": 6,
+    "count": 2
+   },
+   {
+    "kind": "technical",
+    "area": 8
+   }
+  ]
+ },
+ "adjacency": [
+  [
+   "meeting",
+   "lobby",
+   1
+  ],
+  [
+   "office",
+   "corridor",
+   2
+  ],
+  [
+   "wc",
+   "corridor",
+   1
+  ]
+ ]
+}

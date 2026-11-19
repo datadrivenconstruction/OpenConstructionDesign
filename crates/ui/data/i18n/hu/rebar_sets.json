@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "1 készlet hozzáadása",
+ "rebar_sets.add_n": "{n} készlet hozzáadása",
+ "rebar_sets.pick.search": "Rúdtípusok keresése",
+ "rebar_sets.pick.empty": "Nincs illeszkedő rúdtípus",
+ "rebar_sets.unit.deg": "°"
+}

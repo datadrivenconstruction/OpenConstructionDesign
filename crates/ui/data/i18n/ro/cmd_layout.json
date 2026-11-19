@@ -1,0 +1,4 @@
+{
+ "cmd.data.sync_xlsx": "Sincronizează cu foaia de calcul…",
+ "cmd.data.sync_xlsx.desc": "Recitește registrul de calcul legat și arată diferențele față de model."
+}

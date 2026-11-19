@@ -1,0 +1,9 @@
+# Repo-wide build profile. Machine-local settings (target-dir, jobs) live outside the repo.
+[target.x86_64-pc-windows-msvc]
+linker = "rust-lld.exe"
+
+[profile.dev]
+debug = "line-tables-only"
+
+[profile.dev.package."*"]
+debug = false

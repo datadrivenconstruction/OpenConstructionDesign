@@ -1,0 +1,14 @@
+{
+ "cmd.mod.divide": "Разделить на части",
+ "cmd.mod.divide.short": "На части",
+ "cmd.mod.divide.desc": "Делит стену на равные части за один шаг. Введите число частей и щёлкните стену.",
+ "whereis.mod.divide": "разделить на части, равные части, нарезать, поделить стену",
+ "hint.split.parts": "Разделить на части: щёлкните стену · число — количество частей (2–100) · Esc — отмена",
+ "create_input.divide.bad_parts": "«{text}» — не число частей: введите целое от 2 до {max}",
+ "create_input.ws.err.empty": "Введите имя раскладки",
+ "create_input.ws.err.long": "Слишком длинное имя: не больше 40 знаков",
+ "create_input.ws.err.preset": "Это имя встроенной раскладки",
+ "create_input.ws.err.full": "Не больше 24 сохранённых раскладок: сначала удалите одну",
+ "create_input.seldim.locked": "Расстояние {v} закреплено",
+ "create_input.seldim.positive": "Расстояние должно быть больше нуля"
+}

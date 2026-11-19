@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "Anna ensin mallin nimi",
+ "view_template.name_taken": "Tämän niminen malli on jo olemassa",
+ "view_template.pick_blocked": "Valitse ensin vähintään yksi näkymä",
+ "view_template.views.one": "{n} näkymä",
+ "view_template.views.few": "{n} näkymää",
+ "view_template.views.many": "{n} näkymää",
+ "view_template.delete.title": "Poistetaanko tämä malli?",
+ "view_template.delete.body": "Malli ”{name}” poistetaan. Käytetty: {used}.",
+ "view_template.delete.unused": "Malli ”{name}” poistetaan. Mikään näkymä ei käytä sitä.",
+ "view_template.delete.keeps": "Nämä näkymät säilyttävät nykyisen grafiikkansa ja menettävät linkin.",
+ "view_template.delete.undo": "Voit kumota tämän yhdellä Kumoa-toiminnolla.",
+ "view_template.delete.confirm": "Poista malli"
+}

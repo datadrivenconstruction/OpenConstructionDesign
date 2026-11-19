@@ -1,0 +1,15 @@
+{
+ "cmd.ctx.floor.clean_outline": "Oczyść obrys",
+ "cmd.ctx.floor.clean_outline.desc": "Usuwa wąskie kolce tam, gdzie obrys stropu zawraca na siebie. Najpierw pokazuje podgląd; jeden krok cofania.",
+ "outline_cleanup.title": "Oczyść obrys",
+ "outline_cleanup.intro": "Obrys tego stropu zawraca na siebie w wąskich kolcach: {n}. Oczyszczanie usuwa je; reszta zostaje bez zmian.",
+ "outline_cleanup.legend_before": "Gruba linia: obrys obecnie",
+ "outline_cleanup.legend_after": "Cienka linia: obrys po oczyszczeniu",
+ "outline_cleanup.undo": "Możesz to cofnąć jednym krokiem.",
+ "outline_cleanup.apply": "Oczyść",
+ "outline_cleanup.cancel": "Anuluj",
+ "outline_cleanup.done": "Obrys oczyszczony, usunięte kolce: {n}",
+ "outline_cleanup.none": "Obrys tego stropu nie ma kolców",
+ "outline_cleanup.failed": "Nie udało się oczyścić obrysu",
+ "outline_cleanup.changed": "Obrys zmienił się od podglądu; nic nie zapisano. Sprawdź nowy podgląd."
+}

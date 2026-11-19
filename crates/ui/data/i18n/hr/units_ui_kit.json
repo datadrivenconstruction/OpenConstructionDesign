@@ -1,0 +1,6 @@
+{
+ "units.err.parse": "Nije duljina: stara vrijednost je zadržana. Upišite broj s izbornom jedinicom, npr. 2500 ili 8'-2\"",
+ "ui.scale.set": "Mjerilo sučelja: {pct}%",
+ "cmd.ui.scale_up": "Povećaj mjerilo sučelja",
+ "cmd.ui.scale_down": "Smanji mjerilo sučelja"
+}

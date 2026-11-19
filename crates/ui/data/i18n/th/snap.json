@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "จุดปลาย",
+ "snap.midpoint": "จุดกึ่งกลาง",
+ "snap.perpendicular": "ตั้งฉาก",
+ "snap.wall_axis": "แกนผนัง",
+ "snap.wall_face": "ผิวผนัง",
+ "snap.grid": "กริด",
+ "snap.intersection": "จุดตัด",
+ "snap.grid_axis": "เส้นกริด",
+ "snap.ref_plane": "ระนาบอ้างอิง",
+ "snap.nearest": "จุดที่ใกล้ที่สุด",
+ "snap.align_x": "จัดแนวในแกน X กับจุดระยะไกล",
+ "snap.align_y": "จัดแนวในแกน Y กับจุดระยะไกล",
+ "snap.align_xy": "จัดแนวในแกน X และ Y"
+}

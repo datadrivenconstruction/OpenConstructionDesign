@@ -1,0 +1,5 @@
+{
+ "mirror_array.err.count": "Arv on täisarv vahemikus 2 kuni 200: 4 3000 või 4;300, kui samm on kolmekohaline",
+ "mirror_array.err.length": "Samm või kogupikkus peab olema positiivne pikkus, nt 3 000 või 1.2 m",
+ "mirror_array.err.angle": "Keerang on kraadides, mitte null ja kuni 360"
+}

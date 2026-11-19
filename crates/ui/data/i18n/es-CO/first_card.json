@@ -1,0 +1,9 @@
+{
+ "first_card.card.title": "Pruebe el ciclo con XLSX",
+ "first_card.card.step1": "Seleccione un muro",
+ "first_card.card.step2": "Cambie una de sus propiedades",
+ "first_card.card.step3": "Edite en hoja de cálculo XLSX, revise la vista previa y pulse Aplicar",
+ "first_card.card.spreadsheet": "Editar en XLSX",
+ "first_card.card.skip": "Omitir",
+ "first_card.card.done": "Hecho: el modelo y el libro coinciden"
+}

@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "{total} ичинен {done} таанылууда",
+ "mesh_recognize.all": "Бардыгы {n}",
+ "mesh_recognize.only_confident": "Ишенимдүүлөрү гана",
+ "mesh_recognize.confident_tip": "Түрү категорияга туура келген жана ишенимдүүлүгү кеминде {pct}% болгон саптарды белгилейт",
+ "mesh_recognize.row_hint": "Белгилөө үчүн сапты басыңыз. Жебе баскычтары жылдырат, Enter белгилейт.",
+ "mesh_recognize.kind_for": "{name} үчүн түрү",
+ "mesh_recognize.source": "Булак торлору",
+ "mesh_recognize.keep": "Торлорду калтыруу",
+ "mesh_recognize.replace": "Торлорду алмаштыруу",
+ "mesh_recognize.convert_keep": "{n} айландыруу",
+ "mesh_recognize.convert_remove": "{n} айландыруу жана торлорду өчүрүү",
+ "mesh_recognize.creates": "{n} түзүлөт: {kinds}",
+ "mesh_recognize.creates_none": "Азырынча эч нерсе белгиленген жок",
+ "mesh_recognize.stay": "{n} булак торлору моделде калат",
+ "mesh_recognize.removed": "Булак торлорунун {n} өчүрүлөт. Артка кайтаруу аларды кайра кайтарат."
+}

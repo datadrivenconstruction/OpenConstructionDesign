@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "Distance",
+ "cmd.e3d.measure.clear": "Clear gap between faces",
+ "cmd.e3d.measure.angle": "Angle",
+ "cmd.e3d.measure.area": "Area / perimeter of a face or room",
+ "cmd.e3d.measure.volume": "Volume of an element",
+ "cmd.e3d.measure.slope": "Slope",
+ "cmd.e3d.measure.chain": "Measure: point chain",
+ "measure.orphan": "Lost reference",
+ "measure.not_planar": "Faces are not parallel",
+ "measure.unsupported": "Cannot measure this",
+ "cmd.ann.measure_distance": "Measure: distance",
+ "cmd.ann.measure_clear": "Measure: clear gap between faces",
+ "cmd.ann.measure_angle": "Measure: angle",
+ "cmd.ann.measure_area": "Measure: area",
+ "hint.measure.first": "Measure: click a wall face (or a point) · Esc — exit",
+ "hint.measure.second": "Measure: click the second face · Esc — cancel the first pick",
+ "measure.no_face": "No wall face here"
+}

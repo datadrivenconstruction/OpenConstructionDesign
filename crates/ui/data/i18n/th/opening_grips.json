@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "พลิกด้านบานพับ",
+ "cmd.edit.flip_hand.desc": "สะท้อนประตูและหน้าต่างที่เลือกตามแนวผนัง เพื่อให้บานพับย้ายไปอีกปลายของช่องเปิด",
+ "cmd.edit.flip_facing": "พลิกด้านของช่องเปิด",
+ "cmd.edit.flip_facing.desc": "หมุนประตูและหน้าต่างที่เลือกไปยังอีกด้านของผนัง",
+ "opening_grips.flip_hand": "พลิกบานพับ",
+ "opening_grips.flip_hand.tip": "บานพับไปอยู่อีกปลายของช่องเปิด (Shift+F)",
+ "opening_grips.flip_facing": "พลิกด้าน",
+ "opening_grips.flip_facing.tip": "เปิดไปยังอีกด้านของผนัง (Shift+G)",
+ "opening_grips.flip.done": "พลิกแล้ว: {n}",
+ "opening_grips.flip.none": "เลือกประตูหรือหน้าต่างเพื่อพลิก",
+ "opening_grips.flip.fail": "ไม่ได้พลิก: {why}"
+}

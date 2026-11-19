@@ -1,0 +1,8 @@
+brief = "Floor-standing toilet with waste and water connections."
+category = "plumbing"
+must = param FlowCold
+must = param FlowWaste
+must = solids >= 4
+must = ports 2
+must = port pipe 2
+must = flex Width 304 475

@@ -1,0 +1,6 @@
+{
+ "cmd.file.import_again": "Mag-import muli",
+ "cmd.file.import_again.desc": "Gumawa ng bagong proyekto mula sa source file sa kasalukuyan nitong kalagayan.",
+ "cmd.file.open_kept": "Buksan ang itinagong import",
+ "cmd.file.open_kept.desc": "Buksan ang natapos na import na itinago nang kanselahin ang prompt ng hindi pa nasasave na pagbabago."
+}

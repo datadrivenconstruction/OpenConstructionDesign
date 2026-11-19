@@ -1,0 +1,10 @@
+{
+ "xlsx_dup.dup_undo": "Entscheidung rückgängig machen",
+ "xlsx_dup.dup_undo_tip": "Zeilen, die zu neuen Elementen wurden ({n}), werden wieder mit ihrer Id gelesen",
+ "xlsx_dup.dup_new": "Bearbeitete Kopien als neue Elemente anlegen",
+ "xlsx_dup.dup_new_tip": "Zeilen {rows} werden mit ihren Werten zu neuen Elementen; Element #{id} behält seine Werte (ein Rückgängig-Schritt mit dem Rest)",
+ "xl.msg.dup_same": "doppelte Id {}: gleiche Werte wie Zeile {}; Zeile ignoriert",
+ "xl.msg.dup_unchanged": "doppelte Id {}: unveränderte Kopie der exportierten Zeile; Zeile ignoriert",
+ "xl.msg.dup_conflict": "Id {} steht in Zeilen {} mit unterschiedlichen Werten; für diese Id nichts übernommen",
+ "xl.msg.dup_conflict_keep": "Id {} steht in Zeilen {} mit unterschiedlichen Werten; für diese Id nichts übernommen — eine Zeile behalten"
+}

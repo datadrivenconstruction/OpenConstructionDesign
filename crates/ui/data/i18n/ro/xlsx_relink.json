@@ -1,0 +1,14 @@
+{
+ "xlsx_relink.title": "Registrul legat a fost mutat sau redenumit",
+ "xlsx_relink.body": "Registrul „{file}” nu mai este în {folder}. Modificările scrise în el revin doar după ce este legat din nou.",
+ "xlsx_relink.found_one": "Găsit „{file}” în {folder}: același proiect și același export. Îl legi?",
+ "xlsx_relink.found_many": "Au fost găsite {n} registre ale acestui proiect și ale acestui export. Alege-l pe cel care se leagă:",
+ "xlsx_relink.found_none": "Nu a fost găsit niciun registru al acestui export lângă el. Găsește-l sau exportă un registru nou.",
+ "xlsx_relink.link": "Leagă „{file}”",
+ "xlsx_relink.find": "Găsește-l…",
+ "xlsx_relink.find_title": "Găsește registrul legat",
+ "xlsx_relink.export_new": "Exportă un registru nou",
+ "xlsx_relink.close": "Închide",
+ "xlsx_relink.gone": "Registrul „{file}” nu mai este în folderul lui. Modificările scrise în el revin doar după ce este legat din nou.",
+ "xlsx_relink.found_one_short": "Găsit „{file}”: același proiect și același export. Îl legi?"
+}

@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "Tvarovka",
+ "elem.mep_fitting.many": "Tvarovky",
+ "elem.mep_fitting.kind.elbow": "Koleno",
+ "elem.mep_fitting.kind.tee": "T-kus",
+ "elem.mep_fitting.kind.cross": "Křižovatka",
+ "elem.mep_fitting.kind.transition": "Přechod",
+ "elem.mep_fitting.kind.cap": "Zátka",
+ "elem.mep_fitting.size": "Velikost",
+ "elem.mep_fitting.at": "Poloha",
+ "elem.mep_fitting.runs": "Trasa {n}",
+ "elem.mep_fitting.edit_run": "Upravit trasu",
+ "elem.mep_fitting.select_runs": "Vybrat její trasy",
+ "elem.mep_fitting.derived": "Tvarovka sleduje své trasy: změníte-li trasu, tvarovka se změní s ní.",
+ "elem.mep_fitting.no_delete": "Tvarovku nelze smazat ani posunout samostatně. Upravte nebo smažte její trasy.",
+ "elem.mep_fitting.hint": "Klikněte na tvarovku v půdorysu a zobrazí se její trasy.",
+ "elem.mep_fitting.picked": "Vybrané tvarovky: {n}"
+}

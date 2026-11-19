@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "Lisa 1 komplekt",
+ "rebar_sets.add_n": "Lisa {n} komplekti",
+ "rebar_sets.pick.search": "Otsi varrastüüpe",
+ "rebar_sets.pick.empty": "Sobivaid varrastüüpe pole",
+ "rebar_sets.unit.deg": "°"
+}

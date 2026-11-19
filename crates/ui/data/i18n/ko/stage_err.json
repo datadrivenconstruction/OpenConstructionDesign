@@ -1,0 +1,10 @@
+{
+ "stage_err.kept": "표 {t} 유지: 추가 후 기록된 행 {n}개",
+ "stage_err.stage.prev_attached": "추가되지 않음: 이전 추가의 사본이 아직 열려 있음. 추가를 다시 실행하세요",
+ "stage_err.stage.model_changed": "추가되지 않음: 파일을 읽는 동안 모델이 변경됨. 추가를 다시 실행하세요",
+ "stage_err.stage.no_record": "추가되지 않음: 가져온 사본에 변경 기록이 없음",
+ "stage_err.stage.table_differs": "추가되지 않음: 표 {t}이(가) 모델과 가져온 사본에서 다름",
+ "stage_err.stage.unique_key": "추가되지 않음: 표 {t}의 고유 키를 따라갈 수 없음",
+ "stage_err.stage.table_gone": "추가되지 않음: 가져오기가 표 {t}을 변경했으며 사본에는 더 이상 없음",
+ "stage_err.stage.copy_held": "추가됨; 가져온 사본은 다음 추가 또는 모델을 다시 열 때까지 열려 있음"
+}

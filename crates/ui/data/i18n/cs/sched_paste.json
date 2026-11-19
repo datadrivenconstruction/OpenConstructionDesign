@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "Vloženo buněk: {n}",
+ "sched_edit.pasted_skipped": "Vloženo buněk: {n}, přeskočeno {k}: {why}",
+ "sched_edit.filled": "Vyplněno buněk: {n}",
+ "sched_edit.filled_skipped": "Vyplněno buněk: {n}, přeskočeno {k}: {why}",
+ "sched_edit.why_ro": "{n} jen pro čtení",
+ "sched_edit.why_bad": "{n} chybných",
+ "sched_edit.no_cell": "Nejprve klikněte na buňku výkazu",
+ "sched_edit.nothing": "Nic k zapsání",
+ "sched_edit.not_refreshed": "Zapsáno, ale zobrazení se neobnovilo: {e}",
+ "sched_edit.failed": "nezměněno: {e}",
+ "sched_edit.no_changes": "Bez změn: {u} buněk již tyto hodnoty obsahuje",
+ "sched_edit.same_tail": ", {u} již shodných"
+}

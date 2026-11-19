@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "Παραλειμμένες γραμμές και κελιά",
+ "xlsx_issues.conflicts_title": "Αλλαγή και στα δύο σημεία",
+ "xlsx_issues.missing_title": "Λείπει φύλλο από το βιβλίο",
+ "xlsx_issues.look_alike_title": "Το όνομα φύλλου δεν ταιριάζει",
+ "xlsx_issues.mass_title": "Η μαζική διαγραφή χρειάζεται επιβεβαίωση",
+ "xlsx_issues.sheets_missing": "Τα φύλλα {sheets} λείπουν από το βιβλίο (μετονομάστηκαν ή διαγράφηκαν)· οι γραμμές τους δεν συγκρίθηκαν.",
+ "xlsx_issues.keep_model": "Διατήρηση μοντέλου",
+ "xlsx_issues.take_book": "Λήψη από βιβλίο",
+ "xlsx_issues.open_book_tip": "Ανοίγει το αρχείο στην εφαρμογή του. Το μοντέλο δεν αλλάζει· η προεπισκόπηση ανανεώνεται αφού αποθηκεύσετε το βιβλίο."
+}

@@ -1,0 +1,7 @@
+{
+ "messages.title": "Berichten",
+ "messages.desc": "Geschiedenis van meldingen. Geen nieuwe waarschuwingen of fouten.",
+ "messages.desc_new": "{n} nieuwe waarschuwingen of fouten. Klik om ze te lezen.",
+ "messages.copy": "Alles kopiëren",
+ "messages.clear": "Alles wissen"
+}

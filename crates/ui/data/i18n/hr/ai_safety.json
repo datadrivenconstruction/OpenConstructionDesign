@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "Ključ u adresi",
+ "ai_safety.auth.query_name": "Parametar adrese",
+ "ai_safety.need_query_name": "Navedi parametar adrese koji nosi ključ",
+ "ai_safety.apply_unlogged": "Primijenjeno, ali dnevnik promjena nije zapisan",
+ "ai_safety.audit_unlogged": "Dnevnik AI asistenta nije mogao biti zapisan",
+ "ai_safety.chat_not_saved": "Razgovor nije mogao biti spremljen u projekt. Pokušavam ponovno.",
+ "ai_safety.clip_clears": "Međuspremnik se briše za 30 s",
+ "ai_safety.copied_clears": "Kopirano. Međuspremnik se briše za 30 s",
+ "ai_safety.key_session_only": "Ključ se čuva dok se aplikacija ne zatvori",
+ "ai.settings.no_data_dir": "ovaj sustav ne daje mapu za postavke aplikacije"
+}

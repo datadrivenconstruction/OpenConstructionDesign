@@ -1,0 +1,23 @@
+[
+ {
+  "id": "data.issues",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1",
+  "group": "check"
+ },
+ {
+  "id": "data.issue_new",
+  "dialog": true,
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1",
+  "group": "check"
+ }
+]

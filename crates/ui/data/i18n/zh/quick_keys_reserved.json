@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key} 为保留键（{why}），无法重新分配",
+ "quick.keys.res_copy": "复制",
+ "quick.keys.res_paste": "粘贴",
+ "quick.keys.res_cut": "剪切",
+ "quick.keys.res_undo": "撤销 / 重做",
+ "quick.keys.res_save": "保存",
+ "quick.keys.res_palette": "命令面板",
+ "quick.keys.reserved_conflict": "{key} 已被“{cmd}”使用。按 Esc 保留原有分配。",
+ "quick.keys.reserved_swap": "交换",
+ "quick.keys.reserved_take": "改用此键",
+ "quick.keys.reserved_keep": "保留",
+ "quick.keys.reserved_os": "已被系统占用："
+}

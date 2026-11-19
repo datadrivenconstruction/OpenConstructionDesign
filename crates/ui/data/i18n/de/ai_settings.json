@@ -1,0 +1,9 @@
+{
+ "ai.settings.num_bad": "Keine Zahl. Eingeben wie 0.5.",
+ "ai.settings.num_comma": "Als Dezimaltrennzeichen einen Punkt verwenden, etwa 0.5.",
+ "ai.settings.num_negative": "Die Zahl darf nicht negativ sein.",
+ "ai.settings.unit_money": "Währung",
+ "ai.settings.unit_tokens": "Tokens",
+ "ai.settings.unit_price": "pro 1 Mio. Tokens",
+ "ai.settings.limits_hint": "0 bedeutet keine Grenze. Ein abgelehnter Wert lässt die vorherige Grenze bestehen."
+}

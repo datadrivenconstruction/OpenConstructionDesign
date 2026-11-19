@@ -1,0 +1,12 @@
+{
+ "curtain_wall.cw.issue.slab": "pelat {id}: {e}",
+ "curtain_wall.cw.issue.body": "badan {id}: {e}",
+ "curtain_wall.cw.added": "Dinding tirai ditambahkan: {n}",
+ "curtain_wall.cw.add_failed": "Dinding tirai tidak dibangun: {e}",
+ "curtain_wall.cw.edited_warn": "Dinding tirai #{id} diubah: {w}",
+ "curtain_wall.cw.edited": "Dinding tirai #{id} diubah",
+ "curtain_wall.cw.not_changed": "Tidak diubah: {e}",
+ "curtain_wall.cw.room_edited": "Ruang #{id} diubah",
+ "curtain_wall.cw.slope_range": "Tidak diubah: kemiringan di luar rentang",
+ "curtain_wall.cw.slope_set": "Pelat #{id}: kemiringan {pct}"
+}

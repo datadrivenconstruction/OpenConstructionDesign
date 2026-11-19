@@ -1,0 +1,5 @@
+{
+ "start_recent.unavailable": "Ei käytettävissä juuri nyt (asema tai verkkosijainti ei vastaa): {path}",
+ "start_recent.unavailable_short": "Ei käytettävissä juuri nyt",
+ "start_recent.retry": "Yritä uudelleen"
+}

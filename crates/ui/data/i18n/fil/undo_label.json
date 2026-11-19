@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "Bawiin: {what}",
+ "undo_label.redo_what": "Ulitin: {what}",
+ "undo_label.undo_none": "Walang i-u-undo",
+ "undo_label.redo_none": "Walang ire-redo"
+}

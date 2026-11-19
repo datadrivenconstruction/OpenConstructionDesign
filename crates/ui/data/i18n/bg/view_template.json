@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "Първо въведете име на шаблон",
+ "view_template.name_taken": "Вече съществува шаблон с това име",
+ "view_template.pick_blocked": "Първо отметнете поне един изглед",
+ "view_template.views.one": "{n} изглед",
+ "view_template.views.few": "{n} изгледа",
+ "view_template.views.many": "{n} изгледа",
+ "view_template.delete.title": "Да се изтрие ли този шаблон?",
+ "view_template.delete.body": "Шаблонът „{name}“ ще бъде изтрит. Използва се от {used}.",
+ "view_template.delete.unused": "Шаблонът „{name}“ ще бъде изтрит. Никой изглед не го използва.",
+ "view_template.delete.keeps": "Тези изгледи запазват текущата си графика и губят връзката.",
+ "view_template.delete.undo": "Можете да отмените това с една отмяна.",
+ "view_template.delete.confirm": "Изтриване на шаблона"
+}

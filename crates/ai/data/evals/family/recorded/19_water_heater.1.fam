@@ -1,0 +1,23 @@
+family Water Heater
+category plumbing
+host wall
+ifc IfcElectricAppliance FREESTANDINGWATERHEATER
+param Power number type 2000
+param Volume number type 80
+param FlowCold number type 0.1
+param FlowHot number type 0.1
+param Diameter length type 450mm
+param Height length type 800mm
+param Elevation length type 1200mm
+param Casing material type "Enamel White"
+ref Wall y = 0
+ref Centre x = 0
+type "80 l" Diameter=450mm, Height=800mm, Volume=80
+type "150 l" Diameter=560mm, Height=1150mm, Elevation=900mm, Volume=150, FlowCold=0.2, FlowHot=0.2
+type "20x40in" Diameter=20in, Height=40in, Elevation=40in, Volume=113
+extrude Tank circle(Centre, Wall + Diameter / 2, Diameter / 2) z(Elevation, Elevation + Height) mat(Casing) show(3d, elev)
+symbol circle(Centre, Wall + Diameter / 2, Diameter / 2)
+symbol rect(Centre - Diameter / 2, Wall, Centre + Diameter / 2, Wall + Diameter) show(fine)
+connector Cold pipe cold_water at(Centre - 60mm, Wall + Diameter / 2, Elevation) dir(0, 0, -1) size(15mm)
+connector Hot pipe hot_water at(Centre + 60mm, Wall + Diameter / 2, Elevation) dir(0, 0, -1) size(15mm)
+connector Power conduit power at(Centre, Wall, Elevation + Height / 2) dir(0, -1, 0) size(20mm)

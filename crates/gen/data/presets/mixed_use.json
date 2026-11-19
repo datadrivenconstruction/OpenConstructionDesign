@@ -1,0 +1,76 @@
+{
+ "schema": "gen_preset.v1",
+ "name": "mixed_use",
+ "aliases": [
+  "mixed",
+  "tower"
+ ],
+ "base": "office",
+ "note": "mixed_use: built as an office-type plan with shops on the ground floor; flats above an office plan are not laid out as apartments",
+ "brief": {
+  "name": {
+   "en": "Mixed-use building",
+   "ru": "Многофункциональное здание"
+  },
+  "floors": 5
+ },
+ "rules": {},
+ "program": {
+  "schema": "gen_program.v1",
+  "spaces": [
+   {
+    "kind": "retail",
+    "area": 60,
+    "count": 3,
+    "name": {
+     "en": "Shop",
+     "ru": "Магазин"
+    },
+    "floor": "ground"
+   },
+   {
+    "kind": "lobby",
+    "area": 40,
+    "floor": "ground"
+   },
+   {
+    "kind": "wc",
+    "area": 4,
+    "count": 2,
+    "floor": "ground"
+   },
+   {
+    "kind": "office",
+    "area": 25,
+    "count": 4,
+    "floor": "typical"
+   },
+   {
+    "kind": "wc",
+    "area": 4,
+    "floor": "typical"
+   },
+   {
+    "kind": "retail",
+    "area": 60,
+    "count": 3,
+    "name": {
+     "en": "Shop",
+     "ru": "Магазин"
+    },
+    "floor": "single"
+   },
+   {
+    "kind": "office",
+    "area": 25,
+    "count": 2,
+    "floor": "single"
+   },
+   {
+    "kind": "wc",
+    "area": 4,
+    "floor": "single"
+   }
+  ]
+ }
+}

@@ -1,0 +1,8 @@
+{
+ "api.cmd.norms_lookup": "Pronađi pravila normativnog paketa projekta prema temi, elementu ili šifri",
+ "api.cmd.norms_check": "Provjeri model prema normativnom paketu projekta i popiši nalaze",
+ "api.cmd.norms_programme": "Tipični raspored prostorija za vrstu zgrade u državi projekta",
+ "api.cmd.select_similar": "Odaberi svaki element sličan ovome: isti tip ili kategorija, na ovoj razini ili u cijelom projektu",
+ "api.cmd.create_drawing_set": "Izradi nacrt skupa za ispis: tlocrte, presjeke, pročelja, tablice i naslovne blokove",
+ "api.cmd.deliver_project": "Od zadatka do datoteka u jednom koraku: projekt i njegov skup nacrta, izvezen nakon Primijeni"
+}

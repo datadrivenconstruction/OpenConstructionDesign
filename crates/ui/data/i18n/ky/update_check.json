@@ -1,0 +1,21 @@
+{
+ "cmd.help.check_update": "Жаңыртууларды текшерүү",
+ "update_check.title": "Жаңыртууну текшерүү",
+ "update_check.desc": "Демейки боюнча өчүк. Серверге гана версияны, ОСти жана архитектураны, орнотуу түрүн жөнөтөт. Эч нерсени жүктөбөйт жана орнотпойт.",
+ "update_check.freq.startup": "Иштеп баштаганда",
+ "update_check.freq.daily": "Күнүгө",
+ "update_check.freq.weekly": "Жумалык",
+ "update_check.freq.never": "Эч качан",
+ "update_check.check_now": "Азыр текшерүү",
+ "update_check.dialog.title": "Жаңыртууну текшерүү",
+ "update_check.unknown.title": "Жаңыртууларды текшерүү мүмкүн болгон жок",
+ "update_check.unknown.body": "{e}. Бул учурдагы версия актуалдуу дегенди билдирбейт. Кийинчерээк кайра аракет кылыңыз.",
+ "update_check.current": "Сизде акыркы версия бар ({v}).",
+ "update_check.newer": "{v} версиясы жеткиликтүү",
+ "update_check.date": "Чыгарылган {d}",
+ "update_check.unfit": "Бул версия ({v}) сунуш кылынган минималдуу версиядан ({f}) эски. Жаңыртууну сунуш кылабыз.",
+ "update_check.close": "Жабуу",
+ "update_check.open_failed": "Чыгарылыш баракчасын ачууга болгон жок.",
+ "update_check.toast.newer": "{v} версиясы жеткиликтүү. Жардам > Жаңыртууларды текшерүү.",
+ "update_check.toast.unfit": "Бул версия ({v}) сунуш кылынган минималдуу версиядан ({f}) эски."
+}

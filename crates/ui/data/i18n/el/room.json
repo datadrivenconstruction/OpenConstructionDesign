@@ -1,0 +1,6 @@
+{
+ "geom.length": "Μήκος",
+ "sched.cat.room_seps": "Διαχωριστικά χώρων",
+ "room.err.point_leave": "Χώρος {n}: το σημείο θα έβγαινε από το όριό του",
+ "room.err.point_taken": "Χώρος {n}: το σημείο θα έπεφτε στον χώρο {other}"
+}

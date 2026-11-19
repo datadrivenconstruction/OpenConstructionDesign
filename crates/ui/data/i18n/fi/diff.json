@@ -1,0 +1,7 @@
+{
+ "diff.kind.added": "lisätty",
+ "diff.kind.changed": "muutettu",
+ "diff.kind.deleted": "poistettu",
+ "diff.kind.refused": "hylätty",
+ "diff.kind.conflict": "ristiriita"
+}

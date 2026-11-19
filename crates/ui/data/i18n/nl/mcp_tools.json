@@ -1,0 +1,5 @@
+{
+ "mcp.set.hide": "Verbergen",
+ "mcp.set.copy_config": "Configuratie van AI-agent kopiëren",
+ "mcp.set.no_token": "Nog geen toegangstoken. Schakel eerst de server in."
+}

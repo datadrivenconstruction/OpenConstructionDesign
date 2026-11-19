@@ -1,0 +1,7 @@
+{
+ "xlsx_alias_ids.ids_written": "{n} ta yangi qator qayta nomlangan varaqda id oldi; ish kitobining boshqa qismi o'zgarmadi.",
+ "xlsx_alias_ids.ids_open": "Ish kitobi boshqa dasturda ochiq: {n} ta yangi qatorning idlari yozilmadi. U yerda yoping va Sinxronlang; bu qatorlar qayta yaratilmaydi.",
+ "xlsx_alias_ids.ids_failed": "{n} ta yangi qatorning idlarini yozib bo'lmadi; ish kitobi o'z holicha qoldirildi. Bu qatorlar keyingi Sinxronlashda qayta yaratilmaydi.",
+ "xlsx_alias_ids.unpaired": "{n} ta yangi qatorda hali id yo'q; ular eslab qolinadi va qayta yaratilmaydi.",
+ "xlsx_alias_ids.refused": "Hech narsa qo'llanmadi: qayta nomlangan varaq o'qilayotganda {sheets} dagi yangi qatorlar id ololmaydi. Varaqni standart nomiga qaytaring (yoki bu qatorlarni olib tashlang) va qayta sinxronlang."
+}

@@ -1,0 +1,4 @@
+{
+ "topo_import.topo.ambiguous": "{n} filas omitidas: un número se lee de dos formas (1,250 = 1.25 o 1250?) y el archivo no muestra separador decimal",
+ "topo_import.topo.grouped": "{n} puntos leídos con grupos de dígitos (1 250,5 o 1,234.5)"
+}

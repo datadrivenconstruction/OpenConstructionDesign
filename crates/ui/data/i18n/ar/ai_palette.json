@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "اسأل الذكاء: {q}",
+ "ai.palette.connect": "وصّل الذكاء للسؤال",
+ "ai.palette.draft.apply": "تطبيق المسودة ({n})",
+ "ai.palette.draft.reject": "رفض المسودة",
+ "ai.palette.draft.next": "التغيير التالي في المسودة",
+ "ai.palette.draft.show": "عرض المسودة في العرض",
+ "cmd.ai.next_change": "التغيير التالي في المسودة",
+ "cmd.ai.next_change.desc": "ينقل العرض إلى العنصر التالي الذي تغيّره المسودة.",
+ "cmd.ai.show_draft": "عرض مسودة الذكاء في العرض",
+ "cmd.ai.show_draft.desc": "يضبط العرض ليشمل كل ما تغيّره المسودة."
+}

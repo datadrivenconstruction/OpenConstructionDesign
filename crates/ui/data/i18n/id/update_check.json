@@ -1,0 +1,21 @@
+{
+ "cmd.help.check_update": "Periksa pembaruan",
+ "update_check.title": "Pemeriksaan pembaruan",
+ "update_check.desc": "Nonaktif secara default. Hanya mengirim versi, OS dan arsitektur, serta jenis instalasi ke server kami. Tidak pernah mengunduh atau memasang apa pun.",
+ "update_check.freq.startup": "Saat mulai",
+ "update_check.freq.daily": "Harian",
+ "update_check.freq.weekly": "Mingguan",
+ "update_check.freq.never": "Tidak pernah",
+ "update_check.check_now": "Periksa sekarang",
+ "update_check.dialog.title": "Pemeriksaan pembaruan",
+ "update_check.unknown.title": "Pemeriksaan pembaruan tidak dapat dilakukan",
+ "update_check.unknown.body": "{e}. Ini tidak berarti versi ini terbaru. Coba lagi nanti.",
+ "update_check.current": "Anda memakai versi terbaru ({v}).",
+ "update_check.newer": "Versi {v} tersedia",
+ "update_check.date": "Dirilis {d}",
+ "update_check.unfit": "Versi ini ({v}) lebih lama dari versi minimum yang disarankan {f}. Pembaruan sangat disarankan.",
+ "update_check.close": "Tutup",
+ "update_check.open_failed": "Halaman rilis tidak dapat dibuka.",
+ "update_check.toast.newer": "Versi {v} tersedia. Bantuan > Periksa pembaruan.",
+ "update_check.toast.unfit": "Versi ini ({v}) lebih lama dari versi minimum yang disarankan {f}."
+}

@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "Vrij oppervlak",
+ "cmd.mass.panelize": "Opdelen in panelen",
+ "cmd.mass.surface_shell": "Dak op oppervlak",
+ "cmd.mass.thicken": "Verdikken",
+ "hint.mass.freeform.first": "Vrij oppervlak: eerste hoek van de rechthoek in het plan · typ de stijging · Esc — annuleren",
+ "hint.mass.freeform.next": "Vrij oppervlak: tegenoverliggende hoek · typ de stijging · Esc — annuleren",
+ "hint.mass.panelize.first": "Panelen: kies een vrij oppervlak in 3D · Esc — annuleren",
+ "hint.mass.panelize.value": "Panelen: typ de paneelmaat · Enter — toepassen · Esc — annuleren",
+ "hint.mass.surface_shell.first": "Dak op oppervlak: kies een vrij oppervlak in 3D · Esc — annuleren",
+ "hint.mass.surface_shell.value": "Dak op oppervlak: typ de dikte · Enter — toepassen · Esc — annuleren",
+ "hint.mass.thicken.first": "Verdikken: kies een vrij oppervlak in 3D · Esc — annuleren",
+ "hint.mass.thicken.value": "Verdikken: typ de dikte (0 — zonder dikte) · Enter — toepassen · Esc — annuleren",
+ "status.mass.pick_surface": "Kies een vrij oppervlak",
+ "status.mass.freeform_small": "De rechthoek is te klein: minimaal 0,5 m in elke richting",
+ "name.mass.freeform": "Vrij oppervlak",
+ "rgroup.mass_free": "Geavanceerd"
+}

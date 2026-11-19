@@ -1,0 +1,11 @@
+{
+ "fe.csv.apply": "Aplicar importación",
+ "fe.csv.cancel": "Descartar vista previa",
+ "fe.csv.nothing": "Nada que cambiar: el catálogo coincide con los tipos actuales",
+ "fe.csv.preview": "Vista previa de importación: {added} nuevos, {changed} modificados, {same} sin cambios; cambian {values} valores",
+ "fe.csv.preview_hint": "Las celdas vacías y las columnas que faltan conservan los valores actuales. No cambia nada hasta aplicar.",
+ "fe.csv.skipped": "No aplicado, valor conservado: {msg}",
+ "fe.csv.type_added": "Tipo nuevo {name}",
+ "fe.csv.type_changed": "Tipo {name}",
+ "fe.csv.value": "  {param}: {old} → {new}"
+}

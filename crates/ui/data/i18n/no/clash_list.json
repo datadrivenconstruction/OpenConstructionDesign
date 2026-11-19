@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "Alle",
+ "clash_list.only_selected": "Bare valgte",
+ "clash_list.tolerance": "Toleranse",
+ "clash_list.gap": "Mellomrom",
+ "clash_list.export": "Eksporter",
+ "clash_list.col.volume": "Volum",
+ "clash_list.fix.up": "Flytt opp",
+ "clash_list.fix.down": "Flytt ned",
+ "clash_list.fix.sleeve": "Hylse",
+ "clash_list.apply_fix": "Bruk rettelse",
+ "clash_list.err.tol": "Toleranse: skriv inn en lengde (0 eller mer), f.eks. 50 eller 2 in",
+ "clash_list.sleeve_no_host": "Hylse krever en vegg eller et dekke i paret",
+ "clash_list.err.gap": "Mellomrom: skriv inn en lengde (0 eller mer), f.eks. 50 eller 2 in"
+}

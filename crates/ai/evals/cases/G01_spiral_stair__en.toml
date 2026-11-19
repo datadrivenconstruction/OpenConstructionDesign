@@ -1,0 +1,27 @@
+id = "G01_spiral_stair__en"
+tier = "hard"
+group = "Any geometry"
+title = "Spiral staircase"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "Build a spiral staircase between two floors of 3.2 m height each: outer radius 1.5 m, 2 turns, treads, handrails on the outer and inner edge, a central post."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "stair"
+min = 1.0
+
+[[oracle.count]]
+spec = "wall+beam+brace+col+solid+mesh"
+min = 20.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

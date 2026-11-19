@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "Anteprima",
+ "agent_draft.ag.preview.desc": "Traccia gli elementi di questa bozza sulla tela finché il puntatore è sul pulsante. Nulla viene modificato.",
+ "agent_draft.type.column": "Pilastro",
+ "agent_draft.type.roof": "Tetto",
+ "agent_draft.type.ceiling": "Soffitto",
+ "agent_draft.type.stair": "Scala monolitica",
+ "agent_draft.type.railing": "Ringhiera",
+ "agent_draft.type.shaft": "Vano",
+ "agent_draft.type.axis": "Asse 6,5 mm",
+ "agent_draft.type.refplane": "Piano di riferimento"
+}

@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "il valore deve essere maggiore di zero",
+ "sched_ops.not_number": "non è un numero",
+ "sched_ops.no_host": "nessun muro ospitante",
+ "sched_ops.wall_length": "questa lunghezza di muro non può essere impostata così",
+ "sched_ops.no_wall": "nessun muro di questo tipo",
+ "sched_ops.no_opening": "nessuna apertura di questo tipo",
+ "sched_ops.no_curtain": "nessuna facciata continua di questo tipo",
+ "sched_ops.no_panel": "nessun pannello di questo tipo",
+ "sched_ops.no_slab": "nessun solaio di questo tipo",
+ "sched_ops.no_room": "nessuna stanza di questo tipo",
+ "sched_ops.slope_range": "pendenza fuori intervallo",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

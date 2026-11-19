@@ -1,0 +1,29 @@
+{
+ "recover.ago_now": "az önce",
+ "recover.ago_min": {
+  "one": "# dk önce",
+  "other": "# dk önce"
+ },
+ "recover.ago_hour": {
+  "one": "# saat önce",
+  "other": "# saat önce"
+ },
+ "recover.ago_yesterday": "dün",
+ "recover.ago_day": {
+  "one": "# gün önce",
+  "other": "# gün önce"
+ },
+ "recover.empty": "Kalan anlık kopya yok",
+ "recover.empty_hint": "Bu proje için geri yüklenecek bir şey yok.",
+ "recover.all_damaged": "Tüm anlık kopyalar bozuk, hiçbiri geri yüklenemez.",
+ "recover.keys_hint": "Yukarı ve Aşağı anlık kopya seçer, Enter Geri yükle'ye geçer",
+ "recover.row_tip": "Kaydedildi: {time}",
+ "recover.row_damaged_tip": "Geri yüklenemez: {reason}",
+ "recover.archive_ask": "Bu anlık kopya arşive taşınsın mı?",
+ "recover.discard_ask": {
+  "one": "Anlık kopya arşive taşınsın mı? Bir daha önerilmeyecek.",
+  "other": "Tüm # anlık kopya arşive taşınsın mı? Bir daha önerilmeyecek."
+ },
+ "recover.confirm_yes": "Arşive taşı",
+ "recover.confirm_no": "Anlık kopyaları tut"
+}

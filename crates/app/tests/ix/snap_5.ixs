@@ -1,0 +1,4 @@
+walls=[(0,0)-(6,0)]
+zoom=100
+# SNAP-5: a rest of 300 ms captures the end; its X guide holds the cursor
+tool(WA) hover(6,0,300) move(6.0,3.0) → snap=Tracking p=(6,3)

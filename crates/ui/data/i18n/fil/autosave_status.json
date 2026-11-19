@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "Nabigo ang autosave, hindi protektado ang pinakabagong pagbabago. {why}",
+ "autosave_status.autosave_open": "Mga setting ng autosave",
+ "autosave_status.autosave_recovered": "Gumagana na ulit ang autosave.",
+ "autosave_status.autosave_reason": "Dahilan: {why}"
+}

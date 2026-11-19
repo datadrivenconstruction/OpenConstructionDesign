@@ -1,0 +1,19 @@
+{
+ "names.level": "Taso {n}",
+ "names.slab": "Laatta 200",
+ "names.roof_slab": "Katto 200",
+ "names.sheet.plan_section": "Kerros 1 pohjapiirros ja leikkaus",
+ "names.sheet.plan_view": "Kerros 1 pohjapiirros",
+ "names.sheet.site_plan": "Tonttikartta",
+ "names.sheet_set.issue": "Julkaisu 1",
+ "names.title.owner": "Projekti Oy",
+ "names.title.creator": "A. Ivanov",
+ "names.title.approver": "P. Petrov",
+ "names.title.document_type": "Piirustus",
+ "names.title.status": "Työn alla",
+ "names.revision.date": "4.11.2026",
+ "names.revision.description": "Julkaistu tarkistettavaksi",
+ "names.revision.author": "Tekoäly",
+ "names.demo.no_levels": "ei tasoja",
+ "names.demo.no_sheet": "arkki"
+}

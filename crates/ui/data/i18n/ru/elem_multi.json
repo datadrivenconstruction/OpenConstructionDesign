@@ -1,0 +1,10 @@
+{
+ "elem.multi.title": "Элементов: {n}",
+ "elem.multi.varies": "разные",
+ "elem.multi.tip": "Enter задаёт значение всем выбранным",
+ "elem.multi.hidden": "Строк только у части элементов: {n}",
+ "elem.multi.none": "У выбранных элементов нет общих строк",
+ "elem.multi.range": "Значение вне допустимого диапазона",
+ "elem.multi.changed": "Изменено элементов: {n} · Ctrl+Z отменяет",
+ "elem.multi.same": "У всех выбранных уже такое значение"
+}

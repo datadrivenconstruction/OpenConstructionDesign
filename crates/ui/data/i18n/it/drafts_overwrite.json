@@ -1,0 +1,5 @@
+{
+ "drafts_overwrite.ow.project": "Il salvataggio del progetto attende questa risposta. Sostituisci i valori per continuare a salvare; Torna alla modifica mantiene ogni modifica e non scrive nulla.",
+ "drafts_overwrite.drafts.ow_wait": "Il salvataggio attende la tua risposta nell'editor di famiglie: caricare una famiglia sostituirebbe i valori dei tipi di progetto. Non si è chiuso nulla.",
+ "drafts_overwrite.drafts.ow_back": "Salvataggio interrotto: i valori dei tipi di progetto sono stati mantenuti e le modifiche alla famiglia sono ancora aperte. Non si è chiuso nulla."
+}

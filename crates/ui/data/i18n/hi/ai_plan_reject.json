@@ -1,0 +1,9 @@
+{
+ "ai.plan.reject_ask": {
+  "one": "# बदलाव अस्वीकार करें?",
+  "other": "# बदलाव अस्वीकार करें?"
+ },
+ "ai.plan.reject_ask.hint": "ड्राफ़्ट और आपके चिह्न हट जाएँगे। मॉडल जैसा है वैसा रहेगा।",
+ "ai.plan.reject_confirm": "अस्वीकार करें",
+ "ai.plan.reject_keep": "रखें"
+}

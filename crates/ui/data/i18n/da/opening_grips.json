@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "Vend hængselside",
+ "cmd.edit.flip_hand.desc": "Spejler de valgte døre og vinduer langs væggen, så hængslerne flytter til den anden ende af åbningen.",
+ "cmd.edit.flip_facing": "Vend åbningens side",
+ "cmd.edit.flip_facing.desc": "Svinger de valgte døre og vinduer til den anden side af væggen.",
+ "opening_grips.flip_hand": "Vend hængsel",
+ "opening_grips.flip_hand.tip": "Hængsler til den anden ende af åbningen (Shift+F)",
+ "opening_grips.flip_facing": "Vend side",
+ "opening_grips.flip_facing.tip": "Åbning til den anden side af væggen (Shift+G)",
+ "opening_grips.flip.done": "Vendt: {n}",
+ "opening_grips.flip.none": "Vælg en dør eller et vindue, der skal vendes",
+ "opening_grips.flip.fail": "Ikke vendt: {why}"
+}

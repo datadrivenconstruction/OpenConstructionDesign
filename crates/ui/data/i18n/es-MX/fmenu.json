@@ -1,0 +1,7 @@
+{
+ "fmenu.export": "Guardar como / Exportar",
+ "fmenu.export.ifc4x3": "IFC 4.3",
+ "fmenu.export.ifc2x3": "IFC 2x3",
+ "fmenu.export.glb": "glTF binario (.glb)",
+ "fmenu.export.pdf": "PDF o SVG (planos)"
+}

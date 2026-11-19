@@ -1,0 +1,42 @@
+{
+ "ai.tool.show_elements": "Viser elementer",
+ "ai.tool.isolate_elements": "Isolerer elementer",
+ "ai.tool.color_by": "Fargelegger etter verdi",
+ "ai.tool.reset_view": "Tilbakestiller visningen",
+ "ai_found.found.query": "Funnet",
+ "ai_found.found.show": "Vist",
+ "ai_found.found.isolate": "Isolert",
+ "ai_found.found.hide": "Skjult",
+ "ai_found.found.color": "Farget",
+ "ai_found.found.count": "{n} av {m}",
+ "ai_found.found.none": "Ingen treff. Prøv et bredere filter.",
+ "ai_found.found.show_btn": "Vis",
+ "ai_found.found.show_tip": "Velg disse elementene og zoom til dem i plan og 3D",
+ "ai_found.found.isolate_btn": "Isoler",
+ "ai_found.found.isolate_tip": "Vis bare disse elementene til Tilbakestill visning",
+ "ai_found.found.select_btn": "Velg",
+ "ai_found.found.select_tip": "Velg disse elementene uten å flytte visningen",
+ "ai_found.legend.title": "Farge etter {by}",
+ "ai_found.legend.row_tip": "Klikk for å velge disse elementene",
+ "ai_found.legend.empty_value": "Ingen verdi",
+ "ai_found.legend.other": {
+  "one": "# verdi til",
+  "other": "# verdier til"
+ },
+ "ai_found.view.title": "AI-assistentens visning",
+ "ai_found.view.reset": "Tilbakestill visning",
+ "ai_found.view.reset_tip": "Hent tilbake visningen fra før AI-assistenten endret den",
+ "ai_found.view.shown": {
+  "one": "# element vist",
+  "other": "# elementer vist"
+ },
+ "ai_found.view.isolated": {
+  "one": "# element isolert",
+  "other": "# elementer isolert"
+ },
+ "ai_found.view.hidden": {
+  "one": "# element skjult",
+  "other": "# elementer skjult"
+ },
+ "ai_found.found.line": "{what}: {count}"
+}

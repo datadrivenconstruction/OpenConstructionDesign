@@ -1,0 +1,11 @@
+{
+ "cmd.arch.roof_gable.short": "Viil",
+ "cmd.arch.roof_hip.short": "Puusi",
+ "cmd.arch.roof_shed.short": "Pulpett",
+ "cmd.arch.roof_mansard.short": "Mansard",
+ "cmd.arch.roof_gambrel.short": "Kahekaldeline",
+ "cmd.arch.roof_barrel.short": "Tünnvõlv",
+ "cmd.arch.roof_edges.short": "Katuseservad",
+ "cmd.arch.roof_opening.short": "Ava",
+ "cmd.mass.roof_by_face.short": "Pinnast"
+}

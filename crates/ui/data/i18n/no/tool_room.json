@@ -1,0 +1,9 @@
+{
+ "tool.room": "Rom",
+ "tool.room.name": "Rom",
+ "room_tool.room.name": "Navn",
+ "hint.room.place": "Klikk innenfor en lukket veggsløyfe for å lage et rom · Esc — avslutt",
+ "tool.err.room_open": "Området er ikke lukket: lukk veggsløyfen eller legg til et romskille",
+ "tool.err.room_check": "Kan ikke kontrollere rommene i denne etasjen",
+ "tool.err.room_exists": "Det finnes allerede et rom i denne sløyfen"
+}

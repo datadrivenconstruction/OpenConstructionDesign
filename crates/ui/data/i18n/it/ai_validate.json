@@ -1,0 +1,14 @@
+{
+ "ai.issue.integrity": "Problema di integrità: {0} {1}: {2}",
+ "ai.issue.opening_outside": "L'apertura non entra nel muro: {0}",
+ "ai.issue.opening_overlap": "L'apertura si sovrappone all'apertura {0}",
+ "ai.issue.wall_warning": "Muro: {0}",
+ "ai.issue.cut_warning": "Taglio: {0}",
+ "ai.issue.room_open": "Il locale non è chiuso",
+ "ai.issue.material_unknown": "Nessun materiale chiamato \"{0}\" nel progetto: Applica ne aggiungerebbe uno nuovo con proprietà predefinite",
+ "ai.issue.material_suggest": "Nessun materiale chiamato \"{0}\" nel progetto: Applica ne aggiungerebbe uno nuovo. Intendevi \"{1}\"?",
+ "ai.issue.conflict": "Questa voce non può essere eseguita: {0}",
+ "ai.issue.too_large": "{0} elementi cambierebbero, oltre il limite di {1}. Serve l'autorizzazione",
+ "ai.issue.truncated": "L'elenco delle modifiche si è fermato a {0} righe: il piano è più grande di quanto la scheda possa mostrare. Serve l'autorizzazione",
+ "ai.issue.replan_failed": "Il piano non è stato ricalcolato. Viene preso una nuova copia del modello"
+}

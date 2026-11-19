@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "Skakter",
+ "quick.cat.shaft": "Skakt",
+ "shaft_tool.browser.shaft": "Skakt #{id}",
+ "shaft_tool.shaft.top": "Øverste etage",
+ "shaft_tool.shaft.cuts": "Udskårne elementer",
+ "shaft_tool.shaft.cut_area": "Udskåret areal",
+ "shaft_tool.shaft.cut_volume": "Udskåret volumen",
+ "elem.no.rooms": "Følger de rum, den rummer"
+}

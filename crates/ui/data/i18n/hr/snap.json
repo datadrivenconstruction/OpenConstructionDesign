@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "Krajnja točka",
+ "snap.midpoint": "Polovište",
+ "snap.perpendicular": "Okomito",
+ "snap.wall_axis": "Os zida",
+ "snap.wall_face": "Ploha zida",
+ "snap.grid": "Mreža",
+ "snap.intersection": "Presjecište",
+ "snap.grid_axis": "Linija mreže",
+ "snap.ref_plane": "Referentna ravnina",
+ "snap.nearest": "Najbliže",
+ "snap.align_x": "Poravnato u X s udaljenom točkom",
+ "snap.align_y": "Poravnato u Y s udaljenom točkom",
+ "snap.align_xy": "Poravnato u X i Y"
+}

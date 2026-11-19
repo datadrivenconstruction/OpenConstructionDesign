@@ -1,0 +1,8 @@
+{
+ "drafts.drafts.head": "A megnyitott szerkesztők még nem a projektben lévő szerkesztéseket tartalmaznak:",
+ "drafts.draft.family": "Család: „{name}”",
+ "drafts.draft.line": "Vonaltár: {name}",
+ "drafts.draft.styles": "Nézettartomány vonalstílusai",
+ "drafts.btn.save_all": "Mind mentése",
+ "drafts.drafts.refused": "A vázlat nem menthető. Semmi sem lett bezárva; a vázlatot tartalmazó szerkesztő nyitva van."
+}

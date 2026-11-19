@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "{name} ڈسک پر تبدیل ہوئی۔",
+ "src.watch.update": "ماڈل اپ ڈیٹ کریں",
+ "src.watch.compare": "موازنہ کریں",
+ "src.watch.ignore": "یہ ورژن نظرانداز کریں",
+ "src.watch.missing": "{name}: ماخذ فائل نہیں ملی۔ کام جاری ہے۔",
+ "src.watch.locate": "تلاش کریں…",
+ "src.watch.dismiss": "بند کریں",
+ "src.watch.more": "اور {n} مزید ماخذ فائلیں",
+ "src.watch.done": "{name} سے اپ ڈیٹ: {updated} تبدیل، {kept} فیلڈز ترمیم کے طور پر رکھی گئیں، {conflicts} تنازعات، {locked} لاک شدہ قدریں محفوظ"
+}

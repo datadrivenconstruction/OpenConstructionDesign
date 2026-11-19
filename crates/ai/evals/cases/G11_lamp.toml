@@ -1,0 +1,23 @@
+id = "G11_lamp"
+tier = "hard"
+group = "Any geometry"
+title = "灯"
+lang = "zh"
+base = "empty"
+
+[[turn]]
+say = "做一个落地灯：圆形底座直径30厘米，细立杆高1.6米，可调节的弯曲灯臂，锥形灯罩直径40厘米。"
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "col+beam+brace+truss+gridshell_bar+solid+mass+mesh+freeform+shell_elem+gridshell+wall+slab+roof+stair+toposolid+wall_spline+comp:lamp|light|fixture"
+min = 4.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

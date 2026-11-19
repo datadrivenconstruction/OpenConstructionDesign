@@ -1,0 +1,19 @@
+{
+ "ai.plan.apply_updated": "Terapkan rencana yang diperbarui",
+ "ai.plan.keys_anywhere": "Ctrl+Enter menerapkan dan Esc menghentikan permintaan juga dari rencana atau tampilan 3D, kecuali sedang mengetik di kolom teks.",
+ "ai.plan.rebased": "Diperbarui terhadap model saat ini: {what}",
+ "ai.value.bad": "\"{text}\" bukan nilai yang valid untuk {name}",
+ "ai.value.both": "Asisten AI mengubah nilai ini menjadi {agent} saat Anda memasukkan {mine}. Pilih yang akan dipertahankan.",
+ "ai.value.choose_first": "Pilih nilai Anda atau nilai asisten AI di kartu terlebih dahulu",
+ "ai.value.elem": "Elemen {n}: {what}",
+ "ai.value.held": "Nilai Anda {mine} akan dimasukkan saat permintaan selesai",
+ "ai.value.keep_agent": "Pertahankan {agent}",
+ "ai.value.lost": "Nilai Anda {mine} untuk {what} di \"{title}\" tidak dipakai: asisten AI menghapus nilai itu dari kartu",
+ "ai.value.more": "{n} nilai lain: perluas baris",
+ "ai.value.refused": "Rencana tidak dapat menerima nilai ini dan mempertahankan nilai sebelumnya: {why}",
+ "ai.value.refused_next": "Masukkan nilai lain, atau hilangkan centang item agar tidak ikut Terapkan.",
+ "ai.value.tip": "Perbaiki nilai di draf; model hanya berubah saat Terapkan. Enter mengonfirmasi, Esc mengembalikan.",
+ "ai.value.use_mine": "Gunakan {mine}",
+ "ai.value.was": "sebelumnya {old}",
+ "ai.value.bad_len": "Kolom «{name}»: {why}"
+}

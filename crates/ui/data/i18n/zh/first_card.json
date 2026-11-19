@@ -1,0 +1,9 @@
+{
+ "first_card.card.title": "试用 XLSX 电子表格 往返编辑",
+ "first_card.card.step1": "选择一面墙",
+ "first_card.card.step2": "更改其一项属性",
+ "first_card.card.step3": "在 XLSX 电子表格 中编辑,检查预览,然后应用",
+ "first_card.card.spreadsheet": "在 XLSX 电子表格 中编辑",
+ "first_card.card.skip": "跳过",
+ "first_card.card.done": "已完成:模型与工作簿一致"
+}

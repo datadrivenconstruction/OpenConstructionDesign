@@ -1,0 +1,8 @@
+{
+ "drafts.drafts.head": "Geöffnete Editoren enthalten Bearbeitungen, die noch nicht im Projekt sind:",
+ "drafts.draft.family": "Familie „{name}“",
+ "drafts.draft.line": "Linienbibliothek: {name}",
+ "drafts.draft.styles": "Linienstile des Sichtbereichs",
+ "drafts.btn.save_all": "Alle speichern",
+ "drafts.drafts.refused": "Ein Entwurf konnte nicht gespeichert werden. Nichts wurde geschlossen; der Editor mit dem Entwurf bleibt geöffnet."
+}

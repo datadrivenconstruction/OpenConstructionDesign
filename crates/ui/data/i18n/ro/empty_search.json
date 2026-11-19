@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "Nimic găsit",
+ "empty.browser_search.hint": "Nicio vedere, nivel, tip sau cameră nu corespunde acestei căutări.",
+ "empty.browser_search.action": "Șterge căutarea",
+ "empty.xl_filtered.title": "Nicio intrare nu corespunde filtrelor",
+ "empty.xl_filtered.hint": "Activați mai multe tipuri, alegeți altă foaie sau schimbați textul căutării.",
+ "empty.xl_filtered.action": "Șterge filtrele",
+ "empty.xl_nochanges.title": "Nicio modificare în registru",
+ "empty.xl_nochanges.hint": "Registrul corespunde modelului: importul lui nu ar schimba nimic.",
+ "empty.version_same.title": "Modelele sunt identice",
+ "empty.version_same.hint": "Nu s-au găsit diferențe între modelul deschis și versiunea aleasă.",
+ "empty.templates.title": "Niciun șablon de vedere încă",
+ "empty.templates.hint": "Creați unul din vederea curentă ca să-i refolosiți setările pe alte vederi.",
+ "empty.templates.action": "Denumește un șablon",
+ "empty.fe_params.title": "Niciun parametru încă",
+ "empty.fe_params.hint": "Adăugați un parametru mai jos pentru a controla dimensiuni, materiale sau vizibilitate.",
+ "empty.fe_params.action": "Adaugă un parametru"
+}

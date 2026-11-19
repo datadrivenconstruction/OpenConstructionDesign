@@ -1,0 +1,11 @@
+{
+ "cmd.ctx.ceiling.clean_outline": "Ryd op i kontur",
+ "cmd.ctx.ceiling.clean_outline.desc": "Fjerner smalle spidser, hvor loftkonturen vender tilbage på sig selv. Viser en forhåndsvisning først; ét fortrydelsestrin.",
+ "cmd.ctx.shaft.clean_outline": "Ryd op i kontur",
+ "cmd.ctx.shaft.clean_outline.desc": "Fjerner smalle spidser, hvor skaktkonturen vender tilbage på sig selv. Viser en forhåndsvisning først; ét fortrydelsestrin.",
+ "outline_cleanup.intro_ceiling": "Konturen af dette loft vender tilbage på sig selv i smalle spidser: {n}. Oprydning fjerner dem; alt andet forbliver som det er.",
+ "outline_cleanup.intro_shaft": "Konturen af denne skakt vender tilbage på sig selv i smalle spidser: {n}. Oprydning fjerner dem; alt andet forbliver som det er.",
+ "outline_cleanup.none_ceiling": "Konturen af dette loft har ingen spidser",
+ "outline_cleanup.none_shaft": "Konturen af denne skakt har ingen spidser",
+ "outline_cleanup.need_host": "Vælg et gulv, et loft eller en skakt"
+}

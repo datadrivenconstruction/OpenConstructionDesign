@@ -1,0 +1,19 @@
+{
+ "ifc_patch.fallback.source_changed": "Paranda ei kasutatud: lähtefail muutus kettal või ei ole loetav. Fail kirjutati mudelist uuesti.",
+ "ifc_patch.fallback.sources": "Paranda ei kasutatud: projektil pole täpselt ühte lähtefaili. Fail kirjutati mudelist uuesti.",
+ "ifc_patch.fallback.schema": "Paranda ei kasutatud: lähtefaili skeemi ei toetata. Fail kirjutati mudelist uuesti.",
+ "ifc_patch.fallback.structure": "Paranda ei kasutatud: lähtefaili struktuuri ei saa usaldada. Fail kirjutati mudelist uuesti.",
+ "ifc_patch.fallback.edit": "Paranda ei kasutatud: muudatust ei saa lähtefailile turvaliselt rakendada. Fail kirjutati mudelist uuesti.",
+ "ifc_patch.reason.schema": "Lähtefaili skeem ei saa seda muudatust hoida; element jääb lähtefailis olevale kujule",
+ "ifc_patch.reason.prop": "Seda omaduse muudatust ei saa lähtefailis väljendada; väärtus jääb samaks mis lähtefailis",
+ "ifc_patch.reason.no_export": "Sellel uuel elemendil pole IFC-esitust",
+ "ifc_patch.reason.link": "Element on failis, kuid tema materjali või tüübi link pole kirjutatud; see on loetletud kui kirjutamata",
+ "ifc_patch.drop": "Eemalda",
+ "ifc_patch.drop_done": "Ootel lingid eemaldatud: {n}; neid ei proovita enam uuesti",
+ "ifc_patch.fallback.building": "Paranda ei kasutatud: uus tase vajab lähtefailis täpselt ühte hoonet, aga seal on kas null või mitu. Fail kirjutati mudelist uuesti.",
+ "ifc_patch.fallback.types": "Paranda ei kasutatud: tasemed, tüübid või materjalid muutusid pärast importi ning paranda neid kirjutada ei saa. Fail kirjutati mudelist uuesti.",
+ "ifc_patch.fallback.zipped": "Paranda ei kasutatud: pakitud lähtefaili ei saa parandada. Fail kirjutati mudelist uuesti.",
+ "ifc_patch.fallback.source_kept": "Lähtefaili ei kirjutatud üle: seda salvestust ei saa asendamiseks usaldada. See salvestus on selle kõrval koopiana.",
+ "ifc_patch.fallback.nested": "Paranda ei kasutatud: uuel elemendil on sisestatud osi (näiteks pordid), mida paranda kirjutada ei saa. Fail kirjutati mudelist uuesti.",
+ "ifc_patch.fallback.shared_part": "Paranda ei kasutatud: muudetud trepi või rambi osa on kasutusel ka teise elemendi või seosega, mida paranda ei arvesta. Fail kirjutati mudelist uuesti."
+}

@@ -1,0 +1,11 @@
+{
+ "type_pick.pick.search": "Hledat typy nebo tloušťku",
+ "type_pick.pick.empty": "Žádné odpovídající typy",
+ "type_pick.pick.edit": "Upravit typ…",
+ "type_pick.pick.mixed": "Smíšené",
+ "type_pick.pick.layers": {
+  "one": "# vrstva",
+  "few": "# vrstvy",
+  "other": "# vrstev"
+ }
+}

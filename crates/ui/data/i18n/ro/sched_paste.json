@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "Lipite {n} celule",
+ "sched_edit.pasted_skipped": "Lipite {n} celule, omise {k}: {why}",
+ "sched_edit.filled": "Completate {n} celule",
+ "sched_edit.filled_skipped": "Completate {n} celule, omise {k}: {why}",
+ "sched_edit.why_ro": "{n} doar pentru citire",
+ "sched_edit.why_bad": "{n} valoare greșită",
+ "sched_edit.no_cell": "Mai întâi faceți clic pe o celulă din tabel",
+ "sched_edit.nothing": "Nimic de scris",
+ "sched_edit.not_refreshed": "Scris, vederea nu s-a reîmprospătat: {e}",
+ "sched_edit.failed": "nemodificat: {e}",
+ "sched_edit.no_changes": "Nicio modificare: {u} celule au deja aceste valori",
+ "sched_edit.same_tail": ", {u} deja egale"
+}

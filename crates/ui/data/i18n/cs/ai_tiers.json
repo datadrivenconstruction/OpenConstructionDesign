@@ -1,0 +1,4 @@
+{
+ "ai.issue.delete_large": "{0} prvků by bylo smazáno, což překračuje limit {1}. Je potřeba oprávnění",
+ "ai.issue.refused_large": "{0} prvků by se změnilo, což překračuje pevný limit {1}. Rozdělte plán na menší části"
+}

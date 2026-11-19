@@ -1,0 +1,16 @@
+[
+ {
+  "id": "file.import",
+  "dialog": true,
+  "icon": "import-cad",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+I"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ }
+]

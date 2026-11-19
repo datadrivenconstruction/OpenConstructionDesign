@@ -1,0 +1,20 @@
+{
+ "api.cmd.move_elements": "Elemanları metre cinsinden bir ofset kadar taşı",
+ "api.cmd.copy_elements": "Elemanları bir veya daha fazla metre ofsetle kopyala",
+ "api.cmd.rotate_elements": "Elemanları bir nokta etrafında derece cinsinden açı kadar döndür",
+ "api.cmd.mirror_elements": "Elemanları iki nokta arasındaki bir eksene göre aynala",
+ "api.cmd.scale_elements": "Elemanları bir nokta etrafında bir katsayı ile ölçekle",
+ "api.cmd.array_elements": "Elemanların doğrusal veya dairesel dizisi",
+ "api.cmd.offset_wall": "Bir duvarın paralel kopyasını metre cinsinden bir mesafede oluştur",
+ "api.cmd.split_wall": "Bir duvarı bir noktada ikiye böl",
+ "api.cmd.pin_elements": "Elemanları sabitle veya sabitlemeyi kaldır",
+ "api.cmd.flip_openings": "Kapı ve pencerelerin menteşe tarafını veya yönünü çevir",
+ "api.cmd.create_level": "Metre cinsinden bir kotta kat oluştur",
+ "api.cmd.edit_level": "Seviyeyi yeniden adlandır veya kotunu değiştir",
+ "api.cmd.delete_level": "Seviyeyi sil",
+ "api.cmd.place_rooms": "Bir seviyedeki her kapalı bölgeye oda yerleştir",
+ "api.cmd.join_elements": "Elemanları birleştir, ayır veya geometri birleşimini değiştir",
+ "api.cmd.place_footings": "Bir seviyedeki her kolonun altına temel yerleştir",
+ "api.cmd.create_terrain": "Ölçüm noktalarından ya da eğimli bir düzlemden arazi oluştur",
+ "api.cmd.script_recipes": "Serbest yapıların betik yapı taşlarını ve tariflerini oku"
+}

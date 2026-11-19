@@ -1,0 +1,13 @@
+{
+ "xlw.copy_list": "Listeyi kopyala",
+ "xlw.save_list": "Listeyi kaydet…",
+ "xlw.copy_list_tip": "Gösterilen satırları (sayfa, hücre, kimlik, kolon, değerler, neden) bir tablo için metin olarak kopyalar",
+ "xlw.save_list_tip": "Gösterilen satırları çalışma kitabının yanına .csv dosyası olarak kaydeder; çalışma kitabının kendisi hiç değişmez",
+ "xlw.list_book_value": "Çalışma kitabı değeri",
+ "xlw.list_model_value": "Model değeri",
+ "xlw.list_reason": "Neden",
+ "xlw.list_copied": "Liste kopyalandı: {n} satır",
+ "xlw.list_saved": "Liste kaydedildi: {n} satır, {file}",
+ "xlw.list_save_failed": "Liste kaydedilmedi",
+ "xlw.list_nothing": "Kopyalanacak bir şey yok: gösterilen satır yok"
+}

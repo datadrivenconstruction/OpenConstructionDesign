@@ -1,0 +1,8 @@
+{
+ "cmd.arch.room_auto": "Odaları otomatik yerleştir",
+ "cmd.arch.room_auto.desc": "Etkin katta odası olmayan her kapalı sınıra bir oda yerleştirir. Açık duvar döngüleri atlanır, tahminle kapatılmaz. Tek geri alma adımı.",
+ "room_place.placed": "Yerleştirilen oda: {n}. Zaten odası olan bölgeler: {m}. Atlanan açık döngüler: {k}",
+ "room_place.all_had": "Hiçbir şey yerleştirilmedi: {m} kapalı bölgenin tümünde zaten oda var. Atlanan açık döngüler: {k}",
+ "room_place.none": "Hiçbir şey yerleştirilmedi: katta kapalı duvar bölgesi yok",
+ "room_place.none_open": "Hiçbir şey yerleştirilmedi: katta kapalı duvar bölgesi yok. Atlanan açık döngüler: {k}"
+}

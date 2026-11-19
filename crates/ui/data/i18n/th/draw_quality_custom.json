@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "กำหนดเอง",
+ "draw_quality.custom.tip": "{name}: รายการของโปรเจกต์นี้",
+ "draw_quality.custom_note": "รายการที่มีเครื่องหมายกำหนดเองเป็นของโปรเจกต์นี้",
+ "draw_quality.unsaved.lib_body": "บันทึกลงไลบรารีหรือยกเลิกหรือไม่",
+ "draw_quality.unsaved.styles_body": "นำไปใช้กับมุมมองหรือยกเลิกหรือไม่",
+ "draw_quality.unsaved.both_body": "นำไปใช้หรือยกเลิกหรือไม่",
+ "draw_quality.halftone": "{category} ฮาล์ฟโทน",
+ "draw_quality.styles.name": "สไตล์เส้น",
+ "draw_quality.styles.other_level": "การแก้ไขสไตล์ของระดับ {level} ที่ยังไม่บันทึก: นำไปใช้หรือย้อนเพื่อแก้ไขระดับนี้"
+}

@@ -1,0 +1,17 @@
+id = "S10_city_block"
+tier = "smoke"
+group = ""
+title = "City block of several generated buildings"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "Lay out a city block of 120 x 90 m with four separate buildings, each as its own generated project at its own origin: a 9-storey apartment block along the north edge, a 6-storey office on the east side, a 3-storey school in the south-west corner and a 2-storey shop pavilion in the middle. Buildings at least 12 m apart, none overlapping, all inside the block. Build them all."
+
+[[oracle.count]]
+spec = "level"
+min = 9.0
+
+[[oracle.count]]
+spec = "room"
+min = 100.0

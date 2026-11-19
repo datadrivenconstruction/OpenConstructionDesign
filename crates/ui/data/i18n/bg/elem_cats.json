@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "Масата не може да се завърта или огледално отрази: историята ѝ няма завъртане. Преместете или копирайте я, или я начертайте наново в новата посока.",
+ "sched_cats.col.name": "Име",
+ "sched_cats.col.material": "Материал",
+ "sched_cats.col.void": "Празнина",
+ "sched_cats.col.inplace": "На място",
+ "sched_cats.col.volume": "Нетен обем",
+ "sched_cats.col.area": "Площ на повърхността",
+ "sched_cats.col.floor_area": "Площ на пода",
+ "sched_cats.col.thickness": "Дебелина",
+ "sched_cats.col.points": "Точки",
+ "elem.toposolid.points": "Геодезически точки",
+ "elem.toposolid.count": "Точки",
+ "elem.toposolid.low": "Най-ниска",
+ "elem.toposolid.high": "Най-висока",
+ "elem.toposolid.edit": "Редактиране на точките",
+ "elem.toposolid.edit_tip": "Избиране, плъзгане и задаване на кота на геодезическите точки в плана",
+ "elem.toposolid.pick_hint": "Щракнете точка в плана, за да я изберете. Щракнете отново, за да добавите или премахнете.",
+ "elem.toposolid.z": "Кота ({n})",
+ "elem.toposolid.mixed": "Избраните точки се различават; новата стойност ги задава всичките.",
+ "elem.toposolid.edit_help": "Плъзнете точка, за да я преместите. Въведете стойност и натиснете Enter, за да зададете котата. Backspace премахва избраните точки, Esc излиза.",
+ "elem.toposolid.done": "Готово"
+}

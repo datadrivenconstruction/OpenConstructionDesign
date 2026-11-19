@@ -1,0 +1,7 @@
+{
+ "xlsx_project.title": "Ten skoroszyt wyeksportowano z innego projektu",
+ "xlsx_project.body": "Skoroszyt „{file}” należy do innego projektu. Id elementów różnią się między projektami, więc jego wiersze zmieniłyby tu niezwiązane elementy. Nic nie zostało wczytane do tego projektu.",
+ "xlsx_project.export_new": "Wyeksportuj ten projekt do nowego skoroszytu",
+ "xlsx_project.close": "Zamknij",
+ "xlsx_project.no_project": "Ten skoroszyt nie wskazuje, do którego projektu należy: sprawdź, czy został wyeksportowany z tego projektu."
+}

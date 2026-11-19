@@ -1,0 +1,21 @@
+{
+ "mep.row.system": "Rendszer",
+ "mep.row.elevation": "Kezdő magasság",
+ "mep.row.slope": "Lejtés",
+ "mep.row.material": "Anyag",
+ "mep.row.dev_elevation": "Magasság",
+ "mep.row.no_system": "Ez a rendszer már nem létezik. Válasszon másikat.",
+ "mep.row.no_points": "A vezetéknek nincsenek pontjai, ezért nincs magassága.",
+ "mep.row.system_domain": "A(z) {system} rendszer nem fogad ilyen vezetéktípust ({kind}). Válasszon azonos hálózattípusú rendszert.",
+ "mep.row.material_pipes": "Az anyag csak csövekre vonatkozik; ez a vezeték: {kind}.",
+ "mep.row.no_catalog": "Az anyaghoz nincsenek katalógusméretek ehhez a vezetékhez.",
+ "mep.mat.none": "Nincs beállítva",
+ "mep.mat.steel": "Acél",
+ "mep.mat.copper": "Réz",
+ "mep.mat.pvc": "PVC",
+ "mep.mat.pp": "Polipropilén",
+ "mep.err.follow_blocked": "A csatlakoztatott vezeték nem tudja követni ezt a változtatást: az új helyen nincs hely a szárának. Kevesebbet mozgassa az eszközt, vagy előbb válassza le a vezetéket.",
+ "mep.err.follow_slope": "Egy csatlakoztatott vezetéknek az új helyen nem tartható meg az esése: a rendszer legkisebb esése alá csökkenne. Kevesebbet mozgassa az eszközt magasságban, vagy előbb válassza le a vezetéket.",
+ "mep.err.follow_port_lost": "A vezeték egyik csatlakozója a szerkesztés után már nem létezik. Előbb mozgassa el a vezetéket, vagy tartsa meg az eszköz típusát.",
+ "mep.err.follow_device": "Ez a vezeték egy eszközcsatlakozón végződik, onnan nem mozdulhat el. Inkább az eszközt mozgassa, vagy előbb válassza le a vezetéket."
+}

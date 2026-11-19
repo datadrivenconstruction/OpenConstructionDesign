@@ -1,0 +1,11 @@
+{
+ "pick_rules.filter": "Тандоо: баары",
+ "pick_rules.filter.on": "Тандоо: {n} өчүк",
+ "pick_rules.filter.title": "Басуу менен тандала турган категориялар",
+ "pick_rules.filter.all": "Бардык категорияларды тандоо",
+ "pick_rules.filter.tip": "Тандоо чыпкасы: белгиленбеген категориялар басуу жана илинүү менен өткөрүлүп жиберилет",
+ "pick_rules.here": "Бул жердеги нерселер",
+ "pick_rules.here.selected": "тандалган",
+ "pick_rules.pinned": "Бекитилген нерселерди тандоо",
+ "pick_rules.here.row": "{cat} · {len}"
+}

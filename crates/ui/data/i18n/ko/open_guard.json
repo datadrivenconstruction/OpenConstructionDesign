@@ -1,0 +1,11 @@
+{
+ "job.stage.prepare": "프로젝트 준비 중",
+ "open_guard.already_open": "{name}은(는) 이미 열려 있습니다",
+ "open_guard.from_cache": "{name}: 가져오기 캐시에서 열림",
+ "open_guard.known_project": "{name}은(는) 이전에 가져왔습니다: 해당 프로젝트를 엽니다",
+ "open_guard.locate": "찾기",
+ "open_guard.mem_low": "메모리 부족: 메시 예산이 절반으로 줄고 상세 수준 빌드가 일시 중지됩니다",
+ "open_guard.mem_low_short": "메모리 부족: 메모리가 확보될 때까지 상세 수준 빌드가 일시 중지됩니다",
+ "open_guard.no_window": "해당 프로젝트의 창을 찾을 수 없습니다",
+ "open_guard.switch_window": "그 창으로 전환"
+}

@@ -1,0 +1,20 @@
+{
+ "api.cmd.move_elements": "Elementlarni metrda berilgan siljish bilan ko'chirish",
+ "api.cmd.copy_elements": "Elementlarni metrlarda bir yoki bir nechta siljish bilan nusxalash",
+ "api.cmd.rotate_elements": "Elementlarni nuqta atrofida gradusda berilgan burchakka aylantirish",
+ "api.cmd.mirror_elements": "Elementlarni ikki nuqtadan o'tuvchi o'q atrofida aks ettirish",
+ "api.cmd.scale_elements": "Elementlarni nuqta atrofida koeffitsiyent bo'yicha masshtablash",
+ "api.cmd.array_elements": "Elementlarning chiziqli yoki radial massivi",
+ "api.cmd.offset_wall": "Devorning parallel nusxasini metrda berilgan masofada yaratish",
+ "api.cmd.split_wall": "Devorni nuqtada ikkiga bo'lish",
+ "api.cmd.pin_elements": "Elementlarni mahkamlash yoki mahkamlashni bekor qilish",
+ "api.cmd.flip_openings": "Eshik va derazalarning ochilish tomonini yoki yuzini almashtirish",
+ "api.cmd.create_level": "Metrda balandlikda qavat yaratish",
+ "api.cmd.edit_level": "Qavat nomini yoki balandligini o'zgartirish",
+ "api.cmd.delete_level": "Qavatni o'chirish",
+ "api.cmd.place_rooms": "Qavatning har bir yopiq maydoniga xona joylashtirish",
+ "api.cmd.join_elements": "Elementlarni birlashtirish, ajratish yoki geometriya ulanishini almashtirish",
+ "api.cmd.place_footings": "Qavatdagi har bir ustun ostiga poydevor joylashtirish",
+ "api.cmd.create_terrain": "Geodezik nuqtalar yoki qiya tekislik asosida relyef yaratish",
+ "api.cmd.script_recipes": "Erkin konstruksiyalarning skript bloklari va retseptlarini o'qish"
+}

@@ -1,0 +1,11 @@
+{
+ "materials.mat.name_empty": "Zadejte název materiálu",
+ "materials.mat.empty_title": "Zatím žádné materiály",
+ "materials.mat.empty_hint": "Níže zadejte název a stiskněte Přidat",
+ "materials.mat.nothing_hint": "Hledání neodpovídá žádnému materiálu",
+ "materials.mat.clear_search": "Vymazat hledání",
+ "materials.mat.replace_with": "Nahradit za",
+ "materials.mat.delete_refused": "Nelze smazat: materiál se používá na {n} místech. Nejprve jej nahraďte.",
+ "materials.mat.delete_confirm": "Smazat materiál „{name}“? Tuto akci lze vrátit zpět.",
+ "materials.mat.replace_confirm": "Nahradit „{from}“ za „{to}“ u {n} prvků? „{from}“ bude odstraněn. Tuto akci lze vrátit zpět."
+}

@@ -1,0 +1,22 @@
+{
+ "cmd.arch.grid_pick": "Akselisto viivasta",
+ "cmd.arch.grid_pick.desc": "Luo akseliston tarkasti valitun piirustusviivan suuntaisesti nykyisellä tasolla; nimet jatkavat sarjaa. Tab ottaa kerralla kaikki samalla piirustustasolla olevat yhdensuuntaiset viivat. Jokainen valinta on yksi kumoamisaskel.",
+ "cmd.struct.beam_pick": "Palkki viivasta",
+ "cmd.struct.beam_pick.desc": "Sijoittaa nykyisen tyypin palkin aktiiviselle tasolle valitun piirustusviivan suuntaisesti. Tab ottaa liittyvän ketjun. Jokainen valinta on yksi kumoamisaskel.",
+ "hint.grid_pick.one": "Akselisto viivasta: valitse piirustusviiva · Tab kaikki sen tason yhdensuuntaiset viivat · Esc poistuu",
+ "hint.grid_pick.more": "Akselisto viivasta: valitse viiva ottaaksesi kaikki sen tason yhdensuuntaiset viivat · Tab yksi viiva · Esc poistaa valmiuden",
+ "hint.beam_pick.one": "Palkki viivasta: valitse piirustusviiva · Tab liittyvä ketju · Esc poistuu",
+ "hint.beam_pick.more": "Palkki viivasta: valitse viiva ottaaksesi sen ketjun · Tab yksi viiva · Esc poistaa valmiuden",
+ "line_pick.st.start_grid": "Valitse piirustusviiva. Tab: kaikki sen tason yhdensuuntaiset viivat",
+ "line_pick.st.start_beam": "Valitse piirustusviiva palkille {type}. Tab: liittyvä ketju",
+ "line_pick.st.grid_done": "Akseli {name} lisätty",
+ "line_pick.st.grids_done": "{n} akselia lisätty: {first} — {last}",
+ "line_pick.st.beam_done": "Palkki {type} lisätty",
+ "line_pick.st.beams_done": "{n} palkkia {type} lisätty",
+ "line_pick.st.on_grid": "Tällä viivalla on jo akseli {name}",
+ "line_pick.st.on_beam": "Tällä viivalla on jo palkki {id}",
+ "line_pick.st.no_layer": "Viivojen piirustustasoja ei vielä tunneta, yritä uudelleen",
+ "line_pick.st.no_beam_type": "Luettelossa ei ole palkkiprofiilia",
+ "line_pick.st.reload_warn": "Luotu, mutta näkymää ei voitu ladata uudelleen: {err}",
+ "line_pick.st.failed": "Ei luotu: {err}"
+}

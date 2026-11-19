@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "Sobita tüüp",
+ "cmd.mod.match_type.short": "Sobita tüüp",
+ "cmd.mod.match_type.desc": "Vali sein, põrand, post või tala ja klõpsa seejärel teistele sama kategooria elementidele, et anda neile sama tüüp. Lohista aken, et rakendada kõigile selle sees. Esc tühistab lähteelemendi.",
+ "hint.match_type.pick": "Sobita tüüp: vali sein, põrand, post või tala · Esc — välju",
+ "hint.match_type.apply": "Sobita tüüp: klõpsa sihtelementidele või lohista aken · Esc — teine allikas",
+ "match_type.kind.wall": "sein",
+ "match_type.kind.slab": "põrand",
+ "match_type.kind.column": "post",
+ "match_type.kind.beam": "tala",
+ "match_type.refuse.category": "Muu kategooria: sellele tüübile sobib ainult {cat}",
+ "match_type.refuse.curtain": "Kardinsein: selle tüüpi siin ei sobitata",
+ "match_type.refuse.pinned": "Kinnitatud: tüübi muutmiseks eemalda kinnitus",
+ "match_type.pick_bad": "Lähteallikaks vali sein, põrand, post või tala",
+ "match_type.same": "Juba see tüüp",
+ "match_type.done": "Tüüp rakendatud: {n}",
+ "match_type.done_skipped": "Tüüp rakendatud: {n}, vahele jäetud (kinnitatud või kardinsein): {skipped}",
+ "match_type.failed": "Tüüpi ei muudetud: {err}"
+}

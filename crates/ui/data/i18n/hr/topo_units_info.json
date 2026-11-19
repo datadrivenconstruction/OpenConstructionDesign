@@ -1,0 +1,13 @@
+{
+ "topo.unit.mm": "mm",
+ "topo.unit.metre": "m",
+ "topo.unit.ft": "ft",
+ "topo.opt.material": "Materijal",
+ "topo.row.active": "Aktivna površina",
+ "topo.btn.delete_pad": "Izbriši podlogu",
+ "topo.info.loading": "Izrađujem površinu…",
+ "topo.info.warn_n": "{n} upozorenja",
+ "topo.info.points_label": "Točke",
+ "topo.import.all_layers": "Svi slojevi",
+ "topo.import.need_layer": "Označite barem jedan sloj"
+}

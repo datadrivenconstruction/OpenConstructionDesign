@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "I-export sa spreadsheet na XLSX: saklaw",
+ "xlsx_scope.intro": "Piliin kung ano ang papasok sa workbook. Ang pag-import nito pabalik ay babago lamang sa mga elementong ito.",
+ "xlsx_scope.base_whole": "Buong modelo",
+ "xlsx_scope.base_level": "Aktibong level",
+ "xlsx_scope.base_selection": "Pagpili",
+ "xlsx_scope.categories": "Mga kategorya",
+ "xlsx_scope.cat_walls": "pader",
+ "xlsx_scope.cat_openings": "pinto",
+ "xlsx_scope.cat_rooms": "kuwarto",
+ "xlsx_scope.cat_slabs": "sahig",
+ "xlsx_scope.cat_curtains": "curtain wall",
+ "xlsx_scope.nothing_selected": "Walang napili: pumili muna ng elemento o ibang saklaw.",
+ "xlsx_scope.no_categories": "Lagyan ng check ang kahit isang kategorya.",
+ "xlsx_scope.no_level": "Hindi nahanap ang aktibong level.",
+ "xlsx_scope.export": "I-export",
+ "xlsx_scope.preview_scope": "Saklaw na na-export: {scope}. Hindi kailanman babaguhin o bubura ang mga elementong nasa labas nito."
+}

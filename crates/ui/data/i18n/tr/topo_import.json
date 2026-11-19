@@ -1,0 +1,4 @@
+{
+ "topo_import.topo.ambiguous": "{n} satır atlandı: sayı iki şekilde okunabilir (1,250 = 1.25 mi, 1250 mi?) ve dosya ondalık işareti göstermiyor",
+ "topo_import.topo.grouped": "{n} nokta basamak grupları ile okundu (1 250,5 ya da 1,234.5)"
+}

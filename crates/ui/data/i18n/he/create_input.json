@@ -1,0 +1,14 @@
+{
+ "cmd.mod.divide": "חלוקה",
+ "cmd.mod.divide.short": "חלוקה",
+ "cmd.mod.divide.desc": "מחלק קיר לחלקים שווים בשלב אחד. הקלד את מספר החלקים, ואז לחץ על הקיר.",
+ "whereis.mod.divide": "חלוקה, חלקים שווים, חיתוך לחלקים, פילוח קיר",
+ "hint.split.parts": "חלוקה: לחץ על קיר · מספר — חלקים (2–100) · Esc — ביטול",
+ "create_input.divide.bad_parts": "«{text}» אינו מספר חלקים: הקלד מספר שלם מ-2 עד {max}",
+ "create_input.ws.err.empty": "הקלד שם לפריסה",
+ "create_input.ws.err.long": "השם ארוך מדי: עד 40 תווים",
+ "create_input.ws.err.preset": "השם הזה שייך לפריסה מובנית",
+ "create_input.ws.err.full": "עד 24 פריסות שמורות: הסר קודם אחת",
+ "create_input.seldim.locked": "מרחק {v} נעול",
+ "create_input.seldim.positive": "המרחק חייב להיות גדול מאפס"
+}

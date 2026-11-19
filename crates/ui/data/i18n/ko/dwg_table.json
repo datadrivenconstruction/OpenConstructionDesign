@@ -1,0 +1,14 @@
+{
+ "dwg_table.copy": "표 복사",
+ "dwg_table.copy_tip": "레이어별 물량표를 스프레드시트용 표로 복사합니다",
+ "dwg_table.copied": "물량표를 복사했습니다(탭으로 구분)",
+ "dwg_table.total": "합계",
+ "dwg_table.col.layer": "레이어",
+ "dwg_table.col.count": "개수",
+ "dwg_table.col.len": "길이, {unit}",
+ "dwg_table.col.area": "면적, {unit}",
+ "dwg_table.unit.mm": "mm",
+ "dwg_table.unit.m2": "m²",
+ "dwg_table.unit.ft": "ft",
+ "dwg_table.unit.ft2": "ft²"
+}

@@ -1,0 +1,11 @@
+{
+ "job.stage.prepare": "Préparation du projet",
+ "open_guard.already_open": "{name} est déjà ouvert",
+ "open_guard.from_cache": "{name} : ouvert depuis le cache d’import",
+ "open_guard.known_project": "{name} a déjà été importé : ouverture de ce projet",
+ "open_guard.locate": "Localiser",
+ "open_guard.mem_low": "Mémoire faible : le budget de maillage est divisé par deux et la construction des niveaux de détail est suspendue",
+ "open_guard.mem_low_short": "Mémoire faible : la construction des niveaux de détail est suspendue jusqu’à libération de la mémoire",
+ "open_guard.no_window": "La fenêtre de ce projet est introuvable",
+ "open_guard.switch_window": "Basculer vers cette fenêtre"
+}

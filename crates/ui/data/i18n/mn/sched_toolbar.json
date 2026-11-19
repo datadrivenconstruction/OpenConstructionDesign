@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "Толгойн доорх шүүлтүүрийн мөр. Текст: дэд мөр; тоо: >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "Баганыг харуулах эсвэл нуух",
+ "sched_toolbar.groups_tip": "Мөрүүдийг баганаар бүлэглэж, дэд нийлбэртэй",
+ "sched_toolbar.formulas_tip": "Тооцоолсон багана",
+ "sched_toolbar.phase": "Үе шат",
+ "sched_toolbar.phase_tip": "Мөрүүдийг аль үе шатаас авахыг сонгоно",
+ "sched_toolbar.copy_tip": "Сонгосон мөрүүд (эсвэл харагдаж буй бүгд) TSV хэлбэрээр",
+ "sched_toolbar.import_tip": "Экспортлосон хүснэгтийг буцааж уншина: мөрүүд Id-гаар, багана толгойгоор; эхлээд тоо, дараа нь нэг буцаах алхам",
+ "sched_toolbar.export_tip": "Харагдаж буй мөр, багана нийт дүнтэй; тоо тоогоороо үлдэнэ",
+ "sched_toolbar.need_table": "Эхлээд хүснэгт нээнэ үү",
+ "sched_toolbar.busy_open": "Файлын цонх аль хэдийн нээлттэй байна",
+ "sched_toolbar.busy_save": "Хадгалах цонх аль хэдийн нээлттэй байна",
+ "sched_toolbar.clear_filter": "Шүүлтүүрийг цэвэрлэх",
+ "sched_toolbar.fields_title": "Багана"
+}

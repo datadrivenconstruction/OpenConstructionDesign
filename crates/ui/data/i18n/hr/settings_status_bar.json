@@ -1,0 +1,10 @@
+{
+ "cmd.view.axes_full": "Pune osi",
+ "cmd.view.axes_full.desc": "Prikazuje X i Y osi kao pune linije preko tlocrta. Držite F9 za prikaz samo dok je pritisnuto.",
+ "settings.axes_full": "Osi",
+ "settings.axes_full_desc": "Osi tlocrta kao pune linije preko lista. Držite F9 za brzi pregled.",
+ "settings.axes_full_on": "Prikaži pune osi",
+ "plan.hud.axes_tip": "Držite {key} za prikaz punih osi",
+ "status.axes_full.on": "Pune osi uključene",
+ "status.axes_full.off": "Pune osi isključene"
+}

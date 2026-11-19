@@ -1,0 +1,11 @@
+{
+ "cmd.arch.roof_gable.short": "Двускатен",
+ "cmd.arch.roof_hip.short": "Четирискатен",
+ "cmd.arch.roof_shed.short": "Едноскатен",
+ "cmd.arch.roof_mansard.short": "Мансарден",
+ "cmd.arch.roof_gambrel.short": "Мансарден",
+ "cmd.arch.roof_barrel.short": "Свод",
+ "cmd.arch.roof_edges.short": "Ръбове на покрив",
+ "cmd.arch.roof_opening.short": "Отвор",
+ "cmd.mass.roof_by_face.short": "По повърхност"
+}

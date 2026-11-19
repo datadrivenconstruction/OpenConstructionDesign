@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "Piliin ang buong loop ng pader",
+ "cmd.sketch.link_unlink": "Alisin ang link ng gilid sa pader",
+ "cmd.sketch.link_repick": "Muling piliin ang gilid na pader",
+ "cmd.ctx.floor.link_unlink": "Alisin ang link ng mga gilid sa pader",
+ "cmd.ctx.floor.link_accept": "Tanggapin ang mga gilid ng binurang pader",
+ "boundary_link.hint.loop": "I-click ang isang pader: ang saradong hanay ng mga pader ay magiging naka-link na mga gilid",
+ "boundary_link.hint.repick": "I-click ang pader na kahanay ng gilid: susundan ito ng gilid",
+ "boundary_link.need_sketch": "Buksan muna ang boundary sketch",
+ "boundary_link.need_edge": "Ituro ang gilid ng sketch",
+ "boundary_link.need_straight": "Tuwid na gilid lamang ang maaaring sumunod sa pader",
+ "boundary_link.need_floor": "Pumili ng floor",
+ "boundary_link.no_wall": "Walang pader sa ilalim ng cursor",
+ "boundary_link.not_parallel": "Hindi kahanay ng gilid ang pader",
+ "boundary_link.not_linked": "Hindi naka-link sa pader ang gilid na ito",
+ "boundary_link.unlinked": "Naalis ang link: mananatili ang gilid sa lugar at hindi na susunod sa pader",
+ "boundary_link.accepted": "Tinanggap ang mga gilid: mananatili sila sa lugar bilang ordinaryong gilid",
+ "boundary_link.failed": "Hindi maisagawa",
+ "boundary_link.lost": "binurang source wall",
+ "boundary_link.blocked": "hindi masundan ang pader"
+}

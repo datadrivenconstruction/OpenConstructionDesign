@@ -1,0 +1,14 @@
+{
+ "cmd.arch.wall.tile": "Vegg",
+ "cmd.arch.door.tile": "Dør",
+ "cmd.arch.window.tile": "Vindu",
+ "cmd.arch.floor.tile": "Gulv",
+ "cmd.mod.move.tile": "Flytt",
+ "cmd.mod.copy.tile": "Kopier",
+ "cmd.mod.rotate.tile": "Roter",
+ "cmd.mod.mirror.tile": "Speil",
+ "cmd.mod.trim.tile": "Beskjær",
+ "cmd.mod.delete.tile": "Slett",
+ "cmd.ann.dim.tile": "Mål",
+ "cmd.ann.text.tile": "Tekst"
+}

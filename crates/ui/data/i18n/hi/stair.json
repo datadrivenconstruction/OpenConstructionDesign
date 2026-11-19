@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "सीढ़ियाँ",
+ "selcat.railing": "रेलिंग",
+ "quick.cat.stair": "सीढ़ियाँ",
+ "quick.cat.railing": "रेलिंग",
+ "stair.risers": "राइज़र",
+ "stair.riser": "राइज़र ऊँचाई",
+ "stair.comfort": "2R + T",
+ "stair.tread_auto": "नियम से ट्रेड",
+ "stair.tread_auto_tip": "लिखा ट्रेड हटाएँ, ट्रेड 2R + T नियम से तय होगा",
+ "stair.broken": "यह सीढ़ी अपने तलों में फ़िट नहीं बैठती",
+ "railing.host_stair": "सीढ़ी #{id} पर",
+ "railing.host_path": "स्केच रेलिंग",
+ "railing.length": "लंबाई",
+ "stair.deleted_with": "{n} जुड़ी रेलिंग के साथ"
+}

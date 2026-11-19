@@ -1,0 +1,21 @@
+{
+ "ai.receipt.title": {
+  "one": "# 件の変更を適用",
+  "other": "# 件の変更を適用"
+ },
+ "ai.receipt.more": "+{n} 件",
+ "ai.receipt.list": "要素",
+ "ai.receipt.show": "表示",
+ "ai.receipt.show.tip": "変更された要素を選択して表示",
+ "ai.receipt.undo": "元に戻す",
+ "ai.receipt.undo.tip": "この適用だけを正確に取り消す",
+ "ai.receipt.undone": "元に戻しました",
+ "ai.receipt.later": "その後に編集が行われました",
+ "ai.receipt.toast_undone": "適用されたプランを元に戻しました",
+ "ai.receipt.draft_family": "ドラフトのファミリ: {name}",
+ "ai.receipt.promote": "作業用にする",
+ "ai.receipt.promote.tip": "ドラフトのファミリを作業用のファミリに変えます（元に戻すは 1 回）",
+ "ai.receipt.promoted": "ファミリは作業用になりました",
+ "ai.receipt.promote_failed": "ファミリを作業用にできませんでした",
+ "cmd.ai.receipt_undo": "直前のAIプランを元に戻す"
+}

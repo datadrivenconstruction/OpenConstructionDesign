@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "Plage de vue",
+ "view_range.range": "Plage de vue",
+ "view_range.cut": "Plan de coupe",
+ "view_range.bottom": "Bas",
+ "view_range.depth": "Profondeur de vue",
+ "view_range.cut.hint": "Hauteur du plan de coupe au-dessus du niveau. Les éléments qu'il traverse sont dessinés coupés.",
+ "view_range.bottom.hint": "Bas de la plage, par rapport au niveau. Les valeurs nulles ou négatives sont autorisées.",
+ "view_range.depth.hint": "Profondeur sous le bas que la vue prend en compte. Zéro ou plus.",
+ "view_range.err.number": "Saisissez une longueur dans chaque champ",
+ "view_range.err.not_finite": "Saisissez une longueur dans chaque champ",
+ "view_range.err.cut_not_above_bottom": "Le plan de coupe doit être au-dessus du bas",
+ "view_range.err.negative_depth": "La profondeur de vue ne peut pas être négative",
+ "view_range.err.top_below_cut": "Le haut de la plage ne doit pas être sous le plan de coupe"
+}

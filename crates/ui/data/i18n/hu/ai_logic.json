@@ -1,0 +1,6 @@
+{
+ "ai_toast.toast_not_refreshed": "Alkalmazva a(z) {n}. visszavonási lépésként (a Ctrl+Z visszavonja), de a nézet nem frissült. Töltse újra a nézetet.",
+ "ai.optx.reload_failed": "A(z) „{name}” változat alkalmazva és mentve, de a nézet nem töltődött újra: {e}",
+ "ai.cmp.stale": "Elavult",
+ "ai.cmp.stale_tip": "Ez a változat a modell régebbi állapotára épült. Az alkalmazáshoz hozza létre újra."
+}

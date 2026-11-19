@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "نظرِ ثانی شدہ",
+ "ai.redraft.added": "+{n} شامل",
+ "ai.redraft.removed": "−{n} ہٹائے گئے",
+ "ai.redraft.changed": "~{n} تبدیل",
+ "ai.redraft.strip": "آپ کے آخری دیکھنے کے بعد {what}",
+ "ai.redraft.note": "نظرِ ثانی شدہ پلان کا جائزہ لیا گیا: {what}",
+ "ai.redraft.more": "+{n} مزید",
+ "ai.redraft.ack": "سمجھ گیا",
+ "ai.redraft.ack.tip": "اس نظرثانی کو دیکھا ہوا نشان زد کریں؛ پھر Apply اسی کو نشانہ بناتا ہے",
+ "ai.redraft.removed_list": "ہٹائے گئے آئٹمز: {n}",
+ "ai.redraft.review_first": "آپ کے پیغام کے بعد پلان بدل گیا: پہلے تبدیلیاں جانچیں",
+ "ai.redraft.mark.tip": "آپ کے آخری دیکھنے کے بعد نیا یا تبدیل شدہ",
+ "ai.redraft.emptied": "بعد کی درخواست نے ہر آئٹم ہٹا دیا: مسودہ خالی ہے"
+}

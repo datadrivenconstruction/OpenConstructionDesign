@@ -1,0 +1,6 @@
+{
+ "project_seed.seed_level": "레벨 1",
+ "project_seed.seed_wall_partition": "칸막이벽 100",
+ "project_seed.seed_wall_masonry": "조적벽 200",
+ "project_seed.seed_wall_exterior": "외벽 380"
+}

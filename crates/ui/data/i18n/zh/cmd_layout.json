@@ -1,0 +1,4 @@
+{
+ "cmd.data.sync_xlsx": "与 XLSX 电子表格 同步…",
+ "cmd.data.sync_xlsx.desc": "重新读取已链接的工作簿，并显示与模型的差异。"
+}

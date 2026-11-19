@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "اللوح",
+ "curtain_props.cw.panel_cell": "الخلية {i}×{j} · الواجهة الزجاجية رقم {id}",
+ "curtain_props.cw.kind": "النوع",
+ "curtain_props.cw.kind.glazed": "زجاج",
+ "curtain_props.cw.kind.solid": "مصمت",
+ "curtain_props.cw.kind.door": "باب",
+ "curtain_props.cw.kind.window": "نافذة",
+ "curtain_props.cw.kind.empty": "فارغ",
+ "curtain_props.cw.name": "الاسم",
+ "curtain_props.cw.swing_side": "يفتح إلى الجهة الأخرى",
+ "curtain_props.cw.swing_hinge": "المفصلة عند طرف الخلية",
+ "curtain_props.cw.size": "المقاس",
+ "curtain_props.cw.cell_area": "مساحة الخلية",
+ "curtain_props.cw.panel_area": "مساحة اللوح",
+ "curtain_props.cw.prev": "اللوح السابق",
+ "curtain_props.cw.next": "اللوح التالي",
+ "curtain_props.cw.wall": "حدّد الجدار",
+ "curtain_props.cw.panel_hint": "Esc — التحديد · Ctrl+Z — تراجع",
+ "curtain_props.cw.status.panel": "اللوح {i}×{j} ← {kind}",
+ "e3d.err.cw_height": "يجب أن يتجاوز ارتفاع الواجهة الزجاجية 100 مم"
+}

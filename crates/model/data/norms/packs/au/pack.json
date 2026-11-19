@@ -1,0 +1,38 @@
+{
+ "id": "au",
+ "version": "2026.11",
+ "parent": "generic",
+ "country": "AU",
+ "lang": [
+  "en"
+ ],
+ "units": {
+  "length": "m",
+  "display": "metric"
+ },
+ "conventions": {
+  "ground_floor": 0,
+  "area_standard": "net",
+  "net_share": 1.0,
+  "note": "Apartment sizes in Australian guidance are normally internal (inside-of-wall) areas; the NCC itself sets no dwelling area.",
+  "source": null
+ },
+ "status": "tier3",
+ "climate": {
+  "zones": [],
+  "default": null
+ },
+ "research": {
+  "date": "2026-11-14",
+  "missing": [
+   "stair.width_min.house",
+   "parking.per_dwelling",
+   "load.floor_residential",
+   "load.floor_office"
+  ],
+  "unreachable": [
+   "https://ncc.abcb.gov.au/editions/ncc-2022/adopted/volume-two/3-housing-provisions (404)"
+  ]
+ },
+ "note": "Numbers with verified=true were read in the cited clause; the rest are hints with a note of where we looked. Wording is our own; no text of a standard is stored."
+}

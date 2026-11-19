@@ -1,0 +1,41 @@
+[
+ {
+  "id": "data.merge_file",
+  "dialog": true,
+  "icon": "merge-file",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "data",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M3",
+  "group": "source"
+ },
+ {
+  "id": "data.compare_version",
+  "dialog": true,
+  "icon": "diff",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "data",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M3",
+  "group": "check",
+  "priority": 3
+ },
+ {
+  "id": "mgr.design_options",
+  "icon": "design-options",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M3",
+  "group": "project"
+ }
+]

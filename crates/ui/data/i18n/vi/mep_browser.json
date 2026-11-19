@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "Tên hệ",
+ "mep_browser.add_blocked": "Nhập tên hệ trước",
+ "mep_browser.col.insulation": "Cách nhiệt",
+ "mep_browser.cancel": "Hủy",
+ "mep_browser.delete.title": "Xóa hệ này?",
+ "mep_browser.delete.body": "Hệ “{name}” và các đoạn của nó ({n}) sẽ bị xóa.",
+ "mep_browser.delete.undo": "Bạn có thể hoàn tác bằng một lần Hoàn tác.",
+ "mep_browser.delete.confirm": "Xóa hệ"
+}

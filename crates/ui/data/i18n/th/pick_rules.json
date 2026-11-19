@@ -1,0 +1,11 @@
+{
+ "pick_rules.filter": "เลือก: ทั้งหมด",
+ "pick_rules.filter.on": "เลือก: ปิด {n}",
+ "pick_rules.filter.title": "หมวดหมู่ที่คลิกเลือกได้",
+ "pick_rules.filter.all": "เลือกทุกหมวดหมู่",
+ "pick_rules.filter.tip": "ตัวกรองการเลือก: หมวดหมู่ที่ไม่ได้ทำเครื่องหมายจะถูกข้ามเมื่อคลิกและชี้",
+ "pick_rules.here": "รายการที่นี่",
+ "pick_rules.here.selected": "ที่เลือก",
+ "pick_rules.pinned": "เลือกรายการที่ปักหมุด",
+ "pick_rules.here.row": "{cat} · {len}"
+}

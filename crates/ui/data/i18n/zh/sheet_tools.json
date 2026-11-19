@@ -1,0 +1,18 @@
+{
+ "undo.entry_later": "未撤销：此更改之后又进行了其他更改。请先撤销那一项。",
+ "undo.entry_gone": "未撤销：此更改已撤销或已不在历史记录中。",
+ "undo.entry_busy": "请先完成或取消当前绘制，然后再撤销。",
+ "quick.hud.more": "更多位于属性中：{names}",
+ "sheet_tools.sheet.more": "更多图纸工具",
+ "job.of": "{d} / {t}",
+ "job.of.mb": "{d} / {t} MB",
+ "job.left.under_minute": "剩余不到 1 分钟",
+ "job.left.minutes": "剩余约 {n} 分钟",
+ "sheet_tools.start.units": "单位",
+ "sheet_tools.print.save": {
+  "other": "保存 # 张图纸",
+  "one": "保存 # 张图纸"
+ },
+ "sheet_tools.sets.delete_ask": "删除图纸集“{name}”？其图纸仍保留在项目中。",
+ "sheet_tools.keep": "保留"
+}

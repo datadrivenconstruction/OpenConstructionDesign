@@ -1,0 +1,11 @@
+{
+ "empty.sv_notfound.title": "Vista non trovata",
+ "empty.sv_notfound.hint": "Questa vista è stata eliminata o non fa più parte del progetto.",
+ "empty.sv_notfound.action": "Chiudi vista",
+ "empty.sv_cuts_nothing.title": "Questa sezione non taglia nulla",
+ "empty.sv_cuts_nothing.hint": "La linea di sezione non incontra muri, solai o aperture entro la sua profondità. Sposta la linea o aumenta la profondità della vista.",
+ "empty.sv_cuts_nothing.action": "Mostra in pianta",
+ "empty.sv_shows_nothing.title": "Questo prospetto non mostra nulla",
+ "empty.sv_shows_nothing.hint": "Nessun muro, solaio o apertura rientra nella profondità della vista. Sposta la linea di vista o aumenta la profondità.",
+ "empty.sv_shows_nothing.action": "Mostra in pianta"
+}

@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "Усі",
+ "clash_list.only_selected": "Лише вибрані",
+ "clash_list.tolerance": "Допуск",
+ "clash_list.gap": "Зазор",
+ "clash_list.export": "Експорт",
+ "clash_list.col.volume": "Об’єм",
+ "clash_list.fix.up": "Перемістити вгору",
+ "clash_list.fix.down": "Перемістити вниз",
+ "clash_list.fix.sleeve": "Гільза",
+ "clash_list.apply_fix": "Застосувати виправлення",
+ "clash_list.err.tol": "Допуск: введіть довжину (0 або більше), наприклад 50 або 2 дюйм",
+ "clash_list.sleeve_no_host": "Гільзі потрібна стіна або плита в парі",
+ "clash_list.err.gap": "Зазор: введіть довжину (0 або більше), наприклад 50 або 2 дюйм"
+}

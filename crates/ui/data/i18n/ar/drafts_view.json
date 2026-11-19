@@ -1,0 +1,9 @@
+{
+ "drafts.draft.view": "رسوم العرض لـ«{name}»",
+ "drafts.draft.filter": "مرشّح العرض «{name}»",
+ "drafts.draft.filter_new": "مرشّح عرض جديد",
+ "drafts.draft.object_styles": "أنماط الكائنات",
+ "drafts.draft.material": "المادة «{name}»",
+ "drafts.draft.type": "النوع «{name}»",
+ "drafts.draft.params": "معاملات العائلة «{name}»"
+}

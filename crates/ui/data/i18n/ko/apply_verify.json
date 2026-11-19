@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "적용을 중지했습니다: 모델은 그대로 유지됩니다",
+ "apply_verify.rolled_back": "적용 결과가 초안과 일치하지 않아 되돌렸습니다. 모델은 변경되지 않았습니다. {what}",
+ "apply_verify.diff.missing": "초안은 {what}의 {kind}을(를) 보여 주지만 적용에서 그 작업을 하지 않았습니다.",
+ "apply_verify.diff.extra": "초안에 보이지 않는 {kind} {what}을(를) 적용했습니다.",
+ "apply_verify.diff.kind": "초안은 {what}을(를) {shown}(으)로 보여 주지만 적용은 {applied}(으)로 했습니다.",
+ "apply_verify.diff.value": "{what}: “{col}” 값이 초안과 다르게 나왔습니다.",
+ "apply_verify.diff.truncated": "초안과 적용된 변경의 크기가 다릅니다.",
+ "apply_verify.diff.unreadable": "적용된 변경을 다시 읽을 수 없습니다 ({e}).",
+ "apply_verify.no_base": "적용을 실행하지 않았습니다: 초안을 대조할 사본이 없습니다. 모델은 변경되지 않았습니다. 초안을 다시 요청하세요.",
+ "apply_verify.take_back_failed": "되돌리지 못했습니다 ({e}). 실행 취소를 사용하세요.",
+ "apply_verify.kind.created": "생성됨",
+ "apply_verify.kind.changed": "변경됨",
+ "apply_verify.kind.deleted": "삭제됨",
+ "apply_verify.card.type_row": "유형 {type} · 요소 {n}개가 변경을 받습니다"
+}

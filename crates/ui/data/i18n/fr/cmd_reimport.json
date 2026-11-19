@@ -1,0 +1,6 @@
+{
+ "cmd.file.import_again": "Réimporter",
+ "cmd.file.import_again.desc": "Construire un nouveau projet à partir du fichier source dans son état actuel.",
+ "cmd.file.open_kept": "Ouvrir l’import conservé",
+ "cmd.file.open_kept.desc": "Ouvrir l’import terminé conservé lorsque la demande de modifications non enregistrées a été annulée."
+}

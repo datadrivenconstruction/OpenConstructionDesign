@@ -1,0 +1,8 @@
+{
+ "api.cmd.norms_lookup": "Cari aturan paket norma proyek berdasarkan topik, elemen, atau kode",
+ "api.cmd.norms_check": "Periksa model terhadap paket norma proyek dan daftar temuannya",
+ "api.cmd.norms_programme": "Program ruang khas negara proyek untuk jenis bangunan tertentu",
+ "api.cmd.select_similar": "Pilih setiap elemen serupa: tipe atau kategori sama, di level ini atau di seluruh proyek",
+ "api.cmd.create_drawing_set": "Menyusun set gambar siap cetak: denah, potongan, elevasi, jadwal, dan blok judul",
+ "api.cmd.deliver_project": "Dari brief menjadi file dalam satu langkah: proyek dan set gambarnya, diekspor setelah Terapkan"
+}

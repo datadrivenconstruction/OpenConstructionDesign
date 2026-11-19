@@ -1,0 +1,7 @@
+{
+ "xlsx_alias_ids.ids_written": "{n} nových řádků získalo id v přejmenovaném listu; nic jiného v sešitu se nezměnilo.",
+ "xlsx_alias_ids.ids_open": "Sešit je otevřen v jiném programu: id {n} nových řádků nebyla zapsána. Zavřete jej tam a synchronizujte; tyto řádky se znovu nevytvoří.",
+ "xlsx_alias_ids.ids_failed": "Id {n} nových řádků nelze zapsat; sešit zůstal beze změny. Tyto řádky se při dalším Synchronizovat znovu nevytvoří.",
+ "xlsx_alias_ids.unpaired": "{n} nových řádků zatím nemá id; jsou zapamatovány a znovu se nevytvoří.",
+ "xlsx_alias_ids.refused": "Nic nebylo použito: nové řádky v {sheets} nemohou získat id, dokud se čte přejmenovaný list. Přejmenujte list zpět na standardní název (nebo tyto řádky odstraňte) a synchronizujte znovu."
+}

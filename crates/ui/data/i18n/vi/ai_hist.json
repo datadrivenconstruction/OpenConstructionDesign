@@ -1,0 +1,14 @@
+{
+ "ai.hist.badge": "AI",
+ "ai.hist.untitled": "Thay đổi AI",
+ "ai.hist.tip": "{title}\nÁp dụng bởi: {actor}\nMô hình AI: {model}",
+ "ai.hist.why": "Lý do: {why}",
+ "ai.hist.reverted": "đã hoàn lại",
+ "ai.hist.revert_one": "Hoàn lại lô AI này",
+ "ai.revert.done": "Đã hoàn lại thay đổi AI: {n}. Hoàn tác sẽ khôi phục chúng.",
+ "ai.revert.empty": "Không có thay đổi AI nào để hoàn lại",
+ "ai.revert.not_ai": "Bước này không phải là thay đổi AI",
+ "ai.revert.already": "Các thay đổi AI này đã được hoàn lại",
+ "ai.revert.opaque": "Chưa hoàn lại: không thể tách các thay đổi AI này khỏi công việc sau đó một cách an toàn. Không có gì bị thay đổi.",
+ "ai.revert.failed": "Hoàn lại thất bại: {e}"
+}

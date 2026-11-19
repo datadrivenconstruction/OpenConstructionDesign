@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "Không lấy được cao độ {t} ({why}). Chưa thay đổi gì",
+ "host_shape.shape.elev_prompt_in": "cao độ, ft-in…",
+ "host_shape.shape.elev_in": "{v} in"
+}

@@ -1,0 +1,6 @@
+{
+ "delsafe.ring.opening_shape": "Garis luar bukaan akan berpotongan dengan dirinya sendiri atau runtuh",
+ "delsafe.ring.opening_boundary": "Bukaan akan memotong atau menyentuh batas luar",
+ "delsafe.ring.openings_overlap": "Bukaan akan tumpang tindih atau saling menyentuh",
+ "xl.msg.delsafe_instance_param_on_types": "parameter '{}' adalah parameter instans; edit di lembar elemen, tidak diterapkan"
+}

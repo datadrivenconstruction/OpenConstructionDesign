@@ -1,0 +1,11 @@
+{
+ "pick_rules.filter": "Chọn: tất cả",
+ "pick_rules.filter.on": "Chọn: tắt {n}",
+ "pick_rules.filter.title": "Danh mục mà nhấp chuột có thể chọn",
+ "pick_rules.filter.all": "Chọn tất cả danh mục",
+ "pick_rules.filter.tip": "Bộ lọc chọn: danh mục không đánh dấu sẽ bị bỏ qua khi nhấp và di chuột",
+ "pick_rules.here": "Mục ở đây",
+ "pick_rules.here.selected": "đã chọn",
+ "pick_rules.pinned": "Chọn mục đã ghim",
+ "pick_rules.here.row": "{cat} · {len}"
+}

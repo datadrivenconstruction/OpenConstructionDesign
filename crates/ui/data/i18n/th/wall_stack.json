@@ -1,0 +1,10 @@
+{
+ "wall_stack.we.stack_caption": "ประเภทประกอบ",
+ "wall_stack.we.side_left": "หน้าซ้าย",
+ "wall_stack.we.side_right": "หน้าขวา",
+ "wall_stack.we.from": "จาก",
+ "wall_stack.we.to": "ถึง",
+ "wall_stack.we.bottom": "ด้านล่าง",
+ "wall_stack.we.delete_tip": "ลบโปรไฟล์นี้",
+ "wall_stack.we.from_after_to": "“จาก” ต้องอยู่ก่อน “ถึง”"
+}

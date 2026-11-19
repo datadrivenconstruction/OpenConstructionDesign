@@ -1,0 +1,29 @@
+{
+ "recover.ago_now": "방금",
+ "recover.ago_min": {
+  "one": "#분 전",
+  "other": "#분 전"
+ },
+ "recover.ago_hour": {
+  "one": "#시간 전",
+  "other": "#시간 전"
+ },
+ "recover.ago_yesterday": "어제",
+ "recover.ago_day": {
+  "one": "#일 전",
+  "other": "#일 전"
+ },
+ "recover.empty": "남은 스냅숏이 없습니다",
+ "recover.empty_hint": "이 프로젝트에 복원할 항목이 없습니다.",
+ "recover.all_damaged": "모든 스냅숏이 손상되어 복원할 수 없습니다.",
+ "recover.keys_hint": "위/아래 화살표로 스냅숏 선택, Enter로 복원 버튼 이동",
+ "recover.row_tip": "저장 시각 {time}",
+ "recover.row_damaged_tip": "복원할 수 없음: {reason}",
+ "recover.archive_ask": "이 스냅숏을 보관함으로 옮기시겠습니까?",
+ "recover.discard_ask": {
+  "one": "이 스냅숏을 보관함으로 옮길까요? 이후 다시 제안되지 않습니다.",
+  "other": "스냅숏 #개를 모두 보관함으로 옮길까요? 이후 다시 제안되지 않습니다."
+ },
+ "recover.confirm_yes": "보관함으로 이동",
+ "recover.confirm_no": "스냅숏 유지"
+}

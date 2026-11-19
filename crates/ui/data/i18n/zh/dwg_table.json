@@ -1,0 +1,14 @@
+{
+ "dwg_table.copy": "复制表格",
+ "dwg_table.copy_tip": "按图层将工程量复制为表格，以便粘贴到电子表格中",
+ "dwg_table.copied": "已复制工程量（制表符分隔）",
+ "dwg_table.total": "合计",
+ "dwg_table.col.layer": "图层",
+ "dwg_table.col.count": "数量",
+ "dwg_table.col.len": "长度，{unit}",
+ "dwg_table.col.area": "面积，{unit}",
+ "dwg_table.unit.mm": "毫米",
+ "dwg_table.unit.m2": "m²",
+ "dwg_table.unit.ft": "英尺",
+ "dwg_table.unit.ft2": "ft²"
+}

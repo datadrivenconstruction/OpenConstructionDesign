@@ -1,0 +1,7 @@
+{
+ "xlsx_alias_ids.ids_written": "{n} neue Zeilen haben in Ihrem umbenannten Blatt ihre Ids erhalten; sonst hat sich in der Arbeitsmappe nichts geändert.",
+ "xlsx_alias_ids.ids_open": "Die Arbeitsmappe ist in einem anderen Programm geöffnet: Die Ids von {n} neuen Zeilen wurden nicht geschrieben. Schließen Sie sie dort und synchronisieren Sie; diese Zeilen werden nicht erneut erstellt.",
+ "xlsx_alias_ids.ids_failed": "Die Ids von {n} neuen Zeilen konnten nicht geschrieben werden; die Arbeitsmappe blieb unverändert. Diese Zeilen werden beim nächsten Synchronisieren nicht erneut erstellt.",
+ "xlsx_alias_ids.unpaired": "{n} neue Zeilen haben noch keine Id; sie werden gemerkt und nicht erneut erstellt.",
+ "xlsx_alias_ids.refused": "Nichts wurde übernommen: Neue Zeilen in {sheets} können keine Ids erhalten, solange ein umbenanntes Blatt gelesen wird. Benennen Sie das Blatt auf seinen Standardnamen zurück (oder entfernen Sie diese Zeilen) und synchronisieren Sie erneut."
+}

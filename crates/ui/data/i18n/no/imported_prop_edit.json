@@ -1,0 +1,6 @@
+{
+ "imported_prop_edit.remove": "Fjern egenskap",
+ "imported_prop_edit.remove.tip": "Fjerner egenskapen fra {n} valgte element(er) i ett angrepstrinn; den fjernes fra IFC-filen ved lagring",
+ "imported_prop_edit.done": "{key} fjernet fra {n} element(er)",
+ "imported_prop_edit.warn.reload": "Ferdig, men visningen ble ikke oppdatert; åpne panelet på nytt eller angre hvis det ser feil ut"
+}

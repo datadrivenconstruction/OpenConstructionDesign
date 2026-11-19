@@ -1,0 +1,7 @@
+{
+ "project_unsaved.unsaved.model": "Les modifications du modèle ne sont pas enregistrées.",
+ "project_unsaved.unsaved.drawings": {
+  "one": "# dessin placé n'est pas enregistré dans le projet : ses modifications seront perdues.",
+  "other": "# dessins placés ne sont pas enregistrés dans le projet : leurs modifications seront perdues."
+ }
+}

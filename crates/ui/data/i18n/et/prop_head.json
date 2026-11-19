@@ -1,0 +1,9 @@
+{
+ "prop_head.of_type": {
+  "one": "# sellist tüüpi",
+  "other": "# sellist tüüpi"
+ },
+ "prop_head.override_tip": "Erineb tüübist, klõpsa lähtestamiseks",
+ "prop_head.reset_done": "„{name}“ lähtestatud tüübi väärtusele",
+ "prop_head.copy_id": "Klõpsa numbri kopeerimiseks"
+}

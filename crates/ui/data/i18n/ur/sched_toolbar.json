@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "ہیڈرز کے نیچے فلٹر قطار۔ متن: ذیلی سلسلہ؛ اعداد: >5، <=3000، =2.5، <>0",
+ "sched_toolbar.columns_tip": "کالم دکھائیں یا چھپائیں",
+ "sched_toolbar.groups_tip": "کالموں کے مطابق قطاریں گروپ کریں، ذیلی ٹوٹلز کے ساتھ",
+ "sched_toolbar.formulas_tip": "حسابی کالم",
+ "sched_toolbar.phase": "فیز",
+ "sched_toolbar.phase_tip": "قطاریں کس فیز سے لی جائیں",
+ "sched_toolbar.copy_tip": "منتخب قطاریں (یا سب نظر آنے والی) TSV کے طور پر",
+ "sched_toolbar.import_tip": "برآمد شدہ شیڈول واپس پڑھیں: قطاریں Id سے، کالم ہیڈر سے؛ پہلے گنتی، پھر ایک واپسی مرحلہ",
+ "sched_toolbar.export_tip": "نظر آنے والی قطاریں اور کالم، ٹوٹلز کے ساتھ؛ اعداد اعداد ہی رہتے ہیں",
+ "sched_toolbar.need_table": "پہلے شیڈول کھولیں",
+ "sched_toolbar.busy_open": "فائل ڈائیلاگ پہلے ہی کھلا ہے",
+ "sched_toolbar.busy_save": "محفوظ کرنے کا ڈائیلاگ پہلے ہی کھلا ہے",
+ "sched_toolbar.clear_filter": "فلٹر صاف کریں",
+ "sched_toolbar.fields_title": "کالم"
+}

@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "প্রয়োগ আনডু করা হয়েছে: মডেল প্রিভিউর সঙ্গে মেলেনি। {what}",
+ "xlsx_verify.not_written": "{row} বদলানো হয়নি।",
+ "xlsx_verify.lost": "{row} হারিয়ে গেছে।",
+ "xlsx_verify.not_deleted": "{row} মোছা হয়নি।",
+ "xlsx_verify.extra_deleted": "প্রিভিউ রাখলেও {row} মুছে গেছে।",
+ "xlsx_verify.created": "{table}: প্রত্যাশিত {want}-এর বদলে {got}টি নতুন।",
+ "xlsx_verify.value": "{row}, {field}: প্রত্যাশিত {want} (ছিল {old}), পাওয়া গেছে {got}।",
+ "xlsx_verify.check_failed": "ফলাফল যাচাই করা যায়নি: {e}",
+ "xlsx_verify.plan_failed": "প্রয়োগ শুরু হয়নি: যাচাই মডেল পড়তে পারেনি ({e})।",
+ "xlsx_verify.take_back_failed": "ধাপটি আনডু করা যায়নি ({e}): আনডু ব্যবহার করুন।",
+ "xlsx_verify.t.wall": "দেয়াল",
+ "xlsx_verify.t.opening": "ওপেনিং",
+ "xlsx_verify.t.room": "কক্ষ",
+ "xlsx_verify.t.slab": "ফ্লোর",
+ "xlsx_verify.t.level": "লেভেল",
+ "xlsx_verify.t.wall_type": "দেয়াল টাইপ",
+ "xlsx_verify.t.slab_type": "ফ্লোর টাইপ",
+ "xlsx_verify.t.col": "কলাম",
+ "xlsx_verify.t.beam": "বিম",
+ "xlsx_verify.t.roof": "ছাদ",
+ "xlsx_verify.t.curtain_wall": "কার্টেন ওয়াল"
+}

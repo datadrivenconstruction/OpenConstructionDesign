@@ -1,0 +1,19 @@
+{
+ "ifc_patch.fallback.source_changed": "未使用补丁：源文件在磁盘上已更改或无法读取。文件已根据模型重写。",
+ "ifc_patch.fallback.sources": "未使用补丁：项目的源文件数量不是一个。文件已根据模型重写。",
+ "ifc_patch.fallback.schema": "未使用补丁：不支持源文件的架构。文件已根据模型重写。",
+ "ifc_patch.fallback.structure": "未使用补丁：无法确认源文件的结构。文件已根据模型重写。",
+ "ifc_patch.fallback.edit": "未使用补丁：编辑无法安全地应用到源文件。文件已根据模型重写。",
+ "ifc_patch.reason.schema": "源文件的架构无法容纳此编辑；该元素保持源文件中的样子",
+ "ifc_patch.reason.prop": "此属性编辑无法在源文件中表达；该值保持源文件中的样子",
+ "ifc_patch.reason.no_export": "此新元素在 IFC 中没有对应表示",
+ "ifc_patch.reason.link": "元素在文件中，但未写入其与材质或类型的链接；已列为未写入",
+ "ifc_patch.drop": "丢弃",
+ "ifc_patch.drop_done": "已丢弃待处理链接：{n}；将不再重试",
+ "ifc_patch.fallback.building": "未使用补丁：新楼层需要源文件中恰好一座建筑，而源文件中没有或有多座。文件已根据模型重写。",
+ "ifc_patch.fallback.types": "未使用补丁：自导入以来楼层、类型或材质已更改，补丁无法写入这些内容。文件已根据模型重写。",
+ "ifc_patch.fallback.zipped": "未使用补丁：压缩的源文件无法打补丁。文件已根据模型重写。",
+ "ifc_patch.fallback.source_kept": "未覆盖源文件：无法确保此次保存可以替换它。此次保存为其旁边的副本。",
+ "ifc_patch.fallback.nested": "未使用补丁：新元素包含嵌套部件（如端口），补丁无法写入。文件已根据模型重写。",
+ "ifc_patch.fallback.shared_part": "未使用补丁：已编辑的楼梯或坡道的某一部件同时被其他元素或关系使用，补丁无法处理。文件已根据模型重写。"
+}

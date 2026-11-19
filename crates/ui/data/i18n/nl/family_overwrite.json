@@ -1,0 +1,16 @@
+{
+ "family_overwrite.ow.title": "Typewaarden van het project vervangen?",
+ "family_overwrite.ow.body": "Laden vervangt {values} in {types}. Geplaatste exemplaren van deze typen: {instances}.",
+ "family_overwrite.ow.values": {
+  "one": "# waarde",
+  "other": "# waarden"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# type",
+  "other": "# typen"
+ },
+ "family_overwrite.ow.list": "Typen: {list}",
+ "family_overwrite.ow.more": "en {n} meer",
+ "family_overwrite.ow.back": "Terug naar bewerken",
+ "family_overwrite.ow.replace": "Waarden vervangen"
+}

@@ -1,0 +1,16 @@
+{
+ "ai.items.all": {
+  "one": "Tất cả # mục",
+  "other": "Tất cả # mục"
+ },
+ "ai.items.all.tip": "Đánh dấu hoặc bỏ đánh dấu mọi mục của kế hoạch",
+ "ai.items.checked": "{n} trong {m} đã đánh dấu",
+ "ai.items.check.tip": "Đưa “{title}” vào Áp dụng",
+ "ai.items.expand": "Hiện phần tử",
+ "ai.items.collapse": "Ẩn phần tử",
+ "ai.items.apply": {
+  "one": "Áp dụng # mục",
+  "other": "Áp dụng # mục"
+ },
+ "ai.items.apply_none": "Áp dụng"
+}

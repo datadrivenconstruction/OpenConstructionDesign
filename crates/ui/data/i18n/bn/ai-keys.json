@@ -1,0 +1,14 @@
+{
+ "ai_keys.header_is_key": "কী Key ঘরে দিন — হেডার সাধারণ লেখায় সংরক্ষিত হয়",
+ "ai_keys.move": "Key-তে সরান",
+ "ai_keys.remove_line": "হেডার থেকে সরান",
+ "ai_keys.save_blocked": "সংরক্ষণের জন্য কী হেডার থেকে সরান",
+ "ai_keys.show": "দেখান",
+ "ai_keys.hide": "লুকান",
+ "ai_keys.copy": "কপি",
+ "ai_keys.tokens": "টোকেন",
+ "ai_keys.presets": "প্রিসেট",
+ "ai_keys.preset_k": "{n}k",
+ "ai_keys.preset_m": "{n}M",
+ "ai_keys.images_on": "সমর্থিত"
+}

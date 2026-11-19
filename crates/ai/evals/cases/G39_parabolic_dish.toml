@@ -1,0 +1,27 @@
+id = "G39_parabolic_dish"
+tier = "hard"
+group = "Any geometry"
+title = "Parabolic dish antenna"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "Design a parabolic dish antenna 18 m in diameter and 4.5 m deep as a steel gridshell on a paraboloid: ring and radial tube members, the axis tilted 30 degrees, the dish standing on its hub ring 8 m above the ground."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "gridshell"
+min = 1.0
+
+[[oracle.count]]
+spec = "gridshell_bar+beam+brace"
+min = 150.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

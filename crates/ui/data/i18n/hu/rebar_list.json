@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "Felfelé",
+ "rebar_list.move_down": "Lefelé",
+ "rebar_list.remove": "Eltávolítás",
+ "rebar_list.zone_remove_last": "Egy zónának legalább egy helyiség kell: az utolsó eltávolításához törölje a zónát",
+ "rebar_list.rebar_empty_title": "Nincs vasalás ebben a modellben",
+ "rebar_list.rebar_empty_hint": "Helyezzen vasalást egy befogadó elembe, és itt ütemezésre kerül.",
+ "rebar_list.rebar_empty_action": "Vasalás elhelyezése"
+}

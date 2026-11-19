@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "اتصال",
+ "settings.ai_status_desc": "مدلی که دستیار هوش مصنوعی استفاده می‌کند؛ کلیدها در انبار امن می‌مانند",
+ "settings.ai_not_connected": "متصل نیست",
+ "settings.ai_connect": "تنظیمات اتصال",
+ "settings.ai_connect_desc": "نشانی، مدل و کلید مدل شخصی شما، ابری یا محلی",
+ "settings.ai_connect_btn": "تنظیمات اتصال…",
+ "settings.ai_panel": "پنل دستیار هوش مصنوعی",
+ "settings.ai_panel_desc": "با متن بپرسید، پلان را بررسی کنید، سپس اعمال کنید",
+ "settings.ai_open_panel": "باز کردن پنل هوش مصنوعی"
+}

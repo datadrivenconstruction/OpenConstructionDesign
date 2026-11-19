@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "Bruk ble stoppet: modellen beholdes som den var",
+ "apply_verify.rolled_back": "Bruk stemte ikke med utkastet og ble tatt tilbake; modellen er uendret. {what}",
+ "apply_verify.diff.missing": "Utkastet viser {what} {kind}, men Bruk gjorde det ikke.",
+ "apply_verify.diff.extra": "Bruk {kind} {what}, som utkastet ikke viser.",
+ "apply_verify.diff.kind": "Utkastet viser {what} {shown}, men Bruk {applied} den.",
+ "apply_verify.diff.value": "{what}: “{col}” ble annerledes enn i utkastet.",
+ "apply_verify.diff.truncated": "Utkastet og den brukte endringen har ulik størrelse.",
+ "apply_verify.diff.unreadable": "Den brukte endringen kunne ikke leses tilbake ({e}).",
+ "apply_verify.no_base": "Bruk ble ikke kjørt: kopien å sjekke utkastet mot mangler. Modellen er uendret; be om utkastet på nytt.",
+ "apply_verify.take_back_failed": "Tilbaketaking mislyktes ({e}): bruk Angre.",
+ "apply_verify.kind.created": "opprettet",
+ "apply_verify.kind.changed": "endret",
+ "apply_verify.kind.deleted": "slettet",
+ "apply_verify.card.type_row": "Type {type} · {n} elementer får endringen"
+}

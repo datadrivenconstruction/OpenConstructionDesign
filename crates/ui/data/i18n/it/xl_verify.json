@@ -1,0 +1,9 @@
+{
+ "xl.msg.base_value": "controllo di rilettura non riuscito, la vecchia cartella di lavoro viene mantenuta: {} ({}) atteso '{}', letto '{}'",
+ "xl.msg.base_missing": "controllo di rilettura non riuscito, la vecchia cartella di lavoro viene mantenuta: il foglio {} non ha una riga per l'id {}",
+ "xl.msg.base_extra": "controllo di rilettura non riuscito, la vecchia cartella di lavoro viene mantenuta: la riga {} non è nel modello",
+ "xl.msg.base_refused": "controllo di rilettura non riuscito, la vecchia cartella di lavoro viene mantenuta: {} ({}) è stato rifiutato: {}",
+ "xl.msg.base_sheet": "controllo di rilettura non riuscito, la vecchia cartella di lavoro viene mantenuta: il foglio {} manca, è vuoto o non è leggibile",
+ "xl.msg.base_newer": "controllo di rilettura non riuscito, la vecchia cartella di lavoro viene mantenuta: {} celle non contengono il valore del modello",
+ "xl.msg.base_unreadable": "controllo di rilettura non riuscito, la vecchia cartella di lavoro viene mantenuta: la nuova cartella di lavoro non può essere letta ({})"
+}

@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "XLSX स्प्रेडशीट में निर्यात: दायरा",
+ "xlsx_scope.intro": "वर्कबुक में क्या जाए चुनें। वापस आयात करने पर केवल ये तत्व बदलते हैं।",
+ "xlsx_scope.base_whole": "पूरा मॉडल",
+ "xlsx_scope.base_level": "सक्रिय लेवल",
+ "xlsx_scope.base_selection": "चयन",
+ "xlsx_scope.categories": "श्रेणियां",
+ "xlsx_scope.cat_walls": "दीवारें",
+ "xlsx_scope.cat_openings": "दरवाज़े",
+ "xlsx_scope.cat_rooms": "कमरे",
+ "xlsx_scope.cat_slabs": "स्लैब",
+ "xlsx_scope.cat_curtains": "कर्टेन वॉल",
+ "xlsx_scope.nothing_selected": "कुछ नहीं चुना गया: पहले तत्व चुनें या कोई और दायरा चुनें।",
+ "xlsx_scope.no_categories": "कम से कम एक श्रेणी चुनें।",
+ "xlsx_scope.no_level": "सक्रिय लेवल नहीं मिला।",
+ "xlsx_scope.export": "निर्यात",
+ "xlsx_scope.preview_scope": "निर्यात किया गया दायरा: {scope}। इसके बाहर के तत्व कभी नहीं बदले या हटाए जाते।"
+}

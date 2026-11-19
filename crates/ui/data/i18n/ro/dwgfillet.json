@@ -1,0 +1,20 @@
+{
+ "dwgfillet.fillet": "Racordare",
+ "dwgfillet.cancel": "Oprire racordare",
+ "dwgfillet.tip": "Faceți clic pe două linii, de partea care se păstrează: ambele sunt tăiate sau prelungite până la colț, cu un arc tangent când raza este mai mare decât zero",
+ "dwgfillet.radius": "Raza racordării",
+ "dwgfillet.radius_tip": "Raza arcului în unități de desen; 0 face un colț ascuțit",
+ "dwgfillet.st.arm_first": "Faceți clic pe prima linie, de partea care se păstrează",
+ "dwgfillet.st.arm_second": "Faceți clic pe a doua linie, de partea care se păstrează",
+ "dwgfillet.st.not_armed": "Alegeți mai întâi Racordare",
+ "dwgfillet.st.click_line": "Faceți clic pe o singură linie a desenului",
+ "dwgfillet.st.other_drawing": "Ambele linii trebuie să aparțină aceluiași desen: începeți din nou",
+ "dwgfillet.st.changed": "Prima linie s-a schimbat: începeți din nou",
+ "dwgfillet.st.same_line": "Alegeți o a doua linie diferită",
+ "dwgfillet.st.parallel": "Liniile sunt paralele și nu se întâlnesc niciodată: nu se poate realiza un colț",
+ "dwgfillet.st.degenerate": "O linie nu are lungime",
+ "dwgfillet.st.no_side": "Partea pe care ați făcut clic nu are lungime față de colț",
+ "dwgfillet.st.too_big": "Raza este prea mare pentru aceste linii: folosiți o rază mai mică",
+ "dwgfillet.st.radius_bad": "Raza trebuie să fie zero sau pozitivă",
+ "dwgfillet.st.done": "Colț realizat"
+}

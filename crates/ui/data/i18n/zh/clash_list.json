@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "全部",
+ "clash_list.only_selected": "仅所选",
+ "clash_list.tolerance": "公差",
+ "clash_list.gap": "间隙",
+ "clash_list.export": "导出",
+ "clash_list.col.volume": "体积",
+ "clash_list.fix.up": "上移",
+ "clash_list.fix.down": "下移",
+ "clash_list.fix.sleeve": "套管",
+ "clash_list.apply_fix": "应用修复",
+ "clash_list.err.tol": "公差：请输入长度（0 或更大），例如 50 或 2 英寸",
+ "clash_list.sleeve_no_host": "套管需要配对中包含墙或楼板",
+ "clash_list.err.gap": "间隙：请输入长度（0 或更大），例如 50 或 2 英寸"
+}

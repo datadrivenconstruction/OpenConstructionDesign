@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "Hỏi AI: {q}",
+ "ai.palette.connect": "Kết nối AI để hỏi",
+ "ai.palette.draft.apply": "Áp dụng bản nháp ({n})",
+ "ai.palette.draft.reject": "Từ chối bản nháp",
+ "ai.palette.draft.next": "Thay đổi bản nháp tiếp theo",
+ "ai.palette.draft.show": "Hiện bản nháp trong góc nhìn",
+ "cmd.ai.next_change": "Thay đổi bản nháp tiếp theo",
+ "cmd.ai.next_change.desc": "Chuyển góc nhìn tới phần tử tiếp theo mà bản nháp thay đổi.",
+ "cmd.ai.show_draft": "Hiện bản nháp AI trong góc nhìn",
+ "cmd.ai.show_draft.desc": "Khớp góc nhìn với mọi thứ bản nháp thay đổi."
+}

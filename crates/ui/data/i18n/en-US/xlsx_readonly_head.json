@@ -1,0 +1,5 @@
+{
+ "xlsx_readonly.read_only_head": "Read-only — Apply will write a copy",
+ "xlsx_readonly.show_in_folder": "Show in folder",
+ "xlsx_readonly.copy_exists": "The copy file already exists. Choose another name or remove it."
+}

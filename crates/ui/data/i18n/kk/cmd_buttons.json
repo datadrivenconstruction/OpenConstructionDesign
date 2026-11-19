@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}, деңгейде",
+ "cmd_buttons.purge.undo": "Жою бір болдырмау қадамы.",
+ "cmd_buttons.unpin.none": "Таңдалғандардың ешқайсысы бекітілмеген",
+ "cmd_buttons.change_type.none": "Алдымен қабырғаларды таңдаңыз: олардың түрі бір қадамда өзгереді",
+ "cmd_buttons.units.metric": "Өлшем бірліктері: метрлік",
+ "cmd_buttons.units.imperial": "Өлшем бірліктері: фут және дюйм",
+ "cmd_buttons.units.back": "Қайта ауысу",
+ "cmd_buttons.underlay.on": "Астыңғы қабат қосулы: төмендегі деңгей бозаңдау көрсетіледі",
+ "cmd_buttons.underlay.off": "Астыңғы қабат өшірулі",
+ "cmd_buttons.underlay.none": "Астыңғы қабат қосулы, бірақ төмендегі деңгейде көрсетуге ештеңе жоқ",
+ "cmd_buttons.zoom_sel.no_shape": "Таңдауда бұл көріністе кадрға алатын пішін жоқ",
+ "cmd_buttons.close.base": "Жоспар және 3D қойындылары ашық қалады; оны жабу үшін кесіндіні, парақты немесе сызба көрінісін ашыңыз",
+ "tool.equipment": "Жабдық",
+ "hint.equipment.place": "Жабдық: орнын таңдаңыз · Esc — шығу",
+ "cmd_buttons.table.opened": "Кесте модель жанында ашылды",
+ "cmd_buttons.circuits.tip": "Осы модельдің электр тізбектерінің тізімін ашу"
+}

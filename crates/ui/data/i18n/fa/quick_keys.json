@@ -1,0 +1,6 @@
+{
+ "quick.keys.rec_hint": "Esc لغو می‌کند · Backspace پاک می‌کند",
+ "quick.keys.row_lost": "{key} اکنون متعلق به «{cmd}» است",
+ "quick.keys.row_took": "{key} از «{cmd}» گرفته شد",
+ "quick.keys.reset_tip": "بازگشت به پیش‌فرض"
+}

@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "Maillages importés",
+ "mat_mesh.mesh.none_selected": "Sélectionnez des maillages importés dans la vue 3D pour leur donner ce matériau.",
+ "mat_mesh.mesh.current": "Premier maillage sélectionné : {material}",
+ "mat_mesh.mesh.current_none": "Le premier maillage sélectionné n'a pas de matériau.",
+ "mat_mesh.mesh.assign": "Affecter aux {n} sélectionnés",
+ "mat_mesh.mesh.assign_tip": "Le style Réaliste affiche la texture de ce matériau sur les maillages sélectionnés",
+ "mat_mesh.mesh.assign_cat": "Affecter à la catégorie {category}",
+ "mat_mesh.mesh.assign_cat_tip": "Chaque maillage importé de cette catégorie sans matériau propre",
+ "mat_mesh.mesh.clear": "Effacer la sélection",
+ "mat_mesh.mesh.clear_tip": "Les maillages sélectionnés reprennent le matériau de leur catégorie ou la couleur unie",
+ "mat_mesh.mesh.clear_cat": "Effacer la catégorie"
+}

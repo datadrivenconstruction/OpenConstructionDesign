@@ -1,0 +1,6 @@
+{
+ "cmd.ui.pane.next": "Neste panel",
+ "cmd.ui.pane.next.desc": "Flytter tastaturfokus til neste synlige panel – prosjektvindu, lerret, egenskaper, chat.",
+ "cmd.ui.pane.prev": "Forrige panel",
+ "cmd.ui.pane.prev.desc": "Flytter tastaturfokus til forrige synlige panel."
+}

@@ -1,0 +1,10 @@
+{
+ "xlsx_dup.dup_undo": "Kararı geri al",
+ "xlsx_dup.dup_undo_tip": "Yeni öğeye dönüştürülen satırlar ({n}) yeniden kimlikleriyle okunur",
+ "xlsx_dup.dup_new": "Düzenlenmiş kopyaları yeni öğeler olarak oluştur",
+ "xlsx_dup.dup_new_tip": "{rows} satırları değerleriyle yeni öğe olur; öğe #{id} değerlerini korur (diğerleriyle birlikte tek geri alma adımı)",
+ "xl.msg.dup_same": "yinelenen kimlik {}: satır {} ile aynı değerler; satır yoksayıldı",
+ "xl.msg.dup_unchanged": "yinelenen kimlik {}: dışa aktarılan satırın değişmemiş kopyası; satır yoksayıldı",
+ "xl.msg.dup_conflict": "{} kimliği {} satırlarında farklı değerlerle yer alıyor; bu kimlik için hiçbir şey uygulanmadı",
+ "xl.msg.dup_conflict_keep": "{} kimliği {} satırlarında farklı değerlerle yer alıyor; bu kimlik için hiçbir şey uygulanmadı — bir satır bırakın"
+}

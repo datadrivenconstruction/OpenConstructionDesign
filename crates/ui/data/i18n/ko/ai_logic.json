@@ -1,0 +1,6 @@
+{
+ "ai_toast.toast_not_refreshed": "실행 취소 단계 {n}로 적용되었지만 뷰가 갱신되지 않았습니다 (Ctrl+Z로 실행 취소 가능). 뷰를 다시 불러오세요.",
+ "ai.optx.reload_failed": "옵션 “{name}”이 적용되고 저장되었지만 뷰를 다시 불러오지 못했습니다: {e}",
+ "ai.cmp.stale": "오래됨",
+ "ai.cmp.stale_tip": "이 옵션은 이전 모델 상태로 만들어졌습니다. 적용하려면 다시 생성하세요."
+}

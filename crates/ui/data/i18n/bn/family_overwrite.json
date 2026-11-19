@@ -1,0 +1,16 @@
+{
+ "family_overwrite.ow.title": "প্রকল্পের ধরনের মান প্রতিস্থাপন করবেন?",
+ "family_overwrite.ow.body": "লোড করলে {types} এর {values} প্রতিস্থাপিত হবে। এই ধরনের স্থাপিত উপাদান: {instances}।",
+ "family_overwrite.ow.values": {
+  "one": "# মান",
+  "other": "# টি মান"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# ধরন",
+  "other": "# টি ধরন"
+ },
+ "family_overwrite.ow.list": "ধরন: {list}",
+ "family_overwrite.ow.more": "এবং আরও {n} টি",
+ "family_overwrite.ow.back": "সম্পাদনায় ফিরুন",
+ "family_overwrite.ow.replace": "মান প্রতিস্থাপন করুন"
+}

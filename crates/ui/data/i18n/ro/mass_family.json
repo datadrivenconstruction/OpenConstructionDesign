@@ -1,0 +1,9 @@
+{
+ "cmd.mass.timeline_family": "Istoria în familie",
+ "cmd.mass.timeline_family.desc": "Creează o familie de componente din istoria de construcție a formei selectate. Parametrii istoriei devin parametrii familiei.",
+ "mass_family.done": "Familia {name} a fost creată cu {n} parametri",
+ "mass_family.refused": "Familia nu a fost creată: {e}",
+ "mass_family.no_mass": "Mai întâi selectează o formă parametrică",
+ "mass_family.add_modifier": "Adaugă modificator",
+ "mass_family.needs_faces": "Sunt necesare fețe selectate: folosește unealta din fila „Volumetrie”"
+}

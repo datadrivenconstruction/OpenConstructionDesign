@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D",
+ "phases.current_mark": "одоогийн",
+ "phases.make_current": "Одоогийн болгох",
+ "phases.col_phase": "Үе шат",
+ "phases.col_filter": "Шүүлтүүр",
+ "phases.presets": "Планы урьдчилсан тохиргоо",
+ "phases.del_title": "Үе шат устгах",
+ "phases.del_text": "“{name}” үе шатыг устгах уу? Түүний элементүүд доор сонгосон үе шат руу шилжинэ.",
+ "phases.del_into": "Элементүүдийг шилжүүлэх",
+ "phases.del_ok": "Устгах",
+ "phases.col_kind": "Элементийн төрөл",
+ "phases.col_count": "Тоо",
+ "phases.col_volume": "Эзлэхүүн"
+}

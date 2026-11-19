@@ -1,0 +1,6 @@
+walls=[(0,0)-(6,0)]
+zoom=100
+# SNAP-6: the hit is held out to 1.5 r (0.18 m), then released
+tool(WA) move(5.95,0) → snap=Endpoint p=(6,0)
+move(5.84,0) → snap=Endpoint p=(6,0)
+move(5.70,0) → snap=WallAxis

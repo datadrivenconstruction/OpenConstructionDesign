@@ -1,0 +1,8 @@
+{
+ "drafts.drafts.head": "Avatud redaktorites on muudatusi, mida projektis veel pole:",
+ "drafts.draft.family": "Perekond „{name}“",
+ "drafts.draft.line": "Joonte teek: {name}",
+ "drafts.draft.styles": "Vaatevahemiku joonestiilid",
+ "drafts.btn.save_all": "Salvesta kõik",
+ "drafts.drafts.refused": "Mustandit ei saanud salvestada. Midagi ei suletud; mustandiga redaktor on avatud."
+}

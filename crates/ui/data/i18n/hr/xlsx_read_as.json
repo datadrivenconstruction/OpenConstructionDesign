@@ -1,0 +1,11 @@
+{
+ "xlsx_read_as.title": "Preimenovani list?",
+ "xlsx_read_as.detail": "List {found} ima stupce lista {sheet} ({score} % podudaranja). Ne čita se ako ga ne odaberete.",
+ "xlsx_read_as.detail_many": "Više listova odgovara {sheet}: {found}. Ništa nije odabrano za vas; odaberite onaj koji treba pročitati.",
+ "xlsx_read_as.read_as": "Čitaj „{found}“ kao {sheet}",
+ "xlsx_read_as.read_as_tip": "Samo za ovaj uvoz. List se ne preimenuje; Primijeni u njega upisuje samo id-e novih redaka.",
+ "xlsx_read_as.active": "List „{found}“ čita se kao {sheet} u ovom uvozu.",
+ "xlsx_read_as.undo": "Ne čitaj kao {sheet}",
+ "xlsx_read_as.undo_tip": "Natrag na nazive listova kakvi jesu u radnoj knjizi.",
+ "xlsx_read_as.not_rewritten": "Radna knjiga nije ponovno zapisana: preimenovani list čita se pod svojim nazivom. Vratite mu naziv da radna knjiga ostane sinkronizirana."
+}

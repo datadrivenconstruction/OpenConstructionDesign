@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "Байланыш",
+ "settings.ai_status_desc": "AI жардамчысы колдонгон модель; ачкычтар коопсуз сактагычта калат",
+ "settings.ai_not_connected": "Туташкан эмес",
+ "settings.ai_connect": "Байланыш жөндөөлөрү",
+ "settings.ai_connect_desc": "Өзүңүздүн модели, булуттуку же жергиликтүүбү: дарек, модель жана ачкыч",
+ "settings.ai_connect_btn": "Байланыш жөндөөлөрү…",
+ "settings.ai_panel": "AI жардамчысынын панели",
+ "settings.ai_panel_desc": "Сөз менен сурап, планды карап чыгып, колдонуңуз",
+ "settings.ai_open_panel": "AI панелин ачуу"
+}

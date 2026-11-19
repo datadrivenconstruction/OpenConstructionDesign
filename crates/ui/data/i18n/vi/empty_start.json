@@ -1,0 +1,8 @@
+{
+ "empty.start_recent.title": "Chưa có dự án gần đây",
+ "empty.start_recent.hint": "Các dự án bạn đã mở sẽ hiển thị ở đây. Hãy bắt đầu với mô hình mẫu.",
+ "empty.start_recent.action": "Mở mẫu",
+ "start.recent_open_file": "Mở tệp…",
+ "start.forgot": "Đã xóa khỏi danh sách gần đây: {name}",
+ "start.forgot_undo": "Hoàn tác"
+}

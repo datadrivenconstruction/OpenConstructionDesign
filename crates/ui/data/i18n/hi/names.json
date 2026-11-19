@@ -1,0 +1,19 @@
+{
+ "names.level": "लेवल {n}",
+ "names.slab": "स्लैब 200",
+ "names.roof_slab": "छत 200",
+ "names.sheet.plan_section": "फ़्लोर 1 प्लान और सेक्शन",
+ "names.sheet.plan_view": "फ़्लोर 1 प्लान",
+ "names.sheet.site_plan": "साइट प्लान",
+ "names.sheet_set.issue": "इश्यू 1",
+ "names.title.owner": "प्रोजेक्ट लिमिटेड",
+ "names.title.creator": "A. Ivanov",
+ "names.title.approver": "P. Petrov",
+ "names.title.document_type": "ड्रॉइंग",
+ "names.title.status": "प्रगति में",
+ "names.revision.date": "4 नवंबर 2026",
+ "names.revision.description": "समीक्षा के लिए जारी",
+ "names.revision.author": "AI",
+ "names.demo.no_levels": "कोई लेवल नहीं",
+ "names.demo.no_sheet": "शीट"
+}

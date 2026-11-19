@@ -1,0 +1,12 @@
+{
+ "opt.stair.straight": "Gerade",
+ "opt.stair.l": "L",
+ "opt.stair.u": "U",
+ "opt.stair.gap": "Lauflücke",
+ "hint.stair.corner": "L-Treppe: Wendeecke wählen · Rücktaste — letzten Punkt entfernen · Esc — letzten Punkt entfernen; ohne Punkte abbrechen",
+ "hint.stair.side": "Treppe: Seite des zweiten Laufs wählen · Rücktaste — letzten Punkt entfernen · Esc — letzten Punkt entfernen; ohne Punkte abbrechen",
+ "tool.stair.flights": "{n} Steigungen (gesamt {m})",
+ "tool.stair.err_split": "Jeder Lauf braucht mindestens 2 Steigungen: erster Lauf hat {n} von {m}",
+ "tool.stair.err_comfort": "Steigung und Auftritt verletzen die Komfortregel (2S + A)",
+ "tool.stair.err_input": "Treppengröße außerhalb des Bereichs: Breite, Höhe und Podest prüfen"
+}

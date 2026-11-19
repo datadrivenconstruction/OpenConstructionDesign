@@ -1,0 +1,7 @@
+{
+ "xlsx_project.title": "Tämä työkirja on viety toisesta projektista",
+ "xlsx_project.body": "Työkirja ”{file}” kuuluu toiseen projektiin. Elementtien tunnukset eroavat projektien välillä, joten sen rivit muuttaisivat tässä muita elementtejä. Mitään ei luettu tähän projektiin.",
+ "xlsx_project.export_new": "Vie tämä projekti uuteen työkirjaan",
+ "xlsx_project.close": "Sulje",
+ "xlsx_project.no_project": "Tämä työkirja ei kerro, mihin projektiin se kuuluu: tarkista, että se on viety tästä projektista."
+}

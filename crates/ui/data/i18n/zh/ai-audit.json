@@ -1,0 +1,22 @@
+{
+ "ai.audit.tokens": "{n} 个 token",
+ "ai.audit.filter.all": "全部",
+ "ai.audit.filter.ai": "AI",
+ "ai.audit.filter.me": "我",
+ "ai.audit.search": "搜索更改",
+ "ai.audit.search.clear": "清除搜索",
+ "ai.audit.show_all": "显示全部",
+ "ai.audit.empty.hint": "由模型或智能体起草或应用的更改会显示在此处，每项均可撤回。",
+ "ai.audit.no_match": "没有符合筛选条件的更改。",
+ "ai.audit.show.tip": "选中并显示此更改涉及的元素",
+ "ai.audit.revert.ask": "撤回“{what}”？{change}。",
+ "ai.audit.revert.elements": {
+  "other": "# 个元素发生更改",
+  "one": "# 个元素发生更改"
+ },
+ "ai.audit.revert.keeps": "较新的更改保留不变。撤回为一步撤销。",
+ "ai.audit.cancel": "取消",
+ "ai.audit.toast.reverted": "已撤回：{what}",
+ "ai.audit.toast.undone": "已撤销：{what}",
+ "ai.audit.redo": "重做"
+}

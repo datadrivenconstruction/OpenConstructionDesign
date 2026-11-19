@@ -1,0 +1,4 @@
+{
+ "family_load.refused": "Familia „{name}” nu poate fi încărcată: {msg}. Nimic nu a fost încărcat în proiect; modificările dvs. sunt păstrate.",
+ "family_load.loaded_all": "{n} familii încărcate într-un singur pas: {names}"
+}

@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "Întreabă AI: {q}",
+ "ai.palette.connect": "Conectează AI ca să întrebi",
+ "ai.palette.draft.apply": "Aplică ciorna ({n})",
+ "ai.palette.draft.reject": "Respinge ciorna",
+ "ai.palette.draft.next": "Următoarea modificare din ciornă",
+ "ai.palette.draft.show": "Arată ciorna în vedere",
+ "cmd.ai.next_change": "Următoarea modificare din ciornă",
+ "cmd.ai.next_change.desc": "Mută vederea la următorul element pe care îl modifică ciorna.",
+ "cmd.ai.show_draft": "Arată ciorna AI în vedere",
+ "cmd.ai.show_draft.desc": "Încadrează vederea pe tot ce modifică ciorna."
+}

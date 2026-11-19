@@ -1,0 +1,19 @@
+{
+ "names.level": "Etage {n}",
+ "names.slab": "Dæk 200",
+ "names.roof_slab": "Tag 200",
+ "names.sheet.plan_section": "Gulv 1 plan og snit",
+ "names.sheet.plan_view": "Gulv 1 plan",
+ "names.sheet.site_plan": "Situationsplan",
+ "names.sheet_set.issue": "Udgave 1",
+ "names.title.owner": "Projekt ApS",
+ "names.title.creator": "A. Hansen",
+ "names.title.approver": "P. Jensen",
+ "names.title.document_type": "Tegning",
+ "names.title.status": "Under arbejde",
+ "names.revision.date": "4. nov. 2026",
+ "names.revision.description": "Udsendt til gennemsyn",
+ "names.revision.author": "AI",
+ "names.demo.no_levels": "ingen etager",
+ "names.demo.no_sheet": "ark"
+}

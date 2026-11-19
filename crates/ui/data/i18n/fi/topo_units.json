@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "Yksiköt",
+ "topo_units.unit": "Yksiköt tiedostossa",
+ "topo_units.unit.m": "m",
+ "topo_units.unit.cm": "cm",
+ "topo_units.unit.mm": "mm",
+ "topo_units.unit.ft": "ft",
+ "topo_units.unit.usft": "US survey -jalka",
+ "topo_units.unit.in": "in",
+ "topo_units.unit.from_file": "Tiedosto nimeää yksikkönsä: {unit}",
+ "topo_units.unit.suggested": "Tiedosto ei nimeä yksiköitä. Laajuuden perusteella ehdotettu: {unit} — tarkista alla oleva tulos",
+ "topo_units.extent": "Tulos projektin yksiköissä: {x} × {y} {u} pohjapiirroksessa, korkeusväli {z} {u}",
+ "topo_units.extent.none": "Tulos: ei tuotavaa näillä valinnoilla",
+ "topo_units.extent.check": "Tämä ei näytä tontilta: tarkista yksiköt"
+}

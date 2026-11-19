@@ -1,0 +1,50 @@
+id = "S01_house_brief"
+tier = "smoke"
+group = ""
+title = "House from a free-text brief"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "Design a two-storey family house for four people, about 160 m2 in total: open kitchen and living room, three bedrooms, two bathrooms, a study and a single garage on the ground floor, gable roof. Answer in English and build it."
+
+[[oracle.count]]
+spec = "level"
+min = 2.0
+
+[[oracle.count]]
+spec = "room"
+min = 8.0
+
+[[oracle.count]]
+spec = "roof"
+min = 1.0
+
+[[oracle.count]]
+spec = "stair"
+min = 1.0
+
+[[oracle.count]]
+spec = "opening"
+min = 10.0
+
+[[oracle.count]]
+spec = "level"
+min = 2.0
+max = 3.0
+
+[[oracle.count]]
+spec = "room:bed"
+min = 3.0
+
+[[oracle.count]]
+spec = "room:bath|wc|toilet|shower"
+min = 2.0
+
+[[oracle.count]]
+spec = "room:kitchen"
+min = 1.0
+
+[[oracle.count]]
+spec = "room:garage"
+min = 1.0

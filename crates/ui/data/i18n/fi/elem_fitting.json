@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "Liitos",
+ "elem.mep_fitting.many": "Liitokset",
+ "elem.mep_fitting.kind.elbow": "Mutka",
+ "elem.mep_fitting.kind.tee": "T-haara",
+ "elem.mep_fitting.kind.cross": "Risti",
+ "elem.mep_fitting.kind.transition": "Siirtymä",
+ "elem.mep_fitting.kind.cap": "Päätykappale",
+ "elem.mep_fitting.size": "Koko",
+ "elem.mep_fitting.at": "Sijainti",
+ "elem.mep_fitting.runs": "Johto {n}",
+ "elem.mep_fitting.edit_run": "Muokkaa johtoa",
+ "elem.mep_fitting.select_runs": "Valitse sen johdot",
+ "elem.mep_fitting.derived": "Liitos seuraa johtojaan: kun muutat johtoa, liitos muuttuu sen mukana.",
+ "elem.mep_fitting.no_delete": "Liitosta ei voi poistaa tai siirtää yksinään. Muokkaa tai poista sen johdot.",
+ "elem.mep_fitting.hint": "Napsauta pohjapiirroksen liitosta nähdäksesi sen johdot.",
+ "elem.mep_fitting.picked": "Valitut liitokset: {n}"
+}

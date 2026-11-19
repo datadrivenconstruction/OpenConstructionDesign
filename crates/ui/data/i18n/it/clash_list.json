@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "Tutti",
+ "clash_list.only_selected": "Solo selezionati",
+ "clash_list.tolerance": "Tolleranza",
+ "clash_list.gap": "Spazio",
+ "clash_list.export": "Esporta",
+ "clash_list.col.volume": "Volume",
+ "clash_list.fix.up": "Sposta su",
+ "clash_list.fix.down": "Sposta giù",
+ "clash_list.fix.sleeve": "Manicotto",
+ "clash_list.apply_fix": "Applica correzione",
+ "clash_list.err.tol": "Tolleranza: inserisci una lunghezza (0 o più), es. 50 o 2 in",
+ "clash_list.sleeve_no_host": "Il manicotto richiede un muro o un solaio nella coppia",
+ "clash_list.err.gap": "Spazio: inserisci una lunghezza (0 o più), es. 50 o 2 in"
+}

@@ -1,0 +1,5 @@
+{
+ "drafts_overwrite.ow.project": "Das Speichern des Projekts wartet auf diese Antwort. Ersetzen Sie die Werte, um weiter zu speichern; „Zurück zur Bearbeitung“ behält alle Änderungen und schreibt nichts.",
+ "drafts_overwrite.drafts.ow_wait": "Speichern wartet auf Ihre Antwort im Familieneditor: Das Laden einer Familie würde Werte des Projekttyps ersetzen. Nichts wurde geschlossen.",
+ "drafts_overwrite.drafts.ow_back": "Speichern abgebrochen: Werte des Projekttyps wurden beibehalten, die Familienbearbeitungen sind noch offen. Nichts wurde geschlossen."
+}

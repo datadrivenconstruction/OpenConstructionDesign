@@ -1,0 +1,9 @@
+{
+ "drafts.draft.view": "「{name}」のビューのグラフィック",
+ "drafts.draft.filter": "ビューフィルタ「{name}」",
+ "drafts.draft.filter_new": "新しいビューフィルタ",
+ "drafts.draft.object_styles": "オブジェクトのスタイル",
+ "drafts.draft.material": "マテリアル「{name}」",
+ "drafts.draft.type": "タイプ「{name}」",
+ "drafts.draft.params": "ファミリ「{name}」のパラメータ"
+}

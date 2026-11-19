@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "1 سیٹ شامل کریں",
+ "rebar_sets.add_n": "{n} سیٹ شامل کریں",
+ "rebar_sets.pick.search": "بار کی قسمیں تلاش کریں",
+ "rebar_sets.pick.empty": "کوئی ملتی جلتی بار قسم نہیں",
+ "rebar_sets.unit.deg": "°"
+}

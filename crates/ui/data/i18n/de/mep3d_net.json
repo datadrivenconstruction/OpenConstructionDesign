@@ -1,0 +1,13 @@
+{
+ "mep.sys.duct": "Zuluft S1",
+ "mep.sys.pipe": "Kaltwasser C1",
+ "mep.sys.tray": "Strom",
+ "mep.round": "Rund",
+ "mep.material": "Material",
+ "mep3d.elevation": "Höhe ab Geschoss",
+ "mep3d.slope": "Gefälle",
+ "mep3d.shape": "Form",
+ "mep3d.shape.rect": "Rechteckig",
+ "mep3d.shape.round": "Rund",
+ "mep3d.shape.oval": "Flachoval"
+}

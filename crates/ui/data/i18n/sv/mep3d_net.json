@@ -1,0 +1,13 @@
+{
+ "mep.sys.duct": "Tilluft S1",
+ "mep.sys.pipe": "Kallvatten C1",
+ "mep.sys.tray": "Kraft",
+ "mep.round": "Rund",
+ "mep.material": "Materialtyp",
+ "mep3d.elevation": "Höjd från nivå",
+ "mep3d.slope": "Lutning",
+ "mep3d.shape": "Form",
+ "mep3d.shape.rect": "Rektangulär",
+ "mep3d.shape.round": "Rund",
+ "mep3d.shape.oval": "Platt oval"
+}

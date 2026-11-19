@@ -1,0 +1,5 @@
+{
+ "drafts_overwrite.ow.project": "Salvar o projeto aguarda esta resposta. Substitua os valores para continuar salvando; Voltar à edição mantém todas as edições e não grava nada.",
+ "drafts_overwrite.drafts.ow_wait": "O salvamento aguarda sua resposta no editor de família: carregar uma família substituiria os valores de tipo do projeto. Nada foi fechado.",
+ "drafts_overwrite.drafts.ow_back": "Salvamento interrompido: os valores de tipo do projeto foram mantidos e as edições da família continuam abertas. Nada foi fechado."
+}

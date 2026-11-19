@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "Elevasi {t} tidak diambil ({why}). Tidak ada yang diubah",
+ "host_shape.shape.elev_prompt_in": "elevasi, ft-in…",
+ "host_shape.shape.elev_in": "{v} in"
+}

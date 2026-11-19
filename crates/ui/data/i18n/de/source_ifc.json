@@ -1,0 +1,7 @@
+{
+ "src.field.kids": "Untergeordnete Zeilen (Paneele, Eckpunkte)",
+ "src.kids.mine": "{n} untergeordnete Zeilen, hier geändert",
+ "src.kids.changed": "untergeordnete Zeilen hier geändert",
+ "src.kids.theirs": "untergeordnete Zeilen in der Datei geändert",
+ "src.kids.take_tip": "Der nächste Import übernimmt die untergeordneten Zeilen der Datei; sie werden jetzt nicht angewendet."
+}

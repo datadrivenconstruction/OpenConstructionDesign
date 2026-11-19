@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "Ελεύθερη επιφάνεια",
+ "cmd.mass.panelize": "Διαχωρισμός σε πάνελ",
+ "cmd.mass.surface_shell": "Στέγη επί επιφάνειας",
+ "cmd.mass.thicken": "Πάχος",
+ "hint.mass.freeform.first": "Ελεύθερη επιφάνεια: πρώτη γωνία του ορθογωνίου της κάτοψης · πληκτρολογήστε το ύψος · Esc — ακύρωση",
+ "hint.mass.freeform.next": "Ελεύθερη επιφάνεια: αντίθετη γωνία · πληκτρολογήστε το ύψος · Esc — ακύρωση",
+ "hint.mass.panelize.first": "Πάνελ: επιλέξτε ελεύθερη επιφάνεια στο 3D · Esc — ακύρωση",
+ "hint.mass.panelize.value": "Πάνελ: πληκτρολογήστε το μέγεθος του πάνελ · Enter — εφαρμογή · Esc — ακύρωση",
+ "hint.mass.surface_shell.first": "Στέγη επί επιφάνειας: επιλέξτε ελεύθερη επιφάνεια στο 3D · Esc — ακύρωση",
+ "hint.mass.surface_shell.value": "Στέγη επί επιφάνειας: πληκτρολογήστε το πάχος · Enter — εφαρμογή · Esc — ακύρωση",
+ "hint.mass.thicken.first": "Πάχος: επιλέξτε ελεύθερη επιφάνεια στο 3D · Esc — ακύρωση",
+ "hint.mass.thicken.value": "Πάχος: πληκτρολογήστε το πάχος (0 — χωρίς πάχος) · Enter — εφαρμογή · Esc — ακύρωση",
+ "status.mass.pick_surface": "Επιλέξτε ελεύθερη επιφάνεια",
+ "status.mass.freeform_small": "Το ορθογώνιο είναι πολύ μικρό: τουλάχιστον 0,5 μ. σε κάθε διάσταση",
+ "name.mass.freeform": "Ελεύθερη επιφάνεια",
+ "rgroup.mass_free": "Προχωρημένα"
+}

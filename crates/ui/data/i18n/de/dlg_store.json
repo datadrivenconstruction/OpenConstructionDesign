@@ -1,0 +1,10 @@
+{
+ "dlg.dw.store.unloaded": "Zeichnung „{name}“ konnte nicht aus dem Projekt gelesen werden und bleibt in der Datei unverändert",
+ "dlg.dw.store.source_missing": "Zeichnung „{name}“: die Quelldatei wurde nicht gefunden, angezeigt wird die im Projekt gespeicherte Kopie",
+ "dlg.dw.store.source_changed": "Zeichnung „{name}“: die Quelldatei wurde seit der Platzierung geändert, angezeigt wird die im Projekt gespeicherte Kopie",
+ "dlg.dw.store.unreadable": "Die im Projekt gespeicherten platzierten Zeichnungen können nicht gelesen werden",
+ "dlg.dw.store.not_saved": "Zeichnungen werden nicht gespeichert: {why}",
+ "dlg.dw.store.why_read": "die im Projekt gespeicherten platzierten Zeichnungen können nicht gelesen werden",
+ "dlg.dw.store.why_write": "die Projektdatei konnte nicht aktualisiert werden",
+ "dlg.dw.store.missing_in_file": "Die gespeicherte Datei enthält nicht alle platzierten Zeichnungen"
+}

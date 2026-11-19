@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "{total}개 중 {done}개 인식 중",
+ "mesh_recognize.all": "전체 {n}",
+ "mesh_recognize.only_confident": "신뢰도 높은 항목만",
+ "mesh_recognize.confident_tip": "종류가 카테고리와 일치하고 신뢰도가 {pct}% 이상인 행을 선택",
+ "mesh_recognize.row_hint": "행을 클릭하여 선택합니다. 화살표 키로 이동, Enter로 선택.",
+ "mesh_recognize.kind_for": "{name}의 종류",
+ "mesh_recognize.source": "원본 메시",
+ "mesh_recognize.keep": "메시 유지",
+ "mesh_recognize.replace": "메시 바꾸기",
+ "mesh_recognize.convert_keep": "{n}개 변환",
+ "mesh_recognize.convert_remove": "{n}개 변환하고 메시 제거",
+ "mesh_recognize.creates": "{n}개 생성 예정: {kinds}",
+ "mesh_recognize.creates_none": "아직 선택된 항목이 없습니다",
+ "mesh_recognize.stay": "원본 메시 {n}개는 모델에 남습니다",
+ "mesh_recognize.removed": "원본 메시 {n}개가 제거됩니다. 실행 취소로 되돌릴 수 있습니다."
+}

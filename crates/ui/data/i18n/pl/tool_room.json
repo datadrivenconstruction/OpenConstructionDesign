@@ -1,0 +1,9 @@
+{
+ "tool.room": "Pomieszczenie",
+ "tool.room.name": "Pomieszczenie",
+ "room_tool.room.name": "Nazwa",
+ "hint.room.place": "Kliknij wewnątrz zamkniętej pętli ścian, aby utworzyć pomieszczenie · Esc — wyjdź",
+ "tool.err.room_open": "Obszar nie jest zamknięty: zamknij pętlę ścian lub dodaj separator pomieszczenia",
+ "tool.err.room_check": "Nie można sprawdzić pomieszczeń tego poziomu",
+ "tool.err.room_exists": "W tej pętli jest już pomieszczenie"
+}

@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "Butas ng dormer",
+ "cmd.arch.roof_opening": "Opening sa bubong",
+ "cmd.arch.roof_extrusion": "Bubong sa pamamagitan ng extrusion",
+ "cmd.arch.ceiling_opening": "Opening sa ceiling",
+ "cmd.str.slab_opening": "Opening sa floor",
+ "cmd.ctx.wall.detach": "Ihiwalay ang tuktok",
+ "cmd.ctx.floor.sketch": "I-edit ang boundary",
+ "cmd.ctx.floor.shape": "I-edit ang hugis",
+ "host_shape.shape.elev_prompt": "elevasyon, mm…",
+ "host_shape.shape.elev_mm": "{v} mm",
+ "host_shape.sketch.no_host": "walang host sa ilalim ng boundary sa level na ito",
+ "host_shape.issue.roof": "bubong {id}: {e}",
+ "host_shape.issue.ceiling": "kisame {id}: {e}",
+ "host_shape.status.select_slab": "pumili ng slab",
+ "host_shape.status.select_walls": "pumili ng mga pader",
+ "host_shape.status.no_roof_or_level": "walang bubong o level sa itaas",
+ "host_shape.status.top_attached": "nakakabit na ang tuktok ng mga pader",
+ "host_shape.status.top_detached": "naihiwalay na ang tuktok ng mga pader",
+ "host_shape.status.straight_wall": "kailangan ang tuwid na pader",
+ "host_shape.status.roof_extruded": "nagawa ang bubong sa pamamagitan ng extrusion",
+ "warn.kind.cut": "Hindi nabuo ang cut o attachment"
+}

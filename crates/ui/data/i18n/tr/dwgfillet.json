@@ -1,0 +1,20 @@
+{
+ "dwgfillet.fillet": "Köşe yuvarlama",
+ "dwgfillet.cancel": "Köşe yuvarlamayı durdur",
+ "dwgfillet.tip": "Tutulacak taraflardaki iki çizgiye tıklayın: ikisi de köşeye kırpılır veya uzatılır; yarıçap sıfırdan büyükse teğet bir yay eklenir",
+ "dwgfillet.radius": "Köşe yarıçapı",
+ "dwgfillet.radius_tip": "Yayın çizim birimindeki yarıçapı; 0 keskin köşe yapar",
+ "dwgfillet.st.arm_first": "Tutulacak tarafta ilk çizgiye tıklayın",
+ "dwgfillet.st.arm_second": "Tutulacak tarafta ikinci çizgiye tıklayın",
+ "dwgfillet.st.not_armed": "Önce Köşe yuvarlama'yı seçin",
+ "dwgfillet.st.click_line": "Çizimde tek bir çizgiye tıklayın",
+ "dwgfillet.st.other_drawing": "İki çizgi de aynı çizime ait olmalı: baştan başlayın",
+ "dwgfillet.st.changed": "İlk çizgi değişti: baştan başlayın",
+ "dwgfillet.st.same_line": "Farklı bir ikinci çizgi seçin",
+ "dwgfillet.st.parallel": "Çizgiler paralel ve hiç kesişmiyor: köşe oluşturulamaz",
+ "dwgfillet.st.degenerate": "Bir çizginin uzunluğu yok",
+ "dwgfillet.st.no_side": "Tıklanan tarafın köşeden uzunluğu yok",
+ "dwgfillet.st.too_big": "Yarıçap bu çizgiler için çok büyük: daha küçük bir yarıçap kullanın",
+ "dwgfillet.st.radius_bad": "Yarıçap sıfır veya pozitif olmalı",
+ "dwgfillet.st.done": "Köşe oluşturuldu"
+}

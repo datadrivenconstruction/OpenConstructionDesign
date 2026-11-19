@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "Vastaava tyyppi",
+ "cmd.mod.match_type.short": "Vastaava tyyppi",
+ "cmd.mod.match_type.desc": "Valitse seinä, lattia, pilari tai palkki ja napsauta sitten muita samaa luokkaa olevia antaaksesi niille sen tyypin. Vedä ikkuna soveltaaksesi kaikkiin sen sisällä. Esc poistaa lähteen.",
+ "hint.match_type.pick": "Vastaava tyyppi: valitse seinä, lattia, pilari tai palkki · Esc — poistu",
+ "hint.match_type.apply": "Vastaava tyyppi: napsauta kohteita tai vedä ikkuna · Esc — toinen lähde",
+ "match_type.kind.wall": "seinä",
+ "match_type.kind.slab": "lattia",
+ "match_type.kind.column": "pilari",
+ "match_type.kind.beam": "palkki",
+ "match_type.refuse.category": "Muu luokka: tämän tyypin voi saada vain {cat}",
+ "match_type.refuse.curtain": "Verhoseinä: sen tyyppiä ei sovelleta tähän",
+ "match_type.refuse.pinned": "Kiinnitetty: poista kiinnitys tyypin muuttamiseksi",
+ "match_type.pick_bad": "Valitse lähteeksi seinä, lattia, pilari tai palkki",
+ "match_type.same": "Jo tämä tyyppi",
+ "match_type.done": "Tyyppi käytetty: {n}",
+ "match_type.done_skipped": "Tyyppi käytetty: {n}, ohitettu (kiinnitetty tai verho): {skipped}",
+ "match_type.failed": "Tyyppiä ei muutettu: {err}"
+}

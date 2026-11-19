@@ -1,0 +1,8 @@
+brief = "Pump group of a plant: one or two pumps on a frame as nested families, a parameter for the number of pumps, inlet and outlet pipe connections."
+category = "equipment"
+must = param PumpCount
+must = nests 2
+must = visible PumpB
+must = ports 2
+must = port pipe 2
+must = solids >= 1

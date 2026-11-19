@@ -1,0 +1,18 @@
+{
+ "undo.entry_later": "واگرد نشد: بعد از آن تغییر دیگری ایجاد شده. ابتدا آن را واگرد کنید.",
+ "undo.entry_gone": "واگرد نشد: این تغییر قبلاً واگرد شده یا دیگر در تاریخچه نیست.",
+ "undo.entry_busy": "ابتدا ترسیم فعلی را تمام یا لغو کنید، سپس واگرد کنید.",
+ "quick.hud.more": "بیشتر در ویژگی‌ها: {names}",
+ "sheet_tools.sheet.more": "ابزارهای بیشتر برگه",
+ "job.of": "{d} از {t}",
+ "job.of.mb": "{d} از {t} MB",
+ "job.left.under_minute": "کمتر از یک دقیقه مانده",
+ "job.left.minutes": "حدود {n} دقیقه مانده",
+ "sheet_tools.start.units": "واحدها",
+ "sheet_tools.print.save": {
+  "one": "ذخیره # برگه",
+  "other": "ذخیره # برگه"
+ },
+ "sheet_tools.sets.delete_ask": "مجموعه «{name}» حذف شود؟ برگه‌هایش در پروژه می‌مانند.",
+ "sheet_tools.keep": "نگه‌داشتن"
+}

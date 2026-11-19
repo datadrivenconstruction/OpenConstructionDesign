@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "Ångra: {what}",
+ "undo_label.redo_what": "Gör om: {what}",
+ "undo_label.undo_none": "Inget att ångra",
+ "undo_label.redo_none": "Inget att göra om"
+}

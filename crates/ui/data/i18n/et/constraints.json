@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "Hoiab selle seina igal muutmisel praeguse pikkuse",
+ "constraints.con.tip.lock_dist": "Hoiab kahe seina vahelise kauguse igal muutmisel",
+ "constraints.con.tip.equal": "Hoiab valitud seinte vahelised sammud võrdsed",
+ "constraints.con.tip.align": "Hoiab mõlemad seinad ühel joonel",
+ "constraints.con.tip.parallel": "Hoiab seinad paralleelsed",
+ "constraints.con.tip.perp": "Hoiab seinad täisnurga all",
+ "constraints.con.tip.align_grid": "Hoiab seina lähimal telgjoonel",
+ "constraints.con.tip.lock_dist_grid": "Hoiab seina ja lähima telgjoone vahelise kauguse",
+ "constraints.con.tip.level_gap": "Hoiab korruste vahelise vahe",
+ "constraints.con.tip.top_to_level": "Hoiab seina ülaserva ülemise korruse tasemel"
+}

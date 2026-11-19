@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "Duplicar folha com vistas",
+ "cmd.view.sheet_duplicate_title": "Duplicar folha (somente bloco de título)",
+ "sheets.dup.menu_views": "Duplicar com vistas",
+ "sheets.dup.menu_title": "Duplicar, somente bloco de título",
+ "sheets.dup.done": "Folha {number} criada a partir de {src}: {views} vistas, {sched} tabelas e legendas. As revisões não são copiadas; a folha não está emitida.",
+ "sheets.dup.none": "Abra uma folha para duplicá-la",
+ "sheets.dup.copy": "cópia",
+ "cmd.view.sheet_duplicate.short": "Duplicar com vistas",
+ "cmd.view.sheet_duplicate_title.short": "Duplicar bloco de título"
+}

@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key} är reserverad ({why}) och kan inte tilldelas om",
+ "quick.keys.res_copy": "kopiera",
+ "quick.keys.res_paste": "klistra in",
+ "quick.keys.res_cut": "klipp ut",
+ "quick.keys.res_undo": "ångra / gör om",
+ "quick.keys.res_save": "spara",
+ "quick.keys.res_palette": "kommandosökning",
+ "quick.keys.reserved_conflict": "{key} används redan av “{cmd}”. Esc behåller den där.",
+ "quick.keys.reserved_swap": "Byt",
+ "quick.keys.reserved_take": "Ta den",
+ "quick.keys.reserved_keep": "Behåll",
+ "quick.keys.reserved_os": "Upptagen av systemet:"
+}

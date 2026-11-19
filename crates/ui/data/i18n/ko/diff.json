@@ -1,0 +1,7 @@
+{
+ "diff.kind.added": "추가됨",
+ "diff.kind.changed": "변경됨",
+ "diff.kind.deleted": "삭제됨",
+ "diff.kind.refused": "거부됨",
+ "diff.kind.conflict": "충돌"
+}

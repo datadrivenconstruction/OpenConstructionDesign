@@ -1,0 +1,12 @@
+family Curved Bench
+category furniture
+host none
+param Length length type 2000mm
+param SeatH length type 450mm
+param Depth length type 500mm
+type "2000" Length=2000mm
+blend Seat rect(-Length / 2, -Depth / 2, Length / 2, Depth / 2) rect(-Length / 2 + 50mm, -Depth / 2 + 40mm, Length / 2 - 50mm, Depth / 2 - 40mm) z(SeatH - 60mm, SeatH)
+sweep Rail circle(0, 0, 20mm) path(-Length / 2, Depth / 2, SeatH + 300mm, 0, Depth / 2 + 80mm, SeatH + 320mm, Length / 2, Depth / 2, SeatH + 300mm)
+extrude LegA rect(-Length / 2 + 100mm, -Depth / 2, -Length / 2 + 160mm, Depth / 2) z(0, SeatH - 60mm)
+extrude LegB rect(Length / 2 - 160mm, -Depth / 2, Length / 2 - 100mm, Depth / 2) z(0, SeatH - 60mm)
+symbol rect(-Length / 2, -Depth / 2, Length / 2, Depth / 2)

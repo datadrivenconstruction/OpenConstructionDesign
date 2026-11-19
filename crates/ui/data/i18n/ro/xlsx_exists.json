@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "Acest registru de calcul există deja",
+ "xlsx_exists.foreign": "Nu este un registru de calcul al acestui proiect, deci nu este înlocuit niciodată.",
+ "xlsx_exists.pending": "Are {n} modificări care nu sunt încă aplicate modelului.",
+ "xlsx_exists.outside": "Are {n} rânduri pe care noul export nu le conține.",
+ "xlsx_exists.new_name": "Exportă în {name}",
+ "xlsx_exists.apply_first": "Aplică-le mai întâi",
+ "xlsx_exists.replace": "Înlocuiește (registrul vechi în _archive)",
+ "xlsx_exists.archived": "Registrul vechi a fost mutat în {path}",
+ "xlsx_exists.archive_failed": "Registrul vechi nu a putut fi mutat, nimic nu a fost exportat: {error}"
+}

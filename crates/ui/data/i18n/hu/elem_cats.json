@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "A tömeg nem forgatható vagy tükrözhető: alakváltozási előzményében nincs elforgatott lépés. Mozgassa vagy másolja, vagy rajzolja újra az új irányban.",
+ "sched_cats.col.name": "Név",
+ "sched_cats.col.material": "Anyag",
+ "sched_cats.col.void": "Üreg",
+ "sched_cats.col.inplace": "Helyben öntött",
+ "sched_cats.col.volume": "Nettó térfogat",
+ "sched_cats.col.area": "Felületi terület",
+ "sched_cats.col.floor_area": "Padlóterület",
+ "sched_cats.col.thickness": "Vastagság",
+ "sched_cats.col.points": "Pontok",
+ "elem.toposolid.points": "Felmérési pontok",
+ "elem.toposolid.count": "Pontok",
+ "elem.toposolid.low": "Legalacsonyabb",
+ "elem.toposolid.high": "Legmagasabb",
+ "elem.toposolid.edit": "Pontok szerkesztése",
+ "elem.toposolid.edit_tip": "Felmérési pontok kijelölése, húzása és magasságának beállítása az alaprajzon",
+ "elem.toposolid.pick_hint": "Kattintson egy pontra az alaprajzon a kijelöléshez. Újabb kattintással hozzáadja vagy eltávolítja.",
+ "elem.toposolid.z": "Magasság ({n})",
+ "elem.toposolid.mixed": "A kijelölt pontok eltérnek; új érték mindet beállítja.",
+ "elem.toposolid.edit_help": "Húzzon egy pontot az áthelyezéséhez. Írjon be értéket és nyomjon Entert a magasság beállításához. A Backspace törli a kijelölt pontokat, az Esc kilép.",
+ "elem.toposolid.done": "Kész"
+}

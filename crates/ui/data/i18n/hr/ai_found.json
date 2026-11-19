@@ -1,0 +1,46 @@
+{
+ "ai.tool.show_elements": "Prikazivanje elemenata",
+ "ai.tool.isolate_elements": "Izoliranje elemenata",
+ "ai.tool.color_by": "Bojanje prema vrijednosti",
+ "ai.tool.reset_view": "Vraćanje pogleda",
+ "ai_found.found.query": "Pronađeno",
+ "ai_found.found.show": "Prikazano",
+ "ai_found.found.isolate": "Izolirano",
+ "ai_found.found.hide": "Sakriveno",
+ "ai_found.found.color": "Obojano",
+ "ai_found.found.count": "{n} od {m}",
+ "ai_found.found.none": "Ništa ne odgovara. Pokušaj širi filtar.",
+ "ai_found.found.show_btn": "Prikaži",
+ "ai_found.found.show_tip": "Odaberi ove elemente i približi ih u tlocrtu i 3D-u",
+ "ai_found.found.isolate_btn": "Izoliraj",
+ "ai_found.found.isolate_tip": "Prikaži samo ove elemente do Poništi prikaz",
+ "ai_found.found.select_btn": "Odaberi",
+ "ai_found.found.select_tip": "Odaberi ove elemente bez pomicanja pogleda",
+ "ai_found.legend.title": "Boja prema: {by}",
+ "ai_found.legend.row_tip": "Klikni za odabir ovih elemenata",
+ "ai_found.legend.empty_value": "Bez vrijednosti",
+ "ai_found.legend.other": {
+  "one": "# dodatna vrijednost",
+  "few": "# dodatne vrijednosti",
+  "other": "# dodatnih vrijednosti"
+ },
+ "ai_found.view.title": "Pogled AI asistenta",
+ "ai_found.view.reset": "Poništi prikaz",
+ "ai_found.view.reset_tip": "Vrati pogled iz prije nego ga je AI asistent promijenio",
+ "ai_found.view.shown": {
+  "one": "# element prikazan",
+  "few": "# elementa prikazana",
+  "other": "# elemenata prikazano"
+ },
+ "ai_found.view.isolated": {
+  "one": "# element izoliran",
+  "few": "# elementa izolirana",
+  "other": "# elemenata izolirano"
+ },
+ "ai_found.view.hidden": {
+  "one": "# element skriven",
+  "few": "# elementa skrivena",
+  "other": "# elemenata skriveno"
+ },
+ "ai_found.found.line": "{what}: {count}"
+}

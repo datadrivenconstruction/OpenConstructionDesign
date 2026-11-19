@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "Đang nhận dạng {done} trên {total}",
+ "mesh_recognize.all": "Tất cả {n}",
+ "mesh_recognize.only_confident": "Chỉ mục chắc chắn",
+ "mesh_recognize.confident_tip": "Đánh dấu các hàng có loại khớp với danh mục và độ tin cậy ít nhất {pct}%",
+ "mesh_recognize.row_hint": "Nhấp vào hàng để đánh dấu. Phím mũi tên di chuyển, Enter đánh dấu.",
+ "mesh_recognize.kind_for": "Loại cho {name}",
+ "mesh_recognize.source": "Lưới nguồn",
+ "mesh_recognize.keep": "Giữ lưới",
+ "mesh_recognize.replace": "Thay lưới",
+ "mesh_recognize.convert_keep": "Chuyển {n}",
+ "mesh_recognize.convert_remove": "Chuyển {n} và xóa lưới",
+ "mesh_recognize.creates": "Sẽ tạo {n}: {kinds}",
+ "mesh_recognize.creates_none": "Chưa đánh dấu gì",
+ "mesh_recognize.stay": "{n} lưới nguồn vẫn ở trong mô hình",
+ "mesh_recognize.removed": "{n} lưới nguồn sẽ bị xóa. Hoàn tác sẽ đưa chúng trở lại."
+}

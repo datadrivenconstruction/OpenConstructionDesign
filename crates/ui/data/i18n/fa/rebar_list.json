@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "بالا بردن",
+ "rebar_list.move_down": "پایین بردن",
+ "rebar_list.remove": "حذف",
+ "rebar_list.zone_remove_last": "یک ناحیه حداقل به یک اتاق نیاز دارد: برای حذف آخرین، خود ناحیه را حذف کنید",
+ "rebar_list.rebar_empty_title": "میلگردی در این مدل نیست",
+ "rebar_list.rebar_empty_hint": "میلگرد را در یک عنصر میزبان قرار دهید تا اینجا برنامه‌ریزی شود.",
+ "rebar_list.rebar_empty_action": "قرار دادن میلگرد"
+}

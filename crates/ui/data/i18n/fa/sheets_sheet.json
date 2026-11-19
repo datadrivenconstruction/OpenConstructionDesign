@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "کپی برگه همراه با نماها",
+ "cmd.view.sheet_duplicate_title": "کپی برگه (فقط بلوک عنوان)",
+ "sheets.dup.menu_views": "کپی همراه با نماها",
+ "sheets.dup.menu_title": "کپی، فقط بلوک عنوان",
+ "sheets.dup.done": "برگه {number} از {src} ساخته شد: {views} نما، {sched} جدول و راهنما. بازبینی‌ها کپی نشدند؛ برگه منتشر نشده است.",
+ "sheets.dup.none": "برای کپی، ابتدا یک برگه را باز کنید",
+ "sheets.dup.copy": "کپی",
+ "cmd.view.sheet_duplicate.short": "کپی همراه با نماها",
+ "cmd.view.sheet_duplicate_title.short": "کپی بلوک عنوان"
+}

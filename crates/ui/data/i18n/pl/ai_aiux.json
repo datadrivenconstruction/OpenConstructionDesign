@@ -1,0 +1,19 @@
+{
+ "ai.plan.apply_updated": "Zastosuj zaktualizowany plan",
+ "ai.plan.keys_anywhere": "Ctrl+Enter stosuje, a Esc zatrzymuje zapytanie także z planu lub widoku 3D, chyba że wpisujesz tekst w polu.",
+ "ai.plan.rebased": "Zaktualizowano względem bieżącego modelu: {what}",
+ "ai.value.bad": "„{text}” nie jest prawidłową wartością dla {name}",
+ "ai.value.both": "Asystent AI zmienił tę wartość na {agent}, a Ty wpisałeś {mine}. Wybierz, którą zachować.",
+ "ai.value.choose_first": "Najpierw wybierz swoją wartość albo wartość asystenta AI na karcie",
+ "ai.value.elem": "Element {n}: {what}",
+ "ai.value.held": "Twoja wartość {mine} zostanie wpisana po zakończeniu zapytania",
+ "ai.value.keep_agent": "Zachowaj {agent}",
+ "ai.value.lost": "Twoja wartość {mine} dla {what} w „{title}” nie została użyta: asystent AI zdjął tę wartość z karty",
+ "ai.value.more": "Kolejne wartości: {n}: rozwiń wiersz",
+ "ai.value.refused": "Plan nie przyjął tej wartości i zachowuje poprzednią: {why}",
+ "ai.value.refused_next": "Wpisz inną wartość albo odznacz pozycję, aby wyłączyć ją z Zastosuj.",
+ "ai.value.tip": "Popraw wartość w szkicu; model zmienia się dopiero po Zastosuj. Enter potwierdza, Esc przywraca.",
+ "ai.value.use_mine": "Użyj {mine}",
+ "ai.value.was": "było {old}",
+ "ai.value.bad_len": "Pole „{name}”: {why}"
+}

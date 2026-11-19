@@ -1,0 +1,21 @@
+{
+ "cmd.help.check_update": "আপডেট পরীক্ষা করুন",
+ "update_check.title": "আপডেট পরীক্ষা",
+ "update_check.desc": "ডিফল্টভাবে বন্ধ। শুধু সংস্করণ, OS ও আর্কিটেকচার এবং ইনস্টল ধরন আমাদের সার্ভারে পাঠায়। কিছু ডাউনলোড বা ইনস্টল করে না।",
+ "update_check.freq.startup": "শুরুতে",
+ "update_check.freq.daily": "প্রতিদিন",
+ "update_check.freq.weekly": "সাপ্তাহিক",
+ "update_check.freq.never": "কখনো না",
+ "update_check.check_now": "এখনই পরীক্ষা করুন",
+ "update_check.dialog.title": "আপডেট পরীক্ষা",
+ "update_check.unknown.title": "আপডেট পরীক্ষা করা যায়নি",
+ "update_check.unknown.body": "{e}। এর মানে এই সংস্করণটি সর্বশেষ নয় তা নয়। পরে আবার চেষ্টা করুন।",
+ "update_check.current": "আপনার কাছে সর্বশেষ সংস্করণ আছে ({v})।",
+ "update_check.newer": "সংস্করণ {v} পাওয়া যাচ্ছে",
+ "update_check.date": "প্রকাশিত {d}",
+ "update_check.unfit": "এই সংস্করণ ({v}) সর্বনিম্ন সুপারিশকৃত সংস্করণ {f}-এর চেয়ে পুরনো। আপডেট করার পরামর্শ দেওয়া হচ্ছে।",
+ "update_check.close": "বন্ধ করুন",
+ "update_check.open_failed": "রিলিজ পাতা খোলা যায়নি।",
+ "update_check.toast.newer": "সংস্করণ {v} পাওয়া যাচ্ছে। Help > Check for updates।",
+ "update_check.toast.unfit": "এই সংস্করণ ({v}) সর্বনিম্ন সুপারিশকৃত সংস্করণ {f}-এর চেয়ে পুরনো।"
+}

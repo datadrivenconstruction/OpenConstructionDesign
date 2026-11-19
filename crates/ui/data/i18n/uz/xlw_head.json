@@ -1,0 +1,15 @@
+{
+ "xlw.hd_never": "Hali eksport qilinmagan",
+ "xlw.hd_now": "hozirgina",
+ "xlw.hd_min": "{n} daq. oldin",
+ "xlw.hd_hour": "{n} soat oldin",
+ "xlw.hd_day": "{n} kun oldin",
+ "xlw.hd_linked": "Bog'langan",
+ "xlw.hd_watched": "Kuzatilmoqda",
+ "xlw.hd_stale": "Eksportdan keyin model o'zgargan",
+ "xlw.ft_export": "Eksport",
+ "xlw.ft_review": "Ko'rib chiqish",
+ "xlw.ft_apply": "{n} ta o'zgarishni qo'llash",
+ "xlw.ft_delete_missing": "Yo'qlarni o'chirish",
+ "xlw.ft_keep_missing_tip": "O'chirish yoqilgan: qatorsiz elementlar qo'llashda o'chiriladi. Saqlash uchun belgisini olib tashlang."
+}

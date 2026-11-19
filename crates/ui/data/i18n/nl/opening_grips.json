@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "Scharnierzijde omdraaien",
+ "cmd.edit.flip_hand.desc": "Spiegelt de geselecteerde deuren en ramen langs de wand, zodat de scharnieren naar het andere eind van de opening verschuiven.",
+ "cmd.edit.flip_facing": "Kant van opening omdraaien",
+ "cmd.edit.flip_facing.desc": "Draait de geselecteerde deuren en ramen naar de andere kant van de wand.",
+ "opening_grips.flip_hand": "Scharnier omdraaien",
+ "opening_grips.flip_hand.tip": "Scharnieren naar het andere eind van de opening (Shift+F)",
+ "opening_grips.flip_facing": "Kant omdraaien",
+ "opening_grips.flip_facing.tip": "Opening naar de andere kant van de wand (Shift+G)",
+ "opening_grips.flip.done": "Omgedraaid: {n}",
+ "opening_grips.flip.none": "Selecteer een deur of raam om om te draaien",
+ "opening_grips.flip.fail": "Niet omgedraaid: {why}"
+}

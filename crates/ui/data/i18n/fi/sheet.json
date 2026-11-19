@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "Pikanäppäinluettelo",
+ "cmd.help.shortcuts.desc": "Näyttää kaikki pikanäppäimet nykyisellä asetuksella kontekstin mukaan. Paina ? missä tahansa muualla kuin tekstikentässä.",
+ "sheet.title": "Pikanäppäimet",
+ "sheet.filter": "Suodata komennon tai näppäimen mukaan",
+ "sheet.filter_label": "Suodata pikanäppäimiä",
+ "sheet.customize": "Mukauta…",
+ "sheet.close": "Sulje",
+ "sheet.esc_close": "sulkeaksesi",
+ "sheet.none": "Ei vastaavia pikanäppäimiä",
+ "sheet.none_hint": "Kokeile toista sanaa tai näppäintä.",
+ "sheet.sec.general": "Yleiset",
+ "sheet.sec.plan": "Pohjapiirros",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "Luettelot",
+ "sheet.sec.sheets": "Arkit",
+ "sheet.sec.ai": "Tekoälyavustaja"
+}

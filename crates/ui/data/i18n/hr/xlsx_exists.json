@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "Ova radna knjiga već postoji",
+ "xlsx_exists.foreign": "Nije radna knjiga ovog projekta, pa se nikada ne zamjenjuje.",
+ "xlsx_exists.pending": "Sadrži {n} izmjena koje još nisu primijenjene na model.",
+ "xlsx_exists.outside": "Ima {n} redaka koje novi izvoz ne sadrži.",
+ "xlsx_exists.new_name": "Izvoz u {name}",
+ "xlsx_exists.apply_first": "Prvo ih primijenite",
+ "xlsx_exists.replace": "Zamijeni (stara knjiga u _archive)",
+ "xlsx_exists.archived": "Stara radna knjiga premještena u {path}",
+ "xlsx_exists.archive_failed": "Stara radna knjiga nije mogla biti premještena, ništa nije izvezeno: {error}"
+}

@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "{total}-аас {done} таньж байна",
+ "mesh_recognize.all": "Бүгд {n}",
+ "mesh_recognize.only_confident": "Зөвхөн найдвартайг",
+ "mesh_recognize.confident_tip": "Ангилалтай таарч, итгэлцэл {pct}%-иас дээш мөрүүдийг тэмдэглэнэ",
+ "mesh_recognize.row_hint": "Мөр дээр дарж тэмдэглэнэ. Сумаар шилжиж, Enter тэмдэглэнэ.",
+ "mesh_recognize.kind_for": "{name}-ийн төрөл",
+ "mesh_recognize.source": "Эх торууд",
+ "mesh_recognize.keep": "Торуудыг үлдээх",
+ "mesh_recognize.replace": "Торуудыг солих",
+ "mesh_recognize.convert_keep": "{n}-г хөрвүүлэх",
+ "mesh_recognize.convert_remove": "{n}-г хөрвүүлж, торуудыг устгах",
+ "mesh_recognize.creates": "{n} үүсгэнэ: {kinds}",
+ "mesh_recognize.creates_none": "Одоогоор юу ч тэмдэглээгүй",
+ "mesh_recognize.stay": "Эх {n} тор загварт үлдэнэ",
+ "mesh_recognize.removed": "Эх {n} тор устгагдана. Буцаах нь тэдгээрийг сэргээнэ."
+}

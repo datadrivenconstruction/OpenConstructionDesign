@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "Κρατά αυτόν τον τοίχο στο τρέχον μήκος του σε κάθε αλλαγή",
+ "constraints.con.tip.lock_dist": "Κρατά την απόσταση μεταξύ των δύο τοίχων σε κάθε αλλαγή",
+ "constraints.con.tip.equal": "Κρατά ίσα τα διαστήματα μεταξύ των επιλεγμένων τοίχων",
+ "constraints.con.tip.align": "Κρατά και τους δύο τοίχους στην ίδια γραμμή",
+ "constraints.con.tip.parallel": "Κρατά τους τοίχους παράλληλους",
+ "constraints.con.tip.perp": "Κρατά τους τοίχους σε ορθή γωνία",
+ "constraints.con.tip.align_grid": "Κρατά τον τοίχο πάνω στην πλησιέστερη γραμμή του καννάβου",
+ "constraints.con.tip.lock_dist_grid": "Κρατά την απόσταση από τον τοίχο έως την πλησιέστερη γραμμή του καννάβου",
+ "constraints.con.tip.level_gap": "Κρατά το διάστημα μεταξύ των επιπέδων",
+ "constraints.con.tip.top_to_level": "Κρατά την κορυφή του τοίχου στο επίπεδο από πάνω"
+}

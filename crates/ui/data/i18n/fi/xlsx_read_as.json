@@ -1,0 +1,11 @@
+{
+ "xlsx_read_as.title": "Nimetty arkki?",
+ "xlsx_read_as.detail": "Arkilla {found} on arkin {sheet} sarakkeet ({score} % osuma). Sitä ei lueta, ellet valitse sitä.",
+ "xlsx_read_as.detail_many": "Useampi arkki sopii arkille {sheet}: {found}. Mitään ei valita puolestasi; valitse luettava.",
+ "xlsx_read_as.read_as": "Lue ”{found}” arkkina {sheet}",
+ "xlsx_read_as.read_as_tip": "Vain tälle tuonnille. Arkkia ei nimetä uudelleen; Käytä kirjoittaa siihen vain uusien rivien tunnukset.",
+ "xlsx_read_as.active": "Arkki ”{found}” luetaan tässä tuonnissa arkkina {sheet}.",
+ "xlsx_read_as.undo": "Älä lue arkkina {sheet}",
+ "xlsx_read_as.undo_tip": "Takaisin arkkien nimiin sellaisina kuin ne ovat työkirjassa.",
+ "xlsx_read_as.not_rewritten": "Työkirjaa ei kirjoitettu uudelleen: nimetty arkki luetaan sen omalla nimellä. Nimeä se takaisin, jotta työkirja pysyy synkronoituna."
+}

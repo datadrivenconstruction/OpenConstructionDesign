@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "Název systému",
+ "mep_browser.add_blocked": "Nejprve zadejte název systému",
+ "mep_browser.col.insulation": "Izolace",
+ "mep_browser.cancel": "Zrušit",
+ "mep_browser.delete.title": "Smazat tento systém?",
+ "mep_browser.delete.body": "Systém „{name}“ a jeho trasy ({n}) budou smazány.",
+ "mep_browser.delete.undo": "Lze to vrátit jedním krokem Zpět.",
+ "mep_browser.delete.confirm": "Smazat systém"
+}

@@ -1,0 +1,9 @@
+{
+ "drafts.draft.view": "Grafika pogleda „{name}“",
+ "drafts.draft.filter": "Filtar pogleda „{name}“",
+ "drafts.draft.filter_new": "Novi filtar pogleda",
+ "drafts.draft.object_styles": "Stilovi objekata",
+ "drafts.draft.material": "Materijal „{name}“",
+ "drafts.draft.type": "Tip „{name}“",
+ "drafts.draft.params": "Parametri obitelji „{name}“"
+}

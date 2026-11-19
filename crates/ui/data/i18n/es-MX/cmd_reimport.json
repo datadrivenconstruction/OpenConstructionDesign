@@ -1,0 +1,6 @@
+{
+ "cmd.file.import_again": "Importar de nuevo",
+ "cmd.file.import_again.desc": "Crea un proyecto nuevo a partir del archivo de origen tal como está ahora.",
+ "cmd.file.open_kept": "Abrir importación conservada",
+ "cmd.file.open_kept.desc": "Abre la importación terminada que se conservó al cancelar el aviso de cambios sin guardar."
+}

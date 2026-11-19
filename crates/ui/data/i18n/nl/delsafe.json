@@ -1,0 +1,6 @@
+{
+ "delsafe.ring.opening_shape": "Een openingscontour zou zichzelf kruisen of inklappen",
+ "delsafe.ring.opening_boundary": "Een opening zou de buitengrens kruisen of raken",
+ "delsafe.ring.openings_overlap": "Openingen zouden elkaar overlappen of raken",
+ "xl.msg.delsafe_instance_param_on_types": "parameter '{}' is een instantieparameter; bewerk hem op het elementenblad, niet toegepast"
+}

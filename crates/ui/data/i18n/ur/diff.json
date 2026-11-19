@@ -1,0 +1,7 @@
+{
+ "diff.kind.added": "شامل",
+ "diff.kind.changed": "تبدیل",
+ "diff.kind.deleted": "حذف",
+ "diff.kind.refused": "مسترد",
+ "diff.kind.conflict": "تصادم"
+}

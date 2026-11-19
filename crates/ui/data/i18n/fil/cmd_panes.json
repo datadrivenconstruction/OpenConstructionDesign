@@ -1,0 +1,6 @@
+{
+ "cmd.ui.pane.next": "Susunod na pane",
+ "cmd.ui.pane.next.desc": "Ililipat ang keyboard focus sa susunod na nakikitang pane: browser, canvas, property, chat.",
+ "cmd.ui.pane.prev": "Nakaraang pane",
+ "cmd.ui.pane.prev.desc": "Ililipat ang keyboard focus sa nakaraang nakikitang pane."
+}

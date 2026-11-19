@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "Modifications du classeur non appliquées",
+ "workbook_changes.wb.body": "Fermer ou changer de projet les supprime.",
+ "workbook_changes.wb.line": "Import de classeur : {n} modifications non appliquées",
+ "workbook_changes.wb.review": "Examiner",
+ "workbook_changes.wb.discard": "Abandonner"
+}

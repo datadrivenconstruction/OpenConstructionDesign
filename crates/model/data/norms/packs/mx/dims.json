@@ -1,0 +1,228 @@
+{
+ "items": [
+  {
+   "key": "egress.travel_max",
+   "value": 50,
+   "unit": "m",
+   "source": "mx-cdmx-ntcpa",
+   "clause": "4.3.2, Table 4.3.2.1",
+   "url": "https://amraci.org/wp-content/uploads/2024/12/2024-12-12_NTCPA.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "In vertical multi-family housing the longest run to an exit is 50 m without sprinklers and 100 m with them.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ],
+    "sprinklered": false
+   },
+   "verified": true,
+   "note": "read 2026-11-14 in the full text; single houses and horizontal multi-family have no limit"
+  },
+  {
+   "key": "egress.travel_max.office",
+   "value": 60,
+   "unit": "m",
+   "source": "mx-cdmx-ntcpa",
+   "clause": "4.3.2, Table 4.3.2.1",
+   "url": "https://amraci.org/wp-content/uploads/2024/12/2024-12-12_NTCPA.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Professional and financial service buildings (offices) allow 60 m to an exit without sprinklers and 90 m with them.",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "sprinklered": false
+   },
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "daylight.window_floor_ratio",
+   "value": 0.175,
+   "unit": "ratio",
+   "source": "mx-cdmx-ntcpa",
+   "clause": "3.3.3.2.1",
+   "url": "https://amraci.org/wp-content/uploads/2024/12/2024-12-12_NTCPA.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Window area for daylight must be at least 17.5 percent of the room area (15 percent for ancillary rooms).",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "corridor.width_min.accessible",
+   "value": 1.2,
+   "unit": "m",
+   "source": "mx-cdmx-ntcpa",
+   "clause": "2.3.3.3.1 item a",
+   "url": "https://amraci.org/wp-content/uploads/2024/12/2024-12-12_NTCPA.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Horizontal circulation on accessible routes is at least 1.2 m wide, with a 0.9 m exception inside dwellings that widens to 1.2 m at turns.",
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "door.clear_min.accessible",
+   "value": 0.9,
+   "unit": "m",
+   "source": "mx-cdmx-ntcpa",
+   "clause": "2.3.3.2.1 with 2.2.2.2.1 and Table 4.3.5.4",
+   "url": "https://amraci.org/wp-content/uploads/2024/12/2024-12-12_NTCPA.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Doors on accessible routes follow the general door-width table, where housing needs 0.9 m clear (0.8 m for kitchens and bathrooms).",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14; table layout was partly scrambled in text extraction, housing rows read as 800 and 900 mm"
+  },
+  {
+   "key": "accessible.turning_circle",
+   "value": 1.5,
+   "unit": "m",
+   "source": "mx-cdmx-ntcpa",
+   "clause": "2.3.3.3.1 item b",
+   "url": "https://amraci.org/wp-content/uploads/2024/12/2024-12-12_NTCPA.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Where an accessible route is narrower than 1.5 m, spaces fitting a 1.5 m circle are needed at intervals of at most 30 m.",
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "ramp.slope_max",
+   "value": 0.08,
+   "unit": "ratio",
+   "source": "mx-cdmx-ntcpa",
+   "clause": "2.2.2.4.1 item c",
+   "url": "https://amraci.org/wp-content/uploads/2024/12/2024-12-12_NTCPA.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Longitudinal ramp slope is at most 8 percent in new projects (10 percent in existing buildings).",
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "stair.riser_max",
+   "value": 0.18,
+   "unit": "m",
+   "source": "mx-cdmx-ntcpa",
+   "clause": "2.2.2.5, Table 2.2.2.5.1",
+   "url": "https://amraci.org/wp-content/uploads/2024/12/2024-12-12_NTCPA.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Maximum riser is 18 cm for general occupancies (23 cm for restricted-access industrial and storage use).",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "stair.tread_min",
+   "value": 0.25,
+   "unit": "m",
+   "source": "mx-cdmx-ntcpa",
+   "clause": "2.2.2.5, Table 2.2.2.5.1",
+   "url": "https://amraci.org/wp-content/uploads/2024/12/2024-12-12_NTCPA.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Minimum tread depth is 25 cm between the vertical projections of two adjacent nosings.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "stair.width_min",
+   "value": 0.9,
+   "unit": "m",
+   "source": "mx-cdmx-ntcpa",
+   "clause": "4.3.5.2, Table 4.3.5.2",
+   "url": "https://amraci.org/wp-content/uploads/2024/12/2024-12-12_NTCPA.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Clear stair width is 0.9 m for up to 50 users, 1.1 m for 51 to 2000 users, more above that.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 (up to 50 users case)"
+  },
+  {
+   "key": "room.height_min",
+   "value": 2.3,
+   "unit": "m",
+   "source": "mx-cdmx-ntcpa",
+   "clause": "2.2.1.1, Table 2.2.1.1",
+   "url": "https://amraci.org/wp-content/uploads/2024/12/2024-12-12_NTCPA.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Every listed dwelling room needs a clear height of at least 2.3 m.",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "room.height_min.office",
+   "value": 2.3,
+   "unit": "m",
+   "source": "mx-cdmx-ntcpa",
+   "clause": "2.2.1.2, Table 2.2.1.2",
+   "url": "https://amraci.org/wp-content/uploads/2024/12/2024-12-12_NTCPA.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Offices also need 2.3 m minimum clear height, with 6 m2 per employee plus 15 percent for circulation.",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "parking.per_dwelling",
+   "value": 0,
+   "unit": "count",
+   "source": "mx-cdmx-ntcpa",
+   "clause": "1.3.1.1.1 and Table 1.3.1.2.3",
+   "url": "https://amraci.org/wp-content/uploads/2024/12/2024-12-12_NTCPA.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Mexico City no longer requires car bays for housing; it only caps them, at 3 per dwelling.",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14; value 0 is the minimum, maximum is 3 per dwelling; capital-city rule only"
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "Gjenkjenner {done} av {total}",
+ "mesh_recognize.all": "Alle {n}",
+ "mesh_recognize.only_confident": "Bare sikre",
+ "mesh_recognize.confident_tip": "Krysser av rader der type matcher kategorien og sikkerheten er minst {pct} %",
+ "mesh_recognize.row_hint": "Klikk på en rad for å krysse den av. Piltastene flytter, Enter krysser av.",
+ "mesh_recognize.kind_for": "Type for {name}",
+ "mesh_recognize.source": "Kildenett",
+ "mesh_recognize.keep": "Behold nett",
+ "mesh_recognize.replace": "Erstatt nett",
+ "mesh_recognize.convert_keep": "Konverter {n}",
+ "mesh_recognize.convert_remove": "Konverter {n} og fjern nett",
+ "mesh_recognize.creates": "Oppretter {n}: {kinds}",
+ "mesh_recognize.creates_none": "Ingenting avkrysset ennå",
+ "mesh_recognize.stay": "{n} kildenett blir i modellen",
+ "mesh_recognize.removed": "{n} kildenett fjernes. Angre henter dem tilbake."
+}

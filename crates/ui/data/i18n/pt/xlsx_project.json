@@ -1,0 +1,7 @@
+{
+ "xlsx_project.title": "Esta pasta de trabalho foi exportada de outro projeto",
+ "xlsx_project.body": "A pasta de trabalho “{file}” pertence a outro projeto. Os ids dos elementos diferem entre projetos, então as linhas dela alterariam elementos não relacionados aqui. Nada foi lido para este projeto.",
+ "xlsx_project.export_new": "Exportar este projeto para uma nova pasta de trabalho",
+ "xlsx_project.close": "Fechar",
+ "xlsx_project.no_project": "Esta pasta de trabalho não informa a qual projeto pertence: verifique se foi exportada deste projeto."
+}

@@ -1,0 +1,5 @@
+# Shape edit of the selected floor from its context command: Reshaping, two Esc leave it
+tool(SB) click(0,0) click(6,0) click(6,4) click(0,4) key(Enter) → rows(slab)=1 journal=+1
+tool(select) click(3,0) → selected=1
+tool(ctx.floor.shape) → scope=Reshaping
+key(Escape) key(Escape) → scope=Idle rows(slab)=1 journal=+1

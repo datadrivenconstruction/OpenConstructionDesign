@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "Vẽ một đường viền kín: nhấp các điểm, rồi Enter hoặc Hoàn tất để tạo",
+ "sketch_hints.sk_finish": "Hoàn tất",
+ "sketch_hints.sk_cancel": "Hủy",
+ "sketch_hints.import_warn": "cảnh báo kiểm tra mô hình: {n} (đầu tiên: {first})",
+ "sketch_hints.ai.offline.schedule": "Mở bảng thống kê",
+ "sketch_hints.ai.offline.check": "Kiểm tra theo quy tắc",
+ "sketch_hints.ai.offline.warnings": "Hiện cảnh báo",
+ "cmd.file.publish_pdf": "Xuất tờ ra PDF…",
+ "cmd.file.publish_pdf.desc": "Xuất các tờ đã chọn ra PDF. Giống Xuất tờ sang PDF/SVG.",
+ "sketch_hints.verify_none": "Không có gì do trợ lý AI đặt trong lựa chọn để kiểm tra",
+ "sketch_hints.contours_none": "Không có bề mặt địa hình trong mô hình: đường đồng mức xuất hiện khi tạo một bề mặt",
+ "sketch_hints.contours_off": "Đã ẩn đường đồng mức bề mặt địa hình",
+ "sketch_hints.contours_on": "Đã hiện đường đồng mức bề mặt địa hình"
+}

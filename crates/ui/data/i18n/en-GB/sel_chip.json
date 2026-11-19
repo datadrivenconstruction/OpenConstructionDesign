@@ -1,0 +1,5 @@
+{
+ "sel_chip.sel_chip": "{name}: {n}",
+ "sel_chip.opt.sel_hint": "Click an element to select it. Ctrl adds, Shift removes.",
+ "sel_chip.opt.units": "Units"
+}

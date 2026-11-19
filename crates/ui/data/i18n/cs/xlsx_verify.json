@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "Použití bylo vráceno: model neodpovídal náhledu. {what}",
+ "xlsx_verify.not_written": "{row} nebyl změněn.",
+ "xlsx_verify.lost": "{row} zmizel.",
+ "xlsx_verify.not_deleted": "{row} nebyl smazán.",
+ "xlsx_verify.extra_deleted": "{row} byl smazán, ačkoli jej náhled zachovává.",
+ "xlsx_verify.created": "{table}: {got} nových místo {want}.",
+ "xlsx_verify.value": "{row}, {field}: očekáváno {want} (bylo {old}), zadáno {got}.",
+ "xlsx_verify.check_failed": "Výsledek nelze zkontrolovat: {e}",
+ "xlsx_verify.plan_failed": "Použití nebylo spuštěno: kontrola nemohla načíst model ({e}).",
+ "xlsx_verify.take_back_failed": "Krok nelze vrátit ({e}): použijte Zpět.",
+ "xlsx_verify.t.wall": "Stěna",
+ "xlsx_verify.t.opening": "Otvor",
+ "xlsx_verify.t.room": "Místnost",
+ "xlsx_verify.t.slab": "Podlaha",
+ "xlsx_verify.t.level": "Podlaží",
+ "xlsx_verify.t.wall_type": "Typ stěny",
+ "xlsx_verify.t.slab_type": "Typ podlahy",
+ "xlsx_verify.t.col": "Sloup",
+ "xlsx_verify.t.beam": "Trám",
+ "xlsx_verify.t.roof": "Střecha",
+ "xlsx_verify.t.curtain_wall": "Fasádní stěna"
+}

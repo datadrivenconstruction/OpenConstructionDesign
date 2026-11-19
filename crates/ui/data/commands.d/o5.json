@@ -1,0 +1,38 @@
+[
+ {
+  "id": "file.save_ifc",
+  "icon": "ifc-out",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+Shift+E"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "file.save_ifc_as",
+  "dialog": true,
+  "icon": "ifc-out",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "file.ifc_replace_original",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ }
+]

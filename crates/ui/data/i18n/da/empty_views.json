@@ -1,0 +1,19 @@
+{
+ "empty.v3d_gpu.title": "3D er ikke tilgængelig på denne grafikadapter",
+ "empty.v3d_gpu.hint": "Modellen er i orden, og planen virker. Genstart med sikker grafik for at prøve 3D igen.",
+ "empty.v3d_gpu.action": "Genstart med sikker grafik",
+ "empty.v3d_loading.title": "Opbygger 3D…",
+ "empty.v3d_loading.pct": "Åbner… {pct} %",
+ "empty.plan_hidden.title": "Alle elementer er skjult i denne plan",
+ "empty.plan_hidden.hint": "Midlertidig skjulning eller isolering lader intet være synligt.",
+ "empty.plan_hidden.action": "Vis alle",
+ "empty.plan_graphics.title": "Visningsgrafikken skjuler alle kategorier",
+ "empty.plan_graphics.hint": "Kategorireglerne for denne visning lader intet være at vise.",
+ "empty.plan_graphics.action": "Åbn visningsgrafik",
+ "empty.plan_phase.title": "Fasefilteret skjuler alt",
+ "empty.plan_phase.hint": "Intet på denne etage findes i den fase, denne visning viser.",
+ "empty.plan_phase.action": "Skift fase",
+ "empty.plan_level.title": "Ingen elementer på denne etage",
+ "empty.plan_level.hint": "Andre etager i denne model har elementer.",
+ "empty.plan_level.action": "Gå til etagen med elementer"
+}

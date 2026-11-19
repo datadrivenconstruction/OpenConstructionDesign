@@ -1,0 +1,4 @@
+{
+ "family_load.refused": "Obitelj “{name}” nije moguće učitati: {msg}. Ništa nije učitano u projekt; vaše izmjene su sačuvane.",
+ "family_load.loaded_all": "{n} obitelji učitano u jednom koraku: {names}"
+}

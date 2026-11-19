@@ -1,0 +1,8 @@
+{
+ "undo.undone": "Tagasi võetud: {what}",
+ "undo.redone": "Tehti uuesti: {what}",
+ "undo.action.edit.redo": "Tee uuesti",
+ "undo.action.edit.undo": "Võta tagasi",
+ "hdr.unsaved": "Salvestamata muudatused",
+ "hdr.file_menu": "Failimenüü"
+}

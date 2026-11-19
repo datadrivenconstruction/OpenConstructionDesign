@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "Recognizing {done} of {total}",
+ "mesh_recognize.all": "All {n}",
+ "mesh_recognize.only_confident": "Only confident",
+ "mesh_recognize.confident_tip": "Ticks rows whose kind matches the category and whose confidence is at least {pct}%",
+ "mesh_recognize.row_hint": "Click a row to tick it. Arrow keys move, Enter ticks.",
+ "mesh_recognize.kind_for": "Kind for {name}",
+ "mesh_recognize.source": "Source meshes",
+ "mesh_recognize.keep": "Keep meshes",
+ "mesh_recognize.replace": "Replace meshes",
+ "mesh_recognize.convert_keep": "Convert {n}",
+ "mesh_recognize.convert_remove": "Convert {n} and remove meshes",
+ "mesh_recognize.creates": "Will create {n}: {kinds}",
+ "mesh_recognize.creates_none": "Nothing ticked yet",
+ "mesh_recognize.stay": "{n} source meshes stay in the model",
+ "mesh_recognize.removed": "{n} source meshes will be removed. Undo brings them back."
+}

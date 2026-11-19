@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "Filterrække under overskrifterne. Tekst: delstreng; tal: >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "Vis eller skjul kolonner",
+ "sched_toolbar.groups_tip": "Gruppér rækker efter kolonner, med delsummer",
+ "sched_toolbar.formulas_tip": "Beregnede kolonner",
+ "sched_toolbar.phase": "Fase",
+ "sched_toolbar.phase_tip": "Hvilken fase rækkerne hentes fra",
+ "sched_toolbar.copy_tip": "Valgte rækker (eller alle synlige) som TSV",
+ "sched_toolbar.import_tip": "Læs en eksporteret liste tilbage: rækker efter Id, kolonner efter overskrift; tællinger først, derefter ét fortrydelsestrin",
+ "sched_toolbar.export_tip": "Synlige rækker og kolonner med summer; tal forbliver tal",
+ "sched_toolbar.need_table": "Åbn først en liste",
+ "sched_toolbar.busy_open": "En fildialog er allerede åben",
+ "sched_toolbar.busy_save": "En gemmedialog er allerede åben",
+ "sched_toolbar.clear_filter": "Ryd filter",
+ "sched_toolbar.fields_title": "Kolonner"
+}

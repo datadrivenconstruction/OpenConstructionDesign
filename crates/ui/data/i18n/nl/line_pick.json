@@ -1,0 +1,22 @@
+{
+ "cmd.arch.grid_pick": "Raster langs lijn",
+ "cmd.arch.grid_pick.desc": "Maakt een raster precies langs een gekozen tekenlijn van de huidige verdieping; de namen zetten de reeks voort. Tab neemt in één keer alle evenwijdige lijnen van dezelfde tekenlaag. Elke keuze is één ongedaan-stap.",
+ "cmd.struct.beam_pick": "Balk langs lijn",
+ "cmd.struct.beam_pick.desc": "Plaatst een balk van het huidige type op de actieve verdieping langs een gekozen tekenlijn. Tab neemt de aansluitende keten. Elke keuze is één ongedaan-stap.",
+ "hint.grid_pick.one": "Raster langs lijn: kies een tekenlijn · Tab alle evenwijdige lijnen van de laag · Esc sluit af",
+ "hint.grid_pick.more": "Raster langs lijn: kies een lijn om alle evenwijdige lijnen van de laag te nemen · Tab één lijn · Esc uitschakelen",
+ "hint.beam_pick.one": "Balk langs lijn: kies een tekenlijn · Tab aansluitende keten · Esc sluit af",
+ "hint.beam_pick.more": "Balk langs lijn: kies een lijn om de keten te nemen · Tab één lijn · Esc uitschakelen",
+ "line_pick.st.start_grid": "Kies een tekenlijn. Tab: alle evenwijdige lijnen van de laag",
+ "line_pick.st.start_beam": "Kies een tekenlijn voor een balk {type}. Tab: aansluitende keten",
+ "line_pick.st.grid_done": "Raster {name} toegevoegd",
+ "line_pick.st.grids_done": "{n} rasters toegevoegd: {first} — {last}",
+ "line_pick.st.beam_done": "Balk {type} toegevoegd",
+ "line_pick.st.beams_done": "{n} balken {type} toegevoegd",
+ "line_pick.st.on_grid": "Deze lijn heeft al raster {name}",
+ "line_pick.st.on_beam": "Deze lijn heeft al balk {id}",
+ "line_pick.st.no_layer": "De tekenlagen van de lijnen zijn nog niet bekend, probeer het opnieuw",
+ "line_pick.st.no_beam_type": "Geen balkprofiel in de catalogus",
+ "line_pick.st.reload_warn": "Aangemaakt, maar de weergave kon niet opnieuw laden: {err}",
+ "line_pick.st.failed": "Niet aangemaakt: {err}"
+}

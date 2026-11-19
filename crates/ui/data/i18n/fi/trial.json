@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "Piste",
+ "trial.field.distance": "Etäisyys",
+ "trial.field.target": "Elementti",
+ "trial.refused": "{field}: {reason}. Muuta se, jotta voidaan käyttää",
+ "trial.preview_off": "Esikatselu pois: malli on liian suuri"
+}

@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "Панель",
+ "curtain_props.cw.panel_cell": "Ұяша {i}×{j} · шынылы қабырға №{id}",
+ "curtain_props.cw.kind": "Түрі",
+ "curtain_props.cw.kind.glazed": "Шыны",
+ "curtain_props.cw.kind.solid": "Тұтас",
+ "curtain_props.cw.kind.door": "Есік",
+ "curtain_props.cw.kind.window": "Терезе",
+ "curtain_props.cw.kind.empty": "Бос",
+ "curtain_props.cw.name": "Аты",
+ "curtain_props.cw.swing_side": "Басқа жаққа ашылады",
+ "curtain_props.cw.swing_hinge": "Ілгек ұяша шетінде",
+ "curtain_props.cw.size": "Өлшемі",
+ "curtain_props.cw.cell_area": "Ұяша ауданы",
+ "curtain_props.cw.panel_area": "Панель ауданы",
+ "curtain_props.cw.prev": "Алдыңғы панель",
+ "curtain_props.cw.next": "Келесі панель",
+ "curtain_props.cw.wall": "Қабырғаны таңдаңыз",
+ "curtain_props.cw.panel_hint": "Esc — таңдау · Ctrl+Z — қайтару",
+ "curtain_props.cw.status.panel": "Панель {i}×{j} → {kind}",
+ "e3d.err.cw_height": "шынылы қабырға биіктігі 100 мм-ден асуы керек"
+}

@@ -1,0 +1,27 @@
+id = "G06_cable_net"
+tier = "hard"
+group = "Any geometry"
+title = "Seilnetz"
+lang = "de"
+base = "empty"
+
+[[turn]]
+say = "Entwirf ein Seilnetz-Dach über einem Platz von 40 x 40 m mit zwei Hochpunkten (Masten 25 m) und zwei Tiefpunkten, Netzmaschenweite 2 m, Randseile und Zugstäbe."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "col"
+min = 2.0
+
+[[oracle.count]]
+spec = "beam+brace+truss+gridshell_bar"
+min = 300.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

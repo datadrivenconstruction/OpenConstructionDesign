@@ -1,0 +1,27 @@
+id = "G26_ferris_wheel__es"
+tier = "hard"
+group = "Any geometry"
+title = "Ferris wheel"
+lang = "es"
+base = "empty"
+
+[[turn]]
+say = "Una noria de 50 m de diámetro sobre un soporte en A: llanta de celosía, 36 radios de cable, 24 cabinas, eje, plataforma de embarque y cimentaciones."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "comp:gondola|cabin|capsule"
+min = 24.0
+
+[[oracle.count]]
+spec = "beam+brace+col"
+min = 70.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

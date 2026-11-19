@@ -1,0 +1,14 @@
+{
+ "dwg_table.copy": "Копировать таблицу",
+ "dwg_table.copy_tip": "Скопировать ведомость по слоям таблицей для таблицы XLSX",
+ "dwg_table.copied": "Ведомость скопирована (через табуляцию)",
+ "dwg_table.total": "Итого",
+ "dwg_table.col.layer": "Слой",
+ "dwg_table.col.count": "Кол-во",
+ "dwg_table.col.len": "Длина, {unit}",
+ "dwg_table.col.area": "Площадь, {unit}",
+ "dwg_table.unit.mm": "мм",
+ "dwg_table.unit.m2": "м²",
+ "dwg_table.unit.ft": "фут",
+ "dwg_table.unit.ft2": "фут²"
+}

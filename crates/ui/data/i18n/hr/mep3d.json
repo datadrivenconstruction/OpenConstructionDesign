@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "Kanal",
+ "mep3d.pipe": "Cijev",
+ "mep3d.tray": "Kabelska ladica",
+ "mep3d.conduit": "Cijev",
+ "mep3d.system": "Sustav",
+ "mep3d.length": "Duljina",
+ "mep3d.diameter": "Promjer",
+ "mep3d.width": "Širina",
+ "mep3d.height": "Visina",
+ "mep3d.insulation": "Izolacija",
+ "mep3d.tip": "Enter — primijeni; spojnice se ponovno izračunavaju",
+ "mep3d.size_positive": "dimenzija mora biti veća od nule",
+ "mep3d.not_changed": "nije promijenjeno: {e}",
+ "mep3d.copied": "vod kopiran",
+ "mep3d.changed": "vod promijenjen",
+ "mep3d.deleted": "obrisano elemenata: {n}",
+ "mep3d.not_deleted": "nije obrisano: {e}",
+ "mep3d.no_wall_type": "nema tipa zida",
+ "mep3d.demo.supply": "Dovod S1",
+ "mep3d.demo.heating": "Grijanje",
+ "mep3d.demo.power": "Snaga"
+}

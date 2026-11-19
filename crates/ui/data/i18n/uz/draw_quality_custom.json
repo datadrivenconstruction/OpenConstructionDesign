@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "maxsus",
+ "draw_quality.custom.tip": "{name}: bu loyihaning yozuvi",
+ "draw_quality.custom_note": "Maxsus deb belgilangan yozuvlar shu loyihaga tegishli.",
+ "draw_quality.unsaved.lib_body": "Ularni kutubxonaga saqlaysizmi yoki bekor qilaysizmi?",
+ "draw_quality.unsaved.styles_body": "Ularni ko'rinishga qo'llaysizmi yoki bekor qilaysizmi?",
+ "draw_quality.unsaved.both_body": "Ularni qo'llaysizmi yoki bekor qilaysizmi?",
+ "draw_quality.halftone": "{category} yarim ton",
+ "draw_quality.styles.name": "Chiziq uslublari",
+ "draw_quality.styles.other_level": "{level} sathidagi saqlanmagan uslub o'zgarishlari: bu sathni tahrirlash uchun ularni qo'llang yoki qaytaring."
+}

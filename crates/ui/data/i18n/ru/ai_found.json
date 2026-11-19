@@ -1,0 +1,50 @@
+{
+ "ai.tool.show_elements": "Показываю элементы",
+ "ai.tool.isolate_elements": "Изолирую элементы",
+ "ai.tool.color_by": "Раскрашиваю по значению",
+ "ai.tool.reset_view": "Сбрасываю вид",
+ "ai_found.found.query": "Найдено",
+ "ai_found.found.show": "Показано",
+ "ai_found.found.isolate": "Изолировано",
+ "ai_found.found.hide": "Скрыто",
+ "ai_found.found.color": "Раскрашено",
+ "ai_found.found.count": "{n} из {m}",
+ "ai_found.found.line": "{what}: {count}",
+ "ai_found.found.none": "Ничего не подходит. Попробуйте фильтр шире.",
+ "ai_found.found.show_btn": "Показать",
+ "ai_found.found.show_tip": "Выделить эти элементы и показать их в плане и 3D",
+ "ai_found.found.isolate_btn": "Изолировать",
+ "ai_found.found.isolate_tip": "Оставить видимыми только эти элементы до сброса вида",
+ "ai_found.found.select_btn": "Выделить",
+ "ai_found.found.select_tip": "Выделить эти элементы, не сдвигая вид",
+ "ai_found.legend.title": "Цвет по: {by}",
+ "ai_found.legend.row_tip": "Нажмите, чтобы выделить эти элементы",
+ "ai_found.legend.empty_value": "Без значения",
+ "ai_found.legend.other": {
+  "one": "ещё # значение",
+  "few": "ещё # значения",
+  "many": "ещё # значений",
+  "other": "ещё # значения"
+ },
+ "ai_found.view.title": "Вид ИИ-помощника",
+ "ai_found.view.reset": "Сбросить вид",
+ "ai_found.view.reset_tip": "Вернуть вид, каким он был до изменений ИИ-помощника",
+ "ai_found.view.shown": {
+  "one": "Показан # элемент",
+  "few": "Показано # элемента",
+  "many": "Показано # элементов",
+  "other": "Показано # элемента"
+ },
+ "ai_found.view.isolated": {
+  "one": "Изолирован # элемент",
+  "few": "Изолировано # элемента",
+  "many": "Изолировано # элементов",
+  "other": "Изолировано # элемента"
+ },
+ "ai_found.view.hidden": {
+  "one": "Скрыт # элемент",
+  "few": "Скрыто # элемента",
+  "many": "Скрыто # элементов",
+  "other": "Скрыто # элемента"
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "Chiedi all'IA: {q}",
+ "ai.palette.connect": "Connetti l'IA per chiedere",
+ "ai.palette.draft.apply": "Applica bozza ({n})",
+ "ai.palette.draft.reject": "Rifiuta bozza",
+ "ai.palette.draft.next": "Prossima modifica della bozza",
+ "ai.palette.draft.show": "Mostra bozza nella vista",
+ "cmd.ai.next_change": "Prossima modifica della bozza",
+ "cmd.ai.next_change.desc": "Sposta la vista sul prossimo elemento modificato dalla bozza.",
+ "cmd.ai.show_draft": "Mostra bozza IA nella vista",
+ "cmd.ai.show_draft.desc": "Adatta la vista a tutto ciò che la bozza modifica."
+}

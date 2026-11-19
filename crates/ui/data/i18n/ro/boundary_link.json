@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "Alege tot conturul de pereți",
+ "cmd.sketch.link_unlink": "Desprinde muchia de perete",
+ "cmd.sketch.link_repick": "Realege peretele pentru muchie",
+ "cmd.ctx.floor.link_unlink": "Desprinde muchiile de pereți",
+ "cmd.ctx.floor.link_accept": "Acceptă muchiile peretelui șters",
+ "boundary_link.hint.loop": "Faceți clic pe un perete: șirul închis de pereți devine muchii legate",
+ "boundary_link.hint.repick": "Faceți clic pe un perete paralel cu muchia: muchia îl va urma",
+ "boundary_link.need_sketch": "Deschideți mai întâi schița conturului",
+ "boundary_link.need_edge": "Indicați o muchie a schiței",
+ "boundary_link.need_straight": "Doar o muchie dreaptă poate urma un perete",
+ "boundary_link.need_floor": "Selectați o placă",
+ "boundary_link.no_wall": "Niciun perete sub cursor",
+ "boundary_link.not_parallel": "Peretele nu este paralel cu muchia",
+ "boundary_link.not_linked": "Această muchie nu este legată de un perete",
+ "boundary_link.unlinked": "Muchie desprinsă: rămâne pe loc și nu mai urmează peretele",
+ "boundary_link.accepted": "Muchii acceptate: rămân pe loc ca muchii obișnuite",
+ "boundary_link.failed": "Nu s-a putut aplica",
+ "boundary_link.lost": "peretele sursă a fost șters",
+ "boundary_link.blocked": "nu poate urma peretele"
+}

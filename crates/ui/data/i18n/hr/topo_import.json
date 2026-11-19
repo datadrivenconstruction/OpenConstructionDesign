@@ -1,0 +1,4 @@
+{
+ "topo_import.topo.ambiguous": "{n} redaka preskočeno: broj se može pročitati na dva načina (1,250 = 1.25 ili 1250?) i datoteka ne prikazuje decimalni znak",
+ "topo_import.topo.grouped": "{n} točaka pročitano s grupama znamenki (1 250,5 ili 1,234.5)"
+}

@@ -1,0 +1,9 @@
+{
+ "cmd.mass.timeline_family": "Geçmişi aileye dönüştür",
+ "cmd.mass.timeline_family.desc": "Seçili parametrik kütlenin yapım geçmişinden bir bileşen ailesi oluşturur. Geçmiş parametreleri aile parametrelerine dönüşür.",
+ "mass_family.done": "{name} ailesi oluşturuldu, parametre sayısı: {n}",
+ "mass_family.refused": "Aile oluşturulmadı: {e}",
+ "mass_family.no_mass": "Önce parametrik bir kütle seçin",
+ "mass_family.add_modifier": "Değiştirici ekle",
+ "mass_family.needs_faces": "Seçilmiş yüzeyler gerekli: aracı Kütleler sekmesinde kullanın"
+}

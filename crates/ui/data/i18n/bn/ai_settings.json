@@ -1,0 +1,9 @@
+{
+ "ai.settings.num_bad": "সংখ্যা নয়। 0.5-এর মতো লিখুন।",
+ "ai.settings.num_comma": "দশমিক চিহ্ন হিসেবে বিন্দু ব্যবহার করুন, যেমন 0.5।",
+ "ai.settings.num_negative": "সংখ্যাটি ঋণাত্মক হতে পারে না।",
+ "ai.settings.unit_money": "মুদ্রা",
+ "ai.settings.unit_tokens": "টোকেন",
+ "ai.settings.unit_price": "প্রতি ১০ লাখ টোকেন",
+ "ai.settings.limits_hint": "0 মানে কোনো সীমা নেই। প্রত্যাখ্যাত মান হলে আগের সীমা বজায় থাকে।"
+}

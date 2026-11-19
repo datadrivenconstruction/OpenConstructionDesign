@@ -1,0 +1,136 @@
+{
+ "items": [
+  {
+   "key": "room.height_min",
+   "value": 2.5,
+   "unit": "m",
+   "source": "cz-146",
+   "clause": "Sec. 38(1)",
+   "url": "https://www.zakonyprolidi.cz/cs/2024-146",
+   "accessed": "2026-11-14",
+   "paraphrase": "Habitable rooms in residential buildings need 2.5 m clear height, 2.2 m over at most half the area or in attics.",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 at zakonyprolidi.cz (consolidated official text of decree 146/2024); may drop to 2.2 m over up to half the floor area"
+  },
+  {
+   "key": "daylight.window_floor_ratio",
+   "value": 0.1,
+   "unit": "ratio",
+   "source": "cz-146",
+   "clause": "Sec. 20(1)",
+   "url": "https://www.zakonyprolidi.cz/cs/2024-146",
+   "accessed": "2026-11-14",
+   "paraphrase": "Total glazed area of habitable rooms is at least one tenth of their floor area.",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 at zakonyprolidi.cz (consolidated official text of decree 146/2024); sum of window openings at least one tenth of floor area"
+  },
+  {
+   "key": "door.clear_min.accessible",
+   "value": 0.8,
+   "unit": "m",
+   "source": "cz-146",
+   "clause": "Sec. 39(1)",
+   "url": "https://www.zakonyprolidi.cz/cs/2024-146",
+   "accessed": "2026-11-14",
+   "paraphrase": "Main doors to flats, rooms and internal circulation have a clear passage of at least 0.8 m.",
+   "verified": true,
+   "note": "read 2026-11-14 at zakonyprolidi.cz (consolidated official text of decree 146/2024); applies to main entrance doors of dwellings and building circulation"
+  },
+  {
+   "key": "corridor.width_min.accessible",
+   "value": 1.2,
+   "unit": "m",
+   "source": "cz-146",
+   "clause": "Sec. 39(3)(a)",
+   "url": "https://www.zakonyprolidi.cz/cs/2024-146",
+   "accessed": "2026-11-14",
+   "paraphrase": "Shared corridors in apartment buildings are at least 1.2 m wide; the older barrier-free rule asked 1.5 m on pedestrian routes.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 at zakonyprolidi.cz (consolidated official text of decree 146/2024); clear width of common corridors in apartment buildings, with manoeuvring space for wheelchair users at accessible dwellings"
+  },
+  {
+   "key": "accessible.turning_circle",
+   "value": 1.5,
+   "unit": "m",
+   "source": "cz-146",
+   "clause": "Sec. 49(6)",
+   "url": "https://www.zakonyprolidi.cz/cs/2024-146",
+   "accessed": "2026-11-14",
+   "paraphrase": "Barrier-free flats for severe mobility impairment need a 1.5 m turning circle in all rooms.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 at zakonyprolidi.cz (consolidated official text of decree 146/2024); wheelchair-standard dwelling, circle in every room"
+  },
+  {
+   "key": "ramp.slope_max",
+   "value": 0.0625,
+   "unit": "ratio",
+   "source": "cz-398",
+   "clause": "Annex 3, item 2.1.1 (repealed)",
+   "url": "https://www.zakonyprolidi.cz/cs/2009-398",
+   "accessed": "2026-11-14",
+   "paraphrase": "Barrier-free ramp slope up to 1:16; a 3 m ramp in a renovation may go to 1:8.",
+   "verified": false,
+   "note": "unverifiable_free: read 2026-11-14: zakonyprolidi.cz/cs/2024-146; no accessible-ramp slope in the decree (sec. 31(1) gives 12.5 percent for escape-route ramps); accessibility detail is in paywalled CSN 73 4001"
+  },
+  {
+   "key": "stair.width_min.house",
+   "value": 0.9,
+   "unit": "m",
+   "source": "cz-268",
+   "clause": "Sec. 40(4) (repealed)",
+   "url": "https://www.zakonyprolidi.cz/cs/2009-268",
+   "accessed": "2026-11-14",
+   "paraphrase": "Main stairs in family houses are at least 0.9 m clear wide (0.75 m for auxiliary stairs).",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "verified": false,
+   "note": "unverifiable_free: read 2026-11-14: zakonyprolidi.cz/cs/2024-146; no stair width figure for family houses found; 0.9 m existed only in repealed 268/2009"
+  },
+  {
+   "key": "room.height_min.office",
+   "value": 2.6,
+   "unit": "m",
+   "source": "cz-361",
+   "clause": "Sec. 46(1)/(3): clear height of permanent work rooms 2.50 m up to 20 m2, 2.60 m up to 50 m2; offices may use reduced heights but at least 2.60 m",
+   "url": "https://www.zakonyprolidi.cz/cs/2007-361",
+   "accessed": "2026-11-14",
+   "paraphrase": "Workplace regulation sets 2.6 m minimum clear height for offices under the reduction rule and for small work rooms.",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14: zakonyprolidi.cz/cs/2007-361; workplace rule, not decree 146/2024; larger rooms need 2.70 to 3.25 m unless the office reduction applies"
+  }
+ ]
+}

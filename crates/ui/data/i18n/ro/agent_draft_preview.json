@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "Previzualizare",
+ "agent_draft.ag.preview.desc": "Conturează pe pânză elementele acestui proiect cât timp cursorul este pe buton. Nu se schimbă nimic.",
+ "agent_draft.type.column": "Stâlp",
+ "agent_draft.type.roof": "Acoperiș",
+ "agent_draft.type.ceiling": "Tavan",
+ "agent_draft.type.stair": "Monolitică",
+ "agent_draft.type.railing": "Balustradă",
+ "agent_draft.type.shaft": "Puț",
+ "agent_draft.type.axis": "Axă 6.5 mm",
+ "agent_draft.type.refplane": "Plan de referință"
+}

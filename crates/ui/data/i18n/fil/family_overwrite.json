@@ -1,0 +1,16 @@
+{
+ "family_overwrite.ow.title": "Palitan ang mga value ng uri sa proyekto?",
+ "family_overwrite.ow.body": "Papalitan ng pag-load ang {values} sa {types}. Mga inilagay na instance ng mga uring ito: {instances}.",
+ "family_overwrite.ow.values": {
+  "one": "# value",
+  "other": "# value"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# uri",
+  "other": "# uri"
+ },
+ "family_overwrite.ow.list": "Mga uri: {list}",
+ "family_overwrite.ow.more": "at {n} pa",
+ "family_overwrite.ow.back": "Bumalik sa pag-edit",
+ "family_overwrite.ow.replace": "Palitan ang mga value"
+}

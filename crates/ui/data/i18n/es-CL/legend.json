@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "Leyenda",
+ "legend.legend.new_hint": "Nombre de la nueva leyenda",
+ "legend.legend.delete_tip": "Eliminar leyenda",
+ "legend.legend.delete_placed": "Eliminar leyenda (colocada en: {sheets})",
+ "legend.legend.deleted": "Leyenda eliminada: {name}",
+ "legend.legend.no_rows": "Todavía no hay filas. Añada una o tome los estilos de la vista actual",
+ "legend.legend.replace_q": "¿Reemplazar {n} filas por los estilos de esta vista?",
+ "legend.legend.replace": "Reemplazar",
+ "legend.legend.keep": "Conservar filas",
+ "legend.col.swatch": "Muestra",
+ "legend.col.value": "Valor",
+ "legend.col.label": "Etiqueta"
+}

@@ -1,0 +1,14 @@
+{
+ "dwg_table.copy": "Copiar tabela",
+ "dwg_table.copy_tip": "Copie o quantitativo por camada como tabela para uma folha de cálculo",
+ "dwg_table.copied": "Quantitativo copiado (separado por tabulações)",
+ "dwg_table.total": "Total",
+ "dwg_table.col.layer": "Camada",
+ "dwg_table.col.count": "Quantidade",
+ "dwg_table.col.len": "Comprimento, {unit}",
+ "dwg_table.col.area": "Área, {unit}",
+ "dwg_table.unit.mm": "mm",
+ "dwg_table.unit.m2": "m²",
+ "dwg_table.unit.ft": "ft",
+ "dwg_table.unit.ft2": "ft²"
+}

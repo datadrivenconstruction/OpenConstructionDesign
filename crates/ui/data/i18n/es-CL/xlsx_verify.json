@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "La aplicación se deshizo: el modelo no coincidía con la vista previa. {what}",
+ "xlsx_verify.not_written": "{row} no se modificó.",
+ "xlsx_verify.lost": "{row} desapareció.",
+ "xlsx_verify.not_deleted": "{row} no se eliminó.",
+ "xlsx_verify.extra_deleted": "{row} se eliminó, aunque la vista previa lo conserva.",
+ "xlsx_verify.created": "{table}: {got} nuevos en lugar de {want}.",
+ "xlsx_verify.value": "{row}, {field}: se esperaba {want} (era {old}), se recibió {got}.",
+ "xlsx_verify.check_failed": "No se pudo comprobar el resultado: {e}",
+ "xlsx_verify.plan_failed": "La aplicación no se inició: la comprobación no pudo leer el modelo ({e}).",
+ "xlsx_verify.take_back_failed": "No se pudo deshacer el paso ({e}): use Deshacer.",
+ "xlsx_verify.t.wall": "Muro",
+ "xlsx_verify.t.opening": "Hueco",
+ "xlsx_verify.t.room": "Local",
+ "xlsx_verify.t.slab": "Forjado",
+ "xlsx_verify.t.level": "Nivel",
+ "xlsx_verify.t.wall_type": "Tipo de muro",
+ "xlsx_verify.t.slab_type": "Tipo de forjado",
+ "xlsx_verify.t.col": "Pilar",
+ "xlsx_verify.t.beam": "Viga",
+ "xlsx_verify.t.roof": "Cubierta",
+ "xlsx_verify.t.curtain_wall": "Muro cortina"
+}

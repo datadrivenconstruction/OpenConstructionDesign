@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "X 軸",
+ "fe.axis.y": "Y 軸",
+ "fe.axis.z": "Z 軸",
+ "fe.col.axis": "軸",
+ "fe.col.at": "位置",
+ "fe.col.mode": "モード",
+ "fe.mode.fixed": "固定",
+ "fe.mode.free": "自由",
+ "fe.types.inherited": "パラメータの既定値",
+ "fe.csv.more": "その他の CSV 操作",
+ "fe.ref.selected": "平面: {name}"
+}

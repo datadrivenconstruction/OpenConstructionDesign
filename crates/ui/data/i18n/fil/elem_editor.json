@@ -1,0 +1,4 @@
+{
+ "elem.spreadsheet.applied": "Na-import mula sa spreadsheet na XLSX: {what}",
+ "elem.spreadsheet.failed": "Nabigo ang import mula sa spreadsheet na XLSX: {e}"
+}

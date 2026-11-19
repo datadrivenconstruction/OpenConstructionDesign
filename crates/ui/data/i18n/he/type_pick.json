@@ -1,0 +1,11 @@
+{
+ "type_pick.pick.search": "חפש סוגים או עובי",
+ "type_pick.pick.empty": "אין סוגים תואמים",
+ "type_pick.pick.edit": "ערוך סוג…",
+ "type_pick.pick.mixed": "מעורב",
+ "type_pick.pick.layers": {
+  "one": "# שכבה",
+  "two": "# שכבות",
+  "other": "# שכבות"
+ }
+}

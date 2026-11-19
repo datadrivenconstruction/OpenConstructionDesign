@@ -1,0 +1,6 @@
+{
+ "units.err.parse": "不是长度：保留原值。请输入带可选单位的数字，例如 2500 或 8'-2\"",
+ "ui.scale.set": "界面比例：{pct}%",
+ "cmd.ui.scale_up": "增大界面比例",
+ "cmd.ui.scale_down": "减小界面比例"
+}

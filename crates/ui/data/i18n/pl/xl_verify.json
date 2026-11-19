@@ -1,0 +1,9 @@
+{
+ "xl.msg.base_value": "sprawdzenie odczytu nie powiodło się, stary skoroszyt zachowano: {} ({}) oczekiwano '{}', odczytano '{}'",
+ "xl.msg.base_missing": "sprawdzenie odczytu nie powiodło się, stary skoroszyt zachowano: arkusz {} nie ma wiersza dla id {}",
+ "xl.msg.base_extra": "sprawdzenie odczytu nie powiodło się, stary skoroszyt zachowano: wiersza {} nie ma w modelu",
+ "xl.msg.base_refused": "sprawdzenie odczytu nie powiodło się, stary skoroszyt zachowano: {} ({}) odrzucono: {}",
+ "xl.msg.base_sheet": "sprawdzenie odczytu nie powiodło się, stary skoroszyt zachowano: arkusz {} brakuje, jest pusty lub nieczytelny",
+ "xl.msg.base_newer": "sprawdzenie odczytu nie powiodło się, stary skoroszyt zachowano: {} komórek nie zawiera wartości z modelu",
+ "xl.msg.base_unreadable": "sprawdzenie odczytu nie powiodło się, stary skoroszyt zachowano: nowego skoroszytu nie można odczytać ({})"
+}

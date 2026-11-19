@@ -1,0 +1,9 @@
+{
+ "ai.plan.reject_ask": {
+  "one": "Odrzucić # zmianę?",
+  "other": "Odrzucić # zmian?"
+ },
+ "ai.plan.reject_ask.hint": "Szkic i zaznaczenia zostaną usunięte. Model pozostaje bez zmian.",
+ "ai.plan.reject_confirm": "Odrzuć",
+ "ai.plan.reject_keep": "Zachowaj"
+}

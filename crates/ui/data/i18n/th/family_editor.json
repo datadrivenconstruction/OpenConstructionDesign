@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "แฟมิลีใหม่",
+ "family_editor.open_tip": "เปิดแฟมิลีหรือฉบับร่าง",
+ "family_editor.close_named": "ปิด {name}",
+ "family_editor.unsaved": "การเปลี่ยนแปลงที่ยังไม่บันทึก",
+ "family_editor.search": "ค้นหา",
+ "family_editor.nothing": "ไม่พบรายการ",
+ "family_editor.sec_families": "แฟมิลีของโปรเจกต์",
+ "family_editor.sec_drafts": "ฉบับร่าง",
+ "family_editor.cap_category": "หมวดหมู่",
+ "family_editor.cap_host": "องค์ประกอบหลัก",
+ "family_editor.cap_type": "ประเภทตัวอย่าง"
+}

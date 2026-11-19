@@ -1,0 +1,20 @@
+{
+ "dwgfillet.fillet": "Ümardus",
+ "dwgfillet.cancel": "Peata ümardus",
+ "dwgfillet.tip": "Klõpsa kahele joonele külgedel, mida hoida: mõlemad lõigatakse või pikendatakse nurgani; kui raadius on suurem kui null, tekib puutuv kaar",
+ "dwgfillet.radius": "Ümardusraadius",
+ "dwgfillet.radius_tip": "Kaare raadius joonise ühikutes; 0 teeb teravnurga",
+ "dwgfillet.st.arm_first": "Klõpsa esimene joon küljel, mida hoida",
+ "dwgfillet.st.arm_second": "Klõpsa teine joon küljel, mida hoida",
+ "dwgfillet.st.not_armed": "Vali kõigepealt Ümardus",
+ "dwgfillet.st.click_line": "Klõpsa joonise ühel joonel",
+ "dwgfillet.st.other_drawing": "Mõlemad jooned peavad kuuluma samale joonisele: alusta uuesti",
+ "dwgfillet.st.changed": "Esimene joon muutus: alusta uuesti",
+ "dwgfillet.st.same_line": "Vali teine joon, mis on erinev",
+ "dwgfillet.st.parallel": "Jooned on paralleelsed ega kohtu kunagi: nurka ei saa teha",
+ "dwgfillet.st.degenerate": "Joonel pole pikkust",
+ "dwgfillet.st.no_side": "Klõpsatud küljel pole nurgast pikkust",
+ "dwgfillet.st.too_big": "Raadius on nende joonte jaoks liiga suur: kasuta väiksemat raadiust",
+ "dwgfillet.st.radius_bad": "Raadius peab olema null või positiivne",
+ "dwgfillet.st.done": "Nurk tehtud"
+}

@@ -1,0 +1,23 @@
+{
+ "roof_edge.err.number": "Raqam kiriting",
+ "roof_edge.err.positive": "Noldan katta bo'lishi kerak",
+ "roof_edge.err.nonneg": "Manfiy bo'lmasligi kerak",
+ "roof_edge.err.max": "{max} dan oshmasligi kerak",
+ "roof_edge.list.empty_hint": "Peshtoq, suvoq, soffit yoki yorug'lik shiftini tom buyruqlari bilan qo'shing",
+ "roof_edge.edit_tip": "Xususiyatlarni tahrirlash",
+ "roof_edge.delete_tip": "O'chirish",
+ "roof_edge.pe.del_tip": "Bu nuqtani olib tashlash (kesimda kamida 3 ta nuqta qoladi)",
+ "roof_edge.pe.up_tip": "Bu nuqtani yuqoriga ko'chirish",
+ "roof_edge.confirm_edge": "{name} o'chirilsinmi? Ctrl+Z uni qaytaradi.",
+ "roof_edge.confirm_profile": "{name} profili o'chirilsinmi? Ctrl+Z uni qaytaradi.",
+ "roof_edge.deleted_one": "{name} o'chirildi",
+ "roof_edge.deleted_n": {
+  "one": "# element o'chirildi",
+  "other": "# element o'chirildi"
+ },
+ "roof_edge.profile_deleted": "Profil o'chirildi",
+ "roof_edge.profile_in_use": {
+  "one": "Bu profil # chekka elementida ishlatilgan: avval uni o'chiring yoki o'zgartiring",
+  "other": "Bu profil # chekka elementida ishlatilgan: avval ularni o'chiring yoki o'zgartiring"
+ }
+}

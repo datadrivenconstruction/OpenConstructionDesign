@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "タイプを合わせる",
+ "cmd.mod.match_type.short": "タイプを合わせる",
+ "cmd.mod.match_type.desc": "壁、床、柱、梁のいずれかを選び、同じカテゴリの他の要素をクリックして、そのタイプを与えます。窓をドラッグすると内側のすべてに適用されます。Esc で元の要素を解除します。",
+ "hint.match_type.pick": "タイプを合わせる: 壁、床、柱、梁のいずれかを選択 · Esc — 終了",
+ "hint.match_type.apply": "タイプを合わせる: 対象をクリックするか窓をドラッグ · Esc — 別の元要素",
+ "match_type.kind.wall": "壁",
+ "match_type.kind.slab": "床",
+ "match_type.kind.column": "柱",
+ "match_type.kind.beam": "梁",
+ "match_type.refuse.category": "別のカテゴリです: このタイプを設定できるのは {cat} のみです",
+ "match_type.refuse.curtain": "カーテンウォール: ここではタイプを合わせられません",
+ "match_type.refuse.pinned": "固定されています: タイプを変更するには固定を解除してください",
+ "match_type.pick_bad": "元の要素として壁、床、柱、梁のいずれかを選択してください",
+ "match_type.same": "既にこのタイプです",
+ "match_type.done": "タイプを適用しました: {n}",
+ "match_type.done_skipped": "タイプを適用しました: {n}、スキップ (固定またはカーテンウォール): {skipped}",
+ "match_type.failed": "タイプを変更できませんでした: {err}"
+}

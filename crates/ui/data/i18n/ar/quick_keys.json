@@ -1,0 +1,6 @@
+{
+ "quick.keys.rec_hint": "Esc للإلغاء · Backspace للمسح",
+ "quick.keys.row_lost": "{key} أصبح يتبع «{cmd}»",
+ "quick.keys.row_took": "أُخذ {key} من «{cmd}»",
+ "quick.keys.reset_tip": "إعادة الضبط الافتراضي"
+}

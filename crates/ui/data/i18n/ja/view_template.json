@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "先にテンプレート名を入力してください",
+ "view_template.name_taken": "同じ名前のテンプレートが既にあります",
+ "view_template.pick_blocked": "先に少なくとも 1 つのビューをチェックしてください",
+ "view_template.views.one": "{n} ビュー",
+ "view_template.views.few": "{n} ビュー",
+ "view_template.views.many": "{n} ビュー",
+ "view_template.delete.title": "このテンプレートを削除しますか？",
+ "view_template.delete.body": "テンプレート「{name}」を削除します。使用中: {used}。",
+ "view_template.delete.unused": "テンプレート「{name}」を削除します。このテンプレートを使用しているビューはありません。",
+ "view_template.delete.keeps": "これらのビューは現在のグラフィックを維持しますが、リンクは失われます。",
+ "view_template.delete.undo": "元に戻すで 1 回戻せます。",
+ "view_template.delete.confirm": "テンプレートを削除"
+}

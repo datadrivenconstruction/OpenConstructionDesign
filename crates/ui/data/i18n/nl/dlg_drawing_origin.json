@@ -1,0 +1,4 @@
+{
+ "dlg.dw.near_origin": "Verplaats een ver weg liggende tekening naar de oorsprong",
+ "dlg.dw.moved_far": "; naar de oorsprong verplaatst vanaf ({x}, {y}) m, offset behouden"
+}

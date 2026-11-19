@@ -1,0 +1,36 @@
+[
+ {
+  "id": "edit.flip_hand",
+  "icon": "flip-hand",
+  "mnemonic": "OH",
+  "shortcuts": [
+   "Shift+F"
+  ],
+  "tab": "modify",
+  "surfaces": [
+   "C",
+   "A"
+  ],
+  "stage": "M1",
+  "context": [
+   "opening"
+  ]
+ },
+ {
+  "id": "edit.flip_facing",
+  "icon": "flip-facing",
+  "mnemonic": "OG",
+  "shortcuts": [
+   "Shift+G"
+  ],
+  "tab": "modify",
+  "surfaces": [
+   "C",
+   "A"
+  ],
+  "stage": "M1",
+  "context": [
+   "opening"
+  ]
+ }
+]

@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "شافٹس",
+ "quick.cat.shaft": "شافٹ",
+ "shaft_tool.browser.shaft": "شافٹ #{id}",
+ "shaft_tool.shaft.top": "بالائی سطح",
+ "shaft_tool.shaft.cuts": "کاٹے گئے اجزا",
+ "shaft_tool.shaft.cut_area": "کٹا ہوا رقبہ",
+ "shaft_tool.shaft.cut_volume": "کٹا ہوا حجم",
+ "elem.no.rooms": "اپنے کمروں کی پیروی کرتا ہے"
+}

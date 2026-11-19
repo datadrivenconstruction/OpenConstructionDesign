@@ -1,0 +1,10 @@
+{
+ "view_gfx.vv.visible_tip": "แสดงในมุมมองนี้",
+ "view_gfx.vv.enabled_tip": "ใช้ตัวกรองนี้ในมุมมองนี้",
+ "view_gfx.vv.reset_tip": "กลับไปใช้ค่าเริ่มต้นของโปรเจกต์",
+ "view_gfx.vv.col.actions": "การดำเนินการ",
+ "view_gfx.vv.nothing_to_apply": "ไม่มีการเปลี่ยนแปลงให้ใช้",
+ "view_gfx.flt.save_blocked": "ตั้งชื่อตัวกรองและกรอกพารามิเตอร์ของทุกกฎ",
+ "view_gfx.flt.confirm_delete": "ลบสำหรับทุกมุมมองหรือไม่",
+ "view_gfx.flt.param_pick": "เลือก…"
+}

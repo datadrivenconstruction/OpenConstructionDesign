@@ -1,0 +1,31 @@
+id = "G07_vaulted_hall"
+tier = "hard"
+group = "Any geometry"
+title = "Vaulted hall"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "A rib-vaulted hall (cross vaults) 30 x 12 m, nave height 14 m, six bays, columns and pointed arches, stone, with clerestory windows."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "col"
+min = 10.0
+
+[[oracle.count]]
+spec = "opening"
+min = 6.0
+
+[[oracle.count]]
+spec = "col+beam+brace+truss+gridshell_bar+solid+mass+mesh+freeform+shell_elem+gridshell+wall+slab+roof+stair+toposolid+wall_spline"
+min = 40.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

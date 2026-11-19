@@ -1,0 +1,5 @@
+{
+ "lv.level.deleted_attach": "Nabura ang level; nawalan ng nakakabit na tuktok ang {n} pader",
+ "lv.level.rooms": "Kukunin ng {n} kuwarto ang taas ng target na level ({dz} m): {names}. Pindutin muli ang Move para kumpirmahin",
+ "lv.level.pinned": "Hindi nabura ang level: hindi maaaring ilipat sa ibang level ang mga naka-pin na elemento: {names}. I-unpin muna sila"
+}

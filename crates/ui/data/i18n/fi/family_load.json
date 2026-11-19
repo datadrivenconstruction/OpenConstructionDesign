@@ -1,0 +1,4 @@
+{
+ "family_load.refused": "Perhettä “{name}” ei voi ladata: {msg}. Projektiin ei ladattu mitään; muokkauksesi säilytetään.",
+ "family_load.loaded_all": "{n} perhettä ladattiin yhdellä kertaa: {names}"
+}

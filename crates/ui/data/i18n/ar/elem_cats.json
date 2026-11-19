@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "لا يمكن تدوير الكتلة أو عكسها: ليس في سجل شكلها خطوة مدوّرة. انقلها أو انسخها، أو أعد رسمها في الاتجاه الجديد.",
+ "sched_cats.col.name": "الاسم",
+ "sched_cats.col.material": "المادة",
+ "sched_cats.col.void": "الفراغ",
+ "sched_cats.col.inplace": "في الموقع",
+ "sched_cats.col.volume": "الحجم الصافي",
+ "sched_cats.col.area": "مساحة السطح",
+ "sched_cats.col.floor_area": "مساحة الأرضية",
+ "sched_cats.col.thickness": "السماكة",
+ "sched_cats.col.points": "النقاط",
+ "elem.toposolid.points": "نقاط المسح",
+ "elem.toposolid.count": "النقاط",
+ "elem.toposolid.low": "الأدنى",
+ "elem.toposolid.high": "الأعلى",
+ "elem.toposolid.edit": "تحرير النقاط",
+ "elem.toposolid.edit_tip": "حدّد نقاط المسح واسحبها واضبط منسوبها في المخطط",
+ "elem.toposolid.pick_hint": "انقر على نقطة في المخطط لتحديدها. انقر مرة أخرى للإضافة أو الإزالة.",
+ "elem.toposolid.z": "المنسوب ({n})",
+ "elem.toposolid.mixed": "النقاط المحددة مختلفة؛ القيمة الجديدة تضبطها كلها.",
+ "elem.toposolid.edit_help": "اسحب نقطة لتحريكها. اكتب قيمة واضغط Enter لتحديد المنسوب. Backspace يزيل النقاط المحددة، وEsc يخرج.",
+ "elem.toposolid.done": "تم"
+}

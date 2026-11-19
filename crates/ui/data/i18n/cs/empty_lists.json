@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "Nakreslit stěnu",
+ "empty.totals.action": "Nakreslit stěnu",
+ "empty.schedule.action": "Přidat pole",
+ "empty.schedule_filtered.action": "Zrušit filtr",
+ "empty.library.action": "Obnovit hledání",
+ "empty.library.load": "Načíst rodinu",
+ "empty.schedule_fields.title": "Nejsou zobrazena žádná pole",
+ "empty.schedule_fields.action": "Přidat pole",
+ "empty.schedule_fields.hint": "Zapněte alespoň jedno pole, aby se zobrazila tabulka."
+}

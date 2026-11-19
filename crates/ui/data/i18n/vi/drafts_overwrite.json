@@ -1,0 +1,5 @@
+{
+ "drafts_overwrite.ow.project": "Lưu dự án đang chờ câu trả lời này. Thay thế giá trị để tiếp tục lưu; Quay lại chỉnh sửa sẽ giữ mọi chỉnh sửa và không ghi gì.",
+ "drafts_overwrite.drafts.ow_wait": "Lưu đang chờ câu trả lời của bạn trong trình soạn thảo họ: tải họ sẽ thay thế giá trị loại dự án. Chưa đóng gì.",
+ "drafts_overwrite.drafts.ow_back": "Đã dừng lưu: giá trị loại dự án được giữ lại và các chỉnh sửa họ vẫn đang mở. Chưa đóng gì."
+}

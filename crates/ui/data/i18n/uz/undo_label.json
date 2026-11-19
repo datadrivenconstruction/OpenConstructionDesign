@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "Bekor qilish: {what}",
+ "undo_label.redo_what": "Qayta bajarish: {what}",
+ "undo_label.undo_none": "Bekor qilish uchun hech narsa yo'q",
+ "undo_label.redo_none": "Qayta bajarish uchun hech narsa yo'q"
+}

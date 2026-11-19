@@ -1,0 +1,3 @@
+{
+ "find_replace.refresh_failed": "{n} vervangen in {m} elementen; vernieuwen van de weergave mislukt: {e}"
+}

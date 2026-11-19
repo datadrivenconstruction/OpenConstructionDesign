@@ -1,0 +1,14 @@
+{
+ "ai.hist.badge": "AI",
+ "ai.hist.untitled": "AI өзгерістері",
+ "ai.hist.tip": "{title}\nҚолданған: {actor}\nAI моделі: {model}",
+ "ai.hist.why": "Себебі: {why}",
+ "ai.hist.reverted": "қайтарылды",
+ "ai.hist.revert_one": "Осы AI топтамасын қайтару",
+ "ai.revert.done": "AI өзгерістері қайтарылды: {n}. Болдырмау оларды қайтарады.",
+ "ai.revert.empty": "Қайтаратын AI өзгерістері жоқ",
+ "ai.revert.not_ai": "Бұл қадам AI өзгерісі емес",
+ "ai.revert.already": "Бұл AI өзгерістері бұрыннан қайтарылған",
+ "ai.revert.opaque": "Қайтарылмады: бұл AI өзгерістері кейінгі жұмыстан қауіпсіз бөлінбейді. Ештеңе өзгерген жоқ.",
+ "ai.revert.failed": "Қайтару сәтсіз: {e}"
+}

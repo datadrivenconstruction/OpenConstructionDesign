@@ -1,0 +1,11 @@
+{
+ "pick_rules.filter": "Pumili: lahat",
+ "pick_rules.filter.on": "Pumili: {n} naka-off",
+ "pick_rules.filter.title": "Mga kategoryang mapipili ng click",
+ "pick_rules.filter.all": "Pumili ng lahat ng kategorya",
+ "pick_rules.filter.tip": "Selection filter: nilalaktawan ng click at hover ang mga kategoryang walang tsek",
+ "pick_rules.here": "Mga item dito",
+ "pick_rules.here.selected": "napili",
+ "pick_rules.pinned": "Piliin ang mga naka-pin na item",
+ "pick_rules.here.row": "{cat} · {len}"
+}

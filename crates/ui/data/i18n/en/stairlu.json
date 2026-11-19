@@ -1,0 +1,12 @@
+{
+ "opt.stair.straight": "Straight",
+ "opt.stair.l": "L",
+ "opt.stair.u": "U",
+ "opt.stair.gap": "Gap",
+ "hint.stair.corner": "L stair: pick the turn corner · Backspace — remove the last point · Esc — remove the last point, with no points — cancel",
+ "hint.stair.side": "Stair: pick the side of the second flight · Backspace — remove the last point · Esc — remove the last point, with no points — cancel",
+ "tool.stair.flights": "{n} risers (total {m})",
+ "tool.stair.err_split": "Each flight needs at least 2 risers: first flight has {n} of {m}",
+ "tool.stair.err_comfort": "Riser and tread break the comfort rule (2R + T)",
+ "tool.stair.err_input": "Stair size is out of range: check width, height and landing"
+}

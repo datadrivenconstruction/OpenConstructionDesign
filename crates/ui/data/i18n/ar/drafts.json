@@ -1,0 +1,8 @@
+{
+ "drafts.drafts.head": "المحررات المفتوحة تحتوي تعديلات ليست في المشروع بعد:",
+ "drafts.draft.family": "العائلة «{name}»",
+ "drafts.draft.line": "مكتبة الخطوط: {name}",
+ "drafts.draft.styles": "أنماط خطوط نطاق العرض",
+ "drafts.btn.save_all": "احفظ الكل",
+ "drafts.drafts.refused": "تعذّر حفظ مسودة. لم يُغلَق شيء؛ المحرر الذي يحتوي المسودة ما زال مفتوحاً."
+}

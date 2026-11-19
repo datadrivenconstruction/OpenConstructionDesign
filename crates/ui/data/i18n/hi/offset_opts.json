@@ -1,0 +1,7 @@
+{
+ "offset_opts.dist_positive": "ऑफ़सेट दूरी शून्य से बड़ी होनी चाहिए; दिशा कर्सर का अनुसरण करती है",
+ "offset_opts.count_bad": "{min} से {max} तक पूर्ण संख्या",
+ "offset_opts.done_tip": "चयन पूरा करें और टूल शुरू करें",
+ "offset_opts.iso.apply_tip": "इस व्यू के लिए अस्थायी छिपाना स्थायी करें",
+ "offset_opts.iso.exit": "अस्थायी मोड से बाहर निकलें"
+}

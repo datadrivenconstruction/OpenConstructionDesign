@@ -1,0 +1,8 @@
+{
+ "script_rec.started": "Záznam: úpravy od této chvíle půjdou do skriptu. Pro zastavení znovu zvolte „Zaznamenat akce do skriptu“.",
+ "script_rec.saved": "Skript „{name}“ uložen: úprav — {n}.",
+ "script_rec.skipped": "Úpravy nástrojů bez skriptového formuláře nebyly zaznamenány: {k}.",
+ "script_rec.nothing": "Záznam zastaven: není co uložit.",
+ "script_rec.failed": "Záznam nebyl uložen: {why}",
+ "script_rec.no_folder": "chybí složka nastavení pro skripty"
+}

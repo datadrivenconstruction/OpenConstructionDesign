@@ -1,0 +1,4 @@
+{
+ "tool.err.drawing_open": "Linie rysunku wokół tego punktu nie zamykają się w pętlę",
+ "tool.err.drawing_crossing": "Pętla rysunku wokół tego punktu przecina samą siebie"
+}

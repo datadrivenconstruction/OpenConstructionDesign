@@ -1,0 +1,10 @@
+{
+ "ai.optx.applied": "Đã áp dụng phương án “{name}”. Hoàn tác đưa nó về bản nháp",
+ "ai.optx.missing": "Phương án {id} không còn tồn tại",
+ "ai.optx.accepted": "Phương án {id} đã được áp dụng",
+ "ai.optx.not_draft": "Phương án {id} đã bị từ chối và không thể áp dụng",
+ "ai.optx.stale": "Mô hình đã thay đổi sau khi phương án {id} được tạo: hãy tạo lại trước",
+ "ai.optx.bad_recipe": "Không đọc được công thức phương án: {e}",
+ "ai.optx.refused": "Phương án chưa được áp dụng ({code}): {reason}",
+ "ai.optx.failed": "Phương án chưa được áp dụng: {e}"
+}

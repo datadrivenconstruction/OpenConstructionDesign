@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "Selite",
+ "legend.legend.new_hint": "Uuden selitteen nimi",
+ "legend.legend.delete_tip": "Poista selite",
+ "legend.legend.delete_placed": "Poista selite (sijoitettu: {sheets})",
+ "legend.legend.deleted": "Selite poistettu: {name}",
+ "legend.legend.no_rows": "Ei vielä rivejä. Lisää yksi tai ota tämän näkymän tyylit.",
+ "legend.legend.replace_q": "Korvataanko {n} riviä tämän näkymän tyyleillä?",
+ "legend.legend.replace": "Korvaa",
+ "legend.legend.keep": "Säilytä rivit",
+ "legend.col.swatch": "Väriruutu",
+ "legend.col.value": "Arvo",
+ "legend.col.label": "Nimike"
+}

@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "Rückgängig gemacht — Strg+Y wiederholt",
+ "history.hist.empty": "Noch keine Änderungen",
+ "history.hist.empty_hint": "Ihre Bearbeitungen erscheinen hier. Klicken Sie auf einen Schritt, um dorthin zurückzukehren.",
+ "history.hist.revert_all_n": "Alle KI-Änderungen rückgängig machen ({n})"
+}

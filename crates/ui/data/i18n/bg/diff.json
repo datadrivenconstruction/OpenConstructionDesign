@@ -1,0 +1,7 @@
+{
+ "diff.kind.added": "добавено",
+ "diff.kind.changed": "променено",
+ "diff.kind.deleted": "изтрито",
+ "diff.kind.refused": "отказано",
+ "diff.kind.conflict": "конфликт"
+}

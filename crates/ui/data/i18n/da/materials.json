@@ -1,0 +1,11 @@
+{
+ "materials.mat.name_empty": "Angiv et materialenavn",
+ "materials.mat.empty_title": "Ingen materialer endnu",
+ "materials.mat.empty_hint": "Skriv et navn nedenfor og tryk på Tilføj",
+ "materials.mat.nothing_hint": "Intet materiale matcher søgningen",
+ "materials.mat.clear_search": "Ryd søgning",
+ "materials.mat.replace_with": "Erstat med",
+ "materials.mat.delete_refused": "Kan ikke slettes: materialet bruges de {n} steder. Erstat det først.",
+ "materials.mat.delete_confirm": "Slet materialet „{name}“? Du kan fortryde dette.",
+ "materials.mat.replace_confirm": "Erstat „{from}“ med „{to}“ i {n} elementer? „{from}“ fjernes. Du kan fortryde dette."
+}

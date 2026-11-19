@@ -1,0 +1,15 @@
+{
+ "xl.msg.cell_clipped": "el texto se cortó para ajustarse al límite de la celda; solo lectura, edición no aplicada",
+ "xlcell.status": "Exportado. {count} celdas se acortaron o quedaron vacías; vea la ventana de detalles.",
+ "xlcell.title": "Celdas modificadas por la exportación",
+ "xlcell.intro": "Estas celdas no se pudieron escribir tal cual. El valor completo se conserva en el modelo; la celda queda bloqueada y no se puede editar en el libro.",
+ "xlcell.col_sheet": "Hoja",
+ "xlcell.col_row": "Fila",
+ "xlcell.col_col": "Columna",
+ "xlcell.col_id": "Id del elemento",
+ "xlcell.col_what": "Qué ocurrió",
+ "xlcell.what_clipped": "Texto cortado al límite de la celda",
+ "xlcell.what_blank": "No es un número finito; celda dejada vacía",
+ "xlcell.more": "… y {count} más",
+ "xlcell.close": "Cerrar"
+}

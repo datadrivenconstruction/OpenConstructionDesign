@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "verdien må være større enn null",
+ "sched_ops.not_number": "ikke et tall",
+ "sched_ops.no_host": "ingen vertsvegg",
+ "sched_ops.wall_length": "denne veggens lengde kan ikke settes slik",
+ "sched_ops.no_wall": "ingen slik vegg",
+ "sched_ops.no_opening": "ingen slik åpning",
+ "sched_ops.no_curtain": "ingen slik gardinvegg",
+ "sched_ops.no_panel": "ingen slikt panel",
+ "sched_ops.no_slab": "ingen slik plate",
+ "sched_ops.no_room": "ingen slikt rom",
+ "sched_ops.slope_range": "helning utenfor området",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

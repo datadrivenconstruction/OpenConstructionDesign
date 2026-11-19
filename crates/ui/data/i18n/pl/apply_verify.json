@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "Zastosowanie zatrzymano: model zachowano bez zmian",
+ "apply_verify.rolled_back": "Zastosowanie nie zgadzało się z podglądem i zostało cofnięte; model bez zmian. {what}",
+ "apply_verify.diff.missing": "Podgląd pokazuje {what} {kind}, ale zastosowanie tego nie zrobiło.",
+ "apply_verify.diff.extra": "Zastosowano {kind} {what}, którego podgląd nie pokazuje.",
+ "apply_verify.diff.kind": "Podgląd pokazuje {what} {shown}, ale zastosowano {applied}.",
+ "apply_verify.diff.value": "{what}: „{col}” wyszło inaczej niż w podglądzie.",
+ "apply_verify.diff.truncated": "Podgląd i zastosowana zmiana różnią się rozmiarem.",
+ "apply_verify.diff.unreadable": "Nie udało się odczytać zastosowanej zmiany ({e}).",
+ "apply_verify.no_base": "Zastosowanie nie zostało uruchomione: brak kopii do sprawdzenia podglądu. Model bez zmian; poproś o podgląd ponownie.",
+ "apply_verify.take_back_failed": "Cofnięcie nie powiodło się ({e}): użyj Cofnij.",
+ "apply_verify.kind.created": "utworzono",
+ "apply_verify.kind.changed": "zmieniono",
+ "apply_verify.kind.deleted": "usunięto",
+ "apply_verify.card.type_row": "Typ {type} · {n} elementów przyjmuje zmianę"
+}

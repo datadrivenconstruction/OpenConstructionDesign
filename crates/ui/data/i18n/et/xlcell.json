@@ -1,0 +1,15 @@
+{
+ "xl.msg.cell_clipped": "tekst lõigati lahtri piirini; kirjutuskaitstud, muudatust ei rakendatud",
+ "xlcell.status": "Eksporditud. {count} lahtrit lühendati või jäeti tühjaks — vaata üksikasjade akent.",
+ "xlcell.title": "Ekspordi käigus muudetud lahtrid",
+ "xlcell.intro": "Neid lahtreid ei saanud sellisena kirjutada. Täielik väärtus jääb mudelisse; lahter on lukus ja seda ei saa töövihikus muuta.",
+ "xlcell.col_sheet": "Leht",
+ "xlcell.col_row": "Rida",
+ "xlcell.col_col": "Veerg",
+ "xlcell.col_id": "Elemendi id",
+ "xlcell.col_what": "Mis juhtus",
+ "xlcell.what_clipped": "Tekst lõigati lahtri piirini",
+ "xlcell.what_blank": "Pole lõplik arv, lahter jäeti tühjaks",
+ "xlcell.more": "… ja veel {count}",
+ "xlcell.close": "Sulge"
+}

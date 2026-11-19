@@ -1,0 +1,6 @@
+{
+ "cmd.xlsx.undo_apply": "Annulla l'ultima applicazione XLSX",
+ "xlsx_undo.later": "Non annullato: il modello è stato modificato dopo questa applicazione foglio di calcolo XLSX. Usa Ctrl+Z passo per passo o il pannello Cronologia.",
+ "xlsx_undo.gone": "Niente da annullare: questa applicazione foglio di calcolo XLSX è già annullata.",
+ "xlsx_undo.busy": "Termina o annulla prima il disegno in corso, poi annulla l'applicazione foglio di calcolo XLSX."
+}

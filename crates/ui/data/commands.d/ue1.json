@@ -1,0 +1,12 @@
+[
+ {
+  "id": "elem.panel_select_wall",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "Mx",
+  "group": "modify"
+ }
+]

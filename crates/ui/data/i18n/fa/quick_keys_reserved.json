@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key} رزرو شده است ({why}) و نمی‌توان آن را دوباره تخصیص داد",
+ "quick.keys.res_copy": "کپی",
+ "quick.keys.res_paste": "چسباندن",
+ "quick.keys.res_cut": "برش",
+ "quick.keys.res_undo": "واگرد / بازانجام",
+ "quick.keys.res_save": "ذخیره",
+ "quick.keys.res_palette": "پالت دستورات",
+ "quick.keys.reserved_conflict": "{key} از قبل برای «{cmd}» استفاده می‌شود. Esc آن را همان‌جا نگه می‌دارد.",
+ "quick.keys.reserved_swap": "جابه‌جایی",
+ "quick.keys.reserved_take": "برداشتن آن",
+ "quick.keys.reserved_keep": "نگه داشتن",
+ "quick.keys.reserved_os": "در اختیار سیستم است:"
+}

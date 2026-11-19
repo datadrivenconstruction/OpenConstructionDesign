@@ -1,0 +1,27 @@
+id = "G08_arch_bridge__de"
+tier = "hard"
+group = "Any geometry"
+title = "Arch bridge"
+lang = "de"
+base = "empty"
+
+[[turn]]
+say = "Eine stählerne Straßenbrücke mit Bogen über der Fahrbahn, Spannweite 80 m, Bogenstich 14 m, 12 Hänger je Seite, Querträger, Widerlager auf Fundamenten, zwei Fahrspuren und ein Gehweg."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "beam+brace+col+truss"
+min = 60.0
+
+[[oracle.count]]
+spec = "slab"
+min = 1.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

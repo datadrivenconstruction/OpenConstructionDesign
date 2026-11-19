@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "שרטט קיר",
+ "empty.totals.action": "שרטט קיר",
+ "empty.schedule.action": "הוסף שדה",
+ "empty.schedule_filtered.action": "נקה סינון",
+ "empty.library.action": "אפס חיפוש",
+ "empty.library.load": "טען משפחה",
+ "empty.schedule_fields.title": "אין שדות מוצגים",
+ "empty.schedule_fields.action": "הוסף שדה",
+ "empty.schedule_fields.hint": "הפעל לפחות שדה אחד כדי לראות את הטבלה."
+}

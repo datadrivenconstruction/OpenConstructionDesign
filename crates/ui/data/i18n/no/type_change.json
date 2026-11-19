@@ -1,0 +1,13 @@
+{
+ "type_change.affects_walls": {
+  "one": "påvirker # vegg",
+  "other": "påvirker # vegger"
+ },
+ "type_change.affects": {
+  "one": "påvirker # element",
+  "other": "påvirker # elementer"
+ },
+ "type_change.tick_types": "Bruk typeendringene på alle {n} elementer av disse typene",
+ "type_change.tick_types_first": "Kryss av typeendringen først: hvert element av typen tar den",
+ "xl.msg.types_first": "bekreft typeendringene først"
+}

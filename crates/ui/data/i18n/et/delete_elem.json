@@ -1,0 +1,9 @@
+{
+ "elem.deleted": "Kustutatud elemente: {n}",
+ "elem.deleted_kept": "Kustutatud elemente: {n}; alles jäetud: {k} (paneelid ja elemendid, mida ei saa kustutada)",
+ "elem.not_deleted": "ei kustutatud: {e}",
+ "elem.not_deletable": "Seda elementi ei saa kustutada",
+ "elem.panel": "kardinseina paneel",
+ "elem.panel_refused": "Paneel on osa oma kardinseinast ega ole eraldi kustutatav. Kustutamiseks vali kogu sein.",
+ "elem.reload_failed": "Kustutatud, kuid vaade ei uuenenud: {e}"
+}

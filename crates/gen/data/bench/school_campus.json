@@ -1,0 +1,25 @@
+{
+ "schema": "gen_bench.v1",
+ "group": "school",
+ "spec": {
+  "typology": "school_campus",
+  "floors": 2
+ },
+ "adjacency": [
+  [
+   "classroom",
+   "corridor",
+   2
+  ],
+  [
+   "wc",
+   "corridor",
+   1
+  ],
+  [
+   "staff",
+   "classroom",
+   1
+  ]
+ ]
+}

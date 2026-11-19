@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "شارٹ کٹ کی فہرست",
+ "cmd.help.shortcuts.desc": "ہر شارٹ کٹ اسی طرح دکھاتا ہے جیسا اب سیٹ ہے، سیاق کے لحاظ سے۔ ٹیکسٹ فیلڈ کے باہر کہیں بھی ? دبائیں۔",
+ "sheet.title": "کی بورڈ شارٹ کٹس",
+ "sheet.filter": "کمانڈ یا کلید سے فلٹر کریں",
+ "sheet.filter_label": "شارٹ کٹ فلٹر کریں",
+ "sheet.customize": "حسب ضرورت…",
+ "sheet.close": "بند کریں",
+ "sheet.esc_close": "بند کرنے کے لیے",
+ "sheet.none": "کوئی شارٹ کٹ نہیں ملا",
+ "sheet.none_hint": "کوئی اور لفظ یا کلید آزمائیں۔",
+ "sheet.sec.general": "عمومی",
+ "sheet.sec.plan": "پلان",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "شیڈیول",
+ "sheet.sec.sheets": "شیٹس",
+ "sheet.sec.ai": "AI"
+}

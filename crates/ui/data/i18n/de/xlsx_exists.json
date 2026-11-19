@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "Diese Arbeitsmappe existiert bereits",
+ "xlsx_exists.foreign": "Sie ist keine Arbeitsmappe dieses Projekts und wird daher nie ersetzt.",
+ "xlsx_exists.pending": "Sie enthält {n} Bearbeitungen, die noch nicht im Modell übernommen sind.",
+ "xlsx_exists.outside": "Sie hat {n} Zeilen, die der neue Export nicht enthält.",
+ "xlsx_exists.new_name": "Nach {name} exportieren",
+ "xlsx_exists.apply_first": "Übernehmen Sie sie zuerst",
+ "xlsx_exists.replace": "Ersetzen (alte Arbeitsmappe nach _archive)",
+ "xlsx_exists.archived": "Alte Arbeitsmappe nach {path} verschoben",
+ "xlsx_exists.archive_failed": "Die alte Arbeitsmappe konnte nicht verschoben werden, nichts wurde exportiert: {error}"
+}

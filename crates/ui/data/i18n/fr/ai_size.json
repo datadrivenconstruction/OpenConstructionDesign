@@ -1,0 +1,10 @@
+{
+ "ai.size.count": "Environ {n} / {max} jetons",
+ "ai.size.block": "Trop long pour ce modèle : environ {n} jetons, jusqu’à {max} tiennent et laissent de la place pour la réponse. Raccourcissez-le ou divisez-le",
+ "ai.size.trim": "Tronquer pour tenir",
+ "ai.size.trim_tip": "Coupe la fin du message pour qu’il tienne. Rien n’est coupé tant que vous ne cliquez pas.",
+ "ai.size.drop_view": "Omettre la vue",
+ "ai.size.drop_level": "Omettre le niveau",
+ "ai.size.drop_selection": "Omettre la sélection",
+ "ai.size.sep": "’"
+}

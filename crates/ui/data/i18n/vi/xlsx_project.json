@@ -1,0 +1,7 @@
+{
+ "xlsx_project.title": "Sổ làm việc này được xuất từ dự án khác",
+ "xlsx_project.body": "Sổ làm việc “{file}” thuộc dự án khác. Id cấu kiện khác nhau giữa các dự án, nên các hàng của nó sẽ đổi các cấu kiện không liên quan ở đây. Không có gì được đọc vào dự án này.",
+ "xlsx_project.export_new": "Xuất dự án này ra sổ làm việc mới",
+ "xlsx_project.close": "Đóng",
+ "xlsx_project.no_project": "Sổ làm việc này không cho biết nó thuộc dự án nào: hãy kiểm tra xem nó có được xuất từ dự án này không."
+}

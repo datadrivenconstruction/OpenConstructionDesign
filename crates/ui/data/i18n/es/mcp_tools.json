@@ -1,0 +1,5 @@
+{
+ "mcp.set.hide": "Ocultar",
+ "mcp.set.copy_config": "Copiar configuración del agente de IA",
+ "mcp.set.no_token": "Aún no hay token de acceso. Primero active el servidor."
+}

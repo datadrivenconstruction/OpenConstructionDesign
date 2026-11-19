@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "连同视图复制图纸",
+ "cmd.view.sheet_duplicate_title": "复制图纸（仅标题栏）",
+ "sheets.dup.menu_views": "连同视图复制",
+ "sheets.dup.menu_title": "复制，仅标题栏",
+ "sheets.dup.done": "已从 {src} 创建图纸 {number}：{views} 个视图，{sched} 个明细表和图例。修订不予复制；该图纸未发布。",
+ "sheets.dup.none": "请先打开图纸再复制",
+ "sheets.dup.copy": "副本",
+ "cmd.view.sheet_duplicate.short": "连同视图复制",
+ "cmd.view.sheet_duplicate_title.short": "复制标题栏"
+}

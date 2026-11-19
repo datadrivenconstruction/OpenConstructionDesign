@@ -1,0 +1,5 @@
+{
+ "materials.mat.conflict": "Dit materiaal is in het model gewijzigd (ongedaan maken of een ander venster) terwijl de kaart bewerkingen had. Uw bewerkingen blijven behouden.",
+ "materials.mat.keep": "Mijn bewerkingen behouden",
+ "materials.mat.reload": "Opnieuw laden"
+}

@@ -1,0 +1,14 @@
+{
+ "ai.stream.waiting": "Aguardando o modelo",
+ "ai.stream.reading": "Lendo o modelo",
+ "ai.stream.working": "Trabalhando",
+ "ai.stream.answering": "Escrevendo a resposta",
+ "ai.stream.tools_one": "1 ferramenta",
+ "ai.stream.tools_many": "{n} ferramentas",
+ "ai.stream.secs": "{n} s",
+ "ai.stream.sep": " · ",
+ "ai.stream.stalled": "Ainda aguardando o serviço do modelo",
+ "ai.stream.stop": "Parar",
+ "ai.stream.cancelled": "Interrompido",
+ "ai.stream.incomplete": "O rascunho está incompleto. Nada foi aplicado ao modelo."
+}

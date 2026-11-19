@@ -1,0 +1,5 @@
+{
+ "mep_dn.dn.unset": "Niet ingesteld",
+ "mep_dn.slope.err": "Voer een helling in % in, bijv. 1.5",
+ "mep_dn.err.rejected": "de waarde wordt niet geaccepteerd"
+}

@@ -1,0 +1,7 @@
+{
+ "src.field.kids": "Onderliggende rijen (panelen, hoekpunten)",
+ "src.kids.mine": "{n} onderliggende rijen, hier gewijzigd",
+ "src.kids.changed": "onderliggende rijen hier gewijzigd",
+ "src.kids.theirs": "onderliggende rijen in het bestand gewijzigd",
+ "src.kids.take_tip": "De volgende import neemt de onderliggende rijen uit het bestand over; ze worden nu niet toegepast."
+}

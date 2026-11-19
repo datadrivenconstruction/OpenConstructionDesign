@@ -1,0 +1,18 @@
+{
+ "undo.entry_later": "Nincs visszavonva: utána másik módosítás történt. Előbb azt vonja vissza.",
+ "undo.entry_gone": "Nincs visszavonva: ez a módosítás már vissza lett vonva, vagy nincs az előzményekben.",
+ "undo.entry_busy": "Előbb fejezze be vagy szakítsa meg az aktuális rajzolást, majd vonja vissza.",
+ "quick.hud.more": "Továbbiak a Tulajdonságokban: {names}",
+ "sheet_tools.sheet.more": "További lapeszközök",
+ "job.of": "{d} / {t}",
+ "job.of.mb": "{d} / {t} MB",
+ "job.left.under_minute": "kevesebb mint egy perc van hátra",
+ "job.left.minutes": "körülbelül {n} perc van hátra",
+ "sheet_tools.start.units": "Mértékegységek",
+ "sheet_tools.print.save": {
+  "one": "# lap mentése",
+  "other": "# lap mentése"
+ },
+ "sheet_tools.sets.delete_ask": "Törli a(z) „{name}” készletet? A lapjai a projektben maradnak.",
+ "sheet_tools.keep": "Megtartás"
+}

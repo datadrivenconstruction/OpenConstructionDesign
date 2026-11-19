@@ -1,0 +1,34 @@
+id = "S04_apartments_wetwall"
+tier = "smoke"
+group = ""
+title = "Apartment block, furnished, wet-wall plumbing"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "Six-storey apartment block with 24 apartments (mix of one-, two- and three-room flats), fully furnished: beds, sofas, kitchen units and sanitary fixtures. Bathrooms and kitchens stacked over each other on wet walls with water supply and drainage risers. Balconies, flat roof. Build it."
+
+[[oracle.count]]
+spec = "level"
+min = 6.0
+
+[[oracle.count]]
+spec = "room"
+min = 100.0
+
+[[oracle.count]]
+spec = "comp"
+min = 200.0
+
+[[oracle.count]]
+spec = "level"
+min = 6.0
+max = 7.0
+
+[[oracle.count]]
+spec = "room:kitchen"
+min = 24.0
+
+[[oracle.count]]
+spec = "room:bath|wc|toilet"
+min = 24.0

@@ -1,0 +1,13 @@
+{
+ "tags.gone": "L'etichetta non esiste più",
+ "tags.readonly_wall": "L'etichetta di un muro mostra il tipo e qui non si modifica: cambia il tipo di muro",
+ "tags.readonly_comp": "L'etichetta di un componente mostra la famiglia e qui non si modifica: cambia il tipo",
+ "tags.locked": "L'elemento è bloccato: sbloccalo per modificare l'etichetta",
+ "tags.done": "Valore dell'etichetta scritto",
+ "tags.failed": "Etichetta non modificata: {e}",
+ "tags.dup_door": "{mark} presente anche su {n} porte",
+ "tags.dup_window": "{mark} presente anche su {n} finestre",
+ "tags.dup_room": "{mark} presente anche su {n} stanze",
+ "tags.hint_mark": "Marca",
+ "tags.hint_name": "Nome stanza"
+}

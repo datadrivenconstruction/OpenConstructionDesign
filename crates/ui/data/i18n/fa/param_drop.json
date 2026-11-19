@@ -1,0 +1,8 @@
+{
+ "param_drop.title": "مقادیر پارامتر حذف شود؟",
+ "param_drop.intro": "{name} دیگر به این دسته‌ها متصل نیست:",
+ "param_drop.line": "{category}: {values} حذف خواهد شد",
+ "param_drop.undo": "یک Ctrl+Z همه را برمی‌گرداند.",
+ "param_drop.confirm": "حذف مقادیر و ذخیره",
+ "param_drop.cancel": "لغو"
+}

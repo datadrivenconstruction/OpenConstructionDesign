@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "দেয়াল আঁকুন",
+ "empty.totals.action": "দেয়াল আঁকুন",
+ "empty.schedule.action": "ঘর যোগ করুন",
+ "empty.schedule_filtered.action": "ফিল্টার মুছুন",
+ "empty.library.action": "অনুসন্ধান রিসেট",
+ "empty.library.load": "ফ্যামিলি লোড করুন",
+ "empty.schedule_fields.title": "কোনো ঘর দেখানো হচ্ছে না",
+ "empty.schedule_fields.action": "ঘর যোগ করুন",
+ "empty.schedule_fields.hint": "টেবিল দেখতে অন্তত একটি ঘর চালু করুন।"
+}

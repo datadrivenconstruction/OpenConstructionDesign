@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "Reproduire le type",
+ "cmd.mod.match_type.short": "Reproduire le type",
+ "cmd.mod.match_type.desc": "Choisissez un mur, un plancher, un poteau ou une poutre, puis cliquez sur d’autres éléments de la même catégorie pour leur donner son type. Faites glisser une fenêtre pour appliquer à tout ce qu’elle contient. Échap relâche la source.",
+ "hint.match_type.pick": "Reproduire le type : choisir un mur, un plancher, un poteau ou une poutre · Échap — quitter",
+ "hint.match_type.apply": "Reproduire le type : cliquer les cibles ou glisser une fenêtre · Échap — autre source",
+ "match_type.kind.wall": "mur",
+ "match_type.kind.slab": "plancher",
+ "match_type.kind.column": "poteau",
+ "match_type.kind.beam": "poutre",
+ "match_type.refuse.category": "Autre catégorie : seul un {cat} peut recevoir ce type",
+ "match_type.refuse.curtain": "Mur-rideau : son type n’est pas reproduit ici",
+ "match_type.refuse.pinned": "Épinglé : désépinglez-le pour changer le type",
+ "match_type.pick_bad": "Choisissez un mur, un plancher, un poteau ou une poutre comme source",
+ "match_type.same": "Déjà de ce type",
+ "match_type.done": "Type appliqué : {n}",
+ "match_type.done_skipped": "Type appliqué : {n}, ignoré (épinglé ou mur-rideau) : {skipped}",
+ "match_type.failed": "Type non modifié : {err}"
+}

@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "Rango de vista",
+ "view_range.range": "Rango de vista",
+ "view_range.cut": "Plano de corte",
+ "view_range.bottom": "Inferior",
+ "view_range.depth": "Profundidad de vista",
+ "view_range.cut.hint": "Altura del plano de corte sobre el nivel. Los elementos que lo cruzan se dibujan cortados.",
+ "view_range.bottom.hint": "Parte inferior del rango, respecto al nivel. Se admiten valores cero o negativos.",
+ "view_range.depth.hint": "Hasta dónde mira la vista por debajo de la inferior. Cero o más.",
+ "view_range.err.number": "Introduzca una longitud en cada campo",
+ "view_range.err.not_finite": "Introduzca una longitud en cada campo",
+ "view_range.err.cut_not_above_bottom": "El plano de corte debe estar por encima de la inferior",
+ "view_range.err.negative_depth": "La profundidad de vista no puede ser negativa",
+ "view_range.err.top_below_cut": "La parte superior del rango no debe estar por debajo del plano de corte"
+}

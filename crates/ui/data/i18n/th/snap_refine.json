@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "รัศมีการจับจุด",
+ "snap_refine.settings.snap_px_desc": "เคอร์เซอร์ต้องเข้ามาใกล้จุดหรือเส้นแค่ไหนจึงจะจับได้ หน่วยเป็นพิกเซลบนหน้าจอ ค่าที่มากขึ้นช่วยในจอสัมผัสและจอความหนาแน่นสูง",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "แนวนอน",
+ "snap_refine.hint.vertical": "แนวตั้ง",
+ "snap_refine.hint.perpendicular": "ตั้งฉากกับเส้นก่อนหน้า",
+ "snap_refine.hint.parallel": "ขนานกับเส้นก่อนหน้า",
+ "snap_refine.hint.on_axis": "บนแกนผนัง",
+ "snap_refine.no_snap": "ไม่จับจุด (Alt)"
+}

@@ -1,0 +1,7 @@
+{
+ "src.field.kids": "Mga child row (panel, vertex)",
+ "src.kids.mine": "{n} na child row, nabago rito",
+ "src.kids.changed": "nabago rito ang mga child row",
+ "src.kids.theirs": "nabago sa file ang mga child row",
+ "src.kids.take_tip": "Kukunin ng susunod na import ang mga child row ng file; hindi pa ito inilalapat ngayon."
+}

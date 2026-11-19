@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "אביזר",
+ "elem.mep_fitting.many": "אביזרים",
+ "elem.mep_fitting.kind.elbow": "זווית",
+ "elem.mep_fitting.kind.tee": "טי",
+ "elem.mep_fitting.kind.cross": "צלב",
+ "elem.mep_fitting.kind.transition": "מעבר",
+ "elem.mep_fitting.kind.cap": "כיסוי",
+ "elem.mep_fitting.size": "גודל",
+ "elem.mep_fitting.at": "מיקום",
+ "elem.mep_fitting.runs": "קטע {n}",
+ "elem.mep_fitting.edit_run": "ערוך קטע",
+ "elem.mep_fitting.select_runs": "בחר את הקטעים שלו",
+ "elem.mep_fitting.derived": "אביזר עוקב אחרי הקטעים שלו: שנה קטע והאביזר ישתנה איתו.",
+ "elem.mep_fitting.no_delete": "אי אפשר למחוק או להזיז אביזר לבד. ערוך או מחק את הקטעים שלו.",
+ "elem.mep_fitting.hint": "לחץ על אביזר בתוכנית כדי לראות את הקטעים שלו.",
+ "elem.mep_fitting.picked": "אביזרים שנבחרו: {n}"
+}

@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "اعمال متوقف شد: مدل همان‌طور که بود نگه داشته شد",
+ "apply_verify.rolled_back": "اعمال با پیش‌نویس برابر نبود و برگردانده شد؛ مدل بدون تغییر است. {what}",
+ "apply_verify.diff.missing": "پیش‌نویس {what} {kind} را نشان می‌دهد، اما اعمال آن را انجام نداد.",
+ "apply_verify.diff.extra": "{kind} {what} اعمال شد، که پیش‌نویس نشان نمی‌دهد.",
+ "apply_verify.diff.kind": "پیش‌نویس {what} {shown} را نشان می‌دهد، اما اعمال آن را {applied} کرد.",
+ "apply_verify.diff.value": "{what}: “{col}” متفاوت از پیش‌نویس درآمد.",
+ "apply_verify.diff.truncated": "پیش‌نویس و تغییر اعمال‌شده از نظر اندازه متفاوت‌اند.",
+ "apply_verify.diff.unreadable": "تغییر اعمال‌شده دوباره خوانده نشد ({e}).",
+ "apply_verify.no_base": "اعمال اجرا نشد: نسخه‌ای که پیش‌نویس با آن مقایسه شود موجود نیست. مدل بدون تغییر است؛ دوباره پیش‌نویس بخواهید.",
+ "apply_verify.take_back_failed": "برگرداندن آن شکست خورد ({e}): از واگرد استفاده کنید.",
+ "apply_verify.kind.created": "ایجاد شد",
+ "apply_verify.kind.changed": "تغییر کرد",
+ "apply_verify.kind.deleted": "حذف شد",
+ "apply_verify.card.type_row": "نوع {type} · {n} عنصر تغییر را می‌گیرند"
+}

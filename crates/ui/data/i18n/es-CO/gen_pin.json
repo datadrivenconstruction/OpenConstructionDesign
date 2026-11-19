@@ -1,0 +1,7 @@
+{
+ "gen.pin.room": "Ha modificado un espacio del proyecto generado. Fíjelo para que una revisión del proyecto lo mantenga en su sitio.",
+ "gen.pin.storey": "Ha modificado una planta del proyecto generado. Fíjela para que una revisión del proyecto conserve sus muros y huecos.",
+ "gen.pin.action": "Fijar",
+ "gen.pin.done": "Fijado: una revisión del proyecto lo mantiene y coloca el resto a su alrededor",
+ "gen.pin.failed": "No se pudo fijar"
+}

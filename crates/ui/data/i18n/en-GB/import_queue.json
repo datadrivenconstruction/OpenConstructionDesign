@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "Queued behind the running job: {n}",
+ "import_queue.queue_full": "The queue is full, {n} files were not added",
+ "import_queue.changed": "{name} was updated after this project was made. Opened the previous project.",
+ "import_queue.import_again": "Import again",
+ "import_queue.kept": "The finished import is kept",
+ "import_queue.open_it": "Open it",
+ "import_queue.sum.head": "import: {editable} editable (walls {walls}, openings {open}, slabs {slabs}, rooms {rooms}, other {other}), {meshes} as mesh",
+ "import_queue.sum.unchanged": ", unchanged {n}",
+ "import_queue.sum.updated": ", updated {n}",
+ "import_queue.sum.missing": ", not in the source {n} (kept)",
+ "import_queue.sum.skipped": ", skipped {n}",
+ "import_queue.sum.warnings": ", warnings {n}",
+ "import_queue.import_failed": "import failed: {e}"
+}

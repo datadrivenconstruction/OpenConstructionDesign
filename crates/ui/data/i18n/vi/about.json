@@ -1,0 +1,33 @@
+{
+ "cmd.help.licenses": "Giấy phép mã nguồn mở",
+ "cmd.help.licenses.desc": "Liệt kê các thư viện mã nguồn mở dùng trong bản dựng này cùng giấy phép.",
+ "about.product": "DDC Editor",
+ "about.version": "Phiên bản",
+ "about.build": "Bản dựng",
+ "about.schema": "Lược đồ mô hình",
+ "about.system": "Hệ thống",
+ "about.gpu": "Bộ điều hợp đồ họa",
+ "about.language": "Ngôn ngữ",
+ "about.copy": "Sao chép thông tin phiên bản",
+ "about.copy_desc": "Phiên bản, bản dựng, hệ thống và bộ điều hợp đồ họa để báo lỗi. Không có đường dẫn tệp.",
+ "about.copied": "Đã sao chép thông tin phiên bản",
+ "about.licenses": "Giấy phép mã nguồn mở",
+ "about.licenses_desc": "Các thư viện dùng trong bản dựng này và giấy phép của chúng",
+ "about.licenses.open": "Xem",
+ "about.licenses.title": "Giấy phép mã nguồn mở",
+ "about.licenses.note": "DDC Editor bao gồm các thư viện dưới đây. Mỗi thư viện vẫn theo giấy phép và thông báo bản quyền riêng. Toàn văn giấy phép: THIRD_PARTY_LICENSES.txt nằm cạnh ứng dụng.",
+ "about.licenses.full": "Toàn văn giấy phép",
+ "about.licenses.list": "Danh sách thành phần",
+ "about.licenses.close": "Đóng",
+ "about.licenses.col_name": "Thành phần",
+ "about.licenses.col_license": "Giấy phép",
+ "about.licenses.count": {
+  "one": "# thành phần",
+  "other": "# thành phần"
+ },
+ "about.licenses.count_of": "{shown} trong số {total} thành phần",
+ "about.licenses.search_hint": "Tìm theo tên hoặc giấy phép…",
+ "about.licenses.search_clear": "Xóa tìm kiếm",
+ "about.licenses.none": "Không tìm thấy",
+ "about.licenses.none_hint": "Thử một phần tên thư viện hoặc tên giấy phép như MIT."
+}

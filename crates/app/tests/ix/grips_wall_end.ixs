@@ -1,0 +1,6 @@
+walls=[(0,0)-(6,0)]
+# Grip: the end of the selected wall dragged and dropped; GripDrag while held, one record
+tool(select) click(3,0) → selected=1 scope=Idle
+move(6,0) press(6,0) → scope=GripDrag
+move(6,2) → scope=GripDrag journal=+0
+release(6,2) → journal=+1 scope=Idle

@@ -1,0 +1,16 @@
+{
+ "xlsx_recover.title": "Un export vers le classeur lié a été interrompu",
+ "xlsx_recover.both": "L'export s'est arrêté entre le déplacement de l'ancien classeur et la mise en place du nouveau. Rien n'est perdu : le nouveau classeur est complet dans {part}, l'ancien est conservé dans {bak}.",
+ "xlsx_recover.part_only": "L'export s'est arrêté avant la mise en place du nouveau classeur. Il est complet dans {part}.",
+ "xlsx_recover.bak_only": "L'export s'est arrêté avant que le nouveau classeur soit prêt. L'ancien classeur est conservé dans {bak}.",
+ "xlsx_recover.finish": "Terminer l'export interrompu",
+ "xlsx_recover.restore": "Restaurer l'ancien classeur",
+ "xlsx_recover.finished": "L'export interrompu est terminé : le nouveau classeur est en place.",
+ "xlsx_recover.finished_kept": "L'export interrompu est terminé : le nouveau classeur est en place, l'ancien est conservé dans {bak}.",
+ "xlsx_recover.restored": "L'ancien classeur est de nouveau en place.",
+ "xlsx_recover.restore_failed": "L'ancien classeur n'a pas pu être remis en place ({err}). Il est conservé dans {path}.",
+ "xlsx_recover.not_restored": "Le nouveau classeur n'a pas pu être mis en place et l'ancien n'a pas pu être remis en place. Rien n'est perdu : l'ancien classeur est conservé dans {path} ; la synchronisation propose de terminer ou de restaurer.",
+ "xlsx_recover.finish_failed": "Le nouveau classeur n'a pas pu être mis en place ({err}). Il reste dans {path}.",
+ "xlsx_recover.dest_back": "Un classeur est de retour dans {path} : rien n'a été déplacé.",
+ "xlsx_recover.nothing": "Rien de l'export interrompu n'est à déplacer."
+}

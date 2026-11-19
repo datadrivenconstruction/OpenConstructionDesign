@@ -1,0 +1,5 @@
+{
+ "mep_dn.dn.unset": "לא הוגדר",
+ "mep_dn.slope.err": "הזן שיפוע ב-%, למשל 1.5",
+ "mep_dn.err.rejected": "הערך אינו מתקבל"
+}

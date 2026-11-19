@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "Змінено",
+ "ai.redraft.added": "+{n} додано",
+ "ai.redraft.removed": "−{n} видалено",
+ "ai.redraft.changed": "~{n} змінено",
+ "ai.redraft.strip": "{what} після вашого останнього перегляду",
+ "ai.redraft.note": "Переглянуто змінений план: {what}",
+ "ai.redraft.more": "+{n} ще",
+ "ai.redraft.ack": "Зрозуміло",
+ "ai.redraft.ack.tip": "Позначити цю ревізію як переглянуту; Застосувати тепер орієнтується на неї",
+ "ai.redraft.removed_list": "Видалені елементи: {n}",
+ "ai.redraft.review_first": "План змінився після вашого повідомлення: спершу перегляньте зміни",
+ "ai.redraft.mark.tip": "Нове або змінене після вашого останнього перегляду",
+ "ai.redraft.emptied": "Уточнення прибрало всі елементи: чернетка порожня"
+}

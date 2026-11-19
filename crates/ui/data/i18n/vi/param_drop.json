@@ -1,0 +1,8 @@
+{
+ "param_drop.title": "Xóa giá trị tham số?",
+ "param_drop.intro": "{name} không còn gắn với các danh mục này:",
+ "param_drop.line": "{category}: {values} sẽ bị xóa",
+ "param_drop.undo": "Một lần Ctrl+Z sẽ khôi phục tất cả.",
+ "param_drop.confirm": "Xóa giá trị và lưu",
+ "param_drop.cancel": "Hủy"
+}

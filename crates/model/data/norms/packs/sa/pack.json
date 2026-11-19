@@ -1,0 +1,44 @@
+{
+ "id": "sa",
+ "version": "2026.11",
+ "parent": "generic",
+ "country": "SA",
+ "lang": [
+  "ar",
+  "en"
+ ],
+ "units": {
+  "length": "m",
+  "display": "metric"
+ },
+ "conventions": {
+  "ground_floor": 0,
+  "area_standard": "gross",
+  "net_share": 0.85,
+  "note": "The ministry residential requirements set minimum net room areas and cap ground-floor coverage as a share of the plot; typical sales quotes are built-up (gross) area. Not confirmed in a clause. Net share is our own estimate.",
+  "source": null
+ },
+ "status": "tier3",
+ "climate": {
+  "zones": [],
+  "default": null
+ },
+ "research": {
+  "date": "2026-11-14",
+  "missing": [
+   "corridor.width_min.accessible",
+   "fire.compartment_area_max",
+   "fire.compartment_area_max.sprinklered",
+   "parking.per_dwelling",
+   "load.floor_residential",
+   "load.floor_office"
+  ],
+  "unreachable": [
+   "https://sbc.gov.sa 2018 and 2024 SBC 201/801 full-text PDFs (reachable, but contents pages only; full code is paid)",
+   "web.archive.org snapshots of sbc.gov.sa (no code text)",
+   "https://resources.alriyadh.gov.sa:9443/archive/docs/306bd07c-dc37-4cac-b077-9f8d58e21437.pdf (no connection)"
+  ],
+  "note": "The ministry guide delegates clear room height, riser, tread, exits and accessibility to SBC 201 and SBC 1101-1102 (paid, no free full text found). The guide itself states: internal passages in dwellings at least 0.90 m; minimum rooms (net): living/dining 11.2 m2 with 2.8 m width, bedroom 6.5 m2 with 2.1 m width, kitchen 5 m2 with 1.8 m width; villas capped at 14 m height. Those are not in the key list, so not stored."
+ },
+ "note": "Numbers with verified=true were read in the cited clause; the rest are hints with a note of where we looked. Wording is our own; no text of a standard is stored."
+}

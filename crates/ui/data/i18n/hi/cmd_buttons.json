@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level} पर",
+ "cmd_buttons.purge.undo": "हटाना एक पूर्ववत चरण है।",
+ "cmd_buttons.unpin.none": "कोई पिन किया हुआ तत्व चुना नहीं है",
+ "cmd_buttons.change_type.none": "पहले दीवारें चुनें: उनका प्रकार एक चरण में बदलता है",
+ "cmd_buttons.units.metric": "इकाइयाँ: मीट्रिक",
+ "cmd_buttons.units.imperial": "इकाइयाँ: फ़ुट और इंच",
+ "cmd_buttons.units.back": "वापस",
+ "cmd_buttons.underlay.on": "अंडरले चालू: नीचे का तल धुंधला दिखता है",
+ "cmd_buttons.underlay.off": "अंडरले बंद",
+ "cmd_buttons.underlay.none": "अंडरले चालू है, लेकिन नीचे के तल पर दिखाने को कुछ नहीं है",
+ "cmd_buttons.zoom_sel.no_shape": "इस व्यू में चयन की कोई फ़्रेमिंग योग्य आकृति नहीं है",
+ "cmd_buttons.close.base": "प्लान और 3D टैब खुले रहते हैं; बंद करने के लिए सेक्शन, शीट या ड्राफ़्टिंग व्यू खोलें",
+ "tool.equipment": "उपकरण",
+ "hint.equipment.place": "उपकरण: स्थान चुनें · बाहर निकलने के लिए Esc",
+ "cmd_buttons.table.opened": "टेबल मॉडल के साथ खुल गई",
+ "cmd_buttons.circuits.tip": "इस मॉडल की विद्युत सर्किट सूची खोलें"
+}

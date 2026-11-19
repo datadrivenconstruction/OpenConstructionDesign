@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "连接",
+ "settings.ai_status_desc": "AI 助手使用的模型；密钥保存在安全存储中",
+ "settings.ai_not_connected": "未连接",
+ "settings.ai_connect": "连接设置",
+ "settings.ai_connect_desc": "您自有模型的地址、型号和密钥，可为云端或本地模型",
+ "settings.ai_connect_btn": "连接设置…",
+ "settings.ai_panel": "AI 助手面板",
+ "settings.ai_panel_desc": "用文字提问，检查方案后再应用",
+ "settings.ai_open_panel": "打开 AI 面板"
+}

@@ -1,0 +1,9 @@
+{
+ "drafts.draft.view": "View graphics ng “{name}”",
+ "drafts.draft.filter": "View filter na “{name}”",
+ "drafts.draft.filter_new": "Bagong view filter",
+ "drafts.draft.object_styles": "Mga object style",
+ "drafts.draft.material": "Materyal na “{name}”",
+ "drafts.draft.type": "Type na “{name}”",
+ "drafts.draft.params": "Mga parameter ng family na “{name}”"
+}

@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "Vapaa pinta",
+ "cmd.mass.panelize": "Jaa paneeleiksi",
+ "cmd.mass.surface_shell": "Katto pinnalla",
+ "cmd.mass.thicken": "Paksuus",
+ "hint.mass.freeform.first": "Vapaa pinta: pohjakuvion suorakulmion ensimmäinen kulma · kirjoita nousu · Esc — peruuta",
+ "hint.mass.freeform.next": "Vapaa pinta: vastakkainen kulma · kirjoita nousu · Esc — peruuta",
+ "hint.mass.panelize.first": "Paneelit: valitse vapaa pinta 3D:ssä · Esc — peruuta",
+ "hint.mass.panelize.value": "Paneelit: kirjoita paneelin koko · Enter — käytä · Esc — peruuta",
+ "hint.mass.surface_shell.first": "Katto pinnalla: valitse vapaa pinta 3D:ssä · Esc — peruuta",
+ "hint.mass.surface_shell.value": "Katto pinnalla: kirjoita paksuus · Enter — käytä · Esc — peruuta",
+ "hint.mass.thicken.first": "Paksuus: valitse vapaa pinta 3D:ssä · Esc — peruuta",
+ "hint.mass.thicken.value": "Paksuus: kirjoita paksuus (0 — pelkkä pinta) · Enter — käytä · Esc — peruuta",
+ "status.mass.pick_surface": "Valitse vapaa pinta",
+ "status.mass.freeform_small": "Suorakulmio on liian pieni: vähintään 0,5 m joka suuntaan",
+ "name.mass.freeform": "Vapaa pinta",
+ "rgroup.mass_free": "Lisäasetukset"
+}

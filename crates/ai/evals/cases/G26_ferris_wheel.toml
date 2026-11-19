@@ -1,0 +1,27 @@
+id = "G26_ferris_wheel"
+tier = "hard"
+group = "Any geometry"
+title = "Ferris wheel"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "A Ferris wheel 50 m diameter on an A-frame support: rim truss, 36 spokes by cables, 24 gondolas, axle, boarding platform and foundations."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "comp:gondola|cabin|capsule"
+min = 24.0
+
+[[oracle.count]]
+spec = "beam+brace+col"
+min = 70.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

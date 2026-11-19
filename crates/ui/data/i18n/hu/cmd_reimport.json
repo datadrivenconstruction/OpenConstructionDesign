@@ -1,0 +1,6 @@
+{
+ "cmd.file.import_again": "Újraimportálás",
+ "cmd.file.import_again.desc": "Új projekt építése a forrásfájlból a jelenlegi állapota szerint.",
+ "cmd.file.open_kept": "Megőrzött import megnyitása",
+ "cmd.file.open_kept.desc": "Megnyitja a kész importot, amely a nem mentett változásokra figyelmeztető párbeszéd megszakításakor megmaradt."
+}

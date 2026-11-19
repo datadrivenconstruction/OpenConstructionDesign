@@ -1,0 +1,6 @@
+walls=[(0,0)-(6,0)]
+# Linear array: base point and step; one record
+tool(select) click(3,0) → selected=1
+tool(AR) → scope=Moving
+click(0,0) → journal=+0
+click(0,2) → journal=+1 scope=Idle

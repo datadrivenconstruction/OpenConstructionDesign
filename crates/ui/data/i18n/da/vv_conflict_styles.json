@@ -1,0 +1,6 @@
+{
+ "vv_conflict.styles.conflict": "Objektstile for en redigeret kategori ændrede sig i modellen (fortryd eller et andet vindue), mens dette vindue havde redigeringer. Dine redigeringer bevares.",
+ "vv_conflict.styles.keep": "Behold mine redigeringer",
+ "vv_conflict.styles.reload": "Genindlæs",
+ "vv_conflict.styles.answer_first": "Vælg Behold mine redigeringer eller Genindlæs først"
+}

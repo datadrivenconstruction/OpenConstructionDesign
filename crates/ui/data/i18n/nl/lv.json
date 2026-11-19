@@ -1,0 +1,5 @@
+{
+ "lv.level.deleted_attach": "Verdieping verwijderd; {n} wanden verloren hun bovenbevestiging",
+ "lv.level.rooms": "{n} ruimten krijgen de hoogte van de doelverdieping ({dz} m): {names}. Druk nogmaals op Verplaatsen om te bevestigen",
+ "lv.level.pinned": "Verdieping niet verwijderd: vastgezette elementen kunnen niet naar een andere verdieping: {names}. Maak ze eerst los"
+}

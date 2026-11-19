@@ -1,0 +1,11 @@
+{
+ "fe.csv.apply": "اعمال ورود",
+ "fe.csv.cancel": "کنار گذاشتن پیش‌نمایش",
+ "fe.csv.nothing": "چیزی برای تغییر نیست: کاتالوگ با انواع فعلی برابر است",
+ "fe.csv.preview": "پیش‌نمایش ورود: {added} جدید، {changed} تغییر کرده، {same} بدون تغییر؛ {values} مقدار تغییر می‌کند",
+ "fe.csv.preview_hint": "سلول‌های خالی و ستون‌های گمشده مقادیر فعلی را نگه می‌دارند. تا اعمال نکنید چیزی تغییر نمی‌کند.",
+ "fe.csv.skipped": "اعمال نشد، مقدار نگه داشته شد: {msg}",
+ "fe.csv.type_added": "نوع جدید {name}",
+ "fe.csv.type_changed": "نوع {name}",
+ "fe.csv.value": "  {param}: {old} → {new}"
+}

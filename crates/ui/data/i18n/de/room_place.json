@@ -1,0 +1,8 @@
+{
+ "cmd.arch.room_auto": "Räume automatisch platzieren",
+ "cmd.arch.room_auto.desc": "Platziert in jeder geschlossenen Begrenzung der aktiven Ebene, die noch keinen Raum hat, einen Raum. Offene Wandschleifen werden übersprungen und nicht geraten geschlossen. Ein Rückgängig-Schritt.",
+ "room_place.placed": "Platzierte Räume: {n}. Bereiche, die bereits einen Raum hatten: {m}. Übersprungene offene Schleifen: {k}",
+ "room_place.all_had": "Nichts platziert: Alle {m} geschlossenen Bereiche haben bereits einen Raum. Übersprungene offene Schleifen: {k}",
+ "room_place.none": "Nichts platziert: Die Ebene hat keine geschlossenen Wandbereiche",
+ "room_place.none_open": "Nichts platziert: Die Ebene hat keine geschlossenen Wandbereiche. Übersprungene offene Schleifen: {k}"
+}

@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "ช่วงมุมมอง",
+ "view_range.range": "ช่วงมุมมอง",
+ "view_range.cut": "ระนาบตัด",
+ "view_range.bottom": "ด้านล่าง",
+ "view_range.depth": "ความลึกมุมมอง",
+ "view_range.cut.hint": "ความสูงของระนาบตัดเหนือระดับ องค์ประกอบที่ตัดผ่านจะถูกวาดเป็นส่วนตัด",
+ "view_range.bottom.hint": "ด้านล่างของช่วง เทียบกับระดับ ค่าศูนย์หรือค่าลบได้",
+ "view_range.depth.hint": "มุมมองมองลงไปใต้ด้านล่างเท่าไร ศูนย์หรือมากกว่า",
+ "view_range.err.number": "กรอกความยาวในแต่ละช่อง",
+ "view_range.err.not_finite": "กรอกความยาวในแต่ละช่อง",
+ "view_range.err.cut_not_above_bottom": "ระนาบตัดต้องอยู่เหนือด้านล่าง",
+ "view_range.err.negative_depth": "ความลึกมุมมองต้องไม่เป็นค่าลบ",
+ "view_range.err.top_below_cut": "ด้านบนของช่วงต้องไม่อยู่ต่ำกว่าระนาบตัด"
+}

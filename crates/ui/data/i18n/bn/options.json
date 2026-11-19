@@ -1,0 +1,15 @@
+{
+ "fe.add_why_empty": "আগে একটি প্যারামিটারের নাম লিখুন",
+ "fe.add_why_exists": "এই নামের প্যারামিটার আগে থেকেই আছে; বদলাতে প্রয়োগ ব্যবহার করুন",
+ "fe.apply_why_missing": "এই নামের কোনো প্যারামিটার নেই; বিদ্যমান নাম লিখুন",
+ "fe.nochange": "এখনো কোনো পরিবর্তন নেই",
+ "options.accept_more": "গ্রহণ…",
+ "options.delete_more": "মুছুন…",
+ "options.empty_title": "এখনো কোনো অপশন সেট নেই",
+ "options.more": "আরও কাজ: {name}",
+ "options.primary_named": "মূল অপশন: {name}",
+ "options.primary_tip": "এটিকে সেটের মূল অপশন করুন",
+ "options.select_first": "আগে মডেলে উপাদান নির্বাচন করুন",
+ "options.show_3d": "৩D-তে দেখান: {name}",
+ "options.show_plan": "প্ল্যানে দেখান: {name}"
+}

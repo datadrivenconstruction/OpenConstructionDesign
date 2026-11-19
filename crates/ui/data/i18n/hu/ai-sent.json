@@ -1,0 +1,8 @@
+{
+ "ai_sent.summary": "Projektadatok ebben a kérésben: {messages} üzenet, {tools} eszközeredmény, {images} kép",
+ "ai_sent.copy": "Másolás",
+ "ai_sent.filter": "Keresés az elküldött kérésekben",
+ "ai_sent.no_match": "Egyik kérés sem felel meg.",
+ "ai_sent.instructions": "Utasítások és eszközök",
+ "ai_sent.local_note": "Csak ezen a számítógépen, csak erre a munkamenetre tárolva. A kulcsok és jelszavak soha nem jelennek meg."
+}

@@ -1,0 +1,7 @@
+{
+ "messages.title": "Üzenetek",
+ "messages.desc": "Értesítések előzményei. Nincs új figyelmeztetés vagy hiba.",
+ "messages.desc_new": "{n} új figyelmeztetés vagy hiba. Kattintson az elolvasásukhoz.",
+ "messages.copy": "Összes másolása",
+ "messages.clear": "Összes törlése"
+}

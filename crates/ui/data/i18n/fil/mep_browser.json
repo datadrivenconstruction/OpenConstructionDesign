@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "Pangalan ng system",
+ "mep_browser.add_blocked": "Maglagay muna ng pangalan ng system",
+ "mep_browser.col.insulation": "Insulasyon",
+ "mep_browser.cancel": "Kanselahin",
+ "mep_browser.delete.title": "Burahin ang system na ito?",
+ "mep_browser.delete.body": "Buburahin ang system na \"{name}\" at ang mga run nito ({n}).",
+ "mep_browser.delete.undo": "Maibabalik ito gamit ang isang Undo.",
+ "mep_browser.delete.confirm": "Burahin ang system"
+}

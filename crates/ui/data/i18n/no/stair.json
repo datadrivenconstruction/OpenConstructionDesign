@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "Trapper",
+ "selcat.railing": "Rekkverk",
+ "quick.cat.stair": "Trapper",
+ "quick.cat.railing": "Rekkverk",
+ "stair.risers": "Trinn",
+ "stair.riser": "Trinnhøyde",
+ "stair.comfort": "2R + T",
+ "stair.tread_auto": "Trinnbredde etter regel",
+ "stair.tread_auto_tip": "Slipp den skrevne trinnbredden, og la 2R + T-regelen sette den",
+ "stair.broken": "Denne trappen passer ikke med etasjene sine",
+ "railing.host_stair": "Vert: trapp #{id}",
+ "railing.host_path": "Skisser rekkverk",
+ "railing.length": "Lengde",
+ "stair.deleted_with": "med {n} vertsrekkverk"
+}

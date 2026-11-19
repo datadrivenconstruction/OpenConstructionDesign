@@ -1,0 +1,6 @@
+{
+ "imported_prop_edit.remove": "Eigenschaft entfernen",
+ "imported_prop_edit.remove.tip": "Entfernt die Eigenschaft von {n} gewählten Element(en) in einem Rückgängig-Schritt; sie wird beim Speichern aus der IFC-Datei gestrichen",
+ "imported_prop_edit.done": "{key} von {n} Element(en) entfernt",
+ "imported_prop_edit.warn.reload": "Erledigt, aber die Ansicht wurde nicht aktualisiert; Panel neu öffnen oder rückgängig machen, falls es falsch aussieht"
+}

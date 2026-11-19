@@ -1,0 +1,5 @@
+{
+ "ai.plan.apply_n": "Appliquer {n} accepté(s)",
+ "ai.plan.will_apply": "{n} modifications sur {m} seront appliquées",
+ "ai.plan.keys_hint": "J/K ou Alt+Haut/Bas pour se déplacer · A accepter · R rejeter · Espace basculer · Maj+A / Maj+R groupe entier · Ctrl+Entrée appliquer · Échap retour à la vue (conserve le brouillon)"
+}

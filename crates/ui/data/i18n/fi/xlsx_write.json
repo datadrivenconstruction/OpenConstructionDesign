@@ -1,0 +1,4 @@
+{
+ "xlsx_write.denied": "Ei oikeuksia kirjoittaa tähän kansioon. Työkirjaa ei muutettu. Tallenna vienti toiseen kansioon.",
+ "xlsx_write.save_to": "Tallenna…"
+}

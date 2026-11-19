@@ -1,0 +1,6 @@
+{
+ "pair_input.pair_hint": "Két értéket pontosvessző választ el: @1000;500",
+ "pair_input.old_pair": "Két egész szám közti vessző már nem alkot párt: két értékhez írja be 6000;4000, tizedeshez 6000,5",
+ "pair_input.op.bad_length": "Nem hossz: {text} ({why}). Semmi sem változott",
+ "pair_input.op.bad_count": "A darabszám ({text}) nem lett figyelembe véve: egész szám {min} és {max} között"
+}

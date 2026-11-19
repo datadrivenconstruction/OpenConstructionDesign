@@ -1,0 +1,14 @@
+{
+ "cmd.mod.divide": "Böl",
+ "cmd.mod.divide.short": "Böl",
+ "cmd.mod.divide.desc": "Bir duvarı tek adımda eşit parçalara böler. Parça sayısını yazın, sonra duvara tıklayın.",
+ "whereis.mod.divide": "böl, eşit parçalar, parçalara ayır, duvarı böl",
+ "hint.split.parts": "Böl: bir duvara tıklayın · sayı — parça (2–100) · Esc — iptal",
+ "create_input.divide.bad_parts": "«{text}» bir parça sayısı değil: 2 ile {max} arasında tam sayı yazın",
+ "create_input.ws.err.empty": "Yerleşim için bir ad yazın",
+ "create_input.ws.err.long": "Ad çok uzun: en fazla 40 karakter",
+ "create_input.ws.err.preset": "Bu ad yerleşik bir yerleşime ait",
+ "create_input.ws.err.full": "En fazla 24 kayıtlı yerleşim: önce birini kaldırın",
+ "create_input.seldim.locked": "{v} mesafesi kilitli",
+ "create_input.seldim.positive": "Mesafe sıfırdan büyük olmalı"
+}

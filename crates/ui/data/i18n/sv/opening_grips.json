@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "Vänd gångjärnssida",
+ "cmd.edit.flip_hand.desc": "Speglar de valda dörrarna och fönstren längs väggen så att gångjärnen flyttas till öppningens andra ände.",
+ "cmd.edit.flip_facing": "Vänd öppningens sida",
+ "cmd.edit.flip_facing.desc": "Vänder de valda dörrarna och fönstren till andra sidan av väggen.",
+ "opening_grips.flip_hand": "Vänd gångjärn",
+ "opening_grips.flip_hand.tip": "Gångjärnen till öppningens andra ände (Shift+F)",
+ "opening_grips.flip_facing": "Vänd sida",
+ "opening_grips.flip_facing.tip": "Öppningen åt andra sidan av väggen (Shift+G)",
+ "opening_grips.flip.done": "Vänd: {n}",
+ "opening_grips.flip.none": "Välj en dörr eller ett fönster att vända",
+ "opening_grips.flip.fail": "Inte vänd: {why}"
+}

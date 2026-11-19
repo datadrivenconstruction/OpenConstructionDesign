@@ -1,0 +1,5 @@
+{
+ "start_recent.unavailable": "اکنون در دسترس نیست (درایو یا مسیر شبکه پاسخ نمی‌دهد): {path}",
+ "start_recent.unavailable_short": "اکنون در دسترس نیست",
+ "start_recent.retry": "تلاش مجدد"
+}

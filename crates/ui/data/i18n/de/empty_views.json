@@ -1,0 +1,19 @@
+{
+ "empty.v3d_gpu.title": "3D ist auf diesem Grafikadapter nicht verfügbar",
+ "empty.v3d_gpu.hint": "Das Modell ist sicher und der Plan funktioniert. Starten Sie mit sicherer Grafik neu, um 3D erneut zu versuchen.",
+ "empty.v3d_gpu.action": "Mit sicherer Grafik neu starten",
+ "empty.v3d_loading.title": "3D wird aufgebaut…",
+ "empty.v3d_loading.pct": "Wird geöffnet… {pct} %",
+ "empty.plan_hidden.title": "Alle Elemente sind in diesem Plan ausgeblendet",
+ "empty.plan_hidden.hint": "Vorübergehendes Ausblenden oder Isolieren lässt nichts sichtbar.",
+ "empty.plan_hidden.action": "Alle anzeigen",
+ "empty.plan_graphics.title": "Ansichtsgrafik blendet alle Kategorien aus",
+ "empty.plan_graphics.hint": "Die Kategorieregeln dieser Ansicht lassen nichts zum Anzeigen.",
+ "empty.plan_graphics.action": "Ansichtsgrafik öffnen",
+ "empty.plan_phase.title": "Der Phasenfilter blendet alles aus",
+ "empty.plan_phase.hint": "Auf dieser Ebene existiert nichts in der Phase, die diese Ansicht zeigt.",
+ "empty.plan_phase.action": "Phase ändern",
+ "empty.plan_level.title": "Keine Elemente auf dieser Ebene",
+ "empty.plan_level.hint": "Andere Ebenen dieses Modells haben Elemente.",
+ "empty.plan_level.action": "Zur Ebene mit Elementen wechseln"
+}

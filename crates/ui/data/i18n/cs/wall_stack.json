@@ -1,0 +1,10 @@
+{
+ "wall_stack.we.stack_caption": "Složený typ",
+ "wall_stack.we.side_left": "Levá strana",
+ "wall_stack.we.side_right": "Pravá strana",
+ "wall_stack.we.from": "Od",
+ "wall_stack.we.to": "Do",
+ "wall_stack.we.bottom": "Spodní",
+ "wall_stack.we.delete_tip": "Smazat tento profil",
+ "wall_stack.we.from_after_to": "„Od“ musí být před „Do“"
+}

@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "ہر ترمیم پر اس دیوار کی موجودہ لمبائی برقرار رکھتا ہے",
+ "constraints.con.tip.lock_dist": "ہر ترمیم پر دو دیواروں کے درمیان فاصلہ برقرار رکھتا ہے",
+ "constraints.con.tip.equal": "منتخب دیواروں کے درمیان فاصلے برابر رکھتا ہے",
+ "constraints.con.tip.align": "دونوں دیواروں کو ایک لائن پر رکھتا ہے",
+ "constraints.con.tip.parallel": "دیواریں متوازی رکھتا ہے",
+ "constraints.con.tip.perp": "دیواریں قائمہ زاویے پر رکھتا ہے",
+ "constraints.con.tip.align_grid": "دیوار کو قریب ترین گرڈ لائن پر رکھتا ہے",
+ "constraints.con.tip.lock_dist_grid": "دیوار اور قریب ترین گرڈ لائن کے درمیان فاصلہ برقرار رکھتا ہے",
+ "constraints.con.tip.level_gap": "سطحوں کے درمیان فاصلہ برقرار رکھتا ہے",
+ "constraints.con.tip.top_to_level": "دیوار کا اوپری حصہ اوپر کی سطح پر رکھتا ہے"
+}

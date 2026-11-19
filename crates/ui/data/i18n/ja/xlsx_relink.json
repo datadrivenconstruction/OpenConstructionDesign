@@ -1,0 +1,14 @@
+{
+ "xlsx_relink.title": "リンクされたブックが移動または名前変更されました",
+ "xlsx_relink.body": "ブック「{file}」は {folder} にもうありません。ここで入力した編集は、再びリンクされるまで戻りません。",
+ "xlsx_relink.found_one": "{folder} に「{file}」を見つけました: 同じプロジェクトと同じ書き出しです。リンクしますか？",
+ "xlsx_relink.found_many": "このプロジェクトと書き出しに一致するブックが {n} 件見つかりました。リンクするものを選んでください:",
+ "xlsx_relink.found_none": "その近くにこの書き出しのブックは見つかりませんでした。探すか、新しいブックを書き出してください。",
+ "xlsx_relink.link": "「{file}」をリンク",
+ "xlsx_relink.find": "探す…",
+ "xlsx_relink.find_title": "リンクされたブックを探す",
+ "xlsx_relink.export_new": "新しいブックを書き出す",
+ "xlsx_relink.close": "閉じる",
+ "xlsx_relink.gone": "ブック「{file}」はそのフォルダにもうありません。ここで入力した編集は、再びリンクされるまで戻りません。",
+ "xlsx_relink.found_one_short": "「{file}」を見つけました: 同じプロジェクトと同じ書き出しです。リンクしますか？"
+}

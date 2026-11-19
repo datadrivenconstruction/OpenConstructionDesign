@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "A(z) {name} sablon vezérli",
+ "view_template.edit_template": "Sablon szerkesztése",
+ "view_template.locked_tip": "A(z) {name} nézetsablon állítja be. A sablonban módosítsa.",
+ "view_template.no_filters": "Nincs szűrő ebben a nézetben"
+}

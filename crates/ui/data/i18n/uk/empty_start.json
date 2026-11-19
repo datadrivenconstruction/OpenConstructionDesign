@@ -1,0 +1,8 @@
+{
+ "empty.start_recent.title": "Недавніх проєктів поки немає",
+ "empty.start_recent.hint": "Тут з’являються проєкти, які ви відкрили. Почніть із зразкової моделі.",
+ "empty.start_recent.action": "Відкрити зразок",
+ "start.recent_open_file": "Відкрити файл…",
+ "start.forgot": "Видалено з недавніх: {name}",
+ "start.forgot_undo": "Скасувати"
+}

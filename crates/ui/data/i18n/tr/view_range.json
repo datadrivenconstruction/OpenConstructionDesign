@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "Görünüm aralığı",
+ "view_range.range": "Görünüm aralığı",
+ "view_range.cut": "Kesit düzlemi",
+ "view_range.bottom": "Alt",
+ "view_range.depth": "Görünüm derinliği",
+ "view_range.cut.hint": "Kesit düzleminin kattan yüksekliği. Bu düzlemi kesen öğeler kesit olarak çizilir.",
+ "view_range.bottom.hint": "Aralığın alt sınırı, kata göre. Sıfır veya negatif değerlere izin verilir.",
+ "view_range.depth.hint": "Görünüm alt sınırın altında ne kadar aşağı bakar. Sıfır veya daha fazla.",
+ "view_range.err.number": "Her alana bir uzunluk girin",
+ "view_range.err.not_finite": "Her alana bir uzunluk girin",
+ "view_range.err.cut_not_above_bottom": "Kesit düzlemi alt sınırın üstünde olmalı",
+ "view_range.err.negative_depth": "Görünüm derinliği negatif olamaz",
+ "view_range.err.top_below_cut": "Aralığın üst sınırı kesit düzleminin altında olamaz"
+}

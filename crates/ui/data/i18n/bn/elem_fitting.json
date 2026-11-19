@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "ফিটিং",
+ "elem.mep_fitting.many": "ফিটিংসমূহ",
+ "elem.mep_fitting.kind.elbow": "এলবো",
+ "elem.mep_fitting.kind.tee": "টি",
+ "elem.mep_fitting.kind.cross": "ক্রস",
+ "elem.mep_fitting.kind.transition": "ট্রানজিশন",
+ "elem.mep_fitting.kind.cap": "ক্যাপ",
+ "elem.mep_fitting.size": "আকার",
+ "elem.mep_fitting.at": "অবস্থান",
+ "elem.mep_fitting.runs": "রান {n}",
+ "elem.mep_fitting.edit_run": "রান সম্পাদনা",
+ "elem.mep_fitting.select_runs": "এর রানগুলো নির্বাচন করুন",
+ "elem.mep_fitting.derived": "ফিটিং তার রান অনুসরণ করে: রান বদলালে ফিটিংও সাথে বদলায়।",
+ "elem.mep_fitting.no_delete": "ফিটিং নিজে মোছা বা সরানো যায় না। এর রান সম্পাদনা বা মুছুন।",
+ "elem.mep_fitting.hint": "কোন রানের তা দেখতে প্ল্যানে একটি ফিটিংয়ে ক্লিক করুন।",
+ "elem.mep_fitting.picked": "নির্বাচিত ফিটিং: {n}"
+}

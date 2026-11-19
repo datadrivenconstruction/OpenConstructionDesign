@@ -1,0 +1,7 @@
+{
+ "ai.retry.countdown": "Reintentando en {n} s",
+ "ai.retry.try": "Intento automático {i} de {max}. Se vuelve a enviar la misma solicitud.",
+ "ai.retry.now": "Reintentar ahora",
+ "ai.retry.gave_up": "Sigue sin respuesta tras {max} intentos automáticos.",
+ "ai.retry.shorten": "Acortar la solicitud"
+}

@@ -1,0 +1,6 @@
+{
+ "cmd.ui.pane.next": "Järgmine paneel",
+ "cmd.ui.pane.next.desc": "Liigutab klaviatuurifookuse järgmisele nähtavale paneelile, sirvija, lõuend, omadused, vestlus.",
+ "cmd.ui.pane.prev": "Eelmine paneel",
+ "cmd.ui.pane.prev.desc": "Liigutab klaviatuurifookuse eelmisele nähtavale paneelile."
+}

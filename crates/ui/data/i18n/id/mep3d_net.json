@@ -1,0 +1,13 @@
+{
+ "mep.sys.duct": "Suplai S1",
+ "mep.sys.pipe": "Air dingin C1",
+ "mep.sys.tray": "Daya",
+ "mep.round": "Bulat",
+ "mep.material": "Bahan",
+ "mep3d.elevation": "Elevasi dari level",
+ "mep3d.slope": "Kemiringan",
+ "mep3d.shape": "Bentuk",
+ "mep3d.shape.rect": "Persegi panjang",
+ "mep3d.shape.round": "Bulat",
+ "mep3d.shape.oval": "Oval pipih"
+}

@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "Endpoint",
+ "snap.midpoint": "Midpoint",
+ "snap.perpendicular": "Perpendicular",
+ "snap.wall_axis": "Wall axis",
+ "snap.wall_face": "Wall face",
+ "snap.grid": "Grid",
+ "snap.intersection": "Intersection",
+ "snap.grid_axis": "Grid line",
+ "snap.ref_plane": "Reference plane",
+ "snap.nearest": "Nearest",
+ "snap.align_x": "Aligned in X with a remote point",
+ "snap.align_y": "Aligned in Y with a remote point",
+ "snap.align_xy": "Aligned in X and Y"
+}

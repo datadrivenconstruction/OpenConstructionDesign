@@ -1,0 +1,16 @@
+{
+ "ai.items.all": {
+  "one": "Alle # Punkt",
+  "other": "Alle # Punkte"
+ },
+ "ai.items.all.tip": "Alle Punkte des Plans markieren oder abwählen",
+ "ai.items.checked": "{n} von {m} markiert",
+ "ai.items.check.tip": "„{title}“ in Anwenden einschließen",
+ "ai.items.expand": "Elemente anzeigen",
+ "ai.items.collapse": "Elemente ausblenden",
+ "ai.items.apply": {
+  "one": "# Punkt anwenden",
+  "other": "# Punkte anwenden"
+ },
+ "ai.items.apply_none": "Anwenden"
+}

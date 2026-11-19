@@ -1,0 +1,4 @@
+{
+ "vv_conflict.vv.switched": "De actieve weergave is gewijzigd. Deze wijzigingen horen bij {view} en zijn nog niet toegepast: Toepassen schrijft ze naar {view}, Verwerpen gooit ze weg.",
+ "vv_conflict.vv.discard": "Wijzigingen verwerpen"
+}

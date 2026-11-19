@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "編集のたびにこの壁の現在の長さを保つ",
+ "constraints.con.tip.lock_dist": "編集のたびに 2 つの壁の距離を保つ",
+ "constraints.con.tip.equal": "選択した壁の間隔を等しく保つ",
+ "constraints.con.tip.align": "両方の壁を一直線上に保つ",
+ "constraints.con.tip.parallel": "壁の平行を保つ",
+ "constraints.con.tip.perp": "壁の直角を保つ",
+ "constraints.con.tip.align_grid": "壁を最も近いグリッド線上に保つ",
+ "constraints.con.tip.lock_dist_grid": "編集のたびに壁から最も近いグリッド線までの距離を保つ",
+ "constraints.con.tip.level_gap": "レベル間の間隔を保つ",
+ "constraints.con.tip.top_to_level": "壁の上端を上のレベルに保つ"
+}

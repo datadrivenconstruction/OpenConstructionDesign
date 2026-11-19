@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "Đồng bộ loại",
+ "cmd.mod.match_type.short": "Đồng bộ loại",
+ "cmd.mod.match_type.desc": "Chọn một tường, sàn, cột hoặc dầm, rồi nhấp các phần tử cùng danh mục khác để gán cho chúng loại đó. Kéo một cửa sổ để áp dụng cho mọi phần tử bên trong. Esc bỏ nguồn.",
+ "hint.match_type.pick": "Đồng bộ loại: chọn tường, sàn, cột hoặc dầm · Esc — thoát",
+ "hint.match_type.apply": "Đồng bộ loại: nhấp mục tiêu hoặc kéo cửa sổ · Esc — nguồn khác",
+ "match_type.kind.wall": "tường",
+ "match_type.kind.slab": "sàn",
+ "match_type.kind.column": "cột",
+ "match_type.kind.beam": "dầm",
+ "match_type.refuse.category": "Danh mục khác: chỉ {cat} mới nhận được loại này",
+ "match_type.refuse.curtain": "Tường kính: loại của nó không được đồng bộ ở đây",
+ "match_type.refuse.pinned": "Đã ghim: bỏ ghim để đổi loại",
+ "match_type.pick_bad": "Chọn một tường, sàn, cột hoặc dầm làm nguồn",
+ "match_type.same": "Đã là loại này",
+ "match_type.done": "Đã áp dụng loại: {n}",
+ "match_type.done_skipped": "Đã áp dụng loại: {n}, bỏ qua (đã ghim hoặc tường kính): {skipped}",
+ "match_type.failed": "Chưa đổi loại: {err}"
+}

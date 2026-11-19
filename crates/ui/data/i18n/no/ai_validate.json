@@ -1,0 +1,14 @@
+{
+ "ai.issue.integrity": "Integritetsproblem: {0} {1}: {2}",
+ "ai.issue.opening_outside": "Åpningen passer ikke i veggen: {0}",
+ "ai.issue.opening_overlap": "Åpningen overlapper åpning {0}",
+ "ai.issue.wall_warning": "Vegg: {0}",
+ "ai.issue.cut_warning": "Kutt: {0}",
+ "ai.issue.room_open": "Rommet er ikke lukket",
+ "ai.issue.material_unknown": "Ingen materiale kalt «{0}» i prosjektet: Bruk ville lagt til et nytt med standardegenskaper",
+ "ai.issue.material_suggest": "Ingen materiale kalt «{0}» i prosjektet: Bruk ville lagt til et nytt. Mente du «{1}»?",
+ "ai.issue.conflict": "Dette elementet kan ikke kjøres: {0}",
+ "ai.issue.too_large": "{0} elementer ville endret seg, over grensen på {1}. Tillatelse kreves",
+ "ai.issue.truncated": "Endringslisten stoppet ved {0} rader: planen er større enn kortet kan vise. Tillatelse kreves",
+ "ai.issue.replan_failed": "Planen kunne ikke beregnes på nytt. En ny kopi av modellen tas"
+}

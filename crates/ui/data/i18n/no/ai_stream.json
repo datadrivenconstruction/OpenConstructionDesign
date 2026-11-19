@@ -1,0 +1,14 @@
+{
+ "ai.stream.waiting": "Venter på modellen",
+ "ai.stream.reading": "Leser modellen",
+ "ai.stream.working": "Jobber",
+ "ai.stream.answering": "Skriver svaret",
+ "ai.stream.tools_one": "1 verktøy",
+ "ai.stream.tools_many": "{n} verktøy",
+ "ai.stream.secs": "{n} s",
+ "ai.stream.stalled": "Venter fortsatt på modelltjenesten",
+ "ai.stream.stop": "Stopp",
+ "ai.stream.cancelled": "Stoppet",
+ "ai.stream.incomplete": "Utkastet er ufullstendig. Ingenting ble brukt på modellen.",
+ "ai.stream.sep": " · "
+}

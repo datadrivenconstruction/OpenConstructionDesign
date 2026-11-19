@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "Panneau",
+ "curtain_props.cw.panel_cell": "Cellule {i}×{j} · mur-rideau n° {id}",
+ "curtain_props.cw.kind": "Type",
+ "curtain_props.cw.kind.glazed": "Vitré",
+ "curtain_props.cw.kind.solid": "Plein",
+ "curtain_props.cw.kind.door": "Porte",
+ "curtain_props.cw.kind.window": "Fenêtre",
+ "curtain_props.cw.kind.empty": "Vide",
+ "curtain_props.cw.name": "Nom",
+ "curtain_props.cw.swing_side": "S'ouvre de l'autre côté",
+ "curtain_props.cw.swing_hinge": "Charnière à l'extrémité de la cellule",
+ "curtain_props.cw.size": "Dimension",
+ "curtain_props.cw.cell_area": "Surface de la cellule",
+ "curtain_props.cw.panel_area": "Surface du panneau",
+ "curtain_props.cw.prev": "Panneau précédent",
+ "curtain_props.cw.next": "Panneau suivant",
+ "curtain_props.cw.wall": "Sélectionnez le mur",
+ "curtain_props.cw.panel_hint": "Échap — sélection · Ctrl+Z — annuler",
+ "curtain_props.cw.status.panel": "Panneau {i}×{j} → {kind}",
+ "e3d.err.cw_height": "la hauteur du mur-rideau doit dépasser 100 mm"
+}

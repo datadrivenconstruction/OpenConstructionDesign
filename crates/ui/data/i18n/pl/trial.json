@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "Punkt",
+ "trial.field.distance": "Odległość",
+ "trial.field.target": "Element",
+ "trial.refused": "{field}: {reason}. Zmień, aby zastosować",
+ "trial.preview_off": "Podgląd wyłączony: model za duży"
+}

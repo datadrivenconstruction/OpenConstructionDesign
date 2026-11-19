@@ -1,0 +1,331 @@
+{
+ "rules": [
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.18
+   },
+   "unit": "m",
+   "value": 0.18,
+   "text": {
+    "en": "Common stair riser at most 0.18 m",
+    "ru": "Подъём ступени общей лестницы не более 0.18 м"
+   },
+   "source": {
+    "doc": "mx-cdmx-ntcpa",
+    "clause": "2.2.2.5, Table 2.2.2.5.1",
+    "url": "https://amraci.org/wp-content/uploads/2024/12/2024-12-12_NTCPA.pdf",
+    "edition": "gazette text, copy dated 2024-12-12",
+    "accessed": "2026-11-14",
+    "paraphrase": "Maximum riser is 18 cm for general occupancies (23 cm for restricted-access industrial and storage use)."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "mx.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.25
+   },
+   "unit": "m",
+   "value": 0.25,
+   "text": {
+    "en": "Common stair tread at least 0.25 m",
+    "ru": "Проступь общей лестницы не менее 0.25 м"
+   },
+   "source": {
+    "doc": "mx-cdmx-ntcpa",
+    "clause": "2.2.2.5, Table 2.2.2.5.1",
+    "url": "https://amraci.org/wp-content/uploads/2024/12/2024-12-12_NTCPA.pdf",
+    "edition": "gazette text, copy dated 2024-12-12",
+    "accessed": "2026-11-14",
+    "paraphrase": "Minimum tread depth is 25 cm between the vertical projections of two adjacent nosings."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "mx.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 0.9
+   },
+   "unit": "m",
+   "value": 0.9,
+   "text": {
+    "en": "Common stair flight width at least 0.9 m",
+    "ru": "Ширина марша общей лестницы не менее 0.9 м"
+   },
+   "source": {
+    "doc": "mx-cdmx-ntcpa",
+    "clause": "4.3.5.2, Table 4.3.5.2",
+    "url": "https://amraci.org/wp-content/uploads/2024/12/2024-12-12_NTCPA.pdf",
+    "edition": "gazette text, copy dated 2024-12-12",
+    "accessed": "2026-11-14",
+    "paraphrase": "Clear stair width is 0.9 m for up to 50 users, 1.1 m for 51 to 2000 users, more above that."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "mx.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.3
+   },
+   "unit": "m",
+   "value": 2.3,
+   "text": {
+    "en": "Clear height of habitable rooms at least 2.3 m",
+    "ru": "Высота жилых помещений не менее 2.3 м"
+   },
+   "source": {
+    "doc": "mx-cdmx-ntcpa",
+    "clause": "2.2.1.1, Table 2.2.1.1",
+    "url": "https://amraci.org/wp-content/uploads/2024/12/2024-12-12_NTCPA.pdf",
+    "edition": "gazette text, copy dated 2024-12-12",
+    "accessed": "2026-11-14",
+    "paraphrase": "Every listed dwelling room needs a clear height of at least 2.3 m."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "mx.res.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "room_kind": [
+     "office",
+     "meeting"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.3
+   },
+   "unit": "m",
+   "value": 2.3,
+   "text": {
+    "en": "Clear height of work rooms at least 2.3 m",
+    "ru": "Высота рабочих помещений не менее 2.3 м"
+   },
+   "source": {
+    "doc": "mx-cdmx-ntcpa",
+    "clause": "2.2.1.2, Table 2.2.1.2",
+    "url": "https://amraci.org/wp-content/uploads/2024/12/2024-12-12_NTCPA.pdf",
+    "edition": "gazette text, copy dated 2024-12-12",
+    "accessed": "2026-11-14",
+    "paraphrase": "Offices also need 2.3 m minimum clear height, with 6 m2 per employee plus 15 percent for circulation."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "mx.off.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ],
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "width",
+    "min": 1.2
+   },
+   "unit": "m",
+   "value": 1.2,
+   "text": {
+    "en": "Accessible-route corridor clear width at least 1.2 m",
+    "ru": "Ширина коридора на доступном маршруте не менее 1.2 м"
+   },
+   "source": {
+    "doc": "mx-cdmx-ntcpa",
+    "clause": "2.3.3.3.1 item a",
+    "url": "https://amraci.org/wp-content/uploads/2024/12/2024-12-12_NTCPA.pdf",
+    "edition": "gazette text, copy dated 2024-12-12",
+    "accessed": "2026-11-14",
+    "paraphrase": "Horizontal circulation on accessible routes is at least 1.2 m wide, with a 0.9 m exception inside dwellings that widens to 1.2 m at turns."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "mx.acc.corr"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 50,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 50,
+   "text": {
+    "en": "Travel distance to an exit or stair at most 50 m (residential)",
+    "ru": "Путь до выхода или лестницы не более 50 м (жилые)"
+   },
+   "source": {
+    "doc": "mx-cdmx-ntcpa",
+    "clause": "4.3.2, Table 4.3.2.1",
+    "url": "https://amraci.org/wp-content/uploads/2024/12/2024-12-12_NTCPA.pdf",
+    "edition": "gazette text, copy dated 2024-12-12",
+    "accessed": "2026-11-14",
+    "paraphrase": "In vertical multi-family housing the longest run to an exit is 50 m without sprinklers and 100 m with them."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "mx.egr.res"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 60,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 60,
+   "text": {
+    "en": "Travel distance to an exit or stair at most 60 m (office)",
+    "ru": "Путь до выхода или лестницы не более 60 м (офисы)"
+   },
+   "source": {
+    "doc": "mx-cdmx-ntcpa",
+    "clause": "4.3.2, Table 4.3.2.1",
+    "url": "https://amraci.org/wp-content/uploads/2024/12/2024-12-12_NTCPA.pdf",
+    "edition": "gazette text, copy dated 2024-12-12",
+    "accessed": "2026-11-14",
+    "paraphrase": "Professional and financial service buildings (offices) allow 60 m to an exit without sprinklers and 90 m with them."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "mx.egr.off"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {},
+   "check": {
+    "kind": "ratio",
+    "per": "element",
+    "cat": "room",
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen"
+    ],
+    "num": "window_area",
+    "den": "area",
+    "min": 0.175
+   },
+   "unit": "ratio",
+   "value": 0.175,
+   "text": {
+    "en": "Window area at least 17.5 % of the floor of a habitable room",
+    "ru": "Площадь окон не менее 17.5 % площади пола жилой комнаты"
+   },
+   "source": {
+    "doc": "mx-cdmx-ntcpa",
+    "clause": "3.3.3.2.1",
+    "url": "https://amraci.org/wp-content/uploads/2024/12/2024-12-12_NTCPA.pdf",
+    "edition": "gazette text, copy dated 2024-12-12",
+    "accessed": "2026-11-14",
+    "paraphrase": "Window area for daylight must be at least 17.5 percent of the room area (15 percent for ancillary rooms)."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "mx.day"
+  },
+  {
+   "id": "generic.egress.distance",
+   "disabled": true
+  },
+  {
+   "id": "generic.room.daylight",
+   "disabled": true
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+{
+ "cmd.arch.roof_gable.short": "Pelana",
+ "cmd.arch.roof_hip.short": "Perisai",
+ "cmd.arch.roof_shed.short": "Miring",
+ "cmd.arch.roof_mansard.short": "Mansard",
+ "cmd.arch.roof_gambrel.short": "Gambrel",
+ "cmd.arch.roof_barrel.short": "Laras",
+ "cmd.arch.roof_edges.short": "Tepi atap",
+ "cmd.arch.roof_opening.short": "Bukaan",
+ "cmd.mass.roof_by_face.short": "Dari muka"
+}

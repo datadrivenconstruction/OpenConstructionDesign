@@ -1,0 +1,19 @@
+{
+ "xlsx_confirm.chip": "تصدیق کے لیے",
+ "xlsx_confirm.section": "بغیر آئی ڈی کی قطاریں نام یا نمبر سے عنصر کے ساتھ ملائی گئیں",
+ "xlsx_confirm.tag": "نام سے ملایا گیا",
+ "xlsx_confirm.tag_accepted": "مطابقت قبول",
+ "xlsx_confirm.tag_rejected": "نیا بناتا ہے",
+ "xlsx_confirm.kind_room": "کمرہ",
+ "xlsx_confirm.kind_curtain_wall": "پردے کی دیوار",
+ "xlsx_confirm.row_line": "{kind} #{id}، کلید “{key}”",
+ "xlsx_confirm.accept": "قبول کریں",
+ "xlsx_confirm.accept_tip": "یہ قطار متعلقہ عنصر پر لاگو کریں (باقی کے ساتھ ایک واپسی قدم)",
+ "xlsx_confirm.reject": "نیا بنائیں",
+ "xlsx_confirm.reject_tip": "مطابقت نہ کریں: یہ قطار نیا عنصر بناتی ہے",
+ "xlsx_confirm.decide_first": "پہلے نام سے ملی قطاریں قبول یا مسترد کریں۔",
+ "xl.msg.key_match_many": "کلید {} عناصر سے ملتی ہے؛ مطابقت نہیں ہوئی، قطار نیا بناتی ہے",
+ "xl.msg.key_match_taken": "کلید ایک ایسے عنصر سے ملتی ہے جو دوسری قطار استعمال کر رہی ہے؛ مطابقت نہیں ہوئی، قطار نیا بناتی ہے",
+ "xl.msg.key_match_kept": "رکھا گیا: مطابقت مسترد، قطار نیا عنصر بناتی ہے",
+ "xl.msg.key_match_undecided": "نام سے ملی قطاریں فیصلے کا انتظار کر رہی ہیں"
+}

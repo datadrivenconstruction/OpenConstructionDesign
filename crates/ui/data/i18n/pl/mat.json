@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "Beton",
+ "mat.masonry": "Murowane",
+ "mat.brick": "Cegła",
+ "mat.insulation": "Izolacja",
+ "mat.plaster": "Tynk",
+ "mat.render": "Tynk zewnętrzny",
+ "mat.gypsum": "Płyta gipsowa",
+ "mat.glass": "Szkło",
+ "mat.wood": "Drewno",
+ "mat.steel": "Stal",
+ "mat.membrane": "Membrana",
+ "mat.other": "Inne",
+ "warn.cat.wall": "Ściana",
+ "warn.cat.slab": "Płyta stropowa",
+ "warn.cat.opening": "Otwór",
+ "warn.cat.curtain_wall": "Ściana osłonowa",
+ "td.mat.custom": "Inne…"
+}

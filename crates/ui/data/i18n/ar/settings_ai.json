@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "الاتصال",
+ "settings.ai_status_desc": "النموذج الذي يستخدمه مساعد الذكاء الاصطناعي؛ المفاتيح تبقى في المخزن الآمن",
+ "settings.ai_not_connected": "غير متصل",
+ "settings.ai_connect": "إعدادات الاتصال",
+ "settings.ai_connect_desc": "العنوان والنموذج والمفتاح لنموذجك الخاص، سحابي أو محلي",
+ "settings.ai_connect_btn": "إعدادات الاتصال…",
+ "settings.ai_panel": "لوحة مساعد الذكاء الاصطناعي",
+ "settings.ai_panel_desc": "اسأل بالكلمات، راجع الخطة، ثم طبّق",
+ "settings.ai_open_panel": "فتح لوحة الذكاء الاصطناعي"
+}

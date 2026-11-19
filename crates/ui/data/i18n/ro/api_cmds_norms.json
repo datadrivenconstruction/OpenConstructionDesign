@@ -1,0 +1,8 @@
+{
+ "api.cmd.norms_lookup": "Găsește regulile pachetului de norme al proiectului după subiect, element sau cod",
+ "api.cmd.norms_check": "Verifică modelul față de pachetul de norme al proiectului și listează constatările",
+ "api.cmd.norms_programme": "Programul tipic de încăperi al țării proiectului pentru un tip de clădire",
+ "api.cmd.select_similar": "Selectează fiecare element asemănător: același tip sau aceeași categorie, pe acest nivel sau în tot proiectul",
+ "api.cmd.create_drawing_set": "Creează o ciornă a setului de planșe pentru tipărire: planuri, secțiuni, elevații, tabele și blocuri de titlu",
+ "api.cmd.deliver_project": "De la un brief la fișiere, într-un singur pas: proiectul și setul său de planșe, exportate după Aplică"
+}

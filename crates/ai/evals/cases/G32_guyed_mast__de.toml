@@ -1,0 +1,36 @@
+id = "G32_guyed_mast__de"
+tier = "hard"
+group = "Any geometry"
+title = "Guyed lattice mast"
+lang = "de"
+base = "empty"
+
+[[turn]]
+say = "Ein abgespannter Gittermast, 80 m hoch: dreieckiger Gitterschaft mit 1.2 m Seitenlänge, Abspannseile in drei Richtungen auf drei Ebenen (25, 50 und 75 m), Seilanker 50 m vom Schaft."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "col+beam+brace"
+min = 60.0
+
+[[oracle.count]]
+spec = "beam+brace"
+min = 40.0
+
+[[oracle.geom]]
+kind = "height"
+min = 75.0
+max = 85.0
+
+[[oracle.geom]]
+kind = "members_connected"
+max = 1.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

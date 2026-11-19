@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "元に戻しました — Ctrl+Y でやり直し",
+ "history.hist.empty": "まだ変更はありません",
+ "history.hist.empty_hint": "編集内容がここに表示されます。任意のステップをクリックするとそこに戻ります。",
+ "history.hist.revert_all_n": "AI による変更をすべて元に戻す ({n})"
+}

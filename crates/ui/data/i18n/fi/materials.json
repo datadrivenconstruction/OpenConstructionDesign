@@ -1,0 +1,11 @@
+{
+ "materials.mat.name_empty": "Anna materiaalin nimi",
+ "materials.mat.empty_title": "Ei vielä materiaaleja",
+ "materials.mat.empty_hint": "Kirjoita nimi alle ja paina Lisää",
+ "materials.mat.nothing_hint": "Mikään materiaali ei vastaa hakua",
+ "materials.mat.clear_search": "Tyhjennä haku",
+ "materials.mat.replace_with": "Korvaa kohteella",
+ "materials.mat.delete_refused": "Ei voi poistaa: materiaalia käytetään {n} kohdassa. Korvaa se ensin.",
+ "materials.mat.delete_confirm": "Poistetaanko materiaali “{name}”? Voit kumota tämän.",
+ "materials.mat.replace_confirm": "Korvataanko “{from}” kohteella “{to}” {n} elementissä? “{from}” poistetaan. Voit kumota tämän."
+}

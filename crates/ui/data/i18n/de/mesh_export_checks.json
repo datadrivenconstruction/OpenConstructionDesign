@@ -1,0 +1,15 @@
+{
+ "cmd.data.export_step.desc": "Speichert das ganze Modell oder die Auswahl als STEP AP214 oder AP242: Volumenkörper mit exakten ebenen, zylindrischen, kegeligen, kugeligen, torusförmigen und B-Spline-Flächen, andere Elemente als ebene Flächen, Farben, ein Baugruppenknoten je Geschoss.",
+ "cmd.data.export_3mf.desc": "Speichert das ganze Modell oder die Auswahl als 3MF zum Drucken: ein Objekt je Element, Farben, Einheiten und eine Prüfung, dass jeder Körper wasserdicht ist.",
+ "fmenu.export.step": "STEP exakte Körper (.step)",
+ "fmenu.export.3mf": "3MF zum Drucken (.3mf)",
+ "mx.schema": "STEP-Schema",
+ "mx.schema.ap214": "AP214 (breiteste Unterstützung)",
+ "mx.schema.ap242": "AP242",
+ "mx.watertight": "Nicht wasserdichte Körper",
+ "mx.watertight.report": "Schreiben und auflisten",
+ "mx.watertight.skip": "Auslassen",
+ "mx.watertight.require": "Export abbrechen",
+ "mx.faceted": "{fmt} gespeichert: {path} ({exact} exakte Volumenkörper, {n} als ebene Flächen geschrieben: {first})",
+ "sheets.print.svg": "SVG"
+}

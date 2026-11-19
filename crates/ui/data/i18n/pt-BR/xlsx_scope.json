@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "Exportar para planilha XLSX: escopo",
+ "xlsx_scope.intro": "Escolha o que entra na pasta de trabalho. Ao importá-la de volta, só estes elementos mudam.",
+ "xlsx_scope.base_whole": "Modelo inteiro",
+ "xlsx_scope.base_level": "Nível ativo",
+ "xlsx_scope.base_selection": "Seleção",
+ "xlsx_scope.categories": "Categorias",
+ "xlsx_scope.cat_walls": "paredes",
+ "xlsx_scope.cat_openings": "portas",
+ "xlsx_scope.cat_rooms": "ambientes",
+ "xlsx_scope.cat_slabs": "lajes",
+ "xlsx_scope.cat_curtains": "paredes-cortina",
+ "xlsx_scope.nothing_selected": "Nada selecionado: selecione os elementos primeiro ou escolha outro escopo.",
+ "xlsx_scope.no_categories": "Marque pelo menos uma categoria.",
+ "xlsx_scope.no_level": "O nível ativo não foi encontrado.",
+ "xlsx_scope.export": "Exportar",
+ "xlsx_scope.preview_scope": "Escopo exportado: {scope}. Os elementos fora dele nunca são alterados nem excluídos."
+}

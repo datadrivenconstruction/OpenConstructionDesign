@@ -1,0 +1,8 @@
+{
+ "param_drop.title": "Eltávolítja a paraméterértékeket?",
+ "param_drop.intro": "A(z) {name} már nincs ezekhez a kategóriákhoz kötve:",
+ "param_drop.line": "{category}: {values} törlődik",
+ "param_drop.undo": "Egy Ctrl+Z mindet visszahozza.",
+ "param_drop.confirm": "Értékek eltávolítása és mentés",
+ "param_drop.cancel": "Mégse"
+}

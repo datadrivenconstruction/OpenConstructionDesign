@@ -1,0 +1,12 @@
+{
+ "default": "studio",
+ "sets": [
+  {"id": "studio", "base": "outline", "active": "filled", "large": "duotone"},
+  {"id": "outline", "base": "outline", "active": "outline", "large": "outline"},
+  {"id": "duotone", "base": "duotone", "active": "filled", "large": "duotone"},
+  {"id": "filled", "base": "filled", "active": "filled", "large": "filled"},
+  {"id": "outline_duotone", "base": "outline", "active": "duotone", "large": "duotone"},
+  {"id": "duotone_all", "base": "duotone", "active": "duotone", "large": "duotone"},
+  {"id": "filled_outline", "base": "filled", "active": "outline", "large": "outline"}
+ ]
+}

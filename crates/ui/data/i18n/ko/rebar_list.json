@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "위로 이동",
+ "rebar_list.move_down": "아래로 이동",
+ "rebar_list.remove": "제거",
+ "rebar_list.zone_remove_last": "구역에는 룸이 최소 하나 필요합니다: 마지막 룸을 제거하려면 구역을 삭제하세요",
+ "rebar_list.rebar_empty_title": "이 모델에 철근이 없습니다",
+ "rebar_list.rebar_empty_hint": "호스트 요소에 철근을 배치하면 여기에 일정이 표시됩니다.",
+ "rebar_list.rebar_empty_action": "철근 배치"
+}

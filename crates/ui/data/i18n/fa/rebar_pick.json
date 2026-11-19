@@ -1,0 +1,7 @@
+{
+ "rebar_pick.pick.empty": "آرماتوربندی: ستون، تیر، دیوار، دال یا پی را انتخاب کنید",
+ "rebar_pick.pick.unsupported": "این انتخاب آرماتوربندی نمی‌شود. ستون، تیر، دیوار، دال یا پی را انتخاب کنید",
+ "rebar_pick.pick.keys": "کلیک برای انتخاب، Shift برای افزودن بیشتر · Enter برای باز کردن فرم · Esc برای لغو",
+ "rebar_pick.pick.open": "باز کردن فرم",
+ "rebar_pick.pick.cancel": "لغو"
+}

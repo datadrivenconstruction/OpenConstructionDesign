@@ -1,0 +1,41 @@
+id = "G31_suspension_footbridge__es"
+tier = "hard"
+group = "Any geometry"
+title = "Suspension footbridge"
+lang = "es"
+base = "empty"
+
+[[turn]]
+say = "Un puente colgante peatonal de 60 m de luz entre dos torres de acero de 14 m, dos cables principales con 6 m de flecha, péndolas verticales cada 3 m, tablero de 3 m de ancho con barandillas y bloques de anclaje en ambos extremos."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "col"
+min = 2.0
+
+[[oracle.count]]
+spec = "beam+brace+truss"
+min = 30.0
+
+[[oracle.count]]
+spec = "railing"
+min = 1.0
+
+[[oracle.geom]]
+kind = "clear_span"
+target = 60.0
+tol = 0.1
+
+[[oracle.geom]]
+kind = "height"
+min = 12.0
+max = 20.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

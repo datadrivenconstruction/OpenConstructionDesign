@@ -1,0 +1,7 @@
+{
+ "rebar_pick.pick.empty": "Bewehrung: Wählen Sie eine Stütze, einen Träger, eine Wand, eine Decke oder ein Fundament",
+ "rebar_pick.pick.unsupported": "Diese Auswahl kann nicht bewehrt werden. Wählen Sie eine Stütze, einen Träger, eine Wand, eine Decke oder ein Fundament",
+ "rebar_pick.pick.keys": "Klicken zum Wählen, Umschalt für weitere · Enter öffnet das Formular · Esc bricht ab",
+ "rebar_pick.pick.open": "Formular öffnen",
+ "rebar_pick.pick.cancel": "Abbrechen"
+}

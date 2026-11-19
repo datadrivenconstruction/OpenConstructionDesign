@@ -1,0 +1,8 @@
+{
+ "param_drop.title": "Параметрийн утгуудыг устгах уу?",
+ "param_drop.intro": "{name} эдгээр ангилалтай холбоогүй болсон:",
+ "param_drop.line": "{category}: {values} устгагдана",
+ "param_drop.undo": "Нэг Ctrl+Z тэдгээрийг бүгдийг буцаана.",
+ "param_drop.confirm": "Утгуудыг устгаж хадгалах",
+ "param_drop.cancel": "Цуцлах"
+}

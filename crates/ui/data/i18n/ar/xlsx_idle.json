@@ -1,0 +1,8 @@
+{
+ "xlsx_idle.idle_title": "لا توجد تغييرات للاستيراد",
+ "xlsx_idle.export_name": "تصدير",
+ "xlsx_idle.export_body": "يكتب النموذج في مصنف. عدّل القيم هناك، ثم زامن.",
+ "xlsx_idle.sync_name": "مزامنة",
+ "xlsx_idle.sync_body": "يقرأ المصنف من جديد ويعرض الفروقات. يتغير النموذج فقط عند التطبيق.",
+ "xlsx_idle.last_sync": "آخر مزامنة: {when}"
+}

@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "עודכן",
+ "ai.redraft.added": "+{n} נוספו",
+ "ai.redraft.removed": "−{n} הוסרו",
+ "ai.redraft.changed": "~{n} שונו",
+ "ai.redraft.strip": "{what} מאז הפעם האחרונה שהסתכלת",
+ "ai.redraft.note": "התוכנית המעודכנת נבדקה: {what}",
+ "ai.redraft.more": "+{n} נוספים",
+ "ai.redraft.ack": "הבנתי",
+ "ai.redraft.ack.tip": "סמן את הגרסה הזו כנקראה; ההחלה תתייחס אליה",
+ "ai.redraft.removed_list": "פריטים שהוסרו: {n}",
+ "ai.redraft.review_first": "התוכנית השתנתה אחרי ההודעה שלך: בדוק קודם את השינויים",
+ "ai.redraft.mark.tip": "חדש או שונה מאז הפעם האחרונה שהסתכלת",
+ "ai.redraft.emptied": "המעקב הסיר את כל הפריטים: הטיוטה ריקה"
+}

@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "Спочатку введіть назву шаблону",
+ "view_template.name_taken": "Шаблон з такою назвою вже існує",
+ "view_template.pick_blocked": "Спочатку позначте щонайменше один вид",
+ "view_template.views.one": "{n} вид",
+ "view_template.views.few": "{n} види",
+ "view_template.views.many": "{n} видів",
+ "view_template.delete.title": "Видалити цей шаблон?",
+ "view_template.delete.body": "Шаблон «{name}» буде видалено. Використовується: {used}.",
+ "view_template.delete.unused": "Шаблон «{name}» буде видалено. Жоден вид його не використовує.",
+ "view_template.delete.keeps": "Ці види зберігають поточну графіку, але втрачають зв’язок.",
+ "view_template.delete.undo": "Це можна скасувати однією дією «Скасувати».",
+ "view_template.delete.confirm": "Видалити шаблон"
+}

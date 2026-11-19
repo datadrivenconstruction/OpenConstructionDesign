@@ -1,0 +1,4 @@
+{
+ "xlsx_write.denied": "Nu ai drepturi de scriere în acest folder. Registrul nu a fost modificat. Salvează exportul într-un alt folder.",
+ "xlsx_write.save_to": "Salvează în…"
+}

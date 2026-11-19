@@ -1,0 +1,8 @@
+{
+ "xlsx_idle.idle_title": "আমদানির মতো কিছু নেই",
+ "xlsx_idle.export_name": "এক্সপোর্ট",
+ "xlsx_idle.export_body": "মডেলটি একটি ওয়ার্কবুকে লেখে। সেখানে মান সম্পাদনা করুন, তারপর সিঙ্ক করুন।",
+ "xlsx_idle.sync_name": "সিঙ্ক",
+ "xlsx_idle.sync_body": "ওয়ার্কবুক আবার পড়ে পার্থক্য দেখায়। আপনি প্রয়োগ করলেই মডেল বদলায়।",
+ "xlsx_idle.last_sync": "শেষ সিঙ্ক: {when}"
+}

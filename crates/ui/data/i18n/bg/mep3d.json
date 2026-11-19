@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "Въздуховод",
+ "mep3d.pipe": "Тръба",
+ "mep3d.tray": "Кабелен канал",
+ "mep3d.conduit": "Кабелна тръба",
+ "mep3d.system": "Система",
+ "mep3d.length": "Дължина",
+ "mep3d.diameter": "Диаметър",
+ "mep3d.width": "Ширина",
+ "mep3d.height": "Височина",
+ "mep3d.insulation": "Изолация",
+ "mep3d.tip": "Enter — прилага; фитингите се преизчисляват",
+ "mep3d.size_positive": "размерът трябва да е по-голям от нула",
+ "mep3d.not_changed": "не е променено: {e}",
+ "mep3d.copied": "трасето е копирано",
+ "mep3d.changed": "трасето е променено",
+ "mep3d.deleted": "изтрити елементи: {n}",
+ "mep3d.not_deleted": "не е изтрито: {e}",
+ "mep3d.no_wall_type": "няма тип стена",
+ "mep3d.demo.supply": "Подаване S1",
+ "mep3d.demo.heating": "Отопление",
+ "mep3d.demo.power": "Силова"
+}

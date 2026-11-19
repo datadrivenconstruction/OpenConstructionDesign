@@ -1,0 +1,19 @@
+{
+ "ai.plan.apply_updated": "Aplică planul actualizat",
+ "ai.plan.keys_anywhere": "Ctrl+Enter aplică și Esc oprește cererea și din plan sau din vederea 3D, dacă nu se scrie într-un câmp de text.",
+ "ai.plan.rebased": "Actualizat față de modelul curent: {what}",
+ "ai.value.bad": "„{text}” nu este o valoare validă pentru {name}",
+ "ai.value.both": "Asistentul AI a schimbat această valoare în {agent} în timp ce introduceai {mine}. Alege-o pe cea de păstrat.",
+ "ai.value.choose_first": "Mai întâi alege valoarea ta sau pe cea a asistentului AI din cartelă",
+ "ai.value.elem": "Elementul {n}: {what}",
+ "ai.value.held": "Valoarea ta {mine} intră când se termină cererea",
+ "ai.value.keep_agent": "Păstrează {agent}",
+ "ai.value.lost": "Valoarea ta {mine} pentru {what} din „{title}” nu a fost folosită: asistentul AI a scos acea valoare din cartelă",
+ "ai.value.more": "încă {n} valori: extinde rândul",
+ "ai.value.refused": "Planul nu a putut prelua această valoare și păstrează pe cea anterioară: {why}",
+ "ai.value.refused_next": "Introdu o altă valoare sau debifează elementul ca să-l lași afară din Aplică.",
+ "ai.value.tip": "Corectează valoarea în ciornă; modelul se schimbă doar la Aplică. Enter confirmă, Esc restabilește.",
+ "ai.value.use_mine": "Folosește {mine}",
+ "ai.value.was": "era {old}",
+ "ai.value.bad_len": "Câmpul „{name}”: {why}"
+}

@@ -1,0 +1,5 @@
+{
+ "xl.msg.level_name_x_is_already_used": "назва рівня '{}' уже використовується",
+ "xl.msg.unreadable_id_elements_without_a_row_not_deleted": "нечитабельний id: елементи без рядка при імпорті не видаляються",
+ "xl.msg.wall_type_name_x_is_already_used": "назва типу стіни '{}' уже використовується"
+}

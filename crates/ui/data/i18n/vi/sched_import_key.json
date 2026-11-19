@@ -1,0 +1,6 @@
+{
+ "sched_import.no_key": "Sổ làm việc này không có bản ghi xuất (một lần xuất cũ): các ô đổi trong mô hình sau lần xuất đó có thể bị ghi đè. Hãy kiểm tra các ô đã đổi trước khi Áp dụng.",
+ "sched_import.n_kept": "Đã đổi trong mô hình sau khi xuất, được giữ: {n}",
+ "sched_import.n_conflict": "Đã đổi cả trong sổ làm việc lẫn mô hình, chưa áp dụng: {n}",
+ "sched_import.why_conflict": "đã đổi trong mô hình sau khi xuất (nay là {model}), chưa áp dụng"
+}

@@ -1,0 +1,10 @@
+{
+ "xlsx_dup.dup_undo": "Tühista otsus",
+ "xlsx_dup.dup_undo_tip": "Uuteks elementideks muudetud read ({n}) loetakse uuesti nende id-ga",
+ "xlsx_dup.dup_new": "Loo muudetud koopiad uute elementidena",
+ "xlsx_dup.dup_new_tip": "Read {rows} muutuvad oma väärtustega uuteks elementideks; element #{id} säilitab oma väärtused (üks tagasivõtmise samm koos ülejäänuga)",
+ "xl.msg.dup_same": "korduv id {}: samad väärtused kui real {}; rida ignoreeriti",
+ "xl.msg.dup_unchanged": "korduv id {}: eksporditud rea muutmata koopia; rida ignoreeriti",
+ "xl.msg.dup_conflict": "id {} on ridadel {} erinevate väärtustega; selle id jaoks midagi ei rakendatud",
+ "xl.msg.dup_conflict_keep": "id {} on ridadel {} erinevate väärtustega; selle id jaoks midagi ei rakendatud — jäta üks rida alles"
+}

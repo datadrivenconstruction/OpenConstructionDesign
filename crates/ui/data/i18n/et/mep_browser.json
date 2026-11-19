@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "Süsteemi nimi",
+ "mep_browser.add_blocked": "Sisesta kõigepealt süsteemi nimi",
+ "mep_browser.col.insulation": "Isolatsioon",
+ "mep_browser.cancel": "Tühista",
+ "mep_browser.delete.title": "Kas kustutada see süsteem?",
+ "mep_browser.delete.body": "Süsteem \"{name}\" ja selle lõigud ({n}) kustutatakse.",
+ "mep_browser.delete.undo": "Selle saab tagasi võtta ühe käsuga Võta tagasi.",
+ "mep_browser.delete.confirm": "Kustuta süsteem"
+}

@@ -1,0 +1,8 @@
+{
+ "undo.undone": "Ångrat: {what}",
+ "undo.redone": "Gjort om: {what}",
+ "undo.action.edit.redo": "Gör om",
+ "undo.action.edit.undo": "Ångra",
+ "hdr.unsaved": "Osparade ändringar",
+ "hdr.file_menu": "Filmeny"
+}

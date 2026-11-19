@@ -1,0 +1,23 @@
+{
+ "roof_edge.err.number": "Въведете число",
+ "roof_edge.err.positive": "Трябва да е по-голямо от нула",
+ "roof_edge.err.nonneg": "Не трябва да е отрицателно",
+ "roof_edge.err.max": "Не трябва да надвишава {max}",
+ "roof_edge.list.empty_hint": "Добавете капаци, улуци, подпокривни облицовки или стрехи с командите за покрив",
+ "roof_edge.edit_tip": "Редактиране на свойствата",
+ "roof_edge.delete_tip": "Изтриване",
+ "roof_edge.pe.del_tip": "Премахване на тази точка (разрезът запазва поне 3)",
+ "roof_edge.pe.up_tip": "Преместване на тази точка нагоре",
+ "roof_edge.confirm_edge": "Да се изтрие ли {name}? Ctrl+Z го възстановява.",
+ "roof_edge.confirm_profile": "Да се изтрие ли профилът {name}? Ctrl+Z го възстановява.",
+ "roof_edge.deleted_one": "Изтрито: {name}",
+ "roof_edge.deleted_n": {
+  "one": "Изтрит е # елемент",
+  "other": "Изтрити са # елемента"
+ },
+ "roof_edge.profile_deleted": "Профилът е изтрит",
+ "roof_edge.profile_in_use": {
+  "one": "Използва се от # елемент на ръб: първо го изтрийте или променете",
+  "other": "Използва се от # елемента на ръб: първо ги изтрийте или променете"
+ }
+}

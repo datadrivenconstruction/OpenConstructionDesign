@@ -1,0 +1,22 @@
+{
+ "ai.audit.tokens": "{n} โทเคน",
+ "ai.audit.filter.all": "ทั้งหมด",
+ "ai.audit.filter.ai": "AI",
+ "ai.audit.filter.me": "ฉัน",
+ "ai.audit.search": "ค้นหาการเปลี่ยนแปลง",
+ "ai.audit.search.clear": "ล้างการค้นหา",
+ "ai.audit.show_all": "แสดงทั้งหมด",
+ "ai.audit.empty.hint": "การเปลี่ยนแปลงที่ร่างหรือนำไปใช้โดยโมเดลหรือเอเจนต์จะปรากฏที่นี่ พร้อมวิธีย้อนกลับ",
+ "ai.audit.no_match": "ไม่มีการเปลี่ยนแปลงที่ตรงกับตัวกรอง",
+ "ai.audit.show.tip": "เลือกและแสดงองค์ประกอบที่การเปลี่ยนแปลงนี้แตะต้อง",
+ "ai.audit.revert.ask": "ยกเลิก “{what}” หรือไม่? {change}",
+ "ai.audit.revert.elements": {
+  "one": "การเปลี่ยนแปลงองค์ประกอบ # รายการ",
+  "other": "การเปลี่ยนแปลงองค์ประกอบ # รายการ"
+ },
+ "ai.audit.revert.keeps": "การเปลี่ยนแปลงใหม่กว่าจะคงอยู่ การย้อนกลับเป็นการเลิกทำหนึ่งขั้น",
+ "ai.audit.cancel": "ยกเลิก",
+ "ai.audit.toast.reverted": "ย้อนกลับแล้ว: {what}",
+ "ai.audit.toast.undone": "เลิกทำแล้ว: {what}",
+ "ai.audit.redo": "ทำซ้ำ"
+}

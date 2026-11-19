@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "Eelvaade",
+ "agent_draft.ag.preview.desc": "Kontuurib selle mustandi elemendid lõuendil, kuni kursor on nupul. Midagi ei muudeta.",
+ "agent_draft.type.column": "Post",
+ "agent_draft.type.roof": "Katus",
+ "agent_draft.type.ceiling": "Lagi",
+ "agent_draft.type.stair": "Monoliitne trepp",
+ "agent_draft.type.railing": "Piire",
+ "agent_draft.type.shaft": "Šaht",
+ "agent_draft.type.axis": "Telg 6.5 mm",
+ "agent_draft.type.refplane": "Viitetasand"
+}

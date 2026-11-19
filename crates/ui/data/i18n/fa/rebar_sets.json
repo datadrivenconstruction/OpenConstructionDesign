@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "افزودن ۱ مجموعه",
+ "rebar_sets.add_n": "افزودن {n} مجموعه",
+ "rebar_sets.pick.search": "جست‌وجوی انواع میلگرد",
+ "rebar_sets.pick.empty": "نوع میلگرد مطابقی نیست",
+ "rebar_sets.unit.deg": "°"
+}

@@ -1,0 +1,10 @@
+{
+ "cmd.view.axes_full": "全长轴线",
+ "cmd.view.axes_full.desc": "以贯穿平面的完整线条显示 X 和 Y 轴。按住 F9 可仅在按下期间显示。",
+ "settings.axes_full": "轴线",
+ "settings.axes_full_desc": "以贯穿图纸的完整线条显示平面轴线。按住 F9 可快速查看。",
+ "settings.axes_full_on": "显示全长轴线",
+ "plan.hud.axes_tip": "按住 {key} 显示全长轴线",
+ "status.axes_full.on": "已开启全长轴线",
+ "status.axes_full.off": "已关闭全长轴线"
+}

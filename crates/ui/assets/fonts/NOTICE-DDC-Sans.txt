@@ -1,0 +1,4 @@
+DDC Sans is a modified version of Inter (subset to Latin, Greek, Cyrillic and symbols; tabular
+digits baked into the default digit glyphs). Derived from Inter, Copyright 2016 The Inter Project
+Authors (https://github.com/rsms/inter), licensed under the SIL Open Font License 1.1 (OFL.txt).
+Renamed from "Inter" per the OFL; built by tools/font_tnum.py.

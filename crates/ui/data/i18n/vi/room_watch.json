@@ -1,0 +1,4 @@
+{
+ "room_watch.room.dup": "Phòng {room} nằm trong vùng của phòng {other}: diện tích và thể tích chỉ được tính trong phòng {other}",
+ "ai.issue.room_dup": "Phòng nằm trong vùng của phòng {0}: diện tích được tính ở đó"
+}

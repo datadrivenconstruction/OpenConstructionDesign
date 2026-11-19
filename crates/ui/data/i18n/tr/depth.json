@@ -1,0 +1,22 @@
+{
+ "depth.chip": "Derinlik {level}",
+ "depth.chip_tip": "Bir sonraki çalıştırmanın projeyi disiplin bazında ne kadar derine götüreceği: D1 konseptten D5 imalata",
+ "depth.all_off": "tüm disiplinler kapalı",
+ "depth.disc.arch": "Mimari",
+ "depth.disc.struct": "Taşıyıcı",
+ "depth.disc.mep": "MEP",
+ "depth.disc.doc": "Belgeler",
+ "depth.project": "Proje derinliği",
+ "depth.level.1": "D1 Konsept: kütle, katlar, alanlar, tek pafta",
+ "depth.level.2": "D2 Eskiz: duvarlar, programa göre odalar, açıklıklar, grid, planlar",
+ "depth.level.3": "D3 Tasarım: katmanlı tipler, boyutlandırılmış taşıyıcı sistem, MEP ana hatları ve terminaller, tablolar",
+ "depth.level.4": "D4 Uygulama: birleşim detayları, donanım, kaplamalar, donatı, dallar",
+ "depth.level.5": "D5 İmalat: büküm listeleri, çelik birleşimler, prefabrik, metraj cetveli",
+ "depth.as_project": "Aynı",
+ "depth.estimate": "Tahmin: yaklaşık {elements} eleman, {minutes} dk, {calls} çağrıda {tokens} token, {sheets} pafta",
+ "depth.estimate_none": "Tahmin, taslak proje ile birlikte gelir: model henüz boş",
+ "depth.heat": "Derinlik ısı haritası",
+ "depth.heat.row": "Derinlik",
+ "depth.settings": "Bu projenin tasarım derinliği",
+ "depth.settings_desc": "Yapay zeka asistanının çalıştığı derinlik, D1'den D5'e; anahtar ve disiplin başına ayrı derinlik ile; proje dosyasında saklanır"
+}

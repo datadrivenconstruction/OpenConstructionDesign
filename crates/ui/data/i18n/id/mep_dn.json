@@ -1,0 +1,5 @@
+{
+ "mep_dn.dn.unset": "Belum diatur",
+ "mep_dn.slope.err": "Masukkan kemiringan dalam %, misalnya 1.5",
+ "mep_dn.err.rejected": "nilai tidak diterima"
+}

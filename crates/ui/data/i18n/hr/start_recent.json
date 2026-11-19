@@ -1,0 +1,5 @@
+{
+ "start_recent.unavailable": "Trenutno nedostupno (pogon ili mrežno mjesto ne odgovara): {path}",
+ "start_recent.unavailable_short": "Trenutno nedostupno",
+ "start_recent.retry": "Pokušaj ponovo"
+}

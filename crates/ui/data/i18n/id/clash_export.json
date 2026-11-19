@@ -1,0 +1,9 @@
+{
+ "clash.col.x": "X",
+ "clash.col.y": "Y",
+ "clash.col.z": "Z",
+ "clash.unit.ft3": "ft³",
+ "clash.exported_n": "Laporan disimpan: {n} dari {m}, {path}",
+ "clash.exported_f": "Laporan disimpan: {n} dari {m} (filter: {filter}), {path}",
+ "clash.col.unit": "{name}, {unit}"
+}

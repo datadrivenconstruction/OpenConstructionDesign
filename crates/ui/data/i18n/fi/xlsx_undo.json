@@ -1,0 +1,6 @@
+{
+ "cmd.xlsx.undo_apply": "Kumoa viimeisin XLSX-käyttö",
+ "xlsx_undo.later": "Ei kumottu: mallia muokattiin tämän XLSX-käytön jälkeen. Käytä Ctrl+Z:aa askel kerrallaan tai Historia-paneelia.",
+ "xlsx_undo.gone": "Ei kumottavaa: tämä XLSX-käyttö on jo kumottu.",
+ "xlsx_undo.busy": "Viimeistele tai peruuta nykyinen piirros ensin, kumoa sitten XLSX-käyttö."
+}

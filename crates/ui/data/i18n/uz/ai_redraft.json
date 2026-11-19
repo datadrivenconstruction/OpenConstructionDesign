@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "Qayta ishlangan",
+ "ai.redraft.added": "+{n} qo'shildi",
+ "ai.redraft.removed": "−{n} olib tashlandi",
+ "ai.redraft.changed": "~{n} o'zgardi",
+ "ai.redraft.strip": "Oxirgi ko'rishingizdan beri: {what}",
+ "ai.redraft.note": "Qayta ishlangan reja ko'rib chiqildi: {what}",
+ "ai.redraft.more": "+{n} ta yana",
+ "ai.redraft.ack": "Tushunarli",
+ "ai.redraft.ack.tip": "Bu qayta ishlangan variantni ko'rilgan deb belgilash; Qo'llash shunga qaratiladi",
+ "ai.redraft.removed_list": "Olib tashlangan bandlar: {n}",
+ "ai.redraft.review_first": "Reja xabaringizdan keyin o'zgardi: avval o'zgarishlarni ko'rib chiqing",
+ "ai.redraft.mark.tip": "Sizning oxirgi ko'rishingizdan beri yangi yoki o'zgargan",
+ "ai.redraft.emptied": "Davom ettirish barcha bandlarni o'chirdi: qoralama bo'sh"
+}

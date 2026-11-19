@@ -1,0 +1,6 @@
+{
+ "geom.length": "Länge",
+ "sched.cat.room_seps": "Raumtrenner",
+ "room.err.point_leave": "Raum {n}: der Punkt würde seine Begrenzung verlassen",
+ "room.err.point_taken": "Raum {n}: der Punkt würde in Raum {other} fallen"
+}

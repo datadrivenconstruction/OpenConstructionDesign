@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "Legenda",
+ "legend.legend.new_hint": "Yangi legenda nomi",
+ "legend.legend.delete_tip": "Legendani o'chirish",
+ "legend.legend.delete_placed": "Legendani o'chirish (joylashtirilgan: {sheets})",
+ "legend.legend.deleted": "Legenda o'chirildi: {name}",
+ "legend.legend.no_rows": "Hali qatorlar yo'q. Bitta qo'shing yoki joriy ko'rinish uslublarini oling",
+ "legend.legend.replace_q": "{n} ta qatorni bu ko'rinish uslublari bilan almashtirilsinmi?",
+ "legend.legend.replace": "Almashtirish",
+ "legend.legend.keep": "Qatorlarni saqlash",
+ "legend.col.swatch": "Namuna",
+ "legend.col.value": "Qiymat",
+ "legend.col.label": "Yorliq"
+}

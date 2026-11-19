@@ -1,0 +1,8 @@
+{
+ "cmd.file.save_copy": "Lưu bản sao cho người khác…",
+ "cmd.file.save_copy.desc": "Lưu bản sao của dự án không kèm sự đồng ý AI và, trừ khi bạn chọn khác, không kèm nhật ký AI. Dự án này giữ nguyên.",
+ "ai.copy.title": "Lưu bản sao",
+ "ai.copy.journal": "Đưa nhật ký AI vào bản sao? Nhật ký chứa yêu cầu, câu trả lời và địa chỉ. Sự đồng ý đám mây không bao giờ được sao chép: người kia tự quyết định. Chọn Không để loại nhật ký khỏi bản sao.",
+ "ai.copy.done": "Đã lưu bản sao: {name}",
+ "ai.copy.same": "Hãy chọn tệp khác: bản sao không thể thay thế dự án đang mở."
+}

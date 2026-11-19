@@ -1,0 +1,9 @@
+{
+ "empty.props_model.title": "Nic nevybráno",
+ "empty.props_model.hint": "Klikněte na prvek v pohledu a zobrazí se jeho vlastnosti. Nebo exportujte všechny parametry do sešitu, upravte je tam a použijte zpět.",
+ "empty.props_model.action": "Exportovat do tabulkového sešitu",
+ "tut.spreadsheet.title": "Cyklus přes tabulkový sešit",
+ "tut.spreadsheet.1": "Stiskněte Exportovat do tabulkového sešitu níže: vyberte, co zahrnout, a sešit uložte.",
+ "tut.spreadsheet.2": "Otevřete sešit v tabulkovém procesoru, změňte buňku a uložte. Náhled zde ukáže změnu.",
+ "tut.spreadsheet.3": "Zkontrolujte náhled a stiskněte Použít v modelu. Ctrl+Z to vrátí."
+}

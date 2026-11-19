@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "Ce classeur existe déjà",
+ "xlsx_exists.foreign": "Ce n'est pas un classeur de ce projet : il n'est jamais remplacé.",
+ "xlsx_exists.pending": "Il contient {n} modifications non encore appliquées au modèle.",
+ "xlsx_exists.outside": "Il comporte {n} lignes que le nouvel export ne contient pas.",
+ "xlsx_exists.new_name": "Export vers {name}",
+ "xlsx_exists.apply_first": "Appliquez-les d'abord",
+ "xlsx_exists.replace": "Remplacer (ancien classeur dans _archive)",
+ "xlsx_exists.archived": "Ancien classeur déplacé vers {path}",
+ "xlsx_exists.archive_failed": "L'ancien classeur n'a pas pu être déplacé, rien n'a été exporté : {error}"
+}

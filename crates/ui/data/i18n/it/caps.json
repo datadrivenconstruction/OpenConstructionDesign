@@ -1,0 +1,5 @@
+{
+ "caps.refused": "{kinds}: {reason}. Nulla è cambiato.",
+ "caps.panel": "Un pannello si sposta con l'intera facciata continua. Seleziona il muro",
+ "caps.unsupported": "Questo strumento non modifica questi elementi"
+}

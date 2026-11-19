@@ -1,0 +1,20 @@
+{
+ "api.cmd.move_elements": "Flytta element med en förskjutning i meter",
+ "api.cmd.copy_elements": "Kopiera element med en eller flera förskjutningar i meter",
+ "api.cmd.rotate_elements": "Rotera element kring en punkt med en vinkel i grader",
+ "api.cmd.mirror_elements": "Spegla element kring en axel genom två punkter",
+ "api.cmd.scale_elements": "Skala element kring en punkt med en faktor",
+ "api.cmd.array_elements": "Linjär eller radiell upprepning av element",
+ "api.cmd.offset_wall": "Parallellkopia av en vägg på ett avstånd i meter",
+ "api.cmd.split_wall": "Dela en vägg i två vid en punkt",
+ "api.cmd.pin_elements": "Lås eller lås upp element",
+ "api.cmd.flip_openings": "Vänd gångjärnssidan eller vändningen på dörrar och fönster",
+ "api.cmd.create_level": "Skapa en nivå på en höjd i meter",
+ "api.cmd.edit_level": "Byt namn på våning eller ändra höjdläge",
+ "api.cmd.delete_level": "Ta bort våning",
+ "api.cmd.place_rooms": "Placera ett rum i varje sluten yta på en våning",
+ "api.cmd.join_elements": "Sammanfoga, lös upp eller byt geometrisk sammanfogning",
+ "api.cmd.place_footings": "Placera en grund under varje pelare på en våning",
+ "api.cmd.create_terrain": "Skapa terräng från mätpunkter eller ett lutande plan",
+ "api.cmd.script_recipes": "Läs skriptbyggstenar och recept för fria konstruktioner"
+}

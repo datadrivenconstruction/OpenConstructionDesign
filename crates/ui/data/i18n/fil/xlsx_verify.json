@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "Na-undo ang Apply: hindi tumugma ang modelo sa preview. {what}",
+ "xlsx_verify.not_written": "Hindi nabago ang {row}.",
+ "xlsx_verify.lost": "Nawala ang {row}.",
+ "xlsx_verify.not_deleted": "Hindi nabura ang {row}.",
+ "xlsx_verify.extra_deleted": "Nabura ang {row}, kahit itinatago ito ng preview.",
+ "xlsx_verify.created": "{table}: {got} bago sa halip na {want}.",
+ "xlsx_verify.value": "{row}, {field}: inaasahan ang {want} (dati {old}), nakuha {got}.",
+ "xlsx_verify.check_failed": "Hindi masuri ang resulta: {e}",
+ "xlsx_verify.plan_failed": "Hindi sinimulan ang Apply: hindi nabasa ng check ang modelo ({e}).",
+ "xlsx_verify.take_back_failed": "Hindi na-undo ang hakbang ({e}): gamitin ang Undo.",
+ "xlsx_verify.t.wall": "Pader",
+ "xlsx_verify.t.opening": "Butas",
+ "xlsx_verify.t.room": "Kuwarto",
+ "xlsx_verify.t.slab": "Sahig",
+ "xlsx_verify.t.level": "Antas",
+ "xlsx_verify.t.wall_type": "Uri ng pader",
+ "xlsx_verify.t.slab_type": "Uri ng sahig",
+ "xlsx_verify.t.col": "Kolum",
+ "xlsx_verify.t.beam": "Biga",
+ "xlsx_verify.t.roof": "Bubong",
+ "xlsx_verify.t.curtain_wall": "Kurtinang pader"
+}

@@ -1,0 +1,14 @@
+{
+ "cmd.arch.wall.tile": "Wall",
+ "cmd.arch.door.tile": "Door",
+ "cmd.arch.window.tile": "Window",
+ "cmd.arch.floor.tile": "Floor",
+ "cmd.mod.move.tile": "Move",
+ "cmd.mod.copy.tile": "Copy",
+ "cmd.mod.rotate.tile": "Rotate",
+ "cmd.mod.mirror.tile": "Mirror",
+ "cmd.mod.trim.tile": "Trim",
+ "cmd.mod.delete.tile": "Delete",
+ "cmd.ann.dim.tile": "Dimension",
+ "cmd.ann.text.tile": "Text"
+}

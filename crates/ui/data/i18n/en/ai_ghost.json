@@ -1,0 +1,5 @@
+{
+ "ai.ghost.draft": "Draft preview — model unchanged",
+ "ai.ghost.before": "Before: the model as it is. Release B to see the draft",
+ "ai.ghost.hint": "Enter applies, Esc discards, hold B to see Before"
+}

@@ -1,0 +1,15 @@
+{
+ "text_style.lbl.text_style": "סגנון טקסט",
+ "text_style.lbl.align": "יישור",
+ "text_style.lbl.head": "ראש חץ",
+ "text_style.lbl.line_style": "סגנון קו",
+ "text_style.lbl.fill": "מילוי",
+ "text_style.lbl.detail": "פירוט",
+ "text_style.lbl.width": "רוחב",
+ "text_style.bad_number": "הזן מספר מ-{min} עד {max}",
+ "text_style.tip.next_ring": "סגור את הקו המתאר הזה והתחל קו נוסף באותו אזור",
+ "text_style.tip.edit_text": "ערוך את הטקסט במקום",
+ "text_style.tip.add_leader": "הוסף קו מוביל לטקסט הזה",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°"
+}

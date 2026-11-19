@@ -1,0 +1,7 @@
+{
+ "spline.opt.spline": "สไปลน์",
+ "spline.opt.spline_tip": "ผนังสไปลน์: คลิกจุดที่เส้นผ่าน กด Enter หรือ Esc เพื่อจบ",
+ "spline.wt.three_points": "ผนังสไปลน์ต้องมีอย่างน้อยสามจุด",
+ "spline.wt.no_curtain": "ผนังม่านไม่มีแกนสไปลน์",
+ "spline.wt.added": "เพิ่มผนังสไปลน์แล้ว"
+}

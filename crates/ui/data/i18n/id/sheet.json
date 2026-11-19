@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "Referensi pintasan",
+ "cmd.help.shortcuts.desc": "Menampilkan setiap pintasan sesuai pengaturan Anda saat ini, per konteks. Tekan ? di luar kolom teks.",
+ "sheet.title": "Pintasan keyboard",
+ "sheet.filter": "Filter berdasarkan perintah atau tombol",
+ "sheet.filter_label": "Filter pintasan",
+ "sheet.customize": "Sesuaikan…",
+ "sheet.close": "Tutup",
+ "sheet.esc_close": "untuk menutup",
+ "sheet.none": "Tidak ada pintasan yang cocok",
+ "sheet.none_hint": "Coba kata atau tombol lain.",
+ "sheet.sec.general": "Umum",
+ "sheet.sec.plan": "Denah",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "Jadwal",
+ "sheet.sec.sheets": "Lembar",
+ "sheet.sec.ai": "AI"
+}

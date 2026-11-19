@@ -1,0 +1,7 @@
+{
+ "messages.title": "Meldinger",
+ "messages.desc": "Historikk over meldinger. Ingen nye advarsler eller feil.",
+ "messages.desc_new": "{n} nye advarsler eller feil. Klikk for å lese dem.",
+ "messages.copy": "Kopier alt",
+ "messages.clear": "Tøm alt"
+}

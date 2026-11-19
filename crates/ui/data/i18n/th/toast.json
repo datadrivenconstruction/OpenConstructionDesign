@@ -1,0 +1,8 @@
+{
+ "toast.more_tip": "รายการที่เหลืออยู่ในข้อความ",
+ "toast.copy": "คัดลอก",
+ "toast.level.info": "ข้อมูล",
+ "toast.level.success": "เสร็จแล้ว",
+ "toast.level.warning": "คำเตือน",
+ "toast.level.error": "ข้อผิดพลาด"
+}

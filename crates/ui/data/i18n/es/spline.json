@@ -1,0 +1,7 @@
+{
+ "spline.opt.spline": "Spline",
+ "spline.opt.spline_tip": "Muro spline: haga clic en los puntos por los que pasa; Intro o Esc para terminar",
+ "spline.wt.three_points": "un muro spline necesita tres puntos o más",
+ "spline.wt.no_curtain": "un muro cortina no tiene eje spline",
+ "spline.wt.added": "muro spline añadido"
+}

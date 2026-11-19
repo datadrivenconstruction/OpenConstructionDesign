@@ -1,0 +1,72 @@
+{
+ "del.k.door": {
+  "one": "# ușă",
+  "few": "# uși",
+  "other": "# de uși"
+ },
+ "del.k.window": {
+  "one": "# fereastră",
+  "few": "# ferestre",
+  "other": "# de ferestre"
+ },
+ "del.k.opening": {
+  "one": "# gol",
+  "few": "# goluri",
+  "other": "# de goluri"
+ },
+ "del.k.comp": {
+  "one": "# componentă găzduită",
+  "few": "# componente găzduite",
+  "other": "# de componente găzduite"
+ },
+ "del.k.rebar": {
+  "one": "# set de armături",
+  "few": "# seturi de armături",
+  "other": "# de seturi de armături"
+ },
+ "del.k.port": {
+  "one": "# port MEP găzduit",
+  "few": "# porturi MEP găzduite",
+  "other": "# de porturi MEP găzduite"
+ },
+ "del.k.joist": {
+  "one": "# grindă de planșeu",
+  "few": "# grinzi de planșeu",
+  "other": "# de grinzi de planșeu"
+ },
+ "del.k.railing": {
+  "one": "# balustradă",
+  "few": "# balustrade",
+  "other": "# de balustrade"
+ },
+ "del.k.tag": {
+  "one": "# etichetă",
+  "few": "# etichete",
+  "other": "# de etichete"
+ },
+ "del.k.dim": {
+  "one": "# cotă (detașată)",
+  "few": "# cote (detașate)",
+  "other": "# de cote (detașate)"
+ },
+ "del.also": "Afectate și: {list}",
+ "del.rooms": {
+  "one": "# cameră pierde un perete de contur",
+  "few": "# camere pierd un perete de contur",
+  "other": "# de camere pierd un perete de contur"
+ },
+ "del.cancelled": "Ștergere anulată, nimic modificat",
+ "del.confirm.title": "Ștergere cu dependențe",
+ "del.confirm.lead": {
+  "one": "# element selectat va lua cu el:",
+  "few": "# elemente selectate vor lua cu ele:",
+  "other": "# de elemente selectate vor lua cu ele:"
+ },
+ "del.confirm.levels": {
+  "one": "# dintre ele este pe alt nivel",
+  "few": "# dintre ele sunt pe alte niveluri",
+  "other": "# dintre ele sunt pe alte niveluri"
+ },
+ "del.confirm.all": "Șterge tot",
+ "del.confirm.cancel": "Renunță"
+}

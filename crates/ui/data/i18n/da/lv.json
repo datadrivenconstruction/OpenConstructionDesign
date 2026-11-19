@@ -1,0 +1,5 @@
+{
+ "lv.level.deleted_attach": "Etage slettet; {n} vægge mistede deres topforbindelse",
+ "lv.level.rooms": "{n} rum tager måletagens højde ({dz} m): {names}. Tryk Flyt igen for at bekræfte",
+ "lv.level.pinned": "Etage ikke slettet: fastgjorte elementer kan ikke flyttes til en anden etage: {names}. Løsn dem først"
+}

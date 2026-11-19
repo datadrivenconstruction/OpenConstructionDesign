@@ -1,0 +1,5 @@
+{
+ "xlsx_delete.delete_missing": "Slett rader som mangler i arbeidsboken",
+ "xlsx_delete.not_removed": "ikke fjernet: ingen sammenligningsdata",
+ "xlsx_delete.no_base_reason": "Ikke tilgjengelig: arbeidsboken har ingen sammenligningsdata, så en manglende rad kan ikke skilles fra en som ble fjernet ved en feil. Ingenting slettes ved Bruk."
+}

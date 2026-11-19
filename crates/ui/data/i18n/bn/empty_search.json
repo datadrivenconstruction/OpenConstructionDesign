@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "কিছু পাওয়া যায়নি",
+ "empty.browser_search.hint": "এই অনুসন্ধানের সঙ্গে কোনো ভিউ, লেভেল, ধরন বা কক্ষ মেলেনি।",
+ "empty.browser_search.action": "অনুসন্ধান মুছুন",
+ "empty.xl_filtered.title": "ফিল্টারের সঙ্গে কোনো এন্ট্রি মেলেনি",
+ "empty.xl_filtered.hint": "আরও ধরন চালু করুন, অন্য শিট বেছে নিন বা অনুসন্ধান লেখা বদলান।",
+ "empty.xl_filtered.action": "ফিল্টার মুছুন",
+ "empty.xl_nochanges.title": "বইয়ে কোনো পরিবর্তন নেই",
+ "empty.xl_nochanges.hint": "বইটি মডেলের সঙ্গে মেলে: আমদানি করলে কিছুই বদলাবে না।",
+ "empty.version_same.title": "মডেলগুলো একই",
+ "empty.version_same.hint": "খোলা মডেল ও বেছে নেওয়া সংস্করণের মধ্যে কোনো পার্থক্য পাওয়া যায়নি।",
+ "empty.templates.title": "এখনো কোনো ভিউ টেমপ্লেট নেই",
+ "empty.templates.hint": "অন্য ভিউতে সেটিংস ব্যবহারের জন্য বর্তমান ভিউ থেকে একটি তৈরি করুন।",
+ "empty.templates.action": "একটি টেমপ্লেটের নাম দিন",
+ "empty.fe_params.title": "এখনো কোনো প্যারামিটার নেই",
+ "empty.fe_params.hint": "আকার, উপকরণ বা দৃশ্যমানতা নিয়ন্ত্রণ করতে নিচে একটি প্যারামিটার যোগ করুন।",
+ "empty.fe_params.action": "একটি প্যারামিটার যোগ করুন"
+}

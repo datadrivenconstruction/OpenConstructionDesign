@@ -1,0 +1,50 @@
+{
+ "id": "se",
+ "version": "2026.11",
+ "parent": "eu",
+ "country": "SE",
+ "lang": [
+  "sv"
+ ],
+ "units": {
+  "length": "m",
+  "display": "metric"
+ },
+ "conventions": {
+  "ground_floor": 1,
+  "area_standard": "usable",
+  "net_share": 1.0,
+  "note": "Swedish dwelling areas are normally stated as boarea (BOA, living area inside the walls); gross area (BTA) is used for whole buildings. Net share is our own estimate.",
+  "source": null
+ },
+ "status": "tier3",
+ "climate": {
+  "zones": [],
+  "default": null
+ },
+ "research": {
+  "date": "2026-11-14",
+  "missing": [
+   "egress.travel_max",
+   "egress.travel_max.office",
+   "daylight.window_floor_ratio",
+   "corridor.width_min.accessible",
+   "fire.compartment_area_max",
+   "fire.compartment_area_max.sprinklered",
+   "stair.riser_max",
+   "stair.width_min",
+   "stair.riser_max.house",
+   "stair.tread_min.house",
+   "stair.width_min.house",
+   "parking.per_dwelling",
+   "load.floor_residential",
+   "load.floor_office"
+  ],
+  "unreachable": [
+   "BBR section 5 fire: no prescriptive travel distance or compartment area found, rules are performance-based",
+   "boverket.se trappor-ramper page (truncated, no numbers)",
+   "EKS live-load values not confirmed"
+  ]
+ },
+ "note": "Numbers with verified=true were read in the cited clause; the rest are hints with a note of where we looked. Wording is our own; no text of a standard is stored."
+}

@@ -1,0 +1,6 @@
+{
+ "cmd.file.import_again": "Impordi uuesti",
+ "cmd.file.import_again.desc": "Loob uue projekti lähtefailist sellisena, nagu ta praegu on.",
+ "cmd.file.open_kept": "Ava alles jäetud import",
+ "cmd.file.open_kept.desc": "Avab valmis impordi, mis jäeti alles, kui salvestamata muudatuste küsimus tühistati."
+}

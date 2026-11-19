@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "Дормерийн нүх",
+ "cmd.arch.roof_opening": "Дээврийн нүх",
+ "cmd.arch.roof_extrusion": "Экструзээр дээвэр",
+ "cmd.arch.ceiling_opening": "Таазны нүх",
+ "cmd.str.slab_opening": "Шалны нүх",
+ "cmd.ctx.wall.detach": "Оройг салгах",
+ "cmd.ctx.floor.sketch": "Хязгаарыг засах",
+ "cmd.ctx.floor.shape": "Хэлбэрийг засах",
+ "host_shape.shape.elev_prompt": "өндөр, мм…",
+ "host_shape.shape.elev_mm": "{v} мм",
+ "host_shape.sketch.no_host": "Энэ түвшинд хязгаарын доор үндсэн элемент байхгүй",
+ "host_shape.issue.roof": "дээвэр {id}: {e}",
+ "host_shape.issue.ceiling": "тааз {id}: {e}",
+ "host_shape.status.select_slab": "дэвсгэр сонгоно уу",
+ "host_shape.status.select_walls": "хана сонгоно уу",
+ "host_shape.status.no_roof_or_level": "дээр нь дээвэр эсвэл түвшин байхгүй",
+ "host_shape.status.top_attached": "ханын оройг холбосон",
+ "host_shape.status.top_detached": "ханын оройг салгасан",
+ "host_shape.status.straight_wall": "шулуун хана шаардлагатай",
+ "host_shape.status.roof_extruded": "экструзээр дээвэр үүслээ",
+ "warn.kind.cut": "Тайралт эсвэл холбоос бүтээгдээгүй"
+}

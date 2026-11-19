@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "Scal wariant: {name}",
+ "ai_opt_merge.whole": "Scal cały wariant",
+ "ai_opt_merge.parts": "Scal wybrane części",
+ "ai_opt_merge.note": "Dlaczego ten wariant",
+ "ai_opt_merge.rebased": "Model zmienił się po powstaniu tego wariantu: scalanie przeliczono względem bieżącego modelu. Sprawdź zmiany przed zastosowaniem.",
+ "ai_opt_merge.left.not_picked": "Nie wybrano z wariantu",
+ "ai_opt_merge.left.unticked": "Odznaczone w wariancie",
+ "ai_opt_merge.left.conflict": "Nie można dodać do bieżącego modelu: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "Tego wariantu nie można scalić. Odrzucony wariant trzeba najpierw przywrócić.",
+ "ai_opt_merge.refused.stale": "Model zmienił się po powstaniu tego wariantu. Przelicz scalanie względem bieżącego modelu.",
+ "ai_opt_merge.refused.nothing_picked": "Nic nie zaznaczono do scalenia.",
+ "ai_opt_merge.refused.unknown_item": "Pozycja {item} nie należy do tego wariantu.",
+ "ai_opt_merge.refused.not_in_option": "Zaznaczony element nie należy do tego wariantu.",
+ "ai_opt_merge.refused.needs_left_out": "Pozycja {item} wymaga pozycji {needs}. Zaznacz ją także albo zezwól na dodanie zależności.",
+ "ai_opt_merge.refused.set_gone": "Pozycja {item} odnosi się do zaznaczenia, które już nie istnieje. Wygeneruj wariant ponownie.",
+ "ai_opt_merge.refused.busy": "Otwarty jest inny plan. Najpierw go zastosuj lub odrzuć.",
+ "ai_opt_merge.refused.failed": "Scalania nie udało się przygotować: {reason}",
+ "ai_opt_merge.revive": "Przywróć wariant",
+ "ai_opt_merge.merged": "Scalono"
+}

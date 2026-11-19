@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D",
+ "phases.current_mark": "gjeldende",
+ "phases.make_current": "Gjør gjeldende",
+ "phases.col_phase": "Fase",
+ "phases.col_filter": "Filter",
+ "phases.presets": "Planforhåndsinnstillinger",
+ "phases.del_title": "Slett fase",
+ "phases.del_text": "Slette fasen “{name}”? Elementene flyttes til fasen som velges nedenfor.",
+ "phases.del_into": "Flytt elementer til",
+ "phases.del_ok": "Slett",
+ "phases.col_kind": "Elementtype",
+ "phases.col_count": "Antall",
+ "phases.col_volume": "Volum"
+}

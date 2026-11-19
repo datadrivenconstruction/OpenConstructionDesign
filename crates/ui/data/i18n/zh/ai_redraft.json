@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "已修订",
+ "ai.redraft.added": "新增 {n}",
+ "ai.redraft.removed": "删除 {n}",
+ "ai.redraft.changed": "修改 {n}",
+ "ai.redraft.strip": "自您上次查看后：{what}",
+ "ai.redraft.note": "已查看修订后的计划：{what}",
+ "ai.redraft.more": "另有 {n} 项",
+ "ai.redraft.ack": "知道了",
+ "ai.redraft.ack.tip": "标记此修订版本已查看；之后的“应用”将针对该版本",
+ "ai.redraft.removed_list": "已删除项目：{n}",
+ "ai.redraft.review_first": "您发送消息后计划已更改：请先查看更改",
+ "ai.redraft.mark.tip": "自您上次查看后新增或已更改",
+ "ai.redraft.emptied": "后续操作删除了全部项目：草稿已为空"
+}

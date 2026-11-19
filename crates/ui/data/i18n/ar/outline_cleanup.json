@@ -1,0 +1,15 @@
+{
+ "cmd.ctx.floor.clean_outline": "تنظيف المحيط",
+ "cmd.ctx.floor.clean_outline.desc": "يزيل الأشواك الضيقة حيث يلتف محيط الأرضية على نفسه. يعرض معاينة أولًا؛ خطوة تراجع واحدة.",
+ "outline_cleanup.title": "تنظيف المحيط",
+ "outline_cleanup.intro": "يلتف محيط هذه الأرضية على نفسه في أشواك ضيقة: {n}. التنظيف يزيلها، ويبقى الباقي كما هو.",
+ "outline_cleanup.legend_before": "خط عريض: المحيط الحالي",
+ "outline_cleanup.legend_after": "خط رفيع: المحيط بعد التنظيف",
+ "outline_cleanup.undo": "يمكن التراجع عن هذا بخطوة واحدة.",
+ "outline_cleanup.apply": "تنظيف",
+ "outline_cleanup.cancel": "إلغاء",
+ "outline_cleanup.done": "تم تنظيف المحيط، وأُزيلت الأشواك: {n}",
+ "outline_cleanup.none": "محيط هذه الأرضية لا يحوي أشواكًا",
+ "outline_cleanup.failed": "تعذّر تنظيف المحيط",
+ "outline_cleanup.changed": "تغيّر المحيط بعد المعاينة؛ لم يُكتب شيء. راجع المعاينة الجديدة."
+}

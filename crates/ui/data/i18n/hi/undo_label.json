@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "पूर्ववत करें: {what}",
+ "undo_label.redo_what": "फिर से करें: {what}",
+ "undo_label.undo_none": "पूर्ववत करने के लिए कुछ नहीं",
+ "undo_label.redo_none": "फिर से करने के लिए कुछ नहीं"
+}

@@ -1,0 +1,11 @@
+{
+ "sketch.points": "Pontos",
+ "sketch.rect": "Retângulo",
+ "sketch.circle": "Círculo",
+ "sketch.polygon": "Polígono",
+ "sketch.radius": "R",
+ "sketch.sides": "Lados",
+ "sketch.circum": "Circunscrito",
+ "sketch.shape.tip": "Forma de esboço (A alterna). Retângulo: dois cantos. Círculo e polígono: centro, depois raio. Digite um tamanho e pressione Enter para fixá-lo.",
+ "tool.err.zero_size": "Tamanho zero: afaste o segundo ponto do primeiro"
+}

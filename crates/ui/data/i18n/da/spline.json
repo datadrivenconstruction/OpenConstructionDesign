@@ -1,0 +1,7 @@
+{
+ "spline.opt.spline": "Spline",
+ "spline.opt.spline_tip": "Splinevæg: klik på de punkter den går igennem, Enter eller Esc for at afslutte",
+ "spline.wt.three_points": "en splinevæg kræver tre punkter eller flere",
+ "spline.wt.no_curtain": "en gardinvæg har ingen splineakse",
+ "spline.wt.added": "splinevæg tilføjet"
+}

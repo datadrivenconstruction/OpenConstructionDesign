@@ -1,0 +1,11 @@
+{
+ "cmd.arch.roof_gable.short": "Sedlová",
+ "cmd.arch.roof_hip.short": "Valbová",
+ "cmd.arch.roof_shed.short": "Pultová",
+ "cmd.arch.roof_mansard.short": "Mansardová",
+ "cmd.arch.roof_gambrel.short": "Mansardová sedlová",
+ "cmd.arch.roof_barrel.short": "Valbová",
+ "cmd.arch.roof_edges.short": "Hrany střechy",
+ "cmd.arch.roof_opening.short": "Otvor",
+ "cmd.mass.roof_by_face.short": "Podle plochy"
+}

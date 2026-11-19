@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "Igualar tipo",
+ "cmd.mod.match_type.short": "Igualar tipo",
+ "cmd.mod.match_type.desc": "Seleccione un muro, forjado, pilar o viga y después pulse otros de la misma categoría para darles su tipo. Arrastre sobre una ventana para aplicar a todos los incluidos. Esc suelta el origen.",
+ "hint.match_type.pick": "Igualar tipo: seleccione un muro, forjado, pilar o viga · Esc — salir",
+ "hint.match_type.apply": "Igualar tipo: pulse los destinos o arrastre sobre una ventana · Esc — otro origen",
+ "match_type.kind.wall": "muro",
+ "match_type.kind.slab": "forjado",
+ "match_type.kind.column": "pilar",
+ "match_type.kind.beam": "viga",
+ "match_type.refuse.category": "Otra categoría: solo un {cat} puede recibir este tipo",
+ "match_type.refuse.curtain": "Muro cortina: aquí no se iguala su tipo",
+ "match_type.refuse.pinned": "Fijado: desfíjelo para cambiar el tipo",
+ "match_type.pick_bad": "Seleccione como origen un muro, forjado, pilar o viga",
+ "match_type.same": "Ya es este tipo",
+ "match_type.done": "Tipo aplicado: {n}",
+ "match_type.done_skipped": "Tipo aplicado: {n}, omitidos (fijados o muro cortina): {skipped}",
+ "match_type.failed": "Tipo no cambiado: {err}"
+}

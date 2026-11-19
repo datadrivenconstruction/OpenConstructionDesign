@@ -1,0 +1,9 @@
+{
+ "first_card.card.title": "Próbálja ki a táblázatos oda-vissza műveletet",
+ "first_card.card.step1": "Válasszon egy falat",
+ "first_card.card.step2": "Módosítson egy tulajdonságát",
+ "first_card.card.step3": "Szerkessze a táblázatkezelőben, ellenőrizze az előnézetet, majd Alkalmaz",
+ "first_card.card.spreadsheet": "Szerkesztés táblázatkezelőben",
+ "first_card.card.skip": "Kihagyás",
+ "first_card.card.done": "Kész: a modell és a munkafüzet egyezik"
+}

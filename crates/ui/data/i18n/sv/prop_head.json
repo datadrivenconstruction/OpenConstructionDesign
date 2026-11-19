@@ -1,0 +1,9 @@
+{
+ "prop_head.of_type": {
+  "one": "# av den här typen",
+  "other": "# av den här typen"
+ },
+ "prop_head.override_tip": "Skiljer sig från typen, klicka för att återställa",
+ "prop_head.reset_done": "“{name}” återställd till typvärdet",
+ "prop_head.copy_id": "Klicka för att kopiera numret"
+}

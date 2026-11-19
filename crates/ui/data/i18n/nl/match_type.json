@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "Type overnemen",
+ "cmd.mod.match_type.short": "Type overnemen",
+ "cmd.mod.match_type.desc": "Kies een wand, vloer, kolom of balk en klik daarna op andere van dezelfde categorie om hen het type ervan te geven. Sleep een venster om op alles erin toe te passen. Esc laat de bron los.",
+ "hint.match_type.pick": "Type overnemen: kies een wand, vloer, kolom of balk · Esc — afsluiten",
+ "hint.match_type.apply": "Type overnemen: klik op doelen of sleep een venster · Esc — andere bron",
+ "match_type.kind.wall": "wand",
+ "match_type.kind.slab": "vloer",
+ "match_type.kind.column": "kolom",
+ "match_type.kind.beam": "balk",
+ "match_type.refuse.category": "Andere categorie: alleen een {cat} kan dit type krijgen",
+ "match_type.refuse.curtain": "Gordijngevel: het type wordt hier niet overgenomen",
+ "match_type.refuse.pinned": "Vastgezet: maak het los om het type te wijzigen",
+ "match_type.pick_bad": "Kies een wand, vloer, kolom of balk als bron",
+ "match_type.same": "Heeft al dit type",
+ "match_type.done": "Type toegepast: {n}",
+ "match_type.done_skipped": "Type toegepast: {n}, overgeslagen (vastgezet of gordijngevel): {skipped}",
+ "match_type.failed": "Type niet gewijzigd: {err}"
+}

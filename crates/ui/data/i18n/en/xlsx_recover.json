@@ -1,0 +1,16 @@
+{
+ "xlsx_recover.title": "An export into the linked workbook was interrupted",
+ "xlsx_recover.both": "The export stopped between moving the previous workbook aside and putting the new one in place. Nothing is lost: the new workbook is complete at {part}, the previous one is kept at {bak}.",
+ "xlsx_recover.part_only": "The export stopped before the new workbook was put in place. It is complete at {part}.",
+ "xlsx_recover.bak_only": "The export stopped before the new workbook was ready. The previous workbook is kept at {bak}.",
+ "xlsx_recover.finish": "Finish the interrupted export",
+ "xlsx_recover.restore": "Restore the previous workbook",
+ "xlsx_recover.finished": "The interrupted export is finished: the new workbook is in place.",
+ "xlsx_recover.finished_kept": "The interrupted export is finished: the new workbook is in place, the previous one is kept at {bak}.",
+ "xlsx_recover.restored": "The previous workbook is back in place.",
+ "xlsx_recover.restore_failed": "The previous workbook could not be moved back ({err}). It is kept at {path}.",
+ "xlsx_recover.not_restored": "The new workbook could not be put in place and the previous one could not be moved back. Nothing is lost: the previous workbook is kept at {path}; Synchronize offers to finish or restore.",
+ "xlsx_recover.finish_failed": "The new workbook could not be put in place ({err}). It stays at {path}.",
+ "xlsx_recover.dest_back": "A workbook is back at {path}: nothing was moved.",
+ "xlsx_recover.nothing": "Nothing of the interrupted export is left to move."
+}

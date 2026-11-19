@@ -1,0 +1,4 @@
+{
+ "xl.msg.x_cells_above_the_header_on_sheet_x": "{} buněk nad záhlavím na listu „{}“",
+ "xl.msg.book_changed_during_export": "sešit byl během exportu uložen jiným programem a nebyl přepsán; exportujte znovu"
+}

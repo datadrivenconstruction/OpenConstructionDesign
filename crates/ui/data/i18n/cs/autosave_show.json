@@ -1,0 +1,4 @@
+{
+ "cmd.mgr.autosave_show": "Zobrazit automatické ukládání",
+ "cmd.mgr.autosave_show.desc": "Otevře okno automatického ukládání; pokud je již zobrazeno, zůstane otevřené."
+}

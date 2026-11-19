@@ -1,0 +1,4 @@
+{
+ "cmd.data.sync_xlsx": "XLSX スプレッドシート と同期…",
+ "cmd.data.sync_xlsx.desc": "リンクされたブックを再読み込みし、モデルとの差分を表示します。"
+}

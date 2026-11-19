@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "Promień przyciągania",
+ "snap_refine.settings.snap_px_desc": "Jak blisko kursora musi być punkt lub linia, aby przyciągnąć, w pikselach ekranu. Większa wartość pomaga na ekranach dotykowych i o wysokiej gęstości.",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "Poziomo",
+ "snap_refine.hint.vertical": "Pionowo",
+ "snap_refine.hint.perpendicular": "Prostopadle do poprzedniego",
+ "snap_refine.hint.parallel": "Równolegle do poprzedniego",
+ "snap_refine.hint.on_axis": "Na osi ściany",
+ "snap_refine.no_snap": "Bez przyciągania (Alt)"
+}

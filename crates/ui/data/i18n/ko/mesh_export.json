@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "모델 전체 또는 선택 항목을 미터 또는 밀리미터 단위의 이진 STL로 저장합니다.",
+ "cmd.data.export_obj.desc": "모델 전체 또는 선택 항목을 MTL 파일과 함께 OBJ로 저장합니다: 요소마다 그룹 하나, 재료별 색상.",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "재료 포함 OBJ (.obj)",
+ "open_file.filter.mesh": "3D 메시 (glTF, STEP, STL, OBJ)",
+ "mx.title": "{fmt} 내보내기",
+ "mx.scope": "내보낼 대상",
+ "mx.scope.all": "모델 전체",
+ "mx.scope.sel": "선택 항목 ({n}개 요소)",
+ "mx.units": "파일의 단위",
+ "mx.units.m": "미터",
+ "mx.units.mm": "밀리미터",
+ "mx.export": "내보내기…",
+ "mx.saved": "{fmt} 저장됨: {path} ({parts}개 요소, {tris}개 삼각형)",
+ "mx.partial": "{fmt}을(를) 문제 {n}개와 함께 저장했습니다. 일부 본체가 빠졌을 수 있습니다: {path}",
+ "mx.failed": "{fmt} 내보내기 실패: {error}",
+ "mx.imported": "{file}: {n}개 요소를 가져왔습니다 ({tris}개 삼각형)",
+ "mx.imported_notes": "{file}: {n}개 요소를 가져왔습니다 ({tris}개 삼각형), 참고 {w}개: {first}"
+}

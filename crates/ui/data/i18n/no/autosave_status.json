@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "Autolagring feilet, siste endringer er ikke beskyttet. {why}",
+ "autosave_status.autosave_open": "Innstillinger for autolagring",
+ "autosave_status.autosave_recovered": "Autolagring fungerer igjen.",
+ "autosave_status.autosave_reason": "Årsak: {why}"
+}

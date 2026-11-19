@@ -1,0 +1,19 @@
+{
+ "undo.entry_later": "Nevráceno: po ní byla provedena jiná změna. Nejprve vraťte tu.",
+ "undo.entry_gone": "Nevráceno: tato změna je již vrácena nebo není v historii.",
+ "undo.entry_busy": "Nejprve dokončete nebo zrušte aktuální kreslení, poté vraťte zpět.",
+ "quick.hud.more": "Další v Vlastnostech: {names}",
+ "sheet_tools.sheet.more": "Další nástroje listu",
+ "job.of": "{d} z {t}",
+ "job.of.mb": "{d} z {t} MB",
+ "job.left.under_minute": "zbývá méně než minuta",
+ "job.left.minutes": "zbývá asi {n} min",
+ "sheet_tools.start.units": "Jednotky",
+ "sheet_tools.print.save": {
+  "one": "Uložit # list",
+  "few": "Uložit # listy",
+  "other": "Uložit # listů"
+ },
+ "sheet_tools.sets.delete_ask": "Smazat sadu „{name}“? Její listy zůstanou v projektu.",
+ "sheet_tools.keep": "Ponechat"
+}

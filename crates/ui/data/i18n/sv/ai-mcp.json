@@ -1,0 +1,15 @@
+{
+ "mcp.ask.cancel": "Avbryt",
+ "mcp.ask.auto.title": "Låta AI-agenter tillämpa ändringar utan att fråga?",
+ "mcp.ask.auto.body": "Anslutna AI-agenter tillämpar sina ändringar i utkast direkt, utan att vänta på din bekräftelse, så en felaktig ändring kan hamna innan du ser den. Din modell ändras fortfarande bara när du trycker på Tillämpa. Detta gäller tills du stänger av det, stänger editorn eller öppnar en annan modell.",
+ "mcp.ask.auto.yes": "Tillämpa utan att fråga",
+ "mcp.ask.token.title": "Utfärda en ny token?",
+ "mcp.ask.token.body": "Den nuvarande token slutar fungera direkt: anslutna AI-agenter kopplas från och behöver den nya token. Den visas bara en gång, så kopiera den direkt.",
+ "mcp.ask.token.yes": "Ny token",
+ "mcp.auto.chip": "Automatisk tillämpning på",
+ "mcp.auto.chip_tip": "AI-agenter tillämpar ändringar i utkast utan att fråga. Upphör med denna session.",
+ "mcp.auto.ask_again": "Fråga igen",
+ "mcp.token.once": "Kopiera denna token nu: den visas inte igen.",
+ "mcp.renewed": "Ny token utfärdad: den gamla fungerar inte längre",
+ "mcp.copied": "Kopierad"
+}

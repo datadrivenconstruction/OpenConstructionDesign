@@ -1,0 +1,18 @@
+{
+ "undo.entry_later": "Geri alınmadı: bundan sonra başka bir değişiklik yapıldı. Önce onu geri alın.",
+ "undo.entry_gone": "Geri alınmadı: bu değişiklik zaten geri alınmış veya geçmişte yok.",
+ "undo.entry_busy": "Önce mevcut çizimi bitirin veya iptal edin, sonra geri alın.",
+ "quick.hud.more": "Özellikler içinde daha fazlası: {names}",
+ "sheet_tools.sheet.more": "Diğer sayfa araçları",
+ "job.of": "{d} / {t}",
+ "job.of.mb": "{d} / {t} MB",
+ "job.left.under_minute": "1 dakikadan az kaldı",
+ "job.left.minutes": "yaklaşık {n} dk kaldı",
+ "sheet_tools.start.units": "Birimler",
+ "sheet_tools.print.save": {
+  "one": "# sayfayı kaydet",
+  "other": "# sayfayı kaydet"
+ },
+ "sheet_tools.sets.delete_ask": "“{name}” kümesi silinsin mi? Sayfaları projede kalır.",
+ "sheet_tools.keep": "Koru"
+}

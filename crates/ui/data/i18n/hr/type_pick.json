@@ -1,0 +1,11 @@
+{
+ "type_pick.pick.search": "Pretraži tipove ili debljinu",
+ "type_pick.pick.empty": "Nema podudarnih tipova",
+ "type_pick.pick.edit": "Uredi tip…",
+ "type_pick.pick.mixed": "Miješano",
+ "type_pick.pick.layers": {
+  "one": "# sloj",
+  "few": "# sloja",
+  "other": "# slojeva"
+ }
+}

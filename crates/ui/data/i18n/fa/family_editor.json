@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "خانواده جدید",
+ "family_editor.open_tip": "باز کردن خانواده یا پیش‌نویس",
+ "family_editor.close_named": "بستن {name}",
+ "family_editor.unsaved": "تغییرات ذخیره‌نشده",
+ "family_editor.search": "جست‌وجو",
+ "family_editor.nothing": "چیزی پیدا نشد",
+ "family_editor.sec_families": "خانواده‌های پروژه",
+ "family_editor.sec_drafts": "پیش‌نویس‌ها",
+ "family_editor.cap_category": "دسته",
+ "family_editor.cap_host": "میزبان",
+ "family_editor.cap_type": "نوع پیش‌نمایش"
+}

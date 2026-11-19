@@ -1,0 +1,13 @@
+{
+ "tags.gone": "Etiket artık yok",
+ "tags.readonly_wall": "Duvar etiketi türünü gösterir ve burada düzenlenemez: duvar türünü değiştirin",
+ "tags.readonly_comp": "Bileşen etiketi ailesini gösterir ve burada düzenlenemez: türü değiştirin",
+ "tags.locked": "Öğe kilitli: etiketi düzenlemek için kilidini açın",
+ "tags.done": "Etiket değeri yazıldı",
+ "tags.failed": "Etiket değişmedi: {e}",
+ "tags.dup_door": "{mark} ayrıca {n} kapıda da var",
+ "tags.dup_window": "{mark} ayrıca {n} pencerede de var",
+ "tags.dup_room": "{mark} ayrıca {n} odada da var",
+ "tags.hint_mark": "İşaret",
+ "tags.hint_name": "Oda adı"
+}

@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "مش‌های واردشده",
+ "mat_mesh.mesh.none_selected": "مش‌های واردشده را در نمای سه‌بعدی انتخاب کنید تا این مصالح را بگیرند.",
+ "mat_mesh.mesh.current": "اولین مش انتخاب‌شده: {material}",
+ "mat_mesh.mesh.current_none": "اولین مش انتخاب‌شده مصالح ندارد.",
+ "mat_mesh.mesh.assign": "اختصاص به {n} مورد انتخاب‌شده",
+ "mat_mesh.mesh.assign_tip": "سبک واقع‌گرایانه، بافت این مصالح را روی مش‌های انتخاب‌شده نشان می‌دهد",
+ "mat_mesh.mesh.assign_cat": "اختصاص به دستهٔ {category}",
+ "mat_mesh.mesh.assign_cat_tip": "هر مش واردشدهٔ آن دسته که مصالح خودش را ندارد",
+ "mat_mesh.mesh.clear": "پاک کردن انتخاب‌شده",
+ "mat_mesh.mesh.clear_tip": "مش‌های انتخاب‌شده به مصالح دسته یا رنگ ساده برمی‌گردند",
+ "mat_mesh.mesh.clear_cat": "پاک کردن دسته"
+}

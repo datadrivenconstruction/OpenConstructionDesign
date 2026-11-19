@@ -1,0 +1,21 @@
+{
+ "cmd.help.check_update": "Rechercher les mises à jour",
+ "update_check.title": "Vérification des mises à jour",
+ "update_check.desc": "Désactivé par défaut. Envoie uniquement la version, le système et l'architecture, ainsi que le type d'installation, à notre serveur. Ne télécharge ni n'installe jamais rien.",
+ "update_check.freq.startup": "Au démarrage",
+ "update_check.freq.daily": "Quotidienne",
+ "update_check.freq.weekly": "Hebdomadaire",
+ "update_check.freq.never": "Jamais",
+ "update_check.check_now": "Vérifier maintenant",
+ "update_check.dialog.title": "Vérification des mises à jour",
+ "update_check.unknown.title": "Impossible de vérifier les mises à jour",
+ "update_check.unknown.body": "{e}. Cela ne signifie pas que cette version est à jour. Réessayez plus tard.",
+ "update_check.current": "Vous avez la dernière version ({v}).",
+ "update_check.newer": "La version {v} est disponible",
+ "update_check.date": "Publiée le {d}",
+ "update_check.unfit": "Cette version ({v}) est plus ancienne que la version minimale recommandée {f}. Une mise à jour est conseillée.",
+ "update_check.close": "Fermer",
+ "update_check.open_failed": "Impossible d'ouvrir la page de publication.",
+ "update_check.toast.newer": "La version {v} est disponible. Aide > Rechercher les mises à jour.",
+ "update_check.toast.unfit": "Cette version ({v}) est plus ancienne que la version minimale recommandée {f}."
+}

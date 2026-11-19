@@ -1,0 +1,19 @@
+{
+ "empty.v3d_gpu.title": "3D nije dostupan na ovom grafičkom adapteru",
+ "empty.v3d_gpu.hint": "Model je siguran i tlocrt radi. Ponovno pokrenite sa sigurnom grafikom da biste ponovno isprobali 3D.",
+ "empty.v3d_gpu.action": "Ponovno pokreni sa sigurnom grafikom",
+ "empty.v3d_loading.title": "Izrađujem 3D…",
+ "empty.v3d_loading.pct": "Otvaram… {pct} %",
+ "empty.plan_hidden.title": "Svi su elementi skriveni u ovom tlocrtu",
+ "empty.plan_hidden.hint": "Privremeno skrivanje ili izolacija ne ostavljaju ništa vidljivim.",
+ "empty.plan_hidden.action": "Prikaži sve",
+ "empty.plan_graphics.title": "Grafika pogleda skriva sve kategorije",
+ "empty.plan_graphics.hint": "Pravila kategorija ovog pogleda ne ostavljaju ništa za prikaz.",
+ "empty.plan_graphics.action": "Otvori grafiku pogleda",
+ "empty.plan_phase.title": "Filtar faze skriva sve",
+ "empty.plan_phase.hint": "Ništa na ovoj razini ne postoji u fazi koju prikazuje ovaj pogled.",
+ "empty.plan_phase.action": "Promijeni fazu",
+ "empty.plan_level.title": "Na ovoj razini nema elemenata",
+ "empty.plan_level.hint": "Ostale razine ovog modela imaju elemente.",
+ "empty.plan_level.action": "Idi na razinu s elementima"
+}

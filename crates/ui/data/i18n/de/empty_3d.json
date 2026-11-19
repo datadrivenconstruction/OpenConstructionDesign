@@ -1,0 +1,14 @@
+{
+ "empty.v3d_model.title": "Noch nichts in 3D",
+ "empty.v3d_model.hint": "Zeichnen Sie Wände im Plan, dann erscheinen sie hier.",
+ "empty.v3d_model.action": "Plan öffnen",
+ "empty.v3d_hidden.title": "Alle Elemente sind in dieser Ansicht ausgeblendet",
+ "empty.v3d_hidden.hint": "Vorübergehendes Ausblenden oder Isolieren lässt nichts sichtbar. Die Ansichtsgrafik bleibt wie eingestellt.",
+ "empty.v3d_hidden.action": "Alle anzeigen",
+ "empty.v3d_graphics.title": "Die Ansichtsgrafik blendet alle Kategorien aus",
+ "empty.v3d_graphics.hint": "Die Kategorieregeln dieser Ansicht lassen nichts sichtbar. Schalten Sie Kategorien unter Ansichtsgrafik wieder ein.",
+ "empty.v3d_graphics.action": "Ansichtsgrafik öffnen",
+ "empty.v3d_box.title": "Schnittkasten liegt außerhalb des Modells",
+ "empty.v3d_box.hint": "Der Schnittkasten schneidet jedes Element ab. Passen Sie ihn wieder um das Modell an.",
+ "empty.v3d_box.action": "Box zurücksetzen"
+}

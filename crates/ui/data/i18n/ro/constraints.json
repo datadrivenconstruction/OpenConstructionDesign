@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "Păstrează acest perete la lungimea actuală la fiecare modificare",
+ "constraints.con.tip.lock_dist": "Păstrează distanța dintre cei doi pereți la fiecare modificare",
+ "constraints.con.tip.equal": "Păstrează egali pașii dintre pereții selectați",
+ "constraints.con.tip.align": "Ține ambii pereți pe aceeași linie",
+ "constraints.con.tip.parallel": "Păstrează pereții paraleli",
+ "constraints.con.tip.perp": "Păstrează pereții la unghi drept",
+ "constraints.con.tip.align_grid": "Ține peretele pe cea mai apropiată linie de grilă",
+ "constraints.con.tip.lock_dist_grid": "Păstrează distanța de la perete la cea mai apropiată linie de grilă",
+ "constraints.con.tip.level_gap": "Păstrează distanța dintre niveluri",
+ "constraints.con.tip.top_to_level": "Păstrează partea de sus a peretelui la nivelul de deasupra"
+}

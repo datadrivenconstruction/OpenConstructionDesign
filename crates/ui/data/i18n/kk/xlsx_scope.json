@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "XLSX-ге экспорттау: шекара",
+ "xlsx_scope.intro": "Жұмыс кітабына не кіретінін таңдаңыз. Оны кері импорттау тек осы элементтерді өзгертеді.",
+ "xlsx_scope.base_whole": "Бүкіл модель",
+ "xlsx_scope.base_level": "Белсенді деңгей",
+ "xlsx_scope.base_selection": "Таңдау",
+ "xlsx_scope.categories": "Санаттар",
+ "xlsx_scope.cat_walls": "қабырғалар",
+ "xlsx_scope.cat_openings": "есіктер",
+ "xlsx_scope.cat_rooms": "бөлмелер",
+ "xlsx_scope.cat_slabs": "плиталар",
+ "xlsx_scope.cat_curtains": "шынылы қабырғалар",
+ "xlsx_scope.nothing_selected": "Ештеңе таңдалмаған: алдымен элементтерді таңдаңыз немесе басқа шекара таңдаңыз.",
+ "xlsx_scope.no_categories": "Кем дегенде бір санатты белгілеңіз.",
+ "xlsx_scope.no_level": "Белсенді деңгей табылмады.",
+ "xlsx_scope.export": "Экспорттау",
+ "xlsx_scope.preview_scope": "Экспортталатын шекара: {scope}. Одан тыс элементтер ешқашан өзгертілмейді немесе жойылмайды."
+}

@@ -1,0 +1,5 @@
+{
+ "drafts_overwrite.ow.project": "Guardar el proyecto espera esta respuesta. Reemplace los valores para seguir guardando; Volver a editar mantiene todos los cambios y no escribe nada.",
+ "drafts_overwrite.drafts.ow_wait": "El guardado espera su respuesta en el editor de familias: cargar una familia reemplazaría los valores de tipo de proyecto. No se cerró nada.",
+ "drafts_overwrite.drafts.ow_back": "Guardado detenido: se conservaron los valores de tipo de proyecto y las ediciones de familia siguen abiertas. No se cerró nada."
+}

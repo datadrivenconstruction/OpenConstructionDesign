@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D",
+ "phases.current_mark": "hiện tại",
+ "phases.make_current": "Đặt làm hiện tại",
+ "phases.col_phase": "Giai đoạn",
+ "phases.col_filter": "Bộ lọc",
+ "phases.presets": "Cài sẵn mặt bằng",
+ "phases.del_title": "Xóa giai đoạn",
+ "phases.del_text": "Xóa giai đoạn “{name}”? Các cấu kiện của nó sẽ chuyển sang giai đoạn chọn bên dưới.",
+ "phases.del_into": "Chuyển cấu kiện sang",
+ "phases.del_ok": "Xóa",
+ "phases.col_kind": "Loại cấu kiện",
+ "phases.col_count": "Số lượng",
+ "phases.col_volume": "Thể tích"
+}

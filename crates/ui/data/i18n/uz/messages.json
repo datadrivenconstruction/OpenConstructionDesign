@@ -1,0 +1,7 @@
+{
+ "messages.title": "Xabarlar",
+ "messages.desc": "Bildirishnomalar tarixi. Yangi ogohlantirish yoki xatolar yo'q.",
+ "messages.desc_new": "{n} ta yangi ogohlantirish yoki xato. O'qish uchun bosing.",
+ "messages.copy": "Hammasini nusxalash",
+ "messages.clear": "Hammasini tozalash"
+}

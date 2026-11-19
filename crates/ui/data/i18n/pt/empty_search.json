@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "Nada encontrado",
+ "empty.browser_search.hint": "Nenhuma vista, nível, tipo ou ambiente corresponde a esta pesquisa.",
+ "empty.browser_search.action": "Limpar pesquisa",
+ "empty.xl_filtered.title": "Nenhuma entrada corresponde aos filtros",
+ "empty.xl_filtered.hint": "Ative mais tipos, escolha outra folha ou altere o texto da pesquisa.",
+ "empty.xl_filtered.action": "Limpar filtros",
+ "empty.xl_nochanges.title": "Nenhuma alteração na planilha",
+ "empty.xl_nochanges.hint": "A planilha corresponde ao modelo: importá-la não mudaria nada.",
+ "empty.version_same.title": "Os modelos são idênticos",
+ "empty.version_same.hint": "Nenhuma diferença foi encontrada entre o modelo aberto e a versão escolhida.",
+ "empty.templates.title": "Nenhum modelo de vista ainda",
+ "empty.templates.hint": "Crie um a partir da vista atual para reutilizar suas configurações em outras vistas.",
+ "empty.templates.action": "Nomear um modelo",
+ "empty.fe_params.title": "Nenhum parâmetro ainda",
+ "empty.fe_params.hint": "Adicione um parâmetro abaixo para controlar tamanhos, materiais ou visibilidade.",
+ "empty.fe_params.action": "Adicionar um parâmetro"
+}

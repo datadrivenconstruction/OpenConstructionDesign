@@ -1,0 +1,7 @@
+{
+ "src.field.kids": "Righe figlie (pannelli, vertici)",
+ "src.kids.mine": "{n} righe figlie, modificate qui",
+ "src.kids.changed": "righe figlie modificate qui",
+ "src.kids.theirs": "righe figlie modificate nel file",
+ "src.kids.take_tip": "La prossima importazione prende le righe figlie del file; non vengono applicate ora."
+}

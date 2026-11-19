@@ -1,0 +1,23 @@
+{
+ "roof_edge.err.number": "数値を入力してください",
+ "roof_edge.err.positive": "0 より大きくしてください",
+ "roof_edge.err.nonneg": "負の値にはできません",
+ "roof_edge.err.max": "{max} 以下にしてください",
+ "roof_edge.list.empty_hint": "軒樋、水切り、軒天、天窓は屋根コマンドで追加してください",
+ "roof_edge.edit_tip": "プロパティを編集",
+ "roof_edge.delete_tip": "削除",
+ "roof_edge.pe.del_tip": "この点を削除（断面は少なくとも 3 点を保持）",
+ "roof_edge.pe.up_tip": "この点を上に移動",
+ "roof_edge.confirm_edge": "{name} を削除しますか？Ctrl+Z で元に戻せます。",
+ "roof_edge.confirm_profile": "プロファイル {name} を削除しますか？Ctrl+Z で元に戻せます。",
+ "roof_edge.deleted_one": "{name} を削除しました",
+ "roof_edge.deleted_n": {
+  "one": "# 個の要素を削除しました",
+  "other": "# 個の要素を削除しました"
+ },
+ "roof_edge.profile_deleted": "プロファイルを削除しました",
+ "roof_edge.profile_in_use": {
+  "one": "# 個のエッジ要素が使用中です。先に削除または変更してください",
+  "other": "# 個のエッジ要素が使用中です。先に削除または変更してください"
+ }
+}

@@ -1,0 +1,31 @@
+id = "G30_blob_museum__es"
+tier = "hard"
+group = "Any geometry"
+title = "Organic blob museum"
+lang = "es"
+base = "empty"
+
+[[turn]]
+say = "Un museo de arte de forma orgánica: envolvente libre suave de doble curvatura de unos 70 x 45 m, 18 m de altura, hendiduras acristaladas, lucernario, galerías en dos niveles, marquesina de entrada."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "freeform+shell_elem+mesh+solid+wall_spline+gridshell+roof"
+min = 1.0
+
+[[oracle.count]]
+spec = "level"
+min = 2.0
+
+[[oracle.count]]
+spec = "slab"
+min = 2.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

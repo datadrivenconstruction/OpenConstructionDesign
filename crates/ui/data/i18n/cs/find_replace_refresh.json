@@ -1,0 +1,3 @@
+{
+ "find_replace.refresh_failed": "Nahrazeno {n} v {m} prvcích; obnovení pohledu selhalo: {e}"
+}

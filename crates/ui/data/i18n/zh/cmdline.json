@@ -1,0 +1,13 @@
+{
+ "cmdl.mode_cmd": "命令",
+ "cmdl.mode_ai": "AI",
+ "cmdl.toggle": "命令或 AI 助手 (Ctrl+J)",
+ "cmdl.hint": "命令或别名 (W, L, M, RO)、点 #x;y、@dx;dy、d<角度。Ctrl+J：询问 AI 助手",
+ "cmdl.hint_ai": "向 AI 助手询问模型或请求修改。Ctrl+J：返回命令",
+ "cmdl.sent": "已发送给 AI 助手",
+ "cmdl.failed": "无法在此执行“{text}”",
+ "cmdl.no_tool": "请先开始绘图命令，然后输入其点",
+ "cmdl.unknown": "没有命令“{text}”。Ctrl+J 将其发送给 AI 助手",
+ "cmdl.bad": "无法读取“{text}”：{e}",
+ "cmdl.shape": "“{text}”不是点：请输入 x;y、#x;y、@dx;dy 或正距离<角度"
+}

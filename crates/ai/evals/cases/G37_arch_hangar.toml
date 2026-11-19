@@ -1,0 +1,38 @@
+id = "G37_arch_hangar"
+tier = "hard"
+group = "Any geometry"
+title = "Arch hangar"
+lang = "de"
+base = "empty"
+
+[[turn]]
+say = "Ein Flugzeughangar mit 80 m stützenfreier Spannweite: Stahlfachwerkbögen alle 10 m über 60 m Länge, Pfetten und Dachverbände, Bogenstich 16 m, Hangartor über die ganze Breite an einer Stirnseite."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "beam+brace+truss"
+min = 100.0
+
+[[oracle.count]]
+spec = "opening+comp:door|gate"
+min = 1.0
+
+[[oracle.geom]]
+kind = "clear_span"
+target = 80.0
+tol = 0.1
+supports = "pier|abutment|column|footing|base|bearing|support"
+
+[[oracle.geom]]
+kind = "height"
+min = 14.0
+max = 22.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

@@ -1,0 +1,9 @@
+{
+ "ai.settings.num_bad": "Ei ole arv. Sisesta näiteks 0.5.",
+ "ai.settings.num_comma": "Kasuta komakoha tähisena punkti, näiteks 0.5.",
+ "ai.settings.num_negative": "Arv ei saa olla negatiivne.",
+ "ai.settings.unit_money": "valuuta",
+ "ai.settings.unit_tokens": "žetooni",
+ "ai.settings.unit_price": "1M žetooni kohta",
+ "ai.settings.limits_hint": "0 tähendab piiranguta. Tagasilükatud väärtus jätab eelmise piirangu alles."
+}

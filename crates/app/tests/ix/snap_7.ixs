@@ -1,0 +1,6 @@
+walls=[(0,0)-(6,0)]
+zoom=100
+# SNAP-7: Shift+M limits the answer to midpoints until the click
+tool(WA) mod(Shift,down) type("M") mod(Shift,up) move(3.0,0.03) → snap=Midpoint p=(3,0)
+move(5.95,0.05) → snap=Free p=(5.95,0.05)
+click(3.0,0.03) move(5.95,0.05) → snap=Endpoint p=(6,0)

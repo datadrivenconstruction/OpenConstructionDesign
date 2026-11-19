@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "Visszavonva — a Ctrl+Y újra végrehajtja",
+ "history.hist.empty": "Még nincs módosítás",
+ "history.hist.empty_hint": "A szerkesztései itt jelennek meg. Kattintson egy lépésre a visszatéréshez.",
+ "history.hist.revert_all_n": "Minden MI-módosítás visszavonása ({n})"
+}

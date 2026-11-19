@@ -1,0 +1,26 @@
+[
+ {
+  "id": "view.panes",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "P"
+  ],
+  "stage": "M2",
+  "group": "windows"
+ },
+ {
+  "id": "view.pane_max",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "P"
+  ],
+  "stage": "M2",
+  "group": "windows"
+ }
+]

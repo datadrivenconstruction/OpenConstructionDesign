@@ -1,0 +1,7 @@
+{
+ "spline.opt.spline": "Spline",
+ "spline.opt.spline_tip": "Τοίχος spline: κάντε κλικ στα σημεία από όπου περνά· Enter ή Esc για ολοκλήρωση",
+ "spline.wt.three_points": "ένας τοίχος spline χρειάζεται τουλάχιστον τρία σημεία",
+ "spline.wt.no_curtain": "ο κουρτινοτοίχος δεν έχει άξονα spline",
+ "spline.wt.added": "προστέθηκε τοίχος spline"
+}

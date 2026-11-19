@@ -1,0 +1,5 @@
+{
+ "mep_dn.dn.unset": "সেট নেই",
+ "mep_dn.slope.err": "% এ ঢাল লিখুন, যেমন 1.5",
+ "mep_dn.err.rejected": "মানটি গ্রহণযোগ্য নয়"
+}

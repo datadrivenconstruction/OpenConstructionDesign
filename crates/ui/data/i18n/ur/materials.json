@@ -1,0 +1,11 @@
+{
+ "materials.mat.name_empty": "مواد کا نام درج کریں",
+ "materials.mat.empty_title": "ابھی کوئی مواد نہیں",
+ "materials.mat.empty_hint": "نیچے نام لکھیں اور شامل کریں دبائیں",
+ "materials.mat.nothing_hint": "تلاش سے کوئی مواد نہیں ملتا",
+ "materials.mat.clear_search": "تلاش صاف کریں",
+ "materials.mat.replace_with": "اس سے بدلیں",
+ "materials.mat.delete_refused": "حذف نہیں ہو سکتا: یہ مواد {n} جگہوں پر استعمال ہو رہا ہے۔ پہلے اسے بدلیں۔",
+ "materials.mat.delete_confirm": "مواد “{name}” حذف کریں؟ آپ اسے واپس کر سکتے ہیں۔",
+ "materials.mat.replace_confirm": "{n} عناصر میں “{from}” کو “{to}” سے بدلیں؟ “{from}” ہٹا دیا جائے گا۔ آپ اسے واپس کر سکتے ہیں۔"
+}

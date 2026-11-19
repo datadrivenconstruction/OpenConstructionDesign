@@ -1,0 +1,15 @@
+{
+ "cmd.data.export_step.desc": "Tallentaa koko mallin tai valinnan STEP AP214- tai AP242-muodossa: kappaleet tarkkoina tasoina, sylintereinä, kartioina, palloina, toruksina ja B-spline-pintoina, muut elementit tasopintoina, värit ja yksi kokoonpanosolmu tasoa kohden.",
+ "cmd.data.export_3mf.desc": "Tallentaa koko mallin tai valinnan 3MF-tiedostona tulostusta varten: yksi kohde elementtiä kohden, värit, yksiköt ja tarkistus, että jokainen kappale on vesitiivis.",
+ "fmenu.export.step": "STEP tarkat kappaleet (.step)",
+ "fmenu.export.3mf": "3MF tulostukseen (.3mf)",
+ "mx.schema": "STEP-skeema",
+ "mx.schema.ap214": "AP214 (laajin tuki)",
+ "mx.schema.ap242": "AP242",
+ "mx.watertight": "Kappaleet, jotka eivät ole vesitiiviitä",
+ "mx.watertight.report": "Kirjoita ne ja luettele",
+ "mx.watertight.skip": "Jätä pois",
+ "mx.watertight.require": "Peruuta vienti",
+ "mx.faceted": "{fmt} tallennettu: {path} ({exact} tarkkaa kappaletta, {n} kirjoitettu tasopintoina: {first})",
+ "sheets.print.svg": "SVG"
+}

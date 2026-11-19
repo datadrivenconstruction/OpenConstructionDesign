@@ -1,0 +1,14 @@
+{
+ "cmd.arch.wall.tile": "Mur",
+ "cmd.arch.door.tile": "Porte",
+ "cmd.arch.window.tile": "Fenêtre",
+ "cmd.arch.floor.tile": "Dalle",
+ "cmd.mod.move.tile": "Déplacer",
+ "cmd.mod.copy.tile": "Copier",
+ "cmd.mod.rotate.tile": "Pivoter",
+ "cmd.mod.mirror.tile": "Miroir",
+ "cmd.mod.trim.tile": "Ajuster",
+ "cmd.mod.delete.tile": "Supprimer",
+ "cmd.ann.dim.tile": "Cote",
+ "cmd.ann.text.tile": "Texte"
+}

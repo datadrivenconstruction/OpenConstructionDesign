@@ -1,0 +1,28 @@
+id = "G02_ribbed_dome__ru"
+tier = "hard"
+group = "Любая геометрия"
+title = "Ribbed dome"
+lang = "ru"
+base = "empty"
+
+[[turn]]
+say = "Построй ребристый полусферический купол диаметром 24 м, подъём 12 м, с 16 меридиональными рёбрами, 5 кольцами и застеклённым окулюсом диаметром 3 м наверху."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "col+beam+brace+truss+gridshell_bar+solid+mass+mesh+freeform+shell_elem+gridshell+wall+slab+roof+stair+toposolid+wall_spline"
+min = 60.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1
+
+[[oracle.geom]]
+kind = "sphere_fit"
+radius = 12.0
+extent_min = 0.4

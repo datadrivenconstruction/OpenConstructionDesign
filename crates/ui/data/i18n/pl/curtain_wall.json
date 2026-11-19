@@ -1,0 +1,12 @@
+{
+ "curtain_wall.cw.issue.slab": "płyta {id}: {e}",
+ "curtain_wall.cw.issue.body": "bryła {id}: {e}",
+ "curtain_wall.cw.added": "Dodano ściany osłonowe: {n}",
+ "curtain_wall.cw.add_failed": "Ściana osłonowa nie została zbudowana: {e}",
+ "curtain_wall.cw.edited_warn": "Zmieniono ścianę osłonową #{id}: {w}",
+ "curtain_wall.cw.edited": "Zmieniono ścianę osłonową #{id}",
+ "curtain_wall.cw.not_changed": "Nie zmieniono: {e}",
+ "curtain_wall.cw.room_edited": "Zmieniono pomieszczenie #{id}",
+ "curtain_wall.cw.slope_range": "Nie zmieniono: spadek poza zakresem",
+ "curtain_wall.cw.slope_set": "Płyta #{id}: spadek {pct}"
+}

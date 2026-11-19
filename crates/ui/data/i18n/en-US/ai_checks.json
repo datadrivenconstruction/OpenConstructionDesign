@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "measured {value}, limit {limit}",
+ "ai_checks.check.cap": "Showing {shown} of {total} findings. Errors come first: fix them and run again.",
+ "ai_checks.check.run_again": "Run again",
+ "ai_checks.check.goto": "Select and zoom",
+ "ai_checks.check.never_title": "Not checked yet",
+ "ai_checks.check.never_hint": "Run the checks and the findings appear here.",
+ "ai_checks.check.sec.error": "Errors",
+ "ai_checks.check.sec.warning": "Warnings",
+ "ai_checks.check.sec.info": "Notes"
+}

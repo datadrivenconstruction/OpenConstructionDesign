@@ -1,0 +1,8 @@
+{
+ "cmd.props.param_lock": "पैरामीटर मान लॉक या अनलॉक करें",
+ "locked_values.kept": "{n} लॉक किए गए मान रखे गए",
+ "locked_values.locked": "“{name}” लॉक: XLSX स्प्रेडशीट आयात, थोक संपादन और AI इसे नहीं बदलते",
+ "locked_values.unlocked": "“{name}” अनलॉक",
+ "locked_values.locked_tip": "लॉक: XLSX स्प्रेडशीट आयात, थोक संपादन और AI यह मान नहीं बदलते। अनलॉक करने के लिए क्लिक करें  ·  Ctrl+L",
+ "locked_values.no_row": "प्रॉपर्टी में पैरामीटर की पंक्ति पर कर्सर रखें, फिर Ctrl+L दबाएँ"
+}

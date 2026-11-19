@@ -1,0 +1,19 @@
+{
+ "xlsx_confirm.chip": "потрібне підтвердження",
+ "xlsx_confirm.section": "Рядки без ідентифікатора, зіставлені з елементом за назвою або номером",
+ "xlsx_confirm.tag": "зіставлено за назвою",
+ "xlsx_confirm.tag_accepted": "зіставлення прийнято",
+ "xlsx_confirm.tag_rejected": "створює новий",
+ "xlsx_confirm.kind_room": "приміщення",
+ "xlsx_confirm.kind_curtain_wall": "навісна стіна",
+ "xlsx_confirm.row_line": "{kind} №{id}, ключ «{key}»",
+ "xlsx_confirm.accept": "Прийняти",
+ "xlsx_confirm.accept_tip": "Застосувати цей рядок до знайденого елемента (один крок відміни разом з рештою)",
+ "xlsx_confirm.reject": "Створити новий",
+ "xlsx_confirm.reject_tip": "Не зіставляти: цей рядок створює новий елемент",
+ "xlsx_confirm.decide_first": "Спершу прийміть або відхиліть рядки, знайдені за назвою.",
+ "xl.msg.key_match_many": "ключ відповідає {} елементам; не зіставлено, рядок створить новий",
+ "xl.msg.key_match_taken": "ключ відповідає елементу, який використовує інший рядок; не зіставлено, рядок створить новий",
+ "xl.msg.key_match_kept": "залишено: зіставлення відхилено, рядок створює новий елемент",
+ "xl.msg.key_match_undecided": "рядки, зіставлені за назвою, очікують рішення"
+}

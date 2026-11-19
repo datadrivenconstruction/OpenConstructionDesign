@@ -1,0 +1,27 @@
+id = "G17_voronoi_screen"
+tier = "hard"
+group = "Any geometry"
+title = "Voronoi screen"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "A freestanding 12 x 4 m Voronoi-pattern perforated metal screen with about 150 cells, irregular openings, framed, on two posts."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "col+beam+brace+truss+gridshell_bar+solid+mass+mesh+freeform+shell_elem+gridshell+wall+slab+roof+stair+toposolid+wall_spline"
+min = 20.0
+
+[[oracle.count]]
+spec = "opening+brace+beam"
+min = 60.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

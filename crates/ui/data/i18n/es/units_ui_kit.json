@@ -1,0 +1,6 @@
+{
+ "units.err.parse": "No es una longitud: se mantiene el valor anterior. Introduzca un número con unidad opcional, por ejemplo 2500 u 8'-2\"",
+ "ui.scale.set": "Escala de la interfaz: {pct} %",
+ "cmd.ui.scale_up": "Aumentar escala de la interfaz",
+ "cmd.ui.scale_down": "Reducir escala de la interfaz"
+}

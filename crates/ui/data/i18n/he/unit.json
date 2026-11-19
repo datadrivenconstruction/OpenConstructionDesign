@@ -1,0 +1,14 @@
+{
+ "unit.size_b": "{n} B",
+ "unit.size_gb": "{n} GB",
+ "autosave_status.unit.edits": {
+  "one": "עריכה",
+  "two": "עריכות",
+  "other": "עריכות"
+ },
+ "autosave_status.unit.copies": {
+  "one": "עותק",
+  "two": "עותקים",
+  "other": "עותקים"
+ }
+}

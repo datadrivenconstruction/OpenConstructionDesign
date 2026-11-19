@@ -1,0 +1,27 @@
+id = "G09_ship_hull__de"
+tier = "hard"
+group = "Any geometry"
+title = "Ship hull loft"
+lang = "de"
+base = "empty"
+
+[[turn]]
+say = "Ein Verdränger-Schiffsrumpf, durch Spanten gestrakt: Länge 60 m, Breite 10 m, Tiefgang 3.5 m, spitzer Bug, flaches Heck, Deck und 12 Spanten."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "solid+mesh+freeform+shell_elem+mass"
+min = 1.0
+
+[[oracle.count]]
+spec = "col+beam+brace+truss+gridshell_bar+solid+mass+mesh+freeform+shell_elem+gridshell+wall+slab+roof+stair+toposolid+wall_spline"
+min = 12.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

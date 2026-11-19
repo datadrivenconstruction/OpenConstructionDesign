@@ -1,0 +1,11 @@
+{
+ "materials.mat.name_empty": "Malzeme adı girin",
+ "materials.mat.empty_title": "Henüz malzeme yok",
+ "materials.mat.empty_hint": "Aşağıya bir ad yazın ve Ekle'ye basın",
+ "materials.mat.nothing_hint": "Aramayla eşleşen malzeme yok",
+ "materials.mat.clear_search": "Aramayı temizle",
+ "materials.mat.replace_with": "Şununla değiştir",
+ "materials.mat.delete_refused": "Silinemiyor: malzeme {n} yerde kullanılıyor. Önce değiştirin.",
+ "materials.mat.delete_confirm": "“{name}” malzemesi silinsin mi? Bunu geri alabilirsiniz.",
+ "materials.mat.replace_confirm": "{n} öğede “{from}” yerine “{to}” koyulsun mu? “{from}” kaldırılır. Bunu geri alabilirsiniz."
+}

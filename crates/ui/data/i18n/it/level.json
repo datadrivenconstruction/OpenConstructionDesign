@@ -1,0 +1,13 @@
+{
+ "level.err_open": "Livello non aperto: {e}",
+ "level.need_name": "Un livello richiede un nome e una quota",
+ "level.created": "Livello \"{name}\" creato",
+ "level.err_create": "Livello non creato: {e}",
+ "level.err_edit": "Livello non modificato: {e}",
+ "level.edited": "Livello \"{name}\" modificato",
+ "level.edited_stale": "Livello \"{name}\" modificato, vista non aggiornata: {e}",
+ "level.last": "L'ultimo livello non può essere eliminato",
+ "level.deleted": "Livello eliminato",
+ "level.not_empty": "Il livello non è vuoto: prima elimina i suoi elementi",
+ "level.err_delete": "Livello non eliminato: {e}"
+}

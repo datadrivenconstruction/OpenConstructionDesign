@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}, 레벨에 있음",
+ "cmd_buttons.purge.undo": "제거는 실행 취소 한 단계입니다.",
+ "cmd_buttons.unpin.none": "선택한 항목 중 고정된 것이 없습니다",
+ "cmd_buttons.change_type.none": "먼저 벽을 선택하세요: 유형이 한 번에 바뀝니다",
+ "cmd_buttons.units.metric": "단위: 미터법",
+ "cmd_buttons.units.imperial": "단위: 피트와 인치",
+ "cmd_buttons.units.back": "되돌아가기",
+ "cmd_buttons.underlay.on": "언더레이 켜짐: 아래 레벨이 흐리게 표시됩니다",
+ "cmd_buttons.underlay.off": "언더레이 꺼짐",
+ "cmd_buttons.underlay.none": "언더레이 켜짐, 하지만 아래 레벨에 표시할 내용이 없습니다",
+ "cmd_buttons.zoom_sel.no_shape": "선택 항목에 이 뷰에서 맞출 형상이 없습니다",
+ "cmd_buttons.close.base": "평면과 3D 탭은 계속 열려 있습니다. 이를 닫으려면 단면, 시트 또는 제도 뷰를 여세요",
+ "tool.equipment": "설비",
+ "hint.equipment.place": "설비: 위치를 고르세요 · Esc — 종료",
+ "cmd_buttons.table.opened": "모델 옆에 테이블이 열렸습니다",
+ "cmd_buttons.circuits.tip": "이 모델의 전기 회로 목록을 엽니다"
+}

@@ -1,0 +1,12 @@
+{
+ "curtain_wall.cw.issue.slab": "دال {id}: {e}",
+ "curtain_wall.cw.issue.body": "بدنه‌ی {id}: {e}",
+ "curtain_wall.cw.added": "دیوارهای پرده‌ای افزوده شد: {n}",
+ "curtain_wall.cw.add_failed": "دیوار پرده‌ای ساخته نشد: {e}",
+ "curtain_wall.cw.edited_warn": "دیوار پرده‌ای #{id} تغییر کرد: {w}",
+ "curtain_wall.cw.edited": "دیوار پرده‌ای #{id} تغییر کرد",
+ "curtain_wall.cw.not_changed": "تغییر نکرد: {e}",
+ "curtain_wall.cw.room_edited": "اتاق #{id} تغییر کرد",
+ "curtain_wall.cw.slope_range": "تغییر نکرد: شیب خارج از محدوده است",
+ "curtain_wall.cw.slope_set": "دال #{id}: شیب {pct}"
+}

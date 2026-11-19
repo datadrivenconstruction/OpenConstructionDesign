@@ -1,0 +1,9 @@
+{
+ "ai.plan.reject_ask": {
+  "one": "# تغییر رد شود؟",
+  "other": "# تغییر رد شود؟"
+ },
+ "ai.plan.reject_ask.hint": "پیش‌نویس و علامت‌های بررسی شما کنار گذاشته می‌شود. مدل همان‌طور می‌ماند.",
+ "ai.plan.reject_confirm": "رد",
+ "ai.plan.reject_keep": "نگه‌داشتن"
+}

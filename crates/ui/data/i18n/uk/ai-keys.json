@@ -1,0 +1,14 @@
+{
+ "ai_keys.header_is_key": "Ключі вводяться в поле «Ключ» — заголовки зберігаються у відкритому вигляді",
+ "ai_keys.move": "Перенести в «Ключ»",
+ "ai_keys.remove_line": "Видалити із заголовків",
+ "ai_keys.save_blocked": "Щоб зберегти, винесіть ключ із заголовків",
+ "ai_keys.show": "Показати",
+ "ai_keys.hide": "Приховати",
+ "ai_keys.copy": "Копіювати",
+ "ai_keys.tokens": "токенів",
+ "ai_keys.presets": "Пресети",
+ "ai_keys.preset_k": "{n} тис.",
+ "ai_keys.preset_m": "{n} млн",
+ "ai_keys.images_on": "Підтримується"
+}

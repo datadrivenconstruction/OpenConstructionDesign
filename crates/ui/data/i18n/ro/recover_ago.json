@@ -1,0 +1,33 @@
+{
+ "recover.ago_now": "chiar acum",
+ "recover.ago_min": {
+  "one": "acum # min",
+  "few": "acum # min",
+  "other": "acum # min"
+ },
+ "recover.ago_hour": {
+  "one": "acum # oră",
+  "few": "acum # ore",
+  "other": "acum # de ore"
+ },
+ "recover.ago_yesterday": "ieri",
+ "recover.ago_day": {
+  "one": "acum # zi",
+  "few": "acum # zile",
+  "other": "acum # de zile"
+ },
+ "recover.empty": "Nicio copie rămasă",
+ "recover.empty_hint": "Nimic de restaurat pentru acest proiect.",
+ "recover.all_damaged": "Toate copiile sunt deteriorate, niciuna nu poate fi restaurată.",
+ "recover.keys_hint": "Sus și Jos alege o copie, Enter trece la Restaurează",
+ "recover.row_tip": "Salvat {time}",
+ "recover.row_damaged_tip": "Nu poate fi restaurată: {reason}",
+ "recover.archive_ask": "Muți această copie în arhivă?",
+ "recover.discard_ask": {
+  "one": "Muți instantaneul în arhivă? Nu va mai fi propus.",
+  "few": "Muți toate cele # instantanee în arhivă? Nu vor mai fi propuse.",
+  "other": "Muți toate cele # de instantanee în arhivă? Nu vor mai fi propuse."
+ },
+ "recover.confirm_yes": "Mută în arhivă",
+ "recover.confirm_no": "Păstrează copiile"
+}

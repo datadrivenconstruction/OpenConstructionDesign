@@ -1,0 +1,4 @@
+{
+ "vv_conflict.vv.switched": "La vue active a changé. Ces modifications appartiennent à {view} et ne sont pas encore appliquées : Appliquer les écrit dans {view}, Abandonner les supprime.",
+ "vv_conflict.vv.discard": "Abandonner les modifications"
+}

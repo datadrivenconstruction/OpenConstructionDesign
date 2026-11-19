@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "Questa cartella esiste già",
+ "xlsx_exists.foreign": "Non è una cartella di questo progetto, quindi non viene mai sostituita.",
+ "xlsx_exists.pending": "Contiene {n} modifiche non ancora applicate al modello.",
+ "xlsx_exists.outside": "Ha {n} righe che la nuova esportazione non contiene.",
+ "xlsx_exists.new_name": "Esporta in {name}",
+ "xlsx_exists.apply_first": "Applicali prima",
+ "xlsx_exists.replace": "Sostituisci (vecchia cartella in _archive)",
+ "xlsx_exists.archived": "Vecchia cartella spostata in {path}",
+ "xlsx_exists.archive_failed": "La vecchia cartella non è stata spostata, nulla è stato esportato: {error}"
+}

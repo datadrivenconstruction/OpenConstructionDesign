@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "Esta pasta de trabalho já existe",
+ "xlsx_exists.foreign": "Não é uma pasta de trabalho deste projeto, por isso nunca é substituída.",
+ "xlsx_exists.pending": "Tem {n} edições que ainda não foram aplicadas ao modelo.",
+ "xlsx_exists.outside": "Tem {n} linhas que a nova exportação não contém.",
+ "xlsx_exists.new_name": "Exportar para {name}",
+ "xlsx_exists.apply_first": "Aplique-as primeiro",
+ "xlsx_exists.replace": "Substituir (pasta de trabalho antiga para _archive)",
+ "xlsx_exists.archived": "Pasta de trabalho antiga movida para {path}",
+ "xlsx_exists.archive_failed": "A pasta de trabalho antiga não pôde ser movida; nada foi exportado: {error}"
+}

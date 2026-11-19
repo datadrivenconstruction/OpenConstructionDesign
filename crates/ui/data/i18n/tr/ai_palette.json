@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "Yapay zekaya sor: {q}",
+ "ai.palette.connect": "Sormak için yapay zekayı bağla",
+ "ai.palette.draft.apply": "Taslağı uygula ({n})",
+ "ai.palette.draft.reject": "Taslağı reddet",
+ "ai.palette.draft.next": "Sonraki taslak değişikliği",
+ "ai.palette.draft.show": "Taslağı görünümde göster",
+ "cmd.ai.next_change": "Sonraki taslak değişikliği",
+ "cmd.ai.next_change.desc": "Görünümü taslağın değiştirdiği bir sonraki elemana taşır.",
+ "cmd.ai.show_draft": "Yapay zeka taslağını görünümde göster",
+ "cmd.ai.show_draft.desc": "Görünümü taslağın değiştirdiği her şeye sığdırır."
+}

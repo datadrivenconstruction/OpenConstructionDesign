@@ -1,0 +1,14 @@
+{
+ "lnp.why_at": "#{id}: {e}",
+ "lnp.openings_refused": "{n} huecos no modificados ({why})",
+ "lnp.params_changed": "valores modificados: {n}",
+ "lnp.params_same": "Sin cambios: {u} elementos ya tienen este valor",
+ "lnp.params_tip": "Intro aplica el valor a cada elemento seleccionado; Esc los conserva",
+ "lnp.locked_hint": "Se conservan los valores bloqueados: {n}",
+ "lnp.panels_one": "Los paneles se editan uno a uno",
+ "lnp.keep_first": "Conservar el primero",
+ "lnp.keep_first_tip": "Seleccione solo el primer panel para editarlo",
+ "lnp.clip_from_wall": "Parámetros copiados del muro #{id}",
+ "lnp.clip_from_opening": "Parámetros copiados del hueco #{id}",
+ "lnp.match_from": "Propiedades de #{id} aplicadas a {n} elementos"
+}

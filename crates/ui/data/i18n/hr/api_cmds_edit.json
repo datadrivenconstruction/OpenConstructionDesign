@@ -1,0 +1,20 @@
+{
+ "api.cmd.move_elements": "Pomakni elemente za pomak u metrima",
+ "api.cmd.copy_elements": "Kopiraj elemente jednim ili više pomaka u metrima",
+ "api.cmd.rotate_elements": "Zakreni elemente oko točke za kut u stupnjevima",
+ "api.cmd.mirror_elements": "Zrcali elemente preko osi kroz dvije točke",
+ "api.cmd.scale_elements": "Skaliraj elemente oko točke za faktor",
+ "api.cmd.array_elements": "Linearni ili radijalni niz elemenata",
+ "api.cmd.offset_wall": "Paralelna kopija zida na zadanoj udaljenosti u metrima",
+ "api.cmd.split_wall": "Podijeli zid na dva dijela u točki",
+ "api.cmd.pin_elements": "Zaključaj ili otključaj elemente",
+ "api.cmd.flip_openings": "Okreni stranu šarki ili smjer vrata i prozora",
+ "api.cmd.create_level": "Stvori razinu na visini u metrima",
+ "api.cmd.edit_level": "Preimenuj razinu ili promijeni visinsku kotu",
+ "api.cmd.delete_level": "Obriši razinu",
+ "api.cmd.place_rooms": "Postavi prostoriju u svako zatvoreno područje razine",
+ "api.cmd.join_elements": "Spoji, odspoji ili zamijeni spojeve geometrije",
+ "api.cmd.place_footings": "Postavi temelj ispod svakog stupa razine",
+ "api.cmd.create_terrain": "Stvori teren od točaka snimanja ili nagnute ravnine",
+ "api.cmd.script_recipes": "Pročitaj gradivne blokove skripti i recepte slobodnih konstrukcija"
+}

@@ -1,0 +1,13 @@
+{
+ "xlval.pe_hosts": "ओपनिंग #{id} अब फ़िट नहीं होगी: {e}",
+ "xlval.walls_refused": "{n} दीवारें नहीं बदली गईं ({why})",
+ "xl.msg.opening_has_no_wall_to_sit_in": "ओपनिंग के लिए कोई दीवार नहीं है",
+ "xl.msg.opening_size_must_be_0_and_sill_0": "ओपनिंग का आकार > 0 और सिल >= 0 होना चाहिए",
+ "xl.msg.opening_runs_from_x_m_to_x_m_the_wall_is_x_m_long": "ओपनिंग {} m से {} m तक है, दीवार {} m लंबी है",
+ "xl.msg.opening_top_x_m_is_above_the_wall_height_x_m": "ओपनिंग का ऊपरी सिरा {} m दीवार की ऊंचाई {} m से ऊपर है",
+ "xl.msg.opening_overlaps_the_new_opening_in_row_x": "ओपनिंग पंक्ति {} की नई ओपनिंग से टकराती है",
+ "xl.msg.opening_overlaps_opening_x": "ओपनिंग ओपनिंग {} से टकराती है",
+ "xl.msg.wall_height_x_m_is_below_the_top_x_m_of_opening_x": "दीवार की ऊंचाई {} m ओपनिंग {} के ऊपरी सिरे {} m से कम है",
+ "xl.msg.wall_length_x_m_is_shorter_than_the_end_x_m_of_opening_x": "दीवार की लंबाई {} m ओपनिंग {} के अंतिम सिरे {} m से छोटी है",
+ "xl.msg.opening_x_would_no_longer_fit_the_wall": "ओपनिंग {} अब दीवार में फ़िट नहीं होगी"
+}

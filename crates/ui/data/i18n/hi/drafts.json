@@ -1,0 +1,8 @@
+{
+ "drafts.drafts.head": "खुले एडिटरों में ऐसे संपादन हैं जो अभी प्रोजेक्ट में नहीं हैं:",
+ "drafts.draft.family": "फ़ैमिली “{name}”",
+ "drafts.draft.line": "लाइन लाइब्रेरी: {name}",
+ "drafts.draft.styles": "व्यू रेंज लाइन स्टाइल",
+ "drafts.btn.save_all": "सब सहेजें",
+ "drafts.drafts.refused": "ड्राफ़्ट सहेजा नहीं जा सका। कुछ बंद नहीं हुआ; ड्राफ़्ट वाला एडिटर खुला है।"
+}

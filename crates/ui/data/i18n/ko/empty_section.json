@@ -1,0 +1,11 @@
+{
+ "empty.sv_notfound.title": "뷰를 찾을 수 없습니다",
+ "empty.sv_notfound.hint": "이 뷰는 삭제되었거나 더 이상 프로젝트에 속하지 않습니다.",
+ "empty.sv_notfound.action": "뷰 닫기",
+ "empty.sv_cuts_nothing.title": "이 단면은 아무것도 자르지 않습니다",
+ "empty.sv_cuts_nothing.hint": "절단선이 깊이 안의 벽, 슬래브 또는 개구부와 만나지 않습니다. 선을 옮기거나 뷰를 더 깊게 설정하세요.",
+ "empty.sv_cuts_nothing.action": "평면에 표시",
+ "empty.sv_shows_nothing.title": "이 입면에는 아무것도 보이지 않습니다",
+ "empty.sv_shows_nothing.hint": "뷰 깊이 안에 벽, 슬래브 또는 개구부가 없습니다. 뷰 선을 옮기거나 뷰를 더 깊게 설정하세요.",
+ "empty.sv_shows_nothing.action": "평면에 표시"
+}

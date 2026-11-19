@@ -1,0 +1,5 @@
+{
+ "src.more": "Plus",
+ "src.cf.chosen": "{n} sur {m} choisis",
+ "src.opt.allow_mass_warn": "Attention : le fichier ne correspond pas à la plupart des éléments importés ; la fusion peut modifier beaucoup de données."
+}

@@ -1,0 +1,10 @@
+{
+ "type_pick.pick.search": "Cari tipe atau ketebalan",
+ "type_pick.pick.empty": "Tidak ada tipe yang cocok",
+ "type_pick.pick.edit": "Edit tipe…",
+ "type_pick.pick.mixed": "Campuran",
+ "type_pick.pick.layers": {
+  "one": "# lapisan",
+  "other": "# lapisan"
+ }
+}

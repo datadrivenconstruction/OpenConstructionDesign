@@ -1,0 +1,14 @@
+{
+ "ai.hist.badge": "IA",
+ "ai.hist.untitled": "Modifications de l'IA",
+ "ai.hist.tip": "{title}\nAppliqué par : {actor}\nModèle IA : {model}",
+ "ai.hist.why": "Motif : {why}",
+ "ai.hist.reverted": "annulé",
+ "ai.hist.revert_one": "Annuler ce lot de l'IA",
+ "ai.revert.done": "Modifications de l'IA annulées : {n}. Annuler (Ctrl+Z) les rétablit.",
+ "ai.revert.empty": "Aucune modification de l'IA à annuler",
+ "ai.revert.not_ai": "Cette étape n'est pas une modification de l'IA",
+ "ai.revert.already": "Ces modifications de l'IA sont déjà annulées",
+ "ai.revert.opaque": "Non annulé : ces modifications de l'IA ne peuvent pas être séparées en toute sécurité des travaux ultérieurs. Rien n'a été modifié.",
+ "ai.revert.failed": "Échec de l'annulation : {e}"
+}

@@ -1,0 +1,6 @@
+{
+ "pair_input.pair_hint": "2 つの値はセミコロンで区切ります: @1000;500",
+ "pair_input.old_pair": "2 つの整数のカンマではペアになりません: 2 つの値は 6000;4000、小数は 6000,5 と入力してください",
+ "pair_input.op.bad_length": "長さではありません: {text} ({why})。何も変更されていません",
+ "pair_input.op.bad_count": "個数 {text} は取り込まれませんでした: {min} から {max} までの整数にしてください"
+}

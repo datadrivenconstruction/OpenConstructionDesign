@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "Бүкіл модельді немесе таңдауды метрмен немесе миллиметрмен екілік STL ретінде сақтайды.",
+ "cmd.data.export_obj.desc": "Бүкіл модельді немесе таңдауды MTL файлымен OBJ ретінде сақтайды: әр элемент үшін бір топ, түстер материал бойынша.",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "Материалдары бар OBJ (.obj)",
+ "open_file.filter.mesh": "3D торлар (glTF, STEP, STL, OBJ)",
+ "mx.title": "{fmt} экспорттау",
+ "mx.scope": "Нені экспорттау",
+ "mx.scope.all": "Бүкіл модель",
+ "mx.scope.sel": "Таңдау ({n} элемент)",
+ "mx.units": "Файлдағы өлшем бірліктері",
+ "mx.units.m": "Метр",
+ "mx.units.mm": "Миллиметр",
+ "mx.export": "Экспорттау…",
+ "mx.saved": "{fmt} сақталды: {path} ({parts} элемент, {tris} үшбұрыш)",
+ "mx.partial": "{fmt} {n} мәселемен сақталды, кейбір денелер жоқ болуы мүмкін: {path}",
+ "mx.failed": "{fmt} экспорттау сәтсіз аяқталды: {error}",
+ "mx.imported": "{file}: {n} элемент импортталды ({tris} үшбұрыш)",
+ "mx.imported_notes": "{file}: {n} элемент импортталды ({tris} үшбұрыш), {w} ескерту: {first}"
+}

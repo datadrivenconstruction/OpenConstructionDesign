@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "Blatt mit Ansichten duplizieren",
+ "cmd.view.sheet_duplicate_title": "Blatt duplizieren (nur Titelblock)",
+ "sheets.dup.menu_views": "Mit Ansichten duplizieren",
+ "sheets.dup.menu_title": "Duplizieren, nur Titelblock",
+ "sheets.dup.done": "Blatt {number} aus {src} erstellt: {views} Ansichten, {sched} Listen und Legenden. Revisionen werden nicht kopiert; das Blatt ist nicht ausgegeben.",
+ "sheets.dup.none": "Öffnen Sie ein Blatt, um es zu duplizieren",
+ "sheets.dup.copy": "Kopie",
+ "cmd.view.sheet_duplicate.short": "Mit Ansichten duplizieren",
+ "cmd.view.sheet_duplicate_title.short": "Titelblock duplizieren"
+}

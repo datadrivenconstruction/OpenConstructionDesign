@@ -1,0 +1,219 @@
+{
+ "rules": [
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.22
+   },
+   "unit": "m",
+   "value": 0.22,
+   "text": {
+    "en": "Common stair riser at most 0.22 m",
+    "ru": "Подъём ступени общей лестницы не более 0.22 м"
+   },
+   "source": {
+    "doc": "vn-qcvn06",
+    "clause": "3.4.2",
+    "url": "https://congbao.chinhphu.vn/van-ban/thong-tu-so-06-2022-tt-bxd-38322.htm",
+    "edition": "Circular 06/2022/TT-BXD, with amendment 1:2023",
+    "accessed": "2026-11-14",
+    "paraphrase": "Escape stair riser no more than 22 cm."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "vn.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.25
+   },
+   "unit": "m",
+   "value": 0.25,
+   "text": {
+    "en": "Common stair tread at least 0.25 m",
+    "ru": "Проступь общей лестницы не менее 0.25 м"
+   },
+   "source": {
+    "doc": "vn-qcvn06",
+    "clause": "3.4.2",
+    "url": "https://congbao.chinhphu.vn/van-ban/thong-tu-so-06-2022-tt-bxd-38322.htm",
+    "edition": "Circular 06/2022/TT-BXD, with amendment 1:2023",
+    "accessed": "2026-11-14",
+    "paraphrase": "Escape stair tread at least 25 cm, except external stairs."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "vn.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 0.9
+   },
+   "unit": "m",
+   "value": 0.9,
+   "text": {
+    "en": "Common stair flight width at least 0.9 m",
+    "ru": "Ширина марша общей лестницы не менее 0.9 м"
+   },
+   "source": {
+    "doc": "vn-qcvn06",
+    "clause": "3.4.1",
+    "url": "https://congbao.chinhphu.vn/van-ban/thong-tu-so-06-2022-tt-bxd-38322.htm",
+    "edition": "Circular 06/2022/TT-BXD, with amendment 1:2023",
+    "accessed": "2026-11-14",
+    "paraphrase": "Escape stair flight at least 90 cm wide generally; 120 cm where over 200 people on a floor; 135 cm for hospital-type uses."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "vn.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.6
+   },
+   "unit": "m",
+   "value": 2.6,
+   "text": {
+    "en": "Clear height of habitable rooms at least 2.6 m",
+    "ru": "Высота жилых помещений не менее 2.6 м"
+   },
+   "source": {
+    "doc": "vn-qcvn04",
+    "clause": "2.2.10",
+    "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/10/95-vbhn-bxd-2026.pdf",
+    "edition": "Consolidated text 95/2026/VBHN-BXD (2026-09-30)",
+    "accessed": "2026-11-14",
+    "paraphrase": "Clear height of habitable rooms in apartment buildings is at least 2.6 m (2.3 m for kitchens and bathrooms)."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "vn.res.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 40,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 40,
+   "text": {
+    "en": "Travel distance to an exit or stair at most 40 m (residential)",
+    "ru": "Путь до выхода или лестницы не более 40 м (жилые)"
+   },
+   "source": {
+    "doc": "vn-qcvn06",
+    "clause": "Annex G, G.1.1 Table G.1",
+    "url": "https://congbao.chinhphu.vn/van-ban/thong-tu-so-06-2022-tt-bxd-38322.htm",
+    "edition": "Circular 06/2022/TT-BXD, with amendment 1:2023",
+    "accessed": "2026-11-14",
+    "paraphrase": "Apartment front door to nearest stair or exit: 40 m for fire class I/II, S0 structure, door between stairs (25 m on a dead-end corridor; less for lower classes)."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "vn.egr.res"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 60,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 60,
+   "text": {
+    "en": "Travel distance to an exit or stair at most 60 m (office)",
+    "ru": "Путь до выхода или лестницы не более 60 м (офисы)"
+   },
+   "source": {
+    "doc": "vn-qcvn06",
+    "clause": "Annex G, G.1.2.1 Table G.2a row 1",
+    "url": "https://congbao.chinhphu.vn/van-ban/thong-tu-so-06-2022-tt-bxd-38322.htm",
+    "edition": "Circular 06/2022/TT-BXD, with amendment 1:2023",
+    "accessed": "2026-11-14",
+    "paraphrase": "Public-building room door to nearest exit: 60 m for class I-III with escape flow density up to 2 persons/m2, door between exits."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "vn.egr.off"
+  },
+  {
+   "id": "generic.egress.distance",
+   "disabled": true
+  }
+ ]
+}

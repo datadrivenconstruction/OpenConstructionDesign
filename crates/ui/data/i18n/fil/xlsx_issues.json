@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "Mga nilaktawang row at cell",
+ "xlsx_issues.conflicts_title": "Binago sa dalawang lugar",
+ "xlsx_issues.missing_title": "Nawawala ang sheet sa workbook",
+ "xlsx_issues.look_alike_title": "Hindi tugma ang pangalan ng sheet",
+ "xlsx_issues.mass_title": "Kailangan ng kumpirmasyon ang maramihang pagbura",
+ "xlsx_issues.sheets_missing": "Nawawala sa workbook ang mga sheet na {sheets} (pinalitan o binura); hindi inihambing ang mga row nito.",
+ "xlsx_issues.keep_model": "Itira ang modelo",
+ "xlsx_issues.take_book": "Kunin ang workbook",
+ "xlsx_issues.open_book_tip": "Binubuksan ang file sa sarili nitong application. Walang nagbabago sa modelo; magre-reload ang preview pagkatapos mong i-save ang workbook."
+}

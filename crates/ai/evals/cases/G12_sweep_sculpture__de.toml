@@ -1,0 +1,29 @@
+id = "G12_sweep_sculpture__de"
+tier = "hard"
+group = "Any geometry"
+title = "Sweep sculpture"
+lang = "de"
+base = "empty"
+
+[[turn]]
+say = "Eine Skulptur, entstanden durch Sweepen eines abgerundeten Dreiecksprofils entlang eines räumlichen Splinepfads: 12 m lang, 5 m ansteigend, anderthalb Windungen, Profil von 0.3 m bis 1.2 m skaliert."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "solid+mesh+freeform+shell_elem+mass+beam"
+min = 1.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1
+
+[[oracle.geom]]
+kind = "sweep_law"
+turns_min = 1.3
+scale_min = 3.0
+rise_min = 4.0

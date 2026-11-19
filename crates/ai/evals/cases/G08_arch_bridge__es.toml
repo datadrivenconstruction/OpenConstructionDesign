@@ -1,0 +1,27 @@
+id = "G08_arch_bridge__es"
+tier = "hard"
+group = "Any geometry"
+title = "Arch bridge"
+lang = "es"
+base = "empty"
+
+[[turn]]
+say = "Un puente de carretera de acero con arco superior, luz de 80 m, flecha del arco 14 m, 12 péndolas por lado, vigas transversales, estribos sobre zapatas, dos carriles y una acera."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "beam+brace+col+truss"
+min = 60.0
+
+[[oracle.count]]
+spec = "slab"
+min = 1.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

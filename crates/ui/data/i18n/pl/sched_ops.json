@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "wartość musi być większa od zera",
+ "sched_ops.not_number": "nie liczba",
+ "sched_ops.no_host": "brak ściany nośnej",
+ "sched_ops.wall_length": "tak nie da się ustawić długości tej ściany",
+ "sched_ops.no_wall": "brak takiej ściany",
+ "sched_ops.no_opening": "brak takiego otworu",
+ "sched_ops.no_curtain": "brak takiej ściany osłonowej",
+ "sched_ops.no_panel": "brak takiego panelu",
+ "sched_ops.no_slab": "brak takiej płyty stropowej",
+ "sched_ops.no_room": "brak takiego pomieszczenia",
+ "sched_ops.slope_range": "spadek poza zakresem",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

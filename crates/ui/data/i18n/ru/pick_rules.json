@@ -1,0 +1,11 @@
+{
+ "pick_rules.filter": "Выбор: все",
+ "pick_rules.filter.on": "Выбор: без {n}",
+ "pick_rules.filter.title": "Категории, доступные для выбора щелчком",
+ "pick_rules.filter.all": "Выбирать все категории",
+ "pick_rules.filter.tip": "Фильтр выбора: снятые категории не выбираются щелчком и не подсвечиваются",
+ "pick_rules.here": "Элементы здесь",
+ "pick_rules.here.row": "{cat} · {len}",
+ "pick_rules.here.selected": "выбран",
+ "pick_rules.pinned": "Выбирать закреплённые элементы"
+}

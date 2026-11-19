@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "Жабык контур тартыңыз: чекиттерди басыңыз, андан кийин түзүү үчүн Enter же Бүтүрүү басыңыз",
+ "sketch_hints.sk_finish": "Бүтүрүү",
+ "sketch_hints.sk_cancel": "Жокко чыгаруу",
+ "sketch_hints.import_warn": "модель текшерүүсүнүн эскертүүлөрү: {n} (биринчиси: {first})",
+ "sketch_hints.ai.offline.schedule": "Тизмени ачуу",
+ "sketch_hints.ai.offline.check": "Эрежелер боюнча текшерүү",
+ "sketch_hints.ai.offline.warnings": "Эскертүүлөрдү көрсөтүү",
+ "cmd.file.publish_pdf": "Барактарды PDF катары жарыялоо…",
+ "cmd.file.publish_pdf.desc": "Тандалган барактарды PDF форматында жарыялайт. Барактарды PDF/SVG форматында экспорттоо менен бирдей.",
+ "sketch_hints.verify_none": "Текшерүү үчүн тандоодо AI жардамчысы койгон нерсе жок",
+ "sketch_hints.contours_none": "Моделде топо-бет жок: ал түзүлгөндө контурлар пайда болот",
+ "sketch_hints.contours_off": "Топо-бет контурлары жашырылган",
+ "sketch_hints.contours_on": "Топо-бет контурлары көрсөтүлгөн"
+}

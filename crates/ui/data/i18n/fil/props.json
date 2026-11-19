@@ -1,0 +1,18 @@
+{
+ "props.multi.title": {
+  "one": "# elemento",
+  "other": "# na elemento"
+ },
+ "props.multi.cats": {
+  "one": "# kategorya",
+  "other": "# na kategorya"
+ },
+ "props.multi.varies": {
+  "one": "nagbabago (#)",
+  "other": "nagbabago (#)"
+ },
+ "props.multi.clear": "Alisin ang pagpili",
+ "props.multi.undo": "I-undo",
+ "props.multi.narrowed": "Pagpili: {n} · {name}",
+ "props.multi.chip_tip": "{name}: {n}  ·  Click para makita ang properties nila, Ctrl+click para sila lang ang itira"
+}

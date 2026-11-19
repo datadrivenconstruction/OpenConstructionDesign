@@ -1,0 +1,79 @@
+{
+ "schema": "gen_preset.v1",
+ "name": "warehouse",
+ "aliases": [
+  "logistics",
+  "industrial"
+ ],
+ "base": "office",
+ "note": "warehouse: built as storage halls with an office corner in deep room bands; crane beams, loading docks and mezzanines are not built",
+ "brief": {
+  "name": {
+   "en": "Warehouse",
+   "ru": "Склад"
+  },
+  "floors": 1
+ },
+ "rules": {
+  "massing.floor_height": 5.0,
+  "depth.band": 11.0
+ },
+ "program": {
+  "schema": "gen_program.v1",
+  "spaces": [
+   {
+    "kind": "storage",
+    "area": 200,
+    "count": 2,
+    "name": {
+     "en": "Warehouse hall",
+     "ru": "Складской зал"
+    },
+    "floor": "ground"
+   },
+   {
+    "kind": "office",
+    "area": 20,
+    "floor": "ground"
+   },
+   {
+    "kind": "wc",
+    "area": 4,
+    "floor": "ground"
+   },
+   {
+    "kind": "office",
+    "area": 20,
+    "count": 4,
+    "floor": "typical"
+   },
+   {
+    "kind": "wc",
+    "area": 4,
+    "count": 2,
+    "floor": "typical"
+   },
+   {
+    "kind": "storage",
+    "area": 200,
+    "count": 2,
+    "name": {
+     "en": "Warehouse hall",
+     "ru": "Складской зал"
+    },
+    "floor": "single"
+   },
+   {
+    "kind": "office",
+    "area": 20,
+    "count": 2,
+    "floor": "single"
+   },
+   {
+    "kind": "wc",
+    "area": 4,
+    "floor": "single"
+   }
+  ]
+ }
+}

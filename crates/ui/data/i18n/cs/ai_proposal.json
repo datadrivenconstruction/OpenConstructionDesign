@@ -1,0 +1,13 @@
+{
+ "ai.proposal.title": "Návrh AI asistenta",
+ "ai.proposal.meta": "{actor} · operace: {ops}",
+ "ai.proposal.apply.desc": "Použije celý návrh jako jeden krok; Ctrl+Z jej vrátí zpět",
+ "ai.proposal.applying": "Použití…",
+ "ai.proposal.applied": "Návrh byl použit. Ctrl+Z jej vrátí zpět.",
+ "ai.proposal.applied_resync": "Návrh byl použit, ale zobrazení se zatím neaktualizovalo. Obnoví se samo; Ctrl+Z vrátí krok zpět.",
+ "ai.proposal.stale": "Model se změnil poté, co byl návrh zobrazen v náhledu. Požádejte AI asistenta, aby návrh vytvořil znovu.",
+ "ai.proposal.toast.applied": "Návrh použit. Ctrl+Z jej vrátí zpět.",
+ "ai.proposal.toast.stale": "Model se po náhledu změnil, takže nic nebylo použito. Náhled proveďte znovu: požádejte AI asistenta, aby návrh vytvořil znovu.",
+ "ai.proposal.toast.refused": "Návrh nepoužit: {reason}",
+ "ai.proposal.rejected": "Návrh byl odmítnut."
+}

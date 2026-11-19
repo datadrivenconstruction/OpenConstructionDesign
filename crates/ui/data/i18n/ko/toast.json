@@ -1,0 +1,8 @@
+{
+ "toast.more_tip": "나머지는 메시지에 있습니다",
+ "toast.copy": "복사",
+ "toast.level.info": "정보",
+ "toast.level.success": "완료",
+ "toast.level.warning": "경고",
+ "toast.level.error": "오류"
+}

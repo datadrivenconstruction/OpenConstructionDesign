@@ -1,0 +1,8 @@
+{
+ "cmd.props.param_lock": "Zablokuj lub odblokuj wartość parametru",
+ "locked_values.kept": "Zachowano zablokowanych wartości: {n}",
+ "locked_values.locked": "„{name}” zablokowane: import z XLSX-a, zbiorcza edycja i AI go nie zmienią",
+ "locked_values.unlocked": "„{name}” odblokowane",
+ "locked_values.locked_tip": "Zablokowane: import z XLSX-a, zbiorcza edycja i AI zachowują tę wartość. Kliknij, aby odblokować  ·  Ctrl+L",
+ "locked_values.no_row": "Wskaż wiersz parametru we właściwościach i naciśnij Ctrl+L"
+}

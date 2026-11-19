@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "Kapalı bir kontur çizin: noktalara tıklayın, sonra oluşturmak için Enter veya Bitir",
+ "sketch_hints.sk_finish": "Bitir",
+ "sketch_hints.sk_cancel": "İptal",
+ "sketch_hints.import_warn": "model denetim uyarıları: {n} (ilki: {first})",
+ "sketch_hints.ai.offline.schedule": "Çizelgeyi aç",
+ "sketch_hints.ai.offline.check": "Kurallara göre denetle",
+ "sketch_hints.ai.offline.warnings": "Uyarıları göster",
+ "cmd.file.publish_pdf": "Sayfaları PDF olarak yayımla…",
+ "cmd.file.publish_pdf.desc": "Seçilen sayfaları PDF'e yayımlar. Sayfaları PDF/SVG olarak dışa aktarmayla aynı.",
+ "sketch_hints.verify_none": "Seçimde AI asistanı tarafından ayarlanmış doğrulanacak bir şey yok",
+ "sketch_hints.contours_none": "Modelde topo katı yok: bir tane oluşturulduğunda eş yükselti eğrileri görünür",
+ "sketch_hints.contours_off": "Topo katı eş yükselti eğrileri gizli",
+ "sketch_hints.contours_on": "Topo katı eş yükselti eğrileri gösteriliyor"
+}

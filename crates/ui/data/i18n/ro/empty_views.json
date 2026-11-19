@@ -1,0 +1,19 @@
+{
+ "empty.v3d_gpu.title": "3D nu este disponibil pe acest adaptor grafic",
+ "empty.v3d_gpu.hint": "Modelul este în siguranță și planul funcționează. Repornește cu grafică sigură pentru a încerca din nou 3D.",
+ "empty.v3d_gpu.action": "Repornește cu grafică sigură",
+ "empty.v3d_loading.title": "Se construiește 3D…",
+ "empty.v3d_loading.pct": "Se deschide… {pct} %",
+ "empty.plan_hidden.title": "Toate elementele sunt ascunse în acest plan",
+ "empty.plan_hidden.hint": "Ascunderea sau izolarea temporară nu lasă nimic vizibil.",
+ "empty.plan_hidden.action": "Arată tot",
+ "empty.plan_graphics.title": "Grafica vederii ascunde toate categoriile",
+ "empty.plan_graphics.hint": "Regulile de categorie ale acestei vederi nu lasă nimic de arătat.",
+ "empty.plan_graphics.action": "Deschide grafica vederii",
+ "empty.plan_phase.title": "Filtrul de etapă ascunde tot",
+ "empty.plan_phase.hint": "Nimic de pe acest nivel nu există în etapa arătată de această vedere.",
+ "empty.plan_phase.action": "Schimbă etapa",
+ "empty.plan_level.title": "Niciun element pe acest nivel",
+ "empty.plan_level.hint": "Alte niveluri ale acestui model au elemente.",
+ "empty.plan_level.action": "Mergi la nivelul cu elemente"
+}

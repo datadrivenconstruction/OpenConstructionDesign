@@ -1,0 +1,19 @@
+{
+ "names.level": "Geschoss {n}",
+ "names.slab": "Decke 200",
+ "names.roof_slab": "Dach 200",
+ "names.sheet.plan_section": "Grundriss und Schnitt EG",
+ "names.sheet.plan_view": "Grundriss EG",
+ "names.sheet.site_plan": "Lageplan",
+ "names.sheet_set.issue": "Ausgabe 1",
+ "names.title.owner": "Projekt GmbH",
+ "names.title.creator": "A. Iwanow",
+ "names.title.approver": "P. Petrow",
+ "names.title.document_type": "Zeichnung",
+ "names.title.status": "In Bearbeitung",
+ "names.revision.date": "4. Nov. 2026",
+ "names.revision.description": "Zur Prüfung ausgegeben",
+ "names.revision.author": "KI",
+ "names.demo.no_levels": "keine Geschosse",
+ "names.demo.no_sheet": "Blatt"
+}

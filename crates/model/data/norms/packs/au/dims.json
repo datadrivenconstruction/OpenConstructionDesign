@@ -1,0 +1,258 @@
+{
+ "items": [
+  {
+   "key": "egress.travel_max",
+   "value": 20,
+   "unit": "m",
+   "source": "au-ncc22-v1",
+   "clause": "D2D5(1)(a)-(b)",
+   "url": "https://ncc.abcb.gov.au/editions/ncc-2022/adopted/volume-one/d-access-and-egress/part-d2-provision-escape",
+   "accessed": "2026-11-14",
+   "paraphrase": "Class 2/3 flat entrance doors may be up to 20 m from a single exit at the egress level; otherwise 6 m to an exit or to a point with two escape directions.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14; dwelling-door distance 20 m to a single exit, 6 m to an exit or two-direction point; common-area points 20 m"
+  },
+  {
+   "key": "egress.travel_max.office",
+   "value": 40,
+   "unit": "m",
+   "source": "au-ncc22-v1",
+   "clause": "D2D5(3)(a)",
+   "url": "https://ncc.abcb.gov.au/editions/ncc-2022/adopted/volume-one/d-access-and-egress/part-d2-provision-escape",
+   "accessed": "2026-11-14",
+   "paraphrase": "Class 5-9 floors: no point beyond 20 m from an exit or two-direction point, and the distance to at least one exit must not exceed 40 m.",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14; 20 m to single exit / two-way point, 40 m to the nearest of alternative exits; 30 m for single exit at access level (Class 5/6)"
+  },
+  {
+   "key": "daylight.window_floor_ratio",
+   "value": 0.1,
+   "unit": "ratio",
+   "source": "au-ncc22-v1",
+   "clause": "F6D3(1)(a)",
+   "url": "https://ncc.abcb.gov.au/editions/ncc-2022/adopted/volume-one/f-health-and-amenity/part-f6-light-and-ventilation",
+   "accessed": "2026-11-14",
+   "paraphrase": "Habitable rooms in Class 2 and Class 4 parts need glazed area of at least a tenth of the floor area (roof lights 3 percent).",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "door.clear_min.accessible",
+   "value": 0.85,
+   "unit": "m",
+   "source": "au-ncc22-v1",
+   "clause": "D4D3(5)",
+   "url": "https://ncc.abcb.gov.au/editions/ncc-2022/adopted/volume-one/d-access-and-egress/part-d4-access-people-disability",
+   "accessed": "2026-11-14",
+   "paraphrase": "On an accessway, a multi-leaf doorway needs one leaf giving at least 850 mm clear opening.",
+   "verified": true,
+   "note": "read 2026-11-14; value stated in NCC text, detail in AS 1428.1"
+  },
+  {
+   "key": "corridor.width_min.accessible",
+   "value": 1.0,
+   "unit": "m",
+   "source": "au-lhds-2022-preview",
+   "clause": "Part 3, cl. 3.3 (internal corridors serving a doorway under cl. 3.1): min clear width 1000 mm between wall surfaces; also 1.1(2)(a)(iv) access path 1000 mm",
+   "url": "https://codemark.abcb.gov.au/sites/default/files/resources/2022/Livable-housing-design-preview-2022.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Dwelling internal corridors need at least 1000 mm clear between finished wall surfaces; the step-free access path is also at least 1000 mm wide.",
+   "verified": true,
+   "note": "read 2026-11-14: codemark.abcb.gov.au LHDS 2022 preview PDF; 1000 mm confirmed for dwellings via Livable Housing Design Standard (preview edition), not AS 1428.1 (paid); NCC passing-space rule not re-read"
+  },
+  {
+   "key": "accessible.turning_circle",
+   "value": 1.54,
+   "unit": "m",
+   "source": "au-as1428-1",
+   "clause": "AS 1428.1 turning space",
+   "url": "https://www.standards.org.au",
+   "accessed": "2026-11-14",
+   "paraphrase": "Wheelchair turning space around 1540 mm diameter; NCC D4D4(3)(b) requires turning spaces within 2 m of dead ends and every 20 m.",
+   "verified": false,
+   "note": "unverifiable_free: AS 1428.1 is paid; the free Livable Housing Design Standard preview has no turning-circle figure; secondary summaries give a 2070x1540 mm rectangle for 180 degree turns, a 1540 mm circle was not confirmed"
+  },
+  {
+   "key": "ramp.slope_max",
+   "value": 0.0714,
+   "unit": "ratio",
+   "source": "au-lhds-2022-preview",
+   "clause": "cl. 1.1(2)(a)(ii) and (4): step-free access path max gradient 1:14; ramp length caps 9 m at 1:14",
+   "url": "https://codemark.abcb.gov.au/sites/default/files/resources/2022/Livable-housing-design-preview-2022.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Step-free dwelling access path has max gradient 1:14; total ramping length is limited to 9 m at 1:14, more at flatter slopes.",
+   "verified": true,
+   "note": "read 2026-11-14: codemark.abcb.gov.au LHDS 2022 preview PDF; 1:14 for dwelling access ramps, not read in AS 1428.1 itself (paid)"
+  },
+  {
+   "key": "fire.compartment_area_max",
+   "value": 3000,
+   "unit": "m2",
+   "source": "au-ncc22-v1",
+   "clause": "Table C3D3, Class 5/9b, Type C",
+   "url": "https://ncc.abcb.gov.au/editions/ncc-2022/adopted/volume-one/c-fire-resistance/part-c3-compartmentation-and-separation",
+   "accessed": "2026-11-14",
+   "paraphrase": "Office (Class 5) compartment limit depends on construction type: 8000 m2 Type A, 5500 Type B, 3000 Type C; a volume limit also applies.",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "sprinklered": false
+   },
+   "verified": true,
+   "note": "read 2026-11-14; Type C shown (most conservative); Type A 8000 m2 / 48000 m3. No Class 2/3 row in the table"
+  },
+  {
+   "key": "fire.compartment_area_max.sprinklered",
+   "value": 18000,
+   "unit": "m2",
+   "source": "au-ncc22-v1",
+   "clause": "C3D4(a)",
+   "url": "https://ncc.abcb.gov.au/editions/ncc-2022/adopted/volume-one/c-fire-resistance/part-c3-compartmentation-and-separation",
+   "accessed": "2026-11-14",
+   "paraphrase": "A fully sprinklered Class 5-9 building with perimeter vehicle access may exceed the table limits, up to 18000 m2 and 108000 m3 under this concession.",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "sprinklered": true
+   },
+   "verified": true,
+   "note": "read 2026-11-14; larger buildings also allowed if sprinklered and with access"
+  },
+  {
+   "key": "stair.riser_max",
+   "value": 0.19,
+   "unit": "m",
+   "source": "au-ncc22-v1",
+   "clause": "D3D14, Table D3D14",
+   "url": "https://ncc.abcb.gov.au/editions/ncc-2022/adopted/volume-one/d-access-and-egress/part-d3-construction-exits",
+   "accessed": "2026-11-14",
+   "paraphrase": "Riser of a required stair between 115 and 190 mm.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "stair.tread_min",
+   "value": 0.25,
+   "unit": "m",
+   "source": "au-ncc22-v1",
+   "clause": "D3D14, Table D3D14",
+   "url": "https://ncc.abcb.gov.au/editions/ncc-2022/adopted/volume-one/d-access-and-egress/part-d3-construction-exits",
+   "accessed": "2026-11-14",
+   "paraphrase": "Going at least 250 mm in public stairs, 240 mm in private stairs, maximum 355 mm; 2R+G between 550 and 700 mm.",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14; private (within a dwelling unit) 240 mm"
+  },
+  {
+   "key": "stair.width_min",
+   "value": 1.0,
+   "unit": "m",
+   "source": "au-ncc22-v1",
+   "clause": "D2D8(1)",
+   "url": "https://ncc.abcb.gov.au/editions/ncc-2022/adopted/volume-one/d-access-and-egress/part-d2-provision-escape",
+   "accessed": "2026-11-14",
+   "paraphrase": "Exit width of at least 1 m for up to 100 occupants, growing in steps with occupant numbers.",
+   "verified": true,
+   "note": "read 2026-11-14; clear of handrail projections per D2D11"
+  },
+  {
+   "key": "stair.riser_max.house",
+   "value": 0.19,
+   "unit": "m",
+   "source": "au-ncc22-hp",
+   "clause": "Table 11.2.2a",
+   "url": "https://ncc.abcb.gov.au/editions/ncc-2022/adopted/housing-provisions/11-safe-movement-and-access/part-112-stairway-and-ramp-construction",
+   "accessed": "2026-11-14",
+   "paraphrase": "House stair riser range 115-190 mm.",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 at ncc.abcb.gov.au Table 11.2.2a (non-spiral stairs: riser 190 mm max, going 240 mm min)"
+  },
+  {
+   "key": "stair.tread_min.house",
+   "value": 0.24,
+   "unit": "m",
+   "source": "au-ncc22-hp",
+   "clause": "Table 11.2.2a",
+   "url": "https://ncc.abcb.gov.au/editions/ncc-2022/adopted/housing-provisions/11-safe-movement-and-access/part-112-stairway-and-ramp-construction",
+   "accessed": "2026-11-14",
+   "paraphrase": "House stair going range 240-355 mm.",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 at ncc.abcb.gov.au Table 11.2.2a (non-spiral stairs: riser 190 mm max, going 240 mm min)"
+  },
+  {
+   "key": "room.height_min",
+   "value": 2.4,
+   "unit": "m",
+   "source": "au-ncc22-v1",
+   "clause": "F5D2(1)(c)",
+   "url": "https://ncc.abcb.gov.au/editions/ncc-2022/adopted/volume-one/f-health-and-amenity/part-f5-room-heights",
+   "accessed": "2026-11-14",
+   "paraphrase": "Habitable rooms (not kitchens) in Class 2/3/4 part: minimum ceiling height 2.4 m; kitchens, corridors 2.1 m.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "room.height_min.office",
+   "value": 2.4,
+   "unit": "m",
+   "source": "au-ncc22-v1",
+   "clause": "F5D2(3)(a)",
+   "url": "https://ncc.abcb.gov.au/editions/ncc-2022/adopted/volume-one/f-health-and-amenity/part-f5-room-heights",
+   "accessed": "2026-11-14",
+   "paraphrase": "Rooms in Class 5-8 buildings generally need 2.4 m; corridors 2.1 m.",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14; offices not named but fall under the general rule"
+  }
+ ]
+}

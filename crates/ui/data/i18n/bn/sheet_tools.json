@@ -1,0 +1,18 @@
+{
+ "undo.entry_later": "আনডু হয়নি: এরপর আরেকটি পরিবর্তন হয়েছে। আগে সেটি আনডু করুন।",
+ "undo.entry_gone": "আনডু হয়নি: এই পরিবর্তন আগেই আনডু হয়েছে বা ইতিহাসে নেই।",
+ "undo.entry_busy": "আগে বর্তমান অঙ্কন শেষ বা বাতিল করুন, তারপর আনডু করুন।",
+ "quick.hud.more": "বৈশিষ্ট্যে আরও: {names}",
+ "sheet_tools.sheet.more": "আরও শিট টুল",
+ "job.of": "{t}-এর মধ্যে {d}",
+ "job.of.mb": "{t} MB-এর মধ্যে {d} MB",
+ "job.left.under_minute": "এক মিনিটেরও কম বাকি",
+ "job.left.minutes": "প্রায় {n} মিনিট বাকি",
+ "sheet_tools.start.units": "এককসমূহ",
+ "sheet_tools.print.save": {
+  "one": "# টি শিট সংরক্ষণ করুন",
+  "other": "# টি শিট সংরক্ষণ করুন"
+ },
+ "sheet_tools.sets.delete_ask": "সেট “{name}” মুছবেন? এর শিটগুলো প্রকল্পে থেকে যাবে।",
+ "sheet_tools.keep": "রাখুন"
+}

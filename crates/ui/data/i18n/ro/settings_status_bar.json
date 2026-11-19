@@ -1,0 +1,10 @@
+{
+ "cmd.view.axes_full": "Axe complete",
+ "cmd.view.axes_full.desc": "Afișează axele X și Y ca linii complete pe toată planșa. Ține apăsat F9 ca să le vezi doar cât timp este apăsat.",
+ "settings.axes_full": "Axe",
+ "settings.axes_full_desc": "Axele planului ca linii complete pe toată foaia. Ține apăsat F9 pentru o verificare rapidă.",
+ "settings.axes_full_on": "Afișează axele complete",
+ "plan.hud.axes_tip": "Ține apăsat {key} pentru a afișa axele complete",
+ "status.axes_full.on": "Axe complete activate",
+ "status.axes_full.off": "Axe complete dezactivate"
+}

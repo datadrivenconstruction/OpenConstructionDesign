@@ -1,0 +1,5 @@
+{
+ "xlsx_readonly.read_only_head": "Lecture seule — l'application écrira une copie",
+ "xlsx_readonly.show_in_folder": "Afficher dans le dossier",
+ "xlsx_readonly.copy_exists": "Le fichier de copie existe déjà. Choisissez un autre nom ou supprimez-le."
+}

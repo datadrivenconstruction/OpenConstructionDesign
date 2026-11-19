@@ -1,0 +1,7 @@
+{
+ "offset_opts.dist_positive": "偏移距离必须大于零；方向跟随光标",
+ "offset_opts.count_bad": "从 {min} 到 {max} 的整数",
+ "offset_opts.done_tip": "完成选择并启动工具",
+ "offset_opts.iso.apply_tip": "将此视图的临时隐藏设为永久",
+ "offset_opts.iso.exit": "退出临时模式"
+}

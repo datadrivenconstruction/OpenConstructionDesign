@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "Filtririda päiste all. Tekst: osasõne; arvud: >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "Näita või peida veerud",
+ "sched_toolbar.groups_tip": "Rühmita read veergude järgi koos vahesummadega",
+ "sched_toolbar.formulas_tip": "Arvutatud veerud",
+ "sched_toolbar.phase": "Faas",
+ "sched_toolbar.phase_tip": "Millisest faasist read võetakse",
+ "sched_toolbar.copy_tip": "Valitud read (või kõik nähtavad) TSV-vormingus",
+ "sched_toolbar.import_tip": "Loe eksporditud loend tagasi: read ID järgi, veerud päise järgi; kõigepealt arvud, seejärel üks tagasivõtmise samm",
+ "sched_toolbar.export_tip": "Nähtavad read ja veerud koos summadega; arvud jäävad arvudeks",
+ "sched_toolbar.need_table": "Ava kõigepealt loend",
+ "sched_toolbar.busy_open": "Failidialoog on juba avatud",
+ "sched_toolbar.busy_save": "Salvestusdialoog on juba avatud",
+ "sched_toolbar.clear_filter": "Tühista filter",
+ "sched_toolbar.fields_title": "Veerud"
+}

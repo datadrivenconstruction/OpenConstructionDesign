@@ -1,0 +1,5 @@
+{
+ "palette.find_named": "Encontrar elementos chamados \"{q}\"",
+ "palette.search_help": "Pesquisar ajuda para \"{q}\"",
+ "palette.not_found": "Nada chamado \"{q}\""
+}

@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "Panel",
+ "curtain_props.cw.panel_cell": "Celda {i}×{j} · muro cortina n.º {id}",
+ "curtain_props.cw.kind": "Tipo",
+ "curtain_props.cw.kind.glazed": "Acristalado",
+ "curtain_props.cw.kind.solid": "Macizo",
+ "curtain_props.cw.kind.door": "Puerta",
+ "curtain_props.cw.kind.window": "Ventana",
+ "curtain_props.cw.kind.empty": "Vacío",
+ "curtain_props.cw.name": "Nombre",
+ "curtain_props.cw.swing_side": "Se abre hacia el otro lado",
+ "curtain_props.cw.swing_hinge": "Bisagra en el extremo de la celda",
+ "curtain_props.cw.size": "Tamaño",
+ "curtain_props.cw.cell_area": "Superficie de celda",
+ "curtain_props.cw.panel_area": "Superficie del panel",
+ "curtain_props.cw.prev": "Panel anterior",
+ "curtain_props.cw.next": "Panel siguiente",
+ "curtain_props.cw.wall": "Seleccione el muro",
+ "curtain_props.cw.panel_hint": "Esc — selección · Ctrl+Z — deshacer",
+ "curtain_props.cw.status.panel": "Panel {i}×{j} → {kind}",
+ "e3d.err.cw_height": "la altura del muro cortina debe ser superior a 100 mm"
+}

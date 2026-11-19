@@ -1,0 +1,29 @@
+{
+ "recover.ago_now": "lige nu",
+ "recover.ago_min": {
+  "one": "for # min. siden",
+  "other": "for # min. siden"
+ },
+ "recover.ago_hour": {
+  "one": "for # time siden",
+  "other": "for # timer siden"
+ },
+ "recover.ago_yesterday": "i går",
+ "recover.ago_day": {
+  "one": "for # dag siden",
+  "other": "for # dage siden"
+ },
+ "recover.empty": "Ingen øjebliksbilleder tilbage",
+ "recover.empty_hint": "Intet at gendanne for dette projekt.",
+ "recover.all_damaged": "Alle øjebliksbilleder er beskadigede, ingen kan gendannes.",
+ "recover.keys_hint": "Op og Ned vælger et øjebliksbillede, Enter går til Gendan",
+ "recover.row_tip": "Gemt {time}",
+ "recover.row_damaged_tip": "Kan ikke gendannes: {reason}",
+ "recover.archive_ask": "Flyt dette øjebliksbillede til arkivet?",
+ "recover.discard_ask": {
+  "one": "Flyt øjebliksbilledet til arkivet? Det tilbydes ikke igen.",
+  "other": "Flyt alle # øjebliksbilleder til arkivet? De tilbydes ikke igen."
+ },
+ "recover.confirm_yes": "Flyt til arkiv",
+ "recover.confirm_no": "Behold øjebliksbilleder"
+}

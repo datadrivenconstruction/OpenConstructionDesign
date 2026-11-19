@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "शाफ़्ट",
+ "quick.cat.shaft": "शाफ़्ट",
+ "shaft_tool.browser.shaft": "शाफ़्ट #{id}",
+ "shaft_tool.shaft.top": "ऊपरी तल",
+ "shaft_tool.shaft.cuts": "कटे तत्व",
+ "shaft_tool.shaft.cut_area": "कटा क्षेत्रफल",
+ "shaft_tool.shaft.cut_volume": "कटा आयतन",
+ "elem.no.rooms": "अपने कमरों का अनुसरण करता है"
+}

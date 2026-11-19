@@ -1,0 +1,8 @@
+{
+ "empty.start_recent.title": "Ingen nylige prosjekter ennå",
+ "empty.start_recent.hint": "Prosjekter du åpner vises her. Start med eksempelmodellen.",
+ "empty.start_recent.action": "Åpne eksempel",
+ "start.recent_open_file": "Åpne fil…",
+ "start.forgot": "Fjernet fra nylige: {name}",
+ "start.forgot_undo": "Angre"
+}

@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "שם המערכת",
+ "mep_browser.add_blocked": "הזן קודם שם מערכת",
+ "mep_browser.col.insulation": "בידוד",
+ "mep_browser.cancel": "ביטול",
+ "mep_browser.delete.title": "למחוק את המערכת הזו?",
+ "mep_browser.delete.body": "המערכת \"{name}\" וההרצות שלה ({n}) יימחקו.",
+ "mep_browser.delete.undo": "אפשר לבטל זאת בבטל אחד.",
+ "mep_browser.delete.confirm": "מחק מערכת"
+}

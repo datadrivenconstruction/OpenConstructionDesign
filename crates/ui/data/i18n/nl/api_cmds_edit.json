@@ -1,0 +1,20 @@
+{
+ "api.cmd.move_elements": "Elementen verplaatsen met een verschuiving in meter",
+ "api.cmd.copy_elements": "Elementen kopiëren met één of meer verschuivingen in meters",
+ "api.cmd.rotate_elements": "Elementen draaien om een punt over een hoek in graden",
+ "api.cmd.mirror_elements": "Elementen spiegelen om een as door twee punten",
+ "api.cmd.scale_elements": "Elementen schalen om een punt met een factor",
+ "api.cmd.array_elements": "Lineaire of radiale reeks elementen",
+ "api.cmd.offset_wall": "Parallelle kopie van een wand op een afstand in meter",
+ "api.cmd.split_wall": "Een wand in twee delen splitsen op een punt",
+ "api.cmd.pin_elements": "Elementen vastzetten of losmaken",
+ "api.cmd.flip_openings": "Scharnierzijde of kant van deuren en ramen omdraaien",
+ "api.cmd.create_level": "Een verdieping aanmaken op een hoogteligging in meters",
+ "api.cmd.edit_level": "Verdieping hernoemen of de hoogte wijzigen",
+ "api.cmd.delete_level": "Verdieping verwijderen",
+ "api.cmd.place_rooms": "Een ruimte plaatsen in elk gesloten gebied van een verdieping",
+ "api.cmd.join_elements": "Geometrieverbindingen samenvoegen, opheffen of wisselen",
+ "api.cmd.place_footings": "Een funderingspunt plaatsen onder elke kolom van een verdieping",
+ "api.cmd.create_terrain": "Maak een terrein van meetpunten of een hellend vlak",
+ "api.cmd.script_recipes": "Lees de bouwblokken en recepten van scripts voor vrije constructies"
+}

@@ -1,0 +1,15 @@
+{
+ "cmd.data.export_step.desc": "Sine-save ang buong model o pagpili bilang STEP AP214 o AP242: solid na may eksaktong planar, cylindrical, conical, spherical, toroidal at B-spline na face, ang ibang elemento bilang planar face, mga kulay, at isang assembly node bawat level.",
+ "cmd.data.export_3mf.desc": "Sine-save ang buong model o pagpili bilang 3MF para sa pag-print: isang object bawat elemento, mga kulay, unit, at pagsusuri na bawat body ay watertight.",
+ "fmenu.export.step": "STEP eksaktong solid (.step)",
+ "fmenu.export.3mf": "3MF para sa pag-print (.3mf)",
+ "mx.schema": "STEP schema",
+ "mx.schema.ap214": "AP214 (pinakamalawak ang suporta)",
+ "mx.schema.ap242": "AP242",
+ "mx.watertight": "Mga body na hindi watertight",
+ "mx.watertight.report": "Isulat sila at ilista",
+ "mx.watertight.skip": "Huwag isama",
+ "mx.watertight.require": "Kanselahin ang export",
+ "mx.faceted": "Na-save ang {fmt}: {path} ({exact} eksaktong solid, {n} isinulat bilang planar face: {first})",
+ "sheets.print.svg": "SVG"
+}

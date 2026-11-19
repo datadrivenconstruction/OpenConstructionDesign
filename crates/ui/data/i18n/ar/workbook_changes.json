@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "تغييرات المصنف لم تُطبَّق",
+ "workbook_changes.wb.body": "إغلاق المشروع أو التبديل إليه يُسقطها.",
+ "workbook_changes.wb.line": "استيراد مصنف: {n} تغييرات لم تُطبَّق",
+ "workbook_changes.wb.review": "مراجعة",
+ "workbook_changes.wb.discard": "تجاهل"
+}

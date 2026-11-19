@@ -1,0 +1,6 @@
+{
+ "quick.keys.rec_hint": "Esc ยกเลิก · Backspace ล้าง",
+ "quick.keys.row_lost": "{key} ตอนนี้เป็นของ “{cmd}”",
+ "quick.keys.row_took": "{key} ถูกนำมาจาก “{cmd}”",
+ "quick.keys.reset_tip": "กลับไปค่าเริ่มต้น"
+}

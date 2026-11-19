@@ -1,0 +1,19 @@
+{
+ "empty.v3d_gpu.title": "A 3D nem érhető el ezen a grafikus illesztőn",
+ "empty.v3d_gpu.hint": "A modell biztonságos, az alaprajz működik. Indítsa újra biztonságos grafikával, és próbálja újra a 3D-t.",
+ "empty.v3d_gpu.action": "Újraindítás biztonságos grafikával",
+ "empty.v3d_loading.title": "3D készítése…",
+ "empty.v3d_loading.pct": "Megnyitás… {pct} %",
+ "empty.plan_hidden.title": "Ebben az alaprajzon minden elem rejtett",
+ "empty.plan_hidden.hint": "Az ideiglenes elrejtés vagy elkülönítés miatt semmi sem látszik.",
+ "empty.plan_hidden.action": "Mind megjelenítése",
+ "empty.plan_graphics.title": "A nézet grafikája minden kategóriát elrejt",
+ "empty.plan_graphics.hint": "Ennek a nézetnek a kategóriaszabályai miatt nincs megjeleníthető elem.",
+ "empty.plan_graphics.action": "Nézet grafikájának megnyitása",
+ "empty.plan_phase.title": "A fázisszűrő mindent elrejt",
+ "empty.plan_phase.hint": "Ezen a szinten semmi sincs a nézet által mutatott fázisban.",
+ "empty.plan_phase.action": "Fázis módosítása",
+ "empty.plan_level.title": "Ezen a szinten nincsenek elemek",
+ "empty.plan_level.hint": "Ennek a modellnek más szintjein vannak elemek.",
+ "empty.plan_level.action": "Ugrás az elemeket tartalmazó szintre"
+}

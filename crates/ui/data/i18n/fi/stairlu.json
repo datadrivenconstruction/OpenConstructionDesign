@@ -1,0 +1,12 @@
+{
+ "opt.stair.straight": "Suora",
+ "opt.stair.l": "L",
+ "opt.stair.u": "U",
+ "opt.stair.gap": "Väli",
+ "hint.stair.corner": "L-portaat: valitse käännöskulma · Backspace — poista viimeinen piste · Esc — poista viimeinen piste, ilman pisteitä — peruuta",
+ "hint.stair.side": "Portaat: valitse toisen rampin puoli · Backspace — poista viimeinen piste · Esc — poista viimeinen piste, ilman pisteitä — peruuta",
+ "tool.stair.flights": "{n} nousua (yhteensä {m})",
+ "tool.stair.err_split": "Jokaisessa rampissa on oltava vähintään 2 nousua: ensimmäisessä on {n} / {m}",
+ "tool.stair.err_comfort": "Nousu ja askel rikkovat mukavuussäännön (2n + a)",
+ "tool.stair.err_input": "Portaiden koko on alueen ulkopuolella: tarkista leveys, korkeus ja taso"
+}

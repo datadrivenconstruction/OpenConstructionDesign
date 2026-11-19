@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "Kiritish bo'sh.",
+ "units.err.not_number": "{pos} o'rnida son emas.",
+ "units.err.unknown_unit": "Noma'lum birlik: {unit}.",
+ "units.err.non_positive": "Uzunlik noldan katta bo'lishi kerak.",
+ "units.err.too_large": "Uzunlik {max} m dan oshmasligi kerak.",
+ "units.err.bad_angle": "Burchak gradusdagi son bo'lishi kerak.",
+ "units.err.unknown_name": "Noma'lum nom: {name}. Qiymat saqlandi.",
+ "units.err.cycle": "{name} da formula halqasi. Qiymat saqlandi.",
+ "units.err.bad_expr": "{pos} o'rnidagi ifodani o'qib bo'lmadi. Qiymat saqlandi.",
+ "units.err.div_zero": "{pos} o'rnida nolga bo'lish. Qiymat saqlandi.",
+ "units.err.invalid": "Noto'g'ri son.",
+ "units.err.kept": "O'zgartirilmadi: {reason}"
+}

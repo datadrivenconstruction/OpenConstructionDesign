@@ -1,0 +1,8 @@
+{
+ "xlsx_idle.idle_title": "Import qilish uchun o'zgarish yo'q",
+ "xlsx_idle.export_name": "Eksport",
+ "xlsx_idle.export_body": "Modelni ish kitobiga yozadi. U yerda qiymatlarni tahrirlang, so'ng sinxronlang.",
+ "xlsx_idle.sync_name": "Sinxronlash",
+ "xlsx_idle.sync_body": "Ish kitobini qayta o'qiydi va farqlarni ro'yxatlaydi. Model faqat siz qo'llaganingizda o'zgaradi.",
+ "xlsx_idle.last_sync": "Oxirgi sinxronlash: {when}"
+}

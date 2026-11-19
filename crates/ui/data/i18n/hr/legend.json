@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "Legenda",
+ "legend.legend.new_hint": "Naziv nove legende",
+ "legend.legend.delete_tip": "Izbriši legendu",
+ "legend.legend.delete_placed": "Izbriši legendu (postavljena na: {sheets})",
+ "legend.legend.deleted": "Legenda izbrisana: {name}",
+ "legend.legend.no_rows": "Još nema redaka. Dodajte jedan ili preuzmite stilove trenutnog pogleda",
+ "legend.legend.replace_q": "Zamijeniti {n} redaka stilovima ovog pogleda?",
+ "legend.legend.replace": "Zamijeni",
+ "legend.legend.keep": "Zadrži retke",
+ "legend.col.swatch": "Uzorak",
+ "legend.col.value": "Vrijednost",
+ "legend.col.label": "Oznaka"
+}

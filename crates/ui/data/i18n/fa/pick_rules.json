@@ -1,0 +1,11 @@
+{
+ "pick_rules.filter": "انتخاب: همه",
+ "pick_rules.filter.on": "انتخاب: {n} خاموش",
+ "pick_rules.filter.title": "دسته‌هایی که کلیک می‌تواند انتخاب کند",
+ "pick_rules.filter.all": "انتخاب همه‌ی دسته‌ها",
+ "pick_rules.filter.tip": "فیلتر انتخاب: دسته‌های بدون علامت با کلیک و نشانگر نادیده گرفته می‌شوند",
+ "pick_rules.here": "موارد اینجا",
+ "pick_rules.here.selected": "انتخاب‌شده",
+ "pick_rules.pinned": "انتخاب موارد سنجاق‌شده",
+ "pick_rules.here.row": "{cat} · {len}"
+}

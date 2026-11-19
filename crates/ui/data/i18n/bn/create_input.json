@@ -1,0 +1,14 @@
+{
+ "cmd.mod.divide": "ভাগ করুন (সমান অংশে)",
+ "cmd.mod.divide.short": "ভাগ",
+ "cmd.mod.divide.desc": "একটি দেয়াল একধাপে সমান অংশে ভাগ করে। অংশের সংখ্যা লিখুন, তারপর দেয়ালে ক্লিক করুন।",
+ "whereis.mod.divide": "ভাগ, সমান অংশ, টুকরো করা, দেয়াল ভাগ",
+ "hint.split.parts": "সমান ভাগ: দেয়ালে ক্লিক করুন · সংখ্যা — অংশ (2–100) · Esc — বাতিল",
+ "create_input.divide.bad_parts": "«{text}» কোনো অংশের সংখ্যা নয়: 2 থেকে {max} পর্যন্ত একটি পূর্ণসংখ্যা লিখুন",
+ "create_input.ws.err.empty": "লেআউটের নাম লিখুন",
+ "create_input.ws.err.long": "নামটি অনেক লম্বা: সর্বোচ্চ 40 অক্ষর",
+ "create_input.ws.err.preset": "এই নামটি বিল্ট-ইন লেআউটের",
+ "create_input.ws.err.full": "সর্বোচ্চ 24টি সংরক্ষিত লেআউট: আগে একটি সরান",
+ "create_input.seldim.locked": "দূরত্ব {v} লক করা",
+ "create_input.seldim.positive": "দূরত্ব শূন্যের বেশি হতে হবে"
+}

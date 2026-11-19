@@ -1,0 +1,6 @@
+{
+ "cmd.file.import_again": "Impor ulang",
+ "cmd.file.import_again.desc": "Buat proyek baru dari file sumber seperti kondisinya sekarang.",
+ "cmd.file.open_kept": "Buka impor yang disimpan",
+ "cmd.file.open_kept.desc": "Buka impor yang sudah selesai dan disimpan saat dialog perubahan belum tersimpan dibatalkan."
+}

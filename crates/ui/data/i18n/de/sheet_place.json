@@ -1,0 +1,15 @@
+{
+ "sheet_place.place_view_tip": "Ansicht oder Liste auf dem Blatt platzieren",
+ "sheet_place.properties_tip": "Blattnummer, Name, Papier und Revisionen",
+ "sheet_place.print_tip": "Blatt drucken oder exportieren",
+ "sheet_place.fit_tip": "Blatt an das Fenster anpassen",
+ "sheet_place.activate_tip": "Ansicht direkt auf dem Blatt bearbeiten: verschieben, zoomen und zuschneiden",
+ "sheet_place.open_view_tip": "Ansicht in einem eigenen Tab öffnen",
+ "sheet_place.done_tip": "Bearbeitung der Ansicht auf dem Blatt beenden",
+ "sheet_place.reset_crop_tip": "Zuschnitt entfernen und die gesamte Ansicht zeigen",
+ "sheet_place.scale_tip": "Maßstab der ausgewählten Ansicht auf dem Blatt",
+ "sheet_place.title_tip": "Titel, der unter der Ansicht auf dem Blatt angezeigt wird",
+ "sheet_place.banner": "Ansicht auf dem Blatt wird bearbeitet",
+ "sheet_place.new_set_tip": "Satz von Blättern zum gemeinsamen Drucken erstellen",
+ "sheet_place.new_sheet_tip": "Dem Projekt ein Blatt hinzufügen"
+}

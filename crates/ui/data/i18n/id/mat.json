@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "Beton",
+ "mat.masonry": "Pasangan",
+ "mat.brick": "Bata",
+ "mat.insulation": "Isolasi",
+ "mat.plaster": "Plester",
+ "mat.render": "Lapisan",
+ "mat.gypsum": "Papan gipsum",
+ "mat.glass": "Kaca",
+ "mat.wood": "Kayu",
+ "mat.steel": "Baja",
+ "mat.membrane": "Membran",
+ "mat.other": "Lainnya",
+ "warn.cat.wall": "Dinding",
+ "warn.cat.slab": "Pelat",
+ "warn.cat.opening": "Bukaan",
+ "warn.cat.curtain_wall": "Dinding tirai",
+ "td.mat.custom": "Lainnya…"
+}

@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "ההחלה בוטלה: המודל לא תאם את התצוגה המקדימה. {what}",
+ "xlsx_verify.not_written": "{row} לא שונה.",
+ "xlsx_verify.lost": "{row} נעלם.",
+ "xlsx_verify.not_deleted": "{row} לא נמחק.",
+ "xlsx_verify.extra_deleted": "{row} נמחק, למרות שהתצוגה המקדימה שומרת עליו.",
+ "xlsx_verify.created": "{table}: {got} חדשים במקום {want}.",
+ "xlsx_verify.value": "{row}, {field}: צפוי {want} (היה {old}), התקבל {got}.",
+ "xlsx_verify.check_failed": "לא ניתן היה לבדוק את התוצאה: {e}",
+ "xlsx_verify.plan_failed": "ההחלה לא התחילה: הבדיקה לא הצליחה לקרוא את המודל ({e}).",
+ "xlsx_verify.take_back_failed": "לא ניתן היה לבטל את השלב ({e}): השתמש ב-בטל.",
+ "xlsx_verify.t.wall": "קיר",
+ "xlsx_verify.t.opening": "פתח",
+ "xlsx_verify.t.room": "חדר",
+ "xlsx_verify.t.slab": "רצפה",
+ "xlsx_verify.t.level": "מפלס",
+ "xlsx_verify.t.wall_type": "סוג קיר",
+ "xlsx_verify.t.slab_type": "סוג רצפה",
+ "xlsx_verify.t.col": "עמוד",
+ "xlsx_verify.t.beam": "קורה",
+ "xlsx_verify.t.roof": "גג",
+ "xlsx_verify.t.curtain_wall": "קיר מסך"
+}

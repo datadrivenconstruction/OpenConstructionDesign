@@ -1,0 +1,6 @@
+{
+ "project_seed.seed_level": "Nível 1",
+ "project_seed.seed_wall_partition": "Divisória 100",
+ "project_seed.seed_wall_masonry": "Alvenaria 200",
+ "project_seed.seed_wall_exterior": "Externa 380"
+}

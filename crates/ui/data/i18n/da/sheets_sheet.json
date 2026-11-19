@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "Duplikér ark med visninger",
+ "cmd.view.sheet_duplicate_title": "Duplikér ark (kun tegningshoved)",
+ "sheets.dup.menu_views": "Duplikér med visninger",
+ "sheets.dup.menu_title": "Duplikér, kun tegningshoved",
+ "sheets.dup.done": "Ark {number} oprettet fra {src}: {views} visninger, {sched} lister og forklaringer. Revisioner kopieres ikke; arket er ikke udgivet.",
+ "sheets.dup.none": "Åbn et ark for at duplikere det",
+ "sheets.dup.copy": "kopi",
+ "cmd.view.sheet_duplicate.short": "Duplikér med visninger",
+ "cmd.view.sheet_duplicate_title.short": "Duplikér tegningshoved"
+}

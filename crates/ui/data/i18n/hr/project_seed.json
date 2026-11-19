@@ -1,0 +1,6 @@
+{
+ "project_seed.seed_level": "Razina 1",
+ "project_seed.seed_wall_partition": "Pregradni 100",
+ "project_seed.seed_wall_masonry": "Zid od opeke 200",
+ "project_seed.seed_wall_exterior": "Vanjski 380"
+}

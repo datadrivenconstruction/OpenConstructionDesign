@@ -1,0 +1,11 @@
+{
+ "empty.sv_notfound.title": "Pogled nije pronađen",
+ "empty.sv_notfound.hint": "Ovaj pogled je izbrisan ili više nije dio projekta.",
+ "empty.sv_notfound.action": "Zatvori pogled",
+ "empty.sv_cuts_nothing.title": "Ovaj presjek ne siječe ništa",
+ "empty.sv_cuts_nothing.hint": "Linija presjeka ne siječe nijedan zid, ploču ili otvor unutar svoje dubine. Pomaknite liniju ili produbite pogled.",
+ "empty.sv_cuts_nothing.action": "Prikaži u tlocrtu",
+ "empty.sv_shows_nothing.title": "Ovo pročelje ništa ne prikazuje",
+ "empty.sv_shows_nothing.hint": "Nijedan zid, ploča ni otvor ne nalazi se unutar dubine pogleda. Pomaknite liniju pogleda ili produbite pogled.",
+ "empty.sv_shows_nothing.action": "Prikaži u tlocrtu"
+}

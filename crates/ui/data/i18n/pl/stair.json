@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "Schody",
+ "selcat.railing": "Balustrady",
+ "quick.cat.stair": "Schody",
+ "quick.cat.railing": "Balustrady",
+ "stair.risers": "Stopnie",
+ "stair.riser": "Wysokość stopnia",
+ "stair.comfort": "2R + T",
+ "stair.tread_auto": "Podstopnica wg reguły",
+ "stair.tread_auto_tip": "Porzuć wpisaną podstopnicę i pozwól regule 2R + T ją ustawić",
+ "stair.broken": "Te schody nie pasują do swoich poziomów",
+ "railing.host_stair": "Osadzona na schodach #{id}",
+ "railing.host_path": "Balustrada szkicowa",
+ "railing.length": "Długość",
+ "stair.deleted_with": "wraz z {n} osadzonymi balustradami"
+}

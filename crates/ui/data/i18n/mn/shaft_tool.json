@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "Босоо нүхнүүд",
+ "quick.cat.shaft": "Босоо нүх",
+ "shaft_tool.browser.shaft": "Босоо нүх #{id}",
+ "shaft_tool.shaft.top": "Дээд түвшин",
+ "shaft_tool.shaft.cuts": "Огтлогдсон элементүүд",
+ "shaft_tool.shaft.cut_area": "Огтлолын талбай",
+ "shaft_tool.shaft.cut_volume": "Огтлолын эзлэхүүн",
+ "elem.no.rooms": "Агуулж буй өрөөгөө дагана"
+}

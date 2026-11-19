@@ -1,0 +1,15 @@
+{
+ "mcp.ask.cancel": "Cancel",
+ "mcp.ask.auto.title": "Let AI agents apply changes without asking?",
+ "mcp.ask.auto.body": "Connected AI agents will apply their changes to drafts at once, without waiting for your confirmation, so a wrong change can land before you see it. Your model still changes only when you press Apply. This lasts until you turn it off, close the editor or open another model.",
+ "mcp.ask.auto.yes": "Apply without asking",
+ "mcp.ask.token.title": "Issue a new token?",
+ "mcp.ask.token.body": "The current token stops working at once: connected AI agents are cut off and will need the new token. It is shown only once, so copy it right away.",
+ "mcp.ask.token.yes": "New token",
+ "mcp.auto.chip": "Auto-apply on",
+ "mcp.auto.chip_tip": "AI agents apply changes to drafts without asking. Ends with this session.",
+ "mcp.auto.ask_again": "Ask again",
+ "mcp.token.once": "Copy this token now: it will not be shown again.",
+ "mcp.renewed": "New token issued: the old one no longer works",
+ "mcp.copied": "Copied"
+}

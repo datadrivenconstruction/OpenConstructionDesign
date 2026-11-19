@@ -1,0 +1,13 @@
+{
+ "cmd.arch.wall_pick": "Parede por linha",
+ "cmd.arch.wall_pick.desc": "Posiciona uma parede sobre uma linha de desenho escolhida no nível atual. F alterna eixo ou face na linha; Tab pega a cadeia conectada. Cada escolha é uma etapa de desfazer. Funciona também com paredes-cortina.",
+ "hint.wall_pick.center": "Parede por linha: escolha uma linha de desenho · eixo sobre a linha · F face · Tab cadeia · Esc sai",
+ "hint.wall_pick.face": "Parede por linha: escolha uma linha de desenho · face sobre a linha, lado do cursor · F eixo · Tab cadeia · Esc sai",
+ "hint.wall_pick.center_chain": "Parede por linha: escolha uma linha para pegar sua cadeia · eixo sobre a linha · F face · Tab uma linha",
+ "hint.wall_pick.face_chain": "Parede por linha: escolha uma linha para pegar sua cadeia · face sobre a linha · F eixo · Tab uma linha",
+ "wall_pick.st.start": "Escolha uma linha de desenho. F: eixo ou face; Tab: cadeia conectada",
+ "wall_pick.st.no_lines": "Nenhuma linha de desenho visível neste nível",
+ "wall_pick.st.miss": "Nenhuma linha de desenho aqui",
+ "wall_pick.st.on_wall": "Esta linha já está sob a parede {id}",
+ "wall_pick.st.tight": "O deslocamento da face não cabe: um segmento da cadeia é menor que a espessura da parede"
+}

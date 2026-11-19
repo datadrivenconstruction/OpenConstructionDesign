@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "Tallentaa koko mallin tai valinnan binaari-STL-tiedostona metreinä tai millimetreinä.",
+ "cmd.data.export_obj.desc": "Tallentaa koko mallin tai valinnan OBJ-tiedostona MTL-tiedoston kanssa: yksi ryhmä elementtiä kohden, värit materiaalin mukaan.",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "OBJ materiaaleilla (.obj)",
+ "open_file.filter.mesh": "3D-verkot (glTF, STEP, STL, OBJ)",
+ "mx.title": "Vie {fmt}",
+ "mx.scope": "Mitä viedään",
+ "mx.scope.all": "Koko malli",
+ "mx.scope.sel": "Valinta ({n} elementtiä)",
+ "mx.units": "Yksiköt tiedostossa",
+ "mx.units.m": "Metrit",
+ "mx.units.mm": "Millimetrit",
+ "mx.export": "Vie…",
+ "mx.saved": "{fmt} tallennettu: {path} ({parts} elementtiä, {tris} kolmiota)",
+ "mx.partial": "{fmt} tallennettu {n} ongelmalla, osia voi puuttua: {path}",
+ "mx.failed": "{fmt}-vienti epäonnistui: {error}",
+ "mx.imported": "{file}: {n} elementtiä tuotu ({tris} kolmiota)",
+ "mx.imported_notes": "{file}: {n} elementtiä tuotu ({tris} kolmiota), {w} huomautusta: {first}"
+}

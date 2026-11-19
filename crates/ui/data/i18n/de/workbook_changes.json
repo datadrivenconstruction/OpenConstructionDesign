@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "Nicht übernommene Arbeitsmappen-Änderungen",
+ "workbook_changes.wb.body": "Schließen oder Wechseln des Projekts verwirft sie.",
+ "workbook_changes.wb.line": "Arbeitsmappen-Import: {n} Änderungen nicht übernommen",
+ "workbook_changes.wb.review": "Prüfen",
+ "workbook_changes.wb.discard": "Verwerfen"
+}

@@ -1,0 +1,13 @@
+{
+ "topo.unit.mm": "mm",
+ "topo.unit.metre": "m",
+ "topo.unit.ft": "ft",
+ "topo.opt.material": "Malzeme",
+ "topo.row.active": "Etkin yüzey",
+ "topo.btn.delete_pad": "Pedi sil",
+ "topo.info.loading": "Yüzey oluşturuluyor…",
+ "topo.info.warn_n": "{n} uyarı",
+ "topo.info.points_label": "Noktalar",
+ "topo.import.all_layers": "Tüm katmanlar",
+ "topo.import.need_layer": "En az bir katman işaretleyin"
+}

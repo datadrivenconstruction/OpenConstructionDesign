@@ -1,0 +1,13 @@
+{
+ "ai.proposal.title": "Tekoälyavustajan ehdotus",
+ "ai.proposal.meta": "{actor} · toiminnot: {ops}",
+ "ai.proposal.apply.desc": "Ottaa koko ehdotuksen käyttöön yhtenä askeleena; Ctrl+Z kumoaa sen",
+ "ai.proposal.applying": "Otetaan käyttöön…",
+ "ai.proposal.applied": "Ehdotus otettiin käyttöön. Ctrl+Z kumoaa sen.",
+ "ai.proposal.applied_resync": "Ehdotus otettiin käyttöön, mutta näkymää ei ole vielä päivitetty. Se päivittyy itsestään; Ctrl+Z kumoaa askeleen.",
+ "ai.proposal.stale": "Malli muuttui tämän ehdotuksen esikatselun jälkeen. Pyydä tekoälyavustajaa ehdottamaan se uudelleen.",
+ "ai.proposal.toast.applied": "Ehdotus otettu käyttöön. Ctrl+Z kumoaa sen.",
+ "ai.proposal.toast.stale": "Malli muuttui esikatselun jälkeen, joten mitään ei otettu käyttöön. Esikatsele uudelleen: pyydä tekoälyavustajaa ehdottamaan se uudelleen.",
+ "ai.proposal.toast.refused": "Ehdotusta ei otettu käyttöön: {reason}",
+ "ai.proposal.rejected": "Ehdotus hylättiin."
+}

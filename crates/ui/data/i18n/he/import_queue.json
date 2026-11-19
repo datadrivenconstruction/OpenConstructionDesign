@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "בתור אחרי המשימה הפועלת: {n}",
+ "import_queue.queue_full": "התור מלא, {n} קבצים לא נוספו",
+ "import_queue.changed": "{name} עודכן אחרי שהפרויקט נוצר. נפתח הפרויקט הקודם.",
+ "import_queue.import_again": "ייבוא מחדש",
+ "import_queue.kept": "הייבוא שהסתיים נשמר",
+ "import_queue.open_it": "פתיחה",
+ "import_queue.sum.head": "ייבוא: {editable} לעריכה (קירות {walls}, פתחים {open}, רצפות {slabs}, חללים {rooms}, אחר {other}), {meshes} כרשת",
+ "import_queue.sum.unchanged": ", ללא שינוי {n}",
+ "import_queue.sum.updated": ", עודכנו {n}",
+ "import_queue.sum.missing": ", לא במקור {n} (נשמרו)",
+ "import_queue.sum.skipped": ", דולגו {n}",
+ "import_queue.sum.warnings": ", אזהרות {n}",
+ "import_queue.import_failed": "הייבוא נכשל: {e}"
+}

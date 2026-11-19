@@ -1,0 +1,10 @@
+{
+ "view_gfx.vv.visible_tip": "Видимий у цьому виді",
+ "view_gfx.vv.enabled_tip": "Застосувати цей фільтр у цьому виді",
+ "view_gfx.vv.reset_tip": "Повернути до типового для проєкту",
+ "view_gfx.vv.col.actions": "Дії",
+ "view_gfx.vv.nothing_to_apply": "Немає змін для застосування",
+ "view_gfx.flt.save_blocked": "Назвіть фільтр і заповніть параметр кожного правила",
+ "view_gfx.flt.confirm_delete": "Видалити для всіх видів?",
+ "view_gfx.flt.param_pick": "Вибрати…"
+}

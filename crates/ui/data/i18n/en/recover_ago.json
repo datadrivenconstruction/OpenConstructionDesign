@@ -1,0 +1,19 @@
+{
+ "recover.ago_now": "just now",
+ "recover.ago_min": {"one": "# min ago", "other": "# min ago"},
+ "recover.ago_hour": {"one": "# hour ago", "other": "# hours ago"},
+ "recover.ago_yesterday": "yesterday",
+ "recover.ago_day": {"one": "# day ago", "other": "# days ago"},
+ "recover.empty": "No snapshots left",
+ "recover.empty_hint": "Nothing to restore for this project.",
+ "recover.all_damaged": "Every snapshot is damaged, none can be restored.",
+ "recover.keys_hint": "Up and Down choose a snapshot, Enter moves to Restore",
+ "recover.row_tip": "Saved {time}",
+ "recover.row_damaged_tip": "Cannot be restored: {reason}",
+ "recover.archive_ask": "Move this snapshot to the archive?",
+ "recover.discard_ask": {
+  "one": "Move the snapshot to the archive? It will not be offered again.",
+  "other": "Move all # snapshots to the archive? They will not be offered again."
+ },
+ "recover.confirm_yes": "Move to archive",
+ "recover.confirm_no": "Keep snapshots"}

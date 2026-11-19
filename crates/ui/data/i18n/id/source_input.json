@@ -1,0 +1,4 @@
+{
+ "source_input.err.number": "“{text}” bukan angka; parameter ini menyimpan angka. Tidak ada yang ditulis",
+ "source_input.err.comma": "“{text}”: gunakan titik untuk desimal (1.5); koma hanya memisahkan ribuan (1,000). Tidak ada yang ditulis"
+}

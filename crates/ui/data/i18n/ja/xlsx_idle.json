@@ -1,0 +1,8 @@
+{
+ "xlsx_idle.idle_title": "取り込む変更はありません",
+ "xlsx_idle.export_name": "書き出し",
+ "xlsx_idle.export_body": "モデルをブックに書き出します。そこで値を編集してから同期してください。",
+ "xlsx_idle.sync_name": "同期",
+ "xlsx_idle.sync_body": "ブックを再読み込みし、違いの一覧を表示します。モデルは適用したときのみ変わります。",
+ "xlsx_idle.last_sync": "前回の同期: {when}"
+}

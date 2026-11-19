@@ -1,0 +1,4 @@
+walls=[(0,0)-(6,0)]
+zoom=100
+# SNAP-1: the wall end within 12 px
+tool(WA) move(5.95,0.05) → snap=Endpoint p=(6,0)

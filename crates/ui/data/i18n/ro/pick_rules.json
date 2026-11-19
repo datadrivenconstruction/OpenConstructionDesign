@@ -1,0 +1,11 @@
+{
+ "pick_rules.filter": "Selectare: toate",
+ "pick_rules.filter.on": "Selectare: {n} dezactivate",
+ "pick_rules.filter.title": "Categorii pe care le poate selecta un clic",
+ "pick_rules.filter.all": "Selectează toate categoriile",
+ "pick_rules.filter.tip": "Filtru de selecție: categoriile debifate sunt ignorate la clic și la trecerea cursorului",
+ "pick_rules.here": "Elemente aici",
+ "pick_rules.here.selected": "selectate",
+ "pick_rules.pinned": "Selectează elementele fixate",
+ "pick_rules.here.row": "{cat} · {len}"
+}

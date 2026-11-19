@@ -1,0 +1,14 @@
+{
+ "ai.hist.badge": "AI",
+ "ai.hist.untitled": "AI-endringer",
+ "ai.hist.tip": "{title}\nBrukt av: {actor}\nAI-modell: {model}",
+ "ai.hist.why": "Hvorfor: {why}",
+ "ai.hist.reverted": "tilbakeført",
+ "ai.hist.revert_one": "Tilbakefør denne AI-batchen",
+ "ai.revert.done": "AI-endringer tilbakeført: {n}. Angre henter dem tilbake.",
+ "ai.revert.empty": "Det finnes ingen AI-endringer å tilbakeføre",
+ "ai.revert.not_ai": "Dette steget er ikke en AI-endring",
+ "ai.revert.already": "Disse AI-endringene er allerede tilbakeført",
+ "ai.revert.opaque": "Ikke tilbakeført: disse AI-endringene kan ikke skilles trygt fra senere arbeid. Ingenting ble endret.",
+ "ai.revert.failed": "Tilbakeføring mislyktes: {e}"
+}

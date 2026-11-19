@@ -1,0 +1,9 @@
+{
+ "ai.plan.reject_ask": {
+  "one": "Avvis # endring?",
+  "other": "Avvis # endringer?"
+ },
+ "ai.plan.reject_ask.hint": "Utkastet og avmerkingene dine forkastes. Modellen forblir slik den er.",
+ "ai.plan.reject_confirm": "Avvis",
+ "ai.plan.reject_keep": "Behold"
+}

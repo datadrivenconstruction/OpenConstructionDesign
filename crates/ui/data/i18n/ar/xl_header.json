@@ -1,0 +1,4 @@
+{
+ "xl.msg.x_cells_above_the_header_on_sheet_x": "{} خلية فوق الرأس في الورقة '{}'",
+ "xl.msg.book_changed_during_export": "حفظ برنامج آخر المصنف أثناء التصدير، فلم يُستبدل؛ صدّره مرة أخرى"
+}

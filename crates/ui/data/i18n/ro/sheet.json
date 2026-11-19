@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "Referință scurtături",
+ "cmd.help.shortcuts.desc": "Arată fiecare scurtătură așa cum o ai acum, pe context. Apasă ? oriunde în afara unui câmp de text.",
+ "sheet.title": "Scurtături de la tastatură",
+ "sheet.filter": "Filtrează după comandă sau tastă",
+ "sheet.filter_label": "Filtrează scurtăturile",
+ "sheet.customize": "Personalizează…",
+ "sheet.close": "Închide",
+ "sheet.esc_close": "pentru a închide",
+ "sheet.none": "Nicio scurtătură nu corespunde",
+ "sheet.none_hint": "Încearcă alt cuvânt sau altă tastă.",
+ "sheet.sec.general": "General",
+ "sheet.sec.plan": "Plan",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "Tabele",
+ "sheet.sec.sheets": "Foi",
+ "sheet.sec.ai": "AI"
+}

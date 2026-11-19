@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "I-flip ang panig ng bisagra",
+ "cmd.edit.flip_hand.desc": "Mina-mirror ang napiling pinto at bintana sa pader para lumipat ang bisagra sa kabilang dulo ng bukas.",
+ "cmd.edit.flip_facing": "I-flip ang panig ng bukas",
+ "cmd.edit.flip_facing.desc": "Ibinabaling ang napiling pinto at bintana sa kabilang panig ng pader.",
+ "opening_grips.flip_hand": "I-flip ang bisagra",
+ "opening_grips.flip_hand.tip": "Lilipat ang bisagra sa kabilang dulo ng bukas (Shift+F)",
+ "opening_grips.flip_facing": "I-flip ang panig",
+ "opening_grips.flip_facing.tip": "Pagbukas sa kabilang panig ng pader (Shift+G)",
+ "opening_grips.flip.done": "Na-flip: {n}",
+ "opening_grips.flip.none": "Pumili ng pinto o bintana para i-flip",
+ "opening_grips.flip.fail": "Hindi na-flip: {why}"
+}

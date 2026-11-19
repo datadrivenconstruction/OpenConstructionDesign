@@ -1,0 +1,14 @@
+{
+ "ai_keys.header_is_key": "Klucze wpisuj w polu Klucz — nagłówki są zapisywane jawnym tekstem",
+ "ai_keys.move": "Przenieś do Klucza",
+ "ai_keys.remove_line": "Usuń z nagłówków",
+ "ai_keys.save_blocked": "Przenieś klucz z nagłówków, aby zapisać",
+ "ai_keys.show": "Pokaż",
+ "ai_keys.hide": "Ukryj",
+ "ai_keys.copy": "Kopiuj",
+ "ai_keys.tokens": "tokeny",
+ "ai_keys.presets": "Gotowe wartości",
+ "ai_keys.preset_k": "{n} tys.",
+ "ai_keys.preset_m": "{n} mln",
+ "ai_keys.images_on": "Obsługiwane"
+}

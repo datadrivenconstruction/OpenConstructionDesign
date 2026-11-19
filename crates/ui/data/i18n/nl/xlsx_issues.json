@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "Overgeslagen rijen en cellen",
+ "xlsx_issues.conflicts_title": "In beide gewijzigd",
+ "xlsx_issues.missing_title": "Blad ontbreekt in het werkboek",
+ "xlsx_issues.look_alike_title": "Bladnaam komt niet overeen",
+ "xlsx_issues.mass_title": "Massale verwijdering vereist bevestiging",
+ "xlsx_issues.sheets_missing": "Bladen {sheets} ontbreken in het werkboek (hernoemd of verwijderd); hun rijen zijn niet vergeleken.",
+ "xlsx_issues.keep_model": "Model behouden",
+ "xlsx_issues.take_book": "Werkboek overnemen",
+ "xlsx_issues.open_book_tip": "Opent het bestand in zijn programma. Er verandert niets in het model; de voorbeeldweergave wordt opnieuw geladen nadat u het werkboek hebt opgeslagen."
+}

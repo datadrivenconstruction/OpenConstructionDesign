@@ -1,0 +1,10 @@
+{
+ "xlsx_dup.dup_undo": "Hoàn tác quyết định",
+ "xlsx_dup.dup_undo_tip": "Các hàng đã thành cấu kiện mới ({n}) được đọc lại với id của chúng",
+ "xlsx_dup.dup_new": "Tạo bản sao đã sửa thành cấu kiện mới",
+ "xlsx_dup.dup_new_tip": "Các hàng {rows} trở thành cấu kiện mới với giá trị của chúng; cấu kiện #{id} giữ giá trị của nó (một bước hoàn tác cùng phần còn lại)",
+ "xl.msg.dup_same": "trùng id {}: giá trị giống hàng {}; bỏ qua hàng",
+ "xl.msg.dup_unchanged": "trùng id {}: bản sao không đổi của hàng đã xuất; bỏ qua hàng",
+ "xl.msg.dup_conflict": "id {} nằm ở các hàng {} với giá trị khác nhau; chưa áp dụng cho id này",
+ "xl.msg.dup_conflict_keep": "id {} nằm ở các hàng {} với giá trị khác nhau; chưa áp dụng cho id này — giữ một hàng"
+}

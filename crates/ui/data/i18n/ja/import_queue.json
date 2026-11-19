@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "実行中のジョブの後ろに待機中: {n}",
+ "import_queue.queue_full": "キューが一杯のため、{n} 個のファイルは追加されませんでした",
+ "import_queue.changed": "{name} はこのプロジェクトの作成後に更新されました。前のプロジェクトを開きました。",
+ "import_queue.import_again": "再度取り込む",
+ "import_queue.kept": "完了した取り込みは保持されます",
+ "import_queue.open_it": "開く",
+ "import_queue.sum.head": "取り込み: 編集可能 {editable} (壁 {walls}、開口 {open}、床 {slabs}、室 {rooms}、その他 {other})、メッシュとして {meshes}",
+ "import_queue.sum.unchanged": "、変更なし {n}",
+ "import_queue.sum.updated": "、更新 {n}",
+ "import_queue.sum.missing": "、ソースにない {n} 件 (保持)",
+ "import_queue.sum.skipped": "、スキップ {n}",
+ "import_queue.sum.warnings": "、警告 {n}",
+ "import_queue.import_failed": "取り込みに失敗しました: {e}"
+}

@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "Bağlantı",
+ "settings.ai_status_desc": "AI asistanının kullandığı model; anahtarlar güvenli depoda kalır",
+ "settings.ai_not_connected": "Bağlı değil",
+ "settings.ai_connect": "Bağlantı ayarları",
+ "settings.ai_connect_desc": "Kendi modelinizin adresi, modeli ve anahtarı: bulut veya yerel",
+ "settings.ai_connect_btn": "Bağlantı ayarları…",
+ "settings.ai_panel": "AI asistanı paneli",
+ "settings.ai_panel_desc": "Sözle sorun, planı gözden geçirin, sonra uygulayın",
+ "settings.ai_open_panel": "AI panelini aç"
+}

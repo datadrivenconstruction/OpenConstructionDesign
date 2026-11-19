@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "Snabbtangentsöversikt",
+ "cmd.help.shortcuts.desc": "Visar varje genväg som den är nu, per sammanhang. Tryck på ? var som helst utanför ett textfält.",
+ "sheet.title": "Snabbtangenter",
+ "sheet.filter": "Filtrera på kommando eller tangent",
+ "sheet.filter_label": "Filtrera genvägar",
+ "sheet.customize": "Anpassa…",
+ "sheet.close": "Stäng",
+ "sheet.esc_close": "för att stänga",
+ "sheet.none": "Inga genvägar matchar",
+ "sheet.none_hint": "Prova ett annat ord eller en annan tangent.",
+ "sheet.sec.general": "Allmänt",
+ "sheet.sec.plan": "Planvy",
+ "sheet.sec.view3d": "3D-vy",
+ "sheet.sec.schedule": "Scheman",
+ "sheet.sec.sheets": "Blad",
+ "sheet.sec.ai": "AI"
+}

@@ -1,0 +1,22 @@
+{
+ "ai.audit.tokens": "{n} tokenia",
+ "ai.audit.filter.all": "Kaikki",
+ "ai.audit.filter.ai": "AI",
+ "ai.audit.filter.me": "Minä",
+ "ai.audit.search": "Hae muutoksia",
+ "ai.audit.search.clear": "Tyhjennä haku",
+ "ai.audit.show_all": "Näytä kaikki",
+ "ai.audit.empty.hint": "Tässä näkyvät mallin tai agentin luonnostelemat tai käyttämät muutokset, kukin paluureitin kanssa.",
+ "ai.audit.no_match": "Mikään muutos ei täsmää suodattimeen.",
+ "ai.audit.show.tip": "Valitse ja näytä elementit, joihin tämä muutos kohdistui",
+ "ai.audit.revert.ask": "Perutaanko ”{what}”? {change}.",
+ "ai.audit.revert.elements": {
+  "one": "# elementin muutos",
+  "other": "# elementin muutosta"
+ },
+ "ai.audit.revert.keeps": "Uudemmat muutokset säilyvät. Peruutus on yksi kumoamisaskel.",
+ "ai.audit.cancel": "Peruuta",
+ "ai.audit.toast.reverted": "Peruttu: {what}",
+ "ai.audit.toast.undone": "Kumottu: {what}",
+ "ai.audit.redo": "Tee uudelleen"
+}

@@ -1,0 +1,10 @@
+{
+ "cmd.view.axes_full": "Buong axes",
+ "cmd.view.axes_full.desc": "Ipinapakita ang X at Y axes bilang buong linya sa plan. Pindutin nang matagal ang F9 para ipakita lamang habang nakapindot.",
+ "settings.axes_full": "Mga axis",
+ "settings.axes_full_desc": "Mga plan axis bilang buong linya sa sheet. Pindutin nang matagal ang F9 para sa mabilisang tingin.",
+ "settings.axes_full_on": "Ipakita ang buong axes",
+ "plan.hud.axes_tip": "Pindutin nang matagal ang {key} para ipakita ang buong axes",
+ "status.axes_full.on": "Naka-on ang buong axes",
+ "status.axes_full.off": "Naka-off ang buong axes"
+}

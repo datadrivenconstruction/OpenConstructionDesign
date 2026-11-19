@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "хэмжсэн {value}, хязгаар {limit}",
+ "ai_checks.check.cap": "{total}-аас {shown} олдвор харуулж байна. Алдааг эхэлж засаад дахин ажиллуулна уу.",
+ "ai_checks.check.run_again": "Дахин ажиллуулах",
+ "ai_checks.check.goto": "Сонгож ойртуулах",
+ "ai_checks.check.never_title": "Одоогоор шалгаагүй",
+ "ai_checks.check.never_hint": "Шалгалтыг ажиллуулахад олдворууд энд гарна.",
+ "ai_checks.check.sec.error": "Алдаа",
+ "ai_checks.check.sec.warning": "Анхааруулга",
+ "ai_checks.check.sec.info": "Тэмдэглэл"
+}

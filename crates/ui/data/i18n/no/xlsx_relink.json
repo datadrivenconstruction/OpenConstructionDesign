@@ -1,0 +1,14 @@
+{
+ "xlsx_relink.title": "Den koblede arbeidsboken ble flyttet eller omdøpt",
+ "xlsx_relink.body": "Arbeidsboken “{file}” er ikke lenger i {folder}. Redigeringer skrevet inn i den kommer tilbake først etter at den er koblet på nytt.",
+ "xlsx_relink.found_one": "Fant “{file}” i {folder}: samme prosjekt og samme eksport. Koble den?",
+ "xlsx_relink.found_many": "{n} arbeidsbøker for dette prosjektet og denne eksporten ble funnet. Velg den som skal kobles:",
+ "xlsx_relink.found_none": "Ingen arbeidsbok fra denne eksporten ble funnet ved siden av. Finn den, eller eksporter en ny arbeidsbok.",
+ "xlsx_relink.link": "Koble “{file}”",
+ "xlsx_relink.find": "Finn den…",
+ "xlsx_relink.find_title": "Finn den koblede arbeidsboken",
+ "xlsx_relink.export_new": "Eksporter ny arbeidsbok",
+ "xlsx_relink.close": "Lukk",
+ "xlsx_relink.gone": "Arbeidsboken “{file}” er ikke lenger i mappen sin. Redigeringer skrevet inn i den kommer tilbake først etter at den er koblet på nytt.",
+ "xlsx_relink.found_one_short": "Fant “{file}”: samme prosjekt og samme eksport. Koble den?"
+}

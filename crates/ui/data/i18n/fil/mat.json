@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "Kongkreto",
+ "mat.masonry": "Masonerya",
+ "mat.brick": "Ladrilyo",
+ "mat.insulation": "Insulasyon",
+ "mat.plaster": "Palitada",
+ "mat.render": "Tapusin",
+ "mat.gypsum": "Tablang gypsum",
+ "mat.glass": "Salamin",
+ "mat.wood": "Kahoy",
+ "mat.steel": "Bakal",
+ "mat.membrane": "Membrano",
+ "mat.other": "Iba pa",
+ "warn.cat.wall": "Pader",
+ "warn.cat.slab": "Plato",
+ "warn.cat.opening": "Butas",
+ "warn.cat.curtain_wall": "Kurtinang pader",
+ "td.mat.custom": "Iba pa…"
+}

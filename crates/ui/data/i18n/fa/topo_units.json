@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "واحدها",
+ "topo_units.unit": "واحدها در فایل",
+ "topo_units.unit.m": "m",
+ "topo_units.unit.cm": "cm",
+ "topo_units.unit.mm": "mm",
+ "topo_units.unit.ft": "ft",
+ "topo_units.unit.usft": "فوت نقشه‌برداری آمریکا",
+ "topo_units.unit.in": "in",
+ "topo_units.unit.from_file": "فایل واحدهایش را مشخص کرده: {unit}",
+ "topo_units.unit.suggested": "فایل واحدی مشخص نکرده. بر اساس اندازه پیشنهاد شد: {unit} — نتیجه زیر را بررسی کنید",
+ "topo_units.extent": "نتیجه بر حسب واحدهای پروژه: {x} × {y} {u} در پلان، بازه ارتفاع {z} {u}",
+ "topo_units.extent.none": "نتیجه: با این انتخاب‌ها چیزی برای ورود نیست",
+ "topo_units.extent.check": "این شبیه یک سایت به نظر نمی‌رسد: واحدها را بررسی کنید"
+}

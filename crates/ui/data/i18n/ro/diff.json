@@ -1,0 +1,7 @@
+{
+ "diff.kind.added": "adăugat",
+ "diff.kind.changed": "modificat",
+ "diff.kind.deleted": "șters",
+ "diff.kind.refused": "respins",
+ "diff.kind.conflict": "conflict"
+}

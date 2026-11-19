@@ -1,0 +1,35 @@
+{
+ "params_list.n_params": {
+  "one": "# معامل",
+  "other": "# معاملًا",
+  "two": "# معاملان",
+  "few": "# معاملات",
+  "many": "# معاملاً",
+  "zero": "# معاملًا"
+ },
+ "params_list.n_values": {
+  "one": "# قيمة",
+  "other": "# قيمًا",
+  "two": "# قيمتان",
+  "few": "# قيم",
+  "many": "# قيمةً",
+  "zero": "# قيمًا"
+ },
+ "params_list.n_elements": {
+  "one": "# عنصر",
+  "other": "# عنصرًا",
+  "two": "# عنصران",
+  "few": "# عناصر",
+  "many": "# عنصراً",
+  "zero": "# عنصرًا"
+ },
+ "params_list.exported": "صُدِّر {params} إلى {file}",
+ "params_list.export_failed": "لم تُصدَّر المعاملات: {why}",
+ "params_list.open_folder": "فتح المجلد",
+ "params_list.delete_tip": "حذف المعامل وقيمه",
+ "params_list.confirm": "حذف {name} وقيمه البالغ عددها {values} في {elements}؟",
+ "params_list.confirm_btn": "حذف",
+ "params_list.cancel": "إلغاء",
+ "params_list.deleted": "حُذف المعامل {name} ({values})",
+ "params_list.undo": "تراجع"
+}

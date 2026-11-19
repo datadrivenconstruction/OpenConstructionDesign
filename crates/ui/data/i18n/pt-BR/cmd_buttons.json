@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}, no nível",
+ "cmd_buttons.purge.undo": "A remoção é uma etapa de desfazer.",
+ "cmd_buttons.unpin.none": "Nenhum item selecionado está fixado",
+ "cmd_buttons.change_type.none": "Selecione primeiro as paredes: o tipo delas muda em uma etapa",
+ "cmd_buttons.units.metric": "Unidades: métricas",
+ "cmd_buttons.units.imperial": "Unidades: pés e polegadas",
+ "cmd_buttons.units.back": "Voltar",
+ "cmd_buttons.underlay.on": "Sobreposição ativada: o nível abaixo é mostrado esmaecido",
+ "cmd_buttons.underlay.off": "Sobreposição desativada",
+ "cmd_buttons.underlay.none": "Sobreposição ativada, mas o nível abaixo não tem o que mostrar",
+ "cmd_buttons.zoom_sel.no_shape": "A seleção não tem forma para enquadrar nesta vista",
+ "cmd_buttons.close.base": "As abas de planta e 3D permanecem abertas; abra um corte, uma prancha ou uma vista de desenho para fechá-la",
+ "tool.equipment": "Equipamento",
+ "hint.equipment.place": "Equipamento: escolha o local · Esc para sair",
+ "cmd_buttons.table.opened": "Tabela aberta ao lado do modelo",
+ "cmd_buttons.circuits.tip": "Abre a lista de circuitos elétricos deste modelo"
+}

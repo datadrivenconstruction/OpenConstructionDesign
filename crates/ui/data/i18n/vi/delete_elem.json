@@ -1,0 +1,9 @@
+{
+ "elem.deleted": "Đã xóa phần tử: {n}",
+ "elem.deleted_kept": "Đã xóa phần tử: {n}; giữ nguyên: {k} (tấm và phần tử không thể xóa)",
+ "elem.not_deleted": "chưa xóa: {e}",
+ "elem.not_deletable": "Phần tử này không thể xóa",
+ "elem.panel": "tấm tường kính",
+ "elem.panel_refused": "Tấm là một phần của tường kính và không thể xóa riêng. Hãy chọn toàn bộ tường để xóa.",
+ "elem.reload_failed": "Đã xóa, nhưng góc nhìn chưa cập nhật: {e}"
+}

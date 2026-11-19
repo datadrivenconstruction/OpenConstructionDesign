@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "Мансарда ачылышы",
+ "cmd.arch.roof_opening": "Чатырдагы ачылыш",
+ "cmd.arch.roof_extrusion": "Чатыр сүрүү менен",
+ "cmd.arch.ceiling_opening": "Шыптагы ачылыш",
+ "cmd.str.slab_opening": "Кабаттагы ачылыш",
+ "cmd.ctx.wall.detach": "Башын ажыратуу",
+ "cmd.ctx.floor.sketch": "Чегин түзөтүү",
+ "cmd.ctx.floor.shape": "Формасын түзөтүү",
+ "host_shape.shape.elev_prompt": "белгилөө, мм…",
+ "host_shape.shape.elev_mm": "{v} мм",
+ "host_shape.sketch.no_host": "бул кабатта чек астында негиз жок",
+ "host_shape.issue.roof": "чатыр {id}: {e}",
+ "host_shape.issue.ceiling": "шып {id}: {e}",
+ "host_shape.status.select_slab": "плитаны тандаңыз",
+ "host_shape.status.select_walls": "дубалдарды тандаңыз",
+ "host_shape.status.no_roof_or_level": "үстүндө чатыр же кабат жок",
+ "host_shape.status.top_attached": "дубалдардын башы бекитилди",
+ "host_shape.status.top_detached": "дубалдардын башы ажыратылды",
+ "host_shape.status.straight_wall": "түз дубал керек",
+ "host_shape.status.roof_extruded": "сүрүү менен чатыр түзүлдү",
+ "warn.kind.cut": "Кесүү же бириктирүү түзүлгөн эмес"
+}

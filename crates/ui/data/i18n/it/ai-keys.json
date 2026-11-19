@@ -1,0 +1,14 @@
+{
+ "ai_keys.header_is_key": "Le chiavi vanno nel campo Chiave — le intestazioni sono salvate in chiaro",
+ "ai_keys.move": "Sposta in Chiave",
+ "ai_keys.remove_line": "Rimuovi dalle intestazioni",
+ "ai_keys.save_blocked": "Sposta la chiave fuori dalle intestazioni per salvare",
+ "ai_keys.show": "Mostra",
+ "ai_keys.hide": "Nascondi",
+ "ai_keys.copy": "Copia",
+ "ai_keys.tokens": "token",
+ "ai_keys.presets": "Predefiniti",
+ "ai_keys.preset_k": "{n}k",
+ "ai_keys.preset_m": "{n}M",
+ "ai_keys.images_on": "Supportate"
+}

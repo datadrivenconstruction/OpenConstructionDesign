@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "Zapisuje cały model lub zaznaczenie jako binarny STL w metrach lub milimetrach.",
+ "cmd.data.export_obj.desc": "Zapisuje cały model lub zaznaczenie jako OBJ z plikiem MTL: jedna grupa na element, kolory według materiału.",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "OBJ z materiałami (.obj)",
+ "open_file.filter.mesh": "Siatki 3D (glTF, STEP, STL, OBJ)",
+ "mx.title": "Eksportuj {fmt}",
+ "mx.scope": "Co wyeksportować",
+ "mx.scope.all": "Cały model",
+ "mx.scope.sel": "Zaznaczenie ({n} elementów)",
+ "mx.units": "Jednostki w pliku",
+ "mx.units.m": "Metry",
+ "mx.units.mm": "Milimetry",
+ "mx.export": "Eksportuj…",
+ "mx.saved": "Zapisano {fmt}: {path} ({parts} elementów, {tris} trójkątów)",
+ "mx.partial": "Zapisano {fmt} z {n} problemami, część brył może brakować: {path}",
+ "mx.failed": "Eksport {fmt} nie powiódł się: {error}",
+ "mx.imported": "{file}: zaimportowano {n} elementów ({tris} trójkątów)",
+ "mx.imported_notes": "{file}: zaimportowano {n} elementów ({tris} trójkątów), {w} uwag: {first}"
+}

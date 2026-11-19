@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "Malayang ibabaw",
+ "cmd.mass.panelize": "Hatiin sa mga panel",
+ "cmd.mass.surface_shell": "Bubong sa ibabaw",
+ "cmd.mass.thicken": "Kapal",
+ "hint.mass.freeform.first": "Malayang ibabaw: unang sulok ng hugis-parihaba ng plano · i-type ang taas ng umbok · Esc — kanselahin",
+ "hint.mass.freeform.next": "Malayang ibabaw: kabilang sulok · i-type ang taas ng umbok · Esc — kanselahin",
+ "hint.mass.panelize.first": "Mga panel: pumili ng malayang ibabaw sa 3D · Esc — kanselahin",
+ "hint.mass.panelize.value": "Mga panel: i-type ang laki ng panel · Enter — ilapat · Esc — kanselahin",
+ "hint.mass.surface_shell.first": "Bubong sa ibabaw: pumili ng malayang ibabaw sa 3D · Esc — kanselahin",
+ "hint.mass.surface_shell.value": "Bubong sa ibabaw: i-type ang kapal · Enter — ilapat · Esc — kanselahin",
+ "hint.mass.thicken.first": "Kapal: pumili ng malayang ibabaw sa 3D · Esc — kanselahin",
+ "hint.mass.thicken.value": "Kapal: i-type ang kapal (0 — walang kapal na ibabaw) · Enter — ilapat · Esc — kanselahin",
+ "status.mass.pick_surface": "Pumili ng malayang ibabaw",
+ "status.mass.freeform_small": "Masyadong maliit ang parihaba: hindi bababa sa 0.5 m sa bawat direksyon",
+ "name.mass.freeform": "Malayang ibabaw",
+ "rgroup.mass_free": "Advanced"
+}

@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "потребителски",
+ "draw_quality.custom.tip": "{name}: запис на този проект",
+ "draw_quality.custom_note": "Записите с маркировка „потребителски“ принадлежат на този проект.",
+ "draw_quality.unsaved.lib_body": "Да се запазят ли в библиотеката, или да се отхвърлят?",
+ "draw_quality.unsaved.styles_body": "Да се приложат ли към изгледа, или да се отхвърлят?",
+ "draw_quality.unsaved.both_body": "Да се приложат ли, или да се отхвърлят?",
+ "draw_quality.halftone": "Полутон за {category}",
+ "draw_quality.styles.name": "Стилове на линии",
+ "draw_quality.styles.other_level": "Незапазени промени на стилове на ниво {level}: приложете ги или ги отменете, за да редактирате това ниво."
+}

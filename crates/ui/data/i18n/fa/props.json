@@ -1,0 +1,18 @@
+{
+ "props.multi.title": {
+  "one": "# عنصر",
+  "other": "# عنصر"
+ },
+ "props.multi.cats": {
+  "one": "# دسته",
+  "other": "# دسته"
+ },
+ "props.multi.varies": {
+  "one": "متغیر (#)",
+  "other": "متغیر (#)"
+ },
+ "props.multi.clear": "پاک کردن انتخاب",
+ "props.multi.undo": "واگرد",
+ "props.multi.narrowed": "انتخاب: {n} · {name}",
+ "props.multi.chip_tip": "{name}: {n}  ·  کلیک ویژگی‌هایشان را نشان می‌دهد، Ctrl+کلیک فقط همین‌ها را نگه می‌دارد"
+}

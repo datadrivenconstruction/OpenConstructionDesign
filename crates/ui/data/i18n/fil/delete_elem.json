@@ -1,0 +1,9 @@
+{
+ "elem.deleted": "Mga elementong nabura: {n}",
+ "elem.deleted_kept": "Mga elementong nabura: {n}; naiwan: {k} (mga panel at elementong hindi mabubura)",
+ "elem.not_deleted": "hindi nabura: {e}",
+ "elem.not_deletable": "Hindi mabubura ang elementong ito",
+ "elem.panel": "panel ng curtain wall",
+ "elem.panel_refused": "Ang panel ay bahagi ng curtain wall nito at hindi mabubura nang mag-isa. Piliin ang buong dingding para mabura ito.",
+ "elem.reload_failed": "Nabura, pero hindi nag-update ang view: {e}"
+}

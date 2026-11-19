@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "Importált hálók",
+ "mat_mesh.mesh.none_selected": "Jelöljön ki importált hálókat a 3D nézetben, hogy megkapják ezt az anyagot.",
+ "mat_mesh.mesh.current": "Első kijelölt háló: {material}",
+ "mat_mesh.mesh.current_none": "Az első kijelölt hálónak nincs anyaga.",
+ "mat_mesh.mesh.assign": "Hozzárendelés a {n} kijelöltre",
+ "mat_mesh.mesh.assign_tip": "A valósághű stílus ezt az anyag textúráját mutatja a kijelölt hálókon",
+ "mat_mesh.mesh.assign_cat": "Hozzárendelés a(z) {category} kategóriához",
+ "mat_mesh.mesh.assign_cat_tip": "Az adott kategória minden importált hálója, amelynek nincs saját anyaga",
+ "mat_mesh.mesh.clear": "Kijelöltek törlése",
+ "mat_mesh.mesh.clear_tip": "A kijelölt hálók visszatérnek a kategóriaanyagra vagy az egyszínű színre",
+ "mat_mesh.mesh.clear_cat": "Kategória törlése"
+}

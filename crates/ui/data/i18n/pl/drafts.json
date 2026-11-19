@@ -1,0 +1,8 @@
+{
+ "drafts.drafts.head": "Otwarte edytory zawierają edycje, których nie ma jeszcze w projekcie:",
+ "drafts.draft.family": "Rodzina „{name}”",
+ "drafts.draft.line": "Biblioteka linii: {name}",
+ "drafts.draft.styles": "Style linii zakresu widoku",
+ "drafts.btn.save_all": "Zapisz wszystko",
+ "drafts.drafts.refused": "Szkicu nie udało się zapisać. Nic nie zamknięto; edytor ze szkicem jest otwarty."
+}

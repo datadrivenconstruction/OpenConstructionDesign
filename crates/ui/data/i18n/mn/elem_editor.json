@@ -1,0 +1,4 @@
+{
+ "elem.spreadsheet.applied": "XLSX-ээс импорт хийгдлээ: {what}",
+ "elem.spreadsheet.failed": "XLSX хүснэгт импорт амжилтгүй: {e}"
+}

@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "Birimler",
+ "topo_units.unit": "Dosyadaki birimler",
+ "topo_units.unit.m": "m",
+ "topo_units.unit.cm": "cm",
+ "topo_units.unit.mm": "mm",
+ "topo_units.unit.ft": "ft",
+ "topo_units.unit.usft": "ABD arazi ft",
+ "topo_units.unit.in": "in",
+ "topo_units.unit.from_file": "Dosya birimlerini belirtiyor: {unit}",
+ "topo_units.unit.suggested": "Dosya birim belirtmiyor. Kapsama göre önerilen: {unit} — aşağıdaki sonucu kontrol edin",
+ "topo_units.extent": "Proje birimlerinde sonuç: planda {x} × {y} {u}, yükseklik aralığı {z} {u}",
+ "topo_units.extent.none": "Sonuç: bu seçimlerle içe aktarılacak bir şey yok",
+ "topo_units.extent.check": "Bu bir arsa gibi görünmüyor: birimleri kontrol edin"
+}

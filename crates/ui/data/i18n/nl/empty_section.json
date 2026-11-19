@@ -1,0 +1,11 @@
+{
+ "empty.sv_notfound.title": "Weergave niet gevonden",
+ "empty.sv_notfound.hint": "Deze weergave is verwijderd of maakt niet meer deel uit van het project.",
+ "empty.sv_notfound.action": "Weergave sluiten",
+ "empty.sv_cuts_nothing.title": "Deze doorsnede snijdt niets",
+ "empty.sv_cuts_nothing.hint": "De snijlijn raakt binnen zijn diepte geen wanden, vloeren of openingen. Verplaats de lijn of maak de weergave dieper.",
+ "empty.sv_cuts_nothing.action": "Tonen op plattegrond",
+ "empty.sv_shows_nothing.title": "Dit aanzicht toont niets",
+ "empty.sv_shows_nothing.hint": "Er vallen geen wanden, vloeren of openingen binnen de weergavediepte. Verplaats de weergavelijn of maak de weergave dieper.",
+ "empty.sv_shows_nothing.action": "Tonen op plattegrond"
+}

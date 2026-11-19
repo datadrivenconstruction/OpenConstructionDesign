@@ -1,0 +1,6 @@
+{
+ "cmd.ui.pane.next": "Nächstes Fenster",
+ "cmd.ui.pane.next.desc": "Verschiebt den Tastaturfokus auf das nächste sichtbare Fenster: Browser, Zeichenfläche, Eigenschaften, Chat.",
+ "cmd.ui.pane.prev": "Vorheriges Fenster",
+ "cmd.ui.pane.prev.desc": "Verschiebt den Tastaturfokus auf das vorherige sichtbare Fenster."
+}

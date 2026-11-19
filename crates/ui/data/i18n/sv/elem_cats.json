@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "En massa kan inte vridas eller speglas: dess formhistorik saknar ett roterat steg. Flytta eller kopiera den, eller rita om den i den nya riktningen.",
+ "sched_cats.col.name": "Namn",
+ "sched_cats.col.material": "Materialtyp",
+ "sched_cats.col.void": "Hålrum",
+ "sched_cats.col.inplace": "På plats",
+ "sched_cats.col.volume": "Nettovolym",
+ "sched_cats.col.area": "Ytarea",
+ "sched_cats.col.floor_area": "Golvarea",
+ "sched_cats.col.thickness": "Tjocklek",
+ "sched_cats.col.points": "Punkter",
+ "elem.toposolid.points": "Mätpunkter",
+ "elem.toposolid.count": "Punkter",
+ "elem.toposolid.low": "Lägst",
+ "elem.toposolid.high": "Högst",
+ "elem.toposolid.edit": "Redigera punkter",
+ "elem.toposolid.edit_tip": "Välj, dra och ange höjden för mätpunkter i planen",
+ "elem.toposolid.pick_hint": "Klicka på en punkt i planen för att välja den. Klicka igen för att lägga till eller ta bort.",
+ "elem.toposolid.z": "Höjd ({n})",
+ "elem.toposolid.mixed": "De valda punkterna skiljer sig åt; ett nytt värde sätter alla.",
+ "elem.toposolid.edit_help": "Dra en punkt för att flytta den. Skriv ett värde och tryck Enter för att ange höjden. Backspace tar bort de valda punkterna, Esc lämnar.",
+ "elem.toposolid.done": "Klar"
+}

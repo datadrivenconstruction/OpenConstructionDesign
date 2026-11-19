@@ -1,0 +1,4 @@
+{
+ "tool.err.drawing_open": "Tegnelinjerne omkring dette punkt lukkes ikke til en kontur",
+ "tool.err.drawing_crossing": "Tegnekonturen omkring dette punkt krydser sig selv"
+}

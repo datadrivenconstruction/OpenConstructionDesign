@@ -1,0 +1,11 @@
+{
+ "sketch.points": "Puncte",
+ "sketch.rect": "Dreptunghi",
+ "sketch.circle": "Cerc",
+ "sketch.polygon": "Poligon",
+ "sketch.radius": "R",
+ "sketch.sides": "Laturi",
+ "sketch.circum": "Circumscris",
+ "sketch.shape.tip": "Forma schiței (A comută). Dreptunghi: două colțuri. Cerc și poligon: centru, apoi rază. Tastați o dimensiune și apăsați Enter pentru a o fixa.",
+ "tool.err.zero_size": "Dimensiune zero: mutați al doilea punct departe de primul"
+}

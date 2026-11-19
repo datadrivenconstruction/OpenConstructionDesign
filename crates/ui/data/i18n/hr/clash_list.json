@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "Sve",
+ "clash_list.only_selected": "Samo odabrano",
+ "clash_list.tolerance": "Tolerancija",
+ "clash_list.gap": "Razmak",
+ "clash_list.export": "Izvoz",
+ "clash_list.col.volume": "Volumen",
+ "clash_list.fix.up": "Pomakni gore",
+ "clash_list.fix.down": "Pomakni dolje",
+ "clash_list.fix.sleeve": "Čahura",
+ "clash_list.apply_fix": "Primijeni ispravak",
+ "clash_list.err.tol": "Tolerancija: unesite duljinu (0 ili više), npr. 50 ili 2 in",
+ "clash_list.sleeve_no_host": "Čahura treba zid ili ploču u paru",
+ "clash_list.err.gap": "Razmak: unesite duljinu (0 ili više), npr. 50 ili 2 in"
+}

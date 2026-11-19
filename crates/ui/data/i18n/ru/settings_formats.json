@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "Что делать после выгрузки книги",
+ "settings.area_decimals_desc": "Знаков после запятой в площадях",
+ "settings.volume_decimals_desc": "Знаков после запятой в объёмах",
+ "settings.frac_desc": "Наименьшая доля дюйма в имперских длинах",
+ "settings.small_area_desc": "Площади меньше квадратного фута показывать в квадратных дюймах",
+ "settings.sample_desc": "Как выглядят числа при текущем выборе",
+ "autosave.title_desc": "Хранить копию открытого проекта для восстановления",
+ "autosave.interval_desc": "Время между копиями для восстановления",
+ "autosave.keep_desc": "Более старые копии удаляются",
+ "autosave.folder_desc": "Пусто означает папку по умолчанию",
+ "autosave.remind_desc": "Напоминать о сохранении проекта, у которого ещё нет файла",
+ "settings.backend_desc": "Используемый графический адаптер",
+ "settings.news_desc": "Что изменилось в этой версии",
+ "settings.assoc_default_desc": "Сделать приложение основным для файлов моделей",
+ "settings.data_dir_desc": "Здесь лежат кеши, копии для восстановления и журналы."
+}

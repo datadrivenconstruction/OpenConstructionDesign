@@ -1,0 +1,16 @@
+{
+ "cmd.drawing.to_detail": "Plano a detalle",
+ "cmd.drawing.to_detail.desc": "Convierte las primitivas de plano seleccionadas, o todo el plano de esta planta, en líneas de detalle, notas de texto y regiones sobre la planta. El plano no cambia.",
+ "detail_items.st.no_drawing": "No hay plano en esta planta",
+ "detail_items.st.nothing": "Nada que convertir: no hay líneas, arcos, textos ni rellenos en las capas visibles",
+ "detail_items.st.done": "Elementos de detalle añadidos: líneas {lines}, textos {texts}, regiones {regions}",
+ "detail_items.st.failed": "No se pudieron añadir elementos de detalle: {e}",
+ "detail_items.st.warn": "Elementos de detalle añadidos, pero la vista no se pudo actualizar (líneas {lines}, textos {texts}, regiones {regions}): {e}. Deshacer los elimina.",
+ "detail_items.st.bad_view": "Los elementos de detalle requieren una vista de planta o sección",
+ "detail_items.st.no_transform": "Esta vista no tiene un sistema de coordenadas válido para el plano; no se añadió nada",
+ "drafting_tools.free.plan_only": "Este comando trabaja con elementos de planta; abra una planta",
+ "drafting_tools.free.zero": "Los dos puntos coinciden; no se añadió nada",
+ "drafting_tools.free.select_first": "Primero seleccione los elementos de esta vista que desea distribuir",
+ "drafting_tools.free.pick_item": "Haga clic en un elemento de esta vista para etiquetarlo",
+ "drafting_tools.free.dim_kind": "En una vista de delineación solo funcionan las cotas lineales"
+}

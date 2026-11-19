@@ -1,0 +1,11 @@
+{
+ "job.stage.prepare": "جارٍ تجهيز المشروع",
+ "open_guard.already_open": "{name} مفتوح بالفعل",
+ "open_guard.from_cache": "{name}: فُتح من ذاكرة الاستيراد المؤقتة",
+ "open_guard.known_project": "{name} استُورد من قبل: جارٍ فتح ذلك المشروع",
+ "open_guard.locate": "تحديد الموقع",
+ "open_guard.mem_low": "ذاكرة منخفضة: ميزانية الشبكة مخفّضة إلى النصف، وبناء مستويات التفصيل متوقف",
+ "open_guard.mem_low_short": "ذاكرة منخفضة: بناء مستويات التفصيل متوقف حتى تتحرر الذاكرة",
+ "open_guard.no_window": "تعذّر العثور على نافذة ذلك المشروع",
+ "open_guard.switch_window": "الانتقال إلى تلك النافذة"
+}

@@ -1,0 +1,6 @@
+{
+ "vv_conflict.styles.conflict": "Style obiektów edytowanej kategorii zmieniły się w modelu (cofnięcie lub inne okno), gdy to okno miało zmiany. Twoje zmiany zostały zachowane.",
+ "vv_conflict.styles.keep": "Zachowaj moje zmiany",
+ "vv_conflict.styles.reload": "Wczytaj ponownie",
+ "vv_conflict.styles.answer_first": "Wybierz Zachowaj moje zmiany lub najpierw Wczytaj ponownie"
+}

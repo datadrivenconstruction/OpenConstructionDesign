@@ -1,0 +1,14 @@
+{
+ "xlsx_relink.title": "Seotud töövihik on teisaldatud või ümber nimetatud",
+ "xlsx_relink.body": "Töövihik „{file}“ pole enam kaustas {folder}. Sinna sisestatud muudatused tulevad tagasi alles pärast uuesti seostamist.",
+ "xlsx_relink.found_one": "Leiti „{file}“ kaustast {folder}: sama projekt ja sama eksport. Kas seostada?",
+ "xlsx_relink.found_many": "Leiti {n} selle projekti ja selle ekspordi töövihikut. Vali seostatav:",
+ "xlsx_relink.found_none": "Selle kõrvalt ei leitud selle ekspordi töövihikut. Otsi see üles või ekspordi uus töövihik.",
+ "xlsx_relink.link": "Seosta „{file}“",
+ "xlsx_relink.find": "Otsi üles…",
+ "xlsx_relink.find_title": "Leia seotud töövihik",
+ "xlsx_relink.export_new": "Ekspordi uus töövihik",
+ "xlsx_relink.close": "Sulge",
+ "xlsx_relink.gone": "Töövihik „{file}“ pole enam oma kaustas. Sinna sisestatud muudatused tulevad tagasi alles pärast uuesti seostamist.",
+ "xlsx_relink.found_one_short": "Leiti „{file}“: sama projekt ja sama eksport. Kas seostada?"
+}

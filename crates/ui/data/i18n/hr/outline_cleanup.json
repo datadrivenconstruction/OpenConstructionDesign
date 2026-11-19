@@ -1,0 +1,15 @@
+{
+ "cmd.ctx.floor.clean_outline": "Očisti obris",
+ "cmd.ctx.floor.clean_outline.desc": "Uklanja uske šiljke tamo gdje se obris poda vraća na sebe. Prvo prikazuje pregled; jedan korak poništavanja.",
+ "outline_cleanup.title": "Očisti obris",
+ "outline_cleanup.intro": "Obris ovog poda vraća se na sebe u uskim šiljcima: {n}. Čišćenje ih uklanja; sve ostalo ostaje kako jest.",
+ "outline_cleanup.legend_before": "Debela linija: obris sada",
+ "outline_cleanup.legend_after": "Tanka linija: obris nakon čišćenja",
+ "outline_cleanup.undo": "Ovo možete poništiti u jednom koraku.",
+ "outline_cleanup.apply": "Očisti",
+ "outline_cleanup.cancel": "Odustani",
+ "outline_cleanup.done": "Obris očišćen, uklonjeni šiljci: {n}",
+ "outline_cleanup.none": "Obris ovog poda nema šiljaka",
+ "outline_cleanup.failed": "Obris nije bilo moguće očistiti",
+ "outline_cleanup.changed": "Obris se promijenio nakon pregleda; ništa nije zapisano. Provjerite novi pregled."
+}

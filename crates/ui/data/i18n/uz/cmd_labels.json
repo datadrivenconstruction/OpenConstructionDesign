@@ -1,0 +1,14 @@
+{
+ "cmd.arch.wall.tile": "Devor",
+ "cmd.arch.door.tile": "Eshik",
+ "cmd.arch.window.tile": "Deraza",
+ "cmd.arch.floor.tile": "Pol",
+ "cmd.mod.move.tile": "Ko'chirish",
+ "cmd.mod.copy.tile": "Nusxa",
+ "cmd.mod.rotate.tile": "Aylantirish",
+ "cmd.mod.mirror.tile": "Aks",
+ "cmd.mod.trim.tile": "Qirqish",
+ "cmd.mod.delete.tile": "O'chirish",
+ "cmd.ann.dim.tile": "O'lcham",
+ "cmd.ann.text.tile": "Matn"
+}

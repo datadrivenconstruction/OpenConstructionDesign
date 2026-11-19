@@ -1,0 +1,8 @@
+{
+ "empty.start_recent.title": "Zatím žádné nedávné projekty",
+ "empty.start_recent.hint": "Projekty, které otevřete, se zobrazí zde. Začněte ukázkovým modelem.",
+ "empty.start_recent.action": "Otevřít ukázku",
+ "start.recent_open_file": "Otevřít soubor…",
+ "start.forgot": "Odebráno z nedávných: {name}",
+ "start.forgot_undo": "Zpět"
+}

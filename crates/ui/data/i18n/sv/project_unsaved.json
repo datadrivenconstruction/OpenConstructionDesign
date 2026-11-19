@@ -1,0 +1,7 @@
+{
+ "project_unsaved.unsaved.model": "Modelländringar är inte sparade.",
+ "project_unsaved.unsaved.drawings": {
+  "one": "# placerad ritning är inte sparad i projektet: dess ändringar går förlorade.",
+  "other": "# placerade ritningar är inte sparade i projektet: deras ändringar går förlorade."
+ }
+}

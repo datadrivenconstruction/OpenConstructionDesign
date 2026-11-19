@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "Filtruj wiersz pod nagłówkami. Tekst: fragment; liczby: >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "Pokaż lub ukryj kolumny",
+ "sched_toolbar.groups_tip": "Grupuj wiersze według kolumn, z sumami pośrednimi",
+ "sched_toolbar.formulas_tip": "Kolumny obliczeniowe",
+ "sched_toolbar.phase": "Faza",
+ "sched_toolbar.phase_tip": "Z której fazy pobierane są wiersze",
+ "sched_toolbar.copy_tip": "Zaznaczone wiersze (lub wszystkie widoczne) jako TSV",
+ "sched_toolbar.import_tip": "Odczytaj ponownie wyeksportowane zestawienie: wiersze po Id, kolumny po nagłówku; najpierw liczby, potem jeden krok cofania",
+ "sched_toolbar.export_tip": "Widoczne wiersze i kolumny z sumami; liczby pozostają liczbami",
+ "sched_toolbar.need_table": "Najpierw otwórz zestawienie",
+ "sched_toolbar.busy_open": "Okno wyboru pliku jest już otwarte",
+ "sched_toolbar.busy_save": "Okno zapisu jest już otwarte",
+ "sched_toolbar.clear_filter": "Wyczyść filtr",
+ "sched_toolbar.fields_title": "Kolumny"
+}

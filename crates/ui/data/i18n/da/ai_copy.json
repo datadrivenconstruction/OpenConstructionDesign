@@ -1,0 +1,8 @@
+{
+ "cmd.file.save_copy": "Gem en kopi til en anden…",
+ "cmd.file.save_copy.desc": "Gemmer en kopi af projektet uden AI-samtykke og, medmindre du vælger andet, uden AI-journalen. Dette projekt forbliver, som det er.",
+ "ai.copy.title": "Gem en kopi",
+ "ai.copy.journal": "Medtag AI-journalen i kopien? Journalen indeholder anmodninger, svar og adresser. Samtykke til sky kopieres aldrig: den anden person beslutter selv. Vælg Nej for at udelade journalen.",
+ "ai.copy.done": "Kopi gemt: {name}",
+ "ai.copy.same": "Vælg en anden fil: en kopi kan ikke erstatte det åbne projekt."
+}

@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "Пустой ввод.",
+ "units.err.not_number": "Не число в позиции {pos}.",
+ "units.err.unknown_unit": "Неизвестная единица: {unit}.",
+ "units.err.non_positive": "Длина должна быть больше нуля.",
+ "units.err.too_large": "Длина не должна превышать {max} м.",
+ "units.err.bad_angle": "Угол задаётся числом градусов.",
+ "units.err.unknown_name": "Неизвестное имя: {name}. Значение не изменено.",
+ "units.err.cycle": "Цикл в формулах на {name}. Значение не изменено.",
+ "units.err.bad_expr": "Не удаётся разобрать выражение, позиция {pos}. Значение не изменено.",
+ "units.err.div_zero": "Деление на ноль, позиция {pos}. Значение не изменено.",
+ "units.err.invalid": "Неверное число.",
+ "units.err.kept": "Не изменено: {reason}"
+}

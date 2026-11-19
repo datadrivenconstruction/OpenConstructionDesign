@@ -1,0 +1,100 @@
+id = "H03_process_plant"
+tier = "hard"
+group = "Process facilities"
+title = "Chemical process plant with pipe racks"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "Small chemical process plant outdoors: a jacketed reactor, two feed tanks, a distillation column with reboiler and condenser, pumps as duty/standby pairs, a couple of heat exchangers. A steel pipe rack about 4 m high carrying the process lines between the equipment, nozzles on every vessel with the lines actually connected to them, pipes sloped where they need to drain, supports every few metres, access platforms and caged ladders round the column and reactor, and a bund wall round the tank farm. Tell me line sizes and services."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "comp:vessel|tank|reactor|column|drum|exchanger|boiler|condenser|reboiler"
+min = 7.0
+
+[[oracle.count]]
+spec = "comp:pump"
+min = 3.0
+
+[[oracle.count]]
+spec = "comp:nozzle|flange"
+min = 10.0
+
+[[oracle.count]]
+spec = "mep:pipe"
+min = 40.0
+
+[[oracle.count]]
+spec = "comp:support|hanger|shoe|guide|bracket"
+min = 15.0
+
+[[oracle.count]]
+spec = "railing+comp:platform|grating"
+min = 6.0
+
+[[oracle.count]]
+spec = "comp:ladder+stair"
+min = 3.0
+
+[[oracle.count]]
+spec = "col+beam"
+min = 20.0
+
+[[oracle.count]]
+spec = "comp:valve"
+min = 8.0
+
+[[oracle.geom]]
+kind = "mep_connected"
+components_max = 1.0
+ends_min = 0.9
+
+[[oracle.geom]]
+kind = "mep_clashes"
+max = 0.0
+
+[[oracle.text]]
+name = "lists lines with service and size"
+re = "(DN ?\\d+|\\d+ ?mm|\\d+\\\"|NPS)"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1
+"IfcDuctSegment|IfcPipeSegment|IfcCableCarrierSegment" = 1
+"IfcBeam" = 1
+"IfcColumn" = 1
+
+[[oracle.geom]]
+kind = "mep_free_ends"
+max = 0.0
+
+[oracle.checks]
+new_max = 0
+
+[[oracle.geom]]
+kind = "sizes_typical"
+share_max = 0.25
+errors_max = 0.0
+
+[[oracle.geom]]
+kind = "ifc_wellformed"
+
+[[oracle.receipt]]
+field = "created"
+min = 1.0
+
+[[oracle.receipt]]
+field = "blocked"
+max = 0.0
+
+[[oracle.geom]]
+kind = "equipment_by_kind"
+kinds = "vessel|tank|reactor|column|drum|exchanger|boiler|condenser|reboiler:7;pump:3;valve:8"
+
+[[oracle.geom]]
+kind = "pipe_nozzles"
+nozzle = "nozzle|flange"
+share_min = 0.9

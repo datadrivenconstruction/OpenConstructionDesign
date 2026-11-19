@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "Cofnięto — Ctrl+Y ponawia",
+ "history.hist.empty": "Brak zmian",
+ "history.hist.empty_hint": "Twoje edycje pojawią się tutaj. Kliknij dowolny krok, aby do niego wrócić.",
+ "history.hist.revert_all_n": "Cofnij wszystkie zmiany AI ({n})"
+}

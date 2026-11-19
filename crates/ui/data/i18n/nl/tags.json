@@ -1,0 +1,13 @@
+{
+ "tags.gone": "Het merk bestaat niet meer",
+ "tags.readonly_wall": "Een wandmerk toont het type en kan hier niet worden bewerkt: wijzig het wandtype",
+ "tags.readonly_comp": "Een componentmerk toont de familie en kan hier niet worden bewerkt: wijzig het type",
+ "tags.locked": "Het element is vergrendeld: ontgrendel het om het merk te bewerken",
+ "tags.done": "Merkwaarde geschreven",
+ "tags.failed": "Merk niet gewijzigd: {e}",
+ "tags.dup_door": "{mark} ook op {n} deuren",
+ "tags.dup_window": "{mark} ook op {n} ramen",
+ "tags.dup_room": "{mark} ook op {n} ruimten",
+ "tags.hint_mark": "Merk",
+ "tags.hint_name": "Ruimtenaam"
+}

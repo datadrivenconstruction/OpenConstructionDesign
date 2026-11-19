@@ -1,0 +1,13 @@
+{
+ "mep.sys.duct": "Tarne S1",
+ "mep.sys.pipe": "Külm vesi C1",
+ "mep.sys.tray": "Toide",
+ "mep.round": "Ümmargune",
+ "mep.material": "Materjal",
+ "mep3d.elevation": "Kõrgus korrusest",
+ "mep3d.slope": "Kalle",
+ "mep3d.shape": "Kuju",
+ "mep3d.shape.rect": "Ristkülik",
+ "mep3d.shape.round": "Ümmargune",
+ "mep3d.shape.oval": "Lame ovaal"
+}

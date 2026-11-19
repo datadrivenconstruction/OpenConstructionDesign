@@ -1,0 +1,3 @@
+walls=[(0,0)-(6,0) (6,0)-(6,4) (6,4)-(0,4) (0,4)-(0,0)]
+# Ceiling by a click inside the walls
+tool(arch.ceiling) click(3,2) → rows(ceiling)=1 journal=+1

@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "لم يُؤخذ الارتفاع {t} ({why}). لم يتغيّر شيء",
+ "host_shape.shape.elev_prompt_in": "الارتفاع، قدم-بوصة…",
+ "host_shape.shape.elev_in": "{v} بوصة"
+}

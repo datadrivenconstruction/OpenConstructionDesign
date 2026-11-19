@@ -1,0 +1,6 @@
+{
+ "geom.length": "Panjang",
+ "sched.cat.room_seps": "Pemisah ruang",
+ "room.err.point_leave": "Ruang {n}: titik akan keluar dari batasnya",
+ "room.err.point_taken": "Ruang {n}: titik akan jatuh di ruang {other}"
+}

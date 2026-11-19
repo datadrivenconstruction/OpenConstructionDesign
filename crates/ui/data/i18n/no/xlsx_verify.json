@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "Bruk ble angret: modellen stemte ikke med forhåndsvisningen. {what}",
+ "xlsx_verify.not_written": "{row} ble ikke endret.",
+ "xlsx_verify.lost": "{row} forsvant.",
+ "xlsx_verify.not_deleted": "{row} ble ikke slettet.",
+ "xlsx_verify.extra_deleted": "{row} ble slettet, selv om forhåndsvisningen beholder den.",
+ "xlsx_verify.created": "{table}: {got} nye i stedet for {want}.",
+ "xlsx_verify.value": "{row}, {field}: forventet {want} (var {old}), fikk {got}.",
+ "xlsx_verify.check_failed": "Resultatet kunne ikke kontrolleres: {e}",
+ "xlsx_verify.plan_failed": "Bruk ble ikke startet: kontrollen kunne ikke lese modellen ({e}).",
+ "xlsx_verify.take_back_failed": "Steget kunne ikke angres ({e}): bruk Angre.",
+ "xlsx_verify.t.wall": "Vegg",
+ "xlsx_verify.t.opening": "Åpning",
+ "xlsx_verify.t.room": "Rom",
+ "xlsx_verify.t.slab": "Gulv",
+ "xlsx_verify.t.level": "Etasje",
+ "xlsx_verify.t.wall_type": "Veggtype",
+ "xlsx_verify.t.slab_type": "Gulvtype",
+ "xlsx_verify.t.col": "Søyle",
+ "xlsx_verify.t.beam": "Bjelke",
+ "xlsx_verify.t.roof": "Takflate",
+ "xlsx_verify.t.curtain_wall": "Gardinvegg"
+}

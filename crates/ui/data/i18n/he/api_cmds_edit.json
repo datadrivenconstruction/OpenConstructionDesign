@@ -1,0 +1,20 @@
+{
+ "api.cmd.move_elements": "הזזת אלמנטים בהיסט במטרים",
+ "api.cmd.copy_elements": "העתק אלמנטים בהיסט אחד או יותר, במטרים",
+ "api.cmd.rotate_elements": "סיבוב אלמנטים סביב נקודה בזווית במעלות",
+ "api.cmd.mirror_elements": "שיקוף אלמנטים לאורך ציר העובר בשתי נקודות",
+ "api.cmd.scale_elements": "שינוי קנה מידה של אלמנטים סביב נקודה בגורם",
+ "api.cmd.array_elements": "מערך לינארי או רדיאלי של אלמנטים",
+ "api.cmd.offset_wall": "העתק מקביל של קיר במרחק במטרים",
+ "api.cmd.split_wall": "פיצול קיר לשניים בנקודה",
+ "api.cmd.pin_elements": "נעיצה או ביטול נעיצה של אלמנטים",
+ "api.cmd.flip_openings": "היפוך צד הציר או כיוון הפתיחה של דלתות וחלונות",
+ "api.cmd.create_level": "צור מפלס בגובה, במטרים",
+ "api.cmd.edit_level": "שינוי שם של מפלס או שינוי הגובה שלו",
+ "api.cmd.delete_level": "מחיקת מפלס",
+ "api.cmd.place_rooms": "הצבת חדר בכל אזור סגור של מפלס",
+ "api.cmd.join_elements": "חיבור, ניתוק או החלפה של חיבורי גיאומטריה",
+ "api.cmd.place_footings": "הצבת יסוד מתחת לכל עמוד של מפלס",
+ "api.cmd.create_terrain": "צור שטח מנקודות מדידה או ממישור משופע",
+ "api.cmd.script_recipes": "קרא את אבני הבניין והמתכונים של סקריפטים לקונסטרוקציות חופשיות"
+}

@@ -1,0 +1,14 @@
+{
+ "ai.stream.waiting": "Đang chờ mô hình",
+ "ai.stream.reading": "Đang đọc mô hình",
+ "ai.stream.working": "Đang làm việc",
+ "ai.stream.answering": "Đang viết câu trả lời",
+ "ai.stream.tools_one": "1 công cụ",
+ "ai.stream.tools_many": "{n} công cụ",
+ "ai.stream.secs": "{n} s",
+ "ai.stream.stalled": "Vẫn đang chờ dịch vụ mô hình",
+ "ai.stream.stop": "Dừng",
+ "ai.stream.cancelled": "Đã dừng",
+ "ai.stream.incomplete": "Bản nháp chưa hoàn chỉnh. Không có gì được áp dụng vào mô hình.",
+ "ai.stream.sep": " · "
+}

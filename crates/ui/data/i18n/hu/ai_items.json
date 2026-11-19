@@ -1,0 +1,16 @@
+{
+ "ai.items.all": {
+  "one": "Mind a(z) # tétel",
+  "other": "Mind a(z) # tétel"
+ },
+ "ai.items.all.tip": "A terv minden tételének bejelölése vagy kijelölésének megszüntetése",
+ "ai.items.checked": "{n} / {m} bejelölve",
+ "ai.items.check.tip": "A(z) „{title}” bevonása az Alkalmazásba",
+ "ai.items.expand": "Elemek megjelenítése",
+ "ai.items.collapse": "Elemek elrejtése",
+ "ai.items.apply": {
+  "one": "# tétel alkalmazása",
+  "other": "# tétel alkalmazása"
+ },
+ "ai.items.apply_none": "Alkalmaz"
+}

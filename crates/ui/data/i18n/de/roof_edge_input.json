@@ -1,0 +1,23 @@
+{
+ "roof_edge.err.number": "Zahl eingeben",
+ "roof_edge.err.positive": "Muss größer als null sein",
+ "roof_edge.err.nonneg": "Darf nicht negativ sein",
+ "roof_edge.err.max": "Darf {max} nicht überschreiten",
+ "roof_edge.list.empty_hint": "Fügen Sie mit den Dachbefehlen Traufbretter, Dachrinnen, Untersichten oder Dachfenster hinzu",
+ "roof_edge.edit_tip": "Eigenschaften bearbeiten",
+ "roof_edge.delete_tip": "Löschen",
+ "roof_edge.pe.del_tip": "Diesen Punkt entfernen (ein Profil behält mindestens 3)",
+ "roof_edge.pe.up_tip": "Diesen Punkt nach oben verschieben",
+ "roof_edge.confirm_edge": "{name} löschen? Strg+Z stellt es wieder her.",
+ "roof_edge.confirm_profile": "Profil {name} löschen? Strg+Z stellt es wieder her.",
+ "roof_edge.deleted_one": "{name} gelöscht",
+ "roof_edge.deleted_n": {
+  "one": "# Element gelöscht",
+  "other": "# Elemente gelöscht"
+ },
+ "roof_edge.profile_deleted": "Profil gelöscht",
+ "roof_edge.profile_in_use": {
+  "one": "Von # Randelement verwendet: Zuerst löschen oder ändern",
+  "other": "Von # Randelementen verwendet: Zuerst löschen oder ändern"
+ }
+}

@@ -1,0 +1,9 @@
+{
+ "clash.col.x": "X",
+ "clash.col.y": "Y",
+ "clash.col.z": "Z",
+ "clash.unit.ft3": "ft³",
+ "clash.exported_n": "Đã lưu báo cáo: {n} trên {m}, {path}",
+ "clash.exported_f": "Đã lưu báo cáo: {n} trên {m} (bộ lọc: {filter}), {path}",
+ "clash.col.unit": "{name}, {unit}"
+}

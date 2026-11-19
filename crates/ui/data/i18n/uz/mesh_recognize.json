@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "{total} tadan {done} tasi aniqlanmoqda",
+ "mesh_recognize.all": "Barchasi {n}",
+ "mesh_recognize.only_confident": "Faqat ishonchli",
+ "mesh_recognize.confident_tip": "Turi kategoriyaga mos va ishonchlilik darajasi kamida {pct}% bo'lgan qatorlarni belgilaydi",
+ "mesh_recognize.row_hint": "Qatorni belgilash uchun bosing. Strelkalar harakatlantiradi, Enter belgilaydi.",
+ "mesh_recognize.kind_for": "{name} uchun turi",
+ "mesh_recognize.source": "Manba to'rlari",
+ "mesh_recognize.keep": "To'rlarni saqlash",
+ "mesh_recognize.replace": "To'rlarni almashtirish",
+ "mesh_recognize.convert_keep": "{n} ta konvertatsiya",
+ "mesh_recognize.convert_remove": "{n} ta konvertatsiya va to'rlarni o'chirish",
+ "mesh_recognize.creates": "{n} ta yaratiladi: {kinds}",
+ "mesh_recognize.creates_none": "Hali hech narsa belgilanmagan",
+ "mesh_recognize.stay": "{n} ta manba to'ri modelda qoladi",
+ "mesh_recognize.removed": "{n} ta manba to'ri o'chiriladi. Bekor qilish ularni qaytaradi."
+}

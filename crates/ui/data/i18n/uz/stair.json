@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "Zinalar",
+ "selcat.railing": "Panjaralar",
+ "quick.cat.stair": "Zinalar",
+ "quick.cat.railing": "Panjaralar",
+ "stair.risers": "Pogonalar",
+ "stair.riser": "Pogona balandligi",
+ "stair.comfort": "2R + T",
+ "stair.tread_auto": "Qoida bo'yicha tayanch",
+ "stair.tread_auto_tip": "Kiritilgan tayanchni tashlang va uni 2R + T qoidasi belgilasin",
+ "stair.broken": "Bu zina o'z qavatlariga mos kelmaydi",
+ "railing.host_stair": "{id} raqamli zinada",
+ "railing.host_path": "Eskiz bo'yicha panjara",
+ "railing.length": "Uzunlik",
+ "stair.deleted_with": "{n} ta tayanchli panjara bilan"
+}

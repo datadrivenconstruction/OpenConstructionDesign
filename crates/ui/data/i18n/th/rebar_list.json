@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "เลื่อนขึ้น",
+ "rebar_list.move_down": "เลื่อนลง",
+ "rebar_list.remove": "นำออก",
+ "rebar_list.zone_remove_last": "โซนต้องมีอย่างน้อยหนึ่งห้อง: ลบโซนเพื่อนำโซนสุดท้ายออก",
+ "rebar_list.rebar_empty_title": "ไม่มีเหล็กเสริมในโมเดลนี้",
+ "rebar_list.rebar_empty_hint": "วางเหล็กเสริมในองค์ประกอบรองรับ แล้วจะถูกกำหนดตารางที่นี่",
+ "rebar_list.rebar_empty_action": "วางเหล็กเสริม"
+}

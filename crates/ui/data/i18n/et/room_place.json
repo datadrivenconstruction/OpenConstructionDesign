@@ -1,0 +1,8 @@
+{
+ "cmd.arch.room_auto": "Paiguta ruumid automaatselt",
+ "cmd.arch.room_auto.desc": "Paigutab ruumi igasse aktiivse taseme suletud piirkonda, kus seda pole. Avatud seinasilmused jäetakse vahele ega suleta oletuse järgi. Üks tagasivõtmise samm.",
+ "room_place.placed": "Paigutatud ruume: {n}. Piirkonnad, millel oli juba ruum: {m}. Vahele jäetud avatud silmused: {k}",
+ "room_place.all_had": "Midagi ei paigutatud: kõigil {m} suletud alal on juba ruum. Vahele jäetud avatud silmused: {k}",
+ "room_place.none": "Midagi ei paigutatud: tasemel pole suletud seinapiirkondi",
+ "room_place.none_open": "Midagi ei paigutatud: tasemel pole suletud seinapiirkondi. Vahele jäetud avatud silmused: {k}"
+}

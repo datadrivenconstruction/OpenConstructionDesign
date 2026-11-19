@@ -1,0 +1,18 @@
+{
+ "faults.errors": {
+  "one": "# خطا در مدل. برای نمایش کلیک کنید.",
+  "other": "# خطا در مدل. برای دیدن فهرست کلیک کنید."
+ },
+ "faults.warnings": {
+  "one": "# هشدار در مدل. برای نمایش کلیک کنید.",
+  "other": "# هشدار در مدل. برای دیدن فهرست کلیک کنید."
+ },
+ "faults.title": "خطاهای مدل: {n}",
+ "faults.none": "خطا یا هشداری نیست.",
+ "faults.cat.wall": "دیوار",
+ "faults.cat.slab": "دال",
+ "faults.cat.opening": "بازشو",
+ "faults.cat.curtain_wall": "دیوار پرده‌ای",
+ "faults.cat.ramp": "رمپ",
+ "faults.cat.zone": "ناحیه"
+}

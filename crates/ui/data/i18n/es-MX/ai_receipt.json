@@ -1,0 +1,21 @@
+{
+ "ai.receipt.title": {
+  "one": "Aplicado # cambio",
+  "other": "Aplicados # cambios"
+ },
+ "ai.receipt.more": "+{n} más",
+ "ai.receipt.list": "Elementos",
+ "ai.receipt.show": "Mostrar",
+ "ai.receipt.show.tip": "Seleccionar y encuadrar los elementos modificados",
+ "ai.receipt.undo": "Deshacer",
+ "ai.receipt.undo.tip": "Revertir exactamente esta aplicación",
+ "ai.receipt.undone": "Deshecho",
+ "ai.receipt.later": "Se hicieron ediciones posteriores",
+ "ai.receipt.toast_undone": "El plan aplicado se deshizo",
+ "ai.receipt.draft_family": "Familia de borrador: {name}",
+ "ai.receipt.promote": "Hacer operativa",
+ "ai.receipt.promote.tip": "Convertir la familia de borrador en una operativa (un paso de deshacer)",
+ "ai.receipt.promoted": "La familia ya es operativa",
+ "ai.receipt.promote_failed": "No se pudo hacer operativa la familia",
+ "cmd.ai.receipt_undo": "Deshacer el último plan de IA"
+}

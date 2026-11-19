@@ -1,0 +1,6 @@
+{
+ "cmd.arch.room_auto.short": "放置房间",
+ "cmd.mod.group_select.short": "选择组",
+ "cmd.mod.group_cancel.short": "取消编辑",
+ "cmd.view.place_sheet_list.short": "放置图纸列表"
+}

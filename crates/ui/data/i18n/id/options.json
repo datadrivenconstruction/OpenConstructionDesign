@@ -1,0 +1,15 @@
+{
+ "fe.add_why_empty": "Masukkan nama parameter terlebih dahulu",
+ "fe.add_why_exists": "Parameter dengan nama ini sudah ada; gunakan Terapkan untuk mengubahnya",
+ "fe.apply_why_missing": "Tidak ada parameter dengan nama ini; ketik nama yang sudah ada",
+ "fe.nochange": "Belum ada perubahan",
+ "options.accept_more": "Terima…",
+ "options.delete_more": "Hapus…",
+ "options.empty_title": "Belum ada set opsi",
+ "options.more": "Tindakan lainnya: {name}",
+ "options.primary_named": "Opsi utama: {name}",
+ "options.primary_tip": "Jadikan ini opsi utama set",
+ "options.select_first": "Pilih elemen di model terlebih dahulu",
+ "options.show_3d": "Tampilkan di 3D: {name}",
+ "options.show_plan": "Tampilkan di denah: {name}"
+}

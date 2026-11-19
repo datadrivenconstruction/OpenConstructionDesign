@@ -1,0 +1,14 @@
+{
+ "save_guard.save.empty_over_full": "ยังไม่ได้บันทึก: โมเดลว่างเปล่า และไฟล์มีเนื้อหาอยู่แล้ว ไฟล์ไม่ได้ถูกแตะต้อง ใช้บันทึกเป็นเพื่อเขียนเป็นชื่ออื่น",
+ "save_guard.refuse.body": "ยังไม่ได้บันทึก: โมเดลว่างเปล่า และ {name} มีเนื้อหาอยู่แล้ว ไฟล์ไม่ได้ถูกแตะต้อง",
+ "save_guard.refuse.foreign": "นี่ไม่ใช่ไฟล์ของ DDC Editor จึงแทนที่ไม่ได้ ใช้บันทึกเป็นเพื่อเขียนเป็นชื่ออื่น",
+ "save_guard.refuse.ask": "แทนที่ {name} ใช่หรือไม่? ไฟล์นี้มี {what} จะถูกย้ายไปยังโฟลเดอร์ _archive ข้างๆ ก่อน แล้วจึงเขียนโมเดลว่าง",
+ "save_guard.refuse.holds_db": "องค์ประกอบ {n} รายการและแถวเนื้อหา",
+ "save_guard.refuse.holds_ifc": "IFC ที่มีผลิตภัณฑ์",
+ "save_guard.refuse.replace": "แทนที่ต่อไป…",
+ "save_guard.refuse.replace_yes": "ย้ายและแทนที่",
+ "save_guard.refuse.save_as": "บันทึกเป็น…",
+ "save_guard.refuse.cancel": "ยกเลิก",
+ "save_guard.replace.moved": "ย้ายไฟล์เดิมไปยัง {path} แล้ว",
+ "save_guard.replace.move_failed": "ไม่สามารถย้าย {name} ออกไปได้: {error} ยังไม่ได้เขียนอะไร"
+}

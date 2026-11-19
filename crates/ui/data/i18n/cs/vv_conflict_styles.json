@@ -1,0 +1,6 @@
+{
+ "vv_conflict.styles.conflict": "Styly objektů upravené kategorie se v modelu změnily (vrácením zpět nebo v jiném okně), zatímco toto okno mělo úpravy. Vaše úpravy zůstanou zachovány.",
+ "vv_conflict.styles.keep": "Ponechat moje úpravy",
+ "vv_conflict.styles.reload": "Načíst znovu",
+ "vv_conflict.styles.answer_first": "Nejprve zvolte Ponechat moje úpravy nebo Načíst znovu"
+}

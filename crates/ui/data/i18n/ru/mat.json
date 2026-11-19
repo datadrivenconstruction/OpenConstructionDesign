@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "Бетон",
+ "mat.masonry": "Кладка",
+ "mat.brick": "Кирпич",
+ "mat.insulation": "Утеплитель",
+ "mat.plaster": "Штукатурка",
+ "mat.render": "Фасадная штукатурка",
+ "mat.gypsum": "Гипсокартон",
+ "mat.glass": "Стекло",
+ "mat.wood": "Дерево",
+ "mat.steel": "Сталь",
+ "mat.membrane": "Мембрана",
+ "mat.other": "Прочее",
+ "warn.cat.wall": "Стена",
+ "warn.cat.slab": "Перекрытие",
+ "warn.cat.opening": "Проём",
+ "warn.cat.curtain_wall": "Витраж",
+ "td.mat.custom": "Другое…"
+}

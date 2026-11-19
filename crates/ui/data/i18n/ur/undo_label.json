@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "واپس: {what}",
+ "undo_label.redo_what": "دوبارہ: {what}",
+ "undo_label.undo_none": "واپس کرنے کے لیے کچھ نہیں",
+ "undo_label.redo_none": "دوبارہ کرنے کے لیے کچھ نہیں"
+}

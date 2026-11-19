@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "Μια μάζα δεν μπορεί να στραφεί ή να γίνει συμμετρική: το ιστορικό της μορφής της δεν έχει περιστροφικό βήμα. Μετακινήστε ή αντιγράψτε την, ή ξανασχεδιάστε την στη νέα κατεύθυνση.",
+ "sched_cats.col.name": "Όνομα",
+ "sched_cats.col.material": "Υλικό",
+ "sched_cats.col.void": "Κενό",
+ "sched_cats.col.inplace": "Επιτόπου",
+ "sched_cats.col.volume": "Καθαρός όγκος",
+ "sched_cats.col.area": "Εμβαδόν επιφάνειας",
+ "sched_cats.col.floor_area": "Εμβαδόν δαπέδου",
+ "sched_cats.col.thickness": "Πάχος",
+ "sched_cats.col.points": "Σημεία",
+ "elem.toposolid.points": "Σημεία τοπογραφίας",
+ "elem.toposolid.count": "Σημεία",
+ "elem.toposolid.low": "Χαμηλότερο",
+ "elem.toposolid.high": "Υψηλότερο",
+ "elem.toposolid.edit": "Επεξεργασία σημείων",
+ "elem.toposolid.edit_tip": "Επιλογή, σύρσιμο και ορισμός υψομέτρου σημείων τοπογραφίας στην κάτοψη",
+ "elem.toposolid.pick_hint": "Κάντε κλικ σε σημείο της κάτοψης για να το επιλέξετε. Κάντε ξανά κλικ για προσθήκη ή αφαίρεση.",
+ "elem.toposolid.z": "Υψόμετρο ({n})",
+ "elem.toposolid.mixed": "Τα επιλεγμένα σημεία διαφέρουν· μια νέα τιμή τα ορίζει όλα.",
+ "elem.toposolid.edit_help": "Σύρετε ένα σημείο για να το μετακινήσετε. Πληκτρολογήστε μια τιμή και πατήστε Enter για να ορίσετε το υψόμετρο. Backspace αφαιρεί τα επιλεγμένα σημεία, Esc εξέρχεται.",
+ "elem.toposolid.done": "Τέλος"
+}

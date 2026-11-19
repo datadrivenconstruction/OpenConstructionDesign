@@ -1,0 +1,13 @@
+{
+ "mep.sys.duct": "Insuflação S1",
+ "mep.sys.pipe": "Água fria C1",
+ "mep.sys.tray": "Energia",
+ "mep.round": "Redonda",
+ "mep.material": "Material",
+ "mep3d.elevation": "Cota do nível",
+ "mep3d.slope": "Declive",
+ "mep3d.shape": "Forma",
+ "mep3d.shape.rect": "Retangular",
+ "mep3d.shape.round": "Redonda",
+ "mep3d.shape.oval": "Oval achatada"
+}

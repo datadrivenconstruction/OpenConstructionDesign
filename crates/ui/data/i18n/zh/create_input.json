@@ -1,0 +1,14 @@
+{
+ "cmd.mod.divide": "等分",
+ "cmd.mod.divide.short": "等分",
+ "cmd.mod.divide.desc": "一步将墙等分为相等的段。输入段数，然后点击墙。",
+ "whereis.mod.divide": "等分、等距、切分成段、分段墙",
+ "hint.split.parts": "等分：点击墙 · 数字 — 段数（2–100）· Esc — 取消",
+ "create_input.divide.bad_parts": "«{text}» 不是段数：请输入 2 至 {max} 之间的整数",
+ "create_input.ws.err.empty": "请输入布局名称",
+ "create_input.ws.err.long": "名称过长：最多 40 个字符",
+ "create_input.ws.err.preset": "该名称属于内置布局",
+ "create_input.ws.err.full": "最多保存 24 个布局：请先删除一个",
+ "create_input.seldim.locked": "距离 {v} 已锁定",
+ "create_input.seldim.positive": "距离必须大于零"
+}

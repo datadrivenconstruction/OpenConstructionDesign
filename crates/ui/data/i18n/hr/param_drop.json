@@ -1,0 +1,8 @@
+{
+ "param_drop.title": "Ukloniti vrijednosti parametara?",
+ "param_drop.intro": "{name} više nije vezan uz ove kategorije:",
+ "param_drop.line": "{category}: {values} bit će uklonjeno",
+ "param_drop.undo": "Jedan Ctrl+Z vraća ih sve.",
+ "param_drop.confirm": "Ukloni vrijednosti i spremi",
+ "param_drop.cancel": "Odustani"
+}

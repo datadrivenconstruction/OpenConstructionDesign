@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "Phạm vi góc nhìn",
+ "view_range.range": "Phạm vi góc nhìn",
+ "view_range.cut": "Mặt phẳng cắt",
+ "view_range.bottom": "Đáy",
+ "view_range.depth": "Độ sâu góc nhìn",
+ "view_range.cut.hint": "Chiều cao của mặt phẳng cắt trên cao độ. Cấu kiện cắt qua nó được vẽ ở trạng thái cắt.",
+ "view_range.bottom.hint": "Đáy của phạm vi, tương đối so với cao độ. Cho phép giá trị bằng không hoặc âm.",
+ "view_range.depth.hint": "Góc nhìn nhìn xuống dưới đáy bao xa. Bằng không hoặc lớn hơn.",
+ "view_range.err.number": "Nhập chiều dài vào mỗi ô",
+ "view_range.err.not_finite": "Nhập chiều dài vào mỗi ô",
+ "view_range.err.cut_not_above_bottom": "Mặt phẳng cắt phải nằm trên đáy",
+ "view_range.err.negative_depth": "Độ sâu góc nhìn không thể âm",
+ "view_range.err.top_below_cut": "Đỉnh của phạm vi không được thấp hơn mặt phẳng cắt"
+}

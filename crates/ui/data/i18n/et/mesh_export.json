@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "Salvestab kogu mudeli või valiku binaarse STL-ina meetrites või millimeetrites.",
+ "cmd.data.export_obj.desc": "Salvestab kogu mudeli või valiku OBJ-na koos MTL-failiga: üks rühm elemendi kohta, värvid materjali järgi.",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "OBJ materjalidega (.obj)",
+ "open_file.filter.mesh": "3D-võrgud (glTF, STEP, STL, OBJ)",
+ "mx.title": "Ekspordi {fmt}",
+ "mx.scope": "Mida eksportida",
+ "mx.scope.all": "Kogu mudel",
+ "mx.scope.sel": "Valik ({n} elementi)",
+ "mx.units": "Ühikud failis",
+ "mx.units.m": "Meetrid",
+ "mx.units.mm": "Millimeetrid",
+ "mx.export": "Ekspordi…",
+ "mx.saved": "{fmt} salvestatud: {path} ({parts} elementi, {tris} kolmnurka)",
+ "mx.partial": "{fmt} salvestatud {n} probleemiga, osa kehi võib puududa: {path}",
+ "mx.failed": "{fmt} eksport ebaõnnestus: {error}",
+ "mx.imported": "{file}: imporditud {n} elementi ({tris} kolmnurka)",
+ "mx.imported_notes": "{file}: imporditud {n} elementi ({tris} kolmnurka), {w} märkust: {first}"
+}

@@ -1,0 +1,15 @@
+{
+ "fe.add_why_empty": "Sisesta kõigepealt parameetri nimi",
+ "fe.add_why_exists": "Sama nimega parameeter on juba olemas; muutmiseks kasuta Rakenda",
+ "fe.apply_why_missing": "Sellise nimega parameetrit pole; sisesta olemasoleva parameetri nimi",
+ "fe.nochange": "Muudatusi veel pole",
+ "options.accept_more": "Võta vastu…",
+ "options.delete_more": "Kustuta…",
+ "options.empty_title": "Valikukomplekte veel pole",
+ "options.more": "Veel toiminguid: {name}",
+ "options.primary_named": "Peamine valik: {name}",
+ "options.primary_tip": "Määra see komplekti peamiseks valikuks",
+ "options.select_first": "Vali kõigepealt mudelis elemendid",
+ "options.show_3d": "Näita 3D-s: {name}",
+ "options.show_plan": "Näita plaanil: {name}"
+}

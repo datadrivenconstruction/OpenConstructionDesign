@@ -1,0 +1,14 @@
+{
+ "xlsx_relink.title": "A pasta de trabalho vinculada foi movida ou renomeada",
+ "xlsx_relink.body": "A pasta de trabalho “{file}” não está mais em {folder}. Edições digitadas nela só voltam após ser vinculada novamente.",
+ "xlsx_relink.found_one": "Encontrada “{file}” em {folder}: mesmo projeto e mesma exportação. Vincular?",
+ "xlsx_relink.found_many": "Foram encontradas {n} pastas de trabalho deste projeto e desta exportação. Escolha a que será vinculada:",
+ "xlsx_relink.found_none": "Nenhuma pasta de trabalho desta exportação foi encontrada ao lado. Encontre-a ou exporte uma nova pasta de trabalho.",
+ "xlsx_relink.link": "Vincular “{file}”",
+ "xlsx_relink.find": "Encontrar…",
+ "xlsx_relink.find_title": "Encontrar a pasta de trabalho vinculada",
+ "xlsx_relink.export_new": "Exportar nova pasta de trabalho",
+ "xlsx_relink.close": "Fechar",
+ "xlsx_relink.gone": "A pasta de trabalho “{file}” não está mais na pasta dela. Edições digitadas nela só voltam após ser vinculada novamente.",
+ "xlsx_relink.found_one_short": "Encontrada “{file}”: mesmo projeto e mesma exportação. Vincular?"
+}

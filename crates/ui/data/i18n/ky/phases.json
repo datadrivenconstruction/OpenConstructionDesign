@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D",
+ "phases.current_mark": "учурдагы",
+ "phases.make_current": "Учурдагы кылуу",
+ "phases.col_phase": "Фаза",
+ "phases.col_filter": "Чыпка",
+ "phases.presets": "План алдын ала орнотуулары",
+ "phases.del_title": "Фазаны өчүрүү",
+ "phases.del_text": "“{name}” фазасын өчүрөсүзбү? Анын элементтери төмөндө тандалган фазага өтөт.",
+ "phases.del_into": "Элементтерди жылдыруу",
+ "phases.del_ok": "Өчүрүү",
+ "phases.col_kind": "Элемент түрү",
+ "phases.col_count": "Саны",
+ "phases.col_volume": "Көлөм"
+}

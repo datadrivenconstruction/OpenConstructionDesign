@@ -1,0 +1,6 @@
+{
+ "cmd.file.import_again": "Opnieuw importeren",
+ "cmd.file.import_again.desc": "Bouwt een nieuw project uit het bronbestand zoals het nu is.",
+ "cmd.file.open_kept": "Bewaarde import openen",
+ "cmd.file.open_kept.desc": "Opent de voltooide import die is bewaard toen de melding over niet-opgeslagen wijzigingen is geannuleerd."
+}

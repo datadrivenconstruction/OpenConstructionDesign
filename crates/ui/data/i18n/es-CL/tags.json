@@ -1,0 +1,13 @@
+{
+ "tags.gone": "La etiqueta ya no existe",
+ "tags.readonly_wall": "La etiqueta de un muro muestra el tipo y no se puede editar aquí: cambie el tipo de muro",
+ "tags.readonly_comp": "La etiqueta de un componente muestra la familia y no se puede editar aquí: cambie el tipo",
+ "tags.locked": "El elemento está bloqueado: desbloquéelo para editar la etiqueta",
+ "tags.done": "Valor de etiqueta escrito",
+ "tags.failed": "Etiqueta no cambiada: {e}",
+ "tags.dup_door": "{mark} también en {n} puertas",
+ "tags.dup_window": "{mark} también en {n} ventanas",
+ "tags.dup_room": "{mark} también en {n} espacios",
+ "tags.hint_mark": "Marca",
+ "tags.hint_name": "Nombre del espacio"
+}

@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "Tanya AI: {q}",
+ "ai.palette.connect": "Hubungkan AI untuk bertanya",
+ "ai.palette.draft.apply": "Terapkan draf ({n})",
+ "ai.palette.draft.reject": "Tolak draf",
+ "ai.palette.draft.next": "Perubahan draf berikutnya",
+ "ai.palette.draft.show": "Tampilkan draf di tampilan",
+ "cmd.ai.next_change": "Perubahan draf berikutnya",
+ "cmd.ai.next_change.desc": "Memindahkan tampilan ke elemen berikutnya yang diubah draf.",
+ "cmd.ai.show_draft": "Tampilkan draf AI di tampilan",
+ "cmd.ai.show_draft.desc": "Menyesuaikan tampilan ke semua yang diubah draf."
+}

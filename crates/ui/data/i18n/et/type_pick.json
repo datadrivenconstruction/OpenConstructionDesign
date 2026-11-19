@@ -1,0 +1,10 @@
+{
+ "type_pick.pick.search": "Otsi tüüpe või paksust",
+ "type_pick.pick.empty": "Sobivaid tüüpe pole",
+ "type_pick.pick.edit": "Muuda tüüpi…",
+ "type_pick.pick.mixed": "Segatud",
+ "type_pick.pick.layers": {
+  "one": "# kiht",
+  "other": "# kihti"
+ }
+}

@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "En attente derrière la tâche en cours : {n}",
+ "import_queue.queue_full": "La file d’attente est pleine, {n} fichiers n’ont pas été ajoutés",
+ "import_queue.changed": "{name} a été modifié après la création de ce projet. Le projet précédent a été ouvert.",
+ "import_queue.import_again": "Réimporter",
+ "import_queue.kept": "L’import terminé est conservé",
+ "import_queue.open_it": "Ouvrir",
+ "import_queue.sum.head": "import : {editable} modifiables (murs {walls}, ouvertures {open}, dalles {slabs}, pièces {rooms}, autres {other}), {meshes} en maillage",
+ "import_queue.sum.unchanged": ", inchangés {n}",
+ "import_queue.sum.updated": ", mis à jour {n}",
+ "import_queue.sum.missing": ", absents de la source {n} (conservés)",
+ "import_queue.sum.skipped": ", ignorés {n}",
+ "import_queue.sum.warnings": ", avertissements {n}",
+ "import_queue.import_failed": "échec de l’import : {e}"
+}

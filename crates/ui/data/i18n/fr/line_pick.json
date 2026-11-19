@@ -1,0 +1,22 @@
+{
+ "cmd.arch.grid_pick": "Trame par ligne",
+ "cmd.arch.grid_pick.desc": "Crée une trame exactement le long d’une ligne de dessin choisie du niveau actif ; les noms poursuivent la série. Tab prend d’un coup toutes les lignes parallèles du même calque. Chaque clic est une étape d’annulation.",
+ "cmd.struct.beam_pick": "Poutre par ligne",
+ "cmd.struct.beam_pick.desc": "Place une poutre du type courant sur le niveau actif le long d’une ligne de dessin choisie. Tab prend la chaîne connectée. Chaque clic est une étape d’annulation.",
+ "hint.grid_pick.one": "Trame par ligne : choisir une ligne de dessin · Tab toutes les lignes parallèles de son calque · Échap quitter",
+ "hint.grid_pick.more": "Trame par ligne : cliquer une ligne pour prendre toutes les lignes parallèles de son calque · Tab une seule ligne · Échap désactiver",
+ "hint.beam_pick.one": "Poutre par ligne : choisir une ligne de dessin · Tab chaîne connectée · Échap quitter",
+ "hint.beam_pick.more": "Poutre par ligne : cliquer une ligne pour prendre sa chaîne · Tab une seule ligne · Échap désactiver",
+ "line_pick.st.start_grid": "Choisissez une ligne de dessin. Tab : toutes les lignes parallèles de son calque",
+ "line_pick.st.start_beam": "Choisissez une ligne de dessin pour une poutre {type}. Tab : chaîne connectée",
+ "line_pick.st.grid_done": "Trame {name} ajoutée",
+ "line_pick.st.grids_done": "{n} trames ajoutées : {first} — {last}",
+ "line_pick.st.beam_done": "Poutre {type} ajoutée",
+ "line_pick.st.beams_done": "{n} poutres {type} ajoutées",
+ "line_pick.st.on_grid": "Cette ligne porte déjà la trame {name}",
+ "line_pick.st.on_beam": "Cette ligne porte déjà la poutre {id}",
+ "line_pick.st.no_layer": "Les calques des lignes ne sont pas encore connus, réessayez",
+ "line_pick.st.no_beam_type": "Aucune section de poutre dans le catalogue",
+ "line_pick.st.reload_warn": "Créé, mais la vue n’a pas pu être rechargée : {err}",
+ "line_pick.st.failed": "Non créé : {err}"
+}

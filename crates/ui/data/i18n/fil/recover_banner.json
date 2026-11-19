@@ -1,0 +1,7 @@
+{
+ "recover.untitled_note": "Hindi pa nasasave kailanman ang proyektong ito",
+ "recover.file_missing": "Hindi nahanap ang project file",
+ "recover.banner": "May natagpuang hindi nasaving trabaho mula sa nakaraang session para sa {name}",
+ "recover.banner_review": "Suriin",
+ "recover.later_archived": "Ipinagpaliban nang {n} beses: inilipat sa archive ang mga snapshot"
+}

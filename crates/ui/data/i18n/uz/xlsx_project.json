@@ -1,0 +1,7 @@
+{
+ "xlsx_project.title": "Bu ish kitobi boshqa loyihadan eksport qilingan",
+ "xlsx_project.body": "“{file}” ish kitobi boshqa loyihaga tegishli. Loyihalar orasida element idlari farq qiladi, shuning uchun uning qatorlari bu yerda aloqasi yo'q elementlarni o'zgartirardi. Bu loyihaga hech narsa o'qilmadi.",
+ "xlsx_project.export_new": "Bu loyihani yangi ish kitobiga eksport qilish",
+ "xlsx_project.close": "Yopish",
+ "xlsx_project.no_project": "Bu ish kitobi qaysi loyihaga tegishli ekanligini aytmaydi: u shu loyihadan eksport qilinganini tekshiring."
+}

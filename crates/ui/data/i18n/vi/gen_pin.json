@@ -1,0 +1,7 @@
+{
+ "gen.pin.room": "Bạn đã chỉnh sửa một phòng của dự án đã tạo. Hãy ghim để lần sửa đổi dự án giữ nó tại chỗ.",
+ "gen.pin.storey": "Bạn đã chỉnh sửa một tầng của dự án đã tạo. Hãy ghim để lần sửa đổi dự án giữ lại tường và lỗ mở.",
+ "gen.pin.action": "Ghim",
+ "gen.pin.done": "Đã ghim: lần sửa đổi dự án sẽ giữ phần này và bố trí phần còn lại xung quanh",
+ "gen.pin.failed": "Không thể ghim"
+}

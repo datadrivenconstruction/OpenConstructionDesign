@@ -1,0 +1,80 @@
+{
+ "schema": "gen_bench.v1",
+ "group": "steep_site",
+ "spec": {
+  "typology": "apartment_section",
+  "floors": 6,
+  "basements": 2,
+  "footprint": {
+   "plot": [
+    [
+     0,
+     0
+    ],
+    [
+     52,
+     0
+    ],
+    [
+     52,
+     24
+    ],
+    [
+     6,
+     30
+    ],
+    [
+     0,
+     24
+    ]
+   ],
+   "plot_setback": 3
+  }
+ },
+ "adjacency": [
+  [
+   "kitchen",
+   "living",
+   3
+  ],
+  [
+   "bedroom",
+   "bath",
+   1
+  ],
+  [
+   "bath",
+   "hall",
+   1
+  ]
+ ],
+ "site": {
+  "plot": [
+   [
+    0,
+    0
+   ],
+   [
+    52,
+    0
+   ],
+   [
+    52,
+    24
+   ],
+   [
+    6,
+    30
+   ],
+   [
+    0,
+    24
+   ]
+  ],
+  "slope": 0.3,
+  "downhill": [
+   1,
+   0
+  ]
+ }
+}

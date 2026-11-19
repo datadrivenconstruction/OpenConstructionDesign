@@ -1,0 +1,37 @@
+id = "G38_tensile_sail"
+tier = "hard"
+group = "Any geometry"
+title = "Tensile membrane sail"
+lang = "es"
+base = "empty"
+
+[[turn]]
+say = "Una vela tensada de membrana de cuatro puntos sobre una plaza de 15 x 15 m: dos mástiles de 8 m en esquinas opuestas y dos postes de anclaje de 3 m en las otras dos, cables de borde y superficie en silla de montar."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "col"
+min = 4.0
+
+[[oracle.count]]
+spec = "freeform+mesh+shell_elem+solid+gridshell"
+min = 1.0
+
+[[oracle.geom]]
+kind = "saddle_curve"
+share_min = 0.5
+warp_min = 2.0
+
+[[oracle.geom]]
+kind = "height"
+min = 7.5
+max = 10.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

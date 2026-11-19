@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "未適用のブックの変更",
+ "workbook_changes.wb.body": "閉じるか別のプロジェクトに切り替えると破棄されます。",
+ "workbook_changes.wb.line": "ブックの取り込み: {n} 件の変更が未適用",
+ "workbook_changes.wb.review": "確認",
+ "workbook_changes.wb.discard": "破棄"
+}

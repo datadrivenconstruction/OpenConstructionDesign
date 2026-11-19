@@ -1,0 +1,4 @@
+{
+ "cmd.data.sync_xlsx": "I-sync sa spreadsheet na XLSX…",
+ "cmd.data.sync_xlsx.desc": "Binabasa muli ang naka-link na workbook at ipinapakita ang mga pagkakaiba sa modelo."
+}

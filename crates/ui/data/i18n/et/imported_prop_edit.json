@@ -1,0 +1,6 @@
+{
+ "imported_prop_edit.remove": "Eemalda omadus",
+ "imported_prop_edit.remove.tip": "Eemaldab omaduse {n} valitud elemendilt ühe tagasivõtmise sammuga; see jäetakse salvestamisel IFC-failist välja",
+ "imported_prop_edit.done": "{key} eemaldatud {n} elemendilt",
+ "imported_prop_edit.warn.reload": "Valmis, aga vaadet ei värskendatud; ava paneel uuesti või võta tagasi, kui näeb valesti välja"
+}

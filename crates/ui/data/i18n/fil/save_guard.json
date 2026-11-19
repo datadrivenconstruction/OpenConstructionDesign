@@ -1,0 +1,14 @@
+{
+ "save_guard.save.empty_over_full": "Walang nai-save: walang laman ang model, at may laman na ang file. Hindi ginalaw ang file. Gamitin ang Save as para magsulat sa ibang pangalan.",
+ "save_guard.refuse.body": "Walang nai-save: walang laman ang model, at may laman na ang {name}. Hindi ginalaw ang file.",
+ "save_guard.refuse.foreign": "Hindi ito DDC Editor file, kaya hindi ito mapapalitan. Gamitin ang Save as para magsulat sa ibang pangalan.",
+ "save_guard.refuse.ask": "Palitan ang {name}? May laman itong {what}. Ililipat muna ito sa folder na _archive sa tabi nito, saka isusulat ang walang lamang model.",
+ "save_guard.refuse.holds_db": "{n} elemento at mga content row",
+ "save_guard.refuse.holds_ifc": "IFC na may mga product",
+ "save_guard.refuse.replace": "Palitan pa rin…",
+ "save_guard.refuse.replace_yes": "Ilipat at palitan",
+ "save_guard.refuse.save_as": "I-save bilang…",
+ "save_guard.refuse.cancel": "Kanselahin",
+ "save_guard.replace.moved": "Inilipat ang dating file sa {path}",
+ "save_guard.replace.move_failed": "Hindi mailipat ang {name} sa gilid: {error}. Walang naisulat."
+}

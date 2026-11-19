@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "Бош киргизүү.",
+ "units.err.not_number": "{pos} позициясында сан эмес.",
+ "units.err.unknown_unit": "Белгисиз бирдик: {unit}.",
+ "units.err.non_positive": "Узундук нөлдөн чоң болушу керек.",
+ "units.err.too_large": "Узундук {max} м ашпашы керек.",
+ "units.err.bad_angle": "Бурч — градустардагы сан.",
+ "units.err.unknown_name": "Белгисиз аталыш: {name}. Маани сакталды.",
+ "units.err.cycle": "{name} жеринде формуланын циклы. Маани сакталды.",
+ "units.err.bad_expr": "{pos} позициясындагы туюнтманы окуу мүмкүн эмес. Маани сакталды.",
+ "units.err.div_zero": "{pos} позициясында нөлгө бөлүү. Маани сакталды.",
+ "units.err.invalid": "Туура эмес сан.",
+ "units.err.kept": "Өзгөрүлгөн жок: {reason}"
+}

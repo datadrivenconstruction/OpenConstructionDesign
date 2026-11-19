@@ -1,0 +1,9 @@
+{
+ "clash.col.x": "X",
+ "clash.col.y": "Y",
+ "clash.col.z": "Z",
+ "clash.unit.ft3": "ft³",
+ "clash.exported_n": "บันทึกรายงานแล้ว: {n} จาก {m}, {path}",
+ "clash.exported_f": "บันทึกรายงานแล้ว: {n} จาก {m} (ตัวกรอง: {filter}), {path}",
+ "clash.col.unit": "{name}, {unit}"
+}

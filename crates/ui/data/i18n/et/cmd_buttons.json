@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}, samal tasemel",
+ "cmd_buttons.purge.undo": "Eemaldamine on üks tagasivõtu samm.",
+ "cmd_buttons.unpin.none": "Valitud elemendid pole kinnitatud",
+ "cmd_buttons.change_type.none": "Vali esmalt seinad: nende tüüp muutub ühe sammuga",
+ "cmd_buttons.units.metric": "Ühikud: meetermõõdustik",
+ "cmd_buttons.units.imperial": "Ühikud: jalad ja tollid",
+ "cmd_buttons.units.back": "Lülitu tagasi",
+ "cmd_buttons.underlay.on": "Alusjoonis sees: alumine korrus on näidatud hämardatult",
+ "cmd_buttons.underlay.off": "Alusjoonis väljas",
+ "cmd_buttons.underlay.none": "Alusjoonis sees, kuid alumisel korrusel pole midagi näidata",
+ "cmd_buttons.zoom_sel.no_shape": "Valikul pole selles vaates raamitavat kuju",
+ "cmd_buttons.close.base": "Plaani- ja 3D-kaardid jäävad avatuks; sulgemiseks ava lõige, leht või joonistusvaade",
+ "tool.equipment": "Seadmed",
+ "hint.equipment.place": "Seadmed: vali asukoht · Esc — välju",
+ "cmd_buttons.table.opened": "Tabel avati mudeli kõrval",
+ "cmd_buttons.circuits.tip": "Ava selle mudeli elektriahelate loend"
+}

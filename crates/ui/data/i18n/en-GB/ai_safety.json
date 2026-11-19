@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "Key in the address",
+ "ai_safety.auth.query_name": "Address parameter",
+ "ai_safety.need_query_name": "Name the address parameter that carries the key",
+ "ai_safety.apply_unlogged": "Applied, but the change log was not written",
+ "ai_safety.audit_unlogged": "The AI assistant log could not be written",
+ "ai_safety.chat_not_saved": "The chat could not be saved to the project. Trying again.",
+ "ai_safety.clip_clears": "The clipboard clears in 30 s",
+ "ai_safety.copied_clears": "Copied. The clipboard clears in 30 s",
+ "ai_safety.key_session_only": "Key kept until the app closes",
+ "ai.settings.no_data_dir": "this system gives no folder for app settings"
+}

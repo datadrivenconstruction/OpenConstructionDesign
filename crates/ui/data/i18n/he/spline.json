@@ -1,0 +1,7 @@
+{
+ "spline.opt.spline": "ספליין",
+ "spline.opt.spline_tip": "קיר ספליין: לחץ על הנקודות שהוא עובר בהן, Enter או Esc לסיום",
+ "spline.wt.three_points": "קיר ספליין דורש שלוש נקודות או יותר",
+ "spline.wt.no_curtain": "לקיר מסך אין ציר ספליין",
+ "spline.wt.added": "קיר ספליין נוסף"
+}

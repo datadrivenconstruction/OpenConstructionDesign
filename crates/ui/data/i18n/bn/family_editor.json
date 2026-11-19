@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "নতুন ফ্যামিলি",
+ "family_editor.open_tip": "ফ্যামিলি বা ড্রাফট খুলুন",
+ "family_editor.close_named": "{name} বন্ধ করুন",
+ "family_editor.unsaved": "অসংরক্ষিত পরিবর্তন",
+ "family_editor.search": "খুঁজুন",
+ "family_editor.nothing": "কিছু পাওয়া যায়নি",
+ "family_editor.sec_families": "প্রকল্পের ফ্যামিলি",
+ "family_editor.sec_drafts": "ড্রাফট",
+ "family_editor.cap_category": "ক্যাটেগরি",
+ "family_editor.cap_host": "হোস্ট",
+ "family_editor.cap_type": "প্রিভিউ টাইপ"
+}

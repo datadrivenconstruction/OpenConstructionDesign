@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "X tengely",
+ "fe.axis.y": "Y tengely",
+ "fe.axis.z": "Z tengely",
+ "fe.col.axis": "Tengely",
+ "fe.col.at": "Pozíció",
+ "fe.col.mode": "Mód",
+ "fe.mode.fixed": "Rögzített",
+ "fe.mode.free": "Szabad",
+ "fe.types.inherited": "Alapérték a paraméterből",
+ "fe.csv.more": "További CSV-műveletek",
+ "fe.ref.selected": "Sík: {name}"
+}

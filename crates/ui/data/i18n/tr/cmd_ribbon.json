@@ -1,0 +1,23 @@
+{
+  "cmd.arch.room_sep.short": "Oda ayırıcı",
+  "cmd.str.footing.short": "Kolon temeli",
+  "cmd.str.strip_footing.short": "Şerit temel",
+  "cmd.str.analytical.short": "Analitik",
+  "cmd.mep.terminal.short": "Hava terminal",
+  "cmd.mod.isolate.short": "İzole et",
+  "cmd.view.ui.short": "Arayüz",
+  "cmd.mgr.params.short": "Parametreler",
+  "cmd.ctx.wall.attach.short": "İliştir",
+  "cmd.mass.unjoin.short": "Bağı kaldır",
+  "cmd.mod.unjoin.short": "Bağı kaldır",
+  "cmd.arch.void_extrusion.short": "Boşluk ekstr",
+  "cmd.e3d.snap.short": "3D yakalama",
+  "cmd.mgr.open_big.short": "Büyük dosya…",
+  "cmd.site.edit_points.short": "Arazi noktası",
+  "cmd.view.reveal_3d.short": "Kategoriler",
+  "cmd.help.check_update.short": "Güncellemeler",
+  "cmd.ctx.floor.link_unlink.short": "Kenar ayır",
+  "cmd.ui.onboarding.short": "Kurulum…",
+  "cmd.mod.distribute.short": "Dağıt",
+  "cmd.data.src_delta.short": "XLSX tablosu değişim…"
+}

@@ -1,0 +1,11 @@
+{
+ "cmd.ctx.ceiling.clean_outline": "נקה מתאר",
+ "cmd.ctx.ceiling.clean_outline.desc": "מסיר קוצים צרים במקומות שבהם מתאר התקרה פונה אחורה על עצמו. מציג תצוגה מקדימה קודם; צעד ביטול אחד.",
+ "cmd.ctx.shaft.clean_outline": "נקה מתאר",
+ "cmd.ctx.shaft.clean_outline.desc": "מסיר קוצים צרים במקומות שבהם מתאר הפיר פונה אחורה על עצמו. מציג תצוגה מקדימה קודם; צעד ביטול אחד.",
+ "outline_cleanup.intro_ceiling": "המתאר של תקרה זו פונה אחורה על עצמו בקוצים צרים: {n}. הניקוי מסיר אותם; כל היתר נשאר כמו שהוא.",
+ "outline_cleanup.intro_shaft": "המתאר של פיר זה פונה אחורה על עצמו בקוצים צרים: {n}. הניקוי מסיר אותם; כל היתר נשאר כמו שהוא.",
+ "outline_cleanup.none_ceiling": "למתאר של תקרה זו אין קוצים",
+ "outline_cleanup.none_shaft": "למתאר של פיר זה אין קוצים",
+ "outline_cleanup.need_host": "בחר רצפה, תקרה או פיר"
+}

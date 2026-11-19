@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "벽 그리기",
+ "empty.totals.action": "벽 그리기",
+ "empty.schedule.action": "필드 추가",
+ "empty.schedule_filtered.action": "필터 지우기",
+ "empty.library.action": "검색 재설정",
+ "empty.library.load": "패밀리 불러오기",
+ "empty.schedule_fields.title": "표시된 필드 없음",
+ "empty.schedule_fields.action": "필드 추가",
+ "empty.schedule_fields.hint": "표를 보려면 최소 하나의 필드를 켜세요."
+}

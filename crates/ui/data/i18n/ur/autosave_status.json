@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "خودکار محفوظ ناکام، آخری تبدیلیاں محفوظ نہیں۔ {why}",
+ "autosave_status.autosave_open": "خودکار محفوظ ترتیبات",
+ "autosave_status.autosave_recovered": "خودکار محفوظ دوبارہ کام کر رہا ہے۔",
+ "autosave_status.autosave_reason": "وجہ: {why}"
+}

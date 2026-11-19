@@ -1,0 +1,14 @@
+{
+ "dwg_table.copy": "Kopiuj tabelę",
+ "dwg_table.copy_tip": "Kopiuje zestawienie ilości według warstw jako tabelę do arkusza kalkulacyjnego",
+ "dwg_table.copied": "Zestawienie skopiowane (rozdzielone tabulatorami)",
+ "dwg_table.total": "Razem",
+ "dwg_table.col.layer": "Warstwa",
+ "dwg_table.col.count": "Liczba",
+ "dwg_table.col.len": "Długość, {unit}",
+ "dwg_table.col.area": "Pole, {unit}",
+ "dwg_table.unit.mm": "mm",
+ "dwg_table.unit.m2": "m²",
+ "dwg_table.unit.ft": "ft",
+ "dwg_table.unit.ft2": "ft²"
+}

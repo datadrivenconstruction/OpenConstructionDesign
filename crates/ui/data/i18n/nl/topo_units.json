@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "Eenheden",
+ "topo_units.unit": "Eenheden in bestand",
+ "topo_units.unit.m": "m",
+ "topo_units.unit.cm": "cm",
+ "topo_units.unit.mm": "mm",
+ "topo_units.unit.ft": "ft",
+ "topo_units.unit.usft": "US survey ft",
+ "topo_units.unit.in": "in",
+ "topo_units.unit.from_file": "Het bestand noemt zijn eenheden: {unit}",
+ "topo_units.unit.suggested": "Het bestand noemt geen eenheden. Voorgesteld door de omvang: {unit} — controleer het resultaat hieronder",
+ "topo_units.extent": "Resultaat in projecteenheden: {x} × {y} {u} in plattegrond, hoogtebereik {z} {u}",
+ "topo_units.extent.none": "Resultaat: niets om te importeren met deze keuzes",
+ "topo_units.extent.check": "Dit lijkt niet op een terrein: controleer de eenheden"
+}

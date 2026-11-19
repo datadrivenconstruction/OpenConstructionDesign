@@ -1,0 +1,15 @@
+{
+ "text_style.lbl.text_style": "Tekstityyli",
+ "text_style.lbl.align": "Tasaus",
+ "text_style.lbl.head": "Nuolenkärki",
+ "text_style.lbl.line_style": "Viivatyyli",
+ "text_style.lbl.fill": "Täyttö",
+ "text_style.lbl.detail": "Yksityiskohta",
+ "text_style.lbl.width": "Leveys",
+ "text_style.bad_number": "Anna luku väliltä {min}–{max}",
+ "text_style.tip.next_ring": "Sulje tämä ääriviiva ja aloita toinen samalla alueella",
+ "text_style.tip.edit_text": "Muokkaa tekstiä paikallaan",
+ "text_style.tip.add_leader": "Lisää johtoviiva tähän tekstiin",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°"
+}

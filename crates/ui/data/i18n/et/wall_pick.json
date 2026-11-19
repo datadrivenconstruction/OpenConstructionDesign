@@ -1,0 +1,13 @@
+{
+ "cmd.arch.wall_pick": "Sein joone järgi",
+ "cmd.arch.wall_pick.desc": "Asetab praeguse korruse valitud joonisjoonele seina. F vahetab joonel telje ja pinna vahel, Tab võtab ühendatud ahela. Iga valik on üks tagasivõtmise samm. Toimib ka klaasfassaadide puhul.",
+ "hint.wall_pick.center": "Sein joone järgi: vali joonisjoon · telg joonel · F pind · Tab ahel · Esc välju",
+ "hint.wall_pick.face": "Sein joone järgi: vali joonisjoon · pind joonel, kursori poolel · F telg · Tab ahel · Esc välju",
+ "hint.wall_pick.center_chain": "Sein joone järgi: vali joon, et võtta selle ahel · telg joonel · F pind · Tab üks joon",
+ "hint.wall_pick.face_chain": "Sein joone järgi: vali joon, et võtta selle ahel · pind joonel · F telg · Tab üks joon",
+ "wall_pick.st.start": "Vali joonisjoon. F: telg või pind, Tab: ühendatud ahel",
+ "wall_pick.st.no_lines": "Sellel korrusel pole nähtavaid joonisjooni",
+ "wall_pick.st.miss": "Siin pole joonisjoont",
+ "wall_pick.st.on_wall": "See joon on juba seina {id} all",
+ "wall_pick.st.tight": "Pinna nihe ei mahu: ahela lõik on lühem kui seina paksus"
+}

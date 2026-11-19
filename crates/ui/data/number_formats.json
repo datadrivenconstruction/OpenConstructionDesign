@@ -1,0 +1,183 @@
+{
+ "_note": "Decimal mark and thousands group of each UI locale (common usage with Latin digits); read by NumberFormat::for_lang.",
+ "ar": {
+  "decimal": ".",
+  "group": ","
+ },
+ "bg": {
+  "decimal": ",",
+  "group": " "
+ },
+ "bn": {
+  "decimal": ".",
+  "group": ","
+ },
+ "cs": {
+  "decimal": ",",
+  "group": " "
+ },
+ "da": {
+  "decimal": ",",
+  "group": "."
+ },
+ "de": {
+  "decimal": ",",
+  "group": "."
+ },
+ "el": {
+  "decimal": ",",
+  "group": "."
+ },
+ "en": {
+  "decimal": ".",
+  "group": ","
+ },
+ "en-GB": {
+  "decimal": ".",
+  "group": ","
+ },
+ "en-US": {
+  "decimal": ".",
+  "group": ","
+ },
+ "es": {
+  "decimal": ",",
+  "group": "."
+ },
+ "es-CL": {
+  "decimal": ",",
+  "group": "."
+ },
+ "es-CO": {
+  "decimal": ",",
+  "group": "."
+ },
+ "es-MX": {
+  "decimal": ".",
+  "group": ","
+ },
+ "et": {
+  "decimal": ",",
+  "group": " "
+ },
+ "fa": {
+  "decimal": ".",
+  "group": ","
+ },
+ "fi": {
+  "decimal": ",",
+  "group": " "
+ },
+ "fil": {
+  "decimal": ".",
+  "group": ","
+ },
+ "fr": {
+  "decimal": ",",
+  "group": " "
+ },
+ "he": {
+  "decimal": ".",
+  "group": ","
+ },
+ "hi": {
+  "decimal": ".",
+  "group": ","
+ },
+ "hr": {
+  "decimal": ",",
+  "group": "."
+ },
+ "hu": {
+  "decimal": ",",
+  "group": " "
+ },
+ "id": {
+  "decimal": ",",
+  "group": "."
+ },
+ "it": {
+  "decimal": ",",
+  "group": "."
+ },
+ "ja": {
+  "decimal": ".",
+  "group": ","
+ },
+ "kk": {
+  "decimal": ",",
+  "group": " "
+ },
+ "ko": {
+  "decimal": ".",
+  "group": ","
+ },
+ "ky": {
+  "decimal": ",",
+  "group": " "
+ },
+ "mn": {
+  "decimal": ".",
+  "group": ","
+ },
+ "nl": {
+  "decimal": ",",
+  "group": "."
+ },
+ "no": {
+  "decimal": ",",
+  "group": " "
+ },
+ "pl": {
+  "decimal": ",",
+  "group": " "
+ },
+ "pt": {
+  "decimal": ",",
+  "group": " "
+ },
+ "pt-BR": {
+  "decimal": ",",
+  "group": "."
+ },
+ "ro": {
+  "decimal": ",",
+  "group": "."
+ },
+ "ru": {
+  "decimal": ",",
+  "group": " "
+ },
+ "sv": {
+  "decimal": ",",
+  "group": " "
+ },
+ "th": {
+  "decimal": ".",
+  "group": ","
+ },
+ "tr": {
+  "decimal": ",",
+  "group": "."
+ },
+ "uk": {
+  "decimal": ",",
+  "group": " "
+ },
+ "ur": {
+  "decimal": ".",
+  "group": ","
+ },
+ "uz": {
+  "decimal": ",",
+  "group": " "
+ },
+ "vi": {
+  "decimal": ",",
+  "group": "."
+ },
+ "zh": {
+  "decimal": ".",
+  "group": ","
+ }
+}

@@ -1,0 +1,40 @@
+{
+ "rebar_hosts.hosts": "Mga host: {list}",
+ "rebar_hosts.kind.column": "Kolum",
+ "rebar_hosts.kind.beam": "Biga",
+ "rebar_hosts.kind.wall": "Pader",
+ "rebar_hosts.kind.slab": "Plato",
+ "rebar_hosts.kind.footing": "Pundasyon",
+ "rebar_hosts.kind.raft": "Slab ng pundasyon",
+ "rebar_hosts.n.column": {
+  "one": "# column",
+  "other": "# na column"
+ },
+ "rebar_hosts.n.beam": {
+  "one": "# beam",
+  "other": "# na beam"
+ },
+ "rebar_hosts.n.wall": {
+  "one": "# pader",
+  "other": "# na pader"
+ },
+ "rebar_hosts.n.slab": {
+  "one": "# slab",
+  "other": "# na slab"
+ },
+ "rebar_hosts.n.footing": {
+  "one": "# footing",
+  "other": "# na footing"
+ },
+ "rebar_hosts.n.raft": {
+  "one": "# foundation slab",
+  "other": "# na foundation slab"
+ },
+ "rebar_hosts.mixed_note": "Tumatanggap ang column at beam ng bar at stirrup; ang pader, slab at foundation ay mesh. Pumili ng isang grupo para magdagdag ng rebar.",
+ "rebar_hosts.why.mixed": "Halo ang pagpili ng column o beam at pader, slab o foundation. Pumili ng isang grupo.",
+ "rebar_hosts.why.area_linear": "Napupunta ang mesh sa pader, slab at foundation, hindi sa column o beam.",
+ "rebar_hosts.why.bars_plate": "Napupunta ang longitudinal bar at stirrup sa column at beam, hindi sa pader, slab o foundation.",
+ "rebar_hosts.why.no_common_face": "Walang iisang cover face ang mga napiling host. Pumili ng host na iisa ang uri.",
+ "rebar_hosts.why.no_type": "Pumili ng bar type.",
+ "rebar_hosts.kind_type": "{kind} · {type}"
+}

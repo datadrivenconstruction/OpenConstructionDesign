@@ -1,0 +1,7 @@
+{
+ "diff.kind.added": "已添加",
+ "diff.kind.changed": "已更改",
+ "diff.kind.deleted": "已删除",
+ "diff.kind.refused": "已拒绝",
+ "diff.kind.conflict": "冲突"
+}

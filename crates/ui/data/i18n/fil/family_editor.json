@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "Bagong family",
+ "family_editor.open_tip": "Buksan ang family o draft",
+ "family_editor.close_named": "Isara ang {name}",
+ "family_editor.unsaved": "Hindi pa naii-save na pagbabago",
+ "family_editor.search": "Maghanap",
+ "family_editor.nothing": "Walang nahanap",
+ "family_editor.sec_families": "Mga family ng proyekto",
+ "family_editor.sec_drafts": "Mga draft",
+ "family_editor.cap_category": "Kategorya",
+ "family_editor.cap_host": "Pangunahin",
+ "family_editor.cap_type": "Uri ng preview"
+}

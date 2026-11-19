@@ -1,0 +1,7 @@
+{
+ "xlsx_project.title": "Este libro se exportó desde otro proyecto",
+ "xlsx_project.body": "El libro «{file}» pertenece a otro proyecto. Los ids de los elementos difieren entre proyectos, así que sus filas cambiarían elementos no relacionados aquí. No se leyó nada en este proyecto.",
+ "xlsx_project.export_new": "Exportar este proyecto a un libro nuevo",
+ "xlsx_project.close": "Cerrar",
+ "xlsx_project.no_project": "Este libro no indica a qué proyecto pertenece: comprobar que se exportó desde este proyecto."
+}

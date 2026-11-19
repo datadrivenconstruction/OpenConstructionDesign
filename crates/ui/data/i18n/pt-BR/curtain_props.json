@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "Painel",
+ "curtain_props.cw.panel_cell": "Célula {i}×{j} · parede-cortina n.º {id}",
+ "curtain_props.cw.kind": "Tipo",
+ "curtain_props.cw.kind.glazed": "Envidraçado",
+ "curtain_props.cw.kind.solid": "Maciço",
+ "curtain_props.cw.kind.door": "Porta",
+ "curtain_props.cw.kind.window": "Janela",
+ "curtain_props.cw.kind.empty": "Vazio",
+ "curtain_props.cw.name": "Nome",
+ "curtain_props.cw.swing_side": "Abre para o outro lado",
+ "curtain_props.cw.swing_hinge": "Dobradiça na extremidade da célula",
+ "curtain_props.cw.size": "Dimensão",
+ "curtain_props.cw.cell_area": "Área da célula",
+ "curtain_props.cw.panel_area": "Área do painel",
+ "curtain_props.cw.prev": "Painel anterior",
+ "curtain_props.cw.next": "Painel seguinte",
+ "curtain_props.cw.wall": "Selecione a parede",
+ "curtain_props.cw.panel_hint": "Esc — seleção · Ctrl+Z — anular",
+ "curtain_props.cw.status.panel": "Painel {i}×{j} → {kind}",
+ "e3d.err.cw_height": "a altura da parede-cortina tem de ser superior a 100 mm"
+}

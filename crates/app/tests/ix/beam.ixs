@@ -1,0 +1,2 @@
+# Beam: typed length along the cursor direction
+tool(BM) click(0,0) move(3,0) type("4500") key(Enter) → rows(beam)=1 journal=+1

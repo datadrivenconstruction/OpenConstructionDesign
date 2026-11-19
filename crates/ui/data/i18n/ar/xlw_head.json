@@ -1,0 +1,15 @@
+{
+ "xlw.hd_never": "لم يُصدَّر بعد",
+ "xlw.hd_now": "الآن",
+ "xlw.hd_min": "منذ {n} دقيقة",
+ "xlw.hd_hour": "منذ {n} ساعة",
+ "xlw.hd_day": "منذ {n} يوم",
+ "xlw.hd_linked": "مرتبط",
+ "xlw.hd_watched": "مُراقَب",
+ "xlw.hd_stale": "تغيّر النموذج منذ التصدير",
+ "xlw.ft_export": "تصدير",
+ "xlw.ft_review": "مراجعة",
+ "xlw.ft_apply": "طبّق {n} تغييراً",
+ "xlw.ft_delete_missing": "احذف المفقود",
+ "xlw.ft_keep_missing_tip": "الحذف مفعّل: العناصر التي لا يقابلها صف ستُحذف عند التطبيق. ألغِ التحديد للإبقاء عليها."
+}

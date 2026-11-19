@@ -1,0 +1,11 @@
+{
+ "cmd.arch.roof_gable.short": "Dvostrešni",
+ "cmd.arch.roof_hip.short": "Četverostrešni",
+ "cmd.arch.roof_shed.short": "Jednostrešni",
+ "cmd.arch.roof_mansard.short": "Mansardni prelom",
+ "cmd.arch.roof_gambrel.short": "Mansardni",
+ "cmd.arch.roof_barrel.short": "Bačvasti",
+ "cmd.arch.roof_edges.short": "Rubovi krova",
+ "cmd.arch.roof_opening.short": "Otvor",
+ "cmd.mass.roof_by_face.short": "Po plohi"
+}

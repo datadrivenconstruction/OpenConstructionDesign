@@ -1,0 +1,14 @@
+{
+ "lnp.openings_refused": "{n} öppningar ändrades inte ({why})",
+ "lnp.params_changed": "ändrade värden: {n}",
+ "lnp.params_same": "Inga ändringar: {u} element har redan det här värdet",
+ "lnp.params_tip": "Enter tillämpar värdet på alla markerade element; Esc behåller dem",
+ "lnp.locked_hint": "Låsta värden behålls: {n}",
+ "lnp.panels_one": "Paneler redigeras en i taget",
+ "lnp.keep_first": "Behåll första",
+ "lnp.keep_first_tip": "Markera bara den första panelen för att redigera den",
+ "lnp.clip_from_wall": "Parametrar kopierade från vägg #{id}",
+ "lnp.clip_from_opening": "Parametrar kopierade från öppning #{id}",
+ "lnp.match_from": "Egenskaper för #{id} matchade till {n} element",
+ "lnp.why_at": "#{id}: {e}"
+}

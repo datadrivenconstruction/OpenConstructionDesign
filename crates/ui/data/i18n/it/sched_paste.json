@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "Incollate {n} celle",
+ "sched_edit.pasted_skipped": "Incollate {n} celle, saltate {k}: {why}",
+ "sched_edit.filled": "Compilate {n} celle",
+ "sched_edit.filled_skipped": "Compilate {n} celle, saltate {k}: {why}",
+ "sched_edit.why_ro": "{n} in sola lettura",
+ "sched_edit.why_bad": "{n} valore non valido",
+ "sched_edit.no_cell": "Clicca prima una cella del prospetto",
+ "sched_edit.nothing": "Nulla da scrivere",
+ "sched_edit.not_refreshed": "Scritto, la vista non si è aggiornata: {e}",
+ "sched_edit.failed": "non modificato: {e}",
+ "sched_edit.no_changes": "Nessuna modifica: {u} celle hanno già questi valori",
+ "sched_edit.same_tail": ", {u} già uguali"
+}

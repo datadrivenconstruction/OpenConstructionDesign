@@ -1,0 +1,23 @@
+{
+  "cmd.arch.room_sep.short": "Ruimtescheider",
+  "cmd.str.footing.short": "Kolomvoet",
+  "cmd.str.strip_footing.short": "Strookvoet",
+  "cmd.str.analytical.short": "Analytisch",
+  "cmd.mep.terminal.short": "Luchtuitlaat",
+  "cmd.mod.isolate.short": "Isoleren",
+  "cmd.view.ui.short": "Interface",
+  "cmd.mgr.params.short": "Parameters",
+  "cmd.ctx.wall.attach.short": "Koppelen",
+  "cmd.mass.unjoin.short": "Ontkoppelen",
+  "cmd.mod.unjoin.short": "Ontkoppelen",
+  "cmd.arch.void_extrusion.short": "Holle extrusie",
+  "cmd.e3d.snap.short": "3D-snaps",
+  "cmd.mgr.open_big.short": "Groot bestand…",
+  "cmd.site.edit_points.short": "Topo-punten",
+  "cmd.view.reveal_3d.short": "Categorieën",
+  "cmd.help.check_update.short": "Updates",
+  "cmd.ctx.floor.link_unlink.short": "Randen los",
+  "cmd.ui.onboarding.short": "Instellen…",
+  "cmd.mod.distribute.short": "Verdelen",
+  "cmd.data.src_delta.short": "XLSX-wijz.…"
+}

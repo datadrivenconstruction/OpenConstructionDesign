@@ -1,0 +1,42 @@
+{
+ "ai.tool.show_elements": "Viser elementer",
+ "ai.tool.isolate_elements": "Isolerer elementer",
+ "ai.tool.color_by": "Farver efter værdi",
+ "ai.tool.reset_view": "Nulstiller visningen",
+ "ai_found.found.query": "Fundet",
+ "ai_found.found.show": "Vist",
+ "ai_found.found.isolate": "Isoleret",
+ "ai_found.found.hide": "Skjult",
+ "ai_found.found.color": "Farvet",
+ "ai_found.found.count": "{n} af {m}",
+ "ai_found.found.none": "Intet matcher. Prøv et bredere filter.",
+ "ai_found.found.show_btn": "Vis",
+ "ai_found.found.show_tip": "Vælg disse elementer og zoom til dem i plan og 3D",
+ "ai_found.found.isolate_btn": "Isoler",
+ "ai_found.found.isolate_tip": "Vis kun disse elementer, indtil visningen nulstilles",
+ "ai_found.found.select_btn": "Vælg",
+ "ai_found.found.select_tip": "Vælg disse elementer uden at flytte visningen",
+ "ai_found.legend.title": "Farv efter {by}",
+ "ai_found.legend.row_tip": "Klik for at vælge disse elementer",
+ "ai_found.legend.empty_value": "Ingen værdi",
+ "ai_found.legend.other": {
+  "one": "# yderligere værdi",
+  "other": "# yderligere værdier"
+ },
+ "ai_found.view.title": "AI-assistentens visning",
+ "ai_found.view.reset": "Nulstil visning",
+ "ai_found.view.reset_tip": "Gendan visningen fra før AI-assistenten ændrede den",
+ "ai_found.view.shown": {
+  "one": "# element vist",
+  "other": "# elementer vist"
+ },
+ "ai_found.view.isolated": {
+  "one": "# element isoleret",
+  "other": "# elementer isoleret"
+ },
+ "ai_found.view.hidden": {
+  "one": "# element skjult",
+  "other": "# elementer skjult"
+ },
+ "ai_found.found.line": "{what}: {count}"
+}

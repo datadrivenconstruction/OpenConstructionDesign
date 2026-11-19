@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "AI ga so'rash: {q}",
+ "ai.palette.connect": "So'rash uchun AI ni ulang",
+ "ai.palette.draft.apply": "Qoralamani qo'llash ({n})",
+ "ai.palette.draft.reject": "Qoralamani rad etish",
+ "ai.palette.draft.next": "Keyingi qoralama o'zgarishi",
+ "ai.palette.draft.show": "Qoralamani ko'rinishda ko'rsatish",
+ "cmd.ai.next_change": "Keyingi qoralama o'zgarishi",
+ "cmd.ai.next_change.desc": "Ko'rinishni qoralama o'zgartirgan keyingi elementga o'tkazadi.",
+ "cmd.ai.show_draft": "AI qoralamasini ko'rinishda ko'rsatish",
+ "cmd.ai.show_draft.desc": "Ko'rinishni qoralama o'zgartiradigan hamma narsaga moslaydi."
+}

@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "在下方插入层",
+ "type_layers.layer.delete": "删除层",
+ "type_layers.layer.delete_last": "类型至少需要一层",
+ "type_layers.value.bad": "不是有效的正数值",
+ "type_layers.value.required": "必填",
+ "type_layers.unsaved.title": "“{name}”有未保存的更改",
+ "type_layers.unsaved.body": "应用到类型，还是放弃？",
+ "type_layers.unsaved.discard": "放弃"
+}

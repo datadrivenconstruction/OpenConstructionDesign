@@ -1,0 +1,10 @@
+{
+ "stage_err.kept": "tabel {t} jäeti alles: {n} rida kirjutati pärast Lisamist",
+ "stage_err.stage.prev_attached": "Ei lisatud: eelmise Lisamise koopia on veel avatud. Käivita Lisa uuesti",
+ "stage_err.stage.model_changed": "Ei lisatud: mudel muutus faili lugemise ajal. Käivita Lisa uuesti",
+ "stage_err.stage.no_record": "Ei lisatud: imporditud koopial ei ole muutuste kirjet",
+ "stage_err.stage.table_differs": "Ei lisatud: tabel {t} erineb mudeli ja imporditud koopia vahel",
+ "stage_err.stage.unique_key": "Ei lisatud: tabeli {t} unikaalset võtit ei saa järgida",
+ "stage_err.stage.table_gone": "Ei lisatud: import muutis tabelit {t}, mida koopial enam ei ole",
+ "stage_err.stage.copy_held": "Lisatud; imporditud koopia jääb avatuks kuni järgmise Lisamise või mudeli uuesti avamiseni"
+}

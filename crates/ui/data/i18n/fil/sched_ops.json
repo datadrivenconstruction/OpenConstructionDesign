@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "dapat higit sa zero ang halaga",
+ "sched_ops.not_number": "hindi numero",
+ "sched_ops.no_host": "walang host wall",
+ "sched_ops.wall_length": "hindi maitatakda nang ganoon ang haba ng pader na ito",
+ "sched_ops.no_wall": "walang ganoong pader",
+ "sched_ops.no_opening": "walang ganoong opening",
+ "sched_ops.no_curtain": "walang ganoong curtain wall",
+ "sched_ops.no_panel": "walang ganoong panel",
+ "sched_ops.no_slab": "walang ganoong slab",
+ "sched_ops.no_room": "walang ganoong kuwarto",
+ "sched_ops.slope_range": "wala sa saklaw ang slope",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

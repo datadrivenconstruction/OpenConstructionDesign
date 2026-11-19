@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "ציר X",
+ "fe.axis.y": "ציר Y",
+ "fe.axis.z": "ציר Z",
+ "fe.col.axis": "ציר",
+ "fe.col.at": "מיקום",
+ "fe.col.mode": "מצב",
+ "fe.mode.fixed": "קבוע",
+ "fe.mode.free": "חופשי",
+ "fe.types.inherited": "ברירת מחדל מהפרמטר",
+ "fe.csv.more": "פעולות CSV נוספות",
+ "fe.ref.selected": "מישור: {name}"
+}

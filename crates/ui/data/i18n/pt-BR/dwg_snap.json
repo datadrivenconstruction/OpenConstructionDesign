@@ -1,0 +1,5 @@
+{
+ "snap.center": "Centro",
+ "dwg_snap.through": "Ponto de passagem",
+ "dwg_snap.through_tip": "Desloca através do ponto clicado (prende-se a extremidades, cruzamentos, centros) em vez da distância digitada"
+}

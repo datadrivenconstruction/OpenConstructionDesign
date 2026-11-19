@@ -1,0 +1,14 @@
+{
+ "empty.v3d_model.title": "3D da hali hech narsa yo'q",
+ "empty.v3d_model.hint": "Planda devorlar chizing, ular shu yerda paydo bo'ladi.",
+ "empty.v3d_model.action": "Planni ochish",
+ "empty.v3d_hidden.title": "Bu ko'rinishda barcha elementlar yashirilgan",
+ "empty.v3d_hidden.hint": "Vaqtinchalik yashirish yoki ajratish hech narsani ko'rsatmaydi. Ko'rinish grafikasi o'zgarishsiz qoladi.",
+ "empty.v3d_hidden.action": "Hammasini ko'rsatish",
+ "empty.v3d_graphics.title": "Ko'rinish grafikasi barcha kategoriyalarni yashiradi",
+ "empty.v3d_graphics.hint": "Bu ko'rinishning kategoriya qoidalari hech narsani ko'rsatmaydi. Ko'rinish grafikasida kategoriyalarni qayta yoqing.",
+ "empty.v3d_graphics.action": "Ko'rinish grafikasini ochish",
+ "empty.v3d_box.title": "Kesim qutisi model tashqarisida",
+ "empty.v3d_box.hint": "Kesim qutisi barcha elementlarni kesib tashlaydi. Uni model atrofiga qayta moslang.",
+ "empty.v3d_box.action": "Qutini tiklash"
+}

@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "新建族",
+ "family_editor.open_tip": "打开族或草稿",
+ "family_editor.close_named": "关闭 {name}",
+ "family_editor.unsaved": "未保存的更改",
+ "family_editor.search": "搜索",
+ "family_editor.nothing": "未找到结果",
+ "family_editor.sec_families": "项目族",
+ "family_editor.sec_drafts": "草稿",
+ "family_editor.cap_category": "类别",
+ "family_editor.cap_host": "宿主",
+ "family_editor.cap_type": "预览类型"
+}

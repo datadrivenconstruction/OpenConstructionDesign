@@ -1,0 +1,28 @@
+[
+ {
+  "id": "arch.grid_pick",
+  "repeatable": true,
+  "icon": "grid-pick",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M3",
+  "group": "datum"
+ },
+ {
+  "id": "struct.beam_pick",
+  "repeatable": true,
+  "icon": "beam-pick",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "struct",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M3",
+  "group": "struct"
+ }
+]

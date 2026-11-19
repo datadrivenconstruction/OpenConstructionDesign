@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "Бүх загвар эсвэл сонголтыг хоёртын STL хэлбэрээр метр эсвэл миллиметрээр хадгална.",
+ "cmd.data.export_obj.desc": "Бүх загвар эсвэл сонголтыг MTL файлтай OBJ хэлбэрээр хадгална: элемент бүрт нэг бүлэг, материалаар өнгө.",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "Материалтай OBJ (.obj)",
+ "open_file.filter.mesh": "3D сүлжээ (glTF, STEP, STL, OBJ)",
+ "mx.title": "{fmt} экспортлох",
+ "mx.scope": "Юуг экспортлох",
+ "mx.scope.all": "Бүх загвар",
+ "mx.scope.sel": "Сонголт ({n} элемент)",
+ "mx.units": "Файлын нэгжүүд",
+ "mx.units.m": "Метр",
+ "mx.units.mm": "Миллиметр",
+ "mx.export": "Экспортлох…",
+ "mx.saved": "{fmt} хадгалагдлаа: {path} ({parts} элемент, {tris} гурвалжин)",
+ "mx.partial": "{fmt} {n} асуудалтай хадгалагдлаа, зарим бие дутуу байж болно: {path}",
+ "mx.failed": "{fmt} экспорт амжилтгүй: {error}",
+ "mx.imported": "{file}: {n} элемент импортлогдлоо ({tris} гурвалжин)",
+ "mx.imported_notes": "{file}: {n} элемент импортлогдлоо ({tris} гурвалжин), {w} тэмдэглэл: {first}"
+}

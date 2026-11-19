@@ -1,0 +1,9 @@
+{
+ "ai.plan.reject_ask": {
+  "one": "Afvis # ændring?",
+  "other": "Afvis # ændringer?"
+ },
+ "ai.plan.reject_ask.hint": "Udkastet og dine markeringer kasseres. Modellen forbliver, som den er.",
+ "ai.plan.reject_confirm": "Afvis",
+ "ai.plan.reject_keep": "Behold"
+}

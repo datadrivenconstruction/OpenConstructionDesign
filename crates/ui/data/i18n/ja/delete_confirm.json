@@ -1,0 +1,59 @@
+{
+ "del.k.door": {
+  "one": "# 個のドア",
+  "other": "# 個のドア"
+ },
+ "del.k.window": {
+  "one": "# 個の窓",
+  "other": "# 個の窓"
+ },
+ "del.k.opening": {
+  "one": "# 個の開口部",
+  "other": "# 個の開口部"
+ },
+ "del.k.comp": {
+  "one": "# 個のホストされたコンポーネント",
+  "other": "# 個のホストされたコンポーネント"
+ },
+ "del.k.rebar": {
+  "one": "# セットの鉄筋",
+  "other": "# セットの鉄筋"
+ },
+ "del.k.port": {
+  "one": "# 個のホストされた MEP ポート",
+  "other": "# 個のホストされた MEP ポート"
+ },
+ "del.k.joist": {
+  "one": "# 本の梁",
+  "other": "# 本の梁"
+ },
+ "del.k.railing": {
+  "one": "# 個の手すり",
+  "other": "# 個の手すり"
+ },
+ "del.k.tag": {
+  "one": "# 個のタグ",
+  "other": "# 個のタグ"
+ },
+ "del.k.dim": {
+  "one": "# 個の寸法 (切り離し)",
+  "other": "# 個の寸法 (切り離し)"
+ },
+ "del.also": "影響を受けるその他: {list}",
+ "del.rooms": {
+  "one": "# 部屋は境界の壁を 1 つ失います",
+  "other": "# 部屋は境界の壁を 1 つ失います"
+ },
+ "del.cancelled": "削除をキャンセルしました。何も変更されていません",
+ "del.confirm.title": "依存要素を含めて削除",
+ "del.confirm.lead": {
+  "one": "選択した # 個の要素と一緒に次も削除されます:",
+  "other": "選択した # 個の要素と一緒に次も削除されます:"
+ },
+ "del.confirm.levels": {
+  "one": "そのうち # 個は別のレベルにあります",
+  "other": "そのうち # 個は別のレベルにあります"
+ },
+ "del.confirm.all": "すべて削除",
+ "del.confirm.cancel": "キャンセル"
+}

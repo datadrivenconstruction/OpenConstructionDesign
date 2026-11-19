@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "Тез клавишалардын тизмеси",
+ "cmd.help.shortcuts.desc": "Учурдагы бардык тез клавишаларды контекст боюнча көрсөтөт. Текст талаасынан тышкары ? басыңыз.",
+ "sheet.title": "Тез клавишалар",
+ "sheet.filter": "Буйрук же клавиша боюнча чыпка",
+ "sheet.filter_label": "Тез клавишаларды чыпкалоо",
+ "sheet.customize": "Ыңгайлаштыруу…",
+ "sheet.close": "Жабуу",
+ "sheet.esc_close": "жабуу үчүн",
+ "sheet.none": "Тез клавишалар дал келген жок",
+ "sheet.none_hint": "Башка сөз же клавиша менен аракет кылыңыз.",
+ "sheet.sec.general": "Жалпы",
+ "sheet.sec.plan": "План",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "Тизмелер",
+ "sheet.sec.sheets": "Барактар",
+ "sheet.sec.ai": "AI"
+}

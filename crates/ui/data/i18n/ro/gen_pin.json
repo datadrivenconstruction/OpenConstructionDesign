@@ -1,0 +1,7 @@
+{
+ "gen.pin.room": "Ai modificat o încăpere a proiectului generat. Fixează-o, ca o revizuire a proiectului să o păstreze pe loc.",
+ "gen.pin.storey": "Ai modificat un etaj al proiectului generat. Fixează-l, ca o revizuire a proiectului să îi păstreze pereții și golurile.",
+ "gen.pin.action": "Fixează",
+ "gen.pin.done": "Fixat: o revizuire a proiectului îl păstrează și plasează restul în jurul lui",
+ "gen.pin.failed": "Nu s-a putut fixa"
+}

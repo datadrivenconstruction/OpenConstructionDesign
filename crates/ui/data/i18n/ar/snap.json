@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "نهاية",
+ "snap.midpoint": "منتصف",
+ "snap.perpendicular": "عمودي",
+ "snap.wall_axis": "محور الجدار",
+ "snap.wall_face": "وجه الجدار",
+ "snap.grid": "الشبكة",
+ "snap.intersection": "تقاطع",
+ "snap.grid_axis": "خط الشبكة",
+ "snap.ref_plane": "مستوى مرجعي",
+ "snap.nearest": "الأقرب",
+ "snap.align_x": "محاذاة على X مع نقطة بعيدة",
+ "snap.align_y": "محاذاة على Y مع نقطة بعيدة",
+ "snap.align_xy": "محاذاة على X وY"
+}

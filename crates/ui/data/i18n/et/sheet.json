@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "Kiirklahvide juhend",
+ "cmd.help.shortcuts.desc": "Näitab kõiki kiirklahve praegusel kujul, kontekstide kaupa. Vajuta ? kõikjal väljaspool tekstivälja.",
+ "sheet.title": "Kiirklahvid",
+ "sheet.filter": "Filtreeri käsu või klahvi järgi",
+ "sheet.filter_label": "Filtreeri kiirklahve",
+ "sheet.customize": "Kohanda…",
+ "sheet.close": "Sulge",
+ "sheet.esc_close": "sulgemiseks",
+ "sheet.none": "Ükski kiirklahv ei sobi",
+ "sheet.none_hint": "Proovi teist sõna või klahvi.",
+ "sheet.sec.general": "Üldine",
+ "sheet.sec.plan": "Plaan",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "Loendid",
+ "sheet.sec.sheets": "Lehed",
+ "sheet.sec.ai": "AI"
+}

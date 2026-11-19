@@ -1,0 +1,9 @@
+{
+ "drafts.draft.view": "„{name}” nézetének grafikája",
+ "drafts.draft.filter": "Nézetszűrő: „{name}”",
+ "drafts.draft.filter_new": "Új nézetszűrő",
+ "drafts.draft.object_styles": "Objektumstílusok",
+ "drafts.draft.material": "Anyag: „{name}”",
+ "drafts.draft.type": "Típus: „{name}”",
+ "drafts.draft.params": "A(z) „{name}” család paraméterei"
+}

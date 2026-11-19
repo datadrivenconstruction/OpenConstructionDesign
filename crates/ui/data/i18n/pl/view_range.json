@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "Zakres widoku",
+ "view_range.range": "Zakres widoku",
+ "view_range.cut": "Płaszczyzna cięcia",
+ "view_range.bottom": "Dół",
+ "view_range.depth": "Głębokość widoku",
+ "view_range.cut.hint": "Wysokość płaszczyzny cięcia nad poziomem. Elementy, które ją przecinają, są rysowane jako przecięte.",
+ "view_range.bottom.hint": "Dolna granica zakresu względem poziomu. Wartości zerowe i ujemne są dozwolone.",
+ "view_range.depth.hint": "Jak głęboko widok sięga poniżej dołu. Zero lub więcej.",
+ "view_range.err.number": "Wpisz długość w każdym polu",
+ "view_range.err.not_finite": "Wpisz długość w każdym polu",
+ "view_range.err.cut_not_above_bottom": "Płaszczyzna cięcia musi być powyżej dołu",
+ "view_range.err.negative_depth": "Głębokość widoku nie może być ujemna",
+ "view_range.err.top_below_cut": "Góra zakresu nie może być poniżej płaszczyzny cięcia"
+}

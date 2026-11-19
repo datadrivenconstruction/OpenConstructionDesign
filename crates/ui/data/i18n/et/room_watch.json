@@ -1,0 +1,4 @@
+{
+ "room_watch.room.dup": "Ruum {room} on ruumi {other} piirkonnas: pindala ja maht arvestatakse ainult ruumis {other}",
+ "ai.issue.room_dup": "Ruum on ruumi {0} piirkonnas: selle pindala arvestatakse seal"
+}

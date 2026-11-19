@@ -1,0 +1,12 @@
+{
+ "opt.stair.straight": "Lurus",
+ "opt.stair.l": "L",
+ "opt.stair.u": "U",
+ "opt.stair.gap": "Celah",
+ "hint.stair.corner": "Tangga L: pilih sudut belok · Backspace — hapus titik terakhir · Esc — hapus titik terakhir; tanpa titik — batal",
+ "hint.stair.side": "Tangga: pilih sisi rangkaian kedua · Backspace — hapus titik terakhir · Esc — hapus titik terakhir; tanpa titik — batal",
+ "tool.stair.flights": "{n} tanjakan (total {m})",
+ "tool.stair.err_split": "Setiap rangkaian memerlukan minimal 2 tanjakan: rangkaian pertama memiliki {n} dari {m}",
+ "tool.stair.err_comfort": "Tanjakan dan injakan melanggar aturan kenyamanan (2R + T)",
+ "tool.stair.err_input": "Ukuran tangga di luar rentang: periksa lebar, tinggi, dan bordes"
+}

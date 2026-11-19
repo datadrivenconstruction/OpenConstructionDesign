@@ -1,0 +1,7 @@
+{
+ "xlsx_alias_ids.ids_written": "{n} uutta riviä sai tunnuksensa nimetyssä arkissasi; muu työkirja ei muuttunut.",
+ "xlsx_alias_ids.ids_open": "Työkirja on auki toisessa ohjelmassa: {n} uuden rivin tunnuksia ei kirjoitettu. Sulje se siellä ja synkronoi; näitä rivejä ei luoda uudelleen.",
+ "xlsx_alias_ids.ids_failed": "{n} uuden rivin tunnuksia ei voitu kirjoittaa; työkirja jätettiin ennalleen. Näitä rivejä ei luoda uudelleen seuraavassa synkronoinnissa.",
+ "xlsx_alias_ids.unpaired": "{n} uudella rivillä ei ole vielä tunnusta; ne muistetaan eikä niitä luoda uudelleen.",
+ "xlsx_alias_ids.refused": "Mitään ei käytetty: uudet rivit kohteissa {sheets} eivät voi saada tunnuksiaan, kun nimettyä arkkia luetaan. Nimeä arkki takaisin vakionimeensä (tai poista nämä rivit) ja synkronoi uudelleen."
+}

@@ -1,0 +1,7 @@
+{
+ "offset_opts.dist_positive": "فاصله آفست باید بزرگ‌تر از صفر باشد؛ طرف از نشانگر پیروی می‌کند",
+ "offset_opts.count_bad": "عدد صحیح از {min} تا {max}",
+ "offset_opts.done_tip": "انتخاب را تمام کن و ابزار را شروع کن",
+ "offset_opts.iso.apply_tip": "پنهان‌سازی موقت را برای این نما دائمی کن",
+ "offset_opts.iso.exit": "خروج از حالت موقت"
+}

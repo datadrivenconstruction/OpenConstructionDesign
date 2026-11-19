@@ -1,0 +1,6 @@
+{
+ "api.cmd.family_read": "Read a project family's definition text",
+ "api.cmd.family_validate": "Check a family definition text",
+ "api.cmd.family_reference": "Read the family definition text reference",
+ "api.cmd.family_draft": "Offer a family definition as a draft in the family editor"
+}

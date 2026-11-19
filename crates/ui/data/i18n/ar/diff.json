@@ -1,0 +1,7 @@
+{
+ "diff.kind.added": "مضاف",
+ "diff.kind.changed": "متغيّر",
+ "diff.kind.deleted": "محذوف",
+ "diff.kind.refused": "مرفوض",
+ "diff.kind.conflict": "تعارض"
+}

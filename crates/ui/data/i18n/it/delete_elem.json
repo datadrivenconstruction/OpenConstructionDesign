@@ -1,0 +1,9 @@
+{
+ "elem.deleted": "Elementi eliminati: {n}",
+ "elem.deleted_kept": "Elementi eliminati: {n}; lasciati al loro posto: {k} (pannelli ed elementi che non si possono eliminare)",
+ "elem.not_deleted": "non eliminato: {e}",
+ "elem.not_deletable": "Questo elemento non si può eliminare",
+ "elem.panel": "pannello di facciata continua",
+ "elem.panel_refused": "Un pannello fa parte della sua facciata continua e non si può eliminare da solo. Seleziona l'intera parete per eliminarla.",
+ "elem.reload_failed": "Eliminato, ma la vista non si è aggiornata: {e}"
+}

@@ -1,0 +1,4 @@
+{
+ "family_load.refused": "Rodinu „{name}“ nelze načíst: {msg}. Do projektu nebylo nic načteno; vaše úpravy zůstávají zachovány.",
+ "family_load.loaded_all": "Načteno {n} rodin najednou: {names}"
+}

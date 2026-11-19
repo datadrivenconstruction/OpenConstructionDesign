@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "사용자 지정",
+ "draw_quality.custom.tip": "{name}: 이 프로젝트의 항목",
+ "draw_quality.custom_note": "사용자 지정으로 표시된 항목은 이 프로젝트에 속합니다.",
+ "draw_quality.unsaved.lib_body": "라이브러리에 저장하시겠습니까, 아니면 버리시겠습니까?",
+ "draw_quality.unsaved.styles_body": "뷰에 적용하시겠습니까, 아니면 버리시겠습니까?",
+ "draw_quality.unsaved.both_body": "적용하시겠습니까, 아니면 버리시겠습니까?",
+ "draw_quality.halftone": "{category} 하프톤",
+ "draw_quality.styles.name": "선 스타일",
+ "draw_quality.styles.other_level": "레벨 {level}의 저장되지 않은 스타일 편집: 이 레벨을 편집하려면 적용하거나 되돌리세요."
+}

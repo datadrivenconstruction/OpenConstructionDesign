@@ -1,0 +1,19 @@
+{
+ "undo.entry_later": "לא בוטל: אחריו בוצע שינוי אחר. בטל קודם את השינוי ההוא.",
+ "undo.entry_gone": "לא בוטל: השינוי הזה כבר בוטל או שאינו נמצא בהיסטוריה.",
+ "undo.entry_busy": "סיים או בטל קודם את השרטוט הנוכחי, ואז בטל.",
+ "quick.hud.more": "עוד במאפיינים: {names}",
+ "sheet_tools.sheet.more": "כלי גיליון נוספים",
+ "job.of": "{d} מתוך {t}",
+ "job.of.mb": "{d} מתוך {t} MB",
+ "job.left.under_minute": "נותרה פחות מדקה",
+ "job.left.minutes": "נותרו בערך {n} דק׳",
+ "sheet_tools.start.units": "יחידות",
+ "sheet_tools.print.save": {
+  "one": "שמור # גיליון",
+  "two": "שמור # גיליונות",
+  "other": "שמור # גיליונות"
+ },
+ "sheet_tools.sets.delete_ask": "למחוק את הסט “{name}”? הגיליונות שלו יישארו בפרויקט.",
+ "sheet_tools.keep": "שמור"
+}

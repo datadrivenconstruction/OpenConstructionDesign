@@ -1,0 +1,8 @@
+{
+ "cmd.props.param_lock": "Lås eller lås op parameterværdi",
+ "locked_values.kept": "{n} låste værdier beholdt",
+ "locked_values.locked": "“{name}” låst: regneark-import, massredigering og AI beholder den",
+ "locked_values.unlocked": "“{name}” låst op",
+ "locked_values.locked_tip": "Låst: regneark-import, massredigering og AI beholder denne værdi. Klik for at låse op  ·  Ctrl+L",
+ "locked_values.no_row": "Peg på en parameterrække i Egenskaber, og tryk derefter Ctrl+L"
+}

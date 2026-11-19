@@ -1,0 +1,10 @@
+{
+ "cmd.mod.scale": "缩放",
+ "cmd.mod.scale.desc": "选择图元，然后点击基点、参考长度和新长度，或输入系数。",
+ "hint.scale.select": "缩放：选择图元 · Enter — 完成",
+ "hint.scale.first": "缩放：拾取基点 · Esc — 取消",
+ "hint.scale.second": "缩放：拾取参考长度 · 数字 — 系数 · Esc — 取消",
+ "hint.scale.third": "缩放：拾取新长度 · 数字 — 系数 · Esc — 取消",
+ "scl.bad_factor": "缩放系数必须是大于零的数字",
+ "scl.zero_ref": "参考长度为零：请拾取远离基点的点"
+}

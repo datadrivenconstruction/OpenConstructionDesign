@@ -1,0 +1,8 @@
+{
+ "_doc": "Russian text of the scripted eval runs (src/ai/eval/tests_*.rs); {sway} is the sway in mm.",
+ "plates_title": "Фасонки и болты в узлах",
+ "tower_reply": "Башня построена: раскачивание на вершине около {sway} мм (предварительно); в узлах фасонки (gusset plates) и болты (bolts).",
+ "tower_300_reply": "Башня 300 м построена, раскачивание на вершине около {sway} мм (предварительно).",
+ "structure_yes": "решётчат",
+ "structure_no": "покрась стены"
+}

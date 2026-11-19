@@ -1,0 +1,20 @@
+{
+ "api.cmd.move_elements": "Déplacer des éléments d’un décalage en mètres",
+ "api.cmd.copy_elements": "Copier des éléments selon un ou plusieurs décalages en mètres",
+ "api.cmd.rotate_elements": "Faire pivoter des éléments autour d’un point d’un angle en degrés",
+ "api.cmd.mirror_elements": "Symétrie des éléments par rapport à un axe passant par deux points",
+ "api.cmd.scale_elements": "Mettre à l’échelle des éléments autour d’un point selon un facteur",
+ "api.cmd.array_elements": "Réseau linéaire ou radial d’éléments",
+ "api.cmd.offset_wall": "Copie parallèle d’un mur à une distance en mètres",
+ "api.cmd.split_wall": "Couper un mur en deux en un point",
+ "api.cmd.pin_elements": "Épingler ou désépingler des éléments",
+ "api.cmd.flip_openings": "Inverser le sens d’ouverture ou la face des portes et fenêtres",
+ "api.cmd.create_level": "Créer un niveau à une cote en mètres",
+ "api.cmd.edit_level": "Renommer un niveau ou modifier sa cote",
+ "api.cmd.delete_level": "Supprimer un niveau",
+ "api.cmd.place_rooms": "Placer un local dans chaque zone fermée d’un niveau",
+ "api.cmd.join_elements": "Joindre, désolidariser ou changer les jonctions de géométrie",
+ "api.cmd.place_footings": "Placer une semelle sous chaque poteau d’un niveau",
+ "api.cmd.create_terrain": "Créer un terrain à partir de points de relevé ou d'un plan incliné",
+ "api.cmd.script_recipes": "Lire les blocs de script et les recettes des constructions libres"
+}

@@ -1,0 +1,5 @@
+{
+ "drafts_overwrite.ow.project": "A projekt mentése erre a válaszra vár. Cseréld ki az értékeket a mentés folytatásához; a Vissza a szerkesztéshez megtart minden módosítást, és semmit nem ír ki.",
+ "drafts_overwrite.drafts.ow_wait": "A mentés a családszerkesztőben adott válaszra vár: egy család betöltése felülírná a projekttípus-értékeket. Semmi nem zárult be.",
+ "drafts_overwrite.drafts.ow_back": "A mentés leállt: a projekttípus-értékek megmaradtak, a családszerkesztések pedig nyitva maradtak. Semmi nem zárult be."
+}

@@ -1,0 +1,10 @@
+{
+ "xlsx_dup.dup_undo": "Ångra beslut",
+ "xlsx_dup.dup_undo_tip": "Rader som blivit nya element ({n}) läses med sitt id igen",
+ "xlsx_dup.dup_new": "Skapa redigerade kopior som nya element",
+ "xlsx_dup.dup_new_tip": "Rader {rows} blir nya element med sina värden; element #{id} behåller sina värden (ett ångra-steg tillsammans med resten)",
+ "xl.msg.dup_same": "dubblerat id {}: samma värden som rad {}; raden ignorerades",
+ "xl.msg.dup_unchanged": "dubblerat id {}: oförändrad kopia av den exporterade raden; raden ignorerades",
+ "xl.msg.dup_conflict": "id {} finns på raderna {} med olika värden; inget tillämpades för det id:t",
+ "xl.msg.dup_conflict_keep": "id {} finns på raderna {} med olika värden; inget tillämpades för det id:t — behåll en rad"
+}

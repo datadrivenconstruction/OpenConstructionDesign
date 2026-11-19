@@ -1,0 +1,14 @@
+{
+ "lnp.openings_refused": "{n} ओपनिंग नहीं बदलीं ({why})",
+ "lnp.params_changed": "बदले गए मान: {n}",
+ "lnp.params_same": "कोई बदलाव नहीं: {u} एलिमेंट में यह मान पहले से है",
+ "lnp.params_tip": "Enter मान सभी चुने गए एलिमेंट पर लागू करता है; Esc उन्हें वैसा ही रखता है",
+ "lnp.locked_hint": "लॉक किए गए मान रखे गए: {n}",
+ "lnp.panels_one": "पैनल एक-एक करके संपादित होते हैं",
+ "lnp.keep_first": "पहला रखें",
+ "lnp.keep_first_tip": "संपादन के लिए केवल पहला पैनल चुनें",
+ "lnp.clip_from_wall": "दीवार #{id} से पैरामीटर कॉपी किए गए",
+ "lnp.clip_from_opening": "ओपनिंग #{id} से पैरामीटर कॉपी किए गए",
+ "lnp.match_from": "#{id} की प्रॉपर्टी {n} एलिमेंट पर लागू की गई",
+ "lnp.why_at": "#{id}: {e}"
+}

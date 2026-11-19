@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "Нэгжүүд",
+ "topo_units.unit": "Файл дахь нэгж",
+ "topo_units.unit.m": "м",
+ "topo_units.unit.cm": "см",
+ "topo_units.unit.mm": "мм",
+ "topo_units.unit.ft": "фут",
+ "topo_units.unit.usft": "АНУ-ын хэмжилтийн фут",
+ "topo_units.unit.in": "инч",
+ "topo_units.unit.from_file": "Файл нэгжээ заасан: {unit}",
+ "topo_units.unit.suggested": "Файлд нэгж заагаагүй. Хэмжээнээс санал болгосон: {unit} — доорх үр дүнг шалгана уу",
+ "topo_units.extent": "Төслийн нэгжээр үр дүн: план дээр {x} × {y} {u}, өндрийн хүрээ {z} {u}",
+ "topo_units.extent.none": "Үр дүн: эдгээр сонголтоор импортлох зүйл алга",
+ "topo_units.extent.check": "Энэ талбай шиг харагдахгүй байна: нэгжийг шалгана уу"
+}

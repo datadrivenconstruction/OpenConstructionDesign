@@ -1,0 +1,8 @@
+{
+ "cmd.file.save_copy": "Tallenna kopio toiselle…",
+ "cmd.file.save_copy.desc": "Tallentaa projektista kopion ilman tekoälysuostumuksia ja ellei toisin valita, ilman tekoälypöytäkirjaa. Tämä projekti pysyy ennallaan.",
+ "ai.copy.title": "Tallenna kopio",
+ "ai.copy.journal": "Sisällytetäänkö tekoälypöytäkirja kopioon? Pöytäkirjassa ovat pyynnöt, vastaukset ja osoitteet. Pilvisuostumusta ei koskaan kopioida: toinen henkilö päättää itse. Valitse Ei jättääksesi pöytäkirjan pois.",
+ "ai.copy.done": "Kopio tallennettu: {name}",
+ "ai.copy.same": "Valitse toinen tiedosto: kopio ei voi korvata avointa projektia."
+}

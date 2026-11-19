@@ -1,0 +1,5 @@
+{
+ "xlsx_delete.delete_missing": "Usuń wiersze brakujące w skoroszycie",
+ "xlsx_delete.not_removed": "nie usunięto: brak danych porównania",
+ "xlsx_delete.no_base_reason": "Niedostępne: skoroszyt nie ma danych porównania, więc brakującego wiersza nie da się odróżnić od usuniętego przez pomyłkę. Przy Zastosuj nic nie zostanie usunięte."
+}

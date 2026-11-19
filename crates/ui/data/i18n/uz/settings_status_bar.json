@@ -1,0 +1,10 @@
+{
+ "cmd.view.axes_full": "To'liq o'qlar",
+ "cmd.view.axes_full.desc": "X va Y o'qlarini plan bo'ylab to'liq chiziq sifatida ko'rsatadi. F9 ni bosib turganda faqat shu vaqtda ko'rinadi.",
+ "settings.axes_full": "O'qlar",
+ "settings.axes_full_desc": "Plan o'qlari varaq bo'ylab to'liq chiziq sifatida. Tez ko'rish uchun F9 ni bosib turing.",
+ "settings.axes_full_on": "To'liq o'qlarni ko'rsatish",
+ "plan.hud.axes_tip": "To'liq o'qlarni ko'rish uchun {key} ni bosib turing",
+ "status.axes_full.on": "To'liq o'qlar yoqilgan",
+ "status.axes_full.off": "To'liq o'qlar o'chirilgan"
+}

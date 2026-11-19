@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "ردیف‌ها و سلول‌های رد شده",
+ "xlsx_issues.conflicts_title": "در هر دو جا تغییر کرده",
+ "xlsx_issues.missing_title": "برگه در کتاب‌کار نیست",
+ "xlsx_issues.look_alike_title": "نام برگه مطابقت ندارد",
+ "xlsx_issues.mass_title": "حذف انبوه نیاز به تأیید دارد",
+ "xlsx_issues.sheets_missing": "برگه‌های {sheets} در کتاب‌کار نیستند (تغییر نام یا حذف شده‌اند)؛ ردیف‌هایشان مقایسه نشد.",
+ "xlsx_issues.keep_model": "نگه‌داشتن مدل",
+ "xlsx_issues.take_book": "گرفتن کتاب‌کار",
+ "xlsx_issues.open_book_tip": "فایل را در برنامه‌اش باز می‌کند. چیزی در مدل تغییر نمی‌کند؛ پیش‌نمایش پس از ذخیره کتاب‌کار دوباره بارگذاری می‌شود."
+}

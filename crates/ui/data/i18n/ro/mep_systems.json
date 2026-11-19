@@ -1,0 +1,21 @@
+{
+ "mep.row.system": "Sistem",
+ "mep.row.elevation": "Elevația de început",
+ "mep.row.slope": "Pantă",
+ "mep.row.material": "Material",
+ "mep.row.dev_elevation": "Elevație",
+ "mep.row.no_system": "Acest sistem nu mai există. Alegeți altul.",
+ "mep.row.no_points": "Traseul nu are puncte, deci nu are elevație.",
+ "mep.row.system_domain": "Sistemul {system} nu acceptă acest tip de traseu ({kind}). Alegeți un sistem de același tip de rețea.",
+ "mep.row.material_pipes": "Materialul se aplică doar țevilor; acest traseu este de tip {kind}.",
+ "mep.row.no_catalog": "Materialul nu are dimensiuni în catalog pentru acest traseu.",
+ "mep.mat.none": "Nesetat",
+ "mep.mat.steel": "Oțel",
+ "mep.mat.copper": "Cupru",
+ "mep.mat.pvc": "PVC",
+ "mep.mat.pp": "Polipropilenă",
+ "mep.err.follow_blocked": "Un traseu conectat nu poate urma această modificare: nu există loc pentru ramura lui în noua poziție. Mutați aparatul mai puțin sau deconectați mai întâi traseul.",
+ "mep.err.follow_slope": "Un traseu conectat are o cădere care nu poate fi păstrată în noua poziție: ar coborî sub căderea minimă a sistemului său. Mutați aparatul mai puțin pe înălțime sau deconectați mai întâi traseul.",
+ "mep.err.follow_port_lost": "Un conector pe care se afla acest traseu nu mai există după modificare. Mutați mai întâi traseul sau păstrați tipul aparatului.",
+ "mep.err.follow_device": "Acest traseu se termină la un conector de aparat și nu poate pleca de acolo. Mutați aparatul în schimb sau deconectați mai întâi traseul."
+}

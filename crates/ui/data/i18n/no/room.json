@@ -1,0 +1,6 @@
+{
+ "geom.length": "Lengde",
+ "sched.cat.room_seps": "Romskillere",
+ "room.err.point_leave": "Rom {n}: punktet ville forlatt grensen",
+ "room.err.point_taken": "Rom {n}: punktet ville havnet i rom {other}"
+}

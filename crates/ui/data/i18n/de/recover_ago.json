@@ -1,0 +1,29 @@
+{
+ "recover.ago_now": "gerade eben",
+ "recover.ago_min": {
+  "one": "vor # Min.",
+  "other": "vor # Min."
+ },
+ "recover.ago_hour": {
+  "one": "vor # Stunde",
+  "other": "vor # Stunden"
+ },
+ "recover.ago_yesterday": "gestern",
+ "recover.ago_day": {
+  "one": "vor # Tag",
+  "other": "vor # Tagen"
+ },
+ "recover.empty": "Keine Snapshots mehr vorhanden",
+ "recover.empty_hint": "Für dieses Projekt gibt es nichts wiederherzustellen.",
+ "recover.all_damaged": "Alle Snapshots sind beschädigt, keiner kann wiederhergestellt werden.",
+ "recover.keys_hint": "Pfeiltasten Auf und Ab wählen einen Snapshot, Enter wechselt zu „Wiederherstellen“",
+ "recover.row_tip": "Gespeichert {time}",
+ "recover.row_damaged_tip": "Kann nicht wiederhergestellt werden: {reason}",
+ "recover.archive_ask": "Diesen Snapshot ins Archiv verschieben?",
+ "recover.discard_ask": {
+  "one": "Den Snapshot ins Archiv verschieben? Er wird nicht erneut angeboten.",
+  "other": "Alle # Snapshots ins Archiv verschieben? Sie werden nicht erneut angeboten."
+ },
+ "recover.confirm_yes": "Ins Archiv verschieben",
+ "recover.confirm_no": "Snapshots behalten"
+}

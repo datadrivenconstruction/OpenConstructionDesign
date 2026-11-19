@@ -1,0 +1,15 @@
+{
+ "text_style.lbl.text_style": "Textstil",
+ "text_style.lbl.align": "Justering",
+ "text_style.lbl.head": "Pilspets",
+ "text_style.lbl.line_style": "Linjestil",
+ "text_style.lbl.fill": "Fyllning",
+ "text_style.lbl.detail": "Detalj",
+ "text_style.lbl.width": "Bredd",
+ "text_style.bad_number": "Ange ett tal från {min} till {max}",
+ "text_style.tip.next_ring": "Stäng den här konturen och starta en ny i samma yta",
+ "text_style.tip.edit_text": "Redigera texten på plats",
+ "text_style.tip.add_leader": "Lägg till en ledarlinje till den här texten",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°"
+}

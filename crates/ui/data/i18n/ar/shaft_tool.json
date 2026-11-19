@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "فتحات رأسية",
+ "quick.cat.shaft": "فتحة رأسية",
+ "shaft_tool.browser.shaft": "فتحة رأسية #{id}",
+ "shaft_tool.shaft.top": "المستوى العلوي",
+ "shaft_tool.shaft.cuts": "العناصر المقطوعة",
+ "shaft_tool.shaft.cut_area": "مساحة القطع",
+ "shaft_tool.shaft.cut_volume": "حجم القطع",
+ "elem.no.rooms": "يتبع الغرف التي يحتويها"
+}

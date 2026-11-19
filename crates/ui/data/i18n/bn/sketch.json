@@ -1,0 +1,11 @@
+{
+ "sketch.points": "বিন্দু",
+ "sketch.rect": "আয়তক্ষেত্র",
+ "sketch.circle": "বৃত্ত",
+ "sketch.polygon": "বহুভুজ",
+ "sketch.radius": "R",
+ "sketch.sides": "বাহু",
+ "sketch.circum": "পরিবৃত্ত",
+ "sketch.shape.tip": "স্কেচের আকার (A দিয়ে বদলায়)। আয়তক্ষেত্র: দুই কোণ। বৃত্ত ও বহুভুজ: কেন্দ্র, তারপর ব্যাসার্ধ। আকার লিখে Enter চাপলে তা স্থির হয়।",
+ "tool.err.zero_size": "শূন্য আকার: দ্বিতীয় বিন্দু প্রথম থেকে সরান"
+}

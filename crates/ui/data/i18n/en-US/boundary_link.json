@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "Pick whole wall loop",
+ "cmd.sketch.link_unlink": "Unlink edge from wall",
+ "cmd.sketch.link_repick": "Re-pick edge wall",
+ "cmd.ctx.floor.link_unlink": "Unlink edges from walls",
+ "cmd.ctx.floor.link_accept": "Accept edges of deleted walls",
+ "boundary_link.hint.loop": "Click a wall: the closed run of walls becomes linked edges",
+ "boundary_link.hint.repick": "Click a wall parallel to the edge: the edge will follow it",
+ "boundary_link.need_sketch": "Open the boundary sketch first",
+ "boundary_link.need_edge": "Point at an edge of the sketch",
+ "boundary_link.need_straight": "Only a straight edge can follow a wall",
+ "boundary_link.need_floor": "Select a floor",
+ "boundary_link.no_wall": "No wall under the cursor",
+ "boundary_link.not_parallel": "The wall is not parallel to the edge",
+ "boundary_link.not_linked": "This edge is not linked to a wall",
+ "boundary_link.unlinked": "Edge unlinked: it stays in place and no longer follows the wall",
+ "boundary_link.accepted": "Edges accepted: they stay in place as ordinary edges",
+ "boundary_link.failed": "Could not apply",
+ "boundary_link.lost": "source wall deleted",
+ "boundary_link.blocked": "cannot follow the wall"
+}

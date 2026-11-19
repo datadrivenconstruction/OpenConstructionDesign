@@ -1,0 +1,5 @@
+{
+ "materials.mat.conflict": "Este material cambió en el modelo (deshacer u otra ventana) mientras la ficha tenía ediciones. Las ediciones se conservan.",
+ "materials.mat.keep": "Conservar mis ediciones",
+ "materials.mat.reload": "Recargar"
+}

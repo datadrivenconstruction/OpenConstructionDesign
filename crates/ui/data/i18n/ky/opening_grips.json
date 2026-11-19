@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "Илгич тарабын оодаруу",
+ "cmd.edit.flip_hand.desc": "Тандалган эшиктерди жана терезелерди дубал боюнча чагылдырат, илгичтер ачылуунун башка четине өтөт.",
+ "cmd.edit.flip_facing": "Ачылуу тарабын оодаруу",
+ "cmd.edit.flip_facing.desc": "Тандалган эшиктерди жана терезелерди дубалдын башка тарабына бурат.",
+ "opening_grips.flip_hand": "Илгичти оодаруу",
+ "opening_grips.flip_hand.tip": "Илгичтер ачылуунун башка четине өтөт (Shift+F)",
+ "opening_grips.flip_facing": "Тарапты оодаруу",
+ "opening_grips.flip_facing.tip": "Дубалдын башка тарабына ачылуу (Shift+G)",
+ "opening_grips.flip.done": "Оодарылды: {n}",
+ "opening_grips.flip.none": "Оодарыш үчүн эшикти же терезени тандаңыз",
+ "opening_grips.flip.fail": "Оодарылган жок: {why}"
+}

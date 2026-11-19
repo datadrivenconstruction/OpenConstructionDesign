@@ -1,0 +1,18 @@
+{
+ "faults.errors": {
+  "one": "# lỗi trong mô hình. Nhấp để hiển thị.",
+  "other": "# lỗi trong mô hình. Nhấp để xem danh sách."
+ },
+ "faults.warnings": {
+  "one": "# cảnh báo trong mô hình. Nhấp để hiển thị.",
+  "other": "# cảnh báo trong mô hình. Nhấp để xem danh sách."
+ },
+ "faults.title": "Lỗi mô hình: {n}",
+ "faults.none": "Không có lỗi hay cảnh báo.",
+ "faults.cat.wall": "Tường",
+ "faults.cat.slab": "Sàn",
+ "faults.cat.opening": "Lỗ mở",
+ "faults.cat.curtain_wall": "Tường rèm",
+ "faults.cat.ramp": "Đường dốc",
+ "faults.cat.zone": "Khu vực"
+}

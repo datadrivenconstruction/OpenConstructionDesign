@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "Modifiche alla cartella di lavoro non applicate",
+ "workbook_changes.wb.body": "Chiudendo o cambiando progetto andranno perse.",
+ "workbook_changes.wb.line": "Importazione cartella di lavoro: {n} modifiche non applicate",
+ "workbook_changes.wb.review": "Verifica",
+ "workbook_changes.wb.discard": "Scarta"
+}

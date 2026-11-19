@@ -1,0 +1,11 @@
+{
+ "job.stage.prepare": "प्रोजेक्ट तैयार हो रहा है",
+ "open_guard.already_open": "{name} पहले से खुला है",
+ "open_guard.from_cache": "{name}: आयात कैश से खोला गया",
+ "open_guard.known_project": "{name} पहले आयात हुआ था: वही प्रोजेक्ट खुल रहा है",
+ "open_guard.locate": "खोजें",
+ "open_guard.mem_low": "कम मेमोरी: मेश बजट आधा किया गया और लेवल-ऑफ़-डिटेल निर्माण रोका गया",
+ "open_guard.mem_low_short": "कम मेमोरी: मेमोरी खाली होने तक लेवल-ऑफ़-डिटेल निर्माण रुका है",
+ "open_guard.no_window": "उस प्रोजेक्ट की विंडो नहीं मिली",
+ "open_guard.switch_window": "उस विंडो पर जाएँ"
+}

@@ -1,0 +1,7 @@
+{
+ "project_unsaved.unsaved.model": "Mudeli muudatusi ei ole salvestatud.",
+ "project_unsaved.unsaved.drawings": {
+  "one": "# joonis on projektis salvestamata: selle muudatused kaovad.",
+  "other": "# joonist on projektis salvestamata: nende muudatused kaovad."
+ }
+}

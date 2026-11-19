@@ -1,0 +1,34 @@
+id = "S01_de_house_brief"
+tier = "smoke"
+group = ""
+title = "House from a free-text brief (German)"
+lang = "de"
+base = "empty"
+
+[[turn]]
+say = "Entwirf ein zweigeschossiges Einfamilienhaus für vier Personen mit insgesamt etwa 160 m²: offene Küche mit Wohnzimmer, drei Schlafzimmer, zwei Bäder, ein Arbeitszimmer und eine Einzelgarage im Erdgeschoss, Satteldach. Bitte gleich bauen."
+
+[[oracle.count]]
+spec = "level"
+min = 2.0
+
+[[oracle.count]]
+spec = "room"
+min = 8.0
+
+[[oracle.count]]
+spec = "roof"
+min = 1.0
+
+[[oracle.count]]
+spec = "stair"
+min = 1.0
+
+[[oracle.count]]
+spec = "opening"
+min = 10.0
+
+[[oracle.count]]
+spec = "level"
+min = 2.0
+max = 3.0

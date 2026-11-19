@@ -1,0 +1,14 @@
+{
+ "cmd.mod.divide": "Podziel",
+ "cmd.mod.divide.short": "Podziel",
+ "cmd.mod.divide.desc": "Dzieli ścianę na równe części w jednym kroku. Wpisz liczbę części, a potem kliknij ścianę.",
+ "whereis.mod.divide": "podziel, równe części, pocięcie na kawałki, segmentuj ścianę",
+ "hint.split.parts": "Podziel: kliknij ścianę · liczba — części (2–100) · Esc — anuluj",
+ "create_input.divide.bad_parts": "«{text}» nie jest liczbą części: wpisz liczbę całkowitą od 2 do {max}",
+ "create_input.ws.err.empty": "Wpisz nazwę układu",
+ "create_input.ws.err.long": "Nazwa jest za długa: najwyżej 40 znaków",
+ "create_input.ws.err.preset": "Ta nazwa należy do wbudowanego układu",
+ "create_input.ws.err.full": "Maksymalnie 24 zapisane układy: najpierw usuń jeden",
+ "create_input.seldim.locked": "Odległość {v} zablokowana",
+ "create_input.seldim.positive": "Odległość musi być większa od zera"
+}

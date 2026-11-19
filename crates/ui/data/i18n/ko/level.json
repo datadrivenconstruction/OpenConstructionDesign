@@ -1,0 +1,13 @@
+{
+ "level.err_open": "레벨을 열지 못함: {e}",
+ "level.need_name": "레벨에는 이름과 고도가 필요합니다",
+ "level.created": "레벨 \"{name}\" 생성됨",
+ "level.err_create": "레벨이 생성되지 않음: {e}",
+ "level.err_edit": "레벨이 변경되지 않음: {e}",
+ "level.edited": "레벨 \"{name}\" 변경됨",
+ "level.edited_stale": "레벨 \"{name}\" 변경됨, 뷰는 새로 고쳐지지 않음: {e}",
+ "level.last": "마지막 레벨은 삭제할 수 없습니다",
+ "level.deleted": "레벨 삭제됨",
+ "level.not_empty": "레벨이 비어 있지 않음: 먼저 요소를 삭제하세요",
+ "level.err_delete": "레벨이 삭제되지 않음: {e}"
+}

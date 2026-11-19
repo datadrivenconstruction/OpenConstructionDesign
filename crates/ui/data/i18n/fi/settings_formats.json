@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "Mitä tapahtuu, kun työkirja on viety",
+ "settings.area_decimals_desc": "Pinta-alojen desimaalierottimen jälkeiset numerot",
+ "settings.volume_decimals_desc": "Tilavuuksien desimaalierottimen jälkeiset numerot",
+ "settings.frac_desc": "Pienin murto-osa tuumassa imperiaalimitoissa",
+ "settings.small_area_desc": "Näytä alle yhden neliöjalan pinta-alat neliötuumina",
+ "settings.sample_desc": "Miltä luvut näyttävät nykyisillä valinnoilla",
+ "autosave.title_desc": "Säilytä avoimen projektin palautuskopio",
+ "autosave.interval_desc": "Palautuskopioiden välinen aika",
+ "autosave.keep_desc": "Vanhemmat palautuskopiot poistetaan",
+ "autosave.folder_desc": "Tyhjä tarkoittaa oletuskansiota",
+ "autosave.remind_desc": "Muistutus tallentaa projekti, jolla ei vielä ole tiedostoa",
+ "settings.backend_desc": "Käytössä oleva grafiikkasovitin",
+ "settings.news_desc": "Mitä muuttui tässä versiossa",
+ "settings.assoc_default_desc": "Tee tästä sovelluksesta mallitiedostojen oletussovellus",
+ "settings.data_dir_desc": "Välimuisti, palautuskopiot ja lokit ovat täällä."
+}

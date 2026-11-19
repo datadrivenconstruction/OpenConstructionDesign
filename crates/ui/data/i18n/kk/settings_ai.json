@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "Байланыс",
+ "settings.ai_status_desc": "AI көмекшісі пайдаланатын модель; кілттер қауіпсіз қоймада сақталады",
+ "settings.ai_not_connected": "Байланыспаған",
+ "settings.ai_connect": "Байланыс параметрлері",
+ "settings.ai_connect_desc": "Өз модельіңіздің мекенжайы, моделі және кілті: бұлттық немесе жергілікті",
+ "settings.ai_connect_btn": "Байланыс параметрлері…",
+ "settings.ai_panel": "AI көмекшісінің панелі",
+ "settings.ai_panel_desc": "Сөзбен сұраңыз, жоспарды қарап шығыңыз, содан кейін қолданыңыз",
+ "settings.ai_open_panel": "AI панелін ашу"
+}

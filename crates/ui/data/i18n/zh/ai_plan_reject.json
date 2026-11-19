@@ -1,0 +1,9 @@
+{
+ "ai.plan.reject_ask": {
+  "other": "拒绝 # 项更改？",
+  "one": "拒绝 # 项更改？"
+ },
+ "ai.plan.reject_ask.hint": "草稿及您的勾选标记将被丢弃。模型保持不变。",
+ "ai.plan.reject_confirm": "拒绝",
+ "ai.plan.reject_keep": "保留"
+}

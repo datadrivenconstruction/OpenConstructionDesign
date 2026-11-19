@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "mukautettu",
+ "draw_quality.custom.tip": "{name}: tämän projektin merkintä",
+ "draw_quality.custom_note": "Mukautetuksi merkityt merkinnät kuuluvat tähän projektiin.",
+ "draw_quality.unsaved.lib_body": "Tallennetaanko ne kirjastoon vai hylätäänkö ne?",
+ "draw_quality.unsaved.styles_body": "Käytetäänkö ne näkymään vai hylätäänkö ne?",
+ "draw_quality.unsaved.both_body": "Käytetäänkö ne vai hylätäänkö ne?",
+ "draw_quality.halftone": "{category} puolisävy",
+ "draw_quality.styles.name": "Viivatyylit",
+ "draw_quality.styles.other_level": "Tallentamattomia tyylimuutoksia tasolle {level}: käytä tai peru ne muokataksesi tätä tasoa."
+}

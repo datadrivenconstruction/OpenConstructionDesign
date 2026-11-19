@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "Tipi eşleştir",
+ "cmd.mod.match_type.short": "Tipi eşleştir",
+ "cmd.mod.match_type.desc": "Bir duvar, döşeme, kolon veya kiriş seçin, sonra aynı kategoriden diğerlerine tıklayarak onun tipini verin. İçindekilerin hepsine uygulamak için bir pencere sürükleyin. Esc kaynağı bırakır.",
+ "hint.match_type.pick": "Tipi eşleştir: bir duvar, döşeme, kolon veya kiriş seçin · Esc — çık",
+ "hint.match_type.apply": "Tipi eşleştir: hedeflere tıklayın veya pencere sürükleyin · Esc — başka kaynak",
+ "match_type.kind.wall": "duvar",
+ "match_type.kind.slab": "döşeme",
+ "match_type.kind.column": "kolon",
+ "match_type.kind.beam": "kiriş",
+ "match_type.refuse.category": "Başka kategori: bu tipi yalnızca bir {cat} alabilir",
+ "match_type.refuse.curtain": "Perde duvar: tipi burada eşleştirilmez",
+ "match_type.refuse.pinned": "Sabitli: tipi değiştirmek için sabitlemeyi kaldırın",
+ "match_type.pick_bad": "Kaynak olarak bir duvar, döşeme, kolon veya kiriş seçin",
+ "match_type.same": "Zaten bu tip",
+ "match_type.done": "Tip uygulandı: {n}",
+ "match_type.done_skipped": "Tip uygulandı: {n}, atlandı (sabitli veya perde): {skipped}",
+ "match_type.failed": "Tip değiştirilmedi: {err}"
+}

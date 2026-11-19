@@ -1,0 +1,10 @@
+{
+ "view_gfx.vv.visible_tip": "Bu ko'rinishda ko'rinadi",
+ "view_gfx.vv.enabled_tip": "Bu filtrni shu ko'rinishda qo'llash",
+ "view_gfx.vv.reset_tip": "Loyiha standartiga qaytarish",
+ "view_gfx.vv.col.actions": "Amallar",
+ "view_gfx.vv.nothing_to_apply": "Qo'llash uchun o'zgarish yo'q",
+ "view_gfx.flt.save_blocked": "Filtrga nom bering va har bir qoida parametrini to'ldiring",
+ "view_gfx.flt.confirm_delete": "Barcha ko'rinishlar uchun o'chirilsinmi?",
+ "view_gfx.flt.param_pick": "Tanlang…"
+}

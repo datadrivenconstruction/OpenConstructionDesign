@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "Cosa succede dopo l'esportazione di una cartella",
+ "settings.area_decimals_desc": "Cifre dopo il separatore decimale nelle aree",
+ "settings.volume_decimals_desc": "Cifre dopo il separatore decimale nei volumi",
+ "settings.frac_desc": "Frazione più piccola di un pollice nelle lunghezze imperiali",
+ "settings.small_area_desc": "Mostra le aree sotto un piede quadrato in pollici quadrati",
+ "settings.sample_desc": "Come appaiono i numeri con le scelte attuali",
+ "autosave.title_desc": "Conserva una copia di ripristino del progetto aperto",
+ "autosave.interval_desc": "Tempo tra le copie di ripristino",
+ "autosave.keep_desc": "Le copie di ripristino più vecchie vengono rimosse",
+ "autosave.folder_desc": "Vuoto significa la cartella predefinita",
+ "autosave.remind_desc": "Promemoria per salvare un progetto che non ha ancora un file",
+ "settings.backend_desc": "Scheda grafica in uso",
+ "settings.news_desc": "Cosa è cambiato in questa versione",
+ "settings.assoc_default_desc": "Rendi questa app predefinita per i file di modello",
+ "settings.data_dir_desc": "Cache, copie di ripristino e registri sono qui."
+}

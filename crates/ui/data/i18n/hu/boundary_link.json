@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "Teljes falhurok kiválasztása",
+ "cmd.sketch.link_unlink": "Él leválasztása a falról",
+ "cmd.sketch.link_repick": "Élfal újrakijelölése",
+ "cmd.ctx.floor.link_unlink": "Élek leválasztása a falakról",
+ "cmd.ctx.floor.link_accept": "Törölt falak éleinek átvétele",
+ "boundary_link.hint.loop": "Kattintson egy falra: a zárt falsor összekapcsolt élekké válik",
+ "boundary_link.hint.repick": "Kattintson az éllel párhuzamos falra: az él ahhoz fog igazodni",
+ "boundary_link.need_sketch": "Nyissa meg előbb a határvázlatot",
+ "boundary_link.need_edge": "Mutasson a vázlat egyik élére",
+ "boundary_link.need_straight": "Csak egyenes él követheti a falat",
+ "boundary_link.need_floor": "Válasszon ki egy padlót",
+ "boundary_link.no_wall": "Nincs fal a kurzor alatt",
+ "boundary_link.not_parallel": "A fal nem párhuzamos az éllel",
+ "boundary_link.not_linked": "Ez az él nincs falhoz kötve",
+ "boundary_link.unlinked": "Az él leválasztva: a helyén marad, és már nem követi a falat",
+ "boundary_link.accepted": "Az élek átvéve: normál élekként a helyükön maradnak",
+ "boundary_link.failed": "Nem alkalmazható",
+ "boundary_link.lost": "a forrásfal törölve",
+ "boundary_link.blocked": "nem tudja követni a falat"
+}

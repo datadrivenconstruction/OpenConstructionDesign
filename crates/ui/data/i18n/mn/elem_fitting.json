@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "Холбоос",
+ "elem.mep_fitting.many": "Холбоосууд",
+ "elem.mep_fitting.kind.elbow": "Мушгил",
+ "elem.mep_fitting.kind.tee": "Т хэлбэр",
+ "elem.mep_fitting.kind.cross": "Загалмай",
+ "elem.mep_fitting.kind.transition": "Шилжилт",
+ "elem.mep_fitting.kind.cap": "Таг",
+ "elem.mep_fitting.size": "Хэмжээ",
+ "elem.mep_fitting.at": "Байрлал",
+ "elem.mep_fitting.runs": "Хэсэг {n}",
+ "elem.mep_fitting.edit_run": "Хэсгийг засах",
+ "elem.mep_fitting.select_runs": "Хэсгүүдийг нь сонгох",
+ "elem.mep_fitting.derived": "Холбоос нь хэсгүүдээ дагадаг: хэсгийг өөрчилбөл холбоос ч хамт өөрчлөгдөнө.",
+ "elem.mep_fitting.no_delete": "Холбоосыг өөрөөр нь устгах эсвэл зөөх боломжгүй. Түүний хэсгүүдийг засах эсвэл устгана уу.",
+ "elem.mep_fitting.hint": "Хэсгүүдийг харахын тулд планы холбоосыг дарна уу.",
+ "elem.mep_fitting.picked": "Сонгосон холбоос: {n}"
+}

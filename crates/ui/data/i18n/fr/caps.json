@@ -1,0 +1,5 @@
+{
+ "caps.refused": "{kinds} : {reason}. Rien n'a été modifié.",
+ "caps.panel": "Un panneau se déplace avec tout son mur-rideau. Sélectionnez le mur",
+ "caps.unsupported": "Cet outil ne modifie pas ces éléments"
+}

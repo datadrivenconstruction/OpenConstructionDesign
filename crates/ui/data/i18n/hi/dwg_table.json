@@ -1,0 +1,14 @@
+{
+ "dwg_table.copy": "तालिका कॉपी करें",
+ "dwg_table.copy_tip": "परत के अनुसार टेक-ऑफ को स्प्रेडशीट के लिए तालिका के रूप में कॉपी करें",
+ "dwg_table.copied": "टेक-ऑफ कॉपी किया गया (टैब से अलग)",
+ "dwg_table.total": "कुल",
+ "dwg_table.col.layer": "परत",
+ "dwg_table.col.count": "गिनती",
+ "dwg_table.col.len": "लंबाई, {unit}",
+ "dwg_table.col.area": "क्षेत्रफल, {unit}",
+ "dwg_table.unit.mm": "mm",
+ "dwg_table.unit.m2": "m²",
+ "dwg_table.unit.ft": "ft",
+ "dwg_table.unit.ft2": "ft²"
+}

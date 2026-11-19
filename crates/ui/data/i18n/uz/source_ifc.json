@@ -1,0 +1,7 @@
+{
+ "src.field.kids": "Bola qatorlar (panellar, uchlar)",
+ "src.kids.mine": "{n} ta bola qator, bu yerda o'zgargan",
+ "src.kids.changed": "bu yerda bola qatorlar o'zgargan",
+ "src.kids.theirs": "faylda bola qatorlar o'zgargan",
+ "src.kids.take_tip": "Keyingi import faylning bola qatorlarini oladi; ular hozir qo'llanmaydi."
+}

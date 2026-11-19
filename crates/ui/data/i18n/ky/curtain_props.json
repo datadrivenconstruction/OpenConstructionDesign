@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "Панел",
+ "curtain_props.cw.panel_cell": "Уячка {i}×{j} · айнек дубал №{id}",
+ "curtain_props.cw.kind": "Түрү",
+ "curtain_props.cw.kind.glazed": "Айнек",
+ "curtain_props.cw.kind.solid": "Катуу",
+ "curtain_props.cw.kind.door": "Эшик",
+ "curtain_props.cw.kind.window": "Терезе",
+ "curtain_props.cw.kind.empty": "Бош",
+ "curtain_props.cw.name": "Аталышы",
+ "curtain_props.cw.swing_side": "Башка тарапка ачылат",
+ "curtain_props.cw.swing_hinge": "Бурама уячканын четинде",
+ "curtain_props.cw.size": "Өлчөмү",
+ "curtain_props.cw.cell_area": "Уячканын аянты",
+ "curtain_props.cw.panel_area": "Панелдин аянты",
+ "curtain_props.cw.prev": "Мурунку панел",
+ "curtain_props.cw.next": "Кийинки панел",
+ "curtain_props.cw.wall": "Дубалды тандаңыз",
+ "curtain_props.cw.panel_hint": "Esc — тандоо · Ctrl+Z — артка кайтаруу",
+ "curtain_props.cw.status.panel": "Панел {i}×{j} → {kind}",
+ "e3d.err.cw_height": "айнек дубалдын бийиктиги 100 мм тен чоң болушу керек"
+}

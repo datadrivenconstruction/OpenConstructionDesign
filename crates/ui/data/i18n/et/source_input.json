@@ -1,0 +1,4 @@
+{
+ "source_input.err.number": "„{text}“ ei ole arv; see parameeter hoiab arvu. Midagi ei kirjutatud",
+ "source_input.err.comma": "„{text}“: kümnendkohtade jaoks kasuta punkti (1.5); koma eraldab ainult tuhandikke (1,000). Midagi ei kirjutatud"
+}

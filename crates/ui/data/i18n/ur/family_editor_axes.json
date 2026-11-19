@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "X محور",
+ "fe.axis.y": "Y محور",
+ "fe.axis.z": "Z محور",
+ "fe.col.axis": "محور",
+ "fe.col.at": "پوزیشن",
+ "fe.col.mode": "موڈ",
+ "fe.mode.fixed": "مقررہ",
+ "fe.mode.free": "آزاد",
+ "fe.types.inherited": "پیرامیٹر سے ڈیفالٹ",
+ "fe.csv.more": "مزید CSV اعمال",
+ "fe.ref.selected": "پلین: {name}"
+}

@@ -1,0 +1,15 @@
+{
+ "text_style.lbl.text_style": "文字样式",
+ "text_style.lbl.align": "对齐",
+ "text_style.lbl.head": "箭头",
+ "text_style.lbl.line_style": "线型",
+ "text_style.lbl.fill": "填充",
+ "text_style.lbl.detail": "详图",
+ "text_style.lbl.width": "宽度",
+ "text_style.bad_number": "请输入 {min} 到 {max} 之间的数字",
+ "text_style.tip.next_ring": "闭合此轮廓，并在同一区域内开始另一个轮廓",
+ "text_style.tip.edit_text": "就地编辑文字",
+ "text_style.tip.add_leader": "为此文字添加引线",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°"
+}

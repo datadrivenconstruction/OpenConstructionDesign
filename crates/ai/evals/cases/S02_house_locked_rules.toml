@@ -1,0 +1,22 @@
+id = "S02_house_locked_rules"
+tier = "smoke"
+group = ""
+title = "Same house with user-locked rules"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "Design a two-storey family house for four people, about 160 m2 in total: open kitchen and living room, three bedrooms, two bathrooms, a study and a single garage, gable roof. These are my locked rules, do not change them: floor height exactly 2.8 m; every bedroom at least 14 m2; the top of the upper floor no higher than 6 m above the ground floor. Build it and tell me which rule decided the floor height and which decided the building width."
+
+[[oracle.count]]
+spec = "level"
+min = 2.0
+
+[[oracle.count]]
+spec = "room"
+min = 8.0
+
+[[oracle.count]]
+spec = "level"
+min = 2.0
+max = 3.0

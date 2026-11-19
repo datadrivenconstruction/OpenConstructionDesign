@@ -1,0 +1,9 @@
+{
+ "ai.settings.num_bad": "Nem szám. Írja be például így: 0.5.",
+ "ai.settings.num_comma": "Tizedesjelnek pontot használjon, például 0.5.",
+ "ai.settings.num_negative": "A szám nem lehet negatív.",
+ "ai.settings.unit_money": "pénznem",
+ "ai.settings.unit_tokens": "token",
+ "ai.settings.unit_price": "1M tokenenként",
+ "ai.settings.limits_hint": "A 0 korlátlant jelent. Az elutasított érték a korábbi korlátot hagyja érvényben."
+}

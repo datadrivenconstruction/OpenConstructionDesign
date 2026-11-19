@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "Itugma ang uri",
+ "cmd.mod.match_type.short": "Itugma ang uri",
+ "cmd.mod.match_type.desc": "Pumili ng pader, sahig, column o beam, saka i-click ang iba pang kaparehong kategorya para bigyan sila ng uri nito. I-drag ang bintana para ilapat sa lahat ng nasa loob. Ang Esc ay nagbibitaw ng source.",
+ "hint.match_type.pick": "Itugma ang uri: pumili ng pader, sahig, column o beam · Esc — lumabas",
+ "hint.match_type.apply": "Itugma ang uri: i-click ang target o i-drag ang bintana · Esc — ibang source",
+ "match_type.kind.wall": "pader",
+ "match_type.kind.slab": "sahig",
+ "match_type.kind.column": "kolum",
+ "match_type.kind.beam": "biga",
+ "match_type.refuse.category": "Ibang kategorya: tanging {cat} lang ang maaaring kumuha ng uring ito",
+ "match_type.refuse.curtain": "Curtain wall: hindi tumutugma dito ang uri nito",
+ "match_type.refuse.pinned": "Naka-pin: i-unpin para mabago ang uri",
+ "match_type.pick_bad": "Pumili ng pader, sahig, column o beam bilang source",
+ "match_type.same": "Ganito na ang uri",
+ "match_type.done": "Nailapat ang uri: {n}",
+ "match_type.done_skipped": "Nailapat ang uri: {n}, nilaktawan (naka-pin o curtain): {skipped}",
+ "match_type.failed": "Hindi nabago ang uri: {err}"
+}

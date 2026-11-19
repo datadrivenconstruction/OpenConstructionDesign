@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "Merdivenler",
+ "selcat.railing": "Korkuluklar",
+ "quick.cat.stair": "Merdivenler",
+ "quick.cat.railing": "Korkuluklar",
+ "stair.risers": "Basamaklar",
+ "stair.riser": "Basamak yüksekliği",
+ "stair.comfort": "2R + T",
+ "stair.tread_auto": "Kuralla basamak derinliği",
+ "stair.tread_auto_tip": "Yazılan basamak derinliğini bırakın ve 2R + T kuralının belirlemesine izin verin",
+ "stair.broken": "Bu merdiven seviyelerine uymuyor",
+ "railing.host_stair": "{id} numaralı merdivene bağlı",
+ "railing.host_path": "Eskiz korkuluk",
+ "railing.length": "Uzunluk",
+ "stair.deleted_with": "{n} bağlı korkuluk ile birlikte"
+}

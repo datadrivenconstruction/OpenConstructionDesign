@@ -1,0 +1,40 @@
+id = "G35_ski_jump__es"
+tier = "hard"
+group = "Any geometry"
+title = "Ski jump"
+lang = "es"
+base = "empty"
+
+[[turn]]
+say = "Un trampolín de salto de esquí: rampa de impulso de celosía de acero de 90 m a 35 grados sobre pilares, torre de salida con escalera, mesa de despegue a 25 m sobre el pie de la pista de aterrizaje, perfil de aterrizaje de 120 m y torre de jueces al lado."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "col"
+min = 6.0
+
+[[oracle.count]]
+spec = "beam+brace+truss"
+min = 30.0
+
+[[oracle.count]]
+spec = "stair"
+min = 1.0
+
+[[oracle.count]]
+spec = "slab+toposolid+freeform+solid+mesh+roof"
+min = 1.0
+
+[[oracle.geom]]
+kind = "height"
+min = 65.0
+max = 90.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

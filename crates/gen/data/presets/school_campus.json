@@ -1,0 +1,102 @@
+{
+ "schema": "gen_preset.v1",
+ "name": "school_campus",
+ "aliases": [
+  "campus"
+ ],
+ "base": "school",
+ "note": "school_campus: built as a school with a canteen and a sports hall on the ground floor",
+ "brief": {
+  "name": {
+   "en": "School campus",
+   "ru": "Школьный комплекс"
+  },
+  "floors": 2
+ },
+ "rules": {},
+ "program": {
+  "schema": "gen_program.v1",
+  "spaces": [
+   {
+    "kind": "lobby",
+    "area": 72,
+    "floor": "ground"
+   },
+   {
+    "kind": "classroom",
+    "area": 60,
+    "count": 3,
+    "floor": "ground"
+   },
+   {
+    "kind": "dining",
+    "area": 120,
+    "name": {
+     "en": "Canteen",
+     "ru": "Столовая"
+    },
+    "floor": "ground"
+   },
+   {
+    "kind": "gym",
+    "area": 144,
+    "name": {
+     "en": "Sports hall",
+     "ru": "Спортивный зал"
+    },
+    "floor": "ground"
+   },
+   {
+    "kind": "wc",
+    "area": 18,
+    "count": 2,
+    "floor": "ground"
+   },
+   {
+    "kind": "storage",
+    "area": 12,
+    "floor": "ground"
+   },
+   {
+    "kind": "lobby",
+    "area": 48,
+    "floor": "single"
+   },
+   {
+    "kind": "classroom",
+    "area": 60,
+    "count": 4,
+    "floor": "single"
+   },
+   {
+    "kind": "dining",
+    "area": 90,
+    "name": {
+     "en": "Canteen",
+     "ru": "Столовая"
+    },
+    "floor": "single"
+   },
+   {
+    "kind": "gym",
+    "area": 144,
+    "name": {
+     "en": "Sports hall",
+     "ru": "Спортивный зал"
+    },
+    "floor": "single"
+   },
+   {
+    "kind": "staff",
+    "area": 24,
+    "floor": "single"
+   },
+   {
+    "kind": "wc",
+    "area": 18,
+    "count": 2,
+    "floor": "single"
+   }
+  ]
+ }
+}

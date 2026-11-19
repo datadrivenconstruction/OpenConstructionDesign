@@ -1,0 +1,7 @@
+{
+ "gen.pin.room": "Üretilmiş projenin bir odasını değiştirdiniz. Bir revizyonun onu yerinde tutması için sabitleyin.",
+ "gen.pin.storey": "Üretilmiş projenin bir katını değiştirdiniz. Bir revizyonun duvarlarını ve açıklıklarını koruması için sabitleyin.",
+ "gen.pin.action": "Sabitle",
+ "gen.pin.done": "Sabitlendi: projenin bir revizyonu bunu korur ve geri kalanı çevresine yerleştirir",
+ "gen.pin.failed": "Sabitlenemedi"
+}

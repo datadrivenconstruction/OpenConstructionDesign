@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "ค่าต้องมากกว่าศูนย์",
+ "sched_ops.not_number": "ไม่ใช่ตัวเลข",
+ "sched_ops.no_host": "ไม่มีผนังรองรับ",
+ "sched_ops.wall_length": "ความยาวผนังนี้ตั้งค่าแบบนี้ไม่ได้",
+ "sched_ops.no_wall": "ไม่มีผนังดังกล่าว",
+ "sched_ops.no_opening": "ไม่มีช่องเปิดดังกล่าว",
+ "sched_ops.no_curtain": "ไม่มีผนังม่านดังกล่าว",
+ "sched_ops.no_panel": "ไม่มีแผงดังกล่าว",
+ "sched_ops.no_slab": "ไม่มีพื้นดังกล่าว",
+ "sched_ops.no_room": "ไม่มีห้องดังกล่าว",
+ "sched_ops.slope_range": "ความชันอยู่นอกช่วง",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

@@ -1,0 +1,333 @@
+{
+ "schema": "gen_typology.v1",
+ "name": "light_industrial",
+ "aliases": [
+  "light_industry",
+  "factory",
+  "manufacturing_building",
+  "workshop_building"
+ ],
+ "base": "office",
+ "note": "light industrial building: production halls and assembly bays with goods store and loading on the ground floor, offices and a laboratory above; hall ventilation, loads and floor loads per room class",
+ "brief": {
+  "name": {
+   "en": "Light industrial building",
+   "ru": "Лёгкое промышленное здание"
+  },
+  "floors": 2,
+  "floor_height": 6.0,
+  "footprint": {
+   "width": 90,
+   "depth": 36
+  }
+ },
+ "rules": {
+  "egress.max_travel": 60,
+  "corridor.width": 3.0,
+  "egress.protected_stairs": "none"
+ },
+ "model": {
+  "title": {
+   "en": "Light industrial building",
+   "ru": "Лёгкое промышленное здание"
+  },
+  "spaces": [
+   {
+    "class": "reception_l",
+    "kind": "lobby",
+    "name": {
+     "en": "Reception",
+     "ru": "Приёмная"
+    },
+    "area": 40,
+    "count": 1,
+    "level": "ground",
+    "zone": "office"
+   },
+   {
+    "class": "office_l",
+    "kind": "office",
+    "name": {
+     "en": "Site office",
+     "ru": "Контора"
+    },
+    "area": 18,
+    "count": 4,
+    "level": "ground",
+    "zone": "office"
+   },
+   {
+    "class": "canteen_l",
+    "kind": "dining",
+    "name": {
+     "en": "Staff canteen",
+     "ru": "Столовая персонала"
+    },
+    "area": 70,
+    "count": 1,
+    "level": "ground",
+    "zone": "welfare",
+    "occupancy_m2": 2
+   },
+   {
+    "class": "changing_l",
+    "kind": "staff",
+    "name": {
+     "en": "Changing room",
+     "ru": "Раздевалка"
+    },
+    "area": 30,
+    "count": 2,
+    "level": "ground",
+    "zone": "welfare"
+   },
+   {
+    "class": "wc_l",
+    "kind": "wc",
+    "name": {
+     "en": "Toilet",
+     "ru": "Санузел"
+    },
+    "area": 5,
+    "count": 4,
+    "level": "ground",
+    "zone": "welfare"
+   },
+   {
+    "class": "production",
+    "kind": "workshop",
+    "name": {
+     "en": "Production hall",
+     "ru": "Производственный зал"
+    },
+    "area": 420,
+    "count": 3,
+    "level": "ground",
+    "zone": "production",
+    "light": "none",
+    "height_min": 5.0,
+    "occupancy_m2": 20,
+    "live_load_kpa": 10,
+    "demand": {
+     "supply_m3h_m2": 10,
+     "power_w_m2": 80
+    }
+   },
+   {
+    "class": "assembly",
+    "kind": "workshop",
+    "name": {
+     "en": "Assembly bay",
+     "ru": "Сборочный участок"
+    },
+    "area": 260,
+    "count": 2,
+    "level": "ground",
+    "zone": "production",
+    "light": "none",
+    "height_min": 5.0,
+    "occupancy_m2": 15,
+    "live_load_kpa": 10,
+    "demand": {
+     "supply_m3h_m2": 8,
+     "power_w_m2": 40
+    }
+   },
+   {
+    "class": "goods",
+    "kind": "storage",
+    "name": {
+     "en": "Goods store",
+     "ru": "Склад готовой продукции"
+    },
+    "area": 320,
+    "count": 2,
+    "level": "ground",
+    "zone": "logistics",
+    "light": "none",
+    "live_load_kpa": 15
+   },
+   {
+    "class": "loading_l",
+    "kind": "storage",
+    "name": {
+     "en": "Loading bay",
+     "ru": "Погрузочная зона"
+    },
+    "area": 120,
+    "count": 1,
+    "level": "ground",
+    "zone": "logistics",
+    "light": "none",
+    "height_min": 5.0,
+    "live_load_kpa": 15
+   },
+   {
+    "class": "mcc_l",
+    "kind": "technical",
+    "name": {
+     "en": "Electrical room",
+     "ru": "Электрощитовая"
+    },
+    "area": 50,
+    "count": 1,
+    "level": "ground",
+    "zone": "services",
+    "light": "none",
+    "demand": {
+     "ach": 12,
+     "power_w_m2": 60,
+     "cooling_w_m2": 40,
+     "backup_power": true
+    }
+   },
+   {
+    "class": "compressor",
+    "kind": "technical",
+    "name": {
+     "en": "Compressor room",
+     "ru": "Компрессорная"
+    },
+    "area": 60,
+    "count": 1,
+    "level": "ground",
+    "zone": "services",
+    "light": "none",
+    "demand": {
+     "ach": 20,
+     "power_w_m2": 150,
+     "cooling_w_m2": 60
+    }
+   },
+   {
+    "class": "qc",
+    "kind": "lab",
+    "name": {
+     "en": "Quality laboratory",
+     "ru": "Лаборатория качества"
+    },
+    "area": 40,
+    "count": 1,
+    "level": "typical",
+    "zone": "office",
+    "demand": {
+     "ach": 8,
+     "power_w_m2": 60
+    }
+   },
+   {
+    "class": "office_l2",
+    "kind": "office",
+    "name": {
+     "en": "Office",
+     "ru": "Офис"
+    },
+    "area": 24,
+    "count": 6,
+    "level": "typical",
+    "zone": "office"
+   },
+   {
+    "class": "meeting_l",
+    "kind": "meeting",
+    "name": {
+     "en": "Meeting room",
+     "ru": "Переговорная"
+    },
+    "area": 30,
+    "count": 1,
+    "level": "typical",
+    "zone": "office"
+   },
+   {
+    "class": "wc_l2",
+    "kind": "wc",
+    "name": {
+     "en": "Upper toilet",
+     "ru": "Санузел верхнего этажа"
+    },
+    "area": 5,
+    "count": 2,
+    "level": "typical",
+    "zone": "welfare"
+   }
+  ],
+  "zones": [
+   {
+    "id": "production",
+    "name": {
+     "en": "Production",
+     "ru": "Производство"
+    },
+    "adjacent_to": [
+     {
+      "ref": "logistics",
+      "weight": 3
+     },
+     {
+      "ref": "services",
+      "weight": 2
+     }
+    ]
+   },
+   {
+    "id": "logistics",
+    "name": {
+     "en": "Logistics",
+     "ru": "Логистика"
+    },
+    "adjacent_to": [
+     {
+      "ref": "production",
+      "weight": 3
+     }
+    ]
+   },
+   {
+    "id": "services",
+    "name": {
+     "en": "Services",
+     "ru": "Инженерные помещения"
+    },
+    "adjacent_to": [
+     {
+      "ref": "production",
+      "weight": 2
+     }
+    ]
+   },
+   {
+    "id": "office",
+    "name": {
+     "en": "Office",
+     "ru": "Управление"
+    },
+    "adjacent_to": []
+   },
+   {
+    "id": "welfare",
+    "name": {
+     "en": "Welfare",
+     "ru": "Бытовая зона"
+    },
+    "adjacent_to": []
+   }
+  ],
+  "egress": {
+   "exits_min": 2
+  },
+  "structure": {
+   "live_load_kpa": {
+    "rule": "typology.live_load_kpa"
+   }
+  },
+  "spare": {
+   "grow_share": 0.7,
+   "kind": "storage",
+   "name": {
+    "en": "Store",
+    "ru": "Склад"
+   }
+  }
+ }
+}

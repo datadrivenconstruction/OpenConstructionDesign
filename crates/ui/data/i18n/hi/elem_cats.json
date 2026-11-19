@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "द्रव्यमान को घुमाया या दर्पण-उलटा नहीं जा सकता: उसके आकार के इतिहास में कोई घुमाया गया चरण नहीं है। इसे स्थानांतरित या कॉपी करें, या नई दिशा में दोबारा बनाएँ।",
+ "sched_cats.col.name": "नाम",
+ "sched_cats.col.material": "सामग्री",
+ "sched_cats.col.void": "रिक्त",
+ "sched_cats.col.inplace": "स्थान पर",
+ "sched_cats.col.volume": "शुद्ध आयतन",
+ "sched_cats.col.area": "सतह क्षेत्रफल",
+ "sched_cats.col.floor_area": "फ़र्श क्षेत्रफल",
+ "sched_cats.col.thickness": "मोटाई",
+ "sched_cats.col.points": "बिंदु",
+ "elem.toposolid.points": "सर्वे बिंदु",
+ "elem.toposolid.count": "बिंदु",
+ "elem.toposolid.low": "निम्नतम",
+ "elem.toposolid.high": "उच्चतम",
+ "elem.toposolid.edit": "बिंदु संपादित करें",
+ "elem.toposolid.edit_tip": "योजना में सर्वे बिंदु चुनें, खींचें और उनकी ऊँचाई तय करें",
+ "elem.toposolid.pick_hint": "चुनने के लिए योजना में बिंदु पर क्लिक करें। जोड़ने या हटाने के लिए फिर क्लिक करें।",
+ "elem.toposolid.z": "ऊँचाई ({n})",
+ "elem.toposolid.mixed": "चुने गए बिंदुओं के मान अलग हैं; नया मान इन सभी पर लागू होगा।",
+ "elem.toposolid.edit_help": "बिंदु को खींचकर स्थानांतरित करें। मान लिखकर Enter दबाएँ, ऊँचाई तय होगी। Backspace चुने गए बिंदु हटाता है, Esc बाहर निकलता है।",
+ "elem.toposolid.done": "हो गया"
+}

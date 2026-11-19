@@ -1,0 +1,10 @@
+{
+ "wall_stack.we.stack_caption": "Складений тип",
+ "wall_stack.we.side_left": "Ліва грань",
+ "wall_stack.we.side_right": "Права грань",
+ "wall_stack.we.from": "Від",
+ "wall_stack.we.to": "До",
+ "wall_stack.we.bottom": "Низ",
+ "wall_stack.we.delete_tip": "Видалити цей профіль",
+ "wall_stack.we.from_after_to": "«Від» має бути раніше за «До»"
+}

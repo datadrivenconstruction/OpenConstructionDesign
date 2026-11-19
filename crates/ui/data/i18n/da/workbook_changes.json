@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "Ikke-anvendte ændringer i regnearket",
+ "workbook_changes.wb.body": "Lukning eller skift af projekt fjerner dem.",
+ "workbook_changes.wb.line": "Import af regneark: {n} ændringer ikke anvendt",
+ "workbook_changes.wb.review": "Gennemgå",
+ "workbook_changes.wb.discard": "Kassér"
+}

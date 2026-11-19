@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}, на нивото",
+ "cmd_buttons.purge.undo": "Премахването е една стъпка за отмяна.",
+ "cmd_buttons.unpin.none": "Нищо от избраното не е фиксирано",
+ "cmd_buttons.change_type.none": "Първо изберете стени: типът им се сменя на една стъпка",
+ "cmd_buttons.units.metric": "Единици: метрични",
+ "cmd_buttons.units.imperial": "Единици: фути и инчове",
+ "cmd_buttons.units.back": "Върнете се",
+ "cmd_buttons.underlay.on": "Подложката е включена: нивото отдолу се показва избледняло",
+ "cmd_buttons.underlay.off": "Подложката е изключена",
+ "cmd_buttons.underlay.none": "Подложката е включена, но нивото отдолу няма какво да покаже",
+ "cmd_buttons.zoom_sel.no_shape": "Избраното няма форма, която да се побере в този изглед",
+ "cmd_buttons.close.base": "Табовете план и 3D остават отворени; отворете разрез, лист или чертожен изглед, за да го затворите",
+ "tool.equipment": "Оборудване",
+ "hint.equipment.place": "Оборудване: изберете място · Esc за изход",
+ "cmd_buttons.table.opened": "Таблицата е отворена до модела",
+ "cmd_buttons.circuits.tip": "Отваря списъка с електрически вериги на този модел"
+}

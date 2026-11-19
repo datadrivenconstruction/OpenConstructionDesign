@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "Aplicarea a fost oprită: modelul este păstrat cum era",
+ "apply_verify.rolled_back": "Aplicarea nu s-a potrivit cu ciorna și a fost anulată; modelul este neschimbat. {what}",
+ "apply_verify.diff.missing": "Ciorna arată {what} {kind}, dar Aplică nu a făcut-o.",
+ "apply_verify.diff.extra": "S-a aplicat {kind} {what}, pe care ciorna nu îl arată.",
+ "apply_verify.diff.kind": "Ciorna arată {what} {shown}, dar s-a aplicat {applied}.",
+ "apply_verify.diff.value": "{what}: „{col}” a ieșit diferit față de ciornă.",
+ "apply_verify.diff.truncated": "Ciorna și modificarea aplicată diferă ca mărime.",
+ "apply_verify.diff.unreadable": "Modificarea aplicată nu a putut fi citită înapoi ({e}).",
+ "apply_verify.no_base": "Aplicarea nu a fost rulată: copia pentru a verifica ciorna lipsește. Modelul este neschimbat; cere din nou ciorna.",
+ "apply_verify.take_back_failed": "Anularea a eșuat ({e}): folosește Anulează.",
+ "apply_verify.kind.created": "creat",
+ "apply_verify.kind.changed": "modificat",
+ "apply_verify.kind.deleted": "șters",
+ "apply_verify.card.type_row": "Tipul {type} · {n} elemente primesc modificarea"
+}

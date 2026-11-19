@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "Zsanér oldalának megfordítása",
+ "cmd.edit.flip_hand.desc": "Tükrözi a kijelölt ajtókat és ablakokat a fal mentén, hogy a zsanérok a nyílás másik végére kerüljenek.",
+ "cmd.edit.flip_facing": "Nyílás oldalának megfordítása",
+ "cmd.edit.flip_facing.desc": "A kijelölt ajtókat és ablakokat a fal másik oldalára forgatja.",
+ "opening_grips.flip_hand": "Zsanér megfordítása",
+ "opening_grips.flip_hand.tip": "Zsanérok a nyílás másik végére (Shift+F)",
+ "opening_grips.flip_facing": "Oldal megfordítása",
+ "opening_grips.flip_facing.tip": "Nyílás a fal másik oldalára (Shift+G)",
+ "opening_grips.flip.done": "Megfordítva: {n}",
+ "opening_grips.flip.none": "Válasszon ki egy ajtót vagy ablakot a megfordításhoz",
+ "opening_grips.flip.fail": "Nem fordítva: {why}"
+}

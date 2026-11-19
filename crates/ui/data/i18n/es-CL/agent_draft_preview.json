@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "Vista previa",
+ "agent_draft.ag.preview.desc": "Resalta en el lienzo los elementos de este borrador mientras el puntero está sobre el botón. No se cambia nada.",
+ "agent_draft.type.column": "Pilar",
+ "agent_draft.type.roof": "Cubierta",
+ "agent_draft.type.ceiling": "Techo",
+ "agent_draft.type.stair": "Monolítica",
+ "agent_draft.type.railing": "Barandilla",
+ "agent_draft.type.shaft": "Patinillo",
+ "agent_draft.type.axis": "Eje 6.5 mm",
+ "agent_draft.type.refplane": "Plano de referencia"
+}

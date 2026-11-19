@@ -1,0 +1,5 @@
+{
+ "elem.panel_select_wall": "Välj vägg",
+ "cmd.elem.panel_select_wall": "Välj vägg",
+ "elem.left_in_place": "Kvar på plats: {kinds}. En panel hör till sin vägg; massor och annoteringar tas bort på egen hand."
+}

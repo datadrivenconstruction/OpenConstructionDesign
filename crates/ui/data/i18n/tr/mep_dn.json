@@ -1,0 +1,5 @@
+{
+ "mep_dn.dn.unset": "Ayarlanmamış",
+ "mep_dn.slope.err": "% cinsinden eğim girin, ör. 1.5",
+ "mep_dn.err.rejected": "değer kabul edilmiyor"
+}

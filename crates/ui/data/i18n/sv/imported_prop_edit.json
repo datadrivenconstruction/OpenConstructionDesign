@@ -1,0 +1,6 @@
+{
+ "imported_prop_edit.remove": "Ta bort egenskap",
+ "imported_prop_edit.remove.tip": "Tar bort egenskapen från {n} markerade element i ett ångra-steg; den tas bort från IFC-filen vid sparning",
+ "imported_prop_edit.done": "{key} borttagen från {n} element",
+ "imported_prop_edit.warn.reload": "Klart, men vyn uppdaterades inte; öppna panelen igen eller ångra om det ser fel ut"
+}

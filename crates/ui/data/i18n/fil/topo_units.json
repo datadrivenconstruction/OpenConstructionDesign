@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "Mga yunit",
+ "topo_units.unit": "Mga yunit sa file",
+ "topo_units.unit.m": "m",
+ "topo_units.unit.cm": "cm",
+ "topo_units.unit.mm": "mm",
+ "topo_units.unit.ft": "ft",
+ "topo_units.unit.usft": "US survey ft",
+ "topo_units.unit.in": "in",
+ "topo_units.unit.from_file": "Tinutukoy ng file ang mga yunit nito: {unit}",
+ "topo_units.unit.suggested": "Walang nakasaad na yunit ang file. Iminungkahi ng saklaw: {unit} — suriin ang resulta sa ibaba",
+ "topo_units.extent": "Resulta sa mga yunit ng proyekto: {x} × {y} {u} sa plano, saklaw ng taas {z} {u}",
+ "topo_units.extent.none": "Resulta: walang ii-import sa mga pagpiling ito",
+ "topo_units.extent.check": "Mukhang hindi site ito: suriin ang mga yunit"
+}

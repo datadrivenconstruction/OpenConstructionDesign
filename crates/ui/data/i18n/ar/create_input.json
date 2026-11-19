@@ -1,0 +1,14 @@
+{
+ "cmd.mod.divide": "تقسيم",
+ "cmd.mod.divide.short": "تقسيم",
+ "cmd.mod.divide.desc": "يقسم الجدار إلى أجزاء متساوية في خطوة واحدة. اكتب عدد الأجزاء، ثم انقر على الجدار.",
+ "whereis.mod.divide": "تقسيم، أجزاء متساوية، قطع إلى قطع، تجزئة جدار",
+ "hint.split.parts": "تقسيم: انقر على جدار · العدد — الأجزاء (2–100) · Esc — إلغاء",
+ "create_input.divide.bad_parts": "«{text}» ليس عدد أجزاء: اكتب عددًا صحيحًا من 2 إلى {max}",
+ "create_input.ws.err.empty": "اكتب اسمًا للتخطيط",
+ "create_input.ws.err.long": "الاسم طويل جدًا: 40 حرفًا كحد أقصى",
+ "create_input.ws.err.preset": "هذا الاسم يخص تخطيطًا مضمّنًا",
+ "create_input.ws.err.full": "أقصى عدد للتخطيطات المحفوظة 24: احذف واحدًا أولًا",
+ "create_input.seldim.locked": "المسافة {v} مثبتة",
+ "create_input.seldim.positive": "يجب أن تكون المسافة أكبر من صفر"
+}

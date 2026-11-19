@@ -1,0 +1,15 @@
+{
+ "cmd.ctx.floor.clean_outline": "Puhasta kontuur",
+ "cmd.ctx.floor.clean_outline.desc": "Eemaldab kitsad tipud kohtades, kus põranda kontuur pöördub iseendasse. Kõigepealt näidatakse eelvaadet; üks tagasivõtmise samm.",
+ "outline_cleanup.title": "Puhasta kontuur",
+ "outline_cleanup.intro": "Selle põranda kontuur pöördub kitsastes tippudes iseendasse: {n}. Puhastus eemaldab need; kõik muu jääb samaks.",
+ "outline_cleanup.legend_before": "Paks joon: praegune kontuur",
+ "outline_cleanup.legend_after": "Õhuke joon: kontuur pärast puhastust",
+ "outline_cleanup.undo": "Seda saad tagasi võtta ühe sammuga.",
+ "outline_cleanup.apply": "Puhasta",
+ "outline_cleanup.cancel": "Tühista",
+ "outline_cleanup.done": "Kontuur puhastatud, tipud eemaldatud: {n}",
+ "outline_cleanup.none": "Selle põranda kontuuril pole tippe",
+ "outline_cleanup.failed": "Kontuuri ei õnnestunud puhastada",
+ "outline_cleanup.changed": "Kontuur muutus pärast eelvaadet; midagi ei kirjutatud. Vaata uut eelvaadet."
+}

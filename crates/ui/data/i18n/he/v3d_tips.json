@@ -1,0 +1,8 @@
+{
+ "v3d.proj.to_ortho": "עבור להטלה אורתוגונלית",
+ "v3d.proj.to_persp": "עבור לפרספקטיבה",
+ "v3d.walk.unit.m": "m/s",
+ "v3d.walk.unit.ft": "ft/s",
+ "v3d.temp.show_all": "הצג הכול  ·  Esc",
+ "v3d.msg.deleted_named": "המבט התלת-מימדי {name} נמחק"
+}

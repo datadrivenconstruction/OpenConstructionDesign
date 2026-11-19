@@ -1,0 +1,10 @@
+{
+ "dlg.dw.store.unloaded": "Desenul „{name}” nu a putut fi citit din proiect și este păstrat neschimbat în fișier",
+ "dlg.dw.store.source_missing": "Desenul „{name}”: fișierul sursă nu a fost găsit, se afișează copia salvată în proiect",
+ "dlg.dw.store.source_changed": "Desenul „{name}”: fișierul sursă s-a modificat de la plasare, se afișează copia salvată în proiect",
+ "dlg.dw.store.unreadable": "Desenele plasate salvate în proiect nu pot fi citite",
+ "dlg.dw.store.not_saved": "Desenele nu sunt salvate: {why}",
+ "dlg.dw.store.why_read": "desenele plasate salvate în proiect nu pot fi citite",
+ "dlg.dw.store.why_write": "fișierul de proiect nu a putut fi actualizat",
+ "dlg.dw.store.missing_in_file": "Fișierul salvat nu conține toate desenele plasate"
+}

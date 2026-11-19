@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "Radio de ajuste",
+ "snap_refine.settings.snap_px_desc": "Qué tan cerca debe estar el cursor de un punto o línea para ajustarse, en píxeles de pantalla. Un valor mayor ayuda en pantallas táctiles y de alta densidad.",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "Horizontal",
+ "snap_refine.hint.vertical": "Vertical",
+ "snap_refine.hint.perpendicular": "Perpendicular a la anterior",
+ "snap_refine.hint.parallel": "Paralela a la anterior",
+ "snap_refine.hint.on_axis": "En eje de muro",
+ "snap_refine.no_snap": "Sin ajuste (Alt)"
+}

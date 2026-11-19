@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "表头下的筛选行。文本：子串；数字：>5、<=3000、=2.5、<>0",
+ "sched_toolbar.columns_tip": "显示或隐藏列",
+ "sched_toolbar.groups_tip": "按列分组行，并显示小计",
+ "sched_toolbar.formulas_tip": "计算列",
+ "sched_toolbar.phase": "阶段",
+ "sched_toolbar.phase_tip": "行数据取自哪个阶段",
+ "sched_toolbar.copy_tip": "将所选行（或全部可见行）复制为 TSV",
+ "sched_toolbar.import_tip": "读回导出的明细表：按 Id 匹配行，按表头匹配列；先统计，然后作为一步撤销",
+ "sched_toolbar.export_tip": "导出可见行和列及合计；数字保持为数字",
+ "sched_toolbar.need_table": "请先打开明细表",
+ "sched_toolbar.busy_open": "文件对话框已打开",
+ "sched_toolbar.busy_save": "保存对话框已打开",
+ "sched_toolbar.clear_filter": "清除筛选",
+ "sched_toolbar.fields_title": "列"
+}

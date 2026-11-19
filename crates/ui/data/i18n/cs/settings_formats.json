@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "Co se stane po exportu sešitu",
+ "settings.area_decimals_desc": "Počet desetinných míst u ploch",
+ "settings.volume_decimals_desc": "Počet desetinných míst u objemů",
+ "settings.frac_desc": "Nejmenší zlomek palce v imperiálních délkách",
+ "settings.small_area_desc": "Plochy menší než jedna čtvereční stopa zobrazit ve čtverečních palcích",
+ "settings.sample_desc": "Jak čísla vypadají při aktuálním nastavení",
+ "autosave.title_desc": "Uchovávat záložní kopii otevřeného projektu",
+ "autosave.interval_desc": "Čas mezi záložními kopiemi pro obnovu",
+ "autosave.keep_desc": "Starší záložní kopie se odstraní",
+ "autosave.folder_desc": "Prázdné znamená výchozí složku",
+ "autosave.remind_desc": "Připomínka k uložení projektu, který ještě nemá soubor",
+ "settings.backend_desc": "Používaný grafický adaptér",
+ "settings.news_desc": "Co se změnilo v této verzi",
+ "settings.assoc_default_desc": "Nastavit tuto aplikaci jako výchozí pro soubory modelů",
+ "settings.data_dir_desc": "Zde jsou uloženy mezipaměti, záložní kopie a protokoly."
+}

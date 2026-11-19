@@ -1,0 +1,4 @@
+{
+ "cmd.mgr.autosave_show": "Vis automatisk gem",
+ "cmd.mgr.autosave_show.desc": "Åbner vinduet for automatisk gem; det forbliver åbent, hvis det allerede vises."
+}

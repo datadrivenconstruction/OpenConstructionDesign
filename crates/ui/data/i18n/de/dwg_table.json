@@ -1,0 +1,14 @@
+{
+ "dwg_table.copy": "Tabelle kopieren",
+ "dwg_table.copy_tip": "Die Mengenermittlung nach Ebenen als Tabelle für eine Tabellenkalkulation kopieren",
+ "dwg_table.copied": "Mengenermittlung kopiert (tabulatorgetrennt)",
+ "dwg_table.total": "Summe",
+ "dwg_table.col.layer": "Ebene",
+ "dwg_table.col.count": "Anzahl",
+ "dwg_table.col.len": "Länge, {unit}",
+ "dwg_table.col.area": "Fläche, {unit}",
+ "dwg_table.unit.mm": "mm",
+ "dwg_table.unit.m2": "m²",
+ "dwg_table.unit.ft": "ft",
+ "dwg_table.unit.ft2": "ft²"
+}

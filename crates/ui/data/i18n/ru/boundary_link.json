@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "Выбрать замкнутый контур стен",
+ "cmd.sketch.link_unlink": "Отвязать кромку от стены",
+ "cmd.sketch.link_repick": "Заново выбрать стену кромки",
+ "cmd.ctx.floor.link_unlink": "Отвязать кромки от стен",
+ "cmd.ctx.floor.link_accept": "Принять кромки удалённых стен",
+ "boundary_link.hint.loop": "Щёлкните стену: замкнутый контур стен станет связанными кромками",
+ "boundary_link.hint.repick": "Щёлкните стену, параллельную кромке: кромка будет следовать за ней",
+ "boundary_link.need_sketch": "Сначала откройте эскиз контура",
+ "boundary_link.need_edge": "Наведите курсор на кромку эскиза",
+ "boundary_link.need_straight": "За стеной может следовать только прямая кромка",
+ "boundary_link.need_floor": "Выберите перекрытие",
+ "boundary_link.no_wall": "Под курсором нет стены",
+ "boundary_link.not_parallel": "Стена не параллельна кромке",
+ "boundary_link.not_linked": "Эта кромка не связана со стеной",
+ "boundary_link.unlinked": "Кромка отвязана: остаётся на месте и больше не следует за стеной",
+ "boundary_link.accepted": "Кромки приняты: остаются на месте как обычные",
+ "boundary_link.failed": "Не удалось применить",
+ "boundary_link.lost": "исходная стена удалена",
+ "boundary_link.blocked": "не может следовать за стеной"
+}

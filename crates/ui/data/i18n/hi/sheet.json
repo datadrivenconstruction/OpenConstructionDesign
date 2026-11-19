@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "शॉर्टकट सूची",
+ "cmd.help.shortcuts.desc": "हर शॉर्टकट वर्तमान सेटिंग के अनुसार संदर्भ के साथ दिखाता है। टेक्स्ट फ़ील्ड के बाहर कहीं भी ? दबाएँ।",
+ "sheet.title": "कीबोर्ड शॉर्टकट",
+ "sheet.filter": "कमांड या कुंजी से फ़िल्टर करें",
+ "sheet.filter_label": "शॉर्टकट फ़िल्टर करें",
+ "sheet.customize": "अनुकूलित करें…",
+ "sheet.close": "बंद करें",
+ "sheet.esc_close": "बंद करने के लिए",
+ "sheet.none": "कोई शॉर्टकट मेल नहीं खाता",
+ "sheet.none_hint": "कोई दूसरा शब्द या कुंजी आज़माएँ।",
+ "sheet.sec.general": "सामान्य",
+ "sheet.sec.plan": "प्लान",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "शेड्यूल",
+ "sheet.sec.sheets": "शीट",
+ "sheet.sec.ai": "AI"
+}

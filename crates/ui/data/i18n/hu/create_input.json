@@ -1,0 +1,14 @@
+{
+ "cmd.mod.divide": "Felosztás",
+ "cmd.mod.divide.short": "Felosztás",
+ "cmd.mod.divide.desc": "Egy lépésben egyenlő részekre osztja a falat. Írja be a részek számát, majd kattintson a falra.",
+ "whereis.mod.divide": "felosztás, egyenlő részek, darabokra vágás, fal szegmentálása",
+ "hint.split.parts": "Felosztás: kattintson egy falra · szám — részek (2–100) · Esc — mégse",
+ "create_input.divide.bad_parts": "„{text}” nem részszám: adjon meg egész számot 2 és {max} között",
+ "create_input.ws.err.empty": "Adjon nevet az elrendezésnek",
+ "create_input.ws.err.long": "A név túl hosszú: legfeljebb 40 karakter",
+ "create_input.ws.err.preset": "Ez a név beépített elrendezéshez tartozik",
+ "create_input.ws.err.full": "Legfeljebb 24 mentett elrendezés lehet: előbb törölje az egyiket",
+ "create_input.seldim.locked": "{v} távolság zárolva",
+ "create_input.seldim.positive": "A távolságnak nullánál nagyobbnak kell lennie"
+}

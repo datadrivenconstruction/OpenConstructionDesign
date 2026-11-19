@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "Dessiner un mur",
+ "empty.totals.action": "Dessiner un mur",
+ "empty.schedule.action": "Ajouter un champ",
+ "empty.schedule_filtered.action": "Effacer le filtre",
+ "empty.library.action": "Réinitialiser la recherche",
+ "empty.library.load": "Charger une famille",
+ "empty.schedule_fields.title": "Aucun champ affiché",
+ "empty.schedule_fields.action": "Ajouter un champ",
+ "empty.schedule_fields.hint": "Activez au moins un champ pour voir le tableau."
+}

@@ -1,0 +1,5 @@
+{
+ "mcp.set.hide": "隠す",
+ "mcp.set.copy_config": "AIエージェントの設定をコピー",
+ "mcp.set.no_token": "アクセストークンはまだありません。先にサーバーをオンにしてください。"
+}

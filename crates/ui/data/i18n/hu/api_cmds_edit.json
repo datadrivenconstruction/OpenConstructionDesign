@@ -1,0 +1,20 @@
+{
+ "api.cmd.move_elements": "Elemek mozgatása méterben megadott eltolással",
+ "api.cmd.copy_elements": "Elemek másolása egy vagy több, méterben megadott eltolással",
+ "api.cmd.rotate_elements": "Elemek elforgatása egy pont körül megadott fokszöggel",
+ "api.cmd.mirror_elements": "Elemek tükrözése két ponton átmenő tengelyre",
+ "api.cmd.scale_elements": "Elemek méretezése egy pont körül megadott szorzóval",
+ "api.cmd.array_elements": "Elemek lineáris vagy sugaras tömbje",
+ "api.cmd.offset_wall": "Fal párhuzamos másolása méterben megadott távolságra",
+ "api.cmd.split_wall": "Fal kettéosztása egy pontban",
+ "api.cmd.pin_elements": "Elemek rögzítése vagy rögzítés feloldása",
+ "api.cmd.flip_openings": "Ajtók és ablakok zsanéroldalának vagy nyílásirányának megfordítása",
+ "api.cmd.create_level": "Szint létrehozása méterben megadott magasságon",
+ "api.cmd.edit_level": "Szint átnevezése vagy magasságának módosítása",
+ "api.cmd.delete_level": "Szint törlése",
+ "api.cmd.place_rooms": "Helyiség elhelyezése a szint minden zárt területén",
+ "api.cmd.join_elements": "Elemek csatlakozásának összekapcsolása, szétválasztása vagy átállítása",
+ "api.cmd.place_footings": "Alap elhelyezése a szint minden pillére alatt",
+ "api.cmd.create_terrain": "Terep létrehozása felmérési pontokból vagy lejtős síkból",
+ "api.cmd.script_recipes": "Szabad szerkezetek szkriptelemeinek és receptjeinek elolvasása"
+}

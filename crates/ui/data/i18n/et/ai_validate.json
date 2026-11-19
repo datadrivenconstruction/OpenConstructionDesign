@@ -1,0 +1,14 @@
+{
+ "ai.issue.integrity": "Terviklikkuse probleem: {0} {1}: {2}",
+ "ai.issue.opening_outside": "Ava ei mahu seinasse: {0}",
+ "ai.issue.opening_overlap": "Ava kattub avaga {0}",
+ "ai.issue.wall_warning": "Sein: {0}",
+ "ai.issue.cut_warning": "Lõige: {0}",
+ "ai.issue.room_open": "Ruum ei ole suletud",
+ "ai.issue.material_unknown": "Projektis ei ole materjali nimega „{0}”: rakendamine lisaks uue vaikeomadustega",
+ "ai.issue.material_suggest": "Projektis ei ole materjali nimega „{0}”: rakendamine lisaks uue. Kas mõtlesid „{1}”?",
+ "ai.issue.conflict": "Seda toimingut ei saa käivitada: {0}",
+ "ai.issue.too_large": "{0} elementi muutuks, mis ületab piiri {1}. Vaja on luba",
+ "ai.issue.truncated": "Muudatuste loend peatus reas {0}: plaan on suurem, kui kaart suudab näidata. Vaja on luba",
+ "ai.issue.replan_failed": "Plaani ei saanud ümber arvutada. Võetakse mudelist uus koopia"
+}

@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "Tillämpningen ångrades: modellen stämde inte med förhandsgranskningen. {what}",
+ "xlsx_verify.not_written": "{row} ändrades inte.",
+ "xlsx_verify.lost": "{row} försvann.",
+ "xlsx_verify.not_deleted": "{row} togs inte bort.",
+ "xlsx_verify.extra_deleted": "{row} togs bort, trots att förhandsgranskningen behöll den.",
+ "xlsx_verify.created": "{table}: {got} nya i stället för {want}.",
+ "xlsx_verify.value": "{row}, {field}: väntade {want} (var {old}), fick {got}.",
+ "xlsx_verify.check_failed": "Resultatet kunde inte kontrolleras: {e}",
+ "xlsx_verify.plan_failed": "Tillämpningen startades inte: kontrollen kunde inte läsa modellen ({e}).",
+ "xlsx_verify.take_back_failed": "Steget kunde inte ångras ({e}): använd Ångra.",
+ "xlsx_verify.t.wall": "Vägg",
+ "xlsx_verify.t.opening": "Öppning",
+ "xlsx_verify.t.room": "Rum",
+ "xlsx_verify.t.slab": "Golv",
+ "xlsx_verify.t.level": "Nivå",
+ "xlsx_verify.t.wall_type": "Väggtyp",
+ "xlsx_verify.t.slab_type": "Golvtyp",
+ "xlsx_verify.t.col": "Pelare",
+ "xlsx_verify.t.beam": "Balk",
+ "xlsx_verify.t.roof": "Takkonstruktion",
+ "xlsx_verify.t.curtain_wall": "Gardinvägg"
+}

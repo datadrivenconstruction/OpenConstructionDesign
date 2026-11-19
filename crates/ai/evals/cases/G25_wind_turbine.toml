@@ -1,0 +1,36 @@
+id = "G25_wind_turbine"
+tier = "hard"
+group = "Any geometry"
+title = "Wind turbine"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "A utility wind turbine: tapered tubular steel tower 90 m, nacelle, hub and three 50 m blades with twisted airfoil sections, on a circular foundation, with a door and internal ladder."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "comp:blade|rotor"
+min = 3.0
+
+[[oracle.count]]
+spec = "col+solid+mass"
+min = 3.0
+
+[[oracle.count]]
+spec = "iso_footing+raft+solid"
+min = 1.0
+
+[[oracle.geom]]
+kind = "height"
+min = 85.0
+max = 145.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

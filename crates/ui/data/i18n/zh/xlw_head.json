@@ -1,0 +1,15 @@
+{
+ "xlw.hd_never": "尚未导出",
+ "xlw.hd_now": "刚刚",
+ "xlw.hd_min": "{n} 分钟前",
+ "xlw.hd_hour": "{n} 小时前",
+ "xlw.hd_day": "{n} 天前",
+ "xlw.hd_linked": "已链接",
+ "xlw.hd_watched": "正在监视",
+ "xlw.hd_stale": "导出后模型已更改",
+ "xlw.ft_export": "导出",
+ "xlw.ft_review": "检查",
+ "xlw.ft_apply": "应用 {n} 项更改",
+ "xlw.ft_delete_missing": "删除缺失项",
+ "xlw.ft_keep_missing_tip": "删除已开启：应用时将删除没有对应行的元素。取消勾选以保留它们。"
+}

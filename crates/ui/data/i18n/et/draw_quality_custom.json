@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "kohandatud",
+ "draw_quality.custom.tip": "{name}: selle projekti kirje",
+ "draw_quality.custom_note": "Kohandatuks märgitud kirjed kuuluvad sellele projektile.",
+ "draw_quality.unsaved.lib_body": "Kas salvestada need teeki või loobuda neist?",
+ "draw_quality.unsaved.styles_body": "Kas rakendada need vaatele või loobuda neist?",
+ "draw_quality.unsaved.both_body": "Kas rakendada need või loobuda neist?",
+ "draw_quality.halftone": "{category} poolton",
+ "draw_quality.styles.name": "Joonestiilid",
+ "draw_quality.styles.other_level": "Tasandi {level} salvestamata stiilimuudatused: rakenda või tühista need, et seda tasandit muuta."
+}

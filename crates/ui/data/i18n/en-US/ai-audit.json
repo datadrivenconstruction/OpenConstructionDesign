@@ -1,0 +1,22 @@
+{
+ "ai.audit.tokens": "{n} tokens",
+ "ai.audit.filter.all": "All",
+ "ai.audit.filter.ai": "AI",
+ "ai.audit.filter.me": "Me",
+ "ai.audit.search": "Search changes",
+ "ai.audit.search.clear": "Clear search",
+ "ai.audit.show_all": "Show all",
+ "ai.audit.empty.hint": "Changes drafted or applied by a model or an agent appear here, each with a way back.",
+ "ai.audit.no_match": "No changes match the filter.",
+ "ai.audit.show.tip": "Select and show the elements this change touched",
+ "ai.audit.revert.ask": "Take back \"{what}\"? {change}.",
+ "ai.audit.revert.elements": {
+  "one": "# element changes",
+  "other": "# elements change"
+ },
+ "ai.audit.revert.keeps": "Newer changes stay. The revert is one undo step.",
+ "ai.audit.cancel": "Cancel",
+ "ai.audit.toast.reverted": "Reverted: {what}",
+ "ai.audit.toast.undone": "Undone: {what}",
+ "ai.audit.redo": "Redo"
+}

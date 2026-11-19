@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "Жүйе атауы",
+ "mep_browser.add_blocked": "Алдымен жүйенің атын енгізіңіз",
+ "mep_browser.col.insulation": "Оқшаулау",
+ "mep_browser.cancel": "Бас тарту",
+ "mep_browser.delete.title": "Бұл жүйе жойылсын ба?",
+ "mep_browser.delete.body": "\"{name}\" жүйесі және оның {n} тізбегі жойылады.",
+ "mep_browser.delete.undo": "Мұны бір рет Болдырмау арқылы қайтаруға болады.",
+ "mep_browser.delete.confirm": "Жүйені жою"
+}

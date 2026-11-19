@@ -1,0 +1,6 @@
+{
+ "xlsx_no_base.title": "Bu ish kitobida taqqoslash ma'lumoti yo'q",
+ "xlsx_no_base.detail": "Yashirin taqqoslash varag'i yo'q yoki buzilgan (boshqa dastur ish kitobini qayta saqlagan yoki u qo'lda yaratilgan). Har bir farqli katak model qiymatini almashtiradi; eksportdan keyingi model tahrirlarini aniqlab bo'lmaydi. Ish kitobida yo'q qatorlar o'chirilmaydi.",
+ "xlsx_no_base.confirm": "O'zgarishlarni tekshirdim: model qiymatlarini almashtirish ({n})",
+ "xlsx_no_base.confirm_first": "Avval taqqoslash ma'lumotisiz ish kitobi importini tasdiqlang"
+}

@@ -1,0 +1,40 @@
+{
+ "sources": [
+  {
+   "id": "cz-146",
+   "title": "Decree 146/2024 on requirements for construction (replaces 268/2009 and 398/2009)",
+   "publisher": "Czech Republic (law portal zakonyprolidi.cz)",
+   "url": "https://www.zakonyprolidi.cz/cs/2024-146",
+   "edition": "in force 2024-07-01",
+   "licence": "public-law",
+   "verified": "2026-11-14"
+  },
+  {
+   "id": "cz-268",
+   "title": "Decree 268/2009 on technical requirements (repealed)",
+   "publisher": "Czech Republic (law portal)",
+   "url": "https://www.zakonyprolidi.cz/cs/2009-268",
+   "edition": "repealed version",
+   "licence": "public-law",
+   "verified": null
+  },
+  {
+   "id": "cz-398",
+   "title": "Decree 398/2009 on barrier-free use (repealed)",
+   "publisher": "Czech Republic (law portal)",
+   "url": "https://www.zakonyprolidi.cz/cs/2009-398",
+   "edition": "repealed version",
+   "licence": "public-law",
+   "verified": null
+  },
+  {
+   "id": "cz-361",
+   "title": "Government Regulation 361/2007 on health protection at work",
+   "publisher": "Czech Government (Collection of Laws)",
+   "url": "https://www.zakonyprolidi.cz/cs/2007-361",
+   "edition": "consolidated, valid from 2026-09-01",
+   "licence": "public-law",
+   "verified": "2026-11-14"
+  }
+ ]
+}

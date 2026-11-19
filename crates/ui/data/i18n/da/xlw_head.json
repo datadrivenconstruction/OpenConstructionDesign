@@ -1,0 +1,15 @@
+{
+ "xlw.hd_never": "Ikke eksporteret endnu",
+ "xlw.hd_now": "lige nu",
+ "xlw.hd_min": "for {n} min. siden",
+ "xlw.hd_hour": "for {n} t. siden",
+ "xlw.hd_day": "for {n} d. siden",
+ "xlw.hd_linked": "Tilknyttet",
+ "xlw.hd_watched": "Overvåget",
+ "xlw.hd_stale": "Modellen er ændret siden eksport",
+ "xlw.ft_export": "Eksportér",
+ "xlw.ft_review": "Gennemgå",
+ "xlw.ft_apply": "Anvend {n} ændringer",
+ "xlw.ft_delete_missing": "Slet manglende",
+ "xlw.ft_keep_missing_tip": "Sletning er slået til: elementer uden række slettes ved Anvend. Fjern markeringen for at beholde dem."
+}

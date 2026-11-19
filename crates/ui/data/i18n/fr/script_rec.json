@@ -1,0 +1,8 @@
+{
+ "script_rec.started": "Enregistrement : les modifications faites à partir de maintenant seront ajoutées à un script. Pour arrêter, sélectionnez de nouveau « Enregistrer les actions dans un script ».",
+ "script_rec.saved": "Script « {name} » enregistré : modifications — {n}.",
+ "script_rec.skipped": "Modifications faites par des outils sans formulaire de script, non enregistrées : {k}.",
+ "script_rec.nothing": "Enregistrement arrêté : aucune modification à enregistrer.",
+ "script_rec.failed": "L'enregistrement n'a pas été sauvegardé : {why}",
+ "script_rec.no_folder": "aucun dossier de réglages pour les scripts"
+}

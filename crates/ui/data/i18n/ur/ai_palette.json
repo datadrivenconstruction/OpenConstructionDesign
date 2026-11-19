@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "AI سے پوچھیں: {q}",
+ "ai.palette.connect": "پوچھنے کے لیے AI کنیکٹ کریں",
+ "ai.palette.draft.apply": "مسودہ لاگو کریں ({n})",
+ "ai.palette.draft.reject": "مسودہ مسترد کریں",
+ "ai.palette.draft.next": "مسودے کی اگلی تبدیلی",
+ "ai.palette.draft.show": "منظر میں مسودہ دکھائیں",
+ "cmd.ai.next_change": "مسودے کی اگلی تبدیلی",
+ "cmd.ai.next_change.desc": "منظر کو مسودے کے اگلے عنصر پر لے جاتا ہے۔",
+ "cmd.ai.show_draft": "منظر میں AI مسودہ دکھائیں",
+ "cmd.ai.show_draft.desc": "منظر کو مسودے کی ہر تبدیلی پر فٹ کرتا ہے۔"
+}

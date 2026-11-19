@@ -1,0 +1,14 @@
+{
+ "cmd.arch.wall.tile": "Perete",
+ "cmd.arch.door.tile": "Ușă",
+ "cmd.arch.window.tile": "Fereastră",
+ "cmd.arch.floor.tile": "Planșeu",
+ "cmd.mod.move.tile": "Mută",
+ "cmd.mod.copy.tile": "Copiază",
+ "cmd.mod.rotate.tile": "Rotește",
+ "cmd.mod.mirror.tile": "Oglindește",
+ "cmd.mod.trim.tile": "Taie",
+ "cmd.mod.delete.tile": "Șterge",
+ "cmd.ann.dim.tile": "Cotă",
+ "cmd.ann.text.tile": "Text"
+}

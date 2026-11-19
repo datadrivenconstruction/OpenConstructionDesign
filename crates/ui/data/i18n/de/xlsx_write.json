@@ -1,0 +1,4 @@
+{
+ "xlsx_write.denied": "Keine Rechte zum Schreiben in diesem Ordner. Die Arbeitsmappe wurde nicht geändert. Speichern Sie den Export in einem anderen Ordner.",
+ "xlsx_write.save_to": "Speichern unter…"
+}

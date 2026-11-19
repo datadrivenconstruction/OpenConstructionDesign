@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "שורות ותאים שדולגו",
+ "xlsx_issues.conflicts_title": "שונה בשני המקומות",
+ "xlsx_issues.missing_title": "גיליון חסר בחוברת העבודה",
+ "xlsx_issues.look_alike_title": "שם הגיליון אינו תואם",
+ "xlsx_issues.mass_title": "מחיקה המונית דורשת אישור",
+ "xlsx_issues.sheets_missing": "הגיליונות {sheets} חסרים בחוברת העבודה (שונה שמם או נמחקו); השורות שלהם לא הושוו.",
+ "xlsx_issues.keep_model": "שמור את המודל",
+ "xlsx_issues.take_book": "קח מחוברת העבודה",
+ "xlsx_issues.open_book_tip": "פותח את הקובץ באפליקציה שלו. שום דבר לא משתנה במודל; התצוגה המקדימה נטענת מחדש אחרי ששמרת את חוברת העבודה."
+}

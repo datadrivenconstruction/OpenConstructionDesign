@@ -1,0 +1,7 @@
+{
+ "xlsx_alias_ids.ids_written": "{n} novih redaka dobilo je id-eve u vašem preimenovanom listu; ništa drugo u radnoj knjizi nije promijenjeno.",
+ "xlsx_alias_ids.ids_open": "Radna knjiga je otvorena u drugom programu: id-evi {n} novih redaka nisu zapisani. Zatvorite je tamo i sinkronizirajte; ovi redci se ne stvaraju ponovno.",
+ "xlsx_alias_ids.ids_failed": "Id-evi {n} novih redaka nisu mogli biti zapisani; radna knjiga je ostavljena kakva je bila. Ovi redci se ne stvaraju ponovno pri sljedećoj sinkronizaciji.",
+ "xlsx_alias_ids.unpaired": "{n} novih redaka još nema id; zapamćeni su i ne stvaraju se ponovno.",
+ "xlsx_alias_ids.refused": "Ništa nije primijenjeno: novi redci u {sheets} ne mogu dobiti id-eve dok se čita preimenovani list. Vratite listu standardni naziv (ili uklonite ove redce) i ponovno sinkronizirajte."
+}

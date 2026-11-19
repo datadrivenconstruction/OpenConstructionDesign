@@ -1,0 +1,6 @@
+{
+ "pair_input.pair_hint": "Dos valores se separan con punto y coma: @1000;500",
+ "pair_input.old_pair": "Una coma entre dos números enteros ya no forma un par: escribir 6000;4000 para dos valores o 6000,5 para un decimal",
+ "pair_input.op.bad_length": "No es una longitud: {text} ({why}). No se cambió nada",
+ "pair_input.op.bad_count": "No se tomó el número {text}: un entero de {min} a {max}"
+}

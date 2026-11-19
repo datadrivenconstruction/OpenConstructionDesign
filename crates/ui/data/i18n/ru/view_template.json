@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "Сначала введите название шаблона",
+ "view_template.name_taken": "Шаблон с таким названием уже существует",
+ "view_template.pick_blocked": "Сначала отметьте хотя бы один вид",
+ "view_template.views.one": "{n} вид",
+ "view_template.views.few": "{n} вида",
+ "view_template.views.many": "{n} видов",
+ "view_template.delete.title": "Удалить шаблон?",
+ "view_template.delete.body": "Шаблон «{name}» будет удалён. Его используют: {used}.",
+ "view_template.delete.unused": "Шаблон «{name}» будет удалён. Ни один вид его не использует.",
+ "view_template.delete.keeps": "Эти виды сохранят текущую графику, но потеряют связь.",
+ "view_template.delete.undo": "Это можно отменить одним шагом отмены.",
+ "view_template.delete.confirm": "Удалить шаблон"
+}

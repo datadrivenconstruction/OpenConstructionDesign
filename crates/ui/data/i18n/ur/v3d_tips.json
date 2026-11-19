@@ -1,0 +1,8 @@
+{
+ "v3d.proj.to_ortho": "آرتھوگرافک پر سوئچ کریں",
+ "v3d.proj.to_persp": "پرسپیکٹو پر سوئچ کریں",
+ "v3d.walk.unit.m": "m/s",
+ "v3d.walk.unit.ft": "ft/s",
+ "v3d.temp.show_all": "سب دکھائیں  ·  Esc",
+ "v3d.msg.deleted_named": "3D ویو {name} حذف"
+}

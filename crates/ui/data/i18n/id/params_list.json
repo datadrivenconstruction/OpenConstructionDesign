@@ -1,0 +1,23 @@
+{
+ "params_list.n_params": {
+  "one": "# parameter",
+  "other": "# parameter"
+ },
+ "params_list.n_values": {
+  "one": "# nilai",
+  "other": "# nilai"
+ },
+ "params_list.n_elements": {
+  "one": "# elemen",
+  "other": "# elemen"
+ },
+ "params_list.exported": "{params} diekspor ke {file}",
+ "params_list.export_failed": "Parameter tidak diekspor: {why}",
+ "params_list.open_folder": "Buka folder",
+ "params_list.delete_tip": "Hapus parameter dan nilainya",
+ "params_list.confirm": "Hapus {name} dan {values} pada {elements}?",
+ "params_list.confirm_btn": "Hapus",
+ "params_list.cancel": "Batal",
+ "params_list.deleted": "Parameter {name} dihapus ({values})",
+ "params_list.undo": "Batalkan"
+}

@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "Hiçbir şey bulunamadı",
+ "empty.browser_search.hint": "Bu aramayla eşleşen görünüm, kat, tip veya oda yok.",
+ "empty.browser_search.action": "Aramayı temizle",
+ "empty.xl_filtered.title": "Filtrelerle eşleşen kayıt yok",
+ "empty.xl_filtered.hint": "Daha fazla tür açın, başka bir sayfa seçin ya da arama metnini değiştirin.",
+ "empty.xl_filtered.action": "Filtreleri temizle",
+ "empty.xl_nochanges.title": "Çalışma kitabında değişiklik yok",
+ "empty.xl_nochanges.hint": "Çalışma kitabı modelle aynı: içe aktarmak hiçbir şeyi değiştirmez.",
+ "empty.version_same.title": "Modeller aynı",
+ "empty.version_same.hint": "Açık model ile seçilen sürüm arasında fark bulunamadı.",
+ "empty.templates.title": "Henüz görünüm şablonu yok",
+ "empty.templates.hint": "Ayarlarını diğer görünümlerde kullanmak için mevcut görünümden bir tane oluşturun.",
+ "empty.templates.action": "Şablona ad verin",
+ "empty.fe_params.title": "Henüz parametre yok",
+ "empty.fe_params.hint": "Boyutları, malzemeleri veya görünürlüğü yönetmek için aşağıya bir parametre ekleyin.",
+ "empty.fe_params.action": "Parametre ekle"
+}

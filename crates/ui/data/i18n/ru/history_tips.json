@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "Отменено — Ctrl+Y возвращает",
+ "history.hist.empty": "Изменений пока нет",
+ "history.hist.empty_hint": "Ваши правки появятся здесь. Щелчок по шагу возвращает к нему.",
+ "history.hist.revert_all_n": "Откатить все изменения ИИ ({n})"
+}

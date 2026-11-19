@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "X os",
+ "fe.axis.y": "Y os",
+ "fe.axis.z": "Z os",
+ "fe.col.axis": "Os",
+ "fe.col.at": "Položaj",
+ "fe.col.mode": "Način",
+ "fe.mode.fixed": "Fiksno",
+ "fe.mode.free": "Slobodno",
+ "fe.types.inherited": "Zadano iz parametra",
+ "fe.csv.more": "Više radnji za CSV",
+ "fe.ref.selected": "Ravnina: {name}"
+}

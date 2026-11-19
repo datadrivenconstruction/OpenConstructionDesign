@@ -1,0 +1,26 @@
+{
+ "ai.audit.tokens": "{n} رمزًا",
+ "ai.audit.filter.all": "الكل",
+ "ai.audit.filter.ai": "الذكاء الاصطناعي",
+ "ai.audit.filter.me": "أنا",
+ "ai.audit.search": "البحث في التغييرات",
+ "ai.audit.search.clear": "مسح البحث",
+ "ai.audit.show_all": "إظهار الكل",
+ "ai.audit.empty.hint": "تظهر هنا التغييرات التي صاغها نموذج أو وكيل أو طبّقها، ولكل منها طريقة للتراجع.",
+ "ai.audit.no_match": "لا توجد تغييرات تطابق المرشح.",
+ "ai.audit.show.tip": "حدّد وأظهر العناصر التي لمسها هذا التغيير",
+ "ai.audit.revert.ask": "التراجع عن «{what}»؟ {change}.",
+ "ai.audit.revert.elements": {
+  "zero": "لا تغييرات في العناصر",
+  "one": "تغيير في عنصر واحد",
+  "two": "تغييران في عنصرين",
+  "few": "# تغييرات في العناصر",
+  "many": "# تغييرًا في العناصر",
+  "other": "# تغيير في العناصر"
+ },
+ "ai.audit.revert.keeps": "تبقى التغييرات الأحدث. التراجع خطوة تراجع واحدة.",
+ "ai.audit.cancel": "إلغاء",
+ "ai.audit.toast.reverted": "تم التراجع: {what}",
+ "ai.audit.toast.undone": "أُلغي: {what}",
+ "ai.audit.redo": "إعادة"
+}

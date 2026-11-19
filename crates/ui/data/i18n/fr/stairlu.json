@@ -1,0 +1,12 @@
+{
+ "opt.stair.straight": "Droit",
+ "opt.stair.l": "L",
+ "opt.stair.u": "U",
+ "opt.stair.gap": "Jour",
+ "hint.stair.corner": "Escalier en L : choisissez le coin de rotation · Retour arrière — supprimer le dernier point · Échap — supprimer le dernier point, sans point — annuler",
+ "hint.stair.side": "Escalier : choisissez le côté de la deuxième volée · Retour arrière — supprimer le dernier point · Échap — supprimer le dernier point, sans point — annuler",
+ "tool.stair.flights": "{n} contremarches (total {m})",
+ "tool.stair.err_split": "Chaque volée a besoin d'au moins 2 contremarches : la première volée en a {n} sur {m}",
+ "tool.stair.err_comfort": "La contremarche et le giron ne respectent pas la règle de confort (2R + G)",
+ "tool.stair.err_input": "Dimensions d'escalier hors limites : vérifiez la largeur, la hauteur et le palier"
+}

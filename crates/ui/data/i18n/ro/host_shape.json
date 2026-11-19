@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "Deschidere de mansardă",
+ "cmd.arch.roof_opening": "Deschidere în acoperiș",
+ "cmd.arch.roof_extrusion": "Acoperiș prin extrudare",
+ "cmd.arch.ceiling_opening": "Deschidere în tavan",
+ "cmd.str.slab_opening": "Deschidere în placă",
+ "cmd.ctx.wall.detach": "Desprinde partea de sus",
+ "cmd.ctx.floor.sketch": "Editează conturul",
+ "cmd.ctx.floor.shape": "Editează forma",
+ "host_shape.shape.elev_prompt": "cota, mm…",
+ "host_shape.shape.elev_mm": "{v} mm",
+ "host_shape.sketch.no_host": "niciun element gazdă sub contur pe acest nivel",
+ "host_shape.issue.roof": "acoperiș {id}: {e}",
+ "host_shape.issue.ceiling": "tavan {id}: {e}",
+ "host_shape.status.select_slab": "selectați o placă",
+ "host_shape.status.select_walls": "selectați pereții",
+ "host_shape.status.no_roof_or_level": "niciun acoperiș sau nivel deasupra",
+ "host_shape.status.top_attached": "partea de sus a pereților atașată",
+ "host_shape.status.top_detached": "partea de sus a pereților desprinsă",
+ "host_shape.status.straight_wall": "este necesar un perete drept",
+ "host_shape.status.roof_extruded": "acoperiș prin extrudare creat",
+ "warn.kind.cut": "Tăietura sau atașarea nu a fost construită"
+}

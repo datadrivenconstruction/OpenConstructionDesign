@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "패널",
+ "curtain_props.cw.panel_cell": "셀 {i}×{j} · 커튼월 #{id}",
+ "curtain_props.cw.kind": "유형",
+ "curtain_props.cw.kind.glazed": "유리",
+ "curtain_props.cw.kind.solid": "불투명",
+ "curtain_props.cw.kind.door": "문",
+ "curtain_props.cw.kind.window": "창",
+ "curtain_props.cw.kind.empty": "비어 있음",
+ "curtain_props.cw.name": "이름",
+ "curtain_props.cw.swing_side": "반대쪽으로 열림",
+ "curtain_props.cw.swing_hinge": "셀 끝의 경첩",
+ "curtain_props.cw.size": "크기",
+ "curtain_props.cw.cell_area": "셀 면적",
+ "curtain_props.cw.panel_area": "패널 면적",
+ "curtain_props.cw.prev": "이전 패널",
+ "curtain_props.cw.next": "다음 패널",
+ "curtain_props.cw.wall": "벽을 선택하세요",
+ "curtain_props.cw.panel_hint": "Esc — 선택 · Ctrl+Z — 실행 취소",
+ "curtain_props.cw.status.panel": "패널 {i}×{j} → {kind}",
+ "e3d.err.cw_height": "커튼월 높이는 100 mm를 넘어야 합니다"
+}

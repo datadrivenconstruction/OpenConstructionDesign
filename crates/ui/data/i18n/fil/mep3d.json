@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "Ducto ng hangin",
+ "mep3d.pipe": "Tubo",
+ "mep3d.tray": "Tray ng kable",
+ "mep3d.conduit": "Tubo ng kable",
+ "mep3d.system": "Sistema",
+ "mep3d.length": "Haba",
+ "mep3d.diameter": "Diyametro",
+ "mep3d.width": "Lapad",
+ "mep3d.height": "Taas",
+ "mep3d.insulation": "Insulasyon",
+ "mep3d.tip": "Enter — ilapat; muling kakalkulahin ang mga fitting",
+ "mep3d.size_positive": "dapat mas malaki sa zero ang sukat",
+ "mep3d.not_changed": "hindi nabago: {e}",
+ "mep3d.copied": "nakopya ang run",
+ "mep3d.changed": "nabago ang run",
+ "mep3d.deleted": "nabura ang mga elemento: {n}",
+ "mep3d.not_deleted": "hindi nabura: {e}",
+ "mep3d.no_wall_type": "walang uri ng pader",
+ "mep3d.demo.supply": "Suplay S1",
+ "mep3d.demo.heating": "Pagpapainit",
+ "mep3d.demo.power": "Kuryente"
+}

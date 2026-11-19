@@ -1,0 +1,14 @@
+{
+ "cmd.arch.wall.tile": "Fal",
+ "cmd.arch.door.tile": "Ajtó",
+ "cmd.arch.window.tile": "Ablak",
+ "cmd.arch.floor.tile": "Födém",
+ "cmd.mod.move.tile": "Mozgatás",
+ "cmd.mod.copy.tile": "Másolás",
+ "cmd.mod.rotate.tile": "Forgatás",
+ "cmd.mod.mirror.tile": "Tükrözés",
+ "cmd.mod.trim.tile": "Vágás",
+ "cmd.mod.delete.tile": "Törlés",
+ "cmd.ann.dim.tile": "Méretezés",
+ "cmd.ann.text.tile": "Szöveg"
+}

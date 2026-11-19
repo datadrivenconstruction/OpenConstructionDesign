@@ -1,0 +1,5 @@
+{
+ "drafts_overwrite.ow.project": "Projekti salvestamine ootab seda vastust. Asenda väärtused, et salvestamist jätkata; Tagasi muutmisele säilitab kõik muudatused ega kirjuta midagi.",
+ "drafts_overwrite.drafts.ow_wait": "Salvestamine ootab sinu vastust perekonnaredaktoris: perekonna laadimine asendaks projekti tüübi väärtused. Midagi ei suletud.",
+ "drafts_overwrite.drafts.ow_back": "Salvestamine peatati: projekti tüübi väärtused jäeti alles ja perekonna muudatused on endiselt avatud. Midagi ei suletud."
+}

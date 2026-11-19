@@ -1,0 +1,15 @@
+{
+ "xl.msg.cell_clipped": "testo tagliato al limite della cella; sola lettura, modifica non applicata",
+ "xlcell.status": "Esportato. {count} celle sono state accorciate o lasciate vuote — vedi la finestra dei dettagli.",
+ "xlcell.title": "Celle modificate dall'esportazione",
+ "xlcell.intro": "Queste celle non potevano essere scritte così come sono. Il valore completo resta nel modello; la cella è bloccata e non si può modificare nella cartella.",
+ "xlcell.col_sheet": "Tavola",
+ "xlcell.col_row": "Riga",
+ "xlcell.col_col": "Colonna",
+ "xlcell.col_id": "Id elemento",
+ "xlcell.col_what": "Cosa è successo",
+ "xlcell.what_clipped": "Testo tagliato al limite della cella",
+ "xlcell.what_blank": "Non è un numero finito, cella lasciata vuota",
+ "xlcell.more": "… e altre {count}",
+ "xlcell.close": "Chiudi"
+}

@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "Катмарды астына кыстыруу",
+ "type_layers.layer.delete": "Катмарды өчүрүү",
+ "type_layers.layer.delete_last": "Түрдө кеминде бир катмар болушу керек",
+ "type_layers.value.bad": "Оң маани эмес",
+ "type_layers.value.required": "Милдеттүү",
+ "type_layers.unsaved.title": "{name} түрүндөгү сакталбаган өзгөртүүлөр",
+ "type_layers.unsaved.body": "Аларды түргө колдонобу же таштайбы?",
+ "type_layers.unsaved.discard": "Таштоо"
+}

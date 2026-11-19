@@ -1,0 +1,8 @@
+{
+ "xlsx_issues.empty_title": "Lembar kosong dalam workbook",
+ "xlsx_issues.empty_kept": "Lembar {sheet} kosong: tidak ada yang dibaca darinya, {n} elemen tetap seperti semula. Lembar lain tetap dapat diterapkan.",
+ "xlsx_issues.empty_none": "Lembar {sheet} kosong: tidak ada yang dibaca darinya. Lembar lain tetap dapat diterapkan.",
+ "xlsx_issues.unreadable_title": "Lembar tidak dapat dibaca",
+ "xlsx_issues.unreadable": "Lembar {sheet} tidak dapat dibaca, bagian file-nya rusak: tidak ada yang diambil darinya dan elemennya tetap seperti semula. Lembar lain tetap dapat diterapkan.",
+ "xlsx_issues.formulas": "Formula pada lembar {sheet} tidak dapat dibaca, sehingga nilai hitung tidak dapat dibedakan dari suntingan: tidak ada yang diambil dari lembar ini. Lembar lain tetap dapat diterapkan."
+}

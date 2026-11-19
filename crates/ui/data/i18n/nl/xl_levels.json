@@ -1,0 +1,5 @@
+{
+ "xl.msg.level_name_x_is_already_used": "verdiepingsnaam '{}' is al in gebruik",
+ "xl.msg.unreadable_id_elements_without_a_row_not_deleted": "onleesbaar id: elementen zonder rij worden bij deze import niet verwijderd",
+ "xl.msg.wall_type_name_x_is_already_used": "wandtypenaam '{}' is al in gebruik"
+}

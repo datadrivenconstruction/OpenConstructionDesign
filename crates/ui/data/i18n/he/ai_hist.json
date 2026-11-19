@@ -1,0 +1,14 @@
+{
+ "ai.hist.badge": "AI",
+ "ai.hist.untitled": "שינויי AI",
+ "ai.hist.tip": "{title}\nהוחל על ידי: {actor}\nמודל AI: {model}",
+ "ai.hist.why": "למה: {why}",
+ "ai.hist.reverted": "הוחזר לאחור",
+ "ai.hist.revert_one": "החזר לאחור את קבוצת ה-AI הזו",
+ "ai.revert.done": "שינויי AI שהוחזרו לאחור: {n}. ביטול מחזיר אותם.",
+ "ai.revert.empty": "אין שינויי AI להחזיר לאחור",
+ "ai.revert.not_ai": "שלב זה אינו שינוי AI",
+ "ai.revert.already": "שינויי ה-AI האלה כבר הוחזרו לאחור",
+ "ai.revert.opaque": "לא הוחזר: את שינויי ה-AI האלה לא ניתן להפריד בבטחה משינויים מאוחרים יותר. שום דבר לא שונה.",
+ "ai.revert.failed": "ההחזרה לאחור נכשלה: {e}"
+}

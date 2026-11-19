@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "تغییرات کتاب‌کار اعمال نشده",
+ "workbook_changes.wb.body": "بستن یا تعویض پروژه آن‌ها را کنار می‌گذارد.",
+ "workbook_changes.wb.line": "ورود کتاب‌کار: {n} تغییر اعمال نشده",
+ "workbook_changes.wb.review": "بررسی",
+ "workbook_changes.wb.discard": "کنار گذاشتن"
+}

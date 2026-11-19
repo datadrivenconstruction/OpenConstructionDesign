@@ -1,0 +1,36 @@
+id = "G22_pagoda__de"
+tier = "hard"
+group = "Any geometry"
+title = "宝塔"
+lang = "de"
+base = "empty"
+
+[[turn]]
+say = "Baue eine fünfgeschossige Pagode: jedes Geschoss hat weit auskragende, hochgezogene Dachtraufen, jedes Geschoss kleiner als das darunter, Gesamthöhe 40 m, Holzstützen und -balken, oben eine Turmspitze."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "roof"
+min = 5.0
+
+[[oracle.count]]
+spec = "col"
+min = 20.0
+
+[[oracle.count]]
+spec = "level"
+min = 5.0
+
+[[oracle.geom]]
+kind = "height"
+min = 35.0
+max = 46.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

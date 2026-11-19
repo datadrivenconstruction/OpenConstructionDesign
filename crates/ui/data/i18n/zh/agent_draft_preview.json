@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "预览",
+ "agent_draft.ag.preview.desc": "鼠标悬停在按钮上时，在画布上勾勒此草稿中的元素。不会更改任何内容。",
+ "agent_draft.type.column": "柱",
+ "agent_draft.type.roof": "屋顶",
+ "agent_draft.type.ceiling": "天花板",
+ "agent_draft.type.stair": "整体式",
+ "agent_draft.type.railing": "栏杆",
+ "agent_draft.type.shaft": "竖井",
+ "agent_draft.type.axis": "轴线 6.5 mm",
+ "agent_draft.type.refplane": "参照平面"
+}

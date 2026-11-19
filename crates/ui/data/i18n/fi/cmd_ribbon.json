@@ -1,0 +1,23 @@
+{
+  "cmd.arch.room_sep.short": "Tilaerotin",
+  "cmd.str.footing.short": "Pilarijalka",
+  "cmd.str.strip_footing.short": "Nauhajalka",
+  "cmd.str.analytical.short": "Analyyttinen",
+  "cmd.mep.terminal.short": "Ilmapääte",
+  "cmd.mod.isolate.short": "Eristä",
+  "cmd.view.ui.short": "Käyttöliitt.",
+  "cmd.mgr.params.short": "Parametrit",
+  "cmd.ctx.wall.attach.short": "Liitä",
+  "cmd.mass.unjoin.short": "Irrota",
+  "cmd.mod.unjoin.short": "Irrota",
+  "cmd.arch.void_extrusion.short": "Aukkopursotus",
+  "cmd.e3d.snap.short": "3D-tartunnat",
+  "cmd.mgr.open_big.short": "Iso tiedosto…",
+  "cmd.site.edit_points.short": "Maastopisteet",
+  "cmd.view.reveal_3d.short": "Näytä luokat",
+  "cmd.help.check_update.short": "Päivitykset",
+  "cmd.ctx.floor.link_unlink.short": "Irrota reunat",
+  "cmd.ui.onboarding.short": "Asetukset…",
+  "cmd.mod.distribute.short": "Tasaa",
+  "cmd.data.src_delta.short": "XLSX-muutos…"
+}

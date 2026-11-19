@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "Kunci di alamat",
+ "ai_safety.auth.query_name": "Parameter alamat",
+ "ai_safety.need_query_name": "Beri nama parameter alamat yang membawa kunci",
+ "ai_safety.apply_unlogged": "Diterapkan, tetapi log perubahan tidak ditulis",
+ "ai_safety.audit_unlogged": "Log asisten AI tidak dapat ditulis",
+ "ai_safety.chat_not_saved": "Chat tidak dapat disimpan ke proyek. Mencoba lagi.",
+ "ai_safety.clip_clears": "Papan klip dikosongkan dalam 30 detik",
+ "ai_safety.copied_clears": "Disalin. Papan klip dikosongkan dalam 30 detik",
+ "ai_safety.key_session_only": "Kunci disimpan sampai aplikasi ditutup",
+ "ai.settings.no_data_dir": "sistem ini tidak menyediakan folder untuk pengaturan aplikasi"
+}

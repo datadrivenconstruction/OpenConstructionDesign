@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "Kulcs a címben",
+ "ai_safety.auth.query_name": "Címparaméter",
+ "ai_safety.need_query_name": "Nevezze meg a címparamétert, amely a kulcsot hordozza",
+ "ai_safety.apply_unlogged": "Alkalmazva, de a módosítási napló nem íródott meg",
+ "ai_safety.audit_unlogged": "Az MI-asszisztens naplóját nem lehetett megírni",
+ "ai_safety.chat_not_saved": "A beszélgetést nem lehetett a projektbe menteni. Újrapróbálkozás folyamatban.",
+ "ai_safety.clip_clears": "A vágólap 30 mp múlva törlődik",
+ "ai_safety.copied_clears": "Másolva. A vágólap 30 mp múlva törlődik",
+ "ai_safety.key_session_only": "A kulcs az alkalmazás bezárásáig marad meg",
+ "ai.settings.no_data_dir": "ez a rendszer nem ad mappát az alkalmazás beállításainak"
+}

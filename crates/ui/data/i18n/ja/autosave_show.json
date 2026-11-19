@@ -1,0 +1,4 @@
+{
+ "cmd.mgr.autosave_show": "自動保存を表示",
+ "cmd.mgr.autosave_show.desc": "自動保存ウィンドウを開きます。既に表示されている場合は開いたままになります。"
+}

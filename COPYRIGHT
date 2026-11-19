@@ -1,0 +1,57 @@
+OpenConstructionDesign - copyright notice and licensing options
+
+This file is NOT the licence. The full, verbatim text of the GNU Affero
+General Public License v3.0 is in the LICENSE file next to this one, and
+a copy of it ships with every installer and archive.
+
+Copyright (C) 2024-2026 Artem Boiko / DataDrivenConstruction.io
+and OpenConstructionDesign Contributors
+
+Licensor operates as a registered small business (Kleingewerbe /
+Einzelunternehmen) under German law.
+
+OpenConstructionDesign is created and maintained by Artem Boiko under
+the DataDrivenConstruction brand.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published
+by the Free Software Foundation, version 3 of the License.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+SPDX-License-Identifier: AGPL-3.0-only
+
+The full license text ships in the LICENSE file and is also available at:
+https://www.gnu.org/licenses/agpl-3.0.txt
+
+---
+
+Contributor License Agreement (CLA)
+
+All contributions to OpenConstructionDesign require acceptance of the
+Contributor License Agreement in CLA.md (version 2.0, the same terms as
+OpenConstructionERP). The CLA grants Artem Boiko - and any successor
+legal entity (UG (haftungsbeschränkt) or GmbH formed by Artem Boiko) -
+the right to distribute contributions under both the AGPL-3.0-only
+license and a separate commercial license. Signatures are recorded in
+signatures/cla.json.
+
+---
+
+Commercial License
+
+A commercial license is available for organizations that cannot
+comply with the AGPL-3.0 terms (e.g., embedding in closed-source
+products, shipping closed modules with the editor, or deployments
+requiring indemnification / SLA). See COMMERCIAL.md.
+
+Third-party components keep their own licences: NOTICE and
+THIRD_PARTY_LICENSES.txt.
+
+Contact: info@datadrivenconstruction.io

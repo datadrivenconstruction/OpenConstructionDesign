@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key} jest zarezerwowany ({why}) i nie może zostać przypisany",
+ "quick.keys.res_copy": "kopiuj",
+ "quick.keys.res_paste": "wklej",
+ "quick.keys.res_cut": "wytnij",
+ "quick.keys.res_undo": "cofnij / ponów",
+ "quick.keys.res_save": "zapisz",
+ "quick.keys.res_palette": "paleta poleceń",
+ "quick.keys.reserved_conflict": "{key} jest już używany przez „{cmd}”. Esc zostawia go tam.",
+ "quick.keys.reserved_swap": "Zamień",
+ "quick.keys.reserved_take": "Przejmij",
+ "quick.keys.reserved_keep": "Zachowaj",
+ "quick.keys.reserved_os": "Zajęte przez system:"
+}

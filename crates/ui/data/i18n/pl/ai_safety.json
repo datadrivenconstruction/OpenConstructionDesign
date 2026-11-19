@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "Klucz w adresie",
+ "ai_safety.auth.query_name": "Parametr adresu",
+ "ai_safety.need_query_name": "Podaj nazwę parametru adresu, który przenosi klucz",
+ "ai_safety.apply_unlogged": "Zastosowano, ale dziennik zmian nie został zapisany",
+ "ai_safety.audit_unlogged": "Nie udało się zapisać dziennika asystenta AI",
+ "ai_safety.chat_not_saved": "Czat nie został zapisany w projekcie. Ponawiam próbę.",
+ "ai_safety.clip_clears": "Schowek wyczyści się za 30 s",
+ "ai_safety.copied_clears": "Skopiowano. Schowek wyczyści się za 30 s",
+ "ai_safety.key_session_only": "Klucz zachowany do zamknięcia aplikacji",
+ "ai.settings.no_data_dir": "ten system nie podaje folderu ustawień aplikacji"
+}

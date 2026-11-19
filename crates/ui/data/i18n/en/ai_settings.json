@@ -1,0 +1,9 @@
+{
+ "ai.settings.num_bad": "Not a number. Type it like 0.5.",
+ "ai.settings.num_comma": "Use a point as the decimal mark, like 0.5.",
+ "ai.settings.num_negative": "The number cannot be negative.",
+ "ai.settings.unit_money": "currency",
+ "ai.settings.unit_tokens": "tokens",
+ "ai.settings.unit_price": "per 1M tokens",
+ "ai.settings.limits_hint": "0 means no limit. A value that is refused leaves the previous limit in place."
+}

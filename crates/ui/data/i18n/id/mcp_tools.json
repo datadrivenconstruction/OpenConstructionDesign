@@ -1,0 +1,5 @@
+{
+ "mcp.set.hide": "Sembunyikan",
+ "mcp.set.copy_config": "Salin konfigurasi agen AI",
+ "mcp.set.no_token": "Belum ada token akses. Nyalakan server terlebih dahulu."
+}

@@ -1,0 +1,10 @@
+{
+ "view_gfx.vv.visible_tip": "এই ভিউয়ে দৃশ্যমান",
+ "view_gfx.vv.enabled_tip": "এই ভিউয়ে এই ফিল্টার প্রয়োগ করুন",
+ "view_gfx.vv.reset_tip": "প্রকল্পের ডিফল্টে ফিরুন",
+ "view_gfx.vv.col.actions": "কার্যক্রম",
+ "view_gfx.vv.nothing_to_apply": "প্রয়োগ করার মতো কোনো পরিবর্তন নেই",
+ "view_gfx.flt.save_blocked": "ফিল্টারের নাম দিন এবং প্রতিটি নিয়মের প্যারামিটার পূরণ করুন",
+ "view_gfx.flt.confirm_delete": "সব ভিউয়ের জন্য মুছবেন?",
+ "view_gfx.flt.param_pick": "বাছুন…"
+}

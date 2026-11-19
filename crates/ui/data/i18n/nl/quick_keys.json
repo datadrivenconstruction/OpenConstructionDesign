@@ -1,0 +1,6 @@
+{
+ "quick.keys.rec_hint": "Esc annuleert · Backspace wist",
+ "quick.keys.row_lost": "{key} hoort nu bij “{cmd}”",
+ "quick.keys.row_took": "{key} overgenomen van “{cmd}”",
+ "quick.keys.reset_tip": "Terugzetten naar standaard"
+}

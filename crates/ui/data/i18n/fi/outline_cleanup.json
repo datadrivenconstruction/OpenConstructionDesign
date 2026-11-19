@@ -1,0 +1,15 @@
+{
+ "cmd.ctx.floor.clean_outline": "Siisti ulkoviiva",
+ "cmd.ctx.floor.clean_outline.desc": "Poistaa kapeat piikit kohdissa, joissa lattian ulkoviiva kääntyy takaisin itseensä. Näyttää ensin esikatselun; yksi kumoamisvaihe.",
+ "outline_cleanup.title": "Siisti ulkoviiva",
+ "outline_cleanup.intro": "Tämän lattian ulkoviiva kääntyy takaisin itseensä kapeina piikkeinä: {n}. Siistiminen poistaa ne; muu pysyy ennallaan.",
+ "outline_cleanup.legend_before": "Paksu viiva: ulkoviiva nyt",
+ "outline_cleanup.legend_after": "Ohut viiva: ulkoviiva siistimisen jälkeen",
+ "outline_cleanup.undo": "Tämän voi kumota yhdellä vaiheella.",
+ "outline_cleanup.apply": "Siisti",
+ "outline_cleanup.cancel": "Peruuta",
+ "outline_cleanup.done": "Ulkoviiva siistitty, piikit poistettu: {n}",
+ "outline_cleanup.none": "Tämän lattian ulkoviivassa ei ole piikkejä",
+ "outline_cleanup.failed": "Ulkoviivaa ei voitu siistiä",
+ "outline_cleanup.changed": "Ulkoviiva muuttui esikatselun jälkeen; mitään ei kirjoitettu. Tarkista uusi esikatselu."
+}

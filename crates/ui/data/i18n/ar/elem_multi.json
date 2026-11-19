@@ -1,0 +1,10 @@
+{
+ "elem.multi.title": "{n} عنصرًا",
+ "elem.multi.varies": "متغيّر",
+ "elem.multi.tip": "الإدخال يضبط كل العناصر المحددة",
+ "elem.multi.hidden": "{n} صفوف فقط في بعض العناصر",
+ "elem.multi.none": "ليس للعناصر المحددة صفوف مشتركة",
+ "elem.multi.range": "القيمة خارج النطاق المسموح",
+ "elem.multi.changed": "تم تغيير {n} عنصرًا · Ctrl+Z للتراجع",
+ "elem.multi.same": "هذه القيمة موجودة بالفعل في كل العناصر المحددة"
+}

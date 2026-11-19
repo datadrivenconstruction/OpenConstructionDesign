@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "اسم النظام",
+ "mep_browser.add_blocked": "أدخل اسم النظام أولاً",
+ "mep_browser.col.insulation": "العزل",
+ "mep_browser.cancel": "إلغاء",
+ "mep_browser.delete.title": "حذف هذا النظام؟",
+ "mep_browser.delete.body": "سيُحذف النظام «{name}» وتشغيلاته ({n}).",
+ "mep_browser.delete.undo": "يمكنك التراجع عن ذلك بخطوة تراجع واحدة.",
+ "mep_browser.delete.confirm": "حذف النظام"
+}

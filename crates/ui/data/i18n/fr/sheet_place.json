@@ -1,0 +1,15 @@
+{
+ "sheet_place.place_view_tip": "Placer une vue ou un tableau sur la feuille",
+ "sheet_place.properties_tip": "Numéro, nom, format et révisions de la feuille",
+ "sheet_place.print_tip": "Imprimer ou exporter la feuille",
+ "sheet_place.fit_tip": "Ajuster la feuille à la fenêtre",
+ "sheet_place.activate_tip": "Modifiez la vue sur la feuille : déplacez, zoomez et recadrez-la",
+ "sheet_place.open_view_tip": "Ouvrir la vue dans son propre onglet",
+ "sheet_place.done_tip": "Terminer la modification de la vue sur la feuille",
+ "sheet_place.reset_crop_tip": "Retirer le recadrage et afficher la vue entière",
+ "sheet_place.scale_tip": "Échelle de la vue sélectionnée sur la feuille",
+ "sheet_place.title_tip": "Titre affiché sous la vue sur la feuille",
+ "sheet_place.banner": "Modification de la vue sur la feuille",
+ "sheet_place.new_set_tip": "Créer un jeu de feuilles à imprimer ensemble",
+ "sheet_place.new_sheet_tip": "Ajouter une feuille au projet"
+}

@@ -1,0 +1,20 @@
+{
+ "api.cmd.move_elements": "Di chuyển phần tử theo độ dời tính bằng mét",
+ "api.cmd.copy_elements": "Sao chép phần tử theo một hoặc nhiều độ dịch chuyển tính bằng mét",
+ "api.cmd.rotate_elements": "Xoay phần tử quanh một điểm theo góc tính bằng độ",
+ "api.cmd.mirror_elements": "Đối xứng phần tử qua trục đi qua hai điểm",
+ "api.cmd.scale_elements": "Phóng to hoặc thu nhỏ phần tử quanh một điểm theo hệ số",
+ "api.cmd.array_elements": "Mảng tuyến tính hoặc xuyên tâm của phần tử",
+ "api.cmd.offset_wall": "Sao chép song song tường ở khoảng cách tính bằng mét",
+ "api.cmd.split_wall": "Tách tường thành hai đoạn tại một điểm",
+ "api.cmd.pin_elements": "Ghim hoặc bỏ ghim phần tử",
+ "api.cmd.flip_openings": "Lật phía bản lề hoặc hướng mở của cửa đi và cửa sổ",
+ "api.cmd.create_level": "Tạo cao độ tại độ cao tính bằng mét",
+ "api.cmd.edit_level": "Đổi tên cao độ hoặc đổi độ cao của nó",
+ "api.cmd.delete_level": "Xóa cao độ",
+ "api.cmd.place_rooms": "Đặt một phòng trong mỗi vùng kín của một cao độ",
+ "api.cmd.join_elements": "Nối, tách nối hoặc đổi kiểu nối hình học",
+ "api.cmd.place_footings": "Đặt móng dưới mọi cột của một cao độ",
+ "api.cmd.create_terrain": "Tạo địa hình từ các điểm khảo sát hoặc mặt phẳng dốc",
+ "api.cmd.script_recipes": "Đọc các khối lệnh và công thức của kết cấu tự do"
+}

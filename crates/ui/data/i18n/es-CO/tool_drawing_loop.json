@@ -1,0 +1,4 @@
+{
+ "tool.err.drawing_open": "Las líneas del dibujo alrededor de este punto no forman un bucle cerrado",
+ "tool.err.drawing_crossing": "El bucle de líneas alrededor de este punto se cruza a sí mismo"
+}

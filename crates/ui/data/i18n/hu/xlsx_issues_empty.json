@@ -1,0 +1,8 @@
+{
+ "xlsx_issues.empty_title": "Üres munkalap a munkafüzetben",
+ "xlsx_issues.empty_kept": "A(z) {sheet} munkalap üres: nem olvasódott belőle semmi, a(z) {n} elem marad, ahogy van. A többi munkalap továbbra is alkalmazható.",
+ "xlsx_issues.empty_none": "A(z) {sheet} munkalap üres: nem olvasódott belőle semmi. A többi munkalap továbbra is alkalmazható.",
+ "xlsx_issues.unreadable_title": "A munkalap nem olvasható",
+ "xlsx_issues.unreadable": "A(z) {sheet} munkalap nem olvasható, a fájl erre része sérült: ebből semmi nem lett átvéve, az elemek pedig megmaradnak, ahogy vannak. A többi munkalap továbbra is alkalmazható.",
+ "xlsx_issues.formulas": "A(z) {sheet} munkalap képleteit nem lehetett beolvasni, így a számított érték nem különböztethető meg a szerkesztéstől: ebből a munkalapból semmi nem lett átvéve. A többi munkalap továbbra is alkalmazható."
+}

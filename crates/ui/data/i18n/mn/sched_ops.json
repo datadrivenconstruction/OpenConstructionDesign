@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "утга тэгээс их байх ёстой",
+ "sched_ops.not_number": "тоо биш",
+ "sched_ops.no_host": "үндсэн хана байхгүй",
+ "sched_ops.wall_length": "энэ ханын уртыг ингэж тохируулах боломжгүй",
+ "sched_ops.no_wall": "ийм хана байхгүй",
+ "sched_ops.no_opening": "ийм нүх байхгүй",
+ "sched_ops.no_curtain": "ийм хөшигт хана байхгүй",
+ "sched_ops.no_panel": "ийм панел байхгүй",
+ "sched_ops.no_slab": "ийм дэвсгэр байхгүй",
+ "sched_ops.no_room": "ийм өрөө байхгүй",
+ "sched_ops.slope_range": "налуу хязгаараас гадуур",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

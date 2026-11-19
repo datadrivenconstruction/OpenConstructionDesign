@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "Itinigil ang Apply: itinatago ang modelo gaya ng dati",
+ "apply_verify.rolled_back": "Hindi tumugma ang Apply sa draft at ibinalik; hindi nagbago ang modelo. {what}",
+ "apply_verify.diff.missing": "Ipinapakita ng draft ang {what} {kind}, pero hindi ito ginawa ng Apply.",
+ "apply_verify.diff.extra": "Nag-apply ng {kind} {what}, na hindi ipinapakita ng draft.",
+ "apply_verify.diff.kind": "Ipinapakita ng draft ang {what} {shown}, pero nag-apply ng {applied} ito.",
+ "apply_verify.diff.value": "{what}: naiiba sa draft ang “{col}”.",
+ "apply_verify.diff.truncated": "Magkaiba ang laki ng draft at ng nailapat na pagbabago.",
+ "apply_verify.diff.unreadable": "Hindi mabasang pabalik ang nailapat na pagbabago ({e}).",
+ "apply_verify.no_base": "Hindi pinatakbo ang Apply: nawawala ang kopyang ikukumpara sa draft. Hindi nagbago ang modelo; humingi muli ng draft.",
+ "apply_verify.take_back_failed": "Nabigo ang pagbabalik ({e}): gamitin ang Undo.",
+ "apply_verify.kind.created": "ginawa",
+ "apply_verify.kind.changed": "binago",
+ "apply_verify.kind.deleted": "binura",
+ "apply_verify.card.type_row": "Type {type} · {n} na elemento ang tatanggap ng pagbabago"
+}

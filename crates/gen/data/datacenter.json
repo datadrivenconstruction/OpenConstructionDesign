@@ -1,0 +1,175 @@
+{
+ "schema": "gen_datacenter.v1",
+ "about": "Data centre fit-out as data: how a room is recognised (canonical tag first, then words of its name in any language), which library family and types each kind of unit takes, and the network names. The numbers that decide counts, clearances and redundancy are rules (dc.* in rules.json).",
+ "roles": [
+  {
+   "role": "hall",
+   "tag": "data_hall",
+   "name_has": [
+    "data hall",
+    "data centre hall",
+    "data center hall",
+    "white space",
+    "server",
+    "computer room",
+    "it hall",
+    "machine room",
+    "машинный зал",
+    "машзал",
+    "серверн",
+    "зал цод",
+    "rechenzentrum",
+    "rechnerraum",
+    "salle informatique",
+    "salle serveur",
+    "sala de servidores",
+    "sala de datos",
+    "sala server",
+    "机房",
+    "数据大厅",
+    "サーバ"
+   ]
+  },
+  {
+   "role": "battery",
+   "tag": "battery_room",
+   "name_has": [
+    "battery",
+    "batteries",
+    "аккумулятор",
+    "акб",
+    "batterie",
+    "baterías",
+    "电池"
+   ]
+  },
+  {
+   "role": "ups",
+   "tag": "ups_room",
+   "name_has": [
+    "ups",
+    "uninterruptible",
+    "electrical room",
+    "switchgear",
+    "power room",
+    "ибп",
+    "бесперебойн",
+    "электрощитов",
+    "электропомещ",
+    "usv",
+    "onduleur"
+   ]
+  },
+  {
+   "role": "cooling",
+   "tag": "cooling_plant",
+   "name_has": [
+    "chiller",
+    "cooling plant",
+    "chilled water plant",
+    "холодильн",
+    "чиллер",
+    "kälte",
+    "kaelte",
+    "groupe froid",
+    "enfriadora",
+    "冷站",
+    "冷冻机"
+   ]
+  }
+ ],
+ "units": {
+  "rack": {
+   "family": "Server Rack",
+   "types": [
+    "600x1200 42U",
+    "800x1200 48U"
+   ]
+  },
+  "crah": {
+   "family": "CRAH Unit",
+   "types": [
+    "CRAH 100 kW",
+    "CRAH 150 kW",
+    "CRAH 200 kW"
+   ],
+   "capacity": "Cooling"
+  },
+  "chiller": {
+   "family": "Chiller",
+   "types": [
+    "Chiller 500 kW",
+    "Chiller 1000 kW",
+    "Chiller 1500 kW"
+   ],
+   "capacity": "Cooling"
+  },
+  "ups": {
+   "family": "UPS",
+   "types": [
+    "UPS 250 kW",
+    "UPS 500 kW",
+    "UPS 800 kW"
+   ],
+   "capacity": "Rating"
+  },
+  "battery": {
+   "family": "Battery Cabinet",
+   "types": [
+    "Battery 40 kWh",
+    "Battery 80 kWh"
+   ],
+   "capacity": "Energy"
+  },
+  "pdu": {
+   "family": "Power Distribution Unit",
+   "types": [
+    "600x800",
+    "800x800"
+   ]
+  },
+  "door": {
+   "family": "Aisle Containment Door",
+   "types": [
+    "1200x2400",
+    "1800x2400"
+   ]
+  },
+  "genset": {
+   "family": "Generator Set",
+   "types": [
+    "Genset 1000 kW",
+    "Genset 2000 kW",
+    "Genset 2500 kW"
+   ],
+   "capacity": "Rating"
+  }
+ },
+ "ports": {
+  "supply": "CHWS",
+  "return": "CHWR"
+ },
+ "water": {
+  "cp": 4.19,
+  "rho": 1000.0,
+  "about": "Chilled water: specific heat kJ/(kg K) and density kg/m3, physical constants."
+ },
+ "systems": {
+  "chw_supply": {
+   "en": "Chilled water supply",
+   "ru": "Холодоснабжение, подача"
+  },
+  "chw_return": {
+   "en": "Chilled water return",
+   "ru": "Холодоснабжение, обратка"
+  },
+  "power_a": {
+   "en": "IT power path A",
+   "ru": "Питание ИТ, луч A"
+  },
+  "power_b": {
+   "en": "IT power path B",
+   "ru": "Питание ИТ, луч B"
+  }
+ }
+}

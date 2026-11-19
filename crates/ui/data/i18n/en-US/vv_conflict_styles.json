@@ -1,0 +1,6 @@
+{
+ "vv_conflict.styles.conflict": "Object styles of an edited category changed in the model (undo or another window) while this window had edits. Your edits are kept.",
+ "vv_conflict.styles.keep": "Keep my edits",
+ "vv_conflict.styles.reload": "Reload",
+ "vv_conflict.styles.answer_first": "Choose Keep my edits or Reload first"
+}

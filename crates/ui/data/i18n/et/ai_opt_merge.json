@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "Ühenda variant: {name}",
+ "ai_opt_merge.whole": "Ühenda kogu variant",
+ "ai_opt_merge.parts": "Ühenda valitud osad",
+ "ai_opt_merge.note": "Miks see variant",
+ "ai_opt_merge.rebased": "Mudelit muudeti pärast selle variandi koostamist: ühendamine arvutati praeguse mudeli järgi uuesti. Kontrolli muudatused enne rakendamist.",
+ "ai_opt_merge.left.not_picked": "Variandist ei valitud",
+ "ai_opt_merge.left.unticked": "Variandis märge eemaldatud",
+ "ai_opt_merge.left.conflict": "Ei saa lisada praegusele mudelile: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "Seda varianti ei saa ühendada. Tagasilükatud variant tuleb esmalt taastada.",
+ "ai_opt_merge.refused.stale": "Mudelit muudeti pärast selle variandi koostamist. Arvuta ühendamine praeguse mudeli järgi uuesti.",
+ "ai_opt_merge.refused.nothing_picked": "Ühendamiseks pole midagi valitud.",
+ "ai_opt_merge.refused.unknown_item": "Rida {item} ei ole selle variandi osa.",
+ "ai_opt_merge.refused.not_in_option": "Valitud element ei ole selle variandi osa.",
+ "ai_opt_merge.refused.needs_left_out": "Rida {item} vajab rida {needs}. Vali ka see või luba sõltuvused lisada.",
+ "ai_opt_merge.refused.set_gone": "Rida {item} viitab valikule, mida enam ei ole. Genereeri variant uuesti.",
+ "ai_opt_merge.refused.busy": "Üks plaan on veel avatud. Rakenda või lükka see esmalt tagasi.",
+ "ai_opt_merge.refused.failed": "Ühendamist ei saanud ette valmistada: {reason}",
+ "ai_opt_merge.revive": "Taasta variant",
+ "ai_opt_merge.merged": "Ühendatud"
+}

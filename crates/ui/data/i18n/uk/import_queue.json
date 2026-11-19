@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "У черзі за поточним завданням: {n}",
+ "import_queue.queue_full": "Черга заповнена, {n} файлів не додано",
+ "import_queue.changed": "{name} оновлено після створення цього проєкту. Відкрито попередній проєкт.",
+ "import_queue.import_again": "Імпортувати знову",
+ "import_queue.kept": "Завершений імпорт збережено",
+ "import_queue.open_it": "Відкрити",
+ "import_queue.sum.head": "імпорт: {editable} редагованих (стіни {walls}, отвори {open}, перекриття {slabs}, приміщення {rooms}, інші {other}), {meshes} як полігональна сітка",
+ "import_queue.sum.unchanged": ", без змін {n}",
+ "import_queue.sum.updated": ", оновлено {n}",
+ "import_queue.sum.missing": ", немає у джерелі {n} (збережено)",
+ "import_queue.sum.skipped": ", пропущено {n}",
+ "import_queue.sum.warnings": ", попереджень {n}",
+ "import_queue.import_failed": "імпорт не вдався: {e}"
+}

@@ -1,0 +1,9 @@
+{
+ "shot_scenes.site": "Ділянка",
+ "shot_scenes.lawn": "Газон",
+ "shot_scenes.pad": "Майданчик",
+ "shot_scenes.block": "Блок",
+ "shot_scenes.void": "Порожнина",
+ "shot_scenes.tower": "Вежа",
+ "shot_scenes.wall_void": "Отвір у стіні"
+}

@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "værdien skal være større end nul",
+ "sched_ops.not_number": "ikke et tal",
+ "sched_ops.no_host": "ingen værtsvæg",
+ "sched_ops.wall_length": "denne væglængde kan ikke sættes sådan",
+ "sched_ops.no_wall": "ingen sådan væg",
+ "sched_ops.no_opening": "ingen sådan åbning",
+ "sched_ops.no_curtain": "ingen sådan gardinvæg",
+ "sched_ops.no_panel": "ingen sådan panel",
+ "sched_ops.no_slab": "ingen sådan dæk",
+ "sched_ops.no_room": "intet sådant rum",
+ "sched_ops.slope_range": "hældning uden for området",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

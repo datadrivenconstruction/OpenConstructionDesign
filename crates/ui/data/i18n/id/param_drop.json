@@ -1,0 +1,8 @@
+{
+ "param_drop.title": "Hapus nilai parameter?",
+ "param_drop.intro": "{name} tidak lagi terikat ke kategori ini:",
+ "param_drop.line": "{category}: {values} akan dihapus",
+ "param_drop.undo": "Satu Ctrl+Z mengembalikan semuanya.",
+ "param_drop.confirm": "Hapus nilai dan simpan",
+ "param_drop.cancel": "Batal"
+}

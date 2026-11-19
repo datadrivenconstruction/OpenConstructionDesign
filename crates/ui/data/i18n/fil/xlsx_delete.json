@@ -1,0 +1,5 @@
+{
+ "xlsx_delete.delete_missing": "Burahin ang mga row na wala sa workbook",
+ "xlsx_delete.not_removed": "hindi inalis: walang comparison data",
+ "xlsx_delete.no_base_reason": "Hindi available: walang comparison data ang workbook, kaya hindi matutukoy ang nawawalang row mula sa row na aksidenteng inalis. Walang bubura sa Apply."
+}

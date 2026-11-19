@@ -1,0 +1,44 @@
+{
+ "id": "mx",
+ "version": "2026.11",
+ "parent": "generic",
+ "country": "MX",
+ "lang": [
+  "es"
+ ],
+ "units": {
+  "length": "m",
+  "display": "metric"
+ },
+ "conventions": {
+  "ground_floor": 0,
+  "area_standard": "gross",
+  "net_share": 0.85,
+  "note": "Mexico has no single national building code; these values are the Mexico City (capital-city) rule only. Built area (superficie construida, outside of walls) is the usual quoted dwelling area; the norm's minimum room areas are net. Net share is our own estimate.",
+  "source": null
+ },
+ "status": "tier3",
+ "climate": {
+  "zones": [],
+  "default": null
+ },
+ "research": {
+  "date": "2026-11-14",
+  "missing": [
+   "fire.compartment_area_max",
+   "fire.compartment_area_max.sprinklered",
+   "stair.riser_max.house",
+   "stair.tread_min.house",
+   "stair.width_min.house",
+   "load.floor_residential",
+   "load.floor_office"
+  ],
+  "unreachable": [
+   "https://www.transparencia.cdmx.gob.mx/storage/app/uploads/public/678/581/f64/678581f644e28236852601.pdf (connection refused)",
+   "https://www.servimet.cdmx.gob.mx/ (connection refused)",
+   "https://data.consejeria.cdmx.gob.mx/ (404 on guessed path)"
+  ],
+  "note": "Fire compartment limits and imposed loads live in other norms (fire protection, structural criteria) that were not read. The host copies are association/portal mirrors of the gazette text; the official gazette domain was not reachable from here."
+ },
+ "note": "Numbers with verified=true were read in the cited clause; the rest are hints with a note of where we looked. Wording is our own; no text of a standard is stored."
+}

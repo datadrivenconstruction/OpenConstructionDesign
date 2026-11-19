@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "Zaimportowane siatki",
+ "mat_mesh.mesh.none_selected": "Zaznacz zaimportowane siatki w widoku 3D, aby nadać im ten materiał.",
+ "mat_mesh.mesh.current": "Pierwsza zaznaczona siatka: {material}",
+ "mat_mesh.mesh.current_none": "Pierwsza zaznaczona siatka nie ma materiału.",
+ "mat_mesh.mesh.assign": "Przypisz do zaznaczonych: {n}",
+ "mat_mesh.mesh.assign_tip": "Styl Realistyczny pokazuje teksturę tego materiału na zaznaczonych siatkach",
+ "mat_mesh.mesh.assign_cat": "Przypisz do kategorii {category}",
+ "mat_mesh.mesh.assign_cat_tip": "Każda zaimportowana siatka tej kategorii bez własnego materiału",
+ "mat_mesh.mesh.clear": "Wyczyść zaznaczone",
+ "mat_mesh.mesh.clear_tip": "Zaznaczone siatki wracają do materiału kategorii albo zwykłego koloru",
+ "mat_mesh.mesh.clear_cat": "Wyczyść kategorię"
+}

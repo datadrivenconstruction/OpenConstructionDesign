@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "Egységek",
+ "topo_units.unit": "Egységek a fájlban",
+ "topo_units.unit.m": "m",
+ "topo_units.unit.cm": "cm",
+ "topo_units.unit.mm": "mm",
+ "topo_units.unit.ft": "ft",
+ "topo_units.unit.usft": "US survey láb",
+ "topo_units.unit.in": "in",
+ "topo_units.unit.from_file": "A fájl megnevezi az egységeit: {unit}",
+ "topo_units.unit.suggested": "A fájl nem nevez meg egységet. A kiterjedés alapján javasolt: {unit} — ellenőrizze az alábbi eredményt",
+ "topo_units.extent": "Eredmény projektegységben: {x} × {y} {u} az alaprajzon, magassági tartomány {z} {u}",
+ "topo_units.extent.none": "Eredmény: ezekkel a beállításokkal nincs importálandó",
+ "topo_units.extent.check": "Ez nem tűnik telephelynek: ellenőrizze az egységeket"
+}

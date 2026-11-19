@@ -1,0 +1,6 @@
+{
+ "xl.msg.filter_on_sheet_x": "филтър в лист „{}“",
+ "xl.msg.sort_settings_on_sheet_x": "настройки за сортиране в лист „{}“",
+ "xl.msg.hidden_rows_on_sheet_x": "скрити редове в лист „{}“",
+ "xl.msg.hidden_columns_on_sheet_x": "скрити колони в лист „{}“"
+}

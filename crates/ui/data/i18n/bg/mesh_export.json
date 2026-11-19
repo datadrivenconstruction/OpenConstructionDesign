@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "Записва целия модел или избраното като двоичен STL в метри или милиметри.",
+ "cmd.data.export_obj.desc": "Записва целия модел или избраното като OBJ с MTL файл: по една група за всеки елемент, цветове по материал.",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "OBJ с материали (.obj)",
+ "open_file.filter.mesh": "3D мрежи (glTF, STEP, STL, OBJ)",
+ "mx.title": "Експорт {fmt}",
+ "mx.scope": "Какво да се експортира",
+ "mx.scope.all": "Целият модел",
+ "mx.scope.sel": "Избраното ({n} елемента)",
+ "mx.units": "Единици във файла",
+ "mx.units.m": "Метри",
+ "mx.units.mm": "Милиметри",
+ "mx.export": "Експорт…",
+ "mx.saved": "{fmt} е записан: {path} ({parts} елемента, {tris} триъгълника)",
+ "mx.partial": "{fmt} е записан с {n} проблема, някои тела може да липсват: {path}",
+ "mx.failed": "Експортът в {fmt} не бе успешен: {error}",
+ "mx.imported": "{file}: импортирани {n} елемента ({tris} триъгълника)",
+ "mx.imported_notes": "{file}: импортирани {n} елемента ({tris} триъгълника), {w} бележки: {first}"
+}

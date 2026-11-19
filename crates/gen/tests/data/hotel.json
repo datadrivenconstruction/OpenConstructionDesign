@@ -1,0 +1,4 @@
+{"typology": "office", "name": "City Hotel", "floors": 6,
+ "rooms": [{"kind": "bedroom", "area": 24, "count": 14}],
+ "ground_rooms": [{"kind": "lobby", "area": 120}, {"kind": "dining", "area": 150}, {"kind": "office", "area": 20, "count": 2}],
+ "design": {"massing": "l", "facade": "ribbon", "balconies": "loggia", "trees": 10}}

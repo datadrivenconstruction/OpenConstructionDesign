@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "Прилагането е отменено: моделът не съвпадна с прегледа. {what}",
+ "xlsx_verify.not_written": "{row} не е променен.",
+ "xlsx_verify.lost": "{row} изчезна.",
+ "xlsx_verify.not_deleted": "{row} не е изтрит.",
+ "xlsx_verify.extra_deleted": "{row} е изтрит, въпреки че прегледът го запазва.",
+ "xlsx_verify.created": "{table}: {got} нови вместо {want}.",
+ "xlsx_verify.value": "{row}, {field}: очаквано {want} (беше {old}), получено {got}.",
+ "xlsx_verify.check_failed": "Резултатът не можа да бъде проверен: {e}",
+ "xlsx_verify.plan_failed": "Прилагането не е стартирано: проверката не можа да прочете модела ({e}).",
+ "xlsx_verify.take_back_failed": "Стъпката не можа да бъде отменена ({e}): използвайте Отмяна.",
+ "xlsx_verify.t.wall": "Стена",
+ "xlsx_verify.t.opening": "Отвор",
+ "xlsx_verify.t.room": "Помещение",
+ "xlsx_verify.t.slab": "Под",
+ "xlsx_verify.t.level": "Ниво",
+ "xlsx_verify.t.wall_type": "Тип стена",
+ "xlsx_verify.t.slab_type": "Тип под",
+ "xlsx_verify.t.col": "Колона",
+ "xlsx_verify.t.beam": "Греда",
+ "xlsx_verify.t.roof": "Покрив",
+ "xlsx_verify.t.curtain_wall": "Витринна стена"
+}

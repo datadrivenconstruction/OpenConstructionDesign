@@ -1,0 +1,6 @@
+{
+ "ai_toast.toast_not_refreshed": "Na-apply bilang undo step {n} (binabawi ito ng Ctrl+Z), pero hindi nag-refresh ang view. I-reload ang view.",
+ "ai.optx.reload_failed": "Na-apply at na-save ang option na “{name}”, pero hindi nag-reload ang view: {e}",
+ "ai.cmp.stale": "Luma na",
+ "ai.cmp.stale_tip": "Ginawa ang option na ito sa mas lumang estado ng model. Gawin itong muli para ma-apply."
+}

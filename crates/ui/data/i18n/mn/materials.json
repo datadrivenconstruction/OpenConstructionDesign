@@ -1,0 +1,11 @@
+{
+ "materials.mat.name_empty": "Материалын нэрийг оруулна уу",
+ "materials.mat.empty_title": "Материал одоогоор алга",
+ "materials.mat.empty_hint": "Доор нэр бичээд Нэмэх дарна уу",
+ "materials.mat.nothing_hint": "Хайлтад таарах материал алга",
+ "materials.mat.clear_search": "Хайлтыг арилгах",
+ "materials.mat.replace_with": "Солих материал",
+ "materials.mat.delete_refused": "Устгах боломжгүй: материал {n} газарт ашиглагдана. Эхлээд сольно уу.",
+ "materials.mat.delete_confirm": "“{name}” материалыг устгах уу? Үүнийг буцаах боломжтой.",
+ "materials.mat.replace_confirm": "{n} элементийн “{from}”-ийг “{to}”-оор солих уу? “{from}” устгагдана. Үүнийг буцаах боломжтой."
+}

@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "Строка фильтров под заголовками. Текст: подстрока; числа: >5, <=3000, =2,5, <>0",
+ "sched_toolbar.columns_tip": "Показать или скрыть столбцы",
+ "sched_toolbar.groups_tip": "Группировать строки по столбцам, с подытогами",
+ "sched_toolbar.formulas_tip": "Вычисляемые столбцы",
+ "sched_toolbar.phase": "Стадия",
+ "sched_toolbar.phase_tip": "Из какой стадии берутся строки",
+ "sched_toolbar.copy_tip": "Выбранные строки (или все видимые) как TSV",
+ "sched_toolbar.import_tip": "Прочитать выгруженную ведомость: строки по Id, столбцы по заголовкам; сначала счётчики, затем один шаг отмены",
+ "sched_toolbar.export_tip": "Видимые строки и столбцы с итогами; числа остаются числами",
+ "sched_toolbar.need_table": "Сначала откройте ведомость",
+ "sched_toolbar.busy_open": "Диалог выбора файла уже открыт",
+ "sched_toolbar.busy_save": "Диалог сохранения уже открыт",
+ "sched_toolbar.clear_filter": "Сбросить фильтр",
+ "sched_toolbar.fields_title": "Столбцы"
+}

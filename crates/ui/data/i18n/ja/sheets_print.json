@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "前のシート (Page Up)",
+ "sheets.print.next": "次のシート (Page Down)",
+ "sheets.print.fit": "ページに合わせる (ダブルクリック)",
+ "sheets.print.no_sheets": "プレビューするシートがありません",
+ "sheets.print.building": "ページを作成中…",
+ "sheets.print.stop_build": "停止",
+ "sheets.print.build_stopped": "ページの作成を停止しました",
+ "sheets.print.retry": "再作成",
+ "sheets.print.build_failed": "プレビューを作成できませんでした"
+}

@@ -1,0 +1,13 @@
+{
+ "ai.proposal.title": "Propuesta del agente",
+ "ai.proposal.meta": "{actor} · operaciones: {ops}",
+ "ai.proposal.apply.desc": "Aplica la propuesta completa como un solo paso; Ctrl+Z la deshace",
+ "ai.proposal.applying": "Aplicando…",
+ "ai.proposal.applied": "La propuesta se aplicó. Ctrl+Z la deshace.",
+ "ai.proposal.applied_resync": "La propuesta se aplicó, pero la vista aún no se ha actualizado. Se refresca sola; Ctrl+Z deshace el paso.",
+ "ai.proposal.stale": "El modelo cambió después de previsualizar esta propuesta. Pida al agente que la proponga de nuevo.",
+ "ai.proposal.toast.applied": "Propuesta aplicada. Ctrl+Z la deshace.",
+ "ai.proposal.toast.stale": "El modelo cambió tras la vista previa, así que no se aplicó nada. Vuelva a previsualizar: pida al agente una propuesta nueva.",
+ "ai.proposal.toast.refused": "Propuesta no aplicada: {reason}",
+ "ai.proposal.rejected": "La propuesta fue rechazada."
+}

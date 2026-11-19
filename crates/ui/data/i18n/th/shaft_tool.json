@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "ช่องเปิดแนวดิ่ง",
+ "quick.cat.shaft": "ช่องเปิดแนวดิ่ง",
+ "shaft_tool.browser.shaft": "ช่องเปิดแนวดิ่ง #{id}",
+ "shaft_tool.shaft.top": "ระดับบนสุด",
+ "shaft_tool.shaft.cuts": "ส่วนประกอบที่ถูกตัด",
+ "shaft_tool.shaft.cut_area": "พื้นที่ที่ตัด",
+ "shaft_tool.shaft.cut_volume": "ปริมาตรที่ตัด",
+ "elem.no.rooms": "ตามห้องที่อยู่ภายใน"
+}

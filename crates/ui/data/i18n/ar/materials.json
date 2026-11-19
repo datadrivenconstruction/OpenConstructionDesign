@@ -1,0 +1,11 @@
+{
+ "materials.mat.name_empty": "أدخل اسم المادة",
+ "materials.mat.empty_title": "لا توجد مواد بعد",
+ "materials.mat.empty_hint": "اكتب اسماً أدناه واضغط إضافة",
+ "materials.mat.nothing_hint": "لا توجد مادة مطابقة للبحث",
+ "materials.mat.clear_search": "مسح البحث",
+ "materials.mat.replace_with": "استبدال بـ",
+ "materials.mat.delete_refused": "لا يمكن الحذف: المادة مستخدمة في {n} موضعاً. استبدلها أولاً.",
+ "materials.mat.delete_confirm": "حذف المادة «{name}»؟ يمكنك التراجع عن ذلك.",
+ "materials.mat.replace_confirm": "استبدال «{from}» بـ«{to}» في {n} عنصراً؟ سيُحذف «{from}». يمكنك التراجع عن ذلك."
+}

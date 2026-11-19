@@ -1,0 +1,14 @@
+{
+ "save_guard.save.empty_over_full": "Nothing was saved: the model is empty, and the file already holds content. The file is untouched. Use Save as to write to another name.",
+ "save_guard.refuse.body": "Nothing was saved: the model is empty, and {name} already holds content. The file is untouched.",
+ "save_guard.refuse.foreign": "This is not a OpenConstructionDesign file, so it cannot be replaced. Use Save as to write to another name.",
+ "save_guard.refuse.ask": "Replace {name}? It holds {what}. It is moved to the _archive folder beside it first, then the empty model is written.",
+ "save_guard.refuse.holds_db": "{n} elements and content rows",
+ "save_guard.refuse.holds_ifc": "IFC with products",
+ "save_guard.refuse.replace": "Replace anyway…",
+ "save_guard.refuse.replace_yes": "Move it and replace",
+ "save_guard.refuse.save_as": "Save as…",
+ "save_guard.refuse.cancel": "Cancel",
+ "save_guard.replace.moved": "The previous file was moved to {path}",
+ "save_guard.replace.move_failed": "Could not move {name} aside: {error}. Nothing was written."
+}

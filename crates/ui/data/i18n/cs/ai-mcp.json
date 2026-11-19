@@ -1,0 +1,15 @@
+{
+ "mcp.ask.cancel": "Zrušit",
+ "mcp.ask.auto.title": "Povolit AI agentům použít změny bez dotazu?",
+ "mcp.ask.auto.body": "Připojení AI agenti budou změny použít v návrzích hned, bez čekání na váš souhlas, takže špatná změna se může objevit dříve, než ji uvidíte. Váš model se změní až po stisku Použít. Platí do vypnutí, zavření editoru nebo otevření jiného modelu.",
+ "mcp.ask.auto.yes": "Použít bez dotazu",
+ "mcp.ask.token.title": "Vydat nový token?",
+ "mcp.ask.token.body": "Stávající token přestane okamžitě fungovat: připojení AI agenti se odpojí a budou potřebovat nový token. Zobrazí se jen jednou, zkopírujte jej hned.",
+ "mcp.ask.token.yes": "Nový token",
+ "mcp.auto.chip": "Automatické použití zapnuto",
+ "mcp.auto.chip_tip": "AI agenti použijí změny v návrzích bez dotazu. Končí se touto relací.",
+ "mcp.auto.ask_again": "Zeptat se znovu",
+ "mcp.token.once": "Zkopírujte tento token hned: znovu se nezobrazí.",
+ "mcp.renewed": "Vydán nový token: starý již nefunguje",
+ "mcp.copied": "Zkopírováno"
+}

@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "Chave no endereço",
+ "ai_safety.auth.query_name": "Parâmetro de endereço",
+ "ai_safety.need_query_name": "Informe o nome do parâmetro de endereço que carrega a chave",
+ "ai_safety.apply_unlogged": "Aplicado, mas o registro de alterações não foi gravado",
+ "ai_safety.audit_unlogged": "Não foi possível gravar o registro do assistente de IA",
+ "ai_safety.chat_not_saved": "Não foi possível salvar o chat no projeto. Tentando novamente.",
+ "ai_safety.clip_clears": "A área de transferência será limpa em 30 s",
+ "ai_safety.copied_clears": "Copiado. A área de transferência será limpa em 30 s",
+ "ai_safety.key_session_only": "Chave mantida até o aplicativo ser fechado",
+ "ai.settings.no_data_dir": "este sistema não fornece uma pasta para as configurações do aplicativo"
+}

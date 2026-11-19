@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "X-as",
+ "fe.axis.y": "Y-as",
+ "fe.axis.z": "Z-as",
+ "fe.col.axis": "As",
+ "fe.col.at": "Positie",
+ "fe.col.mode": "Modus",
+ "fe.mode.fixed": "Vast",
+ "fe.mode.free": "Vrij",
+ "fe.types.inherited": "Standaard uit parameter",
+ "fe.csv.more": "Meer CSV-acties",
+ "fe.ref.selected": "Vlak: {name}"
+}

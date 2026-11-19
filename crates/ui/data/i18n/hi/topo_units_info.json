@@ -1,0 +1,13 @@
+{
+ "topo.unit.mm": "mm",
+ "topo.unit.metre": "m",
+ "topo.unit.ft": "ft",
+ "topo.opt.material": "सामग्री",
+ "topo.row.active": "सक्रिय सतह",
+ "topo.btn.delete_pad": "पैड हटाएँ",
+ "topo.info.loading": "सतह बनाई जा रही है…",
+ "topo.info.warn_n": "{n} चेतावनियाँ",
+ "topo.info.points_label": "बिंदु",
+ "topo.import.all_layers": "सभी परतें",
+ "topo.import.need_layer": "कम से कम एक परत चुनें"
+}

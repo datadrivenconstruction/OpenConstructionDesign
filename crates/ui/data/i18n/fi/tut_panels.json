@@ -1,0 +1,9 @@
+{
+ "empty.props_model.title": "Mitään ei ole valittu",
+ "empty.props_model.hint": "Napsauta näkymän elementtiä nähdäksesi sen ominaisuudet. Tai vie kaikki parametrit työkirjaan, muokkaa niitä siellä ja vie takaisin.",
+ "empty.props_model.action": "Vie XLSX-taulukkoon",
+ "tut.spreadsheet.title": "XLSX-kierros",
+ "tut.spreadsheet.1": "Paina alla Vie XLSX-taulukkoon: valitse, mitä sisällytetään, ja tallenna työkirja.",
+ "tut.spreadsheet.2": "Avaa työkirja XLSX-taulukossa, muuta solu ja tallenna. Tämän esikatselu näyttää muutoksen.",
+ "tut.spreadsheet.3": "Tarkista esikatselu ja paina Käytä malliin. Ctrl+Z kumoaa sen."
+}

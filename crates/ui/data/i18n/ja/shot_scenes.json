@@ -1,0 +1,9 @@
+{
+ "shot_scenes.site": "敷地",
+ "shot_scenes.lawn": "芝生",
+ "shot_scenes.pad": "平坦部",
+ "shot_scenes.block": "ブロック",
+ "shot_scenes.void": "ボイド",
+ "shot_scenes.tower": "タワー",
+ "shot_scenes.wall_void": "壁のボイド"
+}

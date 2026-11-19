@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "Conducto de aire",
+ "mep3d.pipe": "Tubería",
+ "mep3d.tray": "Bandeja de cables",
+ "mep3d.conduit": "Conducto",
+ "mep3d.system": "Sistema",
+ "mep3d.length": "Longitud",
+ "mep3d.diameter": "Diámetro",
+ "mep3d.width": "Ancho",
+ "mep3d.height": "Altura",
+ "mep3d.insulation": "Aislamiento",
+ "mep3d.tip": "Intro: aplicar; los accesorios se recalculan",
+ "mep3d.size_positive": "la medida debe ser mayor que cero",
+ "mep3d.not_changed": "no modificado: {e}",
+ "mep3d.copied": "tramo copiado",
+ "mep3d.changed": "tramo modificado",
+ "mep3d.deleted": "elementos eliminados: {n}",
+ "mep3d.not_deleted": "no eliminado: {e}",
+ "mep3d.no_wall_type": "sin tipo de muro",
+ "mep3d.demo.supply": "Impulsión S1",
+ "mep3d.demo.heating": "Calefacción",
+ "mep3d.demo.power": "Energía"
+}

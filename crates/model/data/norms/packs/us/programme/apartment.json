@@ -1,0 +1,188 @@
+{
+ "typology": "apartment",
+ "source": "irc2021",
+ "clause": "R304 typical flat programme (counts include the living room)",
+ "variants": [
+  {
+   "code": "br2",
+   "select": {
+    "room_kind": [
+     "living",
+     "bedroom"
+    ],
+    "count": 2
+   },
+   "rooms": [
+    {
+     "kind": "living",
+     "min_area": 6.5,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 6.5,
+     "daylight": true,
+     "min_width": 2.134,
+     "verified": false
+    },
+    {
+     "kind": "kitchen",
+     "daylight": true,
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "bath",
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "hall",
+     "verified": false
+    }
+   ],
+   "allowed": [
+    "storage",
+    "corridor",
+    "wc"
+   ],
+   "circulation_max": 0.18,
+   "storage_max": 0.05,
+   "source": "irc2021",
+   "clause": "R304 typical flat programme (counts include the living room)",
+   "verified": false
+  },
+  {
+   "code": "br3",
+   "select": {
+    "room_kind": [
+     "living",
+     "bedroom"
+    ],
+    "count": 3
+   },
+   "rooms": [
+    {
+     "kind": "living",
+     "min_area": 6.5,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 6.5,
+     "daylight": true,
+     "min_width": 2.134,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 6.5,
+     "daylight": true,
+     "min_width": 2.134,
+     "verified": false
+    },
+    {
+     "kind": "kitchen",
+     "daylight": true,
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "bath",
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "wc",
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "hall",
+     "verified": false
+    }
+   ],
+   "allowed": [
+    "storage",
+    "corridor",
+    "wc"
+   ],
+   "circulation_max": 0.18,
+   "storage_max": 0.05,
+   "source": "irc2021",
+   "clause": "R304 typical flat programme (counts include the living room)",
+   "verified": false
+  },
+  {
+   "code": "br4",
+   "select": {
+    "room_kind": [
+     "living",
+     "bedroom"
+    ],
+    "count": 4
+   },
+   "rooms": [
+    {
+     "kind": "living",
+     "min_area": 6.5,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 6.5,
+     "daylight": true,
+     "min_width": 2.134,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 6.5,
+     "daylight": true,
+     "min_width": 2.134,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 6.5,
+     "daylight": true,
+     "min_width": 2.134,
+     "verified": false
+    },
+    {
+     "kind": "kitchen",
+     "daylight": true,
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "bath",
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "wc",
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "hall",
+     "verified": false
+    }
+   ],
+   "allowed": [
+    "storage",
+    "corridor",
+    "wc"
+   ],
+   "circulation_max": 0.18,
+   "storage_max": 0.05,
+   "source": "irc2021",
+   "clause": "R304 typical flat programme (counts include the living room)",
+   "verified": false
+  }
+ ]
+}

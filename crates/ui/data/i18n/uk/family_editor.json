@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "Нове сімейство",
+ "family_editor.open_tip": "Відкрити сімейство або чернетку",
+ "family_editor.close_named": "Закрити {name}",
+ "family_editor.unsaved": "Незбережені зміни",
+ "family_editor.search": "Пошук",
+ "family_editor.nothing": "Нічого не знайдено",
+ "family_editor.sec_families": "Сімейства проєкту",
+ "family_editor.sec_drafts": "Чернетки",
+ "family_editor.cap_category": "Категорія",
+ "family_editor.cap_host": "Основа",
+ "family_editor.cap_type": "Тип для перегляду"
+}

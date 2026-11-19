@@ -1,0 +1,6 @@
+{
+ "quick.keys.rec_hint": "Esc цуцална · Backspace арилгана",
+ "quick.keys.row_lost": "{key} одоо “{cmd}”-д хамаарна",
+ "quick.keys.row_took": "{key}-г “{cmd}”-аас авсан",
+ "quick.keys.reset_tip": "Анхдагч руу буцаах"
+}

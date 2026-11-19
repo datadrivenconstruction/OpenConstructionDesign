@@ -1,0 +1,42 @@
+{
+ "ai.tool.show_elements": "Εμφάνιση αντικειμένων",
+ "ai.tool.isolate_elements": "Απομόνωση αντικειμένων",
+ "ai.tool.color_by": "Χρωματισμός κατά τιμή",
+ "ai.tool.reset_view": "Επαναφορά προβολής",
+ "ai_found.found.query": "Βρέθηκαν",
+ "ai_found.found.show": "Εμφανισμένα",
+ "ai_found.found.isolate": "Απομονωμένα",
+ "ai_found.found.hide": "Κρυμμένα",
+ "ai_found.found.color": "Χρωματισμένα",
+ "ai_found.found.count": "{n} από {m}",
+ "ai_found.found.none": "Δεν υπάρχει αντιστοιχία. Δοκιμάστε ένα ευρύτερο φίλτρο.",
+ "ai_found.found.show_btn": "Εμφάνιση",
+ "ai_found.found.show_tip": "Επιλογή αυτών των αντικειμένων και εστίαση σε κάτοψη και 3D",
+ "ai_found.found.isolate_btn": "Απομόνωση",
+ "ai_found.found.isolate_tip": "Εμφάνιση μόνο αυτών των αντικειμένων έως την Επαναφορά προβολής",
+ "ai_found.found.select_btn": "Επιλογή",
+ "ai_found.found.select_tip": "Επιλογή αυτών των αντικειμένων χωρίς μετακίνηση της προβολής",
+ "ai_found.legend.title": "Χρωματισμός κατά {by}",
+ "ai_found.legend.row_tip": "Κάντε κλικ για επιλογή αυτών των αντικειμένων",
+ "ai_found.legend.empty_value": "Χωρίς τιμή",
+ "ai_found.legend.other": {
+  "one": "# ακόμα τιμή",
+  "other": "# ακόμα τιμές"
+ },
+ "ai_found.view.title": "Προβολή βοηθού AI",
+ "ai_found.view.reset": "Επαναφορά προβολής",
+ "ai_found.view.reset_tip": "Επαναφορά της προβολής από πριν αλλάξει ο βοηθός AI",
+ "ai_found.view.shown": {
+  "one": "# αντικείμενο εμφανίστηκε",
+  "other": "# αντικείμενα εμφανίστηκαν"
+ },
+ "ai_found.view.isolated": {
+  "one": "# αντικείμενο απομονωμένο",
+  "other": "# αντικείμενα απομονωμένα"
+ },
+ "ai_found.view.hidden": {
+  "one": "# αντικείμενο κρυμμένο",
+  "other": "# αντικείμενα κρυμμένα"
+ },
+ "ai_found.found.line": "{what}: {count}"
+}

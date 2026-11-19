@@ -1,0 +1,23 @@
+family Pump Group
+category equipment
+host floor
+param Length length type 1800mm
+param Width length type 700mm
+param PumpCount number type 2
+param PipeD length type 80mm
+type "Twin" Length=1800mm
+extrude Frame rect(-Length / 2, -Width / 2, Length / 2, Width / 2) z(0, 150mm)
+visible PumpB PumpCnt > 1
+nest PumpA Pump at(-Length / 4, 0, 150mm)
+nest PumpB Pump at(Length / 4, 0, 150mm)
+symbol rect(-Length / 2, -Width / 2, Length / 2, Width / 2)
+connector Inlet pipe cold_water at(-Length / 2, 0, 400mm) dir(-1, 0, 0) size(PipeD)
+connector Outlet pipe cold_water at(Length / 2, 0, 400mm) dir(1, 0, 0) size(PipeD)
+begin
+family Pump
+category equipment
+host floor
+param D length type 400mm
+type "Pump" D=400mm
+extrude Motor rect(-D / 2, -D / 2, D / 2, D / 2) z(0, 500mm)
+end

@@ -1,0 +1,18 @@
+{
+ "faults.errors": {
+  "one": "ماڈل میں # خرابی۔ دکھانے کے لیے کلک کریں۔",
+  "other": "ماڈل میں # خرابیاں۔ فہرست دیکھنے کے لیے کلک کریں۔"
+ },
+ "faults.warnings": {
+  "one": "ماڈل میں # وارننگ۔ دکھانے کے لیے کلک کریں۔",
+  "other": "ماڈل میں # وارننگز۔ فہرست دیکھنے کے لیے کلک کریں۔"
+ },
+ "faults.title": "ماڈل کے نقص: {n}",
+ "faults.none": "کوئی خرابی یا وارننگ نہیں۔",
+ "faults.cat.wall": "دیوار",
+ "faults.cat.slab": "سلیب",
+ "faults.cat.opening": "بازش",
+ "faults.cat.curtain_wall": "پردے کی دیوار",
+ "faults.cat.ramp": "ریمپ",
+ "faults.cat.zone": "زون"
+}

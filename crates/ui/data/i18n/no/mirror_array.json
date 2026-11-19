@@ -1,0 +1,5 @@
+{
+ "mirror_array.err.count": "Antallet er et heltall fra 2 til 200: 4 3000, eller 4;300 når trinnet har tre sifre",
+ "mirror_array.err.length": "Trinnet eller totalen er en positiv lengde, f.eks. 3 000 eller 1.2 m",
+ "mirror_array.err.angle": "Sveipet er en vinkel i grader, ikke null og høyst 360"
+}

@@ -1,0 +1,5 @@
+{
+ "mep_dn.dn.unset": "Ei asetettu",
+ "mep_dn.slope.err": "Anna kaltevuus %:na, esim. 1.5",
+ "mep_dn.err.rejected": "arvoa ei hyväksytä"
+}

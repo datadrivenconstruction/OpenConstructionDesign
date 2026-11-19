@@ -1,0 +1,15 @@
+[
+ {
+  "id": "help.check_update",
+  "icon": "whats-new",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R",
+   "A"
+  ],
+  "stage": "M1",
+  "group": "help"
+ }
+]

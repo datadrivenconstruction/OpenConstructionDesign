@@ -1,0 +1,15 @@
+{
+ "xlw.hd_never": "هنوز خروجی گرفته نشده",
+ "xlw.hd_now": "همین حالا",
+ "xlw.hd_min": "{n} دقیقه پیش",
+ "xlw.hd_hour": "{n} ساعت پیش",
+ "xlw.hd_day": "{n} روز پیش",
+ "xlw.hd_linked": "پیوندخورده",
+ "xlw.hd_watched": "زیر نظر",
+ "xlw.hd_stale": "مدل از زمان خروجی تغییر کرده",
+ "xlw.ft_export": "خروجی",
+ "xlw.ft_review": "بررسی",
+ "xlw.ft_apply": "اعمال {n} تغییر",
+ "xlw.ft_delete_missing": "حذف مفقودها",
+ "xlw.ft_keep_missing_tip": "حذف روشن است: عناصر بدون ردیف هنگام اعمال حذف می‌شوند. برای نگه داشتنشان علامت را بردارید."
+}

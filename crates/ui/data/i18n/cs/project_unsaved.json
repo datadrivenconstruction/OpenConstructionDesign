@@ -1,0 +1,8 @@
+{
+ "project_unsaved.unsaved.model": "Změny modelu nejsou uloženy.",
+ "project_unsaved.unsaved.drawings": {
+  "one": "# umístěný výkres není v projektu uložen: jeho změny budou ztraceny.",
+  "few": "# umístěné výkresy nejsou v projektu uloženy: jejich změny budou ztraceny.",
+  "other": "# umístěných výkresů není v projektu uloženo: jejich změny budou ztraceny."
+ }
+}

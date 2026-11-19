@@ -1,0 +1,10 @@
+{
+ "cmd.view.axes_full": "Teljes tengelyek",
+ "cmd.view.axes_full.desc": "Az X és Y tengelyeket teljes vonalként mutatja a alaprajzon át. Tartsa lenyomva az F9 billentyűt, hogy csak a lenyomás idejére jelenjenek meg.",
+ "settings.axes_full": "Tengelyek",
+ "settings.axes_full_desc": "Az alaprajzi tengelyek teljes vonalként a lapon át. Gyors megtekintéshez tartsa lenyomva az F9 billentyűt.",
+ "settings.axes_full_on": "Teljes tengelyek megjelenítése",
+ "plan.hud.axes_tip": "Tartsa lenyomva a {key} billentyűt a teljes tengelyek megjelenítéséhez",
+ "status.axes_full.on": "Teljes tengelyek bekapcsolva",
+ "status.axes_full.off": "Teljes tengelyek kikapcsolva"
+}

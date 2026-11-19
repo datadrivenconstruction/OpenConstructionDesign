@@ -1,0 +1,18 @@
+family Fan Coil Unit
+category equipment
+host ceiling
+ifc IfcUnitaryEquipment AIRCONDITIONINGUNIT
+param Length length type 1000mm
+param Width length type 600mm
+param Height length type 250mm
+param PortD length type 200mm
+param Flow number type 680
+param Casing material type "Steel White"
+type "FC-02" Length=800mm, PortD=160mm, Flow=340
+type "FC-04" Flow=680
+type "FC-06" Length=1300mm, PortD=250mm, Flow=1020
+extrude Body rect(-Length / 2, -Width / 2, Length / 2, Width / 2) z(0mm, Height) mat(Casing) show(3d, elev)
+symbol rect(-Length / 2, -Width / 2, Length / 2, Width / 2)
+symbol line(-Length / 2, -Width / 2, Length / 2, Width / 2) show(medium, fine)
+connector Supply duct supply_air at(Length / 4, 0, Height) dir(0, 0, 1) size(PortD)
+connector Return duct return_air at(-Length / 4, 0, Height) dir(0, 0, 1) size(PortD)

@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "Pomakni gore",
+ "rebar_list.move_down": "Pomakni dolje",
+ "rebar_list.remove": "Ukloni",
+ "rebar_list.zone_remove_last": "Zona treba najmanje jednu prostoriju: obrišite zonu da uklonite zadnju",
+ "rebar_list.rebar_empty_title": "U ovom modelu nema armature",
+ "rebar_list.rebar_empty_hint": "Postavite armaturu u domaćin element i ona će se ovdje naći u tablici.",
+ "rebar_list.rebar_empty_action": "Postavi armaturu"
+}

@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "Linhas e células ignoradas",
+ "xlsx_issues.conflicts_title": "Alterado nos dois lugares",
+ "xlsx_issues.missing_title": "Folha ausente da pasta de trabalho",
+ "xlsx_issues.look_alike_title": "Nome da folha não corresponde",
+ "xlsx_issues.mass_title": "Exclusão em massa requer confirmação",
+ "xlsx_issues.sheets_missing": "As folhas {sheets} estão ausentes da pasta de trabalho (renomeadas ou excluídas); as linhas delas não foram comparadas.",
+ "xlsx_issues.keep_model": "Manter modelo",
+ "xlsx_issues.take_book": "Usar pasta de trabalho",
+ "xlsx_issues.open_book_tip": "Abre o arquivo no aplicativo correspondente. Nada muda no modelo; a pré-visualização é recarregada após salvar a pasta de trabalho."
+}

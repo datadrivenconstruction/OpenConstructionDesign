@@ -1,0 +1,190 @@
+scale_word	масштаб 1 : 200
+programme	Программа
+programme_rooms	Программа помещений
+hdr_room	Помещение
+hdr_area_m2	Площадь, м2
+hdr_qty	Кол-во
+living_room	Гостиная
+bedroom	Спальня
+bathroom	Санузел
+total	Итого
+kitchen	Кухня
+brief_text	Участок 30х40 м\n5-этажный жилой дом\n1. Кухня — 12,5 м²\nОбщая площадь 1 200 м2\nВысота здания не более 18 м\nСоблюдать СП 54.13330.2022 и ГОСТ 21.501-2018\nПарковка не менее 10 мест
+brief_file	тз.txt
+norms_sentence	Соблюдать СП 54.13330.2022 и ГОСТ 21.501-2018
+norm_sp	СП 54.13330.2022
+norm_gost	ГОСТ 21.501-2018
+dm_glob_pat	Д-*
+dm_glob_name	д-900
+dm_rule_pat	ДВ-9*
+dm_family	ДГ 21-9
+dm_rule_find	дв-910
+grid_a	А
+grid_b	Б
+grid_v	В
+xnya	хня
+layout_1	Лист 1
+layout_2	Лист 2
+door_word	Дверь
+window_word	Окно
+walls_layer_upper	СТЕНЫ
+door_block_900	ДВЕРЬ_900
+col_stem	колон
+pylon_stem	пилон
+columns_word	Колонны
+walls_and_columns	Стены и колонны
+old_family	Старая
+new_family	Новая
+width_abbr	ШИР
+walls_layer	Стены
+st_1	СТ-1
+cyr_de	Д
+residential	Жилая
+sub_word	Подч
+no_word	нет
+meter_letter	м
+item_word	Пункт
+hedgehog	ёж
+storey_2	Этаж 2
+storey_1	Этаж 1
+insulation_lc	утеплитель
+insulation_cap	Утеплитель
+hello_word	Привет
+cyr_zhe	Ж
+texts_layer	Тексты
+wall_200mm	Стена 200 мм
+plan_word	план
+layer_word	Слой
+wall_word	Стена
+height_m	Высота [m]
+height_word	Высота
+level_word	Уровень
+type_word	Тип
+xl_wall	Стена
+xl_masonry	Кладка
+xl_walls	Стены
+xl_length_mm	Длина, мм
+work_code	Код работ
+kr1	КР-1
+kr2	КР-2
+kr3	КР-3
+price_rub	Цена [руб]
+finish_mm	Отделка [mm]
+note_word	Примечание
+yes_word	да
+code_word	Код
+share_word	Доля
+price_word	Цена
+rub_unit	руб
+finish_word	Отделка
+offset_word	Отступ
+offset_ft	Отступ [ft]
+type_mark	Марка типа
+ns1	НС-1
+ns2	НС-2
+wide_word	широко
+no_such	Нет такой
+read_only	Только чтение
+total_lc	итого
+summary_word	Сводка
+remark_word	Заметка
+doors_schedule	Ведомость дверей
+width_mm	Ширина, мм
+plan_floor1	План 1 этажа
+plan_cap	План
+plan_colon	План: 1/2
+plan_file_name	A-101 - План_ 1_2.pdf
+zhe_lc	ж
+designation_code	ДДЦ-01-АР
+site_plan	Генплан
+issue_word	Выпуск
+initials_ai	АИ
+changes_word	Изменения
+as_word	Как
+change_desc	Описание изменения
+revisions_gen	ревизий
+section_word	Разрез
+sheet_word	Лист
+sections_word	Разрезы
+detail_on_section	Узел на разрезе
+plan_and_section	План и разрез
+cyr_en	Н
+cyr_el	Л
+cyr_north	С
+legend_word	Обозначения
+boundary_word	Граница
+demolition_word	Демонтаж
+legend_sheet	Легенда
+doors_word	Двери
+name_word	Имя
+wide_cell	широкая ячейка
+rows_not_shown	Не показано строк
+doors_continued	Двери (продолжение)
+long_layers	Кирпич / Минеральная вата / Воздушный зазор / Бетон / Штукатурка / Краска
+brick_word	Кирпич
+mineral_word	Минеральная
+plaster_word	Штукатурка
+paint_word	Краска
+layers_word	Слои
+briefly_word	кратко
+word_lc	слово
+more_word	ещё
+office_word	Кабинет
+floor_plan	План этажа
+org_project	ООО Проект
+ivanov	Иванов
+petrov	Петров
+cyr_pe	П
+dev_label	Разраб.
+check_label	Пров.
+norm_label	Н.контр.
+approve_label	Утв.
+sheets_word	Листов
+area_20_16	20,16 м²
+long_title	Многофункциональный жилой комплекс с подземной автостоянкой и встроенными помещениями
+cat.as_indicated	Как указано
+cat.area_unit	м²
+cat.revisions	Изменения
+cat.rev_mark	Изм.
+cat.rev_date	Дата
+cat.rev_desc	Описание
+cat.rev_by	Автор
+cat.no_data	нет данных
+cat.continued	продолжение
+cat.rows_hidden	Не показано строк: {n}
+cat.warn_hidden	«{title}»: не показано строк: {n}
+cat.warn_clipped	«{title}»: текст обрезан в строках: {n}
+cat.warn_revisions	Не показано старых ревизий: {n}
+cat.sheet_list	Перечень листов
+cat.col_sheet	Лист
+cat.col_name	Наименование
+cat.col_rev	Изм.
+cat.col_date	Дата
+cat.lines	Линии
+cat.line	Линия
+cat.weight	Толщина, мм
+cat.l_cut	Сечение
+cat.l_outline	Контур
+cat.l_thin	Тонкая
+cat.l_hatch	Штриховка
+cat.l_dim	Размерная
+cat.materials	Материалы
+cat.material	Материал
+cat.wall_types	Типы стен
+cat.type	Тип
+cat.thickness	Толщина
+cat.layers	Слои
+mark_word	Марка
+schedules_word	Ведомости
+title_sheet	Титул
+plans_word	Планы
+legends_word	Легенды
+small_word	Мелкий
+plan_2	План 2
+own_word	Своя
+ddc_01	ДДЦ-01
+school_word	Школа
+client_word	Заказчик
+p7	П-7
+foreign_title	Чужой заголовок
+other_word	Прочее

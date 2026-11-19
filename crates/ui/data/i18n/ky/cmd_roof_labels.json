@@ -1,0 +1,11 @@
+{
+ "cmd.arch.roof_gable.short": "Үч бурчтуу",
+ "cmd.arch.roof_hip.short": "Эшек",
+ "cmd.arch.roof_shed.short": "Бир эңкейиш",
+ "cmd.arch.roof_mansard.short": "Мансарда",
+ "cmd.arch.roof_gambrel.short": "Гамбрел",
+ "cmd.arch.roof_barrel.short": "Цилиндр",
+ "cmd.arch.roof_edges.short": "Чатыр четтери",
+ "cmd.arch.roof_opening.short": "Ачылыш",
+ "cmd.mass.roof_by_face.short": "Беттен"
+}

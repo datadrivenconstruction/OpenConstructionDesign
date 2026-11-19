@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "שאל AI: {q}",
+ "ai.palette.connect": "חבר AI כדי לשאול",
+ "ai.palette.draft.apply": "החל טיוטה ({n})",
+ "ai.palette.draft.reject": "דחה טיוטה",
+ "ai.palette.draft.next": "שינוי הטיוטה הבא",
+ "ai.palette.draft.show": "הצג טיוטה במבט",
+ "cmd.ai.next_change": "שינוי הטיוטה הבא",
+ "cmd.ai.next_change.desc": "מזיז את המבט לאלמנט הבא ששינתה הטיוטה.",
+ "cmd.ai.show_draft": "הצג טיוטת AI במבט",
+ "cmd.ai.show_draft.desc": "מתאים את המבט לכל מה ששינתה הטיוטה."
+}

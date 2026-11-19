@@ -1,0 +1,4 @@
+{
+ "family_load.refused": "“{name}” oilasini yuklab bo'lmadi: {msg}. Loyihaga hech narsa yuklanmadi; tahrirlaringiz saqlanadi.",
+ "family_load.loaded_all": "{n} ta oila bir qadamda yuklandi: {names}"
+}

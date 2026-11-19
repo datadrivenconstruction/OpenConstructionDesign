@@ -1,0 +1,9 @@
+{
+ "xl.msg.base_value": "kiểm tra đọc lại không đạt, giữ nguyên sổ cũ: {} ({}) mong đợi '{}', đọc được '{}'",
+ "xl.msg.base_missing": "kiểm tra đọc lại không đạt, giữ nguyên sổ cũ: trang tính {} không có hàng cho id {}",
+ "xl.msg.base_extra": "kiểm tra đọc lại không đạt, giữ nguyên sổ cũ: hàng {} không có trong mô hình",
+ "xl.msg.base_refused": "kiểm tra đọc lại không đạt, giữ nguyên sổ cũ: {} ({}) bị từ chối: {}",
+ "xl.msg.base_sheet": "kiểm tra đọc lại không đạt, giữ nguyên sổ cũ: trang tính {} bị thiếu, trống hoặc không đọc được",
+ "xl.msg.base_newer": "kiểm tra đọc lại không đạt, giữ nguyên sổ cũ: {} ô không chứa giá trị của mô hình",
+ "xl.msg.base_unreadable": "kiểm tra đọc lại không đạt, giữ nguyên sổ cũ: không đọc được sổ mới ({})"
+}

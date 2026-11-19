@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "Indsæt lag nedenfor",
+ "type_layers.layer.delete": "Slet lag",
+ "type_layers.layer.delete_last": "En type skal have mindst ét lag",
+ "type_layers.value.bad": "Ikke en gyldig positiv værdi",
+ "type_layers.value.required": "Påkrævet",
+ "type_layers.unsaved.title": "Ikke-gemte ændringer i {name}",
+ "type_layers.unsaved.body": "Anvend dem på typen, eller kassér dem?",
+ "type_layers.unsaved.discard": "Kassér"
+}

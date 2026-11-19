@@ -1,0 +1,5 @@
+{
+ "xlsx_delete.delete_missing": "Șterge rândurile lipsă din registru",
+ "xlsx_delete.not_removed": "neșters: nu există date de comparație",
+ "xlsx_delete.no_base_reason": "Indisponibil: registrul nu are date de comparație, deci un rând lipsă nu poate fi deosebit de unul șters din greșeală. Nimic nu se șterge la Aplică."
+}

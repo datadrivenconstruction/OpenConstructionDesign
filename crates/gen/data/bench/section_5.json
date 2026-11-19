@@ -1,0 +1,25 @@
+{
+ "schema": "gen_bench.v1",
+ "group": "apartment_block",
+ "spec": {
+  "typology": "apartment_section",
+  "floors": 5
+ },
+ "adjacency": [
+  [
+   "kitchen",
+   "living",
+   3
+  ],
+  [
+   "bedroom",
+   "bath",
+   1
+  ],
+  [
+   "bath",
+   "hall",
+   1
+  ]
+ ]
+}

@@ -1,0 +1,6 @@
+{
+ "imported_prop_edit.remove": "إزالة الخاصية",
+ "imported_prop_edit.remove.tip": "يزيل الخاصية من {n} عنصر محدد في خطوة تراجع واحدة؛ تُحذف من ملف IFC عند الحفظ",
+ "imported_prop_edit.done": "أُزيلت {key} من {n} عنصر",
+ "imported_prop_edit.warn.reload": "تم، لكن لم يُحدَّث العرض؛ أعد فتح اللوحة أو تراجع إن بدا الوضع خاطئاً"
+}

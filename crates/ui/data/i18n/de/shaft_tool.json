@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "Schächte",
+ "quick.cat.shaft": "Schacht",
+ "shaft_tool.browser.shaft": "Schacht #{id}",
+ "shaft_tool.shaft.top": "Oberste Ebene",
+ "shaft_tool.shaft.cuts": "Ausgeschnittene Elemente",
+ "shaft_tool.shaft.cut_area": "Ausschnittfläche",
+ "shaft_tool.shaft.cut_volume": "Ausschnittvolumen",
+ "elem.no.rooms": "Folgt den Räumen, die er enthält"
+}

@@ -1,0 +1,7 @@
+{
+ "xl.msg.param_ambiguous": "a(z) '{}' oszlop a következő paraméterek bármelyike lehet: {}; írja be a pontos paraméternevet, nem lett alkalmazva",
+ "xl.msg.param_tag_stale": "a(z) '{}' oszlop olyan paramétert nevez meg, amely ebben a projektben nincs; nem lett alkalmazva",
+ "xl.msg.dup_col_note": "a(z) '{}' oszlop a(z) {} munkalapon megismétli a(z) '{}' oszlopot a(z) {} munkalapon; az azonos értékek egyszer kerülnek alkalmazásra, az eltérő sorokban a modell értéke marad",
+ "xl.msg.dup_col_differs": "a(z) '{}' és '{}' oszlopok eltérnek a(z) {} és {} értékben; a modell értéke marad, tartson meg egy oszlopot",
+ "xl.msg.dup_col_id": "a(z) '{}' és '{}' oszlopok eltérnek a(z) {} és {} értékben, a sor nem azonosítható; nem lett alkalmazva, tartson meg egy oszlopot"
+}

@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "Filter row under the headers. Text: substring; numbers: >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "Show or hide columns",
+ "sched_toolbar.groups_tip": "Group rows by columns, with subtotals",
+ "sched_toolbar.formulas_tip": "Calculated columns",
+ "sched_toolbar.phase": "Phase",
+ "sched_toolbar.phase_tip": "Which phase the rows are taken from",
+ "sched_toolbar.copy_tip": "Selected rows (or all visible) as TSV",
+ "sched_toolbar.import_tip": "Read an exported schedule back: rows by Id, columns by header; counts first, then one undo step",
+ "sched_toolbar.export_tip": "Visible rows and columns with totals; numbers stay numbers",
+ "sched_toolbar.need_table": "Open a schedule first",
+ "sched_toolbar.busy_open": "A file dialog is already open",
+ "sched_toolbar.busy_save": "A save dialog is already open",
+ "sched_toolbar.clear_filter": "Clear filter",
+ "sched_toolbar.fields_title": "Columns"
+}

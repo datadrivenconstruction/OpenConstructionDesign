@@ -1,0 +1,7 @@
+{
+ "recover.untitled_note": "该项目从未保存",
+ "recover.file_missing": "未找到项目文件",
+ "recover.banner": "发现 {name} 在较早会话中未保存的工作内容",
+ "recover.banner_review": "检查",
+ "recover.later_archived": "已推迟 {n} 次：快照已移至归档"
+}

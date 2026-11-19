@@ -1,0 +1,4 @@
+{
+ "tool.err.drawing_open": "此点周围的图形线未能闭合为环路",
+ "tool.err.drawing_crossing": "此点周围的图形环路自交"
+}

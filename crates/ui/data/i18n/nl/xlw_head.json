@@ -1,0 +1,15 @@
+{
+ "xlw.hd_never": "Nog niet geëxporteerd",
+ "xlw.hd_now": "zojuist",
+ "xlw.hd_min": "{n} min geleden",
+ "xlw.hd_hour": "{n} u geleden",
+ "xlw.hd_day": "{n} d geleden",
+ "xlw.hd_linked": "Gekoppeld",
+ "xlw.hd_watched": "Bewaakt",
+ "xlw.hd_stale": "Model gewijzigd sinds export",
+ "xlw.ft_export": "Exporteren",
+ "xlw.ft_review": "Controleren",
+ "xlw.ft_apply": "{n} wijzigingen toepassen",
+ "xlw.ft_delete_missing": "Ontbrekende verwijderen",
+ "xlw.ft_keep_missing_tip": "Verwijderen staat aan: elementen zonder rij worden bij Toepassen verwijderd. Vink uit om ze te behouden."
+}

@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "샤프트",
+ "quick.cat.shaft": "샤프트",
+ "shaft_tool.browser.shaft": "샤프트 #{id}",
+ "shaft_tool.shaft.top": "상단 레벨",
+ "shaft_tool.shaft.cuts": "절단 요소",
+ "shaft_tool.shaft.cut_area": "절단 면적",
+ "shaft_tool.shaft.cut_volume": "절단 체적",
+ "elem.no.rooms": "보유한 실을 따름"
+}

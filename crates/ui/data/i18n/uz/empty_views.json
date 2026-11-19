@@ -1,0 +1,19 @@
+{
+ "empty.v3d_gpu.title": "Bu grafik adapterda 3D mavjud emas",
+ "empty.v3d_gpu.hint": "Model xavfsiz va plan ishlaydi. 3D ni qayta sinash uchun xavfsiz grafikada qayta ishga tushiring.",
+ "empty.v3d_gpu.action": "Xavfsiz grafikada qayta ishga tushirish",
+ "empty.v3d_loading.title": "3D qurilmoqda…",
+ "empty.v3d_loading.pct": "Ochilmoqda… {pct} %",
+ "empty.plan_hidden.title": "Bu planda barcha elementlar yashirilgan",
+ "empty.plan_hidden.hint": "Vaqtinchalik yashirish yoki ajratish hech narsani ko'rsatmaydi.",
+ "empty.plan_hidden.action": "Hammasini ko'rsatish",
+ "empty.plan_graphics.title": "Ko'rinish grafikasi barcha kategoriyalarni yashiradi",
+ "empty.plan_graphics.hint": "Bu ko'rinishning kategoriya qoidalari ko'rsatadigan hech narsa qoldirmaydi.",
+ "empty.plan_graphics.action": "Ko'rinish grafikasini ochish",
+ "empty.plan_phase.title": "Bosqich filtri hamma narsani yashiradi",
+ "empty.plan_phase.hint": "Bu sathda ko'rsatilgan bosqichda hech narsa mavjud emas.",
+ "empty.plan_phase.action": "Bosqichni o'zgartirish",
+ "empty.plan_level.title": "Bu sathda elementlar yo'q",
+ "empty.plan_level.hint": "Modelning boshqa sathlarida elementlar bor.",
+ "empty.plan_level.action": "Elementlari bor sathga o'tish"
+}

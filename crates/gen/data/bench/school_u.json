@@ -1,0 +1,33 @@
+{
+ "schema": "gen_bench.v1",
+ "group": "school",
+ "spec": {
+  "typology": "school",
+  "name": "Primary School",
+  "floors": 3,
+  "design": {
+   "massing": "u",
+   "facade": "panels",
+   "rhythm": 2.4,
+   "paving": 4,
+   "trees": 12
+  }
+ },
+ "adjacency": [
+  [
+   "classroom",
+   "corridor",
+   2
+  ],
+  [
+   "wc",
+   "corridor",
+   1
+  ],
+  [
+   "staff",
+   "classroom",
+   1
+  ]
+ ]
+}

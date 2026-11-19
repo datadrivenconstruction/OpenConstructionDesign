@@ -1,0 +1,29 @@
+{
+ "recover.ago_now": "همین حالا",
+ "recover.ago_min": {
+  "one": "# دقیقه پیش",
+  "other": "# دقیقه پیش"
+ },
+ "recover.ago_hour": {
+  "one": "# ساعت پیش",
+  "other": "# ساعت پیش"
+ },
+ "recover.ago_yesterday": "دیروز",
+ "recover.ago_day": {
+  "one": "# روز پیش",
+  "other": "# روز پیش"
+ },
+ "recover.empty": "نسخه‌ای باقی نمانده",
+ "recover.empty_hint": "برای این پروژه چیزی برای بازیابی نیست.",
+ "recover.all_damaged": "همه نسخه‌ها آسیب دیده‌اند و هیچ‌کدام قابل بازیابی نیستند.",
+ "recover.keys_hint": "با بالا و پایین نسخه را انتخاب کنید، با Enter به بازیابی بروید",
+ "recover.row_tip": "ذخیره‌شده {time}",
+ "recover.row_damaged_tip": "قابل بازیابی نیست: {reason}",
+ "recover.archive_ask": "این نسخه به بایگانی منتقل شود؟",
+ "recover.discard_ask": {
+  "one": "نسخه به بایگانی منتقل شود؟ دوباره پیشنهاد نمی‌شود.",
+  "other": "همه # نسخه به بایگانی منتقل شوند؟ دوباره پیشنهاد نمی‌شوند."
+ },
+ "recover.confirm_yes": "انتقال به بایگانی",
+ "recover.confirm_no": "نگه‌داشتن نسخه‌ها"
+}

@@ -1,0 +1,5 @@
+{
+ "start_recent.unavailable": "Indisponibil acum (unitatea sau locația de rețea nu răspunde): {path}",
+ "start_recent.unavailable_short": "Indisponibil acum",
+ "start_recent.retry": "Reîncearcă"
+}

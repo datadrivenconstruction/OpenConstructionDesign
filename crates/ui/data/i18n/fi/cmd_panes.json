@@ -1,0 +1,6 @@
+{
+ "cmd.ui.pane.next": "Seuraava paneeli",
+ "cmd.ui.pane.next.desc": "Siirtää näppäimistön kohdistuksen seuraavaan näkyvään paneeliin (selain, piirtoalue, ominaisuudet, keskustelu).",
+ "cmd.ui.pane.prev": "Edellinen paneeli",
+ "cmd.ui.pane.prev.desc": "Siirtää näppäimistön kohdistuksen edelliseen näkyvään paneeliin."
+}

@@ -1,0 +1,5 @@
+{
+ "xlsx_delete.delete_missing": "Delete rows missing from the workbook",
+ "xlsx_delete.not_removed": "not removed: no comparison data",
+ "xlsx_delete.no_base_reason": "Unavailable: the workbook has no comparison data, so a missing row cannot be told from one removed by mistake. Nothing is deleted on Apply."
+}

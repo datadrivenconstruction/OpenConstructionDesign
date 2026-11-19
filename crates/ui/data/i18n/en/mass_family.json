@@ -1,0 +1,9 @@
+{
+ "cmd.mass.timeline_family": "Timeline to family",
+ "cmd.mass.timeline_family.desc": "Makes a component family from the feature timeline of the selected mass. The timeline parameters become family parameters.",
+ "mass_family.done": "Family {name} created with {n} parameters",
+ "mass_family.refused": "No family created: {e}",
+ "mass_family.no_mass": "Select a parametric mass first",
+ "mass_family.add_modifier": "Add modifier",
+ "mass_family.needs_faces": "Needs picked faces: use the tool on the Massing tab"
+}

@@ -1,0 +1,20 @@
+{
+ "dwgfillet.fillet": "Zaokrąglenie",
+ "dwgfillet.cancel": "Zatrzymaj zaokrąglenie",
+ "dwgfillet.tip": "Kliknij dwie linie po stronach do zachowania: obie zostaną przycięte lub wydłużone do narożnika, z łukiem stycznym, gdy promień jest większy od zera",
+ "dwgfillet.radius": "Promień zaokrąglenia",
+ "dwgfillet.radius_tip": "Promień łuku w jednostkach rysunku; 0 tworzy ostry narożnik",
+ "dwgfillet.st.arm_first": "Kliknij pierwszą linię po stronie, którą zachować",
+ "dwgfillet.st.arm_second": "Kliknij drugą linię po stronie, którą zachować",
+ "dwgfillet.st.not_armed": "Najpierw wybierz Zaokrąglenie",
+ "dwgfillet.st.click_line": "Kliknij pojedynczą linię rysunku",
+ "dwgfillet.st.other_drawing": "Obie linie muszą należeć do tego samego rysunku: zacznij od nowa",
+ "dwgfillet.st.changed": "Pierwsza linia się zmieniła: zacznij od nowa",
+ "dwgfillet.st.same_line": "Wskaż inną drugą linię",
+ "dwgfillet.st.parallel": "Linie są równoległe i nigdy się nie spotykają: nie da się utworzyć narożnika",
+ "dwgfillet.st.degenerate": "Linia ma zerową długość",
+ "dwgfillet.st.no_side": "Wskazana strona nie ma długości od narożnika",
+ "dwgfillet.st.too_big": "Promień jest za duży dla tych linii: użyj mniejszego",
+ "dwgfillet.st.radius_bad": "Promień musi być zerem lub dodatni",
+ "dwgfillet.st.done": "Wykonano narożnik"
+}

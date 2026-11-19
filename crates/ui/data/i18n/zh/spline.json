@@ -1,0 +1,7 @@
+{
+ "spline.opt.spline": "样条",
+ "spline.opt.spline_tip": "样条墙：单击其经过的各点，按 Enter 或 Esc 完成",
+ "spline.wt.three_points": "样条墙至少需要三个点",
+ "spline.wt.no_curtain": "幕墙没有样条轴线",
+ "spline.wt.added": "已添加样条墙"
+}

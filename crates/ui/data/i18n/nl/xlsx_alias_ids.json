@@ -1,0 +1,7 @@
+{
+ "xlsx_alias_ids.ids_written": "{n} nieuwe rijen hebben hun id in uw hernoemde blad gekregen; er is verder niets in het werkboek gewijzigd.",
+ "xlsx_alias_ids.ids_open": "Het werkboek is open in een ander programma: de id's van {n} nieuwe rijen zijn niet geschreven. Sluit het daar en synchroniseer; deze rijen worden niet opnieuw aangemaakt.",
+ "xlsx_alias_ids.ids_failed": "De id's van {n} nieuwe rijen konden niet worden geschreven; het werkboek is ongewijzigd gelaten. Deze rijen worden bij de volgende synchronisatie niet opnieuw aangemaakt.",
+ "xlsx_alias_ids.unpaired": "{n} nieuwe rijen hebben nog geen id; ze worden onthouden en niet opnieuw aangemaakt.",
+ "xlsx_alias_ids.refused": "Er is niets toegepast: nieuwe rijen in {sheets} kunnen geen id krijgen zolang een hernoemd blad wordt gelezen. Hernoem het blad terug naar zijn standaardnaam (of verwijder deze rijen) en synchroniseer opnieuw."
+}

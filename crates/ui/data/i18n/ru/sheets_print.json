@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "Предыдущий лист (Page Up)",
+ "sheets.print.next": "Следующий лист (Page Down)",
+ "sheets.print.fit": "Страница целиком (двойной щелчок)",
+ "sheets.print.no_sheets": "Нет листов для просмотра",
+ "sheets.print.building": "Собираю страницу…",
+ "sheets.print.stop_build": "Остановить",
+ "sheets.print.build_stopped": "Сборка страницы остановлена",
+ "sheets.print.retry": "Собрать снова",
+ "sheets.print.build_failed": "Не удалось собрать предпросмотр"
+}

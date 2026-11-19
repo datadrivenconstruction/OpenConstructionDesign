@@ -1,0 +1,9 @@
+{
+ "prop_head.of_type": {
+  "one": "এই ধরনের #টি",
+  "other": "এই ধরনের #টি"
+ },
+ "prop_head.override_tip": "ধরন থেকে ভিন্ন, রিসেট করতে ক্লিক করুন",
+ "prop_head.reset_done": "“{name}” ধরনের মানে রিসেট হয়েছে",
+ "prop_head.copy_id": "নম্বর কপি করতে ক্লিক করুন"
+}

@@ -1,0 +1,10 @@
+{
+ "view_gfx.vv.visible_tip": "Viditelné v tomto pohledu",
+ "view_gfx.vv.enabled_tip": "Použít tento filtr v tomto pohledu",
+ "view_gfx.vv.reset_tip": "Zpět na výchozí nastavení projektu",
+ "view_gfx.vv.col.actions": "Akce",
+ "view_gfx.vv.nothing_to_apply": "Žádné změny k použití",
+ "view_gfx.flt.save_blocked": "Pojmenujte filtr a vyplňte parametry všech pravidel",
+ "view_gfx.flt.confirm_delete": "Smazat pro všechny pohledy?",
+ "view_gfx.flt.param_pick": "Vybrat…"
+}

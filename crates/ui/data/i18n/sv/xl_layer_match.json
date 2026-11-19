@@ -1,0 +1,4 @@
+{
+ "xl.msg.layer_cells_unplaced": "{} celler av typen '{}' lager {} på bladet '{}' kunde inte placeras",
+ "xl.msg.layer_hidden_unplaced": "dold rad av typen '{}' lager {} på bladet '{}' kunde inte placeras"
+}

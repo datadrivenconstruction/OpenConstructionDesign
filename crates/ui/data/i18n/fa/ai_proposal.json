@@ -1,0 +1,13 @@
+{
+ "ai.proposal.title": "پیشنهاد دستیار",
+ "ai.proposal.meta": "{actor} · عملیات: {ops}",
+ "ai.proposal.apply.desc": "کل پیشنهاد را به‌عنوان یک مرحله اعمال می‌کند؛ Ctrl+Z آن را واگرد می‌کند",
+ "ai.proposal.applying": "در حال اعمال…",
+ "ai.proposal.applied": "پیشنهاد اعمال شد. Ctrl+Z آن را واگرد می‌کند.",
+ "ai.proposal.applied_resync": "پیشنهاد اعمال شد، اما نما هنوز به‌روز نشده است. خودبه‌خود تازه می‌شود؛ Ctrl+Z مرحله را واگرد می‌کند.",
+ "ai.proposal.stale": "مدل پس از پیش‌نمایش این پیشنهاد تغییر کرد. از دستیار بخواهید دوباره پیشنهاد دهد.",
+ "ai.proposal.toast.applied": "پیشنهاد اعمال شد. Ctrl+Z آن را واگرد می‌کند.",
+ "ai.proposal.toast.stale": "مدل پس از پیش‌نمایش تغییر کرد، بنابراین چیزی اعمال نشد. دوباره پیش‌نمایش کنید: از دستیار بخواهید پیشنهاد تازه بدهد.",
+ "ai.proposal.toast.refused": "پیشنهاد اعمال نشد: {reason}",
+ "ai.proposal.rejected": "پیشنهاد رد شد."
+}

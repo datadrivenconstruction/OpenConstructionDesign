@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "Просмотр",
+ "agent_draft.ag.preview.desc": "Показывает на канве контур элементов этого черновика, пока курсор на кнопке. Ничего не меняется.",
+ "agent_draft.type.column": "Колонна",
+ "agent_draft.type.roof": "Кровля",
+ "agent_draft.type.ceiling": "Потолок",
+ "agent_draft.type.stair": "Монолитная",
+ "agent_draft.type.railing": "Ограждение",
+ "agent_draft.type.shaft": "Шахта",
+ "agent_draft.type.axis": "Ось 6.5 мм",
+ "agent_draft.type.refplane": "Опорная плоскость"
+}

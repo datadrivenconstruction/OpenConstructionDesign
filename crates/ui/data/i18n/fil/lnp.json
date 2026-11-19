@@ -1,0 +1,14 @@
+{
+ "lnp.openings_refused": "Hindi nabago ang {n} opening ({why})",
+ "lnp.params_changed": "nabagong halaga: {n}",
+ "lnp.params_same": "Walang pagbabago: may halagang ito na ang {u} elemento",
+ "lnp.params_tip": "Ilalapat ng Enter ang halaga sa bawat napiling elemento; itinitira sila ng Esc",
+ "lnp.locked_hint": "Itinira ang mga naka-lock na halaga: {n}",
+ "lnp.panels_one": "Isa-isang ine-edit ang mga panel",
+ "lnp.keep_first": "Itira ang una",
+ "lnp.keep_first_tip": "Piliin lang ang unang panel para ma-edit ito",
+ "lnp.clip_from_wall": "Nakopya ang mga parameter mula sa pader #{id}",
+ "lnp.clip_from_opening": "Nakopya ang mga parameter mula sa opening #{id}",
+ "lnp.match_from": "Tumugma ang mga property ng #{id} sa {n} elemento",
+ "lnp.why_at": "#{id}: {e}"
+}

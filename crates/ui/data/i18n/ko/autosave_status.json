@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "자동 저장 실패, 최신 변경 사항이 보호되지 않습니다. {why}",
+ "autosave_status.autosave_open": "자동 저장 설정",
+ "autosave_status.autosave_recovered": "자동 저장이 다시 작동합니다.",
+ "autosave_status.autosave_reason": "사유: {why}"
+}

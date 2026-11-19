@@ -1,0 +1,7 @@
+brief = "Kitchen counter run with a worktop."
+category = "casework"
+must = param Length
+must = param Depth
+must = solids >= 3
+must = ports 0
+must = flex Length 960 1500

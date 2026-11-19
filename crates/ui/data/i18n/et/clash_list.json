@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "Kõik",
+ "clash_list.only_selected": "Ainult valitud",
+ "clash_list.tolerance": "Tolerants",
+ "clash_list.gap": "Vahe",
+ "clash_list.export": "Ekspordi",
+ "clash_list.col.volume": "Maht",
+ "clash_list.fix.up": "Liiguta üles",
+ "clash_list.fix.down": "Liiguta alla",
+ "clash_list.fix.sleeve": "Hülss",
+ "clash_list.apply_fix": "Rakenda parandus",
+ "clash_list.err.tol": "Tolerants: sisesta pikkus (0 või rohkem), nt 50 või 2 in",
+ "clash_list.sleeve_no_host": "Hülss vajab paari seina või plaati",
+ "clash_list.err.gap": "Vahe: sisesta pikkus (0 või rohkem), nt 50 või 2 in"
+}

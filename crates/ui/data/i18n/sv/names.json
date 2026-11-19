@@ -1,0 +1,19 @@
+{
+ "names.level": "Nivå {n}",
+ "names.slab": "Bjälklag 200",
+ "names.roof_slab": "Tak 200",
+ "names.sheet.plan_section": "Plan och sektion för plan 1",
+ "names.sheet.plan_view": "Plan 1",
+ "names.sheet.site_plan": "Situationsplan",
+ "names.sheet_set.issue": "Utgåva 1",
+ "names.title.owner": "Projekt AB",
+ "names.title.creator": "A. Lindqvist",
+ "names.title.approver": "P. Johansson",
+ "names.title.document_type": "Ritning",
+ "names.title.status": "Pågår",
+ "names.revision.date": "4 nov 2026",
+ "names.revision.description": "Utfärdad för granskning",
+ "names.revision.author": "AI",
+ "names.demo.no_levels": "inga nivåer",
+ "names.demo.no_sheet": "blad"
+}

@@ -1,0 +1,10 @@
+{
+ "dlg.dw.store.unloaded": "Impossibile leggere il disegno “{name}” dal progetto: viene mantenuto invariato nel file",
+ "dlg.dw.store.source_missing": "Disegno “{name}”: file sorgente non trovato, viene mostrata la copia salvata nel progetto",
+ "dlg.dw.store.source_changed": "Disegno “{name}”: il file sorgente è cambiato dopo il posizionamento, viene mostrata la copia salvata nel progetto",
+ "dlg.dw.store.unreadable": "I disegni posizionati salvati nel progetto non possono essere letti",
+ "dlg.dw.store.not_saved": "I disegni non sono salvati: {why}",
+ "dlg.dw.store.why_read": "i disegni posizionati salvati nel progetto non possono essere letti",
+ "dlg.dw.store.why_write": "il file di progetto non può essere aggiornato",
+ "dlg.dw.store.missing_in_file": "Il file salvato non contiene tutti i disegni posizionati"
+}

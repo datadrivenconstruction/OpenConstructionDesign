@@ -1,0 +1,45 @@
+{
+ "id": "it",
+ "version": "2026.11",
+ "parent": "eu",
+ "country": "IT",
+ "lang": [
+  "it"
+ ],
+ "units": {
+  "length": "m",
+  "display": "metric"
+ },
+ "conventions": {
+  "ground_floor": 0,
+  "area_standard": "net",
+  "net_share": 1.0,
+  "note": "Italian hygiene rules use superficie utile (net floor area); sale listings often use gross commercial area.",
+  "source": "it-dm1975"
+ },
+ "status": "tier3",
+ "climate": {
+  "zones": [],
+  "default": null
+ },
+ "research": {
+  "date": "2026-11-14",
+  "missing": [
+   "egress.travel_max",
+   "egress.travel_max.office",
+   "fire.compartment_area_max",
+   "fire.compartment_area_max.sprinklered",
+   "stair.riser_max",
+   "stair.riser_max.house",
+   "room.height_min.office",
+   "parking.per_dwelling"
+  ],
+  "unreachable": [
+   "DM 3 agosto 2015 fire-code tables S.3/S.4 (no usable source reached)",
+   "Italian parking rule is per building volume (1 m2 per 10 m3), not per dwelling",
+   "gazzettaufficiale.it / normattiva.it article pages (JS shell, no articles); web.archive.org snapshot of the gazette page has no article text",
+   "DM 3 agosto 2015 fire-code tables S.3/S.4: values depend on risk profile, no single fixed number; unipr.it coordinated PDF found but not read"
+  ]
+ },
+ "note": "Numbers with verified=true were read in the cited clause; the rest are hints with a note of where we looked. Wording is our own; no text of a standard is stored."
+}

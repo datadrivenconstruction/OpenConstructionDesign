@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "өлчөнгөн {value}, чек {limit}",
+ "ai_checks.check.cap": "{total} ичинен {shown} корутунду көрсөтүлдү. Алгач каталар: аларды оңдоп, кайра иштетиңиз.",
+ "ai_checks.check.run_again": "Кайра иштетүү",
+ "ai_checks.check.goto": "Тандоо жана жакындатуу",
+ "ai_checks.check.never_title": "Азырынча текшерилген жок",
+ "ai_checks.check.never_hint": "Текшерүүлөрдү иштетиңиз, корутундулар ушул жерде пайда болот.",
+ "ai_checks.check.sec.error": "Каталар",
+ "ai_checks.check.sec.warning": "Эскертүүлөр",
+ "ai_checks.check.sec.info": "Эскертмелер"
+}

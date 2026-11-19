@@ -1,0 +1,13 @@
+{
+ "xlw.copy_list": "Copy list",
+ "xlw.save_list": "Save list…",
+ "xlw.copy_list_tip": "Copy the rows shown (sheet, cell, id, column, values, reason) as text for a spreadsheet",
+ "xlw.save_list_tip": "Save the rows shown as a .csv file next to the workbook; the workbook itself is never changed",
+ "xlw.list_book_value": "Workbook value",
+ "xlw.list_model_value": "Model value",
+ "xlw.list_reason": "Reason",
+ "xlw.list_copied": "List copied: {n} rows",
+ "xlw.list_saved": "List saved: {n} rows, {file}",
+ "xlw.list_save_failed": "List not saved",
+ "xlw.list_nothing": "Nothing to copy: no rows shown"
+}

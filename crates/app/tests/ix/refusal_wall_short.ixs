@@ -1,0 +1,2 @@
+# A second click on the last point is refused with a code, the tool goes on
+tool(WA) click(0,0) click(0.001,0) → refusal=wall_too_short state=Drafting{1}

@@ -1,0 +1,11 @@
+{
+ "sketch.points": "Punkte",
+ "sketch.rect": "Rechteck",
+ "sketch.circle": "Kreis",
+ "sketch.polygon": "Polygon",
+ "sketch.radius": "R",
+ "sketch.sides": "Seiten",
+ "sketch.circum": "Umschrieben",
+ "sketch.shape.tip": "Skizzenform (A wechselt). Rechteck: zwei Ecken. Kreis und Polygon: Mittelpunkt, dann Radius. Geben Sie eine Größe ein und drücken Sie Enter, um sie festzulegen.",
+ "tool.err.zero_size": "Nullgröße: Bewegen Sie den zweiten Punkt vom ersten weg"
+}

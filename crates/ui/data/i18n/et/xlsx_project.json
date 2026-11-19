@@ -1,0 +1,7 @@
+{
+ "xlsx_project.title": "See töövihik eksporditi teisest projektist",
+ "xlsx_project.body": "Töövihik „{file}“ kuulub teisele projektile. Elementide id-d erinevad projektide vahel, seega muudaks selle read siin seotud elemente. Sellesse projekti ei loetud midagi.",
+ "xlsx_project.export_new": "Ekspordi see projekt uude töövihikusse",
+ "xlsx_project.close": "Sulge",
+ "xlsx_project.no_project": "See töövihik ei ütle, millisele projektile see kuulub: kontrolli, et see eksporditi sellest projektist."
+}

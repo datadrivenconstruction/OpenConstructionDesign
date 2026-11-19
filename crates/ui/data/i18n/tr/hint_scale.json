@@ -1,0 +1,10 @@
+{
+ "cmd.mod.scale": "Ölçekle",
+ "cmd.mod.scale.desc": "Elemanları seçin, sonra temel noktayı, referans uzunluğu ve yeni uzunluğu tıklayın veya bir çarpan yazın.",
+ "hint.scale.select": "Ölçekle: elemanları seçin · Enter — bitti",
+ "hint.scale.first": "Ölçekle: temel noktayı seçin · Esc — iptal",
+ "hint.scale.second": "Ölçekle: referans uzunluğu seçin · sayı — çarpan · Esc — iptal",
+ "hint.scale.third": "Ölçekle: yeni uzunluğu seçin · sayı — çarpan · Esc — iptal",
+ "scl.bad_factor": "Ölçek çarpanı sıfırdan büyük bir sayı olmalı",
+ "scl.zero_ref": "Referans uzunluğu sıfır: temel noktadan uzak bir nokta seçin"
+}

@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "Legg til 1 sett",
+ "rebar_sets.add_n": "Legg til {n} sett",
+ "rebar_sets.pick.search": "Søk etter armeringsjerntyper",
+ "rebar_sets.pick.empty": "Ingen armeringsjerntyper passer",
+ "rebar_sets.unit.deg": "°"
+}

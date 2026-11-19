@@ -1,0 +1,16 @@
+{
+ "cmd.drawing.to_detail": "Zeichnung zu Detail",
+ "cmd.drawing.to_detail.desc": "Wandelt die gewählten Zeichnungsobjekte oder die gesamte Zeichnung dieses Geschosses in Detaillinien, Textnotizen und Flächen im Grundriss um. Die Zeichnung bleibt unverändert.",
+ "detail_items.st.no_drawing": "Keine Zeichnung auf diesem Geschoss",
+ "detail_items.st.nothing": "Nichts umzuwandeln: keine Linien, Bögen, Texte oder Füllungen auf sichtbaren Ebenen",
+ "detail_items.st.done": "Detailobjekte hinzugefügt: Linien {lines}, Texte {texts}, Flächen {regions}",
+ "detail_items.st.failed": "Detailobjekte konnten nicht hinzugefügt werden: {e}",
+ "detail_items.st.warn": "Detailobjekte hinzugefügt, aber die Ansicht konnte nicht aktualisiert werden (Linien {lines}, Texte {texts}, Flächen {regions}): {e}. Rückgängig entfernt sie.",
+ "detail_items.st.bad_view": "Detailobjekte brauchen eine Grundriss- oder Schnittansicht",
+ "detail_items.st.no_transform": "Diese Ansicht hat kein brauchbares Koordinatensystem für die Zeichnung; nichts wurde hinzugefügt",
+ "drafting_tools.free.plan_only": "Dieser Befehl arbeitet mit Grundrisselementen; einen Grundriss öffnen",
+ "drafting_tools.free.zero": "Die beiden Punkte fallen zusammen; nichts wurde hinzugefügt",
+ "drafting_tools.free.select_first": "Zuerst die Objekte dieser Ansicht zum Verteilen wählen",
+ "drafting_tools.free.pick_item": "Ein Objekt dieser Ansicht anklicken, um es zu markieren",
+ "drafting_tools.free.dim_kind": "In einer Zeichnungsansicht funktionieren nur Längenbemaßungen"
+}

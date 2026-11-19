@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "پله‌ها",
+ "selcat.railing": "نرده‌ها",
+ "quick.cat.stair": "پله‌ها",
+ "quick.cat.railing": "نرده‌ها",
+ "stair.risers": "خیزها",
+ "stair.riser": "ارتفاع خیز",
+ "stair.comfort": "2R + T",
+ "stair.tread_auto": "کف‌پله طبق قاعده",
+ "stair.tread_auto_tip": "کف‌پلهٔ تایپ‌شده را حذف کنید تا قاعدهٔ 2R + T آن را تعیین کند",
+ "stair.broken": "این پله با ترازهایش جور نیست",
+ "railing.host_stair": "میزبانی‌شده روی پلهٔ {id}",
+ "railing.host_path": "نرده با طرح اولیه",
+ "railing.length": "طول",
+ "stair.deleted_with": "همراه با {n} نردهٔ میزبان"
+}

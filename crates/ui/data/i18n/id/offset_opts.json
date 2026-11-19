@@ -1,0 +1,7 @@
+{
+ "offset_opts.dist_positive": "Jarak offset harus lebih besar dari nol; sisi mengikuti kursor",
+ "offset_opts.count_bad": "Bilangan bulat dari {min} sampai {max}",
+ "offset_opts.done_tip": "Selesaikan pilihan dan mulai alat",
+ "offset_opts.iso.apply_tip": "Jadikan penyembunyian sementara permanen untuk tampilan ini",
+ "offset_opts.iso.exit": "Keluar dari mode sementara"
+}

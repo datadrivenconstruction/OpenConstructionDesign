@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "Tüm modeli veya seçimi metre ya da milimetre cinsinden ikili STL olarak kaydeder.",
+ "cmd.data.export_obj.desc": "Tüm modeli veya seçimi bir MTL dosyasıyla OBJ olarak kaydeder: öğe başına bir grup, malzemeye göre renkler.",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "Malzemeli OBJ (.obj)",
+ "open_file.filter.mesh": "3B ağlar (glTF, STEP, STL, OBJ)",
+ "mx.title": "{fmt} dışa aktar",
+ "mx.scope": "Ne dışa aktarılacak",
+ "mx.scope.all": "Tüm model",
+ "mx.scope.sel": "Seçim ({n} öğe)",
+ "mx.units": "Dosyadaki birimler",
+ "mx.units.m": "Metre",
+ "mx.units.mm": "Milimetre",
+ "mx.export": "Dışa aktar…",
+ "mx.saved": "{fmt} kaydedildi: {path} ({parts} öğe, {tris} üçgen)",
+ "mx.partial": "{fmt} {n} sorunla kaydedildi, bazı gövdeler eksik olabilir: {path}",
+ "mx.failed": "{fmt} dışa aktarma başarısız: {error}",
+ "mx.imported": "{file}: {n} öğe içe aktarıldı ({tris} üçgen)",
+ "mx.imported_notes": "{file}: {n} öğe içe aktarıldı ({tris} üçgen), {w} not: {first}"
+}

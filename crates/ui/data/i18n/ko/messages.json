@@ -1,0 +1,7 @@
+{
+ "messages.title": "메시지",
+ "messages.desc": "알림 기록. 새 경고나 오류 없음.",
+ "messages.desc_new": "새 경고 또는 오류 {n}개. 클릭하여 읽기.",
+ "messages.copy": "모두 복사",
+ "messages.clear": "모두 지우기"
+}

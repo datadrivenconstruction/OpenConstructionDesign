@@ -1,0 +1,6 @@
+{
+ "sel_filter.flt.all_cats": "Semua kategori",
+ "sel_filter.flt.in_sel": "Dalam pilihan",
+ "sel_filter.flt.none": "Centang minimal satu kategori, jika tidak pilihan akan dikosongkan",
+ "sel_filter.tg.none": "Centang minimal satu kategori untuk diberi tag"
+}

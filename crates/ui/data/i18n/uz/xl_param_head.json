@@ -1,0 +1,7 @@
+{
+ "xl.msg.param_ambiguous": "'{}' ustuni quyidagi parametrlardan istalganiga tegishli bo'lishi mumkin {}; aniq parametr nomini kiriting, qo'llanmadi",
+ "xl.msg.param_tag_stale": "'{}' ustuni ushbu loyihada mavjud bo'lmagan parametr nomini ko'rsatadi; qo'llanmadi",
+ "xl.msg.dup_col_note": "{} dagi '{}' ustuni {} dagi '{}' ustunini takrorlaydi; teng qiymatlar bir marta qo'llanadi, farq qiladigan qatorda model qiymati saqlanadi",
+ "xl.msg.dup_col_differs": "'{}' va '{}' ustunlari {} va {} bo'yicha farq qiladi; model qiymati saqlanadi — bitta ustunni qoldiring",
+ "xl.msg.dup_col_id": "'{}' va '{}' ustunlari {} va {} bo'yicha farq qiladi, qatorni aniqlab bo'lmaydi; hech narsa qo'llanmadi — bitta ustunni qoldiring"
+}

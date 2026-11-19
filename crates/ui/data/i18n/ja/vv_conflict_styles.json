@@ -1,0 +1,6 @@
+{
+ "vv_conflict.styles.conflict": "このウィンドウに編集があるあいだに、編集したカテゴリのオブジェクトスタイルがモデル内で変更されました（元に戻す操作または別のウィンドウによる）。あなたの編集は保持されます。",
+ "vv_conflict.styles.keep": "自分の編集を保持",
+ "vv_conflict.styles.reload": "再読み込み",
+ "vv_conflict.styles.answer_first": "「自分の編集を保持」または「再読み込み」を先に選んでください"
+}

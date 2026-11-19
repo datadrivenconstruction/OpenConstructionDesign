@@ -1,0 +1,6 @@
+{
+ "quick.keys.rec_hint": "Esc cancels · Backspace clears",
+ "quick.keys.row_lost": "{key} now belongs to “{cmd}”",
+ "quick.keys.row_took": "{key} taken from “{cmd}”",
+ "quick.keys.reset_tip": "Reset to default"
+}

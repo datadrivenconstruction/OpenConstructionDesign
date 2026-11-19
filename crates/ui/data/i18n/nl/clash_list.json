@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "Alle",
+ "clash_list.only_selected": "Alleen geselecteerde",
+ "clash_list.tolerance": "Tolerantie",
+ "clash_list.gap": "Speling",
+ "clash_list.export": "Exporteren",
+ "clash_list.col.volume": "Inhoud",
+ "clash_list.fix.up": "Omhoog verplaatsen",
+ "clash_list.fix.down": "Omlaag verplaatsen",
+ "clash_list.fix.sleeve": "Mantel",
+ "clash_list.apply_fix": "Oplossing toepassen",
+ "clash_list.err.tol": "Tolerantie: voer een lengte in (0 of meer), bijv. 50 of 2 in",
+ "clash_list.sleeve_no_host": "Een mantel heeft een wand of vloer in het paar nodig",
+ "clash_list.err.gap": "Speling: voer een lengte in (0 of meer), bijv. 50 of 2 in"
+}

@@ -1,0 +1,6 @@
+{
+ "ai_toast.toast_not_refreshed": "{n} numaralı geri alma adımı olarak uygulandı (Ctrl+Z ile geri alınır), ancak görünüm yenilenmedi. Görünümü yeniden yükleyin.",
+ "ai.optx.reload_failed": "\"{name}\" seçeneği uygulandı ve kaydedildi, ancak görünüm yeniden yüklenmedi: {e}",
+ "ai.cmp.stale": "Eski",
+ "ai.cmp.stale_tip": "Bu seçenek daha eski bir model durumuna göre oluşturuldu. Uygulamak için yeniden üretin."
+}

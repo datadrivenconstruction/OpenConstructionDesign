@@ -1,0 +1,1106 @@
+[
+ {
+  "id": "twelve_columns_on_a_grid",
+  "base": "walls",
+  "calls": [
+   {
+    "tool": "create_grids",
+    "args": {
+     "title": "Grid",
+     "x": {
+      "count": 4,
+      "spacing": 6.0
+     },
+     "y": {
+      "count": 3,
+      "spacing": 5.0
+     }
+    }
+   },
+   {
+    "tool": "create_elements",
+    "args": {
+     "title": "Columns A-C/1-4",
+     "cat": "column",
+     "items": [
+      {
+       "at": [
+        0.0,
+        0.0
+       ],
+       "structural": true
+      },
+      {
+       "at": [
+        6.0,
+        0.0
+       ],
+       "structural": true
+      },
+      {
+       "at": [
+        12.0,
+        0.0
+       ],
+       "structural": true
+      },
+      {
+       "at": [
+        18.0,
+        0.0
+       ],
+       "structural": true
+      },
+      {
+       "at": [
+        0.0,
+        5.0
+       ],
+       "structural": true
+      },
+      {
+       "at": [
+        6.0,
+        5.0
+       ],
+       "structural": true
+      },
+      {
+       "at": [
+        12.0,
+        5.0
+       ],
+       "structural": true
+      },
+      {
+       "at": [
+        18.0,
+        5.0
+       ],
+       "structural": true
+      },
+      {
+       "at": [
+        0.0,
+        10.0
+       ],
+       "structural": true
+      },
+      {
+       "at": [
+        6.0,
+        10.0
+       ],
+       "structural": true
+      },
+      {
+       "at": [
+        12.0,
+        10.0
+       ],
+       "structural": true
+      },
+      {
+       "at": [
+        18.0,
+        10.0
+       ],
+       "structural": true
+      }
+     ]
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "create_wall",
+  "base": "walls",
+  "calls": [
+   {
+    "tool": "create_elements",
+    "args": {
+     "title": "Wall",
+     "cat": "wall",
+     "items": [
+      {
+       "a": [
+        0,
+        8
+       ],
+       "b": [
+        5,
+        8
+       ]
+      }
+     ]
+    }
+   }
+  ],
+  "writes": true,
+  "receipt_counts": [
+   1,
+   0,
+   0
+  ]
+ },
+ {
+  "id": "add_param_then_update",
+  "base": "walls",
+  "calls": [
+   {
+    "tool": "add_param",
+    "args": {
+     "title": "Param",
+     "name": "Rating",
+     "ptype": "text",
+     "cats": [
+      "wall"
+     ]
+    }
+   },
+   {
+    "tool": "update_elements",
+    "args": {
+     "title": "Set",
+     "target": {
+      "filter": "wall"
+     },
+     "set": {
+      "Rating": "A"
+     }
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "delete_wall",
+  "base": "walls",
+  "calls": [
+   {
+    "tool": "delete_elements",
+    "args": {
+     "title": "Delete",
+     "target": {
+      "refs": [
+       "wall:{wall1}"
+      ]
+     }
+    }
+   }
+  ],
+  "writes": true,
+  "receipt_counts": [
+   0,
+   0,
+   1
+  ]
+ },
+ {
+  "id": "create_type",
+  "base": "walls",
+  "calls": [
+   {
+    "tool": "create_type",
+    "args": {
+     "title": "Type",
+     "cat": "wall",
+     "name": "W300",
+     "fields": {
+      "layers": [
+       {
+        "material": "Concrete",
+        "thickness": 0.3
+       }
+      ]
+     }
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "add_param",
+  "base": "walls",
+  "calls": [
+   {
+    "tool": "add_param",
+    "args": {
+     "title": "Param",
+     "name": "Rating",
+     "ptype": "text",
+     "cats": [
+      "wall"
+     ]
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "replace_type",
+  "base": "walls",
+  "calls": [
+   {
+    "tool": "create_type",
+    "args": {
+     "title": "Type",
+     "cat": "wall",
+     "name": "W300",
+     "fields": {
+      "layers": [
+       {
+        "material": "Concrete",
+        "thickness": 0.3
+       }
+      ]
+     }
+    }
+   },
+   {
+    "tool": "replace_type",
+    "args": {
+     "title": "Retype",
+     "target": {
+      "refs": [
+       "wall:{wall1}"
+      ]
+     },
+     "to": "wall_type:n1"
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "create_grids",
+  "base": "walls",
+  "calls": [
+   {
+    "tool": "create_grids",
+    "args": {
+     "title": "Grid",
+     "x": {
+      "count": 3,
+      "spacing": 6.0
+     },
+     "y": {
+      "count": 2,
+      "spacing": 5.0
+     }
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "edit_wall_type",
+  "base": "walls",
+  "calls": [
+   {
+    "tool": "edit_wall_type",
+    "args": {
+     "title": "Thicker",
+     "type": "wall_type:{wtype}",
+     "action": "resize",
+     "layer": 1,
+     "thickness": 0.25
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "load_family",
+  "base": "walls",
+  "calls": [
+   {
+    "tool": "load_family",
+    "args": {
+     "title": "Family",
+     "def": "{family_def}"
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "copy_types_from",
+  "base": "walls",
+  "calls": [
+   {
+    "tool": "copy_types_from",
+    "args": {
+     "title": "Copy",
+     "path": "{types_src}",
+     "names": [
+      "Imported W"
+     ]
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "place_fixtures",
+  "base": "walls",
+  "calls": [
+   {
+    "tool": "place_fixtures",
+    "args": {
+     "title": "Sink",
+     "items": [
+      {
+       "family": "Sink",
+       "type": "600x450",
+       "at": [
+        3,
+        3
+       ]
+      }
+     ]
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "route_mep",
+  "base": "mep",
+  "calls": [
+   {
+    "tool": "route_mep",
+    "args": {
+     "title": "Cold",
+     "kind": "cold",
+     "from": {
+      "riser": [
+       8.0,
+       4.0
+      ]
+     }
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "supply_fixtures",
+  "base": "mep",
+  "calls": [
+   {
+    "tool": "supply_fixtures",
+    "args": {
+     "title": "Water",
+     "riser": [
+      8.0,
+      4.0
+     ]
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "power_devices",
+  "base": "mep",
+  "calls": [
+   {
+    "tool": "power_devices",
+    "args": {
+     "title": "Power",
+     "panel": "comp:{panel}"
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "move_elements",
+  "base": "walls",
+  "calls": [
+   {
+    "tool": "move_elements",
+    "args": {
+     "title": "move_elements",
+     "target": {
+      "refs": [
+       "wall:{wall1}"
+      ]
+     },
+     "by": [
+      0.0,
+      1.0
+     ]
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "copy_elements",
+  "base": "walls",
+  "calls": [
+   {
+    "tool": "copy_elements",
+    "args": {
+     "title": "copy_elements",
+     "target": {
+      "refs": [
+       "wall:{wall1}"
+      ]
+     },
+     "offsets": [
+      [
+       0.0,
+       3.0
+      ]
+     ]
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "rotate_elements",
+  "base": "walls",
+  "calls": [
+   {
+    "tool": "rotate_elements",
+    "args": {
+     "title": "rotate_elements",
+     "target": {
+      "refs": [
+       "wall:{wall1}"
+      ]
+     },
+     "center": [
+      0.0,
+      0.0
+     ],
+     "angle": 90.0
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "mirror_elements",
+  "base": "walls",
+  "calls": [
+   {
+    "tool": "mirror_elements",
+    "args": {
+     "title": "mirror_elements",
+     "target": {
+      "refs": [
+       "wall:{wall1}"
+      ]
+     },
+     "a": [
+      0.0,
+      -2.0
+     ],
+     "b": [
+      10.0,
+      -2.0
+     ],
+     "copy": true
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "scale_elements",
+  "base": "walls",
+  "calls": [
+   {
+    "tool": "scale_elements",
+    "args": {
+     "title": "scale_elements",
+     "target": {
+      "refs": [
+       "wall:{wall1}"
+      ]
+     },
+     "center": [
+      0.0,
+      0.0
+     ],
+     "factor": 0.5
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "array_elements",
+  "base": "walls",
+  "calls": [
+   {
+    "tool": "array_elements",
+    "args": {
+     "title": "array_elements",
+     "target": {
+      "refs": [
+       "wall:{wall1}"
+      ]
+     },
+     "mode": "linear",
+     "count": 3,
+     "step": [
+      0.0,
+      2.0
+     ]
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "offset_wall",
+  "base": "walls",
+  "calls": [
+   {
+    "tool": "offset_wall",
+    "args": {
+     "title": "offset_wall",
+     "target": {
+      "refs": [
+       "wall:{wall1}"
+      ]
+     },
+     "distance": 1.0,
+     "side": "left"
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "split_wall",
+  "base": "walls",
+  "calls": [
+   {
+    "tool": "split_wall",
+    "args": {
+     "title": "split_wall",
+     "target": {
+      "refs": [
+       "wall:{wall1}"
+      ]
+     },
+     "at": [
+      4.0,
+      0.0
+     ]
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "pin_elements",
+  "base": "walls",
+  "calls": [
+   {
+    "tool": "pin_elements",
+    "args": {
+     "title": "pin_elements",
+     "target": {
+      "refs": [
+       "wall:{wall1}"
+      ]
+     },
+     "pinned": true
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "join_elements",
+  "base": "walls",
+  "calls": [
+   {
+    "tool": "join_elements",
+    "args": {
+     "title": "Join",
+     "target": {
+      "refs": [
+       "wall:{wall1}",
+       "wall:{wall2}"
+      ]
+     },
+     "action": "join"
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "create_level",
+  "base": "walls",
+  "calls": [
+   {
+    "tool": "create_level",
+    "args": {
+     "title": "create_level",
+     "name": "Level 2",
+     "elevation": 3.0
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "edit_level",
+  "base": "walls",
+  "calls": [
+   {
+    "tool": "edit_level",
+    "args": {
+     "title": "edit_level",
+     "level": "level:{level}",
+     "elevation": 0.5
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "changeset_of_three",
+  "base": "walls",
+  "calls": [
+   {
+    "tool": "create_elements",
+    "args": {
+     "title": "W1",
+     "cat": "wall",
+     "items": [
+      {
+       "a": [
+        0,
+        8
+       ],
+       "b": [
+        5,
+        8
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "tool": "create_elements",
+    "args": {
+     "title": "W2",
+     "cat": "wall",
+     "items": [
+      {
+       "a": [
+        0,
+        9
+       ],
+       "b": [
+        5,
+        9
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "tool": "move_elements",
+    "args": {
+     "title": "Move",
+     "target": {
+      "refs": [
+       "wall:{wall1}"
+      ]
+     },
+     "by": [
+      0.0,
+      1.0
+     ]
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "refusal_between_writes",
+  "base": "walls",
+  "calls": [
+   {
+    "tool": "create_elements",
+    "args": {
+     "title": "W1",
+     "cat": "wall",
+     "items": [
+      {
+       "a": [
+        0,
+        8
+       ],
+       "b": [
+        5,
+        8
+       ]
+      }
+     ]
+    }
+   },
+   {
+    "tool": "delete_elements",
+    "args": {
+     "title": "Nothing",
+     "target": {
+      "filter": "door"
+     }
+    }
+   },
+   {
+    "tool": "create_elements",
+    "args": {
+     "title": "W2",
+     "cat": "wall",
+     "items": [
+      {
+       "a": [
+        0,
+        9
+       ],
+       "b": [
+        5,
+        9
+       ]
+      }
+     ]
+    }
+   }
+  ],
+  "writes": true,
+  "refused": [
+   "",
+   "unknown_target",
+   ""
+  ],
+  "receipt_counts": [
+   2,
+   0,
+   0
+  ]
+ },
+ {
+  "id": "refused_not_found_target",
+  "base": "walls",
+  "calls": [
+   {
+    "tool": "delete_elements",
+    "args": {
+     "title": "Nothing",
+     "target": {
+      "filter": "door"
+     }
+    }
+   }
+  ],
+  "writes": false,
+  "refused": [
+   "unknown_target"
+  ]
+ },
+ {
+  "id": "refused_no_effect",
+  "base": "walls",
+  "calls": [
+   {
+    "tool": "add_param",
+    "args": {
+     "title": "Param",
+     "name": "Load",
+     "ptype": "number",
+     "cats": [
+      "wall"
+     ]
+    }
+   },
+   {
+    "tool": "update_elements",
+    "args": {
+     "title": "More",
+     "target": {
+      "filter": "wall"
+     },
+     "set": {
+      "Load": "+10%"
+     }
+    }
+   }
+  ],
+  "writes": true,
+  "refused": [
+   "",
+   "unknown_target"
+  ]
+ },
+ {
+  "id": "refused_unknown_level",
+  "base": "walls",
+  "calls": [
+   {
+    "tool": "delete_level",
+    "args": {
+     "title": "x",
+     "level": "level:999"
+    }
+   }
+  ],
+  "writes": false,
+  "refused": [
+   "unknown_target"
+  ]
+ },
+ {
+  "id": "refused_bad_scale",
+  "base": "walls",
+  "calls": [
+   {
+    "tool": "scale_elements",
+    "args": {
+     "title": "x",
+     "target": {
+      "refs": [
+       "wall:{wall1}"
+      ]
+     },
+     "center": [
+      0.0,
+      0.0
+     ],
+     "factor": 0.0
+    }
+   }
+  ],
+  "writes": false,
+  "refused": [
+   "invalid_args"
+  ]
+ },
+ {
+  "id": "place_rooms",
+  "base": "house",
+  "calls": [
+   {
+    "tool": "place_rooms",
+    "args": {
+     "title": "Rooms",
+     "level": "level:{ground}"
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "delete_level",
+  "base": "house",
+  "calls": [
+   {
+    "tool": "delete_level",
+    "args": {
+     "title": "Drop",
+     "level": "level:{upper}"
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "flip_openings",
+  "base": "house",
+  "calls": [
+   {
+    "tool": "flip_openings",
+    "args": {
+     "title": "Flip",
+     "target": {
+      "refs": [
+       "door:{door}"
+      ]
+     },
+     "flip": "hand"
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "create_terrain",
+  "base": "house",
+  "calls": [
+   {
+    "tool": "create_terrain",
+    "args": {
+     "title": "Ground",
+     "points": [
+      [
+       -5.0,
+       -5.0,
+       0.0
+      ],
+      [
+       20.0,
+       -5.0,
+       1.5
+      ],
+      [
+       20.0,
+       15.0,
+       2.5
+      ],
+      [
+       -5.0,
+       15.0,
+       0.5
+      ],
+      [
+       7.0,
+       5.0,
+       1.2
+      ]
+     ]
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "place_footings",
+  "base": "house",
+  "calls": [
+   {
+    "tool": "create_elements",
+    "args": {
+     "title": "Column",
+     "cat": "column",
+     "items": [
+      {
+       "at": [
+        4.0,
+        3.0
+       ],
+       "level": "level:{ground}",
+       "structural": true
+      }
+     ]
+    }
+   },
+   {
+    "tool": "place_footings",
+    "args": {
+     "title": "Footings",
+     "level": "level:{ground}"
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "measure_save",
+  "base": "walls",
+  "calls": [
+   {
+    "tool": "measure_save",
+    "args": {
+     "title": "Gap",
+     "kind": "distance",
+     "view": "level:{ground}",
+     "anchors": [
+      "wall:{wall1}@face0",
+      [
+       5.0,
+       6.0,
+       0.0
+      ]
+     ]
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "measure_save_mass_face",
+  "base": "mass",
+  "calls": [
+   {
+    "tool": "measure_save",
+    "args": {
+     "title": "Roof area",
+     "kind": "area",
+     "anchors": [
+      "mass:{mass}@top"
+     ]
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "edit_mass",
+  "base": "mass",
+  "calls": [
+   {
+    "tool": "edit_mass",
+    "args": {
+     "title": "Taller",
+     "mass": "mass:{mass}",
+     "action": "push_pull",
+     "faces": [
+      "top"
+     ],
+     "distance": 3.0
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "edit_mass_draft",
+  "base": "mass",
+  "calls": [
+   {
+    "tool": "edit_mass",
+    "args": {
+     "title": "Batter",
+     "mass": "mass:{mass}",
+     "action": "draft",
+     "faces": [
+      "bottom",
+      "north",
+      "south"
+     ],
+     "angle": 4.0
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
+  "id": "mass_to_family",
+  "base": "mass",
+  "calls": [
+   {
+    "tool": "mass_to_family",
+    "args": {
+     "title": "Family",
+     "mass": "mass:{tl_mass}",
+     "name": "Block"
+    }
+   }
+  ],
+  "writes": true
+ }
+]

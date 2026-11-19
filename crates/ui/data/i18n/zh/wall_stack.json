@@ -1,0 +1,10 @@
+{
+ "wall_stack.we.stack_caption": "复合类型",
+ "wall_stack.we.side_left": "左侧面",
+ "wall_stack.we.side_right": "右侧面",
+ "wall_stack.we.from": "起点",
+ "wall_stack.we.to": "终点",
+ "wall_stack.we.bottom": "底部",
+ "wall_stack.we.delete_tip": "删除此轮廓",
+ "wall_stack.we.from_after_to": "“起点”必须位于“终点”之前"
+}

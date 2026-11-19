@@ -1,0 +1,42 @@
+{
+ "ai.tool.show_elements": "正在显示构件",
+ "ai.tool.isolate_elements": "正在隔离构件",
+ "ai.tool.color_by": "按值着色",
+ "ai.tool.reset_view": "正在重置视图",
+ "ai_found.found.query": "已找到",
+ "ai_found.found.show": "已显示",
+ "ai_found.found.isolate": "已隔离",
+ "ai_found.found.hide": "已隐藏",
+ "ai_found.found.color": "按颜色",
+ "ai_found.found.count": "{n}/{m}",
+ "ai_found.found.none": "没有匹配项。请尝试更宽的筛选条件。",
+ "ai_found.found.show_btn": "显示",
+ "ai_found.found.show_tip": "选择这些构件，并在平面图和三维视图中缩放至它们",
+ "ai_found.found.isolate_btn": "隔离",
+ "ai_found.found.isolate_tip": "仅显示这些构件，直至“重置视图”",
+ "ai_found.found.select_btn": "选择",
+ "ai_found.found.select_tip": "选择这些构件，但不移动视图",
+ "ai_found.legend.title": "按 {by} 着色",
+ "ai_found.legend.row_tip": "单击以选择这些构件",
+ "ai_found.legend.empty_value": "无值",
+ "ai_found.legend.other": {
+  "other": "另外 # 个值",
+  "one": "另外 # 个值"
+ },
+ "ai_found.view.title": "AI助手视图",
+ "ai_found.view.reset": "重置视图",
+ "ai_found.view.reset_tip": "恢复AI助手更改视图前的视图",
+ "ai_found.view.shown": {
+  "other": "已显示 # 个构件",
+  "one": "已显示 # 个构件"
+ },
+ "ai_found.view.isolated": {
+  "other": "已隔离 # 个构件",
+  "one": "已隔离 # 个构件"
+ },
+ "ai_found.view.hidden": {
+  "other": "已隐藏 # 个构件",
+  "one": "已隐藏 # 个构件"
+ },
+ "ai_found.found.line": "{what}：{count}"
+}

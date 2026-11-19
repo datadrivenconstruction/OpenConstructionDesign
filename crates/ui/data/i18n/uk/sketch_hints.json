@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "Накресліть замкнений контур: клацайте точки, потім Enter або Готово",
+ "sketch_hints.sk_finish": "Готово",
+ "sketch_hints.sk_cancel": "Скасувати",
+ "sketch_hints.import_warn": "попереджень перевірки моделі: {n} (перше: {first})",
+ "sketch_hints.ai.offline.schedule": "Відкрити відомість",
+ "sketch_hints.ai.offline.check": "Перевірити за правилами",
+ "sketch_hints.ai.offline.warnings": "Показати попередження",
+ "cmd.file.publish_pdf": "Опублікувати аркуші у PDF…",
+ "cmd.file.publish_pdf.desc": "Публікує вибрані аркуші у PDF. Те саме, що Експорт аркушів у PDF/SVG.",
+ "sketch_hints.verify_none": "У виділенні немає елементів, заданих AI-асистентом, для перевірки",
+ "sketch_hints.contours_none": "У моделі немає топоповерхні: контури з’являться після її створення",
+ "sketch_hints.contours_off": "Контури топоповерхні приховано",
+ "sketch_hints.contours_on": "Контури топоповерхні показано"
+}

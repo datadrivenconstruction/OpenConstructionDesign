@@ -1,0 +1,5 @@
+{
+ "sel_chip.sel_chip": "{name}: {n}",
+ "sel_chip.opt.sel_hint": "Щёлкните элемент, чтобы выбрать. Ctrl добавляет, Shift убирает.",
+ "sel_chip.opt.units": "Единицы"
+}

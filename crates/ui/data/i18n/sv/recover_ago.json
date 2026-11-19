@@ -1,0 +1,29 @@
+{
+ "recover.ago_now": "just nu",
+ "recover.ago_min": {
+  "one": "för # min sedan",
+  "other": "för # min sedan"
+ },
+ "recover.ago_hour": {
+  "one": "för # timme sedan",
+  "other": "för # timmar sedan"
+ },
+ "recover.ago_yesterday": "igår",
+ "recover.ago_day": {
+  "one": "för # dag sedan",
+  "other": "för # dagar sedan"
+ },
+ "recover.empty": "Inga ögonblicksbilder kvar",
+ "recover.empty_hint": "Inget att återställa för det här projektet.",
+ "recover.all_damaged": "Alla ögonblicksbilder är skadade, ingen kan återställas.",
+ "recover.keys_hint": "Upp och Ner väljer en ögonblicksbild, Enter går till Återställ",
+ "recover.row_tip": "Sparad {time}",
+ "recover.row_damaged_tip": "Kan inte återställas: {reason}",
+ "recover.archive_ask": "Flytta den här ögonblicksbilden till arkivet?",
+ "recover.discard_ask": {
+  "one": "Flytta ögonblicksbilden till arkivet? Den erbjuds inte igen.",
+  "other": "Flytta alla # ögonblicksbilder till arkivet? De erbjuds inte igen."
+ },
+ "recover.confirm_yes": "Flytta till arkiv",
+ "recover.confirm_no": "Behåll ögonblicksbilder"
+}

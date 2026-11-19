@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "Anvendelsen blev stoppet: modellen er beholdt, som den var",
+ "apply_verify.rolled_back": "Anvendelsen svarede ikke til udkastet og blev taget tilbage; modellen er uændret. {what}",
+ "apply_verify.diff.missing": "Udkastet viser {what} {kind}, men Anvend gjorde det ikke.",
+ "apply_verify.diff.extra": "Anvend {kind} {what}, som udkastet ikke viser.",
+ "apply_verify.diff.kind": "Udkastet viser {what} {shown}, men Anvend {applied} den.",
+ "apply_verify.diff.value": "{what}: „{col}“ blev anderledes end udkastet.",
+ "apply_verify.diff.truncated": "Udkastet og den anvendte ændring er forskellige i størrelse.",
+ "apply_verify.diff.unreadable": "Den anvendte ændring kunne ikke læses tilbage ({e}).",
+ "apply_verify.no_base": "Anvendelsen blev ikke kørt: kopien til at kontrollere udkastet mod mangler. Modellen er uændret; bed om udkastet igen.",
+ "apply_verify.take_back_failed": "Tilbagetagning mislykkedes ({e}): brug Fortryd.",
+ "apply_verify.kind.created": "oprettet",
+ "apply_verify.kind.changed": "ændret",
+ "apply_verify.kind.deleted": "slettet",
+ "apply_verify.card.type_row": "Type {type} · {n} elementer får ændringen"
+}

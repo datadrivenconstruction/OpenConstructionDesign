@@ -1,0 +1,4 @@
+{
+ "room_watch.room.dup": "Ruang {room} berada di dalam region ruang {other}: luas dan volume hanya dihitung di ruang {other}",
+ "ai.issue.room_dup": "Ruang berada di dalam region ruang {0}: luasnya dihitung di sana"
+}

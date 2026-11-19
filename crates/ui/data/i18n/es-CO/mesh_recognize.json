@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "Reconociendo {done} de {total}",
+ "mesh_recognize.all": "Todos ({n})",
+ "mesh_recognize.only_confident": "Solo seguras",
+ "mesh_recognize.confident_tip": "Marca las filas cuyo tipo coincide con la categoría y cuya confianza es de al menos el {pct} %",
+ "mesh_recognize.row_hint": "Haga clic en una fila para marcarla. Las flechas mueven, Intro marca.",
+ "mesh_recognize.kind_for": "Tipo para {name}",
+ "mesh_recognize.source": "Mallas de origen",
+ "mesh_recognize.keep": "Conservar mallas",
+ "mesh_recognize.replace": "Reemplazar mallas",
+ "mesh_recognize.convert_keep": "Convertir {n}",
+ "mesh_recognize.convert_remove": "Convertir {n} y quitar mallas",
+ "mesh_recognize.creates": "Creará {n}: {kinds}",
+ "mesh_recognize.creates_none": "Nada marcado todavía",
+ "mesh_recognize.stay": "{n} mallas de origen permanecen en el modelo",
+ "mesh_recognize.removed": "{n} mallas de origen se eliminarán. Deshacer las devuelve."
+}

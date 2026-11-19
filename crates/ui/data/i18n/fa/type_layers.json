@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "درج لایه زیر",
+ "type_layers.layer.delete": "حذف لایه",
+ "type_layers.layer.delete_last": "یک نوع حداقل به یک لایه نیاز دارد",
+ "type_layers.value.bad": "مقدار مثبت معتبر نیست",
+ "type_layers.value.required": "الزامی",
+ "type_layers.unsaved.title": "تغییرات ذخیره‌نشده {name}",
+ "type_layers.unsaved.body": "آن‌ها را روی نوع اعمال کنیم یا کنار بگذاریم؟",
+ "type_layers.unsaved.discard": "کنار گذاشتن"
+}

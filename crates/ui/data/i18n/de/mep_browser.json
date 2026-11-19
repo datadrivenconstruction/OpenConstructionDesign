@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "Systemname",
+ "mep_browser.add_blocked": "Geben Sie zuerst einen Systemnamen ein",
+ "mep_browser.col.insulation": "Dämmung",
+ "mep_browser.cancel": "Abbrechen",
+ "mep_browser.delete.title": "Dieses System löschen?",
+ "mep_browser.delete.body": "System „{name}“ und seine Leitungen ({n}) werden gelöscht.",
+ "mep_browser.delete.undo": "Dies lässt sich mit einem Rückgängig-Schritt rückgängig machen.",
+ "mep_browser.delete.confirm": "System löschen"
+}

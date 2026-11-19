@@ -1,0 +1,4 @@
+{
+ "number_input.bad_number": "Pas un nombre : saisissez des chiffres avec un point décimal (1.5)",
+ "number_input.at_grids_tip": "Placer un poteau à chaque intersection de trame de ce niveau"
+}

@@ -1,0 +1,22 @@
+{
+ "cmd.arch.grid_pick": "Griglia per linea",
+ "cmd.arch.grid_pick.desc": "Crea una griglia esattamente lungo una linea di disegno scelta del livello attivo; i nomi proseguono la serie. Tab prende subito tutte le linee parallele dello stesso livello di disegno. Ogni scelta è un passo di annullamento.",
+ "cmd.struct.beam_pick": "Trave per linea",
+ "cmd.struct.beam_pick.desc": "Posiziona una trave del tipo corrente sul livello attivo lungo una linea di disegno scelta. Tab prende la catena collegata. Ogni scelta è un passo di annullamento.",
+ "hint.grid_pick.one": "Griglia per linea: scegli una linea di disegno · Tab tutte le linee parallele del suo livello · Esc esce",
+ "hint.grid_pick.more": "Griglia per linea: scegli una linea per prendere tutte le linee parallele del suo livello · Tab una linea · Esc disarma",
+ "hint.beam_pick.one": "Trave per linea: scegli una linea di disegno · Tab catena collegata · Esc esce",
+ "hint.beam_pick.more": "Trave per linea: scegli una linea per prenderne la catena · Tab una linea · Esc disarma",
+ "line_pick.st.start_grid": "Scegli una linea di disegno. Tab: tutte le linee parallele del suo livello",
+ "line_pick.st.start_beam": "Scegli una linea di disegno per una trave {type}. Tab: catena collegata",
+ "line_pick.st.grid_done": "Griglia {name} aggiunta",
+ "line_pick.st.grids_done": "{n} griglie aggiunte: {first} — {last}",
+ "line_pick.st.beam_done": "Trave {type} aggiunta",
+ "line_pick.st.beams_done": "{n} travi {type} aggiunte",
+ "line_pick.st.on_grid": "Questa linea ha già la griglia {name}",
+ "line_pick.st.on_beam": "Questa linea ha già la trave {id}",
+ "line_pick.st.no_layer": "I livelli di disegno delle linee non sono ancora noti, riprova",
+ "line_pick.st.no_beam_type": "Nessuna sezione di trave nel catalogo",
+ "line_pick.st.reload_warn": "Creato, ma la vista non si è ricaricata: {err}",
+ "line_pick.st.failed": "Non creato: {err}"
+}

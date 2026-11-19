@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "Simpan otomatis gagal, perubahan terbaru tidak terlindungi. {why}",
+ "autosave_status.autosave_open": "Pengaturan simpan otomatis",
+ "autosave_status.autosave_recovered": "Simpan otomatis berfungsi lagi.",
+ "autosave_status.autosave_reason": "Alasan: {why}"
+}

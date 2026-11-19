@@ -1,0 +1,15 @@
+{
+ "fe.add_why_empty": "أدخل اسم المعامل أولًا",
+ "fe.add_why_exists": "يوجد معامل بهذا الاسم بالفعل؛ استخدم تطبيق لتغييره",
+ "fe.apply_why_missing": "لا يوجد معامل بهذا الاسم؛ اكتب اسمًا موجودًا",
+ "fe.nochange": "لا تغييرات بعد",
+ "options.accept_more": "قبول…",
+ "options.delete_more": "حذف…",
+ "options.empty_title": "لا توجد مجموعات خيارات بعد",
+ "options.more": "إجراءات أخرى: {name}",
+ "options.primary_named": "الخيار الأساسي: {name}",
+ "options.primary_tip": "اجعل هذا الخيار الأساسي في المجموعة",
+ "options.select_first": "حدّد عناصر في النموذج أولًا",
+ "options.show_3d": "عرض في ثلاثي الأبعاد: {name}",
+ "options.show_plan": "عرض في المسقط: {name}"
+}

@@ -1,0 +1,20 @@
+{
+ "dwgfillet.fillet": "Concordância",
+ "dwgfillet.cancel": "Parar concordância",
+ "dwgfillet.tip": "Clique em duas linhas, do lado a manter: ambas são aparadas ou prolongadas até ao canto, com um arco tangente quando o raio é superior a zero",
+ "dwgfillet.radius": "Raio de concordância",
+ "dwgfillet.radius_tip": "Raio do arco em unidades do desenho; 0 cria um canto vivo",
+ "dwgfillet.st.arm_first": "Clique na primeira linha, do lado a manter",
+ "dwgfillet.st.arm_second": "Clique na segunda linha, do lado a manter",
+ "dwgfillet.st.not_armed": "Escolha primeiro Concordância",
+ "dwgfillet.st.click_line": "Clique numa única linha do desenho",
+ "dwgfillet.st.other_drawing": "As duas linhas têm de pertencer ao mesmo desenho: recomece",
+ "dwgfillet.st.changed": "A primeira linha foi alterada: recomece",
+ "dwgfillet.st.same_line": "Escolha outra segunda linha",
+ "dwgfillet.st.parallel": "As linhas são paralelas e nunca se encontram: não é possível criar um canto",
+ "dwgfillet.st.degenerate": "Uma linha não tem comprimento",
+ "dwgfillet.st.no_side": "O lado selecionado não tem comprimento a partir do canto",
+ "dwgfillet.st.too_big": "O raio é demasiado grande para estas linhas: use um raio menor",
+ "dwgfillet.st.radius_bad": "O raio tem de ser zero ou positivo",
+ "dwgfillet.st.done": "Canto criado"
+}

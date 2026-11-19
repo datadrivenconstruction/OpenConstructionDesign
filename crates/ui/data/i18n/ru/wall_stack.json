@@ -1,0 +1,10 @@
+{
+ "wall_stack.we.stack_caption": "Составной тип",
+ "wall_stack.we.side_left": "Левая грань",
+ "wall_stack.we.side_right": "Правая грань",
+ "wall_stack.we.from": "От",
+ "wall_stack.we.to": "До",
+ "wall_stack.we.bottom": "Низ",
+ "wall_stack.we.delete_tip": "Удалить профиль",
+ "wall_stack.we.from_after_to": "«От» должно быть меньше «До»"
+}

@@ -1,0 +1,5 @@
+{
+ "elem.panel_select_wall": "दीवार चुनें",
+ "cmd.elem.panel_select_wall": "दीवार चुनें",
+ "elem.left_in_place": "छोड़ा गया: {kinds}। पैनल अपनी दीवार का हिस्सा है; मास और एनोटेशन अपने आप हटते हैं।"
+}

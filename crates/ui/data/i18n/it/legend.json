@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "Legenda",
+ "legend.legend.new_hint": "Nome nuova legenda",
+ "legend.legend.delete_tip": "Elimina legenda",
+ "legend.legend.delete_placed": "Elimina legenda (posizionata su: {sheets})",
+ "legend.legend.deleted": "Legenda eliminata: {name}",
+ "legend.legend.no_rows": "Nessuna riga. Aggiungine una oppure prendi gli stili della vista corrente",
+ "legend.legend.replace_q": "Sostituire {n} righe con gli stili di questa vista?",
+ "legend.legend.replace": "Sostituisci",
+ "legend.legend.keep": "Mantieni righe",
+ "legend.col.swatch": "Campione",
+ "legend.col.value": "Valore",
+ "legend.col.label": "Etichetta"
+}

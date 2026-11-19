@@ -1,0 +1,9 @@
+{
+ "elem.deleted": "Elemente șterse: {n}",
+ "elem.deleted_kept": "Elemente șterse: {n}; lăsate pe loc: {k} (panouri și elemente care nu pot fi șterse)",
+ "elem.not_deleted": "nu a fost șters: {e}",
+ "elem.not_deletable": "Acest element nu poate fi șters",
+ "elem.panel": "panou de fațadă cortină",
+ "elem.panel_refused": "Un panou face parte din fațada sa cortină și nu poate fi șters separat. Selectează întregul perete pentru a-l șterge.",
+ "elem.reload_failed": "Șters, dar vederea nu s-a actualizat: {e}"
+}

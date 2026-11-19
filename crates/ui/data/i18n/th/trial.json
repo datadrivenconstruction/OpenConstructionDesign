@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "จุด",
+ "trial.field.distance": "ระยะ",
+ "trial.field.target": "องค์ประกอบ",
+ "trial.refused": "{field}: {reason} เปลี่ยนค่าเพื่อนำไปใช้",
+ "trial.preview_off": "ปิดการดูตัวอย่าง: โมเดลใหญ่เกินไป"
+}

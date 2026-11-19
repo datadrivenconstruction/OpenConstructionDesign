@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "Légende",
+ "legend.legend.new_hint": "Nom de la nouvelle légende",
+ "legend.legend.delete_tip": "Supprimer la légende",
+ "legend.legend.delete_placed": "Supprimer la légende (placée sur : {sheets})",
+ "legend.legend.deleted": "Légende supprimée : {name}",
+ "legend.legend.no_rows": "Aucune ligne pour l'instant. Ajoutez-en une ou reprenez les styles de la vue courante",
+ "legend.legend.replace_q": "Remplacer {n} lignes par les styles de cette vue ?",
+ "legend.legend.replace": "Remplacer",
+ "legend.legend.keep": "Garder les lignes",
+ "legend.col.swatch": "Échantillon",
+ "legend.col.value": "Valeur",
+ "legend.col.label": "Libellé"
+}

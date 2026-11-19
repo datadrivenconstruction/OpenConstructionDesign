@@ -1,0 +1,4 @@
+{
+ "cmd.data.sync_xlsx": "XLSX 스프레드시트과 동기화…",
+ "cmd.data.sync_xlsx.desc": "연결된 통합 문서를 다시 읽고 모델과의 차이를 표시합니다."
+}

@@ -1,0 +1,13 @@
+{
+ "mep.sys.duct": "Soufflage S1",
+ "mep.sys.pipe": "Eau froide C1",
+ "mep.sys.tray": "Énergie",
+ "mep.round": "Rond",
+ "mep.material": "Matériau",
+ "mep3d.elevation": "Cote par rapport au niveau",
+ "mep3d.slope": "Pente",
+ "mep3d.shape": "Forme",
+ "mep3d.shape.rect": "Rectangulaire",
+ "mep3d.shape.round": "Rond",
+ "mep3d.shape.oval": "Ovale aplati"
+}

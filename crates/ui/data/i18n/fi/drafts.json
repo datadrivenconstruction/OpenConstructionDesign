@@ -1,0 +1,8 @@
+{
+ "drafts.drafts.head": "Avoimissa muokkausikkunoissa on muokkauksia, joita ei ole vielä projektissa:",
+ "drafts.draft.family": "Perhe ”{name}”",
+ "drafts.draft.line": "Viivakirjasto: {name}",
+ "drafts.draft.styles": "Näkymän välin viivatyylit",
+ "drafts.btn.save_all": "Tallenna kaikki",
+ "drafts.drafts.refused": "Luonnosta ei voitu tallentaa. Mitään ei suljettu; luonnoksen sisältävä muokkausikkuna on auki."
+}

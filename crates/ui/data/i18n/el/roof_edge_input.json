@@ -1,0 +1,23 @@
+{
+ "roof_edge.err.number": "Εισάγετε αριθμό",
+ "roof_edge.err.positive": "Πρέπει να είναι μεγαλύτερο από μηδέν",
+ "roof_edge.err.nonneg": "Δεν πρέπει να είναι αρνητικό",
+ "roof_edge.err.max": "Δεν πρέπει να υπερβαίνει το {max}",
+ "roof_edge.list.empty_hint": "Προσθέστε γείσα, υδροροές, υπόσκεπα ή φωταγωγούς με τις εντολές στέγης",
+ "roof_edge.edit_tip": "Επεξεργασία ιδιοτήτων",
+ "roof_edge.delete_tip": "Διαγραφή",
+ "roof_edge.pe.del_tip": "Αφαίρεση αυτού του σημείου (μια τομή κρατά τουλάχιστον 3)",
+ "roof_edge.pe.up_tip": "Μετακίνηση αυτού του σημείου πάνω",
+ "roof_edge.confirm_edge": "Διαγραφή του {name}; Το Ctrl+Z το επαναφέρει.",
+ "roof_edge.confirm_profile": "Διαγραφή προφίλ {name}; Το Ctrl+Z το επαναφέρει.",
+ "roof_edge.deleted_one": "Διαγράφηκε το {name}",
+ "roof_edge.deleted_n": {
+  "one": "Διαγράφηκε # στοιχείο",
+  "other": "Διαγράφηκαν # στοιχεία"
+ },
+ "roof_edge.profile_deleted": "Το προφίλ διαγράφηκε",
+ "roof_edge.profile_in_use": {
+  "one": "Χρησιμοποιείται από # στοιχείο ακμής: διαγράψτε ή αλλάξτε το πρώτα",
+  "other": "Χρησιμοποιείται από # στοιχεία ακμής: διαγράψτε ή αλλάξτε τα πρώτα"
+ }
+}

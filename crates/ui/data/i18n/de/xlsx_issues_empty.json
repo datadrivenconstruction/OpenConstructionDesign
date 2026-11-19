@@ -1,0 +1,8 @@
+{
+ "xlsx_issues.empty_title": "Leeres Blatt in der Arbeitsmappe",
+ "xlsx_issues.empty_kept": "Blatt {sheet} ist leer: Daraus wurde nichts gelesen, {n} Elemente bleiben unverändert. Andere Blätter können weiterhin angewendet werden.",
+ "xlsx_issues.empty_none": "Blatt {sheet} ist leer: Daraus wurde nichts gelesen. Andere Blätter können weiterhin angewendet werden.",
+ "xlsx_issues.unreadable_title": "Blatt konnte nicht gelesen werden",
+ "xlsx_issues.unreadable": "Blatt {sheet} konnte nicht gelesen werden, sein Teil der Datei ist beschädigt: Daraus wurde nichts übernommen, und seine Elemente bleiben unverändert. Andere Blätter können weiterhin angewendet werden.",
+ "xlsx_issues.formulas": "Die Formeln auf Blatt {sheet} konnten nicht gelesen werden, daher lässt sich ein berechneter Wert nicht von einer Bearbeitung unterscheiden: Aus diesem Blatt wurde nichts übernommen. Andere Blätter können weiterhin angewendet werden."
+}

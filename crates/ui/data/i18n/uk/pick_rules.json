@@ -1,0 +1,11 @@
+{
+ "pick_rules.filter": "Вибір: усе",
+ "pick_rules.filter.on": "Вибір: вимкнено {n}",
+ "pick_rules.filter.title": "Категорії, які може вибирати клік",
+ "pick_rules.filter.all": "Вибирати всі категорії",
+ "pick_rules.filter.tip": "Фільтр вибору: зняті категорії пропускаються під час клацання і наведення",
+ "pick_rules.here": "Елементи тут",
+ "pick_rules.here.selected": "вибрано",
+ "pick_rules.pinned": "Вибрати закріплені елементи",
+ "pick_rules.here.row": "{cat} · {len}"
+}

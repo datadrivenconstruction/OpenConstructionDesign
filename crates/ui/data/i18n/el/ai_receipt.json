@@ -1,0 +1,21 @@
+{
+ "ai.receipt.title": {
+  "one": "Εφαρμόστηκε # αλλαγή",
+  "other": "Εφαρμόστηκαν # αλλαγές"
+ },
+ "ai.receipt.more": "+{n} ακόμα",
+ "ai.receipt.list": "Αντικείμενα",
+ "ai.receipt.show": "Εμφάνιση",
+ "ai.receipt.show.tip": "Επιλογή και εστίαση των αλλαγμένων αντικειμένων",
+ "ai.receipt.undo": "Αναίρεση",
+ "ai.receipt.undo.tip": "Αναιρεί ακριβώς αυτή την εφαρμογή",
+ "ai.receipt.undone": "Αναιρέθηκε",
+ "ai.receipt.later": "Έγιναν μεταγενέστερες αλλαγές",
+ "ai.receipt.toast_undone": "Το εφαρμοσμένο σχέδιο αναιρέθηκε",
+ "ai.receipt.draft_family": "Οικογένεια προσχεδίου: {name}",
+ "ai.receipt.promote": "Ορισμός ως εργαζόμενη",
+ "ai.receipt.promote.tip": "Μετατρέπει την οικογένεια προσχεδίου σε εργαζόμενη (ένα βήμα αναίρεσης)",
+ "ai.receipt.promoted": "Η οικογένεια είναι πλέον εργαζόμενη",
+ "ai.receipt.promote_failed": "Η οικογένεια δεν μπόρεσε να γίνει εργαζόμενη",
+ "cmd.ai.receipt_undo": "Αναίρεση τελευταίου σχεδίου AI"
+}

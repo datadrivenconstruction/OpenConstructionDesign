@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key} محفوظ ہے ({why}) اور دوبارہ تفویض نہیں ہو سکتی",
+ "quick.keys.res_copy": "کاپی",
+ "quick.keys.res_paste": "پیسٹ",
+ "quick.keys.res_cut": "کاٹیں",
+ "quick.keys.res_undo": "واپس / دوبارہ",
+ "quick.keys.res_save": "محفوظ کریں",
+ "quick.keys.res_palette": "کمانڈ پیلیٹ",
+ "quick.keys.reserved_conflict": "{key} پہلے ہی “{cmd}” کے لیے استعمال ہو رہی ہے۔ Esc اسے وہیں رکھتا ہے۔",
+ "quick.keys.reserved_swap": "بدلیں",
+ "quick.keys.reserved_take": "لے لیں",
+ "quick.keys.reserved_keep": "رکھیں",
+ "quick.keys.reserved_os": "سسٹم کے زیر استعمال:"
+}

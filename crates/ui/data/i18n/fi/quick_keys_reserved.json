@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key} on varattu ({why}), eikä sitä voi määrittää uudelleen",
+ "quick.keys.res_copy": "kopioi",
+ "quick.keys.res_paste": "liitä",
+ "quick.keys.res_cut": "leikkaa",
+ "quick.keys.res_undo": "kumoa / tee uudelleen",
+ "quick.keys.res_save": "tallenna",
+ "quick.keys.res_palette": "komentohaku",
+ "quick.keys.reserved_conflict": "{key} on jo käytössä: “{cmd}”. Esc säilyttää sen siellä.",
+ "quick.keys.reserved_swap": "Vaihda",
+ "quick.keys.reserved_take": "Ota se",
+ "quick.keys.reserved_keep": "Säilytä",
+ "quick.keys.reserved_os": "Järjestelmän käytössä:"
+}

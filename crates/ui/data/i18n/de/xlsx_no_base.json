@@ -1,0 +1,6 @@
+{
+ "xlsx_no_base.title": "Diese Arbeitsmappe hat keine Vergleichsdaten",
+ "xlsx_no_base.detail": "Das versteckte Vergleichsblatt fehlt oder ist beschädigt (ein anderes Programm hat die Arbeitsmappe neu gespeichert oder sie wurde von Hand erstellt). Jede abweichende Zelle ersetzt den Modellwert; Modelländerungen seit dem Export können nicht erkannt werden. Im Modell fehlende Zeilen werden nicht gelöscht.",
+ "xlsx_no_base.confirm": "Ich habe die Änderungen geprüft: Modellwerte ersetzen ({n})",
+ "xlsx_no_base.confirm_first": "Bestätigen Sie zuerst den Import einer Arbeitsmappe ohne Vergleichsdaten"
+}

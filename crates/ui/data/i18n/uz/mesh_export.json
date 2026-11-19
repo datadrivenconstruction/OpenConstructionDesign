@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "Butun modelni yoki tanlovni metrda yoki millimetrda ikkilik STL sifatida saqlaydi.",
+ "cmd.data.export_obj.desc": "Butun modelni yoki tanlovni MTL fayli bilan OBJ sifatida saqlaydi: har bir element uchun bitta guruh, ranglar materialga ko'ra.",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "Materiallar bilan OBJ (.obj)",
+ "open_file.filter.mesh": "3D to'rlar (glTF, STEP, STL, OBJ)",
+ "mx.title": "{fmt} ni eksport qilish",
+ "mx.scope": "Nimani eksport qilish",
+ "mx.scope.all": "Butun model",
+ "mx.scope.sel": "Tanlov ({n} ta element)",
+ "mx.units": "Fayldagi birliklar",
+ "mx.units.m": "Metr",
+ "mx.units.mm": "Millimetr",
+ "mx.export": "Eksport…",
+ "mx.saved": "{fmt} saqlandi: {path} ({parts} ta element, {tris} ta uchburchak)",
+ "mx.partial": "{fmt} {n} ta muammo bilan saqlandi, ba'zi jismlar yetishmasligi mumkin: {path}",
+ "mx.failed": "{fmt} eksporti amalga oshmadi: {error}",
+ "mx.imported": "{file}: {n} ta element import qilindi ({tris} ta uchburchak)",
+ "mx.imported_notes": "{file}: {n} ta element import qilindi ({tris} ta uchburchak), {w} ta eslatma: {first}"
+}

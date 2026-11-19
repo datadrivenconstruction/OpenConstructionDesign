@@ -1,0 +1,5 @@
+{
+ "src.more": "Mais",
+ "src.cf.chosen": "{n} de {m} escolhidos",
+ "src.opt.allow_mass_warn": "Atenção: o arquivo não corresponde à maioria dos elementos importados, então a mesclagem pode alterar muitos dados."
+}

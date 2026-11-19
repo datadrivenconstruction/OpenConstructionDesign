@@ -1,0 +1,21 @@
+{
+ "ai.receipt.title": {
+  "one": "นำการเปลี่ยนแปลง # รายการไปใช้แล้ว",
+  "other": "นำการเปลี่ยนแปลง # รายการไปใช้แล้ว"
+ },
+ "ai.receipt.more": "+{n} อีก",
+ "ai.receipt.list": "องค์ประกอบ",
+ "ai.receipt.show": "แสดง",
+ "ai.receipt.show.tip": "เลือกและจัดกรอบองค์ประกอบที่เปลี่ยน",
+ "ai.receipt.undo": "เลิกทำ",
+ "ai.receipt.undo.tip": "ย้อนกลับการนำไปใช้ครั้งนี้เท่านั้น",
+ "ai.receipt.undone": "เลิกทำแล้ว",
+ "ai.receipt.later": "มีการแก้ไขภายหลัง",
+ "ai.receipt.toast_undone": "เลิกทำแผนที่นำไปใช้แล้ว",
+ "ai.receipt.draft_family": "แฟมิลีฉบับร่าง: {name}",
+ "ai.receipt.promote": "ทำให้ใช้งานได้",
+ "ai.receipt.promote.tip": "เปลี่ยนแฟมิลีฉบับร่างให้ใช้งานได้ (เลิกทำหนึ่งขั้น)",
+ "ai.receipt.promoted": "แฟมิลีใช้งานได้แล้ว",
+ "ai.receipt.promote_failed": "ทำให้แฟมิลีใช้งานได้ไม่สำเร็จ",
+ "cmd.ai.receipt_undo": "เลิกทำแผน AI ล่าสุด"
+}

@@ -1,0 +1,13 @@
+{
+ "xlw.copy_list": "Salin daftar",
+ "xlw.save_list": "Simpan daftar…",
+ "xlw.copy_list_tip": "Salin baris yang ditampilkan (lembar, sel, id, kolom, nilai, alasan) sebagai teks untuk spreadsheet",
+ "xlw.save_list_tip": "Simpan baris yang ditampilkan sebagai berkas .csv di samping buku kerja; buku kerja itu sendiri tidak pernah diubah",
+ "xlw.list_book_value": "Nilai buku kerja",
+ "xlw.list_model_value": "Nilai model",
+ "xlw.list_reason": "Alasan",
+ "xlw.list_copied": "Daftar disalin: {n} baris",
+ "xlw.list_saved": "Daftar disimpan: {n} baris, {file}",
+ "xlw.list_save_failed": "Daftar tidak disimpan",
+ "xlw.list_nothing": "Tidak ada yang disalin: tidak ada baris ditampilkan"
+}

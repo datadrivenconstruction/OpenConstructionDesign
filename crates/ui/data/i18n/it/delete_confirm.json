@@ -1,0 +1,59 @@
+{
+ "del.k.door": {
+  "one": "# porta",
+  "other": "# porte"
+ },
+ "del.k.window": {
+  "one": "# finestra",
+  "other": "# finestre"
+ },
+ "del.k.opening": {
+  "one": "# apertura",
+  "other": "# aperture"
+ },
+ "del.k.comp": {
+  "one": "# componente ospitato",
+  "other": "# componenti ospitati"
+ },
+ "del.k.rebar": {
+  "one": "# set di armatura",
+  "other": "# set di armature"
+ },
+ "del.k.port": {
+  "one": "# porta MEP ospitata",
+  "other": "# porte MEP ospitate"
+ },
+ "del.k.joist": {
+  "one": "# trave di solaio",
+  "other": "# travi di solaio"
+ },
+ "del.k.railing": {
+  "one": "# ringhiera",
+  "other": "# ringhiere"
+ },
+ "del.k.tag": {
+  "one": "# etichetta",
+  "other": "# etichette"
+ },
+ "del.k.dim": {
+  "one": "# quota (staccata)",
+  "other": "# quote (staccate)"
+ },
+ "del.also": "Coinvolti anche: {list}",
+ "del.rooms": {
+  "one": "# stanza perde un muro di perimetro",
+  "other": "# stanze perdono un muro di perimetro"
+ },
+ "del.cancelled": "Eliminazione annullata, nulla è cambiato",
+ "del.confirm.title": "Elimina con dipendenti",
+ "del.confirm.lead": {
+  "one": "# elemento selezionato porta con sé:",
+  "other": "# elementi selezionati portano con sé:"
+ },
+ "del.confirm.levels": {
+  "one": "# di essi è su un altro livello",
+  "other": "# di essi sono su altri livelli"
+ },
+ "del.confirm.all": "Elimina tutto",
+ "del.confirm.cancel": "Annulla"
+}

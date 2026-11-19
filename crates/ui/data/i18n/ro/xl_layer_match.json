@@ -1,0 +1,4 @@
+{
+ "xl.msg.layer_cells_unplaced": "{} celule de tipul '{}' stratul {} de pe foaia '{}' nu au putut fi plasate",
+ "xl.msg.layer_hidden_unplaced": "rând ascuns de tipul '{}' stratul {} de pe foaia '{}' nu a putut fi plasat"
+}

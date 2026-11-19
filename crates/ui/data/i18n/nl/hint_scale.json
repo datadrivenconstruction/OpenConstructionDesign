@@ -1,0 +1,10 @@
+{
+ "cmd.mod.scale": "Schalen",
+ "cmd.mod.scale.desc": "Selecteer elementen, klik dan het basispunt, een referentielengte en de nieuwe lengte, of typ een factor.",
+ "hint.scale.select": "Schalen: selecteer elementen · Enter — klaar",
+ "hint.scale.first": "Schalen: kies het basispunt · Esc — annuleren",
+ "hint.scale.second": "Schalen: kies de referentielengte · getal — factor · Esc — annuleren",
+ "hint.scale.third": "Schalen: kies de nieuwe lengte · getal — factor · Esc — annuleren",
+ "scl.bad_factor": "Schaalfactor moet een getal groter dan nul zijn",
+ "scl.zero_ref": "De referentielengte is nul: kies een punt op afstand van het basispunt"
+}

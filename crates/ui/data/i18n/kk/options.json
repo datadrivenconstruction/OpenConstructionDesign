@@ -1,0 +1,15 @@
+{
+ "fe.add_why_empty": "Алдымен параметр атауын енгізіңіз",
+ "fe.add_why_exists": "Бұл атаумен параметр бұрыннан бар; оны өзгерту үшін Қолдану басыңыз",
+ "fe.apply_why_missing": "Мұндай атаумен параметр жоқ; бар атауды теріңіз",
+ "fe.nochange": "Әлі өзгеріс жоқ",
+ "options.accept_more": "Қабылдау…",
+ "options.delete_more": "Жою…",
+ "options.empty_title": "Опция жиындары әлі жоқ",
+ "options.more": "Қосымша әрекеттер: {name}",
+ "options.primary_named": "Негізгі опция: {name}",
+ "options.primary_tip": "Мұны жиынның негізгі опциясы ету",
+ "options.select_first": "Алдымен модельдегі элементтерді таңдаңыз",
+ "options.show_3d": "3D-да көрсету: {name}",
+ "options.show_plan": "Жоспарда көрсету: {name}"
+}

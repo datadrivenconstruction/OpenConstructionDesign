@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D",
+ "phases.current_mark": "joriy",
+ "phases.make_current": "Joriy qilish",
+ "phases.col_phase": "Bosqich",
+ "phases.col_filter": "Filtr",
+ "phases.presets": "Plan andozalari",
+ "phases.del_title": "Bosqichni o'chirish",
+ "phases.del_text": "“{name}” bosqichi o'chirilsinmi? Uning elementlari quyida tanlangan bosqichga ko'chiriladi.",
+ "phases.del_into": "Elementlarni ko'chirish",
+ "phases.del_ok": "O'chirish",
+ "phases.col_kind": "Element turi",
+ "phases.col_count": "Soni",
+ "phases.col_volume": "Hajm"
+}

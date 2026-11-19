@@ -1,0 +1,15 @@
+{
+ "cmd.data.export_step.desc": "کل مدل یا انتخاب را به‌صورت STEP AP214 یا AP242 ذخیره می‌کند: جامدها با سطوح دقیق صفحه‌ای، استوانه‌ای، مخروطی، کروی، چنبره‌ای و B-spline؛ سایر عناصر به‌صورت وجه‌های صفحه‌ای، رنگ‌ها و یک گرهٔ مونتاژ برای هر طبقه.",
+ "cmd.data.export_3mf.desc": "کل مدل یا انتخاب را برای چاپ به‌صورت 3MF ذخیره می‌کند: یک شیء برای هر عنصر، رنگ‌ها، واحدها و بررسی بسته‌بودن هر بدنه.",
+ "fmenu.export.step": "STEP جامدهای دقیق (.step)",
+ "fmenu.export.3mf": "3MF برای چاپ (.3mf)",
+ "mx.schema": "اسکیمای STEP",
+ "mx.schema.ap214": "AP214 (سازگاری بیشتر)",
+ "mx.schema.ap242": "AP242",
+ "mx.watertight": "بدنه‌های بسته‌نشده",
+ "mx.watertight.report": "نوشتن و فهرست‌کردن آن‌ها",
+ "mx.watertight.skip": "کنار گذاشتن",
+ "mx.watertight.require": "لغو صدور",
+ "mx.faceted": "{fmt} ذخیره شد: {path} ({exact} جامد دقیق، {n} به‌صورت وجه‌های صفحه‌ای نوشته شد: {first})",
+ "sheets.print.svg": "SVG"
+}

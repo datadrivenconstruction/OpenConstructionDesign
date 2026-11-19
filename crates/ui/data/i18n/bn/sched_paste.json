@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "{n}টি ঘর পেস্ট হয়েছে",
+ "sched_edit.pasted_skipped": "{n}টি ঘর পেস্ট হয়েছে, {k}টি বাদ: {why}",
+ "sched_edit.filled": "{n}টি ঘর পূরণ হয়েছে",
+ "sched_edit.filled_skipped": "{n}টি ঘর পূরণ হয়েছে, {k}টি বাদ: {why}",
+ "sched_edit.why_ro": "{n}টি শুধু-পঠনযোগ্য",
+ "sched_edit.why_bad": "{n}টি অবৈধ মান",
+ "sched_edit.no_cell": "আগে সূচিতে একটি ঘরে ক্লিক করুন",
+ "sched_edit.nothing": "লেখার কিছু নেই",
+ "sched_edit.not_refreshed": "লেখা হয়েছে, ভিউ রিফ্রেশ হয়নি: {e}",
+ "sched_edit.failed": "পরিবর্তন হয়নি: {e}",
+ "sched_edit.no_changes": "কোনো পরিবর্তন নেই: {u}টি ঘরে আগে থেকেই এই মান আছে",
+ "sched_edit.same_tail": ", {u}টি আগে থেকেই সমান"
+}

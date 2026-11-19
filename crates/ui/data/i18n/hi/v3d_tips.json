@@ -1,0 +1,8 @@
+{
+ "v3d.proj.to_ortho": "ऑर्थोग्राफ़िक पर जाएँ",
+ "v3d.proj.to_persp": "परस्पेक्टिव पर जाएँ",
+ "v3d.walk.unit.m": "m/s",
+ "v3d.walk.unit.ft": "ft/s",
+ "v3d.temp.show_all": "सभी दिखाएँ  ·  Esc",
+ "v3d.msg.deleted_named": "3D व्यू {name} हटाया गया"
+}

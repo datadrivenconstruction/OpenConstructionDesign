@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "vlastní",
+ "draw_quality.custom.tip": "{name}: položka tohoto projektu",
+ "draw_quality.custom_note": "Položky označené jako vlastní patří tomuto projektu.",
+ "draw_quality.unsaved.lib_body": "Uložit je do knihovny, nebo je zahodit?",
+ "draw_quality.unsaved.styles_body": "Použít je na pohled, nebo je zahodit?",
+ "draw_quality.unsaved.both_body": "Použít je, nebo je zahodit?",
+ "draw_quality.halftone": "{category} polotón",
+ "draw_quality.styles.name": "Styly čar",
+ "draw_quality.styles.other_level": "Neuložené úpravy stylů podlaží {level}: použijte je nebo je vraťte, abyste mohli upravit toto podlaží."
+}

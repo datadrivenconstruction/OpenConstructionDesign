@@ -1,0 +1,6 @@
+{
+ "cmd.ui.pane.next": "Bảng kế tiếp",
+ "cmd.ui.pane.next.desc": "Chuyển tiêu điểm bàn phím sang bảng hiển thị kế tiếp – trình duyệt, vùng vẽ, thuộc tính, trò chuyện.",
+ "cmd.ui.pane.prev": "Bảng trước đó",
+ "cmd.ui.pane.prev.desc": "Chuyển tiêu điểm bàn phím sang bảng hiển thị trước đó."
+}

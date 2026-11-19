@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "已撤销 — Ctrl+Y 重做",
+ "history.hist.empty": "尚无更改",
+ "history.hist.empty_hint": "您的编辑会显示在此处。点击任一步骤即可回到该步。",
+ "history.hist.revert_all_n": "撤销所有 AI 更改（{n}）"
+}

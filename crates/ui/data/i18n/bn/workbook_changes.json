@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "ওয়ার্কবুকের পরিবর্তন প্রয়োগ হয়নি",
+ "workbook_changes.wb.body": "প্রকল্প বন্ধ বা বদলালে এগুলো বাতিল হবে।",
+ "workbook_changes.wb.line": "ওয়ার্কবুক আমদানি: {n}টি পরিবর্তন প্রয়োগ হয়নি",
+ "workbook_changes.wb.review": "পর্যালোচনা",
+ "workbook_changes.wb.discard": "বাতিল করুন"
+}

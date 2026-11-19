@@ -1,0 +1,18 @@
+{
+ "undo.entry_later": "Ikke angret: en annen endring er gjort etterpå. Angre den først.",
+ "undo.entry_gone": "Ikke angret: denne endringen er allerede angret eller finnes ikke lenger i historikken.",
+ "undo.entry_busy": "Fullfør eller avbryt den pågående tegningen først, og angre deretter.",
+ "quick.hud.more": "Mer i Egenskaper: {names}",
+ "sheet_tools.sheet.more": "Flere arkverktøy",
+ "job.of": "{d} av {t}",
+ "job.of.mb": "{d} av {t} MB",
+ "job.left.under_minute": "mindre enn ett minutt igjen",
+ "job.left.minutes": "ca. {n} min igjen",
+ "sheet_tools.start.units": "Enheter",
+ "sheet_tools.print.save": {
+  "one": "Lagre # ark",
+  "other": "Lagre # ark"
+ },
+ "sheet_tools.sets.delete_ask": "Slette arksettet “{name}”? Arkene forblir i prosjektet.",
+ "sheet_tools.keep": "Behold"
+}

@@ -1,0 +1,11 @@
+{
+ "cmd.ctx.ceiling.clean_outline": "Vyčistit obrys",
+ "cmd.ctx.ceiling.clean_outline.desc": "Odstraní úzké výstupky, kde se obrys stropu vrací sám do sebe. Nejprve zobrazí náhled; jeden krok zpět.",
+ "cmd.ctx.shaft.clean_outline": "Vyčistit obrys",
+ "cmd.ctx.shaft.clean_outline.desc": "Odstraní úzké výstupky, kde se obrys šachty vrací sám do sebe. Nejprve zobrazí náhled; jeden krok zpět.",
+ "outline_cleanup.intro_ceiling": "Obrys tohoto stropu se vrací sám do sebe v úzkých výstupcích: {n}. Čištění je odstraní; vše ostatní zůstane beze změny.",
+ "outline_cleanup.intro_shaft": "Obrys této šachty se vrací sám do sebe v úzkých výstupcích: {n}. Čištění je odstraní; vše ostatní zůstane beze změny.",
+ "outline_cleanup.none_ceiling": "Obrys tohoto stropu nemá žádné výstupky",
+ "outline_cleanup.none_shaft": "Obrys této šachty nemá žádné výstupky",
+ "outline_cleanup.need_host": "Vyberte podlahu, strop nebo šachtu"
+}

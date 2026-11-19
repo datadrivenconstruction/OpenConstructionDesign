@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "绘制墙",
+ "empty.totals.action": "绘制墙",
+ "empty.schedule.action": "添加字段",
+ "empty.schedule_filtered.action": "清除筛选",
+ "empty.library.action": "重置搜索",
+ "empty.library.load": "加载族",
+ "empty.schedule_fields.title": "未显示任何字段",
+ "empty.schedule_fields.action": "添加字段",
+ "empty.schedule_fields.hint": "至少开启一个字段才能查看表格。"
+}

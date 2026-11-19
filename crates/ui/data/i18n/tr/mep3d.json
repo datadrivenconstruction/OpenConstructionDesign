@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "Kanal",
+ "mep3d.pipe": "Boru",
+ "mep3d.tray": "Kablo tavası",
+ "mep3d.conduit": "Kanal",
+ "mep3d.system": "Sistem",
+ "mep3d.length": "Uzunluk",
+ "mep3d.diameter": "Çap",
+ "mep3d.width": "Genişlik",
+ "mep3d.height": "Yükseklik",
+ "mep3d.insulation": "Yalıtım",
+ "mep3d.tip": "Enter — uygula; bağlantı parçaları yeniden hesaplanır",
+ "mep3d.size_positive": "ölçü sıfırdan büyük olmalı",
+ "mep3d.not_changed": "değiştirilmedi: {e}",
+ "mep3d.copied": "hat kopyalandı",
+ "mep3d.changed": "hat değişti",
+ "mep3d.deleted": "silinen elemanlar: {n}",
+ "mep3d.not_deleted": "silinmedi: {e}",
+ "mep3d.no_wall_type": "duvar tipi yok",
+ "mep3d.demo.supply": "Besleme S1",
+ "mep3d.demo.heating": "Isıtma",
+ "mep3d.demo.power": "Güç"
+}

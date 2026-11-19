@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "ドーマー開口",
+ "cmd.arch.roof_opening": "屋根の開口",
+ "cmd.arch.roof_extrusion": "押し出しによる屋根",
+ "cmd.arch.ceiling_opening": "天井の開口",
+ "cmd.str.slab_opening": "床開口",
+ "cmd.ctx.wall.detach": "天端を切り離す",
+ "cmd.ctx.floor.sketch": "境界を編集",
+ "cmd.ctx.floor.shape": "形状を編集",
+ "host_shape.shape.elev_prompt": "標高 (mm)…",
+ "host_shape.shape.elev_mm": "{v} mm",
+ "host_shape.sketch.no_host": "このレベルの境界の下にホストがありません",
+ "host_shape.issue.roof": "屋根 {id}: {e}",
+ "host_shape.issue.ceiling": "天井 {id}: {e}",
+ "host_shape.status.select_slab": "スラブを選択してください",
+ "host_shape.status.select_walls": "壁を選択してください",
+ "host_shape.status.no_roof_or_level": "上に屋根またはレベルがありません",
+ "host_shape.status.top_attached": "壁の天端を取り付けました",
+ "host_shape.status.top_detached": "壁の天端を切り離しました",
+ "host_shape.status.straight_wall": "直線の壁が必要です",
+ "host_shape.status.roof_extruded": "押し出しによる屋根を作成しました",
+ "warn.kind.cut": "切断または取り付けが作成されていません"
+}

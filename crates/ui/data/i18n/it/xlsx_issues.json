@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "Righe e celle saltate",
+ "xlsx_issues.conflicts_title": "Modificato in entrambi i punti",
+ "xlsx_issues.missing_title": "Tavola mancante nella cartella",
+ "xlsx_issues.look_alike_title": "Il nome della tavola non corrisponde",
+ "xlsx_issues.mass_title": "L'eliminazione di massa richiede conferma",
+ "xlsx_issues.sheets_missing": "Le tavole {sheets} mancano nella cartella (rinominate o eliminate); le loro righe non sono state confrontate.",
+ "xlsx_issues.keep_model": "Mantieni modello",
+ "xlsx_issues.take_book": "Prendi dalla cartella",
+ "xlsx_issues.open_book_tip": "Apre il file nella sua applicazione. Il modello non cambia; l'anteprima si ricarica dopo aver salvato la cartella."
+}

@@ -1,0 +1,3 @@
+{
+ "find_replace.refresh_failed": "Đã thay {n} trong {m} cấu kiện; làm mới góc nhìn thất bại: {e}"
+}

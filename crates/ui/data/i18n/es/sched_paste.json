@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "Pegadas {n} celdas",
+ "sched_edit.pasted_skipped": "Pegadas {n} celdas, omitidas {k}: {why}",
+ "sched_edit.filled": "Rellenadas {n} celdas",
+ "sched_edit.filled_skipped": "Rellenadas {n} celdas, omitidas {k}: {why}",
+ "sched_edit.why_ro": "{n} de solo lectura",
+ "sched_edit.why_bad": "{n} valor no válido",
+ "sched_edit.no_cell": "Primero haga clic en una celda de la planilla",
+ "sched_edit.nothing": "Nada que escribir",
+ "sched_edit.not_refreshed": "Escrito, la vista no se actualizó: {e}",
+ "sched_edit.failed": "sin cambios: {e}",
+ "sched_edit.no_changes": "Sin cambios: {u} celdas ya tienen estos valores",
+ "sched_edit.same_tail": ", {u} ya iguales"
+}

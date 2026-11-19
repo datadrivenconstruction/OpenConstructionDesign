@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "Küsi AI-lt: {q}",
+ "ai.palette.connect": "Ühenda AI, et küsida",
+ "ai.palette.draft.apply": "Rakenda mustand ({n})",
+ "ai.palette.draft.reject": "Lükka mustand tagasi",
+ "ai.palette.draft.next": "Järgmine mustandi muudatus",
+ "ai.palette.draft.show": "Näita mustandit vaates",
+ "cmd.ai.next_change": "Järgmine mustandi muudatus",
+ "cmd.ai.next_change.desc": "Liigutab vaate järgmise elemendini, mida mustand muudab.",
+ "cmd.ai.show_draft": "Näita AI mustandit vaates",
+ "cmd.ai.show_draft.desc": "Sobitab vaate kõigi mustandi muudetud elementide järgi."
+}

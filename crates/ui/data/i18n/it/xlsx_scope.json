@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "Esporta in un foglio di calcolo: ambito",
+ "xlsx_scope.intro": "Scegli cosa va nella cartella. Reimportandola si modificano solo questi elementi.",
+ "xlsx_scope.base_whole": "Intero modello",
+ "xlsx_scope.base_level": "Livello attivo",
+ "xlsx_scope.base_selection": "Selezione",
+ "xlsx_scope.categories": "Categorie",
+ "xlsx_scope.cat_walls": "muri",
+ "xlsx_scope.cat_openings": "porte",
+ "xlsx_scope.cat_rooms": "locali",
+ "xlsx_scope.cat_slabs": "solai",
+ "xlsx_scope.cat_curtains": "facciate continue",
+ "xlsx_scope.nothing_selected": "Non c'è nulla di selezionato: seleziona prima gli elementi o scegli un altro ambito.",
+ "xlsx_scope.no_categories": "Seleziona almeno una categoria.",
+ "xlsx_scope.no_level": "Livello attivo non trovato.",
+ "xlsx_scope.export": "Esporta",
+ "xlsx_scope.preview_scope": "Ambito esportato: {scope}. Gli elementi fuori ambito non vengono mai modificati né eliminati."
+}

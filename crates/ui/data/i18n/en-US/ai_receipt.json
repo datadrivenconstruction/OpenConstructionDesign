@@ -1,0 +1,21 @@
+{
+ "ai.receipt.title": {
+  "one": "Applied # change",
+  "other": "Applied # changes"
+ },
+ "ai.receipt.more": "+{n} more",
+ "ai.receipt.list": "Elements",
+ "ai.receipt.show": "Show",
+ "ai.receipt.show.tip": "Select and frame the changed elements",
+ "ai.receipt.undo": "Undo",
+ "ai.receipt.undo.tip": "Take back exactly this apply",
+ "ai.receipt.undone": "Undone",
+ "ai.receipt.later": "Later edits were made",
+ "ai.receipt.toast_undone": "The applied plan was undone",
+ "ai.receipt.draft_family": "Draft family: {name}",
+ "ai.receipt.promote": "Make working",
+ "ai.receipt.promote.tip": "Turn the draft family into a working one (one undo step)",
+ "ai.receipt.promoted": "The family is now working",
+ "ai.receipt.promote_failed": "The family could not be made working",
+ "cmd.ai.receipt_undo": "Undo last AI plan"
+}

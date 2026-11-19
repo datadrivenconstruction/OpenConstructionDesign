@@ -1,0 +1,5 @@
+{
+ "snap.center": "Tâm",
+ "dwg_snap.through": "Điểm xuyên qua",
+ "dwg_snap.through_tip": "Dịch qua điểm đã nhấp (bắt vào đầu, giao điểm, tâm) thay vì khoảng cách nhập tay"
+}

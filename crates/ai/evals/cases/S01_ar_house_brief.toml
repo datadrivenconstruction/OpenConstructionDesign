@@ -1,0 +1,34 @@
+id = "S01_ar_house_brief"
+tier = "smoke"
+group = ""
+title = "House from a free-text brief (Arabic)"
+lang = "ar"
+base = "empty"
+
+[[turn]]
+say = "صمّم منزلاً عائلياً من طابقين لأربعة أشخاص بمساحة إجمالية تقارب ١٦٠ متراً مربعاً: مطبخ مفتوح على غرفة المعيشة، ثلاث غرف نوم، حمّامان، غرفة مكتب، ومرآب لسيارة واحدة في الطابق الأرضي، مع سقف جملوني. ابنِه الآن."
+
+[[oracle.count]]
+spec = "level"
+min = 2.0
+
+[[oracle.count]]
+spec = "room"
+min = 8.0
+
+[[oracle.count]]
+spec = "roof"
+min = 1.0
+
+[[oracle.count]]
+spec = "stair"
+min = 1.0
+
+[[oracle.count]]
+spec = "opening"
+min = 10.0
+
+[[oracle.count]]
+spec = "level"
+min = 2.0
+max = 3.0

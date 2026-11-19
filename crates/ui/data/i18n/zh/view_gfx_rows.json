@@ -1,0 +1,10 @@
+{
+ "view_gfx.vv.visible_tip": "在此视图中可见",
+ "view_gfx.vv.enabled_tip": "在此视图中应用此筛选器",
+ "view_gfx.vv.reset_tip": "恢复为项目默认值",
+ "view_gfx.vv.col.actions": "操作",
+ "view_gfx.vv.nothing_to_apply": "没有可应用的更改",
+ "view_gfx.flt.save_blocked": "请为筛选器命名并填写每条规则的参数",
+ "view_gfx.flt.confirm_delete": "删除所有视图的此筛选器？",
+ "view_gfx.flt.param_pick": "选择…"
+}

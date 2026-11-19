@@ -1,0 +1,40 @@
+{
+ "rebar_hosts.hosts": "میزبان‌ها: {list}",
+ "rebar_hosts.kind.column": "ستون",
+ "rebar_hosts.kind.beam": "تیر",
+ "rebar_hosts.kind.wall": "دیوار",
+ "rebar_hosts.kind.slab": "دال",
+ "rebar_hosts.kind.footing": "پی",
+ "rebar_hosts.kind.raft": "دال پی",
+ "rebar_hosts.n.column": {
+  "one": "# ستون",
+  "other": "# ستون"
+ },
+ "rebar_hosts.n.beam": {
+  "one": "# تیر",
+  "other": "# تیر"
+ },
+ "rebar_hosts.n.wall": {
+  "one": "# دیوار",
+  "other": "# دیوار"
+ },
+ "rebar_hosts.n.slab": {
+  "one": "# دال",
+  "other": "# دال"
+ },
+ "rebar_hosts.n.footing": {
+  "one": "# پی",
+  "other": "# پی"
+ },
+ "rebar_hosts.n.raft": {
+  "one": "# دال پی",
+  "other": "# دال پی"
+ },
+ "rebar_hosts.mixed_note": "ستون‌ها و تیرها میلگرد طولی و خاموت می‌گیرند؛ دیوارها، دال‌ها و پی‌ها مش می‌گیرند. یک گروه را انتخاب کنید تا میلگرد اضافه شود.",
+ "rebar_hosts.why.mixed": "انتخاب ستون یا تیر را با دیوار، دال یا پی ترکیب کرده است. یک گروه را انتخاب کنید.",
+ "rebar_hosts.why.area_linear": "مش به دیوارها، دال‌ها و پی‌ها می‌رود، نه ستون‌ها یا تیرها.",
+ "rebar_hosts.why.bars_plate": "میلگرد طولی و خاموت به ستون‌ها و تیرها می‌رود، نه دیوارها، دال‌ها یا پی‌ها.",
+ "rebar_hosts.why.no_common_face": "میزبان‌های انتخاب‌شده وجه پوششی مشترک ندارند. میزبان‌های از یک نوع را انتخاب کنید.",
+ "rebar_hosts.why.no_type": "یک نوع میلگرد انتخاب کنید.",
+ "rebar_hosts.kind_type": "{kind} · {type}"
+}

@@ -1,0 +1,48 @@
+name: Bug report
+description: Something does not work as documented
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Search existing issues first. Security problems must not be reported here; see SECURITY.md.
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      placeholder: "output of `ddc --version`, or the commit hash"
+    validations: { required: true }
+  - type: input
+    id: platform
+    attributes:
+      label: Platform
+      placeholder: "Windows 11 x86_64, GPU and driver if the problem is graphical"
+    validations: { required: true }
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Where did it happen
+      options: [Desktop editor, Browser, ddc CLI]
+    validations: { required: true }
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Numbered steps, starting from a new or opened model.
+    validations: { required: true }
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations: { required: true }
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      description: Include error messages and, if relevant, the log.
+    validations: { required: true }
+  - type: textarea
+    id: file
+    attributes:
+      label: Minimal file
+      description: Attach a minimal model only if you are allowed to share it. Do not attach proprietary or confidential files.

@@ -1,0 +1,5 @@
+{
+ "ai.plan.apply_n": "Terapkan {n} diterima",
+ "ai.plan.will_apply": "{n} dari {m} perubahan akan diterapkan",
+ "ai.plan.keys_hint": "J/K atau Alt+Atas/Bawah memindahkan · A terima · R tolak · Spasi ganti centang · Shift+A / Shift+R seluruh grup · Ctrl+Enter terapkan · Esc kembali ke tampilan (draf tetap)"
+}

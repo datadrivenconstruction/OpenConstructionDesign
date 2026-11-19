@@ -1,0 +1,18 @@
+{
+ "ai.items.all": {
+  "one": "Sve # stavka",
+  "few": "Sve # stavke",
+  "other": "Sve # stavki"
+ },
+ "ai.items.all.tip": "Označi ili odznači svaku stavku plana",
+ "ai.items.checked": "{n} od {m} označeno",
+ "ai.items.check.tip": "Uključi „{title}“ u Primijeni",
+ "ai.items.expand": "Prikaži elemente",
+ "ai.items.collapse": "Sakrij elemente",
+ "ai.items.apply": {
+  "one": "Primijeni # stavku",
+  "few": "Primijeni # stavke",
+  "other": "Primijeni # stavki"
+ },
+ "ai.items.apply_none": "Primijeni"
+}

@@ -1,0 +1,273 @@
+{
+ "items": [
+  {
+   "key": "room.height_min",
+   "value": 2.7,
+   "unit": "m",
+   "source": "it-dm1975-mirror",
+   "clause": "Art. 1",
+   "url": "https://www.bosettiegatti.eu/info/norme/statali/1975_dm_05_07.htm",
+   "accessed": "2026-11-14",
+   "paraphrase": "Habitable rooms need 2.70 m net height; corridors, bathrooms and storerooms 2.40 m; 2.55 m allowed above 1,000 m altitude.",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via bosettiegatti.eu (full text of the decree); 2.40 m allowed for corridors, baths, stores, 2.55 m in mountain communes"
+  },
+  {
+   "key": "daylight.window_floor_ratio",
+   "value": 0.125,
+   "unit": "ratio",
+   "source": "it-dm1975-mirror",
+   "clause": "Art. 5",
+   "url": "https://www.bosettiegatti.eu/info/norme/statali/1975_dm_05_07.htm",
+   "accessed": "2026-11-14",
+   "paraphrase": "Openable window area must be at least one eighth of floor area, with average daylight factor of about 2 percent.",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via bosettiegatti.eu; ratio refers to openable window area, with a mean daylight factor of at least 2 percent"
+  },
+  {
+   "key": "door.clear_min.accessible",
+   "value": 0.8,
+   "unit": "m",
+   "source": "it-dm236-mirror",
+   "clause": "Point 8.1.1",
+   "url": "https://www.unipr.it/sites/default/files/2026-01/DM%2014%20giugno%201989%20n.%20236%20Barriere%20architettoniche.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Entrance door of a building or unit needs 0.80 m clear width; other doors 0.75 m.",
+   "verified": true,
+   "note": "read 2026-11-14 via unipr.it PDF of the full decree text; 0.80 m for building and dwelling entrance doors, 0.75 m for other doors"
+  },
+  {
+   "key": "corridor.width_min.accessible",
+   "value": 1.0,
+   "unit": "m",
+   "source": "it-dm236-mirror",
+   "clause": "Point 8.1.9",
+   "url": "https://www.unipr.it/sites/default/files/2026-01/DM%2014%20giugno%201989%20n.%20236%20Barriere%20architettoniche.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Corridors are at least 1.00 m wide with passing and turning widenings at the ends and about every 10 m.",
+   "verified": true,
+   "note": "read 2026-11-14 via unipr.it PDF of the full decree text"
+  },
+  {
+   "key": "ramp.slope_max",
+   "value": 0.08,
+   "unit": "ratio",
+   "source": "it-dm236-mirror",
+   "clause": "Point 8.1.11",
+   "url": "https://www.unipr.it/sites/default/files/2026-01/DM%2014%20giugno%201989%20n.%20236%20Barriere%20architettoniche.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Accessible ramp slope is at most 8 percent, steeper only when adapting existing buildings.",
+   "verified": true,
+   "note": "read 2026-11-14 via unipr.it PDF of the full decree text; higher slopes allowed only when adapting existing buildings"
+  },
+  {
+   "key": "stair.width_min",
+   "value": 1.2,
+   "unit": "m",
+   "source": "it-dm236-mirror",
+   "clause": "Point 8.1.10",
+   "url": "https://www.unipr.it/sites/default/files/2026-01/DM%2014%20giugno%201989%20n.%20236%20Barriere%20architettoniche.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Shared or public stair flights are at least 1.20 m wide.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via unipr.it PDF of the full decree text; common/public stairs 1.20 m wide and 0.30 m tread, other stairs 0.80 m and 0.25 m"
+  },
+  {
+   "key": "stair.tread_min",
+   "value": 0.3,
+   "unit": "m",
+   "source": "it-dm236-mirror",
+   "clause": "Point 8.1.10",
+   "url": "https://www.unipr.it/sites/default/files/2026-01/DM%2014%20giugno%201989%20n.%20236%20Barriere%20architettoniche.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Shared or public stairs have treads of at least 0.30 m, with twice the riser plus tread between 0.62 and 0.64 m.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via unipr.it PDF of the full decree text; common/public stairs 1.20 m wide and 0.30 m tread, other stairs 0.80 m and 0.25 m"
+  },
+  {
+   "key": "stair.width_min.house",
+   "value": 0.8,
+   "unit": "m",
+   "source": "it-dm236-mirror",
+   "clause": "Point 8.1.10",
+   "url": "https://www.unipr.it/sites/default/files/2026-01/DM%2014%20giugno%201989%20n.%20236%20Barriere%20architettoniche.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Stairs inside a private dwelling are at least 0.80 m wide.",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via unipr.it PDF of the full decree text; common/public stairs 1.20 m wide and 0.30 m tread, other stairs 0.80 m and 0.25 m"
+  },
+  {
+   "key": "stair.tread_min.house",
+   "value": 0.25,
+   "unit": "m",
+   "source": "it-dm236-mirror",
+   "clause": "Point 8.1.10",
+   "url": "https://www.unipr.it/sites/default/files/2026-01/DM%2014%20giugno%201989%20n.%20236%20Barriere%20architettoniche.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Private-dwelling stairs have a minimum going of 0.25 m.",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via unipr.it PDF of the full decree text; common/public stairs 1.20 m wide and 0.30 m tread, other stairs 0.80 m and 0.25 m"
+  },
+  {
+   "key": "accessible.turning_circle",
+   "value": 1.5,
+   "unit": "m",
+   "source": "it-dm236",
+   "clause": "Point 8.0.2",
+   "url": "https://www.bosettiegatti.eu/info/norme/statali/1989_0236.htm",
+   "accessed": "2026-11-14",
+   "paraphrase": "Wheelchair full-turn space is a circle of about 1.50 m diameter.",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: bosettiegatti.eu refused fetch, web search; official gazette text gives manoeuvre sizes only in drawings and only secondary summaries state the numbers (square, not circle)"
+  },
+  {
+   "key": "load.floor_residential",
+   "value": 2.0,
+   "unit": "kN/m2",
+   "source": "it-ntc",
+   "clause": "Table 3.1.II, category A residential areas: qk = 2.00 kN/m2",
+   "url": "https://www.gazzettaufficiale.it/eli/gu/2018/02/20/42/so/8/sg/pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Residential floor areas in category A carry a characteristic imposed load of 2.00 kN/m2; common stairs and balconies carry 4.00.",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14: gazzettaufficiale.it/eli/gu/2018/02/20/42/so/8/sg/pdf; common stairs, balconies 4.00"
+  },
+  {
+   "key": "load.floor_office",
+   "value": 3.0,
+   "unit": "kN/m2",
+   "source": "it-ntc",
+   "clause": "Table 3.1.II, category B2 offices open to the public: qk = 3.00 kN/m2; B1 closed offices 2.00",
+   "url": "https://www.gazzettaufficiale.it/eli/gu/2018/02/20/42/so/8/sg/pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Offices open to the public (B2) use 3.00 kN/m2 and offices closed to the public (B1) use 2.00 kN/m2 as imposed floor load.",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14: gazzettaufficiale.it/eli/gu/2018/02/20/42/so/8/sg/pdf; value 3.0 is the B2 (public) case; B1 would be 2.0"
+  },
+  {
+   "key": "corridor.width_min",
+   "value": 1.0,
+   "unit": "m",
+   "source": "it-dm236-mirror",
+   "clause": "point 8.1.9, corridors at least 100 cm wide",
+   "verified": true,
+   "url": "https://www.unipr.it/sites/default/files/2026-01/DM%2014%20giugno%201989%20n.%20236%20Barriere%20architettoniche.pdf",
+   "accessed": "2026-11-15",
+   "paraphrase": "A corridor is at least 100 cm wide.",
+   "note": "read 2026-11-15: unipr.it copy of the order of 14 June 1989 no. 236"
+  },
+  {
+   "key": "stair.riser_max",
+   "value": 0.17,
+   "unit": "m",
+   "source": "it-dm236-mirror",
+   "clause": "point 8.1.10, derived from tread at least 30 cm and 2 risers + tread at most 64 cm",
+   "verified": false,
+   "url": "https://www.unipr.it/sites/default/files/2026-01/DM%2014%20giugno%201989%20n.%20236%20Barriere%20architettoniche.pdf",
+   "accessed": "2026-11-15",
+   "paraphrase": "With 30 cm treads the step rule allows risers up to 17 cm.",
+   "note": "derived by the editor from the read clause: tread minimum and 2 risers + tread at most 64 cm; the order states no riser number"
+  },
+  {
+   "key": "stair.going_min",
+   "value": 0.3,
+   "unit": "m",
+   "source": "it-dm236-mirror",
+   "clause": "point 8.1.10, tread at least 30 cm (25 cm on private stairs)",
+   "verified": true,
+   "url": "https://www.unipr.it/sites/default/files/2026-01/DM%2014%20giugno%201989%20n.%20236%20Barriere%20architettoniche.pdf",
+   "accessed": "2026-11-15",
+   "paraphrase": "A common stair tread is at least 30 cm.",
+   "note": "read 2026-11-15: unipr.it copy of the order of 14 June 1989 no. 236"
+  },
+  {
+   "key": "guard.height_min",
+   "value": 1.0,
+   "unit": "m",
+   "source": "it-dm236-mirror",
+   "clause": "points 8.1.8 and 8.1.10, guard at least 1.00 m, closed to a 10 cm sphere",
+   "verified": true,
+   "url": "https://www.unipr.it/sites/default/files/2026-01/DM%2014%20giugno%201989%20n.%20236%20Barriere%20architettoniche.pdf",
+   "accessed": "2026-11-15",
+   "paraphrase": "Balcony and stair guards are at least 1.00 m high.",
+   "note": "read 2026-11-15: unipr.it copy of the order of 14 June 1989 no. 236"
+  },
+  {
+   "key": "egress.travel_max",
+   "value": 45.0,
+   "unit": "m",
+   "source": "it-dm2006-uffici",
+   "clause": "escape routes in offices, 45 m to a safe place",
+   "verified": false,
+   "url": "https://www.vigilfuoco.it/sites/default/files/coordinated-text/COORD_DM_22_02_2006.pdf",
+   "accessed": "2026-11-15",
+   "paraphrase": "An office escape route reaches a safe place within 45 m.",
+   "note": "to_verify: values from search summaries of the order; coordinated text not opened"
+  },
+  {
+   "key": "building.class5_height",
+   "na": true,
+   "value": null,
+   "unit": "m",
+   "source": "it-dm236-mirror",
+   "verified": false,
+   "note": "na: no building class by height in the national codes read; fire rules step by fire-service height bands",
+   "text": {
+    "en": "No building height class.",
+    "ru": "Нет класса здания по высоте."
+   },
+   "url": "https://www.unipr.it/sites/default/files/2026-01/DM%2014%20giugno%201989%20n.%20236%20Barriere%20architettoniche.pdf",
+   "accessed": "2026-11-15"
+  }
+ ]
+}

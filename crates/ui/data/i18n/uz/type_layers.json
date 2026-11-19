@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "Pastga qatlam qo'shish",
+ "type_layers.layer.delete": "Qatlamni o'chirish",
+ "type_layers.layer.delete_last": "Turda kamida bitta qatlam bo'lishi kerak",
+ "type_layers.value.bad": "Yaroqsiz musbat qiymat",
+ "type_layers.value.required": "Majburiy",
+ "type_layers.unsaved.title": "{name} uchun saqlanmagan o'zgarishlar",
+ "type_layers.unsaved.body": "Ularni turga qo'llaysizmi yoki bekor qilaysizmi?",
+ "type_layers.unsaved.discard": "Bekor qilish"
+}

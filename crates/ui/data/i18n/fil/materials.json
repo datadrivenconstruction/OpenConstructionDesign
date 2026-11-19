@@ -1,0 +1,11 @@
+{
+ "materials.mat.name_empty": "Maglagay ng pangalan ng materyal",
+ "materials.mat.empty_title": "Wala pang materyal",
+ "materials.mat.empty_hint": "Mag-type ng pangalan sa ibaba at pindutin ang Add",
+ "materials.mat.nothing_hint": "Walang materyal na tumutugma sa paghahanap",
+ "materials.mat.clear_search": "Alisin ang paghahanap",
+ "materials.mat.replace_with": "Palitan ng",
+ "materials.mat.delete_refused": "Hindi mabura: ginagamit ang materyal sa {n} na lugar. Palitan muna ito.",
+ "materials.mat.delete_confirm": "Burahin ang materyal na “{name}”? Maaari mo itong i-undo.",
+ "materials.mat.replace_confirm": "Palitan ang “{from}” ng “{to}” sa {n} na elemento? Mabubura ang “{from}”. Maaari mo itong i-undo."
+}

@@ -1,0 +1,7 @@
+{
+ "spline.opt.spline": "Сплайн",
+ "spline.opt.spline_tip": "Сплайн хана: дайрах цэгүүдийг дарна уу, дуусгахдаа Enter эсвэл Esc",
+ "spline.wt.three_points": "сплайн хана гурав ба түүнээс дээш цэг шаардана",
+ "spline.wt.no_curtain": "шилэн ханад сплайн тэнхлэг байхгүй",
+ "spline.wt.added": "сплайн хана нэмэгдлээ"
+}

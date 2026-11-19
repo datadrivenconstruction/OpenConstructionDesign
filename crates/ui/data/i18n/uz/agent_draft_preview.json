@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "Oldindan ko'rish",
+ "agent_draft.ag.preview.desc": "Tugma ustida kursor turganda, loyiha qoralamasi elementlarini kanvada chizib ko'rsating. Hech narsa o'zgarmaydi.",
+ "agent_draft.type.column": "Ustun",
+ "agent_draft.type.roof": "Tom",
+ "agent_draft.type.ceiling": "Shift",
+ "agent_draft.type.stair": "Monolit",
+ "agent_draft.type.railing": "Panjara",
+ "agent_draft.type.shaft": "Shaxta",
+ "agent_draft.type.axis": "O'q 6,5 mm",
+ "agent_draft.type.refplane": "Yordamchi tekislik"
+}

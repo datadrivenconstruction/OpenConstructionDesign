@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "Limte inn {n} celler",
+ "sched_edit.pasted_skipped": "Limte inn {n} celler, hoppet over {k}: {why}",
+ "sched_edit.filled": "Fylte {n} celler",
+ "sched_edit.filled_skipped": "Fylte {n} celler, hoppet over {k}: {why}",
+ "sched_edit.why_ro": "{n} skrivebeskyttet",
+ "sched_edit.why_bad": "{n} ugyldig verdi",
+ "sched_edit.no_cell": "Klikk først på en celle i listen",
+ "sched_edit.nothing": "Ingenting å skrive",
+ "sched_edit.not_refreshed": "Skrevet, men visningen ble ikke oppdatert: {e}",
+ "sched_edit.failed": "ikke endret: {e}",
+ "sched_edit.no_changes": "Ingen endringer: {u} celler har allerede disse verdiene",
+ "sched_edit.same_tail": ", {u} er allerede like"
+}

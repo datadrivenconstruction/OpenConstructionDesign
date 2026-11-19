@@ -1,0 +1,20 @@
+{
+ "dwgfillet.fillet": "Yumaloqlash",
+ "dwgfillet.cancel": "Yumaloqlashni to'xtatish",
+ "dwgfillet.tip": "Saqlanadigan tomondagi ikki chiziqni bosing: ikkalasi ham burchakkacha qisqartiriladi yoki uzaytiriladi, radius noldan katta bo'lsa, urinma yoy bilan",
+ "dwgfillet.radius": "Yumaloqlash radiusi",
+ "dwgfillet.radius_tip": "Yoy radiusi chizma birliklarida; 0 o'tkir burchak hosil qiladi",
+ "dwgfillet.st.arm_first": "Saqlanadigan tomondagi birinchi chiziqni bosing",
+ "dwgfillet.st.arm_second": "Saqlanadigan tomondagi ikkinchi chiziqni bosing",
+ "dwgfillet.st.not_armed": "Avval Yumaloqlashni tanlang",
+ "dwgfillet.st.click_line": "Chizmaning bitta chizig'ini bosing",
+ "dwgfillet.st.other_drawing": "Ikkala chiziq ham bir chizmaga tegishli bo'lishi kerak: qaytadan boshlang",
+ "dwgfillet.st.changed": "Birinchi chiziq o'zgardi: qaytadan boshlang",
+ "dwgfillet.st.same_line": "Boshqa ikkinchi chiziqni tanlang",
+ "dwgfillet.st.parallel": "Chiziqlar parallel va hech qachon kesishmaydi: burchak hosil qilib bo'lmaydi",
+ "dwgfillet.st.degenerate": "Chiziqning uzunligi yo'q",
+ "dwgfillet.st.no_side": "Bosilgan tomonning burchakdan uzunligi yo'q",
+ "dwgfillet.st.too_big": "Bu chiziqlar uchun radius juda katta: kichikroq radius ishlating",
+ "dwgfillet.st.radius_bad": "Radius nolga teng yoki musbat bo'lishi kerak",
+ "dwgfillet.st.done": "Burchak hosil qilindi"
+}

@@ -1,0 +1,15 @@
+{
+ "cmd.data.export_step.desc": "Guarda el modelo completo o la selección como STEP AP214 o AP242: sólidos con caras exactas planas, cilíndricas, cónicas, esféricas, toroidales y B-spline; otros elementos como caras planas, colores y un nodo de ensamblaje por planta.",
+ "cmd.data.export_3mf.desc": "Guarda el modelo completo o la selección como 3MF para impresión: un objeto por elemento, colores, unidades y una comprobación de que cada cuerpo es estanco.",
+ "fmenu.export.step": "STEP sólidos exactos (.step)",
+ "fmenu.export.3mf": "3MF para impresión (.3mf)",
+ "mx.schema": "Esquema STEP",
+ "mx.schema.ap214": "AP214 (mayor compatibilidad)",
+ "mx.schema.ap242": "AP242",
+ "mx.watertight": "Cuerpos que no son estancos",
+ "mx.watertight.report": "Escribirlos y listarlos",
+ "mx.watertight.skip": "Dejarlos fuera",
+ "mx.watertight.require": "Cancelar la exportación",
+ "mx.faceted": "{fmt} guardado: {path} ({exact} sólidos exactos, {n} escritos como caras planas: {first})",
+ "sheets.print.svg": "SVG"
+}

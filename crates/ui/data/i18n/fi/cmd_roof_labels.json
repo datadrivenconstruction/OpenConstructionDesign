@@ -1,0 +1,11 @@
+{
+ "cmd.arch.roof_gable.short": "Harjakatto",
+ "cmd.arch.roof_hip.short": "Lappeellinen",
+ "cmd.arch.roof_shed.short": "Pulpettikatto",
+ "cmd.arch.roof_mansard.short": "Mansardikatto",
+ "cmd.arch.roof_gambrel.short": "Kaksoisharjakatto",
+ "cmd.arch.roof_barrel.short": "Tynnyrikatto",
+ "cmd.arch.roof_edges.short": "Kattoreunat",
+ "cmd.arch.roof_opening.short": "Aukko",
+ "cmd.mass.roof_by_face.short": "Pinnasta"
+}

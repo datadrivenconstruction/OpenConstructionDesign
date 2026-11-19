@@ -1,0 +1,8 @@
+{
+ "param_drop.title": "Eemaldada parameetrite väärtused?",
+ "param_drop.intro": "{name} ei ole enam nende kategooriatega seotud:",
+ "param_drop.line": "{category}: {values} eemaldatakse",
+ "param_drop.undo": "Üks Ctrl+Z toob need kõik tagasi.",
+ "param_drop.confirm": "Eemalda väärtused ja salvesta",
+ "param_drop.cancel": "Tühista"
+}

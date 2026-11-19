@@ -1,0 +1,8 @@
+{
+ "v3d.proj.to_ortho": "Overschakelen naar orthogonaal",
+ "v3d.proj.to_persp": "Overschakelen naar perspectief",
+ "v3d.walk.unit.m": "m/s",
+ "v3d.walk.unit.ft": "ft/s",
+ "v3d.temp.show_all": "Alles tonen  ·  Esc",
+ "v3d.msg.deleted_named": "3D-weergave {name} verwijderd"
+}

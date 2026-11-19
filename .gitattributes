@@ -1,0 +1,3 @@
+*.rs text eol=lf
+
+crates/model/data/gltf/** -text

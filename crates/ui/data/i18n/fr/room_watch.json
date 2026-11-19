@@ -1,0 +1,4 @@
+{
+ "room_watch.room.dup": "La pièce {room} est dans la zone de la pièce {other} : surface et volume ne sont comptés que dans la pièce {other}",
+ "ai.issue.room_dup": "La pièce est dans la zone de la pièce {0} : sa surface y est comptée"
+}

@@ -1,0 +1,21 @@
+{
+ "props.multi.title": {
+  "one": "# אלמנט",
+  "two": "# אלמנטים",
+  "other": "# אלמנטים"
+ },
+ "props.multi.cats": {
+  "one": "# קטגוריה",
+  "two": "# קטגוריות",
+  "other": "# קטגוריות"
+ },
+ "props.multi.varies": {
+  "one": "משתנה (#)",
+  "two": "משתנה (#)",
+  "other": "משתנה (#)"
+ },
+ "props.multi.clear": "נקה בחירה",
+ "props.multi.undo": "בטל",
+ "props.multi.narrowed": "בחירה: {n} · {name}",
+ "props.multi.chip_tip": "{name}: {n}  ·  לחיצה מציגה את המאפיינים שלהם, Ctrl+לחיצה משאיר רק אלה"
+}

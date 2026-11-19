@@ -1,0 +1,4 @@
+{
+ "room_watch.room.dup": "Prostorija {room} nalazi se u području prostorije {other}: površina i volumen računaju se samo u prostoriji {other}",
+ "ai.issue.room_dup": "Prostorija je u području prostorije {0}: njezina površina se računa tamo"
+}

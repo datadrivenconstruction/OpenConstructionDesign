@@ -1,0 +1,10 @@
+{
+ "wall_stack.we.stack_caption": "Съставен тип",
+ "wall_stack.we.side_left": "Лице вляво",
+ "wall_stack.we.side_right": "Лице вдясно",
+ "wall_stack.we.from": "От",
+ "wall_stack.we.to": "До",
+ "wall_stack.we.bottom": "Долу",
+ "wall_stack.we.delete_tip": "Изтриване на този профил",
+ "wall_stack.we.from_after_to": "„От“ трябва да е преди „До“"
+}

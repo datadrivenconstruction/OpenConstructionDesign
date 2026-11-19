@@ -1,0 +1,15 @@
+{
+ "mcp.ask.cancel": "Hủy",
+ "mcp.ask.auto.title": "Cho phép tác tử AI áp dụng thay đổi mà không hỏi?",
+ "mcp.ask.auto.body": "Các tác tử AI đã kết nối sẽ áp dụng thay đổi vào bản nháp ngay, không chờ bạn xác nhận, nên một thay đổi sai có thể xuất hiện trước khi bạn thấy. Mô hình của bạn vẫn chỉ thay đổi khi bạn nhấn Áp dụng. Chế độ này kéo dài cho đến khi bạn tắt, đóng trình soạn thảo hoặc mở mô hình khác.",
+ "mcp.ask.auto.yes": "Áp dụng không hỏi",
+ "mcp.ask.token.title": "Cấp token mới?",
+ "mcp.ask.token.body": "Token hiện tại ngừng hoạt động ngay: các tác tử AI đã kết nối sẽ bị ngắt và cần token mới. Token chỉ hiện một lần, hãy sao chép ngay.",
+ "mcp.ask.token.yes": "Token mới",
+ "mcp.auto.chip": "Tự động áp dụng bật",
+ "mcp.auto.chip_tip": "Tác tử AI áp dụng thay đổi vào bản nháp mà không hỏi. Kết thúc cùng phiên này.",
+ "mcp.auto.ask_again": "Hỏi lại",
+ "mcp.token.once": "Sao chép token này ngay: nó sẽ không hiện lại.",
+ "mcp.renewed": "Đã cấp token mới: token cũ không còn hoạt động",
+ "mcp.copied": "Đã sao chép"
+}

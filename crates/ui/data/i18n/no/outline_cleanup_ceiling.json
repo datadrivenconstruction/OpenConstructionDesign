@@ -1,0 +1,11 @@
+{
+ "cmd.ctx.ceiling.clean_outline": "Rydd opp konturen",
+ "cmd.ctx.ceiling.clean_outline.desc": "Fjerner smale topper der takkonturen svinger tilbake på seg selv. Viser en forhåndsvisning først; ett angrasteg.",
+ "cmd.ctx.shaft.clean_outline": "Rydd opp konturen",
+ "cmd.ctx.shaft.clean_outline.desc": "Fjerner smale topper der sjaktkonturen svinger tilbake på seg selv. Viser en forhåndsvisning først; ett angrasteg.",
+ "outline_cleanup.intro_ceiling": "Konturen til dette taket svinger tilbake på seg selv i smale topper: {n}. Opprydding fjerner dem; alt annet forblir som det er.",
+ "outline_cleanup.intro_shaft": "Konturen til denne sjakten svinger tilbake på seg selv i smale topper: {n}. Opprydding fjerner dem; alt annet forblir som det er.",
+ "outline_cleanup.none_ceiling": "Konturen til dette taket har ingen topper",
+ "outline_cleanup.none_shaft": "Konturen til denne sjakten har ingen topper",
+ "outline_cleanup.need_host": "Velg et gulv, et tak eller en sjakt"
+}

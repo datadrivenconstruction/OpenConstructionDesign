@@ -1,0 +1,10 @@
+{
+ "stage_err.kept": "tablica {t} zadržana: {n} redaka upisano nakon Dodaj",
+ "stage_err.stage.prev_attached": "Nije dodano: kopija prethodnog Dodaj je još otvorena. Pokreni Dodaj ponovno",
+ "stage_err.stage.model_changed": "Nije dodano: model se promijenio dok se datoteka čitala. Pokreni Dodaj ponovno",
+ "stage_err.stage.no_record": "Nije dodano: uvezena kopija nema zapis o promjeni",
+ "stage_err.stage.table_differs": "Nije dodano: tablica {t} razlikuje se između modela i uvezene kopije",
+ "stage_err.stage.unique_key": "Nije dodano: jedinstveni ključ tablice {t} ne može se pratiti",
+ "stage_err.stage.table_gone": "Nije dodano: uvoz je promijenio tablicu {t}, koju kopija više nema",
+ "stage_err.stage.copy_held": "Dodano; uvezena kopija ostaje otvorena do sljedećeg Dodaj ili ponovnog otvaranja modela"
+}

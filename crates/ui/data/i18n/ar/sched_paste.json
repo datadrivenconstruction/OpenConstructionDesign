@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "لُصقت {n} خلية",
+ "sched_edit.pasted_skipped": "لُصقت {n} خلية، وتُخطي {k}: {why}",
+ "sched_edit.filled": "مُلئت {n} خلية",
+ "sched_edit.filled_skipped": "مُلئت {n} خلية، وتُخطي {k}: {why}",
+ "sched_edit.why_ro": "{n} للقراءة فقط",
+ "sched_edit.why_bad": "{n} قيمة غير صالحة",
+ "sched_edit.no_cell": "انقر على خلية في الجدول أولًا",
+ "sched_edit.nothing": "لا شيء للكتابة",
+ "sched_edit.not_refreshed": "كُتب، لكن العرض لم يتحدّث: {e}",
+ "sched_edit.failed": "لم يتغير: {e}",
+ "sched_edit.no_changes": "لا تغييرات: {u} خلية تحتوي هذه القيم بالفعل",
+ "sched_edit.same_tail": "، {u} مساوية بالفعل"
+}

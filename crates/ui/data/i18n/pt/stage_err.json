@@ -1,0 +1,10 @@
+{
+ "stage_err.kept": "tabela {t}: {n} linhas gravadas após o Adicionar",
+ "stage_err.stage.prev_attached": "Não adicionado: a cópia do Adicionar anterior ainda está aberta. Execute Adicionar novamente",
+ "stage_err.stage.model_changed": "Não adicionado: o modelo mudou durante a leitura do arquivo. Execute Adicionar novamente",
+ "stage_err.stage.no_record": "Não adicionado: a cópia importada não tem registro de alterações",
+ "stage_err.stage.table_differs": "Não adicionado: a tabela {t} é diferente entre o modelo e a cópia importada",
+ "stage_err.stage.unique_key": "Não adicionado: não é possível acompanhar uma chave única da tabela {t}",
+ "stage_err.stage.table_gone": "Não adicionado: a importação alterou a tabela {t}, que a cópia não tem mais",
+ "stage_err.stage.copy_held": "Adicionado; a cópia importada permanece aberta até o próximo Adicionar ou até reabrir o modelo"
+}

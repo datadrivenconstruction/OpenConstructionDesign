@@ -1,0 +1,7 @@
+{
+ "spline.opt.spline": "Spline",
+ "spline.opt.spline_tip": "Spline stěna: klikejte na body, kterými prochází; Enter nebo Esc dokončí",
+ "spline.wt.three_points": "spline stěna potřebuje tři body nebo více",
+ "spline.wt.no_curtain": "prosklená stěna nemá osu spline",
+ "spline.wt.added": "spline stěna přidána"
+}

@@ -1,0 +1,10 @@
+{
+ "elem.multi.title": "{n} element",
+ "elem.multi.varies": "varierar",
+ "elem.multi.tip": "Enter sätter alla valda element",
+ "elem.multi.hidden": "{n} rader endast på vissa element",
+ "elem.multi.none": "De valda elementen har inga rader gemensamt",
+ "elem.multi.range": "Värdet ligger utanför det tillåtna intervallet",
+ "elem.multi.changed": "Ändrade {n} element · Ctrl+Z ångrar",
+ "elem.multi.same": "Redan detta värde på alla valda element"
+}

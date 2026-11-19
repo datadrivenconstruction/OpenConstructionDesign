@@ -1,0 +1,146 @@
+[
+ {
+  "id": "arch.solid_extrusion",
+  "icon": "solid-extrude",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M3",
+  "group": "gmodel",
+  "repeatable": true,
+  "priority": 6,
+  "variants": [
+   "arch.solid_blend",
+   "arch.solid_revolve",
+   "arch.solid_sweep",
+   "arch.solid_swept_blend"
+  ]
+ },
+ {
+  "id": "arch.void_extrusion",
+  "icon": "void-extrude",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M3",
+  "group": "gmodel",
+  "repeatable": true,
+  "priority": 6,
+  "variants": [
+   "arch.void_blend",
+   "arch.void_revolve",
+   "arch.void_sweep",
+   "arch.void_swept_blend"
+  ]
+ },
+ {
+  "id": "arch.solid_blend",
+  "icon": "solid-blend",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M3",
+  "group": "gmodel",
+  "repeatable": true
+ },
+ {
+  "id": "arch.void_blend",
+  "icon": "void-blend",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M3",
+  "group": "gmodel",
+  "repeatable": true
+ },
+ {
+  "id": "arch.solid_revolve",
+  "icon": "solid-revolve",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M3",
+  "group": "gmodel",
+  "repeatable": true
+ },
+ {
+  "id": "arch.void_revolve",
+  "icon": "void-revolve",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M3",
+  "group": "gmodel",
+  "repeatable": true
+ },
+ {
+  "id": "arch.solid_sweep",
+  "icon": "solid-sweep",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M3",
+  "group": "gmodel",
+  "repeatable": true
+ },
+ {
+  "id": "arch.void_sweep",
+  "icon": "void-sweep",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M3",
+  "group": "gmodel",
+  "repeatable": true
+ },
+ {
+  "id": "arch.solid_swept_blend",
+  "icon": "solid-swept-blend",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M3",
+  "group": "gmodel",
+  "repeatable": true
+ },
+ {
+  "id": "arch.void_swept_blend",
+  "icon": "void-swept-blend",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M3",
+  "group": "gmodel",
+  "repeatable": true
+ }
+]

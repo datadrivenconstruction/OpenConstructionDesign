@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "Tuvastatakse {done} / {total}",
+ "mesh_recognize.all": "Kõik {n}",
+ "mesh_recognize.only_confident": "Ainult kindlad",
+ "mesh_recognize.confident_tip": "Märgib read, mille liik vastab kategooriale ja mille kindlus on vähemalt {pct}%",
+ "mesh_recognize.row_hint": "Klõpsa real, et seda märkida. Nooleklahvid liigutavad, Enter märgib.",
+ "mesh_recognize.kind_for": "Liik: {name}",
+ "mesh_recognize.source": "Lähtevõrgud",
+ "mesh_recognize.keep": "Säilita võrgud",
+ "mesh_recognize.replace": "Asenda võrgud",
+ "mesh_recognize.convert_keep": "Teisenda {n}",
+ "mesh_recognize.convert_remove": "Teisenda {n} ja eemalda võrgud",
+ "mesh_recognize.creates": "Luuakse {n}: {kinds}",
+ "mesh_recognize.creates_none": "Veel pole midagi märgitud",
+ "mesh_recognize.stay": "{n} lähtevõrku jäävad mudelisse",
+ "mesh_recognize.removed": "{n} lähtevõrku eemaldatakse. Tagasivõtmine toob need tagasi."
+}

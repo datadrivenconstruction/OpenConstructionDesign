@@ -1,0 +1,21 @@
+{
+ "mep.row.system": "Hệ thống",
+ "mep.row.elevation": "Cao độ đầu",
+ "mep.row.slope": "Độ dốc",
+ "mep.row.material": "Vật liệu",
+ "mep.row.dev_elevation": "Cao độ",
+ "mep.row.no_system": "Hệ thống đó không còn tồn tại. Hãy chọn hệ thống khác.",
+ "mep.row.no_points": "Tuyến không có điểm nên không có cao độ.",
+ "mep.row.system_domain": "Hệ thống {system} không nhận loại tuyến này ({kind}). Hãy chọn hệ thống cùng loại mạng.",
+ "mep.row.material_pipes": "Vật liệu chỉ áp dụng cho ống; tuyến này là {kind}.",
+ "mep.row.no_catalog": "Vật liệu không có kích thước trong danh mục cho tuyến này.",
+ "mep.mat.none": "Chưa đặt",
+ "mep.mat.steel": "Thép",
+ "mep.mat.copper": "Đồng",
+ "mep.mat.pvc": "PVC",
+ "mep.mat.pp": "Polypropylen",
+ "mep.err.follow_blocked": "Tuyến đã nối không thể đi theo thay đổi này: không có chỗ cho nhánh của nó ở vị trí mới. Hãy di chuyển thiết bị ít hơn, hoặc ngắt kết nối tuyến trước.",
+ "mep.err.follow_slope": "Tuyến đã nối có độ dốc không thể giữ được ở vị trí mới: nó sẽ thấp hơn độ dốc nhỏ nhất của hệ thống. Hãy di chuyển thiết bị ít hơn theo chiều cao, hoặc ngắt kết nối tuyến trước.",
+ "mep.err.follow_port_lost": "Đầu nối mà tuyến này đặt lên không còn tồn tại sau khi sửa. Hãy di chuyển tuyến ra trước, hoặc giữ nguyên loại thiết bị.",
+ "mep.err.follow_device": "Tuyến này kết thúc tại đầu nối của thiết bị và không thể rời khỏi đó. Hãy di chuyển thiết bị thay thế, hoặc ngắt kết nối tuyến trước."
+}

@@ -1,0 +1,5 @@
+{
+ "snap.center": "Center",
+ "dwg_snap.through": "Through point",
+ "dwg_snap.through_tip": "Offset through the clicked point (snaps to ends, crossings, centres) instead of the typed distance"
+}

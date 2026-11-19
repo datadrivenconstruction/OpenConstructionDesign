@@ -1,0 +1,14 @@
+{
+ "cmd.mod.divide": "تقسیم کریں",
+ "cmd.mod.divide.short": "تقسیم",
+ "cmd.mod.divide.desc": "ایک مرحلے میں دیوار کو برابر حصوں میں تقسیم کرتا ہے۔ حصوں کی تعداد لکھیں، پھر دیوار پر کلک کریں۔",
+ "whereis.mod.divide": "تقسیم کریں، برابر حصے، ٹکڑوں میں کاٹیں، دیوار کو حصوں میں",
+ "hint.split.parts": "تقسیم: دیوار پر کلک کریں · عدد — حصے (2–100) · Esc — منسوخ",
+ "create_input.divide.bad_parts": "«{text}» حصوں کی تعداد نہیں: 2 سے {max} تک پورا عدد لکھیں",
+ "create_input.ws.err.empty": "ترتیب کا نام لکھیں",
+ "create_input.ws.err.long": "نام بہت لمبا ہے: زیادہ سے زیادہ 40 حروف",
+ "create_input.ws.err.preset": "یہ نام بلٹ ان ترتیب کا ہے",
+ "create_input.ws.err.full": "زیادہ سے زیادہ 24 محفوظ ترتیبیں: پہلے ایک ہٹائیں",
+ "create_input.seldim.locked": "فاصلہ {v} مقفل",
+ "create_input.seldim.positive": "فاصلہ صفر سے زیادہ ہونا چاہیے"
+}

@@ -1,0 +1,12 @@
+{
+ "curtain_wall.cw.issue.slab": "golv {id}: {e}",
+ "curtain_wall.cw.issue.body": "kropp {id}: {e}",
+ "curtain_wall.cw.added": "Glasfasader tillagda: {n}",
+ "curtain_wall.cw.add_failed": "Glasfasad kunde inte byggas: {e}",
+ "curtain_wall.cw.edited_warn": "Glasfasad #{id} ändrad: {w}",
+ "curtain_wall.cw.edited": "Glasfasad #{id} ändrad",
+ "curtain_wall.cw.not_changed": "Inte ändrad: {e}",
+ "curtain_wall.cw.room_edited": "Rum #{id} ändrat",
+ "curtain_wall.cw.slope_range": "Inte ändrad: lutningen ligger utanför intervallet",
+ "curtain_wall.cw.slope_set": "Golv #{id}: lutning {pct}"
+}

@@ -1,0 +1,5 @@
+{
+ "snap.center": "Middelpunt",
+ "dwg_snap.through": "Door punt",
+ "dwg_snap.through_tip": "Offset door het aangeklikte punt (snapt naar uiteinden, kruisingen, middelpunten) in plaats van de getypte afstand"
+}

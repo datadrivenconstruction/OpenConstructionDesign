@@ -1,0 +1,21 @@
+{
+ "note": "How rooms count in an area schedule. A class lists the room kinds of the pack vocabulary and the name words (lower case, any language) that put a room in it. A method lists the classes whose net area it counts in full; spaces outside the walls count by the pack factor `area.factor.<class>` and not at all when the pack has none. Geometry methods (gross, gross_internal) are measured on the wall footprints, not from the rooms.",
+ "classes": {
+  "living": {"kinds": ["living", "bedroom"], "words": ["living", "bedroom", "жилая", "спальня", "гостиная", "wohnzimmer", "schlafzimmer", "salon", "chambre", "habitacion", "dormitorio"]},
+  "service": {"kinds": ["kitchen", "bath", "wc", "storage"], "words": ["kitchen", "bath", "toilet", "wc", "laundry", "pantry", "utility", "кухня", "ванная", "санузел", "кладовая", "küche", "bad", "cuisine", "cocina"]},
+  "work": {"kinds": ["office", "meeting", "classroom", "lab", "staff"], "words": ["office", "meeting", "classroom", "laboratory", "офис", "кабинет", "büro", "bureau", "oficina"]},
+  "circulation": {"kinds": ["hall", "corridor", "stair", "lift", "lobby"], "words": ["hall", "corridor", "stair", "lift", "elevator", "lobby", "vestibule", "прихожая", "коридор", "лестница", "холл", "тамбур", "flur", "treppe", "couloir", "pasillo"]},
+  "technical": {"kinds": ["technical"], "words": ["technical", "plant", "boiler", "mechanical", "shaft", "техническ", "венткамера", "электрощит", "technikraum", "technique"]},
+  "balcony": {"kinds": [], "words": ["balcony", "балкон", "balkon", "balcon"]},
+  "loggia": {"kinds": [], "words": ["loggia", "лоджия", "loggia"]},
+  "terrace": {"kinds": [], "words": ["terrace", "терраса", "terrasse", "terraza"]}
+ },
+ "external": ["balcony", "loggia", "terrace"],
+ "other": "other",
+ "methods": {
+  "net": {"counts": ["living", "service", "work", "circulation", "technical", "other"]},
+  "usable": {"counts": ["living", "service", "work", "other"]},
+  "gross_internal": {"counts": ["living", "service", "work", "circulation", "technical", "other"]},
+  "gross": {"counts": ["living", "service", "work", "circulation", "technical", "other"]}
+ }
+}

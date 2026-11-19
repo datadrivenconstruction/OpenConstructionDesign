@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "Буцаах: {what}",
+ "undo_label.redo_what": "Дахин хийх: {what}",
+ "undo_label.undo_none": "Буцаах зүйл байхгүй",
+ "undo_label.redo_none": "Дахин хийх зүйл байхгүй"
+}

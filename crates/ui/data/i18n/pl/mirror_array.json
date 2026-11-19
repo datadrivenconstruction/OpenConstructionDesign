@@ -1,0 +1,5 @@
+{
+ "mirror_array.err.count": "Liczba to liczba całkowita od 2 do 200: 4 3000, albo 4;300, gdy krok ma trzy cyfry",
+ "mirror_array.err.length": "Krok lub suma to dodatnia długość, np. 3 000 lub 1.2 m",
+ "mirror_array.err.angle": "Przemiatanie to kąt w stopniach, różny od zera i co najwyżej 360"
+}

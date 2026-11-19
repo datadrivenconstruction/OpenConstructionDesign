@@ -1,0 +1,6 @@
+{
+ "ai_toast.toast_not_refreshed": "Anvendt som fortrydelsestrin {n} (Ctrl+Z fortryder det), men visningen blev ikke opdateret. Genindlæs visningen.",
+ "ai.optx.reload_failed": "Variant \"{name}\" er anvendt og gemt, men visningen blev ikke genindlæst: {e}",
+ "ai.cmp.stale": "Forældet",
+ "ai.cmp.stale_tip": "Denne variant blev bygget på en ældre modeltilstand. Generér den igen for at anvende."
+}

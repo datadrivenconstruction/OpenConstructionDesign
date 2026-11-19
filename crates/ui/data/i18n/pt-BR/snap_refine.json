@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "Raio de captura",
+ "snap_refine.settings.snap_px_desc": "Quão perto o cursor deve chegar de um ponto ou linha para capturar, em pixels da tela. Valores maiores ajudam em telas sensíveis ao toque e de alta densidade.",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "Horizontal",
+ "snap_refine.hint.vertical": "Vertical",
+ "snap_refine.hint.perpendicular": "Perpendicular à anterior",
+ "snap_refine.hint.parallel": "Paralela à anterior",
+ "snap_refine.hint.on_axis": "No eixo da parede",
+ "snap_refine.no_snap": "Sem captura (Alt)"
+}

@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "Wklejono {n} komórek",
+ "sched_edit.pasted_skipped": "Wklejono {n} komórek, pominięto {k}: {why}",
+ "sched_edit.filled": "Wypełniono {n} komórek",
+ "sched_edit.filled_skipped": "Wypełniono {n} komórek, pominięto {k}: {why}",
+ "sched_edit.why_ro": "{n} tylko do odczytu",
+ "sched_edit.why_bad": "{n} zła wartość",
+ "sched_edit.no_cell": "Najpierw kliknij komórkę zestawienia",
+ "sched_edit.nothing": "Nic do zapisania",
+ "sched_edit.not_refreshed": "Zapisano, ale widok się nie odświeżył: {e}",
+ "sched_edit.failed": "nie zmieniono: {e}",
+ "sched_edit.no_changes": "Brak zmian: {u} komórek ma już te wartości",
+ "sched_edit.same_tail": ", {u} już równe"
+}

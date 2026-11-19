@@ -1,0 +1,10 @@
+{
+ "type_pick.pick.search": "Търсене на типове или дебелина",
+ "type_pick.pick.empty": "Няма съвпадащи типове",
+ "type_pick.pick.edit": "Редактиране на тип…",
+ "type_pick.pick.mixed": "Смесено",
+ "type_pick.pick.layers": {
+  "one": "# слой",
+  "other": "# слоя"
+ }
+}

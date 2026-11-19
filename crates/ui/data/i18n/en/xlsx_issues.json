@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "Skipped rows and cells",
+ "xlsx_issues.conflicts_title": "Changed in both places",
+ "xlsx_issues.missing_title": "Sheet missing from the workbook",
+ "xlsx_issues.look_alike_title": "Sheet name does not match",
+ "xlsx_issues.mass_title": "Mass deletion needs confirmation",
+ "xlsx_issues.sheets_missing": "Sheets {sheets} are missing from the workbook (renamed or deleted); their rows were not compared.",
+ "xlsx_issues.keep_model": "Keep model",
+ "xlsx_issues.take_book": "Take workbook",
+ "xlsx_issues.open_book_tip": "Opens the file in its application. Nothing changes in the model; the preview reloads after you save the workbook."
+}

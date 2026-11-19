@@ -1,0 +1,19 @@
+{
+ "names.level": "Ниво {n}",
+ "names.slab": "Под 200",
+ "names.roof_slab": "Покрив 200",
+ "names.sheet.plan_section": "План и разрез на етаж 1",
+ "names.sheet.plan_view": "План на етаж 1",
+ "names.sheet.site_plan": "Ситуационен план",
+ "names.sheet_set.issue": "Издание 1",
+ "names.title.owner": "Проект ООД",
+ "names.title.creator": "А. Иванов",
+ "names.title.approver": "П. Петров",
+ "names.title.document_type": "Чертеж",
+ "names.title.status": "В процес на работа",
+ "names.revision.date": "4.11.2026",
+ "names.revision.description": "Издадено за преглед",
+ "names.revision.author": "AI",
+ "names.demo.no_levels": "без нива",
+ "names.demo.no_sheet": "лист"
+}

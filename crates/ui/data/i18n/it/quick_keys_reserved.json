@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key} è riservato ({why}) e non può essere riassegnato",
+ "quick.keys.res_copy": "copia",
+ "quick.keys.res_paste": "incolla",
+ "quick.keys.res_cut": "taglia",
+ "quick.keys.res_undo": "annulla / ripeti",
+ "quick.keys.res_save": "salva",
+ "quick.keys.res_palette": "ricerca comandi",
+ "quick.keys.reserved_conflict": "{key} è già usato da “{cmd}”. Esc lo lascia lì.",
+ "quick.keys.reserved_swap": "Scambia",
+ "quick.keys.reserved_take": "Usalo",
+ "quick.keys.reserved_keep": "Mantieni",
+ "quick.keys.reserved_os": "Già usato dal sistema:"
+}

@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "Φίλτρο γραμμής κάτω από τις κεφαλίδες. Κείμενο: υποσυμβολοσειρά· αριθμοί: >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "Εμφάνιση ή απόκρυψη στηλών",
+ "sched_toolbar.groups_tip": "Ομαδοποίηση γραμμών κατά στήλες, με υποσύνολα",
+ "sched_toolbar.formulas_tip": "Υπολογιζόμενες στήλες",
+ "sched_toolbar.phase": "Φάση",
+ "sched_toolbar.phase_tip": "Από ποια φάση λαμβάνονται οι γραμμές",
+ "sched_toolbar.copy_tip": "Επιλεγμένες γραμμές (ή όλες οι ορατές) ως TSV",
+ "sched_toolbar.import_tip": "Ανάγνωση ενός εξαγόμενου πίνακα: γραμμές με βάση το Id, στήλες με βάση την κεφαλίδα· πρώτα το πλήθος, μετά ένα βήμα αναίρεσης",
+ "sched_toolbar.export_tip": "Ορατές γραμμές και στήλες με σύνολα· οι αριθμοί παραμένουν αριθμοί",
+ "sched_toolbar.need_table": "Ανοίξτε πρώτα έναν πίνακα",
+ "sched_toolbar.busy_open": "Ένας διάλογος αρχείου είναι ήδη ανοιχτός",
+ "sched_toolbar.busy_save": "Ένας διάλογος αποθήκευσης είναι ήδη ανοιχτός",
+ "sched_toolbar.clear_filter": "Εκκαθάριση φίλτρου",
+ "sched_toolbar.fields_title": "Στήλες"
+}

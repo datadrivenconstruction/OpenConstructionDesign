@@ -1,0 +1,23 @@
+{
+ "cmd.app.report": "Rapportera ett problem…",
+ "cmd.app.report.desc": "Beskriver vad som gick fel och sparar ett paket på den här datorn: din text, byggfakta och systemfakta, en bild av fönstret och den senaste kraschloggen. Ingenting skickas.",
+ "report.title": "Rapportera ett problem",
+ "report.what": "Vad som hände",
+ "report.expected": "Vad du förväntade dig",
+ "report.steps": "Steg för att upprepa det",
+ "report.opt.shot": "Inkludera en bild av fönstret",
+ "report.opt.model": "Inkludera en kopia av modellen",
+ "report.opt.model.note": "Av som standard. Kopian innehåller projektdata, utan AI-journalen.",
+ "report.opt.paths": "Behåll användarnamn i filsökvägar",
+ "report.local": "Paketet sparas bara på den här datorn. Inget skickas automatiskt.",
+ "report.blocked": "Beskriv först vad som hände.",
+ "report.save": "Spara paket",
+ "report.copy": "Kopiera text",
+ "report.cancel": "Avbryt",
+ "report.copied": "Rapporttexten kopierad.",
+ "report.saved": "Paket sparat: {path}",
+ "report.failed": "Paketet kunde inte sparas: {err}",
+ "report.model.fail": "Kopian av modellen kunde inte göras, ingenting sparades: {err}",
+ "report.crash.notice": "Föregående session avslutades med en krasch.",
+ "report.crash.action": "Rapportera ett problem"
+}

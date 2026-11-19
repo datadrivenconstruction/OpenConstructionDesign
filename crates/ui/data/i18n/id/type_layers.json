@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "Sisipkan lapisan di bawah",
+ "type_layers.layer.delete": "Hapus lapisan",
+ "type_layers.layer.delete_last": "Tipe memerlukan minimal satu lapisan",
+ "type_layers.value.bad": "Nilai positif tidak valid",
+ "type_layers.value.required": "Wajib diisi",
+ "type_layers.unsaved.title": "Perubahan belum disimpan pada {name}",
+ "type_layers.unsaved.body": "Terapkan ke tipe, atau buang?",
+ "type_layers.unsaved.discard": "Buang"
+}

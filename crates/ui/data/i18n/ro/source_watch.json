@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "{name} s-a modificat pe disc.",
+ "src.watch.update": "Actualizează modelul",
+ "src.watch.compare": "Compară",
+ "src.watch.ignore": "Ignoră această versiune",
+ "src.watch.missing": "{name}: fișierul sursă nu a fost găsit. Lucrul continuă.",
+ "src.watch.locate": "Localizează…",
+ "src.watch.dismiss": "Închide",
+ "src.watch.more": "și încă {n} fișiere sursă",
+ "src.watch.done": "Actualizat din {name}: {updated} modificate, {kept} câmpuri păstrate ca editate, {conflicts} conflicte, {locked} valori blocate păstrate"
+}

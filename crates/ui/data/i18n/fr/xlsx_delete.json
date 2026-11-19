@@ -1,0 +1,5 @@
+{
+ "xlsx_delete.delete_missing": "Supprimer les lignes absentes du classeur",
+ "xlsx_delete.not_removed": "non supprimé : pas de données de comparaison",
+ "xlsx_delete.no_base_reason": "Indisponible : le classeur n'a pas de données de comparaison, une ligne absente ne peut donc pas être distinguée d'une ligne supprimée par erreur. Rien n'est supprimé à l'application."
+}

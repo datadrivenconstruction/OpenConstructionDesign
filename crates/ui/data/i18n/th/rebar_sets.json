@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "เพิ่ม 1 ชุด",
+ "rebar_sets.add_n": "เพิ่ม {n} ชุด",
+ "rebar_sets.pick.search": "ค้นหาประเภทเหล็กเสริม",
+ "rebar_sets.pick.empty": "ไม่มีประเภทเหล็กเสริมที่ตรงกัน",
+ "rebar_sets.unit.deg": "°"
+}

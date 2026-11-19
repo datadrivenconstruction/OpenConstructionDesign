@@ -1,0 +1,10 @@
+{
+ "xlsx_dup.dup_undo": "Döntés visszavonása",
+ "xlsx_dup.dup_undo_tip": "Az új elemekké alakított sorok ({n}) azonosítójukkal újra beolvasódnak",
+ "xlsx_dup.dup_new": "A szerkesztett másolatok létrehozása új elemekként",
+ "xlsx_dup.dup_new_tip": "A(z) {rows} sorok értékeikkel új elemekké válnak; a #{id} elem megtartja értékeit (a többivel együtt egy visszavonási lépés)",
+ "xl.msg.dup_same": "duplikált azonosító: {}: ugyanazok az értékek, mint a(z) {}. sorban; a sor kimarad",
+ "xl.msg.dup_unchanged": "duplikált azonosító: {}: az exportált sor változatlan másolata; a sor kimarad",
+ "xl.msg.dup_conflict": "a(z) {} azonosító a(z) {} sorokon eltérő értékekkel szerepel; ehhez az azonosítóhoz semmi sincs alkalmazva",
+ "xl.msg.dup_conflict_keep": "a(z) {} azonosító a(z) {} sorokon eltérő értékekkel szerepel; ehhez az azonosítóhoz semmi sincs alkalmazva — tartson meg egy sort"
+}

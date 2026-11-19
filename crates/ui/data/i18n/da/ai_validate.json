@@ -1,0 +1,14 @@
+{
+ "ai.issue.integrity": "Integritetsproblem: {0} {1}: {2}",
+ "ai.issue.opening_outside": "Åbningen passer ikke i væggen: {0}",
+ "ai.issue.opening_overlap": "Åbningen overlapper åbning {0}",
+ "ai.issue.wall_warning": "Væg: {0}",
+ "ai.issue.cut_warning": "Udskæring: {0}",
+ "ai.issue.room_open": "Rummet er ikke lukket",
+ "ai.issue.material_unknown": "Intet materiale ved navn \"{0}\" i projektet: Anvend ville tilføje et nyt med standardegenskaber",
+ "ai.issue.material_suggest": "Intet materiale ved navn \"{0}\" i projektet: Anvend ville tilføje et nyt. Mente du \"{1}\"?",
+ "ai.issue.conflict": "Dette punkt kan ikke køres: {0}",
+ "ai.issue.too_large": "{0} elementer ville ændre sig, over grænsen på {1}. Tilladelse kræves",
+ "ai.issue.truncated": "Ændringslisten stoppede ved {0} rækker: planen er større, end kortet kan vise. Tilladelse kræves",
+ "ai.issue.replan_failed": "Planen kunne ikke genberegnes. En ny kopi af modellen tages"
+}

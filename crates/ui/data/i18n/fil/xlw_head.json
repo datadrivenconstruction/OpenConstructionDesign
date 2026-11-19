@@ -1,0 +1,15 @@
+{
+ "xlw.hd_never": "Hindi pa na-export",
+ "xlw.hd_now": "ngayon lang",
+ "xlw.hd_min": "{n} min ang nakalipas",
+ "xlw.hd_hour": "{n} oras ang nakalipas",
+ "xlw.hd_day": "{n} araw ang nakalipas",
+ "xlw.hd_linked": "Naka-link",
+ "xlw.hd_watched": "Binabantayan",
+ "xlw.hd_stale": "Nagbago ang modelo mula nang i-export",
+ "xlw.ft_export": "I-export",
+ "xlw.ft_review": "Suriin",
+ "xlw.ft_apply": "Ilapat ang {n} pagbabago",
+ "xlw.ft_delete_missing": "Burahin ang nawawala",
+ "xlw.ft_keep_missing_tip": "Naka-on ang pagbura: buburahin sa Apply ang mga elementong walang row. I-untick para itira ang mga ito."
+}

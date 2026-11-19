@@ -1,0 +1,22 @@
+{
+ "depth.chip": "Tiefe {level}",
+ "depth.chip_tip": "Wie weit der nächste Lauf das Projekt ausarbeitet: D1 Konzept bis D5 Fertigung, je Fachbereich",
+ "depth.all_off": "alle Fachbereiche aus",
+ "depth.disc.arch": "Arch",
+ "depth.disc.struct": "Tragwerk",
+ "depth.disc.mep": "TGA",
+ "depth.disc.doc": "Doku",
+ "depth.project": "Projekttiefe",
+ "depth.level.1": "D1 Konzept: Baukörper, Geschosse, Flächen, ein Blatt",
+ "depth.level.2": "D2 Skizze: Wände, Räume nach Programm, Öffnungen, Achsen, Grundrisse",
+ "depth.level.3": "D3 Entwurf: geschichtete Typen, bemessene Tragstruktur, TGA-Hauptstränge und Endpunkte, Auszüge",
+ "depth.level.4": "D4 Ausführungsplanung: Anschlussdetails, Beschläge, Oberflächen, Bewehrung, Abzweige",
+ "depth.level.5": "D5 Fertigung: Biegelisten, Stahlanschlüsse, Fertigteile, Stückliste",
+ "depth.as_project": "Wie Projekt",
+ "depth.estimate": "Schätzung: etwa {elements} Elemente, {minutes} Min., {tokens} Token in {calls} Aufrufen, {sheets} Blätter",
+ "depth.estimate_none": "Die Schätzung liegt dem entworfenen Projekt bei: Das Modell ist noch leer",
+ "depth.heat": "Tiefenkarte",
+ "depth.heat.row": "Tiefe",
+ "depth.settings": "Planungstiefe dieses Projekts",
+ "depth.settings_desc": "Detailtiefe, mit der der KI-Assistent arbeitet, D1 bis D5, mit Schalter und eigener Tiefe je Fachbereich; wird in der Projektdatei gespeichert"
+}

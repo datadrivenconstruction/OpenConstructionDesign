@@ -1,0 +1,15 @@
+{
+ "cmd.ctx.floor.clean_outline": "خاکہ صاف کریں",
+ "cmd.ctx.floor.clean_outline.desc": "جہاں فرش کا خاکہ خود پر واپس مڑتا ہے وہاں تنگ نوکیں ہٹاتا ہے۔ پہلے پیش نظارہ دکھاتا ہے؛ ایک واپسی مرحلہ۔",
+ "outline_cleanup.title": "خاکہ صاف کریں",
+ "outline_cleanup.intro": "اس فرش کا خاکہ تنگ نوکوں میں خود پر واپس مڑتا ہے: {n}۔ صفائی انہیں ہٹاتی ہے؛ باقی سب جوں کا توں رہتا ہے۔",
+ "outline_cleanup.legend_before": "موٹی لائن: اب کا خاکہ",
+ "outline_cleanup.legend_after": "باریک لائن: صفائی کے بعد کا خاکہ",
+ "outline_cleanup.undo": "اسے ایک مرحلے میں واپس کیا جا سکتا ہے۔",
+ "outline_cleanup.apply": "صاف کریں",
+ "outline_cleanup.cancel": "منسوخ",
+ "outline_cleanup.done": "خاکہ صاف ہو گیا، نوکیں ہٹائی گئیں: {n}",
+ "outline_cleanup.none": "اس فرش کے خاکے میں کوئی نوک نہیں",
+ "outline_cleanup.failed": "خاکہ صاف نہیں ہو سکا",
+ "outline_cleanup.changed": "پیش نظارے کے بعد خاکہ بدل گیا؛ کچھ نہیں لکھا گیا۔ نیا پیش نظارہ دیکھیں۔"
+}

@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "نئی فیملی",
+ "family_editor.open_tip": "فیملی یا ڈرافٹ کھولیں",
+ "family_editor.close_named": "{name} بند کریں",
+ "family_editor.unsaved": "غیر محفوظ تبدیلیاں",
+ "family_editor.search": "تلاش",
+ "family_editor.nothing": "کچھ نہیں ملا",
+ "family_editor.sec_families": "پروجیکٹ فیملیز",
+ "family_editor.sec_drafts": "ڈرافٹس",
+ "family_editor.cap_category": "زمرہ",
+ "family_editor.cap_host": "ہوسٹ",
+ "family_editor.cap_type": "پیش نظارہ قسم"
+}

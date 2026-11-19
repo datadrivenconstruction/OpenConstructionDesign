@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "Προεπισκόπηση",
+ "agent_draft.ag.preview.desc": "Περιγράφει τα στοιχεία αυτού του πρόχειρου στον καμβά όσο ο δείκτης είναι πάνω στο κουμπί. Δεν αλλάζει τίποτα.",
+ "agent_draft.type.column": "Κολώνα",
+ "agent_draft.type.roof": "Στέγη",
+ "agent_draft.type.ceiling": "Οροφή",
+ "agent_draft.type.stair": "Μονολιθική",
+ "agent_draft.type.railing": "Κιγκλίδωμα",
+ "agent_draft.type.shaft": "Φωταγωγός",
+ "agent_draft.type.axis": "Άξονας 6.5 mm",
+ "agent_draft.type.refplane": "Επίπεδο αναφοράς"
+}

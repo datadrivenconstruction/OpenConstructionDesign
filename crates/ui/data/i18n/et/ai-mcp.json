@@ -1,0 +1,15 @@
+{
+ "mcp.ask.cancel": "Loobu",
+ "mcp.ask.auto.title": "Kas lasta AI-agentidel muudatused küsimata rakendada?",
+ "mcp.ask.auto.body": "Ühendatud AI-agendid rakendavad oma muudatused mustanditele kohe, ilma sinu kinnituseta, nii et vale muudatus võib jõuda sinuni enne, kui seda näed. Mudel muutub ikka alles siis, kui vajutad Rakenda. See kehtib seni, kuni lülitad selle välja, sulged redaktori või avad teise mudeli.",
+ "mcp.ask.auto.yes": "Rakenda küsimata",
+ "mcp.ask.token.title": "Kas väljastada uus žeton?",
+ "mcp.ask.token.body": "Praegune žeton lakkab kohe töötamast: ühendatud AI-agendid katkestatakse ja nad vajavad uut žetooni. Seda näidatakse ainult üks kord, seega kopeeri see kohe.",
+ "mcp.ask.token.yes": "Uus žeton",
+ "mcp.auto.chip": "Automaatne rakendamine sees",
+ "mcp.auto.chip_tip": "AI-agendid rakendavad muudatused mustanditele küsimata. Lõpeb selle sessiooniga.",
+ "mcp.auto.ask_again": "Küsi uuesti",
+ "mcp.token.once": "Kopeeri see žeton kohe: seda ei näidata uuesti.",
+ "mcp.renewed": "Uus žeton väljastatud: vana ei tööta enam",
+ "mcp.copied": "Kopeeritud"
+}

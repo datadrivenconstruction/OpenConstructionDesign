@@ -1,0 +1,8 @@
+{
+ "empty.start_recent.title": "Nog geen recente projecten",
+ "empty.start_recent.hint": "Projecten die u opent, verschijnen hier. Begin met het voorbeeldmodel.",
+ "empty.start_recent.action": "Voorbeeld openen",
+ "start.recent_open_file": "Bestand openen…",
+ "start.forgot": "Verwijderd uit recent: {name}",
+ "start.forgot_undo": "Ongedaan maken"
+}

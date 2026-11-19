@@ -1,0 +1,7 @@
+{
+ "xl.msg.param_ambiguous": "veerg '{}' võib olla mis tahes parameetritest {}; sisesta täpne parameetri nimi, ei rakendatud",
+ "xl.msg.param_tag_stale": "veerg '{}' viitab parameetrile, mida sellel projektil ei ole; ei rakendatud",
+ "xl.msg.dup_col_note": "veerg '{}' lehel {} kordab veergu '{}' lehel {}; võrdsed väärtused rakendatakse üks kord, rida, kus need erinevad, säilitab mudeli väärtuse",
+ "xl.msg.dup_col_differs": "veerud '{}' ja '{}' erinevad väärtuste {} ja {} poolest; mudeli väärtus jääb, jäta alles üks veerg",
+ "xl.msg.dup_col_id": "veerud '{}' ja '{}' erinevad väärtuste {} ja {} poolest, rida ei saa tuvastada; midagi ei rakendatud, jäta alles üks veerg"
+}

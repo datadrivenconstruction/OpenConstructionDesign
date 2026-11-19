@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "בחר את כל לולאת הקירות",
+ "cmd.sketch.link_unlink": "נתק קצה מקיר",
+ "cmd.sketch.link_repick": "בחר מחדש קיר לקצה",
+ "cmd.ctx.floor.link_unlink": "נתק קצוות מקירות",
+ "cmd.ctx.floor.link_accept": "קבל קצוות של קירות שנמחקו",
+ "boundary_link.hint.loop": "לחץ על קיר: הרצף הסגור של הקירות יהפוך לקצוות מקושרים",
+ "boundary_link.hint.repick": "לחץ על קיר המקביל לקצה: הקצה יעקוב אחריו",
+ "boundary_link.need_sketch": "פתח תחילה את סקיצת הגבול",
+ "boundary_link.need_edge": "הצבע על קצה של הסקיצה",
+ "boundary_link.need_straight": "רק קצה ישר יכול לעקוב אחרי קיר",
+ "boundary_link.need_floor": "בחר רצפה",
+ "boundary_link.no_wall": "אין קיר מתחת לסמן",
+ "boundary_link.not_parallel": "הקיר אינו מקביל לקצה",
+ "boundary_link.not_linked": "קצה זה אינו מקושר לקיר",
+ "boundary_link.unlinked": "הקצה נותק: הוא נשאר במקומו ואינו עוקב עוד אחרי הקיר",
+ "boundary_link.accepted": "הקצוות התקבלו: הם נשארים במקומם כקצוות רגילים",
+ "boundary_link.failed": "לא ניתן להחיל",
+ "boundary_link.lost": "קיר המקור נמחק",
+ "boundary_link.blocked": "לא ניתן לעקוב אחרי הקיר"
+}

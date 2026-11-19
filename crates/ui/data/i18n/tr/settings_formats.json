@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "Çalışma kitabı dışa aktarıldıktan sonra ne olacak",
+ "settings.area_decimals_desc": "Alanlarda ondalık ayırıcıdan sonraki basamaklar",
+ "settings.volume_decimals_desc": "Hacimlerde ondalık ayırıcıdan sonraki basamaklar",
+ "settings.frac_desc": "İngiliz ölçülerinde en küçük inç kesri",
+ "settings.small_area_desc": "1 fit² altındaki alanları inç² olarak göster",
+ "settings.sample_desc": "Mevcut seçimlerle sayılar nasıl görünür",
+ "autosave.title_desc": "Açık projenin kurtarma kopyasını tut",
+ "autosave.interval_desc": "Kurtarma kopyaları arasındaki süre",
+ "autosave.keep_desc": "Daha eski kurtarma kopyaları silinir",
+ "autosave.folder_desc": "Boş bırakılırsa varsayılan klasör kullanılır",
+ "autosave.remind_desc": "Henüz dosyası olmayan projeyi kaydetme hatırlatıcısı",
+ "settings.backend_desc": "Kullanılan grafik adaptörü",
+ "settings.news_desc": "Bu sürümde neler değişti",
+ "settings.assoc_default_desc": "Bu uygulamayı model dosyaları için varsayılan yap",
+ "settings.data_dir_desc": "Önbellekler, kurtarma kopyaları ve günlükler burada tutulur."
+}

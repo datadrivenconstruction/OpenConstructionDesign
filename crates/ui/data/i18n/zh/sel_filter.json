@@ -1,0 +1,6 @@
+{
+ "sel_filter.flt.all_cats": "全部类别",
+ "sel_filter.flt.in_sel": "在所选范围内",
+ "sel_filter.flt.none": "请至少勾选一个类别，否则所选内容将被清空",
+ "sel_filter.tg.none": "请至少勾选一个类别以添加标记"
+}

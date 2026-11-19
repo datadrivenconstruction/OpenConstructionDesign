@@ -1,0 +1,15 @@
+{
+ "xl.msg.cell_clipped": "pinutol ang teksto para magkasya sa limit ng cell; read-only, hindi na-apply ang edit",
+ "xlcell.status": "Na-export. {count} cell ang pinaikli o iniwang walang laman — tingnan ang detalye sa window.",
+ "xlcell.title": "Mga cell na binago ng export",
+ "xlcell.intro": "Hindi maisulat nang ganito ang mga cell na ito. Nasa modelo pa rin ang buong halaga; naka-lock ang cell at hindi ito maie-edit sa book.",
+ "xlcell.col_sheet": "Dahon",
+ "xlcell.col_row": "Hilera",
+ "xlcell.col_col": "Kolum",
+ "xlcell.col_id": "ID ng elemento",
+ "xlcell.col_what": "Nangyari",
+ "xlcell.what_clipped": "Teksto na pinutol sa limit ng cell",
+ "xlcell.what_blank": "Hindi tapos na numero, iniwang walang laman ang cell",
+ "xlcell.more": "… at {count} pa",
+ "xlcell.close": "Isara"
+}

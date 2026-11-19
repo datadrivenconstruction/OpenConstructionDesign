@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "اندازه‌گیری‌شده {value}، حد {limit}",
+ "ai_checks.check.cap": "نمایش {shown} از {total} یافته. خطاها اول می‌آیند: آن‌ها را اصلاح کنید و دوباره اجرا کنید.",
+ "ai_checks.check.run_again": "اجرای دوباره",
+ "ai_checks.check.goto": "انتخاب و بزرگ‌نمایی",
+ "ai_checks.check.never_title": "هنوز بررسی نشده",
+ "ai_checks.check.never_hint": "بررسی‌ها را اجرا کنید تا یافته‌ها اینجا ظاهر شوند.",
+ "ai_checks.check.sec.error": "خطاها",
+ "ai_checks.check.sec.warning": "هشدارها",
+ "ai_checks.check.sec.info": "یادداشت‌ها"
+}

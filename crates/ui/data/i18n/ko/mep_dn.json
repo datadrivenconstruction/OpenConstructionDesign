@@ -1,0 +1,5 @@
+{
+ "mep_dn.dn.unset": "설정 안 됨",
+ "mep_dn.slope.err": "기울기를 %로 입력하세요. 예: 1.5",
+ "mep_dn.err.rejected": "값이 허용되지 않습니다"
+}

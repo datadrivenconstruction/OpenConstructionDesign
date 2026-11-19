@@ -1,0 +1,10 @@
+{
+ "ai.size.count": "~{n} / {max} tokens",
+ "ai.size.block": "Te lang voor dit model: ~{n} tokens, er passen maximaal {max} en er moet ruimte blijven voor het antwoord — verkort het of splits het",
+ "ai.size.trim": "Inkorten tot het past",
+ "ai.size.trim_tip": "Knip het einde van het bericht zodat het past. Er wordt niets geknipt tot u klikt.",
+ "ai.size.drop_view": "Weergave weglaten",
+ "ai.size.drop_level": "Verdieping weglaten",
+ "ai.size.drop_selection": "Selectie weglaten",
+ "ai.size.sep": "."
+}

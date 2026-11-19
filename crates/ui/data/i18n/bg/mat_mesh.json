@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "Импортирани мрежи",
+ "mat_mesh.mesh.none_selected": "Изберете импортирани мрежи в 3D изгледа, за да получат този материал.",
+ "mat_mesh.mesh.current": "Първа избрана мрежа: {material}",
+ "mat_mesh.mesh.current_none": "Първата избрана мрежа няма материал.",
+ "mat_mesh.mesh.assign": "Присвой на {n} избрани",
+ "mat_mesh.mesh.assign_tip": "Реалистичният стил показва текстурата на този материал върху избраните мрежи",
+ "mat_mesh.mesh.assign_cat": "Присвой към категория {category}",
+ "mat_mesh.mesh.assign_cat_tip": "Всяка импортирана мрежа от тази категория без собствен материал",
+ "mat_mesh.mesh.clear": "Изчисти избраните",
+ "mat_mesh.mesh.clear_tip": "Избраните мрежи се връщат към материала на категорията или към плътния цвят",
+ "mat_mesh.mesh.clear_cat": "Изчисти категорията"
+}

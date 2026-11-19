@@ -1,0 +1,5 @@
+{
+ "snap.center": "Sentro",
+ "dwg_snap.through": "Punto ng pagdaan",
+ "dwg_snap.through_tip": "I-offset sa pamamagitan ng na-click na punto (dumidikit sa dulo, tawiran, sentro) sa halip na typed na distansya"
+}

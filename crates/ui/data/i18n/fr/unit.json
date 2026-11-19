@@ -1,0 +1,12 @@
+{
+ "unit.size_b": "{n} o",
+ "unit.size_gb": "{n} Go",
+ "autosave_status.unit.edits": {
+  "one": "modification",
+  "other": "modifications"
+ },
+ "autosave_status.unit.copies": {
+  "one": "copie",
+  "other": "copies"
+ }
+}

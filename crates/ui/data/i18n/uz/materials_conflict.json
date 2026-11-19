@@ -1,0 +1,5 @@
+{
+ "materials.mat.conflict": "Kartochkada tahrirlar bo'lgan paytda bu material modelda o'zgardi (bekor qilish yoki boshqa oyna orqali). Tahrirlaringiz saqlanadi.",
+ "materials.mat.keep": "Mening tahrirlarimni saqlash",
+ "materials.mat.reload": "Qayta yuklash"
+}

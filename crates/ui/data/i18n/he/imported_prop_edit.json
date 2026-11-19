@@ -1,0 +1,6 @@
+{
+ "imported_prop_edit.remove": "הסרת מאפיין",
+ "imported_prop_edit.remove.tip": "מסיר את המאפיין מ-{n} אלמנטים נבחרים בצעד ביטול אחד; הוא יוסר מקובץ ה-IFC בשמירה",
+ "imported_prop_edit.done": "{key} הוסר מ-{n} אלמנטים",
+ "imported_prop_edit.warn.reload": "בוצע, אך המבט לא רוענן; פתחו מחדש את החלונית או בטלו אם נראה שגוי"
+}

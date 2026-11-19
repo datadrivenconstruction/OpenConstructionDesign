@@ -1,0 +1,13 @@
+{
+ "cmd.arch.wall_pick": "Fal vonal alapján",
+ "cmd.arch.wall_pick.desc": "Falat helyez el az aktuális szint kiválasztott rajzvonalára. Az F a tengely és a külső oldal között vált a vonalon, a Tab a csatlakozó láncot veszi át. Minden kiválasztás egy visszavonási lépés. Függönyfalakra is működik.",
+ "hint.wall_pick.center": "Fal vonal alapján: válasszon rajzvonalat · tengely a vonalon · F oldal · Tab lánc · Esc kilépés",
+ "hint.wall_pick.face": "Fal vonal alapján: válasszon rajzvonalat · oldal a vonalon, kurzor felőli oldal · F tengely · Tab lánc · Esc kilépés",
+ "hint.wall_pick.center_chain": "Fal vonal alapján: válasszon vonalat a láncához · tengely a vonalon · F oldal · Tab egy vonal",
+ "hint.wall_pick.face_chain": "Fal vonal alapján: válasszon vonalat a láncához · oldal a vonalon · F tengely · Tab egy vonal",
+ "wall_pick.st.start": "Válasszon rajzvonalat. F: tengely vagy oldal, Tab: csatlakozó lánc",
+ "wall_pick.st.no_lines": "Ezen a szinten nincsenek látható rajzvonalak",
+ "wall_pick.st.miss": "Itt nincs rajzvonal",
+ "wall_pick.st.on_wall": "Ez a vonal már a(z) {id} fal alatt van",
+ "wall_pick.st.tight": "Az oldaleltolás nem illeszkedik: a lánc egy szakasza rövidebb a fal vastagságánál"
+}

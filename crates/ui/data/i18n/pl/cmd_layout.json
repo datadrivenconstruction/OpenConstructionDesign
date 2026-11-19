@@ -1,0 +1,4 @@
+{
+ "cmd.data.sync_xlsx": "Synchronizuj z XLSX-em…",
+ "cmd.data.sync_xlsx.desc": "Ponownie odczytuje powiązany skoroszyt i pokazuje różnice względem modelu."
+}

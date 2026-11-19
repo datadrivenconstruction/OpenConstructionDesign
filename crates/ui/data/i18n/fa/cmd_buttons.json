@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}، روی همان طبقه",
+ "cmd_buttons.purge.undo": "پاکسازی یک مرحلهٔ واگرد است.",
+ "cmd_buttons.unpin.none": "هیچ عنصر انتخاب‌شده‌ای سنجاق نشده است",
+ "cmd_buttons.change_type.none": "ابتدا دیوارها را انتخاب کنید: نوعشان در یک مرحله تغییر می‌کند",
+ "cmd_buttons.units.metric": "واحدها: متریک",
+ "cmd_buttons.units.imperial": "واحدها: فوت و اینچ",
+ "cmd_buttons.units.back": "بازگشت به حالت قبل",
+ "cmd_buttons.underlay.on": "زیرلایه روشن است: طبقهٔ پایین کم‌رنگ نمایش داده می‌شود",
+ "cmd_buttons.underlay.off": "زیرلایه خاموش است",
+ "cmd_buttons.underlay.none": "زیرلایه روشن است، اما طبقهٔ پایین چیزی برای نمایش ندارد",
+ "cmd_buttons.zoom_sel.no_shape": "انتخاب در این نما شکلی برای قاب‌کردن ندارد",
+ "cmd_buttons.close.base": "برگه‌های پلان و سه‌بعدی باز می‌مانند؛ برای بستن، یک برش، برگ یا نمای نقشه باز کنید",
+ "tool.equipment": "تجهیزات",
+ "hint.equipment.place": "تجهیزات: مکان را انتخاب کنید · Esc — خروج",
+ "cmd_buttons.table.opened": "جدول کنار مدل باز شد",
+ "cmd_buttons.circuits.tip": "فهرست مدارهای برق این مدل را باز می‌کند"
+}

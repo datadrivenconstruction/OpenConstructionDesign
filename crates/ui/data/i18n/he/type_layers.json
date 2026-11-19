@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "הוסף שכבה מתחת",
+ "type_layers.layer.delete": "מחק שכבה",
+ "type_layers.layer.delete_last": "לסוג נדרשת לפחות שכבה אחת",
+ "type_layers.value.bad": "הערך אינו חיובי תקין",
+ "type_layers.value.required": "שדה חובה",
+ "type_layers.unsaved.title": "שינויים שלא נשמרו ב-{name}",
+ "type_layers.unsaved.body": "להחיל אותם על הסוג, או לבטל אותם?",
+ "type_layers.unsaved.discard": "בטל שינויים"
+}

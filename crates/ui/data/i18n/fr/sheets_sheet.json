@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "Dupliquer la feuille avec ses vues",
+ "cmd.view.sheet_duplicate_title": "Dupliquer la feuille (cartouche seul)",
+ "sheets.dup.menu_views": "Dupliquer avec les vues",
+ "sheets.dup.menu_title": "Dupliquer, cartouche seul",
+ "sheets.dup.done": "Feuille {number} créée à partir de {src} : {views} vues, {sched} tableaux et légendes. Les révisions ne sont pas copiées ; la feuille n'est pas émise.",
+ "sheets.dup.none": "Ouvrez une feuille pour la dupliquer",
+ "sheets.dup.copy": "copie",
+ "cmd.view.sheet_duplicate.short": "Dupliquer avec les vues",
+ "cmd.view.sheet_duplicate_title.short": "Dupliquer le cartouche"
+}

@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "Walang nakita",
+ "empty.browser_search.hint": "Walang view, level, type o kuwarto na tumutugma sa paghahanap na ito.",
+ "empty.browser_search.action": "Burahin ang paghahanap",
+ "empty.xl_filtered.title": "Walang entry na tumutugma sa mga filter",
+ "empty.xl_filtered.hint": "I-on ang higit pang uri, pumili ng ibang sheet o baguhin ang teksto ng paghahanap.",
+ "empty.xl_filtered.action": "Burahin ang mga filter",
+ "empty.xl_nochanges.title": "Walang pagbabago sa workbook",
+ "empty.xl_nochanges.hint": "Tugma ang workbook sa model: walang mababago kung i-import ito.",
+ "empty.version_same.title": "Magkapareho ang mga model",
+ "empty.version_same.hint": "Walang nakitang pagkakaiba sa pagitan ng bukas na model at ng piniling bersyon.",
+ "empty.templates.title": "Wala pang view template",
+ "empty.templates.hint": "Gumawa ng isa mula sa kasalukuyang view para magamit ang mga setting nito sa ibang view.",
+ "empty.templates.action": "Pangalanan ang template",
+ "empty.fe_params.title": "Wala pang parameter",
+ "empty.fe_params.hint": "Magdagdag ng parameter sa ibaba para kontrolin ang laki, materyales o visibility.",
+ "empty.fe_params.action": "Magdagdag ng parameter"
+}

@@ -1,0 +1,13 @@
+{
+ "mep.sys.duct": "Nawiew S1",
+ "mep.sys.pipe": "Zimna woda C1",
+ "mep.sys.tray": "Zasilanie",
+ "mep.round": "Okrągły",
+ "mep.material": "Materiał",
+ "mep3d.elevation": "Rzędna od poziomu",
+ "mep3d.slope": "Spadek",
+ "mep3d.shape": "Kształt",
+ "mep3d.shape.rect": "Prostokątny",
+ "mep3d.shape.round": "Okrągły",
+ "mep3d.shape.oval": "Płaski owal"
+}

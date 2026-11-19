@@ -1,0 +1,4 @@
+{
+ "elem.spreadsheet.applied": "XLSX-ден импортталды: {what}",
+ "elem.spreadsheet.failed": "XLSX кестесі импорты сәтсіз аяқталды: {e}"
+}

@@ -1,0 +1,6 @@
+{
+ "pair_input.pair_hint": "Deux valeurs sont séparées par un point-virgule : @1000;500",
+ "pair_input.old_pair": "Une virgule entre deux nombres entiers ne forme plus une paire : saisissez 6000;4000 pour deux valeurs ou 6000,5 pour une décimale",
+ "pair_input.op.bad_length": "Ce n'est pas une longueur : {text} ({why}). Rien n'a été modifié",
+ "pair_input.op.bad_count": "Le nombre {text} n'a pas été pris en compte : un entier de {min} à {max}"
+}

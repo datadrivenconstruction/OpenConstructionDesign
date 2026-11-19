@@ -1,0 +1,6 @@
+{
+ "xlsx_readonly.read_only": "Regnearket er skrivebeskyttet (filegenskab eller mappetilladelse). Eksportér til en kopi, eller fjern Skrivebeskyttet i filegenskaberne og prøv igen.",
+ "xlsx_readonly.export_copy": "Eksportér til en kopi",
+ "xlsx_readonly.no_copy_name": "Intet ledigt navn til en kopi ved siden af regnearket.",
+ "xlsx_readonly.copied": "Regnearket blev ladt være som det er. En opdateret kopi blev skrevet ved siden af og er nu tilknyttet: {path}"
+}

@@ -1,0 +1,13 @@
+{
+ "tags.gone": "The tag no longer exists",
+ "tags.readonly_wall": "A wall tag shows the type and cannot be edited here: change the wall type",
+ "tags.readonly_comp": "A component tag shows the family and cannot be edited here: change the type",
+ "tags.locked": "The element is locked: unlock it to edit the tag",
+ "tags.done": "Tag value written",
+ "tags.failed": "Tag not changed: {e}",
+ "tags.dup_door": "{mark} also on {n} doors",
+ "tags.dup_window": "{mark} also on {n} windows",
+ "tags.dup_room": "{mark} also on {n} rooms",
+ "tags.hint_mark": "Mark",
+ "tags.hint_name": "Room name"
+}

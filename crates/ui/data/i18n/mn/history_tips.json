@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "Буцаагдсан — Ctrl+Y дахин хийнэ",
+ "history.hist.empty": "Одоогоор өөрчлөлт алга",
+ "history.hist.empty_hint": "Таны засвар энд гарна. Аль нэг алхам дээр дарвал тэр үе рүү буцна.",
+ "history.hist.revert_all_n": "AI-ийн бүх өөрчлөлтийг буцаах ({n})"
+}

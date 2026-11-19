@@ -1,0 +1,5 @@
+{
+ "sel_chip.opt.sel_hint": "तत्व चुनने के लिए उस पर क्लिक करें। Ctrl जोड़ता है, Shift हटाता है।",
+ "sel_chip.opt.units": "इकाइयां",
+ "sel_chip.sel_chip": "{name}: {n}"
+}

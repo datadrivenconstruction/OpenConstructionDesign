@@ -1,0 +1,8 @@
+{
+ "drafts.drafts.head": "Open editors bevatten bewerkingen die nog niet in het project staan:",
+ "drafts.draft.family": "Familie “{name}”",
+ "drafts.draft.line": "Lijnbibliotheek: {name}",
+ "drafts.draft.styles": "Lijnstijlen van weergavebereik",
+ "drafts.btn.save_all": "Alles opslaan",
+ "drafts.drafts.refused": "Een concept kon niet worden opgeslagen. Er is niets gesloten; de editor met het concept is open."
+}

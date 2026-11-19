@@ -1,0 +1,6 @@
+{
+ "geom.length": "الطول",
+ "sched.cat.room_seps": "فواصل الغرف",
+ "room.err.point_leave": "الغرفة {n}: ستخرج النقطة عن حدودها",
+ "room.err.point_taken": "الغرفة {n}: ستقع النقطة داخل الغرفة {other}"
+}

@@ -1,0 +1,8 @@
+{
+ "cmd.props.param_lock": "Blochează sau deblochează valoarea parametrului",
+ "locked_values.kept": "{n} valori blocate păstrate",
+ "locked_values.locked": "„{name}” blocat: importul XLSX, editarea în bloc și AI îl păstrează",
+ "locked_values.unlocked": "„{name}” deblocat",
+ "locked_values.locked_tip": "Blocat: importul XLSX, editarea în bloc și AI păstrează această valoare. Faceți clic pentru deblocare  ·  Ctrl+L",
+ "locked_values.no_row": "Poziționați-vă pe un rând de parametru din Proprietăți, apoi apăsați Ctrl+L"
+}

@@ -1,0 +1,13 @@
+{
+ "ai.proposal.title": "Agentforslag",
+ "ai.proposal.meta": "{actor} · handlinger: {ops}",
+ "ai.proposal.apply.desc": "Anvender hele forslaget som ét trin; Ctrl+Z fortryder det",
+ "ai.proposal.applying": "Anvender…",
+ "ai.proposal.applied": "Forslaget blev anvendt. Ctrl+Z fortryder det.",
+ "ai.proposal.applied_resync": "Forslaget blev anvendt, men visningen er ikke opdateret endnu. Den opdateres selv; Ctrl+Z fortryder trinnet.",
+ "ai.proposal.stale": "Modellen ændrede sig, efter forslaget blev forhåndsvist. Bed agenten om at foreslå det igen.",
+ "ai.proposal.toast.applied": "Forslag anvendt. Ctrl+Z fortryder det.",
+ "ai.proposal.toast.stale": "Modellen ændrede sig efter forhåndsvisningen, så intet blev anvendt. Forhåndsvis igen: bed agenten om at foreslå det på ny.",
+ "ai.proposal.toast.refused": "Forslag ikke anvendt: {reason}",
+ "ai.proposal.rejected": "Forslaget blev afvist."
+}

@@ -1,0 +1,19 @@
+{
+ "ifc_patch.fallback.source_changed": "Correção não usada: o arquivo de origem foi alterado no disco ou não pode ser lido. O arquivo foi regravado a partir do modelo.",
+ "ifc_patch.fallback.sources": "Correção não usada: o projeto não tem exatamente uma origem. O arquivo foi regravado a partir do modelo.",
+ "ifc_patch.fallback.schema": "Correção não usada: o esquema do arquivo de origem não é suportado. O arquivo foi regravado a partir do modelo.",
+ "ifc_patch.fallback.structure": "Correção não usada: a estrutura do arquivo de origem não é confiável. O arquivo foi regravado a partir do modelo.",
+ "ifc_patch.fallback.edit": "Correção não usada: uma edição não pode ser aplicada com segurança ao arquivo de origem. O arquivo foi regravado a partir do modelo.",
+ "ifc_patch.reason.schema": "O esquema do arquivo de origem não comporta esta edição; o elemento permanece como na origem",
+ "ifc_patch.reason.prop": "Esta edição de propriedade não pode ser expressa no arquivo de origem; o valor permanece como na origem",
+ "ifc_patch.reason.no_export": "Este novo elemento não tem representação em IFC",
+ "ifc_patch.reason.link": "O elemento está no arquivo, mas o link para o seu material ou tipo não é gravado; ele aparece como não gravado",
+ "ifc_patch.drop": "Descartar",
+ "ifc_patch.drop_done": "Links pendentes descartados: {n}; não serão tentados novamente",
+ "ifc_patch.fallback.building": "Correção não usada: um novo nível precisa de exatamente um edifício no arquivo de origem, e há nenhum ou vários. O arquivo foi regravado a partir do modelo.",
+ "ifc_patch.fallback.types": "Correção não usada: níveis, tipos ou materiais mudaram desde a importação, e a correção não consegue gravá-los. O arquivo foi regravado a partir do modelo.",
+ "ifc_patch.fallback.zipped": "Correção não usada: um arquivo de origem compactado não pode ser corrigido. O arquivo foi regravado a partir do modelo.",
+ "ifc_patch.fallback.source_kept": "O arquivo de origem não foi sobrescrito: não foi possível confiar que este salvamento pudesse substituí-lo. Este salvamento é uma cópia ao lado dele.",
+ "ifc_patch.fallback.nested": "Correção não usada: um novo elemento tem partes aninhadas (como portas), que a correção não consegue gravar. O arquivo foi regravado a partir do modelo.",
+ "ifc_patch.fallback.shared_part": "Correção não usada: uma parte de uma escada ou rampa editada também é usada por outro elemento ou relação, o que a correção não consegue tratar. O arquivo foi regravado a partir do modelo."
+}

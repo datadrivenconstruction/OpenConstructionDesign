@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "প্রয়োগ থামানো হয়েছে: মডেল যেমন ছিল তেমন রাখা হয়েছে",
+ "apply_verify.rolled_back": "প্রয়োগ খসড়ার সঙ্গে মেলেনি এবং ফেরত নেওয়া হয়েছে; মডেল অপরিবর্তিত। {what}",
+ "apply_verify.diff.missing": "খসড়া {what} {kind} দেখায়, কিন্তু প্রয়োগ তা করেনি।",
+ "apply_verify.diff.extra": "{kind} {what} প্রয়োগ করা হয়েছে, যা খসড়ায় দেখানো হয়নি।",
+ "apply_verify.diff.kind": "খসড়া {what} {shown} দেখায়, কিন্তু প্রয়োগ করা হয়েছে {applied}।",
+ "apply_verify.diff.value": "{what}: “{col}” খসড়ার থেকে আলাদা হয়েছে।",
+ "apply_verify.diff.truncated": "খসড়া ও প্রয়োগ করা পরিবর্তনের আকার আলাদা।",
+ "apply_verify.diff.unreadable": "প্রয়োগ করা পরিবর্তন আবার পড়া যায়নি ({e})।",
+ "apply_verify.no_base": "প্রয়োগ চালানো হয়নি: খসড়া মেলানোর কপি নেই। মডেল অপরিবর্তিত; খসড়াটি আবার চান।",
+ "apply_verify.take_back_failed": "ফেরত নেওয়া ব্যর্থ ({e}): আনডু ব্যবহার করুন।",
+ "apply_verify.kind.created": "তৈরি",
+ "apply_verify.kind.changed": "বদলানো",
+ "apply_verify.kind.deleted": "মোছা",
+ "apply_verify.card.type_row": "টাইপ {type} · {n}টি উপাদান পরিবর্তন নেবে"
+}

@@ -1,0 +1,16 @@
+{
+ "family_overwrite.ow.title": "Erstat projektets typeværdier?",
+ "family_overwrite.ow.body": "Indlæsning erstatter {values} i {types}. Placerede forekomster af disse typer: {instances}.",
+ "family_overwrite.ow.values": {
+  "one": "# værdi",
+  "other": "# værdier"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# type",
+  "other": "# typer"
+ },
+ "family_overwrite.ow.list": "Typer: {list}",
+ "family_overwrite.ow.more": "og {n} mere",
+ "family_overwrite.ow.back": "Tilbage til redigering",
+ "family_overwrite.ow.replace": "Erstat værdier"
+}

@@ -1,0 +1,14 @@
+{
+ "ai.issue.integrity": "Problem spójności: {0} {1}: {2}",
+ "ai.issue.opening_outside": "Otwór nie mieści się w ścianie: {0}",
+ "ai.issue.opening_overlap": "Otwór nachodzi na otwór {0}",
+ "ai.issue.wall_warning": "Ściana: {0}",
+ "ai.issue.cut_warning": "Przycięcie: {0}",
+ "ai.issue.room_open": "Pomieszczenie nie jest zamknięte",
+ "ai.issue.material_unknown": "Brak materiału o nazwie „{0}” w projekcie: Zastosuj doda nowy z domyślnymi właściwościami",
+ "ai.issue.material_suggest": "Brak materiału o nazwie „{0}” w projekcie: Zastosuj doda nowy. Czy chodziło o „{1}”?",
+ "ai.issue.conflict": "Tej pozycji nie można uruchomić: {0}",
+ "ai.issue.too_large": "{0} elementów zmieniłoby się, powyżej limitu {1}. Potrzebna jest zgoda",
+ "ai.issue.truncated": "Lista zmian urwała się na {0} wierszach: plan jest większy, niż karta może pokazać. Potrzebna jest zgoda",
+ "ai.issue.replan_failed": "Nie udało się przeliczyć planu. Pobierana jest nowa kopia modelu"
+}

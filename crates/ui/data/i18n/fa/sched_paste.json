@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "{n} سلول چسبانده شد",
+ "sched_edit.pasted_skipped": "{n} سلول چسبانده شد، {k} سلول رد شد: {why}",
+ "sched_edit.filled": "{n} سلول پر شد",
+ "sched_edit.filled_skipped": "{n} سلول پر شد، {k} سلول رد شد: {why}",
+ "sched_edit.why_ro": "{n} فقط‌خواندنی",
+ "sched_edit.why_bad": "{n} مقدار نامعتبر",
+ "sched_edit.no_cell": "ابتدا یک سلول از جدول را کلیک کنید",
+ "sched_edit.nothing": "چیزی برای نوشتن نیست",
+ "sched_edit.not_refreshed": "نوشته شد، اما نما به‌روز نشد: {e}",
+ "sched_edit.failed": "تغییر نکرد: {e}",
+ "sched_edit.no_changes": "بدون تغییر: {u} سلول از قبل این مقادیر را دارند",
+ "sched_edit.same_tail": "، {u} از قبل برابر"
+}

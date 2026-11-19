@@ -1,0 +1,19 @@
+{
+ "ifc_patch.fallback.source_changed": "Zakrpa nije korištena: izvorna datoteka se na disku promijenila ili se ne može pročitati. Datoteka je ponovno napisana iz modela.",
+ "ifc_patch.fallback.sources": "Zakrpa nije korištena: projekt nema točno jedan izvor. Datoteka je ponovno napisana iz modela.",
+ "ifc_patch.fallback.schema": "Zakrpa nije korištena: shema izvorne datoteke nije podržana. Datoteka je ponovno napisana iz modela.",
+ "ifc_patch.fallback.structure": "Zakrpa nije korištena: struktura izvorne datoteke ne može se pouzdati. Datoteka je ponovno napisana iz modela.",
+ "ifc_patch.fallback.edit": "Zakrpa nije korištena: izmjena se ne može sigurno primijeniti na izvornu datoteku. Datoteka je ponovno napisana iz modela.",
+ "ifc_patch.reason.schema": "Shema izvorne datoteke ne može sadržavati ovu izmjenu; element ostaje kao u izvoru",
+ "ifc_patch.reason.prop": "Ova izmjena svojstva ne može se izraziti u izvornoj datoteci; vrijednost ostaje kakva je bila u izvoru",
+ "ifc_patch.reason.no_export": "Ovaj novi element nema prikaz u IFC-u",
+ "ifc_patch.reason.link": "Element je u datoteci, ali veza na njegov materijal ili tip nije zapisana; navedena je kao nezapisana",
+ "ifc_patch.drop": "Odbaci",
+ "ifc_patch.drop_done": "Odbačene čekajuće poveznice: {n}; više se ne pokušavaju ponovno",
+ "ifc_patch.fallback.building": "Zakrpa nije korištena: nova razina traži točno jednu zgradu u izvornoj datoteci, a ona nema nijednu ili ima više. Datoteka je ponovno napisana iz modela.",
+ "ifc_patch.fallback.types": "Zakrpa nije korištena: razine, tipovi ili materijali promijenjeni su od uvoza, a zakrpa to ne može zapisati. Datoteka je ponovno napisana iz modela.",
+ "ifc_patch.fallback.zipped": "Zakrpa nije korištena: zapakiranu izvornu datoteku nije moguće zakrpati. Datoteka je ponovno napisana iz modela.",
+ "ifc_patch.fallback.source_kept": "Izvorna datoteka nije prepisana: ovo spremanje ne može se pouzdano zamijeniti. Ovo spremanje je kopija uz nju.",
+ "ifc_patch.fallback.nested": "Zakrpa nije korištena: novi element ima ugniježđene dijelove (kao priključke) koje zakrpa ne može zapisati. Datoteka je ponovno napisana iz modela.",
+ "ifc_patch.fallback.shared_part": "Zakrpa nije korištena: dio uređenog stubišta ili rampe koristi i drugi element ili veza, što zakrpa ne može obuhvatiti. Datoteka je ponovno napisana iz modela."
+}

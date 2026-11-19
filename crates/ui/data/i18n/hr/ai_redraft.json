@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "Revidirano",
+ "ai.redraft.added": "+{n} dodano",
+ "ai.redraft.removed": "−{n} uklonjeno",
+ "ai.redraft.changed": "~{n} promijenjeno",
+ "ai.redraft.strip": "{what} od tvog zadnjeg pogleda",
+ "ai.redraft.note": "Revidirani plan pregledan: {what}",
+ "ai.redraft.more": "+{n} više",
+ "ai.redraft.ack": "Razumijem",
+ "ai.redraft.ack.tip": "Označi ovu reviziju kao viđenu; Primijeni tada cilja nju",
+ "ai.redraft.removed_list": "Uklonjene stavke: {n}",
+ "ai.redraft.review_first": "Plan se promijenio nakon tvoje poruke: prvo pregledaj promjene",
+ "ai.redraft.mark.tip": "Novo ili promijenjeno od tvog zadnjeg pogleda",
+ "ai.redraft.emptied": "Naknadni zahtjev uklonio je sve stavke: nacrt je prazan"
+}

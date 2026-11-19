@@ -1,0 +1,13 @@
+{
+ "cmd.arch.wall_pick": "按线放置墙",
+ "cmd.arch.wall_pick.desc": "在当前楼层中所选的图形线上放置墙。F 切换线上的轴线或面，Tab 选取相连的链。每次拾取为一步撤销。幕墙同样适用。",
+ "hint.wall_pick.center": "按线放墙：拾取图形线 · 线上为轴线 · F 面 · Tab 链 · Esc 退出",
+ "hint.wall_pick.face": "按线放墙：拾取图形线 · 线上为面（光标一侧）· F 轴线 · Tab 链 · Esc 退出",
+ "hint.wall_pick.center_chain": "按线放墙：拾取一条线以选取其链 · 线上为轴线 · F 面 · Tab 单条线",
+ "hint.wall_pick.face_chain": "按线放墙：拾取一条线以选取其链 · 线上为面 · F 轴线 · Tab 单条线",
+ "wall_pick.st.start": "请拾取图形线。F：轴线或面，Tab：相连的链",
+ "wall_pick.st.no_lines": "本楼层没有可见的图形线",
+ "wall_pick.st.miss": "此处没有图形线",
+ "wall_pick.st.on_wall": "此线已位于墙 {id} 之下",
+ "wall_pick.st.tight": "面偏移不合适：链中有一段短于墙厚"
+}

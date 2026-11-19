@@ -1,0 +1,9 @@
+{
+ "elem.deleted": "Elementos eliminados: {n}",
+ "elem.deleted_kept": "Elementos eliminados: {n}; mantidos no lugar: {k} (painéis e elementos que não podem ser eliminados)",
+ "elem.not_deleted": "não eliminado: {e}",
+ "elem.not_deletable": "Este elemento não pode ser eliminado",
+ "elem.panel": "painel de fachada-cortina",
+ "elem.panel_refused": "Um painel faz parte da sua fachada-cortina e não pode ser eliminado isoladamente. Selecione a parede completa para a eliminar.",
+ "elem.reload_failed": "Eliminado, mas a vista não foi atualizada: {e}"
+}

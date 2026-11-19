@@ -1,0 +1,657 @@
+{
+ "schema": "gen_typology.v1",
+ "name": "hospital_wing",
+ "aliases": [
+  "hospital",
+  "krankenhaus",
+  "krankenhausfluegel",
+  "krankenhausflügel",
+  "klinikum",
+  "bettenstation",
+  "hospital_general",
+  "ala_hospitalaria",
+  "pabellon_hospitalario",
+  "医院",
+  "住院楼",
+  "医院病房楼",
+  "больница",
+  "госпиталь",
+  "стационар",
+  "корпус_больницы",
+  "hospital_block",
+  "inpatient_wing",
+  "acute_hospital",
+  "hospital_ward_wing",
+  "Krankenhaus",
+  "krankenhaus"
+ ],
+ "base": "office",
+ "note": "hospital wing: a corridor plan of outpatient, emergency, diagnostic and surgical rooms on the ground floor and inpatient floors above; each room class carries its own air changes, pressure, loads and media; shielding, medical-gas piping and sterile flow are described in the schedule, not modelled as geometry",
+ "brief": {
+  "name": {
+   "en": "Hospital wing",
+   "ru": "Больничный корпус"
+  },
+  "floors": 4,
+  "floor_height": 4.2,
+  "basements": 1
+ },
+ "rules": {
+  "egress.max_travel": 35,
+  "mep.hvac.system": "auto",
+  "mep.hvac.dedicated_oa": "operating_isolation",
+  "corridor.width": 2.4,
+  "egress.protected_stairs": "smokeproof"
+ },
+ "model": {
+  "title": {
+   "en": "Hospital wing",
+   "ru": "Больничный корпус"
+  },
+  "spaces": [
+   {
+    "class": "reception",
+    "kind": "lobby",
+    "name": {
+     "en": "Reception hall",
+     "ru": "Приёмный холл"
+    },
+    "area": 70,
+    "count": 1,
+    "level": "ground",
+    "zone": "public"
+   },
+   {
+    "class": "consulting",
+    "kind": "office",
+    "name": {
+     "en": "Consulting room",
+     "ru": "Кабинет врача"
+    },
+    "area": 16,
+    "count": 8,
+    "level": "ground",
+    "zone": "outpatient"
+   },
+   {
+    "class": "emergency",
+    "kind": "ward",
+    "name": {
+     "en": "Emergency treatment room",
+     "ru": "Процедурная неотложной помощи"
+    },
+    "area": 20,
+    "count": 4,
+    "level": "ground",
+    "zone": "emergency",
+    "tags": [
+     "clinical"
+    ],
+    "demand": {
+     "power_w_m2": 60,
+     "backup_power": true,
+     "media": [
+      "oxygen",
+      "vacuum"
+     ]
+    },
+    "beds": 1
+   },
+   {
+    "class": "imaging",
+    "kind": "lab",
+    "name": {
+     "en": "Imaging room",
+     "ru": "Кабинет визуальной диагностики"
+    },
+    "area": 36,
+    "count": 2,
+    "level": "ground",
+    "zone": "diagnostics",
+    "live_load_kpa": 5,
+    "demand": {
+     "power_w_m2": 250,
+     "cooling_w_m2": 120,
+     "backup_power": true,
+     "ach": 8
+    }
+   },
+   {
+    "class": "mri",
+    "kind": "lab",
+    "name": {
+     "en": "Magnetic resonance room",
+     "ru": "Кабинет магнитно-резонансной томографии"
+    },
+    "area": 40,
+    "count": 1,
+    "level": "ground",
+    "zone": "diagnostics",
+    "light": "none",
+    "live_load_kpa": 5,
+    "demand": {
+     "power_w_m2": 300,
+     "cooling_w_m2": 200,
+     "backup_power": true,
+     "ach": 10
+    }
+   },
+   {
+    "class": "theatre",
+    "kind": "technical",
+    "name": {
+     "en": "Operating theatre",
+     "ru": "Операционная"
+    },
+    "area": 48,
+    "count": 2,
+    "level": "ground",
+    "zone": "surgical",
+    "light": "none",
+    "height_min": 3.0,
+    "adjacent_to": [
+     {
+      "ref": "sterile",
+      "weight": 3
+     },
+     {
+      "ref": "recovery",
+      "weight": 2
+     }
+    ],
+    "tags": [
+     "operating"
+    ],
+    "demand": {
+     "power_w_m2": 150,
+     "cooling_w_m2": 90,
+     "backup_power": true,
+     "media": [
+      "oxygen",
+      "vacuum",
+      "nitrous_oxide",
+      "compressed_air"
+     ],
+     "water_l_day": 800
+    }
+   },
+   {
+    "class": "sterile",
+    "kind": "technical",
+    "name": {
+     "en": "Sterile supply room",
+     "ru": "Стерилизационная"
+    },
+    "area": 40,
+    "count": 1,
+    "level": "ground",
+    "zone": "surgical",
+    "light": "none",
+    "demand": {
+     "ach": 15,
+     "pressure": "positive",
+     "power_w_m2": 120,
+     "cooling_w_m2": 80,
+     "water_l_day": 2000
+    }
+   },
+   {
+    "class": "recovery",
+    "kind": "ward",
+    "name": {
+     "en": "Recovery bay",
+     "ru": "Палата пробуждения"
+    },
+    "area": 30,
+    "count": 1,
+    "level": "ground",
+    "zone": "surgical",
+    "tags": [
+     "clinical"
+    ],
+    "demand": {
+     "power_w_m2": 80,
+     "backup_power": true,
+     "media": [
+      "oxygen",
+      "vacuum"
+     ]
+    },
+    "beds": 4
+   },
+   {
+    "class": "pharmacy",
+    "kind": "storage",
+    "name": {
+     "en": "Pharmacy store",
+     "ru": "Аптечный склад"
+    },
+    "area": 30,
+    "count": 1,
+    "level": "ground",
+    "zone": "support"
+   },
+   {
+    "class": "staff_g",
+    "kind": "staff",
+    "name": {
+     "en": "Clinical staff room",
+     "ru": "Ординаторская"
+    },
+    "area": 28,
+    "count": 1,
+    "level": "ground",
+    "zone": "support"
+   },
+   {
+    "class": "wc_g",
+    "kind": "wc",
+    "name": {
+     "en": "Public toilet",
+     "ru": "Общественный туалет"
+    },
+    "area": 5,
+    "count": 4,
+    "level": "ground",
+    "zone": "public"
+   },
+   {
+    "class": "patient",
+    "kind": "ward",
+    "name": {
+     "en": "Patient room",
+     "ru": "Палата"
+    },
+    "area": 18,
+    "count": 14,
+    "level": "typical",
+    "zone": "ward",
+    "tags": [
+     "clinical"
+    ],
+    "occupancy_m2": 9,
+    "live_load_kpa": 3.5,
+    "demand": {
+     "power_w_m2": 40
+    },
+    "beds": 1
+   },
+   {
+    "class": "isolation",
+    "kind": "ward",
+    "name": {
+     "en": "Isolation room",
+     "ru": "Палата-изолятор"
+    },
+    "area": 20,
+    "count": 2,
+    "level": "typical",
+    "zone": "ward",
+    "tags": [
+     "isolation",
+     "clinical"
+    ],
+    "demand": {
+     "power_w_m2": 50,
+     "backup_power": true,
+     "media": [
+      "oxygen",
+      "vacuum"
+     ]
+    },
+    "beds": 1
+   },
+   {
+    "class": "icu",
+    "kind": "ward",
+    "name": {
+     "en": "Intensive care room",
+     "ru": "Палата интенсивной терапии"
+    },
+    "area": 24,
+    "count": 4,
+    "level": "typical",
+    "zone": "icu",
+    "adjacent_to": [
+     {
+      "ref": "nurse",
+      "weight": 3
+     }
+    ],
+    "tags": [
+     "clinical"
+    ],
+    "demand": {
+     "ach": {
+      "rule": "typology.icu.ach"
+     },
+     "pressure": "positive",
+     "power_w_m2": 120,
+     "cooling_w_m2": 60,
+     "backup_power": true,
+     "media": [
+      "oxygen",
+      "vacuum",
+      "compressed_air"
+     ]
+    },
+    "beds": 1
+   },
+   {
+    "class": "nurse",
+    "kind": "staff",
+    "name": {
+     "en": "Nurses station",
+     "ru": "Сестринский пост"
+    },
+    "area": 24,
+    "count": 2,
+    "level": "typical",
+    "zone": "ward"
+   },
+   {
+    "class": "clean_link",
+    "kind": "lobby",
+    "name": {
+     "en": "Clean transfer lobby",
+     "ru": "Чистый шлюз"
+    },
+    "area": 14,
+    "count": 2,
+    "level": "typical",
+    "zone": "support",
+    "light": "none",
+    "demand": {
+     "ach": 15,
+     "pressure": "positive"
+    }
+   },
+   {
+    "class": "dirty_link",
+    "kind": "lobby",
+    "name": {
+     "en": "Dirty transfer lobby",
+     "ru": "Грязный шлюз"
+    },
+    "area": 14,
+    "count": 2,
+    "level": "typical",
+    "zone": "support",
+    "light": "none",
+    "demand": {
+     "ach": 15,
+     "pressure": "negative"
+    }
+   },
+   {
+    "class": "clean_util",
+    "kind": "storage",
+    "name": {
+     "en": "Clean utility room",
+     "ru": "Чистая подсобная"
+    },
+    "area": 12,
+    "count": 1,
+    "level": "typical",
+    "zone": "support"
+   },
+   {
+    "class": "dirty_util",
+    "kind": "storage",
+    "name": {
+     "en": "Dirty utility room",
+     "ru": "Грязная подсобная"
+    },
+    "area": 12,
+    "count": 1,
+    "level": "typical",
+    "zone": "support",
+    "demand": {
+     "ach": 10,
+     "pressure": "negative"
+    }
+   },
+   {
+    "class": "bath_w",
+    "kind": "bath",
+    "name": {
+     "en": "Patient bathroom",
+     "ru": "Санузел палаты"
+    },
+    "area": 5,
+    "count": 4,
+    "level": "typical",
+    "zone": "ward"
+   },
+   {
+    "class": "wc_w",
+    "kind": "wc",
+    "name": {
+     "en": "Visitor toilet",
+     "ru": "Туалет для посетителей"
+    },
+    "area": 4,
+    "count": 2,
+    "level": "typical",
+    "zone": "public"
+   },
+   {
+    "class": "plant_room",
+    "kind": "technical",
+    "name": {
+     "en": "Plant room",
+     "ru": "Венткамера и теплоузел"
+    },
+    "area": 110,
+    "count": 2,
+    "level": "below:1",
+    "zone": "support",
+    "light": "none",
+    "demand": {
+     "ach": 8,
+     "power_w_m2": 60,
+     "cooling_w_m2": 30
+    }
+   },
+   {
+    "class": "csd",
+    "kind": "technical",
+    "name": {
+     "en": "Central sterile department",
+     "ru": "Центральное стерилизационное отделение"
+    },
+    "area": 140,
+    "count": 1,
+    "level": "below:1",
+    "zone": "surgical",
+    "light": "none",
+    "demand": {
+     "ach": 15,
+     "pressure": "positive",
+     "power_w_m2": 140,
+     "cooling_w_m2": 90,
+     "water_l_day": 6000
+    }
+   },
+   {
+    "class": "switch_room",
+    "kind": "technical",
+    "name": {
+     "en": "Switch room",
+     "ru": "Распределительная"
+    },
+    "area": 45,
+    "count": 1,
+    "level": "below:1",
+    "zone": "support",
+    "light": "none",
+    "demand": {
+     "power_w_m2": 80,
+     "cooling_w_m2": 40,
+     "backup_power": true
+    }
+   },
+   {
+    "class": "gas_store",
+    "kind": "technical",
+    "name": {
+     "en": "Medical gas store",
+     "ru": "Склад медицинских газов"
+    },
+    "area": 30,
+    "count": 1,
+    "level": "below:1",
+    "zone": "support",
+    "light": "none",
+    "demand": {
+     "ach": 6
+    }
+   },
+   {
+    "class": "store_b",
+    "kind": "storage",
+    "name": {
+     "en": "Basement store",
+     "ru": "Подвальный склад"
+    },
+    "area": 40,
+    "count": 1,
+    "level": "below:1",
+    "zone": "support",
+    "light": "none"
+   }
+  ],
+  "zones": [
+   {
+    "id": "public",
+    "name": {
+     "en": "Public",
+     "ru": "Общая зона"
+    },
+    "adjacent_to": []
+   },
+   {
+    "id": "outpatient",
+    "name": {
+     "en": "Outpatient",
+     "ru": "Амбулаторная зона"
+    },
+    "adjacent_to": [
+     {
+      "ref": "public",
+      "weight": 2
+     }
+    ]
+   },
+   {
+    "id": "emergency",
+    "name": {
+     "en": "Emergency",
+     "ru": "Неотложная помощь"
+    },
+    "adjacent_to": [
+     {
+      "ref": "diagnostics",
+      "weight": 3
+     },
+     {
+      "ref": "surgical",
+      "weight": 2
+     }
+    ]
+   },
+   {
+    "id": "diagnostics",
+    "name": {
+     "en": "Diagnostics",
+     "ru": "Диагностика"
+    },
+    "adjacent_to": [
+     {
+      "ref": "emergency",
+      "weight": 3
+     }
+    ]
+   },
+   {
+    "id": "surgical",
+    "name": {
+     "en": "Surgical suite",
+     "ru": "Хирургический блок"
+    },
+    "adjacent_to": [
+     {
+      "ref": "emergency",
+      "weight": 2
+     },
+     {
+      "ref": "diagnostics",
+      "weight": 1
+     }
+    ]
+   },
+   {
+    "id": "ward",
+    "name": {
+     "en": "Inpatient",
+     "ru": "Стационар"
+    },
+    "adjacent_to": [
+     {
+      "ref": "icu",
+      "weight": 3
+     }
+    ]
+   },
+   {
+    "id": "icu",
+    "name": {
+     "en": "Intensive care",
+     "ru": "Реанимация"
+    },
+    "adjacent_to": [
+     {
+      "ref": "ward",
+      "weight": 3
+     }
+    ]
+   },
+   {
+    "id": "support",
+    "name": {
+     "en": "Support",
+     "ru": "Обеспечивающая зона"
+    },
+    "adjacent_to": []
+   }
+  ],
+  "egress": {
+   "exits_min": 2
+  },
+  "structure": {
+   "live_load_kpa": {
+    "rule": "typology.live_load_kpa"
+   }
+  },
+  "below": {
+   "levels": [
+    {
+     "name": {
+      "en": "Plant and sterile services",
+      "ru": "Технический этаж и стерилизация"
+     },
+     "fill": "store_b"
+    }
+   ],
+   "retaining": true
+  },
+  "spare": {
+   "grow_share": 0.6,
+   "kind": "storage",
+   "name": {
+    "en": "Ward store",
+    "ru": "Кладовая отделения"
+   }
+  }
+ }
+}

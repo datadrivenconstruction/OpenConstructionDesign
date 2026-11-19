@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "Punto",
+ "trial.field.distance": "Distanza",
+ "trial.field.target": "Elemento",
+ "trial.refused": "{field}: {reason}. Modificalo per applicare",
+ "trial.preview_off": "Anteprima disattivata: modello troppo grande"
+}

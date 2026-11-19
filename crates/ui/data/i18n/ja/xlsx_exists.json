@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "このブックは既に存在します",
+ "xlsx_exists.foreign": "このプロジェクトのブックではないため、置き換えは行いません。",
+ "xlsx_exists.pending": "モデルにまだ適用されていない編集が {n} 件あります。",
+ "xlsx_exists.outside": "新しい書き出しに含まれない行が {n} 件あります。",
+ "xlsx_exists.new_name": "{name} に書き出し",
+ "xlsx_exists.apply_first": "先に適用してください",
+ "xlsx_exists.replace": "置き換え (既存のブックは _archive へ)",
+ "xlsx_exists.archived": "既存のブックを {path} に移動しました",
+ "xlsx_exists.archive_failed": "既存のブックを移動できなかったため、書き出しを行いませんでした: {error}"
+}

@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "Ревизирано",
+ "ai.redraft.added": "+{n} добавени",
+ "ai.redraft.removed": "−{n} премахнати",
+ "ai.redraft.changed": "~{n} променени",
+ "ai.redraft.strip": "{what} след последния ви преглед",
+ "ai.redraft.note": "Прегледан ревизиран план: {what}",
+ "ai.redraft.more": "+още {n}",
+ "ai.redraft.ack": "Разбрано",
+ "ai.redraft.ack.tip": "Отбелязва тази ревизия като прегледана; Приложи след това се отнася към нея",
+ "ai.redraft.removed_list": "Премахнати точки: {n}",
+ "ai.redraft.review_first": "Планът се промени след вашето съобщение: първо прегледайте промените",
+ "ai.redraft.mark.tip": "Нови или променени след последния ви преглед",
+ "ai.redraft.emptied": "Допълнителната заявка премахна всички точки: черновата е празна"
+}

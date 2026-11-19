@@ -1,0 +1,14 @@
+{
+ "ai.stream.waiting": "در انتظار مدل",
+ "ai.stream.reading": "در حال خواندن مدل",
+ "ai.stream.working": "در حال کار",
+ "ai.stream.answering": "در حال نوشتن پاسخ",
+ "ai.stream.tools_one": "۱ ابزار",
+ "ai.stream.tools_many": "{n} ابزار",
+ "ai.stream.secs": "{n} ثانیه",
+ "ai.stream.stalled": "هنوز منتظر سرویس مدل هوش مصنوعی",
+ "ai.stream.stop": "توقف",
+ "ai.stream.cancelled": "متوقف شد",
+ "ai.stream.incomplete": "پیش‌نویس ناقص است. چیزی به مدل اعمال نشد.",
+ "ai.stream.sep": " · "
+}

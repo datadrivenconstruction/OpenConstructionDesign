@@ -1,0 +1,24 @@
+{
+ "ai.audit.tokens": "{n} токенів",
+ "ai.audit.filter.all": "Усі",
+ "ai.audit.filter.ai": "AI",
+ "ai.audit.filter.me": "Я",
+ "ai.audit.search": "Пошук змін",
+ "ai.audit.search.clear": "Очистити пошук",
+ "ai.audit.show_all": "Показати все",
+ "ai.audit.empty.hint": "Тут з’являються зміни, підготовлені або застосовані моделлю чи агентом, кожна з способом повернення.",
+ "ai.audit.no_match": "Жодна зміна не відповідає фільтру.",
+ "ai.audit.show.tip": "Вибрати й показати елементи, яких торкнулася ця зміна",
+ "ai.audit.revert.ask": "Відкотити «{what}»? {change}.",
+ "ai.audit.revert.elements": {
+  "one": "# зміна елемента",
+  "other": "# змін елементів",
+  "few": "# зміни елементів",
+  "many": "# змін елементів"
+ },
+ "ai.audit.revert.keeps": "Новіші зміни залишаються. Відкат — один крок скасування.",
+ "ai.audit.cancel": "Скасувати",
+ "ai.audit.toast.reverted": "Відкочено: {what}",
+ "ai.audit.toast.undone": "Скасовано: {what}",
+ "ai.audit.redo": "Повторити"
+}

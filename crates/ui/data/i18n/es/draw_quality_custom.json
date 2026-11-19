@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "personalizado",
+ "draw_quality.custom.tip": "{name}: una entrada de este proyecto",
+ "draw_quality.custom_note": "Las entradas marcadas como personalizadas pertenecen a este proyecto.",
+ "draw_quality.unsaved.lib_body": "¿Guardarlos en la biblioteca o descartarlos?",
+ "draw_quality.unsaved.styles_body": "¿Aplicarlos a la vista o descartarlos?",
+ "draw_quality.unsaved.both_body": "¿Aplicarlos o descartarlos?",
+ "draw_quality.halftone": "semitono de {category}",
+ "draw_quality.styles.name": "Estilos de línea",
+ "draw_quality.styles.other_level": "Ediciones de estilo sin guardar del nivel {level}: aplíquelas o revierta para editar este nivel."
+}

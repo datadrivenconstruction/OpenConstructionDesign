@@ -1,0 +1,6 @@
+{
+ "pair_input.pair_hint": "Dvije vrijednosti odvajaju se točkom sa zarezom: @1000;500",
+ "pair_input.old_pair": "Zarez između dva cijela broja više ne čini par: upišite 6000;4000 za dvije vrijednosti ili 6000,5 za decimalni broj",
+ "pair_input.op.bad_length": "Nije duljina: {text} ({why}). Ništa nije promijenjeno",
+ "pair_input.op.bad_count": "Broj {text} nije preuzet: cijeli broj od {min} do {max}"
+}

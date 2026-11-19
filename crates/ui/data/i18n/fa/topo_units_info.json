@@ -1,0 +1,13 @@
+{
+ "topo.unit.mm": "mm",
+ "topo.unit.metre": "m",
+ "topo.unit.ft": "ft",
+ "topo.opt.material": "متریال",
+ "topo.row.active": "سطح فعال",
+ "topo.btn.delete_pad": "حذف پد",
+ "topo.info.loading": "در حال ساختن سطح…",
+ "topo.info.warn_n": "{n} هشدار",
+ "topo.info.points_label": "نقاط",
+ "topo.import.all_layers": "همه لایه‌ها",
+ "topo.import.need_layer": "حداقل یک لایه را علامت بزنید"
+}

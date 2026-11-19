@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "Gambar dinding",
+ "empty.totals.action": "Gambar dinding",
+ "empty.schedule.action": "Tambah kolom",
+ "empty.schedule_filtered.action": "Hapus filter",
+ "empty.library.action": "Atur ulang pencarian",
+ "empty.library.load": "Muat famili",
+ "empty.schedule_fields.title": "Tidak ada kolom ditampilkan",
+ "empty.schedule_fields.action": "Tambah kolom",
+ "empty.schedule_fields.hint": "Aktifkan minimal satu kolom untuk melihat tabel."
+}

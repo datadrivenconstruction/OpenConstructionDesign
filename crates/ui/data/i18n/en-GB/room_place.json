@@ -1,0 +1,8 @@
+{
+ "cmd.arch.room_auto": "Place rooms automatically",
+ "cmd.arch.room_auto.desc": "Places a room in every closed boundary of the active level that has none. Open wall loops are skipped, never closed by guess. One undo step.",
+ "room_place.placed": "Rooms placed: {n}. Regions that already had a room: {m}. Open loops skipped: {k}",
+ "room_place.all_had": "Nothing placed: all {m} closed regions already have a room. Open loops skipped: {k}",
+ "room_place.none": "Nothing placed: the level has no closed wall regions",
+ "room_place.none_open": "Nothing placed: the level has no closed wall regions. Open loops skipped: {k}"
+}

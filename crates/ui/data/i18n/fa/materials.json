@@ -1,0 +1,11 @@
+{
+ "materials.mat.name_empty": "نام متریال را وارد کنید",
+ "materials.mat.empty_title": "هنوز متریالی نیست",
+ "materials.mat.empty_hint": "یک نام پایین بنویسید و Add را بزنید",
+ "materials.mat.nothing_hint": "متریالی با جست‌وجو مطابقت ندارد",
+ "materials.mat.clear_search": "پاک کردن جست‌وجو",
+ "materials.mat.replace_with": "جایگزین با",
+ "materials.mat.delete_refused": "حذف نشد: این متریال در {n} جا استفاده شده است. ابتدا آن را جایگزین کنید.",
+ "materials.mat.delete_confirm": "متریال “{name}” حذف شود؟ می‌توانید این کار را واگرد کنید.",
+ "materials.mat.replace_confirm": "“{from}” با “{to}” در {n} عنصر جایگزین شود؟ “{from}” حذف می‌شود. می‌توانید این کار را واگرد کنید."
+}

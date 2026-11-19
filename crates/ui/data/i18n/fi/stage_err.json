@@ -1,0 +1,10 @@
+{
+ "stage_err.kept": "taulukko {t} säilytettiin: {n} riviä kirjoitettiin Lisää-toiminnon jälkeen",
+ "stage_err.stage.prev_attached": "Ei lisätty: edellisen Lisää-toiminnon kopio on yhä auki. Suorita Lisää uudelleen",
+ "stage_err.stage.model_changed": "Ei lisätty: malli muuttui tiedoston lukemisen aikana. Suorita Lisää uudelleen",
+ "stage_err.stage.no_record": "Ei lisätty: tuodulla kopiolla ei ole muutostietuetta",
+ "stage_err.stage.table_differs": "Ei lisätty: taulukko {t} eroaa mallin ja tuodun kopion välillä",
+ "stage_err.stage.unique_key": "Ei lisätty: taulukon {t} yksilöllistä avainta ei voi seurata",
+ "stage_err.stage.table_gone": "Ei lisätty: tuonti muutti taulukkoa {t}, jota kopiossa ei enää ole",
+ "stage_err.stage.copy_held": "Lisätty; tuotu kopio pysyy auki seuraavaan Lisää-toimintoon tai mallin uudelleenavaukseen asti"
+}

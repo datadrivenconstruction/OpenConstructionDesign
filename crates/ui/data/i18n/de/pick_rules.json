@@ -1,0 +1,11 @@
+{
+ "pick_rules.filter": "Auswahl: alle",
+ "pick_rules.filter.on": "Auswahl: {n} aus",
+ "pick_rules.filter.title": "Kategorien, die per Klick ausgewählt werden können",
+ "pick_rules.filter.all": "Alle Kategorien auswählen",
+ "pick_rules.filter.tip": "Auswahlfilter: nicht markierte Kategorien werden beim Klicken und Überfahren übersprungen",
+ "pick_rules.here": "Elemente hier",
+ "pick_rules.here.selected": "ausgewählt",
+ "pick_rules.pinned": "Angeheftete Elemente auswählen",
+ "pick_rules.here.row": "{cat} · {len}"
+}

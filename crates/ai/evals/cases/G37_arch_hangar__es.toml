@@ -1,0 +1,38 @@
+id = "G37_arch_hangar__es"
+tier = "hard"
+group = "Any geometry"
+title = "Arch hangar"
+lang = "es"
+base = "empty"
+
+[[turn]]
+say = "Un hangar de aviones de 80 m de luz libre: arcos de celosía de acero cada 10 m en 60 m de longitud, correas y arriostramiento de cubierta, flecha del arco 16 m y puerta de hangar de todo el ancho en un testero."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "beam+brace+truss"
+min = 100.0
+
+[[oracle.count]]
+spec = "opening+comp:door|gate"
+min = 1.0
+
+[[oracle.geom]]
+kind = "clear_span"
+target = 80.0
+tol = 0.1
+supports = "pier|abutment|column|footing|base|bearing|support"
+
+[[oracle.geom]]
+kind = "height"
+min = 14.0
+max = 22.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

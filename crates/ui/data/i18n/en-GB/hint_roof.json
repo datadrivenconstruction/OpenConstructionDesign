@@ -1,0 +1,4 @@
+{
+ "hint.roof.pick": "Roof: click inside a wall loop · Space — slope of the edge under the cursor",
+ "hint.roof.walls": "Roof: click the outline walls · Space — slope of the edge under the cursor · Enter — create · Esc — remove the last"
+}

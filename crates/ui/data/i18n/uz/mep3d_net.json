@@ -1,0 +1,13 @@
+{
+ "mep.sys.duct": "Ta'minot S1",
+ "mep.sys.pipe": "Sovuq suv C1",
+ "mep.sys.tray": "Quvvat",
+ "mep.round": "Dumaloq",
+ "mep.material": "Material",
+ "mep3d.elevation": "Sathdan balandlik",
+ "mep3d.slope": "Qiyalik",
+ "mep3d.shape": "Shakl",
+ "mep3d.shape.rect": "To'rtburchak",
+ "mep3d.shape.round": "Dumaloq",
+ "mep3d.shape.oval": "Yassi oval"
+}

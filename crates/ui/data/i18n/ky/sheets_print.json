@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "Алдыңкы барак (Page Up)",
+ "sheets.print.next": "Кийинки барак (Page Down)",
+ "sheets.print.fit": "Баракты тууралоо (эки жолу басыңыз)",
+ "sheets.print.no_sheets": "Алдын ала көрүү үчүн барактар жок",
+ "sheets.print.building": "Барак түзүлүүдө…",
+ "sheets.print.stop_build": "Токтотуу",
+ "sheets.print.build_stopped": "Барак түзүү токтотулду",
+ "sheets.print.retry": "Кайра түзүү",
+ "sheets.print.build_failed": "Алдын ала көрүнүштү түзүү мүмкүн болгон жок"
+}

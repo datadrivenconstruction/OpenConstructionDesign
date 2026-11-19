@@ -1,0 +1,22 @@
+{
+ "ai.audit.tokens": "{n} belirteç",
+ "ai.audit.filter.all": "Tümü",
+ "ai.audit.filter.ai": "YZ",
+ "ai.audit.filter.me": "Ben",
+ "ai.audit.search": "Değişikliklerde ara",
+ "ai.audit.search.clear": "Aramayı temizle",
+ "ai.audit.show_all": "Tümünü göster",
+ "ai.audit.empty.hint": "Bir model veya ajan tarafından taslak olarak hazırlanan ya da uygulanan değişiklikler, her biri geri dönüş yoluyla burada görünür.",
+ "ai.audit.no_match": "Filtreye uyan değişiklik yok.",
+ "ai.audit.show.tip": "Bu değişikliğin dokunduğu elemanları seçip gösterir",
+ "ai.audit.revert.ask": "\"{what}\" geri alınsın mı? {change}.",
+ "ai.audit.revert.elements": {
+  "one": "# eleman değişikliği",
+  "other": "# eleman değişikliği"
+ },
+ "ai.audit.revert.keeps": "Daha yeni değişiklikler kalır. Geri alma tek geri alma adımıdır.",
+ "ai.audit.cancel": "İptal",
+ "ai.audit.toast.reverted": "Ters işlem yapıldı: {what}",
+ "ai.audit.toast.undone": "Geri alındı: {what}",
+ "ai.audit.redo": "Yinele"
+}

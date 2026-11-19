@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "Mantém esta parede no comprimento atual em cada edição",
+ "constraints.con.tip.lock_dist": "Mantém a distância entre as duas paredes em cada edição",
+ "constraints.con.tip.equal": "Mantém iguais os intervalos entre as paredes selecionadas",
+ "constraints.con.tip.align": "Mantém as duas paredes na mesma linha",
+ "constraints.con.tip.parallel": "Mantém as paredes paralelas",
+ "constraints.con.tip.perp": "Mantém as paredes em ângulo reto",
+ "constraints.con.tip.align_grid": "Mantém a parede na linha de grade mais próxima",
+ "constraints.con.tip.lock_dist_grid": "Mantém a distância da parede até a linha de grade mais próxima",
+ "constraints.con.tip.level_gap": "Mantém a distância entre os níveis",
+ "constraints.con.tip.top_to_level": "Mantém o topo da parede no nível acima"
+}

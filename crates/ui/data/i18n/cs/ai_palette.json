@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "Zeptat se AI: {q}",
+ "ai.palette.connect": "Připojte AI pro dotaz",
+ "ai.palette.draft.apply": "Použít návrh ({n})",
+ "ai.palette.draft.reject": "Zamítnout návrh",
+ "ai.palette.draft.next": "Další změna návrhu",
+ "ai.palette.draft.show": "Zobrazit návrh v pohledu",
+ "cmd.ai.next_change": "Další změna návrhu",
+ "cmd.ai.next_change.desc": "Posune pohled na další prvek, který návrh mění.",
+ "cmd.ai.show_draft": "Zobrazit návrh AI v pohledu",
+ "cmd.ai.show_draft.desc": "Přizpůsobí pohled všem prvkům, které návrh mění."
+}

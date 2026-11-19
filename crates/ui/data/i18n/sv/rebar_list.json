@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "Flytta upp",
+ "rebar_list.move_down": "Flytta ned",
+ "rebar_list.remove": "Ta bort",
+ "rebar_list.zone_remove_last": "En zon behöver minst ett rum: ta bort zonen för att ta bort det sista",
+ "rebar_list.rebar_empty_title": "Ingen armering i den här modellen",
+ "rebar_list.rebar_empty_hint": "Placera armering i ett värdelement så schemaläggs den här.",
+ "rebar_list.rebar_empty_action": "Placera armering"
+}

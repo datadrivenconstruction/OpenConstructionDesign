@@ -1,0 +1,13 @@
+{
+ "level.err_open": "Razina nije otvorena: {e}",
+ "level.need_name": "Razina treba naziv i kotu",
+ "level.created": "Razina \"{name}\" stvorena",
+ "level.err_create": "Razina nije stvorena: {e}",
+ "level.err_edit": "Razina nije promijenjena: {e}",
+ "level.edited": "Razina \"{name}\" promijenjena",
+ "level.edited_stale": "Razina \"{name}\" promijenjena, pogled nije osvježen: {e}",
+ "level.last": "Posljednja razina ne može se obrisati",
+ "level.deleted": "Razina obrisana",
+ "level.not_empty": "Razina nije prazna: prvo obrišite njezine elemente",
+ "level.err_delete": "Razina nije obrisana: {e}"
+}

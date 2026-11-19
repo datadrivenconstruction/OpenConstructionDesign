@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "경첩 쪽 뒤집기",
+ "cmd.edit.flip_hand.desc": "선택한 문과 창을 벽을 따라 대칭 이동해 경첩이 개구부의 반대 끝으로 가게 합니다.",
+ "cmd.edit.flip_facing": "여닫는 면 뒤집기",
+ "cmd.edit.flip_facing.desc": "선택한 문과 창을 벽의 반대쪽으로 열리게 합니다.",
+ "opening_grips.flip_hand": "경첩 뒤집기",
+ "opening_grips.flip_hand.tip": "경첩이 개구부의 반대쪽 끝으로 이동 (Shift+F)",
+ "opening_grips.flip_facing": "면 뒤집기",
+ "opening_grips.flip_facing.tip": "벽의 반대쪽으로 열림 (Shift+G)",
+ "opening_grips.flip.done": "뒤집음: {n}",
+ "opening_grips.flip.none": "뒤집을 문 또는 창을 선택하세요",
+ "opening_grips.flip.fail": "뒤집지 않음: {why}"
+}

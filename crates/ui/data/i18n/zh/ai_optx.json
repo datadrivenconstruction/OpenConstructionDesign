@@ -1,0 +1,10 @@
+{
+ "ai.optx.applied": "方案“{name}”已应用。撤销可将其退回草稿",
+ "ai.optx.missing": "方案 {id} 已不存在",
+ "ai.optx.accepted": "方案 {id} 已应用",
+ "ai.optx.not_draft": "方案 {id} 已被拒绝，无法应用",
+ "ai.optx.stale": "方案 {id} 生成后模型已更改：请先重新生成",
+ "ai.optx.bad_recipe": "无法读取方案配方：{e}",
+ "ai.optx.refused": "方案未应用（{code}）：{reason}",
+ "ai.optx.failed": "方案未应用：{e}"
+}

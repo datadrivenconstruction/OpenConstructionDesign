@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "{name} дискте өзгөрдү.",
+ "src.watch.update": "Модельди жаңыртуу",
+ "src.watch.compare": "Салыштыруу",
+ "src.watch.ignore": "Бул версияны этибарга албоо",
+ "src.watch.missing": "{name}: булак файлы табылган жок. Иш улана берет.",
+ "src.watch.locate": "Табуу…",
+ "src.watch.dismiss": "Жабуу",
+ "src.watch.more": "жана дагы {n} булак файлы",
+ "src.watch.done": "{name} боюнча жаңыртылды: {updated} өзгөрдү, {kept} талаа түзөтүлгөн катары сакталды, {conflicts} карама-каршылык, {locked} бекитилген маани сакталды"
+}

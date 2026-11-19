@@ -1,0 +1,14 @@
+{
+ "dwg_table.copy": "Sao chép bảng",
+ "dwg_table.copy_tip": "Sao chép bảng khối lượng theo lớp dưới dạng bảng để dán vào bảng tính",
+ "dwg_table.copied": "Bảng khối lượng đã sao chép (phân tách bằng tab)",
+ "dwg_table.total": "Tổng",
+ "dwg_table.col.layer": "Lớp",
+ "dwg_table.col.count": "Số lượng",
+ "dwg_table.col.len": "Chiều dài, {unit}",
+ "dwg_table.col.area": "Diện tích, {unit}",
+ "dwg_table.unit.mm": "mm",
+ "dwg_table.unit.m2": "m²",
+ "dwg_table.unit.ft": "ft",
+ "dwg_table.unit.ft2": "ft²"
+}

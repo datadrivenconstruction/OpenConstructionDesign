@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "पूरे मॉडल या चयन को बाइनरी STL के रूप में सहेजता है, मीटर या मिलीमीटर में।",
+ "cmd.data.export_obj.desc": "पूरे मॉडल या चयन को MTL फ़ाइल के साथ OBJ के रूप में सहेजता है: हर तत्व के लिए एक समूह, सामग्री के अनुसार रंग।",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "सामग्री सहित OBJ (.obj)",
+ "open_file.filter.mesh": "3D मेश (glTF, STEP, STL, OBJ)",
+ "mx.title": "{fmt} निर्यात",
+ "mx.scope": "क्या निर्यात करें",
+ "mx.scope.all": "पूरा मॉडल",
+ "mx.scope.sel": "चयन ({n} तत्व)",
+ "mx.units": "फ़ाइल में इकाइयाँ",
+ "mx.units.m": "मीटर",
+ "mx.units.mm": "मिलीमीटर",
+ "mx.export": "निर्यात करें…",
+ "mx.saved": "{fmt} सहेजा गया: {path} ({parts} तत्व, {tris} त्रिभुज)",
+ "mx.partial": "{fmt} {n} समस्याओं के साथ सहेजा गया, कुछ ठोस गायब हो सकते हैं: {path}",
+ "mx.failed": "{fmt} निर्यात विफल: {error}",
+ "mx.imported": "{file}: {n} तत्व आयात किए गए ({tris} त्रिभुज)",
+ "mx.imported_notes": "{file}: {n} तत्व आयात किए गए ({tris} त्रिभुज), {w} टिप्पणियाँ: {first}"
+}

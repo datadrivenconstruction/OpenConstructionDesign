@@ -1,0 +1,10 @@
+{
+ "ai.size.count": "~{n} / {max} token",
+ "ai.size.block": "Terlalu panjang untuk model ini: ~{n} token, hingga {max} muat dan menyisakan ruang untuk balasan — persingkat atau pecah",
+ "ai.size.trim": "Potong agar muat",
+ "ai.size.trim_tip": "Memotong bagian akhir pesan agar muat. Tidak ada yang dipotong sampai Anda klik.",
+ "ai.size.drop_view": "Keluarkan tampilan",
+ "ai.size.drop_level": "Keluarkan level",
+ "ai.size.drop_selection": "Keluarkan pilihan",
+ "ai.size.sep": ","
+}

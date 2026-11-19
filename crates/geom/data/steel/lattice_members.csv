@@ -1,0 +1,16 @@
+# Pieces of latticed members: lattice level (2 = a tower member built as a lattice, 3 = a chord
+# of that member built as a laced pair), role (chord | lacing), height band of the tower member
+# (z_to: upper end of the band, m) and the section from sections.csv. Own selection.
+level,role,z_to,section
+2,chord,60,L 120x120x12
+2,chord,120,L 100x100x10
+2,chord,1000,L 90x90x9
+2,lacing,60,L 80x80x8
+2,lacing,120,L 70x70x7
+2,lacing,1000,L 60x60x6
+3,chord,60,L 100x100x10
+3,chord,120,L 90x90x9
+3,chord,1000,L 80x80x8
+3,lacing,60,FL 80x10
+3,lacing,120,FL 60x8
+3,lacing,1000,FL 60x8

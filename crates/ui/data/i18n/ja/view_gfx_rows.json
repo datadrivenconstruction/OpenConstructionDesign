@@ -1,0 +1,10 @@
+{
+ "view_gfx.vv.visible_tip": "このビューで表示",
+ "view_gfx.vv.enabled_tip": "このビューでこのフィルタを適用",
+ "view_gfx.vv.reset_tip": "プロジェクトの既定値に戻す",
+ "view_gfx.vv.col.actions": "操作",
+ "view_gfx.vv.nothing_to_apply": "適用する変更はありません",
+ "view_gfx.flt.save_blocked": "フィルタ名を入力し、すべてのルールのパラメータを入力してください",
+ "view_gfx.flt.confirm_delete": "すべてのビューから削除しますか？",
+ "view_gfx.flt.param_pick": "選択…"
+}

@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "Mind",
+ "clash_list.only_selected": "Csak a kijelöltek",
+ "clash_list.tolerance": "Tűrés",
+ "clash_list.gap": "Hézag",
+ "clash_list.export": "Exportálás",
+ "clash_list.col.volume": "Térfogat",
+ "clash_list.fix.up": "Feljebb",
+ "clash_list.fix.down": "Lejjebb",
+ "clash_list.fix.sleeve": "Hüvely",
+ "clash_list.apply_fix": "Javítás alkalmazása",
+ "clash_list.err.tol": "Tűrés: adjon meg hosszt (0 vagy több), pl. 50 vagy 2 in",
+ "clash_list.sleeve_no_host": "A hüvelyhez a párban fal vagy födém kell",
+ "clash_list.err.gap": "Hézag: adjon meg hosszt (0 vagy több), pl. 50 vagy 2 in"
+}

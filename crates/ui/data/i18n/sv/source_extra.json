@@ -1,0 +1,5 @@
+{
+ "src.more": "Mer",
+ "src.cf.chosen": "{n} av {m} valda",
+ "src.opt.allow_mass_warn": "Var försiktig: filen stämmer inte med de flesta importerade elementen, så sammanslagningen kan ändra mycket data."
+}

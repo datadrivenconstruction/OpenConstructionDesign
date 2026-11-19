@@ -1,0 +1,15 @@
+{
+ "text_style.lbl.text_style": "Estilo de texto",
+ "text_style.lbl.align": "Alineación",
+ "text_style.lbl.head": "Punta de flecha",
+ "text_style.lbl.line_style": "Estilo de línea",
+ "text_style.lbl.fill": "Relleno",
+ "text_style.lbl.detail": "Detalle",
+ "text_style.lbl.width": "Grosor",
+ "text_style.bad_number": "Introduzca un número de {min} a {max}",
+ "text_style.tip.next_ring": "Cerrar este contorno y empezar otro en la misma región",
+ "text_style.tip.edit_text": "Editar el texto en su lugar",
+ "text_style.tip.add_leader": "Añadir línea de referencia a este texto",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°"
+}

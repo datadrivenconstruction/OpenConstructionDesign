@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "Дублювати аркуш з видами",
+ "cmd.view.sheet_duplicate_title": "Дублювати аркуш (лише основний напис)",
+ "sheets.dup.menu_views": "Дублювати з видами",
+ "sheets.dup.menu_title": "Дублювати, лише основний напис",
+ "sheets.dup.done": "Аркуш {number} створено з {src}: видів {views}, відомостей і легенд {sched}. Ревізії не копіюються; аркуш не випущено.",
+ "sheets.dup.none": "Відкрийте аркуш, щоб його дублювати",
+ "sheets.dup.copy": "копія",
+ "cmd.view.sheet_duplicate.short": "Дублювати з видами",
+ "cmd.view.sheet_duplicate_title.short": "Дублювати основний напис"
+}

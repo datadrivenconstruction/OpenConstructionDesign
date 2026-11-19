@@ -1,0 +1,6 @@
+{
+ "sched_import.no_key": "Walang export record ang book na ito (mas lumang export): maaaring ma-overwrite ang mga cell na nabago sa modelo pagkatapos ng export na iyon. Suriin ang mga nabagong cell bago mag-Apply.",
+ "sched_import.n_kept": "Binago sa modelo pagkatapos ng export, itinira: {n}",
+ "sched_import.n_conflict": "Binago sa workbook at sa modelo, hindi nailapat: {n}",
+ "sched_import.why_conflict": "nabago sa modelo pagkatapos ng export (ngayon {model}), hindi nailapat"
+}

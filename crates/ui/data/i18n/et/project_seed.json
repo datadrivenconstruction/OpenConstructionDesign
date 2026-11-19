@@ -1,0 +1,6 @@
+{
+ "project_seed.seed_level": "Korrus 1",
+ "project_seed.seed_wall_partition": "Vaheseina 100",
+ "project_seed.seed_wall_masonry": "Müürsein 200",
+ "project_seed.seed_wall_exterior": "Välissein 380"
+}

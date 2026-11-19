@@ -1,0 +1,405 @@
+{
+ "schema": "gen_typology.v1",
+ "name": "underground_station",
+ "aliases": [
+  "metro_station",
+  "subway_station",
+  "underground_railway_station"
+ ],
+ "base": "office",
+ "note": "underground station: a surface building over three storeys below ground (concourse, platform with a trackway, ventilation and traction level); the outside walls below ground are retaining walls; stair and lift cores run down all levels; tracks, rolling stock and escalator machines are not modelled",
+ "brief": {
+  "name": {
+   "en": "Underground station",
+   "ru": "Станция метро"
+  },
+  "floors": 2,
+  "floor_height": 5.0,
+  "basements": 3,
+  "footprint": {
+   "width": 150,
+   "depth": 26
+  }
+ },
+ "rules": {
+  "corridor.width": 4.0,
+  "egress.max_travel": 60,
+  "egress.protected_stairs": "smokeproof",
+  "underground.retaining_thickness": 0.8
+ },
+ "model": {
+  "title": {
+   "en": "Underground station",
+   "ru": "Станция метро"
+  },
+  "spaces": [
+   {
+    "class": "ticket_hall",
+    "kind": "lobby",
+    "name": {
+     "en": "Ticket hall",
+     "ru": "Кассовый зал"
+    },
+    "area": 1100,
+    "count": 1,
+    "level": "ground",
+    "zone": "public",
+    "occupancy_m2": 2
+   },
+   {
+    "class": "fare_control",
+    "kind": "lobby",
+    "name": {
+     "en": "Fare control hall",
+     "ru": "Зал контроля проезда"
+    },
+    "area": 520,
+    "count": 1,
+    "level": "ground",
+    "zone": "public",
+    "occupancy_m2": 2
+   },
+   {
+    "class": "station_control",
+    "kind": "office",
+    "name": {
+     "en": "Station control room",
+     "ru": "Помещение управления станцией"
+    },
+    "area": 40,
+    "count": 1,
+    "level": "ground",
+    "zone": "operations"
+   },
+   {
+    "class": "staff_st",
+    "kind": "staff",
+    "name": {
+     "en": "Station staff room",
+     "ru": "Комната персонала станции"
+    },
+    "area": 30,
+    "count": 2,
+    "level": "ground",
+    "zone": "operations"
+   },
+   {
+    "class": "wc_st",
+    "kind": "wc",
+    "name": {
+     "en": "Public toilet",
+     "ru": "Общественный туалет"
+    },
+    "area": 12,
+    "count": 4,
+    "level": "ground",
+    "zone": "public"
+   },
+   {
+    "class": "kiosk",
+    "kind": "retail",
+    "name": {
+     "en": "Retail kiosk",
+     "ru": "Торговый киоск"
+    },
+    "area": 30,
+    "count": 4,
+    "level": "ground",
+    "zone": "public"
+   },
+   {
+    "class": "ops_office",
+    "kind": "office",
+    "name": {
+     "en": "Operations office",
+     "ru": "Служебный кабинет"
+    },
+    "area": 40,
+    "count": 4,
+    "level": "typical",
+    "zone": "operations"
+   },
+   {
+    "class": "vent_upper",
+    "kind": "technical",
+    "name": {
+     "en": "Upper ventilation room",
+     "ru": "Верхняя венткамера"
+    },
+    "area": 120,
+    "count": 2,
+    "level": "typical",
+    "zone": "systems",
+    "light": "none",
+    "demand": {
+     "ach": 15,
+     "power_w_m2": 60
+    }
+   },
+   {
+    "class": "concourse",
+    "kind": "lobby",
+    "name": {
+     "en": "Concourse",
+     "ru": "Пересадочный вестибюль"
+    },
+    "area": 900,
+    "count": 1,
+    "level": "below:1",
+    "zone": "public",
+    "light": "none",
+    "height_min": 4.0,
+    "occupancy_m2": 1.5,
+    "live_load_kpa": 5
+   },
+   {
+    "class": "escalator_hall",
+    "kind": "lobby",
+    "name": {
+     "en": "Escalator hall",
+     "ru": "Эскалаторный зал"
+    },
+    "area": 150,
+    "count": 2,
+    "level": "below:1",
+    "zone": "public",
+    "light": "none",
+    "height_min": 4.0,
+    "occupancy_m2": 1.5,
+    "live_load_kpa": 5
+   },
+   {
+    "class": "concourse_services",
+    "kind": "technical",
+    "name": {
+     "en": "Concourse services room",
+     "ru": "Служебное помещение вестибюля"
+    },
+    "area": 120,
+    "count": 2,
+    "level": "below:1",
+    "zone": "systems",
+    "light": "none",
+    "demand": {
+     "ach": 12,
+     "power_w_m2": 50
+    }
+   },
+   {
+    "class": "platform",
+    "kind": "lobby",
+    "name": {
+     "en": "Platform",
+     "ru": "Платформа"
+    },
+    "area": 1300,
+    "count": 2,
+    "level": "below:2",
+    "zone": "public",
+    "light": "none",
+    "height_min": 4.0,
+    "occupancy_m2": 1.0,
+    "live_load_kpa": 5,
+    "demand": {
+     "supply_m3h_m2": 12,
+     "power_w_m2": 15
+    }
+   },
+   {
+    "class": "platform_services",
+    "kind": "technical",
+    "name": {
+     "en": "Platform services room",
+     "ru": "Служебное помещение платформы"
+    },
+    "area": 90,
+    "count": 2,
+    "level": "below:2",
+    "zone": "systems",
+    "light": "none",
+    "demand": {
+     "ach": 12,
+     "power_w_m2": 50
+    }
+   },
+   {
+    "class": "fan_room",
+    "kind": "technical",
+    "name": {
+     "en": "Tunnel ventilation fan room",
+     "ru": "Вентиляционная камера"
+    },
+    "area": 160,
+    "count": 4,
+    "level": "below:3",
+    "zone": "systems",
+    "light": "none",
+    "height_min": 4.0,
+    "demand": {
+     "ach": 30,
+     "power_w_m2": 180,
+     "cooling_w_m2": 40,
+     "backup_power": true
+    }
+   },
+   {
+    "class": "substation",
+    "kind": "technical",
+    "name": {
+     "en": "Traction substation",
+     "ru": "Тяговая подстанция"
+    },
+    "area": 130,
+    "count": 2,
+    "level": "below:3",
+    "zone": "power",
+    "light": "none",
+    "live_load_kpa": 10,
+    "demand": {
+     "ach": 12,
+     "power_w_m2": 300,
+     "cooling_w_m2": 100,
+     "backup_power": true
+    }
+   },
+   {
+    "class": "sump",
+    "kind": "technical",
+    "name": {
+     "en": "Drainage pump room",
+     "ru": "Насосная откачки"
+    },
+    "area": 70,
+    "count": 2,
+    "level": "below:3",
+    "zone": "systems",
+    "light": "none",
+    "demand": {
+     "ach": 8,
+     "power_w_m2": 60,
+     "water_l_day": 24000
+    }
+   },
+   {
+    "class": "cable",
+    "kind": "technical",
+    "name": {
+     "en": "Cable room",
+     "ru": "Кабельное помещение"
+    },
+    "area": 80,
+    "count": 2,
+    "level": "below:3",
+    "zone": "power",
+    "light": "none",
+    "demand": {
+     "power_w_m2": 20
+    }
+   },
+   {
+    "class": "service_void",
+    "kind": "storage",
+    "name": {
+     "en": "Service store",
+     "ru": "Служебная кладовая"
+    },
+    "area": 60,
+    "count": 1,
+    "level": "below:3",
+    "zone": "systems",
+    "light": "none"
+   }
+  ],
+  "zones": [
+   {
+    "id": "public",
+    "name": {
+     "en": "Public",
+     "ru": "Общая зона"
+    },
+    "adjacent_to": []
+   },
+   {
+    "id": "operations",
+    "name": {
+     "en": "Operations",
+     "ru": "Эксплуатация"
+    },
+    "adjacent_to": [
+     {
+      "ref": "public",
+      "weight": 2
+     }
+    ]
+   },
+   {
+    "id": "systems",
+    "name": {
+     "en": "Systems",
+     "ru": "Системы"
+    },
+    "adjacent_to": []
+   },
+   {
+    "id": "power",
+    "name": {
+     "en": "Power",
+     "ru": "Электроснабжение"
+    },
+    "adjacent_to": [
+     {
+      "ref": "systems",
+      "weight": 2
+     }
+    ]
+   }
+  ],
+  "egress": {
+   "exits_min": 2
+  },
+  "structure": {
+   "live_load_kpa": {
+    "rule": "typology.live_load_kpa"
+   }
+  },
+  "below": {
+   "levels": [
+    {
+     "name": {
+      "en": "Concourse level",
+      "ru": "Вестибюльный уровень"
+     },
+     "fill": "concourse_services"
+    },
+    {
+     "name": {
+      "en": "Platform level",
+      "ru": "Платформенный уровень"
+     },
+     "fill": "platform_services",
+     "corridor": {
+      "en": "Trackway",
+      "ru": "Путевая часть"
+     }
+    },
+    {
+     "name": {
+      "en": "Ventilation and traction level",
+      "ru": "Вентиляционно-тяговый уровень"
+     },
+     "fill": "service_void"
+    }
+   ],
+   "retaining": true,
+   "height": 9.0
+  },
+  "spare": {
+   "grow_share": 0.6,
+   "kind": "lobby",
+   "name": {
+    "en": "Public hall",
+    "ru": "Общий зал"
+   }
+  }
+ }
+}

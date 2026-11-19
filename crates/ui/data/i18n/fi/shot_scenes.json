@@ -1,0 +1,9 @@
+{
+ "shot_scenes.site": "Tontti",
+ "shot_scenes.lawn": "Nurmikko",
+ "shot_scenes.pad": "Alusta",
+ "shot_scenes.block": "Lohko",
+ "shot_scenes.void": "Tyhjiö",
+ "shot_scenes.tower": "Torni",
+ "shot_scenes.wall_void": "Seinätyhjiö"
+}

@@ -1,0 +1,18 @@
+{
+ "props.multi.title": {
+  "one": "# елемент",
+  "other": "# елемента"
+ },
+ "props.multi.cats": {
+  "one": "# категория",
+  "other": "# категории"
+ },
+ "props.multi.varies": {
+  "one": "варира (#)",
+  "other": "варира (#)"
+ },
+ "props.multi.clear": "Изчистване на избора",
+ "props.multi.undo": "Отмяна",
+ "props.multi.narrowed": "Избор: {n} · {name}",
+ "props.multi.chip_tip": "{name}: {n}  ·  Щракване показва техните свойства, Ctrl+щракване оставя само тях"
+}

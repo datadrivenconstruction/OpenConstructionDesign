@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "बंद रूपरेखा बनाएं: बिंदु क्लिक करें, फिर बनाने के लिए Enter या समाप्त करें",
+ "sketch_hints.sk_finish": "समाप्त करें",
+ "sketch_hints.sk_cancel": "रद्द करें",
+ "sketch_hints.import_warn": "मॉडल जांच चेतावनियां: {n} (पहली: {first})",
+ "sketch_hints.ai.offline.schedule": "शेड्यूल खोलें",
+ "sketch_hints.ai.offline.check": "नियमों से जांचें",
+ "sketch_hints.ai.offline.warnings": "चेतावनियां दिखाएं",
+ "cmd.file.publish_pdf": "शीटें PDF में प्रकाशित करें…",
+ "cmd.file.publish_pdf.desc": "चुनी हुई शीटें PDF में प्रकाशित करता है। शीटें PDF/SVG में निर्यात करने जैसा ही।",
+ "sketch_hints.verify_none": "चयन में AI सहायक द्वारा सेट कुछ नहीं है जिसकी जांच हो",
+ "sketch_hints.contours_none": "मॉडल में कोई टोपोसॉलिड नहीं: एक बनाने पर कंटूर दिखेंगे",
+ "sketch_hints.contours_off": "टोपोसॉलिड कंटूर छिपे हैं",
+ "sketch_hints.contours_on": "टोपोसॉलिड कंटूर दिखाए गए"
+}

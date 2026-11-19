@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "নিচে স্তর যোগ করুন",
+ "type_layers.layer.delete": "স্তর মুছুন",
+ "type_layers.layer.delete_last": "একটি টাইপে অন্তত একটি স্তর লাগে",
+ "type_layers.value.bad": "বৈধ ধনাত্মক মান নয়",
+ "type_layers.value.required": "আবশ্যক",
+ "type_layers.unsaved.title": "{name}-এর অসংরক্ষিত পরিবর্তন",
+ "type_layers.unsaved.body": "এগুলো টাইপে প্রয়োগ করবেন, নাকি বাতিল করবেন?",
+ "type_layers.unsaved.discard": "বাতিল করুন"
+}

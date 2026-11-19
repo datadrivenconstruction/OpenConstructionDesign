@@ -1,0 +1,13 @@
+{
+ "mep.sys.duct": "Syöttö S1",
+ "mep.sys.pipe": "Kylmävesi C1",
+ "mep.sys.tray": "Voimavirta",
+ "mep.round": "Pyöreä",
+ "mep.material": "Materiaali",
+ "mep3d.elevation": "Korkeusasema tasosta",
+ "mep3d.slope": "Kaltevuus",
+ "mep3d.shape": "Muoto",
+ "mep3d.shape.rect": "Suorakaide",
+ "mep3d.shape.round": "Pyöreä",
+ "mep3d.shape.oval": "Litteä soikea"
+}

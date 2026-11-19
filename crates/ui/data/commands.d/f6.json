@@ -1,0 +1,43 @@
+[
+ {
+  "id": "view.issue_revision",
+  "dialog": true,
+  "icon": "revision-issue",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R",
+   "D"
+  ],
+  "stage": "M5",
+  "group": "sheets",
+  "priority": 6
+ },
+ {
+  "id": "view.place_sheet_list",
+  "icon": "sheet-list",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R",
+   "D"
+  ],
+  "stage": "M5",
+  "group": "sheets"
+ },
+ {
+  "id": "view.place_legend",
+  "icon": "legend-place",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R",
+   "D"
+  ],
+  "stage": "M5",
+  "group": "sheets"
+ }
+]

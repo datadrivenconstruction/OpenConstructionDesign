@@ -1,0 +1,5 @@
+{
+ "start_recent.unavailable": "Nu niet beschikbaar (station of netwerklocatie reageert niet): {path}",
+ "start_recent.unavailable_short": "Nu niet beschikbaar",
+ "start_recent.retry": "Opnieuw proberen"
+}

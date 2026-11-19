@@ -1,0 +1,29 @@
+{
+ "recover.ago_now": "дәл қазір",
+ "recover.ago_min": {
+  "one": "# мин бұрын",
+  "other": "# мин бұрын"
+ },
+ "recover.ago_hour": {
+  "one": "# сағат бұрын",
+  "other": "# сағат бұрын"
+ },
+ "recover.ago_yesterday": "кеше",
+ "recover.ago_day": {
+  "one": "# күн бұрын",
+  "other": "# күн бұрын"
+ },
+ "recover.empty": "Қалған суреттер жоқ",
+ "recover.empty_hint": "Бұл жоба үшін қалпына келтіретін ештеңе жоқ.",
+ "recover.all_damaged": "Барлық сурет бұзылған, ешқайсысын қалпына келтіру мүмкін емес.",
+ "recover.keys_hint": "Суретті таңдау үшін Up және Down, Restore-ға өту үшін Enter",
+ "recover.row_tip": "Сақталды {time}",
+ "recover.row_damaged_tip": "Қалпына келтіру мүмкін емес: {reason}",
+ "recover.archive_ask": "Бұл суретті мұрағатқа жылжыту керек пе?",
+ "recover.discard_ask": {
+  "one": "Суретті мұрағатқа жылжыту керек пе? Ол енді ұсынылмайды.",
+  "other": "Барлық # суретті мұрағатқа жылжыту керек пе? Олар енді ұсынылмайды."
+ },
+ "recover.confirm_yes": "Мұрағатқа жылжыту",
+ "recover.confirm_no": "Суреттерді сақтау"
+}

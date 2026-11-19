@@ -1,0 +1,11 @@
+{
+ "sketch.points": "点",
+ "sketch.rect": "長方形",
+ "sketch.circle": "円",
+ "sketch.polygon": "多角形",
+ "sketch.radius": "R",
+ "sketch.sides": "辺数",
+ "sketch.circum": "外接",
+ "sketch.shape.tip": "スケッチ形状 (A で切替)。長方形: 2 つの角。円と多角形: 中心、次に半径。サイズを入力して Enter で固定します。",
+ "tool.err.zero_size": "サイズがゼロです。2 点目を 1 点目から離してください"
+}

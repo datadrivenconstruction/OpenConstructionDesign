@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "Nova obitelj",
+ "family_editor.open_tip": "Otvori obitelj ili nacrt",
+ "family_editor.close_named": "Zatvori {name}",
+ "family_editor.unsaved": "Nespremljene promjene",
+ "family_editor.search": "Pretraži",
+ "family_editor.nothing": "Ništa nije pronađeno",
+ "family_editor.sec_families": "Obitelji projekta",
+ "family_editor.sec_drafts": "Nacrti",
+ "family_editor.cap_category": "Kategorija",
+ "family_editor.cap_host": "Domaćin",
+ "family_editor.cap_type": "Tip pregleda"
+}

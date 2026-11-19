@@ -1,0 +1,6 @@
+{
+ "xl.msg.filter_on_sheet_x": "filtro en la lámina '{}'",
+ "xl.msg.sort_settings_on_sheet_x": "ajustes de ordenación en la lámina '{}'",
+ "xl.msg.hidden_rows_on_sheet_x": "filas ocultas en la lámina '{}'",
+ "xl.msg.hidden_columns_on_sheet_x": "columnas ocultas en la lámina '{}'"
+}

@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "শ্যাফট",
+ "quick.cat.shaft": "শ্যাফট",
+ "shaft_tool.browser.shaft": "শ্যাফট #{id}",
+ "shaft_tool.shaft.top": "উপরের লেভেল",
+ "shaft_tool.shaft.cuts": "কাটা উপাদান",
+ "shaft_tool.shaft.cut_area": "কাটা এলাকা",
+ "shaft_tool.shaft.cut_volume": "কাটা আয়তন",
+ "elem.no.rooms": "এতে থাকা রুম অনুসরণ করে"
+}

@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "{name} zmienił się na dysku.",
+ "src.watch.update": "Zaktualizuj model",
+ "src.watch.compare": "Porównaj",
+ "src.watch.ignore": "Zignoruj tę wersję",
+ "src.watch.missing": "{name}: nie znaleziono pliku źródłowego. Praca trwa dalej.",
+ "src.watch.locate": "Wskaż…",
+ "src.watch.dismiss": "Zamknij",
+ "src.watch.more": "i jeszcze {n} plików źródłowych",
+ "src.watch.done": "Zaktualizowano z {name}: zmienionych {updated}, pól zachowanych jako edytowane {kept}, konfliktów {conflicts}, zablokowanych wartości zachowanych {locked}"
+}

@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "Weergavebereik",
+ "view_range.range": "Weergavebereik",
+ "view_range.cut": "Snijvlak",
+ "view_range.bottom": "Onderkant",
+ "view_range.depth": "Weergavediepte",
+ "view_range.cut.hint": "Hoogte van het snijvlak boven de verdieping. Elementen die het kruisen worden doorgesneden getekend.",
+ "view_range.bottom.hint": "Onderkant van het bereik, ten opzichte van de verdieping. Nul of negatieve waarden zijn toegestaan.",
+ "view_range.depth.hint": "Hoe ver de weergave onder de onderkant kijkt. Nul of meer.",
+ "view_range.err.number": "Voer in elk veld een lengte in",
+ "view_range.err.not_finite": "Voer in elk veld een lengte in",
+ "view_range.err.cut_not_above_bottom": "Het snijvlak moet boven de onderkant liggen",
+ "view_range.err.negative_depth": "Weergavediepte kan niet negatief zijn",
+ "view_range.err.top_below_cut": "De bovenkant van het bereik mag niet onder het snijvlak liggen"
+}

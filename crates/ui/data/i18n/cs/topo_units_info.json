@@ -1,0 +1,13 @@
+{
+ "topo.unit.mm": "mm",
+ "topo.unit.metre": "m",
+ "topo.unit.ft": "ft",
+ "topo.opt.material": "Materiál",
+ "topo.row.active": "Aktivní plocha",
+ "topo.btn.delete_pad": "Smazat podložku",
+ "topo.info.loading": "Vytváření plochy…",
+ "topo.info.warn_n": "{n} upozornění",
+ "topo.info.points_label": "Body",
+ "topo.import.all_layers": "Všechny vrstvy",
+ "topo.import.need_layer": "Zaškrtněte alespoň jednu vrstvu"
+}

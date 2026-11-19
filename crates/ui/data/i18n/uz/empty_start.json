@@ -1,0 +1,8 @@
+{
+ "empty.start_recent.title": "Hali so'nggi loyihalar yo'q",
+ "empty.start_recent.hint": "Ochgan loyihalaringiz shu yerda ko'rinadi. Namuna model bilan boshlang.",
+ "empty.start_recent.action": "Namunani ochish",
+ "start.recent_open_file": "Faylni ochish…",
+ "start.forgot": "So'nggilardan olib tashlandi: {name}",
+ "start.forgot_undo": "Bekor qilish"
+}

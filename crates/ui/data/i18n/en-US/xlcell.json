@@ -1,0 +1,15 @@
+{
+ "xl.msg.cell_clipped": "text was cut to fit the cell limit; read-only, edit not applied",
+ "xlcell.status": "Exported. {count} cells were shortened or left empty — see the details window.",
+ "xlcell.title": "Cells changed by the export",
+ "xlcell.intro": "These cells could not be written as is. The full value stays in the model; the cell is locked and cannot be edited in the book.",
+ "xlcell.col_sheet": "Sheet",
+ "xlcell.col_row": "Row",
+ "xlcell.col_col": "Column",
+ "xlcell.col_id": "Element id",
+ "xlcell.col_what": "What happened",
+ "xlcell.what_clipped": "Text cut to the cell limit",
+ "xlcell.what_blank": "Not a finite number, cell left empty",
+ "xlcell.more": "… and {count} more",
+ "xlcell.close": "Close"
+}

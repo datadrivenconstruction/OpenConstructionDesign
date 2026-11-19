@@ -1,0 +1,8 @@
+{
+ "empty.start_recent.title": "ยังไม่มีโปรเจกต์ล่าสุด",
+ "empty.start_recent.hint": "โปรเจกต์ที่คุณเปิดจะแสดงที่นี่ เริ่มต้นด้วยโมเดลตัวอย่าง",
+ "empty.start_recent.action": "เปิดตัวอย่าง",
+ "start.recent_open_file": "เปิดไฟล์…",
+ "start.forgot": "ลบออกจากรายการล่าสุดแล้ว: {name}",
+ "start.forgot_undo": "เลิกทำ"
+}

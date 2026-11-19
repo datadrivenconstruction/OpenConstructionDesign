@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "Penerapan dihentikan: model dipertahankan seperti semula",
+ "apply_verify.rolled_back": "Penerapan tidak sesuai dengan draf dan dibatalkan; model tidak berubah. {what}",
+ "apply_verify.diff.missing": "Draf menampilkan {what} {kind}, tetapi Terapkan tidak melakukannya.",
+ "apply_verify.diff.extra": "Terapkan {kind} {what}, yang tidak ditampilkan draf.",
+ "apply_verify.diff.kind": "Draf menampilkan {what} {shown}, tetapi Terapkan {applied} itu.",
+ "apply_verify.diff.value": "{what}: “{col}” hasilnya berbeda dari draf.",
+ "apply_verify.diff.truncated": "Draf dan perubahan yang diterapkan berbeda ukurannya.",
+ "apply_verify.diff.unreadable": "Perubahan yang diterapkan tidak dapat dibaca kembali ({e}).",
+ "apply_verify.no_base": "Penerapan tidak dijalankan: salinan untuk memeriksa draf tidak ada. Model tidak berubah; minta draf lagi.",
+ "apply_verify.take_back_failed": "Pembatalan gagal ({e}): gunakan Urungkan.",
+ "apply_verify.kind.created": "dibuat",
+ "apply_verify.kind.changed": "diubah",
+ "apply_verify.kind.deleted": "dihapus",
+ "apply_verify.card.type_row": "Tipe {type} · {n} elemen menerima perubahan"
+}

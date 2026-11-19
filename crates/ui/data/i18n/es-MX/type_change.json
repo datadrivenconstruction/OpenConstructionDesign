@@ -1,0 +1,13 @@
+{
+ "type_change.affects_walls": {
+  "one": "afecta a # muro",
+  "other": "afecta a # muros"
+ },
+ "type_change.affects": {
+  "one": "afecta a # elemento",
+  "other": "afecta a # elementos"
+ },
+ "type_change.tick_types": "Aplicar los cambios de tipo a los {n} elementos de estos tipos",
+ "type_change.tick_types_first": "Marcar primero el cambio de tipo: cada elemento del tipo lo recibe",
+ "xl.msg.types_first": "confirmar primero los cambios de tipo"
+}

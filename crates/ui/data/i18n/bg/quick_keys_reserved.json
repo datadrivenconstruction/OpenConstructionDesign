@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key} е запазен ({why}) и не може да бъде пренасочен",
+ "quick.keys.res_copy": "копиране",
+ "quick.keys.res_paste": "поставяне",
+ "quick.keys.res_cut": "изрязване",
+ "quick.keys.res_undo": "отмяна / повтаряне",
+ "quick.keys.res_save": "запис",
+ "quick.keys.res_palette": "търсене на команди",
+ "quick.keys.reserved_conflict": "{key} вече се използва от „{cmd}“. Esc го оставя там.",
+ "quick.keys.reserved_swap": "Размени",
+ "quick.keys.reserved_take": "Вземи го",
+ "quick.keys.reserved_keep": "Запази",
+ "quick.keys.reserved_os": "Заето от системата:"
+}

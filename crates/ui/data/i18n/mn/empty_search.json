@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "Юу ч олдсонгүй",
+ "empty.browser_search.hint": "Энэ хайлттай харагдац, түвшин, төрөл эсвэл өрөө тохирохгүй.",
+ "empty.browser_search.action": "Хайлтыг цэвэрлэх",
+ "empty.xl_filtered.title": "Шүүлтүүрт тохирох оруулга байхгүй",
+ "empty.xl_filtered.hint": "Илүү олон төрөл асаах, өөр хуудас сонгох эсвэл хайлтын текстээ өөрчилнө үү.",
+ "empty.xl_filtered.action": "Шүүлтүүрийг цэвэрлэх",
+ "empty.xl_nochanges.title": "Номонд өөрчлөлт байхгүй",
+ "empty.xl_nochanges.hint": "Ном загвартай таарч байна: импортлоход юу ч өөрчлөгдөхгүй.",
+ "empty.version_same.title": "Загварууд ижил байна",
+ "empty.version_same.hint": "Нээлттэй загвар ба сонгосон хувилбарын хооронд ялгаа олдсонгүй.",
+ "empty.templates.title": "Харагдацын загвар хараахан байхгүй",
+ "empty.templates.hint": "Одоогийн харагдацаас үүсгээд бусад харагдацад тохиргоогоо дахин ашиглана уу.",
+ "empty.templates.action": "Загварт нэр өгөх",
+ "empty.fe_params.title": "Параметр хараахан байхгүй",
+ "empty.fe_params.hint": "Хэмжээ, материал эсвэл харагдацыг удирдахын тулд доор параметр нэмнэ үү.",
+ "empty.fe_params.action": "Параметр нэмэх"
+}

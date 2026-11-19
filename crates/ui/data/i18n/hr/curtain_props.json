@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "Panel",
+ "curtain_props.cw.panel_cell": "Ćelija {i}×{j} · zavjesna fasada #{id}",
+ "curtain_props.cw.kind": "Vrsta",
+ "curtain_props.cw.kind.glazed": "Staklo",
+ "curtain_props.cw.kind.solid": "Puno",
+ "curtain_props.cw.kind.door": "Vrata",
+ "curtain_props.cw.kind.window": "Prozor",
+ "curtain_props.cw.kind.empty": "Prazno",
+ "curtain_props.cw.name": "Naziv",
+ "curtain_props.cw.swing_side": "Otvara se na drugu stranu",
+ "curtain_props.cw.swing_hinge": "Šarka na kraju ćelije",
+ "curtain_props.cw.size": "Veličina",
+ "curtain_props.cw.cell_area": "Površina ćelije",
+ "curtain_props.cw.panel_area": "Površina panela",
+ "curtain_props.cw.prev": "Prethodni panel",
+ "curtain_props.cw.next": "Sljedeći panel",
+ "curtain_props.cw.wall": "Odaberite zid",
+ "curtain_props.cw.panel_hint": "Esc — odabir · Ctrl+Z — poništi",
+ "curtain_props.cw.status.panel": "Panel {i}×{j} → {kind}",
+ "e3d.err.cw_height": "visina zavjesne fasade mora biti veća od 100 mm"
+}

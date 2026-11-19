@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}, na poziomie",
+ "cmd_buttons.purge.undo": "Usunięcie to jeden krok cofnięcia.",
+ "cmd_buttons.unpin.none": "Żaden zaznaczony element nie jest przypięty",
+ "cmd_buttons.change_type.none": "Najpierw zaznacz ściany: ich typ zmienia się jednym krokiem",
+ "cmd_buttons.units.metric": "Jednostki: metryczne",
+ "cmd_buttons.units.imperial": "Jednostki: stopy i cale",
+ "cmd_buttons.units.back": "Przełącz z powrotem",
+ "cmd_buttons.underlay.on": "Podkład włączony: kondygnacja poniżej jest pokazana przyciemniona",
+ "cmd_buttons.underlay.off": "Podkład wyłączony",
+ "cmd_buttons.underlay.none": "Podkład włączony, ale kondygnacja poniżej nie ma nic do pokazania",
+ "cmd_buttons.zoom_sel.no_shape": "Zaznaczenie nie ma kształtu do dopasowania w tym widoku",
+ "cmd_buttons.close.base": "Karty rzutu i 3D pozostają otwarte; aby je zamknąć, otwórz przekrój, arkusz lub widok rysunkowy",
+ "tool.equipment": "Urządzenie",
+ "hint.equipment.place": "Urządzenie: wskaż położenie · Esc, aby wyjść",
+ "cmd_buttons.table.opened": "Tabela otwarta obok modelu",
+ "cmd_buttons.circuits.tip": "Otwórz listę obwodów elektrycznych tego modelu"
+}

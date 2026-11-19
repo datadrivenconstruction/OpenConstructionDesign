@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "Optie samenvoegen: {name}",
+ "ai_opt_merge.whole": "Gehele optie samenvoegen",
+ "ai_opt_merge.parts": "Geselecteerde onderdelen samenvoegen",
+ "ai_opt_merge.note": "Waarom deze optie",
+ "ai_opt_merge.rebased": "Het model is gewijzigd nadat deze optie is gemaakt: de samenvoeging is herberekend tegen het huidige model. Controleer de wijzigingen voordat u toepast.",
+ "ai_opt_merge.left.not_picked": "Niet gekozen uit de optie",
+ "ai_opt_merge.left.unticked": "Uitgevinkt in de optie",
+ "ai_opt_merge.left.conflict": "Kan niet aan het huidige model worden toegevoegd: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "Deze optie kan niet worden samengevoegd. Een afgewezen optie moet eerst worden hersteld.",
+ "ai_opt_merge.refused.stale": "Het model is gewijzigd nadat deze optie is gemaakt. Herbereken de samenvoeging tegen het huidige model.",
+ "ai_opt_merge.refused.nothing_picked": "Er is niets geselecteerd om samen te voegen.",
+ "ai_opt_merge.refused.unknown_item": "Onderdeel {item} maakt geen deel uit van deze optie.",
+ "ai_opt_merge.refused.not_in_option": "Het geselecteerde element maakt geen deel uit van deze optie.",
+ "ai_opt_merge.refused.needs_left_out": "Onderdeel {item} heeft onderdeel {needs} nodig. Selecteer dit ook, of sta toe dat afhankelijkheden worden toegevoegd.",
+ "ai_opt_merge.refused.set_gone": "Onderdeel {item} verwijst naar een selectie die niet meer bestaat. Genereer de optie opnieuw.",
+ "ai_opt_merge.refused.busy": "Er is al een ander plan open. Pas het eerst toe of wijs het af.",
+ "ai_opt_merge.refused.failed": "De samenvoeging kon niet worden voorbereid: {reason}",
+ "ai_opt_merge.revive": "Optie herstellen",
+ "ai_opt_merge.merged": "Samengevoegd"
+}

@@ -1,0 +1,133 @@
+{
+  "v": 1,
+  "actor": { "kind": "ai", "session": "s-0042", "model": "any" },
+  "title": "Add a meeting room on L2",
+  "why": "Requested: 6 x 4 m room with a door to the corridor",
+  "groups": [
+    {
+      "id": 1,
+      "title": "Level and wall type",
+      "ops": [
+        {
+          "op": "level",
+          "action": "create",
+          "slot": 1,
+          "name": "L2",
+          "elevation": { "v": 3.0, "unit": "m" }
+        },
+        {
+          "op": "type",
+          "action": "duplicate",
+          "slot": 2,
+          "from": { "by": "name", "cat": "type", "name": "Wall 200" },
+          "name": "Wall 150 partition",
+          "fields": [
+            { "name": "thickness", "value": { "v": 150.0, "unit": "mm" } },
+            { "name": "fire_rating", "value": { "v": "EI60", "unit": null } }
+          ]
+        }
+      ],
+      "depends_on": []
+    },
+    {
+      "id": 2,
+      "title": "Walls and door",
+      "ops": [
+        {
+          "op": "create",
+          "slot": 10,
+          "el": {
+            "kind": "wall",
+            "level": { "by": "new", "slot": 1 },
+            "a": { "kind": "crossing", "a": { "by": "name", "cat": "grid", "name": "A" }, "b": { "by": "name", "cat": "grid", "name": "1" } },
+            "b": { "kind": "at", "p": { "x": 6.0, "y": 0.0, "z": 0.0, "unit": "m" } },
+            "height": { "v": 2800.0, "unit": "mm" },
+            "top": null,
+            "type": { "by": "new", "slot": 2 },
+            "fields": []
+          }
+        },
+        {
+          "op": "create",
+          "slot": 11,
+          "el": {
+            "kind": "wall",
+            "level": { "by": "new", "slot": 1 },
+            "a": {
+              "kind": "offset",
+              "from": { "by": "part", "of": { "by": "new", "slot": 10 }, "part": "face:left" },
+              "d": { "v": 4.0, "unit": "m" },
+              "side": "left"
+            },
+            "b": {
+              "kind": "snap",
+              "near": { "x": 6.0, "y": 4.0, "z": 0.0, "unit": "m" },
+              "kinds": ["endpoint", "intersection"],
+              "max": { "v": 250.0, "unit": "mm" }
+            },
+            "height": { "v": 2.8, "unit": "m" },
+            "top": null,
+            "type": { "by": "new", "slot": 2 },
+            "fields": [{ "name": "mark", "value": { "v": "P-2", "unit": null } }]
+          }
+        },
+        {
+          "op": "create",
+          "slot": 12,
+          "el": {
+            "kind": "door",
+            "host": { "by": "new", "slot": 10 },
+            "at": {
+              "kind": "on_host",
+              "host": { "by": "new", "slot": 10 },
+              "along": { "v": 1.2, "unit": "m" },
+              "from_end": "a",
+              "side": "left",
+              "z": { "v": 0.0, "unit": "m" }
+            },
+            "type": { "by": "name", "cat": "type", "name": "Door 900x2100" },
+            "fields": [{ "name": "swing", "value": { "v": "in-left", "unit": null } }]
+          }
+        },
+        {
+          "op": "set",
+          "target": { "by": "refs", "refs": [{ "by": "new", "slot": 10 }, { "by": "id", "cat": "wall", "id": 55 }] },
+          "fields": [
+            { "name": "comment", "value": { "v": "meeting room", "unit": null } },
+            { "name": "base_offset", "value": { "v": -50.0, "unit": "mm" } }
+          ]
+        },
+        {
+          "op": "transform",
+          "target": { "by": "filter", "cat": "component", "query": "room = '2.01'" },
+          "xf": { "kind": "rotate", "center": { "x": 3.0, "y": 2.0, "z": 0.0, "unit": "m" }, "axis": { "x": 0.0, "y": 0.0, "z": 1.0 }, "angle": { "v": 90.0, "unit": "deg" } },
+          "copy": false
+        },
+        {
+          "op": "pattern",
+          "source": { "by": "refs", "refs": [{ "by": "id", "cat": "component", "id": 301 }] },
+          "pattern": { "kind": "linear", "count": 3, "dir": { "x": 1.0, "y": 0.0, "z": 0.0 }, "spacing": { "by": "fit", "total": { "v": 5.4, "unit": "m" } } },
+          "out": "copies"
+        },
+        {
+          "op": "geometry",
+          "action": "convert",
+          "target": { "by": "id", "cat": "mesh", "id": 77 },
+          "to": "parametric"
+        },
+        {
+          "op": "constrain",
+          "rule": {
+            "kind": "distance",
+            "refs": [
+              { "by": "part", "of": { "by": "new", "slot": 10 }, "part": "face:left" },
+              { "by": "part", "of": { "by": "new", "slot": 11 }, "part": "face:right" }
+            ],
+            "value": { "v": 4.0, "unit": "m" }
+          }
+        }
+      ],
+      "depends_on": [1]
+    }
+  ]
+}

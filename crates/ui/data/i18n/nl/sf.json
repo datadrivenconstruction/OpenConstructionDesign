@@ -1,0 +1,4 @@
+{
+ "sf.restored": "Instellingenbestand {file} was beschadigd; de laatste goede kopie is hersteld. Het beschadigde bestand is bewaard als {broken}.",
+ "sf.reset": "Instellingenbestand {file} was beschadigd en geen back-up was bruikbaar; standaardwaarden worden gebruikt. Het beschadigde bestand is bewaard als {broken}."
+}

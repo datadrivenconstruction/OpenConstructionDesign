@@ -1,0 +1,4 @@
+{
+ "source_input.err.number": "«{text}» no es un número; este parámetro contiene un número. No se escribió nada",
+ "source_input.err.comma": "«{text}»: usar el punto para los decimales (1.5); la coma solo separa miles (1,000). No se escribió nada"
+}

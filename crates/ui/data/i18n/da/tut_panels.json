@@ -1,0 +1,9 @@
+{
+ "empty.props_model.title": "Intet valgt",
+ "empty.props_model.hint": "Klik på et element i visningen for at se dets egenskaber. Eller eksportér alle parametre til en projektmappe, redigér dem der og anvend dem tilbage.",
+ "empty.props_model.action": "Eksportér til regneark",
+ "tut.spreadsheet.title": "Rundtur med regneark",
+ "tut.spreadsheet.1": "Tryk på Eksportér til regneark nedenfor: vælg hvad der skal med, og gem projektmappen.",
+ "tut.spreadsheet.2": "Åbn projektmappen i regnearksprogrammet, ændr en celle og gem den. Forhåndsvisningen her viser ændringen.",
+ "tut.spreadsheet.3": "Kontrollér forhåndsvisningen og tryk på Anvend på model. Ctrl+Z fortryder det."
+}

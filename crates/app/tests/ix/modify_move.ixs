@@ -1,0 +1,6 @@
+walls=[(0,0)-(6,0)]
+# Move, pick-first: select the wall, MV, base and target point; one record, Idle -> Moving -> Idle
+tool(select) click(3,0) → selected=1 scope=Idle
+tool(MV) → scope=Moving
+click(0,0) → scope=Moving journal=+0
+click(1.2,0) → journal=+1 scope=Idle

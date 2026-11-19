@@ -1,0 +1,15 @@
+{
+ "sheet_place.place_view_tip": "Paiguta lehele vaade või loend",
+ "sheet_place.properties_tip": "Lehenumber, nimi, paber ja versioonid",
+ "sheet_place.print_tip": "Prindi või ekspordi leht",
+ "sheet_place.fit_tip": "Sobita leht aknasse",
+ "sheet_place.activate_tip": "Muuda vaadet lehel kohapeal: liiguta, suumi ja lõika",
+ "sheet_place.open_view_tip": "Ava vaade omal sakil",
+ "sheet_place.done_tip": "Lõpeta vaate muutmine lehel",
+ "sheet_place.reset_crop_tip": "Eemalda lõige ja näita kogu vaadet",
+ "sheet_place.scale_tip": "Valitud vaate mõõtkava lehel",
+ "sheet_place.title_tip": "Pealkiri, mis kuvatakse lehel vaate all",
+ "sheet_place.banner": "Vaate muutmine lehel",
+ "sheet_place.new_set_tip": "Loo lehtede komplekt, et need koos printida",
+ "sheet_place.new_sheet_tip": "Lisa projektile leht"
+}

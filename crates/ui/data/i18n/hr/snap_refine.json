@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "Polumjer hvatanja",
+ "snap_refine.settings.snap_px_desc": "Koliko kursor mora biti blizu točke ili linije da se uhvati, u pikselima zaslona. Veća vrijednost pomaže na zaslonima osjetljivima na dodir i zaslonima visoke gustoće.",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "Vodoravno",
+ "snap_refine.hint.vertical": "Okomito",
+ "snap_refine.hint.perpendicular": "Okomito na prethodni",
+ "snap_refine.hint.parallel": "Paralelno s prethodnim",
+ "snap_refine.hint.on_axis": "Na osi zida",
+ "snap_refine.no_snap": "Bez hvatanja (Alt)"
+}

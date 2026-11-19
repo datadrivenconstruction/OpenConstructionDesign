@@ -1,0 +1,10 @@
+{
+ "ai.optx.applied": "Variante „{name}“ angewendet. Rückgängig setzt sie in den Entwurf zurück",
+ "ai.optx.missing": "Variante {id} existiert nicht mehr",
+ "ai.optx.accepted": "Variante {id} ist bereits angewendet",
+ "ai.optx.not_draft": "Variante {id} wurde abgelehnt und kann nicht angewendet werden",
+ "ai.optx.stale": "Das Modell hat sich nach Variante {id} geändert: zuerst neu erzeugen",
+ "ai.optx.bad_recipe": "Das Rezept der Variante kann nicht gelesen werden: {e}",
+ "ai.optx.refused": "Die Variante wurde nicht angewendet ({code}): {reason}",
+ "ai.optx.failed": "Die Variante wurde nicht angewendet: {e}"
+}

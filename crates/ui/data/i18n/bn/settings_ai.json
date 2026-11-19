@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "সংযোগ",
+ "settings.ai_status_desc": "AI সহকারী যে মডেল ব্যবহার করে; কী নিরাপদ স্টোরে থাকে",
+ "settings.ai_not_connected": "সংযুক্ত নয়",
+ "settings.ai_connect": "সংযোগ সেটিংস",
+ "settings.ai_connect_desc": "আপনার নিজের মডেলের ঠিকানা, মডেল ও কী — ক্লাউড বা লোকাল",
+ "settings.ai_connect_btn": "সংযোগ সেটিংস…",
+ "settings.ai_panel": "AI সহকারী প্যানেল",
+ "settings.ai_panel_desc": "কথায় জিজ্ঞাসা করুন, পরিকল্পনা দেখুন, তারপর প্রয়োগ করুন",
+ "settings.ai_open_panel": "AI প্যানেল খুলুন"
+}

@@ -1,0 +1,11 @@
+{
+ "cmd.ctx.ceiling.clean_outline": "Oczyść obrys",
+ "cmd.ctx.ceiling.clean_outline.desc": "Usuwa wąskie kolce tam, gdzie obrys sufitu zawraca na siebie. Najpierw pokazuje podgląd; jeden krok cofania.",
+ "cmd.ctx.shaft.clean_outline": "Oczyść obrys",
+ "cmd.ctx.shaft.clean_outline.desc": "Usuwa wąskie kolce tam, gdzie obrys szybu zawraca na siebie. Najpierw pokazuje podgląd; jeden krok cofania.",
+ "outline_cleanup.intro_ceiling": "Obrys tego sufitu zawraca na siebie w wąskich kolcach: {n}. Oczyszczanie usuwa je; reszta zostaje bez zmian.",
+ "outline_cleanup.intro_shaft": "Obrys tego szybu zawraca na siebie w wąskich kolcach: {n}. Oczyszczanie usuwa je; reszta zostaje bez zmian.",
+ "outline_cleanup.none_ceiling": "Obrys tego sufitu nie ma kolców",
+ "outline_cleanup.none_shaft": "Obrys tego szybu nie ma kolców",
+ "outline_cleanup.need_host": "Zaznacz strop, sufit lub szyb"
+}

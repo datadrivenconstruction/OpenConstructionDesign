@@ -1,0 +1,8 @@
+{
+ "script_rec.started": "Înregistrare: modificările făcute de acum intră într-un script. Pentru a opri, alege din nou „Înregistrează acțiunile în script”.",
+ "script_rec.saved": "Scriptul „{name}” a fost salvat: modificări — {n}.",
+ "script_rec.skipped": "Modificările făcute de unelte fără formă de script nu au fost înregistrate: {k}.",
+ "script_rec.nothing": "Înregistrare oprită: nu sunt modificări de salvat.",
+ "script_rec.failed": "Înregistrarea nu a fost salvată: {why}",
+ "script_rec.no_folder": "nu există un dosar de setări pentru scripturi"
+}

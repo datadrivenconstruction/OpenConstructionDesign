@@ -1,0 +1,19 @@
+{
+ "names.level": "Sath {n}",
+ "names.slab": "Plita 200",
+ "names.roof_slab": "Tom 200",
+ "names.sheet.plan_section": "1-qavat rejasi va kesimi",
+ "names.sheet.plan_view": "1-qavat rejasi",
+ "names.sheet.site_plan": "Maydon rejasi",
+ "names.sheet_set.issue": "1-nashr",
+ "names.title.owner": "Loyiha MCHJ",
+ "names.title.creator": "A. Rahimov",
+ "names.title.approver": "P. Karimov",
+ "names.title.document_type": "Chizma",
+ "names.title.status": "Jarayonda",
+ "names.revision.date": "2026-yil 4-noyabr",
+ "names.revision.description": "Ko'rib chiqish uchun chiqarildi",
+ "names.revision.author": "AI",
+ "names.demo.no_levels": "sathlar yo'q",
+ "names.demo.no_sheet": "varaq"
+}

@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "Шахталар",
+ "quick.cat.shaft": "Шахта",
+ "shaft_tool.browser.shaft": "Шахта #{id}",
+ "shaft_tool.shaft.top": "Үстүнкү деңгээл",
+ "shaft_tool.shaft.cuts": "Кесилген элементтер",
+ "shaft_tool.shaft.cut_area": "Кесилген аянт",
+ "shaft_tool.shaft.cut_volume": "Кесилген көлөм",
+ "elem.no.rooms": "Ичиндеги бөлмөлөрдү ээрчийт"
+}

@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "पिछली शीट (Page Up)",
+ "sheets.print.next": "अगली शीट (Page Down)",
+ "sheets.print.fit": "पेज फ़िट करें (डबल-क्लिक)",
+ "sheets.print.no_sheets": "पूर्वावलोकन के लिए कोई शीट नहीं",
+ "sheets.print.building": "पेज बनाया जा रहा है…",
+ "sheets.print.stop_build": "रोकें",
+ "sheets.print.build_stopped": "पेज बनाना रोका गया",
+ "sheets.print.retry": "फिर से बनाएँ",
+ "sheets.print.build_failed": "पूर्वावलोकन नहीं बन सका"
+}

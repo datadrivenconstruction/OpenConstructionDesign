@@ -1,0 +1,9 @@
+{
+ "ai.settings.num_bad": "To nie jest liczba. Wpisz np. 0.5.",
+ "ai.settings.num_comma": "Jako separatora dziesiętnego użyj kropki, np. 0.5.",
+ "ai.settings.num_negative": "Liczba nie może być ujemna.",
+ "ai.settings.unit_money": "waluta",
+ "ai.settings.unit_tokens": "tokenów",
+ "ai.settings.unit_price": "za 1 mln tokenów",
+ "ai.settings.limits_hint": "0 oznacza brak limitu. Odrzucona wartość zostawia poprzedni limit."
+}

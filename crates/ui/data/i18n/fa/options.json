@@ -1,0 +1,15 @@
+{
+ "fe.add_why_empty": "ابتدا نام یک پارامتر را وارد کنید",
+ "fe.add_why_exists": "پارامتری با این نام از قبل وجود دارد؛ برای تغییر آن از «اعمال» استفاده کنید",
+ "fe.apply_why_missing": "پارامتری با این نام نیست؛ نام یک پارامتر موجود را تایپ کنید",
+ "fe.nochange": "هنوز تغییری نیست",
+ "options.accept_more": "پذیرش…",
+ "options.delete_more": "حذف…",
+ "options.empty_title": "هنوز مجموعهٔ گزینه‌ای نیست",
+ "options.more": "اقدامات بیشتر: {name}",
+ "options.primary_named": "گزینهٔ اصلی: {name}",
+ "options.primary_tip": "این را گزینهٔ اصلی مجموعه کنید",
+ "options.select_first": "ابتدا عناصر را در مدل انتخاب کنید",
+ "options.show_3d": "نمایش در سه‌بعدی: {name}",
+ "options.show_plan": "نمایش در پلان: {name}"
+}

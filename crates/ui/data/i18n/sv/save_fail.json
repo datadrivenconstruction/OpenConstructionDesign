@@ -1,0 +1,16 @@
+{
+ "save_fail.save_fail.title": "Projektet sparades inte",
+ "save_fail.save_fail.kept": "Dina ändringar finns kvar här. Inget går förlorat så länge redigeraren är öppen.",
+ "save_fail.save_fail.details": "Detaljer",
+ "save_fail.save_fail.copy": "Kopiera",
+ "save_fail.save_fail.save_as": "Spara som…",
+ "save_fail.save_fail.retry": "Försök igen",
+ "save_fail.save_fail.close": "Stäng",
+ "save_fail.cause.full": "Disken är full. Frigör utrymme eller spara projektet på en annan enhet.",
+ "save_fail.cause.denied": "Mappen eller filen är skrivskyddad, eller du saknar behörighet att skriva här. Välj en annan mapp.",
+ "save_fail.cause.locked": "Filen är öppen i ett annat program. Stäng den där och tryck på Försök igen.",
+ "save_fail.cause.missing": "Mappen finns inte längre. Välj en annan mapp, eller återställ den och tryck på Försök igen.",
+ "save_fail.cause.offline": "Enheten eller nätverksmappen är inte tillgänglig. Anslut den igen och tryck på Försök igen, eller spara på en annan plats.",
+ "save_fail.cause.too_long": "Sökvägen till filen är för lång. Välj en kortare mapp eller ett kortare filnamn.",
+ "save_fail.cause.other": "Filen kunde inte skrivas: {detail}"
+}

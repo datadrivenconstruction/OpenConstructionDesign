@@ -1,0 +1,42 @@
+{
+ "room_kinds": {
+  "living": [
+   "lounge",
+   "sitting room",
+   "reception room"
+  ],
+  "kitchen": [
+   "kitchenette"
+  ],
+  "bath": [
+   "bathroom",
+   "shower room",
+   "en-suite",
+   "ensuite"
+  ],
+  "wc": [
+   "w.c.",
+   "cloakroom"
+  ],
+  "hall": [
+   "hallway",
+   "entrance hall"
+  ],
+  "corridor": [
+   "passage",
+   "landing"
+  ],
+  "storage": [
+   "utility",
+   "airing cupboard",
+   "larder"
+  ],
+  "office": [
+   "open plan office"
+  ],
+  "meeting": [
+   "meeting room",
+   "boardroom"
+  ]
+ }
+}

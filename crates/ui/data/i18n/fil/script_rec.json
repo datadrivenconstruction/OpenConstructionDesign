@@ -1,0 +1,8 @@
+{
+ "script_rec.started": "Pagre-record: ang mga pagbabagong gagawin mo mula ngayon ay mapupunta sa isang script. Piliin muli ang “I-record ang mga aksyon sa script” para huminto.",
+ "script_rec.saved": "Na-save ang script na “{name}”: {n} pagbabago.",
+ "script_rec.skipped": "Hindi naitala ang {k} pagbabagong ginawa ng mga tool na walang anyo ng script.",
+ "script_rec.nothing": "Itinigil ang pag-record: walang pagbabagong ise-save.",
+ "script_rec.failed": "Hindi na-save ang recording: {why}",
+ "script_rec.no_folder": "walang folder ng settings para sa mga script"
+}

@@ -1,0 +1,5 @@
+{
+ "snap.center": "Keskpunkt",
+ "dwg_snap.through": "Läbiv punkt",
+ "dwg_snap.through_tip": "Nihuta läbi klõpsatud punkti (haakub otstele, ristumistele, keskpunktidele) sisestatud kauguse asemel"
+}

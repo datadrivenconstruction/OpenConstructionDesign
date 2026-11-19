@@ -1,0 +1,7 @@
+{
+ "fmenu.export": "另存为 / 导出",
+ "fmenu.export.ifc4x3": "IFC 4.3",
+ "fmenu.export.ifc2x3": "IFC 2x3",
+ "fmenu.export.glb": "glTF 二进制 (.glb)",
+ "fmenu.export.pdf": "PDF 或 SVG（图纸）"
+}

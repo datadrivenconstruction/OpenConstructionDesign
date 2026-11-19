@@ -1,0 +1,5 @@
+{
+ "xlsx_delete.delete_missing": "ブックにない行を削除",
+ "xlsx_delete.not_removed": "削除されませんでした: 比較データがありません",
+ "xlsx_delete.no_base_reason": "利用できません: ブックに比較データがないため、行の欠落と誤った削除を区別できません。適用時には何も削除されません。"
+}

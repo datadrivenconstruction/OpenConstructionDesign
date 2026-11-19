@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "Tagasi võetud — Ctrl+Y taastab",
+ "history.hist.empty": "Muudatusi veel pole",
+ "history.hist.empty_hint": "Sinu muudatused ilmuvad siia. Klõpsa mis tahes sammul, et sinna naasta.",
+ "history.hist.revert_all_n": "Tühista kõik AI muudatused ({n})"
+}

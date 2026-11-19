@@ -1,0 +1,7 @@
+{
+ "spline.opt.spline": "Сплайн",
+ "spline.opt.spline_tip": "Сплайн дубал: өтө турган чекиттерди басыңыз, аяктоо үчүн Enter же Esc",
+ "spline.wt.three_points": "сплайн дубалга үч же андан көп чекит керек",
+ "spline.wt.no_curtain": "айнек дубалдын сплайн огу жок",
+ "spline.wt.added": "сплайн дубал кошулду"
+}

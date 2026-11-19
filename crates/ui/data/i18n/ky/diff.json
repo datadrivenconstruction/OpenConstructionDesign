@@ -1,0 +1,7 @@
+{
+ "diff.kind.added": "кошулган",
+ "diff.kind.changed": "өзгөргөн",
+ "diff.kind.deleted": "өчүрүлгөн",
+ "diff.kind.refused": "четке кагылган",
+ "diff.kind.conflict": "карама-каршылык"
+}

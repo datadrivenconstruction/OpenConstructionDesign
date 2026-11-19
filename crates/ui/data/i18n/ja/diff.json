@@ -1,0 +1,7 @@
+{
+ "diff.kind.added": "追加",
+ "diff.kind.changed": "変更",
+ "diff.kind.deleted": "削除",
+ "diff.kind.refused": "拒否",
+ "diff.kind.conflict": "競合"
+}

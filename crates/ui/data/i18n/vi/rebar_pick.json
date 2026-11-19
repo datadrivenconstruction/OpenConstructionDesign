@@ -1,0 +1,7 @@
+{
+ "rebar_pick.pick.empty": "Cốt thép: chọn cột, dầm, tường, sàn hoặc móng",
+ "rebar_pick.pick.unsupported": "Lựa chọn này không thể gia cố. Hãy chọn cột, dầm, tường, sàn hoặc móng",
+ "rebar_pick.pick.keys": "Nhấp để chọn, Shift để thêm · Enter để mở biểu mẫu · Esc để hủy",
+ "rebar_pick.pick.open": "Mở biểu mẫu",
+ "rebar_pick.pick.cancel": "Hủy"
+}

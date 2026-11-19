@@ -1,0 +1,46 @@
+{
+ "rebar_hosts.hosts": "Gazde: {list}",
+ "rebar_hosts.kind.column": "Stâlp",
+ "rebar_hosts.kind.beam": "Grindă",
+ "rebar_hosts.kind.wall": "Perete",
+ "rebar_hosts.kind.slab": "Placă",
+ "rebar_hosts.kind.footing": "Fundație izolată",
+ "rebar_hosts.kind.raft": "Placă de fundație",
+ "rebar_hosts.n.column": {
+  "one": "# stâlp",
+  "few": "# stâlpi",
+  "other": "# de stâlpi"
+ },
+ "rebar_hosts.n.beam": {
+  "one": "# grindă",
+  "few": "# grinzi",
+  "other": "# de grinzi"
+ },
+ "rebar_hosts.n.wall": {
+  "one": "# perete",
+  "few": "# pereți",
+  "other": "# de pereți"
+ },
+ "rebar_hosts.n.slab": {
+  "one": "# placă",
+  "few": "# plăci",
+  "other": "# de plăci"
+ },
+ "rebar_hosts.n.footing": {
+  "one": "# fundație izolată",
+  "few": "# fundații izolate",
+  "other": "# de fundații izolate"
+ },
+ "rebar_hosts.n.raft": {
+  "one": "# radier",
+  "few": "# radiere",
+  "other": "# de radiere"
+ },
+ "rebar_hosts.mixed_note": "Stâlpii și grinzile primesc bare și etrieri; pereții, plăcile și fundațiile primesc plasă. Selectează un singur grup pentru a adăuga armătură.",
+ "rebar_hosts.why.mixed": "Selecția amestecă stâlpi sau grinzi cu pereți, plăci sau fundații. Selectează un singur grup.",
+ "rebar_hosts.why.area_linear": "Plasa intră în pereți, plăci și fundații, nu în stâlpi sau grinzi.",
+ "rebar_hosts.why.bars_plate": "Barele longitudinale și etrierii intră în stâlpi și grinzi, nu în pereți, plăci sau fundații.",
+ "rebar_hosts.why.no_common_face": "Gazdele selectate nu au o față de acoperire comună. Selectează gazde de un singur tip.",
+ "rebar_hosts.why.no_type": "Alege un tip de bară.",
+ "rebar_hosts.kind_type": "{kind} · {type}"
+}

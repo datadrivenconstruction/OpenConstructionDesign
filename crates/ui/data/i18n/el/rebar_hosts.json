@@ -1,0 +1,40 @@
+{
+ "rebar_hosts.hosts": "Φορείς: {list}",
+ "rebar_hosts.kind.column": "Κολώνα",
+ "rebar_hosts.kind.beam": "Δοκός",
+ "rebar_hosts.kind.wall": "Τοίχος",
+ "rebar_hosts.kind.slab": "Πλάκα",
+ "rebar_hosts.kind.footing": "Θεμέλιο",
+ "rebar_hosts.kind.raft": "Θεμελιώδης πλάκα",
+ "rebar_hosts.n.column": {
+  "one": "# κολώνα",
+  "other": "# κολώνες"
+ },
+ "rebar_hosts.n.beam": {
+  "one": "# δοκός",
+  "other": "# δοκοί"
+ },
+ "rebar_hosts.n.wall": {
+  "one": "# τοίχος",
+  "other": "# τοίχοι"
+ },
+ "rebar_hosts.n.slab": {
+  "one": "# πλάκα",
+  "other": "# πλάκες"
+ },
+ "rebar_hosts.n.footing": {
+  "one": "# θεμέλιο",
+  "other": "# θεμέλια"
+ },
+ "rebar_hosts.n.raft": {
+  "one": "# θεμελιώδης πλάκα",
+  "other": "# θεμελιώδεις πλάκες"
+ },
+ "rebar_hosts.mixed_note": "Οι κολώνες και οι δοκοί δέχονται ράβδους και συνδέσμους· οι τοίχοι, οι πλάκες και τα θεμέλια δέχονται πλέγμα. Επιλέξτε μία ομάδα για να προσθέσετε οπλισμό.",
+ "rebar_hosts.why.mixed": "Η επιλογή αναμιγνύει κολώνες ή δοκούς με τοίχους, πλάκες ή θεμέλια. Επιλέξτε μία ομάδα.",
+ "rebar_hosts.why.area_linear": "Το πλέγμα μπαίνει σε τοίχους, πλάκες και θεμέλια, όχι σε κολώνες ή δοκούς.",
+ "rebar_hosts.why.bars_plate": "Οι διαμήκεις ράβδοι και οι σύνδεσμοι μπαίνουν σε κολώνες και δοκούς, όχι σε τοίχους, πλάκες ή θεμέλια.",
+ "rebar_hosts.why.no_common_face": "Οι επιλεγμένοι φορείς δεν έχουν κοινή όψη επικάλυψης. Επιλέξτε φορείς ενός είδους.",
+ "rebar_hosts.why.no_type": "Επιλέξτε τύπο ράβδου.",
+ "rebar_hosts.kind_type": "{kind} · {type}"
+}

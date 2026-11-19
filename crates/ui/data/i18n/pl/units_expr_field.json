@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "Puste pole.",
+ "units.err.not_number": "Nie liczba na pozycji {pos}.",
+ "units.err.unknown_unit": "Nieznana jednostka: {unit}.",
+ "units.err.non_positive": "Długość musi być większa od zera.",
+ "units.err.too_large": "Długość nie może przekraczać {max} m.",
+ "units.err.bad_angle": "Kąt to liczba stopni.",
+ "units.err.unknown_name": "Nieznana nazwa: {name}. Wartość zachowana.",
+ "units.err.cycle": "Pętla wzoru w {name}. Wartość zachowana.",
+ "units.err.bad_expr": "Nie można odczytać wyrażenia na pozycji {pos}. Wartość zachowana.",
+ "units.err.div_zero": "Dzielenie przez zero na pozycji {pos}. Wartość zachowana.",
+ "units.err.invalid": "Nieprawidłowa liczba.",
+ "units.err.kept": "Nie zmieniono: {reason}"
+}

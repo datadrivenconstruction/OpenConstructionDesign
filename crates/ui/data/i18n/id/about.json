@@ -1,0 +1,33 @@
+{
+ "cmd.help.licenses": "Lisensi sumber terbuka",
+ "cmd.help.licenses.desc": "Menampilkan daftar pustaka sumber terbuka yang dipakai build ini beserta lisensinya.",
+ "about.product": "DDC Editor",
+ "about.version": "Versi",
+ "about.build": "Build",
+ "about.schema": "Skema model",
+ "about.system": "Sistem",
+ "about.gpu": "Adaptor grafis",
+ "about.language": "Bahasa",
+ "about.copy": "Salin info versi",
+ "about.copy_desc": "Versi, build, sistem, dan adaptor grafis untuk laporan bug. Tanpa path berkas.",
+ "about.copied": "Info versi disalin",
+ "about.licenses": "Lisensi sumber terbuka",
+ "about.licenses_desc": "Pustaka yang dipakai di build ini dan lisensinya",
+ "about.licenses.open": "Lihat",
+ "about.licenses.title": "Lisensi sumber terbuka",
+ "about.licenses.note": "DDC Editor menyertakan pustaka berikut. Setiap pustaka tetap berada di bawah lisensi dan pemberitahuan hak cipta masing-masing. Teks lisensi lengkap: THIRD_PARTY_LICENSES.txt di samping aplikasi.",
+ "about.licenses.full": "Teks lisensi lengkap",
+ "about.licenses.list": "Daftar komponen",
+ "about.licenses.close": "Tutup",
+ "about.licenses.col_name": "Komponen",
+ "about.licenses.col_license": "Lisensi",
+ "about.licenses.count": {
+  "one": "# komponen",
+  "other": "# komponen"
+ },
+ "about.licenses.count_of": "{shown} dari {total} komponen",
+ "about.licenses.search_hint": "Cari berdasarkan nama atau lisensi…",
+ "about.licenses.search_clear": "Hapus pencarian",
+ "about.licenses.none": "Tidak ditemukan",
+ "about.licenses.none_hint": "Coba sebagian nama pustaka atau lisensi, misalnya MIT."
+}

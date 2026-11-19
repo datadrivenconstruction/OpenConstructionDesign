@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "Föregående blad (Page Up)",
+ "sheets.print.next": "Nästa blad (Page Down)",
+ "sheets.print.fit": "Anpassa sida (dubbelklicka)",
+ "sheets.print.no_sheets": "Inga blad att förhandsgranska",
+ "sheets.print.building": "Bygger sidan…",
+ "sheets.print.stop_build": "Stoppa",
+ "sheets.print.build_stopped": "Sidbyggnaden avbröts",
+ "sheets.print.retry": "Bygg igen",
+ "sheets.print.build_failed": "Förhandsgranskningen kunde inte skapas"
+}

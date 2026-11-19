@@ -1,0 +1,38 @@
+id = "G28_cooling_tower__es"
+tier = "hard"
+group = "Any geometry"
+title = "Hyperboloid cooling tower"
+lang = "es"
+base = "empty"
+
+[[turn]]
+say = "Una torre de refrigeración hiperboloide: altura 120 m, diámetro en la base 90 m, garganta de 55 m a 90 m de altura, borde superior de 58 m, cáscara nervada con pilares en V en la base."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "col"
+min = 24.0
+
+[[oracle.count]]
+spec = "shell_elem+freeform+wall_spline+mesh+solid+wall"
+min = 1.0
+
+[[oracle.geom]]
+kind = "height"
+min = 110.0
+max = 130.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1
+
+[[oracle.geom]]
+kind = "waist"
+ratio_max = 0.8
+at_min = 0.5
+at_max = 0.9

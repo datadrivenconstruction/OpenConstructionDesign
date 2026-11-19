@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "Radius snap",
+ "snap_refine.settings.snap_px_desc": "Seberapa dekat kursor harus berada dengan titik atau garis agar melakukan snap, dalam piksel layar. Nilai lebih besar membantu di layar sentuh dan layar berkepadatan tinggi.",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "Horizontal",
+ "snap_refine.hint.vertical": "Vertikal",
+ "snap_refine.hint.perpendicular": "Tegak lurus dengan sebelumnya",
+ "snap_refine.hint.parallel": "Sejajar dengan sebelumnya",
+ "snap_refine.hint.on_axis": "Pada sumbu dinding",
+ "snap_refine.no_snap": "Tanpa snap (Alt)"
+}

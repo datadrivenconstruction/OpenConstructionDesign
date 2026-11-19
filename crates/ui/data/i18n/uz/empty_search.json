@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "Hech narsa topilmadi",
+ "empty.browser_search.hint": "Bu qidiruvga hech bir ko'rinish, qavat, tur yoki xona mos kelmaydi.",
+ "empty.browser_search.action": "Qidiruvni tozalash",
+ "empty.xl_filtered.title": "Filtrlarga mos yozuv yo'q",
+ "empty.xl_filtered.hint": "Ko'proq turlarni yoqing, boshqa varaqni tanlang yoki qidiruv matnini o'zgartiring.",
+ "empty.xl_filtered.action": "Filtrlarni tozalash",
+ "empty.xl_nochanges.title": "Kitobda o'zgarish yo'q",
+ "empty.xl_nochanges.hint": "Kitob modelga mos keladi: uni import qilish hech narsani o'zgartirmaydi.",
+ "empty.version_same.title": "Modellar bir xil",
+ "empty.version_same.hint": "Ochiq model va tanlangan versiya o'rtasida farq topilmadi.",
+ "empty.templates.title": "Hali ko'rinish shablonlari yo'q",
+ "empty.templates.hint": "Sozlamalarini boshqa ko'rinishlarda qayta ishlatish uchun joriy ko'rinishdan yarating.",
+ "empty.templates.action": "Shablonga nom bering",
+ "empty.fe_params.title": "Hali parametrlar yo'q",
+ "empty.fe_params.hint": "O'lchamlar, materiallar yoki ko'rinishni boshqarish uchun quyida parametr qo'shing.",
+ "empty.fe_params.action": "Parametr qo'shish"
+}

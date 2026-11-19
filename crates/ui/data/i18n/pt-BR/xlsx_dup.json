@@ -1,0 +1,10 @@
+{
+ "xlsx_dup.dup_undo": "Desfazer decisão",
+ "xlsx_dup.dup_undo_tip": "Linhas convertidas em novos elementos ({n}) são lidas novamente com o id",
+ "xlsx_dup.dup_new": "Criar cópias editadas como novos elementos",
+ "xlsx_dup.dup_new_tip": "As linhas {rows} tornam-se novos elementos com seus valores; o elemento #{id} mantém os valores dele (um passo de desfazer junto com o restante)",
+ "xl.msg.dup_same": "id duplicado {}: mesmos valores da linha {}; linha ignorada",
+ "xl.msg.dup_unchanged": "id duplicado {}: cópia não alterada da linha exportada; linha ignorada",
+ "xl.msg.dup_conflict": "o id {} está nas linhas {} com valores diferentes; nada aplicado para este id",
+ "xl.msg.dup_conflict_keep": "o id {} está nas linhas {} com valores diferentes; nada aplicado para este id — mantenha uma linha"
+}

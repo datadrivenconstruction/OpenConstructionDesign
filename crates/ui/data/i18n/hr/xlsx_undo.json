@@ -1,0 +1,6 @@
+{
+ "cmd.xlsx.undo_apply": "Poništi zadnju primjenu iz proračunske tablice",
+ "xlsx_undo.later": "Nije poništeno: model je uređen nakon ove primjene iz proračunske tablice. Koristite Ctrl+Z korak po korak ili panel Povijest.",
+ "xlsx_undo.gone": "Nema što poništiti: ova primjena iz proračunske tablice već je poništena.",
+ "xlsx_undo.busy": "Prvo završite ili otkažite trenutni crtež, zatim poništite primjenu iz proračunske tablice."
+}

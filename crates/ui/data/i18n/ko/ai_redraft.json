@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "개정됨",
+ "ai.redraft.added": "+{n}개 추가",
+ "ai.redraft.removed": "−{n}개 제거",
+ "ai.redraft.changed": "~{n}개 변경",
+ "ai.redraft.strip": "마지막으로 본 이후 {what}",
+ "ai.redraft.note": "검토한 개정 계획: {what}",
+ "ai.redraft.more": "+{n}개 더",
+ "ai.redraft.ack": "확인",
+ "ai.redraft.ack.tip": "이 개정을 본 것으로 표시; 이후 적용은 이 개정을 대상으로 합니다",
+ "ai.redraft.removed_list": "제거된 항목: {n}",
+ "ai.redraft.review_first": "메시지 이후 계획이 변경되었습니다: 먼저 변경 사항을 검토하세요",
+ "ai.redraft.mark.tip": "마지막으로 본 이후 새로 추가되었거나 변경됨",
+ "ai.redraft.emptied": "후속 요청이 모든 항목을 제거했습니다: 초안이 비었습니다"
+}

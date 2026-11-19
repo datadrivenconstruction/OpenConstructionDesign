@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "שומר על אורך הקיר הנוכחי בכל עריכה",
+ "constraints.con.tip.lock_dist": "שומר על המרחק בין שני הקירות בכל עריכה",
+ "constraints.con.tip.equal": "שומר על המרווחים שווים בין הקירות הנבחרים",
+ "constraints.con.tip.align": "שומר על שני הקירות בקו אחד",
+ "constraints.con.tip.parallel": "שומר על הקירות מקבילים",
+ "constraints.con.tip.perp": "שומר על הקירות בזווית ישרה",
+ "constraints.con.tip.align_grid": "שומר את הקיר על קו הרשת הקרוב ביותר",
+ "constraints.con.tip.lock_dist_grid": "שומר על המרחק מהקיר לקו הרשת הקרוב ביותר",
+ "constraints.con.tip.level_gap": "שומר על המרווח בין המפלסים",
+ "constraints.con.tip.top_to_level": "שומר על חלקו העליון של הקיר במפלס שמעל"
+}

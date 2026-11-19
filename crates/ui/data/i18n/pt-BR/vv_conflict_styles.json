@@ -1,0 +1,6 @@
+{
+ "vv_conflict.styles.conflict": "Os estilos de objeto de uma categoria editada foram alterados no modelo (desfazer ou outra janela) enquanto esta janela tinha edições. Suas edições foram mantidas.",
+ "vv_conflict.styles.keep": "Manter minhas edições",
+ "vv_conflict.styles.reload": "Recarregar",
+ "vv_conflict.styles.answer_first": "Escolha Manter minhas edições ou Recarregar primeiro"
+}

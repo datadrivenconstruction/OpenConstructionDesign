@@ -1,0 +1,8 @@
+{
+ "cmd.file.save_copy": "Spara en kopia till någon annan…",
+ "cmd.file.save_copy.desc": "Sparar en kopia av projektet utan AI-samtycke och, om du inte väljer annorlunda, utan AI-journalen. Det här projektet förblir oförändrat.",
+ "ai.copy.title": "Spara en kopia",
+ "ai.copy.journal": "Ta med AI-journalen i kopian? Journalen innehåller förfrågningar, svar och adresser. Molnsamtycke kopieras aldrig: den andra personen bestämmer själv. Välj Nej för att utelämna journalen.",
+ "ai.copy.done": "Kopia sparad: {name}",
+ "ai.copy.same": "Välj en annan fil: en kopia kan inte ersätta det öppna projektet."
+}

@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "gemessen {value}, Grenzwert {limit}",
+ "ai_checks.check.cap": "{shown} von {total} Befunden angezeigt. Fehler stehen zuerst: Beheben Sie sie und prüfen Sie erneut.",
+ "ai_checks.check.run_again": "Erneut ausführen",
+ "ai_checks.check.goto": "Auswählen und zoomen",
+ "ai_checks.check.never_title": "Noch nicht geprüft",
+ "ai_checks.check.never_hint": "Führen Sie die Prüfungen aus, dann erscheinen die Befunde hier.",
+ "ai_checks.check.sec.error": "Fehler",
+ "ai_checks.check.sec.warning": "Warnungen",
+ "ai_checks.check.sec.info": "Hinweise"
+}

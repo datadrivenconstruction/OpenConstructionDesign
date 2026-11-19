@@ -1,0 +1,14 @@
+{
+ "lnp.openings_refused": "{n} nyílás nem változott ({why})",
+ "lnp.params_changed": "módosított értékek: {n}",
+ "lnp.params_same": "Nincs változás: {u} elem már ezt az értéket tartalmazza",
+ "lnp.params_tip": "Az Enter minden kijelölt elemre alkalmazza az értéket; az Esc megtartja őket",
+ "lnp.locked_hint": "Megtartott zárolt értékek: {n}",
+ "lnp.panels_one": "A paneleket egyenként lehet szerkeszteni",
+ "lnp.keep_first": "Első megtartása",
+ "lnp.keep_first_tip": "Csak az első panel kijelölése a szerkesztéséhez",
+ "lnp.clip_from_wall": "Paraméterek másolva a(z) #{id} falból",
+ "lnp.clip_from_opening": "Paraméterek másolva a(z) #{id} nyílásból",
+ "lnp.match_from": "A #{id} tulajdonságai {n} elemre illesztve",
+ "lnp.why_at": "#{id}: {e}"
+}

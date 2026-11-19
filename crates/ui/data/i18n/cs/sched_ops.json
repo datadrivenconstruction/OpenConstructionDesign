@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "hodnota musí být větší než nula",
+ "sched_ops.not_number": "není číslo",
+ "sched_ops.no_host": "není hostitelská stěna",
+ "sched_ops.wall_length": "délku této stěny takto nelze nastavit",
+ "sched_ops.no_wall": "taková stěna neexistuje",
+ "sched_ops.no_opening": "takový otvor neexistuje",
+ "sched_ops.no_curtain": "taková prosklená stěna neexistuje",
+ "sched_ops.no_panel": "takový panel neexistuje",
+ "sched_ops.no_slab": "taková deska neexistuje",
+ "sched_ops.no_room": "taková místnost neexistuje",
+ "sched_ops.slope_range": "sklon mimo rozsah",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

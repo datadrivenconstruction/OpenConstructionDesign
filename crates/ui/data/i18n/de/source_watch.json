@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "{name} wurde auf dem Datenträger geändert.",
+ "src.watch.update": "Modell aktualisieren",
+ "src.watch.compare": "Vergleichen",
+ "src.watch.ignore": "Diese Version ignorieren",
+ "src.watch.missing": "{name}: Quelldatei nicht gefunden. Die Arbeit geht weiter.",
+ "src.watch.locate": "Suchen…",
+ "src.watch.dismiss": "Schließen",
+ "src.watch.more": "und {n} weitere Quelldateien",
+ "src.watch.done": "Aktualisiert aus {name}: {updated} geändert, {kept} als bearbeitet behalten, {conflicts} Konflikte, {locked} gesperrte Werte behalten"
+}

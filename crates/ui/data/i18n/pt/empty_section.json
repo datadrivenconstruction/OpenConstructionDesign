@@ -1,0 +1,11 @@
+{
+ "empty.sv_notfound.title": "Vista não encontrada",
+ "empty.sv_notfound.hint": "Esta vista foi excluída ou não faz mais parte do projeto.",
+ "empty.sv_notfound.action": "Fechar vista",
+ "empty.sv_cuts_nothing.title": "Este corte não corta nada",
+ "empty.sv_cuts_nothing.hint": "A linha de corte não encontra paredes, lajes ou aberturas dentro da sua profundidade. Mova a linha ou aprofunde a vista.",
+ "empty.sv_cuts_nothing.action": "Mostrar na planta",
+ "empty.sv_shows_nothing.title": "Este alçado não mostra nada",
+ "empty.sv_shows_nothing.hint": "Nenhuma parede, laje ou abertura cai dentro da profundidade da vista. Mova a linha de vista ou aprofunde a vista.",
+ "empty.sv_shows_nothing.action": "Mostrar na planta"
+}

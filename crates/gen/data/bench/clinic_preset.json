@@ -1,0 +1,25 @@
+{
+ "schema": "gen_bench.v1",
+ "group": "clinic",
+ "spec": {
+  "typology": "clinic",
+  "floors": 3
+ },
+ "adjacency": [
+  [
+   "office",
+   "corridor",
+   2
+  ],
+  [
+   "ward",
+   "wc",
+   2
+  ],
+  [
+   "lobby",
+   "office",
+   1
+  ]
+ ]
+}

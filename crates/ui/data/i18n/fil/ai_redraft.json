@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "Binago",
+ "ai.redraft.added": "+{n} naidagdag",
+ "ai.redraft.removed": "−{n} inalis",
+ "ai.redraft.changed": "~{n} nabago",
+ "ai.redraft.strip": "{what} mula noong huli mong tingin",
+ "ai.redraft.note": "Nasuri ang binagong plan: {what}",
+ "ai.redraft.more": "+{n} pa",
+ "ai.redraft.ack": "Naintindihan",
+ "ai.redraft.ack.tip": "Markahang nakita na ang rebisyong ito; dito na tututok ang Apply",
+ "ai.redraft.removed_list": "Mga inalis na item: {n}",
+ "ai.redraft.review_first": "Nagbago ang plan pagkatapos ng mensahe mo: suriin muna ang mga pagbabago",
+ "ai.redraft.mark.tip": "Bago o nabago mula noong huli mong tingin",
+ "ai.redraft.emptied": "Inalis ng follow-up ang bawat item: walang laman ang draft"
+}

@@ -1,0 +1,18 @@
+{
+ "faults.errors": {
+  "one": "# Fehler im Modell. Klicken, um ihn anzuzeigen.",
+  "other": "# Fehler im Modell. Klicken, um die Liste anzuzeigen."
+ },
+ "faults.warnings": {
+  "one": "# Warnung im Modell. Klicken, um sie anzuzeigen.",
+  "other": "# Warnungen im Modell. Klicken, um die Liste anzuzeigen."
+ },
+ "faults.title": "Modellfehler: {n}",
+ "faults.none": "Keine Fehler oder Warnungen.",
+ "faults.cat.wall": "Wand",
+ "faults.cat.slab": "Decke",
+ "faults.cat.opening": "Öffnung",
+ "faults.cat.curtain_wall": "Vorhangfassade",
+ "faults.cat.ramp": "Rampe",
+ "faults.cat.zone": "Zone"
+}

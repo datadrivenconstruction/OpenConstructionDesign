@@ -1,0 +1,33 @@
+{
+ "cmd.help.licenses": "Ochiq kodli litsenziyalar",
+ "cmd.help.licenses.desc": "Ushbu yig'mada ishlatilgan ochiq kodli kutubxonalar va ularning litsenziyalarini ko'rsatadi.",
+ "about.product": "DDC Editor",
+ "about.version": "Versiya",
+ "about.build": "Yig'ma",
+ "about.schema": "Model sxemasi",
+ "about.system": "Tizim",
+ "about.gpu": "Grafik adapter",
+ "about.language": "Til",
+ "about.copy": "Versiya ma'lumotini nusxalash",
+ "about.copy_desc": "Xato haqidagi xabar uchun versiya, yig'ma, tizim va grafik adapter. Fayl yo'llarisiz.",
+ "about.copied": "Versiya ma'lumoti nusxalandi",
+ "about.licenses": "Ochiq kodli litsenziyalar",
+ "about.licenses_desc": "Ushbu yig'madagi kutubxonalar va ularning litsenziyalari",
+ "about.licenses.open": "Ko'rish",
+ "about.licenses.title": "Ochiq kodli litsenziyalar",
+ "about.licenses.note": "DDC Editor quyidagi kutubxonalarni o'z ichiga oladi. Har biri o'z litsenziyasi va mualliflik huquqi bildirishnomasi bilan qoladi. To'liq litsenziya matnlari: ilova yonidagi THIRD_PARTY_LICENSES.txt faylida.",
+ "about.licenses.full": "To'liq litsenziya matnlari",
+ "about.licenses.list": "Komponentlar ro'yxati",
+ "about.licenses.close": "Yopish",
+ "about.licenses.col_name": "Komponent",
+ "about.licenses.col_license": "Litsenziya",
+ "about.licenses.count": {
+  "one": "# komponent",
+  "other": "# komponent"
+ },
+ "about.licenses.count_of": "{total} tadan {shown} ta komponent",
+ "about.licenses.search_hint": "Nomi yoki litsenziyasi bo'yicha qidirish…",
+ "about.licenses.search_clear": "Qidiruvni tozalash",
+ "about.licenses.none": "Hech narsa topilmadi",
+ "about.licenses.none_hint": "Kutubxona nomining bir qismini yoki MIT kabi litsenziyani sinab ko'ring."
+}

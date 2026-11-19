@@ -1,0 +1,9 @@
+{
+ "first_card.card.title": "XLSX স্প্রেডশিট রাউন্ড ট্রিপ চেষ্টা করুন",
+ "first_card.card.step1": "একটি দেয়াল বেছে নিন",
+ "first_card.card.step2": "এর একটি প্রোপার্টি বদলান",
+ "first_card.card.step3": "XLSX-এ সম্পাদনা করুন, প্রিভিউ দেখুন, Apply",
+ "first_card.card.spreadsheet": "XLSX-এ সম্পাদনা",
+ "first_card.card.skip": "এড়িয়ে যান",
+ "first_card.card.done": "সম্পন্ন: মডেল ও ওয়ার্কবুক মিলছে"
+}

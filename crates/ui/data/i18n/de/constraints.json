@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "Hält diese Wand bei jeder Änderung auf ihrer aktuellen Länge",
+ "constraints.con.tip.lock_dist": "Hält den Abstand zwischen den beiden Wänden bei jeder Änderung",
+ "constraints.con.tip.equal": "Hält die Abstände zwischen den gewählten Wänden gleich",
+ "constraints.con.tip.align": "Hält beide Wände auf einer Linie",
+ "constraints.con.tip.parallel": "Hält die Wände parallel",
+ "constraints.con.tip.perp": "Hält die Wände im rechten Winkel",
+ "constraints.con.tip.align_grid": "Hält die Wand auf der nächstgelegenen Rasterlinie",
+ "constraints.con.tip.lock_dist_grid": "Hält den Abstand der Wand zur nächstgelegenen Rasterlinie",
+ "constraints.con.tip.level_gap": "Hält den Abstand zwischen den Ebenen",
+ "constraints.con.tip.top_to_level": "Hält die Wandoberkante auf der Ebene darüber"
+}

@@ -1,0 +1,7 @@
+{
+ "src.field.kids": "Alamread (paneelid, tipud)",
+ "src.kids.mine": "{n} alamrida, muudetud siin",
+ "src.kids.changed": "alamread muudetud siin",
+ "src.kids.theirs": "alamread muudetud failis",
+ "src.kids.take_tip": "Järgmine import võtab faili alamread; praegu neid ei rakendata."
+}

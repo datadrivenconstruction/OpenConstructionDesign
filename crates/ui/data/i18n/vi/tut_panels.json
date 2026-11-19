@@ -1,0 +1,9 @@
+{
+ "empty.props_model.title": "Chưa chọn gì",
+ "empty.props_model.hint": "Nhấn một phần tử trong góc nhìn để xem thuộc tính. Hoặc xuất mọi tham số ra một sổ bảng tính, sửa ở đó rồi áp dụng ngược lại.",
+ "empty.props_model.action": "Xuất ra bảng tính",
+ "tut.spreadsheet.title": "Vòng đi về bảng tính",
+ "tut.spreadsheet.1": "Nhấn Xuất ra bảng tính bên dưới: chọn nội dung cần đưa vào và lưu sổ.",
+ "tut.spreadsheet.2": "Mở sổ trong ứng dụng bảng tính, sửa một ô rồi lưu. Bản xem trước ở đây sẽ hiển thị thay đổi.",
+ "tut.spreadsheet.3": "Kiểm tra bản xem trước và nhấn Áp dụng vào mô hình. Ctrl+Z để hoàn tác."
+}

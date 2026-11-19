@@ -1,0 +1,236 @@
+[
+ {
+  "id": "view.home_3d",
+  "icon": "home-3d",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "nav",
+  "priority": 5
+ },
+ {
+  "id": "view.zoom_sel_3d",
+  "icon": "zoom-sel-3d",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "nav",
+  "priority": 5
+ },
+ {
+  "id": "view.projection",
+  "icon": "projection",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "nav",
+  "priority": 5
+ },
+ {
+  "id": "view.walk",
+  "icon": "walk",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "nav",
+  "priority": 6
+ },
+ {
+  "id": "view.style_shaded",
+  "icon": "style-shaded",
+  "mnemonic": null,
+  "shortcuts": [
+   "Alt+4"
+  ],
+  "tab": "view",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "graphics"
+ },
+ {
+  "id": "view.style_consistent",
+  "icon": "style-consistent",
+  "mnemonic": null,
+  "shortcuts": [
+   "Alt+6"
+  ],
+  "tab": "view",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "graphics"
+ },
+ {
+  "id": "view.style_hidden",
+  "icon": "style-hidden",
+  "mnemonic": null,
+  "shortcuts": [
+   "Alt+2"
+  ],
+  "tab": "view",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "graphics"
+ },
+ {
+  "id": "view.style_wireframe",
+  "icon": "style-wire",
+  "mnemonic": null,
+  "shortcuts": [
+   "Alt+1"
+  ],
+  "tab": "view",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "graphics"
+ },
+ {
+  "id": "view.style_xray",
+  "icon": "style-xray",
+  "mnemonic": null,
+  "shortcuts": [
+   "Alt+7"
+  ],
+  "tab": "view",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "graphics"
+ },
+ {
+  "id": "view.vg_3d",
+  "icon": "vg-3d",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "graphics",
+  "priority": 5,
+  "launcher": true
+ },
+ {
+  "id": "view.section_box_fit",
+  "icon": "section-box",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "graphics",
+  "priority": 6
+ },
+ {
+  "id": "view.section_caps",
+  "icon": "section-caps",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "graphics",
+  "priority": 6
+ },
+ {
+  "id": "view.level_3d",
+  "icon": "level-3d",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "create"
+ },
+ {
+  "id": "view.save_3d",
+  "icon": "view-save",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "create"
+ },
+ {
+  "id": "view.hide_cat_3d",
+  "icon": "hide-cat-3d",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M1",
+  "group": "visib",
+  "context": [
+   "*"
+  ]
+ },
+ {
+  "id": "view.isolate_cat_3d",
+  "icon": "isolate-cat-3d",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M1",
+  "group": "visib",
+  "context": [
+   "*"
+  ]
+ },
+ {
+  "id": "view.reveal_3d",
+  "icon": "reveal-3d",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M1",
+  "group": "visib",
+  "context": [
+   "*"
+  ]
+ }
+]

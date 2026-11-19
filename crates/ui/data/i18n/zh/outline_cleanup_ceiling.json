@@ -1,0 +1,11 @@
+{
+ "cmd.ctx.ceiling.clean_outline": "清理轮廓",
+ "cmd.ctx.ceiling.clean_outline.desc": "移除天花板轮廓回折处的窄尖刺。先显示预览；一步撤销。",
+ "cmd.ctx.shaft.clean_outline": "清理轮廓",
+ "cmd.ctx.shaft.clean_outline.desc": "移除竖井轮廓回折处的窄尖刺。先显示预览；一步撤销。",
+ "outline_cleanup.intro_ceiling": "本天花板轮廓在窄尖刺处回折：{n}。清理会移除这些尖刺，其余部分保持不变。",
+ "outline_cleanup.intro_shaft": "本竖井轮廓在窄尖刺处回折：{n}。清理会移除这些尖刺，其余部分保持不变。",
+ "outline_cleanup.none_ceiling": "本天花板轮廓没有尖刺",
+ "outline_cleanup.none_shaft": "本竖井轮廓没有尖刺",
+ "outline_cleanup.need_host": "请选择楼板、天花板或竖井"
+}

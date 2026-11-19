@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "Точка",
+ "trial.field.distance": "Разстояние",
+ "trial.field.target": "Елемент",
+ "trial.refused": "{field}: {reason}. Променете го, за да се приложи",
+ "trial.preview_off": "Прегледът е изключен: моделът е твърде голям"
+}

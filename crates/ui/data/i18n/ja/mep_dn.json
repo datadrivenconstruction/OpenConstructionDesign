@@ -1,0 +1,5 @@
+{
+ "mep_dn.dn.unset": "未設定",
+ "mep_dn.slope.err": "勾配を % で入力してください (例: 1.5)",
+ "mep_dn.err.rejected": "この値は受け付けられません"
+}

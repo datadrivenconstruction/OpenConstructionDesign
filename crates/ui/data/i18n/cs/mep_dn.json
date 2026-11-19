@@ -1,0 +1,5 @@
+{
+ "mep_dn.dn.unset": "Nenastaveno",
+ "mep_dn.slope.err": "Zadejte sklon v %, např. 1.5",
+ "mep_dn.err.rejected": "hodnota není přijata"
+}

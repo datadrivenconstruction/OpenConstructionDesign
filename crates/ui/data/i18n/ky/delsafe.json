@@ -1,0 +1,6 @@
+{
+ "delsafe.ring.opening_shape": "Тешиктин контуру өзүн кесип өтөт же бузулат",
+ "delsafe.ring.opening_boundary": "Тешик тышкы чекти кесип өтөт же тийип калат",
+ "delsafe.ring.openings_overlap": "Тешиктер бири-бирине кирип же тийип калат",
+ "xl.msg.delsafe_instance_param_on_types": "'{}' параметри — элементтин параметри; аны элементтер барагында түзөтүңүз, колдонулган жок"
+}

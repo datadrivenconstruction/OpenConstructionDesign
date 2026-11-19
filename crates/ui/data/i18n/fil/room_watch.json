@@ -1,0 +1,4 @@
+{
+ "room_watch.room.dup": "Nasa region ng room {other} ang room {room}: area at volume ay binibilang lang sa room {other}",
+ "ai.issue.room_dup": "Nasa region ng room {0} ang room: nabibilang ang area nito doon"
+}

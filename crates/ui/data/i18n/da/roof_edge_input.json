@@ -1,0 +1,23 @@
+{
+ "roof_edge.err.number": "Angiv et tal",
+ "roof_edge.err.positive": "Skal være større end nul",
+ "roof_edge.err.nonneg": "Må ikke være negativ",
+ "roof_edge.err.max": "Må ikke overstige {max}",
+ "roof_edge.list.empty_hint": "Tilføj stødbrædder, render, udhæng eller tagvinduer med tagkommandoerne",
+ "roof_edge.edit_tip": "Rediger egenskaber",
+ "roof_edge.delete_tip": "Slet",
+ "roof_edge.pe.del_tip": "Fjern dette punkt (et snit beholder mindst 3)",
+ "roof_edge.pe.up_tip": "Flyt dette punkt op",
+ "roof_edge.confirm_edge": "Slet {name}? Ctrl+Z henter den tilbage.",
+ "roof_edge.confirm_profile": "Slet profilen {name}? Ctrl+Z henter den tilbage.",
+ "roof_edge.deleted_one": "Slettede {name}",
+ "roof_edge.deleted_n": {
+  "one": "Slettede # element",
+  "other": "Slettede # elementer"
+ },
+ "roof_edge.profile_deleted": "Profil slettet",
+ "roof_edge.profile_in_use": {
+  "one": "Brugt af # kantelement: slet eller ændr det først",
+  "other": "Brugt af # kantelementer: slet eller ændr dem først"
+ }
+}

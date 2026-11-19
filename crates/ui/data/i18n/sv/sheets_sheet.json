@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "Duplicera blad med vyer",
+ "cmd.view.sheet_duplicate_title": "Duplicera blad (endast namnlist)",
+ "sheets.dup.menu_views": "Duplicera med vyer",
+ "sheets.dup.menu_title": "Duplicera, endast namnlist",
+ "sheets.dup.done": "Blad {number} skapat från {src}: {views} vyer, {sched} scheman och förklaringar. Revisioner kopieras inte; bladet är ej utfärdat.",
+ "sheets.dup.none": "Öppna ett blad för att duplicera det",
+ "sheets.dup.copy": "kopia",
+ "cmd.view.sheet_duplicate.short": "Duplicera med vyer",
+ "cmd.view.sheet_duplicate_title.short": "Duplicera namnlist"
+}

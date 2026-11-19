@@ -1,0 +1,15 @@
+{
+ "cmd.data.export_step.desc": "يحفظ النموذج كاملاً أو التحديد بصيغة STEP AP214 أو AP242: مجسمات بأوجه مستوية ومخروطية وكروية وحلقية وB-spline دقيقة، والعناصر الأخرى بأوجه مستوية، والألوان، وعقدة تجميع لكل مستوى.",
+ "cmd.data.export_3mf.desc": "يحفظ النموذج كاملاً أو التحديد بصيغة 3MF للطباعة: كائن لكل عنصر، والألوان والوحدات، وفحص أن كل جسم مغلق بالكامل.",
+ "fmenu.export.step": "STEP مجسمات دقيقة (.step)",
+ "fmenu.export.3mf": "3MF للطباعة (.3mf)",
+ "mx.schema": "مخطط STEP",
+ "mx.schema.ap214": "AP214 (أوسع دعماً)",
+ "mx.schema.ap242": "AP242",
+ "mx.watertight": "أجسام غير مغلقة بالكامل",
+ "mx.watertight.report": "اكتبها واذكرها في قائمة",
+ "mx.watertight.skip": "استبعدها",
+ "mx.watertight.require": "ألغِ التصدير",
+ "mx.faceted": "تم حفظ {fmt}: {path} ({exact} مجسمات دقيقة، و{n} مكتوبة كأوجه مستوية: {first})",
+ "sheets.print.svg": "SVG"
+}

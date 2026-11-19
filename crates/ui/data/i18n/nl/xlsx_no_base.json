@@ -1,0 +1,6 @@
+{
+ "xlsx_no_base.title": "Dit werkboek heeft geen vergelijkingsgegevens",
+ "xlsx_no_base.detail": "Het verborgen vergelijkingsblad ontbreekt of is beschadigd (een ander programma heeft het werkboek opnieuw opgeslagen, of het is met de hand gemaakt). Elke afwijkende cel vervangt de modelwaarde; modelbewerkingen die sinds de export zijn gedaan, kunnen niet worden gedetecteerd. Rijen die in het werkboek ontbreken worden niet verwijderd.",
+ "xlsx_no_base.confirm": "Ik heb de wijzigingen gecontroleerd: vervang de modelwaarden ({n})",
+ "xlsx_no_base.confirm_first": "Bevestig eerst de import van een werkboek zonder vergelijkingsgegevens"
+}

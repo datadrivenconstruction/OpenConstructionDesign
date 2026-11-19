@@ -1,0 +1,4 @@
+{
+ "topo_import.topo.ambiguous": "{n} righe saltate: un numero si legge in due modi (1,250 = 1.25 o 1250?) e il file non indica il separatore decimale",
+ "topo_import.topo.grouped": "{n} punti letti con gruppi di cifre (1 250,5 o 1,234.5)"
+}

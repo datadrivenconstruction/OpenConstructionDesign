@@ -1,0 +1,6 @@
+{
+ "quick.keys.rec_hint": "Esc מבטל · Backspace מנקה",
+ "quick.keys.row_lost": "{key} עבר ל“{cmd}”",
+ "quick.keys.row_took": "{key} נלקח מ“{cmd}”",
+ "quick.keys.reset_tip": "החזר לברירת מחדל"
+}

@@ -1,0 +1,16 @@
+{
+ "xlsx_recover.title": "Izvoz u povezanu radnu knjigu je prekinut",
+ "xlsx_recover.both": "Izvoz je zaustavljen između odlaganja prethodne radne knjige i postavljanja nove. Ništa nije izgubljeno: nova radna knjiga je potpuna u {part}, prethodna je zadržana u {bak}.",
+ "xlsx_recover.part_only": "Izvoz je zaustavljen prije postavljanja nove radne knjige. Potpuna je u {part}.",
+ "xlsx_recover.bak_only": "Izvoz je zaustavljen prije nego što je nova radna knjiga bila spremna. Prethodna radna knjiga zadržana je u {bak}.",
+ "xlsx_recover.finish": "Završi prekinuti izvoz",
+ "xlsx_recover.restore": "Vrati prethodnu radnu knjigu",
+ "xlsx_recover.finished": "Prekinuti izvoz je završen: nova radna knjiga je na mjestu.",
+ "xlsx_recover.finished_kept": "Prekinuti izvoz je završen: nova radna knjiga je na mjestu, prethodna je zadržana u {bak}.",
+ "xlsx_recover.restored": "Prethodna radna knjiga je vraćena na mjesto.",
+ "xlsx_recover.restore_failed": "Prethodna radna knjiga nije mogla biti vraćena ({err}). Zadržana je u {path}.",
+ "xlsx_recover.not_restored": "Nova radna knjiga nije mogla biti postavljena na mjesto, a prethodna nije mogla biti vraćena. Ništa nije izgubljeno: prethodna radna knjiga zadržana je u {path}; Sinkronizacija nudi završetak ili vraćanje.",
+ "xlsx_recover.finish_failed": "Nova radna knjiga nije mogla biti postavljena na mjesto ({err}). Ostaje u {path}.",
+ "xlsx_recover.dest_back": "Radna knjiga je vraćena u {path}: ništa nije premješteno.",
+ "xlsx_recover.nothing": "Od prekinutog izvoza nema što premjestiti."
+}

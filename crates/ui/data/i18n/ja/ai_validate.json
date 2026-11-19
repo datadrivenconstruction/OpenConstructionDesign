@@ -1,0 +1,14 @@
+{
+ "ai.issue.integrity": "整合性の問題: {0} {1}: {2}",
+ "ai.issue.opening_outside": "開口部が壁に収まりません: {0}",
+ "ai.issue.opening_overlap": "開口部が開口部 {0} と重なっています",
+ "ai.issue.wall_warning": "壁: {0}",
+ "ai.issue.cut_warning": "切り取り: {0}",
+ "ai.issue.room_open": "部屋が閉じていません",
+ "ai.issue.material_unknown": "プロジェクトに「{0}」という名前のマテリアルはありません: 適用すると既定のプロパティで新しく追加されます",
+ "ai.issue.material_suggest": "プロジェクトに「{0}」という名前のマテリアルはありません: 適用すると新しく追加されます。「{1}」の意図ですか?",
+ "ai.issue.conflict": "この項目は実行できません: {0}",
+ "ai.issue.too_large": "{0} 個の要素が変更されます。上限 {1} を超えるため、許可が必要です",
+ "ai.issue.truncated": "変更リストは {0} 行で打ち切られました: プランはカードに表示しきれないほど大きいです。許可が必要です",
+ "ai.issue.replan_failed": "プランを再計算できませんでした。モデルの新しいコピーを作成しています"
+}

@@ -1,0 +1,20 @@
+{
+ "unit.size_b": "{n} B",
+ "unit.size_gb": "{n} GB",
+ "autosave_status.unit.edits": {
+  "one": "تعديل",
+  "other": "تعديلات",
+  "two": "تعديلان",
+  "few": "تعديلات",
+  "many": "تعديلاً",
+  "zero": "تعديلات"
+ },
+ "autosave_status.unit.copies": {
+  "one": "نسخة",
+  "other": "نسخ",
+  "two": "نسختان",
+  "few": "نسخ",
+  "many": "نسخةً",
+  "zero": "نسخ"
+ }
+}

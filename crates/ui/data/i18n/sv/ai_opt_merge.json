@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "Sammanfoga alternativ: {name}",
+ "ai_opt_merge.whole": "Sammanfoga hela alternativet",
+ "ai_opt_merge.parts": "Sammanfoga valda delar",
+ "ai_opt_merge.note": "Varför detta alternativ",
+ "ai_opt_merge.rebased": "Modellen ändrades efter att alternativet gjordes: sammanfogningen räknades om mot den aktuella modellen. Kontrollera ändringarna innan du tillämpar.",
+ "ai_opt_merge.left.not_picked": "Inte valt från alternativet",
+ "ai_opt_merge.left.unticked": "Avmarkerat i alternativet",
+ "ai_opt_merge.left.conflict": "Kan inte läggas till i den aktuella modellen: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "Detta alternativ kan inte sammanfogas. Ett avvisat alternativ måste återställas först.",
+ "ai_opt_merge.refused.stale": "Modellen ändrades efter att detta alternativ gjordes. Räkna om sammanfogningen mot den aktuella modellen.",
+ "ai_opt_merge.refused.nothing_picked": "Inget är markerat att sammanfoga.",
+ "ai_opt_merge.refused.unknown_item": "Post {item} ingår inte i detta alternativ.",
+ "ai_opt_merge.refused.not_in_option": "Det markerade elementet ingår inte i detta alternativ.",
+ "ai_opt_merge.refused.needs_left_out": "Post {item} kräver post {needs}. Markera den också, eller tillåt att beroenden läggs till.",
+ "ai_opt_merge.refused.set_gone": "Post {item} hänvisar till en markering som inte längre finns. Generera alternativet igen.",
+ "ai_opt_merge.refused.busy": "En annan plan är öppen. Tillämpa eller avvisa den först.",
+ "ai_opt_merge.refused.failed": "Sammanfogningen kunde inte förberedas: {reason}",
+ "ai_opt_merge.revive": "Återställ alternativ",
+ "ai_opt_merge.merged": "Sammanfogad"
+}

@@ -1,0 +1,15 @@
+{
+ "sheet_place.place_view_tip": "Nézet vagy kimutatás elhelyezése a lapon",
+ "sheet_place.properties_tip": "Lapszám, név, papír és felülvizsgálatok",
+ "sheet_place.print_tip": "A lap nyomtatása vagy exportálása",
+ "sheet_place.fit_tip": "A lap illesztése az ablakhoz",
+ "sheet_place.activate_tip": "A nézet szerkesztése helyben a lapon: mozgatás, nagyítás és kivágás",
+ "sheet_place.open_view_tip": "A nézet megnyitása a saját fülön",
+ "sheet_place.done_tip": "A nézet lapon történő szerkesztésének befejezése",
+ "sheet_place.reset_crop_tip": "A kivágás eltávolítása, a teljes nézet megjelenítése",
+ "sheet_place.scale_tip": "A kijelölt nézet méretaránya a lapon",
+ "sheet_place.title_tip": "A lapon a nézet alatt megjelenő cím",
+ "sheet_place.banner": "Nézet szerkesztése a lapon",
+ "sheet_place.new_set_tip": "Együtt nyomtatandó lapkészlet létrehozása",
+ "sheet_place.new_sheet_tip": "Lap hozzáadása a projekthez"
+}

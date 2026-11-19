@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "Το {name} άλλαξε στον δίσκο.",
+ "src.watch.update": "Ενημέρωση μοντέλου",
+ "src.watch.compare": "Σύγκριση",
+ "src.watch.ignore": "Αγνόηση αυτής της έκδοσης",
+ "src.watch.missing": "{name}: το αρχείο πηγής δεν βρέθηκε. Η εργασία συνεχίζεται.",
+ "src.watch.locate": "Εντοπισμός…",
+ "src.watch.dismiss": "Κλείσιμο",
+ "src.watch.more": "και {n} ακόμη αρχεία πηγής",
+ "src.watch.done": "Ενημερώθηκε από το {name}: {updated} άλλαξαν, {kept} πεδία διατηρήθηκαν ως επεξεργασμένα, {conflicts} συγκρούσεις, {locked} κλειδωμένες τιμές διατηρήθηκαν"
+}

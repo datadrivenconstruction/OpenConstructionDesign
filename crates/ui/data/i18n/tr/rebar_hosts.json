@@ -1,0 +1,40 @@
+{
+ "rebar_hosts.hosts": "Ana elemanlar: {list}",
+ "rebar_hosts.kind.column": "Kolon",
+ "rebar_hosts.kind.beam": "Kiriş",
+ "rebar_hosts.kind.wall": "Duvar",
+ "rebar_hosts.kind.slab": "Döşeme",
+ "rebar_hosts.kind.footing": "Temel",
+ "rebar_hosts.kind.raft": "Radye temel",
+ "rebar_hosts.n.column": {
+  "one": "# kolon",
+  "other": "# kolon"
+ },
+ "rebar_hosts.n.beam": {
+  "one": "# kiriş",
+  "other": "# kiriş"
+ },
+ "rebar_hosts.n.wall": {
+  "one": "# duvar",
+  "other": "# duvar"
+ },
+ "rebar_hosts.n.slab": {
+  "one": "# döşeme",
+  "other": "# döşeme"
+ },
+ "rebar_hosts.n.footing": {
+  "one": "# temel",
+  "other": "# temel"
+ },
+ "rebar_hosts.n.raft": {
+  "one": "# radye temel",
+  "other": "# radye temel"
+ },
+ "rebar_hosts.mixed_note": "Kolon ve kirişler çubuk ve etriye alır; duvar, döşeme ve temeller ağ alır. Donatı eklemek için tek bir grup seçin.",
+ "rebar_hosts.why.mixed": "Seçim kolon veya kirişleri duvar, döşeme veya temellerle karıştırıyor. Tek bir grup seçin.",
+ "rebar_hosts.why.area_linear": "Ağ duvarlara, döşemelere ve temellere girer, kolon veya kirişlere girmez.",
+ "rebar_hosts.why.bars_plate": "Boyuna çubuklar ve etriyeler kolon ve kirişlere girer; duvar, döşeme veya temellere girmez.",
+ "rebar_hosts.why.no_common_face": "Seçili ana elemanların ortak bir pas yüzü yok. Tek tür ana eleman seçin.",
+ "rebar_hosts.why.no_type": "Bir donatı tipi seçin.",
+ "rebar_hosts.kind_type": "{kind} · {type}"
+}

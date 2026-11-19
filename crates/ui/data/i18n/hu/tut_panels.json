@@ -1,0 +1,9 @@
+{
+ "empty.props_model.title": "Nincs kijelölés",
+ "empty.props_model.hint": "Kattintson egy elemre a nézetben a tulajdonságai megtekintéséhez. Vagy exportálja az összes paramétert munkafüzetbe, szerkessze ott, és alkalmazza vissza.",
+ "empty.props_model.action": "Exportálás táblázatba",
+ "tut.spreadsheet.title": "Táblázatos oda-vissza út",
+ "tut.spreadsheet.1": "Nyomja meg lent az Exportálás táblázatba gombot: válassza ki, mit tartalmazzon, és mentse a munkafüzetet.",
+ "tut.spreadsheet.2": "Nyissa meg a munkafüzetet a táblázatkezelőben, módosítson egy cellát, és mentse. Az itteni előnézet mutatja a változást.",
+ "tut.spreadsheet.3": "Ellenőrizze az előnézetet, és nyomja meg az Alkalmazás a modellre gombot. A Ctrl+Z visszavonja."
+}

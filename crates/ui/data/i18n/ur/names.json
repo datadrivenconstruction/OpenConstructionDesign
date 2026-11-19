@@ -1,0 +1,19 @@
+{
+ "names.level": "لیول {n}",
+ "names.slab": "سلیب 200",
+ "names.roof_slab": "چھت 200",
+ "names.sheet.plan_section": "فرش 1 کا پلان اور سیکشن",
+ "names.sheet.plan_view": "فرش 1 کا پلان",
+ "names.sheet.site_plan": "سائٹ پلان",
+ "names.sheet_set.issue": "اشو 1",
+ "names.title.owner": "پروجیکٹ لمیٹڈ",
+ "names.title.creator": "اے۔ ایوانوف",
+ "names.title.approver": "پی۔ پیٹروف",
+ "names.title.document_type": "ڈرائنگ",
+ "names.title.status": "جاری ہے",
+ "names.revision.date": "4 نومبر 2026",
+ "names.revision.description": "جائزے کے لیے جاری",
+ "names.revision.author": "AI",
+ "names.demo.no_levels": "کوئی لیول نہیں",
+ "names.demo.no_sheet": "شیٹ"
+}

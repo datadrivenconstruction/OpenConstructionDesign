@@ -1,0 +1,11 @@
+{
+ "job.stage.prepare": "A projekt előkészítése",
+ "open_guard.already_open": "A(z) {name} már meg van nyitva",
+ "open_guard.from_cache": "{name}: megnyitva az importgyorsítótárból",
+ "open_guard.known_project": "A(z) {name} korábban importálva lett: ez a projekt nyílik meg",
+ "open_guard.locate": "Keresés",
+ "open_guard.mem_low": "Kevés memória: a háló-keretet felezik, a részletességi szintű építés szünetel",
+ "open_guard.mem_low_short": "Kevés memória: a részletességi szintű építés szünetel, amíg fel nem szabadul a memória",
+ "open_guard.no_window": "Az adott projekt ablaka nem található",
+ "open_guard.switch_window": "Váltás arra az ablakra"
+}

@@ -1,0 +1,6 @@
+{
+ "xlsx_readonly.read_only": "Skoroszyt jest tylko do odczytu (właściwość pliku lub uprawnienia folderu). Eksportuj do kopii albo odznacz Tylko do odczytu we właściwościach pliku i spróbuj ponownie.",
+ "xlsx_readonly.export_copy": "Eksportuj do kopii",
+ "xlsx_readonly.no_copy_name": "Brak wolnej nazwy dla kopii obok skoroszytu.",
+ "xlsx_readonly.copied": "Skoroszyt pozostawiono bez zmian. Obok zapisano odświeżoną kopię i jest ona teraz powiązana: {path}"
+}

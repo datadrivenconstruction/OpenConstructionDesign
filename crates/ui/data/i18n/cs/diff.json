@@ -1,0 +1,7 @@
+{
+ "diff.kind.added": "přidáno",
+ "diff.kind.changed": "změněno",
+ "diff.kind.deleted": "smazáno",
+ "diff.kind.refused": "odmítnuto",
+ "diff.kind.conflict": "konflikt"
+}

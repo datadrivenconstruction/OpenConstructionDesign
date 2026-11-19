@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "{name} 已在磁盘上更改。",
+ "src.watch.update": "更新模型",
+ "src.watch.compare": "比较",
+ "src.watch.ignore": "忽略此版本",
+ "src.watch.missing": "{name}：未找到源文件。工作继续。",
+ "src.watch.locate": "定位…",
+ "src.watch.dismiss": "关闭",
+ "src.watch.more": "以及另外 {n} 个源文件",
+ "src.watch.done": "已从 {name} 更新：{updated} 项已更改，{kept} 个字段保留了手动编辑，{conflicts} 处冲突，{locked} 个锁定值已保留"
+}

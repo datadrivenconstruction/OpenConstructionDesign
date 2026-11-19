@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "Ничего не найдено",
+ "empty.browser_search.hint": "Ни один вид, уровень, тип или помещение не подходит под запрос.",
+ "empty.browser_search.action": "Очистить поиск",
+ "empty.xl_filtered.title": "Под фильтры ничего не подходит",
+ "empty.xl_filtered.hint": "Включите больше видов, выберите другой лист или измените текст поиска.",
+ "empty.xl_filtered.action": "Сбросить фильтры",
+ "empty.xl_nochanges.title": "В книге нет изменений",
+ "empty.xl_nochanges.hint": "Книга совпадает с моделью: импорт ничего не изменит.",
+ "empty.version_same.title": "Модели одинаковы",
+ "empty.version_same.hint": "Различий между открытой моделью и выбранной версией не найдено.",
+ "empty.templates.title": "Шаблонов видов пока нет",
+ "empty.templates.hint": "Создайте шаблон из текущего вида, чтобы применять его настройки к другим видам.",
+ "empty.templates.action": "Назвать шаблон",
+ "empty.fe_params.title": "Параметров пока нет",
+ "empty.fe_params.hint": "Добавьте параметр ниже, чтобы управлять размерами, материалами или видимостью.",
+ "empty.fe_params.action": "Добавить параметр"
+}

@@ -1,0 +1,13 @@
+{
+ "cmdl.mode_cmd": "コマンド",
+ "cmdl.mode_ai": "AI",
+ "cmdl.toggle": "コマンドまたはAIアシスタント (Ctrl+J)",
+ "cmdl.hint": "コマンドまたは別名 (W, L, M, RO)、点 #x;y、@dx;dy、d<角度。Ctrl+J: AIアシスタントに質問",
+ "cmdl.hint_ai": "モデルについてAIアシスタントに質問するか、変更を依頼してください。Ctrl+J: コマンドに戻る",
+ "cmdl.sent": "AIアシスタントに送信しました",
+ "cmdl.failed": "ここで「{text}」を実行できません",
+ "cmdl.no_tool": "先に作図コマンドを開始してから、その点を入力してください",
+ "cmdl.unknown": "コマンド「{text}」はありません。Ctrl+J でAIアシスタントに送信します",
+ "cmdl.bad": "「{text}」を読み取れません: {e}",
+ "cmdl.shape": "「{text}」は点ではありません: x;y、#x;y、@dx;dy、または正の距離<角度を入力してください"
+}

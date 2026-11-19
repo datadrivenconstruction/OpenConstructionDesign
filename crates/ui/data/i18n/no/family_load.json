@@ -1,0 +1,4 @@
+{
+ "family_load.refused": "Familien “{name}” kan ikke lastes inn: {msg}. Ingenting ble lastet inn i prosjektet; redigeringene dine beholdes.",
+ "family_load.loaded_all": "{n} familier lastet inn i ett trinn: {names}"
+}

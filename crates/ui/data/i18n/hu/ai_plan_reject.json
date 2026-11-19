@@ -1,0 +1,9 @@
+{
+ "ai.plan.reject_ask": {
+  "one": "Elutasítja a # módosítást?",
+  "other": "Elutasítja a # módosítást?"
+ },
+ "ai.plan.reject_ask.hint": "A vázlat és a bejelölések elvesznek. A modell marad, ahogy van.",
+ "ai.plan.reject_confirm": "Elutasítás",
+ "ai.plan.reject_keep": "Megtartás"
+}

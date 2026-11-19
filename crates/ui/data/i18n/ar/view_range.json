@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "نطاق العرض",
+ "view_range.range": "نطاق العرض",
+ "view_range.cut": "مستوى القطع",
+ "view_range.bottom": "الأسفل",
+ "view_range.depth": "عمق العرض",
+ "view_range.cut.hint": "ارتفاع مستوى القطع فوق المستوى. العناصر التي تعبره تُرسم مقطوعة.",
+ "view_range.bottom.hint": "أسفل النطاق بالنسبة للمستوى. القيم صفر أو سالبة مسموحة.",
+ "view_range.depth.hint": "المسافة التي ينظر فيها العرض تحت الأسفل. صفر أو أكثر.",
+ "view_range.err.number": "أدخل طولاً في كل حقل",
+ "view_range.err.not_finite": "أدخل طولاً في كل حقل",
+ "view_range.err.cut_not_above_bottom": "يجب أن يكون مستوى القطع أعلى من الأسفل",
+ "view_range.err.negative_depth": "لا يمكن أن يكون عمق العرض سالباً",
+ "view_range.err.top_below_cut": "يجب ألا يكون أعلى النطاق أدنى من مستوى القطع"
+}

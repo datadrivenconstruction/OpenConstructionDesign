@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "نصف قطر الالتقاط",
+ "snap_refine.settings.snap_px_desc": "مدى قرب المؤشر من نقطة أو خط حتى يلتقط، بالبكسل على الشاشة. القيمة الأكبر تساعد على الشاشات اللمسية وعالية الكثافة.",
+ "snap_refine.settings.px_suffix": " بكسل",
+ "snap_refine.hint.horizontal": "أفقي",
+ "snap_refine.hint.vertical": "رأسي",
+ "snap_refine.hint.perpendicular": "عمودي على السابق",
+ "snap_refine.hint.parallel": "موازٍ للسابق",
+ "snap_refine.hint.on_axis": "على محور الجدار",
+ "snap_refine.no_snap": "بلا التقاط (Alt)"
+}

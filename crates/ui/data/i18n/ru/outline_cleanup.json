@@ -1,0 +1,15 @@
+{
+ "cmd.ctx.floor.clean_outline": "Очистить контур",
+ "cmd.ctx.floor.clean_outline.desc": "Убирает узкие выступы, где контур перекрытия разворачивается назад. Сначала показывает результат; отменяется одним шагом.",
+ "outline_cleanup.title": "Очистить контур",
+ "outline_cleanup.intro": "Контур этого перекрытия разворачивается назад узкими выступами: {n}. Очистка уберёт их, остальное не изменится.",
+ "outline_cleanup.legend_before": "Толстая линия: контур сейчас",
+ "outline_cleanup.legend_after": "Тонкая линия: контур после очистки",
+ "outline_cleanup.undo": "Это можно отменить одним шагом.",
+ "outline_cleanup.apply": "Очистить",
+ "outline_cleanup.cancel": "Отмена",
+ "outline_cleanup.done": "Контур очищен, убрано выступов: {n}",
+ "outline_cleanup.none": "В контуре этого перекрытия нет выступов",
+ "outline_cleanup.failed": "Не удалось очистить контур",
+ "outline_cleanup.changed": "Контур изменился после просмотра; ничего не записано. Проверьте новый просмотр."
+}

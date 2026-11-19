@@ -1,0 +1,4 @@
+{
+ "xl.msg.layer_cells_unplaced": "{} solua tyypin '{}' kerrokselle {} arkilla '{}' ei voitu sijoittaa",
+ "xl.msg.layer_hidden_unplaced": "tyypin '{}' kerroksen {} piilotettu rivi arkilla '{}' ei voitu sijoittaa"
+}

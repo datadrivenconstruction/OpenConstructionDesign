@@ -1,0 +1,16 @@
+{
+ "family_overwrite.ow.title": "Felülírja a projekt típusértékeit?",
+ "family_overwrite.ow.body": "A betöltés felülírja a(z) {values} értéket a(z) {types} típusokban. Ezeknek a típusoknak elhelyezett példányai: {instances}.",
+ "family_overwrite.ow.values": {
+  "one": "# érték",
+  "other": "# érték"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# típus",
+  "other": "# típus"
+ },
+ "family_overwrite.ow.list": "Típusok: {list}",
+ "family_overwrite.ow.more": "és még {n}",
+ "family_overwrite.ow.back": "Vissza a szerkesztéshez",
+ "family_overwrite.ow.replace": "Értékek felülírása"
+}

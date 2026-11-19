@@ -1,0 +1,38 @@
+id = "G28_cooling_tower"
+tier = "hard"
+group = "Any geometry"
+title = "Hyperboloid cooling tower"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "A hyperboloid cooling tower: height 120 m, base diameter 90 m, throat 55 m at a height of 90 m, top 58 m, a ribbed shell with V-shaped columns at the base."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "col"
+min = 24.0
+
+[[oracle.count]]
+spec = "shell_elem+freeform+wall_spline+mesh+solid+wall"
+min = 1.0
+
+[[oracle.geom]]
+kind = "height"
+min = 110.0
+max = 130.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1
+
+[[oracle.geom]]
+kind = "waist"
+ratio_max = 0.8
+at_min = 0.5
+at_max = 0.9

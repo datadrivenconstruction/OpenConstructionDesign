@@ -1,0 +1,11 @@
+{
+ "empty.sv_notfound.title": "Vue introuvable",
+ "empty.sv_notfound.hint": "Cette vue a été supprimée ou ne fait plus partie du projet.",
+ "empty.sv_notfound.action": "Fermer la vue",
+ "empty.sv_cuts_nothing.title": "Cette coupe ne coupe rien",
+ "empty.sv_cuts_nothing.hint": "La ligne de coupe ne rencontre aucun mur, dalle ni ouverture dans sa profondeur. Déplacez la ligne ou augmentez la profondeur de la vue.",
+ "empty.sv_cuts_nothing.action": "Afficher sur le plan",
+ "empty.sv_shows_nothing.title": "Cette élévation n'affiche rien",
+ "empty.sv_shows_nothing.hint": "Aucun mur, dalle ni ouverture ne se trouve dans la profondeur de la vue. Déplacez la ligne de vue ou augmentez la profondeur.",
+ "empty.sv_shows_nothing.action": "Afficher sur le plan"
+}

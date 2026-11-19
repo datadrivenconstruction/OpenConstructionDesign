@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "Przesuń w górę",
+ "rebar_list.move_down": "Przesuń w dół",
+ "rebar_list.remove": "Usuń",
+ "rebar_list.zone_remove_last": "Strefa potrzebuje co najmniej jednego pomieszczenia: usuń strefę, aby usunąć ostatnie",
+ "rebar_list.rebar_empty_title": "Brak zbrojenia w tym modelu",
+ "rebar_list.rebar_empty_hint": "Umieść zbrojenie w elemencie nośnym, a zostanie ujęte w zestawieniu tutaj.",
+ "rebar_list.rebar_empty_action": "Umieść zbrojenie"
+}

@@ -1,0 +1,14 @@
+{
+ "ai.hist.badge": "AI",
+ "ai.hist.untitled": "Mga pagbabago ng AI",
+ "ai.hist.tip": "{title}\nIni-apply ni: {actor}\nAI model: {model}",
+ "ai.hist.why": "Bakit: {why}",
+ "ai.hist.reverted": "nabawi",
+ "ai.hist.revert_one": "Bawiin ang batch na ito ng AI",
+ "ai.revert.done": "Nabawi ang mga pagbabago ng AI: {n}. Ibinabalik ito ng undo.",
+ "ai.revert.empty": "Walang pagbabago ng AI na babawiin",
+ "ai.revert.not_ai": "Hindi pagbabago ng AI ang hakbang na ito",
+ "ai.revert.already": "Nabawi na ang mga pagbabago ng AI na ito",
+ "ai.revert.opaque": "Hindi nabawi: hindi ligtas na mahihiwalay ang mga pagbabago ng AI na ito sa mga susunod na gawa. Walang nagbago.",
+ "ai.revert.failed": "Nabigo ang pagbawi: {e}"
+}

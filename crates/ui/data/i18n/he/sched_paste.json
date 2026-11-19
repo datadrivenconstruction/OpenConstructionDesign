@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "הודבקו {n} תאים",
+ "sched_edit.pasted_skipped": "הודבקו {n} תאים, דולגו {k}: {why}",
+ "sched_edit.filled": "מולאו {n} תאים",
+ "sched_edit.filled_skipped": "מולאו {n} תאים, דולגו {k}: {why}",
+ "sched_edit.why_ro": "{n} לקריאה בלבד",
+ "sched_edit.why_bad": "{n} ערך לא תקין",
+ "sched_edit.no_cell": "לחץ קודם על תא בטבלה",
+ "sched_edit.nothing": "אין מה לכתוב",
+ "sched_edit.not_refreshed": "נכתב, התצוגה לא התרעננה: {e}",
+ "sched_edit.failed": "לא שונה: {e}",
+ "sched_edit.no_changes": "אין שינויים: {u} תאים כבר מחזיקים ערכים אלה",
+ "sched_edit.same_tail": ", {u} כבר שווים"
+}

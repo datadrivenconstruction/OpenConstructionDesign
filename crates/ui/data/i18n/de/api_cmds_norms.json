@@ -1,0 +1,8 @@
+{
+ "api.cmd.norms_lookup": "Regeln des Normenpakets des Projekts nach Thema, Element oder Kennung finden",
+ "api.cmd.norms_check": "Das Modell gegen das Normenpaket des Projekts prüfen und die Befunde auflisten",
+ "api.cmd.norms_programme": "Übliches Raumprogramm des Projektlandes für einen Gebäudetyp",
+ "api.cmd.select_similar": "Alle gleichartigen Elemente auswählen: gleicher Typ oder gleiche Kategorie, auf dieser Ebene oder im ganzen Projekt",
+ "api.cmd.create_drawing_set": "Druckbaren Plansatz entwerfen: Grundrisse, Schnitte, Ansichten, Listen und Schriftfelder",
+ "api.cmd.deliver_project": "Vom Briefing bis zu den Dateien in einem Schritt: das Projekt und sein Plansatz, nach Apply exportiert"
+}

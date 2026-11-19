@@ -1,0 +1,11 @@
+{
+ "materials.mat.name_empty": "กรอกชื่อวัสดุ",
+ "materials.mat.empty_title": "ยังไม่มีวัสดุ",
+ "materials.mat.empty_hint": "พิมพ์ชื่อด้านล่างแล้วกด เพิ่ม",
+ "materials.mat.nothing_hint": "ไม่มีวัสดุที่ตรงกับการค้นหา",
+ "materials.mat.clear_search": "ล้างการค้นหา",
+ "materials.mat.replace_with": "แทนที่ด้วย",
+ "materials.mat.delete_refused": "ลบไม่ได้: วัสดุนี้ถูกใช้ใน {n} แห่ง ให้แทนที่ก่อน",
+ "materials.mat.delete_confirm": "ลบวัสดุ “{name}” หรือไม่ คุณสามารถเลิกทำได้",
+ "materials.mat.replace_confirm": "แทนที่ “{from}” ด้วย “{to}” ใน {n} องค์ประกอบหรือไม่ “{from}” จะถูกลบ คุณสามารถเลิกทำได้"
+}

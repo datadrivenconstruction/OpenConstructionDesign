@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "Баракты көрүнүштөр менен көчүрүү",
+ "cmd.view.sheet_duplicate_title": "Баракты көчүрүү (аталыш блогу гана)",
+ "sheets.dup.menu_views": "Көрүнүштөр менен көчүрүү",
+ "sheets.dup.menu_title": "Көчүрүү, аталыш блогу гана",
+ "sheets.dup.done": "{src} негизинде {number} барагы түзүлдү: {views} көрүнүш, {sched} тизме жана легенда. Ревизиялар көчүрүлгөн жок; барак чыгарылган эмес.",
+ "sheets.dup.none": "Көчүрүү үчүн баракты ачыңыз",
+ "sheets.dup.copy": "көчүрмө",
+ "cmd.view.sheet_duplicate.short": "Көрүнүштөр менен көчүрүү",
+ "cmd.view.sheet_duplicate_title.short": "Аталыш блогун көчүрүү"
+}

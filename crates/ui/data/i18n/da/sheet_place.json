@@ -1,0 +1,15 @@
+{
+ "sheet_place.place_view_tip": "Placér en visning eller liste på arket",
+ "sheet_place.properties_tip": "Arknummer, navn, papir og revisioner",
+ "sheet_place.print_tip": "Udskriv eller eksportér arket",
+ "sheet_place.fit_tip": "Tilpas arket til vinduet",
+ "sheet_place.activate_tip": "Redigér visningen direkte på arket: panorér, zoom og beskær den",
+ "sheet_place.open_view_tip": "Åbn visningen i sin egen fane",
+ "sheet_place.done_tip": "Afslut redigering af visningen på arket",
+ "sheet_place.reset_crop_tip": "Fjern beskæringen og vis hele visningen",
+ "sheet_place.scale_tip": "Skala for den valgte visning på arket",
+ "sheet_place.title_tip": "Titel vist under visningen på arket",
+ "sheet_place.banner": "Redigerer visningen på arket",
+ "sheet_place.new_set_tip": "Opret et sæt ark, der udskrives samlet",
+ "sheet_place.new_sheet_tip": "Tilføj et ark til projektet"
+}

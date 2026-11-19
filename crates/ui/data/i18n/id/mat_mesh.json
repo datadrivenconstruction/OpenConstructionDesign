@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "Mesh impor",
+ "mat_mesh.mesh.none_selected": "Pilih mesh impor di tampilan 3D untuk memberinya material ini.",
+ "mat_mesh.mesh.current": "Mesh terpilih pertama: {material}",
+ "mat_mesh.mesh.current_none": "Mesh terpilih pertama tidak memiliki material.",
+ "mat_mesh.mesh.assign": "Tetapkan ke {n} terpilih",
+ "mat_mesh.mesh.assign_tip": "Gaya Realistic menampilkan tekstur material ini pada mesh terpilih",
+ "mat_mesh.mesh.assign_cat": "Tetapkan ke kategori {category}",
+ "mat_mesh.mesh.assign_cat_tip": "Setiap mesh impor dari kategori itu tanpa material sendiri",
+ "mat_mesh.mesh.clear": "Kosongkan terpilih",
+ "mat_mesh.mesh.clear_tip": "Mesh terpilih kembali ke material kategorinya atau warna polos",
+ "mat_mesh.mesh.clear_cat": "Kosongkan kategori"
+}

@@ -1,0 +1,16 @@
+{
+ "ai.items.all": {
+  "one": "ทั้งหมด # รายการ",
+  "other": "ทั้งหมด # รายการ"
+ },
+ "ai.items.all.tip": "ติ๊กหรือยกเลิกทุกรายการในแผน",
+ "ai.items.checked": "ติ๊กแล้ว {n} จาก {m}",
+ "ai.items.check.tip": "รวม “{title}” ในการนำไปใช้",
+ "ai.items.expand": "แสดงองค์ประกอบ",
+ "ai.items.collapse": "ซ่อนองค์ประกอบ",
+ "ai.items.apply": {
+  "one": "นำ # รายการไปใช้",
+  "other": "นำ # รายการไปใช้"
+ },
+ "ai.items.apply_none": "นำไปใช้"
+}

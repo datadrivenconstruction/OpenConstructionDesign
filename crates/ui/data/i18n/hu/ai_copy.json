@@ -1,0 +1,8 @@
+{
+ "cmd.file.save_copy": "Másolat mentése másnak…",
+ "cmd.file.save_copy.desc": "A projekt másolatát menti MI-hozzájárulás nélkül, és ha nem dönt másképp, MI-napló nélkül. Ez a projekt változatlan marad.",
+ "ai.copy.title": "Másolat mentése",
+ "ai.copy.journal": "Belevegye az MI-naplót a másolatba? A napló kéréseket, válaszokat és címeket tartalmaz. A felhős hozzájárulás soha nem másolódik: a másik fél maga dönt. Válassza a Nem lehetőséget, ha a naplót ki akarja hagyni.",
+ "ai.copy.done": "Másolat mentve: {name}",
+ "ai.copy.same": "Válasszon másik fájlt: a másolat nem írhatja felül a megnyitott projektet."
+}

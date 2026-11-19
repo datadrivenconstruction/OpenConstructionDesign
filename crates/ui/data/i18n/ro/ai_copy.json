@@ -1,0 +1,8 @@
+{
+ "cmd.file.save_copy": "Salvează o copie pentru altcineva…",
+ "cmd.file.save_copy.desc": "Salvează o copie a proiectului fără consimțământul AI și, dacă nu alegi altfel, fără jurnalul AI. Acest proiect rămâne neschimbat.",
+ "ai.copy.title": "Salvează o copie",
+ "ai.copy.journal": "Incluzi jurnalul AI în copie? Jurnalul conține cereri, răspunsuri și adrese. Consimțământul pentru cloud nu se copiază niciodată: celălalt decide singur. Alege Nu ca să lași jurnalul afară.",
+ "ai.copy.done": "Copie salvată: {name}",
+ "ai.copy.same": "Alege alt fișier: o copie nu poate înlocui proiectul deschis."
+}

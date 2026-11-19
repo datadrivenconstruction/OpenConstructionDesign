@@ -1,0 +1,9 @@
+{
+ "prop_head.of_type": {
+  "one": "# dari tipe ini",
+  "other": "# dari tipe ini"
+ },
+ "prop_head.override_tip": "Berbeda dari tipe, klik untuk mengatur ulang",
+ "prop_head.reset_done": "“{name}” diatur ulang ke nilai tipe",
+ "prop_head.copy_id": "Klik untuk menyalin nomor"
+}

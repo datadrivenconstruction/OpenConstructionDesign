@@ -1,0 +1,5 @@
+{
+ "legend.legend.empty_hint": "הזן שם למעלה ולחץ על צור.",
+ "legend.legend.pick_hint": "בחר מקרא מהרשימה למעלה.",
+ "legend.legend.taken": "כבר קיים מקרא בשם \"{name}\". הזן שם אחר."
+}

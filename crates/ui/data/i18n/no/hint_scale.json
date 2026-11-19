@@ -1,0 +1,10 @@
+{
+ "cmd.mod.scale": "Skaler",
+ "cmd.mod.scale.desc": "Velg elementer, klikk deretter basispunktet, en referanselengde og ny lengde, eller skriv inn en faktor.",
+ "hint.scale.select": "Skaler: velg elementer · Enter — ferdig",
+ "hint.scale.first": "Skaler: velg basispunkt · Esc — avbryt",
+ "hint.scale.second": "Skaler: velg referanselengde · tall — faktor · Esc — avbryt",
+ "hint.scale.third": "Skaler: velg ny lengde · tall — faktor · Esc — avbryt",
+ "scl.bad_factor": "Skaleringsfaktoren må være et tall større enn null",
+ "scl.zero_ref": "Referanselengden er null: velg et punkt bort fra basispunktet"
+}

@@ -1,0 +1,29 @@
+{
+ "recover.ago_now": "vừa xong",
+ "recover.ago_min": {
+  "one": "# phút trước",
+  "other": "# phút trước"
+ },
+ "recover.ago_hour": {
+  "one": "# giờ trước",
+  "other": "# giờ trước"
+ },
+ "recover.ago_yesterday": "hôm qua",
+ "recover.ago_day": {
+  "one": "# ngày trước",
+  "other": "# ngày trước"
+ },
+ "recover.empty": "Không còn bản khôi phục",
+ "recover.empty_hint": "Không có gì để khôi phục cho dự án này.",
+ "recover.all_damaged": "Mọi bản khôi phục đều hỏng, không thể khôi phục.",
+ "recover.keys_hint": "Lên và Xuống chọn bản khôi phục, Enter chuyển đến Khôi phục",
+ "recover.row_tip": "Đã lưu {time}",
+ "recover.row_damaged_tip": "Không thể khôi phục: {reason}",
+ "recover.archive_ask": "Chuyển bản khôi phục này vào kho lưu trữ?",
+ "recover.discard_ask": {
+  "one": "Chuyển bản khôi phục này vào kho lưu trữ? Bản này sẽ không được đề xuất lại.",
+  "other": "Chuyển tất cả # bản khôi phục vào kho lưu trữ? Các bản này sẽ không được đề xuất lại."
+ },
+ "recover.confirm_yes": "Chuyển vào kho lưu trữ",
+ "recover.confirm_no": "Giữ bản khôi phục"
+}

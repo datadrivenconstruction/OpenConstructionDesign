@@ -1,0 +1,6 @@
+{
+ "cmd.ui.pane.next": "Következő panel",
+ "cmd.ui.pane.next.desc": "A billentyűzet fókuszát a következő látható panelre viszi (böngésző, vászon, tulajdonságok, csevegés).",
+ "cmd.ui.pane.prev": "Előző panel",
+ "cmd.ui.pane.prev.desc": "A billentyűzet fókuszát az előző látható panelre viszi."
+}

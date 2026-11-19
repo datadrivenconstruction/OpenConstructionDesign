@@ -1,0 +1,14 @@
+{
+ "dwg_table.copy": "টেবিল কপি",
+ "dwg_table.copy_tip": "লেয়ারভিত্তিক টেকঅফ স্প্রেডশিটের জন্য টেবিল হিসেবে কপি করুন",
+ "dwg_table.copied": "টেকঅফ কপি হয়েছে (ট্যাব-বিভক্ত)",
+ "dwg_table.total": "মোট",
+ "dwg_table.col.layer": "লেয়ার",
+ "dwg_table.col.count": "সংখ্যা",
+ "dwg_table.col.len": "দৈর্ঘ্য, {unit}",
+ "dwg_table.col.area": "ক্ষেত্রফল, {unit}",
+ "dwg_table.unit.mm": "mm",
+ "dwg_table.unit.m2": "m²",
+ "dwg_table.unit.ft": "ft",
+ "dwg_table.unit.ft2": "ft²"
+}

@@ -1,0 +1,11 @@
+{
+ "job.stage.prepare": "Forbereder prosjektet",
+ "open_guard.already_open": "{name} er allerede åpen",
+ "open_guard.from_cache": "{name}: åpnet fra importbufferen",
+ "open_guard.known_project": "{name} ble importert tidligere: åpner det prosjektet",
+ "open_guard.locate": "Finn",
+ "open_guard.mem_low": "Lite minne: nettbudsjettet halveres og bygging av detaljnivåer settes på pause",
+ "open_guard.mem_low_short": "Lite minne: bygging av detaljnivåer er satt på pause til minnet frigjøres",
+ "open_guard.no_window": "Vinduet for prosjektet ble ikke funnet",
+ "open_guard.switch_window": "Bytt til det vinduet"
+}

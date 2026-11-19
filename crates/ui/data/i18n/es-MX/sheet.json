@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "Referencia de atajos",
+ "cmd.help.shortcuts.desc": "Muestra cada atajo tal como lo tiene ahora, por contexto. Pulse ? en cualquier lugar fuera de un campo de texto.",
+ "sheet.title": "Atajos de teclado",
+ "sheet.filter": "Filtrar por comando o tecla",
+ "sheet.filter_label": "Filtrar atajos",
+ "sheet.customize": "Personalizar…",
+ "sheet.close": "Cerrar",
+ "sheet.esc_close": "para cerrar",
+ "sheet.none": "Ningún atajo coincide",
+ "sheet.none_hint": "Pruebe otra palabra o tecla.",
+ "sheet.sec.general": "General",
+ "sheet.sec.plan": "Planta",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "Tablas",
+ "sheet.sec.sheets": "Láminas",
+ "sheet.sec.ai": "IA"
+}

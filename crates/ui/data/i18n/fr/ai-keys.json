@@ -1,0 +1,14 @@
+{
+ "ai_keys.header_is_key": "Les clés vont dans le champ Clé — les en-têtes sont enregistrés en clair",
+ "ai_keys.move": "Déplacer vers Clé",
+ "ai_keys.remove_line": "Retirer des en-têtes",
+ "ai_keys.save_blocked": "Retirez la clé des en-têtes pour enregistrer",
+ "ai_keys.show": "Afficher",
+ "ai_keys.hide": "Masquer",
+ "ai_keys.copy": "Copier",
+ "ai_keys.tokens": "jetons",
+ "ai_keys.presets": "Préréglages",
+ "ai_keys.preset_k": "{n} k",
+ "ai_keys.preset_m": "{n} M",
+ "ai_keys.images_on": "Pris en charge"
+}

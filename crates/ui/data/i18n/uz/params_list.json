@@ -1,0 +1,23 @@
+{
+ "params_list.n_params": {
+  "one": "# ta parametr",
+  "other": "# ta parametr"
+ },
+ "params_list.n_values": {
+  "one": "# ta qiymat",
+  "other": "# ta qiymat"
+ },
+ "params_list.n_elements": {
+  "one": "# ta element",
+  "other": "# ta element"
+ },
+ "params_list.exported": "{params} {file} fayliga eksport qilindi",
+ "params_list.export_failed": "Parametrlar eksport qilinmadi: {why}",
+ "params_list.open_folder": "Papkani ochish",
+ "params_list.delete_tip": "Parametr va uning qiymatlarini o'chirish",
+ "params_list.confirm": "{name} parametri va uning {elements} dagi {values} qiymatlari o'chirilsinmi?",
+ "params_list.confirm_btn": "O'chirish",
+ "params_list.cancel": "Bekor qilish",
+ "params_list.deleted": "{name} parametri ({values}) o'chirildi",
+ "params_list.undo": "Bekor qilish"
+}

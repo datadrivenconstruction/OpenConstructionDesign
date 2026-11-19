@@ -1,0 +1,14 @@
+{
+ "cmd.mod.divide": "Divide",
+ "cmd.mod.divide.short": "Divide",
+ "cmd.mod.divide.desc": "Divides a wall into equal parts in one step. Type the number of parts, then click the wall.",
+ "whereis.mod.divide": "divide, equal parts, cut into pieces, segment wall",
+ "hint.split.parts": "Divide: click a wall · number — parts (2–100) · Esc — cancel",
+ "create_input.divide.bad_parts": "“{text}” is not a part count: type a whole number from 2 to {max}",
+ "create_input.ws.err.empty": "Type a name for the layout",
+ "create_input.ws.err.long": "The name is too long: at most 40 characters",
+ "create_input.ws.err.preset": "That name belongs to a built-in layout",
+ "create_input.ws.err.full": "24 saved layouts at most: remove one first",
+ "create_input.seldim.locked": "Distance {v} locked",
+ "create_input.seldim.positive": "The distance must be above zero"
+}

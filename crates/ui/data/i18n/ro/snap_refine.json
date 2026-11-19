@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "Raza de agățare",
+ "snap_refine.settings.snap_px_desc": "Cât de aproape trebuie să ajungă cursorul de un punct sau o linie pentru a se agăța, în pixeli de ecran. Valori mai mari ajută pe ecranele tactile și cele cu densitate mare.",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "Orizontal",
+ "snap_refine.hint.vertical": "Vertical",
+ "snap_refine.hint.perpendicular": "Perpendicular pe precedentul",
+ "snap_refine.hint.parallel": "Paralel cu precedentul",
+ "snap_refine.hint.on_axis": "Pe axa peretelui",
+ "snap_refine.no_snap": "Fără agățare (Alt)"
+}

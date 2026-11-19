@@ -1,0 +1,5 @@
+{
+ "legend.legend.empty_hint": "Yukarıya bir ad girin ve Oluştur'a basın.",
+ "legend.legend.pick_hint": "Yukarıdaki listeden bir açıklama seçin.",
+ "legend.legend.taken": "“{name}” adlı bir açıklama zaten var. Başka bir ad girin."
+}

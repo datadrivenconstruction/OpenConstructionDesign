@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "Enheder",
+ "topo_units.unit": "Enheder i fil",
+ "topo_units.unit.m": "m",
+ "topo_units.unit.cm": "cm",
+ "topo_units.unit.mm": "mm",
+ "topo_units.unit.ft": "fod",
+ "topo_units.unit.usft": "US survey-fod",
+ "topo_units.unit.in": "in",
+ "topo_units.unit.from_file": "Filen angiver sine enheder: {unit}",
+ "topo_units.unit.suggested": "Filen angiver ingen enheder. Foreslået ud fra omfanget: {unit} — kontrollér resultatet nedenfor",
+ "topo_units.extent": "Resultat i projektets enheder: {x} × {y} {u} i plan, højdeområde {z} {u}",
+ "topo_units.extent.none": "Resultat: intet at importere med disse valg",
+ "topo_units.extent.check": "Dette ligner ikke en grund: kontrollér enhederne"
+}

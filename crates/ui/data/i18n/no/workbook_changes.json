@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "Endringer i arbeidsbok ikke brukt",
+ "workbook_changes.wb.body": "Lukking eller bytte av prosjekt fjerner dem.",
+ "workbook_changes.wb.line": "Import av arbeidsbok: {n} endringer ikke brukt",
+ "workbook_changes.wb.review": "Gjennomgå",
+ "workbook_changes.wb.discard": "Forkast"
+}

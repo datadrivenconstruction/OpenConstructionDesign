@@ -1,0 +1,6 @@
+{
+ "vv_conflict.styles.conflict": "संपादित श्रेणी के ऑब्जेक्ट स्टाइल मॉडल में बदल गए (undo या किसी और विंडो से), जब इस विंडो में बदलाव थे। आपके बदलाव रखे गए हैं।",
+ "vv_conflict.styles.keep": "मेरे बदलाव रखें",
+ "vv_conflict.styles.reload": "पुनः लोड करें",
+ "vv_conflict.styles.answer_first": "पहले चुनें: मेरे बदलाव रखें या पुनः लोड करें"
+}

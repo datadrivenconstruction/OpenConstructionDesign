@@ -1,0 +1,14 @@
+{
+ "xlsx_relink.title": "Sổ làm việc đã liên kết đã được chuyển hoặc đổi tên",
+ "xlsx_relink.body": "Sổ làm việc “{file}” không còn nằm trong {folder}. Chỉnh sửa nhập vào đó chỉ quay lại sau khi được liên kết lại.",
+ "xlsx_relink.found_one": "Đã tìm thấy “{file}” trong {folder}: cùng dự án và cùng lần xuất. Liên kết?",
+ "xlsx_relink.found_many": "Đã tìm thấy {n} sổ làm việc của dự án này và lần xuất này. Chọn một để liên kết:",
+ "xlsx_relink.found_none": "Không tìm thấy sổ làm việc của lần xuất này bên cạnh. Hãy tìm nó, hoặc xuất sổ làm việc mới.",
+ "xlsx_relink.link": "Liên kết “{file}”",
+ "xlsx_relink.find": "Tìm…",
+ "xlsx_relink.find_title": "Tìm sổ làm việc đã liên kết",
+ "xlsx_relink.export_new": "Xuất sổ làm việc mới",
+ "xlsx_relink.close": "Đóng",
+ "xlsx_relink.gone": "Sổ làm việc “{file}” không còn trong thư mục của nó. Chỉnh sửa nhập vào đó chỉ quay lại sau khi được liên kết lại.",
+ "xlsx_relink.found_one_short": "Đã tìm thấy “{file}”: cùng dự án và cùng lần xuất. Liên kết?"
+}

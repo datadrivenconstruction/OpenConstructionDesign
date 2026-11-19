@@ -1,0 +1,10 @@
+{
+ "type_pick.pick.search": "টাইপ বা পুরুত্ব খুঁজুন",
+ "type_pick.pick.empty": "মেলে এমন কোনো টাইপ নেই",
+ "type_pick.pick.edit": "টাইপ সম্পাদনা করুন…",
+ "type_pick.pick.mixed": "মিশ্র",
+ "type_pick.pick.layers": {
+  "one": "# স্তর",
+  "other": "# স্তর"
+ }
+}

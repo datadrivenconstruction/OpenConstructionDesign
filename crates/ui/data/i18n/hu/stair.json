@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "Lépcsők",
+ "selcat.railing": "Korlátok",
+ "quick.cat.stair": "Lépcsők",
+ "quick.cat.railing": "Korlátok",
+ "stair.risers": "Lépcsőfokok",
+ "stair.riser": "Lépcsőfok magassága",
+ "stair.comfort": "2R + T",
+ "stair.tread_auto": "Lépcsőfok-mélység szabály szerint",
+ "stair.tread_auto_tip": "Ejtse el a beírt lépcsőfok-mélységet, és hagyja, hogy a 2R + T szabály állítsa be",
+ "stair.broken": "Ez a lépcső nem illeszkedik a szintjeihez",
+ "railing.host_stair": "A(z) #{id} lépcsőn",
+ "railing.host_path": "Vázolt korlát",
+ "railing.length": "Hossz",
+ "stair.deleted_with": "{n} hozzá tartozó korláttal"
+}

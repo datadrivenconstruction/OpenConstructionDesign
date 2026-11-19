@@ -1,0 +1,9 @@
+{
+ "tool.room": "Kuwarto",
+ "tool.room.name": "Kuwarto",
+ "room_tool.room.name": "Pangalan",
+ "hint.room.place": "I-click sa loob ng saradong wall loop para gumawa ng kuwarto · Esc — lumabas",
+ "tool.err.room_open": "Hindi sarado ang rehiyon: isara ang wall loop o magdagdag ng room separator",
+ "tool.err.room_check": "Hindi masuri ang mga kuwarto ng antas na ito",
+ "tool.err.room_exists": "May kuwarto na sa loop na ito"
+}

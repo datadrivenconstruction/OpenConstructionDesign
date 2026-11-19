@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "برگه قبلی (Page Up)",
+ "sheets.print.next": "برگه بعدی (Page Down)",
+ "sheets.print.fit": "جا دادن صفحه (دوبار کلیک)",
+ "sheets.print.no_sheets": "برگه‌ای برای پیش‌نمایش نیست",
+ "sheets.print.building": "در حال ساخت صفحه…",
+ "sheets.print.stop_build": "توقف",
+ "sheets.print.build_stopped": "ساخت صفحه متوقف شد",
+ "sheets.print.retry": "دوباره بساز",
+ "sheets.print.build_failed": "پیش‌نمایش ساخته نشد"
+}

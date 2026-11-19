@@ -1,0 +1,16 @@
+{
+ "family_overwrite.ow.title": "Projekttypwerte ersetzen?",
+ "family_overwrite.ow.body": "Das Laden ersetzt {values} in {types}. Platzierte Instanzen dieser Typen: {instances}.",
+ "family_overwrite.ow.values": {
+  "one": "# Wert",
+  "other": "# Werte"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# Typ",
+  "other": "# Typen"
+ },
+ "family_overwrite.ow.list": "Typen: {list}",
+ "family_overwrite.ow.more": "und {n} weitere",
+ "family_overwrite.ow.back": "Zurück zum Bearbeiten",
+ "family_overwrite.ow.replace": "Werte ersetzen"
+}

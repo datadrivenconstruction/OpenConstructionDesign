@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3B",
+ "phases.current_mark": "geçerli",
+ "phases.make_current": "Geçerli yap",
+ "phases.col_phase": "Faz",
+ "phases.col_filter": "Filtre",
+ "phases.presets": "Plan ön ayarları",
+ "phases.del_title": "Fazı sil",
+ "phases.del_text": "“{name}” fazı silinsin mi? Öğeleri aşağıda seçilen faza taşınır.",
+ "phases.del_into": "Öğeleri şuraya taşı",
+ "phases.del_ok": "Sil",
+ "phases.col_kind": "Öğe türü",
+ "phases.col_count": "Adet",
+ "phases.col_volume": "Hacim"
+}

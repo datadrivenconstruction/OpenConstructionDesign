@@ -1,0 +1,13 @@
+{
+ "ai.proposal.title": "Agent taklifi",
+ "ai.proposal.meta": "{actor} · amallar: {ops}",
+ "ai.proposal.apply.desc": "Butun taklifni bitta qadam sifatida qo'llaydi; Ctrl+Z uni bekor qiladi",
+ "ai.proposal.applying": "Qo'llanmoqda…",
+ "ai.proposal.applied": "Taklif qo'llandi. Ctrl+Z uni bekor qiladi.",
+ "ai.proposal.applied_resync": "Taklif qo'llandi, lekin ko'rinish hali yangilanmadi. U o'zi yangilanadi; Ctrl+Z qadamni bekor qiladi.",
+ "ai.proposal.stale": "Taklif oldindan ko'rilgandan keyin model o'zgardi. Sun'iy intellektdan uni qaytadan taklif qilishni so'rang.",
+ "ai.proposal.toast.applied": "Taklif qo'llandi. Ctrl+Z uni bekor qiladi.",
+ "ai.proposal.toast.stale": "Oldindan ko'rishdan keyin model o'zgardi, shuning uchun hech narsa qo'llanmadi. Qaytadan oldindan ko'ring: agentdan uni yangidan taklif qilishni so'rang.",
+ "ai.proposal.toast.refused": "Taklif qo'llanmadi: {reason}",
+ "ai.proposal.rejected": "Taklif rad etildi."
+}

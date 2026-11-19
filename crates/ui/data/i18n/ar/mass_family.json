@@ -1,0 +1,9 @@
+{
+ "cmd.mass.timeline_family": "السجل إلى عائلة",
+ "cmd.mass.timeline_family.desc": "ينشئ عائلة مكونات من سجل بناء الشكل المحدد. تصبح معاملات السجل معاملات للعائلة.",
+ "mass_family.done": "تم إنشاء العائلة {name} بعدد معاملات: {n}",
+ "mass_family.refused": "لم تُنشأ العائلة: {e}",
+ "mass_family.no_mass": "اختر شكلًا بارامتريًا أولًا",
+ "mass_family.add_modifier": "إضافة معدِّل",
+ "mass_family.needs_faces": "مطلوب اختيار أوجه: استخدم الأداة على تبويب «الكتل»"
+}

@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "În așteptare după operațiunea în curs: {n}",
+ "import_queue.queue_full": "Coada este plină, {n} fișiere nu au fost adăugate",
+ "import_queue.changed": "{name} a fost actualizat după ce a fost creat acest proiect. S-a deschis proiectul anterior.",
+ "import_queue.import_again": "Importă din nou",
+ "import_queue.kept": "Importul terminat este păstrat",
+ "import_queue.open_it": "Deschide-l",
+ "import_queue.sum.head": "import: {editable} editabile (pereți {walls}, deschideri {open}, plăci {slabs}, încăperi {rooms}, altele {other}), {meshes} ca plasă",
+ "import_queue.sum.unchanged": ", nemodificate {n}",
+ "import_queue.sum.updated": ", actualizate {n}",
+ "import_queue.sum.missing": ", nu există în sursă {n} (păstrate)",
+ "import_queue.sum.skipped": ", omise {n}",
+ "import_queue.sum.warnings": ", avertismente {n}",
+ "import_queue.import_failed": "importul a eșuat: {e}"
+}

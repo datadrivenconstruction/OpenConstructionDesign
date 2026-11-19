@@ -1,0 +1,10 @@
+{
+ "type_pick.pick.search": "ค้นหาประเภทหรือความหนา",
+ "type_pick.pick.empty": "ไม่มีประเภทที่ตรงกัน",
+ "type_pick.pick.edit": "แก้ไขประเภท…",
+ "type_pick.pick.mixed": "หลายค่า",
+ "type_pick.pick.layers": {
+  "one": "# เลเยอร์",
+  "other": "# เลเยอร์"
+ }
+}

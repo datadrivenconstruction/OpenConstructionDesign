@@ -1,0 +1,40 @@
+{
+ "rebar_hosts.hosts": "องค์ประกอบหลัก: {list}",
+ "rebar_hosts.kind.column": "เสา",
+ "rebar_hosts.kind.beam": "คาน",
+ "rebar_hosts.kind.wall": "ผนัง",
+ "rebar_hosts.kind.slab": "พื้น",
+ "rebar_hosts.kind.footing": "ฐานราก",
+ "rebar_hosts.kind.raft": "แผ่นฐานราก",
+ "rebar_hosts.n.column": {
+  "one": "# เสา",
+  "other": "# เสา"
+ },
+ "rebar_hosts.n.beam": {
+  "one": "# คาน",
+  "other": "# คาน"
+ },
+ "rebar_hosts.n.wall": {
+  "one": "# ผนัง",
+  "other": "# ผนัง"
+ },
+ "rebar_hosts.n.slab": {
+  "one": "# พื้น",
+  "other": "# พื้น"
+ },
+ "rebar_hosts.n.footing": {
+  "one": "# ฐานราก",
+  "other": "# ฐานราก"
+ },
+ "rebar_hosts.n.raft": {
+  "one": "# แผ่นฐานราก",
+  "other": "# แผ่นฐานราก"
+ },
+ "rebar_hosts.mixed_note": "เสาและคานรับเหล็กยืนและเหล็กปลอก ผนัง พื้น และฐานรากรับตาข่าย เลือกกลุ่มเดียวเพื่อเพิ่มเหล็กเสริม",
+ "rebar_hosts.why.mixed": "การเลือกผสมเสาหรือคานกับผนัง พื้น หรือฐานราก เลือกกลุ่มเดียว",
+ "rebar_hosts.why.area_linear": "ตาข่ายใส่ในผนัง พื้น และฐานราก ไม่ใช่เสาหรือคาน",
+ "rebar_hosts.why.bars_plate": "เหล็กยืนและเหล็กปลอกใส่ในเสาและคาน ไม่ใช่ผนัง พื้น หรือฐานราก",
+ "rebar_hosts.why.no_common_face": "องค์ประกอบหลักที่เลือกไม่มีหน้าหุ้มร่วมกัน เลือกองค์ประกอบหลักชนิดเดียวกัน",
+ "rebar_hosts.why.no_type": "เลือกประเภทเหล็กเสริม",
+ "rebar_hosts.kind_type": "{kind} · {type}"
+}

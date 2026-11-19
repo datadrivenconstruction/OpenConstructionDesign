@@ -1,0 +1,9 @@
+{
+ "ai.settings.num_bad": "Nije broj. Upiši ga kao 0.5.",
+ "ai.settings.num_comma": "Koristi točku kao decimalni znak, poput 0.5.",
+ "ai.settings.num_negative": "Broj ne može biti negativan.",
+ "ai.settings.unit_money": "valuta",
+ "ai.settings.unit_tokens": "tokena",
+ "ai.settings.unit_price": "po 1M tokena",
+ "ai.settings.limits_hint": "0 znači bez granice. Odbijena vrijednost ostavlja prethodnu granicu na snazi."
+}

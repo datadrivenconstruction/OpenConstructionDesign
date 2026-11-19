@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "体量无法旋转或镜像：其形状历史中没有旋转步骤。请移动或复制，或按新方向重新绘制。",
+ "sched_cats.col.name": "名称",
+ "sched_cats.col.material": "材质",
+ "sched_cats.col.void": "孔洞",
+ "sched_cats.col.inplace": "现场浇筑",
+ "sched_cats.col.volume": "净体积",
+ "sched_cats.col.area": "表面积",
+ "sched_cats.col.floor_area": "楼面面积",
+ "sched_cats.col.thickness": "厚度",
+ "sched_cats.col.points": "点数",
+ "elem.toposolid.points": "测量点",
+ "elem.toposolid.count": "点数",
+ "elem.toposolid.low": "最低",
+ "elem.toposolid.high": "最高",
+ "elem.toposolid.edit": "编辑点",
+ "elem.toposolid.edit_tip": "在平面中选择、拖动并设置测量点的标高",
+ "elem.toposolid.pick_hint": "在平面中点击一个点以选中。再次点击可添加或移除。",
+ "elem.toposolid.z": "标高（{n}）",
+ "elem.toposolid.mixed": "所选点的标高不同；输入新值将统一设置。",
+ "elem.toposolid.edit_help": "拖动点即可移动。输入数值并按 Enter 设置标高。Backspace 删除所选点，Esc 退出。",
+ "elem.toposolid.done": "完成"
+}

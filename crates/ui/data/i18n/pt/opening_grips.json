@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "Inverter lado da dobradiça",
+ "cmd.edit.flip_hand.desc": "Espelha as portas e janelas selecionadas ao longo da parede, de modo que as dobradiças passem para a outra extremidade da abertura.",
+ "cmd.edit.flip_facing": "Inverter lado da abertura",
+ "cmd.edit.flip_facing.desc": "Gira as portas e janelas selecionadas para o outro lado da parede.",
+ "opening_grips.flip_hand": "Inverter dobradiça",
+ "opening_grips.flip_hand.tip": "Dobradiças para a outra extremidade da abertura (Shift+F)",
+ "opening_grips.flip_facing": "Inverter lado",
+ "opening_grips.flip_facing.tip": "Abertura para o outro lado da parede (Shift+G)",
+ "opening_grips.flip.done": "Invertidos: {n}",
+ "opening_grips.flip.none": "Selecione uma porta ou janela para inverter",
+ "opening_grips.flip.fail": "Não invertido: {why}"
+}

@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "১টি সেট যোগ করুন",
+ "rebar_sets.add_n": "{n}টি সেট যোগ করুন",
+ "rebar_sets.pick.search": "বার টাইপ খুঁজুন",
+ "rebar_sets.pick.empty": "মেলে এমন কোনো বার টাইপ নেই",
+ "rebar_sets.unit.deg": "°"
+}

@@ -1,0 +1,8 @@
+{
+ "ai_sent.summary": "Data proyek dalam permintaan ini: {messages} pesan, {tools} hasil alat, {images} gambar",
+ "ai_sent.copy": "Salin",
+ "ai_sent.filter": "Cari di permintaan terkirim",
+ "ai_sent.no_match": "Tidak ada permintaan yang cocok.",
+ "ai_sent.instructions": "Instruksi dan alat",
+ "ai_sent.local_note": "Disimpan hanya di komputer ini, untuk sesi ini. Kunci dan kata sandi tidak pernah ditampilkan."
+}

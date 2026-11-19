@@ -1,0 +1,6 @@
+{
+ "cmd.file.import_again": "Importér igen",
+ "cmd.file.import_again.desc": "Opretter et nyt projekt ud fra kildefilen, som den er nu.",
+ "cmd.file.open_kept": "Åbn gemt import",
+ "cmd.file.open_kept.desc": "Åbner den færdige import, der blev gemt, da prompten om ikke-gemte ændringer blev annulleret."
+}

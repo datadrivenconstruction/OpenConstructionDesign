@@ -1,0 +1,13 @@
+{
+ "level.err_open": "המפלס לא נפתח: {e}",
+ "level.need_name": "למפלס נדרשים שם וגובה",
+ "level.created": "המפלס “{name}” נוצר",
+ "level.err_create": "המפלס לא נוצר: {e}",
+ "level.err_edit": "המפלס לא שונה: {e}",
+ "level.edited": "המפלס “{name}” שונה",
+ "level.edited_stale": "המפלס “{name}” שונה, המבט לא רוענן: {e}",
+ "level.last": "לא ניתן למחוק את המפלס האחרון",
+ "level.deleted": "המפלס נמחק",
+ "level.not_empty": "המפלס אינו ריק: מחקו קודם את האלמנטים שבו",
+ "level.err_delete": "המפלס לא נמחק: {e}"
+}

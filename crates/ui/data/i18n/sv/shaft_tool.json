@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "Schakt",
+ "quick.cat.shaft": "Schakt",
+ "shaft_tool.browser.shaft": "Schakt #{id}",
+ "shaft_tool.shaft.top": "Översta våning",
+ "shaft_tool.shaft.cuts": "Skurna element",
+ "shaft_tool.shaft.cut_area": "Skuren yta",
+ "shaft_tool.shaft.cut_volume": "Skuren volym",
+ "elem.no.rooms": "Följer rummen den innehåller"
+}

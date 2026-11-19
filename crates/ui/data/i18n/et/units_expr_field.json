@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "Tühi sisend.",
+ "units.err.not_number": "Positsioonil {pos} ei ole arv.",
+ "units.err.unknown_unit": "Tundmatu ühik: {unit}.",
+ "units.err.non_positive": "Pikkus peab olema suurem kui null.",
+ "units.err.too_large": "Pikkus ei tohi ületada {max} m.",
+ "units.err.bad_angle": "Nurk on kraadide arv.",
+ "units.err.unknown_name": "Tundmatu nimi: {name}. Väärtus jäeti alles.",
+ "units.err.cycle": "Valemi tsükkel kohas {name}. Väärtus jäeti alles.",
+ "units.err.bad_expr": "Avaldist ei saa lugeda positsioonil {pos}. Väärtus jäeti alles.",
+ "units.err.div_zero": "Nulliga jagamine positsioonil {pos}. Väärtus jäeti alles.",
+ "units.err.invalid": "Vale arv.",
+ "units.err.kept": "Ei muudetud: {reason}"
+}

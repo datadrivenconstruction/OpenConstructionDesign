@@ -1,0 +1,15 @@
+{
+ "fe.add_why_empty": "먼저 매개변수 이름을 입력하세요",
+ "fe.add_why_exists": "같은 이름의 매개변수가 이미 있습니다. 변경하려면 적용을 사용하세요",
+ "fe.apply_why_missing": "이 이름의 매개변수가 없습니다. 기존 이름을 입력하세요",
+ "fe.nochange": "아직 변경 없음",
+ "options.accept_more": "수락…",
+ "options.delete_more": "삭제…",
+ "options.empty_title": "아직 옵션 세트가 없습니다",
+ "options.more": "추가 작업: {name}",
+ "options.primary_named": "기본 옵션: {name}",
+ "options.primary_tip": "이 세트의 기본 옵션으로 설정",
+ "options.select_first": "먼저 모델에서 요소를 선택하세요",
+ "options.show_3d": "3D에 표시: {name}",
+ "options.show_plan": "평면에 표시: {name}"
+}

@@ -1,0 +1,8 @@
+{
+ "ai_sent.summary": "נתוני הפרויקט בבקשה הזו: {messages} הודעות, {tools} תוצאות כלים, {images} תמונות",
+ "ai_sent.copy": "העתק",
+ "ai_sent.filter": "חפש בבקשות שנשלחו",
+ "ai_sent.no_match": "אין בקשה שתואמת.",
+ "ai_sent.instructions": "הוראות וכלים",
+ "ai_sent.local_note": "נשמר רק במחשב הזה, לסשן הנוכחי. מפתחות וסיסמאות לעולם אינם מוצגים."
+}

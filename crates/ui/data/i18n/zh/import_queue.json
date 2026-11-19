@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "排队等待正在运行的任务：{n}",
+ "import_queue.queue_full": "队列已满，{n} 个文件未添加",
+ "import_queue.changed": "{name} 在创建此项目后已被更新。已打开上一个项目。",
+ "import_queue.import_again": "重新导入",
+ "import_queue.kept": "已保留完成的导入",
+ "import_queue.open_it": "打开",
+ "import_queue.sum.head": "导入：{editable} 个可编辑（墙 {walls}、开口 {open}、楼板 {slabs}、房间 {rooms}、其他 {other}），{meshes} 个为网格",
+ "import_queue.sum.unchanged": "，未更改 {n}",
+ "import_queue.sum.updated": "，已更新 {n}",
+ "import_queue.sum.missing": "，源文件中缺失 {n}（已保留）",
+ "import_queue.sum.skipped": "，已跳过 {n}",
+ "import_queue.sum.warnings": "，警告 {n}",
+ "import_queue.import_failed": "导入失败：{e}"
+}

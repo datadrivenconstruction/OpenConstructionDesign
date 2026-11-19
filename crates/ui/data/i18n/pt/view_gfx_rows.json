@@ -1,0 +1,10 @@
+{
+ "view_gfx.vv.visible_tip": "Visível nesta vista",
+ "view_gfx.vv.enabled_tip": "Aplicar este filtro nesta vista",
+ "view_gfx.vv.reset_tip": "Voltar ao padrão do projeto",
+ "view_gfx.vv.col.actions": "Ações",
+ "view_gfx.vv.nothing_to_apply": "Nenhuma alteração a aplicar",
+ "view_gfx.flt.save_blocked": "Dê um nome ao filtro e preencha todos os parâmetros da regra",
+ "view_gfx.flt.confirm_delete": "Excluir para todas as vistas?",
+ "view_gfx.flt.param_pick": "Escolher…"
+}

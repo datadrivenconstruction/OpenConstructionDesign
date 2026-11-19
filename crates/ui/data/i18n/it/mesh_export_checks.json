@@ -1,0 +1,15 @@
+{
+ "cmd.data.export_step.desc": "Salva l'intero modello o la selezione come STEP AP214 o AP242: solidi con facce esatte planari, cilindriche, coniche, sferiche, toroidali e B-spline, gli altri elementi come facce planari, colori, un nodo di assieme per livello.",
+ "cmd.data.export_3mf.desc": "Salva l'intero modello o la selezione come 3MF per la stampa: un oggetto per elemento, colori, unità e un controllo che ogni corpo sia a tenuta d'acqua.",
+ "fmenu.export.step": "STEP solidi esatti (.step)",
+ "fmenu.export.3mf": "3MF per la stampa (.3mf)",
+ "mx.schema": "Schema STEP",
+ "mx.schema.ap214": "AP214 (supporto più ampio)",
+ "mx.schema.ap242": "AP242",
+ "mx.watertight": "Corpi non a tenuta d'acqua",
+ "mx.watertight.report": "Scrivili ed elencali",
+ "mx.watertight.skip": "Escludili",
+ "mx.watertight.require": "Annulla l'esportazione",
+ "mx.faceted": "{fmt} salvato: {path} ({exact} solidi esatti, {n} scritti come facce planari: {first})",
+ "sheets.print.svg": "SVG"
+}

@@ -1,0 +1,11 @@
+{
+ "cmd.ctx.ceiling.clean_outline": "Linisin ang outline",
+ "cmd.ctx.ceiling.clean_outline.desc": "Inaalis ang makikitid na tinik kung saan bumabalik sa sarili ang outline ng ceiling. Nagpapakita muna ng preview; isang undo step.",
+ "cmd.ctx.shaft.clean_outline": "Linisin ang outline",
+ "cmd.ctx.shaft.clean_outline.desc": "Inaalis ang makikitid na tinik kung saan bumabalik sa sarili ang outline ng shaft. Nagpapakita muna ng preview; isang undo step.",
+ "outline_cleanup.intro_ceiling": "Ang outline ng ceiling na ito ay bumabalik sa sarili sa makikitid na tinik: {n}. Aalisin ng paglilinis ang mga ito; mananatiling pareho ang iba.",
+ "outline_cleanup.intro_shaft": "Ang outline ng shaft na ito ay bumabalik sa sarili sa makikitid na tinik: {n}. Aalisin ng paglilinis ang mga ito; mananatiling pareho ang iba.",
+ "outline_cleanup.none_ceiling": "Walang tinik ang outline ng ceiling na ito",
+ "outline_cleanup.none_shaft": "Walang tinik ang outline ng shaft na ito",
+ "outline_cleanup.need_host": "Pumili ng floor, ceiling o shaft"
+}

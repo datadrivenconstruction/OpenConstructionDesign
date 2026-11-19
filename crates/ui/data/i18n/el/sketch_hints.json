@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "Σχεδιάστε κλειστό περίγραμμα: κλικ σε σημεία, μετά Enter ή Τέλος για δημιουργία",
+ "sketch_hints.sk_finish": "Τέλος",
+ "sketch_hints.sk_cancel": "Άκυρο",
+ "sketch_hints.import_warn": "προειδοποιήσεις ελέγχου μοντέλου: {n} (πρώτη: {first})",
+ "sketch_hints.ai.offline.schedule": "Άνοιγμα πίνακα",
+ "sketch_hints.ai.offline.check": "Έλεγχος με κανόνες",
+ "sketch_hints.ai.offline.warnings": "Εμφάνιση προειδοποιήσεων",
+ "cmd.file.publish_pdf": "Δημοσίευση φύλλων σε PDF…",
+ "cmd.file.publish_pdf.desc": "Δημοσιεύει τα επιλεγμένα φύλλα σε PDF. Ίδιο με την Εξαγωγή φύλλων σε PDF/SVG.",
+ "sketch_hints.verify_none": "Δεν υπάρχει στην επιλογή στοιχείο που όρισε ο βοηθός AI για έλεγχο",
+ "sketch_hints.contours_none": "Δεν υπάρχει τοπογραφική επιφάνεια στο μοντέλο: οι ισοϋψείς εμφανίζονται μόλις δημιουργηθεί μία",
+ "sketch_hints.contours_off": "Οι ισοϋψείς της επιφάνειας είναι κρυμμένες",
+ "sketch_hints.contours_on": "Οι ισοϋψείς της επιφάνειας εμφανίζονται"
+}

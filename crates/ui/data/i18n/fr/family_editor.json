@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "Nouvelle famille",
+ "family_editor.open_tip": "Ouvrir une famille ou un brouillon",
+ "family_editor.close_named": "Fermer {name}",
+ "family_editor.unsaved": "Modifications non enregistrées",
+ "family_editor.search": "Rechercher",
+ "family_editor.nothing": "Rien trouvé",
+ "family_editor.sec_families": "Familles du projet",
+ "family_editor.sec_drafts": "Brouillons",
+ "family_editor.cap_category": "Catégorie",
+ "family_editor.cap_host": "Hôte",
+ "family_editor.cap_type": "Type d'aperçu"
+}

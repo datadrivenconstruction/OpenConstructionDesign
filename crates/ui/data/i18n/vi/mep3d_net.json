@@ -1,0 +1,13 @@
+{
+ "mep.sys.duct": "Cấp gió S1",
+ "mep.sys.pipe": "Nước lạnh C1",
+ "mep.sys.tray": "Nguồn điện",
+ "mep.round": "Tròn",
+ "mep.material": "Vật liệu",
+ "mep3d.elevation": "Cao độ tính từ tầng",
+ "mep3d.slope": "Độ dốc",
+ "mep3d.shape": "Hình dạng",
+ "mep3d.shape.rect": "Chữ nhật",
+ "mep3d.shape.round": "Tròn",
+ "mep3d.shape.oval": "Ô van dẹt"
+}

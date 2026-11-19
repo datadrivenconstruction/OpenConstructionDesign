@@ -1,0 +1,6 @@
+{
+ "project_seed.seed_level": "Cao độ 1",
+ "project_seed.seed_wall_partition": "Vách ngăn 100",
+ "project_seed.seed_wall_masonry": "Tường xây 200",
+ "project_seed.seed_wall_exterior": "Tường ngoài 380"
+}

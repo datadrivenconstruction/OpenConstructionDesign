@@ -1,0 +1,5 @@
+{
+ "legend.legend.empty_hint": "Inserisci un nome sopra e premi Crea.",
+ "legend.legend.pick_hint": "Scegli una legenda dalla lista sopra.",
+ "legend.legend.taken": "Esiste già una legenda chiamata \"{name}\". Inserisci un altro nome."
+}

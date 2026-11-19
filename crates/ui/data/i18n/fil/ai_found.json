@@ -1,0 +1,42 @@
+{
+ "ai.tool.show_elements": "Pagpapakita ng mga elemento",
+ "ai.tool.isolate_elements": "Paghihiwalay ng mga elemento",
+ "ai.tool.color_by": "Pagkukulay ayon sa halaga",
+ "ai.tool.reset_view": "Pag-reset ng view",
+ "ai_found.found.query": "Nahanap",
+ "ai_found.found.show": "Ipinakita",
+ "ai_found.found.isolate": "Hiwalay",
+ "ai_found.found.hide": "Nakatago",
+ "ai_found.found.color": "Kinulayan",
+ "ai_found.found.count": "{n} sa {m}",
+ "ai_found.found.none": "Walang tumutugma. Subukan ang mas malawak na filter.",
+ "ai_found.found.show_btn": "Ipakita",
+ "ai_found.found.show_tip": "Piliin ang mga elementong ito at i-zoom sa mga ito sa plan at 3D",
+ "ai_found.found.isolate_btn": "Ihiwalay",
+ "ai_found.found.isolate_tip": "Ipakita lang ang mga elementong ito hanggang I-reset ang view",
+ "ai_found.found.select_btn": "Piliin",
+ "ai_found.found.select_tip": "Piliin ang mga elementong ito nang hindi gumagalaw ang view",
+ "ai_found.legend.title": "Kulayan ayon sa {by}",
+ "ai_found.legend.row_tip": "I-click para piliin ang mga elementong ito",
+ "ai_found.legend.empty_value": "Walang halaga",
+ "ai_found.legend.other": {
+  "one": "# pang halaga",
+  "other": "# pang halaga"
+ },
+ "ai_found.view.title": "View ng AI katulong",
+ "ai_found.view.reset": "I-reset ang view",
+ "ai_found.view.reset_tip": "Ibalik ang view mula bago ito binago ng AI katulong",
+ "ai_found.view.shown": {
+  "one": "# elemento ang ipinakita",
+  "other": "# elemento ang ipinakita"
+ },
+ "ai_found.view.isolated": {
+  "one": "# elemento ang inihiwalay",
+  "other": "# elemento ang inihiwalay"
+ },
+ "ai_found.view.hidden": {
+  "one": "# elemento ang nakatago",
+  "other": "# elemento ang nakatago"
+ },
+ "ai_found.found.line": "{what}: {count}"
+}

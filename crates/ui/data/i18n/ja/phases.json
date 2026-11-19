@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D",
+ "phases.current_mark": "現在",
+ "phases.make_current": "現在に設定",
+ "phases.col_phase": "フェーズ",
+ "phases.col_filter": "フィルタ",
+ "phases.presets": "平面プリセット",
+ "phases.del_title": "フェーズを削除",
+ "phases.del_text": "フェーズ「{name}」を削除しますか？その要素は下で選択したフェーズに移動します。",
+ "phases.del_into": "要素の移動先",
+ "phases.del_ok": "削除",
+ "phases.col_kind": "要素タイプ",
+ "phases.col_count": "数",
+ "phases.col_volume": "体積"
+}

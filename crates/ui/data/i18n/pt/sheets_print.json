@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "Folha anterior (Page Up)",
+ "sheets.print.next": "Próxima folha (Page Down)",
+ "sheets.print.fit": "Ajustar página (clique duplo)",
+ "sheets.print.no_sheets": "Nenhuma folha para pré-visualizar",
+ "sheets.print.building": "Montando a página…",
+ "sheets.print.stop_build": "Parar",
+ "sheets.print.build_stopped": "Montagem da página interrompida",
+ "sheets.print.retry": "Montar novamente",
+ "sheets.print.build_failed": "Não foi possível montar a prévia"
+}

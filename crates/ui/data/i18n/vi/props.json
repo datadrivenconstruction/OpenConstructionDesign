@@ -1,0 +1,18 @@
+{
+ "props.multi.title": {
+  "one": "# cấu kiện",
+  "other": "# cấu kiện"
+ },
+ "props.multi.cats": {
+  "one": "# danh mục",
+  "other": "# danh mục"
+ },
+ "props.multi.varies": {
+  "one": "thay đổi (#)",
+  "other": "thay đổi (#)"
+ },
+ "props.multi.clear": "Xóa lựa chọn",
+ "props.multi.undo": "Hoàn tác",
+ "props.multi.narrowed": "Lựa chọn: {n} · {name}",
+ "props.multi.chip_tip": "{name}: {n}  ·  Nhấp để xem thuộc tính của chúng, Ctrl+nhấp chỉ giữ các mục này"
+}

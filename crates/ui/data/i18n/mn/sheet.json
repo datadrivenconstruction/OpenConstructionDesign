@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "Товчлолын тайлбар",
+ "cmd.help.shortcuts.desc": "Одоогийн бүх товчлолыг контекстээр нь харуулна. Текст оруулах талбараас гадна ? дарна уу.",
+ "sheet.title": "Гарын товчлолууд",
+ "sheet.filter": "Команд эсвэл товчоор шүүх",
+ "sheet.filter_label": "Товчлолуудыг шүүх",
+ "sheet.customize": "Өөрчлөх…",
+ "sheet.close": "Хаах",
+ "sheet.esc_close": "хаах",
+ "sheet.none": "Таарсан товчлол алга",
+ "sheet.none_hint": "Өөр үг эсвэл товч оруулж үзнэ үү.",
+ "sheet.sec.general": "Ерөнхий",
+ "sheet.sec.plan": "План",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "Хуваарь",
+ "sheet.sec.sheets": "Хуудсууд",
+ "sheet.sec.ai": "AI"
+}

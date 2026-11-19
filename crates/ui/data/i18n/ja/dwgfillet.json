@@ -1,0 +1,20 @@
+{
+ "dwgfillet.fillet": "フィレット",
+ "dwgfillet.cancel": "フィレットを停止",
+ "dwgfillet.tip": "残す側の 2 本の線をクリックします: 両方とも角までトリムまたは延長され、半径が 0 より大きい場合は接線円弧が付きます",
+ "dwgfillet.radius": "フィレット半径",
+ "dwgfillet.radius_tip": "図面単位での円弧の半径です。0 にすると鋭角な角になります",
+ "dwgfillet.st.arm_first": "残す側の 1 本目の線をクリックしてください",
+ "dwgfillet.st.arm_second": "残す側の 2 本目の線をクリックしてください",
+ "dwgfillet.st.not_armed": "先にフィレットを選択してください",
+ "dwgfillet.st.click_line": "図面の単一の線をクリックしてください",
+ "dwgfillet.st.other_drawing": "両方の線は同じ図面に属している必要があります: 最初からやり直してください",
+ "dwgfillet.st.changed": "1 本目の線が変更されました: 最初からやり直してください",
+ "dwgfillet.st.same_line": "別の 2 本目の線を選択してください",
+ "dwgfillet.st.parallel": "線が平行で交わらないため、角を作成できません",
+ "dwgfillet.st.degenerate": "線に長さがありません",
+ "dwgfillet.st.no_side": "クリックした側には、角から長さがありません",
+ "dwgfillet.st.too_big": "これらの線に対して半径が大きすぎます: より小さい半径を使用してください",
+ "dwgfillet.st.radius_bad": "半径はゼロまたは正の値である必要があります",
+ "dwgfillet.st.done": "角を作成しました"
+}

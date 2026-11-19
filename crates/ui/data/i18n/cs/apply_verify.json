@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "Použití bylo zastaveno: model zůstává beze změny",
+ "apply_verify.rolled_back": "Použití neodpovídalo konceptu a bylo vráceno; model je beze změny. {what}",
+ "apply_verify.diff.missing": "Koncept zobrazuje {what} {kind}, ale Použít to neprovedlo.",
+ "apply_verify.diff.extra": "Použít {kind} {what}, což koncept nezobrazuje.",
+ "apply_verify.diff.kind": "Koncept zobrazuje {what} {shown}, ale Použít to {applied}.",
+ "apply_verify.diff.value": "{what}: „{col}“ vyšlo jinak než v konceptu.",
+ "apply_verify.diff.truncated": "Koncept a použitá změna se liší rozsahem.",
+ "apply_verify.diff.unreadable": "Použitou změnu nelze přečíst zpět ({e}).",
+ "apply_verify.no_base": "Použití nebylo spuštěno: chybí kopie, proti které se koncept kontroluje. Model je beze změny; vyžádejte koncept znovu.",
+ "apply_verify.take_back_failed": "Vrácení selhalo ({e}): použijte Zpět.",
+ "apply_verify.kind.created": "vytvořeno",
+ "apply_verify.kind.changed": "změněno",
+ "apply_verify.kind.deleted": "smazáno",
+ "apply_verify.card.type_row": "Typ {type} · změnu převezme {n} prvků"
+}

@@ -1,0 +1,20 @@
+{
+ "faults.errors": {
+  "one": "# chyba v modelu. Kliknutím ji zobrazíte.",
+  "few": "# chyby v modelu. Kliknutím zobrazíte seznam.",
+  "other": "# chyb v modelu. Kliknutím zobrazíte seznam."
+ },
+ "faults.warnings": {
+  "one": "# varování v modelu. Kliknutím je zobrazíte.",
+  "few": "# varování v modelu. Kliknutím zobrazíte seznam.",
+  "other": "# varování v modelu. Kliknutím zobrazíte seznam."
+ },
+ "faults.title": "Závady modelu: {n}",
+ "faults.none": "Žádné chyby ani varování.",
+ "faults.cat.wall": "Stěna",
+ "faults.cat.slab": "Deska",
+ "faults.cat.opening": "Otvor",
+ "faults.cat.curtain_wall": "Fasádní stěna",
+ "faults.cat.ramp": "Rampa",
+ "faults.cat.zone": "Zóna"
+}

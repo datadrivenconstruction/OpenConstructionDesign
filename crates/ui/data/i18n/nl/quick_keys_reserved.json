@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key} is gereserveerd ({why}) en kan niet opnieuw worden toegewezen",
+ "quick.keys.res_copy": "kopiëren",
+ "quick.keys.res_paste": "plakken",
+ "quick.keys.res_cut": "knippen",
+ "quick.keys.res_undo": "ongedaan maken / opnieuw",
+ "quick.keys.res_save": "opslaan",
+ "quick.keys.res_palette": "opdrachtenpalet",
+ "quick.keys.reserved_conflict": "{key} is al in gebruik door “{cmd}”. Esc houdt het daar.",
+ "quick.keys.reserved_swap": "Omwisselen",
+ "quick.keys.reserved_take": "Overnemen",
+ "quick.keys.reserved_keep": "Behouden",
+ "quick.keys.reserved_os": "Bezet door het systeem:"
+}

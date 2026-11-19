@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "自定义",
+ "draw_quality.custom.tip": "{name}：本项目的条目",
+ "draw_quality.custom_note": "标记为“自定义”的条目属于本项目。",
+ "draw_quality.unsaved.lib_body": "保存到库，还是放弃？",
+ "draw_quality.unsaved.styles_body": "应用到视图，还是放弃？",
+ "draw_quality.unsaved.both_body": "应用，还是放弃？",
+ "draw_quality.halftone": "{category} 半色调",
+ "draw_quality.styles.name": "线型",
+ "draw_quality.styles.other_level": "标高 {level} 的未保存线型编辑：请先应用或还原，再编辑此标高。"
+}

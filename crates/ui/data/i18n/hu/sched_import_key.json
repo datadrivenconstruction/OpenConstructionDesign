@@ -1,0 +1,6 @@
+{
+ "sched_import.no_key": "Ennek a munkafüzetnek nincs exportnaplója (régebbi export): az attól az exporttól a modellben módosított cellák felülíródhatnak. Az Alkalmazás előtt ellenőrizze a módosított cellákat.",
+ "sched_import.n_kept": "Az exportálás után a modellben módosítva, megtartva: {n}",
+ "sched_import.n_conflict": "Mindkét helyen módosítva, nincs alkalmazva: {n}",
+ "sched_import.why_conflict": "az exportálás után módosítva a modellben (most: {model}), nincs alkalmazva"
+}

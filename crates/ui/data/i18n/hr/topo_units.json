@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "Jedinice",
+ "topo_units.unit": "Jedinice u datoteci",
+ "topo_units.unit.m": "m",
+ "topo_units.unit.cm": "cm",
+ "topo_units.unit.mm": "mm",
+ "topo_units.unit.ft": "ft",
+ "topo_units.unit.usft": "US survey ft",
+ "topo_units.unit.in": "in",
+ "topo_units.unit.from_file": "Datoteka navodi svoje jedinice: {unit}",
+ "topo_units.unit.suggested": "Datoteka ne navodi jedinice. Predloženo prema opsegu: {unit} — provjerite rezultat u nastavku",
+ "topo_units.extent": "Rezultat u jedinicama projekta: {x} × {y} {u} u tlocrtu, raspon visine {z} {u}",
+ "topo_units.extent.none": "Rezultat: ništa za uvoz s ovim izborima",
+ "topo_units.extent.check": "Ovo ne izgleda kao lokacija: provjerite jedinice"
+}

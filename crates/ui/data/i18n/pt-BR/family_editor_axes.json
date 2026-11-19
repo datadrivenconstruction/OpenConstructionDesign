@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "Eixo X",
+ "fe.axis.y": "Eixo Y",
+ "fe.axis.z": "Eixo Z",
+ "fe.col.axis": "Eixo",
+ "fe.col.at": "Posição",
+ "fe.col.mode": "Modo",
+ "fe.mode.fixed": "Fixo",
+ "fe.mode.free": "Livre",
+ "fe.types.inherited": "Padrão do parâmetro",
+ "fe.csv.more": "Mais ações de CSV",
+ "fe.ref.selected": "Plano: {name}"
+}

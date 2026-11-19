@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "Алдын ала көрүү",
+ "agent_draft.ag.preview.desc": "Баскыч үстүндө курсор турганда бул долбоордун элементтерин холстто бөлүп көрсөтөт. Эч нерсе өзгөрбөйт.",
+ "agent_draft.type.column": "Колонна",
+ "agent_draft.type.roof": "Чатыр",
+ "agent_draft.type.ceiling": "Төбө",
+ "agent_draft.type.stair": "Монолиттик",
+ "agent_draft.type.railing": "Тосмо",
+ "agent_draft.type.shaft": "Шахта",
+ "agent_draft.type.axis": "Ок 6,5 мм",
+ "agent_draft.type.refplane": "Координаталык тегиздик"
+}

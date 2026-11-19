@@ -1,0 +1,10 @@
+{
+ "stage_err.kept": "nanatiling table {t}: {n} row na naisulat pagkatapos ng Add",
+ "stage_err.stage.prev_attached": "Hindi naidagdag: bukas pa ang kopya ng nakaraang Add. Patakbuhin muli ang Add",
+ "stage_err.stage.model_changed": "Hindi naidagdag: nagbago ang model habang binabasa ang file. Patakbuhin muli ang Add",
+ "stage_err.stage.no_record": "Hindi naidagdag: walang change record ang na-import na kopya",
+ "stage_err.stage.table_differs": "Hindi naidagdag: magkaiba ang table {t} sa model at sa na-import na kopya",
+ "stage_err.stage.unique_key": "Hindi naidagdag: hindi masusundan ang unique key ng table {t}",
+ "stage_err.stage.table_gone": "Hindi naidagdag: binago ng import ang table {t}, na wala na sa kopya",
+ "stage_err.stage.copy_held": "Naidagdag; mananatiling bukas ang na-import na kopya hanggang sa susunod na Add o pagbukas muli ng model"
+}

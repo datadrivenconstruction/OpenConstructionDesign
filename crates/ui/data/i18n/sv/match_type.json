@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "Matcha typ",
+ "cmd.mod.match_type.short": "Matcha typ",
+ "cmd.mod.match_type.desc": "Välj en vägg, ett golv, en pelare eller en balk, klicka sedan på andra av samma kategori för att ge dem dess typ. Dra ett fönster för att tillämpa på alla inne i det. Esc släpper källan.",
+ "hint.match_type.pick": "Matcha typ: välj en vägg, ett golv, en pelare eller en balk · Esc — avsluta",
+ "hint.match_type.apply": "Matcha typ: klicka på mål eller dra ett fönster · Esc — annan källa",
+ "match_type.kind.wall": "vägg",
+ "match_type.kind.slab": "golv",
+ "match_type.kind.column": "pelare",
+ "match_type.kind.beam": "balk",
+ "match_type.refuse.category": "Annan kategori: endast en {cat} kan ta den här typen",
+ "match_type.refuse.curtain": "Gardinvägg: dess typ matchas inte här",
+ "match_type.refuse.pinned": "Fastlåst: lås upp den för att ändra typen",
+ "match_type.pick_bad": "Välj en vägg, ett golv, en pelare eller en balk som källa",
+ "match_type.same": "Redan denna typ",
+ "match_type.done": "Typ tillämpad: {n}",
+ "match_type.done_skipped": "Typ tillämpad: {n}, hoppade över (fastlåsta eller gardin): {skipped}",
+ "match_type.failed": "Typen ändrades inte: {err}"
+}

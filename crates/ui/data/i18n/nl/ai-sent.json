@@ -1,0 +1,8 @@
+{
+ "ai_sent.summary": "Projectgegevens in dit verzoek: {messages} berichten, {tools} resultaten van hulpmiddelen, {images} afbeeldingen",
+ "ai_sent.copy": "Kopiëren",
+ "ai_sent.filter": "Zoeken in verzonden verzoeken",
+ "ai_sent.no_match": "Geen enkel verzoek komt overeen.",
+ "ai_sent.instructions": "Instructies en hulpmiddelen",
+ "ai_sent.local_note": "Alleen op deze computer bewaard, voor deze sessie. Sleutels en wachtwoorden worden nooit getoond."
+}

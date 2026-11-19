@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "Duplică planșa cu vederi",
+ "cmd.view.sheet_duplicate_title": "Duplică planșa (doar blocul de titlu)",
+ "sheets.dup.menu_views": "Duplică cu vederi",
+ "sheets.dup.menu_title": "Duplică, doar blocul de titlu",
+ "sheets.dup.done": "Planșa {number} creată din {src}: {views} vederi, {sched} tabele și legende. Reviziile nu se copiază; planșa este nelansată.",
+ "sheets.dup.none": "Deschideți o planșă pentru a o duplica",
+ "sheets.dup.copy": "copie",
+ "cmd.view.sheet_duplicate.short": "Duplică cu vederi",
+ "cmd.view.sheet_duplicate_title.short": "Duplică blocul de titlu"
+}

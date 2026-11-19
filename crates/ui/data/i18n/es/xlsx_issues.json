@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "Filas y celdas omitidas",
+ "xlsx_issues.conflicts_title": "Modificado en ambos lados",
+ "xlsx_issues.missing_title": "Hoja ausente en el libro",
+ "xlsx_issues.look_alike_title": "El nombre de la hoja no coincide",
+ "xlsx_issues.mass_title": "La eliminación masiva necesita confirmación",
+ "xlsx_issues.sheets_missing": "Faltan las hojas {sheets} en el libro (renombradas o eliminadas); sus filas no se compararon.",
+ "xlsx_issues.keep_model": "Conservar modelo",
+ "xlsx_issues.take_book": "Tomar libro",
+ "xlsx_issues.open_book_tip": "Abre el archivo en su aplicación. El modelo no cambia; la vista previa se recarga al guardar el libro."
+}

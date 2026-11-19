@@ -1,0 +1,9 @@
+{
+ "empty.props_model.title": "Ingenting valgt",
+ "empty.props_model.hint": "Klikk et element i visningen for å se egenskapene. Eller eksporter alle parametere til en arbeidsbok, rediger dem der og bruk dem tilbake.",
+ "empty.props_model.action": "Eksporter til regneark",
+ "tut.spreadsheet.title": "Rundtur via regneark",
+ "tut.spreadsheet.1": "Trykk Eksporter til regneark nedenfor: velg hva som skal med, og lagre arbeidsboken.",
+ "tut.spreadsheet.2": "Åpne arbeidsboken i regnearkprogrammet, endre en celle og lagre. Forhåndsvisningen her viser endringen.",
+ "tut.spreadsheet.3": "Kontroller forhåndsvisningen og trykk Bruk på modellen. Ctrl+Z angrer."
+}

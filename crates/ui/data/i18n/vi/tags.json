@@ -1,0 +1,13 @@
+{
+ "tags.gone": "Nhãn không còn tồn tại",
+ "tags.readonly_wall": "Nhãn tường hiển thị loại và không thể sửa ở đây: hãy đổi loại tường",
+ "tags.readonly_comp": "Nhãn cấu kiện hiển thị họ và không thể sửa ở đây: hãy đổi loại",
+ "tags.locked": "Phần tử đã khóa: hãy mở khóa để sửa nhãn",
+ "tags.done": "Đã ghi giá trị nhãn",
+ "tags.failed": "Chưa đổi nhãn: {e}",
+ "tags.dup_door": "{mark} cũng có trên {n} cửa đi",
+ "tags.dup_window": "{mark} cũng có trên {n} cửa sổ",
+ "tags.dup_room": "{mark} cũng có trên {n} phòng",
+ "tags.hint_mark": "Ký hiệu",
+ "tags.hint_name": "Tên phòng"
+}

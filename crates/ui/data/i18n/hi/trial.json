@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "बिंदु",
+ "trial.field.distance": "दूरी",
+ "trial.field.target": "तत्व",
+ "trial.refused": "{field}: {reason}। लागू करने के लिए बदलें",
+ "trial.preview_off": "प्रीव्यू बंद: मॉडल बहुत बड़ा है"
+}

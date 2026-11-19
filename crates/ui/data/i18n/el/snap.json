@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "Άκρο",
+ "snap.midpoint": "Μέσο",
+ "snap.perpendicular": "Κάθετο",
+ "snap.wall_axis": "Άξονας τοίχου",
+ "snap.wall_face": "Έδρα τοίχου",
+ "snap.grid": "Κάναβος",
+ "snap.intersection": "Τομή",
+ "snap.grid_axis": "Γραμμή κανάβου",
+ "snap.ref_plane": "Επίπεδο αναφοράς",
+ "snap.nearest": "Πλησιέστερο",
+ "snap.align_x": "Ευθυγραμμισμένο στον X με απομακρυσμένο σημείο",
+ "snap.align_y": "Ευθυγραμμισμένο στον Y με απομακρυσμένο σημείο",
+ "snap.align_xy": "Ευθυγραμμισμένο στους X και Y"
+}

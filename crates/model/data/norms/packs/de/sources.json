@@ -1,0 +1,106 @@
+{
+ "sources": [
+  {
+   "id": "mbo2022",
+   "title": "Model Building Code (MBO) 2022, state codes follow it",
+   "licence": "public-law",
+   "verified": "2026-11-13",
+   "publisher": "Bauministerkonferenz",
+   "edition": "2002, amended 2020-09-25",
+   "url": "https://bauministerkonferenz.de/Dokumente/42323530.pdf"
+  },
+  {
+   "id": "din18065",
+   "title": "DIN 18065 Stairs in buildings",
+   "licence": "copyright-numbers-only",
+   "verified": null,
+   "publisher": "DIN",
+   "edition": "2015"
+  },
+  {
+   "id": "din18040-2",
+   "title": "DIN 18040-2 Accessible building, dwellings",
+   "licence": "copyright-numbers-only",
+   "verified": null,
+   "publisher": "DIN",
+   "edition": "2011"
+  },
+  {
+   "id": "asr-a1.2",
+   "title": "Workplace rule ASR A1.2 Room dimensions and movement areas",
+   "licence": "public-law",
+   "verified": "2026-11-13",
+   "publisher": "BAuA",
+   "url": "https://www.baua.de/DE/Angebote/Regelwerk/ASR/pdf/ASR-A1-2.pdf?__blob=publicationFile",
+   "edition": "2013, amended 2022"
+  },
+  {
+   "id": "asr-a1.8",
+   "title": "Workplace rule ASR A1.8 Traffic routes",
+   "licence": "public-law",
+   "verified": "2026-11-13",
+   "publisher": "BAuA",
+   "url": "https://www.baua.de/DE/Angebote/Regelwerk/ASR/pdf/ASR-A1-8.pdf?__blob=publicationFile",
+   "edition": "2022, amended 2024"
+  },
+  {
+   "id": "asr-a2.3",
+   "title": "Workplace rule ASR A2.3 Escape routes and emergency plans",
+   "licence": "public-law",
+   "verified": "2026-11-13",
+   "publisher": "BAuA",
+   "url": "https://www.baua.de/DE/Angebote/Regelwerk/ASR/pdf/ASR-A2-3.pdf?__blob=publicationFile",
+   "edition": "2024"
+  },
+  {
+   "id": "din-ts12831-1",
+   "title": "DIN/TS 12831-1 Heating load, national supplement with standard outdoor temperatures",
+   "publisher": "DIN",
+   "edition": "2020",
+   "licence": "copyright-numbers-only",
+   "verified": null
+  },
+  {
+   "id": "din4710",
+   "title": "DIN 4710 Statistics of meteorological data for HVAC design",
+   "publisher": "DIN",
+   "edition": "2003",
+   "licence": "copyright-numbers-only",
+   "verified": null
+  },
+  {
+   "id": "din-en16798-1",
+   "title": "DIN EN 16798-1 Energy performance of buildings, indoor environmental input parameters",
+   "publisher": "DIN",
+   "edition": "2022",
+   "licence": "copyright-numbers-only",
+   "verified": null
+  },
+  {
+   "id": "mvstaettvo",
+   "title": "Muster-Versammlungsstättenverordnung (MVStättVO)",
+   "licence": "public-law",
+   "publisher": "Fachkommission Bauaufsicht der Bauministerkonferenz",
+   "edition": "Fassung Juni 2005, zuletzt geändert Juli 2014",
+   "url": "https://www.bauministerkonferenz.de/Dokumente/4231724917250.pdf",
+   "verified": "2026-11-14"
+  },
+  {
+   "id": "geg",
+   "title": "Building Energy Act (GEG), annex 1 reference building of a dwelling",
+   "licence": "public-law",
+   "verified": null,
+   "publisher": "Federal Republic of Germany",
+   "edition": "2024",
+   "url": "https://www.gesetze-im-internet.de/geg/anlage_1.html"
+  },
+  {
+   "id": "din4109-1",
+   "title": "DIN 4109-1 Sound insulation in buildings, minimum requirements",
+   "licence": "copyright-numbers-only",
+   "verified": null,
+   "publisher": "DIN",
+   "edition": "2018"
+  }
+ ]
+}

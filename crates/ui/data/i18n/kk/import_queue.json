@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "Орындалып жатқан тапсырманың артында кезекте: {n}",
+ "import_queue.queue_full": "Кезек толы, {n} файл қосылмады",
+ "import_queue.changed": "{name} осы жоба жасалғаннан кейін жаңартылды. Алдыңғы жоба ашылды.",
+ "import_queue.import_again": "Қайта импорттау",
+ "import_queue.kept": "Аяқталған импорт сақталды",
+ "import_queue.open_it": "Ашу",
+ "import_queue.sum.head": "импорт: {editable} өңделетін (қабырғалар {walls}, ойықтар {open}, едендер {slabs}, бөлмелер {rooms}, басқа {other}), {meshes} тор ретінде",
+ "import_queue.sum.unchanged": ", өзгермеген {n}",
+ "import_queue.sum.updated": ", жаңартылған {n}",
+ "import_queue.sum.missing": ", бастапқыда жоқ {n} (сақталды)",
+ "import_queue.sum.skipped": ", өткізілді {n}",
+ "import_queue.sum.warnings": ", ескертулер {n}",
+ "import_queue.import_failed": "импорт сәтсіз: {e}"
+}

@@ -1,0 +1,4 @@
+{
+ "ai.issue.delete_large": "{0} phần tử sẽ bị xóa, vượt giới hạn {1}. Cần được cho phép",
+ "ai.issue.refused_large": "{0} phần tử sẽ thay đổi, vượt giới hạn cứng {1}. Hãy chia kế hoạch thành các phần nhỏ hơn"
+}

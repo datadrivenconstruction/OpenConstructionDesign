@@ -1,0 +1,14 @@
+{
+ "ai.issue.integrity": "Integriteitsprobleem: {0} {1}: {2}",
+ "ai.issue.opening_outside": "De opening past niet in de wand: {0}",
+ "ai.issue.opening_overlap": "De opening overlapt opening {0}",
+ "ai.issue.wall_warning": "Wand: {0}",
+ "ai.issue.cut_warning": "Afsnijding: {0}",
+ "ai.issue.room_open": "De ruimte is niet gesloten",
+ "ai.issue.material_unknown": "Geen materiaal met de naam \"{0}\" in het project: Toepassen maakt een nieuw aan met standaardeigenschappen",
+ "ai.issue.material_suggest": "Geen materiaal met de naam \"{0}\" in het project: Toepassen zou een nieuw aanmaken. Bedoelde u \"{1}\"?",
+ "ai.issue.conflict": "Dit onderdeel kan niet worden uitgevoerd: {0}",
+ "ai.issue.too_large": "{0} elementen zouden wijzigen, boven de limiet van {1}. Toestemming is nodig",
+ "ai.issue.truncated": "De lijst met wijzigingen stopte bij {0} rijen: het plan is groter dan de kaart kan tonen. Toestemming is nodig",
+ "ai.issue.replan_failed": "Het plan kon niet opnieuw worden berekend. Er wordt een nieuwe kopie van het model gemaakt"
+}

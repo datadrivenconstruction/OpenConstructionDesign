@@ -1,0 +1,6 @@
+{
+ "quick.keys.rec_hint": "Esc hủy · Backspace xóa",
+ "quick.keys.row_lost": "{key} nay thuộc về “{cmd}”",
+ "quick.keys.row_took": "Đã lấy {key} từ “{cmd}”",
+ "quick.keys.reset_tip": "Đặt lại mặc định"
+}

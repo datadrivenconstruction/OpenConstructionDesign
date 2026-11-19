@@ -1,0 +1,8 @@
+{
+ "script_rec.started": "Grabación: las ediciones que haga a partir de ahora se guardarán en un script. Para detenerla, vuelva a elegir «Grabar acciones en script».",
+ "script_rec.saved": "Script «{name}» guardado: ediciones — {n}.",
+ "script_rec.skipped": "No se grabaron ediciones hechas con herramientas sin forma de script: {k}.",
+ "script_rec.nothing": "Grabación detenida: no hay ediciones que guardar.",
+ "script_rec.failed": "La grabación no se guardó: {why}",
+ "script_rec.no_folder": "no hay carpeta de configuración para los scripts"
+}

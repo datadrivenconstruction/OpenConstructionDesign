@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "แผง",
+ "curtain_props.cw.panel_cell": "ช่อง {i}×{j} · ผนังม่าน #{id}",
+ "curtain_props.cw.kind": "ประเภท",
+ "curtain_props.cw.kind.glazed": "กระจก",
+ "curtain_props.cw.kind.solid": "ทึบ",
+ "curtain_props.cw.kind.door": "ประตู",
+ "curtain_props.cw.kind.window": "หน้าต่าง",
+ "curtain_props.cw.kind.empty": "ว่าง",
+ "curtain_props.cw.name": "ชื่อ",
+ "curtain_props.cw.swing_side": "เปิดไปอีกด้าน",
+ "curtain_props.cw.swing_hinge": "บานพับที่ปลายช่อง",
+ "curtain_props.cw.size": "ขนาด",
+ "curtain_props.cw.cell_area": "พื้นที่ช่อง",
+ "curtain_props.cw.panel_area": "พื้นที่แผง",
+ "curtain_props.cw.prev": "แผงก่อนหน้า",
+ "curtain_props.cw.next": "แผงถัดไป",
+ "curtain_props.cw.wall": "เลือกผนัง",
+ "curtain_props.cw.panel_hint": "Esc — การเลือก · Ctrl+Z — เลิกทำ",
+ "curtain_props.cw.status.panel": "แผง {i}×{j} → {kind}",
+ "e3d.err.cw_height": "ความสูงผนังม่านต้องมากกว่า 100 mm"
+}

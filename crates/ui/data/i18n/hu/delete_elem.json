@@ -1,0 +1,9 @@
+{
+ "elem.deleted": "Törölt elemek: {n}",
+ "elem.deleted_kept": "Törölt elemek: {n}; helyükön maradt: {k} (függönyfal-panelek és a törölhetetlen elemek)",
+ "elem.not_deleted": "nem törölve: {e}",
+ "elem.not_deletable": "Ez az elem nem törölhető",
+ "elem.panel": "függönyfal-panel",
+ "elem.panel_refused": "A panel a függönyfal része, önállóan nem törölhető. Törléséhez jelölje ki az egész falat.",
+ "elem.reload_failed": "Törölve, de a nézet nem frissült: {e}"
+}

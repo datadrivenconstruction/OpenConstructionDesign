@@ -1,0 +1,5 @@
+{
+ "elem.panel_select_wall": "Sélectionner le mur",
+ "cmd.elem.panel_select_wall": "Sélectionner le mur",
+ "elem.left_in_place": "Laissés en place : {kinds}. Un panneau appartient à son mur ; les masses et annotations sont supprimées automatiquement."
+}

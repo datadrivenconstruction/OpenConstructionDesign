@@ -1,0 +1,5 @@
+{
+ "xlsx_delete.delete_missing": "Slet rækker, der mangler i regnearket",
+ "xlsx_delete.not_removed": "ikke fjernet: ingen sammenligningsdata",
+ "xlsx_delete.no_base_reason": "Ikke tilgængelig: regnearket har ingen sammenligningsdata, så en manglende række kan ikke skelnes fra en fjernet ved en fejl. Intet slettes ved Anvend."
+}

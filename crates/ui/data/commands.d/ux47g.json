@@ -1,0 +1,16 @@
+[
+ {
+  "id": "help.shortcuts",
+  "icon": "keyboard",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R",
+   "A"
+  ],
+  "stage": "M1",
+  "group": "help",
+  "priority": 7
+ }
+]

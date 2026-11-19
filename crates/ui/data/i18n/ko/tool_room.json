@@ -1,0 +1,9 @@
+{
+ "tool.room": "실",
+ "tool.room.name": "실",
+ "room_tool.room.name": "이름",
+ "hint.room.place": "닫힌 벽 루프 안을 클릭해 실 만들기 · Esc — 종료",
+ "tool.err.room_open": "영역이 닫히지 않음: 벽 루프를 닫거나 실 구분선을 추가하세요",
+ "tool.err.room_check": "이 레벨의 실을 확인할 수 없습니다",
+ "tool.err.room_exists": "이 루프에 이미 실이 있습니다"
+}

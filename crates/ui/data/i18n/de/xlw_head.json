@@ -1,0 +1,15 @@
+{
+ "xlw.hd_never": "Noch nicht exportiert",
+ "xlw.hd_now": "gerade eben",
+ "xlw.hd_min": "vor {n} Min.",
+ "xlw.hd_hour": "vor {n} Std.",
+ "xlw.hd_day": "vor {n} T",
+ "xlw.hd_linked": "Verknüpft",
+ "xlw.hd_watched": "Überwacht",
+ "xlw.hd_stale": "Modell seit dem Export geändert",
+ "xlw.ft_export": "Exportieren",
+ "xlw.ft_review": "Prüfen",
+ "xlw.ft_apply": "{n} Änderungen anwenden",
+ "xlw.ft_delete_missing": "Fehlende löschen",
+ "xlw.ft_keep_missing_tip": "Löschen ist aktiv: Elemente ohne Zeile werden beim Anwenden gelöscht. Abwählen, um sie zu behalten."
+}

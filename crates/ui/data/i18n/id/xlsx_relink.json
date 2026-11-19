@@ -1,0 +1,14 @@
+{
+ "xlsx_relink.title": "Buku kerja tertaut dipindah atau diganti nama",
+ "xlsx_relink.body": "Buku kerja “{file}” tidak lagi berada di {folder}. Suntingan yang diketik di dalamnya baru kembali setelah ditautkan lagi.",
+ "xlsx_relink.found_one": "Ditemukan “{file}” di {folder}: proyek dan ekspor yang sama. Tautkan?",
+ "xlsx_relink.found_many": "{n} buku kerja dari proyek ini dan ekspor ini ditemukan. Pilih yang akan ditautkan:",
+ "xlsx_relink.found_none": "Tidak ada buku kerja dari ekspor ini di sampingnya. Cari, atau ekspor buku kerja baru.",
+ "xlsx_relink.link": "Tautkan “{file}”",
+ "xlsx_relink.find": "Cari…",
+ "xlsx_relink.find_title": "Cari buku kerja yang tertaut",
+ "xlsx_relink.export_new": "Ekspor buku kerja baru",
+ "xlsx_relink.close": "Tutup",
+ "xlsx_relink.gone": "Buku kerja “{file}” tidak lagi berada di foldernya. Suntingan yang diketik di dalamnya baru kembali setelah ditautkan lagi.",
+ "xlsx_relink.found_one_short": "Ditemukan “{file}”: proyek dan ekspor yang sama. Tautkan?"
+}

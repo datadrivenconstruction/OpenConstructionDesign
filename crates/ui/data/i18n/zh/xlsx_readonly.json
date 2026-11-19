@@ -1,0 +1,6 @@
+{
+ "xlsx_readonly.read_only": "工作簿为只读（文件属性或文件夹权限）。请导出为副本，或在文件属性中取消“只读”后重试。",
+ "xlsx_readonly.export_copy": "导出为副本",
+ "xlsx_readonly.no_copy_name": "工作簿旁边没有可用于副本的名称。",
+ "xlsx_readonly.copied": "工作簿保持不变。已在其旁边写入刷新后的副本并已建立链接：{path}"
+}

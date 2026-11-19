@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "Denne arbeidsboken finnes allerede",
+ "xlsx_exists.foreign": "Den er ikke en arbeidsbok for dette prosjektet, så den erstattes aldri.",
+ "xlsx_exists.pending": "Den har {n} redigeringer som ikke er brukt på modellen ennå.",
+ "xlsx_exists.outside": "Den har {n} rader som den nye eksporten ikke tar med.",
+ "xlsx_exists.new_name": "Eksporter til {name}",
+ "xlsx_exists.apply_first": "Bruk dem først",
+ "xlsx_exists.replace": "Erstatt (gammel arbeidsbok til _archive)",
+ "xlsx_exists.archived": "Gammel arbeidsbok flyttet til {path}",
+ "xlsx_exists.archive_failed": "Den gamle arbeidsboken kunne ikke flyttes, ingenting ble eksportert: {error}"
+}

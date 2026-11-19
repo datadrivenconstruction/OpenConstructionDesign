@@ -1,0 +1,10 @@
+{
+ "view_gfx.vv.visible_tip": "Ορατό σε αυτή την προβολή",
+ "view_gfx.vv.enabled_tip": "Εφαρμογή αυτού του φίλτρου σε αυτή την προβολή",
+ "view_gfx.vv.reset_tip": "Επιστροφή στην προεπιλογή του έργου",
+ "view_gfx.vv.col.actions": "Ενέργειες",
+ "view_gfx.vv.nothing_to_apply": "Δεν υπάρχουν αλλαγές για εφαρμογή",
+ "view_gfx.flt.save_blocked": "Δώστε όνομα στο φίλτρο και συμπληρώστε κάθε παράμετρο κανόνα",
+ "view_gfx.flt.confirm_delete": "Διαγραφή για όλες τις προβολές;",
+ "view_gfx.flt.param_pick": "Επιλογή…"
+}

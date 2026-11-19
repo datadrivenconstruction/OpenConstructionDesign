@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "측정값 {value}, 한도 {limit}",
+ "ai_checks.check.cap": "{total}개 중 {shown}개 결과 표시. 오류가 먼저 나옵니다. 수정한 뒤 다시 실행하세요.",
+ "ai_checks.check.run_again": "다시 실행",
+ "ai_checks.check.goto": "선택하고 확대",
+ "ai_checks.check.never_title": "아직 검사하지 않았습니다",
+ "ai_checks.check.never_hint": "검사를 실행하면 결과가 여기에 표시됩니다.",
+ "ai_checks.check.sec.error": "오류",
+ "ai_checks.check.sec.warning": "경고",
+ "ai_checks.check.sec.info": "참고"
+}

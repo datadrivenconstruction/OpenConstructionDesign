@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "Σε αναμονή πίσω από την εργασία που εκτελείται: {n}",
+ "import_queue.queue_full": "Η ουρά είναι γεμάτη, {n} αρχεία δεν προστέθηκαν",
+ "import_queue.changed": "Το {name} ενημερώθηκε μετά τη δημιουργία αυτού του έργου. Ανοίχτηκε το προηγούμενο έργο.",
+ "import_queue.import_again": "Νέα εισαγωγή",
+ "import_queue.kept": "Η ολοκληρωμένη εισαγωγή διατηρείται",
+ "import_queue.open_it": "Άνοιγμα",
+ "import_queue.sum.head": "εισαγωγή: {editable} επεξεργάσιμα (τοίχοι {walls}, ανοίγματα {open}, πλάκες {slabs}, χώροι {rooms}, άλλα {other}), {meshes} ως πλέγμα",
+ "import_queue.sum.unchanged": ", αμετάβλητα {n}",
+ "import_queue.sum.updated": ", ενημερώθηκαν {n}",
+ "import_queue.sum.missing": ", δεν υπάρχουν στην πηγή {n} (διατηρήθηκαν)",
+ "import_queue.sum.skipped": ", παραλείφθηκαν {n}",
+ "import_queue.sum.warnings": ", προειδοποιήσεις {n}",
+ "import_queue.import_failed": "η εισαγωγή απέτυχε: {e}"
+}

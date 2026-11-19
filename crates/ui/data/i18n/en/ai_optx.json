@@ -1,0 +1,10 @@
+{
+ "ai.optx.applied": "Option \"{name}\" applied. Undo returns it to draft",
+ "ai.optx.missing": "Option {id} no longer exists",
+ "ai.optx.accepted": "Option {id} is already applied",
+ "ai.optx.not_draft": "Option {id} was rejected and cannot be applied",
+ "ai.optx.stale": "The model changed after option {id} was made: regenerate it first",
+ "ai.optx.bad_recipe": "The option recipe cannot be read: {e}",
+ "ai.optx.refused": "The option was not applied ({code}): {reason}",
+ "ai.optx.failed": "The option was not applied: {e}"
+}

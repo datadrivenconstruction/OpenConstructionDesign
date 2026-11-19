@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "اسنیپ رداس",
+ "snap_refine.settings.snap_px_desc": "اسنیپ کے لیے کرسر کو نقطے یا لائن کے کتنا قریب آنا چاہیے، اسکرین پکسلز میں۔ ٹچ اسکرین اور زیادہ ڈینسٹی ڈسپلے پر بڑی قدر مددگار ہوتی ہے۔",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "افقی",
+ "snap_refine.hint.vertical": "عمودی",
+ "snap_refine.hint.perpendicular": "پچھلے کے عمود پر",
+ "snap_refine.hint.parallel": "پچھلے کے متوازی",
+ "snap_refine.hint.on_axis": "دیوار کے محور پر",
+ "snap_refine.no_snap": "اسنیپ نہیں (Alt)"
+}

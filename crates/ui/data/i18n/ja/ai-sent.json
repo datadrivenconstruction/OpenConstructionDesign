@@ -1,0 +1,8 @@
+{
+ "ai_sent.summary": "このリクエストのプロジェクトデータ: メッセージ {messages} 件、ツール結果 {tools} 件、画像 {images} 件",
+ "ai_sent.copy": "コピー",
+ "ai_sent.filter": "送信済みリクエストを検索",
+ "ai_sent.no_match": "一致するリクエストはありません。",
+ "ai_sent.instructions": "指示とツール",
+ "ai_sent.local_note": "このコンピュータにのみ、このセッション中保存されます。キーとパスワードは表示されません。"
+}

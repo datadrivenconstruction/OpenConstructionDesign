@@ -1,0 +1,8 @@
+{
+ "v3d.proj.to_ortho": "正投影に切り替え",
+ "v3d.proj.to_persp": "透視投影に切り替え",
+ "v3d.walk.unit.m": "m/s",
+ "v3d.walk.unit.ft": "ft/s",
+ "v3d.temp.show_all": "すべて表示  ·  Esc",
+ "v3d.msg.deleted_named": "3D ビュー {name} を削除しました"
+}

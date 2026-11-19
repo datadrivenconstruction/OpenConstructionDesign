@@ -1,0 +1,14 @@
+{
+ "dwg_table.copy": "Kopioi taulukko",
+ "dwg_table.copy_tip": "Kopioi määrälaskenta tasoittain taulukkolaskentaan sopivana taulukkona",
+ "dwg_table.copied": "Määrälaskenta kopioitu (sarkaineroteltu)",
+ "dwg_table.total": "Yhteensä",
+ "dwg_table.col.layer": "Taso",
+ "dwg_table.col.count": "Määrä",
+ "dwg_table.col.len": "Pituus, {unit}",
+ "dwg_table.col.area": "Pinta-ala, {unit}",
+ "dwg_table.unit.mm": "mm",
+ "dwg_table.unit.m2": "m²",
+ "dwg_table.unit.ft": "ft",
+ "dwg_table.unit.ft2": "ft²"
+}

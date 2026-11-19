@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "কবজার দিক উল্টান",
+ "cmd.edit.flip_hand.desc": "নির্বাচিত দরজা ও জানালা দেয়াল বরাবর আয়নার মতো উল্টায়, যাতে কবজা ওপেনিংয়ের অন্য প্রান্তে যায়।",
+ "cmd.edit.flip_facing": "খোলার দিক উল্টান",
+ "cmd.edit.flip_facing.desc": "নির্বাচিত দরজা ও জানালা দেয়ালের অন্য পাশে ঘোরায়।",
+ "opening_grips.flip_hand": "কবজা উল্টান",
+ "opening_grips.flip_hand.tip": "ওপেনিংয়ের অন্য প্রান্তে কবজা (Shift+F)",
+ "opening_grips.flip_facing": "দিক উল্টান",
+ "opening_grips.flip_facing.tip": "দেয়ালের অন্য পাশে খোলা (Shift+G)",
+ "opening_grips.flip.done": "উল্টানো হয়েছে: {n}",
+ "opening_grips.flip.none": "উল্টাতে একটি দরজা বা জানালা নির্বাচন করুন",
+ "opening_grips.flip.fail": "উল্টানো হয়নি: {why}"
+}

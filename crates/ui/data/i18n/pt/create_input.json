@@ -1,0 +1,14 @@
+{
+ "cmd.mod.divide": "Dividir",
+ "cmd.mod.divide.short": "Dividir",
+ "cmd.mod.divide.desc": "Divide uma parede em partes iguais num só passo. Escreva o número de partes e clique na parede.",
+ "whereis.mod.divide": "dividir, partes iguais, cortar em pedaços, segmentar parede",
+ "hint.split.parts": "Dividir: clique numa parede · número — partes (2–100) · Esc — cancelar",
+ "create_input.divide.bad_parts": "«{text}» não é um número de partes: escreva um número inteiro de 2 a {max}",
+ "create_input.ws.err.empty": "Escreva um nome para a disposição",
+ "create_input.ws.err.long": "O nome é demasiado longo: no máximo 40 caracteres",
+ "create_input.ws.err.preset": "Esse nome pertence a uma disposição incorporada",
+ "create_input.ws.err.full": "No máximo 24 disposições guardadas: remova primeiro uma",
+ "create_input.seldim.locked": "Distância {v} bloqueada",
+ "create_input.seldim.positive": "A distância tem de ser superior a zero"
+}

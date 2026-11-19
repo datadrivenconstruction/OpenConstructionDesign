@@ -1,0 +1,8 @@
+{
+ "cmd.arch.room_auto": "Umístit místnosti automaticky",
+ "cmd.arch.room_auto.desc": "Umístí místnost do každé uzavřené hranice aktivního podlaží, která žádnou nemá. Otevřené smyčky stěn se přeskočí a nikdy se nedoplní odhadem. Jeden krok zpět.",
+ "room_place.placed": "Umístěno místností: {n}. Oblasti, které již místnost měly: {m}. Přeskočené otevřené smyčky: {k}",
+ "room_place.all_had": "Nic neumístěno: všechny uzavřené oblasti ({m}) již místnost mají. Přeskočené otevřené smyčky: {k}",
+ "room_place.none": "Nic neumístěno: podlaží nemá žádné uzavřené oblasti stěn",
+ "room_place.none_open": "Nic neumístěno: podlaží nemá žádné uzavřené oblasti stěn. Přeskočené otevřené smyčky: {k}"
+}

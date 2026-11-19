@@ -1,0 +1,11 @@
+{
+ "cmd.ctx.ceiling.clean_outline": "Rensa konturen",
+ "cmd.ctx.ceiling.clean_outline.desc": "Tar bort smala spikar där takkonturen viker tillbaka på sig själv. Visar en förhandsvisning först; ett steg att ångra.",
+ "cmd.ctx.shaft.clean_outline": "Rensa konturen",
+ "cmd.ctx.shaft.clean_outline.desc": "Tar bort smala spikar där schaktkonturen viker tillbaka på sig själv. Visar en förhandsvisning först; ett steg att ångra.",
+ "outline_cleanup.intro_ceiling": "Konturen för taket viker tillbaka på sig själv i smala spikar: {n}. Rensningen tar bort dem; allt annat förblir oförändrat.",
+ "outline_cleanup.intro_shaft": "Konturen för schaktet viker tillbaka på sig själv i smala spikar: {n}. Rensningen tar bort dem; allt annat förblir oförändrat.",
+ "outline_cleanup.none_ceiling": "Konturen för taket har inga spikar",
+ "outline_cleanup.none_shaft": "Konturen för schaktet har inga spikar",
+ "outline_cleanup.need_host": "Välj ett golv, tak eller schakt"
+}

@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "צינור אוורור",
+ "mep3d.pipe": "צינור",
+ "mep3d.tray": "מסילת כבלים",
+ "mep3d.conduit": "צנרת",
+ "mep3d.system": "מערכת",
+ "mep3d.length": "אורך",
+ "mep3d.diameter": "קוטר",
+ "mep3d.width": "רוחב",
+ "mep3d.height": "גובה",
+ "mep3d.insulation": "בידוד",
+ "mep3d.tip": "Enter — החלה; האביזרים מחושבים מחדש",
+ "mep3d.size_positive": "הגודל חייב להיות גדול מאפס",
+ "mep3d.not_changed": "לא שונה: {e}",
+ "mep3d.copied": "המסלול הועתק",
+ "mep3d.changed": "המסלול שונה",
+ "mep3d.deleted": "אלמנטים שנמחקו: {n}",
+ "mep3d.not_deleted": "לא נמחק: {e}",
+ "mep3d.no_wall_type": "אין סוג קיר",
+ "mep3d.demo.supply": "אספקה S1",
+ "mep3d.demo.heating": "חימום",
+ "mep3d.demo.power": "חשמל"
+}

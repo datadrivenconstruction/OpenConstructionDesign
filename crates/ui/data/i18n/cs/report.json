@@ -1,0 +1,23 @@
+{
+ "cmd.app.report": "Nahlásit problém…",
+ "cmd.app.report.desc": "Popíše, co se pokazilo, a uloží balíček do tohoto počítače: váš text, údaje o sestavení a systému, snímek okna a záznam posledního pádu. Nic se neodesílá.",
+ "report.title": "Nahlásit problém",
+ "report.what": "Co se stalo",
+ "report.expected": "Co jste očekávali",
+ "report.steps": "Kroky k zopakování",
+ "report.opt.shot": "Přiložit snímek okna",
+ "report.opt.model": "Přiložit kopii modelu",
+ "report.opt.model.note": "Ve výchozím nastavení vypnuto. Kopie obsahuje data projektu bez deníku AI.",
+ "report.opt.paths": "Ponechat uživatelská jména v cestách k souborům",
+ "report.local": "Balíček je uložen pouze v tomto počítači. Nic se neodesílá automaticky.",
+ "report.blocked": "Nejprve popište, co se stalo.",
+ "report.save": "Uložit balíček",
+ "report.copy": "Kopírovat text",
+ "report.cancel": "Zrušit",
+ "report.copied": "Text hlášení zkopírován.",
+ "report.saved": "Balíček uložen: {path}",
+ "report.failed": "Balíček nebylo možné uložit: {err}",
+ "report.model.fail": "Kopii modelu nebylo možné vytvořit, nic nebylo uloženo: {err}",
+ "report.crash.notice": "Předchozí relace skončila pádem.",
+ "report.crash.action": "Nahlásit problém"
+}

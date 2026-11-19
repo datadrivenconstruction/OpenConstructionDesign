@@ -1,0 +1,7 @@
+{
+ "xl.msg.param_ambiguous": "column '{}' could be any of the parameters {}; type the exact parameter name, not applied",
+ "xl.msg.param_tag_stale": "column '{}' names a parameter this project does not have; not applied",
+ "xl.msg.dup_col_note": "column '{}' in {} repeats column '{}' in {}; equal values apply once, a row where they differ keeps the model value",
+ "xl.msg.dup_col_differs": "columns '{}' and '{}' differ in {} and {}; the model value stays — keep one column",
+ "xl.msg.dup_col_id": "columns '{}' and '{}' differ in {} and {}, the row cannot be identified; nothing applied — keep one column"
+}

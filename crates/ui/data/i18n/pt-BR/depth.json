@@ -1,0 +1,22 @@
+{
+ "depth.chip": "Profundidade {level}",
+ "depth.chip_tip": "Até onde a próxima execução desenvolve o projeto: D1 conceito a D5 fabrico, por disciplina",
+ "depth.all_off": "todas as disciplinas desligadas",
+ "depth.disc.arch": "Arq",
+ "depth.disc.struct": "Estr",
+ "depth.disc.mep": "MEP",
+ "depth.disc.doc": "Documentos",
+ "depth.project": "Profundidade do projeto",
+ "depth.level.1": "D1 Conceito: volumetria, pisos, áreas, uma folha",
+ "depth.level.2": "D2 Esboço: paredes, espaços por programa, aberturas, malha, plantas",
+ "depth.level.3": "D3 Projeto: tipos por camadas, estrutura dimensionada, troncos e terminais MEP, tabelas",
+ "depth.level.4": "D4 Execução: pormenores de ligação, ferragens, acabamentos, armaduras, derivações",
+ "depth.level.5": "D5 Fabrico: listas de dobragem, ligações metálicas, pré-fabricação, lista de materiais",
+ "depth.as_project": "Igual",
+ "depth.estimate": "Estimativa: cerca de {elements} elementos, {minutes} min, {tokens} tokens em {calls} chamadas, {sheets} folhas",
+ "depth.estimate_none": "A estimativa surge com o projeto esboçado: o modelo ainda está vazio",
+ "depth.heat": "Mapa de calor da profundidade",
+ "depth.heat.row": "Profundidade",
+ "depth.settings": "Profundidade de desenho deste projeto",
+ "depth.settings_desc": "Profundidade com que o assistente de IA trabalha, D1 a D5, com um interruptor e profundidade própria por disciplina; salva no arquivo do projeto"
+}

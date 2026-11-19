@@ -1,0 +1,20 @@
+{
+ "api.cmd.move_elements": "Flytt elementer med en forskyvning i meter",
+ "api.cmd.copy_elements": "Kopier elementer med én eller flere forskyvninger i meter",
+ "api.cmd.rotate_elements": "Roter elementer om et punkt med en vinkel i grader",
+ "api.cmd.mirror_elements": "Speil elementer om en akse gjennom to punkter",
+ "api.cmd.scale_elements": "Skaler elementer om et punkt med en faktor",
+ "api.cmd.array_elements": "Lineær eller radial rekke av elementer",
+ "api.cmd.offset_wall": "Parallell kopi av en vegg i en avstand i meter",
+ "api.cmd.split_wall": "Del en vegg i to i et punkt",
+ "api.cmd.pin_elements": "Lås eller lås opp elementer",
+ "api.cmd.flip_openings": "Snu hengselsiden eller vendingen på dører og vinduer",
+ "api.cmd.create_level": "Opprett en etasje på en kote i meter",
+ "api.cmd.edit_level": "Gi en etasje nytt navn eller endre kotehøyden",
+ "api.cmd.delete_level": "Slett en etasje",
+ "api.cmd.place_rooms": "Plasser et rom i hvert lukket område i en etasje",
+ "api.cmd.join_elements": "Koble sammen, koble fra eller bytt geometriske sammenkoblinger",
+ "api.cmd.place_footings": "Plasser et fundament under hver søyle i en etasje",
+ "api.cmd.create_terrain": "Opprett terreng fra målepunkter eller et skråplan",
+ "api.cmd.script_recipes": "Les skriptbyggeklossene og oppskriftene for frie konstruksjoner"
+}

@@ -1,0 +1,18 @@
+{
+ "undo.entry_later": "Tidak diurungkan: ada perubahan lain setelahnya. Urungkan yang itu dulu.",
+ "undo.entry_gone": "Tidak diurungkan: perubahan ini sudah diurungkan atau tidak lagi ada di riwayat.",
+ "undo.entry_busy": "Selesaikan atau batalkan gambar saat ini dulu, lalu urungkan.",
+ "quick.hud.more": "Lainnya di Properti: {names}",
+ "sheet_tools.sheet.more": "Alat lembar lainnya",
+ "job.of": "{d} dari {t}",
+ "job.of.mb": "{d} dari {t} MB",
+ "job.left.under_minute": "kurang dari semenit lagi",
+ "job.left.minutes": "sekitar {n} mnt lagi",
+ "sheet_tools.start.units": "Satuan",
+ "sheet_tools.print.save": {
+  "one": "Simpan # lembar",
+  "other": "Simpan # lembar"
+ },
+ "sheet_tools.sets.delete_ask": "Hapus set “{name}”? Lembarnya tetap di proyek.",
+ "sheet_tools.keep": "Simpan"
+}

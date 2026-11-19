@@ -1,0 +1,14 @@
+{
+ "empty.v3d_model.title": "3D에 아직 아무것도 없습니다",
+ "empty.v3d_model.hint": "평면에 벽을 그리면 여기에 나타납니다.",
+ "empty.v3d_model.action": "평면 열기",
+ "empty.v3d_hidden.title": "이 뷰에서 모든 요소가 숨겨져 있습니다",
+ "empty.v3d_hidden.hint": "임시 숨기기 또는 분리로 보이는 것이 없습니다. 뷰 그래픽은 설정대로 유지됩니다.",
+ "empty.v3d_hidden.action": "모두 표시",
+ "empty.v3d_graphics.title": "뷰 그래픽이 모든 카테고리를 숨깁니다",
+ "empty.v3d_graphics.hint": "이 뷰의 카테고리 규칙으로 보이는 것이 없습니다. 뷰 그래픽에서 카테고리를 다시 켜 주세요.",
+ "empty.v3d_graphics.action": "뷰 그래픽 열기",
+ "empty.v3d_box.title": "단면 상자가 모델 밖에 있습니다",
+ "empty.v3d_box.hint": "단면 상자가 모든 요소를 잘라냅니다. 모델에 맞게 다시 감싸 주세요.",
+ "empty.v3d_box.action": "상자 재설정"
+}

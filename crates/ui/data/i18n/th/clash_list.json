@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "ทั้งหมด",
+ "clash_list.only_selected": "เฉพาะที่เลือก",
+ "clash_list.tolerance": "ความคลาดเคลื่อน",
+ "clash_list.gap": "ช่องว่าง",
+ "clash_list.export": "ส่งออก",
+ "clash_list.col.volume": "ปริมาตร",
+ "clash_list.fix.up": "เลื่อนขึ้น",
+ "clash_list.fix.down": "เลื่อนลง",
+ "clash_list.fix.sleeve": "ปลอก",
+ "clash_list.apply_fix": "ใช้การแก้ไข",
+ "clash_list.err.tol": "ความคลาดเคลื่อน: กรอกความยาว (0 ขึ้นไป) เช่น 50 หรือ 2 in",
+ "clash_list.sleeve_no_host": "ปลอกต้องมีผนังหรือพื้นในคู่",
+ "clash_list.err.gap": "ช่องว่าง: กรอกความยาว (0 ขึ้นไป) เช่น 50 หรือ 2 in"
+}

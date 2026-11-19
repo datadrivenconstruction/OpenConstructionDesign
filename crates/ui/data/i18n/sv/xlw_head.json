@@ -1,0 +1,15 @@
+{
+ "xlw.hd_never": "Inte exporterad ännu",
+ "xlw.hd_now": "just nu",
+ "xlw.hd_min": "för {n} min sedan",
+ "xlw.hd_hour": "för {n} h sedan",
+ "xlw.hd_day": "för {n} d sedan",
+ "xlw.hd_linked": "Länkad",
+ "xlw.hd_watched": "Bevakad",
+ "xlw.hd_stale": "Modellen ändrad sedan export",
+ "xlw.ft_export": "Exportera",
+ "xlw.ft_review": "Granska",
+ "xlw.ft_apply": "Tillämpa {n} ändringar",
+ "xlw.ft_delete_missing": "Ta bort saknade",
+ "xlw.ft_keep_missing_tip": "Borttagning är på: element utan rad tas bort vid Tillämpa. Avmarkera för att behålla dem."
+}

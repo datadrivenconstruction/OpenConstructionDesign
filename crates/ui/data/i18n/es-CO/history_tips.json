@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "Deshecho — Ctrl+Y rehace",
+ "history.hist.empty": "Sin cambios todavía",
+ "history.hist.empty_hint": "Sus ediciones aparecen aquí. Haga clic en cualquier paso para volver a él.",
+ "history.hist.revert_all_n": "Revertir todos los cambios de IA ({n})"
+}

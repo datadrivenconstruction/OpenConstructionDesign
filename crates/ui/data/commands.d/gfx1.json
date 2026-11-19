@@ -1,0 +1,92 @@
+[
+ {
+  "id": "view.style_shaded_plain",
+  "icon": "style-plain",
+  "mnemonic": null,
+  "shortcuts": [
+   "Alt+3"
+  ],
+  "tab": "view",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "graphics"
+ },
+ {
+  "id": "view.style_realistic",
+  "icon": "style-realistic",
+  "mnemonic": null,
+  "shortcuts": [
+   "Alt+5"
+  ],
+  "tab": "view",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "graphics"
+ },
+ {
+  "id": "view.gfx_auto",
+  "icon": "gfx-auto",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+Alt+Shift+1"
+  ],
+  "tab": "view",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "graphics",
+  "priority": 6,
+  "variants": [
+   "view.gfx_speed",
+   "view.gfx_balanced",
+   "view.gfx_quality"
+  ]
+ },
+ {
+  "id": "view.gfx_speed",
+  "icon": "gfx-speed",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+Alt+Shift+2"
+  ],
+  "tab": "view",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "graphics"
+ },
+ {
+  "id": "view.gfx_balanced",
+  "icon": "gfx-balanced",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+Alt+Shift+3"
+  ],
+  "tab": "view",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "graphics"
+ },
+ {
+  "id": "view.gfx_quality",
+  "icon": "gfx-quality",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+Alt+Shift+4"
+  ],
+  "tab": "view",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "graphics"
+ }
+]

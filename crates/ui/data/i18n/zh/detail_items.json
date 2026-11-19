@@ -1,0 +1,16 @@
+{
+ "cmd.drawing.to_detail": "图纸转为详图",
+ "cmd.drawing.to_detail.desc": "将所选图纸图元，或本标高上的整张图纸，转换为平面上的详图线、文字注释和填充区域。图纸本身保持不变。",
+ "detail_items.st.no_drawing": "本标高上没有图纸",
+ "detail_items.st.nothing": "没有可转换的内容：所显示图层上没有线、圆弧、文字或填充",
+ "detail_items.st.done": "已添加详图项：线 {lines}，文字 {texts}，区域 {regions}",
+ "detail_items.st.failed": "无法添加详图项：{e}",
+ "detail_items.st.warn": "已添加详图项，但无法刷新视图（线 {lines}，文字 {texts}，区域 {regions}）：{e}。撤销可将其删除。",
+ "detail_items.st.bad_view": "详图项需要平面或剖面视图",
+ "detail_items.st.no_transform": "此视图没有可用于图纸的坐标系；未添加任何内容",
+ "drafting_tools.free.plan_only": "此命令作用于平面构件；请打开平面",
+ "drafting_tools.free.zero": "两点重合；未添加任何内容",
+ "drafting_tools.free.select_first": "请先选择要分布的此视图项目",
+ "drafting_tools.free.pick_item": "点击此视图中的一个项目以添加标记",
+ "drafting_tools.free.dim_kind": "绘图视图中仅线性尺寸可用"
+}

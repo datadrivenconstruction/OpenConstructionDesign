@@ -1,0 +1,7 @@
+{
+ "src.field.kids": "Lignes enfants (panneaux, sommets)",
+ "src.kids.mine": "{n} lignes enfants, modifiées ici",
+ "src.kids.changed": "lignes enfants modifiées ici",
+ "src.kids.theirs": "lignes enfants modifiées dans le fichier",
+ "src.kids.take_tip": "Le prochain import reprend les lignes enfants du fichier ; elles ne sont pas appliquées maintenant."
+}

@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "Předchozí list (Page Up)",
+ "sheets.print.next": "Další list (Page Down)",
+ "sheets.print.fit": "Přizpůsobit stránku (dvojklik)",
+ "sheets.print.no_sheets": "Žádné listy k zobrazení",
+ "sheets.print.building": "Vytváření stránky…",
+ "sheets.print.stop_build": "Zastavit",
+ "sheets.print.build_stopped": "Vytváření stránky zastaveno",
+ "sheets.print.retry": "Vytvořit znovu",
+ "sheets.print.build_failed": "Náhled nelze vytvořit"
+}

@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "Scegli l'intero anello di muri",
+ "cmd.sketch.link_unlink": "Scollega lo spigolo dal muro",
+ "cmd.sketch.link_repick": "Riscegli il muro dello spigolo",
+ "cmd.ctx.floor.link_unlink": "Scollega spigoli dai muri",
+ "cmd.ctx.floor.link_accept": "Accetta spigoli di muri eliminati",
+ "boundary_link.hint.loop": "Clicca un muro: la serie chiusa di muri diventa spigoli collegati",
+ "boundary_link.hint.repick": "Clicca un muro parallelo allo spigolo: lo spigolo lo seguirà",
+ "boundary_link.need_sketch": "Apri prima lo schizzo del contorno",
+ "boundary_link.need_edge": "Indica uno spigolo dello schizzo",
+ "boundary_link.need_straight": "Solo uno spigolo rettilineo può seguire un muro",
+ "boundary_link.need_floor": "Seleziona un solaio",
+ "boundary_link.no_wall": "Nessun muro sotto il cursore",
+ "boundary_link.not_parallel": "Il muro non è parallelo allo spigolo",
+ "boundary_link.not_linked": "Questo spigolo non è collegato a un muro",
+ "boundary_link.unlinked": "Spigolo scollegato: resta al suo posto e non segue più il muro",
+ "boundary_link.accepted": "Spigoli accettati: restano al loro posto come spigoli normali",
+ "boundary_link.failed": "Impossibile applicare",
+ "boundary_link.lost": "muro di origine eliminato",
+ "boundary_link.blocked": "impossibile seguire il muro"
+}

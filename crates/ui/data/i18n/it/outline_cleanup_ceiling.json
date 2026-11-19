@@ -1,0 +1,11 @@
+{
+ "cmd.ctx.ceiling.clean_outline": "Pulisci contorno",
+ "cmd.ctx.ceiling.clean_outline.desc": "Rimuove le punte strette dove il contorno del soffitto si ripiega su se stesso. Mostra prima un'anteprima; un solo passo di annullamento.",
+ "cmd.ctx.shaft.clean_outline": "Pulisci contorno",
+ "cmd.ctx.shaft.clean_outline.desc": "Rimuove le punte strette dove il contorno del vano si ripiega su se stesso. Mostra prima un'anteprima; un solo passo di annullamento.",
+ "outline_cleanup.intro_ceiling": "Il contorno di questo soffitto si ripiega su se stesso in punte strette: {n}. La pulizia le rimuove; il resto resta invariato.",
+ "outline_cleanup.intro_shaft": "Il contorno di questo vano si ripiega su se stesso in punte strette: {n}. La pulizia le rimuove; il resto resta invariato.",
+ "outline_cleanup.none_ceiling": "Il contorno di questo soffitto non ha punte",
+ "outline_cleanup.none_shaft": "Il contorno di questo vano non ha punte",
+ "outline_cleanup.need_host": "Seleziona un solaio, un soffitto o un vano"
+}

@@ -1,0 +1,10 @@
+{
+ "dlg.dw.store.unloaded": "“{name}” chizmasini loyihadan o'qib bo'lmadi va fayl ichida o'zgarishsiz qoldi",
+ "dlg.dw.store.source_missing": "“{name}” chizmasi: manba fayli topilmadi, loyihada saqlangan nusxa ko'rsatilmoqda",
+ "dlg.dw.store.source_changed": "“{name}” chizmasi: manba fayli joylashtirilgandan keyin o'zgargan, loyihada saqlangan nusxa ko'rsatilmoqda",
+ "dlg.dw.store.unreadable": "Loyihada saqlangan joylashtirilgan chizmalarni o'qib bo'lmaydi",
+ "dlg.dw.store.not_saved": "Chizmalar saqlanmadi: {why}",
+ "dlg.dw.store.why_read": "loyihada saqlangan joylashtirilgan chizmalarni o'qib bo'lmaydi",
+ "dlg.dw.store.why_write": "loyiha faylini yangilab bo'lmadi",
+ "dlg.dw.store.missing_in_file": "Saqlangan fayl joylashtirilgan barcha chizmalarni o'z ichiga olmaydi"
+}

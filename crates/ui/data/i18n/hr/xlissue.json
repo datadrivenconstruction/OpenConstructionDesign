@@ -1,0 +1,13 @@
+{
+ "xlw.copy_list": "Kopiraj popis",
+ "xlw.save_list": "Spremi popis…",
+ "xlw.copy_list_tip": "Kopira prikazane retke (list, ćelija, id, stupac, vrijednosti, razlog) kao tekst za proračunsku tablicu",
+ "xlw.save_list_tip": "Sprema prikazane retke kao .csv datoteku uz radnu knjigu; sama radna knjiga se nikada ne mijenja",
+ "xlw.list_book_value": "Vrijednost radne knjige",
+ "xlw.list_model_value": "Vrijednost modela",
+ "xlw.list_reason": "Razlog",
+ "xlw.list_copied": "Popis kopiran: {n} redaka",
+ "xlw.list_saved": "Popis spremljen: {n} redaka, {file}",
+ "xlw.list_save_failed": "Popis nije spremljen",
+ "xlw.list_nothing": "Nema što kopirati: nema prikazanih redaka"
+}

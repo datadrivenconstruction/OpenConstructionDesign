@@ -1,0 +1,10 @@
+{
+ "elem.multi.title": "{n} elem",
+ "elem.multi.varies": "változó",
+ "elem.multi.tip": "Enter minden kijelölt elemre beállítja",
+ "elem.multi.hidden": "{n} sor csak néhány elemnél van",
+ "elem.multi.none": "A kijelölt elemeknek nincs közös sora",
+ "elem.multi.range": "Az érték a megengedett tartományon kívül esik",
+ "elem.multi.changed": "{n} elem módosult · Ctrl+Z visszavon",
+ "elem.multi.same": "Minden kijelölt elemen már ez az érték van"
+}

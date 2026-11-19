@@ -1,0 +1,6 @@
+{
+ "quick.keys.rec_hint": "Esc membatalkan · Backspace menghapus",
+ "quick.keys.row_lost": "{key} kini milik “{cmd}”",
+ "quick.keys.row_took": "{key} diambil dari “{cmd}”",
+ "quick.keys.reset_tip": "Atur ulang ke default"
+}

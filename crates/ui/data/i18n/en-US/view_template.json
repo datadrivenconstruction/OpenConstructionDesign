@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "Enter a template name first",
+ "view_template.name_taken": "A template with this name already exists",
+ "view_template.pick_blocked": "Check at least one view first",
+ "view_template.views.one": "{n} view",
+ "view_template.views.few": "{n} views",
+ "view_template.views.many": "{n} views",
+ "view_template.delete.title": "Delete this template?",
+ "view_template.delete.body": "Template \"{name}\" will be deleted. Used by {used}.",
+ "view_template.delete.unused": "Template \"{name}\" will be deleted. No view uses it.",
+ "view_template.delete.keeps": "These views keep their current graphics and lose the link.",
+ "view_template.delete.undo": "You can undo this with one Undo.",
+ "view_template.delete.confirm": "Delete template"
+}

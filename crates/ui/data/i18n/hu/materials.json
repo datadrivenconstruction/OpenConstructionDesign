@@ -1,0 +1,11 @@
+{
+ "materials.mat.name_empty": "Adja meg az anyag nevét",
+ "materials.mat.empty_title": "Még nincsenek anyagok",
+ "materials.mat.empty_hint": "Írjon be alul egy nevet, és nyomja meg a Hozzáadás gombot",
+ "materials.mat.nothing_hint": "Nincs a keresésnek megfelelő anyag",
+ "materials.mat.clear_search": "Keresés törlése",
+ "materials.mat.replace_with": "Csere erre",
+ "materials.mat.delete_refused": "Nem törölhető: az anyag {n} helyen van használatban. Előbb cserélje le.",
+ "materials.mat.delete_confirm": "Törli a(z) „{name}” anyagot? Ez visszavonható.",
+ "materials.mat.replace_confirm": "Lecseréli a(z) „{from}” anyagot „{to}” anyagra {n} elemben? A „{from}” törlődik. Ez visszavonható."
+}

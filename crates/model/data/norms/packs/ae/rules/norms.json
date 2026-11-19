@@ -1,0 +1,180 @@
+{
+ "rules": [
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.18
+   },
+   "unit": "m",
+   "value": 0.18,
+   "text": {
+    "en": "Common stair riser at most 0.18 m",
+    "ru": "Подъём ступени общей лестницы не более 0.18 м"
+   },
+   "source": {
+    "doc": "ae-flsc",
+    "clause": "Table 3.4 item 2 (stair riser height), p.255",
+    "url": "https://web.archive.org/web/20250615020406if_/https://www.dcd.gov.ae/portal/eng/UAEFIRECODE_ENG_SEPTEMBER_2018.pdf",
+    "edition": "September 2018 (CDGH-OP-25, 1348 pages), official PDF read from a web.archive.org snapshot of 2025-06-15",
+    "accessed": "2026-11-14",
+    "paraphrase": "Exit-stair risers may not exceed 180 mm and may not be below 100 mm."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ae.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.28
+   },
+   "unit": "m",
+   "value": 0.28,
+   "text": {
+    "en": "Common stair tread at least 0.28 m",
+    "ru": "Проступь общей лестницы не менее 0.28 м"
+   },
+   "source": {
+    "doc": "ae-flsc",
+    "clause": "Table 3.4 item 3 (stair tread depth), p.255",
+    "url": "https://web.archive.org/web/20250615020406if_/https://www.dcd.gov.ae/portal/eng/UAEFIRECODE_ENG_SEPTEMBER_2018.pdf",
+    "edition": "September 2018 (CDGH-OP-25, 1348 pages), official PDF read from a web.archive.org snapshot of 2025-06-15",
+    "accessed": "2026-11-14",
+    "paraphrase": "Exit-stair tread depth must be at least 280 mm."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ae.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 1.2
+   },
+   "unit": "m",
+   "value": 1.2,
+   "text": {
+    "en": "Common stair flight width at least 1.2 m",
+    "ru": "Ширина марша общей лестницы не менее 1.2 м"
+   },
+   "source": {
+    "doc": "ae-flsc",
+    "clause": "Table 3.4 item 1.i (stair width), p.255",
+    "url": "https://web.archive.org/web/20250615020406if_/https://www.dcd.gov.ae/portal/eng/UAEFIRECODE_ENG_SEPTEMBER_2018.pdf",
+    "edition": "September 2018 (CDGH-OP-25, 1348 pages), official PDF read from a web.archive.org snapshot of 2025-06-15",
+    "accessed": "2026-11-14",
+    "paraphrase": "An exit stair serving up to 2000 persons needs at least 1200 mm clear and enough width for the egress capacity."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ae.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 30,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 30,
+   "text": {
+    "en": "Travel distance to an exit or stair at most 30 m (residential)",
+    "ru": "Путь до выхода или лестницы не более 30 м (жилые)"
+   },
+   "source": {
+    "doc": "ae-flsc",
+    "clause": "Table 3.16 row 6.i (Residential A, apartment main door to exit), p.293",
+    "url": "https://web.archive.org/web/20250615020406if_/https://www.dcd.gov.ae/portal/eng/UAEFIRECODE_ENG_SEPTEMBER_2018.pdf",
+    "edition": "September 2018 (CDGH-OP-25, 1348 pages), official PDF read from a web.archive.org snapshot of 2025-06-15",
+    "accessed": "2026-11-14",
+    "paraphrase": "Unsprinklered apartment: 30 m from the flat main door to an exit; 61 m when sprinklered."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ae.egr.res"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 61,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 61,
+   "text": {
+    "en": "Travel distance to an exit or stair at most 61 m (office)",
+    "ru": "Путь до выхода или лестницы не более 61 м (офисы)"
+   },
+   "source": {
+    "doc": "ae-flsc",
+    "clause": "Table 3.16 row 2.i (Business, regular office areas), p.293",
+    "url": "https://web.archive.org/web/20250615020406if_/https://www.dcd.gov.ae/portal/eng/UAEFIRECODE_ENG_SEPTEMBER_2018.pdf",
+    "edition": "September 2018 (CDGH-OP-25, 1348 pages), official PDF read from a web.archive.org snapshot of 2025-06-15",
+    "accessed": "2026-11-14",
+    "paraphrase": "Offices without sprinklers: 61 m to an exit; 91 m with sprinklers."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ae.egr.off"
+  },
+  {
+   "id": "generic.egress.distance",
+   "disabled": true
+  }
+ ]
+}

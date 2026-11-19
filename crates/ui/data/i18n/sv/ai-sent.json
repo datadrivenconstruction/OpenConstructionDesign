@@ -1,0 +1,8 @@
+{
+ "ai_sent.summary": "Projektdata i denna begäran: {messages} meddelanden, {tools} verktygsresultat, {images} bilder",
+ "ai_sent.copy": "Kopiera",
+ "ai_sent.filter": "Sök i skickade begäranden",
+ "ai_sent.no_match": "Ingen begäran matchar.",
+ "ai_sent.instructions": "Instruktioner och verktyg",
+ "ai_sent.local_note": "Sparas endast på den här datorn, för denna session. Nycklar och lösenord visas aldrig."
+}

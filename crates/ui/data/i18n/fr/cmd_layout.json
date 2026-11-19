@@ -1,0 +1,4 @@
+{
+ "cmd.data.sync_xlsx": "Synchroniser avec un tableur…",
+ "cmd.data.sync_xlsx.desc": "Relit le classeur lié et affiche les différences avec le modèle."
+}

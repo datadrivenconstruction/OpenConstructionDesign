@@ -1,0 +1,16 @@
+{
+ "xlsx_recover.title": "En export till den länkade arbetsboken avbröts",
+ "xlsx_recover.both": "Exporten stoppades mellan att den gamla arbetsboken flyttades åt sidan och att den nya lades på plats. Inget är förlorat: den nya arbetsboken är komplett på {part}, den föregående behålls på {bak}.",
+ "xlsx_recover.part_only": "Exporten stoppades innan den nya arbetsboken lades på plats. Den är komplett på {part}.",
+ "xlsx_recover.bak_only": "Exporten stoppades innan den nya arbetsboken var klar. Den föregående arbetsboken behålls på {bak}.",
+ "xlsx_recover.finish": "Slutför den avbrutna exporten",
+ "xlsx_recover.restore": "Återställ den föregående arbetsboken",
+ "xlsx_recover.finished": "Den avbrutna exporten är klar: den nya arbetsboken är på plats.",
+ "xlsx_recover.finished_kept": "Den avbrutna exporten är klar: den nya arbetsboken är på plats, den föregående behålls på {bak}.",
+ "xlsx_recover.restored": "Den föregående arbetsboken är tillbaka på plats.",
+ "xlsx_recover.restore_failed": "Den föregående arbetsboken kunde inte flyttas tillbaka ({err}). Den behålls på {path}.",
+ "xlsx_recover.not_restored": "Den nya arbetsboken kunde inte läggas på plats och den föregående kunde inte flyttas tillbaka. Inget är förlorat: den föregående arbetsboken behålls på {path}; Synkronisera erbjuder att slutföra eller återställa.",
+ "xlsx_recover.finish_failed": "Den nya arbetsboken kunde inte läggas på plats ({err}). Den ligger kvar på {path}.",
+ "xlsx_recover.dest_back": "En arbetsbok finns tillbaka på {path}: inget flyttades.",
+ "xlsx_recover.nothing": "Inget från den avbrutna exporten finns kvar att flytta."
+}

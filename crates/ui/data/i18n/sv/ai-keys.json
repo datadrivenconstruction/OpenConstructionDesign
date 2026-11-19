@@ -1,0 +1,14 @@
+{
+ "ai_keys.header_is_key": "Nycklar ska stå i fältet Nyckel — huvuden sparas i klartext",
+ "ai_keys.move": "Flytta till Nyckel",
+ "ai_keys.remove_line": "Ta bort från huvuden",
+ "ai_keys.save_blocked": "Flytta nyckeln ur huvudena för att spara",
+ "ai_keys.show": "Visa",
+ "ai_keys.hide": "Dölj",
+ "ai_keys.copy": "Kopiera",
+ "ai_keys.tokens": "tokenenheter",
+ "ai_keys.presets": "Förinställningar",
+ "ai_keys.preset_k": "{n}k",
+ "ai_keys.preset_m": "{n}M",
+ "ai_keys.images_on": "Stöds"
+}

@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "Salvează întregul model sau selecția ca STL binar, în metri sau milimetri.",
+ "cmd.data.export_obj.desc": "Salvează întregul model sau selecția ca OBJ cu fișier MTL: un grup pentru fiecare element, culori după material.",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "OBJ cu materiale (.obj)",
+ "open_file.filter.mesh": "Plase 3D (glTF, STEP, STL, OBJ)",
+ "mx.title": "Exportă {fmt}",
+ "mx.scope": "Ce să se exporte",
+ "mx.scope.all": "Întregul model",
+ "mx.scope.sel": "Selecție ({n} elemente)",
+ "mx.units": "Unități în fișier",
+ "mx.units.m": "Metri",
+ "mx.units.mm": "Milimetri",
+ "mx.export": "Exportă…",
+ "mx.saved": "{fmt} salvat: {path} ({parts} elemente, {tris} triunghiuri)",
+ "mx.partial": "{fmt} salvat cu {n} probleme, unele corpuri pot lipsi: {path}",
+ "mx.failed": "Exportul {fmt} a eșuat: {error}",
+ "mx.imported": "{file}: {n} elemente importate ({tris} triunghiuri)",
+ "mx.imported_notes": "{file}: {n} elemente importate ({tris} triunghiuri), {w} note: {first}"
+}

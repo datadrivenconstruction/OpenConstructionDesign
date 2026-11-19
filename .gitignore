@@ -1,0 +1,12 @@
+/target
+*.rvt
+*.rfa
+/samples/private/
+/_secrets/
+.env
+/crates/io/assets/fonts/cjk/
+/quality/corpus.local.toml
+__pycache__/
+*.pyc
+_archive/
+tools/bigfile_bench/corpus.md

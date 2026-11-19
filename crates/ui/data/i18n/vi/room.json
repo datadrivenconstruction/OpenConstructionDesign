@@ -1,0 +1,6 @@
+{
+ "geom.length": "Chiều dài",
+ "sched.cat.room_seps": "Ranh giới phòng",
+ "room.err.point_leave": "Phòng {n}: điểm sẽ nằm ngoài ranh giới",
+ "room.err.point_taken": "Phòng {n}: điểm sẽ rơi vào phòng {other}"
+}

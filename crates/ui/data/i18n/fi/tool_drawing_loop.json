@@ -1,0 +1,4 @@
+{
+ "tool.err.drawing_open": "Tämän pisteen ympärillä olevat piirustusviivat eivät sulkeudu lenkiksi",
+ "tool.err.drawing_crossing": "Tämän pisteen ympärillä oleva piirustuslenkki leikkaa itsensä"
+}

@@ -1,0 +1,10 @@
+{
+ "cmd.mod.scale": "Tỷ lệ",
+ "cmd.mod.scale.desc": "Chọn phần tử, rồi nhấn điểm gốc, một chiều dài tham chiếu và chiều dài mới, hoặc nhập hệ số.",
+ "hint.scale.select": "Tỷ lệ: chọn phần tử · Enter — xong",
+ "hint.scale.first": "Tỷ lệ: chọn điểm gốc · Esc — hủy",
+ "hint.scale.second": "Tỷ lệ: chọn chiều dài tham chiếu · số — hệ số · Esc — hủy",
+ "hint.scale.third": "Tỷ lệ: chọn chiều dài mới · số — hệ số · Esc — hủy",
+ "scl.bad_factor": "Hệ số tỷ lệ phải là số lớn hơn 0",
+ "scl.zero_ref": "Chiều dài tham chiếu bằng 0: hãy chọn điểm cách xa điểm gốc"
+}

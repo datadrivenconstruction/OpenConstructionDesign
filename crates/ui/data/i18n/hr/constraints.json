@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "Pri svakoj izmjeni održava ovaj zid na trenutnoj duljini",
+ "constraints.con.tip.lock_dist": "Pri svakoj izmjeni održava udaljenost između dvaju zidova",
+ "constraints.con.tip.equal": "Održava jednake razmake između odabranih zidova",
+ "constraints.con.tip.align": "Održava oba zida na istoj liniji",
+ "constraints.con.tip.parallel": "Održava zidove paralelnima",
+ "constraints.con.tip.perp": "Održava zidove pod pravim kutom",
+ "constraints.con.tip.align_grid": "Održava zid na najbližoj liniji mreže",
+ "constraints.con.tip.lock_dist_grid": "Održava udaljenost od zida do najbliže linije mreže",
+ "constraints.con.tip.level_gap": "Održava razmak između razina",
+ "constraints.con.tip.top_to_level": "Održava vrh zida na razini iznad"
+}

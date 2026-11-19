@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "Системийн нэр",
+ "mep_browser.add_blocked": "Эхлээд системийн нэрийг оруулна уу",
+ "mep_browser.col.insulation": "Дулаалга",
+ "mep_browser.cancel": "Цуцлах",
+ "mep_browser.delete.title": "Энэ системийг устгах уу?",
+ "mep_browser.delete.body": "“{name}” систем ба түүний {n} гүйлтийг устгана.",
+ "mep_browser.delete.undo": "Үүнийг нэг Буцаах-аар буцаах боломжтой.",
+ "mep_browser.delete.confirm": "Системийг устгах"
+}

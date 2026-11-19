@@ -1,0 +1,16 @@
+{
+ "save_fail.save_fail.title": "Loyiha saqlanmadi",
+ "save_fail.save_fail.kept": "Tahrirlaringiz hali shu yerda ochiq. Muharrir ochiq turganda hech narsa yo'qolmaydi.",
+ "save_fail.save_fail.details": "Tafsilotlar",
+ "save_fail.save_fail.copy": "Nusxalash",
+ "save_fail.save_fail.save_as": "Boshqacha saqlash…",
+ "save_fail.save_fail.retry": "Qayta urinish",
+ "save_fail.save_fail.close": "Yopish",
+ "save_fail.cause.full": "Disk to'lgan. Joy bo'shating yoki loyihani boshqa diskka saqlang.",
+ "save_fail.cause.denied": "Bu papka yoki fayl faqat o'qish uchun, yoki bu yerga yozish ruxsatingiz yo'q. Boshqa papka tanlang.",
+ "save_fail.cause.locked": "Fayl boshqa dasturda ochiq. U yerda yoping, so'ng Qayta urinish tugmasini bosing.",
+ "save_fail.cause.missing": "Papka endi mavjud emas. Boshqa papka tanlang, yoki uni tiklab, Qayta urinish tugmasini bosing.",
+ "save_fail.cause.offline": "Disk yoki tarmoq papkasi mavjud emas. Uni qayta ulang va Qayta urinish tugmasini bosing, yoki boshqa joyga saqlang.",
+ "save_fail.cause.too_long": "Fayl yo'li juda uzun. Qisqaroq papka yoki fayl nomi tanlang.",
+ "save_fail.cause.other": "Faylga yozib bo'lmadi: {detail}"
+}

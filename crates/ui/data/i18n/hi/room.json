@@ -1,0 +1,6 @@
+{
+ "geom.length": "लंबाई",
+ "sched.cat.room_seps": "रूम सेपरेटर",
+ "room.err.point_leave": "कमरा {n}: बिंदु अपनी सीमा से बाहर चला जाएगा",
+ "room.err.point_taken": "कमरा {n}: बिंदु कमरा {other} में पड़ जाएगा"
+}

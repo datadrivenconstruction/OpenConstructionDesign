@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "Lucarne",
+ "cmd.arch.roof_opening": "Ouverture de toiture",
+ "cmd.arch.roof_extrusion": "Toiture par extrusion",
+ "cmd.arch.ceiling_opening": "Ouverture de plafond",
+ "cmd.str.slab_opening": "Ouverture de dalle",
+ "cmd.ctx.wall.detach": "Détacher le haut",
+ "cmd.ctx.floor.sketch": "Modifier le contour",
+ "cmd.ctx.floor.shape": "Modifier la forme",
+ "host_shape.shape.elev_prompt": "élévation, mm…",
+ "host_shape.shape.elev_mm": "{v} mm",
+ "host_shape.sketch.no_host": "aucun hôte sous le contour à ce niveau",
+ "host_shape.issue.roof": "toiture {id} : {e}",
+ "host_shape.issue.ceiling": "plafond {id} : {e}",
+ "host_shape.status.select_slab": "sélectionnez une dalle",
+ "host_shape.status.select_walls": "sélectionnez des murs",
+ "host_shape.status.no_roof_or_level": "aucune toiture ou niveau au-dessus",
+ "host_shape.status.top_attached": "têtes de murs rattachées",
+ "host_shape.status.top_detached": "têtes de murs détachées",
+ "host_shape.status.straight_wall": "un mur droit est requis",
+ "host_shape.status.roof_extruded": "toiture par extrusion créée",
+ "warn.kind.cut": "Coupe ou rattachement non créé"
+}

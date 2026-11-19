@@ -1,0 +1,19 @@
+[package]
+name = "ddc-gen"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Seed-deterministic building generators and family templates"
+
+[dependencies]
+web-time.workspace = true
+ddc-geom = { path = "../geom" }
+serde_json.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+# country norm packs for the per-country generation test (tests/world.rs)
+ddc-model = { path = "../model" }

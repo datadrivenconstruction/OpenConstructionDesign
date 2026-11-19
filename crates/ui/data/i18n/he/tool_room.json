@@ -1,0 +1,9 @@
+{
+ "tool.room": "חדר",
+ "tool.room.name": "חדר",
+ "room_tool.room.name": "שם",
+ "hint.room.place": "לחץ בתוך לולאת קירות סגורה כדי ליצור חדר · Esc — יציאה",
+ "tool.err.room_open": "האזור אינו סגור: סגור את לולאת הקירות או הוסף מפריד חדרים",
+ "tool.err.room_check": "לא ניתן לבדוק את החדרים של מפלס זה",
+ "tool.err.room_exists": "כבר יש חדר בלולאה הזו"
+}

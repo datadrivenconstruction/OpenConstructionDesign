@@ -1,0 +1,10 @@
+{
+ "stage_err.kept": "jadval {t} saqlandi: Qo'shishdan keyin {n} qator yozildi",
+ "stage_err.stage.prev_attached": "Qo'shilmadi: oldingi qo'shishning nusxasi hali ochiq. Qo'shishni qayta ishga tushiring",
+ "stage_err.stage.model_changed": "Qo'shilmadi: fayl o'qilayotganda model o'zgardi. Qo'shishni qayta ishga tushiring",
+ "stage_err.stage.no_record": "Qo'shilmadi: import qilingan nusxada o'zgarish yozuvi yo'q",
+ "stage_err.stage.table_differs": "Qo'shilmadi: {t} jadvali model va import qilingan nusxada farq qiladi",
+ "stage_err.stage.unique_key": "Qo'shilmadi: {t} jadvalining noyob kalitini kuzatib bo'lmaydi",
+ "stage_err.stage.table_gone": "Qo'shilmadi: import {t} jadvalini o'zgartirdi, nusxada u endi yo'q",
+ "stage_err.stage.copy_held": "Qo'shildi; import qilingan nusxa keyingi Qo'shishgacha yoki modelni qayta ochguncha ochiq qoladi"
+}

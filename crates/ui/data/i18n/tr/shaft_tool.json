@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "Şaftlar",
+ "quick.cat.shaft": "Şaft",
+ "shaft_tool.browser.shaft": "Şaft #{id}",
+ "shaft_tool.shaft.top": "Üst seviye",
+ "shaft_tool.shaft.cuts": "Kesilen elemanlar",
+ "shaft_tool.shaft.cut_area": "Kesilen alan",
+ "shaft_tool.shaft.cut_volume": "Kesilen hacim",
+ "elem.no.rooms": "İçerdiği odaları izler"
+}

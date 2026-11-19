@@ -1,0 +1,8 @@
+{
+ "api.cmd.norms_lookup": "Hanapin ang mga patakaran ng norm pack ng proyekto ayon sa paksa, elemento o code",
+ "api.cmd.norms_check": "Suriin ang modelo laban sa norm pack ng proyekto at ilista ang mga natuklasan",
+ "api.cmd.norms_programme": "Karaniwang programa ng kuwarto sa bansa ng proyekto para sa uri ng gusali",
+ "api.cmd.select_similar": "Piliin ang bawat elementong katulad nito: parehong type o kategorya, sa level na ito o sa buong proyekto",
+ "api.cmd.create_drawing_set": "Mag-draft ng set ng drawing na maipi-print: mga plan, section, elevation, schedule at title block",
+ "api.cmd.deliver_project": "Mula sa brief patungo sa mga file sa isang hakbang: ang proyekto at ang drawing set nito, na ie-export pagkatapos ng Apply"
+}

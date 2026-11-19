@@ -1,0 +1,7 @@
+{
+ "recover.untitled_note": "Ten projekt nigdy nie został zapisany",
+ "recover.file_missing": "Nie znaleziono pliku projektu",
+ "recover.banner": "Znaleziono niezapisane zmiany z wcześniejszej sesji dla {name}",
+ "recover.banner_review": "Przejrzyj",
+ "recover.later_archived": "Odłożono {n} razy: migawki przeniesiono do archiwum"
+}

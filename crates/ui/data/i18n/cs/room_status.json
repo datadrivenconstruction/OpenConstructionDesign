@@ -1,0 +1,4 @@
+{
+ "room_status.open": "Místnost {room} již není uzavřena",
+ "warn.kind.room_open": "Místnosti nejsou uzavřeny"
+}

@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "Fästradie",
+ "snap_refine.settings.snap_px_desc": "Hur nära markören måste komma en punkt eller linje för att fästa, i skärmpixlar. Större värde hjälper på pekskärmar och skärmar med hög densitet.",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "Horisontell",
+ "snap_refine.hint.vertical": "Vertikal",
+ "snap_refine.hint.perpendicular": "Vinkelrät mot föregående",
+ "snap_refine.hint.parallel": "Parallell med föregående",
+ "snap_refine.hint.on_axis": "På väggaxel",
+ "snap_refine.no_snap": "Ingen fästning (Alt)"
+}

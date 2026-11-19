@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "Cheia în adresă",
+ "ai_safety.auth.query_name": "Parametrul adresei",
+ "ai_safety.need_query_name": "Numește parametrul adresei care poartă cheia",
+ "ai_safety.apply_unlogged": "Aplicat, dar jurnalul modificărilor nu a fost scris",
+ "ai_safety.audit_unlogged": "Jurnalul asistentului AI nu a putut fi scris",
+ "ai_safety.chat_not_saved": "Conversația nu a putut fi salvată în proiect. Se încearcă din nou.",
+ "ai_safety.clip_clears": "Clipboard-ul se golește în 30 s",
+ "ai_safety.copied_clears": "Copiat. Clipboard-ul se golește în 30 s",
+ "ai_safety.key_session_only": "Cheie păstrată până la închiderea aplicației",
+ "ai.settings.no_data_dir": "acest sistem nu oferă un dosar pentru setările aplicației"
+}

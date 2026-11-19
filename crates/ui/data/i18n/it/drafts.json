@@ -1,0 +1,8 @@
+{
+ "drafts.drafts.head": "Gli editor aperti contengono modifiche non ancora nel progetto:",
+ "drafts.draft.family": "Famiglia “{name}”",
+ "drafts.draft.line": "Libreria linee: {name}",
+ "drafts.draft.styles": "Stili linea dell'intervallo di vista",
+ "drafts.btn.save_all": "Salva tutto",
+ "drafts.drafts.refused": "Una bozza non ha potuto essere salvata. Nulla è stato chiuso; l'editor con la bozza è aperto."
+}

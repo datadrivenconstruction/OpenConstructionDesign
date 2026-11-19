@@ -1,0 +1,26 @@
+family Planter
+category planting
+host floor
+ifc IfcGeographicElement NOTDEFINED
+param Lift length type 0mm
+param Length length type 2000mm
+param Width length type 600mm
+param Box length type 500mm
+param Timber material type "Timber Larch"
+param Leaves material type "Foliage Green"
+type "H0" Lift=0mm
+type "H2.7" Lift=2950mm
+type "H3.0" Lift=3250mm
+type "H3.3" Lift=3550mm
+type "H3.6" Lift=3850mm
+type "H3.9" Lift=4150mm
+type "H4.2" Lift=4450mm
+type "H4.5" Lift=4750mm
+type "H4.8" Lift=5050mm
+type "H5.1" Lift=5350mm
+type "H5.4" Lift=5650mm
+type "H5.7" Lift=5950mm
+type "H6.0" Lift=6250mm
+extrude Body rect(-Length / 2, -Width / 2, Length / 2, Width / 2) z(Lift, Lift + Box) mat(Timber) show(3d, elev)
+extrude Shrub rect(-Length / 2 + 100mm, -Width / 2 + 100mm, Length / 2 - 100mm, Width / 2 - 100mm) z(Lift + Box, Lift + Box + 600mm) mat(Leaves) show(3d, elev)
+symbol rect(-Length / 2, -Width / 2, Length / 2, Width / 2)

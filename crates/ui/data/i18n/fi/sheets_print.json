@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "Edellinen arkki (Page Up)",
+ "sheets.print.next": "Seuraava arkki (Page Down)",
+ "sheets.print.fit": "Sovita sivu (kaksoisnapsauta)",
+ "sheets.print.no_sheets": "Ei arkkeja esikatseltavaksi",
+ "sheets.print.building": "Luodaan sivua…",
+ "sheets.print.stop_build": "Pysäytä",
+ "sheets.print.build_stopped": "Sivun luonti pysäytettiin",
+ "sheets.print.retry": "Luo uudelleen",
+ "sheets.print.build_failed": "Esikatselua ei voitu luoda"
+}

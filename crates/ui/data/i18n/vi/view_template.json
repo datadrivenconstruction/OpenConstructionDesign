@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "Nhập tên mẫu trước",
+ "view_template.name_taken": "Đã có mẫu với tên này",
+ "view_template.pick_blocked": "Đánh dấu ít nhất một góc nhìn trước",
+ "view_template.views.one": "{n} góc nhìn",
+ "view_template.views.few": "{n} góc nhìn",
+ "view_template.views.many": "{n} góc nhìn",
+ "view_template.delete.title": "Xóa mẫu này?",
+ "view_template.delete.body": "Mẫu “{name}” sẽ bị xóa. Đang dùng bởi {used}.",
+ "view_template.delete.unused": "Mẫu “{name}” sẽ bị xóa. Không góc nhìn nào dùng nó.",
+ "view_template.delete.keeps": "Các góc nhìn này giữ đồ họa hiện tại và mất liên kết.",
+ "view_template.delete.undo": "Bạn có thể hoàn tác bằng một lần Hoàn tác.",
+ "view_template.delete.confirm": "Xóa mẫu"
+}

@@ -1,0 +1,15 @@
+{
+ "text_style.lbl.text_style": "টেক্সট স্টাইল",
+ "text_style.lbl.align": "সারিবদ্ধকরণ",
+ "text_style.lbl.head": "তীরের মাথা",
+ "text_style.lbl.line_style": "লাইন স্টাইল",
+ "text_style.lbl.fill": "ফিল",
+ "text_style.lbl.detail": "বিস্তারিত",
+ "text_style.lbl.width": "প্রস্থ",
+ "text_style.bad_number": "{min} থেকে {max} পর্যন্ত একটি সংখ্যা লিখুন",
+ "text_style.tip.next_ring": "এই কনট্যুর বন্ধ করে একই অঞ্চলে আরেকটি শুরু করুন",
+ "text_style.tip.edit_text": "সরাসরি টেক্সট সম্পাদনা করুন",
+ "text_style.tip.add_leader": "এই টেক্সটে লিডার লাইন যোগ করুন",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°"
+}

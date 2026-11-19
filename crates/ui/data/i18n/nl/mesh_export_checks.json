@@ -1,0 +1,15 @@
+{
+ "cmd.data.export_step.desc": "Slaat het hele model of de selectie op als STEP AP214 of AP242: massieve lichamen met exacte vlakke, cilindrische, conische, bolvormige, torusvormige en B-spline-vlakken, andere elementen als vlakke vlakken, kleuren, één assemblagenode per verdieping.",
+ "cmd.data.export_3mf.desc": "Slaat het hele model of de selectie op als 3MF voor printen: één object per element, kleuren, eenheden en een controle of elk lichaam waterdicht is.",
+ "fmenu.export.step": "STEP exacte lichamen (.step)",
+ "fmenu.export.3mf": "3MF voor printen (.3mf)",
+ "mx.schema": "STEP-schema",
+ "mx.schema.ap214": "AP214 (breedste ondersteuning)",
+ "mx.schema.ap242": "AP242",
+ "mx.watertight": "Lichamen die niet waterdicht zijn",
+ "mx.watertight.report": "Opslaan en opsommen",
+ "mx.watertight.skip": "Weglaten",
+ "mx.watertight.require": "Export annuleren",
+ "mx.faceted": "{fmt} opgeslagen: {path} ({exact} exacte lichamen, {n} als vlakke vlakken geschreven: {first})",
+ "sheets.print.svg": "SVG"
+}

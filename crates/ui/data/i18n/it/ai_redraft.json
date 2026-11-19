@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "Rivisto",
+ "ai.redraft.added": "+{n} aggiunte",
+ "ai.redraft.removed": "−{n} rimosse",
+ "ai.redraft.changed": "~{n} modificate",
+ "ai.redraft.strip": "{what} dalla tua ultima verifica",
+ "ai.redraft.note": "Piano rivisto verificato: {what}",
+ "ai.redraft.more": "+{n} altri",
+ "ai.redraft.ack": "Capito",
+ "ai.redraft.ack.tip": "Segna questa revisione come vista; Applica allora la riguarda",
+ "ai.redraft.removed_list": "Voci rimosse: {n}",
+ "ai.redraft.review_first": "Il piano è cambiato dopo il tuo messaggio: verifica prima le modifiche",
+ "ai.redraft.mark.tip": "Nuovo o modificato dalla tua ultima verifica",
+ "ai.redraft.emptied": "Il seguito ha rimosso ogni voce: la bozza è vuota"
+}

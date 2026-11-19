@@ -1,0 +1,14 @@
+{
+ "ai_keys.header_is_key": "As chaves vão no campo Chave — os cabeçalhos são guardados em texto simples",
+ "ai_keys.move": "Mover para Chave",
+ "ai_keys.remove_line": "Remover dos cabeçalhos",
+ "ai_keys.save_blocked": "Mova a chave para fora dos cabeçalhos para guardar",
+ "ai_keys.show": "Mostrar",
+ "ai_keys.hide": "Ocultar",
+ "ai_keys.copy": "Copiar",
+ "ai_keys.tokens": "tokens",
+ "ai_keys.presets": "Predefinições",
+ "ai_keys.preset_k": "{n} mil",
+ "ai_keys.preset_m": "{n} M",
+ "ai_keys.images_on": "Suportado"
+}

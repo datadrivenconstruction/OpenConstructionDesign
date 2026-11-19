@@ -1,0 +1,10 @@
+{
+ "dlg.dw.store.unloaded": "Joonist „{name}“ ei õnnestunud projektist lugeda, see jääb failis muutmata",
+ "dlg.dw.store.source_missing": "Joonis „{name}“: lähtefaili ei leitud, näidatakse projekti salvestatud koopiat",
+ "dlg.dw.store.source_changed": "Joonis „{name}“: lähtefail on pärast paigutamist muutunud, näidatakse projekti salvestatud koopiat",
+ "dlg.dw.store.unreadable": "Projekti salvestatud paigutatud jooniseid ei õnnestu lugeda",
+ "dlg.dw.store.not_saved": "Jooniseid ei salvestatud: {why}",
+ "dlg.dw.store.why_read": "projekti salvestatud paigutatud jooniseid ei õnnestu lugeda",
+ "dlg.dw.store.why_write": "projekti faili ei õnnestunud uuendada",
+ "dlg.dw.store.missing_in_file": "Salvestatud fail ei sisalda kõiki paigutatud jooniseid"
+}

@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "Houdt deze wand bij elke bewerking op zijn huidige lengte",
+ "constraints.con.tip.lock_dist": "Houdt de afstand tussen de twee wanden bij elke bewerking aan",
+ "constraints.con.tip.equal": "Houdt de stappen tussen de geselecteerde wanden gelijk",
+ "constraints.con.tip.align": "Houdt beide wanden op één lijn",
+ "constraints.con.tip.parallel": "Houdt de wanden evenwijdig",
+ "constraints.con.tip.perp": "Houdt de wanden in een rechte hoek",
+ "constraints.con.tip.align_grid": "Houdt de wand op de dichtstbijzijnde gridlijn",
+ "constraints.con.tip.lock_dist_grid": "Houdt de afstand van de wand tot de dichtstbijzijnde gridlijn aan",
+ "constraints.con.tip.level_gap": "Houdt de afstand tussen de verdiepingen aan",
+ "constraints.con.tip.top_to_level": "Houdt de bovenkant van de wand op de verdieping erboven"
+}

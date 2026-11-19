@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "Tự động lưu thất bại, các thay đổi gần nhất chưa được bảo vệ. {why}",
+ "autosave_status.autosave_open": "Cài đặt tự động lưu",
+ "autosave_status.autosave_recovered": "Tự động lưu đã hoạt động trở lại.",
+ "autosave_status.autosave_reason": "Lý do: {why}"
+}

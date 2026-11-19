@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "オプションを統合: {name}",
+ "ai_opt_merge.whole": "オプション全体を統合",
+ "ai_opt_merge.parts": "選択した部分を統合",
+ "ai_opt_merge.note": "このオプションの理由",
+ "ai_opt_merge.rebased": "このオプションの作成後にモデルが変更されました: 統合は現在のモデルに対して再計算されました。適用前に変更を確認してください。",
+ "ai_opt_merge.left.not_picked": "オプションから選択されていません",
+ "ai_opt_merge.left.unticked": "オプションでチェックが外れています",
+ "ai_opt_merge.left.conflict": "現在のモデルには追加できません: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "このオプションは統合できません。却下されたオプションは先に復元する必要があります。",
+ "ai_opt_merge.refused.stale": "このオプションの作成後にモデルが変更されました。現在のモデルに対して統合を再計算してください。",
+ "ai_opt_merge.refused.nothing_picked": "統合する項目が選択されていません。",
+ "ai_opt_merge.refused.unknown_item": "項目 {item} はこのオプションに含まれていません。",
+ "ai_opt_merge.refused.not_in_option": "選択した要素はこのオプションに含まれていません。",
+ "ai_opt_merge.refused.needs_left_out": "項目 {item} には項目 {needs} が必要です。それも選択するか、依存関係の追加を許可してください。",
+ "ai_opt_merge.refused.set_gone": "項目 {item} は存在しない選択を参照しています。オプションを再生成してください。",
+ "ai_opt_merge.refused.busy": "別のプランが開いています。先に適用または却下してください。",
+ "ai_opt_merge.refused.failed": "統合の準備ができませんでした: {reason}",
+ "ai_opt_merge.revive": "オプションを復元",
+ "ai_opt_merge.merged": "統合済み"
+}

@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "Gumuhit ng saradong outline: mag-click ng mga punto, saka Enter o Finish para gumawa",
+ "sketch_hints.sk_finish": "Tapusin",
+ "sketch_hints.sk_cancel": "Kanselahin",
+ "sketch_hints.import_warn": "mga babala ng model check: {n} (una: {first})",
+ "sketch_hints.ai.offline.schedule": "Buksan ang schedule",
+ "sketch_hints.ai.offline.check": "Suriin laban sa mga patakaran",
+ "sketch_hints.ai.offline.warnings": "Ipakita ang mga babala",
+ "cmd.file.publish_pdf": "I-publish ang mga sheet bilang PDF…",
+ "cmd.file.publish_pdf.desc": "Ini-publish sa PDF ang mga napiling sheet. Kapareho ng I-export ang mga sheet sa PDF/SVG.",
+ "sketch_hints.verify_none": "Walang itinakda ng AI katulong sa pagpili na ive-verify",
+ "sketch_hints.contours_none": "Walang toposolid sa modelo: lilitaw ang contour kapag may nagawa na",
+ "sketch_hints.contours_off": "Nakatago ang toposolid contour",
+ "sketch_hints.contours_on": "Nakikita ang toposolid contour"
+}

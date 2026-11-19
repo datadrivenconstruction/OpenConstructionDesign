@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "Schicht darunter einfügen",
+ "type_layers.layer.delete": "Schicht löschen",
+ "type_layers.layer.delete_last": "Ein Typ braucht mindestens eine Schicht",
+ "type_layers.value.bad": "Kein gültiger positiver Wert",
+ "type_layers.value.required": "Erforderlich",
+ "type_layers.unsaved.title": "Nicht gespeicherte Änderungen an {name}",
+ "type_layers.unsaved.body": "Auf den Typ anwenden oder verwerfen?",
+ "type_layers.unsaved.discard": "Verwerfen"
+}

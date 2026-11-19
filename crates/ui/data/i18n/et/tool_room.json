@@ -1,0 +1,9 @@
+{
+ "tool.room": "Ruum",
+ "tool.room.name": "Ruum",
+ "room_tool.room.name": "Nimi",
+ "hint.room.place": "Ruumi loomiseks klõpsa suletud seinasilmuse sees · Esc — välju",
+ "tool.err.room_open": "Ala ei ole suletud: sulge seinasilmus või lisa ruumi eraldaja",
+ "tool.err.room_check": "Selle taseme ruume ei saa kontrollida",
+ "tool.err.room_exists": "Selles silmuses on juba ruum"
+}

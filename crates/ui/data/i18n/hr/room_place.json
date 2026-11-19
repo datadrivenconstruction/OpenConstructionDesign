@@ -1,0 +1,8 @@
+{
+ "cmd.arch.room_auto": "Automatski postavi prostorije",
+ "cmd.arch.room_auto.desc": "Postavlja prostoriju u svaku zatvorenu granicu aktivne razine koja nema prostoriju. Otvoreni nizovi zidova se preskaču i nikad se ne zatvaraju pretpostavkom. Jedan korak poništavanja.",
+ "room_place.placed": "Postavljene prostorije: {n}. Područja koja su već imala prostoriju: {m}. Preskočeni otvoreni nizovi: {k}",
+ "room_place.all_had": "Ništa nije postavljeno: svih {m} zatvorenih područja već ima prostoriju. Preskočeni otvoreni nizovi: {k}",
+ "room_place.none": "Ništa nije postavljeno: razina nema zatvorenih područja zidova",
+ "room_place.none_open": "Ništa nije postavljeno: razina nema zatvorenih područja zidova. Preskočeni otvoreni nizovi: {k}"
+}

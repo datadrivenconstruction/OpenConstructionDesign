@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "Mga na-import na mesh",
+ "mat_mesh.mesh.none_selected": "Pumili ng mga na-import na mesh sa 3D view para bigyan sila ng materyales na ito.",
+ "mat_mesh.mesh.current": "Unang napiling mesh: {material}",
+ "mat_mesh.mesh.current_none": "Walang materyales ang unang napiling mesh.",
+ "mat_mesh.mesh.assign": "Italaga sa {n} napili",
+ "mat_mesh.mesh.assign_tip": "Ipinapakita ng Realistic style ang texture ng materyales na ito sa mga napiling mesh",
+ "mat_mesh.mesh.assign_cat": "Italaga sa kategorya {category}",
+ "mat_mesh.mesh.assign_cat_tip": "Bawat na-import na mesh ng kategoryang iyon na walang sariling materyales",
+ "mat_mesh.mesh.clear": "Burahin ang napili",
+ "mat_mesh.mesh.clear_tip": "Bumabalik ang mga napiling mesh sa materyales ng kategorya nila o sa payak na kulay",
+ "mat_mesh.mesh.clear_cat": "Burahin ang kategorya"
+}

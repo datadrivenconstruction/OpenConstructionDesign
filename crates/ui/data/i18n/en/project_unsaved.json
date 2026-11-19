@@ -1,0 +1,7 @@
+{
+ "project_unsaved.unsaved.model": "Model changes are not saved.",
+ "project_unsaved.unsaved.drawings": {
+  "one": "# placed drawing is not saved in the project: its changes will be lost.",
+  "other": "# placed drawings are not saved in the project: their changes will be lost."
+ }
+}

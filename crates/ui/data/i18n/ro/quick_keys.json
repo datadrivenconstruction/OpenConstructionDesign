@@ -1,0 +1,6 @@
+{
+ "quick.keys.rec_hint": "Esc anulează · Backspace șterge",
+ "quick.keys.row_lost": "{key} aparține acum de „{cmd}”",
+ "quick.keys.row_took": "{key} preluat de la „{cmd}”",
+ "quick.keys.reset_tip": "Revino la implicit"
+}

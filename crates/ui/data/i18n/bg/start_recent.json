@@ -1,0 +1,5 @@
+{
+ "start_recent.unavailable": "В момента не е достъпно (устройството или мрежовото местоположение не отговаря): {path}",
+ "start_recent.unavailable_short": "В момента не е достъпно",
+ "start_recent.retry": "Опитай отново"
+}

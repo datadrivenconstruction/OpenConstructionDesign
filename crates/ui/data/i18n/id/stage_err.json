@@ -1,0 +1,10 @@
+{
+ "stage_err.kept": "tabel {t} dipertahankan: {n} baris ditulis setelah Tambah",
+ "stage_err.stage.prev_attached": "Tidak ditambahkan: salinan dari Tambah sebelumnya masih terbuka. Jalankan Tambah lagi",
+ "stage_err.stage.model_changed": "Tidak ditambahkan: model berubah saat file dibaca. Jalankan Tambah lagi",
+ "stage_err.stage.no_record": "Tidak ditambahkan: salinan yang diimpor tidak memiliki catatan perubahan",
+ "stage_err.stage.table_differs": "Tidak ditambahkan: tabel {t} berbeda antara model dan salinan yang diimpor",
+ "stage_err.stage.unique_key": "Tidak ditambahkan: kunci unik tabel {t} tidak dapat diikuti",
+ "stage_err.stage.table_gone": "Tidak ditambahkan: impor mengubah tabel {t}, yang tidak lagi ada di salinan",
+ "stage_err.stage.copy_held": "Ditambahkan; salinan yang diimpor tetap terbuka sampai Tambah berikutnya atau model dibuka kembali"
+}

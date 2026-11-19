@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "Massi ei saa pöörata ega peegeldada: selle kujutamise ajaloos pole pööratud sammu. Teisalda või kopeeri see või joonista uuesti uues suunas.",
+ "sched_cats.col.name": "Nimi",
+ "sched_cats.col.material": "Materjal",
+ "sched_cats.col.void": "Õõs",
+ "sched_cats.col.inplace": "Kohapeal valatud",
+ "sched_cats.col.volume": "Netomaht",
+ "sched_cats.col.area": "Pinnapindala",
+ "sched_cats.col.floor_area": "Põrandapindala",
+ "sched_cats.col.thickness": "Paksus",
+ "sched_cats.col.points": "Punktid",
+ "elem.toposolid.points": "Mõõdistuspunktid",
+ "elem.toposolid.count": "Punktid",
+ "elem.toposolid.low": "Madalaim",
+ "elem.toposolid.high": "Kõrgeim",
+ "elem.toposolid.edit": "Muuda punkte",
+ "elem.toposolid.edit_tip": "Vali, lohista ja määra mõõdistuspunktide kõrgusmärk plaanil",
+ "elem.toposolid.pick_hint": "Punkti valimiseks klõpsa seda plaanil. Lisamiseks või eemaldamiseks klõpsa uuesti.",
+ "elem.toposolid.z": "Kõrgusmärk ({n})",
+ "elem.toposolid.mixed": "Valitud punktid erinevad; uus väärtus määrab need kõik.",
+ "elem.toposolid.edit_help": "Punkti liigutamiseks lohista seda. Kõrgusmärgi määramiseks sisesta väärtus ja vajuta Enter. Backspace eemaldab valitud punktid, Esc lahkub.",
+ "elem.toposolid.done": "Valmis"
+}

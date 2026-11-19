@@ -1,0 +1,19 @@
+{
+ "names.level": "Level {n}",
+ "names.slab": "Slab 200",
+ "names.roof_slab": "Roof 200",
+ "names.sheet.plan_section": "Floor 1 plan and section",
+ "names.sheet.plan_view": "Floor 1 plan",
+ "names.sheet.site_plan": "Site plan",
+ "names.sheet_set.issue": "Issue 1",
+ "names.title.owner": "Project Ltd",
+ "names.title.creator": "A. Ivanov",
+ "names.title.approver": "P. Petrov",
+ "names.title.document_type": "Drawing",
+ "names.title.status": "In progress",
+ "names.revision.date": "Nov 4, 2026",
+ "names.revision.description": "Issued for review",
+ "names.revision.author": "AI",
+ "names.demo.no_levels": "no levels",
+ "names.demo.no_sheet": "sheet"
+}

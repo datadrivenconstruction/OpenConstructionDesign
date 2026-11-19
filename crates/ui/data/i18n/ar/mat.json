@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "خرسانة",
+ "mat.masonry": "كتل بنائية",
+ "mat.brick": "طوب",
+ "mat.insulation": "عزل",
+ "mat.plaster": "لياسة",
+ "mat.render": "محارة",
+ "mat.gypsum": "ألواح جبس",
+ "mat.glass": "زجاج",
+ "mat.wood": "خشب",
+ "mat.steel": "فولاذ",
+ "mat.membrane": "غشاء",
+ "mat.other": "أخرى",
+ "warn.cat.wall": "جدار",
+ "warn.cat.slab": "بلاطة",
+ "warn.cat.opening": "فتحة",
+ "warn.cat.curtain_wall": "جدار ستائري",
+ "td.mat.custom": "أخرى…"
+}

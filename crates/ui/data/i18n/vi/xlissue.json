@@ -1,0 +1,13 @@
+{
+ "xlw.copy_list": "Sao chép danh sách",
+ "xlw.save_list": "Lưu danh sách…",
+ "xlw.copy_list_tip": "Sao chép các hàng đang hiển thị (tờ, ô, id, cột, giá trị, lý do) dưới dạng văn bản để dán vào bảng tính",
+ "xlw.save_list_tip": "Lưu các hàng đang hiển thị thành tệp .csv cạnh sổ làm việc; bản thân sổ làm việc không bao giờ thay đổi",
+ "xlw.list_book_value": "Giá trị trong sổ làm việc",
+ "xlw.list_model_value": "Giá trị trong mô hình",
+ "xlw.list_reason": "Lý do",
+ "xlw.list_copied": "Đã sao chép danh sách: {n} hàng",
+ "xlw.list_saved": "Đã lưu danh sách: {n} hàng, {file}",
+ "xlw.list_save_failed": "Chưa lưu danh sách",
+ "xlw.list_nothing": "Không có gì để sao chép: không có hàng nào hiển thị"
+}

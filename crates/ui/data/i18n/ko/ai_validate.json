@@ -1,0 +1,14 @@
+{
+ "ai.issue.integrity": "무결성 문제: {0} {1}: {2}",
+ "ai.issue.opening_outside": "개구부가 벽에 맞지 않습니다: {0}",
+ "ai.issue.opening_overlap": "개구부가 개구부 {0}와 겹칩니다",
+ "ai.issue.wall_warning": "벽: {0}",
+ "ai.issue.cut_warning": "자름: {0}",
+ "ai.issue.room_open": "룸이 닫혀 있지 않습니다",
+ "ai.issue.material_unknown": "프로젝트에 “{0}” 재료가 없습니다: 적용하면 기본 속성의 새 재료가 추가됩니다",
+ "ai.issue.material_suggest": "프로젝트에 “{0}” 재료가 없습니다: 적용하면 새 재료가 추가됩니다. “{1}”을 뜻하셨나요?",
+ "ai.issue.conflict": "이 항목은 실행할 수 없습니다: {0}",
+ "ai.issue.too_large": "요소 {0}개가 변경됩니다. 한도 {1}개를 넘으므로 허용이 필요합니다",
+ "ai.issue.truncated": "변경 목록이 {0}행에서 멈췄습니다: 계획이 카드에 표시할 수 있는 양보다 큽니다. 허용이 필요합니다",
+ "ai.issue.replan_failed": "계획을 다시 계산할 수 없습니다. 모델의 새 사본을 만드는 중입니다"
+}

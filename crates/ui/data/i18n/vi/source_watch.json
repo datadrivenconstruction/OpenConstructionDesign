@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "{name} đã thay đổi trên đĩa.",
+ "src.watch.update": "Cập nhật mô hình",
+ "src.watch.compare": "So sánh",
+ "src.watch.ignore": "Bỏ qua phiên bản này",
+ "src.watch.missing": "{name}: không tìm thấy tệp nguồn. Công việc vẫn tiếp tục.",
+ "src.watch.locate": "Tìm…",
+ "src.watch.dismiss": "Bỏ qua",
+ "src.watch.more": "và {n} tệp nguồn khác",
+ "src.watch.done": "Đã cập nhật từ {name}: {updated} phần tử đổi, {kept} trường giữ nguyên vì đã sửa, {conflicts} xung đột, {locked} giá trị khóa được giữ"
+}

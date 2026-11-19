@@ -1,0 +1,205 @@
+{
+ "items": [
+  {
+   "key": "door.clear_min.accessible",
+   "value": 0.8,
+   "unit": "m",
+   "source": "cte-db-sua",
+   "clause": "Anejo A, itinerario accesible: free passage width 0.80 m at least",
+   "verified": true,
+   "note": "read 2026-11-13: codigotecnico.org/pdf/Documentos/SUA/DBSUA.pdf"
+  },
+  {
+   "key": "accessible.turning_circle",
+   "value": 1.5,
+   "unit": "m",
+   "source": "cte-db-sua",
+   "clause": "Anejo A, itinerario accesible: turning space of 1.50 m diameter",
+   "verified": true,
+   "note": "read 2026-11-13: codigotecnico.org/pdf/Documentos/SUA/DBSUA.pdf"
+  },
+  {
+   "key": "ramp.slope_max",
+   "value": 0.06,
+   "unit": "ratio",
+   "source": "cte-db-sua",
+   "clause": "SUA 1 par. 4.3.1, accessible ramps 6 % beyond 6 m length",
+   "verified": true,
+   "note": "read 2026-11-13: codigotecnico.org/pdf/Documentos/SUA/DBSUA.pdf"
+  },
+  {
+   "key": "room.height_min",
+   "value": 2.5,
+   "unit": "m",
+   "source": "es-orden-1944",
+   "clause": "Rule 6: height of all rooms from floor to ceiling at least 2.50 m in urban areas, 2.20 m in detached and rural houses",
+   "verified": true,
+   "url": "https://www.boe.es/gazeta/dias/1944/03/01/pdfs/BOE-1944-61.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "National minimum hygiene order: rooms are at least 2.50 m high in towns, 2.20 m in detached or rural houses.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "note": "read 2026-11-14: BOE 1 March 1944 pp. 1833-1834; national rule that applies where a region has no own habitability decree; the Catalan value sits in the es-ct overlay"
+  },
+  {
+   "key": "egress.travel_max",
+   "value": 50.0,
+   "unit": "m",
+   "source": "cte-db-si",
+   "clause": "SI 3 table 3.1, floors with more than one exit: 50 m",
+   "verified": true,
+   "note": "read 2026-11-13: codigotecnico.org/pdf/Documentos/SI/DBSI.pdf; 25 m with a single exit"
+  },
+  {
+   "key": "corridor.width_min.accessible",
+   "value": 1.2,
+   "unit": "m",
+   "source": "cte-db-sua9",
+   "clause": "DB-SUA annex A, accessible route 1.20 m wide",
+   "verified": true,
+   "note": "read 2026-11-14: codigotecnico.org/pdf/Documentos/SUA/DBSUA.pdf"
+  },
+  {
+   "key": "fire.compartment_area_max",
+   "value": 2500,
+   "unit": "m2",
+   "source": "cte-db-si",
+   "clause": "SI 1 table 1.1, dwellings and offices: fire sector up to 2500 m2",
+   "verified": true,
+   "note": "read 2026-11-14: codigotecnico.org/pdf/Documentos/SI/DBSI.pdf; general rule, other uses differ"
+  },
+  {
+   "key": "daylight.window_floor_ratio",
+   "value": 0.167,
+   "unit": "ratio",
+   "source": "es-orden-1944",
+   "clause": "Rule 3: every habitable room has direct ventilation to the outside through an opening of at least 1/6 of the room floor area",
+   "verified": true,
+   "url": "https://www.boe.es/gazeta/dias/1944/03/01/pdfs/BOE-1944-61.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "National minimum hygiene order: each day or night room needs an opening to the outside of at least one sixth of its floor area.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "note": "read 2026-11-14: BOE 1 March 1944 pp. 1833-1834; national rule that applies where a region has no own habitability decree; regions override it (Catalonia 1/8 in the es-ct overlay)"
+  },
+  {
+   "key": "envelope.u_wall",
+   "value": 0.41,
+   "unit": "W/m2K",
+   "source": "cte-db-he",
+   "clause": "HE1 table 3.1.1.a, climate zone D",
+   "verified": false,
+   "note": "not read against the clause: value recalled from the edition named, an engineer checks it before relying on it",
+   "paraphrase": "In winter climate zone D (the inland plateau) an external wall may not exceed U 0.41 W/m2K."
+  },
+  {
+   "key": "envelope.u_roof",
+   "value": 0.35,
+   "unit": "W/m2K",
+   "source": "cte-db-he",
+   "clause": "HE1 table 3.1.1.a, climate zone D",
+   "verified": false,
+   "note": "not read against the clause: value recalled from the edition named, an engineer checks it before relying on it",
+   "paraphrase": "In winter climate zone D a roof to outside air may not exceed U 0.35 W/m2K."
+  },
+  {
+   "key": "envelope.u_ground",
+   "value": 0.65,
+   "unit": "W/m2K",
+   "source": "cte-db-he",
+   "clause": "HE1 table 3.1.1.a, climate zone D",
+   "verified": false,
+   "note": "not read against the clause: value recalled from the edition named, an engineer checks it before relying on it",
+   "paraphrase": "In winter climate zone D an element against the ground may not exceed U 0.65 W/m2K."
+  },
+  {
+   "key": "corridor.width_min",
+   "value": 1.0,
+   "unit": "m",
+   "source": "cte-db-si",
+   "clause": "SI 3 table 4.1, corridors and ramps at least 1.00 m",
+   "verified": true,
+   "url": "https://www.codigotecnico.org/pdf/Documentos/SI/DBSI.pdf",
+   "accessed": "2026-11-15",
+   "paraphrase": "An evacuation corridor is at least 1.00 m wide.",
+   "note": "read 2026-11-15: codigotecnico.org DB-SI PDF"
+  },
+  {
+   "key": "building.high_rise_height",
+   "value": 28.0,
+   "unit": "m",
+   "source": "cte-db-si",
+   "clause": "SI 3 table 5.1 and SI 4, evacuation height above 28 m needs specially protected stairs and an emergency lift",
+   "verified": true,
+   "url": "https://www.codigotecnico.org/pdf/Documentos/SI/DBSI.pdf",
+   "accessed": "2026-11-15",
+   "paraphrase": "Above 28 m of evacuation height stricter stair and lift measures apply.",
+   "note": "read 2026-11-15: codigotecnico.org DB-SI PDF"
+  },
+  {
+   "key": "building.class5_height",
+   "na": true,
+   "value": null,
+   "unit": "m",
+   "source": "cte-db-si",
+   "verified": false,
+   "note": "na: fire measures step by evacuation height bands (14 m, 15 m, 28 m) per use, not by a building class",
+   "text": {
+    "en": "No height class: fire measures step by evacuation height per use.",
+    "ru": "Нет класса по высоте: требования меняются по высоте эвакуации для каждого назначения."
+   }
+  },
+  {
+   "key": "stair.riser_max",
+   "value": 0.185,
+   "unit": "m",
+   "orig": {
+    "value": 18.5,
+    "unit": "cm"
+   },
+   "source": "cte-db-sua",
+   "clause": "SUA 1 par. 4.2.1(1), riser 13 to 18.5 cm (17.5 cm in public-use zones)",
+   "verified": true,
+   "url": "https://www.codigotecnico.org/pdf/Documentos/SUA/DBSUA.pdf",
+   "accessed": "2026-11-15",
+   "paraphrase": "A stair riser is 13 to 18.5 cm, lower where the public uses it.",
+   "note": "read 2026-11-15: codigotecnico.org DB-SUA PDF"
+  },
+  {
+   "key": "stair.going_min",
+   "value": 0.28,
+   "unit": "m",
+   "orig": {
+    "value": 28,
+    "unit": "cm"
+   },
+   "source": "cte-db-sua",
+   "clause": "SUA 1 par. 4.2.1(1), going at least 28 cm on straight flights",
+   "verified": true,
+   "url": "https://www.codigotecnico.org/pdf/Documentos/SUA/DBSUA.pdf",
+   "accessed": "2026-11-15",
+   "paraphrase": "A straight flight has treads of at least 28 cm.",
+   "note": "read 2026-11-15: codigotecnico.org DB-SUA PDF"
+  },
+  {
+   "key": "guard.height_min",
+   "value": 0.9,
+   "unit": "m",
+   "source": "cte-db-sua",
+   "clause": "SUA 1 par. 3.2.1(1), 0.90 m where the drop is up to 6 m, 1.10 m otherwise",
+   "verified": true,
+   "url": "https://www.codigotecnico.org/pdf/Documentos/SUA/DBSUA.pdf",
+   "accessed": "2026-11-15",
+   "paraphrase": "A guard is 0.90 m high over a drop up to 6 m and 1.10 m above that.",
+   "note": "read 2026-11-15: codigotecnico.org DB-SUA PDF"
+  }
+ ]
+}

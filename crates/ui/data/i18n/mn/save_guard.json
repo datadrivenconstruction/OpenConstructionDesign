@@ -1,0 +1,14 @@
+{
+ "save_guard.save.empty_over_full": "Юу ч хадгалагдсангүй: загвар хоосон, файл аль хэдийн агуулгатай байна. Файлд хүрээгүй. Өөр нэрээр бичихийн тулд Өөрөөр хадгалах-ыг ашиглана уу.",
+ "save_guard.refuse.body": "Юу ч хадгалагдсангүй: загвар хоосон, {name} аль хэдийн агуулгатай байна. Файлд хүрээгүй.",
+ "save_guard.refuse.foreign": "Энэ нь DDC Editor файл биш тул солих боломжгүй. Өөр нэрээр бичихийн тулд Өөрөөр хадгалах-ыг ашиглана уу.",
+ "save_guard.refuse.ask": "{name}-г солих уу? Энэ нь {what} агуулж байна. Эхлээд хажууд нь _archive хавтсанд шилжүүлж, дараа нь хоосон загварыг бичнэ.",
+ "save_guard.refuse.holds_db": "{n} элемент ба агуулгын мөр",
+ "save_guard.refuse.holds_ifc": "IFC бүтээгдэхүүнтэй",
+ "save_guard.refuse.replace": "Ямар ч байсан солих…",
+ "save_guard.refuse.replace_yes": "Шилжүүлээд солих",
+ "save_guard.refuse.save_as": "Өөрөөр хадгалах…",
+ "save_guard.refuse.cancel": "Болих",
+ "save_guard.replace.moved": "Өмнөх файлыг {path} руу шилжүүллээ",
+ "save_guard.replace.move_failed": "{name}-г тавьж чадсангүй: {error}. Юу ч бичигдээгүй."
+}

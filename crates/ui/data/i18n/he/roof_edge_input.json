@@ -1,0 +1,25 @@
+{
+ "roof_edge.err.number": "הזן מספר",
+ "roof_edge.err.positive": "חייב להיות גדול מאפס",
+ "roof_edge.err.nonneg": "לא יכול להיות שלילי",
+ "roof_edge.err.max": "לא יכול לעבור את {max}",
+ "roof_edge.list.empty_hint": "הוסף מסגרות, מרזבים, תקרות תחתונות או פתחי גג בפקודות הגג",
+ "roof_edge.edit_tip": "ערוך מאפיינים",
+ "roof_edge.delete_tip": "מחק",
+ "roof_edge.pe.del_tip": "הסר נקודה זו (בחתך נשארות לפחות 3)",
+ "roof_edge.pe.up_tip": "הזז נקודה זו למעלה",
+ "roof_edge.confirm_edge": "למחוק את {name}? Ctrl+Z יחזיר אותו.",
+ "roof_edge.confirm_profile": "למחוק את הפרופיל {name}? Ctrl+Z יחזיר אותו.",
+ "roof_edge.deleted_one": "נמחק {name}",
+ "roof_edge.deleted_n": {
+  "one": "נמחק # אלמנט",
+  "two": "נמחקו # אלמנטים",
+  "other": "נמחקו # אלמנטים"
+ },
+ "roof_edge.profile_deleted": "הפרופיל נמחק",
+ "roof_edge.profile_in_use": {
+  "one": "בשימוש על ידי # אלמנט קצה: מחק או שנה אותו קודם",
+  "two": "בשימוש על ידי # אלמנטי קצה: מחק או שנה אותם קודם",
+  "other": "בשימוש על ידי # אלמנטי קצה: מחק או שנה אותם קודם"
+ }
+}

@@ -1,0 +1,5 @@
+{
+ "xlsx_readonly.read_only_head": "Csak olvasható — az Alkalmazás másolatot ír",
+ "xlsx_readonly.show_in_folder": "Megjelenítés a mappában",
+ "xlsx_readonly.copy_exists": "A másolatfájl már létezik. Válasszon másik nevet, vagy törölje."
+}

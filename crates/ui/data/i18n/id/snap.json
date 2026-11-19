@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "Titik ujung",
+ "snap.midpoint": "Titik tengah",
+ "snap.perpendicular": "Tegak lurus",
+ "snap.wall_axis": "Sumbu dinding",
+ "snap.wall_face": "Muka dinding",
+ "snap.grid": "Kisi",
+ "snap.intersection": "Perpotongan",
+ "snap.grid_axis": "Garis grid",
+ "snap.ref_plane": "Bidang referensi",
+ "snap.nearest": "Terdekat",
+ "snap.align_x": "Sejajar di X dengan titik jauh",
+ "snap.align_y": "Sejajar di Y dengan titik jauh",
+ "snap.align_xy": "Sejajar di X dan Y"
+}

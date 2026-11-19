@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "Jednotky",
+ "topo_units.unit": "Jednotky v souboru",
+ "topo_units.unit.m": "m",
+ "topo_units.unit.cm": "cm",
+ "topo_units.unit.mm": "mm",
+ "topo_units.unit.ft": "ft",
+ "topo_units.unit.usft": "US survey ft",
+ "topo_units.unit.in": "in",
+ "topo_units.unit.from_file": "Soubor uvádí své jednotky: {unit}",
+ "topo_units.unit.suggested": "Soubor neuvádí jednotky. Navrženo podle rozsahu: {unit} — zkontrolujte výsledek níže",
+ "topo_units.extent": "Výsledek v jednotkách projektu: {x} × {y} {u} v půdorysu, výškový rozsah {z} {u}",
+ "topo_units.extent.none": "Výsledek: s těmito volbami nic k importu",
+ "topo_units.extent.check": "Nevypadá to jako pozemek: zkontrolujte jednotky"
+}

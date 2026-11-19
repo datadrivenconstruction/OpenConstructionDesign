@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "بتن",
+ "mat.masonry": "بنایی",
+ "mat.brick": "آجر",
+ "mat.insulation": "عایق",
+ "mat.plaster": "گچ",
+ "mat.render": "اندود",
+ "mat.gypsum": "گچ‌برد",
+ "mat.glass": "شیشه",
+ "mat.wood": "چوب",
+ "mat.steel": "فولاد",
+ "mat.membrane": "غشا",
+ "mat.other": "سایر",
+ "warn.cat.wall": "دیوار",
+ "warn.cat.slab": "دال",
+ "warn.cat.opening": "بازشو",
+ "warn.cat.curtain_wall": "دیوار پرده‌ای",
+ "td.mat.custom": "سایر…"
+}

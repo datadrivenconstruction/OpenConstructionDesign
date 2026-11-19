@@ -1,0 +1,4 @@
+{
+ "family_load.refused": "A(z) „{name}” család nem tölthető be: {msg}. Semmi nem került a projektbe; a szerkesztései megmaradnak.",
+ "family_load.loaded_all": "{n} család betöltve egy lépésben: {names}"
+}

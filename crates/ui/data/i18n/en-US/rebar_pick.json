@@ -1,0 +1,7 @@
+{
+ "rebar_pick.pick.empty": "Reinforcement: pick a column, beam, wall, slab or footing",
+ "rebar_pick.pick.unsupported": "This selection cannot be reinforced. Pick a column, beam, wall, slab or footing",
+ "rebar_pick.pick.keys": "Click to pick, Shift to add more · Enter to open the form · Esc to cancel",
+ "rebar_pick.pick.open": "Open form",
+ "rebar_pick.pick.cancel": "Cancel"
+}

@@ -1,0 +1,8 @@
+{
+ "v3d.proj.to_ortho": "Εναλλαγή σε ορθογραφική",
+ "v3d.proj.to_persp": "Εναλλαγή σε προοπτική",
+ "v3d.walk.unit.m": "m/s",
+ "v3d.walk.unit.ft": "ft/s",
+ "v3d.temp.show_all": "Εμφάνιση όλων  ·  Esc",
+ "v3d.msg.deleted_named": "Διαγράφηκε η τρισδιάστατη προβολή {name}"
+}

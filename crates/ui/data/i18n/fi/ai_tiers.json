@@ -1,0 +1,4 @@
+{
+ "ai.issue.delete_large": "{0} elementtiä poistettaisiin, yli rajan {1}. Lupa vaaditaan",
+ "ai.issue.refused_large": "{0} elementtiä muuttuisi, yli kovan rajan {1}. Jaa suunnitelma pienempiin osiin"
+}

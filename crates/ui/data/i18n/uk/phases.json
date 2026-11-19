@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D",
+ "phases.current_mark": "поточна",
+ "phases.make_current": "Зробити поточною",
+ "phases.col_phase": "Фаза",
+ "phases.col_filter": "Фільтр",
+ "phases.presets": "Пресети плану",
+ "phases.del_title": "Видалити фазу",
+ "phases.del_text": "Видалити фазу «{name}»? Її елементи перейдуть до фази, обраної нижче.",
+ "phases.del_into": "Перемістити елементи до",
+ "phases.del_ok": "Видалити",
+ "phases.col_kind": "Тип елемента",
+ "phases.col_count": "Кількість",
+ "phases.col_volume": "Об’єм"
+}

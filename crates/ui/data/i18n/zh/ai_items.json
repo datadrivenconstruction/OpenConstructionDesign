@@ -1,0 +1,16 @@
+{
+ "ai.items.all": {
+  "one": "全部 # 项",
+  "other": "全部 # 项"
+ },
+ "ai.items.all.tip": "勾选或取消勾选方案中的每一项",
+ "ai.items.checked": "已勾选 {n}/{m}",
+ "ai.items.check.tip": "将“{title}”纳入应用",
+ "ai.items.expand": "显示元素",
+ "ai.items.collapse": "隐藏元素",
+ "ai.items.apply": {
+  "one": "应用 # 项",
+  "other": "应用 # 项"
+ },
+ "ai.items.apply_none": "应用"
+}

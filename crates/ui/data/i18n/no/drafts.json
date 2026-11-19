@@ -1,0 +1,8 @@
+{
+ "drafts.drafts.head": "Åpne redigeringsvinduer har endringer som ikke er i prosjektet ennå:",
+ "drafts.draft.family": "Familien “{name}”",
+ "drafts.draft.line": "Linjebibliotek: {name}",
+ "drafts.draft.styles": "Linjetyper for visningsområde",
+ "drafts.btn.save_all": "Lagre alle",
+ "drafts.drafts.refused": "Et utkast kunne ikke lagres. Ingenting ble lukket; redigeringsvinduet med utkastet er åpent."
+}

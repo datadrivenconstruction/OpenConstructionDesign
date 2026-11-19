@@ -1,0 +1,7 @@
+brief = "Vertical facade fin; depth and spacing as parameters."
+category = "generic"
+must = param Height
+must = param Depth
+must = solids >= 1
+must = ports 0
+must = flex Height 2400 3750

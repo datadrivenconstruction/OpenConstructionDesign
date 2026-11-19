@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "Exporteren naar spreadsheet: bereik",
+ "xlsx_scope.intro": "Kies wat in het werkboek komt. Het weer importeren wijzigt alleen deze elementen.",
+ "xlsx_scope.base_whole": "Heel model",
+ "xlsx_scope.base_level": "Actieve verdieping",
+ "xlsx_scope.base_selection": "Selectie",
+ "xlsx_scope.categories": "Categorieën",
+ "xlsx_scope.cat_walls": "wanden",
+ "xlsx_scope.cat_openings": "deuren",
+ "xlsx_scope.cat_rooms": "ruimten",
+ "xlsx_scope.cat_slabs": "vloeren",
+ "xlsx_scope.cat_curtains": "gordijngevels",
+ "xlsx_scope.nothing_selected": "Niets is geselecteerd: selecteer eerst elementen of kies een ander bereik.",
+ "xlsx_scope.no_categories": "Vink minstens één categorie aan.",
+ "xlsx_scope.no_level": "De actieve verdieping is niet gevonden.",
+ "xlsx_scope.export": "Exporteren",
+ "xlsx_scope.preview_scope": "Geëxporteerd bereik: {scope}. Elementen daarbuiten worden nooit gewijzigd of verwijderd."
+}

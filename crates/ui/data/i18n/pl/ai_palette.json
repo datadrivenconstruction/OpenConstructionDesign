@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "Zapytaj AI: {q}",
+ "ai.palette.connect": "Połącz AI, aby zadać pytanie",
+ "ai.palette.draft.apply": "Zastosuj szkic ({n})",
+ "ai.palette.draft.reject": "Odrzuć szkic",
+ "ai.palette.draft.next": "Następna zmiana w szkicu",
+ "ai.palette.draft.show": "Pokaż szkic w widoku",
+ "cmd.ai.next_change": "Następna zmiana w szkicu",
+ "cmd.ai.next_change.desc": "Przenosi widok do następnego elementu zmienianego przez szkic.",
+ "cmd.ai.show_draft": "Pokaż szkic AI w widoku",
+ "cmd.ai.show_draft.desc": "Dopasowuje widok do wszystkiego, co zmienia szkic."
+}

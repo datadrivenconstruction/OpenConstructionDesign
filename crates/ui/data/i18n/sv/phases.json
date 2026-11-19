@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D-vy",
+ "phases.current_mark": "aktuell",
+ "phases.make_current": "Gör aktuell",
+ "phases.col_phase": "Fas",
+ "phases.col_filter": "Filtrering",
+ "phases.presets": "Planförinställningar",
+ "phases.del_title": "Ta bort fas",
+ "phases.del_text": "Ta bort fasen “{name}”? Dess element flyttas till fasen som väljs nedan.",
+ "phases.del_into": "Flytta element till",
+ "phases.del_ok": "Ta bort",
+ "phases.col_kind": "Elementtyp",
+ "phases.col_count": "Antal",
+ "phases.col_volume": "Volym"
+}

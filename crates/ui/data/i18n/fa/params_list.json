@@ -1,0 +1,23 @@
+{
+ "params_list.n_params": {
+  "one": "# پارامتر",
+  "other": "# پارامتر"
+ },
+ "params_list.n_values": {
+  "one": "# مقدار",
+  "other": "# مقدار"
+ },
+ "params_list.n_elements": {
+  "one": "# عنصر",
+  "other": "# عنصر"
+ },
+ "params_list.exported": "{params} به {file} خروجی گرفته شد",
+ "params_list.export_failed": "پارامترها خروجی گرفته نشدند: {why}",
+ "params_list.open_folder": "باز کردن پوشه",
+ "params_list.delete_tip": "حذف پارامتر و مقادیرش",
+ "params_list.confirm": "{name} و {values} آن روی {elements} حذف شود؟",
+ "params_list.confirm_btn": "حذف",
+ "params_list.cancel": "لغو",
+ "params_list.deleted": "پارامتر {name} ({values}) حذف شد",
+ "params_list.undo": "واگرد"
+}

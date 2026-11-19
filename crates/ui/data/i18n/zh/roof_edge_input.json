@@ -1,0 +1,23 @@
+{
+ "roof_edge.err.number": "请输入数字",
+ "roof_edge.err.positive": "必须大于零",
+ "roof_edge.err.nonneg": "不得为负数",
+ "roof_edge.err.max": "不得超过 {max}",
+ "roof_edge.list.empty_hint": "使用屋顶命令添加檐板、天沟、檐底板或天窗",
+ "roof_edge.edit_tip": "编辑属性",
+ "roof_edge.delete_tip": "删除",
+ "roof_edge.pe.del_tip": "移除此点（剖面至少保留 3 个点）",
+ "roof_edge.pe.up_tip": "上移此点",
+ "roof_edge.confirm_edge": "删除 {name}？Ctrl+Z 可恢复。",
+ "roof_edge.confirm_profile": "删除轮廓 {name}？Ctrl+Z 可恢复。",
+ "roof_edge.deleted_one": "已删除 {name}",
+ "roof_edge.deleted_n": {
+  "other": "已删除 # 个图元",
+  "one": "已删除 # 个图元"
+ },
+ "roof_edge.profile_deleted": "轮廓已删除",
+ "roof_edge.profile_in_use": {
+  "other": "被 # 个边缘图元使用：请先删除或更改它们",
+  "one": "被 # 个边缘图元使用：请先删除或更改它们"
+ }
+}

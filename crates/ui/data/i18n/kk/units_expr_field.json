@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "Енгізу бос.",
+ "units.err.not_number": "{pos} орнында сан емес.",
+ "units.err.unknown_unit": "Белгісіз өлшем бірлігі: {unit}.",
+ "units.err.non_positive": "Ұзындық нөлден үлкен болуы керек.",
+ "units.err.too_large": "Ұзындық {max} м-ден аспауы керек.",
+ "units.err.bad_angle": "Бұрыш — градуспен берілген сан.",
+ "units.err.unknown_name": "Белгісіз атау: {name}. Мән сақталды.",
+ "units.err.cycle": "{name} орнында формула циклі. Мән сақталды.",
+ "units.err.bad_expr": "{pos} орнындағы өрнекті оқу мүмкін емес. Мән сақталды.",
+ "units.err.div_zero": "{pos} орнында нөлге бөлу. Мән сақталды.",
+ "units.err.invalid": "Жарамсыз сан.",
+ "units.err.kept": "Өзгермеді: {reason}"
+}

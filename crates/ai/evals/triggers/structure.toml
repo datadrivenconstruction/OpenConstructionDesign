@@ -1,0 +1,17 @@
+# Requests that must make the agent read ddc://skills/structure first (yes), and ones that must not (no).
+skill = "structure"
+yes = [
+  "Build a 300 m lattice tower with curved legs, three platforms and bolted gusset plates",
+  "построй решётчатую мачту высотой 120 м с тремя площадками",
+  "Model a space frame roof for a 60 by 90 m hangar on perimeter columns",
+  "Entwirf eine Bogenbrücke für Fußgänger mit 45 m Spannweite",
+  "Diseña una cubierta de estadio con cerchas en voladizo de 40 m",
+  "Add a steel portal frame with bracing to the warehouse and connect the members",
+  "做一个双曲面网壳博物馆屋顶，带边梁和支座",
+]
+no = [
+  "покрась стены в гостиной в белый цвет",
+  "Rename level 2 to Ground floor",
+  "Show me a schedule of doors on level 1",
+  "Change the floor finish of the kitchen to oak",
+]

@@ -1,0 +1,14 @@
+{
+ "ai.hist.badge": "AI",
+ "ai.hist.untitled": "Modificări AI",
+ "ai.hist.tip": "{title}\nAplicat de: {actor}\nModel AI: {model}",
+ "ai.hist.why": "Motiv: {why}",
+ "ai.hist.reverted": "revenit",
+ "ai.hist.revert_one": "Revine la acest lot AI",
+ "ai.revert.done": "Modificări AI revenite: {n}. Anularea le aduce înapoi.",
+ "ai.revert.empty": "Nu există modificări AI de revenit",
+ "ai.revert.not_ai": "Acest pas nu este o modificare AI",
+ "ai.revert.already": "Aceste modificări AI sunt deja revenite",
+ "ai.revert.opaque": "Nu s-a revenit: aceste modificări AI nu pot fi separate în siguranță de lucrul ulterior. Nu s-a schimbat nimic.",
+ "ai.revert.failed": "Revenirea a eșuat: {e}"
+}

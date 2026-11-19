@@ -1,0 +1,6 @@
+{
+ "xlsx_no_base.title": "Ennek a munkafüzetnek nincsenek összehasonlítási adatai",
+ "xlsx_no_base.detail": "A rejtett összehasonlító lap hiányzik vagy sérült (egy másik program újramentette a munkafüzetet, vagy kézzel készült). Minden eltérő cella lecseréli a modell értékét; az exportálás óta a modellen végzett szerkesztések nem észlelhetők. A munkafüzetből hiányzó sorok nem törlődnek.",
+ "xlsx_no_base.confirm": "Ellenőriztem a módosításokat: cserélje le a modell értékeit ({n})",
+ "xlsx_no_base.confirm_first": "Előbb erősítse meg az összehasonlítási adatok nélküli munkafüzet importálását"
+}

@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "Teckenförklaring",
+ "legend.legend.new_hint": "Nytt namn på teckenförklaring",
+ "legend.legend.delete_tip": "Ta bort teckenförklaring",
+ "legend.legend.delete_placed": "Ta bort teckenförklaring (placerad på: {sheets})",
+ "legend.legend.deleted": "Teckenförklaring borttagen: {name}",
+ "legend.legend.no_rows": "Inga rader ännu. Lägg till en eller ta stilarna från den aktuella vyn",
+ "legend.legend.replace_q": "Ersätt {n} rader med stilarna från den här vyn?",
+ "legend.legend.replace": "Ersätt",
+ "legend.legend.keep": "Behåll rader",
+ "legend.col.swatch": "Färgprov",
+ "legend.col.value": "Värde",
+ "legend.col.label": "Etikett"
+}

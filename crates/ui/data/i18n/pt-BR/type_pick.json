@@ -1,0 +1,10 @@
+{
+ "type_pick.pick.search": "Pesquisar tipos ou espessura",
+ "type_pick.pick.empty": "Nenhum tipo correspondente",
+ "type_pick.pick.edit": "Editar tipo…",
+ "type_pick.pick.mixed": "Misto",
+ "type_pick.pick.layers": {
+  "one": "# camada",
+  "other": "# camadas"
+ }
+}

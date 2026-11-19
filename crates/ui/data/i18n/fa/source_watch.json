@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "{name} روی دیسک تغییر کرد.",
+ "src.watch.update": "به‌روزرسانی مدل",
+ "src.watch.compare": "مقایسه",
+ "src.watch.ignore": "این نسخه را نادیده بگیر",
+ "src.watch.missing": "{name}: فایل منبع پیدا نشد. کار ادامه دارد.",
+ "src.watch.locate": "یافتن…",
+ "src.watch.dismiss": "بستن",
+ "src.watch.more": "و {n} فایل منبع دیگر",
+ "src.watch.done": "به‌روز شده از {name}: {updated} تغییر، {kept} فیلد به‌عنوان ویرایش نگه داشته شد، {conflicts} تعارض، {locked} مقدار قفل‌شده نگه داشته شد"
+}

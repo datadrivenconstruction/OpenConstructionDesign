@@ -1,0 +1,23 @@
+{
+ "cmd.app.report": "דווח על בעיה…",
+ "cmd.app.report.desc": "מתאר מה השתבש ושומר חבילה על המחשב הזה: הטקסט שלך, עובדות על הגרסה והמערכת, תמונה של החלון ורשומת הקריסה האחרונה. דבר לא נשלח.",
+ "report.title": "דווח על בעיה",
+ "report.what": "מה קרה",
+ "report.expected": "מה ציפית",
+ "report.steps": "צעדים לשחזור",
+ "report.opt.shot": "כלול תמונה של החלון",
+ "report.opt.model": "כלול עותק של המודל",
+ "report.opt.model.note": "כבוי כברירת מחדל. העותק כולל את נתוני הפרויקט שלך, בלי יומן ה-AI.",
+ "report.opt.paths": "שמור שמות משתמש בנתיבי קבצים",
+ "report.local": "החבילה נשמרת על המחשב הזה בלבד. דבר לא נשלח אוטומטית.",
+ "report.blocked": "תאר תחילה מה קרה.",
+ "report.save": "שמור חבילה",
+ "report.copy": "העתק טקסט",
+ "report.cancel": "ביטול",
+ "report.copied": "טקסט הדוח הועתק.",
+ "report.saved": "החבילה נשמרה: {path}",
+ "report.failed": "לא ניתן לשמור את החבילה: {err}",
+ "report.model.fail": "לא ניתן היה להכין עותק של המודל, דבר לא נשמר: {err}",
+ "report.crash.notice": "הסשן הקודם הסתיים בקריסה.",
+ "report.crash.action": "דווח על בעיה"
+}

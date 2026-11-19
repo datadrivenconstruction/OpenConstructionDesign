@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "Nessun risultato",
+ "empty.browser_search.hint": "Nessuna vista, livello, tipo o stanza corrisponde a questa ricerca.",
+ "empty.browser_search.action": "Cancella ricerca",
+ "empty.xl_filtered.title": "Nessuna voce corrisponde ai filtri",
+ "empty.xl_filtered.hint": "Attiva altri tipi, scegli un'altra tavola o cambia il testo di ricerca.",
+ "empty.xl_filtered.action": "Cancella filtri",
+ "empty.xl_nochanges.title": "Nessuna modifica nella cartella",
+ "empty.xl_nochanges.hint": "La cartella corrisponde al modello: importarla non cambierebbe nulla.",
+ "empty.version_same.title": "I modelli sono identici",
+ "empty.version_same.hint": "Non sono state trovate differenze tra il modello aperto e la versione scelta.",
+ "empty.templates.title": "Nessun modello di vista ancora",
+ "empty.templates.hint": "Creane uno dalla vista corrente per riusarne le impostazioni in altre viste.",
+ "empty.templates.action": "Dai un nome a un modello",
+ "empty.fe_params.title": "Nessun parametro ancora",
+ "empty.fe_params.hint": "Aggiungi un parametro qui sotto per guidare dimensioni, materiali o visibilità.",
+ "empty.fe_params.action": "Aggiungi un parametro"
+}

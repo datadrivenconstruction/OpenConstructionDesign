@@ -1,0 +1,29 @@
+{
+ "recover.ago_now": "à l'instant",
+ "recover.ago_min": {
+  "one": "il y a # min",
+  "other": "il y a # min"
+ },
+ "recover.ago_hour": {
+  "one": "il y a # heure",
+  "other": "il y a # heures"
+ },
+ "recover.ago_yesterday": "hier",
+ "recover.ago_day": {
+  "one": "il y a # jour",
+  "other": "il y a # jours"
+ },
+ "recover.empty": "Plus aucune copie",
+ "recover.empty_hint": "Rien à restaurer pour ce projet.",
+ "recover.all_damaged": "Toutes les copies sont endommagées, aucune ne peut être restaurée.",
+ "recover.keys_hint": "Haut et Bas choisissent une copie, Entrée passe à Restaurer",
+ "recover.row_tip": "Enregistrée à {time}",
+ "recover.row_damaged_tip": "Impossible à restaurer : {reason}",
+ "recover.archive_ask": "Déplacer cette copie dans les archives ?",
+ "recover.discard_ask": {
+  "one": "Déplacer la copie dans les archives ? Elle ne sera plus proposée.",
+  "other": "Déplacer les # copies dans les archives ? Elles ne seront plus proposées."
+ },
+ "recover.confirm_yes": "Déplacer dans les archives",
+ "recover.confirm_no": "Garder les copies"
+}

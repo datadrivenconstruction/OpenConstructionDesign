@@ -1,0 +1,42 @@
+{
+ "ai.tool.show_elements": "Pokazywanie elementów",
+ "ai.tool.isolate_elements": "Izolowanie elementów",
+ "ai.tool.color_by": "Kolorowanie według wartości",
+ "ai.tool.reset_view": "Resetowanie widoku",
+ "ai_found.found.query": "Znaleziono",
+ "ai_found.found.show": "Pokazane",
+ "ai_found.found.isolate": "Wyizolowane",
+ "ai_found.found.hide": "Ukryte",
+ "ai_found.found.color": "Pokolorowane",
+ "ai_found.found.count": "{n} z {m}",
+ "ai_found.found.none": "Nic nie pasuje. Spróbuj szerszego filtra.",
+ "ai_found.found.show_btn": "Pokaż",
+ "ai_found.found.show_tip": "Zaznacz te elementy i przybliż do nich w rzucie i 3D",
+ "ai_found.found.isolate_btn": "Wyizoluj",
+ "ai_found.found.isolate_tip": "Pokaż tylko te elementy do Resetuj widok",
+ "ai_found.found.select_btn": "Zaznacz",
+ "ai_found.found.select_tip": "Zaznacz te elementy bez przesuwania widoku",
+ "ai_found.legend.title": "Kolor według: {by}",
+ "ai_found.legend.row_tip": "Kliknij, aby zaznaczyć te elementy",
+ "ai_found.legend.empty_value": "Brak wartości",
+ "ai_found.legend.other": {
+  "one": "# dodatkowa wartość",
+  "other": "# dodatkowych wartości"
+ },
+ "ai_found.view.title": "Widok asystenta AI",
+ "ai_found.view.reset": "Resetuj widok",
+ "ai_found.view.reset_tip": "Przywróć widok sprzed zmiany przez asystenta AI",
+ "ai_found.view.shown": {
+  "one": "# element pokazany",
+  "other": "# elementów pokazanych"
+ },
+ "ai_found.view.isolated": {
+  "one": "# element wyizolowany",
+  "other": "# elementów wyizolowanych"
+ },
+ "ai_found.view.hidden": {
+  "one": "# element ukryty",
+  "other": "# elementów ukrytych"
+ },
+ "ai_found.found.line": "{what}: {count}"
+}

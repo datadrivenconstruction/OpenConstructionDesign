@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "چھوڑی گئی قطاریں اور خانے",
+ "xlsx_issues.conflicts_title": "دونوں جگہ تبدیل ہوا",
+ "xlsx_issues.missing_title": "ورک بک میں شیٹ غائب",
+ "xlsx_issues.look_alike_title": "شیٹ کا نام مطابقت نہیں رکھتا",
+ "xlsx_issues.mass_title": "بڑے پیمانے پر حذف کی تصدیق درکار ہے",
+ "xlsx_issues.sheets_missing": "شیٹس {sheets} ورک بک میں غائب ہیں (نام بدلا یا حذف ہوا)؛ ان کی قطاریں موازنہ نہیں ہوئیں۔",
+ "xlsx_issues.keep_model": "ماڈل رکھیں",
+ "xlsx_issues.take_book": "ورک بک لیں",
+ "xlsx_issues.open_book_tip": "فائل اپنی ایپلیکیشن میں کھولتا ہے۔ ماڈل میں کچھ نہیں بدلتا؛ ورک بک محفوظ کرنے کے بعد پیش نظارہ دوبارہ لوڈ ہوتا ہے۔"
+}

@@ -1,0 +1,5 @@
+{
+ "src.more": "Więcej",
+ "src.cf.chosen": "Wybrano {n} z {m}",
+ "src.opt.allow_mass_warn": "Uwaga: plik nie pasuje do większości zaimportowanych elementów, więc scalenie może zmienić dużo danych."
+}

@@ -1,0 +1,6 @@
+{
+ "quick.keys.rec_hint": "Esc বাতিল করে · Backspace মুছে দেয়",
+ "quick.keys.row_lost": "{key} এখন “{cmd}”-এর",
+ "quick.keys.row_took": "{key} “{cmd}” থেকে নেওয়া হয়েছে",
+ "quick.keys.reset_tip": "ডিফল্টে ফেরান"
+}

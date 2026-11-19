@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "Betoon",
+ "mat.masonry": "Müüritis",
+ "mat.brick": "Tellis",
+ "mat.insulation": "Isolatsioon",
+ "mat.plaster": "Krohv",
+ "mat.render": "Värvitud krohv",
+ "mat.gypsum": "Kipsplaat",
+ "mat.glass": "Klaas",
+ "mat.wood": "Puit",
+ "mat.steel": "Teras",
+ "mat.membrane": "Membraan",
+ "mat.other": "Muu",
+ "warn.cat.wall": "Sein",
+ "warn.cat.slab": "Plaat",
+ "warn.cat.opening": "Avaus",
+ "warn.cat.curtain_wall": "Kardinsein",
+ "td.mat.custom": "Muu…"
+}

@@ -1,0 +1,11 @@
+{
+ "cmd.ctx.ceiling.clean_outline": "Clean up outline",
+ "cmd.ctx.ceiling.clean_outline.desc": "Removes narrow spikes where the ceiling outline turns back on itself. Shows a preview first; one undo step.",
+ "cmd.ctx.shaft.clean_outline": "Clean up outline",
+ "cmd.ctx.shaft.clean_outline.desc": "Removes narrow spikes where the shaft outline turns back on itself. Shows a preview first; one undo step.",
+ "outline_cleanup.intro_ceiling": "The outline of this ceiling turns back on itself in narrow spikes: {n}. Clean-up removes them; everything else stays as it is.",
+ "outline_cleanup.intro_shaft": "The outline of this shaft turns back on itself in narrow spikes: {n}. Clean-up removes them; everything else stays as it is.",
+ "outline_cleanup.none_ceiling": "The outline of this ceiling has no spikes",
+ "outline_cleanup.none_shaft": "The outline of this shaft has no spikes",
+ "outline_cleanup.need_host": "Select a floor, ceiling or shaft"
+}

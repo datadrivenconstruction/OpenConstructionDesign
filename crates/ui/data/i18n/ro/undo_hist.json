@@ -1,0 +1,8 @@
+{
+ "undo.undone": "Anulat: {what}",
+ "undo.redone": "Refăcut: {what}",
+ "undo.action.edit.redo": "Refă",
+ "undo.action.edit.undo": "Anulează",
+ "hdr.unsaved": "Modificări nesalvate",
+ "hdr.file_menu": "Meniul fișier"
+}

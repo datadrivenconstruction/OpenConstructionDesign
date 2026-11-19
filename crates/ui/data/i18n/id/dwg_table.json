@@ -1,0 +1,14 @@
+{
+ "dwg_table.copy": "Salin tabel",
+ "dwg_table.copy_tip": "Salin rekap per layer sebagai tabel untuk spreadsheet",
+ "dwg_table.copied": "Rekap disalin (dipisahkan tab)",
+ "dwg_table.total": "Jumlah",
+ "dwg_table.col.layer": "Lapisan",
+ "dwg_table.col.count": "Jumlah",
+ "dwg_table.col.len": "Panjang, {unit}",
+ "dwg_table.col.area": "Luas, {unit}",
+ "dwg_table.unit.mm": "mm",
+ "dwg_table.unit.m2": "m²",
+ "dwg_table.unit.ft": "ft",
+ "dwg_table.unit.ft2": "ft²"
+}

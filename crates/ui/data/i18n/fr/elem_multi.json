@@ -1,0 +1,10 @@
+{
+ "elem.multi.title": "{n} éléments",
+ "elem.multi.varies": "variable",
+ "elem.multi.tip": "Entrée applique à tous les éléments sélectionnés",
+ "elem.multi.hidden": "{n} lignes seulement sur certains éléments",
+ "elem.multi.none": "Les éléments sélectionnés n'ont aucune ligne en commun",
+ "elem.multi.range": "La valeur est hors de la plage autorisée",
+ "elem.multi.changed": "{n} éléments modifiés · Ctrl+Z pour annuler",
+ "elem.multi.same": "Cette valeur est déjà appliquée à tous les éléments sélectionnés"
+}

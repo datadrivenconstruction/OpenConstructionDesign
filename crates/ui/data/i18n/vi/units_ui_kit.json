@@ -1,0 +1,6 @@
+{
+ "units.err.parse": "Không phải chiều dài: giá trị cũ được giữ nguyên. Nhập số kèm đơn vị tùy chọn, ví dụ 2500 hoặc 8'-2\"",
+ "ui.scale.set": "Tỷ lệ giao diện: {pct}%",
+ "cmd.ui.scale_up": "Tăng tỷ lệ giao diện",
+ "cmd.ui.scale_down": "Giảm tỷ lệ giao diện"
+}

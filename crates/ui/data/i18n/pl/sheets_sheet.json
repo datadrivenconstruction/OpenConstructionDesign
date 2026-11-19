@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "Duplikuj arkusz z widokami",
+ "cmd.view.sheet_duplicate_title": "Duplikuj arkusz (tylko tabela tytułowa)",
+ "sheets.dup.menu_views": "Duplikuj z widokami",
+ "sheets.dup.menu_title": "Duplikuj, tylko tabela tytułowa",
+ "sheets.dup.done": "Arkusz {number} utworzony z {src}: {views} widoków, {sched} zestawień i legend. Rewizje nie są kopiowane; arkusz jest niewydany.",
+ "sheets.dup.none": "Otwórz arkusz, aby go zduplikować",
+ "sheets.dup.copy": "kopia",
+ "cmd.view.sheet_duplicate.short": "Duplikuj z widokami",
+ "cmd.view.sheet_duplicate_title.short": "Duplikuj tabelę tytułową"
+}

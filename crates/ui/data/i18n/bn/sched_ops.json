@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "মান শূন্যের বেশি হতে হবে",
+ "sched_ops.not_number": "সংখ্যা নয়",
+ "sched_ops.no_host": "হোস্ট দেয়াল নেই",
+ "sched_ops.wall_length": "দেয়ালের এই দৈর্ঘ্য এভাবে সেট করা যাবে না",
+ "sched_ops.no_wall": "এমন দেয়াল নেই",
+ "sched_ops.no_opening": "এমন ফাঁকা অংশ নেই",
+ "sched_ops.no_curtain": "এমন পর্দা-দেয়াল নেই",
+ "sched_ops.no_panel": "এমন প্যানেল নেই",
+ "sched_ops.no_slab": "এমন স্ল্যাব নেই",
+ "sched_ops.no_room": "এমন কক্ষ নেই",
+ "sched_ops.slope_range": "ঢাল সীমার বাইরে",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

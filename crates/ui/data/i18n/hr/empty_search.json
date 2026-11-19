@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "Ništa nije pronađeno",
+ "empty.browser_search.hint": "Nijedan pogled, razina, vrsta ni prostorija ne odgovara ovoj pretrazi.",
+ "empty.browser_search.action": "Obriši pretragu",
+ "empty.xl_filtered.title": "Nijedan unos ne odgovara filtrima",
+ "empty.xl_filtered.hint": "Uključite još vrsta, odaberite drugi list ili promijenite tekst pretrage.",
+ "empty.xl_filtered.action": "Obriši filtre",
+ "empty.xl_nochanges.title": "Nema izmjena u radnoj knjizi",
+ "empty.xl_nochanges.hint": "Radna knjiga odgovara modelu: uvoz ne bi ništa promijenio.",
+ "empty.version_same.title": "Modeli su identični",
+ "empty.version_same.hint": "Nisu pronađene razlike između otvorenog modela i odabrane verzije.",
+ "empty.templates.title": "Još nema predložaka pogleda",
+ "empty.templates.hint": "Izradite ga iz trenutnog pogleda da ponovno upotrijebite njegove postavke na drugim pogledima.",
+ "empty.templates.action": "Nazovi predložak",
+ "empty.fe_params.title": "Još nema parametara",
+ "empty.fe_params.hint": "Dodajte parametar ispod da upravljate dimenzijama, materijalima ili vidljivošću.",
+ "empty.fe_params.action": "Dodaj parametar"
+}

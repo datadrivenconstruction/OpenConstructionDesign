@@ -1,0 +1,7 @@
+{
+ "diff.kind.added": "idinagdag",
+ "diff.kind.changed": "binago",
+ "diff.kind.deleted": "binura",
+ "diff.kind.refused": "tinanggihan",
+ "diff.kind.conflict": "salungatan"
+}

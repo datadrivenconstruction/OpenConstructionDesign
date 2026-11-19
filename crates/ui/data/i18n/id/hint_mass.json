@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "Permukaan bebas",
+ "cmd.mass.panelize": "Bagi menjadi panel",
+ "cmd.mass.surface_shell": "Atap pada permukaan",
+ "cmd.mass.thicken": "Beri ketebalan",
+ "hint.mass.freeform.first": "Permukaan bebas: sudut pertama persegi panjang denah · ketik tinggi busur · Esc — batal",
+ "hint.mass.freeform.next": "Permukaan bebas: sudut berlawanan · ketik tinggi busur · Esc — batal",
+ "hint.mass.panelize.first": "Bagi menjadi panel: pilih permukaan bebas di 3D · Esc — batal",
+ "hint.mass.panelize.value": "Bagi menjadi panel: ketik ukuran panel · Enter — terapkan · Esc — batal",
+ "hint.mass.surface_shell.first": "Atap pada permukaan: pilih permukaan bebas di 3D · Esc — batal",
+ "hint.mass.surface_shell.value": "Atap pada permukaan: ketik ketebalan · Enter — terapkan · Esc — batal",
+ "hint.mass.thicken.first": "Beri ketebalan: pilih permukaan bebas di 3D · Esc — batal",
+ "hint.mass.thicken.value": "Beri ketebalan: ketik ketebalan (0 — tanpa ketebalan) · Enter — terapkan · Esc — batal",
+ "status.mass.pick_surface": "Pilih permukaan bebas",
+ "status.mass.freeform_small": "Persegi panjang terlalu kecil: minimal 0,5 m di setiap sisi",
+ "name.mass.freeform": "Permukaan bebas",
+ "rgroup.mass_free": "Lanjutan"
+}

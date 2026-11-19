@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "mesuré {value}, limite {limit}",
+ "ai_checks.check.cap": "Affichage de {shown} sur {total} constats. Les erreurs viennent en premier : corrigez-les puis relancez.",
+ "ai_checks.check.run_again": "Relancer",
+ "ai_checks.check.goto": "Sélectionner et zoomer",
+ "ai_checks.check.never_title": "Pas encore contrôlé",
+ "ai_checks.check.never_hint": "Lancez les contrôles et les constats apparaissent ici.",
+ "ai_checks.check.sec.error": "Erreurs",
+ "ai_checks.check.sec.warning": "Avertissements",
+ "ai_checks.check.sec.info": "Remarques"
+}

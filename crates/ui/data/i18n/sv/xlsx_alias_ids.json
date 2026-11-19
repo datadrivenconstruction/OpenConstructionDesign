@@ -1,0 +1,7 @@
+{
+ "xlsx_alias_ids.ids_written": "{n} nya rader fick sitt id i ditt omdöpta blad; inget annat i arbetsboken ändrades.",
+ "xlsx_alias_ids.ids_open": "Arbetsboken är öppen i ett annat program: id för {n} nya rader skrevs inte. Stäng den där och synkronisera; dessa rader skapas inte igen.",
+ "xlsx_alias_ids.ids_failed": "Id för {n} nya rader kunde inte skrivas; arbetsboken lämnades som den var. Dessa rader skapas inte igen vid nästa synkronisering.",
+ "xlsx_alias_ids.unpaired": "{n} nya rader saknar id ännu; de minns och skapas inte igen.",
+ "xlsx_alias_ids.refused": "Inget tillämpades: nya rader i {sheets} kan inte få sina id medan ett omdöpt blad läses. Byt namn på bladet tillbaka till standardnamnet (eller ta bort dessa rader) och synkronisera igen."
+}

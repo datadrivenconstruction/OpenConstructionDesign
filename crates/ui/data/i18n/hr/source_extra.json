@@ -1,0 +1,5 @@
+{
+ "src.more": "Više",
+ "src.cf.chosen": "Odabrano {n} od {m}",
+ "src.opt.allow_mass_warn": "Oprez: datoteka ne odgovara većini uvezenih elemenata, pa spajanje može promijeniti mnogo podataka."
+}

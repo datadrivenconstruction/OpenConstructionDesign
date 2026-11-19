@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}, on the level",
+ "cmd_buttons.purge.undo": "Removing is one undo step.",
+ "cmd_buttons.unpin.none": "Nothing selected is pinned",
+ "cmd_buttons.change_type.none": "Select walls first: their type changes in one step",
+ "cmd_buttons.units.metric": "Units: metric",
+ "cmd_buttons.units.imperial": "Units: feet and inches",
+ "cmd_buttons.units.back": "Switch back",
+ "cmd_buttons.underlay.on": "Underlay on: the level below is shown dimmed",
+ "cmd_buttons.underlay.off": "Underlay off",
+ "cmd_buttons.underlay.none": "Underlay on, but the level below has nothing to show",
+ "cmd_buttons.zoom_sel.no_shape": "The selection has no shape to frame in this view",
+ "cmd_buttons.close.base": "The plan and 3D tabs stay open; open a section, a sheet or a drafting view to close it",
+ "tool.equipment": "Equipment",
+ "hint.equipment.place": "Equipment: pick the location · Esc to exit",
+ "cmd_buttons.table.opened": "Table opened beside the model",
+ "cmd_buttons.circuits.tip": "Open the list of electrical circuits of this model"
+}

@@ -1,0 +1,12 @@
+{
+ "opt.stair.straight": "To'g'ri",
+ "opt.stair.l": "L",
+ "opt.stair.u": "U",
+ "opt.stair.gap": "Oraliq",
+ "hint.stair.corner": "L zina: burilish burchagini tanlang · Backspace — oxirgi nuqtani olib tashlash · Esc — oxirgi nuqtani olib tashlash, nuqta qolmasa — bekor qilish",
+ "hint.stair.side": "Zina: ikkinchi marsh tomonini tanlang · Backspace — oxirgi nuqtani olib tashlash · Esc — oxirgi nuqtani olib tashlash, nuqta qolmasa — bekor qilish",
+ "tool.stair.flights": "{n} ta pog'ona (jami {m})",
+ "tool.stair.err_split": "Har bir marshda kamida 2 ta pog'ona bo'lishi kerak: birinchi marshda {n} ta, {m} dan",
+ "tool.stair.err_comfort": "Balandlik va yurish 2R + T qulaylik qoidasini buzadi",
+ "tool.stair.err_input": "Zina o'lchami diapazondan tashqarida: kenglik, balandlik va maydonchani tekshiring"
+}

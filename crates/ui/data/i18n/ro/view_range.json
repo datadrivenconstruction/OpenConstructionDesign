@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "Interval de vedere",
+ "view_range.range": "Interval de vedere",
+ "view_range.cut": "Plan de tăiere",
+ "view_range.bottom": "Jos",
+ "view_range.depth": "Adâncime vedere",
+ "view_range.cut.hint": "Înălțimea planului de tăiere deasupra nivelului. Elementele care îl intersectează sunt desenate tăiate.",
+ "view_range.bottom.hint": "Partea de jos a intervalului, față de nivel. Valorile zero sau negative sunt permise.",
+ "view_range.depth.hint": "Cât de adânc se uită vederea sub partea de jos. Zero sau mai mult.",
+ "view_range.err.number": "Introdu o lungime în fiecare câmp",
+ "view_range.err.not_finite": "Introdu o lungime în fiecare câmp",
+ "view_range.err.cut_not_above_bottom": "Planul de tăiere trebuie să fie deasupra părții de jos",
+ "view_range.err.negative_depth": "Adâncimea vederii nu poate fi negativă",
+ "view_range.err.top_below_cut": "Partea de sus a intervalului nu trebuie să fie sub planul de tăiere"
+}

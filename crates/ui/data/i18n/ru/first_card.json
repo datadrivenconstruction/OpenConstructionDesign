@@ -1,0 +1,9 @@
+{
+ "first_card.card.title": "Попробуйте обмен с таблицей XLSX",
+ "first_card.card.step1": "Выберите стену",
+ "first_card.card.step2": "Измените одно из её свойств",
+ "first_card.card.step3": "Правка в табличном редакторе, предпросмотр, Применить",
+ "first_card.card.spreadsheet": "Править в табличном редакторе",
+ "first_card.card.skip": "Пропустить",
+ "first_card.card.done": "Готово: модель и книга совпадают"
+}

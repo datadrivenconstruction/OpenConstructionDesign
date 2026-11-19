@@ -1,0 +1,8 @@
+{
+ "script_rec.started": "Inspelning: redigeringarna du gör från och med nu går till ett skript. Välj «Spela in åtgärder till skript» igen för att stoppa.",
+ "script_rec.saved": "Skript «{name}» sparat: {n} redigeringar.",
+ "script_rec.skipped": "{k} redigeringar gjorda med verktyg utan skriptform spelades inte in.",
+ "script_rec.nothing": "Inspelningen stoppad: inget att spara.",
+ "script_rec.failed": "Inspelningen sparades inte: {why}",
+ "script_rec.no_folder": "ingen inställningsmapp för skript"
+}

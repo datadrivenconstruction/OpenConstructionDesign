@@ -1,0 +1,4 @@
+{
+ "topo_import.topo.ambiguous": "{n} riviä ohitettu: luku voidaan lukea kahdella tavalla (1,250 = 1.25 vai 1250?) eikä tiedosto näytä desimaalimerkkiä",
+ "topo_import.topo.grouped": "{n} pistettä luettiin numeroryhmillä (1 250,5 tai 1,234.5)"
+}

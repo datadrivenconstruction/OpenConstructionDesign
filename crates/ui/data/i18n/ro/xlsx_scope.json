@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "Export în foaia de calcul: domeniu",
+ "xlsx_scope.intro": "Alege ce intră în registrul de calcul. Reimportarea lui schimbă doar aceste elemente.",
+ "xlsx_scope.base_whole": "Tot modelul",
+ "xlsx_scope.base_level": "Nivelul activ",
+ "xlsx_scope.base_selection": "Selecție",
+ "xlsx_scope.categories": "Categorii",
+ "xlsx_scope.cat_walls": "pereți",
+ "xlsx_scope.cat_openings": "uși",
+ "xlsx_scope.cat_rooms": "încăperi",
+ "xlsx_scope.cat_slabs": "plăci",
+ "xlsx_scope.cat_curtains": "pereți cortină",
+ "xlsx_scope.nothing_selected": "Nimic nu este selectat: selectează mai întâi elemente sau alege alt domeniu.",
+ "xlsx_scope.no_categories": "Bifează cel puțin o categorie.",
+ "xlsx_scope.no_level": "Nivelul activ nu a fost găsit.",
+ "xlsx_scope.export": "Exportă",
+ "xlsx_scope.preview_scope": "Domeniu exportat: {scope}. Elementele din afara lui nu sunt niciodată schimbate sau șterse."
+}

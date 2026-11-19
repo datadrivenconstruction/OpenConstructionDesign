@@ -1,0 +1,15 @@
+{
+ "cmd.data.export_step.desc": "Zapisuje cały model lub zaznaczenie jako STEP AP214 lub AP242: bryły z dokładnymi powierzchniami płaskimi, walcowymi, stożkowymi, sferycznymi, toroidalnymi i B-spline, pozostałe elementy jako płaskie powierzchnie, kolory, jeden węzeł złożenia na poziom.",
+ "cmd.data.export_3mf.desc": "Zapisuje cały model lub zaznaczenie jako 3MF do druku: jeden obiekt na element, kolory, jednostki i sprawdzenie, czy każda bryła jest szczelna.",
+ "fmenu.export.step": "STEP dokładne bryły (.step)",
+ "fmenu.export.3mf": "3MF do druku (.3mf)",
+ "mx.schema": "Schemat STEP",
+ "mx.schema.ap214": "AP214 (najszersze wsparcie)",
+ "mx.schema.ap242": "AP242",
+ "mx.watertight": "Bryły, które nie są szczelne",
+ "mx.watertight.report": "Zapisz je i wypisz na liście",
+ "mx.watertight.skip": "Pomiń je",
+ "mx.watertight.require": "Anuluj eksport",
+ "mx.faceted": "Zapisano {fmt}: {path} ({exact} dokładnych brył, {n} zapisanych jako płaskie powierzchnie: {first})",
+ "sheets.print.svg": "SVG"
+}

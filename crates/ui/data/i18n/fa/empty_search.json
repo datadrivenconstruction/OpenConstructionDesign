@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "چیزی پیدا نشد",
+ "empty.browser_search.hint": "هیچ نما، تراز، نوع یا اتاقی با این جستجو مطابقت ندارد.",
+ "empty.browser_search.action": "پاک کردن جستجو",
+ "empty.xl_filtered.title": "هیچ موردی با فیلترها مطابقت ندارد",
+ "empty.xl_filtered.hint": "موارد بیشتری را روشن کنید، برگهٔ دیگری انتخاب کنید یا متن جستجو را عوض کنید.",
+ "empty.xl_filtered.action": "پاک کردن فیلترها",
+ "empty.xl_nochanges.title": "در کتاب تغییری نیست",
+ "empty.xl_nochanges.hint": "کتاب با مدل یکسان است: ورود آن چیزی را تغییر نمی‌دهد.",
+ "empty.version_same.title": "مدل‌ها یکسان‌اند",
+ "empty.version_same.hint": "بین مدل باز و نسخهٔ انتخاب‌شده تفاوتی پیدا نشد.",
+ "empty.templates.title": "هنوز قالب نمایی نیست",
+ "empty.templates.hint": "از نمای فعلی یک قالب بسازید تا تنظیماتش را در نماهای دیگر استفاده کنید.",
+ "empty.templates.action": "نام‌گذاری قالب",
+ "empty.fe_params.title": "هنوز پارامتری نیست",
+ "empty.fe_params.hint": "پارامتری در زیر اضافه کنید تا اندازه‌ها، مصالح یا نمایش را کنترل کند.",
+ "empty.fe_params.action": "افزودن پارامتر"
+}

@@ -1,0 +1,51 @@
+id = "H10_footbridge_arch"
+tier = "hard"
+group = "Bridges"
+title = "Arch footbridge, 90 m span"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "Pedestrian and cycle bridge over a river, 90 m main span. Steel arch above the deck with vertical hangers, a deck 4 m wide with railings, a ramp up on each bank at a gentle slope, abutments and a pier or two. Check the deck for vibration comfort and tell me the result."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "beam+brace+truss+sweep+gridshell_bar"
+min = 80.0
+
+[[oracle.count]]
+spec = "brace+comp:hanger+comp:cable"
+min = 30.0
+
+[[oracle.count]]
+spec = "col+iso_footing+strip_footing+raft+comp:pier|abutment"
+min = 4.0
+
+[[oracle.count]]
+spec = "railing+comp:rail"
+min = 4.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[[oracle.text]]
+name = "checks vibration or deflection"
+re = "(vibrat|frequenc|Hz|deflect)"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1
+"IfcColumn" = 1
+"IfcBeam" = 1
+"IfcMember" = 1
+
+[[oracle.geom]]
+kind = "clear_span"
+target = 90.0
+tol = 0.1
+
+[[oracle.geom]]
+kind = "supports_connected"
+min = 2.0

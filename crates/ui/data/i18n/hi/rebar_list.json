@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "ऊपर ले जाएँ",
+ "rebar_list.move_down": "नीचे ले जाएँ",
+ "rebar_list.remove": "हटाएँ",
+ "rebar_list.zone_remove_last": "ज़ोन को कम से कम एक कमरा चाहिए: आखिरी हटाने के लिए ज़ोन हटाएँ",
+ "rebar_list.rebar_empty_title": "इस मॉडल में कोई रीबार नहीं",
+ "rebar_list.rebar_empty_hint": "होस्ट तत्व में रीबार लगाएँ, वह यहाँ शेड्यूल होगा।",
+ "rebar_list.rebar_empty_action": "रीबार लगाएँ"
+}

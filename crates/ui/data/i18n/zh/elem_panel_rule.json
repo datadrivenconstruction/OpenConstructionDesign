@@ -1,0 +1,5 @@
+{
+ "elem.panel_select_wall": "选择墙",
+ "cmd.elem.panel_select_wall": "选择墙",
+ "elem.left_in_place": "保留原位：{kinds}。嵌板随其墙体一起处理；体量和注释会单独删除。"
+}

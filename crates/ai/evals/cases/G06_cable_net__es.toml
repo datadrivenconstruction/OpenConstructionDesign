@@ -1,0 +1,27 @@
+id = "G06_cable_net__es"
+tier = "hard"
+group = "Any geometry"
+title = "Seilnetz"
+lang = "es"
+base = "empty"
+
+[[turn]]
+say = "Diseña una cubierta de red de cables sobre una plaza de 40 x 40 m con dos puntos altos (mástiles de 25 m) y dos puntos bajos, malla de 2 m, cables de borde y tirantes."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "col"
+min = 2.0
+
+[[oracle.count]]
+spec = "beam+brace+truss+gridshell_bar"
+min = 300.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

@@ -1,0 +1,8 @@
+{
+ "undo.undone": "בוטל: {what}",
+ "undo.redone": "בוצע שוב: {what}",
+ "undo.action.edit.redo": "בצע שוב",
+ "undo.action.edit.undo": "בטל",
+ "hdr.unsaved": "שינויים שלא נשמרו",
+ "hdr.file_menu": "תפריט קובץ"
+}

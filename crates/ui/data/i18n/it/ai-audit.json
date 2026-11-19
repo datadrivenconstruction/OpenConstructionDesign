@@ -1,0 +1,22 @@
+{
+ "ai.audit.tokens": "{n} token",
+ "ai.audit.filter.all": "Tutte",
+ "ai.audit.filter.ai": "IA",
+ "ai.audit.filter.me": "Io",
+ "ai.audit.search": "Cerca modifiche",
+ "ai.audit.search.clear": "Cancella ricerca",
+ "ai.audit.show_all": "Mostra tutto",
+ "ai.audit.empty.hint": "Qui compaiono le modifiche preparate o applicate da un modello o da un agente, ognuna con un modo per tornare indietro.",
+ "ai.audit.no_match": "Nessuna modifica corrisponde al filtro.",
+ "ai.audit.show.tip": "Seleziona e mostra gli elementi toccati da questa modifica",
+ "ai.audit.revert.ask": "Annullare \"{what}\"? {change}.",
+ "ai.audit.revert.elements": {
+  "one": "# elemento modificato",
+  "other": "# elementi modificati"
+ },
+ "ai.audit.revert.keeps": "Le modifiche più recenti restano. Il ripristino è un solo passo di annullamento.",
+ "ai.audit.cancel": "Annulla",
+ "ai.audit.toast.reverted": "Ripristinato: {what}",
+ "ai.audit.toast.undone": "Annullato: {what}",
+ "ai.audit.redo": "Ripeti"
+}

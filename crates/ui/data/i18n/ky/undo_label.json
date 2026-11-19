@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "Кайтаруу: {what}",
+ "undo_label.redo_what": "Кайра аткаруу: {what}",
+ "undo_label.undo_none": "Кайтарууга эч нерсе жок",
+ "undo_label.redo_none": "Кайра аткарууга эч нерсе жок"
+}

@@ -1,0 +1,36 @@
+id = "G25_wind_turbine__de"
+tier = "hard"
+group = "Any geometry"
+title = "Wind turbine"
+lang = "de"
+base = "empty"
+
+[[turn]]
+say = "Eine Windkraftanlage: konischer Stahlrohrturm 90 m, Gondel, Nabe und drei Rotorblätter von je 50 m mit verwundenen Profilschnitten, runde Gründung, Tür und innenliegende Leiter."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "comp:blade|rotor"
+min = 3.0
+
+[[oracle.count]]
+spec = "col+solid+mass"
+min = 3.0
+
+[[oracle.count]]
+spec = "iso_footing+raft+solid"
+min = 1.0
+
+[[oracle.geom]]
+kind = "height"
+min = 85.0
+max = 145.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

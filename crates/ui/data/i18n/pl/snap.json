@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "Koniec",
+ "snap.midpoint": "Środek",
+ "snap.perpendicular": "Prostopadła",
+ "snap.wall_axis": "Oś ściany",
+ "snap.wall_face": "Lico ściany",
+ "snap.grid": "Siatka",
+ "snap.intersection": "Przecięcie",
+ "snap.grid_axis": "Linia siatki",
+ "snap.ref_plane": "Płaszczyzna odniesienia",
+ "snap.nearest": "Najbliższy",
+ "snap.align_x": "Wyrównanie w X do punktu zdalnego",
+ "snap.align_y": "Wyrównanie w Y do punktu zdalnego",
+ "snap.align_xy": "Wyrównanie w X i Y"
+}

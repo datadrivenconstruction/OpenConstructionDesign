@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "একটি বন্ধ রূপরেখা আঁকুন: বিন্দুতে ক্লিক করুন, তারপর Enter বা শেষ চাপুন",
+ "sketch_hints.sk_finish": "শেষ",
+ "sketch_hints.sk_cancel": "বাতিল",
+ "sketch_hints.import_warn": "মডেল যাচাইয়ের সতর্কতা: {n} (প্রথমটি: {first})",
+ "sketch_hints.ai.offline.schedule": "সূচি খুলুন",
+ "sketch_hints.ai.offline.check": "নিয়মের বিরুদ্ধে যাচাই করুন",
+ "sketch_hints.ai.offline.warnings": "সতর্কতা দেখান",
+ "cmd.file.publish_pdf": "শিট PDF হিসেবে প্রকাশ করুন…",
+ "cmd.file.publish_pdf.desc": "বাছাই করা শিট PDF-এ প্রকাশ করে। PDF/SVG-তে শিট এক্সপোর্টের মতোই।",
+ "sketch_hints.verify_none": "বাছাইয়ে AI সহকারীর সেট করা যাচাই করার মতো কিছু নেই",
+ "sketch_hints.contours_none": "মডেলে কোনো টপোসলিড নেই: একটি তৈরি হলে কনটুর দেখাবে",
+ "sketch_hints.contours_off": "টপোসলিড কনটুর লুকানো",
+ "sketch_hints.contours_on": "টপোসলিড কনটুর দেখানো"
+}

@@ -1,0 +1,8 @@
+{
+ "cmd.arch.room_auto": "Placera rum automatiskt",
+ "cmd.arch.room_auto.desc": "Placerar ett rum i varje sluten gräns på aktiv våning som saknar ett. Öppna väggslingor hoppas över, de sluts aldrig genom gissning. Ett steg att ångra.",
+ "room_place.placed": "Rum placerade: {n}. Områden som redan hade ett rum: {m}. Öppna slingor hoppades över: {k}",
+ "room_place.all_had": "Inget placerat: alla {m} slutna områden har redan ett rum. Öppna slingor hoppades över: {k}",
+ "room_place.none": "Inget placerat: våningen har inga slutna väggområden",
+ "room_place.none_open": "Inget placerat: våningen har inga slutna väggområden. Öppna slingor hoppades över: {k}"
+}

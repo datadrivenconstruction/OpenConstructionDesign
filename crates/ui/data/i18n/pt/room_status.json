@@ -1,0 +1,4 @@
+{
+ "room_status.open": "O ambiente {room} não está mais fechado",
+ "warn.kind.room_open": "Ambientes não fechados"
+}

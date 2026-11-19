@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "Inserează strat dedesubt",
+ "type_layers.layer.delete": "Șterge stratul",
+ "type_layers.layer.delete_last": "Un tip are nevoie de cel puțin un strat",
+ "type_layers.value.bad": "Nu este o valoare pozitivă validă",
+ "type_layers.value.required": "Obligatoriu",
+ "type_layers.unsaved.title": "Modificări nesalvate la {name}",
+ "type_layers.unsaved.body": "Aplici modificările la tip sau le renunți?",
+ "type_layers.unsaved.discard": "Renunță"
+}

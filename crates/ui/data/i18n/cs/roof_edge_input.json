@@ -1,0 +1,25 @@
+{
+ "roof_edge.err.number": "Zadejte číslo",
+ "roof_edge.err.positive": "Musí být větší než nula",
+ "roof_edge.err.nonneg": "Nesmí být záporné",
+ "roof_edge.err.max": "Nesmí přesáhnout {max}",
+ "roof_edge.list.empty_hint": "Přidejte obšívky, žlaby, podbití nebo světlíky příkazy pro střechu",
+ "roof_edge.edit_tip": "Upravit vlastnosti",
+ "roof_edge.delete_tip": "Smazat",
+ "roof_edge.pe.del_tip": "Odebrat tento bod (řez zachovává alespoň 3)",
+ "roof_edge.pe.up_tip": "Posunout tento bod nahoru",
+ "roof_edge.confirm_edge": "Smazat {name}? Ctrl+Z jej vrátí.",
+ "roof_edge.confirm_profile": "Smazat profil {name}? Ctrl+Z jej vrátí.",
+ "roof_edge.deleted_one": "Smazáno: {name}",
+ "roof_edge.deleted_n": {
+  "one": "Smazán # prvek",
+  "few": "Smazány # prvky",
+  "other": "Smazáno # prvků"
+ },
+ "roof_edge.profile_deleted": "Profil smazán",
+ "roof_edge.profile_in_use": {
+  "one": "Používá # hranový prvek: nejdřív jej smažte nebo změňte",
+  "few": "Používají # hranové prvky: nejdřív je smažte nebo změňte",
+  "other": "Používá # hranových prvků: nejdřív je smažte nebo změňte"
+ }
+}

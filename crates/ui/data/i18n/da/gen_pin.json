@@ -1,0 +1,7 @@
+{
+ "gen.pin.room": "Du har ændret et rum i det genererede projekt. Fastgør det, så en revision lader det blive, hvor det er.",
+ "gen.pin.storey": "Du har ændret en etage i det genererede projekt. Fastgør den, så en revision bevarer dens vægge og åbninger.",
+ "gen.pin.action": "Fastgør",
+ "gen.pin.done": "Fastgjort: en revision af projektet beholder den og placerer resten omkring den",
+ "gen.pin.failed": "Kunne ikke fastgøre"
+}

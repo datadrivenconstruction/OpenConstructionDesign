@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "Система аты",
+ "mep_browser.add_blocked": "Адегенде система атын киргизиңиз",
+ "mep_browser.col.insulation": "Жылуулоо",
+ "mep_browser.cancel": "Жокко чыгаруу",
+ "mep_browser.delete.title": "Бул системаны өчүрөсүзбү?",
+ "mep_browser.delete.body": "“{name}” системасы жана анын агымдары ({n}) өчүрүлөт.",
+ "mep_browser.delete.undo": "Муну бир Артка кайтаруу менен кайтарууга болот.",
+ "mep_browser.delete.confirm": "Системаны өчүрүү"
+}

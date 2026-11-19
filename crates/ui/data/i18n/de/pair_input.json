@@ -1,0 +1,6 @@
+{
+ "pair_input.pair_hint": "Zwei Werte werden durch ein Semikolon getrennt: @1000;500",
+ "pair_input.old_pair": "Ein Komma zwischen zwei ganzen Zahlen bildet kein Paar mehr: Geben Sie 6000;4000 für zwei Werte oder 6000,5 für eine Dezimalzahl ein",
+ "pair_input.op.bad_length": "Keine Länge: {text} ({why}). Nichts wurde geändert",
+ "pair_input.op.bad_count": "Anzahl {text} wurde nicht übernommen: eine ganze Zahl von {min} bis {max}"
+}

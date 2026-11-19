@@ -1,0 +1,14 @@
+{
+ "type_pick.pick.search": "ابحث في الأنواع أو السماكة",
+ "type_pick.pick.empty": "لا توجد أنواع مطابقة",
+ "type_pick.pick.edit": "تحرير النوع…",
+ "type_pick.pick.mixed": "مختلط",
+ "type_pick.pick.layers": {
+  "one": "# طبقة",
+  "other": "# طبقات",
+  "two": "# طبقتان",
+  "few": "# طبقات",
+  "many": "# طبقةً",
+  "zero": "# طبقات"
+ }
+}

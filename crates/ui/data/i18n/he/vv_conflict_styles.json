@@ -1,0 +1,6 @@
+{
+ "vv_conflict.styles.conflict": "סגנונות אובייקט של קטגוריה שנערכה השתנו במודל (ביטול או חלון אחר) בזמן שלחלון זה היו עריכות. העריכות שלך נשמרות.",
+ "vv_conflict.styles.keep": "שמור את העריכות שלי",
+ "vv_conflict.styles.reload": "טען מחדש",
+ "vv_conflict.styles.answer_first": "בחר שמור את העריכות שלי או טען מחדש קודם"
+}

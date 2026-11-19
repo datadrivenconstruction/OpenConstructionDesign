@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "Změny ze sešitu nebyly použity",
+ "workbook_changes.wb.body": "Zavřením nebo přepnutím projektu se zahodí.",
+ "workbook_changes.wb.line": "Import sešitu: {n} změn nebylo použito",
+ "workbook_changes.wb.review": "Zkontrolovat",
+ "workbook_changes.wb.discard": "Zahodit"
+}

@@ -1,0 +1,432 @@
+{
+ "rules": [
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.21
+   },
+   "unit": "m",
+   "value": 0.21,
+   "text": {
+    "en": "Common stair riser at most 0.21 m",
+    "ru": "Подъём ступени общей лестницы не более 0.21 м"
+   },
+   "source": {
+    "doc": "nl-bbl",
+    "clause": "Art. 4.26, Table 4.26, other-use column",
+    "url": "https://iplo.nl/publish/pages/191119/besluit-bouwwerken-leefomgeving-tekst-bij-inwerkingtreding-1.pdf",
+    "edition": "consolidated text in force 2024-01-01; later amendments (2026) announced, not checked",
+    "accessed": "2026-11-14",
+    "paraphrase": "Regular stair outside a single dwelling, including shared stairs of a residential building, has a rise of at most 0.21 m."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "nl.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.185
+   },
+   "unit": "m",
+   "value": 0.185,
+   "text": {
+    "en": "Common stair tread at least 0.185 m",
+    "ru": "Проступь общей лестницы не менее 0.185 м"
+   },
+   "source": {
+    "doc": "nl-bbl",
+    "clause": "Art. 4.26, Table 4.26, other-use column",
+    "url": "https://iplo.nl/publish/pages/191119/besluit-bouwwerken-leefomgeving-tekst-bij-inwerkingtreding-1.pdf",
+    "edition": "consolidated text in force 2024-01-01; later amendments (2026) announced, not checked",
+    "accessed": "2026-11-14",
+    "paraphrase": "Going measured on the climbing line is at least 0.185 m for these stairs."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "nl.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 0.8
+   },
+   "unit": "m",
+   "value": 0.8,
+   "text": {
+    "en": "Common stair flight width at least 0.8 m",
+    "ru": "Ширина марша общей лестницы не менее 0.8 м"
+   },
+   "source": {
+    "doc": "nl-bbl",
+    "clause": "Art. 4.26, Table 4.26",
+    "url": "https://iplo.nl/publish/pages/191119/besluit-bouwwerken-leefomgeving-tekst-bij-inwerkingtreding-1.pdf",
+    "edition": "consolidated text in force 2024-01-01; later amendments (2026) announced, not checked",
+    "accessed": "2026-11-14",
+    "paraphrase": "Minimum stair width is 0.8 m; an escape stair in a residential building over 600 m2 per stair needs 1.2 m per the IPLO page."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "nl.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.188
+   },
+   "unit": "m",
+   "value": 0.188,
+   "text": {
+    "en": "Stair riser in a house at most 0.188 m",
+    "ru": "Подъём ступени в доме не более 0.188 м"
+   },
+   "source": {
+    "doc": "nl-bbl",
+    "clause": "Art. 4.26, Table 4.26, dwelling column",
+    "url": "https://iplo.nl/publish/pages/191119/besluit-bouwwerken-leefomgeving-tekst-bij-inwerkingtreding-1.pdf",
+    "edition": "consolidated text in force 2024-01-01; later amendments (2026) announced, not checked",
+    "accessed": "2026-11-14",
+    "paraphrase": "Regular stair inside a dwelling has a rise of at most 0.188 m."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "nl.house.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.22
+   },
+   "unit": "m",
+   "value": 0.22,
+   "text": {
+    "en": "Stair tread in a house at least 0.22 m",
+    "ru": "Проступь в доме не менее 0.22 м"
+   },
+   "source": {
+    "doc": "nl-bbl",
+    "clause": "Art. 4.26, Table 4.26, dwelling column",
+    "url": "https://iplo.nl/publish/pages/191119/besluit-bouwwerken-leefomgeving-tekst-bij-inwerkingtreding-1.pdf",
+    "edition": "consolidated text in force 2024-01-01; later amendments (2026) announced, not checked",
+    "accessed": "2026-11-14",
+    "paraphrase": "Going on the climbing line inside a dwelling is at least 0.22 m."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "nl.house.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 0.8
+   },
+   "unit": "m",
+   "value": 0.8,
+   "text": {
+    "en": "Stair flight width in a house at least 0.8 m",
+    "ru": "Ширина марша в доме не менее 0.8 м"
+   },
+   "source": {
+    "doc": "nl-bbl",
+    "clause": "Art. 4.26, Table 4.26, dwelling column",
+    "url": "https://iplo.nl/publish/pages/191119/besluit-bouwwerken-leefomgeving-tekst-bij-inwerkingtreding-1.pdf",
+    "edition": "consolidated text in force 2024-01-01; later amendments (2026) announced, not checked",
+    "accessed": "2026-11-14",
+    "paraphrase": "Stair inside a dwelling is at least 0.8 m wide."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "nl.house.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.6
+   },
+   "unit": "m",
+   "value": 2.6,
+   "text": {
+    "en": "Clear height of habitable rooms at least 2.6 m",
+    "ru": "Высота жилых помещений не менее 2.6 м"
+   },
+   "source": {
+    "doc": "nl-bbl",
+    "clause": "Art. 4.164(4) with Table 4.162, row 1c",
+    "url": "https://iplo.nl/publish/pages/191119/besluit-bouwwerken-leefomgeving-tekst-bij-inwerkingtreding-1.pdf",
+    "edition": "consolidated text in force 2024-01-01; later amendments (2026) announced, not checked",
+    "accessed": "2026-11-14",
+    "paraphrase": "Living area and living room of an ordinary dwelling have at least 2.6 m height above floor in the 2024 text."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "nl.res.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ],
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "width",
+    "min": 1.2
+   },
+   "unit": "m",
+   "value": 1.2,
+   "text": {
+    "en": "Accessible-route corridor clear width at least 1.2 m",
+    "ru": "Ширина коридора на доступном маршруте не менее 1.2 м"
+   },
+   "source": {
+    "doc": "nl-bbl",
+    "clause": "Art. 4.181(2)",
+    "url": "https://iplo.nl/publish/pages/191119/besluit-bouwwerken-leefomgeving-tekst-bij-inwerkingtreding-1.pdf",
+    "edition": "consolidated text in force 2024-01-01; later amendments (2026) announced, not checked",
+    "accessed": "2026-11-14",
+    "paraphrase": "A shared circulation space in a residential building has a free width of at least 1.2 m (0.85 m for a route inside a dwelling)."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "nl.acc.corr"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 30,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 30,
+   "text": {
+    "en": "Travel distance to an exit or stair at most 30 m (residential)",
+    "ru": "Путь до выхода или лестницы не более 30 м (жилые)"
+   },
+   "source": {
+    "doc": "nl-bbl",
+    "clause": "Art. 4.66(1) with Table 4.64, row 1b",
+    "url": "https://iplo.nl/publish/pages/191119/besluit-bouwwerken-leefomgeving-tekst-bij-inwerkingtreding-1.pdf",
+    "edition": "consolidated text in force 2024-01-01; later amendments (2026) announced, not checked",
+    "accessed": "2026-11-14",
+    "paraphrase": "Corrected walking distance from any point of a dwelling use area to an exit of its sub-compartment is capped at 30 m."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "nl.egr.res"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 30,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 30,
+   "text": {
+    "en": "Travel distance to an exit or stair at most 30 m (office)",
+    "ru": "Путь до выхода или лестницы не более 30 м (офисы)"
+   },
+   "source": {
+    "doc": "nl-bbl",
+    "clause": "Art. 4.66(1) with Table 4.64, row 6",
+    "url": "https://iplo.nl/publish/pages/191119/besluit-bouwwerken-leefomgeving-tekst-bij-inwerkingtreding-1.pdf",
+    "edition": "consolidated text in force 2024-01-01; later amendments (2026) announced, not checked",
+    "accessed": "2026-11-14",
+    "paraphrase": "Same 30 m walking-distance cap applies to office use areas."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "nl.egr.off"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {},
+   "check": {
+    "kind": "ratio",
+    "per": "element",
+    "cat": "room",
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen"
+    ],
+    "num": "window_area",
+    "den": "area",
+    "min": 0.1
+   },
+   "unit": "ratio",
+   "value": 0.1,
+   "text": {
+    "en": "Window area at least 10.0 % of the floor of a habitable room",
+    "ru": "Площадь окон не менее 10.0 % площади пола жилой комнаты"
+   },
+   "source": {
+    "doc": "nl-bbl",
+    "clause": "Art. 4.147(1) with Table 4.146, row 1",
+    "url": "https://iplo.nl/publish/pages/191119/besluit-bouwwerken-leefomgeving-tekst-bij-inwerkingtreding-1.pdf",
+    "edition": "consolidated text in force 2024-01-01; later amendments (2026) announced, not checked",
+    "accessed": "2026-11-14",
+    "paraphrase": "Equivalent daylight area of a dwelling living area must be at least 10 percent of its floor area, plus at least 0.5 m2 per room."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "nl.day"
+  },
+  {
+   "id": "eu.acc.corr",
+   "disabled": true
+  },
+  {
+   "id": "eu.day",
+   "disabled": true
+  },
+  {
+   "id": "eu.egr.off",
+   "disabled": true
+  },
+  {
+   "id": "eu.egr.res",
+   "disabled": true
+  },
+  {
+   "id": "eu.off.riser",
+   "disabled": true
+  },
+  {
+   "id": "eu.off.sw",
+   "disabled": true
+  },
+  {
+   "id": "eu.off.tread",
+   "disabled": true
+  },
+  {
+   "id": "eu.res.h",
+   "disabled": true
+  },
+  {
+   "id": "eu.res.riser",
+   "disabled": true
+  },
+  {
+   "id": "eu.res.sw",
+   "disabled": true
+  },
+  {
+   "id": "eu.res.tread",
+   "disabled": true
+  },
+  {
+   "id": "generic.egress.distance",
+   "disabled": true
+  },
+  {
+   "id": "generic.room.daylight",
+   "disabled": true
+  }
+ ]
+}

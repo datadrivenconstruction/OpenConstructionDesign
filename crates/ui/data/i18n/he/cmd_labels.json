@@ -1,0 +1,14 @@
+{
+ "cmd.arch.wall.tile": "קיר",
+ "cmd.arch.door.tile": "דלת",
+ "cmd.arch.window.tile": "חלון",
+ "cmd.arch.floor.tile": "רצפה",
+ "cmd.mod.move.tile": "הזז",
+ "cmd.mod.copy.tile": "העתק",
+ "cmd.mod.rotate.tile": "סובב",
+ "cmd.mod.mirror.tile": "שקף",
+ "cmd.mod.trim.tile": "קצץ",
+ "cmd.mod.delete.tile": "מחק",
+ "cmd.ann.dim.tile": "מידה",
+ "cmd.ann.text.tile": "טקסט"
+}

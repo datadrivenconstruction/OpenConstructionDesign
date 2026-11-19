@@ -1,0 +1,15 @@
+{
+ "cmd.ctx.floor.clean_outline": "Curăță conturul",
+ "cmd.ctx.floor.clean_outline.desc": "Elimină vârfurile înguste unde conturul plăcii se întoarce asupra sa. Mai întâi arată o previzualizare; un pas de anulare.",
+ "outline_cleanup.title": "Curăță conturul",
+ "outline_cleanup.intro": "Conturul acestei plăci se întoarce asupra sa în vârfuri înguste: {n}. Curățarea le elimină; restul rămâne neschimbat.",
+ "outline_cleanup.legend_before": "Linie groasă: conturul acum",
+ "outline_cleanup.legend_after": "Linie subțire: conturul după curățare",
+ "outline_cleanup.undo": "Puteți anula aceasta dintr-un singur pas.",
+ "outline_cleanup.apply": "Curăță",
+ "outline_cleanup.cancel": "Renunță",
+ "outline_cleanup.done": "Contur curățat, vârfuri eliminate: {n}",
+ "outline_cleanup.none": "Conturul acestei plăci nu are vârfuri",
+ "outline_cleanup.failed": "Conturul nu a putut fi curățat",
+ "outline_cleanup.changed": "Conturul s-a modificat de la previzualizare; nimic nu a fost scris. Verificați noua previzualizare."
+}

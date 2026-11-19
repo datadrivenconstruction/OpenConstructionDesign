@@ -1,0 +1,11 @@
+{
+ "sketch.points": "Titik",
+ "sketch.rect": "Persegi panjang",
+ "sketch.circle": "Lingkaran",
+ "sketch.polygon": "Poligon",
+ "sketch.radius": "R",
+ "sketch.sides": "Sisi",
+ "sketch.circum": "Berlingkar luar",
+ "sketch.shape.tip": "Bentuk sketsa (A untuk mengganti). Persegi panjang: dua sudut. Lingkaran dan poligon: pusat, lalu jari-jari. Ketik ukuran dan tekan Enter untuk menguncinya.",
+ "tool.err.zero_size": "Ukuran nol: geser titik kedua menjauh dari yang pertama"
+}

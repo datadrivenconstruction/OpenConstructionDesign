@@ -1,0 +1,8 @@
+{
+ "cmd.props.param_lock": "Bloquear o desbloquear el valor del parámetro",
+ "locked_values.kept": "{n} valores bloqueados conservados",
+ "locked_values.locked": "«{name}» bloqueado: la importación de hoja de cálculo XLSX, la edición múltiple y la IA lo conservan",
+ "locked_values.unlocked": "«{name}» desbloqueado",
+ "locked_values.locked_tip": "Bloqueado: la importación de hoja de cálculo XLSX, la edición múltiple y la IA conservan este valor. Clic para desbloquear  ·  Ctrl+L",
+ "locked_values.no_row": "Sitúe el cursor en una fila de parámetro de Propiedades y pulse Ctrl+L"
+}

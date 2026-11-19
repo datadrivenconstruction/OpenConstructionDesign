@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "Automatisk gem mislykkedes, de seneste ændringer er ikke beskyttet. {why}",
+ "autosave_status.autosave_open": "Indstillinger for automatisk gem",
+ "autosave_status.autosave_recovered": "Automatisk gem virker igen.",
+ "autosave_status.autosave_reason": "Årsag: {why}"
+}

@@ -1,0 +1,4 @@
+{
+ "cmd.mgr.autosave_show": "Visa automatisk sparning",
+ "cmd.mgr.autosave_show.desc": "Öppnar fönstret för automatisk sparning; det förblir öppet om det redan visas."
+}

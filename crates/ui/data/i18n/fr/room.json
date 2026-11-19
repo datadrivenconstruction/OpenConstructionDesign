@@ -1,0 +1,6 @@
+{
+ "geom.length": "Longueur",
+ "sched.cat.room_seps": "Séparateurs de pièces",
+ "room.err.point_leave": "Pièce {n} : le point sortirait de son contour",
+ "room.err.point_taken": "Pièce {n} : le point tomberait dans la pièce {other}"
+}

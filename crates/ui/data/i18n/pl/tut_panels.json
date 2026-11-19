@@ -1,0 +1,9 @@
+{
+ "empty.props_model.title": "Nic nie zaznaczono",
+ "empty.props_model.hint": "Kliknij element w widoku, aby zobaczyć jego właściwości. Albo wyeksportuj wszystkie parametry do skoroszytu, edytuj je tam i zastosuj z powrotem.",
+ "empty.props_model.action": "Eksportuj do XLSX-a",
+ "tut.spreadsheet.title": "Obieg przez XLSX",
+ "tut.spreadsheet.1": "Naciśnij Eksportuj do XLSX-a poniżej: wybierz, co uwzględnić, i zapisz skoroszyt.",
+ "tut.spreadsheet.2": "Otwórz skoroszyt w arkuszu XLSX, zmień komórkę i zapisz. Podgląd tutaj pokaże zmianę.",
+ "tut.spreadsheet.3": "Sprawdź podgląd i naciśnij Zastosuj do modelu. Ctrl+Z cofa."
+}

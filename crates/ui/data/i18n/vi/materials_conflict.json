@@ -1,0 +1,5 @@
+{
+ "materials.mat.conflict": "Vật liệu này đã đổi trong mô hình (hoàn tác hoặc cửa sổ khác) khi thẻ có chỉnh sửa. Chỉnh sửa của bạn được giữ.",
+ "materials.mat.keep": "Giữ chỉnh sửa của tôi",
+ "materials.mat.reload": "Tải lại"
+}

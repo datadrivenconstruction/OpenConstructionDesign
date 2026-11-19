@@ -1,0 +1,11 @@
+{
+ "cmd.arch.roof_gable.short": "گیبل",
+ "cmd.arch.roof_hip.short": "ہپ",
+ "cmd.arch.roof_shed.short": "شیڈ",
+ "cmd.arch.roof_mansard.short": "مینسرڈ",
+ "cmd.arch.roof_gambrel.short": "گیمبرل",
+ "cmd.arch.roof_barrel.short": "بیرل",
+ "cmd.arch.roof_edges.short": "چھت کے کنارے",
+ "cmd.arch.roof_opening.short": "بازش",
+ "cmd.mass.roof_by_face.short": "چہرے سے"
+}

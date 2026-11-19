@@ -1,0 +1,10 @@
+{
+ "type_pick.pick.search": "Søk etter typer eller tykkelse",
+ "type_pick.pick.empty": "Ingen typer passer",
+ "type_pick.pick.edit": "Rediger type…",
+ "type_pick.pick.mixed": "Blandet",
+ "type_pick.pick.layers": {
+  "one": "# lag",
+  "other": "# lag"
+ }
+}

@@ -1,0 +1,378 @@
+{
+ "rules": [
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.175
+   },
+   "unit": "m",
+   "value": 0.175,
+   "text": {
+    "en": "Stair riser at most 0.175 m (one or two family dwelling)",
+    "hi": "सीढ़ी का राइज़र अधिकतम 0.175 m (एक या दो परिवार वाला आवास)"
+   },
+   "source": {
+    "doc": "nbcs2026-f",
+    "clause": "4.4.2.4.3.1 riser at most 175 mm, one or two family dwellings",
+    "url": "https://dfes.goa.gov.in/wp-content/uploads/2026/05/sp7_2026_nbcs-212-1480.pdf",
+    "edition": "2026",
+    "accessed": "2026-11-13",
+    "note": "BIS free standard National Building Construction Standards 2026 Part F (successor of NBC 2016 Part 4), copy hosted by a state fire department; Part F is guidance for state bye-laws"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "in.house.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.15
+   },
+   "unit": "m",
+   "value": 0.15,
+   "text": {
+    "en": "Stair riser at most 0.15 m (other buildings)",
+    "hi": "सीढ़ी का राइज़र अधिकतम 0.15 m (अन्य भवन)"
+   },
+   "source": {
+    "doc": "nbcs2026-f",
+    "clause": "4.4.2.4.3.1 riser at most 150 mm, other buildings",
+    "url": "https://dfes.goa.gov.in/wp-content/uploads/2026/05/sp7_2026_nbcs-212-1480.pdf",
+    "edition": "2026",
+    "accessed": "2026-11-13",
+    "note": "BIS free standard National Building Construction Standards 2026 Part F (successor of NBC 2016 Part 4), copy hosted by a state fire department; Part F is guidance for state bye-laws"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "in.oth.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.25
+   },
+   "unit": "m",
+   "value": 0.25,
+   "text": {
+    "en": "Residential stair tread at least 0.25 m (without nosing)",
+    "hi": "आवासीय सीढ़ी का ट्रेड कम से कम 0.25 m (नोज़िंग के बिना)"
+   },
+   "source": {
+    "doc": "nbcs2026-f",
+    "clause": "4.4.2.4.3.1 tread at least 250 mm, residential",
+    "url": "https://dfes.goa.gov.in/wp-content/uploads/2026/05/sp7_2026_nbcs-212-1480.pdf",
+    "edition": "2026",
+    "accessed": "2026-11-13",
+    "note": "BIS free standard National Building Construction Standards 2026 Part F (successor of NBC 2016 Part 4), copy hosted by a state fire department; Part F is guidance for state bye-laws"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "in.res.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.3
+   },
+   "unit": "m",
+   "value": 0.3,
+   "text": {
+    "en": "Office stair tread at least 0.30 m (without nosing)",
+    "hi": "कार्यालय सीढ़ी का ट्रेड कम से कम 0.30 m (नोज़िंग के बिना)"
+   },
+   "source": {
+    "doc": "nbcs2026-f",
+    "clause": "4.4.2.4.3.1 tread at least 300 mm, business and other buildings",
+    "url": "https://dfes.goa.gov.in/wp-content/uploads/2026/05/sp7_2026_nbcs-212-1480.pdf",
+    "edition": "2026",
+    "accessed": "2026-11-13",
+    "note": "BIS free standard National Building Construction Standards 2026 Part F (successor of NBC 2016 Part 4), copy hosted by a state fire department; Part F is guidance for state bye-laws"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "in.off.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 1.0
+   },
+   "unit": "m",
+   "value": 1.0,
+   "text": {
+    "en": "Stair flight width at least 1.00 m (one or two family dwelling)",
+    "hi": "सीढ़ी के फ़्लाइट की चौड़ाई कम से कम 1.00 m (एक या दो परिवार वाला आवास)"
+   },
+   "source": {
+    "doc": "nbcs2026-f",
+    "clause": "4.4.2.4.3.2 e) 1) residential one or two family 1.00 m (row housing of 2 storeys 0.75 m)",
+    "url": "https://dfes.goa.gov.in/wp-content/uploads/2026/05/sp7_2026_nbcs-212-1480.pdf",
+    "edition": "2026",
+    "accessed": "2026-11-13",
+    "note": "BIS free standard National Building Construction Standards 2026 Part F (successor of NBC 2016 Part 4), copy hosted by a state fire department; Part F is guidance for state bye-laws"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "in.house.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 1.25
+   },
+   "unit": "m",
+   "value": 1.25,
+   "text": {
+    "en": "Stair flight width at least 1.25 m (apartment house, subdivision A-III)",
+    "hi": "सीढ़ी के फ़्लाइट की चौड़ाई कम से कम 1.25 m (अपार्टमेंट भवन, उप-वर्ग A-III)"
+   },
+   "source": {
+    "doc": "nbcs2026-f",
+    "clause": "4.4.2.4.3.2 e) 2) residential A-I, A-II, A-III 1.25 m",
+    "url": "https://dfes.goa.gov.in/wp-content/uploads/2026/05/sp7_2026_nbcs-212-1480.pdf",
+    "edition": "2026",
+    "accessed": "2026-11-13",
+    "note": "BIS free standard National Building Construction Standards 2026 Part F (successor of NBC 2016 Part 4), copy hosted by a state fire department; Part F is guidance for state bye-laws"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "in.apt.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 1.5
+   },
+   "unit": "m",
+   "value": 1.5,
+   "text": {
+    "en": "Stair flight width at least 1.50 m (business and other buildings)",
+    "hi": "सीढ़ी के फ़्लाइट की चौड़ाई कम से कम 1.50 m (व्यावसायिक और अन्य भवन)"
+   },
+   "source": {
+    "doc": "nbcs2026-f",
+    "clause": "4.4.2.4.3.2 e) 7) all other buildings 1.50 m",
+    "url": "https://dfes.goa.gov.in/wp-content/uploads/2026/05/sp7_2026_nbcs-212-1480.pdf",
+    "edition": "2026",
+    "accessed": "2026-11-13",
+    "note": "BIS free standard National Building Construction Standards 2026 Part F (successor of NBC 2016 Part 4), copy hosted by a state fire department; Part F is guidance for state bye-laws"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "in.off.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {},
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "headroom",
+    "min": 2.2
+   },
+   "unit": "m",
+   "value": 2.2,
+   "text": {
+    "en": "Headroom under a stair landing and over the flight at least 2.2 m",
+    "hi": "सीढ़ी लैंडिंग के नीचे और फ़्लाइट के ऊपर हेडरूम कम से कम 2.2 m"
+   },
+   "source": {
+    "doc": "nbcs2026-f",
+    "clause": "4.4.2.4.3.2 h) 1) minimum headroom 2.2 m",
+    "url": "https://dfes.goa.gov.in/wp-content/uploads/2026/05/sp7_2026_nbcs-212-1480.pdf",
+    "edition": "2026",
+    "accessed": "2026-11-13",
+    "note": "BIS free standard National Building Construction Standards 2026 Part F (successor of NBC 2016 Part 4), copy hosted by a state fire department; Part F is guidance for state bye-laws"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "in.stair.headroom"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 30.0,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 30.0,
+   "text": {
+    "en": "Travel distance from a room to an exit or stair at most 30 m (residential, construction types 1 and 2, no sprinklers)",
+    "hi": "कक्ष से निकास या सीढ़ी तक यात्रा दूरी अधिकतम 30 m (आवासीय, निर्माण प्रकार 1 और 2, बिना स्प्रिंकलर)"
+   },
+   "source": {
+    "doc": "nbcs2026-f",
+    "clause": "Table 4 residential Group A, types 1 and 2 unsprinklered 30 m (sprinklered 60 m)",
+    "url": "https://dfes.goa.gov.in/wp-content/uploads/2026/05/sp7_2026_nbcs-212-1480.pdf",
+    "edition": "2026",
+    "accessed": "2026-11-13",
+    "note": "BIS free standard National Building Construction Standards 2026 Part F (successor of NBC 2016 Part 4), copy hosted by a state fire department; Part F is guidance for state bye-laws"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "in.egr.res"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 30.0,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 30.0,
+   "text": {
+    "en": "Travel distance from a room to an exit or stair at most 30 m (business, construction types 1 and 2, no sprinklers)",
+    "hi": "कक्ष से निकास या सीढ़ी तक यात्रा दूरी अधिकतम 30 m (व्यावसायिक, निर्माण प्रकार 1 और 2, बिना स्प्रिंकलर)"
+   },
+   "source": {
+    "doc": "nbcs2026-f",
+    "clause": "Table 4 business Group E, types 1 and 2 unsprinklered 30 m (sprinklered 60 m)",
+    "url": "https://dfes.goa.gov.in/wp-content/uploads/2026/05/sp7_2026_nbcs-212-1480.pdf",
+    "edition": "2026",
+    "accessed": "2026-11-13",
+    "note": "BIS free standard National Building Construction Standards 2026 Part F (successor of NBC 2016 Part 4), copy hosted by a state fire department; Part F is guidance for state bye-laws"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "in.egr.off"
+  },
+  {
+   "id": "generic.stair.step",
+   "disabled": true
+  },
+  {
+   "id": "generic.stair.headroom",
+   "disabled": true
+  },
+  {
+   "id": "generic.egress.distance",
+   "disabled": true
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ],
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "width",
+    "min": 1.2
+   },
+   "unit": "m",
+   "value": 1.2,
+   "text": {
+    "en": "Accessible corridor at least 1.2 m",
+    "ru": "Доступный коридор не менее 1.2 м"
+   },
+   "source": {
+    "doc": "hg-india-2021",
+    "clause": "4.4.1, corridor 1200 mm for one wheelchair",
+    "url": "https://divyangjan.depwd.gov.in/upload/uploadfiles/2262.pdf",
+    "accessed": "2026-11-15",
+    "paraphrase": "A corridor for one wheelchair is 1200 mm wide.",
+    "note": "same clause as dim corridor.width_min.accessible, read 2026-11-14"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "in.acc.corr"
+  }
+ ]
+}

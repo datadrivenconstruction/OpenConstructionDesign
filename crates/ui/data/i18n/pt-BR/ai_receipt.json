@@ -1,0 +1,21 @@
+{
+ "ai.receipt.title": {
+  "one": "# alteração aplicada",
+  "other": "# alterações aplicadas"
+ },
+ "ai.receipt.more": "+{n} mais",
+ "ai.receipt.list": "Elementos",
+ "ai.receipt.show": "Mostrar",
+ "ai.receipt.show.tip": "Seleciona e enquadra os elementos alterados",
+ "ai.receipt.undo": "Desfazer",
+ "ai.receipt.undo.tip": "Desfazer exatamente esta aplicação",
+ "ai.receipt.undone": "Desfeito",
+ "ai.receipt.later": "Foram feitas edições posteriores",
+ "ai.receipt.toast_undone": "O plano aplicado foi desfeito",
+ "ai.receipt.draft_family": "Família em rascunho: {name}",
+ "ai.receipt.promote": "Tornar de trabalho",
+ "ai.receipt.promote.tip": "Transforma a família em rascunho em uma de trabalho (um passo de desfazer)",
+ "ai.receipt.promoted": "A família agora é de trabalho",
+ "ai.receipt.promote_failed": "Não foi possível tornar a família de trabalho",
+ "cmd.ai.receipt_undo": "Desfazer o último plano de IA"
+}

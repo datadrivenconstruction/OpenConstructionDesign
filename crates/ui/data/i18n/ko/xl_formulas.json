@@ -1,0 +1,4 @@
+{
+ "xl.msg.x_formulas_in_column_x_on_sheet_x_replaced_by_values": "시트 '{}'의 열 '{}'에 있는 수식 {}개를 값으로 바꿨습니다",
+ "xl.msg.formula_in_a_model_column_not_applied": "모델 열의 수식: 결과는 적용하지 않고 모델 값을 유지합니다. 값을 입력해야 변경됩니다"
+}

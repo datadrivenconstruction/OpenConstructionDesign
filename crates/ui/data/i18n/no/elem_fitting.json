@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "Stykke",
+ "elem.mep_fitting.many": "Stykker",
+ "elem.mep_fitting.kind.elbow": "Albue",
+ "elem.mep_fitting.kind.tee": "T-stykke",
+ "elem.mep_fitting.kind.cross": "Kryss",
+ "elem.mep_fitting.kind.transition": "Overgang",
+ "elem.mep_fitting.kind.cap": "Endestykke",
+ "elem.mep_fitting.size": "Størrelse",
+ "elem.mep_fitting.at": "Posisjon",
+ "elem.mep_fitting.runs": "Strekning {n}",
+ "elem.mep_fitting.edit_run": "Rediger strekning",
+ "elem.mep_fitting.select_runs": "Velg strekningene",
+ "elem.mep_fitting.derived": "Et stykke følger strekningene sine: endrer du en strekning, endrer stykket seg med den.",
+ "elem.mep_fitting.no_delete": "Et stykke kan ikke slettes eller flyttes alene. Rediger eller slett strekningene.",
+ "elem.mep_fitting.hint": "Klikk på et stykke i planen for å se strekningene",
+ "elem.mep_fitting.picked": "Valgte stykker: {n}"
+}

@@ -1,0 +1,19 @@
+{
+ "empty.v3d_gpu.title": "이 그래픽 어댑터에서는 3D를 사용할 수 없습니다",
+ "empty.v3d_gpu.hint": "모델은 안전하고 평면은 작동합니다. 안전한 그래픽으로 다시 시작해 3D를 다시 시도하세요.",
+ "empty.v3d_gpu.action": "안전한 그래픽으로 다시 시작",
+ "empty.v3d_loading.title": "3D 생성 중…",
+ "empty.v3d_loading.pct": "여는 중… {pct} %",
+ "empty.plan_hidden.title": "이 평면에서 모든 요소가 숨겨져 있습니다",
+ "empty.plan_hidden.hint": "임시 숨기기 또는 분리로 보이는 것이 없습니다.",
+ "empty.plan_hidden.action": "모두 표시",
+ "empty.plan_graphics.title": "뷰 그래픽이 모든 카테고리를 숨깁니다",
+ "empty.plan_graphics.hint": "이 뷰의 카테고리 규칙으로 보여줄 것이 없습니다.",
+ "empty.plan_graphics.action": "뷰 그래픽 열기",
+ "empty.plan_phase.title": "단계 필터가 모든 것을 숨깁니다",
+ "empty.plan_phase.hint": "이 레벨에서 이 뷰가 보여 주는 단계에 존재하는 것이 없습니다.",
+ "empty.plan_phase.action": "단계 변경",
+ "empty.plan_level.title": "이 레벨에는 요소가 없습니다",
+ "empty.plan_level.hint": "이 모델의 다른 레벨에는 요소가 있습니다.",
+ "empty.plan_level.action": "요소가 있는 레벨로 이동"
+}

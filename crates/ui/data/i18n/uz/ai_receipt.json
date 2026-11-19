@@ -1,0 +1,21 @@
+{
+ "ai.receipt.title": {
+  "one": "# ta o'zgarish qo'llandi",
+  "other": "# ta o'zgarish qo'llandi"
+ },
+ "ai.receipt.more": "+{n} ta yana",
+ "ai.receipt.list": "Elementlar",
+ "ai.receipt.show": "Ko'rsatish",
+ "ai.receipt.show.tip": "O'zgargan elementlarni tanlash va kadrga olish",
+ "ai.receipt.undo": "Bekor qilish",
+ "ai.receipt.undo.tip": "Aynan shu qo'llashni qaytarish",
+ "ai.receipt.undone": "Bekor qilindi",
+ "ai.receipt.later": "Keyingi tahrirlar qilingan",
+ "ai.receipt.toast_undone": "Qo'llangan reja bekor qilindi",
+ "ai.receipt.draft_family": "Qoralama oila: {name}",
+ "ai.receipt.promote": "Ishchi qilish",
+ "ai.receipt.promote.tip": "Qoralama oilani ishchi oilaga aylantiradi (bitta bekor qilish qadami)",
+ "ai.receipt.promoted": "Oila endi ishchi",
+ "ai.receipt.promote_failed": "Oilani ishchi qilib bo'lmadi",
+ "cmd.ai.receipt_undo": "Oxirgi AI rejasini bekor qilish"
+}

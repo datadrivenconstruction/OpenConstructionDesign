@@ -1,0 +1,23 @@
+{
+ "params_list.n_params": {
+  "one": "# parameter",
+  "other": "# parameter"
+ },
+ "params_list.n_values": {
+  "one": "# värde",
+  "other": "# värden"
+ },
+ "params_list.n_elements": {
+  "one": "# element",
+  "other": "# element"
+ },
+ "params_list.exported": "{params} exporterade till {file}",
+ "params_list.export_failed": "Parametrarna exporterades inte: {why}",
+ "params_list.open_folder": "Öppna mapp",
+ "params_list.delete_tip": "Ta bort parametern och dess värden",
+ "params_list.confirm": "Ta bort {name} och dess {values} på {elements}?",
+ "params_list.confirm_btn": "Ta bort",
+ "params_list.cancel": "Avbryt",
+ "params_list.deleted": "Borttagen parameter {name} ({values})",
+ "params_list.undo": "Ångra"
+}

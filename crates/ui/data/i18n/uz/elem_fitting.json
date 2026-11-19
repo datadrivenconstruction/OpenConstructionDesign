@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "Fitting",
+ "elem.mep_fitting.many": "Fittinglar",
+ "elem.mep_fitting.kind.elbow": "Tirsak",
+ "elem.mep_fitting.kind.tee": "Troynik",
+ "elem.mep_fitting.kind.cross": "Xoch",
+ "elem.mep_fitting.kind.transition": "O'tkazgich",
+ "elem.mep_fitting.kind.cap": "Qopqoq",
+ "elem.mep_fitting.size": "O'lcham",
+ "elem.mep_fitting.at": "Joylashuvi",
+ "elem.mep_fitting.runs": "Trassa {n}",
+ "elem.mep_fitting.edit_run": "Trassani tahrirlash",
+ "elem.mep_fitting.select_runs": "Trassalarini tanlang",
+ "elem.mep_fitting.derived": "Fitting o'z trassalariga ergashadi: trassani o'zgartirsangiz, fitting ham o'zgaradi.",
+ "elem.mep_fitting.no_delete": "Fittingni o'zi o'chirib yoki ko'chirib bo'lmaydi. Uning trassalarini tahrirlang yoki o'chiring.",
+ "elem.mep_fitting.hint": "Trassalarini ko'rish uchun planda fittingni bosing.",
+ "elem.mep_fitting.picked": "Tanlangan fittinglar: {n}"
+}

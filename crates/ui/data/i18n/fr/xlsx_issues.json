@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "Lignes et cellules ignorées",
+ "xlsx_issues.conflicts_title": "Modifié aux deux endroits",
+ "xlsx_issues.missing_title": "Feuille absente du classeur",
+ "xlsx_issues.look_alike_title": "Le nom de la feuille ne correspond pas",
+ "xlsx_issues.mass_title": "La suppression en masse doit être confirmée",
+ "xlsx_issues.sheets_missing": "Les feuilles {sheets} sont absentes du classeur (renommées ou supprimées) ; leurs lignes n'ont pas été comparées.",
+ "xlsx_issues.keep_model": "Garder le modèle",
+ "xlsx_issues.take_book": "Prendre le classeur",
+ "xlsx_issues.open_book_tip": "Ouvre le fichier dans son application. Rien ne change dans le modèle ; l'aperçu se recharge après l'enregistrement du classeur."
+}

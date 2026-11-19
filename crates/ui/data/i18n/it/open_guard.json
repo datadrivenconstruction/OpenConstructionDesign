@@ -1,0 +1,11 @@
+{
+ "job.stage.prepare": "Preparazione del progetto",
+ "open_guard.already_open": "{name} è già aperto",
+ "open_guard.from_cache": "{name}: aperto dalla cache di importazione",
+ "open_guard.known_project": "{name} era già stato importato: apro quel progetto",
+ "open_guard.locate": "Trova",
+ "open_guard.mem_low": "Memoria scarsa: il budget delle mesh è dimezzato e la costruzione del livello di dettaglio è sospesa",
+ "open_guard.mem_low_short": "Memoria scarsa: la costruzione del livello di dettaglio è sospesa finché si libera memoria",
+ "open_guard.no_window": "Impossibile trovare la finestra di quel progetto",
+ "open_guard.switch_window": "Passa a quella finestra"
+}

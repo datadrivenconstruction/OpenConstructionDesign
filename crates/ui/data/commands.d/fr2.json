@@ -1,0 +1,24 @@
+[
+ {
+  "id": "app.ctx_tips",
+  "icon": "ctx-tips",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "help.reference",
+  "icon": "reference",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ }
+]

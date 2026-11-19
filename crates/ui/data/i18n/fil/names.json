@@ -1,0 +1,19 @@
+{
+ "names.level": "Antas {n}",
+ "names.slab": "Sahig 200",
+ "names.roof_slab": "Bubong 200",
+ "names.sheet.plan_section": "Plan at section ng Palapag 1",
+ "names.sheet.plan_view": "Plan ng Palapag 1",
+ "names.sheet.site_plan": "Plano ng site",
+ "names.sheet_set.issue": "Isyu 1",
+ "names.title.owner": "Proyekto Ltd",
+ "names.title.creator": "A. Ivanov",
+ "names.title.approver": "P. Petrov",
+ "names.title.document_type": "Guhit",
+ "names.title.status": "Ginagawa pa",
+ "names.revision.date": "Nob 4, 2026",
+ "names.revision.description": "Inilabas para sa pagsusuri",
+ "names.revision.author": "AI",
+ "names.demo.no_levels": "walang level",
+ "names.demo.no_sheet": "plano"
+}

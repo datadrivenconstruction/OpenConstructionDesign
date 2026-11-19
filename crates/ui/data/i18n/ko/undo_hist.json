@@ -1,0 +1,8 @@
+{
+ "undo.undone": "실행 취소함: {what}",
+ "undo.redone": "다시 실행함: {what}",
+ "undo.action.edit.redo": "다시 실행",
+ "undo.action.edit.undo": "실행 취소",
+ "hdr.unsaved": "저장되지 않은 변경 사항",
+ "hdr.file_menu": "파일 메뉴"
+}

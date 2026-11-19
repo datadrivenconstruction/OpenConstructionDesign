@@ -1,0 +1,5 @@
+{
+ "caps.refused": "{kinds}: {reason}. Nic nie zmieniono.",
+ "caps.panel": "Panel przesuwa się razem z całą ścianą osłonową. Zaznacz ścianę",
+ "caps.unsupported": "To narzędzie nie edytuje tych elementów"
+}

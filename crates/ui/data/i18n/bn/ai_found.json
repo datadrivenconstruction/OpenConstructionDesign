@@ -1,0 +1,42 @@
+{
+ "ai.tool.show_elements": "উপাদান দেখানো হচ্ছে",
+ "ai.tool.isolate_elements": "উপাদান আলাদা করা হচ্ছে",
+ "ai.tool.color_by": "মান অনুযায়ী রঙ করা হচ্ছে",
+ "ai.tool.reset_view": "ভিউ রিসেট করা হচ্ছে",
+ "ai_found.found.query": "পাওয়া গেছে",
+ "ai_found.found.show": "দেখানো",
+ "ai_found.found.isolate": "আলাদা করা",
+ "ai_found.found.hide": "লুকানো",
+ "ai_found.found.color": "রঙ করা",
+ "ai_found.found.count": "{m}টির মধ্যে {n}",
+ "ai_found.found.none": "কিছুই মেলেনি। আরও বিস্তৃত ফিল্টার চেষ্টা করুন।",
+ "ai_found.found.show_btn": "দেখান",
+ "ai_found.found.show_tip": "এই উপাদানগুলো নির্বাচন করুন এবং প্ল্যান ও 3D-তে এগুলোতে জুম করুন",
+ "ai_found.found.isolate_btn": "আলাদা করুন",
+ "ai_found.found.isolate_tip": "ভিউ রিসেট না করা পর্যন্ত শুধু এই উপাদানগুলো দেখান",
+ "ai_found.found.select_btn": "নির্বাচন করুন",
+ "ai_found.found.select_tip": "ভিউ না সরিয়ে এই উপাদানগুলো নির্বাচন করুন",
+ "ai_found.legend.title": "{by} অনুযায়ী রঙ",
+ "ai_found.legend.row_tip": "এই উপাদানগুলো নির্বাচন করতে ক্লিক করুন",
+ "ai_found.legend.empty_value": "কোনো মান নেই",
+ "ai_found.legend.other": {
+  "one": "আরও # টি মান",
+  "other": "আরও # টি মান"
+ },
+ "ai_found.view.title": "AI সহকারীর ভিউ",
+ "ai_found.view.reset": "ভিউ রিসেট",
+ "ai_found.view.reset_tip": "AI সহকারী বদলানোর আগের ভিউ ফিরিয়ে আনুন",
+ "ai_found.view.shown": {
+  "one": "# টি উপাদান দেখানো",
+  "other": "# টি উপাদান দেখানো"
+ },
+ "ai_found.view.isolated": {
+  "one": "# টি উপাদান আলাদা করা",
+  "other": "# টি উপাদান আলাদা করা"
+ },
+ "ai_found.view.hidden": {
+  "one": "# টি উপাদান লুকানো",
+  "other": "# টি উপাদান লুকানো"
+ },
+ "ai_found.found.line": "{what}: {count}"
+}

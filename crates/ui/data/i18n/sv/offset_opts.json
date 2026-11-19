@@ -1,0 +1,7 @@
+{
+ "offset_opts.dist_positive": "Förskjutningsavståndet måste vara större än noll; sidan följer markören",
+ "offset_opts.count_bad": "Heltal från {min} till {max}",
+ "offset_opts.done_tip": "Avsluta markeringen och starta verktyget",
+ "offset_opts.iso.apply_tip": "Gör den tillfälliga döljningen permanent för den här vyn",
+ "offset_opts.iso.exit": "Avsluta tillfälligt läge"
+}

@@ -1,0 +1,9 @@
+{
+ "clash.col.x": "X",
+ "clash.col.y": "Y",
+ "clash.col.z": "Z",
+ "clash.unit.ft3": "ft³",
+ "clash.exported_n": "הדוח נשמר: {n} מתוך {m}, {path}",
+ "clash.exported_f": "הדוח נשמר: {n} מתוך {m} (מסנן: {filter}), {path}",
+ "clash.col.unit": "{name}, {unit}"
+}

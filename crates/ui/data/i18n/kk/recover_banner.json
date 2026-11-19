@@ -1,0 +1,7 @@
+{
+ "recover.untitled_note": "Бұл жоба ешқашан сақталмаған",
+ "recover.file_missing": "Жоба файлы табылмады",
+ "recover.banner": "{name} үшін бұрынғы сеанстан сақталмаған жұмыс табылды",
+ "recover.banner_review": "Қарау",
+ "recover.later_archived": "{n} рет кейінге қойылды: суреттер архивке көшірілді"
+}

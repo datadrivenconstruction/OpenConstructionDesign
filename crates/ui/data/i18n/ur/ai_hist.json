@@ -1,0 +1,14 @@
+{
+ "ai.hist.badge": "AI",
+ "ai.hist.untitled": "AI تبدیلیاں",
+ "ai.hist.tip": "{title}\nلاگو کیا: {actor}\nAI ماڈل: {model}",
+ "ai.hist.why": "وجہ: {why}",
+ "ai.hist.reverted": "واپس لوٹایا گیا",
+ "ai.hist.revert_one": "یہ AI بیچ واپس لوٹائیں",
+ "ai.revert.done": "AI تبدیلیاں واپس لوٹائی گئیں: {n}۔ Undo انہیں واپس لاتا ہے۔",
+ "ai.revert.empty": "واپس لوٹانے کے لیے کوئی AI تبدیلی نہیں",
+ "ai.revert.not_ai": "یہ مرحلہ AI تبدیلی نہیں ہے",
+ "ai.revert.already": "یہ AI تبدیلیاں پہلے ہی واپس لوٹائی جا چکی ہیں",
+ "ai.revert.opaque": "واپس نہیں لوٹایا گیا: یہ AI تبدیلیاں بعد کے کام سے محفوظ طور پر الگ نہیں ہو سکتیں۔ کچھ نہیں بدلا گیا۔",
+ "ai.revert.failed": "واپسی ناکام: {e}"
+}

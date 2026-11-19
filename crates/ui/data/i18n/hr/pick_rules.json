@@ -1,0 +1,11 @@
+{
+ "pick_rules.filter": "Odabir: sve",
+ "pick_rules.filter.on": "Odabir: isključeno {n}",
+ "pick_rules.filter.title": "Kategorije koje klik može odabrati",
+ "pick_rules.filter.all": "Odaberi sve kategorije",
+ "pick_rules.filter.tip": "Filter odabira: neoznačene kategorije preskaču se klikom i prelaskom miša",
+ "pick_rules.here": "Stavke ovdje",
+ "pick_rules.here.selected": "odabrano",
+ "pick_rules.pinned": "Odaberi prikvačene stavke",
+ "pick_rules.here.row": "{cat} · {len}"
+}

@@ -1,0 +1,19 @@
+{
+ "names.level": "ระดับ {n}",
+ "names.slab": "พื้น 200",
+ "names.roof_slab": "หลังคา 200",
+ "names.sheet.plan_section": "แผนและหน้าตัดชั้น 1",
+ "names.sheet.plan_view": "แผนชั้น 1",
+ "names.sheet.site_plan": "แผนผังพื้นที่โครงการ",
+ "names.sheet_set.issue": "ฉบับที่ 1",
+ "names.title.owner": "บริษัท โปรเจกต์ จำกัด",
+ "names.title.creator": "สมหญิง อ.",
+ "names.title.approver": "สมชาย ป.",
+ "names.title.document_type": "แบบ",
+ "names.title.status": "กำลังดำเนินการ",
+ "names.revision.date": "4 พ.ย. 2569",
+ "names.revision.description": "ออกเพื่อตรวจทาน",
+ "names.revision.author": "AI",
+ "names.demo.no_levels": "ไม่มีระดับ",
+ "names.demo.no_sheet": "แผ่นงาน"
+}

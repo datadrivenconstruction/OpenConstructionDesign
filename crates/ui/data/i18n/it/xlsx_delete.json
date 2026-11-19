@@ -1,0 +1,5 @@
+{
+ "xlsx_delete.delete_missing": "Elimina righe mancanti nella cartella",
+ "xlsx_delete.not_removed": "non rimosso: nessun dato di confronto",
+ "xlsx_delete.no_base_reason": "Non disponibile: la cartella non ha dati di confronto, quindi una riga mancante non si può distinguere da una eliminata per errore. Nulla viene eliminato all'applicazione."
+}

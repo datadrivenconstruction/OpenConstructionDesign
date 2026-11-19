@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "এই ওয়ার্কবুক আগে থেকেই আছে",
+ "xlsx_exists.foreign": "এটি এই প্রকল্পের ওয়ার্কবুক নয়, তাই কখনো প্রতিস্থাপিত হয় না।",
+ "xlsx_exists.pending": "এতে {n}টি সম্পাদনা আছে যা এখনো মডেলে প্রয়োগ হয়নি।",
+ "xlsx_exists.outside": "এতে {n}টি সারি আছে যা নতুন এক্সপোর্টে নেই।",
+ "xlsx_exists.new_name": "{name}-এ এক্সপোর্ট",
+ "xlsx_exists.apply_first": "আগে এগুলো প্রয়োগ করুন",
+ "xlsx_exists.replace": "বদলান (পুরোনো বই _archive-এ)",
+ "xlsx_exists.archived": "পুরোনো ওয়ার্কবুক সরানো হয়েছে {path}-এ",
+ "xlsx_exists.archive_failed": "পুরোনো ওয়ার্কবুক সরানো যায়নি, কিছুই এক্সপোর্ট হয়নি: {error}"
+}

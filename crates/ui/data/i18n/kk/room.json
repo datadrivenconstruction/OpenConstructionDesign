@@ -1,0 +1,6 @@
+{
+ "geom.length": "Ұзындық",
+ "sched.cat.room_seps": "Бөлме бөлгіштері",
+ "room.err.point_leave": "Бөлме {n}: нүкте шекарадан шығып кетеді",
+ "room.err.point_taken": "Бөлме {n}: нүкте {other} бөлмесіне түседі"
+}

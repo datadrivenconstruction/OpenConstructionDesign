@@ -1,0 +1,11 @@
+{
+ "cmd.ctx.ceiling.clean_outline": "Limpiar contorno",
+ "cmd.ctx.ceiling.clean_outline.desc": "Quita las puntas estrechas donde el contorno del techo vuelve sobre sí mismo. Muestra antes una vista previa; un paso de deshacer.",
+ "cmd.ctx.shaft.clean_outline": "Limpiar contorno",
+ "cmd.ctx.shaft.clean_outline.desc": "Quita las puntas estrechas donde el contorno del hueco vuelve sobre sí mismo. Muestra antes una vista previa; un paso de deshacer.",
+ "outline_cleanup.intro_ceiling": "El contorno de este techo vuelve sobre sí mismo en puntas estrechas: {n}. La limpieza las elimina; lo demás queda igual.",
+ "outline_cleanup.intro_shaft": "El contorno de este hueco vuelve sobre sí mismo en puntas estrechas: {n}. La limpieza las elimina; lo demás queda igual.",
+ "outline_cleanup.none_ceiling": "El contorno de este techo no tiene puntas",
+ "outline_cleanup.none_shaft": "El contorno de este hueco no tiene puntas",
+ "outline_cleanup.need_host": "Seleccione un forjado, techo o hueco"
+}

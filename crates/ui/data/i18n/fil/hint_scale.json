@@ -1,0 +1,10 @@
+{
+ "cmd.mod.scale": "Iskala",
+ "cmd.mod.scale.desc": "Pumili ng mga elemento, saka i-click ang base point, reference length at bagong haba, o mag-type ng factor.",
+ "hint.scale.select": "Scale: pumili ng mga elemento · Enter — tapos na",
+ "hint.scale.first": "Scale: pumili ng base point · Esc — kanselahin",
+ "hint.scale.second": "Scale: pumili ng reference length · numero — factor · Esc — kanselahin",
+ "hint.scale.third": "Scale: pumili ng bagong haba · numero — factor · Esc — kanselahin",
+ "scl.bad_factor": "Dapat numerong higit sa zero ang scale factor",
+ "scl.zero_ref": "Zero ang reference length: pumili ng point na malayo sa base"
+}

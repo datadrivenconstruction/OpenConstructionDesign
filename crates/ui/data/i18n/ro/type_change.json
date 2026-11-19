@@ -1,0 +1,15 @@
+{
+ "type_change.affects_walls": {
+  "one": "afectează # perete",
+  "few": "afectează # pereți",
+  "other": "afectează # de pereți"
+ },
+ "type_change.affects": {
+  "one": "afectează # element",
+  "few": "afectează # elemente",
+  "other": "afectează # de elemente"
+ },
+ "type_change.tick_types": "Aplicați modificările de tip la toate cele {n} elemente din aceste tipuri",
+ "type_change.tick_types_first": "Bifați mai întâi modificarea de tip: fiecare element al tipului o preia",
+ "xl.msg.types_first": "confirmați mai întâi modificările de tip"
+}

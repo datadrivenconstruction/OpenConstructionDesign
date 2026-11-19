@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "نقطه‌ی انتها",
+ "snap.midpoint": "نقطه‌ی میانی",
+ "snap.perpendicular": "عمود",
+ "snap.wall_axis": "محور دیوار",
+ "snap.wall_face": "وجه دیوار",
+ "snap.grid": "شبکه",
+ "snap.intersection": "تقاطع",
+ "snap.grid_axis": "خط شبکه",
+ "snap.ref_plane": "صفحه‌ی مرجع",
+ "snap.nearest": "نزدیک‌ترین",
+ "snap.align_x": "هم‌راستا در X با یک نقطه‌ی دور",
+ "snap.align_y": "هم‌راستا در Y با یک نقطه‌ی دور",
+ "snap.align_xy": "هم‌راستا در X و Y"
+}

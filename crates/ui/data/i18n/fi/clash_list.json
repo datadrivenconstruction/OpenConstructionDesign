@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "Kaikki",
+ "clash_list.only_selected": "Vain valitut",
+ "clash_list.tolerance": "Toleranssi",
+ "clash_list.gap": "Väli",
+ "clash_list.export": "Vie",
+ "clash_list.col.volume": "Tilavuus",
+ "clash_list.fix.up": "Siirrä ylös",
+ "clash_list.fix.down": "Siirrä alas",
+ "clash_list.fix.sleeve": "Holkki",
+ "clash_list.apply_fix": "Käytä korjausta",
+ "clash_list.err.tol": "Toleranssi: anna pituus (0 tai enemmän), esim. 50 tai 2 in",
+ "clash_list.sleeve_no_host": "Holkki tarvitsee seinän tai laatan pariksi",
+ "clash_list.err.gap": "Väli: anna pituus (0 tai enemmän), esim. 50 tai 2 in"
+}

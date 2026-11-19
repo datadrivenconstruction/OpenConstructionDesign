@@ -1,0 +1,35 @@
+[
+ {
+  "id": "mod.demolish",
+  "icon": "demolish",
+  "mnemonic": "DX",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M2",
+  "group": "modify",
+  "context": [
+   "wall",
+   "door",
+   "window",
+   "curtain",
+   "floor"
+  ],
+  "priority": 6
+ },
+ {
+  "id": "mgr.project_params",
+  "icon": "project-params",
+  "mnemonic": "PJ",
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M2",
+  "group": "project"
+ }
+]

@@ -1,0 +1,21 @@
+{
+ "cmd.help.check_update": "Check for updates",
+ "update_check.title": "Update check",
+ "update_check.desc": "Off by default. Sends only the version, the OS and architecture, and the install kind to our server. Never downloads or installs anything.",
+ "update_check.freq.startup": "At startup",
+ "update_check.freq.daily": "Daily",
+ "update_check.freq.weekly": "Weekly",
+ "update_check.freq.never": "Never",
+ "update_check.check_now": "Check now",
+ "update_check.dialog.title": "Update check",
+ "update_check.unknown.title": "Could not check for updates",
+ "update_check.unknown.body": "{e}. This does not mean this version is current. Try again later.",
+ "update_check.current": "You have the latest version ({v}).",
+ "update_check.newer": "Version {v} is available",
+ "update_check.date": "Released {d}",
+ "update_check.unfit": "This version ({v}) is older than the minimum recommended version {f}. Updating is advised.",
+ "update_check.close": "Close",
+ "update_check.open_failed": "Could not open the release page.",
+ "update_check.toast.newer": "Version {v} is available. Help > Check for updates.",
+ "update_check.toast.unfit": "This version ({v}) is older than the minimum recommended version {f}."
+}

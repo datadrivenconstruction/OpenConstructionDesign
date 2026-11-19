@@ -1,0 +1,9 @@
+{
+ "empty.props_model.title": "Nichts ausgewählt",
+ "empty.props_model.hint": "Klicken Sie in der Ansicht auf ein Element, um seine Eigenschaften zu sehen. Oder exportieren Sie alle Parameter in eine Arbeitsmappe, bearbeiten Sie sie dort und übernehmen Sie sie zurück.",
+ "empty.props_model.action": "Nach XLSX-Tabelle exportieren",
+ "tut.spreadsheet.title": "XLSX-Rundlauf",
+ "tut.spreadsheet.1": "Drücken Sie unten auf „Nach XLSX-Tabelle exportieren“: Wählen Sie den Inhalt und speichern Sie die Arbeitsmappe.",
+ "tut.spreadsheet.2": "Öffnen Sie die Arbeitsmappe in einer Tabellenkalkulation, ändern Sie eine Zelle und speichern Sie. Die Vorschau hier zeigt die Änderung.",
+ "tut.spreadsheet.3": "Prüfen Sie die Vorschau und drücken Sie „Auf Modell anwenden“. Strg+Z macht es rückgängig."
+}

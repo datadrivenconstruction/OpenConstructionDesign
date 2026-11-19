@@ -1,0 +1,7 @@
+{
+ "src.field.kids": "Gyermeksorok (panelek, csúcsok)",
+ "src.kids.mine": "{n} gyermeksor, módosítva itt",
+ "src.kids.changed": "gyermeksorok módosítva itt",
+ "src.kids.theirs": "gyermeksorok módosítva a fájlban",
+ "src.kids.take_tip": "A következő importálás átveszi a fájl gyermeksorait; most nem kerülnek alkalmazásra."
+}

@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "Uma massa não pode ser rodada nem espelhada: o seu histórico de forma não tem passo de rotação. Mova ou copie-a, ou redesenhe-a na nova direção.",
+ "sched_cats.col.name": "Nome",
+ "sched_cats.col.material": "Material",
+ "sched_cats.col.void": "Vazio",
+ "sched_cats.col.inplace": "In situ",
+ "sched_cats.col.volume": "Volume líquido",
+ "sched_cats.col.area": "Área da superfície",
+ "sched_cats.col.floor_area": "Área do piso",
+ "sched_cats.col.thickness": "Espessura",
+ "sched_cats.col.points": "Pontos",
+ "elem.toposolid.points": "Pontos de levantamento",
+ "elem.toposolid.count": "Pontos",
+ "elem.toposolid.low": "Mais baixo",
+ "elem.toposolid.high": "Mais alto",
+ "elem.toposolid.edit": "Editar pontos",
+ "elem.toposolid.edit_tip": "Selecione, arraste e defina a cota dos pontos de levantamento na planta",
+ "elem.toposolid.pick_hint": "Clique num ponto na planta para o selecionar. Clique de novo para adicionar ou remover.",
+ "elem.toposolid.z": "Cota ({n})",
+ "elem.toposolid.mixed": "Os pontos selecionados diferem; um novo valor define-os todos.",
+ "elem.toposolid.edit_help": "Arraste um ponto para o mover. Escreva um valor e prima Enter para definir a cota. Backspace remove os pontos selecionados, Esc sai.",
+ "elem.toposolid.done": "Concluir"
+}

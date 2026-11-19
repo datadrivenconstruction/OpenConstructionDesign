@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D",
+ "phases.current_mark": "वर्तमान",
+ "phases.make_current": "वर्तमान बनाएँ",
+ "phases.col_phase": "चरण",
+ "phases.col_filter": "फ़िल्टर",
+ "phases.presets": "प्लान प्रीसेट",
+ "phases.del_title": "चरण हटाएँ",
+ "phases.del_text": "चरण “{name}” हटाएँ? इसके तत्व नीचे चुने चरण में चले जाएँगे।",
+ "phases.del_into": "तत्व इसमें ले जाएँ",
+ "phases.del_ok": "हटाएँ",
+ "phases.col_kind": "तत्व प्रकार",
+ "phases.col_count": "गिनती",
+ "phases.col_volume": "आयतन"
+}

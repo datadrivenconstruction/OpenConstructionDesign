@@ -1,0 +1,66 @@
+{
+ "schema": "gen_bench.v1",
+ "group": "irregular_site",
+ "spec": {
+  "typology": "office",
+  "floors": 4,
+  "footprint": {
+   "plot": [
+    [
+     0,
+     0
+    ],
+    [
+     62,
+     0
+    ],
+    [
+     50,
+     34
+    ],
+    [
+     8,
+     30
+    ]
+   ],
+   "plot_setback": 3
+  }
+ },
+ "adjacency": [
+  [
+   "meeting",
+   "lobby",
+   1
+  ],
+  [
+   "office",
+   "corridor",
+   2
+  ],
+  [
+   "wc",
+   "corridor",
+   1
+  ]
+ ],
+ "site": {
+  "plot": [
+   [
+    0,
+    0
+   ],
+   [
+    62,
+    0
+   ],
+   [
+    50,
+    34
+   ],
+   [
+    8,
+    30
+   ]
+  ]
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "टाइप मिलाएँ",
+ "cmd.mod.match_type.short": "टाइप मिलाएँ",
+ "cmd.mod.match_type.desc": "दीवार, फ़र्श, कॉलम या बीम चुनें, फिर उसी श्रेणी के दूसरे एलिमेंट पर क्लिक करें ताकि उन्हें उसका टाइप मिले। विंडो खींचें तो अंदर के सभी पर लागू होगा। Esc स्रोत हटाता है।",
+ "hint.match_type.pick": "टाइप मिलाएँ: दीवार, फ़र्श, कॉलम या बीम चुनें · Esc — बाहर",
+ "hint.match_type.apply": "टाइप मिलाएँ: लक्ष्य पर क्लिक करें या विंडो खींचें · Esc — दूसरा स्रोत",
+ "match_type.kind.wall": "दीवार",
+ "match_type.kind.slab": "फ़र्श",
+ "match_type.kind.column": "कॉलम",
+ "match_type.kind.beam": "बीम",
+ "match_type.refuse.category": "दूसरी श्रेणी: यह टाइप केवल {cat} ले सकता है",
+ "match_type.refuse.curtain": "कर्टन वॉल: उसका टाइप यहाँ नहीं मिलता",
+ "match_type.refuse.pinned": "पिन किया गया: टाइप बदलने के लिए अनपिन करें",
+ "match_type.pick_bad": "स्रोत के रूप में दीवार, फ़र्श, कॉलम या बीम चुनें",
+ "match_type.same": "यह टाइप पहले से है",
+ "match_type.done": "टाइप लागू किया गया: {n}",
+ "match_type.done_skipped": "टाइप लागू किया गया: {n}, छोड़े गए (पिन या कर्टन): {skipped}",
+ "match_type.failed": "टाइप नहीं बदला: {err}"
+}

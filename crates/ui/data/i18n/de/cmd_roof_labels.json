@@ -1,0 +1,11 @@
+{
+ "cmd.arch.roof_gable.short": "Satteldach",
+ "cmd.arch.roof_hip.short": "Walmdach",
+ "cmd.arch.roof_shed.short": "Pultdach",
+ "cmd.arch.roof_mansard.short": "Mansarddach",
+ "cmd.arch.roof_gambrel.short": "Mansarddach (Knickdach)",
+ "cmd.arch.roof_barrel.short": "Tonnendach",
+ "cmd.arch.roof_edges.short": "Dachkanten",
+ "cmd.arch.roof_opening.short": "Dachöffnung",
+ "cmd.mass.roof_by_face.short": "Nach Fläche"
+}

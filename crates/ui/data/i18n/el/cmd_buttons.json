@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}, στο επίπεδο",
+ "cmd_buttons.purge.undo": "Η αφαίρεση είναι ένα βήμα αναίρεσης.",
+ "cmd_buttons.unpin.none": "Κανένα επιλεγμένο στοιχείο δεν είναι καρφιτσωμένο",
+ "cmd_buttons.change_type.none": "Επιλέξτε πρώτα τοίχους: ο τύπος τους αλλάζει σε ένα βήμα",
+ "cmd_buttons.units.metric": "Μονάδες: μετρικές",
+ "cmd_buttons.units.imperial": "Μονάδες: πόδια και ίντσες",
+ "cmd_buttons.units.back": "Επιστροφή",
+ "cmd_buttons.underlay.on": "Υπόστρωμα ενεργό: το επίπεδο από κάτω εμφανίζεται αμυδρό",
+ "cmd_buttons.underlay.off": "Υπόστρωμα ανενεργό",
+ "cmd_buttons.underlay.none": "Υπόστρωμα ενεργό, αλλά το επίπεδο από κάτω δεν έχει τι να δείξει",
+ "cmd_buttons.zoom_sel.no_shape": "Η επιλογή δεν έχει σχήμα για εστίαση σε αυτή την προβολή",
+ "cmd_buttons.close.base": "Οι καρτέλες κάτοψης και 3D μένουν ανοιχτές· για κλείσιμο ανοίξτε τομή, φύλλο ή σχέδιο",
+ "tool.equipment": "Εξοπλισμός",
+ "hint.equipment.place": "Εξοπλισμός: επιλέξτε θέση · Esc — έξοδος",
+ "cmd_buttons.table.opened": "Ο πίνακας άνοιξε δίπλα στο μοντέλο",
+ "cmd_buttons.circuits.tip": "Άνοιγμα της λίστας των ηλεκτρικών κυκλωμάτων του μοντέλου"
+}

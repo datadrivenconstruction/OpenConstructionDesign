@@ -1,0 +1,10 @@
+{
+ "elem.multi.title": "{n} elementi",
+ "elem.multi.varies": "varia",
+ "elem.multi.tip": "Invio imposta tutti gli elementi selezionati",
+ "elem.multi.hidden": "{n} righe solo su alcuni elementi",
+ "elem.multi.none": "Gli elementi selezionati non hanno righe in comune",
+ "elem.multi.range": "Il valore è fuori dall'intervallo consentito",
+ "elem.multi.changed": "Modificati {n} elementi · Ctrl+Z annulla",
+ "elem.multi.same": "Questo valore è già su tutti gli elementi selezionati"
+}

@@ -1,0 +1,5 @@
+{
+ "xlsx_delete.delete_missing": "Çalışma kitabında olmayan satırları sil",
+ "xlsx_delete.not_removed": "kaldırılmadı: karşılaştırma verisi yok",
+ "xlsx_delete.no_base_reason": "Kullanılamıyor: çalışma kitabında karşılaştırma verisi yok, bu yüzden eksik bir satır yanlışlıkla silinmiş olandan ayırt edilemez. Uygula'da hiçbir şey silinmez."
+}

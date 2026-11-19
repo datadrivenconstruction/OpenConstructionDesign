@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "Variante zusammenführen: {name}",
+ "ai_opt_merge.whole": "Ganze Variante zusammenführen",
+ "ai_opt_merge.parts": "Gewählte Teile zusammenführen",
+ "ai_opt_merge.note": "Warum diese Variante",
+ "ai_opt_merge.rebased": "Das Modell hat sich nach dieser Variante geändert: Die Zusammenführung wurde gegen das aktuelle Modell neu berechnet. Änderungen vor dem Anwenden prüfen.",
+ "ai_opt_merge.left.not_picked": "Nicht aus der Variante übernommen",
+ "ai_opt_merge.left.unticked": "In der Variante abgewählt",
+ "ai_opt_merge.left.conflict": "Kann dem aktuellen Modell nicht hinzugefügt werden: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "Diese Variante kann nicht zusammengeführt werden. Eine abgelehnte Variante muss zuerst wiederhergestellt werden.",
+ "ai_opt_merge.refused.stale": "Das Modell hat sich nach dieser Variante geändert. Zusammenführung gegen das aktuelle Modell neu berechnen.",
+ "ai_opt_merge.refused.nothing_picked": "Nichts zum Zusammenführen ausgewählt.",
+ "ai_opt_merge.refused.unknown_item": "Punkt {item} gehört nicht zu dieser Variante.",
+ "ai_opt_merge.refused.not_in_option": "Das gewählte Element gehört nicht zu dieser Variante.",
+ "ai_opt_merge.refused.needs_left_out": "Punkt {item} braucht Punkt {needs}. Diesen ebenfalls auswählen oder Abhängigkeiten hinzufügen lassen.",
+ "ai_opt_merge.refused.set_gone": "Punkt {item} verweist auf eine Auswahl, die nicht mehr existiert. Variante neu erzeugen.",
+ "ai_opt_merge.refused.busy": "Ein anderer Plan ist offen. Zuerst anwenden oder ablehnen.",
+ "ai_opt_merge.refused.failed": "Die Zusammenführung konnte nicht vorbereitet werden: {reason}",
+ "ai_opt_merge.revive": "Variante wiederherstellen",
+ "ai_opt_merge.merged": "Zusammengeführt"
+}

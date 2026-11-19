@@ -1,0 +1,5 @@
+{
+ "xlsx_delete.delete_missing": "Eliminar las filas que faltan en el libro",
+ "xlsx_delete.not_removed": "no eliminado: sin datos de comparación",
+ "xlsx_delete.no_base_reason": "No disponible: el libro no tiene datos de comparación, así que una fila que falta no se puede distinguir de una eliminada por error. No se elimina nada al aplicar."
+}

@@ -1,0 +1,10 @@
+{
+ "dlg.dw.store.unloaded": "Ritning “{name}” kunde inte läsas från projektet och behålls oförändrad i filen",
+ "dlg.dw.store.source_missing": "Ritning “{name}”: källfilen hittades inte, kopian som sparats i projektet visas",
+ "dlg.dw.store.source_changed": "Ritning “{name}”: källfilen har ändrats sedan den placerades, kopian som sparats i projektet visas",
+ "dlg.dw.store.unreadable": "De placerade ritningar som är lagrade i projektet kan inte läsas",
+ "dlg.dw.store.not_saved": "Ritningarna sparas inte: {why}",
+ "dlg.dw.store.why_read": "de placerade ritningar som är lagrade i projektet kan inte läsas",
+ "dlg.dw.store.why_write": "projektfilen kunde inte uppdateras",
+ "dlg.dw.store.missing_in_file": "Den sparade filen innehåller inte alla placerade ritningar"
+}

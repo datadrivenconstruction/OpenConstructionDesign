@@ -1,0 +1,6 @@
+{
+ "xlsx_readonly.read_only": "The workbook is read-only (file property or folder permission). Export to a copy, or clear Read-only in the file properties and try again.",
+ "xlsx_readonly.export_copy": "Export to a copy",
+ "xlsx_readonly.no_copy_name": "No free name for a copy beside the workbook.",
+ "xlsx_readonly.copied": "The workbook was left as it is. A refreshed copy was written beside it and is linked now: {path}"
+}

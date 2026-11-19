@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "Preview",
+ "agent_draft.ag.preview.desc": "Outline the elements of this draft on the canvas while the pointer is on the button. Nothing is changed.",
+ "agent_draft.type.column": "Column",
+ "agent_draft.type.roof": "Roof",
+ "agent_draft.type.ceiling": "Ceiling",
+ "agent_draft.type.stair": "Monolithic",
+ "agent_draft.type.railing": "Railing",
+ "agent_draft.type.shaft": "Shaft",
+ "agent_draft.type.axis": "Axis 6.5 mm",
+ "agent_draft.type.refplane": "Reference plane"
+}

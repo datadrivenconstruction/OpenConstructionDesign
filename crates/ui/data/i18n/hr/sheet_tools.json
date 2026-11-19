@@ -1,0 +1,19 @@
+{
+ "undo.entry_later": "Nije poništeno: nakon nje napravljena je druga promjena. Prvo poništite tu.",
+ "undo.entry_gone": "Nije poništeno: ova promjena je već poništena ili više nije u povijesti.",
+ "undo.entry_busy": "Prvo završite ili otkažite trenutni crtež, zatim poništite.",
+ "quick.hud.more": "Više u svojstvima: {names}",
+ "sheet_tools.sheet.more": "Više alata za listove",
+ "job.of": "{d} od {t}",
+ "job.of.mb": "{d} od {t} MB",
+ "job.left.under_minute": "manje od minute preostalo",
+ "job.left.minutes": "oko {n} min preostalo",
+ "sheet_tools.start.units": "Jedinice",
+ "sheet_tools.print.save": {
+  "one": "Spremi # list",
+  "few": "Spremi # lista",
+  "other": "Spremi # listova"
+ },
+ "sheet_tools.sets.delete_ask": "Izbrisati skup „{name}“? Njegovi listovi ostaju u projektu.",
+ "sheet_tools.keep": "Zadrži"
+}

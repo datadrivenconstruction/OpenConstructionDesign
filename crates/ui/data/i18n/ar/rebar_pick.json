@@ -1,0 +1,7 @@
+{
+ "rebar_pick.pick.empty": "التسليح: اختر عموداً أو كمرة أو جداراً أو بلاطة أو أساساً",
+ "rebar_pick.pick.unsupported": "لا يمكن تسليح هذا التحديد. اختر عموداً أو كمرة أو جداراً أو بلاطة أو أساساً",
+ "rebar_pick.pick.keys": "انقر للاختيار، وShift لإضافة المزيد · Enter لفتح النموذج · Esc للإلغاء",
+ "rebar_pick.pick.open": "فتح النموذج",
+ "rebar_pick.pick.cancel": "إلغاء"
+}

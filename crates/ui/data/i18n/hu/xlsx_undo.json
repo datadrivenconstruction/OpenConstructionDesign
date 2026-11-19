@@ -1,0 +1,6 @@
+{
+ "cmd.xlsx.undo_apply": "Az utolsó táblázatos alkalmazás visszavonása",
+ "xlsx_undo.later": "Nincs visszavonva: a modellt a táblázatos alkalmazás után szerkesztették. Használja a Ctrl+Z-t lépésenként, vagy az Előzmények panelt.",
+ "xlsx_undo.gone": "Nincs visszavonható: ez a táblázatos alkalmazás már vissza van vonva.",
+ "xlsx_undo.busy": "Előbb fejezze be vagy szakítsa meg az aktuális rajzolást, majd vonja vissza a táblázatos alkalmazást."
+}

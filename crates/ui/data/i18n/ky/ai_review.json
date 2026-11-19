@@ -1,0 +1,5 @@
+{
+ "ai.plan.apply_n": "Кабыл алынган {n} колдонуу",
+ "ai.plan.will_apply": "{m} өзгөртүүнүн {n} колдонулат",
+ "ai.plan.keys_hint": "J/K же Alt+Up/Down жылдыруу · A кабыл алуу · R четке кагуу · Space белгилөө · Shift+A / Shift+R бүт топ · Ctrl+Enter колдонуу · Esc көрүнүшкө кайтуу (черновик сакталат)"
+}

@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "Filter row sa ilalim ng mga header. Teksto: substring; numero: >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "Ipakita o itago ang mga column",
+ "sched_toolbar.groups_tip": "I-group ang mga row ayon sa column, may subtotal",
+ "sched_toolbar.formulas_tip": "Mga calculated column",
+ "sched_toolbar.phase": "Yugto",
+ "sched_toolbar.phase_tip": "Aling phase kinukuha ang mga row",
+ "sched_toolbar.copy_tip": "Mga napiling row (o lahat ng nakikita) bilang TSV",
+ "sched_toolbar.import_tip": "Basahin pabalik ang na-export na schedule: mga row ayon sa Id, mga column ayon sa header; bilangin muna, saka isang undo step",
+ "sched_toolbar.export_tip": "Mga nakikitang row at column na may kabuuan; nananatiling numero ang mga numero",
+ "sched_toolbar.need_table": "Magbukas muna ng schedule",
+ "sched_toolbar.busy_open": "Bukas na ang file dialog",
+ "sched_toolbar.busy_save": "Bukas na ang save dialog",
+ "sched_toolbar.clear_filter": "Burahin ang filter",
+ "sched_toolbar.fields_title": "Mga column"
+}

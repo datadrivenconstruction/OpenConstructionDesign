@@ -1,0 +1,10 @@
+{
+ "wall_stack.we.stack_caption": "Samengesteld type",
+ "wall_stack.we.side_left": "Linkerzijde",
+ "wall_stack.we.side_right": "Rechterzijde",
+ "wall_stack.we.from": "Van",
+ "wall_stack.we.to": "Tot",
+ "wall_stack.we.bottom": "Onder",
+ "wall_stack.we.delete_tip": "Dit profiel verwijderen",
+ "wall_stack.we.from_after_to": "'Van' moet vóór 'Tot' liggen"
+}

@@ -1,0 +1,11 @@
+{
+ "cmd.arch.roof_gable.short": "جملوني",
+ "cmd.arch.roof_hip.short": "رباعي الميول",
+ "cmd.arch.roof_shed.short": "أحادي الميل",
+ "cmd.arch.roof_mansard.short": "مانسارد",
+ "cmd.arch.roof_gambrel.short": "جمبريل",
+ "cmd.arch.roof_barrel.short": "برميلي",
+ "cmd.arch.roof_edges.short": "حواف السطح",
+ "cmd.arch.roof_opening.short": "فتحة",
+ "cmd.mass.roof_by_face.short": "حسب الوجه"
+}

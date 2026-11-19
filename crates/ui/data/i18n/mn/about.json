@@ -1,0 +1,33 @@
+{
+ "cmd.help.licenses": "Нээлттэй эхийн лиценз",
+ "cmd.help.licenses.desc": "Энэ хувилбарт ашигласан нээлттэй эхийн сангууд ба тэдгээрийн лиценз.",
+ "about.product": "DDC Editor",
+ "about.version": "Хувилбар",
+ "about.build": "Угсралт",
+ "about.schema": "Загварын схем",
+ "about.system": "Систем",
+ "about.gpu": "График адаптер",
+ "about.language": "Хэл",
+ "about.copy": "Хувилбарын мэдээллийг хуулах",
+ "about.copy_desc": "Алдааны тайланд зориулсан хувилбар, угсралт, систем, график адаптер. Файлын зам байхгүй.",
+ "about.copied": "Хувилбарын мэдээллийг хуулсан",
+ "about.licenses": "Нээлттэй эхийн лиценз",
+ "about.licenses_desc": "Энэ хувилбарт ашигласан сангууд ба тэдгээрийн лиценз",
+ "about.licenses.open": "Харах",
+ "about.licenses.title": "Нээлттэй эхийн лиценз",
+ "about.licenses.note": "DDC Editor доорх сангуудыг агуулна. Тус бүр өөрийн лиценз ба зохиогчийн мэдэгдэлтэй хэвээр байна. Лицензийн бүтэн текст: программын хажуугийн THIRD_PARTY_LICENSES.txt.",
+ "about.licenses.full": "Лицензийн бүтэн текст",
+ "about.licenses.list": "Бүрэлдэхүүний жагсаалт",
+ "about.licenses.close": "Хаах",
+ "about.licenses.col_name": "Бүрэлдэхүүн",
+ "about.licenses.col_license": "Лиценз",
+ "about.licenses.count": {
+  "one": "# бүрэлдэхүүн",
+  "other": "# бүрэлдэхүүн"
+ },
+ "about.licenses.count_of": "{total}-аас {shown} бүрэлдэхүүн",
+ "about.licenses.search_hint": "Нэр эсвэл лицензээр хайх…",
+ "about.licenses.search_clear": "Хайлтыг арилгах",
+ "about.licenses.none": "Юу ч олдсонгүй",
+ "about.licenses.none_hint": "Сангийн нэрний хэсэг эсвэл MIT гэх мэт лицензээр хайж үзнэ үү."
+}

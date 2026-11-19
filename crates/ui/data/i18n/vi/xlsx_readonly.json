@@ -1,0 +1,6 @@
+{
+ "xlsx_readonly.read_only": "Sổ làm việc chỉ đọc (thuộc tính tệp hoặc quyền thư mục). Hãy xuất ra bản sao, hoặc bỏ Chỉ đọc trong thuộc tính tệp rồi thử lại.",
+ "xlsx_readonly.export_copy": "Xuất ra bản sao",
+ "xlsx_readonly.no_copy_name": "Không có tên trống cho bản sao bên cạnh sổ làm việc.",
+ "xlsx_readonly.copied": "Sổ làm việc được giữ nguyên. Một bản làm mới đã được ghi bên cạnh và liên kết ngay bây giờ: {path}"
+}

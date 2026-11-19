@@ -1,0 +1,3 @@
+# Shaft sketch: Backspace removes the last point
+tool(arch.shaft) click(0,0) click(2,0) click(9,9) key(Backspace) → state=Drafting{2}
+click(2,2) click(0,2) key(Enter) → rows(shaft)=1 journal=+1

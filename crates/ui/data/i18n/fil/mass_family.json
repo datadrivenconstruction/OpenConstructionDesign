@@ -1,0 +1,9 @@
+{
+ "cmd.mass.timeline_family": "Kasaysayan sa family",
+ "cmd.mass.timeline_family.desc": "Gumagawa ng component family mula sa feature timeline ng napiling mass. Ang mga parameter ng timeline ay nagiging parameter ng family.",
+ "mass_family.done": "Nagawa ang family {name} na may {n} parameter",
+ "mass_family.refused": "Walang nagawang family: {e}",
+ "mass_family.no_mass": "Pumili muna ng parametric mass",
+ "mass_family.add_modifier": "Magdagdag ng modifier",
+ "mass_family.needs_faces": "Kailangan ng mga napiling mukha: gamitin ang tool sa tab na Massing"
+}

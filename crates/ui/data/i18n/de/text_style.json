@@ -1,0 +1,15 @@
+{
+ "text_style.lbl.text_style": "Textstil",
+ "text_style.lbl.align": "Ausrichtung",
+ "text_style.lbl.head": "Pfeilspitze",
+ "text_style.lbl.line_style": "Linienstil",
+ "text_style.lbl.fill": "Füllung",
+ "text_style.lbl.detail": "Detail",
+ "text_style.lbl.width": "Breite",
+ "text_style.bad_number": "Zahl von {min} bis {max} eingeben",
+ "text_style.tip.next_ring": "Diese Kontur schließen und in derselben Fläche eine weitere beginnen",
+ "text_style.tip.edit_text": "Text direkt bearbeiten",
+ "text_style.tip.add_leader": "Dieser Beschriftung eine Hinweislinie hinzufügen",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°"
+}

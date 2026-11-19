@@ -1,0 +1,27 @@
+id = "G20_amphitheatre__es"
+tier = "hard"
+group = "Any geometry"
+title = "Amphitheater"
+lang = "es"
+base = "empty"
+
+[[turn]]
+say = "Un anfiteatro semicircular al aire libre de 30 m de radio, 20 filas de gradas escalonadas, escaleras radiales, escenario con cubierta sobre 4 pilares."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "stair+slab+solid"
+min = 20.0
+
+[[oracle.count]]
+spec = "col"
+min = 4.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

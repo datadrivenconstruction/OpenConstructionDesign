@@ -1,0 +1,8 @@
+{
+ "xlsx_issues.empty_title": "Prazan list u radnoj knjizi",
+ "xlsx_issues.empty_kept": "List {sheet} je prazan: iz njega ništa nije pročitano, {n} elemenata ostaje kakvo je bilo. Ostali listovi se i dalje mogu primijeniti.",
+ "xlsx_issues.empty_none": "List {sheet} je prazan: iz njega ništa nije pročitano. Ostali listovi se i dalje mogu primijeniti.",
+ "xlsx_issues.unreadable_title": "List nije mogao biti pročitan",
+ "xlsx_issues.unreadable": "List {sheet} nije mogao biti pročitan, njegov dio datoteke je oštećen: iz njega ništa nije preuzeto, a njegovi elementi ostaju kakvi jesu. Ostali listovi se i dalje mogu primijeniti.",
+ "xlsx_issues.formulas": "Formule na listu {sheet} nisu mogle biti pročitane, pa se izračunata vrijednost ne može razlikovati od izmjene: iz ovog lista ništa nije preuzeto. Ostali listovi se i dalje mogu primijeniti."
+}

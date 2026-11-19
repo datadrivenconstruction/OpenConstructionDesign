@@ -1,0 +1,4 @@
+{
+ "number_input.bad_number": "Nije broj: unesite znamenke s decimalnom točkom (1.5)",
+ "number_input.at_grids_tip": "Postavi stup na svako sjecište mreže na ovoj razini"
+}

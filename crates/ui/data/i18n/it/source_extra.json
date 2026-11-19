@@ -1,0 +1,5 @@
+{
+ "src.more": "Altro",
+ "src.cf.chosen": "{n} di {m} scelti",
+ "src.opt.allow_mass_warn": "Attenzione: il file non corrisponde alla maggior parte degli elementi importati, quindi l'unione può modificare molti dati."
+}

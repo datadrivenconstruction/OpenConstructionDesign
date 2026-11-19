@@ -1,0 +1,22 @@
+{
+ "cmd.arch.grid_pick": "Grid by line",
+ "cmd.arch.grid_pick.desc": "Makes a grid exactly along a picked drawing line of the current level; names continue the series. Tab takes every parallel line of the same drawing layer at once. Each pick is one undo step.",
+ "cmd.struct.beam_pick": "Beam by line",
+ "cmd.struct.beam_pick.desc": "Places a beam of the current type on the active level along a picked drawing line. Tab takes the connected chain. Each pick is one undo step.",
+ "hint.grid_pick.one": "Grid by line: pick a drawing line · Tab all parallel lines of its layer · Esc exit",
+ "hint.grid_pick.more": "Grid by line: pick a line to take all parallel lines of its layer · Tab one line · Esc disarm",
+ "hint.beam_pick.one": "Beam by line: pick a drawing line · Tab connected chain · Esc exit",
+ "hint.beam_pick.more": "Beam by line: pick a line to take its chain · Tab one line · Esc disarm",
+ "line_pick.st.start_grid": "Pick a drawing line. Tab: all parallel lines of its layer",
+ "line_pick.st.start_beam": "Pick a drawing line for a {type} beam. Tab: connected chain",
+ "line_pick.st.grid_done": "Grid {name} added",
+ "line_pick.st.grids_done": "{n} grids added: {first} — {last}",
+ "line_pick.st.beam_done": "Beam {type} added",
+ "line_pick.st.beams_done": "{n} beams {type} added",
+ "line_pick.st.on_grid": "This line already has grid {name}",
+ "line_pick.st.on_beam": "This line already has beam {id}",
+ "line_pick.st.no_layer": "The drawing layers of the lines are not known yet, try again",
+ "line_pick.st.no_beam_type": "No beam section in the catalog",
+ "line_pick.st.reload_warn": "Created, but the view could not reload: {err}",
+ "line_pick.st.failed": "Not created: {err}"
+}

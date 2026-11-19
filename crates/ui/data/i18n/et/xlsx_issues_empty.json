@@ -1,0 +1,8 @@
+{
+ "xlsx_issues.empty_title": "Tühi leht töövihikus",
+ "xlsx_issues.empty_kept": "Leht {sheet} on tühi: sellest ei loetud midagi, {n} elementi jäävad samaks. Teisi lehti saab ikka rakendada.",
+ "xlsx_issues.empty_none": "Leht {sheet} on tühi: sellest ei loetud midagi. Teisi lehti saab ikka rakendada.",
+ "xlsx_issues.unreadable_title": "Lehte ei õnnestunud lugeda",
+ "xlsx_issues.unreadable": "Lehte {sheet} ei õnnestunud lugeda, selle osa failist on vigane: sellest ei võetud midagi ja selle elemendid jäävad samaks. Teisi lehti saab ikka rakendada.",
+ "xlsx_issues.formulas": "Lehe {sheet} valemeid ei õnnestunud lugeda, seetõttu arvutatud väärtust ei saa muudatusest eristada: sellest lehest ei võetud midagi. Teisi lehti saab ikka rakendada."
+}

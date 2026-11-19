@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "Visningsområde",
+ "view_range.range": "Visningsområde",
+ "view_range.cut": "Snittplan",
+ "view_range.bottom": "Underkant",
+ "view_range.depth": "Visningsdybde",
+ "view_range.cut.hint": "Høyde på snittplanet over etasjen. Elementer som krysser det vises som kuttet.",
+ "view_range.bottom.hint": "Underkant av området, i forhold til etasjen. Null eller negative verdier er tillatt.",
+ "view_range.depth.hint": "Hvor langt visningen ser under underkanten. Null eller mer.",
+ "view_range.err.number": "Skriv inn en lengde i hvert felt",
+ "view_range.err.not_finite": "Skriv inn en lengde i hvert felt",
+ "view_range.err.cut_not_above_bottom": "Snittplanet må være over underkanten",
+ "view_range.err.negative_depth": "Visningsdybden kan ikke være negativ",
+ "view_range.err.top_below_cut": "Toppen av området må ikke være under snittplanet"
+}

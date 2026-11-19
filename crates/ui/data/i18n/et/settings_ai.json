@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "Ühendus",
+ "settings.ai_status_desc": "Mudel, mida tehisintellekti assistent kasutab; võtmed jäävad turvalisse hoidlasse",
+ "settings.ai_not_connected": "Ühendus puudub",
+ "settings.ai_connect": "Ühenduse seaded",
+ "settings.ai_connect_desc": "Sinu enda mudeli, pilve- või kohaliku mudeli aadress, mudel ja võti",
+ "settings.ai_connect_btn": "Ühenduse seaded…",
+ "settings.ai_panel": "Tehisintellekti assistendi paneel",
+ "settings.ai_panel_desc": "Küsi sõnadega, vaata plaan üle ja rakenda",
+ "settings.ai_open_panel": "Ava AI-paneel"
+}

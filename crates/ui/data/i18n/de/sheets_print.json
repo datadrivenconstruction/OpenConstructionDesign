@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "Vorheriges Blatt (Bild auf)",
+ "sheets.print.next": "Nächstes Blatt (Bild ab)",
+ "sheets.print.fit": "Seite anpassen (Doppelklick)",
+ "sheets.print.no_sheets": "Keine Blätter für die Vorschau",
+ "sheets.print.building": "Seite wird aufgebaut…",
+ "sheets.print.stop_build": "Stopp",
+ "sheets.print.build_stopped": "Seitenaufbau abgebrochen",
+ "sheets.print.retry": "Erneut aufbauen",
+ "sheets.print.build_failed": "Die Vorschau konnte nicht erstellt werden"
+}

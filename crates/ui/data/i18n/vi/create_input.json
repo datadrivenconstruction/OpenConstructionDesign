@@ -1,0 +1,14 @@
+{
+ "cmd.mod.divide": "Chia",
+ "cmd.mod.divide.short": "Chia",
+ "cmd.mod.divide.desc": "Chia tường thành các phần bằng nhau chỉ trong một bước. Nhập số phần, rồi bấm vào tường.",
+ "whereis.mod.divide": "chia, phần bằng nhau, cắt thành đoạn, phân đoạn tường",
+ "hint.split.parts": "Chia: bấm tường · số — số phần (2–100) · Esc — hủy",
+ "create_input.divide.bad_parts": "«{text}» không phải là số phần: nhập số nguyên từ 2 đến {max}",
+ "create_input.ws.err.empty": "Nhập tên cho bố cục",
+ "create_input.ws.err.long": "Tên quá dài: tối đa 40 ký tự",
+ "create_input.ws.err.preset": "Tên này thuộc về một bố cục có sẵn",
+ "create_input.ws.err.full": "Tối đa 24 bố cục đã lưu: hãy xóa một bố cục trước",
+ "create_input.seldim.locked": "Khoảng cách {v} đã khóa",
+ "create_input.seldim.positive": "Khoảng cách phải lớn hơn 0"
+}

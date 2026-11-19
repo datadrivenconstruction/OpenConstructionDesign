@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "Anwenden wurde gestoppt: Das Modell bleibt unverändert",
+ "apply_verify.rolled_back": "Anwenden entsprach nicht dem Entwurf und wurde zurückgenommen; das Modell ist unverändert. {what}",
+ "apply_verify.diff.missing": "Der Entwurf zeigt {what} {kind}, angewendet wurde das aber nicht.",
+ "apply_verify.diff.extra": "{kind} {what} anwenden, was der Entwurf nicht zeigt.",
+ "apply_verify.diff.kind": "Der Entwurf zeigt {what} {shown}, angewendet wurde aber {applied}.",
+ "apply_verify.diff.value": "{what}: „{col}“ weicht vom Entwurf ab.",
+ "apply_verify.diff.truncated": "Entwurf und angewendete Änderung unterscheiden sich im Umfang.",
+ "apply_verify.diff.unreadable": "Die angewendete Änderung konnte nicht zurückgelesen werden ({e}).",
+ "apply_verify.no_base": "Anwenden wurde nicht ausgeführt: Die Kopie zum Prüfen des Entwurfs fehlt. Das Modell ist unverändert; fordern Sie den Entwurf erneut an.",
+ "apply_verify.take_back_failed": "Zurücknehmen fehlgeschlagen ({e}): Verwenden Sie „Rückgängig“.",
+ "apply_verify.kind.created": "erstellt",
+ "apply_verify.kind.changed": "geändert",
+ "apply_verify.kind.deleted": "gelöscht",
+ "apply_verify.card.type_row": "Typ {type} · {n} Elemente übernehmen die Änderung"
+}

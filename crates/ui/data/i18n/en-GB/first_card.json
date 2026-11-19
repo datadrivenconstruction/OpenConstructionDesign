@@ -1,0 +1,9 @@
+{
+ "first_card.card.title": "Try the XLSX spreadsheet round trip",
+ "first_card.card.step1": "Select a wall",
+ "first_card.card.step2": "Change one of its properties",
+ "first_card.card.step3": "Edit in a spreadsheet app, check the preview, Apply",
+ "first_card.card.spreadsheet": "Edit in a spreadsheet app",
+ "first_card.card.skip": "Skip",
+ "first_card.card.done": "Done: the model and the workbook match"
+}

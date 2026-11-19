@@ -1,0 +1,4 @@
+{
+ "elem.spreadsheet.applied": "Táblázatból importálva: {what}",
+ "elem.spreadsheet.failed": "Táblázatimport sikertelen: {e}"
+}

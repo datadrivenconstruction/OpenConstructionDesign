@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "Tämä työkirja on jo olemassa",
+ "xlsx_exists.foreign": "Se ei ole tämän projektin työkirja, joten sitä ei korvata koskaan.",
+ "xlsx_exists.pending": "Siinä on {n} muokkausta, joita ei ole vielä käytetty malliin.",
+ "xlsx_exists.outside": "Siinä on {n} riviä, joita uusi vienti ei sisällä.",
+ "xlsx_exists.new_name": "Vie kohteeseen {name}",
+ "xlsx_exists.apply_first": "Käytä ne ensin",
+ "xlsx_exists.replace": "Korvaa (vanha kirja _archiveen)",
+ "xlsx_exists.archived": "Vanha työkirja siirretty kohteeseen {path}",
+ "xlsx_exists.archive_failed": "Vanhaa työkirjaa ei voitu siirtää, mitään ei viety: {error}"
+}

@@ -1,0 +1,4 @@
+{
+ "vv_conflict.vv.switched": "当前视图已更改。这些编辑属于 {view}，尚未应用：“应用”会将其写入 {view}，“放弃”会将其丢弃。",
+ "vv_conflict.vv.discard": "放弃编辑"
+}

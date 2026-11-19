@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "Σύνδεση",
+ "settings.ai_status_desc": "Το μοντέλο που χρησιμοποιεί ο βοηθός AI· τα κλειδιά μένουν στην ασφαλή αποθήκη",
+ "settings.ai_not_connected": "Δεν είναι συνδεδεμένο",
+ "settings.ai_connect": "Ρυθμίσεις σύνδεσης",
+ "settings.ai_connect_desc": "Διεύθυνση, μοντέλο και κλειδί του δικού σας μοντέλου, στο cloud ή τοπικά",
+ "settings.ai_connect_btn": "Ρυθμίσεις σύνδεσης…",
+ "settings.ai_panel": "Πίνακας βοηθού AI",
+ "settings.ai_panel_desc": "Ρωτήστε με λόγια, ελέγξτε το σχέδιο και μετά εφαρμόστε",
+ "settings.ai_open_panel": "Άνοιγμα πίνακα AI"
+}

@@ -1,0 +1,6 @@
+{
+ "xlsx_no_base.title": "Esta pasta de trabalho não tem dados de comparação",
+ "xlsx_no_base.detail": "A folha de comparação oculta está ausente ou danificada (outro programa regravou a pasta de trabalho, ou ela foi feita à mão). Cada célula diferente substitui o valor do modelo; edições no modelo feitas desde a exportação não podem ser detectadas. Linhas ausentes da pasta de trabalho não são excluídas.",
+ "xlsx_no_base.confirm": "Conferi as alterações: substituir os valores do modelo ({n})",
+ "xlsx_no_base.confirm_first": "Confirme primeiro a importação de uma pasta de trabalho sem dados de comparação"
+}

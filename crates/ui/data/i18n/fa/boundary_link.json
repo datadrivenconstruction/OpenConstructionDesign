@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "انتخاب کل حلقه‌ی دیوار",
+ "cmd.sketch.link_unlink": "جدا کردن لبه از دیوار",
+ "cmd.sketch.link_repick": "انتخاب مجدد دیوار لبه",
+ "cmd.ctx.floor.link_unlink": "جدا کردن لبه‌ها از دیوارها",
+ "cmd.ctx.floor.link_accept": "پذیرش لبه‌های دیوارهای حذف‌شده",
+ "boundary_link.hint.loop": "روی یک دیوار کلیک کنید: حلقه‌ی بستهٔ دیوارها به لبه‌های پیوندی تبدیل می‌شود",
+ "boundary_link.hint.repick": "روی دیواری موازی با لبه کلیک کنید: لبه آن را دنبال خواهد کرد",
+ "boundary_link.need_sketch": "ابتدا طرح مرز را باز کنید",
+ "boundary_link.need_edge": "به یک لبه‌ی طرح اشاره کنید",
+ "boundary_link.need_straight": "فقط یک لبه‌ی مستقیم می‌تواند دیوار را دنبال کند",
+ "boundary_link.need_floor": "یک کف را انتخاب کنید",
+ "boundary_link.no_wall": "دیواری زیر نشانگر نیست",
+ "boundary_link.not_parallel": "دیوار با لبه موازی نیست",
+ "boundary_link.not_linked": "این لبه به دیواری پیوند ندارد",
+ "boundary_link.unlinked": "لبه جدا شد: در جای خود می‌ماند و دیگر دیوار را دنبال نمی‌کند",
+ "boundary_link.accepted": "لبه‌ها پذیرفته شدند: به‌عنوان لبه‌ی عادی در جای خود می‌مانند",
+ "boundary_link.failed": "اعمال نشد",
+ "boundary_link.lost": "دیوار مبدأ حذف شده است",
+ "boundary_link.blocked": "نمی‌تواند دیوار را دنبال کند"
+}

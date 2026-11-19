@@ -1,0 +1,6 @@
+{
+ "cmd.ui.pane.next": "Keyingi panel",
+ "cmd.ui.pane.next.desc": "Klaviatura fokusini keyingi ko'rinadigan panelga o'tkazadi: ko'rsatkich, kanvas, xususiyatlar, suhbat.",
+ "cmd.ui.pane.prev": "Oldingi panel",
+ "cmd.ui.pane.prev.desc": "Klaviatura fokusini oldingi ko'rinadigan panelga o'tkazadi."
+}

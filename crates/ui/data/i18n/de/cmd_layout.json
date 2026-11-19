@@ -1,0 +1,4 @@
+{
+ "cmd.data.sync_xlsx": "Mit XLSX-Tabelle synchronisieren…",
+ "cmd.data.sync_xlsx.desc": "Liest die verknüpfte Arbeitsmappe erneut ein und zeigt Unterschiede zum Modell."
+}

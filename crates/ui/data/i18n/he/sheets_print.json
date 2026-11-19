@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "הגיליון הקודם (Page Up)",
+ "sheets.print.next": "הגיליון הבא (Page Down)",
+ "sheets.print.fit": "התאם לעמוד (לחיצה כפולה)",
+ "sheets.print.no_sheets": "אין גיליונות לתצוגה מקדימה",
+ "sheets.print.building": "בונה את העמוד…",
+ "sheets.print.stop_build": "עצור",
+ "sheets.print.build_stopped": "בניית העמוד הופסקה",
+ "sheets.print.retry": "בנה שוב",
+ "sheets.print.build_failed": "לא ניתן היה לבנות את התצוגה המקדימה"
+}

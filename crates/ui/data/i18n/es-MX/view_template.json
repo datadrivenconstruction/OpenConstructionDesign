@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "Primero introduzca un nombre de plantilla",
+ "view_template.name_taken": "Ya existe una plantilla con este nombre",
+ "view_template.pick_blocked": "Marque primero al menos una vista",
+ "view_template.views.one": "{n} vista",
+ "view_template.views.few": "{n} vistas",
+ "view_template.views.many": "{n} vistas",
+ "view_template.delete.title": "¿Eliminar esta plantilla?",
+ "view_template.delete.body": "Se eliminará la plantilla \"{name}\". La usan {used}.",
+ "view_template.delete.unused": "Se eliminará la plantilla \"{name}\". Ninguna vista la usa.",
+ "view_template.delete.keeps": "Estas vistas conservan sus gráficos actuales y pierden el vínculo.",
+ "view_template.delete.undo": "Puede deshacerlo con un Deshacer.",
+ "view_template.delete.confirm": "Eliminar plantilla"
+}

@@ -1,0 +1,18 @@
+{
+ "faults.errors": {
+  "one": "モデル内のエラー # 件。クリックして表示します。",
+  "other": "モデル内のエラー # 件。クリックして一覧を表示します。"
+ },
+ "faults.warnings": {
+  "one": "モデル内の警告 # 件。クリックして表示します。",
+  "other": "モデル内の警告 # 件。クリックして一覧を表示します。"
+ },
+ "faults.title": "モデルの不具合: {n}",
+ "faults.none": "エラーも警告もありません。",
+ "faults.cat.wall": "壁",
+ "faults.cat.slab": "スラブ",
+ "faults.cat.opening": "開口",
+ "faults.cat.curtain_wall": "カーテンウォール",
+ "faults.cat.ramp": "スロープ",
+ "faults.cat.zone": "ゾーン"
+}

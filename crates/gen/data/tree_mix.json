@@ -1,0 +1,54 @@
+{
+  "note": "Site tree mixes: rule site.tree_mix names one, rule site.tree_season a season (the Season of the library types; types of the all_year code stand in all of them); groups name the Group values of the types of the library family Tree. A type with Weight 0 is never picked; a larger Weight is picked earlier and more often.",
+  "seasons": { "summer": 0, "autumn": 1, "winter": 2, "spring": 3 },
+  "all_year": 4,
+  "groups": { "broadleaf": 0, "conifer": 1, "columnar": 2, "weeping": 3, "palm": 4, "small": 5, "spreading": 6 },
+  "mixes": {
+    "mixed": ["broadleaf", "conifer", "columnar", "weeping", "small", "spreading"],
+    "broadleaf": ["broadleaf", "weeping", "small", "spreading"],
+    "conifer": ["conifer", "columnar"],
+    "street": ["broadleaf", "columnar", "small"],
+    "arid": ["columnar", "palm", "spreading"],
+    "tropical": ["palm", "small", "spreading"]
+  },
+  "species": [
+    {"name": "Oak", "words": ["oak", "дуб", "eiche"]},
+    {"name": "Birch", "words": ["birch", "берез", "birke"]},
+    {"name": "Maple", "words": ["maple", "клен", "ahorn"]},
+    {"name": "Linden", "words": ["linden", "лип", "linde"]},
+    {"name": "Spruce", "words": ["spruce", "fichte"]},
+    {"name": "Scots Pine", "words": ["pine", "сосн", "kiefer"]},
+    {"name": "Willow", "words": ["willow", "weide"]},
+    {"name": "Poplar", "words": ["poplar", "тополь", "тополя", "тополи", "pappel"]},
+    {"name": "Larch", "words": ["larch", "лиственниц", "lärche"]},
+    {"name": "Chestnut", "words": ["chestnut", "каштан", "kastanie"]},
+    {"name": "Cherry", "words": ["cherry", "вишн", "kirsche"]},
+    {"name": "Elm", "words": ["elm", "вяз", "ulme"]}
+  ],
+  "edges": {
+    "street": ["street", "road", "улиц", "дорог", "straße", "strasse"],
+    "south": ["south", "южн", "юг", "süd"],
+    "east": ["east", "восточ", "восто", "ost"],
+    "north": ["north", "север", "nord"],
+    "west": ["west", "западн", "запад"]
+  },
+  "hedge_words": ["hedge", "изгород", "hecke"],
+  "climates": {
+    "note": "Words of site.climate, any case: a word ending in * is a prefix (inflected forms); a Chinese word is found anywhere in the text. Tried in the order tropical, arid, conifer.",
+    "tropical": ["tropical", "tropics", "jungle", "equatorial", "palm", "palms", "beach", "island",
+      "тропик*", "тропическ*", "джунгл*", "экватор*", "пальм*", "пляж*", "остров*",
+      "tropisch*", "tropen", "dschungel", "äquator*", "palme*", "strand", "insel",
+      "tropical*", "trópico*", "tropico*", "selva", "jungla", "ecuatorial*", "palmera*", "playa", "isla",
+      "热带", "亚热带", "丛林", "赤道", "棕榈", "海滩", "海岛", "岛屿"],
+    "arid": ["desert", "arid", "dry", "hot", "oasis", "mediterranean",
+      "пустын*", "засушлив*", "сух*", "жарк*", "оазис", "средиземн*",
+      "wüste*", "trocken*", "heiß*", "heiss*", "oase", "mittelmeer*", "arid*",
+      "desierto*", "árid*", "seco", "seca", "secos", "calurosa", "caluroso", "cálid*", "oasis", "mediterrán*", "mediterran*",
+      "沙漠", "干旱", "干燥", "炎热", "酷热", "干热", "绿洲", "地中海"],
+    "conifer": ["north", "northern", "mountain", "mountains", "alpine", "cold", "boreal", "taiga", "nordic", "scandinavian", "forest", "forested", "highland",
+      "север*", "горы", "горн*", "холодн*", "бореал*", "тайг*", "лес", "лесн*", "хвойн*", "высокогор*", "скандинав*",
+      "nord*", "berg*", "gebirg*", "alpin*", "kalt*", "boreal*", "wald*", "hochland*", "skandinav*",
+      "norte*", "nórdic*", "nordic*", "montaña*", "montana*", "alpino*", "frío", "frio", "fría", "fria", "bosque*", "altiplano", "escandinav*",
+      "北方", "北欧", "山区", "山地", "高山", "寒冷", "寒带", "针叶", "森林", "高原", "泰加"]
+  }
+}

@@ -1,0 +1,16 @@
+{
+ "ai.items.all": {
+  "one": "Kaikki # kohta",
+  "other": "Kaikki # kohtaa"
+ },
+ "ai.items.all.tip": "Valitse tai poista valinta suunnitelman jokaisesta kohdasta",
+ "ai.items.checked": "{n} / {m} valittu",
+ "ai.items.check.tip": "Sisällytä ”{title}” Käytä-toimintoon",
+ "ai.items.expand": "Näytä elementit",
+ "ai.items.collapse": "Piilota elementit",
+ "ai.items.apply": {
+  "one": "Käytä # kohta",
+  "other": "Käytä # kohtaa"
+ },
+ "ai.items.apply_none": "Käytä"
+}

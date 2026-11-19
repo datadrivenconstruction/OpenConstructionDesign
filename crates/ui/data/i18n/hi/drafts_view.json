@@ -1,0 +1,9 @@
+{
+ "drafts.draft.view": "“{name}” के व्यू ग्राफ़िक्स",
+ "drafts.draft.filter": "व्यू फ़िल्टर “{name}”",
+ "drafts.draft.filter_new": "नया व्यू फ़िल्टर",
+ "drafts.draft.object_styles": "ऑब्जेक्ट स्टाइल",
+ "drafts.draft.material": "मटीरियल “{name}”",
+ "drafts.draft.type": "प्रकार “{name}”",
+ "drafts.draft.params": "फ़ैमिली “{name}” के पैरामीटर"
+}

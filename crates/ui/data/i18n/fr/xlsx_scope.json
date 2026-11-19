@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "Export vers tableur XLSX : périmètre",
+ "xlsx_scope.intro": "Choisissez ce qui va dans le classeur. Le réimporter ne modifie que ces éléments.",
+ "xlsx_scope.base_whole": "Modèle entier",
+ "xlsx_scope.base_level": "Niveau actif",
+ "xlsx_scope.base_selection": "Sélection",
+ "xlsx_scope.categories": "Catégories",
+ "xlsx_scope.cat_walls": "murs",
+ "xlsx_scope.cat_openings": "portes",
+ "xlsx_scope.cat_rooms": "pièces",
+ "xlsx_scope.cat_slabs": "dalles",
+ "xlsx_scope.cat_curtains": "murs-rideaux",
+ "xlsx_scope.nothing_selected": "Rien n'est sélectionné : sélectionnez d'abord des éléments ou choisissez un autre périmètre.",
+ "xlsx_scope.no_categories": "Cochez au moins une catégorie.",
+ "xlsx_scope.no_level": "Le niveau actif est introuvable.",
+ "xlsx_scope.export": "Exporter",
+ "xlsx_scope.preview_scope": "Périmètre exporté : {scope}. Les éléments hors périmètre ne sont jamais modifiés ni supprimés."
+}

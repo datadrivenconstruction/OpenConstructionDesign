@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "Felismerés: {done} / {total}",
+ "mesh_recognize.all": "Mind {n}",
+ "mesh_recognize.only_confident": "Csak a megbízható",
+ "mesh_recognize.confident_tip": "Bejelöli azokat a sorokat, amelyek fajtája megegyezik a kategóriával, és amelyek megbízhatósága legalább {pct}%",
+ "mesh_recognize.row_hint": "Kattintson egy sorra a bejelöléshez. A nyilakkal lehet mozogni, az Enter jelöl.",
+ "mesh_recognize.kind_for": "Fajta ehhez: {name}",
+ "mesh_recognize.source": "Forrás hálók",
+ "mesh_recognize.keep": "Hálók megtartása",
+ "mesh_recognize.replace": "Hálók cseréje",
+ "mesh_recognize.convert_keep": "Átalakítás: {n}",
+ "mesh_recognize.convert_remove": "{n} átalakítása és a hálók törlése",
+ "mesh_recognize.creates": "Létrehoz: {n}: {kinds}",
+ "mesh_recognize.creates_none": "Még nincs bejelölve semmi",
+ "mesh_recognize.stay": "{n} forrás háló marad a modellben",
+ "mesh_recognize.removed": "{n} forrás háló törlődik. A visszavonás visszahozza őket."
+}

@@ -1,0 +1,5 @@
+{
+ "lv.level.deleted_attach": "Szint törölve; {n} fal elvesztette a felső csatlakozását",
+ "lv.level.rooms": "{n} helyiség felveszi a cél szint magasságát ({dz} m): {names}. A megerősítéshez nyomja meg ismét a Mozgatás gombot",
+ "lv.level.pinned": "A szint nem törölhető: a rögzített elemek nem mozgathatók másik szintre: {names}. Előbb oldja fel őket"
+}

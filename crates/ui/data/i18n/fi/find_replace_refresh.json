@@ -1,0 +1,3 @@
+{
+ "find_replace.refresh_failed": "Korvattu {n} kohdassa {m} elementissä; näkymän päivitys epäonnistui: {e}"
+}

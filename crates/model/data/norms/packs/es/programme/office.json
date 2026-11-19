@@ -1,0 +1,41 @@
+{
+ "typology": "office",
+ "source": "rd486-1997",
+ "clause": "typical office floor",
+ "variants": [
+  {
+   "code": "floor",
+   "rooms": [
+    {
+     "kind": "office",
+     "min_area": 10.0,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "wc",
+     "min_area": 1.2,
+     "wet": true,
+     "verified": false
+    }
+   ],
+   "allowed": [
+    "meeting",
+    "lobby",
+    "corridor",
+    "hall",
+    "storage",
+    "technical",
+    "stair",
+    "lift",
+    "kitchen",
+    "staff"
+   ],
+   "circulation_max": 0.25,
+   "storage_max": 0.06,
+   "source": "rd486-1997",
+   "clause": "typical office floor",
+   "verified": false
+  }
+ ]
+}

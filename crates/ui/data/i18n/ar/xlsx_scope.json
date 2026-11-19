@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "تصدير إلى جدول XLSX: النطاق",
+ "xlsx_scope.intro": "اختر ما يدخل إلى المصنف. استيراده لاحقاً يغيّر هذه العناصر فقط.",
+ "xlsx_scope.base_whole": "النموذج كاملاً",
+ "xlsx_scope.base_level": "المستوى النشط",
+ "xlsx_scope.base_selection": "التحديد",
+ "xlsx_scope.categories": "الفئات",
+ "xlsx_scope.cat_walls": "جدران",
+ "xlsx_scope.cat_openings": "أبواب",
+ "xlsx_scope.cat_rooms": "غرف",
+ "xlsx_scope.cat_slabs": "بلاطات",
+ "xlsx_scope.cat_curtains": "جدران ستائرية",
+ "xlsx_scope.nothing_selected": "لا شيء محدد: حدّد العناصر أولاً أو اختر نطاقاً آخر.",
+ "xlsx_scope.no_categories": "حدّد فئة واحدة على الأقل.",
+ "xlsx_scope.no_level": "لم يُعثر على المستوى النشط.",
+ "xlsx_scope.export": "تصدير",
+ "xlsx_scope.preview_scope": "النطاق المُصدَّر: {scope}. العناصر خارجه لا تتغير ولا تُحذف أبداً."
+}

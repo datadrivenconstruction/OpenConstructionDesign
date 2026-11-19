@@ -1,0 +1,27 @@
+{
+ "id": "es-ct",
+ "version": "2026.11",
+ "parent": "es",
+ "country": "ES",
+ "lang": [
+  "es",
+  "ca"
+ ],
+ "units": {
+  "length": "m",
+  "display": "metric"
+ },
+ "conventions": {
+  "ground_floor": 0,
+  "area_standard": "usable",
+  "net_share": 1.0,
+  "note": "Ground floor (planta baja) is 0; dwelling area is the useful surface inside the walls. Our own summary, not checked against a clause.",
+  "source": null
+ },
+ "status": "tier3",
+ "climate": {
+  "zones": [],
+  "default": null
+ },
+ "note": "Catalonia overlay: numbers from the Catalan habitability decree that differ from the national rule. Wording is our own; no text of a standard is stored."
+}

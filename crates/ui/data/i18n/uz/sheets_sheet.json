@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "Ko'rinishlari bilan varaqni nusxalash",
+ "cmd.view.sheet_duplicate_title": "Varaqni nusxalash (faqat sarlavha bloki)",
+ "sheets.dup.menu_views": "Ko'rinishlari bilan nusxalash",
+ "sheets.dup.menu_title": "Nusxalash, faqat sarlavha bloki",
+ "sheets.dup.done": "{src} asosida {number} varag'i yaratildi: {views} ko'rinish, {sched} jadval va legenda. Reviziyalar nusxalanmaydi; varaq chiqarilmagan.",
+ "sheets.dup.none": "Nusxalash uchun varaqni oching",
+ "sheets.dup.copy": "nusxa",
+ "cmd.view.sheet_duplicate.short": "Ko'rinishlari bilan nusxalash",
+ "cmd.view.sheet_duplicate_title.short": "Sarlavha blokini nusxalash"
+}

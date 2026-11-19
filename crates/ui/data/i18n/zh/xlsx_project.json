@@ -1,0 +1,7 @@
+{
+ "xlsx_project.title": "此工作簿是从另一个项目导出的",
+ "xlsx_project.body": "工作簿“{file}”属于另一个项目。元素 ID 在各项目之间不同，因此其行会更改此处无关的元素。未将任何内容读入本项目。",
+ "xlsx_project.export_new": "将本项目导出为新工作簿",
+ "xlsx_project.close": "关闭",
+ "xlsx_project.no_project": "此工作簿未说明其所属项目：请确认它是从本项目导出的。"
+}

@@ -1,0 +1,264 @@
+{
+ "schema": "gen_typology.v1",
+ "name": "residential_tower",
+ "aliases": [
+  "high_rise_residential",
+  "residential_high_rise",
+  "apartment_tower"
+ ],
+ "base": "apartment_section",
+ "note": "residential tower: flats of three sizes whose numbers per floor follow the unit mix rules, a refuge floor every N storeys by rule, two protected stairs and a firefighting lift; every flat is a suite of living room, bedrooms by type, kitchen, bath and hall laid out inside its cell",
+ "brief": {
+  "name": {
+   "en": "Residential tower",
+   "ru": "Жилая башня"
+  },
+  "floors": 40,
+  "floor_height": 3.3,
+  "lifts": 8,
+  "corridor": 2.0,
+  "footprint": {
+   "width": 60,
+   "depth": 26
+  }
+ },
+ "rules": {
+  "egress.max_travel": 40,
+  "corridor.width": 2.0,
+  "egress.protected_stairs": "smokeproof"
+ },
+ "model": {
+  "title": {
+   "en": "Residential tower",
+   "ru": "Жилая башня"
+  },
+  "spaces": [
+   {
+    "class": "refuge",
+    "kind": "lobby",
+    "name": {
+     "en": "Refuge area",
+     "ru": "Зона безопасности"
+    },
+    "area": 120,
+    "count": 1,
+    "level": "typical",
+    "zone": "refuge",
+    "occupancy_m2": 0.5,
+    "live_load_kpa": 5,
+    "demand": {
+     "supply_m3h_m2": 15
+    },
+    "periodic": "refuge"
+   },
+   {
+    "class": "refuge_plant",
+    "kind": "technical",
+    "name": {
+     "en": "Refuge services room",
+     "ru": "Служебное помещение зоны безопасности"
+    },
+    "area": 40,
+    "count": 1,
+    "level": "typical",
+    "zone": "services",
+    "light": "none",
+    "demand": {
+     "ach": 12,
+     "power_w_m2": 40,
+     "backup_power": true
+    },
+    "periodic": "refuge"
+   }
+  ],
+  "units": [
+   {
+    "name": {
+     "en": "1",
+     "ru": "1"
+    },
+    "count": {
+     "rule": "typology.mix.one"
+    },
+    "rooms": [
+     {
+      "kind": "living",
+      "area": 18,
+      "count": 1,
+      "name": {
+       "en": "Living room",
+       "ru": "Гостиная"
+      }
+     },
+     {
+      "kind": "bedroom",
+      "area": 13,
+      "count": 1,
+      "name": {
+       "en": "Bedroom",
+       "ru": "Спальня"
+      }
+     },
+     {
+      "kind": "kitchen",
+      "area": 9,
+      "count": 1
+     },
+     {
+      "kind": "bath",
+      "area": 4,
+      "count": 1
+     },
+     {
+      "kind": "wc",
+      "area": 1.8,
+      "count": 1
+     },
+     {
+      "kind": "hall",
+      "area": 6,
+      "count": 1
+     }
+    ]
+   },
+   {
+    "name": {
+     "en": "2",
+     "ru": "2"
+    },
+    "count": {
+     "rule": "typology.mix.two"
+    },
+    "rooms": [
+     {
+      "kind": "living",
+      "area": 20,
+      "count": 1,
+      "name": {
+       "en": "Living room",
+       "ru": "Гостиная"
+      }
+     },
+     {
+      "kind": "bedroom",
+      "area": 13,
+      "count": 2,
+      "name": {
+       "en": "Bedroom",
+       "ru": "Спальня"
+      }
+     },
+     {
+      "kind": "kitchen",
+      "area": 10,
+      "count": 1
+     },
+     {
+      "kind": "bath",
+      "area": 4.4,
+      "count": 1
+     },
+     {
+      "kind": "wc",
+      "area": 1.8,
+      "count": 1
+     },
+     {
+      "kind": "hall",
+      "area": 6,
+      "count": 1
+     }
+    ]
+   },
+   {
+    "name": {
+     "en": "3",
+     "ru": "3"
+    },
+    "count": {
+     "rule": "typology.mix.three"
+    },
+    "rooms": [
+     {
+      "kind": "living",
+      "area": 24,
+      "count": 1,
+      "name": {
+       "en": "Living room",
+       "ru": "Гостиная"
+      }
+     },
+     {
+      "kind": "bedroom",
+      "area": 13,
+      "count": 3,
+      "name": {
+       "en": "Bedroom",
+       "ru": "Спальня"
+      }
+     },
+     {
+      "kind": "kitchen",
+      "area": 11,
+      "count": 1
+     },
+     {
+      "kind": "bath",
+      "area": 5,
+      "count": 1
+     },
+     {
+      "kind": "wc",
+      "area": 1.8,
+      "count": 1
+     },
+     {
+      "kind": "hall",
+      "area": 6,
+      "count": 1
+     }
+    ]
+   }
+  ],
+  "zones": [
+   {
+    "id": "services",
+    "name": {
+     "en": "Services",
+     "ru": "Инженерные помещения"
+    },
+    "adjacent_to": []
+   },
+   {
+    "id": "refuge",
+    "name": {
+     "en": "Refuge",
+     "ru": "Зона безопасности"
+    },
+    "adjacent_to": [
+     {
+      "ref": "services",
+      "weight": 1
+     }
+    ]
+   }
+  ],
+  "periodic": [
+   {
+    "id": "refuge",
+    "every": {
+     "rule": "typology.refuge.every"
+    },
+    "replaces": true
+   }
+  ],
+  "egress": {
+   "exits_min": 2
+  },
+  "structure": {
+   "live_load_kpa": {
+    "rule": "typology.live_load_kpa"
+   }
+  }
+ }
+}

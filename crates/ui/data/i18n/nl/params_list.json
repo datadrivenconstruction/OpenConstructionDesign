@@ -1,0 +1,23 @@
+{
+ "params_list.n_params": {
+  "one": "# parameter",
+  "other": "# parameters"
+ },
+ "params_list.n_values": {
+  "one": "# waarde",
+  "other": "# waarden"
+ },
+ "params_list.n_elements": {
+  "one": "# element",
+  "other": "# elementen"
+ },
+ "params_list.exported": "{params} geëxporteerd naar {file}",
+ "params_list.export_failed": "Parameters niet geëxporteerd: {why}",
+ "params_list.open_folder": "Map openen",
+ "params_list.delete_tip": "Parameter en zijn waarden verwijderen",
+ "params_list.confirm": "{name} en de {values} op {elements} verwijderen?",
+ "params_list.confirm_btn": "Verwijderen",
+ "params_list.cancel": "Annuleren",
+ "params_list.deleted": "Parameter {name} verwijderd ({values})",
+ "params_list.undo": "Ongedaan maken"
+}

@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "Automatisch opslaan mislukt, de laatste wijzigingen zijn niet beschermd. {why}",
+ "autosave_status.autosave_open": "Instellingen automatisch opslaan",
+ "autosave_status.autosave_recovered": "Automatisch opslaan werkt weer.",
+ "autosave_status.autosave_reason": "Reden: {why}"
+}

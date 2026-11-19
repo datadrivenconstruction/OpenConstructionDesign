@@ -1,0 +1,10 @@
+{
+ "cmd.view.axes_full": "Telgede täisjooned",
+ "cmd.view.axes_full.desc": "Näitab X- ja Y-telgi plaanil täisjoontena. Hoia F9 all, et näidata neid ainult vajutamise ajal.",
+ "settings.axes_full": "Teljed",
+ "settings.axes_full_desc": "Plaani teljed täisjoontena üle joonise. Hoia F9 all kiireks vaateks.",
+ "settings.axes_full_on": "Näita telgi täisjooni",
+ "plan.hud.axes_tip": "Hoia {key} all, et näidata telgi täisjoontena",
+ "status.axes_full.on": "Telgede täisjooned sisse lülitatud",
+ "status.axes_full.off": "Telgede täisjooned välja lülitatud"
+}

@@ -1,0 +1,22 @@
+id = "S12_rules_explained"
+tier = "smoke"
+group = ""
+title = "Mixed use, U-shaped: explain the rules behind the decisions"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "Mixed-use building, 7 storeys: shops on the ground floor, offices above, U-shaped massing around a courtyard, curtain wall facade. Build it, then explain the five most important design decisions and for each one name the generation rule (its id) and the value that drove it."
+
+[[oracle.count]]
+spec = "level"
+min = 7.0
+
+[[oracle.count]]
+spec = "room"
+min = 50.0
+
+[[oracle.count]]
+spec = "level"
+min = 7.0
+max = 8.0

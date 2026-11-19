@@ -1,0 +1,11 @@
+{
+ "job.stage.prepare": "הכנת הפרויקט",
+ "open_guard.already_open": "{name} כבר פתוח",
+ "open_guard.from_cache": "{name}: נפתח ממטמון הייבוא",
+ "open_guard.known_project": "{name} יובא בעבר: פתיחת הפרויקט הזה",
+ "open_guard.locate": "איתור",
+ "open_guard.mem_low": "זיכרון נמוך: תקציב הרשתות מופחת בחצי ובניית רמת הפירוט מושהית",
+ "open_guard.mem_low_short": "זיכרון נמוך: בניית רמת הפירוט מושהית עד שהזיכרון מתפנה",
+ "open_guard.no_window": "לא נמצא החלון של הפרויקט ההוא",
+ "open_guard.switch_window": "מעבר לחלון ההוא"
+}

@@ -1,0 +1,13 @@
+{
+ "topo.unit.mm": "mm",
+ "topo.unit.metre": "m",
+ "topo.unit.ft": "fut",
+ "topo.opt.material": "Material",
+ "topo.row.active": "Faol yuza",
+ "topo.btn.delete_pad": "Maydonni o'chirish",
+ "topo.info.loading": "Yuza qurilmoqda…",
+ "topo.info.warn_n": "{n} ta ogohlantirish",
+ "topo.info.points_label": "Nuqtalar",
+ "topo.import.all_layers": "Barcha qatlamlar",
+ "topo.import.need_layer": "Kamida bitta qatlamni belgilang"
+}

@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "Referência de atalhos",
+ "cmd.help.shortcuts.desc": "Mostra todos os atalhos como estão agora, por contexto. Pressione ? em qualquer lugar fora de um campo de texto.",
+ "sheet.title": "Atalhos de teclado",
+ "sheet.filter": "Filtrar por comando ou tecla",
+ "sheet.filter_label": "Filtrar atalhos",
+ "sheet.customize": "Personalizar…",
+ "sheet.close": "Fechar",
+ "sheet.esc_close": "para fechar",
+ "sheet.none": "Nenhum atalho corresponde",
+ "sheet.none_hint": "Tente outra palavra ou tecla.",
+ "sheet.sec.general": "Geral",
+ "sheet.sec.plan": "Planta",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "Tabelas",
+ "sheet.sec.sheets": "Folhas",
+ "sheet.sec.ai": "IA"
+}

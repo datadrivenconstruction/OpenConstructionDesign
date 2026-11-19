@@ -1,0 +1,18 @@
+{
+ "faults.errors": {
+  "one": "# fout in het model. Klik om hem te tonen.",
+  "other": "# fouten in het model. Klik om de lijst te zien."
+ },
+ "faults.warnings": {
+  "one": "# waarschuwing in het model. Klik om hem te tonen.",
+  "other": "# waarschuwingen in het model. Klik om de lijst te zien."
+ },
+ "faults.title": "Modelfouten: {n}",
+ "faults.none": "Geen fouten of waarschuwingen.",
+ "faults.cat.wall": "Wand",
+ "faults.cat.slab": "Vloer",
+ "faults.cat.opening": "Doorbreking",
+ "faults.cat.curtain_wall": "Gordijngevel",
+ "faults.cat.ramp": "Helling",
+ "faults.cat.zone": "Gebied"
+}

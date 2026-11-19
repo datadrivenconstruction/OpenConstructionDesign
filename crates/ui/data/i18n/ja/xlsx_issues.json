@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "スキップされた行とセル",
+ "xlsx_issues.conflicts_title": "両方で変更されています",
+ "xlsx_issues.missing_title": "ブックにシートがありません",
+ "xlsx_issues.look_alike_title": "シート名が一致しません",
+ "xlsx_issues.mass_title": "大量削除には確認が必要です",
+ "xlsx_issues.sheets_missing": "シート {sheets} がブックにありません (名前変更または削除)。その行は比較されませんでした。",
+ "xlsx_issues.keep_model": "モデルを保持",
+ "xlsx_issues.take_book": "ブックの値を採用",
+ "xlsx_issues.open_book_tip": "ファイルをそのアプリで開きます。モデルは変わりません。ブックを保存するとプレビューが再読み込みされます。"
+}

@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "Denne regnearksfil findes allerede",
+ "xlsx_exists.foreign": "Det er ikke en regnearksfil fra dette projekt, så den erstattes aldrig.",
+ "xlsx_exists.pending": "Den indeholder {n} redigeringer, der endnu ikke er anvendt på modellen.",
+ "xlsx_exists.outside": "Den har {n} rækker, som den nye eksport ikke indeholder.",
+ "xlsx_exists.new_name": "Eksportér til {name}",
+ "xlsx_exists.apply_first": "Anvend dem først",
+ "xlsx_exists.replace": "Erstat (gammel fil til _archive)",
+ "xlsx_exists.archived": "Gammel regnearksfil flyttet til {path}",
+ "xlsx_exists.archive_failed": "Den gamle regnearksfil kunne ikke flyttes, intet blev eksporteret: {error}"
+}

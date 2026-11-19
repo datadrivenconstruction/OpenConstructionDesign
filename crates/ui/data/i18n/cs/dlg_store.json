@@ -1,0 +1,10 @@
+{
+ "dlg.dw.store.unloaded": "Výkres „{name}“ nebylo možné načíst z projektu a v souboru zůstává beze změny",
+ "dlg.dw.store.source_missing": "Výkres „{name}“: zdrojový soubor nebyl nalezen, zobrazena je kopie uložená v projektu",
+ "dlg.dw.store.source_changed": "Výkres „{name}“: zdrojový soubor se od umístění změnil, zobrazena je kopie uložená v projektu",
+ "dlg.dw.store.unreadable": "Umístěné výkresy uložené v projektu nelze načíst",
+ "dlg.dw.store.not_saved": "Výkresy nejsou uloženy: {why}",
+ "dlg.dw.store.why_read": "umístěné výkresy uložené v projektu nelze načíst",
+ "dlg.dw.store.why_write": "soubor projektu nebylo možné aktualizovat",
+ "dlg.dw.store.missing_in_file": "Uložený soubor neobsahuje všechny umístěné výkresy"
+}

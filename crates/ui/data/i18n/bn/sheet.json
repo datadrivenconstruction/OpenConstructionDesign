@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "শর্টকাট তালিকা",
+ "cmd.help.shortcuts.desc": "বর্তমান সেটআপ অনুযায়ী প্রসঙ্গভিত্তিক সব শর্টকাট দেখায়। টেক্সট ফিল্ডের বাইরে যেকোনো জায়গায় ? চাপুন।",
+ "sheet.title": "কিবোর্ড শর্টকাট",
+ "sheet.filter": "কমান্ড বা কী দিয়ে ফিল্টার করুন",
+ "sheet.filter_label": "শর্টকাট ফিল্টার",
+ "sheet.customize": "কাস্টমাইজ করুন…",
+ "sheet.close": "বন্ধ করুন",
+ "sheet.esc_close": "বন্ধ করতে",
+ "sheet.none": "মেলে এমন কোনো শর্টকাট নেই",
+ "sheet.none_hint": "অন্য শব্দ বা কী চেষ্টা করুন।",
+ "sheet.sec.general": "সাধারণ",
+ "sheet.sec.plan": "প্ল্যান",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "সূচি",
+ "sheet.sec.sheets": "শিট",
+ "sheet.sec.ai": "AI"
+}

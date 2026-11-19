@@ -1,0 +1,15 @@
+{
+ "text_style.lbl.text_style": "Мәтін стилі",
+ "text_style.lbl.align": "Туралау",
+ "text_style.lbl.head": "Көрсеткі ұшы",
+ "text_style.lbl.line_style": "Сызық стилі",
+ "text_style.lbl.fill": "Толтыру",
+ "text_style.lbl.detail": "Детальдар",
+ "text_style.lbl.width": "Ені",
+ "text_style.bad_number": "{min} мен {max} аралығындағы санды енгізіңіз",
+ "text_style.tip.next_ring": "Осы контурды жауып, сол аймақта жаңасын бастау",
+ "text_style.tip.edit_text": "Мәтінді орнында өңдеу",
+ "text_style.tip.add_leader": "Осы мәтінге көшбасшы сызық қосу",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°"
+}

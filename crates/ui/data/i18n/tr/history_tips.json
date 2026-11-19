@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "Geri alındı — Ctrl+Y yeniden yapar",
+ "history.hist.empty": "Henüz değişiklik yok",
+ "history.hist.empty_hint": "Düzenlemeleriniz burada görünür. Herhangi bir adıma tıklayarak oraya dönün.",
+ "history.hist.revert_all_n": "Tüm AI değişikliklerini geri al ({n})"
+}

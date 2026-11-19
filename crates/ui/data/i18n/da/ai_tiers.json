@@ -1,0 +1,4 @@
+{
+ "ai.issue.delete_large": "{0} elementer ville blive slettet, over grænsen på {1}. Tilladelse kræves",
+ "ai.issue.refused_large": "{0} elementer ville ændre sig, over den faste grænse på {1}. Del planen op i mindre dele"
+}

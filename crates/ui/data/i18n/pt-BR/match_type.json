@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "Copiar tipo",
+ "cmd.mod.match_type.short": "Copiar tipo",
+ "cmd.mod.match_type.desc": "Escolha uma parede, laje, pilar ou viga e depois clique noutros elementos da mesma categoria para lhes atribuir o seu tipo. Arraste uma janela para aplicar a todos os que estão dentro. Esc larga a origem.",
+ "hint.match_type.pick": "Copiar tipo: escolha uma parede, laje, pilar ou viga · Esc — sair",
+ "hint.match_type.apply": "Copiar tipo: clique nos alvos ou arraste uma janela · Esc — outra origem",
+ "match_type.kind.wall": "parede",
+ "match_type.kind.slab": "laje",
+ "match_type.kind.column": "pilar",
+ "match_type.kind.beam": "viga",
+ "match_type.refuse.category": "Outra categoria: apenas um(a) {cat} pode receber este tipo",
+ "match_type.refuse.curtain": "Parede-cortina: o seu tipo não é aplicado aqui",
+ "match_type.refuse.pinned": "Fixado: desafixe-o para alterar o tipo",
+ "match_type.pick_bad": "Escolha uma parede, laje, pilar ou viga como origem",
+ "match_type.same": "Já é este tipo",
+ "match_type.done": "Tipo aplicado: {n}",
+ "match_type.done_skipped": "Tipo aplicado: {n}, ignorados (fixados ou cortina): {skipped}",
+ "match_type.failed": "Tipo não alterado: {err}"
+}

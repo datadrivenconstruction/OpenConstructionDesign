@@ -1,0 +1,14 @@
+{
+ "xlsx_relink.title": "Linkitettyä työkirjaa on siirretty tai nimetty uudelleen",
+ "xlsx_relink.body": "Työkirja ”{file}” ei ole enää kansiossa {folder}. Siihen kirjoitetut muokkaukset palaavat vasta, kun se on linkitetty uudelleen.",
+ "xlsx_relink.found_one": "Löytyi ”{file}” kansiosta {folder}: sama projekti ja sama vienti. Linkitetäänkö?",
+ "xlsx_relink.found_many": "Löytyi {n} tämän projektin ja tämän viennin työkirjaa. Valitse linkitettävä:",
+ "xlsx_relink.found_none": "Sen vierestä ei löytynyt tämän viennin työkirjaa. Etsi se tai vie uusi työkirja.",
+ "xlsx_relink.link": "Linkitä ”{file}”",
+ "xlsx_relink.find": "Etsi…",
+ "xlsx_relink.find_title": "Etsi linkitetty työkirja",
+ "xlsx_relink.export_new": "Vie uusi työkirja",
+ "xlsx_relink.close": "Sulje",
+ "xlsx_relink.gone": "Työkirja ”{file}” ei ole enää kansiossaan. Siihen kirjoitetut muokkaukset palaavat vasta, kun se on linkitetty uudelleen.",
+ "xlsx_relink.found_one_short": "Löytyi ”{file}”: sama projekti ja sama vienti. Linkitetäänkö?"
+}

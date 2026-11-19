@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "Alamat",
+ "legend.legend.new_hint": "Bagong pangalan ng legend",
+ "legend.legend.delete_tip": "Burahin ang legend",
+ "legend.legend.delete_placed": "Burahin ang legend (nakalagay sa: {sheets})",
+ "legend.legend.deleted": "Nabura ang legend: {name}",
+ "legend.legend.no_rows": "Wala pang row. Magdagdag ng isa o kunin ang style ng kasalukuyang view",
+ "legend.legend.replace_q": "Palitan ang {n} na row ng style ng view na ito?",
+ "legend.legend.replace": "Palitan",
+ "legend.legend.keep": "Itira ang mga row",
+ "legend.col.swatch": "Kulay",
+ "legend.col.value": "Halaga",
+ "legend.col.label": "Etiketa"
+}

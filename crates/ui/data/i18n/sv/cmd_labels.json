@@ -1,0 +1,14 @@
+{
+ "cmd.arch.wall.tile": "Vägg",
+ "cmd.arch.door.tile": "Dörr",
+ "cmd.arch.window.tile": "Fönster",
+ "cmd.arch.floor.tile": "Golv",
+ "cmd.mod.move.tile": "Flytta",
+ "cmd.mod.copy.tile": "Kopiera",
+ "cmd.mod.rotate.tile": "Rotera",
+ "cmd.mod.mirror.tile": "Spegla",
+ "cmd.mod.trim.tile": "Trimma",
+ "cmd.mod.delete.tile": "Ta bort",
+ "cmd.ann.dim.tile": "Mått",
+ "cmd.ann.text.tile": "Textruta"
+}

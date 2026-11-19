@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "Αναθεωρημένο",
+ "ai.redraft.added": "+{n} προστέθηκαν",
+ "ai.redraft.removed": "−{n} αφαιρέθηκαν",
+ "ai.redraft.changed": "~{n} άλλαξαν",
+ "ai.redraft.strip": "{what} από την τελευταία σας ματιά",
+ "ai.redraft.note": "Ελέγχθηκε το αναθεωρημένο σχέδιο: {what}",
+ "ai.redraft.more": "+{n} ακόμα",
+ "ai.redraft.ack": "Κατάλαβα",
+ "ai.redraft.ack.tip": "Σημειώνει αυτή την αναθεώρηση ως είδωμένη· η Εφαρμογή τώρα στοχεύει σε αυτήν",
+ "ai.redraft.removed_list": "Αφαιρεμένα στοιχεία: {n}",
+ "ai.redraft.review_first": "Το σχέδιο άλλαξε μετά το μήνυμά σας: ελέγξτε πρώτα τις αλλαγές",
+ "ai.redraft.mark.tip": "Νέο ή αλλαγμένο από την τελευταία σας ματιά",
+ "ai.redraft.emptied": "Η συνέχεια αφαίρεσε όλα τα στοιχεία: το προσχέδιο είναι κενό"
+}

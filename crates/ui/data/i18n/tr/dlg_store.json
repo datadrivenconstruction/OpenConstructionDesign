@@ -1,0 +1,10 @@
+{
+ "dlg.dw.store.unloaded": "Çizim “{name}” projeden okunamadı ve dosyada değişmeden tutuluyor",
+ "dlg.dw.store.source_missing": "Çizim “{name}”: kaynak dosya bulunamadı, projede kayıtlı kopya gösteriliyor",
+ "dlg.dw.store.source_changed": "Çizim “{name}”: yerleştirildikten sonra kaynak dosya değişti, projede kayıtlı kopya gösteriliyor",
+ "dlg.dw.store.unreadable": "Projede saklanan yerleştirilmiş çizimler okunamıyor",
+ "dlg.dw.store.not_saved": "Çizimler kaydedilmedi: {why}",
+ "dlg.dw.store.why_read": "projede saklanan yerleştirilmiş çizimler okunamıyor",
+ "dlg.dw.store.why_write": "proje dosyası güncellenemedi",
+ "dlg.dw.store.missing_in_file": "Kaydedilen dosyada yerleştirilmiş tüm çizimler yok"
+}

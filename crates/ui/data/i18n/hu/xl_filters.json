@@ -1,0 +1,6 @@
+{
+ "xl.msg.filter_on_sheet_x": "szűrő a(z) '{}' lapon",
+ "xl.msg.sort_settings_on_sheet_x": "rendezési beállítások a(z) '{}' lapon",
+ "xl.msg.hidden_rows_on_sheet_x": "rejtett sorok a(z) '{}' lapon",
+ "xl.msg.hidden_columns_on_sheet_x": "rejtett oszlopok a(z) '{}' lapon"
+}

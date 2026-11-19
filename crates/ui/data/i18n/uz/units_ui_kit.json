@@ -1,0 +1,6 @@
+{
+ "units.err.parse": "Uzunlik emas: eski qiymat saqlandi. Ixtiyoriy birlik bilan son kiriting, masalan 2500 yoki 8'-2\"",
+ "ui.scale.set": "Interfeys masshtabi: {pct}%",
+ "cmd.ui.scale_up": "Interfeys masshtabini oshirish",
+ "cmd.ui.scale_down": "Interfeys masshtabini kamaytirish"
+}

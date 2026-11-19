@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "Õhukanal",
+ "mep3d.pipe": "Toru",
+ "mep3d.tray": "Kaabliriiul",
+ "mep3d.conduit": "Kaabelkanal",
+ "mep3d.system": "Süsteem",
+ "mep3d.length": "Pikkus",
+ "mep3d.diameter": "Läbimõõt",
+ "mep3d.width": "Laius",
+ "mep3d.height": "Kõrgus",
+ "mep3d.insulation": "Isolatsioon",
+ "mep3d.tip": "Enter — rakenda; liitmikud arvutatakse uuesti",
+ "mep3d.size_positive": "suurus peab olema suurem kui null",
+ "mep3d.not_changed": "ei muudetud: {e}",
+ "mep3d.copied": "trass kopeeritud",
+ "mep3d.changed": "trass muudetud",
+ "mep3d.deleted": "elemente kustutatud: {n}",
+ "mep3d.not_deleted": "ei kustutatud: {e}",
+ "mep3d.no_wall_type": "seinatüüp puudub",
+ "mep3d.demo.supply": "Tarne S1",
+ "mep3d.demo.heating": "Küte",
+ "mep3d.demo.power": "Toide"
+}

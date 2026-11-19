@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "改訂",
+ "ai.redraft.added": "+{n} 件追加",
+ "ai.redraft.removed": "−{n} 件削除",
+ "ai.redraft.changed": "~{n} 件変更",
+ "ai.redraft.strip": "前回の確認以降の {what}",
+ "ai.redraft.note": "改訂されたプランを確認しました: {what}",
+ "ai.redraft.more": "+{n} 件",
+ "ai.redraft.ack": "確認しました",
+ "ai.redraft.ack.tip": "この改訂を確認済みにします。適用はこの改訂を対象にします",
+ "ai.redraft.removed_list": "削除された項目: {n}",
+ "ai.redraft.review_first": "メッセージの後にプランが変更されました: 先に変更を確認してください",
+ "ai.redraft.mark.tip": "前回の確認以降に新規または変更されたもの",
+ "ai.redraft.emptied": "フォローアップで全項目が削除されました: ドラフトは空です"
+}

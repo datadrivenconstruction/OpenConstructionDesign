@@ -1,0 +1,6 @@
+{
+ "sched_import.no_key": "Ce classeur n'a pas de trace d'export (export ancien) : des cellules modifiées dans le modèle après cet export peuvent être écrasées. Vérifiez les cellules modifiées avant d'appliquer.",
+ "sched_import.n_kept": "Modifié dans le modèle après l'export, conservé : {n}",
+ "sched_import.n_conflict": "Modifié à la fois dans le classeur et dans le modèle, non appliqué : {n}",
+ "sched_import.why_conflict": "modifié dans le modèle après l'export (maintenant {model}), non appliqué"
+}

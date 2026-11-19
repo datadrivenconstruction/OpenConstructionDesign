@@ -1,0 +1,5 @@
+{
+ "mep_dn.dn.unset": "Não definido",
+ "mep_dn.slope.err": "Informe uma inclinação em %, ex.: 1.5",
+ "mep_dn.err.rejected": "o valor não é aceito"
+}

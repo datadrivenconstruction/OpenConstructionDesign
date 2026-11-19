@@ -1,0 +1,8 @@
+{
+ "cmd.arch.room_auto": "Awtomatikong maglagay ng mga kuwarto",
+ "cmd.arch.room_auto.desc": "Naglalagay ng kuwarto sa bawat saradong boundary ng aktibong level na wala pang kuwarto. Nilalaktawan ang mga bukas na loop ng pader; hindi sila isinasara batay sa hula. Isang undo step.",
+ "room_place.placed": "Nailagay na kuwarto: {n}. Mga rehiyong may kuwarto na: {m}. Nilaktawan ang mga bukas na loop: {k}",
+ "room_place.all_had": "Walang nailagay: may kuwarto na ang lahat ng {m} saradong rehiyon. Nilaktawan ang mga bukas na loop: {k}",
+ "room_place.none": "Walang nailagay: walang saradong rehiyon ng pader ang level",
+ "room_place.none_open": "Walang nailagay: walang saradong rehiyon ng pader ang level. Nilaktawan ang mga bukas na loop: {k}"
+}

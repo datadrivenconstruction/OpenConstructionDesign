@@ -1,0 +1,8 @@
+brief = "Wall distribution board with one conduit connection."
+category = "electrical"
+must = param Width
+must = param Height
+must = solids >= 1
+must = ports 1
+must = port conduit 1
+must = flex Width 320 500

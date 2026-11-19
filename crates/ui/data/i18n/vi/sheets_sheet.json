@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "Nhân đôi bản vẽ kèm góc nhìn",
+ "cmd.view.sheet_duplicate_title": "Nhân đôi bản vẽ (chỉ khung tên)",
+ "sheets.dup.menu_views": "Nhân đôi kèm góc nhìn",
+ "sheets.dup.menu_title": "Nhân đôi, chỉ khung tên",
+ "sheets.dup.done": "Đã tạo bản vẽ {number} từ {src}: {views} góc nhìn, {sched} bảng thống kê và chú giải. Bản sửa đổi không được sao chép; bản vẽ chưa được phát hành.",
+ "sheets.dup.none": "Hãy mở một bản vẽ để nhân đôi",
+ "sheets.dup.copy": "bản sao",
+ "cmd.view.sheet_duplicate.short": "Nhân đôi kèm góc nhìn",
+ "cmd.view.sheet_duplicate_title.short": "Nhân đôi khung tên"
+}

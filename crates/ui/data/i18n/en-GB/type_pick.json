@@ -1,0 +1,10 @@
+{
+ "type_pick.pick.search": "Search types or thickness",
+ "type_pick.pick.empty": "No matching types",
+ "type_pick.pick.edit": "Edit type…",
+ "type_pick.pick.mixed": "Mixed",
+ "type_pick.pick.layers": {
+  "one": "# layer",
+  "other": "# layers"
+ }
+}

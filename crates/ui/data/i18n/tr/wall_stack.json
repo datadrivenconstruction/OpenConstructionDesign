@@ -1,0 +1,10 @@
+{
+ "wall_stack.we.stack_caption": "Bileşik tip",
+ "wall_stack.we.side_left": "Sol yüz",
+ "wall_stack.we.side_right": "Sağ yüz",
+ "wall_stack.we.from": "Başlangıç",
+ "wall_stack.we.to": "Bitiş",
+ "wall_stack.we.bottom": "Alt",
+ "wall_stack.we.delete_tip": "Bu profili sil",
+ "wall_stack.we.from_after_to": "“Başlangıç”, “Bitiş”ten önce olmalı"
+}

@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D",
+ "phases.current_mark": "aktuální",
+ "phases.make_current": "Nastavit jako aktuální",
+ "phases.col_phase": "Fáze",
+ "phases.col_filter": "Filtr",
+ "phases.presets": "Předvolby půdorysu",
+ "phases.del_title": "Smazat fázi",
+ "phases.del_text": "Smazat fázi „{name}“? Její prvky přejdou do fáze vybrané níže.",
+ "phases.del_into": "Přesunout prvky do",
+ "phases.del_ok": "Smazat",
+ "phases.col_kind": "Typ prvku",
+ "phases.col_count": "Počet",
+ "phases.col_volume": "Objem"
+}

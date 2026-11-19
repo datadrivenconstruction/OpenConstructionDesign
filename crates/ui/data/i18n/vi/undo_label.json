@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "Hoàn tác: {what}",
+ "undo_label.redo_what": "Làm lại: {what}",
+ "undo_label.undo_none": "Không có gì để hoàn tác",
+ "undo_label.redo_none": "Không có gì để làm lại"
+}

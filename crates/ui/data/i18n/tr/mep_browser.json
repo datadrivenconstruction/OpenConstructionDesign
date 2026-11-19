@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "Sistem adı",
+ "mep_browser.add_blocked": "Önce bir sistem adı girin",
+ "mep_browser.col.insulation": "Yalıtım",
+ "mep_browser.cancel": "İptal",
+ "mep_browser.delete.title": "Bu sistem silinsin mi?",
+ "mep_browser.delete.body": "“{name}” sistemi ve {n} çalışması silinecek.",
+ "mep_browser.delete.undo": "Bunu tek bir Geri al ile geri alabilirsiniz.",
+ "mep_browser.delete.confirm": "Sistemi sil"
+}

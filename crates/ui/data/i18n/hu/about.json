@@ -1,0 +1,33 @@
+{
+ "cmd.help.licenses": "Nyílt forráskódú licencek",
+ "cmd.help.licenses.desc": "Felsorolja az ebben a buildben használt nyílt forráskódú könyvtárakat a licenceikkel.",
+ "about.product": "DDC Editor",
+ "about.version": "Verzió",
+ "about.build": "Build",
+ "about.schema": "Modellséma",
+ "about.system": "Rendszer",
+ "about.gpu": "Grafikus illesztő",
+ "about.language": "Nyelv",
+ "about.copy": "Verzióinformáció másolása",
+ "about.copy_desc": "Verzió, build, rendszer és grafikus illesztő hibajelentéshez. Fájlelérési utak nélkül.",
+ "about.copied": "A verzióinformáció másolva",
+ "about.licenses": "Nyílt forráskódú licencek",
+ "about.licenses_desc": "Az ebben a buildben használt könyvtárak és licenceik",
+ "about.licenses.open": "Megtekintés",
+ "about.licenses.title": "Nyílt forráskódú licencek",
+ "about.licenses.note": "A DDC Editor az alábbi könyvtárakat tartalmazza. Mindegyik saját licence és szerzői jogi közleménye alatt marad. A teljes licencszövegek: THIRD_PARTY_LICENSES.txt az alkalmazás mellett.",
+ "about.licenses.full": "Teljes licencszövegek",
+ "about.licenses.list": "Összetevők listája",
+ "about.licenses.close": "Bezárás",
+ "about.licenses.col_name": "Összetevő",
+ "about.licenses.col_license": "Licenc",
+ "about.licenses.count": {
+  "one": "# összetevő",
+  "other": "# összetevő"
+ },
+ "about.licenses.count_of": "{shown} / {total} összetevő",
+ "about.licenses.search_hint": "Keresés név vagy licenc szerint…",
+ "about.licenses.search_clear": "Keresés törlése",
+ "about.licenses.none": "Nincs találat",
+ "about.licenses.none_hint": "Próbáljon könyvtárnév-részletet vagy licencet, például MIT-t."
+}

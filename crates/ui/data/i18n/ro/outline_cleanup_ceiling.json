@@ -1,0 +1,11 @@
+{
+ "cmd.ctx.ceiling.clean_outline": "Curăță conturul",
+ "cmd.ctx.ceiling.clean_outline.desc": "Elimină vârfurile înguste unde conturul tavanului se întoarce asupra sa. Mai întâi arată o previzualizare; un pas de anulare.",
+ "cmd.ctx.shaft.clean_outline": "Curăță conturul",
+ "cmd.ctx.shaft.clean_outline.desc": "Elimină vârfurile înguste unde conturul golului se întoarce asupra sa. Mai întâi arată o previzualizare; un pas de anulare.",
+ "outline_cleanup.intro_ceiling": "Conturul acestui tavan se întoarce asupra sa în vârfuri înguste: {n}. Curățarea le elimină; restul rămâne neschimbat.",
+ "outline_cleanup.intro_shaft": "Conturul acestui gol se întoarce asupra sa în vârfuri înguste: {n}. Curățarea le elimină; restul rămâne neschimbat.",
+ "outline_cleanup.none_ceiling": "Conturul acestui tavan nu are vârfuri",
+ "outline_cleanup.none_shaft": "Conturul acestui gol nu are vârfuri",
+ "outline_cleanup.need_host": "Selectați o placă, un tavan sau un gol"
+}

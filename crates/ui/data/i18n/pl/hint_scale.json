@@ -1,0 +1,10 @@
+{
+ "cmd.mod.scale": "Skaluj",
+ "cmd.mod.scale.desc": "Zaznacz elementy, następnie kliknij punkt bazowy, długość odniesienia i nową długość albo wpisz współczynnik.",
+ "hint.scale.select": "Skala: zaznacz elementy · Enter — gotowe",
+ "hint.scale.first": "Skala: wskaż punkt bazowy · Esc — anuluj",
+ "hint.scale.second": "Skala: wskaż długość odniesienia · liczba — współczynnik · Esc — anuluj",
+ "hint.scale.third": "Skala: wskaż nową długość · liczba — współczynnik · Esc — anuluj",
+ "scl.bad_factor": "Współczynnik skali musi być liczbą większą od zera",
+ "scl.zero_ref": "Długość odniesienia wynosi zero: wskaż punkt z dala od bazy"
+}

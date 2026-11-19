@@ -1,0 +1,8 @@
+{
+ "v3d.proj.to_ortho": "Skift til parallelprojektion",
+ "v3d.proj.to_persp": "Skift til perspektiv",
+ "v3d.walk.unit.m": "m/s",
+ "v3d.walk.unit.ft": "ft/s",
+ "v3d.temp.show_all": "Vis alle  ·  Esc",
+ "v3d.msg.deleted_named": "3D-visning {name} slettet"
+}

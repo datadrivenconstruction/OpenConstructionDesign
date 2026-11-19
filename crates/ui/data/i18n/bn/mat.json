@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "কংক্রিট",
+ "mat.masonry": "ইটের গাঁথনি",
+ "mat.brick": "ইট",
+ "mat.insulation": "অন্তরণ",
+ "mat.plaster": "প্লাস্টার",
+ "mat.render": "আস্তরণ",
+ "mat.gypsum": "জিপসাম বোর্ড",
+ "mat.glass": "কাচ",
+ "mat.wood": "কাঠ",
+ "mat.steel": "ইস্পাত",
+ "mat.membrane": "ঝিল্লি",
+ "mat.other": "অন্যান্য",
+ "warn.cat.wall": "দেয়াল",
+ "warn.cat.slab": "স্ল্যাব",
+ "warn.cat.opening": "ফাঁকা অংশ",
+ "warn.cat.curtain_wall": "পর্দা-দেয়াল",
+ "td.mat.custom": "অন্যান্য…"
+}

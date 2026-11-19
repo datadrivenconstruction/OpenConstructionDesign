@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "Бетон",
+ "mat.masonry": "Тош-кирпич",
+ "mat.brick": "Кирпич",
+ "mat.insulation": "Изоляция",
+ "mat.plaster": "Шыбак",
+ "mat.render": "Шыбоо",
+ "mat.gypsum": "Гипс плитасы",
+ "mat.glass": "Айнек",
+ "mat.wood": "Жыгач",
+ "mat.steel": "Болот",
+ "mat.membrane": "Мембрана",
+ "mat.other": "Башка",
+ "warn.cat.wall": "Дубал",
+ "warn.cat.slab": "Плита",
+ "warn.cat.opening": "Ачылыш",
+ "warn.cat.curtain_wall": "Шаар дубалы",
+ "td.mat.custom": "Башка…"
+}

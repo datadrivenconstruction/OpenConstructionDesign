@@ -1,0 +1,13 @@
+{
+ "level.err_open": "Hindi nabuksan ang level: {e}",
+ "level.need_name": "Kailangan ng level ng pangalan at elevation",
+ "level.created": "Nagawa ang level na \"{name}\"",
+ "level.err_create": "Hindi nagawa ang level: {e}",
+ "level.err_edit": "Hindi nabago ang level: {e}",
+ "level.edited": "Nabago ang level na \"{name}\"",
+ "level.edited_stale": "Nabago ang level na \"{name}\", hindi na-refresh ang view: {e}",
+ "level.last": "Hindi maaaring burahin ang huling level",
+ "level.deleted": "Nabura ang level",
+ "level.not_empty": "Hindi walang laman ang level: burahin muna ang mga elemento nito",
+ "level.err_delete": "Hindi nabura ang level: {e}"
+}

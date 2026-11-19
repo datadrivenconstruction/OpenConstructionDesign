@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "Ештеңе табылмады",
+ "empty.browser_search.hint": "Бұл іздеуге ешбір көрініс, деңгей, түр немесе бөлме сәйкес келмейді.",
+ "empty.browser_search.action": "Іздеуді тазалау",
+ "empty.xl_filtered.title": "Сүзгілерге сәйкес жазбалар жоқ",
+ "empty.xl_filtered.hint": "Көбірек түрлерді қосыңыз, басқа парақты таңдаңыз немесе мәтін іздеуін өзгертіңіз.",
+ "empty.xl_filtered.action": "Сүзгілерді тазалау",
+ "empty.xl_nochanges.title": "Кітапта өзгеріс жоқ",
+ "empty.xl_nochanges.hint": "Кітап модельмен сәйкес: оны импорттау ештеңені өзгертпейді.",
+ "empty.version_same.title": "Модельдер бірдей",
+ "empty.version_same.hint": "Ашық модель мен таңдалған нұсқа арасында айырмашылық табылмады.",
+ "empty.templates.title": "Әлі көрініс үлгілері жоқ",
+ "empty.templates.hint": "Ағымдағы көріністен жасаңыз, оның параметрлерін басқа көріністерде қайта пайдалану үшін.",
+ "empty.templates.action": "Үлгіге атау беру",
+ "empty.fe_params.title": "Әлі параметрлер жоқ",
+ "empty.fe_params.hint": "Өлшемдерді, материалдарды немесе көріністі басқару үшін төменде параметр қосыңыз.",
+ "empty.fe_params.action": "Параметр қосу"
+}

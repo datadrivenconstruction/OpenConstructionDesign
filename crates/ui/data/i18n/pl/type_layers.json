@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "Wstaw warstwę poniżej",
+ "type_layers.layer.delete": "Usuń warstwę",
+ "type_layers.layer.delete_last": "Typ musi mieć co najmniej jedną warstwę",
+ "type_layers.value.bad": "Nieprawidłowa wartość dodatnia",
+ "type_layers.value.required": "Wymagane",
+ "type_layers.unsaved.title": "Niezapisane zmiany w {name}",
+ "type_layers.unsaved.body": "Zastosować je do typu, czy odrzucić?",
+ "type_layers.unsaved.discard": "Odrzuć"
+}

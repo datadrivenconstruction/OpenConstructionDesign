@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "Отвір слухового вікна",
+ "cmd.arch.roof_opening": "Отвір у даху",
+ "cmd.arch.roof_extrusion": "Дах видавлюванням",
+ "cmd.arch.ceiling_opening": "Отвір у стелі",
+ "cmd.str.slab_opening": "Отвір у перекритті",
+ "cmd.ctx.wall.detach": "Від'єднати верх",
+ "cmd.ctx.floor.sketch": "Змінити межу",
+ "cmd.ctx.floor.shape": "Змінити форму",
+ "host_shape.shape.elev_prompt": "відмітка, мм…",
+ "host_shape.shape.elev_mm": "{v} мм",
+ "host_shape.sketch.no_host": "на цьому рівні під межею немає основи",
+ "host_shape.issue.roof": "дах {id}: {e}",
+ "host_shape.issue.ceiling": "стеля {id}: {e}",
+ "host_shape.status.select_slab": "виберіть перекриття",
+ "host_shape.status.select_walls": "виберіть стіни",
+ "host_shape.status.no_roof_or_level": "над ним немає даху або рівня",
+ "host_shape.status.top_attached": "верхи стін прикріплено",
+ "host_shape.status.top_detached": "верхи стін від'єднано",
+ "host_shape.status.straight_wall": "потрібна пряма стіна",
+ "host_shape.status.roof_extruded": "дах видавлюванням створено",
+ "warn.kind.cut": "Виріз або прив'язку не побудовано"
+}

@@ -1,0 +1,14 @@
+{
+ "cmd.arch.wall.tile": "Стена",
+ "cmd.arch.door.tile": "Дверь",
+ "cmd.arch.window.tile": "Окно",
+ "cmd.arch.floor.tile": "Перекрытие",
+ "cmd.mod.move.tile": "Перенос",
+ "cmd.mod.copy.tile": "Копия",
+ "cmd.mod.rotate.tile": "Поворот",
+ "cmd.mod.mirror.tile": "Зеркало",
+ "cmd.mod.trim.tile": "Обрезка",
+ "cmd.mod.delete.tile": "Удалить",
+ "cmd.ann.dim.tile": "Размер",
+ "cmd.ann.text.tile": "Текст"
+}

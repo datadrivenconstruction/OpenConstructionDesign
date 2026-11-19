@@ -1,0 +1,11 @@
+{
+ "sketch.points": "점",
+ "sketch.rect": "사각형",
+ "sketch.circle": "원",
+ "sketch.polygon": "다각형",
+ "sketch.radius": "R",
+ "sketch.sides": "변",
+ "sketch.circum": "외접",
+ "sketch.shape.tip": "스케치 도형(A로 전환). 사각형: 두 모서리. 원과 다각형: 중심, 그다음 반지름. 크기를 입력하고 Enter를 누르면 고정됩니다.",
+ "tool.err.zero_size": "크기가 0입니다: 두 번째 점을 첫 번째 점에서 떨어뜨리세요"
+}

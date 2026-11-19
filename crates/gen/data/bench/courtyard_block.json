@@ -1,0 +1,32 @@
+{
+ "schema": "gen_bench.v1",
+ "group": "apartment_block",
+ "spec": {
+  "typology": "apartment_section",
+  "name": "Courtyard Block",
+  "floors": 7,
+  "design": {
+   "massing": "courtyard",
+   "balconies": "balcony",
+   "facade": "punched",
+   "trees": 18
+  }
+ },
+ "adjacency": [
+  [
+   "kitchen",
+   "living",
+   3
+  ],
+  [
+   "bedroom",
+   "bath",
+   1
+  ],
+  [
+   "bath",
+   "hall",
+   1
+  ]
+ ]
+}

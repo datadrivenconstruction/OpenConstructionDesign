@@ -1,0 +1,19 @@
+{
+ "xlsx_confirm.chip": "確認が必要",
+ "xlsx_confirm.section": "ID のない行を、名前または番号で要素に一致させました",
+ "xlsx_confirm.tag": "名前で一致",
+ "xlsx_confirm.tag_accepted": "一致を承認しました",
+ "xlsx_confirm.tag_rejected": "新規作成",
+ "xlsx_confirm.kind_room": "部屋",
+ "xlsx_confirm.kind_curtain_wall": "カーテンウォール",
+ "xlsx_confirm.row_line": "{kind} #{id}、キー \"{key}\"",
+ "xlsx_confirm.accept": "承認",
+ "xlsx_confirm.accept_tip": "この行を一致した要素に適用します（残りと合わせて元に戻すは 1 回）",
+ "xlsx_confirm.reject": "新規作成",
+ "xlsx_confirm.reject_tip": "一致させない: この行は新しい要素を作成します",
+ "xlsx_confirm.decide_first": "名前で一致した行を、先に承認または却下してください。",
+ "xl.msg.key_match_many": "キーは {} 個の要素に一致します。一致させず、この行は新しい要素を 1 つ作成します",
+ "xl.msg.key_match_taken": "キーは別の行で使われている要素に一致します。一致させず、この行は新しい要素を 1 つ作成します",
+ "xl.msg.key_match_kept": "保持: 一致を却下しました。この行は新しい要素を作成します",
+ "xl.msg.key_match_undecided": "名前で一致した行は判断を待っています"
+}

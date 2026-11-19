@@ -1,0 +1,19 @@
+{
+ "empty.v3d_gpu.title": "3D není na tomto grafickém adaptéru dostupné",
+ "empty.v3d_gpu.hint": "Model je v pořádku a půdorys funguje. Restartujte s bezpečnou grafikou a zkuste 3D znovu.",
+ "empty.v3d_gpu.action": "Restartovat s bezpečnou grafikou",
+ "empty.v3d_loading.title": "Vytváření 3D…",
+ "empty.v3d_loading.pct": "Otevírání… {pct} %",
+ "empty.plan_hidden.title": "Všechny prvky jsou v tomto půdorysu skryty",
+ "empty.plan_hidden.hint": "Dočasné skrytí nebo izolace nenechává nic viditelné.",
+ "empty.plan_hidden.action": "Zobrazit vše",
+ "empty.plan_graphics.title": "Grafika pohledu skrývá všechny kategorie",
+ "empty.plan_graphics.hint": "Pravidla kategorií tohoto pohledu nenechávají nic k zobrazení.",
+ "empty.plan_graphics.action": "Otevřít grafiku pohledu",
+ "empty.plan_phase.title": "Filtr fáze skrývá vše",
+ "empty.plan_phase.hint": "Nic na tomto podlaží neexistuje ve fázi zobrazené tímto pohledem.",
+ "empty.plan_phase.action": "Změnit fázi",
+ "empty.plan_level.title": "Na tomto podlaží nejsou žádné prvky",
+ "empty.plan_level.hint": "Jiná podlaží tohoto modelu obsahují prvky.",
+ "empty.plan_level.action": "Přejít na podlaží s prvky"
+}

@@ -1,0 +1,6 @@
+{
+ "cmd.arch.room_auto.short": "Sijoita huoneet",
+ "cmd.mod.group_select.short": "Valitse ryhmä",
+ "cmd.mod.group_cancel.short": "Peruuta muokkaus",
+ "cmd.view.place_sheet_list.short": "Sijoita arkkiluettelo"
+}

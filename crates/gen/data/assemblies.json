@@ -1,0 +1,117 @@
+{
+  "schema": "gen_assemblies.v1",
+  "about": "Layered build-ups the generator assigns to walls, slabs and roofs. Layers run from the outside (walls) or the top (slabs, roofs) inwards; thickness in millimetres. A layer with `sizes` is sized by the generator: the smallest size that meets the rules of its use (U-value, sound insulation) is taken, and of the build-ups of one use that meet them the thinnest wins (file order on a tie). Material values are typical design values of the material class (thermal conductivity W/(m K), density kg/m3, reaction-to-fire class), our own table: an engineer checks them against the product actually used. `fire_minutes` is the fire resistance the build-up is rated for at its smallest size.",
+  "physics": {
+    "surface": {
+      "wall": {"rsi": 0.13, "rse": 0.04, "why": "Surface resistances of a vertical element with horizontal heat flow, m2K/W."},
+      "roof": {"rsi": 0.10, "rse": 0.04, "why": "Surface resistances of a roof with upward heat flow, m2K/W."},
+      "ground": {"rsi": 0.17, "rse": 0.0, "why": "Downward heat flow into a slab on the ground; the soil itself is not counted, which errs on the safe side."}
+    },
+    "mass_law": {"a": 37.5, "b": -42.0, "why": "Weighted sound reduction index of a single-leaf element from its mass per area m' (kg/m2): Rw = a log10(m') + b; an estimate for heavy single-leaf walls and floors, not for light double-leaf ones."},
+    "pitched_from_deg": 5.0,
+    "fire_board": {"material": "gypsum_fire", "mm": 15, "minutes": 20, "max": 8, "why": "One layer of fire rated board on the inside face adds this many minutes of fire resistance; layers are added until a wall reaches the rating its rule asks for."}
+  },
+  "materials": [
+    {"id": "gypsum_plaster", "name": "Gypsum Plaster", "lambda": 0.40, "density": 1000, "fire": "A1", "function": "finish"},
+    {"id": "mineral_render", "name": "Mineral Render", "lambda": 0.87, "density": 1800, "fire": "A1", "function": "finish"},
+    {"id": "mw_facade", "name": "Mineral Wool Facade Insulation", "lambda": 0.035, "density": 140, "fire": "A1", "function": "insulation"},
+    {"id": "eps_facade", "name": "EPS Facade Insulation", "lambda": 0.032, "density": 15, "fire": "E", "function": "insulation"},
+    {"id": "waterproofing", "name": "Bituminous Waterproofing Membrane", "lambda": 0.23, "density": 1100, "fire": "E", "function": "membrane"},
+    {"id": "rc", "name": "Reinforced Concrete", "lambda": 2.3, "density": 2400, "fire": "A1", "function": "structure"},
+    {"id": "cs_masonry", "name": "Calcium Silicate Masonry", "lambda": 1.1, "density": 2000, "fire": "A1", "function": "structure"},
+    {"id": "gypsum_board", "name": "Gypsum Board", "lambda": 0.25, "density": 900, "fire": "A2", "function": "finish"},
+    {"id": "gypsum_board_wet", "name": "Moisture Resistant Gypsum Board", "lambda": 0.25, "density": 900, "fire": "A2", "function": "finish"},
+    {"id": "mw_cavity", "name": "Mineral Wool Cavity Insulation", "lambda": 0.037, "density": 30, "fire": "A1", "function": "insulation"},
+    {"id": "cement_screed", "name": "Cement Screed", "lambda": 1.4, "density": 2000, "fire": "A1", "function": "substrate"},
+    {"id": "mw_impact", "name": "Mineral Wool Impact Sound Insulation", "lambda": 0.035, "density": 120, "fire": "A1", "function": "insulation"},
+    {"id": "xps", "name": "XPS Insulation", "lambda": 0.035, "density": 35, "fire": "E", "function": "insulation"},
+    {"id": "pe_vapour", "name": "Polyethylene Vapour Membrane", "lambda": 0.4, "density": 950, "fire": "E", "function": "membrane"},
+    {"id": "bitumen", "name": "Bitumen Roofing Membrane", "lambda": 0.23, "density": 1100, "fire": "E", "function": "membrane"},
+    {"id": "mw_roof", "name": "Mineral Wool Roof Insulation", "lambda": 0.039, "density": 150, "fire": "A1", "function": "insulation"},
+    {"id": "pir_roof", "name": "PIR Roof Insulation", "lambda": 0.023, "density": 30, "fire": "C", "function": "insulation"},
+    {"id": "lw_falls", "name": "Lightweight Concrete To Falls", "lambda": 0.35, "density": 1000, "fire": "A1", "function": "substrate"},
+    {"id": "roof_tiles", "name": "Roof Tiles On Battens", "lambda": 1.0, "density": 1900, "fire": "A1", "function": "finish"},
+    {"id": "underlay", "name": "Roofing Underlay Membrane", "lambda": 0.17, "density": 600, "fire": "E", "function": "membrane"},
+    {"id": "mw_rafter", "name": "Mineral Wool Between Rafters Insulation", "lambda": 0.040, "density": 60, "fire": "A1", "function": "insulation"},
+    {"id": "gypsum_fire", "name": "Fire Rated Gypsum Board", "lambda": 0.25, "density": 900, "fire": "A1", "function": "finish"},
+    {"id": "timber_cladding", "name": "Timber Cladding On Battens", "lambda": 0.13, "density": 500, "fire": "D", "function": "finish"},
+    {"id": "clt", "name": "Cross-Laminated Timber Panel", "lambda": 0.13, "density": 520, "fire": "D", "function": "structure"},
+    {"id": "timber_stud", "name": "Timber Stud Frame", "lambda": 0.09, "density": 140, "fire": "D", "function": "structure"},
+    {"id": "steel_stud", "name": "Steel Stud Frame", "lambda": 0.07, "density": 90, "fire": "A1", "function": "structure"},
+    {"id": "brick", "name": "Clay Brick Masonry", "lambda": 0.7, "density": 1800, "fire": "A1", "function": "structure"},
+    {"id": "aac", "name": "Aerated Concrete Block", "lambda": 0.12, "density": 600, "fire": "A1", "function": "structure"},
+    {"id": "concrete_block", "name": "Concrete Block Masonry", "lambda": 1.1, "density": 1900, "fire": "A1", "function": "structure"},
+    {"id": "gravel_fill", "name": "Gravel Fill", "lambda": 0.7, "density": 1800, "fire": "A1", "function": "substrate"}
+  ],
+  "assemblies": [
+    {"id": "ext_rc_mw", "use": "exterior_wall", "name": "Exterior RC MW", "fire_minutes": 90, "layers": [
+      {"material": "mineral_render", "mm": 15},
+      {"material": "mw_facade", "sizes": [60, 80, 100, 120, 140, 160, 180, 200, 220, 240, 260, 280, 300]},
+      {"material": "rc", "mm": 150},
+      {"material": "gypsum_plaster", "mm": 15}]},
+    {"id": "ext_rc_eps", "use": "exterior_wall", "name": "Exterior RC EPS", "fire_minutes": 90, "layers": [
+      {"material": "mineral_render", "mm": 15},
+      {"material": "eps_facade", "sizes": [60, 80, 100, 120, 140, 160, 180, 200, 220, 240, 260, 280, 300]},
+      {"material": "rc", "mm": 150},
+      {"material": "gypsum_plaster", "mm": 15}]},
+    {"id": "retaining_rc", "use": "retaining_wall", "name": "Retaining RC", "fire_minutes": 120, "layers": [
+      {"material": "waterproofing", "mm": 5},
+      {"material": "rc", "sizes": [245, 295, 345, 395, 445, 495, 545, 595, 645, 695, 745, 795, 845, 895, 945, 995, 1045, 1095, 1145, 1195, 1245, 1295, 1345, 1395, 1445, 1495]}]},
+    {"id": "party_cs", "use": "party_wall", "name": "Party CS", "fire_minutes": 90, "structure": ["concrete", "frame"], "layers": [
+      {"material": "gypsum_plaster", "mm": 12.5},
+      {"material": "cs_masonry", "sizes": [115, 150, 175, 200, 240, 300]},
+      {"material": "gypsum_plaster", "mm": 12.5}]},
+    {"id": "partition_stud", "use": "partition", "name": "Partition Stud", "fire_minutes": 30, "layers": [
+      {"material": "gypsum_board", "mm": 12.5},
+      {"material": "mw_cavity", "mm": 75},
+      {"material": "gypsum_board", "mm": 12.5}]},
+    {"id": "partition_wet", "use": "wet_partition", "name": "Wet Partition Stud", "fire_minutes": 30, "layers": [
+      {"material": "gypsum_board_wet", "mm": 12.5},
+      {"material": "mw_cavity", "mm": 75},
+      {"material": "gypsum_board_wet", "mm": 12.5}]},
+    {"id": "floor_rc", "use": "intermediate_slab", "name": "Floor RC Screed", "fire_minutes": 90, "layers": [
+      {"material": "cement_screed", "mm": 50},
+      {"material": "mw_impact", "mm": 30},
+      {"material": "rc", "sizes": [200, 220, 250, 300]}]},
+    {"id": "ground_rc", "use": "ground_slab", "name": "Ground RC XPS", "fire_minutes": 90, "layers": [
+      {"material": "cement_screed", "mm": 50},
+      {"material": "xps", "sizes": [60, 80, 100, 120, 140, 160, 180, 200, 220, 240, 260, 280, 300]},
+      {"material": "pe_vapour", "mm": 0.2},
+      {"material": "rc", "mm": 200}]},
+    {"id": "roof_flat_mw", "use": "flat_roof", "name": "Flat Roof RC MW", "fire_minutes": 90, "layers": [
+      {"material": "bitumen", "mm": 8},
+      {"material": "mw_roof", "sizes": [80, 100, 120, 140, 160, 180, 200, 220, 240, 260, 280, 300, 320, 340, 360, 380, 400]},
+      {"material": "pe_vapour", "mm": 0.2},
+      {"material": "lw_falls", "mm": 50},
+      {"material": "rc", "mm": 200}]},
+    {"id": "roof_flat_pir", "use": "flat_roof", "name": "Flat Roof RC PIR", "fire_minutes": 90, "layers": [
+      {"material": "bitumen", "mm": 8},
+      {"material": "pir_roof", "sizes": [80, 100, 120, 140, 160, 180, 200, 220, 240, 260, 280, 300]},
+      {"material": "pe_vapour", "mm": 0.2},
+      {"material": "lw_falls", "mm": 50},
+      {"material": "rc", "mm": 200}]},
+    {"id": "roof_pitched", "use": "pitched_roof", "name": "Pitched Roof Rafter MW", "fire_minutes": 30, "layers": [
+      {"material": "roof_tiles", "mm": 40},
+      {"material": "underlay", "mm": 1},
+      {"material": "mw_rafter", "sizes": [120, 140, 160, 180, 200, 220, 240, 260, 280, 300, 320, 340, 360]},
+      {"material": "pe_vapour", "mm": 0.2},
+      {"material": "gypsum_board", "mm": 12.5}]},
+    {"id": "core_cs", "use": "core_wall", "name": "Core CS", "fire_minutes": 90, "structure": ["concrete", "frame"], "layers": [{"material": "gypsum_plaster", "mm": 12.5}, {"material": "cs_masonry", "sizes": [115, 150, 175, 200, 240, 300]}, {"material": "gypsum_plaster", "mm": 12.5}]},
+    {"id": "core_brick", "use": "core_wall", "name": "Core Brick", "fire_minutes": 120, "structure": ["masonry"], "layers": [{"material": "gypsum_plaster", "mm": 12.5}, {"material": "brick", "sizes": [115, 150, 175, 200, 240, 300, 365]}, {"material": "gypsum_plaster", "mm": 12.5}]},
+    {"id": "core_rc", "use": "core_wall", "name": "Core RC", "fire_minutes": 120, "structure": ["timber", "timber_frame"], "layers": [{"material": "gypsum_plaster", "mm": 12.5}, {"material": "rc", "sizes": [150, 175, 200, 250, 300]}, {"material": "gypsum_plaster", "mm": 12.5}]},
+    {"id": "floor_clt", "use": "intermediate_slab", "name": "Floor CLT Screed", "fire_minutes": 60, "structure": ["timber", "timber_frame"], "layers": [{"material": "cement_screed", "mm": 50}, {"material": "mw_impact", "mm": 30}, {"material": "gravel_fill", "mm": 80}, {"material": "clt", "sizes": [140, 160, 180, 200, 220, 240, 260, 280, 300, 320, 340, 360, 380, 400]}]},
+    {"id": "roof_flat_clt", "use": "flat_roof", "name": "Flat Roof CLT MW", "fire_minutes": 60, "structure": ["timber", "timber_frame"], "layers": [{"material": "bitumen", "mm": 8}, {"material": "mw_roof", "sizes": [80, 100, 120, 140, 160, 180, 200, 220, 240, 260, 280, 300, 320, 340, 360, 380, 400]}, {"material": "pe_vapour", "mm": 0.2}, {"material": "lw_falls", "mm": 50}, {"material": "clt", "mm": 160}]},
+    {"id": "ext_clt", "use": "exterior_wall", "name": "Exterior CLT MW", "fire_minutes": 60, "structure": ["timber"], "layers": [{"material": "timber_cladding", "mm": 24}, {"material": "mw_facade", "sizes": [60, 80, 100, 120, 140, 160, 180, 200, 220, 240, 260, 280, 300]}, {"material": "clt", "mm": 100}, {"material": "gypsum_board", "mm": 12.5}]},
+    {"id": "ext_timber_frame", "use": "exterior_wall", "name": "Exterior Timber Frame MW", "fire_minutes": 30, "structure": ["timber_frame"], "layers": [{"material": "timber_cladding", "mm": 24}, {"material": "mw_facade", "sizes": [60, 80, 100, 120, 140, 160, 180, 200, 220, 240, 260, 280, 300]}, {"material": "timber_stud", "mm": 140}, {"material": "gypsum_board", "mm": 12.5}]},
+    {"id": "ext_aac", "use": "exterior_wall", "name": "Exterior AAC MW", "fire_minutes": 120, "structure": ["frame"], "layers": [{"material": "mineral_render", "mm": 15}, {"material": "mw_facade", "sizes": [60, 80, 100, 120, 140, 160, 180, 200, 220, 240, 260, 280, 300]}, {"material": "aac", "mm": 200}, {"material": "gypsum_plaster", "mm": 15}]},
+    {"id": "ext_brick", "use": "exterior_wall", "name": "Exterior Brick MW", "fire_minutes": 120, "structure": ["masonry"], "layers": [{"material": "mineral_render", "mm": 15}, {"material": "mw_facade", "sizes": [60, 80, 100, 120, 140, 160, 180, 200, 220, 240, 260, 280, 300]}, {"material": "brick", "mm": 240}, {"material": "gypsum_plaster", "mm": 15}]},
+    {"id": "party_clt", "use": "party_wall", "name": "Party CLT", "fire_minutes": 60, "structure": ["timber", "timber_frame"], "layers": [{"material": "gypsum_board", "mm": 12.5}, {"material": "clt", "sizes": [100, 120, 140, 160, 180, 200, 220, 240, 260, 280, 300, 320, 340, 360, 380, 400, 420, 440, 460, 480, 500, 520, 540, 560, 580, 600, 620, 640, 660, 680, 700]}, {"material": "gypsum_board", "mm": 12.5}]},
+    {"id": "party_brick", "use": "party_wall", "name": "Party Brick", "fire_minutes": 120, "structure": ["masonry"], "layers": [{"material": "gypsum_plaster", "mm": 12.5}, {"material": "brick", "sizes": [115, 150, 175, 200, 240, 300, 365]}, {"material": "gypsum_plaster", "mm": 12.5}]},
+    {"id": "partition_timber", "use": "partition", "name": "Partition Timber Stud", "fire_minutes": 30, "structure": ["timber", "timber_frame"], "layers": [{"material": "gypsum_board", "mm": 12.5}, {"material": "timber_stud", "mm": 75}, {"material": "gypsum_board", "mm": 12.5}]},
+    {"id": "partition_steel", "use": "partition", "name": "Partition Steel Stud", "fire_minutes": 30, "structure": ["frame"], "layers": [{"material": "gypsum_board", "mm": 12.5}, {"material": "steel_stud", "mm": 75}, {"material": "gypsum_board", "mm": 12.5}]},
+    {"id": "partition_block", "use": "partition", "name": "Partition Block", "fire_minutes": 60, "structure": ["masonry"], "layers": [{"material": "gypsum_plaster", "mm": 12.5}, {"material": "concrete_block", "mm": 100}, {"material": "gypsum_plaster", "mm": 12.5}]},
+    {"id": "wet_timber", "use": "wet_partition", "name": "Wet Partition Timber Stud", "fire_minutes": 30, "structure": ["timber", "timber_frame"], "layers": [{"material": "gypsum_board_wet", "mm": 12.5}, {"material": "timber_stud", "mm": 75}, {"material": "gypsum_board_wet", "mm": 12.5}]},
+    {"id": "wet_steel", "use": "wet_partition", "name": "Wet Partition Steel Stud", "fire_minutes": 30, "structure": ["frame"], "layers": [{"material": "gypsum_board_wet", "mm": 12.5}, {"material": "steel_stud", "mm": 75}, {"material": "gypsum_board_wet", "mm": 12.5}]},
+    {"id": "wet_block", "use": "wet_partition", "name": "Wet Partition Block", "fire_minutes": 60, "structure": ["masonry"], "layers": [{"material": "gypsum_plaster", "mm": 12.5}, {"material": "concrete_block", "mm": 100}, {"material": "gypsum_plaster", "mm": 12.5}]}
+  ]
+}

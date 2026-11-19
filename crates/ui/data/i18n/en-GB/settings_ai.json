@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "Connection",
+ "settings.ai_status_desc": "The model the AI assistant uses; keys stay in the secure store",
+ "settings.ai_not_connected": "Not connected",
+ "settings.ai_connect": "Connection settings",
+ "settings.ai_connect_desc": "Address, model and key of your own model, cloud or local",
+ "settings.ai_connect_btn": "Connection settings…",
+ "settings.ai_panel": "AI assistant panel",
+ "settings.ai_panel_desc": "Ask in words, review the plan, then apply",
+ "settings.ai_open_panel": "Open AI panel"
+}

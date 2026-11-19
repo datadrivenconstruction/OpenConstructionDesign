@@ -1,0 +1,11 @@
+{
+ "job.stage.prepare": "Projekti ettevalmistamine",
+ "open_guard.already_open": "{name} on juba avatud",
+ "open_guard.from_cache": "{name}: avati impordi vahemälust",
+ "open_guard.known_project": "{name} imporditi varem: avan selle projekti",
+ "open_guard.locate": "Leia",
+ "open_guard.mem_low": "Vähe mälu: võrgueelarve on poole väiksem ja detailsuse taseme ehitamine peatatud",
+ "open_guard.mem_low_short": "Vähe mälu: detailsuse taseme ehitamine on peatatud, kuni mälu vabaneb",
+ "open_guard.no_window": "Selle projekti akent ei leitud",
+ "open_guard.switch_window": "Lülitu sellele aknale"
+}

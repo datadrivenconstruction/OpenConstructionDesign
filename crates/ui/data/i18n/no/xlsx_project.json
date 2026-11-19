@@ -1,0 +1,7 @@
+{
+ "xlsx_project.title": "Denne arbeidsboken ble eksportert fra et annet prosjekt",
+ "xlsx_project.body": "Arbeidsboken “{file}” hører til et annet prosjekt. Element-id-er er ulike mellom prosjekter, så radene ville endret urelaterte elementer her. Ingenting ble lest inn i dette prosjektet.",
+ "xlsx_project.export_new": "Eksporter dette prosjektet til en ny arbeidsbok",
+ "xlsx_project.close": "Lukk",
+ "xlsx_project.no_project": "Denne arbeidsboken sier ikke hvilket prosjekt den hører til: kontroller at den ble eksportert fra dette prosjektet."
+}

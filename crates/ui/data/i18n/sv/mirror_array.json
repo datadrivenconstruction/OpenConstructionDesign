@@ -1,0 +1,5 @@
+{
+ "mirror_array.err.count": "Antalet är ett heltal från 2 till 200: 4 3000, eller 4;300 när steget har tre siffror",
+ "mirror_array.err.length": "Steget eller totalen är en positiv längd, t.ex. 3 000 eller 1.2 m",
+ "mirror_array.err.angle": "Svepet är en vinkel i grader, inte noll och högst 360"
+}

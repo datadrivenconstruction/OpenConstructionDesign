@@ -1,0 +1,7 @@
+brief = "Hospital bed with a raised head section."
+category = "furniture"
+must = param Width
+must = param Length
+must = solids >= 10
+must = ports 0
+must = flex Width 720 1125

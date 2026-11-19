@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "Juhib mall {name}",
+ "view_template.edit_template": "Muuda malli",
+ "view_template.locked_tip": "Määratud vaatemalliga {name}. Muuda seda mallis.",
+ "view_template.no_filters": "Selles vaates filtreid pole"
+}

@@ -1,0 +1,7 @@
+{
+ "diff.kind.added": "ditambahkan",
+ "diff.kind.changed": "diubah",
+ "diff.kind.deleted": "dihapus",
+ "diff.kind.refused": "ditolak",
+ "diff.kind.conflict": "konflik"
+}

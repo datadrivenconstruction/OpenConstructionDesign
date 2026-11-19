@@ -1,0 +1,5 @@
+{
+ "undo.action": "실행 취소",
+ "undo.action_keys": "실행 취소({keys})",
+ "undo.ai_applied": "변경 사항 적용됨"
+}

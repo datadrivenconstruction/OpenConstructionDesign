@@ -1,0 +1,11 @@
+{
+ "job.stage.prepare": "প্রকল্প প্রস্তুত হচ্ছে",
+ "open_guard.already_open": "{name} ইতিমধ্যে খোলা",
+ "open_guard.from_cache": "{name}: আমদানি ক্যাশ থেকে খোলা হয়েছে",
+ "open_guard.known_project": "{name} আগে আমদানি হয়েছিল: সেই প্রকল্প খোলা হচ্ছে",
+ "open_guard.locate": "খুঁজুন",
+ "open_guard.mem_low": "মেমোরি কম: মেশ বাজেট অর্ধেক করা হয়েছে এবং লেভেল-অফ-ডিটেইল তৈরি থামানো হয়েছে",
+ "open_guard.mem_low_short": "মেমোরি কম: মেমোরি খালি না হওয়া পর্যন্ত লেভেল-অফ-ডিটেইল তৈরি থামানো",
+ "open_guard.no_window": "ওই প্রকল্পের উইন্ডো খুঁজে পাওয়া যায়নি",
+ "open_guard.switch_window": "ওই উইন্ডোতে যান"
+}

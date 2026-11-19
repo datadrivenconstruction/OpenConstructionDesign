@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "Saisie vide.",
+ "units.err.not_number": "Ce n'est pas un nombre à la position {pos}.",
+ "units.err.unknown_unit": "Unité inconnue : {unit}.",
+ "units.err.non_positive": "La longueur doit être supérieure à zéro.",
+ "units.err.too_large": "La longueur ne doit pas dépasser {max} m.",
+ "units.err.bad_angle": "L'angle est un nombre de degrés.",
+ "units.err.unknown_name": "Nom inconnu : {name}. Valeur conservée.",
+ "units.err.cycle": "Boucle de formule sur {name}. Valeur conservée.",
+ "units.err.bad_expr": "Impossible de lire l'expression à la position {pos}. Valeur conservée.",
+ "units.err.div_zero": "Division par zéro à la position {pos}. Valeur conservée.",
+ "units.err.invalid": "Nombre invalide.",
+ "units.err.kept": "Non modifié : {reason}"
+}

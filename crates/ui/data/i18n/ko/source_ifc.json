@@ -1,0 +1,7 @@
+{
+ "src.field.kids": "하위 행 (패널, 꼭짓점)",
+ "src.kids.mine": "하위 행 {n}개, 여기서 변경됨",
+ "src.kids.changed": "여기서 하위 행이 변경됨",
+ "src.kids.theirs": "파일에서 하위 행이 변경됨",
+ "src.kids.take_tip": "다음 가져오기 때 파일의 하위 행을 가져옵니다. 지금은 적용되지 않습니다."
+}

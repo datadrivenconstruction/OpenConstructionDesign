@@ -1,0 +1,16 @@
+{
+ "unit.size_b": "{n} Б",
+ "unit.size_gb": "{n} ГБ",
+ "autosave_status.unit.edits": {
+  "one": "правка",
+  "other": "правок",
+  "few": "правки",
+  "many": "правок"
+ },
+ "autosave_status.unit.copies": {
+  "one": "копія",
+  "other": "копій",
+  "few": "копії",
+  "many": "копій"
+ }
+}

@@ -1,0 +1,131 @@
+{
+ "rules": [
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.25
+   },
+   "unit": "m",
+   "value": 0.25,
+   "text": {
+    "en": "Common stair tread at least 0.25 m",
+    "ru": "Проступь общей лестницы не менее 0.25 м"
+   },
+   "source": {
+    "doc": "se-bbr8",
+    "clause": "BBR 8:232 general advice",
+    "url": "https://www.boverket.se/contentassets/2b709d86893740bab472714cb1ffb4c0/boverkets-byggregler-avsnitt-8-bfs-2011-6-tom-2014-3.pdf",
+    "edition": "BFS 2011:6 amended to BFS 2014:3 (older edition)",
+    "accessed": "2026-11-14",
+    "paraphrase": "Going of stairs should be at least 0.25 m measured on the walking line.",
+    "note": "read 2026-11-14 at older BFS 2014:3 edition of section 8; not rechecked against current edition"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "se.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.4
+   },
+   "unit": "m",
+   "value": 2.4,
+   "text": {
+    "en": "Clear height of habitable rooms at least 2.4 m",
+    "ru": "Высота жилых помещений не менее 2.4 м"
+   },
+   "source": {
+    "doc": "se-bbr3",
+    "clause": "BBR 3:3111",
+    "url": "https://www.boverket.se/globalassets/publikationer/dokument/2026/boverkets-byggregler-bbr-avsnitt-3---tillganglighet-bostadsutformning-rumshojd-och-driftutrymmen.pdf",
+    "edition": "BFS 2011:6, guidance edition before 2025-12-01",
+    "accessed": "2026-11-14",
+    "paraphrase": "Rooms in dwellings meant for more than temporary stay need at least 2.4 m clear height; houses may use 2.3 m in attic and basement storeys."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "se.res.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "room_kind": [
+     "office",
+     "meeting"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.4
+   },
+   "unit": "m",
+   "value": 2.4,
+   "text": {
+    "en": "Clear height of work rooms at least 2.4 m",
+    "ru": "Высота рабочих помещений не менее 2.4 м"
+   },
+   "source": {
+    "doc": "se-bbr3",
+    "clause": "BBR 3:3113",
+    "url": "https://www.boverket.se/globalassets/publikationer/dokument/2026/boverkets-byggregler-bbr-avsnitt-3---tillganglighet-bostadsutformning-rumshojd-och-driftutrymmen.pdf",
+    "edition": "BFS 2011:6, guidance edition before 2025-12-01",
+    "accessed": "2026-11-14",
+    "paraphrase": "Work rooms need at least 2.4 m height; teaching rooms and rooms for many people need 2.7 m."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "se.off.h"
+  },
+  {
+   "id": "eu.off.h",
+   "disabled": true
+  },
+  {
+   "id": "eu.off.tread",
+   "disabled": true
+  },
+  {
+   "id": "eu.res.h",
+   "disabled": true
+  },
+  {
+   "id": "eu.res.tread",
+   "disabled": true
+  }
+ ]
+}

@@ -1,0 +1,27 @@
+[
+ {
+  "id": "mgr.link_add",
+  "dialog": true,
+  "icon": "link-add",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "D"
+  ],
+  "stage": "M3",
+  "group": "model"
+ },
+ {
+  "id": "mgr.link_reload",
+  "icon": "link-reload",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "D"
+  ],
+  "stage": "M3",
+  "group": "model"
+ }
+]

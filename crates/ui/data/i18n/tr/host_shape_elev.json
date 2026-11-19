@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "Kot {t} alınmadı ({why}). Hiçbir şey değiştirilmedi",
+ "host_shape.shape.elev_prompt_in": "kot, ft-in…",
+ "host_shape.shape.elev_in": "{v} in"
+}

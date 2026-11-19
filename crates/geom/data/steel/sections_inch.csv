@@ -1,0 +1,12 @@
+# Inch-series example sections of the member catalogue (`member::catalog`), dimensions in inches.
+# Provenance: nominal designations and dimensions of common North American rolled and hollow
+# shapes, as published in the public shape-dimension tables of the US steel construction
+# standards. Dimensions only (facts), no other content of those tables. Pending legal review.
+# Columns: name, shape. Shape is `kind v1 v2 ...` with the kinds of `Shape::text`:
+# i h b tw tf; c h b tw tf; l h b t; tube h b t; pipe d t.
+# W shapes live in us_w.csv (dimensions per ASTM A6, properties computed in steel::rolled).
+name,shape
+C10x15.3,c 10.0 2.6 0.24 0.436
+L4x4x1/2,l 4.0 4.0 0.5
+HSS6x6x1/2,tube 6.0 6.0 0.5
+Pipe 6 STD,pipe 6.625 0.28

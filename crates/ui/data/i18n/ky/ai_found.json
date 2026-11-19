@@ -1,0 +1,42 @@
+{
+ "ai.tool.show_elements": "Элементтерди көрсөтүү",
+ "ai.tool.isolate_elements": "Элементтерди бөлүү",
+ "ai.tool.color_by": "Маани боюнча боёо",
+ "ai.tool.reset_view": "Көрүнүштү калыбына келтирүү",
+ "ai_found.found.query": "Табылды",
+ "ai_found.found.show": "Көрсөтүлдү",
+ "ai_found.found.isolate": "Бөлүнгөн",
+ "ai_found.found.hide": "Жашырылган",
+ "ai_found.found.color": "Боёлгон",
+ "ai_found.found.count": "{m} ичинен {n}",
+ "ai_found.found.none": "Эч нерсе туура келбейт. Чыпканы кеңирээк коюп көрүңүз.",
+ "ai_found.found.show_btn": "Көрсөтүү",
+ "ai_found.found.show_tip": "Ушул элементтерди тандап, план жана 3D көрүнүштө чоңойтуу",
+ "ai_found.found.isolate_btn": "Бөлүү",
+ "ai_found.found.isolate_tip": "Көрүнүштү калыбына келтиргичке чейин ушул элементтерди гана көрсөтүү",
+ "ai_found.found.select_btn": "Тандоо",
+ "ai_found.found.select_tip": "Көрүнүштү жылдырбай ушул элементтерди тандоо",
+ "ai_found.legend.title": "{by} боюнча боёо",
+ "ai_found.legend.row_tip": "Бул элементтерди тандоо үчүн басыңыз",
+ "ai_found.legend.empty_value": "Маани жок",
+ "ai_found.legend.other": {
+  "one": "# дагы бир маани",
+  "other": "# дагы маани"
+ },
+ "ai_found.view.title": "AI жардамчысынын көрүнүшү",
+ "ai_found.view.reset": "Көрүнүштү калыбына келтирүү",
+ "ai_found.view.reset_tip": "AI жардамчысы өзгөрткөнгө чейинки көрүнүштү кайтаруу",
+ "ai_found.view.shown": {
+  "one": "# элемент көрсөтүлдү",
+  "other": "# элемент көрсөтүлдү"
+ },
+ "ai_found.view.isolated": {
+  "one": "# элемент бөлүндү",
+  "other": "# элемент бөлүндү"
+ },
+ "ai_found.view.hidden": {
+  "one": "# элемент жашырылган",
+  "other": "# элемент жашырылган"
+ },
+ "ai_found.found.line": "{what}: {count}"
+}

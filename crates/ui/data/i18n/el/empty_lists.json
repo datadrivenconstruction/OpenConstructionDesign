@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "Σχεδίαση τοίχου",
+ "empty.totals.action": "Σχεδίαση τοίχου",
+ "empty.schedule.action": "Προσθήκη πεδίου",
+ "empty.schedule_filtered.action": "Εκκαθάριση φίλτρου",
+ "empty.library.action": "Επαναφορά αναζήτησης",
+ "empty.library.load": "Φόρτωση οικογένειας",
+ "empty.schedule_fields.title": "Δεν εμφανίζονται πεδία",
+ "empty.schedule_fields.action": "Προσθήκη πεδίου",
+ "empty.schedule_fields.hint": "Ενεργοποιήστε τουλάχιστον ένα πεδίο για να δείτε τον πίνακα."
+}

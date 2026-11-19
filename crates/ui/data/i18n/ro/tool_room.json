@@ -1,0 +1,9 @@
+{
+ "tool.room": "Încăpere",
+ "tool.room.name": "Încăpere",
+ "room_tool.room.name": "Nume",
+ "hint.room.place": "Fă clic în interiorul unei bucle de pereți închise pentru a crea o încăpere · Esc — ieșire",
+ "tool.err.room_open": "Regiunea nu este închisă: închide bucla de pereți sau adaugă un separator de încăpere",
+ "tool.err.room_check": "Nu se pot verifica încăperile acestui nivel",
+ "tool.err.room_exists": "Există deja o încăpere în această buclă"
+}

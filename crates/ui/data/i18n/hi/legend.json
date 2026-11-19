@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "लीजेंड",
+ "legend.legend.new_hint": "नए लीजेंड का नाम",
+ "legend.legend.delete_tip": "लीजेंड हटाएँ",
+ "legend.legend.delete_placed": "लीजेंड हटाएँ (लगा है: {sheets})",
+ "legend.legend.deleted": "लीजेंड हटाया गया: {name}",
+ "legend.legend.no_rows": "अभी कोई पंक्ति नहीं। एक जोड़ें या इस व्यू की स्टाइल लें",
+ "legend.legend.replace_q": "{n} पंक्तियाँ इस व्यू की स्टाइल से बदलें?",
+ "legend.legend.replace": "बदलें",
+ "legend.legend.keep": "पंक्तियाँ रखें",
+ "legend.col.swatch": "नमूना रंग",
+ "legend.col.value": "मान",
+ "legend.col.label": "लेबल"
+}

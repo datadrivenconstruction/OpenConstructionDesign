@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "Mansarda teshigi",
+ "cmd.arch.roof_opening": "Tom teshigi",
+ "cmd.arch.roof_extrusion": "Tomni ekstruziya bilan",
+ "cmd.arch.ceiling_opening": "Shift teshigi",
+ "cmd.str.slab_opening": "Plita teshigi",
+ "cmd.ctx.wall.detach": "Tepani ajratish",
+ "cmd.ctx.floor.sketch": "Chegarani tahrirlash",
+ "cmd.ctx.floor.shape": "Shaklni tahrirlash",
+ "host_shape.shape.elev_prompt": "balandlik, mm…",
+ "host_shape.shape.elev_mm": "{v} mm",
+ "host_shape.sketch.no_host": "bu qavatda chegara ostida tayanch yo'q",
+ "host_shape.issue.roof": "tom {id}: {e}",
+ "host_shape.issue.ceiling": "shift {id}: {e}",
+ "host_shape.status.select_slab": "plitani tanlang",
+ "host_shape.status.select_walls": "devorlarni tanlang",
+ "host_shape.status.no_roof_or_level": "yuqorida tom yoki qavat yo'q",
+ "host_shape.status.top_attached": "devor tepalari biriktirildi",
+ "host_shape.status.top_detached": "devor tepalari ajratildi",
+ "host_shape.status.straight_wall": "to'g'ri devor kerak",
+ "host_shape.status.roof_extruded": "ekstruziya bilan tom yaratildi",
+ "warn.kind.cut": "Kesim yoki biriktirma qurilmadi"
+}

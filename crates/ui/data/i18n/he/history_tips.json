@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "בוטל — Ctrl+Y מבצע שוב",
+ "history.hist.empty": "עדיין אין שינויים",
+ "history.hist.empty_hint": "העריכות שלך יופיעו כאן. לחץ על כל שלב כדי לחזור אליו.",
+ "history.hist.revert_all_n": "החזר את כל שינויי ה-AI למצב קודם ({n})"
+}

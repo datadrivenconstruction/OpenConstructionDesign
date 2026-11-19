@@ -1,0 +1,13 @@
+{
+ "cmd.arch.wall_pick": "Seinä viivan mukaan",
+ "cmd.arch.wall_pick.desc": "Sijoittaa seinän nykyisen tason valitulle piirustusviivalle. F vaihtaa akselin tai pinnan viivalla, Tab valitsee yhteenliittyvän ketjun. Jokainen valinta on yksi kumottava vaihe. Toimii myös verhoseinille.",
+ "hint.wall_pick.center": "Seinä viivan mukaan: valitse piirustusviiva · akseli viivalla · F pinta · Tab ketju · Esc poistu",
+ "hint.wall_pick.face": "Seinä viivan mukaan: valitse piirustusviiva · pinta viivalla, kursorin puolella · F akseli · Tab ketju · Esc poistu",
+ "hint.wall_pick.center_chain": "Seinä viivan mukaan: valitse viiva ottaaksesi sen ketjun · akseli viivalla · F pinta · Tab yksi viiva",
+ "hint.wall_pick.face_chain": "Seinä viivan mukaan: valitse viiva ottaaksesi sen ketjun · pinta viivalla · F akseli · Tab yksi viiva",
+ "wall_pick.st.start": "Valitse piirustusviiva. F: akseli tai pinta, Tab: yhteenliittyvä ketju",
+ "wall_pick.st.no_lines": "Tällä tasolla ei ole näkyviä piirustusviivoja",
+ "wall_pick.st.miss": "Ei piirustusviivaa tässä",
+ "wall_pick.st.on_wall": "Tämä viiva on jo seinän {id} alla",
+ "wall_pick.st.tight": "Pintasiirtymä ei mahdu: ketjun osuus on lyhyempi kuin seinän paksuus"
+}

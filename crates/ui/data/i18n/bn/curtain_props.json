@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "প্যানেল",
+ "curtain_props.cw.panel_cell": "সেল {i}×{j} · কার্টেন ওয়াল #{id}",
+ "curtain_props.cw.kind": "ধরন",
+ "curtain_props.cw.kind.glazed": "কাঁচ",
+ "curtain_props.cw.kind.solid": "কঠিন",
+ "curtain_props.cw.kind.door": "দরজা",
+ "curtain_props.cw.kind.window": "জানালা",
+ "curtain_props.cw.kind.empty": "খালি",
+ "curtain_props.cw.name": "নাম",
+ "curtain_props.cw.swing_side": "অন্য দিকে খোলে",
+ "curtain_props.cw.swing_hinge": "সেলের প্রান্তে কব্জা",
+ "curtain_props.cw.size": "আকার",
+ "curtain_props.cw.cell_area": "সেলের ক্ষেত্রফল",
+ "curtain_props.cw.panel_area": "প্যানেলের ক্ষেত্রফল",
+ "curtain_props.cw.prev": "আগের প্যানেল",
+ "curtain_props.cw.next": "পরবর্তী প্যানেল",
+ "curtain_props.cw.wall": "দেয়াল বেছে নিন",
+ "curtain_props.cw.panel_hint": "Esc — নির্বাচন · Ctrl+Z — আনডু",
+ "curtain_props.cw.status.panel": "প্যানেল {i}×{j} → {kind}",
+ "e3d.err.cw_height": "কার্টেন ওয়ালের উচ্চতা 100 mm-এর বেশি হতে হবে"
+}

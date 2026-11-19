@@ -1,0 +1,6 @@
+{
+ "cmd.arch.room_auto.short": "Place rooms",
+ "cmd.mod.group_select.short": "Select group",
+ "cmd.mod.group_cancel.short": "Cancel edit",
+ "cmd.view.place_sheet_list.short": "Place sheet list"
+}

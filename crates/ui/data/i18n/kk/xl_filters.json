@@ -1,0 +1,6 @@
+{
+ "xl.msg.filter_on_sheet_x": "'{}' парағындағы сүзгі",
+ "xl.msg.sort_settings_on_sheet_x": "'{}' парағындағы сұрыптау параметрлері",
+ "xl.msg.hidden_rows_on_sheet_x": "'{}' парағындағы жасырын жолдар",
+ "xl.msg.hidden_columns_on_sheet_x": "'{}' парағындағы жасырын бағандар"
+}

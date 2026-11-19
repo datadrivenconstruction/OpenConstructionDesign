@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "Đã sửa",
+ "ai.redraft.added": "+{n} mới",
+ "ai.redraft.removed": "−{n} đã xóa",
+ "ai.redraft.changed": "~{n} đã đổi",
+ "ai.redraft.strip": "{what} từ lần xem cuối của bạn",
+ "ai.redraft.note": "Đã xem kế hoạch đã sửa: {what}",
+ "ai.redraft.more": "+{n} nữa",
+ "ai.redraft.ack": "Đã hiểu",
+ "ai.redraft.ack.tip": "Đánh dấu bản sửa này đã xem; Áp dụng sau đó sẽ nhắm vào nó",
+ "ai.redraft.removed_list": "Mục đã xóa: {n}",
+ "ai.redraft.review_first": "Kế hoạch đã đổi sau tin nhắn của bạn: hãy xem các thay đổi trước",
+ "ai.redraft.mark.tip": "Mới hoặc đã đổi từ lần xem cuối của bạn",
+ "ai.redraft.emptied": "Yêu cầu tiếp theo đã xóa mọi mục: bản nháp trống"
+}

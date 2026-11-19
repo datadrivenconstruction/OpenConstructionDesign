@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "مجرى هواء",
+ "mep3d.pipe": "أنبوب",
+ "mep3d.tray": "حامل كابلات",
+ "mep3d.conduit": "قناة كابلات",
+ "mep3d.system": "النظام",
+ "mep3d.length": "الطول",
+ "mep3d.diameter": "القطر",
+ "mep3d.width": "العرض",
+ "mep3d.height": "الارتفاع",
+ "mep3d.insulation": "العزل",
+ "mep3d.tip": "Enter — تطبيق؛ تُعاد حساب الوصلات",
+ "mep3d.size_positive": "يجب أن يكون المقاس أكبر من الصفر",
+ "mep3d.not_changed": "لم يتغير: {e}",
+ "mep3d.copied": "نُسخ المسار",
+ "mep3d.changed": "تغيّر المسار",
+ "mep3d.deleted": "حُذفت العناصر: {n}",
+ "mep3d.not_deleted": "لم يُحذف: {e}",
+ "mep3d.no_wall_type": "لا يوجد نوع جدار",
+ "mep3d.demo.supply": "إمداد S1",
+ "mep3d.demo.heating": "تدفئة",
+ "mep3d.demo.power": "كهرباء"
+}

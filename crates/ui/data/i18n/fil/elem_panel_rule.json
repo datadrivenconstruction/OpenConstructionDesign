@@ -1,0 +1,5 @@
+{
+ "elem.panel_select_wall": "Pumili ng pader",
+ "cmd.elem.panel_select_wall": "Pumili ng pader",
+ "elem.left_in_place": "Naiwan sa lugar: {kinds}. Kasama ng pader nito ang panel; ang mga mass at annotation ay binubura nang kusa."
+}

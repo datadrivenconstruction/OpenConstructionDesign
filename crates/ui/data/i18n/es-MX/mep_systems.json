@@ -1,0 +1,21 @@
+{
+ "mep.row.system": "Sistema",
+ "mep.row.elevation": "Cota inicial",
+ "mep.row.slope": "Pendiente",
+ "mep.row.material": "Material",
+ "mep.row.dev_elevation": "Cota",
+ "mep.row.no_system": "Ese sistema ya no existe. Elija otro.",
+ "mep.row.no_points": "El tramo no tiene puntos, por lo que no tiene cota.",
+ "mep.row.system_domain": "El sistema {system} no admite este tipo de tramo ({kind}). Elija un sistema del mismo tipo de red.",
+ "mep.row.material_pipes": "El material se aplica solo a tuberías; este tramo es de tipo {kind}.",
+ "mep.row.no_catalog": "El material no tiene tamaños de catálogo para este tramo.",
+ "mep.mat.none": "Sin definir",
+ "mep.mat.steel": "Acero",
+ "mep.mat.copper": "Cobre",
+ "mep.mat.pvc": "PVC",
+ "mep.mat.pp": "Polipropileno",
+ "mep.err.follow_blocked": "Un tramo conectado no puede seguir este cambio: no hay espacio para su tramo en la nueva posición. Mueva menos el equipo o desconecte antes el tramo.",
+ "mep.err.follow_slope": "Un tramo conectado tiene una pendiente que no puede mantenerse en la nueva posición: caería por debajo de la pendiente mínima de su sistema. Mueva menos el equipo en altura o desconecte antes el tramo.",
+ "mep.err.follow_port_lost": "Una conexión en la que estaba este tramo ya no existe tras la edición. Mueva antes el tramo o mantenga el tipo de equipo.",
+ "mep.err.follow_device": "Este tramo termina en una conexión de equipo y no puede separarse de ella. Mueva el equipo en su lugar o desconecte antes el tramo."
+}

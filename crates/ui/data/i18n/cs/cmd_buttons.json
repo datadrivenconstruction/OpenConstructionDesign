@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}, na podlaží",
+ "cmd_buttons.purge.undo": "Odstranění je jeden krok zpět.",
+ "cmd_buttons.unpin.none": "Žádný výběr není připnutý",
+ "cmd_buttons.change_type.none": "Nejprve vyberte stěny: jejich typ se změní jedním krokem",
+ "cmd_buttons.units.metric": "Jednotky: metrické",
+ "cmd_buttons.units.imperial": "Jednotky: stopy a palce",
+ "cmd_buttons.units.back": "Přepnout zpět",
+ "cmd_buttons.underlay.on": "Podklad zapnut: podlaží pod ním je zobrazeno ztlumeně",
+ "cmd_buttons.underlay.off": "Podklad vypnut",
+ "cmd_buttons.underlay.none": "Podklad zapnut, ale podlaží pod ním nemá co zobrazit",
+ "cmd_buttons.zoom_sel.no_shape": "Výběr nemá v tomto pohledu tvar, na který by se dalo přiblížit",
+ "cmd_buttons.close.base": "Karty půdorysu a 3D zůstanou otevřené; zavřít lze řez, list nebo výkresový pohled",
+ "tool.equipment": "Zařízení",
+ "hint.equipment.place": "Zařízení: vyberte umístění · Esc — ukončit",
+ "cmd_buttons.table.opened": "Tabulka otevřena vedle modelu",
+ "cmd_buttons.circuits.tip": "Otevřít seznam elektrických okruhů tohoto modelu"
+}

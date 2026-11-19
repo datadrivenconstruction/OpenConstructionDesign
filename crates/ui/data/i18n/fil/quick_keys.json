@@ -1,0 +1,6 @@
+{
+ "quick.keys.rec_hint": "Esc para kanselahin · Backspace para burahin",
+ "quick.keys.row_lost": "Napunta na ang {key} sa “{cmd}”",
+ "quick.keys.row_took": "Kinuha ang {key} mula sa “{cmd}”",
+ "quick.keys.reset_tip": "Ibalik sa default"
+}

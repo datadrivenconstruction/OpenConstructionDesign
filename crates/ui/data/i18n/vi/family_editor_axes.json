@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "Trục X",
+ "fe.axis.y": "Trục Y",
+ "fe.axis.z": "Trục Z",
+ "fe.col.axis": "Trục",
+ "fe.col.at": "Vị trí",
+ "fe.col.mode": "Chế độ",
+ "fe.mode.fixed": "Cố định",
+ "fe.mode.free": "Tự do",
+ "fe.types.inherited": "Mặc định từ tham số",
+ "fe.csv.more": "Thao tác CSV khác",
+ "fe.ref.selected": "Mặt phẳng: {name}"
+}

@@ -1,0 +1,6 @@
+{
+ "delsafe.ring.opening_shape": "একটি ওপেনিং আউটলাইন নিজেকে ছেদ করবে বা ভেঙে যাবে",
+ "delsafe.ring.opening_boundary": "একটি ওপেনিং বাইরের সীমানা ছেদ বা স্পর্শ করবে",
+ "delsafe.ring.openings_overlap": "ওপেনিংগুলো পরস্পর ওভারল্যাপ বা স্পর্শ করবে",
+ "xl.msg.delsafe_instance_param_on_types": "প্যারামিটার '{}' একটি ইনস্ট্যান্স প্যারামিটার; এটি elements শিটে সম্পাদনা করুন, প্রয়োগ হয়নি"
+}

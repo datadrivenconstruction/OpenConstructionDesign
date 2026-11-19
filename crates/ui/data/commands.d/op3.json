@@ -1,0 +1,24 @@
+[
+ {
+  "id": "file.import_again",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "file.open_kept",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ }
+]

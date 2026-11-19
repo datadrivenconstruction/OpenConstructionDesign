@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "입력이 비어 있습니다.",
+ "units.err.not_number": "{pos} 위치가 숫자가 아닙니다.",
+ "units.err.unknown_unit": "알 수 없는 단위: {unit}.",
+ "units.err.non_positive": "길이는 0보다 커야 합니다.",
+ "units.err.too_large": "길이는 {max} m를 넘을 수 없습니다.",
+ "units.err.bad_angle": "각도는 도 단위 숫자여야 합니다.",
+ "units.err.unknown_name": "알 수 없는 이름: {name}. 값 유지.",
+ "units.err.cycle": "{name}에서 수식이 순환합니다. 값 유지.",
+ "units.err.bad_expr": "{pos} 위치의 수식을 읽을 수 없습니다. 값 유지.",
+ "units.err.div_zero": "{pos} 위치에서 0으로 나눔. 값 유지.",
+ "units.err.invalid": "잘못된 숫자입니다.",
+ "units.err.kept": "변경되지 않음: {reason}"
+}

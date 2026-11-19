@@ -1,0 +1,15 @@
+{
+ "sheet_place.place_view_tip": "Postavi pogled ili tablicu na list",
+ "sheet_place.properties_tip": "Broj lista, naziv, papir i revizije",
+ "sheet_place.print_tip": "Ispiši ili izvezi list",
+ "sheet_place.fit_tip": "Prilagodi list prozoru",
+ "sheet_place.activate_tip": "Uredite pogled na listu: pomičite, zumirajte i izrežite ga",
+ "sheet_place.open_view_tip": "Otvori pogled u vlastitoj kartici",
+ "sheet_place.done_tip": "Završi uređivanje pogleda na listu",
+ "sheet_place.reset_crop_tip": "Ukloni izrez i prikaži cijeli pogled",
+ "sheet_place.scale_tip": "Mjerilo odabranog pogleda na listu",
+ "sheet_place.title_tip": "Naslov prikazan ispod pogleda na listu",
+ "sheet_place.banner": "Uređivanje pogleda na listu",
+ "sheet_place.new_set_tip": "Izradi skup listova za zajednički ispis",
+ "sheet_place.new_sheet_tip": "Dodaj list u projekt"
+}

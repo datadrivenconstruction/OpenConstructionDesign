@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "{total} 件中 {done} 件を認識中",
+ "mesh_recognize.all": "すべて {n}",
+ "mesh_recognize.only_confident": "確度が高いもののみ",
+ "mesh_recognize.confident_tip": "種類がカテゴリに一致し、確度が {pct}% 以上の行をチェックします",
+ "mesh_recognize.row_hint": "行をクリックしてチェック。矢印キーで移動、Enter でチェック。",
+ "mesh_recognize.kind_for": "{name} の種類",
+ "mesh_recognize.source": "元のメッシュ",
+ "mesh_recognize.keep": "メッシュを保持",
+ "mesh_recognize.replace": "メッシュを置き換え",
+ "mesh_recognize.convert_keep": "{n} 件を変換",
+ "mesh_recognize.convert_remove": "{n} 件を変換してメッシュを削除",
+ "mesh_recognize.creates": "{n} 件を作成: {kinds}",
+ "mesh_recognize.creates_none": "まだチェックされていません",
+ "mesh_recognize.stay": "元のメッシュ {n} 件はモデルに残ります",
+ "mesh_recognize.removed": "元のメッシュ {n} 件が削除されます。元に戻すと復元されます。"
+}

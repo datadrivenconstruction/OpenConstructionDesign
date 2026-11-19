@@ -1,0 +1,15 @@
+{
+ "cmd.ctx.floor.clean_outline": "Làm sạch đường viền",
+ "cmd.ctx.floor.clean_outline.desc": "Xóa các gai nhọn hẹp nơi đường viền sàn quay ngược lại. Hiển thị bản xem trước trước; một bước hoàn tác.",
+ "outline_cleanup.title": "Làm sạch đường viền",
+ "outline_cleanup.intro": "Đường viền của sàn này quay ngược lại tạo thành các gai nhọn hẹp: {n}. Làm sạch sẽ xóa chúng; mọi thứ khác giữ nguyên.",
+ "outline_cleanup.legend_before": "Nét đậm: đường viền hiện tại",
+ "outline_cleanup.legend_after": "Nét mảnh: đường viền sau khi làm sạch",
+ "outline_cleanup.undo": "Bạn có thể hoàn tác việc này trong một bước.",
+ "outline_cleanup.apply": "Làm sạch",
+ "outline_cleanup.cancel": "Hủy",
+ "outline_cleanup.done": "Đã làm sạch đường viền, đã xóa gai nhọn: {n}",
+ "outline_cleanup.none": "Đường viền của sàn này không có gai nhọn",
+ "outline_cleanup.failed": "Không làm sạch được đường viền",
+ "outline_cleanup.changed": "Đường viền đã thay đổi kể từ bản xem trước; chưa ghi gì. Hãy kiểm tra bản xem trước mới."
+}

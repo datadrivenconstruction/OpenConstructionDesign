@@ -1,0 +1,21 @@
+{
+ "ai.receipt.title": {
+  "one": "Tillämpade # ändring",
+  "other": "Tillämpade # ändringar"
+ },
+ "ai.receipt.more": "+{n} till",
+ "ai.receipt.list": "Element",
+ "ai.receipt.show": "Visa",
+ "ai.receipt.show.tip": "Markera och visa de ändrade elementen",
+ "ai.receipt.undo": "Ångra",
+ "ai.receipt.undo.tip": "Ta tillbaka exakt denna tillämpning",
+ "ai.receipt.undone": "Ångrat",
+ "ai.receipt.later": "Senare redigeringar gjordes",
+ "ai.receipt.toast_undone": "Den tillämpade planen ångrades",
+ "ai.receipt.draft_family": "Utkastfamilj: {name}",
+ "ai.receipt.promote": "Gör användbar",
+ "ai.receipt.promote.tip": "Gör utkastfamiljen till en användbar (ett ångra-steg)",
+ "ai.receipt.promoted": "Familjen är nu användbar",
+ "ai.receipt.promote_failed": "Familjen kunde inte göras användbar",
+ "cmd.ai.receipt_undo": "Ångra senaste AI-plan"
+}

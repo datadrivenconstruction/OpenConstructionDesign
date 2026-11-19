@@ -1,0 +1,6 @@
+{
+ "cmd.ui.pane.next": "Další panel",
+ "cmd.ui.pane.next.desc": "Přesune fokus klávesnice na další viditelný panel (prohlížeč, plátno, vlastnosti, chat).",
+ "cmd.ui.pane.prev": "Předchozí panel",
+ "cmd.ui.pane.prev.desc": "Přesune fokus klávesnice na předchozí viditelný panel."
+}

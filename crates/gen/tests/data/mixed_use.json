@@ -1,0 +1,3 @@
+{"typology": "office", "name": "Mixed-use Tower", "floors": 14,
+ "ground_rooms": [{"kind": "retail", "area": 90, "count": 3}, {"kind": "lobby", "area": 60}],
+ "design": {"massing": "tower_podium", "upper_from": 2, "setback": 3, "facade": "fins", "rhythm": 2.1, "balconies": "loggia", "terrace": true, "trees": 14}}

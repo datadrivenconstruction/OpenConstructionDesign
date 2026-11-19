@@ -1,0 +1,16 @@
+[package]
+name = "ddc-calc"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Structural analysis job: analytical model and loads to solver input"
+
+[dependencies]
+ddc-model = { path = "../model" }
+ddc-geom = { path = "../geom" }
+ddc-fem = { path = "../fem" }
+serde_json.workspace = true
+sha2 = "0.10"

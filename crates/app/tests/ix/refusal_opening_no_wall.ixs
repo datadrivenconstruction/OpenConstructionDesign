@@ -1,0 +1,2 @@
+# A door away from every wall is refused
+tool(DR) move(3,2) click(3,2) → refusal=opening_no_wall rows(opening)=0 journal=+0

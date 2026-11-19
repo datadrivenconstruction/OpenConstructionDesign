@@ -1,0 +1,8 @@
+{
+ "api.cmd.norms_lookup": "Tìm quy định trong bộ quy chuẩn của dự án theo chủ đề, phần tử hoặc mã",
+ "api.cmd.norms_check": "Kiểm tra mô hình theo bộ quy chuẩn của dự án và liệt kê phát hiện",
+ "api.cmd.norms_programme": "Chương trình phòng điển hình theo quốc gia của dự án cho một loại công trình",
+ "api.cmd.select_similar": "Chọn mọi phần tử giống phần tử này: cùng loại hoặc danh mục, trên tầng này hoặc trong toàn dự án",
+ "api.cmd.create_drawing_set": "Soạn bộ bản vẽ in được: mặt bằng, mặt cắt, mặt đứng, bảng thống kê và khung tên",
+ "api.cmd.deliver_project": "Từ bản mô tả đến tệp trong một bước: dự án và bộ bản vẽ của nó, xuất sau khi Áp dụng"
+}

@@ -1,0 +1,16 @@
+{
+ "cmd.drawing.to_detail": "Ritning till detalj",
+ "cmd.drawing.to_detail.desc": "Omvandlar de valda ritningsprimitiverna, eller hela ritningen på denna nivå, till detaljlinjer, textnoteringar och områden i planen. Ritningen förblir oförändrad.",
+ "detail_items.st.no_drawing": "Ingen ritning på denna nivå",
+ "detail_items.st.nothing": "Inget att konvertera: inga linjer, bågar, texter eller fyllningar på synliga lager",
+ "detail_items.st.done": "Detaljobjekt tillagda: linjer {lines}, texter {texts}, områden {regions}",
+ "detail_items.st.failed": "Kunde inte lägga till detaljobjekt: {e}",
+ "detail_items.st.warn": "Detaljobjekt tillagda, men vyn kunde inte uppdateras (linjer {lines}, texter {texts}, områden {regions}): {e}. Ångra tar bort dem.",
+ "detail_items.st.bad_view": "Detaljobjekt kräver en plan- eller sektionsvy",
+ "detail_items.st.no_transform": "Denna vy har inget användbart koordinatsystem för ritningen; inget lades till",
+ "drafting_tools.free.plan_only": "Detta kommando fungerar på planelement; öppna en plan",
+ "drafting_tools.free.zero": "De två punkterna sammanfaller; inget lades till",
+ "drafting_tools.free.select_first": "Markera först objekten i denna vy som ska fördelas",
+ "drafting_tools.free.pick_item": "Klicka på ett objekt i denna vy för att märka det",
+ "drafting_tools.free.dim_kind": "Endast linjära måttsättningar fungerar i en ritvy"
+}

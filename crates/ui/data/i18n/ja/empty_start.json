@@ -1,0 +1,8 @@
+{
+ "empty.start_recent.title": "最近のプロジェクトはまだありません",
+ "empty.start_recent.hint": "開いたプロジェクトがここに表示されます。まずはサンプルモデルから始めてください。",
+ "empty.start_recent.action": "サンプルを開く",
+ "start.recent_open_file": "ファイルを開く…",
+ "start.forgot": "最近使ったファイルから削除しました: {name}",
+ "start.forgot_undo": "元に戻す"
+}

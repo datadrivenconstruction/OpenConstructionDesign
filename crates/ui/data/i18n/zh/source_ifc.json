@@ -1,0 +1,7 @@
+{
+ "src.field.kids": "子行（构件、顶点）",
+ "src.kids.mine": "{n} 个子行，已在此处更改",
+ "src.kids.changed": "此处已更改子行",
+ "src.kids.theirs": "文件中已更改的子行",
+ "src.kids.take_tip": "下次导入将采用文件中的子行；当前不会应用。"
+}

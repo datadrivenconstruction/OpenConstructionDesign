@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "継手",
+ "elem.mep_fitting.many": "継手",
+ "elem.mep_fitting.kind.elbow": "エルボ",
+ "elem.mep_fitting.kind.tee": "チーズ",
+ "elem.mep_fitting.kind.cross": "クロス",
+ "elem.mep_fitting.kind.transition": "レデューサー",
+ "elem.mep_fitting.kind.cap": "キャップ",
+ "elem.mep_fitting.size": "サイズ",
+ "elem.mep_fitting.at": "位置",
+ "elem.mep_fitting.runs": "ルート {n}",
+ "elem.mep_fitting.edit_run": "ルートを編集",
+ "elem.mep_fitting.select_runs": "そのルートを選択",
+ "elem.mep_fitting.derived": "継手はルートに追従します。ルートを変更すると継手も一緒に変わります。",
+ "elem.mep_fitting.no_delete": "継手単独では削除も移動もできません。そのルートを編集または削除してください。",
+ "elem.mep_fitting.hint": "平面上の継手をクリックすると、そのルートが表示されます。",
+ "elem.mep_fitting.picked": "選択した継手: {n}"
+}

@@ -1,0 +1,46 @@
+{
+ "rebar_hosts.hosts": "Hostitelé: {list}",
+ "rebar_hosts.kind.column": "Sloup",
+ "rebar_hosts.kind.beam": "Trám",
+ "rebar_hosts.kind.wall": "Stěna",
+ "rebar_hosts.kind.slab": "Deska",
+ "rebar_hosts.kind.footing": "Patka",
+ "rebar_hosts.kind.raft": "Základová deska",
+ "rebar_hosts.n.column": {
+  "one": "# sloup",
+  "few": "# sloupy",
+  "other": "# sloupů"
+ },
+ "rebar_hosts.n.beam": {
+  "one": "# trám",
+  "few": "# trámy",
+  "other": "# trámů"
+ },
+ "rebar_hosts.n.wall": {
+  "one": "# stěna",
+  "few": "# stěny",
+  "other": "# stěn"
+ },
+ "rebar_hosts.n.slab": {
+  "one": "# deska",
+  "few": "# desky",
+  "other": "# desek"
+ },
+ "rebar_hosts.n.footing": {
+  "one": "# patka",
+  "few": "# patky",
+  "other": "# patek"
+ },
+ "rebar_hosts.n.raft": {
+  "one": "# základová deska",
+  "few": "# základové desky",
+  "other": "# základových desek"
+ },
+ "rebar_hosts.mixed_note": "Sloupy a trámy přijímají pruty a třmínky; stěny, desky a základy přijímají síť. Pro přidání výztuže vyberte jednu skupinu.",
+ "rebar_hosts.why.mixed": "Výběr míchá sloupy nebo trámy se stěnami, deskami nebo základy. Vyberte jednu skupinu.",
+ "rebar_hosts.why.area_linear": "Síť patří do stěn, desek a základů, ne do sloupů nebo trámů.",
+ "rebar_hosts.why.bars_plate": "Podélné pruty a třmínky patří do sloupů a trámů, ne do stěn, desek nebo základů.",
+ "rebar_hosts.why.no_common_face": "Vybraní hostitelé nemají společnou krycí plochu. Vyberte hostitele jednoho druhu.",
+ "rebar_hosts.why.no_type": "Vyberte typ prutu.",
+ "rebar_hosts.kind_type": "{kind} · {type}"
+}

@@ -1,0 +1,21 @@
+{
+ "cmd.help.check_update": "Kiểm tra cập nhật",
+ "update_check.title": "Kiểm tra cập nhật",
+ "update_check.desc": "Mặc định tắt. Chỉ gửi số phiên bản, hệ điều hành, kiến trúc và loại cài đặt tới máy chủ. Không bao giờ tải về hay cài đặt gì.",
+ "update_check.freq.startup": "Khi khởi động",
+ "update_check.freq.daily": "Hằng ngày",
+ "update_check.freq.weekly": "Hằng tuần",
+ "update_check.freq.never": "Không bao giờ",
+ "update_check.check_now": "Kiểm tra ngay",
+ "update_check.dialog.title": "Kiểm tra cập nhật",
+ "update_check.unknown.title": "Không thể kiểm tra cập nhật",
+ "update_check.unknown.body": "{e}. Điều này không có nghĩa phiên bản này là mới nhất. Hãy thử lại sau.",
+ "update_check.current": "Bạn đang dùng phiên bản mới nhất ({v}).",
+ "update_check.newer": "Có phiên bản {v}",
+ "update_check.date": "Phát hành {d}",
+ "update_check.unfit": "Phiên bản này ({v}) cũ hơn phiên bản tối thiểu được khuyến nghị {f}. Nên cập nhật.",
+ "update_check.close": "Đóng",
+ "update_check.open_failed": "Không thể mở trang phát hành.",
+ "update_check.toast.newer": "Có phiên bản {v}. Trợ giúp > Kiểm tra cập nhật.",
+ "update_check.toast.unfit": "Phiên bản này ({v}) cũ hơn phiên bản tối thiểu được khuyến nghị {f}."
+}

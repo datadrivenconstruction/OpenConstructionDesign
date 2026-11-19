@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "Баш аттардын астындагы чыпка катары. Текст: камтуу; сандар: >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "Тилкелерди көрсөтүү же жашыруу",
+ "sched_toolbar.groups_tip": "Катарларды тилкелер боюнча топтоо, суммалар менен",
+ "sched_toolbar.formulas_tip": "Эсептелүүчү тилкелер",
+ "sched_toolbar.phase": "Фаза",
+ "sched_toolbar.phase_tip": "Катарлар кайсы фазадан алынат",
+ "sched_toolbar.copy_tip": "Тандалган катарлар (же бардыгы көрүнүп турган) TSV катары",
+ "sched_toolbar.import_tip": "Экспорттолгон тизмени кайра окуу: катарлар Id боюнча, тилкелер баш аты боюнча; адегенде санактар, андан кийин бир артка кайтаруу кадамы",
+ "sched_toolbar.export_tip": "Көрүнүп турган катарлар жана тилкелер, суммалар менен; сандар сан бойдон калат",
+ "sched_toolbar.need_table": "Адегенде тизмени ачыңыз",
+ "sched_toolbar.busy_open": "Файл тандоо терезеси буга чейин ачык",
+ "sched_toolbar.busy_save": "Сактоо терезеси буга чейин ачык",
+ "sched_toolbar.clear_filter": "Чыпканы тазалоо",
+ "sched_toolbar.fields_title": "Тилкелер"
+}

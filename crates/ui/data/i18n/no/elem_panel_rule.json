@@ -1,0 +1,5 @@
+{
+ "elem.panel_select_wall": "Velg vegg",
+ "cmd.elem.panel_select_wall": "Velg vegg",
+ "elem.left_in_place": "Latt stå: {kinds}. Et panel hører til sin vegg; masser og merknader slettes hver for seg."
+}

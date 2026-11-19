@@ -1,0 +1,11 @@
+{
+ "fe.csv.apply": "طبّق الاستيراد",
+ "fe.csv.cancel": "تجاهل المعاينة",
+ "fe.csv.nothing": "لا يوجد ما يتغيّر: الكتالوج مطابق للأنواع الحالية",
+ "fe.csv.preview": "معاينة الاستيراد: {added} جديد، و{changed} مُعدَّل، و{same} دون تغيير من الأنواع؛ تتغيّر {values} قيمة",
+ "fe.csv.preview_hint": "الخلايا الفارغة والأعمدة المفقودة تُبقي القيم الحالية. لا يتغيّر شيء حتى تطبّق.",
+ "fe.csv.skipped": "لم يُطبَّق، والقيمة محفوظة: {msg}",
+ "fe.csv.type_added": "نوع جديد {name}",
+ "fe.csv.type_changed": "النوع {name}",
+ "fe.csv.value": "  {param}: {old} → {new}"
+}

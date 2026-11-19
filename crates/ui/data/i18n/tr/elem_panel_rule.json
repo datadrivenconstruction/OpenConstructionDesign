@@ -1,0 +1,5 @@
+{
+ "elem.panel_select_wall": "Duvarı seç",
+ "cmd.elem.panel_select_wall": "Duvarı seç",
+ "elem.left_in_place": "Yerinde bırakıldı: {kinds}. Panel kendi duvarına aittir; kütleler ve açıklamalar kendiliğinden silinir."
+}

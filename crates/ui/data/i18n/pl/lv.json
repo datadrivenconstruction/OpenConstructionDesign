@@ -1,0 +1,5 @@
+{
+ "lv.level.deleted_attach": "Poziom usunięto; {n} ścian straciło górne przypięcie",
+ "lv.level.rooms": "{n} pomieszczeń przyjmuje wysokość docelowego poziomu ({dz} m): {names}. Naciśnij Przenieś ponownie, aby potwierdzić",
+ "lv.level.pinned": "Poziomu nie usunięto: przypięte elementy nie mogą przejść na inny poziom: {names}. Najpierw je odepnij"
+}

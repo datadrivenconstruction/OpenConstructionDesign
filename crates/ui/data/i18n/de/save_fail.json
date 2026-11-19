@@ -1,0 +1,16 @@
+{
+ "save_fail.save_fail.title": "Projekt nicht gespeichert",
+ "save_fail.save_fail.kept": "Ihre Änderungen sind hier noch geöffnet. Solange der Editor geöffnet bleibt, geht nichts verloren.",
+ "save_fail.save_fail.details": "Details",
+ "save_fail.save_fail.copy": "Kopieren",
+ "save_fail.save_fail.save_as": "Speichern unter…",
+ "save_fail.save_fail.retry": "Wiederholen",
+ "save_fail.save_fail.close": "Schließen",
+ "save_fail.cause.full": "Der Datenträger ist voll. Geben Sie Speicherplatz frei oder speichern Sie das Projekt auf einem anderen Laufwerk.",
+ "save_fail.cause.denied": "Dieser Ordner oder diese Datei ist schreibgeschützt, oder Sie haben hier keine Schreibberechtigung. Wählen Sie einen anderen Ordner.",
+ "save_fail.cause.locked": "Die Datei ist in einem anderen Programm geöffnet. Schließen Sie sie dort und drücken Sie dann „Wiederholen“.",
+ "save_fail.cause.missing": "Der Ordner existiert nicht mehr. Wählen Sie einen anderen Ordner oder stellen Sie ihn wieder her und drücken Sie „Wiederholen“.",
+ "save_fail.cause.offline": "Das Laufwerk oder der Netzwerkordner ist nicht verfügbar. Verbinden Sie ihn erneut und drücken Sie „Wiederholen“ oder speichern Sie an einem anderen Ort.",
+ "save_fail.cause.too_long": "Der Dateipfad ist zu lang. Wählen Sie einen kürzeren Ordner- oder Dateinamen.",
+ "save_fail.cause.other": "Die Datei konnte nicht geschrieben werden: {detail}"
+}

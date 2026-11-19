@@ -1,0 +1,13 @@
+{
+ "type_change.affects_walls": {
+  "one": "ảnh hưởng đến # tường",
+  "other": "ảnh hưởng đến # tường"
+ },
+ "type_change.affects": {
+  "one": "ảnh hưởng đến # cấu kiện",
+  "other": "ảnh hưởng đến # cấu kiện"
+ },
+ "type_change.tick_types": "Áp dụng thay đổi loại cho tất cả {n} cấu kiện thuộc các loại này",
+ "type_change.tick_types_first": "Hãy đánh dấu thay đổi loại trước: mọi cấu kiện thuộc loại đó đều nhận thay đổi này",
+ "xl.msg.types_first": "hãy xác nhận thay đổi loại trước"
+}

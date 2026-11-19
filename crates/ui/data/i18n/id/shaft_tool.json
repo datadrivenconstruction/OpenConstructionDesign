@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "Shaft",
+ "quick.cat.shaft": "Shaft",
+ "shaft_tool.browser.shaft": "Shaft #{id}",
+ "shaft_tool.shaft.top": "Level atas",
+ "shaft_tool.shaft.cuts": "Elemen terpotong",
+ "shaft_tool.shaft.cut_area": "Luas potongan",
+ "shaft_tool.shaft.cut_volume": "Volume potongan",
+ "elem.no.rooms": "Mengikuti ruang yang dimuatnya"
+}

@@ -1,0 +1,13 @@
+{
+ "xlw.copy_list": "Copiar lista",
+ "xlw.save_list": "Guardar lista…",
+ "xlw.copy_list_tip": "Copia las filas mostradas (hoja, celda, id, columna, valores, motivo) como texto para una hoja de cálculo",
+ "xlw.save_list_tip": "Guarda las filas mostradas como archivo .csv junto al libro; el libro en sí nunca se modifica",
+ "xlw.list_book_value": "Valor del libro",
+ "xlw.list_model_value": "Valor del modelo",
+ "xlw.list_reason": "Motivo",
+ "xlw.list_copied": "Lista copiada: {n} filas",
+ "xlw.list_saved": "Lista guardada: {n} filas, {file}",
+ "xlw.list_save_failed": "Lista no guardada",
+ "xlw.list_nothing": "Nada que copiar: no hay filas mostradas"
+}

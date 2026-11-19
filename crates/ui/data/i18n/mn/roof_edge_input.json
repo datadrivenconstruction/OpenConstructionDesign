@@ -1,0 +1,23 @@
+{
+ "roof_edge.err.number": "Тоо оруулна уу",
+ "roof_edge.err.positive": "Тэгээс их байх ёстой",
+ "roof_edge.err.nonneg": "Сөрөг байж болохгүй",
+ "roof_edge.err.max": "{max}-аас хэтрэхгүй байх ёстой",
+ "roof_edge.list.empty_hint": "Дээврийн командаар фасци, ховил, зөрөх тааз эсвэл дээвэрийн цонх нэмнэ үү",
+ "roof_edge.edit_tip": "Шинж чанарыг засах",
+ "roof_edge.delete_tip": "Устгах",
+ "roof_edge.pe.del_tip": "Энэ цэгийг устгах (хэсэгт дор хаяж 3 цэг байна)",
+ "roof_edge.pe.up_tip": "Энэ цэгийг дээш зөөх",
+ "roof_edge.confirm_edge": "{name}-ийг устгах уу? Ctrl+Z буцаана.",
+ "roof_edge.confirm_profile": "{name} профилийг устгах уу? Ctrl+Z буцаана.",
+ "roof_edge.deleted_one": "{name}-ийг устгасан",
+ "roof_edge.deleted_n": {
+  "one": "# элементийг устгасан",
+  "other": "# элементийг устгасан"
+ },
+ "roof_edge.profile_deleted": "Профайл устгагдсан",
+ "roof_edge.profile_in_use": {
+  "one": "# ирмэгийн элемент ашиглаж байна: эхлээд устгах эсвэл өөрчилнө үү",
+  "other": "# ирмэгийн элементүүд ашиглаж байна: эхлээд устгах эсвэл өөрчилнө үү"
+ }
+}

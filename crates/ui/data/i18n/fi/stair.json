@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "Portaat",
+ "selcat.railing": "Kaiteet",
+ "quick.cat.stair": "Portaat",
+ "quick.cat.railing": "Kaiteet",
+ "stair.risers": "Nousut",
+ "stair.riser": "Nousun korkeus",
+ "stair.comfort": "2R + T",
+ "stair.tread_auto": "Askelma säännön mukaan",
+ "stair.tread_auto_tip": "Pudota kirjoitettu askelma ja anna 2R + T -sääntö määrittää se",
+ "stair.broken": "Tämä porras ei sovi sen tasoihin",
+ "railing.host_stair": "Isäntänä porras #{id}",
+ "railing.host_path": "Piirrä kaide",
+ "railing.length": "Pituus",
+ "stair.deleted_with": "{n} isäntäkaiteen kanssa"
+}

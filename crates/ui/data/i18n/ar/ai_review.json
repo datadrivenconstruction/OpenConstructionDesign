@@ -1,0 +1,5 @@
+{
+ "ai.plan.apply_n": "تطبيق {n} مقبولة",
+ "ai.plan.will_apply": "سيُطبَّق {n} من أصل {m} تغييراً",
+ "ai.plan.keys_hint": "J/K أو Alt+أعلى/أسفل للتنقل · A للقبول · R للرفض · Space للتبديل · Shift+A / Shift+R لكامل المجموعة · Ctrl+Enter للتطبيق · Esc للعودة إلى العرض (تبقى المسودة)"
+}

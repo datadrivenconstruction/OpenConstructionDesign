@@ -1,0 +1,9 @@
+{
+ "elem.deleted": "已删除构件：{n}",
+ "elem.deleted_kept": "已删除构件：{n}；保留未删除：{k}（幕墙嵌板及无法删除的构件）",
+ "elem.not_deleted": "未删除：{e}",
+ "elem.not_deletable": "此构件无法删除",
+ "elem.panel": "幕墙嵌板",
+ "elem.panel_refused": "嵌板属于其幕墙，不能单独删除。请选择整面幕墙后删除。",
+ "elem.reload_failed": "已删除，但视图未更新：{e}"
+}

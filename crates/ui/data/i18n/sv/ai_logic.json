@@ -1,0 +1,6 @@
+{
+ "ai_toast.toast_not_refreshed": "Tillämpad som ångra-steg {n} (Ctrl+Z ångrar den), men vyn uppdaterades inte. Ladda om vyn.",
+ "ai.optx.reload_failed": "Alternativet \"{name}\" är tillämpat och sparat, men vyn laddades inte om: {e}",
+ "ai.cmp.stale": "Inaktuell",
+ "ai.cmp.stale_tip": "Detta alternativ byggdes på ett äldre modelltillstånd. Generera det igen för att tillämpa."
+}

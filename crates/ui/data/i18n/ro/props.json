@@ -1,0 +1,21 @@
+{
+ "props.multi.title": {
+  "one": "# element",
+  "few": "# elemente",
+  "other": "# de elemente"
+ },
+ "props.multi.cats": {
+  "one": "# categorie",
+  "few": "# categorii",
+  "other": "# de categorii"
+ },
+ "props.multi.varies": {
+  "one": "variază (#)",
+  "few": "variază (#)",
+  "other": "variază (#)"
+ },
+ "props.multi.clear": "Golește selecția",
+ "props.multi.undo": "Anulează",
+ "props.multi.narrowed": "Selecție: {n} · {name}",
+ "props.multi.chip_tip": "{name}: {n}  ·  Clic arată proprietățile lor, Ctrl+clic păstrează doar acestea"
+}

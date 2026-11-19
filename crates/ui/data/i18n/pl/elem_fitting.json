@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "Kształtka",
+ "elem.mep_fitting.many": "Kształtki",
+ "elem.mep_fitting.kind.elbow": "Kolano",
+ "elem.mep_fitting.kind.tee": "Trójnik",
+ "elem.mep_fitting.kind.cross": "Krzyżak",
+ "elem.mep_fitting.kind.transition": "Przejście",
+ "elem.mep_fitting.kind.cap": "Zaślepka",
+ "elem.mep_fitting.size": "Rozmiar",
+ "elem.mep_fitting.at": "Położenie",
+ "elem.mep_fitting.runs": "Odcinek {n}",
+ "elem.mep_fitting.edit_run": "Edytuj odcinek",
+ "elem.mep_fitting.select_runs": "Zaznacz jej odcinki",
+ "elem.mep_fitting.derived": "Kształtka podąża za swoimi odcinkami: zmiana odcinka zmienia także kształtkę.",
+ "elem.mep_fitting.no_delete": "Kształtki nie można usunąć ani przesunąć samodzielnie. Edytuj lub usuń jej odcinki.",
+ "elem.mep_fitting.hint": "Kliknij kształtkę w rzucie, aby zobaczyć jej odcinki.",
+ "elem.mep_fitting.picked": "Zaznaczono kształtek: {n}"
+}

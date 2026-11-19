@@ -1,0 +1,11 @@
+{
+ "cmd.ctx.ceiling.clean_outline": "Limpar contorno",
+ "cmd.ctx.ceiling.clean_outline.desc": "Remove pontas estreitas onde o contorno do teto volta sobre si mesmo. Mostra uma pré-visualização antes; uma etapa de desfazer.",
+ "cmd.ctx.shaft.clean_outline": "Limpar contorno",
+ "cmd.ctx.shaft.clean_outline.desc": "Remove pontas estreitas onde o contorno do poço volta sobre si mesmo. Mostra uma pré-visualização antes; uma etapa de desfazer.",
+ "outline_cleanup.intro_ceiling": "O contorno deste teto volta sobre si mesmo em pontas estreitas: {n}. A limpeza as remove; o restante permanece como está.",
+ "outline_cleanup.intro_shaft": "O contorno deste poço volta sobre si mesmo em pontas estreitas: {n}. A limpeza as remove; o restante permanece como está.",
+ "outline_cleanup.none_ceiling": "O contorno deste teto não tem pontas",
+ "outline_cleanup.none_shaft": "O contorno deste poço não tem pontas",
+ "outline_cleanup.need_host": "Selecione uma laje, um teto ou um poço"
+}

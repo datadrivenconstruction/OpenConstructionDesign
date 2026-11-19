@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "फ़िटिंग",
+ "elem.mep_fitting.many": "फ़िटिंग",
+ "elem.mep_fitting.kind.elbow": "एल्बो",
+ "elem.mep_fitting.kind.tee": "टी",
+ "elem.mep_fitting.kind.cross": "क्रॉस",
+ "elem.mep_fitting.kind.transition": "ट्रांज़िशन",
+ "elem.mep_fitting.kind.cap": "कैप",
+ "elem.mep_fitting.size": "आकार",
+ "elem.mep_fitting.at": "स्थिति",
+ "elem.mep_fitting.runs": "रन {n}",
+ "elem.mep_fitting.edit_run": "रन संपादित करें",
+ "elem.mep_fitting.select_runs": "उसके रन चुनें",
+ "elem.mep_fitting.derived": "फ़िटिंग अपने रन का अनुसरण करती है: रन बदलें तो फ़िटिंग भी बदलेगी।",
+ "elem.mep_fitting.no_delete": "फ़िटिंग को अकेले हटाया या स्थानांतरित नहीं किया जा सकता। उसके रन संपादित करें या हटाएँ।",
+ "elem.mep_fitting.hint": "प्लान में फ़िटिंग पर क्लिक करके उसके रन देखें।",
+ "elem.mep_fitting.picked": "चुनी गई फ़िटिंग: {n}"
+}

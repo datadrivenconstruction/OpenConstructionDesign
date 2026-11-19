@@ -1,0 +1,9 @@
+{
+ "ai.plan.reject_ask": {
+  "one": "Hylätäänkö # muutos?",
+  "other": "Hylätäänkö # muutosta?"
+ },
+ "ai.plan.reject_ask.hint": "Luonnos ja valintamerkkisi poistetaan. Malli pysyy ennallaan.",
+ "ai.plan.reject_confirm": "Hylkää",
+ "ai.plan.reject_keep": "Säilytä"
+}

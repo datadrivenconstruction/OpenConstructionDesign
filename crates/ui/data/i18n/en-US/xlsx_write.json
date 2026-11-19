@@ -1,0 +1,4 @@
+{
+ "xlsx_write.denied": "No rights to write in this folder. The workbook was not changed. Save the export to another folder.",
+ "xlsx_write.save_to": "Save to…"
+}

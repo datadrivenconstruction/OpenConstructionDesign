@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "صفوف وخلايا متخطاة",
+ "xlsx_issues.conflicts_title": "متغير في المكانين",
+ "xlsx_issues.missing_title": "الورقة مفقودة من المصنف",
+ "xlsx_issues.look_alike_title": "اسم الورقة غير مطابق",
+ "xlsx_issues.mass_title": "الحذف الكامل يحتاج تأكيداً",
+ "xlsx_issues.sheets_missing": "الأوراق {sheets} مفقودة من المصنف (أُعيدت تسميتها أو حُذفت)؛ لم تُقارن صفوفها.",
+ "xlsx_issues.keep_model": "الاحتفاظ بالنموذج",
+ "xlsx_issues.take_book": "أخذ المصنف",
+ "xlsx_issues.open_book_tip": "يفتح الملف في تطبيقه. لا يتغير شيء في النموذج؛ تُعاد المعاينة بعد حفظ المصنف."
+}

@@ -1,0 +1,12 @@
+{
+ "opt.stair.straight": "直跑",
+ "opt.stair.l": "L 形",
+ "opt.stair.u": "U 形",
+ "opt.stair.gap": "梯井",
+ "hint.stair.corner": "L 形楼梯：拾取转角 · Backspace — 删除最后一点 · Esc — 无点时取消，有点时删除最后一点",
+ "hint.stair.side": "楼梯：拾取第二跑的一侧 · Backspace — 删除最后一点 · Esc — 无点时取消，有点时删除最后一点",
+ "tool.stair.flights": "{n} 个踢面（共 {m}）",
+ "tool.stair.err_split": "每跑至少需要 2 个踢面：第一跑有 {n}（共 {m}）",
+ "tool.stair.err_comfort": "踢面和踏面不满足舒适度规则（2R + T）",
+ "tool.stair.err_input": "楼梯尺寸超出范围：请检查宽度、高度和平台"
+}

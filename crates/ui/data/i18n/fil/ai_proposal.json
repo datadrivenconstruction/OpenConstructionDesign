@@ -1,0 +1,13 @@
+{
+ "ai.proposal.title": "Mungkahi ng AI katulong",
+ "ai.proposal.meta": "{actor} · operasyon: {ops}",
+ "ai.proposal.apply.desc": "Inilalapat ang buong mungkahi bilang isang hakbang; Ctrl+Z para i-undo",
+ "ai.proposal.applying": "Inilalapat…",
+ "ai.proposal.applied": "Nailapat ang mungkahi. Ctrl+Z para i-undo.",
+ "ai.proposal.applied_resync": "Nailapat ang mungkahi, pero hindi pa nag-update ang view. Kusa itong magre-refresh; Ctrl+Z para i-undo ang hakbang.",
+ "ai.proposal.stale": "Nagbago ang model pagkatapos ma-preview ang mungkahing ito. Hilingin sa AI katulong na gumawa ulit ng mungkahi.",
+ "ai.proposal.toast.applied": "Nailapat ang mungkahi. Ctrl+Z para i-undo.",
+ "ai.proposal.toast.stale": "Nagbago ang model pagkatapos ng preview, kaya walang nailapat. I-preview ulit: hilingin sa AI katulong na gumawa ng bagong mungkahi.",
+ "ai.proposal.toast.refused": "Hindi nailapat ang mungkahi: {reason}",
+ "ai.proposal.rejected": "Tinanggihan ang mungkahi."
+}

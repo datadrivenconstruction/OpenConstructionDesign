@@ -1,0 +1,4 @@
+{
+ "elem.spreadsheet.applied": "XLSX स्प्रेडशीट से आयात किया गया: {what}",
+ "elem.spreadsheet.failed": "XLSX स्प्रेडशीट आयात विफल: {e}"
+}

@@ -1,0 +1,16 @@
+{
+ "save_fail.save_fail.title": "A projekt nincs mentve",
+ "save_fail.save_fail.kept": "A módosításai még nyitva vannak itt. Nem vész el semmi, amíg a szerkesztő nyitva marad.",
+ "save_fail.save_fail.details": "Részletek",
+ "save_fail.save_fail.copy": "Másolás",
+ "save_fail.save_fail.save_as": "Mentés másként…",
+ "save_fail.save_fail.retry": "Újrapróbálkozás",
+ "save_fail.save_fail.close": "Bezárás",
+ "save_fail.cause.full": "A lemez megtelt. Szabadítson fel helyet, vagy mentse a projektet egy másik meghajtóra.",
+ "save_fail.cause.denied": "Ez a mappa vagy fájl csak olvasható, vagy nincs jogosultsága ide írni. Válasszon másik mappát.",
+ "save_fail.cause.locked": "A fájl egy másik programban van megnyitva. Zárja be ott, majd nyomja meg az Újrapróbálkozás gombot.",
+ "save_fail.cause.missing": "A mappa már nem létezik. Válasszon másik mappát, vagy állítsa vissza, és nyomja meg az Újrapróbálkozást.",
+ "save_fail.cause.offline": "A meghajtó vagy a hálózati mappa nem elérhető. Csatlakoztassa újra, és nyomja meg az Újrapróbálkozást, vagy mentsen máshová.",
+ "save_fail.cause.too_long": "A fájl elérési útja túl hosszú. Válasszon rövidebb mappát vagy fájlnevet.",
+ "save_fail.cause.other": "A fájlt nem sikerült írni: {detail}"
+}

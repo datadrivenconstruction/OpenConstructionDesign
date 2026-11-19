@@ -1,0 +1,13 @@
+{
+ "topo.unit.mm": "mm",
+ "topo.unit.metre": "m",
+ "topo.unit.ft": "fod",
+ "topo.opt.material": "Materiale",
+ "topo.row.active": "Aktiv overflade",
+ "topo.btn.delete_pad": "Slet plade",
+ "topo.info.loading": "Opbygger overfladen…",
+ "topo.info.warn_n": "{n} advarsler",
+ "topo.info.points_label": "Punkter",
+ "topo.import.all_layers": "Alle lag",
+ "topo.import.need_layer": "Markér mindst ét lag"
+}

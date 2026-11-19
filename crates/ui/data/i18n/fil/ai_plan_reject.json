@@ -1,0 +1,9 @@
+{
+ "ai.plan.reject_ask": {
+  "one": "Tanggihan ang # pagbabago?",
+  "other": "Tanggihan ang # pagbabago?"
+ },
+ "ai.plan.reject_ask.hint": "Mawawala ang draft at ang mga tsek mo. Mananatili ang model.",
+ "ai.plan.reject_confirm": "Tanggihan",
+ "ai.plan.reject_keep": "Panatilihin"
+}

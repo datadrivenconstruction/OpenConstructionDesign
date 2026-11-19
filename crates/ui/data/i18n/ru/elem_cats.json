@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "Форму нельзя повернуть или отразить: в истории построения нет шага поворота. Перенесите или скопируйте её, либо постройте заново в нужном направлении.",
+ "sched_cats.col.name": "Название",
+ "sched_cats.col.material": "Материал",
+ "sched_cats.col.void": "Пустота",
+ "sched_cats.col.inplace": "По месту",
+ "sched_cats.col.volume": "Объём нетто",
+ "sched_cats.col.area": "Площадь поверхности",
+ "sched_cats.col.floor_area": "Площадь этажа",
+ "sched_cats.col.thickness": "Толщина",
+ "sched_cats.col.points": "Точек",
+ "elem.toposolid.points": "Точки съёмки",
+ "elem.toposolid.count": "Точек",
+ "elem.toposolid.low": "Минимум",
+ "elem.toposolid.high": "Максимум",
+ "elem.toposolid.edit": "Править точки",
+ "elem.toposolid.edit_tip": "Выбор, перенос и отметка точек съёмки в плане",
+ "elem.toposolid.pick_hint": "Щёлкните точку в плане, чтобы выбрать её. Повторный щелчок добавляет или снимает.",
+ "elem.toposolid.z": "Отметка ({n})",
+ "elem.toposolid.mixed": "У выбранных точек разные отметки; новое значение зададит всем.",
+ "elem.toposolid.edit_help": "Перетащите точку, чтобы сдвинуть её. Наберите число и Enter, чтобы задать отметку. Backspace удаляет выбранные точки, Esc выходит.",
+ "elem.toposolid.done": "Готово"
+}

@@ -1,0 +1,5 @@
+{
+ "materials.mat.conflict": "Ovaj materijal je promijenjen u modelu (poništavanje ili drugi prozor) dok je kartica imala izmjene. Vaše izmjene su zadržane.",
+ "materials.mat.keep": "Zadrži moje izmjene",
+ "materials.mat.reload": "Ponovno učitaj"
+}

@@ -1,0 +1,5 @@
+{
+ "mirror_array.err.count": "Broj je cijeli broj od 2 do 200: 4 3000, ili 4;300 kada korak ima tri znamenke",
+ "mirror_array.err.length": "Korak ili ukupno je pozitivna duljina, npr. 3 000 ili 1.2 m",
+ "mirror_array.err.angle": "Pomak je kut u stupnjevima, ne nula i najviše 360"
+}

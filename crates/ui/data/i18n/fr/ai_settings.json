@@ -1,0 +1,9 @@
+{
+ "ai.settings.num_bad": "Ce n’est pas un nombre. Saisissez-le par exemple sous la forme 0.5.",
+ "ai.settings.num_comma": "Utilisez un point comme séparateur décimal, par exemple 0.5.",
+ "ai.settings.num_negative": "Le nombre ne peut pas être négatif.",
+ "ai.settings.unit_money": "devise",
+ "ai.settings.unit_tokens": "jetons",
+ "ai.settings.unit_price": "par 1 M de jetons",
+ "ai.settings.limits_hint": "0 signifie sans limite. Une valeur refusée conserve la limite précédente."
+}

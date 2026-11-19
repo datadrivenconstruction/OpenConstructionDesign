@@ -1,0 +1,15 @@
+{
+ "text_style.lbl.text_style": "Estilo de texto",
+ "text_style.lbl.align": "Alinhamento",
+ "text_style.lbl.head": "Ponta de seta",
+ "text_style.lbl.line_style": "Estilo de linha",
+ "text_style.lbl.fill": "Preenchimento",
+ "text_style.lbl.detail": "Detalhe",
+ "text_style.lbl.width": "Largura",
+ "text_style.bad_number": "Informe um número de {min} a {max}",
+ "text_style.tip.next_ring": "Fechar este contorno e iniciar outro na mesma região",
+ "text_style.tip.edit_text": "Editar o texto no lugar",
+ "text_style.tip.add_leader": "Adicionar linha de chamada a este texto",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°"
+}

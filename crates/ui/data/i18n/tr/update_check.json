@@ -1,0 +1,21 @@
+{
+ "cmd.help.check_update": "Güncellemeleri denetle",
+ "update_check.title": "Güncelleme denetimi",
+ "update_check.desc": "Varsayılan olarak kapalı. Yalnızca sürümü, işletim sistemini, mimariyi ve kurulum türünü sunucumuza gönderir. Hiçbir şeyi indirmez veya kurmaz.",
+ "update_check.freq.startup": "Başlangıçta",
+ "update_check.freq.daily": "Günlük",
+ "update_check.freq.weekly": "Haftalık",
+ "update_check.freq.never": "Hiçbir zaman",
+ "update_check.check_now": "Şimdi denetle",
+ "update_check.dialog.title": "Güncelleme denetimi",
+ "update_check.unknown.title": "Güncellemeler denetlenemedi",
+ "update_check.unknown.body": "{e}. Bu, sürümün güncel olduğu anlamına gelmez. Daha sonra tekrar deneyin.",
+ "update_check.current": "En son sürümü kullanıyorsunuz ({v}).",
+ "update_check.newer": "Sürüm {v} mevcut",
+ "update_check.date": "Yayımlandı {d}",
+ "update_check.unfit": "Bu sürüm ({v}), önerilen en düşük sürüm {f} değerinden eski. Güncellemeniz önerilir.",
+ "update_check.close": "Kapat",
+ "update_check.open_failed": "Sürüm sayfası açılamadı.",
+ "update_check.toast.newer": "Sürüm {v} mevcut. Yardım > Güncellemeleri denetle.",
+ "update_check.toast.unfit": "Bu sürüm ({v}), önerilen en düşük sürüm {f} değerinden eski."
+}

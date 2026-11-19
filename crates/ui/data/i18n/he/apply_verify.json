@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "ההחלה נעצרה: המודל נשמר כמות שהיה",
+ "apply_verify.rolled_back": "ההחלה לא תאמה את הטיוטה ובוטלה; המודל לא השתנה. {what}",
+ "apply_verify.diff.missing": "הטיוטה מציגה {what} {kind}, אבל ההחלה לא ביצעה את זה.",
+ "apply_verify.diff.extra": "הוחל {kind} {what}, שהטיוטה אינה מציגה.",
+ "apply_verify.diff.kind": "הטיוטה מציגה {what} {shown}, אבל ההחלה {applied} אותו.",
+ "apply_verify.diff.value": "{what}: “{col}” יצא שונה מהטיוטה.",
+ "apply_verify.diff.truncated": "הטיוטה והשינוי שהוחל שונים בגודלם.",
+ "apply_verify.diff.unreadable": "לא ניתן היה לקרוא בחזרה את השינוי שהוחל ({e}).",
+ "apply_verify.no_base": "ההחלה לא הורצה: העותק לבדיקת הטיוטה חסר. המודל לא השתנה; בקש את הטיוטה שוב.",
+ "apply_verify.take_back_failed": "הביטול נכשל ({e}): השתמש ב-בטל.",
+ "apply_verify.kind.created": "נוצר",
+ "apply_verify.kind.changed": "שונה",
+ "apply_verify.kind.deleted": "נמחק",
+ "apply_verify.card.type_row": "סוג {type} · {n} רכיבים מקבלים את השינוי"
+}

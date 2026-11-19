@@ -1,0 +1,23 @@
+{
+ "params_list.n_params": {
+  "one": "# параметр",
+  "other": "# параметр"
+ },
+ "params_list.n_values": {
+  "one": "# утга",
+  "other": "# утга"
+ },
+ "params_list.n_elements": {
+  "one": "# элемент",
+  "other": "# элемент"
+ },
+ "params_list.exported": "{params} {file} руу экспортлогдлоо",
+ "params_list.export_failed": "Параметрүүд экспортлогдсонгүй: {why}",
+ "params_list.open_folder": "Хавтас нээх",
+ "params_list.delete_tip": "Параметр ба түүний утгуудыг устгах",
+ "params_list.confirm": "{name} параметр ба түүний {values} утгыг {elements} дээрээс устгах уу?",
+ "params_list.confirm_btn": "Устгах",
+ "params_list.cancel": "Болих",
+ "params_list.deleted": "{name} параметр устгагдлаа ({values})",
+ "params_list.undo": "Буцаах"
+}

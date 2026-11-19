@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "Dakkapelopening",
+ "cmd.arch.roof_opening": "Dakopening",
+ "cmd.arch.roof_extrusion": "Dak door extrusie",
+ "cmd.arch.ceiling_opening": "Plafondopening",
+ "cmd.str.slab_opening": "Vloeropening",
+ "cmd.ctx.wall.detach": "Bovenkant losmaken",
+ "cmd.ctx.floor.sketch": "Begrenzing bewerken",
+ "cmd.ctx.floor.shape": "Vorm bewerken",
+ "host_shape.shape.elev_prompt": "hoogte, mm…",
+ "host_shape.shape.elev_mm": "{v} mm",
+ "host_shape.sketch.no_host": "geen drager onder de begrenzing op deze verdieping",
+ "host_shape.issue.roof": "dak {id}: {e}",
+ "host_shape.issue.ceiling": "plafond {id}: {e}",
+ "host_shape.status.select_slab": "selecteer een vloer",
+ "host_shape.status.select_walls": "selecteer wanden",
+ "host_shape.status.no_roof_or_level": "geen dak of verdieping erboven",
+ "host_shape.status.top_attached": "bovenkanten van wanden gekoppeld",
+ "host_shape.status.top_detached": "bovenkanten van wanden losgemaakt",
+ "host_shape.status.straight_wall": "een rechte wand is vereist",
+ "host_shape.status.roof_extruded": "dak door extrusie aangemaakt",
+ "warn.kind.cut": "Uitsnede of koppeling niet gebouwd"
+}

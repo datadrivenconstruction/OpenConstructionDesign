@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "Paftayı görünümleriyle çoğalt",
+ "cmd.view.sheet_duplicate_title": "Paftayı çoğalt (yalnızca başlık bloğu)",
+ "sheets.dup.menu_views": "Görünümlerle çoğalt",
+ "sheets.dup.menu_title": "Çoğalt, yalnızca başlık bloğu",
+ "sheets.dup.done": "{src} kaynağından {number} paftası oluşturuldu: {views} görünüm, {sched} çizelge ve açıklama. Revizyonlar kopyalanmadı; pafta yayımlanmamış.",
+ "sheets.dup.none": "Çoğaltmak için bir pafta açın",
+ "sheets.dup.copy": "kopya",
+ "cmd.view.sheet_duplicate.short": "Görünümlerle çoğalt",
+ "cmd.view.sheet_duplicate_title.short": "Başlık bloğunu çoğalt"
+}

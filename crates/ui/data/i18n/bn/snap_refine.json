@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "স্ন্যাপ ব্যাসার্ধ",
+ "snap_refine.settings.snap_px_desc": "স্ন্যাপ করতে কার্সর একটি বিন্দু বা রেখার কতটা কাছে আসতে হবে, স্ক্রিন পিক্সেলে। টাচ স্ক্রিন ও উচ্চ-ঘনত্বের ডিসপ্লেতে বড় মান সাহায্য করে।",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "অনুভূমিক",
+ "snap_refine.hint.vertical": "উল্লম্ব",
+ "snap_refine.hint.perpendicular": "আগেরটির লম্ব",
+ "snap_refine.hint.parallel": "আগেরটির সমান্তরাল",
+ "snap_refine.hint.on_axis": "দেয়ালের অক্ষে",
+ "snap_refine.no_snap": "স্ন্যাপ নেই (Alt)"
+}

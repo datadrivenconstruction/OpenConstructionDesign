@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "Förhandsgranskning",
+ "agent_draft.ag.preview.desc": "Markerar elementen i det här utkastet på arbetsytan medan pekaren är på knappen. Inget ändras.",
+ "agent_draft.type.column": "Pelare",
+ "agent_draft.type.roof": "Takkonstruktion",
+ "agent_draft.type.ceiling": "Tak",
+ "agent_draft.type.stair": "Monolitisk",
+ "agent_draft.type.railing": "Räcke",
+ "agent_draft.type.shaft": "Schakt",
+ "agent_draft.type.axis": "Axel 6.5 mm",
+ "agent_draft.type.refplane": "Referensplan"
+}

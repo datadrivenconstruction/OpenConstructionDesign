@@ -1,0 +1,22 @@
+{
+ "cmd.arch.grid_pick": "Grilă după linie",
+ "cmd.arch.grid_pick.desc": "Creează o grilă exact pe o linie de desen aleasă din nivelul curent; numele continuă seria. Tab ia toate liniile paralele din același strat de desen deodată. Fiecare alegere este un pas de anulare.",
+ "cmd.struct.beam_pick": "Grindă după linie",
+ "cmd.struct.beam_pick.desc": "Plasează o grindă de tipul curent pe nivelul activ, de-a lungul unei linii de desen alese. Tab ia lanțul conectat. Fiecare alegere este un pas de anulare.",
+ "hint.grid_pick.one": "Grilă după linie: alegeți o linie de desen · Tab toate liniile paralele din stratul ei · Esc iese",
+ "hint.grid_pick.more": "Grilă după linie: alegeți o linie pentru a lua toate liniile paralele din stratul ei · Tab o singură linie · Esc dezarmează",
+ "hint.beam_pick.one": "Grindă după linie: alegeți o linie de desen · Tab lanț conectat · Esc iese",
+ "hint.beam_pick.more": "Grindă după linie: alegeți o linie pentru a lua lanțul său · Tab o singură linie · Esc dezarmează",
+ "line_pick.st.start_grid": "Alegeți o linie de desen. Tab: toate liniile paralele din stratul ei",
+ "line_pick.st.start_beam": "Alegeți o linie de desen pentru o grindă {type}. Tab: lanț conectat",
+ "line_pick.st.grid_done": "Grilă {name} adăugată",
+ "line_pick.st.grids_done": "{n} grile adăugate: {first} — {last}",
+ "line_pick.st.beam_done": "Grindă {type} adăugată",
+ "line_pick.st.beams_done": "{n} grinzi {type} adăugate",
+ "line_pick.st.on_grid": "Această linie are deja grila {name}",
+ "line_pick.st.on_beam": "Această linie are deja grinda {id}",
+ "line_pick.st.no_layer": "Straturile de desen ale liniilor nu sunt încă cunoscute, încercați din nou",
+ "line_pick.st.no_beam_type": "Nicio secțiune de grindă în catalog",
+ "line_pick.st.reload_warn": "Creat, dar vederea nu s-a putut reîncărca: {err}",
+ "line_pick.st.failed": "Nu a fost creat: {err}"
+}

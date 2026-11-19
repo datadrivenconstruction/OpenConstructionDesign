@@ -1,0 +1,6 @@
+{
+ "imported_prop_edit.remove": "Xóa thuộc tính",
+ "imported_prop_edit.remove.tip": "Xóa thuộc tính khỏi {n} phần tử đã chọn trong một bước hoàn tác; sẽ bị bỏ khỏi tệp IFC khi lưu",
+ "imported_prop_edit.done": "Đã xóa {key} khỏi {n} phần tử",
+ "imported_prop_edit.warn.reload": "Xong, nhưng góc nhìn chưa được làm mới; mở lại bảng hoặc hoàn tác nếu thấy sai"
+}

@@ -1,0 +1,11 @@
+{
+ "materials.mat.name_empty": "הזן שם לחומר",
+ "materials.mat.empty_title": "עדיין אין חומרים",
+ "materials.mat.empty_hint": "הקלד שם למטה ולחץ על הוסף",
+ "materials.mat.nothing_hint": "אין חומר שתואם לחיפוש",
+ "materials.mat.clear_search": "נקה חיפוש",
+ "materials.mat.replace_with": "החלף ב",
+ "materials.mat.delete_refused": "לא ניתן למחוק: החומר בשימוש ב-{n} מקומות. החלף אותו קודם.",
+ "materials.mat.delete_confirm": "למחוק את החומר “{name}”? אפשר לבטל פעולה זו.",
+ "materials.mat.replace_confirm": "להחליף את “{from}” ב-“{to}” ב-{n} רכיבים? “{from}” יוסר. אפשר לבטל פעולה זו."
+}

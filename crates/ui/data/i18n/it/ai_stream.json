@@ -1,0 +1,14 @@
+{
+ "ai.stream.waiting": "In attesa del modello",
+ "ai.stream.reading": "Lettura del modello",
+ "ai.stream.working": "Al lavoro",
+ "ai.stream.answering": "Scrittura della risposta",
+ "ai.stream.tools_one": "1 strumento",
+ "ai.stream.tools_many": "{n} strumenti",
+ "ai.stream.secs": "{n} s",
+ "ai.stream.stalled": "In attesa ancora del servizio del modello",
+ "ai.stream.stop": "Ferma",
+ "ai.stream.cancelled": "Fermato",
+ "ai.stream.incomplete": "La bozza è incompleta. Nulla è stato applicato al modello.",
+ "ai.stream.sep": " · "
+}

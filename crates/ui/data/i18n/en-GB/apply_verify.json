@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "Apply was stopped: the model is kept as it was",
+ "apply_verify.rolled_back": "Apply did not match the draft and was taken back; the model is unchanged. {what}",
+ "apply_verify.diff.missing": "The draft shows {what} {kind}, but Apply did not do it.",
+ "apply_verify.diff.extra": "Apply {kind} {what}, which the draft does not show.",
+ "apply_verify.diff.kind": "The draft shows {what} {shown}, but Apply {applied} it.",
+ "apply_verify.diff.value": "{what}: “{col}” came out different from the draft.",
+ "apply_verify.diff.truncated": "The draft and the applied change differ in size.",
+ "apply_verify.diff.unreadable": "The applied change could not be read back ({e}).",
+ "apply_verify.no_base": "Apply was not run: the copy to check the draft against is missing. The model is unchanged; ask for the draft again.",
+ "apply_verify.take_back_failed": "Taking it back failed ({e}): use Undo.",
+ "apply_verify.kind.created": "created",
+ "apply_verify.kind.changed": "changed",
+ "apply_verify.kind.deleted": "deleted",
+ "apply_verify.card.type_row": "Type {type} · {n} elements take the change"
+}

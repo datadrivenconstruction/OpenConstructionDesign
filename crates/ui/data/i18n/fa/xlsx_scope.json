@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "خروجی به صفحه‌گسترده: محدوده",
+ "xlsx_scope.intro": "انتخاب کنید چه چیزی وارد کتاب‌کار شود. بازگرداندنش فقط این عناصر را تغییر می‌دهد.",
+ "xlsx_scope.base_whole": "کل مدل",
+ "xlsx_scope.base_level": "تراز فعال",
+ "xlsx_scope.base_selection": "انتخاب",
+ "xlsx_scope.categories": "دسته‌ها",
+ "xlsx_scope.cat_walls": "دیوارها",
+ "xlsx_scope.cat_openings": "درها",
+ "xlsx_scope.cat_rooms": "اتاق‌ها",
+ "xlsx_scope.cat_slabs": "دال‌ها",
+ "xlsx_scope.cat_curtains": "دیوارهای پرده‌ای",
+ "xlsx_scope.nothing_selected": "چیزی انتخاب نشده: ابتدا عناصر را انتخاب کنید یا محدوده دیگری را بردارید.",
+ "xlsx_scope.no_categories": "حداقل یک دسته را علامت بزنید.",
+ "xlsx_scope.no_level": "تراز فعال پیدا نشد.",
+ "xlsx_scope.export": "خروجی",
+ "xlsx_scope.preview_scope": "محدوده خروجی: {scope}. عناصر بیرون آن هرگز تغییر یا حذف نمی‌شوند."
+}

@@ -1,0 +1,40 @@
+{
+ "rebar_hosts.hosts": "宿主：{list}",
+ "rebar_hosts.kind.column": "柱",
+ "rebar_hosts.kind.beam": "梁",
+ "rebar_hosts.kind.wall": "墙",
+ "rebar_hosts.kind.slab": "楼板",
+ "rebar_hosts.kind.footing": "独立基础",
+ "rebar_hosts.kind.raft": "基础底板",
+ "rebar_hosts.n.column": {
+  "other": "# 根柱",
+  "one": "# 根柱"
+ },
+ "rebar_hosts.n.beam": {
+  "other": "# 根梁",
+  "one": "# 根梁"
+ },
+ "rebar_hosts.n.wall": {
+  "other": "# 面墙",
+  "one": "# 面墙"
+ },
+ "rebar_hosts.n.slab": {
+  "other": "# 块楼板",
+  "one": "# 块楼板"
+ },
+ "rebar_hosts.n.footing": {
+  "other": "# 个独立基础",
+  "one": "# 个独立基础"
+ },
+ "rebar_hosts.n.raft": {
+  "other": "# 块基础底板",
+  "one": "# 块基础底板"
+ },
+ "rebar_hosts.mixed_note": "柱和梁使用纵筋与箍筋；墙、楼板和基础使用网片。请选择同一类别后再添加钢筋。",
+ "rebar_hosts.why.mixed": "所选内容同时包含柱或梁以及墙、楼板或基础。请选择同一类别。",
+ "rebar_hosts.why.area_linear": "网片用于墙、楼板和基础，不用于柱或梁。",
+ "rebar_hosts.why.bars_plate": "纵筋和箍筋用于柱和梁，不用于墙、楼板或基础。",
+ "rebar_hosts.why.no_common_face": "所选宿主没有共同的保护层面。请选择同一类型的宿主。",
+ "rebar_hosts.why.no_type": "请选择钢筋类型。",
+ "rebar_hosts.kind_type": "{kind} · {type}"
+}

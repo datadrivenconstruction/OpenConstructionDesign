@@ -1,0 +1,49 @@
+{
+ "sources": [
+  {
+   "id": "vn-qcvn06",
+   "title": "National fire safety regulation for buildings (QCVN 06:2022/BXD)",
+   "publisher": "Ministry of Construction / Government Gazette",
+   "url": "https://congbao.chinhphu.vn/van-ban/thong-tu-so-06-2022-tt-bxd-38322.htm",
+   "edition": "Circular 06/2022/TT-BXD, with amendment 1:2023",
+   "licence": "public-law",
+   "verified": "2026-11-14"
+  },
+  {
+   "id": "vn-qcvn04",
+   "title": "National regulation on apartment buildings (QCVN 04:2021/BXD), consolidated 2026",
+   "publisher": "Government Gazette / Ministry of Construction",
+   "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/10/95-vbhn-bxd-2026.pdf",
+   "edition": "Consolidated text 95/2026/VBHN-BXD (2026-09-30)",
+   "licence": "public-law",
+   "verified": "2026-11-14"
+  },
+  {
+   "id": "vn-qcvn10",
+   "title": "National regulation on accessibility of buildings (QCVN 10:2024/BXD)",
+   "publisher": "Ministry of Construction",
+   "url": "https://thuvienphapluat.vn/TCVN/Xay-dung/QCVN-10-2024-BXD-Xay-dung-cong-trinh-dam-bao-tiep-can-su-dung-921135.aspx",
+   "edition": "2024",
+   "licence": "public-law",
+   "verified": null
+  },
+  {
+   "id": "vn-tcvn2737",
+   "title": "TCVN 2737 loads and actions",
+   "publisher": "Ministry of Science and Technology",
+   "url": "https://tieuchuan.vn",
+   "edition": "2023",
+   "licence": "copyright-numbers-only",
+   "verified": null
+  },
+  {
+   "id": "vn-qcvn10-2024",
+   "title": "National regulation on accessible construction works (QCVN 10:2024/BXD), issued by Circular 06/2024/TT-BXD",
+   "publisher": "Ministry of Construction / Government portal",
+   "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2024/8/06-bxd.pdf",
+   "edition": "2024-08-01, effective 2025-02-01",
+   "licence": "public-law",
+   "verified": "2026-11-14"
+  }
+ ]
+}

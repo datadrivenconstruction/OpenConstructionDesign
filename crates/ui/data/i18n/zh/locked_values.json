@@ -1,0 +1,8 @@
+{
+ "cmd.props.param_lock": "锁定或解锁参数值",
+ "locked_values.kept": "已保留 {n} 个锁定值",
+ "locked_values.locked": "“{name}”已锁定：XLSX 电子表格 导入、批量编辑和 AI 将保留此值",
+ "locked_values.unlocked": "“{name}”已解锁",
+ "locked_values.locked_tip": "已锁定：XLSX 电子表格 导入、批量编辑和 AI 将保留此值。点击以解锁  ·  Ctrl+L",
+ "locked_values.no_row": "在属性面板中将光标置于参数行上，然后按 Ctrl+L"
+}

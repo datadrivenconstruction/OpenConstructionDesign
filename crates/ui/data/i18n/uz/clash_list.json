@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "Hammasi",
+ "clash_list.only_selected": "Faqat tanlanganlar",
+ "clash_list.tolerance": "Tolerans",
+ "clash_list.gap": "Oraliq",
+ "clash_list.export": "Eksport",
+ "clash_list.col.volume": "Hajm",
+ "clash_list.fix.up": "Yuqoriga ko'chirish",
+ "clash_list.fix.down": "Pastga ko'chirish",
+ "clash_list.fix.sleeve": "Gilza",
+ "clash_list.apply_fix": "Tuzatishni qo'llash",
+ "clash_list.err.tol": "Tolerans: uzunlik kiriting (0 yoki undan ko'p), masalan 50 yoki 2 dyuym",
+ "clash_list.sleeve_no_host": "Gilza juftlikda devor yoki plita talab qiladi",
+ "clash_list.err.gap": "Oraliq: uzunlik kiriting (0 yoki undan ko'p), masalan 50 yoki 2 dyuym"
+}

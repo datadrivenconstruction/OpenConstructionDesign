@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "Penerapan dibatalkan: model tidak sesuai dengan pratinjau. {what}",
+ "xlsx_verify.not_written": "{row} tidak diubah.",
+ "xlsx_verify.lost": "{row} hilang.",
+ "xlsx_verify.not_deleted": "{row} tidak dihapus.",
+ "xlsx_verify.extra_deleted": "{row} dihapus, padahal pratinjau mempertahankannya.",
+ "xlsx_verify.created": "{table}: {got} baru, bukan {want}.",
+ "xlsx_verify.value": "{row}, {field}: diharapkan {want} (sebelumnya {old}), didapat {got}.",
+ "xlsx_verify.check_failed": "Hasil tidak dapat diperiksa: {e}",
+ "xlsx_verify.plan_failed": "Penerapan tidak dimulai: pemeriksaan tidak dapat membaca model ({e}).",
+ "xlsx_verify.take_back_failed": "Langkah tidak dapat diurungkan ({e}): gunakan Urungkan.",
+ "xlsx_verify.t.wall": "Dinding",
+ "xlsx_verify.t.opening": "Bukaan",
+ "xlsx_verify.t.room": "Ruang",
+ "xlsx_verify.t.slab": "Lantai",
+ "xlsx_verify.t.level": "Tingkat",
+ "xlsx_verify.t.wall_type": "Tipe dinding",
+ "xlsx_verify.t.slab_type": "Tipe lantai",
+ "xlsx_verify.t.col": "Kolom",
+ "xlsx_verify.t.beam": "Balok",
+ "xlsx_verify.t.roof": "Atap",
+ "xlsx_verify.t.curtain_wall": "Dinding tirai"
+}

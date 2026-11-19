@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "إدراج طبقة أسفل",
+ "type_layers.layer.delete": "حذف الطبقة",
+ "type_layers.layer.delete_last": "يحتاج النوع إلى طبقة واحدة على الأقل",
+ "type_layers.value.bad": "قيمة موجبة غير صالحة",
+ "type_layers.value.required": "مطلوب",
+ "type_layers.unsaved.title": "تغييرات غير محفوظة في {name}",
+ "type_layers.unsaved.body": "هل تطبّقها على النوع أم تتجاهلها؟",
+ "type_layers.unsaved.discard": "تجاهل"
+}

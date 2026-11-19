@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "נקודה",
+ "trial.field.distance": "מרחק",
+ "trial.field.target": "אלמנט",
+ "trial.refused": "{field}: {reason}. שנה כדי להחיל",
+ "trial.preview_off": "תצוגה מקדימה כבויה: המודל גדול מדי"
+}

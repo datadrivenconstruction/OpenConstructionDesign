@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "Zalijepljeno ćelija: {n}",
+ "sched_edit.pasted_skipped": "Zalijepljeno ćelija: {n}, preskočeno {k}: {why}",
+ "sched_edit.filled": "Popunjeno ćelija: {n}",
+ "sched_edit.filled_skipped": "Popunjeno ćelija: {n}, preskočeno {k}: {why}",
+ "sched_edit.why_ro": "{n} samo za čitanje",
+ "sched_edit.why_bad": "{n} neispravna vrijednost",
+ "sched_edit.no_cell": "Prvo kliknite ćeliju u tablici",
+ "sched_edit.nothing": "Nema što zapisati",
+ "sched_edit.not_refreshed": "Zapisano, prikaz se nije osvježio: {e}",
+ "sched_edit.failed": "nije promijenjeno: {e}",
+ "sched_edit.no_changes": "Nema izmjena: {u} ćelija već sadrži ove vrijednosti",
+ "sched_edit.same_tail": ", {u} već jednako"
+}

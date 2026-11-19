@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "Vše",
+ "clash_list.only_selected": "Pouze vybrané",
+ "clash_list.tolerance": "Tolerance",
+ "clash_list.gap": "Mezera",
+ "clash_list.export": "Export",
+ "clash_list.col.volume": "Objem",
+ "clash_list.fix.up": "Posunout nahoru",
+ "clash_list.fix.down": "Posunout dolů",
+ "clash_list.fix.sleeve": "Pouzdro",
+ "clash_list.apply_fix": "Použít opravu",
+ "clash_list.err.tol": "Tolerance: zadejte délku (0 nebo více), např. 50 nebo 2 in",
+ "clash_list.sleeve_no_host": "Pouzdro potřebuje ve dvojici stěnu nebo desku",
+ "clash_list.err.gap": "Mezera: zadejte délku (0 nebo více), např. 50 nebo 2 in"
+}

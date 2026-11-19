@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "Applicazione annullata: il modello non corrispondeva all'anteprima. {what}",
+ "xlsx_verify.not_written": "{row} non è stato modificato.",
+ "xlsx_verify.lost": "{row} è scomparso.",
+ "xlsx_verify.not_deleted": "{row} non è stato eliminato.",
+ "xlsx_verify.extra_deleted": "{row} è stato eliminato, sebbene l'anteprima lo mantenga.",
+ "xlsx_verify.created": "{table}: {got} nuovi invece di {want}.",
+ "xlsx_verify.value": "{row}, {field}: previsto {want} (era {old}), ottenuto {got}.",
+ "xlsx_verify.check_failed": "Impossibile verificare il risultato: {e}",
+ "xlsx_verify.plan_failed": "Applicazione non avviata: il controllo non ha potuto leggere il modello ({e}).",
+ "xlsx_verify.take_back_failed": "Il passo non è stato annullato ({e}): usa Annulla.",
+ "xlsx_verify.t.wall": "Muro",
+ "xlsx_verify.t.opening": "Apertura",
+ "xlsx_verify.t.room": "Locale",
+ "xlsx_verify.t.slab": "Solaio",
+ "xlsx_verify.t.level": "Livello",
+ "xlsx_verify.t.wall_type": "Tipo di muro",
+ "xlsx_verify.t.slab_type": "Tipo di solaio",
+ "xlsx_verify.t.col": "Pilastro",
+ "xlsx_verify.t.beam": "Trave",
+ "xlsx_verify.t.roof": "Tetto",
+ "xlsx_verify.t.curtain_wall": "Facciata continua"
+}

@@ -1,0 +1,14 @@
+{
+ "lnp.openings_refused": "개구부 {n}개 변경되지 않음 ({why})",
+ "lnp.params_changed": "변경된 값: {n}",
+ "lnp.params_same": "변경 없음: 요소 {u}개가 이미 이 값을 가짐",
+ "lnp.params_tip": "Enter로 선택한 모든 요소에 값 적용; Esc로 유지",
+ "lnp.locked_hint": "유지되는 잠긴 값: {n}",
+ "lnp.panels_one": "패널은 한 번에 하나씩 편집합니다",
+ "lnp.keep_first": "첫 번째 유지",
+ "lnp.keep_first_tip": "첫 번째 패널만 선택해 편집합니다",
+ "lnp.clip_from_wall": "벽 #{id}에서 매개변수 복사됨",
+ "lnp.clip_from_opening": "개구부 #{id}에서 매개변수 복사됨",
+ "lnp.match_from": "#{id}의 속성을 요소 {n}개에 일치시킴",
+ "lnp.why_at": "#{id}: {e}"
+}

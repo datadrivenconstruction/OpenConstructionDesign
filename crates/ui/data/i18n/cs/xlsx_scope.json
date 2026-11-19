@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "Export do tabulky XLSX: rozsah",
+ "xlsx_scope.intro": "Vyberte, co se zapíše do sešitu. Zpětný import mění pouze tyto prvky.",
+ "xlsx_scope.base_whole": "Celý model",
+ "xlsx_scope.base_level": "Aktivní podlaží",
+ "xlsx_scope.base_selection": "Výběr",
+ "xlsx_scope.categories": "Kategorie",
+ "xlsx_scope.cat_walls": "stěny",
+ "xlsx_scope.cat_openings": "dveře",
+ "xlsx_scope.cat_rooms": "místnosti",
+ "xlsx_scope.cat_slabs": "desky",
+ "xlsx_scope.cat_curtains": "fasádní stěny",
+ "xlsx_scope.nothing_selected": "Nic není vybráno: nejprve vyberte prvky nebo zvolte jiný rozsah.",
+ "xlsx_scope.no_categories": "Zaškrtněte alespoň jednu kategorii.",
+ "xlsx_scope.no_level": "Aktivní podlaží nebylo nalezeno.",
+ "xlsx_scope.export": "Export",
+ "xlsx_scope.preview_scope": "Exportovaný rozsah: {scope}. Prvky mimo něj nikdy nebudou změněny ani smazány."
+}

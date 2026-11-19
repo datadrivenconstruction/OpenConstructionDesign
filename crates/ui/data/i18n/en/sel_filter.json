@@ -1,0 +1,6 @@
+{
+ "sel_filter.flt.all_cats": "All categories",
+ "sel_filter.flt.in_sel": "In selection",
+ "sel_filter.flt.none": "Tick at least one category, otherwise the selection would be emptied",
+ "sel_filter.tg.none": "Tick at least one category to tag"
+}

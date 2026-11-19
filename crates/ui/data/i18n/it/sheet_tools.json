@@ -1,0 +1,18 @@
+{
+ "undo.entry_later": "Non annullato: dopo è stata fatta un'altra modifica. Annulla prima quella.",
+ "undo.entry_gone": "Non annullato: questa modifica è già annullata o non è più nella cronologia.",
+ "undo.entry_busy": "Termina o annulla prima il disegno in corso, poi annulla.",
+ "quick.hud.more": "Altro in Proprietà: {names}",
+ "sheet_tools.sheet.more": "Altri strumenti tavola",
+ "job.of": "{d} di {t}",
+ "job.of.mb": "{d} di {t} MB",
+ "job.left.under_minute": "meno di un minuto rimanente",
+ "job.left.minutes": "circa {n} min rimanenti",
+ "sheet_tools.start.units": "Unità",
+ "sheet_tools.print.save": {
+  "one": "Salva # tavola",
+  "other": "Salva # tavole"
+ },
+ "sheet_tools.sets.delete_ask": "Eliminare il set “{name}”? Le sue tavole restano nel progetto.",
+ "sheet_tools.keep": "Mantieni"
+}

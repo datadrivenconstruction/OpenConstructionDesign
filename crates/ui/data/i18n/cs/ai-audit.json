@@ -1,0 +1,23 @@
+{
+ "ai.audit.tokens": "{n} tokenů",
+ "ai.audit.filter.all": "Vše",
+ "ai.audit.filter.ai": "AI",
+ "ai.audit.filter.me": "Já",
+ "ai.audit.search": "Hledat změny",
+ "ai.audit.search.clear": "Vymazat hledání",
+ "ai.audit.show_all": "Zobrazit vše",
+ "ai.audit.empty.hint": "Změny navržené nebo použité modelem či agentem se zobrazí zde, každá s možností návratu.",
+ "ai.audit.no_match": "Filtru neodpovídá žádná změna.",
+ "ai.audit.show.tip": "Vybrat a zobrazit prvky, kterých se tato změna dotkla",
+ "ai.audit.revert.ask": "Vrátit „{what}“? {change}.",
+ "ai.audit.revert.elements": {
+  "one": "# změna prvku",
+  "few": "# změny prvků",
+  "other": "# změn prvků"
+ },
+ "ai.audit.revert.keeps": "Novější změny zůstanou. Vrácení je jeden krok zpět.",
+ "ai.audit.cancel": "Zrušit",
+ "ai.audit.toast.reverted": "Vráceno: {what}",
+ "ai.audit.toast.undone": "Vráceno zpět: {what}",
+ "ai.audit.redo": "Znovu"
+}

@@ -1,0 +1,21 @@
+{
+ "mep.row.system": "Soustava",
+ "mep.row.elevation": "Počáteční kóta",
+ "mep.row.slope": "Spád",
+ "mep.row.material": "Materiál",
+ "mep.row.dev_elevation": "Kóta",
+ "mep.row.no_system": "Tato soustava už neexistuje. Vyberte jinou.",
+ "mep.row.no_points": "Trasa nemá body, a proto nemá kótu.",
+ "mep.row.system_domain": "Soustava {system} nepřijímá tento typ trasy ({kind}). Vyberte soustavu stejného typu sítě.",
+ "mep.row.material_pipes": "Materiál se týká pouze potrubí; tato trasa je: {kind}.",
+ "mep.row.no_catalog": "Materiál nemá katalogové rozměry pro tuto trasu.",
+ "mep.mat.none": "Nenastaveno",
+ "mep.mat.steel": "Ocel",
+ "mep.mat.copper": "Měď",
+ "mep.mat.pvc": "PVC",
+ "mep.mat.pp": "Polypropylen",
+ "mep.err.follow_blocked": "Připojená trasa nemůže tuto změnu sledovat: na novém místě pro její větev není místo. Přesuňte zařízení méně, nebo nejprve trasu odpojte.",
+ "mep.err.follow_slope": "Připojená trasa má spád, který na novém místě nelze zachovat: klesla by pod nejmenší spád své soustavy. Přesuňte zařízení méně na výšku, nebo nejprve trasu odpojte.",
+ "mep.err.follow_port_lost": "Přípojka, na které trasa ležela, po úpravě neexistuje. Nejprve trasu přesuňte pryč, nebo zachovejte typ zařízení.",
+ "mep.err.follow_device": "Tato trasa končí na přípojce zařízení a nemůže ji opustit. Přesuňte zařízení, nebo nejprve trasu odpojte."
+}

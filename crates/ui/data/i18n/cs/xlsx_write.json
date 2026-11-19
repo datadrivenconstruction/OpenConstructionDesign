@@ -1,0 +1,4 @@
+{
+ "xlsx_write.denied": "Nemáte oprávnění zapisovat do této složky. Sešit nebyl změněn. Uložte export do jiné složky.",
+ "xlsx_write.save_to": "Uložit do…"
+}

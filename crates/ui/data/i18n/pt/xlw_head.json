@@ -1,0 +1,15 @@
+{
+ "xlw.hd_never": "Ainda não exportada",
+ "xlw.hd_now": "agora mesmo",
+ "xlw.hd_min": "há {n} min",
+ "xlw.hd_hour": "há {n} h",
+ "xlw.hd_day": "há {n} d",
+ "xlw.hd_linked": "Vinculada",
+ "xlw.hd_watched": "Monitorada",
+ "xlw.hd_stale": "Modelo alterado desde a exportação",
+ "xlw.ft_export": "Exportar",
+ "xlw.ft_review": "Revisar",
+ "xlw.ft_apply": "Aplicar {n} alterações",
+ "xlw.ft_delete_missing": "Excluir ausentes",
+ "xlw.ft_keep_missing_tip": "Exclusão ativada: elementos sem linha serão excluídos ao aplicar. Desmarque para mantê-los."
+}

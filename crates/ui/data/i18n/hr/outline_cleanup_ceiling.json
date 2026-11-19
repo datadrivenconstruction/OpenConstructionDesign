@@ -1,0 +1,11 @@
+{
+ "cmd.ctx.ceiling.clean_outline": "Očisti obris",
+ "cmd.ctx.ceiling.clean_outline.desc": "Uklanja uske šiljke tamo gdje se obris stropa vraća na sebe. Prvo prikazuje pregled; jedan korak poništavanja.",
+ "cmd.ctx.shaft.clean_outline": "Očisti obris",
+ "cmd.ctx.shaft.clean_outline.desc": "Uklanja uske šiljke tamo gdje se obris okna vraća na sebe. Prvo prikazuje pregled; jedan korak poništavanja.",
+ "outline_cleanup.intro_ceiling": "Obris ovog stropa vraća se na sebe u uskim šiljcima: {n}. Čišćenje ih uklanja; sve ostalo ostaje kako jest.",
+ "outline_cleanup.intro_shaft": "Obris ovog okna vraća se na sebe u uskim šiljcima: {n}. Čišćenje ih uklanja; sve ostalo ostaje kako jest.",
+ "outline_cleanup.none_ceiling": "Obris ovog stropa nema šiljaka",
+ "outline_cleanup.none_shaft": "Obris ovog okna nema šiljaka",
+ "outline_cleanup.need_host": "Odaberite pod, strop ili okno"
+}

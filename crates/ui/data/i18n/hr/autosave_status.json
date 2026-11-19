@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "Automatsko spremanje nije uspjelo, zadnje izmjene nisu zaštićene. {why}",
+ "autosave_status.autosave_open": "Postavke automatskog spremanja",
+ "autosave_status.autosave_recovered": "Automatsko spremanje ponovno radi.",
+ "autosave_status.autosave_reason": "Razlog: {why}"
+}

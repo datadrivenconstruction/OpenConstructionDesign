@@ -1,0 +1,19 @@
+{
+ "names.level": "Etasje {n}",
+ "names.slab": "Dekke 200",
+ "names.roof_slab": "Tak 200",
+ "names.sheet.plan_section": "Plan og snitt, 1. etasje",
+ "names.sheet.plan_view": "Plan, 1. etasje",
+ "names.sheet.site_plan": "Situasjonsplan",
+ "names.sheet_set.issue": "Utgave 1",
+ "names.title.owner": "Prosjekt AS",
+ "names.title.creator": "A. Berg",
+ "names.title.approver": "K. Hansen",
+ "names.title.document_type": "Tegning",
+ "names.title.status": "Under arbeid",
+ "names.revision.date": "4. nov. 2026",
+ "names.revision.description": "Utgitt til gjennomgang",
+ "names.revision.author": "AI",
+ "names.demo.no_levels": "ingen etasjer",
+ "names.demo.no_sheet": "ark"
+}

@@ -1,0 +1,8 @@
+{
+ "ai_sent.summary": "Prosjektdata i denne forespørselen: {messages} meldinger, {tools} verktøyresultater, {images} bilder",
+ "ai_sent.copy": "Kopier",
+ "ai_sent.filter": "Finn i sendte forespørsler",
+ "ai_sent.no_match": "Ingen forespørsel samsvarer.",
+ "ai_sent.instructions": "Instruksjoner og verktøy",
+ "ai_sent.local_note": "Lagret bare på denne datamaskinen, for denne økten. Nøkler og passord vises aldri."
+}

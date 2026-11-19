@@ -1,0 +1,10 @@
+{
+ "dlg.dw.store.unloaded": "Rysunku „{name}” nie udało się odczytać z projektu; pozostaje w pliku bez zmian",
+ "dlg.dw.store.source_missing": "Rysunek „{name}”: nie znaleziono pliku źródłowego, pokazano kopię zapisaną w projekcie",
+ "dlg.dw.store.source_changed": "Rysunek „{name}”: plik źródłowy zmienił się od chwili umieszczenia, pokazano kopię zapisaną w projekcie",
+ "dlg.dw.store.unreadable": "Umieszczonych rysunków zapisanych w projekcie nie można odczytać",
+ "dlg.dw.store.not_saved": "Rysunki nie są zapisane: {why}",
+ "dlg.dw.store.why_read": "umieszczonych rysunków zapisanych w projekcie nie można odczytać",
+ "dlg.dw.store.why_write": "nie udało się zaktualizować pliku projektu",
+ "dlg.dw.store.missing_in_file": "Zapisany plik nie zawiera wszystkich umieszczonych rysunków"
+}

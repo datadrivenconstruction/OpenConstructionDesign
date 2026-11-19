@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "Nothing found",
+ "empty.browser_search.hint": "No view, level, type or room matches this search.",
+ "empty.browser_search.action": "Clear search",
+ "empty.xl_filtered.title": "No entries match the filters",
+ "empty.xl_filtered.hint": "Turn on more kinds, pick another sheet or change the search text.",
+ "empty.xl_filtered.action": "Clear filters",
+ "empty.xl_nochanges.title": "No changes in the book",
+ "empty.xl_nochanges.hint": "The book matches the model: importing it would change nothing.",
+ "empty.version_same.title": "The models are identical",
+ "empty.version_same.hint": "No differences were found between the open model and the chosen version.",
+ "empty.templates.title": "No view templates yet",
+ "empty.templates.hint": "Create one from the current view to reuse its settings on other views.",
+ "empty.templates.action": "Name a template",
+ "empty.fe_params.title": "No parameters yet",
+ "empty.fe_params.hint": "Add a parameter below to drive sizes, materials or visibility.",
+ "empty.fe_params.action": "Add a parameter"
+}

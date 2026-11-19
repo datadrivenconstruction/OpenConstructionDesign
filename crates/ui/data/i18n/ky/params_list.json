@@ -1,0 +1,23 @@
+{
+ "params_list.n_params": {
+  "one": "# параметр",
+  "other": "# параметр"
+ },
+ "params_list.n_values": {
+  "one": "# маани",
+  "other": "# маани"
+ },
+ "params_list.n_elements": {
+  "one": "# элемент",
+  "other": "# элемент"
+ },
+ "params_list.exported": "{params} {file} файлына экспорттолду",
+ "params_list.export_failed": "Параметрлер экспорттолгон жок: {why}",
+ "params_list.open_folder": "Папканы ачуу",
+ "params_list.delete_tip": "Параметрди жана анын маанилерин өчүрүү",
+ "params_list.confirm": "{name} параметрин жана ал {elements} элементтеринде коюлган {values} маанини өчүрөсүзбү?",
+ "params_list.confirm_btn": "Өчүрүү",
+ "params_list.cancel": "Жокко чыгаруу",
+ "params_list.deleted": "{name} параметри өчүрүлдү ({values})",
+ "params_list.undo": "Кайтаруу"
+}

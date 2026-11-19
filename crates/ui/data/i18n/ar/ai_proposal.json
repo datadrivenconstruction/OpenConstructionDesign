@@ -1,0 +1,13 @@
+{
+ "ai.proposal.title": "مقترح الوكيل",
+ "ai.proposal.meta": "{actor} · العمليات: {ops}",
+ "ai.proposal.apply.desc": "يطبّق المقترح كاملًا كخطوة واحدة؛ Ctrl+Z يتراجع عنه",
+ "ai.proposal.applying": "جارٍ التطبيق…",
+ "ai.proposal.applied": "تم تطبيق المقترح. Ctrl+Z يتراجع عنه.",
+ "ai.proposal.applied_resync": "تم تطبيق المقترح، لكن العرض لم يتحدّث بعد. يتحدّث تلقائيًا؛ Ctrl+Z يتراجع عن الخطوة.",
+ "ai.proposal.stale": "تغيّر النموذج بعد معاينة هذا المقترح. اطلب من الوكيل اقتراحه من جديد.",
+ "ai.proposal.toast.applied": "تم تطبيق المقترح. Ctrl+Z يتراجع عنه.",
+ "ai.proposal.toast.stale": "تغيّر النموذج بعد المعاينة، لذا لم يُطبَّق شيء. عاين من جديد: اطلب من الوكيل اقتراحه مجددًا.",
+ "ai.proposal.toast.refused": "لم يُطبَّق المقترح: {reason}",
+ "ai.proposal.rejected": "تم رفض المقترح."
+}

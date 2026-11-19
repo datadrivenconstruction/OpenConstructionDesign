@@ -1,0 +1,15 @@
+{
+ "fe.add_why_empty": "Saisissez d'abord un nom de paramètre",
+ "fe.add_why_exists": "Un paramètre portant ce nom existe déjà ; utilisez Appliquer pour le modifier",
+ "fe.apply_why_missing": "Aucun paramètre de ce nom ; saisissez un nom existant",
+ "fe.nochange": "Aucune modification pour l'instant",
+ "options.accept_more": "Accepter…",
+ "options.delete_more": "Supprimer…",
+ "options.empty_title": "Aucun jeu d'options pour l'instant",
+ "options.more": "Autres actions : {name}",
+ "options.primary_named": "Option principale : {name}",
+ "options.primary_tip": "En faire l'option principale du jeu",
+ "options.select_first": "Sélectionnez d'abord des éléments dans le modèle",
+ "options.show_3d": "Afficher en 3D : {name}",
+ "options.show_plan": "Afficher en plan : {name}"
+}

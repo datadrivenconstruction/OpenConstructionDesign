@@ -1,0 +1,21 @@
+{
+ "mep.row.system": "Süsteem",
+ "mep.row.elevation": "Alguse kõrgusmärk",
+ "mep.row.slope": "Kalle",
+ "mep.row.material": "Materjal",
+ "mep.row.dev_elevation": "Kõrgusmärk",
+ "mep.row.no_system": "Seda süsteemi enam pole. Vali teine.",
+ "mep.row.no_points": "Trassil pole punkte, seega pole kõrgusmärki.",
+ "mep.row.system_domain": "Süsteem {system} ei sobi sellele trassi tüübile ({kind}). Vali sama võrgutüübiga süsteem.",
+ "mep.row.material_pipes": "Materjal kehtib ainult torudele; see trass on {kind}.",
+ "mep.row.no_catalog": "Materjalil pole selle trassi jaoks kataloogi mõõtmeid.",
+ "mep.mat.none": "Määramata",
+ "mep.mat.steel": "Teras",
+ "mep.mat.copper": "Vask",
+ "mep.mat.pvc": "PVC",
+ "mep.mat.pp": "Polüpropüleen",
+ "mep.err.follow_blocked": "Ühendatud trassi ei saa sellele muudatusele järgi viia: uue asukoha juures pole ruumi selle haru jaoks. Liiguta seadet vähem või eemalda kõigepealt trassi ühendus.",
+ "mep.err.follow_slope": "Ühendatud trassil on kalle, mida ei saa uuel kohal säilitada: see langeks allapoole süsteemi väikseimat kallet. Liiguta seadet kõrguses vähem või eemalda kõigepealt trassi ühendus.",
+ "mep.err.follow_port_lost": "Ühendus, millel see trass asus, ei eksisteeri pärast muudatust enam. Liiguta trass kõigepealt eemale või säilita seadme tüüp.",
+ "mep.err.follow_device": "See trass lõpeb seadme ühendusel ega saa sealt lahkuda. Liiguta selle asemel seadet või eemalda kõigepealt trassi ühendus."
+}

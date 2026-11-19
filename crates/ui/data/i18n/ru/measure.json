@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "Расстояние",
+ "cmd.e3d.measure.clear": "Просвет между гранями",
+ "cmd.e3d.measure.angle": "Угол",
+ "cmd.e3d.measure.area": "Площадь / периметр грани или помещения",
+ "cmd.e3d.measure.volume": "Объём элемента",
+ "cmd.e3d.measure.slope": "Уклон",
+ "cmd.e3d.measure.chain": "Замер: цепочка точек",
+ "measure.orphan": "Опора потеряна",
+ "measure.not_planar": "Грани не параллельны",
+ "measure.unsupported": "Это не измеряется",
+ "cmd.ann.measure_distance": "Измерение: расстояние",
+ "cmd.ann.measure_clear": "Измерение: просвет между гранями",
+ "cmd.ann.measure_angle": "Измерение: угол",
+ "cmd.ann.measure_area": "Измерение: площадь",
+ "hint.measure.first": "Измерение: щёлкните грань стены (или точку) · Esc — выход",
+ "hint.measure.second": "Измерение: щёлкните вторую грань · Esc — отменить первый выбор",
+ "measure.no_face": "Здесь нет грани стены"
+}

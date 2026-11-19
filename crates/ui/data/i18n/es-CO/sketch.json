@@ -1,0 +1,11 @@
+{
+ "sketch.points": "Puntos",
+ "sketch.rect": "Rectángulo",
+ "sketch.circle": "Círculo",
+ "sketch.polygon": "Polígono",
+ "sketch.radius": "R",
+ "sketch.sides": "Lados",
+ "sketch.circum": "Circunscrito",
+ "sketch.shape.tip": "Forma del boceto (A cambia). Rectángulo: dos esquinas. Círculo y polígono: centro y luego radio. Escriba un tamaño y pulse Intro para fijarlo.",
+ "tool.err.zero_size": "Tamaño cero: aleje el segundo punto del primero"
+}

@@ -1,0 +1,10 @@
+{
+ "prop_head.of_type": {
+  "one": "# tohoto typu",
+  "few": "# tohoto typu",
+  "other": "# tohoto typu"
+ },
+ "prop_head.override_tip": "Liší se od typu, kliknutím obnovíte",
+ "prop_head.reset_done": "„{name}“ obnoveno na hodnotu typu",
+ "prop_head.copy_id": "Kliknutím zkopírujete číslo"
+}

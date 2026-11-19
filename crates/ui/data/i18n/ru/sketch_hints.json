@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "Нарисуйте замкнутый контур: щёлкайте точки, Enter или «Готово» — создать",
+ "sketch_hints.sk_finish": "Готово",
+ "sketch_hints.sk_cancel": "Отмена",
+ "sketch_hints.import_warn": "предупреждений проверки: {n} (первое — {first})",
+ "sketch_hints.ai.offline.schedule": "Открыть спецификацию",
+ "sketch_hints.ai.offline.check": "Проверить по правилам",
+ "sketch_hints.ai.offline.warnings": "Показать предупреждения",
+ "cmd.file.publish_pdf": "Выпустить PDF листов…",
+ "cmd.file.publish_pdf.desc": "Выпускает выбранные листы в PDF. То же, что «Экспорт листов в PDF/SVG».",
+ "sketch_hints.verify_none": "В выбранном нет значений помощника, которые нужно проверить",
+ "sketch_hints.contours_none": "В модели нет рельефа: горизонтали появятся после создания рельефа",
+ "sketch_hints.contours_off": "Горизонтали рельефа скрыты",
+ "sketch_hints.contours_on": "Горизонтали рельефа показаны"
+}

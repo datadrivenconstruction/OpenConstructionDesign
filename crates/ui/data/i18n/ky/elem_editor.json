@@ -1,0 +1,4 @@
+{
+ "elem.spreadsheet.applied": "XLSX'ден импорттолду: {what}",
+ "elem.spreadsheet.failed": "XLSX электрондук таблица импорту ишке ашкан жок: {e}"
+}

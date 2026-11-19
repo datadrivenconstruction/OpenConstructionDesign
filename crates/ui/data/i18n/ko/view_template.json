@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "먼저 템플릿 이름을 입력하세요",
+ "view_template.name_taken": "같은 이름의 템플릿이 이미 있습니다",
+ "view_template.pick_blocked": "먼저 뷰를 하나 이상 선택하세요",
+ "view_template.views.one": "뷰 {n}개",
+ "view_template.views.few": "뷰 {n}개",
+ "view_template.views.many": "뷰 {n}개",
+ "view_template.delete.title": "이 템플릿을 삭제하시겠습니까?",
+ "view_template.delete.body": "템플릿 \"{name}\"이(가) 삭제됩니다. 사용처: {used}.",
+ "view_template.delete.unused": "템플릿 \"{name}\"이(가) 삭제됩니다. 이 템플릿을 사용하는 뷰는 없습니다.",
+ "view_template.delete.keeps": "이 뷰들은 현재 그래픽을 유지하고 연결만 끊깁니다.",
+ "view_template.delete.undo": "실행 취소 한 번으로 되돌릴 수 있습니다.",
+ "view_template.delete.confirm": "템플릿 삭제"
+}

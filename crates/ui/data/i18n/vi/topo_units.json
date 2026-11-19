@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "Đơn vị",
+ "topo_units.unit": "Đơn vị trong tệp",
+ "topo_units.unit.m": "m",
+ "topo_units.unit.cm": "cm",
+ "topo_units.unit.mm": "mm",
+ "topo_units.unit.ft": "ft",
+ "topo_units.unit.usft": "foot khảo sát Mỹ",
+ "topo_units.unit.in": "in",
+ "topo_units.unit.from_file": "Tệp ghi rõ đơn vị: {unit}",
+ "topo_units.unit.suggested": "Tệp không ghi đơn vị. Gợi ý theo kích thước: {unit} — kiểm tra kết quả bên dưới",
+ "topo_units.extent": "Kết quả theo đơn vị dự án: {x} × {y} {u} trên mặt bằng, khoảng cao độ {z} {u}",
+ "topo_units.extent.none": "Kết quả: không có gì để nhập với các lựa chọn này",
+ "topo_units.extent.check": "Có vẻ không phải mặt bằng công trường: hãy kiểm tra đơn vị"
+}

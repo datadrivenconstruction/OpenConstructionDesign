@@ -1,0 +1,16 @@
+{
+ "xlsx_recover.title": "En eksport til det tilknyttede regneark blev afbrudt",
+ "xlsx_recover.both": "Eksporten stoppede mellem flytningen af det forrige regneark til siden og placeringen af det nye. Intet er tabt: det nye regneark er komplet i {part}, det forrige beholdes i {bak}.",
+ "xlsx_recover.part_only": "Eksporten stoppede, før det nye regneark blev placeret. Det er komplet i {part}.",
+ "xlsx_recover.bak_only": "Eksporten stoppede, før det nye regneark var klar. Det forrige regneark beholdes i {bak}.",
+ "xlsx_recover.finish": "Afslut den afbrudte eksport",
+ "xlsx_recover.restore": "Gendan det forrige regneark",
+ "xlsx_recover.finished": "Den afbrudte eksport er afsluttet: det nye regneark er på plads.",
+ "xlsx_recover.finished_kept": "Den afbrudte eksport er afsluttet: det nye regneark er på plads, det forrige beholdes i {bak}.",
+ "xlsx_recover.restored": "Det forrige regneark er tilbage på plads.",
+ "xlsx_recover.restore_failed": "Det forrige regneark kunne ikke flyttes tilbage ({err}). Det beholdes i {path}.",
+ "xlsx_recover.not_restored": "Det nye regneark kunne ikke placeres, og det forrige kunne ikke flyttes tilbage. Intet er tabt: det forrige regneark beholdes i {path}; Synkronisér tilbyder at afslutte eller gendanne.",
+ "xlsx_recover.finish_failed": "Det nye regneark kunne ikke placeres ({err}). Det bliver i {path}.",
+ "xlsx_recover.dest_back": "Et regneark er tilbage i {path}: intet blev flyttet.",
+ "xlsx_recover.nothing": "Intet fra den afbrudte eksport er tilbage at flytte."
+}

@@ -1,0 +1,6 @@
+{
+ "pair_input.pair_hint": "To verdier skilles med semikolon: @1000;500",
+ "pair_input.old_pair": "Et komma mellom to hele tall gir ikke lenger et par: skriv 6000;4000 for to verdier eller 6000,5 for et desimaltall",
+ "pair_input.op.bad_length": "Ikke en lengde: {text} ({why}). Ingenting ble endret",
+ "pair_input.op.bad_count": "Antallet {text} ble ikke tatt: et heltall fra {min} til {max}"
+}

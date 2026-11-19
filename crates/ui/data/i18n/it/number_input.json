@@ -1,0 +1,4 @@
+{
+ "number_input.bad_number": "Non è un numero: usa cifre con il punto decimale (1.5)",
+ "number_input.at_grids_tip": "Posiziona un pilastro in ogni intersezione di griglia su questo livello"
+}

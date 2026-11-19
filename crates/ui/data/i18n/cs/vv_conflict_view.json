@@ -1,0 +1,4 @@
+{
+ "vv_conflict.vv.switched": "Aktivní pohled se změnil. Tyto úpravy patří do {view} a zatím nejsou použity: Použít je zapíše do {view}, Zahodit je zruší.",
+ "vv_conflict.vv.discard": "Zahodit úpravy"
+}

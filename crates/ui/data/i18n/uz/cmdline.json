@@ -1,0 +1,13 @@
+{
+ "cmdl.mode_cmd": "Buyruq",
+ "cmdl.mode_ai": "AI",
+ "cmdl.toggle": "Buyruqlar yoki AI yordamchisi (Ctrl+J)",
+ "cmdl.hint": "Buyruq yoki qisqartma (W, L, M, RO), nuqta #x;y, @dx;dy, d<burchak. Ctrl+J: AI yordamchisiga so'rang",
+ "cmdl.hint_ai": "Model haqida so'rang yoki o'zgartirish so'rang. Ctrl+J: buyruqlarga qaytish",
+ "cmdl.sent": "AI yordamchisiga yuborildi",
+ "cmdl.failed": "Bu yerda “{text}” ni bajarib bo'lmadi",
+ "cmdl.no_tool": "Avval chizish buyrug'ini boshlang, so'ng uning nuqtalarini kiriting",
+ "cmdl.unknown": "“{text}” buyrug'i yo'q. Ctrl+J uni AI yordamchisiga yuboradi",
+ "cmdl.bad": "“{text}” ni o'qib bo'lmadi: {e}",
+ "cmdl.shape": "“{text}” nuqta emas: x;y, #x;y, @dx;dy yoki musbat masofa<burchak kiriting"
+}

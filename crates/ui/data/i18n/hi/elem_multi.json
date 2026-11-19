@@ -1,0 +1,10 @@
+{
+ "elem.multi.title": "{n} तत्व",
+ "elem.multi.varies": "भिन्न",
+ "elem.multi.tip": "Enter सभी चयनित तत्वों पर लागू करता है",
+ "elem.multi.hidden": "{n} पंक्तियाँ केवल कुछ तत्वों पर हैं",
+ "elem.multi.none": "चुने गए तत्वों में कोई पंक्ति समान नहीं है",
+ "elem.multi.range": "मान अनुमत सीमा से बाहर है",
+ "elem.multi.changed": "{n} तत्व बदले · Ctrl+Z पूर्ववत करता है",
+ "elem.multi.same": "सभी चयनित तत्वों पर पहले से यही मान है"
+}

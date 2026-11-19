@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "Nejprve zadejte název šablony",
+ "view_template.name_taken": "Šablona s tímto názvem již existuje",
+ "view_template.pick_blocked": "Nejprve zaškrtněte alespoň jeden pohled",
+ "view_template.views.one": "{n} pohled",
+ "view_template.views.few": "{n} pohledy",
+ "view_template.views.many": "{n} pohledů",
+ "view_template.delete.title": "Smazat tuto šablonu?",
+ "view_template.delete.body": "Šablona „{name}“ bude smazána. Používá ji {used}.",
+ "view_template.delete.unused": "Šablona „{name}“ bude smazána. Žádný pohled ji nepoužívá.",
+ "view_template.delete.keeps": "Tyto pohledy si ponechají svou grafiku, ale ztratí vazbu.",
+ "view_template.delete.undo": "Lze to vrátit jedním krokem Zpět.",
+ "view_template.delete.confirm": "Smazat šablonu"
+}

@@ -1,0 +1,9 @@
+{
+ "empty.props_model.title": "Ništa nije odabrano",
+ "empty.props_model.hint": "Kliknite element u pogledu da vidite njegova svojstva. Ili izvezite sve parametre u radnu knjigu, uredite ih tamo i primijenite natrag.",
+ "empty.props_model.action": "Izvezi u XLSX",
+ "tut.spreadsheet.title": "XLSX tablica u oba smjera",
+ "tut.spreadsheet.1": "Pritisnite Izvezi u XLSX tablica ispod: odaberite što uključiti i spremite radnu knjigu.",
+ "tut.spreadsheet.2": "Otvorite radnu knjigu u XLSX-u, promijenite ćeliju i spremite je. Pregled ovdje prikazuje promjenu.",
+ "tut.spreadsheet.3": "Provjerite pregled i pritisnite Primijeni na model. Ctrl+Z poništava."
+}

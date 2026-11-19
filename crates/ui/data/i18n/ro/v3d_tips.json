@@ -1,0 +1,8 @@
+{
+ "v3d.proj.to_ortho": "Treci la ortogonal",
+ "v3d.proj.to_persp": "Treci la perspectivă",
+ "v3d.walk.unit.m": "m/s",
+ "v3d.walk.unit.ft": "ft/s",
+ "v3d.temp.show_all": "Arată tot  ·  Esc",
+ "v3d.msg.deleted_named": "Vederea 3D {name} ștearsă"
+}

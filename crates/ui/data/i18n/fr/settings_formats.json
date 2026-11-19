@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "Ce qui se passe après l'export d'un classeur",
+ "settings.area_decimals_desc": "Chiffres après le séparateur décimal pour les surfaces",
+ "settings.volume_decimals_desc": "Chiffres après le séparateur décimal pour les volumes",
+ "settings.frac_desc": "Plus petite fraction de pouce dans les longueurs impériales",
+ "settings.small_area_desc": "Afficher les surfaces inférieures à un pied carré en pouces carrés",
+ "settings.sample_desc": "Aspect des nombres avec les choix actuels",
+ "autosave.title_desc": "Conserver une copie de récupération du projet ouvert",
+ "autosave.interval_desc": "Délai entre les copies de récupération",
+ "autosave.keep_desc": "Les copies de récupération les plus anciennes sont supprimées",
+ "autosave.folder_desc": "Vide = dossier par défaut",
+ "autosave.remind_desc": "Rappel d'enregistrer un projet qui n'a pas encore de fichier",
+ "settings.backend_desc": "Adaptateur graphique utilisé",
+ "settings.news_desc": "Ce qui a changé dans cette version",
+ "settings.assoc_default_desc": "Faire de cette application la valeur par défaut pour les fichiers de modèle",
+ "settings.data_dir_desc": "Les caches, copies de récupération et journaux sont stockés ici."
+}

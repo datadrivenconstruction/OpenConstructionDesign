@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "คีย์ในที่อยู่",
+ "ai_safety.auth.query_name": "พารามิเตอร์ที่อยู่",
+ "ai_safety.need_query_name": "ตั้งชื่อพารามิเตอร์ที่อยู่ที่ใช้ส่งคีย์",
+ "ai_safety.apply_unlogged": "นำไปใช้แล้ว แต่บันทึกการเปลี่ยนแปลงไม่ได้เขียน",
+ "ai_safety.audit_unlogged": "เขียนบันทึกของผู้ช่วย AI ไม่ได้",
+ "ai_safety.chat_not_saved": "บันทึกการสนทนาเข้าโครงการไม่ได้ กำลังลองอีกครั้ง",
+ "ai_safety.clip_clears": "คลิปบอร์ดจะล้างใน 30 วินาที",
+ "ai_safety.copied_clears": "คัดลอกแล้ว คลิปบอร์ดจะล้างใน 30 วินาที",
+ "ai_safety.key_session_only": "เก็บคีย์ไว้จนกว่าแอปจะปิด",
+ "ai.settings.no_data_dir": "ระบบนี้ไม่มีโฟลเดอร์สำหรับการตั้งค่าแอป"
+}

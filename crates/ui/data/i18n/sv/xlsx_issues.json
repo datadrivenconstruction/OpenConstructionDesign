@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "Överhoppade rader och celler",
+ "xlsx_issues.conflicts_title": "Ändrad på båda ställena",
+ "xlsx_issues.missing_title": "Blad saknas i arbetsboken",
+ "xlsx_issues.look_alike_title": "Bladnamnet stämmer inte",
+ "xlsx_issues.mass_title": "Massborttagning kräver bekräftelse",
+ "xlsx_issues.sheets_missing": "Blad {sheets} saknas i arbetsboken (omdöpta eller borttagna); deras rader jämfördes inte.",
+ "xlsx_issues.keep_model": "Behåll modell",
+ "xlsx_issues.take_book": "Ta arbetsboken",
+ "xlsx_issues.open_book_tip": "Öppnar filen i dess program. Inget ändras i modellen; förhandsgranskningen laddas om när du sparar arbetsboken."
+}

@@ -1,0 +1,8 @@
+{
+ "cmd.props.param_lock": "Blocca o sblocca il valore del parametro",
+ "locked_values.kept": "{n} valori bloccati mantenuti",
+ "locked_values.locked": "“{name}” bloccato: importazione foglio di calcolo XLSX, modifica in blocco e IA lo mantengono",
+ "locked_values.unlocked": "“{name}” sbloccato",
+ "locked_values.locked_tip": "Bloccato: importazione foglio di calcolo XLSX, modifica in blocco e IA mantengono questo valore. Clic per sbloccare  ·  Ctrl+L",
+ "locked_values.no_row": "Posiziona il cursore su una riga parametro nelle Proprietà, poi premi Ctrl+L"
+}

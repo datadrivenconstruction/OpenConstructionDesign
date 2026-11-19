@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "{name} promijenjen na disku.",
+ "src.watch.update": "Ažuriraj model",
+ "src.watch.compare": "Usporedi",
+ "src.watch.ignore": "Zanemari ovu verziju",
+ "src.watch.missing": "{name}: izvorna datoteka nije pronađena. Rad se nastavlja.",
+ "src.watch.locate": "Pronađi…",
+ "src.watch.dismiss": "Odbaci",
+ "src.watch.more": "i još {n} izvornih datoteka",
+ "src.watch.done": "Ažurirano iz {name}: promijenjeno {updated}, {kept} polja zadržano kao uređeno, {conflicts} sukoba, {locked} zaključanih vrijednosti zadržano"
+}

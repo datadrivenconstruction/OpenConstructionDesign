@@ -1,0 +1,15 @@
+{
+ "xl.msg.cell_clipped": "teks dipotong agar muat batas sel; hanya baca, suntingan tidak diterapkan",
+ "xlcell.status": "Diekspor. {count} sel dipersingkat atau dikosongkan — lihat jendela detail.",
+ "xlcell.title": "Sel yang diubah oleh ekspor",
+ "xlcell.intro": "Sel ini tidak dapat ditulis apa adanya. Nilai lengkapnya tetap di model; sel dikunci dan tidak dapat diedit di buku kerja.",
+ "xlcell.col_sheet": "Lembar",
+ "xlcell.col_row": "Baris",
+ "xlcell.col_col": "Kolom",
+ "xlcell.col_id": "Id elemen",
+ "xlcell.col_what": "Yang terjadi",
+ "xlcell.what_clipped": "Teks dipotong sesuai batas sel",
+ "xlcell.what_blank": "Bukan angka terbatas, sel dikosongkan",
+ "xlcell.more": "… dan {count} lainnya",
+ "xlcell.close": "Tutup"
+}

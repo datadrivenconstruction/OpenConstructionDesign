@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "personalizzato",
+ "draw_quality.custom.tip": "{name}: una voce di questo progetto",
+ "draw_quality.custom_note": "Le voci contrassegnate come personalizzate appartengono a questo progetto.",
+ "draw_quality.unsaved.lib_body": "Salvarle nella libreria o scartarle?",
+ "draw_quality.unsaved.styles_body": "Applicarle alla vista o scartarle?",
+ "draw_quality.unsaved.both_body": "Applicarle o scartarle?",
+ "draw_quality.halftone": "Mezzatinta {category}",
+ "draw_quality.styles.name": "Stili linea",
+ "draw_quality.styles.other_level": "Modifiche non salvate agli stili del livello {level}: applicale o annullale per modificare questo livello."
+}

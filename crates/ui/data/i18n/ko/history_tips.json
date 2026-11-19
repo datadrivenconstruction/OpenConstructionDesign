@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "실행 취소됨 — Ctrl+Y로 다시 실행",
+ "history.hist.empty": "아직 변경 사항이 없습니다",
+ "history.hist.empty_hint": "편집 내용이 여기에 표시됩니다. 단계를 클릭하면 그 시점으로 돌아갑니다.",
+ "history.hist.revert_all_n": "AI 변경 사항 모두 되돌리기 ({n})"
+}

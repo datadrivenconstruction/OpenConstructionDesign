@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "Kinokontrol ng template na {name}",
+ "view_template.edit_template": "I-edit ang template",
+ "view_template.locked_tip": "Itinakda ng view template na {name}. Baguhin ito sa template.",
+ "view_template.no_filters": "Walang filter sa view na ito"
+}

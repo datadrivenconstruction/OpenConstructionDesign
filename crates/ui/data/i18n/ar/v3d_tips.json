@@ -1,0 +1,8 @@
+{
+ "v3d.proj.to_ortho": "التبديل إلى المسقط المتعامد",
+ "v3d.proj.to_persp": "التبديل إلى المنظور",
+ "v3d.walk.unit.m": "م/ث",
+ "v3d.walk.unit.ft": "قدم/ث",
+ "v3d.temp.show_all": "إظهار الكل  ·  Esc",
+ "v3d.msg.deleted_named": "حُذف المنظر ثلاثي الأبعاد {name}"
+}

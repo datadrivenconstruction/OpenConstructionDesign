@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "Massa tidak dapat diputar atau dicerminkan: riwayat bentuknya tidak memiliki langkah rotasi. Pindahkan atau salin, atau gambar ulang ke arah baru.",
+ "sched_cats.col.name": "Nama",
+ "sched_cats.col.material": "Bahan",
+ "sched_cats.col.void": "Rongga",
+ "sched_cats.col.inplace": "Di tempat",
+ "sched_cats.col.volume": "Volume bersih",
+ "sched_cats.col.area": "Luas permukaan",
+ "sched_cats.col.floor_area": "Luas lantai",
+ "sched_cats.col.thickness": "Tebal",
+ "sched_cats.col.points": "Titik",
+ "elem.toposolid.points": "Titik survei",
+ "elem.toposolid.count": "Titik",
+ "elem.toposolid.low": "Terendah",
+ "elem.toposolid.high": "Tertinggi",
+ "elem.toposolid.edit": "Edit titik",
+ "elem.toposolid.edit_tip": "Pilih, seret, dan atur elevasi titik survei pada denah",
+ "elem.toposolid.pick_hint": "Klik titik pada denah untuk memilihnya. Klik lagi untuk menambah atau menghapus.",
+ "elem.toposolid.z": "Elevasi ({n})",
+ "elem.toposolid.mixed": "Titik yang dipilih berbeda; nilai baru akan mengaturnya semua.",
+ "elem.toposolid.edit_help": "Seret titik untuk memindahkannya. Ketik nilai dan tekan Enter untuk mengatur elevasi. Backspace menghapus titik yang dipilih, Esc keluar.",
+ "elem.toposolid.done": "Selesai"
+}

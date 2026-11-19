@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "Lisää 1 sarja",
+ "rebar_sets.add_n": "Lisää {n} sarjaa",
+ "rebar_sets.pick.search": "Hae palkkityyppejä",
+ "rebar_sets.pick.empty": "Ei vastaavia palkkityyppejä",
+ "rebar_sets.unit.deg": "°"
+}

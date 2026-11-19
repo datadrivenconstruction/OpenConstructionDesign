@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "Түлхүүр хаягт",
+ "ai_safety.auth.query_name": "Хаягийн параметр",
+ "ai_safety.need_query_name": "Түлхүүрийг зөөх хаягийн параметрийн нэрийг заана уу",
+ "ai_safety.apply_unlogged": "Хэрэгжсэн ч өөрчлөлтийн бүртгэл бичигдээгүй",
+ "ai_safety.audit_unlogged": "AI туслахын бүртгэлийг бичиж чадсангүй",
+ "ai_safety.chat_not_saved": "Чатыг төсөлд хадгалж чадсангүй. Дахин оролдож байна.",
+ "ai_safety.clip_clears": "Clipboard 30 секундын дараа цэвэрлэгдэнэ",
+ "ai_safety.copied_clears": "Хуулагдлаа. Clipboard 30 секундын дараа цэвэрлэгдэнэ",
+ "ai_safety.key_session_only": "Түлхүүр апп хаагдах хүртэл хадгалагдана",
+ "ai.settings.no_data_dir": "энэ систем апп-ын тохиргооны хавтас өгдөггүй"
+}

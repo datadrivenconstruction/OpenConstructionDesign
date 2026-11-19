@@ -1,0 +1,13 @@
+{
+ "cmd.arch.wall_pick": "Muro per linea",
+ "cmd.arch.wall_pick.desc": "Posiziona un muro su una linea di disegno scelta del livello corrente. F cambia asse o faccia sulla linea, Tab prende la catena collegata. Ogni scelta è un passo di annullamento. Funziona anche per le facciate continue.",
+ "hint.wall_pick.center": "Muro per linea: scegli una linea di disegno · asse sulla linea · F faccia · Tab catena · Esc esci",
+ "hint.wall_pick.face": "Muro per linea: scegli una linea di disegno · faccia sulla linea, lato cursore · F asse · Tab catena · Esc esci",
+ "hint.wall_pick.center_chain": "Muro per linea: scegli una linea per prenderne la catena · asse sulla linea · F faccia · Tab solo una linea",
+ "hint.wall_pick.face_chain": "Muro per linea: scegli una linea per prenderne la catena · faccia sulla linea · F asse · Tab solo una linea",
+ "wall_pick.st.start": "Scegli una linea di disegno. F: asse o faccia, Tab: catena collegata",
+ "wall_pick.st.no_lines": "Nessuna linea di disegno visibile su questo livello",
+ "wall_pick.st.miss": "Nessuna linea di disegno qui",
+ "wall_pick.st.on_wall": "Questa linea è già sotto il muro {id}",
+ "wall_pick.st.tight": "Lo scostamento di faccia non entra: un tratto della catena è più corto dello spessore del muro"
+}

@@ -1,0 +1,11 @@
+{
+ "sketch.points": "Punktid",
+ "sketch.rect": "Ristkülik",
+ "sketch.circle": "Ring",
+ "sketch.polygon": "Hulknurk",
+ "sketch.radius": "R",
+ "sketch.sides": "Küljed",
+ "sketch.circum": "Ümbritsetud",
+ "sketch.shape.tip": "Eskiisi kuju (A vahetab). Ristkülik: kaks nurka. Ring ja hulknurk: keskpunkt, seejärel raadius. Sisesta mõõde ja vajuta Enter, et see fikseerida.",
+ "tool.err.zero_size": "Nullmõõde: liiguta teist punkti esimesest eemale"
+}

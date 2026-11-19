@@ -1,0 +1,16 @@
+{
+ "family_overwrite.ow.title": "Zastąpić wartości typów projektu?",
+ "family_overwrite.ow.body": "Wczytanie zastąpi {values} w {types}. Umieszczone wystąpienia tych typów: {instances}.",
+ "family_overwrite.ow.values": {
+  "one": "# wartość",
+  "other": "# wartości"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# typ",
+  "other": "# typów"
+ },
+ "family_overwrite.ow.list": "Typy: {list}",
+ "family_overwrite.ow.more": "i jeszcze {n}",
+ "family_overwrite.ow.back": "Wróć do edycji",
+ "family_overwrite.ow.replace": "Zastąp wartości"
+}

@@ -1,0 +1,3 @@
+{
+ "find_replace.refresh_failed": "{n} sustituidos en {m} elementos; error al actualizar la vista: {e}"
+}

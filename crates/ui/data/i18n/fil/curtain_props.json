@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "Tabla",
+ "curtain_props.cw.panel_cell": "Selda {i}×{j} · pader na kurtina #{id}",
+ "curtain_props.cw.kind": "Uri",
+ "curtain_props.cw.kind.glazed": "Salamin",
+ "curtain_props.cw.kind.solid": "Buo",
+ "curtain_props.cw.kind.door": "Pinto",
+ "curtain_props.cw.kind.window": "Bintana",
+ "curtain_props.cw.kind.empty": "Walang laman",
+ "curtain_props.cw.name": "Pangalan",
+ "curtain_props.cw.swing_side": "Bumubukas sa kabilang panig",
+ "curtain_props.cw.swing_hinge": "Bisagra sa dulo ng cell",
+ "curtain_props.cw.size": "Laki",
+ "curtain_props.cw.cell_area": "Lawak ng cell",
+ "curtain_props.cw.panel_area": "Lawak ng panel",
+ "curtain_props.cw.prev": "Naunang panel",
+ "curtain_props.cw.next": "Susunod na panel",
+ "curtain_props.cw.wall": "Pumili ng pader",
+ "curtain_props.cw.panel_hint": "Esc — pagpili · Ctrl+Z — i-undo",
+ "curtain_props.cw.status.panel": "Tabla {i}×{j} → {kind}",
+ "e3d.err.cw_height": "dapat mas mataas sa 100 mm ang taas ng curtain wall"
+}

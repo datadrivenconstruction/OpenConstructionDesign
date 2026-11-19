@@ -1,0 +1,4 @@
+{
+ "source_input.err.number": "“{text}”不是数字；此参数只接受数字。未写入",
+ "source_input.err.comma": "“{text}”：小数请使用小数点（1.5）；逗号仅用于千位分隔（1,000）。未写入"
+}

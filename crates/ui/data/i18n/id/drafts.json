@@ -1,0 +1,8 @@
+{
+ "drafts.drafts.head": "Editor yang terbuka berisi suntingan yang belum ada di proyek:",
+ "drafts.draft.family": "Keluarga “{name}”",
+ "drafts.draft.line": "Pustaka garis: {name}",
+ "drafts.draft.styles": "Gaya garis rentang tampilan",
+ "drafts.btn.save_all": "Simpan semua",
+ "drafts.drafts.refused": "Draf tidak dapat disimpan. Tidak ada yang ditutup; editor dengan draf tetap terbuka."
+}

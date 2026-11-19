@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "Automaatsalvestus ebaõnnestus, viimaseid muudatusi ei kaitsta. {why}",
+ "autosave_status.autosave_open": "Automaatsalvestuse seaded",
+ "autosave_status.autosave_recovered": "Automaatsalvestus töötab jälle.",
+ "autosave_status.autosave_reason": "Põhjus: {why}"
+}

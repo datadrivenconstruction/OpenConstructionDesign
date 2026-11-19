@@ -1,0 +1,4 @@
+{
+ "room_watch.room.dup": "La sala {room} está en la región de la sala {other}: la superficie y el volumen se cuentan solo en la sala {other}",
+ "ai.issue.room_dup": "La sala está en la región de la sala {0}: su superficie se cuenta allí"
+}

@@ -1,0 +1,11 @@
+{
+ "job.stage.prepare": "Příprava projektu",
+ "open_guard.already_open": "{name} je již otevřen",
+ "open_guard.from_cache": "{name}: otevřeno z importní mezipaměti",
+ "open_guard.known_project": "{name} byl dříve importován: otevírám tento projekt",
+ "open_guard.locate": "Najít",
+ "open_guard.mem_low": "Málo paměti: rozpočet sítí je poloviční a sestavování úrovní detailu je pozastaveno",
+ "open_guard.mem_low_short": "Málo paměti: sestavování úrovní detailu je pozastaveno, dokud se paměť neuvolní",
+ "open_guard.no_window": "Okno tohoto projektu nebylo nalezeno",
+ "open_guard.switch_window": "Přepnout do tohoto okna"
+}

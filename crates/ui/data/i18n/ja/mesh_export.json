@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "モデル全体または選択範囲を、メートルまたはミリメートル単位のバイナリ STL として保存します。",
+ "cmd.data.export_obj.desc": "モデル全体または選択範囲を、MTL ファイル付きの OBJ として保存します。要素ごとに 1 グループ、色はマテリアルごとです。",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "マテリアル付き OBJ (.obj)",
+ "open_file.filter.mesh": "3D メッシュ (glTF, STEP, STL, OBJ)",
+ "mx.title": "{fmt} を書き出す",
+ "mx.scope": "書き出す範囲",
+ "mx.scope.all": "モデル全体",
+ "mx.scope.sel": "選択範囲 ({n} 要素)",
+ "mx.units": "ファイル内の単位",
+ "mx.units.m": "メートル",
+ "mx.units.mm": "ミリメートル",
+ "mx.export": "書き出し…",
+ "mx.saved": "{fmt} を保存しました: {path} ({parts} 要素、{tris} 三角形)",
+ "mx.partial": "{fmt} を {n} 件の問題を伴って保存しました。一部のボディが欠ける可能性があります: {path}",
+ "mx.failed": "{fmt} の書き出しに失敗しました: {error}",
+ "mx.imported": "{file}: {n} 要素を読み込みました ({tris} 三角形)",
+ "mx.imported_notes": "{file}: {n} 要素を読み込みました ({tris} 三角形)、{w} 件の注記: {first}"
+}

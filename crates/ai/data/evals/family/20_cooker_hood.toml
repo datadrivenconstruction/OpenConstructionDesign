@@ -1,0 +1,11 @@
+brief = "Cooker hood with a duct connection."
+category = "equipment"
+# the recorded answer names category mechanical, which the parser does not know: refused
+outcome = "refused"
+must = param Power
+must = param Width
+must = solids >= 2
+must = ports 2
+must = port conduit 1
+must = port duct 1
+must = flex Width 480 750

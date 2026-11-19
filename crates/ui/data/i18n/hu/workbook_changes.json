@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "A munkafüzet módosításai nincsenek alkalmazva",
+ "workbook_changes.wb.body": "A projekt bezárása vagy váltása elveti őket.",
+ "workbook_changes.wb.line": "Munkafüzet-importálás: {n} módosítás nincs alkalmazva",
+ "workbook_changes.wb.review": "Áttekintés",
+ "workbook_changes.wb.discard": "Elvetés"
+}

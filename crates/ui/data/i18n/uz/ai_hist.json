@@ -1,0 +1,14 @@
+{
+ "ai.hist.badge": "AI",
+ "ai.hist.untitled": "AI o'zgarishlari",
+ "ai.hist.tip": "{title}\nQo'llagan: {actor}\nAI modeli: {model}",
+ "ai.hist.why": "Sabab: {why}",
+ "ai.hist.reverted": "qaytarilgan",
+ "ai.hist.revert_one": "Ushbu AI partiyasini qaytarish",
+ "ai.revert.done": "AI o'zgarishlari qaytarildi: {n}. Bekor qilish ularni qaytaradi.",
+ "ai.revert.empty": "Qaytariladigan AI o'zgarishlari yo'q",
+ "ai.revert.not_ai": "Bu qadam AI o'zgarishi emas",
+ "ai.revert.already": "Bu AI o'zgarishlari allaqachon qaytarilgan",
+ "ai.revert.opaque": "Qaytarilmadi: bu AI o'zgarishlarini keyingi ishdan xavfsiz ajratib bo'lmaydi. Hech narsa o'zgarmadi.",
+ "ai.revert.failed": "Qaytarib bo'lmadi: {e}"
+}

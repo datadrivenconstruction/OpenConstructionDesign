@@ -1,0 +1,112 @@
+[
+  {
+    "id": "e3d.measure.distance",
+    "icon": "",
+    "mnemonic": null,
+    "shortcuts": [],
+    "tab": "modify",
+    "surfaces": [],
+    "stage": "M3",
+    "group": "edit3d"
+  },
+  {
+    "id": "e3d.measure.clear",
+    "icon": "",
+    "mnemonic": null,
+    "shortcuts": [],
+    "tab": "modify",
+    "surfaces": [],
+    "stage": "M3",
+    "group": "edit3d"
+  },
+  {
+    "id": "e3d.measure.angle",
+    "icon": "",
+    "mnemonic": null,
+    "shortcuts": [],
+    "tab": "modify",
+    "surfaces": [],
+    "stage": "M3",
+    "group": "edit3d"
+  },
+  {
+    "id": "e3d.measure.area",
+    "icon": "",
+    "mnemonic": null,
+    "shortcuts": [],
+    "tab": "modify",
+    "surfaces": [],
+    "stage": "M3",
+    "group": "edit3d"
+  },
+  {
+    "id": "e3d.measure.volume",
+    "icon": "",
+    "mnemonic": null,
+    "shortcuts": [],
+    "tab": "modify",
+    "surfaces": [],
+    "stage": "M3",
+    "group": "edit3d"
+  },
+  {
+    "id": "e3d.measure.slope",
+    "icon": "",
+    "mnemonic": null,
+    "shortcuts": [],
+    "tab": "modify",
+    "surfaces": [],
+    "stage": "M3",
+    "group": "edit3d"
+  },
+  {
+    "id": "e3d.measure.chain",
+    "icon": "",
+    "mnemonic": null,
+    "shortcuts": [],
+    "tab": "modify",
+    "surfaces": [],
+    "stage": "M3",
+    "group": "edit3d"
+  },
+  {
+    "id": "ann.measure_distance",
+    "icon": "",
+    "mnemonic": null,
+    "shortcuts": [],
+    "tab": "annotate",
+    "surfaces": [],
+    "stage": "M3",
+    "group": "text"
+  },
+  {
+    "id": "ann.measure_clear",
+    "icon": "",
+    "mnemonic": null,
+    "shortcuts": [],
+    "tab": "annotate",
+    "surfaces": [],
+    "stage": "M3",
+    "group": "text"
+  },
+  {
+    "id": "ann.measure_angle",
+    "icon": "",
+    "mnemonic": null,
+    "shortcuts": [],
+    "tab": "annotate",
+    "surfaces": [],
+    "stage": "M3",
+    "group": "text"
+  },
+  {
+    "id": "ann.measure_area",
+    "icon": "",
+    "mnemonic": null,
+    "shortcuts": [],
+    "tab": "annotate",
+    "surfaces": [],
+    "stage": "M3",
+    "group": "text"
+  }
+]

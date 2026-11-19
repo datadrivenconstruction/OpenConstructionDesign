@@ -1,0 +1,44 @@
+{
+ "room_kinds": {
+  "living": [
+   "salón",
+   "salon",
+   "sala de estar",
+   "estar"
+  ],
+  "bedroom": [
+   "dormitorio",
+   "habitación"
+  ],
+  "kitchen": [
+   "cocina"
+  ],
+  "bath": [
+   "baño",
+   "aseo"
+  ],
+  "wc": [
+   "aseo",
+   "inodoro"
+  ],
+  "hall": [
+   "vestíbulo",
+   "recibidor",
+   "entrada"
+  ],
+  "corridor": [
+   "pasillo"
+  ],
+  "storage": [
+   "trastero",
+   "despensa"
+  ],
+  "office": [
+   "oficina",
+   "despacho"
+  ],
+  "meeting": [
+   "sala de reuniones"
+  ]
+ }
+}

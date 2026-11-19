@@ -1,0 +1,9 @@
+{
+ "tool.room": "Rum",
+ "tool.room.name": "Rum",
+ "room_tool.room.name": "Namn",
+ "hint.room.place": "Klicka inuti en sluten väggslinga för att skapa ett rum · Esc — avsluta",
+ "tool.err.room_open": "Ytan är inte sluten: slut väggslingan eller lägg till en rumsavgränsare",
+ "tool.err.room_check": "Rummen på denna våning kan inte kontrolleras",
+ "tool.err.room_exists": "Det finns redan ett rum i denna slinga"
+}

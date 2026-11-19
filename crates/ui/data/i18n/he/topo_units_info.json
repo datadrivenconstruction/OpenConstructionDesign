@@ -1,0 +1,13 @@
+{
+ "topo.unit.mm": "mm",
+ "topo.unit.metre": "m",
+ "topo.unit.ft": "ft",
+ "topo.opt.material": "חומר",
+ "topo.row.active": "משטח פעיל",
+ "topo.btn.delete_pad": "מחק משטח",
+ "topo.info.loading": "בונה את המשטח…",
+ "topo.info.warn_n": "{n} אזהרות",
+ "topo.info.points_label": "נקודות",
+ "topo.import.all_layers": "כל השכבות",
+ "topo.import.need_layer": "סמן לפחות שכבה אחת"
+}

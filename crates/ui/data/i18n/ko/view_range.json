@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "뷰 범위",
+ "view_range.range": "뷰 범위",
+ "view_range.cut": "절단 평면",
+ "view_range.bottom": "하단",
+ "view_range.depth": "뷰 깊이",
+ "view_range.cut.hint": "레벨 위 절단 평면의 높이. 이를 가로지르는 요소는 잘린 상태로 그려집니다.",
+ "view_range.bottom.hint": "레벨 기준 범위의 하단. 0 또는 음수 값도 허용됩니다.",
+ "view_range.depth.hint": "뷰가 하단 아래로 얼마나 깊이 보는지. 0 이상.",
+ "view_range.err.number": "각 칸에 길이를 입력하세요",
+ "view_range.err.not_finite": "각 칸에 길이를 입력하세요",
+ "view_range.err.cut_not_above_bottom": "절단 평면은 하단보다 위에 있어야 합니다",
+ "view_range.err.negative_depth": "뷰 깊이는 음수가 될 수 없습니다",
+ "view_range.err.top_below_cut": "범위의 상단은 절단 평면보다 아래에 있으면 안 됩니다"
+}

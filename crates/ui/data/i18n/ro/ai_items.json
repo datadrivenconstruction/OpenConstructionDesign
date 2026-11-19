@@ -1,0 +1,18 @@
+{
+ "ai.items.all": {
+  "one": "Tot # element",
+  "few": "Toate # elementele",
+  "other": "Toate # de elemente"
+ },
+ "ai.items.all.tip": "Bifează sau debifează fiecare element al planului",
+ "ai.items.checked": "{n} din {m} bifate",
+ "ai.items.check.tip": "Include „{title}” în Aplică",
+ "ai.items.expand": "Arată elementele",
+ "ai.items.collapse": "Ascunde elementele",
+ "ai.items.apply": {
+  "one": "Aplică # element",
+  "few": "Aplică # elemente",
+  "other": "Aplică # de elemente"
+ },
+ "ai.items.apply_none": "Aplică"
+}

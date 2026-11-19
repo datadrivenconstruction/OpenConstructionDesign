@@ -1,0 +1,11 @@
+{
+ "job.stage.prepare": "Подготовка проекта",
+ "open_guard.already_open": "{name} уже открыт",
+ "open_guard.from_cache": "{name}: открыто из кэша импорта",
+ "open_guard.known_project": "{name} уже импортировался: открываю тот проект",
+ "open_guard.locate": "Найти",
+ "open_guard.mem_low": "Мало памяти: бюджет мешей вдвое меньше, построение уровней детализации приостановлено",
+ "open_guard.mem_low_short": "Мало памяти: построение уровней детализации приостановлено, пока память не освободится",
+ "open_guard.no_window": "Окно этого проекта не найдено",
+ "open_guard.switch_window": "Перейти в это окно"
+}

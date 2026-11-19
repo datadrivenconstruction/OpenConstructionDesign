@@ -1,0 +1,6 @@
+{
+ "vv_conflict.styles.conflict": "Gli stili degli oggetti di una categoria modificata sono cambiati nel modello (annulla o un'altra finestra) mentre questa finestra aveva modifiche. Le tue modifiche sono mantenute.",
+ "vv_conflict.styles.keep": "Mantieni le mie modifiche",
+ "vv_conflict.styles.reload": "Ricarica",
+ "vv_conflict.styles.answer_first": "Scegli Mantieni le mie modifiche o Ricarica prima"
+}

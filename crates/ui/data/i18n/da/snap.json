@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "Endepunkt",
+ "snap.midpoint": "Midtpunkt",
+ "snap.perpendicular": "Vinkelret",
+ "snap.wall_axis": "Væggens akse",
+ "snap.wall_face": "Vægflade",
+ "snap.grid": "Gitter",
+ "snap.intersection": "Skæring",
+ "snap.grid_axis": "Akselinje",
+ "snap.ref_plane": "Referenceplan",
+ "snap.nearest": "Nærmeste",
+ "snap.align_x": "Justeret i X med et fjernt punkt",
+ "snap.align_y": "Justeret i Y med et fjernt punkt",
+ "snap.align_xy": "Justeret i X og Y"
+}

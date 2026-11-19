@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "Čeka iza pokrenutog zadatka: {n}",
+ "import_queue.queue_full": "Red je pun, {n} datoteka nije dodano",
+ "import_queue.changed": "{name} je ažuriran nakon što je ovaj projekt napravljen. Otvoren je prethodni projekt.",
+ "import_queue.import_again": "Uvezi ponovno",
+ "import_queue.kept": "Završen uvoz je zadržan",
+ "import_queue.open_it": "Otvori",
+ "import_queue.sum.head": "uvoz: {editable} uredivo (zidovi {walls}, otvori {open}, ploče {slabs}, prostorije {rooms}, ostalo {other}), {meshes} kao mreža",
+ "import_queue.sum.unchanged": ", nepromijenjeno {n}",
+ "import_queue.sum.updated": ", ažurirano {n}",
+ "import_queue.sum.missing": ", nije u izvoru {n} (zadržano)",
+ "import_queue.sum.skipped": ", preskočeno {n}",
+ "import_queue.sum.warnings": ", upozorenja {n}",
+ "import_queue.import_failed": "uvoz nije uspio: {e}"
+}

@@ -1,0 +1,11 @@
+{
+ "cmd.ctx.ceiling.clean_outline": "تنظيف المحيط",
+ "cmd.ctx.ceiling.clean_outline.desc": "يزيل الأشواك الضيقة حيث يلتف محيط السقف على نفسه. يعرض معاينة أولًا؛ خطوة تراجع واحدة.",
+ "cmd.ctx.shaft.clean_outline": "تنظيف المحيط",
+ "cmd.ctx.shaft.clean_outline.desc": "يزيل الأشواك الضيقة حيث يلتف محيط الفتحة الرأسية على نفسه. يعرض معاينة أولًا؛ خطوة تراجع واحدة.",
+ "outline_cleanup.intro_ceiling": "يلتف محيط هذا السقف على نفسه في أشواك ضيقة: {n}. التنظيف يزيلها، ويبقى الباقي كما هو.",
+ "outline_cleanup.intro_shaft": "يلتف محيط هذه الفتحة الرأسية على نفسها في أشواك ضيقة: {n}. التنظيف يزيلها، ويبقى الباقي كما هو.",
+ "outline_cleanup.none_ceiling": "محيط هذا السقف لا يحوي أشواكًا",
+ "outline_cleanup.none_shaft": "محيط هذه الفتحة الرأسية لا يحوي أشواكًا",
+ "outline_cleanup.need_host": "حدّد أرضية أو سقفًا أو فتحة رأسية"
+}

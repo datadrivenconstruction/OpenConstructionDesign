@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "Volná plocha",
+ "cmd.mass.panelize": "Rozdělit na panely",
+ "cmd.mass.surface_shell": "Střecha podle plochy",
+ "cmd.mass.thicken": "Zesílit",
+ "hint.mass.freeform.first": "Volná plocha: první roh obdélníku v půdorysu · zadejte výšku · Esc — zrušit",
+ "hint.mass.freeform.next": "Volná plocha: protilehlý roh · zadejte výšku · Esc — zrušit",
+ "hint.mass.panelize.first": "Panely: vyberte volnou plochu ve 3D · Esc — zrušit",
+ "hint.mass.panelize.value": "Panely: zadejte velikost panelu · Enter — použít · Esc — zrušit",
+ "hint.mass.surface_shell.first": "Střecha podle plochy: vyberte volnou plochu ve 3D · Esc — zrušit",
+ "hint.mass.surface_shell.value": "Střecha podle plochy: zadejte tloušťku · Enter — použít · Esc — zrušit",
+ "hint.mass.thicken.first": "Zesílit: vyberte volnou plochu ve 3D · Esc — zrušit",
+ "hint.mass.thicken.value": "Zesílit: zadejte tloušťku (0 — bez tloušťky) · Enter — použít · Esc — zrušit",
+ "status.mass.pick_surface": "Vyberte volnou plochu",
+ "status.mass.freeform_small": "Obdélník je příliš malý: alespoň 0,5 m v každém směru",
+ "name.mass.freeform": "Volná plocha",
+ "rgroup.mass_free": "Pokročilé"
+}

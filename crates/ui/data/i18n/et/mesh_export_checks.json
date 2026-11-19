@@ -1,0 +1,15 @@
+{
+ "cmd.data.export_step.desc": "Salvestab kogu mudeli või valiku STEP AP214 või AP242 formaadis: tahked kehad täpsete tasapinnaliste, silindriliste, koonilise, sfääriliste, toroidsete ja B-spline-pindadega, muud elemendid tasapinnaliste pindadena, värvid ja üks koostesõlm korruse kohta.",
+ "cmd.data.export_3mf.desc": "Salvestab kogu mudeli või valiku printimiseks 3MF-na: üks objekt elemendi kohta, värvid, ühikud ja kontroll, et iga keha on suletud.",
+ "fmenu.export.step": "STEP täpsed tahked kehad (.step)",
+ "fmenu.export.3mf": "3MF printimiseks (.3mf)",
+ "mx.schema": "STEP-skeem",
+ "mx.schema.ap214": "AP214 (kõige laiem tugi)",
+ "mx.schema.ap242": "AP242",
+ "mx.watertight": "Kehad, mis pole suletud",
+ "mx.watertight.report": "Kirjuta need ja loetle",
+ "mx.watertight.skip": "Jäta välja",
+ "mx.watertight.require": "Tühista eksport",
+ "mx.faceted": "{fmt} salvestatud: {path} ({exact} täpset tahket keha, {n} kirjutatud tasapinnaliste pindadena: {first})",
+ "sheets.print.svg": "SVG"
+}

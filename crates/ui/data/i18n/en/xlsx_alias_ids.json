@@ -1,0 +1,7 @@
+{
+ "xlsx_alias_ids.ids_written": "{n} new rows got their ids in your renamed sheet; nothing else in the workbook changed.",
+ "xlsx_alias_ids.ids_open": "The workbook is open in another program: the ids of {n} new rows were not written. Close it there and Sync; these rows are not created again.",
+ "xlsx_alias_ids.ids_failed": "The ids of {n} new rows could not be written; the workbook was left as it was. These rows are not created again on the next Sync.",
+ "xlsx_alias_ids.unpaired": "{n} new rows have no id yet; they are remembered and not created again.",
+ "xlsx_alias_ids.refused": "Nothing was applied: new rows in {sheets} cannot get their ids while a renamed sheet is read. Rename the sheet back to its standard name (or remove these rows) and Sync again."
+}

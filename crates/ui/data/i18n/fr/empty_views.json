@@ -1,0 +1,19 @@
+{
+ "empty.v3d_gpu.title": "La 3D n'est pas disponible sur cet adaptateur graphique",
+ "empty.v3d_gpu.hint": "Le modèle est intact et le plan fonctionne. Redémarrez en mode graphique sûr pour réessayer la 3D.",
+ "empty.v3d_gpu.action": "Redémarrer en mode graphique sûr",
+ "empty.v3d_loading.title": "Construction de la 3D…",
+ "empty.v3d_loading.pct": "Ouverture… {pct} %",
+ "empty.plan_hidden.title": "Tous les éléments sont masqués dans ce plan",
+ "empty.plan_hidden.hint": "Le masquage ou l'isolement temporaire ne laisse rien visible.",
+ "empty.plan_hidden.action": "Tout afficher",
+ "empty.plan_graphics.title": "Les graphiques de vue masquent toutes les catégories",
+ "empty.plan_graphics.hint": "Les règles de catégories de cette vue ne laissent rien à afficher.",
+ "empty.plan_graphics.action": "Ouvrir les graphiques de vue",
+ "empty.plan_phase.title": "Le filtre de phase masque tout",
+ "empty.plan_phase.hint": "Rien de ce niveau n'existe dans la phase affichée par cette vue.",
+ "empty.plan_phase.action": "Changer de phase",
+ "empty.plan_level.title": "Aucun élément sur ce niveau",
+ "empty.plan_level.hint": "D'autres niveaux de ce modèle contiennent des éléments.",
+ "empty.plan_level.action": "Aller au niveau avec des éléments"
+}

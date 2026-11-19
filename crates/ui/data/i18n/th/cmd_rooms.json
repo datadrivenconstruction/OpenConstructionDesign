@@ -1,0 +1,6 @@
+{
+ "cmd.arch.room_auto.short": "วางห้อง",
+ "cmd.mod.group_select.short": "เลือกกลุ่ม",
+ "cmd.mod.group_cancel.short": "ยกเลิกการแก้ไข",
+ "cmd.view.place_sheet_list.short": "วางรายการชีต"
+}

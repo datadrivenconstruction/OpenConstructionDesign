@@ -1,0 +1,4 @@
+{
+ "xlsx_write.denied": "No hay permisos para escribir en esta carpeta. El libro no se cambió. Guardar la exportación en otra carpeta.",
+ "xlsx_write.save_to": "Guardar en…"
+}

@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "Todos",
+ "clash_list.only_selected": "Somente selecionados",
+ "clash_list.tolerance": "Tolerância",
+ "clash_list.gap": "Folga",
+ "clash_list.export": "Exportar",
+ "clash_list.col.volume": "Volume",
+ "clash_list.fix.up": "Mover para cima",
+ "clash_list.fix.down": "Mover para baixo",
+ "clash_list.fix.sleeve": "Luva",
+ "clash_list.apply_fix": "Aplicar correção",
+ "clash_list.err.tol": "Tolerância: informe um comprimento (0 ou mais), ex.: 50 ou 2 in",
+ "clash_list.sleeve_no_host": "A luva precisa de uma parede ou laje no par",
+ "clash_list.err.gap": "Folga: informe um comprimento (0 ou mais), ex.: 50 ou 2 in"
+}

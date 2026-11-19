@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "يجب أن تكون القيمة أكبر من صفر",
+ "sched_ops.not_number": "ليس رقمًا",
+ "sched_ops.no_host": "لا يوجد جدار مضيف",
+ "sched_ops.wall_length": "لا يمكن ضبط طول هذا الجدار إلى هذه القيمة",
+ "sched_ops.no_wall": "لا يوجد جدار كهذا",
+ "sched_ops.no_opening": "لا توجد فتحة كهذه",
+ "sched_ops.no_curtain": "لا يوجد جدار ستاري كهذا",
+ "sched_ops.no_panel": "لا توجد لوحة كهذه",
+ "sched_ops.no_slab": "لا توجد بلاطة كهذه",
+ "sched_ops.no_room": "لا توجد غرفة كهذه",
+ "sched_ops.slope_range": "الميل خارج المدى",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

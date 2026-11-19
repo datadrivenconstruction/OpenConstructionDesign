@@ -1,0 +1,10 @@
+{
+ "elem.multi.title": "{n} prvků",
+ "elem.multi.varies": "liší se",
+ "elem.multi.tip": "Zadáním se nastaví všechny vybrané prvky",
+ "elem.multi.hidden": "{n} řádků pouze u některých prvků",
+ "elem.multi.none": "Vybrané prvky nemají žádné společné řádky",
+ "elem.multi.range": "Hodnota je mimo povolený rozsah",
+ "elem.multi.changed": "Změněno prvků: {n} · Ctrl+Z vrátí",
+ "elem.multi.same": "Všechny vybrané prvky již mají tuto hodnotu"
+}

@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "আগে একটি টেমপ্লেটের নাম লিখুন",
+ "view_template.name_taken": "এই নামে একটি টেমপ্লেট আগে থেকেই আছে",
+ "view_template.pick_blocked": "আগে অন্তত একটি ভিউ টিক দিন",
+ "view_template.views.one": "{n}টি ভিউ",
+ "view_template.views.few": "{n}টি ভিউ",
+ "view_template.views.many": "{n}টি ভিউ",
+ "view_template.delete.title": "এই টেমপ্লেটটি মুছবেন?",
+ "view_template.delete.body": "টেমপ্লেট \"{name}\" মুছে যাবে। ব্যবহার করছে {used}।",
+ "view_template.delete.unused": "টেমপ্লেট \"{name}\" মুছে যাবে। কোনো ভিউ এটি ব্যবহার করে না।",
+ "view_template.delete.keeps": "এই ভিউগুলো বর্তমান গ্রাফিক্স রাখবে, তবে লিংক হারাবে।",
+ "view_template.delete.undo": "একবার আনডু দিয়ে এটি ফেরানো যায়।",
+ "view_template.delete.confirm": "টেমপ্লেট মুছুন"
+}

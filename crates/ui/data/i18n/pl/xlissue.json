@@ -1,0 +1,13 @@
+{
+ "xlw.copy_list": "Kopiuj listę",
+ "xlw.save_list": "Zapisz listę…",
+ "xlw.copy_list_tip": "Kopiuje widoczne wiersze (arkusz, komórka, id, kolumna, wartości, powód) jako tekst do arkusza kalkulacyjnego",
+ "xlw.save_list_tip": "Zapisuje widoczne wiersze jako plik .csv obok skoroszytu; sam skoroszyt nigdy się nie zmienia",
+ "xlw.list_book_value": "Wartość skoroszytu",
+ "xlw.list_model_value": "Wartość modelu",
+ "xlw.list_reason": "Powód",
+ "xlw.list_copied": "Skopiowano listę: {n} wierszy",
+ "xlw.list_saved": "Zapisano listę: {n} wierszy, {file}",
+ "xlw.list_save_failed": "Nie zapisano listy",
+ "xlw.list_nothing": "Nic do skopiowania: brak widocznych wierszy"
+}

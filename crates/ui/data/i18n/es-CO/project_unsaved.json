@@ -1,0 +1,7 @@
+{
+ "project_unsaved.unsaved.model": "Los cambios del modelo no están guardados.",
+ "project_unsaved.unsaved.drawings": {
+  "one": "# plano colocado no está guardado en el proyecto: sus cambios se perderán.",
+  "other": "# planos colocados no están guardados en el proyecto: sus cambios se perderán."
+ }
+}

@@ -1,0 +1,74 @@
+{
+ "rules": [
+  {
+   "id": "ru.apartment.area",
+   "text": {
+    "en": "Apartment area at least the minimum for its number of living rooms",
+    "ru": "Площадь квартиры не менее минимальной для числа жилых комнат"
+   },
+   "source": {
+    "doc": "sp54.13330",
+    "clause": "table 5.1"
+   },
+   "severity": "error",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "programme",
+    "typology": "apartment"
+   },
+   "unit": "m2",
+   "verified": true,
+   "depth": 1,
+   "discipline": "arch"
+  },
+  {
+   "id": "ru.room.low_height_share",
+   "text": {
+    "en": "Rooms lower than 2.5 m take at most half of the dwelling area",
+    "ru": "Помещения ниже 2,5 м занимают не более половины площади жилья"
+   },
+   "source": {
+    "doc": "sp54.13330",
+    "clause": "App. A.2.2"
+   },
+   "severity": "error",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "ratio",
+    "per": "total",
+    "group_by": "unit",
+    "num": {
+     "where": [
+      {
+       "field": "height",
+       "op": "<",
+       "value": 2.5
+      }
+     ]
+    },
+    "den": {},
+    "max": 0.5
+   },
+   "unit": "ratio",
+   "verified": true,
+   "depth": 2,
+   "discipline": "arch",
+   "value": 0.5
+  },
+  {
+   "id": "generic.programme.apartment",
+   "disabled": true
+  }
+ ]
+}

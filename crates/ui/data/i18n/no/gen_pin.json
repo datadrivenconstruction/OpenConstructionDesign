@@ -1,0 +1,7 @@
+{
+ "gen.pin.room": "Du endret et rom i det genererte prosjektet. Lås det, så beholder en revisjon det på plass.",
+ "gen.pin.storey": "Du endret en etasje i det genererte prosjektet. Lås den, så beholder en revisjon veggene og åpningene.",
+ "gen.pin.action": "Lås",
+ "gen.pin.done": "Låst: en revisjon av prosjektet beholder det og plasserer resten rundt det",
+ "gen.pin.failed": "Kunne ikke låse"
+}

@@ -1,0 +1,11 @@
+{
+ "cmd.arch.roof_gable.short": "Sadel",
+ "cmd.arch.roof_hip.short": "Valm",
+ "cmd.arch.roof_shed.short": "Pulttag",
+ "cmd.arch.roof_mansard.short": "Mansard, knækket",
+ "cmd.arch.roof_gambrel.short": "Mansard",
+ "cmd.arch.roof_barrel.short": "Tønde",
+ "cmd.arch.roof_edges.short": "Tagkanter",
+ "cmd.arch.roof_opening.short": "Åbning",
+ "cmd.mass.roof_by_face.short": "Efter flade"
+}

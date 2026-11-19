@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "Чөлөөт гадаргуу",
+ "cmd.mass.panelize": "Хавтанд хуваах",
+ "cmd.mass.surface_shell": "Гадаргуун дээвэр",
+ "cmd.mass.thicken": "Зузаан",
+ "hint.mass.freeform.first": "Чөлөөт гадаргуу: планы тэгш өнцөгтийн эхний булан · тоо оруулна — өндөр · Esc — цуцлах",
+ "hint.mass.freeform.next": "Чөлөөт гадаргуу: эсрэг талын булан · тоо оруулна — өндөр · Esc — цуцлах",
+ "hint.mass.panelize.first": "Хавтан: 3D-д чөлөөт гадаргуу сонгоно уу · Esc — цуцлах",
+ "hint.mass.panelize.value": "Хавтан: хавтангийн хэмжээг оруулна уу · Enter — хэрэгжүүлэх · Esc — цуцлах",
+ "hint.mass.surface_shell.first": "Гадаргуун дээвэр: 3D-д чөлөөт гадаргуу сонгоно уу · Esc — цуцлах",
+ "hint.mass.surface_shell.value": "Гадаргуун дээвэр: зузааныг оруулна уу · Enter — хэрэгжүүлэх · Esc — цуцлах",
+ "hint.mass.thicken.first": "Зузаан: 3D-д чөлөөт гадаргуу сонгоно уу · Esc — цуцлах",
+ "hint.mass.thicken.value": "Зузаан: зузааныг оруулна уу (0 — зузаангүй) · Enter — хэрэгжүүлэх · Esc — цуцлах",
+ "status.mass.pick_surface": "Чөлөөт гадаргуу сонгоно уу",
+ "status.mass.freeform_small": "Тэгш өнцөгт хэтэрхий жижиг: тус бүр 0.5 м-ээс багагүй байх ёстой",
+ "name.mass.freeform": "Чөлөөт гадаргуу",
+ "rgroup.mass_free": "Нэмэлт"
+}

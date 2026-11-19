@@ -1,0 +1,9 @@
+{
+ "tool.room": "Ambiente",
+ "tool.room.name": "Ambiente",
+ "room_tool.room.name": "Nome",
+ "hint.room.place": "Clique dentro de um contorno de parede fechado para criar um ambiente · Esc — sair",
+ "tool.err.room_open": "A região não está fechada: feche o contorno de paredes ou adicione um aba de ambiente",
+ "tool.err.room_check": "Não é possível verificar os ambientes deste pavimento",
+ "tool.err.room_exists": "Já existe um ambiente neste contorno"
+}

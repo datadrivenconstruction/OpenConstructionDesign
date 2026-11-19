@@ -1,0 +1,13 @@
+{
+ "cmdl.mode_cmd": "Kom.",
+ "cmdl.mode_ai": "AI",
+ "cmdl.toggle": "Polecenia lub asystent AI (Ctrl+J)",
+ "cmdl.hint": "Polecenie lub skrót (W, L, M, RO), punkt #x;y, @dx;dy, d<kąt. Ctrl+J: zapytaj asystenta AI",
+ "cmdl.hint_ai": "Zapytaj asystenta AI o model lub poproś o zmianę. Ctrl+J: powrót do poleceń",
+ "cmdl.sent": "Wysłano do asystenta AI",
+ "cmdl.failed": "Nie można tu uruchomić „{text}”",
+ "cmdl.no_tool": "Najpierw uruchom polecenie rysowania, a potem wpisz jego punkty",
+ "cmdl.unknown": "Brak polecenia „{text}”. Ctrl+J wyśle je do asystenta AI",
+ "cmdl.bad": "Nie można odczytać „{text}”: {e}",
+ "cmdl.shape": "„{text}” nie jest punktem: wpisz x;y, #x;y, @dx;dy lub dodatnią odległość<kąt"
+}

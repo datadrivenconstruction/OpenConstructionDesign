@@ -1,0 +1,31 @@
+{
+ "sources": [
+  {
+   "id": "se-bbr3",
+   "title": "Boverket building rules BBR section 3 with guidance (accessibility, dwelling design, room height)",
+   "publisher": "Boverket",
+   "url": "https://www.boverket.se/globalassets/publikationer/dokument/2026/boverkets-byggregler-bbr-avsnitt-3---tillganglighet-bostadsutformning-rumshojd-och-driftutrymmen.pdf",
+   "edition": "BFS 2011:6, guidance edition before 2025-12-01",
+   "licence": "public-law",
+   "verified": "2026-11-14"
+  },
+  {
+   "id": "se-bbr8",
+   "title": "Boverket building rules BBR section 8 (safety in use)",
+   "publisher": "Boverket",
+   "url": "https://www.boverket.se/contentassets/2b709d86893740bab472714cb1ffb4c0/boverkets-byggregler-avsnitt-8-bfs-2011-6-tom-2014-3.pdf",
+   "edition": "BFS 2011:6 amended to BFS 2014:3 (older edition)",
+   "licence": "public-law",
+   "verified": null
+  },
+  {
+   "id": "se-bbr8-guidance-2025",
+   "title": "BBR section 8 Safety in use, guidance from PBL knowledge bank (before 1 Dec 2025)",
+   "publisher": "Boverket",
+   "url": "https://www.boverket.se/globalassets/publikationer/dokument/2026/boverkets-byggregler-bbr-avsnitt-8---sakerhet-vid-anvandning---vagledning-fran-pbl-kunskapsbanken-fore-1-december-2025.pdf",
+   "edition": "2025-12",
+   "licence": "public-law",
+   "verified": "2026-11-14"
+  }
+ ]
+}

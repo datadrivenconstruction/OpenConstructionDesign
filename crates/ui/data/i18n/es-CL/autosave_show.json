@@ -1,0 +1,4 @@
+{
+ "cmd.mgr.autosave_show": "Mostrar autoguardado",
+ "cmd.mgr.autosave_show.desc": "Abre la ventana de autoguardado; permanece abierta si ya se mostraba."
+}

@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "لاگو روک دیا گیا: ماڈل جیسا تھا ویسا رکھا گیا",
+ "apply_verify.rolled_back": "لاگو مسودے سے نہیں ملا اور واپس لے لیا گیا؛ ماڈل نہیں بدلا۔ {what}",
+ "apply_verify.diff.missing": "مسودہ {what} {kind} دکھاتا ہے، مگر لاگو نے یہ نہیں کیا۔",
+ "apply_verify.diff.extra": "{kind} {what} لاگو کریں، جو مسودہ نہیں دکھاتا۔",
+ "apply_verify.diff.kind": "مسودہ {what} {shown} دکھاتا ہے، مگر لاگو {applied} کرتا ہے۔",
+ "apply_verify.diff.value": "{what}: “{col}” مسودے سے مختلف نکلا۔",
+ "apply_verify.diff.truncated": "مسودہ اور لاگو شدہ تبدیلی حجم میں مختلف ہیں۔",
+ "apply_verify.diff.unreadable": "لاگو شدہ تبدیلی واپس نہیں پڑھی جا سکی ({e})۔",
+ "apply_verify.no_base": "لاگو نہیں چلا: مسودے کا موازنہ کرنے کی نقل غائب ہے۔ ماڈل نہیں بدلا؛ مسودہ دوبارہ مانگیں۔",
+ "apply_verify.take_back_failed": "واپس لینا ناکام ({e}): Undo استعمال کریں۔",
+ "apply_verify.kind.created": "بنایا گیا",
+ "apply_verify.kind.changed": "تبدیل",
+ "apply_verify.kind.deleted": "حذف",
+ "apply_verify.card.type_row": "قسم {type} · {n} عناصر یہ تبدیلی لیتے ہیں"
+}

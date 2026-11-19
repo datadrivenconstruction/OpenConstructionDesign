@@ -1,0 +1,21 @@
+{
+ "gen.group.envelope": "Envelope",
+ "gen.group.acoustic": "Sound insulation",
+ "gen.rule.fire.insulation_class.title": "Envelope insulation fire class",
+ "gen.rule.fire.insulation_class.desc": "Worst reaction-to-fire class the insulation of exterior walls and roofs may have; build-ups with a worse insulation are not chosen.",
+ "gen.rule.envelope.u_wall.title": "Exterior wall U-value",
+ "gen.rule.envelope.u_wall.desc": "Highest heat transmittance of an exterior wall; the wall insulation is sized to stay under it, so a colder climate gets a thicker wall.",
+ "gen.rule.envelope.u_roof.title": "Roof U-value",
+ "gen.rule.envelope.u_roof.desc": "Highest heat transmittance of a roof; the roof insulation is sized to stay under it.",
+ "gen.rule.envelope.u_ground.title": "Ground slab U-value",
+ "gen.rule.envelope.u_ground.desc": "Highest heat transmittance of the floor slab on the ground; the insulation under the screed is sized to stay under it.",
+ "gen.rule.acoustic.rw_party.title": "Party wall sound insulation",
+ "gen.rule.acoustic.rw_party.desc": "Least sound reduction index Rw of a wall between dwellings or next to a common corridor; the masonry core is sized by the mass law to reach it.",
+ "gen.rule.acoustic.rw_floor.title": "Floor sound insulation",
+ "gen.rule.acoustic.rw_floor.desc": "Least sound reduction index Rw of a floor between storeys; the concrete slab is sized by the mass law to reach it.",
+ "gen.why.e.asm_wall": "exterior walls {t} m thick with {ins} m of insulation: U {u} W/m2K, at most {lim}",
+ "gen.why.e.asm_roof": "roof {t} m thick with {ins} m of insulation: U {u} W/m2K, at most {lim}",
+ "gen.why.e.asm_ground": "ground slab {t} m thick with {ins} m of insulation: U {u} W/m2K, at most {lim}",
+ "gen.why.e.asm_party": "party walls {t} m thick, {m} kg/m2: Rw {rw} dB by the mass law, at least {lim}",
+ "gen.why.e.asm_floor": "floors {t} m thick, {m} kg/m2: Rw {rw} dB by the mass law, at least {lim}"
+}

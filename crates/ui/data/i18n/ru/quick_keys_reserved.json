@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key} зарезервировано ({why}), переназначить нельзя",
+ "quick.keys.res_copy": "копирование",
+ "quick.keys.res_paste": "вставка",
+ "quick.keys.res_cut": "вырезание",
+ "quick.keys.res_undo": "отмена / повтор",
+ "quick.keys.res_save": "сохранение",
+ "quick.keys.res_palette": "палитра команд",
+ "quick.keys.reserved_conflict": "{key} уже занято командой «{cmd}». Esc — оставить как есть.",
+ "quick.keys.reserved_swap": "Поменять местами",
+ "quick.keys.reserved_take": "Забрать себе",
+ "quick.keys.reserved_keep": "Оставить",
+ "quick.keys.reserved_os": "Заняты системой:"
+}

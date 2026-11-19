@@ -1,0 +1,20 @@
+{
+ "dwgfillet.fillet": "Afronden",
+ "dwgfillet.cancel": "Afronding stoppen",
+ "dwgfillet.tip": "Klik op twee lijnen aan de zijden die behouden moeten blijven: beide worden bijgesneden of verlengd tot de hoek, met een raakboog bij een straal boven nul",
+ "dwgfillet.radius": "Afrondingsstraal",
+ "dwgfillet.radius_tip": "Straal van de boog in tekeneenheden; 0 maakt een scherpe hoek",
+ "dwgfillet.st.arm_first": "Klik op de eerste lijn aan de zijde die behouden moet blijven",
+ "dwgfillet.st.arm_second": "Klik op de tweede lijn aan de zijde die behouden moet blijven",
+ "dwgfillet.st.not_armed": "Kies eerst Afronden",
+ "dwgfillet.st.click_line": "Klik op één lijn van de tekening",
+ "dwgfillet.st.other_drawing": "Beide lijnen moeten bij dezelfde tekening horen: begin opnieuw",
+ "dwgfillet.st.changed": "De eerste lijn is gewijzigd: begin opnieuw",
+ "dwgfillet.st.same_line": "Kies een andere tweede lijn",
+ "dwgfillet.st.parallel": "De lijnen zijn evenwijdig en komen nooit samen: er kan geen hoek worden gemaakt",
+ "dwgfillet.st.degenerate": "Een lijn heeft geen lengte",
+ "dwgfillet.st.no_side": "De aangeklikte zijde heeft geen lengte vanaf de hoek",
+ "dwgfillet.st.too_big": "De straal is te groot voor deze lijnen: gebruik een kleinere straal",
+ "dwgfillet.st.radius_bad": "De straal moet nul of positief zijn",
+ "dwgfillet.st.done": "Hoek gemaakt"
+}

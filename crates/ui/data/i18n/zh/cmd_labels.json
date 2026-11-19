@@ -1,0 +1,14 @@
+{
+ "cmd.arch.wall.tile": "墙",
+ "cmd.arch.door.tile": "门",
+ "cmd.arch.window.tile": "窗",
+ "cmd.arch.floor.tile": "楼板",
+ "cmd.mod.move.tile": "移动",
+ "cmd.mod.copy.tile": "复制",
+ "cmd.mod.rotate.tile": "旋转",
+ "cmd.mod.mirror.tile": "镜像",
+ "cmd.mod.trim.tile": "修剪",
+ "cmd.mod.delete.tile": "删除",
+ "cmd.ann.dim.tile": "尺寸标注",
+ "cmd.ann.text.tile": "文字"
+}

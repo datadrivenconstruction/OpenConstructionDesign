@@ -1,0 +1,14 @@
+{
+ "ai_keys.header_is_key": "ضع المفاتيح في حقل المفتاح — تُحفظ الترويسات كنص عادي",
+ "ai_keys.move": "نقل إلى المفتاح",
+ "ai_keys.remove_line": "إزالة من الترويسات",
+ "ai_keys.save_blocked": "انقل المفتاح خارج الترويسات للحفظ",
+ "ai_keys.show": "إظهار",
+ "ai_keys.hide": "إخفاء",
+ "ai_keys.copy": "نسخ",
+ "ai_keys.tokens": "رموز",
+ "ai_keys.presets": "الإعدادات الجاهزة",
+ "ai_keys.preset_k": "{n} ألف",
+ "ai_keys.preset_m": "{n} مليون",
+ "ai_keys.images_on": "مدعوم"
+}

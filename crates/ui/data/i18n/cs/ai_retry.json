@@ -1,0 +1,7 @@
+{
+ "ai.retry.countdown": "Opakuji za {n} s",
+ "ai.retry.try": "Automatický pokus {i} z {max}. Stejný požadavek se odešle znovu.",
+ "ai.retry.now": "Zkusit hned",
+ "ai.retry.gave_up": "Ani po {max} automatických pokusech odpověď nepřišla.",
+ "ai.retry.shorten": "Zkrátit požadavek"
+}

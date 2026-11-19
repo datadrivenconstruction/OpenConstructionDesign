@@ -1,0 +1,8 @@
+{
+ "xlsx_issues.empty_title": "Pusty arkusz w skoroszycie",
+ "xlsx_issues.empty_kept": "Arkusz {sheet} jest pusty: nic z niego nie odczytano, {n} elementów pozostaje bez zmian. Pozostałe arkusze nadal można zastosować.",
+ "xlsx_issues.empty_none": "Arkusz {sheet} jest pusty: nic z niego nie odczytano. Pozostałe arkusze nadal można zastosować.",
+ "xlsx_issues.unreadable_title": "Nie udało się odczytać arkusza",
+ "xlsx_issues.unreadable": "Arkusza {sheet} nie udało się odczytać, jego część pliku jest uszkodzona: nic z niego nie pobrano, a jego elementy pozostają bez zmian. Pozostałe arkusze nadal można zastosować.",
+ "xlsx_issues.formulas": "Formuł w arkuszu {sheet} nie udało się odczytać, więc wartości obliczonej nie da się odróżnić od edycji: nic z tego arkusza nie pobrano. Pozostałe arkusze nadal można zastosować."
+}

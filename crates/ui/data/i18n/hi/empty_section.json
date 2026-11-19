@@ -1,0 +1,11 @@
+{
+ "empty.sv_notfound.title": "व्यू नहीं मिला",
+ "empty.sv_notfound.hint": "यह व्यू हटा दिया गया है या अब प्रोजेक्ट का हिस्सा नहीं है।",
+ "empty.sv_notfound.action": "व्यू बंद करें",
+ "empty.sv_cuts_nothing.title": "यह सेक्शन कुछ नहीं काटता",
+ "empty.sv_cuts_nothing.hint": "कट रेखा अपनी गहराई के भीतर किसी दीवार, स्लैब या ओपनिंग को नहीं काटती। रेखा हटाएं या व्यू को गहरा करें।",
+ "empty.sv_cuts_nothing.action": "प्लान पर दिखाएं",
+ "empty.sv_shows_nothing.title": "यह एलिवेशन कुछ नहीं दिखाता",
+ "empty.sv_shows_nothing.hint": "व्यू की गहराई में कोई दीवार, स्लैब या ओपनिंग नहीं आती। व्यू रेखा हटाएं या व्यू को गहरा करें।",
+ "empty.sv_shows_nothing.action": "प्लान पर दिखाएं"
+}

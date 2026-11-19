@@ -1,0 +1,4 @@
+{
+ "cmd.data.sync_xlsx": "Sync with XLSX spreadsheet…",
+ "cmd.data.sync_xlsx.desc": "Re-reads the linked workbook and shows differences from the model."
+}

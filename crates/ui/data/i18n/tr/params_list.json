@@ -1,0 +1,23 @@
+{
+ "params_list.n_params": {
+  "one": "# parametre",
+  "other": "# parametre"
+ },
+ "params_list.n_values": {
+  "one": "# değer",
+  "other": "# değer"
+ },
+ "params_list.n_elements": {
+  "one": "# öğe",
+  "other": "# öğe"
+ },
+ "params_list.exported": "{params} dosyaya aktarıldı: {file}",
+ "params_list.export_failed": "Parametreler dışa aktarılmadı: {why}",
+ "params_list.open_folder": "Klasörü aç",
+ "params_list.delete_tip": "Parametreyi ve değerlerini sil",
+ "params_list.confirm": "{name} parametresi ve {elements} üzerindeki {values} silinsin mi?",
+ "params_list.confirm_btn": "Sil",
+ "params_list.cancel": "İptal",
+ "params_list.deleted": "{name} parametresi silindi ({values})",
+ "params_list.undo": "Geri al"
+}

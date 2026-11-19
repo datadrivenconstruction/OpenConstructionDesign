@@ -1,0 +1,4 @@
+{
+ "cmd.data.sync_xlsx": "Synkronisér med regneark…",
+ "cmd.data.sync_xlsx.desc": "Læser det tilknyttede regneark igen og viser forskelle fra modellen."
+}

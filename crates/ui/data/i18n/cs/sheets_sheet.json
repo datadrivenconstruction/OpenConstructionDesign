@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "Duplikovat list s pohledy",
+ "cmd.view.sheet_duplicate_title": "Duplikovat list (pouze razítko)",
+ "sheets.dup.menu_views": "Duplikovat s pohledy",
+ "sheets.dup.menu_title": "Duplikovat, pouze razítko",
+ "sheets.dup.done": "List {number} vytvořen z {src}: {views} pohledů, {sched} výkazů a legend. Revize se nekopírují; list je nevydaný.",
+ "sheets.dup.none": "Otevřete list, který chcete duplikovat",
+ "sheets.dup.copy": "kopie",
+ "cmd.view.sheet_duplicate.short": "Duplikovat s pohledy",
+ "cmd.view.sheet_duplicate_title.short": "Duplikovat razítko"
+}

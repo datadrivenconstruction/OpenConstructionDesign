@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "Chọn toàn bộ vòng tường",
+ "cmd.sketch.link_unlink": "Hủy liên kết cạnh với tường",
+ "cmd.sketch.link_repick": "Chọn lại tường cho cạnh",
+ "cmd.ctx.floor.link_unlink": "Hủy liên kết cạnh với tường",
+ "cmd.ctx.floor.link_accept": "Chấp nhận cạnh của tường đã xóa",
+ "boundary_link.hint.loop": "Nhấn vào một bức tường: chuỗi tường khép kín sẽ thành các cạnh liên kết",
+ "boundary_link.hint.repick": "Nhấn vào một bức tường song song với cạnh: cạnh sẽ bám theo nó",
+ "boundary_link.need_sketch": "Mở phác thảo ranh giới trước",
+ "boundary_link.need_edge": "Trỏ vào một cạnh của phác thảo",
+ "boundary_link.need_straight": "Chỉ cạnh thẳng mới bám được theo tường",
+ "boundary_link.need_floor": "Chọn một sàn",
+ "boundary_link.no_wall": "Không có tường dưới con trỏ",
+ "boundary_link.not_parallel": "Tường không song song với cạnh",
+ "boundary_link.not_linked": "Cạnh này chưa liên kết với tường",
+ "boundary_link.unlinked": "Đã hủy liên kết cạnh: cạnh giữ nguyên vị trí và không còn bám theo tường",
+ "boundary_link.accepted": "Đã chấp nhận cạnh: chúng giữ nguyên vị trí như cạnh thông thường",
+ "boundary_link.failed": "Không áp dụng được",
+ "boundary_link.lost": "tường gốc đã bị xóa",
+ "boundary_link.blocked": "không thể bám theo tường"
+}

@@ -1,0 +1,15 @@
+{
+ "xlw.hd_never": "Non ancora esportato",
+ "xlw.hd_now": "poco fa",
+ "xlw.hd_min": "{n} min fa",
+ "xlw.hd_hour": "{n} h fa",
+ "xlw.hd_day": "{n} g fa",
+ "xlw.hd_linked": "Collegato",
+ "xlw.hd_watched": "Sotto controllo",
+ "xlw.hd_stale": "Modello cambiato dopo l'esportazione",
+ "xlw.ft_export": "Esporta",
+ "xlw.ft_review": "Verifica",
+ "xlw.ft_apply": "Applica {n} modifiche",
+ "xlw.ft_delete_missing": "Elimina mancanti",
+ "xlw.ft_keep_missing_tip": "L'eliminazione è attiva: gli elementi senza riga verranno eliminati all'applicazione. Deseleziona per mantenerli."
+}

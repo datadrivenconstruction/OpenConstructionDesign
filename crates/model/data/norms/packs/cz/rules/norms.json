@@ -1,0 +1,205 @@
+{
+ "rules": [
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 0.9
+   },
+   "unit": "m",
+   "value": 0.9,
+   "text": {
+    "en": "Stair flight width in a house at least 0.9 m",
+    "ru": "Ширина марша в доме не менее 0.9 м"
+   },
+   "source": {
+    "doc": "cz-268",
+    "clause": "Sec. 40(4) (repealed)",
+    "url": "https://www.zakonyprolidi.cz/cs/2009-268",
+    "edition": "repealed version",
+    "accessed": "2026-11-14",
+    "paraphrase": "Main stairs in family houses are at least 0.9 m clear wide (0.75 m for auxiliary stairs).",
+    "note": "read 2026-11-14 at repealed decree 268/2009; 146/2024 value not checked | repealed 268/2009 text checked 2026-11-14 at zakonyprolidi.cz; not in force, kept unverified"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "cz.house.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.5
+   },
+   "unit": "m",
+   "value": 2.5,
+   "text": {
+    "en": "Clear height of habitable rooms at least 2.5 m",
+    "ru": "Высота жилых помещений не менее 2.5 м"
+   },
+   "source": {
+    "doc": "cz-146",
+    "clause": "Sec. 38(1)",
+    "url": "https://www.zakonyprolidi.cz/cs/2024-146",
+    "edition": "in force 2024-07-01",
+    "accessed": "2026-11-14",
+    "paraphrase": "Habitable rooms in residential buildings need 2.5 m clear height, 2.2 m over at most half the area or in attics."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "cz.res.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "room_kind": [
+     "office",
+     "meeting"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.6
+   },
+   "unit": "m",
+   "value": 2.6,
+   "text": {
+    "en": "Clear height of work rooms at least 2.6 m",
+    "ru": "Высота рабочих помещений не менее 2.6 м"
+   },
+   "source": {
+    "doc": "cz-268",
+    "clause": "Sec. 10(5) (repealed)",
+    "url": "https://www.zakonyprolidi.cz/cs/2009-268",
+    "edition": "repealed version",
+    "accessed": "2026-11-14",
+    "paraphrase": "Habitable and stay rooms had 2.6 m under the old decree; no workplace-specific height found in 146/2024.",
+    "note": "read 2026-11-14 at repealed 268/2009; weak evidence for offices | repealed 268/2009 text checked 2026-11-14 at zakonyprolidi.cz; not in force, kept unverified"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "cz.off.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ],
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "width",
+    "min": 1.2
+   },
+   "unit": "m",
+   "value": 1.2,
+   "text": {
+    "en": "Accessible-route corridor clear width at least 1.2 m",
+    "ru": "Ширина коридора на доступном маршруте не менее 1.2 м"
+   },
+   "source": {
+    "doc": "cz-146",
+    "clause": "Sec. 39(3)(a)",
+    "url": "https://www.zakonyprolidi.cz/cs/2024-146",
+    "edition": "in force 2024-07-01",
+    "accessed": "2026-11-14",
+    "paraphrase": "Shared corridors in apartment buildings are at least 1.2 m wide; the older barrier-free rule asked 1.5 m on pedestrian routes."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "cz.acc.corr"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {},
+   "check": {
+    "kind": "ratio",
+    "per": "element",
+    "cat": "room",
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen"
+    ],
+    "num": "window_area",
+    "den": "area",
+    "min": 0.1
+   },
+   "unit": "ratio",
+   "value": 0.1,
+   "text": {
+    "en": "Window area at least 10.0 % of the floor of a habitable room",
+    "ru": "Площадь окон не менее 10.0 % площади пола жилой комнаты"
+   },
+   "source": {
+    "doc": "cz-146",
+    "clause": "Sec. 20(1)",
+    "url": "https://www.zakonyprolidi.cz/cs/2024-146",
+    "edition": "in force 2024-07-01",
+    "accessed": "2026-11-14",
+    "paraphrase": "Total glazed area of habitable rooms is at least one tenth of their floor area."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "cz.day"
+  },
+  {
+   "id": "eu.acc.corr",
+   "disabled": true
+  },
+  {
+   "id": "eu.day",
+   "disabled": true
+  },
+  {
+   "id": "eu.off.h",
+   "disabled": true
+  },
+  {
+   "id": "eu.res.h",
+   "disabled": true
+  },
+  {
+   "id": "generic.room.daylight",
+   "disabled": true
+  }
+ ]
+}

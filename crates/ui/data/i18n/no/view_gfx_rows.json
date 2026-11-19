@@ -1,0 +1,10 @@
+{
+ "view_gfx.vv.visible_tip": "Synlig i denne visningen",
+ "view_gfx.vv.enabled_tip": "Bruk dette filteret i denne visningen",
+ "view_gfx.vv.reset_tip": "Tilbake til prosjektets standard",
+ "view_gfx.vv.col.actions": "Handlinger",
+ "view_gfx.vv.nothing_to_apply": "Ingen endringer å bruke",
+ "view_gfx.flt.save_blocked": "Gi filteret et navn og fyll inn parameter for hver regel",
+ "view_gfx.flt.confirm_delete": "Slette for alle visninger?",
+ "view_gfx.flt.param_pick": "Velg…"
+}

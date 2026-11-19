@@ -1,0 +1,18 @@
+{
+ "props.multi.title": {
+  "other": "# 个图元",
+  "one": "# 个图元"
+ },
+ "props.multi.cats": {
+  "other": "# 个类别",
+  "one": "# 个类别"
+ },
+ "props.multi.varies": {
+  "other": "不同（#）",
+  "one": "不同（#）"
+ },
+ "props.multi.clear": "清除选择",
+ "props.multi.undo": "撤销",
+ "props.multi.narrowed": "选择：{n} · {name}",
+ "props.multi.chip_tip": "{name}：{n}  ·  点击显示其属性，Ctrl+点击仅保留这些"
+}

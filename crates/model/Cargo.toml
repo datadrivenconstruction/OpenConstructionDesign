@@ -1,0 +1,29 @@
+[package]
+name = "ddc-model"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Building model stored in SQLite with an edit journal"
+
+[dependencies]
+web-time.workspace = true
+rusqlite = { workspace = true, features = ["backup", "functions", "serialize"] }
+thiserror.workspace = true
+sha2 = "0.10"
+ddc-geom = { path = "../geom" }
+ddc-solver = { path = "../solver" }
+# forward envelopes in the journal (op.src); deflate above 4 kB
+ddc-ops = { path = "../ops" }
+miniz_oxide = "0.9.1"
+# value patterns of information requirements; linear time, so a pattern from a workbook is safe
+regex = "1"
+serde.workspace = true
+# exact f64 in the undo journal (default parser may be off by 1 ulp)
+serde_json = { workspace = true, features = ["float_roundtrip"] }
+
+[features]
+# per-thread SQL statement counter for the idle-frame budget test; absent from release builds
+test-hooks = ["rusqlite/trace"]

@@ -1,0 +1,11 @@
+{
+ "xlsx_read_as.title": "Renamed sheet?",
+ "xlsx_read_as.detail": "Sheet {found} has the columns of {sheet} ({score}% match). It is not read unless you choose it.",
+ "xlsx_read_as.detail_many": "More than one sheet fits {sheet}: {found}. Nothing is picked for you; choose the one to read.",
+ "xlsx_read_as.read_as": "Read “{found}” as {sheet}",
+ "xlsx_read_as.read_as_tip": "For this import only. The sheet is not renamed; Apply only writes the ids of new rows into it.",
+ "xlsx_read_as.active": "Sheet “{found}” is read as {sheet} in this import.",
+ "xlsx_read_as.undo": "Do not read as {sheet}",
+ "xlsx_read_as.undo_tip": "Back to the sheet names as they are in the workbook.",
+ "xlsx_read_as.not_rewritten": "The workbook was not rewritten: a renamed sheet is read under its own name. Rename it back to keep the workbook in sync."
+}

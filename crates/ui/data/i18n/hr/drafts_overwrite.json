@@ -1,0 +1,5 @@
+{
+ "drafts_overwrite.ow.project": "Spremanje projekta čeka ovaj odgovor. Zamijenite vrijednosti za nastavak spremanja; Natrag na uređivanje zadržava sve izmjene i ništa ne zapisuje.",
+ "drafts_overwrite.drafts.ow_wait": "Spremanje čeka vaš odgovor u uređivaču obitelji: učitavanje obitelji zamijenilo bi vrijednosti tipova projekta. Ništa nije zatvoreno.",
+ "drafts_overwrite.drafts.ow_back": "Spremanje je zaustavljeno: vrijednosti tipova projekta su sačuvane, a izmjene obitelji su još otvorene. Ništa nije zatvoreno."
+}

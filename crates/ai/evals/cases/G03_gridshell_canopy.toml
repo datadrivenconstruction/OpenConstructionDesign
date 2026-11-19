@@ -1,0 +1,31 @@
+id = "G03_gridshell_canopy"
+tier = "hard"
+group = "Any geometry"
+title = "Gridshell canopy"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "Design a free-form timber gridshell canopy covering about 30 x 20 m, high point 8 m, with a diagonal grid at about 1 m spacing, supported on 6 slender columns."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "gridshell_bar+beam+brace+gridshell"
+min = 200.0
+
+[[oracle.count]]
+spec = "col"
+min = 4.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1
+
+[[oracle.geom]]
+kind = "gaussian_curve"
+share_min = 0.3

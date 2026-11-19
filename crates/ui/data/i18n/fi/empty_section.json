@@ -1,0 +1,11 @@
+{
+ "empty.sv_notfound.title": "Näkymää ei löydy",
+ "empty.sv_notfound.hint": "Tämä näkymä on poistettu tai se ei ole enää osa projektia.",
+ "empty.sv_notfound.action": "Sulje näkymä",
+ "empty.sv_cuts_nothing.title": "Tämä leikkaus ei leikkaa mitään",
+ "empty.sv_cuts_nothing.hint": "Leikkausviiva ei kohtaa seiniä, laattoja tai aukkoja sen syvyydellä. Siirrä viivaa tai tee näkymästä syvempi.",
+ "empty.sv_cuts_nothing.action": "Näytä pohjapiirroksella",
+ "empty.sv_shows_nothing.title": "Tämä julkisivu ei näytä mitään",
+ "empty.sv_shows_nothing.hint": "Näkymän syvyyteen ei osu seiniä, laattoja tai aukkoja. Siirrä näkymän viivaa tai tee näkymästä syvempi.",
+ "empty.sv_shows_nothing.action": "Näytä pohjapiirroksella"
+}

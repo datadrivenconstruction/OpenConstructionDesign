@@ -1,0 +1,22 @@
+[
+ {
+  "id": "mod.match_type",
+  "repeatable": true,
+  "icon": "match-type",
+  "mnemonic": "MT",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M1",
+  "group": "clip",
+  "context": [
+   "wall",
+   "floor",
+   "column",
+   "beam"
+  ]
+ }
+]

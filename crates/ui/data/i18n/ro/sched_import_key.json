@@ -1,0 +1,6 @@
+{
+ "sched_import.no_key": "Acest registru nu are înregistrare de export (un export mai vechi): celulele modificate în model după acel export pot fi suprascrise. Verifică celulele modificate înainte de Aplică.",
+ "sched_import.n_kept": "Modificat în model după export, păstrat: {n}",
+ "sched_import.n_conflict": "Modificat și în registru, și în model, neaplicat: {n}",
+ "sched_import.why_conflict": "modificat în model după export (acum {model}), neaplicat"
+}

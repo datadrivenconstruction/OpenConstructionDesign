@@ -1,0 +1,13 @@
+{
+ "type_change.affects_walls": {
+  "one": "# दीवार प्रभावित",
+  "other": "# दीवारें प्रभावित"
+ },
+ "type_change.affects": {
+  "one": "# तत्व प्रभावित",
+  "other": "# तत्व प्रभावित"
+ },
+ "type_change.tick_types": "इन प्रकारों के सभी {n} तत्वों पर प्रकार बदलाव लागू करें",
+ "type_change.tick_types_first": "पहले प्रकार बदलाव चुनें: हर तत्व उसे लेगा",
+ "xl.msg.types_first": "पहले प्रकार बदलाव की पुष्टि करें"
+}

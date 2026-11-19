@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "Stairs",
+ "selcat.railing": "Railings",
+ "quick.cat.stair": "Stairs",
+ "quick.cat.railing": "Railings",
+ "stair.risers": "Risers",
+ "stair.riser": "Riser height",
+ "stair.comfort": "2R + T",
+ "stair.tread_auto": "Tread by rule",
+ "stair.tread_auto_tip": "Drop the typed tread and let the 2R + T rule set it",
+ "stair.broken": "This stair does not fit its levels",
+ "railing.host_stair": "Hosted on stair #{id}",
+ "railing.host_path": "Sketch railing",
+ "railing.length": "Length",
+ "stair.deleted_with": "with {n} hosted railings"
+}

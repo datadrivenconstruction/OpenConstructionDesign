@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "हेडर के नीचे फ़िल्टर पंक्ति। पाठ: उप-स्ट्रिंग; संख्याएँ: >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "कॉलम दिखाएँ या छिपाएँ",
+ "sched_toolbar.groups_tip": "कॉलम से पंक्तियों का समूह बनाएँ, उप-योग के साथ",
+ "sched_toolbar.formulas_tip": "गणना वाले कॉलम",
+ "sched_toolbar.phase": "फ़ेज़",
+ "sched_toolbar.phase_tip": "पंक्तियाँ किस फ़ेज़ से ली जाती हैं",
+ "sched_toolbar.copy_tip": "चुनी गई पंक्तियाँ (या सभी दिखने वाली) TSV के रूप में",
+ "sched_toolbar.import_tip": "निर्यात किया शेड्यूल वापस पढ़ें: पंक्तियाँ Id से, कॉलम हेडर से; पहले गिनती, फिर एक undo चरण",
+ "sched_toolbar.export_tip": "दिखने वाली पंक्तियाँ और कॉलम योग के साथ; संख्याएँ संख्याएँ ही रहती हैं",
+ "sched_toolbar.need_table": "पहले शेड्यूल खोलें",
+ "sched_toolbar.busy_open": "फ़ाइल डायलॉग पहले से खुला है",
+ "sched_toolbar.busy_save": "सहेजने का डायलॉग पहले से खुला है",
+ "sched_toolbar.clear_filter": "फ़िल्टर साफ़ करें",
+ "sched_toolbar.fields_title": "कॉलम"
+}

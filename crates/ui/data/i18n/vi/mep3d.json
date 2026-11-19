@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "Ống gió",
+ "mep3d.pipe": "Ống",
+ "mep3d.tray": "Máng cáp",
+ "mep3d.conduit": "Ống luồn",
+ "mep3d.system": "Hệ thống",
+ "mep3d.length": "Chiều dài",
+ "mep3d.diameter": "Đường kính",
+ "mep3d.width": "Chiều rộng",
+ "mep3d.height": "Chiều cao",
+ "mep3d.insulation": "Cách nhiệt",
+ "mep3d.tip": "Enter — áp dụng; phụ kiện sẽ được tính lại",
+ "mep3d.size_positive": "kích thước phải lớn hơn không",
+ "mep3d.not_changed": "chưa đổi: {e}",
+ "mep3d.copied": "tuyến đã sao chép",
+ "mep3d.changed": "tuyến đã thay đổi",
+ "mep3d.deleted": "đã xóa phần tử: {n}",
+ "mep3d.not_deleted": "chưa xóa: {e}",
+ "mep3d.no_wall_type": "không có loại tường",
+ "mep3d.demo.supply": "Cấp gió S1",
+ "mep3d.demo.heating": "Sưởi",
+ "mep3d.demo.power": "Nguồn điện"
+}

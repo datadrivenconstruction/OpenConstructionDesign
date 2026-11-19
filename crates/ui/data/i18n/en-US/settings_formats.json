@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "What happens after a workbook is exported",
+ "settings.area_decimals_desc": "Digits after the decimal separator in areas",
+ "settings.volume_decimals_desc": "Digits after the decimal separator in volumes",
+ "settings.frac_desc": "Smallest fraction of an inch in imperial lengths",
+ "settings.small_area_desc": "Show areas below one square foot in square inches",
+ "settings.sample_desc": "How numbers look with the current choices",
+ "autosave.title_desc": "Keep a recovery copy of the open project",
+ "autosave.interval_desc": "Time between recovery copies",
+ "autosave.keep_desc": "Older recovery copies are removed",
+ "autosave.folder_desc": "Empty means the default folder",
+ "autosave.remind_desc": "Reminder to save a project that has no file yet",
+ "settings.backend_desc": "Graphics adapter in use",
+ "settings.news_desc": "What changed in this version",
+ "settings.assoc_default_desc": "Make this app the default for model files",
+ "settings.data_dir_desc": "Caches, recovery copies and logs live here."
+}

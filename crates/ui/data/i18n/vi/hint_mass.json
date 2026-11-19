@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "Mặt cong tự do",
+ "cmd.mass.panelize": "Chia tấm",
+ "cmd.mass.surface_shell": "Mái theo mặt",
+ "cmd.mass.thicken": "Tạo độ dày",
+ "hint.mass.freeform.first": "Mặt cong tự do: góc đầu tiên của hình chữ nhật trên mặt bằng · nhập chiều cao vồng · Esc — hủy",
+ "hint.mass.freeform.next": "Mặt cong tự do: góc đối diện · nhập chiều cao vồng · Esc — hủy",
+ "hint.mass.panelize.first": "Chia tấm: chọn mặt cong tự do trong 3D · Esc — hủy",
+ "hint.mass.panelize.value": "Chia tấm: nhập kích thước tấm · Enter — áp dụng · Esc — hủy",
+ "hint.mass.surface_shell.first": "Mái theo mặt: chọn mặt cong tự do trong 3D · Esc — hủy",
+ "hint.mass.surface_shell.value": "Mái theo mặt: nhập độ dày · Enter — áp dụng · Esc — hủy",
+ "hint.mass.thicken.first": "Tạo độ dày: chọn mặt cong tự do trong 3D · Esc — hủy",
+ "hint.mass.thicken.value": "Tạo độ dày: nhập độ dày (0 — mặt trần) · Enter — áp dụng · Esc — hủy",
+ "status.mass.pick_surface": "Chọn một mặt cong tự do",
+ "status.mass.freeform_small": "Hình chữ nhật quá nhỏ: tối thiểu 0,5 m mỗi cạnh",
+ "name.mass.freeform": "Mặt cong tự do",
+ "rgroup.mass_free": "Nâng cao"
+}

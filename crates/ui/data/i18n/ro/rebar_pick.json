@@ -1,0 +1,7 @@
+{
+ "rebar_pick.pick.empty": "Armătură: alege un stâlp, o grindă, un perete, o placă sau o fundație",
+ "rebar_pick.pick.unsupported": "Această selecție nu poate fi armată. Alege un stâlp, o grindă, un perete, o placă sau o fundație",
+ "rebar_pick.pick.keys": "Clic pentru a alege, Shift pentru a adăuga mai multe · Enter deschide formularul · Esc anulează",
+ "rebar_pick.pick.open": "Deschide formularul",
+ "rebar_pick.pick.cancel": "Anulează"
+}

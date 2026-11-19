@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "Add 1 set",
+ "rebar_sets.add_n": "Add {n} sets",
+ "rebar_sets.pick.search": "Search bar types",
+ "rebar_sets.pick.empty": "No matching bar types",
+ "rebar_sets.unit.deg": "°"
+}

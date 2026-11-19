@@ -1,0 +1,27 @@
+id = "G06_cable_net__en"
+tier = "hard"
+group = "Any geometry"
+title = "Seilnetz"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "Design a cable-net roof over a square of 40 x 40 m with two high points (masts 25 m) and two low points, mesh size 2 m, edge cables and tension rods."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "col"
+min = 2.0
+
+[[oracle.count]]
+spec = "beam+brace+truss+gridshell_bar"
+min = 300.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

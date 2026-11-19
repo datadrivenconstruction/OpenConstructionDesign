@@ -1,0 +1,6 @@
+{
+ "cmd.file.import_again": "Importera igen",
+ "cmd.file.import_again.desc": "Bygg ett nytt projekt från källfilen i det skick den har nu.",
+ "cmd.file.open_kept": "Öppna sparad import",
+ "cmd.file.open_kept.desc": "Öppna den färdiga importen som sparades när dialogen om osparade ändringar avbröts."
+}

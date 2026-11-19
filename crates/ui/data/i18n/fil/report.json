@@ -1,0 +1,23 @@
+{
+ "cmd.app.report": "Mag-ulat ng problema…",
+ "cmd.app.report.desc": "Inilalarawan kung ano ang nagkamali at nagse-save ng bundle sa computer na ito: ang teksto mo, mga detalye ng build at system, larawan ng window at ang huling crash record. Walang ipinapadala.",
+ "report.title": "Mag-ulat ng problema",
+ "report.what": "Ano ang nangyari",
+ "report.expected": "Ang inaasahan mo",
+ "report.steps": "Mga hakbang para maulit ito",
+ "report.opt.shot": "Isama ang larawan ng window",
+ "report.opt.model": "Isama ang kopya ng model",
+ "report.opt.model.note": "Naka-off bilang default. Naglalaman ang kopya ng data ng proyekto mo, walang AI journal.",
+ "report.opt.paths": "Panatilihin ang user name sa mga file path",
+ "report.local": "Nai-save ang bundle sa computer na ito lang. Walang awtomatikong ipinapadala.",
+ "report.blocked": "Ilarawan muna kung ano ang nangyari.",
+ "report.save": "I-save ang bundle",
+ "report.copy": "Kopyahin ang teksto",
+ "report.cancel": "Kanselahin",
+ "report.copied": "Nakopya ang teksto ng ulat.",
+ "report.saved": "Nai-save ang bundle: {path}",
+ "report.failed": "Hindi nai-save ang bundle: {err}",
+ "report.model.fail": "Hindi nagawa ang kopya ng model, walang nai-save: {err}",
+ "report.crash.notice": "Nagtapos sa crash ang nakaraang session.",
+ "report.crash.action": "Mag-ulat ng problema"
+}

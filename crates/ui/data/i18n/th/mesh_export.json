@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "บันทึกโมเดลทั้งหมดหรือส่วนที่เลือกเป็น STL แบบไบนารี หน่วยเมตรหรือมิลลิเมตร",
+ "cmd.data.export_obj.desc": "บันทึกโมเดลทั้งหมดหรือส่วนที่เลือกเป็น OBJ พร้อมไฟล์ MTL: หนึ่งกลุ่มต่อองค์ประกอบ สีตามวัสดุ",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "OBJ พร้อมวัสดุ (.obj)",
+ "open_file.filter.mesh": "เมชสามมิติ (glTF, STEP, STL, OBJ)",
+ "mx.title": "ส่งออก {fmt}",
+ "mx.scope": "ส่งออกอะไร",
+ "mx.scope.all": "ทั้งโมเดล",
+ "mx.scope.sel": "ส่วนที่เลือก ({n} องค์ประกอบ)",
+ "mx.units": "หน่วยในไฟล์",
+ "mx.units.m": "เมตร",
+ "mx.units.mm": "มิลลิเมตร",
+ "mx.export": "ส่งออก…",
+ "mx.saved": "บันทึก {fmt} แล้ว: {path} ({parts} องค์ประกอบ, {tris} สามเหลี่ยม)",
+ "mx.partial": "บันทึก {fmt} พร้อมปัญหา {n} รายการ บางวัตถุอาจหายไป: {path}",
+ "mx.failed": "การส่งออก {fmt} ล้มเหลว: {error}",
+ "mx.imported": "{file}: นำเข้า {n} องค์ประกอบ ({tris} สามเหลี่ยม)",
+ "mx.imported_notes": "{file}: นำเข้า {n} องค์ประกอบ ({tris} สามเหลี่ยม), หมายเหตุ {w} รายการ: {first}"
+}

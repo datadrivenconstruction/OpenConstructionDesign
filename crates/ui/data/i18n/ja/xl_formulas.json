@@ -1,0 +1,4 @@
+{
+ "xl.msg.x_formulas_in_column_x_on_sheet_x_replaced_by_values": "シート '{}' の列 '{}' にある {} 件の数式を値に置き換えました",
+ "xl.msg.formula_in_a_model_column_not_applied": "モデル列の数式: 結果は適用されず、モデルの値は残ります。変更するには値を入力してください"
+}

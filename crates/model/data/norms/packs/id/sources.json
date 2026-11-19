@@ -1,0 +1,31 @@
+{
+ "sources": [
+  {
+   "id": "id-pp16",
+   "title": "Government Regulation 16/2021 implementing the Building Act, annex part 1 (technical standards)",
+   "publisher": "Government of Indonesia",
+   "url": "https://dpmptsp.subang.go.id/izin/contoh_doc/PP-Nomor-16-Tahun-2021-Lamp.-Bagian-1-compressed.pdf",
+   "edition": "2021",
+   "licence": "public-law",
+   "verified": "2026-11-14"
+  },
+  {
+   "id": "id-sni1727",
+   "title": "SNI 1727 minimum design loads for buildings",
+   "publisher": "National Standardization Agency",
+   "url": "https://bsn.go.id",
+   "edition": "2020",
+   "licence": "copyright-numbers-only",
+   "verified": null
+  },
+  {
+   "id": "id-permen26-2008",
+   "title": "Ministerial regulation on technical requirements for fire protection in buildings",
+   "publisher": "Ministry of Public Works (copy hosted by the Jakarta provincial government service portal)",
+   "url": "https://pelayanan.jakarta.go.id/download/regulasi/peraturan-menteri-pekerjaan-umum-nomor-26-prt-m-2008-tentang-persyaratan-teknis-sistem-proteksi-kebakaran-pada-bangunan-gedung-dan-lingkungan.pdf",
+   "edition": "26/PRT/M/2008",
+   "licence": "public-law",
+   "verified": "2026-11-14"
+  }
+ ]
+}

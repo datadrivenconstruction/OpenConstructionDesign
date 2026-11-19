@@ -1,0 +1,11 @@
+{
+ "cmd.arch.roof_gable.short": "Двускатная",
+ "cmd.arch.roof_hip.short": "Вальмовая",
+ "cmd.arch.roof_shed.short": "Односкатная",
+ "cmd.arch.roof_mansard.short": "Мансардная",
+ "cmd.arch.roof_gambrel.short": "Ломаная",
+ "cmd.arch.roof_barrel.short": "Сводчатая",
+ "cmd.arch.roof_edges.short": "Кромки крыши",
+ "cmd.arch.roof_opening.short": "Проём",
+ "cmd.mass.roof_by_face.short": "По грани"
+}

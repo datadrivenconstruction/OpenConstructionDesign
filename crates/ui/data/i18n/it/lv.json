@@ -1,0 +1,5 @@
+{
+ "lv.level.deleted_attach": "Livello eliminato; {n} muri hanno perso l'ancoraggio superiore",
+ "lv.level.rooms": "{n} locali prendono l'altezza del livello di destinazione ({dz} m): {names}. Premi di nuovo Sposta per confermare",
+ "lv.level.pinned": "Livello non eliminato: gli elementi bloccati non possono passare a un altro livello: {names}. Sbloccali prima"
+}

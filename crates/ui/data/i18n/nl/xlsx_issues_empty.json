@@ -1,0 +1,8 @@
+{
+ "xlsx_issues.empty_title": "Leeg blad in het werkboek",
+ "xlsx_issues.empty_kept": "Blad {sheet} is leeg: er is niets uit gelezen, {n} elementen blijven zoals ze zijn. Andere bladen kunnen nog worden toegepast.",
+ "xlsx_issues.empty_none": "Blad {sheet} is leeg: er is niets uit gelezen. Andere bladen kunnen nog worden toegepast.",
+ "xlsx_issues.unreadable_title": "Blad kon niet worden gelezen",
+ "xlsx_issues.unreadable": "Blad {sheet} kon niet worden gelezen, het deel van het bestand is beschadigd: er is niets uit overgenomen en de elementen blijven zoals ze zijn. Andere bladen kunnen nog worden toegepast.",
+ "xlsx_issues.formulas": "De formules op blad {sheet} konden niet worden gelezen, dus een berekende waarde is niet te onderscheiden van een bewerking: er is niets uit dit blad overgenomen. Andere bladen kunnen nog worden toegepast."
+}

@@ -1,0 +1,6 @@
+{
+ "vv_conflict.styles.conflict": "Muudetud kategooria objektistiilid muutusid mudelis (tagasivõtmine või teine aken), kui see aken sisaldas muudatusi. Sinu muudatused säilitatakse.",
+ "vv_conflict.styles.keep": "Säilita minu muudatused",
+ "vv_conflict.styles.reload": "Laadi uuesti",
+ "vv_conflict.styles.answer_first": "Vali kõigepealt Säilita minu muudatused või Laadi uuesti"
+}

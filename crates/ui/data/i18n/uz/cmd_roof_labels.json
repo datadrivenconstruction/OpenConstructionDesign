@@ -1,0 +1,11 @@
+{
+ "cmd.arch.roof_gable.short": "Ikki qiyalik",
+ "cmd.arch.roof_hip.short": "Shipli",
+ "cmd.arch.roof_shed.short": "Bir qiyalik",
+ "cmd.arch.roof_mansard.short": "Mansard",
+ "cmd.arch.roof_gambrel.short": "Sinishli",
+ "cmd.arch.roof_barrel.short": "Tunel",
+ "cmd.arch.roof_edges.short": "Tom qirralari",
+ "cmd.arch.roof_opening.short": "Teshik",
+ "cmd.mass.roof_by_face.short": "Yuz bo'yicha"
+}

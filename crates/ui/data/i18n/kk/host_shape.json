@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "Мансардалық ойық",
+ "cmd.arch.roof_opening": "Шатырдағы ойық",
+ "cmd.arch.roof_extrusion": "Экструзия арқылы шатыр",
+ "cmd.arch.ceiling_opening": "Төбедегі ойық",
+ "cmd.str.slab_opening": "Еден ойығы",
+ "cmd.ctx.wall.detach": "Жоғарғы бөлігін ажырату",
+ "cmd.ctx.floor.sketch": "Шекараны өңдеу",
+ "cmd.ctx.floor.shape": "Пішінді өңдеу",
+ "host_shape.shape.elev_prompt": "биіктік, мм…",
+ "host_shape.shape.elev_mm": "{v} мм",
+ "host_shape.sketch.no_host": "Осы деңгейде шекара астында негізгі элемент жоқ",
+ "host_shape.issue.roof": "шатыр {id}: {e}",
+ "host_shape.issue.ceiling": "төбе {id}: {e}",
+ "host_shape.status.select_slab": "плитаны таңдаңыз",
+ "host_shape.status.select_walls": "қабырғаларды таңдаңыз",
+ "host_shape.status.no_roof_or_level": "үстінде шатыр немесе деңгей жоқ",
+ "host_shape.status.top_attached": "қабырға жоғарғылары бекітілді",
+ "host_shape.status.top_detached": "қабырға жоғарғылары ажыратылды",
+ "host_shape.status.straight_wall": "түзу қабырға қажет",
+ "host_shape.status.roof_extruded": "экструзия арқылы шатыр жасалды",
+ "warn.kind.cut": "Кесу немесе бекіту құрылмады"
+}

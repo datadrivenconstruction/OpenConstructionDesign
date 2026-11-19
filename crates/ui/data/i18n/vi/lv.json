@@ -1,0 +1,5 @@
+{
+ "lv.level.deleted_attach": "Đã xóa cao độ; {n} tường mất điểm gắn ở đỉnh",
+ "lv.level.rooms": "{n} phòng sẽ lấy chiều cao của cao độ đích ({dz} m): {names}. Nhấn Di chuyển lần nữa để xác nhận",
+ "lv.level.pinned": "Chưa xóa cao độ: các phần tử đã ghim không thể chuyển sang cao độ khác: {names}. Hãy bỏ ghim trước"
+}

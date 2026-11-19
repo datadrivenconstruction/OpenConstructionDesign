@@ -1,0 +1,31 @@
+{
+ "roof_edge.err.number": "أدخل رقماً",
+ "roof_edge.err.positive": "يجب أن يكون أكبر من صفر",
+ "roof_edge.err.nonneg": "يجب ألا يكون سالباً",
+ "roof_edge.err.max": "يجب ألا يتجاوز {max}",
+ "roof_edge.list.empty_hint": "أضف واجهات وميازيب وأسقفاً داخلية أو فتحات سقف بأوامر السقف",
+ "roof_edge.edit_tip": "تحرير الخصائص",
+ "roof_edge.delete_tip": "حذف",
+ "roof_edge.pe.del_tip": "إزالة هذه النقطة (يحتفظ المقطع بثلاث نقاط على الأقل)",
+ "roof_edge.pe.up_tip": "نقل هذه النقطة للأعلى",
+ "roof_edge.confirm_edge": "حذف {name}؟ Ctrl+Z يعيده.",
+ "roof_edge.confirm_profile": "حذف المقطع {name}؟ Ctrl+Z يعيده.",
+ "roof_edge.deleted_one": "تم حذف {name}",
+ "roof_edge.deleted_n": {
+  "one": "تم حذف # عنصر",
+  "other": "تم حذف # عنصراً",
+  "two": "تم حذف # عنصرين",
+  "few": "تم حذف # عناصر",
+  "many": "تم حذف # عنصراً",
+  "zero": "تم حذف # عنصراً"
+ },
+ "roof_edge.profile_deleted": "تم حذف المقطع",
+ "roof_edge.profile_in_use": {
+  "one": "مستخدم من عنصر حافة واحد: احذفه أو غيّره أولاً",
+  "other": "مستخدم من # عنصر حافة: احذفها أو غيّرها أولاً",
+  "two": "مستخدم من # عنصرَي حافة: احذفهما أو غيّرهما أولاً",
+  "few": "مستخدم من # عناصر حافة: احذفها أو غيّرها أولاً",
+  "many": "مستخدم من # عنصر حافة: احذفه أو غيّره أولاً",
+  "zero": "مستخدم من # عنصر حافة: احذفها أو غيّرها أولاً"
+ }
+}

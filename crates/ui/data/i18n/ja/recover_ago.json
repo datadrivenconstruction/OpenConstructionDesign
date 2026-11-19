@@ -1,0 +1,29 @@
+{
+ "recover.ago_now": "たった今",
+ "recover.ago_min": {
+  "one": "# 分前",
+  "other": "# 分前"
+ },
+ "recover.ago_hour": {
+  "one": "# 時間前",
+  "other": "# 時間前"
+ },
+ "recover.ago_yesterday": "昨日",
+ "recover.ago_day": {
+  "one": "# 日前",
+  "other": "# 日前"
+ },
+ "recover.empty": "残りのスナップショットはありません",
+ "recover.empty_hint": "このプロジェクトに復元するものはありません。",
+ "recover.all_damaged": "すべてのスナップショットが破損しており、復元できません。",
+ "recover.keys_hint": "↑ ↓ でスナップショットを選択、Enter で復元へ移動",
+ "recover.row_tip": "保存日時 {time}",
+ "recover.row_damaged_tip": "復元できません: {reason}",
+ "recover.archive_ask": "このスナップショットをアーカイブに移動しますか？",
+ "recover.discard_ask": {
+  "one": "スナップショットをアーカイブに移動しますか？再度表示されることはありません。",
+  "other": "# 件のスナップショットすべてをアーカイブに移動しますか？再度表示されることはありません。"
+ },
+ "recover.confirm_yes": "アーカイブに移動",
+ "recover.confirm_no": "スナップショットを保持"
+}

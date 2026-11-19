@@ -1,0 +1,10 @@
+{
+ "view_gfx.vv.visible_tip": "Nähtav selles vaates",
+ "view_gfx.vv.enabled_tip": "Rakenda see filter selles vaates",
+ "view_gfx.vv.reset_tip": "Tagasi projekti vaikeväärtusele",
+ "view_gfx.vv.col.actions": "Toimingud",
+ "view_gfx.vv.nothing_to_apply": "Rakendada pole muudatusi",
+ "view_gfx.flt.save_blocked": "Nimeta filter ja täida iga reegli parameeter",
+ "view_gfx.flt.confirm_delete": "Kas kustutada kõigi vaadete jaoks?",
+ "view_gfx.flt.param_pick": "Vali…"
+}

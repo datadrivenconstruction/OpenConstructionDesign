@@ -1,0 +1,9 @@
+{
+ "ai.settings.num_bad": "Bukan angka. Ketik seperti 0.5.",
+ "ai.settings.num_comma": "Gunakan titik sebagai pemisah desimal, seperti 0.5.",
+ "ai.settings.num_negative": "Angka tidak boleh negatif.",
+ "ai.settings.unit_money": "mata uang",
+ "ai.settings.unit_tokens": "token",
+ "ai.settings.unit_price": "per 1 juta token",
+ "ai.settings.limits_hint": "0 berarti tanpa batas. Nilai yang ditolak membiarkan batas sebelumnya."
+}

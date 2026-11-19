@@ -1,0 +1,20 @@
+{
+ "dwgfillet.fillet": "Avrunding",
+ "dwgfillet.cancel": "Stopp avrunding",
+ "dwgfillet.tip": "Klikk på to linjer på sidene som skal beholdes: begge kappes eller forlenges til hjørnet, med en tangentbue når radiusen er over null",
+ "dwgfillet.radius": "Avrundingsradius",
+ "dwgfillet.radius_tip": "Radius på buen i tegningsenheter; 0 gir et skarpt hjørne",
+ "dwgfillet.st.arm_first": "Klikk på den første linjen, på siden som skal beholdes",
+ "dwgfillet.st.arm_second": "Klikk på den andre linjen, på siden som skal beholdes",
+ "dwgfillet.st.not_armed": "Velg Avrunding først",
+ "dwgfillet.st.click_line": "Klikk på én enkelt linje i tegningen",
+ "dwgfillet.st.other_drawing": "Begge linjene må høre til samme tegning: start på nytt",
+ "dwgfillet.st.changed": "Den første linjen er endret: start på nytt",
+ "dwgfillet.st.same_line": "Velg en annen andre linje",
+ "dwgfillet.st.parallel": "Linjene er parallelle og møtes aldri: ingen hjørne kan lages",
+ "dwgfillet.st.degenerate": "En linje har ingen lengde",
+ "dwgfillet.st.no_side": "Den klikkede siden har ingen lengde fra hjørnet",
+ "dwgfillet.st.too_big": "Radiusen er for stor for disse linjene: bruk en mindre radius",
+ "dwgfillet.st.radius_bad": "Radiusen må være null eller positiv",
+ "dwgfillet.st.done": "Hjørne laget"
+}

@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "הזז למעלה",
+ "rebar_list.move_down": "הזז למטה",
+ "rebar_list.remove": "הסר",
+ "rebar_list.zone_remove_last": "לאזור נדרש לפחות חדר אחד: מחק את האזור כדי להסיר את האחרון",
+ "rebar_list.rebar_empty_title": "אין זיון במודל זה",
+ "rebar_list.rebar_empty_hint": "מקם זיון באלמנט מארח והוא ייכלל בטבלה כאן.",
+ "rebar_list.rebar_empty_action": "מקם זיון"
+}

@@ -1,0 +1,11 @@
+{
+ "empty.sv_notfound.title": "Tampilan tidak ditemukan",
+ "empty.sv_notfound.hint": "Tampilan ini dihapus atau tidak lagi menjadi bagian proyek.",
+ "empty.sv_notfound.action": "Tutup tampilan",
+ "empty.sv_cuts_nothing.title": "Potongan ini tidak memotong apa pun",
+ "empty.sv_cuts_nothing.hint": "Garis potongan tidak menyentuh dinding, pelat, atau bukaan dalam kedalamannya. Pindahkan garis atau perdalam tampilan.",
+ "empty.sv_cuts_nothing.action": "Tampilkan di denah",
+ "empty.sv_shows_nothing.title": "Tampak ini tidak menampilkan apa pun",
+ "empty.sv_shows_nothing.hint": "Tidak ada dinding, pelat, atau bukaan dalam kedalaman tampilan. Pindahkan garis tampilan atau perdalam tampilan.",
+ "empty.sv_shows_nothing.action": "Tampilkan di denah"
+}

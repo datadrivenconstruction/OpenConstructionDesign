@@ -1,0 +1,7 @@
+{
+ "src.field.kids": "Underrækker (paneler, hjørner)",
+ "src.kids.mine": "{n} underrækker, ændret her",
+ "src.kids.changed": "underrækker ændret her",
+ "src.kids.theirs": "underrækker ændret i filen",
+ "src.kids.take_tip": "Den næste import tager filens underrækker; de anvendes ikke nu."
+}

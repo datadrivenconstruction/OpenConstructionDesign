@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "Tetőablak-nyílás",
+ "cmd.arch.roof_opening": "Tetőnyílás",
+ "cmd.arch.roof_extrusion": "Tető extrudálással",
+ "cmd.arch.ceiling_opening": "Mennyezetnyílás",
+ "cmd.str.slab_opening": "Födémnyílás",
+ "cmd.ctx.wall.detach": "Fejrész leválasztása",
+ "cmd.ctx.floor.sketch": "Határ szerkesztése",
+ "cmd.ctx.floor.shape": "Alak szerkesztése",
+ "host_shape.shape.elev_prompt": "kóta, mm…",
+ "host_shape.shape.elev_mm": "{v} mm",
+ "host_shape.sketch.no_host": "ezen a szinten a határ alatt nincs befogadó elem",
+ "host_shape.issue.roof": "tető {id}: {e}",
+ "host_shape.issue.ceiling": "mennyezet {id}: {e}",
+ "host_shape.status.select_slab": "válasszon födémet",
+ "host_shape.status.select_walls": "válasszon falakat",
+ "host_shape.status.no_roof_or_level": "nincs felette tető vagy szint",
+ "host_shape.status.top_attached": "falfejek csatlakoztatva",
+ "host_shape.status.top_detached": "falfejek leválasztva",
+ "host_shape.status.straight_wall": "egyenes fal szükséges",
+ "host_shape.status.roof_extruded": "tető extrudálással létrehozva",
+ "warn.kind.cut": "Vágás vagy csatlakozás nincs felépítve"
+}

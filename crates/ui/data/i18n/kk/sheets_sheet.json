@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "Парақты көріністерімен көшіру",
+ "cmd.view.sheet_duplicate_title": "Парақты көшіру (тек титул блогы)",
+ "sheets.dup.menu_views": "Көріністерімен көшіру",
+ "sheets.dup.menu_title": "Көшіру, тек титул блогы",
+ "sheets.dup.done": "{src} негізінде {number} парағы жасалды: {views} көрініс, {sched} кесте және легенда. Ревизиялар көшірілмеді; парақ шығарылмаған.",
+ "sheets.dup.none": "Көшіру үшін парақты ашыңыз",
+ "sheets.dup.copy": "көшірме",
+ "cmd.view.sheet_duplicate.short": "Көріністерімен көшіру",
+ "cmd.view.sheet_duplicate_title.short": "Титул блогын көшіру"
+}

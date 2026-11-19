@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "Verbindingsstuk",
+ "elem.mep_fitting.many": "Fittingen",
+ "elem.mep_fitting.kind.elbow": "Bocht",
+ "elem.mep_fitting.kind.tee": "T-stuk",
+ "elem.mep_fitting.kind.cross": "Kruisstuk",
+ "elem.mep_fitting.kind.transition": "Overgang",
+ "elem.mep_fitting.kind.cap": "Afdekkap",
+ "elem.mep_fitting.size": "Formaat",
+ "elem.mep_fitting.at": "Positie",
+ "elem.mep_fitting.runs": "Traject {n}",
+ "elem.mep_fitting.edit_run": "Traject bewerken",
+ "elem.mep_fitting.select_runs": "Selecteer zijn trajecten",
+ "elem.mep_fitting.derived": "Een fitting volgt zijn trajecten: wijzig een traject en de fitting verandert mee.",
+ "elem.mep_fitting.no_delete": "Een fitting kan niet op zichzelf worden verwijderd of verplaatst. Bewerk of verwijder zijn trajecten.",
+ "elem.mep_fitting.hint": "Klik op een fitting in de plattegrond om zijn trajecten te zien.",
+ "elem.mep_fitting.picked": "Geselecteerde fittingen: {n}"
+}

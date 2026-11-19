@@ -1,0 +1,10 @@
+{
+ "ai.size.count": "~{n} / {max} token",
+ "ai.size.block": "Troppo lungo per questo modello: ~{n} token, ne entrano fino a {max} lasciando spazio alla risposta — accorcialo o dividilo",
+ "ai.size.trim": "Taglia per entrare",
+ "ai.size.trim_tip": "Taglia la fine del messaggio per farlo entrare. Non viene tagliato nulla finché non clicchi.",
+ "ai.size.drop_view": "Escludi la vista",
+ "ai.size.drop_level": "Escludi il livello",
+ "ai.size.drop_selection": "Escludi la selezione",
+ "ai.size.sep": "."
+}

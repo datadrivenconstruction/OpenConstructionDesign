@@ -1,0 +1,15 @@
+[
+ {
+  "id": "data.sync_xlsx",
+  "dialog": true,
+  "icon": "xlsx-sync",
+  "mnemonic": "XS",
+  "shortcuts": [],
+  "tab": "data",
+  "surfaces": ["R"],
+  "stage": "M3",
+  "group": "exchange",
+  "size": "large",
+  "priority": 1
+ }
+]

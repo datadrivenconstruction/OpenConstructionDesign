@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D",
+ "phases.current_mark": "ағымдағы",
+ "phases.make_current": "Ағымдағы ету",
+ "phases.col_phase": "Кезең",
+ "phases.col_filter": "Сүзгі",
+ "phases.presets": "Жоспар үлгілері",
+ "phases.del_title": "Кезеңді жою",
+ "phases.del_text": "\"{name}\" кезеңі жойылсын ба? Оның элементтері төменде таңдалған кезеңге жылжиды.",
+ "phases.del_into": "Элементтерді мына жерге жылжыту",
+ "phases.del_ok": "Жою",
+ "phases.col_kind": "Элемент түрі",
+ "phases.col_count": "Саны",
+ "phases.col_volume": "Көлем"
+}

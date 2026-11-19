@@ -1,0 +1,4 @@
+{
+ "topo_import.topo.ambiguous": "{n} rijen overgeslagen: een getal kan op twee manieren worden gelezen (1,250 = 1.25 of 1250?) en het bestand toont geen decimaalteken",
+ "topo_import.topo.grouped": "{n} punten gelezen met cijfergroepen (1 250,5 of 1,234.5)"
+}

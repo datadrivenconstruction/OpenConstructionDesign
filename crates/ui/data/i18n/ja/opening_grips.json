@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "ヒンジ側を反転",
+ "cmd.edit.flip_hand.desc": "選択した扉と窓を壁に沿って鏡像反転し、ヒンジを開口の反対端へ移動します。",
+ "cmd.edit.flip_facing": "開口の側を反転",
+ "cmd.edit.flip_facing.desc": "選択した扉と窓を壁の反対側へ振り替えます。",
+ "opening_grips.flip_hand": "ヒンジを反転",
+ "opening_grips.flip_hand.tip": "ヒンジを開口の反対端へ移動 (Shift+F)",
+ "opening_grips.flip_facing": "側を反転",
+ "opening_grips.flip_facing.tip": "壁の反対側へ開口を移動 (Shift+G)",
+ "opening_grips.flip.done": "反転しました: {n}",
+ "opening_grips.flip.none": "反転する扉または窓を選択してください",
+ "opening_grips.flip.fail": "反転しませんでした: {why}"
+}

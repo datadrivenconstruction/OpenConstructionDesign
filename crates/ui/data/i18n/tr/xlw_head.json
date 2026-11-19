@@ -1,0 +1,15 @@
+{
+ "xlw.hd_never": "Henüz dışa aktarılmadı",
+ "xlw.hd_now": "az önce",
+ "xlw.hd_min": "{n} dk önce",
+ "xlw.hd_hour": "{n} sa önce",
+ "xlw.hd_day": "{n} gün önce",
+ "xlw.hd_linked": "Bağlı",
+ "xlw.hd_watched": "İzleniyor",
+ "xlw.hd_stale": "Dışa aktarmadan sonra model değişti",
+ "xlw.ft_export": "Dışa aktar",
+ "xlw.ft_review": "Gözden geçir",
+ "xlw.ft_apply": "{n} değişikliği uygula",
+ "xlw.ft_delete_missing": "Eksikleri sil",
+ "xlw.ft_keep_missing_tip": "Silme açık: satırı olmayan öğeler Uygula'da silinecek. Korumak için işareti kaldırın."
+}

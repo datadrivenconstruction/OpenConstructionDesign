@@ -1,0 +1,14 @@
+{
+ "ai_keys.header_is_key": "Sleutels horen in het veld Sleutel — koppen worden in platte tekst opgeslagen",
+ "ai_keys.move": "Naar Sleutel verplaatsen",
+ "ai_keys.remove_line": "Uit koppen verwijderen",
+ "ai_keys.save_blocked": "Verplaats de sleutel uit de koppen om op te slaan",
+ "ai_keys.show": "Tonen",
+ "ai_keys.hide": "Verbergen",
+ "ai_keys.copy": "Kopiëren",
+ "ai_keys.tokens": "tokens",
+ "ai_keys.presets": "Voorinstellingen",
+ "ai_keys.preset_k": "{n}k",
+ "ai_keys.preset_m": "{n}M",
+ "ai_keys.images_on": "Ondersteund"
+}

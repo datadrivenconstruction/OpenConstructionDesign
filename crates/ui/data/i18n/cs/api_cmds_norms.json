@@ -1,0 +1,8 @@
+{
+ "api.cmd.norms_lookup": "Najít pravidla normového balíku projektu podle tématu, prvku nebo kódu",
+ "api.cmd.norms_check": "Zkontrolovat model podle normového balíku projektu a vypsat nálezy",
+ "api.cmd.norms_programme": "Typický program místností v zemi projektu pro daný typ budovy",
+ "api.cmd.select_similar": "Vybrat všechny podobné prvky: stejný typ nebo kategorie, na tomto podlaží nebo v celém projektu",
+ "api.cmd.create_drawing_set": "Připravit tisknutelnou sadu výkresů: půdorysy, řezy, pohledy, výkazy a razítka",
+ "api.cmd.deliver_project": "Od zadání k souborům v jednom kroku: projekt a jeho sada výkresů, exportovaná po Použít"
+}

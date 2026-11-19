@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "विकल्प मर्ज करें: {name}",
+ "ai_opt_merge.whole": "पूरा विकल्प मर्ज करें",
+ "ai_opt_merge.parts": "चुने गए भाग मर्ज करें",
+ "ai_opt_merge.note": "यह विकल्प क्यों",
+ "ai_opt_merge.rebased": "यह विकल्प बनने के बाद मॉडल बदल गया: मर्ज वर्तमान मॉडल के सापेक्ष दोबारा गणना हुआ। लागू करने से पहले बदलाव जाँचें।",
+ "ai_opt_merge.left.not_picked": "विकल्प से नहीं चुना गया",
+ "ai_opt_merge.left.unticked": "विकल्प में निशान हटाया गया",
+ "ai_opt_merge.left.conflict": "वर्तमान मॉडल में नहीं जोड़ा जा सकता: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "यह विकल्प मर्ज नहीं हो सकता। अस्वीकृत विकल्प को पहले बहाल करना होगा।",
+ "ai_opt_merge.refused.stale": "यह विकल्प बनने के बाद मॉडल बदल गया। वर्तमान मॉडल के सापेक्ष मर्ज दोबारा गणना करें।",
+ "ai_opt_merge.refused.nothing_picked": "मर्ज के लिए कुछ नहीं चुना गया।",
+ "ai_opt_merge.refused.unknown_item": "आइटम {item} इस विकल्प का हिस्सा नहीं है।",
+ "ai_opt_merge.refused.not_in_option": "चुना गया तत्व इस विकल्प का हिस्सा नहीं है।",
+ "ai_opt_merge.refused.needs_left_out": "आइटम {item} को आइटम {needs} चाहिए। उसे भी चुनें, या निर्भरताएँ जोड़ने की अनुमति दें।",
+ "ai_opt_merge.refused.set_gone": "आइटम {item} एक ऐसे चयन को संदर्भित करता है जो अब नहीं है। विकल्प दोबारा बनाएँ।",
+ "ai_opt_merge.refused.busy": "एक और योजना खुली है। पहले उसे लागू या अस्वीकार करें।",
+ "ai_opt_merge.refused.failed": "मर्ज तैयार नहीं हो सका: {reason}",
+ "ai_opt_merge.revive": "विकल्प बहाल करें",
+ "ai_opt_merge.merged": "मर्ज हुआ"
+}

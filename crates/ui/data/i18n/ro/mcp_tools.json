@@ -1,0 +1,5 @@
+{
+ "mcp.set.hide": "Ascunde",
+ "mcp.set.copy_config": "Copiază configurația agentului AI",
+ "mcp.set.no_token": "Încă fără token de acces. Pornește mai întâi serverul."
+}

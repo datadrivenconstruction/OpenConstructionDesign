@@ -1,0 +1,8 @@
+{
+ "cmd.file.save_copy": "Boshqa shaxs uchun nusxa saqlash…",
+ "cmd.file.save_copy.desc": "Loyihaning nusxasini AI roziligisiz va, siz boshqacha tanlamasangiz, AI jurnalisiz saqlaydi. Bu loyiha o'zgarishsiz qoladi.",
+ "ai.copy.title": "Nusxani saqlash",
+ "ai.copy.journal": "Nusxaga AI jurnali kiritilsinmi? Jurnalda so'rovlar, javoblar va manzillar bor. Bulut rozligi hech qachon nusxalanmaydi: boshqa shaxs o'zi qaror qiladi. Jurnalni chiqarib tashlash uchun Yo'q ni tanlang.",
+ "ai.copy.done": "Nusxa saqlandi: {name}",
+ "ai.copy.same": "Boshqa fayl tanlang: nusxa ochiq loyihani almashtira olmaydi."
+}

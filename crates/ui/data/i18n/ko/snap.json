@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "끝점",
+ "snap.midpoint": "중점",
+ "snap.perpendicular": "수직",
+ "snap.wall_axis": "벽 중심선",
+ "snap.wall_face": "벽면",
+ "snap.grid": "그리드",
+ "snap.intersection": "교점",
+ "snap.grid_axis": "그리드선",
+ "snap.ref_plane": "기준면",
+ "snap.nearest": "가장 가까운 점",
+ "snap.align_x": "원격 점과 X 방향 정렬",
+ "snap.align_y": "원격 점과 Y 방향 정렬",
+ "snap.align_xy": "X 및 Y 방향 정렬"
+}

@@ -1,0 +1,31 @@
+{
+ "sources": [
+  {
+   "id": "sa-momrah-res",
+   "title": "Requirements for building residential buildings (villas group R3, apartment buildings group R2)",
+   "publisher": "Ministry of Municipalities and Housing (MOMRAH)",
+   "url": "https://momah.gov.sa/sites/default/files/2024-07/ashtratat%20a%27nsha%20almbany%20alsknyt%20almnshwrt%20%60ly%20mwq%60%20alwzart%20.pdf",
+   "edition": "2024 (1446 H), ministerial decision 4500943139",
+   "licence": "public-law",
+   "verified": "2026-11-14"
+  },
+  {
+   "id": "sa-sbc",
+   "title": "Saudi Building Code SBC 201 (general) and SBC 801 (fire protection)",
+   "publisher": "Saudi Building Code National Committee",
+   "url": "https://sbc.gov.sa/En/BC/Pages/BuildingCode/BCDetails.aspx?codeId=201&year=2024",
+   "edition": "2018 / 2024",
+   "licence": "copyright-numbers-only",
+   "verified": null
+  },
+  {
+   "id": "sa-sbc201-2007-copy",
+   "title": "Saudi Building Code SBC 201 first issue (2007), unofficial consultant-hosted copy of the architectural volume",
+   "publisher": "Saudi Building Code National Committee (text); hosted by a private consultant",
+   "url": "https://fkec.com.sa/website/uploads/Architectural_Requirements.pdf",
+   "edition": "2007 first issue",
+   "licence": "copyright-numbers-only",
+   "verified": null
+  }
+ ]
+}

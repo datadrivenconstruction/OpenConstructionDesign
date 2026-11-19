@@ -1,0 +1,26 @@
+family Radiator
+category equipment
+host wall
+ifc IfcSpaceHeater RADIATOR
+param Flow number type 0.03
+param Length length type 1000mm
+param Height length type 500mm
+param Depth length type 100mm
+param Gap length type 40mm
+param Elevation length instance 150mm
+param Section length type 50mm
+param Sections int type = round(Length / Section)
+param Pipe length type 10mm
+param Steel material type "Steel White"
+ref Left x = -Length / 2
+ref Right x = Length / 2
+ref Wall y = 0
+type "600x500" Length=600mm
+type "1000x500" Length=1000mm
+type "40x20in" Length=40in, Height=20in, Depth=4in, Gap=1.5in, Elevation=6in, Section=2in, Pipe=0.4in
+extrude Panel rect(Left, Wall + Gap, Right, Wall + Gap + Depth) z(Elevation, Elevation + Height) mat(Steel) show(3d, elev)
+sweep Supply circle(0, 0, Pipe) path(Left + 30mm, Wall + Gap + Depth / 2, Elevation, Left + 30mm, Wall + Gap + Depth / 2, 30mm, Left + 30mm, Wall, 30mm) mat(Steel) show(medium, fine, 3d, elev)
+sweep Return circle(0, 0, Pipe) path(Right - 30mm, Wall + Gap + Depth / 2, Elevation, Right - 30mm, Wall + Gap + Depth / 2, 30mm, Right - 30mm, Wall, 30mm) mat(Steel) show(medium, fine, 3d, elev)
+symbol rect(Left, Wall + Gap, Right, Wall + Gap + Depth)
+connector Supply pipe heating at(Left + 30mm, Wall, 30mm) dir(0, -1, 0) size(15mm)
+connector Return pipe heating at(Right - 30mm, Wall, 30mm) dir(0, -1, 0) size(15mm)

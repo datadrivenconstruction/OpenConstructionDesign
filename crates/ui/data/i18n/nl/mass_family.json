@@ -1,0 +1,9 @@
+{
+ "cmd.mass.timeline_family": "Geschiedenis naar familie",
+ "cmd.mass.timeline_family.desc": "Maakt een onderdeelfamilie van de constructiegeschiedenis van de geselecteerde massa. De parameters van de geschiedenis worden familieparameters.",
+ "mass_family.done": "Familie {name} aangemaakt met {n} parameters",
+ "mass_family.refused": "Geen familie aangemaakt: {e}",
+ "mass_family.no_mass": "Selecteer eerst een parametrische massa",
+ "mass_family.add_modifier": "Modifier toevoegen",
+ "mass_family.needs_faces": "Vereist geselecteerde vlakken: gebruik het hulpmiddel op het tabblad Massa"
+}

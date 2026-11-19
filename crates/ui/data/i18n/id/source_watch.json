@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "{name} berubah di disk.",
+ "src.watch.update": "Perbarui model",
+ "src.watch.compare": "Bandingkan",
+ "src.watch.ignore": "Abaikan versi ini",
+ "src.watch.missing": "{name}: file sumber tidak ditemukan. Pekerjaan berlanjut.",
+ "src.watch.locate": "Cari…",
+ "src.watch.dismiss": "Tutup",
+ "src.watch.more": "dan {n} file sumber lainnya",
+ "src.watch.done": "Diperbarui dari {name}: {updated} berubah, {kept} field dipertahankan sebagai hasil edit, {conflicts} konflik, {locked} nilai terkunci dipertahankan"
+}

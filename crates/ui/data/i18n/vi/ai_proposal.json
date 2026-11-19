@@ -1,0 +1,13 @@
+{
+ "ai.proposal.title": "Đề xuất của trợ lý",
+ "ai.proposal.meta": "{actor} · thao tác: {ops}",
+ "ai.proposal.apply.desc": "Áp dụng toàn bộ đề xuất như một bước; Ctrl+Z để hoàn tác",
+ "ai.proposal.applying": "Đang áp dụng…",
+ "ai.proposal.applied": "Đề xuất đã được áp dụng. Ctrl+Z để hoàn tác.",
+ "ai.proposal.applied_resync": "Đề xuất đã được áp dụng, nhưng góc nhìn chưa cập nhật. Góc nhìn sẽ tự làm mới; Ctrl+Z để hoàn tác bước này.",
+ "ai.proposal.stale": "Mô hình đã thay đổi sau khi đề xuất được xem trước. Hãy yêu cầu trợ lý đề xuất lại.",
+ "ai.proposal.toast.applied": "Đã áp dụng đề xuất. Ctrl+Z để hoàn tác.",
+ "ai.proposal.toast.stale": "Mô hình đã thay đổi sau bản xem trước, nên chưa áp dụng gì. Hãy xem trước lại: yêu cầu trợ lý đề xuất lại.",
+ "ai.proposal.toast.refused": "Chưa áp dụng đề xuất: {reason}",
+ "ai.proposal.rejected": "Đề xuất đã bị từ chối."
+}

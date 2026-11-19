@@ -1,0 +1,13 @@
+{
+ "level.err_open": "تراز باز نشد: {e}",
+ "level.need_name": "تراز به نام و ارتفاع نیاز دارد",
+ "level.created": "تراز «{name}» ایجاد شد",
+ "level.err_create": "تراز ساخته نشد: {e}",
+ "level.err_edit": "تراز تغییر نکرد: {e}",
+ "level.edited": "تراز «{name}» تغییر کرد",
+ "level.edited_stale": "تراز «{name}» تغییر کرد، نما تازه نشد: {e}",
+ "level.last": "آخرین تراز را نمی‌توان حذف کرد",
+ "level.deleted": "تراز حذف شد",
+ "level.not_empty": "تراز خالی نیست: ابتدا عناصرش را حذف کنید",
+ "level.err_delete": "تراز حذف نشد: {e}"
+}

@@ -1,0 +1,4 @@
+{
+ "elem.spreadsheet.applied": "Tuotu taulukkolaskennasta: {what}",
+ "elem.spreadsheet.failed": "Taulukkolaskennasta tuonti epäonnistui: {e}"
+}

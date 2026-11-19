@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "آپشن ضم کریں: {name}",
+ "ai_opt_merge.whole": "پورا آپشن ضم کریں",
+ "ai_opt_merge.parts": "منتخب حصے ضم کریں",
+ "ai_opt_merge.note": "یہ آپشن کیوں",
+ "ai_opt_merge.rebased": "یہ آپشن بننے کے بعد ماڈل بدل گیا: ضم موجودہ ماڈل کے مقابل دوبارہ حساب ہوا۔ لاگو کرنے سے پہلے تبدیلیاں جانچیں۔",
+ "ai_opt_merge.left.not_picked": "آپشن سے منتخب نہیں کیا گیا",
+ "ai_opt_merge.left.unticked": "آپشن میں نشان ہٹایا گیا",
+ "ai_opt_merge.left.conflict": "موجودہ ماڈل میں شامل نہیں ہو سکتا: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "یہ آپشن ضم نہیں ہو سکتا۔ مسترد آپشن کو پہلے بحال کرنا ہوگا۔",
+ "ai_opt_merge.refused.stale": "یہ آپشن بننے کے بعد ماڈل بدل گیا۔ موجودہ ماڈل کے مقابل ضم دوبارہ حساب کریں۔",
+ "ai_opt_merge.refused.nothing_picked": "ضم کے لیے کچھ منتخب نہیں۔",
+ "ai_opt_merge.refused.unknown_item": "آئٹم {item} اس آپشن کا حصہ نہیں ہے۔",
+ "ai_opt_merge.refused.not_in_option": "منتخب عنصر اس آپشن کا حصہ نہیں ہے۔",
+ "ai_opt_merge.refused.needs_left_out": "آئٹم {item} کو آئٹم {needs} درکار ہے۔ اسے بھی منتخب کریں، یا انحصار شامل کرنے کی اجازت دیں۔",
+ "ai_opt_merge.refused.set_gone": "آئٹم {item} ایک ایسے انتخاب کا حوالہ دیتا ہے جو اب موجود نہیں۔ آپشن دوبارہ بنائیں۔",
+ "ai_opt_merge.refused.busy": "ایک اور پلان کھلا ہے۔ پہلے اسے لاگو یا مسترد کریں۔",
+ "ai_opt_merge.refused.failed": "ضم تیار نہیں ہو سکا: {reason}",
+ "ai_opt_merge.revive": "آپشن بحال کریں",
+ "ai_opt_merge.merged": "ضم ہو گیا"
+}

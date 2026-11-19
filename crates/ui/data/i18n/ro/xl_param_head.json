@@ -1,0 +1,7 @@
+{
+ "xl.msg.param_ambiguous": "coloana '{}' poate corespunde oricăruia dintre parametrii {}; scrieți numele exact al parametrului, nu s-a aplicat",
+ "xl.msg.param_tag_stale": "coloana '{}' denumește un parametru pe care acest proiect nu îl are; nu s-a aplicat",
+ "xl.msg.dup_col_note": "coloana '{}' din {} repetă coloana '{}' din {}; valorile egale se aplică o singură dată, iar un rând în care diferă păstrează valoarea din model",
+ "xl.msg.dup_col_differs": "coloanele '{}' și '{}' diferă în {} și {}; se păstrează valoarea din model — păstrați o singură coloană",
+ "xl.msg.dup_col_id": "coloanele '{}' și '{}' diferă în {} și {}, rândul nu poate fi identificat; nimic nu a fost aplicat — păstrați o singură coloană"
+}

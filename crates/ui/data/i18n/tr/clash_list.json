@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "Tümü",
+ "clash_list.only_selected": "Yalnızca seçilenler",
+ "clash_list.tolerance": "Tolerans",
+ "clash_list.gap": "Boşluk",
+ "clash_list.export": "Dışa aktar",
+ "clash_list.col.volume": "Hacim",
+ "clash_list.fix.up": "Yukarı taşı",
+ "clash_list.fix.down": "Aşağı taşı",
+ "clash_list.fix.sleeve": "Kılıf",
+ "clash_list.apply_fix": "Düzeltmeyi uygula",
+ "clash_list.err.tol": "Tolerans: uzunluk girin (0 veya daha fazla), ör. 50 veya 2 in",
+ "clash_list.sleeve_no_host": "Kılıf, çiftte bir duvar veya döşeme gerektirir",
+ "clash_list.err.gap": "Boşluk: uzunluk girin (0 veya daha fazla), ör. 50 veya 2 in"
+}

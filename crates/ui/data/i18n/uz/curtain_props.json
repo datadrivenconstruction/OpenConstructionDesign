@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "Panel",
+ "curtain_props.cw.panel_cell": "Katak {i}×{j} · pardali devor #{id}",
+ "curtain_props.cw.kind": "Turi",
+ "curtain_props.cw.kind.glazed": "Oynali",
+ "curtain_props.cw.kind.solid": "Yopiq",
+ "curtain_props.cw.kind.door": "Eshik",
+ "curtain_props.cw.kind.window": "Deraza",
+ "curtain_props.cw.kind.empty": "Bo'sh",
+ "curtain_props.cw.name": "Nomi",
+ "curtain_props.cw.swing_side": "Boshqa tomonga ochiladi",
+ "curtain_props.cw.swing_hinge": "Menteşe katak chetida",
+ "curtain_props.cw.size": "O'lcham",
+ "curtain_props.cw.cell_area": "Katak yuzasi",
+ "curtain_props.cw.panel_area": "Panel yuzasi",
+ "curtain_props.cw.prev": "Oldingi panel",
+ "curtain_props.cw.next": "Keyingi panel",
+ "curtain_props.cw.wall": "Devorni tanlang",
+ "curtain_props.cw.panel_hint": "Esc — tanlash · Ctrl+Z — bekor qilish",
+ "curtain_props.cw.status.panel": "Panel {i}×{j} → {kind}",
+ "e3d.err.cw_height": "pardali devor balandligi 100 mm dan katta bo'lishi kerak"
+}

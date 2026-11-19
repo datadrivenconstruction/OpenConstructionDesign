@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "Всички",
+ "clash_list.only_selected": "Само избраните",
+ "clash_list.tolerance": "Толеранс",
+ "clash_list.gap": "Празнина",
+ "clash_list.export": "Експорт",
+ "clash_list.col.volume": "Обем",
+ "clash_list.fix.up": "Преместване нагоре",
+ "clash_list.fix.down": "Преместване надолу",
+ "clash_list.fix.sleeve": "Втулка",
+ "clash_list.apply_fix": "Прилагане на корекцията",
+ "clash_list.err.tol": "Толеранс: въведете дължина (0 или повече), напр. 50 или 2 in",
+ "clash_list.sleeve_no_host": "Втулката изисква стена или плоча в двойката",
+ "clash_list.err.gap": "Празнина: въведете дължина (0 или повече), напр. 50 или 2 in"
+}

@@ -1,0 +1,40 @@
+{
+ "id": "nl",
+ "version": "2026.11",
+ "parent": "eu",
+ "country": "NL",
+ "lang": [
+  "nl"
+ ],
+ "units": {
+  "length": "m",
+  "display": "metric"
+ },
+ "conventions": {
+  "ground_floor": 0,
+  "area_standard": "usable",
+  "net_share": 1.0,
+  "note": "Dutch rules and briefs use gebruiksoppervlakte (usable floor area measured inside the walls of a use function). Net share is our own estimate.",
+  "source": null
+ },
+ "status": "tier3",
+ "climate": {
+  "zones": [],
+  "default": null
+ },
+ "research": {
+  "date": "2026-11-14",
+  "missing": [
+   "fire.compartment_area_max.sprinklered",
+   "room.height_min.office",
+   "parking.per_dwelling",
+   "load.floor_residential",
+   "load.floor_office"
+  ],
+  "unreachable": [
+   "https://wetten.overheid.nl/BWBR0041297/ (page over 10 MB; read the IPLO-hosted consolidated PDF instead)",
+   "iplo.nl vrije-hoogte and trappen-hellingbanen pages (404)"
+  ]
+ },
+ "note": "Numbers with verified=true were read in the cited clause; the rest are hints with a note of where we looked. Wording is our own; no text of a standard is stored."
+}

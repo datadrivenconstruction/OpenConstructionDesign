@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "Tarkistettu",
+ "ai.redraft.added": "+{n} lisätty",
+ "ai.redraft.removed": "−{n} poistettu",
+ "ai.redraft.changed": "~{n} muutettu",
+ "ai.redraft.strip": "{what} viimeisestä katselusta",
+ "ai.redraft.note": "Tarkistettu muokattu suunnitelma: {what}",
+ "ai.redraft.more": "+{n} lisää",
+ "ai.redraft.ack": "Selvä",
+ "ai.redraft.ack.tip": "Merkitse tämä versio nähdyksi; Käytä kohdistuu siihen",
+ "ai.redraft.removed_list": "Poistetut kohdat: {n}",
+ "ai.redraft.review_first": "Suunnitelma muuttui viestisi jälkeen: tarkista muutokset ensin",
+ "ai.redraft.mark.tip": "Uusi tai muutettu sitten viimeisen katselun",
+ "ai.redraft.emptied": "Jatkokysymys poisti kaikki kohdat: luonnos on tyhjä"
+}

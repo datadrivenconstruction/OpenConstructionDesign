@@ -1,0 +1,11 @@
+{
+ "empty.sv_notfound.title": "Vederea nu a fost găsită",
+ "empty.sv_notfound.hint": "Această vedere a fost ștearsă sau nu mai face parte din proiect.",
+ "empty.sv_notfound.action": "Închide vederea",
+ "empty.sv_cuts_nothing.title": "Această secțiune nu taie nimic",
+ "empty.sv_cuts_nothing.hint": "Linia de secțiune nu întâlnește pereți, plăci sau goluri în adâncimea ei. Mută linia sau fă vederea mai adâncă.",
+ "empty.sv_cuts_nothing.action": "Arată în plan",
+ "empty.sv_shows_nothing.title": "Această elevație nu arată nimic",
+ "empty.sv_shows_nothing.hint": "Niciun perete, placă sau gol nu intră în adâncimea vederii. Mută linia de vedere sau fă vederea mai adâncă.",
+ "empty.sv_shows_nothing.action": "Arată în plan"
+}

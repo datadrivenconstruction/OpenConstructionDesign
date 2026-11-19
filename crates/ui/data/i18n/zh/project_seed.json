@@ -1,0 +1,6 @@
+{
+ "project_seed.seed_level": "标高 1",
+ "project_seed.seed_wall_partition": "隔墙 100",
+ "project_seed.seed_wall_masonry": "砌体墙 200",
+ "project_seed.seed_wall_exterior": "外墙 380"
+}

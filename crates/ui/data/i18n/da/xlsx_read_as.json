@@ -1,0 +1,11 @@
+{
+ "xlsx_read_as.title": "Omdøbt ark?",
+ "xlsx_read_as.detail": "Ark {found} har kolonnerne fra {sheet} ({score} % match). Det læses ikke, medmindre du vælger det.",
+ "xlsx_read_as.detail_many": "Mere end ét ark passer til {sheet}: {found}. Intet er valgt for dig; vælg det, der skal læses.",
+ "xlsx_read_as.read_as": "Læs „{found}“ som {sheet}",
+ "xlsx_read_as.read_as_tip": "Kun for denne import. Arket omdøbes ikke; Anvend skriver kun id'er for nye rækker ind i det.",
+ "xlsx_read_as.active": "Ark „{found}“ læses som {sheet} i denne import.",
+ "xlsx_read_as.undo": "Læs ikke som {sheet}",
+ "xlsx_read_as.undo_tip": "Tilbage til arknavnene, som de står i regnearket.",
+ "xlsx_read_as.not_rewritten": "Regnearket blev ikke skrevet om: et omdøbt ark læses under sit eget navn. Omdøb det tilbage for at holde regnearket synkront."
+}

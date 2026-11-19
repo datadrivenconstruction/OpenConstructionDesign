@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "Đã hoàn tác áp dụng: mô hình không khớp với bản xem trước. {what}",
+ "xlsx_verify.not_written": "{row} chưa thay đổi.",
+ "xlsx_verify.lost": "{row} đã biến mất.",
+ "xlsx_verify.not_deleted": "{row} chưa bị xóa.",
+ "xlsx_verify.extra_deleted": "{row} đã bị xóa, dù bản xem trước vẫn giữ nó.",
+ "xlsx_verify.created": "{table}: {got} mới thay vì {want}.",
+ "xlsx_verify.value": "{row}, {field}: cần {want} (đang là {old}), nhận được {got}.",
+ "xlsx_verify.check_failed": "Không thể kiểm tra kết quả: {e}",
+ "xlsx_verify.plan_failed": "Chưa bắt đầu áp dụng: kiểm tra không đọc được mô hình ({e}).",
+ "xlsx_verify.take_back_failed": "Không thể hoàn tác bước ({e}): hãy dùng Hoàn tác.",
+ "xlsx_verify.t.wall": "Tường",
+ "xlsx_verify.t.opening": "Lỗ mở",
+ "xlsx_verify.t.room": "Phòng",
+ "xlsx_verify.t.slab": "Sàn",
+ "xlsx_verify.t.level": "Cao độ",
+ "xlsx_verify.t.wall_type": "Loại tường",
+ "xlsx_verify.t.slab_type": "Loại sàn",
+ "xlsx_verify.t.col": "Cột",
+ "xlsx_verify.t.beam": "Dầm",
+ "xlsx_verify.t.roof": "Mái",
+ "xlsx_verify.t.curtain_wall": "Tường rèm"
+}

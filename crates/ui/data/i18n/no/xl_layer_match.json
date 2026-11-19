@@ -1,0 +1,4 @@
+{
+ "xl.msg.layer_cells_unplaced": "{} celler av typen '{}' lag {} på ark '{}' kunne ikke plasseres",
+ "xl.msg.layer_hidden_unplaced": "skjult rad av typen '{}' lag {} på ark '{}' kunne ikke plasseres"
+}

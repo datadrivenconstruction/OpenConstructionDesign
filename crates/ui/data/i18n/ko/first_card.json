@@ -1,0 +1,9 @@
+{
+ "first_card.card.title": "XLSX 스프레드시트 왕복 편집 해보기",
+ "first_card.card.step1": "벽을 선택하세요",
+ "first_card.card.step2": "속성 하나를 바꾸세요",
+ "first_card.card.step3": "XLSX 스프레드시트에서 편집하고, 미리보기를 확인한 뒤 적용하세요",
+ "first_card.card.spreadsheet": "XLSX 스프레드시트에서 편집",
+ "first_card.card.skip": "건너뛰기",
+ "first_card.card.done": "완료: 모델과 워크북이 일치합니다"
+}

@@ -1,0 +1,8 @@
+{
+ "script_rec.started": "Snimanje: promjene koje napravite od sada idu u skriptu. Za zaustavljanje ponovno odaberite „Snimi radnje u skriptu“.",
+ "script_rec.saved": "Skripta „{name}“ spremljena: promjena — {n}.",
+ "script_rec.skipped": "Promjene alata bez skriptnog oblika nisu zabilježene: {k}.",
+ "script_rec.nothing": "Snimanje zaustavljeno: nema promjena za spremanje.",
+ "script_rec.failed": "Snimka nije spremljena: {why}",
+ "script_rec.no_folder": "nema mape postavki za skripte"
+}

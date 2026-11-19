@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "Өмнөх хуудас (Page Up)",
+ "sheets.print.next": "Дараагийн хуудас (Page Down)",
+ "sheets.print.fit": "Хуудсанд тохируулах (давхар дарах)",
+ "sheets.print.no_sheets": "Урьдчилан харах хуудас алга",
+ "sheets.print.building": "Хуудсыг бэлтгэж байна…",
+ "sheets.print.stop_build": "Зогсоох",
+ "sheets.print.build_stopped": "Хуудас бэлтгэх зогссон",
+ "sheets.print.retry": "Дахин бэлтгэх",
+ "sheets.print.build_failed": "Урьдчилсан харагдацыг бэлтгэж чадсангүй"
+}

@@ -1,0 +1,5 @@
+{
+ "lv.level.deleted_attach": "Nível eliminado; {n} paredes perderam a fixação superior",
+ "lv.level.rooms": "{n} divisões assumem a altura do nível de destino ({dz} m): {names}. Prima Mover novamente para confirmar",
+ "lv.level.pinned": "Nível não eliminado: elementos fixados não podem passar para outro nível: {names}. Desafixe-os primeiro"
+}

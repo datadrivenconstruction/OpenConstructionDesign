@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "Liiguta üles",
+ "rebar_list.move_down": "Liiguta alla",
+ "rebar_list.remove": "Eemalda",
+ "rebar_list.zone_remove_last": "Tsoonis peab olema vähemalt üks ruum: kustuta tsoon, et viimane eemaldada",
+ "rebar_list.rebar_empty_title": "Selles mudelis pole armatuuri",
+ "rebar_list.rebar_empty_hint": "Paiguta armatuur hostelemendile ja see lisatakse siia loendisse.",
+ "rebar_list.rebar_empty_action": "Paiguta armatuur"
+}

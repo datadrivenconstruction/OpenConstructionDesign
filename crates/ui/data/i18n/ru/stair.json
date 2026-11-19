@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "Лестницы",
+ "selcat.railing": "Ограждения",
+ "quick.cat.stair": "Лестницы",
+ "quick.cat.railing": "Ограждения",
+ "stair.risers": "Подъёмов",
+ "stair.riser": "Высота подъёма",
+ "stair.comfort": "2R + T",
+ "stair.tread_auto": "Проступь по правилу",
+ "stair.tread_auto_tip": "Сбросить введённую проступь: её задаст правило 2R + T",
+ "stair.broken": "Лестница не помещается между уровнями",
+ "railing.host_stair": "На лестнице #{id}",
+ "railing.host_path": "Ограждение по эскизу",
+ "railing.length": "Длина",
+ "stair.deleted_with": "вместе с ограждениями: {n}"
+}

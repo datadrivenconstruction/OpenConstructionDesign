@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "Eindpunt",
+ "snap.midpoint": "Middelpunt",
+ "snap.perpendicular": "Loodrecht",
+ "snap.wall_axis": "Wandas",
+ "snap.wall_face": "Wandvlak",
+ "snap.grid": "Raster",
+ "snap.intersection": "Snijpunt",
+ "snap.grid_axis": "Roosterlijn",
+ "snap.ref_plane": "Referentievlak",
+ "snap.nearest": "Dichtstbij",
+ "snap.align_x": "Uitgelijnd in X met een extern punt",
+ "snap.align_y": "Uitgelijnd in Y met een extern punt",
+ "snap.align_xy": "Uitgelijnd in X en Y"
+}

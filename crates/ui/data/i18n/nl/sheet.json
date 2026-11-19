@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "Sneltoetsenoverzicht",
+ "cmd.help.shortcuts.desc": "Toont elke sneltoets zoals u die nu hebt, per context. Druk overal buiten een tekstveld op ?.",
+ "sheet.title": "Sneltoetsen",
+ "sheet.filter": "Filteren op opdracht of toets",
+ "sheet.filter_label": "Sneltoetsen filteren",
+ "sheet.customize": "Aanpassen…",
+ "sheet.close": "Sluiten",
+ "sheet.esc_close": "om te sluiten",
+ "sheet.none": "Geen sneltoetsen gevonden",
+ "sheet.none_hint": "Probeer een ander woord of een andere toets.",
+ "sheet.sec.general": "Algemeen",
+ "sheet.sec.plan": "Plattegrond",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "Lijsten",
+ "sheet.sec.sheets": "Bladen",
+ "sheet.sec.ai": "AI"
+}

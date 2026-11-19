@@ -1,0 +1,6 @@
+{
+ "xlsx_no_base.title": "Dette regneark har ingen sammenligningsdata",
+ "xlsx_no_base.detail": "Det skjulte sammenligningsark mangler eller er beskadiget (et andet program gemte regnearket igen, eller det blev lavet i hånden). Hver afvigende celle erstatter modelværdien; modelredigeringer foretaget siden eksporten kan ikke registreres. Rækker der mangler i regnearket slettes ikke.",
+ "xlsx_no_base.confirm": "Jeg har kontrolleret ændringerne: erstat modelværdierne ({n})",
+ "xlsx_no_base.confirm_first": "Bekræft først importen af et regneark uden sammenligningsdata"
+}

@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "Havo kanali",
+ "mep3d.pipe": "Quvur",
+ "mep3d.tray": "Kabel lotoki",
+ "mep3d.conduit": "Quvur",
+ "mep3d.system": "Tizim",
+ "mep3d.length": "Uzunlik",
+ "mep3d.diameter": "Diametr",
+ "mep3d.width": "Kenglik",
+ "mep3d.height": "Balandlik",
+ "mep3d.insulation": "Izolyatsiya",
+ "mep3d.tip": "Enter — qo'llash; fitinglar qayta hisoblanadi",
+ "mep3d.size_positive": "o'lcham noldan katta bo'lishi kerak",
+ "mep3d.not_changed": "o'zgarmadi: {e}",
+ "mep3d.copied": "liniya nusxalandi",
+ "mep3d.changed": "liniya o'zgartirildi",
+ "mep3d.deleted": "o'chirilgan elementlar: {n}",
+ "mep3d.not_deleted": "o'chirilmadi: {e}",
+ "mep3d.no_wall_type": "devor turi yo'q",
+ "mep3d.demo.supply": "Ta'minot S1",
+ "mep3d.demo.heating": "Isitish",
+ "mep3d.demo.power": "Quvvat"
+}

@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "Suodatinrivi otsikoiden alla. Teksti: osajono; luvut: >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "Näytä tai piilota sarakkeet",
+ "sched_toolbar.groups_tip": "Ryhmittele rivit sarakkeiden mukaan, välisummilla",
+ "sched_toolbar.formulas_tip": "Lasketut sarakkeet",
+ "sched_toolbar.phase": "Vaihe",
+ "sched_toolbar.phase_tip": "Mistä vaiheesta rivit otetaan",
+ "sched_toolbar.copy_tip": "Valitut rivit (tai kaikki näkyvät) TSV-muodossa",
+ "sched_toolbar.import_tip": "Lue vietty luettelo takaisin: rivit Id:n mukaan, sarakkeet otsikon mukaan; ensin määrät, sitten yksi kumoamisvaihe",
+ "sched_toolbar.export_tip": "Näkyvät rivit ja sarakkeet yhteissummineen; luvut pysyvät lukuina",
+ "sched_toolbar.need_table": "Avaa ensin luettelo",
+ "sched_toolbar.busy_open": "Tiedostodialogi on jo auki",
+ "sched_toolbar.busy_save": "Tallennusdialogi on jo auki",
+ "sched_toolbar.clear_filter": "Tyhjennä suodatin",
+ "sched_toolbar.fields_title": "Sarakkeet"
+}

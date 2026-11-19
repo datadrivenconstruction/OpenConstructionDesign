@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "Ångrad — Ctrl+Y gör om",
+ "history.hist.empty": "Inga ändringar ännu",
+ "history.hist.empty_hint": "Dina redigeringar visas här. Klicka på ett steg för att gå tillbaka till det.",
+ "history.hist.revert_all_n": "Återför alla AI-ändringar ({n})"
+}

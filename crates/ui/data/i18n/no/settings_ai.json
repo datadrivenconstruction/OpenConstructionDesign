@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "Tilkobling",
+ "settings.ai_status_desc": "Modellen AI-assistenten bruker; nøklene oppbevares i det sikre lageret",
+ "settings.ai_not_connected": "Ikke tilkoblet",
+ "settings.ai_connect": "Tilkoblingsinnstillinger",
+ "settings.ai_connect_desc": "Adresse, modell og nøkkel for din egen modell, sky eller lokal",
+ "settings.ai_connect_btn": "Tilkoblingsinnstillinger…",
+ "settings.ai_panel": "AI-assistentpanel",
+ "settings.ai_panel_desc": "Spør med ord, gjennomgå planen, og bruk deretter",
+ "settings.ai_open_panel": "Åpne AI-panelet"
+}

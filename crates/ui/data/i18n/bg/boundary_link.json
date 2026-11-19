@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "Избери целия контур от стени",
+ "cmd.sketch.link_unlink": "Откачи ръба от стената",
+ "cmd.sketch.link_repick": "Избери отново стената за ръба",
+ "cmd.ctx.floor.link_unlink": "Откачи ръбовете от стените",
+ "cmd.ctx.floor.link_accept": "Приеми ръбовете на изтрити стени",
+ "boundary_link.hint.loop": "Кликнете върху стена: затворената верига стени става свързани ръбове",
+ "boundary_link.hint.repick": "Кликнете върху стена, успоредна на ръба: ръбът ще я следва",
+ "boundary_link.need_sketch": "Първо отворете скицата на контура",
+ "boundary_link.need_edge": "Посочете ръб на скицата",
+ "boundary_link.need_straight": "Само права линия може да следва стена",
+ "boundary_link.need_floor": "Изберете под",
+ "boundary_link.no_wall": "Под курсора няма стена",
+ "boundary_link.not_parallel": "Стената не е успоредна на ръба",
+ "boundary_link.not_linked": "Този ръб не е свързан със стена",
+ "boundary_link.unlinked": "Ръбът е откачен: остава на място и вече не следва стената",
+ "boundary_link.accepted": "Ръбовете са приети: остават на място като обикновени ръбове",
+ "boundary_link.failed": "Не може да се приложи",
+ "boundary_link.lost": "изходната стена е изтрита",
+ "boundary_link.blocked": "не може да следва стената"
+}

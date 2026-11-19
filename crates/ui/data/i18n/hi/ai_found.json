@@ -1,0 +1,42 @@
+{
+ "ai.tool.show_elements": "तत्व दिखाए जा रहे हैं",
+ "ai.tool.isolate_elements": "तत्व अलग किए जा रहे हैं",
+ "ai.tool.color_by": "मान के अनुसार रंग दिया जा रहा है",
+ "ai.tool.reset_view": "व्यू रीसेट किया जा रहा है",
+ "ai_found.found.query": "मिले",
+ "ai_found.found.show": "दिखाए गए",
+ "ai_found.found.isolate": "अलग किए गए",
+ "ai_found.found.hide": "छिपाए गए",
+ "ai_found.found.color": "रंगीन",
+ "ai_found.found.count": "{n} में से {m}",
+ "ai_found.found.none": "कुछ मेल नहीं खाया। व्यापक फ़िल्टर आज़माएँ।",
+ "ai_found.found.show_btn": "दिखाएँ",
+ "ai_found.found.show_tip": "ये तत्व चुनें और प्लान व 3D में उन पर ज़ूम करें",
+ "ai_found.found.isolate_btn": "अलग करें",
+ "ai_found.found.isolate_tip": "रीसेट व्यू तक केवल ये तत्व दिखाएँ",
+ "ai_found.found.select_btn": "चुनें",
+ "ai_found.found.select_tip": "दृश्य हिलाए बिना ये तत्व चुनें",
+ "ai_found.legend.title": "{by} के अनुसार रंग",
+ "ai_found.legend.row_tip": "इन तत्वों को चुनने के लिए क्लिक करें",
+ "ai_found.legend.empty_value": "कोई मान नहीं",
+ "ai_found.legend.other": {
+  "one": "# और मान",
+  "other": "# और मान"
+ },
+ "ai_found.view.title": "AI सहायक व्यू",
+ "ai_found.view.reset": "व्यू रीसेट करें",
+ "ai_found.view.reset_tip": "AI सहायक के बदलने से पहले का व्यू वापस लाएँ",
+ "ai_found.view.shown": {
+  "one": "# तत्व दिखाया गया",
+  "other": "# तत्व दिखाए गए"
+ },
+ "ai_found.view.isolated": {
+  "one": "# तत्व अलग किया गया",
+  "other": "# तत्व अलग किए गए"
+ },
+ "ai_found.view.hidden": {
+  "one": "# तत्व छिपा",
+  "other": "# तत्व छिपे"
+ },
+ "ai_found.found.line": "{what}: {count}"
+}

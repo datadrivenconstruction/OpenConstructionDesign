@@ -1,0 +1,15 @@
+{
+ "fe.add_why_empty": "Skriv inn et parameternavn først",
+ "fe.add_why_exists": "En parameter med dette navnet finnes allerede; bruk Bruk for å endre den",
+ "fe.apply_why_missing": "Ingen parameter med dette navnet; skriv inn et eksisterende navn",
+ "fe.nochange": "Ingen endringer ennå",
+ "options.accept_more": "Godta…",
+ "options.delete_more": "Slett…",
+ "options.empty_title": "Ingen alternativsett ennå",
+ "options.more": "Flere handlinger: {name}",
+ "options.primary_named": "Hovedalternativ: {name}",
+ "options.primary_tip": "Gjør dette til hovedalternativet i settet",
+ "options.select_first": "Velg elementer i modellen først",
+ "options.show_3d": "Vis i 3D: {name}",
+ "options.show_plan": "Vis i plan: {name}"
+}

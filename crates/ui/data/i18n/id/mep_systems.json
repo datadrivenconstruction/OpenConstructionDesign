@@ -1,0 +1,21 @@
+{
+ "mep.row.system": "Sistem",
+ "mep.row.elevation": "Elevasi awal",
+ "mep.row.slope": "Kemiringan",
+ "mep.row.material": "Bahan",
+ "mep.row.dev_elevation": "Elevasi",
+ "mep.row.no_system": "Sistem itu sudah tidak ada. Pilih yang lain.",
+ "mep.row.no_points": "Jalur tidak memiliki titik, sehingga tidak memiliki elevasi.",
+ "mep.row.system_domain": "Sistem {system} tidak menerima jalur jenis ini ({kind}). Pilih sistem dengan jenis jaringan yang sama.",
+ "mep.row.material_pipes": "Material hanya berlaku untuk pipa; jalur ini adalah {kind}.",
+ "mep.row.no_catalog": "Material tidak memiliki ukuran katalog untuk jalur ini.",
+ "mep.mat.none": "Tidak diatur",
+ "mep.mat.steel": "Baja",
+ "mep.mat.copper": "Tembaga",
+ "mep.mat.pvc": "PVC",
+ "mep.mat.pp": "Polipropilena",
+ "mep.err.follow_blocked": "Jalur yang terhubung tidak dapat mengikuti perubahan ini: tidak ada ruang untuk cabangnya di tempat baru. Pindahkan perangkat lebih sedikit, atau lepas jalur dulu.",
+ "mep.err.follow_slope": "Jalur yang terhubung memiliki kemiringan yang tidak dapat dipertahankan di tempat baru: akan turun di bawah kemiringan terkecil sistemnya. Pindahkan perangkat lebih sedikit secara vertikal, atau lepas jalur dulu.",
+ "mep.err.follow_port_lost": "Konektor tempat jalur ini berada tidak ada lagi setelah pengeditan. Pindahkan jalur dulu, atau pertahankan jenis perangkat.",
+ "mep.err.follow_device": "Jalur ini berakhir pada konektor perangkat dan tidak dapat meninggalkannya. Pindahkan perangkat sebagai gantinya, atau lepas jalur dulu."
+}

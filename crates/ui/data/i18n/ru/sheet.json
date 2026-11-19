@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "Горячие клавиши",
+ "cmd.help.shortcuts.desc": "Показывает все сочетания клавиш в том виде, как они настроены сейчас, по разделам. Нажмите ? вне поля ввода.",
+ "sheet.title": "Горячие клавиши",
+ "sheet.filter": "Фильтр по команде или клавише",
+ "sheet.filter_label": "Фильтр сочетаний",
+ "sheet.customize": "Настроить…",
+ "sheet.close": "Закрыть",
+ "sheet.esc_close": "закрыть",
+ "sheet.none": "Нет подходящих сочетаний",
+ "sheet.none_hint": "Попробуйте другое слово или клавишу.",
+ "sheet.sec.general": "Общие",
+ "sheet.sec.plan": "План",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "Спецификации",
+ "sheet.sec.sheets": "Листы",
+ "sheet.sec.ai": "ИИ"
+}

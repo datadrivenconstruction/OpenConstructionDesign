@@ -1,0 +1,11 @@
+{
+ "fe.csv.apply": "Zastosuj import",
+ "fe.csv.cancel": "Odrzuć podgląd",
+ "fe.csv.nothing": "Nic do zmiany: katalog zgadza się z bieżącymi typami",
+ "fe.csv.preview": "Podgląd importu: {added} nowych, {changed} zmienionych, {same} bez zmian typów; zmienia się {values} wartości",
+ "fe.csv.preview_hint": "Puste komórki i brakujące kolumny zachowują bieżące wartości. Nic się nie zmieni, dopóki nie zastosujesz.",
+ "fe.csv.skipped": "Nie zastosowano, wartość zachowana: {msg}",
+ "fe.csv.type_added": "Nowy typ {name}",
+ "fe.csv.type_changed": "Typ {name}",
+ "fe.csv.value": "  {param}: {old} → {new}"
+}

@@ -1,0 +1,8 @@
+{
+ "cmd.file.save_copy": "Uložit kopii pro jinou osobu…",
+ "cmd.file.save_copy.desc": "Uloží kopii projektu bez souhlasu s AI a, pokud nezvolíte jinak, bez deníku AI. Tento projekt zůstane beze změny.",
+ "ai.copy.title": "Uložit kopii",
+ "ai.copy.journal": "Zahrnout deník AI do kopie? Deník obsahuje požadavky, odpovědi a adresy. Souhlas s cloudem se nikdy nekopíruje: rozhodne o něm druhá osoba sama. Zvolte Ne, pokud deník vynechat.",
+ "ai.copy.done": "Kopie uložena: {name}",
+ "ai.copy.same": "Vyberte jiný soubor: kopie nemůže nahradit otevřený projekt."
+}

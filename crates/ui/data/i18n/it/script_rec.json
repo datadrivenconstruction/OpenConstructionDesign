@@ -1,0 +1,8 @@
+{
+ "script_rec.started": "Registrazione: le modifiche da questo momento finiranno in uno script. Per fermarla, scegli di nuovo «Registra azioni in script».",
+ "script_rec.saved": "Script «{name}» salvato: modifiche — {n}.",
+ "script_rec.skipped": "Modifiche fatte da strumenti senza forma di script non registrate: {k}.",
+ "script_rec.nothing": "Registrazione interrotta: nessuna modifica da salvare.",
+ "script_rec.failed": "Registrazione non salvata: {why}",
+ "script_rec.no_folder": "nessuna cartella delle impostazioni per gli script"
+}

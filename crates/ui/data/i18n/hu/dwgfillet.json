@@ -1,0 +1,20 @@
+{
+ "dwgfillet.fillet": "Kerekítés",
+ "dwgfillet.cancel": "Kerekítés leállítása",
+ "dwgfillet.tip": "Kattintson két vonalra a megtartandó oldalakon: mindkettő a sarokig vágódik vagy hosszabbodik, a sugár felett érintő ívvel",
+ "dwgfillet.radius": "Kerekítési sugár",
+ "dwgfillet.radius_tip": "Az ív sugara rajzegységben; 0 esetén éles sarok lesz",
+ "dwgfillet.st.arm_first": "Kattintson az első vonalra a megtartandó oldalon",
+ "dwgfillet.st.arm_second": "Kattintson a második vonalra a megtartandó oldalon",
+ "dwgfillet.st.not_armed": "Előbb válassza a Kerekítés parancsot",
+ "dwgfillet.st.click_line": "Kattintson a rajz egyetlen vonalára",
+ "dwgfillet.st.other_drawing": "Mindkét vonalnak ugyanahhoz a rajzhoz kell tartoznia: kezdje újra",
+ "dwgfillet.st.changed": "Az első vonal megváltozott: kezdje újra",
+ "dwgfillet.st.same_line": "Válasszon másik második vonalat",
+ "dwgfillet.st.parallel": "A vonalak párhuzamosak, és soha nem találkoznak: nem készíthető sarok",
+ "dwgfillet.st.degenerate": "Egy vonalnak nincs hossza",
+ "dwgfillet.st.no_side": "A megkattintott oldalnak nincs hossza a sarktól",
+ "dwgfillet.st.too_big": "A sugár túl nagy ezekhez a vonalakhoz: használjon kisebb sugarat",
+ "dwgfillet.st.radius_bad": "A sugár nulla vagy pozitív legyen",
+ "dwgfillet.st.done": "Sarok elkészítve"
+}

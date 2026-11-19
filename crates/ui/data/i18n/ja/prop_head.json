@@ -1,0 +1,9 @@
+{
+ "prop_head.of_type": {
+  "one": "このタイプの # 個",
+  "other": "このタイプの # 個"
+ },
+ "prop_head.override_tip": "タイプと異なります。クリックしてリセット",
+ "prop_head.reset_done": "「{name}」をタイプの値にリセットしました",
+ "prop_head.copy_id": "クリックして番号をコピー"
+}

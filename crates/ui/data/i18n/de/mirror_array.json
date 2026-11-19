@@ -1,0 +1,5 @@
+{
+ "mirror_array.err.count": "Die Anzahl ist eine ganze Zahl von 2 bis 200: 4 3000, oder 4;300, wenn der Schritt drei Stellen hat",
+ "mirror_array.err.length": "Der Schritt oder die Gesamtlänge ist eine positive Länge, z. B. 3 000 oder 1.2 m",
+ "mirror_array.err.angle": "Der Bogen ist ein Winkel in Grad, nicht null und höchstens 360"
+}

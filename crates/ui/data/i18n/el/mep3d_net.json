@@ -1,0 +1,13 @@
+{
+ "mep.sys.duct": "Παροχή S1",
+ "mep.sys.pipe": "Ψυχρό νερό C1",
+ "mep.sys.tray": "Ισχύς",
+ "mep.round": "Στρογγυλό",
+ "mep.material": "Υλικό",
+ "mep3d.elevation": "Υψόμετρο από το επίπεδο",
+ "mep3d.slope": "Κλίση",
+ "mep3d.shape": "Σχήμα",
+ "mep3d.shape.rect": "Ορθογώνιο",
+ "mep3d.shape.round": "Στρογγυλό",
+ "mep3d.shape.oval": "Επίπεδο ωοειδές"
+}

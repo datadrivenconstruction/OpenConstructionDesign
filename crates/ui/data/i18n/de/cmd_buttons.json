@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}, auf dem Geschoss",
+ "cmd_buttons.purge.undo": "Das Entfernen ist ein Rückgängig-Schritt.",
+ "cmd_buttons.unpin.none": "Nichts Gewähltes ist fixiert",
+ "cmd_buttons.change_type.none": "Zuerst Wände wählen: ihr Typ wird in einem Schritt geändert",
+ "cmd_buttons.units.metric": "Einheiten: metrisch",
+ "cmd_buttons.units.imperial": "Einheiten: Fuß und Zoll",
+ "cmd_buttons.units.back": "Zurückschalten",
+ "cmd_buttons.underlay.on": "Unterlage an: das Geschoss darunter wird abgeblendet angezeigt",
+ "cmd_buttons.underlay.off": "Unterlage aus",
+ "cmd_buttons.underlay.none": "Unterlage an, aber das Geschoss darunter hat nichts anzuzeigen",
+ "cmd_buttons.zoom_sel.no_shape": "Die Auswahl hat in dieser Ansicht keine Form zum Einrahmen",
+ "cmd_buttons.close.base": "Die Reiter Grundriss und 3D bleiben offen; zum Schließen einen Schnitt, ein Blatt oder eine Zeichenansicht öffnen",
+ "tool.equipment": "Ausrüstung",
+ "hint.equipment.place": "Ausrüstung: Ort wählen · Esc — beenden",
+ "cmd_buttons.table.opened": "Tabelle neben dem Modell geöffnet",
+ "cmd_buttons.circuits.tip": "Liste der Stromkreise dieses Modells öffnen"
+}

@@ -1,0 +1,8 @@
+{
+ "xlsx_idle.idle_title": "Keine Änderungen zum Importieren",
+ "xlsx_idle.export_name": "Exportieren",
+ "xlsx_idle.export_body": "Schreibt das Modell in eine Arbeitsmappe. Bearbeiten Sie dort die Werte, dann synchronisieren Sie.",
+ "xlsx_idle.sync_name": "Synchronisieren",
+ "xlsx_idle.sync_body": "Liest die Arbeitsmappe erneut ein und listet die Unterschiede auf. Das Modell ändert sich erst, wenn Sie übernehmen.",
+ "xlsx_idle.last_sync": "Zuletzt synchronisiert: {when}"
+}

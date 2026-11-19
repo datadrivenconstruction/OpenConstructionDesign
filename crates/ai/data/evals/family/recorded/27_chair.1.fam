@@ -1,0 +1,26 @@
+family Chair
+category furniture
+host floor
+ifc IfcFurniture CHAIR
+param Width length type 450mm
+param Depth length type 500mm
+param SeatH length type 450mm
+param BackH length type 850mm
+param Seat length type 40mm
+param Leg length type 35mm
+param Back length type 20mm
+param Frame material type "Beech"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Rear y = Depth / 2
+type "450x500" Width=450mm, Depth=500mm
+type "18x20in" Width=18in, Depth=20in, SeatH=18in, BackH=34in, Seat=1.5in, Leg=1.5in, Back=0.75in
+extrude Seat rect(Left, Front, Right, Rear) z(SeatH - Seat, SeatH) mat(Frame) show(3d, elev)
+extrude Leg1 rect(Left, Front, Left + Leg, Front + Leg) z(0, SeatH - Seat) mat(Frame) show(medium, fine, 3d, elev)
+extrude Leg2 rect(Right - Leg, Front, Right, Front + Leg) z(0, SeatH - Seat) mat(Frame) show(medium, fine, 3d, elev)
+extrude Leg3 rect(Right - Leg, Rear - Leg, Right, Rear) z(0, SeatH - Seat) mat(Frame) show(medium, fine, 3d, elev)
+extrude Leg4 rect(Left, Rear - Leg, Left + Leg, Rear) z(0, SeatH - Seat) mat(Frame) show(medium, fine, 3d, elev)
+extrude Back rect(Left, Rear - Back, Right, Rear) z(SeatH, BackH) mat(Frame) show(3d, elev)
+symbol rect(Left, Front, Right, Rear)
+symbol line(Left, Rear - Back, Right, Rear - Back) show(medium, fine)

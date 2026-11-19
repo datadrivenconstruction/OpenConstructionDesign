@@ -1,0 +1,16 @@
+[
+ {
+  "id": "props.param_lock",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+L"
+  ],
+  "tab": null,
+  "surfaces": [
+   "P"
+  ],
+  "stage": "M3",
+  "group": "props"
+ }
+]

@@ -1,0 +1,9 @@
+{
+ "elem.deleted": "Element borttagna: {n}",
+ "elem.deleted_kept": "Element borttagna: {n}; kvar på plats: {k} (panelar och element som inte kan tas bort)",
+ "elem.not_deleted": "ej borttagen: {e}",
+ "elem.not_deletable": "Detta element kan inte tas bort",
+ "elem.panel": "gardinväggspanel",
+ "elem.panel_refused": "En panel ingår i sin gardinvägg och kan inte tas bort var för sig. Markera hela väggen för att ta bort den.",
+ "elem.reload_failed": "Borttagen, men vyn uppdaterades inte: {e}"
+}

@@ -1,0 +1,14 @@
+{
+ "ai.issue.integrity": "Integritetsproblem: {0} {1}: {2}",
+ "ai.issue.opening_outside": "Öppningen ryms inte i väggen: {0}",
+ "ai.issue.opening_overlap": "Öppningen överlappar öppning {0}",
+ "ai.issue.wall_warning": "Vägg: {0}",
+ "ai.issue.cut_warning": "Skärning: {0}",
+ "ai.issue.room_open": "Rummet är inte slutet",
+ "ai.issue.material_unknown": "Inget material med namnet \"{0}\" i projektet: Tillämpa skulle lägga till ett nytt med standardegenskaper",
+ "ai.issue.material_suggest": "Inget material med namnet \"{0}\" i projektet: Tillämpa skulle lägga till ett nytt. Menade du \"{1}\"?",
+ "ai.issue.conflict": "Denna post kan inte köras: {0}",
+ "ai.issue.too_large": "{0} element skulle ändras, över gränsen {1}. Tillstånd krävs",
+ "ai.issue.truncated": "Ändringslistan stannade vid {0} rader: planen är större än kortet kan visa. Tillstånd krävs",
+ "ai.issue.replan_failed": "Planen kunde inte räknas om. En ny kopia av modellen tas"
+}

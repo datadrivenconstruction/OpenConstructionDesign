@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "Cambios del libro no aplicados",
+ "workbook_changes.wb.body": "Al cerrar o cambiar de proyecto se descartan.",
+ "workbook_changes.wb.line": "Importación de libro: {n} cambios no aplicados",
+ "workbook_changes.wb.review": "Revisar",
+ "workbook_changes.wb.discard": "Descartar"
+}

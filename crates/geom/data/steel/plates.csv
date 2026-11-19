@@ -1,0 +1,30 @@
+# Plates and stiffeners. Thicknesses in mm.
+[thickness]
+t
+6
+8
+10
+12
+15
+16
+20
+25
+30
+35
+40
+45
+50
+60
+
+# size_round: plate sides are rounded up to this step; snip: corner snip of a stiffener at a
+# rolled fillet; min_t: thinnest load-bearing plate; stiff_ratio: a stiffener is at least this
+# share of the flange it continues; ratio_max: a plate is at most this many times thicker
+# than the thinnest element it joins; grade: default plate material.
+[rules]
+key,value,unit
+size_round,10,mm
+snip,15,mm
+min_t,6,mm
+stiff_ratio,0.8,t
+ratio_max,4,ratio
+grade,S355,text

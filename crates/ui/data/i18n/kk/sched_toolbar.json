@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "Тақырыптың астындағы сүзгі жолы. Мәтін: ішкі жол; сандар: >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "Бағандарды көрсету немесе жасыру",
+ "sched_toolbar.groups_tip": "Жолдарды бағандар бойынша топтау, аралық жиынтықтармен",
+ "sched_toolbar.formulas_tip": "Есептелетін бағандар",
+ "sched_toolbar.phase": "Кезең",
+ "sched_toolbar.phase_tip": "Жолдар қай кезеңнен алынады",
+ "sched_toolbar.copy_tip": "Таңдалған жолдар (немесе барлық көрінетіндері) TSV ретінде",
+ "sched_toolbar.import_tip": "Экспортталған кестені қайта оқу: жолдар Id бойынша, бағандар тақырып бойынша; алдымен санау, содан кейін бір болдырмау қадамы",
+ "sched_toolbar.export_tip": "Көрінетін жолдар мен бағандар, жиынтықтармен; сандар сан күйінде қалады",
+ "sched_toolbar.need_table": "Алдымен кестені ашыңыз",
+ "sched_toolbar.busy_open": "Файл диалогы бұрыннан ашық",
+ "sched_toolbar.busy_save": "Сақтау диалогы бұрыннан ашық",
+ "sched_toolbar.clear_filter": "Сүзгіні тазалау",
+ "sched_toolbar.fields_title": "Бағандар"
+}

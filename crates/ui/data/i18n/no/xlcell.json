@@ -1,0 +1,15 @@
+{
+ "xl.msg.cell_clipped": "teksten ble kuttet for å passe cellegrensen; skrivebeskyttet, redigering ikke brukt",
+ "xlcell.status": "Eksportert. {count} celler ble forkortet eller stod tomme — se detaljvinduet.",
+ "xlcell.title": "Celler endret av eksporten",
+ "xlcell.intro": "Disse cellene kunne ikke skrives slik de er. Hele verdien finnes fortsatt i modellen; cellen er låst og kan ikke redigeres i arbeidsboken.",
+ "xlcell.col_sheet": "Ark",
+ "xlcell.col_row": "Rad",
+ "xlcell.col_col": "Kolonne",
+ "xlcell.col_id": "Element-id",
+ "xlcell.col_what": "Hva skjedde",
+ "xlcell.what_clipped": "Tekst kuttet til cellegrensen",
+ "xlcell.what_blank": "Ikke et endelig tall, cellen står tom",
+ "xlcell.more": "… og {count} til",
+ "xlcell.close": "Lukk"
+}

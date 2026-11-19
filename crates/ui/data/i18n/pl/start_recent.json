@@ -1,0 +1,5 @@
+{
+ "start_recent.unavailable": "Chwilowo niedostępne (dysk lub lokalizacja sieciowa nie odpowiada): {path}",
+ "start_recent.unavailable_short": "Chwilowo niedostępne",
+ "start_recent.retry": "Ponów"
+}

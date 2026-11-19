@@ -1,0 +1,15 @@
+{
+ "fe.add_why_empty": "Najpierw wpisz nazwę parametru",
+ "fe.add_why_exists": "Parametr o tej nazwie już istnieje; użyj Zastosuj, aby go zmienić",
+ "fe.apply_why_missing": "Brak parametru o tej nazwie; wpisz istniejącą nazwę",
+ "fe.nochange": "Jeszcze brak zmian",
+ "options.accept_more": "Przyjmij…",
+ "options.delete_more": "Usuń…",
+ "options.empty_title": "Brak zestawów opcji",
+ "options.more": "Więcej działań: {name}",
+ "options.primary_named": "Opcja główna: {name}",
+ "options.primary_tip": "Ustaw tę opcję jako główną w zestawie",
+ "options.select_first": "Najpierw zaznacz elementy w modelu",
+ "options.show_3d": "Pokaż w 3D: {name}",
+ "options.show_plan": "Pokaż w planie: {name}"
+}

@@ -1,0 +1,4 @@
+{
+  "scene": {"medium_over": 1000, "medium_under": 900, "coarse_over": 4000, "coarse_under": 3600},
+  "plan": {"medium_over": 150, "medium_under": 135, "coarse_over": 600, "coarse_under": 540}
+}

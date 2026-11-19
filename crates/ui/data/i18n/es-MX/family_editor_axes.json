@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "Eje X",
+ "fe.axis.y": "Eje Y",
+ "fe.axis.z": "Eje Z",
+ "fe.col.axis": "Eje",
+ "fe.col.at": "Posición",
+ "fe.col.mode": "Modo",
+ "fe.mode.fixed": "Fijo",
+ "fe.mode.free": "Libre",
+ "fe.types.inherited": "Predeterminado del parámetro",
+ "fe.csv.more": "Más acciones CSV",
+ "fe.ref.selected": "Plano: {name}"
+}

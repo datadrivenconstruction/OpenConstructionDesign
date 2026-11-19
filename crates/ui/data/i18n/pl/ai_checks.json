@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "zmierzono {value}, limit {limit}",
+ "ai_checks.check.cap": "Pokazano {shown} z {total} wyników. Najpierw błędy: popraw je i uruchom ponownie.",
+ "ai_checks.check.run_again": "Uruchom ponownie",
+ "ai_checks.check.goto": "Zaznacz i przybliż",
+ "ai_checks.check.never_title": "Jeszcze nie sprawdzono",
+ "ai_checks.check.never_hint": "Uruchom sprawdzenia, a wyniki pojawią się tutaj.",
+ "ai_checks.check.sec.error": "Błędy",
+ "ai_checks.check.sec.warning": "Ostrzeżenia",
+ "ai_checks.check.sec.info": "Uwagi"
+}

@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "Este libro ya existe",
+ "xlsx_exists.foreign": "No es un libro de este proyecto, así que nunca se reemplaza.",
+ "xlsx_exists.pending": "Contiene {n} ediciones que todavía no se aplicaron al modelo.",
+ "xlsx_exists.outside": "Tiene {n} filas que la nueva exportación no incluye.",
+ "xlsx_exists.new_name": "Exportar a {name}",
+ "xlsx_exists.apply_first": "Aplíquelos primero",
+ "xlsx_exists.replace": "Reemplazar (libro antiguo a _archive)",
+ "xlsx_exists.archived": "Libro antiguo movido a {path}",
+ "xlsx_exists.archive_failed": "No se pudo mover el libro antiguo; no se exportó nada: {error}"
+}

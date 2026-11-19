@@ -1,0 +1,4 @@
+{
+ "xl.msg.layer_cells_unplaced": "{} cellules du type « {} », couche {}, de la feuille « {} » n'ont pas pu être placées",
+ "xl.msg.layer_hidden_unplaced": "ligne masquée du type « {} », couche {}, de la feuille « {} » n'a pas pu être placée"
+}

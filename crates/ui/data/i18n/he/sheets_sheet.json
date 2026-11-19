@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "שכפל גיליון עם מבטים",
+ "cmd.view.sheet_duplicate_title": "שכפל גיליון (בלוק כותרת בלבד)",
+ "sheets.dup.menu_views": "שכפל עם מבטים",
+ "sheets.dup.menu_title": "שכפל, בלוק כותרת בלבד",
+ "sheets.dup.done": "גיליון {number} נוצר מ-{src}: {views} מבטים, {sched} טבלאות ומקרא. גרסאות לא הועתקו; הגיליון אינו הונפק.",
+ "sheets.dup.none": "פתח גיליון כדי לשכפל אותו",
+ "sheets.dup.copy": "עותק",
+ "cmd.view.sheet_duplicate.short": "שכפל עם מבטים",
+ "cmd.view.sheet_duplicate_title.short": "שכפל בלוק כותרת"
+}

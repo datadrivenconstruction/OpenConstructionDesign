@@ -1,0 +1,15 @@
+{
+ "cmd.ctx.floor.clean_outline": "Omtrek opschonen",
+ "cmd.ctx.floor.clean_outline.desc": "Verwijdert smalle puntjes waar de vloeromtrek op zichzelf terugbuigt. Toont eerst een voorbeeld; één stap ongedaan maken.",
+ "outline_cleanup.title": "Omtrek opschonen",
+ "outline_cleanup.intro": "De omtrek van deze vloer buigt op smalle plekken terug op zichzelf: {n} puntjes. Opschonen verwijdert ze; de rest blijft ongewijzigd.",
+ "outline_cleanup.legend_before": "Dikke lijn: de omtrek nu",
+ "outline_cleanup.legend_after": "Dunne lijn: de omtrek na opschonen",
+ "outline_cleanup.undo": "Dit kunt u in één stap ongedaan maken.",
+ "outline_cleanup.apply": "Opschonen",
+ "outline_cleanup.cancel": "Annuleren",
+ "outline_cleanup.done": "Omtrek opgeschoond, puntjes verwijderd: {n}",
+ "outline_cleanup.none": "De omtrek van deze vloer heeft geen puntjes",
+ "outline_cleanup.failed": "De omtrek kon niet worden opgeschoond",
+ "outline_cleanup.changed": "De omtrek is gewijzigd sinds het voorbeeld; er is niets geschreven. Controleer het nieuwe voorbeeld."
+}

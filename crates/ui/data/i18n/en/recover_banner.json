@@ -1,0 +1,7 @@
+{
+ "recover.untitled_note": "This project was never saved",
+ "recover.file_missing": "The project file was not found",
+ "recover.banner": "Unsaved work from an earlier session was found for {name}",
+ "recover.banner_review": "Review",
+ "recover.later_archived": "Put off {n} times: snapshots moved to the archive"
+}

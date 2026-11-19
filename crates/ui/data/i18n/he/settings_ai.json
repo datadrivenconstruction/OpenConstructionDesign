@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "חיבור",
+ "settings.ai_status_desc": "המודל שעוזר ה-AI משתמש בו; המפתחות נשמרים באחסון המאובטח",
+ "settings.ai_not_connected": "לא מחובר",
+ "settings.ai_connect": "הגדרות חיבור",
+ "settings.ai_connect_desc": "כתובת, מודל ומפתח של המודל שלך, בענן או מקומי",
+ "settings.ai_connect_btn": "הגדרות חיבור…",
+ "settings.ai_panel": "חלונית עוזר AI",
+ "settings.ai_panel_desc": "שאל במילים, בדוק את התוכנית, ואז החל",
+ "settings.ai_open_panel": "פתח את חלונית ה-AI"
+}

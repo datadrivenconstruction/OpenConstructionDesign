@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "Повітропровід",
+ "mep3d.pipe": "Труба",
+ "mep3d.tray": "Кабельний лоток",
+ "mep3d.conduit": "Кабельна труба",
+ "mep3d.system": "Система",
+ "mep3d.length": "Довжина",
+ "mep3d.diameter": "Діаметр",
+ "mep3d.width": "Ширина",
+ "mep3d.height": "Висота",
+ "mep3d.insulation": "Ізоляція",
+ "mep3d.tip": "Enter — застосувати; фітинги перераховуються",
+ "mep3d.size_positive": "розмір має бути більшим за нуль",
+ "mep3d.not_changed": "не змінено: {e}",
+ "mep3d.copied": "трасу скопійовано",
+ "mep3d.changed": "трасу змінено",
+ "mep3d.deleted": "видалено елементів: {n}",
+ "mep3d.not_deleted": "не видалено: {e}",
+ "mep3d.no_wall_type": "немає типу стіни",
+ "mep3d.demo.supply": "Приплив S1",
+ "mep3d.demo.heating": "Опалення",
+ "mep3d.demo.power": "Живлення"
+}

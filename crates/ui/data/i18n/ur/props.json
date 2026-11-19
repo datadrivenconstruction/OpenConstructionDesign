@@ -1,0 +1,18 @@
+{
+ "props.multi.title": {
+  "one": "# عنصر",
+  "other": "# عناصر"
+ },
+ "props.multi.cats": {
+  "one": "# زمرہ",
+  "other": "# زمرے"
+ },
+ "props.multi.varies": {
+  "one": "مختلف (#)",
+  "other": "مختلف (#)"
+ },
+ "props.multi.clear": "انتخاب صاف کریں",
+ "props.multi.undo": "واپس",
+ "props.multi.narrowed": "انتخاب: {n} · {name}",
+ "props.multi.chip_tip": "{name}: {n}  ·  کلک سے ان کی خصوصیات دکھیں، Ctrl+کلک صرف انہیں رکھے"
+}

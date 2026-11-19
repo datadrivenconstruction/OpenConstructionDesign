@@ -1,0 +1,13 @@
+{
+ "xlw.copy_list": "一覧をコピー",
+ "xlw.save_list": "一覧を保存…",
+ "xlw.copy_list_tip": "表示中の行 (シート、セル、ID、列、値、理由) を表計算用のテキストとしてコピーします",
+ "xlw.save_list_tip": "表示中の行をブックと同じフォルダの .csv ファイルとして保存します。ブック自体は変更されません",
+ "xlw.list_book_value": "ブックの値",
+ "xlw.list_model_value": "モデルの値",
+ "xlw.list_reason": "理由",
+ "xlw.list_copied": "一覧をコピーしました: {n} 行",
+ "xlw.list_saved": "一覧を保存しました: {n} 行、{file}",
+ "xlw.list_save_failed": "一覧を保存できませんでした",
+ "xlw.list_nothing": "コピーするものがありません: 表示中の行がありません"
+}

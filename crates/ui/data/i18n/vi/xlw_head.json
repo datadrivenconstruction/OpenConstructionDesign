@@ -1,0 +1,15 @@
+{
+ "xlw.hd_never": "Chưa xuất",
+ "xlw.hd_now": "vừa xong",
+ "xlw.hd_min": "{n} phút trước",
+ "xlw.hd_hour": "{n} giờ trước",
+ "xlw.hd_day": "{n} ngày trước",
+ "xlw.hd_linked": "Đã liên kết",
+ "xlw.hd_watched": "Đang theo dõi",
+ "xlw.hd_stale": "Mô hình đã đổi kể từ lần xuất",
+ "xlw.ft_export": "Xuất",
+ "xlw.ft_review": "Xem lại",
+ "xlw.ft_apply": "Áp dụng {n} thay đổi",
+ "xlw.ft_delete_missing": "Xóa các thiếu",
+ "xlw.ft_keep_missing_tip": "Đang bật xóa: cấu kiện không có hàng sẽ bị xóa khi Áp dụng. Bỏ đánh dấu để giữ lại."
+}

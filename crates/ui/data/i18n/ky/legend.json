@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "Легенда",
+ "legend.legend.new_hint": "Жаңы легенданын аты",
+ "legend.legend.delete_tip": "Легенданы өчүрүү",
+ "legend.legend.delete_placed": "Легенданы өчүрүү (колдонулган жерлери: {sheets})",
+ "legend.legend.deleted": "Легенда өчүрүлдү: {name}",
+ "legend.legend.no_rows": "Азырынча саптар жок. Бирин кошуңуз же учурдагы көрүнүштүн стилдерин алыңыз",
+ "legend.legend.replace_q": "{n} сапты бул көрүнүштүн стилдери менен алмаштырасызбы?",
+ "legend.legend.replace": "Алмаштыруу",
+ "legend.legend.keep": "Саптарды калтыруу",
+ "legend.col.swatch": "Түс үлгүсү",
+ "legend.col.value": "Маани",
+ "legend.col.label": "Жазуу"
+}

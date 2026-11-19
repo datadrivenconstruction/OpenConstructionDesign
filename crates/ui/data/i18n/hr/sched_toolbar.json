@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "Filtar retka ispod zaglavlja. Tekst: podniz; brojevi: >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "Prikaži ili sakrij stupce",
+ "sched_toolbar.groups_tip": "Grupiraj retke po stupcima, s međuzbrojevima",
+ "sched_toolbar.formulas_tip": "Izračunati stupci",
+ "sched_toolbar.phase": "Faza",
+ "sched_toolbar.phase_tip": "Iz koje faze se uzimaju reci",
+ "sched_toolbar.copy_tip": "Odabrani reci (ili svi vidljivi) kao TSV",
+ "sched_toolbar.import_tip": "Pročitajte izvezenu tablicu natrag: reci po Id-u, stupci po zaglavlju; prvo brojevi, zatim jedan korak poništavanja",
+ "sched_toolbar.export_tip": "Vidljivi reci i stupci s ukupnima; brojevi ostaju brojevi",
+ "sched_toolbar.need_table": "Prvo otvorite tablicu",
+ "sched_toolbar.busy_open": "Dijaloški okvir za datoteke je već otvoren",
+ "sched_toolbar.busy_save": "Dijaloški okvir za spremanje je već otvoren",
+ "sched_toolbar.clear_filter": "Obriši filtar",
+ "sched_toolbar.fields_title": "Stupci"
+}

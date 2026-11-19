@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "Застосування зупинено: модель збережено без змін",
+ "apply_verify.rolled_back": "Застосування не відповідало чернетці і його скасовано; модель не змінено. {what}",
+ "apply_verify.diff.missing": "У чернетці показано {what} {kind}, але «Застосувати» цього не зробило.",
+ "apply_verify.diff.extra": "Застосовано {kind} {what}, якого немає в чернетці.",
+ "apply_verify.diff.kind": "У чернетці показано {what} {shown}, але «Застосувати» {applied} це.",
+ "apply_verify.diff.value": "{what}: «{col}» вийшло інакше, ніж у чернетці.",
+ "apply_verify.diff.truncated": "Чернетка і застосована зміна відрізняються за розміром.",
+ "apply_verify.diff.unreadable": "Застосовану зміну не вдалося прочитати назад ({e}).",
+ "apply_verify.no_base": "Застосування не запущено: немає копії для перевірки чернетки. Модель не змінено; запросіть чернетку знову.",
+ "apply_verify.take_back_failed": "Скасувати не вдалося ({e}): скористайтеся «Скасувати».",
+ "apply_verify.kind.created": "створено",
+ "apply_verify.kind.changed": "змінено",
+ "apply_verify.kind.deleted": "видалено",
+ "apply_verify.card.type_row": "Тип {type} · {n} елементів отримують зміну"
+}

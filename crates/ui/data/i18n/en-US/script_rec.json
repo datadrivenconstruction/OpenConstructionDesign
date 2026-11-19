@@ -1,0 +1,8 @@
+{
+ "script_rec.started": "Recording: the edits you make from now on go into a script. Choose “Record actions to script” again to stop.",
+ "script_rec.saved": "Script “{name}” saved: {n} edits.",
+ "script_rec.skipped": "{k} edits made by tools without a script form were not recorded.",
+ "script_rec.nothing": "Recording stopped: no edits to save.",
+ "script_rec.failed": "The recording was not saved: {why}",
+ "script_rec.no_folder": "no settings folder for scripts"
+}

@@ -1,0 +1,13 @@
+{
+ "ai.proposal.title": "Usulan agen",
+ "ai.proposal.meta": "{actor} · operasi: {ops}",
+ "ai.proposal.apply.desc": "Menerapkan seluruh usulan sebagai satu langkah; Ctrl+Z mengurungkannya",
+ "ai.proposal.applying": "Menerapkan…",
+ "ai.proposal.applied": "Usulan diterapkan. Ctrl+Z membatalkannya.",
+ "ai.proposal.applied_resync": "Usulan diterapkan, tetapi tampilan belum diperbarui. Tampilan akan menyegarkan diri sendiri; Ctrl+Z mengurungkan langkah.",
+ "ai.proposal.stale": "Model berubah setelah usulan ini dipratinjau. Minta agen mengusulkannya kembali.",
+ "ai.proposal.toast.applied": "Usulan diterapkan. Ctrl+Z mengurungkannya.",
+ "ai.proposal.toast.stale": "Model berubah setelah pratinjau, jadi tidak ada yang diterapkan. Pratinjau lagi: minta agen mengusulkan ulang.",
+ "ai.proposal.toast.refused": "Usulan tidak diterapkan: {reason}",
+ "ai.proposal.rejected": "Usulan ditolak."
+}

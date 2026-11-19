@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "কাস্টম",
+ "draw_quality.custom.tip": "{name}: এই প্রকল্পের একটি এন্ট্রি",
+ "draw_quality.custom_note": "কাস্টম চিহ্নিত এন্ট্রিগুলো এই প্রকল্পের।",
+ "draw_quality.unsaved.lib_body": "লাইব্রেরিতে সংরক্ষণ করবেন, নাকি বাতিল করবেন?",
+ "draw_quality.unsaved.styles_body": "এগুলো ভিউতে প্রয়োগ করবেন, নাকি বাতিল করবেন?",
+ "draw_quality.unsaved.both_body": "এগুলো প্রয়োগ করবেন, নাকি বাতিল করবেন?",
+ "draw_quality.halftone": "{category} হাফটোন",
+ "draw_quality.styles.name": "লাইন স্টাইল",
+ "draw_quality.styles.other_level": "লেভেল {level}-এর অসংরক্ষিত স্টাইল সম্পাদনা: এই লেভেল সম্পাদনার জন্য সেগুলো প্রয়োগ বা ফেরত দিন।"
+}

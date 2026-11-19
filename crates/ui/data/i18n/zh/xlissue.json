@@ -1,0 +1,13 @@
+{
+ "xlw.copy_list": "复制列表",
+ "xlw.save_list": "保存列表…",
+ "xlw.copy_list_tip": "以文本形式复制所显示的行（图纸、单元格、ID、列、数值、原因），以便粘贴到电子表格",
+ "xlw.save_list_tip": "将所显示的行保存为工作簿旁的 .csv 文件；工作簿本身不会更改",
+ "xlw.list_book_value": "工作簿值",
+ "xlw.list_model_value": "模型值",
+ "xlw.list_reason": "原因",
+ "xlw.list_copied": "已复制列表：{n} 行",
+ "xlw.list_saved": "列表已保存：{n} 行，{file}",
+ "xlw.list_save_failed": "列表未保存",
+ "xlw.list_nothing": "没有可复制的内容：未显示任何行"
+}

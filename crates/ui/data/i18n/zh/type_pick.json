@@ -1,0 +1,10 @@
+{
+ "type_pick.pick.search": "搜索类型或厚度",
+ "type_pick.pick.empty": "没有匹配的类型",
+ "type_pick.pick.edit": "编辑类型…",
+ "type_pick.pick.mixed": "混合",
+ "type_pick.pick.layers": {
+  "other": "# 层",
+  "one": "# 层"
+ }
+}

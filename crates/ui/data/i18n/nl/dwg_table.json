@@ -1,0 +1,14 @@
+{
+ "dwg_table.copy": "Tabel kopiëren",
+ "dwg_table.copy_tip": "Kopieer de hoeveelheidsstaat per laag als tabel voor een spreadsheet",
+ "dwg_table.copied": "Hoeveelheden gekopieerd (tabgescheiden)",
+ "dwg_table.total": "Totaal",
+ "dwg_table.col.layer": "Laag",
+ "dwg_table.col.count": "Aantal",
+ "dwg_table.col.len": "Lengte, {unit}",
+ "dwg_table.col.area": "Oppervlakte, {unit}",
+ "dwg_table.unit.mm": "mm",
+ "dwg_table.unit.m2": "m²",
+ "dwg_table.unit.ft": "ft",
+ "dwg_table.unit.ft2": "ft²"
+}

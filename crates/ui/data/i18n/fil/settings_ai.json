@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "Koneksyon",
+ "settings.ai_status_desc": "Ang model na ginagamit ng AI katulong; nananatili ang mga key sa secure store",
+ "settings.ai_not_connected": "Hindi nakakonekta",
+ "settings.ai_connect": "Mga setting ng koneksyon",
+ "settings.ai_connect_desc": "Address, model at key ng sarili mong model, cloud man o local",
+ "settings.ai_connect_btn": "Mga setting ng koneksyon…",
+ "settings.ai_panel": "Panel ng AI katulong",
+ "settings.ai_panel_desc": "Magtanong gamit ang salita, suriin ang plano, saka ilapat",
+ "settings.ai_open_panel": "Buksan ang AI panel"
+}

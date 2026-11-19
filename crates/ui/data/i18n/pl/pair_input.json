@@ -1,0 +1,6 @@
+{
+ "pair_input.pair_hint": "Dwie wartości oddziela się średnikiem: @1000;500",
+ "pair_input.old_pair": "Przecinek między dwiema liczbami całkowitymi nie tworzy już pary: wpisz 6000;4000 dla dwóch wartości albo 6000,5 dla liczby dziesiętnej",
+ "pair_input.op.bad_length": "To nie jest długość: {text} ({why}). Nic nie zmieniono",
+ "pair_input.op.bad_count": "Liczby {text} nie przyjęto: liczba całkowita od {min} do {max}"
+}

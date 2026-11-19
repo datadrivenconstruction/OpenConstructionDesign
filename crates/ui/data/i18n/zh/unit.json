@@ -1,0 +1,12 @@
+{
+ "unit.size_b": "{n} B",
+ "unit.size_gb": "{n} GB",
+ "autosave_status.unit.edits": {
+  "other": "处修改",
+  "one": "处修改"
+ },
+ "autosave_status.unit.copies": {
+  "other": "份",
+  "one": "份"
+ }
+}

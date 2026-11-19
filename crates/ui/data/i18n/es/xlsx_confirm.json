@@ -1,0 +1,19 @@
+{
+ "xlsx_confirm.chip": "por confirmar",
+ "xlsx_confirm.section": "Filas sin id asignadas a un elemento por nombre o número",
+ "xlsx_confirm.tag": "asignado por nombre",
+ "xlsx_confirm.tag_accepted": "asignación aceptada",
+ "xlsx_confirm.tag_rejected": "crea nuevo",
+ "xlsx_confirm.kind_room": "espacio",
+ "xlsx_confirm.kind_curtain_wall": "muro cortina",
+ "xlsx_confirm.row_line": "{kind} #{id}, clave \"{key}\"",
+ "xlsx_confirm.accept": "Aceptar",
+ "xlsx_confirm.accept_tip": "Aplicar esta fila al elemento asignado (un paso de deshacer junto con el resto)",
+ "xlsx_confirm.reject": "Crear nuevo",
+ "xlsx_confirm.reject_tip": "No asignar: esta fila crea un elemento nuevo",
+ "xlsx_confirm.decide_first": "Acepte o rechace primero las filas asignadas por nombre.",
+ "xl.msg.key_match_many": "la clave coincide con {} elementos; sin asignar, la fila crea uno nuevo",
+ "xl.msg.key_match_taken": "la clave coincide con un elemento usado por otra fila; sin asignar, la fila crea uno nuevo",
+ "xl.msg.key_match_kept": "conservado: asignación rechazada, la fila crea un elemento nuevo",
+ "xl.msg.key_match_undecided": "las filas asignadas por nombre esperan una decisión"
+}

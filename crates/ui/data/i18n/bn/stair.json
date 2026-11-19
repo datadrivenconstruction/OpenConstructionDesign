@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "সিঁড়ি",
+ "selcat.railing": "রেলিং",
+ "quick.cat.stair": "সিঁড়ি",
+ "quick.cat.railing": "রেলিং",
+ "stair.risers": "রাইজার",
+ "stair.riser": "রাইজারের উচ্চতা",
+ "stair.comfort": "2R + T",
+ "stair.tread_auto": "নিয়ম অনুযায়ী ট্রেড",
+ "stair.tread_auto_tip": "লেখা ট্রেড বাদ দিন এবং 2R + T নিয়মকে তা স্থির করতে দিন",
+ "stair.broken": "এই সিঁড়ি এর লেভেলের সাথে মেলে না",
+ "railing.host_stair": "সিঁড়ি #{id}-এর উপর",
+ "railing.host_path": "স্কেচ রেলিং",
+ "railing.length": "দৈর্ঘ্য",
+ "stair.deleted_with": "{n}টি সংযুক্ত রেলিংসহ"
+}

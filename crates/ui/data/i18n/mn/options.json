@@ -1,0 +1,15 @@
+{
+ "fe.add_why_empty": "Эхлээд параметрийн нэрийг оруулна уу",
+ "fe.add_why_exists": "Ийм нэртэй параметр аль хэдийн байна; өөрчлөхийн тулд Хэрэглэх дарна уу",
+ "fe.apply_why_missing": "Ийм нэртэй параметр байхгүй; байгаа нэрийг бичнэ үү",
+ "fe.nochange": "Өөрчлөлт хараахан байхгүй",
+ "options.accept_more": "Зөвшөөрөх…",
+ "options.delete_more": "Устгах…",
+ "options.empty_title": "Сонголтын багц хараахан байхгүй",
+ "options.more": "Нэмэлт үйлдэл: {name}",
+ "options.primary_named": "Үндсэн сонголт: {name}",
+ "options.primary_tip": "Үүнийг багцын үндсэн сонголт болгох",
+ "options.select_first": "Эхлээд загварт элементүүдийг сонгоно уу",
+ "options.show_3d": "3D-д харуулах: {name}",
+ "options.show_plan": "Төлөвлөгөөнд харуулах: {name}"
+}

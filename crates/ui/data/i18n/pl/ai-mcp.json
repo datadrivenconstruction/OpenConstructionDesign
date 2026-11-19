@@ -1,0 +1,15 @@
+{
+ "mcp.ask.cancel": "Anuluj",
+ "mcp.ask.auto.title": "Pozwolić agentom AI stosować zmiany bez pytania?",
+ "mcp.ask.auto.body": "Połączeni agenci AI zastosują zmiany do szkiców od razu, bez czekania na Twoje potwierdzenie, więc błędna zmiana może trafić do modelu, zanim ją zobaczysz. Model zmienia się wyłącznie po naciśnięciu Zastosuj. Trwa to, dopóki tego nie wyłączysz, nie zamkniesz edytora lub nie otworzysz innego modelu.",
+ "mcp.ask.auto.yes": "Stosuj bez pytania",
+ "mcp.ask.token.title": "Wydać nowy token?",
+ "mcp.ask.token.body": "Obecny token przestaje działać od razu: połączeni agenci AI zostaną odcięci i będą potrzebowali nowego tokenu. Jest pokazywany tylko raz, więc skopiuj go od razu.",
+ "mcp.ask.token.yes": "Nowy token",
+ "mcp.auto.chip": "Auto-stosowanie włączone",
+ "mcp.auto.chip_tip": "Agenci AI stosują zmiany do szkiców bez pytania. Kończy się wraz z tą sesją.",
+ "mcp.auto.ask_again": "Pytaj ponownie",
+ "mcp.token.once": "Skopiuj ten token teraz: nie zostanie pokazany ponownie.",
+ "mcp.renewed": "Wydano nowy token: stary przestał działać",
+ "mcp.copied": "Skopiowano"
+}

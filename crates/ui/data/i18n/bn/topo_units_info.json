@@ -1,0 +1,13 @@
+{
+ "topo.unit.mm": "mm",
+ "topo.unit.metre": "m",
+ "topo.unit.ft": "ft",
+ "topo.opt.material": "ম্যাটেরিয়াল",
+ "topo.row.active": "সক্রিয় সারফেস",
+ "topo.btn.delete_pad": "প্যাড মুছুন",
+ "topo.info.loading": "সারফেস তৈরি হচ্ছে…",
+ "topo.info.warn_n": "{n}টি সতর্কতা",
+ "topo.info.points_label": "বিন্দু",
+ "topo.import.all_layers": "সব স্তর",
+ "topo.import.need_layer": "অন্তত একটি স্তর টিক দিন"
+}

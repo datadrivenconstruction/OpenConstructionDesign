@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "Отметка {t} не принята ({why}). Ничего не изменено",
+ "host_shape.shape.elev_prompt_in": "отметка, фут-дюйм…",
+ "host_shape.shape.elev_in": "{v} дюйм."
+}

@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "Betong",
+ "mat.masonry": "Murverk",
+ "mat.brick": "Murstein",
+ "mat.insulation": "Isolasjon",
+ "mat.plaster": "Puss",
+ "mat.render": "Rapping",
+ "mat.gypsum": "Gipsplate",
+ "mat.glass": "Glass",
+ "mat.wood": "Tre",
+ "mat.steel": "Stål",
+ "mat.membrane": "Membran",
+ "mat.other": "Annet",
+ "warn.cat.wall": "Vegg",
+ "warn.cat.slab": "Plate",
+ "warn.cat.opening": "Åpning",
+ "warn.cat.curtain_wall": "Gardinvegg",
+ "td.mat.custom": "Annet…"
+}

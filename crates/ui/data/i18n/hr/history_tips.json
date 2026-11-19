@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "Poništeno — Ctrl+Y ponavlja",
+ "history.hist.empty": "Još nema promjena",
+ "history.hist.empty_hint": "Vaše izmjene pojavit će se ovdje. Kliknite bilo koji korak za povratak na njega.",
+ "history.hist.revert_all_n": "Vrati sve AI promjene ({n})"
+}

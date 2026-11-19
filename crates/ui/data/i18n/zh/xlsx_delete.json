@@ -1,0 +1,5 @@
+{
+ "xlsx_delete.delete_missing": "删除工作簿中缺少的行",
+ "xlsx_delete.not_removed": "未删除：没有比较数据",
+ "xlsx_delete.no_base_reason": "不可用：工作簿没有比较数据，因此无法区分缺失的行与误删的行。应用时不会删除任何内容。"
+}

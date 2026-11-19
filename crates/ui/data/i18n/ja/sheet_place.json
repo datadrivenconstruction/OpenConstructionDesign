@@ -1,0 +1,15 @@
+{
+ "sheet_place.place_view_tip": "シートにビューまたは集計表を配置",
+ "sheet_place.properties_tip": "シート番号、名前、用紙、改訂",
+ "sheet_place.print_tip": "シートを印刷またはエクスポート",
+ "sheet_place.fit_tip": "シートをウィンドウに合わせる",
+ "sheet_place.activate_tip": "シート上でビューをその場で編集: パン、ズーム、切り抜き",
+ "sheet_place.open_view_tip": "ビューを独自のタブで開く",
+ "sheet_place.done_tip": "シート上のビュー編集を終了",
+ "sheet_place.reset_crop_tip": "切り抜きを解除して全体のビューを表示",
+ "sheet_place.scale_tip": "シート上の選択ビューの尺度",
+ "sheet_place.title_tip": "シート上のビューの下に表示されるタイトル",
+ "sheet_place.banner": "シート上でビューを編集中",
+ "sheet_place.new_set_tip": "一緒に印刷するシートのセットを作成",
+ "sheet_place.new_sheet_tip": "プロジェクトにシートを追加"
+}

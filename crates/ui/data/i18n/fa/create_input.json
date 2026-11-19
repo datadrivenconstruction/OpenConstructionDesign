@@ -1,0 +1,14 @@
+{
+ "cmd.mod.divide": "تقسیم",
+ "cmd.mod.divide.short": "تقسیم",
+ "cmd.mod.divide.desc": "یک دیوار را در یک مرحله به بخش‌های مساوی تقسیم می‌کند. تعداد بخش‌ها را تایپ کنید، سپس روی دیوار کلیک کنید.",
+ "whereis.mod.divide": "تقسیم، بخش‌های مساوی، بریدن به قطعات، تقسیم دیوار",
+ "hint.split.parts": "تقسیم: روی دیواری کلیک کنید · عدد — تعداد بخش (2–100) · Esc — لغو",
+ "create_input.divide.bad_parts": "«{text}» یک تعداد بخش نیست: عدد صحیحی از 2 تا {max} تایپ کنید",
+ "create_input.ws.err.empty": "یک نام برای چیدمان تایپ کنید",
+ "create_input.ws.err.long": "نام بیش از حد طولانی است: حداکثر 40 نویسه",
+ "create_input.ws.err.preset": "این نام متعلق به یک چیدمان داخلی است",
+ "create_input.ws.err.full": "حداکثر 24 چیدمان ذخیره‌شده: ابتدا یکی را حذف کنید",
+ "create_input.seldim.locked": "فاصلهٔ {v} قفل شد",
+ "create_input.seldim.positive": "فاصله باید بزرگ‌تر از صفر باشد"
+}

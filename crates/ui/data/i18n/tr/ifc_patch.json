@@ -1,0 +1,19 @@
+{
+ "ifc_patch.fallback.source_changed": "Yama kullanılmadı: kaynak dosya diskte değişti veya okunamıyor. Dosya modelden yeniden yazıldı.",
+ "ifc_patch.fallback.sources": "Yama kullanılmadı: projede tam olarak bir kaynak yok. Dosya modelden yeniden yazıldı.",
+ "ifc_patch.fallback.schema": "Yama kullanılmadı: kaynak dosyanın şeması desteklenmiyor. Dosya modelden yeniden yazıldı.",
+ "ifc_patch.fallback.structure": "Yama kullanılmadı: kaynak dosyanın yapısına güvenilemedi. Dosya modelden yeniden yazıldı.",
+ "ifc_patch.fallback.edit": "Yama kullanılmadı: düzenleme kaynak dosyaya güvenli biçimde uygulanamıyor. Dosya modelden yeniden yazıldı.",
+ "ifc_patch.reason.schema": "Kaynak dosyanın şeması bu düzenlemeyi tutamıyor; öğe kaynaktaki haliyle kalır",
+ "ifc_patch.reason.prop": "Bu özellik düzenlemesi kaynak dosyada ifade edilemiyor; değer kaynaktaki gibi kalır",
+ "ifc_patch.reason.no_export": "Bu yeni elemanın IFC'de karşılığı yok",
+ "ifc_patch.reason.link": "Eleman dosyada var, ancak malzemesine veya tipine bağlantı yazılmıyor; yazılmayanlar listesinde",
+ "ifc_patch.drop": "Bırak",
+ "ifc_patch.drop_done": "Bekleyen bağlantılar bırakıldı: {n}; artık yeniden denenmeyecek",
+ "ifc_patch.fallback.building": "Yama kullanılmadı: yeni bir kat, kaynak dosyada tam olarak bir yapı gerektirir; dosyada yok veya birden fazla var. Dosya modelden yeniden yazıldı.",
+ "ifc_patch.fallback.types": "Yama kullanılmadı: içe aktarmadan bu yana katlar, tipler veya malzemeler değişti ve yama bunları yazamaz. Dosya modelden yeniden yazıldı.",
+ "ifc_patch.fallback.zipped": "Yama kullanılmadı: sıkıştırılmış bir kaynak dosya yamalanamaz. Dosya modelden yeniden yazıldı.",
+ "ifc_patch.fallback.source_kept": "Kaynak dosyanın üzerine yazılmadı: bu kaydın yerine geçmesine güvenilemedi. Bu kayıt yanına bir kopya olarak yazıldı.",
+ "ifc_patch.fallback.nested": "Yama kullanılmadı: yeni bir eleman iç içe parçalara sahip (örneğin portlar), yama bunları yazamaz. Dosya modelden yeniden yazıldı.",
+ "ifc_patch.fallback.shared_part": "Yama kullanılmadı: düzenlenen bir merdiven veya rampanın bir parçası başka bir eleman veya ilişki tarafından da kullanılıyor, yama bunu hesaba katamaz. Dosya modelden yeniden yazıldı."
+}

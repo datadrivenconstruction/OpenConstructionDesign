@@ -1,0 +1,16 @@
+{
+ "family_overwrite.ow.title": "Proje tipi değerleri değiştirilsin mi?",
+ "family_overwrite.ow.body": "Yükleme, {types} içindeki {values} değerlerini değiştirir. Bu tiplerin yerleştirilmiş örnekleri: {instances}.",
+ "family_overwrite.ow.values": {
+  "one": "# değer",
+  "other": "# değer"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# tip",
+  "other": "# tip"
+ },
+ "family_overwrite.ow.list": "Tipler: {list}",
+ "family_overwrite.ow.more": "ve {n} tane daha",
+ "family_overwrite.ow.back": "Düzenlemeye dön",
+ "family_overwrite.ow.replace": "Değerleri değiştir"
+}

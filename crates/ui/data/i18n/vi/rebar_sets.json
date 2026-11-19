@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "Thêm 1 bộ",
+ "rebar_sets.add_n": "Thêm {n} bộ",
+ "rebar_sets.pick.search": "Tìm loại thanh",
+ "rebar_sets.pick.empty": "Không có loại thanh phù hợp",
+ "rebar_sets.unit.deg": "°"
+}

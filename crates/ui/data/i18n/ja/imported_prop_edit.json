@@ -1,0 +1,6 @@
+{
+ "imported_prop_edit.remove": "プロパティを削除",
+ "imported_prop_edit.remove.tip": "選択中の {n} 個の要素から、1 回の元に戻す操作でプロパティを削除します。保存時に IFC ファイルからも削除されます",
+ "imported_prop_edit.done": "{n} 個の要素から {key} を削除しました",
+ "imported_prop_edit.warn.reload": "完了しましたが、ビューは更新されていません。表示がおかしい場合はパネルを開き直すか、元に戻してください"
+}

@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "Tilføj 1 sæt",
+ "rebar_sets.add_n": "Tilføj {n} sæt",
+ "rebar_sets.pick.search": "Søg armeringstyper",
+ "rebar_sets.pick.empty": "Ingen matchende armeringstyper",
+ "rebar_sets.unit.deg": "°"
+}

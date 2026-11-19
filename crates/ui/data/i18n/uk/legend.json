@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "Легенда",
+ "legend.legend.new_hint": "Назва нової легенди",
+ "legend.legend.delete_tip": "Видалити легенду",
+ "legend.legend.delete_placed": "Видалити легенду (розміщено на: {sheets})",
+ "legend.legend.deleted": "Легенду видалено: {name}",
+ "legend.legend.no_rows": "Рядків ще немає. Додайте один або візьміть стилі поточного виду",
+ "legend.legend.replace_q": "Замінити {n} рядків стилями цього виду?",
+ "legend.legend.replace": "Замінити",
+ "legend.legend.keep": "Зберегти рядки",
+ "legend.col.swatch": "Зразок",
+ "legend.col.value": "Значення",
+ "legend.col.label": "Підпис"
+}

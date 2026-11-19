@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "Flip hinge side",
+ "cmd.edit.flip_hand.desc": "Mirrors the selected doors and windows along the wall so the hinges move to the other end of the opening.",
+ "cmd.edit.flip_facing": "Flip opening side",
+ "cmd.edit.flip_facing.desc": "Swings the selected doors and windows to the other side of the wall.",
+ "opening_grips.flip_hand": "Flip hinge",
+ "opening_grips.flip_hand.tip": "Hinges to the other end of the opening (Shift+F)",
+ "opening_grips.flip_facing": "Flip side",
+ "opening_grips.flip_facing.tip": "Opening to the other side of the wall (Shift+G)",
+ "opening_grips.flip.done": "Flipped: {n}",
+ "opening_grips.flip.none": "Select a door or window to flip",
+ "opening_grips.flip.fail": "Not flipped: {why}"
+}

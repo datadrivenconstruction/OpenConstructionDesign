@@ -1,0 +1,4 @@
+{
+ "sf.restored": "Asetustiedosto {file} vioittui; viimeisin kelvollinen kopio palautettiin. Vioittunut tiedosto säilytetään nimellä {broken}.",
+ "sf.reset": "Asetustiedosto {file} vioittui, eikä yksikään varmuuskopio ollut käyttökelpoinen; käytetään oletuksia. Vioittunut tiedosto säilytetään nimellä {broken}."
+}

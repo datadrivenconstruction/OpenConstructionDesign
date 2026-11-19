@@ -1,0 +1,114 @@
+{
+ "items": [
+  {
+   "key": "room.height_min",
+   "value": 2.4,
+   "unit": "m",
+   "source": "se-bbr3",
+   "clause": "BBR 3:3111",
+   "url": "https://www.boverket.se/globalassets/publikationer/dokument/2026/boverkets-byggregler-bbr-avsnitt-3---tillganglighet-bostadsutformning-rumshojd-och-driftutrymmen.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Rooms in dwellings meant for more than temporary stay need at least 2.4 m clear height; houses may use 2.3 m in attic and basement storeys.",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 at Boverket PDF"
+  },
+  {
+   "key": "room.height_min.office",
+   "value": 2.4,
+   "unit": "m",
+   "source": "se-bbr3",
+   "clause": "BBR 3:3113",
+   "url": "https://www.boverket.se/globalassets/publikationer/dokument/2026/boverkets-byggregler-bbr-avsnitt-3---tillganglighet-bostadsutformning-rumshojd-och-driftutrymmen.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Work rooms need at least 2.4 m height; teaching rooms and rooms for many people need 2.7 m.",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 at Boverket PDF"
+  },
+  {
+   "key": "accessible.turning_circle",
+   "value": 1.5,
+   "unit": "m",
+   "source": "se-bbr3",
+   "clause": "BBR 3:113 (general advice), common parts",
+   "url": "https://www.boverket.se/globalassets/publikationer/dokument/2026/boverkets-byggregler-bbr-avsnitt-3---tillganglighet-bostadsutformning-rumshojd-och-driftutrymmen.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "In shared parts of residential buildings and in other buildings the design turning space is a 1.5 m diameter circle.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 at Boverket PDF; general advice, not binding text"
+  },
+  {
+   "key": "accessible.turning_circle.dwelling",
+   "value": 1.3,
+   "unit": "m",
+   "source": "se-bbr3",
+   "clause": "BBR 3:113 (general advice), inside dwellings",
+   "url": "https://www.boverket.se/globalassets/publikationer/dokument/2026/boverkets-byggregler-bbr-avsnitt-3---tillganglighet-bostadsutformning-rumshojd-och-driftutrymmen.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Inside individual dwellings the design turning space is a 1.3 m diameter circle.",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 at Boverket PDF; general advice"
+  },
+  {
+   "key": "ramp.slope_max",
+   "value": 0.0833,
+   "unit": "ratio",
+   "source": "se-bbr3",
+   "clause": "BBR 3:1222 (ramps)",
+   "url": "https://www.boverket.se/globalassets/publikationer/dokument/2026/boverkets-byggregler-bbr-avsnitt-3---tillganglighet-bostadsutformning-rumshojd-och-driftutrymmen.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "An accessible ramp may be at most 1:12 steep; 1:20 is noted as safer.",
+   "verified": true,
+   "note": "read 2026-11-14 at Boverket PDF"
+  },
+  {
+   "key": "door.clear_min.accessible",
+   "value": 0.8,
+   "unit": "m",
+   "source": "se-bbr3",
+   "clause": "BBR 3:122 general advice on doors",
+   "url": "https://www.boverket.se/globalassets/publikationer/dokument/2026/boverkets-byggregler-bbr-avsnitt-3---tillganglighet-bostadsutformning-rumshojd-och-driftutrymmen.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Clear passage through accessible doors should be at least 0.80 m (0.76 m for dwelling bathrooms).",
+   "verified": true,
+   "note": "read 2026-11-14 at Boverket PDF; general advice, exact sub-clause number not confirmed"
+  },
+  {
+   "key": "stair.tread_min",
+   "value": 0.25,
+   "unit": "m",
+   "source": "se-bbr8-guidance-2025",
+   "clause": "BBR 8:232 general advice: stairs in or at buildings should have tread depth at least 0.25 m on the walking line; outdoor stairs on plots 0.30 m",
+   "url": "https://www.boverket.se/globalassets/publikationer/dokument/2026/boverkets-byggregler-bbr-avsnitt-8---sakerhet-vid-anvandning---vagledning-fran-pbl-kunskapsbanken-fore-1-december-2025.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Boverket guidance says stair going in the walking line should be at least 0.25 m indoors; outdoor stairs 0.30 m. Newer rules after 1 Dec 2025 drop fixed figures.",
+   "verified": true,
+   "note": "read 2026-11-14: boverket.se publication on BBR section 8 guidance (pre-1 Dec 2025 rules); caveat: Boverket states newer rules from 1 Dec 2025 give no fixed dimensions and older rules may be applied until 30 June 2026"
+  }
+ ]
+}

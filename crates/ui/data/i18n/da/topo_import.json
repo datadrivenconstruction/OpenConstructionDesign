@@ -1,0 +1,4 @@
+{
+ "topo_import.topo.ambiguous": "{n} rækker sprunget over: et tal kan læses på to måder (1,250 = 1.25 eller 1250?), og filen viser intet decimaltegn",
+ "topo_import.topo.grouped": "{n} punkter læst med cifergrupper (1 250,5 eller 1,234.5)"
+}

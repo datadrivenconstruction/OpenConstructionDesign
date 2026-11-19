@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "Dodaj 1 skup",
+ "rebar_sets.add_n": "Dodaj {n} skupova",
+ "rebar_sets.pick.search": "Pretraži tipove šipki",
+ "rebar_sets.pick.empty": "Nema podudarnih tipova šipki",
+ "rebar_sets.unit.deg": "°"
+}

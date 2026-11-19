@@ -1,0 +1,4 @@
+{
+ "sf.restored": "Ayar dosyası {file} bozuktu; son sağlam kopya geri yüklendi. Bozuk dosya {broken} olarak saklandı.",
+ "sf.reset": "Ayar dosyası {file} bozuktu ve kullanılabilir yedek yoktu; varsayılanlar kullanılıyor. Bozuk dosya {broken} olarak saklandı."
+}

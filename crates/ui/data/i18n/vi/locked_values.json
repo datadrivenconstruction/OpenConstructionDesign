@@ -1,0 +1,8 @@
+{
+ "cmd.props.param_lock": "Khóa hoặc mở khóa giá trị tham số",
+ "locked_values.kept": "Đã giữ {n} giá trị khóa",
+ "locked_values.locked": "“{name}” đã khóa: nhập bảng tính, chỉnh sửa hàng loạt và AI sẽ giữ nguyên",
+ "locked_values.unlocked": "Đã mở khóa “{name}”",
+ "locked_values.locked_tip": "Đã khóa: nhập bảng tính, chỉnh sửa hàng loạt và AI giữ nguyên giá trị này. Nhấp để mở khóa  ·  Ctrl+L",
+ "locked_values.no_row": "Đặt con trỏ vào một dòng tham số trong Thuộc tính, rồi nhấn Ctrl+L"
+}

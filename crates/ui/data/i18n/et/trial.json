@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "Punkt",
+ "trial.field.distance": "Kaugus",
+ "trial.field.target": "Element",
+ "trial.refused": "{field}: {reason}. Muuda, et rakendada",
+ "trial.preview_off": "Eelvaade väljas: mudel on liiga suur"
+}

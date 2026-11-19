@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "ไม่มีข้อมูลที่ป้อน",
+ "units.err.not_number": "ไม่ใช่ตัวเลขที่ตำแหน่ง {pos}",
+ "units.err.unknown_unit": "ไม่รู้จักหน่วย: {unit}",
+ "units.err.non_positive": "ความยาวต้องมากกว่าศูนย์",
+ "units.err.too_large": "ความยาวต้องไม่เกิน {max} ม.",
+ "units.err.bad_angle": "มุมต้องเป็นจำนวนองศา",
+ "units.err.unknown_name": "ไม่รู้จักชื่อ: {name} คงค่าเดิมไว้",
+ "units.err.cycle": "สูตรวนซ้ำที่ {name} คงค่าเดิมไว้",
+ "units.err.bad_expr": "อ่านสูตรที่ตำแหน่ง {pos} ไม่ได้ คงค่าเดิมไว้",
+ "units.err.div_zero": "หารด้วยศูนย์ที่ตำแหน่ง {pos} คงค่าเดิมไว้",
+ "units.err.invalid": "ตัวเลขไม่ถูกต้อง",
+ "units.err.kept": "ไม่ได้เปลี่ยน: {reason}"
+}

@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "کلید در نشانی",
+ "ai_safety.auth.query_name": "پارامتر نشانی",
+ "ai_safety.need_query_name": "نام پارامتر نشانی که کلید را حمل می‌کند را وارد کنید",
+ "ai_safety.apply_unlogged": "اعمال شد، اما گزارش تغییرات نوشته نشد",
+ "ai_safety.audit_unlogged": "گزارش دستیار هوش مصنوعی نوشته نشد",
+ "ai_safety.chat_not_saved": "گفتگو در پروژه ذخیره نشد. دوباره تلاش می‌شود.",
+ "ai_safety.clip_clears": "کلیپ‌بورد پس از ۳۰ ثانیه پاک می‌شود",
+ "ai_safety.copied_clears": "کپی شد. کلیپ‌بورد پس از ۳۰ ثانیه پاک می‌شود",
+ "ai_safety.key_session_only": "کلید تا بسته شدن برنامه نگه داشته می‌شود",
+ "ai.settings.no_data_dir": "این سیستم پوشه‌ای برای تنظیمات برنامه نمی‌دهد"
+}

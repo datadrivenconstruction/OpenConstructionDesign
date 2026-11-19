@@ -1,0 +1,22 @@
+{
+ "cmd.arch.grid_pick": "Grid dari garis",
+ "cmd.arch.grid_pick.desc": "Membuat grid tepat mengikuti garis gambar yang dipilih di level saat ini; nama melanjutkan urutan. Tab mengambil semua garis sejajar dari layer gambar yang sama sekaligus. Setiap pilihan adalah satu langkah undo.",
+ "cmd.struct.beam_pick": "Balok dari garis",
+ "cmd.struct.beam_pick.desc": "Menempatkan balok dengan tipe aktif di level aktif mengikuti garis gambar yang dipilih. Tab mengambil rantai yang terhubung. Setiap pilihan adalah satu langkah undo.",
+ "hint.grid_pick.one": "Grid dari garis: pilih garis gambar · Tab semua garis sejajar pada layernya · Esc keluar",
+ "hint.grid_pick.more": "Grid dari garis: pilih garis untuk mengambil semua garis sejajar pada layernya · Tab satu garis · Esc melepas mode",
+ "hint.beam_pick.one": "Balok dari garis: pilih garis gambar · Tab rantai terhubung · Esc keluar",
+ "hint.beam_pick.more": "Balok dari garis: pilih garis untuk mengambil rantainya · Tab satu garis · Esc melepas mode",
+ "line_pick.st.start_grid": "Pilih garis gambar. Tab: semua garis sejajar pada layernya",
+ "line_pick.st.start_beam": "Pilih garis gambar untuk balok {type}. Tab: rantai terhubung",
+ "line_pick.st.grid_done": "Grid {name} ditambahkan",
+ "line_pick.st.grids_done": "{n} grid ditambahkan: {first} — {last}",
+ "line_pick.st.beam_done": "Balok {type} ditambahkan",
+ "line_pick.st.beams_done": "{n} balok {type} ditambahkan",
+ "line_pick.st.on_grid": "Garis ini sudah memiliki grid {name}",
+ "line_pick.st.on_beam": "Garis ini sudah memiliki balok {id}",
+ "line_pick.st.no_layer": "Layer gambar untuk garis belum diketahui, coba lagi",
+ "line_pick.st.no_beam_type": "Tidak ada penampang balok di katalog",
+ "line_pick.st.reload_warn": "Dibuat, tetapi tampilan tidak dapat dimuat ulang: {err}",
+ "line_pick.st.failed": "Tidak dibuat: {err}"
+}

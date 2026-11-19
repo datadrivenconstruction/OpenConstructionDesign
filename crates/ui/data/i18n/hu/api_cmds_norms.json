@@ -1,0 +1,8 @@
+{
+ "api.cmd.norms_lookup": "A projekt szabványcsomagjának szabályai témakör, elem vagy kód szerint",
+ "api.cmd.norms_check": "A modell ellenőrzése a projekt szabványcsomagja szerint, a megállapítások listázásával",
+ "api.cmd.norms_programme": "A projekt országának jellemző helyiségprogramja adott épülettípusra",
+ "api.cmd.select_similar": "Minden hasonló elem kijelölése: azonos típus vagy kategória, ezen a szinten vagy az egész projektben",
+ "api.cmd.create_drawing_set": "Nyomtatható rajzkészlet vázlata: alaprajzok, metszetek, homlokzatok, táblázatok és címtáblák",
+ "api.cmd.deliver_project": "Megbízástól a fájlokig egy lépésben: a projekt és rajzkészlete, az Alkalmaz után exportálva"
+}

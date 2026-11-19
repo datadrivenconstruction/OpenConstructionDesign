@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "스냅 반경",
+ "snap_refine.settings.snap_px_desc": "스냅되려면 커서가 점이나 선에 얼마나 가까워야 하는지를 화면 픽셀 단위로 정합니다. 터치스크린과 고밀도 디스플레이에서 더 도움이 됩니다.",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "수평",
+ "snap_refine.hint.vertical": "수직",
+ "snap_refine.hint.perpendicular": "이전 항목과 직각",
+ "snap_refine.hint.parallel": "이전 항목과 평행",
+ "snap_refine.hint.on_axis": "벽 중심선 위",
+ "snap_refine.no_snap": "스냅 없음 (Alt)"
+}

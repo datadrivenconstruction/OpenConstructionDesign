@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "Holder denne væg på sin nuværende længde ved enhver redigering",
+ "constraints.con.tip.lock_dist": "Holder afstanden mellem de to vægge ved enhver redigering",
+ "constraints.con.tip.equal": "Holder trinene mellem de valgte vægge ens",
+ "constraints.con.tip.align": "Holder begge vægge på én linje",
+ "constraints.con.tip.parallel": "Holder vægge parallelle",
+ "constraints.con.tip.perp": "Holder vægge i ret vinkel",
+ "constraints.con.tip.align_grid": "Holder væggen på den nærmeste gitterlinje",
+ "constraints.con.tip.lock_dist_grid": "Holder afstanden fra væggen til den nærmeste gitterlinje",
+ "constraints.con.tip.level_gap": "Holder afstanden mellem etagerne",
+ "constraints.con.tip.top_to_level": "Holder vægtoppen på etagen ovenfor"
+}

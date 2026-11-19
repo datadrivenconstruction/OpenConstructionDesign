@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "Oldingi varaq (Page Up)",
+ "sheets.print.next": "Keyingi varaq (Page Down)",
+ "sheets.print.fit": "Sahifaga moslash (ikki marta bosing)",
+ "sheets.print.no_sheets": "Oldindan ko'rish uchun varaq yo'q",
+ "sheets.print.building": "Sahifa tayyorlanmoqda…",
+ "sheets.print.stop_build": "To'xtatish",
+ "sheets.print.build_stopped": "Sahifa tayyorlash to'xtatildi",
+ "sheets.print.retry": "Qayta tayyorlash",
+ "sheets.print.build_failed": "Oldindan ko'rish tayyorlanmadi"
+}

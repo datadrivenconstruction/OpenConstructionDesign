@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}, la nivel",
+ "cmd_buttons.purge.undo": "Eliminarea este un singur pas de anulare.",
+ "cmd_buttons.unpin.none": "Niciun element selectat nu este fixat",
+ "cmd_buttons.change_type.none": "Selectați mai întâi pereții: tipul lor se schimbă dintr-un pas",
+ "cmd_buttons.units.metric": "Unități: metrice",
+ "cmd_buttons.units.imperial": "Unități: picioare și țoli",
+ "cmd_buttons.units.back": "Comută înapoi",
+ "cmd_buttons.underlay.on": "Substrat activat: nivelul de dedesubt este afișat estompat",
+ "cmd_buttons.underlay.off": "Substrat dezactivat",
+ "cmd_buttons.underlay.none": "Substrat activat, dar nivelul de dedesubt nu are ce afișa",
+ "cmd_buttons.zoom_sel.no_shape": "Selecția nu are o formă de încadrat în această vedere",
+ "cmd_buttons.close.base": "Tab-urile de plan și 3D rămân deschise; deschideți o secțiune, o planșă sau o vedere de desen pentru a le închide",
+ "tool.equipment": "Echipament",
+ "hint.equipment.place": "Echipament: alegeți locul · Esc pentru a ieși",
+ "cmd_buttons.table.opened": "Tabel deschis lângă model",
+ "cmd_buttons.circuits.tip": "Deschide lista circuitelor electrice ale acestui model"
+}

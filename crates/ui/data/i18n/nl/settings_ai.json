@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "Verbinding",
+ "settings.ai_status_desc": "Het model dat de AI-assistent gebruikt; sleutels blijven in de beveiligde opslag",
+ "settings.ai_not_connected": "Niet verbonden",
+ "settings.ai_connect": "Verbindingsinstellingen",
+ "settings.ai_connect_desc": "Adres, model en sleutel van uw eigen model, in de cloud of lokaal",
+ "settings.ai_connect_btn": "Verbindingsinstellingen…",
+ "settings.ai_panel": "AI-assistentpaneel",
+ "settings.ai_panel_desc": "Vraag in woorden, controleer het plan en pas dan toe",
+ "settings.ai_open_panel": "AI-paneel openen"
+}

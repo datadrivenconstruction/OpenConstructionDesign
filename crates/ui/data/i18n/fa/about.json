@@ -1,0 +1,33 @@
+{
+ "cmd.help.licenses": "مجوزهای متن‌باز",
+ "cmd.help.licenses.desc": "فهرست کتابخانه‌های متن‌باز استفاده‌شده در این ساخت را با مجوزهایشان نشان می‌دهد.",
+ "about.product": "DDC Editor",
+ "about.version": "نسخه",
+ "about.build": "ساخت",
+ "about.schema": "طرح‌واره مدل",
+ "about.system": "سیستم",
+ "about.gpu": "آداپتور گرافیکی",
+ "about.language": "زبان",
+ "about.copy": "کپی اطلاعات نسخه",
+ "about.copy_desc": "نسخه، ساخت، سیستم و آداپتور گرافیکی برای گزارش خطا. بدون مسیر فایل.",
+ "about.copied": "اطلاعات نسخه کپی شد",
+ "about.licenses": "مجوزهای متن‌باز",
+ "about.licenses_desc": "کتابخانه‌های استفاده‌شده در این ساخت و مجوزهایشان",
+ "about.licenses.open": "نمایش",
+ "about.licenses.title": "مجوزهای متن‌باز",
+ "about.licenses.note": "DDC Editor کتابخانه‌های زیر را دربردارد. هر کدام تحت مجوز و اعلان حق نشر خود باقی می‌مانند. متن کامل مجوزها: فایل THIRD_PARTY_LICENSES.txt کنار برنامه.",
+ "about.licenses.full": "متن کامل مجوزها",
+ "about.licenses.list": "فهرست اجزا",
+ "about.licenses.close": "بستن",
+ "about.licenses.col_name": "جزء",
+ "about.licenses.col_license": "مجوز",
+ "about.licenses.count": {
+  "one": "# جزء",
+  "other": "# جزء"
+ },
+ "about.licenses.count_of": "{shown} از {total} جزء",
+ "about.licenses.search_hint": "جست‌وجو با نام یا مجوز…",
+ "about.licenses.search_clear": "پاک کردن جست‌وجو",
+ "about.licenses.none": "چیزی پیدا نشد",
+ "about.licenses.none_hint": "بخشی از نام کتابخانه یا یک مجوز مانند MIT را امتحان کنید."
+}

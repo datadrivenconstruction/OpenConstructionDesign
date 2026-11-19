@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "ماس کو گھمایا یا عکس نہیں بنایا جا سکتا: اس کی فارم ہسٹری میں گردش کا قدم نہیں۔ اسے منتقل یا کاپی کریں، یا نئی سمت میں دوبارہ بنائیں۔",
+ "sched_cats.col.name": "نام",
+ "sched_cats.col.material": "مواد",
+ "sched_cats.col.void": "خلا",
+ "sched_cats.col.inplace": "موقع پر",
+ "sched_cats.col.volume": "خالص حجم",
+ "sched_cats.col.area": "سطح کا رقبہ",
+ "sched_cats.col.floor_area": "فرش کا رقبہ",
+ "sched_cats.col.thickness": "موٹائی",
+ "sched_cats.col.points": "نقاط",
+ "elem.toposolid.points": "سروے نقاط",
+ "elem.toposolid.count": "نقاط",
+ "elem.toposolid.low": "سب سے نیچا",
+ "elem.toposolid.high": "سب سے اونچا",
+ "elem.toposolid.edit": "نقاط میں ترمیم",
+ "elem.toposolid.edit_tip": "پلان میں سروے نقاط کو منتخب، گھسیٹیں اور ان کی ایلیویشن مقرر کریں",
+ "elem.toposolid.pick_hint": "منتخب کرنے کے لیے پلان میں نقطے پر کلک کریں۔ شامل یا ہٹانے کے لیے دوبارہ کلک کریں۔",
+ "elem.toposolid.z": "ایلیویشن ({n})",
+ "elem.toposolid.mixed": "منتخب نقاط مختلف ہیں؛ نئی قدر سب کو مقرر کر دے گی۔",
+ "elem.toposolid.edit_help": "نقطہ منتقل کرنے کے لیے گھسیٹیں۔ ایلیویشن مقرر کرنے کے لیے قدر لکھ کر Enter دبائیں۔ منتخب نقاط Backspace سے ہٹتے ہیں، Esc سے باہر آئیں۔",
+ "elem.toposolid.done": "ہو گیا"
+}

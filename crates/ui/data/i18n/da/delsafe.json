@@ -1,0 +1,6 @@
+{
+ "delsafe.ring.opening_shape": "En åbningskontur ville krydse sig selv eller kollapse",
+ "delsafe.ring.opening_boundary": "En åbning ville skære eller røre den ydre grænse",
+ "delsafe.ring.openings_overlap": "Åbninger ville overlappe eller røre hinanden",
+ "xl.msg.delsafe_instance_param_on_types": "parameteren '{}' er en forekomstparameter; redigér den på elementarket, ikke anvendt"
+}

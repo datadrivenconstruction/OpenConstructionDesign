@@ -1,0 +1,8 @@
+{
+ "drafts.drafts.head": "Các trình chỉnh sửa đang mở giữ chỉnh sửa chưa có trong dự án:",
+ "drafts.draft.family": "Họ “{name}”",
+ "drafts.draft.line": "Thư viện đường: {name}",
+ "drafts.draft.styles": "Kiểu đường của phạm vi góc nhìn",
+ "drafts.btn.save_all": "Lưu tất cả",
+ "drafts.drafts.refused": "Không thể lưu bản nháp. Chưa đóng gì; trình chỉnh sửa có bản nháp vẫn đang mở."
+}

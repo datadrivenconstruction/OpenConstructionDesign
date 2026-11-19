@@ -1,0 +1,4 @@
+{
+ "xl.msg.x_formulas_in_column_x_on_sheet_x_replaced_by_values": "{} kaavaa sarakkeessa '{}' arkilla '{}' korvattiin arvoilla",
+ "xl.msg.formula_in_a_model_column_not_applied": "kaava mallin sarakkeessa: sen tulosta ei käytetä, mallin arvo säilyy; kirjoita arvo muuttaaksesi sitä"
+}

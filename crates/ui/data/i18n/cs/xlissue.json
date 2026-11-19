@@ -1,0 +1,13 @@
+{
+ "xlw.copy_list": "Kopírovat seznam",
+ "xlw.save_list": "Uložit seznam…",
+ "xlw.copy_list_tip": "Zkopírovat zobrazené řádky (list, buňka, id, sloupec, hodnoty, důvod) jako text pro tabulku",
+ "xlw.save_list_tip": "Uložit zobrazené řádky jako soubor .csv vedle sešitu; samotný sešit se nikdy nemění",
+ "xlw.list_book_value": "Hodnota ze sešitu",
+ "xlw.list_model_value": "Hodnota modelu",
+ "xlw.list_reason": "Důvod",
+ "xlw.list_copied": "Seznam zkopírován: {n} řádků",
+ "xlw.list_saved": "Seznam uložen: {n} řádků, {file}",
+ "xlw.list_save_failed": "Seznam nebyl uložen",
+ "xlw.list_nothing": "Není co kopírovat: nejsou zobrazeny žádné řádky"
+}

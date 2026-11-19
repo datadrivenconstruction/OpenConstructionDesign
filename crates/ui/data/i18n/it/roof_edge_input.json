@@ -1,0 +1,23 @@
+{
+ "roof_edge.err.number": "Inserisci un numero",
+ "roof_edge.err.positive": "Deve essere maggiore di zero",
+ "roof_edge.err.nonneg": "Non deve essere negativo",
+ "roof_edge.err.max": "Non deve superare {max}",
+ "roof_edge.list.empty_hint": "Aggiungi frontalini, canali, sottogronde o lucernari con i comandi del tetto",
+ "roof_edge.edit_tip": "Modifica proprietà",
+ "roof_edge.delete_tip": "Elimina",
+ "roof_edge.pe.del_tip": "Rimuovi questo punto (una sezione ne mantiene almeno 3)",
+ "roof_edge.pe.up_tip": "Sposta questo punto in alto",
+ "roof_edge.confirm_edge": "Eliminare {name}? Ctrl+Z lo ripristina.",
+ "roof_edge.confirm_profile": "Eliminare il profilo {name}? Ctrl+Z lo ripristina.",
+ "roof_edge.deleted_one": "Eliminato {name}",
+ "roof_edge.deleted_n": {
+  "one": "Eliminato # elemento",
+  "other": "Eliminati # elementi"
+ },
+ "roof_edge.profile_deleted": "Profilo eliminato",
+ "roof_edge.profile_in_use": {
+  "one": "Usato da # elemento di bordo: eliminalo o modificalo prima",
+  "other": "Usato da # elementi di bordo: eliminali o modificali prima"
+ }
+}

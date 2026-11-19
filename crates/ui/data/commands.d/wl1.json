@@ -1,0 +1,15 @@
+[
+ {
+  "id": "arch.wall_pick",
+  "repeatable": true,
+  "icon": "wall-pick",
+  "mnemonic": "WL",
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M3",
+  "group": "build"
+ }
+]

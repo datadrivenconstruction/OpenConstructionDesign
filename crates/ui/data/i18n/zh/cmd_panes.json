@@ -1,0 +1,6 @@
+{
+ "cmd.ui.pane.next": "下一个窗格",
+ "cmd.ui.pane.next.desc": "将键盘焦点移到下一个可见窗格（浏览器、画布、属性、对话）。",
+ "cmd.ui.pane.prev": "上一个窗格",
+ "cmd.ui.pane.prev.desc": "将键盘焦点移到上一个可见窗格。"
+}

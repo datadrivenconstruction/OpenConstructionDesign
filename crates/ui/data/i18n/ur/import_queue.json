@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "چلتے کام کے پیچھے قطار میں: {n}",
+ "import_queue.queue_full": "قطار بھر گئی، {n} فائلیں شامل نہیں ہوئیں",
+ "import_queue.changed": "{name} اس پروجیکٹ کے بننے کے بعد اپ ڈیٹ ہوئی۔ پچھلا پروجیکٹ کھولا گیا۔",
+ "import_queue.import_again": "دوبارہ درآمد کریں",
+ "import_queue.kept": "مکمل درآمد محفوظ رکھی گئی ہے",
+ "import_queue.open_it": "کھولیں",
+ "import_queue.sum.head": "درآمد: {editable} قابلِ ترمیم (دیواریں {walls}، بازشیں {open}، سلیبز {slabs}، کمرے {rooms}، دیگر {other})، {meshes} میش کے طور پر",
+ "import_queue.sum.unchanged": "، بغیر تبدیلی {n}",
+ "import_queue.sum.updated": "، اپ ڈیٹ {n}",
+ "import_queue.sum.missing": "، ماخذ میں نہیں {n} (محفوظ)",
+ "import_queue.sum.skipped": "، چھوڑی گئی {n}",
+ "import_queue.sum.warnings": "، انتباہات {n}",
+ "import_queue.import_failed": "درآمد ناکام: {e}"
+}

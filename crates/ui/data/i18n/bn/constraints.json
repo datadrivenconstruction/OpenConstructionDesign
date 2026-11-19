@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "প্রতিটি সম্পাদনায় এই দেয়ালের বর্তমান দৈর্ঘ্য রাখে",
+ "constraints.con.tip.lock_dist": "প্রতিটি সম্পাদনায় দুই দেয়ালের দূরত্ব রাখে",
+ "constraints.con.tip.equal": "বাছাই করা দেয়ালগুলোর মধ্যে ধাপ সমান রাখে",
+ "constraints.con.tip.align": "দুটি দেয়াল একই লাইনে রাখে",
+ "constraints.con.tip.parallel": "দেয়ালগুলো সমান্তরাল রাখে",
+ "constraints.con.tip.perp": "দেয়ালগুলো সমকোণে রাখে",
+ "constraints.con.tip.align_grid": "দেয়ালটি নিকটতম গ্রিড লাইনে রাখে",
+ "constraints.con.tip.lock_dist_grid": "দেয়াল থেকে নিকটতম গ্রিড লাইনের দূরত্ব রাখে",
+ "constraints.con.tip.level_gap": "লেভেলের মধ্যের ফাঁক রাখে",
+ "constraints.con.tip.top_to_level": "দেয়ালের উপরের প্রান্ত উপরের লেভেলে রাখে"
+}

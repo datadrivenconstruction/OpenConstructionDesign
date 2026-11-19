@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "pasadya",
+ "draw_quality.custom.tip": "{name}: entry ng proyektong ito",
+ "draw_quality.custom_note": "Ang mga entry na may markang custom ay sa proyektong ito.",
+ "draw_quality.unsaved.lib_body": "I-save sa library, o itapon?",
+ "draw_quality.unsaved.styles_body": "Ilapat sa view, o itapon?",
+ "draw_quality.unsaved.both_body": "Ilapat ang mga ito, o itapon?",
+ "draw_quality.halftone": "Kalahating tono ng {category}",
+ "draw_quality.styles.name": "Mga line style",
+ "draw_quality.styles.other_level": "Mga hindi pa naii-save na pagbabago sa style ng level {level}: ilapat o ibalik ang mga ito para ma-edit ang level na ito."
+}

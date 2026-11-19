@@ -1,0 +1,9 @@
+{
+ "ai.plan.reject_ask": {
+  "one": "Avvisa # ändring?",
+  "other": "Avvisa # ändringar?"
+ },
+ "ai.plan.reject_ask.hint": "Utkastet och dina bockmarkeringar kasseras. Modellen förblir som den är.",
+ "ai.plan.reject_confirm": "Avvisa",
+ "ai.plan.reject_keep": "Behåll"
+}

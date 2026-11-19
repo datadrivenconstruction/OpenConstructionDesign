@@ -1,0 +1,23 @@
+{
+ "params_list.n_params": {
+  "one": "# 個のパラメータ",
+  "other": "# 個のパラメータ"
+ },
+ "params_list.n_values": {
+  "one": "# 個の値",
+  "other": "# 個の値"
+ },
+ "params_list.n_elements": {
+  "one": "# 個の要素",
+  "other": "# 個の要素"
+ },
+ "params_list.exported": "{params} を {file} に書き出しました",
+ "params_list.export_failed": "パラメータを書き出せませんでした: {why}",
+ "params_list.open_folder": "フォルダを開く",
+ "params_list.delete_tip": "パラメータとその値を削除",
+ "params_list.confirm": "{name} と、{elements} 上のその {values} を削除しますか?",
+ "params_list.confirm_btn": "削除",
+ "params_list.cancel": "キャンセル",
+ "params_list.deleted": "パラメータ {name} ({values}) を削除しました",
+ "params_list.undo": "元に戻す"
+}

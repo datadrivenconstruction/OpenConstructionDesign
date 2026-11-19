@@ -1,0 +1,15 @@
+{
+ "mcp.ask.cancel": "Annuleren",
+ "mcp.ask.auto.title": "AI-agenten wijzigingen laten toepassen zonder te vragen?",
+ "mcp.ask.auto.body": "Verbonden AI-agenten passen hun wijzigingen direct toe op concepten, zonder op uw bevestiging te wachten, dus een verkeerde wijziging kan erin komen voordat u hem ziet. Uw model verandert nog steeds alleen als u op Toepassen drukt. Dit blijft gelden tot u het uitzet, de editor sluit of een ander model opent.",
+ "mcp.ask.auto.yes": "Toepassen zonder te vragen",
+ "mcp.ask.token.title": "Een nieuw token uitgeven?",
+ "mcp.ask.token.body": "Het huidige token werkt meteen niet meer: verbonden AI-agenten worden afgesloten en hebben het nieuwe token nodig. Het wordt maar één keer getoond, dus kopieer het meteen.",
+ "mcp.ask.token.yes": "Nieuw token",
+ "mcp.auto.chip": "Automatisch toepassen aan",
+ "mcp.auto.chip_tip": "AI-agenten passen wijzigingen op concepten toe zonder te vragen. Eindigt met deze sessie.",
+ "mcp.auto.ask_again": "Opnieuw vragen",
+ "mcp.token.once": "Kopieer dit token nu: het wordt niet opnieuw getoond.",
+ "mcp.renewed": "Nieuw token uitgegeven: het oude werkt niet meer",
+ "mcp.copied": "Gekopieerd"
+}

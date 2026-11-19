@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "سطح آزاد",
+ "cmd.mass.panelize": "تقسیم به پانل",
+ "cmd.mass.surface_shell": "بام روی سطح",
+ "cmd.mass.thicken": "ضخیم‌سازی",
+ "hint.mass.freeform.first": "سطح آزاد: اولین گوشهٔ مستطیل پلان · عدد — ارتفاع · Esc — انصراف",
+ "hint.mass.freeform.next": "سطح آزاد: گوشهٔ مقابل · عدد — ارتفاع · Esc — انصراف",
+ "hint.mass.panelize.first": "تقسیم به پانل: یک سطح آزاد را در 3D انتخاب کنید · Esc — انصراف",
+ "hint.mass.panelize.value": "تقسیم به پانل: اندازهٔ پانل را وارد کنید · Enter — اعمال · Esc — انصراف",
+ "hint.mass.surface_shell.first": "بام روی سطح: یک سطح آزاد را در 3D انتخاب کنید · Esc — انصراف",
+ "hint.mass.surface_shell.value": "بام روی سطح: ضخامت را وارد کنید · Enter — اعمال · Esc — انصراف",
+ "hint.mass.thicken.first": "ضخیم‌سازی: یک سطح آزاد را در 3D انتخاب کنید · Esc — انصراف",
+ "hint.mass.thicken.value": "ضخیم‌سازی: ضخامت را وارد کنید (0 — سطح بدون ضخامت) · Enter — اعمال · Esc — انصراف",
+ "status.mass.pick_surface": "یک سطح آزاد را انتخاب کنید",
+ "status.mass.freeform_small": "مستطیل خیلی کوچک است: هر ضلع حداقل 0.5 متر",
+ "name.mass.freeform": "سطح آزاد",
+ "rgroup.mass_free": "پیشرفته"
+}

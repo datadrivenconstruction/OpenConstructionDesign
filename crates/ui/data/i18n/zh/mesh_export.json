@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "将整个模型或所选内容保存为二进制 STL，单位可为米或毫米。",
+ "cmd.data.export_obj.desc": "将整个模型或所选内容保存为带 MTL 文件的 OBJ：每个构件为一个组，颜色按材质设定。",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "带材质的 OBJ (.obj)",
+ "open_file.filter.mesh": "三维网格 (glTF、STEP、STL、OBJ)",
+ "mx.title": "导出 {fmt}",
+ "mx.scope": "导出范围",
+ "mx.scope.all": "整个模型",
+ "mx.scope.sel": "所选内容（{n} 个构件）",
+ "mx.units": "文件中的单位",
+ "mx.units.m": "米",
+ "mx.units.mm": "毫米",
+ "mx.export": "导出…",
+ "mx.saved": "已保存 {fmt}：{path}（{parts} 个构件，{tris} 个三角形）",
+ "mx.partial": "已保存 {fmt}，但有 {n} 个问题，部分实体可能缺失：{path}",
+ "mx.failed": "{fmt} 导出失败：{error}",
+ "mx.imported": "{file}：已导入 {n} 个构件（{tris} 个三角形）",
+ "mx.imported_notes": "{file}：已导入 {n} 个构件（{tris} 个三角形），{w} 条说明：{first}"
+}

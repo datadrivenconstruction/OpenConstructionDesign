@@ -1,0 +1,8 @@
+{
+ "drafts.drafts.head": "May mga edit na wala pa sa proyekto ang mga bukas na editor:",
+ "drafts.draft.family": "Family na “{name}”",
+ "drafts.draft.line": "Library ng linya: {name}",
+ "drafts.draft.styles": "Mga line style ng saklaw ng view",
+ "drafts.btn.save_all": "I-save lahat",
+ "drafts.drafts.refused": "Hindi na-save ang isang draft. Walang isinara; bukas pa ang editor na may draft."
+}

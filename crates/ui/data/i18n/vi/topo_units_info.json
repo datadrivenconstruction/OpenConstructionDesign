@@ -1,0 +1,13 @@
+{
+ "topo.unit.mm": "mm",
+ "topo.unit.metre": "m",
+ "topo.unit.ft": "ft",
+ "topo.opt.material": "Vật liệu",
+ "topo.row.active": "Bề mặt đang dùng",
+ "topo.btn.delete_pad": "Xóa bệ",
+ "topo.info.loading": "Đang dựng bề mặt…",
+ "topo.info.warn_n": "{n} cảnh báo",
+ "topo.info.points_label": "Điểm",
+ "topo.import.all_layers": "Mọi lớp",
+ "topo.import.need_layer": "Chọn ít nhất một lớp"
+}

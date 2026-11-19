@@ -1,0 +1,18 @@
+{
+ "undo.entry_later": "Ikke fortrudt: en anden ændring blev foretaget efter den. Fortryd den først.",
+ "undo.entry_gone": "Ikke fortrudt: denne ændring er allerede fortrudt eller ikke længere i historikken.",
+ "undo.entry_busy": "Afslut eller annullér den aktuelle tegning først, og fortryd derefter.",
+ "quick.hud.more": "Flere i Egenskaber: {names}",
+ "sheet_tools.sheet.more": "Flere arkværktøjer",
+ "job.of": "{d} af {t}",
+ "job.of.mb": "{d} af {t} MB",
+ "job.left.under_minute": "under et minut tilbage",
+ "job.left.minutes": "ca. {n} min. tilbage",
+ "sheet_tools.start.units": "Enheder",
+ "sheet_tools.print.save": {
+  "one": "Gem # ark",
+  "other": "Gem # ark"
+ },
+ "sheet_tools.sets.delete_ask": "Slet sættet „{name}“? Dets ark bliver i projektet.",
+ "sheet_tools.keep": "Behold"
+}

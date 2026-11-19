@@ -1,0 +1,8 @@
+{
+ "api.cmd.norms_lookup": "按主题、构件或规范条款查找项目规范包的规则",
+ "api.cmd.norms_check": "根据项目的规范包检查模型并列出问题",
+ "api.cmd.norms_programme": "项目所在国家针对某类建筑的典型房间任务书",
+ "api.cmd.select_similar": "选择所有与此相同的图元：相同类型或类别，可限于当前标高或整个项目",
+ "api.cmd.create_drawing_set": "起草可打印的图纸集：平面图、剖面图、立面图、明细表和标题栏",
+ "api.cmd.deliver_project": "从任务书一步生成文件：项目及其图纸集，应用后导出"
+}

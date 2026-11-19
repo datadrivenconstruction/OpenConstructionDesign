@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "적용되지 않은 통합 문서 변경",
+ "workbook_changes.wb.body": "닫거나 프로젝트를 전환하면 이 변경 사항은 사라집니다.",
+ "workbook_changes.wb.line": "통합 문서 가져오기: 적용되지 않은 변경 {n}개",
+ "workbook_changes.wb.review": "검토",
+ "workbook_changes.wb.discard": "버리기"
+}

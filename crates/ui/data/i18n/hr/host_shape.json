@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "Otvor krovne kućice",
+ "cmd.arch.roof_opening": "Otvor u krovu",
+ "cmd.arch.roof_extrusion": "Krov ekstruzijom",
+ "cmd.arch.ceiling_opening": "Otvor u stropu",
+ "cmd.str.slab_opening": "Otvor u ploči",
+ "cmd.ctx.wall.detach": "Odvoji vrh",
+ "cmd.ctx.floor.sketch": "Uredi granicu",
+ "cmd.ctx.floor.shape": "Uredi oblik",
+ "host_shape.shape.elev_prompt": "kota, mm…",
+ "host_shape.shape.elev_mm": "{v} mm",
+ "host_shape.sketch.no_host": "nema domaćina ispod granice na ovoj razini",
+ "host_shape.issue.roof": "krov {id}: {e}",
+ "host_shape.issue.ceiling": "strop {id}: {e}",
+ "host_shape.status.select_slab": "odaberite ploču",
+ "host_shape.status.select_walls": "odaberite zidove",
+ "host_shape.status.no_roof_or_level": "nema krova ili razine iznad",
+ "host_shape.status.top_attached": "vrhovi zidova spojeni",
+ "host_shape.status.top_detached": "vrhovi zidova odvojeni",
+ "host_shape.status.straight_wall": "potreban je ravni zid",
+ "host_shape.status.roof_extruded": "krov ekstruzijom izrađen",
+ "warn.kind.cut": "Rez ili spoj nije izrađen"
+}

@@ -1,0 +1,18 @@
+{
+ "family_overwrite.ow.title": "Nahradit hodnoty typů projektu?",
+ "family_overwrite.ow.body": "Načtení nahradí {values} u {types}. Umístěné instance těchto typů: {instances}.",
+ "family_overwrite.ow.values": {
+  "one": "# hodnota",
+  "few": "# hodnoty",
+  "other": "# hodnot"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# typ",
+  "few": "# typy",
+  "other": "# typů"
+ },
+ "family_overwrite.ow.list": "Typy: {list}",
+ "family_overwrite.ow.more": "a ještě {n}",
+ "family_overwrite.ow.back": "Zpět k úpravám",
+ "family_overwrite.ow.replace": "Nahradit hodnoty"
+}

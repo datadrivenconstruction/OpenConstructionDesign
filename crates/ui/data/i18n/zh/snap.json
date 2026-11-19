@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "端点",
+ "snap.midpoint": "中点",
+ "snap.perpendicular": "垂足",
+ "snap.wall_axis": "墙轴线",
+ "snap.wall_face": "墙面",
+ "snap.grid": "网格",
+ "snap.intersection": "交点",
+ "snap.grid_axis": "轴网线",
+ "snap.ref_plane": "参照平面",
+ "snap.nearest": "最近点",
+ "snap.align_x": "与远处点在 X 向对齐",
+ "snap.align_y": "与远处点在 Y 向对齐",
+ "snap.align_xy": "在 X 和 Y 向对齐"
+}

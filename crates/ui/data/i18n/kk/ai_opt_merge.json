@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "Опцияны біріктіру: {name}",
+ "ai_opt_merge.whole": "Бүкіл опцияны біріктіру",
+ "ai_opt_merge.parts": "Таңдалған бөліктерді біріктіру",
+ "ai_opt_merge.note": "Бұл опция неге керек",
+ "ai_opt_merge.rebased": "Бұл опция жасалғаннан кейін модель өзгерді: біріктіру ағымдағы модель бойынша қайта есептелді. Қолданар алдында өзгерістерді тексеріңіз.",
+ "ai_opt_merge.left.not_picked": "Опциядан таңдалмаған",
+ "ai_opt_merge.left.unticked": "Опцияда белгісі алынған",
+ "ai_opt_merge.left.conflict": "Ағымдағы модельге қосылмайды: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "Бұл опцияны біріктіру мүмкін емес. Алдымен қабылданбаған опцияны қалпына келтіру керек.",
+ "ai_opt_merge.refused.stale": "Бұл опция жасалғаннан кейін модель өзгерді. Біріктіруді ағымдағы модель бойынша қайта есептеңіз.",
+ "ai_opt_merge.refused.nothing_picked": "Біріктіру үшін ештеңе таңдалмаған.",
+ "ai_opt_merge.refused.unknown_item": "{item} элементі бұл опцияның бөлігі емес.",
+ "ai_opt_merge.refused.not_in_option": "Таңдалған элемент бұл опцияның бөлігі емес.",
+ "ai_opt_merge.refused.needs_left_out": "{item} элементі {needs} элементін қажет етеді. Оны да таңдаңыз немесе тәуелділіктерді қосуға рұқсат етіңіз.",
+ "ai_opt_merge.refused.set_gone": "{item} элементі енді жоқ таңдауға сілтейді. Опцияны қайта жасаңыз.",
+ "ai_opt_merge.refused.busy": "Басқа жоспар ашық. Алдымен оны қолданыңыз немесе қабылдамаңыз.",
+ "ai_opt_merge.refused.failed": "Біріктіруді дайындау мүмкін болмады: {reason}",
+ "ai_opt_merge.revive": "Опцияны қалпына келтіру",
+ "ai_opt_merge.merged": "Біріктірілді"
+}

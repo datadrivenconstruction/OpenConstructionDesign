@@ -1,0 +1,15 @@
+{
+ "mcp.ask.cancel": "Batal",
+ "mcp.ask.auto.title": "Biarkan agen AI menerapkan perubahan tanpa bertanya?",
+ "mcp.ask.auto.body": "Agen AI yang terhubung akan menerapkan perubahannya ke draf segera, tanpa menunggu konfirmasi Anda, sehingga perubahan yang salah bisa masuk sebelum Anda melihatnya. Model Anda tetap hanya berubah saat Anda menekan Terapkan. Ini berlaku sampai Anda mematikannya, menutup editor, atau membuka model lain.",
+ "mcp.ask.auto.yes": "Terapkan tanpa bertanya",
+ "mcp.ask.token.title": "Terbitkan token baru?",
+ "mcp.ask.token.body": "Token saat ini langsung berhenti berfungsi: agen AI yang terhubung terputus dan perlu token baru. Token hanya ditampilkan sekali, jadi salin segera.",
+ "mcp.ask.token.yes": "Token baru",
+ "mcp.auto.chip": "Terapkan otomatis aktif",
+ "mcp.auto.chip_tip": "Agen AI menerapkan perubahan ke draf tanpa bertanya. Berakhir bersama sesi ini.",
+ "mcp.auto.ask_again": "Tanya lagi",
+ "mcp.token.once": "Salin token ini sekarang: tidak akan ditampilkan lagi.",
+ "mcp.renewed": "Token baru diterbitkan: token lama tidak berfungsi lagi",
+ "mcp.copied": "Disalin"
+}

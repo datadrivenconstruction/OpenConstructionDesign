@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "Enheter",
+ "topo_units.unit": "Enheter i fil",
+ "topo_units.unit.m": "m",
+ "topo_units.unit.cm": "cm",
+ "topo_units.unit.mm": "mm",
+ "topo_units.unit.ft": "ft",
+ "topo_units.unit.usft": "US survey-fot",
+ "topo_units.unit.in": "in",
+ "topo_units.unit.from_file": "Filen oppgir sine enheter: {unit}",
+ "topo_units.unit.suggested": "Filen oppgir ingen enheter. Foreslått ut fra utstrekningen: {unit} — kontroller resultatet nedenfor",
+ "topo_units.extent": "Resultat i prosjektenheter: {x} × {y} {u} i plan, høydeområde {z} {u}",
+ "topo_units.extent.none": "Resultat: ingenting å importere med disse valgene",
+ "topo_units.extent.check": "Dette ser ikke ut som en tomt: kontroller enhetene"
+}

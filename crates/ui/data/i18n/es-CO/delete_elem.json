@@ -1,0 +1,9 @@
+{
+ "elem.deleted": "Elementos eliminados: {n}",
+ "elem.deleted_kept": "Elementos eliminados: {n}; conservados: {k} (paneles y elementos que no se pueden eliminar)",
+ "elem.not_deleted": "no eliminado: {e}",
+ "elem.not_deletable": "Este elemento no se puede eliminar",
+ "elem.panel": "panel de muro cortina",
+ "elem.panel_refused": "Un panel forma parte de su muro cortina y no se puede eliminar por separado. Seleccione todo el muro para eliminarlo.",
+ "elem.reload_failed": "Eliminado, pero la vista no se actualizó: {e}"
+}

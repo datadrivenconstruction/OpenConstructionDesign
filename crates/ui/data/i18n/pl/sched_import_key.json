@@ -1,0 +1,6 @@
+{
+ "sched_import.no_key": "Ten skoroszyt nie ma zapisu eksportu (starszy eksport): komórki zmienione w modelu po tym eksporcie mogą zostać nadpisane. Sprawdź zmienione komórki przed Zastosuj.",
+ "sched_import.n_kept": "Zmienione w modelu po eksporcie, zachowano: {n}",
+ "sched_import.n_conflict": "Zmienione zarówno w skoroszycie, jak i w modelu, nie zastosowano: {n}",
+ "sched_import.why_conflict": "zmieniono w modelu po eksporcie (teraz {model}), nie zastosowano"
+}

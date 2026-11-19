@@ -1,0 +1,4 @@
+{
+ "room_watch.room.dup": "Huone {room} on huoneen {other} alueella: pinta-ala ja tilavuus lasketaan vain huoneessa {other}",
+ "ai.issue.room_dup": "Huone on huoneen {0} alueella: sen pinta-ala lasketaan siellä"
+}

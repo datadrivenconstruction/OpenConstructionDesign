@@ -1,0 +1,9 @@
+{
+ "cmd.mass.timeline_family": "इतिहास से परिवार",
+ "cmd.mass.timeline_family.desc": "चयनित मास के फ़ीचर इतिहास से घटक परिवार बनाता है। इतिहास के पैरामीटर परिवार के पैरामीटर बन जाते हैं।",
+ "mass_family.done": "परिवार {name} बना, पैरामीटर: {n}",
+ "mass_family.refused": "परिवार नहीं बना: {e}",
+ "mass_family.no_mass": "पहले पैरामीट्रिक मास चुनें",
+ "mass_family.add_modifier": "मॉडिफ़ायर जोड़ें",
+ "mass_family.needs_faces": "चुने गए फ़ेस चाहिए: मासिंग टैब पर टूल का उपयोग करें"
+}

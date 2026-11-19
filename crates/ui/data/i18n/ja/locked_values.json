@@ -1,0 +1,8 @@
+{
+ "cmd.props.param_lock": "パラメータ値をロック/ロック解除",
+ "locked_values.kept": "ロックされた値 {n} 件を保持しました",
+ "locked_values.locked": "「{name}」をロックしました: XLSX スプレッドシート 取り込み、一括編集、AI でも変更されません",
+ "locked_values.unlocked": "「{name}」のロックを解除しました",
+ "locked_values.locked_tip": "ロック中: XLSX スプレッドシート 取り込み、一括編集、AI はこの値を保持します。クリックでロック解除  ·  Ctrl+L",
+ "locked_values.no_row": "プロパティの行にカーソルを合わせてから Ctrl+L を押してください"
+}

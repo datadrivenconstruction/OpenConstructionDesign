@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "Kysy tekoälyltä: {q}",
+ "ai.palette.connect": "Yhdistä tekoäly kysyäksesi",
+ "ai.palette.draft.apply": "Käytä luonnosta ({n})",
+ "ai.palette.draft.reject": "Hylkää luonnos",
+ "ai.palette.draft.next": "Seuraava luonnoksen muutos",
+ "ai.palette.draft.show": "Näytä luonnos näkymässä",
+ "cmd.ai.next_change": "Seuraava luonnoksen muutos",
+ "cmd.ai.next_change.desc": "Siirtää näkymän seuraavaan elementtiin, jonka luonnos muuttaa.",
+ "cmd.ai.show_draft": "Näytä tekoälyn luonnos näkymässä",
+ "cmd.ai.show_draft.desc": "Sovittaa näkymän kaikkeen, mitä luonnos muuttaa."
+}

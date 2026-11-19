@@ -1,0 +1,8 @@
+{
+ "xlsx_idle.idle_title": "Geen wijzigingen om te importeren",
+ "xlsx_idle.export_name": "Exporteren",
+ "xlsx_idle.export_body": "Schrijft het model naar een werkboek. Bewerk daar de waarden en synchroniseer daarna.",
+ "xlsx_idle.sync_name": "Synchroniseren",
+ "xlsx_idle.sync_body": "Leest het werkboek opnieuw in en somt de verschillen op. Het model wijzigt pas als u toepast.",
+ "xlsx_idle.last_sync": "Laatst gesynchroniseerd: {when}"
+}

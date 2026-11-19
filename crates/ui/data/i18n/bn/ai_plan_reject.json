@@ -1,0 +1,9 @@
+{
+ "ai.plan.reject_ask": {
+  "one": "# টি পরিবর্তন বাতিল করবেন?",
+  "other": "# টি পরিবর্তন বাতিল করবেন?"
+ },
+ "ai.plan.reject_ask.hint": "ড্রাফট ও আপনার টিক চিহ্ন বাদ যাবে। মডেল যেমন আছে তেমনই থাকবে।",
+ "ai.plan.reject_confirm": "বাতিল",
+ "ai.plan.reject_keep": "রাখুন"
+}

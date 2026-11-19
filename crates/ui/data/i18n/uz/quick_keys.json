@@ -1,0 +1,6 @@
+{
+ "quick.keys.rec_hint": "Esc bekor qiladi · Backspace tozalaydi",
+ "quick.keys.row_lost": "{key} endi “{cmd}” ga tegishli",
+ "quick.keys.row_took": "{key} “{cmd}” dan olindi",
+ "quick.keys.reset_tip": "Standartga qaytarish"
+}

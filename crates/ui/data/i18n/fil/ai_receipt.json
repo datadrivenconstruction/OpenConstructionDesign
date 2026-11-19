@@ -1,0 +1,21 @@
+{
+ "ai.receipt.title": {
+  "one": "Na-apply ang # pagbabago",
+  "other": "Na-apply ang # pagbabago"
+ },
+ "ai.receipt.more": "+{n} pa",
+ "ai.receipt.list": "Mga elemento",
+ "ai.receipt.show": "Ipakita",
+ "ai.receipt.show.tip": "Piliin at i-frame ang mga binagong elemento",
+ "ai.receipt.undo": "I-undo",
+ "ai.receipt.undo.tip": "Bawiin nang eksakto ang apply na ito",
+ "ai.receipt.undone": "Na-undo",
+ "ai.receipt.later": "May mga susunod na pag-edit na ginawa",
+ "ai.receipt.toast_undone": "Na-undo ang na-apply na plan",
+ "ai.receipt.draft_family": "Family ng draft: {name}",
+ "ai.receipt.promote": "Gawing gumagana",
+ "ai.receipt.promote.tip": "Gawing gumaganang family ang draft family (isang undo step)",
+ "ai.receipt.promoted": "Gumagana na ang family",
+ "ai.receipt.promote_failed": "Hindi magawang gumagana ang family",
+ "cmd.ai.receipt_undo": "I-undo ang huling AI plan"
+}

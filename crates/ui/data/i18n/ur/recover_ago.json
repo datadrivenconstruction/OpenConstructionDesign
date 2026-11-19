@@ -1,0 +1,29 @@
+{
+ "recover.ago_now": "ابھی",
+ "recover.ago_min": {
+  "one": "# منٹ پہلے",
+  "other": "# منٹ پہلے"
+ },
+ "recover.ago_hour": {
+  "one": "# گھنٹہ پہلے",
+  "other": "# گھنٹے پہلے"
+ },
+ "recover.ago_yesterday": "کل",
+ "recover.ago_day": {
+  "one": "# دن پہلے",
+  "other": "# دن پہلے"
+ },
+ "recover.empty": "کوئی اسنیپ شاٹ باقی نہیں",
+ "recover.empty_hint": "اس پروجیکٹ کے لیے بحال کرنے کو کچھ نہیں۔",
+ "recover.all_damaged": "تمام اسنیپ شاٹس خراب ہیں، کوئی بحال نہیں ہو سکتا۔",
+ "recover.keys_hint": "اوپر اور نیچے سے اسنیپ شاٹ چنیں، Enter سے بحال کریں تک جائیں",
+ "recover.row_tip": "محفوظ شدہ {time}",
+ "recover.row_damaged_tip": "بحال نہیں ہو سکتا: {reason}",
+ "recover.archive_ask": "یہ اسنیپ شاٹ آرکائیو میں منتقل کریں؟",
+ "recover.discard_ask": {
+  "one": "اسنیپ شاٹ آرکائیو میں منتقل کریں؟ یہ دوبارہ پیش نہیں کیا جائے گا۔",
+  "other": "تمام # اسنیپ شاٹس آرکائیو میں منتقل کریں؟ یہ دوبارہ پیش نہیں کیے جائیں گے۔"
+ },
+ "recover.confirm_yes": "آرکائیو میں منتقل کریں",
+ "recover.confirm_no": "اسنیپ شاٹس رکھیں"
+}

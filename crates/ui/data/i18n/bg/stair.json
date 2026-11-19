@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "Стълби",
+ "selcat.railing": "Парапети",
+ "quick.cat.stair": "Стълби",
+ "quick.cat.railing": "Парапети",
+ "stair.risers": "Стъпала",
+ "stair.riser": "Височина на стъпалото",
+ "stair.comfort": "2R + T",
+ "stair.tread_auto": "Газ по правило",
+ "stair.tread_auto_tip": "Отхвърля въведения газ и оставя правилото 2R + T да го определи",
+ "stair.broken": "Тази стълба не съответства на нивата си",
+ "railing.host_stair": "Върху стълба #{id}",
+ "railing.host_path": "Скициран парапет",
+ "railing.length": "Дължина",
+ "stair.deleted_with": "заедно с {n} парапета"
+}

@@ -1,0 +1,7 @@
+{
+ "offset_opts.dist_positive": "Der Versatzabstand muss größer als null sein; die Seite folgt dem Cursor",
+ "offset_opts.count_bad": "Ganze Zahl von {min} bis {max}",
+ "offset_opts.done_tip": "Auswahl abschließen und Werkzeug starten",
+ "offset_opts.iso.apply_tip": "Das vorübergehende Ausblenden für diese Ansicht dauerhaft machen",
+ "offset_opts.iso.exit": "Vorübergehenden Modus beenden"
+}

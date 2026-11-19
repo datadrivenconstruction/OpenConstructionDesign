@@ -1,0 +1,10 @@
+{
+ "dlg.dw.store.unloaded": "Piirustusta “{name}” ei voitu lukea projektista, ja se säilytetään tiedostossa muuttumattomana",
+ "dlg.dw.store.source_missing": "Piirustus “{name}”: lähdetiedostoa ei löytynyt, näytetään projektiin tallennettu kopio",
+ "dlg.dw.store.source_changed": "Piirustus “{name}”: lähdetiedosto on muuttunut sijoittamisen jälkeen, näytetään projektiin tallennettu kopio",
+ "dlg.dw.store.unreadable": "Projektiin tallennettuja sijoitettuja piirustuksia ei voi lukea",
+ "dlg.dw.store.not_saved": "Piirustuksia ei tallenneta: {why}",
+ "dlg.dw.store.why_read": "projektiin tallennettuja sijoitettuja piirustuksia ei voi lukea",
+ "dlg.dw.store.why_write": "projektitiedostoa ei voitu päivittää",
+ "dlg.dw.store.missing_in_file": "Tallennettu tiedosto ei sisällä kaikkia sijoitettuja piirustuksia"
+}

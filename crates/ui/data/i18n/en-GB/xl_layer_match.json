@@ -1,0 +1,4 @@
+{
+ "xl.msg.layer_cells_unplaced": "{} cells of type '{}' layer {} on sheet '{}' could not be placed",
+ "xl.msg.layer_hidden_unplaced": "hidden row of type '{}' layer {} on sheet '{}' could not be placed"
+}

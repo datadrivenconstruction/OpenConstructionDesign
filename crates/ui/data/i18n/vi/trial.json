@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "Điểm",
+ "trial.field.distance": "Khoảng cách",
+ "trial.field.target": "Cấu kiện",
+ "trial.refused": "{field}: {reason}. Hãy đổi để áp dụng",
+ "trial.preview_off": "Đã tắt xem trước: mô hình quá lớn"
+}

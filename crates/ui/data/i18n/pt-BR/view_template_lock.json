@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "Controlado pelo modelo {name}",
+ "view_template.edit_template": "Editar modelo",
+ "view_template.locked_tip": "Definido pelo modelo de vista {name}. Altere-o no modelo.",
+ "view_template.no_filters": "Nenhum filtro nesta vista"
+}

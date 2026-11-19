@@ -1,0 +1,14 @@
+{
+ "ai_keys.header_is_key": "Kunci dimasukkan di kolom Kunci — header disimpan dalam teks biasa",
+ "ai_keys.move": "Pindahkan ke Kunci",
+ "ai_keys.remove_line": "Hapus dari header",
+ "ai_keys.save_blocked": "Pindahkan kunci dari header untuk menyimpan",
+ "ai_keys.show": "Tampilkan",
+ "ai_keys.hide": "Sembunyikan",
+ "ai_keys.copy": "Salin",
+ "ai_keys.tokens": "token",
+ "ai_keys.presets": "Preset",
+ "ai_keys.preset_k": "{n}rb",
+ "ai_keys.preset_m": "{n}jt",
+ "ai_keys.images_on": "Didukung"
+}

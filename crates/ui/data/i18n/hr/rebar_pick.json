@@ -1,0 +1,7 @@
+{
+ "rebar_pick.pick.empty": "Armatura: odaberite stup, gredu, zid, ploču ili temelj",
+ "rebar_pick.pick.unsupported": "Ovaj odabir ne može se armirati. Odaberite stup, gredu, zid, ploču ili temelj",
+ "rebar_pick.pick.keys": "Klik za odabir, Shift za dodavanje · Enter za otvaranje obrasca · Esc za odustajanje",
+ "rebar_pick.pick.open": "Otvori obrazac",
+ "rebar_pick.pick.cancel": "Odustani"
+}

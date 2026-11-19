@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "ادغام گزینه: {name}",
+ "ai_opt_merge.whole": "ادغام کل گزینه",
+ "ai_opt_merge.parts": "ادغام بخش‌های انتخاب‌شده",
+ "ai_opt_merge.note": "چرا این گزینه",
+ "ai_opt_merge.rebased": "مدل پس از ساخت این گزینه تغییر کرد: ادغام با مدل فعلی دوباره محاسبه شد. پیش از اعمال، تغییرات را بررسی کنید.",
+ "ai_opt_merge.left.not_picked": "از گزینه انتخاب نشده",
+ "ai_opt_merge.left.unticked": "در گزینه علامت برداشته شده",
+ "ai_opt_merge.left.conflict": "به مدل فعلی افزوده نمی‌شود: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "این گزینه قابل ادغام نیست. گزینهٔ ردشده ابتدا باید بازگردانده شود.",
+ "ai_opt_merge.refused.stale": "مدل پس از ساخت این گزینه تغییر کرد. ادغام را با مدل فعلی دوباره محاسبه کنید.",
+ "ai_opt_merge.refused.nothing_picked": "چیزی برای ادغام انتخاب نشده.",
+ "ai_opt_merge.refused.unknown_item": "مورد {item} بخشی از این گزینه نیست.",
+ "ai_opt_merge.refused.not_in_option": "عنصر انتخاب‌شده بخشی از این گزینه نیست.",
+ "ai_opt_merge.refused.needs_left_out": "مورد {item} به مورد {needs} نیاز دارد. آن را هم انتخاب کنید، یا اجازه دهید وابستگی‌ها افزوده شوند.",
+ "ai_opt_merge.refused.set_gone": "مورد {item} به انتخابی اشاره دارد که دیگر نیست. گزینه را دوباره تولید کنید.",
+ "ai_opt_merge.refused.busy": "برنامهٔ دیگری باز است. اول آن را اعمال یا رد کنید.",
+ "ai_opt_merge.refused.failed": "ادغام آماده نشد: {reason}",
+ "ai_opt_merge.revive": "بازگردانی گزینه",
+ "ai_opt_merge.merged": "ادغام شد"
+}

@@ -1,0 +1,6 @@
+{
+ "xlsx_no_base.title": "Den här arbetsboken saknar jämförelsedata",
+ "xlsx_no_base.detail": "Det dolda jämförelsebladet saknas eller är skadat (ett annat program sparade om arbetsboken, eller den gjordes för hand). Varje avvikande cell ersätter modellvärdet; modelländringar som gjorts sedan exporten kan inte upptäckas. Rader som saknas i arbetsboken tas inte bort.",
+ "xlsx_no_base.confirm": "Jag har kontrollerat ändringarna: ersätt modellvärdena ({n})",
+ "xlsx_no_base.confirm_first": "Bekräfta importen av en arbetsbok utan jämförelsedata först"
+}

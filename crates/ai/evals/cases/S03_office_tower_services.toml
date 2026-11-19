@@ -1,0 +1,38 @@
+id = "S03_office_tower_services"
+tier = "smoke"
+group = ""
+title = "Office tower with services and risers"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "Office tower, 14 storeys, typical floor about 1,200 m2, two cores with stairs and lifts, central corridor. Full building services: supply and exhaust ventilation with vertical risers in the cores and ducts on every floor, water supply and drainage risers to the toilets on every floor. Build it."
+
+[[oracle.count]]
+spec = "level"
+min = 14.0
+
+[[oracle.count]]
+spec = "room"
+min = 100.0
+
+[[oracle.count]]
+spec = "mep_run"
+min = 50.0
+
+[[oracle.count]]
+spec = "level"
+min = 14.0
+max = 16.0
+
+[[oracle.count]]
+spec = "room:toilet|wc"
+min = 14.0
+
+[[oracle.count]]
+spec = "room:stair"
+min = 14.0
+
+[[oracle.count]]
+spec = "room:lift"
+min = 14.0

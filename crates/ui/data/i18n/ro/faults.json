@@ -1,0 +1,20 @@
+{
+ "faults.errors": {
+  "one": "# eroare în model. Apasă pentru a o afișa.",
+  "few": "# erori în model. Apasă pentru a vedea lista.",
+  "other": "# de erori în model. Apasă pentru a vedea lista."
+ },
+ "faults.warnings": {
+  "one": "# avertisment în model. Apasă pentru a-l afișa.",
+  "few": "# avertismente în model. Apasă pentru a vedea lista.",
+  "other": "# de avertismente în model. Apasă pentru a vedea lista."
+ },
+ "faults.title": "Defecte ale modelului: {n}",
+ "faults.none": "Nicio eroare sau avertisment.",
+ "faults.cat.wall": "Perete",
+ "faults.cat.slab": "Planșeu",
+ "faults.cat.opening": "Gol",
+ "faults.cat.curtain_wall": "Fațadă cortină",
+ "faults.cat.ramp": "Rampă",
+ "faults.cat.zone": "Zonă"
+}

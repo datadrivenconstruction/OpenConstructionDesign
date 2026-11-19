@@ -1,0 +1,7 @@
+{
+ "ai.retry.countdown": "Susubukan muli sa loob ng {n} s",
+ "ai.retry.try": "Awtomatikong subok {i} sa {max}. Ipapadala muli ang parehong kahilingan.",
+ "ai.retry.now": "Subukan muli ngayon",
+ "ai.retry.gave_up": "Wala pa ring sagot pagkatapos ng {max} na awtomatikong subok.",
+ "ai.retry.shorten": "Paikliin ang kahilingan"
+}

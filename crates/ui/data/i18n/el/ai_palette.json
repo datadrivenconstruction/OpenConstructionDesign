@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "Ερώτηση AI: {q}",
+ "ai.palette.connect": "Συνδέστε το AI για να κάνετε ερώτηση",
+ "ai.palette.draft.apply": "Εφαρμογή προσχεδίου ({n})",
+ "ai.palette.draft.reject": "Απόρριψη προσχεδίου",
+ "ai.palette.draft.next": "Επόμενη αλλαγή προσχεδίου",
+ "ai.palette.draft.show": "Εμφάνιση προσχεδίου στην προβολή",
+ "cmd.ai.next_change": "Επόμενη αλλαγή προσχεδίου",
+ "cmd.ai.next_change.desc": "Μετακινεί την προβολή στο επόμενο αντικείμενο που αλλάζει το προσχέδιο.",
+ "cmd.ai.show_draft": "Εμφάνιση προσχεδίου AI στην προβολή",
+ "cmd.ai.show_draft.desc": "Προσαρμόζει την προβολή σε όλα όσα αλλάζει το προσχέδιο."
+}

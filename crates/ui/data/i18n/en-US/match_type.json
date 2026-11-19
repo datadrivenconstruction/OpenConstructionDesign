@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "Match type",
+ "cmd.mod.match_type.short": "Match type",
+ "cmd.mod.match_type.desc": "Pick a wall, floor, column or beam, then click others of the same category to give them its type. Drag a window to apply to all inside. Esc drops the source.",
+ "hint.match_type.pick": "Match type: pick a wall, floor, column or beam · Esc — exit",
+ "hint.match_type.apply": "Match type: click targets or drag a window · Esc — another source",
+ "match_type.kind.wall": "wall",
+ "match_type.kind.slab": "floor",
+ "match_type.kind.column": "column",
+ "match_type.kind.beam": "beam",
+ "match_type.refuse.category": "Other category: only a {cat} can take this type",
+ "match_type.refuse.curtain": "Curtain wall: its type is not matched here",
+ "match_type.refuse.pinned": "Pinned: unpin it to change the type",
+ "match_type.pick_bad": "Pick a wall, floor, column or beam as the source",
+ "match_type.same": "Already this type",
+ "match_type.done": "Type applied: {n}",
+ "match_type.done_skipped": "Type applied: {n}, skipped (pinned or curtain): {skipped}",
+ "match_type.failed": "Type not changed: {err}"
+}

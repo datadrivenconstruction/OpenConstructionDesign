@@ -1,0 +1,6 @@
+{
+ "delsafe.ring.opening_shape": "Bir açıklığın dış hattı kendini keser veya çöker",
+ "delsafe.ring.opening_boundary": "Bir açıklık dış sınıra kesişir veya dokunur",
+ "delsafe.ring.openings_overlap": "Açıklıklar birbirini keser veya birbirine dokunur",
+ "xl.msg.delsafe_instance_param_on_types": "'{}' parametresi bir örnek parametresi: elemanlar sayfasında düzenleyin, uygulanmadı"
+}

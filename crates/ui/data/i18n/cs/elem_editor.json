@@ -1,0 +1,4 @@
+{
+ "elem.spreadsheet.applied": "Importováno z tabulky: {what}",
+ "elem.spreadsheet.failed": "Import z tabulky selhal: {e}"
+}

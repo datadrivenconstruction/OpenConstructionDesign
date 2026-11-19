@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "وصلة",
+ "elem.mep_fitting.many": "الوصلات",
+ "elem.mep_fitting.kind.elbow": "كوع",
+ "elem.mep_fitting.kind.tee": "تي",
+ "elem.mep_fitting.kind.cross": "صليب",
+ "elem.mep_fitting.kind.transition": "انتقال",
+ "elem.mep_fitting.kind.cap": "غطاء",
+ "elem.mep_fitting.size": "المقاس",
+ "elem.mep_fitting.at": "الموضع",
+ "elem.mep_fitting.runs": "المسار {n}",
+ "elem.mep_fitting.edit_run": "تعديل المسار",
+ "elem.mep_fitting.select_runs": "حدد مساراتها",
+ "elem.mep_fitting.derived": "تتبع الوصلة مساراتها: عند تغيير مسار تتغير الوصلة معه.",
+ "elem.mep_fitting.no_delete": "لا يمكن حذف الوصلة أو تحريكها منفردة. عدّل مساراتها أو احذفها.",
+ "elem.mep_fitting.hint": "انقر على وصلة في المخطط لرؤية مساراتها.",
+ "elem.mep_fitting.picked": "الوصلات المحددة: {n}"
+}

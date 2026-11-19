@@ -1,0 +1,5 @@
+{
+ "ai.ghost.draft": "草稿预览，模型未改变",
+ "ai.ghost.before": "修改前：模型当前状态。按住 B 查看草稿",
+ "ai.ghost.hint": "按住 B 查看修改前"
+}

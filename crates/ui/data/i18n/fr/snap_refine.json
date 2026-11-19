@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "Rayon d'accrochage",
+ "snap_refine.settings.snap_px_desc": "À quelle distance le curseur doit se trouver d'un point ou d'une ligne pour s'y accrocher, en pixels écran. Une valeur plus grande aide sur les écrans tactiles et les écrans haute densité.",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "Horizontal",
+ "snap_refine.hint.vertical": "Vertical",
+ "snap_refine.hint.perpendicular": "Perpendiculaire à la précédente",
+ "snap_refine.hint.parallel": "Parallèle à la précédente",
+ "snap_refine.hint.on_axis": "Sur l'axe du mur",
+ "snap_refine.no_snap": "Sans accrochage (Alt)"
+}

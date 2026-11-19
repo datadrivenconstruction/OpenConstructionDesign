@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "Desenhar parede",
+ "empty.totals.action": "Desenhar parede",
+ "empty.schedule.action": "Adicionar campo",
+ "empty.schedule_filtered.action": "Limpar filtro",
+ "empty.library.action": "Redefinir pesquisa",
+ "empty.library.load": "Carregar família",
+ "empty.schedule_fields.title": "Nenhum campo exibido",
+ "empty.schedule_fields.action": "Adicionar campo",
+ "empty.schedule_fields.hint": "Ative pelo menos um campo para ver a tabela."
+}

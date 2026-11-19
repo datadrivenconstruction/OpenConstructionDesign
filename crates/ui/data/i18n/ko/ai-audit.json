@@ -1,0 +1,22 @@
+{
+ "ai.audit.tokens": "토큰 {n}개",
+ "ai.audit.filter.all": "전체",
+ "ai.audit.filter.ai": "AI",
+ "ai.audit.filter.me": "나",
+ "ai.audit.search": "변경 검색",
+ "ai.audit.search.clear": "검색 지우기",
+ "ai.audit.show_all": "모두 보기",
+ "ai.audit.empty.hint": "모델이나 에이전트가 작성하거나 적용한 변경 사항이 각각 되돌리는 방법과 함께 여기에 표시됩니다.",
+ "ai.audit.no_match": "필터와 일치하는 변경이 없습니다.",
+ "ai.audit.show.tip": "이 변경이 건드린 요소를 선택하고 표시",
+ "ai.audit.revert.ask": "“{what}”을 되돌릴까요? {change}.",
+ "ai.audit.revert.elements": {
+  "one": "요소 #개 변경",
+  "other": "요소 #개 변경"
+ },
+ "ai.audit.revert.keeps": "이후 변경은 유지됩니다. 되돌리기는 실행 취소 한 단계입니다.",
+ "ai.audit.cancel": "취소",
+ "ai.audit.toast.reverted": "되돌림: {what}",
+ "ai.audit.toast.undone": "실행 취소: {what}",
+ "ai.audit.redo": "다시 실행"
+}

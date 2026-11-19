@@ -1,0 +1,6 @@
+{
+ "xlsx_readonly.read_only": "Die Arbeitsmappe ist schreibgeschützt (Dateieigenschaft oder Ordnerrecht). Exportieren Sie als Kopie oder heben Sie „Schreibgeschützt“ in den Dateieigenschaften auf und versuchen Sie es erneut.",
+ "xlsx_readonly.export_copy": "Als Kopie exportieren",
+ "xlsx_readonly.no_copy_name": "Kein freier Name für eine Kopie neben der Arbeitsmappe.",
+ "xlsx_readonly.copied": "Die Arbeitsmappe blieb unverändert. Daneben wurde eine aktualisierte Kopie geschrieben und ist jetzt verknüpft: {path}"
+}

@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "کنکریٹ",
+ "mat.masonry": "چنائی",
+ "mat.brick": "اینٹ",
+ "mat.insulation": "انسولیشن",
+ "mat.plaster": "پلاستر",
+ "mat.render": "رینڈر",
+ "mat.gypsum": "جپسم بورڈ",
+ "mat.glass": "شیشہ",
+ "mat.wood": "لکڑی",
+ "mat.steel": "اسٹیل",
+ "mat.membrane": "جھلی",
+ "mat.other": "دیگر",
+ "warn.cat.wall": "دیوار",
+ "warn.cat.slab": "سلیب",
+ "warn.cat.opening": "اوپننگ",
+ "warn.cat.curtain_wall": "کرٹین وال",
+ "td.mat.custom": "دیگر…"
+}

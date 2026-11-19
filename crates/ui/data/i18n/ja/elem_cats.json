@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "マスは回転や鏡像にできません: その形状履歴に回転ステップがないためです。移動またはコピーするか、新しい方向で描き直してください。",
+ "sched_cats.col.name": "名前",
+ "sched_cats.col.material": "材質",
+ "sched_cats.col.void": "空洞",
+ "sched_cats.col.inplace": "現場打ち",
+ "sched_cats.col.volume": "正味体積",
+ "sched_cats.col.area": "表面積",
+ "sched_cats.col.floor_area": "床面積",
+ "sched_cats.col.thickness": "厚さ",
+ "sched_cats.col.points": "点",
+ "elem.toposolid.points": "測量点",
+ "elem.toposolid.count": "点",
+ "elem.toposolid.low": "最低",
+ "elem.toposolid.high": "最高",
+ "elem.toposolid.edit": "点を編集",
+ "elem.toposolid.edit_tip": "平面上で測量点を選択、ドラッグ、標高設定します",
+ "elem.toposolid.pick_hint": "平面上の点をクリックして選択します。もう一度クリックすると追加または削除されます。",
+ "elem.toposolid.z": "標高 ({n})",
+ "elem.toposolid.mixed": "選択した点の値が異なります。新しい値を入力すると、すべてに設定されます。",
+ "elem.toposolid.edit_help": "点をドラッグして移動します。値を入力して Enter を押すと標高を設定します。Backspace で選択した点を削除し、Esc で終了します。",
+ "elem.toposolid.done": "完了"
+}

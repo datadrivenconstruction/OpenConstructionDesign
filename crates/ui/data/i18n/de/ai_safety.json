@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "Schlüssel in der Adresse",
+ "ai_safety.auth.query_name": "Adressparameter",
+ "ai_safety.need_query_name": "Den Adressparameter nennen, der den Schlüssel trägt",
+ "ai_safety.apply_unlogged": "Angewendet, aber das Änderungsprotokoll wurde nicht geschrieben",
+ "ai_safety.audit_unlogged": "Das Protokoll des KI-Assistenten konnte nicht geschrieben werden",
+ "ai_safety.chat_not_saved": "Der Chat konnte nicht im Projekt gespeichert werden. Erneuter Versuch läuft.",
+ "ai_safety.clip_clears": "Die Zwischenablage wird in 30 s geleert",
+ "ai_safety.copied_clears": "Kopiert. Die Zwischenablage wird in 30 s geleert",
+ "ai_safety.key_session_only": "Schlüssel wird bis zum Schließen der App gehalten",
+ "ai.settings.no_data_dir": "Dieses System stellt keinen Ordner für App-Einstellungen bereit"
+}

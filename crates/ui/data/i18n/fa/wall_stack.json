@@ -1,0 +1,10 @@
+{
+ "wall_stack.we.stack_caption": "نوع ترکیبی",
+ "wall_stack.we.side_left": "وجه چپ",
+ "wall_stack.we.side_right": "وجه راست",
+ "wall_stack.we.from": "از",
+ "wall_stack.we.to": "تا",
+ "wall_stack.we.bottom": "پایین",
+ "wall_stack.we.delete_tip": "حذف این پروفیل",
+ "wall_stack.we.from_after_to": "«از» باید قبل از «تا» باشد"
+}

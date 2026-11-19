@@ -1,0 +1,9 @@
+{
+ "prop_head.of_type": {
+  "one": "# de este tipo",
+  "other": "# de este tipo"
+ },
+ "prop_head.override_tip": "Difiere del tipo; haga clic para restablecer",
+ "prop_head.reset_done": "“{name}” restablecido al valor del tipo",
+ "prop_head.copy_id": "Haga clic para copiar el número"
+}

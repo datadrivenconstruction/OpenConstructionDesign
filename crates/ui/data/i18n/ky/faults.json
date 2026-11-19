@@ -1,0 +1,18 @@
+{
+ "faults.errors": {
+  "one": "# ката модельде. Көрүү үчүн басыңыз.",
+  "other": "# ката модельде. Тизмени көрүү үчүн басыңыз."
+ },
+ "faults.warnings": {
+  "one": "# эскертүү модельде. Көрүү үчүн басыңыз.",
+  "other": "# эскертүү модельде. Тизмени көрүү үчүн басыңыз."
+ },
+ "faults.title": "Модель каталары: {n}",
+ "faults.none": "Каталар же эскертүүлөр жок.",
+ "faults.cat.wall": "Дубал",
+ "faults.cat.slab": "Плита",
+ "faults.cat.opening": "Ачылыш",
+ "faults.cat.curtain_wall": "Айнек дубал",
+ "faults.cat.ramp": "Ташма",
+ "faults.cat.zone": "Зона"
+}

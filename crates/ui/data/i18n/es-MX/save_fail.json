@@ -1,0 +1,16 @@
+{
+ "save_fail.save_fail.title": "Proyecto no guardado",
+ "save_fail.save_fail.kept": "Sus cambios siguen abiertos aquí. No se pierde nada mientras el editor esté abierto.",
+ "save_fail.save_fail.details": "Detalles",
+ "save_fail.save_fail.copy": "Copiar",
+ "save_fail.save_fail.save_as": "Guardar como…",
+ "save_fail.save_fail.retry": "Reintentar",
+ "save_fail.save_fail.close": "Cerrar",
+ "save_fail.cause.full": "El disco está lleno. Libere espacio o guarde el proyecto en otra unidad.",
+ "save_fail.cause.denied": "Esta carpeta o archivo es de solo lectura, o no tiene permiso para escribir aquí. Elija otra carpeta.",
+ "save_fail.cause.locked": "El archivo está abierto en otro programa. Ciérrelo allí y pulse Reintentar.",
+ "save_fail.cause.missing": "La carpeta ya no existe. Elija otra carpeta, o restáurela y pulse Reintentar.",
+ "save_fail.cause.offline": "La unidad o la carpeta de red no está disponible. Vuelva a conectarla y pulse Reintentar, o guarde en otro lugar.",
+ "save_fail.cause.too_long": "La ruta del archivo es demasiado larga. Elija una carpeta o un nombre de archivo más corto.",
+ "save_fail.cause.other": "No se pudo escribir el archivo: {detail}"
+}

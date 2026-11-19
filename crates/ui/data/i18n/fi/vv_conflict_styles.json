@@ -1,0 +1,6 @@
+{
+ "vv_conflict.styles.conflict": "Muokatun luokan elementtityylit muuttuivat mallissa (kumoamalla tai toisessa ikkunassa), kun tässä ikkunassa oli muokkauksia. Muokkauksesi säilytetään.",
+ "vv_conflict.styles.keep": "Säilytä muokkaukseni",
+ "vv_conflict.styles.reload": "Lataa uudelleen",
+ "vv_conflict.styles.answer_first": "Valitse Säilytä muokkaukseni tai Lataa ensin uudelleen"
+}

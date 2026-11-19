@@ -1,0 +1,6 @@
+{
+ "cmd.file.import_again": "Qayta import qilish",
+ "cmd.file.import_again.desc": "Manba faylidan hozirgi holatida yangi loyiha yaratish.",
+ "cmd.file.open_kept": "Saqlangan importni ochish",
+ "cmd.file.open_kept.desc": "Saqlanmagan o'zgarishlar so'rovi bekor qilinganda saqlab qolingan tugallangan importni ochish."
+}

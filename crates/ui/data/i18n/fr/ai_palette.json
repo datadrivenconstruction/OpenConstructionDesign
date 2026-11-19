@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "Demander à l'IA : {q}",
+ "ai.palette.connect": "Connecter l'IA pour poser une question",
+ "ai.palette.draft.apply": "Appliquer le brouillon ({n})",
+ "ai.palette.draft.reject": "Rejeter le brouillon",
+ "ai.palette.draft.next": "Modification suivante du brouillon",
+ "ai.palette.draft.show": "Afficher le brouillon dans la vue",
+ "cmd.ai.next_change": "Modification suivante du brouillon",
+ "cmd.ai.next_change.desc": "Déplace la vue vers l'élément suivant modifié par le brouillon.",
+ "cmd.ai.show_draft": "Afficher le brouillon IA dans la vue",
+ "cmd.ai.show_draft.desc": "Adapte la vue à tous les éléments modifiés par le brouillon."
+}

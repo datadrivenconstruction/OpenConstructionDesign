@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "Chú giải",
+ "legend.legend.new_hint": "Tên chú giải mới",
+ "legend.legend.delete_tip": "Xóa chú giải",
+ "legend.legend.delete_placed": "Xóa chú giải (đang đặt tại: {sheets})",
+ "legend.legend.deleted": "Đã xóa chú giải: {name}",
+ "legend.legend.no_rows": "Chưa có hàng. Thêm một hàng hoặc lấy kiểu của góc nhìn hiện tại",
+ "legend.legend.replace_q": "Thay {n} hàng bằng kiểu của góc nhìn này?",
+ "legend.legend.replace": "Thay thế",
+ "legend.legend.keep": "Giữ các hàng",
+ "legend.col.swatch": "Mẫu màu",
+ "legend.col.value": "Giá trị",
+ "legend.col.label": "Nhãn"
+}

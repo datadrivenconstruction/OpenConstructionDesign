@@ -1,0 +1,8 @@
+{
+ "xlsx_issues.empty_title": "Tomt ark i arbejdsbogen",
+ "xlsx_issues.empty_kept": "Ark {sheet} er tomt: der blev ikke læst noget fra det, {n} elementer beholdes som de er. Andre ark kan stadig anvendes.",
+ "xlsx_issues.empty_none": "Ark {sheet} er tomt: der blev ikke læst noget fra det. Andre ark kan stadig anvendes.",
+ "xlsx_issues.unreadable_title": "Ark kunne ikke læses",
+ "xlsx_issues.unreadable": "Ark {sheet} kunne ikke læses, dets del af filen er beskadiget: intet blev hentet fra det, og dets elementer beholdes som de er. Andre ark kan stadig anvendes.",
+ "xlsx_issues.formulas": "Formlerne på ark {sheet} kunne ikke læses, så en beregnet værdi kan ikke skelnes fra en redigering: intet blev hentet fra dette ark. Andre ark kan stadig anvendes."
+}

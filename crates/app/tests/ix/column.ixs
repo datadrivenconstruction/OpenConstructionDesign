@@ -1,0 +1,4 @@
+# Column: Space turns it, a click places it; the tool stays armed
+tool(CL) → scope=Placing hint="arch.column.place"
+key(Space) click(2,3) → rows(col)=1 journal=+1 scope=Placing
+click(4,3) → rows(col)=2 journal=+2

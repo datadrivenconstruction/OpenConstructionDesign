@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "Импортталған торлар",
+ "mat_mesh.mesh.none_selected": "Осы материалды беру үшін 3D көріністе импортталған торларды таңдаңыз.",
+ "mat_mesh.mesh.current": "Бірінші таңдалған тор: {material}",
+ "mat_mesh.mesh.current_none": "Бірінші таңдалған торда материал жоқ.",
+ "mat_mesh.mesh.assign": "{n} таңдалғанға қолдану",
+ "mat_mesh.mesh.assign_tip": "Шынайы стиль осы материалдың текстурасын таңдалған торларда көрсетеді",
+ "mat_mesh.mesh.assign_cat": "{category} санатына қолдану",
+ "mat_mesh.mesh.assign_cat_tip": "Өз материалы жоқ сол санаттың барлық импортталған торы",
+ "mat_mesh.mesh.clear": "Таңдалғанды тазалау",
+ "mat_mesh.mesh.clear_tip": "Таңдалған торлар санат материалына немесе жай түске оралады",
+ "mat_mesh.mesh.clear_cat": "Санатты тазалау"
+}

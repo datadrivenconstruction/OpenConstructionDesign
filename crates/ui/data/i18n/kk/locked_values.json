@@ -1,0 +1,8 @@
+{
+ "cmd.props.param_lock": "Параметр мәнін құлыптау немесе ашу",
+ "locked_values.kept": "{n} құлыпталған мән сақталды",
+ "locked_values.locked": "“{name}” құлыпталды: XLSX кестесі импорты, жаппай өңдеу және AI оны сақтайды",
+ "locked_values.unlocked": "“{name}” ашылды",
+ "locked_values.locked_tip": "Құлыпталған: XLSX кестесі импорты, жаппай өңдеу және AI бұл мәнді сақтайды. Ашу үшін басыңыз  ·  Ctrl+L",
+ "locked_values.no_row": "Қасиеттерден параметр жолына курсорды қойып, Ctrl+L басыңыз"
+}

@@ -1,0 +1,42 @@
+{
+ "ai.tool.show_elements": "요소 표시 중",
+ "ai.tool.isolate_elements": "요소 분리 중",
+ "ai.tool.color_by": "값 기준으로 색상 지정 중",
+ "ai.tool.reset_view": "뷰 재설정 중",
+ "ai_found.found.query": "찾음",
+ "ai_found.found.show": "표시됨",
+ "ai_found.found.isolate": "분리됨",
+ "ai_found.found.hide": "숨김",
+ "ai_found.found.color": "색상 지정됨",
+ "ai_found.found.count": "{m}개 중 {n}개",
+ "ai_found.found.none": "일치하는 항목이 없습니다. 필터를 넓혀 보세요.",
+ "ai_found.found.show_btn": "표시",
+ "ai_found.found.show_tip": "이 요소를 선택하고 평면과 3D에서 확대",
+ "ai_found.found.isolate_btn": "분리",
+ "ai_found.found.isolate_tip": "뷰 재설정 전까지 이 요소만 표시",
+ "ai_found.found.select_btn": "선택",
+ "ai_found.found.select_tip": "뷰를 이동하지 않고 이 요소 선택",
+ "ai_found.legend.title": "{by} 기준 색상",
+ "ai_found.legend.row_tip": "클릭하여 이 요소 선택",
+ "ai_found.legend.empty_value": "값 없음",
+ "ai_found.legend.other": {
+  "one": "#개 값 더",
+  "other": "#개 값 더"
+ },
+ "ai_found.view.title": "AI 어시스턴트 뷰",
+ "ai_found.view.reset": "뷰 재설정",
+ "ai_found.view.reset_tip": "AI 어시스턴트가 바꾸기 전의 뷰 복원",
+ "ai_found.view.shown": {
+  "one": "요소 #개 표시됨",
+  "other": "요소 #개 표시됨"
+ },
+ "ai_found.view.isolated": {
+  "one": "요소 #개 분리됨",
+  "other": "요소 #개 분리됨"
+ },
+ "ai_found.view.hidden": {
+  "one": "요소 #개 숨김",
+  "other": "요소 #개 숨김"
+ },
+ "ai_found.found.line": "{what}: {count}"
+}

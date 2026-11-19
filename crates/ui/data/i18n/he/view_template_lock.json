@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "נשלט על ידי התבנית {name}",
+ "view_template.edit_template": "ערוך תבנית",
+ "view_template.locked_tip": "נקבע על ידי תבנית המבט {name}. שנה אותו בתבנית.",
+ "view_template.no_filters": "אין מסננים במבט הזה"
+}

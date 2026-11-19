@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "Lahat",
+ "clash_list.only_selected": "Napili lang",
+ "clash_list.tolerance": "Toleransya",
+ "clash_list.gap": "Agwat",
+ "clash_list.export": "I-export",
+ "clash_list.col.volume": "Bolyum",
+ "clash_list.fix.up": "Itaas",
+ "clash_list.fix.down": "Ibaba",
+ "clash_list.fix.sleeve": "Manggas",
+ "clash_list.apply_fix": "Ilapat ang ayos",
+ "clash_list.err.tol": "Tolerance: maglagay ng haba (0 o higit pa), halimbawa 50 o 2 in",
+ "clash_list.sleeve_no_host": "Kailangan ng sleeve ng pader o slab sa pares",
+ "clash_list.err.gap": "Gap: maglagay ng haba (0 o higit pa), halimbawa 50 o 2 in"
+}

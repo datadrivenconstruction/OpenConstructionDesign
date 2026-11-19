@@ -1,0 +1,9 @@
+{
+ "tool.room": "Phòng",
+ "tool.room.name": "Phòng",
+ "room_tool.room.name": "Tên",
+ "hint.room.place": "Bấm bên trong một vòng tường kín để tạo phòng · Esc — thoát",
+ "tool.err.room_open": "Vùng chưa khép kín: hãy khép vòng tường hoặc thêm vách ngăn phòng",
+ "tool.err.room_check": "Không thể kiểm tra các phòng của cao độ này",
+ "tool.err.room_exists": "Đã có một phòng trong vòng này"
+}

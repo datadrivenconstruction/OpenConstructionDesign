@@ -1,0 +1,13 @@
+{
+ "level.err_open": "Nivån öppnades inte: {e}",
+ "level.need_name": "En nivå behöver ett namn och en höjd",
+ "level.created": "Nivån \"{name}\" skapad",
+ "level.err_create": "Nivån skapades inte: {e}",
+ "level.err_edit": "Nivån ändrades inte: {e}",
+ "level.edited": "Nivån \"{name}\" ändrad",
+ "level.edited_stale": "Nivån \"{name}\" ändrad, vyn uppdaterades inte: {e}",
+ "level.last": "Den sista nivån kan inte tas bort",
+ "level.deleted": "Nivå borttagen",
+ "level.not_empty": "Nivån är inte tom: ta först bort dess element",
+ "level.err_delete": "Nivån togs inte bort: {e}"
+}

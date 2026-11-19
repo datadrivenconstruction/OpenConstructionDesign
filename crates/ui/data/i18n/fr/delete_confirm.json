@@ -1,0 +1,59 @@
+{
+ "del.k.door": {
+  "one": "# porte",
+  "other": "# portes"
+ },
+ "del.k.window": {
+  "one": "# fenêtre",
+  "other": "# fenêtres"
+ },
+ "del.k.opening": {
+  "one": "# ouverture",
+  "other": "# ouvertures"
+ },
+ "del.k.comp": {
+  "one": "# composant hébergé",
+  "other": "# composants hébergés"
+ },
+ "del.k.rebar": {
+  "one": "# jeu d'armatures",
+  "other": "# jeux d'armatures"
+ },
+ "del.k.port": {
+  "one": "# port MEP hébergé",
+  "other": "# ports MEP hébergés"
+ },
+ "del.k.joist": {
+  "one": "# poutre de charpente",
+  "other": "# poutres de charpente"
+ },
+ "del.k.railing": {
+  "one": "# garde-corps",
+  "other": "# garde-corps"
+ },
+ "del.k.tag": {
+  "one": "# étiquette",
+  "other": "# étiquettes"
+ },
+ "del.k.dim": {
+  "one": "# cote (détachée)",
+  "other": "# cotes (détachées)"
+ },
+ "del.also": "Également concernés : {list}",
+ "del.rooms": {
+  "one": "# pièce perd un mur de limite",
+  "other": "# pièces perdent un mur de limite"
+ },
+ "del.cancelled": "Suppression annulée, rien n'a été modifié",
+ "del.confirm.title": "Supprimer avec les dépendances",
+ "del.confirm.lead": {
+  "one": "# élément sélectionné entraîne aussi :",
+  "other": "# éléments sélectionnés entraînent aussi :"
+ },
+ "del.confirm.levels": {
+  "one": "# d'entre eux est sur un autre niveau",
+  "other": "# d'entre eux sont sur d'autres niveaux"
+ },
+ "del.confirm.all": "Tout supprimer",
+ "del.confirm.cancel": "Annuler"
+}

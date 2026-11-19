@@ -1,0 +1,10 @@
+{
+ "ai.size.count": "~{n} / {max} token",
+ "ai.size.block": "Quá dài cho mô hình này: ~{n} token, tối đa {max} vừa và chừa chỗ cho câu trả lời — hãy rút ngắn hoặc chia nhỏ",
+ "ai.size.trim": "Cắt cho vừa",
+ "ai.size.trim_tip": "Cắt phần cuối tin nhắn cho vừa. Không cắt gì cho đến khi bạn nhấp.",
+ "ai.size.drop_view": "Bỏ góc nhìn",
+ "ai.size.drop_level": "Bỏ cao độ",
+ "ai.size.drop_selection": "Bỏ vùng chọn",
+ "ai.size.sep": "."
+}

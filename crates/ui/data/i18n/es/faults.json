@@ -1,0 +1,18 @@
+{
+ "faults.errors": {
+  "one": "# error en el modelo. Haga clic para mostrarlo.",
+  "other": "# errores en el modelo. Haga clic para ver la lista."
+ },
+ "faults.warnings": {
+  "one": "# advertencia en el modelo. Haga clic para mostrarla.",
+  "other": "# advertencias en el modelo. Haga clic para ver la lista."
+ },
+ "faults.title": "Fallos del modelo: {n}",
+ "faults.none": "Sin errores ni advertencias.",
+ "faults.cat.wall": "Muro",
+ "faults.cat.slab": "Forjado",
+ "faults.cat.opening": "Hueco",
+ "faults.cat.curtain_wall": "Muro cortina",
+ "faults.cat.ramp": "Rampa",
+ "faults.cat.zone": "Zona"
+}

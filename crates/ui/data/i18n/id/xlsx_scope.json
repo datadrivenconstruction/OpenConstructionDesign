@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "Ekspor ke spreadsheet XLSX: cakupan",
+ "xlsx_scope.intro": "Pilih apa yang masuk ke buku kerja. Mengimpornya kembali hanya mengubah elemen-elemen ini.",
+ "xlsx_scope.base_whole": "Seluruh model",
+ "xlsx_scope.base_level": "Level aktif",
+ "xlsx_scope.base_selection": "Pilihan",
+ "xlsx_scope.categories": "Kategori",
+ "xlsx_scope.cat_walls": "dinding",
+ "xlsx_scope.cat_openings": "pintu",
+ "xlsx_scope.cat_rooms": "ruang",
+ "xlsx_scope.cat_slabs": "pelat",
+ "xlsx_scope.cat_curtains": "dinding tirai",
+ "xlsx_scope.nothing_selected": "Tidak ada yang dipilih: pilih elemen dulu atau pilih cakupan lain.",
+ "xlsx_scope.no_categories": "Centang minimal satu kategori.",
+ "xlsx_scope.no_level": "Level aktif tidak ditemukan.",
+ "xlsx_scope.export": "Ekspor",
+ "xlsx_scope.preview_scope": "Cakupan yang diekspor: {scope}. Elemen di luarnya tidak pernah diubah atau dihapus."
+}

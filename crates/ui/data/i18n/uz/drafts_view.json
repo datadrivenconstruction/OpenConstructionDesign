@@ -1,0 +1,9 @@
+{
+ "drafts.draft.view": "“{name}” ko'rinish grafikasi",
+ "drafts.draft.filter": "Ko'rinish filtri “{name}”",
+ "drafts.draft.filter_new": "Yangi ko'rinish filtri",
+ "drafts.draft.object_styles": "Ob'ekt uslublari",
+ "drafts.draft.material": "Material “{name}”",
+ "drafts.draft.type": "Tur “{name}”",
+ "drafts.draft.params": "“{name}” oilasining parametrlari"
+}

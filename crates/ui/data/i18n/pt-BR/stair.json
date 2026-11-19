@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "Escadas",
+ "selcat.railing": "Guarda-corpos",
+ "quick.cat.stair": "Escadas",
+ "quick.cat.railing": "Guarda-corpos",
+ "stair.risers": "Espelhos",
+ "stair.riser": "Altura do espelho",
+ "stair.comfort": "2E + P",
+ "stair.tread_auto": "Piso por regra",
+ "stair.tread_auto_tip": "Descarte o piso introduzido e deixe a regra 2E + P defini-lo",
+ "stair.broken": "Esta escada não se ajusta aos seus níveis",
+ "railing.host_stair": "Associado à escada n.º {id}",
+ "railing.host_path": "Desenhar guarda-corpo",
+ "railing.length": "Comprimento",
+ "stair.deleted_with": "com {n} guarda-corpos associados"
+}

@@ -1,0 +1,15 @@
+{
+ "text_style.lbl.text_style": "Teksttype",
+ "text_style.lbl.align": "Justering",
+ "text_style.lbl.head": "Pilespids",
+ "text_style.lbl.line_style": "Linjetype",
+ "text_style.lbl.fill": "Fyld",
+ "text_style.lbl.detail": "Detalje",
+ "text_style.lbl.width": "Bredde",
+ "text_style.bad_number": "Angiv et tal fra {min} til {max}",
+ "text_style.tip.next_ring": "Luk denne kontur og start en ny i samme område",
+ "text_style.tip.edit_text": "Rediger teksten på stedet",
+ "text_style.tip.add_leader": "Tilføj en føringslinje til denne tekst",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°"
+}

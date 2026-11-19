@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "Dupliser ark med visninger",
+ "cmd.view.sheet_duplicate_title": "Dupliser ark (bare tittelfelt)",
+ "sheets.dup.menu_views": "Dupliser med visninger",
+ "sheets.dup.menu_title": "Dupliser, bare tittelfelt",
+ "sheets.dup.done": "Ark {number} opprettet fra {src}: {views} visninger, {sched} lister og forklaringer. Revisjoner kopieres ikke; arket er ikke utgitt.",
+ "sheets.dup.none": "Åpne et ark for å duplisere det",
+ "sheets.dup.copy": "kopi",
+ "cmd.view.sheet_duplicate.short": "Dupliser med visninger",
+ "cmd.view.sheet_duplicate_title.short": "Dupliser tittelfelt"
+}

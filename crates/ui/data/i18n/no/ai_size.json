@@ -1,0 +1,10 @@
+{
+ "ai.size.count": "~{n} / {max} tokens",
+ "ai.size.block": "For lang for denne modellen: ~{n} tokens, opptil {max} får plass og etterlater rom for svaret — forkort den eller del den opp",
+ "ai.size.trim": "Kutt til størrelse",
+ "ai.size.trim_tip": "Kutter slutten av meldingen så den får plass. Ingenting kuttes før du klikker.",
+ "ai.size.drop_view": "Ta visningen ut",
+ "ai.size.drop_level": "Ta etasjen ut",
+ "ai.size.drop_selection": "Ta utvalget ut",
+ "ai.size.sep": ","
+}

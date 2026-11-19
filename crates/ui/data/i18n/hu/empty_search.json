@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "Nincs találat",
+ "empty.browser_search.hint": "Nincs ilyen keresésnek megfelelő nézet, szint, típus vagy helyiség.",
+ "empty.browser_search.action": "Keresés törlése",
+ "empty.xl_filtered.title": "Nincs a szűrőknek megfelelő bejegyzés",
+ "empty.xl_filtered.hint": "Kapcsoljon be több fajtát, válasszon másik lapot, vagy módosítsa a keresési szöveget.",
+ "empty.xl_filtered.action": "Szűrők törlése",
+ "empty.xl_nochanges.title": "Nincs módosítás a munkafüzetben",
+ "empty.xl_nochanges.hint": "A munkafüzet egyezik a modellel: importálása semmit nem változtatna.",
+ "empty.version_same.title": "A modellek azonosak",
+ "empty.version_same.hint": "A megnyitott modell és a kiválasztott verzió között nem található eltérés.",
+ "empty.templates.title": "Még nincsenek nézetsablonok",
+ "empty.templates.hint": "Hozzon létre egyet az aktuális nézetből, hogy más nézetekben is újra felhasználhassa a beállításait.",
+ "empty.templates.action": "Sablon elnevezése",
+ "empty.fe_params.title": "Még nincsenek paraméterek",
+ "empty.fe_params.hint": "Adjon hozzá lentebb egy paramétert a méretek, anyagok vagy láthatóság vezérléséhez.",
+ "empty.fe_params.action": "Paraméter hozzáadása"
+}

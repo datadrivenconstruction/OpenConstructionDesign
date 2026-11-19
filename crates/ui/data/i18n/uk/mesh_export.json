@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "Зберігає всю модель або вибране як бінарний STL у метрах або міліметрах.",
+ "cmd.data.export_obj.desc": "Зберігає всю модель або вибране як OBJ з файлом MTL: одна група на елемент, кольори за матеріалом.",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "OBJ з матеріалами (.obj)",
+ "open_file.filter.mesh": "3D-сітки (glTF, STEP, STL, OBJ)",
+ "mx.title": "Експорт {fmt}",
+ "mx.scope": "Що експортувати",
+ "mx.scope.all": "Уся модель",
+ "mx.scope.sel": "Вибране ({n} елементів)",
+ "mx.units": "Одиниці у файлі",
+ "mx.units.m": "Метри",
+ "mx.units.mm": "Міліметри",
+ "mx.export": "Експортувати…",
+ "mx.saved": "{fmt} збережено: {path} ({parts} елементів, {tris} трикутників)",
+ "mx.partial": "{fmt} збережено з {n} проблемами, деякі тіла можуть бути відсутні: {path}",
+ "mx.failed": "Помилка експорту {fmt}: {error}",
+ "mx.imported": "{file}: імпортовано {n} елементів ({tris} трикутників)",
+ "mx.imported_notes": "{file}: імпортовано {n} елементів ({tris} трикутників), {w} приміток: {first}"
+}

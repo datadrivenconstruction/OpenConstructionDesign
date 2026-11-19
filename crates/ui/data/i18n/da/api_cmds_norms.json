@@ -1,0 +1,8 @@
+{
+ "api.cmd.norms_lookup": "Find reglerne i projektets normpakke efter emne, element eller kode",
+ "api.cmd.norms_check": "Kontrollér modellen mod projektets normpakke og list fundene",
+ "api.cmd.norms_programme": "Typisk rumprogram for projektets land for en bygningstype",
+ "api.cmd.select_similar": "Vælg alle elementer som dette: samme type eller kategori, på denne etage eller i hele projektet",
+ "api.cmd.create_drawing_set": "Udarbejd et udskrivbart tegningssæt: planer, snit, facader, lister og titelblokke",
+ "api.cmd.deliver_project": "Fra oplæg til filer i ét trin: projektet og dets tegningssæt, eksporteret efter Anvend"
+}

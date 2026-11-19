@@ -1,0 +1,18 @@
+{
+ "props.multi.title": {
+  "one": "# 要素",
+  "other": "# 要素"
+ },
+ "props.multi.cats": {
+  "one": "# カテゴリ",
+  "other": "# カテゴリ"
+ },
+ "props.multi.varies": {
+  "one": "さまざま (#)",
+  "other": "さまざま (#)"
+ },
+ "props.multi.clear": "選択を解除",
+ "props.multi.undo": "元に戻す",
+ "props.multi.narrowed": "選択: {n} · {name}",
+ "props.multi.chip_tip": "{name}: {n}  ·  クリックでそのプロパティを表示、Ctrl+クリックでこれだけに絞り込み"
+}

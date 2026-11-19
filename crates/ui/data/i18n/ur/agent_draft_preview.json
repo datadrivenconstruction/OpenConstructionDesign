@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "پیش نظارہ",
+ "agent_draft.ag.preview.desc": "بٹن پر پوائنٹر ہونے کے دوران اس ڈرافٹ کے عناصر کینوس پر نمایاں کریں۔ کچھ نہیں بدلتا۔",
+ "agent_draft.type.column": "ستون",
+ "agent_draft.type.roof": "چھت",
+ "agent_draft.type.ceiling": "سیلنگ",
+ "agent_draft.type.stair": "یک پارچہ",
+ "agent_draft.type.railing": "ریلنگ",
+ "agent_draft.type.shaft": "شافٹ",
+ "agent_draft.type.axis": "محور 6.5 mm",
+ "agent_draft.type.refplane": "ریفرنس پلین"
+}

@@ -1,0 +1,7 @@
+{
+ "rebar_pick.pick.empty": "Armatures : choisissez un poteau, une poutre, un mur, une dalle ou une semelle",
+ "rebar_pick.pick.unsupported": "Cette sélection ne peut pas recevoir d'armatures. Choisissez un poteau, une poutre, un mur, une dalle ou une semelle",
+ "rebar_pick.pick.keys": "Cliquer pour choisir, Maj pour en ajouter · Entrée pour ouvrir le formulaire · Échap pour annuler",
+ "rebar_pick.pick.open": "Ouvrir le formulaire",
+ "rebar_pick.pick.cancel": "Annuler"
+}

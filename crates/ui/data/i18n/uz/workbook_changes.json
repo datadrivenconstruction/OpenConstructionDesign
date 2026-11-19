@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "Qo'llanmagan ish kitobi o'zgarishlari",
+ "workbook_changes.wb.body": "Loyihani yopish yoki almashtirish ularni o'chiradi.",
+ "workbook_changes.wb.line": "Ish kitobini import qilish: qo'llanmagan {n} ta o'zgarish",
+ "workbook_changes.wb.review": "Ko'rib chiqish",
+ "workbook_changes.wb.discard": "Bekor qilish"
+}

@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "Semua",
+ "clash_list.only_selected": "Hanya yang dipilih",
+ "clash_list.tolerance": "Toleransi",
+ "clash_list.gap": "Celah",
+ "clash_list.export": "Ekspor",
+ "clash_list.col.volume": "Volume",
+ "clash_list.fix.up": "Pindah ke atas",
+ "clash_list.fix.down": "Pindah ke bawah",
+ "clash_list.fix.sleeve": "Selongsong",
+ "clash_list.apply_fix": "Terapkan perbaikan",
+ "clash_list.err.tol": "Toleransi: masukkan panjang (0 atau lebih), misalnya 50 atau 2 in",
+ "clash_list.sleeve_no_host": "Sleeve memerlukan dinding atau pelat dalam pasangan",
+ "clash_list.err.gap": "Celah: masukkan panjang (0 atau lebih), misalnya 50 atau 2 in"
+}

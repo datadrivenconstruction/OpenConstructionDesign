@@ -1,0 +1,13 @@
+{
+ "type_change.affects_walls": {
+  "one": "vaikuttaa # seinään",
+  "other": "vaikuttaa # seinään"
+ },
+ "type_change.affects": {
+  "one": "vaikuttaa # elementtiin",
+  "other": "vaikuttaa # elementtiin"
+ },
+ "type_change.tick_types": "Sovella tyyppimuutokset kaikkiin näiden tyyppien {n} elementtiin",
+ "type_change.tick_types_first": "Valitse ensin tyyppimuutos: jokainen tyypin elementti saa sen",
+ "xl.msg.types_first": "vahvista ensin tyyppimuutokset"
+}

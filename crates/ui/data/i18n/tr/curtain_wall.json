@@ -1,0 +1,12 @@
+{
+ "curtain_wall.cw.issue.slab": "döşeme {id}: {e}",
+ "curtain_wall.cw.issue.body": "gövde {id}: {e}",
+ "curtain_wall.cw.added": "Eklenen giydirme cepheler: {n}",
+ "curtain_wall.cw.add_failed": "Giydirme cephe oluşturulmadı: {e}",
+ "curtain_wall.cw.edited_warn": "Giydirme cephe #{id} değiştirildi: {w}",
+ "curtain_wall.cw.edited": "Giydirme cephe #{id} değiştirildi",
+ "curtain_wall.cw.not_changed": "Değişmedi: {e}",
+ "curtain_wall.cw.room_edited": "Oda #{id} değiştirildi",
+ "curtain_wall.cw.slope_range": "Değişmedi: eğim aralık dışında",
+ "curtain_wall.cw.slope_set": "Döşeme #{id}: eğim {pct}"
+}

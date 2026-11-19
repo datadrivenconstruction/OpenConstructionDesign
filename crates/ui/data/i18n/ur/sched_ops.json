@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "قدر صفر سے زیادہ ہونی چاہیے",
+ "sched_ops.not_number": "عدد نہیں",
+ "sched_ops.no_host": "میزبان دیوار نہیں",
+ "sched_ops.wall_length": "اس دیوار کی لمبائی اس طرح مقرر نہیں ہو سکتی",
+ "sched_ops.no_wall": "ایسی دیوار موجود نہیں",
+ "sched_ops.no_opening": "ایسا اوپننگ موجود نہیں",
+ "sched_ops.no_curtain": "ایسی کرٹین وال موجود نہیں",
+ "sched_ops.no_panel": "ایسا پینل موجود نہیں",
+ "sched_ops.no_slab": "ایسا سلیب موجود نہیں",
+ "sched_ops.no_room": "ایسا کمرہ موجود نہیں",
+ "sched_ops.slope_range": "ڈھلان حد سے باہر",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

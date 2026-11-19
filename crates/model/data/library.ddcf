@@ -1,0 +1,2646 @@
+# Built-in component library. Families are separated by a "---" line.
+# Insertion point: furniture - centre of the plan footprint on the floor; wall-mounted - the wall face, body in +y.
+# Bodies are visible in 3D and on elevations; the plan shows symbols.
+
+family Table
+category furniture
+host floor
+ifc IfcFurniture TABLE
+param Width length type 1600mm
+param Depth length type 800mm
+param Height length type 750mm
+param Top length type 40mm
+param Leg length type 60mm
+param LegH length type = Height - Top
+param Wood material type "Oak"
+param Seats int type = 2 * floor(Width / 600mm) + if(Depth >= 900mm, 2, 0)
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Back y = Depth / 2
+type "1600x800" Width=1600mm, Depth=800mm
+type "1200x800" Width=1200mm, Depth=800mm
+type "1200x500" Width=1200mm, Depth=500mm
+type "60x30in" Width=60in, Depth=30in, Height=29in, Top=1.5in, Leg=2.5in
+extrude Top rect(Left, Front, Right, Back) z(LegH, Height) mat(Wood) show(3d, elev)
+extrude Leg1 rect(Left, Front, Left + Leg, Front + Leg) z(0, LegH) mat(Wood) show(3d, elev)
+extrude Leg2 rect(Right - Leg, Front, Right, Front + Leg) z(0, LegH) mat(Wood) show(3d, elev)
+extrude Leg3 rect(Right - Leg, Back - Leg, Right, Back) z(0, LegH) mat(Wood) show(3d, elev)
+extrude Leg4 rect(Left, Back - Leg, Left + Leg, Back) z(0, LegH) mat(Wood) show(3d, elev)
+symbol rect(Left, Front, Right, Back)
+---
+family Chair
+category furniture
+host floor
+ifc IfcFurniture CHAIR
+param Width length type 450mm
+param Depth length type 500mm
+param SeatH length type 450mm
+param BackH length type 850mm
+param Seat length type 40mm
+param Leg length type 35mm
+param Back length type 20mm
+param Frame material type "Beech"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Rear y = Depth / 2
+type "450x500" Width=450mm, Depth=500mm
+type "18x20in" Width=18in, Depth=20in, SeatH=18in, BackH=34in, Seat=1.5in, Leg=1.5in, Back=0.75in
+extrude Seat rect(Left, Front, Right, Rear) z(SeatH - Seat, SeatH) mat(Frame) show(3d, elev)
+extrude Leg1 rect(Left, Front, Left + Leg, Front + Leg) z(0, SeatH - Seat) mat(Frame) show(medium, fine, 3d, elev)
+extrude Leg2 rect(Right - Leg, Front, Right, Front + Leg) z(0, SeatH - Seat) mat(Frame) show(medium, fine, 3d, elev)
+extrude Leg3 rect(Right - Leg, Rear - Leg, Right, Rear) z(0, SeatH - Seat) mat(Frame) show(medium, fine, 3d, elev)
+extrude Leg4 rect(Left, Rear - Leg, Left + Leg, Rear) z(0, SeatH - Seat) mat(Frame) show(medium, fine, 3d, elev)
+extrude Back rect(Left, Rear - Back, Right, Rear) z(SeatH, BackH) mat(Frame) show(3d, elev)
+symbol rect(Left, Front, Right, Rear)
+symbol line(Left, Rear - Back, Right, Rear - Back) show(medium, fine)
+---
+family Desk
+category furniture
+host floor
+ifc IfcFurniture DESK
+param Width length type 1400mm
+param Depth length type 700mm
+param Height length type 740mm
+param Top length type 25mm
+param Panel length type 25mm
+param Modesty length type 400mm
+param Board material type "Melamine White"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Back y = Depth / 2
+type "1400x700" Width=1400mm, Depth=700mm
+type "1600x800" Width=1600mm, Depth=800mm
+type "60x30in" Width=60in, Depth=30in, Height=29in, Top=1in, Panel=1in, Modesty=16in
+extrude Top rect(Left, Front, Right, Back) z(Height - Top, Height) mat(Board) show(3d, elev)
+extrude SideL rect(Left, Front, Left + Panel, Back) z(0, Height - Top) mat(Board) show(3d, elev)
+extrude SideR rect(Right - Panel, Front, Right, Back) z(0, Height - Top) mat(Board) show(3d, elev)
+extrude Modesty rect(Left + Panel, Back - 2 * Panel, Right - Panel, Back - Panel) z(Height - Top - Modesty, Height - Top) mat(Board) show(medium, fine, 3d, elev)
+symbol rect(Left, Front, Right, Back)
+---
+family Bed
+category furniture
+host floor
+ifc IfcFurniture BED
+param Width length type 1600mm
+param Length length type 2000mm
+param BaseH length type 300mm
+param MattressH length type 220mm
+param HeadH length type 1000mm
+param Head length type 60mm
+param Inset length type 20mm
+param Frame material type "Walnut"
+param Fabric material type "Textile"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Foot y = -Length / 2
+ref HeadEnd y = Length / 2
+type "Double 1600x2000" Width=1600mm, Length=2000mm
+type "Single 900x2000" Width=900mm, Length=2000mm
+type "Queen 60x80in" Width=60in, Length=80in, BaseH=12in, MattressH=9in, HeadH=40in, Head=2.5in, Inset=0.75in
+extrude Base rect(Left, Foot, Right, HeadEnd - Head) z(0, BaseH) mat(Frame) show(3d, elev)
+extrude Mattress rect(Left + Inset, Foot + Inset, Right - Inset, HeadEnd - Head) z(BaseH, BaseH + MattressH) mat(Fabric) show(3d, elev)
+extrude Headboard rect(Left, HeadEnd - Head, Right, HeadEnd) z(0, HeadH) mat(Frame) show(3d, elev)
+symbol rect(Left, Foot, Right, HeadEnd)
+symbol line(Left, HeadEnd - Head, Right, HeadEnd - Head)
+symbol rect(Left + 100mm, HeadEnd - Head - 450mm, Right - 100mm, HeadEnd - Head - 100mm) show(medium, fine)
+symbol line(Left, Foot + Length / 3, Right, Foot + Length / 3) show(fine)
+---
+family Wardrobe
+category casework
+host floor
+ifc IfcFurniture NOTDEFINED
+param Width length type 1000mm
+param Depth length type 600mm
+param Height length type 2100mm
+param Plinth length type 80mm
+param Recess length type 50mm
+param Doors int type = max(1, round(Width / 500mm))
+param Board material type "Oak Veneer"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = 0
+ref Back y = Depth
+type "1000x600x2100" Width=1000mm, Depth=600mm, Height=2100mm
+type "1500x600x2200" Width=1500mm, Depth=600mm, Height=2200mm
+type "48x24x84in" Width=48in, Depth=24in, Height=84in, Plinth=3in, Recess=2in
+extrude Plinth rect(Left, Front + Recess, Right, Back) z(0, Plinth) mat(Board) show(3d, elev)
+extrude Body rect(Left, Front + 28mm, Right, Back) z(Plinth, Height) mat(Board) show(3d, elev)
+extrude DoorLeft rect(Left + 2mm, Front + 8mm, -1mm, Front + 28mm) z(Plinth + 2mm, Height - 2mm) mat(Board) show(3d, elev)
+extrude DoorRight rect(1mm, Front + 8mm, Right - 2mm, Front + 28mm) z(Plinth + 2mm, Height - 2mm) mat(Board) show(3d, elev)
+extrude HandleLeft rect(-60mm, Front, -40mm, Front + 8mm) z(Height / 2, Height / 2 + 300mm) mat(Board) show(medium, fine, 3d, elev)
+extrude HandleRight rect(40mm, Front, 60mm, Front + 8mm) z(Height / 2, Height / 2 + 300mm) mat(Board) show(medium, fine, 3d, elev)
+symbol rect(Left, Front, Right, Back)
+symbol line(Left, Front, Right, Back) show(medium, fine)
+symbol line(Left, Back, Right, Front) show(medium, fine)
+---
+family Sofa
+category furniture
+host floor
+ifc IfcFurniture SOFA
+param Width length type 2000mm
+param Depth length type 900mm
+param Height length type 800mm
+param SeatH length type 420mm
+param Arm length type 200mm
+param ArmH length type 600mm
+param Back length type 200mm
+param Base length type 200mm
+param Fabric material type "Upholstery Grey"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Rear y = Depth / 2
+type "2000" Width=2000mm
+type "2400" Width=2400mm
+type "84in" Width=84in, Depth=36in, Height=32in, SeatH=17in, Arm=8in, ArmH=24in, Back=8in, Base=8in
+extrude Base rect(Left + Arm, Front, Right - Arm, Rear - Back) z(0, Base) mat(Fabric) show(3d, elev)
+extrude Seat rect(Left + Arm, Front, Right - Arm, Rear - Back) z(Base, SeatH) mat(Fabric) show(3d, elev)
+extrude Back rect(Left, Rear - Back, Right, Rear) z(0, Height) mat(Fabric) show(3d, elev)
+extrude ArmL rect(Left, Front, Left + Arm, Rear - Back) z(0, ArmH) mat(Fabric) show(3d, elev)
+extrude ArmR rect(Right - Arm, Front, Right, Rear - Back) z(0, ArmH) mat(Fabric) show(3d, elev)
+symbol rect(Left, Front, Right, Rear)
+symbol line(Left + Arm, Rear - Back, Right - Arm, Rear - Back)
+symbol line(Left + Arm, Front, Left + Arm, Rear - Back)
+symbol line(Right - Arm, Front, Right - Arm, Rear - Back)
+symbol line(0, Front, 0, Rear - Back) show(fine)
+---
+family WC
+category plumbing
+host wall
+ifc IfcSanitaryTerminal TOILETPAN
+param FlowCold number type 0.1
+param FlowWaste number type 1.6
+param Width length type 380mm
+param Depth length type 650mm
+param Height length type 400mm
+param TankW length type 380mm
+param TankD length type 160mm
+param TankH length type 780mm
+param Elevation length instance 0mm
+param China material type "Vitreous China"
+ref Wall y = 0
+ref Centre x = 0
+type "Floor 650" Depth=650mm
+type "Wall-hung 540" Depth=540mm, TankD=120mm, TankH=560mm
+type "Accessible 700" Depth=700mm, Height=480mm
+type "Compact 26in" Width=14in, Depth=26in, Height=15in, TankW=15in, TankD=6in, TankH=30in
+extrude Tank rect(Centre - TankW / 2, Wall, Centre + TankW / 2, Wall + TankD) z(Elevation + Height, Elevation + TankH) mat(China) show(3d, elev)
+blend Pedestal circle(Centre, (TankD + Depth) / 2, 120mm) circle(Centre, (TankD + Depth) / 2, Width / 2 - 20mm) z(Elevation, Elevation + Height - 60mm) mat(China) show(3d, elev)
+extrude Back rect(Centre - Width / 2 + 40mm, Wall, Centre + Width / 2 - 40mm, (TankD + Depth) / 2) z(Elevation + 100mm, Elevation + Height - 60mm) mat(China) show(medium, fine, 3d, elev)
+extrude Seat circle(Centre, (TankD + Depth) / 2, Width / 2) z(Elevation + Height - 60mm, Elevation + Height) mat(China) show(3d, elev)
+symbol rect(Centre - TankW / 2, Wall, Centre + TankW / 2, Wall + TankD)
+symbol circle(Centre, (TankD + Depth) / 2, Width / 2)
+symbol line(Centre - Width / 2, (TankD + Depth) / 2, Centre - Width / 2 + 40mm, Wall + TankD) show(medium, fine)
+symbol line(Centre + Width / 2, (TankD + Depth) / 2, Centre + Width / 2 - 40mm, Wall + TankD) show(medium, fine)
+connector Waste pipe sanitary at(Centre, Wall + 150mm, Elevation) dir(0, 0, -1) size(100mm)
+connector Cold pipe cold_water at(Centre + TankW / 2 - 50mm, Wall, Elevation + TankH - 100mm) dir(0, -1, 0) size(15mm)
+---
+family Washbasin
+category plumbing
+host wall
+ifc IfcSanitaryTerminal WASHHANDBASIN
+param FlowCold number type 0.07
+param FlowHot number type 0.07
+param FlowWaste number type 0.3
+param Radius length type 250mm
+param Bowl length type 180mm
+param Shell length type 15mm
+param Rim length instance 850mm
+param China material type "Vitreous China"
+param Gap length type 30mm
+ref Wall y = 0
+ref Axis y = Gap + Radius
+type "500" Radius=250mm
+type "600" Radius=300mm, Bowl=200mm
+type "20in" Radius=10in, Bowl=7in, Shell=0.6in, Gap=1.2in
+revolve Bowl poly(0, Rim - Bowl, Radius, Rim - Bowl, Radius, Rim, Radius - Shell, Rim, Radius - Shell, Rim - Bowl + Shell, 0, Rim - Bowl + Shell) axis(0, Axis) mat(China) show(3d, elev)
+extrude Bracket rect(-60mm, Wall, 60mm, Gap) z(Rim - Bowl, Rim - 20mm) mat(China) show(medium, fine, 3d, elev)
+symbol circle(0, Axis, Radius)
+symbol circle(0, Axis, Radius - Shell) show(medium, fine)
+symbol line(-60mm, Wall, 60mm, Wall) show(fine)
+connector Waste pipe sanitary at(0, Axis, Rim - Bowl) dir(0, 0, -1) size(40mm)
+connector Cold pipe cold_water at(-50mm, Wall, Rim - Bowl - 100mm) dir(0, -1, 0) size(15mm)
+connector Hot pipe hot_water at(50mm, Wall, Rim - Bowl - 100mm) dir(0, -1, 0) size(15mm)
+---
+family Bathtub
+category plumbing
+host floor
+ifc IfcSanitaryTerminal BATH
+param FlowCold number type 0.3
+param FlowHot number type 0.2
+param FlowWaste number type 0.6
+param Length length type 1700mm
+param Width length type 750mm
+param Height length type 560mm
+param Wall length type 60mm
+param Bottom length type 60mm
+param Acrylic material type "Acrylic White"
+param Capacity volume type = (Length - 2 * Wall) * (Width - 2 * Wall) * (Height - Bottom) * 0.8
+ref Left x = -Length / 2
+ref Right x = Length / 2
+ref Front y = -Width / 2
+ref Back y = Width / 2
+type "1700x750" Length=1700mm, Width=750mm
+type "1500x700" Length=1500mm, Width=700mm
+type "60x30in" Length=60in, Width=30in, Height=22in, Wall=2.5in, Bottom=2.5in
+extrude Base rect(Left, Front, Right, Back) z(0, Bottom) mat(Acrylic) show(3d, elev)
+extrude SideF rect(Left, Front, Right, Front + Wall) z(Bottom, Height) mat(Acrylic) show(3d, elev)
+extrude SideB rect(Left, Back - Wall, Right, Back) z(Bottom, Height) mat(Acrylic) show(3d, elev)
+extrude EndL rect(Left, Front + Wall, Left + Wall, Back - Wall) z(Bottom, Height) mat(Acrylic) show(3d, elev)
+extrude EndR rect(Right - Wall, Front + Wall, Right, Back - Wall) z(Bottom, Height) mat(Acrylic) show(3d, elev)
+symbol rect(Left, Front, Right, Back)
+symbol rect(Left + Wall, Front + Wall, Right - Wall, Back - Wall)
+symbol circle(Right - Wall - 100mm, 0, 25mm) show(medium, fine)
+connector Waste pipe sanitary at(Right - Wall - 100mm, 0, 0) dir(0, 0, -1) size(40mm)
+connector Cold pipe cold_water at(Right - Wall - 50mm, Back, Height - 100mm) dir(0, 1, 0) size(15mm)
+connector Hot pipe hot_water at(Right - Wall - 150mm, Back, Height - 100mm) dir(0, 1, 0) size(15mm)
+---
+family Kitchen Counter
+category casework
+host floor
+ifc IfcFurniture NOTDEFINED
+param Length length type 1200mm
+param Depth length type 600mm
+param Height length type 900mm
+param Worktop length type 38mm
+param Overhang length type 20mm
+param Plinth length type 100mm
+param Toe length type 50mm
+param Carcass material type "Melamine White"
+param Stone material type "Quartz"
+ref Left x = 0
+ref Right x = Length
+ref Front y = 0
+ref Back y = Depth
+type "300" Length=300mm
+type "450" Length=450mm
+type "600" Length=600mm
+type "900" Length=900mm
+type "1200" Length=1200mm
+type "36in" Length=36in, Depth=24in, Height=36in, Worktop=1.5in, Overhang=1in, Plinth=4in, Toe=3in
+extrude Plinth rect(Left, Front + Overhang + Toe, Right, Back) z(0, Plinth) mat(Carcass) show(3d, elev)
+extrude Cabinet rect(Left, Front + Overhang, Right, Back) z(Plinth, Height - Worktop) mat(Carcass) show(3d, elev)
+extrude Worktop rect(Left, Front, Right, Back) z(Height - Worktop, Height) mat(Stone) show(3d, elev)
+symbol rect(Left, Front, Right, Back)
+symbol line(Left, Front + Overhang, Right, Front + Overhang) show(medium, fine)
+---
+family Sink
+category plumbing
+host floor
+ifc IfcSanitaryTerminal SINK
+param FlowCold number type 0.1
+param FlowHot number type 0.1
+param FlowWaste number type 0.6
+param Width length type 600mm
+param Depth length type 450mm
+param BowlD length type 180mm
+param Rim length type 30mm
+param Shell length type 1mm
+param Top length instance 900mm
+param Steel material type "Stainless Steel"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Back y = Depth / 2
+type "600x450" Width=600mm, Depth=450mm
+type "800x500" Width=800mm, Depth=500mm, BowlD=200mm
+type "24x18in" Width=24in, Depth=18in, BowlD=7in, Rim=1.2in, Shell=0.04in
+extrude RimF rect(Left, Front, Right, Front + Rim) z(Top - Shell, Top) mat(Steel) show(3d, elev)
+extrude RimB rect(Left, Back - Rim, Right, Back) z(Top - Shell, Top) mat(Steel) show(3d, elev)
+extrude RimL rect(Left, Front + Rim, Left + Rim, Back - Rim) z(Top - Shell, Top) mat(Steel) show(3d, elev)
+extrude RimR rect(Right - Rim, Front + Rim, Right, Back - Rim) z(Top - Shell, Top) mat(Steel) show(3d, elev)
+extrude Floor rect(Left + Rim, Front + Rim, Right - Rim, Back - Rim) z(Top - BowlD, Top - BowlD + Shell) mat(Steel) show(3d, elev)
+extrude WallF rect(Left + Rim, Front + Rim, Right - Rim, Front + Rim + Shell) z(Top - BowlD + Shell, Top - Shell) mat(Steel) show(medium, fine, 3d, elev)
+extrude WallB rect(Left + Rim, Back - Rim - Shell, Right - Rim, Back - Rim) z(Top - BowlD + Shell, Top - Shell) mat(Steel) show(medium, fine, 3d, elev)
+extrude WallL rect(Left + Rim, Front + Rim + Shell, Left + Rim + Shell, Back - Rim - Shell) z(Top - BowlD + Shell, Top - Shell) mat(Steel) show(medium, fine, 3d, elev)
+extrude WallR rect(Right - Rim - Shell, Front + Rim + Shell, Right - Rim, Back - Rim - Shell) z(Top - BowlD + Shell, Top - Shell) mat(Steel) show(medium, fine, 3d, elev)
+symbol rect(Left, Front, Right, Back)
+symbol rect(Left + Rim, Front + Rim, Right - Rim, Back - Rim)
+symbol circle(0, 0, 25mm) show(medium, fine)
+connector Waste pipe sanitary at(0, 0, Top - BowlD) dir(0, 0, -1) size(40mm)
+connector Cold pipe cold_water at(-50mm, Back, Top - BowlD - 100mm) dir(0, 1, 0) size(15mm)
+connector Hot pipe hot_water at(50mm, Back, Top - BowlD - 100mm) dir(0, 1, 0) size(15mm)
+---
+family Ceiling Light
+category lighting
+host ceiling
+ifc IfcLightFixture POINTSOURCE
+param Diameter length type 300mm
+param Height length type 80mm
+param Drop length instance 0mm
+param Power number type 18
+param Flux number type 2000
+param Diffuser material type "Opal Acrylic"
+type "Round 300" Diameter=300mm, Power=18, Flux=2000
+type "Round 600" Diameter=600mm, Height=100mm, Power=36, Flux=4000
+type "Round 300 EM" Diameter=300mm, Power=18, Flux=2000
+type "Round 600 EM" Diameter=600mm, Height=100mm, Power=36, Flux=4000
+type "12in" Diameter=12in, Height=3in, Power=15, Flux=1300
+revolve Body rect(0, -Drop - Height, Diameter / 2, -Drop) mat(Diffuser) show(3d, elev)
+symbol circle(0, 0, Diameter / 2)
+symbol line(-Diameter / 2, 0, Diameter / 2, 0) show(medium, fine)
+symbol line(0, -Diameter / 2, 0, Diameter / 2) show(medium, fine)
+connector Power conduit power at(0, 0, -Drop) dir(0, 0, 1) size(20mm)
+---
+family Radiator
+category equipment
+host wall
+ifc IfcSpaceHeater RADIATOR
+param Flow number type 0.03
+param Length length type 1000mm
+param Height length type 500mm
+param Depth length type 100mm
+param Gap length type 40mm
+param Elevation length instance 150mm
+param Section length type 50mm
+param Sections int type = round(Length / Section)
+param Pipe length type 10mm
+param Steel material type "Steel White"
+ref Left x = -Length / 2
+ref Right x = Length / 2
+ref Wall y = 0
+type "600x500" Length=600mm
+type "1000x500" Length=1000mm
+type "40x20in" Length=40in, Height=20in, Depth=4in, Gap=1.5in, Elevation=6in, Section=2in, Pipe=0.4in
+extrude Panel rect(Left, Wall + Gap, Right, Wall + Gap + Depth) z(Elevation, Elevation + Height) mat(Steel) show(3d, elev)
+sweep Supply circle(0, 0, Pipe) path(Left + 30mm, Wall + Gap + Depth / 2, Elevation, Left + 30mm, Wall + Gap + Depth / 2, 30mm, Left + 30mm, Wall, 30mm) mat(Steel) show(3d, elev)
+sweep Return circle(0, 0, Pipe) path(Right - 30mm, Wall + Gap + Depth / 2, Elevation, Right - 30mm, Wall + Gap + Depth / 2, 30mm, Right - 30mm, Wall, 30mm) mat(Steel) show(3d, elev)
+symbol rect(Left, Wall + Gap, Right, Wall + Gap + Depth)
+connector Supply pipe heating at(Left + 30mm, Wall, 30mm) dir(0, -1, 0) size(15mm)
+connector Return pipe heating at(Right - 30mm, Wall, 30mm) dir(0, -1, 0) size(15mm)
+---
+family Generic Box
+category generic
+host face
+ifc IfcBuildingElementProxy ELEMENT
+param Width length instance 500mm
+param Depth length instance 500mm
+param Height length instance 500mm
+param Finish material instance "Default"
+type "Box" Width=500mm
+extrude Body rect(-Width / 2, -Depth / 2, Width / 2, Depth / 2) z(0, Height) mat(Finish)
+symbol rect(-Width / 2, -Depth / 2, Width / 2, Depth / 2)
+---
+family Supply Diffuser
+category air_terminal
+host ceiling
+ifc IfcAirTerminal DIFFUSER
+param Size length type 600mm
+param NeckD length type 250mm
+param NeckH length type 200mm
+param Face length type 30mm
+param Flow number type 300
+param Finish material type "Steel White"
+type "600x600" Size=600mm, NeckD=250mm, Flow=400
+type "300x300" Size=300mm, NeckD=160mm, Flow=150
+type "24x24 in" Size=610mm, NeckD=250mm, Flow=400
+extrude Plate rect(-Size / 2, -Size / 2, Size / 2, Size / 2) z(-Face, 0mm) mat(Finish) show(3d, elev)
+revolve Neck rect(0, 0mm, NeckD / 2, NeckH) mat(Finish) show(3d, elev)
+symbol rect(-Size / 2, -Size / 2, Size / 2, Size / 2)
+symbol line(-Size / 2, -Size / 2, Size / 2, Size / 2) show(medium, fine)
+symbol line(-Size / 2, Size / 2, Size / 2, -Size / 2) show(medium, fine)
+connector Air duct at(0, 0, NeckH) dir(0, 0, 1) size(NeckD)
+---
+family Exhaust Grille
+category air_terminal
+host ceiling
+ifc IfcAirTerminal GRILLE
+param Size length type 400mm
+param NeckD length type 200mm
+param NeckH length type 150mm
+param Face length type 25mm
+param Flow number type 200
+param Finish material type "Steel White"
+type "400x400" Size=400mm, NeckD=200mm, Flow=200
+type "200x200" Size=200mm, NeckD=125mm, Flow=80
+type "16x16 in" Size=406mm, NeckD=200mm, Flow=200
+extrude Plate rect(-Size / 2, -Size / 2, Size / 2, Size / 2) z(-Face, 0mm) mat(Finish) show(3d, elev)
+revolve Neck rect(0, 0mm, NeckD / 2, NeckH) mat(Finish) show(3d, elev)
+symbol rect(-Size / 2, -Size / 2, Size / 2, Size / 2)
+symbol line(-Size / 2, 0mm, Size / 2, 0mm) show(medium, fine)
+connector Air duct at(0, 0, NeckH) dir(0, 0, 1) size(NeckD)
+---
+family Air Handling Unit
+category equipment
+host floor
+ifc IfcUnitaryEquipment AIRHANDLER
+param Length length type 2000mm
+param Width length type 1000mm
+param Height length type 1400mm
+param PortD length type 400mm
+param Source number type 1
+param Casing material type "Steel White"
+type "2000x1000" Length=2000mm
+type "3000x1400" Length=3000mm, Width=1400mm, Height=1800mm, PortD=630mm
+type "118x55 in" Length=3000mm, Width=1400mm, Height=1800mm, PortD=630mm
+type "900x600" Length=900mm, Width=600mm, Height=500mm, PortD=160mm
+extrude RailFront rect(-Length / 2, -Width / 2 + 20mm, Length / 2, -Width / 2 + 120mm) z(0mm, 100mm) mat(Casing) show(3d, elev)
+extrude RailBack rect(-Length / 2, Width / 2 - 100mm, Length / 2, Width / 2) z(0mm, 100mm) mat(Casing) show(3d, elev)
+extrude Body rect(-Length / 2, -Width / 2 + 20mm, Length / 2, Width / 2) z(100mm, Height - 40mm) mat(Casing) show(3d, elev)
+extrude Roof rect(-Length / 2 + 10mm, -Width / 2 + 30mm, Length / 2 - 10mm, Width / 2 - 10mm) z(Height - 40mm, Height) mat(Casing) show(3d, elev)
+extrude PanelA rect(-Length / 2 + 40mm, -Width / 2, -15mm, -Width / 2 + 20mm) z(140mm, Height - 80mm) mat(Casing) show(medium, fine, 3d, elev)
+extrude PanelB rect(15mm, -Width / 2, Length / 2 - 40mm, -Width / 2 + 20mm) z(140mm, Height - 80mm) mat(Casing) show(medium, fine, 3d, elev)
+extrude HandleA rect(-80mm, -Width / 2, -60mm, -Width / 2 + 20mm) z(Height / 2 - 150mm, Height / 2 + 150mm) mat(Casing) show(fine, 3d, elev)
+extrude HandleB rect(60mm, -Width / 2, 80mm, -Width / 2 + 20mm) z(Height / 2 - 150mm, Height / 2 + 150mm) mat(Casing) show(fine, 3d, elev)
+symbol rect(-Length / 2, -Width / 2, Length / 2, Width / 2)
+symbol line(-Length / 2, -Width / 2, Length / 2, Width / 2) show(medium, fine)
+connector Supply duct supply_air at(Length / 4, 0, Height) dir(0, 0, 1) size(PortD)
+connector Return duct return_air at(-Length / 4, 0, Height) dir(0, 0, 1) size(PortD)
+---
+family VAV Box
+category equipment
+host ceiling
+ifc IfcAirTerminalBox VARIABLEFLOWPRESSUREDEPENDANT
+param Length length type 900mm
+param Width length type 450mm
+param Height length type 300mm
+param Drop length type 200mm
+param InletD length type 250mm
+param Flow number type 600
+param Casing material type "Steel White"
+type "160" Width=350mm, Height=250mm, InletD=160mm, Flow=250
+type "250" InletD=250mm, Flow=600
+type "315" Length=1100mm, Width=550mm, Height=350mm, InletD=315mm, Flow=1100
+type "10in" Length=36in, Width=18in, Height=10in, InletD=10in, Flow=600
+extrude Body rect(-Length / 2 + 80mm, -Width / 2 + 15mm, Length / 2 - 20mm, Width / 2 - 15mm) z(Drop, Drop + Height) mat(Casing) show(3d, elev)
+extrude Flange rect(Length / 2 - 20mm, -Width / 2, Length / 2, Width / 2) z(Drop, Drop + Height) mat(Casing) show(3d, elev)
+sweep Collar circle(0, 0, InletD / 2) path(-Length / 2, 0, Drop + Height / 2, -Length / 2 + 80mm, 0, Drop + Height / 2) mat(Casing) show(3d, elev)
+extrude Actuator rect(-Length / 2 + 100mm, Width / 2 - 15mm, -Length / 2 + 260mm, Width / 2) z(Drop + 60mm, Drop + Height - 60mm) mat(Casing) show(medium, fine, 3d, elev)
+symbol rect(-Length / 2, -Width / 2, Length / 2, Width / 2)
+symbol line(-Length / 2, 0mm, Length / 2, 0mm) show(medium, fine)
+connector Inlet duct supply_air at(-Length / 2, 0, Drop + Height / 2) dir(-1, 0, 0) size(InletD)
+---
+family Fan Coil Unit
+category equipment
+host ceiling
+ifc IfcUnitaryEquipment AIRCONDITIONINGUNIT
+param Length length type 1000mm
+param Width length type 600mm
+param Height length type 250mm
+param PortD length type 200mm
+param Flow number type 680
+param Casing material type "Steel White"
+type "FC-02" Length=800mm, PortD=160mm, Flow=340
+type "FC-04" Flow=680
+type "FC-06" Length=1300mm, PortD=250mm, Flow=1020
+type "FC-32in" Length=32in, PortD=8in, Flow=500
+extrude Body rect(-Length / 2 + 30mm, -Width / 2, Length / 2 - 30mm, Width / 2) z(20mm, Height) mat(Casing) show(3d, elev)
+extrude EndLeft rect(-Length / 2, -Width / 2 + 20mm, -Length / 2 + 30mm, Width / 2 - 20mm) z(40mm, Height - 20mm) mat(Casing) show(3d, elev)
+extrude EndRight rect(Length / 2 - 30mm, -Width / 2 + 20mm, Length / 2, Width / 2 - 20mm) z(40mm, Height - 20mm) mat(Casing) show(3d, elev)
+extrude Pan rect(-Length / 2 + 30mm, -Width / 2, Length / 2 - 30mm, -Width / 2 + 120mm) z(0mm, 20mm) mat(Casing) show(3d, elev)
+extrude SlatA rect(-Length / 2 + 80mm, -Width / 2 + 180mm, Length / 2 - 80mm, -Width / 2 + 200mm) z(0mm, 20mm) mat(Casing) show(medium, fine, 3d, elev)
+extrude SlatB rect(-Length / 2 + 80mm, -Width / 2 + 260mm, Length / 2 - 80mm, -Width / 2 + 280mm) z(0mm, 20mm) mat(Casing) show(medium, fine, 3d, elev)
+extrude SlatC rect(-Length / 2 + 80mm, -Width / 2 + 340mm, Length / 2 - 80mm, -Width / 2 + 360mm) z(0mm, 20mm) mat(Casing) show(medium, fine, 3d, elev)
+symbol rect(-Length / 2, -Width / 2, Length / 2, Width / 2)
+symbol line(-Length / 2, -Width / 2, Length / 2, Width / 2) show(medium, fine)
+connector Supply duct supply_air at(Length / 4, 0, Height) dir(0, 0, 1) size(PortD)
+connector Return duct return_air at(-Length / 4, 0, Height) dir(0, 0, 1) size(PortD)
+---
+family Socket Outlet
+category electrical
+host wall
+ifc IfcOutlet POWEROUTLET
+param Width length type 80mm
+param Height length type 80mm
+param Depth length type 12mm
+param Power number type 200
+param Finish material type "Steel White"
+type "Single" Width=80mm, Power=200
+type "Double" Width=150mm, Power=400
+extrude Plate poly(-Width / 2 + 4mm, 0mm, Width / 2 - 4mm, 0mm, Width / 2, 4mm, Width / 2, Depth - 6mm, Width / 2 - 4mm, Depth - 4mm, -Width / 2 + 4mm, Depth - 4mm, -Width / 2, Depth - 6mm, -Width / 2, 4mm) z(0mm, Height) mat(Finish) show(3d, elev)
+sweep Face circle(0, 0, 22mm) path(0, Depth - 4mm, Height / 2, 0, Depth, Height / 2) mat(Finish) show(3d, elev)
+symbol rect(-Width / 2, 0mm, Width / 2, 60mm)
+symbol line(-Width / 2, 60mm, Width / 2, 60mm) show(medium, fine)
+connector Power conduit power at(0, 0, Height / 2) dir(0, -1, 0) size(20mm)
+---
+family Medical Gas Outlet
+category plumbing
+host wall
+ifc IfcMedicalDevice USERDEFINED
+param Width length type 120mm
+param Height length type 120mm
+param Depth length type 60mm
+param Port length type 15mm
+param Finish material type "Steel White"
+type "DISS" Port=15mm
+type "Quick connect" Width=140mm, Height=140mm, Port=22mm
+type "Wide 6 in" Width=6in, Height=6in, Port=1in
+extrude Plate rect(-Width / 2, 0mm, Width / 2, Depth) z(0mm, Height) mat(Finish) show(3d, elev)
+symbol rect(-Width / 2, 0mm, Width / 2, Depth)
+symbol line(-Width / 2, 0mm, Width / 2, Depth) show(medium, fine)
+connector Gas pipe medical_gas at(0, 0, Height / 2) dir(0, -1, 0) size(Port)
+---
+family Light Switch
+category electrical
+host wall
+ifc IfcSwitchingDevice TOGGLESWITCH
+param Width length type 80mm
+param Height length type 80mm
+param Depth length type 12mm
+param Finish material type "Steel White"
+type "One gang" Width=80mm
+type "Two gang" Width=150mm
+type "Three gang 9 in" Width=225mm
+extrude Plate poly(-Width / 2 + 4mm, 0mm, Width / 2 - 4mm, 0mm, Width / 2, 4mm, Width / 2, Depth - 6mm, Width / 2 - 4mm, Depth - 4mm, -Width / 2 + 4mm, Depth - 4mm, -Width / 2, Depth - 6mm, -Width / 2, 4mm) z(0mm, Height) mat(Finish) show(3d, elev)
+extrude Rocker rect(-22mm, Depth - 4mm, 22mm, Depth) z(Height / 2 - 26mm, Height / 2 + 26mm) mat(Finish) show(3d, elev)
+symbol circle(0, 60mm, 30mm)
+symbol line(0, 0mm, 0, 30mm) show(medium, fine)
+connector Power conduit power at(0, 0, Height / 2) dir(0, -1, 0) size(20mm)
+---
+family Distribution Board
+category electrical
+host wall
+ifc IfcElectricDistributionBoard DISTRIBUTIONBOARD
+param Width length type 400mm
+param Height length type 600mm
+param Depth length type 120mm
+param Source number type 1
+param Casing material type "Steel White"
+type "400x600" Width=400mm, Height=600mm
+type "600x800" Width=600mm, Height=800mm, Depth=200mm
+type "24x32 in" Width=610mm, Height=813mm, Depth=200mm
+type "Sub 400x600" Width=400mm, Height=600mm, Source=0
+extrude Body rect(-Width / 2, 0mm, Width / 2, Depth - 15mm) z(0mm, Height) mat(Casing) show(3d, elev)
+extrude Door rect(-Width / 2 + 10mm, Depth - 15mm, Width / 2 - 10mm, Depth - 4mm) z(10mm, Height - 10mm) mat(Casing) show(3d, elev)
+extrude Hinge rect(-Width / 2 + 10mm, Depth - 4mm, -Width / 2 + 25mm, Depth) z(10mm, Height - 10mm) mat(Casing) show(3d, elev)
+extrude Window rect(-Width / 2 + 50mm, Depth - 4mm, Width / 2 - 50mm, Depth) z(Height / 2, Height - 60mm) mat(Casing) show(fine, 3d, elev)
+extrude Lock rect(Width / 2 - 45mm, Depth - 4mm, Width / 2 - 30mm, Depth) z(Height / 2 - 40mm, Height / 2 + 40mm) mat(Casing) show(medium, fine, 3d, elev)
+symbol rect(-Width / 2, 0mm, Width / 2, Depth)
+symbol line(-Width / 2, 0mm, Width / 2, Depth) show(medium, fine)
+connector Main conduit power at(0, Depth / 2, Height) dir(0, 0, 1) size(50mm)
+---
+family Shower Tray
+category plumbing
+host floor
+ifc IfcSanitaryTerminal SHOWER
+param FlowCold number type 0.1
+param FlowWaste number type 0.6
+param Width length type 900mm
+param Depth length type 900mm
+param TrayH length type 80mm
+param ScreenH length type 1900mm
+param Glass length type 8mm
+param Edge length type 30mm
+param Ceramic material type "Vitreous China"
+param Pane material type "Glass Clear"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Back y = Depth / 2
+type "900x900" Width=900mm, Depth=900mm
+type "800x800" Width=800mm, Depth=800mm
+type "36x36in" Width=36in, Depth=36in, TrayH=3in, ScreenH=75in, Glass=0.3in, Edge=1.2in
+extrude Tray rect(Left, Front, Right, Back) z(0, TrayH) mat(Ceramic) show(3d, elev)
+extrude ScreenBack rect(Left, Back - Glass, Right, Back) z(TrayH, ScreenH) mat(Pane) show(3d, elev)
+extrude ScreenRight rect(Right - Glass, Front, Right, Back - Glass) z(TrayH, ScreenH) mat(Pane) show(3d, elev)
+symbol rect(Left, Front, Right, Back)
+symbol circle(0, 0, 40mm)
+symbol line(Left + Edge, Front + Edge, Right - Edge, Front + Edge) show(medium, fine)
+symbol line(Left, Back - Glass, Right, Back - Glass) show(medium, fine)
+connector Waste pipe sanitary at(0, 0, 0) dir(0, 0, -1) size(50mm)
+connector Cold pipe cold_water at(Right - 100mm, Back, 1000mm) dir(0, 1, 0) size(15mm)
+connector Hot pipe hot_water at(Right - 250mm, Back, 1000mm) dir(0, 1, 0) size(15mm)
+---
+family Urinal
+category plumbing
+host wall
+ifc IfcSanitaryTerminal URINAL
+param FlowCold number type 0.05
+param FlowWaste number type 0.5
+param Width length type 360mm
+param Depth length type 350mm
+param Height length type 650mm
+param Elevation length instance 600mm
+param Rim length type 40mm
+param China material type "Vitreous China"
+ref Wall y = 0
+ref Centre x = 0
+type "Standard 360" Width=360mm, Depth=350mm, Height=650mm
+type "Standard 14in" Width=14in, Depth=14in, Height=26in, Elevation=24in, Rim=1.5in
+extrude Back rect(Centre - Width / 2, Wall, Centre + Width / 2, Wall + Rim) z(Elevation, Elevation + Height) mat(China) show(3d, elev)
+blend Bowl circle(Centre, Wall + Width / 2 - 20mm, Width / 2 - 20mm) circle(Centre, Wall + Depth / 2, Width / 2) z(Elevation + 100mm, Elevation + Height - 60mm) mat(China) show(3d, elev)
+extrude Lip rect(Centre - Width / 2, Wall + Depth - Rim, Centre + Width / 2, Wall + Depth) z(Elevation + 100mm, Elevation + 200mm) mat(China) show(medium, fine, 3d, elev)
+symbol rect(Centre - Width / 2, Wall, Centre + Width / 2, Wall + Depth)
+symbol circle(Centre, Wall + Depth / 2, Width / 3) show(medium, fine)
+connector Waste pipe sanitary at(Centre, Wall, Elevation + 100mm) dir(0, -1, 0) size(50mm)
+connector Cold pipe cold_water at(Centre, Wall, Elevation + Height) dir(0, -1, 0) size(15mm)
+---
+family Hospital Bed
+category furniture
+host floor
+ifc IfcFurniture BED
+param Width length type 900mm
+param Length length type 2100mm
+param LegH length type 250mm
+param Frame length type 120mm
+param MattressH length type 150mm
+param Leg length type 50mm
+param Board length type 40mm
+param HeadH length type 900mm
+param FootH length type 700mm
+param RailH length type 350mm
+param RailT length type 30mm
+param Steel material type "Steel White"
+param Mattress material type "Textile"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Foot y = -Length / 2
+ref HeadEnd y = Length / 2
+type "900x2100" Width=900mm, Length=2100mm
+type "36x84in" Width=36in, Length=84in, LegH=10in, Frame=4.5in, MattressH=6in, Leg=2in, Board=1.5in, HeadH=36in, FootH=28in, RailH=14in, RailT=1.2in
+extrude Leg1 rect(Left + 40mm, Foot + 40mm, Left + 40mm + Leg, Foot + 40mm + Leg) z(0, LegH) mat(Steel) show(medium, fine, 3d, elev)
+extrude Leg2 rect(Right - 40mm - Leg, Foot + 40mm, Right - 40mm, Foot + 40mm + Leg) z(0, LegH) mat(Steel) show(medium, fine, 3d, elev)
+extrude Leg3 rect(Right - 40mm - Leg, HeadEnd - 40mm - Leg, Right - 40mm, HeadEnd - 40mm) z(0, LegH) mat(Steel) show(medium, fine, 3d, elev)
+extrude Leg4 rect(Left + 40mm, HeadEnd - 40mm - Leg, Left + 40mm + Leg, HeadEnd - 40mm) z(0, LegH) mat(Steel) show(medium, fine, 3d, elev)
+extrude Frame rect(Left + 20mm, Foot + 20mm, Right - 20mm, HeadEnd - 20mm) z(LegH, LegH + Frame) mat(Steel) show(3d, elev)
+extrude Mattress rect(Left + 40mm, Foot + Board, Right - 40mm, HeadEnd - Board) z(LegH + Frame, LegH + Frame + MattressH) mat(Mattress) show(3d, elev)
+extrude Headboard rect(Left + 20mm, HeadEnd - Board, Right - 20mm, HeadEnd) z(LegH, HeadH) mat(Steel) show(3d, elev)
+extrude Footboard rect(Left + 20mm, Foot, Right - 20mm, Foot + Board) z(LegH, FootH) mat(Steel) show(3d, elev)
+extrude RailL rect(Left, Foot + Length / 4, Left + RailT, HeadEnd - Length / 6) z(LegH + Frame + MattressH, LegH + Frame + MattressH + RailH) mat(Steel) show(3d, elev)
+extrude RailR rect(Right - RailT, Foot + Length / 4, Right, HeadEnd - Length / 6) z(LegH + Frame + MattressH, LegH + Frame + MattressH + RailH) mat(Steel) show(3d, elev)
+symbol rect(Left, Foot, Right, HeadEnd)
+symbol line(Left, HeadEnd - Board, Right, HeadEnd - Board)
+symbol rect(Left + 100mm, HeadEnd - Board - 450mm, Right - 100mm, HeadEnd - Board - 100mm) show(medium, fine)
+symbol line(Left, Foot + Length / 4, Left, HeadEnd - Length / 6) show(medium, fine)
+symbol line(Right, Foot + Length / 4, Right, HeadEnd - Length / 6) show(medium, fine)
+---
+family Storage Rack
+category casework
+host floor
+ifc IfcFurniture NOTDEFINED
+param Width length type 2700mm
+param Depth length type 1100mm
+param Height length type 4500mm
+param Levels int type 4
+param Post length type 90mm
+param Beam length type 120mm
+param Frame material type "Steel Blue"
+param Beams material type "Steel Orange"
+param Pitch length type = (Height - Beam) / Levels
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Back y = Depth / 2
+type "2700x1100x4500" Width=2700mm, Depth=1100mm, Height=4500mm, Levels=4
+type "1800x600x2400" Width=1800mm, Depth=600mm, Height=2400mm, Levels=3, Post=60mm, Beam=80mm
+type "108x44x180in" Width=108in, Depth=44in, Height=180in, Levels=4, Post=3.5in, Beam=4.7in
+extrude Post1 rect(Left, Front, Left + Post, Front + Post) z(0, Height) mat(Frame) show(3d, elev)
+extrude Post2 rect(Left, Back - Post, Left + Post, Back) z(0, Height) mat(Frame) show(3d, elev)
+extrude Post3 rect(Right - Post, Front, Right, Front + Post) z(0, Height) mat(Frame) show(3d, elev)
+extrude Post4 rect(Right - Post, Back - Post, Right, Back) z(0, Height) mat(Frame) show(3d, elev)
+extrude Post5 rect(-Post / 2, Front, Post / 2, Front + Post) z(0, Height) mat(Frame) show(3d, elev)
+extrude Post6 rect(-Post / 2, Back - Post, Post / 2, Back) z(0, Height) mat(Frame) show(3d, elev)
+extrude Beam1F rect(Left, Front, Right, Front + Post) z(Pitch - Beam / 2, Pitch + Beam / 2) mat(Beams) show(3d, elev)
+extrude Beam1B rect(Left, Back - Post, Right, Back) z(Pitch - Beam / 2, Pitch + Beam / 2) mat(Beams) show(3d, elev)
+extrude Beam2F rect(Left, Front, Right, Front + Post) z(2 * Pitch - Beam / 2, 2 * Pitch + Beam / 2) mat(Beams) show(3d, elev)
+extrude Beam2B rect(Left, Back - Post, Right, Back) z(2 * Pitch - Beam / 2, 2 * Pitch + Beam / 2) mat(Beams) show(3d, elev)
+extrude Beam3F rect(Left, Front, Right, Front + Post) z(3 * Pitch - Beam / 2, 3 * Pitch + Beam / 2) mat(Beams) show(3d, elev)
+extrude Beam3B rect(Left, Back - Post, Right, Back) z(3 * Pitch - Beam / 2, 3 * Pitch + Beam / 2) mat(Beams) show(3d, elev)
+extrude BeamTopF rect(Left, Front, Right, Front + Post) z(Height - Beam, Height) mat(Beams) show(3d, elev)
+extrude BeamTopB rect(Left, Back - Post, Right, Back) z(Height - Beam, Height) mat(Beams) show(3d, elev)
+symbol rect(Left, Front, Right, Back)
+symbol line(0, Front, 0, Back) show(medium, fine)
+symbol line(Left, 0, Right, 0) show(fine)
+---
+family Car
+category generic
+host floor
+ifc IfcBuildingElementProxy ELEMENT
+param Width length type 1800mm
+param Length length type 4700mm
+param BodyH length type 700mm
+param Ground length type 150mm
+param CabinH length type 550mm
+param WheelD length type 650mm
+param WheelW length type 220mm
+param Paint material type "Car Paint"
+param Tyre material type "Rubber Black"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Length / 2
+ref Rear y = Length / 2
+type "Sedan 1800x4700" Width=1800mm, Length=4700mm
+type "Sedan 71x185in" Width=71in, Length=185in, BodyH=27.5in, Ground=6in, CabinH=21.5in, WheelD=25.5in, WheelW=8.5in
+extrude Body rect(Left + 40mm, Front, Right - 40mm, Rear) z(Ground, Ground + BodyH) mat(Paint) show(3d, elev)
+extrude Cabin rect(Left + 150mm, Front + Length * 0.3, Right - 150mm, Rear - Length * 0.2) z(Ground + BodyH, Ground + BodyH + CabinH) mat(Paint) show(3d, elev)
+extrude WheelFL rect(Left, Front + 800mm, Left + WheelW, Front + 800mm + WheelD) z(0, WheelD) mat(Tyre) show(3d, elev)
+extrude WheelFR rect(Right - WheelW, Front + 800mm, Right, Front + 800mm + WheelD) z(0, WheelD) mat(Tyre) show(3d, elev)
+extrude WheelRL rect(Left, Rear - 800mm - WheelD, Left + WheelW, Rear - 800mm) z(0, WheelD) mat(Tyre) show(3d, elev)
+extrude WheelRR rect(Right - WheelW, Rear - 800mm - WheelD, Right, Rear - 800mm) z(0, WheelD) mat(Tyre) show(3d, elev)
+symbol rect(Left + 40mm, Front, Right - 40mm, Rear)
+symbol rect(Left + 150mm, Front + Length * 0.3, Right - 150mm, Rear - Length * 0.2) show(medium, fine)
+symbol line(Left + 40mm, Front + Length * 0.3, Right - 40mm, Front + Length * 0.3) show(medium, fine)
+---
+family Reception Desk
+category furniture
+host floor
+ifc IfcFurniture DESK
+param Width length type 2400mm
+param Depth length type 800mm
+param Height length type 1100mm
+param WorkH length type 750mm
+param Top length type 40mm
+param Panel length type 30mm
+param Ledge length type 300mm
+param Board material type "Melamine White"
+param Stone material type "Quartz"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Back y = Depth / 2
+type "2400x800" Width=2400mm, Depth=800mm
+type "96x32in" Width=96in, Depth=32in, Height=43in, WorkH=29.5in, Top=1.5in, Panel=1.2in, Ledge=12in
+extrude Worktop rect(Left, Front + Ledge, Right, Back) z(WorkH - Top, WorkH) mat(Stone) show(3d, elev)
+extrude Counter rect(Left, Front, Right, Front + Ledge) z(Height - Top, Height) mat(Stone) show(3d, elev)
+extrude FrontPanel rect(Left, Front, Right, Front + Panel) z(0, Height - Top) mat(Board) show(3d, elev)
+extrude SideL rect(Left, Front + Panel, Left + Panel, Back) z(0, WorkH - Top) mat(Board) show(3d, elev)
+extrude SideR rect(Right - Panel, Front + Panel, Right, Back) z(0, WorkH - Top) mat(Board) show(3d, elev)
+extrude Riser rect(Left, Front + Ledge - Panel, Right, Front + Ledge) z(WorkH, Height - Top) mat(Board) show(medium, fine, 3d, elev)
+symbol rect(Left, Front, Right, Back)
+symbol line(Left, Front + Ledge, Right, Front + Ledge) show(medium, fine)
+---
+family Locker Bank
+category casework
+host floor
+ifc IfcFurniture NOTDEFINED
+param Width length type 1200mm
+param Depth length type 500mm
+param Height length type 1800mm
+param Doors int type = max(1, round(Width / 300mm))
+param Plinth length type 100mm
+param Wall length type 20mm
+param Gap length type 3mm
+param Metal material type "Steel Grey"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Back y = Depth / 2
+type "1200x500x1800" Width=1200mm, Depth=500mm, Height=1800mm
+type "900x500x1800" Width=900mm, Depth=500mm, Height=1800mm
+type "48x20x72in" Width=48in, Depth=20in, Height=72in, Plinth=4in, Wall=0.75in, Gap=0.1in
+extrude Plinth rect(Left, Front + 30mm, Right, Back) z(0, Plinth) mat(Metal) show(3d, elev)
+extrude Carcass rect(Left, Front + Wall, Right, Back) z(Plinth, Height) mat(Metal) show(3d, elev)
+extrude DoorPlane rect(Left, Front, Right, Front + Wall) z(Plinth + Gap, Height - Gap) mat(Metal) show(3d, elev)
+symbol rect(Left, Front, Right, Back)
+symbol line(Left, Front + Wall, Right, Front + Wall) show(medium, fine)
+symbol line(Left + Width / Doors, Front, Left + Width / Doors, Front + Wall) show(medium, fine)
+---
+family Workbench
+category furniture
+host floor
+ifc IfcFurniture TABLE
+param Width length type 2000mm
+param Depth length type 800mm
+param Height length type 900mm
+param Top length type 50mm
+param Leg length type 70mm
+param ShelfH length type 200mm
+param Shelf length type 30mm
+param Wood material type "Oak"
+param Steel material type "Steel Grey"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Back y = Depth / 2
+type "2000x800" Width=2000mm, Depth=800mm
+type "72x30in" Width=72in, Depth=30in, Height=35in, Top=2in, Leg=2.75in, ShelfH=8in, Shelf=1.2in
+extrude Top rect(Left, Front, Right, Back) z(Height - Top, Height) mat(Wood) show(3d, elev)
+extrude Leg1 rect(Left + 50mm, Front + 50mm, Left + 50mm + Leg, Front + 50mm + Leg) z(0, Height - Top) mat(Steel) show(medium, fine, 3d, elev)
+extrude Leg2 rect(Right - 50mm - Leg, Front + 50mm, Right - 50mm, Front + 50mm + Leg) z(0, Height - Top) mat(Steel) show(medium, fine, 3d, elev)
+extrude Leg3 rect(Right - 50mm - Leg, Back - 50mm - Leg, Right - 50mm, Back - 50mm) z(0, Height - Top) mat(Steel) show(medium, fine, 3d, elev)
+extrude Leg4 rect(Left + 50mm, Back - 50mm - Leg, Left + 50mm + Leg, Back - 50mm) z(0, Height - Top) mat(Steel) show(medium, fine, 3d, elev)
+extrude LowerShelf rect(Left + 50mm, Front + 50mm, Right - 50mm, Back - 50mm) z(ShelfH, ShelfH + Shelf) mat(Wood) show(3d, elev)
+symbol rect(Left, Front, Right, Back)
+symbol rect(Left + 50mm, Front + 50mm, Right - 50mm, Back - 50mm) show(medium, fine)
+---
+family Lab Bench
+category casework
+host floor
+ifc IfcFurniture NOTDEFINED
+param Width length type 3000mm
+param Depth length type 750mm
+param Height length type 900mm
+param Worktop length type 30mm
+param Plinth length type 100mm
+param Upright length type 50mm
+param ShelfH length type 1500mm
+param ShelfD length type 250mm
+param Shelf length type 25mm
+param UprightH length type 1200mm
+param Carcass material type "Melamine White"
+param Resin material type "Epoxy Black"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Back y = Depth / 2
+type "3000x750" Width=3000mm, Depth=750mm
+type "120x30in" Width=120in, Depth=30in, Height=36in, Worktop=1.2in, Plinth=4in, Upright=2in, ShelfH=60in, ShelfD=10in, Shelf=1in, UprightH=48in
+extrude Plinth rect(Left, Front + 50mm, Right, Back) z(0, Plinth) mat(Carcass) show(3d, elev)
+extrude Cabinet rect(Left, Front + 20mm, Right, Back) z(Plinth, Height - Worktop) mat(Carcass) show(3d, elev)
+extrude Worktop rect(Left, Front, Right, Back) z(Height - Worktop, Height) mat(Resin) show(3d, elev)
+extrude UprightL rect(Left, Back - Upright, Left + Upright, Back) z(Height, Height + UprightH) mat(Carcass) show(3d, elev)
+extrude UprightM rect(-Upright / 2, Back - Upright, Upright / 2, Back) z(Height, Height + UprightH) mat(Carcass) show(3d, elev)
+extrude UprightR rect(Right - Upright, Back - Upright, Right, Back) z(Height, Height + UprightH) mat(Carcass) show(3d, elev)
+extrude ReagentShelf rect(Left, Back - ShelfD, Right, Back - Upright) z(Height + 400mm, Height + 400mm + Shelf) mat(Carcass) show(3d, elev)
+symbol rect(Left, Front, Right, Back)
+symbol rect(Left, Back - ShelfD, Right, Back) show(medium, fine)
+symbol line(Left, Front + 20mm, Right, Front + 20mm) show(medium, fine)
+---
+family Shelf Unit
+category casework
+host floor
+ifc IfcFurniture NOTDEFINED
+param Width length type 1200mm
+param Depth length type 900mm
+param Height length type 1600mm
+param Shelves int type 4
+param Base length type 150mm
+param Panel length type 30mm
+param Shelf length type 25mm
+param Spine length type 20mm
+param Pitch length type = (Height - Base - Shelf) / Shelves
+param Steel material type "Steel White"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Back y = Depth / 2
+type "1200x900x1600" Width=1200mm, Depth=900mm, Height=1600mm, Shelves=4
+type "900x600x1400" Width=900mm, Depth=600mm, Height=1400mm, Shelves=3
+type "48x36x64in" Width=48in, Depth=36in, Height=64in, Shelves=4, Base=6in, Panel=1.2in, Shelf=1in, Spine=0.8in
+extrude BaseBlock rect(Left, Front + 50mm, Right, Back - 50mm) z(0, Base) mat(Steel) show(3d, elev)
+extrude SideL rect(Left, Front, Left + Panel, Back) z(Base, Height) mat(Steel) show(3d, elev)
+extrude SideR rect(Right - Panel, Front, Right, Back) z(Base, Height) mat(Steel) show(3d, elev)
+extrude SpineWall rect(Left + Panel, -Spine / 2, Right - Panel, Spine / 2) z(Base, Height) mat(Steel) show(3d, elev)
+extrude Shelf1F rect(Left + Panel, Front, Right - Panel, -Spine / 2) z(Base + Pitch - Shelf, Base + Pitch) mat(Steel) show(3d, elev)
+extrude Shelf1B rect(Left + Panel, Spine / 2, Right - Panel, Back) z(Base + Pitch - Shelf, Base + Pitch) mat(Steel) show(3d, elev)
+extrude Shelf2F rect(Left + Panel, Front, Right - Panel, -Spine / 2) z(Base + 2 * Pitch - Shelf, Base + 2 * Pitch) mat(Steel) show(3d, elev)
+extrude Shelf2B rect(Left + Panel, Spine / 2, Right - Panel, Back) z(Base + 2 * Pitch - Shelf, Base + 2 * Pitch) mat(Steel) show(3d, elev)
+extrude Shelf3F rect(Left + Panel, Front, Right - Panel, -Spine / 2) z(Base + 3 * Pitch - Shelf, Base + 3 * Pitch) mat(Steel) show(3d, elev)
+extrude Shelf3B rect(Left + Panel, Spine / 2, Right - Panel, Back) z(Base + 3 * Pitch - Shelf, Base + 3 * Pitch) mat(Steel) show(3d, elev)
+extrude TopF rect(Left + Panel, Front, Right - Panel, -Spine / 2) z(Height - Shelf, Height) mat(Steel) show(3d, elev)
+extrude TopB rect(Left + Panel, Spine / 2, Right - Panel, Back) z(Height - Shelf, Height) mat(Steel) show(3d, elev)
+symbol rect(Left, Front, Right, Back)
+symbol line(Left, 0, Right, 0) show(medium, fine)
+---
+family Whiteboard
+category generic
+host wall
+ifc IfcBuildingElementProxy ELEMENT
+param Width length type 2400mm
+param Height length type 1200mm
+param Depth length type 25mm
+param Frame length type 25mm
+param Elevation length instance 900mm
+param Tray length type 60mm
+param Surface material type "Enamel White"
+param Trim material type "Aluminium"
+ref Wall y = 0
+ref Centre x = 0
+type "2400x1200" Width=2400mm, Height=1200mm
+type "1800x1200" Width=1800mm, Height=1200mm
+type "96x48in" Width=96in, Height=48in, Depth=1in, Frame=1in, Tray=2.4in, Elevation=36in
+extrude Board rect(Centre - Width / 2, Wall, Centre + Width / 2, Wall + Depth) z(Elevation, Elevation + Height) mat(Surface) show(3d, elev)
+extrude FrameTop rect(Centre - Width / 2, Wall, Centre + Width / 2, Wall + Depth + 5mm) z(Elevation + Height - Frame, Elevation + Height) mat(Trim) show(3d, elev)
+extrude FrameBottom rect(Centre - Width / 2, Wall, Centre + Width / 2, Wall + Depth + Tray) z(Elevation, Elevation + Frame) mat(Trim) show(3d, elev)
+symbol rect(Centre - Width / 2, Wall, Centre + Width / 2, Wall + Depth)
+---
+family Treadmill
+category furniture
+host floor
+ifc IfcFurniture NOTDEFINED
+param Width length type 800mm
+param Length length type 2000mm
+param DeckH length type 200mm
+param DeckT length type 120mm
+param Post length type 50mm
+param ConsoleH length type 1300mm
+param ConsoleD length type 250mm
+param Frame material type "Steel Grey"
+param Belt material type "Rubber Black"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Length / 2
+ref Rear y = Length / 2
+type "800x2000" Width=800mm, Length=2000mm
+type "32x80in" Width=32in, Length=80in, DeckH=8in, DeckT=4.5in, Post=2in, ConsoleH=51in, ConsoleD=10in
+extrude Deck rect(Left, Front, Right, Rear - 300mm) z(DeckH - DeckT, DeckH) mat(Frame) show(3d, elev)
+extrude Belt rect(Left + 100mm, Front + 100mm, Right - 100mm, Rear - 400mm) z(DeckH, DeckH + 20mm) mat(Belt) show(3d, elev)
+extrude Motor rect(Left, Rear - 300mm, Right, Rear) z(0, DeckH) mat(Frame) show(3d, elev)
+extrude PostL rect(Left, Rear - 300mm, Left + Post, Rear - 300mm + Post) z(DeckH, ConsoleH) mat(Frame) show(3d, elev)
+extrude PostR rect(Right - Post, Rear - 300mm, Right, Rear - 300mm + Post) z(DeckH, ConsoleH) mat(Frame) show(3d, elev)
+extrude Console rect(Left, Rear - 300mm - 50mm, Right, Rear - 300mm - 50mm + ConsoleD) z(ConsoleH - 150mm, ConsoleH) mat(Frame) show(3d, elev)
+symbol rect(Left, Front, Right, Rear)
+symbol rect(Left + 100mm, Front + 100mm, Right - 100mm, Rear - 400mm) show(medium, fine)
+---
+family Refrigerator
+category equipment
+host floor
+ifc IfcElectricAppliance FRIDGE_FREEZER
+param Power number type 150
+param Width length type 600mm
+param Depth length type 650mm
+param Height length type 1850mm
+param Plinth length type 60mm
+param Casing material type "Steel White"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Back y = Depth / 2
+type "600x650x1850" Width=600mm, Depth=650mm, Height=1850mm
+type "700x700x2000" Width=700mm, Depth=700mm, Height=2000mm
+type "24x26x72in" Width=24in, Depth=26in, Height=72in, Plinth=2.5in
+extrude Plinth rect(Left + 40mm, Front + 40mm, Right - 40mm, Back) z(0mm, Plinth) mat(Casing) show(3d, elev)
+extrude Body rect(Left, Front + 40mm, Right, Back) z(Plinth, Height) mat(Casing) show(3d, elev)
+extrude Fridge rect(Left, Front + 10mm, Right, Front + 40mm) z(Plinth + 2mm, Height * 0.62) mat(Casing) show(3d, elev)
+extrude Freezer rect(Left, Front + 10mm, Right, Front + 40mm) z(Height * 0.62 + 4mm, Height - 2mm) mat(Casing) show(3d, elev)
+extrude HandleLow rect(Right - 60mm, Front, Right - 40mm, Front + 10mm) z(Height * 0.62 - 500mm, Height * 0.62 - 60mm) mat(Casing) show(medium, fine, 3d, elev)
+extrude HandleHigh rect(Right - 60mm, Front, Right - 40mm, Front + 10mm) z(Height * 0.62 + 60mm, Height * 0.62 + 400mm) mat(Casing) show(medium, fine, 3d, elev)
+symbol rect(Left, Front, Right, Back)
+symbol line(Left, Front + 50mm, Right, Front + 50mm) show(medium, fine)
+connector Power conduit power at(0, Back, 300mm) dir(0, 1, 0) size(20mm)
+---
+family Bedside Table
+category furniture
+host floor
+ifc IfcFurniture NOTDEFINED
+param Width length type 450mm
+param Depth length type 400mm
+param Height length type 550mm
+param Top length type 20mm
+param Plinth length type 80mm
+param Wood material type "Oak"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Back y = Depth / 2
+type "450x400" Width=450mm, Depth=400mm
+type "500x450 Locker" Width=500mm, Depth=450mm, Height=850mm
+type "18x16in" Width=18in, Depth=16in, Height=22in, Top=0.75in, Plinth=3in
+extrude Plinth rect(Left + 30mm, Front + 30mm, Right - 30mm, Back - 30mm) z(0, Plinth) mat(Wood) show(3d, elev)
+extrude Box rect(Left, Front, Right, Back) z(Plinth, Height - Top) mat(Wood) show(3d, elev)
+extrude Top rect(Left, Front, Right, Back) z(Height - Top, Height) mat(Wood) show(3d, elev)
+symbol rect(Left, Front, Right, Back)
+symbol line(Left, Front + 20mm, Right, Front + 20mm) show(fine)
+---
+family Armchair
+category furniture
+host floor
+ifc IfcFurniture CHAIR
+param Width length type 750mm
+param Depth length type 800mm
+param Height length type 800mm
+param SeatH length type 420mm
+param Arm length type 120mm
+param ArmH length type 600mm
+param Back length type 180mm
+param Base length type 150mm
+param Fabric material type "Upholstery Grey"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Rear y = Depth / 2
+type "750x800" Width=750mm, Depth=800mm
+type "650x700" Width=650mm, Depth=700mm, Height=780mm, Arm=100mm
+type "30x32in" Width=30in, Depth=32in, Height=32in, SeatH=17in, Arm=5in, ArmH=24in, Back=7in, Base=6in
+extrude Seat rect(Left + Arm, Front, Right - Arm, Rear - Back) z(Base, SeatH) mat(Fabric) show(3d, elev)
+extrude Back rect(Left, Rear - Back, Right, Rear) z(Base, Height) mat(Fabric) show(3d, elev)
+extrude ArmL rect(Left, Front, Left + Arm, Rear - Back) z(Base, ArmH) mat(Fabric) show(3d, elev)
+extrude ArmR rect(Right - Arm, Front, Right, Rear - Back) z(Base, ArmH) mat(Fabric) show(3d, elev)
+extrude Plinth rect(Left + 30mm, Front + 30mm, Right - 30mm, Rear - 30mm) z(0, Base) mat(Fabric) show(3d, elev)
+symbol rect(Left, Front, Right, Rear)
+symbol line(Left + Arm, Rear - Back, Right - Arm, Rear - Back)
+symbol line(Left + Arm, Front, Left + Arm, Rear - Back) show(medium, fine)
+symbol line(Right - Arm, Front, Right - Arm, Rear - Back) show(medium, fine)
+---
+family Grab Rail
+category generic
+host wall
+ifc IfcRailing HANDRAIL
+param Length length type 600mm
+param Bar length type 32mm
+param Stand length type 70mm
+param Elevation length instance 750mm
+param Steel material type "Stainless Steel"
+ref Wall y = 0
+ref Centre x = 0
+type "600" Length=600mm
+type "900" Length=900mm
+type "24in" Length=24in, Bar=1.25in, Stand=3in
+extrude Bar rect(Centre - Length / 2, Stand - Bar / 2, Centre + Length / 2, Stand + Bar / 2) z(Elevation, Elevation + Bar) mat(Steel) show(3d, elev)
+extrude PostL rect(Centre - Length / 2, Wall, Centre - Length / 2 + Bar, Stand) z(Elevation, Elevation + Bar) mat(Steel) show(3d, elev)
+extrude PostR rect(Centre + Length / 2 - Bar, Wall, Centre + Length / 2, Stand) z(Elevation, Elevation + Bar) mat(Steel) show(3d, elev)
+symbol rect(Centre - Length / 2, Wall, Centre + Length / 2, Stand + Bar / 2)
+---
+family Hinged Grab Rail
+category generic
+host wall
+ifc IfcRailing HANDRAIL
+param Reach length type 800mm
+param Bar length type 32mm
+param Plate length type 100mm
+param Elevation length instance 750mm
+param Steel material type "Stainless Steel"
+ref Wall y = 0
+ref Centre x = 0
+type "800" Reach=800mm
+type "850" Reach=850mm
+type "32in" Reach=32in, Bar=1.25in, Plate=4in
+extrude Plate rect(Centre - Plate / 2, Wall, Centre + Plate / 2, Wall + 15mm) z(Elevation - Plate, Elevation + Plate) mat(Steel) show(3d, elev)
+extrude Bar rect(Centre - Bar / 2, Wall + 15mm, Centre + Bar / 2, Reach) z(Elevation, Elevation + Bar) mat(Steel) show(3d, elev)
+symbol rect(Centre - Plate / 2, Wall, Centre + Plate / 2, Reach)
+---
+family Floor Drain
+category plumbing
+host floor
+ifc IfcWasteTerminal FLOORTRAP
+param FlowWaste number type 0.8
+param Size length type 150mm
+param Body length type 110mm
+param Depth length type 90mm
+param Grate material type "Stainless Steel"
+type "150" Size=150mm
+type "200" Size=200mm, Body=150mm
+type "6in" Size=6in, Body=4.5in, Depth=3.5in
+extrude Grate rect(-Size / 2, -Size / 2, Size / 2, Size / 2) z(-10mm, 0) mat(Grate) show(3d, elev)
+revolve Trap rect(0, -Depth, Body / 2, -10mm) axis(0, 0) mat(Grate) show(3d, elev)
+symbol rect(-Size / 2, -Size / 2, Size / 2, Size / 2)
+symbol circle(0, 0, Body / 2) show(medium, fine)
+connector Waste pipe sanitary at(0, 0, -Depth) dir(0, 0, -1) size(50mm)
+---
+family Facade Fin
+category generic
+host floor
+ifc IfcShadingDevice NOTDEFINED
+param Height length type 3000mm
+param Depth length type 400mm
+param Thick length type 60mm
+param Fin material type "Anodised Aluminium Bronze"
+type "H2.7" Height=2700mm
+type "H3.0" Height=3000mm
+type "H3.3" Height=3300mm
+type "H3.6" Height=3600mm
+type "H3.9" Height=3900mm
+type "H4.2" Height=4200mm
+type "H4.5" Height=4500mm
+type "H4.8" Height=4800mm
+type "H5.1" Height=5100mm
+type "H5.4" Height=5400mm
+type "H5.7" Height=5700mm
+type "H6.0" Height=6000mm
+type "H120in" Height=120in
+extrude Body poly(-Thick / 2, 0, Thick / 2, 0, Thick / 2, Depth - Thick / 2, Thick / 4, Depth - Thick / 8, 0, Depth, -Thick / 4, Depth - Thick / 8, -Thick / 2, Depth - Thick / 2) z(0, Height) mat(Fin) show(3d, elev)
+extrude BracketLow rect(-Thick / 2, 0, Thick / 2, 80mm) z(100mm, 250mm) mat(Fin) show(medium, fine, 3d, elev)
+extrude BracketHigh rect(-Thick / 2, 0, Thick / 2, 80mm) z(Height - 250mm, Height - 100mm) mat(Fin) show(medium, fine, 3d, elev)
+symbol rect(-Thick / 2, 0, Thick / 2, Depth)
+---
+family Facade Mullion
+category generic
+host floor
+ifc IfcMember MULLION
+param Height length type 3000mm
+param Depth length type 150mm
+param Thick length type 60mm
+param Frame material type "Aluminium Dark Grey"
+type "H2.7" Height=2700mm
+type "H3.0" Height=3000mm
+type "H3.3" Height=3300mm
+type "H3.6" Height=3600mm
+type "H3.9" Height=3900mm
+type "H4.2" Height=4200mm
+type "H4.5" Height=4500mm
+type "H4.8" Height=4800mm
+type "H5.1" Height=5100mm
+type "H5.4" Height=5400mm
+type "H5.7" Height=5700mm
+type "H6.0" Height=6000mm
+type "H120in" Height=120in
+extrude Body poly(-Thick / 2 + 10mm, 0, Thick / 2 - 10mm, 0, Thick / 2 - 10mm, Depth - 25mm, Thick / 2, Depth - 25mm, Thick / 2, Depth, -Thick / 2, Depth, -Thick / 2, Depth - 25mm, -Thick / 2 + 10mm, Depth - 25mm) z(0, Height) mat(Frame) show(3d, elev)
+symbol rect(-Thick / 2, 0, Thick / 2, Depth)
+---
+family Facade Panel
+category generic
+host floor
+ifc IfcCovering CLADDING
+param Height length type 3000mm
+param Width length type 1200mm
+param Thick length type 40mm
+param Gap length type 30mm
+param Cladding material type "Fibre Cement Grey"
+type "H2.7" Height=2700mm
+type "H3.0" Height=3000mm
+type "H3.3" Height=3300mm
+type "H3.6" Height=3600mm
+type "H3.9" Height=3900mm
+type "H4.2" Height=4200mm
+type "H4.5" Height=4500mm
+type "H4.8" Height=4800mm
+type "H5.1" Height=5100mm
+type "H5.4" Height=5400mm
+type "H5.7" Height=5700mm
+type "H6.0" Height=6000mm
+type "H120in" Height=120in
+extrude Body poly(-Width / 2 + 5mm, Gap, Width / 2 - 5mm, Gap, Width / 2, Gap + 5mm, Width / 2, Gap + Thick - 5mm, Width / 2 - 5mm, Gap + Thick, -Width / 2 + 5mm, Gap + Thick, -Width / 2, Gap + Thick - 5mm, -Width / 2, Gap + 5mm) z(0, Height - 20mm) mat(Cladding) show(3d, elev)
+extrude RailLeft rect(-Width / 2 + 60mm, 0, -Width / 2 + 100mm, Gap) z(0, Height - 20mm) mat(Cladding) show(medium, fine, 3d, elev)
+extrude RailRight rect(Width / 2 - 100mm, 0, Width / 2 - 60mm, Gap) z(0, Height - 20mm) mat(Cladding) show(medium, fine, 3d, elev)
+symbol rect(-Width / 2, Gap, Width / 2, Gap + Thick)
+---
+family Balcony
+category generic
+host floor
+ifc IfcSlab NOTDEFINED
+param Width length type 3000mm
+param Depth length type 1500mm
+param Slab length type 200mm
+param Rail length type 1100mm
+param Glass length type 20mm
+param Deck material type "Concrete"
+param Pane material type "Glass Clear"
+type "W2400" Width=2400mm
+type "W3000" Width=3000mm
+type "W3600" Width=3600mm
+type "W4800" Width=4800mm
+type "W120in" Width=120in
+extrude Deck rect(-Width / 2, 0, Width / 2, Depth) z(-Slab, 0) mat(Deck) show(3d, elev)
+extrude Front rect(-Width / 2, Depth - Glass, Width / 2, Depth) z(0, Rail) mat(Pane) show(3d, elev)
+extrude Left rect(-Width / 2, 0, -Width / 2 + Glass, Depth - Glass) z(0, Rail) mat(Pane) show(3d, elev)
+extrude Right rect(Width / 2 - Glass, 0, Width / 2, Depth - Glass) z(0, Rail) mat(Pane) show(3d, elev)
+symbol rect(-Width / 2, 0, Width / 2, Depth)
+---
+family Loggia
+category generic
+host floor
+ifc IfcSlab NOTDEFINED
+param Width length type 3000mm
+param Depth length type 1800mm
+param Slab length type 200mm
+param Rail length type 1100mm
+param Screen length type 150mm
+param Height length type 2600mm
+param Glass length type 20mm
+param Deck material type "Concrete"
+param Side material type "Fibre Cement Grey"
+param Pane material type "Glass Clear"
+type "W2400" Width=2400mm
+type "W3000" Width=3000mm
+type "W3600" Width=3600mm
+type "W4800" Width=4800mm
+type "W120in" Width=120in
+extrude Deck rect(-Width / 2, 0, Width / 2, Depth) z(-Slab, 0) mat(Deck) show(3d, elev)
+extrude Front rect(-Width / 2 + Screen, Depth - Glass, Width / 2 - Screen, Depth) z(0, Rail) mat(Pane) show(3d, elev)
+extrude Left rect(-Width / 2, 0, -Width / 2 + Screen, Depth) z(0, Height) mat(Side) show(3d, elev)
+extrude Right rect(Width / 2 - Screen, 0, Width / 2, Depth) z(0, Height) mat(Side) show(3d, elev)
+extrude Top rect(-Width / 2, 0, Width / 2, Depth) z(Height, Height + Slab) mat(Side) show(3d, elev)
+symbol rect(-Width / 2, 0, Width / 2, Depth)
+---
+family Entrance Canopy
+category generic
+host floor
+ifc IfcBuildingElementProxy ELEMENT
+param Width length type 3600mm
+param Depth length type 1800mm
+param Lift length type 2700mm
+param Thick length type 200mm
+param Cover material type "Aluminium Dark Grey"
+type "3600x1800" Width=3600mm
+type "6000x2400" Width=6000mm, Depth=2400mm
+type "120x60in" Width=120in, Depth=60in
+extrude Plate rect(-Width / 2, 0, Width / 2, Depth - 40mm) z(Lift, Lift + Thick - 40mm) mat(Cover) show(3d, elev)
+extrude Fascia rect(-Width / 2, Depth - 40mm, Width / 2, Depth) z(Lift, Lift + Thick) mat(Cover) show(3d, elev)
+extrude Upstand rect(-Width / 2, 0, Width / 2, 40mm) z(Lift + Thick - 40mm, Lift + Thick) mat(Cover) show(medium, fine, 3d, elev)
+sweep TieLeft circle(0, 0, 15mm) path(-Width / 2 + 150mm, Depth - 100mm, Lift + Thick - 40mm, -Width / 2 + 150mm, 20mm, Lift + Thick + 1000mm) mat(Cover) show(medium, fine, 3d, elev)
+sweep TieRight circle(0, 0, 15mm) path(Width / 2 - 150mm, Depth - 100mm, Lift + Thick - 40mm, Width / 2 - 150mm, 20mm, Lift + Thick + 1000mm) mat(Cover) show(medium, fine, 3d, elev)
+symbol rect(-Width / 2, 0, Width / 2, Depth)
+---
+family Paving Slab
+category generic
+host floor
+ifc IfcBuildingElementProxy ELEMENT
+param Size length type 1500mm
+param Thick length type 30mm
+param Stone material type "Concrete Paving"
+type "1500" Size=1500mm
+type "60in" Size=60in
+type "Path" Size=1500mm
+extrude Body rect(-Size / 2 + 5mm, -Size / 2 + 5mm, Size / 2 - 5mm, Size / 2 - 5mm) z(0, Thick - 4mm) mat(Stone) show(3d, elev)
+blend Arris rect(-Size / 2 + 5mm, -Size / 2 + 5mm, Size / 2 - 5mm, Size / 2 - 5mm) rect(-Size / 2 + 9mm, -Size / 2 + 9mm, Size / 2 - 9mm, Size / 2 - 9mm) z(Thick - 4mm, Thick) mat(Stone) show(3d, elev)
+symbol rect(-Size / 2, -Size / 2, Size / 2, Size / 2)
+---
+family Tree
+category planting
+host floor
+ifc IfcGeographicElement NOTDEFINED
+# Species table: one type per tree, a few per species with another seed and size, so
+# neighbours differ. Form: 0 round 1 oval 2 conical 3 columnar 4 weeping 5 palm 6 vase
+# 7 spreading. Group is for the generator: 0 broadleaf 1 conifer 2 columnar 3 weeping
+# 4 palm 5 small 6 spreading; Weight 0 keeps a type out of generated sites. Leaf is the
+# foliage fullness (0 bare, 1 full); Seed fixes the branching and the uneven crown.
+# Season is when the type stands in leaf: 0 summer 1 autumn 2 winter (bare) 3 spring, 4 all
+# year (evergreens); a deciduous species has one type per season with the same seed.
+# Scale (instance value) sizes the whole tree; the generator jitters it per tree. MinClear floors
+# the clear trunk under the crown (the generator sets it from site.tree_min_clear).
+param Form int type 0
+param Height length type 8000mm
+param Crown length type 4000mm
+param Trunk length type 300mm
+param Clear length type 2500mm
+param Leaf number type 1
+param Seed int type 1
+param Scale number instance 1
+param MinClear length instance 0mm
+param Group int type 0
+param Weight number type 1
+param Season int type 0
+param Bark material type "Bark Brown"
+param Leaves material type "Foliage Green"
+param Inner material type "Foliage Shade"
+param Light material type "Foliage Light"
+param Streak material type "Bark Brown Streak"
+type "Oak A" Form=0, Height=14000mm, Crown=11000mm, Trunk=600mm, Clear=3500mm, Leaf=1, Seed=107, Group=0, Weight=1, Bark="Bark Dark", Streak="Bark Dark Streak"
+type "Oak B" Form=0, Height=12600mm, Crown=11880mm, Trunk=552mm, Clear=3325mm, Leaf=1, Seed=114, Group=0, Weight=1, Bark="Bark Dark", Streak="Bark Dark Streak"
+type "Linden A" Form=1, Height=16000mm, Crown=8500mm, Trunk=500mm, Clear=3000mm, Leaf=1, Seed=121, Group=0, Weight=1
+type "Linden B" Form=1, Height=14400mm, Crown=9180mm, Trunk=460mm, Clear=2850mm, Leaf=1, Seed=128, Group=0, Weight=1
+type "Maple A" Form=0, Height=11000mm, Crown=8000mm, Trunk=400mm, Clear=2500mm, Leaf=1, Seed=135, Group=0, Weight=1
+type "Maple B" Form=0, Height=9900mm, Crown=8640mm, Trunk=368mm, Clear=2375mm, Leaf=1, Seed=142, Group=0, Weight=1
+type "Plane A" Form=0, Height=18000mm, Crown=13000mm, Trunk=700mm, Clear=4500mm, Leaf=1, Seed=149, Group=0, Weight=1, Bark="Bark Grey", Streak="Bark Grey Streak"
+type "Plane B" Form=0, Height=16200mm, Crown=14040mm, Trunk=644mm, Clear=4275mm, Leaf=1, Seed=156, Group=0, Weight=1, Bark="Bark Grey", Streak="Bark Grey Streak"
+type "Elm A" Form=6, Height=17000mm, Crown=12000mm, Trunk=600mm, Clear=4000mm, Leaf=1, Seed=163, Group=0, Weight=1, Bark="Bark Grey", Streak="Bark Grey Streak"
+type "Elm B" Form=6, Height=15300mm, Crown=12960mm, Trunk=552mm, Clear=3800mm, Leaf=1, Seed=170, Group=0, Weight=1, Bark="Bark Grey", Streak="Bark Grey Streak"
+type "Spruce A" Form=2, Height=20000mm, Crown=6000mm, Trunk=500mm, Clear=1200mm, Leaf=1, Seed=177, Group=1, Weight=1, Leaves="Foliage Conifer", Season=4, Bark="Bark Red", Inner="Foliage Conifer Shade", Light="Foliage Conifer Light", Streak="Bark Red Streak"
+type "Spruce B" Form=2, Height=18000mm, Crown=6480mm, Trunk=460mm, Clear=1140mm, Leaf=1, Seed=184, Group=1, Weight=1, Leaves="Foliage Conifer", Season=4, Bark="Bark Red", Inner="Foliage Conifer Shade", Light="Foliage Conifer Light", Streak="Bark Red Streak"
+type "Fir A" Form=2, Height=14000mm, Crown=5000mm, Trunk=400mm, Clear=1000mm, Leaf=1, Seed=191, Group=1, Weight=1, Leaves="Foliage Conifer", Season=4, Bark="Bark Red", Inner="Foliage Conifer Shade", Light="Foliage Conifer Light", Streak="Bark Red Streak"
+type "Fir B" Form=2, Height=12600mm, Crown=5400mm, Trunk=368mm, Clear=950mm, Leaf=1, Seed=198, Group=1, Weight=1, Leaves="Foliage Conifer", Season=4, Bark="Bark Red", Inner="Foliage Conifer Shade", Light="Foliage Conifer Light", Streak="Bark Red Streak"
+type "Poplar A" Form=3, Height=22000mm, Crown=4500mm, Trunk=500mm, Clear=2500mm, Leaf=1, Seed=205, Group=2, Weight=1, Bark="Bark Grey", Streak="Bark Grey Streak"
+type "Poplar B" Form=3, Height=19800mm, Crown=4860mm, Trunk=460mm, Clear=2375mm, Leaf=1, Seed=212, Group=2, Weight=1, Bark="Bark Grey", Streak="Bark Grey Streak"
+type "Cypress A" Form=3, Height=12000mm, Crown=2600mm, Trunk=300mm, Clear=600mm, Leaf=1, Seed=219, Group=2, Weight=1, Leaves="Foliage Conifer", Season=4, Inner="Foliage Conifer Shade", Light="Foliage Conifer Light"
+type "Cypress B" Form=3, Height=10800mm, Crown=2810mm, Trunk=276mm, Clear=570mm, Leaf=1, Seed=226, Group=2, Weight=1, Leaves="Foliage Conifer", Season=4, Inner="Foliage Conifer Shade", Light="Foliage Conifer Light"
+type "Willow A" Form=4, Height=14000mm, Crown=12000mm, Trunk=600mm, Clear=1000mm, Leaf=1, Seed=233, Group=3, Weight=1, Bark="Bark Dark", Streak="Bark Dark Streak"
+type "Willow B" Form=4, Height=12600mm, Crown=12960mm, Trunk=552mm, Clear=950mm, Leaf=1, Seed=240, Group=3, Weight=1, Bark="Bark Dark", Streak="Bark Dark Streak"
+type "Birch A" Form=4, Height=10000mm, Crown=6000mm, Trunk=300mm, Clear=1500mm, Leaf=1, Seed=247, Group=3, Weight=1, Bark="Bark Birch", Streak="Bark Birch Streak"
+type "Birch B" Form=4, Height=9000mm, Crown=6480mm, Trunk=276mm, Clear=1425mm, Leaf=1, Seed=254, Group=3, Weight=1, Bark="Bark Birch", Streak="Bark Birch Streak"
+type "Date Palm A" Form=5, Height=12000mm, Crown=6000mm, Trunk=450mm, Clear=8000mm, Leaf=1, Seed=261, Group=4, Weight=1, Season=4, Bark="Bark Palm", Streak="Bark Palm Streak"
+type "Date Palm B" Form=5, Height=10800mm, Crown=6480mm, Trunk=414mm, Clear=7600mm, Leaf=1, Seed=268, Group=4, Weight=1, Season=4, Bark="Bark Palm", Streak="Bark Palm Streak"
+type "Fan Palm A" Form=5, Height=7000mm, Crown=4500mm, Trunk=350mm, Clear=5000mm, Leaf=1, Seed=275, Group=4, Weight=1, Season=4, Bark="Bark Palm", Streak="Bark Palm Streak"
+type "Fan Palm B" Form=5, Height=6300mm, Crown=4860mm, Trunk=322mm, Clear=4750mm, Leaf=1, Seed=282, Group=4, Weight=1, Season=4, Bark="Bark Palm", Streak="Bark Palm Streak"
+type "Cherry A" Form=1, Height=6000mm, Crown=5000mm, Trunk=250mm, Clear=1400mm, Leaf=1, Seed=289, Group=5, Weight=1, Bark="Bark Cherry", Streak="Bark Cherry Streak"
+type "Cherry B" Form=1, Height=5400mm, Crown=5400mm, Trunk=230mm, Clear=1330mm, Leaf=1, Seed=296, Group=5, Weight=1, Bark="Bark Cherry", Streak="Bark Cherry Streak"
+type "Hawthorn A" Form=0, Height=5000mm, Crown=4000mm, Trunk=200mm, Clear=1000mm, Leaf=1, Seed=303, Group=5, Weight=1, Bark="Bark Grey", Streak="Bark Grey Streak"
+type "Hawthorn B" Form=0, Height=4500mm, Crown=4320mm, Trunk=184mm, Clear=950mm, Leaf=1, Seed=310, Group=5, Weight=1, Bark="Bark Grey", Streak="Bark Grey Streak"
+type "Shrub A" Form=0, Height=1500mm, Crown=1800mm, Trunk=50mm, Clear=100mm, Leaf=1, Seed=317, Group=5, Weight=1
+type "Shrub B" Form=0, Height=1350mm, Crown=1940mm, Trunk=46mm, Clear=95mm, Leaf=1, Seed=324, Group=5, Weight=1
+type "Acacia A" Form=7, Height=10000mm, Crown=12000mm, Trunk=450mm, Clear=4500mm, Leaf=1, Seed=331, Group=6, Weight=1, Bark="Bark Dark", Streak="Bark Dark Streak"
+type "Acacia B" Form=7, Height=9000mm, Crown=12960mm, Trunk=414mm, Clear=4275mm, Leaf=1, Seed=338, Group=6, Weight=1, Bark="Bark Dark", Streak="Bark Dark Streak"
+type "Stone Pine A" Form=7, Height=14000mm, Crown=10000mm, Trunk=500mm, Clear=7000mm, Leaf=1, Seed=345, Group=6, Weight=1, Leaves="Foliage Conifer", Season=4, Bark="Bark Red", Inner="Foliage Conifer Shade", Light="Foliage Conifer Light", Streak="Bark Red Streak"
+type "Stone Pine B" Form=7, Height=12600mm, Crown=10800mm, Trunk=460mm, Clear=6650mm, Leaf=1, Seed=352, Group=6, Weight=1, Leaves="Foliage Conifer", Season=4, Bark="Bark Red", Inner="Foliage Conifer Shade", Light="Foliage Conifer Light", Streak="Bark Red Streak"
+type "Chestnut A" Form=0, Height=18000mm, Crown=14000mm, Trunk=700mm, Clear=3500mm, Leaf=1, Seed=401, Group=0, Weight=1, Bark="Bark Dark", Streak="Bark Dark Streak"
+type "Chestnut B" Form=0, Height=16200mm, Crown=15120mm, Trunk=644mm, Clear=3325mm, Leaf=1, Seed=408, Group=0, Weight=1, Bark="Bark Dark", Streak="Bark Dark Streak"
+type "Ash A" Form=1, Height=20000mm, Crown=9000mm, Trunk=550mm, Clear=4500mm, Leaf=1, Seed=415, Group=0, Weight=1, Bark="Bark Dark", Streak="Bark Dark Streak"
+type "Ash B" Form=1, Height=18000mm, Crown=9720mm, Trunk=506mm, Clear=4275mm, Leaf=1, Seed=422, Group=0, Weight=1, Bark="Bark Dark", Streak="Bark Dark Streak"
+type "Hornbeam A" Form=3, Height=15000mm, Crown=5000mm, Trunk=380mm, Clear=2000mm, Leaf=1, Seed=429, Group=2, Weight=1, Bark="Bark Grey", Streak="Bark Grey Streak"
+type "Hornbeam B" Form=3, Height=13500mm, Crown=5400mm, Trunk=350mm, Clear=1900mm, Leaf=1, Seed=436, Group=2, Weight=1, Bark="Bark Grey", Streak="Bark Grey Streak"
+type "Scots Pine A" Form=6, Height=22000mm, Crown=9000mm, Trunk=500mm, Clear=9000mm, Leaf=1, Seed=443, Group=1, Weight=1, Leaves="Foliage Conifer", Season=4, Bark="Bark Red", Inner="Foliage Conifer Shade", Light="Foliage Conifer Light", Streak="Bark Red Streak"
+type "Scots Pine B" Form=6, Height=19800mm, Crown=9720mm, Trunk=460mm, Clear=8550mm, Leaf=1, Seed=450, Group=1, Weight=1, Leaves="Foliage Conifer", Season=4, Bark="Bark Red", Inner="Foliage Conifer Shade", Light="Foliage Conifer Light", Streak="Bark Red Streak"
+type "Olive A" Form=7, Height=6000mm, Crown=6500mm, Trunk=350mm, Clear=1200mm, Leaf=1, Seed=457, Group=6, Weight=1, Leaves="Foliage Olive", Season=4, Bark="Bark Grey", Inner="Foliage Olive Shade", Light="Foliage Olive Light", Streak="Bark Grey Streak"
+type "Olive B" Form=7, Height=5400mm, Crown=7020mm, Trunk=322mm, Clear=1140mm, Leaf=1, Seed=464, Group=6, Weight=1, Leaves="Foliage Olive", Season=4, Bark="Bark Grey", Inner="Foliage Olive Shade", Light="Foliage Olive Light", Streak="Bark Grey Streak"
+type "Magnolia A" Form=1, Height=7000mm, Crown=5500mm, Trunk=250mm, Clear=1000mm, Leaf=1, Seed=471, Group=5, Weight=1, Bark="Bark Grey", Streak="Bark Grey Streak"
+type "Magnolia B" Form=1, Height=6300mm, Crown=5940mm, Trunk=230mm, Clear=950mm, Leaf=1, Seed=478, Group=5, Weight=1, Bark="Bark Grey", Streak="Bark Grey Streak"
+type "Rowan A" Form=0, Height=8000mm, Crown=5500mm, Trunk=250mm, Clear=1500mm, Leaf=1, Seed=485, Group=5, Weight=1, Bark="Bark Grey", Streak="Bark Grey Streak"
+type "Rowan B" Form=0, Height=7200mm, Crown=5940mm, Trunk=230mm, Clear=1425mm, Leaf=1, Seed=492, Group=5, Weight=1, Bark="Bark Grey", Streak="Bark Grey Streak"
+type "Larch A" Form=2, Height=24000mm, Crown=7000mm, Trunk=480mm, Clear=2500mm, Leaf=1, Seed=499, Group=1, Weight=1, Leaves="Foliage Conifer", Season=4, Bark="Bark Red", Inner="Foliage Conifer Shade", Light="Foliage Conifer Light", Streak="Bark Red Streak"
+type "Larch B" Form=2, Height=21600mm, Crown=7560mm, Trunk=442mm, Clear=2375mm, Leaf=1, Seed=506, Group=1, Weight=1, Leaves="Foliage Conifer", Season=4, Bark="Bark Red", Inner="Foliage Conifer Shade", Light="Foliage Conifer Light", Streak="Bark Red Streak"
+type "Oak A Autumn" Form=0, Height=14000mm, Crown=11000mm, Trunk=600mm, Clear=3500mm, Leaf=1, Seed=107, Group=0, Weight=1, Season=1, Leaves="Foliage Autumn", Bark="Bark Dark", Inner="Foliage Autumn Shade", Light="Foliage Autumn Light", Streak="Bark Dark Streak"
+type "Oak A Bare" Form=0, Height=14000mm, Crown=11000mm, Trunk=600mm, Clear=3500mm, Leaf=0, Seed=107, Group=0, Weight=1, Season=2, Bark="Bark Dark", Streak="Bark Dark Streak"
+type "Oak A Spring" Form=0, Height=14000mm, Crown=11000mm, Trunk=600mm, Clear=3500mm, Leaf=0.75, Seed=107, Group=0, Weight=1, Season=3, Leaves="Foliage Spring", Bark="Bark Dark", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Streak="Bark Dark Streak"
+type "Oak B Autumn" Form=0, Height=12600mm, Crown=11880mm, Trunk=552mm, Clear=3325mm, Leaf=1, Seed=114, Group=0, Weight=1, Season=1, Leaves="Foliage Autumn", Bark="Bark Dark", Inner="Foliage Autumn Shade", Light="Foliage Autumn Light", Streak="Bark Dark Streak"
+type "Oak B Bare" Form=0, Height=12600mm, Crown=11880mm, Trunk=552mm, Clear=3325mm, Leaf=0, Seed=114, Group=0, Weight=1, Season=2, Bark="Bark Dark", Streak="Bark Dark Streak"
+type "Oak B Spring" Form=0, Height=12600mm, Crown=11880mm, Trunk=552mm, Clear=3325mm, Leaf=0.75, Seed=114, Group=0, Weight=1, Season=3, Leaves="Foliage Spring", Bark="Bark Dark", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Streak="Bark Dark Streak"
+type "Linden A Autumn" Form=1, Height=16000mm, Crown=8500mm, Trunk=500mm, Clear=3000mm, Leaf=1, Seed=121, Group=0, Weight=1, Season=1, Leaves="Foliage Gold", Inner="Foliage Gold Shade", Light="Foliage Gold Light"
+type "Linden A Bare" Form=1, Height=16000mm, Crown=8500mm, Trunk=500mm, Clear=3000mm, Leaf=0, Seed=121, Group=0, Weight=1, Season=2
+type "Linden A Spring" Form=1, Height=16000mm, Crown=8500mm, Trunk=500mm, Clear=3000mm, Leaf=0.75, Seed=121, Group=0, Weight=1, Season=3, Leaves="Foliage Spring", Inner="Foliage Spring Shade", Light="Foliage Spring Light"
+type "Linden B Autumn" Form=1, Height=14400mm, Crown=9180mm, Trunk=460mm, Clear=2850mm, Leaf=1, Seed=128, Group=0, Weight=1, Season=1, Leaves="Foliage Gold", Inner="Foliage Gold Shade", Light="Foliage Gold Light"
+type "Linden B Bare" Form=1, Height=14400mm, Crown=9180mm, Trunk=460mm, Clear=2850mm, Leaf=0, Seed=128, Group=0, Weight=1, Season=2
+type "Linden B Spring" Form=1, Height=14400mm, Crown=9180mm, Trunk=460mm, Clear=2850mm, Leaf=0.75, Seed=128, Group=0, Weight=1, Season=3, Leaves="Foliage Spring", Inner="Foliage Spring Shade", Light="Foliage Spring Light"
+type "Maple A Autumn" Form=0, Height=11000mm, Crown=8000mm, Trunk=400mm, Clear=2500mm, Leaf=1, Seed=135, Group=0, Weight=1, Season=1, Leaves="Foliage Red", Inner="Foliage Red Shade", Light="Foliage Red Light"
+type "Maple A Bare" Form=0, Height=11000mm, Crown=8000mm, Trunk=400mm, Clear=2500mm, Leaf=0, Seed=135, Group=0, Weight=1, Season=2
+type "Maple A Spring" Form=0, Height=11000mm, Crown=8000mm, Trunk=400mm, Clear=2500mm, Leaf=0.75, Seed=135, Group=0, Weight=1, Season=3, Leaves="Foliage Spring", Inner="Foliage Spring Shade", Light="Foliage Spring Light"
+type "Maple B Autumn" Form=0, Height=9900mm, Crown=8640mm, Trunk=368mm, Clear=2375mm, Leaf=1, Seed=142, Group=0, Weight=1, Season=1, Leaves="Foliage Red", Inner="Foliage Red Shade", Light="Foliage Red Light"
+type "Maple B Bare" Form=0, Height=9900mm, Crown=8640mm, Trunk=368mm, Clear=2375mm, Leaf=0, Seed=142, Group=0, Weight=1, Season=2
+type "Maple B Spring" Form=0, Height=9900mm, Crown=8640mm, Trunk=368mm, Clear=2375mm, Leaf=0.75, Seed=142, Group=0, Weight=1, Season=3, Leaves="Foliage Spring", Inner="Foliage Spring Shade", Light="Foliage Spring Light"
+type "Plane A Autumn" Form=0, Height=18000mm, Crown=13000mm, Trunk=700mm, Clear=4500mm, Leaf=1, Seed=149, Group=0, Weight=1, Season=1, Leaves="Foliage Autumn", Bark="Bark Grey", Inner="Foliage Autumn Shade", Light="Foliage Autumn Light", Streak="Bark Grey Streak"
+type "Plane A Bare" Form=0, Height=18000mm, Crown=13000mm, Trunk=700mm, Clear=4500mm, Leaf=0, Seed=149, Group=0, Weight=1, Season=2, Bark="Bark Grey", Streak="Bark Grey Streak"
+type "Plane A Spring" Form=0, Height=18000mm, Crown=13000mm, Trunk=700mm, Clear=4500mm, Leaf=0.75, Seed=149, Group=0, Weight=1, Season=3, Leaves="Foliage Spring", Bark="Bark Grey", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Streak="Bark Grey Streak"
+type "Plane B Autumn" Form=0, Height=16200mm, Crown=14040mm, Trunk=644mm, Clear=4275mm, Leaf=1, Seed=156, Group=0, Weight=1, Season=1, Leaves="Foliage Autumn", Bark="Bark Grey", Inner="Foliage Autumn Shade", Light="Foliage Autumn Light", Streak="Bark Grey Streak"
+type "Plane B Bare" Form=0, Height=16200mm, Crown=14040mm, Trunk=644mm, Clear=4275mm, Leaf=0, Seed=156, Group=0, Weight=1, Season=2, Bark="Bark Grey", Streak="Bark Grey Streak"
+type "Plane B Spring" Form=0, Height=16200mm, Crown=14040mm, Trunk=644mm, Clear=4275mm, Leaf=0.75, Seed=156, Group=0, Weight=1, Season=3, Leaves="Foliage Spring", Bark="Bark Grey", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Streak="Bark Grey Streak"
+type "Elm A Autumn" Form=6, Height=17000mm, Crown=12000mm, Trunk=600mm, Clear=4000mm, Leaf=1, Seed=163, Group=0, Weight=1, Season=1, Leaves="Foliage Gold", Bark="Bark Grey", Inner="Foliage Gold Shade", Light="Foliage Gold Light", Streak="Bark Grey Streak"
+type "Elm A Bare" Form=6, Height=17000mm, Crown=12000mm, Trunk=600mm, Clear=4000mm, Leaf=0, Seed=163, Group=0, Weight=1, Season=2, Bark="Bark Grey", Streak="Bark Grey Streak"
+type "Elm A Spring" Form=6, Height=17000mm, Crown=12000mm, Trunk=600mm, Clear=4000mm, Leaf=0.75, Seed=163, Group=0, Weight=1, Season=3, Leaves="Foliage Spring", Bark="Bark Grey", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Streak="Bark Grey Streak"
+type "Elm B Autumn" Form=6, Height=15300mm, Crown=12960mm, Trunk=552mm, Clear=3800mm, Leaf=1, Seed=170, Group=0, Weight=1, Season=1, Leaves="Foliage Gold", Bark="Bark Grey", Inner="Foliage Gold Shade", Light="Foliage Gold Light", Streak="Bark Grey Streak"
+type "Elm B Bare" Form=6, Height=15300mm, Crown=12960mm, Trunk=552mm, Clear=3800mm, Leaf=0, Seed=170, Group=0, Weight=1, Season=2, Bark="Bark Grey", Streak="Bark Grey Streak"
+type "Elm B Spring" Form=6, Height=15300mm, Crown=12960mm, Trunk=552mm, Clear=3800mm, Leaf=0.75, Seed=170, Group=0, Weight=1, Season=3, Leaves="Foliage Spring", Bark="Bark Grey", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Streak="Bark Grey Streak"
+type "Poplar A Autumn" Form=3, Height=22000mm, Crown=4500mm, Trunk=500mm, Clear=2500mm, Leaf=1, Seed=205, Group=2, Weight=1, Season=1, Leaves="Foliage Gold", Bark="Bark Grey", Inner="Foliage Gold Shade", Light="Foliage Gold Light", Streak="Bark Grey Streak"
+type "Poplar A Bare" Form=3, Height=22000mm, Crown=4500mm, Trunk=500mm, Clear=2500mm, Leaf=0, Seed=205, Group=2, Weight=1, Season=2, Bark="Bark Grey", Streak="Bark Grey Streak"
+type "Poplar A Spring" Form=3, Height=22000mm, Crown=4500mm, Trunk=500mm, Clear=2500mm, Leaf=0.75, Seed=205, Group=2, Weight=1, Season=3, Leaves="Foliage Spring", Bark="Bark Grey", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Streak="Bark Grey Streak"
+type "Poplar B Autumn" Form=3, Height=19800mm, Crown=4860mm, Trunk=460mm, Clear=2375mm, Leaf=1, Seed=212, Group=2, Weight=1, Season=1, Leaves="Foliage Gold", Bark="Bark Grey", Inner="Foliage Gold Shade", Light="Foliage Gold Light", Streak="Bark Grey Streak"
+type "Poplar B Bare" Form=3, Height=19800mm, Crown=4860mm, Trunk=460mm, Clear=2375mm, Leaf=0, Seed=212, Group=2, Weight=1, Season=2, Bark="Bark Grey", Streak="Bark Grey Streak"
+type "Poplar B Spring" Form=3, Height=19800mm, Crown=4860mm, Trunk=460mm, Clear=2375mm, Leaf=0.75, Seed=212, Group=2, Weight=1, Season=3, Leaves="Foliage Spring", Bark="Bark Grey", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Streak="Bark Grey Streak"
+type "Willow A Autumn" Form=4, Height=14000mm, Crown=12000mm, Trunk=600mm, Clear=1000mm, Leaf=1, Seed=233, Group=3, Weight=1, Season=1, Leaves="Foliage Gold", Bark="Bark Dark", Inner="Foliage Gold Shade", Light="Foliage Gold Light", Streak="Bark Dark Streak"
+type "Willow A Bare" Form=4, Height=14000mm, Crown=12000mm, Trunk=600mm, Clear=1000mm, Leaf=0, Seed=233, Group=3, Weight=1, Season=2, Bark="Bark Dark", Streak="Bark Dark Streak"
+type "Willow A Spring" Form=4, Height=14000mm, Crown=12000mm, Trunk=600mm, Clear=1000mm, Leaf=0.75, Seed=233, Group=3, Weight=1, Season=3, Leaves="Foliage Spring", Bark="Bark Dark", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Streak="Bark Dark Streak"
+type "Willow B Autumn" Form=4, Height=12600mm, Crown=12960mm, Trunk=552mm, Clear=950mm, Leaf=1, Seed=240, Group=3, Weight=1, Season=1, Leaves="Foliage Gold", Bark="Bark Dark", Inner="Foliage Gold Shade", Light="Foliage Gold Light", Streak="Bark Dark Streak"
+type "Willow B Bare" Form=4, Height=12600mm, Crown=12960mm, Trunk=552mm, Clear=950mm, Leaf=0, Seed=240, Group=3, Weight=1, Season=2, Bark="Bark Dark", Streak="Bark Dark Streak"
+type "Willow B Spring" Form=4, Height=12600mm, Crown=12960mm, Trunk=552mm, Clear=950mm, Leaf=0.75, Seed=240, Group=3, Weight=1, Season=3, Leaves="Foliage Spring", Bark="Bark Dark", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Streak="Bark Dark Streak"
+type "Birch A Autumn" Form=4, Height=10000mm, Crown=6000mm, Trunk=300mm, Clear=1500mm, Leaf=1, Seed=247, Group=3, Weight=1, Season=1, Leaves="Foliage Gold", Bark="Bark Birch", Inner="Foliage Gold Shade", Light="Foliage Gold Light", Streak="Bark Birch Streak"
+type "Birch A Bare" Form=4, Height=10000mm, Crown=6000mm, Trunk=300mm, Clear=1500mm, Leaf=0, Seed=247, Group=3, Weight=1, Season=2, Bark="Bark Birch", Streak="Bark Birch Streak"
+type "Birch A Spring" Form=4, Height=10000mm, Crown=6000mm, Trunk=300mm, Clear=1500mm, Leaf=0.75, Seed=247, Group=3, Weight=1, Season=3, Leaves="Foliage Spring", Bark="Bark Birch", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Streak="Bark Birch Streak"
+type "Birch B Autumn" Form=4, Height=9000mm, Crown=6480mm, Trunk=276mm, Clear=1425mm, Leaf=1, Seed=254, Group=3, Weight=1, Season=1, Leaves="Foliage Gold", Bark="Bark Birch", Inner="Foliage Gold Shade", Light="Foliage Gold Light", Streak="Bark Birch Streak"
+type "Birch B Bare" Form=4, Height=9000mm, Crown=6480mm, Trunk=276mm, Clear=1425mm, Leaf=0, Seed=254, Group=3, Weight=1, Season=2, Bark="Bark Birch", Streak="Bark Birch Streak"
+type "Birch B Spring" Form=4, Height=9000mm, Crown=6480mm, Trunk=276mm, Clear=1425mm, Leaf=0.75, Seed=254, Group=3, Weight=1, Season=3, Leaves="Foliage Spring", Bark="Bark Birch", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Streak="Bark Birch Streak"
+type "Cherry A Autumn" Form=1, Height=6000mm, Crown=5000mm, Trunk=250mm, Clear=1400mm, Leaf=1, Seed=289, Group=5, Weight=1, Season=1, Leaves="Foliage Red", Bark="Bark Cherry", Inner="Foliage Red Shade", Light="Foliage Red Light", Streak="Bark Cherry Streak"
+type "Cherry A Bare" Form=1, Height=6000mm, Crown=5000mm, Trunk=250mm, Clear=1400mm, Leaf=0, Seed=289, Group=5, Weight=1, Season=2, Bark="Bark Cherry", Streak="Bark Cherry Streak"
+type "Cherry A Spring" Form=1, Height=6000mm, Crown=5000mm, Trunk=250mm, Clear=1400mm, Leaf=1, Seed=289, Group=5, Weight=1, Season=3, Leaves="Foliage Blossom", Bark="Bark Cherry", Inner="Foliage Blossom Shade", Light="Foliage Blossom Light", Streak="Bark Cherry Streak"
+type "Cherry B Autumn" Form=1, Height=5400mm, Crown=5400mm, Trunk=230mm, Clear=1330mm, Leaf=1, Seed=296, Group=5, Weight=1, Season=1, Leaves="Foliage Red", Bark="Bark Cherry", Inner="Foliage Red Shade", Light="Foliage Red Light", Streak="Bark Cherry Streak"
+type "Cherry B Bare" Form=1, Height=5400mm, Crown=5400mm, Trunk=230mm, Clear=1330mm, Leaf=0, Seed=296, Group=5, Weight=1, Season=2, Bark="Bark Cherry", Streak="Bark Cherry Streak"
+type "Cherry B Spring" Form=1, Height=5400mm, Crown=5400mm, Trunk=230mm, Clear=1330mm, Leaf=1, Seed=296, Group=5, Weight=1, Season=3, Leaves="Foliage Blossom", Bark="Bark Cherry", Inner="Foliage Blossom Shade", Light="Foliage Blossom Light", Streak="Bark Cherry Streak"
+type "Hawthorn A Autumn" Form=0, Height=5000mm, Crown=4000mm, Trunk=200mm, Clear=1000mm, Leaf=1, Seed=303, Group=5, Weight=1, Season=1, Leaves="Foliage Red", Bark="Bark Grey", Inner="Foliage Red Shade", Light="Foliage Red Light", Streak="Bark Grey Streak"
+type "Hawthorn A Bare" Form=0, Height=5000mm, Crown=4000mm, Trunk=200mm, Clear=1000mm, Leaf=0, Seed=303, Group=5, Weight=1, Season=2, Bark="Bark Grey", Streak="Bark Grey Streak"
+type "Hawthorn A Spring" Form=0, Height=5000mm, Crown=4000mm, Trunk=200mm, Clear=1000mm, Leaf=1, Seed=303, Group=5, Weight=1, Season=3, Leaves="Foliage White", Bark="Bark Grey", Inner="Foliage White Shade", Light="Foliage White Light", Streak="Bark Grey Streak"
+type "Hawthorn B Autumn" Form=0, Height=4500mm, Crown=4320mm, Trunk=184mm, Clear=950mm, Leaf=1, Seed=310, Group=5, Weight=1, Season=1, Leaves="Foliage Red", Bark="Bark Grey", Inner="Foliage Red Shade", Light="Foliage Red Light", Streak="Bark Grey Streak"
+type "Hawthorn B Bare" Form=0, Height=4500mm, Crown=4320mm, Trunk=184mm, Clear=950mm, Leaf=0, Seed=310, Group=5, Weight=1, Season=2, Bark="Bark Grey", Streak="Bark Grey Streak"
+type "Hawthorn B Spring" Form=0, Height=4500mm, Crown=4320mm, Trunk=184mm, Clear=950mm, Leaf=1, Seed=310, Group=5, Weight=1, Season=3, Leaves="Foliage White", Bark="Bark Grey", Inner="Foliage White Shade", Light="Foliage White Light", Streak="Bark Grey Streak"
+type "Shrub A Autumn" Form=0, Height=1500mm, Crown=1800mm, Trunk=50mm, Clear=100mm, Leaf=1, Seed=317, Group=5, Weight=1, Season=1, Leaves="Foliage Red", Inner="Foliage Red Shade", Light="Foliage Red Light"
+type "Shrub A Bare" Form=0, Height=1500mm, Crown=1800mm, Trunk=50mm, Clear=100mm, Leaf=0, Seed=317, Group=5, Weight=1, Season=2
+type "Shrub A Spring" Form=0, Height=1500mm, Crown=1800mm, Trunk=50mm, Clear=100mm, Leaf=0.75, Seed=317, Group=5, Weight=1, Season=3, Leaves="Foliage Spring", Inner="Foliage Spring Shade", Light="Foliage Spring Light"
+type "Shrub B Autumn" Form=0, Height=1350mm, Crown=1940mm, Trunk=46mm, Clear=95mm, Leaf=1, Seed=324, Group=5, Weight=1, Season=1, Leaves="Foliage Red", Inner="Foliage Red Shade", Light="Foliage Red Light"
+type "Shrub B Bare" Form=0, Height=1350mm, Crown=1940mm, Trunk=46mm, Clear=95mm, Leaf=0, Seed=324, Group=5, Weight=1, Season=2
+type "Shrub B Spring" Form=0, Height=1350mm, Crown=1940mm, Trunk=46mm, Clear=95mm, Leaf=0.75, Seed=324, Group=5, Weight=1, Season=3, Leaves="Foliage Spring", Inner="Foliage Spring Shade", Light="Foliage Spring Light"
+type "Acacia A Autumn" Form=7, Height=10000mm, Crown=12000mm, Trunk=450mm, Clear=4500mm, Leaf=1, Seed=331, Group=6, Weight=1, Season=1, Leaves="Foliage Gold", Bark="Bark Dark", Inner="Foliage Gold Shade", Light="Foliage Gold Light", Streak="Bark Dark Streak"
+type "Acacia A Bare" Form=7, Height=10000mm, Crown=12000mm, Trunk=450mm, Clear=4500mm, Leaf=0, Seed=331, Group=6, Weight=1, Season=2, Bark="Bark Dark", Streak="Bark Dark Streak"
+type "Acacia A Spring" Form=7, Height=10000mm, Crown=12000mm, Trunk=450mm, Clear=4500mm, Leaf=0.75, Seed=331, Group=6, Weight=1, Season=3, Leaves="Foliage Spring", Bark="Bark Dark", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Streak="Bark Dark Streak"
+type "Acacia B Autumn" Form=7, Height=9000mm, Crown=12960mm, Trunk=414mm, Clear=4275mm, Leaf=1, Seed=338, Group=6, Weight=1, Season=1, Leaves="Foliage Gold", Bark="Bark Dark", Inner="Foliage Gold Shade", Light="Foliage Gold Light", Streak="Bark Dark Streak"
+type "Acacia B Bare" Form=7, Height=9000mm, Crown=12960mm, Trunk=414mm, Clear=4275mm, Leaf=0, Seed=338, Group=6, Weight=1, Season=2, Bark="Bark Dark", Streak="Bark Dark Streak"
+type "Acacia B Spring" Form=7, Height=9000mm, Crown=12960mm, Trunk=414mm, Clear=4275mm, Leaf=0.75, Seed=338, Group=6, Weight=1, Season=3, Leaves="Foliage Spring", Bark="Bark Dark", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Streak="Bark Dark Streak"
+type "Chestnut A Autumn" Form=0, Height=18000mm, Crown=14000mm, Trunk=700mm, Clear=3500mm, Leaf=1, Seed=401, Group=0, Weight=1, Season=1, Leaves="Foliage Autumn", Bark="Bark Dark", Inner="Foliage Autumn Shade", Light="Foliage Autumn Light", Streak="Bark Dark Streak"
+type "Chestnut A Bare" Form=0, Height=18000mm, Crown=14000mm, Trunk=700mm, Clear=3500mm, Leaf=0, Seed=401, Group=0, Weight=1, Season=2, Bark="Bark Dark", Streak="Bark Dark Streak"
+type "Chestnut A Spring" Form=0, Height=18000mm, Crown=14000mm, Trunk=700mm, Clear=3500mm, Leaf=0.75, Seed=401, Group=0, Weight=1, Season=3, Leaves="Foliage Spring", Bark="Bark Dark", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Streak="Bark Dark Streak"
+type "Chestnut B Autumn" Form=0, Height=16200mm, Crown=15120mm, Trunk=644mm, Clear=3325mm, Leaf=1, Seed=408, Group=0, Weight=1, Season=1, Leaves="Foliage Autumn", Bark="Bark Dark", Inner="Foliage Autumn Shade", Light="Foliage Autumn Light", Streak="Bark Dark Streak"
+type "Chestnut B Bare" Form=0, Height=16200mm, Crown=15120mm, Trunk=644mm, Clear=3325mm, Leaf=0, Seed=408, Group=0, Weight=1, Season=2, Bark="Bark Dark", Streak="Bark Dark Streak"
+type "Chestnut B Spring" Form=0, Height=16200mm, Crown=15120mm, Trunk=644mm, Clear=3325mm, Leaf=0.75, Seed=408, Group=0, Weight=1, Season=3, Leaves="Foliage Spring", Bark="Bark Dark", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Streak="Bark Dark Streak"
+type "Ash A Autumn" Form=1, Height=20000mm, Crown=9000mm, Trunk=550mm, Clear=4500mm, Leaf=1, Seed=415, Group=0, Weight=1, Season=1, Leaves="Foliage Gold", Bark="Bark Dark", Inner="Foliage Gold Shade", Light="Foliage Gold Light", Streak="Bark Dark Streak"
+type "Ash A Bare" Form=1, Height=20000mm, Crown=9000mm, Trunk=550mm, Clear=4500mm, Leaf=0, Seed=415, Group=0, Weight=1, Season=2, Bark="Bark Dark", Streak="Bark Dark Streak"
+type "Ash A Spring" Form=1, Height=20000mm, Crown=9000mm, Trunk=550mm, Clear=4500mm, Leaf=0.75, Seed=415, Group=0, Weight=1, Season=3, Leaves="Foliage Spring", Bark="Bark Dark", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Streak="Bark Dark Streak"
+type "Ash B Autumn" Form=1, Height=18000mm, Crown=9720mm, Trunk=506mm, Clear=4275mm, Leaf=1, Seed=422, Group=0, Weight=1, Season=1, Leaves="Foliage Gold", Bark="Bark Dark", Inner="Foliage Gold Shade", Light="Foliage Gold Light", Streak="Bark Dark Streak"
+type "Ash B Bare" Form=1, Height=18000mm, Crown=9720mm, Trunk=506mm, Clear=4275mm, Leaf=0, Seed=422, Group=0, Weight=1, Season=2, Bark="Bark Dark", Streak="Bark Dark Streak"
+type "Ash B Spring" Form=1, Height=18000mm, Crown=9720mm, Trunk=506mm, Clear=4275mm, Leaf=0.75, Seed=422, Group=0, Weight=1, Season=3, Leaves="Foliage Spring", Bark="Bark Dark", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Streak="Bark Dark Streak"
+type "Hornbeam A Autumn" Form=3, Height=15000mm, Crown=5000mm, Trunk=380mm, Clear=2000mm, Leaf=1, Seed=429, Group=2, Weight=1, Season=1, Leaves="Foliage Gold", Bark="Bark Grey", Inner="Foliage Gold Shade", Light="Foliage Gold Light", Streak="Bark Grey Streak"
+type "Hornbeam A Bare" Form=3, Height=15000mm, Crown=5000mm, Trunk=380mm, Clear=2000mm, Leaf=0, Seed=429, Group=2, Weight=1, Season=2, Bark="Bark Grey", Streak="Bark Grey Streak"
+type "Hornbeam A Spring" Form=3, Height=15000mm, Crown=5000mm, Trunk=380mm, Clear=2000mm, Leaf=0.75, Seed=429, Group=2, Weight=1, Season=3, Leaves="Foliage Spring", Bark="Bark Grey", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Streak="Bark Grey Streak"
+type "Hornbeam B Autumn" Form=3, Height=13500mm, Crown=5400mm, Trunk=350mm, Clear=1900mm, Leaf=1, Seed=436, Group=2, Weight=1, Season=1, Leaves="Foliage Gold", Bark="Bark Grey", Inner="Foliage Gold Shade", Light="Foliage Gold Light", Streak="Bark Grey Streak"
+type "Hornbeam B Bare" Form=3, Height=13500mm, Crown=5400mm, Trunk=350mm, Clear=1900mm, Leaf=0, Seed=436, Group=2, Weight=1, Season=2, Bark="Bark Grey", Streak="Bark Grey Streak"
+type "Hornbeam B Spring" Form=3, Height=13500mm, Crown=5400mm, Trunk=350mm, Clear=1900mm, Leaf=0.75, Seed=436, Group=2, Weight=1, Season=3, Leaves="Foliage Spring", Bark="Bark Grey", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Streak="Bark Grey Streak"
+type "Magnolia A Autumn" Form=1, Height=7000mm, Crown=5500mm, Trunk=250mm, Clear=1000mm, Leaf=1, Seed=471, Group=5, Weight=1, Season=1, Leaves="Foliage Gold", Bark="Bark Grey", Inner="Foliage Gold Shade", Light="Foliage Gold Light", Streak="Bark Grey Streak"
+type "Magnolia A Bare" Form=1, Height=7000mm, Crown=5500mm, Trunk=250mm, Clear=1000mm, Leaf=0, Seed=471, Group=5, Weight=1, Season=2, Bark="Bark Grey", Streak="Bark Grey Streak"
+type "Magnolia A Spring" Form=1, Height=7000mm, Crown=5500mm, Trunk=250mm, Clear=1000mm, Leaf=1, Seed=471, Group=5, Weight=1, Season=3, Leaves="Foliage Blossom", Bark="Bark Grey", Inner="Foliage Blossom Shade", Light="Foliage Blossom Light", Streak="Bark Grey Streak"
+type "Magnolia B Autumn" Form=1, Height=6300mm, Crown=5940mm, Trunk=230mm, Clear=950mm, Leaf=1, Seed=478, Group=5, Weight=1, Season=1, Leaves="Foliage Gold", Bark="Bark Grey", Inner="Foliage Gold Shade", Light="Foliage Gold Light", Streak="Bark Grey Streak"
+type "Magnolia B Bare" Form=1, Height=6300mm, Crown=5940mm, Trunk=230mm, Clear=950mm, Leaf=0, Seed=478, Group=5, Weight=1, Season=2, Bark="Bark Grey", Streak="Bark Grey Streak"
+type "Magnolia B Spring" Form=1, Height=6300mm, Crown=5940mm, Trunk=230mm, Clear=950mm, Leaf=1, Seed=478, Group=5, Weight=1, Season=3, Leaves="Foliage Blossom", Bark="Bark Grey", Inner="Foliage Blossom Shade", Light="Foliage Blossom Light", Streak="Bark Grey Streak"
+type "Rowan A Autumn" Form=0, Height=8000mm, Crown=5500mm, Trunk=250mm, Clear=1500mm, Leaf=1, Seed=485, Group=5, Weight=1, Season=1, Leaves="Foliage Red", Bark="Bark Grey", Inner="Foliage Red Shade", Light="Foliage Red Light", Streak="Bark Grey Streak"
+type "Rowan A Bare" Form=0, Height=8000mm, Crown=5500mm, Trunk=250mm, Clear=1500mm, Leaf=0, Seed=485, Group=5, Weight=1, Season=2, Bark="Bark Grey", Streak="Bark Grey Streak"
+type "Rowan A Spring" Form=0, Height=8000mm, Crown=5500mm, Trunk=250mm, Clear=1500mm, Leaf=1, Seed=485, Group=5, Weight=1, Season=3, Leaves="Foliage White", Bark="Bark Grey", Inner="Foliage White Shade", Light="Foliage White Light", Streak="Bark Grey Streak"
+type "Rowan B Autumn" Form=0, Height=7200mm, Crown=5940mm, Trunk=230mm, Clear=1425mm, Leaf=1, Seed=492, Group=5, Weight=1, Season=1, Leaves="Foliage Red", Bark="Bark Grey", Inner="Foliage Red Shade", Light="Foliage Red Light", Streak="Bark Grey Streak"
+type "Rowan B Bare" Form=0, Height=7200mm, Crown=5940mm, Trunk=230mm, Clear=1425mm, Leaf=0, Seed=492, Group=5, Weight=1, Season=2, Bark="Bark Grey", Streak="Bark Grey Streak"
+type "Rowan B Spring" Form=0, Height=7200mm, Crown=5940mm, Trunk=230mm, Clear=1425mm, Leaf=1, Seed=492, Group=5, Weight=1, Season=3, Leaves="Foliage White", Bark="Bark Grey", Inner="Foliage White Shade", Light="Foliage White Light", Streak="Bark Grey Streak"
+type "Small" Form=0, Height=6000mm, Crown=3500mm, Trunk=300mm, Clear=1800mm, Leaf=1, Seed=359, Group=5, Weight=0
+type "Large" Form=0, Height=9000mm, Crown=5000mm, Trunk=400mm, Clear=2500mm, Leaf=1, Seed=366, Group=0, Weight=0
+type "Maple Autumn" Form=0, Height=11000mm, Crown=8000mm, Trunk=400mm, Clear=2500mm, Leaf=1, Seed=373, Group=0, Weight=0, Leaves="Foliage Autumn", Inner="Foliage Autumn Shade", Light="Foliage Autumn Light"
+type "Oak Bare" Form=0, Height=14000mm, Crown=11000mm, Trunk=600mm, Clear=3500mm, Leaf=0, Seed=380, Group=0, Weight=0, Bark="Bark Dark", Streak="Bark Dark Streak"
+type "Linden Bare" Form=1, Height=16000mm, Crown=8500mm, Trunk=500mm, Clear=3000mm, Leaf=0, Seed=387, Group=0, Weight=0
+type "Cherry Blossom" Form=1, Height=6000mm, Crown=5000mm, Trunk=250mm, Clear=1400mm, Leaf=1, Seed=394, Group=5, Weight=0, Leaves="Foliage Blossom", Bark="Bark Cherry", Inner="Foliage Blossom Shade", Light="Foliage Blossom Light", Streak="Bark Cherry Streak"
+type "H300in" Height=300in, Crown=150in, Weight=0
+plant Stem part(wood) form(Form) height(Height * Scale) crown(Crown * Scale) trunk(Trunk * Scale) clear(max(Clear * Scale, MinClear)) leaf(Leaf) seed(Seed) mat(Bark) show(plan, 3d, elev)
+plant Crown part(foliage) form(Form) height(Height * Scale) crown(Crown * Scale) trunk(Trunk * Scale) clear(max(Clear * Scale, MinClear)) leaf(Leaf) seed(Seed) mat(Leaves) show(plan, 3d, elev)
+plant Shade part(shade) form(Form) height(Height * Scale) crown(Crown * Scale) trunk(Trunk * Scale) clear(max(Clear * Scale, MinClear)) leaf(Leaf) seed(Seed) mat(Inner) show(3d, elev)
+plant Light part(light) form(Form) height(Height * Scale) crown(Crown * Scale) trunk(Trunk * Scale) clear(max(Clear * Scale, MinClear)) leaf(Leaf) seed(Seed) mat(Light) show(3d, elev)
+plant Streak part(streak) form(Form) height(Height * Scale) crown(Crown * Scale) trunk(Trunk * Scale) clear(max(Clear * Scale, MinClear)) leaf(Leaf) seed(Seed) mat(Streak) show(3d, elev)
+---
+family Planter
+category planting
+host floor
+ifc IfcGeographicElement NOTDEFINED
+param Lift length type 0mm
+param Length length type 2000mm
+param Width length type 600mm
+param Box length type 500mm
+param Timber material type "Timber Larch"
+param Leaves material type "Foliage Green"
+type "H0" Lift=0mm
+type "H2.7" Lift=2950mm
+type "H3.0" Lift=3250mm
+type "H3.3" Lift=3550mm
+type "H3.6" Lift=3850mm
+type "H3.9" Lift=4150mm
+type "H4.2" Lift=4450mm
+type "H4.5" Lift=4750mm
+type "H4.8" Lift=5050mm
+type "H5.1" Lift=5350mm
+type "H5.4" Lift=5650mm
+type "H5.7" Lift=5950mm
+type "H6.0" Lift=6250mm
+type "Lift130in" Lift=130in
+extrude Body rect(-Length / 2, -Width / 2, Length / 2, Width / 2) z(Lift, Lift + Box) mat(Timber) show(3d, elev)
+extrude Shrub rect(-Length / 2 + 100mm, -Width / 2 + 100mm, Length / 2 - 100mm, Width / 2 - 100mm) z(Lift + Box, Lift + Box + 600mm) mat(Leaves) show(3d, elev)
+symbol rect(-Length / 2, -Width / 2, Length / 2, Width / 2)
+---
+family Hedge
+category planting
+host floor
+ifc IfcGeographicElement NOTDEFINED
+# One clipped length of a hedge, laid end to end along a boundary; Height is the clipped height.
+# Six cuts along the length, each with its own top height and width (seeded by Scale, which the
+# generator jitters per length), a trimmed shoulder under a narrower top, and a scalloped plan edge.
+param Length length type 3000mm
+param Width length type 600mm
+param Height length type 1200mm
+param Scale number type 1
+param Leaves material type "Foliage Green"
+type "Clipped 1200" Height=1200mm
+type "Low 600" Height=600mm, Width=500mm
+type "Tall 1800" Height=1800mm, Width=800mm
+type "Conifer 2000" Height=2000mm, Width=800mm, Leaves="Foliage Conifer"
+extrude Base0 rect((-Length / 2 + Length * 0 / 6), -(Width * Scale * (1 + 0.06 * cos(Scale * 61 + 0 * 1.9))) / 2, (-Length / 2 + Length * 1 / 6), (Width * Scale * (1 + 0.06 * cos(Scale * 61 + 0 * 1.9))) / 2) z(0mm, 0.75 * (Height * Scale * (1 + 0.08 * sin(Scale * 97 + 0 * 2.3)))) mat(Leaves) show(3d, elev)
+extrude Top0 rect((-Length / 2 + Length * 0 / 6), -0.4 * (Width * Scale * (1 + 0.06 * cos(Scale * 61 + 0 * 1.9))), (-Length / 2 + Length * 1 / 6), 0.4 * (Width * Scale * (1 + 0.06 * cos(Scale * 61 + 0 * 1.9)))) z(0.75 * (Height * Scale * (1 + 0.08 * sin(Scale * 97 + 0 * 2.3))), (Height * Scale * (1 + 0.08 * sin(Scale * 97 + 0 * 2.3)))) mat(Leaves) show(3d, elev)
+extrude Base1 rect((-Length / 2 + Length * 1 / 6), -(Width * Scale * (1 + 0.06 * cos(Scale * 61 + 1 * 1.9))) / 2, (-Length / 2 + Length * 2 / 6), (Width * Scale * (1 + 0.06 * cos(Scale * 61 + 1 * 1.9))) / 2) z(0mm, 0.75 * (Height * Scale * (1 + 0.08 * sin(Scale * 97 + 1 * 2.3)))) mat(Leaves) show(3d, elev)
+extrude Top1 rect((-Length / 2 + Length * 1 / 6), -0.4 * (Width * Scale * (1 + 0.06 * cos(Scale * 61 + 1 * 1.9))), (-Length / 2 + Length * 2 / 6), 0.4 * (Width * Scale * (1 + 0.06 * cos(Scale * 61 + 1 * 1.9)))) z(0.75 * (Height * Scale * (1 + 0.08 * sin(Scale * 97 + 1 * 2.3))), (Height * Scale * (1 + 0.08 * sin(Scale * 97 + 1 * 2.3)))) mat(Leaves) show(3d, elev)
+extrude Base2 rect((-Length / 2 + Length * 2 / 6), -(Width * Scale * (1 + 0.06 * cos(Scale * 61 + 2 * 1.9))) / 2, (-Length / 2 + Length * 3 / 6), (Width * Scale * (1 + 0.06 * cos(Scale * 61 + 2 * 1.9))) / 2) z(0mm, 0.75 * (Height * Scale * (1 + 0.08 * sin(Scale * 97 + 2 * 2.3)))) mat(Leaves) show(3d, elev)
+extrude Top2 rect((-Length / 2 + Length * 2 / 6), -0.4 * (Width * Scale * (1 + 0.06 * cos(Scale * 61 + 2 * 1.9))), (-Length / 2 + Length * 3 / 6), 0.4 * (Width * Scale * (1 + 0.06 * cos(Scale * 61 + 2 * 1.9)))) z(0.75 * (Height * Scale * (1 + 0.08 * sin(Scale * 97 + 2 * 2.3))), (Height * Scale * (1 + 0.08 * sin(Scale * 97 + 2 * 2.3)))) mat(Leaves) show(3d, elev)
+extrude Base3 rect((-Length / 2 + Length * 3 / 6), -(Width * Scale * (1 + 0.06 * cos(Scale * 61 + 3 * 1.9))) / 2, (-Length / 2 + Length * 4 / 6), (Width * Scale * (1 + 0.06 * cos(Scale * 61 + 3 * 1.9))) / 2) z(0mm, 0.75 * (Height * Scale * (1 + 0.08 * sin(Scale * 97 + 3 * 2.3)))) mat(Leaves) show(3d, elev)
+extrude Top3 rect((-Length / 2 + Length * 3 / 6), -0.4 * (Width * Scale * (1 + 0.06 * cos(Scale * 61 + 3 * 1.9))), (-Length / 2 + Length * 4 / 6), 0.4 * (Width * Scale * (1 + 0.06 * cos(Scale * 61 + 3 * 1.9)))) z(0.75 * (Height * Scale * (1 + 0.08 * sin(Scale * 97 + 3 * 2.3))), (Height * Scale * (1 + 0.08 * sin(Scale * 97 + 3 * 2.3)))) mat(Leaves) show(3d, elev)
+extrude Base4 rect((-Length / 2 + Length * 4 / 6), -(Width * Scale * (1 + 0.06 * cos(Scale * 61 + 4 * 1.9))) / 2, (-Length / 2 + Length * 5 / 6), (Width * Scale * (1 + 0.06 * cos(Scale * 61 + 4 * 1.9))) / 2) z(0mm, 0.75 * (Height * Scale * (1 + 0.08 * sin(Scale * 97 + 4 * 2.3)))) mat(Leaves) show(3d, elev)
+extrude Top4 rect((-Length / 2 + Length * 4 / 6), -0.4 * (Width * Scale * (1 + 0.06 * cos(Scale * 61 + 4 * 1.9))), (-Length / 2 + Length * 5 / 6), 0.4 * (Width * Scale * (1 + 0.06 * cos(Scale * 61 + 4 * 1.9)))) z(0.75 * (Height * Scale * (1 + 0.08 * sin(Scale * 97 + 4 * 2.3))), (Height * Scale * (1 + 0.08 * sin(Scale * 97 + 4 * 2.3)))) mat(Leaves) show(3d, elev)
+extrude Base5 rect((-Length / 2 + Length * 5 / 6), -(Width * Scale * (1 + 0.06 * cos(Scale * 61 + 5 * 1.9))) / 2, (-Length / 2 + Length * 6 / 6), (Width * Scale * (1 + 0.06 * cos(Scale * 61 + 5 * 1.9))) / 2) z(0mm, 0.75 * (Height * Scale * (1 + 0.08 * sin(Scale * 97 + 5 * 2.3)))) mat(Leaves) show(3d, elev)
+extrude Top5 rect((-Length / 2 + Length * 5 / 6), -0.4 * (Width * Scale * (1 + 0.06 * cos(Scale * 61 + 5 * 1.9))), (-Length / 2 + Length * 6 / 6), 0.4 * (Width * Scale * (1 + 0.06 * cos(Scale * 61 + 5 * 1.9)))) z(0.75 * (Height * Scale * (1 + 0.08 * sin(Scale * 97 + 5 * 2.3))), (Height * Scale * (1 + 0.08 * sin(Scale * 97 + 5 * 2.3)))) mat(Leaves) show(3d, elev)
+symbol arc((-Length / 2 + Length * 1 / 12), Width * Scale / 2, Length / 12, 0deg, 180deg)
+symbol arc((-Length / 2 + Length * 1 / 12), -Width * Scale / 2, Length / 12, 180deg, 360deg)
+symbol arc((-Length / 2 + Length * 3 / 12), Width * Scale / 2, Length / 12, 0deg, 180deg)
+symbol arc((-Length / 2 + Length * 3 / 12), -Width * Scale / 2, Length / 12, 180deg, 360deg)
+symbol arc((-Length / 2 + Length * 5 / 12), Width * Scale / 2, Length / 12, 0deg, 180deg)
+symbol arc((-Length / 2 + Length * 5 / 12), -Width * Scale / 2, Length / 12, 180deg, 360deg)
+symbol arc((-Length / 2 + Length * 7 / 12), Width * Scale / 2, Length / 12, 0deg, 180deg)
+symbol arc((-Length / 2 + Length * 7 / 12), -Width * Scale / 2, Length / 12, 180deg, 360deg)
+symbol arc((-Length / 2 + Length * 9 / 12), Width * Scale / 2, Length / 12, 0deg, 180deg)
+symbol arc((-Length / 2 + Length * 9 / 12), -Width * Scale / 2, Length / 12, 180deg, 360deg)
+symbol arc((-Length / 2 + Length * 11 / 12), Width * Scale / 2, Length / 12, 0deg, 180deg)
+symbol arc((-Length / 2 + Length * 11 / 12), -Width * Scale / 2, Length / 12, 180deg, 360deg)
+symbol line(-Length / 2, -Width * Scale / 2, -Length / 2, Width * Scale / 2)
+symbol line(Length / 2, -Width * Scale / 2, Length / 2, Width * Scale / 2)
+---
+family Shrub
+category planting
+host floor
+ifc IfcGeographicElement NOTDEFINED
+# A shrub: the same procedural plant as a tree, low; Scale (set per plant by the generator) sizes
+# it and reseeds its lumps, so no two shrubs of a type are alike. Form 0 round 1 oval 6 vase 7 spreading.
+param Form int type 0
+param Height length type 1200mm
+param Crown length type 1400mm
+param Trunk length type 30mm
+param Clear length type 100mm
+param Leaf number type 1
+param Seed int type 1
+param Scale number type 1
+param Bark material type "Bark Brown"
+param Leaves material type "Foliage Green"
+type "Round 1" Form=0, Height=1100mm, Crown=1300mm, Seed=11
+type "Round 2" Form=0, Height=1500mm, Crown=1700mm, Seed=12
+type "Oval 1" Form=1, Height=1600mm, Crown=1100mm, Seed=13
+type "Spreading 1" Form=7, Height=800mm, Crown=1800mm, Seed=14
+type "Spreading 2" Form=7, Height=1000mm, Crown=2200mm, Seed=15, Leaves="Foliage Olive"
+type "Vase 1" Form=6, Height=1800mm, Crown=1500mm, Clear=200mm, Seed=16
+type "Lilac" Form=1, Height=2200mm, Crown=1800mm, Clear=250mm, Seed=17, Leaves="Foliage Spring"
+plant Stem part(wood) form(Form) height(Height * Scale) crown(Crown * Scale) trunk(Trunk * Scale) clear(Clear * Scale) leaf(Leaf) seed(Seed + round(Scale * 100)) mat(Bark) show(plan, 3d, elev)
+plant Crown part(foliage) form(Form) height(Height * Scale) crown(Crown * Scale) trunk(Trunk * Scale) clear(Clear * Scale) leaf(Leaf) seed(Seed + round(Scale * 100)) mat(Leaves) show(plan, 3d, elev)
+---
+family Lawn
+category planting
+host floor
+ifc IfcGeographicElement NOTDEFINED
+# A square of ground cover: grass or a planting bed (mulch and soil), laid on a grid.
+param Size length type 6000mm
+param Thick length type 20mm
+param Cover material type "Lawn Grass"
+type "Lawn" Size=6000mm
+type "Bed" Size=1500mm, Thick=60mm, Cover="Planting Soil"
+extrude Body rect(-Size / 2 + 5mm, -Size / 2 + 5mm, Size / 2 - 5mm, Size / 2 - 5mm) z(0, Thick) mat(Cover) show(3d, elev)
+symbol rect(-Size / 2, -Size / 2, Size / 2, Size / 2)
+---
+family Glass Rail
+category generic
+host floor
+ifc IfcRailing BALUSTRADE
+param Length length type 3000mm
+param Height length type 1100mm
+param Glass length type 20mm
+param Pane material type "Glass Clear"
+type "3000" Length=3000mm
+type "120in" Length=120in
+extrude Shoe poly(-Length / 2, -45mm, Length / 2, -45mm, Length / 2, 45mm, -Length / 2, 45mm) z(0, 110mm) mat(Pane) show(3d, elev)
+extrude Pane rect(-Length / 2 + 5mm, -Glass / 2, Length / 2 - 5mm, Glass / 2) z(110mm, Height - 40mm) mat(Pane) show(3d, elev)
+sweep Cap circle(0, 0, 21mm) path(-Length / 2 + 5mm, 0, Height - 21mm, Length / 2 - 5mm, 0, Height - 21mm) mat(Pane) show(3d, elev)
+symbol rect(-Length / 2, -Glass / 2, Length / 2, Glass / 2)
+---
+family Washing Machine
+category plumbing
+host floor
+ifc IfcElectricAppliance WASHINGMACHINE
+param Power number type 2200
+param FlowCold number type 0.15
+param FlowWaste number type 0.8
+param Width length type 600mm
+param Depth length type 600mm
+param Height length type 850mm
+param Casing material type "Steel White"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Back y = Depth / 2
+type "600" Width=600mm, Depth=600mm, Height=850mm
+type "24in" Width=24in, Depth=24in, Height=34in
+extrude Plinth rect(Left + 20mm, Front + 50mm, Right - 20mm, Back) z(0mm, 80mm) mat(Casing) show(3d, elev)
+extrude Body rect(Left, Front + 20mm, Right, Back) z(80mm, Height - 20mm) mat(Casing) show(3d, elev)
+extrude Top rect(Left, Front, Right, Back) z(Height - 20mm, Height) mat(Casing) show(3d, elev)
+extrude Panel rect(Left, Front, Right, Front + 20mm) z(Height - 140mm, Height - 20mm) mat(Casing) show(3d, elev)
+sweep Door circle(0, 0, 160mm) path(0, Front + 20mm, Height / 2 - 30mm, 0, Front, Height / 2 - 30mm) mat(Casing) show(3d, elev)
+sweep Knob circle(0, 0, 25mm) path(Right - 80mm, Front + 20mm, Height - 80mm, Right - 80mm, Front, Height - 80mm) mat(Casing) show(medium, fine, 3d, elev)
+extrude Drawer rect(Left + 30mm, Front + 5mm, Left + 200mm, Front + 20mm) z(Height - 120mm, Height - 40mm) mat(Casing) show(fine, 3d, elev)
+extrude Kick rect(Left + 20mm, Front + 20mm, Right - 20mm, Front + 50mm) z(0mm, 80mm) mat(Casing) show(medium, fine, 3d, elev)
+symbol rect(Left, Front, Right, Back)
+symbol line(Left, Front, Right, Back) show(medium, fine)
+connector Waste pipe sanitary at(200mm, 200mm, 0) dir(0, 0, -1) size(40mm)
+connector Cold pipe cold_water at(-200mm, 300mm, 600mm) dir(0, 1, 0) size(15mm)
+connector Power conduit power at(0, 300mm, 300mm) dir(0, 1, 0) size(20mm)
+---
+family Dishwasher
+category plumbing
+host floor
+ifc IfcElectricAppliance DISHWASHER
+param Power number type 2000
+param FlowCold number type 0.15
+param FlowWaste number type 0.8
+param Width length type 600mm
+param Depth length type 600mm
+param Height length type 850mm
+param Casing material type "Steel White"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Back y = Depth / 2
+type "600" Width=600mm, Depth=600mm, Height=850mm
+type "24in" Width=24in, Depth=24in, Height=34in
+extrude Plinth rect(Left + 20mm, Front + 50mm, Right - 20mm, Back) z(0mm, 80mm) mat(Casing) show(3d, elev)
+extrude Body rect(Left, Front + 20mm, Right, Back) z(80mm, Height - 20mm) mat(Casing) show(3d, elev)
+extrude Top rect(Left, Front, Right, Back) z(Height - 20mm, Height) mat(Casing) show(3d, elev)
+extrude Door rect(Left + 3mm, Front, Right - 3mm, Front + 20mm) z(80mm, Height - 140mm) mat(Casing) show(3d, elev)
+extrude Panel rect(Left, Front, Right, Front + 20mm) z(Height - 137mm, Height - 20mm) mat(Casing) show(3d, elev)
+extrude Handle rect(Left + 100mm, Front, Right - 100mm, Front + 5mm) z(Height - 180mm, Height - 160mm) mat(Casing) show(medium, fine, 3d, elev)
+extrude Kick rect(Left + 20mm, Front + 20mm, Right - 20mm, Front + 50mm) z(0mm, 80mm) mat(Casing) show(medium, fine, 3d, elev)
+symbol rect(Left, Front, Right, Back)
+symbol line(Left, Front, Right, Back) show(medium, fine)
+connector Waste pipe sanitary at(200mm, 200mm, 0) dir(0, 0, -1) size(40mm)
+connector Cold pipe cold_water at(-200mm, 300mm, 600mm) dir(0, 1, 0) size(15mm)
+connector Power conduit power at(0, 300mm, 300mm) dir(0, 1, 0) size(20mm)
+---
+family Cooker
+category plumbing
+host floor
+ifc IfcElectricAppliance ELECTRICCOOKER
+param Power number type 7000
+param Width length type 600mm
+param Depth length type 600mm
+param Height length type 850mm
+param Casing material type "Steel White"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Back y = Depth / 2
+type "600" Width=600mm, Depth=600mm, Height=850mm
+type "24in" Width=24in, Depth=24in, Height=34in
+extrude Plinth rect(Left + 20mm, Front + 50mm, Right - 20mm, Back) z(0mm, 80mm) mat(Casing) show(3d, elev)
+extrude Body rect(Left, Front + 20mm, Right, Back) z(80mm, Height - 20mm) mat(Casing) show(3d, elev)
+extrude Top rect(Left, Front, Right, Back) z(Height - 20mm, Height - 15mm) mat(Casing) show(3d, elev)
+extrude Oven rect(Left + 3mm, Front, Right - 3mm, Front + 20mm) z(180mm, Height - 140mm) mat(Casing) show(3d, elev)
+extrude Drawer rect(Left + 3mm, Front, Right - 3mm, Front + 20mm) z(80mm, 177mm) mat(Casing) show(3d, elev)
+extrude Panel rect(Left, Front, Right, Front + 20mm) z(Height - 137mm, Height - 20mm) mat(Casing) show(3d, elev)
+extrude Window rect(Left + 80mm, Front, Right - 80mm, Front + 4mm) z(300mm, Height - 260mm) mat(Casing) show(medium, fine, 3d, elev)
+extrude HobA circle(Left + Width / 4, Front + Depth / 4, 90mm) z(Height - 15mm, Height) mat(Casing) show(3d, elev)
+extrude HobB circle(Right - Width / 4, Front + Depth / 4, 70mm) z(Height - 15mm, Height) mat(Casing) show(3d, elev)
+extrude HobC circle(Left + Width / 4, Back - Depth / 4, 70mm) z(Height - 15mm, Height) mat(Casing) show(medium, fine, 3d, elev)
+extrude HobD circle(Right - Width / 4, Back - Depth / 4, 90mm) z(Height - 15mm, Height) mat(Casing) show(medium, fine, 3d, elev)
+extrude Rim rect(Left + 10mm, Front + 10mm, Right - 10mm, Front + 20mm) z(Height - 15mm, Height) mat(Casing) show(medium, fine, 3d, elev)
+symbol rect(Left, Front, Right, Back)
+symbol line(Left, Front, Right, Back) show(medium, fine)
+connector Power conduit power at(0, 300mm, 300mm) dir(0, 1, 0) size(20mm)
+---
+family Platform Lift
+category equipment
+host floor
+ifc IfcTransportElement LIFTINGGEAR
+param Width length type 1100mm
+param Depth length type 1400mm
+param Travel length type 2000mm
+param Guard length type 1100mm
+param Deck length type 60mm
+param Mast length type 200mm
+param Steel material type "Steel White"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Back y = Depth / 2
+type "1100x1400" Width=1100mm, Depth=1400mm
+type "900x1400" Width=900mm, Depth=1400mm
+type "43x55in" Width=43in, Depth=55in
+extrude Deck rect(Left + Mast, Front, Right, Back) z(0mm, Deck) mat(Steel) show(3d, elev)
+extrude Mast rect(Left, Front, Left + Mast, Back) z(0mm, Travel + Guard) mat(Steel) show(3d, elev)
+extrude Guard rect(Right - Deck, Front, Right, Back) z(Deck, Deck + Guard) mat(Steel) show(medium, fine, 3d, elev)
+symbol rect(Left, Front, Right, Back)
+symbol rect(Left, Front, Left + Mast, Back)
+symbol line(Left + Mast, Back, Right, Front) show(medium, fine)
+---
+family Wall Cabinet
+category casework
+host floor
+ifc IfcFurniture NOTDEFINED
+param Length length type 600mm
+param Depth length type 350mm
+param Height length type 720mm
+param Elevation length type 1450mm
+param Door length type 18mm
+param Carcass material type "Melamine White"
+ref Left x = 0
+ref Right x = Length
+ref Front y = 0
+ref Back y = Depth
+type "300" Length=300mm
+type "450" Length=450mm
+type "600" Length=600mm
+type "900" Length=900mm
+type "1200" Length=1200mm
+type "24in" Length=24in, Depth=12in, Height=30in, Elevation=54in
+extrude Cabinet rect(Left, Front + Door, Right, Back) z(Elevation, Elevation + Height) mat(Carcass) show(3d, elev)
+extrude Doors rect(Left, Front, Right, Front + Door) z(Elevation, Elevation + Height) mat(Carcass) show(3d, elev)
+symbol line(Left, Front, Right, Front)
+symbol line(Left, Front, Right, Back) show(medium, fine)
+---
+family Cooker Hood
+category equipment
+host floor
+ifc IfcElectricAppliance NOTDEFINED
+param Power number type 250
+param Width length type 600mm
+param Depth length type 500mm
+param Elevation length type 1550mm
+param Canopy length type 120mm
+param Chimney length type 250mm
+param ChimneyH length type 500mm
+param Duct length type 150mm
+param Casing material type "Stainless Steel"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Back y = Depth / 2
+type "600" Width=600mm
+type "900" Width=900mm
+type "24in" Width=24in, Depth=20in, Elevation=61in, Duct=6in
+extrude Canopy rect(Left, Front, Right, Back) z(Elevation, Elevation + Canopy) mat(Casing) show(3d, elev)
+extrude Chimney rect(-Chimney / 2, Back - Chimney, Chimney / 2, Back) z(Elevation + Canopy, Elevation + Canopy + ChimneyH) mat(Casing) show(3d, elev)
+symbol rect(Left, Front, Right, Back) show(medium, fine)
+symbol rect(-Chimney / 2, Back - Chimney, Chimney / 2, Back)
+connector Exhaust duct exhaust_air at(0, Back - Chimney / 2, Elevation + Canopy + ChimneyH) dir(0, 0, 1) size(Duct)
+connector Power conduit power at(0, Back, Elevation + Canopy + ChimneyH - 100mm) dir(0, 1, 0) size(20mm)
+---
+family Water Heater
+category plumbing
+host wall
+ifc IfcElectricAppliance FREESTANDINGWATERHEATER
+param Power number type 2000
+param Volume number type 80
+param FlowCold number type 0.1
+param FlowHot number type 0.1
+param Diameter length type 450mm
+param Height length type 800mm
+param Elevation length type 1200mm
+param Casing material type "Enamel White"
+ref Wall y = 0
+ref Centre x = 0
+type "80 l" Diameter=450mm, Height=800mm, Volume=80
+type "150 l" Diameter=560mm, Height=1150mm, Elevation=900mm, Volume=150, FlowCold=0.2, FlowHot=0.2
+type "20x40in" Diameter=20in, Height=40in, Elevation=40in, Volume=113
+extrude Tank circle(Centre, Wall + Diameter / 2, Diameter / 2) z(Elevation, Elevation + Height) mat(Casing) show(3d, elev)
+symbol circle(Centre, Wall + Diameter / 2, Diameter / 2)
+symbol rect(Centre - Diameter / 2, Wall, Centre + Diameter / 2, Wall + Diameter) show(fine)
+connector Cold pipe cold_water at(Centre - 60mm, Wall + Diameter / 2, Elevation) dir(0, 0, -1) size(15mm)
+connector Hot pipe hot_water at(Centre + 60mm, Wall + Diameter / 2, Elevation) dir(0, 0, -1) size(15mm)
+connector Power conduit power at(Centre, Wall, Elevation + Height / 2) dir(0, -1, 0) size(20mm)
+---
+family Mirror
+category generic
+host wall
+ifc IfcFurniture NOTDEFINED
+param Width length type 500mm
+param Height length type 700mm
+param Depth length type 20mm
+param Elevation length type 1100mm
+param Glass material type "Mirror Glass"
+ref Wall y = 0
+ref Centre x = 0
+type "500x700" Width=500mm, Height=700mm
+type "600x800" Width=600mm, Height=800mm, Elevation=1000mm
+type "20x28in" Width=20in, Height=28in, Depth=0.75in, Elevation=43in
+extrude Back rect(Centre - Width / 2, Wall, Centre + Width / 2, Wall + Depth - 6mm) z(Elevation, Elevation + Height) mat(Glass) show(3d, elev)
+extrude Glass rect(Centre - Width / 2 + 15mm, Wall + Depth - 6mm, Centre + Width / 2 - 15mm, Wall + Depth) z(Elevation + 15mm, Elevation + Height - 15mm) mat(Glass) show(3d, elev)
+symbol rect(Centre - Width / 2, Wall, Centre + Width / 2, Wall + Depth)
+---
+family Towel Rail
+category generic
+host wall
+ifc IfcFurniture NOTDEFINED
+param Width length type 500mm
+param Height length type 800mm
+param Depth length type 100mm
+param Bar length type 25mm
+param Elevation length type 900mm
+param Steel material type "Chrome"
+ref Wall y = 0
+ref Centre x = 0
+type "500x800" Width=500mm, Height=800mm
+type "600x1200" Width=600mm, Height=1200mm, Elevation=700mm
+type "20x32in" Width=20in, Height=32in, Depth=4in, Bar=1in, Elevation=36in
+extrude SideL rect(Centre - Width / 2, Depth - Bar, Centre - Width / 2 + Bar, Depth) z(Elevation, Elevation + Height) mat(Steel) show(3d, elev)
+extrude SideR rect(Centre + Width / 2 - Bar, Depth - Bar, Centre + Width / 2, Depth) z(Elevation, Elevation + Height) mat(Steel) show(3d, elev)
+extrude Bars rect(Centre - Width / 2, Depth - Bar, Centre + Width / 2, Depth) z(Elevation + Height / 3, Elevation + Height / 3 + Bar) mat(Steel) show(3d, elev)
+extrude Mount rect(Centre - Bar / 2, Wall, Centre + Bar / 2, Depth - Bar) z(Elevation + Height - Bar, Elevation + Height) mat(Steel) show(3d, elev)
+symbol rect(Centre - Width / 2, Wall, Centre + Width / 2, Depth)
+---
+family Toilet Roll Holder
+category generic
+host wall
+ifc IfcFurniture NOTDEFINED
+param Width length type 150mm
+param Depth length type 120mm
+param Elevation length type 700mm
+param Steel material type "Chrome"
+ref Wall y = 0
+ref Centre x = 0
+type "150" Width=150mm
+type "6in" Width=6in, Depth=4.75in, Elevation=28in
+extrude Plate rect(Centre - Width / 2, Wall, Centre + Width / 2, Wall + 10mm) z(Elevation, Elevation + 80mm) mat(Steel) show(3d, elev)
+extrude Arm rect(Centre - Width / 2, Wall + 10mm, Centre + Width / 2, Depth) z(Elevation + 20mm, Elevation + 40mm) mat(Steel) show(3d, elev)
+symbol rect(Centre - Width / 2, Wall, Centre + Width / 2, Depth)
+---
+family Coat Rack
+category furniture
+host wall
+ifc IfcFurniture NOTDEFINED
+param Width length type 900mm
+param Depth length type 250mm
+param Elevation length type 1650mm
+param Shelf length type 20mm
+param Wood material type "Oak"
+ref Wall y = 0
+ref Centre x = 0
+type "900" Width=900mm
+type "1200" Width=1200mm
+type "36in" Width=36in, Depth=10in, Elevation=65in, Shelf=0.75in
+extrude Board rect(Centre - Width / 2, Wall, Centre + Width / 2, Wall + Shelf) z(Elevation - 150mm, Elevation) mat(Wood) show(3d, elev)
+extrude Shelf rect(Centre - Width / 2, Wall, Centre + Width / 2, Depth) z(Elevation + 150mm, Elevation + 150mm + Shelf) mat(Wood) show(3d, elev)
+symbol rect(Centre - Width / 2, Wall, Centre + Width / 2, Depth)
+---
+family Escalator
+category equipment
+host floor
+ifc IfcTransportElement ESCALATOR
+param Rise length type 6000mm
+param Run length type 10392mm
+param Landing length type 3000mm
+param Width length type 1650mm
+param Band length type 1000mm
+param Truss length type 1100mm
+param Balustrade length type 1000mm
+param Panel length type 20mm
+param Casing material type "Steel Grey"
+param Steps material type "Stainless Steel"
+param Screen material type "Glass Clear"
+type "6000" Rise=6000mm, Run=10392mm
+type "8400" Rise=8400mm, Run=14549mm
+type "236in" Rise=236in, Run=409in, Landing=118in, Width=65in, Band=39in
+sweep Truss rect(-Width / 2, -Truss, Width / 2, 0) path(-Landing, 0, 0, 0, 0, 0, Run, 0, Rise, Run + Landing, 0, Rise) mat(Casing) show(3d, elev)
+sweep Treads rect(-Band / 2, 0, Band / 2, 50mm) path(-Landing, 0, 0, 0, 0, 0, Run, 0, Rise, Run + Landing, 0, Rise) mat(Steps) show(3d, elev)
+sweep RailL rect(-Width / 2, 0, -Width / 2 + Panel, Balustrade) path(-Landing, 0, 0, 0, 0, 0, Run, 0, Rise, Run + Landing, 0, Rise) mat(Screen) show(3d, elev)
+sweep RailR rect(Width / 2 - Panel, 0, Width / 2, Balustrade) path(-Landing, 0, 0, 0, 0, 0, Run, 0, Rise, Run + Landing, 0, Rise) mat(Screen) show(3d, elev)
+symbol rect(-Landing, -Width / 2, Run + Landing, Width / 2)
+symbol line(0, -Band / 2, Run, -Band / 2) show(medium, fine)
+symbol line(0, Band / 2, Run, Band / 2) show(medium, fine)
+---
+family Shoe Cabinet
+category furniture
+host floor
+ifc IfcFurniture NOTDEFINED
+param Width length type 800mm
+param Depth length type 350mm
+param Height length type 1000mm
+param Plinth length type 60mm
+param Wood material type "Oak"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Back y = Depth / 2
+type "800x350" Width=800mm, Depth=350mm
+type "1000x350" Width=1000mm, Depth=350mm
+type "32x14in" Width=32in, Depth=14in, Height=40in, Plinth=2.5in
+extrude Plinth rect(Left + 30mm, Front + 30mm, Right - 30mm, Back) z(0, Plinth) mat(Wood) show(3d, elev)
+extrude Body rect(Left, Front, Right, Back) z(Plinth, Height) mat(Wood) show(3d, elev)
+symbol rect(Left, Front, Right, Back)
+---
+family Coffee Table
+category furniture
+host floor
+ifc IfcFurniture TABLE
+param Width length type 1000mm
+param Depth length type 600mm
+param Height length type 420mm
+param Top length type 25mm
+param Leg length type 50mm
+param Wood material type "Oak"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Back y = Depth / 2
+type "1000x600" Width=1000mm, Depth=600mm
+type "1200x600" Width=1200mm, Depth=600mm
+type "40x24in" Width=40in, Depth=24in, Height=16.5in, Top=1in, Leg=2in
+extrude Top rect(Left, Front, Right, Back) z(Height - Top, Height) mat(Wood) show(3d, elev)
+extrude Leg1 rect(Left, Front, Left + Leg, Front + Leg) z(0, Height - Top) mat(Wood) show(3d, elev)
+extrude Leg2 rect(Right - Leg, Front, Right, Front + Leg) z(0, Height - Top) mat(Wood) show(3d, elev)
+extrude Leg3 rect(Left, Back - Leg, Left + Leg, Back) z(0, Height - Top) mat(Wood) show(3d, elev)
+extrude Leg4 rect(Right - Leg, Back - Leg, Right, Back) z(0, Height - Top) mat(Wood) show(3d, elev)
+symbol rect(Left, Front, Right, Back)
+---
+family TV Unit
+category furniture
+host floor
+ifc IfcFurniture NOTDEFINED
+param Width length type 1600mm
+param Depth length type 450mm
+param Height length type 500mm
+param Screen length type 1250mm
+param ScreenH length type 720mm
+param Wood material type "Oak"
+param Glass material type "Black Glass"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Back y = Depth / 2
+type "1600x450" Width=1600mm, Depth=450mm
+type "1800x450" Width=1800mm, Depth=450mm, Screen=1450mm, ScreenH=830mm
+type "64x18in" Width=64in, Depth=18in, Height=20in, Screen=49in, ScreenH=28in
+extrude Body rect(Left, Front, Right, Back) z(0, Height) mat(Wood) show(3d, elev)
+extrude Screen rect(-Screen / 2, Back - 80mm, Screen / 2, Back - 40mm) z(Height + 80mm, Height + 80mm + ScreenH) mat(Glass) show(3d, elev)
+symbol rect(Left, Front, Right, Back)
+symbol line(-Screen / 2, Back - 60mm, Screen / 2, Back - 60mm) show(medium, fine)
+---
+family Examination Couch
+category furniture
+host floor
+ifc IfcFurniture BED
+param Length length type 1900mm
+param Width length type 650mm
+param Height length type 700mm
+param Pad length type 80mm
+param Frame material type "Powder Coat White"
+param Cover material type "Vinyl Blue"
+ref Left x = -Length / 2
+ref Right x = Length / 2
+ref Front y = -Width / 2
+ref Back y = Width / 2
+type "1900x650" Length=1900mm, Width=650mm
+type "2000x700" Length=2000mm, Width=700mm
+type "75x26in" Length=75in, Width=26in, Height=28in, Pad=3in
+extrude Base rect(Left + 100mm, Front + 100mm, Right - 100mm, Back - 100mm) z(0, Height - Pad) mat(Frame) show(3d, elev)
+extrude Pad rect(Left, Front, Right, Back) z(Height - Pad, Height) mat(Cover) show(3d, elev)
+symbol rect(Left, Front, Right, Back)
+symbol line(Right - 500mm, Front, Right - 500mm, Back) show(medium, fine)
+---
+family Medical Cabinet
+category furniture
+host floor
+ifc IfcFurniture NOTDEFINED
+param Width length type 800mm
+param Depth length type 400mm
+param Height length type 1900mm
+param Plinth length type 80mm
+param Steel material type "Powder Coat White"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Back y = Depth / 2
+type "800x400" Width=800mm, Depth=400mm
+type "1000x450" Width=1000mm, Depth=450mm
+type "32x16in" Width=32in, Depth=16in, Height=75in, Plinth=3in
+extrude Plinth rect(Left + 30mm, Front + 30mm, Right - 30mm, Back) z(0, Plinth) mat(Steel) show(3d, elev)
+extrude Body rect(Left, Front, Right, Back) z(Plinth, Height) mat(Steel) show(3d, elev)
+symbol rect(Left, Front, Right, Back)
+symbol line(0, Front, 0, Back) show(medium, fine)
+---
+family Sprinkler Head
+category plumbing
+host ceiling
+ifc IfcFireSuppressionTerminal SPRINKLER
+param Boss length type 25mm
+param Stem length type 60mm
+param Deflector length type 50mm
+param Flow number type 1.5
+param Finish material type "Steel White"
+type "Pendent" Boss=25mm
+type "Pendent 1in" Boss=1in, Stem=2.4in, Deflector=2in
+revolve Body rect(0, 0mm, Boss / 2, Stem) mat(Finish) show(3d, elev)
+extrude Plate rect(-Deflector / 2, -Deflector / 2, Deflector / 2, Deflector / 2) z(-10mm, 0mm) mat(Finish) show(3d, elev)
+symbol rect(-Deflector / 2, -Deflector / 2, Deflector / 2, Deflector / 2)
+symbol line(-Deflector / 2, 0mm, Deflector / 2, 0mm) show(medium, fine)
+connector Inlet pipe sprinkler at(0, 0, Stem) dir(0, 0, 1) size(15mm)
+---
+family Fire Pump
+category equipment
+host floor
+ifc IfcPump PUMP
+param Length length type 1600mm
+param Width length type 700mm
+param Height length type 800mm
+param Port length type 100mm
+param Casing material type "Steel White"
+type "Booster" Length=1600mm
+type "Booster 63in" Length=63in, Width=28in, Height=31in, Port=4in
+extrude Body rect(-Length / 2, -Width / 2, Length / 2, Width / 2) z(0mm, Height) mat(Casing) show(3d, elev)
+symbol rect(-Length / 2, -Width / 2, Length / 2, Width / 2)
+symbol line(-Length / 2, -Width / 2, Length / 2, Width / 2) show(medium, fine)
+connector Inlet pipe sprinkler at(-Length / 2, 0, Height / 2) dir(-1, 0, 0) size(Port)
+connector Outlet pipe sprinkler at(Length / 2, 0, Height / 2) dir(1, 0, 0) size(Port)
+---
+family Pressurisation Fan
+category equipment
+host floor
+ifc IfcUnitaryEquipment AIRHANDLER
+param Length length type 1200mm
+param Width length type 900mm
+param Height length type 1000mm
+param Casing material type "Steel White"
+type "Stair fan" Length=1200mm
+type "Stair fan 47in" Length=47in, Width=35in, Height=39in
+extrude Body rect(-Length / 2, -Width / 2, Length / 2, Width / 2) z(0mm, Height) mat(Casing) show(3d, elev)
+symbol rect(-Length / 2, -Width / 2, Length / 2, Width / 2)
+symbol line(-Length / 2, -Width / 2, Length / 2, Width / 2) show(medium, fine)
+---
+family Lift Car
+category equipment
+host floor
+ifc IfcTransportElement ELEVATOR
+param Width length type 1100mm
+param Depth length type 1400mm
+param Height length type 2200mm
+param DoorW length type 900mm
+param Wall length type 40mm
+param Floor length type 80mm
+param Steel material type "Stainless Steel"
+param Panel material type "Steel Grey"
+type "630 kg" Width=1100mm, Depth=1400mm, DoorW=900mm
+type "800 kg" Width=1350mm, Depth=1400mm, DoorW=900mm
+type "1000 kg" Width=1100mm, Depth=2100mm, DoorW=900mm
+type "1275 kg" Width=1400mm, Depth=2100mm, DoorW=1100mm
+type "1600 kg" Width=1600mm, Depth=2400mm, DoorW=1200mm
+type "630 kg 43x55in" Width=43.3in, Depth=55.1in, DoorW=35.4in
+extrude Base rect(-Width / 2, -Depth / 2, Width / 2, Depth / 2) z(0mm, Floor) mat(Panel) show(3d, elev)
+extrude Top rect(-Width / 2, -Depth / 2, Width / 2, Depth / 2) z(Height - Wall, Height) mat(Steel) show(3d, elev)
+extrude Back rect(-Width / 2, -Depth / 2, Width / 2, -Depth / 2 + Wall) z(Floor, Height - Wall) mat(Steel) show(3d, elev)
+extrude SideL rect(-Width / 2, -Depth / 2 + Wall, -Width / 2 + Wall, Depth / 2 - Wall) z(Floor, Height - Wall) mat(Steel) show(3d, elev)
+extrude SideR rect(Width / 2 - Wall, -Depth / 2 + Wall, Width / 2, Depth / 2 - Wall) z(Floor, Height - Wall) mat(Steel) show(3d, elev)
+# the door opening never eats the front returns: a full-width door leaves a Wall-wide return each side
+extrude FrontL rect(-Width / 2, Depth / 2 - Wall, -min(DoorW, Width - 2 * Wall) / 2, Depth / 2) z(Floor, Height - Wall) mat(Steel) show(3d, elev)
+extrude FrontR rect(min(DoorW, Width - 2 * Wall) / 2, Depth / 2 - Wall, Width / 2, Depth / 2) z(Floor, Height - Wall) mat(Steel) show(3d, elev)
+symbol rect(-Width / 2, -Depth / 2, Width / 2, Depth / 2)
+symbol line(-Width / 2, -Depth / 2, Width / 2, Depth / 2) show(medium, fine)
+symbol line(-Width / 2, Depth / 2, Width / 2, -Depth / 2) show(medium, fine)
+---
+family Lift Landing Door
+category door
+host floor
+ifc IfcDoor NOTDEFINED
+param Width length type 900mm
+param Height length type 2100mm
+param Jamb length type 100mm
+param Thick length type 80mm
+param Leaf material type "Stainless Steel"
+type "800" Width=800mm
+type "900" Width=900mm
+type "1100" Width=1100mm
+type "1200" Width=1200mm
+type "36in" Width=36in, Height=82in, Jamb=4in, Thick=3in
+extrude JambL rect(-Width / 2 - Jamb, -Thick / 2, -Width / 2, Thick / 2) z(0mm, Height + Jamb) mat(Leaf) show(3d, elev)
+extrude JambR rect(Width / 2, -Thick / 2, Width / 2 + Jamb, Thick / 2) z(0mm, Height + Jamb) mat(Leaf) show(3d, elev)
+extrude Head rect(-Width / 2, -Thick / 2, Width / 2, Thick / 2) z(Height, Height + Jamb) mat(Leaf) show(3d, elev)
+extrude LeafL rect(-Width / 2, -Thick / 4, 0, Thick / 4) z(0mm, Height) mat(Leaf) show(3d, elev)
+extrude LeafR rect(0, -Thick / 4, Width / 2, Thick / 4) z(0mm, Height) mat(Leaf) show(3d, elev)
+symbol rect(-Width / 2 - Jamb, -Thick / 2, Width / 2 + Jamb, Thick / 2)
+symbol line(-Width / 2, 0, Width / 2, 0) show(medium, fine)
+---
+family Lift Pit
+category equipment
+host floor
+ifc IfcBuildingElementProxy ELEMENT
+param Width length type 1600mm
+param Depth length type 1900mm
+param Pit length type 1100mm
+param Wall length type 200mm
+param Slab length type 250mm
+param Concrete material type "Concrete"
+type "630 kg slow" Width=1600mm, Depth=1850mm, Pit=1100mm
+type "630 kg medium" Width=1600mm, Depth=1850mm, Pit=1600mm
+type "630 kg fast" Width=1600mm, Depth=1850mm, Pit=2500mm
+type "800 kg slow" Width=1850mm, Depth=1850mm, Pit=1100mm
+type "800 kg medium" Width=1850mm, Depth=1850mm, Pit=1600mm
+type "800 kg fast" Width=1850mm, Depth=1850mm, Pit=2500mm
+type "1000 kg slow" Width=1600mm, Depth=2550mm, Pit=1100mm
+type "1000 kg medium" Width=1600mm, Depth=2550mm, Pit=1600mm
+type "1000 kg fast" Width=1600mm, Depth=2550mm, Pit=2500mm
+type "1275 kg slow" Width=1900mm, Depth=2550mm, Pit=1100mm
+type "1275 kg medium" Width=1900mm, Depth=2550mm, Pit=1600mm
+type "1275 kg fast" Width=1900mm, Depth=2550mm, Pit=2500mm
+type "1600 kg slow" Width=2100mm, Depth=2850mm, Pit=1100mm
+type "1600 kg medium" Width=2100mm, Depth=2850mm, Pit=1600mm
+type "1600 kg fast" Width=2100mm, Depth=2850mm, Pit=2500mm
+type "630 kg slow 63in" Width=63.0in, Depth=72.8in, Pit=43.3in
+extrude Bed rect(-Width / 2, -Depth / 2, Width / 2, Depth / 2) z(0mm, Slab) mat(Concrete) show(3d, elev)
+extrude WallS rect(-Width / 2, -Depth / 2, Width / 2, -Depth / 2 + Wall) z(Slab, Pit) mat(Concrete) show(3d, elev)
+extrude WallN rect(-Width / 2, Depth / 2 - Wall, Width / 2, Depth / 2) z(Slab, Pit) mat(Concrete) show(3d, elev)
+extrude WallW rect(-Width / 2, -Depth / 2 + Wall, -Width / 2 + Wall, Depth / 2 - Wall) z(Slab, Pit) mat(Concrete) show(3d, elev)
+extrude WallE rect(Width / 2 - Wall, -Depth / 2 + Wall, Width / 2, Depth / 2 - Wall) z(Slab, Pit) mat(Concrete) show(3d, elev)
+symbol rect(-Width / 2, -Depth / 2, Width / 2, Depth / 2)
+symbol line(-Width / 2, -Depth / 2, Width / 2, Depth / 2) show(medium, fine)
+---
+family Lift Overrun
+category equipment
+host floor
+ifc IfcBuildingElementProxy ELEMENT
+param Width length type 1600mm
+param Depth length type 1900mm
+param Head length type 1100mm
+param Wall length type 200mm
+param Slab length type 250mm
+param Concrete material type "Concrete"
+type "630 kg slow" Width=1600mm, Depth=1850mm, Head=3800mm
+type "630 kg medium" Width=1600mm, Depth=1850mm, Head=4400mm
+type "630 kg fast" Width=1600mm, Depth=1850mm, Head=5600mm
+type "800 kg slow" Width=1850mm, Depth=1850mm, Head=3800mm
+type "800 kg medium" Width=1850mm, Depth=1850mm, Head=4400mm
+type "800 kg fast" Width=1850mm, Depth=1850mm, Head=5600mm
+type "1000 kg slow" Width=1600mm, Depth=2550mm, Head=3800mm
+type "1000 kg medium" Width=1600mm, Depth=2550mm, Head=4400mm
+type "1000 kg fast" Width=1600mm, Depth=2550mm, Head=5600mm
+type "1275 kg slow" Width=1900mm, Depth=2550mm, Head=3800mm
+type "1275 kg medium" Width=1900mm, Depth=2550mm, Head=4400mm
+type "1275 kg fast" Width=1900mm, Depth=2550mm, Head=5600mm
+type "1600 kg slow" Width=2100mm, Depth=2850mm, Head=3800mm
+type "1600 kg medium" Width=2100mm, Depth=2850mm, Head=4400mm
+type "1600 kg fast" Width=2100mm, Depth=2850mm, Head=5600mm
+type "630 kg slow 63in" Width=63.0in, Depth=72.8in, Head=149.6in
+extrude WallS rect(-Width / 2, -Depth / 2, Width / 2, -Depth / 2 + Wall) z(0mm, Head) mat(Concrete) show(3d, elev)
+extrude WallN rect(-Width / 2, Depth / 2 - Wall, Width / 2, Depth / 2) z(0mm, Head) mat(Concrete) show(3d, elev)
+extrude WallW rect(-Width / 2, -Depth / 2 + Wall, -Width / 2 + Wall, Depth / 2 - Wall) z(0mm, Head) mat(Concrete) show(3d, elev)
+extrude WallE rect(Width / 2 - Wall, -Depth / 2 + Wall, Width / 2, Depth / 2 - Wall) z(0mm, Head) mat(Concrete) show(3d, elev)
+extrude Cap rect(-Width / 2, -Depth / 2, Width / 2, Depth / 2) z(Head - Slab, Head) mat(Concrete) show(3d, elev)
+symbol rect(-Width / 2, -Depth / 2, Width / 2, Depth / 2)
+symbol line(-Width / 2, -Depth / 2, Width / 2, Depth / 2) show(medium, fine)
+---
+family Lift Machine
+category equipment
+host floor
+ifc IfcTransportElement ELEVATOR
+param Width length type 800mm
+param Depth length type 500mm
+param Height length type 600mm
+param Casing material type "Steel Grey"
+type "slow" Width=600mm, Depth=400mm, Height=500mm
+type "medium" Width=800mm, Depth=500mm, Height=600mm
+type "fast" Width=1000mm, Depth=700mm, Height=800mm
+type "medium 31x20in" Width=31.5in, Depth=19.7in, Height=23.6in
+extrude Body rect(-Width / 2, -Depth / 2, Width / 2, Depth / 2) z(0mm, Height) mat(Casing) show(3d, elev)
+symbol rect(-Width / 2, -Depth / 2, Width / 2, Depth / 2)
+symbol line(-Width / 2, -Depth / 2, Width / 2, Depth / 2) show(medium, fine)
+---
+family Server Rack
+category equipment
+host floor
+ifc IfcElectricAppliance NOTDEFINED
+param Width length type 600mm
+param Depth length type 1200mm
+param Height length type 2000mm
+param Frame length type 40mm
+param Door length type 25mm
+param Casing material type "Epoxy Black"
+param Mesh material type "Black Glass"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Back y = Depth / 2
+type "600x1200 42U" Width=600mm, Depth=1200mm, Height=2000mm
+type "800x1200 48U" Width=800mm, Depth=1200mm, Height=2250mm
+type "24x48in 42U" Width=24in, Depth=48in, Height=79in, Frame=1.5in, Door=1in
+extrude Body rect(Left, Front + Door, Right, Back) z(0, Height) mat(Casing) show(3d, elev)
+extrude FrontDoor rect(Left + Frame, Front, Right - Frame, Front + Door) z(Frame, Height - Frame) mat(Mesh) show(3d, elev)
+symbol rect(Left, Front, Right, Back)
+symbol line(Left, Front + Door, Right, Front + Door) show(medium, fine)
+symbol line(Left, Front, Right, Back) show(fine)
+---
+family CRAH Unit
+category equipment
+host floor
+ifc IfcUnitaryEquipment AIRHANDLER
+param Cooling number type 150
+param Width length type 2500mm
+param Depth length type 900mm
+param Height length type 1950mm
+param Grille length type 500mm
+param PortD length type 100mm
+param SupplyZ length type 150mm
+param ReturnZ length type 450mm
+param Casing material type "Steel White"
+param Louvre material type "Steel Grey"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Back y = Depth / 2
+type "CRAH 100 kW" Cooling=100, Width=2000mm, PortD=80mm
+type "CRAH 150 kW" Cooling=150, Width=2500mm, PortD=100mm
+type "CRAH 200 kW" Cooling=200, Width=3100mm, PortD=125mm
+type "W96in" Width=96in, Depth=36in
+extrude Body rect(Left, Front, Right, Back) z(0, Height) mat(Casing) show(3d, elev)
+extrude Intake rect(Left + 100mm, Front - 20mm, Right - 100mm, Front) z(Height - Grille - 100mm, Height - 100mm) mat(Louvre) show(3d, elev)
+symbol rect(Left, Front, Right, Back)
+symbol line(Left, Front, Right, Back) show(medium, fine)
+symbol line(Left, Back, Right, Front) show(medium, fine)
+connector CHWS pipe chilled_water at(-Width / 4, Front, SupplyZ) dir(0, -1, 0) size(PortD)
+connector CHWR pipe chilled_water at(Width / 4, Front, ReturnZ) dir(0, -1, 0) size(PortD)
+---
+family Chiller
+category equipment
+host floor
+ifc IfcUnitaryEquipment NOTDEFINED
+param Cooling number type 1000
+param Length length type 6000mm
+param Width length type 2300mm
+param Height length type 2500mm
+param Fan length type 1800mm
+param FanH length type 300mm
+param PortD length type 200mm
+param SupplyZ length type 600mm
+param ReturnZ length type 1100mm
+param Casing material type "Steel Grey"
+param Guard material type "Aluminium Dark Grey"
+ref Left x = -Length / 2
+ref Right x = Length / 2
+ref Front y = -Width / 2
+ref Back y = Width / 2
+type "Chiller 500 kW" Cooling=500, Length=4500mm, PortD=150mm
+type "Chiller 1000 kW" Cooling=1000, Length=6000mm, PortD=200mm
+type "Chiller 1500 kW" Cooling=1500, Length=8000mm, Width=2400mm, PortD=250mm
+type "L240in" Length=240in, Width=90in
+extrude Body rect(Left, Front, Right, Back) z(0, Height) mat(Casing) show(3d, elev)
+extrude Fan1 circle(-Length / 4, 0, Fan / 2) z(Height, Height + FanH) mat(Guard) show(3d, elev)
+extrude Fan2 circle(Length / 4, 0, Fan / 2) z(Height, Height + FanH) mat(Guard) show(3d, elev)
+symbol rect(Left, Front, Right, Back)
+symbol circle(-Length / 4, 0, Fan / 2) show(medium, fine)
+symbol circle(Length / 4, 0, Fan / 2) show(medium, fine)
+connector CHWS pipe chilled_water at(Left + 400mm, Front, SupplyZ) dir(0, -1, 0) size(PortD)
+connector CHWR pipe chilled_water at(Left + 900mm, Front, ReturnZ) dir(0, -1, 0) size(PortD)
+---
+family UPS
+category electrical
+host floor
+ifc IfcElectricAppliance NOTDEFINED
+param Rating number type 500
+param Width length type 1800mm
+param Depth length type 850mm
+param Height length type 2000mm
+param Panel length type 400mm
+param Casing material type "Steel Grey"
+param Screen material type "Black Glass"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Back y = Depth / 2
+type "UPS 250 kW" Rating=250, Width=1200mm
+type "UPS 500 kW" Rating=500, Width=1800mm
+type "UPS 800 kW" Rating=800, Width=2600mm
+type "W72in" Width=72in
+extrude Body rect(Left, Front, Right, Back) z(0, Height) mat(Casing) show(3d, elev)
+extrude Display rect(Left + 100mm, Front - 10mm, Left + 100mm + Panel, Front) z(Height - 700mm, Height - 400mm) mat(Screen) show(3d, elev)
+symbol rect(Left, Front, Right, Back)
+symbol line(Left, Front, Right, Back) show(medium, fine)
+---
+family Battery Cabinet
+category electrical
+host floor
+ifc IfcElectricAppliance NOTDEFINED
+param Energy number type 40
+param Width length type 800mm
+param Depth length type 800mm
+param Height length type 2000mm
+param Casing material type "Steel Grey"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Back y = Depth / 2
+type "Battery 40 kWh" Energy=40, Width=800mm
+type "Battery 80 kWh" Energy=80, Width=1200mm
+type "W32in" Width=32in
+extrude Body rect(Left, Front, Right, Back) z(0, Height) mat(Casing) show(3d, elev)
+symbol rect(Left, Front, Right, Back)
+symbol line(Left, Front + 100mm, Right, Front + 100mm) show(medium, fine)
+---
+family Generator Set
+category electrical
+host floor
+ifc IfcElectricAppliance NOTDEFINED
+param Rating number type 2000
+param Length length type 12192mm
+param Width length type 2438mm
+param Height length type 2896mm
+param Stack length type 400mm
+param StackH length type 1500mm
+param Casing material type "Powder Coat White"
+param Flue material type "Stainless Steel"
+ref Left x = -Length / 2
+ref Right x = Length / 2
+ref Front y = -Width / 2
+ref Back y = Width / 2
+type "Genset 1000 kW" Rating=1000, Length=6058mm
+type "Genset 2000 kW" Rating=2000, Length=12192mm
+type "Genset 2500 kW" Rating=2500, Length=13716mm
+type "L240in" Length=240in
+extrude Body rect(Left, Front, Right, Back) z(0, Height) mat(Casing) show(3d, elev)
+extrude Exhaust circle(Right - 1000mm, 0, Stack / 2) z(Height, Height + StackH) mat(Flue) show(3d, elev)
+symbol rect(Left, Front, Right, Back)
+symbol circle(Right - 1000mm, 0, Stack / 2) show(medium, fine)
+---
+family Landing Valve
+category plumbing
+host floor
+ifc IfcValve ISOLATING
+param Body length type 250mm
+param Size length type 160mm
+param Port length type 65mm
+param Finish material type "Steel White"
+type "DN65" Port=65mm
+type "2.5in" Body=10in, Size=6.3in, Port=2.5in
+extrude Body rect(0mm, -Size / 2, Body, Size / 2) z(0mm, Size) mat(Finish) show(3d, elev)
+symbol rect(0mm, -Size / 2, Body, Size / 2)
+symbol line(0mm, 0mm, Body, 0mm) show(medium, fine)
+connector Inlet pipe sprinkler at(0mm, 0mm, Size / 2) dir(-1, 0, 0) size(Port)
+---
+family Fire Inlet
+category plumbing
+host floor
+ifc IfcValve CHECK
+param Size length type 250mm
+param Height length type 500mm
+param Port length type 100mm
+param Finish material type "Steel White"
+type "DN100" Port=100mm
+type "4in" Size=10in, Height=20in, Port=4in
+extrude Body rect(-Size / 2, -Size / 2, Size / 2, Size / 2) z(0mm, Height) mat(Finish) show(3d, elev)
+symbol rect(-Size / 2, -Size / 2, Size / 2, Size / 2)
+symbol line(-Size / 2, -Size / 2, Size / 2, Size / 2) show(medium, fine)
+connector Outlet pipe sprinkler at(0mm, 0mm, Height) dir(0, 0, 1) size(Port)
+---
+family Pressure Vessel
+category equipment
+host floor
+ifc IfcTank STORAGE
+param Diameter length type 1200mm
+param Height length type 2400mm
+param Skirt length type 400mm
+param Port length type 80mm
+param Finish material type "Steel White"
+type "DN80 1200x2400" Diameter=1200mm
+type "DN150 1600x3200" Diameter=1600mm, Height=3200mm, Skirt=500mm, Port=150mm
+type "3in 48x96in" Diameter=48in, Height=96in, Skirt=16in, Port=3in
+extrude Shell circle(0, 0, Diameter / 2) z(Skirt, Skirt + Height) mat(Finish) show(3d, elev)
+extrude Support circle(0, 0, Diameter / 2 - 40mm) z(0mm, Skirt) mat(Finish) show(3d, elev)
+symbol circle(0, 0, Diameter / 2)
+symbol line(-Diameter / 2, 0mm, Diameter / 2, 0mm) show(medium, fine)
+symbol line(0mm, -Diameter / 2, 0mm, Diameter / 2) show(medium, fine)
+connector Inlet pipe heating at(Diameter / 2, 0, Skirt + Height - 300mm) dir(1, 0, 0) size(Port)
+connector Outlet pipe heating at(Diameter / 2, 0, Skirt + 300mm) dir(1, 0, 0) size(Port)
+---
+family Heat Exchanger
+category equipment
+host floor
+ifc IfcHeatExchanger PLATE
+param Length length type 800mm
+param Width length type 400mm
+param Height length type 1200mm
+param Plate length type 40mm
+param Port length type 50mm
+param Finish material type "Steel White"
+type "DN50 800x400" Length=800mm
+type "DN100 1200x500" Length=1200mm, Width=500mm, Height=1600mm, Plate=50mm, Port=100mm
+type "2in 32x16in" Length=32in, Width=16in, Height=48in, Plate=1.5in, Port=2in
+extrude Pack rect(-Length / 2 + Plate, -Width / 2, Length / 2 - Plate, Width / 2) z(150mm, Height) mat(Finish) show(3d, elev)
+extrude FixedPlate rect(-Length / 2, -Width / 2 - 20mm, -Length / 2 + Plate, Width / 2 + 20mm) z(100mm, Height + 50mm) mat(Finish) show(3d, elev)
+extrude PressurePlate rect(Length / 2 - Plate, -Width / 2 - 20mm, Length / 2, Width / 2 + 20mm) z(100mm, Height + 50mm) mat(Finish) show(3d, elev)
+extrude Foot rect(-Length / 2, -Width / 2, Length / 2, Width / 2) z(0mm, 100mm) mat(Finish) show(3d, elev)
+symbol rect(-Length / 2, -Width / 2, Length / 2, Width / 2)
+symbol line(-Length / 2 + Plate, -Width / 2, -Length / 2 + Plate, Width / 2) show(medium, fine)
+connector PrimaryIn pipe hot_water at(-Length / 2, -Width / 4, Height - 100mm) dir(-1, 0, 0) size(Port)
+connector PrimaryOut pipe hot_water at(-Length / 2, Width / 4, 250mm) dir(-1, 0, 0) size(Port)
+connector SecondaryIn pipe cold_water at(Length / 2, Width / 4, 250mm) dir(1, 0, 0) size(Port)
+connector SecondaryOut pipe cold_water at(Length / 2, -Width / 4, Height - 100mm) dir(1, 0, 0) size(Port)
+---
+family Centrifugal Pump
+category equipment
+host floor
+ifc IfcPump CIRCULATOR
+param Length length type 900mm
+param Width length type 400mm
+param Axis length type 350mm
+param Casing length type 300mm
+param Port length type 65mm
+param Finish material type "Steel White"
+type "DN65 900x400" Length=900mm
+type "DN100 1200x500" Length=1200mm, Width=500mm, Axis=450mm, Casing=400mm, Port=100mm
+type "2.5in 36x16in" Length=36in, Width=16in, Axis=14in, Casing=12in, Port=2.5in
+extrude Base rect(-Length / 2, -Width / 2, Length / 2, Width / 2) z(0mm, 80mm) mat(Finish) show(3d, elev)
+extrude Volute circle(-Length / 4, 0, Casing / 2) z(80mm, Axis + Casing / 2) mat(Finish) show(3d, elev)
+extrude Motor rect(-Length / 4 + Casing / 2, -Casing / 2, Length / 2 - 40mm, Casing / 2) z(80mm, Axis + Casing / 2) mat(Finish) show(3d, elev)
+symbol rect(-Length / 2, -Width / 2, Length / 2, Width / 2)
+symbol circle(-Length / 4, 0, Casing / 2) show(medium, fine)
+connector Suction pipe cold_water at(-Length / 2, 0, Axis) dir(-1, 0, 0) size(Port)
+connector Discharge pipe cold_water at(-Length / 4, 0, Axis + Casing / 2) dir(0, 0, 1) size(Port)
+---
+family Gate Valve
+category plumbing
+host floor
+ifc IfcValve ISOLATING
+param Length length type 300mm
+param Size length type 200mm
+param Port length type 100mm
+param Wheel length type 250mm
+param Finish material type "Steel White"
+type "DN100" Port=100mm
+type "DN200" Length=400mm, Size=320mm, Port=200mm, Wheel=400mm
+type "4in" Length=12in, Size=8in, Port=4in, Wheel=10in
+extrude Body rect(-Length / 2, -Size / 4, Length / 2, Size / 4) z(0mm, Size / 2) mat(Finish) show(3d, elev)
+extrude Bonnet circle(0, 0, Size / 4) z(Size / 2, Size) mat(Finish) show(3d, elev)
+extrude Handwheel circle(0, 0, Wheel / 2) z(Size, Size + 30mm) mat(Finish) show(3d, elev)
+symbol rect(-Length / 2, -Size / 4, Length / 2, Size / 4)
+symbol line(-Length / 2, -Size / 4, Length / 2, Size / 4) show(medium, fine)
+symbol line(-Length / 2, Size / 4, Length / 2, -Size / 4) show(medium, fine)
+connector Inlet pipe cold_water at(-Length / 2, 0, Size / 4) dir(-1, 0, 0) size(Port)
+connector Outlet pipe cold_water at(Length / 2, 0, Size / 4) dir(1, 0, 0) size(Port)
+---
+family Power Distribution Unit
+category equipment
+host floor
+ifc IfcElectricDistributionBoard DISTRIBUTIONBOARD
+param Width length type 600mm
+param Depth length type 800mm
+param Height length type 2000mm
+param Door length type 25mm
+param Casing material type "Epoxy Black"
+type "600x800" Width=600mm
+type "800x800" Width=800mm
+type "24x32in" Width=24in, Depth=32in, Height=79in, Door=1in
+extrude Body rect(-Width / 2, -Depth / 2 + Door, Width / 2, Depth / 2) z(0mm, Height) mat(Casing) show(3d, elev)
+extrude FrontDoor rect(-Width / 2 + 20mm, -Depth / 2, Width / 2 - 20mm, -Depth / 2 + Door) z(20mm, Height - 20mm) mat(Casing) show(3d, elev)
+symbol rect(-Width / 2, -Depth / 2, Width / 2, Depth / 2)
+symbol line(-Width / 2, -Depth / 2 + Door, Width / 2, -Depth / 2 + Door) show(medium, fine)
+connector Feed conduit power at(0, 0, Height) dir(0, 0, 1) size(63mm)
+---
+family Aisle Containment Door
+category generic
+host floor
+ifc IfcDoor DOOR
+param Width length type 1200mm
+param Height length type 2400mm
+param Frame length type 60mm
+param Leaf length type 30mm
+param Casing material type "Epoxy Black"
+param Glass material type "Black Glass"
+type "1200x2400" Width=1200mm
+type "1800x2400" Width=1800mm
+type "48x96in" Width=48in, Height=96in, Frame=2.5in, Leaf=1in
+extrude PostA rect(-Width / 2, -Frame / 2, -Width / 2 + Frame, Frame / 2) z(0mm, Height) mat(Casing) show(3d, elev)
+extrude PostB rect(Width / 2 - Frame, -Frame / 2, Width / 2, Frame / 2) z(0mm, Height) mat(Casing) show(3d, elev)
+extrude Head rect(-Width / 2 + Frame, -Frame / 2, Width / 2 - Frame, Frame / 2) z(Height - Frame, Height) mat(Casing) show(3d, elev)
+extrude Panel rect(-Width / 2 + Frame, -Leaf / 2, Width / 2 - Frame, Leaf / 2) z(0mm, Height - Frame) mat(Glass) show(3d, elev)
+symbol rect(-Width / 2, -Frame / 2, Width / 2, Frame / 2)
+symbol line(-Width / 2 + Frame, 0mm, Width / 2 - Frame, 0mm) show(medium, fine)
+---
+family Antenna Mount
+category generic
+host face
+ifc IfcBuildingElementProxy ELEMENT
+param Arm length type 1200mm
+param Mast length type 2500mm
+param Pipe length type 76mm
+param Bracket length type 300mm
+param Finish material type "Steel White"
+type "1200x2500" Arm=1200mm
+type "2000x3000" Arm=2000mm, Mast=3000mm, Pipe=89mm, Bracket=400mm
+type "48x98in" Arm=48in, Mast=98in, Pipe=3in, Bracket=12in
+extrude Pole circle(Arm, 0, Pipe / 2) z(0mm, Mast) mat(Finish) show(3d, elev)
+extrude Boom rect(0mm, -Pipe / 2, Arm, Pipe / 2) z(Mast / 2 - Pipe / 2, Mast / 2 + Pipe / 2) mat(Finish) show(3d, elev)
+extrude Plate rect(-30mm, -Bracket / 2, 0mm, Bracket / 2) z(Mast / 2 - Bracket / 2, Mast / 2 + Bracket / 2) mat(Finish) show(3d, elev)
+symbol rect(-30mm, -Bracket / 2, Arm + Pipe / 2, Bracket / 2)
+symbol circle(Arm, 0, Pipe / 2) show(medium, fine)
+---
+family Tower Platform
+category generic
+host floor
+ifc IfcBuildingElementProxy ELEMENT
+param Width length type 2000mm
+param Depth length type 2000mm
+param Rail length type 1100mm
+param Deck length type 50mm
+param Post length type 50mm
+param Finish material type "Steel White"
+type "2000x2000" Width=2000mm
+type "3000x2000" Width=3000mm
+type "80x80in" Width=80in, Depth=80in, Rail=43in, Deck=2in, Post=2in
+extrude Grating rect(-Width / 2, -Depth / 2, Width / 2, Depth / 2) z(0mm, Deck) mat(Finish) show(3d, elev)
+extrude PostA rect(-Width / 2, -Depth / 2, -Width / 2 + Post, -Depth / 2 + Post) z(Deck, Rail) mat(Finish) show(3d, elev)
+extrude PostB rect(Width / 2 - Post, -Depth / 2, Width / 2, -Depth / 2 + Post) z(Deck, Rail) mat(Finish) show(3d, elev)
+extrude PostC rect(-Width / 2, Depth / 2 - Post, -Width / 2 + Post, Depth / 2) z(Deck, Rail) mat(Finish) show(3d, elev)
+extrude PostD rect(Width / 2 - Post, Depth / 2 - Post, Width / 2, Depth / 2) z(Deck, Rail) mat(Finish) show(3d, elev)
+extrude TopRailFront rect(-Width / 2, -Depth / 2, Width / 2, -Depth / 2 + Post) z(Rail - Post, Rail) mat(Finish) show(3d, elev)
+extrude TopRailBack rect(-Width / 2, Depth / 2 - Post, Width / 2, Depth / 2) z(Rail - Post, Rail) mat(Finish) show(3d, elev)
+symbol rect(-Width / 2, -Depth / 2, Width / 2, Depth / 2)
+symbol line(-Width / 2, -Depth / 2, Width / 2, Depth / 2) show(medium, fine)
+symbol line(-Width / 2, Depth / 2, Width / 2, -Depth / 2) show(medium, fine)
+---
+family Cage Ladder
+category generic
+host floor
+ifc IfcBuildingElementProxy ELEMENT
+param Height length type 6000mm
+param Width length type 450mm
+param Rail length type 50mm
+param Rung length type 25mm
+param Finish material type "Steel White"
+type "6000x450" Height=6000mm
+type "9000x450" Height=9000mm
+type "236x18in" Height=236in, Width=18in, Rail=2in, Rung=1in
+extrude RailA rect(-Width / 2, 0mm, -Width / 2 + Rail, Rail) z(0mm, Height) mat(Finish) show(3d, elev)
+extrude RailB rect(Width / 2 - Rail, 0mm, Width / 2, Rail) z(0mm, Height) mat(Finish) show(3d, elev)
+extrude Rung1 rect(-Width / 2 + Rail, 0mm, Width / 2 - Rail, Rung) z(Height / 5, Height / 5 + Rung) mat(Finish) show(3d, elev)
+extrude Rung2 rect(-Width / 2 + Rail, 0mm, Width / 2 - Rail, Rung) z(Height * 2 / 5, Height * 2 / 5 + Rung) mat(Finish) show(3d, elev)
+extrude Rung3 rect(-Width / 2 + Rail, 0mm, Width / 2 - Rail, Rung) z(Height * 3 / 5, Height * 3 / 5 + Rung) mat(Finish) show(3d, elev)
+extrude Rung4 rect(-Width / 2 + Rail, 0mm, Width / 2 - Rail, Rung) z(Height * 4 / 5, Height * 4 / 5 + Rung) mat(Finish) show(3d, elev)
+symbol rect(-Width / 2, 0mm, Width / 2, Rail)
+symbol line(-Width / 2, 0mm, Width / 2, Rail) show(medium, fine)
+---
+family Glulam Column
+category generic
+host floor
+ifc IfcColumn COLUMN
+param Width length type 280mm
+param Depth length type 280mm
+param Height length type 3000mm
+param Shoe length type 20mm
+param Lap length type 30mm
+param Timber material type "Glulam Timber"
+param Steel material type "Steel Grey"
+type "280x280" Width=280mm, Depth=280mm
+type "360x360" Width=360mm, Depth=360mm
+type "440x440" Width=440mm, Depth=440mm, Shoe=25mm
+type "11x11in" Width=11in, Depth=11in, Height=118in, Shoe=0.75in, Lap=1.25in
+extrude Body rect(-Width / 2, -Depth / 2, Width / 2, Depth / 2) z(Shoe, Height) mat(Timber) show(3d, elev)
+extrude BasePlate rect(-Width / 2 - Lap, -Depth / 2 - Lap, Width / 2 + Lap, Depth / 2 + Lap) z(0mm, Shoe) mat(Steel) show(3d, elev)
+symbol rect(-Width / 2, -Depth / 2, Width / 2, Depth / 2)
+symbol line(-Width / 2, -Depth / 2, Width / 2, Depth / 2) show(medium, fine)
+symbol line(-Width / 2, Depth / 2, Width / 2, -Depth / 2) show(medium, fine)
+---
+family Glulam Beam
+category generic
+host floor
+ifc IfcBeam BEAM
+param Length length type 6000mm
+param Width length type 200mm
+param Depth length type 440mm
+param Seat length type 120mm
+param Plate length type 12mm
+param Timber material type "Glulam Timber"
+param Steel material type "Steel Grey"
+type "200x440" Width=200mm, Depth=440mm
+type "240x600" Width=240mm, Depth=600mm, Length=7200mm
+type "280x720" Width=280mm, Depth=720mm, Length=8000mm, Seat=150mm
+type "8x18in" Length=236in, Width=8in, Depth=18in, Seat=5in, Plate=0.5in
+extrude Body rect(-Length / 2, -Width / 2, Length / 2, Width / 2) z(0mm, Depth) mat(Timber) show(3d, elev)
+extrude PlateA rect(-Length / 2, -Width / 2 - Plate, -Length / 2 + Seat, Width / 2 + Plate) z(0mm, Depth) mat(Steel) show(3d, elev)
+extrude PlateB rect(Length / 2 - Seat, -Width / 2 - Plate, Length / 2, Width / 2 + Plate) z(0mm, Depth) mat(Steel) show(3d, elev)
+symbol rect(-Length / 2, -Width / 2, Length / 2, Width / 2)
+symbol line(-Length / 2, 0mm, Length / 2, 0mm) show(medium, fine)
+---
+family CLT Floor Panel
+category generic
+host floor
+ifc IfcSlab FLOOR
+param Length length type 6000mm
+param Width length type 2400mm
+param Thickness length type 200mm
+param Wood material type "Cross-Laminated Timber"
+param Cross material type "Cross-Laminated Timber Cross"
+type "2400x6000 t200" Thickness=200mm
+type "2400x7200 t240" Length=7200mm, Thickness=240mm
+type "3000x8000 t280" Length=8000mm, Width=3000mm, Thickness=280mm
+type "96x236in t8in" Length=236in, Width=96in, Thickness=8in
+extrude LayerA rect(-Length / 2, -Width / 2, Length / 2, Width / 2) z(0mm, Thickness * 2 / 5) mat(Wood) show(3d, elev)
+extrude LayerB rect(-Length / 2, -Width / 2, Length / 2, Width / 2) z(Thickness * 2 / 5, Thickness * 3 / 5) mat(Cross) show(3d, elev)
+extrude LayerC rect(-Length / 2, -Width / 2, Length / 2, Width / 2) z(Thickness * 3 / 5, Thickness) mat(Wood) show(3d, elev)
+symbol rect(-Length / 2, -Width / 2, Length / 2, Width / 2)
+symbol line(-Length / 2, -Width / 2, Length / 2, Width / 2) show(medium, fine)
+symbol line(-Length / 2, Width / 2, Length / 2, -Width / 2) show(fine)
+---
+family Insulator String
+category equipment
+host none
+ifc IfcBuildingElementProxy ELEMENT
+param Length length instance 2800mm
+param Core length type 200mm
+param Cap length type 300mm
+param Ceramic material type "Porcelain"
+param Metal material type "Steel Grey"
+type "String" Core=200mm
+extrude Cap rect(-Cap / 2, -Cap / 2, Cap / 2, Cap / 2) z(-Cap, 0mm) mat(Metal) show(3d, elev)
+extrude Stack rect(-Core / 2, -Core / 2, Core / 2, Core / 2) z(-Length, -Cap) mat(Ceramic) show(3d, elev)
+symbol rect(-Cap / 2, -Cap / 2, Cap / 2, Cap / 2)
+---
+family Mast Lift
+category equipment
+host floor
+ifc IfcTransportElement ELEVATOR
+param Width length type 1500mm
+param Depth length type 3200mm
+param CarH length type 2300mm
+param Mast length type 650mm
+param Floor length type 100mm
+param Wall length type 40mm
+param MastH length instance 6000mm
+param CarZ length instance 0mm
+param Steel material type "Steel Grey"
+param Panel material type "Stainless Steel"
+type "1500 kg" Width=1500mm, Depth=3200mm, Mast=650mm
+type "1000 kg" Width=1300mm, Depth=2500mm, Mast=550mm
+type "1500 kg 59x126in" Width=59in, Depth=126in, CarH=90in, Mast=25.5in
+extrude Mast rect(-Mast / 2, Depth / 2 - Mast / 2, Mast / 2, Depth / 2 + Mast / 2) z(0mm, MastH) mat(Steel) show(3d, elev)
+extrude Base rect(-Width / 2, -Depth / 2 - Mast / 2, Width / 2, Depth / 2 - Mast / 2) z(CarZ, CarZ + Floor) mat(Panel) show(3d, elev)
+extrude Roof rect(-Width / 2, -Depth / 2 - Mast / 2, Width / 2, Depth / 2 - Mast / 2) z(CarZ + CarH - Wall, CarZ + CarH) mat(Panel) show(3d, elev)
+extrude SideL rect(-Width / 2, -Depth / 2 - Mast / 2, -Width / 2 + Wall, Depth / 2 - Mast / 2) z(CarZ + Floor, CarZ + CarH - Wall) mat(Panel) show(3d, elev)
+extrude SideR rect(Width / 2 - Wall, -Depth / 2 - Mast / 2, Width / 2, Depth / 2 - Mast / 2) z(CarZ + Floor, CarZ + CarH - Wall) mat(Panel) show(3d, elev)
+extrude Back rect(-Width / 2 + Wall, Depth / 2 - Mast / 2 - Wall, Width / 2 - Wall, Depth / 2 - Mast / 2) z(CarZ + Floor, CarZ + CarH - Wall) mat(Panel) show(3d, elev)
+symbol rect(-Width / 2, -Depth / 2 - Mast / 2, Width / 2, Depth / 2 - Mast / 2)
+symbol rect(-Mast / 2, Depth / 2 - Mast / 2, Mast / 2, Depth / 2 + Mast / 2)
+symbol line(-Width / 2, -Depth / 2 - Mast / 2, Width / 2, Depth / 2 - Mast / 2) show(medium, fine)
+---
+family Overhead Crane
+category equipment
+host floor
+ifc IfcTransportElement LIFTINGGEAR
+param Span length type 22500mm
+param Capacity number type 10
+param Gauge length type 2500mm
+param Carriage length type 600mm
+param CarriageW length type 400mm
+param Wheelbase length type = max(3000mm, Span / 7)
+param Girder length type = max(600mm, Span / 18)
+param GirderW length type = 400mm + Capacity * 10mm
+param TrolleyW length type 1800mm
+param TrolleyL length type = Gauge + GirderW
+param TrolleyH length type = 700mm + Capacity * 20mm
+param Block length type 800mm
+param Steel material type "Steel Grey"
+ref Left x = -Span / 2
+ref Right x = Span / 2
+type "10 t 22.5 m" Span=22500mm, Capacity=10
+type "5 t 16.5 m" Span=16500mm, Capacity=5
+type "20 t 28.5 m" Span=28500mm, Capacity=20
+type "10 t 72ft span 864in" Span=864in, Capacity=10
+extrude CarriageL rect(Left - CarriageW / 2, -Wheelbase / 2, Left + CarriageW / 2, Wheelbase / 2) z(0mm, Carriage) mat(Steel) show(3d, elev)
+extrude CarriageR rect(Right - CarriageW / 2, -Wheelbase / 2, Right + CarriageW / 2, Wheelbase / 2) z(0mm, Carriage) mat(Steel) show(3d, elev)
+extrude GirderA rect(Left, -Gauge / 2 - GirderW / 2, Right, -Gauge / 2 + GirderW / 2) z(Carriage, Carriage + Girder) mat(Steel) show(3d, elev)
+extrude GirderB rect(Left, Gauge / 2 - GirderW / 2, Right, Gauge / 2 + GirderW / 2) z(Carriage, Carriage + Girder) mat(Steel) show(3d, elev)
+extrude Trolley rect(-TrolleyW / 2, -TrolleyL / 2, TrolleyW / 2, TrolleyL / 2) z(Carriage + Girder, Carriage + Girder + TrolleyH) mat(Steel) show(3d, elev)
+extrude HookBlock rect(-Block / 2, -Block / 2, Block / 2, Block / 2) z(Carriage, Carriage + Block) mat(Steel) show(medium, fine, 3d, elev)
+symbol rect(Left - CarriageW / 2, -Wheelbase / 2, Right + CarriageW / 2, Wheelbase / 2)
+symbol rect(-TrolleyW / 2, -TrolleyL / 2, TrolleyW / 2, TrolleyL / 2)
+symbol line(Left, -Gauge / 2, Right, -Gauge / 2) show(medium, fine)
+symbol line(Left, Gauge / 2, Right, Gauge / 2) show(medium, fine)

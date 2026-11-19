@@ -1,0 +1,10 @@
+{
+ "dlg.dw.store.unloaded": "Tekening “{name}” kon niet uit het project worden gelezen en blijft ongewijzigd in het bestand",
+ "dlg.dw.store.source_missing": "Tekening “{name}”: het bronbestand is niet gevonden; de kopie in het project wordt getoond",
+ "dlg.dw.store.source_changed": "Tekening “{name}”: het bronbestand is gewijzigd sinds het werd geplaatst; de kopie in het project wordt getoond",
+ "dlg.dw.store.unreadable": "De geplaatste tekeningen die in het project zijn opgeslagen, kunnen niet worden gelezen",
+ "dlg.dw.store.not_saved": "Tekeningen zijn niet opgeslagen: {why}",
+ "dlg.dw.store.why_read": "de geplaatste tekeningen die in het project zijn opgeslagen, kunnen niet worden gelezen",
+ "dlg.dw.store.why_write": "het projectbestand kon niet worden bijgewerkt",
+ "dlg.dw.store.missing_in_file": "Het opgeslagen bestand bevat niet elke geplaatste tekening"
+}

@@ -1,0 +1,5 @@
+{
+ "mep_dn.dn.unset": "Nesetat",
+ "mep_dn.slope.err": "Introdu o pantă în %, de ex. 1.5",
+ "mep_dn.err.rejected": "valoarea nu este acceptată"
+}

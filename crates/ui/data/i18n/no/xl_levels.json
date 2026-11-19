@@ -1,0 +1,5 @@
+{
+ "xl.msg.level_name_x_is_already_used": "etasjenavnet '{}' er allerede i bruk",
+ "xl.msg.unreadable_id_elements_without_a_row_not_deleted": "uleselig id: elementer uten rad slettes ikke i denne importen",
+ "xl.msg.wall_type_name_x_is_already_used": "veggtypenavnet '{}' er allerede i bruk"
+}

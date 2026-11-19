@@ -1,0 +1,11 @@
+{
+ "materials.mat.name_empty": "Informe um nome de material",
+ "materials.mat.empty_title": "Nenhum material ainda",
+ "materials.mat.empty_hint": "Digite um nome abaixo e pressione Adicionar",
+ "materials.mat.nothing_hint": "Nenhum material corresponde à pesquisa",
+ "materials.mat.clear_search": "Limpar pesquisa",
+ "materials.mat.replace_with": "Substituir por",
+ "materials.mat.delete_refused": "Não é possível excluir: o material é usado em {n} lugares. Substitua-o primeiro.",
+ "materials.mat.delete_confirm": "Excluir o material “{name}”? Você pode desfazer isso.",
+ "materials.mat.replace_confirm": "Substituir “{from}” por “{to}” em {n} elementos? “{from}” é removido. Você pode desfazer isso."
+}

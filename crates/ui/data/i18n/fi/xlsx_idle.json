@@ -1,0 +1,8 @@
+{
+ "xlsx_idle.idle_title": "Ei tuotavia muutoksia",
+ "xlsx_idle.export_name": "Vienti",
+ "xlsx_idle.export_body": "Kirjoittaa mallin työkirjaan. Muokkaa arvoja siellä, sitten synkronoi.",
+ "xlsx_idle.sync_name": "Synkronointi",
+ "xlsx_idle.sync_body": "Lukee työkirjan uudelleen ja luettelee erot. Malli muuttuu vasta, kun käytät.",
+ "xlsx_idle.last_sync": "Viimeksi synkronoitu: {when}"
+}

@@ -1,0 +1,5 @@
+{
+ "rbdrag.beam": "A hosted beam would fall outside the new boundary.",
+ "rbdrag.rebar": "Rebar set {id} on the foundation slab would fall outside the new boundary.",
+ "rbdrag.opening": "An opening would fall outside the new boundary."
+}

@@ -1,0 +1,5 @@
+{
+ "drafts_overwrite.ow.project": "Sparningen av projektet väntar på det här svaret. Ersätt värden för att fortsätta spara; Tillbaka till redigering behåller alla ändringar och skriver ingenting.",
+ "drafts_overwrite.drafts.ow_wait": "Sparningen väntar på ditt svar i familjeredigeraren: att läsa in en familj skulle ersätta värden för projekttyper. Inget stängdes.",
+ "drafts_overwrite.drafts.ow_back": "Sparningen stoppades: värden för projekttyper behölls och familjeredigeringarna är fortfarande öppna. Inget stängdes."
+}

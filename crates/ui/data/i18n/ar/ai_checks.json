@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "القيمة المقاسة {value}، الحد {limit}",
+ "ai_checks.check.cap": "يُعرض {shown} من {total} نتيجة. الأخطاء أولاً: أصلحها ثم أعد التشغيل.",
+ "ai_checks.check.run_again": "تشغيل مجدداً",
+ "ai_checks.check.goto": "تحديد والتكبير",
+ "ai_checks.check.never_title": "لم يُفحص بعد",
+ "ai_checks.check.never_hint": "شغّل الفحوصات وتظهر النتائج هنا.",
+ "ai_checks.check.sec.error": "الأخطاء",
+ "ai_checks.check.sec.warning": "التحذيرات",
+ "ai_checks.check.sec.info": "ملاحظات"
+}

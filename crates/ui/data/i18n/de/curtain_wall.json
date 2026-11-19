@@ -1,0 +1,12 @@
+{
+ "curtain_wall.cw.issue.slab": "Decke {id}: {e}",
+ "curtain_wall.cw.issue.body": "Bauteil {id}: {e}",
+ "curtain_wall.cw.added": "Vorhangfassaden hinzugefügt: {n}",
+ "curtain_wall.cw.add_failed": "Vorhangfassade nicht erstellt: {e}",
+ "curtain_wall.cw.edited_warn": "Vorhangfassade Nr. {id} geändert: {w}",
+ "curtain_wall.cw.edited": "Vorhangfassade Nr. {id} geändert",
+ "curtain_wall.cw.not_changed": "Nicht geändert: {e}",
+ "curtain_wall.cw.room_edited": "Raum Nr. {id} geändert",
+ "curtain_wall.cw.slope_range": "Nicht geändert: Neigung außerhalb des Bereichs",
+ "curtain_wall.cw.slope_set": "Decke Nr. {id}: Neigung {pct}"
+}

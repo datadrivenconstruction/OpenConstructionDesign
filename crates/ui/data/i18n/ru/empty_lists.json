@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "Нарисовать стену",
+ "empty.totals.action": "Нарисовать стену",
+ "empty.schedule.action": "Добавить поле",
+ "empty.schedule_filtered.action": "Сбросить фильтр",
+ "empty.library.action": "Сбросить поиск",
+ "empty.library.load": "Загрузить семейство",
+ "empty.schedule_fields.title": "Нет отображаемых полей",
+ "empty.schedule_fields.action": "Добавить поле",
+ "empty.schedule_fields.hint": "Включите хотя бы одно поле, чтобы увидеть таблицу."
+}

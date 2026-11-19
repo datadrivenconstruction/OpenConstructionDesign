@@ -1,0 +1,19 @@
+{
+ "empty.v3d_gpu.title": "3D pole selle graafikaadapteri jaoks saadaval",
+ "empty.v3d_gpu.hint": "Mudel on ohutu ja plaan töötab. Taaskäivita ohutu graafikaga, et 3D uuesti proovida.",
+ "empty.v3d_gpu.action": "Taaskäivita ohutu graafikaga",
+ "empty.v3d_loading.title": "3D koostamine…",
+ "empty.v3d_loading.pct": "Avamine… {pct} %",
+ "empty.plan_hidden.title": "Kõik elemendid on selles plaanis peidetud",
+ "empty.plan_hidden.hint": "Ajutine peitmine või isoleerimine ei jäta midagi nähtavaks.",
+ "empty.plan_hidden.action": "Näita kõiki",
+ "empty.plan_graphics.title": "Vaate graafika peidab kõik kategooriad",
+ "empty.plan_graphics.hint": "Selle vaate kategooriareeglid ei jäta midagi näidata.",
+ "empty.plan_graphics.action": "Ava vaate graafika",
+ "empty.plan_phase.title": "Faasifilter peidab kõik",
+ "empty.plan_phase.hint": "Selle korruse miski ei ole selle vaate faasis olemas.",
+ "empty.plan_phase.action": "Muuda faasi",
+ "empty.plan_level.title": "Sellel korrusel pole elemente",
+ "empty.plan_level.hint": "Selle mudeli teistel korrustel on elemente.",
+ "empty.plan_level.action": "Mine korrusele, kus on elemente"
+}

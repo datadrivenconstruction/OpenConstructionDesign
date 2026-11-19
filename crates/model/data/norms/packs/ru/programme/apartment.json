@@ -1,0 +1,367 @@
+{
+ "typology": "apartment",
+ "source": "sp54.13330",
+ "clause": "table 5.1",
+ "variants": [
+  {
+   "code": "1k",
+   "select": {
+    "room_kind": [
+     "living",
+     "bedroom"
+    ],
+    "count": 1
+   },
+   "area_min": 28,
+   "rooms": [
+    {
+     "kind": "living",
+     "min_area": 16,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "kitchen",
+     "min_area": 8,
+     "daylight": true,
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "bath",
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "hall",
+     "verified": false
+    }
+   ],
+   "allowed": [
+    "storage",
+    "corridor",
+    "wc"
+   ],
+   "circulation_max": 0.18,
+   "storage_max": 0.05,
+   "source": "sp54.13330",
+   "clause": "table 5.1",
+   "verified": true
+  },
+  {
+   "code": "2k",
+   "select": {
+    "room_kind": [
+     "living",
+     "bedroom"
+    ],
+    "count": 2
+   },
+   "area_min": 44,
+   "rooms": [
+    {
+     "kind": "living",
+     "min_area": 16,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 8,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "kitchen",
+     "min_area": 8,
+     "daylight": true,
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "bath",
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "hall",
+     "verified": false
+    }
+   ],
+   "allowed": [
+    "storage",
+    "corridor",
+    "wc"
+   ],
+   "circulation_max": 0.18,
+   "storage_max": 0.05,
+   "source": "sp54.13330",
+   "clause": "table 5.1",
+   "verified": true
+  },
+  {
+   "code": "3k",
+   "select": {
+    "room_kind": [
+     "living",
+     "bedroom"
+    ],
+    "count": 3
+   },
+   "area_min": 56,
+   "rooms": [
+    {
+     "kind": "living",
+     "min_area": 16,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 8,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 8,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "kitchen",
+     "min_area": 8,
+     "daylight": true,
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "bath",
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "hall",
+     "verified": false
+    }
+   ],
+   "allowed": [
+    "storage",
+    "corridor",
+    "wc"
+   ],
+   "circulation_max": 0.18,
+   "storage_max": 0.05,
+   "source": "sp54.13330",
+   "clause": "table 5.1",
+   "verified": true
+  },
+  {
+   "code": "4k",
+   "select": {
+    "room_kind": [
+     "living",
+     "bedroom"
+    ],
+    "count": 4
+   },
+   "area_min": 70,
+   "rooms": [
+    {
+     "kind": "living",
+     "min_area": 16,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 8,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 8,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 8,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "kitchen",
+     "min_area": 8,
+     "daylight": true,
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "bath",
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "hall",
+     "verified": false
+    }
+   ],
+   "allowed": [
+    "storage",
+    "corridor",
+    "wc"
+   ],
+   "circulation_max": 0.18,
+   "storage_max": 0.05,
+   "source": "sp54.13330",
+   "clause": "table 5.1",
+   "verified": true
+  },
+  {
+   "code": "5k",
+   "select": {
+    "room_kind": [
+     "living",
+     "bedroom"
+    ],
+    "count": 5
+   },
+   "area_min": 84,
+   "rooms": [
+    {
+     "kind": "living",
+     "min_area": 16,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 8,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 8,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 8,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 8,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "kitchen",
+     "min_area": 8,
+     "daylight": true,
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "bath",
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "hall",
+     "verified": false
+    }
+   ],
+   "allowed": [
+    "storage",
+    "corridor",
+    "wc"
+   ],
+   "circulation_max": 0.18,
+   "storage_max": 0.05,
+   "source": "sp54.13330",
+   "clause": "table 5.1",
+   "verified": true
+  },
+  {
+   "code": "6k",
+   "select": {
+    "room_kind": [
+     "living",
+     "bedroom"
+    ],
+    "count": 6
+   },
+   "area_min": 103,
+   "rooms": [
+    {
+     "kind": "living",
+     "min_area": 16,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 8,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 8,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 8,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 8,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 8,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "kitchen",
+     "min_area": 8,
+     "daylight": true,
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "bath",
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "hall",
+     "verified": false
+    }
+   ],
+   "allowed": [
+    "storage",
+    "corridor",
+    "wc"
+   ],
+   "circulation_max": 0.18,
+   "storage_max": 0.05,
+   "source": "sp54.13330",
+   "clause": "table 5.1",
+   "verified": true
+  }
+ ]
+}

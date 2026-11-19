@@ -1,0 +1,14 @@
+{
+ "cmd.mod.divide": "Hatiin nang pantay",
+ "cmd.mod.divide.short": "Hatiin",
+ "cmd.mod.divide.desc": "Hinahati ang pader sa pantay na bahagi sa isang hakbang. I-type ang bilang ng bahagi, saka i-click ang pader.",
+ "whereis.mod.divide": "divide, pantay na bahagi, hatiin sa piraso, segment wall",
+ "hint.split.parts": "Hatiin nang pantay: i-click ang pader · numero — bahagi (2–100) · Esc — kanselahin",
+ "create_input.divide.bad_parts": "Ang «{text}» ay hindi bilang ng bahagi: mag-type ng buong numero mula 2 hanggang {max}",
+ "create_input.ws.err.empty": "I-type ang pangalan ng layout",
+ "create_input.ws.err.long": "Masyadong mahaba ang pangalan: hanggang 40 karakter lamang",
+ "create_input.ws.err.preset": "Pag-aari ng built-in na layout ang pangalang iyon",
+ "create_input.ws.err.full": "Hanggang 24 na naka-save na layout lamang: magtanggal muna ng isa",
+ "create_input.seldim.locked": "Nakakandado ang distansya {v}",
+ "create_input.seldim.positive": "Dapat higit sa zero ang distansya"
+}

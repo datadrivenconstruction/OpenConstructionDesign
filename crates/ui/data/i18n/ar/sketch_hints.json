@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "ارسم مخططاً مغلقاً: انقر النقاط، ثم Enter أو إنهاء للإنشاء",
+ "sketch_hints.sk_finish": "إنهاء",
+ "sketch_hints.sk_cancel": "إلغاء",
+ "sketch_hints.import_warn": "تحذيرات فحص النموذج: {n} (الأولى: {first})",
+ "sketch_hints.ai.offline.schedule": "فتح الجدول الزمني",
+ "sketch_hints.ai.offline.check": "التحقق وفق القواعد",
+ "sketch_hints.ai.offline.warnings": "عرض التحذيرات",
+ "cmd.file.publish_pdf": "نشر الأوراق بصيغة PDF…",
+ "cmd.file.publish_pdf.desc": "ينشر الأوراق المختارة بصيغة PDF. مطابق لتصدير الأوراق إلى PDF/SVG.",
+ "sketch_hints.verify_none": "لا يوجد في التحديد ما أدخله مساعد الذكاء الاصطناعي للتحقق منه",
+ "sketch_hints.contours_none": "لا توجد أرضية طبوغرافية في النموذج: تظهر الكنتورات بعد إنشائها",
+ "sketch_hints.contours_off": "كنتورات الأرضية الطبوغرافية مخفية",
+ "sketch_hints.contours_on": "كنتورات الأرضية الطبوغرافية معروضة"
+}

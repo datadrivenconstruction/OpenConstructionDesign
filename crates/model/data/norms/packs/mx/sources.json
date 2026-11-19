@@ -1,0 +1,22 @@
+{
+ "sources": [
+  {
+   "id": "mx-cdmx-ntcpa",
+   "title": "Complementary Technical Norm for the architectural project (Mexico City)",
+   "publisher": "Government of Mexico City, official gazette",
+   "url": "https://amraci.org/wp-content/uploads/2024/12/2024-12-12_NTCPA.pdf",
+   "edition": "gazette text, copy dated 2024-12-12",
+   "licence": "public-law",
+   "verified": "2026-11-14"
+  },
+  {
+   "id": "mx-cdmx-rcdf",
+   "title": "Mexico City construction regulation (Reglamento de Construcciones)",
+   "publisher": "Government of Mexico City, official gazette",
+   "url": "https://paot.org.mx/centro/reglamentos/df/pdf/2024/RGTO_CONSTRUCCIONES_22_04_2022.pdf",
+   "edition": "consolidated, last reform listed 2022-04-22 in this copy",
+   "licence": "public-law",
+   "verified": null
+  }
+ ]
+}

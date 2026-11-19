@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "Avain osoitteessa",
+ "ai_safety.auth.query_name": "Osoiteparametri",
+ "ai_safety.need_query_name": "Nimeä osoiteparametri, joka kantaa avainta",
+ "ai_safety.apply_unlogged": "Käytetty, mutta muutosta ei kirjattu lokiin",
+ "ai_safety.audit_unlogged": "Tekoälyavustajan lokia ei voitu kirjoittaa",
+ "ai_safety.chat_not_saved": "Keskustelua ei voitu tallentaa projektiin. Yritetään uudelleen.",
+ "ai_safety.clip_clears": "Leikepöytä tyhjenee 30 s:n kuluttua",
+ "ai_safety.copied_clears": "Kopioitu. Leikepöytä tyhjenee 30 s:n kuluttua",
+ "ai_safety.key_session_only": "Avain säilyy sovelluksen sulkemiseen asti",
+ "ai.settings.no_data_dir": "tämä järjestelmä ei anna kansiota sovelluksen asetuksille"
+}

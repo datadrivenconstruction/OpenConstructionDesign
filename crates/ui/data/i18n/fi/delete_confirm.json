@@ -1,0 +1,59 @@
+{
+ "del.k.door": {
+  "one": "# ovi",
+  "other": "# ovea"
+ },
+ "del.k.window": {
+  "one": "# ikkuna",
+  "other": "# ikkunaa"
+ },
+ "del.k.opening": {
+  "one": "# aukko",
+  "other": "# aukkoa"
+ },
+ "del.k.comp": {
+  "one": "# isäntäkomponentti",
+  "other": "# isäntäkomponenttia"
+ },
+ "del.k.rebar": {
+  "one": "# raudoitusjoukko",
+  "other": "# raudoitusjoukkoa"
+ },
+ "del.k.port": {
+  "one": "# isäntä-LVIS-liitäntä",
+  "other": "# isäntä-LVIS-liitäntää"
+ },
+ "del.k.joist": {
+  "one": "# runkopalkki",
+  "other": "# runkopalkkia"
+ },
+ "del.k.railing": {
+  "one": "# kaide",
+  "other": "# kaidetta"
+ },
+ "del.k.tag": {
+  "one": "# tunniste",
+  "other": "# tunnistetta"
+ },
+ "del.k.dim": {
+  "one": "# mitta (irrotettu)",
+  "other": "# mittaa (irrotettu)"
+ },
+ "del.also": "Myös vaikuttuneet: {list}",
+ "del.rooms": {
+  "one": "# huone menettää rajaseinän",
+  "other": "# huonetta menettää rajaseinän"
+ },
+ "del.cancelled": "Poisto peruttu, mitään ei muutettu",
+ "del.confirm.title": "Poista riippuvuuksineen",
+ "del.confirm.lead": {
+  "one": "# valittu elementti vie nämä mukanaan:",
+  "other": "# valittua elementtiä vie nämä mukanaan:"
+ },
+ "del.confirm.levels": {
+  "one": "# niistä on toisella tasolla",
+  "other": "# niistä on toisilla tasoilla"
+ },
+ "del.confirm.all": "Poista kaikki",
+ "del.confirm.cancel": "Peruuta"
+}

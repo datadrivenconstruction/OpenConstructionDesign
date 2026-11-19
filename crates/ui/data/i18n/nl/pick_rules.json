@@ -1,0 +1,11 @@
+{
+ "pick_rules.filter": "Kiezen: alles",
+ "pick_rules.filter.on": "Kiezen: {n} uit",
+ "pick_rules.filter.title": "Categorieën die met een klik gekozen kunnen worden",
+ "pick_rules.filter.all": "Alle categorieën kiezen",
+ "pick_rules.filter.tip": "Selectiefilter: niet aangevinkte categorieën worden overgeslagen bij klikken en aanwijzen",
+ "pick_rules.here": "Items hier",
+ "pick_rules.here.selected": "geselecteerd",
+ "pick_rules.pinned": "Vastgezette items selecteren",
+ "pick_rules.here.row": "{cat} · {len}"
+}

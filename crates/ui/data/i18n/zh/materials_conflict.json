@@ -1,0 +1,5 @@
+{
+ "materials.mat.conflict": "此材质在编辑卡片期间在模型中已更改（撤销或其他窗口）。您的编辑已保留。",
+ "materials.mat.keep": "保留我的编辑",
+ "materials.mat.reload": "重新加载"
+}

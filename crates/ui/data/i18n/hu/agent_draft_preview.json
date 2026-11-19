@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "Előnézet",
+ "agent_draft.ag.preview.desc": "Amíg a mutató a gombon van, körvonalazza ennek a vázlatnak az elemeit a rajzfelületen. Semmi sem változik.",
+ "agent_draft.type.column": "Pillér",
+ "agent_draft.type.roof": "Tető",
+ "agent_draft.type.ceiling": "Mennyezet",
+ "agent_draft.type.stair": "Monolit",
+ "agent_draft.type.railing": "Korlát",
+ "agent_draft.type.shaft": "Akna",
+ "agent_draft.type.axis": "Tengely 6,5 mm",
+ "agent_draft.type.refplane": "Referenciasík"
+}

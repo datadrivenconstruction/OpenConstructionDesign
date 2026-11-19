@@ -1,0 +1,5 @@
+{
+ "materials.mat.conflict": "카드를 편집하는 동안 이 재료가 모델에서 바뀌었습니다(실행 취소 또는 다른 창). 편집 내용은 유지됩니다.",
+ "materials.mat.keep": "내 편집 유지",
+ "materials.mat.reload": "다시 불러오기"
+}

@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "चल रहे काम के बाद कतार में: {n}",
+ "import_queue.queue_full": "कतार भर गई है, {n} फ़ाइलें नहीं जोड़ी गईं",
+ "import_queue.changed": "{name} इस प्रोजेक्ट के बनने के बाद अपडेट हुई। पिछला प्रोजेक्ट खोला गया।",
+ "import_queue.import_again": "फिर से आयात करें",
+ "import_queue.kept": "पूरा हुआ आयात रखा गया है",
+ "import_queue.open_it": "खोलें",
+ "import_queue.sum.head": "आयात: {editable} संपादनयोग्य (दीवारें {walls}, ओपनिंग {open}, स्लैब {slabs}, कमरे {rooms}, अन्य {other}), {meshes} मेश के रूप में",
+ "import_queue.sum.unchanged": ", अपरिवर्तित {n}",
+ "import_queue.sum.updated": ", अपडेट किए गए {n}",
+ "import_queue.sum.missing": ", स्रोत में नहीं {n} (रखे गए)",
+ "import_queue.sum.skipped": ", छोड़े गए {n}",
+ "import_queue.sum.warnings": ", चेतावनियाँ {n}",
+ "import_queue.import_failed": "आयात विफल: {e}"
+}

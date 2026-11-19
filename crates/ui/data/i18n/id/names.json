@@ -1,0 +1,19 @@
+{
+ "names.level": "Tingkat {n}",
+ "names.slab": "Pelat 200",
+ "names.roof_slab": "Atap 200",
+ "names.sheet.plan_section": "Denah dan potongan lantai 1",
+ "names.sheet.plan_view": "Denah lantai 1",
+ "names.sheet.site_plan": "Denah tapak",
+ "names.sheet_set.issue": "Terbitan 1",
+ "names.title.owner": "PT Proyek",
+ "names.title.creator": "A. Wijaya",
+ "names.title.approver": "P. Pratama",
+ "names.title.document_type": "Gambar",
+ "names.title.status": "Dalam proses",
+ "names.revision.date": "4 Nov 2026",
+ "names.revision.description": "Diterbitkan untuk ditinjau",
+ "names.revision.author": "AI",
+ "names.demo.no_levels": "tanpa level",
+ "names.demo.no_sheet": "lembar"
+}

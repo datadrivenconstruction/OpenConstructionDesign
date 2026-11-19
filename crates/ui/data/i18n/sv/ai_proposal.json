@@ -1,0 +1,13 @@
+{
+ "ai.proposal.title": "Förslag från AI-assistenten",
+ "ai.proposal.meta": "{actor} · operationer: {ops}",
+ "ai.proposal.apply.desc": "Tillämpar hela förslaget som ett steg; Ctrl+Z ångrar det",
+ "ai.proposal.applying": "Tillämpar…",
+ "ai.proposal.applied": "Förslaget tillämpades. Ctrl+Z ångrar det.",
+ "ai.proposal.applied_resync": "Förslaget tillämpades, men vyn har inte uppdaterats än. Den uppdateras av sig själv; Ctrl+Z ångrar steget.",
+ "ai.proposal.stale": "Modellen ändrades efter att förslaget förhandsgranskades. Be AI-assistenten föreslå det igen.",
+ "ai.proposal.toast.applied": "Förslaget tillämpat. Ctrl+Z ångrar det.",
+ "ai.proposal.toast.stale": "Modellen ändrades efter förhandsgranskningen, så ingenting tillämpades. Förhandsgranska igen: be AI-assistenten föreslå på nytt.",
+ "ai.proposal.toast.refused": "Förslaget tillämpades inte: {reason}",
+ "ai.proposal.rejected": "Förslaget avvisades."
+}

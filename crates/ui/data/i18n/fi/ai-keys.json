@@ -1,0 +1,14 @@
+{
+ "ai_keys.header_is_key": "Avaimet kirjoitetaan Avain-kenttään — otsikot tallentuvat selkokielisinä",
+ "ai_keys.move": "Siirrä Avaimeen",
+ "ai_keys.remove_line": "Poista otsikoista",
+ "ai_keys.save_blocked": "Siirrä avain pois otsikoista tallentaaksesi",
+ "ai_keys.show": "Näytä",
+ "ai_keys.hide": "Piilota",
+ "ai_keys.copy": "Kopioi",
+ "ai_keys.tokens": "tokenit",
+ "ai_keys.presets": "Esiasetukset",
+ "ai_keys.preset_k": "{n} k",
+ "ai_keys.preset_m": "{n} M",
+ "ai_keys.images_on": "Tuettu"
+}

@@ -1,0 +1,27 @@
+id = "G39_parabolic_dish__de"
+tier = "hard"
+group = "Any geometry"
+title = "Parabolic dish antenna"
+lang = "de"
+base = "empty"
+
+[[turn]]
+say = "Entwirf eine Parabolantenne mit 18 m Durchmesser und 4.5 m Tiefe als Stahl-Gitterschale auf einem Paraboloid: Ring- und Radialstäbe aus Rohren, die Achse um 30 Grad geneigt, die Schale steht auf ihrem Nabenring 8 m über dem Boden."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "gridshell"
+min = 1.0
+
+[[oracle.count]]
+spec = "gridshell_bar+beam+brace"
+min = 150.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

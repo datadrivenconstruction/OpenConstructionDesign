@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "Fortryd: {what}",
+ "undo_label.redo_what": "Gentag: {what}",
+ "undo_label.undo_none": "Intet at fortryde",
+ "undo_label.redo_none": "Intet at gentage"
+}

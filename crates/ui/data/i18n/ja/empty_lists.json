@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "壁を描く",
+ "empty.totals.action": "壁を描く",
+ "empty.schedule.action": "項目を追加",
+ "empty.schedule_filtered.action": "フィルターをクリア",
+ "empty.library.action": "検索をリセット",
+ "empty.library.load": "ファミリを読み込む",
+ "empty.schedule_fields.title": "表示する項目がありません",
+ "empty.schedule_fields.action": "項目を追加",
+ "empty.schedule_fields.hint": "表を表示するには、少なくとも 1 つの項目をオンにしてください。"
+}

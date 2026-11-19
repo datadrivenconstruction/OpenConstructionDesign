@@ -1,0 +1,10 @@
+{
+ "ai.plan.reject_ask": {
+  "one": "Respingeți # modificare?",
+  "few": "Respingeți # modificări?",
+  "other": "Respingeți # de modificări?"
+ },
+ "ai.plan.reject_ask.hint": "Ciorna și bifele tale se elimină. Modelul rămâne neschimbat.",
+ "ai.plan.reject_confirm": "Respinge",
+ "ai.plan.reject_keep": "Păstrează"
+}

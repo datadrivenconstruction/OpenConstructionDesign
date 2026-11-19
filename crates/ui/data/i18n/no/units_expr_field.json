@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "Tomt felt.",
+ "units.err.not_number": "Ikke et tall på posisjon {pos}.",
+ "units.err.unknown_unit": "Ukjent enhet: {unit}.",
+ "units.err.non_positive": "Lengden må være større enn null.",
+ "units.err.too_large": "Lengden kan ikke overstige {max} m.",
+ "units.err.bad_angle": "Vinkelen må være et antall grader.",
+ "units.err.unknown_name": "Ukjent navn: {name}. Verdien beholdes.",
+ "units.err.cycle": "Formelsløyfe ved {name}. Verdien beholdes.",
+ "units.err.bad_expr": "Kan ikke lese uttrykket på posisjon {pos}. Verdien beholdes.",
+ "units.err.div_zero": "Deling med null på posisjon {pos}. Verdien beholdes.",
+ "units.err.invalid": "Ugyldig tall.",
+ "units.err.kept": "Ikke endret: {reason}"
+}

@@ -1,0 +1,5 @@
+{
+ "legend.legend.empty_hint": "Voer hierboven een naam in en druk op Maken.",
+ "legend.legend.pick_hint": "Kies hierboven een legenda uit de lijst.",
+ "legend.legend.taken": "Er bestaat al een legenda met de naam “{name}”. Voer een andere naam in."
+}

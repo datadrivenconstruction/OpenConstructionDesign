@@ -1,0 +1,7 @@
+{
+ "xl.msg.param_ambiguous": "kolom '{}' kan een van de parameters {} zijn; typ de exacte parameternaam, niet toegepast",
+ "xl.msg.param_tag_stale": "kolom '{}' verwijst naar een parameter die dit project niet heeft; niet toegepast",
+ "xl.msg.dup_col_note": "kolom '{}' in {} herhaalt kolom '{}' in {}; gelijke waarden worden één keer toegepast, een rij waar ze verschillen houdt de modelwaarde",
+ "xl.msg.dup_col_differs": "kolommen '{}' en '{}' verschillen in {} en {}; de modelwaarde blijft — houd één kolom over",
+ "xl.msg.dup_col_id": "kolommen '{}' en '{}' verschillen in {} en {}, de rij kan niet worden geïdentificeerd; niets toegepast — houd één kolom over"
+}

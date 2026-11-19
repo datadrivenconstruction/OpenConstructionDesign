@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D",
+ "phases.current_mark": "الحالية",
+ "phases.make_current": "جعلها الحالية",
+ "phases.col_phase": "المرحلة",
+ "phases.col_filter": "التصفية",
+ "phases.presets": "إعدادات المخطط المسبقة",
+ "phases.del_title": "حذف المرحلة",
+ "phases.del_text": "حذف المرحلة «{name}»؟ ستنتقل عناصرها إلى المرحلة المختارة أدناه.",
+ "phases.del_into": "نقل العناصر إلى",
+ "phases.del_ok": "حذف",
+ "phases.col_kind": "نوع العنصر",
+ "phases.col_count": "العدد",
+ "phases.col_volume": "الحجم"
+}

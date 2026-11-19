@@ -1,0 +1,14 @@
+{
+ "ai_keys.header_is_key": "密钥请填入“密钥”字段——标头以明文保存",
+ "ai_keys.move": "移至密钥",
+ "ai_keys.remove_line": "从标头中删除",
+ "ai_keys.save_blocked": "请先将密钥移出标头后再保存",
+ "ai_keys.show": "显示",
+ "ai_keys.hide": "隐藏",
+ "ai_keys.copy": "复制",
+ "ai_keys.tokens": "token",
+ "ai_keys.presets": "预设",
+ "ai_keys.preset_k": "{n}k",
+ "ai_keys.preset_m": "{n}M",
+ "ai_keys.images_on": "支持"
+}

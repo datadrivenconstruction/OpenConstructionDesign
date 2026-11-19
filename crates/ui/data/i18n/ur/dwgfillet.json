@@ -1,0 +1,20 @@
+{
+ "dwgfillet.fillet": "فِلیٹ",
+ "dwgfillet.cancel": "فِلیٹ روکیں",
+ "dwgfillet.tip": "رکھنے والی طرف دو لائنوں پر کلک کریں: دونوں کونے تک کاٹی یا بڑھائی جائیں گی، ریڈیس صفر سے زیادہ ہو تو ٹینجنٹ آرک بنے گا",
+ "dwgfillet.radius": "فِلیٹ ریڈیس",
+ "dwgfillet.radius_tip": "ڈرائنگ یونٹس میں آرک کا ریڈیس؛ 0 تیز کونا بناتا ہے",
+ "dwgfillet.st.arm_first": "رکھنے والی طرف پہلی لائن پر کلک کریں",
+ "dwgfillet.st.arm_second": "رکھنے والی طرف دوسری لائن پر کلک کریں",
+ "dwgfillet.st.not_armed": "پہلے فِلیٹ منتخب کریں",
+ "dwgfillet.st.click_line": "ڈرائنگ کی ایک لائن پر کلک کریں",
+ "dwgfillet.st.other_drawing": "دونوں لائنیں ایک ہی ڈرائنگ کی ہونی چاہئیں: دوبارہ شروع کریں",
+ "dwgfillet.st.changed": "پہلی لائن بدل گئی: دوبارہ شروع کریں",
+ "dwgfillet.st.same_line": "دوسری لائن مختلف منتخب کریں",
+ "dwgfillet.st.parallel": "لائنیں متوازی ہیں اور کبھی نہیں ملتیں: کونا نہیں بن سکتا",
+ "dwgfillet.st.degenerate": "ایک لائن کی لمبائی نہیں",
+ "dwgfillet.st.no_side": "کلک کی گئی طرف کونے سے کوئی لمبائی نہیں رکھتی",
+ "dwgfillet.st.too_big": "ان لائنوں کے لیے ریڈیس بہت بڑا ہے: چھوٹا ریڈیس استعمال کریں",
+ "dwgfillet.st.radius_bad": "ریڈیس صفر یا مثبت ہونا چاہیے",
+ "dwgfillet.st.done": "کونا بن گیا"
+}

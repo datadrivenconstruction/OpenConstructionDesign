@@ -1,0 +1,14 @@
+{
+ "xlsx_relink.title": "La cartella collegata è stata spostata o rinominata",
+ "xlsx_relink.body": "La cartella “{file}” non è più in {folder}. Le modifiche digitate al suo interno tornano solo dopo che è stata ricollegata.",
+ "xlsx_relink.found_one": "Trovata “{file}” in {folder}: stesso progetto e stessa esportazione. Collegarla?",
+ "xlsx_relink.found_many": "Sono state trovate {n} cartelle di questo progetto e di questa esportazione. Scegli quella da collegare:",
+ "xlsx_relink.found_none": "Nessuna cartella di questa esportazione è stata trovata accanto. Trovala, oppure esporta una nuova cartella.",
+ "xlsx_relink.link": "Collega “{file}”",
+ "xlsx_relink.find": "Trovala…",
+ "xlsx_relink.find_title": "Trova la cartella collegata",
+ "xlsx_relink.export_new": "Esporta nuova cartella",
+ "xlsx_relink.close": "Chiudi",
+ "xlsx_relink.gone": "La cartella “{file}” non è più nella sua cartella. Le modifiche digitate al suo interno tornano solo dopo che è stata ricollegata.",
+ "xlsx_relink.found_one_short": "Trovata “{file}”: stesso progetto e stessa esportazione. Collegarla?"
+}

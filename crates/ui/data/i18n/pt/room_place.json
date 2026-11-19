@@ -1,0 +1,8 @@
+{
+ "cmd.arch.room_auto": "Criar ambientes automaticamente",
+ "cmd.arch.room_auto.desc": "Cria um ambiente em cada contorno fechado do nível ativo que não tenha um. Laços abertos são ignorados, nunca fechados por suposição. Uma etapa de desfazer.",
+ "room_place.placed": "Ambientes criados: {n}. Regiões que já tinham um ambiente: {m}. Laços abertos ignorados: {k}",
+ "room_place.all_had": "Nada criado: todas as {m} regiões fechadas já têm um ambiente. Laços abertos ignorados: {k}",
+ "room_place.none": "Nada criado: o nível não tem regiões de parede fechadas",
+ "room_place.none_open": "Nada criado: o nível não tem regiões de parede fechadas. Laços abertos ignorados: {k}"
+}

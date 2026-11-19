@@ -1,0 +1,21 @@
+{
+ "cmd.help.check_update": "בדוק עדכונים",
+ "update_check.title": "בדיקת עדכון",
+ "update_check.desc": "כבוי כברירת מחדל. שולח לשרת שלנו רק את הגרסה, מערכת ההפעלה והארכיטקטורה, וסוג ההתקנה. לעולם לא מוריד או מתקין דבר.",
+ "update_check.freq.startup": "בהפעלה",
+ "update_check.freq.daily": "יומי",
+ "update_check.freq.weekly": "שבועי",
+ "update_check.freq.never": "לעולם לא",
+ "update_check.check_now": "בדוק עכשיו",
+ "update_check.dialog.title": "בדיקת עדכון",
+ "update_check.unknown.title": "לא ניתן לבדוק עדכונים",
+ "update_check.unknown.body": "{e}. זה לא אומר שהגרסה עדכנית. נסה שוב מאוחר יותר.",
+ "update_check.current": "יש לך את הגרסה העדכנית ביותר ({v}).",
+ "update_check.newer": "גרסה {v} זמינה",
+ "update_check.date": "פורסם {d}",
+ "update_check.unfit": "גרסה זו ({v}) ישנה יותר מהגרסה המינימלית המומלצת {f}. מומלץ לעדכן.",
+ "update_check.close": "סגור",
+ "update_check.open_failed": "לא ניתן היה לפתוח את דף הגרסה.",
+ "update_check.toast.newer": "גרסה {v} זמינה. עזרה > בדוק עדכונים.",
+ "update_check.toast.unfit": "גרסה זו ({v}) ישנה יותר מהגרסה המינימלית המומלצת {f}."
+}

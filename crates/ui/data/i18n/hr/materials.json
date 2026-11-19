@@ -1,0 +1,11 @@
+{
+ "materials.mat.name_empty": "Unesite naziv materijala",
+ "materials.mat.empty_title": "Još nema materijala",
+ "materials.mat.empty_hint": "Upišite naziv ispod i pritisnite Dodaj",
+ "materials.mat.nothing_hint": "Nijedan materijal ne odgovara pretrazi",
+ "materials.mat.clear_search": "Obriši pretragu",
+ "materials.mat.replace_with": "Zamijeni s",
+ "materials.mat.delete_refused": "Ne može se izbrisati: materijal se koristi na {n} mjesta. Prvo ga zamijenite.",
+ "materials.mat.delete_confirm": "Izbrisati materijal „{name}“? To možete poništiti.",
+ "materials.mat.replace_confirm": "Zamijeniti „{from}“ s „{to}“ u {n} elemenata? „{from}“ se uklanja. To možete poništiti."
+}

@@ -1,0 +1,5 @@
+{
+ "lv.level.deleted_attach": "Level deleted; {n} walls lost their top attachment",
+ "lv.level.rooms": "{n} rooms take the target level height ({dz} m): {names}. Press Move again to confirm",
+ "lv.level.pinned": "Level not deleted: pinned elements cannot move to another level: {names}. Unpin them first"
+}

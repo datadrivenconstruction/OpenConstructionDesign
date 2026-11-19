@@ -1,0 +1,13 @@
+{
+ "level.err_open": "Tase ei avatud: {e}",
+ "level.need_name": "Tasemel peab olema nimi ja kõrgus",
+ "level.created": "Tase “{name}” loodud",
+ "level.err_create": "Taset ei loodud: {e}",
+ "level.err_edit": "Tase ei muutunud: {e}",
+ "level.edited": "Tase “{name}” muudetud",
+ "level.edited_stale": "Tase “{name}” muudetud, vaadet ei värskendatud: {e}",
+ "level.last": "Viimast korrust ei saa kustutada",
+ "level.deleted": "Tase kustutatud",
+ "level.not_empty": "Tase pole tühi: kustuta kõigepealt selle elemendid",
+ "level.err_delete": "Taset ei kustutatud: {e}"
+}

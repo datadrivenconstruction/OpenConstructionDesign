@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "Paneel",
+ "curtain_props.cw.panel_cell": "Feld {i}×{j} · Vorhangfassade #{id}",
+ "curtain_props.cw.kind": "Typ",
+ "curtain_props.cw.kind.glazed": "Glas",
+ "curtain_props.cw.kind.solid": "Voll",
+ "curtain_props.cw.kind.door": "Tür",
+ "curtain_props.cw.kind.window": "Fenster",
+ "curtain_props.cw.kind.empty": "Leer",
+ "curtain_props.cw.name": "Name",
+ "curtain_props.cw.swing_side": "Öffnet zur anderen Seite",
+ "curtain_props.cw.swing_hinge": "Scharnier am Feldende",
+ "curtain_props.cw.size": "Größe",
+ "curtain_props.cw.cell_area": "Feldfläche",
+ "curtain_props.cw.panel_area": "Paneelfläche",
+ "curtain_props.cw.prev": "Vorheriges Paneel",
+ "curtain_props.cw.next": "Nächstes Paneel",
+ "curtain_props.cw.wall": "Wand wählen",
+ "curtain_props.cw.panel_hint": "Esc — Auswahl · Strg+Z — rückgängig",
+ "curtain_props.cw.status.panel": "Paneel {i}×{j} → {kind}",
+ "e3d.err.cw_height": "Die Höhe der Vorhangfassade muss über 100 mm liegen"
+}

@@ -1,0 +1,13 @@
+{
+ "mep.sys.duct": "送风 S1",
+ "mep.sys.pipe": "冷水 C1",
+ "mep.sys.tray": "电力",
+ "mep.round": "圆形",
+ "mep.material": "材质",
+ "mep3d.elevation": "距标高高度",
+ "mep3d.slope": "坡度",
+ "mep3d.shape": "形状",
+ "mep3d.shape.rect": "矩形",
+ "mep3d.shape.round": "圆形",
+ "mep3d.shape.oval": "扁椭圆形"
+}

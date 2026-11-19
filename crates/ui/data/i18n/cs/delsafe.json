@@ -1,0 +1,6 @@
+{
+ "delsafe.ring.opening_shape": "Obrys otvoru by se protínal nebo zkolaboval",
+ "delsafe.ring.opening_boundary": "Otvor by křížil nebo se dotýkal vnější hranice",
+ "delsafe.ring.openings_overlap": "Otvory by se překrývaly nebo se navzájem dotýkaly",
+ "xl.msg.delsafe_instance_param_on_types": "parametr '{}' je parametr instance; upravte ho v listu prvků, nebylo použito"
+}

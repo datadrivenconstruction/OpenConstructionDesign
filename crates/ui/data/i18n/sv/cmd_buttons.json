@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}, på våningen",
+ "cmd_buttons.purge.undo": "Borttagningen är ett ångrasteg.",
+ "cmd_buttons.unpin.none": "Inget markerat är fastlåst",
+ "cmd_buttons.change_type.none": "Markera väggar först: deras typ ändras i ett steg",
+ "cmd_buttons.units.metric": "Enheter: metriska",
+ "cmd_buttons.units.imperial": "Enheter: fot och tum",
+ "cmd_buttons.units.back": "Byt tillbaka",
+ "cmd_buttons.underlay.on": "Underlag på: våningen under visas nedtonad",
+ "cmd_buttons.underlay.off": "Underlag av",
+ "cmd_buttons.underlay.none": "Underlag på, men våningen under har inget att visa",
+ "cmd_buttons.zoom_sel.no_shape": "Markeringen har ingen form att zooma in på i den här vyn",
+ "cmd_buttons.close.base": "Plan- och 3D-flikarna förblir öppna; öppna en sektion, ett blad eller en ritningsvy för att stänga dem",
+ "tool.equipment": "Utrustning",
+ "hint.equipment.place": "Utrustning: välj platsen · Esc för att avsluta",
+ "cmd_buttons.table.opened": "Tabellen öppnades bredvid modellen",
+ "cmd_buttons.circuits.tip": "Öppna listan över elkretsar i den här modellen"
+}

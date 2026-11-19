@@ -1,0 +1,7 @@
+{
+ "src.field.kids": "Linhas filhas (painéis, vértices)",
+ "src.kids.mine": "{n} linhas filhas, alteradas aqui",
+ "src.kids.changed": "linhas filhas alteradas aqui",
+ "src.kids.theirs": "linhas filhas alteradas no arquivo",
+ "src.kids.take_tip": "A próxima importação traz as linhas filhas do arquivo; elas não são aplicadas agora."
+}

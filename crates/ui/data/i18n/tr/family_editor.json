@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "Yeni aile",
+ "family_editor.open_tip": "Aile veya taslak aç",
+ "family_editor.close_named": "{name} kapat",
+ "family_editor.unsaved": "Kaydedilmemiş değişiklikler",
+ "family_editor.search": "Ara",
+ "family_editor.nothing": "Bulunamadı",
+ "family_editor.sec_families": "Proje aileleri",
+ "family_editor.sec_drafts": "Taslaklar",
+ "family_editor.cap_category": "Kategori",
+ "family_editor.cap_host": "Ana eleman",
+ "family_editor.cap_type": "Önizleme tipi"
+}

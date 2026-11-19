@@ -1,0 +1,11 @@
+{
+ "cmd.ctx.ceiling.clean_outline": "Konturni tozalash",
+ "cmd.ctx.ceiling.clean_outline.desc": "Shift konturi o'zi ustiga qaytadigan tor uchlarni olib tashlaydi. Avval oldindan ko'rinish ko'rsatiladi; bitta bekor qilish qadami.",
+ "cmd.ctx.shaft.clean_outline": "Konturni tozalash",
+ "cmd.ctx.shaft.clean_outline.desc": "Shaxta konturi o'zi ustiga qaytadigan tor uchlarni olib tashlaydi. Avval oldindan ko'rinish ko'rsatiladi; bitta bekor qilish qadami.",
+ "outline_cleanup.intro_ceiling": "Bu shiftning konturi tor uchlarda o'zi ustiga qaytadi: {n}. Tozalash ularni olib tashlaydi; qolgan hammasi o'zgarishsiz qoladi.",
+ "outline_cleanup.intro_shaft": "Bu shaxtaning konturi tor uchlarda o'zi ustiga qaytadi: {n}. Tozalash ularni olib tashlaydi; qolgan hammasi o'zgarishsiz qoladi.",
+ "outline_cleanup.none_ceiling": "Bu shiftning konturida uchlar yo'q",
+ "outline_cleanup.none_shaft": "Bu shaxtaning konturida uchlar yo'q",
+ "outline_cleanup.need_host": "Qavat, shift yoki shaxtani tanlang"
+}

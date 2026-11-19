@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "Hele wandlus kiezen",
+ "cmd.sketch.link_unlink": "Rand van wand ontkoppelen",
+ "cmd.sketch.link_repick": "Randwand opnieuw kiezen",
+ "cmd.ctx.floor.link_unlink": "Randen van wanden ontkoppelen",
+ "cmd.ctx.floor.link_accept": "Randen van verwijderde wanden accepteren",
+ "boundary_link.hint.loop": "Klik op een wand: de gesloten reeks wanden wordt gekoppelde randen",
+ "boundary_link.hint.repick": "Klik op een wand evenwijdig aan de rand: de rand volgt die",
+ "boundary_link.need_sketch": "Open eerst de begrenzingsschets",
+ "boundary_link.need_edge": "Wijs een rand van de schets aan",
+ "boundary_link.need_straight": "Alleen een rechte rand kan een wand volgen",
+ "boundary_link.need_floor": "Selecteer een vloer",
+ "boundary_link.no_wall": "Geen wand onder de cursor",
+ "boundary_link.not_parallel": "De wand is niet evenwijdig aan de rand",
+ "boundary_link.not_linked": "Deze rand is niet aan een wand gekoppeld",
+ "boundary_link.unlinked": "Rand ontkoppeld: hij blijft staan en volgt de wand niet meer",
+ "boundary_link.accepted": "Randen geaccepteerd: ze blijven staan als gewone randen",
+ "boundary_link.failed": "Kon niet worden toegepast",
+ "boundary_link.lost": "bronwand verwijderd",
+ "boundary_link.blocked": "kan de wand niet volgen"
+}

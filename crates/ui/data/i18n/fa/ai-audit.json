@@ -1,0 +1,22 @@
+{
+ "ai.audit.tokens": "{n} توکن",
+ "ai.audit.filter.all": "همه",
+ "ai.audit.filter.ai": "AI",
+ "ai.audit.filter.me": "من",
+ "ai.audit.search": "جست‌وجوی تغییرات",
+ "ai.audit.search.clear": "پاک کردن جست‌وجو",
+ "ai.audit.show_all": "نمایش همه",
+ "ai.audit.empty.hint": "تغییراتی که مدل یا عامل پیش‌نویس یا اعمال کرده این‌جا می‌آید، هر کدام با راه بازگشت.",
+ "ai.audit.no_match": "هیچ تغییری با فیلتر مطابقت ندارد.",
+ "ai.audit.show.tip": "عنصرهایی را که این تغییر لمس کرده انتخاب و نشان بده",
+ "ai.audit.revert.ask": "«{what}» برگردانده شود؟ {change}.",
+ "ai.audit.revert.elements": {
+  "one": "تغییر # عنصر",
+  "other": "تغییر # عنصر"
+ },
+ "ai.audit.revert.keeps": "تغییرات تازه‌تر می‌مانند. برگرداندن یک گام واگرد است.",
+ "ai.audit.cancel": "انصراف",
+ "ai.audit.toast.reverted": "برگردانده شد: {what}",
+ "ai.audit.toast.undone": "واگرد شد: {what}",
+ "ai.audit.redo": "بازانجام"
+}

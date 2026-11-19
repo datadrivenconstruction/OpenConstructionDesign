@@ -1,0 +1,11 @@
+{
+ "materials.mat.name_empty": "Masukkan nama material",
+ "materials.mat.empty_title": "Belum ada material",
+ "materials.mat.empty_hint": "Ketik nama di bawah lalu tekan Tambah",
+ "materials.mat.nothing_hint": "Tidak ada material yang cocok dengan pencarian",
+ "materials.mat.clear_search": "Hapus pencarian",
+ "materials.mat.replace_with": "Ganti dengan",
+ "materials.mat.delete_refused": "Tidak dapat dihapus: material dipakai di {n} tempat. Ganti dulu.",
+ "materials.mat.delete_confirm": "Hapus material “{name}”? Anda dapat mengurungkannya.",
+ "materials.mat.replace_confirm": "Ganti “{from}” dengan “{to}” pada {n} elemen? “{from}” akan dihapus. Anda dapat mengurungkannya."
+}

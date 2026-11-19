@@ -1,0 +1,21 @@
+{
+ "mep.row.system": "Sistema",
+ "mep.row.elevation": "Cota inicial",
+ "mep.row.slope": "Declive",
+ "mep.row.material": "Material",
+ "mep.row.dev_elevation": "Cota",
+ "mep.row.no_system": "Esse sistema já não existe. Escolha outro.",
+ "mep.row.no_points": "A tubulação não tem pontos, por isso não tem cota.",
+ "mep.row.system_domain": "O sistema {system} não aceita este tipo de tubulação ({kind}). Escolha um sistema do mesmo tipo de rede.",
+ "mep.row.material_pipes": "O material aplica-se apenas a tubagens; esta tubulação é do tipo {kind}.",
+ "mep.row.no_catalog": "O material não tem diâmetros de catálogo para esta tubulação.",
+ "mep.mat.none": "Não definido",
+ "mep.mat.steel": "Aço",
+ "mep.mat.copper": "Cobre",
+ "mep.mat.pvc": "PVC",
+ "mep.mat.pp": "Polipropileno",
+ "mep.err.follow_blocked": "Uma tubulação ligada não pode acompanhar esta alteração: não há espaço para o seu trecho na nova posição. Mova o dispositivo menos ou desligue a tubulação primeiro.",
+ "mep.err.follow_slope": "Uma tubulação ligada tem uma queda que não pode ser mantida na nova posição: ficaria abaixo da queda mínima do seu sistema. Mova o dispositivo menos em altura ou desligue a tubulação primeiro.",
+ "mep.err.follow_port_lost": "Um conector em que esta tubulação estava apoiada deixou de existir após a edição. Afaste primeiro a tubulação ou mantenha o tipo de dispositivo.",
+ "mep.err.follow_device": "Esta tubulação termina num conector de dispositivo e não pode sair dele. Mova o dispositivo em vez disso ou desligue a tubulação primeiro."
+}

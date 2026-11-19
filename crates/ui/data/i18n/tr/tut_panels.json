@@ -1,0 +1,9 @@
+{
+ "empty.props_model.title": "Hiçbir şey seçili değil",
+ "empty.props_model.hint": "Özelliklerini görmek için görünümde bir öğeye tıklayın. Ya da tüm parametreleri bir çalışma kitabına aktarın, orada düzenleyin ve modele geri uygulayın.",
+ "empty.props_model.action": "XLSX'e aktar",
+ "tut.spreadsheet.title": "XLSX tablosu ile gidiş-dönüş",
+ "tut.spreadsheet.1": "Aşağıdaki XLSX'e aktar düğmesine basın: neyin dahil edileceğini seçin ve çalışma kitabını kaydedin.",
+ "tut.spreadsheet.2": "Çalışma kitabını XLSX'de açın, bir hücreyi değiştirip kaydedin. Buradaki önizleme değişikliği gösterir.",
+ "tut.spreadsheet.3": "Önizlemeyi kontrol edin ve Modele uygula'ya basın. Geri almak için Ctrl+Z."
+}

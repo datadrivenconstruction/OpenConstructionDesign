@@ -1,0 +1,29 @@
+{
+ "recover.ago_now": "अभी-अभी",
+ "recover.ago_min": {
+  "one": "# मिनट पहले",
+  "other": "# मिनट पहले"
+ },
+ "recover.ago_hour": {
+  "one": "# घंटा पहले",
+  "other": "# घंटे पहले"
+ },
+ "recover.ago_yesterday": "कल",
+ "recover.ago_day": {
+  "one": "# दिन पहले",
+  "other": "# दिन पहले"
+ },
+ "recover.empty": "कोई स्नैपशॉट नहीं बचा",
+ "recover.empty_hint": "इस प्रोजेक्ट के लिए बहाल करने को कुछ नहीं।",
+ "recover.all_damaged": "हर स्नैपशॉट खराब है, कोई बहाल नहीं हो सकता।",
+ "recover.keys_hint": "ऊपर और नीचे तीर से स्नैपशॉट चुनें, Enter से बहाल पर जाएँ",
+ "recover.row_tip": "सहेजा गया {time}",
+ "recover.row_damaged_tip": "बहाल नहीं हो सकता: {reason}",
+ "recover.archive_ask": "यह स्नैपशॉट आर्काइव में ले जाएँ?",
+ "recover.discard_ask": {
+  "one": "स्नैपशॉट आर्काइव में ले जाएँ? यह दोबारा नहीं दिखाया जाएगा।",
+  "other": "सभी # स्नैपशॉट आर्काइव में ले जाएँ? वे दोबारा नहीं दिखाए जाएँगे।"
+ },
+ "recover.confirm_yes": "आर्काइव में ले जाएँ",
+ "recover.confirm_no": "स्नैपशॉट रखें"
+}

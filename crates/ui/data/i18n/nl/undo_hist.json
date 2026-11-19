@@ -1,0 +1,8 @@
+{
+ "undo.undone": "Ongedaan gemaakt: {what}",
+ "undo.redone": "Opnieuw uitgevoerd: {what}",
+ "undo.action.edit.redo": "Opnieuw",
+ "undo.action.edit.undo": "Ongedaan maken",
+ "hdr.unsaved": "Niet-opgeslagen wijzigingen",
+ "hdr.file_menu": "Bestandsmenu"
+}

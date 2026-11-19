@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "Фитинг",
+ "elem.mep_fitting.many": "Фитингтер",
+ "elem.mep_fitting.kind.elbow": "Тірсек",
+ "elem.mep_fitting.kind.tee": "Тройник",
+ "elem.mep_fitting.kind.cross": "Крест",
+ "elem.mep_fitting.kind.transition": "Ауысу",
+ "elem.mep_fitting.kind.cap": "Қақпақ",
+ "elem.mep_fitting.size": "Өлшемі",
+ "elem.mep_fitting.at": "Орны",
+ "elem.mep_fitting.runs": "Трасса {n}",
+ "elem.mep_fitting.edit_run": "Трассаны өңдеу",
+ "elem.mep_fitting.select_runs": "Оның трассаларын таңдаңыз",
+ "elem.mep_fitting.derived": "Фитинг өз трассаларына ілеседі: трассаны өзгертсеңіз, фитинг de соған сай өзгереді.",
+ "elem.mep_fitting.no_delete": "Фитингті өз бетінше жоюға немесе жылжытуға болмайды. Оның трассаларын өңдеңіз немесе жойыңыз.",
+ "elem.mep_fitting.hint": "Оның трассаларын көру үшін жоспардағы фитингті басыңыз.",
+ "elem.mep_fitting.picked": "Таңдалған фитингтер: {n}"
+}

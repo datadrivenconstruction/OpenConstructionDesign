@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "Popis prečaca",
+ "cmd.help.shortcuts.desc": "Prikazuje svaki prečac onako kako ga sada imate, po kontekstu. Pritisnite ? bilo gdje izvan tekstnog polja.",
+ "sheet.title": "Prečaci tipkovnice",
+ "sheet.filter": "Filtriraj po naredbi ili tipki",
+ "sheet.filter_label": "Filtriraj prečace",
+ "sheet.customize": "Prilagodi…",
+ "sheet.close": "Zatvori",
+ "sheet.esc_close": "za zatvaranje",
+ "sheet.none": "Nema podudaranja prečaca",
+ "sheet.none_hint": "Pokušajte drugu riječ ili tipku.",
+ "sheet.sec.general": "Opće",
+ "sheet.sec.plan": "Tlocrt",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "Tablice",
+ "sheet.sec.sheets": "Listovi",
+ "sheet.sec.ai": "AI"
+}

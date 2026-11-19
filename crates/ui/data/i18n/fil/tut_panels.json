@@ -1,0 +1,9 @@
+{
+ "empty.props_model.title": "Walang napili",
+ "empty.props_model.hint": "I-click ang elemento sa view para makita ang mga property nito. O i-export ang lahat ng parameter sa workbook, i-edit doon at ibalik sa model.",
+ "empty.props_model.action": "I-export sa XLSX",
+ "tut.spreadsheet.title": "Ikot sa XLSX",
+ "tut.spreadsheet.1": "Pindutin ang I-export sa spreadsheet na XLSX sa ibaba: piliin kung ano ang isasama at i-save ang workbook.",
+ "tut.spreadsheet.2": "Buksan ang workbook sa spreadsheet na XLSX, baguhin ang isang cell at i-save. Ipinapakita ng preview dito ang pagbabago.",
+ "tut.spreadsheet.3": "Suriin ang preview at pindutin ang Ilapat sa model. Ctrl+Z para i-undo."
+}

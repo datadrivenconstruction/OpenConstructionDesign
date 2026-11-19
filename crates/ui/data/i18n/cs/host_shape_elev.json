@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "Kóta {t} nebyla převzata ({why}). Nic nebylo změněno",
+ "host_shape.shape.elev_prompt_in": "kóta, ft-in…",
+ "host_shape.shape.elev_in": "{v} in"
+}

@@ -1,0 +1,6 @@
+{
+ "delsafe.ring.opening_shape": "An opening outline would cross itself or collapse",
+ "delsafe.ring.opening_boundary": "An opening would cross or touch the outer boundary",
+ "delsafe.ring.openings_overlap": "Openings would overlap or touch each other",
+ "xl.msg.delsafe_instance_param_on_types": "parameter '{}' is an instance parameter; edit it on the elements sheet, not applied"
+}

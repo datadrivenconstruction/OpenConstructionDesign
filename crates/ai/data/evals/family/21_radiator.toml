@@ -1,0 +1,8 @@
+brief = "Panel radiator with supply and return pipes."
+category = "equipment"
+must = param Flow
+must = param Length
+must = solids >= 3
+must = ports 2
+must = port pipe 2
+must = flex Length 800 1250

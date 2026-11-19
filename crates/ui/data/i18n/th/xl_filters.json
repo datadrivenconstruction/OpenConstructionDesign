@@ -1,0 +1,6 @@
+{
+ "xl.msg.filter_on_sheet_x": "ตัวกรองในแผ่นงาน '{}'",
+ "xl.msg.sort_settings_on_sheet_x": "การตั้งค่าการเรียงลำดับในแผ่นงาน '{}'",
+ "xl.msg.hidden_rows_on_sheet_x": "แถวที่ซ่อนในแผ่นงาน '{}'",
+ "xl.msg.hidden_columns_on_sheet_x": "คอลัมน์ที่ซ่อนในแผ่นงาน '{}'"
+}

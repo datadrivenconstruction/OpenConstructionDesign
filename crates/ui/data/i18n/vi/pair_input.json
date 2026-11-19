@@ -1,0 +1,6 @@
+{
+ "pair_input.pair_hint": "Hai giá trị được ngăn bởi dấu chấm phẩy: @1000;500",
+ "pair_input.old_pair": "Dấu phẩy giữa hai số nguyên không còn tạo thành cặp: nhập 6000;4000 cho hai giá trị, hoặc 6000,5 cho số thập phân",
+ "pair_input.op.bad_length": "Không phải chiều dài: {text} ({why}). Chưa thay đổi gì",
+ "pair_input.op.bad_count": "Số lượng {text} chưa được nhận: số nguyên từ {min} đến {max}"
+}

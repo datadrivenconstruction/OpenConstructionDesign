@@ -1,0 +1,6 @@
+{
+ "vv_conflict.styles.conflict": "Los estilos de objeto de una categoría editada cambiaron en el modelo (deshacer u otra ventana) mientras esta ventana tenía cambios. Sus cambios se conservan.",
+ "vv_conflict.styles.keep": "Mantener mis cambios",
+ "vv_conflict.styles.reload": "Recargar",
+ "vv_conflict.styles.answer_first": "Elija Mantener mis cambios o Recargar primero"
+}

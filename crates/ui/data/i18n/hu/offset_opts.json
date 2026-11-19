@@ -1,0 +1,7 @@
+{
+ "offset_opts.dist_positive": "Az eltolási távolságnak nagyobbnak kell lennie nullánál; az oldal a kurzort követi",
+ "offset_opts.count_bad": "Egész szám {min} és {max} között",
+ "offset_opts.done_tip": "Kijelölés befejezése és az eszköz indítása",
+ "offset_opts.iso.apply_tip": "Az ideiglenes elrejtés véglegessé tétele ebben a nézetben",
+ "offset_opts.iso.exit": "Kilépés az ideiglenes módból"
+}

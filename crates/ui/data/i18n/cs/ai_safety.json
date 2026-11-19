@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "Klíč v adrese",
+ "ai_safety.auth.query_name": "Parametr adresy",
+ "ai_safety.need_query_name": "Pojmenujte parametr adresy, který nese klíč",
+ "ai_safety.apply_unlogged": "Použito, ale protokol změn se nezapsal",
+ "ai_safety.audit_unlogged": "Protokol AI asistenta nelze zapsat",
+ "ai_safety.chat_not_saved": "Chat nelze uložit do projektu. Zkouším znovu.",
+ "ai_safety.clip_clears": "Schránka se vyprázdní za 30 s",
+ "ai_safety.copied_clears": "Zkopírováno. Schránka se vyprázdní za 30 s",
+ "ai_safety.key_session_only": "Klíč zůstane do zavření aplikace",
+ "ai.settings.no_data_dir": "tento systém neposkytuje složku pro nastavení aplikace"
+}

@@ -1,0 +1,27 @@
+{
+ "schema": "gen_feature_words.v1",
+ "note": "Brief words in several languages for the feature keywords the brief check judges: the key is the keyword, each list its words (case and spaces do not matter). A count in front (2 OP-Saal) is kept as keyword:count.",
+ "features": {
+  "hvac": {
+   "en": ["hvac", "ventilation", "air_conditioning", "mechanical_ventilation", "air_handling"],
+   "de": ["lüftung", "lueftung", "lüftungsanlage", "klimaanlage", "raumlufttechnik", "rlt", "zuluft", "abluft"],
+   "ru": ["вентиляция", "вентиляции", "кондиционирование", "овик", "приточно_вытяжная_вентиляция"],
+   "es": ["ventilación", "ventilacion", "climatización", "climatizacion", "aire_acondicionado"],
+   "zh": ["通风", "暖通", "空调", "通风系统", "暖通空调"]
+  },
+  "sprinklers": {
+   "en": ["sprinkler", "sprinklers", "sprinkler_system"],
+   "de": ["sprinkler", "sprinkleranlage", "löschanlage", "loeschanlage"],
+   "ru": ["спринклер", "спринклеры", "спринклерная_система", "спринклерное_пожаротушение"],
+   "es": ["rociadores", "rociador", "sistema_de_rociadores"],
+   "zh": ["喷淋", "喷淋系统", "自动喷水灭火系统"]
+  },
+  "operating_rooms": {
+   "en": ["operating_room", "operating_rooms", "operating_theatre", "operating_theatres", "operating_theater", "operating_theaters", "surgery_room"],
+   "de": ["op", "op_saal", "op_säle", "op_saele", "operationssaal", "operationssäle", "operationssaele"],
+   "ru": ["операционная", "операционные", "операционный_зал"],
+   "es": ["quirófano", "quirofano", "quirófanos", "quirofanos", "sala_de_operaciones"],
+   "zh": ["手术室", "手术间"]
+  }
+ }
+}

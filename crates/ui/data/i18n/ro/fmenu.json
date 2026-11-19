@@ -1,0 +1,7 @@
+{
+ "fmenu.export": "Salvează ca / Exportă",
+ "fmenu.export.ifc4x3": "IFC 4.3",
+ "fmenu.export.ifc2x3": "IFC 2x3",
+ "fmenu.export.glb": "glTF binar (.glb)",
+ "fmenu.export.pdf": "PDF sau SVG (planșe)"
+}

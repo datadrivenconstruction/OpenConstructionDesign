@@ -1,0 +1,14 @@
+{
+ "ai.stream.waiting": "ماڈل کا انتظار",
+ "ai.stream.reading": "ماڈل پڑھا جا رہا ہے",
+ "ai.stream.working": "کام جاری",
+ "ai.stream.answering": "جواب لکھا جا رہا ہے",
+ "ai.stream.tools_one": "1 ٹول",
+ "ai.stream.tools_many": "{n} ٹولز",
+ "ai.stream.secs": "{n} سیکنڈ",
+ "ai.stream.stalled": "ابھی تک ماڈل سروس کا انتظار",
+ "ai.stream.stop": "روکیں",
+ "ai.stream.cancelled": "رک گیا",
+ "ai.stream.incomplete": "مسودہ نامکمل ہے۔ ماڈل میں کچھ لاگو نہیں ہوا۔",
+ "ai.stream.sep": " · "
+}

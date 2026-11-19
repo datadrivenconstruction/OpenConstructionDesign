@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "Perguntar à IA: {q}",
+ "ai.palette.connect": "Conectar a IA para perguntar",
+ "ai.palette.draft.apply": "Aplicar rascunho ({n})",
+ "ai.palette.draft.reject": "Rejeitar rascunho",
+ "ai.palette.draft.next": "Próxima alteração do rascunho",
+ "ai.palette.draft.show": "Mostrar rascunho na vista",
+ "cmd.ai.next_change": "Próxima alteração do rascunho",
+ "cmd.ai.next_change.desc": "Move a vista para o próximo elemento que o rascunho altera.",
+ "cmd.ai.show_draft": "Mostrar rascunho da IA na vista",
+ "cmd.ai.show_draft.desc": "Ajusta a vista a tudo o que o rascunho altera."
+}

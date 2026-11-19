@@ -1,0 +1,10 @@
+{
+ "prop_head.of_type": {
+  "one": "# din acest tip",
+  "few": "# din acest tip",
+  "other": "# din acest tip"
+ },
+ "prop_head.override_tip": "Diferă de tip, faceți clic pentru a reseta",
+ "prop_head.reset_done": "„{name}” resetat la valoarea tipului",
+ "prop_head.copy_id": "Faceți clic pentru a copia numărul"
+}

@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "Πίνακας συντομεύσεων",
+ "cmd.help.shortcuts.desc": "Εμφανίζει κάθε συντόμευση όπως την έχετε τώρα, ανά περιβάλλον. Πατήστε ? εκτός πεδίου κειμένου.",
+ "sheet.title": "Πλήκτρα συντόμευσης",
+ "sheet.filter": "Φίλτρο ανά εντολή ή πλήκτρο",
+ "sheet.filter_label": "Φίλτρο συντομεύσεων",
+ "sheet.customize": "Προσαρμογή…",
+ "sheet.close": "Κλείσιμο",
+ "sheet.esc_close": "για κλείσιμο",
+ "sheet.none": "Καμία συντόμευση δεν ταιριάζει",
+ "sheet.none_hint": "Δοκιμάστε άλλη λέξη ή πλήκτρο.",
+ "sheet.sec.general": "Γενικά",
+ "sheet.sec.plan": "Κάτοψη",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "Πίνακες",
+ "sheet.sec.sheets": "Φύλλα",
+ "sheet.sec.ai": "AI"
+}

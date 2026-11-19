@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "Alle",
+ "clash_list.only_selected": "Kun valgte",
+ "clash_list.tolerance": "Tolerance",
+ "clash_list.gap": "Mellemrum",
+ "clash_list.export": "Eksportér",
+ "clash_list.col.volume": "Volumen",
+ "clash_list.fix.up": "Flyt op",
+ "clash_list.fix.down": "Flyt ned",
+ "clash_list.fix.sleeve": "Muffe",
+ "clash_list.apply_fix": "Anvend rettelse",
+ "clash_list.err.tol": "Tolerance: angiv en længde (0 eller mere), fx 50 eller 2 in",
+ "clash_list.sleeve_no_host": "Muffe kræver en væg eller plade i parret",
+ "clash_list.err.gap": "Mellemrum: angiv en længde (0 eller mere), fx 50 eller 2 in"
+}

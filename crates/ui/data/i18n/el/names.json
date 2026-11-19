@@ -1,0 +1,19 @@
+{
+ "names.level": "Επίπεδο {n}",
+ "names.slab": "Πλάκα 200",
+ "names.roof_slab": "Στέγη 200",
+ "names.sheet.plan_section": "Κάτοψη και τομή 1ου ορόφου",
+ "names.sheet.plan_view": "Κάτοψη 1ου ορόφου",
+ "names.sheet.site_plan": "Κάτοψη οικοπέδου",
+ "names.sheet_set.issue": "Έκδοση 1",
+ "names.title.owner": "Project Ε.Π.Ε.",
+ "names.title.creator": "Α. Ιβάνοφ",
+ "names.title.approver": "Π. Πέτροφ",
+ "names.title.document_type": "Σχέδιο",
+ "names.title.status": "Σε εξέλιξη",
+ "names.revision.date": "4 Νοε 2026",
+ "names.revision.description": "Εκδόθηκε για έλεγχο",
+ "names.revision.author": "AI",
+ "names.demo.no_levels": "χωρίς επίπεδα",
+ "names.demo.no_sheet": "φύλλο"
+}

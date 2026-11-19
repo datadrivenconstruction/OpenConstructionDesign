@@ -1,0 +1,18 @@
+{
+ "props.multi.title": {
+  "one": "# element",
+  "other": "# element"
+ },
+ "props.multi.cats": {
+  "one": "# kategoriya",
+  "other": "# kategoriya"
+ },
+ "props.multi.varies": {
+  "one": "turlicha (#)",
+  "other": "turlicha (#)"
+ },
+ "props.multi.clear": "Tanlovni tozalash",
+ "props.multi.undo": "Bekor qilish",
+ "props.multi.narrowed": "Tanlov: {n} · {name}",
+ "props.multi.chip_tip": "{name}: {n}  ·  Bosish ularning xususiyatlarini ko'rsatadi, Ctrl+bosish faqat shularni qoldiradi"
+}

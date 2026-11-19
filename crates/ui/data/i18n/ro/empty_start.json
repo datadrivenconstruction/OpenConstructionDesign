@@ -1,0 +1,8 @@
+{
+ "empty.start_recent.title": "Niciun proiect recent încă",
+ "empty.start_recent.hint": "Proiectele deschise apar aici. Începe cu modelul de exemplu.",
+ "empty.start_recent.action": "Deschide exemplul",
+ "start.recent_open_file": "Deschide fișier…",
+ "start.forgot": "Scos din recente: {name}",
+ "start.forgot_undo": "Anulează"
+}

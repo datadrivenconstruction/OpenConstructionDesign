@@ -1,0 +1,14 @@
+{
+ "ai.issue.integrity": "Problema de integridad: {0} {1}: {2}",
+ "ai.issue.opening_outside": "La abertura no cabe en el muro: {0}",
+ "ai.issue.opening_overlap": "La abertura se superpone con la abertura {0}",
+ "ai.issue.wall_warning": "Muro: {0}",
+ "ai.issue.cut_warning": "Corte: {0}",
+ "ai.issue.room_open": "La habitación no está cerrada",
+ "ai.issue.material_unknown": "No hay ningún material llamado «{0}» en el proyecto: Aplicar añadiría uno nuevo con propiedades predeterminadas",
+ "ai.issue.material_suggest": "No hay ningún material llamado «{0}» en el proyecto: Aplicar añadiría uno nuevo. ¿Quiso decir «{1}»?",
+ "ai.issue.conflict": "Este elemento no se puede ejecutar: {0}",
+ "ai.issue.too_large": "Cambiarían {0} elementos, por encima del límite de {1}. Se necesita permiso",
+ "ai.issue.truncated": "La lista de cambios se detuvo en {0} filas: el plan es más grande de lo que puede mostrar la tarjeta. Se necesita permiso",
+ "ai.issue.replan_failed": "No se pudo recalcular el plan. Se está tomando una copia nueva del modelo"
+}

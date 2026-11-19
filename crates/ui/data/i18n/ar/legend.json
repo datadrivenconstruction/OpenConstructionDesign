@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "المفتاح",
+ "legend.legend.new_hint": "اسم المفتاح الجديد",
+ "legend.legend.delete_tip": "حذف المفتاح",
+ "legend.legend.delete_placed": "حذف المفتاح (موضوع على: {sheets})",
+ "legend.legend.deleted": "تم حذف المفتاح: {name}",
+ "legend.legend.no_rows": "لا توجد صفوف بعد. أضف صفاً أو خذ أنماط العرض الحالي",
+ "legend.legend.replace_q": "استبدال {n} صفاً بأنماط هذا العرض؟",
+ "legend.legend.replace": "استبدال",
+ "legend.legend.keep": "الاحتفاظ بالصفوف",
+ "legend.col.swatch": "العينة",
+ "legend.col.value": "القيمة",
+ "legend.col.label": "التسمية"
+}

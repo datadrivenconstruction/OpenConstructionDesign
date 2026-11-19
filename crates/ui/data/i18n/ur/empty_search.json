@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "کچھ نہیں ملا",
+ "empty.browser_search.hint": "اس تلاش سے کوئی ویو، لیول، قسم یا کمرہ میل نہیں کھاتا۔",
+ "empty.browser_search.action": "تلاش صاف کریں",
+ "empty.xl_filtered.title": "کوئی اندراج فلٹرز سے میل نہیں کھاتا",
+ "empty.xl_filtered.hint": "مزید اقسام آن کریں، دوسری شیٹ چنیں یا تلاش کا متن بدلیں۔",
+ "empty.xl_filtered.action": "فلٹرز صاف کریں",
+ "empty.xl_nochanges.title": "ورک بک میں کوئی تبدیلی نہیں",
+ "empty.xl_nochanges.hint": "ورک بک ماڈل سے میل کھاتی ہے: درآمد سے کچھ نہیں بدلے گا۔",
+ "empty.version_same.title": "ماڈل ایک جیسے ہیں",
+ "empty.version_same.hint": "کھلے ماڈل اور منتخب ورژن میں کوئی فرق نہیں ملا۔",
+ "empty.templates.title": "ابھی کوئی ویو ٹیمپلیٹ نہیں",
+ "empty.templates.hint": "موجودہ ویو سے ایک بنائیں تاکہ اس کی ترتیبات دوسرے ویوز پر استعمال ہوں۔",
+ "empty.templates.action": "ٹیمپلیٹ کا نام رکھیں",
+ "empty.fe_params.title": "ابھی کوئی پیرامیٹر نہیں",
+ "empty.fe_params.hint": "سائز، مواد یا نظر آنے کو چلانے کے لیے نیچے پیرامیٹر شامل کریں۔",
+ "empty.fe_params.action": "پیرامیٹر شامل کریں"
+}

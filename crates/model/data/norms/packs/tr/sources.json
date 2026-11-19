@@ -1,0 +1,31 @@
+{
+ "sources": [
+  {
+   "id": "tr-planli",
+   "title": "Zoning regulation for planned areas (Planli Alanlar Imar Yonetmeligi)",
+   "publisher": "Ministry of Environment, Urbanisation and Climate Change",
+   "url": "https://www.alomaliye.com/wp-content/uploads/2017/07/planli-alanlar-01-07-2026.pdf",
+   "edition": "consolidated through the amendment of 2026-07-01 (RG 33297)",
+   "licence": "public-law",
+   "verified": "2026-11-14"
+  },
+  {
+   "id": "tr-fire",
+   "title": "Regulation on fire protection of buildings (Binalarin Yangindan Korunmasi Hakkinda Yonetmelik)",
+   "publisher": "Council of Ministers decision 2007/12937; text hosted by the Ministry of Family and Social Services",
+   "url": "https://www.aile.gov.tr/eyhgm/mevzuat/ulusal-mevzuat/yonetmelikler/binalarin-yangindan-korunmasi-hakkinda-yonetmelik/",
+   "edition": "consolidated, amendments to 2015-03-16",
+   "licence": "public-law",
+   "verified": "2026-11-14"
+  },
+  {
+   "id": "tr-ts9111",
+   "title": "TS 9111 accessibility in buildings",
+   "publisher": "Turkish Standards Institution",
+   "url": "https://www.tse.org.tr",
+   "edition": "n/a",
+   "licence": "copyright-numbers-only",
+   "verified": null
+  }
+ ]
+}

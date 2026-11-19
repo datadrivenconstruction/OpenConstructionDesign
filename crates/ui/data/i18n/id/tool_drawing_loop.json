@@ -1,0 +1,4 @@
+{
+ "tool.err.drawing_open": "Garis gambar di sekitar titik ini tidak menutup menjadi loop",
+ "tool.err.drawing_crossing": "Loop gambar di sekitar titik ini berpotongan dengan dirinya sendiri"
+}

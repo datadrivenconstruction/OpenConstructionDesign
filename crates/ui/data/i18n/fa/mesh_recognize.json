@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "در حال شناسایی {done} از {total}",
+ "mesh_recognize.all": "همه {n}",
+ "mesh_recognize.only_confident": "فقط مطمئن‌ها",
+ "mesh_recognize.confident_tip": "ردیف‌هایی را علامت می‌زند که نوعشان با دسته مطابقت دارد و اطمینانشان دست‌کم {pct}% است",
+ "mesh_recognize.row_hint": "برای علامت زدن روی ردیف کلیک کنید. کلیدهای فلش حرکت می‌کنند، Enter علامت می‌زند.",
+ "mesh_recognize.kind_for": "نوع برای {name}",
+ "mesh_recognize.source": "مش‌های منبع",
+ "mesh_recognize.keep": "نگه‌داشتن مش‌ها",
+ "mesh_recognize.replace": "جایگزینی مش‌ها",
+ "mesh_recognize.convert_keep": "تبدیل {n}",
+ "mesh_recognize.convert_remove": "تبدیل {n} و حذف مش‌ها",
+ "mesh_recognize.creates": "{n} ایجاد می‌شود: {kinds}",
+ "mesh_recognize.creates_none": "هنوز چیزی علامت نخورده",
+ "mesh_recognize.stay": "{n} مش منبع در مدل می‌مانند",
+ "mesh_recognize.removed": "{n} مش منبع حذف خواهد شد. واگرد آن‌ها را برمی‌گرداند."
+}

@@ -1,0 +1,15 @@
+{
+ "fe.add_why_empty": "Avval parametr nomini kiriting",
+ "fe.add_why_exists": "Bu nomli parametr allaqachon bor; uni o'zgartirish uchun Qo'llash dan foydalaning",
+ "fe.apply_why_missing": "Bunday nomli parametr yo'q; mavjud nomni kiriting",
+ "fe.nochange": "Hali o'zgarishlar yo'q",
+ "options.accept_more": "Qabul qilish…",
+ "options.delete_more": "O'chirish…",
+ "options.empty_title": "Hali variantlar to'plami yo'q",
+ "options.more": "Qo'shimcha amallar: {name}",
+ "options.primary_named": "Asosiy variant: {name}",
+ "options.primary_tip": "Buni to'plamning asosiy varianti qilish",
+ "options.select_first": "Avval modelda elementlarni tanlang",
+ "options.show_3d": "3D da ko'rsatish: {name}",
+ "options.show_plan": "Rejada ko'rsatish: {name}"
+}

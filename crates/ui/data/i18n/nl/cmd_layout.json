@@ -1,0 +1,4 @@
+{
+ "cmd.data.sync_xlsx": "Synchroniseren met spreadsheet…",
+ "cmd.data.sync_xlsx.desc": "Leest het gekoppelde werkboek opnieuw in en toont de verschillen met het model."
+}

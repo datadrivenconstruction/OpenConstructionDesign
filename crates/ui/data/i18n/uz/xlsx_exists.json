@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "Bu ish kitobi allaqachon mavjud",
+ "xlsx_exists.foreign": "Bu ushbu loyihaning ish kitobi emas, shuning uchun u hech qachon almashtirilmaydi.",
+ "xlsx_exists.pending": "Unda modelga hali qo'llanmagan {n} ta tahrir bor.",
+ "xlsx_exists.outside": "Unda yangi eksport olib kelmaydigan {n} ta qator bor.",
+ "xlsx_exists.new_name": "{name} ga eksport",
+ "xlsx_exists.apply_first": "Avval ularni qo'llang",
+ "xlsx_exists.replace": "Almashtirish (eski kitob _archive ga)",
+ "xlsx_exists.archived": "Eski ish kitobi {path} ga ko'chirildi",
+ "xlsx_exists.archive_failed": "Eski ish kitobini ko'chirib bo'lmadi, hech narsa eksport qilinmadi: {error}"
+}

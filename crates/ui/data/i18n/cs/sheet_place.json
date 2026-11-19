@@ -1,0 +1,15 @@
+{
+ "sheet_place.place_view_tip": "Umístit pohled nebo výkaz na list",
+ "sheet_place.properties_tip": "Číslo listu, název, formát papíru a revize",
+ "sheet_place.print_tip": "Vytisknout nebo exportovat list",
+ "sheet_place.fit_tip": "Přizpůsobit list oknu",
+ "sheet_place.activate_tip": "Upravit pohled přímo na listu: posun, zoom a oříznutí",
+ "sheet_place.open_view_tip": "Otevřít pohled na vlastní záložce",
+ "sheet_place.done_tip": "Dokončit úpravu pohledu na listu",
+ "sheet_place.reset_crop_tip": "Odstranit oříznutí a zobrazit celý pohled",
+ "sheet_place.scale_tip": "Měřítko vybraného pohledu na listu",
+ "sheet_place.title_tip": "Název zobrazený pod pohledem na listu",
+ "sheet_place.banner": "Úprava pohledu na listu",
+ "sheet_place.new_set_tip": "Vytvořit sadu listů pro tisk najednou",
+ "sheet_place.new_sheet_tip": "Přidat list do projektu"
+}

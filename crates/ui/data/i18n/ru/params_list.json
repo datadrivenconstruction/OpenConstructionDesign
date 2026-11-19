@@ -1,0 +1,14 @@
+{
+ "params_list.n_params": { "one": "# параметр", "few": "# параметра", "many": "# параметров", "other": "# параметра" },
+ "params_list.n_values": { "one": "# значение", "few": "# значения", "many": "# значений", "other": "# значения" },
+ "params_list.n_elements": { "one": "# элементе", "few": "# элементах", "many": "# элементах", "other": "# элементах" },
+ "params_list.exported": "Экспортировано: {params} в {file}",
+ "params_list.export_failed": "Параметры не экспортированы: {why}",
+ "params_list.open_folder": "Открыть папку",
+ "params_list.delete_tip": "Удалить параметр вместе со значениями",
+ "params_list.confirm": "Удалить {name} и его {values} на {elements}?",
+ "params_list.confirm_btn": "Удалить",
+ "params_list.cancel": "Отмена",
+ "params_list.deleted": "Параметр {name} удалён ({values})",
+ "params_list.undo": "Отменить"
+}

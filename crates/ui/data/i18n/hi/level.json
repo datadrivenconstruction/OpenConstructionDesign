@@ -1,0 +1,13 @@
+{
+ "level.err_open": "लेवल नहीं खुला: {e}",
+ "level.need_name": "लेवल को नाम और एलिवेशन चाहिए",
+ "level.created": "लेवल \"{name}\" बनाया गया",
+ "level.err_create": "लेवल नहीं बना: {e}",
+ "level.err_edit": "लेवल नहीं बदला: {e}",
+ "level.edited": "लेवल \"{name}\" बदला गया",
+ "level.edited_stale": "लेवल \"{name}\" बदला गया, व्यू ताज़ा नहीं हुआ: {e}",
+ "level.last": "आखिरी लेवल हटाया नहीं जा सकता",
+ "level.deleted": "लेवल हटाया गया",
+ "level.not_empty": "लेवल खाली नहीं है: पहले उसके एलिमेंट हटाएँ",
+ "level.err_delete": "लेवल नहीं हटा: {e}"
+}

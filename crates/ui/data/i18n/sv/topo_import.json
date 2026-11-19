@@ -1,0 +1,4 @@
+{
+ "topo_import.topo.ambiguous": "{n} rader hoppades över: ett tal kan läsas på två sätt (1,250 = 1.25 eller 1250?) och filen visar ingen decimalavskiljare",
+ "topo_import.topo.grouped": "{n} punkter lästes med siffergrupper (1 250,5 eller 1,234.5)"
+}

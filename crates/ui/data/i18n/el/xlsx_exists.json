@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "Αυτό το βιβλίο υπάρχει ήδη",
+ "xlsx_exists.foreign": "Δεν είναι βιβλίο αυτού του έργου, οπότε δεν αντικαθίσταται ποτέ.",
+ "xlsx_exists.pending": "Έχει {n} επεξεργασίες που δεν έχουν εφαρμοστεί ακόμα στο μοντέλο.",
+ "xlsx_exists.outside": "Έχει {n} γραμμές που η νέα εξαγωγή δεν περιέχει.",
+ "xlsx_exists.new_name": "Εξαγωγή σε {name}",
+ "xlsx_exists.apply_first": "Εφαρμόστε τις πρώτα",
+ "xlsx_exists.replace": "Αντικατάσταση (παλιό βιβλίο στο _archive)",
+ "xlsx_exists.archived": "Το παλιό βιβλίο μετακινήθηκε στο {path}",
+ "xlsx_exists.archive_failed": "Το παλιό βιβλίο δεν μπόρεσε να μετακινηθεί, δεν έγινε εξαγωγή: {error}"
+}

@@ -1,0 +1,14 @@
+family Shelf Cabinet
+category casework
+host floor
+param Width length type 800mm
+param Depth length type 400mm
+param Height length type 1800mm
+type "800x1800" Width=800mm
+extrude Body rect(-Width / 2, -Depth / 2, Width / 2, Depth / 2) z(0, Height)
+extrude ShelfA rect(-Width / 2 + 20mm, -Depth / 2 + 20mm, Width / 2 - 20mm, Depth / 2 - 20mm) z(Height / 3, Height / 3 + 20mm)
+extrude ShelfB rect(-Width / 2 + 20mm, -Depth / 2 + 20mm, Width / 2 - 20mm, Depth / 2 - 20mm) z(Height * 2 / 3, Height * 2 / 3 + 20mm)
+extrude Door rect(-Width / 2, -Depth / 2 - 18mm, Width / 2, -Depth / 2) z(0, Height)
+visible ShelfA Height > 1200mm
+visible ShelfB Height > 1200mm
+symbol rect(-Width / 2, -Depth / 2, Width / 2, Depth / 2)

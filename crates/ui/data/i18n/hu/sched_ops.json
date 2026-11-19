@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "az értéknek nullánál nagyobbnak kell lennie",
+ "sched_ops.not_number": "nem szám",
+ "sched_ops.no_host": "nincs befogadó fal",
+ "sched_ops.wall_length": "ezt a falhosszt nem lehet így beállítani",
+ "sched_ops.no_wall": "nincs ilyen fal",
+ "sched_ops.no_opening": "nincs ilyen nyílás",
+ "sched_ops.no_curtain": "nincs ilyen üvegfal",
+ "sched_ops.no_panel": "nincs ilyen panel",
+ "sched_ops.no_slab": "nincs ilyen födém",
+ "sched_ops.no_room": "nincs ilyen helyiség",
+ "sched_ops.slope_range": "lejtés tartományon kívül",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

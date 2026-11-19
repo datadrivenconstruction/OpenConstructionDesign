@@ -1,0 +1,5 @@
+{
+ "mcp.set.hide": "Ausblenden",
+ "mcp.set.copy_config": "KI-Agenten-Konfiguration kopieren",
+ "mcp.set.no_token": "Noch kein Zugriffstoken. Zuerst den Server einschalten."
+}

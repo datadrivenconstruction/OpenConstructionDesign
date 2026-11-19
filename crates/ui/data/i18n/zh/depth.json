@@ -1,0 +1,22 @@
+{
+ "depth.chip": "深度 {level}",
+ "depth.chip_tip": "下一次运行将把项目深化到何种程度：D1 概念至 D5 加工，按专业划分",
+ "depth.all_off": "所有专业均已关闭",
+ "depth.disc.arch": "建筑",
+ "depth.disc.struct": "结构",
+ "depth.disc.mep": "机电",
+ "depth.disc.doc": "文档",
+ "depth.project": "项目深度",
+ "depth.level.1": "D1 概念：体量、层数、面积，一张图纸",
+ "depth.level.2": "D2 草图：墙体、按功能划分的房间、洞口、轴网、平面图",
+ "depth.level.3": "D3 设计：分层构造、结构尺寸、机电主干及末端、明细表",
+ "depth.level.4": "D4 施工图：节点详图、五金件、饰面、配筋、支线",
+ "depth.level.5": "D5 加工：弯筋表、钢结构连接、预制构件、材料清单",
+ "depth.as_project": "同项目",
+ "depth.estimate": "估算：约 {elements} 个构件，{minutes} 分钟，{calls} 次调用共 {tokens} 个 token，{sheets} 张图纸",
+ "depth.estimate_none": "估算将在项目草案生成后给出：模型目前为空",
+ "depth.heat": "深度热力图",
+ "depth.heat.row": "深度",
+ "depth.settings": "本项目的设计深度",
+ "depth.settings_desc": "AI 助手的工作深度 D1 至 D5，可开关，并可为每个专业单独设置深度；保存在项目文件中"
+}

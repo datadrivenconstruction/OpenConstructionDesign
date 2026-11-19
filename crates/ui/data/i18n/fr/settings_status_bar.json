@@ -1,0 +1,10 @@
+{
+ "cmd.view.axes_full": "Axes en pleine longueur",
+ "cmd.view.axes_full.desc": "Affiche les axes X et Y en lignes continues sur tout le plan. Maintenez F9 pour ne les afficher que pendant l’appui.",
+ "settings.axes_full": "Axes",
+ "settings.axes_full_desc": "Axes du plan en lignes continues sur toute la feuille. Maintenez F9 pour un aperçu rapide.",
+ "settings.axes_full_on": "Afficher les axes en pleine longueur",
+ "plan.hud.axes_tip": "Maintenez {key} pour afficher les axes en pleine longueur",
+ "status.axes_full.on": "Axes en pleine longueur activés",
+ "status.axes_full.off": "Axes en pleine longueur désactivés"
+}

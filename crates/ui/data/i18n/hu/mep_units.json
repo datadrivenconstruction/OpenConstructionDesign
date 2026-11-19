@@ -1,0 +1,8 @@
+{
+ "mep_units.unit.mm": "mm",
+ "mep_units.unit.in": "in",
+ "mep_units.dn": "DN",
+ "mep_units.diameter": "Átmérő",
+ "mep_units.system.new": "Új rendszer",
+ "mep_units.system.none": "Nincs rendszer"
+}

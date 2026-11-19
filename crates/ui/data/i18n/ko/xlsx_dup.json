@@ -1,0 +1,10 @@
+{
+ "xlsx_dup.dup_undo": "결정 실행 취소",
+ "xlsx_dup.dup_undo_tip": "새 요소가 된 행({n})은 다시 ID와 함께 읽힙니다",
+ "xlsx_dup.dup_new": "편집한 사본을 새 요소로 만들기",
+ "xlsx_dup.dup_new_tip": "행 {rows}은(는) 값을 그대로 가진 새 요소가 됩니다. 요소 #{id}은(는) 값을 유지합니다 (나머지와 함께 실행 취소 한 단계)",
+ "xl.msg.dup_same": "중복 ID {}: 행 {}과 같은 값입니다. 행 무시됨",
+ "xl.msg.dup_unchanged": "중복 ID {}: 내보낸 행의 변경되지 않은 사본입니다. 행 무시됨",
+ "xl.msg.dup_conflict": "ID {}이(가) 서로 다른 값을 가진 행 {}에 있습니다. 이 ID에 대해 아무것도 적용하지 않음",
+ "xl.msg.dup_conflict_keep": "ID {}이(가) 서로 다른 값을 가진 행 {}에 있습니다. 이 ID에 대해 아무것도 적용하지 않음 — 행 하나를 남기세요"
+}

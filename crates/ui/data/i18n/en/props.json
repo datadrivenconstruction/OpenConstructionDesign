@@ -1,0 +1,18 @@
+{
+ "props.multi.title": {
+  "one": "# element",
+  "other": "# elements"
+ },
+ "props.multi.cats": {
+  "one": "# category",
+  "other": "# categories"
+ },
+ "props.multi.varies": {
+  "one": "varies (#)",
+  "other": "varies (#)"
+ },
+ "props.multi.clear": "Clear selection",
+ "props.multi.undo": "Undo",
+ "props.multi.narrowed": "Selection: {n} · {name}",
+ "props.multi.chip_tip": "{name}: {n}  ·  Click shows their properties, Ctrl+click keeps only these"
+}

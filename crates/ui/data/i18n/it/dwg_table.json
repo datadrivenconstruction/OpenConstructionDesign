@@ -1,0 +1,14 @@
+{
+ "dwg_table.copy": "Copia tabella",
+ "dwg_table.copy_tip": "Copia il computo per layer come tabella da foglio di calcolo",
+ "dwg_table.copied": "Computo copiato (separato da tabulazioni)",
+ "dwg_table.total": "Totale",
+ "dwg_table.col.layer": "Layer",
+ "dwg_table.col.count": "Quantità",
+ "dwg_table.col.len": "Lunghezza, {unit}",
+ "dwg_table.col.area": "Area, {unit}",
+ "dwg_table.unit.mm": "mm",
+ "dwg_table.unit.m2": "m²",
+ "dwg_table.unit.ft": "ft",
+ "dwg_table.unit.ft2": "ft²"
+}

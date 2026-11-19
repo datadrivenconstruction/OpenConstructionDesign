@@ -1,0 +1,16 @@
+{
+ "save_fail.save_fail.title": "Projekti ei salvestatud",
+ "save_fail.save_fail.kept": "Su muudatused on siin veel avatud. Midagi ei kao, kuni redaktor on avatud.",
+ "save_fail.save_fail.details": "Üksikasjad",
+ "save_fail.save_fail.copy": "Kopeeri",
+ "save_fail.save_fail.save_as": "Salvesta nimega…",
+ "save_fail.save_fail.retry": "Proovi uuesti",
+ "save_fail.save_fail.close": "Sulge",
+ "save_fail.cause.full": "Ketas on täis. Vabasta ruumi või salvesta projekt teisele kettale.",
+ "save_fail.cause.denied": "See kaust või fail on kirjutuskaitstud või sul pole siia kirjutamisõigust. Vali teine kaust.",
+ "save_fail.cause.locked": "Fail on avatud teises programmis. Sulge see seal ja vajuta „Proovi uuesti“.",
+ "save_fail.cause.missing": "Kaust enam ei ole. Vali teine kaust või taasta see ja vajuta „Proovi uuesti“.",
+ "save_fail.cause.offline": "Ketas või võrgukaust pole saadaval. Ühenda uuesti ja vajuta „Proovi uuesti“ või salvesta mujale.",
+ "save_fail.cause.too_long": "Faili tee on liiga pikk. Vali lühem kausta- või failinimi.",
+ "save_fail.cause.other": "Faili ei õnnestunud kirjutada: {detail}"
+}

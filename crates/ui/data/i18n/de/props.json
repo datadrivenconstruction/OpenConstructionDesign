@@ -1,0 +1,18 @@
+{
+ "props.multi.title": {
+  "one": "# Element",
+  "other": "# Elemente"
+ },
+ "props.multi.cats": {
+  "one": "# Kategorie",
+  "other": "# Kategorien"
+ },
+ "props.multi.varies": {
+  "one": "uneinheitlich (#)",
+  "other": "uneinheitlich (#)"
+ },
+ "props.multi.clear": "Auswahl leeren",
+ "props.multi.undo": "Rückgängig",
+ "props.multi.narrowed": "Auswahl: {n} · {name}",
+ "props.multi.chip_tip": "{name}: {n}  ·  Klick zeigt deren Eigenschaften, Strg+Klick behält nur diese"
+}

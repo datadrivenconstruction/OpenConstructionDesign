@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "Em fila atrás da tarefa em execução: {n}",
+ "import_queue.queue_full": "A fila está cheia; {n} arquivos não foram adicionados",
+ "import_queue.changed": "{name} foi atualizado depois de este projeto ser criado. Foi aberto o projeto anterior.",
+ "import_queue.import_again": "Importar novamente",
+ "import_queue.kept": "A importação concluída é mantida",
+ "import_queue.open_it": "Abrir",
+ "import_queue.sum.head": "importação: {editable} editáveis (paredes {walls}, aberturas {open}, lajes {slabs}, divisões {rooms}, outros {other}), {meshes} como malha",
+ "import_queue.sum.unchanged": ", sem alterações {n}",
+ "import_queue.sum.updated": ", atualizados {n}",
+ "import_queue.sum.missing": ", não existem na origem {n} (mantidos)",
+ "import_queue.sum.skipped": ", ignorados {n}",
+ "import_queue.sum.warnings": ", avisos {n}",
+ "import_queue.import_failed": "falha na importação: {e}"
+}

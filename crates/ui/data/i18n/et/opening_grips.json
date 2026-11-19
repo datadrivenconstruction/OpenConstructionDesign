@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "Pööra saanikute pool",
+ "cmd.edit.flip_hand.desc": "Peegeldab valitud uksed ja aknad mööda seina, nii et saanikud liiguvad ava teisele otsale.",
+ "cmd.edit.flip_facing": "Pööra ava pool",
+ "cmd.edit.flip_facing.desc": "Pöörab valitud uksed ja aknad seina teisele poolele.",
+ "opening_grips.flip_hand": "Pööra saanik",
+ "opening_grips.flip_hand.tip": "Saanikud avaga teisele otsale (Shift+F)",
+ "opening_grips.flip_facing": "Pööra pool",
+ "opening_grips.flip_facing.tip": "Ava seina teisele poolele (Shift+G)",
+ "opening_grips.flip.done": "Pööratud: {n}",
+ "opening_grips.flip.none": "Vali uks või aken, mida pöörata",
+ "opening_grips.flip.fail": "Ei pööratud: {why}"
+}

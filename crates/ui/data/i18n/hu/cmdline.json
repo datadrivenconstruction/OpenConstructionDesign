@@ -1,0 +1,13 @@
+{
+ "cmdl.mode_cmd": "Parancs",
+ "cmdl.mode_ai": "MI",
+ "cmdl.toggle": "Parancsok vagy az MI-asszisztens (Ctrl+J)",
+ "cmdl.hint": "Parancs vagy rövidítés (W, L, M, RO), pont #x;y, @dx;dy, d<szög. Ctrl+J: kérdés az MI-asszisztensnek",
+ "cmdl.hint_ai": "Kérdezze az MI-asszisztenst a modellről, vagy kérjen módosítást. Ctrl+J: vissza a parancsokhoz",
+ "cmdl.sent": "Elküldve az MI-asszisztensnek",
+ "cmdl.failed": "A(z) „{text}” itt nem hajtható végre",
+ "cmdl.no_tool": "Előbb indítson rajzoló parancsot, majd adja meg a pontjait",
+ "cmdl.unknown": "Nincs ilyen parancs: „{text}”. A Ctrl+J az MI-asszisztensnek küldi",
+ "cmdl.bad": "Nem olvasható: „{text}”: {e}",
+ "cmdl.shape": "„{text}” nem pont: írjon x;y, #x;y, @dx;dy vagy pozitív távolság<szög alakot"
+}

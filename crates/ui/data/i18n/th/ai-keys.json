@@ -1,0 +1,14 @@
+{
+ "ai_keys.header_is_key": "คีย์ต้องใส่ในช่องคีย์ — ส่วนหัวจะถูกบันทึกเป็นข้อความธรรมดา",
+ "ai_keys.move": "ย้ายไปที่คีย์",
+ "ai_keys.remove_line": "ลบออกจากส่วนหัว",
+ "ai_keys.save_blocked": "ย้ายคีย์ออกจากส่วนหัวก่อนบันทึก",
+ "ai_keys.show": "แสดง",
+ "ai_keys.hide": "ซ่อน",
+ "ai_keys.copy": "คัดลอก",
+ "ai_keys.tokens": "โทเคน",
+ "ai_keys.presets": "ค่าตั้งล่วงหน้า",
+ "ai_keys.preset_k": "{n}k",
+ "ai_keys.preset_m": "{n}M",
+ "ai_keys.images_on": "รองรับ"
+}

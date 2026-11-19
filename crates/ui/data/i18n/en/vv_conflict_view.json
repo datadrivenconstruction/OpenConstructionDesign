@@ -1,0 +1,4 @@
+{
+ "vv_conflict.vv.switched": "The active view changed. These edits belong to {view} and are not applied yet: Apply writes them to {view}, Discard drops them.",
+ "vv_conflict.vv.discard": "Discard edits"
+}

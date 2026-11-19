@@ -1,0 +1,7 @@
+{
+ "spline.opt.spline": "Spline",
+ "spline.opt.spline_tip": "Splinewand: klik de punten aan waar hij doorheen gaat, Enter of Esc om af te ronden",
+ "spline.wt.three_points": "een splinewand heeft drie of meer punten nodig",
+ "spline.wt.no_curtain": "een gordijngevel heeft geen spline-as",
+ "spline.wt.added": "splinewand toegevoegd"
+}

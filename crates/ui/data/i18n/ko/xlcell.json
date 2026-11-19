@@ -1,0 +1,15 @@
+{
+ "xl.msg.cell_clipped": "텍스트가 셀 한계에 맞게 잘렸습니다. 읽기 전용이며 편집이 적용되지 않았습니다",
+ "xlcell.status": "내보내기 완료. 셀 {count}개가 줄어들거나 비워졌습니다 — 자세한 내용 창을 보세요.",
+ "xlcell.title": "내보내기로 변경된 셀",
+ "xlcell.intro": "이 셀들은 있는 그대로 쓸 수 없었습니다. 전체 값은 모델에 남아 있고, 셀은 잠겨 통합 문서에서 편집할 수 없습니다.",
+ "xlcell.col_sheet": "시트",
+ "xlcell.col_row": "행",
+ "xlcell.col_col": "열",
+ "xlcell.col_id": "요소 ID",
+ "xlcell.col_what": "발생한 일",
+ "xlcell.what_clipped": "셀 한계에 맞게 잘린 텍스트",
+ "xlcell.what_blank": "유한한 숫자가 아니므로 셀을 비움",
+ "xlcell.more": "… 그리고 {count}개 더",
+ "xlcell.close": "닫기"
+}

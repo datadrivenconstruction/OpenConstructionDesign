@@ -1,0 +1,9 @@
+{
+ "ai.plan.reject_ask": {
+  "one": "# 件の変更を却下しますか?",
+  "other": "# 件の変更を却下しますか?"
+ },
+ "ai.plan.reject_ask.hint": "ドラフトとチェックマークは破棄されます。モデルは変わりません。",
+ "ai.plan.reject_confirm": "却下",
+ "ai.plan.reject_keep": "保持"
+}

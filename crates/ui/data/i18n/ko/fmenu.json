@@ -1,0 +1,7 @@
+{
+ "fmenu.export": "다른 이름으로 저장 / 내보내기",
+ "fmenu.export.ifc4x3": "IFC 4.3",
+ "fmenu.export.ifc2x3": "IFC 2x3",
+ "fmenu.export.glb": "glTF binary (.glb)",
+ "fmenu.export.pdf": "PDF 또는 SVG (시트)"
+}

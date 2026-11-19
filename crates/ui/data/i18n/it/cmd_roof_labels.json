@@ -1,0 +1,11 @@
+{
+ "cmd.arch.roof_gable.short": "A capanna",
+ "cmd.arch.roof_hip.short": "A padiglione",
+ "cmd.arch.roof_shed.short": "A falda unica",
+ "cmd.arch.roof_mansard.short": "Mansardata",
+ "cmd.arch.roof_gambrel.short": "A mansarda",
+ "cmd.arch.roof_barrel.short": "A botte",
+ "cmd.arch.roof_edges.short": "Bordi copertura",
+ "cmd.arch.roof_opening.short": "Apertura",
+ "cmd.mass.roof_by_face.short": "Da faccia"
+}

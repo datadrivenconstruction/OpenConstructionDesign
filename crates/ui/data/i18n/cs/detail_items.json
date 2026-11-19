@@ -1,0 +1,16 @@
+{
+ "cmd.drawing.to_detail": "Výkres na detail",
+ "cmd.drawing.to_detail.desc": "Vybrané prvky výkresu, nebo celý výkres na tomto podlaží, převede na detailní čáry, textové poznámky a plochy v půdorysu. Výkres zůstane beze změny.",
+ "detail_items.st.no_drawing": "Na tomto podlaží není žádný výkres",
+ "detail_items.st.nothing": "Není co převést: na zobrazených vrstvách nejsou čáry, oblouky, texty ani výplně",
+ "detail_items.st.done": "Přidány detailní prvky: čáry {lines}, texty {texts}, plochy {regions}",
+ "detail_items.st.failed": "Detailní prvky nelze přidat: {e}",
+ "detail_items.st.warn": "Detailní prvky přidány, ale pohled nelze obnovit (čáry {lines}, texty {texts}, plochy {regions}): {e}. Zpět je odstraní.",
+ "detail_items.st.bad_view": "Detailní prvky vyžadují půdorys nebo řez",
+ "detail_items.st.no_transform": "Tento pohled nemá použitelný souřadnicový systém pro výkres; nic nebylo přidáno",
+ "drafting_tools.free.plan_only": "Tento příkaz pracuje s prvky půdorysu; otevřete půdorys",
+ "drafting_tools.free.zero": "Oba body se shodují; nic nebylo přidáno",
+ "drafting_tools.free.select_first": "Nejprve vyberte prvky tohoto pohledu, které chcete rozmístit",
+ "drafting_tools.free.pick_item": "Kliknutím na prvek tohoto pohledu jej označte",
+ "drafting_tools.free.dim_kind": "Ve výkresovém pohledu fungují pouze délkové kóty"
+}

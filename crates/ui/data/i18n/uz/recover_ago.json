@@ -1,0 +1,29 @@
+{
+ "recover.ago_now": "hozirgina",
+ "recover.ago_min": {
+  "one": "# daq. oldin",
+  "other": "# daq. oldin"
+ },
+ "recover.ago_hour": {
+  "one": "# soat oldin",
+  "other": "# soat oldin"
+ },
+ "recover.ago_yesterday": "kecha",
+ "recover.ago_day": {
+  "one": "# kun oldin",
+  "other": "# kun oldin"
+ },
+ "recover.empty": "Qolgan nusxalar yo'q",
+ "recover.empty_hint": "Bu loyiha uchun tiklash uchun hech narsa yo'q.",
+ "recover.all_damaged": "Barcha nusxalar buzilgan, hech biri tiklanmaydi.",
+ "recover.keys_hint": "Yuqori va Pastki tugmalar nusxani tanlaydi, Enter Tiklash ga o'tkazadi",
+ "recover.row_tip": "Saqlangan {time}",
+ "recover.row_damaged_tip": "Tiklab bo'lmaydi: {reason}",
+ "recover.archive_ask": "Bu nusxa arxivga ko'chirilsinmi?",
+ "recover.discard_ask": {
+  "one": "Nusxa arxivga ko'chirilsinmi? U boshqa taklif qilinmaydi.",
+  "other": "Barcha # nusxa arxivga ko'chirilsinmi? Ular boshqa taklif qilinmaydi."
+ },
+ "recover.confirm_yes": "Arxivga ko'chirish",
+ "recover.confirm_no": "Nusxalarni saqlash"
+}

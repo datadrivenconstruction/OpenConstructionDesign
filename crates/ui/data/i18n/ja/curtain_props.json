@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "パネル",
+ "curtain_props.cw.panel_cell": "セル {i}×{j} · カーテンウォール #{id}",
+ "curtain_props.cw.kind": "タイプ",
+ "curtain_props.cw.kind.glazed": "ガラス",
+ "curtain_props.cw.kind.solid": "ソリッド",
+ "curtain_props.cw.kind.door": "ドア",
+ "curtain_props.cw.kind.window": "窓",
+ "curtain_props.cw.kind.empty": "空",
+ "curtain_props.cw.name": "名前",
+ "curtain_props.cw.swing_side": "反対側へ開く",
+ "curtain_props.cw.swing_hinge": "ヒンジはセルの端",
+ "curtain_props.cw.size": "サイズ",
+ "curtain_props.cw.cell_area": "セルの面積",
+ "curtain_props.cw.panel_area": "パネル面積",
+ "curtain_props.cw.prev": "前のパネル",
+ "curtain_props.cw.next": "次のパネル",
+ "curtain_props.cw.wall": "壁を選択してください",
+ "curtain_props.cw.panel_hint": "Esc — 選択 · Ctrl+Z — 元に戻す",
+ "curtain_props.cw.status.panel": "パネル {i}×{j} → {kind}",
+ "e3d.err.cw_height": "カーテンウォールの高さは 100 mm を超える必要があります"
+}

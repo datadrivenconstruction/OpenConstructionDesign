@@ -1,0 +1,6 @@
+{
+ "xlsx_no_base.title": "Bu çalışma kitabında karşılaştırma verisi yok",
+ "xlsx_no_base.detail": "Gizli karşılaştırma sayfası eksik veya bozuk (çalışma kitabını başka bir program yeniden kaydetti ya da el ile oluşturuldu). Farklı her hücre model değerinin yerine geçer; dışa aktarmadan sonra yapılan model düzenlemeleri algılanamaz. Çalışma kitabında olmayan satırlar silinmez.",
+ "xlsx_no_base.confirm": "Değişiklikleri kontrol ettim: model değerlerini değiştir ({n})",
+ "xlsx_no_base.confirm_first": "Önce karşılaştırma verisi olmayan çalışma kitabının içe aktarımını onaylayın"
+}

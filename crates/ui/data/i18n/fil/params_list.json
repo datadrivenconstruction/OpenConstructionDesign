@@ -1,0 +1,23 @@
+{
+ "params_list.n_params": {
+  "one": "# parameter",
+  "other": "# na parameter"
+ },
+ "params_list.n_values": {
+  "one": "# halaga",
+  "other": "# na halaga"
+ },
+ "params_list.n_elements": {
+  "one": "# elemento",
+  "other": "# na elemento"
+ },
+ "params_list.exported": "Na-export ang {params} sa {file}",
+ "params_list.export_failed": "Hindi na-export ang mga parameter: {why}",
+ "params_list.open_folder": "Buksan ang folder",
+ "params_list.delete_tip": "Burahin ang parameter at ang mga halaga nito",
+ "params_list.confirm": "Burahin ang {name} at ang {values} nito sa {elements}?",
+ "params_list.confirm_btn": "Burahin",
+ "params_list.cancel": "Kanselahin",
+ "params_list.deleted": "Nabura ang parameter {name} ({values})",
+ "params_list.undo": "I-undo"
+}

@@ -1,0 +1,101 @@
+{
+ "sources": [
+  {
+   "id": "ndss",
+   "title": "Nationally Described Space Standard (technical housing standards)",
+   "licence": "ogl",
+   "verified": "2026-11-11",
+   "publisher": "Government of the UK",
+   "edition": "2015"
+  },
+  {
+   "id": "ad-k",
+   "title": "Approved Document K Protection from falling, collision and impact",
+   "licence": "ogl",
+   "verified": null,
+   "publisher": "Government of the UK"
+  },
+  {
+   "id": "ad-m",
+   "title": "Approved Document M Access to and use of buildings, volume 1 dwellings",
+   "licence": "ogl",
+   "verified": "2026-11-13",
+   "publisher": "Government of the UK",
+   "url": "https://assets.publishing.service.gov.uk/media/5a7f8a82ed915d74e622b17b/BR_PDF_AD_M1_2015_with_2016_amendments_V3.pdf",
+   "edition": "2015 with 2016 amendments"
+  },
+  {
+   "id": "ad-m-v2",
+   "title": "Approved Document M, volume 2 buildings other than dwellings",
+   "licence": "ogl",
+   "verified": "2026-11-14",
+   "publisher": "Government of the UK"
+  },
+  {
+   "id": "ad-b-v1",
+   "title": "Approved Document B fire safety, volume 1 dwellings",
+   "licence": "ogl",
+   "verified": "2026-11-11",
+   "publisher": "Government of the UK"
+  },
+  {
+   "id": "ad-b-v2",
+   "title": "Approved Document B fire safety, volume 2 buildings other than dwellings",
+   "licence": "ogl",
+   "verified": "2026-11-14",
+   "publisher": "Government of the UK"
+  },
+  {
+   "id": "whsw1992",
+   "title": "Workplace (Health, Safety and Welfare) Regulations 1992",
+   "licence": "ogl",
+   "verified": "2026-11-13",
+   "publisher": "Government of the UK",
+   "edition": "1992",
+   "url": "https://www.hse.gov.uk/contact/faqs/roomspace.htm"
+  },
+  {
+   "id": "adf-v2",
+   "title": "Approved Document F Volume 2, buildings other than dwellings (England)",
+   "publisher": "Government of the UK",
+   "edition": "2021, revised 2022",
+   "url": "https://assets.publishing.service.gov.uk/media/62a761edd3bf7f03667c667e/ADF2_revised.pdf",
+   "licence": "ogl",
+   "verified": "2026-11-15"
+  },
+  {
+   "id": "uk-design-baseline",
+   "title": "UK design climate baseline (editor default; no regulation sets design temperatures)",
+   "publisher": "DDC",
+   "edition": "2026.11",
+   "licence": "own",
+   "verified": null
+  },
+  {
+   "id": "ad-l-v1",
+   "title": "Approved Document L Conservation of fuel and power, volume 1 dwellings",
+   "licence": "ogl",
+   "verified": null,
+   "publisher": "Government of the UK",
+   "edition": "2021",
+   "url": "https://www.gov.uk/government/publications/conservation-of-fuel-and-power-approved-document-l"
+  },
+  {
+   "id": "ba1984",
+   "title": "Building Act 1984, section 120D (higher-risk building)",
+   "licence": "ogl",
+   "publisher": "UK Parliament",
+   "edition": "as amended",
+   "url": "https://www.legislation.gov.uk/ukpga/1984/55/section/120D",
+   "verified": "2026-11-15"
+  },
+  {
+   "id": "br2010",
+   "title": "Building Regulations 2010, Schedule 1 requirements",
+   "licence": "ogl",
+   "publisher": "UK Government",
+   "edition": "as amended",
+   "url": "https://www.legislation.gov.uk/uksi/2010/2214/schedule/1"
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+{
+ "recover.untitled_note": "Este proyecto nunca se guardó",
+ "recover.file_missing": "No se encontró el archivo del proyecto",
+ "recover.banner": "Se encontraron cambios sin guardar de una sesión anterior de {name}",
+ "recover.banner_review": "Revisar",
+ "recover.later_archived": "Aplazado {n} veces: las copias se movieron al archivo"
+}

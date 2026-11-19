@@ -1,0 +1,10 @@
+{
+ "ai.size.count": "~{n} / {max} tokens",
+ "ai.size.block": "Demasiado largo para este modelo: ~{n} tokens; caben hasta {max} y dejar espacio para la respuesta. Acórtelo o divídalo",
+ "ai.size.trim": "Recortar para ajustar",
+ "ai.size.trim_tip": "Corta el final del mensaje para que quepa. No se corta nada hasta que haga clic.",
+ "ai.size.drop_view": "Excluir la vista",
+ "ai.size.drop_level": "Excluir la planta",
+ "ai.size.drop_selection": "Excluir la selección",
+ "ai.size.sep": ","
+}

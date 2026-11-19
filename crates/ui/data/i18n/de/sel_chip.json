@@ -1,0 +1,5 @@
+{
+ "sel_chip.opt.sel_hint": "Klicken Sie auf ein Element, um es auszuwählen. Strg fügt hinzu, Umschalt entfernt.",
+ "sel_chip.opt.units": "Einheiten",
+ "sel_chip.sel_chip": "{name}: {n}"
+}

@@ -1,0 +1,6 @@
+{
+ "xlsx_no_base.title": "Buku kerja ini tidak memiliki data pembanding",
+ "xlsx_no_base.detail": "Lembar pembanding tersembunyi hilang atau rusak (program lain menyimpan ulang buku kerja, atau dibuat manual). Setiap sel yang berbeda menggantikan nilai model; suntingan model sejak ekspor tidak dapat dideteksi. Baris yang tidak ada di buku kerja tidak dihapus.",
+ "xlsx_no_base.confirm": "Saya sudah memeriksa perubahannya: ganti nilai model ({n})",
+ "xlsx_no_base.confirm_first": "Konfirmasi impor buku kerja tanpa data pembanding dulu"
+}

@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "Narysuj zamknięty kontur: klikaj punkty, potem Enter lub Zakończ, aby utworzyć",
+ "sketch_hints.sk_finish": "Zakończ",
+ "sketch_hints.sk_cancel": "Anuluj",
+ "sketch_hints.import_warn": "ostrzeżenia sprawdzenia modelu: {n} (pierwsze: {first})",
+ "sketch_hints.ai.offline.schedule": "Otwórz zestawienie",
+ "sketch_hints.ai.offline.check": "Sprawdź wg reguł",
+ "sketch_hints.ai.offline.warnings": "Pokaż ostrzeżenia",
+ "cmd.file.publish_pdf": "Publikuj arkusze do PDF…",
+ "cmd.file.publish_pdf.desc": "Publikuje wybrane arkusze do PDF. To samo co Eksportuj arkusze do PDF/SVG.",
+ "sketch_hints.verify_none": "W zaznaczeniu nie ma elementów ustawionych przez asystenta AI do weryfikacji",
+ "sketch_hints.contours_none": "Brak powierzchni topograficznej w modelu: kontury pojawią się po jej utworzeniu",
+ "sketch_hints.contours_off": "Kontury powierzchni ukryte",
+ "sketch_hints.contours_on": "Kontury powierzchni pokazane"
+}

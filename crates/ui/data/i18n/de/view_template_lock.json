@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "Gesteuert durch Vorlage {name}",
+ "view_template.edit_template": "Vorlage bearbeiten",
+ "view_template.locked_tip": "Festgelegt durch die Ansichtsvorlage {name}. Ändern Sie es in der Vorlage.",
+ "view_template.no_filters": "Keine Filter in dieser Ansicht"
+}

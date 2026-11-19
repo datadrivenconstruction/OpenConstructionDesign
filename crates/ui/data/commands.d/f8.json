@@ -1,0 +1,29 @@
+[
+ {
+  "id": "mep.disconnect",
+  "once": true,
+  "icon": "disconnect",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "systems",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "systems"
+ },
+ {
+  "id": "mep.browser",
+  "icon": "system-browser",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "systems",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "systems",
+  "size": "medium",
+  "priority": 6
+ }
+]

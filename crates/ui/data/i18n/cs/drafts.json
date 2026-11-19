@@ -1,0 +1,8 @@
+{
+ "drafts.drafts.head": "Otevřené editory obsahují úpravy, které zatím nejsou v projektu:",
+ "drafts.draft.family": "Rodina „{name}“",
+ "drafts.draft.line": "Knihovna čar: {name}",
+ "drafts.draft.styles": "Styly čar rozsahu pohledu",
+ "drafts.btn.save_all": "Uložit vše",
+ "drafts.drafts.refused": "Koncept nelze uložit. Nic nebylo zavřeno; editor s konceptem zůstává otevřen."
+}

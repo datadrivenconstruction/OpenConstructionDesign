@@ -1,0 +1,5 @@
+{
+ "xl.msg.level_name_x_is_already_used": "naziv razine '{}' već je upotrijebljen",
+ "xl.msg.unreadable_id_elements_without_a_row_not_deleted": "nečitljiv id: elementi bez retka ne brišu se u ovom uvozu",
+ "xl.msg.wall_type_name_x_is_already_used": "naziv tipa zida '{}' već je upotrijebljen"
+}

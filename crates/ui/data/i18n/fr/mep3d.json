@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "Gaine",
+ "mep3d.pipe": "Tuyau",
+ "mep3d.tray": "Chemin de câbles",
+ "mep3d.conduit": "Fourreau",
+ "mep3d.system": "Système",
+ "mep3d.length": "Longueur",
+ "mep3d.diameter": "Diamètre",
+ "mep3d.width": "Largeur",
+ "mep3d.height": "Hauteur",
+ "mep3d.insulation": "Isolation",
+ "mep3d.tip": "Entrée — appliquer ; les raccords sont recalculés",
+ "mep3d.size_positive": "la dimension doit être supérieure à zéro",
+ "mep3d.not_changed": "non modifié : {e}",
+ "mep3d.copied": "tracé copié",
+ "mep3d.changed": "tracé modifié",
+ "mep3d.deleted": "éléments supprimés : {n}",
+ "mep3d.not_deleted": "non supprimé : {e}",
+ "mep3d.no_wall_type": "aucun type de mur",
+ "mep3d.demo.supply": "Soufflage S1",
+ "mep3d.demo.heating": "Chauffage",
+ "mep3d.demo.power": "Énergie"
+}

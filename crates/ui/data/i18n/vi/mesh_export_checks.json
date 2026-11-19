@@ -1,0 +1,15 @@
+{
+ "cmd.data.export_step.desc": "Lưu toàn bộ mô hình hoặc vùng chọn dưới dạng STEP AP214 hoặc AP242: khối đặc với mặt phẳng, trụ, nón, cầu, xuyến và B-spline chính xác; các phần tử khác là mặt phẳng; có màu và một nút lắp ráp cho mỗi cao độ.",
+ "cmd.data.export_3mf.desc": "Lưu toàn bộ mô hình hoặc vùng chọn dưới dạng 3MF để in: mỗi cấu kiện một đối tượng, có màu, đơn vị và kiểm tra mọi khối kín nước.",
+ "fmenu.export.step": "STEP khối đặc chính xác (.step)",
+ "fmenu.export.3mf": "3MF để in (.3mf)",
+ "mx.schema": "Lược đồ STEP",
+ "mx.schema.ap214": "AP214 (hỗ trợ rộng nhất)",
+ "mx.schema.ap242": "AP242",
+ "mx.watertight": "Khối không kín nước",
+ "mx.watertight.report": "Ghi chúng và liệt kê",
+ "mx.watertight.skip": "Bỏ qua",
+ "mx.watertight.require": "Hủy xuất",
+ "mx.faceted": "Đã lưu {fmt}: {path} ({exact} khối đặc chính xác, {n} ghi dưới dạng mặt phẳng: {first})",
+ "sheets.print.svg": "SVG"
+}

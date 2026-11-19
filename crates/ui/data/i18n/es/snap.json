@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "Extremo",
+ "snap.midpoint": "Punto medio",
+ "snap.perpendicular": "Perpendicular",
+ "snap.wall_axis": "Eje de muro",
+ "snap.wall_face": "Cara de muro",
+ "snap.grid": "Rejilla",
+ "snap.intersection": "Intersección",
+ "snap.grid_axis": "Línea de rejilla",
+ "snap.ref_plane": "Plano de referencia",
+ "snap.nearest": "Más cercano",
+ "snap.align_x": "Alineado en X con un punto remoto",
+ "snap.align_y": "Alineado en Y con un punto remoto",
+ "snap.align_xy": "Alineado en X e Y"
+}

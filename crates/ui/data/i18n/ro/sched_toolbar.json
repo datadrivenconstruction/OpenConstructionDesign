@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "Filtru pe rândul de sub antete. Text: subșir; numere: >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "Afișează sau ascunde coloanele",
+ "sched_toolbar.groups_tip": "Grupează rândurile după coloane, cu subtotaluri",
+ "sched_toolbar.formulas_tip": "Coloane calculate",
+ "sched_toolbar.phase": "Fază",
+ "sched_toolbar.phase_tip": "Din ce fază sunt luate rândurile",
+ "sched_toolbar.copy_tip": "Rândurile selectate (sau toate cele vizibile) ca TSV",
+ "sched_toolbar.import_tip": "Citește înapoi un tabel exportat: rânduri după Id, coloane după antet; întâi numărările, apoi un pas de anulare",
+ "sched_toolbar.export_tip": "Rândurile și coloanele vizibile, cu totaluri; numerele rămân numere",
+ "sched_toolbar.need_table": "Deschideți mai întâi un tabel",
+ "sched_toolbar.busy_open": "Un dialog de fișier este deja deschis",
+ "sched_toolbar.busy_save": "Un dialog de salvare este deja deschis",
+ "sched_toolbar.clear_filter": "Șterge filtrul",
+ "sched_toolbar.fields_title": "Coloane"
+}

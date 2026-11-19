@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "Batalkan: {what}",
+ "undo_label.redo_what": "Ulangi: {what}",
+ "undo_label.undo_none": "Tidak ada yang dibatalkan",
+ "undo_label.redo_none": "Tidak ada yang diulangi"
+}

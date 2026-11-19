@@ -1,0 +1,22 @@
+{
+ "depth.chip": "深度 {level}",
+ "depth.chip_tip": "次の実行でプロジェクトをどこまで詰めるか: 分野別に D1 コンセプトから D5 製作まで",
+ "depth.all_off": "すべての分野をオフ",
+ "depth.disc.arch": "建築",
+ "depth.disc.struct": "構造",
+ "depth.disc.mep": "設備",
+ "depth.disc.doc": "図書",
+ "depth.project": "プロジェクトの深度",
+ "depth.level.1": "D1 コンセプト: マッシング、階、面積、シート 1 枚",
+ "depth.level.2": "D2 スケッチ: 壁、用途別の部屋、開口、通り芯、平面図",
+ "depth.level.3": "D3 設計: 層別のタイプ、寸法決めされた構造、設備の主要幹線と端末、一覧表",
+ "depth.level.4": "D4 実施: 取り合い詳細、金物、仕上げ、鉄筋、分岐",
+ "depth.level.5": "D5 製作: 曲げ加工表、鉄骨接合部、プレハブ、部材表",
+ "depth.as_project": "同じ",
+ "depth.estimate": "見積もり: 要素 約 {elements}、{minutes} 分、{calls} 回の呼び出しで {tokens} トークン、シート {sheets}",
+ "depth.estimate_none": "見積もりは下書きされたプロジェクトとともに表示されます。モデルはまだ空です",
+ "depth.heat": "深度ヒートマップ",
+ "depth.heat.row": "深度",
+ "depth.settings": "このプロジェクトの設計深度",
+ "depth.settings_desc": "AI アシスタントが作業する深度 (D1〜D5)。分野ごとにスイッチと独自の深度を設定可能。プロジェクト ファイルに保存されます"
+}

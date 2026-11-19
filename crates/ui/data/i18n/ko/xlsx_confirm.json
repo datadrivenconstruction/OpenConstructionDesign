@@ -1,0 +1,19 @@
+{
+ "xlsx_confirm.chip": "확인 필요",
+ "xlsx_confirm.section": "id가 없는 행은 이름 또는 번호로 요소에 일치됩니다",
+ "xlsx_confirm.tag": "이름으로 일치",
+ "xlsx_confirm.tag_accepted": "일치 수락됨",
+ "xlsx_confirm.tag_rejected": "새로 만듦",
+ "xlsx_confirm.kind_room": "실",
+ "xlsx_confirm.kind_curtain_wall": "커튼월",
+ "xlsx_confirm.row_line": "{kind} #{id}, 키 \"{key}\"",
+ "xlsx_confirm.accept": "수락",
+ "xlsx_confirm.accept_tip": "이 행을 일치하는 요소에 적용합니다(나머지와 함께 실행 취소 한 단계)",
+ "xlsx_confirm.reject": "새로 만들기",
+ "xlsx_confirm.reject_tip": "일치하지 않음: 이 행은 새 요소를 만듭니다",
+ "xlsx_confirm.decide_first": "이름으로 일치한 행을 먼저 수락하거나 거부하십시오.",
+ "xl.msg.key_match_many": "키가 요소 {}개와 일치하여 일치시키지 않았고, 이 행은 새 요소를 만듭니다",
+ "xl.msg.key_match_taken": "키가 다른 행이 사용하는 요소와 일치하여 일치시키지 않았고, 이 행은 새 요소를 만듭니다",
+ "xl.msg.key_match_kept": "유지됨: 일치 거부, 이 행은 새 요소를 만듭니다",
+ "xl.msg.key_match_undecided": "이름으로 일치한 행은 결정을 기다립니다"
+}

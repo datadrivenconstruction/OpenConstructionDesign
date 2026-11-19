@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "Yuqoriga surish",
+ "rebar_list.move_down": "Pastga surish",
+ "rebar_list.remove": "Olib tashlash",
+ "rebar_list.zone_remove_last": "Zonada kamida bitta xona bo'lishi kerak: oxirgisini olib tashlash uchun zonani o'chiring",
+ "rebar_list.rebar_empty_title": "Bu modelda armatura yo'q",
+ "rebar_list.rebar_empty_hint": "Armaturani tayanch elementga joylashtiring, u shu yerda jadvalga kiritiladi.",
+ "rebar_list.rebar_empty_action": "Armatura joylashtirish"
+}

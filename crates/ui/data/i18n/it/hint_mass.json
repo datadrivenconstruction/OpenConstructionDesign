@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "Superficie libera",
+ "cmd.mass.panelize": "Suddividi in pannelli",
+ "cmd.mass.surface_shell": "Copertura su superficie",
+ "cmd.mass.thicken": "Spessore",
+ "hint.mass.freeform.first": "Superficie libera: primo angolo del rettangolo in pianta · digita l'altezza · Esc — annulla",
+ "hint.mass.freeform.next": "Superficie libera: angolo opposto · digita l'altezza · Esc — annulla",
+ "hint.mass.panelize.first": "Pannelli: scegli una superficie libera in 3D · Esc — annulla",
+ "hint.mass.panelize.value": "Pannelli: digita la dimensione del pannello · Invio — applica · Esc — annulla",
+ "hint.mass.surface_shell.first": "Copertura su superficie: scegli una superficie libera in 3D · Esc — annulla",
+ "hint.mass.surface_shell.value": "Copertura su superficie: digita lo spessore · Invio — applica · Esc — annulla",
+ "hint.mass.thicken.first": "Spessore: scegli una superficie libera in 3D · Esc — annulla",
+ "hint.mass.thicken.value": "Spessore: digita lo spessore (0 — superficie nuda) · Invio — applica · Esc — annulla",
+ "status.mass.pick_surface": "Scegli una superficie libera",
+ "status.mass.freeform_small": "Il rettangolo è troppo piccolo: almeno 0,5 m per lato",
+ "name.mass.freeform": "Superficie libera",
+ "rgroup.mass_free": "Avanzate"
+}

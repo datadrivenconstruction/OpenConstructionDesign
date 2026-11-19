@@ -1,0 +1,7 @@
+{
+ "xl.msg.param_ambiguous": "'{}' sütunu şu parametrelerden biri olabilir: {}; tam parametre adını yazın, uygulanmadı",
+ "xl.msg.param_tag_stale": "'{}' sütunu bu projede olmayan bir parametre adı taşıyor; uygulanmadı",
+ "xl.msg.dup_col_note": "{} içindeki '{}' sütunu, {} içindeki '{}' sütununu tekrarlıyor; eşit değerler bir kez uygulanır, farklı olan satırlar model değerini korur",
+ "xl.msg.dup_col_differs": "'{}' ve '{}' sütunları {} ve {} bakımından farklı; model değeri kalır — bir sütun bırakın",
+ "xl.msg.dup_col_id": "'{}' ve '{}' sütunları {} ve {} bakımından farklı, satır tanımlanamıyor; hiçbir şey uygulanmadı — bir sütun bırakın"
+}

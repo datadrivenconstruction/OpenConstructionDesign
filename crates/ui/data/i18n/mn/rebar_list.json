@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "Дээш зөөх",
+ "rebar_list.move_down": "Доош зөөх",
+ "rebar_list.remove": "Хасах",
+ "rebar_list.zone_remove_last": "Бүсэд дор хаяж нэг өрөө хэрэгтэй: сүүлчийнхийг арилгахын тулд бүсийг устга",
+ "rebar_list.rebar_empty_title": "Энэ загварт арматур байхгүй",
+ "rebar_list.rebar_empty_hint": "Арматурыг үндсэн элементэд байрлуулбал энд хуваарилагдана.",
+ "rebar_list.rebar_empty_action": "Арматур байрлуулах"
+}

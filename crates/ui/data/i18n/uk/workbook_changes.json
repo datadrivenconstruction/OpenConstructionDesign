@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "Зміни книги не застосовано",
+ "workbook_changes.wb.body": "Закриття або перемикання проєкту їх скидає.",
+ "workbook_changes.wb.line": "Імпорт книги: {n} змін не застосовано",
+ "workbook_changes.wb.review": "Переглянути",
+ "workbook_changes.wb.discard": "Відхилити"
+}

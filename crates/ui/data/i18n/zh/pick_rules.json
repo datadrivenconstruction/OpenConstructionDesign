@@ -1,0 +1,11 @@
+{
+ "pick_rules.filter": "选择：全部",
+ "pick_rules.filter.on": "选择：已关闭 {n} 项",
+ "pick_rules.filter.title": "单击可选择的类别",
+ "pick_rules.filter.all": "选择所有类别",
+ "pick_rules.filter.tip": "选择过滤器：未勾选的类别在单击和悬停时将被跳过",
+ "pick_rules.here": "此处的项目",
+ "pick_rules.here.selected": "已选",
+ "pick_rules.pinned": "选择已锁定的项目",
+ "pick_rules.here.row": "{cat} · {len}"
+}

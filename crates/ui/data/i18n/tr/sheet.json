@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "Kısayol listesi",
+ "cmd.help.shortcuts.desc": "Her kısayolu şu anki bağlamına göre gösterir. Metin alanı dışında her yerde ? tuşuna basın.",
+ "sheet.title": "Klavye kısayolları",
+ "sheet.filter": "Komut veya tuşa göre filtrele",
+ "sheet.filter_label": "Kısayolları filtrele",
+ "sheet.customize": "Özelleştir…",
+ "sheet.close": "Kapat",
+ "sheet.esc_close": "kapatmak için",
+ "sheet.none": "Eşleşen kısayol yok",
+ "sheet.none_hint": "Başka bir kelime veya tuş deneyin.",
+ "sheet.sec.general": "Genel",
+ "sheet.sec.plan": "Plan",
+ "sheet.sec.view3d": "3B",
+ "sheet.sec.schedule": "Çizelgeler",
+ "sheet.sec.sheets": "Sayfalar",
+ "sheet.sec.ai": "AI"
+}

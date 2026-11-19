@@ -1,0 +1,22 @@
+{
+ "depth.chip": "Depth {level}",
+ "depth.chip_tip": "How far the next run works the project out: D1 concept to D5 fabrication, by discipline",
+ "depth.all_off": "all disciplines off",
+ "depth.disc.arch": "Arch",
+ "depth.disc.struct": "Struct",
+ "depth.disc.mep": "MEP",
+ "depth.disc.doc": "Docs",
+ "depth.project": "Project depth",
+ "depth.level.1": "D1 Concept: massing, storeys, areas, one sheet",
+ "depth.level.2": "D2 Sketch: walls, rooms by programme, openings, grid, plans",
+ "depth.level.3": "D3 Design: layered types, sized structure, MEP mains and terminals, schedules",
+ "depth.level.4": "D4 Working: junction details, hardware, finishes, reinforcement, branches",
+ "depth.level.5": "D5 Fabrication: bending schedules, steel connections, prefab, bill of materials",
+ "depth.as_project": "Same",
+ "depth.estimate": "Estimate: about {elements} elements, {minutes} min, {tokens} tokens in {calls} calls, {sheets} sheets",
+ "depth.estimate_none": "The estimate comes with the drafted project: the model is still empty",
+ "depth.heat": "Depth heat map",
+ "depth.heat.row": "Depth",
+ "depth.settings": "Design depth of this project",
+ "depth.settings_desc": "Depth the AI assistant works to, D1 to D5, with a switch and own depth per discipline; saved in the project file"
+}

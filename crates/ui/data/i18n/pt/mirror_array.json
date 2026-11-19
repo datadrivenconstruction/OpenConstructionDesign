@@ -1,0 +1,5 @@
+{
+ "mirror_array.err.count": "A contagem é um número inteiro de 2 a 200: 4 3000, ou 4;300 quando o passo tem três dígitos",
+ "mirror_array.err.length": "O passo ou o total é um comprimento positivo, ex.: 3 000 ou 1.2 m",
+ "mirror_array.err.angle": "A varredura é um ângulo em graus, diferente de zero e no máximo 360"
+}

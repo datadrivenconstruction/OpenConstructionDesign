@@ -1,0 +1,11 @@
+{
+ "sketch.points": "پوائنٹس",
+ "sketch.rect": "مستطیل",
+ "sketch.circle": "دائرہ",
+ "sketch.polygon": "کثیر الاضلاع",
+ "sketch.radius": "ر",
+ "sketch.sides": "اضلاع",
+ "sketch.circum": "محیط پر",
+ "sketch.shape.tip": "اسکیچ شکل (A سے تبدیل)۔ مستطیل: دو کونے۔ دائرہ اور کثیر الاضلاع: مرکز، پھر رداس۔ سائز ٹائپ کریں اور Enter دبائیں تاکہ مقرر ہو جائے۔",
+ "tool.err.zero_size": "صفر سائز: دوسرا نقطہ پہلے سے دور لے جائیں"
+}

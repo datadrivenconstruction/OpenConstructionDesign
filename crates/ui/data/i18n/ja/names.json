@@ -1,0 +1,19 @@
+{
+ "names.level": "レベル {n}",
+ "names.slab": "スラブ 200",
+ "names.roof_slab": "屋根 200",
+ "names.sheet.plan_section": "1階平面図と断面図",
+ "names.sheet.plan_view": "1階平面図",
+ "names.sheet.site_plan": "配置図",
+ "names.sheet_set.issue": "発行 1",
+ "names.title.owner": "プロジェクト社",
+ "names.title.creator": "A. Ivanov",
+ "names.title.approver": "P. Petrov",
+ "names.title.document_type": "図面",
+ "names.title.status": "作業中",
+ "names.revision.date": "2026年11月4日",
+ "names.revision.description": "レビュー用に発行",
+ "names.revision.author": "AI",
+ "names.demo.no_levels": "レベルなし",
+ "names.demo.no_sheet": "シート"
+}

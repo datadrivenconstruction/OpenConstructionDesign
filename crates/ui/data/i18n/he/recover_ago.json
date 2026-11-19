@@ -1,0 +1,33 @@
+{
+ "recover.ago_now": "ממש עכשיו",
+ "recover.ago_min": {
+  "one": "לפני # דק׳",
+  "two": "לפני # דק׳",
+  "other": "לפני # דק׳"
+ },
+ "recover.ago_hour": {
+  "one": "לפני # שעה",
+  "two": "לפני # שעות",
+  "other": "לפני # שעות"
+ },
+ "recover.ago_yesterday": "אתמול",
+ "recover.ago_day": {
+  "one": "לפני # יום",
+  "two": "לפני # ימים",
+  "other": "לפני # ימים"
+ },
+ "recover.empty": "לא נשארו עותקים",
+ "recover.empty_hint": "אין מה לשחזר לפרויקט הזה.",
+ "recover.all_damaged": "כל העותקים פגומים, אין אפשרות לשחזר.",
+ "recover.keys_hint": "למעלה ולמטה בוחרים עותק, Enter עובר לשחזור",
+ "recover.row_tip": "נשמר {time}",
+ "recover.row_damaged_tip": "לא ניתן לשחזר: {reason}",
+ "recover.archive_ask": "להעביר את העותק הזה לארכיון?",
+ "recover.discard_ask": {
+  "one": "להעביר את התמונה לארכיון? היא לא תוצע שוב.",
+  "two": "להעביר את כל # התמונות לארכיון? הן לא יוצעו שוב.",
+  "other": "להעביר את כל # התמונות לארכיון? הן לא יוצעו שוב."
+ },
+ "recover.confirm_yes": "העבר לארכיון",
+ "recover.confirm_no": "שמור עותקים"
+}

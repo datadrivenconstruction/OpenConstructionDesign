@@ -1,0 +1,13 @@
+{
+ "topo.unit.mm": "mm",
+ "topo.unit.metre": "m",
+ "topo.unit.ft": "ft",
+ "topo.opt.material": "Material",
+ "topo.row.active": "Aktive Oberfläche",
+ "topo.btn.delete_pad": "Fläche löschen",
+ "topo.info.loading": "Oberfläche wird erstellt…",
+ "topo.info.warn_n": "{n} Warnungen",
+ "topo.info.points_label": "Punkte",
+ "topo.import.all_layers": "Alle Ebenen",
+ "topo.import.need_layer": "Mindestens eine Ebene markieren"
+}

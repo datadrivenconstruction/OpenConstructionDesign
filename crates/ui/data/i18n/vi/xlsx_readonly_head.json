@@ -1,0 +1,5 @@
+{
+ "xlsx_readonly.read_only_head": "Chỉ đọc — Áp dụng sẽ ghi một bản sao",
+ "xlsx_readonly.show_in_folder": "Hiện trong thư mục",
+ "xlsx_readonly.copy_exists": "Tệp bản sao đã tồn tại. Chọn tên khác hoặc xóa nó."
+}

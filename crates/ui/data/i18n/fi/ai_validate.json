@@ -1,0 +1,14 @@
+{
+ "ai.issue.integrity": "Eheysongelma: {0} {1}: {2}",
+ "ai.issue.opening_outside": "Aukko ei mahdu seinään: {0}",
+ "ai.issue.opening_overlap": "Aukko menee päällekkäin aukon {0} kanssa",
+ "ai.issue.wall_warning": "Seinä: {0}",
+ "ai.issue.cut_warning": "Leikkaus: {0}",
+ "ai.issue.room_open": "Huone ei ole suljettu",
+ "ai.issue.material_unknown": "Projektissa ei ole materiaalia nimeltä \"{0}\": Käytä lisäisi uuden oletusominaisuuksin",
+ "ai.issue.material_suggest": "Projektissa ei ole materiaalia nimeltä \"{0}\": Käytä lisäisi uuden. Tarkoititko \"{1}\"?",
+ "ai.issue.conflict": "Tätä kohtaa ei voi suorittaa: {0}",
+ "ai.issue.too_large": "{0} elementtiä muuttuisi, yli rajan {1}. Lupa vaaditaan",
+ "ai.issue.truncated": "Muutosluettelo pysähtyi riville {0}: suunnitelma on suurempi kuin kortti voi näyttää. Lupa vaaditaan",
+ "ai.issue.replan_failed": "Suunnitelmaa ei voitu laskea uudelleen. Mallista otetaan uusi kopio"
+}

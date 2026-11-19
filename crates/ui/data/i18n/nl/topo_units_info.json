@@ -1,0 +1,13 @@
+{
+ "topo.unit.mm": "mm",
+ "topo.unit.metre": "m",
+ "topo.unit.ft": "ft",
+ "topo.opt.material": "Materiaal",
+ "topo.row.active": "Actief oppervlak",
+ "topo.btn.delete_pad": "Plateau verwijderen",
+ "topo.info.loading": "Oppervlak wordt opgebouwd…",
+ "topo.info.warn_n": "{n} waarschuwingen",
+ "topo.info.points_label": "Punten",
+ "topo.import.all_layers": "Alle lagen",
+ "topo.import.need_layer": "Vink minstens één laag aan"
+}

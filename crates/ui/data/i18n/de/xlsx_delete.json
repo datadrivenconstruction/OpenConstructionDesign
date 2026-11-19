@@ -1,0 +1,5 @@
+{
+ "xlsx_delete.delete_missing": "Im Modell fehlende Zeilen löschen",
+ "xlsx_delete.not_removed": "nicht entfernt: keine Vergleichsdaten",
+ "xlsx_delete.no_base_reason": "Nicht verfügbar: Die Arbeitsmappe hat keine Vergleichsdaten, daher lässt sich eine fehlende Zeile nicht von einer versehentlich entfernten unterscheiden. Beim Anwenden wird nichts gelöscht."
+}

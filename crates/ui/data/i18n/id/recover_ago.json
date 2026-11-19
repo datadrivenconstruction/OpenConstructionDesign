@@ -1,0 +1,29 @@
+{
+ "recover.ago_now": "baru saja",
+ "recover.ago_min": {
+  "one": "# mnt lalu",
+  "other": "# mnt lalu"
+ },
+ "recover.ago_hour": {
+  "one": "# jam lalu",
+  "other": "# jam lalu"
+ },
+ "recover.ago_yesterday": "kemarin",
+ "recover.ago_day": {
+  "one": "# hari lalu",
+  "other": "# hari lalu"
+ },
+ "recover.empty": "Tidak ada salinan tersisa",
+ "recover.empty_hint": "Tidak ada yang dapat dipulihkan untuk proyek ini.",
+ "recover.all_damaged": "Semua salinan rusak, tidak ada yang dapat dipulihkan.",
+ "recover.keys_hint": "Panah Atas dan Bawah memilih salinan, Enter pindah ke Pulihkan",
+ "recover.row_tip": "Disimpan {time}",
+ "recover.row_damaged_tip": "Tidak dapat dipulihkan: {reason}",
+ "recover.archive_ask": "Pindahkan salinan ini ke arsip?",
+ "recover.discard_ask": {
+  "one": "Pindahkan salinan ke arsip? Salinan ini tidak akan ditawarkan lagi.",
+  "other": "Pindahkan semua # salinan ke arsip? Salinan ini tidak akan ditawarkan lagi."
+ },
+ "recover.confirm_yes": "Pindahkan ke arsip",
+ "recover.confirm_no": "Simpan salinan"
+}

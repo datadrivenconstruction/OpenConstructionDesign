@@ -1,0 +1,5 @@
+{
+ "rbdrag.beam": "Una viga alojada quedaría fuera del nuevo contorno.",
+ "rbdrag.rebar": "La armadura {id} del forjado de cimentación quedaría fuera del nuevo contorno.",
+ "rbdrag.opening": "Un hueco quedaría fuera del nuevo contorno."
+}

@@ -1,0 +1,23 @@
+{
+ "roof_edge.err.number": "Introduzca un número",
+ "roof_edge.err.positive": "Debe ser mayor que cero",
+ "roof_edge.err.nonneg": "No debe ser negativo",
+ "roof_edge.err.max": "No debe superar {max}",
+ "roof_edge.list.empty_hint": "Añada frentes, canalones, sofitos o lucernarios con los comandos de cubierta",
+ "roof_edge.edit_tip": "Editar propiedades",
+ "roof_edge.delete_tip": "Eliminar",
+ "roof_edge.pe.del_tip": "Quitar este punto (una sección conserva al menos 3)",
+ "roof_edge.pe.up_tip": "Subir este punto",
+ "roof_edge.confirm_edge": "¿Eliminar {name}? Ctrl+Z lo recupera.",
+ "roof_edge.confirm_profile": "¿Eliminar el perfil {name}? Ctrl+Z lo recupera.",
+ "roof_edge.deleted_one": "Eliminado {name}",
+ "roof_edge.deleted_n": {
+  "one": "Eliminado # elemento",
+  "other": "Eliminados # elementos"
+ },
+ "roof_edge.profile_deleted": "Perfil eliminado",
+ "roof_edge.profile_in_use": {
+  "one": "Usado por # elemento de borde: elimínelo o cámbielo antes",
+  "other": "Usado por # elementos de borde: elimínelos o cámbielos antes"
+ }
+}

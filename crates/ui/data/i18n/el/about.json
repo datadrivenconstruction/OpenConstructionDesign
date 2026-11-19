@@ -1,0 +1,33 @@
+{
+ "cmd.help.licenses": "Άδειες λογισμικού ανοιχτού κώδικα",
+ "cmd.help.licenses.desc": "Εμφανίζει τις βιβλιοθήκες ανοιχτού κώδικα που χρησιμοποιεί αυτό το build, με τις άδειές τους.",
+ "about.product": "DDC Editor",
+ "about.version": "Έκδοση",
+ "about.build": "Build",
+ "about.schema": "Σχήμα μοντέλου",
+ "about.system": "Σύστημα",
+ "about.gpu": "Προσαρμογέας γραφικών",
+ "about.language": "Γλώσσα",
+ "about.copy": "Αντιγραφή στοιχείων έκδοσης",
+ "about.copy_desc": "Έκδοση, build, σύστημα και προσαρμογέας γραφικών για αναφορά σφάλματος. Χωρίς διαδρομές αρχείων.",
+ "about.copied": "Τα στοιχεία έκδοσης αντιγράφηκαν",
+ "about.licenses": "Άδειες λογισμικού ανοιχτού κώδικα",
+ "about.licenses_desc": "Βιβλιοθήκες που χρησιμοποιούνται σε αυτό το build και οι άδειές τους",
+ "about.licenses.open": "Προβολή",
+ "about.licenses.title": "Άδειες λογισμικού ανοιχτού κώδικα",
+ "about.licenses.note": "Το DDC Editor περιλαμβάνει τις παρακάτω βιβλιοθήκες. Καθεμία παραμένει με τη δική της άδεια και ειδοποίηση πνευματικών δικαιωμάτων. Πλήρη κείμενα αδειών: THIRD_PARTY_LICENSES.txt δίπλα στην εφαρμογή.",
+ "about.licenses.full": "Πλήρη κείμενα αδειών",
+ "about.licenses.list": "Λίστα στοιχείων",
+ "about.licenses.close": "Κλείσιμο",
+ "about.licenses.col_name": "Στοιχείο",
+ "about.licenses.col_license": "Άδεια",
+ "about.licenses.count": {
+  "one": "# στοιχείο",
+  "other": "# στοιχεία"
+ },
+ "about.licenses.count_of": "{shown} από {total} στοιχεία",
+ "about.licenses.search_hint": "Αναζήτηση με όνομα ή άδεια…",
+ "about.licenses.search_clear": "Εκκαθάριση αναζήτησης",
+ "about.licenses.none": "Δεν βρέθηκε τίποτα",
+ "about.licenses.none_hint": "Δοκιμάστε μέρος του ονόματος μιας βιβλιοθήκης ή μια άδεια, όπως η MIT."
+}

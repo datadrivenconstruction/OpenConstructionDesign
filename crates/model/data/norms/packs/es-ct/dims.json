@@ -1,0 +1,40 @@
+{
+ "items": [
+  {
+   "key": "room.height_min",
+   "value": 2.5,
+   "unit": "m",
+   "source": "cat-decret-141-2012",
+   "clause": "Annex 1, 3.5: clear height between finished floor and ceiling at least 2.50 m (2.20 m in bathrooms, kitchens, circulation)",
+   "verified": true,
+   "url": "https://aplicacions.habitatge.gencat.cat/files/decret141%20HABITABILITAT%20201260882.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Catalan habitability decree requires 2.50 m clear height in habitable rooms; lower 2.20 m in service and circulation spaces.",
+   "note": "read 2026-11-14: aplicacions.habitatge.gencat.cat/files/decret141 HABITABILITAT 201260882.pdf; Catalonia only; 2.40 m for some refurbishments",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   }
+  },
+  {
+   "key": "daylight.window_floor_ratio",
+   "value": 0.125,
+   "unit": "ratio",
+   "source": "cat-decret-141-2012",
+   "clause": "Annex 1, 3.9.1: living spaces and bedrooms need openings of at least 1/8 of useful floor area (counted between 0 and 2.5 m height)",
+   "verified": true,
+   "note": "read 2026-11-14: aplicacions.habitatge.gencat.cat/files/decret141 HABITABILITAT 201260882.pdf; Catalonia only",
+   "url": "https://aplicacions.habitatge.gencat.cat/files/decret141%20HABITABILITAT%20201260882.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Catalan decree requires natural-light openings of at least one eighth of the useful floor area for living spaces and bedrooms.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   }
+  }
+ ]
+}

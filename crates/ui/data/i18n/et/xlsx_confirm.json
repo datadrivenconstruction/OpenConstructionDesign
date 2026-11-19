@@ -1,0 +1,19 @@
+{
+ "xlsx_confirm.chip": "kinnitamiseks",
+ "xlsx_confirm.section": "ID-ta read, mis on sobitatud elemendile nime või numbri järgi",
+ "xlsx_confirm.tag": "sobitatud nime järgi",
+ "xlsx_confirm.tag_accepted": "vaste aktsepteeritud",
+ "xlsx_confirm.tag_rejected": "loob uue",
+ "xlsx_confirm.kind_room": "ruum",
+ "xlsx_confirm.kind_curtain_wall": "kardinasein",
+ "xlsx_confirm.row_line": "{kind} #{id}, võti „{key}“",
+ "xlsx_confirm.accept": "Nõustu",
+ "xlsx_confirm.accept_tip": "Rakenda see rida sobitatud elemendile (üks tagasivõtmise samm koos ülejäänutega)",
+ "xlsx_confirm.reject": "Loo uus",
+ "xlsx_confirm.reject_tip": "Ära sobita: see rida loob uue elemendi",
+ "xlsx_confirm.decide_first": "Nõustu või lükka kõigepealt tagasi nime järgi sobitatud read.",
+ "xl.msg.key_match_many": "võti sobib {} elemendiga; ei sobitatud, rida loob uue",
+ "xl.msg.key_match_taken": "võti sobib teise rea kasutatud elemendiga; ei sobitatud, rida loob uue",
+ "xl.msg.key_match_kept": "jäeti alles: vaste lükati tagasi, rida loob uue elemendi",
+ "xl.msg.key_match_undecided": "nime järgi sobitatud read ootavad otsust"
+}

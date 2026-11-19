@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "Un volum de masă nu poate fi rotit sau oglindit: istoricul formei sale nu are un pas de rotație. Mutați sau copiați-l ori desenați-l din nou în noua direcție.",
+ "sched_cats.col.name": "Nume",
+ "sched_cats.col.material": "Material",
+ "sched_cats.col.void": "Gol",
+ "sched_cats.col.inplace": "În situ",
+ "sched_cats.col.volume": "Volum net",
+ "sched_cats.col.area": "Suprafață totală",
+ "sched_cats.col.floor_area": "Suprafața pardoselii",
+ "sched_cats.col.thickness": "Grosime",
+ "sched_cats.col.points": "Puncte",
+ "elem.toposolid.points": "Puncte de topografie",
+ "elem.toposolid.count": "Puncte",
+ "elem.toposolid.low": "Cel mai jos",
+ "elem.toposolid.high": "Cel mai înalt",
+ "elem.toposolid.edit": "Editează punctele",
+ "elem.toposolid.edit_tip": "Selectați, trageți și setați cota punctelor de topografie în plan",
+ "elem.toposolid.pick_hint": "Faceți clic pe un punct din plan pentru a-l selecta. Faceți clic din nou pentru a adăuga sau elimina.",
+ "elem.toposolid.z": "Cota ({n})",
+ "elem.toposolid.mixed": "Punctele selectate diferă; o valoare nouă le setează pe toate.",
+ "elem.toposolid.edit_help": "Trageți un punct pentru a-l muta. Introduceți o valoare și apăsați Enter pentru a seta cota. Backspace elimină punctele selectate, Esc iese.",
+ "elem.toposolid.done": "Gata"
+}

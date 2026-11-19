@@ -1,0 +1,22 @@
+{
+ "ai.audit.tokens": "{n} token",
+ "ai.audit.filter.all": "Mind",
+ "ai.audit.filter.ai": "MI",
+ "ai.audit.filter.me": "Én",
+ "ai.audit.search": "Módosítások keresése",
+ "ai.audit.search.clear": "Keresés törlése",
+ "ai.audit.show_all": "Összes megjelenítése",
+ "ai.audit.empty.hint": "Itt jelennek meg a modell vagy ügynök által vázolt vagy alkalmazott módosítások, mindegyik visszavonási lehetőséggel.",
+ "ai.audit.no_match": "A szűrőnek nincs megfelelő módosítása.",
+ "ai.audit.show.tip": "Kijelöli és megjeleníti az ezzel a módosítással érintett elemeket",
+ "ai.audit.revert.ask": "Visszavonja a(z) „{what}” módosítást? {change}.",
+ "ai.audit.revert.elements": {
+  "one": "# elemváltozás",
+  "other": "# elemváltozás"
+ },
+ "ai.audit.revert.keeps": "Az újabb módosítások megmaradnak. A visszavonás egy visszavonási lépés.",
+ "ai.audit.cancel": "Mégse",
+ "ai.audit.toast.reverted": "Visszavonva: {what}",
+ "ai.audit.toast.undone": "Visszavonva: {what}",
+ "ai.audit.redo": "Újra"
+}

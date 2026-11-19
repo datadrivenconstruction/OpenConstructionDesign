@@ -1,0 +1,27 @@
+id = "G01_spiral_stair__ru"
+tier = "hard"
+group = "Any geometry"
+title = "Винтовая лестница"
+lang = "ru"
+base = "empty"
+
+[[turn]]
+say = "Сделай винтовую лестницу между двумя этажами высотой 3.2 м каждый: наружный радиус 1.5 м, 2 оборота, ступени, перила по внешнему и внутреннему краю, центральная стойка."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "stair"
+min = 1.0
+
+[[oracle.count]]
+spec = "wall+beam+brace+col+solid+mesh"
+min = 20.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

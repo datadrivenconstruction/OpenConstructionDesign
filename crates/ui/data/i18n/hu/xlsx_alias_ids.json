@@ -1,0 +1,7 @@
+{
+ "xlsx_alias_ids.ids_written": "{n} új sor azonosítót kapott az átnevezett lapon; a munkafüzet más része nem változott.",
+ "xlsx_alias_ids.ids_open": "A munkafüzet egy másik programban van megnyitva: {n} új sor azonosítói nem íródtak ki. Zárja be ott, és szinkronizáljon; ezek a sorok nem jönnek létre újra.",
+ "xlsx_alias_ids.ids_failed": "{n} új sor azonosítóit nem lehetett kiírni; a munkafüzet változatlan maradt. Ezek a sorok a következő szinkronizáláskor sem jönnek létre újra.",
+ "xlsx_alias_ids.unpaired": "{n} új sornak még nincs azonosítója; ezek emlékezve maradnak, és nem jönnek létre újra.",
+ "xlsx_alias_ids.refused": "Semmi sem lett alkalmazva: a(z) {sheets} lapok új sorai nem kaphatnak azonosítót, amíg átnevezett lap van beolvasva. Nevezze vissza a lapot a szabványos nevére (vagy törölje ezeket a sorokat), és szinkronizáljon újra."
+}

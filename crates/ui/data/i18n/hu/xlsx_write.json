@@ -1,0 +1,4 @@
+{
+ "xlsx_write.denied": "Nincs írási joga ebben a mappában. A munkafüzet nem módosult. Mentse az exportot egy másik mappába.",
+ "xlsx_write.save_to": "Mentés ide…"
+}

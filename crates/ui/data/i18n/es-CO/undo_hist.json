@@ -1,0 +1,8 @@
+{
+ "undo.undone": "Deshecho: {what}",
+ "undo.redone": "Rehecho: {what}",
+ "undo.action.edit.redo": "Rehacer",
+ "undo.action.edit.undo": "Deshacer",
+ "hdr.unsaved": "Cambios sin guardar",
+ "hdr.file_menu": "Menú Archivo"
+}

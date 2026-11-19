@@ -1,0 +1,11 @@
+{
+ "pick_rules.filter": "Επιλογή: όλα",
+ "pick_rules.filter.on": "Επιλογή: {n} εκτός",
+ "pick_rules.filter.title": "Κατηγορίες που μπορεί να επιλέξει ένα κλικ",
+ "pick_rules.filter.all": "Επιλογή όλων των κατηγοριών",
+ "pick_rules.filter.tip": "Φίλτρο επιλογής: οι κατηγορίες χωρίς σήμανση παραλείπονται στο κλικ και στο πέρασμα του δείκτη",
+ "pick_rules.here": "Στοιχεία εδώ",
+ "pick_rules.here.selected": "επιλεγμένα",
+ "pick_rules.pinned": "Επιλογή καρφιτσωμένων στοιχείων",
+ "pick_rules.here.row": "{cat} · {len}"
+}

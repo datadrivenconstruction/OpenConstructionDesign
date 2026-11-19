@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "{n} सेल पेस्ट किए गए",
+ "sched_edit.pasted_skipped": "{n} सेल पेस्ट किए गए, {k} छोड़े: {why}",
+ "sched_edit.filled": "{n} सेल भरे गए",
+ "sched_edit.filled_skipped": "{n} सेल भरे गए, {k} छोड़े: {why}",
+ "sched_edit.why_ro": "{n} केवल-पढ़ने योग्य",
+ "sched_edit.why_bad": "{n} अमान्य मान",
+ "sched_edit.no_cell": "पहले शेड्यूल में कोई सेल क्लिक करें",
+ "sched_edit.nothing": "लिखने के लिए कुछ नहीं",
+ "sched_edit.not_refreshed": "लिखा गया, पर दृश्य ताज़ा नहीं हुआ: {e}",
+ "sched_edit.failed": "नहीं बदला: {e}",
+ "sched_edit.no_changes": "कोई बदलाव नहीं: {u} सेल में ये मान पहले से हैं",
+ "sched_edit.same_tail": ", {u} पहले से समान"
+}

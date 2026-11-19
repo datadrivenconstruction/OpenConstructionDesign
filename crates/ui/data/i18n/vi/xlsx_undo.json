@@ -1,0 +1,6 @@
+{
+ "cmd.xlsx.undo_apply": "Hoàn tác lần áp dụng bảng tính gần nhất",
+ "xlsx_undo.later": "Chưa hoàn tác: mô hình đã được chỉnh sửa sau lần áp dụng bảng tính này. Hãy dùng Ctrl+Z từng bước hoặc bảng Lịch sử.",
+ "xlsx_undo.gone": "Không có gì để hoàn tác: lần áp dụng bảng tính này đã được hoàn tác.",
+ "xlsx_undo.busy": "Hãy hoàn thành hoặc hủy bản vẽ hiện tại trước, rồi hoàn tác lần áp dụng bảng tính."
+}

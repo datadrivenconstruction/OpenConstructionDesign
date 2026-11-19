@@ -1,0 +1,19 @@
+{
+ "names.level": "Razina {n}",
+ "names.slab": "Ploča 200",
+ "names.roof_slab": "Krov 200",
+ "names.sheet.plan_section": "Tlocrt i presjek prizemlja",
+ "names.sheet.plan_view": "Tlocrt prizemlja",
+ "names.sheet.site_plan": "Situacijski plan",
+ "names.sheet_set.issue": "Izdanje 1",
+ "names.title.owner": "Projekt d.o.o.",
+ "names.title.creator": "A. Ivanović",
+ "names.title.approver": "P. Petrović",
+ "names.title.document_type": "Nacrt",
+ "names.title.status": "U izradi",
+ "names.revision.date": "4. 11. 2026.",
+ "names.revision.description": "Izdano na pregled",
+ "names.revision.author": "AI",
+ "names.demo.no_levels": "nema razina",
+ "names.demo.no_sheet": "list"
+}

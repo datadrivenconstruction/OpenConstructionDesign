@@ -1,0 +1,28 @@
+id = "G18_fractal_tree"
+tier = "hard"
+group = "Any geometry"
+title = "Fractal tree structure"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "A tree-like structural canopy: one trunk branching recursively in 4 generations, each splitting into 3, branches shrinking by 0.7, total height 12 m, with a roof deck on the crown."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "col+beam+brace+solid"
+min = 80.0
+
+[[oracle.geom]]
+kind = "height"
+min = 10.0
+max = 15.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

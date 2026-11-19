@@ -1,0 +1,9 @@
+{
+ "prop_head.of_type": {
+  "one": "이 유형의 # 개",
+  "other": "이 유형의 # 개"
+ },
+ "prop_head.override_tip": "유형과 다름, 클릭하여 재설정",
+ "prop_head.reset_done": "“{name}”을(를) 유형 값으로 재설정함",
+ "prop_head.copy_id": "클릭하여 번호 복사"
+}

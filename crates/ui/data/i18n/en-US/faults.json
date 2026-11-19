@@ -1,0 +1,18 @@
+{
+ "faults.errors": {
+  "one": "# error in the model. Click to show it.",
+  "other": "# errors in the model. Click to see the list."
+ },
+ "faults.warnings": {
+  "one": "# warning in the model. Click to show it.",
+  "other": "# warnings in the model. Click to see the list."
+ },
+ "faults.title": "Model faults: {n}",
+ "faults.none": "No errors or warnings.",
+ "faults.cat.wall": "Wall",
+ "faults.cat.slab": "Slab",
+ "faults.cat.opening": "Opening",
+ "faults.cat.curtain_wall": "Curtain wall",
+ "faults.cat.ramp": "Ramp",
+ "faults.cat.zone": "Zone"
+}

@@ -1,0 +1,15 @@
+{
+ "fe.add_why_empty": "先にパラメータ名を入力してください",
+ "fe.add_why_exists": "この名前のパラメータは既に存在します。変更するには「適用」を使ってください",
+ "fe.apply_why_missing": "この名前のパラメータはありません。既存の名前を入力してください",
+ "fe.nochange": "まだ変更はありません",
+ "options.accept_more": "承認…",
+ "options.delete_more": "削除…",
+ "options.empty_title": "オプションセットはまだありません",
+ "options.more": "その他の操作: {name}",
+ "options.primary_named": "メインのオプション: {name}",
+ "options.primary_tip": "このセットのメインのオプションにします",
+ "options.select_first": "先にモデルで要素を選択してください",
+ "options.show_3d": "3D で表示: {name}",
+ "options.show_plan": "平面で表示: {name}"
+}

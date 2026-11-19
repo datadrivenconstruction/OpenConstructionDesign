@@ -1,0 +1,10 @@
+{
+ "prop_head.of_type": {
+  "one": "# מסוג זה",
+  "two": "# מסוג זה",
+  "other": "# מסוג זה"
+ },
+ "prop_head.override_tip": "שונה מהסוג, לחץ כדי לאפס",
+ "prop_head.reset_done": "“{name}” אופס לערך הסוג",
+ "prop_head.copy_id": "לחץ כדי להעתיק את המספר"
+}

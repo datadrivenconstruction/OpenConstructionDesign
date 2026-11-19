@@ -1,0 +1,28 @@
+[
+ {
+  "id": "view.drafting_new",
+  "icon": "drafting-new",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R",
+   "D"
+  ],
+  "stage": "M5",
+  "group": "create"
+ },
+ {
+  "id": "view.drafting_open",
+  "icon": "drafting-open",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R",
+   "D"
+  ],
+  "stage": "M5",
+  "group": "create"
+ }
+]

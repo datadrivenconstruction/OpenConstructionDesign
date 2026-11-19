@@ -1,0 +1,8 @@
+brief = "Small air handling unit with supply and return duct connections."
+category = "equipment"
+must = param Length
+must = param Width
+must = solids >= 1
+must = ports 2
+must = port duct 2
+must = flex Length 1600 2500

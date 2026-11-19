@@ -1,0 +1,6 @@
+{
+ "quick.keys.rec_hint": "Esc 取消 · Backspace 清除",
+ "quick.keys.row_lost": "{key} 现已归属“{cmd}”",
+ "quick.keys.row_took": "已从“{cmd}”移出 {key}",
+ "quick.keys.reset_tip": "恢复默认"
+}

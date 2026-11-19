@@ -1,0 +1,15 @@
+{
+ "xl.msg.cell_clipped": "Text wurde auf das Zellenlimit gekürzt; schreibgeschützt, Bearbeitung nicht übernommen",
+ "xlcell.status": "Exportiert. {count} Zellen wurden gekürzt oder leer gelassen — siehe Detailfenster.",
+ "xlcell.title": "Durch den Export geänderte Zellen",
+ "xlcell.intro": "Diese Zellen konnten nicht unverändert geschrieben werden. Der vollständige Wert bleibt im Modell; die Zelle ist gesperrt und kann in der Arbeitsmappe nicht bearbeitet werden.",
+ "xlcell.col_sheet": "Blatt",
+ "xlcell.col_row": "Zeile",
+ "xlcell.col_col": "Spalte",
+ "xlcell.col_id": "Element-Id",
+ "xlcell.col_what": "Was passiert ist",
+ "xlcell.what_clipped": "Text auf das Zellenlimit gekürzt",
+ "xlcell.what_blank": "Keine endliche Zahl, Zelle leer gelassen",
+ "xlcell.more": "… und {count} weitere",
+ "xlcell.close": "Schließen"
+}

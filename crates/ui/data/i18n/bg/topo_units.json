@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "Мерни единици",
+ "topo_units.unit": "Мерни единици във файла",
+ "topo_units.unit.m": "m",
+ "topo_units.unit.cm": "cm",
+ "topo_units.unit.mm": "mm",
+ "topo_units.unit.ft": "ft",
+ "topo_units.unit.usft": "US survey ft",
+ "topo_units.unit.in": "in",
+ "topo_units.unit.from_file": "Файлът посочва мерните си единици: {unit}",
+ "topo_units.unit.suggested": "Файлът не посочва мерни единици. Предложено според размера: {unit} — проверете резултата по-долу",
+ "topo_units.extent": "Резултат в мерни единици на проекта: {x} × {y} {u} в плана, диапазон на височината {z} {u}",
+ "topo_units.extent.none": "Резултат: с тези избори няма какво да се импортира",
+ "topo_units.extent.check": "Това не прилича на площадка: проверете мерните единици"
+}

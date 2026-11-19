@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "Өндөр {t} авагдсангүй ({why}). Юу ч өөрчлөгдсөнгүй",
+ "host_shape.shape.elev_prompt_in": "өндөр, фут-дюйм…",
+ "host_shape.shape.elev_in": "{v} дюйм"
+}

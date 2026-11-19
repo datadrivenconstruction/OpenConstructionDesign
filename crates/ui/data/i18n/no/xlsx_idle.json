@@ -1,0 +1,8 @@
+{
+ "xlsx_idle.idle_title": "Ingen endringer å importere",
+ "xlsx_idle.export_name": "Eksporter",
+ "xlsx_idle.export_body": "Skriver modellen til en arbeidsbok. Rediger verdiene der, og synkroniser deretter.",
+ "xlsx_idle.sync_name": "Synkroniser",
+ "xlsx_idle.sync_body": "Leser arbeidsboken på nytt og lister opp hva som er forskjellig. Modellen endres først når du bruker.",
+ "xlsx_idle.last_sync": "Sist synkronisert: {when}"
+}

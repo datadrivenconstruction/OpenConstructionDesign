@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "واپس کیا گیا — Ctrl+Y دوبارہ کرتا ہے",
+ "history.hist.empty": "ابھی کوئی تبدیلی نہیں",
+ "history.hist.empty_hint": "آپ کی ترامیم یہاں ظاہر ہوں گی۔ کسی بھی مرحلے پر کلک کر کے وہاں واپس جائیں۔",
+ "history.hist.revert_all_n": "تمام AI تبدیلیاں واپس کریں ({n})"
+}

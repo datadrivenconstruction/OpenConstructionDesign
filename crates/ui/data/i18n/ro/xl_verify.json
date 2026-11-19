@@ -1,0 +1,9 @@
+{
+ "xl.msg.base_value": "verificarea de citire a eșuat, registrul de lucru vechi este păstrat: {} ({}) se aștepta '{}', s-a citit '{}'",
+ "xl.msg.base_missing": "verificarea de citire a eșuat, registrul de lucru vechi este păstrat: foaia {} nu are rând pentru id-ul {}",
+ "xl.msg.base_extra": "verificarea de citire a eșuat, registrul de lucru vechi este păstrat: rândul {} nu există în model",
+ "xl.msg.base_refused": "verificarea de citire a eșuat, registrul de lucru vechi este păstrat: {} ({}) a fost refuzat: {}",
+ "xl.msg.base_sheet": "verificarea de citire a eșuat, registrul de lucru vechi este păstrat: foaia {} lipsește, este goală sau nu poate fi citită",
+ "xl.msg.base_newer": "verificarea de citire a eșuat, registrul de lucru vechi este păstrat: {} celule nu conțin valoarea modelului",
+ "xl.msg.base_unreadable": "verificarea de citire a eșuat, registrul de lucru vechi este păstrat: noul registru de lucru nu poate fi citit ({})"
+}

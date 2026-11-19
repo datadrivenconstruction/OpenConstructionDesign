@@ -1,0 +1,14 @@
+{
+ "cmd.mod.divide": "Хуваах",
+ "cmd.mod.divide.short": "Хуваах",
+ "cmd.mod.divide.desc": "Ханыг тэнцүү хэсгүүдэд нэг алхамаар хуваана. Хэсгийн тоог бичээд, дараа нь ханыг дарна.",
+ "whereis.mod.divide": "хуваах, тэнцүү хэсэг, хэсгүүдэд хуваах, ханыг сегментлэх",
+ "hint.split.parts": "Хуваах: ханыг дарна · тоо — хэсэг (2–100) · Esc — цуцлах",
+ "create_input.divide.bad_parts": "«{text}» хэсгийн тоо биш: 2-оос {max} хүртэлх бүхэл тоо бичнэ үү",
+ "create_input.ws.err.empty": "Байрлалд нэр бичнэ үү",
+ "create_input.ws.err.long": "Нэр хэт урт: хамгийн ихдээ 40 тэмдэгт",
+ "create_input.ws.err.preset": "Энэ нэр суурилуулсан байрлалд хамаарна",
+ "create_input.ws.err.full": "Хамгийн ихдээ 24 хадгалсан байрлал: эхлээд нэгийг устга",
+ "create_input.seldim.locked": "Зай {v} түгжсэн",
+ "create_input.seldim.positive": "Зай тэгээс их байх ёстой"
+}

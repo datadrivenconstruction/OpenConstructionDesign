@@ -1,0 +1,12 @@
+{
+ "opt.stair.straight": "Rak",
+ "opt.stair.l": "L",
+ "opt.stair.u": "U",
+ "opt.stair.gap": "Glugg",
+ "hint.stair.corner": "L-trappa: välj vändhörnet · Backsteg — ta bort sista punkten · Esc — ta bort sista punkten, utan punkter — avbryt",
+ "hint.stair.side": "Trappa: välj sidan av andra löpet · Backsteg — ta bort sista punkten · Esc — ta bort sista punkten, utan punkter — avbryt",
+ "tool.stair.flights": "{n} steghöjder (totalt {m})",
+ "tool.stair.err_split": "Varje löp behöver minst 2 steghöjder: första löpet har {n} av {m}",
+ "tool.stair.err_comfort": "Steghöjd och trädsteg bryter mot komfortregeln (2h + b)",
+ "tool.stair.err_input": "Trappstorleken ligger utanför intervallet: kontrollera bredd, höjd och podest"
+}

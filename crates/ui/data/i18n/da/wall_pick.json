@@ -1,0 +1,13 @@
+{
+ "cmd.arch.wall_pick": "Væg efter linje",
+ "cmd.arch.wall_pick.desc": "Placerer en væg på en valgt tegnelinje på den aktuelle etage. F skifter akse eller flade på linjen, Tab tager den sammenhængende kæde. Hvert valg er ét fortrydelsestrin. Virker også for gardinvægge.",
+ "hint.wall_pick.center": "Væg efter linje: vælg en tegnelinje · akse på linjen · F flade · Tab kæde · Esc afslut",
+ "hint.wall_pick.face": "Væg efter linje: vælg en tegnelinje · flade på linjen, markørens side · F akse · Tab kæde · Esc afslut",
+ "hint.wall_pick.center_chain": "Væg efter linje: vælg en linje for at tage dens kæde · akse på linjen · F flade · Tab én linje",
+ "hint.wall_pick.face_chain": "Væg efter linje: vælg en linje for at tage dens kæde · flade på linjen · F akse · Tab én linje",
+ "wall_pick.st.start": "Vælg en tegnelinje. F: akse eller flade, Tab: sammenhængende kæde",
+ "wall_pick.st.no_lines": "Ingen synlige tegnelinjer på denne etage",
+ "wall_pick.st.miss": "Ingen tegnelinje her",
+ "wall_pick.st.on_wall": "Denne linje ligger allerede under væg {id}",
+ "wall_pick.st.tight": "Fladeforskydningen passer ikke: et segment i kæden er kortere end vægtykkelsen"
+}

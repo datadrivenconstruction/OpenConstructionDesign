@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "Lisa kiht allapoole",
+ "type_layers.layer.delete": "Kustuta kiht",
+ "type_layers.layer.delete_last": "Tüübil peab olema vähemalt üks kiht",
+ "type_layers.value.bad": "Pole kehtiv positiivne väärtus",
+ "type_layers.value.required": "Kohustuslik",
+ "type_layers.unsaved.title": "Salvestamata muudatused tüübis {name}",
+ "type_layers.unsaved.body": "Kas rakendada need tüübile või loobuda neist?",
+ "type_layers.unsaved.discard": "Loobu"
+}

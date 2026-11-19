@@ -1,0 +1,14 @@
+{
+ "cmd.mod.divide": "分割",
+ "cmd.mod.divide.short": "分割",
+ "cmd.mod.divide.desc": "壁を一度に等分割します。分割数を入力してから、壁をクリックしてください。",
+ "whereis.mod.divide": "分割、等分、断片に切る、壁をセグメント化",
+ "hint.split.parts": "分割: 壁をクリック · 数値 — 分割数 (2〜100) · Esc — キャンセル",
+ "create_input.divide.bad_parts": "「{text}」は分割数ではありません: 2 から {max} までの整数を入力してください",
+ "create_input.ws.err.empty": "レイアウト名を入力してください",
+ "create_input.ws.err.long": "名前が長すぎます: 最大 40 文字",
+ "create_input.ws.err.preset": "その名前は組み込みレイアウトのものです",
+ "create_input.ws.err.full": "保存できるレイアウトは最大 24 件です。先に 1 つ削除してください",
+ "create_input.seldim.locked": "距離 {v} を固定",
+ "create_input.seldim.positive": "距離は 0 より大きい必要があります"
+}

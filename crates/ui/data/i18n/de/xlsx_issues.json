@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "Übersprungene Zeilen und Zellen",
+ "xlsx_issues.conflicts_title": "In beiden Bereichen geändert",
+ "xlsx_issues.missing_title": "Blatt in der Arbeitsmappe fehlt",
+ "xlsx_issues.look_alike_title": "Blattname stimmt nicht überein",
+ "xlsx_issues.mass_title": "Massenlöschung muss bestätigt werden",
+ "xlsx_issues.sheets_missing": "Blätter {sheets} fehlen in der Arbeitsmappe (umbenannt oder gelöscht); ihre Zeilen wurden nicht verglichen.",
+ "xlsx_issues.keep_model": "Modell behalten",
+ "xlsx_issues.take_book": "Arbeitsmappe übernehmen",
+ "xlsx_issues.open_book_tip": "Öffnet die Datei in ihrer Anwendung. Am Modell ändert sich nichts; die Vorschau lädt neu, nachdem Sie die Arbeitsmappe gespeichert haben."
+}

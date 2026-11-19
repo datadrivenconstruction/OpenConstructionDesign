@@ -1,0 +1,10 @@
+{
+ "view_gfx.vv.visible_tip": "Vidljivo u ovom pogledu",
+ "view_gfx.vv.enabled_tip": "Primijeni ovaj filtar u ovom pogledu",
+ "view_gfx.vv.reset_tip": "Natrag na zadanu vrijednost projekta",
+ "view_gfx.vv.col.actions": "Radnje",
+ "view_gfx.vv.nothing_to_apply": "Nema promjena za primjenu",
+ "view_gfx.flt.save_blocked": "Imenujte filtar i ispunite svaki parametar pravila",
+ "view_gfx.flt.confirm_delete": "Izbrisati za sve poglede?",
+ "view_gfx.flt.param_pick": "Odaberi…"
+}

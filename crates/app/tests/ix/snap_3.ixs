@@ -1,0 +1,4 @@
+walls=[(0,0)-(6,0)]
+zoom=10
+# SNAP-3: the capture radius is 12 px at any zoom: 1.2 m here
+tool(WA) move(5.0,0.5) → snap=Endpoint p=(6,0)

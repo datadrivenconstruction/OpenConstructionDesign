@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "өзүнчө",
+ "draw_quality.custom.tip": "{name}: бул долбоордун жазуусу",
+ "draw_quality.custom_note": "“Өзүнчө” белгиси бар жазуулар бул долбоорго таандык.",
+ "draw_quality.unsaved.lib_body": "Аларды китепканага сактайсызбы же таштайсызбы?",
+ "draw_quality.unsaved.styles_body": "Аларды көрүнүшкө колдонобу же таштайбы?",
+ "draw_quality.unsaved.both_body": "Аларды колдонобу же таштайбы?",
+ "draw_quality.halftone": "{category} жарым тон",
+ "draw_quality.styles.name": "Сызык стилдери",
+ "draw_quality.styles.other_level": "{level} деңгээлинин сакталбаган стиль өзгөртүүлөрү: бул деңгээлди түзөтүү үчүн аларды колдонуңуз же кайтарыңыз."
+}

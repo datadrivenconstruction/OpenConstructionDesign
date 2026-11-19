@@ -1,0 +1,16 @@
+{
+ "cmd.drawing.to_detail": "Tekening naar detail",
+ "cmd.drawing.to_detail.desc": "Zet de geselecteerde tekenprimitieven, of de hele tekening op deze verdieping, om in detaillijnen, tekstnotities en vlakken op de plattegrond. De tekening blijft ongewijzigd.",
+ "detail_items.st.no_drawing": "Geen tekening op deze verdieping",
+ "detail_items.st.nothing": "Niets om te converteren: geen lijnen, bogen, teksten of vullingen op zichtbare lagen",
+ "detail_items.st.done": "Detailonderdelen toegevoegd: lijnen {lines}, teksten {texts}, vlakken {regions}",
+ "detail_items.st.failed": "Detailonderdelen konden niet worden toegevoegd: {e}",
+ "detail_items.st.warn": "Detailonderdelen toegevoegd, maar de weergave kon niet worden vernieuwd (lijnen {lines}, teksten {texts}, vlakken {regions}): {e}. Ongedaan maken verwijdert ze.",
+ "detail_items.st.bad_view": "Detailonderdelen vereisen een plattegrond- of doorsnedeweergave",
+ "detail_items.st.no_transform": "Deze weergave heeft geen bruikbaar coördinatenstelsel voor de tekening; er is niets toegevoegd",
+ "drafting_tools.free.plan_only": "Deze opdracht werkt op plattegrondelementen; open een plattegrond",
+ "drafting_tools.free.zero": "De twee punten vallen samen; er is niets toegevoegd",
+ "drafting_tools.free.select_first": "Selecteer eerst de onderdelen van deze weergave die u wilt verdelen",
+ "drafting_tools.free.pick_item": "Klik op een onderdeel van deze weergave om het te taggen",
+ "drafting_tools.free.dim_kind": "Alleen lineaire maatvoering werkt in een tekenweergave"
+}

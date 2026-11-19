@@ -1,0 +1,14 @@
+{
+ "ai.stream.waiting": "Naghihintay sa model",
+ "ai.stream.reading": "Binabasa ang model",
+ "ai.stream.working": "Gumagawa",
+ "ai.stream.answering": "Isinusulat ang sagot",
+ "ai.stream.tools_one": "1 kasangkapan",
+ "ai.stream.tools_many": "{n} na tool",
+ "ai.stream.secs": "{n} s",
+ "ai.stream.stalled": "Naghihintay pa rin sa serbisyo ng model",
+ "ai.stream.stop": "Itigil",
+ "ai.stream.cancelled": "Itinigil",
+ "ai.stream.incomplete": "Hindi kumpleto ang draft. Walang na-apply sa model.",
+ "ai.stream.sep": " · "
+}

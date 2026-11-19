@@ -1,0 +1,6 @@
+{
+ "sched_import.no_key": "Bu ish kitobida eksport yozuvi yo'q (eskiroq eksport): o'sha eksportdan keyin modelda o'zgargan kataklar ustiga yozilishi mumkin. Qo'llashdan oldin o'zgargan kataklarni tekshiring.",
+ "sched_import.n_kept": "Eksportdan keyin modelda o'zgartirilgan, saqlangan: {n}",
+ "sched_import.n_conflict": "Ham ish kitobida, ham modelda o'zgartirilgan, qo'llanmadi: {n}",
+ "sched_import.why_conflict": "eksportdan keyin modelda o'zgartirilgan (hozir {model}), qo'llanmadi"
+}

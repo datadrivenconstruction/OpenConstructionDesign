@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "רדיוס הצמדה",
+ "snap_refine.settings.snap_px_desc": "עד כמה הסמן חייב להתקרב לנקודה או לקו כדי להיצמד, בפיקסלים של המסך. ערך גדול יותר עוזר במסכי מגע ובצפיפות פיקסלים גבוהה.",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "אופקי",
+ "snap_refine.hint.vertical": "אנכי",
+ "snap_refine.hint.perpendicular": "מאונך לקודם",
+ "snap_refine.hint.parallel": "מקביל לקודם",
+ "snap_refine.hint.on_axis": "על ציר הקיר",
+ "snap_refine.no_snap": "ללא הצמדה (Alt)"
+}

@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "Αγωγός αέρα",
+ "mep3d.pipe": "Σωλήνας",
+ "mep3d.tray": "Θήκη καλωδίων",
+ "mep3d.conduit": "Αγωγός",
+ "mep3d.system": "Σύστημα",
+ "mep3d.length": "Μήκος",
+ "mep3d.diameter": "Διάμετρος",
+ "mep3d.width": "Πλάτος",
+ "mep3d.height": "Ύψος",
+ "mep3d.insulation": "Μόνωση",
+ "mep3d.tip": "Enter — εφαρμογή· τα εξαρτήματα υπολογίζονται ξανά",
+ "mep3d.size_positive": "το μέγεθος πρέπει να είναι μεγαλύτερο από μηδέν",
+ "mep3d.not_changed": "δεν άλλαξε: {e}",
+ "mep3d.copied": "η γραμμή αντιγράφηκε",
+ "mep3d.changed": "η γραμμή άλλαξε",
+ "mep3d.deleted": "διαγράφηκαν στοιχεία: {n}",
+ "mep3d.not_deleted": "δεν διαγράφηκε: {e}",
+ "mep3d.no_wall_type": "χωρίς τύπο τοίχου",
+ "mep3d.demo.supply": "Παροχή S1",
+ "mep3d.demo.heating": "Θέρμανση",
+ "mep3d.demo.power": "Ισχύς"
+}

@@ -1,0 +1,42 @@
+{
+ "ai.tool.show_elements": "Affichage des éléments",
+ "ai.tool.isolate_elements": "Isolement des éléments",
+ "ai.tool.color_by": "Coloration par valeur",
+ "ai.tool.reset_view": "Réinitialisation de la vue",
+ "ai_found.found.query": "Trouvés",
+ "ai_found.found.show": "Affichés",
+ "ai_found.found.isolate": "Isolés",
+ "ai_found.found.hide": "Masqués",
+ "ai_found.found.color": "Colorés",
+ "ai_found.found.count": "{n} sur {m}",
+ "ai_found.found.none": "Aucune correspondance. Essayez un filtre plus large.",
+ "ai_found.found.show_btn": "Afficher",
+ "ai_found.found.show_tip": "Sélectionner ces éléments et les zoomer en plan et en 3D",
+ "ai_found.found.isolate_btn": "Isoler",
+ "ai_found.found.isolate_tip": "Afficher uniquement ces éléments jusqu'à Réinitialiser la vue",
+ "ai_found.found.select_btn": "Sélectionner",
+ "ai_found.found.select_tip": "Sélectionner ces éléments sans déplacer la vue",
+ "ai_found.legend.title": "Coloration par {by}",
+ "ai_found.legend.row_tip": "Cliquer pour sélectionner ces éléments",
+ "ai_found.legend.empty_value": "Sans valeur",
+ "ai_found.legend.other": {
+  "one": "# autre valeur",
+  "other": "# autres valeurs"
+ },
+ "ai_found.view.title": "Vue de l'assistant IA",
+ "ai_found.view.reset": "Réinitialiser la vue",
+ "ai_found.view.reset_tip": "Rétablir la vue d'avant la modification par l'assistant IA",
+ "ai_found.view.shown": {
+  "one": "# élément affiché",
+  "other": "# éléments affichés"
+ },
+ "ai_found.view.isolated": {
+  "one": "# élément isolé",
+  "other": "# éléments isolés"
+ },
+ "ai_found.view.hidden": {
+  "one": "# élément masqué",
+  "other": "# éléments masqués"
+ },
+ "ai_found.found.line": "{what} : {count}"
+}

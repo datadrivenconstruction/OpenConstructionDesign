@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "Справка за клавишни комбинации",
+ "cmd.help.shortcuts.desc": "Показва всяка клавишна комбинация, както е в момента, по контекст. Натиснете ? навсякъде извън текстово поле.",
+ "sheet.title": "Клавишни комбинации",
+ "sheet.filter": "Филтриране по команда или клавиш",
+ "sheet.filter_label": "Филтриране на клавишните комбинации",
+ "sheet.customize": "Персонализиране…",
+ "sheet.close": "Затваряне",
+ "sheet.esc_close": "за затваряне",
+ "sheet.none": "Няма съвпадащи клавишни комбинации",
+ "sheet.none_hint": "Опитайте друга дума или клавиш.",
+ "sheet.sec.general": "Общи",
+ "sheet.sec.plan": "План",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "Спецификации",
+ "sheet.sec.sheets": "Листове",
+ "sheet.sec.ai": "AI"
+}

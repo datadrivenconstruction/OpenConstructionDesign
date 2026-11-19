@@ -1,0 +1,13 @@
+{
+ "tags.gone": "Belgi endi mavjud emas",
+ "tags.readonly_wall": "Devor belgisi turini ko'rsatadi va bu yerda tahrirlanmaydi: devor turini o'zgartiring",
+ "tags.readonly_comp": "Komponent belgisi oilani ko'rsatadi va bu yerda tahrirlanmaydi: turini o'zgartiring",
+ "tags.locked": "Element qulflangan: belgini tahrirlash uchun qulfini oching",
+ "tags.done": "Belgi qiymati yozildi",
+ "tags.failed": "Belgi o'zgartirilmadi: {e}",
+ "tags.dup_door": "{mark} yana {n} ta eshikda",
+ "tags.dup_window": "{mark} yana {n} ta derazada",
+ "tags.dup_room": "{mark} yana {n} ta xonada",
+ "tags.hint_mark": "Belgi",
+ "tags.hint_name": "Xona nomi"
+}

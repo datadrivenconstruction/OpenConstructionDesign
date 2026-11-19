@@ -1,0 +1,283 @@
+{
+ "items": [
+  {
+   "key": "egress.travel_max",
+   "value": 30,
+   "unit": "m",
+   "source": "ar-caba-ce",
+   "clause": "3.4.7.6(b)",
+   "url": "https://documentosboletinoficial.buenosaires.gob.ar/publico/PL-LEY-LCABA-LCBA-6100-18-ANX.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "On upper floors no point may be farther than 30 m from a protected exit stair, halved in basements.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ],
+    "sprinklered": false
+   },
+   "verified": true,
+   "note": "read 2026-11-14; national Decree 351/79 Annex VII item 3.2.3.2 allows 40 m (read in a university copy)"
+  },
+  {
+   "key": "egress.travel_max.office",
+   "value": 30,
+   "unit": "m",
+   "source": "ar-caba-ce",
+   "clause": "3.4.7.6(b)",
+   "url": "https://documentosboletinoficial.buenosaires.gob.ar/publico/PL-LEY-LCABA-LCBA-6100-18-ANX.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "The same 30 m limit to a protected exit stair applies to office floors; no separate office value exists.",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "sprinklered": false
+   },
+   "verified": true,
+   "note": "read 2026-11-14; national rule 40 m"
+  },
+  {
+   "key": "daylight.window_floor_ratio",
+   "value": 0.0667,
+   "unit": "ratio",
+   "source": "ar-caba-ce",
+   "clause": "3.3.2.3(a)",
+   "url": "https://documentosboletinoficial.buenosaires.gob.ar/publico/PL-LEY-LCABA-LCBA-6100-18-ANX.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Permanent-use rooms need daylight opening area of floor area divided by 15 for a side opening free of cover (divided by 12 under a covered part).",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14; 1/12 = 0.0833 if the opening is under a covered area; 20 percent reduction allowed on north-facing walls"
+  },
+  {
+   "key": "corridor.width_min.accessible",
+   "value": 1.2,
+   "unit": "m",
+   "source": "ar-dec914",
+   "clause": "Annex I, Art. 21 item A.1.4.1 horizontal circulation",
+   "url": "https://boletinoficial.buenosaires.gob.ar/normativaba/norma/45091",
+   "accessed": "2026-11-14",
+   "paraphrase": "Horizontal corridors need a minimum side of 1.20 m with 1.50 m widenings every 20 m; exterior routes 1.50 m.",
+   "verified": true,
+   "note": "read 2026-11-14 in the official city gazette copy"
+  },
+  {
+   "key": "door.clear_min.accessible",
+   "value": 0.8,
+   "unit": "m",
+   "source": "ar-dec914",
+   "clause": "Annex I, Art. 21 item A.1.3.1",
+   "url": "https://boletinoficial.buenosaires.gob.ar/normativaba/norma/45091",
+   "accessed": "2026-11-14",
+   "paraphrase": "Minimum clear passage of a door is 0.80 m, except rooms narrower than 0.80 m.",
+   "verified": true,
+   "note": "read 2026-11-14; Decree 467/98 0.90 m door concerns public transport vehicles, not buildings"
+  },
+  {
+   "key": "accessible.turning_circle",
+   "value": 1.5,
+   "unit": "m",
+   "source": "ar-dec914",
+   "clause": "Annex I, Art. 21 item A.1.4.1",
+   "url": "https://boletinoficial.buenosaires.gob.ar/normativaba/norma/45091",
+   "accessed": "2026-11-14",
+   "paraphrase": "A 1.50 m diameter circle must fit at corridor ends and every 20 m, at ramp landings and in lift cabins.",
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "ramp.slope_max",
+   "value": 0.0833,
+   "unit": "ratio",
+   "source": "ar-dec914",
+   "clause": "Annex I, Art. 21 items A.1.4.2.2.1-2",
+   "url": "https://boletinoficial.buenosaires.gob.ar/normativaba/norma/45091",
+   "accessed": "2026-11-14",
+   "paraphrase": "Ramp slope is tied to height overcome: 1:12 (8.33 percent) up to 0.30 m rise indoors or 0.20 m outdoors; gentler slopes (1:20 to 1:25) for rises up to 1.40 m.",
+   "verified": true,
+   "note": "read 2026-11-14; steeper 1:8 and 1:10 only for tiny rises (0.075 and 0.20 m); flights limited to 6 m horizontal projection"
+  },
+  {
+   "key": "fire.compartment_area_max",
+   "value": 1000,
+   "unit": "m2",
+   "source": "ar-dec351",
+   "clause": "Annex VII item 6.2.3 (construction condition C3)",
+   "url": "https://www1.ing.unlp.edu.ar/sitio/administracion/concursos/archivos/Decreto-351-79.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Fire sectors under condition C3 must not exceed 1000 m2 of floor; 2000 m2 if fully sprinklered.",
+   "applies": {
+    "sprinklered": false
+   },
+   "verified": false,
+   "note": "searched 2026-11-14: official argentina.gob.ar Annex VII page returned 404; clause text read only on a university copy (www1.ing.unlp.edu.ar); mapping of office/residential uses to condition C3 not found in the text (tables not extractable)"
+  },
+  {
+   "key": "fire.compartment_area_max.sprinklered",
+   "value": 2000,
+   "unit": "m2",
+   "source": "ar-dec351",
+   "clause": "Annex VII item 6.2.3 (condition C3)",
+   "url": "https://www1.ing.unlp.edu.ar/sitio/administracion/concursos/archivos/Decreto-351-79.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Instead of fire walls, sprinklers allow condition-C3 sectors up to 2000 m2.",
+   "applies": {
+    "sprinklered": true
+   },
+   "verified": false,
+   "note": "searched 2026-11-14: same as unsprinklered entry; clause read on university copy only, use-to-C3 mapping unconfirmed"
+  },
+  {
+   "key": "stair.riser_max",
+   "value": 0.18,
+   "unit": "m",
+   "source": "ar-caba-ce",
+   "clause": "3.4.3.1(b)",
+   "url": "https://documentosboletinoficial.buenosaires.gob.ar/publico/PL-LEY-LCABA-LCBA-6100-18-ANX.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Main stair riser between 0.15 and 0.18 m (0.16 m max for accessible stairs in mass-use buildings); 2R+G must be 0.60-0.63 m.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14; accessibility decree 914/97 narrows to 0.14-0.16 m"
+  },
+  {
+   "key": "stair.tread_min",
+   "value": 0.26,
+   "unit": "m",
+   "source": "ar-caba-ce",
+   "clause": "3.4.3.1(b)",
+   "url": "https://documentosboletinoficial.buenosaires.gob.ar/publico/PL-LEY-LCABA-LCBA-6100-18-ANX.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Main stair tread (going) between 0.26 and 0.30 m.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14; decree 914/97 requires 0.28-0.30 m for accessible stairs"
+  },
+  {
+   "key": "stair.width_min",
+   "value": 1.2,
+   "unit": "m",
+   "source": "ar-caba-ce",
+   "clause": "3.4.3.1(d)1",
+   "url": "https://documentosboletinoficial.buenosaires.gob.ar/publico/PL-LEY-LCABA-LCBA-6100-18-ANX.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "General minimum clear width of a main stair is 1.20 m (1.10 m on narrow lots up to 8.66 m wide).",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "stair.riser_max.house",
+   "value": 0.18,
+   "unit": "m",
+   "source": "ar-caba-ce",
+   "clause": "3.4.3.1(b)",
+   "url": "https://documentosboletinoficial.buenosaires.gob.ar/publico/PL-LEY-LCABA-LCBA-6100-18-ANX.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "No separate house value found; the main-stair riser range of 0.15-0.18 m applies.",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14; single-dwelling-specific rule only for width"
+  },
+  {
+   "key": "stair.tread_min.house",
+   "value": 0.26,
+   "unit": "m",
+   "source": "ar-caba-ce",
+   "clause": "3.4.3.1(b)",
+   "url": "https://documentosboletinoficial.buenosaires.gob.ar/publico/PL-LEY-LCABA-LCBA-6100-18-ANX.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "No separate house value found; the main-stair going range of 0.26-0.30 m applies.",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "stair.width_min.house",
+   "value": 1.0,
+   "unit": "m",
+   "source": "ar-caba-ce",
+   "clause": "3.4.3.1(d)1",
+   "url": "https://documentosboletinoficial.buenosaires.gob.ar/publico/PL-LEY-LCABA-LCBA-6100-18-ANX.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "A stair serving a single dwelling, or a multi-dwelling plot with four or fewer units, needs only 1.00 m clear width.",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "room.height_min",
+   "value": 2.6,
+   "unit": "m",
+   "source": "ar-caba-ce",
+   "clause": "3.3.1.2.1 table",
+   "url": "https://documentosboletinoficial.buenosaires.gob.ar/publico/PL-LEY-LCABA-LCBA-6100-18-ANX.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "First-class (permanent habitation or work) rooms need clear height of 2.60 m regardless of area; service rooms 2.10-2.30 m.",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "room.height_min.office",
+   "value": 2.6,
+   "unit": "m",
+   "source": "ar-caba-ce",
+   "clause": "3.3.1.2.1 table, class 1; class 3 for commercial work rooms",
+   "url": "https://documentosboletinoficial.buenosaires.gob.ar/publico/PL-LEY-LCABA-LCBA-6100-18-ANX.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Permanent work rooms are first class at 2.60 m; third-class rooms for commerce and trade need 2.40 m up to 16 m2, 2.60 to 50 m2, 2.80 above.",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14; office classified as first class (permanent work) by interpretation"
+  }
+ ]
+}

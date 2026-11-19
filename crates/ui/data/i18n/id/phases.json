@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D",
+ "phases.current_mark": "aktif",
+ "phases.make_current": "Jadikan aktif",
+ "phases.col_phase": "Fase",
+ "phases.col_filter": "Saring",
+ "phases.presets": "Preset denah",
+ "phases.del_title": "Hapus fase",
+ "phases.del_text": "Hapus fase \"{name}\"? Elemennya dipindah ke fase yang dipilih di bawah.",
+ "phases.del_into": "Pindahkan elemen ke",
+ "phases.del_ok": "Hapus",
+ "phases.col_kind": "Jenis elemen",
+ "phases.col_count": "Jumlah",
+ "phases.col_volume": "Volume"
+}

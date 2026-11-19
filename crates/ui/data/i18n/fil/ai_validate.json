@@ -1,0 +1,14 @@
+{
+ "ai.issue.integrity": "Problema sa integridad: {0} {1}: {2}",
+ "ai.issue.opening_outside": "Hindi kasya sa dingding ang bukas: {0}",
+ "ai.issue.opening_overlap": "Nagsasapaw ang bukas sa bukas {0}",
+ "ai.issue.wall_warning": "Dingding: {0}",
+ "ai.issue.cut_warning": "Putol: {0}",
+ "ai.issue.room_open": "Hindi sarado ang kuwarto",
+ "ai.issue.material_unknown": "Walang materyales na pinangalang “{0}” sa proyekto: magdaragdag ang Apply ng bago na may default na katangian",
+ "ai.issue.material_suggest": "Walang materyales na pinangalang “{0}” sa proyekto: magdaragdag ng bago ang Apply. Ito ba ang ibig mong sabihin, “{1}”?",
+ "ai.issue.conflict": "Hindi maaaring patakbuhin ang item na ito: {0}",
+ "ai.issue.too_large": "{0} elemento ang magbabago, lampas sa limitasyon na {1}. Kailangan ng pahintulot",
+ "ai.issue.truncated": "Huminto ang listahan ng pagbabago sa {0} row: mas malaki ang plan kaysa sa maipapakita ng card. Kailangan ng pahintulot",
+ "ai.issue.replan_failed": "Hindi muling makalkula ang plan. Kumukuha ng bagong kopya ng model"
+}

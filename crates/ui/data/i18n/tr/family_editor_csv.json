@@ -1,0 +1,11 @@
+{
+ "fe.csv.apply": "İçe aktarmayı uygula",
+ "fe.csv.cancel": "Önizlemeyi at",
+ "fe.csv.nothing": "Değişecek bir şey yok: katalog mevcut tiplerle eşleşiyor",
+ "fe.csv.preview": "İçe aktarma önizlemesi: {added} yeni, {changed} değiştirilmiş, {same} değişmemiş tip; {values} değer değişir",
+ "fe.csv.preview_hint": "Boş hücreler ve eksik sütunlar mevcut değerleri korur. Uygulayana kadar hiçbir şey değişmez.",
+ "fe.csv.skipped": "Uygulanmadı, değer korundu: {msg}",
+ "fe.csv.type_added": "Yeni tip {name}",
+ "fe.csv.type_changed": "Tip {name}",
+ "fe.csv.value": "  {param}: {old} → {new}"
+}

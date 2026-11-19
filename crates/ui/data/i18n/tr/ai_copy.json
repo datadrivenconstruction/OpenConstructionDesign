@@ -1,0 +1,8 @@
+{
+ "cmd.file.save_copy": "Başkası için kopya kaydet…",
+ "cmd.file.save_copy.desc": "Projenin, yapay zeka onayı olmadan ve siz aksini seçmedikçe yapay zeka günlüğü olmadan bir kopyasını kaydeder. Bu proje olduğu gibi kalır.",
+ "ai.copy.title": "Kopyayı kaydet",
+ "ai.copy.journal": "Kopyaya yapay zeka günlüğü eklensin mi? Günlük istekleri, yanıtları ve adresleri içerir. Bulut onayı hiçbir zaman kopyalanmaz: diğer kişi kendi kararını verir. Günlüğü dışarıda bırakmak için Hayır'ı seçin.",
+ "ai.copy.done": "Kopya kaydedildi: {name}",
+ "ai.copy.same": "Başka bir dosya seçin: kopya açık projenin yerini alamaz."
+}

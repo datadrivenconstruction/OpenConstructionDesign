@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "X-axel",
+ "fe.axis.y": "Y-axel",
+ "fe.axis.z": "Z-axel",
+ "fe.col.axis": "Axel",
+ "fe.col.at": "Placering",
+ "fe.col.mode": "Läge",
+ "fe.mode.fixed": "Fast",
+ "fe.mode.free": "Fri",
+ "fe.types.inherited": "Standard från parameter",
+ "fe.csv.more": "Fler CSV-åtgärder",
+ "fe.ref.selected": "Plan: {name}"
+}

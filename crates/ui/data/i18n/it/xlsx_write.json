@@ -1,0 +1,4 @@
+{
+ "xlsx_write.denied": "Nessun diritto di scrittura in questa cartella. La cartella non è stata modificata. Salva l'esportazione in un'altra cartella.",
+ "xlsx_write.save_to": "Salva in…"
+}

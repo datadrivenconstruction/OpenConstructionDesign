@@ -1,0 +1,7 @@
+{
+ "spline.opt.spline": "Splain",
+ "spline.opt.spline_tip": "Splainsein: klõpsa punktid, mida see läbib; lõpetamiseks Enter või Esc",
+ "spline.wt.three_points": "splainseinaks on vaja vähemalt kolme punkti",
+ "spline.wt.no_curtain": "klaasseinal pole splainteljet",
+ "spline.wt.added": "splainsein lisatud"
+}

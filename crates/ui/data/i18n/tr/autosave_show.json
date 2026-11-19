@@ -1,0 +1,4 @@
+{
+ "cmd.mgr.autosave_show": "Otomatik kaydetmeyi göster",
+ "cmd.mgr.autosave_show.desc": "Otomatik kayıt penceresini açar; zaten açıksa açık kalır."
+}

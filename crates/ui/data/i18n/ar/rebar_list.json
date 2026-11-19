@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "نقل لأعلى",
+ "rebar_list.move_down": "نقل لأسفل",
+ "rebar_list.remove": "إزالة",
+ "rebar_list.zone_remove_last": "المنطقة تحتاج غرفة واحدة على الأقل: احذف المنطقة لإزالة الأخيرة",
+ "rebar_list.rebar_empty_title": "لا يوجد حديد تسليح في هذا النموذج",
+ "rebar_list.rebar_empty_hint": "ضع حديد التسليح في عنصر مستضيف وستُجدوَل هنا.",
+ "rebar_list.rebar_empty_action": "وضع حديد التسليح"
+}

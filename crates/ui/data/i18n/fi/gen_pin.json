@@ -1,0 +1,7 @@
+{
+ "gen.pin.room": "Muutit luodun hankkeen tilaa. Kiinnitä se, jotta muokkaus pitää sen paikallaan.",
+ "gen.pin.storey": "Muutit luodun hankkeen kerrosta. Kiinnitä se, jotta muokkaus säilyttää sen seinät ja aukot.",
+ "gen.pin.action": "Kiinnitä",
+ "gen.pin.done": "Kiinnitetty: hankkeen muokkaus säilyttää tämän ja sijoittaa muun ympärille",
+ "gen.pin.failed": "Kiinnitys ei onnistunut"
+}

@@ -1,0 +1,8 @@
+{
+ "script_rec.started": "Opname: de wijzigingen die je vanaf nu maakt, gaan naar een script. Kies “Acties naar script opnemen” opnieuw om te stoppen.",
+ "script_rec.saved": "Script “{name}” opgeslagen: {n} wijzigingen.",
+ "script_rec.skipped": "{k} wijzigingen door hulpmiddelen zonder scriptvorm zijn niet opgenomen.",
+ "script_rec.nothing": "Opname gestopt: er zijn geen wijzigingen om op te slaan.",
+ "script_rec.failed": "De opname is niet opgeslagen: {why}",
+ "script_rec.no_folder": "geen instellingenmap voor scripts"
+}

@@ -1,0 +1,13 @@
+{
+ "mep.sys.duct": "Suplay S1",
+ "mep.sys.pipe": "Malamig na tubig C1",
+ "mep.sys.tray": "Kuryente",
+ "mep.round": "Bilog",
+ "mep.material": "Materyal",
+ "mep3d.elevation": "Elevation mula sa level",
+ "mep3d.slope": "Dalisdis",
+ "mep3d.shape": "Hugis",
+ "mep3d.shape.rect": "Parihaba",
+ "mep3d.shape.round": "Bilog",
+ "mep3d.shape.oval": "Patag na oval"
+}

@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "Тепкичтер",
+ "selcat.railing": "Перилалар",
+ "quick.cat.stair": "Тепкичтер",
+ "quick.cat.railing": "Перилалар",
+ "stair.risers": "Басмалар",
+ "stair.riser": "Басмалардын бийиктиги",
+ "stair.comfort": "2R + T",
+ "stair.tread_auto": "Эреже боюнча басма",
+ "stair.tread_auto_tip": "Жазылган басманы таштап, басманы 2R + T эрежеси менен аныктаңыз",
+ "stair.broken": "Бул тепкич деңгээлдерге туура келбейт",
+ "railing.host_stair": "#{id} тепкичине бекитилген",
+ "railing.host_path": "Эскиз перила",
+ "railing.length": "Узундугу",
+ "stair.deleted_with": "{n} бекитилген перила менен"
+}

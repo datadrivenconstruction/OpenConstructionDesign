@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "Νέα οικογένεια",
+ "family_editor.open_tip": "Άνοιγμα οικογένειας ή πρόχειρου",
+ "family_editor.close_named": "Κλείσιμο {name}",
+ "family_editor.unsaved": "Μη αποθηκευμένες αλλαγές",
+ "family_editor.search": "Αναζήτηση",
+ "family_editor.nothing": "Δεν βρέθηκε τίποτα",
+ "family_editor.sec_families": "Οικογένειες έργου",
+ "family_editor.sec_drafts": "Πρόχειρα",
+ "family_editor.cap_category": "Κατηγορία",
+ "family_editor.cap_host": "Φορέας",
+ "family_editor.cap_type": "Τύπος προεπισκόπησης"
+}

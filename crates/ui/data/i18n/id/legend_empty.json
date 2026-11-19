@@ -1,0 +1,5 @@
+{
+ "legend.legend.empty_hint": "Masukkan nama di atas lalu tekan Buat.",
+ "legend.legend.pick_hint": "Pilih legenda dari daftar di atas.",
+ "legend.legend.taken": "Legenda bernama \"{name}\" sudah ada. Masukkan nama lain."
+}

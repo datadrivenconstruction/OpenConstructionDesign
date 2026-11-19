@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "Цэг",
+ "trial.field.distance": "Зай",
+ "trial.field.target": "Элемент",
+ "trial.refused": "{field}: {reason}. Хэрэглэхийн тулд өөрчилнө үү",
+ "trial.preview_off": "Урьдчилан харах унтраалттай: загвар хэт том"
+}

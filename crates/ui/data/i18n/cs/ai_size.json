@@ -1,0 +1,10 @@
+{
+ "ai.size.count": "~{n} / {max} tokenů",
+ "ai.size.block": "Pro tento model je to příliš dlouhé: ~{n} tokenů, vejde se až {max} a zbyde místo na odpověď — zkraťte to nebo rozdělte",
+ "ai.size.trim": "Zkrátit, aby se vešlo",
+ "ai.size.trim_tip": "Zkrátí konec zprávy, aby se vešla. Nic se nezkrátí, dokud neklepnete.",
+ "ai.size.drop_view": "Vynechat pohled",
+ "ai.size.drop_level": "Vynechat podlaží",
+ "ai.size.drop_selection": "Vynechat výběr",
+ "ai.size.sep": ","
+}

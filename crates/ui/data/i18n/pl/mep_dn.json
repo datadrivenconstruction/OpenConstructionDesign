@@ -1,0 +1,5 @@
+{
+ "mep_dn.dn.unset": "Nie ustawiono",
+ "mep_dn.slope.err": "Wpisz spadek w %, np. 1.5",
+ "mep_dn.err.rejected": "wartość nie jest przyjęta"
+}

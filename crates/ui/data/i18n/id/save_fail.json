@@ -1,0 +1,16 @@
+{
+ "save_fail.save_fail.title": "Proyek tidak tersimpan",
+ "save_fail.save_fail.kept": "Perubahan Anda masih terbuka di sini. Tidak ada yang hilang selama editor tetap terbuka.",
+ "save_fail.save_fail.details": "Detail",
+ "save_fail.save_fail.copy": "Salin",
+ "save_fail.save_fail.save_as": "Simpan sebagai…",
+ "save_fail.save_fail.retry": "Coba lagi",
+ "save_fail.save_fail.close": "Tutup",
+ "save_fail.cause.full": "Disk penuh. Kosongkan ruang atau simpan proyek ke drive lain.",
+ "save_fail.cause.denied": "Folder atau file ini hanya-baca, atau Anda tidak memiliki izin menulis di sini. Pilih folder lain.",
+ "save_fail.cause.locked": "File dibuka di program lain. Tutup di sana, lalu tekan Coba lagi.",
+ "save_fail.cause.missing": "Folder sudah tidak ada. Pilih folder lain, atau pulihkan dan tekan Coba lagi.",
+ "save_fail.cause.offline": "Drive atau folder jaringan tidak tersedia. Sambungkan kembali dan tekan Coba lagi, atau simpan di tempat lain.",
+ "save_fail.cause.too_long": "Path file terlalu panjang. Pilih folder atau nama file yang lebih pendek.",
+ "save_fail.cause.other": "File tidak dapat ditulis: {detail}"
+}

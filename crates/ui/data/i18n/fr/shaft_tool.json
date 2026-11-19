@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "Gaines",
+ "quick.cat.shaft": "Gaines",
+ "shaft_tool.browser.shaft": "Gaine #{id}",
+ "shaft_tool.shaft.top": "Niveau supérieur",
+ "shaft_tool.shaft.cuts": "Éléments découpés",
+ "shaft_tool.shaft.cut_area": "Surface découpée",
+ "shaft_tool.shaft.cut_volume": "Volume découpé",
+ "elem.no.rooms": "Suit les pièces qu'elle contient"
+}

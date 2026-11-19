@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "In de wachtrij achter de lopende taak: {n}",
+ "import_queue.queue_full": "De wachtrij is vol, {n} bestanden zijn niet toegevoegd",
+ "import_queue.changed": "{name} is bijgewerkt nadat dit project is gemaakt. Het vorige project is geopend.",
+ "import_queue.import_again": "Opnieuw importeren",
+ "import_queue.kept": "De voltooide import wordt bewaard",
+ "import_queue.open_it": "Openen",
+ "import_queue.sum.head": "import: {editable} bewerkbaar (wanden {walls}, openingen {open}, vloeren {slabs}, ruimten {rooms}, overig {other}), {meshes} als mesh",
+ "import_queue.sum.unchanged": ", ongewijzigd {n}",
+ "import_queue.sum.updated": ", bijgewerkt {n}",
+ "import_queue.sum.missing": ", niet in de bron {n} (bewaard)",
+ "import_queue.sum.skipped": ", overgeslagen {n}",
+ "import_queue.sum.warnings": ", waarschuwingen {n}",
+ "import_queue.import_failed": "import mislukt: {e}"
+}

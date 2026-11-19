@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "Apertura abbaino",
+ "cmd.arch.roof_opening": "Apertura nel tetto",
+ "cmd.arch.roof_extrusion": "Tetto per estrusione",
+ "cmd.arch.ceiling_opening": "Apertura nel soffitto",
+ "cmd.str.slab_opening": "Apertura nel solaio",
+ "cmd.ctx.wall.detach": "Stacca sommità",
+ "cmd.ctx.floor.sketch": "Modifica contorno",
+ "cmd.ctx.floor.shape": "Modifica forma",
+ "host_shape.shape.elev_prompt": "quota, mm…",
+ "host_shape.shape.elev_mm": "{v} mm",
+ "host_shape.sketch.no_host": "nessun elemento ospitante sotto il contorno su questo livello",
+ "host_shape.issue.roof": "tetto {id}: {e}",
+ "host_shape.issue.ceiling": "soffitto {id}: {e}",
+ "host_shape.status.select_slab": "seleziona un solaio",
+ "host_shape.status.select_walls": "seleziona muri",
+ "host_shape.status.no_roof_or_level": "nessun tetto o livello sopra",
+ "host_shape.status.top_attached": "sommità dei muri collegate",
+ "host_shape.status.top_detached": "sommità dei muri staccate",
+ "host_shape.status.straight_wall": "è richiesto un muro rettilineo",
+ "host_shape.status.roof_extruded": "tetto per estrusione creato",
+ "warn.kind.cut": "Taglio o collegamento non creato"
+}

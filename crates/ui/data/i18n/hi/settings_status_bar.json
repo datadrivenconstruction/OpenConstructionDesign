@@ -1,0 +1,10 @@
+{
+ "cmd.view.axes_full": "पूर्ण अक्ष",
+ "cmd.view.axes_full.desc": "X और Y अक्ष प्लान के पार पूरी रेखाओं के रूप में दिखाता है। F9 दबाए रखें तो केवल दबाते समय दिखते हैं।",
+ "settings.axes_full": "अक्ष",
+ "settings.axes_full_desc": "शीट के पार पूरी रेखाओं के रूप में प्लान अक्ष। त्वरित देखने के लिए F9 दबाए रखें।",
+ "settings.axes_full_on": "पूर्ण अक्ष दिखाएँ",
+ "plan.hud.axes_tip": "पूर्ण अक्ष देखने के लिए {key} दबाए रखें",
+ "status.axes_full.on": "पूर्ण अक्ष चालू",
+ "status.axes_full.off": "पूर्ण अक्ष बंद"
+}

@@ -1,0 +1,10 @@
+{
+ "elem.multi.title": "{n} elementów",
+ "elem.multi.varies": "różne",
+ "elem.multi.tip": "Enter ustawia wszystkie zaznaczone elementy",
+ "elem.multi.hidden": "{n} wierszy tylko dla części elementów",
+ "elem.multi.none": "Zaznaczone elementy nie mają wspólnych wierszy",
+ "elem.multi.range": "Wartość jest poza dozwolonym zakresem",
+ "elem.multi.changed": "Zmieniono {n} elementów · Ctrl+Z cofa",
+ "elem.multi.same": "Ta wartość już jest we wszystkich zaznaczonych elementach"
+}

@@ -1,0 +1,6 @@
+{
+ "sched_import.no_key": "이 통합 문서에는 내보내기 기록이 없습니다(이전 내보내기). 그 내보내기 후 모델에서 바뀐 셀은 덮어써질 수 있습니다. 적용하기 전에 바뀐 셀을 확인하세요.",
+ "sched_import.n_kept": "내보낸 후 모델에서 바뀌어 유지됨: {n}",
+ "sched_import.n_conflict": "통합 문서와 모델 양쪽에서 바뀌어 적용하지 않음: {n}",
+ "sched_import.why_conflict": "내보낸 후 모델에서 바뀌어({model}) 적용하지 않음"
+}

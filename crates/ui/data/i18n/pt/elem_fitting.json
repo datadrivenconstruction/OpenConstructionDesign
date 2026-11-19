@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "Conexão",
+ "elem.mep_fitting.many": "Conexões",
+ "elem.mep_fitting.kind.elbow": "Cotovelo",
+ "elem.mep_fitting.kind.tee": "Derivação em T",
+ "elem.mep_fitting.kind.cross": "Cruzamento",
+ "elem.mep_fitting.kind.transition": "Transição",
+ "elem.mep_fitting.kind.cap": "Tampa",
+ "elem.mep_fitting.size": "Dimensão",
+ "elem.mep_fitting.at": "Posição",
+ "elem.mep_fitting.runs": "Percurso {n}",
+ "elem.mep_fitting.edit_run": "Editar percurso",
+ "elem.mep_fitting.select_runs": "Selecionar os seus percursos",
+ "elem.mep_fitting.derived": "Uma conexão segue os seus percursos: se alterar um percurso, a conexão altera-se com ele.",
+ "elem.mep_fitting.no_delete": "Uma conexão não pode ser eliminada nem movida isoladamente. Edite ou elimine os seus percursos.",
+ "elem.mep_fitting.hint": "Clique numa conexão na planta para ver os seus percursos.",
+ "elem.mep_fitting.picked": "Conexões selecionadas: {n}"
+}

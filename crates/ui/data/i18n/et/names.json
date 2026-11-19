@@ -1,0 +1,19 @@
+{
+ "names.level": "Tase {n}",
+ "names.slab": "Põrand 200",
+ "names.roof_slab": "Katus 200",
+ "names.sheet.plan_section": "1. korruse plaan ja lõige",
+ "names.sheet.plan_view": "1. korruse plaan",
+ "names.sheet.site_plan": "Krundiplaan",
+ "names.sheet_set.issue": "Väljaanne 1",
+ "names.title.owner": "Projekt OÜ",
+ "names.title.creator": "A. Ivanov",
+ "names.title.approver": "P. Petrov",
+ "names.title.document_type": "Joonis",
+ "names.title.status": "Töös",
+ "names.revision.date": "4. nov 2026",
+ "names.revision.description": "Välja antud ülevaatamiseks",
+ "names.revision.author": "AI",
+ "names.demo.no_levels": "tasemed puuduvad",
+ "names.demo.no_sheet": "leht"
+}

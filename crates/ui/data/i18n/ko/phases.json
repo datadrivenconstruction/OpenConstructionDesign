@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D",
+ "phases.current_mark": "현재",
+ "phases.make_current": "현재로 설정",
+ "phases.col_phase": "단계",
+ "phases.col_filter": "필터",
+ "phases.presets": "평면 프리셋",
+ "phases.del_title": "단계 삭제",
+ "phases.del_text": "단계 \"{name}\"을(를) 삭제할까요? 이 단계의 요소는 아래에서 고른 단계로 옮겨집니다.",
+ "phases.del_into": "요소를 다음으로 이동",
+ "phases.del_ok": "삭제",
+ "phases.col_kind": "요소 유형",
+ "phases.col_count": "개수",
+ "phases.col_volume": "체적"
+}

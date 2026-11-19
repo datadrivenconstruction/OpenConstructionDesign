@@ -1,0 +1,10 @@
+{
+ "view_gfx.vv.visible_tip": "Näkyvissä tässä näkymässä",
+ "view_gfx.vv.enabled_tip": "Käytä tätä suodatinta tässä näkymässä",
+ "view_gfx.vv.reset_tip": "Takaisin projektin oletukseen",
+ "view_gfx.vv.col.actions": "Toiminnot",
+ "view_gfx.vv.nothing_to_apply": "Ei muutoksia käytettäväksi",
+ "view_gfx.flt.save_blocked": "Nimeä suodatin ja täytä jokaisen säännön parametri",
+ "view_gfx.flt.confirm_delete": "Poistetaanko kaikista näkymistä?",
+ "view_gfx.flt.param_pick": "Valitse…"
+}

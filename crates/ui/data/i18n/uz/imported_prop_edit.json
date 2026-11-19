@@ -1,0 +1,6 @@
+{
+ "imported_prop_edit.remove": "Xususiyatni olib tashlash",
+ "imported_prop_edit.remove.tip": "Xususiyatni tanlangan {n} ta elementdan bitta qaytarish qadami bilan olib tashlaydi; saqlashda IFC fayldan o'chiriladi",
+ "imported_prop_edit.done": "{key} {n} ta elementdan olib tashlandi",
+ "imported_prop_edit.warn.reload": "Bajarildi, lekin ko'rinish yangilanmadi; ko'rinish noto'g'ri bo'lsa, panelni qayta oching yoki bekor qiling"
+}

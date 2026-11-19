@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "Overfør type",
+ "cmd.mod.match_type.short": "Overfør type",
+ "cmd.mod.match_type.desc": "Velg en vegg, et gulv, en søyle eller en bjelke, og klikk deretter på andre av samme kategori for å gi dem dens type. Dra et vindu for å bruke på alt innenfor. Esc slipper kilden.",
+ "hint.match_type.pick": "Overfør type: velg en vegg, et gulv, en søyle eller en bjelke · Esc – avslutt",
+ "hint.match_type.apply": "Overfør type: klikk mål eller dra et vindu · Esc – annen kilde",
+ "match_type.kind.wall": "vegg",
+ "match_type.kind.slab": "gulv",
+ "match_type.kind.column": "søyle",
+ "match_type.kind.beam": "bjelke",
+ "match_type.refuse.category": "Annen kategori: bare en {cat} kan få denne typen",
+ "match_type.refuse.curtain": "Fasadevegg: typen overføres ikke hit",
+ "match_type.refuse.pinned": "Festet: løsne det for å endre typen",
+ "match_type.pick_bad": "Velg en vegg, et gulv, en søyle eller en bjelke som kilde",
+ "match_type.same": "Allerede denne typen",
+ "match_type.done": "Type brukt: {n}",
+ "match_type.done_skipped": "Type brukt: {n}, hoppet over (festet eller fasade): {skipped}",
+ "match_type.failed": "Type ikke endret: {err}"
+}

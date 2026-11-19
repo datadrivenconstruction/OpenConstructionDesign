@@ -1,0 +1,14 @@
+{
+ "ai.hist.badge": "AI",
+ "ai.hist.untitled": "AI өзгөртүүлөрү",
+ "ai.hist.tip": "{title}\nКолдонгон: {actor}\nAI модели: {model}",
+ "ai.hist.why": "Себеби: {why}",
+ "ai.hist.reverted": "кайтарылган",
+ "ai.hist.revert_one": "Бул AI топтомун кайтаруу",
+ "ai.revert.done": "AI өзгөртүүлөрү кайтарылды: {n}. Артка кайтаруу аларды калыбына келтирет.",
+ "ai.revert.empty": "Кайтаруу үчүн AI өзгөртүүлөрү жок",
+ "ai.revert.not_ai": "Бул кадам AI өзгөртүүсү эмес",
+ "ai.revert.already": "Бул AI өзгөртүүлөрү мурунтан кайтарылган",
+ "ai.revert.opaque": "Кайтарылган жок: бул AI өзгөртүүлөрү кийинки иштен коопсуз бөлүнө албайт. Эч нерсе өзгөргөн жок.",
+ "ai.revert.failed": "Кайтаруу ийгиликсиз: {e}"
+}

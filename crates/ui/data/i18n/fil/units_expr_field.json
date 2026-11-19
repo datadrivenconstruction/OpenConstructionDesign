@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "Walang laman ang input.",
+ "units.err.not_number": "Hindi numero sa posisyon {pos}.",
+ "units.err.unknown_unit": "Hindi kilalang unit: {unit}.",
+ "units.err.non_positive": "Dapat higit sa zero ang haba.",
+ "units.err.too_large": "Hindi dapat lumampas sa {max} m ang haba.",
+ "units.err.bad_angle": "Ang anggulo ay bilang ng digri.",
+ "units.err.unknown_name": "Hindi kilalang pangalan: {name}. Itinago ang halaga.",
+ "units.err.cycle": "Loop sa formula sa {name}. Itinago ang halaga.",
+ "units.err.bad_expr": "Hindi mabasa ang expression sa posisyon {pos}. Itinago ang halaga.",
+ "units.err.div_zero": "Paghahati sa zero sa posisyon {pos}. Itinago ang halaga.",
+ "units.err.invalid": "Hindi wastong numero.",
+ "units.err.kept": "Hindi binago: {reason}"
+}

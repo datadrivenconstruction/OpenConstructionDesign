@@ -1,0 +1,7 @@
+{
+ "rebar_pick.pick.empty": "Armadura: escolha um pilar, viga, parede, laje ou sapata",
+ "rebar_pick.pick.unsupported": "Esta seleção não pode receber armadura. Escolha um pilar, viga, parede, laje ou sapata",
+ "rebar_pick.pick.keys": "Clique para escolher, Shift para adicionar mais · Enter para abrir o formulário · Esc para cancelar",
+ "rebar_pick.pick.open": "Abrir formulário",
+ "rebar_pick.pick.cancel": "Cancelar"
+}

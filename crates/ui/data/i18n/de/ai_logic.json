@@ -1,0 +1,6 @@
+{
+ "ai_toast.toast_not_refreshed": "Als Rückgängig-Schritt {n} angewendet (Strg+Z macht es rückgängig), die Ansicht wurde aber nicht aktualisiert. Ansicht neu laden.",
+ "ai.optx.reload_failed": "Variante „{name}“ ist angewendet und gespeichert, die Ansicht wurde aber nicht neu geladen: {e}",
+ "ai.cmp.stale": "Veraltet",
+ "ai.cmp.stale_tip": "Diese Variante wurde auf einem älteren Modellstand erstellt. Zum Anwenden neu erzeugen."
+}

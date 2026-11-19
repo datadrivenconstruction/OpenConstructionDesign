@@ -1,0 +1,6 @@
+{
+ "units.err.parse": "Ei pituus: vanha arvo säilytetään. Anna luku ja halutessasi yksikkö, esimerkiksi 2500 tai 8'-2\"",
+ "ui.scale.set": "Käyttöliittymän mittakaava: {pct} %",
+ "cmd.ui.scale_up": "Suurenna käyttöliittymän mittakaava",
+ "cmd.ui.scale_down": "Pienennä käyttöliittymän mittakaava"
+}

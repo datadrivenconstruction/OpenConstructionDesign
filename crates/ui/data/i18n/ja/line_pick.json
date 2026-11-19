@@ -1,0 +1,22 @@
+{
+ "cmd.arch.grid_pick": "線から通り芯",
+ "cmd.arch.grid_pick.desc": "現在のレベルの図面線に沿って正確に通り芯を作成し、名前は連番で続きます。Tab を押すと、同じ図面レイヤーの平行線がすべて一度に選ばれます。各選択は 1 回の元に戻す操作です。",
+ "cmd.struct.beam_pick": "線から梁",
+ "cmd.struct.beam_pick.desc": "選択した図面線に沿って、現在のタイプの梁をアクティブなレベルに配置します。Tab を押すと、接続された連続線を選択します。各選択は 1 回の元に戻す操作です。",
+ "hint.grid_pick.one": "線から通り芯: 図面線を選択 · Tab でそのレイヤーの平行線すべて · Esc で終了",
+ "hint.grid_pick.more": "線から通り芯: 線を選ぶとそのレイヤーの平行線をすべて取得 · Tab で 1 本のみ · Esc で解除",
+ "hint.beam_pick.one": "線から梁: 図面線を選択 · Tab で接続された連続線 · Esc で終了",
+ "hint.beam_pick.more": "線から梁: 線を選ぶと連続線を取得 · Tab で 1 本のみ · Esc で解除",
+ "line_pick.st.start_grid": "図面線を選択してください。Tab: そのレイヤーの平行線すべて",
+ "line_pick.st.start_beam": "{type} 梁用の図面線を選択してください。Tab: 接続された連続線",
+ "line_pick.st.grid_done": "通り芯 {name} を追加しました",
+ "line_pick.st.grids_done": "通り芯を {n} 本追加しました: {first} — {last}",
+ "line_pick.st.beam_done": "梁 {type} を追加しました",
+ "line_pick.st.beams_done": "梁 {type} を {n} 本追加しました",
+ "line_pick.st.on_grid": "この線には既に通り芯 {name} があります",
+ "line_pick.st.on_beam": "この線には既に梁 {id} があります",
+ "line_pick.st.no_layer": "線の図面レイヤーがまだ判明していません。もう一度お試しください",
+ "line_pick.st.no_beam_type": "カタログに梁の断面がありません",
+ "line_pick.st.reload_warn": "作成しましたが、ビューを再読み込みできませんでした: {err}",
+ "line_pick.st.failed": "作成されませんでした: {err}"
+}

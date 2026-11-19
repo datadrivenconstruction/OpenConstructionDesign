@@ -1,0 +1,16 @@
+{
+ "ai.items.all": {
+  "one": "همهٔ # مورد",
+  "other": "همهٔ # مورد"
+ },
+ "ai.items.all.tip": "همهٔ موارد برنامه را علامت بزن یا بردار",
+ "ai.items.checked": "{n} از {m} علامت خورده",
+ "ai.items.check.tip": "«{title}» را در «اعمال» بگنجان",
+ "ai.items.expand": "نمایش عنصرها",
+ "ai.items.collapse": "پنهان کردن عنصرها",
+ "ai.items.apply": {
+  "one": "اعمال # مورد",
+  "other": "اعمال # مورد"
+ },
+ "ai.items.apply_none": "اعمال"
+}

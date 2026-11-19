@@ -1,0 +1,28 @@
+id = "G04_hypar_roof__es"
+tier = "hard"
+group = "Any geometry"
+title = "Hyperbolic paraboloid roof"
+lang = "es"
+base = "empty"
+
+[[turn]]
+say = "Una cubierta de hormigón tipo hypar (paraboloide hiperbólico) de 20 x 20 m sobre cuatro apoyos de esquina, vigas de borde, desnivel de 5 m entre las esquinas baja y alta."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "roof+slab+freeform+shell_elem+mesh+solid"
+min = 1.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1
+
+[[oracle.geom]]
+kind = "saddle_curve"
+share_min = 0.5
+warp_min = 2.0

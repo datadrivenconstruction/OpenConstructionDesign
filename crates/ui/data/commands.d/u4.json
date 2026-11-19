@@ -1,0 +1,15 @@
+[
+ {
+  "id": "data.clash_report",
+  "icon": "clash-report",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "data",
+  "surfaces": [
+   "R",
+   "I"
+  ],
+  "stage": "M1",
+  "group": "check"
+ }
+]

@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "Filterrad under overskriftene. Tekst: delstreng; tall: >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "Vis eller skjul kolonner",
+ "sched_toolbar.groups_tip": "Grupper rader etter kolonner, med delsummer",
+ "sched_toolbar.formulas_tip": "Beregnede kolonner",
+ "sched_toolbar.phase": "Fase",
+ "sched_toolbar.phase_tip": "Hvilken fase radene hentes fra",
+ "sched_toolbar.copy_tip": "Valgte rader (eller alle synlige) som TSV",
+ "sched_toolbar.import_tip": "Les en eksportert liste tilbake: rader etter Id, kolonner etter overskrift; antall først, deretter ett angrasteg",
+ "sched_toolbar.export_tip": "Synlige rader og kolonner med summer; tall forblir tall",
+ "sched_toolbar.need_table": "Åpne en liste først",
+ "sched_toolbar.busy_open": "En fildialog er allerede åpen",
+ "sched_toolbar.busy_save": "En lagringsdialog er allerede åpen",
+ "sched_toolbar.clear_filter": "Fjern filter",
+ "sched_toolbar.fields_title": "Kolonner"
+}

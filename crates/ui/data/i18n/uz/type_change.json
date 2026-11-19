@@ -1,0 +1,13 @@
+{
+ "type_change.affects_walls": {
+  "one": "# ta devorga ta'sir qiladi",
+  "other": "# ta devorga ta'sir qiladi"
+ },
+ "type_change.affects": {
+  "one": "# ta elementga ta'sir qiladi",
+  "other": "# ta elementga ta'sir qiladi"
+ },
+ "type_change.tick_types": "Tur o'zgarishlarini {n} ta shu tur elementlariga qo'llash",
+ "type_change.tick_types_first": "Avval tur o'zgarishini belgilang: har bir tur elementi uni oladi",
+ "xl.msg.types_first": "avval tur o'zgarishlarini tasdiqlang"
+}

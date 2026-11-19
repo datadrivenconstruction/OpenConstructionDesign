@@ -1,0 +1,20 @@
+{
+ "api.cmd.move_elements": "按偏移量（米）移动构件",
+ "api.cmd.copy_elements": "按一个或多个偏移量（米）复制构件",
+ "api.cmd.rotate_elements": "绕一点按角度（度）旋转构件",
+ "api.cmd.mirror_elements": "以经过两点的轴镜像构件",
+ "api.cmd.scale_elements": "绕一点按比例缩放构件",
+ "api.cmd.array_elements": "线性或环形阵列构件",
+ "api.cmd.offset_wall": "按距离（米）平行复制墙体",
+ "api.cmd.split_wall": "在一点处将墙体拆分为两段",
+ "api.cmd.pin_elements": "固定或取消固定构件",
+ "api.cmd.flip_openings": "翻转门窗的开启侧或朝向",
+ "api.cmd.create_level": "按标高（米）创建楼层",
+ "api.cmd.edit_level": "重命名楼层或更改标高",
+ "api.cmd.delete_level": "删除楼层",
+ "api.cmd.place_rooms": "在楼层每个封闭区域中放置房间",
+ "api.cmd.join_elements": "连接、取消连接或切换几何连接",
+ "api.cmd.place_footings": "在楼层每根柱下放置基础",
+ "api.cmd.create_terrain": "通过测量点或倾斜平面创建地形",
+ "api.cmd.script_recipes": "阅读自由形态结构的脚本构件块与配方"
+}

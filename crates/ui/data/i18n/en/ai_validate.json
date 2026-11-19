@@ -1,0 +1,14 @@
+{
+ "ai.issue.integrity": "Integrity problem: {0} {1}: {2}",
+ "ai.issue.opening_outside": "The opening does not fit in the wall: {0}",
+ "ai.issue.opening_overlap": "The opening overlaps opening {0}",
+ "ai.issue.wall_warning": "Wall: {0}",
+ "ai.issue.cut_warning": "Cut: {0}",
+ "ai.issue.room_open": "The room is not closed",
+ "ai.issue.material_unknown": "No material named \"{0}\" in the project: Apply would add a new one with default properties",
+ "ai.issue.material_suggest": "No material named \"{0}\" in the project: Apply would add a new one. Did you mean \"{1}\"?",
+ "ai.issue.conflict": "This item cannot run: {0}",
+ "ai.issue.too_large": "{0} elements would change, above the limit of {1}. Permission is needed",
+ "ai.issue.truncated": "The change list stopped at {0} rows: the plan is larger than the card can show. Permission is needed",
+ "ai.issue.replan_failed": "The plan could not be recalculated. A new copy of the model is being taken"
+}

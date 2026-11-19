@@ -1,0 +1,13 @@
+{
+ "xlw.copy_list": "Copia elenco",
+ "xlw.save_list": "Salva elenco…",
+ "xlw.copy_list_tip": "Copia le righe mostrate (tavola, cella, id, colonna, valori, motivo) come testo per un foglio di calcolo",
+ "xlw.save_list_tip": "Salva le righe mostrate come file .csv accanto alla cartella; la cartella non viene mai modificata",
+ "xlw.list_book_value": "Valore nella cartella",
+ "xlw.list_model_value": "Valore nel modello",
+ "xlw.list_reason": "Motivo",
+ "xlw.list_copied": "Elenco copiato: {n} righe",
+ "xlw.list_saved": "Elenco salvato: {n} righe, {file}",
+ "xlw.list_save_failed": "Elenco non salvato",
+ "xlw.list_nothing": "Nulla da copiare: nessuna riga mostrata"
+}

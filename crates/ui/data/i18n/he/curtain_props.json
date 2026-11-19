@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "לוח",
+ "curtain_props.cw.panel_cell": "תא {i}×{j} · קיר מסך #{id}",
+ "curtain_props.cw.kind": "סוג",
+ "curtain_props.cw.kind.glazed": "זכוכית",
+ "curtain_props.cw.kind.solid": "אטום",
+ "curtain_props.cw.kind.door": "דלת",
+ "curtain_props.cw.kind.window": "חלון",
+ "curtain_props.cw.kind.empty": "ריק",
+ "curtain_props.cw.name": "שם",
+ "curtain_props.cw.swing_side": "נפתח לצד השני",
+ "curtain_props.cw.swing_hinge": "ציר בקצה התא",
+ "curtain_props.cw.size": "גודל",
+ "curtain_props.cw.cell_area": "שטח תא",
+ "curtain_props.cw.panel_area": "שטח לוח",
+ "curtain_props.cw.prev": "הלוח הקודם",
+ "curtain_props.cw.next": "הלוח הבא",
+ "curtain_props.cw.wall": "בחר את הקיר",
+ "curtain_props.cw.panel_hint": "Esc — בחירה · Ctrl+Z — ביטול",
+ "curtain_props.cw.status.panel": "לוח {i}×{j} → {kind}",
+ "e3d.err.cw_height": "גובה קיר המסך חייב להיות מעל 100 mm"
+}

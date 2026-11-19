@@ -1,0 +1,6 @@
+{
+ "xlsx_readonly.read_only": "Työkirja on vain luku -tilassa (tiedoston ominaisuus tai kansion oikeus). Vie kopioon tai poista Vain luku -merkintä tiedoston ominaisuuksista ja yritä uudelleen.",
+ "xlsx_readonly.export_copy": "Vie kopioon",
+ "xlsx_readonly.no_copy_name": "Työkirjan viereen ei ole vapaata nimeä kopiolle.",
+ "xlsx_readonly.copied": "Työkirjaa ei muutettu. Sen viereen kirjoitettiin päivitetty kopio ja se on nyt linkitetty: {path}"
+}

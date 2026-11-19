@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "X o'qi",
+ "fe.axis.y": "Y o'qi",
+ "fe.axis.z": "Z o'qi",
+ "fe.col.axis": "O'q",
+ "fe.col.at": "Joylashuv",
+ "fe.col.mode": "Rejim",
+ "fe.mode.fixed": "Qat'iy",
+ "fe.mode.free": "Erkin",
+ "fe.types.inherited": "Parametrdan standart",
+ "fe.csv.more": "Qo'shimcha CSV amallari",
+ "fe.ref.selected": "Tekislik: {name}"
+}

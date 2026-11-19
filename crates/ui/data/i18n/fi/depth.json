@@ -1,0 +1,22 @@
+{
+ "depth.chip": "Syvyys {level}",
+ "depth.chip_tip": "Kuinka pitkälle seuraava ajo viedään projektia: D1 konsepti – D5 valmistus, tekniikkalajeittain",
+ "depth.all_off": "kaikki tekniikkalajit pois",
+ "depth.disc.arch": "Arkk.",
+ "depth.disc.struct": "Rak.",
+ "depth.disc.mep": "LVIS",
+ "depth.disc.doc": "Dok.",
+ "depth.project": "Projektin syvyys",
+ "depth.level.1": "D1 Konsepti: massoittelu, kerrokset, pinta-alat, yksi arkki",
+ "depth.level.2": "D2 Luonnos: seinät, huoneet ohjelman mukaan, aukot, akselisto, pohjapiirrokset",
+ "depth.level.3": "D3 Suunnittelu: kerrostetut tyypit, mitoitettu rakenne, LVI-päälinjat ja päätteet, luettelot",
+ "depth.level.4": "D4 Työpiirustus: liitosdetaljit, kiinnitykset, pinnoitteet, raudoitus, haarat",
+ "depth.level.5": "D5 Valmistus: taivutusluettelot, teräsliitokset, esivalmistus, materiaaliluettelo",
+ "depth.as_project": "Sama",
+ "depth.estimate": "Arvio: noin {elements} elementtiä, {minutes} min, {tokens} tokenia {calls} kutsussa, {sheets} arkkia",
+ "depth.estimate_none": "Arvio tulee laaditusta projektista: malli on vielä tyhjä",
+ "depth.heat": "Syvyyskartta",
+ "depth.heat.row": "Syvyys",
+ "depth.settings": "Tämän projektin suunnittelusyvyys",
+ "depth.settings_desc": "Syvyys, johon tekoälyavustaja työskentelee, D1–D5, kytkimellä ja omalla syvyydellä jokaiselle tekniikkalajille; tallennetaan projektitiedostoon"
+}

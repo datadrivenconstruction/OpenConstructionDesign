@@ -1,0 +1,9 @@
+{
+ "first_card.card.title": "Wypróbuj obieg z XLSX-em",
+ "first_card.card.step1": "Zaznacz ścianę",
+ "first_card.card.step2": "Zmień jedną z jej właściwości",
+ "first_card.card.step3": "Edytuj w arkuszu XLSX, sprawdź podgląd, Zastosuj",
+ "first_card.card.spreadsheet": "Edytuj w arkuszu XLSX",
+ "first_card.card.skip": "Pomiń",
+ "first_card.card.done": "Gotowe: model i skoroszyt są zgodne"
+}

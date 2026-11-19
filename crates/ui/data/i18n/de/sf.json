@@ -1,0 +1,4 @@
+{
+ "sf.restored": "Die Einstellungsdatei {file} war beschädigt; die letzte intakte Kopie wurde wiederhergestellt. Die beschädigte Datei wird als {broken} aufbewahrt.",
+ "sf.reset": "Die Einstellungsdatei {file} war beschädigt und kein Backup war brauchbar; es gelten die Standardwerte. Die beschädigte Datei wird als {broken} aufbewahrt."
+}

@@ -1,0 +1,9 @@
+{
+ "xl.msg.base_value": "kontroll etter lesing feilet, den gamle arbeidsboken beholdes: {} ({}) ventet '{}', leste '{}'",
+ "xl.msg.base_missing": "kontroll etter lesing feilet, den gamle arbeidsboken beholdes: arket {} har ingen rad for id {}",
+ "xl.msg.base_extra": "kontroll etter lesing feilet, den gamle arbeidsboken beholdes: rad {} finnes ikke i modellen",
+ "xl.msg.base_refused": "kontroll etter lesing feilet, den gamle arbeidsboken beholdes: {} ({}) ble avvist: {}",
+ "xl.msg.base_sheet": "kontroll etter lesing feilet, den gamle arbeidsboken beholdes: arket {} mangler, er tomt eller kan ikke leses",
+ "xl.msg.base_newer": "kontroll etter lesing feilet, den gamle arbeidsboken beholdes: {} celler har ikke modellverdien",
+ "xl.msg.base_unreadable": "kontroll etter lesing feilet, den gamle arbeidsboken beholdes: den nye arbeidsboken kan ikke leses ({})"
+}

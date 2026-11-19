@@ -1,0 +1,7 @@
+{
+ "ai.retry.countdown": "Nuovo tentativo tra {n} s",
+ "ai.retry.try": "Tentativo automatico {i} di {max}. La stessa richiesta viene inviata di nuovo.",
+ "ai.retry.now": "Riprova ora",
+ "ai.retry.gave_up": "Ancora nessuna risposta dopo {max} tentativi automatici.",
+ "ai.retry.shorten": "Accorcia la richiesta"
+}

@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "点",
+ "trial.field.distance": "距离",
+ "trial.field.target": "图元",
+ "trial.refused": "{field}：{reason}。请更改后应用",
+ "trial.preview_off": "预览已关闭：模型过大"
+}

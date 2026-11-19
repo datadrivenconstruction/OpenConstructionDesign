@@ -1,0 +1,10 @@
+{
+ "xlsx_dup.dup_undo": "I-undo ang desisyon",
+ "xlsx_dup.dup_undo_tip": "Ang mga row na ginawang bagong elemento ({n}) ay binabasa muli sa kanilang id",
+ "xlsx_dup.dup_new": "Gawing bagong elemento ang mga na-edit na kopya",
+ "xlsx_dup.dup_new_tip": "Magiging bagong elemento ang mga row {rows} na may kanilang mga halaga; itinatago ng elementong #{id} ang mga halaga nito (isang undo step kasama ng iba)",
+ "xl.msg.dup_same": "dobleng id {}: kapareho ng mga halaga ng row {}; nilaktawan ang row",
+ "xl.msg.dup_unchanged": "dobleng id {}: hindi nabagong kopya ng na-export na row; nilaktawan ang row",
+ "xl.msg.dup_conflict": "nasa mga row {} ang id {} na may magkakaibang halaga; walang nailapat para sa id na ito",
+ "xl.msg.dup_conflict_keep": "nasa mga row {} ang id {} na may magkakaibang halaga; walang nailapat para sa id na ito — itira ang isang row"
+}

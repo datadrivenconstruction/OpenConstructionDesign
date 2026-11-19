@@ -1,0 +1,6 @@
+{
+ "delsafe.ring.opening_shape": "โครงร่างช่องเปิดจะตัดกันเองหรือยุบตัว",
+ "delsafe.ring.opening_boundary": "ช่องเปิดจะตัดหรือสัมผัสขอบนอก",
+ "delsafe.ring.openings_overlap": "ช่องเปิดจะซ้อนทับหรือสัมผัสกัน",
+ "xl.msg.delsafe_instance_param_on_types": "พารามิเตอร์ '{}' เป็นพารามิเตอร์ของอินสแตนซ์ แก้ไขในชีตส่วนประกอบ ยังไม่ได้ใช้"
+}

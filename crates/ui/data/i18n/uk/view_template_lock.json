@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "Керується шаблоном {name}",
+ "view_template.edit_template": "Редагувати шаблон",
+ "view_template.locked_tip": "Задано шаблоном виду {name}. Змініть його в шаблоні.",
+ "view_template.no_filters": "У цьому виді немає фільтрів"
+}

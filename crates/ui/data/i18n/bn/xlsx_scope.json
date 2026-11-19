@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "XLSX-এ এক্সপোর্ট: পরিধি",
+ "xlsx_scope.intro": "ওয়ার্কবুকে কী যাবে বাছুন। ফেরত আমদানি করলে শুধু এই উপাদানগুলো বদলাবে।",
+ "xlsx_scope.base_whole": "পুরো মডেল",
+ "xlsx_scope.base_level": "সক্রিয় লেভেল",
+ "xlsx_scope.base_selection": "নির্বাচন",
+ "xlsx_scope.categories": "ক্যাটেগরি",
+ "xlsx_scope.cat_walls": "দেয়াল",
+ "xlsx_scope.cat_openings": "দরজা",
+ "xlsx_scope.cat_rooms": "কক্ষ",
+ "xlsx_scope.cat_slabs": "স্ল্যাব",
+ "xlsx_scope.cat_curtains": "কার্টেন ওয়াল",
+ "xlsx_scope.nothing_selected": "কিছু নির্বাচিত নয়: আগে উপাদান বাছুন বা অন্য পরিধি বেছে নিন।",
+ "xlsx_scope.no_categories": "অন্তত একটি ক্যাটেগরি টিক দিন।",
+ "xlsx_scope.no_level": "সক্রিয় লেভেল পাওয়া যায়নি।",
+ "xlsx_scope.export": "এক্সপোর্ট",
+ "xlsx_scope.preview_scope": "এক্সপোর্ট পরিধি: {scope}। এর বাইরের উপাদান কখনো বদলায় বা মোছা হয় না।"
+}

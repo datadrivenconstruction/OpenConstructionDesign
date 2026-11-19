@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "Шахты",
+ "quick.cat.shaft": "Шахта",
+ "shaft_tool.browser.shaft": "Шахта №{id}",
+ "shaft_tool.shaft.top": "Верхний уровень",
+ "shaft_tool.shaft.cuts": "Режет элементов",
+ "shaft_tool.shaft.cut_area": "Площадь выреза",
+ "shaft_tool.shaft.cut_volume": "Объём выреза",
+ "elem.no.rooms": "Следует за своими помещениями"
+}

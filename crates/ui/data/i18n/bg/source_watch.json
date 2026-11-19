@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "{name} е променен на диска.",
+ "src.watch.update": "Обнови модела",
+ "src.watch.compare": "Сравни",
+ "src.watch.ignore": "Игнорирай тази версия",
+ "src.watch.missing": "{name}: изходният файл не е намерен. Работата продължава.",
+ "src.watch.locate": "Намери…",
+ "src.watch.dismiss": "Скрий",
+ "src.watch.more": "и още {n} изходни файла",
+ "src.watch.done": "Обновено от {name}: променени {updated}, полета, запазени като редактирани {kept}, конфликти {conflicts}, запазени заключени стойности {locked}"
+}

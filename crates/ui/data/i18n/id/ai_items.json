@@ -1,0 +1,16 @@
+{
+ "ai.items.all": {
+  "one": "Semua # item",
+  "other": "Semua # item"
+ },
+ "ai.items.all.tip": "Centang atau hilangkan centang setiap item rencana",
+ "ai.items.checked": "{n} dari {m} dicentang",
+ "ai.items.check.tip": "Sertakan “{title}” dalam Terapkan",
+ "ai.items.expand": "Tampilkan elemen",
+ "ai.items.collapse": "Sembunyikan elemen",
+ "ai.items.apply": {
+  "one": "Terapkan # item",
+  "other": "Terapkan # item"
+ },
+ "ai.items.apply_none": "Terapkan"
+}

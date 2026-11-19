@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "মডেল বা নির্বাচন মিটার বা মিলিমিটারে বাইনারি STL হিসেবে সংরক্ষণ করে।",
+ "cmd.data.export_obj.desc": "মডেল বা নির্বাচন MTL ফাইলসহ OBJ হিসেবে সংরক্ষণ করে: প্রতিটি উপাদানের জন্য একটি গ্রুপ, উপকরণ অনুযায়ী রং।",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "উপকরণসহ OBJ (.obj)",
+ "open_file.filter.mesh": "3D মেশ (glTF, STEP, STL, OBJ)",
+ "mx.title": "{fmt} এক্সপোর্ট",
+ "mx.scope": "কী এক্সপোর্ট হবে",
+ "mx.scope.all": "পুরো মডেল",
+ "mx.scope.sel": "নির্বাচন ({n}টি উপাদান)",
+ "mx.units": "ফাইলের একক",
+ "mx.units.m": "মিটার",
+ "mx.units.mm": "মিলিমিটার",
+ "mx.export": "এক্সপোর্ট…",
+ "mx.saved": "{fmt} সংরক্ষিত হয়েছে: {path} ({parts}টি উপাদান, {tris}টি ত্রিভুজ)",
+ "mx.partial": "{fmt} {n}টি সমস্যাসহ সংরক্ষিত হয়েছে, কিছু বডি বাদ পড়তে পারে: {path}",
+ "mx.failed": "{fmt} এক্সপোর্ট ব্যর্থ: {error}",
+ "mx.imported": "{file}: {n}টি উপাদান আমদানি হয়েছে ({tris}টি ত্রিভুজ)",
+ "mx.imported_notes": "{file}: {n}টি উপাদান আমদানি হয়েছে ({tris}টি ত্রিভুজ), {w}টি নোট: {first}"
+}

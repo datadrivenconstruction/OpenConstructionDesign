@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "Sprungne rækker og celler",
+ "xlsx_issues.conflicts_title": "Ændret begge steder",
+ "xlsx_issues.missing_title": "Ark mangler i regnearket",
+ "xlsx_issues.look_alike_title": "Arknavn matcher ikke",
+ "xlsx_issues.mass_title": "Massesletning kræver bekræftelse",
+ "xlsx_issues.sheets_missing": "Ark {sheets} mangler i regnearket (omdøbt eller slettet); deres rækker blev ikke sammenlignet.",
+ "xlsx_issues.keep_model": "Behold model",
+ "xlsx_issues.take_book": "Tag regnearkets værdi",
+ "xlsx_issues.open_book_tip": "Åbner filen i dens program. Intet ændres i modellen; forhåndsvisningen genindlæses, når du har gemt regnearket."
+}

@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "Stepenice",
+ "selcat.railing": "Ograde",
+ "quick.cat.stair": "Stepenice",
+ "quick.cat.railing": "Ograde",
+ "stair.risers": "Stupnjevi",
+ "stair.riser": "Visina stupnja",
+ "stair.comfort": "2R + T",
+ "stair.tread_auto": "Gaz po pravilu",
+ "stair.tread_auto_tip": "Odbaci upisani gaz i prepusti pravilu 2R + T da ga postavi",
+ "stair.broken": "Ove stepenice ne odgovaraju njihovim razinama",
+ "railing.host_stair": "Vezano na stepenice #{id}",
+ "railing.host_path": "Ograda skicom",
+ "railing.length": "Duljina",
+ "stair.deleted_with": "s {n} vezanih ograda"
+}

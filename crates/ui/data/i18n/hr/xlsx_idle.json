@@ -1,0 +1,8 @@
+{
+ "xlsx_idle.idle_title": "Nema promjena za uvoz",
+ "xlsx_idle.export_name": "Izvoz",
+ "xlsx_idle.export_body": "Zapisuje model u radnu knjigu. Uredite vrijednosti tamo, zatim sinkronizirajte.",
+ "xlsx_idle.sync_name": "Sinkronizacija",
+ "xlsx_idle.sync_body": "Ponovno čita radnu knjigu i navodi razlike. Model se mijenja tek kada primijenite.",
+ "xlsx_idle.last_sync": "Zadnja sinkronizacija: {when}"
+}

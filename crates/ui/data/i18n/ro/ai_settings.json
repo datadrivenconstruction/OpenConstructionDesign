@@ -1,0 +1,9 @@
+{
+ "ai.settings.num_bad": "Nu este un număr. Scrie-l ca 0.5.",
+ "ai.settings.num_comma": "Folosește punctul ca separator zecimal, ca în 0.5.",
+ "ai.settings.num_negative": "Numărul nu poate fi negativ.",
+ "ai.settings.unit_money": "monedă",
+ "ai.settings.unit_tokens": "tokeni",
+ "ai.settings.unit_price": "la 1M tokeni",
+ "ai.settings.limits_hint": "0 înseamnă fără limită. O valoare refuzată lasă în vigoare limita anterioară."
+}

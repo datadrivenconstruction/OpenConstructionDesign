@@ -1,0 +1,9 @@
+{
+ "prop_head.of_type": {
+  "one": "# از این نوع",
+  "other": "# از این نوع"
+ },
+ "prop_head.override_tip": "با نوع فرق دارد، برای بازنشانی کلیک کنید",
+ "prop_head.reset_done": "«{name}» به مقدار نوع بازنشانی شد",
+ "prop_head.copy_id": "برای کپی شماره کلیک کنید"
+}

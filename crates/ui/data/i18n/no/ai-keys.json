@@ -1,0 +1,14 @@
+{
+ "ai_keys.header_is_key": "Nøkler skal i Nøkkel-feltet — hoder lagres i klartekst",
+ "ai_keys.move": "Flytt til Nøkkel",
+ "ai_keys.remove_line": "Fjern fra hoder",
+ "ai_keys.save_blocked": "Flytt nøkkelen ut av hodene for å lagre",
+ "ai_keys.show": "Vis",
+ "ai_keys.hide": "Skjul",
+ "ai_keys.copy": "Kopier",
+ "ai_keys.tokens": "tokens",
+ "ai_keys.presets": "Forhåndsvalg",
+ "ai_keys.preset_k": "{n}k",
+ "ai_keys.preset_m": "{n}M",
+ "ai_keys.images_on": "Støttet"
+}

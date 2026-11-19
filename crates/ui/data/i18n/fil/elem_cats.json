@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "Hindi maaaring paikutin o i-mirror ang masa: walang naikutang hakbang ang kasaysayan ng anyo nito. Ilipat o kopyahin ito, o iguhit muli sa bagong direksyon.",
+ "sched_cats.col.name": "Pangalan",
+ "sched_cats.col.material": "Materyales",
+ "sched_cats.col.void": "Butas",
+ "sched_cats.col.inplace": "Sa lugar",
+ "sched_cats.col.volume": "Netong bolyum",
+ "sched_cats.col.area": "Lawak ng ibabaw",
+ "sched_cats.col.floor_area": "Lawak ng sahig",
+ "sched_cats.col.thickness": "Kapal",
+ "sched_cats.col.points": "Mga punto",
+ "elem.toposolid.points": "Mga survey point",
+ "elem.toposolid.count": "Mga punto",
+ "elem.toposolid.low": "Pinakamababa",
+ "elem.toposolid.high": "Pinakamataas",
+ "elem.toposolid.edit": "I-edit ang mga punto",
+ "elem.toposolid.edit_tip": "Pumili, i-drag at itakda ang elevation ng mga survey point sa plano",
+ "elem.toposolid.pick_hint": "I-click ang punto sa plano para piliin ito. I-click muli para magdagdag o mag-alis.",
+ "elem.toposolid.z": "Elevasyon ({n})",
+ "elem.toposolid.mixed": "Magkakaiba ang mga napiling punto; itatakda ng bagong value ang lahat.",
+ "elem.toposolid.edit_help": "I-drag ang punto para ilipat ito. Mag-type ng value at pindutin ang Enter para itakda ang elevation. Inaalis ng Backspace ang mga napiling punto, lalabas ang Esc.",
+ "elem.toposolid.done": "Tapos"
+}

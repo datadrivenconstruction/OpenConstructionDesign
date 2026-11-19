@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "{name} changed on disk.",
+ "src.watch.update": "Update model",
+ "src.watch.compare": "Compare",
+ "src.watch.ignore": "Ignore this version",
+ "src.watch.missing": "{name}: source file not found. Work continues.",
+ "src.watch.locate": "Locate…",
+ "src.watch.dismiss": "Dismiss",
+ "src.watch.more": "and {n} more source files",
+ "src.watch.done": "Updated from {name}: {updated} changed, {kept} fields kept as edited, {conflicts} conflicts, {locked} locked values kept"
+}

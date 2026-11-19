@@ -1,0 +1,10 @@
+{
+ "xlsx_dup.dup_undo": "Deshacer decisión",
+ "xlsx_dup.dup_undo_tip": "Las filas convertidas en elementos nuevos ({n}) se vuelven a leer con su id",
+ "xlsx_dup.dup_new": "Crear copias editadas como elementos nuevos",
+ "xlsx_dup.dup_new_tip": "Las filas {rows} pasan a ser elementos nuevos con sus valores; el elemento #{id} conserva sus valores (un paso de deshacer junto con el resto)",
+ "xl.msg.dup_same": "id {} duplicado: mismos valores que la fila {}; fila ignorada",
+ "xl.msg.dup_unchanged": "id {} duplicado: copia sin cambios de la fila exportada; fila ignorada",
+ "xl.msg.dup_conflict": "el id {} está en las filas {} con valores distintos; no se aplicó nada para este id",
+ "xl.msg.dup_conflict_keep": "el id {} está en las filas {} con valores distintos; no se aplicó nada para este id — conservar una fila"
+}

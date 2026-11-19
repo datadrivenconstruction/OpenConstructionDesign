@@ -1,0 +1,146 @@
+{
+ "items": [
+  {
+   "key": "door.clear_min",
+   "value": 0.8,
+   "unit": "m",
+   "source": "gb55031",
+   "clause": "6.5.2 to 6.5.4 door clear width 0.80 m",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14 for GB 55031 door clear width; only an unofficial full-text mirror, a paid translation and Beijing municipal excerpts surfaced, none with a readable door clause"
+  },
+  {
+   "key": "stair.landing_min",
+   "value": 1.2,
+   "unit": "m",
+   "source": "gb55031",
+   "clause": "5.3.5 landing at a direction change at least flight width and 1.20 m; straight landing 0.90 m",
+   "verified": true,
+   "note": "read 2026-11-13: GB 55031-2022 clause text in the Beijing planning bureau standards excerpt, ghzrzyw.beijing.gov.cn/biaozhunguanli/bzzl/202209/P020220929592779805981.pdf"
+  },
+  {
+   "key": "stair.flight_risers_max",
+   "value": 18,
+   "unit": "count",
+   "source": "gb55031",
+   "clause": "5.3.8 each public flight 2 to 18 risers",
+   "verified": true,
+   "note": "read 2026-11-13: GB 55031-2022 clause text in the Beijing planning bureau standards excerpt, ghzrzyw.beijing.gov.cn/biaozhunguanli/bzzl/202209/P020220929592779805981.pdf"
+  },
+  {
+   "key": "egress.travel_max",
+   "value": 40.0,
+   "unit": "m",
+   "source": "gb55031",
+   "clause": "evacuation distance",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: GB 50016 PDFs on a Shenzhen government host and a university host have non-extractable CJK text (no OCR available); official standards portal gives view-only access; the residential table was not read"
+  },
+  {
+   "key": "daylight.window_floor_ratio",
+   "value": 0.143,
+   "unit": "ratio",
+   "source": "gb50096",
+   "clause": "7.1.5, bedrooms, living rooms and kitchens glazed at 1/7 of the floor",
+   "verified": true,
+   "note": "read 2026-11-14: jsxishan.gov.cn/doc/2012/11/14/2321165.shtml (government copy); GB 55038-2025 6.2.2 only requires direct daylight, whether it repeals 7.1.5 was not checked"
+  },
+  {
+   "key": "door.clear_min.accessible",
+   "value": 0.9,
+   "unit": "m",
+   "source": "gb55019",
+   "clause": "2.5.4(1), accessible door 900 mm clear in new buildings",
+   "verified": true,
+   "note": "read 2026-11-14: ghzrzyw.beijing.gov.cn/biaozhunguanli/bzzl/202112/P020211228345970190464.pdf; was 0.8, the refurbishment value"
+  },
+  {
+   "key": "accessible.turning_circle",
+   "value": 1.5,
+   "unit": "m",
+   "source": "gb55019",
+   "clause": "2.6.1(1), 1.50 m turning space before an accessible lift",
+   "verified": true,
+   "note": "read 2026-11-14: ghzrzyw.beijing.gov.cn/biaozhunguanli/bzzl/202112/P020211228345970190464.pdf"
+  },
+  {
+   "key": "corridor.width_min.accessible",
+   "value": 1.2,
+   "unit": "m",
+   "source": "gb55019",
+   "clause": "2.2.2, accessible route 1.20 m wide",
+   "verified": true,
+   "note": "read 2026-11-14: ghzrzyw.beijing.gov.cn/biaozhunguanli/bzzl/202112/P020211228345970190464.pdf"
+  },
+  {
+   "key": "fire.compartment_area_max",
+   "value": 2500,
+   "unit": "m2",
+   "source": "gb55037",
+   "clause": "4.3.16, multi-storey public building of grade I/II: 2500 m2",
+   "verified": true,
+   "note": "read 2026-11-14: zfcxjw.cq.gov.cn clause quote and GB 50016 table 5.3.1 on xxgk.jl.gov.cn; residential limits not read"
+  },
+  {
+   "key": "room.height_min",
+   "value": 2.4,
+   "unit": "m",
+   "source": "gb50096",
+   "clause": "5.5.2, bedrooms and living rooms at least 2.40 m clear",
+   "verified": true,
+   "url": "https://www.jsxishan.gov.cn/doc/2012/11/14/2321165.shtml",
+   "accessed": "2026-11-15",
+   "paraphrase": "Bedrooms and living rooms are at least 2.40 m high.",
+   "note": "read 2026-11-15: jsxishan.gov.cn page with the mandatory clauses of GB 50096-2011"
+  },
+  {
+   "key": "stair.riser_max",
+   "value": 0.175,
+   "unit": "m",
+   "source": "gb50096",
+   "clause": "6.3.2, riser at most 0.175 m",
+   "verified": true,
+   "url": "https://www.jsxishan.gov.cn/doc/2012/11/14/2321165.shtml",
+   "accessed": "2026-11-15",
+   "paraphrase": "A residential stair rises at most 0.175 m per step.",
+   "note": "read 2026-11-15: jsxishan.gov.cn page with the mandatory clauses of GB 50096-2011"
+  },
+  {
+   "key": "stair.going_min",
+   "value": 0.26,
+   "unit": "m",
+   "source": "gb50096",
+   "clause": "6.3.2, tread at least 0.26 m",
+   "verified": true,
+   "url": "https://www.jsxishan.gov.cn/doc/2012/11/14/2321165.shtml",
+   "accessed": "2026-11-15",
+   "paraphrase": "A residential stair tread is at least 0.26 m.",
+   "note": "read 2026-11-15: jsxishan.gov.cn page with the mandatory clauses of GB 50096-2011"
+  },
+  {
+   "key": "guard.height_min",
+   "value": 1.1,
+   "unit": "m",
+   "source": "gb55031",
+   "clause": "6.6.1(2), guard clear height at least 1.10 m (dwellings up to six storeys 1.05 m, GB 50096 5.6.3)",
+   "verified": true,
+   "url": "https://ghzrzyw.beijing.gov.cn/biaozhunguanli/bzzl/202209/P020220929592779805981.pdf",
+   "accessed": "2026-11-15",
+   "paraphrase": "A guard at an open edge is at least 1.10 m high.",
+   "note": "read 2026-11-15: beijing.gov.cn PDF of GB 55031-2022"
+  },
+  {
+   "key": "building.class5_height",
+   "na": true,
+   "value": null,
+   "unit": "m",
+   "source": "gb55031",
+   "verified": false,
+   "note": "na: buildings are classed by height lines for high-rise and by fire resistance grade, not by a 13 m class",
+   "text": {
+    "en": "No 13 m building class.",
+    "ru": "Нет класса здания 13 м."
+   }
+  }
+ ]
+}

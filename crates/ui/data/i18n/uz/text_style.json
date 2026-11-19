@@ -1,0 +1,15 @@
+{
+ "text_style.lbl.text_style": "Matn uslubi",
+ "text_style.lbl.align": "Tekislash",
+ "text_style.lbl.head": "Strelka uchi",
+ "text_style.lbl.line_style": "Chiziq uslubi",
+ "text_style.lbl.fill": "To'ldirish",
+ "text_style.lbl.detail": "Detal",
+ "text_style.lbl.width": "Kengligi",
+ "text_style.bad_number": "{min} dan {max} gacha raqam kiriting",
+ "text_style.tip.next_ring": "Bu konturni yopib, shu sohada yangisini boshlash",
+ "text_style.tip.edit_text": "Matnni joyida tahrirlash",
+ "text_style.tip.add_leader": "Bu matnga yetakchi chiziq qo'shish",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°"
+}

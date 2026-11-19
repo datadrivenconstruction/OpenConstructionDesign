@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "Прилагането е спряно: моделът е запазен както е",
+ "apply_verify.rolled_back": "Прилагането не съвпадна с черновата и беше отменено; моделът е непроменен. {what}",
+ "apply_verify.diff.missing": "Черновата показва {what} {kind}, но при прилагане това не е направено.",
+ "apply_verify.diff.extra": "Прилагане на {kind} {what}, което черновата не показва.",
+ "apply_verify.diff.kind": "Черновата показва {what} {shown}, а при прилагане е {applied}.",
+ "apply_verify.diff.value": "{what}: „{col}“ е различно от черновата.",
+ "apply_verify.diff.truncated": "Черновата и приложената промяна се различават по размер.",
+ "apply_verify.diff.unreadable": "Приложената промяна не можа да бъде прочетена обратно ({e}).",
+ "apply_verify.no_base": "Прилагането не е стартирано: липсва копието, спрямо което да се провери черновата. Моделът е непроменен; поискайте черновата отново.",
+ "apply_verify.take_back_failed": "Отмяната не успя ({e}): използвайте Отмяна.",
+ "apply_verify.kind.created": "създадено",
+ "apply_verify.kind.changed": "променено",
+ "apply_verify.kind.deleted": "изтрито",
+ "apply_verify.card.type_row": "Тип {type} · {n} елемента приемат промяната"
+}

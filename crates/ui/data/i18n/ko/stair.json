@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "계단",
+ "selcat.railing": "난간",
+ "quick.cat.stair": "계단",
+ "quick.cat.railing": "난간",
+ "stair.risers": "챌판",
+ "stair.riser": "챌판 높이",
+ "stair.comfort": "2R + T",
+ "stair.tread_auto": "규칙으로 디딤판",
+ "stair.tread_auto_tip": "입력한 디딤판 값을 버리고 2R + T 규칙으로 설정",
+ "stair.broken": "이 계단은 레벨에 맞지 않습니다",
+ "railing.host_stair": "계단 #{id}에 호스트됨",
+ "railing.host_path": "스케치 난간",
+ "railing.length": "길이",
+ "stair.deleted_with": "호스트된 난간 {n}개와 함께"
+}

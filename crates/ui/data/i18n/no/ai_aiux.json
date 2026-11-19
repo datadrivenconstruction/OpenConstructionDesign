@@ -1,0 +1,19 @@
+{
+ "ai.plan.apply_updated": "Bruk oppdatert plan",
+ "ai.plan.keys_anywhere": "Ctrl+Enter bruker og Esc stopper forespørselen også fra plan- eller 3D-visningen, med mindre et tekstfelt skrives i.",
+ "ai.plan.rebased": "Oppdatert mot gjeldende modell: {what}",
+ "ai.value.bad": "«{text}» er ikke en gyldig verdi for {name}",
+ "ai.value.both": "AI-assistenten endret denne verdien til {agent} mens du skrev {mine}. Velg den som skal beholdes.",
+ "ai.value.choose_first": "Velg verdien din eller AI-assistentens på kortet først",
+ "ai.value.elem": "Element {n}: {what}",
+ "ai.value.held": "Verdien din {mine} settes inn når forespørselen er ferdig",
+ "ai.value.keep_agent": "Behold {agent}",
+ "ai.value.lost": "Verdien din {mine} for {what} i «{title}» ble ikke brukt: AI-assistenten tok verdien av kortet",
+ "ai.value.more": "{n} flere verdier: utvid raden",
+ "ai.value.refused": "Planen kunne ikke ta imot denne verdien og beholder den forrige: {why}",
+ "ai.value.refused_next": "Skriv inn en annen verdi, eller fjern haken fra elementet for å la det ligge utenfor Bruk.",
+ "ai.value.tip": "Korriger verdien i utkastet; modellen endres først ved Bruk. Enter bekrefter, Esc gjenoppretter.",
+ "ai.value.use_mine": "Bruk {mine}",
+ "ai.value.was": "var {old}",
+ "ai.value.bad_len": "Feltet «{name}»: {why}"
+}

@@ -1,0 +1,16 @@
+{
+ "cmd.drawing.to_detail": "図面をディテールに変換",
+ "cmd.drawing.to_detail.desc": "選択した図面プリミティブ、または現在の階の図面全体を、平面上のディテール線、テキスト注記、領域に変換します。図面自体は変更されません。",
+ "detail_items.st.no_drawing": "この階に図面がありません",
+ "detail_items.st.nothing": "変換するものがありません: 表示中のレイヤーに線、円弧、テキスト、塗りつぶしがありません",
+ "detail_items.st.done": "ディテール要素を追加: 線 {lines}、テキスト {texts}、領域 {regions}",
+ "detail_items.st.failed": "ディテール要素を追加できませんでした: {e}",
+ "detail_items.st.warn": "ディテール要素を追加しましたが、ビューを更新できませんでした (線 {lines}、テキスト {texts}、領域 {regions}): {e}。元に戻すと削除されます。",
+ "detail_items.st.bad_view": "ディテール要素には平面ビューまたは断面ビューが必要です",
+ "detail_items.st.no_transform": "このビューには図面用の有効な座標系がないため、何も追加されませんでした",
+ "drafting_tools.free.plan_only": "このコマンドは平面要素を対象とします。平面を開いてください",
+ "drafting_tools.free.zero": "2 点が一致しているため、何も追加されませんでした",
+ "drafting_tools.free.select_first": "先に、配分するこのビューの要素を選択してください",
+ "drafting_tools.free.pick_item": "このビューの要素をクリックしてタグを付けてください",
+ "drafting_tools.free.dim_kind": "製図ビューでは直線寸法のみ使用できます"
+}

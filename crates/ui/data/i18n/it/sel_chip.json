@@ -1,0 +1,5 @@
+{
+ "sel_chip.opt.sel_hint": "Clicca un elemento per selezionarlo. Ctrl aggiunge, Shift toglie.",
+ "sel_chip.opt.units": "Unità",
+ "sel_chip.sel_chip": "{name}: {n}"
+}

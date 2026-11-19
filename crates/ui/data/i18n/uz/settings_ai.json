@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "Ulanish",
+ "settings.ai_status_desc": "AI yordamchisi ishlatadigan model; kalitlar xavfsiz saqlashda qoladi",
+ "settings.ai_not_connected": "Ulanmagan",
+ "settings.ai_connect": "Ulanish sozlamalari",
+ "settings.ai_connect_desc": "O'zingizning modelingiz manzili, modeli va kaliti: bulutli yoki mahalliy",
+ "settings.ai_connect_btn": "Ulanish sozlamalari…",
+ "settings.ai_panel": "AI yordamchisi paneli",
+ "settings.ai_panel_desc": "So'zlar bilan so'rang, planni ko'rib chiqing, so'ng qo'llang",
+ "settings.ai_open_panel": "AI panelini ochish"
+}

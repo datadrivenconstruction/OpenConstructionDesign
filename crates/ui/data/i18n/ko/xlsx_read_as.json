@@ -1,0 +1,11 @@
+{
+ "xlsx_read_as.title": "이름이 바뀐 시트?",
+ "xlsx_read_as.detail": "시트 {found}의 열이 {sheet}의 열과 {score}% 일치합니다. 선택하지 않으면 읽지 않습니다.",
+ "xlsx_read_as.detail_many": "{sheet}에 맞는 시트가 둘 이상입니다: {found}. 자동으로 고르지 않으니 읽을 시트를 선택하세요.",
+ "xlsx_read_as.read_as": "“{found}”을(를) {sheet}(으)로 읽기",
+ "xlsx_read_as.read_as_tip": "이번 가져오기에만 적용됩니다. 시트 이름은 바뀌지 않으며, 적용은 새 행의 ID만 시트에 씁니다.",
+ "xlsx_read_as.active": "이번 가져오기에서는 시트 “{found}”을(를) {sheet}(으)로 읽습니다.",
+ "xlsx_read_as.undo": "{sheet}(으)로 읽지 않기",
+ "xlsx_read_as.undo_tip": "통합 문서에 있는 원래 시트 이름으로 돌아갑니다.",
+ "xlsx_read_as.not_rewritten": "통합 문서를 다시 쓰지 않았습니다: 이름이 바뀐 시트는 그 이름 그대로 읽습니다. 통합 문서와 동기화하려면 원래 이름으로 되돌리세요."
+}

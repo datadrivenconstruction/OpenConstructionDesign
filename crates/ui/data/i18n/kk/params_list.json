@@ -1,0 +1,23 @@
+{
+ "params_list.n_params": {
+  "one": "# параметр",
+  "other": "# параметр"
+ },
+ "params_list.n_values": {
+  "one": "# мән",
+  "other": "# мән"
+ },
+ "params_list.n_elements": {
+  "one": "# элемент",
+  "other": "# элемент"
+ },
+ "params_list.exported": "{params} {file} файлына экспортталды",
+ "params_list.export_failed": "Параметрлер экспортталмады: {why}",
+ "params_list.open_folder": "Қалтаны ашу",
+ "params_list.delete_tip": "Параметрді және оның мәндерін жою",
+ "params_list.confirm": "{name} параметрін және оның {elements} элементтегі {values} мәнін жою керек пе?",
+ "params_list.confirm_btn": "Жою",
+ "params_list.cancel": "Бас тарту",
+ "params_list.deleted": "{name} параметрі жойылды ({values})",
+ "params_list.undo": "Қайтару"
+}

@@ -1,0 +1,11 @@
+{
+ "cmd.ctx.ceiling.clean_outline": "Umriss bereinigen",
+ "cmd.ctx.ceiling.clean_outline.desc": "Entfernt schmale Spitzen, an denen der Deckenumriss zu sich selbst zurückläuft. Zeigt zuerst eine Vorschau; ein Rückgängig-Schritt.",
+ "cmd.ctx.shaft.clean_outline": "Umriss bereinigen",
+ "cmd.ctx.shaft.clean_outline.desc": "Entfernt schmale Spitzen, an denen der Schachtumriss zu sich selbst zurückläuft. Zeigt zuerst eine Vorschau; ein Rückgängig-Schritt.",
+ "outline_cleanup.intro_ceiling": "Der Umriss dieser Decke läuft in schmalen Spitzen zu sich selbst zurück: {n}. Die Bereinigung entfernt sie; alles andere bleibt unverändert.",
+ "outline_cleanup.intro_shaft": "Der Umriss dieses Schachts läuft in schmalen Spitzen zu sich selbst zurück: {n}. Die Bereinigung entfernt sie; alles andere bleibt unverändert.",
+ "outline_cleanup.none_ceiling": "Der Umriss dieser Decke hat keine Spitzen",
+ "outline_cleanup.none_shaft": "Der Umriss dieses Schachts hat keine Spitzen",
+ "outline_cleanup.need_host": "Wählen Sie ein Geschoss, eine Decke oder einen Schacht"
+}

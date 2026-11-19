@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D",
+ "phases.current_mark": "aktuel",
+ "phases.make_current": "Gør aktuel",
+ "phases.col_phase": "Fase",
+ "phases.col_filter": "Filter",
+ "phases.presets": "Planforvalg",
+ "phases.del_title": "Slet fase",
+ "phases.del_text": "Slet fasen „{name}“? Dens elementer flyttes til fasen valgt nedenfor.",
+ "phases.del_into": "Flyt elementer til",
+ "phases.del_ok": "Slet",
+ "phases.col_kind": "Elementtype",
+ "phases.col_count": "Antal",
+ "phases.col_volume": "Volumen"
+}

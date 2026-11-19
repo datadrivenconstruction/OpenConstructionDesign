@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "Mga hagdan",
+ "selcat.railing": "Mga railing",
+ "quick.cat.stair": "Mga hagdan",
+ "quick.cat.railing": "Mga railing",
+ "stair.risers": "Mga riser",
+ "stair.riser": "Taas ng riser",
+ "stair.comfort": "2R + T",
+ "stair.tread_auto": "Tread ayon sa rule",
+ "stair.tread_auto_tip": "Alisin ang tinype na tread at hayaang itakda ito ng 2R + T rule",
+ "stair.broken": "Hindi bagay sa mga antas nito ang hagdan na ito",
+ "railing.host_stair": "Nakakabit sa hagdan #{id}",
+ "railing.host_path": "Sketch na railing",
+ "railing.length": "Haba",
+ "stair.deleted_with": "kasama ang {n} na nakakabit na railing"
+}

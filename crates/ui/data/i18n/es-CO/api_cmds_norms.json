@@ -1,0 +1,8 @@
+{
+ "api.cmd.norms_lookup": "Buscar las reglas del paquete de normas del proyecto por tema, elemento o código",
+ "api.cmd.norms_check": "Comprobar el modelo con el paquete de normas del proyecto y listar los hallazgos",
+ "api.cmd.norms_programme": "Programa de estancias típico del país del proyecto para un tipo de edificio",
+ "api.cmd.select_similar": "Seleccionar todos los elementos como este: mismo tipo o categoría, en esta planta o en todo el proyecto",
+ "api.cmd.create_drawing_set": "Preparar un juego de planos imprimible: plantas, secciones, alzados, planillas y cajetines",
+ "api.cmd.deliver_project": "Del encargo a los archivos en un paso: el proyecto y su juego de planos, exportados tras Aplicar"
+}

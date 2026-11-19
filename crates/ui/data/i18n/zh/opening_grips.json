@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "翻转合页侧",
+ "cmd.edit.flip_hand.desc": "沿墙体镜像所选门窗，使合页移至洞口另一端。",
+ "cmd.edit.flip_facing": "翻转门窗开启侧",
+ "cmd.edit.flip_facing.desc": "将所选门窗的开启方向翻转至墙体另一侧。",
+ "opening_grips.flip_hand": "翻转合页",
+ "opening_grips.flip_hand.tip": "合页移至洞口另一端（Shift+F）",
+ "opening_grips.flip_facing": "翻转开启侧",
+ "opening_grips.flip_facing.tip": "开启至墙体另一侧（Shift+G）",
+ "opening_grips.flip.done": "已翻转：{n}",
+ "opening_grips.flip.none": "请选择要翻转的门或窗",
+ "opening_grips.flip.fail": "未翻转：{why}"
+}

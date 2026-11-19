@@ -1,0 +1,2 @@
+{"typology": "office", "name": "Office Tower", "floors": 8,
+ "design": {"massing": "tower_podium", "upper_from": 2, "setback": 4, "facade": "curtain", "terrace": true}}

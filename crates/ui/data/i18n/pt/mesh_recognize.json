@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "Reconhecendo {done} de {total}",
+ "mesh_recognize.all": "Todos os {n}",
+ "mesh_recognize.only_confident": "Somente confiáveis",
+ "mesh_recognize.confident_tip": "Marca as linhas cujo tipo corresponde à categoria e cuja confiança é de pelo menos {pct}%",
+ "mesh_recognize.row_hint": "Clique em uma linha para marcá-la. As setas movem, Enter marca.",
+ "mesh_recognize.kind_for": "Tipo para {name}",
+ "mesh_recognize.source": "Malhas de origem",
+ "mesh_recognize.keep": "Manter malhas",
+ "mesh_recognize.replace": "Substituir malhas",
+ "mesh_recognize.convert_keep": "Converter {n}",
+ "mesh_recognize.convert_remove": "Converter {n} e remover malhas",
+ "mesh_recognize.creates": "Criará {n}: {kinds}",
+ "mesh_recognize.creates_none": "Nada marcado ainda",
+ "mesh_recognize.stay": "{n} malhas de origem permanecem no modelo",
+ "mesh_recognize.removed": "{n} malhas de origem serão removidas. Desfazer as traz de volta."
+}

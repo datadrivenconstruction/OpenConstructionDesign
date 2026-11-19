@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "Minden szerkesztésnél megtartja ennek a falnak a jelenlegi hosszát",
+ "constraints.con.tip.lock_dist": "Minden szerkesztésnél megtartja a két fal közötti távolságot",
+ "constraints.con.tip.equal": "A kijelölt falak közötti távolságok egyenlők maradnak",
+ "constraints.con.tip.align": "A két fal egy vonalban marad",
+ "constraints.con.tip.parallel": "A falak párhuzamosak maradnak",
+ "constraints.con.tip.perp": "A falak derékszögben maradnak",
+ "constraints.con.tip.align_grid": "A fal a legközelebbi rácsvonalon marad",
+ "constraints.con.tip.lock_dist_grid": "Megtartja a fal és a legközelebbi rácsvonal közötti távolságot",
+ "constraints.con.tip.level_gap": "A szintek közötti távolság megmarad",
+ "constraints.con.tip.top_to_level": "A fal tetejét a fölötte lévő szinthez igazítja"
+}

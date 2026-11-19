@@ -1,0 +1,8 @@
+{
+ "v3d.proj.to_ortho": "Beralih ke ortografis",
+ "v3d.proj.to_persp": "Beralih ke perspektif",
+ "v3d.walk.unit.m": "m/dtk",
+ "v3d.walk.unit.ft": "ft/s",
+ "v3d.temp.show_all": "Tampilkan semua  ·  Esc",
+ "v3d.msg.deleted_named": "Tampilan 3D {name} dihapus"
+}

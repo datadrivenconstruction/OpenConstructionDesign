@@ -1,0 +1,23 @@
+{
+  "cmd.arch.room_sep.short": "Room separator",
+  "cmd.str.footing.short": "Column footing",
+  "cmd.str.strip_footing.short": "Strip footing",
+  "cmd.str.analytical.short": "Analytical",
+  "cmd.mep.terminal.short": "Air terminal",
+  "cmd.mod.isolate.short": "Isolate",
+  "cmd.view.ui.short": "Interface",
+  "cmd.mgr.params.short": "Parameters",
+  "cmd.ctx.wall.attach.short": "Attach",
+  "cmd.mass.unjoin.short": "Unjoin",
+  "cmd.mod.unjoin.short": "Unjoin",
+  "cmd.arch.void_extrusion.short": "Void extrusion",
+  "cmd.e3d.snap.short": "3D snaps",
+  "cmd.mgr.open_big.short": "Large file…",
+  "cmd.site.edit_points.short": "Toposolid points",
+  "cmd.view.reveal_3d.short": "Reveal categories",
+  "cmd.help.check_update.short": "Updates",
+  "cmd.ctx.floor.link_unlink.short": "Unlink edges",
+  "cmd.ui.onboarding.short": "Set up…",
+  "cmd.mod.distribute.short": "Distribute",
+  "cmd.data.src_delta.short": "Changes to XLSX spreadsheet…"
+}

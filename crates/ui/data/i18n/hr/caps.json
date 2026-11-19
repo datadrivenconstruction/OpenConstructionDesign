@@ -1,0 +1,5 @@
+{
+ "caps.refused": "{kinds}: {reason}. Ništa nije promijenjeno.",
+ "caps.panel": "Panel se pomiče sa svim zavjesnim zidom. Odaberite zid",
+ "caps.unsupported": "Ovaj alat ne uređuje ove elemente"
+}

@@ -1,0 +1,5 @@
+# Grip: a corner of the selected floor dragged out; one record
+tool(SB) click(0,0) click(6,0) click(6,4) click(0,4) key(Enter) → rows(slab)=1 journal=+1
+tool(select) click(3,0) → selected=1
+move(6,4) press(6,4) → scope=GripDrag
+move(7,5) release(7,5) → journal=+2 scope=Idle

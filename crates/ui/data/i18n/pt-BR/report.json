@@ -1,0 +1,23 @@
+{
+ "cmd.app.report": "Relatar um problema…",
+ "cmd.app.report.desc": "Descreve o que deu errado e salva um pacote neste computador: seu texto, dados da versão e do sistema, uma imagem da janela e o último registro de falha. Nada é enviado.",
+ "report.title": "Relatar um problema",
+ "report.what": "O que aconteceu",
+ "report.expected": "O que você esperava",
+ "report.steps": "Passos para repetir",
+ "report.opt.shot": "Incluir uma imagem da janela",
+ "report.opt.model": "Incluir uma cópia do modelo",
+ "report.opt.model.note": "Desativado por padrão. A cópia contém os dados do projeto, sem o diário de IA.",
+ "report.opt.paths": "Manter nomes de usuário nos caminhos de arquivo",
+ "report.local": "O pacote é salvo somente neste computador. Nada é enviado automaticamente.",
+ "report.blocked": "Descreva primeiro o que aconteceu.",
+ "report.save": "Salvar pacote",
+ "report.copy": "Copiar texto",
+ "report.cancel": "Cancelar",
+ "report.copied": "Texto do relatório copiado.",
+ "report.saved": "Pacote salvo: {path}",
+ "report.failed": "O pacote não pôde ser salvo: {err}",
+ "report.model.fail": "A cópia do modelo não pôde ser feita; nada foi salvo: {err}",
+ "report.crash.notice": "A sessão anterior terminou com uma falha.",
+ "report.crash.action": "Relatar um problema"
+}

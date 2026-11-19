@@ -1,0 +1,10 @@
+{
+ "dlg.dw.store.unloaded": "A(z) „{name}” rajzot nem lehetett beolvasni a projektből, a fájlban változatlanul megmarad",
+ "dlg.dw.store.source_missing": "„{name}” rajz: a forrásfájl nem található, a projektben mentett másolat látszik",
+ "dlg.dw.store.source_changed": "„{name}” rajz: a forrásfájl az elhelyezés óta megváltozott, a projektben mentett másolat látszik",
+ "dlg.dw.store.unreadable": "A projektben tárolt elhelyezett rajzokat nem lehet beolvasni",
+ "dlg.dw.store.not_saved": "A rajzok nincsenek mentve: {why}",
+ "dlg.dw.store.why_read": "a projektben tárolt elhelyezett rajzokat nem lehet beolvasni",
+ "dlg.dw.store.why_write": "a projektfájlt nem lehetett frissíteni",
+ "dlg.dw.store.missing_in_file": "A mentett fájl nem tartalmazza az összes elhelyezett rajzot"
+}

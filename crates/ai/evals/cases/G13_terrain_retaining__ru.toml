@@ -1,0 +1,31 @@
+id = "G13_terrain_retaining__ru"
+tier = "hard"
+group = "Любая геометрия"
+title = "Terrain with retaining walls"
+lang = "ru"
+base = "empty"
+
+[[turn]]
+say = "Участок со склоном 60 x 40 м с перепадом 6 м, террасирован на три уровня бетонными подпорными стенами высотой до 2.5 м, ступени между террасами и пандус."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "toposolid+mesh"
+min = 1.0
+
+[[oracle.count]]
+spec = "wall"
+min = 3.0
+
+[[oracle.count]]
+spec = "stair"
+min = 1.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

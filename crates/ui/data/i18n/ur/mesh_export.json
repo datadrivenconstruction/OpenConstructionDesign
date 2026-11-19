@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "پوری ماڈل یا منتخب حصہ بائنری STL کے طور پر میٹر یا ملی میٹر میں محفوظ کرتا ہے۔",
+ "cmd.data.export_obj.desc": "پوری ماڈل یا منتخب حصہ MTL فائل کے ساتھ OBJ کے طور پر محفوظ کرتا ہے: ہر عنصر کا ایک گروپ، مواد کے مطابق رنگ۔",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "مواد کے ساتھ OBJ (.obj)",
+ "open_file.filter.mesh": "3D میشز (glTF, STEP, STL, OBJ)",
+ "mx.title": "{fmt} برآمد کریں",
+ "mx.scope": "کیا برآمد کرنا ہے",
+ "mx.scope.all": "پوری ماڈل",
+ "mx.scope.sel": "منتخب ({n} عناصر)",
+ "mx.units": "فائل میں اکائیاں",
+ "mx.units.m": "میٹر",
+ "mx.units.mm": "ملی میٹر",
+ "mx.export": "برآمد کریں…",
+ "mx.saved": "{fmt} محفوظ ہو گیا: {path} ({parts} عناصر، {tris} مثلث)",
+ "mx.partial": "{fmt} {n} مسائل کے ساتھ محفوظ ہوا، کچھ باڈیز غائب ہو سکتی ہیں: {path}",
+ "mx.failed": "{fmt} برآمد ناکام: {error}",
+ "mx.imported": "{file}: {n} عناصر درآمد ہوئے ({tris} مثلث)",
+ "mx.imported_notes": "{file}: {n} عناصر درآمد ہوئے ({tris} مثلث)، {w} نوٹس: {first}"
+}

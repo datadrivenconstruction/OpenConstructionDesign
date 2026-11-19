@@ -1,0 +1,8 @@
+{
+ "xlsx_idle.idle_title": "Nicio modificare de importat",
+ "xlsx_idle.export_name": "Export",
+ "xlsx_idle.export_body": "Scrie modelul într-un registru de calcul. Editează valorile acolo, apoi sincronizează.",
+ "xlsx_idle.sync_name": "Sincronizare",
+ "xlsx_idle.sync_body": "Recitește registrul de calcul și listează diferențele. Modelul se schimbă doar când aplici.",
+ "xlsx_idle.last_sync": "Ultima sincronizare: {when}"
+}

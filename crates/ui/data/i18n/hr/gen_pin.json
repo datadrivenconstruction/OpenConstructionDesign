@@ -1,0 +1,7 @@
+{
+ "gen.pin.room": "Promijenili ste prostoriju generiranog projekta. Zaključajte je da revizija projekta zadrži na mjestu.",
+ "gen.pin.storey": "Promijenili ste etažu generiranog projekta. Zaključajte je da revizija projekta zadrži njezine zidove i otvore.",
+ "gen.pin.action": "Zaključaj",
+ "gen.pin.done": "Zaključano: revizija projekta to zadržava i raspoređuje ostalo oko toga",
+ "gen.pin.failed": "Nije moguće zaključati"
+}

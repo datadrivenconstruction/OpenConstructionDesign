@@ -1,0 +1,21 @@
+{
+ "cmd.help.check_update": "अपडेट जाँचें",
+ "update_check.title": "अपडेट जाँच",
+ "update_check.desc": "डिफ़ॉल्ट रूप से बंद। केवल संस्करण, OS और आर्किटेक्चर, तथा इंस्टॉल का प्रकार हमारे सर्वर पर भेजता है। कुछ भी डाउनलोड या इंस्टॉल नहीं करता।",
+ "update_check.freq.startup": "स्टार्टअप पर",
+ "update_check.freq.daily": "रोज़ाना",
+ "update_check.freq.weekly": "साप्ताहिक",
+ "update_check.freq.never": "कभी नहीं",
+ "update_check.check_now": "अभी जाँचें",
+ "update_check.dialog.title": "अपडेट जाँच",
+ "update_check.unknown.title": "अपडेट नहीं जाँचे जा सके",
+ "update_check.unknown.body": "{e}। इसका अर्थ यह नहीं कि यह संस्करण नवीनतम है। बाद में फिर कोशिश करें।",
+ "update_check.current": "आपके पास नवीनतम संस्करण है ({v})।",
+ "update_check.newer": "संस्करण {v} उपलब्ध है",
+ "update_check.date": "जारी: {d}",
+ "update_check.unfit": "यह संस्करण ({v}) न्यूनतम अनुशंसित संस्करण {f} से पुराना है। अपडेट की सलाह दी जाती है।",
+ "update_check.close": "बंद करें",
+ "update_check.open_failed": "रिलीज़ पेज नहीं खुल सका।",
+ "update_check.toast.newer": "संस्करण {v} उपलब्ध है। सहायता > अपडेट जाँचें।",
+ "update_check.toast.unfit": "यह संस्करण ({v}) न्यूनतम अनुशंसित संस्करण {f} से पुराना है।"
+}

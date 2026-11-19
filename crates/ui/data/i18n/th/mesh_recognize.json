@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "กำลังจดจำ {done} จาก {total}",
+ "mesh_recognize.all": "ทั้งหมด {n}",
+ "mesh_recognize.only_confident": "เฉพาะที่มั่นใจ",
+ "mesh_recognize.confident_tip": "ทำเครื่องหมายแถวที่ชนิดตรงกับหมวดหมู่และมีความเชื่อมั่นอย่างน้อย {pct}%",
+ "mesh_recognize.row_hint": "คลิกแถวเพื่อทำเครื่องหมาย ปุ่มลูกศรเพื่อเลื่อน Enter เพื่อทำเครื่องหมาย",
+ "mesh_recognize.kind_for": "ชนิดสำหรับ {name}",
+ "mesh_recognize.source": "เมชต้นทาง",
+ "mesh_recognize.keep": "เก็บเมช",
+ "mesh_recognize.replace": "แทนที่เมช",
+ "mesh_recognize.convert_keep": "แปลง {n}",
+ "mesh_recognize.convert_remove": "แปลง {n} และลบเมช",
+ "mesh_recognize.creates": "จะสร้าง {n}: {kinds}",
+ "mesh_recognize.creates_none": "ยังไม่ได้เลือกอะไร",
+ "mesh_recognize.stay": "เมชต้นทาง {n} ชิ้นยังคงอยู่ในโมเดล",
+ "mesh_recognize.removed": "เมชต้นทาง {n} ชิ้นจะถูกลบ เลิกทำจะนำกลับมา"
+}

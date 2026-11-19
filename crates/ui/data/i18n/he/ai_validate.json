@@ -1,0 +1,14 @@
+{
+ "ai.issue.integrity": "בעיית שלמות: {0} {1}: {2}",
+ "ai.issue.opening_outside": "הפתח לא נכנס לתוך הקיר: {0}",
+ "ai.issue.opening_overlap": "הפתח חופף לפתח {0}",
+ "ai.issue.wall_warning": "קיר: {0}",
+ "ai.issue.cut_warning": "חיתוך: {0}",
+ "ai.issue.room_open": "החדר לא סגור",
+ "ai.issue.material_unknown": "אין חומר בשם “{0}” בפרויקט: החלה תוסיף חדש עם מאפיינים ברירת מחדל",
+ "ai.issue.material_suggest": "אין חומר בשם “{0}” בפרויקט: החלה תוסיף חדש. האם התכוונת ל-“{1}”?",
+ "ai.issue.conflict": "הפריט הזה לא יכול לרוץ: {0}",
+ "ai.issue.too_large": "{0} אלמנטים ישתנו, מעל הגבול של {1}. נדרשת הרשאה",
+ "ai.issue.truncated": "רשימת השינויים נעצרה אחרי {0} שורות: התוכנית גדולה מכדי שהכרטיס יציג. נדרשת הרשאה",
+ "ai.issue.replan_failed": "לא ניתן היה לחשב מחדש את התוכנית. נוצר עותק חדש של המודל"
+}

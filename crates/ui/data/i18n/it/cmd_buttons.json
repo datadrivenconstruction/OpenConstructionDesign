@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}, sul livello",
+ "cmd_buttons.purge.undo": "La rimozione è un unico passo di annullamento.",
+ "cmd_buttons.unpin.none": "Nessun elemento selezionato è bloccato",
+ "cmd_buttons.change_type.none": "Seleziona prima i muri: il loro tipo cambia in un solo passo",
+ "cmd_buttons.units.metric": "Unità: metriche",
+ "cmd_buttons.units.imperial": "Unità: piedi e pollici",
+ "cmd_buttons.units.back": "Torna indietro",
+ "cmd_buttons.underlay.on": "Sottostante attivo: il livello sottostante è mostrato attenuato",
+ "cmd_buttons.underlay.off": "Sottostante disattivato",
+ "cmd_buttons.underlay.none": "Sottostante attivo, ma il livello sottostante non ha nulla da mostrare",
+ "cmd_buttons.zoom_sel.no_shape": "La selezione non ha una forma da inquadrare in questa vista",
+ "cmd_buttons.close.base": "Le schede pianta e 3D restano aperte; apri una sezione, un foglio o una vista di disegno per chiuderla",
+ "tool.equipment": "Attrezzatura",
+ "hint.equipment.place": "Attrezzatura: scegli la posizione · Esc per uscire",
+ "cmd_buttons.table.opened": "Tabella aperta accanto al modello",
+ "cmd_buttons.circuits.tip": "Apri l'elenco dei circuiti elettrici di questo modello"
+}

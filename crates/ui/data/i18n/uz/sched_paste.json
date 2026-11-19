@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "{n} ta katak joylashtirildi",
+ "sched_edit.pasted_skipped": "{n} ta katak joylashtirildi, {k} tasi o'tkazib yuborildi: {why}",
+ "sched_edit.filled": "{n} ta katak to'ldirildi",
+ "sched_edit.filled_skipped": "{n} ta katak to'ldirildi, {k} tasi o'tkazib yuborildi: {why}",
+ "sched_edit.why_ro": "{n} ta faqat o'qish uchun",
+ "sched_edit.why_bad": "{n} ta noto'g'ri qiymat",
+ "sched_edit.no_cell": "Avval jadvalda katakni bosing",
+ "sched_edit.nothing": "Yozish uchun hech narsa yo'q",
+ "sched_edit.not_refreshed": "Yozildi, ko'rinish yangilanmadi: {e}",
+ "sched_edit.failed": "o'zgarmadi: {e}",
+ "sched_edit.no_changes": "O'zgarish yo'q: {u} ta katakda allaqachon shu qiymatlar bor",
+ "sched_edit.same_tail": ", {u} tasi allaqachon teng"
+}

@@ -1,0 +1,48 @@
+{
+ "sources": [
+  {
+   "id": "gb55031",
+   "title": "GB 55031-2022 General code for civil buildings (mandatory)",
+   "licence": "copyright-numbers-only",
+   "verified": "2026-11-13",
+   "publisher": "MOHURD / SAMR",
+   "edition": "2022, in force 2023-03-01",
+   "url": "https://ghzrzyw.beijing.gov.cn/biaozhunguanli/bzzl/202209/P020220929592779805981.pdf"
+  },
+  {
+   "id": "gb50016",
+   "title": "GB 50016 Code for fire protection design of buildings",
+   "licence": "copyright-numbers-only",
+   "verified": null,
+   "publisher": "MOHURD",
+   "edition": "2014, amended 2018"
+  },
+  {
+   "id": "gb50096",
+   "title": "GB 50096-2011 Design code for residential buildings",
+   "licence": "copyright-numbers-only",
+   "verified": "2026-11-14",
+   "publisher": "MOHURD",
+   "edition": "2011, in force 2012-08-01",
+   "url": "https://www.jsxishan.gov.cn/doc/2012/11/14/2321165.shtml"
+  },
+  {
+   "id": "gb55019",
+   "title": "GB 55019-2021 General code for accessibility of construction and municipal engineering",
+   "licence": "copyright-numbers-only",
+   "verified": "2026-11-14",
+   "publisher": "MOHURD",
+   "edition": "2021, in force 2022-04-01",
+   "url": "https://ghzrzyw.beijing.gov.cn/biaozhunguanli/bzzl/202112/P020211228345970190464.pdf"
+  },
+  {
+   "id": "gb55037",
+   "title": "GB 55037-2022 General code for fire protection of buildings",
+   "licence": "copyright-numbers-only",
+   "verified": "2026-11-14",
+   "publisher": "MOHURD",
+   "edition": "2022, in force 2023-06-01",
+   "url": "https://zfcxjw.cq.gov.cn/zwxx_166/gsgg/202511/P020251111333058238157.pdf"
+  }
+ ]
+}

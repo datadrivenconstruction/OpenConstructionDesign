@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "Skriv inn et malnavn først",
+ "view_template.name_taken": "Det finnes allerede en mal med dette navnet",
+ "view_template.pick_blocked": "Kryss av minst én visning først",
+ "view_template.views.one": "{n} visning",
+ "view_template.views.few": "{n} visninger",
+ "view_template.views.many": "{n} visninger",
+ "view_template.delete.title": "Slette denne malen?",
+ "view_template.delete.body": "Malen “{name}” slettes. Brukt av {used}.",
+ "view_template.delete.unused": "Malen “{name}” slettes. Ingen visning bruker den.",
+ "view_template.delete.keeps": "Disse visningene beholder sin nåværende grafikk og mister koblingen.",
+ "view_template.delete.undo": "Du kan angre dette med ett Angre.",
+ "view_template.delete.confirm": "Slett mal"
+}

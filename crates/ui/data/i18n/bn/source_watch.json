@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "{name} ডিস্কে বদলেছে।",
+ "src.watch.update": "মডেল হালনাগাদ করুন",
+ "src.watch.compare": "তুলনা",
+ "src.watch.ignore": "এই সংস্করণ উপেক্ষা করুন",
+ "src.watch.missing": "{name}: উৎস ফাইল পাওয়া যায়নি। কাজ চলতে থাকে।",
+ "src.watch.locate": "খুঁজুন…",
+ "src.watch.dismiss": "বন্ধ করুন",
+ "src.watch.more": "এবং আরও {n}টি উৎস ফাইল",
+ "src.watch.done": "{name} থেকে হালনাগাদ: {updated}টি বদলেছে, {kept}টি ক্ষেত্র সম্পাদিত হিসেবে রাখা হয়েছে, {conflicts}টি দ্বন্দ্ব, {locked}টি লক করা মান রাখা হয়েছে"
+}

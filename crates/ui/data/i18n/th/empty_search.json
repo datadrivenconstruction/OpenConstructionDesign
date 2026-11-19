@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "ไม่พบอะไร",
+ "empty.browser_search.hint": "ไม่มีมุมมอง ระดับ ประเภท หรือห้องที่ตรงกับการค้นหานี้",
+ "empty.browser_search.action": "ล้างการค้นหา",
+ "empty.xl_filtered.title": "ไม่มีรายการที่ตรงกับตัวกรอง",
+ "empty.xl_filtered.hint": "เปิดชนิดเพิ่มเติม เลือกแผ่นอื่น หรือเปลี่ยนข้อความค้นหา",
+ "empty.xl_filtered.action": "ล้างตัวกรอง",
+ "empty.xl_nochanges.title": "ไม่มีการเปลี่ยนแปลงในสมุดงาน",
+ "empty.xl_nochanges.hint": "สมุดงานตรงกับโมเดล การนำเข้าจะไม่เปลี่ยนอะไร",
+ "empty.version_same.title": "โมเดลเหมือนกัน",
+ "empty.version_same.hint": "ไม่พบความแตกต่างระหว่างโมเดลที่เปิดอยู่กับเวอร์ชันที่เลือก",
+ "empty.templates.title": "ยังไม่มีเทมเพลตมุมมอง",
+ "empty.templates.hint": "สร้างจากมุมมองปัจจุบันเพื่อใช้การตั้งค่าซ้ำกับมุมมองอื่น",
+ "empty.templates.action": "ตั้งชื่อเทมเพลต",
+ "empty.fe_params.title": "ยังไม่มีพารามิเตอร์",
+ "empty.fe_params.hint": "เพิ่มพารามิเตอร์ด้านล่างเพื่อควบคุมขนาด วัสดุ หรือการมองเห็น",
+ "empty.fe_params.action": "เพิ่มพารามิเตอร์"
+}

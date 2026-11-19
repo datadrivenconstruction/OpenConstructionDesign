@@ -1,0 +1,67 @@
+id = "H08_metro_station"
+tier = "hard"
+group = "Underground structures"
+title = "Underground metro station, 18 m deep"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "Underground metro station about 18 m below ground. Island platform 150 m long between two tracks in vaulted tunnel sections, a concourse level above with ticket hall, six escalators and two lifts up to street level, ventilation shafts at both ends, two entrance pavilions at street level, plant and staff rooms."
+
+[[oracle.count]]
+spec = "level"
+min = 3.0
+
+[[oracle.count]]
+spec = "room:platform"
+min = 1.0
+
+[[oracle.count]]
+spec = "room:concourse|hall|ticket"
+min = 1.0
+
+[[oracle.count]]
+spec = "comp:escalator"
+min = 6.0
+
+[[oracle.count]]
+spec = "comp:lift|elevator"
+min = 2.0
+
+[[oracle.count]]
+spec = "shaft"
+min = 2.0
+
+[[oracle.count]]
+spec = "curved+sweep+freeform+shell_elem"
+min = 4.0
+
+[[oracle.count]]
+spec = "slab"
+min = 4.0
+
+[[oracle.count]]
+spec = "toposolid"
+min = 1.0
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1
+"IfcWall" = 1
+"IfcSlab" = 1
+
+[[oracle.geom]]
+kind = "room_depth"
+room = "platform"
+depth = 18.0
+tol = 0.25
+
+[[oracle.geom]]
+kind = "room_above"
+upper = "concourse|hall|ticket"
+lower = "platform"
+gap_min = 3.0
+
+[[oracle.geom]]
+kind = "shaft_spread"
+count_min = 2.0
+apart_min = 100.0

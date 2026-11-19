@@ -1,0 +1,8 @@
+{
+ "undo.undone": "Rückgängig gemacht: {what}",
+ "undo.redone": "Wiederholt: {what}",
+ "undo.action.edit.redo": "Wiederholen",
+ "undo.action.edit.undo": "Rückgängig",
+ "hdr.unsaved": "Nicht gespeicherte Änderungen",
+ "hdr.file_menu": "Dateimenü"
+}

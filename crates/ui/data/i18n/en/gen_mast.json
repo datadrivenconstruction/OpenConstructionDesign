@@ -1,0 +1,16 @@
+{
+ "complib.fam.mast_lift": "Mast Lift",
+ "fam.name.mast_lift": "Mast Lift",
+ "gen.rule.steel.check.self_weight.desc": "Weight of the tower above a cut, per metre of height.",
+ "gen.rule.steel.check.self_weight.title": "Steel weight per metre",
+ "gen.rule.steel.check.strut_share.desc": "Share of the chord force a horizontal holds at its node.",
+ "gen.rule.steel.check.strut_share.title": "Horizontal share",
+ "gen.rule.steel.out.lift_box_d.desc": "Plan depth a mast lift needs with its mast; floors open over it.",
+ "gen.rule.steel.out.lift_box_d.title": "Lift box depth",
+ "gen.rule.steel.out.lift_box_w.desc": "Plan width a mast lift needs; floors open over it.",
+ "gen.rule.steel.out.lift_box_w.title": "Lift box width",
+ "gen.rule.steel.out.lift_offset.desc": "Distance of a lift from the axis, clear of the plan brace.",
+ "gen.rule.steel.out.lift_offset.title": "Lift offset from the axis",
+ "gen.rule.steel.out.lifts.desc": "Lifts up the core: to the second platform, then to the top.",
+ "gen.rule.steel.out.lifts.title": "Lift runs"
+}

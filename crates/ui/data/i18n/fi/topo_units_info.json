@@ -1,0 +1,13 @@
+{
+ "topo.unit.mm": "mm",
+ "topo.unit.metre": "m",
+ "topo.unit.ft": "ft",
+ "topo.opt.material": "Materiaali",
+ "topo.row.active": "Aktiivinen pinta",
+ "topo.btn.delete_pad": "Poista alusta",
+ "topo.info.loading": "Rakennetaan pintaa…",
+ "topo.info.warn_n": "{n} varoitusta",
+ "topo.info.points_label": "Pisteet",
+ "topo.import.all_layers": "Kaikki kerrokset",
+ "topo.import.need_layer": "Valitse vähintään yksi kerros"
+}

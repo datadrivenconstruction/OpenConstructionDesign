@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "значение должно быть больше нуля",
+ "sched_ops.not_number": "не число",
+ "sched_ops.no_host": "нет стены-основы",
+ "sched_ops.wall_length": "такую длину стены задать нельзя",
+ "sched_ops.no_wall": "нет такой стены",
+ "sched_ops.no_opening": "нет такого проёма",
+ "sched_ops.no_curtain": "нет такой витражной стены",
+ "sched_ops.no_panel": "нет такой панели",
+ "sched_ops.no_slab": "нет такого перекрытия",
+ "sched_ops.no_room": "нет такого помещения",
+ "sched_ops.slope_range": "уклон вне допустимого диапазона",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

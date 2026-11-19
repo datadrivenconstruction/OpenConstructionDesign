@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "上移",
+ "rebar_list.move_down": "下移",
+ "rebar_list.remove": "移除",
+ "rebar_list.zone_remove_last": "区域至少需要一个房间：删除该区域以移除最后一个房间",
+ "rebar_list.rebar_empty_title": "此模型中没有钢筋",
+ "rebar_list.rebar_empty_hint": "在宿主图元中放置钢筋，它将在此处列入明细。",
+ "rebar_list.rebar_empty_action": "放置钢筋"
+}

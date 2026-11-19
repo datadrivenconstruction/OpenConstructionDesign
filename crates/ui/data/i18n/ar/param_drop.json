@@ -1,0 +1,8 @@
+{
+ "param_drop.title": "إزالة قيم المعامل؟",
+ "param_drop.intro": "{name} لم يعد مرتبطاً بهذه الفئات:",
+ "param_drop.line": "{category}: ستُزال {values}",
+ "param_drop.undo": "ضغطة واحدة على Ctrl+Z تعيدها كلها.",
+ "param_drop.confirm": "أزِل القيم واحفظ",
+ "param_drop.cancel": "إلغاء"
+}

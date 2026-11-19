@@ -1,0 +1,9 @@
+{
+ "empty.props_model.title": "Inget valt",
+ "empty.props_model.hint": "Klicka på ett element i vyn för att se dess egenskaper. Eller exportera alla parametrar till en arbetsbok, redigera dem där och tillämpa tillbaka.",
+ "empty.props_model.action": "Exportera till kalkylblad",
+ "tut.spreadsheet.title": "Tur och retur via kalkylblad",
+ "tut.spreadsheet.1": "Tryck på Exportera till kalkylblad nedan: välj vad som ska ingå och spara arbetsboken.",
+ "tut.spreadsheet.2": "Öppna arbetsboken i kalkylprogrammet, ändra en cell och spara. Förhandsvisningen här visar ändringen.",
+ "tut.spreadsheet.3": "Kontrollera förhandsvisningen och tryck på Tillämpa på modellen. Ctrl+Z ångrar."
+}

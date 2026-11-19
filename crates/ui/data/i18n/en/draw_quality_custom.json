@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "custom",
+ "draw_quality.custom.tip": "{name}: an entry of this project",
+ "draw_quality.custom_note": "Entries marked custom belong to this project.",
+ "draw_quality.unsaved.lib_body": "Save them to the library, or discard them?",
+ "draw_quality.unsaved.styles_body": "Apply them to the view, or discard them?",
+ "draw_quality.unsaved.both_body": "Apply them, or discard them?",
+ "draw_quality.halftone": "{category} halftone",
+ "draw_quality.styles.name": "Line styles",
+ "draw_quality.styles.other_level": "Unsaved style edits of level {level}: apply or revert them to edit this level."
+}

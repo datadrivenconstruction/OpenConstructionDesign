@@ -1,0 +1,8 @@
+{
+ "script_rec.started": "Kayıt: bundan sonra yaptığınız düzenlemeler bir betiğe eklenecek. Durdurmak için “Eylemleri betiğe kaydet” seçeneğini yeniden seçin.",
+ "script_rec.saved": "“{name}” betiği kaydedildi: düzenleme — {n}.",
+ "script_rec.skipped": "Betik formu olmayan araçlarla yapılan {k} düzenleme kaydedilmedi.",
+ "script_rec.nothing": "Kayıt durduruldu: kaydedilecek düzenleme yok.",
+ "script_rec.failed": "Kayıt kaydedilmedi: {why}",
+ "script_rec.no_folder": "betikler için ayar klasörü yok"
+}

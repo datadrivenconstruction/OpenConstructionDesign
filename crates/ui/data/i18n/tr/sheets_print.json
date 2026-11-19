@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "Önceki sayfa (Page Up)",
+ "sheets.print.next": "Sonraki sayfa (Page Down)",
+ "sheets.print.fit": "Sayfaya sığdır (çift tıklama)",
+ "sheets.print.no_sheets": "Önizlenecek sayfa yok",
+ "sheets.print.building": "Sayfa oluşturuluyor…",
+ "sheets.print.stop_build": "Durdur",
+ "sheets.print.build_stopped": "Sayfa oluşturma durduruldu",
+ "sheets.print.retry": "Yeniden oluştur",
+ "sheets.print.build_failed": "Önizleme oluşturulamadı"
+}

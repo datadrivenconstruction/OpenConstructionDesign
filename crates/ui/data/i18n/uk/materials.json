@@ -1,0 +1,11 @@
+{
+ "materials.mat.name_empty": "Введіть назву матеріалу",
+ "materials.mat.empty_title": "Матеріалів ще немає",
+ "materials.mat.empty_hint": "Введіть назву нижче і натисніть Додати",
+ "materials.mat.nothing_hint": "Жоден матеріал не відповідає пошуку",
+ "materials.mat.clear_search": "Очистити пошук",
+ "materials.mat.replace_with": "Замінити на",
+ "materials.mat.delete_refused": "Не можна видалити: матеріал використовується в {n} місцях. Спочатку замініть його.",
+ "materials.mat.delete_confirm": "Видалити матеріал “{name}”? Це можна скасувати.",
+ "materials.mat.replace_confirm": "Замінити “{from}” на “{to}” у {n} елементах? “{from}” буде видалено. Це можна скасувати."
+}

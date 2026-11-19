@@ -1,0 +1,74 @@
+{
+ "schema": "gen_bench.v1",
+ "group": "irregular_site",
+ "spec": {
+  "typology": "apartment_section",
+  "floors": 5,
+  "footprint": {
+   "plot": [
+    [
+     0,
+     0
+    ],
+    [
+     48,
+     0
+    ],
+    [
+     56,
+     22
+    ],
+    [
+     30,
+     38
+    ],
+    [
+     0,
+     26
+    ]
+   ],
+   "plot_setback": 4
+  }
+ },
+ "adjacency": [
+  [
+   "kitchen",
+   "living",
+   3
+  ],
+  [
+   "bedroom",
+   "bath",
+   1
+  ],
+  [
+   "bath",
+   "hall",
+   1
+  ]
+ ],
+ "site": {
+  "plot": [
+   [
+    0,
+    0
+   ],
+   [
+    48,
+    0
+   ],
+   [
+    56,
+    22
+   ],
+   [
+    30,
+    38
+   ],
+   [
+    0,
+    26
+   ]
+  ]
+ }
+}

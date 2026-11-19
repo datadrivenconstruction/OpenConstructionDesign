@@ -1,0 +1,5 @@
+{
+ "ai.plan.apply_n": "Rakenda {n} vastuvõetud",
+ "ai.plan.will_apply": "{n} / {m} muudatust rakendatakse",
+ "ai.plan.keys_hint": "J/K või Alt+Üles/Alla liigutab · A võtab vastu · R lükkab tagasi · Tühik lülitab · Shift+A / Shift+R kogu rühm · Ctrl+Enter rakendab · Esc tagasi vaatesse (jätab mustandi alles)"
+}

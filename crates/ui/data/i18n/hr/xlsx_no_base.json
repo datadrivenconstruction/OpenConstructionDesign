@@ -1,0 +1,6 @@
+{
+ "xlsx_no_base.title": "Ova radna knjiga nema podatke za usporedbu",
+ "xlsx_no_base.detail": "Skriveni list za usporedbu nedostaje ili je oštećen (drugi program je ponovno spremio radnu knjigu ili je napravljena ručno). Svaka različita ćelija zamjenjuje vrijednost modela; izmjene modela od izvoza ne mogu se otkriti. Redci koji nedostaju u radnoj knjizi se ne brišu.",
+ "xlsx_no_base.confirm": "Provjerio sam promjene: zamijeni vrijednosti modela ({n})",
+ "xlsx_no_base.confirm_first": "Prvo potvrdite uvoz radne knjige bez podataka za usporedbu"
+}

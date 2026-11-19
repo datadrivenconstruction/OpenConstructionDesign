@@ -1,0 +1,23 @@
+{
+ "roof_edge.err.number": "ایک عدد درج کریں",
+ "roof_edge.err.positive": "صفر سے زیادہ ہونا چاہیے",
+ "roof_edge.err.nonneg": "منفی نہیں ہو سکتا",
+ "roof_edge.err.max": "{max} سے زیادہ نہ ہو",
+ "roof_edge.list.empty_hint": "ربن کمانڈز سے فاسیا، گٹرز، سوفٹس یا اسکائی لائٹس شامل کریں",
+ "roof_edge.edit_tip": "خصوصیات میں ترمیم",
+ "roof_edge.delete_tip": "حذف کریں",
+ "roof_edge.pe.del_tip": "یہ نقطہ ہٹائیں (سیکشن میں کم از کم 3 رہتے ہیں)",
+ "roof_edge.pe.up_tip": "اس نقطے کو اوپر لے جائیں",
+ "roof_edge.confirm_edge": "{name} حذف کریں؟ Ctrl+Z اسے واپس لاتا ہے۔",
+ "roof_edge.confirm_profile": "پروفائل {name} حذف کریں؟ Ctrl+Z اسے واپس لاتا ہے۔",
+ "roof_edge.deleted_one": "{name} حذف ہو گیا",
+ "roof_edge.deleted_n": {
+  "one": "# عنصر حذف ہوا",
+  "other": "# عناصر حذف ہوئے"
+ },
+ "roof_edge.profile_deleted": "پروفائل حذف ہو گئی",
+ "roof_edge.profile_in_use": {
+  "one": "# کنارے کے عنصر نے استعمال کیا: پہلے اسے حذف یا تبدیل کریں",
+  "other": "# کنارے کے عناصر نے استعمال کیا: پہلے انہیں حذف یا تبدیل کریں"
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key} ถูกสงวนไว้ ({why}) จึงกำหนดใหม่ไม่ได้",
+ "quick.keys.res_copy": "คัดลอก",
+ "quick.keys.res_paste": "วาง",
+ "quick.keys.res_cut": "ตัด",
+ "quick.keys.res_undo": "เลิกทำ / ทำซ้ำ",
+ "quick.keys.res_save": "บันทึก",
+ "quick.keys.res_palette": "แถบค้นหาคำสั่ง",
+ "quick.keys.reserved_conflict": "{key} ถูกใช้โดย “{cmd}” อยู่แล้ว Esc เพื่อคงไว้ที่เดิม",
+ "quick.keys.reserved_swap": "สลับ",
+ "quick.keys.reserved_take": "ใช้คีย์นี้",
+ "quick.keys.reserved_keep": "คงไว้",
+ "quick.keys.reserved_os": "ถูกใช้โดยระบบ:"
+}

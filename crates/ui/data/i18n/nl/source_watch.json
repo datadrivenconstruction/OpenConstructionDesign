@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "{name} is op schijf gewijzigd.",
+ "src.watch.update": "Model bijwerken",
+ "src.watch.compare": "Vergelijken",
+ "src.watch.ignore": "Deze versie negeren",
+ "src.watch.missing": "{name}: bronbestand niet gevonden. Het werk gaat door.",
+ "src.watch.locate": "Zoeken…",
+ "src.watch.dismiss": "Sluiten",
+ "src.watch.more": "en nog {n} bronbestanden",
+ "src.watch.done": "Bijgewerkt vanuit {name}: {updated} gewijzigd, {kept} velden als bewerkt behouden, {conflicts} conflicten, {locked} vergrendelde waarden behouden"
+}

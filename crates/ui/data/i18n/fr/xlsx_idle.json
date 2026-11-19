@@ -1,0 +1,8 @@
+{
+ "xlsx_idle.idle_title": "Aucune modification à importer",
+ "xlsx_idle.export_name": "Exporter",
+ "xlsx_idle.export_body": "Écrit le modèle dans un classeur. Modifiez les valeurs, puis synchronisez.",
+ "xlsx_idle.sync_name": "Synchroniser",
+ "xlsx_idle.sync_body": "Relit le classeur et liste les différences. Le modèle ne change qu'après application.",
+ "xlsx_idle.last_sync": "Dernière synchronisation : {when}"
+}

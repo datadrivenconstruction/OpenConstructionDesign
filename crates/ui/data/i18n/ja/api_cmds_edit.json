@@ -1,0 +1,20 @@
+{
+ "api.cmd.move_elements": "メートル単位のオフセットで要素を移動",
+ "api.cmd.copy_elements": "1 つ以上のオフセット（メートル）で要素をコピー",
+ "api.cmd.rotate_elements": "点を中心に要素を指定角度(度)で回転",
+ "api.cmd.mirror_elements": "2点を通る軸を基準に要素を鏡像",
+ "api.cmd.scale_elements": "点を基準に要素を指定倍率で拡大縮小",
+ "api.cmd.array_elements": "要素の直線状または放射状の配列",
+ "api.cmd.offset_wall": "壁を指定距離(メートル)だけ平行にコピー",
+ "api.cmd.split_wall": "指定点で壁を2つに分割",
+ "api.cmd.pin_elements": "要素を固定または固定解除",
+ "api.cmd.flip_openings": "扉と窓のヒンジ側または向きを反転",
+ "api.cmd.create_level": "標高（メートル）でレベルを作成",
+ "api.cmd.edit_level": "レベルの名前または立面高さを変更",
+ "api.cmd.delete_level": "レベルを削除",
+ "api.cmd.place_rooms": "レベル内のすべての閉じた領域に部屋を配置",
+ "api.cmd.join_elements": "形状の結合を作成、解除、または切り替え",
+ "api.cmd.place_footings": "レベル内のすべての柱の下に基礎を配置",
+ "api.cmd.create_terrain": "測量点または傾斜面から地形を作成",
+ "api.cmd.script_recipes": "自由形状の構造のスクリプト部品とレシピを読む"
+}

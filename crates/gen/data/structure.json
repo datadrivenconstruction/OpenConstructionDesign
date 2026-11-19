@@ -1,0 +1,60 @@
+{
+  "about": "Structural systems of a generated project (design.structure): the type name and the layers of each wall role, the floor and the roof, and the column section type. Layer shares split the thickness the role already has; the first layer faces out. Concrete is the default and keeps the type names projects were built with.",
+  "systems": {
+    "concrete": {
+      "walls": {
+        "exterior": {"name": "Gen Exterior 300", "layers": [["Facade Render", 1.0]]},
+        "party": {"name": "Gen Party 200", "layers": [["Concrete", 1.0]]},
+        "corridor": {"name": "Gen Corridor 200", "layers": [["Concrete", 1.0]]},
+        "partition": {"name": "Gen Partition 100", "layers": [["Concrete", 1.0]]}
+      },
+      "floor": {"name": "Gen Floor 200", "layers": [["Concrete", 1.0]]},
+      "roof": {"name": "Gen Roof 250", "layers": [["Roofing Membrane", 1.0]]},
+      "column": {"prefix": "Gen Column", "material": "Concrete"}
+    },
+    "timber": {
+      "walls": {
+        "exterior": {"name": "Gen CLT Exterior 300", "layers": [["Timber Cladding", 0.1], ["Mineral Wool Insulation", 0.4], ["Cross-Laminated Timber", 0.5]]},
+        "party": {"name": "Gen CLT Party 200", "layers": [["Gypsum Board", 0.15], ["Cross-Laminated Timber", 0.7], ["Gypsum Board", 0.15]]},
+        "corridor": {"name": "Gen Core Concrete 200", "layers": [["Concrete", 1.0]]},
+        "partition": {"name": "Gen Timber Stud 100", "layers": [["Gypsum Board", 0.15], ["Timber Stud", 0.7], ["Gypsum Board", 0.15]]}
+      },
+      "floor": {"name": "Gen CLT Floor 200", "layers": [["Screed", 0.25], ["Cross-Laminated Timber", 0.75]]},
+      "roof": {"name": "Gen CLT Roof 250", "layers": [["Roofing Membrane", 0.2], ["Cross-Laminated Timber", 0.8]]},
+      "column": {"prefix": "Gen Glulam Column", "material": "Glulam Timber"}
+    },
+    "frame": {
+      "walls": {
+        "exterior": {"name": "Gen Infill Exterior 300", "layers": [["Facade Render", 0.05], ["Mineral Wool Insulation", 0.35], ["Aerated Concrete Block", 0.6]]},
+        "party": {"name": "Gen Infill Party 200", "layers": [["Aerated Concrete Block", 1.0]]},
+        "corridor": {"name": "Gen Infill Corridor 200", "layers": [["Aerated Concrete Block", 1.0]]},
+        "partition": {"name": "Gen Infill Partition 100", "layers": [["Gypsum Board", 0.15], ["Steel Stud", 0.7], ["Gypsum Board", 0.15]]}
+      },
+      "floor": {"name": "Gen Flat Slab 200", "layers": [["Concrete", 1.0]]},
+      "roof": {"name": "Gen Roof 250", "layers": [["Roofing Membrane", 1.0]]},
+      "column": {"prefix": "Gen Frame Column", "material": "Concrete"}
+    },
+    "timber_frame": {
+      "walls": {
+        "exterior": {"name": "Gen Timber Frame Exterior 300", "layers": [["Timber Cladding", 0.1], ["Mineral Wool Insulation", 0.6], ["Timber Stud", 0.3]]},
+        "party": {"name": "Gen CLT Party 200", "layers": [["Gypsum Board", 0.15], ["Cross-Laminated Timber", 0.7], ["Gypsum Board", 0.15]]},
+        "corridor": {"name": "Gen Core Concrete 200", "layers": [["Concrete", 1.0]]},
+        "partition": {"name": "Gen Timber Stud 100", "layers": [["Gypsum Board", 0.15], ["Timber Stud", 0.7], ["Gypsum Board", 0.15]]}
+      },
+      "floor": {"name": "Gen CLT Floor 200", "layers": [["Screed", 0.25], ["Cross-Laminated Timber", 0.75]]},
+      "roof": {"name": "Gen CLT Roof 250", "layers": [["Roofing Membrane", 0.2], ["Cross-Laminated Timber", 0.8]]},
+      "column": {"prefix": "Gen Glulam Column", "material": "Glulam Timber"}
+    },
+    "masonry": {
+      "walls": {
+        "exterior": {"name": "Gen Masonry Exterior 300", "layers": [["Facade Render", 0.05], ["Brick", 0.95]]},
+        "party": {"name": "Gen Masonry Party 200", "layers": [["Brick", 1.0]]},
+        "corridor": {"name": "Gen Masonry Corridor 200", "layers": [["Brick", 1.0]]},
+        "partition": {"name": "Gen Block Partition 100", "layers": [["Concrete Block", 1.0]]}
+      },
+      "floor": {"name": "Gen Floor 200", "layers": [["Concrete", 1.0]]},
+      "roof": {"name": "Gen Roof 250", "layers": [["Roofing Membrane", 1.0]]},
+      "column": {"prefix": "Gen Column", "material": "Concrete"}
+    }
+  }
+}

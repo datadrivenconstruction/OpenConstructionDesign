@@ -1,0 +1,5 @@
+{
+ "elem.panel_select_wall": "Select wall",
+ "cmd.elem.panel_select_wall": "Select wall",
+ "elem.left_in_place": "Left in place: {kinds}. A panel belongs to its wall; masses and annotations are deleted on their own."
+}

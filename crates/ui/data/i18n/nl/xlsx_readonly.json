@@ -1,0 +1,6 @@
+{
+ "xlsx_readonly.read_only": "Het werkboek is alleen-lezen (bestandseigenschap of maprechten). Exporteer naar een kopie, of schakel Alleen-lezen uit in de bestandseigenschappen en probeer opnieuw.",
+ "xlsx_readonly.export_copy": "Exporteren naar een kopie",
+ "xlsx_readonly.no_copy_name": "Geen vrije naam voor een kopie naast het werkboek.",
+ "xlsx_readonly.copied": "Het werkboek is ongewijzigd gelaten. Er is een vernieuwde kopie naast geschreven en die is nu gekoppeld: {path}"
+}

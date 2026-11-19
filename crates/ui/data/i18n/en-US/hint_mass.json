@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "Freeform surface",
+ "cmd.mass.panelize": "Panelize",
+ "cmd.mass.surface_shell": "Roof on surface",
+ "cmd.mass.thicken": "Thicken",
+ "hint.mass.freeform.first": "Freeform: first corner of the plan rectangle · type the rise · Esc — cancel",
+ "hint.mass.freeform.next": "Freeform: opposite corner · type the rise · Esc — cancel",
+ "hint.mass.panelize.first": "Panelize: pick a freeform surface in 3D · Esc — cancel",
+ "hint.mass.panelize.value": "Panelize: type the panel size · Enter — apply · Esc — cancel",
+ "hint.mass.surface_shell.first": "Roof on surface: pick a freeform surface in 3D · Esc — cancel",
+ "hint.mass.surface_shell.value": "Roof on surface: type the thickness · Enter — apply · Esc — cancel",
+ "hint.mass.thicken.first": "Thicken: pick a freeform surface in 3D · Esc — cancel",
+ "hint.mass.thicken.value": "Thicken: type the thickness (0 — bare surface) · Enter — apply · Esc — cancel",
+ "status.mass.pick_surface": "Pick a freeform surface",
+ "status.mass.freeform_small": "The rectangle is too small: at least 0.5 m each way",
+ "name.mass.freeform": "Freeform surface",
+ "rgroup.mass_free": "Advanced"
+}

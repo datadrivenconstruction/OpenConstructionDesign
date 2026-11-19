@@ -1,0 +1,9 @@
+{
+ "empty.props_model.title": "Midagi pole valitud",
+ "empty.props_model.hint": "Klõpsa vaates elementi, et näha selle omadusi. Või ekspordi kõik parameetrid töövihikusse, muuda neid seal ja rakenda tagasi.",
+ "empty.props_model.action": "Ekspordi tabelarvutusse",
+ "tut.spreadsheet.title": "Tabelarvutuse ümmargune töövoog",
+ "tut.spreadsheet.1": "Vajuta allpool Ekspordi tabelarvutusse: vali, mida lisada, ja salvesta töövihik.",
+ "tut.spreadsheet.2": "Ava töövihik tabelarvutusprogrammis, muuda lahtrit ja salvesta. Siinne eelvaade näitab muudatust.",
+ "tut.spreadsheet.3": "Kontrolli eelvaadet ja vajuta Rakenda mudelile. Ctrl+Z võtab tagasi."
+}

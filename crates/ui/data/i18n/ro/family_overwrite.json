@@ -1,0 +1,18 @@
+{
+ "family_overwrite.ow.title": "Înlocuiți valorile tipurilor din proiect?",
+ "family_overwrite.ow.body": "Încărcarea înlocuiește {values} în {types}. Instanțe plasate ale acestor tipuri: {instances}.",
+ "family_overwrite.ow.values": {
+  "one": "# valoare",
+  "few": "# valori",
+  "other": "# de valori"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# tip",
+  "few": "# tipuri",
+  "other": "# de tipuri"
+ },
+ "family_overwrite.ow.list": "Tipuri: {list}",
+ "family_overwrite.ow.more": "și încă {n}",
+ "family_overwrite.ow.back": "Înapoi la editare",
+ "family_overwrite.ow.replace": "Înlocuiește valorile"
+}

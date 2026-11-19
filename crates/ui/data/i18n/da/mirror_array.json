@@ -1,0 +1,5 @@
+{
+ "mirror_array.err.count": "Antallet er et heltal fra 2 til 200: 4 3000, eller 4;300 når trinnet har tre cifre",
+ "mirror_array.err.length": "Trinnet eller den samlede længde er en positiv længde, fx 3 000 eller 1.2 m",
+ "mirror_array.err.angle": "Fejningen er en vinkel i grader, ikke nul og højst 360"
+}

@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "Sine-save ang buong model o pagpili bilang binary STL, sa metro o milimetro.",
+ "cmd.data.export_obj.desc": "Sine-save ang buong model o pagpili bilang OBJ kasama ang MTL file: isang grupo bawat elemento, may kulay ayon sa materyal.",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "OBJ na may materyal (.obj)",
+ "open_file.filter.mesh": "3D mesh (glTF, STEP, STL, OBJ)",
+ "mx.title": "I-export ang {fmt}",
+ "mx.scope": "Ano ang ie-export",
+ "mx.scope.all": "Buong model",
+ "mx.scope.sel": "Pagpili ({n} elemento)",
+ "mx.units": "Mga unit sa file",
+ "mx.units.m": "Metro",
+ "mx.units.mm": "Milimetro",
+ "mx.export": "I-export…",
+ "mx.saved": "Na-save ang {fmt}: {path} ({parts} elemento, {tris} triangle)",
+ "mx.partial": "Na-save ang {fmt} na may {n} problema, maaaring may nawawalang bahagi: {path}",
+ "mx.failed": "Nabigo ang export ng {fmt}: {error}",
+ "mx.imported": "{file}: {n} elemento ang na-import ({tris} triangle)",
+ "mx.imported_notes": "{file}: {n} elemento ang na-import ({tris} triangle), {w} na tala: {first}"
+}

@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "Chèn lớp bên dưới",
+ "type_layers.layer.delete": "Xóa lớp",
+ "type_layers.layer.delete_last": "Một loại cần ít nhất một lớp",
+ "type_layers.value.bad": "Không phải giá trị dương hợp lệ",
+ "type_layers.value.required": "Bắt buộc",
+ "type_layers.unsaved.title": "Thay đổi chưa lưu của {name}",
+ "type_layers.unsaved.body": "Áp dụng cho loại, hay bỏ đi?",
+ "type_layers.unsaved.discard": "Bỏ"
+}

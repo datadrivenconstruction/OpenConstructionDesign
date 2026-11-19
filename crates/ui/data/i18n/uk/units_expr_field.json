@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "Порожнє введення.",
+ "units.err.not_number": "Не число на позиції {pos}.",
+ "units.err.unknown_unit": "Невідома одиниця: {unit}.",
+ "units.err.non_positive": "Довжина має бути більшою за нуль.",
+ "units.err.too_large": "Довжина не має перевищувати {max} м.",
+ "units.err.bad_angle": "Кут має бути числом градусів.",
+ "units.err.unknown_name": "Невідома назва: {name}. Значення збережено.",
+ "units.err.cycle": "Циклічна залежність формул у {name}. Значення збережено.",
+ "units.err.bad_expr": "Не вдалося прочитати вираз на позиції {pos}. Значення збережено.",
+ "units.err.div_zero": "Ділення на нуль на позиції {pos}. Значення збережено.",
+ "units.err.invalid": "Некоректне число.",
+ "units.err.kept": "Не змінено: {reason}"
+}

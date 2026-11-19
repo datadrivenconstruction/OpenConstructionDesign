@@ -1,0 +1,21 @@
+{
+ "cmd.help.check_update": "Проверить обновления",
+ "update_check.title": "Проверка обновлений",
+ "update_check.desc": "По умолчанию выключена. Отправляет на наш сервер только версию, ОС с архитектурой и способ установки. Ничего не скачивает и не устанавливает.",
+ "update_check.freq.startup": "При запуске",
+ "update_check.freq.daily": "Раз в день",
+ "update_check.freq.weekly": "Раз в неделю",
+ "update_check.freq.never": "Никогда",
+ "update_check.check_now": "Проверить сейчас",
+ "update_check.dialog.title": "Проверка обновлений",
+ "update_check.unknown.title": "Не удалось проверить обновления",
+ "update_check.unknown.body": "{e}. Это не значит, что версия актуальна. Попробуйте позже.",
+ "update_check.current": "У вас последняя версия ({v}).",
+ "update_check.newer": "Доступна версия {v}",
+ "update_check.date": "Выпущена {d}",
+ "update_check.unfit": "Эта версия ({v}) старше минимальной рекомендуемой {f}. Обновление желательно.",
+ "update_check.close": "Закрыть",
+ "update_check.open_failed": "Не удалось открыть страницу релиза.",
+ "update_check.toast.newer": "Доступна версия {v}. Справка > Проверить обновления.",
+ "update_check.toast.unfit": "Эта версия ({v}) старше минимальной рекомендуемой {f}."
+}

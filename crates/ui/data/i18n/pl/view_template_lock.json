@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "Sterowane szablonem {name}",
+ "view_template.edit_template": "Edytuj szablon",
+ "view_template.locked_tip": "Ustawione przez szablon widoku {name}. Zmień je w szablonie.",
+ "view_template.no_filters": "Brak filtrów w tym widoku"
+}

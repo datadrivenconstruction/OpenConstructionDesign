@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "KI fragen: {q}",
+ "ai.palette.connect": "KI verbinden, um zu fragen",
+ "ai.palette.draft.apply": "Entwurf anwenden ({n})",
+ "ai.palette.draft.reject": "Entwurf ablehnen",
+ "ai.palette.draft.next": "Nächste Entwurfsänderung",
+ "ai.palette.draft.show": "Entwurf in der Ansicht zeigen",
+ "cmd.ai.next_change": "Nächste Entwurfsänderung",
+ "cmd.ai.next_change.desc": "Verschiebt die Ansicht zum nächsten Element, das der Entwurf ändert.",
+ "cmd.ai.show_draft": "KI-Entwurf in der Ansicht zeigen",
+ "cmd.ai.show_draft.desc": "Passt die Ansicht an alles an, was der Entwurf ändert."
+}

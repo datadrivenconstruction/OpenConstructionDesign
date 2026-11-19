@@ -1,0 +1,13 @@
+{
+ "type_change.affects_walls": {
+  "one": "# duvarı etkiler",
+  "other": "# duvarı etkiler"
+ },
+ "type_change.affects": {
+  "one": "# öğeyi etkiler",
+  "other": "# öğeyi etkiler"
+ },
+ "type_change.tick_types": "Tip değişikliklerini bu tiplerdeki {n} öğenin tümüne uygula",
+ "type_change.tick_types_first": "Önce tip değişikliğini işaretleyin: bu tipteki her öğe onu alır",
+ "xl.msg.types_first": "önce tip değişikliklerini onaylayın"
+}

@@ -1,0 +1,18 @@
+{
+ "props.multi.title": {
+  "one": "# öğe",
+  "other": "# öğe"
+ },
+ "props.multi.cats": {
+  "one": "# kategori",
+  "other": "# kategori"
+ },
+ "props.multi.varies": {
+  "one": "değişken (#)",
+  "other": "değişken (#)"
+ },
+ "props.multi.clear": "Seçimi temizle",
+ "props.multi.undo": "Geri al",
+ "props.multi.narrowed": "Seçim: {n} · {name}",
+ "props.multi.chip_tip": "{name}: {n}  ·  Tıklama özelliklerini gösterir, Ctrl+tıklama yalnızca bunları tutar"
+}

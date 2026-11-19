@@ -1,0 +1,19 @@
+{
+ "ifc_patch.fallback.source_changed": "Łatka nie użyta: plik źródłowy zmienił się na dysku albo nie można go odczytać. Plik przepisano z modelu.",
+ "ifc_patch.fallback.sources": "Łatka nie użyta: projekt nie ma dokładnie jednego źródła. Plik przepisano z modelu.",
+ "ifc_patch.fallback.schema": "Łatka nie użyta: schemat pliku źródłowego nie jest obsługiwany. Plik przepisano z modelu.",
+ "ifc_patch.fallback.structure": "Łatka nie użyta: struktury pliku źródłowego nie da się uznać za wiarygodną. Plik przepisano z modelu.",
+ "ifc_patch.fallback.edit": "Łatka nie użyta: edycji nie da się bezpiecznie zastosować w pliku źródłowym. Plik przepisano z modelu.",
+ "ifc_patch.reason.schema": "Schemat pliku źródłowego nie może zapisać tej zmiany; element pozostaje taki, jak w źródle",
+ "ifc_patch.reason.prop": "Tej edycji właściwości nie da się wyrazić w pliku źródłowym; wartość zostaje jak w źródle",
+ "ifc_patch.reason.no_export": "Ten nowy element nie ma reprezentacji w IFC",
+ "ifc_patch.reason.link": "Element jest w pliku, ale łącze do jego materiału lub typu nie jest zapisywane; jest wymieniony jako niezapisany",
+ "ifc_patch.drop": "Porzuć",
+ "ifc_patch.drop_done": "Porzucono oczekujące łącza: {n}; nie są już ponawiane",
+ "ifc_patch.fallback.building": "Łatka nie użyta: nowy poziom wymaga dokładnie jednego budynku w pliku źródłowym, a jest ich zero lub kilka. Plik przepisano z modelu.",
+ "ifc_patch.fallback.types": "Łatka nie użyta: poziomy, typy lub materiały zmieniły się od importu, a łatka tego nie zapisze. Plik przepisano z modelu.",
+ "ifc_patch.fallback.zipped": "Łatka nie użyta: spakowanego pliku źródłowego nie można załatać. Plik przepisano z modelu.",
+ "ifc_patch.fallback.source_kept": "Plik źródłowy nie został nadpisany: nie można ufać, że ten zapis go zastąpi. Ten zapis jest kopią obok niego.",
+ "ifc_patch.fallback.nested": "Łatka nie użyta: nowy element ma zagnieżdżone części (np. porty), których łatka nie potrafi zapisać. Plik przepisano z modelu.",
+ "ifc_patch.fallback.shared_part": "Łatka nie użyta: część edytowanych schodów lub rampy jest też użyta przez inny element lub relację, czego łatka nie uwzględni. Plik przepisano z modelu."
+}

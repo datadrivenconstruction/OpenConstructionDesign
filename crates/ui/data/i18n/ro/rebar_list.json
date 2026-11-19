@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "Mută în sus",
+ "rebar_list.move_down": "Mută în jos",
+ "rebar_list.remove": "Elimină",
+ "rebar_list.zone_remove_last": "O zonă are nevoie de cel puțin o cameră: ștergeți zona pentru a elimina ultima",
+ "rebar_list.rebar_empty_title": "Nicio armătură în acest model",
+ "rebar_list.rebar_empty_hint": "Plasați armătură într-un element gazdă și va fi programată aici.",
+ "rebar_list.rebar_empty_action": "Plasează armătură"
+}

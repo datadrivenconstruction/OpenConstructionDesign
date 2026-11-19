@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "มวลรูปทรงหมุนหรือสะท้อนไม่ได้: ประวัติรูปทรงไม่มีขั้นตอนการหมุน ย้ายหรือคัดลอก หรือวาดใหม่ในทิศทางใหม่",
+ "sched_cats.col.name": "ชื่อ",
+ "sched_cats.col.material": "วัสดุ",
+ "sched_cats.col.void": "ช่องว่าง",
+ "sched_cats.col.inplace": "ในสถานที่",
+ "sched_cats.col.volume": "ปริมาตรสุทธิ",
+ "sched_cats.col.area": "พื้นที่ผิว",
+ "sched_cats.col.floor_area": "พื้นที่พื้น",
+ "sched_cats.col.thickness": "ความหนา",
+ "sched_cats.col.points": "จุด",
+ "elem.toposolid.points": "จุดสำรวจ",
+ "elem.toposolid.count": "จุด",
+ "elem.toposolid.low": "ต่ำสุด",
+ "elem.toposolid.high": "สูงสุด",
+ "elem.toposolid.edit": "แก้ไขจุด",
+ "elem.toposolid.edit_tip": "เลือก ลาก และตั้งระดับความสูงของจุดสำรวจบนแปลน",
+ "elem.toposolid.pick_hint": "คลิกจุดบนแปลนเพื่อเลือก คลิกอีกครั้งเพื่อเพิ่มหรือลบ",
+ "elem.toposolid.z": "ระดับความสูง ({n})",
+ "elem.toposolid.mixed": "จุดที่เลือกไม่เท่ากัน ค่าใหม่จะตั้งให้ทั้งหมด",
+ "elem.toposolid.edit_help": "ลากจุดเพื่อย้าย พิมพ์ค่าแล้วกด Enter เพื่อตั้งระดับความสูง Backspace ลบจุดที่เลือก Esc ออก",
+ "elem.toposolid.done": "เสร็จสิ้น"
+}

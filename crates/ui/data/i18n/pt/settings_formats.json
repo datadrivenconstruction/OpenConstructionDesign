@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "O que acontece depois que uma planilha é exportada",
+ "settings.area_decimals_desc": "Dígitos após o separador decimal nas áreas",
+ "settings.volume_decimals_desc": "Dígitos após o separador decimal nos volumes",
+ "settings.frac_desc": "Menor fração de polegada em comprimentos imperiais",
+ "settings.small_area_desc": "Mostrar áreas abaixo de um pé quadrado em polegadas quadradas",
+ "settings.sample_desc": "Como os números aparecem com as escolhas atuais",
+ "autosave.title_desc": "Manter uma cópia de recuperação do projeto aberto",
+ "autosave.interval_desc": "Tempo entre cópias de recuperação",
+ "autosave.keep_desc": "Cópias de recuperação mais antigas são removidas",
+ "autosave.folder_desc": "Vazio significa a pasta padrão",
+ "autosave.remind_desc": "Lembrete para salvar um projeto que ainda não tem arquivo",
+ "settings.backend_desc": "Adaptador gráfico em uso",
+ "settings.news_desc": "O que mudou nesta versão",
+ "settings.assoc_default_desc": "Tornar este aplicativo o padrão para arquivos de modelo",
+ "settings.data_dir_desc": "Caches, cópias de recuperação e registros ficam aqui."
+}

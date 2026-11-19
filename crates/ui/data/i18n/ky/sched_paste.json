@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "{n} уяча чапталды",
+ "sched_edit.pasted_skipped": "{n} уяча чапталды, {k} өткөрүлдү: {why}",
+ "sched_edit.filled": "{n} уяча толтурулду",
+ "sched_edit.filled_skipped": "{n} уяча толтурулду, {k} өткөрүлдү: {why}",
+ "sched_edit.why_ro": "{n} окула гана турган",
+ "sched_edit.why_bad": "{n} туура эмес маани",
+ "sched_edit.no_cell": "Адегенде тизмеден уячаны басыңыз",
+ "sched_edit.nothing": "Жазууга эч нерсе жок",
+ "sched_edit.not_refreshed": "Жазылды, бирок көрүнүш жаңыланган жок: {e}",
+ "sched_edit.failed": "өзгөрүлгөн жок: {e}",
+ "sched_edit.no_changes": "Өзгөрүү жок: {u} уячада мурунтан эле ушул маанилер бар",
+ "sched_edit.same_tail": ", {u} мурунтан эле барабар"
+}

@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "Paneel",
+ "curtain_props.cw.panel_cell": "Cel {i}×{j} · gordijngevel #{id}",
+ "curtain_props.cw.kind": "Type",
+ "curtain_props.cw.kind.glazed": "Glas",
+ "curtain_props.cw.kind.solid": "Massief",
+ "curtain_props.cw.kind.door": "Deur",
+ "curtain_props.cw.kind.window": "Raam",
+ "curtain_props.cw.kind.empty": "Leeg",
+ "curtain_props.cw.name": "Naam",
+ "curtain_props.cw.swing_side": "Opent naar de andere zijde",
+ "curtain_props.cw.swing_hinge": "Scharnier aan het celeinde",
+ "curtain_props.cw.size": "Maat",
+ "curtain_props.cw.cell_area": "Celoppervlakte",
+ "curtain_props.cw.panel_area": "Paneeloppervlakte",
+ "curtain_props.cw.prev": "Vorig paneel",
+ "curtain_props.cw.next": "Volgend paneel",
+ "curtain_props.cw.wall": "Selecteer de wand",
+ "curtain_props.cw.panel_hint": "Esc — selectie · Ctrl+Z — ongedaan maken",
+ "curtain_props.cw.status.panel": "Paneel {i}×{j} → {kind}",
+ "e3d.err.cw_height": "de hoogte van de gordijngevel moet meer dan 100 mm zijn"
+}

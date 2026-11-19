@@ -1,0 +1,4 @@
+{
+ "sf.restored": "Nasira ang settings file {file}; naibalik ang huling maayos na kopya. Itinago ang nasirang file bilang {broken}.",
+ "sf.reset": "Nasira ang settings file {file} at walang magagamit na backup; ginamit ang mga default. Itinago ang nasirang file bilang {broken}."
+}

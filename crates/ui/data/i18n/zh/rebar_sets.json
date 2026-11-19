@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "添加 1 组",
+ "rebar_sets.add_n": "添加 {n} 组",
+ "rebar_sets.pick.search": "搜索钢筋类型",
+ "rebar_sets.pick.empty": "没有匹配的钢筋类型",
+ "rebar_sets.unit.deg": "°"
+}

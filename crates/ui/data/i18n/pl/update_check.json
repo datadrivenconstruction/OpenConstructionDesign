@@ -1,0 +1,21 @@
+{
+ "cmd.help.check_update": "Sprawdź aktualizacje",
+ "update_check.title": "Sprawdzanie aktualizacji",
+ "update_check.desc": "Domyślnie wyłączone. Wysyła na nasz serwer tylko wersję, system i architekturę oraz rodzaj instalacji. Niczego nie pobiera ani nie instaluje.",
+ "update_check.freq.startup": "Przy uruchomieniu",
+ "update_check.freq.daily": "Codziennie",
+ "update_check.freq.weekly": "Co tydzień",
+ "update_check.freq.never": "Nigdy",
+ "update_check.check_now": "Sprawdź teraz",
+ "update_check.dialog.title": "Sprawdzanie aktualizacji",
+ "update_check.unknown.title": "Nie udało się sprawdzić aktualizacji",
+ "update_check.unknown.body": "{e}. Nie oznacza to, że ta wersja jest aktualna. Spróbuj ponownie później.",
+ "update_check.current": "Masz najnowszą wersję ({v}).",
+ "update_check.newer": "Dostępna jest wersja {v}",
+ "update_check.date": "Wydano {d}",
+ "update_check.unfit": "Ta wersja ({v}) jest starsza niż minimalna zalecana wersja {f}. Zaleca się aktualizację.",
+ "update_check.close": "Zamknij",
+ "update_check.open_failed": "Nie udało się otworzyć strony wydania.",
+ "update_check.toast.newer": "Dostępna jest wersja {v}. Pomoc > Sprawdź aktualizacje.",
+ "update_check.toast.unfit": "Ta wersja ({v}) jest starsza niż minimalna zalecana wersja {f}."
+}

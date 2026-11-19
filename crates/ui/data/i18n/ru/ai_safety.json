@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "Ключ в адресе",
+ "ai_safety.auth.query_name": "Параметр адреса",
+ "ai_safety.need_query_name": "Укажите параметр адреса, в котором передаётся ключ",
+ "ai_safety.apply_unlogged": "Применено, но журнал изменений не записан",
+ "ai_safety.audit_unlogged": "Не удалось записать журнал ИИ-помощника",
+ "ai_safety.chat_not_saved": "Не удалось сохранить чат в проект. Повторяем.",
+ "ai_safety.clip_clears": "Буфер обмена очистится через 30 с",
+ "ai_safety.copied_clears": "Скопировано. Буфер обмена очистится через 30 с",
+ "ai_safety.key_session_only": "Ключ хранится до закрытия программы",
+ "ai.settings.no_data_dir": "система не даёт папку для настроек программы"
+}

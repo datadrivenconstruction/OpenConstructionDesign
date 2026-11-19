@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "Pročelje {t} nije preuzeto ({why}). Ništa nije promijenjeno",
+ "host_shape.shape.elev_prompt_in": "pročelje, ft-in…",
+ "host_shape.shape.elev_in": "{v} in"
+}

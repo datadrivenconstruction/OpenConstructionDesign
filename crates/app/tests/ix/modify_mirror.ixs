@@ -1,0 +1,5 @@
+walls=[(0,0)-(6,0) (8,-2)-(8,2)]
+# Mirror about a picked wall: the copy lands on the other side, one record
+tool(select) click(3,0) → selected=1
+tool(MM) → scope=Moving
+click(8,1) → walls=3 journal=+1 scope=Idle

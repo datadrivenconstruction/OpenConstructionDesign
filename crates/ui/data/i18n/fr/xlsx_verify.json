@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "L'application a été annulée : le modèle ne correspondait pas à l'aperçu. {what}",
+ "xlsx_verify.not_written": "{row} n'a pas été modifié.",
+ "xlsx_verify.lost": "{row} a disparu.",
+ "xlsx_verify.not_deleted": "{row} n'a pas été supprimé.",
+ "xlsx_verify.extra_deleted": "{row} a été supprimé, alors que l'aperçu le conserve.",
+ "xlsx_verify.created": "{table} : {got} nouveaux au lieu de {want}.",
+ "xlsx_verify.value": "{row}, {field} : attendu {want} (était {old}), reçu {got}.",
+ "xlsx_verify.check_failed": "Le résultat n'a pas pu être vérifié : {e}",
+ "xlsx_verify.plan_failed": "L'application n'a pas démarré : la vérification n'a pas pu lire le modèle ({e}).",
+ "xlsx_verify.take_back_failed": "L'étape n'a pas pu être annulée ({e}) : utilisez Annuler.",
+ "xlsx_verify.t.wall": "Mur",
+ "xlsx_verify.t.opening": "Ouverture",
+ "xlsx_verify.t.room": "Pièce",
+ "xlsx_verify.t.slab": "Dalle",
+ "xlsx_verify.t.level": "Niveau",
+ "xlsx_verify.t.wall_type": "Type de mur",
+ "xlsx_verify.t.slab_type": "Type de dalle",
+ "xlsx_verify.t.col": "Poteau",
+ "xlsx_verify.t.beam": "Poutre",
+ "xlsx_verify.t.roof": "Toiture",
+ "xlsx_verify.t.curtain_wall": "Mur-rideau"
+}

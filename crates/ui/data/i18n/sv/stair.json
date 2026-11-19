@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "Trappor",
+ "selcat.railing": "Räcken",
+ "quick.cat.stair": "Trappor",
+ "quick.cat.railing": "Räcken",
+ "stair.risers": "Steg",
+ "stair.riser": "Stegshöjd",
+ "stair.comfort": "2s + g",
+ "stair.tread_auto": "Trädjup enligt regel",
+ "stair.tread_auto_tip": "Släpp det inskrivna trädjupet och låt regeln 2s + g ange det",
+ "stair.broken": "Denna trappa passar inte sina våningar",
+ "railing.host_stair": "Värd: trappa #{id}",
+ "railing.host_path": "Skissat räcke",
+ "railing.length": "Längd",
+ "stair.deleted_with": "med {n} värdade räcken"
+}

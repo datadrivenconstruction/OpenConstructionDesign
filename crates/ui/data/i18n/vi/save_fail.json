@@ -1,0 +1,16 @@
+{
+ "save_fail.save_fail.title": "Dự án chưa được lưu",
+ "save_fail.save_fail.kept": "Các chỉnh sửa của bạn vẫn còn ở đây. Không mất gì khi trình chỉnh sửa còn mở.",
+ "save_fail.save_fail.details": "Chi tiết",
+ "save_fail.save_fail.copy": "Sao chép",
+ "save_fail.save_fail.save_as": "Lưu thành…",
+ "save_fail.save_fail.retry": "Thử lại",
+ "save_fail.save_fail.close": "Đóng",
+ "save_fail.cause.full": "Ổ đĩa đã đầy. Hãy giải phóng dung lượng hoặc lưu dự án sang ổ đĩa khác.",
+ "save_fail.cause.denied": "Thư mục hoặc tệp này chỉ đọc, hoặc bạn không có quyền ghi ở đây. Hãy chọn thư mục khác.",
+ "save_fail.cause.locked": "Tệp đang mở trong chương trình khác. Hãy đóng nó ở đó, rồi nhấn Thử lại.",
+ "save_fail.cause.missing": "Thư mục không còn tồn tại. Hãy chọn thư mục khác, hoặc khôi phục nó rồi nhấn Thử lại.",
+ "save_fail.cause.offline": "Ổ đĩa hoặc thư mục mạng không khả dụng. Hãy kết nối lại rồi nhấn Thử lại, hoặc lưu ở nơi khác.",
+ "save_fail.cause.too_long": "Đường dẫn tệp quá dài. Hãy chọn thư mục hoặc tên tệp ngắn hơn.",
+ "save_fail.cause.other": "Không ghi được tệp: {detail}"
+}

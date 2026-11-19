@@ -1,0 +1,7 @@
+{
+ "offset_opts.dist_positive": "Siirtymäetäisyyden on oltava suurempi kuin nolla; puoli seuraa kursoria",
+ "offset_opts.count_bad": "Kokonaisluku väliltä {min}–{max}",
+ "offset_opts.done_tip": "Viimeistele valinta ja aloita työkalu",
+ "offset_opts.iso.apply_tip": "Tee tilapäisestä piilotuksesta pysyvä tälle näkymälle",
+ "offset_opts.iso.exit": "Poistu tilapäisestä tilasta"
+}

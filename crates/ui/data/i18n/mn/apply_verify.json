@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "Хэрэглэх зогссон: загварыг хэвээр нь хадгалсан",
+ "apply_verify.rolled_back": "Хэрэглэх ноорогтой таарсангүй тул буцаагдсан; загвар өөрчлөгдөөгүй. {what}",
+ "apply_verify.diff.missing": "Ноорог {kind} {what}-г харуулсан, гэвч Хэрэглэх үүнийг хийгээгүй.",
+ "apply_verify.diff.extra": "Ноорогт харагдаагүй {kind} {what}-г хэрэглэв.",
+ "apply_verify.diff.kind": "Ноорог {shown} {what}-г харуулсан, гэвч {applied} хэрэглэсэн.",
+ "apply_verify.diff.value": "{what}: “{col}” ноорогоос өөр гарлаа.",
+ "apply_verify.diff.truncated": "Ноорог болон хэрэглэсэн өөрчлөлт хэмжээгээрээ ялгаатай.",
+ "apply_verify.diff.unreadable": "Хэрэглэсэн өөрчлөлтийг буцааж уншиж чадсангүй ({e}).",
+ "apply_verify.no_base": "Хэрэглэх ажиллаагүй: ноорогыг шалгах хуулбар байхгүй. Загвар өөрчлөгдөөгүй; ноорогоо дахин хүснэ үү.",
+ "apply_verify.take_back_failed": "Буцаах амжилтгүй ({e}): Буцаах ашиглана уу.",
+ "apply_verify.kind.created": "үүсгэсэн",
+ "apply_verify.kind.changed": "өөрчлөгдсөн",
+ "apply_verify.kind.deleted": "устгасан",
+ "apply_verify.card.type_row": "Төрөл {type} · {n} элемент өөрчлөлтийг авна"
+}

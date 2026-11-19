@@ -1,0 +1,22 @@
+{
+ "undo.entry_later": "لم يتم التراجع: أُجري تغيير آخر بعده. تراجع عن ذلك أولاً.",
+ "undo.entry_gone": "لم يتم التراجع: هذا التغيير تم التراجع عنه بالفعل أو لم يعد في السجل.",
+ "undo.entry_busy": "أنهِ الرسم الحالي أو ألغِه أولاً، ثم تراجع.",
+ "quick.hud.more": "المزيد في الخصائص: {names}",
+ "sheet_tools.sheet.more": "أدوات ورقة إضافية",
+ "job.of": "{d} من {t}",
+ "job.of.mb": "{d} من {t} ميغابايت",
+ "job.left.under_minute": "متبقٍ أقل من دقيقة",
+ "job.left.minutes": "متبقٍ نحو {n} دقيقة",
+ "sheet_tools.start.units": "الوحدات",
+ "sheet_tools.print.save": {
+  "one": "حفظ ورقة #",
+  "other": "حفظ # ورقة",
+  "two": "حفظ # ورقتين",
+  "few": "حفظ # أوراق",
+  "many": "حفظ # ورقةً",
+  "zero": "حفظ # ورقة"
+ },
+ "sheet_tools.sets.delete_ask": "حذف المجموعة “{name}”؟ ستبقى أوراقها في المشروع.",
+ "sheet_tools.keep": "إبقاء"
+}

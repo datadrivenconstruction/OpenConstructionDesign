@@ -1,0 +1,15 @@
+{
+ "xlw.hd_never": "ابھی برآمد نہیں ہوئی",
+ "xlw.hd_now": "ابھی",
+ "xlw.hd_min": "{n} منٹ پہلے",
+ "xlw.hd_hour": "{n} گھنٹے پہلے",
+ "xlw.hd_day": "{n} دن پہلے",
+ "xlw.hd_linked": "منسلک",
+ "xlw.hd_watched": "زیرِ نگرانی",
+ "xlw.hd_stale": "برآمد کے بعد ماڈل بدلا",
+ "xlw.ft_export": "برآمد",
+ "xlw.ft_review": "جائزہ",
+ "xlw.ft_apply": "{n} تبدیلیاں لاگو کریں",
+ "xlw.ft_delete_missing": "غائب حذف کریں",
+ "xlw.ft_keep_missing_tip": "حذف فعال ہے: قطار کے بغیر عناصر لاگو کرنے پر حذف ہوں گے۔ رکھنے کے لیے نشان ہٹائیں۔"
+}

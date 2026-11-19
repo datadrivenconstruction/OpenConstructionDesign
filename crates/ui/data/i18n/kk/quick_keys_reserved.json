@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key} сақталған ({why}) және қайта тағайындалмайды",
+ "quick.keys.res_copy": "көшіру",
+ "quick.keys.res_paste": "қою",
+ "quick.keys.res_cut": "кесу",
+ "quick.keys.res_undo": "болдырмау / қайталау",
+ "quick.keys.res_save": "сақтау",
+ "quick.keys.res_palette": "команда палитрасы",
+ "quick.keys.reserved_conflict": "{key} бұрыннан «{cmd}» командасында пайдаланылған. Esc оны сол жерде қалдырады.",
+ "quick.keys.reserved_swap": "Ауыстыру",
+ "quick.keys.reserved_take": "Алу",
+ "quick.keys.reserved_keep": "Қалдыру",
+ "quick.keys.reserved_os": "Жүйе пайдаланады:"
+}

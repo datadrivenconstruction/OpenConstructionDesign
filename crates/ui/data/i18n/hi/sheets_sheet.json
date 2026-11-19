@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "दृश्यों सहित शीट की प्रतिलिपि",
+ "cmd.view.sheet_duplicate_title": "शीट की प्रतिलिपि (केवल टाइटल ब्लॉक)",
+ "sheets.dup.menu_views": "दृश्यों सहित प्रतिलिपि",
+ "sheets.dup.menu_title": "प्रतिलिपि, केवल टाइटल ब्लॉक",
+ "sheets.dup.done": "{src} से शीट {number} बनी: {views} दृश्य, {sched} शेड्यूल और लीजेंड। रिवीज़न कॉपी नहीं होते; शीट अभी जारी नहीं हुई है।",
+ "sheets.dup.none": "प्रतिलिपि के लिए शीट खोलें",
+ "sheets.dup.copy": "कॉपी",
+ "cmd.view.sheet_duplicate.short": "दृश्यों सहित प्रतिलिपि",
+ "cmd.view.sheet_duplicate_title.short": "टाइटल ब्लॉक की प्रतिलिपि"
+}

@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "Usklađi tip",
+ "cmd.mod.match_type.short": "Usklađi tip",
+ "cmd.mod.match_type.desc": "Odaberite zid, ploču, stup ili gredu, zatim kliknite druge iste kategorije da dobiju njegov tip. Povucite okvir za primjenu na sve unutra. Esc odbacuje izvor.",
+ "hint.match_type.pick": "Usklađivanje tipa: odaberite zid, ploču, stup ili gredu · Esc — izlaz",
+ "hint.match_type.apply": "Usklađivanje tipa: kliknite mete ili povucite okvir · Esc — drugi izvor",
+ "match_type.kind.wall": "zid",
+ "match_type.kind.slab": "ploča",
+ "match_type.kind.column": "stup",
+ "match_type.kind.beam": "greda",
+ "match_type.refuse.category": "Druga kategorija: ovaj tip može dobiti samo {cat}",
+ "match_type.refuse.curtain": "Zastakljena fasada: njezin tip se ovdje ne usklađuje",
+ "match_type.refuse.pinned": "Prikvačeno: otkvačite za promjenu tipa",
+ "match_type.pick_bad": "Odaberite zid, ploču, stup ili gredu kao izvor",
+ "match_type.same": "Već ovaj tip",
+ "match_type.done": "Tip primijenjen: {n}",
+ "match_type.done_skipped": "Tip primijenjen: {n}, preskočeno (prikvačeno ili zastakljeno): {skipped}",
+ "match_type.failed": "Tip nije promijenjen: {err}"
+}

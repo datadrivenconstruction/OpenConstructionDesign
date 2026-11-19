@@ -1,0 +1,7 @@
+{
+ "rebar_pick.pick.empty": "Armering: velg en søyle, bjelke, vegg, dekke eller fundament",
+ "rebar_pick.pick.unsupported": "Dette valget kan ikke armeres. Velg en søyle, bjelke, vegg, dekke eller fundament",
+ "rebar_pick.pick.keys": "Klikk for å velge, Shift for å legge til flere · Enter for å åpne skjemaet · Esc for å avbryte",
+ "rebar_pick.pick.open": "Åpne skjema",
+ "rebar_pick.pick.cancel": "Avbryt"
+}

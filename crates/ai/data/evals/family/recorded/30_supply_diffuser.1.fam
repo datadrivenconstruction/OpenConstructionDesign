@@ -1,0 +1,19 @@
+family Supply Diffuser
+category air_terminal
+host ceiling
+ifc IfcAirTerminal DIFFUSER
+param Size length type 600mm
+param NeckD length type 250mm
+param NeckH length type 200mm
+param Face length type 30mm
+param Flow number type 300
+param Finish material type "Steel White"
+type "600x600" Size=600mm, NeckD=250mm, Flow=400
+type "300x300" Size=300mm, NeckD=160mm, Flow=150
+type "24x24 in" Size=610mm, NeckD=250mm, Flow=400
+extrude Plate rect(-Size / 2, -Size / 2, Size / 2, Size / 2) z(-Face, 0mm) mat(Finish) show(3d, elev)
+revolve Neck rect(0, 0mm, NeckD / 2, NeckH) mat(Finish) show(3d, elev)
+symbol rect(-Size / 2, -Size / 2, Size / 2, Size / 2)
+symbol line(-Size / 2, -Size / 2, Size / 2, Size / 2) show(medium, fine)
+symbol line(-Size / 2, Size / 2, Size / 2, -Size / 2) show(medium, fine)
+connector Air duct at(0, 0, NeckH) dir(0, 0, 1) size(NeckD)

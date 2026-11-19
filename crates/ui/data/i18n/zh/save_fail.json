@@ -1,0 +1,16 @@
+{
+ "save_fail.save_fail.title": "项目未保存",
+ "save_fail.save_fail.kept": "您的编辑仍在此处保留。只要编辑器保持打开，就不会丢失任何内容。",
+ "save_fail.save_fail.details": "详细信息",
+ "save_fail.save_fail.copy": "复制",
+ "save_fail.save_fail.save_as": "另存为…",
+ "save_fail.save_fail.retry": "重试",
+ "save_fail.save_fail.close": "关闭",
+ "save_fail.cause.full": "磁盘已满。请释放空间，或将项目保存到其他驱动器。",
+ "save_fail.cause.denied": "此文件夹或文件为只读，或您没有写入权限。请选择其他文件夹。",
+ "save_fail.cause.locked": "文件已在其他程序中打开。请先在该程序中关闭，然后按“重试”。",
+ "save_fail.cause.missing": "文件夹已不存在。请选择其他文件夹，或将其恢复后按“重试”。",
+ "save_fail.cause.offline": "驱动器或网络文件夹不可用。请重新连接后按“重试”，或保存到其他位置。",
+ "save_fail.cause.too_long": "文件路径过长。请选择较短的文件夹或文件名。",
+ "save_fail.cause.other": "无法写入文件：{detail}"
+}

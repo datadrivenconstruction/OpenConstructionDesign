@@ -1,0 +1,6 @@
+{
+ "xlsx_no_base.title": "Ce classeur n'a pas de données de comparaison",
+ "xlsx_no_base.detail": "La feuille de comparaison masquée est absente ou endommagée (un autre programme a réenregistré le classeur, ou il a été fait à la main). Chaque cellule différente remplace la valeur du modèle ; les modifications du modèle faites depuis l'export ne peuvent pas être détectées. Les lignes absentes du classeur ne sont pas supprimées.",
+ "xlsx_no_base.confirm": "J'ai vérifié les modifications : remplacer les valeurs du modèle ({n})",
+ "xlsx_no_base.confirm_first": "Confirmez d'abord l'import d'un classeur sans données de comparaison"
+}

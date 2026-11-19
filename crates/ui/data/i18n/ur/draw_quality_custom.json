@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "حسب ضرورت",
+ "draw_quality.custom.tip": "{name}: اس پروجیکٹ کا اندراج",
+ "draw_quality.custom_note": "حسب ضرورت نشان والے اندراجات اس پروجیکٹ کے ہیں۔",
+ "draw_quality.unsaved.lib_body": "انہیں لائبریری میں محفوظ کریں، یا رد کریں؟",
+ "draw_quality.unsaved.styles_body": "انہیں ویو پر لاگو کریں، یا رد کریں؟",
+ "draw_quality.unsaved.both_body": "انہیں لاگو کریں، یا رد کریں؟",
+ "draw_quality.halftone": "{category} ہاف ٹون",
+ "draw_quality.styles.name": "لائن اسٹائلز",
+ "draw_quality.styles.other_level": "سطح {level} کی غیر محفوظ اسٹائل تبدیلیاں: اس سطح میں ترمیم کے لیے انہیں لاگو یا واپس کریں۔"
+}

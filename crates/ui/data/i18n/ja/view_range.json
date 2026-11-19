@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "ビュー範囲",
+ "view_range.range": "ビュー範囲",
+ "view_range.cut": "切断面",
+ "view_range.bottom": "下端",
+ "view_range.depth": "ビューの深さ",
+ "view_range.cut.hint": "レベルより上の切断面の高さ。切断面をまたぐ要素は切断されて描かれます。",
+ "view_range.bottom.hint": "レベルを基準とした範囲の下端。0 または負の値も指定できます。",
+ "view_range.depth.hint": "ビューが下端より下をどこまで見るか。0 以上。",
+ "view_range.err.number": "各欄に長さを入力してください",
+ "view_range.err.not_finite": "各欄に長さを入力してください",
+ "view_range.err.cut_not_above_bottom": "切断面は下端より上にしてください",
+ "view_range.err.negative_depth": "ビューの深さは負にできません",
+ "view_range.err.top_below_cut": "範囲の上端は切断面より下にできません"
+}

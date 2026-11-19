@@ -1,0 +1,4 @@
+{
+ "cmd.data.sync_xlsx": "Synkronisera med kalkylblad…",
+ "cmd.data.sync_xlsx.desc": "Läser den länkade arbetsboken på nytt och visar skillnader mot modellen."
+}

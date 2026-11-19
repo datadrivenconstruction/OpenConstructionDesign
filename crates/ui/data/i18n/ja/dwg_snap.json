@@ -1,0 +1,5 @@
+{
+ "snap.center": "中心",
+ "dwg_snap.through": "通過点",
+ "dwg_snap.through_tip": "入力した距離ではなく、クリックした点 (端点、交点、中心にスナップ) を通るようにオフセットします"
+}

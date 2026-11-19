@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "Prázdný vstup.",
+ "units.err.not_number": "Na pozici {pos} není číslo.",
+ "units.err.unknown_unit": "Neznámá jednotka: {unit}.",
+ "units.err.non_positive": "Délka musí být větší než nula.",
+ "units.err.too_large": "Délka nesmí přesáhnout {max} m.",
+ "units.err.bad_angle": "Úhel je číslo ve stupních.",
+ "units.err.unknown_name": "Neznámý název: {name}. Hodnota ponechána.",
+ "units.err.cycle": "Smyčka vzorce u {name}. Hodnota ponechána.",
+ "units.err.bad_expr": "Výraz na pozici {pos} nelze přečíst. Hodnota ponechána.",
+ "units.err.div_zero": "Dělení nulou na pozici {pos}. Hodnota ponechána.",
+ "units.err.invalid": "Neplatné číslo.",
+ "units.err.kept": "Nezměněno: {reason}"
+}

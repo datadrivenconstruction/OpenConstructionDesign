@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "Buku kerja ini sudah ada",
+ "xlsx_exists.foreign": "Ini bukan buku kerja proyek ini, jadi tidak pernah diganti.",
+ "xlsx_exists.pending": "Ada {n} suntingan yang belum diterapkan ke model.",
+ "xlsx_exists.outside": "Ada {n} baris yang tidak dibawa ekspor baru.",
+ "xlsx_exists.new_name": "Ekspor ke {name}",
+ "xlsx_exists.apply_first": "Terapkan dulu",
+ "xlsx_exists.replace": "Ganti (buku kerja lama ke _archive)",
+ "xlsx_exists.archived": "Buku kerja lama dipindahkan ke {path}",
+ "xlsx_exists.archive_failed": "Buku kerja lama tidak dapat dipindahkan, tidak ada yang diekspor: {error}"
+}

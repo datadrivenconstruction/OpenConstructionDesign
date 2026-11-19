@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "Ändringar i arbetsboken tillämpades inte",
+ "workbook_changes.wb.body": "Om du stänger eller byter projekt försvinner de.",
+ "workbook_changes.wb.line": "Import av arbetsbok: {n} ändringar tillämpades inte",
+ "workbook_changes.wb.review": "Granska",
+ "workbook_changes.wb.discard": "Kasta"
+}

@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "Önce bir şablon adı girin",
+ "view_template.name_taken": "Bu adda bir şablon zaten var",
+ "view_template.pick_blocked": "Önce en az bir görünüm işaretleyin",
+ "view_template.views.one": "{n} görünüm",
+ "view_template.views.few": "{n} görünüm",
+ "view_template.views.many": "{n} görünüm",
+ "view_template.delete.title": "Bu şablon silinsin mi?",
+ "view_template.delete.body": "“{name}” şablonu silinecek. Kullanan: {used}.",
+ "view_template.delete.unused": "“{name}” şablonu silinecek. Hiçbir görünüm kullanmıyor.",
+ "view_template.delete.keeps": "Bu görünümler mevcut grafiklerini korur ve bağlantıyı kaybeder.",
+ "view_template.delete.undo": "Bunu tek bir Geri al ile geri alabilirsiniz.",
+ "view_template.delete.confirm": "Şablonu sil"
+}

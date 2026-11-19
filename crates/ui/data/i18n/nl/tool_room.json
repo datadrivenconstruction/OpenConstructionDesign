@@ -1,0 +1,9 @@
+{
+ "tool.room": "Ruimte",
+ "tool.room.name": "Ruimte",
+ "room_tool.room.name": "Naam",
+ "hint.room.place": "Klik binnen een gesloten wandlus om een ruimte te maken · Esc — verlaten",
+ "tool.err.room_open": "Het gebied is niet gesloten: sluit de wandlus of voeg een ruimtescheider toe",
+ "tool.err.room_check": "Kan de ruimten van deze verdieping niet controleren",
+ "tool.err.room_exists": "Er is al een ruimte in deze lus"
+}

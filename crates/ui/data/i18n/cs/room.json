@@ -1,0 +1,6 @@
+{
+ "geom.length": "Délka",
+ "sched.cat.room_seps": "Oddělovače místností",
+ "room.err.point_leave": "Místnost {n}: bod by opustil svou hranici",
+ "room.err.point_taken": "Místnost {n}: bod by skončil v místnosti {other}"
+}

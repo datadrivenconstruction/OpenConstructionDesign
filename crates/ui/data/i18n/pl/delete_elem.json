@@ -1,0 +1,9 @@
+{
+ "elem.deleted": "Usunięto elementów: {n}",
+ "elem.deleted_kept": "Usunięto elementów: {n}; pozostawiono: {k} (panele i elementy, których nie można usunąć)",
+ "elem.not_deleted": "nie usunięto: {e}",
+ "elem.not_deletable": "Tego elementu nie można usunąć",
+ "elem.panel": "panel ściany osłonowej",
+ "elem.panel_refused": "Panel jest częścią ściany osłonowej i nie można go usunąć osobno. Zaznacz całą ścianę, aby ją usunąć.",
+ "elem.reload_failed": "Usunięto, ale widok się nie odświeżył: {e}"
+}

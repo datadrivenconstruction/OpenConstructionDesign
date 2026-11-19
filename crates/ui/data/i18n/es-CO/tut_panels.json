@@ -1,0 +1,9 @@
+{
+ "empty.props_model.title": "Nada seleccionado",
+ "empty.props_model.hint": "Haga clic en un elemento de la vista para ver sus propiedades. O exporte todos los parámetros a un libro, edítelos allí y aplíquelos de vuelta.",
+ "empty.props_model.action": "Exportar a XLSX",
+ "tut.spreadsheet.title": "Ida y vuelta con XLSX",
+ "tut.spreadsheet.1": "Pulse Exportar a hoja de cálculo XLSX abajo: elija qué incluir y guarde el libro.",
+ "tut.spreadsheet.2": "Abra el libro en hoja de cálculo XLSX, cambie una celda y guárdelo. La vista previa aquí muestra el cambio.",
+ "tut.spreadsheet.3": "Revise la vista previa y pulse Aplicar al modelo. Ctrl+Z lo deshace."
+}

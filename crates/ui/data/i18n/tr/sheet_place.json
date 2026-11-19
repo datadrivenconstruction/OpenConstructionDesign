@@ -1,0 +1,15 @@
+{
+ "sheet_place.place_view_tip": "Sayfaya görünüm veya tablo yerleştirin",
+ "sheet_place.properties_tip": "Sayfa numarası, adı, kağıt ve revizyonlar",
+ "sheet_place.print_tip": "Sayfayı yazdırın veya dışa aktarın",
+ "sheet_place.fit_tip": "Sayfayı pencereye sığdırın",
+ "sheet_place.activate_tip": "Görünümü sayfada yerinde düzenleyin: kaydırın, yakınlaştırın ve kırpın",
+ "sheet_place.open_view_tip": "Görünümü kendi sekmesinde açın",
+ "sheet_place.done_tip": "Sayfadaki görünümü düzenlemeyi bitirin",
+ "sheet_place.reset_crop_tip": "Kırpmayı kaldırın ve tüm görünümü gösterin",
+ "sheet_place.scale_tip": "Sayfadaki seçili görünümün ölçeği",
+ "sheet_place.title_tip": "Sayfada görünümün altında gösterilen başlık",
+ "sheet_place.banner": "Görünüm sayfada düzenleniyor",
+ "sheet_place.new_set_tip": "Birlikte yazdırılacak sayfa kümesi oluşturun",
+ "sheet_place.new_sheet_tip": "Projeye sayfa ekleyin"
+}

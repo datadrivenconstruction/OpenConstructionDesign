@@ -1,0 +1,16 @@
+{
+ "xlsx_recover.title": "통합 문서로의 내보내기가 중단되었습니다",
+ "xlsx_recover.both": "이전 통합 문서를 옆으로 옮긴 뒤 새 문서를 놓기 전에 내보내기가 중단되었습니다. 아무것도 잃지 않았습니다: 새 통합 문서는 {part}에 완성되어 있고, 이전 문서는 {bak}에 보관되어 있습니다.",
+ "xlsx_recover.part_only": "새 통합 문서를 놓기 전에 내보내기가 중단되었습니다. {part}에 완성되어 있습니다.",
+ "xlsx_recover.bak_only": "새 통합 문서가 준비되기 전에 내보내기가 중단되었습니다. 이전 통합 문서는 {bak}에 보관됩니다.",
+ "xlsx_recover.finish": "중단된 내보내기 마무리",
+ "xlsx_recover.restore": "이전 통합 문서 복원",
+ "xlsx_recover.finished": "중단된 내보내기를 마쳤습니다: 새 통합 문서가 제자리에 있습니다.",
+ "xlsx_recover.finished_kept": "중단된 내보내기를 마쳤습니다: 새 통합 문서가 제자리에 있고, 이전 문서는 {bak}에 보관됩니다.",
+ "xlsx_recover.restored": "이전 통합 문서를 제자리에 되돌렸습니다.",
+ "xlsx_recover.restore_failed": "이전 통합 문서를 되돌리지 못했습니다 ({err}). {path}에 보관됩니다.",
+ "xlsx_recover.not_restored": "새 통합 문서를 놓지 못했고 이전 문서도 되돌리지 못했습니다. 아무것도 잃지 않았습니다: 이전 통합 문서는 {path}에 보관됩니다. 동기화에서 마무리하거나 복원하도록 제안합니다.",
+ "xlsx_recover.finish_failed": "새 통합 문서를 놓지 못했습니다 ({err}). {path}에 남아 있습니다.",
+ "xlsx_recover.dest_back": "통합 문서가 {path}에 다시 있습니다: 아무것도 옮기지 않았습니다.",
+ "xlsx_recover.nothing": "중단된 내보내기에서 옮길 항목이 남아 있지 않습니다."
+}

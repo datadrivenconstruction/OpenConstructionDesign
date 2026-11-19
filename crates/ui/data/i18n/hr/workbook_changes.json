@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "Promjene radne knjige nisu primijenjene",
+ "workbook_changes.wb.body": "Zatvaranjem ili prebacivanjem projekta one se odbacuju.",
+ "workbook_changes.wb.line": "Uvoz radne knjige: {n} promjena nije primijenjeno",
+ "workbook_changes.wb.review": "Pregledaj",
+ "workbook_changes.wb.discard": "Odbaci"
+}

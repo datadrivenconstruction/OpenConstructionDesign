@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "היפוך צד הציר",
+ "cmd.edit.flip_hand.desc": "משקף את הדלתות והחלונות הנבחרים לאורך הקיר, כך שהצירים יעברו לקצה השני של הפתח.",
+ "cmd.edit.flip_facing": "היפוך צד הפתח",
+ "cmd.edit.flip_facing.desc": "מסובב את הדלתות והחלונות הנבחרים לצד השני של הקיר.",
+ "opening_grips.flip_hand": "הפוך ציר",
+ "opening_grips.flip_hand.tip": "הצירים לקצה השני של הפתח (Shift+F)",
+ "opening_grips.flip_facing": "הפוך צד",
+ "opening_grips.flip_facing.tip": "פתח לצד השני של הקיר (Shift+G)",
+ "opening_grips.flip.done": "הופך: {n}",
+ "opening_grips.flip.none": "בחר דלת או חלון להיפוך",
+ "opening_grips.flip.fail": "לא הופך: {why}"
+}

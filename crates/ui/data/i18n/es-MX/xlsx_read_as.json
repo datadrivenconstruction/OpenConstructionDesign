@@ -1,0 +1,11 @@
+{
+ "xlsx_read_as.title": "¿Hoja renombrada?",
+ "xlsx_read_as.detail": "La hoja {found} tiene las columnas de {sheet} (coincidencia del {score} %). No se lee salvo que la elija.",
+ "xlsx_read_as.detail_many": "Más de una hoja encaja con {sheet}: {found}. No se elige ninguna por usted; elija la que se debe leer.",
+ "xlsx_read_as.read_as": "Leer “{found}” como {sheet}",
+ "xlsx_read_as.read_as_tip": "Solo para esta importación. La hoja no se renombra; Aplicar solo escribe en ella los id de las filas nuevas.",
+ "xlsx_read_as.active": "La hoja “{found}” se lee como {sheet} en esta importación.",
+ "xlsx_read_as.undo": "No leer como {sheet}",
+ "xlsx_read_as.undo_tip": "Volver a los nombres de lámina tal como están en el libro.",
+ "xlsx_read_as.not_rewritten": "El libro no se reescribió: una hoja renombrada se lee con su propio nombre. Renómbrela de nuevo para mantener el libro sincronizado."
+}

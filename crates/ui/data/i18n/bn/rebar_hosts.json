@@ -1,0 +1,40 @@
+{
+ "rebar_hosts.hosts": "হোস্ট: {list}",
+ "rebar_hosts.kind.column": "কলাম",
+ "rebar_hosts.kind.beam": "বিম",
+ "rebar_hosts.kind.wall": "দেয়াল",
+ "rebar_hosts.kind.slab": "স্ল্যাব",
+ "rebar_hosts.kind.footing": "ফুটিং",
+ "rebar_hosts.kind.raft": "ফাউন্ডেশন স্ল্যাব",
+ "rebar_hosts.n.column": {
+  "one": "# টি কলাম",
+  "other": "# টি কলাম"
+ },
+ "rebar_hosts.n.beam": {
+  "one": "# টি বিম",
+  "other": "# টি বিম"
+ },
+ "rebar_hosts.n.wall": {
+  "one": "# টি দেয়াল",
+  "other": "# টি দেয়াল"
+ },
+ "rebar_hosts.n.slab": {
+  "one": "# টি স্ল্যাব",
+  "other": "# টি স্ল্যাব"
+ },
+ "rebar_hosts.n.footing": {
+  "one": "# টি ফুটিং",
+  "other": "# টি ফুটিং"
+ },
+ "rebar_hosts.n.raft": {
+  "one": "# টি ফাউন্ডেশন স্ল্যাব",
+  "other": "# টি ফাউন্ডেশন স্ল্যাব"
+ },
+ "rebar_hosts.mixed_note": "কলাম ও বিমে রড ও স্টিরাপ যায়; দেয়াল, স্ল্যাব ও ফাউন্ডেশনে মেশ যায়। রিইনফোর্সমেন্ট যোগ করতে একটি গ্রুপ বাছুন।",
+ "rebar_hosts.why.mixed": "নির্বাচনে কলাম বা বিম এবং দেয়াল, স্ল্যাব বা ফাউন্ডেশন মিশে আছে। একটি গ্রুপ বাছুন।",
+ "rebar_hosts.why.area_linear": "মেশ যায় দেয়াল, স্ল্যাব ও ফাউন্ডেশনে, কলাম বা বিমে নয়।",
+ "rebar_hosts.why.bars_plate": "লম্বা রড ও স্টিরাপ যায় কলাম ও বিমে, দেয়াল, স্ল্যাব বা ফাউন্ডেশনে নয়।",
+ "rebar_hosts.why.no_common_face": "বাছাই করা হোস্টগুলোর কোনো সাধারণ কভার তল নেই। একই ধরনের হোস্ট বাছুন।",
+ "rebar_hosts.why.no_type": "একটি বার টাইপ বাছুন।",
+ "rebar_hosts.kind_type": "{kind} · {type}"
+}

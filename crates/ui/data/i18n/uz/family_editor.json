@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "Yangi oila",
+ "family_editor.open_tip": "Oila yoki qoralamani ochish",
+ "family_editor.close_named": "{name} ni yopish",
+ "family_editor.unsaved": "Saqlanmagan o'zgarishlar",
+ "family_editor.search": "Qidirish",
+ "family_editor.nothing": "Hech narsa topilmadi",
+ "family_editor.sec_families": "Loyiha oilalari",
+ "family_editor.sec_drafts": "Qoralamalar",
+ "family_editor.cap_category": "Kategoriya",
+ "family_editor.cap_host": "Asos",
+ "family_editor.cap_type": "Oldindan ko'rish turi"
+}

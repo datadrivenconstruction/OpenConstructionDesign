@@ -1,0 +1,8 @@
+{
+ "xlsx_issues.empty_title": "Trang tính trống trong sổ",
+ "xlsx_issues.empty_kept": "Trang tính {sheet} trống: không đọc được gì từ đó, {n} cấu kiện giữ nguyên. Các trang tính khác vẫn có thể áp dụng.",
+ "xlsx_issues.empty_none": "Trang tính {sheet} trống: không đọc được gì từ đó. Các trang tính khác vẫn có thể áp dụng.",
+ "xlsx_issues.unreadable_title": "Không đọc được trang tính",
+ "xlsx_issues.unreadable": "Không đọc được trang tính {sheet}, phần tệp này bị hỏng: chưa lấy gì từ đó và các cấu kiện giữ nguyên. Các trang tính khác vẫn có thể áp dụng.",
+ "xlsx_issues.formulas": "Không đọc được các công thức trên trang tính {sheet}, nên không phân biệt được giá trị tính toán với chỉnh sửa: chưa lấy gì từ trang tính này. Các trang tính khác vẫn có thể áp dụng."
+}

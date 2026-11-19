@@ -1,0 +1,7 @@
+{
+ "recover.untitled_note": "এই প্রকল্প কখনো সংরক্ষণ করা হয়নি",
+ "recover.file_missing": "প্রকল্প ফাইল পাওয়া যায়নি",
+ "recover.banner": "{name}-এর জন্য আগের সেশনের অসংরক্ষিত কাজ পাওয়া গেছে",
+ "recover.banner_review": "দেখুন",
+ "recover.later_archived": "{n} বার পিছিয়ে দেওয়া হয়েছে: স্ন্যাপশট আর্কাইভে সরানো হয়েছে"
+}

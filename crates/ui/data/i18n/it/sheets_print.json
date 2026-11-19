@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "Tavola precedente (Pag Su)",
+ "sheets.print.next": "Tavola successiva (Pag Giù)",
+ "sheets.print.fit": "Adatta pagina (doppio clic)",
+ "sheets.print.no_sheets": "Nessuna tavola da visualizzare in anteprima",
+ "sheets.print.building": "Creazione della pagina…",
+ "sheets.print.stop_build": "Interrompi",
+ "sheets.print.build_stopped": "Creazione pagina interrotta",
+ "sheets.print.retry": "Crea di nuovo",
+ "sheets.print.build_failed": "Impossibile creare l'anteprima"
+}

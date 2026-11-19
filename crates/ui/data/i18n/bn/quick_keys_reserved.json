@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key} সংরক্ষিত ({why}), তাই নতুনভাবে দেওয়া যাবে না",
+ "quick.keys.res_copy": "কপি",
+ "quick.keys.res_paste": "পেস্ট",
+ "quick.keys.res_cut": "কাট",
+ "quick.keys.res_undo": "Undo / Redo",
+ "quick.keys.res_save": "সংরক্ষণ",
+ "quick.keys.res_palette": "কমান্ড প্যালেট",
+ "quick.keys.reserved_conflict": "{key} ইতিমধ্যে “{cmd}”-এর জন্য ব্যবহৃত। Esc দিলে এটি সেখানেই থাকবে।",
+ "quick.keys.reserved_swap": "বদলান",
+ "quick.keys.reserved_take": "এটি নিন",
+ "quick.keys.reserved_keep": "রাখুন",
+ "quick.keys.reserved_os": "সিস্টেম ব্যবহার করছে:"
+}

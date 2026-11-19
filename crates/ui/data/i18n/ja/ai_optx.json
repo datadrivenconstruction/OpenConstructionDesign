@@ -1,0 +1,10 @@
+{
+ "ai.optx.applied": "オプション「{name}」を適用しました。元に戻すとドラフトに戻ります",
+ "ai.optx.missing": "オプション {id} はもう存在しません",
+ "ai.optx.accepted": "オプション {id} はすでに適用されています",
+ "ai.optx.not_draft": "オプション {id} は却下されているため適用できません",
+ "ai.optx.stale": "オプション {id} の作成後にモデルが変更されました: 先に再生成してください",
+ "ai.optx.bad_recipe": "オプションのレシピを読み込めません: {e}",
+ "ai.optx.refused": "オプションは適用されませんでした（{code}）: {reason}",
+ "ai.optx.failed": "オプションは適用されませんでした: {e}"
+}

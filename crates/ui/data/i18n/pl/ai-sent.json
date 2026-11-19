@@ -1,0 +1,8 @@
+{
+ "ai_sent.summary": "Dane projektu w tym zapytaniu: wiadomości {messages}, wyników narzędzi {tools}, obrazów {images}",
+ "ai_sent.copy": "Kopiuj",
+ "ai_sent.filter": "Szukaj w wysłanych zapytaniach",
+ "ai_sent.no_match": "Żadne zapytanie nie pasuje.",
+ "ai_sent.instructions": "Instrukcje i narzędzia",
+ "ai_sent.local_note": "Przechowywane tylko na tym komputerze, na czas tej sesji. Klucze i hasła nigdy nie są pokazywane."
+}

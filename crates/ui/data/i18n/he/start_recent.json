@@ -1,0 +1,5 @@
+{
+ "start_recent.unavailable": "לא זמין כרגע (הכונן או מיקום הרשת אינם מגיבים): {path}",
+ "start_recent.unavailable_short": "לא זמין כרגע",
+ "start_recent.retry": "נסה שוב"
+}

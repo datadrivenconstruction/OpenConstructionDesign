@@ -1,0 +1,42 @@
+{
+ "ai.tool.show_elements": "กำลังแสดงองค์ประกอบ",
+ "ai.tool.isolate_elements": "กำลังแยกองค์ประกอบ",
+ "ai.tool.color_by": "กำลังระบายสีตามค่า",
+ "ai.tool.reset_view": "กำลังรีเซ็ตมุมมอง",
+ "ai_found.found.query": "พบ",
+ "ai_found.found.show": "แสดงแล้ว",
+ "ai_found.found.isolate": "แยกแล้ว",
+ "ai_found.found.hide": "ซ่อนแล้ว",
+ "ai_found.found.color": "ระบายสีแล้ว",
+ "ai_found.found.count": "{n} จาก {m}",
+ "ai_found.found.none": "ไม่มีรายการที่ตรงกัน ลองใช้ตัวกรองที่กว้างขึ้น",
+ "ai_found.found.show_btn": "แสดง",
+ "ai_found.found.show_tip": "เลือกองค์ประกอบเหล่านี้และซูมไปยังองค์ประกอบในแปลนและ 3D",
+ "ai_found.found.isolate_btn": "แยก",
+ "ai_found.found.isolate_tip": "แสดงเฉพาะองค์ประกอบเหล่านี้จนกว่าจะรีเซ็ตมุมมอง",
+ "ai_found.found.select_btn": "เลือก",
+ "ai_found.found.select_tip": "เลือกองค์ประกอบเหล่านี้โดยไม่เลื่อนมุมมอง",
+ "ai_found.legend.title": "ระบายสีตาม {by}",
+ "ai_found.legend.row_tip": "คลิกเพื่อเลือกองค์ประกอบเหล่านี้",
+ "ai_found.legend.empty_value": "ไม่มีค่า",
+ "ai_found.legend.other": {
+  "one": "อีก # ค่า",
+  "other": "อีก # ค่า"
+ },
+ "ai_found.view.title": "มุมมองของผู้ช่วย AI",
+ "ai_found.view.reset": "รีเซ็ตมุมมอง",
+ "ai_found.view.reset_tip": "คืนมุมมองจากก่อนที่ผู้ช่วย AI จะเปลี่ยน",
+ "ai_found.view.shown": {
+  "one": "แสดงองค์ประกอบ # รายการ",
+  "other": "แสดงองค์ประกอบ # รายการ"
+ },
+ "ai_found.view.isolated": {
+  "one": "แยกองค์ประกอบ # รายการ",
+  "other": "แยกองค์ประกอบ # รายการ"
+ },
+ "ai_found.view.hidden": {
+  "one": "ซ่อนองค์ประกอบ # รายการ",
+  "other": "ซ่อนองค์ประกอบ # รายการ"
+ },
+ "ai_found.found.line": "{what}: {count}"
+}

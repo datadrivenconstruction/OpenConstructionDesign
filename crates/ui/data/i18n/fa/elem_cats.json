@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "یک حجم را نمی‌توان چرخاند یا قرینه کرد: تاریخچه فرمش گام چرخشی ندارد. آن را جابه‌جا یا کپی کنید، یا در جهت جدید دوباره بکشید.",
+ "sched_cats.col.name": "نام",
+ "sched_cats.col.material": "مصالح",
+ "sched_cats.col.void": "حفره",
+ "sched_cats.col.inplace": "درجا",
+ "sched_cats.col.volume": "حجم خالص",
+ "sched_cats.col.area": "مساحت سطح",
+ "sched_cats.col.floor_area": "مساحت کف",
+ "sched_cats.col.thickness": "ضخامت",
+ "sched_cats.col.points": "نقاط",
+ "elem.toposolid.points": "نقاط برداشت",
+ "elem.toposolid.count": "نقاط",
+ "elem.toposolid.low": "پایین‌ترین",
+ "elem.toposolid.high": "بالاترین",
+ "elem.toposolid.edit": "ویرایش نقاط",
+ "elem.toposolid.edit_tip": "نقاط برداشت را در پلان انتخاب، بکشید و ارتفاعشان را تنظیم کنید",
+ "elem.toposolid.pick_hint": "برای انتخاب نقطه، روی آن در پلان کلیک کنید. دوباره کلیک کنید تا اضافه یا حذف شود.",
+ "elem.toposolid.z": "ارتفاع ({n})",
+ "elem.toposolid.mixed": "نقاط انتخاب‌شده متفاوت‌اند؛ مقدار جدید همه را تنظیم می‌کند.",
+ "elem.toposolid.edit_help": "برای جابه‌جایی نقطه، آن را بکشید. مقدار تایپ کنید و Enter بزنید تا ارتفاع تنظیم شود. Backspace نقاط انتخاب‌شده را حذف می‌کند، Esc خارج می‌شود.",
+ "elem.toposolid.done": "انجام شد"
+}

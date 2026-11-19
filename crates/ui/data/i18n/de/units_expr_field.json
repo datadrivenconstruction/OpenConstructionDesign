@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "Leere Eingabe.",
+ "units.err.not_number": "Keine Zahl an Position {pos}.",
+ "units.err.unknown_unit": "Unbekannte Einheit: {unit}.",
+ "units.err.non_positive": "Die Länge muss größer als null sein.",
+ "units.err.too_large": "Die Länge darf {max} m nicht überschreiten.",
+ "units.err.bad_angle": "Der Winkel ist eine Gradzahl.",
+ "units.err.unknown_name": "Unbekannter Name: {name}. Wert beibehalten.",
+ "units.err.cycle": "Formelschleife bei {name}. Wert beibehalten.",
+ "units.err.bad_expr": "Der Ausdruck an Position {pos} kann nicht gelesen werden. Wert beibehalten.",
+ "units.err.div_zero": "Division durch null an Position {pos}. Wert beibehalten.",
+ "units.err.invalid": "Ungültige Zahl.",
+ "units.err.kept": "Nicht geändert: {reason}"
+}

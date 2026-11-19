@@ -1,0 +1,11 @@
+{
+ "xlsx_read_as.title": "Lembar diganti nama?",
+ "xlsx_read_as.detail": "Lembar {found} memiliki kolom {sheet} (kecocokan {score}%). Tidak dibaca kecuali Anda memilihnya.",
+ "xlsx_read_as.detail_many": "Lebih dari satu lembar cocok dengan {sheet}: {found}. Tidak ada yang dipilih untuk Anda; pilih yang akan dibaca.",
+ "xlsx_read_as.read_as": "Baca “{found}” sebagai {sheet}",
+ "xlsx_read_as.read_as_tip": "Hanya untuk impor ini. Lembar tidak diganti namanya; Terapkan hanya menulis id baris baru ke dalamnya.",
+ "xlsx_read_as.active": "Lembar “{found}” dibaca sebagai {sheet} pada impor ini.",
+ "xlsx_read_as.undo": "Jangan baca sebagai {sheet}",
+ "xlsx_read_as.undo_tip": "Kembali ke nama lembar seperti di buku kerja.",
+ "xlsx_read_as.not_rewritten": "Buku kerja tidak ditulis ulang: lembar yang diganti nama dibaca dengan namanya sendiri. Kembalikan namanya agar buku kerja tetap sinkron."
+}

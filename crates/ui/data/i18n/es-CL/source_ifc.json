@@ -1,0 +1,7 @@
+{
+ "src.field.kids": "Filas hijas (paneles, vértices)",
+ "src.kids.mine": "{n} filas hijas, modificadas aquí",
+ "src.kids.changed": "filas hijas modificadas aquí",
+ "src.kids.theirs": "filas hijas modificadas en el archivo",
+ "src.kids.take_tip": "La próxima importación toma las filas hijas del archivo; no se aplican ahora."
+}

@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "Référence des raccourcis",
+ "cmd.help.shortcuts.desc": "Affiche chaque raccourci tel que vous l'avez actuellement, par contexte. Appuyez sur ? hors d'un champ de texte.",
+ "sheet.title": "Raccourcis clavier",
+ "sheet.filter": "Filtrer par commande ou touche",
+ "sheet.filter_label": "Filtrer les raccourcis",
+ "sheet.customize": "Personnaliser…",
+ "sheet.close": "Fermer",
+ "sheet.esc_close": "pour fermer",
+ "sheet.none": "Aucun raccourci ne correspond",
+ "sheet.none_hint": "Essayez un autre mot ou une autre touche.",
+ "sheet.sec.general": "Général",
+ "sheet.sec.plan": "Plan",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "Nomenclatures",
+ "sheet.sec.sheets": "Feuilles",
+ "sheet.sec.ai": "IA"
+}

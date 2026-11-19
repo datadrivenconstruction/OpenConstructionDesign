@@ -1,0 +1,9 @@
+brief = "Air handling unit with six connections: supply, return and exhaust air ducts, hot and cold water pipes and a power conduit; size parameters and a type per size."
+category = "equipment"
+must = param Length
+must = ports 6
+must = port duct 3
+must = port pipe 2
+must = port conduit 1
+must = bbox x 2400
+must = flex Length 1800 3200

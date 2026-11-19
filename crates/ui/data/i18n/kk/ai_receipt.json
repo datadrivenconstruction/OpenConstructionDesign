@@ -1,0 +1,21 @@
+{
+ "ai.receipt.title": {
+  "one": "Қолданылған # өзгеріс",
+  "other": "Қолданылған # өзгеріс"
+ },
+ "ai.receipt.more": "+{n} тағы",
+ "ai.receipt.list": "Элементтер",
+ "ai.receipt.show": "Көрсету",
+ "ai.receipt.show.tip": "Өзгерген элементтерді таңдап, кадрға салу",
+ "ai.receipt.undo": "Болдырмау",
+ "ai.receipt.undo.tip": "Дәл осы қолдануды қайтару",
+ "ai.receipt.undone": "Болдырылды",
+ "ai.receipt.later": "Кейінірек өңдеулер жасалды",
+ "ai.receipt.toast_undone": "Қолданылған жоспар болдырылды",
+ "ai.receipt.draft_family": "Жоба отбасы: {name}",
+ "ai.receipt.promote": "Жұмысшы ету",
+ "ai.receipt.promote.tip": "Жоба отбасын жұмысшыға айналдыру (бір қайтару қадамы)",
+ "ai.receipt.promoted": "Отбасы енді жұмысшы",
+ "ai.receipt.promote_failed": "Отбасын жұмысшы ету мүмкін болмады",
+ "cmd.ai.receipt_undo": "Соңғы AI жоспарын болдырмау"
+}

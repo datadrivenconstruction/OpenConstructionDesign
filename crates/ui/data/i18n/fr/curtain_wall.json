@@ -1,0 +1,12 @@
+{
+ "curtain_wall.cw.issue.slab": "plancher {id} : {e}",
+ "curtain_wall.cw.issue.body": "corps {id} : {e}",
+ "curtain_wall.cw.added": "Murs-rideaux ajoutés : {n}",
+ "curtain_wall.cw.add_failed": "Mur-rideau non construit : {e}",
+ "curtain_wall.cw.edited_warn": "Mur-rideau n° {id} modifié : {w}",
+ "curtain_wall.cw.edited": "Mur-rideau n° {id} modifié",
+ "curtain_wall.cw.not_changed": "Non modifié : {e}",
+ "curtain_wall.cw.room_edited": "Pièce n° {id} modifiée",
+ "curtain_wall.cw.slope_range": "Non modifié : pente hors plage",
+ "curtain_wall.cw.slope_set": "Plancher n° {id} : pente {pct}"
+}

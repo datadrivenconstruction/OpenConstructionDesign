@@ -1,0 +1,15 @@
+{
+ "xl.msg.cell_clipped": "tekst is ingekort tot de celgrens; alleen-lezen, bewerking niet toegepast",
+ "xlcell.status": "Geëxporteerd. {count} cellen zijn ingekort of leeg gelaten — zie het venster met details.",
+ "xlcell.title": "Cellen gewijzigd door de export",
+ "xlcell.intro": "Deze cellen konden niet zo worden geschreven. De volledige waarde blijft in het model; de cel is vergrendeld en kan in het werkboek niet worden bewerkt.",
+ "xlcell.col_sheet": "Blad",
+ "xlcell.col_row": "Rij",
+ "xlcell.col_col": "Kolom",
+ "xlcell.col_id": "Element-id",
+ "xlcell.col_what": "Wat er gebeurde",
+ "xlcell.what_clipped": "Tekst ingekort tot de celgrens",
+ "xlcell.what_blank": "Geen eindig getal, cel leeg gelaten",
+ "xlcell.more": "… en {count} meer",
+ "xlcell.close": "Sluiten"
+}

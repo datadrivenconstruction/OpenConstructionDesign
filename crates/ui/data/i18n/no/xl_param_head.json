@@ -1,0 +1,7 @@
+{
+ "xl.msg.param_ambiguous": "kolonnen '{}' kan være en av parameterne {}; skriv det nøyaktige parameternavnet, ikke brukt",
+ "xl.msg.param_tag_stale": "kolonnen '{}' nevner en parameter dette prosjektet ikke har; ikke brukt",
+ "xl.msg.dup_col_note": "kolonnen '{}' i {} gjentar kolonnen '{}' i {}; like verdier brukes én gang, en rad der de avviker beholder modellverdien",
+ "xl.msg.dup_col_differs": "kolonnene '{}' og '{}' avviker i {} og {}; modellverdien beholdes; behold én kolonne",
+ "xl.msg.dup_col_id": "kolonnene '{}' og '{}' avviker i {} og {}, raden kan ikke identifiseres; ingenting ble brukt; behold én kolonne"
+}

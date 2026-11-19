@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "1 ta to'plam qo'shish",
+ "rebar_sets.add_n": "{n} ta to'plam qo'shish",
+ "rebar_sets.pick.search": "Armatura turlarini qidirish",
+ "rebar_sets.pick.empty": "Mos armatura turi yo'q",
+ "rebar_sets.unit.deg": "°"
+}

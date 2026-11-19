@@ -1,0 +1,11 @@
+{
+ "fe.csv.apply": "가져오기 적용",
+ "fe.csv.cancel": "미리보기 버리기",
+ "fe.csv.nothing": "변경할 내용이 없습니다: 카탈로그가 현재 유형과 일치합니다",
+ "fe.csv.preview": "가져오기 미리보기: 새 유형 {added}개, 변경 {changed}개, 변경 없음 {same}개; 값 {values}개 변경",
+ "fe.csv.preview_hint": "빈 셀과 없는 열은 현재 값을 유지합니다. 적용하기 전에는 아무것도 바뀌지 않습니다.",
+ "fe.csv.skipped": "적용하지 않아 값 유지: {msg}",
+ "fe.csv.type_added": "새 유형 {name}",
+ "fe.csv.type_changed": "유형 {name}",
+ "fe.csv.value": "  {param}: {old} → {new}"
+}

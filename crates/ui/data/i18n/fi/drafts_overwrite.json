@@ -1,0 +1,5 @@
+{
+ "drafts_overwrite.ow.project": "Projektin tallennus odottaa tätä vastausta. Korvaa arvot jatkaaksesi tallennusta; Takaisin muokkaukseen säilyttää kaikki muokkaukset eikä kirjoita mitään.",
+ "drafts_overwrite.drafts.ow_wait": "Tallennus odottaa vastaustasi perhemuokkaimessa: perheen lataaminen korvaisi projektin tyyppiarvot. Mitään ei suljettu.",
+ "drafts_overwrite.drafts.ow_back": "Tallennus pysäytettiin: projektin tyyppiarvot säilytettiin ja perheen muokkaukset ovat yhä auki. Mitään ei suljettu."
+}

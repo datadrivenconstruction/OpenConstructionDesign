@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "Importované sítě",
+ "mat_mesh.mesh.none_selected": "Vyberte importované sítě v 3D pohledu, aby dostaly tento materiál.",
+ "mat_mesh.mesh.current": "První vybraná síť: {material}",
+ "mat_mesh.mesh.current_none": "První vybraná síť nemá materiál.",
+ "mat_mesh.mesh.assign": "Přiřadit k {n} vybraným",
+ "mat_mesh.mesh.assign_tip": "Styl Realistický zobrazí texturu tohoto materiálu na vybraných sítích",
+ "mat_mesh.mesh.assign_cat": "Přiřadit ke kategorii {category}",
+ "mat_mesh.mesh.assign_cat_tip": "Každá importovaná síť této kategorie bez vlastního materiálu",
+ "mat_mesh.mesh.clear": "Vymazat vybrané",
+ "mat_mesh.mesh.clear_tip": "Vybrané sítě se vrátí k materiálu kategorie nebo k prosté barvě",
+ "mat_mesh.mesh.clear_cat": "Vymazat kategorii"
+}

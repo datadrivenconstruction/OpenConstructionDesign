@@ -1,0 +1,7 @@
+{
+ "xlsx_project.title": "Buku kerja ini diekspor dari proyek lain",
+ "xlsx_project.body": "Buku kerja “{file}” milik proyek lain. Id elemen berbeda antarproyek, jadi barisnya akan mengubah elemen yang tidak berkaitan di sini. Tidak ada yang dibaca ke proyek ini.",
+ "xlsx_project.export_new": "Ekspor proyek ini ke buku kerja baru",
+ "xlsx_project.close": "Tutup",
+ "xlsx_project.no_project": "Buku kerja ini tidak menyebutkan proyek asalnya: pastikan diekspor dari proyek ini."
+}

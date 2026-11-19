@@ -1,0 +1,14 @@
+{
+ "lnp.openings_refused": "{n} 个开口未更改（{why}）",
+ "lnp.params_changed": "已更改的值：{n}",
+ "lnp.params_same": "无更改：{u} 个构件已具有此值",
+ "lnp.params_tip": "按 Enter 将该值应用于所有所选构件；按 Esc 保留原值",
+ "lnp.locked_hint": "已保留锁定值：{n}",
+ "lnp.panels_one": "嵌板需逐个编辑",
+ "lnp.keep_first": "保留第一个",
+ "lnp.keep_first_tip": "仅选择第一个嵌板即可编辑",
+ "lnp.clip_from_wall": "已复制墙体 #{id} 的参数",
+ "lnp.clip_from_opening": "已复制开口 #{id} 的参数",
+ "lnp.match_from": "已将 #{id} 的属性匹配到 {n} 个构件",
+ "lnp.why_at": "#{id}：{e}"
+}

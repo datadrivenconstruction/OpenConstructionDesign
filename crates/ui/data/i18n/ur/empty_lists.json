@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "دیوار بنائیں",
+ "empty.totals.action": "دیوار بنائیں",
+ "empty.schedule.action": "فیلڈ شامل کریں",
+ "empty.schedule_filtered.action": "فلٹر صاف کریں",
+ "empty.library.action": "تلاش ری سیٹ کریں",
+ "empty.library.load": "فیملی لوڈ کریں",
+ "empty.schedule_fields.title": "کوئی فیلڈ نہیں دکھائی جا رہی",
+ "empty.schedule_fields.action": "فیلڈ شامل کریں",
+ "empty.schedule_fields.hint": "ٹیبل دیکھنے کے لیے کم از کم ایک فیلڈ آن کریں۔"
+}

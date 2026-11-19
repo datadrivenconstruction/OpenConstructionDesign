@@ -1,0 +1,20 @@
+{
+ "api.cmd.move_elements": "Siirrä elementtejä metreinä ilmoitetulla siirtymällä",
+ "api.cmd.copy_elements": "Kopioi elementtejä yhdellä tai useammalla siirrolla metreinä",
+ "api.cmd.rotate_elements": "Kierrä elementtejä pisteen ympäri asteina ilmoitetulla kulmalla",
+ "api.cmd.mirror_elements": "Peilaa elementit akselin yli, jonka määrittävät kaksi pistettä",
+ "api.cmd.scale_elements": "Skaalaa elementtejä pisteen ympäri kertoimella",
+ "api.cmd.array_elements": "Elementtien lineaarinen tai säteittäinen toisto",
+ "api.cmd.offset_wall": "Seinän yhdensuuntainen kopio metreinä ilmoitetulla etäisyydellä",
+ "api.cmd.split_wall": "Jaa seinä kahteen osaan pisteessä",
+ "api.cmd.pin_elements": "Lukitse tai vapauta elementtejä",
+ "api.cmd.flip_openings": "Käännä ovien ja ikkunoiden saranapuoli tai suunta",
+ "api.cmd.create_level": "Luo taso metreinä ilmoitettuun korkeuteen",
+ "api.cmd.edit_level": "Nimeä taso uudelleen tai muuta sen korkeusasemaa",
+ "api.cmd.delete_level": "Poista taso",
+ "api.cmd.place_rooms": "Sijoita huone tason jokaiseen suljettuun alueeseen",
+ "api.cmd.join_elements": "Yhdistä, irrota tai vaihda geometrian liitoksia",
+ "api.cmd.place_footings": "Sijoita perustus jokaisen tason pilarin alle",
+ "api.cmd.create_terrain": "Luo maasto mittauspisteistä tai kaltevasta tasosta",
+ "api.cmd.script_recipes": "Lue vapaiden rakenteiden skriptilohkot ja reseptit"
+}

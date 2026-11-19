@@ -1,0 +1,15 @@
+{
+ "cmd.data.export_step.desc": "Tüm modeli veya seçimi STEP AP214 ya da AP242 olarak kaydeder: düzlemsel, silindirik, konik, küresel, toroidal ve B-spline yüzeylere sahip kesin katı cisimler; diğer öğeler düzlemsel yüzler olarak, renkler ve kat başına bir montaj düğümü.",
+ "cmd.data.export_3mf.desc": "Tüm modeli veya seçimi baskı için 3MF olarak kaydeder: öğe başına bir nesne, renkler, birimler ve her gövdenin su geçirmez olduğunun kontrolü.",
+ "fmenu.export.step": "STEP kesin katılar (.step)",
+ "fmenu.export.3mf": "Baskı için 3MF (.3mf)",
+ "mx.schema": "STEP şeması",
+ "mx.schema.ap214": "AP214 (en geniş destek)",
+ "mx.schema.ap242": "AP242",
+ "mx.watertight": "Su geçirmez olmayan gövdeler",
+ "mx.watertight.report": "Yaz ve listele",
+ "mx.watertight.skip": "Dışarıda bırak",
+ "mx.watertight.require": "Dışa aktarmayı iptal et",
+ "mx.faceted": "{fmt} kaydedildi: {path} ({exact} kesin katı, {n} düzlemsel yüz olarak yazıldı: {first})",
+ "sheets.print.svg": "SVG"
+}

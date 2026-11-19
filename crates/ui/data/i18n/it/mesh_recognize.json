@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "Riconoscimento {done} di {total}",
+ "mesh_recognize.all": "Tutti {n}",
+ "mesh_recognize.only_confident": "Solo affidabili",
+ "mesh_recognize.confident_tip": "Seleziona le righe il cui tipo corrisponde alla categoria e la cui affidabilità è almeno {pct}%",
+ "mesh_recognize.row_hint": "Clicca una riga per selezionarla. I tasti freccia spostano, Invio seleziona.",
+ "mesh_recognize.kind_for": "Tipo per {name}",
+ "mesh_recognize.source": "Mesh di origine",
+ "mesh_recognize.keep": "Mantieni le mesh",
+ "mesh_recognize.replace": "Sostituisci le mesh",
+ "mesh_recognize.convert_keep": "Converti {n}",
+ "mesh_recognize.convert_remove": "Converti {n} e rimuovi le mesh",
+ "mesh_recognize.creates": "Creerà {n}: {kinds}",
+ "mesh_recognize.creates_none": "Nessuna riga selezionata",
+ "mesh_recognize.stay": "{n} mesh di origine restano nel modello",
+ "mesh_recognize.removed": "{n} mesh di origine saranno rimosse. Annulla le riporta."
+}

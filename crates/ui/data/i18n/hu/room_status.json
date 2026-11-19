@@ -1,0 +1,4 @@
+{
+ "room_status.open": "A(z) {room} helyiség már nincs zárva",
+ "warn.kind.room_open": "Nem zárt helyiségek"
+}

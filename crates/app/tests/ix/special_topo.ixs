@@ -1,0 +1,6 @@
+# Toposolid by points: a special mode as a session; Enter makes it (one record), Esc twice leaves
+tool(site.toposolid) → hint="site.toposolid.first"
+click(0,0) → scope=Drafting hint="site.toposolid.next" journal=+0
+click(10,0) click(10,10) click(0,10) → journal=+0
+key(Enter) → journal=+1
+key(Escape) key(Escape) → scope=Idle

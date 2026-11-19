@@ -1,0 +1,6 @@
+{
+ "geom.length": "Comprimento",
+ "sched.cat.room_seps": "Separadores de ambiente",
+ "room.err.point_leave": "Ambiente {n}: o ponto sairia do seu contorno",
+ "room.err.point_taken": "Ambiente {n}: o ponto cairia no ambiente {other}"
+}

@@ -1,0 +1,8 @@
+{
+ "xlsx_idle.idle_title": "Žádné změny k importu",
+ "xlsx_idle.export_name": "Export",
+ "xlsx_idle.export_body": "Zapíše model do sešitu. Hodnoty tam upravte a poté synchronizujte.",
+ "xlsx_idle.sync_name": "Synchronizovat",
+ "xlsx_idle.sync_body": "Znovu načte sešit a vypíše rozdíly. Model se mění jen při použití.",
+ "xlsx_idle.last_sync": "Naposledy synchronizováno: {when}"
+}

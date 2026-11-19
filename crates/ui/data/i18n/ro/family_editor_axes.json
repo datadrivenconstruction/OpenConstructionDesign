@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "Axa X",
+ "fe.axis.y": "Axa Y",
+ "fe.axis.z": "Axa Z",
+ "fe.col.axis": "Axă",
+ "fe.col.at": "Poziție",
+ "fe.col.mode": "Mod",
+ "fe.mode.fixed": "Fix",
+ "fe.mode.free": "Liber",
+ "fe.types.inherited": "Implicit din parametru",
+ "fe.csv.more": "Mai multe acțiuni CSV",
+ "fe.ref.selected": "Plan: {name}"
+}

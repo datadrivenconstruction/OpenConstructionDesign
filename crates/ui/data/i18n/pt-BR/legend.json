@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "Legenda",
+ "legend.legend.new_hint": "Nome da nova legenda",
+ "legend.legend.delete_tip": "Excluir legenda",
+ "legend.legend.delete_placed": "Excluir legenda (colocada em: {sheets})",
+ "legend.legend.deleted": "Legenda excluída: {name}",
+ "legend.legend.no_rows": "Nenhuma linha ainda. Adicione uma ou use os estilos da vista atual",
+ "legend.legend.replace_q": "Substituir {n} linhas pelos estilos desta vista?",
+ "legend.legend.replace": "Substituir",
+ "legend.legend.keep": "Manter linhas",
+ "legend.col.swatch": "Amostra",
+ "legend.col.value": "Valor",
+ "legend.col.label": "Rótulo"
+}

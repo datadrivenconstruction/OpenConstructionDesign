@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "Võti aadressis",
+ "ai_safety.auth.query_name": "Aadressi parameeter",
+ "ai_safety.need_query_name": "Nimeta aadressi parameeter, mis kannab võtit",
+ "ai_safety.apply_unlogged": "Rakendatud, kuid muudatuste logi ei kirjutatud",
+ "ai_safety.audit_unlogged": "Tehisintellekti assistendi logi ei saanud kirjutada",
+ "ai_safety.chat_not_saved": "Vestlust ei saanud projekti salvestada. Proovin uuesti.",
+ "ai_safety.clip_clears": "Lõikelaud tühjeneb 30 s pärast",
+ "ai_safety.copied_clears": "Kopeeritud. Lõikelaud tühjeneb 30 s pärast",
+ "ai_safety.key_session_only": "Võti hoitakse kuni rakenduse sulgemiseni",
+ "ai.settings.no_data_dir": "see süsteem ei anna rakenduse seadete kausta"
+}

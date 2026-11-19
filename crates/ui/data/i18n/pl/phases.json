@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D",
+ "phases.current_mark": "bieżąca",
+ "phases.make_current": "Ustaw jako bieżącą",
+ "phases.col_phase": "Faza",
+ "phases.col_filter": "Filtr",
+ "phases.presets": "Ustawienia planu",
+ "phases.del_title": "Usuń fazę",
+ "phases.del_text": "Usunąć fazę „{name}”? Jej elementy przejdą do fazy wybranej poniżej.",
+ "phases.del_into": "Przenieś elementy do",
+ "phases.del_ok": "Usuń",
+ "phases.col_kind": "Typ elementu",
+ "phases.col_count": "Liczba",
+ "phases.col_volume": "Objętość"
+}

@@ -1,0 +1,6 @@
+{
+ "sel_filter.flt.all_cats": "Mọi danh mục",
+ "sel_filter.flt.in_sel": "Trong lựa chọn",
+ "sel_filter.flt.none": "Chọn ít nhất một danh mục, nếu không lựa chọn sẽ bị xóa trắng",
+ "sel_filter.tg.none": "Chọn ít nhất một danh mục để gắn thẻ"
+}

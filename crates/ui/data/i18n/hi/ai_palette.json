@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "AI से पूछें: {q}",
+ "ai.palette.connect": "पूछने के लिए AI जोड़ें",
+ "ai.palette.draft.apply": "ड्राफ़्ट लागू करें ({n})",
+ "ai.palette.draft.reject": "ड्राफ़्ट अस्वीकार करें",
+ "ai.palette.draft.next": "अगला ड्राफ़्ट बदलाव",
+ "ai.palette.draft.show": "दृश्य में ड्राफ़्ट दिखाएँ",
+ "cmd.ai.next_change": "अगला ड्राफ़्ट बदलाव",
+ "cmd.ai.next_change.desc": "दृश्य को अगले उस तत्व पर ले जाता है जिसे ड्राफ़्ट बदलता है।",
+ "cmd.ai.show_draft": "दृश्य में AI ड्राफ़्ट दिखाएँ",
+ "cmd.ai.show_draft.desc": "दृश्य को उस सब पर फ़िट करता है जिसे ड्राफ़्ट बदलता है।"
+}

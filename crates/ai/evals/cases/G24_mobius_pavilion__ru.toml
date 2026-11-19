@@ -1,0 +1,23 @@
+id = "G24_mobius_pavilion__ru"
+tier = "hard"
+group = "Любая геометрия"
+title = "Mobius band pavilion"
+lang = "ru"
+base = "empty"
+
+[[turn]]
+say = "Павильон в форме ленты Мёбиуса: лента шириной 3 м, петля диаметром 18 м, высота в пике 6 м, один полуоборот, стальные рёбра с шагом 1 м под сплошной поверхностью."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "solid+mesh+freeform+shell_elem+beam"
+min = 20.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

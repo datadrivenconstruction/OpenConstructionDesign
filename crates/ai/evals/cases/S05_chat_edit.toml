@@ -1,0 +1,24 @@
+id = "S05_chat_edit"
+tier = "smoke"
+group = ""
+title = "Edit by chat: wider kitchen, basement parking"
+lang = "en"
+base = "@S01_house_brief"
+
+[[turn]]
+say = "Make the kitchen 2 m wider."
+
+[[turn]]
+say = "Now add a basement with parking for two cars under the house."
+
+[[oracle.count]]
+spec = "level"
+min = 3.0
+
+[[oracle.count]]
+spec = "room:park|garage"
+min = 1.0
+
+[[oracle.geom]]
+kind = "edit_kept"
+min = 0.5

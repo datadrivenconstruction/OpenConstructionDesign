@@ -1,0 +1,8 @@
+{
+ "cmd.arch.room_auto": "Plasser rom automatisk",
+ "cmd.arch.room_auto.desc": "Plasserer et rom i hver lukket avgrensning på aktiv etasje som mangler rom. Åpne veggsløyfer hoppes over, de lukkes aldri ved gjetning. Ett angrasteg.",
+ "room_place.placed": "Rom plassert: {n}. Områder som allerede hadde rom: {m}. Åpne sløyfer hoppet over: {k}",
+ "room_place.all_had": "Ingenting plassert: alle {m} lukkede områder har allerede et rom. Åpne sløyfer hoppet over: {k}",
+ "room_place.none": "Ingenting plassert: etasjen har ingen lukkede veggområder",
+ "room_place.none_open": "Ingenting plassert: etasjen har ingen lukkede veggområder. Åpne sløyfer hoppet over: {k}"
+}

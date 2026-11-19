@@ -1,0 +1,13 @@
+{
+ "cmd.arch.wall_pick": "Wand via lijn",
+ "cmd.arch.wall_pick.desc": "Plaatst een wand op een aangeklikte tekenlijn van de huidige verdieping. F wisselt de as of het vlak op de lijn, Tab neemt de verbonden keten. Elke klik is één ongedaan-maakstap. Werkt ook voor gordijngevels.",
+ "hint.wall_pick.center": "Wand via lijn: kies een tekenlijn · as op de lijn · F vlak · Tab keten · Esc verlaten",
+ "hint.wall_pick.face": "Wand via lijn: kies een tekenlijn · vlak op de lijn, aanwijzerzijde · F as · Tab keten · Esc verlaten",
+ "hint.wall_pick.center_chain": "Wand via lijn: kies een lijn om de keten over te nemen · as op de lijn · F vlak · Tab één lijn",
+ "hint.wall_pick.face_chain": "Wand via lijn: kies een lijn om de keten over te nemen · vlak op de lijn · F as · Tab één lijn",
+ "wall_pick.st.start": "Kies een tekenlijn. F: as of vlak, Tab: verbonden keten",
+ "wall_pick.st.no_lines": "Geen zichtbare tekenlijnen op deze verdieping",
+ "wall_pick.st.miss": "Hier geen tekenlijn",
+ "wall_pick.st.on_wall": "Deze lijn valt al onder wand {id}",
+ "wall_pick.st.tight": "De vlakoffset past niet: een segment van de keten is korter dan de wanddikte"
+}

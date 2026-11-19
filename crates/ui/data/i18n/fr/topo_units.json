@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "Unités",
+ "topo_units.unit": "Unités du fichier",
+ "topo_units.unit.m": "m",
+ "topo_units.unit.cm": "cm",
+ "topo_units.unit.mm": "mm",
+ "topo_units.unit.ft": "pi",
+ "topo_units.unit.usft": "pied US survey",
+ "topo_units.unit.in": "po",
+ "topo_units.unit.from_file": "Le fichier indique ses unités : {unit}",
+ "topo_units.unit.suggested": "Le fichier n'indique pas d'unités. Suggérée par l'étendue : {unit} — vérifiez le résultat ci-dessous",
+ "topo_units.extent": "Résultat en unités du projet : {x} × {y} {u} en plan, plage de hauteur {z} {u}",
+ "topo_units.extent.none": "Résultat : rien à importer avec ces choix",
+ "topo_units.extent.check": "Cela ne ressemble pas à un site : vérifiez les unités"
+}

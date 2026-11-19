@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "Odwróć stronę zawiasów",
+ "cmd.edit.flip_hand.desc": "Odbija zaznaczone drzwi i okna wzdłuż ściany, tak że zawiasy przechodzą na drugi koniec otworu.",
+ "cmd.edit.flip_facing": "Odwróć stronę otwierania",
+ "cmd.edit.flip_facing.desc": "Przekłada zaznaczone drzwi i okna na drugą stronę ściany.",
+ "opening_grips.flip_hand": "Odwróć zawias",
+ "opening_grips.flip_hand.tip": "Zawiasy na drugi koniec otworu (Shift+F)",
+ "opening_grips.flip_facing": "Odwróć stronę",
+ "opening_grips.flip_facing.tip": "Otwarcie na drugą stronę ściany (Shift+G)",
+ "opening_grips.flip.done": "Odwrócono: {n}",
+ "opening_grips.flip.none": "Zaznacz drzwi lub okno, aby je odwrócić",
+ "opening_grips.flip.fail": "Nie odwrócono: {why}"
+}

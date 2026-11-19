@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "Агаар дамжуулагч",
+ "mep3d.pipe": "Хоолой",
+ "mep3d.tray": "Кабелийн тэвш",
+ "mep3d.conduit": "Хоолой",
+ "mep3d.system": "Систем",
+ "mep3d.length": "Урт",
+ "mep3d.diameter": "Диаметр",
+ "mep3d.width": "Өргөн",
+ "mep3d.height": "Өндөр",
+ "mep3d.insulation": "Дулаалга",
+ "mep3d.tip": "Enter — хэрэглэх; холбоосууд дахин тооцоологдоно",
+ "mep3d.size_positive": "хэмжээ тэгээс их байх ёстой",
+ "mep3d.not_changed": "өөрчлөгдөөгүй: {e}",
+ "mep3d.copied": "шугам хуулагдсан",
+ "mep3d.changed": "шугам өөрчлөгдсөн",
+ "mep3d.deleted": "элементүүд устгагдсан: {n}",
+ "mep3d.not_deleted": "устгагдаагүй: {e}",
+ "mep3d.no_wall_type": "ханын төрөл байхгүй",
+ "mep3d.demo.supply": "Нийлүүлэлт S1",
+ "mep3d.demo.heating": "Дулаан",
+ "mep3d.demo.power": "Цахилгаан"
+}

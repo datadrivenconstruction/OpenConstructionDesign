@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "Töövihiku muudatused rakendamata",
+ "workbook_changes.wb.body": "Projekti sulgemine või vahetamine need kustutab.",
+ "workbook_changes.wb.line": "Töövihiku import: {n} muudatust rakendamata",
+ "workbook_changes.wb.review": "Vaata üle",
+ "workbook_changes.wb.discard": "Loobu"
+}

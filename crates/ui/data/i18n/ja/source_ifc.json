@@ -1,0 +1,7 @@
+{
+ "src.field.kids": "子行 (パネル、頂点)",
+ "src.kids.mine": "子行 {n} 件、ここで変更",
+ "src.kids.changed": "ここで子行を変更",
+ "src.kids.theirs": "ファイルで子行を変更",
+ "src.kids.take_tip": "次回の取り込みでファイルの子行を取得します。今は適用されません。"
+}

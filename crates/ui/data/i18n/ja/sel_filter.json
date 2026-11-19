@@ -1,0 +1,6 @@
+{
+ "sel_filter.flt.all_cats": "すべてのカテゴリ",
+ "sel_filter.flt.in_sel": "選択内",
+ "sel_filter.flt.none": "少なくとも 1 つのカテゴリをチェックしてください。そうしないと選択が空になります",
+ "sel_filter.tg.none": "タグ付けするカテゴリを 1 つ以上チェックしてください"
+}

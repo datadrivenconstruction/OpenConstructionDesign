@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "Жоғары жылжыту",
+ "rebar_list.move_down": "Төмен жылжыту",
+ "rebar_list.remove": "Алып тастау",
+ "rebar_list.zone_remove_last": "Аймаққа кемінде бір бөлме керек: соңғысын алып тастау үшін аймақты жойыңыз",
+ "rebar_list.rebar_empty_title": "Бұл модельде арматура жоқ",
+ "rebar_list.rebar_empty_hint": "Арматураны негізгі элементке орналастырсаңыз, ол осы жерде жоспарланады.",
+ "rebar_list.rebar_empty_action": "Арматура орналастыру"
+}

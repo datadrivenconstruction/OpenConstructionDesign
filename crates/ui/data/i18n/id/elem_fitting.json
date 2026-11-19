@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "Sambungan",
+ "elem.mep_fitting.many": "Fitting",
+ "elem.mep_fitting.kind.elbow": "Siku",
+ "elem.mep_fitting.kind.tee": "Tee",
+ "elem.mep_fitting.kind.cross": "Silang",
+ "elem.mep_fitting.kind.transition": "Transisi",
+ "elem.mep_fitting.kind.cap": "Tutup",
+ "elem.mep_fitting.size": "Ukuran",
+ "elem.mep_fitting.at": "Posisi",
+ "elem.mep_fitting.runs": "Jalur {n}",
+ "elem.mep_fitting.edit_run": "Edit jalur",
+ "elem.mep_fitting.select_runs": "Pilih jalurnya",
+ "elem.mep_fitting.derived": "Fitting mengikuti jalurnya: ubah jalur dan fitting ikut berubah.",
+ "elem.mep_fitting.no_delete": "Fitting tidak dapat dihapus atau dipindahkan sendiri. Edit atau hapus jalurnya.",
+ "elem.mep_fitting.hint": "Klik fitting di denah untuk melihat jalurnya.",
+ "elem.mep_fitting.picked": "Fitting dipilih: {n}"
+}

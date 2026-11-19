@@ -1,0 +1,18 @@
+{
+ "props.multi.title": {
+  "one": "# element",
+  "other": "# elementi"
+ },
+ "props.multi.cats": {
+  "one": "# kategooria",
+  "other": "# kategooriat"
+ },
+ "props.multi.varies": {
+  "one": "erineb (#)",
+  "other": "erineb (#)"
+ },
+ "props.multi.clear": "Tühista valik",
+ "props.multi.undo": "Võta tagasi",
+ "props.multi.narrowed": "Valik: {n} · {name}",
+ "props.multi.chip_tip": "{name}: {n}  ·  Klõps näitab nende omadusi, Ctrl+klõps jätab alles ainult need"
+}

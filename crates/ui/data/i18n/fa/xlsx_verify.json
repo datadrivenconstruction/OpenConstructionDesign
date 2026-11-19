@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "اعمال واگرد شد: مدل با پیش‌نمایش برابر نبود. {what}",
+ "xlsx_verify.not_written": "{row} تغییر نکرد.",
+ "xlsx_verify.lost": "{row} ناپدید شد.",
+ "xlsx_verify.not_deleted": "{row} حذف نشد.",
+ "xlsx_verify.extra_deleted": "{row} حذف شد، با وجود اینکه پیش‌نمایش آن را نگه می‌دارد.",
+ "xlsx_verify.created": "{table}: {got} جدید به‌جای {want}.",
+ "xlsx_verify.value": "{row}، {field}: انتظار {want} (قبلاً {old}) را داشتیم، {got} شد.",
+ "xlsx_verify.check_failed": "نتیجه بررسی نشد: {e}",
+ "xlsx_verify.plan_failed": "اعمال شروع نشد: بررسی نتوانست مدل را بخواند ({e}).",
+ "xlsx_verify.take_back_failed": "این مرحله واگرد نشد ({e}): از واگرد استفاده کنید.",
+ "xlsx_verify.t.wall": "دیوار",
+ "xlsx_verify.t.opening": "بازشو",
+ "xlsx_verify.t.room": "اتاق",
+ "xlsx_verify.t.slab": "کف",
+ "xlsx_verify.t.level": "تراز",
+ "xlsx_verify.t.wall_type": "نوع دیوار",
+ "xlsx_verify.t.slab_type": "نوع کف",
+ "xlsx_verify.t.col": "ستون",
+ "xlsx_verify.t.beam": "تیر",
+ "xlsx_verify.t.roof": "بام",
+ "xlsx_verify.t.curtain_wall": "دیوار پرده‌ای"
+}

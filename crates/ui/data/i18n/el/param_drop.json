@@ -1,0 +1,8 @@
+{
+ "param_drop.title": "Αφαίρεση τιμών παραμέτρου;",
+ "param_drop.intro": "Το {name} δεν είναι πια συνδεδεμένο με αυτές τις κατηγορίες:",
+ "param_drop.line": "{category}: θα αφαιρεθούν {values}",
+ "param_drop.undo": "Ένα Ctrl+Z τις επαναφέρει όλες.",
+ "param_drop.confirm": "Αφαίρεση τιμών και αποθήκευση",
+ "param_drop.cancel": "Άκυρο"
+}

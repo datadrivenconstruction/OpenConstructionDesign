@@ -1,0 +1,5 @@
+{
+ "mep_dn.dn.unset": "Sin definir",
+ "mep_dn.slope.err": "Introduzca una pendiente en %, p. ej. 1.5",
+ "mep_dn.err.rejected": "el valor no se acepta"
+}

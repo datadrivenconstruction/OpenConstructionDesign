@@ -1,0 +1,621 @@
+[
+ {
+  "id": "H01_mixed_use_tower",
+  "brief": "Mixed-use tower, 24 storeys + 2 basement levels of parking (180 cars, ramps). Podium floors 1–3: retail (12 units, 2-storey atrium with escalators), floor 4: fitness and pool. Floors 5–12: Class A offices (open plan, 2 cores, raised floors). Floors 13–24: 160 apartments (studio/1/2/3-bed mix 20/40/30/10 %), balconies on south and west. Setback at floor 13 with roof terrace. Unitised curtain wall on the office part, ceramic panels with punched windows on the residential part. Concrete core + composite steel frame, 8.4 m grid. Full HVAC: AHUs on plant floor 12 and roof, VAV in offices, fan coils in apartments, smoke extract in atrium. Site 60×45 m with drop-off and landscaping.",
+  "checklist": [
+   "24 storeys",
+   "2 basements",
+   "parking ramps",
+   "retail units",
+   "atrium 2 storeys",
+   "escalators",
+   "pool",
+   "2 cores",
+   "apartments mix",
+   "balconies S/W",
+   "setback at 13",
+   "roof terrace",
+   "curtain wall offices",
+   "panels residential",
+   "8.4 m grid",
+   "composite frame",
+   "AHU plant floor",
+   "VAV",
+   "fan coils",
+   "smoke extract",
+   "site drop-off",
+   "landscaping"
+  ],
+  "expect": {
+   "storeys": [
+    24,
+    26
+   ],
+   "rooms": {
+    "retail": 12,
+    "parking": 1
+   },
+   "apartments": 160,
+   "model": {
+    "at_least": {
+     "level": 24,
+     "room": 100
+    }
+   }
+  }
+ },
+ {
+  "id": "H02_hospital",
+  "brief": "Regional hospital, 220 beds. 4-storey diagnostic and treatment podium (emergency with ambulance bay, 8 operating theatres with clean corridor, ICU 24 beds, imaging: 2 MRI, 2 CT) and two 6-storey ward wings in an H-plan with courtyards. Wards: single and double rooms with ensuite, nurse stations per 32 beds. Separate circulation for patients, staff and logistics; 6 bed lifts, 2 service lifts, helipad on the roof. Interstitial plant floor above theatres. HVAC: 100 % fresh air for theatres with pressure cascade, HEPA, heat recovery; medical gases.",
+  "checklist": [
+   "220 beds",
+   "podium 4 storeys",
+   "2 ward wings 6 storeys",
+   "H-plan",
+   "courtyards",
+   "emergency",
+   "ambulance bay",
+   "8 theatres",
+   "clean corridor",
+   "ICU 24",
+   "MRI",
+   "CT",
+   "ensuite rooms",
+   "nurse stations",
+   "separate circulation",
+   "bed lifts",
+   "service lifts",
+   "helipad",
+   "interstitial floor",
+   "fresh air theatres",
+   "pressure cascade",
+   "heat recovery",
+   "medical gases"
+  ],
+  "expect": {
+   "storeys": [
+    4,
+    7
+   ],
+   "rooms": {
+    "ward": 110
+   },
+   "model": {
+    "at_least": {
+     "level": 4,
+     "room": 110
+    }
+   }
+  }
+ },
+ {
+  "id": "H03_school_campus",
+  "brief": "Secondary school for 1,200 pupils on a sloping site (6 m fall). Three wings around a courtyard (U-plan): teaching (36 classrooms, 8 science labs with fume cupboards), arts (music, drama studio, art), sport (double-height sports hall 34×18 m with spectator gallery, changing rooms). 500-seat auditorium with raked seating and stage. Library, dining for 400 with kitchen. Timber glulam roof over the sports hall, pitched roofs elsewhere, PV on south slopes. Accessible ramps and lifts, external terraces following the slope.",
+  "checklist": [
+   "U-plan",
+   "courtyard",
+   "36 classrooms",
+   "8 labs",
+   "fume cupboards",
+   "music",
+   "drama",
+   "sports hall 34x18 double height",
+   "spectator gallery",
+   "changing",
+   "auditorium 500 raked",
+   "stage",
+   "library",
+   "dining 400",
+   "kitchen",
+   "glulam roof",
+   "pitched roofs",
+   "PV",
+   "ramps",
+   "lifts",
+   "sloping site terraces"
+  ],
+  "expect": {
+   "storeys": [
+    1,
+    4
+   ],
+   "rooms": {
+    "classroom": 36,
+    "lab": 8,
+    "gym": 1,
+    "dining": 1
+   },
+   "model": {
+    "at_least": {
+     "level": 1,
+     "room": 46
+    }
+   }
+  }
+ },
+ {
+  "id": "H04_hotel_resort",
+  "brief": "5-star hotel, 180 keys in a curved 10-storey slab facing the sea, with a 2-storey podium: lobby with 8 m high space, all-day restaurant, specialty restaurant, ballroom 600 m² divisible in 3, meeting rooms, spa with indoor pool. Rooms 38 m², suites on top two floors with large terraces, cantilevered sky bar on the roof. Back-of-house with service yard and loading. HVAC: 4-pipe fan coils in rooms, DOAS, kitchen extract, pool dehumidification.",
+  "checklist": [
+   "180 keys",
+   "curved slab",
+   "10 storeys",
+   "podium 2",
+   "double-height lobby",
+   "2 restaurants",
+   "ballroom divisible",
+   "meeting rooms",
+   "spa",
+   "indoor pool",
+   "suites terraces",
+   "cantilevered sky bar",
+   "service yard",
+   "loading",
+   "4-pipe fan coils",
+   "DOAS",
+   "kitchen extract",
+   "pool dehumidification"
+  ],
+  "expect": {
+   "storeys": [
+    10,
+    12
+   ],
+   "model": {
+    "at_least": {
+     "level": 10,
+     "room": 180
+    }
+   }
+  }
+ },
+ {
+  "id": "H05_logistics_hub",
+  "brief": "Logistics warehouse 24,000 m², clear height 12 m, steel portal frames 30 m span at 12 m bays, 2 overhead cranes 10 t in the heavy bay, 40 loading docks with levellers and canopies, sprinkler and smoke vents. Attached 3-storey office block with mezzanine overlooking the hall, truck yard and parking for 150 cars.",
+  "checklist": [
+   "24000 m2",
+   "12 m clear",
+   "portal frames 30 m",
+   "12 m bays",
+   "overhead cranes",
+   "crane runway beams",
+   "40 docks",
+   "levellers",
+   "dock canopies",
+   "sprinklers",
+   "smoke vents",
+   "3-storey office",
+   "mezzanine",
+   "truck yard",
+   "parking 150"
+  ],
+  "expect": {
+   "storeys": [
+    1,
+    3
+   ],
+   "gfa": [
+    24000,
+    32000
+   ],
+   "model": {
+    "at_least": {
+     "level": 1
+    }
+   }
+  }
+ },
+ {
+  "id": "H06_lattice_tower",
+  "brief": "300 m wrought-iron lattice observation tower: four curved lattice legs on masonry piers merging into a single shaft above the second platform, three viewing platforms (57 m, 115 m, 276 m), decorative arches between the legs at the first level, built-up riveted members, gusset plates at every node, lifts in the legs.",
+  "checklist": [
+   "300 m",
+   "4 curved legs",
+   "piers",
+   "merge into shaft",
+   "platform 57",
+   "platform 115",
+   "platform 276",
+   "arches",
+   "riveted built-up members",
+   "gusset plates",
+   "lifts"
+  ],
+  "expect": {
+   "terms": [
+    "57",
+    "115",
+    "276"
+   ],
+   "model": {
+    "at_least": {
+     "steel_conn": 1
+    }
+   }
+  }
+ },
+ {
+  "id": "H07_residential_quarter",
+  "brief": "Residential quarter: three buildings on one podium — a 16-storey point tower, a 9-storey L-shaped block and a 6-storey courtyard block with townhouses on the ground floor. Shared underground car park (2 levels), landscaped podium garden with playground, ground-floor retail along the street. Brick facades with recessed loggias, pitched roofs on the low block, green roof on the podium.",
+  "checklist": [
+   "3 buildings",
+   "shared podium",
+   "16-storey tower",
+   "9-storey L",
+   "6-storey courtyard",
+   "townhouses",
+   "2-level car park",
+   "podium garden",
+   "playground",
+   "street retail",
+   "brick facades",
+   "loggias",
+   "pitched roofs",
+   "green roof"
+  ],
+  "expect": {
+   "storeys": [
+    16,
+    18
+   ],
+   "rooms": {
+    "retail": 1,
+    "parking": 1
+   },
+   "model": {
+    "at_least": {
+     "level": 16
+    }
+   }
+  }
+ },
+ {
+  "id": "H08_museum_freeform",
+  "brief": "Contemporary art museum with a free-form double-curved roof shell (steel gridshell, glass and metal panels) spanning 60 m over a column-free main gallery, a spiral ramp linking three gallery levels around a top-lit atrium, cantilevered auditorium of 300 seats, café terrace, and a sunken sculpture garden. Displacement ventilation with strict humidity control in galleries.",
+  "checklist": [
+   "free-form roof",
+   "gridshell",
+   "60 m span",
+   "column-free gallery",
+   "spiral ramp",
+   "3 gallery levels",
+   "top-lit atrium",
+   "cantilevered auditorium",
+   "300 seats",
+   "café terrace",
+   "sunken garden",
+   "displacement ventilation",
+   "humidity control"
+  ],
+  "expect": {
+   "storeys": [
+    3,
+    4
+   ],
+   "terms": [
+    "300"
+   ],
+   "model": {
+    "at_least": {
+     "level": 3
+    }
+   }
+  }
+ },
+ {
+  "id": "V01_office_floor_hvac",
+  "kind": "hvac",
+  "brief": "On the generated 12-storey office (open plan 1,500 m²/floor, 2 cores): design full HVAC for a typical floor — VAV supply 6 l/s/person + 1.5 l/s/m² extract, 1 person/10 m², ceiling void 600 mm. Size ducts by velocity (main ≤ 6 m/s, branches ≤ 4 m/s), diffusers on a 3×3 m grid at ceiling level, return via plenum grilles, fire dampers at every core wall crossing, AHU on roof with riser in each core. Report total airflow, duct sizes, pressure drop of the index run.",
+  "checklist": [
+   "airflow per zone",
+   "VAV boxes",
+   "main ducts sized ≤6 m/s",
+   "branches ≤4 m/s",
+   "diffusers 3x3 grid at ceiling",
+   "return grilles",
+   "fire dampers at core walls",
+   "risers in cores",
+   "roof AHU",
+   "index run pressure drop",
+   "no clashes with beams"
+  ],
+  "expect": {
+   "numbers": [
+    {
+     "label": "occupants",
+     "value": 150,
+     "tol": 0.05
+    },
+    {
+     "label": "person supply l/s",
+     "value": 900,
+     "tol": 0.05
+    }
+   ],
+   "terms": [
+    "vav",
+    "fire damper",
+    "riser",
+    "diffuser",
+    "pressure drop|pa"
+   ],
+   "model": {
+    "delta": {
+     "mep_run": 1,
+     "mep_system": 1
+    }
+   }
+  }
+ },
+ {
+  "id": "V02_hotel_fancoils",
+  "kind": "hvac",
+  "brief": "Hotel guest floor, 24 rooms: 4-pipe fan coils above each bathroom ceiling, fresh air from DOAS 30 m³/h/room via corridor duct, bathroom extract 15 l/s/room to roof fans, chilled/hot water pipes sized and insulated, condensate drains with fall, sleeves at all wall/slab penetrations.",
+  "checklist": [
+   "24 fan coils",
+   "4-pipe connections",
+   "DOAS duct",
+   "fresh air 30 m3/h/room",
+   "bath extract 15 l/s",
+   "roof extract fans",
+   "CHW/HW pipes sized",
+   "insulation",
+   "condensate fall",
+   "sleeves at penetrations"
+  ],
+  "expect": {
+   "numbers": [
+    {
+     "label": "fan coils",
+     "value": 24,
+     "tol": 0
+    },
+    {
+     "label": "DOAS m3/h",
+     "value": 720,
+     "tol": 0.05
+    },
+    {
+     "label": "bath extract l/s",
+     "value": 360,
+     "tol": 0.05
+    }
+   ],
+   "terms": [
+    "fan coil",
+    "condensate",
+    "insulat",
+    "sleeve"
+   ],
+   "model": {
+    "delta": {
+     "mep_run": 1
+    }
+   }
+  }
+ },
+ {
+  "id": "V03_theatre_cascade",
+  "kind": "hvac",
+  "brief": "Operating theatre suite (4 theatres + clean corridor + anaesthesia + scrub): 100 % fresh air, 25 ACH in theatres, laminar flow ceiling 3×3 m over the table, pressure cascade theatre +25 Pa > clean corridor +15 Pa > dirty corridor 0, HEPA terminal filters, run-around heat recovery, separate AHU per 2 theatres.",
+  "checklist": [
+   "25 ACH",
+   "laminar flow ceiling",
+   "pressure cascade values",
+   "HEPA",
+   "heat recovery",
+   "AHU per 2 theatres",
+   "separate extract",
+   "dirty corridor 0 Pa"
+  ],
+  "expect": {
+   "numbers": [
+    {
+     "label": "ACH",
+     "value": 25,
+     "tol": 0
+    },
+    {
+     "label": "theatre Pa",
+     "value": 25,
+     "tol": 0
+    },
+    {
+     "label": "clean corridor Pa",
+     "value": 15,
+     "tol": 0
+    },
+    {
+     "label": "AHUs",
+     "value": 2,
+     "tol": 0
+    }
+   ],
+   "terms": [
+    "hepa",
+    "laminar",
+    "heat recovery|run-around"
+   ],
+   "model": {
+    "delta": {
+     "mep_system": 1
+    }
+   }
+  }
+ },
+ {
+  "id": "V04_reroute_clashes",
+  "kind": "hvac_edit",
+  "brief": "In the current office model, find all ducts and pipes clashing with beams or columns, reroute them (drop under beams or through allowed web openings ≤ 0.6 h), keep slopes for drains, and report every clash before/after.",
+  "checklist": [
+   "clash list before",
+   "reroutes applied",
+   "web openings within limits",
+   "drain slopes kept",
+   "clash list after = 0"
+  ],
+  "expect": {
+   "terms": [
+    "clash",
+    "before",
+    "after"
+   ],
+   "model": {
+    "at_least": {
+     "mep_run": 1
+    }
+   }
+  }
+ },
+ {
+  "id": "Q01_quantities",
+  "kind": "question",
+  "brief": "How many doors are there per fire rating on each floor, what is the total curtain wall area per orientation, and which rooms are below 12 m²? Highlight them.",
+  "checklist": [
+   "doors per rating per floor",
+   "CW area by orientation",
+   "rooms < 12 m2 listed",
+   "highlighted"
+  ],
+  "expect": {
+   "numbers": [
+    {
+     "label": "room limit m2",
+     "value": 12,
+     "tol": 0
+    }
+   ],
+   "terms": [
+    "fire|EI",
+    "curtain",
+    "north|south|east|west"
+   ],
+   "model": {
+    "apply": false,
+    "unchanged": true
+   }
+  }
+ },
+ {
+  "id": "Q02_code_check",
+  "kind": "question",
+  "brief": "Check all stairs, corridors and doors against the egress rules (riser ≤ 175, tread ≥ 280, headroom ≥ 2.0 m, corridor ≥ 1.5 m, door clear width ≥ 0.9 m, travel distance ≤ 45 m). List violations and prepare fixes as a draft.",
+  "checklist": [
+   "stairs checked",
+   "corridors checked",
+   "doors checked",
+   "travel distance",
+   "violations listed",
+   "fix draft prepared"
+  ],
+  "expect": {
+   "numbers": [
+    {
+     "label": "riser",
+     "value": 175,
+     "tol": 0
+    },
+    {
+     "label": "tread",
+     "value": 280,
+     "tol": 0
+    },
+    {
+     "label": "travel m",
+     "value": 45,
+     "tol": 0
+    }
+   ],
+   "terms": [
+    "stair",
+    "corridor",
+    "door",
+    "violation|complies|no issue"
+   ],
+   "model": {
+    "apply": false,
+    "draft": true
+   }
+  }
+ },
+ {
+  "id": "Q03_redesign",
+  "kind": "question",
+  "brief": "Convert floors 5–8 of the office into 40 apartments with balconies, keep the cores and structural grid, add bathrooms stacked over each other with risers, and update HVAC from VAV to fan coils + MVHR per apartment.",
+  "checklist": [
+   "floors 5-8 converted",
+   "40 apartments",
+   "balconies",
+   "cores kept",
+   "grid kept",
+   "stacked bathrooms",
+   "risers",
+   "fan coils",
+   "MVHR per apartment"
+  ],
+  "expect": {
+   "numbers": [
+    {
+     "label": "apartments",
+     "value": 40,
+     "tol": 0
+    }
+   ],
+   "terms": [
+    "balcon",
+    "core",
+    "fan coil",
+    "mvhr|heat recovery"
+   ],
+   "model": {
+    "delta": {
+     "room": 40
+    }
+   }
+  }
+ },
+ {
+  "id": "Q04_steel_node",
+  "kind": "question",
+  "brief": "Design the moment connection between a HEB 400 column and an IPE 500 beam for M=320 kNm, V=180 kN: extended end plate, bolt grade 10.9, stiffeners if needed; show bolt layout, check edge distances and welds, and place it in the model.",
+  "checklist": [
+   "extended end plate",
+   "bolt 10.9 layout",
+   "edge distances checked",
+   "welds defined",
+   "stiffeners decision",
+   "placed in model",
+   "check report"
+  ],
+  "expect": {
+   "numbers": [
+    {
+     "label": "moment kNm",
+     "value": 320,
+     "tol": 0
+    },
+    {
+     "label": "shear kN",
+     "value": 180,
+     "tol": 0
+    },
+    {
+     "label": "bolt grade",
+     "value": 10.9,
+     "tol": 0
+    }
+   ],
+   "terms": [
+    "end plate",
+    "stiffener",
+    "weld",
+    "edge"
+   ],
+   "model": {
+    "delta": {
+     "steel_conn": 1
+    }
+   }
+  }
+ }
+]

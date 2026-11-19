@@ -1,0 +1,42 @@
+{
+ "id": "za",
+ "version": "2026.11",
+ "parent": "generic",
+ "country": "ZA",
+ "lang": [
+  "en",
+  "af"
+ ],
+ "units": {
+  "length": "m",
+  "display": "metric"
+ },
+ "conventions": {
+  "ground_floor": 0,
+  "area_standard": "gross",
+  "net_share": 0.85,
+  "note": "Floor areas on South African plans and building-regulation forms are usually measured to the outside of walls (gross); not confirmed from an official text. Net share is our own estimate.",
+  "source": null
+ },
+ "status": "tier3",
+ "climate": {
+  "zones": [],
+  "default": null
+ },
+ "research": {
+  "date": "2026-11-14",
+  "missing": [
+   "stair.riser_max.house",
+   "stair.tread_min.house",
+   "parking.per_dwelling",
+   "load.floor_residential",
+   "load.floor_office"
+  ],
+  "unreachable": [
+   "https://resource.capetown.gov.za/documentcentre/Documents/Procedures, guidelines and regulations/National Building Regulations - Part S.pdf (connection refused; web.archive.org copy 404)",
+   "source.acts.co.za regulation parts C, D, O, S, T carry only section titles, no numbers",
+   "archive.org text copies are 2010/2011 editions; later amendments not checked"
+  ]
+ },
+ "note": "Numbers with verified=true were read in the cited clause; the rest are hints with a note of where we looked. Wording is our own; no text of a standard is stored."
+}

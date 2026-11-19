@@ -1,0 +1,9 @@
+{
+ "cmd.mass.timeline_family": "Riwayat ke famili",
+ "cmd.mass.timeline_family.desc": "Membuat famili komponen dari riwayat pembangunan massa yang dipilih. Parameter riwayat menjadi parameter famili.",
+ "mass_family.done": "Famili {name} dibuat dengan {n} parameter",
+ "mass_family.refused": "Famili tidak dibuat: {e}",
+ "mass_family.no_mass": "Pilih massa parametrik terlebih dahulu",
+ "mass_family.add_modifier": "Tambah modifier",
+ "mass_family.needs_faces": "Perlu sisi yang dipilih: gunakan alat di tab Massa"
+}

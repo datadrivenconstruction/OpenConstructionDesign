@@ -1,0 +1,19 @@
+{
+ "names.level": "Nível {n}",
+ "names.slab": "Laje 200",
+ "names.roof_slab": "Cobertura 200",
+ "names.sheet.plan_section": "Planta e corte do piso 1",
+ "names.sheet.plan_view": "Planta do piso 1",
+ "names.sheet.site_plan": "Planta de implantação",
+ "names.sheet_set.issue": "Emissão 1",
+ "names.title.owner": "Projeto Lda",
+ "names.title.creator": "A. Ivanov",
+ "names.title.approver": "P. Petrov",
+ "names.title.document_type": "Desenho",
+ "names.title.status": "Em curso",
+ "names.revision.date": "4 nov. 2026",
+ "names.revision.description": "Emitido para revisão",
+ "names.revision.author": "IA",
+ "names.demo.no_levels": "sem níveis",
+ "names.demo.no_sheet": "prancha"
+}

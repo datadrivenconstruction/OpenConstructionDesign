@@ -1,0 +1,14 @@
+{
+ "ai.hist.badge": "AI",
+ "ai.hist.untitled": "Промени от AI",
+ "ai.hist.tip": "{title}\nПриложено от: {actor}\nAI модел: {model}",
+ "ai.hist.why": "Защо: {why}",
+ "ai.hist.reverted": "върнато",
+ "ai.hist.revert_one": "Върни този пакет промени от AI",
+ "ai.revert.done": "Промените от AI са върнати: {n}. Отмяната ги връща обратно.",
+ "ai.revert.empty": "Няма промени от AI за връщане",
+ "ai.revert.not_ai": "Тази стъпка не е промяна от AI",
+ "ai.revert.already": "Тези промени от AI вече са върнати",
+ "ai.revert.opaque": "Не е върнато: тези промени от AI не могат безопасно да се отделят от по-късна работа. Нищо не е променено.",
+ "ai.revert.failed": "Връщането не успя: {e}"
+}

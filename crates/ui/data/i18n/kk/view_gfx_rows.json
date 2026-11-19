@@ -1,0 +1,10 @@
+{
+ "view_gfx.vv.visible_tip": "Осы көріністе көрінеді",
+ "view_gfx.vv.enabled_tip": "Бұл сүзгіні осы көріністе қолдану",
+ "view_gfx.vv.reset_tip": "Жобаның әдепкі мәніне қайту",
+ "view_gfx.vv.col.actions": "Әрекеттер",
+ "view_gfx.vv.nothing_to_apply": "Қолданатын өзгерістер жоқ",
+ "view_gfx.flt.save_blocked": "Сүзгіге ат беріп, әр ереже параметрін толтырыңыз",
+ "view_gfx.flt.confirm_delete": "Барлық көріністер үшін жою керек пе?",
+ "view_gfx.flt.param_pick": "Таңдау…"
+}

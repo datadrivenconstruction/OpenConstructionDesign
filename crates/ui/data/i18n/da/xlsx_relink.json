@@ -1,0 +1,14 @@
+{
+ "xlsx_relink.title": "Det tilknyttede regneark blev flyttet eller omdøbt",
+ "xlsx_relink.body": "Regnearket „{file}“ findes ikke længere i {folder}. Redigeringer skrevet i det kommer først tilbage, når det er tilknyttet igen.",
+ "xlsx_relink.found_one": "Fandt „{file}“ i {folder}: samme projekt og samme eksport. Tilknyt den?",
+ "xlsx_relink.found_many": "{n} regneark fra dette projekt og denne eksport blev fundet. Vælg det, der skal tilknyttes:",
+ "xlsx_relink.found_none": "Intet regneark fra denne eksport blev fundet ved siden af. Find det, eller eksportér et nyt regneark.",
+ "xlsx_relink.link": "Tilknyt „{file}“",
+ "xlsx_relink.find": "Find det…",
+ "xlsx_relink.find_title": "Find det tilknyttede regneark",
+ "xlsx_relink.export_new": "Eksportér nyt regneark",
+ "xlsx_relink.close": "Luk",
+ "xlsx_relink.gone": "Regnearket „{file}“ findes ikke længere i sin mappe. Redigeringer skrevet i det kommer først tilbage, når det er tilknyttet igen.",
+ "xlsx_relink.found_one_short": "Fandt „{file}“: samme projekt og samme eksport. Tilknyt den?"
+}

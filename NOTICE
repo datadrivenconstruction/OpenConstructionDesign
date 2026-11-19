@@ -1,0 +1,32 @@
+OpenConstructionDesign
+Copyright (C) 2024-2026 Artem Boiko / DataDrivenConstruction.io
+and OpenConstructionDesign Contributors
+
+Licensed under the GNU Affero General Public License, version 3 only
+(AGPL-3.0-only); see LICENSE and COPYRIGHT. A commercial licence is available; see
+COMMERCIAL.md. The crate crates/bridge-proto is licensed under Apache-2.0 (see its Cargo.toml).
+
+This product includes third-party software and data:
+
+- Rust crates listed, with versions and licences, in THIRD_PARTY_LICENSES.txt, which also
+  contains the full licence texts.
+- SQLite (bundled through rusqlite), placed in the public domain by its authors.
+- Fonts under the SIL Open Font License 1.1:
+    Inter (the basis of DDC Sans), Copyright (c) 2016 The Inter Project Authors;
+    IBM Plex Sans, Copyright (c) 2017 IBM Corp., with Reserved Font Name "Plex";
+    Noto Sans families, Copyright 2022-2025 The Noto Project Authors;
+    Noto Sans CJK (SC, JP, KR), Copyright 2014-2021 Adobe, with Reserved Font Name "Source";
+    Noto Sans Math, Copyright 2022 Google LLC;
+    Noto Emoji, Copyright 2013 Google LLC.
+- Phosphor Icons grid conventions and three redrawn glyphs, Copyright (c) 2023 Phosphor Icons,
+  MIT License.
+- glTF sample models from the Khronos glTF Sample Assets, CC0-1.0.
+- Content pack: models from Poly Haven (polyhaven.com) and textures from ambientCG
+  (ambientcg.com), CC0-1.0; credited here as the sources ask.
+- Contains public sector information licensed under the Open Government Licence v3.0
+  (crates/model/data/norms/packs/uk/).
+
+Details for every bundled data file: DATA_LICENSES.md.
+
+File-format names and names of standards are used only to identify formats and standards. This
+project is not affiliated with or endorsed by the owners of any other software, format or standard.

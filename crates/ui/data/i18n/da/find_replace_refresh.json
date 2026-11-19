@@ -1,0 +1,3 @@
+{
+ "find_replace.refresh_failed": "Erstattet {n} i {m} elementer; opdatering af visning mislykkedes: {e}"
+}

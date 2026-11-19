@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "Προσθήκη 1 συνόλου",
+ "rebar_sets.add_n": "Προσθήκη {n} συνόλων",
+ "rebar_sets.pick.search": "Αναζήτηση τύπων ράβδων",
+ "rebar_sets.pick.empty": "Δεν υπάρχουν αντίστοιχοι τύποι ράβδων",
+ "rebar_sets.unit.deg": "°"
+}

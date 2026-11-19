@@ -1,0 +1,13 @@
+{
+ "mep.sys.duct": "Нийлүүлэлт S1",
+ "mep.sys.pipe": "Хүйтэн ус C1",
+ "mep.sys.tray": "Цахилгаан",
+ "mep.round": "Дугуй",
+ "mep.material": "Материал",
+ "mep3d.elevation": "Түвшнээс өндөр",
+ "mep3d.slope": "Налуу",
+ "mep3d.shape": "Хэлбэр",
+ "mep3d.shape.rect": "Тэгш өнцөгт",
+ "mep3d.shape.round": "Дугуй",
+ "mep3d.shape.oval": "Хавтгай зууван"
+}

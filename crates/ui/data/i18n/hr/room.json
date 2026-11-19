@@ -1,0 +1,6 @@
+{
+ "geom.length": "Duljina",
+ "sched.cat.room_seps": "Razdjelnici prostorija",
+ "room.err.point_leave": "Prostorija {n}: točka bi izašla iz svoje granice",
+ "room.err.point_taken": "Prostorija {n}: točka bi pala u prostoriju {other}"
+}

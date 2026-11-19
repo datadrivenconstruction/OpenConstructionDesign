@@ -1,0 +1,7 @@
+{
+ "xlsx_alias_ids.ids_written": "{n} filas nuevas recibieron su id en la lámina renombrada; nada más del libro cambió.",
+ "xlsx_alias_ids.ids_open": "El libro está abierto en otro programa: no se escribieron los ids de {n} filas nuevas. Cerrarlo allí y sincronizar; estas filas no se vuelven a crear.",
+ "xlsx_alias_ids.ids_failed": "No se pudieron escribir los ids de {n} filas nuevas; el libro se dejó como estaba. Estas filas no se vuelven a crear en la próxima sincronización.",
+ "xlsx_alias_ids.unpaired": "{n} filas nuevas aún no tienen id; quedan registradas y no se vuelven a crear.",
+ "xlsx_alias_ids.refused": "No se aplicó nada: las filas nuevas de {sheets} no pueden recibir su id mientras se lee una lámina renombrada. Restaurar el nombre estándar de la lámina (o eliminar estas filas) y sincronizar de nuevo."
+}

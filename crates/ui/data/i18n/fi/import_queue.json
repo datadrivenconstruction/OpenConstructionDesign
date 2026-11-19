@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "Jonossa käynnissä olevan työn jälkeen: {n}",
+ "import_queue.queue_full": "Jono on täynnä, {n} tiedostoa ei lisätty",
+ "import_queue.changed": "{name} päivitettiin tämän projektin luomisen jälkeen. Avattiin edellinen projekti.",
+ "import_queue.import_again": "Tuo uudelleen",
+ "import_queue.kept": "Valmis tuonti säilytetään",
+ "import_queue.open_it": "Avaa se",
+ "import_queue.sum.head": "tuonti: {editable} muokattavaa (seinät {walls}, aukot {open}, laatat {slabs}, huoneet {rooms}, muut {other}), {meshes} verkkona",
+ "import_queue.sum.unchanged": ", ennallaan {n}",
+ "import_queue.sum.updated": ", päivitetty {n}",
+ "import_queue.sum.missing": ", ei lähteessä {n} (säilytetty)",
+ "import_queue.sum.skipped": ", ohitettu {n}",
+ "import_queue.sum.warnings": ", varoituksia {n}",
+ "import_queue.import_failed": "tuonti epäonnistui: {e}"
+}

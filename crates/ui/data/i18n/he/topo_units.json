@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "יחידות",
+ "topo_units.unit": "יחידות בקובץ",
+ "topo_units.unit.m": "m",
+ "topo_units.unit.cm": "cm",
+ "topo_units.unit.mm": "mm",
+ "topo_units.unit.ft": "ft",
+ "topo_units.unit.usft": "ft סקר ארה״ב",
+ "topo_units.unit.in": "in",
+ "topo_units.unit.from_file": "הקובץ מציין את היחידות שלו: {unit}",
+ "topo_units.unit.suggested": "הקובץ לא מציין יחידות. מוצע לפי היקף הנתונים: {unit} — בדוק את התוצאה למטה",
+ "topo_units.extent": "התוצאה ביחידות הפרויקט: {x} × {y} {u} בתוכנית, טווח גובה {z} {u}",
+ "topo_units.extent.none": "תוצאה: אין מה לייבא עם הבחירות האלה",
+ "topo_units.extent.check": "זה לא נראה כמו אתר: בדוק את היחידות"
+}

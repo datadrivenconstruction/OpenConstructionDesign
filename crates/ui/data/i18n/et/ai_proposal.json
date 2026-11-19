@@ -1,0 +1,13 @@
+{
+ "ai.proposal.title": "Agendi ettepanek",
+ "ai.proposal.meta": "{actor} · toimingud: {ops}",
+ "ai.proposal.apply.desc": "Rakendab kogu ettepaneku ühe sammuna; Ctrl+Z võtab selle tagasi",
+ "ai.proposal.applying": "Rakendamine…",
+ "ai.proposal.applied": "Ettepanek rakendati. Ctrl+Z võtab selle tagasi.",
+ "ai.proposal.applied_resync": "Ettepanek rakendati, kuid vaade ei ole veel uuenenud. See värskendub ise; Ctrl+Z võtab sammu tagasi.",
+ "ai.proposal.stale": "Mudel muutus pärast selle ettepaneku eelvaadet. Palu agendil ettepanek uuesti esitada.",
+ "ai.proposal.toast.applied": "Ettepanek rakendatud. Ctrl+Z võtab selle tagasi.",
+ "ai.proposal.toast.stale": "Mudel muutus pärast eelvaadet, seega midagi ei rakendatud. Vaata eelvaade uuesti: palu agendil ettepanek uuesti esitada.",
+ "ai.proposal.toast.refused": "Ettepanekut ei rakendatud: {reason}",
+ "ai.proposal.rejected": "Ettepanek lükati tagasi."
+}

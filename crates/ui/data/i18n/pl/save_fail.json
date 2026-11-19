@@ -1,0 +1,16 @@
+{
+ "save_fail.save_fail.title": "Projekt nie został zapisany",
+ "save_fail.save_fail.kept": "Twoje zmiany są nadal otwarte. Nic nie przepada, dopóki edytor jest otwarty.",
+ "save_fail.save_fail.details": "Szczegóły",
+ "save_fail.save_fail.copy": "Kopiuj",
+ "save_fail.save_fail.save_as": "Zapisz jako…",
+ "save_fail.save_fail.retry": "Ponów",
+ "save_fail.save_fail.close": "Zamknij",
+ "save_fail.cause.full": "Dysk jest pełny. Zwolnij miejsce albo zapisz projekt na innym dysku.",
+ "save_fail.cause.denied": "Ten folder lub plik jest tylko do odczytu albo nie masz uprawnień do zapisu. Wybierz inny folder.",
+ "save_fail.cause.locked": "Plik jest otwarty w innym programie. Zamknij go tam, a następnie naciśnij Ponów.",
+ "save_fail.cause.missing": "Folder już nie istnieje. Wybierz inny folder albo go przywróć i naciśnij Ponów.",
+ "save_fail.cause.offline": "Dysk lub folder sieciowy jest niedostępny. Połącz go ponownie i naciśnij Ponów albo zapisz w innym miejscu.",
+ "save_fail.cause.too_long": "Ścieżka pliku jest zbyt długa. Wybierz krótszy folder lub nazwę pliku.",
+ "save_fail.cause.other": "Nie udało się zapisać pliku: {detail}"
+}

@@ -1,0 +1,29 @@
+{
+ "recover.ago_now": "жаңы гана",
+ "recover.ago_min": {
+  "one": "# мүнөт мурун",
+  "other": "# мүнөт мурун"
+ },
+ "recover.ago_hour": {
+  "one": "# саат мурун",
+  "other": "# саат мурун"
+ },
+ "recover.ago_yesterday": "кечээ",
+ "recover.ago_day": {
+  "one": "# күн мурун",
+  "other": "# күн мурун"
+ },
+ "recover.empty": "Калган снимоктор жок",
+ "recover.empty_hint": "Бул долбоор үчүн калыбына келтирүүчү эч нерсе жок.",
+ "recover.all_damaged": "Бардык снимоктор бузулган, калыбына келтирүүгө болбойт.",
+ "recover.keys_hint": "Up жана Down снимокту тандайт, Enter Калыбына келтирүүгө өтөт",
+ "recover.row_tip": "Сакталган: {time}",
+ "recover.row_damaged_tip": "Калыбына келтирүүгө болбойт: {reason}",
+ "recover.archive_ask": "Бул снимокту архивге жылдырасызбы?",
+ "recover.discard_ask": {
+  "one": "Снимокту архивге жылдырасызбы? Ал кайра сунушталбайт.",
+  "other": "Бардык # снимокту архивге жылдырасызбы? Алар кайра сунушталбайт."
+ },
+ "recover.confirm_yes": "Архивге жылдыруу",
+ "recover.confirm_no": "Снимокторду калтыруу"
+}

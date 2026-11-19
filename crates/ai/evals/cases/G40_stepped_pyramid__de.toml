@@ -1,0 +1,37 @@
+id = "G40_stepped_pyramid__de"
+tier = "hard"
+group = "Any geometry"
+title = "Stepped pyramid"
+lang = "de"
+base = "empty"
+
+[[turn]]
+say = "Eine Stufenpyramide: sieben Terrassen auf 60 x 60 m Grundfläche, jede Stufe 4 m hoch und ringsum 4 m zurückgesetzt, eine Mitteltreppe an einer Seite, ein kleiner Tempel auf der obersten Plattform."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "level"
+min = 7.0
+
+[[oracle.count]]
+spec = "slab"
+min = 7.0
+
+[[oracle.count]]
+spec = "stair"
+min = 1.0
+
+[[oracle.geom]]
+kind = "setback_per_floor"
+inset = 4.0
+# a ground slab under the first terrace and the temple floor are steps off the set-back
+share_min = 0.7
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

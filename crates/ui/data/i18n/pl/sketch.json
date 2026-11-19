@@ -1,0 +1,11 @@
+{
+ "sketch.points": "Punkty",
+ "sketch.rect": "Prostokąt",
+ "sketch.circle": "Okrąg",
+ "sketch.polygon": "Wielokąt",
+ "sketch.radius": "R",
+ "sketch.sides": "Boki",
+ "sketch.circum": "Opisany",
+ "sketch.shape.tip": "Kształt szkicu (A przełącza). Prostokąt: dwa narożniki. Okrąg i wielokąt: środek, potem promień. Wpisz wymiar i naciśnij Enter, aby go ustalić.",
+ "tool.err.zero_size": "Zerowy rozmiar: przesuń drugi punkt dalej od pierwszego"
+}

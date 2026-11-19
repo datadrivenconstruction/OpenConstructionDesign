@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "Fusionar opción: {name}",
+ "ai_opt_merge.whole": "Fusionar la opción completa",
+ "ai_opt_merge.parts": "Fusionar partes seleccionadas",
+ "ai_opt_merge.note": "Por qué esta opción",
+ "ai_opt_merge.rebased": "El modelo cambió después de crear esta opción: la fusión se recalculó con el modelo actual. Revise los cambios antes de aplicar.",
+ "ai_opt_merge.left.not_picked": "No seleccionado en la opción",
+ "ai_opt_merge.left.unticked": "Desmarcado en la opción",
+ "ai_opt_merge.left.conflict": "No se puede añadir al modelo actual: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "Esta opción no se puede fusionar. Antes hay que restaurar una opción rechazada.",
+ "ai_opt_merge.refused.stale": "El modelo cambió después de crear esta opción. Recalcule la fusión con el modelo actual.",
+ "ai_opt_merge.refused.nothing_picked": "No hay nada seleccionado para fusionar.",
+ "ai_opt_merge.refused.unknown_item": "El elemento {item} no forma parte de esta opción.",
+ "ai_opt_merge.refused.not_in_option": "El elemento seleccionado no forma parte de esta opción.",
+ "ai_opt_merge.refused.needs_left_out": "El elemento {item} necesita el elemento {needs}. Selecciónelo también o permita añadir las dependencias.",
+ "ai_opt_merge.refused.set_gone": "El elemento {item} hace referencia a una selección que ya no existe. Genere la opción de nuevo.",
+ "ai_opt_merge.refused.busy": "Hay otro plan abierto. Aplíquelo o recházelo primero.",
+ "ai_opt_merge.refused.failed": "No se pudo preparar la fusión: {reason}",
+ "ai_opt_merge.revive": "Restaurar opción",
+ "ai_opt_merge.merged": "Fusionado"
+}

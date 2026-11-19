@@ -1,0 +1,10 @@
+{
+ "view_gfx.vv.visible_tip": "Zichtbaar in deze weergave",
+ "view_gfx.vv.enabled_tip": "Dit filter in deze weergave toepassen",
+ "view_gfx.vv.reset_tip": "Terug naar de projectstandaard",
+ "view_gfx.vv.col.actions": "Acties",
+ "view_gfx.vv.nothing_to_apply": "Geen wijzigingen om toe te passen",
+ "view_gfx.flt.save_blocked": "Geef het filter een naam en vul elke regelparameter in",
+ "view_gfx.flt.confirm_delete": "Verwijderen voor alle weergaven?",
+ "view_gfx.flt.param_pick": "Kiezen…"
+}

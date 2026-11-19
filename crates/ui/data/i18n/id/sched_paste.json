@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "Menempel {n} sel",
+ "sched_edit.pasted_skipped": "Menempel {n} sel, dilewati {k}: {why}",
+ "sched_edit.filled": "Terisi {n} sel",
+ "sched_edit.filled_skipped": "Terisi {n} sel, dilewati {k}: {why}",
+ "sched_edit.why_ro": "{n} hanya-baca",
+ "sched_edit.why_bad": "{n} nilai tidak valid",
+ "sched_edit.no_cell": "Klik sel di jadwal terlebih dahulu",
+ "sched_edit.nothing": "Tidak ada yang ditulis",
+ "sched_edit.not_refreshed": "Tertulis, tetapi tampilan tidak diperbarui: {e}",
+ "sched_edit.failed": "tidak diubah: {e}",
+ "sched_edit.no_changes": "Tidak ada perubahan: {u} sel sudah berisi nilai ini",
+ "sched_edit.same_tail": ", {u} sudah sama"
+}

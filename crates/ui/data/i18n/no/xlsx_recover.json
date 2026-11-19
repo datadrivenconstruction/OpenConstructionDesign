@@ -1,0 +1,16 @@
+{
+ "xlsx_recover.title": "En eksport til den koblede arbeidsboken ble avbrutt",
+ "xlsx_recover.both": "Eksporten stoppet mellom flyttingen av den forrige arbeidsboken til side og plasseringen av den nye. Ingenting er tapt: den nye arbeidsboken er komplett i {part}, den forrige beholdes i {bak}.",
+ "xlsx_recover.part_only": "Eksporten stoppet før den nye arbeidsboken ble plassert. Den er komplett i {part}.",
+ "xlsx_recover.bak_only": "Eksporten stoppet før den nye arbeidsboken var klar. Den forrige arbeidsboken beholdes i {bak}.",
+ "xlsx_recover.finish": "Fullfør den avbrutte eksporten",
+ "xlsx_recover.restore": "Gjenopprett den forrige arbeidsboken",
+ "xlsx_recover.finished": "Den avbrutte eksporten er fullført: den nye arbeidsboken er på plass.",
+ "xlsx_recover.finished_kept": "Den avbrutte eksporten er fullført: den nye arbeidsboken er på plass, den forrige beholdes i {bak}.",
+ "xlsx_recover.restored": "Den forrige arbeidsboken er tilbake på plass.",
+ "xlsx_recover.restore_failed": "Den forrige arbeidsboken kunne ikke flyttes tilbake ({err}). Den beholdes i {path}.",
+ "xlsx_recover.not_restored": "Den nye arbeidsboken kunne ikke plasseres, og den forrige kunne ikke flyttes tilbake. Ingenting er tapt: den forrige arbeidsboken beholdes i {path}; Synkroniser tilbyr å fullføre eller gjenopprette.",
+ "xlsx_recover.finish_failed": "Den nye arbeidsboken kunne ikke plasseres ({err}). Den ligger fortsatt i {path}.",
+ "xlsx_recover.dest_back": "En arbeidsbok ligger igjen i {path}: ingenting ble flyttet.",
+ "xlsx_recover.nothing": "Ingenting fra den avbrutte eksporten er igjen å flytte."
+}

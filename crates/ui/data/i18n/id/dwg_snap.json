@@ -1,0 +1,5 @@
+{
+ "snap.center": "Pusat",
+ "dwg_snap.through": "Titik tembus",
+ "dwg_snap.through_tip": "Offset melalui titik yang diklik (menangkap ujung, perpotongan, pusat) alih-alih jarak yang diketik"
+}

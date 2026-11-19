@@ -1,0 +1,11 @@
+{
+ "empty.sv_notfound.title": "نما پیدا نشد",
+ "empty.sv_notfound.hint": "این نما حذف شده یا دیگر بخشی از پروژه نیست.",
+ "empty.sv_notfound.action": "بستن نما",
+ "empty.sv_cuts_nothing.title": "این برش چیزی را قطع نمی‌کند",
+ "empty.sv_cuts_nothing.hint": "خط برش در عمق خود به هیچ دیوار، دال یا بازشویی نمی‌رسد. خط را جابه‌جا کنید یا نما را عمیق‌تر کنید.",
+ "empty.sv_cuts_nothing.action": "نمایش روی پلان",
+ "empty.sv_shows_nothing.title": "این نمای ارتفاعی چیزی نشان نمی‌دهد",
+ "empty.sv_shows_nothing.hint": "هیچ دیوار، دال یا بازشویی در عمق نما نیست. خط نما را جابه‌جا کنید یا نما را عمیق‌تر کنید.",
+ "empty.sv_shows_nothing.action": "نمایش روی پلان"
+}

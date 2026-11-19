@@ -1,0 +1,8 @@
+{
+ "xlsx_idle.idle_title": "没有需要导入的更改",
+ "xlsx_idle.export_name": "导出",
+ "xlsx_idle.export_body": "将模型写入工作簿。在工作簿中编辑数值后再同步。",
+ "xlsx_idle.sync_name": "同步",
+ "xlsx_idle.sync_body": "重新读取工作簿并列出差异。只有在您应用后，模型才会更改。",
+ "xlsx_idle.last_sync": "上次同步：{when}"
+}

@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "Unități",
+ "topo_units.unit": "Unități în fișier",
+ "topo_units.unit.m": "m",
+ "topo_units.unit.cm": "cm",
+ "topo_units.unit.mm": "mm",
+ "topo_units.unit.ft": "ft",
+ "topo_units.unit.usft": "picioare US survey",
+ "topo_units.unit.in": "in",
+ "topo_units.unit.from_file": "Fișierul își numește unitățile: {unit}",
+ "topo_units.unit.suggested": "Fișierul nu numește unități. Sugerat după extindere: {unit} — verifică rezultatul de mai jos",
+ "topo_units.extent": "Rezultat în unitățile proiectului: {x} × {y} {u} în plan, interval de înălțime {z} {u}",
+ "topo_units.extent.none": "Rezultat: nimic de importat cu aceste alegeri",
+ "topo_units.extent.check": "Nu pare un teren: verifică unitățile"
+}

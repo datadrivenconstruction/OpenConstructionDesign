@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "Bán kính bắt điểm",
+ "snap_refine.settings.snap_px_desc": "Con trỏ phải đến gần điểm hoặc đường bao nhiêu để bắt, tính bằng pixel màn hình. Giá trị lớn hơn hữu ích cho màn hình cảm ứng và màn hình mật độ cao.",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "Ngang",
+ "snap_refine.hint.vertical": "Đứng",
+ "snap_refine.hint.perpendicular": "Vuông góc với đường trước",
+ "snap_refine.hint.parallel": "Song song với đường trước",
+ "snap_refine.hint.on_axis": "Trên trục tường",
+ "snap_refine.no_snap": "Không bắt điểm (Alt)"
+}

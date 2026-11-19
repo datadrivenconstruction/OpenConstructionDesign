@@ -1,0 +1,7 @@
+{
+ "spline.opt.spline": "Spline",
+ "spline.opt.spline_tip": "Dinding spline: klik titik yang dilewatinya, Enter atau Esc untuk selesai",
+ "spline.wt.three_points": "dinding spline membutuhkan tiga titik atau lebih",
+ "spline.wt.no_curtain": "dinding tirai tidak memiliki sumbu spline",
+ "spline.wt.added": "dinding spline ditambahkan"
+}

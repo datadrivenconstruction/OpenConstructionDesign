@@ -1,0 +1,6 @@
+{
+ "cmd.arch.room_auto.short": "실 배치",
+ "cmd.mod.group_select.short": "그룹 선택",
+ "cmd.mod.group_cancel.short": "편집 취소",
+ "cmd.view.place_sheet_list.short": "시트 목록 배치"
+}

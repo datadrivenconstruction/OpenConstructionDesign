@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "Вісь X",
+ "fe.axis.y": "Вісь Y",
+ "fe.axis.z": "Вісь Z",
+ "fe.col.axis": "Вісь",
+ "fe.col.at": "Положення",
+ "fe.col.mode": "Режим",
+ "fe.mode.fixed": "Фіксовано",
+ "fe.mode.free": "Вільно",
+ "fe.types.inherited": "Типове зі параметра",
+ "fe.csv.more": "Більше дій з CSV",
+ "fe.ref.selected": "Площина: {name}"
+}

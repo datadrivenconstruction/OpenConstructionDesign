@@ -1,0 +1,9 @@
+{
+ "xl.msg.base_value": "okuma sonrası denetim başarısız, eski çalışma kitabı korundu: {} ({}) beklenen '{}', okunan '{}'",
+ "xl.msg.base_missing": "okuma sonrası denetim başarısız, eski çalışma kitabı korundu: {} sayfasında {} kimliği için satır yok",
+ "xl.msg.base_extra": "okuma sonrası denetim başarısız, eski çalışma kitabı korundu: {} satırı modelde yok",
+ "xl.msg.base_refused": "okuma sonrası denetim başarısız, eski çalışma kitabı korundu: {} ({}) reddedildi: {}",
+ "xl.msg.base_sheet": "okuma sonrası denetim başarısız, eski çalışma kitabı korundu: {} sayfası eksik, boş ya da okunamıyor",
+ "xl.msg.base_newer": "okuma sonrası denetim başarısız, eski çalışma kitabı korundu: {} hücre model değerini taşımıyor",
+ "xl.msg.base_unreadable": "okuma sonrası denetim başarısız, eski çalışma kitabı korundu: yeni çalışma kitabı okunamıyor ({})"
+}

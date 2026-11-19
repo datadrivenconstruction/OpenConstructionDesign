@@ -1,0 +1,6 @@
+{
+ "xl.msg.filter_on_sheet_x": "filtro sulla tavola '{}'",
+ "xl.msg.sort_settings_on_sheet_x": "impostazioni di ordinamento sulla tavola '{}'",
+ "xl.msg.hidden_rows_on_sheet_x": "righe nascoste sulla tavola '{}'",
+ "xl.msg.hidden_columns_on_sheet_x": "colonne nascoste sulla tavola '{}'"
+}

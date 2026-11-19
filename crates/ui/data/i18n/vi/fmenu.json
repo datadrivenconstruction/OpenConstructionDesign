@@ -1,0 +1,7 @@
+{
+ "fmenu.export": "Lưu dưới dạng / Xuất",
+ "fmenu.export.ifc4x3": "IFC 4.3",
+ "fmenu.export.ifc2x3": "IFC 2x3",
+ "fmenu.export.glb": "glTF nhị phân (.glb)",
+ "fmenu.export.pdf": "PDF hoặc SVG (bản vẽ)"
+}

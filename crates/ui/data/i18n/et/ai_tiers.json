@@ -1,0 +1,4 @@
+{
+ "ai.issue.delete_large": "{0} elementi kustutataks, mis ületab piiri {1}. Vaja on luba",
+ "ai.issue.refused_large": "{0} elementi muutuks, mis ületab kõvapiiri {1}. Jaga plaan väiksemateks osadeks"
+}

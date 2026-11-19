@@ -1,0 +1,8 @@
+{
+ "cmd.file.save_copy": "Salva una copia per un'altra persona…",
+ "cmd.file.save_copy.desc": "Salva una copia del progetto senza il consenso IA e, salvo diversa scelta, senza il registro IA. Questo progetto resta com'è.",
+ "ai.copy.title": "Salva una copia",
+ "ai.copy.journal": "Includere il registro IA nella copia? Il registro contiene richieste, risposte e indirizzi. Il consenso al cloud non viene mai copiato: l'altra persona decide per sé. Scegli No per escludere il registro.",
+ "ai.copy.done": "Copia salvata: {name}",
+ "ai.copy.same": "Scegli un altro file: una copia non può sostituire il progetto aperto."
+}

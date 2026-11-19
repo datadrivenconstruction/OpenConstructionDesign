@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "Вставлено клітинок: {n}",
+ "sched_edit.pasted_skipped": "Вставлено клітинок: {n}, пропущено {k}: {why}",
+ "sched_edit.filled": "Заповнено клітинок: {n}",
+ "sched_edit.filled_skipped": "Заповнено клітинок: {n}, пропущено {k}: {why}",
+ "sched_edit.why_ro": "{n} лише для читання",
+ "sched_edit.why_bad": "{n} некоректне значення",
+ "sched_edit.no_cell": "Спершу клацніть клітинку у відомості",
+ "sched_edit.nothing": "Нічого записувати",
+ "sched_edit.not_refreshed": "Записано, але вид не оновився: {e}",
+ "sched_edit.failed": "не змінено: {e}",
+ "sched_edit.no_changes": "Змін немає: {u} клітинок уже мають ці значення",
+ "sched_edit.same_tail": ", {u} вже однакові"
+}

@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "Нищо не е намерено",
+ "empty.browser_search.hint": "Нито един изглед, ниво, тип или помещение не отговаря на търсенето.",
+ "empty.browser_search.action": "Изчисти търсенето",
+ "empty.xl_filtered.title": "Няма записи, които отговарят на филтрите",
+ "empty.xl_filtered.hint": "Включете още видове, изберете друг лист или променете текста за търсене.",
+ "empty.xl_filtered.action": "Изчисти филтрите",
+ "empty.xl_nochanges.title": "Няма промени в книгата",
+ "empty.xl_nochanges.hint": "Книгата съвпада с модела: импортирането ѝ няма да промени нищо.",
+ "empty.version_same.title": "Моделите са идентични",
+ "empty.version_same.hint": "Не са открити разлики между отворения модел и избраната версия.",
+ "empty.templates.title": "Още няма шаблони за изгледи",
+ "empty.templates.hint": "Създайте го от текущия изглед, за да използвате настройките му в други изгледи.",
+ "empty.templates.action": "Именувай шаблон",
+ "empty.fe_params.title": "Още няма параметри",
+ "empty.fe_params.hint": "Добавете параметър по-долу, за да управлявате размери, материали или видимост.",
+ "empty.fe_params.action": "Добави параметър"
+}

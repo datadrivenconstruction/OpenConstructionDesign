@@ -1,0 +1,12 @@
+{
+ "curtain_wall.cw.issue.slab": "födém {id}: {e}",
+ "curtain_wall.cw.issue.body": "test {id}: {e}",
+ "curtain_wall.cw.added": "Hozzáadott függönyfalak: {n}",
+ "curtain_wall.cw.add_failed": "A függönyfal nem készült el: {e}",
+ "curtain_wall.cw.edited_warn": "A #{id} függönyfal módosítva: {w}",
+ "curtain_wall.cw.edited": "A #{id} függönyfal módosítva",
+ "curtain_wall.cw.not_changed": "Nem módosítva: {e}",
+ "curtain_wall.cw.room_edited": "A #{id} helyiség módosítva",
+ "curtain_wall.cw.slope_range": "Nem módosítva: a lejtés kívül esik a tartományon",
+ "curtain_wall.cw.slope_set": "#{id} födém: lejtés {pct}"
+}

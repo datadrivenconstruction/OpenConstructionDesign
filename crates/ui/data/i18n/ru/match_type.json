@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "Подобрать тип",
+ "cmd.mod.match_type.short": "Подобрать тип",
+ "cmd.mod.match_type.desc": "Выберите стену, перекрытие, колонну или балку, затем щёлкайте остальные той же категории: они получат этот тип. Рамка применяет ко всем внутри. Esc сбрасывает образец.",
+ "hint.match_type.pick": "Подбор типа: выберите стену, перекрытие, колонну или балку · Esc — выход",
+ "hint.match_type.apply": "Подбор типа: щёлкайте цели или обведите рамкой · Esc — другой образец",
+ "match_type.kind.wall": "стена",
+ "match_type.kind.slab": "перекрытие",
+ "match_type.kind.column": "колонна",
+ "match_type.kind.beam": "балка",
+ "match_type.refuse.category": "Другая категория: этот тип подходит только для категории «{cat}»",
+ "match_type.refuse.curtain": "Навесная стена: её тип здесь не подбирается",
+ "match_type.refuse.pinned": "Закреплено: открепите, чтобы сменить тип",
+ "match_type.pick_bad": "Образцом может быть стена, перекрытие, колонна или балка",
+ "match_type.same": "Уже этот тип",
+ "match_type.done": "Тип применён: {n}",
+ "match_type.done_skipped": "Тип применён: {n}, пропущено (закреплено или навесная): {skipped}",
+ "match_type.failed": "Тип не изменён: {err}"
+}

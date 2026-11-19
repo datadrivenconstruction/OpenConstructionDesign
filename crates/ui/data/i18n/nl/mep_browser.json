@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "Systeemnaam",
+ "mep_browser.add_blocked": "Voer eerst een systeemnaam in",
+ "mep_browser.col.insulation": "Isolatie",
+ "mep_browser.cancel": "Annuleren",
+ "mep_browser.delete.title": "Dit systeem verwijderen?",
+ "mep_browser.delete.body": "Systeem “{name}” en zijn lussen ({n}) worden verwijderd.",
+ "mep_browser.delete.undo": "U kunt dit ongedaan maken met één Ongedaan maken.",
+ "mep_browser.delete.confirm": "Systeem verwijderen"
+}

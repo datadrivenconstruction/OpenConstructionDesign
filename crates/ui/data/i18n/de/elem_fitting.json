@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "Formstück",
+ "elem.mep_fitting.many": "Formstücke",
+ "elem.mep_fitting.kind.elbow": "Bogen",
+ "elem.mep_fitting.kind.tee": "T-Stück",
+ "elem.mep_fitting.kind.cross": "Kreuzstück",
+ "elem.mep_fitting.kind.transition": "Übergang",
+ "elem.mep_fitting.kind.cap": "Endkappe",
+ "elem.mep_fitting.size": "Nennmaß",
+ "elem.mep_fitting.at": "Position",
+ "elem.mep_fitting.runs": "Leitung {n}",
+ "elem.mep_fitting.edit_run": "Leitung bearbeiten",
+ "elem.mep_fitting.select_runs": "Seine Leitungen wählen",
+ "elem.mep_fitting.derived": "Ein Formstück folgt seinen Leitungen: Ändern Sie eine Leitung, ändert sich das Formstück mit.",
+ "elem.mep_fitting.no_delete": "Ein Formstück kann nicht allein gelöscht oder verschoben werden. Seine Leitungen bearbeiten oder löschen.",
+ "elem.mep_fitting.hint": "Ein Formstück im Grundriss anklicken, um seine Leitungen zu sehen.",
+ "elem.mep_fitting.picked": "Gewählte Formstücke: {n}"
+}

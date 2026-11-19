@@ -1,0 +1,8 @@
+{
+ "param_drop.title": "पैरामीटर मान हटाएँ?",
+ "param_drop.intro": "{name} अब इन श्रेणियों से जुड़ा नहीं है:",
+ "param_drop.line": "{category}: {values} हटाए जाएँगे",
+ "param_drop.undo": "एक Ctrl+Z सब वापस ले आएगा।",
+ "param_drop.confirm": "मान हटाएँ और सहेजें",
+ "param_drop.cancel": "रद्द करें"
+}

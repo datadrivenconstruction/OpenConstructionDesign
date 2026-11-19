@@ -1,0 +1,15 @@
+{
+ "xl.msg.cell_clipped": "tekst przycięto do limitu komórki; tylko do odczytu, edycja nie zastosowana",
+ "xlcell.status": "Wyeksportowano. {count} komórek skrócono lub pozostawiono puste — zobacz okno szczegółów.",
+ "xlcell.title": "Komórki zmienione przez eksport",
+ "xlcell.intro": "Tych komórek nie dało się zapisać w obecnej postaci. Pełna wartość pozostaje w modelu; komórka jest zablokowana i nie można jej edytować w skoroszycie.",
+ "xlcell.col_sheet": "Arkusz",
+ "xlcell.col_row": "Wiersz",
+ "xlcell.col_col": "Kolumna",
+ "xlcell.col_id": "Id elementu",
+ "xlcell.col_what": "Co się stało",
+ "xlcell.what_clipped": "Tekst przycięty do limitu komórki",
+ "xlcell.what_blank": "To nie jest skończona liczba, komórka pozostawiona pusta",
+ "xlcell.more": "… i jeszcze {count}",
+ "xlcell.close": "Zamknij"
+}

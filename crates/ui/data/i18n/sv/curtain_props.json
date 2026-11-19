@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "Fyllningspanel",
+ "curtain_props.cw.panel_cell": "Cell {i}×{j} · ridåvägg #{id}",
+ "curtain_props.cw.kind": "Typ",
+ "curtain_props.cw.kind.glazed": "Glas",
+ "curtain_props.cw.kind.solid": "Massiv",
+ "curtain_props.cw.kind.door": "Dörr",
+ "curtain_props.cw.kind.window": "Fönster",
+ "curtain_props.cw.kind.empty": "Tom",
+ "curtain_props.cw.name": "Namn",
+ "curtain_props.cw.swing_side": "Öppnas åt andra sidan",
+ "curtain_props.cw.swing_hinge": "Gångjärn vid cellens ände",
+ "curtain_props.cw.size": "Storlek",
+ "curtain_props.cw.cell_area": "Cellarea",
+ "curtain_props.cw.panel_area": "Panelarea",
+ "curtain_props.cw.prev": "Föregående panel",
+ "curtain_props.cw.next": "Nästa panel",
+ "curtain_props.cw.wall": "Välj väggen",
+ "curtain_props.cw.panel_hint": "Esc — markering · Ctrl+Z — ångra",
+ "curtain_props.cw.status.panel": "Fyllning {i}×{j} → {kind}",
+ "e3d.err.cw_height": "ridåväggens höjd måste vara över 100 mm"
+}

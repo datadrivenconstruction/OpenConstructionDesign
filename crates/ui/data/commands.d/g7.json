@@ -1,0 +1,281 @@
+[
+ {
+  "id": "arch.roof_gable",
+  "icon": "roof-gable",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "build",
+  "repeatable": true
+ },
+ {
+  "id": "arch.roof_hip",
+  "icon": "roof-hip",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "build",
+  "repeatable": true
+ },
+ {
+  "id": "arch.roof_shed",
+  "icon": "roof-shed",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "build",
+  "repeatable": true
+ },
+ {
+  "id": "arch.roof_mansard",
+  "icon": "roof-mansard",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "build",
+  "repeatable": true
+ },
+ {
+  "id": "arch.roof_gambrel",
+  "icon": "roof-gambrel",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "build",
+  "repeatable": true
+ },
+ {
+  "id": "arch.roof_barrel",
+  "icon": "roof-barrel",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "build",
+  "repeatable": true
+ },
+ {
+  "id": "arch.roof_join",
+  "icon": "roof-join",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "build",
+  "size": "medium",
+  "priority": 6,
+  "variants": [
+   "arch.roof_unjoin"
+  ]
+ },
+ {
+  "id": "arch.roof_unjoin",
+  "once": true,
+  "icon": "roof-unjoin",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "build"
+ },
+ {
+  "id": "arch.fascia",
+  "icon": "fascia",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "build",
+  "repeatable": true
+ },
+ {
+  "id": "arch.gutter",
+  "icon": "gutter",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "build",
+  "repeatable": true
+ },
+ {
+  "id": "arch.soffit",
+  "icon": "soffit",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "build",
+  "repeatable": true
+ },
+ {
+  "id": "arch.skylight",
+  "icon": "skylight",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "build",
+  "repeatable": true
+ },
+ {
+  "id": "str.slab_edge",
+  "icon": "slab-edge",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "struct",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "struct",
+  "repeatable": true
+ },
+ {
+  "id": "arch.wall_sweep",
+  "icon": "wall-sweep",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "build",
+  "repeatable": true,
+  "variants": [
+   "arch.wall_cornice",
+   "arch.wall_reveal"
+  ]
+ },
+ {
+  "id": "arch.wall_cornice",
+  "icon": "wall-cornice",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "build",
+  "repeatable": true
+ },
+ {
+  "id": "arch.wall_reveal",
+  "icon": "wall-reveal",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "build",
+  "repeatable": true
+ },
+ {
+  "id": "arch.roof_taper",
+  "icon": "roof-taper",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "build",
+  "size": "medium"
+ },
+ {
+  "id": "arch.roof_edges",
+  "icon": "roof-edges",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "build",
+  "variants": [
+   "arch.fascia",
+   "arch.gutter",
+   "arch.soffit"
+  ]
+ },
+ {
+  "id": "arch.sweep_profiles",
+  "icon": "sweep-profiles",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "build",
+  "size": "medium",
+  "priority": 8
+ }
+]

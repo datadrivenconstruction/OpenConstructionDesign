@@ -1,0 +1,14 @@
+{
+ "ai.hist.badge": "AI",
+ "ai.hist.untitled": "AI өөрчлөлтүүд",
+ "ai.hist.tip": "{title}\nХэрэгжүүлсэн: {actor}\nAI загвар: {model}",
+ "ai.hist.why": "Учир нь: {why}",
+ "ai.hist.reverted": "буцаагдсан",
+ "ai.hist.revert_one": "Энэ AI багцыг буцаах",
+ "ai.revert.done": "AI өөрчлөлтүүд буцаагдлаа: {n}. Буцаах нь тэднийг сэргээнэ.",
+ "ai.revert.empty": "Буцаах AI өөрчлөлт байхгүй",
+ "ai.revert.not_ai": "Энэ алхам AI өөрчлөлт биш",
+ "ai.revert.already": "Эдгээр AI өөрчлөлтүүд аль хэдийн буцаагдсан",
+ "ai.revert.opaque": "Буцаагдаагүй: эдгээр AI өөрчлөлтүүдийг дараагийн ажлаас найдвартай салгах боломжгүй. Юу ч өөрчлөгдөөгүй.",
+ "ai.revert.failed": "Буцаалт амжилтгүй: {e}"
+}

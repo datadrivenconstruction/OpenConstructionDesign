@@ -1,0 +1,8 @@
+{
+ "empty.start_recent.title": "Henüz son proje yok",
+ "empty.start_recent.hint": "Açtığınız projeler burada görünür. Örnek modelle başlayın.",
+ "empty.start_recent.action": "Örneği aç",
+ "start.recent_open_file": "Dosya aç…",
+ "start.forgot": "Son projelerden kaldırıldı: {name}",
+ "start.forgot_undo": "Geri al"
+}

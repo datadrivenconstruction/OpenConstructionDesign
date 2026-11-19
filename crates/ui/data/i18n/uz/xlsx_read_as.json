@@ -1,0 +1,11 @@
+{
+ "xlsx_read_as.title": "Qayta nomlangan varaq?",
+ "xlsx_read_as.detail": "{found} varag'ida {sheet} ustunlari bor ({score}% mos). Siz tanlamasangiz, u o'qilmaydi.",
+ "xlsx_read_as.detail_many": "{sheet} ga bir nechta varaq mos keladi: {found}. Sizning o'rningizga hech narsa tanlanmagan; o'qiladiganini tanlang.",
+ "xlsx_read_as.read_as": "“{found}” ni {sheet} sifatida o'qish",
+ "xlsx_read_as.read_as_tip": "Faqat bu import uchun. Varaq qayta nomlanmaydi; Qo'llash unga faqat yangi qatorlarning idlarini yozadi.",
+ "xlsx_read_as.active": "“{found}” varag'i bu importda {sheet} sifatida o'qiladi.",
+ "xlsx_read_as.undo": "{sheet} sifatida o'qimaslik",
+ "xlsx_read_as.undo_tip": "Ish kitobidagi varaq nomlariga qaytish.",
+ "xlsx_read_as.not_rewritten": "Ish kitobi qayta yozilmadi: nomi o'zgargan varaq o'z nomi bilan o'qiladi. Ish kitobini sinxron saqlash uchun uni eski nomiga qaytaring."
+}

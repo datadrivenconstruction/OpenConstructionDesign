@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "Koneksi",
+ "settings.ai_status_desc": "Model yang dipakai asisten AI; kunci tetap di penyimpanan aman",
+ "settings.ai_not_connected": "Tidak terhubung",
+ "settings.ai_connect": "Pengaturan koneksi",
+ "settings.ai_connect_desc": "Alamat, model, dan kunci model Anda sendiri, di cloud atau lokal",
+ "settings.ai_connect_btn": "Pengaturan koneksi…",
+ "settings.ai_panel": "Panel asisten AI",
+ "settings.ai_panel_desc": "Tanyakan dengan kata-kata, tinjau denah, lalu terapkan",
+ "settings.ai_open_panel": "Buka panel AI"
+}

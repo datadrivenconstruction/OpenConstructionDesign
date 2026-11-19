@@ -1,0 +1,6 @@
+{
+ "pair_input.pair_hint": "Kaksi arvoa erotetaan puolipisteellä: @1000;500",
+ "pair_input.old_pair": "Kaksi kokonaislukua ei enää muodosta paria pilkulla: kirjoita 6000;4000 kahdelle arvolle tai 6000,5 desimaalille",
+ "pair_input.op.bad_length": "Ei pituus: {text} ({why}). Mitään ei muutettu",
+ "pair_input.op.bad_count": "Määrää {text} ei otettu: kokonaisluku väliltä {min}–{max}"
+}

@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "mõõdetud {value}, piirang {limit}",
+ "ai_checks.check.cap": "Näidatakse {shown} / {total} leidu. Vead on esimesed: paranda need ja käivita uuesti.",
+ "ai_checks.check.run_again": "Käivita uuesti",
+ "ai_checks.check.goto": "Vali ja suumi",
+ "ai_checks.check.never_title": "Pole veel kontrollitud",
+ "ai_checks.check.never_hint": "Käivita kontrollid ja leiud ilmuvad siia.",
+ "ai_checks.check.sec.error": "Vead",
+ "ai_checks.check.sec.warning": "Hoiatused",
+ "ai_checks.check.sec.info": "Märkused"
+}

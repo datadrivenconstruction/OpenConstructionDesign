@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "Свободна повърхност",
+ "cmd.mass.panelize": "Разделяне на панели",
+ "cmd.mass.surface_shell": "Покрив по повърхност",
+ "cmd.mass.thicken": "Дебелина",
+ "hint.mass.freeform.first": "Свободна повърхност: първият ъгъл на правоъгълника в плана · въведете издигането · Esc — отказ",
+ "hint.mass.freeform.next": "Свободна повърхност: противоположният ъгъл · въведете издигането · Esc — отказ",
+ "hint.mass.panelize.first": "Панели: изберете свободна повърхност в 3D · Esc — отказ",
+ "hint.mass.panelize.value": "Панели: въведете размера на панела · Enter — приложи · Esc — отказ",
+ "hint.mass.surface_shell.first": "Покрив по повърхност: изберете свободна повърхност в 3D · Esc — отказ",
+ "hint.mass.surface_shell.value": "Покрив по повърхност: въведете дебелината · Enter — приложи · Esc — отказ",
+ "hint.mass.thicken.first": "Дебелина: изберете свободна повърхност в 3D · Esc — отказ",
+ "hint.mass.thicken.value": "Дебелина: въведете дебелината (0 — без дебелина) · Enter — приложи · Esc — отказ",
+ "status.mass.pick_surface": "Изберете свободна повърхност",
+ "status.mass.freeform_small": "Правоъгълникът е твърде малък: поне 0,5 м във всяка посока",
+ "name.mass.freeform": "Свободна повърхност",
+ "rgroup.mass_free": "Допълнително"
+}

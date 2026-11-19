@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "Anslutning",
+ "settings.ai_status_desc": "Modellen som AI-assistenten använder; nycklar stannar i det säkra lagret",
+ "settings.ai_not_connected": "Inte ansluten",
+ "settings.ai_connect": "Anslutningsinställningar",
+ "settings.ai_connect_desc": "Adress, modell och nyckel för din egen modell, moln eller lokal",
+ "settings.ai_connect_btn": "Anslutningsinställningar…",
+ "settings.ai_panel": "AI-assistentens panel",
+ "settings.ai_panel_desc": "Fråga med ord, granska planen och tillämpa sedan",
+ "settings.ai_open_panel": "Öppna AI-panelen"
+}

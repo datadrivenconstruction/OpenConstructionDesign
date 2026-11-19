@@ -1,0 +1,9 @@
+{
+ "xl.msg.base_value": "échec de la vérification de relecture, l'ancien classeur est conservé : {} ({}) attendu « {} », lu « {} »",
+ "xl.msg.base_missing": "échec de la vérification de relecture, l'ancien classeur est conservé : la feuille {} n'a pas de ligne pour l'id {}",
+ "xl.msg.base_extra": "échec de la vérification de relecture, l'ancien classeur est conservé : la ligne {} n'est pas dans le modèle",
+ "xl.msg.base_refused": "échec de la vérification de relecture, l'ancien classeur est conservé : {} ({}) a été refusé : {}",
+ "xl.msg.base_sheet": "échec de la vérification de relecture, l'ancien classeur est conservé : la feuille {} est absente, vide ou illisible",
+ "xl.msg.base_newer": "échec de la vérification de relecture, l'ancien classeur est conservé : {} cellules ne contiennent pas la valeur du modèle",
+ "xl.msg.base_unreadable": "échec de la vérification de relecture, l'ancien classeur est conservé : le nouveau classeur ne peut pas être lu ({})"
+}

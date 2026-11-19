@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "X-akseli",
+ "fe.axis.y": "Y-akseli",
+ "fe.axis.z": "Z-akseli",
+ "fe.col.axis": "Akseli",
+ "fe.col.at": "Sijainti",
+ "fe.col.mode": "Tila",
+ "fe.mode.fixed": "Kiinteä",
+ "fe.mode.free": "Vapaa",
+ "fe.types.inherited": "Oletus parametrista",
+ "fe.csv.more": "Lisää CSV-toimintoja",
+ "fe.ref.selected": "Taso: {name}"
+}

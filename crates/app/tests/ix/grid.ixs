@@ -1,0 +1,3 @@
+# Grids: two clicks each, one record each
+tool(arch.grid) click(0,0) click(0,8) → rows(grid)=1
+click(5,0) click(5,8) → rows(grid)=2 journal=+2

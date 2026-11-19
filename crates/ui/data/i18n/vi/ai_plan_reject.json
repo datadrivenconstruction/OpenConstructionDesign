@@ -1,0 +1,9 @@
+{
+ "ai.plan.reject_ask": {
+  "one": "Từ chối # thay đổi?",
+  "other": "Từ chối # thay đổi?"
+ },
+ "ai.plan.reject_ask.hint": "Bản nháp và dấu đã đánh sẽ bị bỏ. Mô hình giữ nguyên.",
+ "ai.plan.reject_confirm": "Từ chối",
+ "ai.plan.reject_keep": "Giữ lại"
+}

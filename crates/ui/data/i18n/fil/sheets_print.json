@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "Nakaraang sheet (Page Up)",
+ "sheets.print.next": "Susunod na sheet (Page Down)",
+ "sheets.print.fit": "Magkasya ang page (double-click)",
+ "sheets.print.no_sheets": "Walang sheet na ipapakita sa preview",
+ "sheets.print.building": "Binubuo ang page…",
+ "sheets.print.stop_build": "Ihinto",
+ "sheets.print.build_stopped": "Itinigil ang pagbuo ng page",
+ "sheets.print.retry": "Buuin muli",
+ "sheets.print.build_failed": "Hindi nabuo ang preview"
+}

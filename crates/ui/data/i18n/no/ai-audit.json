@@ -1,0 +1,22 @@
+{
+ "ai.audit.tokens": "{n} tokens",
+ "ai.audit.filter.all": "Alle",
+ "ai.audit.filter.ai": "AI",
+ "ai.audit.filter.me": "Meg",
+ "ai.audit.search": "Søk i endringer",
+ "ai.audit.search.clear": "Tøm søk",
+ "ai.audit.show_all": "Vis alle",
+ "ai.audit.empty.hint": "Endringer utkastet eller brukt av en modell eller agent vises her, hver med en vei tilbake.",
+ "ai.audit.no_match": "Ingen endringer samsvarer med filteret.",
+ "ai.audit.show.tip": "Velg og vis elementene denne endringen berørte",
+ "ai.audit.revert.ask": "Ta tilbake «{what}»? {change}.",
+ "ai.audit.revert.elements": {
+  "one": "# elementendring",
+  "other": "# elementendringer"
+ },
+ "ai.audit.revert.keeps": "Nyere endringer består. Tilbakeføringen er ett angrertrinn.",
+ "ai.audit.cancel": "Avbryt",
+ "ai.audit.toast.reverted": "Tilbakeført: {what}",
+ "ai.audit.toast.undone": "Angret: {what}",
+ "ai.audit.redo": "Gjør om"
+}

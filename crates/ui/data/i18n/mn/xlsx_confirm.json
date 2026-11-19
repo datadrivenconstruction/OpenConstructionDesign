@@ -1,0 +1,19 @@
+{
+ "xlsx_confirm.chip": "батлах",
+ "xlsx_confirm.section": "Id-гүй мөрүүдийг нэр эсвэл дугаараар элементэд тохируулсан",
+ "xlsx_confirm.tag": "нэрээр тохирсон",
+ "xlsx_confirm.tag_accepted": "тохируулга зөвшөөрөгдлөө",
+ "xlsx_confirm.tag_rejected": "шинээр үүсгэнэ",
+ "xlsx_confirm.kind_room": "өрөө",
+ "xlsx_confirm.kind_curtain_wall": "шилэн хана",
+ "xlsx_confirm.row_line": "{kind} #{id}, түлхүүр \"{key}\"",
+ "xlsx_confirm.accept": "Зөвшөөрөх",
+ "xlsx_confirm.accept_tip": "Энэ мөрийг тохирсон элементэд хэрэглэнэ (үлдсэнтэй нэг буцаах алхамаар)",
+ "xlsx_confirm.reject": "Шинээр үүсгэх",
+ "xlsx_confirm.reject_tip": "Тохируулахгүй: энэ мөр шинэ элемент үүсгэнэ",
+ "xlsx_confirm.decide_first": "Эхлээд нэрээр тохирсон мөрүүдийг зөвшөөрөх эсвэл татгалзана уу.",
+ "xl.msg.key_match_many": "түлхүүр {} элементтэй таарч байна; тохируулаагүй, мөр шинэ элемент үүсгэнэ",
+ "xl.msg.key_match_taken": "түлхүүр өөр мөрөөр эзлэгдсэн элементтэй таарч байна; тохируулаагүй, мөр шинэ элемент үүсгэнэ",
+ "xl.msg.key_match_kept": "үлдсэн: тохируулга татгалзсан, мөр шинэ элемент үүсгэнэ",
+ "xl.msg.key_match_undecided": "нэрээр тохирсон мөрүүд шийдвэр хүлээж байна"
+}

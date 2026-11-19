@@ -1,0 +1,23 @@
+{
+ "cmd.app.report": "Hiba jelentése…",
+ "cmd.app.report.desc": "Leírja, mi romlott el, és csomagot ment erre a számítógépre: a szövegedet, a build- és rendszeradatokat, az ablak képét és az utolsó összeomlási naplót. Semmi sem kerül elküldésre.",
+ "report.title": "Hiba jelentése",
+ "report.what": "Mi történt",
+ "report.expected": "Mit vártál",
+ "report.steps": "Lépések a reprodukáláshoz",
+ "report.opt.shot": "Az ablak képének csatolása",
+ "report.opt.model": "A modell másolatának csatolása",
+ "report.opt.model.note": "Alapértelmezetten kikapcsolva. A másolat a projektadataidat tartalmazza, az MI-naplót nem.",
+ "report.opt.paths": "Felhasználónevek megtartása a fájlelérési utakban",
+ "report.local": "A csomag csak ezen a számítógépen van mentve. Semmi sem kerül automatikusan elküldésre.",
+ "report.blocked": "Előbb írd le, mi történt.",
+ "report.save": "Csomag mentése",
+ "report.copy": "Szöveg másolása",
+ "report.cancel": "Mégse",
+ "report.copied": "A jelentés szövege másolva.",
+ "report.saved": "Csomag mentve: {path}",
+ "report.failed": "A csomagot nem sikerült menteni: {err}",
+ "report.model.fail": "A modell másolatát nem sikerült elkészíteni, semmi sem lett mentve: {err}",
+ "report.crash.notice": "Az előző munkamenet összeomlással ért véget.",
+ "report.crash.action": "Hiba jelentése"
+}

@@ -1,0 +1,5 @@
+{
+ "rbdrag.beam": "En balk som sitter i värdelementet skulle hamna utanför den nya gränsen.",
+ "rbdrag.rebar": "Armeringsgrupp {id} på grundplattan skulle hamna utanför den nya gränsen.",
+ "rbdrag.opening": "En öppning skulle hamna utanför den nya gränsen."
+}

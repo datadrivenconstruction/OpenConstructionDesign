@@ -1,0 +1,252 @@
+{
+ "items": [
+  {
+   "key": "egress.travel_max",
+   "value": 30,
+   "unit": "m",
+   "source": "ca-nbc20",
+   "clause": "3.4.2.5.(1)(f)",
+   "url": "https://publications.gc.ca/collections/collection_2022/cnrc-nrc/NR24-28-2020-eng.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Where several exits are required, travel to the nearest one is limited to 30 m for occupancies not named in the other cases, including residential, unsprinklered.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ],
+    "sprinklered": false
+   },
+   "verified": true,
+   "note": "read 2026-11-14 in the official PDF; 45 m if sprinklered throughout (3.4.2.5.(1)(c))"
+  },
+  {
+   "key": "egress.travel_max.office",
+   "value": 40,
+   "unit": "m",
+   "source": "ca-nbc20",
+   "clause": "3.4.2.5.(1)(b)",
+   "url": "https://publications.gc.ca/collections/collection_2022/cnrc-nrc/NR24-28-2020-eng.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Business and personal services floor areas: travel to at least one exit limited to 40 m (45 m if sprinklered throughout).",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "sprinklered": false
+   },
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "corridor.width_min.accessible",
+   "value": 1.0,
+   "unit": "m",
+   "source": "ca-nbc20",
+   "clause": "3.8.3.2.(1)",
+   "url": "https://publications.gc.ca/collections/collection_2022/cnrc-nrc/NR24-28-2020-eng.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "A barrier-free path of travel needs a clear width of 1000 mm, reducible to 850 mm over at most 600 mm length.",
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "door.clear_min.accessible",
+   "value": 0.85,
+   "unit": "m",
+   "source": "ca-nbc20",
+   "clause": "3.8.3.6.(2)",
+   "url": "https://publications.gc.ca/collections/collection_2022/cnrc-nrc/NR24-28-2020-eng.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Doorways on a barrier-free path need 850 mm clear width with the door open; same for the route to one bathroom in a residential suite.",
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "accessible.turning_circle",
+   "value": 1.7,
+   "unit": "m",
+   "source": "ca-nbc20",
+   "clause": "3.8.3.2.(6)(a)",
+   "url": "https://publications.gc.ca/collections/collection_2022/cnrc-nrc/NR24-28-2020-eng.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "A narrow accessible route longer than 12 m must end in a clear floor space of 1700 mm diameter (or 1700 x 1500 mm, or a T shape).",
+   "verified": true,
+   "note": "read 2026-11-14; this is the circle size the code names for route ends; some washroom stalls use 1500 mm"
+  },
+  {
+   "key": "ramp.slope_max",
+   "value": 0.0833,
+   "unit": "ratio",
+   "source": "ca-nbc20",
+   "clause": "3.8.3.5.(1)(b)",
+   "url": "https://publications.gc.ca/collections/collection_2022/cnrc-nrc/NR24-28-2020-eng.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Ramps on a barrier-free path need a uniform slope no steeper than 1 in 12 (also 3.4.6.7 for general ramps).",
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "stair.riser_max",
+   "value": 0.18,
+   "unit": "m",
+   "source": "ca-nbc20",
+   "clause": "3.4.6.8.(2); Table 9.8.4.1 (public)",
+   "url": "https://publications.gc.ca/collections/collection_2022/cnrc-nrc/NR24-28-2020-eng.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Exit and public stairs: riser between 125 and 180 mm.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "stair.tread_min",
+   "value": 0.28,
+   "unit": "m",
+   "source": "ca-nbc20",
+   "clause": "3.4.6.8.(1); Table 9.8.4.2 (public)",
+   "url": "https://publications.gc.ca/collections/collection_2022/cnrc-nrc/NR24-28-2020-eng.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Exit and public stairs: run at least 280 mm.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "stair.width_min",
+   "value": 1.1,
+   "unit": "m",
+   "source": "ca-nbc20",
+   "clause": "Table 3.4.3.2.-A",
+   "url": "https://publications.gc.ca/collections/collection_2022/cnrc-nrc/NR24-28-2020-eng.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Exit stairs in residential and business occupancies need 1100 mm clear width; 900 mm where the stair serves at most 2 storeys above exit level.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14; table text partly garbled in extraction, the 900 mm low-rise case also matches 9.8.2.1.(1)"
+  },
+  {
+   "key": "stair.riser_max.house",
+   "value": 0.2,
+   "unit": "m",
+   "source": "ca-nbc20",
+   "clause": "Table 9.8.4.1 (private)",
+   "url": "https://publications.gc.ca/collections/collection_2022/cnrc-nrc/NR24-28-2020-eng.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Stairs serving a single dwelling: riser between 125 and 200 mm.",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "stair.tread_min.house",
+   "value": 0.255,
+   "unit": "m",
+   "source": "ca-nbc20",
+   "clause": "Table 9.8.4.2 (private)",
+   "url": "https://publications.gc.ca/collections/collection_2022/cnrc-nrc/NR24-28-2020-eng.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Stairs serving a single dwelling: run between 255 and 355 mm.",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "stair.width_min.house",
+   "value": 0.86,
+   "unit": "m",
+   "source": "ca-nbc20",
+   "clause": "9.8.2.1.(2),(4)",
+   "url": "https://publications.gc.ca/collections/collection_2022/cnrc-nrc/NR24-28-2020-eng.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Stairs within or serving a single dwelling unit need at least 860 mm width.",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "room.height_min",
+   "value": 2.1,
+   "unit": "m",
+   "source": "ca-nbc20",
+   "clause": "Table 9.5.3.1",
+   "url": "https://publications.gc.ca/collections/collection_2022/cnrc-nrc/NR24-28-2020-eng.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Residential living, dining, kitchen and bedroom spaces need ceiling height of 2.1 m over most of the room; corridors and baths have lower area rules.",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14; table text partly garbled in extraction but 2.1 m is the minimum column; secondary suites 1.95 m"
+  },
+  {
+   "key": "load.floor_residential",
+   "value": 1.9,
+   "unit": "kN/m2",
+   "source": "ca-nbc20",
+   "clause": "Table 4.1.5.3 (NBC 2020 Vol.1 Div.B p.4-9): sleeping and living quarters in apartments, hotels, motels, boarding schools, colleges 1.9 kPa",
+   "url": "https://publications.gc.ca/collections/collection_2022/cnrc-nrc/NR24-28-2020-eng.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Dwelling and apartment sleeping/living areas are designed for 1.9 kPa uniform live load.",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14: publications.gc.ca/collections/collection_2022/cnrc-nrc/NR24-28-2020-eng.pdf; text layout scrambled so value-to-row pairing taken from row order and cross-checked against the Ontario Building Code table (also 1.9)"
+  },
+  {
+   "key": "load.floor_office",
+   "value": 2.4,
+   "unit": "kN/m2",
+   "source": "ca-nbc20",
+   "clause": "Table 4.1.5.3 (p.4-9): office areas on other floors 2.4 kPa; basements and floors with direct ground-level exterior access 4.8 kPa",
+   "url": "https://publications.gc.ca/collections/collection_2022/cnrc-nrc/NR24-28-2020-eng.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Office floors above ground-level access floors use 2.4 kPa; ground-level and basement office floors use 4.8 kPa.",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14: publications.gc.ca/collections/collection_2022/cnrc-nrc/NR24-28-2020-eng.pdf; pairing from row order in scrambled extraction; 2.4 applies to upper floors"
+  }
+ ]
+}

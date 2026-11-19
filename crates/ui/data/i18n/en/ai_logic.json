@@ -1,0 +1,6 @@
+{
+ "ai_toast.toast_not_refreshed": "Applied as undo step {n} (Ctrl+Z undoes it), but the view did not refresh. Reload the view.",
+ "ai.optx.reload_failed": "Option \"{name}\" is applied and saved, but the view did not reload: {e}",
+ "ai.cmp.stale": "Stale",
+ "ai.cmp.stale_tip": "This option was built on an older model state. Generate it again to apply."
+}

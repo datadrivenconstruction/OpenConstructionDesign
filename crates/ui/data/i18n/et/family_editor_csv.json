@@ -1,0 +1,11 @@
+{
+ "fe.csv.apply": "Rakenda import",
+ "fe.csv.cancel": "Loobu eelvaatest",
+ "fe.csv.nothing": "Muudatusi pole: kataloog vastab praegustele tüüpidele",
+ "fe.csv.preview": "Impordi eelvaade: {added} uut, {changed} muudetud, {same} muutumata tüüpi; {values} väärtust muutub",
+ "fe.csv.preview_hint": "Tühjad lahtrid ja puuduvad veerud säilitavad praegused väärtused. Midagi ei muutu enne rakendamist.",
+ "fe.csv.skipped": "Ei rakendatud, väärtus jäi alles: {msg}",
+ "fe.csv.type_added": "Uus tüüp {name}",
+ "fe.csv.type_changed": "Tüüp {name}",
+ "fe.csv.value": "  {param}: {old} → {new}"
+}

@@ -1,0 +1,8 @@
+{
+ "undo.undone": "元に戻しました: {what}",
+ "undo.redone": "やり直しました: {what}",
+ "undo.action.edit.redo": "やり直し",
+ "undo.action.edit.undo": "元に戻す",
+ "hdr.unsaved": "未保存の変更",
+ "hdr.file_menu": "ファイルメニュー"
+}

@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key} محجوز ({why}) ولا يمكن إعادة تعيينه",
+ "quick.keys.res_copy": "نسخ",
+ "quick.keys.res_paste": "لصق",
+ "quick.keys.res_cut": "قص",
+ "quick.keys.res_undo": "تراجع / إعادة",
+ "quick.keys.res_save": "حفظ",
+ "quick.keys.res_palette": "لوحة الأوامر",
+ "quick.keys.reserved_conflict": "{key} مستخدم بالفعل في “{cmd}”. «Esc» يُبقيه هناك.",
+ "quick.keys.reserved_swap": "تبديل",
+ "quick.keys.reserved_take": "خذه",
+ "quick.keys.reserved_keep": "إبقاء",
+ "quick.keys.reserved_os": "محجوز من النظام:"
+}

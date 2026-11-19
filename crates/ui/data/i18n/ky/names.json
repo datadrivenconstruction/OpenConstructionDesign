@@ -1,0 +1,19 @@
+{
+ "names.level": "Деңгээл {n}",
+ "names.slab": "Плита 200",
+ "names.roof_slab": "Чатыр 200",
+ "names.sheet.plan_section": "1-кабаттын плана жана кесими",
+ "names.sheet.plan_view": "1-кабаттын плана",
+ "names.sheet.site_plan": "Участканын плана",
+ "names.sheet_set.issue": "Басылма 1",
+ "names.title.owner": "Долбоор ЖЧК",
+ "names.title.creator": "А. Иванов",
+ "names.title.approver": "П. Петров",
+ "names.title.document_type": "Чийме",
+ "names.title.status": "Иш жүрүп жатат",
+ "names.revision.date": "4-нояб. 2026",
+ "names.revision.description": "Карап чыгуу үчүн берилди",
+ "names.revision.author": "AI",
+ "names.demo.no_levels": "деңгээлдер жок",
+ "names.demo.no_sheet": "лист"
+}

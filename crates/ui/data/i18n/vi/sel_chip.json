@@ -1,0 +1,5 @@
+{
+ "sel_chip.opt.sel_hint": "Nhấp cấu kiện để chọn. Ctrl thêm, Shift bỏ.",
+ "sel_chip.opt.units": "Đơn vị",
+ "sel_chip.sel_chip": "{name}: {n}"
+}

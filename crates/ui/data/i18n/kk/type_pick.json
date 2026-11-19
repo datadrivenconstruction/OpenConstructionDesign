@@ -1,0 +1,10 @@
+{
+ "type_pick.pick.search": "Түрлерді немесе қалыңдықты іздеу",
+ "type_pick.pick.empty": "Сәйкес түр жоқ",
+ "type_pick.pick.edit": "Түрді өңдеу…",
+ "type_pick.pick.mixed": "Аралас",
+ "type_pick.pick.layers": {
+  "one": "# қабат",
+  "other": "# қабат"
+ }
+}

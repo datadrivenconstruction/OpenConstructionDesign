@@ -1,0 +1,59 @@
+{
+ "del.k.door": {
+  "one": "# door",
+  "other": "# doors"
+ },
+ "del.k.window": {
+  "one": "# window",
+  "other": "# windows"
+ },
+ "del.k.opening": {
+  "one": "# opening",
+  "other": "# openings"
+ },
+ "del.k.comp": {
+  "one": "# hosted component",
+  "other": "# hosted components"
+ },
+ "del.k.rebar": {
+  "one": "# rebar set",
+  "other": "# rebar sets"
+ },
+ "del.k.port": {
+  "one": "# hosted MEP port",
+  "other": "# hosted MEP ports"
+ },
+ "del.k.joist": {
+  "one": "# framing beam",
+  "other": "# framing beams"
+ },
+ "del.k.railing": {
+  "one": "# railing",
+  "other": "# railings"
+ },
+ "del.k.tag": {
+  "one": "# tag",
+  "other": "# tags"
+ },
+ "del.k.dim": {
+  "one": "# dimension (detached)",
+  "other": "# dimensions (detached)"
+ },
+ "del.also": "Também afetados: {list}",
+ "del.rooms": {
+  "one": "# room loses a boundary wall",
+  "other": "# rooms lose a boundary wall"
+ },
+ "del.cancelled": "Exclusão cancelada, nada foi alterado",
+ "del.confirm.title": "Excluir com dependentes",
+ "del.confirm.lead": {
+  "one": "# elemento selecionado leva consigo estes:",
+  "other": "# elementos selecionados levam consigo estes:"
+ },
+ "del.confirm.levels": {
+  "one": "# of them is on another level",
+  "other": "# of them are on other levels"
+ },
+ "del.confirm.all": "Excluir tudo",
+ "del.confirm.cancel": "Cancelar"
+}

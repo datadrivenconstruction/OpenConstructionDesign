@@ -1,0 +1,59 @@
+{
+ "del.k.door": {
+  "one": "# deur",
+  "other": "# deuren"
+ },
+ "del.k.window": {
+  "one": "# raam",
+  "other": "# ramen"
+ },
+ "del.k.opening": {
+  "one": "# opening",
+  "other": "# openingen"
+ },
+ "del.k.comp": {
+  "one": "# gehoste component",
+  "other": "# gehoste componenten"
+ },
+ "del.k.rebar": {
+  "one": "# wapeningsset",
+  "other": "# wapeningssets"
+ },
+ "del.k.port": {
+  "one": "# gehoste MEP-aansluiting",
+  "other": "# gehoste MEP-aansluitingen"
+ },
+ "del.k.joist": {
+  "one": "# constructiebalk",
+  "other": "# constructiebalken"
+ },
+ "del.k.railing": {
+  "one": "# leuning",
+  "other": "# leuningen"
+ },
+ "del.k.tag": {
+  "one": "# merk",
+  "other": "# merken"
+ },
+ "del.k.dim": {
+  "one": "# maat (losgekoppeld)",
+  "other": "# maten (losgekoppeld)"
+ },
+ "del.also": "Ook getroffen: {list}",
+ "del.rooms": {
+  "one": "# ruimte verliest een begrenzende wand",
+  "other": "# ruimten verliezen een begrenzende wand"
+ },
+ "del.cancelled": "Verwijderen geannuleerd, niets gewijzigd",
+ "del.confirm.title": "Verwijderen met afhankelijken",
+ "del.confirm.lead": {
+  "one": "# geselecteerd element neemt hiermee mee:",
+  "other": "# geselecteerde elementen nemen hiermee mee:"
+ },
+ "del.confirm.levels": {
+  "one": "# daarvan staat op een andere verdieping",
+  "other": "# daarvan staan op andere verdiepingen"
+ },
+ "del.confirm.all": "Alles verwijderen",
+ "del.confirm.cancel": "Annuleren"
+}

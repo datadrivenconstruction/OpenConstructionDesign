@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "Treppen",
+ "selcat.railing": "Geländer",
+ "quick.cat.stair": "Treppen",
+ "quick.cat.railing": "Geländer",
+ "stair.risers": "Steigungen",
+ "stair.riser": "Steigungshöhe",
+ "stair.comfort": "2S + A",
+ "stair.tread_auto": "Auftritt nach Regel",
+ "stair.tread_auto_tip": "Den eingegebenen Auftritt verwerfen und die Regel 2S + A bestimmen lassen",
+ "stair.broken": "Diese Treppe passt nicht zu ihren Geschossen",
+ "railing.host_stair": "Auf Treppe #{id}",
+ "railing.host_path": "Geländer skizzieren",
+ "railing.length": "Länge",
+ "stair.deleted_with": "mit {n} aufgesetzten Geländern"
+}

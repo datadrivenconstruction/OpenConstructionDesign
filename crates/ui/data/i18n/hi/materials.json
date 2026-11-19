@@ -1,0 +1,11 @@
+{
+ "materials.mat.name_empty": "सामग्री का नाम लिखें",
+ "materials.mat.empty_title": "अभी कोई सामग्री नहीं",
+ "materials.mat.empty_hint": "नीचे नाम लिखें और जोड़ें दबाएँ",
+ "materials.mat.nothing_hint": "खोज से कोई सामग्री नहीं मिली",
+ "materials.mat.clear_search": "खोज साफ़ करें",
+ "materials.mat.replace_with": "इससे बदलें",
+ "materials.mat.delete_refused": "हटाया नहीं जा सकता: सामग्री {n} स्थानों पर उपयोग में है। पहले उसे बदलें।",
+ "materials.mat.delete_confirm": "सामग्री “{name}” हटाएँ? आप इसे वापस ले सकते हैं।",
+ "materials.mat.replace_confirm": "{n} तत्वों में “{from}” को “{to}” से बदलें? “{from}” हटा दिया जाएगा। आप इसे वापस ले सकते हैं।"
+}

@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "Altına katman ekle",
+ "type_layers.layer.delete": "Katmanı sil",
+ "type_layers.layer.delete_last": "Bir tipte en az bir katman olmalı",
+ "type_layers.value.bad": "Geçerli bir pozitif değer değil",
+ "type_layers.value.required": "Zorunlu",
+ "type_layers.unsaved.title": "{name} için kaydedilmemiş değişiklikler",
+ "type_layers.unsaved.body": "Tipe uygulansın mı, yoksa atılsın mı?",
+ "type_layers.unsaved.discard": "At"
+}

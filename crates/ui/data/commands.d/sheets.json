@@ -1,0 +1,60 @@
+[
+ {
+  "id": "view.sheet_set",
+  "icon": "sheet-set",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R",
+   "D"
+  ],
+  "stage": "M5",
+  "group": "sheets",
+  "priority": 6
+ },
+ {
+  "id": "view.sheets_for_levels",
+  "dialog": true,
+  "icon": "sheets-levels",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R",
+   "D"
+  ],
+  "stage": "M5",
+  "group": "sheets",
+  "priority": 6
+ },
+ {
+  "id": "view.drawing_set",
+  "icon": "drawing-set",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R",
+   "D"
+  ],
+  "stage": "M5",
+  "group": "sheets",
+  "priority": 6
+ },
+ {
+  "id": "view.print_sheets",
+  "dialog": true,
+  "icon": "print",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R",
+   "D"
+  ],
+  "stage": "M5",
+  "group": "sheets",
+  "priority": 4
+ }
+]

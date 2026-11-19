@@ -1,0 +1,8 @@
+{
+ "project_unsaved.unsaved.model": "Modificările modelului nu sunt salvate.",
+ "project_unsaved.unsaved.drawings": {
+  "one": "# desen plasat nu este salvat în proiect: modificările sale vor fi pierdute.",
+  "few": "# desene plasate nu sunt salvate în proiect: modificările lor vor fi pierdute.",
+  "other": "# de desene plasate nu sunt salvate în proiect: modificările lor vor fi pierdute."
+ }
+}

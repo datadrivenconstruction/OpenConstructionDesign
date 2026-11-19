@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key} ayrılmıştır ({why}) ve yeniden atanamaz",
+ "quick.keys.res_copy": "kopyala",
+ "quick.keys.res_paste": "yapıştır",
+ "quick.keys.res_cut": "kes",
+ "quick.keys.res_undo": "geri al / yinele",
+ "quick.keys.res_save": "kaydet",
+ "quick.keys.res_palette": "komut paleti",
+ "quick.keys.reserved_conflict": "{key} zaten “{cmd}” için kullanılıyor. Esc onu orada tutar.",
+ "quick.keys.reserved_swap": "Değiştir",
+ "quick.keys.reserved_take": "Al",
+ "quick.keys.reserved_keep": "Koru",
+ "quick.keys.reserved_os": "Sistem tarafından kullanılıyor:"
+}

@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "Dodaj 1 zestaw",
+ "rebar_sets.add_n": "Dodaj {n} zestawów",
+ "rebar_sets.pick.search": "Szukaj typów prętów",
+ "rebar_sets.pick.empty": "Brak pasujących typów prętów",
+ "rebar_sets.unit.deg": "°"
+}

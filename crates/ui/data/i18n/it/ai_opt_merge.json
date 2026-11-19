@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "Unisci opzione: {name}",
+ "ai_opt_merge.whole": "Unisci l'intera opzione",
+ "ai_opt_merge.parts": "Unisci le parti selezionate",
+ "ai_opt_merge.note": "Perché questa opzione",
+ "ai_opt_merge.rebased": "Il modello è cambiato dopo la creazione di questa opzione: l'unione è stata ricalcolata sul modello attuale. Controlla le modifiche prima di applicarle.",
+ "ai_opt_merge.left.not_picked": "Non scelto dall'opzione",
+ "ai_opt_merge.left.unticked": "Deselezionato nell'opzione",
+ "ai_opt_merge.left.conflict": "Non può essere aggiunto al modello attuale: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "Questa opzione non si può unire. Un'opzione rifiutata va prima ripristinata.",
+ "ai_opt_merge.refused.stale": "Il modello è cambiato dopo la creazione di questa opzione. Ricalcola l'unione sul modello attuale.",
+ "ai_opt_merge.refused.nothing_picked": "Nessun elemento selezionato da unire.",
+ "ai_opt_merge.refused.unknown_item": "La voce {item} non fa parte di questa opzione.",
+ "ai_opt_merge.refused.not_in_option": "L'elemento selezionato non fa parte di questa opzione.",
+ "ai_opt_merge.refused.needs_left_out": "La voce {item} richiede la voce {needs}. Selezionala anche tu, oppure consenti di aggiungere le dipendenze.",
+ "ai_opt_merge.refused.set_gone": "La voce {item} si riferisce a una selezione che non esiste più. Genera di nuovo l'opzione.",
+ "ai_opt_merge.refused.busy": "Un altro piano è aperto. Applicalo o rifiutalo prima.",
+ "ai_opt_merge.refused.failed": "Impossibile preparare l'unione: {reason}",
+ "ai_opt_merge.revive": "Ripristina opzione",
+ "ai_opt_merge.merged": "Unito"
+}

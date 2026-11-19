@@ -1,0 +1,8 @@
+{
+ "v3d.proj.to_ortho": "Bytt til ortogonal",
+ "v3d.proj.to_persp": "Bytt til perspektiv",
+ "v3d.walk.unit.m": "m/s",
+ "v3d.walk.unit.ft": "fot/s",
+ "v3d.temp.show_all": "Vis alle  ·  Esc",
+ "v3d.msg.deleted_named": "3D-visning {name} slettet"
+}

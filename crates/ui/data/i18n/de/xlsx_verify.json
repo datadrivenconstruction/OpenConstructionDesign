@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "Anwenden wurde rückgängig gemacht: Das Modell entsprach nicht der Vorschau. {what}",
+ "xlsx_verify.not_written": "{row} wurde nicht geändert.",
+ "xlsx_verify.lost": "{row} ist verschwunden.",
+ "xlsx_verify.not_deleted": "{row} wurde nicht gelöscht.",
+ "xlsx_verify.extra_deleted": "{row} wurde gelöscht, obwohl die Vorschau sie behält.",
+ "xlsx_verify.created": "{table}: {got} neu statt {want}.",
+ "xlsx_verify.value": "{row}, {field}: erwartet {want} (war {old}), erhalten {got}.",
+ "xlsx_verify.check_failed": "Das Ergebnis konnte nicht geprüft werden: {e}",
+ "xlsx_verify.plan_failed": "Anwenden wurde nicht gestartet: Die Prüfung konnte das Modell nicht lesen ({e}).",
+ "xlsx_verify.take_back_failed": "Der Schritt konnte nicht rückgängig gemacht werden ({e}): Verwenden Sie „Rückgängig“.",
+ "xlsx_verify.t.wall": "Wand",
+ "xlsx_verify.t.opening": "Öffnung",
+ "xlsx_verify.t.room": "Raum",
+ "xlsx_verify.t.slab": "Geschossdecke",
+ "xlsx_verify.t.level": "Ebene",
+ "xlsx_verify.t.wall_type": "Wandtyp",
+ "xlsx_verify.t.slab_type": "Deckentyp",
+ "xlsx_verify.t.col": "Stütze",
+ "xlsx_verify.t.beam": "Träger",
+ "xlsx_verify.t.roof": "Dach",
+ "xlsx_verify.t.curtain_wall": "Vorhangfassade"
+}

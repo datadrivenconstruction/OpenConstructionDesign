@@ -1,0 +1,4 @@
+{
+ "xl.msg.x_cells_above_the_header_on_sheet_x": "{} cellules au-dessus de l'en-tête sur la feuille '{}'",
+ "xl.msg.book_changed_during_export": "le classeur a été enregistré par un autre programme pendant l'export et n'a pas été écrasé ; exportez à nouveau"
+}

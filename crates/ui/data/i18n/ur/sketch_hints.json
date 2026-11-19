@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "بند خاکہ بنائیں: نقطے کلک کریں، پھر بنانے کے لیے Enter یا مکمل کریں",
+ "sketch_hints.sk_finish": "مکمل کریں",
+ "sketch_hints.sk_cancel": "منسوخ کریں",
+ "sketch_hints.import_warn": "ماڈل چیک کے انتباہات: {n} (پہلا: {first})",
+ "sketch_hints.ai.offline.schedule": "شیڈیول کھولیں",
+ "sketch_hints.ai.offline.check": "قواعد سے جانچیں",
+ "sketch_hints.ai.offline.warnings": "انتباہات دکھائیں",
+ "cmd.file.publish_pdf": "شیٹس PDF میں شائع کریں…",
+ "cmd.file.publish_pdf.desc": "چنی گئی شیٹس PDF میں شائع کرتا ہے۔ شیٹس کو PDF/SVG میں برآمد کرنے جیسا۔",
+ "sketch_hints.verify_none": "انتخاب میں AI معاون کا سیٹ کردہ کچھ نہیں جانچنے کے لیے",
+ "sketch_hints.contours_none": "ماڈل میں کوئی ٹوپو سولڈ نہیں: ایک بننے پر کنٹورز ظاہر ہوں گے",
+ "sketch_hints.contours_off": "ٹوپو سولڈ کنٹورز چھپے ہوئے",
+ "sketch_hints.contours_on": "ٹوپو سولڈ کنٹورز دکھائے جا رہے"
+}

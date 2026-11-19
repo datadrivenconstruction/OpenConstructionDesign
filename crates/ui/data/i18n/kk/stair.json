@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "Баспалдақтар",
+ "selcat.railing": "Қоршаулар",
+ "quick.cat.stair": "Баспалдақтар",
+ "quick.cat.railing": "Қоршаулар",
+ "stair.risers": "Көтерімдер",
+ "stair.riser": "Көтеру биіктігі",
+ "stair.comfort": "2R + T",
+ "stair.tread_auto": "Ережеге сай басқыш",
+ "stair.tread_auto_tip": "Теріңген басқышты алып тастап, оны 2R + T ережесі белгілесін",
+ "stair.broken": "Бұл баспалдақ өз деңгейлеріне сәйкес келмейді",
+ "railing.host_stair": "#{id} баспалдағына орналасқан",
+ "railing.host_path": "Эскиз бойынша қоршау",
+ "railing.length": "Ұзындығы",
+ "stair.deleted_with": "{n} орналасқан қоршаумен бірге"
+}

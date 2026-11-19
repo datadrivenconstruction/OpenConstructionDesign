@@ -1,0 +1,8 @@
+{
+ "v3d.proj.to_ortho": "Passa a ortogonale",
+ "v3d.proj.to_persp": "Passa a prospettiva",
+ "v3d.walk.unit.m": "m/s",
+ "v3d.walk.unit.ft": "ft/s",
+ "v3d.temp.show_all": "Mostra tutto  ·  Esc",
+ "v3d.msg.deleted_named": "Vista 3D {name} eliminata"
+}

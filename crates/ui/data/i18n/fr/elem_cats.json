@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "Une masse ne peut pas être pivotée ni symétrisée : son historique de forme ne contient pas d'étape de rotation. Déplacez-la ou copiez-la, ou redessinez-la dans la nouvelle direction.",
+ "sched_cats.col.name": "Nom",
+ "sched_cats.col.material": "Matériau",
+ "sched_cats.col.void": "Vide",
+ "sched_cats.col.inplace": "Coulé en place",
+ "sched_cats.col.volume": "Volume net",
+ "sched_cats.col.area": "Surface",
+ "sched_cats.col.floor_area": "Surface de plancher",
+ "sched_cats.col.thickness": "Épaisseur",
+ "sched_cats.col.points": "Points",
+ "elem.toposolid.points": "Points de levé",
+ "elem.toposolid.count": "Points",
+ "elem.toposolid.low": "Minimum",
+ "elem.toposolid.high": "Maximum",
+ "elem.toposolid.edit": "Modifier les points",
+ "elem.toposolid.edit_tip": "Sélectionner, faire glisser et fixer la cote des points de levé en plan",
+ "elem.toposolid.pick_hint": "Cliquez un point en plan pour le sélectionner. Cliquez à nouveau pour ajouter ou retirer.",
+ "elem.toposolid.z": "Cote ({n})",
+ "elem.toposolid.mixed": "Les points sélectionnés diffèrent ; une nouvelle valeur les fixe tous.",
+ "elem.toposolid.edit_help": "Faites glisser un point pour le déplacer. Saisissez une valeur et appuyez sur Entrée pour fixer la cote. Retour arrière supprime les points sélectionnés, Échap quitte.",
+ "elem.toposolid.done": "Terminé"
+}

@@ -1,0 +1,4 @@
+{
+ "ai.issue.delete_large": "{0} éléments seraient supprimés, au-delà de la limite de {1}. Une autorisation est nécessaire",
+ "ai.issue.refused_large": "{0} éléments seraient modifiés, au-delà de la limite stricte de {1}. Divisez le plan en parties plus petites"
+}

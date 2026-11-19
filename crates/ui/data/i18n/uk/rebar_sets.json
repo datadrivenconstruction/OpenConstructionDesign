@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "Додати 1 набір",
+ "rebar_sets.add_n": "Додати {n} наборів",
+ "rebar_sets.pick.search": "Пошук типів арматури",
+ "rebar_sets.pick.empty": "Немає відповідних типів арматури",
+ "rebar_sets.unit.deg": "°"
+}

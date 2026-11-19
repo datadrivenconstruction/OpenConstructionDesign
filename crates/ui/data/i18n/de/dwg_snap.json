@@ -1,0 +1,5 @@
+{
+ "snap.center": "Mitte",
+ "dwg_snap.through": "Durchgangspunkt",
+ "dwg_snap.through_tip": "Versatz durch den angeklickten Punkt (rastet auf Enden, Schnitten, Mittelpunkten) statt des eingegebenen Abstands"
+}

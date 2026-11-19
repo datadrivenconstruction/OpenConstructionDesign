@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "Podgląd",
+ "agent_draft.ag.preview.desc": "Obrysowuje elementy tego szkicu na kanwie, gdy wskaźnik jest na przycisku. Nic nie zmienia.",
+ "agent_draft.type.column": "Słup",
+ "agent_draft.type.roof": "Dach",
+ "agent_draft.type.ceiling": "Sufit",
+ "agent_draft.type.stair": "Monolityczne",
+ "agent_draft.type.railing": "Balustrada",
+ "agent_draft.type.shaft": "Szyb",
+ "agent_draft.type.axis": "Oś 6.5 mm",
+ "agent_draft.type.refplane": "Płaszczyzna odniesienia"
+}

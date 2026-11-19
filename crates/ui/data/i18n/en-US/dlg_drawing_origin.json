@@ -1,0 +1,4 @@
+{
+ "dlg.dw.near_origin": "Move a far-away drawing to the origin",
+ "dlg.dw.moved_far": "; moved to the origin from ({x}, {y}) m, offset kept"
+}

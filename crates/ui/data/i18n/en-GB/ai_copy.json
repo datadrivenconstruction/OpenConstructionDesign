@@ -1,0 +1,8 @@
+{
+ "cmd.file.save_copy": "Save a copy for someone else…",
+ "cmd.file.save_copy.desc": "Saves a copy of the project without AI consent and, unless you choose otherwise, without the AI journal. This project stays as it is.",
+ "ai.copy.title": "Save a copy",
+ "ai.copy.journal": "Include the AI journal in the copy? The journal holds requests, answers and addresses. Cloud consent is never copied: the other person decides for themselves. Choose No to leave the journal out.",
+ "ai.copy.done": "Copy saved: {name}",
+ "ai.copy.same": "Choose another file: a copy cannot replace the open project."
+}

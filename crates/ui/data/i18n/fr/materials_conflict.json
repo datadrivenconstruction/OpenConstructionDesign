@@ -1,0 +1,5 @@
+{
+ "materials.mat.conflict": "Ce matériau a été modifié dans le modèle (annulation ou autre fenêtre) pendant que la fiche contenait des modifications. Vos modifications sont conservées.",
+ "materials.mat.keep": "Garder mes modifications",
+ "materials.mat.reload": "Recharger"
+}

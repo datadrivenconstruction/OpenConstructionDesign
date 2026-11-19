@@ -1,0 +1,7 @@
+{
+ "messages.title": "Messaggi",
+ "messages.desc": "Cronologia degli avvisi. Nessun nuovo avviso o errore.",
+ "messages.desc_new": "{n} nuovi avvisi o errori. Clicca per leggerli.",
+ "messages.copy": "Copia tutto",
+ "messages.clear": "Cancella tutto"
+}

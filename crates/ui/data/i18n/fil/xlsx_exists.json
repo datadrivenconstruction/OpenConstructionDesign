@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "Mayroon nang ganitong workbook",
+ "xlsx_exists.foreign": "Hindi ito workbook ng proyektong ito, kaya hindi ito pinapalitan kailanman.",
+ "xlsx_exists.pending": "May {n} na edit ito na hindi pa nailalapat sa modelo.",
+ "xlsx_exists.outside": "May {n} na row ito na hindi dala ng bagong export.",
+ "xlsx_exists.new_name": "I-export sa {name}",
+ "xlsx_exists.apply_first": "I-apply muna sila",
+ "xlsx_exists.replace": "Palitan (ililipat ang lumang book sa _archive)",
+ "xlsx_exists.archived": "Nailipat ang lumang workbook sa {path}",
+ "xlsx_exists.archive_failed": "Hindi mailipat ang lumang workbook, walang na-export: {error}"
+}

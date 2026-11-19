@@ -1,0 +1,16 @@
+{
+ "cmd.drawing.to_detail": "Disegno in dettaglio",
+ "cmd.drawing.to_detail.desc": "Trasforma le primitive di disegno selezionate, oppure tutto il disegno di questo livello, in linee di dettaglio, note di testo e campiture sulla pianta. Il disegno resta invariato.",
+ "detail_items.st.no_drawing": "Nessun disegno su questo livello",
+ "detail_items.st.nothing": "Niente da convertire: nessuna linea, arco, testo o riempimento sui layer visibili",
+ "detail_items.st.done": "Elementi di dettaglio aggiunti: linee {lines}, testi {texts}, campiture {regions}",
+ "detail_items.st.failed": "Impossibile aggiungere gli elementi di dettaglio: {e}",
+ "detail_items.st.warn": "Elementi di dettaglio aggiunti, ma la vista non è stata aggiornata (linee {lines}, testi {texts}, campiture {regions}): {e}. Annulla per rimuoverli.",
+ "detail_items.st.bad_view": "Gli elementi di dettaglio richiedono una vista in pianta o in sezione",
+ "detail_items.st.no_transform": "Questa vista non ha un sistema di coordinate utilizzabile per il disegno; non è stato aggiunto nulla",
+ "drafting_tools.free.plan_only": "Questo comando lavora sugli elementi in pianta; apri una pianta",
+ "drafting_tools.free.zero": "I due punti coincidono; non è stato aggiunto nulla",
+ "drafting_tools.free.select_first": "Prima seleziona gli elementi di questa vista da distribuire",
+ "drafting_tools.free.pick_item": "Fai clic su un elemento di questa vista per contrassegnarlo",
+ "drafting_tools.free.dim_kind": "In una vista di disegno funzionano solo le quote lineari"
+}

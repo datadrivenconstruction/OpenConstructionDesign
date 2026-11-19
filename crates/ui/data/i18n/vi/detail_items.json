@@ -1,0 +1,16 @@
+{
+ "cmd.drawing.to_detail": "Chuyển bản vẽ thành chi tiết",
+ "cmd.drawing.to_detail.desc": "Biến các đối tượng vẽ đã chọn, hoặc toàn bộ bản vẽ trên tầng này, thành đường chi tiết, ghi chú văn bản và vùng trên mặt bằng. Bản vẽ gốc giữ nguyên.",
+ "detail_items.st.no_drawing": "Không có bản vẽ trên tầng này",
+ "detail_items.st.nothing": "Không có gì để chuyển: không có đường, cung, chữ hoặc vùng tô trên các lớp đang hiển thị",
+ "detail_items.st.done": "Đã thêm mục chi tiết: đường {lines}, chữ {texts}, vùng {regions}",
+ "detail_items.st.failed": "Không thể thêm mục chi tiết: {e}",
+ "detail_items.st.warn": "Đã thêm mục chi tiết, nhưng không thể làm mới góc nhìn (đường {lines}, chữ {texts}, vùng {regions}): {e}. Hoàn tác sẽ xóa chúng.",
+ "detail_items.st.bad_view": "Mục chi tiết cần góc nhìn mặt bằng hoặc mặt cắt",
+ "detail_items.st.no_transform": "Góc nhìn này không có hệ tọa độ dùng được cho bản vẽ; chưa thêm gì",
+ "drafting_tools.free.plan_only": "Lệnh này làm việc với cấu kiện trên mặt bằng; hãy mở mặt bằng",
+ "drafting_tools.free.zero": "Hai điểm trùng nhau; chưa thêm gì",
+ "drafting_tools.free.select_first": "Hãy chọn các đối tượng của góc nhìn này cần phân bố trước",
+ "drafting_tools.free.pick_item": "Nhấp vào một đối tượng của góc nhìn này để gắn thẻ",
+ "drafting_tools.free.dim_kind": "Góc nhìn bản vẽ 2D chỉ hỗ trợ kích thước thẳng"
+}

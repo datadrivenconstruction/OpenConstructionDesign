@@ -1,0 +1,13 @@
+{
+ "cmd.arch.wall_pick": "Dinding dari garis",
+ "cmd.arch.wall_pick.desc": "Menempatkan dinding pada garis gambar yang dipilih di level saat ini. F beralih antara sumbu atau sisi pada garis, Tab mengambil rantai yang terhubung. Setiap pilihan adalah satu langkah urungkan. Berlaku juga untuk dinding tirai.",
+ "hint.wall_pick.center": "Dinding dari garis: pilih garis gambar · sumbu pada garis · F sisi · Tab rantai · Esc keluar",
+ "hint.wall_pick.face": "Dinding dari garis: pilih garis gambar · sisi pada garis, sisi kursor · F sumbu · Tab rantai · Esc keluar",
+ "hint.wall_pick.center_chain": "Dinding dari garis: pilih garis untuk mengambil rantainya · sumbu pada garis · F sisi · Tab satu garis",
+ "hint.wall_pick.face_chain": "Dinding dari garis: pilih garis untuk mengambil rantainya · sisi pada garis · F sumbu · Tab satu garis",
+ "wall_pick.st.start": "Pilih garis gambar. F: sumbu atau sisi, Tab: rantai terhubung",
+ "wall_pick.st.no_lines": "Tidak ada garis gambar terlihat di level ini",
+ "wall_pick.st.miss": "Tidak ada garis gambar di sini",
+ "wall_pick.st.on_wall": "Garis ini sudah berada di bawah dinding {id}",
+ "wall_pick.st.tight": "Offset sisi tidak muat: ada segmen rantai yang lebih pendek dari tebal dinding"
+}

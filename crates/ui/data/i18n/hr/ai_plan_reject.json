@@ -1,0 +1,10 @@
+{
+ "ai.plan.reject_ask": {
+  "one": "Odbaciti # promjenu?",
+  "few": "Odbaciti # promjene?",
+  "other": "Odbaciti # promjena?"
+ },
+ "ai.plan.reject_ask.hint": "Nacrt i tvoje oznake se odbacuju. Model ostaje isti.",
+ "ai.plan.reject_confirm": "Odbij",
+ "ai.plan.reject_keep": "Zadrži"
+}

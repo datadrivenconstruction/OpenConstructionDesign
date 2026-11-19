@@ -1,0 +1,16 @@
+{
+ "xlsx_recover.title": "导出到已链接的工作簿时中断",
+ "xlsx_recover.both": "导出在将旧工作簿移开与放入新工作簿之间中止。没有任何内容丢失：新工作簿完整地位于 {part}，旧工作簿保留在 {bak}。",
+ "xlsx_recover.part_only": "导出在放入新工作簿之前中止。其完整文件位于 {part}。",
+ "xlsx_recover.bak_only": "导出在新工作簿准备好之前中止。旧工作簿保留在 {bak}。",
+ "xlsx_recover.finish": "完成被中断的导出",
+ "xlsx_recover.restore": "恢复旧工作簿",
+ "xlsx_recover.finished": "被中断的导出已完成：新工作簿已就位。",
+ "xlsx_recover.finished_kept": "被中断的导出已完成：新工作簿已就位，旧工作簿保留在 {bak}。",
+ "xlsx_recover.restored": "旧工作簿已恢复到原位。",
+ "xlsx_recover.restore_failed": "无法将旧工作簿移回（{err}）。它保留在 {path}。",
+ "xlsx_recover.not_restored": "无法放置新工作簿，且无法将旧工作簿移回。没有任何内容丢失：旧工作簿保留在 {path}；同步功能可提供完成或恢复的选项。",
+ "xlsx_recover.finish_failed": "无法放置新工作簿（{err}）。它仍位于 {path}。",
+ "xlsx_recover.dest_back": "工作簿已回到 {path}：未移动任何内容。",
+ "xlsx_recover.nothing": "被中断的导出中没有需要移动的内容。"
+}

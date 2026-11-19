@@ -1,0 +1,6 @@
+{
+ "project_seed.seed_level": "1. szint",
+ "project_seed.seed_wall_partition": "Válaszfal 100",
+ "project_seed.seed_wall_masonry": "Falazott 200",
+ "project_seed.seed_wall_exterior": "Külső 380"
+}

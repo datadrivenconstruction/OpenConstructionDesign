@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "Tegnforklaring",
+ "legend.legend.new_hint": "Nytt navn på tegnforklaring",
+ "legend.legend.delete_tip": "Slett tegnforklaring",
+ "legend.legend.delete_placed": "Slett tegnforklaring (plassert på: {sheets})",
+ "legend.legend.deleted": "Tegnforklaring slettet: {name}",
+ "legend.legend.no_rows": "Ingen rader ennå. Legg til en, eller ta stilene fra gjeldende visning",
+ "legend.legend.replace_q": "Erstatte {n} rader med stilene fra denne visningen?",
+ "legend.legend.replace": "Erstatt",
+ "legend.legend.keep": "Behold rader",
+ "legend.col.swatch": "Fargeprøve",
+ "legend.col.value": "Verdi",
+ "legend.col.label": "Etikett"
+}

@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "Introdu mai întâi un nume de șablon",
+ "view_template.name_taken": "Există deja un șablon cu acest nume",
+ "view_template.pick_blocked": "Bifează mai întâi cel puțin o vedere",
+ "view_template.views.one": "{n} vedere",
+ "view_template.views.few": "{n} vederi",
+ "view_template.views.many": "{n} vederi",
+ "view_template.delete.title": "Ștergi acest șablon?",
+ "view_template.delete.body": "Șablonul \"{name}\" va fi șters. Folosit de {used}.",
+ "view_template.delete.unused": "Șablonul \"{name}\" va fi șters. Nicio vedere nu îl folosește.",
+ "view_template.delete.keeps": "Aceste vederi își păstrează grafica actuală și pierd legătura.",
+ "view_template.delete.undo": "Poți anula cu o singură acțiune Anulează.",
+ "view_template.delete.confirm": "Șterge șablonul"
+}

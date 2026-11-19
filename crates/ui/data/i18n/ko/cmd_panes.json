@@ -1,0 +1,6 @@
+{
+ "cmd.ui.pane.next": "다음 패널",
+ "cmd.ui.pane.next.desc": "키보드 포커스를 다음 보이는 패널로 이동: 브라우저, 캔버스, 속성, 대화.",
+ "cmd.ui.pane.prev": "이전 패널",
+ "cmd.ui.pane.prev.desc": "키보드 포커스를 이전 보이는 패널로 이동합니다."
+}

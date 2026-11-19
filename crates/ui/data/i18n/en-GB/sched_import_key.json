@@ -1,0 +1,6 @@
+{
+ "sched_import.no_key": "This book has no export record (an older export): cells changed in the model after that export can be overwritten. Check the changed cells before Apply.",
+ "sched_import.n_kept": "Changed in the model after the export, kept: {n}",
+ "sched_import.n_conflict": "Changed both in the book and in the model, not applied: {n}",
+ "sched_import.why_conflict": "changed in the model after the export (now {model}), not applied"
+}

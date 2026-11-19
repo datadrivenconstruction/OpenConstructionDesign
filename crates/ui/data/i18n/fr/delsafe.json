@@ -1,0 +1,6 @@
+{
+ "delsafe.ring.opening_shape": "Le contour d'une ouverture se couperait lui-même ou s'effondrerait",
+ "delsafe.ring.opening_boundary": "Une ouverture couperait ou toucherait le contour extérieur",
+ "delsafe.ring.openings_overlap": "Les ouvertures se chevaucheraient ou se toucheraient",
+ "xl.msg.delsafe_instance_param_on_types": "le paramètre '{}' est un paramètre d'occurrence ; modifiez-le dans la feuille des éléments, non appliqué"
+}

@@ -1,0 +1,14 @@
+{
+ "ai.hist.badge": "AI",
+ "ai.hist.untitled": "Perubahan AI",
+ "ai.hist.tip": "{title}\nDiterapkan oleh: {actor}\nModel AI: {model}",
+ "ai.hist.why": "Alasan: {why}",
+ "ai.hist.reverted": "dibatalkan",
+ "ai.hist.revert_one": "Batalkan batch AI ini",
+ "ai.revert.done": "Perubahan AI dibatalkan: {n}. Urungkan untuk mengembalikannya.",
+ "ai.revert.empty": "Tidak ada perubahan AI untuk dibatalkan",
+ "ai.revert.not_ai": "Langkah ini bukan perubahan AI",
+ "ai.revert.already": "Perubahan AI ini sudah dibatalkan",
+ "ai.revert.opaque": "Tidak dibatalkan: perubahan AI ini tidak bisa dipisahkan dengan aman dari pekerjaan berikutnya. Tidak ada yang diubah.",
+ "ai.revert.failed": "Pembatalan gagal: {e}"
+}

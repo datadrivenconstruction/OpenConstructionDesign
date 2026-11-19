@@ -1,0 +1,10 @@
+{
+ "cmd.view.axes_full": "全長の軸線",
+ "cmd.view.axes_full.desc": "X軸と Y軸を平面全体に全長線で表示します。F9 を押している間だけ表示することもできます。",
+ "settings.axes_full": "軸線",
+ "settings.axes_full_desc": "平面の軸線をシート全体に全長線で表示します。F9 の長押しで一時的に確認できます。",
+ "settings.axes_full_on": "全長の軸線を表示",
+ "plan.hud.axes_tip": "{key} を押し続けると全長の軸線を表示",
+ "status.axes_full.on": "全長の軸線: オン",
+ "status.axes_full.off": "全長の軸線: オフ"
+}

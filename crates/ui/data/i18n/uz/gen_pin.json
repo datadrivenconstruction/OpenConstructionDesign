@@ -1,0 +1,7 @@
+{
+ "gen.pin.room": "Yaratilgan loyihaning xonasini o'zgartirdingiz. Qayta ishlashda u o'z joyida qolishi uchun mahkamlang.",
+ "gen.pin.storey": "Yaratilgan loyihaning qavatini o'zgartirdingiz. Qayta ishlashda uning devorlari va teshiklari saqlanishi uchun mahkamlang.",
+ "gen.pin.action": "Mahkamlash",
+ "gen.pin.done": "Mahkamlandi: loyihani qayta ishlash buni saqlaydi va qolganini atrofiga joylashtiradi",
+ "gen.pin.failed": "Mahkamlab bo'lmadi"
+}

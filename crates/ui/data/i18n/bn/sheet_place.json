@@ -1,0 +1,15 @@
+{
+ "sheet_place.place_view_tip": "শিটে একটি ভিউ বা সূচি বসান",
+ "sheet_place.properties_tip": "শিট নম্বর, নাম, কাগজ ও রিভিশন",
+ "sheet_place.print_tip": "শিট প্রিন্ট বা রপ্তানি করুন",
+ "sheet_place.fit_tip": "শিট উইন্ডোতে ফিট করুন",
+ "sheet_place.activate_tip": "শিটে ভিউ সরাসরি সম্পাদনা করুন: সরানো, জুম ও ক্রপ",
+ "sheet_place.open_view_tip": "ভিউটি আলাদা ট্যাবে খুলুন",
+ "sheet_place.done_tip": "শিটে ভিউ সম্পাদনা শেষ করুন",
+ "sheet_place.reset_crop_tip": "ক্রপ সরিয়ে পুরো ভিউ দেখান",
+ "sheet_place.scale_tip": "শিটে নির্বাচিত ভিউয়ের স্কেল",
+ "sheet_place.title_tip": "শিটে ভিউয়ের নিচে দেখানো শিরোনাম",
+ "sheet_place.banner": "শিটে ভিউ সম্পাদনা হচ্ছে",
+ "sheet_place.new_set_tip": "একসঙ্গে প্রিন্টের জন্য শিট সেট তৈরি করুন",
+ "sheet_place.new_sheet_tip": "প্রকল্পে একটি শিট যোগ করুন"
+}

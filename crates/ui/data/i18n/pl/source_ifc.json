@@ -1,0 +1,7 @@
+{
+ "src.field.kids": "Wiersze podrzędne (panele, wierzchołki)",
+ "src.kids.mine": "wierszy podrzędnych: {n}, zmienionych tutaj",
+ "src.kids.changed": "wiersze podrzędne zmienione tutaj",
+ "src.kids.theirs": "wiersze podrzędne zmienione w pliku",
+ "src.kids.take_tip": "Następny import pobiera wiersze podrzędne z pliku; nie są stosowane teraz."
+}

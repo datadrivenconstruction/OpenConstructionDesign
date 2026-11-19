@@ -1,0 +1,11 @@
+{
+ "cmd.ctx.ceiling.clean_outline": "Puhasta kontuur",
+ "cmd.ctx.ceiling.clean_outline.desc": "Eemaldab kitsad tipud kohtades, kus laeasa kontuur pöördub iseendasse. Kõigepealt näidatakse eelvaadet; üks tagasivõtmise samm.",
+ "cmd.ctx.shaft.clean_outline": "Puhasta kontuur",
+ "cmd.ctx.shaft.clean_outline.desc": "Eemaldab kitsad tipud kohtades, kus šahti kontuur pöördub iseendasse. Kõigepealt näidatakse eelvaadet; üks tagasivõtmise samm.",
+ "outline_cleanup.intro_ceiling": "Selle lae kontuur pöördub kitsastes tippudes iseendasse: {n}. Puhastus eemaldab need; kõik muu jääb samaks.",
+ "outline_cleanup.intro_shaft": "Selle šahti kontuur pöördub kitsastes tippudes iseendasse: {n}. Puhastus eemaldab need; kõik muu jääb samaks.",
+ "outline_cleanup.none_ceiling": "Selle lae kontuuril pole tippe",
+ "outline_cleanup.none_shaft": "Selle šahti kontuuril pole tippe",
+ "outline_cleanup.need_host": "Vali põrand, lagi või šaht"
+}

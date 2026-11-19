@@ -1,0 +1,29 @@
+{
+ "recover.ago_now": "дөнгөж сая",
+ "recover.ago_min": {
+  "one": "# мин өмнө",
+  "other": "# мин өмнө"
+ },
+ "recover.ago_hour": {
+  "one": "# цагийн өмнө",
+  "other": "# цагийн өмнө"
+ },
+ "recover.ago_yesterday": "өчигдөр",
+ "recover.ago_day": {
+  "one": "# өдрийн өмнө",
+  "other": "# өдрийн өмнө"
+ },
+ "recover.empty": "Үлдсэн хуулбар алга",
+ "recover.empty_hint": "Энэ төслийн сэргээх зүйл алга.",
+ "recover.all_damaged": "Бүх хуулбар эвдэрсэн, нэгийг нь ч сэргээх боломжгүй.",
+ "recover.keys_hint": "Дээш, доош сумаар хуулбар сонгоно, Enter дарвал Сэргээх руу шилжинэ",
+ "recover.row_tip": "Хадгалсан {time}",
+ "recover.row_damaged_tip": "Сэргээх боломжгүй: {reason}",
+ "recover.archive_ask": "Энэ хуулбарыг архивт шилжүүлэх үү?",
+ "recover.discard_ask": {
+  "one": "Хуулбарыг архивт шилжүүлэх үү? Дахин санал болгохгүй.",
+  "other": "Бүх # хуулбарыг архивт шилжүүлэх үү? Дахин санал болгохгүй."
+ },
+ "recover.confirm_yes": "Архивт шилжүүлэх",
+ "recover.confirm_no": "Хуулбаруудыг үлдээх"
+}

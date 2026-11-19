@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "Bekor qilindi — Ctrl+Y qayta bajaradi",
+ "history.hist.empty": "Hali o'zgarish yo'q",
+ "history.hist.empty_hint": "Tahrirlaringiz shu yerda ko'rinadi. Istalgan qadamni bosib, unga qayting.",
+ "history.hist.revert_all_n": "Barcha AI o'zgarishlarini qaytarish ({n})"
+}

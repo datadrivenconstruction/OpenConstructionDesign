@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "Připojení",
+ "settings.ai_status_desc": "Model, který AI asistent používá; klíče zůstávají v zabezpečeném úložišti",
+ "settings.ai_not_connected": "Nepřipojeno",
+ "settings.ai_connect": "Nastavení připojení",
+ "settings.ai_connect_desc": "Adresa, model a klíč vlastního modelu, cloudového nebo lokálního",
+ "settings.ai_connect_btn": "Nastavení připojení…",
+ "settings.ai_panel": "Panel AI asistenta",
+ "settings.ai_panel_desc": "Zeptejte se slovy, zkontrolujte návrh a poté použijte",
+ "settings.ai_open_panel": "Otevřít panel AI"
+}

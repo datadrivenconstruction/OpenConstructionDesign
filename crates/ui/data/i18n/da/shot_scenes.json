@@ -1,0 +1,9 @@
+{
+ "shot_scenes.site": "Grund",
+ "shot_scenes.lawn": "Græs",
+ "shot_scenes.pad": "Plateau",
+ "shot_scenes.block": "Blok",
+ "shot_scenes.void": "Hulrum",
+ "shot_scenes.tower": "Tårn",
+ "shot_scenes.wall_void": "Hulrum i væg"
+}

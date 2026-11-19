@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "مرشح يظهر تحت العناوين. نص: جزء من النص؛ أرقام: >5، <=3000، =2.5، <>0",
+ "sched_toolbar.columns_tip": "إظهار الأعمدة أو إخفاؤها",
+ "sched_toolbar.groups_tip": "تجميع الصفوف حسب الأعمدة، مع المجاميع الفرعية",
+ "sched_toolbar.formulas_tip": "الأعمدة المحسوبة",
+ "sched_toolbar.phase": "المرحلة",
+ "sched_toolbar.phase_tip": "من أي مرحلة تُؤخذ الصفوف",
+ "sched_toolbar.copy_tip": "الصفوف المحددة (أو كل المرئية) بصيغة TSV",
+ "sched_toolbar.import_tip": "قراءة جدول مُصدَّر مرة أخرى: الصفوف بالمعرّف Id، والأعمدة بالعناوين؛ العدادات أولًا، ثم خطوة تراجع واحدة",
+ "sched_toolbar.export_tip": "الصفوف والأعمدة المرئية مع المجاميع؛ الأرقام تبقى أرقامًا",
+ "sched_toolbar.need_table": "افتح جدولًا أولًا",
+ "sched_toolbar.busy_open": "نافذة فتح ملف مفتوحة بالفعل",
+ "sched_toolbar.busy_save": "نافذة حفظ مفتوحة بالفعل",
+ "sched_toolbar.clear_filter": "مسح المرشح",
+ "sched_toolbar.fields_title": "الأعمدة"
+}

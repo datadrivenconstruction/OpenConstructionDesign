@@ -1,0 +1,4 @@
+{
+ "xl.msg.layer_cells_unplaced": "시트 '{}'의 유형 '{}' 레이어 {} 셀 {}개를 배치하지 못했습니다",
+ "xl.msg.layer_hidden_unplaced": "시트 '{}'의 유형 '{}' 레이어 {}의 숨겨진 행을 배치하지 못했습니다"
+}

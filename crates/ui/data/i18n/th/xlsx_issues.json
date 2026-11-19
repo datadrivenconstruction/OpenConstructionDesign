@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "แถวและเซลล์ที่ข้าม",
+ "xlsx_issues.conflicts_title": "เปลี่ยนแปลงทั้งสองที่",
+ "xlsx_issues.missing_title": "ไม่มีแผ่นงานในสมุดงาน",
+ "xlsx_issues.look_alike_title": "ชื่อแผ่นงานไม่ตรงกัน",
+ "xlsx_issues.mass_title": "การลบจำนวนมากต้องยืนยัน",
+ "xlsx_issues.sheets_missing": "แผ่นงาน {sheets} ไม่มีในสมุดงาน (เปลี่ยนชื่อหรือลบ) จึงไม่ได้เปรียบเทียบแถว",
+ "xlsx_issues.keep_model": "เก็บโมเดล",
+ "xlsx_issues.take_book": "ใช้ค่าจากสมุดงาน",
+ "xlsx_issues.open_book_tip": "เปิดไฟล์ในโปรแกรมของมัน ไม่มีอะไรในโมเดลเปลี่ยน ตัวอย่างจะโหลดใหม่หลังคุณบันทึกสมุดงาน"
+}

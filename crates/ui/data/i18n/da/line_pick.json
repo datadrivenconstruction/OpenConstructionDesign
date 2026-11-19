@@ -1,0 +1,22 @@
+{
+ "cmd.arch.grid_pick": "Akse efter linje",
+ "cmd.arch.grid_pick.desc": "Laver en akse nøjagtigt langs en valgt tegnelinje på den aktuelle etage; navnene fortsætter serien. Tab tager alle parallelle linjer i samme tegnelag på én gang. Hvert valg er ét fortrydelsestrin.",
+ "cmd.struct.beam_pick": "Bjælke efter linje",
+ "cmd.struct.beam_pick.desc": "Placerer en bjælke af den aktuelle type på den aktive etage langs en valgt tegnelinje. Tab tager den forbundne kæde. Hvert valg er ét fortrydelsestrin.",
+ "hint.grid_pick.one": "Akse efter linje: vælg en tegnelinje · Tab alle parallelle linjer i dens lag · Esc afslut",
+ "hint.grid_pick.more": "Akse efter linje: vælg en linje for at tage alle parallelle linjer i dens lag · Tab én linje · Esc afvæbner",
+ "hint.beam_pick.one": "Bjælke efter linje: vælg en tegnelinje · Tab forbundet kæde · Esc afslut",
+ "hint.beam_pick.more": "Bjælke efter linje: vælg en linje for at tage dens kæde · Tab én linje · Esc afvæbner",
+ "line_pick.st.start_grid": "Vælg en tegnelinje. Tab: alle parallelle linjer i dens lag",
+ "line_pick.st.start_beam": "Vælg en tegnelinje for en {type}-bjælke. Tab: forbundet kæde",
+ "line_pick.st.grid_done": "Akse {name} tilføjet",
+ "line_pick.st.grids_done": "{n} akser tilføjet: {first} — {last}",
+ "line_pick.st.beam_done": "Bjælke {type} tilføjet",
+ "line_pick.st.beams_done": "{n} bjælker {type} tilføjet",
+ "line_pick.st.on_grid": "Denne linje har allerede akse {name}",
+ "line_pick.st.on_beam": "Denne linje har allerede bjælke {id}",
+ "line_pick.st.no_layer": "Linjernes tegnelag er endnu ukendt, prøv igen",
+ "line_pick.st.no_beam_type": "Ingen bjælkeprofil i kataloget",
+ "line_pick.st.reload_warn": "Oprettet, men visningen kunne ikke genindlæses: {err}",
+ "line_pick.st.failed": "Ikke oprettet: {err}"
+}

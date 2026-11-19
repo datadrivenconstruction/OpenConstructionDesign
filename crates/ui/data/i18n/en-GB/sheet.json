@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "Shortcut reference",
+ "cmd.help.shortcuts.desc": "Shows every shortcut as you have it now, by context. Press ? anywhere outside a text field.",
+ "sheet.title": "Keyboard shortcuts",
+ "sheet.filter": "Filter by command or key",
+ "sheet.filter_label": "Filter shortcuts",
+ "sheet.customize": "Customize…",
+ "sheet.close": "Close",
+ "sheet.esc_close": "to close",
+ "sheet.none": "No shortcuts match",
+ "sheet.none_hint": "Try another word or key.",
+ "sheet.sec.general": "General",
+ "sheet.sec.plan": "Plan",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "Schedules",
+ "sheet.sec.sheets": "Sheets",
+ "sheet.sec.ai": "AI"
+}

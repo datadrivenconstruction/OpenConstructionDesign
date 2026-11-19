@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "Samakan tipe",
+ "cmd.mod.match_type.short": "Samakan tipe",
+ "cmd.mod.match_type.desc": "Pilih dinding, lantai, kolom, atau balok, lalu klik yang lain dari kategori sama untuk memberinya tipe tersebut. Seret jendela untuk menerapkan ke semua yang ada di dalamnya. Esc melepas sumber.",
+ "hint.match_type.pick": "Samakan tipe: pilih dinding, lantai, kolom, atau balok · Esc — keluar",
+ "hint.match_type.apply": "Samakan tipe: klik target atau seret jendela · Esc — sumber lain",
+ "match_type.kind.wall": "dinding",
+ "match_type.kind.slab": "lantai",
+ "match_type.kind.column": "kolom",
+ "match_type.kind.beam": "balok",
+ "match_type.refuse.category": "Kategori lain: hanya {cat} yang bisa memakai tipe ini",
+ "match_type.refuse.curtain": "Dinding tirai: tipenya tidak dapat disamakan di sini",
+ "match_type.refuse.pinned": "Dikunci: lepas kunci untuk mengubah tipe",
+ "match_type.pick_bad": "Pilih dinding, lantai, kolom, atau balok sebagai sumber",
+ "match_type.same": "Sudah bertipe ini",
+ "match_type.done": "Tipe diterapkan: {n}",
+ "match_type.done_skipped": "Tipe diterapkan: {n}, dilewati (dikunci atau tirai): {skipped}",
+ "match_type.failed": "Tipe tidak diubah: {err}"
+}

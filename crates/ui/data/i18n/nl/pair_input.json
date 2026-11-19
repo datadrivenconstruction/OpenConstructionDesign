@@ -1,0 +1,6 @@
+{
+ "pair_input.pair_hint": "Twee waarden worden gescheiden door een puntkomma: @1000;500",
+ "pair_input.old_pair": "Een komma tussen twee gehele getallen maakt geen paar meer: typ 6000;4000 voor twee waarden of 6000,5 voor een decimaal",
+ "pair_input.op.bad_length": "Geen lengte: {text} ({why}). Er is niets gewijzigd",
+ "pair_input.op.bad_count": "Aantal {text} is niet overgenomen: een geheel getal van {min} tot {max}"
+}

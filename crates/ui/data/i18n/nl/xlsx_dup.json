@@ -1,0 +1,10 @@
+{
+ "xlsx_dup.dup_undo": "Beslissing ongedaan maken",
+ "xlsx_dup.dup_undo_tip": "Rijen die nieuwe elementen zijn geworden ({n}) worden weer met hun id gelezen",
+ "xlsx_dup.dup_new": "Bewerkte kopieën als nieuwe elementen aanmaken",
+ "xlsx_dup.dup_new_tip": "Rijen {rows} worden nieuwe elementen met hun waarden; element #{id} behoudt zijn waarden (één ongedaan-maakstap met de rest)",
+ "xl.msg.dup_same": "dubbel id {}: dezelfde waarden als rij {}; rij genegeerd",
+ "xl.msg.dup_unchanged": "dubbel id {}: ongewijzigde kopie van de geëxporteerde rij; rij genegeerd",
+ "xl.msg.dup_conflict": "id {} staat op rijen {} met verschillende waarden; niets toegepast voor dit id",
+ "xl.msg.dup_conflict_keep": "id {} staat op rijen {} met verschillende waarden; niets toegepast voor dit id — behoud één rij"
+}

@@ -1,0 +1,13 @@
+{
+ "cmd.arch.wall_pick": "Muro por línea",
+ "cmd.arch.wall_pick.desc": "Coloca un muro sobre una línea de dibujo elegida del nivel actual. F cambia el eje o la cara sobre la línea; Tab toma la cadena conectada. Cada elección es un paso de deshacer. También funciona con muros cortina.",
+ "hint.wall_pick.center": "Muro por línea: elija una línea de dibujo · eje sobre la línea · F cara · Tab cadena · Esc salir",
+ "hint.wall_pick.face": "Muro por línea: elija una línea de dibujo · cara sobre la línea, lado del cursor · F eje · Tab cadena · Esc salir",
+ "hint.wall_pick.center_chain": "Muro por línea: elija una línea para tomar su cadena · eje sobre la línea · F cara · Tab una línea",
+ "hint.wall_pick.face_chain": "Muro por línea: elija una línea para tomar su cadena · cara sobre la línea · F eje · Tab una línea",
+ "wall_pick.st.start": "Elija una línea de dibujo. F: eje o cara; Tab: cadena conectada",
+ "wall_pick.st.no_lines": "No hay líneas de dibujo visibles en este nivel",
+ "wall_pick.st.miss": "No hay línea de dibujo aquí",
+ "wall_pick.st.on_wall": "Esta línea ya está bajo el muro {id}",
+ "wall_pick.st.tight": "El desplazamiento de cara no cabe: un tramo de la cadena es más corto que el espesor del muro"
+}

@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "Φρεάτια",
+ "quick.cat.shaft": "Φρεάτιο",
+ "shaft_tool.browser.shaft": "Φρεάτιο #{id}",
+ "shaft_tool.shaft.top": "Ανώτερο επίπεδο",
+ "shaft_tool.shaft.cuts": "Κομμένα στοιχεία",
+ "shaft_tool.shaft.cut_area": "Εμβαδόν κοπής",
+ "shaft_tool.shaft.cut_volume": "Όγκος κοπής",
+ "elem.no.rooms": "Ακολουθεί τους χώρους που περιέχει"
+}

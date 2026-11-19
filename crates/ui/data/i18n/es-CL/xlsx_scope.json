@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "Exportar a hoja de cálculo XLSX: alcance",
+ "xlsx_scope.intro": "Elija qué entra en el libro. Al importarlo de vuelta solo cambian estos elementos.",
+ "xlsx_scope.base_whole": "Modelo completo",
+ "xlsx_scope.base_level": "Nivel activo",
+ "xlsx_scope.base_selection": "Selección",
+ "xlsx_scope.categories": "Categorías",
+ "xlsx_scope.cat_walls": "muros",
+ "xlsx_scope.cat_openings": "puertas",
+ "xlsx_scope.cat_rooms": "locales",
+ "xlsx_scope.cat_slabs": "forjados",
+ "xlsx_scope.cat_curtains": "muros cortina",
+ "xlsx_scope.nothing_selected": "No hay nada seleccionado: seleccione elementos primero o elija otro alcance.",
+ "xlsx_scope.no_categories": "Marque al menos una categoría.",
+ "xlsx_scope.no_level": "No se encontró el nivel activo.",
+ "xlsx_scope.export": "Exportar",
+ "xlsx_scope.preview_scope": "Alcance exportado: {scope}. Los elementos fuera de él nunca se cambian ni eliminan."
+}

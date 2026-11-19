@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "1 सेट जोड़ें",
+ "rebar_sets.add_n": "{n} सेट जोड़ें",
+ "rebar_sets.pick.search": "बार प्रकार खोजें",
+ "rebar_sets.pick.empty": "कोई मेल खाता बार प्रकार नहीं",
+ "rebar_sets.unit.deg": "°"
+}

@@ -1,0 +1,29 @@
+{
+ "params_list.n_params": {
+  "one": "# параметр",
+  "few": "# параметри",
+  "many": "# параметрів",
+  "other": "# параметрів"
+ },
+ "params_list.n_values": {
+  "one": "# значення",
+  "few": "# значення",
+  "many": "# значень",
+  "other": "# значень"
+ },
+ "params_list.n_elements": {
+  "one": "# елемент",
+  "few": "# елементи",
+  "many": "# елементів",
+  "other": "# елементів"
+ },
+ "params_list.exported": "{params} експортовано у {file}",
+ "params_list.export_failed": "Параметри не експортовано: {why}",
+ "params_list.open_folder": "Відкрити папку",
+ "params_list.delete_tip": "Видалити параметр і його значення",
+ "params_list.confirm": "Видалити {name} і його {values} на {elements}?",
+ "params_list.confirm_btn": "Видалити",
+ "params_list.cancel": "Скасувати",
+ "params_list.deleted": "Параметр {name} видалено ({values})",
+ "params_list.undo": "Скасувати"
+}

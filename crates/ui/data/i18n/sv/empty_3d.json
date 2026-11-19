@@ -1,0 +1,14 @@
+{
+ "empty.v3d_model.title": "Inget i 3D än",
+ "empty.v3d_model.hint": "Rita väggar i planen så visas de här.",
+ "empty.v3d_model.action": "Öppna plan",
+ "empty.v3d_hidden.title": "Alla element är dolda i den här vyn",
+ "empty.v3d_hidden.hint": "Tillfällig dold eller isolerad visning lämnar inget synligt. Vygrafiken ligger kvar som den är.",
+ "empty.v3d_hidden.action": "Visa alla",
+ "empty.v3d_graphics.title": "Vygrafiken döljer alla kategorier",
+ "empty.v3d_graphics.hint": "Kategorireglerna för den här vyn lämnar inget synligt. Slå på kategorierna igen under Vygrafik.",
+ "empty.v3d_graphics.action": "Öppna vygrafik",
+ "empty.v3d_box.title": "Sektionsboxen ligger utanför modellen",
+ "empty.v3d_box.hint": "Boxen klipper bort varje element. Anpassa den runt modellen igen.",
+ "empty.v3d_box.action": "Återställ box"
+}

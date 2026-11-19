@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D",
+ "phases.current_mark": "courante",
+ "phases.make_current": "Rendre courante",
+ "phases.col_phase": "Phase",
+ "phases.col_filter": "Filtre",
+ "phases.presets": "Préréglages de plan",
+ "phases.del_title": "Supprimer la phase",
+ "phases.del_text": "Supprimer la phase « {name} » ? Ses éléments passent dans la phase choisie ci-dessous.",
+ "phases.del_into": "Déplacer les éléments vers",
+ "phases.del_ok": "Supprimer",
+ "phases.col_kind": "Type d'élément",
+ "phases.col_count": "Nombre",
+ "phases.col_volume": "Volume"
+}

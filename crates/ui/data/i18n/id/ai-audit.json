@@ -1,0 +1,22 @@
+{
+ "ai.audit.tokens": "{n} token",
+ "ai.audit.filter.all": "Semua",
+ "ai.audit.filter.ai": "AI",
+ "ai.audit.filter.me": "Saya",
+ "ai.audit.search": "Cari perubahan",
+ "ai.audit.search.clear": "Hapus pencarian",
+ "ai.audit.show_all": "Tampilkan semua",
+ "ai.audit.empty.hint": "Perubahan yang dibuat atau diterapkan oleh model atau agen muncul di sini, masing-masing dengan cara kembali.",
+ "ai.audit.no_match": "Tidak ada perubahan yang cocok dengan filter.",
+ "ai.audit.show.tip": "Pilih dan tampilkan elemen yang disentuh perubahan ini",
+ "ai.audit.revert.ask": "Batalkan \"{what}\"? {change}.",
+ "ai.audit.revert.elements": {
+  "one": "# perubahan elemen",
+  "other": "# perubahan elemen"
+ },
+ "ai.audit.revert.keeps": "Perubahan yang lebih baru tetap. Pembatalan adalah satu langkah urung.",
+ "ai.audit.cancel": "Batal",
+ "ai.audit.toast.reverted": "Dibatalkan: {what}",
+ "ai.audit.toast.undone": "Diurungkan: {what}",
+ "ai.audit.redo": "Ulang"
+}

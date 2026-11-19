@@ -1,0 +1,7 @@
+{
+ "messages.title": "İletiler",
+ "messages.desc": "Bildirim geçmişi. Yeni uyarı veya hata yok.",
+ "messages.desc_new": "{n} yeni uyarı veya hata. Okumak için tıklayın.",
+ "messages.copy": "Tümünü kopyala",
+ "messages.clear": "Tümünü temizle"
+}

@@ -1,0 +1,15 @@
+{
+ "xlw.hd_never": "Pole veel eksporditud",
+ "xlw.hd_now": "just nüüd",
+ "xlw.hd_min": "{n} min tagasi",
+ "xlw.hd_hour": "{n} t tagasi",
+ "xlw.hd_day": "{n} p tagasi",
+ "xlw.hd_linked": "Seotud",
+ "xlw.hd_watched": "Jälgitud",
+ "xlw.hd_stale": "Mudel muutus pärast eksporti",
+ "xlw.ft_export": "Ekspordi",
+ "xlw.ft_review": "Vaata üle",
+ "xlw.ft_apply": "Rakenda {n} muudatust",
+ "xlw.ft_delete_missing": "Kustuta puuduvad",
+ "xlw.ft_keep_missing_tip": "Kustutamine on sisse lülitatud: ilma reata elemendid kustutatakse rakendamisel. Eemalda märge, et need säilitada."
+}

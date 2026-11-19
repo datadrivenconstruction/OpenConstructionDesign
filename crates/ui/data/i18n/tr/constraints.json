@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "Her düzenlemede bu duvarın mevcut uzunluğunu tutar",
+ "constraints.con.tip.lock_dist": "Her düzenlemede iki duvar arasındaki mesafeyi tutar",
+ "constraints.con.tip.equal": "Seçili duvarlar arasındaki aralıkları eşit tutar",
+ "constraints.con.tip.align": "İki duvarı tek hatta tutar",
+ "constraints.con.tip.parallel": "Duvarları paralel tutar",
+ "constraints.con.tip.perp": "Duvarları dik açıyla tutar",
+ "constraints.con.tip.align_grid": "Duvarı en yakın grid çizgisinde tutar",
+ "constraints.con.tip.lock_dist_grid": "Duvar ile en yakın grid çizgisi arasındaki mesafeyi tutar",
+ "constraints.con.tip.level_gap": "Katlar arasındaki boşluğu tutar",
+ "constraints.con.tip.top_to_level": "Duvarın üstünü üstteki kotta tutar"
+}

@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "Canal",
+ "mep3d.pipe": "Țeavă",
+ "mep3d.tray": "Jgheab pentru cabluri",
+ "mep3d.conduit": "Tub",
+ "mep3d.system": "Sistem",
+ "mep3d.length": "Lungime",
+ "mep3d.diameter": "Diametru",
+ "mep3d.width": "Lățime",
+ "mep3d.height": "Înălțime",
+ "mep3d.insulation": "Izolație",
+ "mep3d.tip": "Enter — aplică; piesele de racord se recalculează",
+ "mep3d.size_positive": "dimensiunea trebuie să fie mai mare decât zero",
+ "mep3d.not_changed": "nemodificat: {e}",
+ "mep3d.copied": "traseu copiat",
+ "mep3d.changed": "traseu modificat",
+ "mep3d.deleted": "elemente șterse: {n}",
+ "mep3d.not_deleted": "nu a fost șters: {e}",
+ "mep3d.no_wall_type": "niciun tip de perete",
+ "mep3d.demo.supply": "Alimentare S1",
+ "mep3d.demo.heating": "Încălzire",
+ "mep3d.demo.power": "Forță"
+}

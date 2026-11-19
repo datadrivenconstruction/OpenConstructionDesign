@@ -1,0 +1,6 @@
+{
+ "imported_prop_edit.remove": "Supprimer la propriété",
+ "imported_prop_edit.remove.tip": "Retire la propriété de {n} élément(s) sélectionné(s) en une seule étape d’annulation ; elle est supprimée du fichier IFC à l’enregistrement",
+ "imported_prop_edit.done": "{key} retiré de {n} élément(s)",
+ "imported_prop_edit.warn.reload": "Terminé, mais la vue n’a pas été actualisée ; rouvrez le panneau ou annulez si le résultat semble incorrect"
+}

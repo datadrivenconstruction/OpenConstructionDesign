@@ -1,0 +1,22 @@
+{
+ "depth.chip": "Hloubka {level}",
+ "depth.chip_tip": "Jak daleko další běh propracuje projekt: D1 koncept až D5 výroba, podle oboru",
+ "depth.all_off": "všechny obory vypnuty",
+ "depth.disc.arch": "Arch.",
+ "depth.disc.struct": "Kon",
+ "depth.disc.mep": "TZB",
+ "depth.disc.doc": "Dok",
+ "depth.project": "Hloubka projektu",
+ "depth.level.1": "D1 Koncept: hmoty, podlaží, plochy, jeden list",
+ "depth.level.2": "D2 Skica: stěny, místnosti podle programu, otvory, osy sítě, půdorysy",
+ "depth.level.3": "D3 Návrh: vrstvené typy, dimenzovaná konstrukce, hlavní trasy TZB a koncové prvky, výkazy",
+ "depth.level.4": "D4 Dílenská: detaily styků, kování, povrchy, výztuž, odbočky",
+ "depth.level.5": "D5 Výroba: výkazy ohybů, ocelové spoje, prefabrikáty, soupis materiálu",
+ "depth.as_project": "Stejná",
+ "depth.estimate": "Odhad: asi {elements} prvků, {minutes} min, {tokens} tokenů v {calls} voláních, {sheets} listů",
+ "depth.estimate_none": "Odhad přijde s navrženým projektem: model je zatím prázdný",
+ "depth.heat": "Mapa hloubky",
+ "depth.heat.row": "Hloubka",
+ "depth.settings": "Hloubka zpracování tohoto projektu",
+ "depth.settings_desc": "Hloubka, do které AI asistent pracuje, D1 až D5, s vypínačem a vlastní hloubkou pro každý obor; uloženo v souboru projektu"
+}

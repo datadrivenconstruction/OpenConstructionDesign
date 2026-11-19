@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "Anulat — Ctrl+Y refă",
+ "history.hist.empty": "Nicio modificare încă",
+ "history.hist.empty_hint": "Modificările tale apar aici. Dă clic pe orice pas pentru a reveni la el.",
+ "history.hist.revert_all_n": "Revino la toate modificările AI ({n})"
+}

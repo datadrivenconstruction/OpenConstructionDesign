@@ -1,0 +1,11 @@
+{
+ "xlsx_read_as.title": "Yeniden adlandırılmış sayfa?",
+ "xlsx_read_as.detail": "{found} sayfasının sütunları {sheet} ile aynı ({score}% eşleşme). Siz seçmedikçe okunmaz.",
+ "xlsx_read_as.detail_many": "{sheet} ile birden fazla sayfa uyuyor: {found}. Sizin yerinize hiçbiri seçilmedi; okunacak olanı seçin.",
+ "xlsx_read_as.read_as": "“{found}” sayfasını {sheet} olarak oku",
+ "xlsx_read_as.read_as_tip": "Yalnızca bu içe aktarma için. Sayfa yeniden adlandırılmaz; Uygula yalnızca yeni satırların kimliklerini oraya yazar.",
+ "xlsx_read_as.active": "“{found}” sayfası bu içe aktarmada {sheet} olarak okunur.",
+ "xlsx_read_as.undo": "{sheet} olarak okuma",
+ "xlsx_read_as.undo_tip": "Çalışma kitabındaki mevcut sayfa adlarına dön.",
+ "xlsx_read_as.not_rewritten": "Çalışma kitabı yeniden yazılmadı: yeniden adlandırılmış sayfa kendi adıyla okunur. Çalışma kitabını eşitli tutmak için adını geri değiştirin."
+}

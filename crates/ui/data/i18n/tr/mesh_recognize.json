@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "Tanınıyor: {done} / {total}",
+ "mesh_recognize.all": "Tümü {n}",
+ "mesh_recognize.only_confident": "Yalnızca emin olanlar",
+ "mesh_recognize.confident_tip": "Türü kategoriyle eşleşen ve güveni en az %{pct} olan satırları işaretler",
+ "mesh_recognize.row_hint": "Satırı işaretlemek için tıklayın. Ok tuşları gezinir, Enter işaretler.",
+ "mesh_recognize.kind_for": "{name} için tür",
+ "mesh_recognize.source": "Kaynak ağlar",
+ "mesh_recognize.keep": "Ağları tut",
+ "mesh_recognize.replace": "Ağları değiştir",
+ "mesh_recognize.convert_keep": "{n} dönüştür",
+ "mesh_recognize.convert_remove": "{n} dönüştür ve ağları kaldır",
+ "mesh_recognize.creates": "{n} oluşturulacak: {kinds}",
+ "mesh_recognize.creates_none": "Henüz bir şey işaretlenmedi",
+ "mesh_recognize.stay": "{n} kaynak ağ modelde kalır",
+ "mesh_recognize.removed": "{n} kaynak ağ kaldırılacak. Geri al ile geri gelir."
+}

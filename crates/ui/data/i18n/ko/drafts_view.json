@@ -1,0 +1,9 @@
+{
+ "drafts.draft.view": "“{name}”의 뷰 그래픽",
+ "drafts.draft.filter": "뷰 필터 “{name}”",
+ "drafts.draft.filter_new": "새 뷰 필터",
+ "drafts.draft.object_styles": "객체 스타일",
+ "drafts.draft.material": "재료 “{name}”",
+ "drafts.draft.type": "유형 “{name}”",
+ "drafts.draft.params": "패밀리 “{name}”의 매개변수"
+}

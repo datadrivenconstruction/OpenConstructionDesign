@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "Діапазон виду",
+ "view_range.range": "Діапазон виду",
+ "view_range.cut": "Площина розрізу",
+ "view_range.bottom": "Низ",
+ "view_range.depth": "Глибина виду",
+ "view_range.cut.hint": "Висота площини розрізу над рівнем. Елементи, що її перетинають, показуються в розрізі.",
+ "view_range.bottom.hint": "Низ діапазону відносно рівня. Допускаються нульові та від’ємні значення.",
+ "view_range.depth.hint": "Наскільки вид заглиблюється нижче низу. Нуль або більше.",
+ "view_range.err.number": "Введіть довжину в кожне поле",
+ "view_range.err.not_finite": "Введіть довжину в кожне поле",
+ "view_range.err.cut_not_above_bottom": "Площина розрізу має бути вище низу",
+ "view_range.err.negative_depth": "Глибина виду не може бути від’ємною",
+ "view_range.err.top_below_cut": "Верх діапазону не має бути нижче площини розрізу"
+}

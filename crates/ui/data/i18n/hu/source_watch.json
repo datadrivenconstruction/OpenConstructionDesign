@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "A(z) {name} megváltozott a lemezen.",
+ "src.watch.update": "Modell frissítése",
+ "src.watch.compare": "Összehasonlítás",
+ "src.watch.ignore": "Ezt a verziót figyelmen kívül hagyni",
+ "src.watch.missing": "{name}: a forrásfájl nem található. A munka folytatódik.",
+ "src.watch.locate": "Keresés…",
+ "src.watch.dismiss": "Elvetés",
+ "src.watch.more": "és még {n} forrásfájl",
+ "src.watch.done": "Frissítve innen: {name}: {updated} módosítva, {kept} mező szerkesztettként megtartva, {conflicts} ütközés, {locked} zárolt érték megtartva"
+}

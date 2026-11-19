@@ -1,0 +1,30 @@
+[
+ {
+  "id": "ui.pane.next",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [
+   "F6"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1",
+  "group": "view"
+ },
+ {
+  "id": "ui.pane.prev",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [
+   "Shift+F6"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1",
+  "group": "view"
+ }
+]

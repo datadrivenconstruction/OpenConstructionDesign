@@ -1,0 +1,10 @@
+{
+ "dlg.dw.store.unloaded": "Tegning “{name}” kunne ikke leses fra prosjektet og beholdes uendret i filen",
+ "dlg.dw.store.source_missing": "Tegning “{name}”: kildefilen finnes ikke, kopien lagret i prosjektet vises",
+ "dlg.dw.store.source_changed": "Tegning “{name}”: kildefilen er endret siden den ble plassert, kopien lagret i prosjektet vises",
+ "dlg.dw.store.unreadable": "De plasserte tegningene som er lagret i prosjektet, kan ikke leses",
+ "dlg.dw.store.not_saved": "Tegningene er ikke lagret: {why}",
+ "dlg.dw.store.why_read": "de plasserte tegningene som er lagret i prosjektet, kan ikke leses",
+ "dlg.dw.store.why_write": "prosjektfilen kunne ikke oppdateres",
+ "dlg.dw.store.missing_in_file": "Den lagrede filen inneholder ikke alle plasserte tegninger"
+}

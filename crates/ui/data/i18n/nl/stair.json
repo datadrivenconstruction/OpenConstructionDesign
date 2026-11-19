@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "Trappen",
+ "selcat.railing": "Leuningen",
+ "quick.cat.stair": "Trappen",
+ "quick.cat.railing": "Leuningen",
+ "stair.risers": "Optreden",
+ "stair.riser": "Optrededhoogte",
+ "stair.comfort": "2R + T",
+ "stair.tread_auto": "Traprede volgens regel",
+ "stair.tread_auto_tip": "Laat de ingevoerde traprede vallen en laat de 2R + T-regel die bepalen",
+ "stair.broken": "Deze trap past niet bij zijn verdiepingen",
+ "railing.host_stair": "Gehost op trap #{id}",
+ "railing.host_path": "Leuning schetsen",
+ "railing.length": "Lengte",
+ "stair.deleted_with": "met {n} gehoste leuningen"
+}

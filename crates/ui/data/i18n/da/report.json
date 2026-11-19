@@ -1,0 +1,23 @@
+{
+ "cmd.app.report": "Rapportér et problem…",
+ "cmd.app.report.desc": "Beskriver, hvad der gik galt, og gemmer en pakke på denne computer: din tekst, build- og systemdata, et billede af vinduet og den seneste nedbrudsrapport. Intet sendes.",
+ "report.title": "Rapportér et problem",
+ "report.what": "Hvad der skete",
+ "report.expected": "Hvad du forventede",
+ "report.steps": "Trin for at gentage det",
+ "report.opt.shot": "Medtag et billede af vinduet",
+ "report.opt.model": "Medtag en kopi af modellen",
+ "report.opt.model.note": "Slået fra som standard. Kopien indeholder dine projektdata, uden AI-journalen.",
+ "report.opt.paths": "Behold brugernavne i filstier",
+ "report.local": "Pakken gemmes kun på denne computer. Intet sendes automatisk.",
+ "report.blocked": "Beskriv først, hvad der skete.",
+ "report.save": "Gem pakke",
+ "report.copy": "Kopiér tekst",
+ "report.cancel": "Annuller",
+ "report.copied": "Rapportteksten er kopieret.",
+ "report.saved": "Pakke gemt: {path}",
+ "report.failed": "Pakken kunne ikke gemmes: {err}",
+ "report.model.fail": "Kopien af modellen kunne ikke laves, intet blev gemt: {err}",
+ "report.crash.notice": "Den forrige session endte med et nedbrud.",
+ "report.crash.action": "Rapportér et problem"
+}

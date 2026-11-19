@@ -1,0 +1,18 @@
+{
+ "faults.errors": {
+  "one": "মডেলে # ত্রুটি। দেখাতে ক্লিক করুন।",
+  "other": "মডেলে # ত্রুটি। তালিকা দেখতে ক্লিক করুন।"
+ },
+ "faults.warnings": {
+  "one": "মডেলে # সতর্কতা। দেখাতে ক্লিক করুন।",
+  "other": "মডেলে # সতর্কতা। তালিকা দেখতে ক্লিক করুন।"
+ },
+ "faults.title": "মডেল ত্রুটি: {n}",
+ "faults.none": "কোনো ত্রুটি বা সতর্কতা নেই।",
+ "faults.cat.wall": "দেয়াল",
+ "faults.cat.slab": "স্ল্যাব",
+ "faults.cat.opening": "ওপেনিং",
+ "faults.cat.curtain_wall": "কার্টেন ওয়াল",
+ "faults.cat.ramp": "র‍্যাম্প",
+ "faults.cat.zone": "জোন"
+}

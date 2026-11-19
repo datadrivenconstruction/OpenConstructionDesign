@@ -1,0 +1,16 @@
+{
+ "family_overwrite.ow.title": "مقادیر نوع‌های پروژه جایگزین شود؟",
+ "family_overwrite.ow.body": "بارگذاری، مقادیر {values} در {types} را جایگزین می‌کند. نمونه‌های قرارداده‌شده از این انواع: {instances}.",
+ "family_overwrite.ow.values": {
+  "one": "# مقدار",
+  "other": "# مقدار"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# نوع",
+  "other": "# نوع"
+ },
+ "family_overwrite.ow.list": "انواع: {list}",
+ "family_overwrite.ow.more": "و {n} مورد دیگر",
+ "family_overwrite.ow.back": "بازگشت به ویرایش",
+ "family_overwrite.ow.replace": "جایگزینی مقادیر"
+}

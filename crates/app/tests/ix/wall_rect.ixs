@@ -1,0 +1,4 @@
+# Rectangle of walls: two corners, one record
+tool(arch.wall_room) click(0,0) click(6,4) → walls=4 joints=4 journal=+1
+undo → walls=0
+redo → walls=4

@@ -1,0 +1,10 @@
+{
+ "ai.optx.applied": "Varianta „{name}” a fost aplicată. Anularea o readuce în ciornă",
+ "ai.optx.missing": "Varianta {id} nu mai există",
+ "ai.optx.accepted": "Varianta {id} este deja aplicată",
+ "ai.optx.not_draft": "Varianta {id} a fost respinsă și nu poate fi aplicată",
+ "ai.optx.stale": "Modelul s-a schimbat după ce a fost făcută varianta {id}: regenerează-o mai întâi",
+ "ai.optx.bad_recipe": "Rețeta variantei nu poate fi citită: {e}",
+ "ai.optx.refused": "Varianta nu a fost aplicată ({code}): {reason}",
+ "ai.optx.failed": "Varianta nu a fost aplicată: {e}"
+}

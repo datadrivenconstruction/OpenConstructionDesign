@@ -1,0 +1,13 @@
+{
+ "mep.sys.duct": "จ่ายลม S1",
+ "mep.sys.pipe": "น้ำเย็น C1",
+ "mep.sys.tray": "กำลังไฟ",
+ "mep.round": "กลม",
+ "mep.material": "วัสดุ",
+ "mep3d.elevation": "ระดับความสูงจากระดับ",
+ "mep3d.slope": "ความลาด",
+ "mep3d.shape": "รูปร่าง",
+ "mep3d.shape.rect": "สี่เหลี่ยม",
+ "mep3d.shape.round": "กลม",
+ "mep3d.shape.oval": "วงรีแบน"
+}

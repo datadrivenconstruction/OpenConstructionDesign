@@ -1,0 +1,15 @@
+{
+ "fe.add_why_empty": "Сначала введите имя параметра",
+ "fe.add_why_exists": "Параметр с таким именем уже есть; измените его кнопкой «Применить»",
+ "fe.apply_why_missing": "Нет параметра с таким именем; введите существующее имя",
+ "fe.nochange": "Изменений пока нет",
+ "options.accept_more": "Принять…",
+ "options.delete_more": "Удалить…",
+ "options.empty_title": "Наборов вариантов пока нет",
+ "options.more": "Ещё действия: {name}",
+ "options.primary_named": "Основной вариант: {name}",
+ "options.primary_tip": "Сделать этот вариант основным в наборе",
+ "options.select_first": "Сначала выберите элементы в модели",
+ "options.show_3d": "Показать в 3D: {name}",
+ "options.show_plan": "Показать на плане: {name}"
+}

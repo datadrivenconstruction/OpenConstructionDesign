@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "Réteg beszúrása alá",
+ "type_layers.layer.delete": "Réteg törlése",
+ "type_layers.layer.delete_last": "A típusnak legalább egy réteg kell",
+ "type_layers.value.bad": "Nem érvényes pozitív érték",
+ "type_layers.value.required": "Kötelező",
+ "type_layers.unsaved.title": "Mentetlen módosítások: {name}",
+ "type_layers.unsaved.body": "Alkalmazza őket a típusra, vagy elveti?",
+ "type_layers.unsaved.discard": "Elvetés"
+}

@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "凡例",
+ "legend.legend.new_hint": "新しい凡例名",
+ "legend.legend.delete_tip": "凡例を削除",
+ "legend.legend.delete_placed": "凡例を削除 (配置先: {sheets})",
+ "legend.legend.deleted": "凡例を削除しました: {name}",
+ "legend.legend.no_rows": "まだ行がありません。追加するか、現在のビューのスタイルを取り込んでください",
+ "legend.legend.replace_q": "{n} 行をこのビューのスタイルに置き換えますか？",
+ "legend.legend.replace": "置き換え",
+ "legend.legend.keep": "行を保持",
+ "legend.col.swatch": "色見本",
+ "legend.col.value": "値",
+ "legend.col.label": "ラベル"
+}

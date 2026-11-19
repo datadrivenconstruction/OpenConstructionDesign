@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "Punct",
+ "trial.field.distance": "Distanță",
+ "trial.field.target": "Element",
+ "trial.refused": "{field}: {reason}. Modificați-l pentru a aplica",
+ "trial.preview_off": "Previzualizare oprită: model prea mare"
+}

@@ -1,0 +1,11 @@
+{
+ "xlsx_read_as.title": "Foaie redenumită?",
+ "xlsx_read_as.detail": "Foaia {found} are coloanele lui {sheet} ({score}% potrivire). Nu este citită decât dacă o alegi.",
+ "xlsx_read_as.detail_many": "Mai multe foi corespund lui {sheet}: {found}. Nimic nu este ales pentru tine; alege-o pe cea care se citește.",
+ "xlsx_read_as.read_as": "Citește „{found}” ca {sheet}",
+ "xlsx_read_as.read_as_tip": "Doar pentru acest import. Foaia nu este redenumită; Aplică scrie doar id-urile rândurilor noi în ea.",
+ "xlsx_read_as.active": "Foaia „{found}” este citită ca {sheet} la acest import.",
+ "xlsx_read_as.undo": "Nu citi ca {sheet}",
+ "xlsx_read_as.undo_tip": "Înapoi la numele foilor așa cum sunt în registru.",
+ "xlsx_read_as.not_rewritten": "Registrul nu a fost rescris: o foaie redenumită este citită sub propriul nume. Redenumește-o înapoi pentru a păstra registrul sincronizat."
+}

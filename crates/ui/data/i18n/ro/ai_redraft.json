@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "Revizuit",
+ "ai.redraft.added": "+{n} adăugate",
+ "ai.redraft.removed": "−{n} eliminate",
+ "ai.redraft.changed": "~{n} modificate",
+ "ai.redraft.strip": "{what} de la ultima ta verificare",
+ "ai.redraft.note": "Plan revizuit verificat: {what}",
+ "ai.redraft.more": "+{n} în plus",
+ "ai.redraft.ack": "Am înțeles",
+ "ai.redraft.ack.tip": "Marchează această revizie ca văzută; Aplică se referă apoi la ea",
+ "ai.redraft.removed_list": "Elemente eliminate: {n}",
+ "ai.redraft.review_first": "Planul s-a schimbat după mesajul tău: verifică mai întâi modificările",
+ "ai.redraft.mark.tip": "Nou sau modificat de la ultima ta verificare",
+ "ai.redraft.emptied": "Completarea a eliminat toate elementele: ciorna este goală"
+}

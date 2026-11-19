@@ -1,0 +1,10 @@
+{
+ "ai.optx.applied": "Alternativet \"{name}\" tillämpat. Ångra återställer det till utkast",
+ "ai.optx.missing": "Alternativ {id} finns inte längre",
+ "ai.optx.accepted": "Alternativ {id} är redan tillämpat",
+ "ai.optx.not_draft": "Alternativ {id} avvisades och kan inte tillämpas",
+ "ai.optx.stale": "Modellen ändrades efter att alternativ {id} gjordes: generera om det först",
+ "ai.optx.bad_recipe": "Alternativets recept kan inte läsas: {e}",
+ "ai.optx.refused": "Alternativet tillämpades inte ({code}): {reason}",
+ "ai.optx.failed": "Alternativet tillämpades inte: {e}"
+}

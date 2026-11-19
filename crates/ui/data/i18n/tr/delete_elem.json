@@ -1,0 +1,9 @@
+{
+ "elem.deleted": "Silinen elemanlar: {n}",
+ "elem.deleted_kept": "Silinen elemanlar: {n}; yerinde bırakılan: {k} (silinemeyen paneller ve elemanlar)",
+ "elem.not_deleted": "silinmedi: {e}",
+ "elem.not_deletable": "Bu eleman silinemez",
+ "elem.panel": "perde duvar paneli",
+ "elem.panel_refused": "Panel, ait olduğu perde duvarın parçasıdır ve tek başına silinemez. Silmek için tüm duvarı seçin.",
+ "elem.reload_failed": "Silindi, ancak görünüm güncellenmedi: {e}"
+}

@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "การเปลี่ยนแปลงสมุดงานที่ยังไม่ได้นำไปใช้",
+ "workbook_changes.wb.body": "การปิดหรือสลับโปรเจกต์จะทิ้งการเปลี่ยนแปลงเหล่านี้",
+ "workbook_changes.wb.line": "นำเข้าสมุดงาน: {n} การเปลี่ยนแปลงยังไม่ได้นำไปใช้",
+ "workbook_changes.wb.review": "ตรวจสอบ",
+ "workbook_changes.wb.discard": "ยกเลิกการเปลี่ยนแปลง"
+}

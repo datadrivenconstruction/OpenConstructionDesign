@@ -1,0 +1,8 @@
+{
+ "undo.undone": "Bekor qilindi: {what}",
+ "undo.redone": "Qaytarildi: {what}",
+ "undo.action.edit.redo": "Qaytarish",
+ "undo.action.edit.undo": "Bekor qilish",
+ "hdr.unsaved": "Saqlanmagan o'zgarishlar",
+ "hdr.file_menu": "Fayl menyusi"
+}

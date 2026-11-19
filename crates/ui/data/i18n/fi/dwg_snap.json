@@ -1,0 +1,5 @@
+{
+ "snap.center": "Keskipiste",
+ "dwg_snap.through": "Läpäisevä piste",
+ "dwg_snap.through_tip": "Siirto napsautetun pisteen kautta (tarttuu päihin, risteyksiin, keskipisteisiin) kirjoitetun etäisyyden sijaan"
+}

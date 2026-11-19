@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "点",
+ "trial.field.distance": "距離",
+ "trial.field.target": "要素",
+ "trial.refused": "{field}: {reason}。適用するには変更してください",
+ "trial.preview_off": "プレビューはオフ: モデルが大きすぎます"
+}

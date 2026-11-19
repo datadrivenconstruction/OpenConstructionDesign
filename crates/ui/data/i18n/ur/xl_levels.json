@@ -1,0 +1,5 @@
+{
+ "xl.msg.level_name_x_is_already_used": "سطح کا نام '{}' پہلے سے استعمال ہو رہا ہے",
+ "xl.msg.unreadable_id_elements_without_a_row_not_deleted": "ناقابلِ پڑھ آئی ڈی: قطار کے بغیر عناصر اس درآمد میں حذف نہیں ہوتے",
+ "xl.msg.wall_type_name_x_is_already_used": "دیوار کی قسم کا نام '{}' پہلے سے استعمال ہو رہا ہے"
+}

@@ -1,0 +1,11 @@
+{
+ "job.stage.prepare": "Preparando el proyecto",
+ "open_guard.already_open": "{name} ya está abierto",
+ "open_guard.from_cache": "{name}: abierto desde la caché de importación",
+ "open_guard.known_project": "{name} se importó antes: abriendo ese proyecto",
+ "open_guard.locate": "Localizar",
+ "open_guard.mem_low": "Poca memoria: el presupuesto de malla se reduce a la mitad y se pausa la generación de niveles de detalle",
+ "open_guard.mem_low_short": "Poca memoria: la generación de niveles de detalle está en pausa hasta que se libere memoria",
+ "open_guard.no_window": "No se encontró la ventana de ese proyecto",
+ "open_guard.switch_window": "Cambiar a esa ventana"
+}

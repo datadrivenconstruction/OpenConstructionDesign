@@ -1,0 +1,8 @@
+{
+ "undo.undone": "واپس کیا گیا: {what}",
+ "undo.redone": "دوبارہ کیا گیا: {what}",
+ "undo.action.edit.redo": "دوبارہ کریں",
+ "undo.action.edit.undo": "واپس کریں",
+ "hdr.unsaved": "غیر محفوظ تبدیلیاں",
+ "hdr.file_menu": "فائل مینو"
+}

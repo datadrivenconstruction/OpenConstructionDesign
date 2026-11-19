@@ -1,0 +1,23 @@
+family Desk
+category furniture
+host floor
+ifc IfcFurniture DESK
+param Width length type 1400mm
+param Depth length type 700mm
+param Height length type 740mm
+param Top length type 25mm
+param Panel length type 25mm
+param Modesty length type 400mm
+param Board material type "Melamine White"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Back y = Depth / 2
+type "1400x700" Width=1400mm, Depth=700mm
+type "1600x800" Width=1600mm, Depth=800mm
+type "60x30in" Width=60in, Depth=30in, Height=29in, Top=1in, Panel=1in, Modesty=16in
+extrude Top rect(Left, Front, Right, Back) z(Height - Top, Height) mat(Board) show(3d, elev)
+extrude SideL rect(Left, Front, Left + Panel, Back) z(0, Height - Top) mat(Board) show(3d, elev)
+extrude SideR rect(Right - Panel, Front, Right, Back) z(0, Height - Top) mat(Board) show(3d, elev)
+extrude Modesty rect(Left + Panel, Back - 2 * Panel, Right - Panel, Back - Panel) z(Height - Top - Modesty, Height - Top) mat(Board) show(medium, fine, 3d, elev)
+symbol rect(Left, Front, Right, Back)

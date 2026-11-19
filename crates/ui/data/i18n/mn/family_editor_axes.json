@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "X тэнхлэг",
+ "fe.axis.y": "Y тэнхлэг",
+ "fe.axis.z": "Z тэнхлэг",
+ "fe.col.axis": "Тэнхлэг",
+ "fe.col.at": "Байрлал",
+ "fe.col.mode": "Горим",
+ "fe.mode.fixed": "Тогтмол",
+ "fe.mode.free": "Чөлөөт",
+ "fe.types.inherited": "Параметрээс анхдагч",
+ "fe.csv.more": "CSV-ийн бусад үйлдэл",
+ "fe.ref.selected": "Хавтгай: {name}"
+}

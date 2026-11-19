@@ -1,0 +1,16 @@
+{
+ "family_overwrite.ow.title": "替换项目类型值？",
+ "family_overwrite.ow.body": "加载将替换 {types} 中的 {values}。这些类型的已放置实例：{instances}。",
+ "family_overwrite.ow.values": {
+  "other": "# 个值",
+  "one": "# 个值"
+ },
+ "family_overwrite.ow.types": {
+  "other": "# 个类型",
+  "one": "# 个类型"
+ },
+ "family_overwrite.ow.list": "类型：{list}",
+ "family_overwrite.ow.more": "以及另外 {n} 项",
+ "family_overwrite.ow.back": "返回编辑",
+ "family_overwrite.ow.replace": "替换值"
+}

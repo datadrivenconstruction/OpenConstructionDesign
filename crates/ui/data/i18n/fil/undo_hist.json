@@ -1,0 +1,8 @@
+{
+ "undo.undone": "Na-undo: {what}",
+ "undo.redone": "Na-redo: {what}",
+ "undo.action.edit.redo": "Ulitin",
+ "undo.action.edit.undo": "I-undo",
+ "hdr.unsaved": "Mga hindi na-save na pagbabago",
+ "hdr.file_menu": "Menu ng file"
+}

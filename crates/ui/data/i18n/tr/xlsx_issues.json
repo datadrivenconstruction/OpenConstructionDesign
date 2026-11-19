@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "Atlanan satırlar ve hücreler",
+ "xlsx_issues.conflicts_title": "İki yerde de değiştirilmiş",
+ "xlsx_issues.missing_title": "Sayfa çalışma kitabında yok",
+ "xlsx_issues.look_alike_title": "Sayfa adı eşleşmiyor",
+ "xlsx_issues.mass_title": "Toplu silme onay gerektirir",
+ "xlsx_issues.sheets_missing": "{sheets} sayfaları çalışma kitabında yok (yeniden adlandırılmış veya silinmiş); satırları karşılaştırılmadı.",
+ "xlsx_issues.keep_model": "Modeli koru",
+ "xlsx_issues.take_book": "Çalışma kitabını al",
+ "xlsx_issues.open_book_tip": "Dosyayı kendi uygulamasında açar. Modelde hiçbir şey değişmez; çalışma kitabını kaydettikten sonra önizleme yeniden yüklenir."
+}

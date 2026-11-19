@@ -1,0 +1,14 @@
+{
+ "unit.size_b": "{n} B",
+ "unit.size_gb": "{n} GB",
+ "autosave_status.unit.edits": {
+  "one": "úprava",
+  "few": "úpravy",
+  "other": "úprav"
+ },
+ "autosave_status.unit.copies": {
+  "one": "kopie",
+  "few": "kopie",
+  "other": "kopií"
+ }
+}

@@ -1,0 +1,8 @@
+{
+ "ai_sent.summary": "Ushbu so'rovdagi loyiha ma'lumotlari: {messages} xabar, {tools} vosita natijasi, {images} tasvir",
+ "ai_sent.copy": "Nusxalash",
+ "ai_sent.filter": "Yuborilgan so'rovlardan qidirish",
+ "ai_sent.no_match": "Hech bir so'rov mos kelmadi.",
+ "ai_sent.instructions": "Ko'rsatmalar va vositalar",
+ "ai_sent.local_note": "Faqat shu kompyuterda, ushbu seans uchun saqlanadi. Kalitlar va parollar hech qachon ko'rsatilmaydi."
+}

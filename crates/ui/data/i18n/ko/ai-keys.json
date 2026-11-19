@@ -1,0 +1,14 @@
+{
+ "ai_keys.header_is_key": "키는 키 필드에 넣으세요 — 헤더는 평문으로 저장됩니다",
+ "ai_keys.move": "키 필드로 이동",
+ "ai_keys.remove_line": "헤더에서 제거",
+ "ai_keys.save_blocked": "저장하려면 키를 헤더 밖으로 옮기세요",
+ "ai_keys.show": "보기",
+ "ai_keys.hide": "숨기기",
+ "ai_keys.copy": "복사",
+ "ai_keys.tokens": "토큰",
+ "ai_keys.presets": "프리셋",
+ "ai_keys.preset_k": "{n}k",
+ "ai_keys.preset_m": "{n}M",
+ "ai_keys.images_on": "지원됨"
+}

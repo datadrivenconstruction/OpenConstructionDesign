@@ -1,0 +1,6 @@
+{
+ "xl.msg.filter_on_sheet_x": "filtro na folha '{}'",
+ "xl.msg.sort_settings_on_sheet_x": "configurações de classificação na folha '{}'",
+ "xl.msg.hidden_rows_on_sheet_x": "linhas ocultas na folha '{}'",
+ "xl.msg.hidden_columns_on_sheet_x": "colunas ocultas na folha '{}'"
+}

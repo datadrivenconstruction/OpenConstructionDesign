@@ -1,0 +1,19 @@
+{
+ "empty.v3d_gpu.title": "3D không khả dụng trên bộ điều hợp đồ họa này",
+ "empty.v3d_gpu.hint": "Mô hình an toàn và mặt bằng hoạt động. Khởi động lại với đồ họa an toàn để thử 3D lần nữa.",
+ "empty.v3d_gpu.action": "Khởi động lại với đồ họa an toàn",
+ "empty.v3d_loading.title": "Đang dựng 3D…",
+ "empty.v3d_loading.pct": "Đang mở… {pct} %",
+ "empty.plan_hidden.title": "Mọi cấu kiện đều bị ẩn trong mặt bằng này",
+ "empty.plan_hidden.hint": "Ẩn hoặc cô lập tạm thời không để lại gì hiển thị.",
+ "empty.plan_hidden.action": "Hiện tất cả",
+ "empty.plan_graphics.title": "Đồ họa góc nhìn ẩn mọi danh mục",
+ "empty.plan_graphics.hint": "Quy tắc danh mục của góc nhìn này không để lại gì để hiển thị.",
+ "empty.plan_graphics.action": "Mở đồ họa góc nhìn",
+ "empty.plan_phase.title": "Bộ lọc giai đoạn ẩn mọi thứ",
+ "empty.plan_phase.hint": "Không có gì trên cao độ này tồn tại trong giai đoạn mà góc nhìn này hiển thị.",
+ "empty.plan_phase.action": "Đổi giai đoạn",
+ "empty.plan_level.title": "Không có cấu kiện nào trên cao độ này",
+ "empty.plan_level.hint": "Các cao độ khác của mô hình này có cấu kiện.",
+ "empty.plan_level.action": "Đến cao độ có cấu kiện"
+}

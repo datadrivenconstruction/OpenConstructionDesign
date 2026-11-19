@@ -1,0 +1,67 @@
+{
+ "sources": [
+  {
+   "id": "za-nbr",
+   "title": "National Building Regulations under Act 103 of 1977 (functional text, no numeric limits in the parts read)",
+   "publisher": "Republic of South Africa",
+   "url": "https://source.acts.co.za/national-building-regulations-and-building-standards-act-1977/r2378_regulations_under_the_na.php",
+   "edition": "R2378 of 1990, as amended",
+   "licence": "public-law",
+   "verified": null
+  },
+  {
+   "id": "za-sans10400",
+   "title": "SANS 10400 parts C, M, O, S, T (deemed-to-satisfy rules for the regulations)",
+   "publisher": "South African Bureau of Standards",
+   "url": "https://archive.org/search?query=sans+10400",
+   "edition": "C:2010, M:2011, O:2011, S:2011, T:2020 ed.4",
+   "licence": "copyright-numbers-only",
+   "verified": null
+  },
+  {
+   "id": "za-sans10400-s",
+   "title": "SANS 10400 part S, application of the National Building Regulations, archive text copy",
+   "publisher": "Public.Resource.Org copy on archive.org",
+   "url": "https://archive.org/stream/za.sans.10400.s.2011/za.sans.10400.s.2011_djvu.txt",
+   "edition": "Edition 3, 2011",
+   "licence": "copyright-numbers-only",
+   "verified": "2026-11-14"
+  },
+  {
+   "id": "za-sans10400-t",
+   "title": "SANS 10400 part T, application of the National Building Regulations, archive text copy",
+   "publisher": "Public.Resource.Org copy on archive.org",
+   "url": "https://archive.org/stream/za.sans.10400.t.2011/za.sans.10400.t.2011_djvu.txt",
+   "edition": "Edition 3, 2011",
+   "licence": "copyright-numbers-only",
+   "verified": "2026-11-14"
+  },
+  {
+   "id": "za-sans10400-m",
+   "title": "SANS 10400 part M, application of the National Building Regulations, archive text copy",
+   "publisher": "Public.Resource.Org copy on archive.org",
+   "url": "https://archive.org/stream/za.sans.10400.m.2011/za.sans.10400.m.2011_djvu.txt",
+   "edition": "Edition 3, 2011",
+   "licence": "copyright-numbers-only",
+   "verified": "2026-11-14"
+  },
+  {
+   "id": "za-sans10400-o",
+   "title": "SANS 10400 part O, application of the National Building Regulations, archive text copy",
+   "publisher": "Public.Resource.Org copy on archive.org",
+   "url": "https://archive.org/stream/za.sans.10400.o.2011/za.sans.10400.o.2011_djvu.txt",
+   "edition": "Edition 3, 2011",
+   "licence": "copyright-numbers-only",
+   "verified": "2026-11-14"
+  },
+  {
+   "id": "za-sans10400-c",
+   "title": "SANS 10400 part C, application of the National Building Regulations, archive text copy",
+   "publisher": "Public.Resource.Org copy on archive.org",
+   "url": "https://archive.org/stream/za.sans.10400.c.2010/za.sans.10400.c.2010_djvu.txt",
+   "edition": "Edition 3, 2010",
+   "licence": "copyright-numbers-only",
+   "verified": "2026-11-14"
+  }
+ ]
+}

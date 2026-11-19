@@ -1,0 +1,23 @@
+{
+ "cmd.app.report": "Meld fra om et problem…",
+ "cmd.app.report.desc": "Beskriver hva som gikk galt og lagrer en pakke på denne maskinen: teksten din, bygg- og systemopplysninger, et bilde av vinduet og siste krasjlogg. Ingenting sendes.",
+ "report.title": "Meld fra om et problem",
+ "report.what": "Hva som skjedde",
+ "report.expected": "Hva du forventet",
+ "report.steps": "Trinn for å gjenta det",
+ "report.opt.shot": "Ta med et bilde av vinduet",
+ "report.opt.model": "Ta med en kopi av modellen",
+ "report.opt.model.note": "Av som standard. Kopien inneholder prosjektdataene dine, uten AI-journalen.",
+ "report.opt.paths": "Behold brukernavn i filbaner",
+ "report.local": "Pakken lagres bare på denne maskinen. Ingenting sendes automatisk.",
+ "report.blocked": "Beskriv først hva som skjedde.",
+ "report.save": "Lagre pakke",
+ "report.copy": "Kopier tekst",
+ "report.cancel": "Avbryt",
+ "report.copied": "Rapporteksten er kopiert.",
+ "report.saved": "Pakke lagret: {path}",
+ "report.failed": "Pakken kunne ikke lagres: {err}",
+ "report.model.fail": "Modellkopien kunne ikke lages, og ingenting ble lagret: {err}",
+ "report.crash.notice": "Forrige økt endte med en krasj.",
+ "report.crash.action": "Meld fra om et problem"
+}

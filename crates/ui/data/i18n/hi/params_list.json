@@ -1,0 +1,23 @@
+{
+ "params_list.n_params": {
+  "one": "# पैरामीटर",
+  "other": "# पैरामीटर"
+ },
+ "params_list.n_values": {
+  "one": "# मान",
+  "other": "# मान"
+ },
+ "params_list.n_elements": {
+  "one": "# तत्व",
+  "other": "# तत्व"
+ },
+ "params_list.exported": "{params} को {file} में निर्यात किया गया",
+ "params_list.export_failed": "पैरामीटर निर्यात नहीं हुए: {why}",
+ "params_list.open_folder": "फ़ोल्डर खोलें",
+ "params_list.delete_tip": "पैरामीटर और उसके मान हटाएँ",
+ "params_list.confirm": "{name} और उसके {values} को {elements} पर से हटाएँ?",
+ "params_list.confirm_btn": "हटाएँ",
+ "params_list.cancel": "रद्द करें",
+ "params_list.deleted": "पैरामीटर {name} हटाया गया ({values})",
+ "params_list.undo": "पूर्ववत करें"
+}

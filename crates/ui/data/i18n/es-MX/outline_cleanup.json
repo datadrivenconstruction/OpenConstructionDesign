@@ -1,0 +1,15 @@
+{
+ "cmd.ctx.floor.clean_outline": "Limpiar contorno",
+ "cmd.ctx.floor.clean_outline.desc": "Quita las puntas estrechas donde el contorno del forjado vuelve sobre sí mismo. Muestra antes una vista previa; un paso de deshacer.",
+ "outline_cleanup.title": "Limpiar contorno",
+ "outline_cleanup.intro": "El contorno de este forjado vuelve sobre sí mismo en puntas estrechas: {n}. La limpieza las elimina; lo demás queda igual.",
+ "outline_cleanup.legend_before": "Línea gruesa: el contorno actual",
+ "outline_cleanup.legend_after": "Línea fina: el contorno tras la limpieza",
+ "outline_cleanup.undo": "Puede deshacerlo en un paso.",
+ "outline_cleanup.apply": "Limpiar",
+ "outline_cleanup.cancel": "Cancelar",
+ "outline_cleanup.done": "Contorno limpiado, puntas eliminadas: {n}",
+ "outline_cleanup.none": "El contorno de este forjado no tiene puntas",
+ "outline_cleanup.failed": "No se pudo limpiar el contorno",
+ "outline_cleanup.changed": "El contorno cambió desde la vista previa; no se escribió nada. Revise la nueva vista previa."
+}

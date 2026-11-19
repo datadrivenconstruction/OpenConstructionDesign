@@ -1,0 +1,26 @@
+{
+ "id": "de",
+ "version": "2026.11",
+ "parent": "eu",
+ "country": "DE",
+ "lang": [
+  "de"
+ ],
+ "units": {
+  "length": "m",
+  "display": "metric"
+ },
+ "conventions": {
+  "ground_floor": 0,
+  "area_standard": "usable",
+  "net_share": 1.0,
+  "note": "Ground floor (EG) is 0; dwelling area follows the living-space ordinance, rooms with weighted balconies and low parts. Our own summary, not checked against a clause.",
+  "source": null
+ },
+ "status": "tier2",
+ "climate": {
+  "zones": [],
+  "default": null
+ },
+ "note": "Numbers with verified=true were checked against the cited clause; the rest are hints to verify by an engineer against the current edition. Wording is our own."
+}

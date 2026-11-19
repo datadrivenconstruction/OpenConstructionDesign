@@ -1,0 +1,4 @@
+{
+ "room_watch.room.dup": "A(z) {room} helyiség a(z) {other} helyiség területén belül van: a terület és a térfogat csak a(z) {other} helyiségben számít",
+ "ai.issue.room_dup": "A helyiség a(z) {0} helyiség területén belül van: a területe ott kerül számításra"
+}

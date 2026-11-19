@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "Доор давхарга нэмэх",
+ "type_layers.layer.delete": "Давхарга устгах",
+ "type_layers.layer.delete_last": "Төрөлд дор хаяж нэг давхарга байх ёстой",
+ "type_layers.value.bad": "Зөв эерэг утга биш",
+ "type_layers.value.required": "Заавал",
+ "type_layers.unsaved.title": "{name}-ийн хадгалаагүй өөрчлөлтүүд",
+ "type_layers.unsaved.body": "Төрөлд хэрэглэх үү, эсвэл хаях уу?",
+ "type_layers.unsaved.discard": "Хаях"
+}

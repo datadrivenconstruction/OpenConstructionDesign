@@ -1,0 +1,27 @@
+id = "G26_ferris_wheel__ru"
+tier = "hard"
+group = "Любая геометрия"
+title = "Ferris wheel"
+lang = "ru"
+base = "empty"
+
+[[turn]]
+say = "Колесо обозрения диаметром 50 м на А-образной опоре: обод-ферма, 36 тросовых спиц, 24 кабины, ось, посадочная платформа и фундаменты."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "comp:gondola|cabin|capsule"
+min = 24.0
+
+[[oracle.count]]
+spec = "beam+brace+col"
+min = 70.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

@@ -1,0 +1,6 @@
+{
+ "sched_import.no_key": "Dette regneark har ingen eksportpost (en ældre eksport): celler ændret i modellen efter den eksport kan blive overskrevet. Kontrollér de ændrede celler før Anvend.",
+ "sched_import.n_kept": "Ændret i modellen efter eksporten, beholdt: {n}",
+ "sched_import.n_conflict": "Ændret både i regnearket og i modellen, ikke anvendt: {n}",
+ "sched_import.why_conflict": "ændret i modellen efter eksporten (nu {model}), ikke anvendt"
+}

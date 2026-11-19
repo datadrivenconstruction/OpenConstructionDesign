@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "Slaat het hele model of de selectie op als binaire STL in meters of millimeters.",
+ "cmd.data.export_obj.desc": "Slaat het hele model of de selectie op als OBJ met een MTL-bestand: één groep per element, kleuren per materiaal.",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "OBJ met materialen (.obj)",
+ "open_file.filter.mesh": "3D-meshes (glTF, STEP, STL, OBJ)",
+ "mx.title": "{fmt} exporteren",
+ "mx.scope": "Wat exporteren",
+ "mx.scope.all": "Heel model",
+ "mx.scope.sel": "Selectie ({n} elementen)",
+ "mx.units": "Eenheden in het bestand",
+ "mx.units.m": "Meters",
+ "mx.units.mm": "Millimeters",
+ "mx.export": "Exporteren…",
+ "mx.saved": "{fmt} opgeslagen: {path} ({parts} elementen, {tris} driehoeken)",
+ "mx.partial": "{fmt} opgeslagen met {n} problemen, sommige volumes kunnen ontbreken: {path}",
+ "mx.failed": "Exporteren van {fmt} mislukt: {error}",
+ "mx.imported": "{file}: {n} elementen geïmporteerd ({tris} driehoeken)",
+ "mx.imported_notes": "{file}: {n} elementen geïmporteerd ({tris} driehoeken), {w} opmerkingen: {first}"
+}

@@ -1,0 +1,11 @@
+{
+ "cmd.ctx.ceiling.clean_outline": "輪郭を整理",
+ "cmd.ctx.ceiling.clean_outline.desc": "天井の輪郭が自身に戻る細いスパイクを取り除きます。先にプレビューを表示します。元に戻す操作は 1 回分です。",
+ "cmd.ctx.shaft.clean_outline": "輪郭を整理",
+ "cmd.ctx.shaft.clean_outline.desc": "シャフトの輪郭が自身に戻る細いスパイクを取り除きます。先にプレビューを表示します。元に戻す操作は 1 回分です。",
+ "outline_cleanup.intro_ceiling": "この天井の輪郭には自身に戻る細いスパイクがあります: {n}。整理ではそれらを取り除き、その他はそのままにします。",
+ "outline_cleanup.intro_shaft": "このシャフトの輪郭には自身に戻る細いスパイクがあります: {n}。整理ではそれらを取り除き、その他はそのままにします。",
+ "outline_cleanup.none_ceiling": "この天井の輪郭にスパイクはありません",
+ "outline_cleanup.none_shaft": "このシャフトの輪郭にスパイクはありません",
+ "outline_cleanup.need_host": "床、天井、またはシャフトを選択してください"
+}

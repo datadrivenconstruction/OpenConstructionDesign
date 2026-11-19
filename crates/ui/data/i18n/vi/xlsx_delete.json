@@ -1,0 +1,5 @@
+{
+ "xlsx_delete.delete_missing": "Xóa các hàng thiếu trong sổ làm việc",
+ "xlsx_delete.not_removed": "chưa xóa: không có dữ liệu so sánh",
+ "xlsx_delete.no_base_reason": "Không khả dụng: sổ làm việc không có dữ liệu so sánh nên không phân biệt được hàng thiếu với hàng bị xóa nhầm. Không có gì bị xóa khi Áp dụng."
+}

@@ -1,0 +1,10 @@
+{
+ "ai.optx.applied": "آپشن \"{name}\" لاگو ہوا۔ Undo اسے مسودے میں واپس لاتا ہے",
+ "ai.optx.missing": "آپشن {id} اب موجود نہیں",
+ "ai.optx.accepted": "آپشن {id} پہلے ہی لاگو ہے",
+ "ai.optx.not_draft": "آپشن {id} مسترد ہو چکا اور لاگو نہیں ہو سکتا",
+ "ai.optx.stale": "آپشن {id} بننے کے بعد ماڈل بدل گیا: پہلے اسے دوبارہ بنائیں",
+ "ai.optx.bad_recipe": "آپشن کا نسخہ نہیں پڑھا جا سکتا: {e}",
+ "ai.optx.refused": "آپشن لاگو نہیں ہوا ({code}): {reason}",
+ "ai.optx.failed": "آپشن لاگو نہیں ہوا: {e}"
+}

@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "Αναίρεση: {what}",
+ "undo_label.redo_what": "Επανάληψη: {what}",
+ "undo_label.undo_none": "Τίποτα για αναίρεση",
+ "undo_label.redo_none": "Τίποτα για επανάληψη"
+}

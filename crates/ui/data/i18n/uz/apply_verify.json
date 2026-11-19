@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "Qo'llash to'xtatildi: model o'z holicha saqlandi",
+ "apply_verify.rolled_back": "Qo'llash qoralamaga mos kelmadi va qaytarildi; model o'zgarmadi. {what}",
+ "apply_verify.diff.missing": "Qoralamada {what} {kind} ko'rsatilgan, lekin qo'llash buni bajarmadi.",
+ "apply_verify.diff.extra": "{kind} {what} qo'llandi, u qoralamada ko'rsatilmagan.",
+ "apply_verify.diff.kind": "Qoralamada {what} {shown} ko'rsatilgan, lekin {applied} qo'llangan.",
+ "apply_verify.diff.value": "{what}: “{col}” qoralamadagidan boshqacha chiqdi.",
+ "apply_verify.diff.truncated": "Qoralama va qo'llangan o'zgarish hajmi bo'yicha farq qiladi.",
+ "apply_verify.diff.unreadable": "Qo'llangan o'zgarishni qayta o'qib bo'lmadi ({e}).",
+ "apply_verify.no_base": "Qo'llash bajarilmadi: qoralamani tekshirish uchun nusxa yo'q. Model o'zgarmadi; qoralamani qayta so'rang.",
+ "apply_verify.take_back_failed": "Qaytarib bo'lmadi ({e}): Bekor qilish dan foydalaning.",
+ "apply_verify.kind.created": "yaratildi",
+ "apply_verify.kind.changed": "o'zgartirildi",
+ "apply_verify.kind.deleted": "o'chirildi",
+ "apply_verify.card.type_row": "{type} tur · {n} element o'zgarishni oladi"
+}

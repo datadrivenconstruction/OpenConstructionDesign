@@ -1,0 +1,20 @@
+{
+ "dwgfillet.fillet": "Fillet",
+ "dwgfillet.cancel": "Stop fillet",
+ "dwgfillet.tip": "Click two lines on the sides to keep: both are trimmed or extended to the corner, with a tangent arc when the radius is above zero",
+ "dwgfillet.radius": "Fillet radius",
+ "dwgfillet.radius_tip": "Radius of the arc in drawing units; 0 makes a sharp corner",
+ "dwgfillet.st.arm_first": "Click the first line on the side to keep",
+ "dwgfillet.st.arm_second": "Click the second line on the side to keep",
+ "dwgfillet.st.not_armed": "Choose Fillet first",
+ "dwgfillet.st.click_line": "Click a single line of the drawing",
+ "dwgfillet.st.other_drawing": "Both lines must belong to the same drawing: start again",
+ "dwgfillet.st.changed": "The first line changed: start again",
+ "dwgfillet.st.same_line": "Pick a different second line",
+ "dwgfillet.st.parallel": "The lines are parallel and never meet: no corner can be made",
+ "dwgfillet.st.degenerate": "A line has no length",
+ "dwgfillet.st.no_side": "The clicked side has no length from the corner",
+ "dwgfillet.st.too_big": "The radius is too large for these lines: use a smaller radius",
+ "dwgfillet.st.radius_bad": "The radius must be zero or positive",
+ "dwgfillet.st.done": "Corner made"
+}

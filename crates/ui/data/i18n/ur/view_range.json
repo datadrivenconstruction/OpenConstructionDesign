@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "ویو رینج",
+ "view_range.range": "ویو رینج",
+ "view_range.cut": "کٹ پلین",
+ "view_range.bottom": "نچلا",
+ "view_range.depth": "ویو گہرائی",
+ "view_range.cut.hint": "کٹ پلین کی سطح سے بلندی۔ اسے کاٹنے والے عناصر کٹے ہوئے دکھائے جاتے ہیں۔",
+ "view_range.bottom.hint": "رینج کا نچلا حصہ، سطح کے لحاظ سے۔ صفر یا منفی قدریں جائز ہیں۔",
+ "view_range.depth.hint": "ویو نچلے حصے سے کتنا نیچے دیکھتا ہے۔ صفر یا زیادہ۔",
+ "view_range.err.number": "ہر خانے میں لمبائی درج کریں",
+ "view_range.err.not_finite": "ہر خانے میں لمبائی درج کریں",
+ "view_range.err.cut_not_above_bottom": "کٹ پلین نچلے حصے سے اوپر ہونا چاہیے",
+ "view_range.err.negative_depth": "ویو گہرائی منفی نہیں ہو سکتی",
+ "view_range.err.top_below_cut": "رینج کا اوپری حصہ کٹ پلین سے نیچے نہیں ہونا چاہیے"
+}

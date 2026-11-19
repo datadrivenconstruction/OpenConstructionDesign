@@ -1,0 +1,22 @@
+{
+ "ai.audit.tokens": "{n} токен",
+ "ai.audit.filter.all": "Бүгд",
+ "ai.audit.filter.ai": "AI",
+ "ai.audit.filter.me": "Би",
+ "ai.audit.search": "Өөрчлөлтийг хайх",
+ "ai.audit.search.clear": "Хайлтыг арилгах",
+ "ai.audit.show_all": "Бүгдийг харуулах",
+ "ai.audit.empty.hint": "Загвар эсвэл агент ноорог гаргасан эсвэл хэрэгжүүлсэн өөрчлөлтүүд буцаах боломжтойгоор энд харагдана.",
+ "ai.audit.no_match": "Шүүлтүүрт тохирох өөрчлөлт байхгүй.",
+ "ai.audit.show.tip": "Энэ өөрчлөлтийн хөдөлгөсөн элементүүдийг сонгож харуулна",
+ "ai.audit.revert.ask": "“{what}”-ийг буцаах уу? {change}.",
+ "ai.audit.revert.elements": {
+  "one": "# элементийн өөрчлөлт",
+  "other": "# элементийн өөрчлөлт"
+ },
+ "ai.audit.revert.keeps": "Шинэ өөрчлөлтүүд үлдэнэ. Буцаалт нэг буцаах алхам.",
+ "ai.audit.cancel": "Цуцлах",
+ "ai.audit.toast.reverted": "Буцаагдлаа: {what}",
+ "ai.audit.toast.undone": "Цуцлагдлаа: {what}",
+ "ai.audit.redo": "Дахин хийх"
+}

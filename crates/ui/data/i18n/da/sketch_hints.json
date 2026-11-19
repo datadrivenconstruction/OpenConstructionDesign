@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "Tegn en lukket kontur: klik punkter, og tryk Enter eller Afslut for at oprette",
+ "sketch_hints.sk_finish": "Afslut",
+ "sketch_hints.sk_cancel": "Annullér",
+ "sketch_hints.import_warn": "advarsler fra modeltjek: {n} (første: {first})",
+ "sketch_hints.ai.offline.schedule": "Åbn listen",
+ "sketch_hints.ai.offline.check": "Kontrollér mod regler",
+ "sketch_hints.ai.offline.warnings": "Vis advarsler",
+ "cmd.file.publish_pdf": "Udgiv ark som PDF…",
+ "cmd.file.publish_pdf.desc": "Udgiver de valgte ark til PDF. Samme som Eksportér ark til PDF/SVG.",
+ "sketch_hints.verify_none": "Intet angivet af AI-assistenten i valget at verificere",
+ "sketch_hints.contours_none": "Ingen terrænflade i modellen: niveaukurver vises, når en oprettes",
+ "sketch_hints.contours_off": "Terrænflade-niveaukurver skjult",
+ "sketch_hints.contours_on": "Terrænflade-niveaukurver vist"
+}

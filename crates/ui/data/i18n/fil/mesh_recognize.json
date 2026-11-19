@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "Kinikilala ang {done} sa {total}",
+ "mesh_recognize.all": "Lahat ng {n}",
+ "mesh_recognize.only_confident": "Confident lang",
+ "mesh_recognize.confident_tip": "Nilalagyan ng check ang mga row na tugma ang uri sa kategorya at ang confidence ay hindi bababa sa {pct}%",
+ "mesh_recognize.row_hint": "I-click ang row para lagyan ng check. Gumagalaw ang arrow key, pumipili ang Enter.",
+ "mesh_recognize.kind_for": "Uri para sa {name}",
+ "mesh_recognize.source": "Source mesh",
+ "mesh_recognize.keep": "Itira ang mesh",
+ "mesh_recognize.replace": "Palitan ang mesh",
+ "mesh_recognize.convert_keep": "I-convert ang {n}",
+ "mesh_recognize.convert_remove": "I-convert ang {n} at alisin ang mesh",
+ "mesh_recognize.creates": "Gagawa ng {n}: {kinds}",
+ "mesh_recognize.creates_none": "Wala pang napili",
+ "mesh_recognize.stay": "{n} source mesh ang nananatili sa modelo",
+ "mesh_recognize.removed": "{n} source mesh ang aalisin. Ibabalik ng Undo ang mga ito."
+}

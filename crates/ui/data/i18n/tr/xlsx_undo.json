@@ -1,0 +1,6 @@
+{
+ "cmd.xlsx.undo_apply": "Son XLSX tablosu uygulamasını geri al",
+ "xlsx_undo.later": "Geri alınmadı: bu XLSX tablosu uygulamasından sonra model düzenlendi. Ctrl+Z'yi adım adım kullanın ya da Geçmiş panelini açın.",
+ "xlsx_undo.gone": "Geri alınacak bir şey yok: bu XLSX tablosu uygulaması zaten geri alındı.",
+ "xlsx_undo.busy": "Önce mevcut çizimi bitirin veya iptal edin, sonra XLSX tablosu uygulamasını geri alın."
+}

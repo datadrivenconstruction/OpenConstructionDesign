@@ -1,0 +1,7 @@
+{
+ "diff.kind.added": "जोड़ा गया",
+ "diff.kind.changed": "बदला गया",
+ "diff.kind.deleted": "हटाया गया",
+ "diff.kind.refused": "अस्वीकृत",
+ "diff.kind.conflict": "टकराव"
+}

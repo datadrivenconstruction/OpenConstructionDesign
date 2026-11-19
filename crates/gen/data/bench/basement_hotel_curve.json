@@ -1,0 +1,24 @@
+{
+ "schema": "gen_bench.v1",
+ "group": "basement",
+ "spec": {
+  "typology": "hotel",
+  "floors": 6,
+  "basements": 1,
+  "design": {
+   "curve": 2.5
+  }
+ },
+ "adjacency": [
+  [
+   "bedroom",
+   "bath",
+   3
+  ],
+  [
+   "bedroom",
+   "corridor",
+   1
+  ]
+ ]
+}

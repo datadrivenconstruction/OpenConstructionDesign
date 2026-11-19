@@ -1,0 +1,22 @@
+{
+ "depth.chip": "Dybde {level}",
+ "depth.chip_tip": "Hvor langt næste kørsel udarbejder projektet: D1 koncept til D5 fabrikation, pr. disciplin",
+ "depth.all_off": "alle discipliner fra",
+ "depth.disc.arch": "Arkitektur",
+ "depth.disc.struct": "Konstr",
+ "depth.disc.mep": "MEP",
+ "depth.disc.doc": "Dok",
+ "depth.project": "Projektdybde",
+ "depth.level.1": "D1 Koncept: volumen, etager, arealer, ét ark",
+ "depth.level.2": "D2 Skitse: vægge, rum efter program, åbninger, akser, planer",
+ "depth.level.3": "D3 Projektering: lagdelte typer, dimensioneret konstruktion, VVS-hovedledninger og terminaler, lister",
+ "depth.level.4": "D4 Arbejdstegning: samlingsdetaljer, beslag, overflader, armering, grene",
+ "depth.level.5": "D5 Fabrikation: bukkelister, stålforbindelser, præfabrikation, materialeliste",
+ "depth.as_project": "Samme",
+ "depth.estimate": "Estimat: ca. {elements} elementer, {minutes} min, {tokens} tokens i {calls} kald, {sheets} ark",
+ "depth.estimate_none": "Estimatet kommer med det udarbejdede projekt: modellen er stadig tom",
+ "depth.heat": "Dybdevarmekort",
+ "depth.heat.row": "Dybde",
+ "depth.settings": "Projekteringsdybde for dette projekt",
+ "depth.settings_desc": "Den dybde AI-assistenten arbejder til, D1 til D5, med en kontakt og egen dybde pr. disciplin; gemmes i projektfilen"
+}

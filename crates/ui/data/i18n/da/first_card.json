@@ -1,0 +1,9 @@
+{
+ "first_card.card.title": "Prøv XLSX-rundturen",
+ "first_card.card.step1": "Vælg en væg",
+ "first_card.card.step2": "Ændr en af dens egenskaber",
+ "first_card.card.step3": "Rediger i XLSX-regneark, kontrollér eksemplet, Anvend",
+ "first_card.card.spreadsheet": "Rediger i XLSX",
+ "first_card.card.skip": "Spring over",
+ "first_card.card.done": "Udført: modellen og regnearket stemmer overens"
+}

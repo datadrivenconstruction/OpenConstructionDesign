@@ -1,0 +1,11 @@
+{
+ "xlsx_read_as.title": "Tờ đã đổi tên?",
+ "xlsx_read_as.detail": "Tờ {found} có các cột của {sheet} (khớp {score}%). Nó sẽ không được đọc trừ khi bạn chọn.",
+ "xlsx_read_as.detail_many": "Có nhiều hơn một tờ khớp {sheet}: {found}. Không có tờ nào được chọn thay bạn; hãy chọn tờ để đọc.",
+ "xlsx_read_as.read_as": "Đọc “{found}” như {sheet}",
+ "xlsx_read_as.read_as_tip": "Chỉ cho lần nhập này. Tờ không bị đổi tên; Áp dụng chỉ ghi id của hàng mới vào đó.",
+ "xlsx_read_as.active": "Tờ “{found}” được đọc như {sheet} trong lần nhập này.",
+ "xlsx_read_as.undo": "Không đọc như {sheet}",
+ "xlsx_read_as.undo_tip": "Trở về tên tờ như trong sổ làm việc.",
+ "xlsx_read_as.not_rewritten": "Sổ làm việc không được ghi lại: tờ đã đổi tên được đọc theo tên riêng. Hãy đổi tên lại để sổ làm việc đồng bộ."
+}

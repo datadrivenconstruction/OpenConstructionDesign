@@ -1,0 +1,7 @@
+{
+ "offset_opts.dist_positive": "Distanța de decalare trebuie să fie mai mare decât zero; latura urmează cursorul",
+ "offset_opts.count_bad": "Număr întreg de la {min} la {max}",
+ "offset_opts.done_tip": "Termină selecția și pornește instrumentul",
+ "offset_opts.iso.apply_tip": "Fă ascunderea temporară permanentă pentru această vedere",
+ "offset_opts.iso.exit": "Ieși din modul temporar"
+}

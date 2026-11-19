@@ -1,0 +1,6 @@
+{
+ "geom.length": "لمبائی",
+ "sched.cat.room_seps": "کمرہ الگ کرنے والے",
+ "room.err.point_leave": "کمرہ {n}: نقطہ اپنی سرحد سے باہر چلا جائے گا",
+ "room.err.point_taken": "کمرہ {n}: نقطہ کمرہ {other} میں پڑ جائے گا"
+}

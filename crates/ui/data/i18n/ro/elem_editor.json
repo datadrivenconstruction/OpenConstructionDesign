@@ -1,0 +1,4 @@
+{
+ "elem.spreadsheet.applied": "Importat din foaia de calcul: {what}",
+ "elem.spreadsheet.failed": "Importul din foaia de calcul a eșuat: {e}"
+}

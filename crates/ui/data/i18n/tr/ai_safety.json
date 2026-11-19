@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "Adreste anahtar",
+ "ai_safety.auth.query_name": "Adres parametresi",
+ "ai_safety.need_query_name": "Anahtarı taşıyan adres parametresinin adını girin",
+ "ai_safety.apply_unlogged": "Uygulandı, ancak değişiklik günlüğü yazılamadı",
+ "ai_safety.audit_unlogged": "Yapay zeka asistanı günlüğü yazılamadı",
+ "ai_safety.chat_not_saved": "Sohbet projeye kaydedilemedi. Yeniden deneniyor.",
+ "ai_safety.clip_clears": "Pano 30 sn içinde temizlenir",
+ "ai_safety.copied_clears": "Kopyalandı. Pano 30 sn içinde temizlenir",
+ "ai_safety.key_session_only": "Anahtar uygulama kapanana kadar tutulur",
+ "ai.settings.no_data_dir": "bu sistem uygulama ayarları için bir klasör vermiyor"
+}

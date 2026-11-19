@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "Спросить ИИ: {q}",
+ "ai.palette.connect": "Подключите ИИ, чтобы спросить",
+ "ai.palette.draft.apply": "Применить черновик ({n})",
+ "ai.palette.draft.reject": "Отклонить черновик",
+ "ai.palette.draft.next": "Следующее изменение черновика",
+ "ai.palette.draft.show": "Показать черновик на виде",
+ "cmd.ai.next_change": "Следующее изменение черновика",
+ "cmd.ai.next_change.desc": "Переводит вид к следующему элементу, который меняет черновик.",
+ "cmd.ai.show_draft": "Показать черновик ИИ на виде",
+ "cmd.ai.show_draft.desc": "Вписывает в вид всё, что меняет черновик."
+}

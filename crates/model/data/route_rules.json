@@ -1,0 +1,13 @@
+{
+  "water_velocity_m_s": 1.2,
+  "air_velocity_m_s": 5.0,
+  "max_states": 300000,
+  "riser_join_m": 0.5,
+  "conduit_mm": [[2, 20], [4, 25], [8, 32], [16, 40], [0, 50]],
+  "variants": [
+    {"name": "shortest", "bend_cost": 0.3},
+    {"name": "fewest_fittings", "bend_cost": 4.0},
+    {"name": "along_axes", "bend_cost": 1.5, "axis_gain": 0.6, "wall_cost": 6.0}
+  ],
+  "power": {"in_wall": 1.2, "wall_cost": 0.5}
+}

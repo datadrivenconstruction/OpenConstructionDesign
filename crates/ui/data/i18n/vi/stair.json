@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "Cầu thang",
+ "selcat.railing": "Lan can",
+ "quick.cat.stair": "Cầu thang",
+ "quick.cat.railing": "Lan can",
+ "stair.risers": "Các bậc",
+ "stair.riser": "Chiều cao bậc",
+ "stair.comfort": "2R + T",
+ "stair.tread_auto": "Bản bậc theo quy tắc",
+ "stair.tread_auto_tip": "Bỏ bản bậc đã nhập và để quy tắc 2R + T tự tính",
+ "stair.broken": "Cầu thang này không khớp với các cao độ của nó",
+ "railing.host_stair": "Đặt trên cầu thang #{id}",
+ "railing.host_path": "Lan can phác thảo",
+ "railing.length": "Chiều dài",
+ "stair.deleted_with": "cùng {n} lan can đặt trên"
+}

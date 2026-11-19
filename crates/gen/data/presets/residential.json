@@ -1,0 +1,22 @@
+{
+ "schema": "gen_preset.v1",
+ "name": "residential",
+ "aliases": [
+  "apartment_block",
+  "housing",
+  "apartments"
+ ],
+ "base": "apartment_section",
+ "note": "residential: built as an apartment section",
+ "brief": {
+  "name": {
+   "en": "Residential building",
+   "ru": "Жилой дом"
+  }
+ },
+ "rules": {},
+ "program": {
+  "schema": "gen_program.v1",
+  "spaces": []
+ }
+}

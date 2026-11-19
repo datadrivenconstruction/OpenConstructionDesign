@@ -1,0 +1,11 @@
+{
+ "fe.csv.apply": "Primijeni uvoz",
+ "fe.csv.cancel": "Odbaci pregled",
+ "fe.csv.nothing": "Nema promjena: katalog odgovara trenutnim tipovima",
+ "fe.csv.preview": "Pregled uvoza: {added} novih, {changed} promijenjenih, {same} nepromijenjenih tipova; mijenja se {values} vrijednosti",
+ "fe.csv.preview_hint": "Prazne ćelije i nedostajući stupci zadržavaju trenutne vrijednosti. Ništa se ne mijenja dok ne primijenite.",
+ "fe.csv.skipped": "Nije primijenjeno, vrijednost zadržana: {msg}",
+ "fe.csv.type_added": "Novi tip {name}",
+ "fe.csv.type_changed": "Tip {name}",
+ "fe.csv.value": "  {param}: {old} → {new}"
+}

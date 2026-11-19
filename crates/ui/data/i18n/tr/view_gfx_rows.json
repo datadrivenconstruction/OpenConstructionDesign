@@ -1,0 +1,10 @@
+{
+ "view_gfx.vv.visible_tip": "Bu görünümde görünür",
+ "view_gfx.vv.enabled_tip": "Bu filtreyi bu görünümde uygula",
+ "view_gfx.vv.reset_tip": "Proje varsayılanına dön",
+ "view_gfx.vv.col.actions": "İşlemler",
+ "view_gfx.vv.nothing_to_apply": "Uygulanacak değişiklik yok",
+ "view_gfx.flt.save_blocked": "Filtreye ad verin ve her kural parametresini doldurun",
+ "view_gfx.flt.confirm_delete": "Tüm görünümler için silinsin mi?",
+ "view_gfx.flt.param_pick": "Seç…"
+}

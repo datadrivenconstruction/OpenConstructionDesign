@@ -1,0 +1,9 @@
+{
+ "first_card.card.title": "Спробуйте обмін через XLSX",
+ "first_card.card.step1": "Оберіть стіну",
+ "first_card.card.step2": "Змініть одну з її властивостей",
+ "first_card.card.step3": "Редагуйте в XLSX, перевірте перегляд, Застосувати",
+ "first_card.card.spreadsheet": "Редагувати в XLSX",
+ "first_card.card.skip": "Пропустити",
+ "first_card.card.done": "Готово: модель і таблиця збігаються"
+}

@@ -1,0 +1,21 @@
+{
+ "cmd.help.check_update": "Provjeri ažuriranja",
+ "update_check.title": "Provjera ažuriranja",
+ "update_check.desc": "Isključeno prema zadanim postavkama. Šalje se samo verzija, OS i arhitektura te vrsta instalacije na naš poslužitelj. Ništa se nikad ne preuzima niti instalira.",
+ "update_check.freq.startup": "Pri pokretanju",
+ "update_check.freq.daily": "Dnevno",
+ "update_check.freq.weekly": "Tjedno",
+ "update_check.freq.never": "Nikad",
+ "update_check.check_now": "Provjeri sada",
+ "update_check.dialog.title": "Provjera ažuriranja",
+ "update_check.unknown.title": "Provjera ažuriranja nije uspjela",
+ "update_check.unknown.body": "{e}. To ne znači da je ova verzija najnovija. Pokušajte ponovno kasnije.",
+ "update_check.current": "Imate najnoviju verziju ({v}).",
+ "update_check.newer": "Dostupna je verzija {v}",
+ "update_check.date": "Objavljeno {d}",
+ "update_check.unfit": "Ova verzija ({v}) starija je od najniže preporučene verzije {f}. Preporučuje se ažuriranje.",
+ "update_check.close": "Zatvori",
+ "update_check.open_failed": "Stranicu s izdanjem nije bilo moguće otvoriti.",
+ "update_check.toast.newer": "Dostupna je verzija {v}. Pomoć > Provjeri ažuriranja.",
+ "update_check.toast.unfit": "Ova verzija ({v}) starija je od najniže preporučene verzije {f}."
+}

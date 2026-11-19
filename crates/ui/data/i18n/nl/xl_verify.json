@@ -1,0 +1,9 @@
+{
+ "xl.msg.base_value": "controle na teruglezen mislukt, het oude werkboek blijft behouden: {} ({}) verwacht '{}', gelezen '{}'",
+ "xl.msg.base_missing": "controle na teruglezen mislukt, het oude werkboek blijft behouden: blad {} heeft geen rij voor id {}",
+ "xl.msg.base_extra": "controle na teruglezen mislukt, het oude werkboek blijft behouden: rij {} staat niet in het model",
+ "xl.msg.base_refused": "controle na teruglezen mislukt, het oude werkboek blijft behouden: {} ({}) is geweigerd: {}",
+ "xl.msg.base_sheet": "controle na teruglezen mislukt, het oude werkboek blijft behouden: blad {} ontbreekt, is leeg of onleesbaar",
+ "xl.msg.base_newer": "controle na teruglezen mislukt, het oude werkboek blijft behouden: {} cellen bevatten niet de modelwaarde",
+ "xl.msg.base_unreadable": "controle na teruglezen mislukt, het oude werkboek blijft behouden: het nieuwe werkboek kan niet worden gelezen ({})"
+}

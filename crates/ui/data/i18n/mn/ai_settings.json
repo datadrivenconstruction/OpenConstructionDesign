@@ -1,0 +1,9 @@
+{
+ "ai.settings.num_bad": "Тоо биш байна. 0.5 шиг бичнэ үү.",
+ "ai.settings.num_comma": "Аравтын тэмдэгт болгож цэг ашиглана уу, жишээ нь 0.5.",
+ "ai.settings.num_negative": "Тоо сөрөг байж болохгүй.",
+ "ai.settings.unit_money": "валют",
+ "ai.settings.unit_tokens": "токен",
+ "ai.settings.unit_price": "1М токенд",
+ "ai.settings.limits_hint": "0 нь хязгааргүй гэсэн үг. Татгалзсан утга өмнөх хязгаарыг хэвээр үлдээнэ."
+}

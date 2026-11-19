@@ -1,0 +1,22 @@
+{
+ "depth.chip": "Kedalaman {level}",
+ "depth.chip_tip": "Seberapa jauh proses berikutnya mengerjakan proyek: D1 konsep sampai D5 fabrikasi, per disiplin",
+ "depth.all_off": "semua disiplin nonaktif",
+ "depth.disc.arch": "Arsitektur",
+ "depth.disc.struct": "Struktur",
+ "depth.disc.mep": "MEP",
+ "depth.disc.doc": "Dok",
+ "depth.project": "Kedalaman proyek",
+ "depth.level.1": "D1 Konsep: massa, lantai, luas, satu lembar",
+ "depth.level.2": "D2 Sketsa: dinding, ruang sesuai program, bukaan, grid, denah",
+ "depth.level.3": "D3 Desain: tipe berlapis, struktur berukuran, saluran utama dan terminal MEP, jadwal",
+ "depth.level.4": "D4 Kerja: detail sambungan, perangkat keras, finishing, tulangan, cabang",
+ "depth.level.5": "D5 Fabrikasi: jadwal pembengkokan, sambungan baja, prefab, daftar material",
+ "depth.as_project": "Sama",
+ "depth.estimate": "Perkiraan: sekitar {elements} elemen, {minutes} menit, {tokens} token dalam {calls} panggilan, {sheets} lembar",
+ "depth.estimate_none": "Perkiraan hadir bersama proyek yang sudah dibuat drafnya: model masih kosong",
+ "depth.heat": "Peta panas kedalaman",
+ "depth.heat.row": "Kedalaman",
+ "depth.settings": "Kedalaman desain proyek ini",
+ "depth.settings_desc": "Kedalaman yang dikerjakan asisten AI, D1 sampai D5, dengan sakelar dan kedalaman sendiri per disiplin; disimpan di file proyek"
+}

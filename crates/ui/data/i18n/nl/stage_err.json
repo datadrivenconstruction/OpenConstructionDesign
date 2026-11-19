@@ -1,0 +1,10 @@
+{
+ "stage_err.kept": "tabel {t} behouden: {n} rijen geschreven na de Toevoegen",
+ "stage_err.stage.prev_attached": "Niet toegevoegd: de kopie van de vorige Toevoegen is nog open. Voer Toevoegen opnieuw uit",
+ "stage_err.stage.model_changed": "Niet toegevoegd: het model is gewijzigd terwijl het bestand werd gelezen. Voer Toevoegen opnieuw uit",
+ "stage_err.stage.no_record": "Niet toegevoegd: de geïmporteerde kopie heeft geen wijzigingslogboek",
+ "stage_err.stage.table_differs": "Niet toegevoegd: tabel {t} verschilt tussen het model en de geïmporteerde kopie",
+ "stage_err.stage.unique_key": "Niet toegevoegd: een unieke sleutel van tabel {t} kan niet worden gevolgd",
+ "stage_err.stage.table_gone": "Niet toegevoegd: de import heeft tabel {t} gewijzigd, die de kopie niet meer heeft",
+ "stage_err.stage.copy_held": "Toegevoegd; de geïmporteerde kopie blijft open tot de volgende Toevoegen of het opnieuw openen van het model"
+}

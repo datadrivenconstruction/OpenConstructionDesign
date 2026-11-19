@@ -1,0 +1,6 @@
+{
+ "pair_input.pair_hint": "Două valori sunt separate prin punct și virgulă: @1000;500",
+ "pair_input.old_pair": "O virgulă între două numere întregi nu mai face pereche: scrie 6000;4000 pentru două valori sau 6000,5 pentru zecimală",
+ "pair_input.op.bad_length": "Nu este o lungime: {text} ({why}). Nimic nu a fost modificat",
+ "pair_input.op.bad_count": "Numărul {text} nu a fost luat: un întreg de la {min} la {max}"
+}

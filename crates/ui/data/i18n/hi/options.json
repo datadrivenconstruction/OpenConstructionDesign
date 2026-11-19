@@ -1,0 +1,15 @@
+{
+ "fe.add_why_empty": "पहले पैरामीटर का नाम दर्ज करें",
+ "fe.add_why_exists": "इस नाम का पैरामीटर पहले से है; उसे बदलने के लिए लागू करें दबाएँ",
+ "fe.apply_why_missing": "इस नाम का कोई पैरामीटर नहीं; मौजूदा नाम लिखें",
+ "fe.nochange": "अभी कोई बदलाव नहीं",
+ "options.accept_more": "स्वीकार करें…",
+ "options.delete_more": "हटाएँ…",
+ "options.empty_title": "अभी कोई विकल्प सेट नहीं",
+ "options.more": "और कार्रवाइयाँ: {name}",
+ "options.primary_named": "प्राथमिक विकल्प: {name}",
+ "options.primary_tip": "इसे सेट का प्राथमिक विकल्प बनाएँ",
+ "options.select_first": "पहले मॉडल में तत्व चुनें",
+ "options.show_3d": "3D में दिखाएँ: {name}",
+ "options.show_plan": "प्लान में दिखाएँ: {name}"
+}

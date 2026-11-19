@@ -1,0 +1,5 @@
+{
+ "start_recent.unavailable": "Não disponível agora (a unidade ou o local de rede não responde): {path}",
+ "start_recent.unavailable_short": "Não disponível agora",
+ "start_recent.retry": "Tentar novamente"
+}

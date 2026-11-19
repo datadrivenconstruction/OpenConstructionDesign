@@ -1,0 +1,14 @@
+{
+ "dwg_table.copy": "Kopírovat tabulku",
+ "dwg_table.copy_tip": "Zkopíruje výkaz výměr podle vrstev jako tabulku do tabulkového procesoru",
+ "dwg_table.copied": "Výkaz výměr zkopírován (oddělený tabulátory)",
+ "dwg_table.total": "Celkem",
+ "dwg_table.col.layer": "Vrstva",
+ "dwg_table.col.count": "Počet",
+ "dwg_table.col.len": "Délka, {unit}",
+ "dwg_table.col.area": "Plocha, {unit}",
+ "dwg_table.unit.mm": "mm",
+ "dwg_table.unit.m2": "m²",
+ "dwg_table.unit.ft": "ft",
+ "dwg_table.unit.ft2": "ft²"
+}

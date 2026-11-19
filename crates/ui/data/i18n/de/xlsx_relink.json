@@ -1,0 +1,14 @@
+{
+ "xlsx_relink.title": "Die verknüpfte Arbeitsmappe wurde verschoben oder umbenannt",
+ "xlsx_relink.body": "Die Arbeitsmappe „{file}“ befindet sich nicht mehr in {folder}. Darin getippte Änderungen kommen erst zurück, wenn sie wieder verknüpft ist.",
+ "xlsx_relink.found_one": "„{file}“ in {folder} gefunden: gleiches Projekt und gleicher Export. Verknüpfen?",
+ "xlsx_relink.found_many": "{n} Arbeitsmappen dieses Projekts und dieses Exports wurden gefunden. Wählen Sie die aus, die verknüpft werden soll:",
+ "xlsx_relink.found_none": "Neben dem Ort wurde keine Arbeitsmappe dieses Exports gefunden. Suchen Sie sie oder exportieren Sie eine neue Arbeitsmappe.",
+ "xlsx_relink.link": "„{file}“ verknüpfen",
+ "xlsx_relink.find": "Suchen…",
+ "xlsx_relink.find_title": "Die verknüpfte Arbeitsmappe suchen",
+ "xlsx_relink.export_new": "Neue Arbeitsmappe exportieren",
+ "xlsx_relink.close": "Schließen",
+ "xlsx_relink.gone": "Die Arbeitsmappe „{file}“ ist nicht mehr in ihrem Ordner. Darin getippte Änderungen kommen erst zurück, wenn sie wieder verknüpft ist.",
+ "xlsx_relink.found_one_short": "„{file}“ gefunden: gleiches Projekt und gleicher Export. Verknüpfen?"
+}

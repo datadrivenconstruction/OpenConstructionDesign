@@ -1,0 +1,10 @@
+{
+ "cmd.view.axes_full": "Full axes",
+ "cmd.view.axes_full.desc": "Shows the X and Y axes as full lines across the plan. Hold F9 to show them only while pressed.",
+ "settings.axes_full": "Axes",
+ "settings.axes_full_desc": "Plan axes as full lines across the sheet. Hold F9 for a quick look.",
+ "settings.axes_full_on": "Show full axes",
+ "plan.hud.axes_tip": "Hold {key} to show full axes",
+ "status.axes_full.on": "Full axes on",
+ "status.axes_full.off": "Full axes off"
+}

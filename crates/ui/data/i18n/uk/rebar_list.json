@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "Перемістити вгору",
+ "rebar_list.move_down": "Перемістити вниз",
+ "rebar_list.remove": "Прибрати",
+ "rebar_list.zone_remove_last": "Зона має містити щонайменше одну кімнату: видаліть зону, щоб прибрати останню",
+ "rebar_list.rebar_empty_title": "У цій моделі немає арматури",
+ "rebar_list.rebar_empty_hint": "Розмістіть арматуру в основному елементі, і вона з'явиться тут у розкладі.",
+ "rebar_list.rebar_empty_action": "Розмістити арматуру"
+}

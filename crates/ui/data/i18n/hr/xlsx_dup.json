@@ -1,0 +1,10 @@
+{
+ "xlsx_dup.dup_undo": "Poništi odluku",
+ "xlsx_dup.dup_undo_tip": "Redci pretvoreni u nove elemente ({n}) ponovno se čitaju s id-em",
+ "xlsx_dup.dup_new": "Stvori uređene kopije kao nove elemente",
+ "xlsx_dup.dup_new_tip": "Redci {rows} postaju novi elementi s vlastitim vrijednostima; element #{id} zadržava svoje vrijednosti (jedan korak poništavanja zajedno s ostalima)",
+ "xl.msg.dup_same": "dvostruki id {}: iste vrijednosti kao redak {}; redak je zanemaren",
+ "xl.msg.dup_unchanged": "dvostruki id {}: nepromijenjena kopija izvezenog retka; redak je zanemaren",
+ "xl.msg.dup_conflict": "id {} nalazi se u recima {} s različitim vrijednostima; za ovaj id ništa nije primijenjeno",
+ "xl.msg.dup_conflict_keep": "id {} nalazi se u recima {} s različitim vrijednostima; za ovaj id ništa nije primijenjeno — zadržite jedan redak"
+}

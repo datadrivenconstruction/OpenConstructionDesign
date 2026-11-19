@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "Жылдам пернелер анықтамасы",
+ "cmd.help.shortcuts.desc": "Барлық жылдам пернелерді қазіргі күйінде контекст бойынша көрсетеді. Мәтін өрісінен тыс жерде ? басыңыз.",
+ "sheet.title": "Пернетақта жылдам пернелері",
+ "sheet.filter": "Команда немесе пернесі бойынша сүзу",
+ "sheet.filter_label": "Жылдам пернелерді сүзу",
+ "sheet.customize": "Теңшеу…",
+ "sheet.close": "Жабу",
+ "sheet.esc_close": "жабу үшін",
+ "sheet.none": "Сәйкес жылдам перне жоқ",
+ "sheet.none_hint": "Басқа сөзді немесе пернені көріңіз.",
+ "sheet.sec.general": "Жалпы",
+ "sheet.sec.plan": "План",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "Кестелер",
+ "sheet.sec.sheets": "Парақтар",
+ "sheet.sec.ai": "AI"
+}

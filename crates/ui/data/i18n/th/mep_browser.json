@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "ชื่อระบบ",
+ "mep_browser.add_blocked": "กรอกชื่อระบบก่อน",
+ "mep_browser.col.insulation": "ฉนวน",
+ "mep_browser.cancel": "ยกเลิก",
+ "mep_browser.delete.title": "ลบระบบนี้หรือไม่",
+ "mep_browser.delete.body": "ระบบ \"{name}\" และเส้นทาง ({n}) จะถูกลบ",
+ "mep_browser.delete.undo": "คุณสามารถเลิกทำได้ด้วยการเลิกทำครั้งเดียว",
+ "mep_browser.delete.confirm": "ลบระบบ"
+}

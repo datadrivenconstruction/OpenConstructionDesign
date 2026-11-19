@@ -1,0 +1,10 @@
+{
+ "dlg.dw.store.unloaded": "Tegning „{name}” kunne ikke læses fra projektet og bevares uændret i filen",
+ "dlg.dw.store.source_missing": "Tegning „{name}”: kildefilen blev ikke fundet, kopien gemt i projektet vises",
+ "dlg.dw.store.source_changed": "Tegning „{name}”: kildefilen er ændret siden placeringen, kopien gemt i projektet vises",
+ "dlg.dw.store.unreadable": "De placerede tegninger gemt i projektet kan ikke læses",
+ "dlg.dw.store.not_saved": "Tegninger er ikke gemt: {why}",
+ "dlg.dw.store.why_read": "de placerede tegninger gemt i projektet kan ikke læses",
+ "dlg.dw.store.why_write": "projektfilen kunne ikke opdateres",
+ "dlg.dw.store.missing_in_file": "Den gemte fil indeholder ikke alle placerede tegninger"
+}

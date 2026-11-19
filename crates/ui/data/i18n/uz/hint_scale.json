@@ -1,0 +1,10 @@
+{
+ "cmd.mod.scale": "Masshtab",
+ "cmd.mod.scale.desc": "Elementlarni tanlang, so'ng bazaviy nuqtani, havola uzunligini va yangi uzunlikni bosing yoki koeffitsient kiriting.",
+ "hint.scale.select": "Masshtab: elementlarni tanlang · Enter — tugatish",
+ "hint.scale.first": "Masshtab: bazaviy nuqtani tanlang · Esc — bekor qilish",
+ "hint.scale.second": "Masshtab: havola uzunligini tanlang · son — koeffitsient · Esc — bekor qilish",
+ "hint.scale.third": "Masshtab: yangi uzunlikni tanlang · son — koeffitsient · Esc — bekor qilish",
+ "scl.bad_factor": "Masshtab koeffitsienti noldan katta son bo'lishi kerak",
+ "scl.zero_ref": "Havola uzunligi nol: bazadan uzoqroq nuqtani tanlang"
+}

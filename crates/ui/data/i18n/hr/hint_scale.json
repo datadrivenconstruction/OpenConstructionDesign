@@ -1,0 +1,10 @@
+{
+ "cmd.mod.scale": "Skaliraj",
+ "cmd.mod.scale.desc": "Odaberite elemente, zatim kliknite početnu točku, referentnu duljinu i novu duljinu, ili upišite faktor.",
+ "hint.scale.select": "Skaliranje: odaberite elemente · Enter — gotovo",
+ "hint.scale.first": "Skaliranje: odaberite početnu točku · Esc — odustani",
+ "hint.scale.second": "Skaliranje: odaberite referentnu duljinu · broj — faktor · Esc — odustani",
+ "hint.scale.third": "Skaliranje: odaberite novu duljinu · broj — faktor · Esc — odustani",
+ "scl.bad_factor": "Faktor skaliranja mora biti broj veći od nule",
+ "scl.zero_ref": "Referentna duljina je nula: odaberite točku udaljenu od početne"
+}

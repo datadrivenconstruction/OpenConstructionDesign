@@ -1,0 +1,10 @@
+{
+ "cmd.view.axes_full": "Pełne osie",
+ "cmd.view.axes_full.desc": "Pokazuje osie X i Y jako pełne linie na całym rzucie. Przytrzymaj F9, aby pokazać je tylko podczas wciskania.",
+ "settings.axes_full": "Osie",
+ "settings.axes_full_desc": "Osie rzutu jako pełne linie na arkuszu. Przytrzymaj F9, aby szybko podejrzeć.",
+ "settings.axes_full_on": "Pokaż pełne osie",
+ "plan.hud.axes_tip": "Przytrzymaj {key}, aby pokazać pełne osie",
+ "status.axes_full.on": "Pełne osie włączone",
+ "status.axes_full.off": "Pełne osie wyłączone"
+}

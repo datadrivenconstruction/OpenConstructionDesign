@@ -1,0 +1,9 @@
+{
+ "tool.room": "Espacio",
+ "tool.room.name": "Espacio",
+ "room_tool.room.name": "Nombre",
+ "hint.room.place": "Haga clic dentro de un contorno de muros cerrado para crear un espacio · Esc — salir",
+ "tool.err.room_open": "La región no está cerrada: cierre el contorno de muros o añada un separador de espacio",
+ "tool.err.room_check": "No se pueden comprobar los espacios de esta planta",
+ "tool.err.room_exists": "Ya hay un espacio en este contorno"
+}

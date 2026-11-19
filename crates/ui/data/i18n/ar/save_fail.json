@@ -1,0 +1,16 @@
+{
+ "save_fail.save_fail.title": "لم يُحفظ المشروع",
+ "save_fail.save_fail.kept": "تعديلاتك ما زالت مفتوحة هنا. لا يضيع شيء ما دام المحرر مفتوحًا.",
+ "save_fail.save_fail.details": "التفاصيل",
+ "save_fail.save_fail.copy": "نسخ",
+ "save_fail.save_fail.save_as": "حفظ باسم…",
+ "save_fail.save_fail.retry": "إعادة المحاولة",
+ "save_fail.save_fail.close": "إغلاق",
+ "save_fail.cause.full": "القرص ممتلئ. فرِّغ مساحة أو احفظ المشروع على قرص آخر.",
+ "save_fail.cause.denied": "هذا المجلد أو الملف للقراءة فقط، أو ليست لديك صلاحية الكتابة هنا. اختر مجلدًا آخر.",
+ "save_fail.cause.locked": "الملف مفتوح في برنامج آخر. أغلقه هناك، ثم اضغط «إعادة المحاولة».",
+ "save_fail.cause.missing": "المجلد لم يعد موجودًا. اختر مجلدًا آخر، أو استعده واضغط «إعادة المحاولة».",
+ "save_fail.cause.offline": "المحرك أو مجلد الشبكة غير متاح. أعد وصله واضغط «إعادة المحاولة»، أو احفظ في مكان آخر.",
+ "save_fail.cause.too_long": "مسار الملف طويل جدًا. اختر مجلدًا أو اسم ملف أقصر.",
+ "save_fail.cause.other": "تعذّرت كتابة الملف: {detail}"
+}

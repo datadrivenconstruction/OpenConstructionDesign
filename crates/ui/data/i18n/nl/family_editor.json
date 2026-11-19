@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "Nieuwe familie",
+ "family_editor.open_tip": "Familie of concept openen",
+ "family_editor.close_named": "{name} sluiten",
+ "family_editor.unsaved": "Niet-opgeslagen wijzigingen",
+ "family_editor.search": "Zoeken",
+ "family_editor.nothing": "Niets gevonden",
+ "family_editor.sec_families": "Projectfamilies",
+ "family_editor.sec_drafts": "Concepten",
+ "family_editor.cap_category": "Categorie",
+ "family_editor.cap_host": "Drager",
+ "family_editor.cap_type": "Voorbeeldtype"
+}

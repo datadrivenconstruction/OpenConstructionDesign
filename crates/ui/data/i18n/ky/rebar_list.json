@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "Жогору жылдыруу",
+ "rebar_list.move_down": "Төмөн жылдыруу",
+ "rebar_list.remove": "Алып салуу",
+ "rebar_list.zone_remove_last": "Зонада кеминде бир бөлмө керек: акыркысын алып салуу үчүн зонаны өчүрүңүз",
+ "rebar_list.rebar_empty_title": "Бул моделде арматура жок",
+ "rebar_list.rebar_empty_hint": "Арматураны хост элементке коюңуз, ал ушул жерде тизмеге түшөт.",
+ "rebar_list.rebar_empty_action": "Арматура коюу"
+}

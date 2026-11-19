@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "Ez a munkafüzet már létezik",
+ "xlsx_exists.foreign": "Nem ennek a projektnek a munkafüzete, ezért soha nem cserélődik le.",
+ "xlsx_exists.pending": "{n} szerkesztést tartalmaz, amelyek még nincsenek alkalmazva a modellen.",
+ "xlsx_exists.outside": "{n} olyan sora van, amelyet az új export nem tartalmaz.",
+ "xlsx_exists.new_name": "Exportálás ide: {name}",
+ "xlsx_exists.apply_first": "Előbb alkalmazza őket",
+ "xlsx_exists.replace": "Csere (a régi munkafüzet az _archive mappába kerül)",
+ "xlsx_exists.archived": "A régi munkafüzet áthelyezve ide: {path}",
+ "xlsx_exists.archive_failed": "A régi munkafüzetet nem lehetett áthelyezni, semmi sem lett exportálva: {error}"
+}

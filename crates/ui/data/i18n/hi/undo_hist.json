@@ -1,0 +1,8 @@
+{
+ "undo.undone": "पूर्ववत किया गया: {what}",
+ "undo.redone": "फिर से किया गया: {what}",
+ "undo.action.edit.redo": "फिर से करें",
+ "undo.action.edit.undo": "पूर्ववत करें",
+ "hdr.unsaved": "असहेजे बदलाव",
+ "hdr.file_menu": "फ़ाइल मेनू"
+}

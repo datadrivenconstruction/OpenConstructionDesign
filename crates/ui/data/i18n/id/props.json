@@ -1,0 +1,18 @@
+{
+ "props.multi.title": {
+  "one": "# elemen",
+  "other": "# elemen"
+ },
+ "props.multi.cats": {
+  "one": "# kategori",
+  "other": "# kategori"
+ },
+ "props.multi.varies": {
+  "one": "bervariasi (#)",
+  "other": "bervariasi (#)"
+ },
+ "props.multi.clear": "Hapus pilihan",
+ "props.multi.undo": "Urungkan",
+ "props.multi.narrowed": "Pilihan: {n} · {name}",
+ "props.multi.chip_tip": "{name}: {n}  ·  Klik menampilkan propertinya, Ctrl+klik hanya menyimpan ini"
+}

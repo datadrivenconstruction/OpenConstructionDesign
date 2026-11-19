@@ -1,0 +1,5 @@
+{
+ "ai.ghost.draft": "Podgląd szkicu — model bez zmian",
+ "ai.ghost.before": "Przed: model w obecnym stanie. Puść B, aby zobaczyć szkic",
+ "ai.ghost.hint": "Przytrzymaj B, aby zobaczyć stan „Przed”"
+}

@@ -1,0 +1,5 @@
+{
+ "src.more": "Lisää",
+ "src.cf.chosen": "{n} / {m} valittu",
+ "src.opt.allow_mass_warn": "Varovasti: tiedosto ei vastaa useimpia tuotuja elementtejä, joten yhdistäminen voi muuttaa paljon tietoja."
+}

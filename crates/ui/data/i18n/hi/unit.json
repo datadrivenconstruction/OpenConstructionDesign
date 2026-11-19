@@ -1,0 +1,12 @@
+{
+ "unit.size_b": "{n} B",
+ "unit.size_gb": "{n} GB",
+ "autosave_status.unit.edits": {
+  "one": "संपादन",
+  "other": "संपादन"
+ },
+ "autosave_status.unit.copies": {
+  "one": "प्रति",
+  "other": "प्रतियाँ"
+ }
+}

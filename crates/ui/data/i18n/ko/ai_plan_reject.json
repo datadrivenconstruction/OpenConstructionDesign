@@ -1,0 +1,9 @@
+{
+ "ai.plan.reject_ask": {
+  "one": "변경 #건을 거부할까요?",
+  "other": "변경 #건을 거부할까요?"
+ },
+ "ai.plan.reject_ask.hint": "초안과 체크 표시가 버려집니다. 모델은 그대로 유지됩니다.",
+ "ai.plan.reject_confirm": "거부",
+ "ai.plan.reject_keep": "유지"
+}

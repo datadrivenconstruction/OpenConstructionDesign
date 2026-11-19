@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "سسٹم کا نام",
+ "mep_browser.add_blocked": "پہلے سسٹم کا نام درج کریں",
+ "mep_browser.col.insulation": "موصلیت",
+ "mep_browser.cancel": "منسوخ کریں",
+ "mep_browser.delete.title": "یہ سسٹم حذف کریں؟",
+ "mep_browser.delete.body": "سسٹم “{name}” اور اس کے رنز ({n}) حذف ہو جائیں گے۔",
+ "mep_browser.delete.undo": "ایک واپس سے اسے واپس کیا جا سکتا ہے۔",
+ "mep_browser.delete.confirm": "سسٹم حذف کریں"
+}

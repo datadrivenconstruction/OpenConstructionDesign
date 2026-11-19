@@ -1,0 +1,11 @@
+{
+ "fe.csv.apply": "Importni qo'llash",
+ "fe.csv.cancel": "Oldindan ko'rishni bekor qilish",
+ "fe.csv.nothing": "O'zgartirish yo'q: katalog joriy turlarga mos",
+ "fe.csv.preview": "Import oldindan ko'rishi: {added} ta yangi, {changed} ta o'zgargan, {same} ta o'zgarmagan tur; {values} ta qiymat o'zgaradi",
+ "fe.csv.preview_hint": "Bo'sh kataklar va yo'q ustunlar joriy qiymatlarni saqlaydi. Qo'llamaguningizcha hech narsa o'zgarmaydi.",
+ "fe.csv.skipped": "Qo'llanmadi, qiymat saqlandi: {msg}",
+ "fe.csv.type_added": "Yangi tur {name}",
+ "fe.csv.type_changed": "Tur {name}",
+ "fe.csv.value": "  {param}: {old} → {new}"
+}

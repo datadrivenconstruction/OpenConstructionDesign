@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D",
+ "phases.current_mark": "nykyinen",
+ "phases.make_current": "Aseta nykyiseksi",
+ "phases.col_phase": "Vaihe",
+ "phases.col_filter": "Suodatin",
+ "phases.presets": "Pohjapiirroksen esiasetukset",
+ "phases.del_title": "Poista vaihe",
+ "phases.del_text": "Poistetaanko vaihe ”{name}”? Sen elementit siirtyvät alla valittuun vaiheeseen.",
+ "phases.del_into": "Siirrä elementit kohteeseen",
+ "phases.del_ok": "Poista",
+ "phases.col_kind": "Elementtityyppi",
+ "phases.col_count": "Määrä",
+ "phases.col_volume": "Tilavuus"
+}

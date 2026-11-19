@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "Aplicar se detuvo: el modelo se mantiene como estaba",
+ "apply_verify.rolled_back": "Aplicar no coincidió con el borrador y se revirtió; el modelo no cambió. {what}",
+ "apply_verify.diff.missing": "El borrador muestra {what} {kind}, pero Aplicar no lo hizo.",
+ "apply_verify.diff.extra": "Aplicar {kind} {what}, que el borrador no muestra.",
+ "apply_verify.diff.kind": "El borrador muestra {what} {shown}, pero Aplicar lo {applied}.",
+ "apply_verify.diff.value": "{what}: «{col}» salió distinto del borrador.",
+ "apply_verify.diff.truncated": "El borrador y el cambio aplicado difieren en tamaño.",
+ "apply_verify.diff.unreadable": "No se pudo leer el cambio aplicado ({e}).",
+ "apply_verify.no_base": "Aplicar no se ejecutó: falta la copia con la que comprobar el borrador. El modelo no cambió; pedir de nuevo el borrador.",
+ "apply_verify.take_back_failed": "No se pudo revertir ({e}): usar Deshacer.",
+ "apply_verify.kind.created": "creado",
+ "apply_verify.kind.changed": "modificado",
+ "apply_verify.kind.deleted": "eliminado",
+ "apply_verify.card.type_row": "Tipo {type} · {n} elementos reciben el cambio"
+}

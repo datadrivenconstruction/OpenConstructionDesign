@@ -1,0 +1,4 @@
+{
+ "room_status.open": "Raum {room} ist nicht mehr umschlossen",
+ "warn.kind.room_open": "Räume nicht umschlossen"
+}

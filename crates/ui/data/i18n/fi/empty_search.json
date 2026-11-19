@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "Ei tuloksia",
+ "empty.browser_search.hint": "Mikään näkymä, taso, tyyppi tai huone ei vastaa hakua.",
+ "empty.browser_search.action": "Tyhjennä haku",
+ "empty.xl_filtered.title": "Mikään merkintä ei täsmää suodattimiin",
+ "empty.xl_filtered.hint": "Ota käyttöön lisää tyyppejä, valitse toinen lehti tai muuta hakutekstiä.",
+ "empty.xl_filtered.action": "Tyhjennä suodattimet",
+ "empty.xl_nochanges.title": "Ei muutoksia kirjassa",
+ "empty.xl_nochanges.hint": "Kirja vastaa mallia: sen tuominen ei muuttaisi mitään.",
+ "empty.version_same.title": "Mallit ovat identtiset",
+ "empty.version_same.hint": "Avoimen mallin ja valitun version välillä ei löytynyt eroja.",
+ "empty.templates.title": "Ei vielä näkymämalleja",
+ "empty.templates.hint": "Luo se nykyisestä näkymästä käyttääksesi sen asetuksia muissa näkymissä.",
+ "empty.templates.action": "Nimeä mallipohja",
+ "empty.fe_params.title": "Ei vielä parametreja",
+ "empty.fe_params.hint": "Lisää alla parametri ohjaamaan kokoja, materiaaleja tai näkyvyyttä.",
+ "empty.fe_params.action": "Lisää parametri"
+}

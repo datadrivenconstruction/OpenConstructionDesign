@@ -1,0 +1,127 @@
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+env:
+  CARGO_TERM_COLOR: always
+  CARGO_INCREMENTAL: "0"
+  RUST_TOOLCHAIN: "1.95.0"
+
+jobs:
+  names:
+    name: licence and trademark lint (required)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python tools/name_lint.py
+      - run: python tools/spdx_headers.py
+
+  test:
+    name: test ${{ matrix.crate }} (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        crate: [ddc-bridge-proto, ddc-model, ddc-geom, ddc-solver, ddc-io, ddc-render, ddc-app,
+                ddc-ui, ddc-ai, ddc-ops, ddc-gen, ddc-fem, ddc-calc, ddc-cli, ddc-script, ddc-link,
+                bigfile-bench]
+    steps:
+      - uses: actions/checkout@v4
+      - name: toolchain
+        shell: bash
+        run: |
+          rustup toolchain install "$RUST_TOOLCHAIN" --profile minimal
+          rustup default "$RUST_TOOLCHAIN"
+      - name: system libraries
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libxkbcommon-dev libwayland-dev libx11-dev libxcursor-dev libxrandr-dev libxi-dev libgl1-mesa-dev libfontconfig1-dev
+      - uses: Swatinem/rust-cache@v2
+        with:
+          shared-key: test-${{ matrix.os }}-${{ matrix.crate }}
+          save-if: ${{ github.ref == 'refs/heads/main' }}
+      - name: build
+        run: cargo build -p ${{ matrix.crate }} --all-targets --locked
+      - name: test
+        run: cargo test -p ${{ matrix.crate }} --locked
+
+  fmt:
+    name: fmt (advisory)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    # The tree is not yet formatted in one pass; this job reports and does not block.
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - name: toolchain
+        shell: bash
+        run: |
+          rustup toolchain install "$RUST_TOOLCHAIN" --profile minimal -c rustfmt
+          rustup default "$RUST_TOOLCHAIN"
+      - run: cargo fmt --all --check
+
+  clippy:
+    name: clippy (warnings allowed)
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - name: toolchain
+        shell: bash
+        run: |
+          rustup toolchain install "$RUST_TOOLCHAIN" --profile minimal -c clippy
+          rustup default "$RUST_TOOLCHAIN"
+      - name: system libraries
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libxkbcommon-dev libwayland-dev libx11-dev libxcursor-dev libxrandr-dev libxi-dev libgl1-mesa-dev libfontconfig1-dev
+      - uses: Swatinem/rust-cache@v2
+        with:
+          shared-key: clippy
+          save-if: ${{ github.ref == 'refs/heads/main' }}
+      - name: clippy
+        shell: bash
+        run: |
+          cargo clippy --workspace --all-targets --locked --message-format=short 2> clippy.txt || { tail -n 80 clippy.txt; exit 1; }
+          {
+            echo "### clippy warnings (not blocking yet)"
+            echo '```'
+            grep -E '^(warning|error)' clippy.txt | sed -E 's/^[^ ]+ //' | sort | uniq -c | sort -rn | head -n 60
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          grep -cE '^[^ ]+: warning' clippy.txt || true
+
+  supply:
+    name: supply chain (required)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: EmbarkStudios/cargo-deny-action@v2
+      - if: ${{ !cancelled() }}
+        run: python3 tools/closed_deps_check.py
+
+  ci-ok:
+    name: ci ok
+    if: always()
+    needs: [names, test, clippy, supply]
+    runs-on: ubuntu-latest
+    steps:
+      - shell: bash
+        run: |
+          [ "${{ needs.names.result }}" = success ] && [ "${{ needs.test.result }}" = success ] \
+            && [ "${{ needs.clippy.result }}" = success ] && [ "${{ needs.supply.result }}" = success ]

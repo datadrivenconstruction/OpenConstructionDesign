@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "Алдыңғы парақ (Page Up)",
+ "sheets.print.next": "Келесі парақ (Page Down)",
+ "sheets.print.fit": "Бетке сыйдыру (екі рет басыңыз)",
+ "sheets.print.no_sheets": "Алдын ала қарау үшін парақ жоқ",
+ "sheets.print.building": "Бет құрылып жатыр…",
+ "sheets.print.stop_build": "Тоқтату",
+ "sheets.print.build_stopped": "Бетті құру тоқтатылды",
+ "sheets.print.retry": "Қайта құру",
+ "sheets.print.build_failed": "Алдын ала қарауды құру мүмкін болмады"
+}

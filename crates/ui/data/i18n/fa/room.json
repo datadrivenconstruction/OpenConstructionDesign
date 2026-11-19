@@ -1,0 +1,6 @@
+{
+ "geom.length": "طول",
+ "sched.cat.room_seps": "جداکننده‌های فضا",
+ "room.err.point_leave": "فضای {n}: نقطه از مرز آن خارج می‌شود",
+ "room.err.point_taken": "فضای {n}: نقطه در فضای {other} می‌افتد"
+}

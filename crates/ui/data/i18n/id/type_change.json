@@ -1,0 +1,13 @@
+{
+ "type_change.affects_walls": {
+  "one": "memengaruhi # dinding",
+  "other": "memengaruhi # dinding"
+ },
+ "type_change.affects": {
+  "one": "memengaruhi # elemen",
+  "other": "memengaruhi # elemen"
+ },
+ "type_change.tick_types": "Terapkan perubahan tipe ke semua {n} elemen dari tipe ini",
+ "type_change.tick_types_first": "Centang perubahan tipe terlebih dahulu: setiap elemen dari tipe tersebut menerimanya",
+ "xl.msg.types_first": "konfirmasi perubahan tipe terlebih dahulu"
+}

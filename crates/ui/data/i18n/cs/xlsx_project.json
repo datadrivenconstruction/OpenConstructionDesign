@@ -1,0 +1,7 @@
+{
+ "xlsx_project.title": "Tento sešit byl exportován z jiného projektu",
+ "xlsx_project.body": "Sešit „{file}“ patří jinému projektu. Id prvků se mezi projekty liší, takže by jeho řádky změnily nesouvisející prvky. Do tohoto projektu nic nebylo načteno.",
+ "xlsx_project.export_new": "Exportovat tento projekt do nového sešitu",
+ "xlsx_project.close": "Zavřít",
+ "xlsx_project.no_project": "Sešit neuvádí, ke kterému projektu patří: ověřte, že byl exportován z tohoto projektu."
+}

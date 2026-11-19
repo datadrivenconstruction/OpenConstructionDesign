@@ -1,0 +1,10 @@
+{
+ "dlg.dw.store.unloaded": "도면 “{name}”을(를) 프로젝트에서 읽을 수 없어 파일에 변경 없이 유지됩니다",
+ "dlg.dw.store.source_missing": "도면 “{name}”: 원본 파일을 찾을 수 없어, 프로젝트에 저장된 사본을 표시합니다",
+ "dlg.dw.store.source_changed": "도면 “{name}”: 배치한 뒤 원본 파일이 변경되어, 프로젝트에 저장된 사본을 표시합니다",
+ "dlg.dw.store.unreadable": "프로젝트에 저장된 배치 도면을 읽을 수 없습니다",
+ "dlg.dw.store.not_saved": "도면이 저장되지 않음: {why}",
+ "dlg.dw.store.why_read": "프로젝트에 저장된 배치 도면을 읽을 수 없습니다",
+ "dlg.dw.store.why_write": "프로젝트 파일을 갱신할 수 없습니다",
+ "dlg.dw.store.missing_in_file": "저장된 파일에 배치된 도면이 모두 들어 있지 않습니다"
+}

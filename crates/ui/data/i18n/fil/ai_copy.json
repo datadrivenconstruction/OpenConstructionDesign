@@ -1,0 +1,8 @@
+{
+ "cmd.file.save_copy": "I-save ang kopya para sa iba…",
+ "cmd.file.save_copy.desc": "Nagse-save ng kopya ng proyekto nang walang pahintulot sa AI at, maliban kung pipiliin mong hindi, nang walang journal ng AI. Nananatili ang proyektong ito.",
+ "ai.copy.title": "I-save ang kopya",
+ "ai.copy.journal": "Isama ang journal ng AI sa kopya? Nasa journal ang mga kahilingan, sagot at address. Hindi kailanman kinokopya ang pahintulot sa cloud: ang ibang tao ang magpapasya para sa sarili. Piliin ang Hindi para iwan sa labas ang journal.",
+ "ai.copy.done": "Na-save ang kopya: {name}",
+ "ai.copy.same": "Pumili ng ibang file: hindi mapapalitan ng kopya ang bukas na proyekto."
+}

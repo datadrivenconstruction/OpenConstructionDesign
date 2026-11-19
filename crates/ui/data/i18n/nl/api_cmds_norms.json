@@ -1,0 +1,8 @@
+{
+ "api.cmd.norms_lookup": "De regels van het normenpakket van het project zoeken op onderwerp, element of code",
+ "api.cmd.norms_check": "Het model controleren tegen het normenpakket van het project en de bevindingen tonen",
+ "api.cmd.norms_programme": "Gebruikelijk ruimteprogramma voor een gebouwtype in het land van het project",
+ "api.cmd.select_similar": "Selecteer elk vergelijkbaar element: zelfde type of categorie, op deze verdieping of in het hele project",
+ "api.cmd.create_drawing_set": "Een afdrukbare tekenset opstellen: plattegronden, doorsneden, aanzichten, lijsten en titelblokken",
+ "api.cmd.deliver_project": "Van opdracht naar bestanden in één stap: het project en zijn tekenset, geëxporteerd na Toepassen"
+}

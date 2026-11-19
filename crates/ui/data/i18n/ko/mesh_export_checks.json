@@ -1,0 +1,15 @@
+{
+ "cmd.data.export_step.desc": "모델 전체 또는 선택 항목을 STEP AP214 또는 AP242로 저장합니다: 평면, 원통, 원뿔, 구, 토러스, B-스플라인 면을 가진 솔리드, 기타 요소는 평면으로, 색상, 레벨당 어셈블리 노드 하나.",
+ "cmd.data.export_3mf.desc": "모델 전체 또는 선택 항목을 출력용 3MF로 저장합니다: 요소마다 객체 하나, 색상, 단위, 모든 본체의 수밀성 검사.",
+ "fmenu.export.step": "STEP 정확한 솔리드 (.step)",
+ "fmenu.export.3mf": "출력용 3MF (.3mf)",
+ "mx.schema": "STEP 스키마",
+ "mx.schema.ap214": "AP214 (가장 넓은 지원)",
+ "mx.schema.ap242": "AP242",
+ "mx.watertight": "수밀이 아닌 본체",
+ "mx.watertight.report": "기록하고 목록 만들기",
+ "mx.watertight.skip": "제외",
+ "mx.watertight.require": "내보내기 취소",
+ "mx.faceted": "{fmt} 저장됨: {path} (정확한 솔리드 {exact}개, 평면 면으로 기록 {n}개: {first})",
+ "sheets.print.svg": "SVG"
+}

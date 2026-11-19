@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "{n} cella beillesztve",
+ "sched_edit.pasted_skipped": "{n} cella beillesztve, {k} kihagyva: {why}",
+ "sched_edit.filled": "{n} cella kitöltve",
+ "sched_edit.filled_skipped": "{n} cella kitöltve, {k} kihagyva: {why}",
+ "sched_edit.why_ro": "{n} csak olvasható",
+ "sched_edit.why_bad": "{n} hibás érték",
+ "sched_edit.no_cell": "Előbb kattintson a kimutatás egyik celláján",
+ "sched_edit.nothing": "Nincs mit írni",
+ "sched_edit.not_refreshed": "Megírva, a nézet nem frissült: {e}",
+ "sched_edit.failed": "nem módosítva: {e}",
+ "sched_edit.no_changes": "Nincs módosítás: {u} cella már ezeket az értékeket tartalmazza",
+ "sched_edit.same_tail": ", {u} már egyezik"
+}

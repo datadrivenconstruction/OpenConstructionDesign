@@ -1,0 +1,13 @@
+{
+ "level.err_open": "لیول نہیں کھلا: {e}",
+ "level.need_name": "لیول کو نام اور ایلیویشن درکار ہے",
+ "level.created": "لیول \"{name}\" بن گیا",
+ "level.err_create": "لیول نہیں بنا: {e}",
+ "level.err_edit": "لیول تبدیل نہیں ہوا: {e}",
+ "level.edited": "لیول \"{name}\" تبدیل ہو گیا",
+ "level.edited_stale": "لیول \"{name}\" تبدیل ہوا، ویو تازہ نہیں ہوا: {e}",
+ "level.last": "آخری لیول حذف نہیں ہو سکتا",
+ "level.deleted": "لیول حذف ہو گیا",
+ "level.not_empty": "لیول خالی نہیں: پہلے اس کے عناصر حذف کریں",
+ "level.err_delete": "لیول حذف نہیں ہوا: {e}"
+}

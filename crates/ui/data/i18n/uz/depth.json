@@ -1,0 +1,22 @@
+{
+ "depth.chip": "Chuqurlik {level}",
+ "depth.chip_tip": "Keyingi ishga tushirish loyihani qanchalik chuqur ishlashini ko'rsatadi: D1 kontseptsiyadan D5 tayyorlashgacha, sohalar bo'yicha",
+ "depth.all_off": "barcha sohalar o'chirilgan",
+ "depth.disc.arch": "Arx.",
+ "depth.disc.struct": "Konstr.",
+ "depth.disc.mep": "MEP",
+ "depth.disc.doc": "Hujj.",
+ "depth.project": "Loyiha chuqurligi",
+ "depth.level.1": "D1 Kontseptsiya: massa, qavatlar, maydonlar, bitta varaq",
+ "depth.level.2": "D2 Eskiz: devorlar, dastur bo'yicha xonalar, teshiklar, to'r, planlar",
+ "depth.level.3": "D3 Loyiha: qatlamli turlar, o'lchamlangan konstruksiya, MEP asosiy magistrallari va terminallar, jadvallar",
+ "depth.level.4": "D4 Ishchi: tugun detallari, furnitura, pardozlar, armatura, tarmoqlar",
+ "depth.level.5": "D5 Tayyorlash: egish jadvallari, po'lat birikmalar, yig'ma qismlar, materiallar ro'yxati",
+ "depth.as_project": "Xuddi shunday",
+ "depth.estimate": "Taxmin: taxminan {elements} element, {minutes} daq., {calls} chaqiruvda {tokens} token, {sheets} varaq",
+ "depth.estimate_none": "Taxmin qoralama loyiha bilan birga keladi: model hali bo'sh",
+ "depth.heat": "Chuqurlik issiqlik xaritasi",
+ "depth.heat.row": "Chuqurlik",
+ "depth.settings": "Bu loyihaning loyihalash chuqurligi",
+ "depth.settings_desc": "AI yordamchisi ishlaydigan chuqurlik, D1 dan D5 gacha, kalit va har bir soha uchun alohida chuqurlik bilan; loyiha faylida saqlanadi"
+}

@@ -1,0 +1,12 @@
+{
+ "curtain_wall.cw.issue.slab": "pol {id}: {e}",
+ "curtain_wall.cw.issue.body": "korpus {id}: {e}",
+ "curtain_wall.cw.added": "Pardali devorlar qo'shildi: {n}",
+ "curtain_wall.cw.add_failed": "Pardali devor qurilmadi: {e}",
+ "curtain_wall.cw.edited_warn": "Pardali devor #{id} o'zgartirildi: {w}",
+ "curtain_wall.cw.edited": "Pardali devor #{id} o'zgartirildi",
+ "curtain_wall.cw.not_changed": "O'zgartirilmadi: {e}",
+ "curtain_wall.cw.room_edited": "Xona #{id} o'zgartirildi",
+ "curtain_wall.cw.slope_range": "O'zgartirilmadi: qiyalik diapazondan tashqarida",
+ "curtain_wall.cw.slope_set": "Pol #{id}: qiyalik {pct}"
+}

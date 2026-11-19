@@ -1,0 +1,8 @@
+{
+ "xlsx_issues.empty_title": "Feuille vide dans le classeur",
+ "xlsx_issues.empty_kept": "La feuille {sheet} est vide : rien n'en a été lu, {n} éléments restent tels quels. Les autres feuilles peuvent encore être appliquées.",
+ "xlsx_issues.empty_none": "La feuille {sheet} est vide : rien n'en a été lu. Les autres feuilles peuvent encore être appliquées.",
+ "xlsx_issues.unreadable_title": "Feuille illisible",
+ "xlsx_issues.unreadable": "La feuille {sheet} n'a pas pu être lue, sa partie du fichier est endommagée : rien n'en a été pris et ses éléments restent tels quels. Les autres feuilles peuvent encore être appliquées.",
+ "xlsx_issues.formulas": "Les formules de la feuille {sheet} n'ont pas pu être lues : une valeur calculée ne peut donc pas être distinguée d'une modification. Rien n'a été pris de cette feuille. Les autres feuilles peuvent encore être appliquées."
+}

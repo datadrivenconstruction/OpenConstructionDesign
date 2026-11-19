@@ -1,0 +1,4 @@
+{
+ "vv_conflict.vv.switched": "Vederea activă s-a schimbat. Aceste modificări aparțin {view} și nu sunt încă aplicate: Aplică le scrie în {view}, Renunță le elimină.",
+ "vv_conflict.vv.discard": "Renunță la modificări"
+}

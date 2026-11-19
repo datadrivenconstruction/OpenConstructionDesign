@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "Reviderad",
+ "ai.redraft.added": "+{n} tillagda",
+ "ai.redraft.removed": "−{n} borttagna",
+ "ai.redraft.changed": "~{n} ändrade",
+ "ai.redraft.strip": "{what} sedan din senaste genomgång",
+ "ai.redraft.note": "Reviderad plan granskad: {what}",
+ "ai.redraft.more": "+{n} till",
+ "ai.redraft.ack": "Uppfattat",
+ "ai.redraft.ack.tip": "Markera denna revision som sedd; Tillämpa riktas då mot den",
+ "ai.redraft.removed_list": "Borttagna poster: {n}",
+ "ai.redraft.review_first": "Planen ändrades efter ditt meddelande: granska ändringarna först",
+ "ai.redraft.mark.tip": "Ny eller ändrad sedan din senaste genomgång",
+ "ai.redraft.emptied": "Uppföljningen tog bort alla poster: utkastet är tomt"
+}

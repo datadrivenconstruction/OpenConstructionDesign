@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "Beton",
+ "mat.masonry": "Metselwerk",
+ "mat.brick": "Baksteen",
+ "mat.insulation": "Isolatie",
+ "mat.plaster": "Pleister",
+ "mat.render": "Stucwerk",
+ "mat.gypsum": "Gipsplaat",
+ "mat.glass": "Glas",
+ "mat.wood": "Hout",
+ "mat.steel": "Staal",
+ "mat.membrane": "Membraan",
+ "mat.other": "Overig",
+ "warn.cat.wall": "Wand",
+ "warn.cat.slab": "Vloer",
+ "warn.cat.opening": "Doorbreking",
+ "warn.cat.curtain_wall": "Gordijngevel",
+ "td.mat.custom": "Overig…"
+}

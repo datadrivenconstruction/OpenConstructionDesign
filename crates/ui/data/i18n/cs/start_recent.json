@@ -1,0 +1,5 @@
+{
+ "start_recent.unavailable": "Momentálně nedostupné (jednotka nebo síťové umístění neodpovídá): {path}",
+ "start_recent.unavailable_short": "Momentálně nedostupné",
+ "start_recent.retry": "Zkusit znovu"
+}

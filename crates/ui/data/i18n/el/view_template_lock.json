@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "Ελέγχεται από το πρότυπο {name}",
+ "view_template.edit_template": "Επεξεργασία προτύπου",
+ "view_template.locked_tip": "Ορίζεται από το πρότυπο προβολής {name}. Αλλάξτε το στο πρότυπο.",
+ "view_template.no_filters": "Δεν υπάρχουν φίλτρα σε αυτή την προβολή"
+}

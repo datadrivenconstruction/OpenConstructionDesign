@@ -1,0 +1,37 @@
+{
+ "typology": "office",
+ "source": "intl-baseline",
+ "clause": "programme.office",
+ "variants": [
+  {
+   "code": "floor",
+   "rooms": [
+    {
+     "kind": "office",
+     "min_area": 10,
+     "daylight": true
+    },
+    {
+     "kind": "wc",
+     "min_area": 1.2,
+     "wet": true
+    }
+   ],
+   "allowed": [
+    "meeting",
+    "lobby",
+    "corridor",
+    "hall",
+    "storage",
+    "technical",
+    "stair",
+    "lift",
+    "kitchen",
+    "staff"
+   ],
+   "circulation_max": 0.25,
+   "storage_max": 0.05,
+   "verified": false
+  }
+ ]
+}

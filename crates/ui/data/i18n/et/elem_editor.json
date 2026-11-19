@@ -1,0 +1,4 @@
+{
+ "elem.spreadsheet.applied": "Imporditud tabelarvutusest: {what}",
+ "elem.spreadsheet.failed": "Tabelarvutuse import ebaõnnestus: {e}"
+}

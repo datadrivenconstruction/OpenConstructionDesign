@@ -1,0 +1,29 @@
+id = "S06_critic_refine"
+tier = "smoke"
+group = ""
+title = "Critic and refine loop names the rule it changed"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "Hotel, 5 storeys, 60 guest rooms, reception and restaurant on the ground floor. Run the design critique on it and tell me exactly which rule parameters the critic changed, with old and new values and why. Then build the improved version."
+
+[policy]
+"ai.gen_refine" = "on"
+
+[[oracle.count]]
+spec = "level"
+min = 5.0
+
+[[oracle.count]]
+spec = "room"
+min = 60.0
+
+[[oracle.count]]
+spec = "level"
+min = 5.0
+max = 6.0
+
+[[oracle.count]]
+spec = "room:guest|room|bedroom"
+min = 60.0

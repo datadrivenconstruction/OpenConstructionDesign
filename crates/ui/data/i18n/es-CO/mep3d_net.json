@@ -1,0 +1,13 @@
+{
+ "mep.sys.duct": "Impulsión S1",
+ "mep.sys.pipe": "Agua fría C1",
+ "mep.sys.tray": "Energía",
+ "mep.round": "Redondo",
+ "mep.material": "Material",
+ "mep3d.elevation": "Elevación desde el nivel",
+ "mep3d.slope": "Pendiente",
+ "mep3d.shape": "Forma",
+ "mep3d.shape.rect": "Rectangular",
+ "mep3d.shape.round": "Redonda",
+ "mep3d.shape.oval": "Oval plano"
+}

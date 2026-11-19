@@ -1,0 +1,7 @@
+{
+ "rebar_pick.pick.empty": "זיון: בחר עמוד, קורה, קיר, רצפה או יסוד",
+ "rebar_pick.pick.unsupported": "לא ניתן לזייין את הבחירה הזו. בחר עמוד, קורה, קיר, רצפה או יסוד",
+ "rebar_pick.pick.keys": "לחץ לבחירה, Shift להוספה · Enter לפתיחת הטופס · Esc לביטול",
+ "rebar_pick.pick.open": "פתח טופס",
+ "rebar_pick.pick.cancel": "ביטול"
+}

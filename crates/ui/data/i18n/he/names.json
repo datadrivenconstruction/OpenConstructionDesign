@@ -1,0 +1,19 @@
+{
+ "names.level": "מפלס {n}",
+ "names.slab": "רצפה 200",
+ "names.roof_slab": "גג 200",
+ "names.sheet.plan_section": "תוכנית וחתך קומה 1",
+ "names.sheet.plan_view": "תוכנית קומה 1",
+ "names.sheet.site_plan": "תוכנית אתר",
+ "names.sheet_set.issue": "הנפקה 1",
+ "names.title.owner": "פרויקט בע״מ",
+ "names.title.creator": "א. איבנוב",
+ "names.title.approver": "פ. פטרוב",
+ "names.title.document_type": "שרטוט",
+ "names.title.status": "בעבודה",
+ "names.revision.date": "4 בנובמבר 2026",
+ "names.revision.description": "הונפק לבדיקה",
+ "names.revision.author": "AI",
+ "names.demo.no_levels": "אין מפלסים",
+ "names.demo.no_sheet": "גיליון"
+}

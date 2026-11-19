@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Country norm pack",
+  "description": "One pack is a folder <id>/ with pack.json, sources.json, dims.json, rules/*.json and optional programme/*.json, vocab.json, assemblies.json, drawing.json. A pack names its parent; resolving merges generic -> region -> country -> state or city, the child entry with the same id or key replacing the parent's. Numbers are SI. The checker in crates/model/src/checks/norm_pack.rs (check_layer, resolve) enforces this schema and the references between files; tests keep both in step.",
+  "type": "object",
+  "$defs": {
+    "packId": {"type": "string", "pattern": "^[a-z]{2,10}(-[a-z0-9]{1,8})?$"},
+    "unit": {"enum": ["m", "m2", "m3", "count", "ratio", "h", "W/m2K", "dB", "kN/m2", "C", "m3/h", "m3/h m2", "min", ""]},
+    "origUnit": {"enum": ["m", "mm", "cm", "in", "ft", "m2", "ft2", "kN/m2", "kPa", "kgf/m2", "psf", "ratio", "%", "count", "h", "C", "m3/h", "l/s", "cfm", "m3/h m2", "l/s m2", "cfm/ft2"]},
+    "number": {"oneOf": [{"type": "number"}, {"type": "array", "items": {"type": "number"}, "minItems": 1}]},
+    "paraphrase": {"type": "string", "minLength": 1, "maxLength": 200, "pattern": "^[^\\n]*$", "description": "What the clause says, one sentence in our own words; never the text of the standard."},
+    "applies": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "typology": {"oneOf": [{"type": "string"}, {"type": "array", "items": {"type": "string"}}]},
+        "room_kind": {"oneOf": [{"type": "string"}, {"type": "array", "items": {"type": "string"}}]},
+        "region": {"oneOf": [{"type": "string"}, {"type": "array", "items": {"type": "string"}}]},
+        "min_floors": {"type": "integer", "minimum": 0},
+        "max_floors": {"type": "integer", "minimum": 0},
+        "sprinklered": {"type": "boolean"},
+        "height_min": {"type": "number", "minimum": 0, "maximum": 1000},
+        "height_max": {"type": "number", "minimum": 0, "maximum": 1000}
+      }
+    },
+    "orig": {
+      "type": "object",
+      "description": "The number as the source states it (imperial, mm, %); it must convert to value.",
+      "required": ["value", "unit"],
+      "properties": {"value": {"$ref": "#/$defs/number"}, "unit": {"$ref": "#/$defs/origUnit"}}
+    },
+    "noQuotes": {
+      "not": {"anyOf": [{"required": ["quote"]}, {"required": ["verbatim"]}, {"required": ["excerpt"]}, {"required": ["source_text"]}]}
+    },
+    "pack": {
+      "type": "object",
+      "required": ["id", "version", "parent", "units", "status"],
+      "properties": {
+        "id": {"$ref": "#/$defs/packId"},
+        "version": {"type": "string", "minLength": 1},
+        "parent": {"oneOf": [{"$ref": "#/$defs/packId"}, {"type": "null"}], "description": "null only for generic"},
+        "country": {"type": ["string", "null"], "description": "ISO 3166-1 alpha-2, upper case; null for generic and regions"},
+        "lang": {"type": "array", "items": {"type": "string"}},
+        "units": {
+          "type": "object",
+          "required": ["length"],
+          "properties": {"length": {"const": "m"}, "display": {"enum": ["metric", "imperial"]}}
+        },
+        "conventions": {
+          "type": "object",
+          "properties": {
+            "ground_floor": {"enum": [0, 1], "description": "Number of the street-level storey"},
+            "area_standard": {"enum": ["gross", "gross_internal", "net", "usable"]},
+            "net_share": {"type": "number", "exclusiveMinimum": 0.5, "maximum": 1, "description": "Net room area per unit of the stated area; 1 for net"},
+            "note": {"type": "string"},
+            "source": {"type": ["string", "null"]}
+          }
+        },
+        "status": {"enum": ["generic", "draft", "tier1", "tier2", "tier3"]},
+        "climate": {"type": "object"},
+        "note": {"type": "string"}
+      },
+      "allOf": [{"$ref": "#/$defs/noQuotes"}]
+    },
+    "source": {
+      "type": "object",
+      "required": ["id", "title", "licence"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "title": {"type": "string", "minLength": 1, "description": "Our own English title"},
+        "licence": {"enum": ["public-law", "ogl", "open", "copyright-numbers-only", "own"]},
+        "publisher": {"type": ["string", "null"]},
+        "url": {"type": ["string", "null"], "pattern": "^https?://"},
+        "edition": {"type": ["string", "null"]},
+        "verified": {"type": ["string", "null"], "description": "Date a number was read in this source"}
+      },
+      "allOf": [{"$ref": "#/$defs/noQuotes"}]
+    },
+    "dim": {
+      "type": "object",
+      "required": ["key", "value", "unit", "source", "verified"],
+      "properties": {
+        "key": {"type": "string", "minLength": 1},
+        "value": {"$ref": "#/$defs/number"},
+        "unit": {"$ref": "#/$defs/unit"},
+        "orig": {"$ref": "#/$defs/orig"},
+        "source": {"type": "string"},
+        "clause": {"type": "string"},
+        "url": {"type": "string", "pattern": "^https?://"},
+        "accessed": {"type": "string"},
+        "paraphrase": {"$ref": "#/$defs/paraphrase"},
+        "applies": {"$ref": "#/$defs/applies"},
+        "verified": {"type": "boolean", "description": "true only when the clause was read; then clause is required"},
+        "unlimited": {"type": "boolean", "description": "The source sets no limit; value is null"},
+        "na": {"type": "boolean", "description": "The country has no such key; value is null, note says why, the parent value is dropped"},
+        "note": {"type": "string", "description": "Where we looked, what was found"}
+      },
+      "allOf": [{"$ref": "#/$defs/noQuotes"}]
+    },
+    "rule": {
+      "type": "object",
+      "required": ["id"],
+      "oneOf": [
+        {"required": ["id", "disabled"], "properties": {"disabled": {"const": true}, "na": {"type": "boolean", "description": "Not applicable in this country; note says why"}, "note": {"type": "string"}}},
+        {
+          "required": ["id", "text", "source", "check", "unit", "severity", "verified"],
+          "properties": {
+            "id": {"type": "string"},
+            "depth": {"type": "integer", "minimum": 1, "maximum": 5},
+            "discipline": {"type": "string"},
+            "applies": {"$ref": "#/$defs/applies"},
+            "check": {"type": "object", "required": ["kind"], "properties": {"kind": {"enum": ["formula", "ratio", "adjacency", "stack", "distance", "programme", "param_present", "param_range", "param_in", "count", "clearance", "unique", "param_value", "cases", "compare"]}}},
+            "unit": {"$ref": "#/$defs/unit"},
+            "value": {"$ref": "#/$defs/number"},
+            "orig": {"$ref": "#/$defs/orig"},
+            "text": {"type": "object", "required": ["en"], "additionalProperties": {"type": "string"}},
+            "source": {
+              "type": "object",
+              "required": ["doc", "clause"],
+              "properties": {"doc": {"type": "string"}, "clause": {"type": "string", "minLength": 1}, "url": {"type": "string"}, "edition": {"type": "string"}, "accessed": {"type": "string"}, "paraphrase": {"$ref": "#/$defs/paraphrase"}, "note": {"type": "string"}}
+            },
+            "paraphrase": {"$ref": "#/$defs/paraphrase"},
+            "severity": {"enum": ["error", "warning", "info"]},
+            "verified": {"type": "boolean"}
+          }
+        }
+      ],
+      "allOf": [{"$ref": "#/$defs/noQuotes"}]
+    }
+  },
+  "properties": {
+    "pack.json": {"$ref": "#/$defs/pack"},
+    "sources.json": {"type": "object", "properties": {"sources": {"type": "array", "items": {"$ref": "#/$defs/source"}}}},
+    "dims.json": {"type": "object", "properties": {"items": {"type": "array", "items": {"$ref": "#/$defs/dim"}}}},
+    "rules/*.json": {"type": "object", "properties": {"rules": {"type": "array", "items": {"$ref": "#/$defs/rule"}}}}
+  }
+}

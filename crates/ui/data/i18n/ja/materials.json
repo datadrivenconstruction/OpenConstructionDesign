@@ -1,0 +1,11 @@
+{
+ "materials.mat.name_empty": "マテリアル名を入力してください",
+ "materials.mat.empty_title": "マテリアルはまだありません",
+ "materials.mat.empty_hint": "下に名前を入力して「追加」を押してください",
+ "materials.mat.nothing_hint": "検索に一致するマテリアルはありません",
+ "materials.mat.clear_search": "検索をクリア",
+ "materials.mat.replace_with": "置き換え先",
+ "materials.mat.delete_refused": "削除できません: このマテリアルは {n} か所で使用されています。先に置き換えてください。",
+ "materials.mat.delete_confirm": "マテリアル「{name}」を削除しますか？この操作は元に戻せます。",
+ "materials.mat.replace_confirm": "{n} 個の要素で「{from}」を「{to}」に置き換えますか？「{from}」は削除されます。この操作は元に戻せます。"
+}

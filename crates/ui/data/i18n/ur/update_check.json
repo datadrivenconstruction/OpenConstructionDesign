@@ -1,0 +1,21 @@
+{
+ "cmd.help.check_update": "اپ ڈیٹس چیک کریں",
+ "update_check.title": "اپ ڈیٹ چیک",
+ "update_check.desc": "ڈیفالٹ طور پر بند۔ صرف ورژن، OS اور آرکیٹیکچر، اور انسٹال کی قسم ہمارے سرور کو بھیجتا ہے۔ کچھ ڈاؤن لوڈ یا انسٹال نہیں کرتا۔",
+ "update_check.freq.startup": "شروع ہونے پر",
+ "update_check.freq.daily": "روزانہ",
+ "update_check.freq.weekly": "ہفتہ وار",
+ "update_check.freq.never": "کبھی نہیں",
+ "update_check.check_now": "ابھی چیک کریں",
+ "update_check.dialog.title": "اپ ڈیٹ چیک",
+ "update_check.unknown.title": "اپ ڈیٹس چیک نہیں ہو سکیں",
+ "update_check.unknown.body": "{e}۔ اس کا مطلب یہ نہیں کہ یہ ورژن تازہ ہے۔ بعد میں دوبارہ کوشش کریں۔",
+ "update_check.current": "آپ کے پاس تازہ ترین ورژن ہے ({v})۔",
+ "update_check.newer": "ورژن {v} دستیاب ہے",
+ "update_check.date": "جاری ہوا {d}",
+ "update_check.unfit": "یہ ورژن ({v}) کم از کم تجویز کردہ ورژن {f} سے پرانا ہے۔ اپ ڈیٹ کرنے کا مشورہ ہے۔",
+ "update_check.close": "بند کریں",
+ "update_check.open_failed": "ریلیز صفحہ نہیں کھولا جا سکا۔",
+ "update_check.toast.newer": "ورژن {v} دستیاب ہے۔ Help > Check for updates۔",
+ "update_check.toast.unfit": "یہ ورژن ({v}) کم از کم تجویز کردہ ورژن {f} سے پرانا ہے۔"
+}

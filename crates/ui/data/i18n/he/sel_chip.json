@@ -1,0 +1,5 @@
+{
+ "sel_chip.opt.sel_hint": "לחץ על רכיב כדי לבחור אותו. Ctrl מוסיף, Shift מסיר.",
+ "sel_chip.opt.units": "יחידות",
+ "sel_chip.sel_chip": "{name}: {n}"
+}

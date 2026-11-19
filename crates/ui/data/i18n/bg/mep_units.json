@@ -1,0 +1,8 @@
+{
+ "mep_units.unit.mm": "mm",
+ "mep_units.unit.in": "in",
+ "mep_units.dn": "DN",
+ "mep_units.diameter": "Диаметър",
+ "mep_units.system.new": "Нова система",
+ "mep_units.system.none": "Без система"
+}

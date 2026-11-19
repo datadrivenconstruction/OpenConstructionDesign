@@ -1,0 +1,20 @@
+{
+ "dwgfillet.fillet": "ทำมุมโค้ง",
+ "dwgfillet.cancel": "หยุดการทำมุมโค้ง",
+ "dwgfillet.tip": "คลิกเส้นสองเส้นที่ด้านที่จะเก็บไว้: ทั้งสองเส้นจะถูกตัดหรือต่อจนถึงมุม และมีส่วนโค้งสัมผัสเมื่อรัศมีมากกว่าศูนย์",
+ "dwgfillet.radius": "รัศมีมุมโค้ง",
+ "dwgfillet.radius_tip": "รัศมีของส่วนโค้งในหน่วยของแบบ; 0 คือมุมแหลม",
+ "dwgfillet.st.arm_first": "คลิกเส้นแรกที่ด้านที่จะเก็บไว้",
+ "dwgfillet.st.arm_second": "คลิกเส้นที่สองที่ด้านที่จะเก็บไว้",
+ "dwgfillet.st.not_armed": "เลือกทำมุมโค้งก่อน",
+ "dwgfillet.st.click_line": "คลิกเส้นเดียวของแบบ",
+ "dwgfillet.st.other_drawing": "เส้นทั้งสองต้องอยู่ในแบบเดียวกัน: เริ่มใหม่",
+ "dwgfillet.st.changed": "เส้นแรกเปลี่ยนแปลง: เริ่มใหม่",
+ "dwgfillet.st.same_line": "เลือกเส้นที่สองที่ต่างออกไป",
+ "dwgfillet.st.parallel": "เส้นขนานกันและไม่มีวันมาบรรจบ จึงสร้างมุมไม่ได้",
+ "dwgfillet.st.degenerate": "เส้นไม่มีความยาว",
+ "dwgfillet.st.no_side": "ด้านที่คลิกไม่มีความยาวจากมุม",
+ "dwgfillet.st.too_big": "รัศมีใหญ่เกินไปสำหรับเส้นเหล่านี้: ใช้รัศมีที่เล็กลง",
+ "dwgfillet.st.radius_bad": "รัศมีต้องเป็นศูนย์หรือบวก",
+ "dwgfillet.st.done": "สร้างมุมแล้ว"
+}

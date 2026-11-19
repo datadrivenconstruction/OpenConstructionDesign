@@ -1,0 +1,6 @@
+{
+ "sched_import.no_key": "此工作簿没有导出记录（较早的导出）：该次导出后在模型中更改的单元格可能被覆盖。请在应用前检查已更改的单元格。",
+ "sched_import.n_kept": "导出后在模型中已更改，已保留：{n}",
+ "sched_import.n_conflict": "在工作簿和模型中均已更改，未应用：{n}",
+ "sched_import.why_conflict": "导出后在模型中已更改（现为 {model}），未应用"
+}

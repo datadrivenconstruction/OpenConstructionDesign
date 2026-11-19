@@ -1,0 +1,11 @@
+{
+ "cmd.arch.roof_gable.short": "박공",
+ "cmd.arch.roof_hip.short": "우진각",
+ "cmd.arch.roof_shed.short": "외쪽",
+ "cmd.arch.roof_mansard.short": "맨사드",
+ "cmd.arch.roof_gambrel.short": "겹경사",
+ "cmd.arch.roof_barrel.short": "배럴",
+ "cmd.arch.roof_edges.short": "지붕 모서리",
+ "cmd.arch.roof_opening.short": "개구부",
+ "cmd.mass.roof_by_face.short": "면으로"
+}

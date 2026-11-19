@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "Kütle döndürülemez ya da aynalanamaz: biçim geçmişinde döndürme adımı yok. Taşıyın ya da kopyalayın, ya da yeni yönde yeniden çizin.",
+ "sched_cats.col.name": "Ad",
+ "sched_cats.col.material": "Malzeme",
+ "sched_cats.col.void": "Boşluk",
+ "sched_cats.col.inplace": "Yerinde dökme",
+ "sched_cats.col.volume": "Net hacim",
+ "sched_cats.col.area": "Yüzey alanı",
+ "sched_cats.col.floor_area": "Kat alanı",
+ "sched_cats.col.thickness": "Kalınlık",
+ "sched_cats.col.points": "Noktalar",
+ "elem.toposolid.points": "Ölçüm noktaları",
+ "elem.toposolid.count": "Noktalar",
+ "elem.toposolid.low": "En düşük",
+ "elem.toposolid.high": "En yüksek",
+ "elem.toposolid.edit": "Noktaları düzenle",
+ "elem.toposolid.edit_tip": "Plandaki ölçüm noktalarını seçin, sürükleyin ve kotlarını ayarlayın",
+ "elem.toposolid.pick_hint": "Seçmek için plandaki bir noktaya tıklayın. Eklemek veya çıkarmak için tekrar tıklayın.",
+ "elem.toposolid.z": "Kot ({n})",
+ "elem.toposolid.mixed": "Seçili noktalar farklı; yeni bir değer hepsine uygulanır.",
+ "elem.toposolid.edit_help": "Bir noktayı taşımak için sürükleyin. Kotu ayarlamak için bir değer yazıp Enter'a basın. Backspace seçili noktaları siler, Esc çıkar.",
+ "elem.toposolid.done": "Tamam"
+}

@@ -1,0 +1,6 @@
+{
+ "ai_toast.toast_not_refreshed": "Applicato come passo di annullamento {n} (Ctrl+Z lo annulla), ma la vista non si è aggiornata. Ricarica la vista.",
+ "ai.optx.reload_failed": "L'opzione \"{name}\" è applicata e salvata, ma la vista non si è ricaricata: {e}",
+ "ai.cmp.stale": "Obsoleto",
+ "ai.cmp.stale_tip": "Questa opzione è stata creata su uno stato precedente del modello. Generala di nuovo per applicarla."
+}

@@ -1,0 +1,6 @@
+{
+ "pair_input.pair_hint": "두 값은 세미콜론으로 구분합니다: @1000;500",
+ "pair_input.old_pair": "두 정수 사이의 쉼표는 더 이상 쌍을 만들지 않습니다: 두 값은 6000;4000, 소수는 6000,5로 입력하세요",
+ "pair_input.op.bad_length": "길이가 아닙니다: {text} ({why}). 아무것도 바꾸지 않았습니다",
+ "pair_input.op.bad_count": "개수 {text}을(를) 받지 못했습니다: {min}~{max} 사이의 정수여야 합니다"
+}

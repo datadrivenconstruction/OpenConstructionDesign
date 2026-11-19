@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "personalizat",
+ "draw_quality.custom.tip": "{name}: o intrare a acestui proiect",
+ "draw_quality.custom_note": "Intrările marcate ca personalizate aparțin acestui proiect.",
+ "draw_quality.unsaved.lib_body": "Le salvezi în bibliotecă sau le renunți?",
+ "draw_quality.unsaved.styles_body": "Le aplici vederii sau le renunți?",
+ "draw_quality.unsaved.both_body": "Le aplici sau le renunți?",
+ "draw_quality.halftone": "Semitonuri {category}",
+ "draw_quality.styles.name": "Stiluri de linie",
+ "draw_quality.styles.other_level": "Modificări nesalvate ale stilurilor de la nivelul {level}: aplică-le sau revino-le pentru a edita acest nivel."
+}

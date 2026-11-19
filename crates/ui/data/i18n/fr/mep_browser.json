@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "Nom du système",
+ "mep_browser.add_blocked": "Saisissez d'abord un nom de système",
+ "mep_browser.col.insulation": "Isolation",
+ "mep_browser.cancel": "Annuler",
+ "mep_browser.delete.title": "Supprimer ce système ?",
+ "mep_browser.delete.body": "Le système « {name} » et ses tracés ({n}) seront supprimés.",
+ "mep_browser.delete.undo": "Vous pouvez annuler cette action d'un seul Annuler.",
+ "mep_browser.delete.confirm": "Supprimer le système"
+}

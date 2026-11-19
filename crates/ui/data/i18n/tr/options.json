@@ -1,0 +1,15 @@
+{
+ "fe.add_why_empty": "Önce bir parametre adı girin",
+ "fe.add_why_exists": "Bu adla bir parametre zaten var; değiştirmek için Uygula kullanın",
+ "fe.apply_why_missing": "Bu adla parametre yok; mevcut bir ad yazın",
+ "fe.nochange": "Henüz değişiklik yok",
+ "options.accept_more": "Kabul et…",
+ "options.delete_more": "Sil…",
+ "options.empty_title": "Henüz seçenek kümesi yok",
+ "options.more": "Diğer işlemler: {name}",
+ "options.primary_named": "Birincil seçenek: {name}",
+ "options.primary_tip": "Bunu kümenin birincil seçeneği yapın",
+ "options.select_first": "Önce modelde öğeleri seçin",
+ "options.show_3d": "3D'de göster: {name}",
+ "options.show_plan": "Planda göster: {name}"
+}

@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "सिस्टम का नाम",
+ "mep_browser.add_blocked": "पहले सिस्टम का नाम लिखें",
+ "mep_browser.col.insulation": "इन्सुलेशन",
+ "mep_browser.cancel": "रद्द करें",
+ "mep_browser.delete.title": "यह सिस्टम हटाएँ?",
+ "mep_browser.delete.body": "सिस्टम “{name}” और उसके रन ({n}) हटा दिए जाएँगे।",
+ "mep_browser.delete.undo": "इसे एक बार वापस लें से वापस ले सकते हैं।",
+ "mep_browser.delete.confirm": "सिस्टम हटाएँ"
+}

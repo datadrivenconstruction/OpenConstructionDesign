@@ -1,0 +1,4 @@
+{
+ "tool.err.drawing_open": "Bu noktanın etrafındaki çizgiler bir döngü oluşturmuyor",
+ "tool.err.drawing_crossing": "Bu noktanın etrafındaki çizim döngüsü kendini kesiyor"
+}

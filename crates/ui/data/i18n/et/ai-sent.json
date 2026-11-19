@@ -1,0 +1,8 @@
+{
+ "ai_sent.summary": "Projekti andmed selles päringus: {messages} sõnumit, {tools} tööriista tulemust, {images} pilti",
+ "ai_sent.copy": "Kopeeri",
+ "ai_sent.filter": "Otsi saadetud päringutest",
+ "ai_sent.no_match": "Ükski päring ei vasta.",
+ "ai_sent.instructions": "Juhised ja tööriistad",
+ "ai_sent.local_note": "Hoitakse ainult selles arvutis ja ainult selle sessiooni jooksul. Võtmeid ja paroole ei näidata kunagi."
+}

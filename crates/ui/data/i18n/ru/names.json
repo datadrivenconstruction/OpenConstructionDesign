@@ -1,0 +1,19 @@
+{
+ "names.level": "Этаж {n}",
+ "names.slab": "Плита 200",
+ "names.roof_slab": "Кровля 200",
+ "names.sheet.plan_section": "План 1 этажа и разрез",
+ "names.sheet.plan_view": "План 1 этажа",
+ "names.sheet.site_plan": "Генплан",
+ "names.sheet_set.issue": "Выпуск 1",
+ "names.title.owner": "ООО «Проект»",
+ "names.title.creator": "А. Иванов",
+ "names.title.approver": "П. Петров",
+ "names.title.document_type": "Чертёж",
+ "names.title.status": "В работе",
+ "names.revision.date": "04.11.2026",
+ "names.revision.description": "Выпуск для согласования",
+ "names.revision.author": "АИ",
+ "names.demo.no_levels": "нет уровней",
+ "names.demo.no_sheet": "лист"
+}

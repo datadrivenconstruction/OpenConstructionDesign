@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "Frit formet flade",
+ "cmd.mass.panelize": "Opdel i paneler",
+ "cmd.mass.surface_shell": "Tag på flade",
+ "cmd.mass.thicken": "Tykkelse",
+ "hint.mass.freeform.first": "Frit formet flade: første hjørne af planrektanglen · skriv hævningen · Esc — annuller",
+ "hint.mass.freeform.next": "Frit formet flade: modsatte hjørne · skriv hævningen · Esc — annuller",
+ "hint.mass.panelize.first": "Paneler: vælg en frit formet flade i 3D · Esc — annuller",
+ "hint.mass.panelize.value": "Paneler: skriv panelstørrelsen · Enter — anvend · Esc — annuller",
+ "hint.mass.surface_shell.first": "Tag på flade: vælg en frit formet flade i 3D · Esc — annuller",
+ "hint.mass.surface_shell.value": "Tag på flade: skriv tykkelsen · Enter — anvend · Esc — annuller",
+ "hint.mass.thicken.first": "Tykkelse: vælg en frit formet flade i 3D · Esc — annuller",
+ "hint.mass.thicken.value": "Tykkelse: skriv tykkelsen (0 — kun fladen) · Enter — anvend · Esc — annuller",
+ "status.mass.pick_surface": "Vælg en frit formet flade",
+ "status.mass.freeform_small": "Rektanglet er for lille: mindst 0,5 m i hver retning",
+ "name.mass.freeform": "Frit formet flade",
+ "rgroup.mass_free": "Avanceret"
+}

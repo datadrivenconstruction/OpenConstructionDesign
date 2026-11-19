@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "własne",
+ "draw_quality.custom.tip": "{name}: wpis tego projektu",
+ "draw_quality.custom_note": "Wpisy oznaczone jako własne należą do tego projektu.",
+ "draw_quality.unsaved.lib_body": "Zapisać je w bibliotece, czy odrzucić?",
+ "draw_quality.unsaved.styles_body": "Zastosować je do widoku, czy odrzucić?",
+ "draw_quality.unsaved.both_body": "Zastosować je, czy odrzucić?",
+ "draw_quality.halftone": "Półton: {category}",
+ "draw_quality.styles.name": "Style linii",
+ "draw_quality.styles.other_level": "Niezapisane zmiany stylów poziomu {level}: zastosuj je lub cofnij, aby edytować ten poziom."
+}

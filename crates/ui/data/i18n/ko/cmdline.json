@@ -1,0 +1,13 @@
+{
+ "cmdl.mode_cmd": "명령",
+ "cmdl.mode_ai": "AI",
+ "cmdl.toggle": "명령 또는 AI 어시스턴트 (Ctrl+J)",
+ "cmdl.hint": "명령 또는 별칭 (W, L, M, RO), 점 #x;y, @dx;dy, d<각도. Ctrl+J: AI 어시스턴트에 질문",
+ "cmdl.hint_ai": "모델에 대해 AI 어시스턴트에 질문하거나 변경을 요청하세요. Ctrl+J: 명령으로 돌아가기",
+ "cmdl.sent": "AI 어시스턴트에 전송됨",
+ "cmdl.failed": "“{text}”을(를) 여기서 실행할 수 없습니다",
+ "cmdl.no_tool": "먼저 그리기 명령을 시작한 뒤 점을 입력하세요",
+ "cmdl.unknown": "“{text}” 명령이 없습니다. Ctrl+J를 누르면 AI 어시스턴트에 전송됩니다",
+ "cmdl.bad": "“{text}”을(를) 읽을 수 없습니다: {e}",
+ "cmdl.shape": "“{text}”은(는) 점이 아닙니다: x;y, #x;y, @dx;dy 또는 양의 거리<각도를 입력하세요"
+}

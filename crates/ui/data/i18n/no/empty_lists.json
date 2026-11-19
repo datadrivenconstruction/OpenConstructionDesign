@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "Tegn vegg",
+ "empty.totals.action": "Tegn vegg",
+ "empty.schedule.action": "Legg til felt",
+ "empty.schedule_filtered.action": "Fjern filter",
+ "empty.library.action": "Nullstill søk",
+ "empty.library.load": "Last inn familie",
+ "empty.schedule_fields.title": "Ingen felt vises",
+ "empty.schedule_fields.action": "Legg til felt",
+ "empty.schedule_fields.hint": "Slå på minst ett felt for å se tabellen."
+}

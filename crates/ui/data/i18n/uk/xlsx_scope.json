@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "Експорт в XLSX: обсяг",
+ "xlsx_scope.intro": "Оберіть, що потрапить до книги. Імпорт назад змінить лише ці елементи.",
+ "xlsx_scope.base_whole": "Уся модель",
+ "xlsx_scope.base_level": "Активний рівень",
+ "xlsx_scope.base_selection": "Виділення",
+ "xlsx_scope.categories": "Категорії",
+ "xlsx_scope.cat_walls": "стіни",
+ "xlsx_scope.cat_openings": "двері",
+ "xlsx_scope.cat_rooms": "приміщення",
+ "xlsx_scope.cat_slabs": "плити",
+ "xlsx_scope.cat_curtains": "навісні стіни",
+ "xlsx_scope.nothing_selected": "Нічого не виділено: спершу виберіть елементи або оберіть інший обсяг.",
+ "xlsx_scope.no_categories": "Позначте принаймні одну категорію.",
+ "xlsx_scope.no_level": "Активний рівень не знайдено.",
+ "xlsx_scope.export": "Експорт",
+ "xlsx_scope.preview_scope": "Експортований обсяг: {scope}. Елементи поза ним ніколи не змінюються й не видаляються."
+}

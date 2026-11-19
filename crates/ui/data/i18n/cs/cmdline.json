@@ -1,0 +1,13 @@
+{
+ "cmdl.mode_cmd": "Příkaz",
+ "cmdl.mode_ai": "AI",
+ "cmdl.toggle": "Příkazy nebo AI asistent (Ctrl+J)",
+ "cmdl.hint": "Příkaz nebo zkratka (W, L, M, RO), bod #x;y, @dx;dy, d<úhel. Ctrl+J: zeptat se AI asistenta",
+ "cmdl.hint_ai": "Zeptejte se AI asistenta na model nebo na změnu. Ctrl+J: zpět k příkazům",
+ "cmdl.sent": "Odesláno AI asistentovi",
+ "cmdl.failed": "Příkaz „{text}“ zde nelze spustit",
+ "cmdl.no_tool": "Nejprve spusťte kreslicí příkaz, pak zadávejte jeho body",
+ "cmdl.unknown": "Příkaz „{text}“ neexistuje. Ctrl+J jej odešle AI asistentovi",
+ "cmdl.bad": "„{text}“ nelze přečíst: {e}",
+ "cmdl.shape": "„{text}“ není bod: zadejte x;y, #x;y, @dx;dy nebo kladnou vzdálenost<úhel"
+}

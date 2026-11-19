@@ -1,0 +1,18 @@
+{
+ "faults.errors": {
+  "one": "# errore nel modello. Fai clic per mostrarlo.",
+  "other": "# errori nel modello. Fai clic per vedere l'elenco."
+ },
+ "faults.warnings": {
+  "one": "# avviso nel modello. Fai clic per mostrarlo.",
+  "other": "# avvisi nel modello. Fai clic per vedere l'elenco."
+ },
+ "faults.title": "Anomalie del modello: {n}",
+ "faults.none": "Nessun errore o avviso.",
+ "faults.cat.wall": "Muro",
+ "faults.cat.slab": "Solaio",
+ "faults.cat.opening": "Apertura",
+ "faults.cat.curtain_wall": "Facciata continua",
+ "faults.cat.ramp": "Rampa",
+ "faults.cat.zone": "Zona"
+}

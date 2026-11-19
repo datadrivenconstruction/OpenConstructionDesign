@@ -1,0 +1,6 @@
+{
+ "imported_prop_edit.remove": "Alisin ang property",
+ "imported_prop_edit.remove.tip": "Inaalis ang property sa {n} napiling elemento sa isang undo step; tatanggalin ito sa IFC file sa pag-save",
+ "imported_prop_edit.done": "Inalis ang {key} sa {n} elemento",
+ "imported_prop_edit.warn.reload": "Tapos, pero hindi na-refresh ang view; buksan muli ang panel o i-undo kung mukhang mali"
+}

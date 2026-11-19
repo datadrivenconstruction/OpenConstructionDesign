@@ -1,0 +1,11 @@
+{
+ "pick_rules.filter": "বাছাই: সব",
+ "pick_rules.filter.on": "বাছাই: {n} বন্ধ",
+ "pick_rules.filter.title": "যে ক্যাটাগরি ক্লিকে বাছাই করা যায়",
+ "pick_rules.filter.all": "সব ক্যাটাগরি বাছাই",
+ "pick_rules.filter.tip": "নির্বাচন ফিল্টার: টিক না দেওয়া ক্যাটাগরি ক্লিক ও হোভারে বাদ যায়",
+ "pick_rules.here": "এখানকার আইটেম",
+ "pick_rules.here.selected": "নির্বাচিত",
+ "pick_rules.pinned": "পিন করা আইটেম নির্বাচন করুন",
+ "pick_rules.here.row": "{cat} · {len}"
+}

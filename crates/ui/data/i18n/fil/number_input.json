@@ -1,0 +1,4 @@
+{
+ "number_input.bad_number": "Hindi numero: maglagay ng digit na may decimal point (1.5)",
+ "number_input.at_grids_tip": "Maglagay ng column sa bawat grid intersection sa level na ito"
+}

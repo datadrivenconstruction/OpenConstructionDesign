@@ -1,0 +1,16 @@
+{
+ "save_fail.save_fail.title": "Projektet er ikke gemt",
+ "save_fail.save_fail.kept": "Dine ændringer er stadig åbne her. Intet går tabt, så længe editoren er åben.",
+ "save_fail.save_fail.details": "Detaljer",
+ "save_fail.save_fail.copy": "Kopiér",
+ "save_fail.save_fail.save_as": "Gem som…",
+ "save_fail.save_fail.retry": "Prøv igen",
+ "save_fail.save_fail.close": "Luk",
+ "save_fail.cause.full": "Disken er fuld. Frigør plads, eller gem projektet på et andet drev.",
+ "save_fail.cause.denied": "Mappen eller filen er skrivebeskyttet, eller du har ikke tilladelse til at skrive her. Vælg en anden mappe.",
+ "save_fail.cause.locked": "Filen er åben i et andet program. Luk den der, og tryk derefter på Prøv igen.",
+ "save_fail.cause.missing": "Mappen findes ikke længere. Vælg en anden mappe, eller gendan den og tryk på Prøv igen.",
+ "save_fail.cause.offline": "Drevet eller netværksmappen er ikke tilgængelig. Forbind den igen og tryk på Prøv igen, eller gem et andet sted.",
+ "save_fail.cause.too_long": "Filstien er for lang. Vælg en kortere mappe- eller filnavn.",
+ "save_fail.cause.other": "Filen kunne ikke skrives: {detail}"
+}

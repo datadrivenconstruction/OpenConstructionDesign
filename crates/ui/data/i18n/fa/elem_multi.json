@@ -1,0 +1,10 @@
+{
+ "elem.multi.title": "{n} عنصر",
+ "elem.multi.varies": "متغیر",
+ "elem.multi.tip": "Enter همه‌ی عناصر انتخاب‌شده را تنظیم می‌کند",
+ "elem.multi.hidden": "{n} ردیف فقط روی برخی عناصر است",
+ "elem.multi.none": "عناصر انتخاب‌شده ردیف مشترکی ندارند",
+ "elem.multi.range": "مقدار خارج از محدودهٔ مجاز است",
+ "elem.multi.changed": "{n} عنصر تغییر کرد · Ctrl+Z واگرد می‌کند",
+ "elem.multi.same": "همه‌ی عناصر انتخاب‌شده از قبل این مقدار را دارند"
+}

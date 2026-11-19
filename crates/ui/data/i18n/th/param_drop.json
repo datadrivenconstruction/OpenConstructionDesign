@@ -1,0 +1,8 @@
+{
+ "param_drop.title": "ลบค่าพารามิเตอร์หรือไม่",
+ "param_drop.intro": "{name} ไม่ได้ผูกกับหมวดหมู่เหล่านี้อีกต่อไป:",
+ "param_drop.line": "{category}: ค่า {values} จะถูกลบ",
+ "param_drop.undo": "Ctrl+Z ครั้งเดียวจะนำทั้งหมดกลับมา",
+ "param_drop.confirm": "ลบค่าและบันทึก",
+ "param_drop.cancel": "ยกเลิก"
+}

@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "Elevația {t} nu a fost preluată ({why}). Nu s-a modificat nimic",
+ "host_shape.shape.elev_prompt_in": "elevație, ft-in…",
+ "host_shape.shape.elev_in": "{v} in"
+}

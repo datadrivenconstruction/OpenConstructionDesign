@@ -1,0 +1,16 @@
+{
+ "family_overwrite.ow.title": "プロジェクトのタイプ値を置き換えますか?",
+ "family_overwrite.ow.body": "読み込みにより {types} の {values} が置き換えられます。これらのタイプの配置済みインスタンス: {instances}。",
+ "family_overwrite.ow.values": {
+  "one": "# 値",
+  "other": "# 値"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# タイプ",
+  "other": "# タイプ"
+ },
+ "family_overwrite.ow.list": "タイプ: {list}",
+ "family_overwrite.ow.more": "ほか {n} 件",
+ "family_overwrite.ow.back": "編集に戻る",
+ "family_overwrite.ow.replace": "値を置き換え"
+}

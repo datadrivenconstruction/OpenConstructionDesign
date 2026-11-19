@@ -1,0 +1,15 @@
+{
+ "fe.add_why_empty": "Prvo upišite naziv parametra",
+ "fe.add_why_exists": "Parametar s ovim nazivom već postoji; za promjenu upotrijebite Primijeni",
+ "fe.apply_why_missing": "Nema parametra s ovim nazivom; upišite postojeći naziv",
+ "fe.nochange": "Još nema izmjena",
+ "options.accept_more": "Prihvati…",
+ "options.delete_more": "Obriši…",
+ "options.empty_title": "Još nema skupova opcija",
+ "options.more": "Dodatne radnje: {name}",
+ "options.primary_named": "Glavna opcija: {name}",
+ "options.primary_tip": "Postavi ovo kao glavnu opciju skupa",
+ "options.select_first": "Prvo odaberite elemente u modelu",
+ "options.show_3d": "Prikaži u 3D: {name}",
+ "options.show_plan": "Prikaži u tlocrtu: {name}"
+}

@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "Hợp nhất phương án: {name}",
+ "ai_opt_merge.whole": "Hợp nhất toàn bộ phương án",
+ "ai_opt_merge.parts": "Hợp nhất phần đã chọn",
+ "ai_opt_merge.note": "Vì sao có phương án này",
+ "ai_opt_merge.rebased": "Mô hình đã thay đổi sau khi phương án này được tạo: việc hợp nhất đã được tính lại theo mô hình hiện tại. Hãy kiểm tra thay đổi trước khi áp dụng.",
+ "ai_opt_merge.left.not_picked": "Không được chọn từ phương án",
+ "ai_opt_merge.left.unticked": "Đã bỏ đánh dấu trong phương án",
+ "ai_opt_merge.left.conflict": "Không thể thêm vào mô hình hiện tại: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "Phương án này không thể hợp nhất. Phương án bị từ chối phải được khôi phục trước.",
+ "ai_opt_merge.refused.stale": "Mô hình đã thay đổi sau khi phương án này được tạo. Hãy tính lại việc hợp nhất theo mô hình hiện tại.",
+ "ai_opt_merge.refused.nothing_picked": "Chưa chọn gì để hợp nhất.",
+ "ai_opt_merge.refused.unknown_item": "Mục {item} không thuộc phương án này.",
+ "ai_opt_merge.refused.not_in_option": "Phần tử đã chọn không thuộc phương án này.",
+ "ai_opt_merge.refused.needs_left_out": "Mục {item} cần mục {needs}. Hãy chọn luôn mục đó, hoặc cho phép thêm phụ thuộc.",
+ "ai_opt_merge.refused.set_gone": "Mục {item} tham chiếu tới một vùng chọn không còn tồn tại. Hãy tạo lại phương án.",
+ "ai_opt_merge.refused.busy": "Đang mở một kế hoạch khác. Hãy áp dụng hoặc từ chối nó trước.",
+ "ai_opt_merge.refused.failed": "Không thể chuẩn bị hợp nhất: {reason}",
+ "ai_opt_merge.revive": "Khôi phục phương án",
+ "ai_opt_merge.merged": "Đã hợp nhất"
+}

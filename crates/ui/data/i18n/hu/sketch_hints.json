@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "Rajzoljon zárt körvonalat: kattintson pontokra, majd az Enter vagy a Befejezés a létrehozáshoz",
+ "sketch_hints.sk_finish": "Befejezés",
+ "sketch_hints.sk_cancel": "Mégse",
+ "sketch_hints.import_warn": "modellellenőrzési figyelmeztetések: {n} (első: {first})",
+ "sketch_hints.ai.offline.schedule": "Kimutatás megnyitása",
+ "sketch_hints.ai.offline.check": "Ellenőrzés a szabályok szerint",
+ "sketch_hints.ai.offline.warnings": "Figyelmeztetések megjelenítése",
+ "cmd.file.publish_pdf": "Lapok közzététele PDF-ként…",
+ "cmd.file.publish_pdf.desc": "A kiválasztott lapokat PDF-be teszi közzé. Ugyanaz, mint a lapok exportálása PDF/SVG formátumba.",
+ "sketch_hints.verify_none": "A kijelölésben nincs az MI-asszisztens által beállított, ellenőrizendő elem",
+ "sketch_hints.contours_none": "Nincs topográfiai test a modellben: a szintvonalak akkor jelennek meg, ha létrehoz egyet",
+ "sketch_hints.contours_off": "Topográfiai szintvonalak elrejtve",
+ "sketch_hints.contours_on": "Topográfiai szintvonalak megjelenítve"
+}

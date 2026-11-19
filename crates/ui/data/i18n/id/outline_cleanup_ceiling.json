@@ -1,0 +1,11 @@
+{
+ "cmd.ctx.ceiling.clean_outline": "Bersihkan kontur",
+ "cmd.ctx.ceiling.clean_outline.desc": "Menghapus duri sempit tempat kontur plafon berbalik ke dirinya sendiri. Pratinjau ditampilkan dulu; satu langkah batal.",
+ "cmd.ctx.shaft.clean_outline": "Bersihkan kontur",
+ "cmd.ctx.shaft.clean_outline.desc": "Menghapus duri sempit tempat kontur shaft berbalik ke dirinya sendiri. Pratinjau ditampilkan dulu; satu langkah batal.",
+ "outline_cleanup.intro_ceiling": "Kontur plafon ini berbalik ke dirinya sendiri dalam duri sempit: {n}. Pembersihan menghapusnya; yang lain tetap seperti semula.",
+ "outline_cleanup.intro_shaft": "Kontur shaft ini berbalik ke dirinya sendiri dalam duri sempit: {n}. Pembersihan menghapusnya; yang lain tetap seperti semula.",
+ "outline_cleanup.none_ceiling": "Kontur plafon ini tidak memiliki duri",
+ "outline_cleanup.none_shaft": "Kontur shaft ini tidak memiliki duri",
+ "outline_cleanup.need_host": "Pilih lantai, plafon, atau shaft"
+}

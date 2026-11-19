@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "جارٍ التعرف على {done} من {total}",
+ "mesh_recognize.all": "الكل {n}",
+ "mesh_recognize.only_confident": "الواثقة فقط",
+ "mesh_recognize.confident_tip": "يحدد الصفوف التي يطابق نوعها الفئة ويبلغ مستوى ثقتها {pct}% على الأقل",
+ "mesh_recognize.row_hint": "انقر صفاً لتحديده. مفاتيح الأسهم للتنقل، وEnter للتحديد.",
+ "mesh_recognize.kind_for": "النوع لـ {name}",
+ "mesh_recognize.source": "شبكات المصدر",
+ "mesh_recognize.keep": "الاحتفاظ بالشبكات",
+ "mesh_recognize.replace": "استبدال الشبكات",
+ "mesh_recognize.convert_keep": "تحويل {n}",
+ "mesh_recognize.convert_remove": "تحويل {n} وحذف الشبكات",
+ "mesh_recognize.creates": "سيُنشئ {n}: {kinds}",
+ "mesh_recognize.creates_none": "لم يُحدَّد شيء بعد",
+ "mesh_recognize.stay": "تبقى {n} شبكة مصدر في النموذج",
+ "mesh_recognize.removed": "سيتم حذف {n} شبكة مصدر. التراجع يعيدها."
+}

@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "প্রিভিউ",
+ "agent_draft.ag.preview.desc": "বোতামে পয়েন্টার থাকলে ক্যানভাসে এই ড্রাফটের উপাদানের রূপরেখা দেখায়। কিছু বদলায় না।",
+ "agent_draft.type.column": "কলাম",
+ "agent_draft.type.roof": "ছাদ",
+ "agent_draft.type.ceiling": "সিলিং",
+ "agent_draft.type.stair": "মনোলিথিক",
+ "agent_draft.type.railing": "রেলিং",
+ "agent_draft.type.shaft": "শ্যাফট",
+ "agent_draft.type.axis": "অক্ষ 6.5 mm",
+ "agent_draft.type.refplane": "রেফারেন্স প্লেন"
+}

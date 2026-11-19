@@ -1,0 +1,14 @@
+{
+ "lnp.openings_refused": "{n} ouvertures non modifiées ({why})",
+ "lnp.params_changed": "valeurs modifiées : {n}",
+ "lnp.params_same": "Aucune modification : {u} éléments ont déjà cette valeur",
+ "lnp.params_tip": "Entrée applique la valeur à chaque élément sélectionné ; Échap les conserve",
+ "lnp.locked_hint": "Valeurs verrouillées conservées : {n}",
+ "lnp.panels_one": "Les panneaux se modifient un à la fois",
+ "lnp.keep_first": "Garder le premier",
+ "lnp.keep_first_tip": "Sélectionnez uniquement le premier panneau pour le modifier",
+ "lnp.clip_from_wall": "Paramètres copiés depuis le mur #{id}",
+ "lnp.clip_from_opening": "Paramètres copiés depuis l’ouverture #{id}",
+ "lnp.match_from": "Propriétés de #{id} appliquées à {n} éléments",
+ "lnp.why_at": "#{id} : {e}"
+}

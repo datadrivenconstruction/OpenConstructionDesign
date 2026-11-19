@@ -1,0 +1,16 @@
+[
+ {
+  "id": "view.range",
+  "repeatable": false,
+  "icon": "layers",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "graphics",
+  "priority": 6
+ }
+]

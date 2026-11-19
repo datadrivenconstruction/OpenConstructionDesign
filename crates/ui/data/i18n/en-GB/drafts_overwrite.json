@@ -1,0 +1,5 @@
+{
+ "drafts_overwrite.ow.project": "Saving the project waits for this answer. Replace values to go on saving; Back to editing keeps every edit and writes nothing.",
+ "drafts_overwrite.drafts.ow_wait": "Saving waits for your answer in the family editor: loading a family would replace project type values. Nothing was closed.",
+ "drafts_overwrite.drafts.ow_back": "Saving stopped: project type values were kept and the family edits are still open. Nothing was closed."
+}

@@ -1,0 +1,353 @@
+{
+ "rules": [
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.18
+   },
+   "unit": "m",
+   "value": 0.18,
+   "text": {
+    "en": "Common stair riser at most 0.18 m",
+    "ru": "Подъём ступени общей лестницы не более 0.18 м"
+   },
+   "source": {
+    "doc": "ae-du-dbc",
+    "clause": "B.6.4.1.4",
+    "url": "https://dm.gov.ae/wp-content/uploads/2021/12/Dubai%20Building%20Code_English_2021%20Edition_compressed.pdf",
+    "edition": "2021 edition",
+    "accessed": "2026-11-14",
+    "paraphrase": "Riser height is limited to the range 100 to 180 mm; regular-use stairs are recommended at 150 to 165 mm (B.6.4.1.6)."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ae.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.28
+   },
+   "unit": "m",
+   "value": 0.28,
+   "text": {
+    "en": "Common stair tread at least 0.28 m",
+    "ru": "Проступь общей лестницы не менее 0.28 м"
+   },
+   "source": {
+    "doc": "ae-du-dbc",
+    "clause": "B.6.4.1.4",
+    "url": "https://dm.gov.ae/wp-content/uploads/2021/12/Dubai%20Building%20Code_English_2021%20Edition_compressed.pdf",
+    "edition": "2021 edition",
+    "accessed": "2026-11-14",
+    "paraphrase": "Tread depth must be at least 280 mm; regular-use stairs are recommended at 300 mm or more."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ae.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 1.2
+   },
+   "unit": "m",
+   "value": 1.2,
+   "text": {
+    "en": "Common stair flight width at least 1.2 m",
+    "ru": "Ширина марша общей лестницы не менее 1.2 м"
+   },
+   "source": {
+    "doc": "ae-du-dbc",
+    "clause": "B.6.4.1.3",
+    "url": "https://dm.gov.ae/wp-content/uploads/2021/12/Dubai%20Building%20Code_English_2021%20Edition_compressed.pdf",
+    "edition": "2021 edition",
+    "accessed": "2026-11-14",
+    "paraphrase": "Every stairway needs at least 1.2 m clear width; exit stairs may need more depending on occupant count under the national fire code."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ae.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.18
+   },
+   "unit": "m",
+   "value": 0.18,
+   "text": {
+    "en": "Stair riser in a house at most 0.18 m",
+    "ru": "Подъём ступени в доме не более 0.18 м"
+   },
+   "source": {
+    "doc": "ae-du-dbc",
+    "clause": "K.5.5.2.3 (Villas part)",
+    "url": "https://dm.gov.ae/wp-content/uploads/2021/12/Dubai%20Building%20Code_English_2021%20Edition_compressed.pdf",
+    "edition": "2021 edition",
+    "accessed": "2026-11-14",
+    "paraphrase": "Villa stair risers fall in the 100 to 180 mm range, the same as the general rule."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ae.house.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.28
+   },
+   "unit": "m",
+   "value": 0.28,
+   "text": {
+    "en": "Stair tread in a house at least 0.28 m",
+    "ru": "Проступь в доме не менее 0.28 м"
+   },
+   "source": {
+    "doc": "ae-du-dbc",
+    "clause": "K.5.5.2.3 (Villas part)",
+    "url": "https://dm.gov.ae/wp-content/uploads/2021/12/Dubai%20Building%20Code_English_2021%20Edition_compressed.pdf",
+    "edition": "2021 edition",
+    "accessed": "2026-11-14",
+    "paraphrase": "Villa stair treads must be at least 280 mm deep."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ae.house.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 1.0
+   },
+   "unit": "m",
+   "value": 1.0,
+   "text": {
+    "en": "Stair flight width in a house at least 1.0 m",
+    "ru": "Ширина марша в доме не менее 1.0 м"
+   },
+   "source": {
+    "doc": "ae-du-dbc",
+    "clause": "K.5.5.2.2 (Villas part)",
+    "url": "https://dm.gov.ae/wp-content/uploads/2021/12/Dubai%20Building%20Code_English_2021%20Edition_compressed.pdf",
+    "edition": "2021 edition",
+    "accessed": "2026-11-14",
+    "paraphrase": "Stairways in villas need at least 1.0 m clear width, narrower than the 1.2 m general rule."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ae.house.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.7
+   },
+   "unit": "m",
+   "value": 2.7,
+   "text": {
+    "en": "Clear height of habitable rooms at least 2.7 m",
+    "ru": "Высота жилых помещений не менее 2.7 м"
+   },
+   "source": {
+    "doc": "ae-du-dbc",
+    "clause": "B.5.3, Table B.4",
+    "url": "https://dm.gov.ae/wp-content/uploads/2021/12/Dubai%20Building%20Code_English_2021%20Edition_compressed.pdf",
+    "edition": "2021 edition",
+    "accessed": "2026-11-14",
+    "paraphrase": "Living and bedroom spaces in residential and hotel use need a clear height of 2.7 m measured from finished floor to soffit."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ae.res.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "room_kind": [
+     "office",
+     "meeting"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.5
+   },
+   "unit": "m",
+   "value": 2.5,
+   "text": {
+    "en": "Clear height of work rooms at least 2.5 m",
+    "ru": "Высота рабочих помещений не менее 2.5 м"
+   },
+   "source": {
+    "doc": "ae-du-dbc",
+    "clause": "B.5.3, Table B.4",
+    "url": "https://dm.gov.ae/wp-content/uploads/2021/12/Dubai%20Building%20Code_English_2021%20Edition_compressed.pdf",
+    "edition": "2021 edition",
+    "accessed": "2026-11-14",
+    "paraphrase": "Business occupancy offices need a clear height of 2.5 m."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ae.off.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ],
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "width",
+    "min": 1.0
+   },
+   "unit": "m",
+   "value": 1.0,
+   "text": {
+    "en": "Accessible-route corridor clear width at least 1.0 m",
+    "ru": "Ширина коридора на доступном маршруте не менее 1.0 м"
+   },
+   "source": {
+    "doc": "ae-du-dbc",
+    "clause": "C.5.5, Table C.3",
+    "url": "https://dm.gov.ae/wp-content/uploads/2021/12/Dubai%20Building%20Code_English_2021%20Edition_compressed.pdf",
+    "edition": "2021 edition",
+    "accessed": "2026-11-14",
+    "paraphrase": "Internal accessible routes must be at least 1.0 m clear (1.2 m recommended); external accessible routes are 1.2 m minimum."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ae.acc.corr"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {},
+   "check": {
+    "kind": "ratio",
+    "per": "element",
+    "cat": "room",
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen"
+    ],
+    "num": "window_area",
+    "den": "area",
+    "min": 0.1
+   },
+   "unit": "ratio",
+   "value": 0.1,
+   "text": {
+    "en": "Window area at least 10.0 % of the floor of a habitable room",
+    "ru": "Площадь окон не менее 10.0 % площади пола жилой комнаты"
+   },
+   "source": {
+    "doc": "ae-du-dbc",
+    "clause": "B.6.5.2.1, Table B.8",
+    "url": "https://dm.gov.ae/wp-content/uploads/2021/12/Dubai%20Building%20Code_English_2021%20Edition_compressed.pdf",
+    "edition": "2021 edition",
+    "accessed": "2026-11-14",
+    "paraphrase": "Net glazing area must be at least one tenth of the room area for living and bedroom spaces (kitchen excluded) and for office workstation areas."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ae.day"
+  },
+  {
+   "id": "generic.room.daylight",
+   "disabled": true
+  }
+ ]
+}

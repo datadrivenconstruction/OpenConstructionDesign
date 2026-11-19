@@ -1,0 +1,5 @@
+{
+ "start_recent.unavailable": "Indisponible pour le moment (le lecteur ou l'emplacement réseau ne répond pas) : {path}",
+ "start_recent.unavailable_short": "Indisponible pour le moment",
+ "start_recent.retry": "Réessayer"
+}

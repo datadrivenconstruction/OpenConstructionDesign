@@ -1,0 +1,4 @@
+{
+ "xl.msg.layer_cells_unplaced": "{} Zellen des Typs '{}' Schicht {} auf Blatt '{}' konnten nicht platziert werden",
+ "xl.msg.layer_hidden_unplaced": "ausgeblendete Zeile des Typs '{}' Schicht {} auf Blatt '{}' konnte nicht platziert werden"
+}

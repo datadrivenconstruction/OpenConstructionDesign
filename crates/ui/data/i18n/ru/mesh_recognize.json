@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "Распознаётся {done} из {total}",
+ "mesh_recognize.all": "Все {n}",
+ "mesh_recognize.only_confident": "Только уверенные",
+ "mesh_recognize.confident_tip": "Отмечает строки, где вид совпадает с категорией и уверенность не ниже {pct}%",
+ "mesh_recognize.row_hint": "Щёлкните строку, чтобы отметить её. Стрелки перемещают, Enter отмечает.",
+ "mesh_recognize.kind_for": "Вид для {name}",
+ "mesh_recognize.source": "Исходные сетки",
+ "mesh_recognize.keep": "Оставить сетки",
+ "mesh_recognize.replace": "Заменить сетки",
+ "mesh_recognize.convert_keep": "Преобразовать {n}",
+ "mesh_recognize.convert_remove": "Преобразовать {n} и удалить сетки",
+ "mesh_recognize.creates": "Будет создано {n}: {kinds}",
+ "mesh_recognize.creates_none": "Пока ничего не отмечено",
+ "mesh_recognize.stay": "Исходных сеток останется в модели: {n}",
+ "mesh_recognize.removed": "Исходных сеток будет удалено: {n}. Отмена вернёт их."
+}

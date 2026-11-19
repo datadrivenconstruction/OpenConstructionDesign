@@ -1,0 +1,10 @@
+{
+ "cmd.view.axes_full": "แกนเต็มความยาว",
+ "cmd.view.axes_full.desc": "แสดงแกน X และ Y เป็นเส้นเต็มตลอดแปลน กด F9 ค้างไว้เพื่อแสดงเฉพาะขณะกด",
+ "settings.axes_full": "แกน",
+ "settings.axes_full_desc": "แกนแปลนเป็นเส้นเต็มตลอดแผ่นงาน กด F9 ค้างไว้เพื่อดูอย่างรวดเร็ว",
+ "settings.axes_full_on": "แสดงแกนเต็มความยาว",
+ "plan.hud.axes_tip": "กด {key} ค้างไว้เพื่อแสดงแกนเต็มความยาว",
+ "status.axes_full.on": "เปิดแกนเต็มความยาวแล้ว",
+ "status.axes_full.off": "ปิดแกนเต็มความยาวแล้ว"
+}

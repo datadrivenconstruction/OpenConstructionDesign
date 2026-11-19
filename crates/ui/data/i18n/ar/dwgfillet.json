@@ -1,0 +1,20 @@
+{
+ "dwgfillet.fillet": "تقويس الزاوية",
+ "dwgfillet.cancel": "إيقاف التقويس",
+ "dwgfillet.tip": "انقر على خطين عند الجهات المراد إبقاؤها: يُقصّ الخطان أو يُمدّان حتى الزاوية، مع قوس مماس عندما يكون نصف القطر أكبر من صفر",
+ "dwgfillet.radius": "نصف قطر التقويس",
+ "dwgfillet.radius_tip": "نصف قطر القوس بوحدات الرسم؛ الصفر يجعل الزاوية حادة",
+ "dwgfillet.st.arm_first": "انقر على الخط الأول من الجهة المراد إبقاؤها",
+ "dwgfillet.st.arm_second": "انقر على الخط الثاني من الجهة المراد إبقاؤها",
+ "dwgfillet.st.not_armed": "اختر تقويس الزاوية أولاً",
+ "dwgfillet.st.click_line": "انقر على خط واحد من الرسم",
+ "dwgfillet.st.other_drawing": "يجب أن ينتمي الخطان إلى الرسم نفسه: ابدأ من جديد",
+ "dwgfillet.st.changed": "تغيّر الخط الأول: ابدأ من جديد",
+ "dwgfillet.st.same_line": "اختر خطاً ثانياً مختلفاً",
+ "dwgfillet.st.parallel": "الخطان متوازيان ولا يلتقيان أبداً: لا يمكن إنشاء زاوية",
+ "dwgfillet.st.degenerate": "الخط بلا طول",
+ "dwgfillet.st.no_side": "الجهة التي نقرت عليها ليس لها طول من الزاوية",
+ "dwgfillet.st.too_big": "نصف القطر كبير جداً لهذين الخطين: استخدم نصف قطر أصغر",
+ "dwgfillet.st.radius_bad": "يجب أن يكون نصف القطر صفراً أو موجباً",
+ "dwgfillet.st.done": "تم إنشاء الزاوية"
+}

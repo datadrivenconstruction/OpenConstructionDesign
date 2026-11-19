@@ -1,0 +1,10 @@
+{
+ "xlsx_dup.dup_undo": "Urungkan keputusan",
+ "xlsx_dup.dup_undo_tip": "Baris yang menjadi elemen baru ({n}) dibaca lagi dengan id-nya",
+ "xlsx_dup.dup_new": "Buat salinan yang diedit sebagai elemen baru",
+ "xlsx_dup.dup_new_tip": "Baris {rows} menjadi elemen baru dengan nilainya; elemen #{id} mempertahankan nilainya (satu langkah urungkan bersama sisanya)",
+ "xl.msg.dup_same": "id ganda {}: nilai sama dengan baris {}; baris diabaikan",
+ "xl.msg.dup_unchanged": "id ganda {}: salinan tidak berubah dari baris yang diekspor; baris diabaikan",
+ "xl.msg.dup_conflict": "id {} ada di baris {} dengan nilai berbeda; tidak ada yang diterapkan untuk id ini",
+ "xl.msg.dup_conflict_keep": "id {} ada di baris {} dengan nilai berbeda; tidak ada yang diterapkan untuk id ini — simpan satu baris"
+}

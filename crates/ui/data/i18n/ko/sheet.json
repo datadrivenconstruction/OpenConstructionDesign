@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "단축키 참조",
+ "cmd.help.shortcuts.desc": "현재 설정된 모든 단축키를 상황별로 표시합니다. 텍스트 입력란 밖에서 ?를 누르세요.",
+ "sheet.title": "키보드 단축키",
+ "sheet.filter": "명령 또는 키로 필터",
+ "sheet.filter_label": "단축키 필터",
+ "sheet.customize": "사용자 지정…",
+ "sheet.close": "닫기",
+ "sheet.esc_close": "닫으려면",
+ "sheet.none": "일치하는 단축키가 없습니다",
+ "sheet.none_hint": "다른 단어나 키를 입력해 보세요.",
+ "sheet.sec.general": "일반",
+ "sheet.sec.plan": "평면",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "일람표",
+ "sheet.sec.sheets": "시트",
+ "sheet.sec.ai": "AI"
+}

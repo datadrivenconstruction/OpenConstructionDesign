@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "Lisää kerros alle",
+ "type_layers.layer.delete": "Poista kerros",
+ "type_layers.layer.delete_last": "Tyypissä on oltava vähintään yksi kerros",
+ "type_layers.value.bad": "Ei kelvollinen positiivinen arvo",
+ "type_layers.value.required": "Pakollinen",
+ "type_layers.unsaved.title": "Tallentamattomia muutoksia: {name}",
+ "type_layers.unsaved.body": "Käytetäänkö ne tyyppiin vai hylätäänkö ne?",
+ "type_layers.unsaved.discard": "Hylkää"
+}

@@ -1,0 +1,7 @@
+{
+ "recover.untitled_note": "Projektet har aldrig sparats",
+ "recover.file_missing": "Projektfilen hittades inte",
+ "recover.banner": "Osparat arbete från en tidigare session hittades för {name}",
+ "recover.banner_review": "Granska",
+ "recover.later_archived": "Uppskjutet {n} gånger: ögonblicksbilder flyttades till arkivet"
+}

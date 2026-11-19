@@ -1,0 +1,16 @@
+{
+ "save_fail.save_fail.title": "Projekt nebyl uložen",
+ "save_fail.save_fail.kept": "Vaše úpravy jsou zde stále otevřené. Dokud editor zůstane otevřený, nic se neztratí.",
+ "save_fail.save_fail.details": "Podrobnosti",
+ "save_fail.save_fail.copy": "Kopírovat",
+ "save_fail.save_fail.save_as": "Uložit jako…",
+ "save_fail.save_fail.retry": "Zkusit znovu",
+ "save_fail.save_fail.close": "Zavřít",
+ "save_fail.cause.full": "Disk je plný. Uvolněte místo nebo uložte projekt na jiný disk.",
+ "save_fail.cause.denied": "Tato složka nebo soubor je jen pro čtení, nebo zde nemáte oprávnění zapisovat. Vyberte jinou složku.",
+ "save_fail.cause.locked": "Soubor je otevřen v jiném programu. Zavřete jej tam a stiskněte Zkusit znovu.",
+ "save_fail.cause.missing": "Složka již neexistuje. Vyberte jinou složku, nebo ji obnovte a stiskněte Zkusit znovu.",
+ "save_fail.cause.offline": "Jednotka nebo síťová složka není dostupná. Znovu ji připojte a stiskněte Zkusit znovu, nebo uložte jinam.",
+ "save_fail.cause.too_long": "Cesta k souboru je příliš dlouhá. Vyberte kratší složku nebo název souboru.",
+ "save_fail.cause.other": "Soubor nelze zapsat: {detail}"
+}

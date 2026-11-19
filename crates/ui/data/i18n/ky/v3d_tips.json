@@ -1,0 +1,8 @@
+{
+ "v3d.proj.to_ortho": "Ортогоналдык проекцияга которуу",
+ "v3d.proj.to_persp": "Перспективага которуу",
+ "v3d.walk.unit.m": "м/с",
+ "v3d.walk.unit.ft": "фт/с",
+ "v3d.temp.show_all": "Баарын көрсөтүү  ·  Esc",
+ "v3d.msg.deleted_named": "3D көрүнүш {name} өчүрүлдү"
+}

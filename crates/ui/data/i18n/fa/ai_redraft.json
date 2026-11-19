@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "بازنگری‌شده",
+ "ai.redraft.added": "+{n} افزوده",
+ "ai.redraft.removed": "−{n} حذف",
+ "ai.redraft.changed": "~{n} تغییر کرد",
+ "ai.redraft.strip": "{what} از آخرین نگاه شما",
+ "ai.redraft.note": "برنامهٔ بازنگری‌شده بررسی شد: {what}",
+ "ai.redraft.more": "+{n} دیگر",
+ "ai.redraft.ack": "فهمیدم",
+ "ai.redraft.ack.tip": "این بازنگری را دیده‌شده علامت می‌زند؛ «اعمال» بعد روی آن است",
+ "ai.redraft.removed_list": "موارد حذف‌شده: {n}",
+ "ai.redraft.review_first": "برنامه پس از پیام شما تغییر کرد: ابتدا تغییرات را بررسی کنید",
+ "ai.redraft.mark.tip": "جدید یا تغییرکرده از آخرین نگاه شما",
+ "ai.redraft.emptied": "پیگیری همه‌ی موارد را حذف کرد: پیش‌نویس خالی است"
+}

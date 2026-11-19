@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "カスタム",
+ "draw_quality.custom.tip": "{name}: このプロジェクトの項目",
+ "draw_quality.custom_note": "「カスタム」と表示された項目はこのプロジェクトに属します。",
+ "draw_quality.unsaved.lib_body": "ライブラリに保存しますか、それとも破棄しますか？",
+ "draw_quality.unsaved.styles_body": "ビューに適用しますか、それとも破棄しますか？",
+ "draw_quality.unsaved.both_body": "適用しますか、それとも破棄しますか？",
+ "draw_quality.halftone": "{category} の網掛け",
+ "draw_quality.styles.name": "線のスタイル",
+ "draw_quality.styles.other_level": "レベル {level} の未保存のスタイル編集: このレベルを編集するには適用または元に戻してください。"
+}

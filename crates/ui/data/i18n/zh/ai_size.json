@@ -1,0 +1,10 @@
+{
+ "ai.size.count": "约 {n} / {max} 个词元",
+ "ai.size.block": "对此模型而言过长：约 {n} 个词元，最多可容纳 {max} 个并为回复留出空间。请缩短或拆分",
+ "ai.size.trim": "截断以适配",
+ "ai.size.trim_tip": "截去消息末尾使其适配。点击前不会截断任何内容。",
+ "ai.size.drop_view": "排除该视图",
+ "ai.size.drop_level": "排除该楼层",
+ "ai.size.drop_selection": "排除该选择集",
+ "ai.size.sep": ","
+}

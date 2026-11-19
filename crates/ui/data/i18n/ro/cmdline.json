@@ -1,0 +1,13 @@
+{
+ "cmdl.mode_cmd": "Cmd",
+ "cmdl.mode_ai": "AI",
+ "cmdl.toggle": "Comenzi sau asistentul AI (Ctrl+J)",
+ "cmdl.hint": "Comandă sau alias (W, L, M, RO), punct #x;y, @dx;dy, d<unghi. Ctrl+J: întreabă asistentul AI",
+ "cmdl.hint_ai": "Întreabă asistentul AI despre model sau cere o modificare. Ctrl+J: înapoi la comenzi",
+ "cmdl.sent": "Trimis asistentului AI",
+ "cmdl.failed": "Nu s-a putut executa „{text}” aici",
+ "cmdl.no_tool": "Mai întâi pornește o comandă de desen, apoi introdu punctele ei",
+ "cmdl.unknown": "Nu există comanda „{text}”. Ctrl+J o trimite asistentului AI",
+ "cmdl.bad": "Nu se poate citi „{text}”: {e}",
+ "cmdl.shape": "„{text}” nu este un punct: introdu x;y, #x;y, @dx;dy sau o distanță pozitivă<unghi"
+}

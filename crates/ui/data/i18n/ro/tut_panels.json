@@ -1,0 +1,9 @@
+{
+ "empty.props_model.title": "Nimic selectat",
+ "empty.props_model.hint": "Faceți clic pe un element din vedere pentru a-i vedea proprietățile. Sau exportați toți parametrii într-un registru, editați-i acolo și aplicați-i înapoi.",
+ "empty.props_model.action": "Exportă în tabel",
+ "tut.spreadsheet.title": "Ciclu cu foaia de calcul",
+ "tut.spreadsheet.1": "Apăsați Exportă în tabel de mai jos: alegeți ce să includeți și salvați registrul.",
+ "tut.spreadsheet.2": "Deschideți registrul într-o aplicație de tabele, modificați o celulă și salvați. Previzualizarea de aici arată modificarea.",
+ "tut.spreadsheet.3": "Verificați previzualizarea și apăsați Aplică în model. Ctrl+Z anulează."
+}

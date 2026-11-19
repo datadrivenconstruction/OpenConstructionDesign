@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "يتحكم فيه القالب {name}",
+ "view_template.edit_template": "تحرير القالب",
+ "view_template.locked_tip": "محدد بقالب العرض {name}. غيّره من القالب.",
+ "view_template.no_filters": "لا توجد تصفيات في هذا العرض"
+}

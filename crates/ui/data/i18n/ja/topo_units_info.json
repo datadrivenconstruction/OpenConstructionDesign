@@ -1,0 +1,13 @@
+{
+ "topo.unit.mm": "mm",
+ "topo.unit.metre": "m",
+ "topo.unit.ft": "ft",
+ "topo.opt.material": "マテリアル",
+ "topo.row.active": "アクティブなサーフェス",
+ "topo.btn.delete_pad": "パッドを削除",
+ "topo.info.loading": "サーフェスを作成中…",
+ "topo.info.warn_n": "警告 {n} 件",
+ "topo.info.points_label": "点",
+ "topo.import.all_layers": "すべてのレイヤ",
+ "topo.import.need_layer": "少なくとも 1 つのレイヤをチェックしてください"
+}

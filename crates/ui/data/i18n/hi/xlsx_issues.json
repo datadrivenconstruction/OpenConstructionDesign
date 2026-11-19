@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "छोड़ी गई पंक्तियां और सेल",
+ "xlsx_issues.conflicts_title": "दोनों जगह बदला गया",
+ "xlsx_issues.missing_title": "वर्कबुक में शीट नहीं है",
+ "xlsx_issues.look_alike_title": "शीट नाम मेल नहीं खाता",
+ "xlsx_issues.mass_title": "बड़े पैमाने पर हटाने की पुष्टि चाहिए",
+ "xlsx_issues.sheets_missing": "वर्कबुक में शीट {sheets} नहीं हैं (नाम बदला या हटाया गया); उनकी पंक्तियों की तुलना नहीं हुई।",
+ "xlsx_issues.keep_model": "मॉडल रखें",
+ "xlsx_issues.take_book": "वर्कबुक लें",
+ "xlsx_issues.open_book_tip": "फ़ाइल को उसके ऐप में खोलता है। मॉडल में कुछ नहीं बदलता; वर्कबुक सहेजने के बाद पूर्वावलोकन फिर लोड होता है।"
+}

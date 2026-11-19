@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "Түзетілді",
+ "ai.redraft.added": "+{n} қосылды",
+ "ai.redraft.removed": "−{n} алынды",
+ "ai.redraft.changed": "~{n} өзгертілді",
+ "ai.redraft.strip": "Соңғы қарағаннан бері: {what}",
+ "ai.redraft.note": "Түзетілген жоспар қаралды: {what}",
+ "ai.redraft.more": "+{n} тағы",
+ "ai.redraft.ack": "Түсіндім",
+ "ai.redraft.ack.tip": "Бұл нұсқаны көрдім деп белгілеу; Қолдану оны нысанаға алады",
+ "ai.redraft.removed_list": "Алынған элементтер: {n}",
+ "ai.redraft.review_first": "Жоспар сіздің хабарламаңыздан кейін өзгерді: алдымен өзгерістерді қараңыз",
+ "ai.redraft.mark.tip": "Соңғы қарағаннан бері жаңа немесе өзгерген",
+ "ai.redraft.emptied": "Жалғасы барлық элементті алып тастады: жоба бос"
+}

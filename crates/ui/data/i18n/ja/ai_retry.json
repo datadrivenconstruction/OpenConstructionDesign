@@ -1,0 +1,7 @@
+{
+ "ai.retry.countdown": "{n} 秒後に再試行",
+ "ai.retry.try": "自動再試行 {i} / {max}。同じリクエストを再送信します。",
+ "ai.retry.now": "今すぐ再試行",
+ "ai.retry.gave_up": "自動再試行 {max} 回後も回答がありません。",
+ "ai.retry.shorten": "リクエストを短くする"
+}

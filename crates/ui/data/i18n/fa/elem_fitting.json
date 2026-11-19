@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "اتصال",
+ "elem.mep_fitting.many": "اتصال‌ها",
+ "elem.mep_fitting.kind.elbow": "زانو",
+ "elem.mep_fitting.kind.tee": "سه‌راهی",
+ "elem.mep_fitting.kind.cross": "صلیبی",
+ "elem.mep_fitting.kind.transition": "تبدیل",
+ "elem.mep_fitting.kind.cap": "درپوش",
+ "elem.mep_fitting.size": "اندازه",
+ "elem.mep_fitting.at": "موقعیت",
+ "elem.mep_fitting.runs": "مسیر {n}",
+ "elem.mep_fitting.edit_run": "ویرایش مسیر",
+ "elem.mep_fitting.select_runs": "انتخاب مسیرهایش",
+ "elem.mep_fitting.derived": "اتصال از مسیرهایش پیروی می‌کند: مسیر را تغییر دهید و اتصال هم با آن تغییر می‌کند.",
+ "elem.mep_fitting.no_delete": "اتصال را نمی‌توان به‌تنهایی حذف یا جابه‌جا کرد. مسیرهایش را ویرایش یا حذف کنید.",
+ "elem.mep_fitting.hint": "برای دیدن مسیرهایش روی یک اتصال در پلان کلیک کنید.",
+ "elem.mep_fitting.picked": "اتصال‌های انتخاب‌شده: {n}"
+}

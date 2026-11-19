@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "Shafts",
+ "quick.cat.shaft": "Shaft",
+ "shaft_tool.browser.shaft": "Shaft #{id}",
+ "shaft_tool.shaft.top": "Top level",
+ "shaft_tool.shaft.cuts": "Cut elements",
+ "shaft_tool.shaft.cut_area": "Cut area",
+ "shaft_tool.shaft.cut_volume": "Cut volume",
+ "elem.no.rooms": "Follows the rooms it holds"
+}

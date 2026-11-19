@@ -1,0 +1,8 @@
+{
+ "empty.start_recent.title": "Još nema nedavnih projekata",
+ "empty.start_recent.hint": "Projekti koje otvorite pojavit će se ovdje. Počnite s primjerom modela.",
+ "empty.start_recent.action": "Otvori primjer",
+ "start.recent_open_file": "Otvori datoteku…",
+ "start.forgot": "Uklonjeno iz nedavnih: {name}",
+ "start.forgot_undo": "Poništi"
+}

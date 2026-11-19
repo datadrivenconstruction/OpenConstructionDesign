@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "از هوش مصنوعی بپرس: {q}",
+ "ai.palette.connect": "برای پرسش، هوش مصنوعی را وصل کنید",
+ "ai.palette.draft.apply": "اعمال پیش‌نویس ({n})",
+ "ai.palette.draft.reject": "رد پیش‌نویس",
+ "ai.palette.draft.next": "تغییر بعدی پیش‌نویس",
+ "ai.palette.draft.show": "نمایش پیش‌نویس در نما",
+ "cmd.ai.next_change": "تغییر بعدی پیش‌نویس",
+ "cmd.ai.next_change.desc": "نما را به عنصر بعدی که پیش‌نویس تغییرش می‌دهد می‌برد.",
+ "cmd.ai.show_draft": "نمایش پیش‌نویس هوش مصنوعی در نما",
+ "cmd.ai.show_draft.desc": "نما را به همه‌چیزی که پیش‌نویس تغییر می‌دهد جا می‌دهد."
+}

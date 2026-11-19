@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "Bộ lọc hàng dưới tiêu đề. Chữ: chuỗi con; số: >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "Hiện hoặc ẩn cột",
+ "sched_toolbar.groups_tip": "Nhóm hàng theo cột, kèm tổng phụ",
+ "sched_toolbar.formulas_tip": "Cột tính toán",
+ "sched_toolbar.phase": "Giai đoạn",
+ "sched_toolbar.phase_tip": "Lấy dữ liệu hàng từ giai đoạn nào",
+ "sched_toolbar.copy_tip": "Các hàng đã chọn (hoặc tất cả hàng đang hiện) dạng TSV",
+ "sched_toolbar.import_tip": "Đọc lại bảng thống kê đã xuất: hàng theo Id, cột theo tiêu đề; đếm trước, sau đó một bước hoàn tác",
+ "sched_toolbar.export_tip": "Các hàng và cột đang hiện, kèm tổng; số vẫn là số",
+ "sched_toolbar.need_table": "Hãy mở bảng thống kê trước",
+ "sched_toolbar.busy_open": "Hộp thoại mở tệp đã được mở",
+ "sched_toolbar.busy_save": "Hộp thoại lưu đã được mở",
+ "sched_toolbar.clear_filter": "Xóa bộ lọc",
+ "sched_toolbar.fields_title": "Cột"
+}

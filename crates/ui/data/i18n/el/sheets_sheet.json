@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "Αντίγραφο φύλλου με προβολές",
+ "cmd.view.sheet_duplicate_title": "Αντίγραφο φύλλου (μόνο πλαίσιο τίτλου)",
+ "sheets.dup.menu_views": "Αντίγραφο με προβολές",
+ "sheets.dup.menu_title": "Αντίγραφο, μόνο πλαίσιο τίτλου",
+ "sheets.dup.done": "Το φύλλο {number} δημιουργήθηκε από το {src}: {views} προβολές, {sched} πίνακες και υπομνήματα. Οι αναθεωρήσεις δεν αντιγράφονται· το φύλλο δεν έχει εκδοθεί.",
+ "sheets.dup.none": "Ανοίξτε ένα φύλλο για να το αντιγράψετε",
+ "sheets.dup.copy": "αντίγραφο",
+ "cmd.view.sheet_duplicate.short": "Αντίγραφο με προβολές",
+ "cmd.view.sheet_duplicate_title.short": "Αντίγραφο πλαισίου τίτλου"
+}

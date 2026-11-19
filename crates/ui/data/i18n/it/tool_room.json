@@ -1,0 +1,9 @@
+{
+ "tool.room": "Locale",
+ "tool.room.name": "Locale",
+ "room_tool.room.name": "Nome",
+ "hint.room.place": "Clic dentro un contorno di muri chiuso per creare un locale · Esc — esci",
+ "tool.err.room_open": "La regione non è chiusa: chiudi il contorno dei muri o aggiungi un separatore di locale",
+ "tool.err.room_check": "Impossibile verificare i locali di questo livello",
+ "tool.err.room_exists": "C'è già un locale in questo contorno"
+}

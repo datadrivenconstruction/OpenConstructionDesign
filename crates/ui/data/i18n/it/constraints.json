@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "Mantiene questo muro alla lunghezza attuale a ogni modifica",
+ "constraints.con.tip.lock_dist": "Mantiene la distanza tra i due muri a ogni modifica",
+ "constraints.con.tip.equal": "Mantiene uguali i passi tra i muri selezionati",
+ "constraints.con.tip.align": "Mantiene i due muri su una stessa linea",
+ "constraints.con.tip.parallel": "Mantiene i muri paralleli",
+ "constraints.con.tip.perp": "Mantiene i muri ad angolo retto",
+ "constraints.con.tip.align_grid": "Mantiene il muro sulla linea di griglia più vicina",
+ "constraints.con.tip.lock_dist_grid": "Mantiene la distanza dal muro alla linea di griglia più vicina",
+ "constraints.con.tip.level_gap": "Mantiene la distanza tra i livelli",
+ "constraints.con.tip.top_to_level": "Mantiene la sommità del muro al livello superiore"
+}

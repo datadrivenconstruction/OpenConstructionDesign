@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "Cavedi",
+ "quick.cat.shaft": "Cavedio",
+ "shaft_tool.browser.shaft": "Cavedio #{id}",
+ "shaft_tool.shaft.top": "Livello superiore",
+ "shaft_tool.shaft.cuts": "Elementi tagliati",
+ "shaft_tool.shaft.cut_area": "Superficie tagliata",
+ "shaft_tool.shaft.cut_volume": "Volume tagliato",
+ "elem.no.rooms": "Segue i locali che contiene"
+}

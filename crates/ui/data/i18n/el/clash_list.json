@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "Όλα",
+ "clash_list.only_selected": "Μόνο επιλεγμένα",
+ "clash_list.tolerance": "Ανοχή",
+ "clash_list.gap": "Κενό",
+ "clash_list.export": "Εξαγωγή",
+ "clash_list.col.volume": "Όγκος",
+ "clash_list.fix.up": "Μετακίνηση πάνω",
+ "clash_list.fix.down": "Μετακίνηση κάτω",
+ "clash_list.fix.sleeve": "Θήκη",
+ "clash_list.apply_fix": "Εφαρμογή διόρθωσης",
+ "clash_list.err.tol": "Ανοχή: εισάγετε μήκος (0 ή περισσότερο), π.χ. 50 ή 2 in",
+ "clash_list.sleeve_no_host": "Η θήκη χρειάζεται τοίχο ή πλάκα στο ζεύγος",
+ "clash_list.err.gap": "Κενό: εισάγετε μήκος (0 ή περισσότερο), π.χ. 50 ή 2 in"
+}

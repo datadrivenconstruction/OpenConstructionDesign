@@ -1,0 +1,13 @@
+[
+ {
+  "id": "mgr.autosave_show",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ }
+]

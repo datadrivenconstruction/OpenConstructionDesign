@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "Sarlavhalar ostidagi filtr qatori. Matn: qism satr; sonlar: >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "Ustunlarni ko'rsatish yoki yashirish",
+ "sched_toolbar.groups_tip": "Qatorlarni ustunlar bo'yicha guruhlash, oraliq jamilar bilan",
+ "sched_toolbar.formulas_tip": "Hisoblanadigan ustunlar",
+ "sched_toolbar.phase": "Bosqich",
+ "sched_toolbar.phase_tip": "Qatorlar qaysi bosqichdan olinishi",
+ "sched_toolbar.copy_tip": "Tanlangan qatorlar (yoki barcha ko'rinadiganlar) TSV sifatida",
+ "sched_toolbar.import_tip": "Eksport qilingan jadvalni qaytarib o'qish: qatorlar Id bo'yicha, ustunlar sarlavha bo'yicha; avval sanoq, so'ng bitta bekor qilish qadami",
+ "sched_toolbar.export_tip": "Ko'rinadigan qatorlar va ustunlar jami bilan; sonlar sonligicha qoladi",
+ "sched_toolbar.need_table": "Avval jadvalni oching",
+ "sched_toolbar.busy_open": "Fayl oynasi allaqachon ochiq",
+ "sched_toolbar.busy_save": "Saqlash oynasi allaqachon ochiq",
+ "sched_toolbar.clear_filter": "Filtrni tozalash",
+ "sched_toolbar.fields_title": "Ustunlar"
+}

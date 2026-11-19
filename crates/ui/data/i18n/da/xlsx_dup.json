@@ -1,0 +1,10 @@
+{
+ "xlsx_dup.dup_undo": "Fortryd beslutning",
+ "xlsx_dup.dup_undo_tip": "Rækker lavet om til nye elementer ({n}) læses igen med deres id",
+ "xlsx_dup.dup_new": "Opret redigerede kopier som nye elementer",
+ "xlsx_dup.dup_new_tip": "Rækkerne {rows} bliver nye elementer med deres værdier; element #{id} beholder sine værdier (ét fortrydelsestrin sammen med resten)",
+ "xl.msg.dup_same": "dublet-id {}: samme værdier som række {}; rækken ignoreres",
+ "xl.msg.dup_unchanged": "dublet-id {}: uændret kopi af den eksporterede række; rækken ignoreres",
+ "xl.msg.dup_conflict": "id {} står på rækkerne {} med forskellige værdier; intet anvendt for dette id",
+ "xl.msg.dup_conflict_keep": "id {} står på rækkerne {} med forskellige værdier; intet anvendt for dette id — behold én række"
+}

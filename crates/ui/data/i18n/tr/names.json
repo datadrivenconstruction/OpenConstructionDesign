@@ -1,0 +1,19 @@
+{
+ "names.level": "{n}. kat",
+ "names.slab": "Döşeme 200",
+ "names.roof_slab": "Çatı 200",
+ "names.sheet.plan_section": "1. kat planı ve kesiti",
+ "names.sheet.plan_view": "1. kat planı",
+ "names.sheet.site_plan": "Saha planı",
+ "names.sheet_set.issue": "Sayı 1",
+ "names.title.owner": "Proje Ltd.",
+ "names.title.creator": "A. Ivanov",
+ "names.title.approver": "P. Petrov",
+ "names.title.document_type": "Çizim",
+ "names.title.status": "Devam ediyor",
+ "names.revision.date": "4 Kas 2026",
+ "names.revision.description": "İnceleme için yayımlandı",
+ "names.revision.author": "AI",
+ "names.demo.no_levels": "kat yok",
+ "names.demo.no_sheet": "sayfa"
+}

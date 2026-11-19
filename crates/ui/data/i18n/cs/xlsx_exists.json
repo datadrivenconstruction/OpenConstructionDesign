@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "Tento sešit již existuje",
+ "xlsx_exists.foreign": "Nejde o sešit tohoto projektu, proto nikdy nebude nahrazen.",
+ "xlsx_exists.pending": "Obsahuje {n} úprav, které zatím nejsou použity v modelu.",
+ "xlsx_exists.outside": "Obsahuje {n} řádků, které nový export nepřenese.",
+ "xlsx_exists.new_name": "Export do {name}",
+ "xlsx_exists.apply_first": "Nejprve je použijte",
+ "xlsx_exists.replace": "Nahradit (starý sešit do _archive)",
+ "xlsx_exists.archived": "Starý sešit přesunut do {path}",
+ "xlsx_exists.archive_failed": "Starý sešit nelze přesunout, nic nebylo exportováno: {error}"
+}

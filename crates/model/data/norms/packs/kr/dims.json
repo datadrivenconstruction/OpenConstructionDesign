@@ -1,0 +1,251 @@
+{
+ "items": [
+  {
+   "key": "egress.travel_max",
+   "value": 50,
+   "unit": "m",
+   "source": "kr-bld-decree",
+   "clause": "Art. 34 para 1",
+   "url": "https://elaw.klri.re.kr/kor_service/lawViewMultiContent.do?hseq=69117",
+   "accessed": "2026-11-14",
+   "paraphrase": "Walking distance to a direct stair is 30 m generally, raised to 50 m where main structure is fire-resistant or noncombustible; 40 m on floors 16+ of tall apartments.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ],
+    "sprinklered": false
+   },
+   "verified": true,
+   "note": "read 2026-11-14 in English text at the KLRI page; the 40 m case applies to 16+ storey apartments."
+  },
+  {
+   "key": "egress.travel_max.office",
+   "value": 50,
+   "unit": "m",
+   "source": "kr-bld-decree",
+   "clause": "Art. 34 para 1",
+   "url": "https://elaw.klri.re.kr/kor_service/lawViewMultiContent.do?hseq=69117",
+   "accessed": "2026-11-14",
+   "paraphrase": "Offices of fire-resistant or noncombustible structure use the same 50 m limit.",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "sprinklered": false
+   },
+   "verified": true,
+   "note": "read 2026-11-14 at KLRI page"
+  },
+  {
+   "key": "fire.compartment_area_max",
+   "value": 1000,
+   "unit": "m2",
+   "source": "kr-evac-rule",
+   "clause": "Art. 14(1) item 1",
+   "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsNm=%EA%B1%B4%EC%B6%95%EB%AC%BC%EC%9D%98%20%ED%94%BC%EB%82%9C%E3%86%8D%EB%B0%A9%ED%99%94%EA%B5%AC%EC%A1%B0%20%EB%93%B1%EC%9D%98%20%EA%B8%B0%EC%A4%80%EC%97%90%20%EA%B4%80%ED%95%9C%20%EA%B7%9C%EC%B9%99&joNo=001400000&mode=11",
+   "accessed": "2026-11-14",
+   "paraphrase": "Floors up to the 10th storey are divided into compartments of 1000 m2 each.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ],
+    "sprinklered": false
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via www.law.go.kr (official text). Applies to floors 10 and below; 11th floor and above use 200 m2 (500 m2 with noncombustible finishes). Decree Art. 46 trigger read earlier at KLRI."
+  },
+  {
+   "key": "fire.compartment_area_max.sprinklered",
+   "value": 3000,
+   "unit": "m2",
+   "source": "kr-evac-rule",
+   "clause": "Art. 14(1) item 1",
+   "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsNm=%EA%B1%B4%EC%B6%95%EB%AC%BC%EC%9D%98%20%ED%94%BC%EB%82%9C%E3%86%8D%EB%B0%A9%ED%99%94%EA%B5%AC%EC%A1%B0%20%EB%93%B1%EC%9D%98%20%EA%B8%B0%EC%A4%80%EC%97%90%20%EA%B4%80%ED%95%9C%20%EA%B7%9C%EC%B9%99&joNo=001400000&mode=11",
+   "accessed": "2026-11-14",
+   "paraphrase": "With sprinklers or similar automatic extinguishing, floors up to the 10th storey allow 3000 m2 per compartment.",
+   "applies": {
+    "sprinklered": true
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via www.law.go.kr (official text). 11th floor and above: 600 m2 (1500 m2 with noncombustible finishes)."
+  },
+  {
+   "key": "room.height_min",
+   "value": 2.1,
+   "unit": "m",
+   "source": "kr-evac-rule",
+   "clause": "Art. 16(1)",
+   "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsNm=%EA%B1%B4%EC%B6%95%EB%AC%BC%EC%9D%98%20%ED%94%BC%EB%82%9C%E3%86%8D%EB%B0%A9%ED%99%94%EA%B5%AC%EC%A1%B0%20%EB%93%B1%EC%9D%98%20%EA%B8%B0%EC%A4%80%EC%97%90%20%EA%B4%80%ED%95%9C%20%EA%B7%9C%EC%B9%99&joNo=001600000&mode=11",
+   "accessed": "2026-11-14",
+   "paraphrase": "Ceiling of a habitable room is at least 2.1 m, counting beams or the slab underside where no ceiling exists.",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via www.law.go.kr (official text). Rule Art. 16 implements decree Art. 50; assembly/religious halls over 200 m2 need 4 m (2.7 m under balconies). Housing standard 2.2 m not re-read."
+  },
+  {
+   "key": "room.height_min.office",
+   "value": 2.1,
+   "unit": "m",
+   "source": "kr-evac-rule",
+   "clause": "Art. 16(1) with decree Art. 50",
+   "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsNm=%EA%B1%B4%EC%B6%95%EB%AC%BC%EC%9D%98%20%ED%94%BC%EB%82%9C%E3%86%8D%EB%B0%A9%ED%99%94%EA%B5%AC%EC%A1%B0%20%EB%93%B1%EC%9D%98%20%EA%B8%B0%EC%A4%80%EC%97%90%20%EA%B4%80%ED%95%9C%20%EA%B7%9C%EC%B9%99&joNo=001600000&mode=11",
+   "accessed": "2026-11-14",
+   "paraphrase": "Same 2.1 m ceiling rule applies to offices, which are not in the exempted use list.",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via www.law.go.kr (official text). Decree Art. 50 exempts only factories, warehouses, hazardous storage, animal/plant and recycling facilities and graveyards, so offices are covered."
+  },
+  {
+   "key": "daylight.window_floor_ratio",
+   "value": 0.1,
+   "unit": "ratio",
+   "source": "kr-evac-rule",
+   "clause": "Art. 17(1)",
+   "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsNm=%EA%B1%B4%EC%B6%95%EB%AC%BC%EC%9D%98%20%ED%94%BC%EB%82%9C%E3%86%8D%EB%B0%A9%ED%99%94%EA%B5%AC%EC%A1%B0%20%EB%93%B1%EC%9D%98%20%EA%B8%B0%EC%A4%80%EC%97%90%20%EA%B4%80%ED%95%9C%20%EA%B7%9C%EC%B9%99&joNo=001700000&mode=11",
+   "accessed": "2026-11-14",
+   "paraphrase": "Window area for daylight in a habitable room is at least one tenth of that room's floor area.",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via www.law.go.kr (official text). Exempt where lighting of the table-set illuminance is installed; ventilation openings 1/20 (Art. 17(2))."
+  },
+  {
+   "key": "stair.width_min",
+   "value": 1.2,
+   "unit": "m",
+   "source": "kr-housing-std",
+   "clause": "Art. 16(1) table, row common stairs",
+   "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsNm=%EC%A3%BC%ED%83%9D%EA%B1%B4%EC%84%A4%EA%B8%B0%EC%A4%80%20%EB%93%B1%EC%97%90%20%EA%B4%80%ED%95%9C%20%EA%B7%9C%EC%A0%95&joNo=001600000&mode=11",
+   "accessed": "2026-11-14",
+   "paraphrase": "Common stairs have a clear width of at least 120 cm.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via www.law.go.kr (official text). Table is an image on law.go.kr; read the image. Outdoor stairs row: 90 cm / 20 cm / 24 cm."
+  },
+  {
+   "key": "stair.riser_max",
+   "value": 0.18,
+   "unit": "m",
+   "source": "kr-housing-std",
+   "clause": "Art. 16(1) table, row common stairs",
+   "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsNm=%EC%A3%BC%ED%83%9D%EA%B1%B4%EC%84%A4%EA%B8%B0%EC%A4%80%20%EB%93%B1%EC%97%90%20%EA%B4%80%ED%95%9C%20%EA%B7%9C%EC%A0%95&joNo=001600000&mode=11",
+   "accessed": "2026-11-14",
+   "paraphrase": "Common stairs have a riser of at most 18 cm.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via www.law.go.kr (official text). Table is an image on law.go.kr; read the image. Outdoor stairs row: 90 cm / 20 cm / 24 cm."
+  },
+  {
+   "key": "stair.tread_min",
+   "value": 0.26,
+   "unit": "m",
+   "source": "kr-housing-std",
+   "clause": "Art. 16(1) table, row common stairs",
+   "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsNm=%EC%A3%BC%ED%83%9D%EA%B1%B4%EC%84%A4%EA%B8%B0%EC%A4%80%20%EB%93%B1%EC%97%90%20%EA%B4%80%ED%95%9C%20%EA%B7%9C%EC%A0%95&joNo=001600000&mode=11",
+   "accessed": "2026-11-14",
+   "paraphrase": "Common stairs have a tread of at least 26 cm.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via www.law.go.kr (official text). Table is an image on law.go.kr; read the image. Outdoor stairs row: 90 cm / 20 cm / 24 cm."
+  },
+  {
+   "key": "parking.per_dwelling",
+   "value": 1.0,
+   "unit": "count",
+   "source": "kr-housing-std",
+   "clause": "Art. 27(1) item 1",
+   "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsNm=%EC%A3%BC%ED%83%9D%EA%B1%B4%EC%84%A4%EA%B8%B0%EC%A4%80%20%EB%93%B1%EC%97%90%20%EA%B4%80%ED%95%9C%20%EA%B7%9C%EC%A0%95&joNo=002700000&mode=11",
+   "accessed": "2026-11-14",
+   "paraphrase": "Housing estates need at least one space per dwelling, 0.7 for dwellings of 60 m2 exclusive area or less.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via www.law.go.kr (official text). National minimum 1 space per dwelling, 0.7 where exclusive area is 60 m2 or less; area-based ratios also apply; local ordinances may tighten (up to +20%)."
+  },
+  {
+   "key": "corridor.width_min.accessible",
+   "value": 1.2,
+   "unit": "m",
+   "source": "kr-access-rule",
+   "clause": "Annex 1 item 7(a)",
+   "url": "https://www.law.go.kr/LSW//flDownload.do?gubun=&flSeq=135226913&bylClsCd=110201",
+   "accessed": "2026-11-14",
+   "paraphrase": "Accessible corridor clear width is at least 1.2 m, and 1.5 m may be used with rooms on both sides.",
+   "verified": true,
+   "note": "read 2026-11-14 via www.law.go.kr (official text). Read in the annex PDF rendered as image; 1.5 m allowed where rooms line both sides."
+  },
+  {
+   "key": "door.clear_min.accessible",
+   "value": 0.9,
+   "unit": "m",
+   "source": "kr-access-rule",
+   "clause": "Annex 1 item 6(a)(1)",
+   "url": "https://www.law.go.kr/LSW//flDownload.do?gubun=&flSeq=135226913&bylClsCd=110201",
+   "accessed": "2026-11-14",
+   "paraphrase": "Accessible entrance doors need at least 0.9 m clear passage width.",
+   "verified": true,
+   "note": "read 2026-11-14 via www.law.go.kr (official text). Clear passage width of accessible entrance doors; 1.2 m clear zone in front of the door."
+  },
+  {
+   "key": "accessible.turning_circle",
+   "value": 1.5,
+   "unit": "m",
+   "source": "kr-access-rule",
+   "clause": "Accessibility act rules, annex",
+   "url": "https://www.law.go.kr/LSW//flDownload.do?gubun=&flSeq=135226913&bylClsCd=110201",
+   "accessed": "2026-11-14",
+   "paraphrase": "Wheelchair turning space is a 150 cm circle.",
+   "verified": false,
+   "note": "read 2026-11-14: law.go.kr annex 1 PDF (flSeq=135226913); a 1.5 m square for rotation is given, no circle diameter, so kept unverified as a proxy"
+  },
+  {
+   "key": "ramp.slope_max",
+   "value": 0.083333,
+   "unit": "ratio",
+   "source": "kr-access-rule",
+   "clause": "Annex 1 item 12(b)",
+   "url": "https://www.law.go.kr/LSW//flDownload.do?gubun=&flSeq=135226913&bylClsCd=110201",
+   "accessed": "2026-11-14",
+   "paraphrase": "Accessible ramp slope is at most 1:12.",
+   "verified": true,
+   "note": "read 2026-11-14 via www.law.go.kr (official text). Up to 1:8 only for existing buildings, height under 1 m, with staff assistance."
+  }
+ ]
+}

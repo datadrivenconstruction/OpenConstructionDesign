@@ -1,0 +1,16 @@
+{
+ "family_overwrite.ow.title": "پروجیکٹ کی قسم کی قدریں تبدیل کریں؟",
+ "family_overwrite.ow.body": "لوڈ کرنے سے {types} میں {values} تبدیل ہوں گی۔ ان اقسام کے رکھے گئے نمونے: {instances}۔",
+ "family_overwrite.ow.values": {
+  "one": "# قدر",
+  "other": "# قدریں"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# قسم",
+  "other": "# اقسام"
+ },
+ "family_overwrite.ow.list": "اقسام: {list}",
+ "family_overwrite.ow.more": "اور {n} مزید",
+ "family_overwrite.ow.back": "واپس ترمیم پر",
+ "family_overwrite.ow.replace": "قدریں تبدیل کریں"
+}

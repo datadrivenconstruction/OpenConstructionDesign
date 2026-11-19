@@ -1,0 +1,15 @@
+{
+ "cmd.ctx.floor.clean_outline": "清理轮廓",
+ "cmd.ctx.floor.clean_outline.desc": "移除楼板轮廓回折处的窄尖刺。先显示预览；一步撤销。",
+ "outline_cleanup.title": "清理轮廓",
+ "outline_cleanup.intro": "本楼板轮廓在窄尖刺处回折：{n}。清理会移除这些尖刺，其余部分保持不变。",
+ "outline_cleanup.legend_before": "粗线：当前轮廓",
+ "outline_cleanup.legend_after": "细线：清理后的轮廓",
+ "outline_cleanup.undo": "可一步撤销。",
+ "outline_cleanup.apply": "清理",
+ "outline_cleanup.cancel": "取消",
+ "outline_cleanup.done": "轮廓已清理，已移除尖刺：{n}",
+ "outline_cleanup.none": "本楼板轮廓没有尖刺",
+ "outline_cleanup.failed": "无法清理轮廓",
+ "outline_cleanup.changed": "预览后轮廓已改变；未写入任何内容。请检查新预览。"
+}

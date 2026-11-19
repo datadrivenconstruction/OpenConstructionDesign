@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "Itaas",
+ "rebar_list.move_down": "Ibaba",
+ "rebar_list.remove": "Alisin",
+ "rebar_list.zone_remove_last": "Kailangan ng zone ng hindi bababa sa isang kuwarto: burahin ang zone para maalis ang huli",
+ "rebar_list.rebar_empty_title": "Walang rebar sa model na ito",
+ "rebar_list.rebar_empty_hint": "Maglagay ng rebar sa host element at ise-schedule ito dito.",
+ "rebar_list.rebar_empty_action": "Maglagay ng rebar"
+}

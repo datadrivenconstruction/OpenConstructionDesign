@@ -1,0 +1,72 @@
+{
+ "schema": "gen_bench.v1",
+ "group": "steep_site",
+ "spec": {
+  "typology": "office",
+  "floors": 4,
+  "basements": 1,
+  "footprint": {
+   "plot": [
+    [
+     0,
+     0
+    ],
+    [
+     44,
+     0
+    ],
+    [
+     44,
+     30
+    ],
+    [
+     0,
+     30
+    ]
+   ],
+   "plot_setback": 3
+  }
+ },
+ "adjacency": [
+  [
+   "meeting",
+   "lobby",
+   1
+  ],
+  [
+   "office",
+   "corridor",
+   2
+  ],
+  [
+   "wc",
+   "corridor",
+   1
+  ]
+ ],
+ "site": {
+  "plot": [
+   [
+    0,
+    0
+   ],
+   [
+    44,
+    0
+   ],
+   [
+    44,
+    30
+   ],
+   [
+    0,
+    30
+   ]
+  ],
+  "slope": 0.2,
+  "downhill": [
+   0,
+   -1
+  ]
+ }
+}

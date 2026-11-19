@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "Açıklama",
+ "legend.legend.new_hint": "Yeni açıklama adı",
+ "legend.legend.delete_tip": "Açıklamayı sil",
+ "legend.legend.delete_placed": "Açıklamayı sil (yerleştirildiği yerler: {sheets})",
+ "legend.legend.deleted": "Açıklama silindi: {name}",
+ "legend.legend.no_rows": "Henüz satır yok. Bir tane ekleyin veya mevcut görünümün stillerini alın",
+ "legend.legend.replace_q": "{n} satır bu görünümün stilleriyle değiştirilsin mi?",
+ "legend.legend.replace": "Değiştir",
+ "legend.legend.keep": "Satırları tut",
+ "legend.col.swatch": "Renk örneği",
+ "legend.col.value": "Değer",
+ "legend.col.label": "Etiket"
+}

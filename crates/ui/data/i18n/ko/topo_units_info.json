@@ -1,0 +1,13 @@
+{
+ "topo.unit.mm": "mm",
+ "topo.unit.metre": "m",
+ "topo.unit.ft": "ft",
+ "topo.opt.material": "재료",
+ "topo.row.active": "활성 표면",
+ "topo.btn.delete_pad": "패드 삭제",
+ "topo.info.loading": "표면 생성 중…",
+ "topo.info.warn_n": "경고 {n}개",
+ "topo.info.points_label": "점",
+ "topo.import.all_layers": "모든 레이어",
+ "topo.import.need_layer": "레이어를 하나 이상 선택하세요"
+}

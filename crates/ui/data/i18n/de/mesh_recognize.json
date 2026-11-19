@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "Erkennung {done} von {total}",
+ "mesh_recognize.all": "Alle {n}",
+ "mesh_recognize.only_confident": "Nur sichere",
+ "mesh_recognize.confident_tip": "Markiert Zeilen, deren Art zur Kategorie passt und deren Sicherheit mindestens {pct} % beträgt",
+ "mesh_recognize.row_hint": "Klicken Sie auf eine Zeile, um sie zu markieren. Pfeiltasten bewegen, Enter markiert.",
+ "mesh_recognize.kind_for": "Art für {name}",
+ "mesh_recognize.source": "Quellnetze",
+ "mesh_recognize.keep": "Netze behalten",
+ "mesh_recognize.replace": "Netze ersetzen",
+ "mesh_recognize.convert_keep": "{n} umwandeln",
+ "mesh_recognize.convert_remove": "{n} umwandeln und Netze entfernen",
+ "mesh_recognize.creates": "Erstellt {n}: {kinds}",
+ "mesh_recognize.creates_none": "Noch nichts markiert",
+ "mesh_recognize.stay": "{n} Quellnetze bleiben im Modell",
+ "mesh_recognize.removed": "{n} Quellnetze werden entfernt. Rückgängig stellt sie wieder her."
+}

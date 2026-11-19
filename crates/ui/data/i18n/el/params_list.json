@@ -1,0 +1,23 @@
+{
+ "params_list.n_params": {
+  "one": "# παράμετρος",
+  "other": "# παράμετροι"
+ },
+ "params_list.n_values": {
+  "one": "# τιμή",
+  "other": "# τιμές"
+ },
+ "params_list.n_elements": {
+  "one": "# στοιχείο",
+  "other": "# στοιχεία"
+ },
+ "params_list.exported": "{params} εξήχθησαν στο {file}",
+ "params_list.export_failed": "Οι παράμετροι δεν εξήχθησαν: {why}",
+ "params_list.open_folder": "Άνοιγμα φακέλου",
+ "params_list.delete_tip": "Διαγραφή παραμέτρου και των τιμών της",
+ "params_list.confirm": "Διαγραφή του {name} και των {values} του στα {elements};",
+ "params_list.confirm_btn": "Διαγραφή",
+ "params_list.cancel": "Ακύρωση",
+ "params_list.deleted": "Διαγράφηκε η παράμετρος {name} ({values})",
+ "params_list.undo": "Αναίρεση"
+}

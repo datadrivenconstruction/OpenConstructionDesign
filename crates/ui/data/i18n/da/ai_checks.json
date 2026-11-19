@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "målt {value}, grænse {limit}",
+ "ai_checks.check.cap": "Viser {shown} af {total} fund. Fejl står først: ret dem og kør igen.",
+ "ai_checks.check.run_again": "Kør igen",
+ "ai_checks.check.goto": "Vælg og zoom",
+ "ai_checks.check.never_title": "Ikke kontrolleret endnu",
+ "ai_checks.check.never_hint": "Kør kontrollerne, så vises fundene her.",
+ "ai_checks.check.sec.error": "Fejl",
+ "ai_checks.check.sec.warning": "Advarsler",
+ "ai_checks.check.sec.info": "Noter"
+}

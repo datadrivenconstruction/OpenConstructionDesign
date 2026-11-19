@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "Ilgak tomonini almashtirish",
+ "cmd.edit.flip_hand.desc": "Tanlangan eshik va derazalarni devor bo'ylab aks ettiradi, ilgaklar teshikning boshqa uchiga o'tadi.",
+ "cmd.edit.flip_facing": "Ochilish tomonini almashtirish",
+ "cmd.edit.flip_facing.desc": "Tanlangan eshik va derazalarni devorning boshqa tomoniga aylantiradi.",
+ "opening_grips.flip_hand": "Ilgakni almashtirish",
+ "opening_grips.flip_hand.tip": "Ilgaklar teshikning boshqa uchiga (Shift+F)",
+ "opening_grips.flip_facing": "Tomonni almashtirish",
+ "opening_grips.flip_facing.tip": "Ochilish devorning boshqa tomoniga (Shift+G)",
+ "opening_grips.flip.done": "Aylantirildi: {n}",
+ "opening_grips.flip.none": "Aylantirish uchun eshik yoki derazani tanlang",
+ "opening_grips.flip.fail": "Aylantirilmadi: {why}"
+}

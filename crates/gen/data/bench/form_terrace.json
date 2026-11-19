@@ -1,0 +1,32 @@
+{
+ "schema": "gen_bench.v1",
+ "group": "free_form",
+ "spec": {
+  "typology": "office",
+  "name": "Terraced Block",
+  "floors": 6,
+  "footprint": {
+   "shape": "rectangle",
+   "width": 54,
+   "depth": 32
+  },
+  "rules": {
+   "massing.step_every": 2,
+   "massing.step_setback": 3,
+   "massing.step_mode": "terrace",
+   "massing.step_dir": 90
+  }
+ },
+ "adjacency": [
+  [
+   "office",
+   "meeting",
+   1
+  ],
+  [
+   "meeting",
+   "lobby",
+   1
+  ]
+ ]
+}

@@ -1,0 +1,4 @@
+{
+ "topo_import.topo.ambiguous": "{n} rida jäeti vahele: arv loetakse kahel viisil (1,250 = 1.25 või 1250?) ja fail ei näita kümnendmärki",
+ "topo_import.topo.grouped": "{n} punkti loeti numbrirühmadega (1 250,5 või 1,234.5)"
+}

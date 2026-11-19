@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "Адегенде шаблондун атын киргизиңиз",
+ "view_template.name_taken": "Мындай аттагы шаблон бар",
+ "view_template.pick_blocked": "Адегенде кеминде бир көрүнүштү белгилеңиз",
+ "view_template.views.one": "{n} көрүнүш",
+ "view_template.views.few": "{n} көрүнүш",
+ "view_template.views.many": "{n} көрүнүш",
+ "view_template.delete.title": "Бул шаблонду өчүрөсүзбү?",
+ "view_template.delete.body": "“{name}” шаблону өчүрүлөт. Колдонулат: {used}.",
+ "view_template.delete.unused": "“{name}” шаблону өчүрүлөт. Аны эч бир көрүнүш колдонбойт.",
+ "view_template.delete.keeps": "Бул көрүнүштөр учурдагы графикасын сактап, шаблон байланышын жоготот.",
+ "view_template.delete.undo": "Муну бир Артка кайтаруу менен кайтарууга болот.",
+ "view_template.delete.confirm": "Шаблонду өчүрүү"
+}

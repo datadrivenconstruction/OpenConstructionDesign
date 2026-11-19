@@ -1,0 +1,40 @@
+{
+ "rebar_hosts.hosts": "Verter: {list}",
+ "rebar_hosts.kind.column": "Søyle",
+ "rebar_hosts.kind.beam": "Bjelke",
+ "rebar_hosts.kind.wall": "Vegg",
+ "rebar_hosts.kind.slab": "Dekke",
+ "rebar_hosts.kind.footing": "Fundament",
+ "rebar_hosts.kind.raft": "Fundamentplate",
+ "rebar_hosts.n.column": {
+  "one": "# søyle",
+  "other": "# søyler"
+ },
+ "rebar_hosts.n.beam": {
+  "one": "# bjelke",
+  "other": "# bjelker"
+ },
+ "rebar_hosts.n.wall": {
+  "one": "# vegg",
+  "other": "# vegger"
+ },
+ "rebar_hosts.n.slab": {
+  "one": "# dekke",
+  "other": "# dekker"
+ },
+ "rebar_hosts.n.footing": {
+  "one": "# fundament",
+  "other": "# fundamenter"
+ },
+ "rebar_hosts.n.raft": {
+  "one": "# fundamentplate",
+  "other": "# fundamentplater"
+ },
+ "rebar_hosts.mixed_note": "Søyler og bjelker tar armeringsjern og bøyler; vegger, dekker og fundamenter tar nett. Velg én gruppe for å legge til armering.",
+ "rebar_hosts.why.mixed": "Valget blander søyler eller bjelker med vegger, dekker eller fundamenter. Velg én gruppe.",
+ "rebar_hosts.why.area_linear": "Nett går i vegger, dekker og fundamenter, ikke søyler eller bjelker.",
+ "rebar_hosts.why.bars_plate": "Langsgående armeringsjern og bøyler går i søyler og bjelker, ikke vegger, dekker eller fundamenter.",
+ "rebar_hosts.why.no_common_face": "De valgte vertene har ingen felles dekkflate. Velg verter av én type.",
+ "rebar_hosts.why.no_type": "Velg en armeringsjerntype.",
+ "rebar_hosts.kind_type": "{kind} · {type}"
+}

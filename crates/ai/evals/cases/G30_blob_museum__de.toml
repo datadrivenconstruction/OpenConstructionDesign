@@ -1,0 +1,31 @@
+id = "G30_blob_museum__de"
+tier = "hard"
+group = "Any geometry"
+title = "Organic blob museum"
+lang = "de"
+base = "empty"
+
+[[turn]]
+say = "Ein organisch geformtes Kunstmuseum: glatte doppelt gekrümmte Freiformhülle von etwa 70 x 45 m, 18 m hoch, verglaste Schlitze, Oberlicht, Galerien auf zwei Ebenen, Eingangsvordach."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "freeform+shell_elem+mesh+solid+wall_spline+gridshell+roof"
+min = 1.0
+
+[[oracle.count]]
+spec = "level"
+min = 2.0
+
+[[oracle.count]]
+spec = "slab"
+min = 2.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

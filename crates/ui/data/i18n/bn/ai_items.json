@@ -1,0 +1,16 @@
+{
+ "ai.items.all": {
+  "one": "সব # টি আইটেম",
+  "other": "সব # টি আইটেম"
+ },
+ "ai.items.all.tip": "প্ল্যানের সব আইটেম টিক বা টিক-মুক্ত করুন",
+ "ai.items.checked": "{m}টির মধ্যে {n}টি টিক",
+ "ai.items.check.tip": "প্রয়োগে “{title}” যুক্ত করুন",
+ "ai.items.expand": "উপাদান দেখান",
+ "ai.items.collapse": "উপাদান লুকান",
+ "ai.items.apply": {
+  "one": "# টি আইটেম প্রয়োগ করুন",
+  "other": "# টি আইটেম প্রয়োগ করুন"
+ },
+ "ai.items.apply_none": "প্রয়োগ করুন"
+}

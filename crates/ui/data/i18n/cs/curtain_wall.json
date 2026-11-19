@@ -1,0 +1,12 @@
+{
+ "curtain_wall.cw.issue.slab": "deska {id}: {e}",
+ "curtain_wall.cw.issue.body": "těleso {id}: {e}",
+ "curtain_wall.cw.added": "Přidáno fasádních stěn: {n}",
+ "curtain_wall.cw.add_failed": "Fasádní stěna nebyla vytvořena: {e}",
+ "curtain_wall.cw.edited_warn": "Fasádní stěna č. {id} změněna: {w}",
+ "curtain_wall.cw.edited": "Fasádní stěna č. {id} změněna",
+ "curtain_wall.cw.not_changed": "Nezměněno: {e}",
+ "curtain_wall.cw.room_edited": "Místnost č. {id} změněna",
+ "curtain_wall.cw.slope_range": "Nezměněno: sklon je mimo rozsah",
+ "curtain_wall.cw.slope_set": "Deska č. {id}: sklon {pct}"
+}

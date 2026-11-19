@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "أُوقف التطبيق: يبقى النموذج كما كان",
+ "apply_verify.rolled_back": "لم يطابق التطبيق المسودة فتم التراجع عنه؛ النموذج لم يتغيّر. {what}",
+ "apply_verify.diff.missing": "تُظهر المسودة {what} {kind}، لكن التطبيق لم ينفّذ ذلك.",
+ "apply_verify.diff.extra": "طُبّق {kind} {what} الذي لا تُظهره المسودة.",
+ "apply_verify.diff.kind": "تُظهر المسودة {what} {shown}، لكن «تطبيق» {applied} ذلك.",
+ "apply_verify.diff.value": "{what}: جاءت «{col}» مختلفة عن المسودة.",
+ "apply_verify.diff.truncated": "المسودة والتغيير المطبَّق يختلفان في الحجم.",
+ "apply_verify.diff.unreadable": "تعذّرت قراءة التغيير المطبَّق ({e}).",
+ "apply_verify.no_base": "لم يُشغَّل التطبيق: نسخة المقارنة للمسودة مفقودة. النموذج لم يتغيّر؛ اطلب المسودة من جديد.",
+ "apply_verify.take_back_failed": "فشل التراجع ({e}): استخدم «تراجع».",
+ "apply_verify.kind.created": "أُنشئ",
+ "apply_verify.kind.changed": "تغيّر",
+ "apply_verify.kind.deleted": "حُذف",
+ "apply_verify.card.type_row": "النوع {type} · {n} عناصر تأخذ التغيير"
+}

@@ -1,0 +1,5 @@
+{
+ "start_recent.unavailable": "Inte tillgänglig just nu (enheten eller nätverksplatsen svarar inte): {path}",
+ "start_recent.unavailable_short": "Inte tillgänglig just nu",
+ "start_recent.retry": "Försök igen"
+}

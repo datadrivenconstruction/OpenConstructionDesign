@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "Бүтүн модельди же тандоону метрде же миллиметрде binary STL катары сактайт.",
+ "cmd.data.export_obj.desc": "Бүтүн модельди же тандоону MTL файлы менен OBJ катары сактайт: ар бир элемент үчүн бир топ, материал боюнча түстөр.",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "Материалдары менен OBJ (.obj)",
+ "open_file.filter.mesh": "3D торлор (glTF, STEP, STL, OBJ)",
+ "mx.title": "{fmt} экспорттоо",
+ "mx.scope": "Эмнени экспорттоо",
+ "mx.scope.all": "Бүтүн модель",
+ "mx.scope.sel": "Тандоо ({n} элемент)",
+ "mx.units": "Файлдагы бирликтер",
+ "mx.units.m": "Метр",
+ "mx.units.mm": "Миллиметр",
+ "mx.export": "Экспорттоо…",
+ "mx.saved": "{fmt} сакталды: {path} ({parts} элемент, {tris} үч бурчтук)",
+ "mx.partial": "{fmt} {n} көйгөй менен сакталды, айрым денелер жок болушу мүмкүн: {path}",
+ "mx.failed": "{fmt} экспорттоо ийгиликсиз: {error}",
+ "mx.imported": "{file}: {n} элемент импортталды ({tris} үч бурчтук)",
+ "mx.imported_notes": "{file}: {n} элемент импортталды ({tris} үч бурчтук), {w} эскертүү: {first}"
+}

@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "Изменён",
+ "ai.redraft.added": "+{n} добавлено",
+ "ai.redraft.removed": "−{n} убрано",
+ "ai.redraft.changed": "~{n} изменено",
+ "ai.redraft.strip": "{what} с вашего последнего просмотра",
+ "ai.redraft.note": "Изменённый план просмотрен: {what}",
+ "ai.redraft.more": "ещё {n}",
+ "ai.redraft.ack": "Понятно",
+ "ai.redraft.ack.tip": "Отметить эту версию как просмотренную; «Применить» будет относиться к ней",
+ "ai.redraft.removed_list": "Убранные пункты: {n}",
+ "ai.redraft.review_first": "План изменился после вашего сообщения: сначала просмотрите изменения",
+ "ai.redraft.mark.tip": "Новое или изменённое с вашего последнего просмотра",
+ "ai.redraft.emptied": "Уточнение убрало все пункты: черновик пуст"
+}

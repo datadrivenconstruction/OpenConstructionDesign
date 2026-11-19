@@ -1,0 +1,21 @@
+{
+ "ai.receipt.title": {
+  "one": "# Änderung angewendet",
+  "other": "# Änderungen angewendet"
+ },
+ "ai.receipt.more": "+{n} weitere",
+ "ai.receipt.list": "Elemente",
+ "ai.receipt.show": "Anzeigen",
+ "ai.receipt.show.tip": "Geänderte Elemente auswählen und einrahmen",
+ "ai.receipt.undo": "Rückgängig",
+ "ai.receipt.undo.tip": "Genau dieses Anwenden zurücknehmen",
+ "ai.receipt.undone": "Rückgängig gemacht",
+ "ai.receipt.later": "Es wurden spätere Änderungen vorgenommen",
+ "ai.receipt.toast_undone": "Der angewendete Plan wurde rückgängig gemacht",
+ "ai.receipt.draft_family": "Entwurfsfamilie: {name}",
+ "ai.receipt.promote": "Arbeitsfähig machen",
+ "ai.receipt.promote.tip": "Die Entwurfsfamilie in eine arbeitsfähige umwandeln (ein Rückgängig-Schritt)",
+ "ai.receipt.promoted": "Die Familie ist jetzt arbeitsfähig",
+ "ai.receipt.promote_failed": "Die Familie konnte nicht arbeitsfähig gemacht werden",
+ "cmd.ai.receipt_undo": "Letzten KI-Plan rückgängig machen"
+}

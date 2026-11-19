@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "Indsatte {n} celler",
+ "sched_edit.pasted_skipped": "Indsatte {n} celler, sprang {k} over: {why}",
+ "sched_edit.filled": "Udfyldte {n} celler",
+ "sched_edit.filled_skipped": "Udfyldte {n} celler, sprang {k} over: {why}",
+ "sched_edit.why_ro": "{n} skrivebeskyttet",
+ "sched_edit.why_bad": "{n} ugyldig værdi",
+ "sched_edit.no_cell": "Klik først på en celle i listen",
+ "sched_edit.nothing": "Intet at skrive",
+ "sched_edit.not_refreshed": "Skrevet, men visningen blev ikke opdateret: {e}",
+ "sched_edit.failed": "ikke ændret: {e}",
+ "sched_edit.no_changes": "Ingen ændringer: {u} celler har allerede disse værdier",
+ "sched_edit.same_tail": ", {u} er allerede ens"
+}

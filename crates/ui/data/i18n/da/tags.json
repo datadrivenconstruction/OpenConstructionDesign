@@ -1,0 +1,13 @@
+{
+ "tags.gone": "Markeringen findes ikke længere",
+ "tags.readonly_wall": "En vægmarkering viser typen og kan ikke redigeres her: skift vægtypen",
+ "tags.readonly_comp": "En komponentmarkering viser familien og kan ikke redigeres her: skift typen",
+ "tags.locked": "Elementet er låst: lås det op for at redigere markeringen",
+ "tags.done": "Markeringsværdi skrevet",
+ "tags.failed": "Markering ikke ændret: {e}",
+ "tags.dup_door": "{mark} også på {n} døre",
+ "tags.dup_window": "{mark} også på {n} vinduer",
+ "tags.dup_room": "{mark} også på {n} rum",
+ "tags.hint_mark": "Mærke",
+ "tags.hint_name": "Rumnavn"
+}

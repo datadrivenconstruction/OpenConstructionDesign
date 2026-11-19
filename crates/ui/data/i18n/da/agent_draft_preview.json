@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "Forhåndsvisning",
+ "agent_draft.ag.preview.desc": "Optegner elementerne i dette udkast på lærredet, mens markøren er på knappen. Intet ændres.",
+ "agent_draft.type.column": "Søjle",
+ "agent_draft.type.roof": "Tag",
+ "agent_draft.type.ceiling": "Loft",
+ "agent_draft.type.stair": "Monolitisk",
+ "agent_draft.type.railing": "Gelænder",
+ "agent_draft.type.shaft": "Skakt",
+ "agent_draft.type.axis": "Akse 6.5 mm",
+ "agent_draft.type.refplane": "Referenceplan"
+}

@@ -1,0 +1,5 @@
+{
+ "elem.panel_select_wall": "Wand auswählen",
+ "cmd.elem.panel_select_wall": "Wand auswählen",
+ "elem.left_in_place": "Am Ort belassen: {kinds}. Eine Füllung gehört zu ihrer Wand; Massen und Beschriftungen werden separat gelöscht."
+}

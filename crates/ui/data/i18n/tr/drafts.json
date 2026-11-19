@@ -1,0 +1,8 @@
+{
+ "drafts.drafts.head": "Açık düzenleyicilerde henüz projede olmayan düzenlemeler var:",
+ "drafts.draft.family": "“{name}” ailesi",
+ "drafts.draft.line": "Çizgi kitaplığı: {name}",
+ "drafts.draft.styles": "Görünüm aralığı çizgi stilleri",
+ "drafts.btn.save_all": "Tümünü kaydet",
+ "drafts.drafts.refused": "Taslak kaydedilemedi. Hiçbir şey kapatılmadı; taslaklı düzenleyici açık."
+}

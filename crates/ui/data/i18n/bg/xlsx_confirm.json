@@ -1,0 +1,19 @@
+{
+ "xlsx_confirm.chip": "за потвърждение",
+ "xlsx_confirm.section": "Редове без идентификатор, съпоставени с елемент по име или номер",
+ "xlsx_confirm.tag": "съвпада по име",
+ "xlsx_confirm.tag_accepted": "съвпадението е прието",
+ "xlsx_confirm.tag_rejected": "създава нов",
+ "xlsx_confirm.kind_room": "помещение",
+ "xlsx_confirm.kind_curtain_wall": "фасадна стена",
+ "xlsx_confirm.row_line": "{kind} #{id}, ключ „{key}“",
+ "xlsx_confirm.accept": "Приеми",
+ "xlsx_confirm.accept_tip": "Прилага този ред към съвпадналия елемент (една стъпка за отмяна заедно с останалите)",
+ "xlsx_confirm.reject": "Създай нов",
+ "xlsx_confirm.reject_tip": "Без съвпадение: този ред създава нов елемент",
+ "xlsx_confirm.decide_first": "Първо приемете или отхвърлете редовете, съвпаднали по име.",
+ "xl.msg.key_match_many": "ключът съвпада с {} елемента; не е съпоставен, редът създава нов",
+ "xl.msg.key_match_taken": "ключът съвпада с елемент, използван от друг ред; не е съпоставен, редът създава нов",
+ "xl.msg.key_match_kept": "запазено: съвпадението е отхвърлено, редът създава нов елемент",
+ "xl.msg.key_match_undecided": "редовете, съпоставени по име, чакат решение"
+}

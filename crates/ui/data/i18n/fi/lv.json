@@ -1,0 +1,5 @@
+{
+ "lv.level.deleted_attach": "Taso poistettu; {n} seinältä katosi yläkiinnitys",
+ "lv.level.rooms": "{n} huoneen korkeus vastaa kohdetason korkeutta ({dz} m): {names}. Vahvista painamalla Siirrä uudelleen",
+ "lv.level.pinned": "Tasoa ei poistettu: kiinnitettyjä elementtejä ei voi siirtää toiselle tasolle: {names}. Poista kiinnitys ensin"
+}

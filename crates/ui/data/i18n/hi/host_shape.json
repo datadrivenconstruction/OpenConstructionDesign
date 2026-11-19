@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "डॉर्मर ओपनिंग",
+ "cmd.arch.roof_opening": "छत की ओपनिंग",
+ "cmd.arch.roof_extrusion": "एक्सट्रूज़न से छत",
+ "cmd.arch.ceiling_opening": "सीलिंग ओपनिंग",
+ "cmd.str.slab_opening": "फ़्लोर ओपनिंग",
+ "cmd.ctx.wall.detach": "ऊपरी भाग अलग करें",
+ "cmd.ctx.floor.sketch": "सीमा संपादित करें",
+ "cmd.ctx.floor.shape": "आकार संपादित करें",
+ "host_shape.shape.elev_prompt": "एलिवेशन, mm…",
+ "host_shape.shape.elev_mm": "{v} mm",
+ "host_shape.sketch.no_host": "इस लेवल पर सीमा के नीचे कोई होस्ट नहीं है",
+ "host_shape.issue.roof": "छत {id}: {e}",
+ "host_shape.issue.ceiling": "सीलिंग {id}: {e}",
+ "host_shape.status.select_slab": "स्लैब चुनें",
+ "host_shape.status.select_walls": "दीवारें चुनें",
+ "host_shape.status.no_roof_or_level": "ऊपर कोई छत या लेवल नहीं है",
+ "host_shape.status.top_attached": "दीवारों के ऊपरी भाग जोड़े गए",
+ "host_shape.status.top_detached": "दीवारों के ऊपरी भाग अलग किए गए",
+ "host_shape.status.straight_wall": "सीधी दीवार ज़रूरी है",
+ "host_shape.status.roof_extruded": "एक्सट्रूज़न से छत बनाई गई",
+ "warn.kind.cut": "कटौती या जुड़ाव नहीं बना"
+}

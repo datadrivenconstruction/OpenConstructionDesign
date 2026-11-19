@@ -1,0 +1,6 @@
+{
+ "project_seed.seed_level": "Niveau 1",
+ "project_seed.seed_wall_partition": "Cloison 100",
+ "project_seed.seed_wall_masonry": "Maçonnerie 200",
+ "project_seed.seed_wall_exterior": "Extérieur 380"
+}

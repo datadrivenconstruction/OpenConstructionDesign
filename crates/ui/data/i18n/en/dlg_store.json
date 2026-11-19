@@ -1,0 +1,10 @@
+{
+ "dlg.dw.store.unloaded": "Drawing “{name}” could not be read from the project and is kept in the file unchanged",
+ "dlg.dw.store.source_missing": "Drawing “{name}”: the source file is not found, the copy saved in the project is shown",
+ "dlg.dw.store.source_changed": "Drawing “{name}”: the source file has changed since it was placed, the copy saved in the project is shown",
+ "dlg.dw.store.unreadable": "The placed drawings stored in the project cannot be read",
+ "dlg.dw.store.not_saved": "Drawings are not saved: {why}",
+ "dlg.dw.store.why_read": "the placed drawings stored in the project cannot be read",
+ "dlg.dw.store.why_write": "the project file could not be updated",
+ "dlg.dw.store.missing_in_file": "The saved file does not hold every placed drawing"
+}

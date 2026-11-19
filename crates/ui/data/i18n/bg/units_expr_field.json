@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "Празно поле.",
+ "units.err.not_number": "На позиция {pos} няма число.",
+ "units.err.unknown_unit": "Непозната мерна единица: {unit}.",
+ "units.err.non_positive": "Дължината трябва да е по-голяма от нула.",
+ "units.err.too_large": "Дължината не трябва да надвишава {max} m.",
+ "units.err.bad_angle": "Ъгълът е число в градуси.",
+ "units.err.unknown_name": "Непознато име: {name}. Стойността е запазена.",
+ "units.err.cycle": "Цикъл във формула при {name}. Стойността е запазена.",
+ "units.err.bad_expr": "Изразът на позиция {pos} не може да бъде прочетен. Стойността е запазена.",
+ "units.err.div_zero": "Деление на нула на позиция {pos}. Стойността е запазена.",
+ "units.err.invalid": "Невалидно число.",
+ "units.err.kept": "Не е променено: {reason}"
+}

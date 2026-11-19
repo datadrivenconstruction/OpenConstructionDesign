@@ -1,0 +1,10 @@
+{
+ "cmd.view.axes_full": "Trục đầy đủ",
+ "cmd.view.axes_full.desc": "Hiện trục X và Y dưới dạng đường kẻ đầy xuyên qua mặt bằng. Giữ F9 để chỉ hiện trong lúc nhấn.",
+ "settings.axes_full": "Trục",
+ "settings.axes_full_desc": "Trục mặt bằng dạng đường kẻ đầy trên bản vẽ. Giữ F9 để xem nhanh.",
+ "settings.axes_full_on": "Hiện trục đầy đủ",
+ "plan.hud.axes_tip": "Giữ {key} để hiện trục đầy đủ",
+ "status.axes_full.on": "Trục đầy đủ: bật",
+ "status.axes_full.off": "Trục đầy đủ: tắt"
+}

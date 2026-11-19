@@ -1,0 +1,10 @@
+{
+ "elem.multi.title": "{n} phần tử",
+ "elem.multi.varies": "khác nhau",
+ "elem.multi.tip": "Nhập để đặt cho mọi phần tử đã chọn",
+ "elem.multi.hidden": "{n} hàng chỉ có ở một số phần tử",
+ "elem.multi.none": "Các phần tử đã chọn không có hàng chung",
+ "elem.multi.range": "Giá trị nằm ngoài phạm vi cho phép",
+ "elem.multi.changed": "Đã thay đổi {n} phần tử · Ctrl+Z để hoàn tác",
+ "elem.multi.same": "Tất cả phần tử đã chọn đều đã có giá trị này"
+}

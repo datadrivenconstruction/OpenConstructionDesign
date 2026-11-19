@@ -1,0 +1,14 @@
+{
+ "cmd.mod.divide": "Teilen",
+ "cmd.mod.divide.short": "Teilen",
+ "cmd.mod.divide.desc": "Teilt eine Wand in einem Schritt in gleiche Abschnitte. Anzahl der Abschnitte eingeben, dann die Wand anklicken.",
+ "whereis.mod.divide": "teilen, gleiche Abschnitte, zerlegen, Wand segmentieren",
+ "hint.split.parts": "Teilen: Wand anklicken · Zahl — Abschnitte (2–100) · Esc — abbrechen",
+ "create_input.divide.bad_parts": "«{text}» ist keine Anzahl von Abschnitten: eine ganze Zahl von 2 bis {max} eingeben",
+ "create_input.ws.err.empty": "Einen Namen für die Anordnung eingeben",
+ "create_input.ws.err.long": "Der Name ist zu lang: höchstens 40 Zeichen",
+ "create_input.ws.err.preset": "Dieser Name gehört zu einer eingebauten Anordnung",
+ "create_input.ws.err.full": "Höchstens 24 gespeicherte Anordnungen: zuerst eine entfernen",
+ "create_input.seldim.locked": "Abstand {v} gesperrt",
+ "create_input.seldim.positive": "Der Abstand muss größer als null sein"
+}

@@ -1,0 +1,8 @@
+{
+ "empty.start_recent.title": "Hiljutisi projekte veel pole",
+ "empty.start_recent.hint": "Siin kuvatakse avatud projektid. Alusta näidismudeliga.",
+ "empty.start_recent.action": "Ava näidis",
+ "start.recent_open_file": "Ava fail…",
+ "start.forgot": "Eemaldatud hiljutiste hulgast: {name}",
+ "start.forgot_undo": "Võta tagasi"
+}

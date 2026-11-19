@@ -1,0 +1,19 @@
+{
+ "empty.v3d_gpu.title": "Hindi available ang 3D sa graphics adapter na ito",
+ "empty.v3d_gpu.hint": "Ligtas ang modelo at gumagana ang plano. I-restart gamit ang safe graphics para subukan muli ang 3D.",
+ "empty.v3d_gpu.action": "I-restart gamit ang safe graphics",
+ "empty.v3d_loading.title": "Binubuo ang 3D…",
+ "empty.v3d_loading.pct": "Binubuksan… {pct} %",
+ "empty.plan_hidden.title": "Nakatago ang lahat ng elemento sa planong ito",
+ "empty.plan_hidden.hint": "Walang nakikita dahil sa pansamantalang pagtatago o pag-isolate.",
+ "empty.plan_hidden.action": "Ipakita lahat",
+ "empty.plan_graphics.title": "Itinatago ng view graphics ang lahat ng kategorya",
+ "empty.plan_graphics.hint": "Ang mga patakaran ng kategorya ng view na ito ay walang iniwang ipapakita.",
+ "empty.plan_graphics.action": "Buksan ang view graphics",
+ "empty.plan_phase.title": "Itinatago ng phase filter ang lahat",
+ "empty.plan_phase.hint": "Walang umiiral sa level na ito sa phase na ipinapakita ng view na ito.",
+ "empty.plan_phase.action": "Baguhin ang phase",
+ "empty.plan_level.title": "Walang elemento sa level na ito",
+ "empty.plan_level.hint": "May elemento ang ibang level ng modelong ito.",
+ "empty.plan_level.action": "Pumunta sa level na may elemento"
+}

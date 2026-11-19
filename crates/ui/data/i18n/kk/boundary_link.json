@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "Қабырғалардың толық контурын таңдау",
+ "cmd.sketch.link_unlink": "Жиекті қабырғадан ажырату",
+ "cmd.sketch.link_repick": "Жиек қабырғасын қайта таңдау",
+ "cmd.ctx.floor.link_unlink": "Жиектерді қабырғалардан ажырату",
+ "cmd.ctx.floor.link_accept": "Жойылған қабырғалардың жиектерін қабылдау",
+ "boundary_link.hint.loop": "Қабырғаны нұқыңыз: қабырғалардың жабық тізбегі байланған жиектерге айналады",
+ "boundary_link.hint.repick": "Жиекке параллель қабырғаны нұқыңыз: жиек соны ілестіреді",
+ "boundary_link.need_sketch": "Алдымен шекара эскизін ашыңыз",
+ "boundary_link.need_edge": "Эскиз жиегін нұқыңыз",
+ "boundary_link.need_straight": "Қабырғаны тек түзу жиек ілестіре алады",
+ "boundary_link.need_floor": "Еденді таңдаңыз",
+ "boundary_link.no_wall": "Курсор астында қабырға жоқ",
+ "boundary_link.not_parallel": "Қабырға жиекке параллель емес",
+ "boundary_link.not_linked": "Бұл жиек қабырғаға байланбаған",
+ "boundary_link.unlinked": "Жиек ажыратылды: ол орнында қалады және енді қабырғаны ілестірмейді",
+ "boundary_link.accepted": "Жиектер қабылданды: олар орнында қалады, қарапайым жиектер ретінде",
+ "boundary_link.failed": "Қолдану мүмкін болмады",
+ "boundary_link.lost": "бастапқы қабырға жойылған",
+ "boundary_link.blocked": "қабырғаны ілестіре алмайды"
+}

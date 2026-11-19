@@ -1,0 +1,5 @@
+{
+ "xl.msg.level_name_x_is_already_used": "il nome di livello '{}' è già usato",
+ "xl.msg.unreadable_id_elements_without_a_row_not_deleted": "id illeggibile: gli elementi senza riga non vengono eliminati in questa importazione",
+ "xl.msg.wall_type_name_x_is_already_used": "il nome di tipo di muro '{}' è già usato"
+}

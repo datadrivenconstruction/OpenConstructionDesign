@@ -1,0 +1,13 @@
+{
+ "type_change.affects_walls": {
+  "one": "# falat érint",
+  "other": "# falat érint"
+ },
+ "type_change.affects": {
+  "one": "# elemet érint",
+  "other": "# elemet érint"
+ },
+ "type_change.tick_types": "Alkalmazza a típusváltozásokat ezeknek a típusoknak mind a(z) {n} elemére",
+ "type_change.tick_types_first": "Előbb jelölje be a típusváltozást: a típus minden eleme átveszi",
+ "xl.msg.types_first": "előbb erősítse meg a típusváltozásokat"
+}

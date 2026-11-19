@@ -1,0 +1,36 @@
+id = "G05_twisted_tower__es"
+tier = "hard"
+group = "Any geometry"
+title = "Twisted tower"
+lang = "es"
+base = "empty"
+
+[[turn]]
+say = "Haz una torre de oficinas retorcida de 40 plantas, cada planta girada 1.5 grados respecto a la inferior, planta cuadrada de 36 m, núcleo de 12 m, fachada acristalada."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "level"
+min = 38.0
+
+[[oracle.count]]
+spec = "slab"
+min = 38.0
+
+[[oracle.geom]]
+kind = "height"
+min = 150.0
+max = 175.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1
+
+[[oracle.geom]]
+kind = "twist_per_floor"
+deg = 1.5

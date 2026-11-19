@@ -1,0 +1,14 @@
+{
+ "dwg_table.copy": "Táblázat másolása",
+ "dwg_table.copy_tip": "A rétegenkénti mennyiségkimutatás másolása táblázatként",
+ "dwg_table.copied": "Mennyiségkimutatás másolva (tabulátorral elválasztva)",
+ "dwg_table.total": "Összesen",
+ "dwg_table.col.layer": "Réteg",
+ "dwg_table.col.count": "Darab",
+ "dwg_table.col.len": "Hossz, {unit}",
+ "dwg_table.col.area": "Terület, {unit}",
+ "dwg_table.unit.mm": "mm",
+ "dwg_table.unit.m2": "m²",
+ "dwg_table.unit.ft": "ft",
+ "dwg_table.unit.ft2": "ft²"
+}

@@ -1,0 +1,6 @@
+{
+ "pair_input.pair_hint": "Dois valores são separados por ponto e vírgula: @1000;500",
+ "pair_input.old_pair": "Uma vírgula entre dois números inteiros não forma mais um par: digite 6000;4000 para dois valores ou 6000,5 para um decimal",
+ "pair_input.op.bad_length": "Não é um comprimento: {text} ({why}). Nada foi alterado",
+ "pair_input.op.bad_count": "Contagem {text} não aceita: um número inteiro de {min} a {max}"
+}

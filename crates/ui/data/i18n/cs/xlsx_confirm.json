@@ -1,0 +1,19 @@
+{
+ "xlsx_confirm.chip": "k potvrzení",
+ "xlsx_confirm.section": "Řádky bez id spárované s prvkem podle názvu nebo čísla",
+ "xlsx_confirm.tag": "spárováno podle názvu",
+ "xlsx_confirm.tag_accepted": "shoda přijata",
+ "xlsx_confirm.tag_rejected": "vytvoří nový",
+ "xlsx_confirm.kind_room": "místnost",
+ "xlsx_confirm.kind_curtain_wall": "fasádní stěna",
+ "xlsx_confirm.row_line": "{kind} č. {id}, klíč „{key}“",
+ "xlsx_confirm.accept": "Přijmout",
+ "xlsx_confirm.accept_tip": "Použít tento řádek na spárovaný prvek (jeden krok zpět s ostatními)",
+ "xlsx_confirm.reject": "Vytvořit nový",
+ "xlsx_confirm.reject_tip": "Nespárovat: tento řádek vytvoří nový prvek",
+ "xlsx_confirm.decide_first": "Nejprve přijměte nebo odmítněte řádky spárované podle názvu.",
+ "xl.msg.key_match_many": "klíč odpovídá {} prvkům; nespárováno, řádek vytvoří nový",
+ "xl.msg.key_match_taken": "klíč odpovídá prvku použitému jiným řádkem; nespárováno, řádek vytvoří nový",
+ "xl.msg.key_match_kept": "ponecháno: shoda odmítnuta, řádek vytvoří nový prvek",
+ "xl.msg.key_match_undecided": "řádky spárované podle názvu čekají na rozhodnutí"
+}

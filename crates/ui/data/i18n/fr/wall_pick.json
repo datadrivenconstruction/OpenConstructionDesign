@@ -1,0 +1,13 @@
+{
+ "cmd.arch.wall_pick": "Mur par ligne",
+ "cmd.arch.wall_pick.desc": "Place un mur sur une ligne de plan choisie au niveau courant. F bascule l'axe ou la face sur la ligne, Tab prend la chaîne connectée. Chaque choix est une étape d'annulation. Fonctionne aussi pour les murs-rideaux.",
+ "hint.wall_pick.center": "Mur par ligne : choisissez une ligne de plan · axe sur la ligne · F face · Tab chaîne · Échap quitter",
+ "hint.wall_pick.face": "Mur par ligne : choisissez une ligne de plan · face sur la ligne, côté curseur · F axe · Tab chaîne · Échap quitter",
+ "hint.wall_pick.center_chain": "Mur par ligne : choisissez une ligne pour prendre sa chaîne · axe sur la ligne · F face · Tab une seule ligne",
+ "hint.wall_pick.face_chain": "Mur par ligne : choisissez une ligne pour prendre sa chaîne · face sur la ligne · F axe · Tab une seule ligne",
+ "wall_pick.st.start": "Choisissez une ligne de plan. F : axe ou face, Tab : chaîne connectée",
+ "wall_pick.st.no_lines": "Aucune ligne de plan visible sur ce niveau",
+ "wall_pick.st.miss": "Aucune ligne de plan ici",
+ "wall_pick.st.on_wall": "Cette ligne est déjà sous le mur {id}",
+ "wall_pick.st.tight": "Le décalage de face ne rentre pas : un segment de la chaîne est plus court que l'épaisseur du mur"
+}

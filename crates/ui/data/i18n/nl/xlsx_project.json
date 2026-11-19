@@ -1,0 +1,7 @@
+{
+ "xlsx_project.title": "Dit werkboek is vanuit een ander project geëxporteerd",
+ "xlsx_project.body": "Werkboek “{file}” hoort bij een ander project. Element-id's verschillen tussen projecten, dus de rijen zouden hier niet-verwante elementen wijzigen. Er is niets in dit project ingelezen.",
+ "xlsx_project.export_new": "Dit project naar een nieuw werkboek exporteren",
+ "xlsx_project.close": "Sluiten",
+ "xlsx_project.no_project": "Dit werkboek vermeldt niet bij welk project het hoort: controleer of het vanuit dit project is geëxporteerd."
+}

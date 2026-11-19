@@ -1,0 +1,13 @@
+{
+ "xlw.copy_list": "Kopiér liste",
+ "xlw.save_list": "Gem liste…",
+ "xlw.copy_list_tip": "Kopiér de viste rækker (ark, celle, id, kolonne, værdier, årsag) som tekst til et regneark",
+ "xlw.save_list_tip": "Gem de viste rækker som en .csv-fil ved siden af regnearket; selve regnearket ændres aldrig",
+ "xlw.list_book_value": "Regnearkets værdi",
+ "xlw.list_model_value": "Modelværdi",
+ "xlw.list_reason": "Årsag",
+ "xlw.list_copied": "Liste kopieret: {n} rækker",
+ "xlw.list_saved": "Liste gemt: {n} rækker, {file}",
+ "xlw.list_save_failed": "Listen blev ikke gemt",
+ "xlw.list_nothing": "Intet at kopiere: ingen rækker vist"
+}

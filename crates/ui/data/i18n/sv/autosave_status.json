@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "Autosparningen misslyckades, de senaste ändringarna är inte skyddade. {why}",
+ "autosave_status.autosave_open": "Inställningar för autosparning",
+ "autosave_status.autosave_recovered": "Autosparningen fungerar igen.",
+ "autosave_status.autosave_reason": "Orsak: {why}"
+}

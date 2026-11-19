@@ -1,0 +1,15 @@
+{
+ "xlw.hd_never": "Pas encore exporté",
+ "xlw.hd_now": "à l'instant",
+ "xlw.hd_min": "il y a {n} min",
+ "xlw.hd_hour": "il y a {n} h",
+ "xlw.hd_day": "il y a {n} j",
+ "xlw.hd_linked": "Lié",
+ "xlw.hd_watched": "Surveillé",
+ "xlw.hd_stale": "Modèle modifié depuis l'export",
+ "xlw.ft_export": "Exporter",
+ "xlw.ft_review": "Vérifier",
+ "xlw.ft_apply": "Appliquer {n} modifications",
+ "xlw.ft_delete_missing": "Supprimer les absents",
+ "xlw.ft_keep_missing_tip": "La suppression est activée : les éléments sans ligne seront supprimés à l'application. Décochez pour les conserver."
+}

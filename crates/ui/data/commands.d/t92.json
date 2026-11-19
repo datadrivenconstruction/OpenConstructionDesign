@@ -1,0 +1,119 @@
+[
+ {
+  "id": "arch.dormer",
+  "icon": "dormer",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "Mx",
+  "group": "opening",
+  "priority": 6,
+  "repeatable": true
+ },
+ {
+  "id": "arch.roof_opening",
+  "icon": "roof-opening",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "Mx",
+  "group": "opening",
+  "repeatable": true
+ },
+ {
+  "id": "arch.roof_extrusion",
+  "icon": "roof-extrude",
+  "mnemonic": "RX",
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "Mx",
+  "group": "build",
+  "repeatable": true
+ },
+ {
+  "id": "arch.ceiling_opening",
+  "icon": "ceiling-opening",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "Mx",
+  "group": "opening",
+  "repeatable": true
+ },
+ {
+  "id": "str.slab_opening",
+  "icon": "slab-opening",
+  "mnemonic": "SO",
+  "shortcuts": [],
+  "tab": "struct",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "Mx",
+  "group": "struct",
+  "repeatable": true,
+  "priority": 7
+ },
+ {
+  "id": "ctx.wall.detach",
+  "icon": "wall-detach",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "profile",
+  "context": [
+   "wall"
+  ]
+ },
+ {
+  "id": "ctx.floor.sketch",
+  "icon": "floor-sketch",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "profile",
+  "context": [
+   "floor"
+  ]
+ },
+ {
+  "id": "ctx.floor.shape",
+  "icon": "floor-shape",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "profile",
+  "context": [
+   "floor"
+  ]
+ }
+]

@@ -1,0 +1,4 @@
+{
+ "cmd.data.sync_xlsx": "Sinkronkan dengan spreadsheet XLSX…",
+ "cmd.data.sync_xlsx.desc": "Membaca ulang buku kerja tertaut dan menampilkan perbedaan dari model."
+}

@@ -1,0 +1,13 @@
+{
+ "tags.gone": "Štítek již neexistuje",
+ "tags.readonly_wall": "Štítek stěny zobrazuje typ a zde jej nelze upravit: změňte typ stěny",
+ "tags.readonly_comp": "Štítek komponenty zobrazuje rodinu a zde jej nelze upravit: změňte typ",
+ "tags.locked": "Prvek je zamčen: pro úpravu štítku jej odemkněte",
+ "tags.done": "Hodnota štítku zapsána",
+ "tags.failed": "Štítek nezměněn: {e}",
+ "tags.dup_door": "{mark} se opakuje u dalších dveří: {n}",
+ "tags.dup_window": "{mark} se opakuje u dalších oken: {n}",
+ "tags.dup_room": "{mark} se opakuje u dalších místností: {n}",
+ "tags.hint_mark": "Označení",
+ "tags.hint_name": "Název místnosti"
+}

@@ -1,0 +1,6 @@
+{
+ "xlsx_no_base.title": "Acest registru nu are date de comparație",
+ "xlsx_no_base.detail": "Foaia ascunsă de comparație lipsește sau este deteriorată (alt program a resalvat registrul, sau a fost făcut manual). Fiecare celulă diferită înlocuiește valoarea modelului; modificările făcute în model după export nu pot fi detectate. Rândurile lipsă din registru nu sunt șterse.",
+ "xlsx_no_base.confirm": "Am verificat modificările: înlocuiește valorile modelului ({n})",
+ "xlsx_no_base.confirm_first": "Confirmă mai întâi importul unui registru fără date de comparație"
+}

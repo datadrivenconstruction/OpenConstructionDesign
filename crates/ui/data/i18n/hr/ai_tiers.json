@@ -1,0 +1,4 @@
+{
+ "ai.issue.delete_large": "{0} elemenata bi bilo obrisano, iznad granice od {1}. Potrebno je dopuštenje",
+ "ai.issue.refused_large": "{0} elemenata bi se promijenilo, iznad tvrde granice od {1}. Podijeli plan na manje dijelove"
+}

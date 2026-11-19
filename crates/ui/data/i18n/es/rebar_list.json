@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "Subir",
+ "rebar_list.move_down": "Bajar",
+ "rebar_list.remove": "Quitar",
+ "rebar_list.zone_remove_last": "Una zona necesita al menos un local: elimine la zona para quitar el último",
+ "rebar_list.rebar_empty_title": "No hay armadura en este modelo",
+ "rebar_list.rebar_empty_hint": "Coloque armadura en un elemento base y se programará aquí.",
+ "rebar_list.rebar_empty_action": "Colocar armadura"
+}

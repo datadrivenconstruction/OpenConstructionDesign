@@ -1,0 +1,23 @@
+id = "G11_lamp__de"
+tier = "hard"
+group = "Any geometry"
+title = "灯"
+lang = "de"
+base = "empty"
+
+[[turn]]
+say = "Mache eine Stehlampe: runder Fuß mit 30 cm Durchmesser, dünner Stab 1.6 m hoch, verstellbarer gebogener Arm, konischer Schirm mit 40 cm Durchmesser."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "col+beam+brace+truss+gridshell_bar+solid+mass+mesh+freeform+shell_elem+gridshell+wall+slab+roof+stair+toposolid+wall_spline+comp:lamp|light|fixture"
+min = 4.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

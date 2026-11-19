@@ -1,0 +1,14 @@
+{
+ "empty.v3d_model.title": "Zatím nic ve 3D",
+ "empty.v3d_model.hint": "Nakreslete stěny v půdorysu a zobrazí se zde.",
+ "empty.v3d_model.action": "Otevřít půdorys",
+ "empty.v3d_hidden.title": "V tomto pohledu jsou skryty všechny prvky",
+ "empty.v3d_hidden.hint": "Dočasné skrytí nebo izolace nenechává nic viditelné. Grafika pohledu zůstává nastavena.",
+ "empty.v3d_hidden.action": "Zobrazit vše",
+ "empty.v3d_graphics.title": "Grafika pohledu skrývá všechny kategorie",
+ "empty.v3d_graphics.hint": "Pravidla kategorií tohoto pohledu nenechávají nic viditelné. Zapněte kategorie zpět v grafice pohledu.",
+ "empty.v3d_graphics.action": "Otevřít grafiku pohledu",
+ "empty.v3d_box.title": "Řezný box je mimo model",
+ "empty.v3d_box.hint": "Řezný box odřezává každý prvek. Přizpůsobte jej zpět modelu.",
+ "empty.v3d_box.action": "Obnovit box"
+}

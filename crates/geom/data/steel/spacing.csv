@@ -1,0 +1,24 @@
+# Bolt spacing rules. `d0` values are multiples of the hole diameter, `mm` values are absolute,
+# `t` values multiply the thinnest outer ply. Minima are checked; preferred values drive layout.
+[rules]
+key,value,unit
+# end distance (force direction) and edge distance (across the force), minimum
+e1_min,1.2,d0
+e2_min,1.2,d0
+# pitch along the force and gauge across it, minimum
+p1_min,2.2,d0
+p2_min,2.4,d0
+# layout values: rounded up to `round`
+e_pref,1.5,d0
+p_pref,3.0,d0
+round,5,mm
+# maximum edge distance: e_max_t * t + e_max_add
+e_max_t,4,t
+e_max_add,40,mm
+# maximum pitch: min(p_max_t * t, p_max_abs)
+p_max_t,14,t
+p_max_abs,200,mm
+# free space from a washer rim to a face standing across the bolt (wrench room)
+face_clear,6,mm
+# thread beyond the nut, in thread pitches
+protrusion,3,pitch

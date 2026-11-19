@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "A aplicação foi desfeita: o modelo não correspondia à pré-visualização. {what}",
+ "xlsx_verify.not_written": "{row} não foi alterado.",
+ "xlsx_verify.lost": "{row} desapareceu.",
+ "xlsx_verify.not_deleted": "{row} não foi excluído.",
+ "xlsx_verify.extra_deleted": "{row} foi excluído, embora a pré-visualização o mantenha.",
+ "xlsx_verify.created": "{table}: {got} novos em vez de {want}.",
+ "xlsx_verify.value": "{row}, {field}: esperado {want} (era {old}), recebido {got}.",
+ "xlsx_verify.check_failed": "O resultado não pôde ser verificado: {e}",
+ "xlsx_verify.plan_failed": "A aplicação não foi iniciada: a verificação não pôde ler o modelo ({e}).",
+ "xlsx_verify.take_back_failed": "A etapa não pôde ser desfeita ({e}): use Desfazer.",
+ "xlsx_verify.t.wall": "Parede",
+ "xlsx_verify.t.opening": "Abertura",
+ "xlsx_verify.t.room": "Ambiente",
+ "xlsx_verify.t.slab": "Laje",
+ "xlsx_verify.t.level": "Nível",
+ "xlsx_verify.t.wall_type": "Tipo de parede",
+ "xlsx_verify.t.slab_type": "Tipo de laje",
+ "xlsx_verify.t.col": "Pilar",
+ "xlsx_verify.t.beam": "Viga",
+ "xlsx_verify.t.roof": "Cobertura",
+ "xlsx_verify.t.curtain_wall": "Parede-cortina"
+}

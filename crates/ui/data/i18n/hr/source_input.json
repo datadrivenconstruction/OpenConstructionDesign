@@ -1,0 +1,4 @@
+{
+ "source_input.err.number": "„{text}“ nije broj; ovaj parametar sadrži broj. Ništa nije zapisano",
+ "source_input.err.comma": "„{text}“: za decimale upotrijebite točku (1.5); zarez služi samo za grupiranje tisućica (1,000). Ništa nije zapisano"
+}

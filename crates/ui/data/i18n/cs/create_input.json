@@ -1,0 +1,14 @@
+{
+ "cmd.mod.divide": "Rozdělit na díly",
+ "cmd.mod.divide.short": "Rozdělit",
+ "cmd.mod.divide.desc": "Rozdělí stěnu na stejné díly v jednom kroku. Zadejte počet dílů a pak klikněte na stěnu.",
+ "whereis.mod.divide": "rozdělit, stejné díly, rozřezat na kusy, rozdělit stěnu",
+ "hint.split.parts": "Rozdělit: klikněte na stěnu · číslo — díly (2–100) · Esc — zrušit",
+ "create_input.divide.bad_parts": "„{text}“ není počet dílů: zadejte celé číslo od 2 do {max}",
+ "create_input.ws.err.empty": "Zadejte název rozvržení",
+ "create_input.ws.err.long": "Název je příliš dlouhý: nejvýše 40 znaků",
+ "create_input.ws.err.preset": "Tento název patří vestavěnému rozvržení",
+ "create_input.ws.err.full": "Uložit lze nejvýše 24 rozvržení: nejprve jedno odstraňte",
+ "create_input.seldim.locked": "Vzdálenost {v} zamčena",
+ "create_input.seldim.positive": "Vzdálenost musí být větší než nula"
+}

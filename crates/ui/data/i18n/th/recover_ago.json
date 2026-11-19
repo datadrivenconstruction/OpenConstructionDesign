@@ -1,0 +1,29 @@
+{
+ "recover.ago_now": "เมื่อสักครู่",
+ "recover.ago_min": {
+  "one": "# นาทีที่แล้ว",
+  "other": "# นาทีที่แล้ว"
+ },
+ "recover.ago_hour": {
+  "one": "# ชั่วโมงที่แล้ว",
+  "other": "# ชั่วโมงที่แล้ว"
+ },
+ "recover.ago_yesterday": "เมื่อวาน",
+ "recover.ago_day": {
+  "one": "# วันที่แล้ว",
+  "other": "# วันที่แล้ว"
+ },
+ "recover.empty": "ไม่มีสำเนาเหลืออยู่",
+ "recover.empty_hint": "ไม่มีอะไรให้กู้คืนสำหรับโปรเจกต์นี้",
+ "recover.all_damaged": "สำเนาทุกชุดเสียหาย กู้คืนไม่ได้",
+ "recover.keys_hint": "ขึ้นและลงเพื่อเลือกสำเนา Enter เพื่อไปที่กู้คืน",
+ "recover.row_tip": "บันทึกเมื่อ {time}",
+ "recover.row_damaged_tip": "กู้คืนไม่ได้: {reason}",
+ "recover.archive_ask": "ย้ายสำเนานี้ไปที่คลังเก็บหรือไม่",
+ "recover.discard_ask": {
+  "one": "ย้ายสำเนาไปคลังเก็บหรือไม่ จะไม่มีการเสนอให้อีก",
+  "other": "ย้ายสำเนาทั้ง # ชุดไปคลังเก็บหรือไม่ จะไม่มีการเสนอให้อีก"
+ },
+ "recover.confirm_yes": "ย้ายไปคลังเก็บ",
+ "recover.confirm_no": "เก็บสำเนาไว้"
+}

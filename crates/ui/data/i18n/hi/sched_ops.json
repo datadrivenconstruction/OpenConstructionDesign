@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "मान शून्य से अधिक होना चाहिए",
+ "sched_ops.not_number": "संख्या नहीं",
+ "sched_ops.no_host": "होस्ट दीवार नहीं",
+ "sched_ops.wall_length": "इस दीवार की लंबाई इस तरह सेट नहीं की जा सकती",
+ "sched_ops.no_wall": "ऐसी दीवार नहीं",
+ "sched_ops.no_opening": "ऐसी ओपनिंग नहीं",
+ "sched_ops.no_curtain": "ऐसी कर्टेन वॉल नहीं",
+ "sched_ops.no_panel": "ऐसा पैनल नहीं",
+ "sched_ops.no_slab": "ऐसा स्लैब नहीं",
+ "sched_ops.no_room": "ऐसा कक्ष नहीं",
+ "sched_ops.slope_range": "ढलान सीमा से बाहर",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

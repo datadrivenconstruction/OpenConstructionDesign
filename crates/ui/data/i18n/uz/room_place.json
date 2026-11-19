@@ -1,0 +1,8 @@
+{
+ "cmd.arch.room_auto": "Xonalarni avtomatik joylashtirish",
+ "cmd.arch.room_auto.desc": "Faol qavatning hali xonasi bo'lmagan har bir yopiq chegarasiga xona joylashtiradi. Ochiq devor konturlari o'tkazib yuboriladi, taxmin bilan yopilmaydi. Bitta bekor qilish qadami.",
+ "room_place.placed": "Joylashtirilgan xonalar: {n}. Allaqachon xonasi bo'lgan hududlar: {m}. Ochiq konturlar o'tkazib yuborildi: {k}",
+ "room_place.all_had": "Hech narsa joylashtirilmadi: barcha {m} ta yopiq hudud allaqachon xonaga ega. Ochiq konturlar o'tkazib yuborildi: {k}",
+ "room_place.none": "Hech narsa joylashtirilmadi: qavatda yopiq devor hududlari yo'q",
+ "room_place.none_open": "Hech narsa joylashtirilmadi: qavatda yopiq devor hududlari yo'q. Ochiq konturlar o'tkazib yuborildi: {k}"
+}

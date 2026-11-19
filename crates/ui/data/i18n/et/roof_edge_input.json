@@ -1,0 +1,23 @@
+{
+ "roof_edge.err.number": "Sisesta number",
+ "roof_edge.err.positive": "Peab olema suurem kui null",
+ "roof_edge.err.nonneg": "Ei tohi olla negatiivne",
+ "roof_edge.err.max": "Ei tohi ületada väärtust {max}",
+ "roof_edge.list.empty_hint": "Lisa katuseservad, vihmarennid, räästalaed või katuseaknad katuse käskudega",
+ "roof_edge.edit_tip": "Muuda omadusi",
+ "roof_edge.delete_tip": "Kustuta",
+ "roof_edge.pe.del_tip": "Eemalda see punkt (lõik säilitab vähemalt 3)",
+ "roof_edge.pe.up_tip": "Liiguta see punkt üles",
+ "roof_edge.confirm_edge": "Kas kustutada {name}? Ctrl+Z toob selle tagasi.",
+ "roof_edge.confirm_profile": "Kas kustutada profiil {name}? Ctrl+Z toob selle tagasi.",
+ "roof_edge.deleted_one": "Kustutati {name}",
+ "roof_edge.deleted_n": {
+  "one": "Kustutati # element",
+  "other": "Kustutati # elementi"
+ },
+ "roof_edge.profile_deleted": "Profiil kustutati",
+ "roof_edge.profile_in_use": {
+  "one": "Kasutusel # servaelemendi poolt: kustuta või muuda see kõigepealt",
+  "other": "Kasutusel # servaelemendi poolt: kustuta või muuda need kõigepealt"
+ }
+}

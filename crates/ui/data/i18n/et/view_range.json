@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "Vaatevahemik",
+ "view_range.range": "Vaatevahemik",
+ "view_range.cut": "Lõiketasand",
+ "view_range.bottom": "Alumine",
+ "view_range.depth": "Vaate sügavus",
+ "view_range.cut.hint": "Lõiketasandi kõrgus korrusest. Seda ületavad elemendid joonistatakse lõigatuna.",
+ "view_range.bottom.hint": "Vahemiku alumine serv korruse suhtes. Nullist väiksemad või negatiivsed väärtused on lubatud.",
+ "view_range.depth.hint": "Kui kaugele vaade ulatub alumisest servast allapoole. Null või rohkem.",
+ "view_range.err.number": "Sisesta pikkus igasse lahtrisse",
+ "view_range.err.not_finite": "Sisesta pikkus igasse lahtrisse",
+ "view_range.err.cut_not_above_bottom": "Lõiketasand peab asuma alumisest servast kõrgemal",
+ "view_range.err.negative_depth": "Vaate sügavus ei saa olla negatiivne",
+ "view_range.err.top_below_cut": "Vahemiku ülaserv ei tohi jääda lõiketasandist allapoole"
+}

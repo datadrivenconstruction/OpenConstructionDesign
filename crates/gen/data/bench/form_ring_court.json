@@ -1,0 +1,65 @@
+{
+ "schema": "gen_bench.v1",
+ "group": "free_form",
+ "spec": {
+  "typology": "office",
+  "name": "Ring Court",
+  "floors": 5,
+  "footprint": {
+   "wings": [
+    {
+     "from": [
+      0,
+      0
+     ],
+     "to": [
+      56,
+      0
+     ]
+    },
+    {
+     "from": [
+      56,
+      0
+     ],
+     "to": [
+      56,
+      56
+     ]
+    },
+    {
+     "from": [
+      56,
+      56
+     ],
+     "to": [
+      0,
+      56
+     ]
+    },
+    {
+     "from": [
+      0,
+      56
+     ],
+     "to": [
+      0,
+      0
+     ]
+    }
+   ]
+  }
+ },
+ "adjacency": [
+  [
+   "office",
+   "meeting",
+   1
+  ],
+  [
+   "meeting",
+   "lobby",
+   1
+  ]
+ ]
+}

@@ -1,0 +1,13 @@
+{
+ "mep.sys.duct": "إمداد S1",
+ "mep.sys.pipe": "ماء بارد C1",
+ "mep.sys.tray": "كهرباء",
+ "mep.round": "دائري",
+ "mep.material": "المادة",
+ "mep3d.elevation": "الارتفاع من المستوى",
+ "mep3d.slope": "الميل",
+ "mep3d.shape": "الشكل",
+ "mep3d.shape.rect": "مستطيل",
+ "mep3d.shape.round": "دائري",
+ "mep3d.shape.oval": "بيضاوي مسطح"
+}

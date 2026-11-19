@@ -1,0 +1,4 @@
+{
+ "sf.restored": "Fișierul de setări {file} a fost deteriorat; ultima copie bună a fost restaurată. Fișierul deteriorat este păstrat ca {broken}.",
+ "sf.reset": "Fișierul de setări {file} a fost deteriorat și nicio copie de rezervă nu a fost utilizabilă; se folosesc valorile implicite. Fișierul deteriorat este păstrat ca {broken}."
+}

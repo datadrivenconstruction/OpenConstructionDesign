@@ -1,0 +1,7 @@
+{
+ "ai.retry.countdown": "Prøver igen om {n} s",
+ "ai.retry.try": "Automatisk forsøg {i} af {max}. Den samme anmodning sendes igen.",
+ "ai.retry.now": "Prøv igen nu",
+ "ai.retry.gave_up": "Stadig intet svar efter {max} automatiske forsøg.",
+ "ai.retry.shorten": "Forkort anmodningen"
+}

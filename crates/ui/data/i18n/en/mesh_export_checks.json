@@ -1,0 +1,15 @@
+{
+ "cmd.data.export_step.desc": "Saves the whole model or the selection as STEP AP214 or AP242: solids with exact planar, cylindrical, conical, spherical, toroidal and B-spline faces, other elements as planar faces, colours, one assembly node per level.",
+ "cmd.data.export_3mf.desc": "Saves the whole model or the selection as 3MF for printing: one object per element, colours, units, and a check that every body is watertight.",
+ "fmenu.export.step": "STEP exact solids (.step)",
+ "fmenu.export.3mf": "3MF for printing (.3mf)",
+ "mx.schema": "STEP schema",
+ "mx.schema.ap214": "AP214 (widest support)",
+ "mx.schema.ap242": "AP242",
+ "mx.watertight": "Bodies that are not watertight",
+ "mx.watertight.report": "Write them and list them",
+ "mx.watertight.skip": "Leave them out",
+ "mx.watertight.require": "Cancel the export",
+ "mx.faceted": "{fmt} saved: {path} ({exact} exact solids, {n} written as planar faces: {first})",
+ "sheets.print.svg": "SVG"
+}

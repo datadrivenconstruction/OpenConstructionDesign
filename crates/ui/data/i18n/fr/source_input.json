@@ -1,0 +1,4 @@
+{
+ "source_input.err.number": "« {text} » n'est pas un nombre ; ce paramètre attend un nombre. Rien n'a été écrit",
+ "source_input.err.comma": "« {text} » : utilisez un point pour les décimales (1.5) ; la virgule ne sert qu'à grouper les milliers (1,000). Rien n'a été écrit"
+}

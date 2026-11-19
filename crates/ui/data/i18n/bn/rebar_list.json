@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "উপরে সরান",
+ "rebar_list.move_down": "নিচে সরান",
+ "rebar_list.remove": "সরান",
+ "rebar_list.zone_remove_last": "একটি জোনে অন্তত একটি কক্ষ লাগে: শেষটি সরাতে জোনটি মুছুন",
+ "rebar_list.rebar_empty_title": "এই মডেলে কোনো রিবার নেই",
+ "rebar_list.rebar_empty_hint": "একটি হোস্ট উপাদানে রিবার বসালে এখানে সূচিবদ্ধ হবে।",
+ "rebar_list.rebar_empty_action": "রিবার বসান"
+}

@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "یہ ورک بک پہلے سے موجود ہے",
+ "xlsx_exists.foreign": "یہ اس پروجیکٹ کی ورک بک نہیں، اس لیے کبھی نہیں بدلی جاتی۔",
+ "xlsx_exists.pending": "اس میں {n} ترامیم ہیں جو ابھی ماڈل پر لاگو نہیں ہوئیں۔",
+ "xlsx_exists.outside": "اس میں {n} قطاریں ہیں جو نئی برآمد میں نہیں۔",
+ "xlsx_exists.new_name": "{name} میں برآمد",
+ "xlsx_exists.apply_first": "پہلے انہیں لاگو کریں",
+ "xlsx_exists.replace": "بدلیں (پرانی ورک بک _archive میں)",
+ "xlsx_exists.archived": "پرانی ورک بک {path} میں منتقل ہوئی",
+ "xlsx_exists.archive_failed": "پرانی ورک بک منتقل نہیں ہو سکی، کچھ برآمد نہیں ہوا: {error}"
+}

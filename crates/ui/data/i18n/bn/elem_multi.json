@@ -1,0 +1,10 @@
+{
+ "elem.multi.title": "{n}টি উপাদান",
+ "elem.multi.varies": "ভিন্ন",
+ "elem.multi.tip": "Enter সব নির্বাচিত উপাদানে সেট করে",
+ "elem.multi.hidden": "{n}টি সারি শুধু কিছু উপাদানে",
+ "elem.multi.none": "নির্বাচিত উপাদানে কোনো সাধারণ সারি নেই",
+ "elem.multi.range": "মান অনুমোদিত সীমার বাইরে",
+ "elem.multi.changed": "{n}টি উপাদান বদলেছে · Ctrl+Z ফিরিয়ে আনে",
+ "elem.multi.same": "সব নির্বাচিত উপাদানে আগে থেকেই এই মান"
+}

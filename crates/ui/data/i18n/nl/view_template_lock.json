@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "Beheerd door sjabloon {name}",
+ "view_template.edit_template": "Sjabloon bewerken",
+ "view_template.locked_tip": "Ingesteld door het weergavesjabloon {name}. Wijzig het in het sjabloon.",
+ "view_template.no_filters": "Geen filters in deze weergave"
+}

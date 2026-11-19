@@ -1,0 +1,42 @@
+{
+ "ai.tool.show_elements": "Visar element",
+ "ai.tool.isolate_elements": "Isolerar element",
+ "ai.tool.color_by": "Färgsätter efter värde",
+ "ai.tool.reset_view": "Återställer vyn",
+ "ai_found.found.query": "Hittade",
+ "ai_found.found.show": "Visad",
+ "ai_found.found.isolate": "Isolerad",
+ "ai_found.found.hide": "Dold",
+ "ai_found.found.color": "Färgad",
+ "ai_found.found.count": "{n} av {m}",
+ "ai_found.found.none": "Inget matchar. Prova ett bredare filter.",
+ "ai_found.found.show_btn": "Visa",
+ "ai_found.found.show_tip": "Markera dessa element och zooma till dem i plan och 3D",
+ "ai_found.found.isolate_btn": "Isolera",
+ "ai_found.found.isolate_tip": "Visa bara dessa element till Återställ vy",
+ "ai_found.found.select_btn": "Markera",
+ "ai_found.found.select_tip": "Markera dessa element utan att flytta vyn",
+ "ai_found.legend.title": "Färg efter {by}",
+ "ai_found.legend.row_tip": "Klicka för att markera dessa element",
+ "ai_found.legend.empty_value": "Inget värde",
+ "ai_found.legend.other": {
+  "one": "# värde till",
+  "other": "# värden till"
+ },
+ "ai_found.view.title": "AI-assistentens vy",
+ "ai_found.view.reset": "Återställ vy",
+ "ai_found.view.reset_tip": "Återför vyn från innan AI-assistenten ändrade den",
+ "ai_found.view.shown": {
+  "one": "# element visat",
+  "other": "# element visade"
+ },
+ "ai_found.view.isolated": {
+  "one": "# element isolerat",
+  "other": "# element isolerade"
+ },
+ "ai_found.view.hidden": {
+  "one": "# element dolt",
+  "other": "# element dolda"
+ },
+ "ai_found.found.line": "{what}: {count}"
+}

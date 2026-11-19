@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "Бетон",
+ "mat.masonry": "Өрлөг",
+ "mat.brick": "Тоосго",
+ "mat.insulation": "Дулаалга",
+ "mat.plaster": "Шпаклёвка",
+ "mat.render": "Шавар",
+ "mat.gypsum": "Гипсэн хавтан",
+ "mat.glass": "Шил",
+ "mat.wood": "Мод",
+ "mat.steel": "Ган",
+ "mat.membrane": "Мембран",
+ "mat.other": "Бусад",
+ "warn.cat.wall": "Хана",
+ "warn.cat.slab": "Дэвсгэр",
+ "warn.cat.opening": "Нүх",
+ "warn.cat.curtain_wall": "Хөшигт хана",
+ "td.mat.custom": "Бусад…"
+}

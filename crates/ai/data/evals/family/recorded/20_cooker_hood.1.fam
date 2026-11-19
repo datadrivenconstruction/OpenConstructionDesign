@@ -1,0 +1,26 @@
+family Cooker Hood
+category mechanical
+host floor
+ifc IfcElectricAppliance NOTDEFINED
+param Power number type 250
+param Width length type 600mm
+param Depth length type 500mm
+param Elevation length type 1550mm
+param Canopy length type 120mm
+param Chimney length type 250mm
+param ChimneyH length type 500mm
+param Duct length type 150mm
+param Casing material type "Stainless Steel"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Back y = Depth / 2
+type "600" Width=600mm
+type "900" Width=900mm
+type "24in" Width=24in, Depth=20in, Elevation=61in, Duct=6in
+extrude Canopy rect(Left, Front, Right, Back) z(Elevation, Elevation + Canopy) mat(Casing) show(3d, elev)
+extrude Chimney rect(-Chimney / 2, Back - Chimney, Chimney / 2, Back) z(Elevation + Canopy, Elevation + Canopy + ChimneyH) mat(Casing) show(3d, elev)
+symbol rect(Left, Front, Right, Back) show(medium, fine)
+symbol rect(-Chimney / 2, Back - Chimney, Chimney / 2, Back)
+connector Exhaust duct exhaust_air at(0, Back - Chimney / 2, Elevation + Canopy + ChimneyH) dir(0, 0, 1) size(Duct)
+connector Power conduit power at(0, Back, Elevation + Canopy + ChimneyH - 100mm) dir(0, 1, 0) size(20mm)

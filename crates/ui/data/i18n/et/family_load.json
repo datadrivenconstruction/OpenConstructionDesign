@@ -1,0 +1,4 @@
+{
+ "family_load.refused": "Perekonda “{name}” ei saa laadida: {msg}. Projekti ei laaditud midagi; sinu muudatused on alles.",
+ "family_load.loaded_all": "{n} perekonda laaditi ühe sammuga: {names}"
+}

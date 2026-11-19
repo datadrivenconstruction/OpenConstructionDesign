@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "Deshacer: {what}",
+ "undo_label.redo_what": "Rehacer: {what}",
+ "undo_label.undo_none": "Nada que deshacer",
+ "undo_label.redo_none": "Nada que rehacer"
+}

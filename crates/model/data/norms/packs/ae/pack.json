@@ -1,0 +1,52 @@
+{
+ "id": "ae",
+ "version": "2026.11",
+ "parent": "generic",
+ "country": "AE",
+ "lang": [
+  "en",
+  "ar"
+ ],
+ "units": {
+  "length": "m",
+  "display": "metric"
+ },
+ "conventions": {
+  "ground_floor": 0,
+  "area_standard": "gross",
+  "net_share": 0.85,
+  "note": "Developers and the Dubai code quote built-up or gross floor area measured to the outside of walls; no federal clause was read. Net share is our own estimate.",
+  "source": null
+ },
+ "status": "tier3",
+ "climate": {
+  "zones": [],
+  "default": null
+ },
+ "research": {
+  "date": "2026-11-14",
+  "missing": [
+   "daylight.window_floor_ratio",
+   "corridor.width_min.accessible",
+   "accessible.turning_circle",
+   "fire.compartment_area_max",
+   "fire.compartment_area_max.sprinklered",
+   "stair.riser_max.house",
+   "stair.tread_min.house",
+   "stair.width_min.house",
+   "room.height_min",
+   "room.height_min.office",
+   "parking.per_dwelling",
+   "load.floor_residential",
+   "load.floor_office"
+  ],
+  "unreachable": [
+   "https://www.dcd.gov.ae (all paths, live host refuses connections; content reached only through web.archive.org)",
+   "http://www.dcd.gov.ae/download/preventionsafety/UAE_FIRE_AND_LIFE_SAFETY_CODE_OF_PRACTICE.pdf (old path, no archive snapshot)",
+   "https://moi.gov.ae/DataFolder/EN%20Laws%20and%20Regulations/Civil%20Defense/UAE%20Ministerial%20Resolution%20No.%20(505)%20of%202012.pdf (connection refused, not retried via archive)",
+   "https://u.ae/en/information-and-services/justice-safety-and-the-law/building-safety (404)"
+  ],
+  "note": "The official September 2018 PDF was read as text from a web.archive.org snapshot (2025-06-15). It covers egress, stairs and ramps. Building geometry (heights, daylight, parking, loads) is set per emirate; use pack ae-du for Dubai. fire.compartment_area_max stays missing: allowable area per storey depends on construction type in Tables 1.7 and 1.8 (section 2.10.4) and gives no single figure."
+ },
+ "note": "Numbers with verified=true were read in the cited clause; the rest are hints with a note of where we looked. Wording is our own; no text of a standard is stored."
+}

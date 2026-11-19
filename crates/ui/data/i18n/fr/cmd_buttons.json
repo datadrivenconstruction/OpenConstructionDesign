@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}, au niveau",
+ "cmd_buttons.purge.undo": "La suppression est une seule étape d'annulation.",
+ "cmd_buttons.unpin.none": "Aucun élément sélectionné n'est épinglé",
+ "cmd_buttons.change_type.none": "Sélectionnez d'abord des murs : leur type change en une seule étape",
+ "cmd_buttons.units.metric": "Unités : métriques",
+ "cmd_buttons.units.imperial": "Unités : pieds et pouces",
+ "cmd_buttons.units.back": "Revenir",
+ "cmd_buttons.underlay.on": "Fond de plan activé : le niveau inférieur est affiché en grisé",
+ "cmd_buttons.underlay.off": "Fond de plan désactivé",
+ "cmd_buttons.underlay.none": "Fond de plan activé, mais le niveau inférieur n'a rien à afficher",
+ "cmd_buttons.zoom_sel.no_shape": "La sélection n'a pas de forme à cadrer dans cette vue",
+ "cmd_buttons.close.base": "Les onglets Plan et 3D restent ouverts ; ouvrez une coupe, une feuille ou une vue de détail pour la fermer",
+ "tool.equipment": "Équipement",
+ "hint.equipment.place": "Équipement : choisissez l'emplacement · Échap pour quitter",
+ "cmd_buttons.table.opened": "Tableau ouvert à côté du modèle",
+ "cmd_buttons.circuits.tip": "Ouvrir la liste des circuits électriques de ce modèle"
+}

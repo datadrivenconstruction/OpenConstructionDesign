@@ -1,0 +1,23 @@
+{
+ "roof_edge.err.number": "กรอกตัวเลข",
+ "roof_edge.err.positive": "ต้องมากกว่าศูนย์",
+ "roof_edge.err.nonneg": "ต้องไม่เป็นค่าลบ",
+ "roof_edge.err.max": "ต้องไม่เกิน {max}",
+ "roof_edge.list.empty_hint": "เพิ่มขอบชายคา รางน้ำ ท้องชายคา หรือช่องแสงด้วยคำสั่งหลังคา",
+ "roof_edge.edit_tip": "แก้ไขคุณสมบัติ",
+ "roof_edge.delete_tip": "ลบ",
+ "roof_edge.pe.del_tip": "ลบจุดนี้ (ส่วนต้องมีอย่างน้อย 3 จุด)",
+ "roof_edge.pe.up_tip": "เลื่อนจุดนี้ขึ้น",
+ "roof_edge.confirm_edge": "ลบ {name} หรือไม่ Ctrl+Z จะนำกลับมา",
+ "roof_edge.confirm_profile": "ลบโปรไฟล์ {name} หรือไม่ Ctrl+Z จะนำกลับมา",
+ "roof_edge.deleted_one": "ลบ {name} แล้ว",
+ "roof_edge.deleted_n": {
+  "one": "ลบ # องค์ประกอบแล้ว",
+  "other": "ลบ # องค์ประกอบแล้ว"
+ },
+ "roof_edge.profile_deleted": "ลบโปรไฟล์แล้ว",
+ "roof_edge.profile_in_use": {
+  "one": "ถูกใช้โดยองค์ประกอบขอบ # ชิ้น: ลบหรือเปลี่ยนก่อน",
+  "other": "ถูกใช้โดยองค์ประกอบขอบ # ชิ้น: ลบหรือเปลี่ยนก่อน"
+ }
+}

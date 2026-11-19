@@ -1,0 +1,5 @@
+{
+ "mcp.set.hide": "Skrýt",
+ "mcp.set.copy_config": "Kopírovat nastavení AI agentů",
+ "mcp.set.no_token": "Zatím žádný přístupový token. Nejprve zapněte server."
+}

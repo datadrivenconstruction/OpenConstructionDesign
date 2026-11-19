@@ -1,0 +1,7 @@
+{
+ "gen.pin.room": "Alterou um compartimento do projeto gerado. Fixe-o para que uma revisão do projeto o mantenha no lugar.",
+ "gen.pin.storey": "Alterou um piso do projeto gerado. Fixe-o para que uma revisão mantenha as suas paredes e vãos.",
+ "gen.pin.action": "Fixar",
+ "gen.pin.done": "Fixado: uma revisão do projeto mantém este elemento e coloca o restante à sua volta",
+ "gen.pin.failed": "Não foi possível fixar"
+}

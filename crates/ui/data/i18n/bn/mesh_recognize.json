@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "{total}টির মধ্যে {done}টি চেনা হচ্ছে",
+ "mesh_recognize.all": "সব {n}",
+ "mesh_recognize.only_confident": "শুধু আত্মবিশ্বাসীগুলো",
+ "mesh_recognize.confident_tip": "ক্যাটেগরির সঙ্গে ধরন মেলে এবং আত্মবিশ্বাস কমপক্ষে {pct}% এমন সারি টিক দেয়",
+ "mesh_recognize.row_hint": "সারিতে ক্লিক করে টিক দিন। তীর কী সরায়, Enter টিক দেয়।",
+ "mesh_recognize.kind_for": "{name}-এর ধরন",
+ "mesh_recognize.source": "উৎস মেশ",
+ "mesh_recognize.keep": "মেশ রাখুন",
+ "mesh_recognize.replace": "মেশ বদলান",
+ "mesh_recognize.convert_keep": "{n} রূপান্তর করুন",
+ "mesh_recognize.convert_remove": "{n} রূপান্তর করুন এবং মেশ সরান",
+ "mesh_recognize.creates": "{n} তৈরি হবে: {kinds}",
+ "mesh_recognize.creates_none": "এখনো কিছু টিক দেওয়া হয়নি",
+ "mesh_recognize.stay": "{n}টি উৎস মেশ মডেলে থেকে যাবে",
+ "mesh_recognize.removed": "{n}টি উৎস মেশ মুছে যাবে। আনডু করলে ফিরবে।"
+}

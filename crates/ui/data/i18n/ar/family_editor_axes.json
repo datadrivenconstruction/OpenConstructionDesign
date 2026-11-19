@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "المحور X",
+ "fe.axis.y": "المحور Y",
+ "fe.axis.z": "المحور Z",
+ "fe.col.axis": "المحور",
+ "fe.col.at": "الموضع",
+ "fe.col.mode": "الوضع",
+ "fe.mode.fixed": "ثابت",
+ "fe.mode.free": "حر",
+ "fe.types.inherited": "افتراضي من المعلمة",
+ "fe.csv.more": "إجراءات CSV إضافية",
+ "fe.ref.selected": "المستوى: {name}"
+}

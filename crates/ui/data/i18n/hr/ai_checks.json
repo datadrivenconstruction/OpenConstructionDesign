@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "izmjereno {value}, granica {limit}",
+ "ai_checks.check.cap": "Prikazano {shown} od {total} nalaza. Greške su prve: ispravite ih i pokrenite ponovno.",
+ "ai_checks.check.run_again": "Pokreni ponovno",
+ "ai_checks.check.goto": "Odaberi i uvećaj",
+ "ai_checks.check.never_title": "Još nije provjereno",
+ "ai_checks.check.never_hint": "Pokrenite provjere i nalazi će se pojaviti ovdje.",
+ "ai_checks.check.sec.error": "Greške",
+ "ai_checks.check.sec.warning": "Upozorenja",
+ "ai_checks.check.sec.info": "Napomene"
+}

@@ -1,0 +1,12 @@
+{
+  "hedge": {"types": {"clipped": "Clipped 1200", "low": "Low 600", "tall": "Tall 1800", "conifer": "Conifer 2000"},
+            "length": 3.0, "inset": 0.4},
+  "lawn": {"type": "Lawn", "tile": 6.0},
+  "bed": {"type": "Bed", "tile": 1.5, "shrub_stride": 3},
+  "shrubs": ["Round 1", "Spreading 1", "Oval 1", "Round 2", "Spreading 2", "Vase 1", "Lilac"],
+  "path": {"type": "Path", "tile": 1.5},
+  "caps": {"hedge": 160, "lawn": 160, "path": 240, "bed": 240, "row": 40},
+  "reserve": 100,
+  "row_inset": 2.0,
+  "street_angles": {"south": 0, "east": 90, "north": 180, "west": 270}
+}

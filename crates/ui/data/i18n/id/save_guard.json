@@ -1,0 +1,14 @@
+{
+ "save_guard.save.empty_over_full": "Tidak ada yang disimpan: model kosong, dan file sudah memuat konten. File tidak diubah. Gunakan Simpan sebagai untuk menulis dengan nama lain.",
+ "save_guard.refuse.body": "Tidak ada yang disimpan: model kosong, dan {name} sudah memuat konten. File tidak diubah.",
+ "save_guard.refuse.foreign": "Ini bukan file DDC Editor, sehingga tidak dapat diganti. Gunakan Simpan sebagai untuk menulis dengan nama lain.",
+ "save_guard.refuse.ask": "Ganti {name}? File ini memuat {what}. File akan dipindahkan ke folder _archive di sebelahnya terlebih dahulu, lalu model kosong ditulis.",
+ "save_guard.refuse.holds_db": "{n} elemen dan baris konten",
+ "save_guard.refuse.holds_ifc": "IFC dengan produk",
+ "save_guard.refuse.replace": "Ganti juga…",
+ "save_guard.refuse.replace_yes": "Pindahkan dan ganti",
+ "save_guard.refuse.save_as": "Simpan sebagai…",
+ "save_guard.refuse.cancel": "Batal",
+ "save_guard.replace.moved": "File sebelumnya dipindahkan ke {path}",
+ "save_guard.replace.move_failed": "{name} tidak dapat dipindahkan ke samping: {error}. Tidak ada yang ditulis."
+}

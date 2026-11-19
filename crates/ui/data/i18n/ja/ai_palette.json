@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "AIに質問: {q}",
+ "ai.palette.connect": "質問するにはAIを接続",
+ "ai.palette.draft.apply": "ドラフトを適用 ({n})",
+ "ai.palette.draft.reject": "ドラフトを却下",
+ "ai.palette.draft.next": "次のドラフトの変更",
+ "ai.palette.draft.show": "ビューにドラフトを表示",
+ "cmd.ai.next_change": "次のドラフトの変更",
+ "cmd.ai.next_change.desc": "ビューをドラフトが変更する次の要素へ移動します。",
+ "cmd.ai.show_draft": "AIドラフトをビューに表示",
+ "cmd.ai.show_draft.desc": "ドラフトが変更するすべてが収まるようにビューを合わせます。"
+}

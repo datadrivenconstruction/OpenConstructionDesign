@@ -1,0 +1,13 @@
+{
+ "topo.unit.mm": "mm",
+ "topo.unit.metre": "m",
+ "topo.unit.ft": "pi",
+ "topo.opt.material": "Matériau",
+ "topo.row.active": "Surface active",
+ "topo.btn.delete_pad": "Supprimer la plateforme",
+ "topo.info.loading": "Construction de la surface…",
+ "topo.info.warn_n": "{n} avertissements",
+ "topo.info.points_label": "Points",
+ "topo.import.all_layers": "Toutes les couches",
+ "topo.import.need_layer": "Cochez au moins une couche"
+}

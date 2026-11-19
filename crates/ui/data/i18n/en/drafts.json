@@ -1,0 +1,8 @@
+{
+ "drafts.drafts.head": "Open editors hold edits that are not in the project yet:",
+ "drafts.draft.family": "Family “{name}”",
+ "drafts.draft.line": "Line library: {name}",
+ "drafts.draft.styles": "View range line styles",
+ "drafts.btn.save_all": "Save all",
+ "drafts.drafts.refused": "A draft could not be saved. Nothing was closed; the editor with the draft is open."
+}

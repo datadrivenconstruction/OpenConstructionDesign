@@ -1,0 +1,6 @@
+{
+ "xl.msg.filter_on_sheet_x": "filtru pe foaia '{}'",
+ "xl.msg.sort_settings_on_sheet_x": "setările de sortare de pe foaia '{}'",
+ "xl.msg.hidden_rows_on_sheet_x": "rânduri ascunse pe foaia '{}'",
+ "xl.msg.hidden_columns_on_sheet_x": "coloane ascunse pe foaia '{}'"
+}

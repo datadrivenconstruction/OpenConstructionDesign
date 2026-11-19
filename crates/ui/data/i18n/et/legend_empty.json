@@ -1,0 +1,5 @@
+{
+ "legend.legend.empty_hint": "Sisesta ülal nimi ja vajuta Loo.",
+ "legend.legend.pick_hint": "Vali legend ülaloleva loendi seest.",
+ "legend.legend.taken": "Nimega \"{name}\" legend on juba olemas. Sisesta teine nimi."
+}

@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "Әр өңдеуде бұл қабырғаның ағымдағы ұзындығын сақтайды",
+ "constraints.con.tip.lock_dist": "Әр өңдеуде екі қабырға арасындағы қашықтықты сақтайды",
+ "constraints.con.tip.equal": "Таңдалған қабырғалар арасындағы аралықтарды тең ұстайды",
+ "constraints.con.tip.align": "Екі қабырғаны бір сызықта ұстайды",
+ "constraints.con.tip.parallel": "Қабырғаларды параллель ұстайды",
+ "constraints.con.tip.perp": "Қабырғаларды тік бұрышта ұстайды",
+ "constraints.con.tip.align_grid": "Қабырғаны ең жақын тор сызығында ұстайды",
+ "constraints.con.tip.lock_dist_grid": "Қабырғадан ең жақын тор сызығына дейінгі қашықтықты сақтайды",
+ "constraints.con.tip.level_gap": "Деңгейлер арасындағы аралықты ұстайды",
+ "constraints.con.tip.top_to_level": "Қабырғаның жоғарғы жағын жоғарыдағы деңгейде ұстайды"
+}

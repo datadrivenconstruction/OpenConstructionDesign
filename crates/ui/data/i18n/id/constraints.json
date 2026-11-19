@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "Menjaga dinding ini tetap pada panjang saat ini di setiap suntingan",
+ "constraints.con.tip.lock_dist": "Menjaga jarak kedua dinding pada setiap suntingan",
+ "constraints.con.tip.equal": "Menjaga jarak antar dinding yang dipilih tetap sama",
+ "constraints.con.tip.align": "Menjaga kedua dinding tetap segaris",
+ "constraints.con.tip.parallel": "Menjaga dinding tetap sejajar",
+ "constraints.con.tip.perp": "Menjaga dinding tegak lurus",
+ "constraints.con.tip.align_grid": "Menjaga dinding pada garis grid terdekat",
+ "constraints.con.tip.lock_dist_grid": "Menjaga jarak dari dinding ke garis grid terdekat",
+ "constraints.con.tip.level_gap": "Menjaga jarak antar level",
+ "constraints.con.tip.top_to_level": "Menjaga bagian atas dinding di level di atasnya"
+}

@@ -1,0 +1,16 @@
+{
+ "ai.items.all": {
+  "one": "계획 항목 #개 모두",
+  "other": "계획 항목 #개 모두"
+ },
+ "ai.items.all.tip": "계획의 모든 항목을 선택하거나 해제",
+ "ai.items.checked": "{m}개 중 {n}개 선택됨",
+ "ai.items.check.tip": "“{title}”을 적용에 포함",
+ "ai.items.expand": "요소 보기",
+ "ai.items.collapse": "요소 숨기기",
+ "ai.items.apply": {
+  "one": "항목 #개 적용",
+  "other": "항목 #개 적용"
+ },
+ "ai.items.apply_none": "적용"
+}

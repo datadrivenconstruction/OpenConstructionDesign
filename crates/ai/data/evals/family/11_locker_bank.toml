@@ -1,0 +1,7 @@
+brief = "Bank of lockers with a parameter for the number of doors."
+category = "casework"
+must = param Width
+must = param Depth
+must = solids >= 3
+must = ports 0
+must = flex Width 960 1500

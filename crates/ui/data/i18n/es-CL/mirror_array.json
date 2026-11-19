@@ -1,0 +1,5 @@
+{
+ "mirror_array.err.count": "El número es un entero de 2 a 200: 4 3000, o 4;300 cuando el paso tiene tres dígitos",
+ "mirror_array.err.length": "El paso o el total es una longitud positiva, p. ej. 3 000 o 1.2 m",
+ "mirror_array.err.angle": "El barrido es un ángulo en grados, no cero y como máximo 360"
+}

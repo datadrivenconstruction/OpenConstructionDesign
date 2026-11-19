@@ -1,0 +1,23 @@
+{
+  "cmd.arch.room_sep.short": "Separador",
+  "cmd.str.footing.short": "Sapata pilar",
+  "cmd.str.strip_footing.short": "Sapata corr.",
+  "cmd.str.analytical.short": "Analítico",
+  "cmd.mep.terminal.short": "Difusor",
+  "cmd.mod.isolate.short": "Isolar",
+  "cmd.view.ui.short": "Interface",
+  "cmd.mgr.params.short": "Parâmetros",
+  "cmd.ctx.wall.attach.short": "Anexar",
+  "cmd.mass.unjoin.short": "Desassociar",
+  "cmd.mod.unjoin.short": "Desassociar",
+  "cmd.arch.void_extrusion.short": "Extr. vazio",
+  "cmd.e3d.snap.short": "Snaps 3D",
+  "cmd.mgr.open_big.short": "Ficheiro gr.…",
+  "cmd.site.edit_points.short": "Pontos terr.",
+  "cmd.view.reveal_3d.short": "Mostrar cat.",
+  "cmd.help.check_update.short": "Atualizações",
+  "cmd.ctx.floor.link_unlink.short": "Soltar arestas",
+  "cmd.ui.onboarding.short": "Configurar…",
+  "cmd.mod.distribute.short": "Distribuir",
+  "cmd.data.src_delta.short": "Alter. planilha XLSX…"
+}

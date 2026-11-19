@@ -1,0 +1,18 @@
+{
+ "faults.errors": {
+  "one": "Modelda # ta xato. Ko'rsatish uchun bosing.",
+  "other": "Modelda # ta xato. Ro'yxatni ko'rish uchun bosing."
+ },
+ "faults.warnings": {
+  "one": "Modelda # ta ogohlantirish. Ko'rsatish uchun bosing.",
+  "other": "Modelda # ta ogohlantirish. Ro'yxatni ko'rish uchun bosing."
+ },
+ "faults.title": "Model nosozliklari: {n}",
+ "faults.none": "Xato yoki ogohlantirish yo'q.",
+ "faults.cat.wall": "Devor",
+ "faults.cat.slab": "Plita",
+ "faults.cat.opening": "Teshik",
+ "faults.cat.curtain_wall": "Pardali devor",
+ "faults.cat.ramp": "Pandus",
+ "faults.cat.zone": "Zona"
+}

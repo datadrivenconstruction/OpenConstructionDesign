@@ -1,0 +1,14 @@
+{
+ "ai.issue.integrity": "Sự cố toàn vẹn: {0} {1}: {2}",
+ "ai.issue.opening_outside": "Lỗ mở không vừa trong tường: {0}",
+ "ai.issue.opening_overlap": "Lỗ mở chồng lên lỗ mở {0}",
+ "ai.issue.wall_warning": "Tường: {0}",
+ "ai.issue.cut_warning": "Cắt: {0}",
+ "ai.issue.room_open": "Phòng chưa khép kín",
+ "ai.issue.material_unknown": "Không có vật liệu tên “{0}” trong dự án: Áp dụng sẽ thêm một vật liệu mới với thuộc tính mặc định",
+ "ai.issue.material_suggest": "Không có vật liệu tên “{0}” trong dự án: Áp dụng sẽ thêm mới. Có phải ý bạn là “{1}”?",
+ "ai.issue.conflict": "Mục này không thể chạy: {0}",
+ "ai.issue.too_large": "{0} phần tử sẽ thay đổi, vượt giới hạn {1}. Cần được cho phép",
+ "ai.issue.truncated": "Danh sách thay đổi dừng ở {0} hàng: kế hoạch lớn hơn thẻ có thể hiển thị. Cần được cho phép",
+ "ai.issue.replan_failed": "Không thể tính lại kế hoạch. Đang chụp một bản sao mới của mô hình"
+}

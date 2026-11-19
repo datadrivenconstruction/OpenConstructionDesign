@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "1 Satz hinzufügen",
+ "rebar_sets.add_n": "{n} Sätze hinzufügen",
+ "rebar_sets.pick.search": "Stabtypen suchen",
+ "rebar_sets.pick.empty": "Keine passenden Stabtypen",
+ "rebar_sets.unit.deg": "°"
+}

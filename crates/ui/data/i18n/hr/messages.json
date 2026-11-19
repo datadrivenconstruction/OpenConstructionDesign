@@ -1,0 +1,7 @@
+{
+ "messages.title": "Poruke",
+ "messages.desc": "Povijest obavijesti. Nema novih upozorenja ili grešaka.",
+ "messages.desc_new": "Novih upozorenja ili grešaka: {n}. Kliknite za čitanje.",
+ "messages.copy": "Kopiraj sve",
+ "messages.clear": "Obriši sve"
+}

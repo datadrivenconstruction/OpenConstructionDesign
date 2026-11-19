@@ -1,0 +1,59 @@
+{
+ "del.k.door": {
+  "one": "# pinto",
+  "other": "# na pinto"
+ },
+ "del.k.window": {
+  "one": "# bintana",
+  "other": "# na bintana"
+ },
+ "del.k.opening": {
+  "one": "# opening",
+  "other": "# na opening"
+ },
+ "del.k.comp": {
+  "one": "# naka-host na component",
+  "other": "# na naka-host na component"
+ },
+ "del.k.rebar": {
+  "one": "# set ng rebar",
+  "other": "# na set ng rebar"
+ },
+ "del.k.port": {
+  "one": "# naka-host na MEP port",
+  "other": "# na naka-host na MEP port"
+ },
+ "del.k.joist": {
+  "one": "# framing beam",
+  "other": "# na framing beam"
+ },
+ "del.k.railing": {
+  "one": "# railing",
+  "other": "# na railing"
+ },
+ "del.k.tag": {
+  "one": "# tag",
+  "other": "# na tag"
+ },
+ "del.k.dim": {
+  "one": "# dimensyon (naihiwalay)",
+  "other": "# na dimensyon (naihiwalay)"
+ },
+ "del.also": "Apektado rin: {list}",
+ "del.rooms": {
+  "one": "# kuwarto ang nawawalan ng boundary wall",
+  "other": "# na kuwarto ang nawawalan ng boundary wall"
+ },
+ "del.cancelled": "Kinansela ang pagbura, walang nagbago",
+ "del.confirm.title": "Burahin kasama ang mga dependent",
+ "del.confirm.lead": {
+  "one": "# napiling elemento ang kasama nito:",
+  "other": "# na napiling elemento ang kasama nila:"
+ },
+ "del.confirm.levels": {
+  "one": "# sa kanila ay nasa ibang level",
+  "other": "# sa kanila ay nasa ibang mga level"
+ },
+ "del.confirm.all": "Burahin lahat",
+ "del.confirm.cancel": "Kanselahin"
+}

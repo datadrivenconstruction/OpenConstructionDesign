@@ -1,0 +1,22 @@
+{
+ "ai.audit.tokens": "{n} token",
+ "ai.audit.filter.all": "Barchasi",
+ "ai.audit.filter.ai": "AI",
+ "ai.audit.filter.me": "Men",
+ "ai.audit.search": "O'zgarishlarni qidirish",
+ "ai.audit.search.clear": "Qidiruvni tozalash",
+ "ai.audit.show_all": "Hammasini ko'rsatish",
+ "ai.audit.empty.hint": "Model yoki agent tomonidan qoralama qilingan yoki qo'llangan o'zgarishlar shu yerda chiqadi, har biri qaytarish yo'li bilan.",
+ "ai.audit.no_match": "Filtrga mos o'zgarishlar yo'q.",
+ "ai.audit.show.tip": "Bu o'zgarish ta'sir qilgan elementlarni tanlash va ko'rsatish",
+ "ai.audit.revert.ask": "“{what}” ni qaytarilsinmi? {change}.",
+ "ai.audit.revert.elements": {
+  "one": "# ta element o'zgarishi",
+  "other": "# ta element o'zgaradi"
+ },
+ "ai.audit.revert.keeps": "Yangi o'zgarishlar qoladi. Qaytarish bitta bekor qilish qadami.",
+ "ai.audit.cancel": "Bekor qilish",
+ "ai.audit.toast.reverted": "Qaytarildi: {what}",
+ "ai.audit.toast.undone": "Bekor qilindi: {what}",
+ "ai.audit.redo": "Qayta bajarish"
+}

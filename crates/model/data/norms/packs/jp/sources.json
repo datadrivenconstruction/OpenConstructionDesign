@@ -1,0 +1,40 @@
+{
+ "sources": [
+  {
+   "id": "jp-bsa-order",
+   "title": "Building Standards Act Enforcement Order",
+   "publisher": "Government of Japan (e-Gov)",
+   "url": "https://laws.e-gov.go.jp/law/325CO0000000338",
+   "edition": "consolidated, fetched 2026-11-14",
+   "licence": "public-law",
+   "verified": "2026-11-14"
+  },
+  {
+   "id": "jp-bsa",
+   "title": "Building Standards Act",
+   "publisher": "Government of Japan (e-Gov)",
+   "url": "https://laws.e-gov.go.jp/law/325AC0000000201",
+   "edition": "consolidated, fetched 2026-11-14",
+   "licence": "public-law",
+   "verified": null
+  },
+  {
+   "id": "jp-bf-order",
+   "title": "Barrier-Free Act Enforcement Order (building accessibility standards)",
+   "publisher": "Government of Japan (e-Gov)",
+   "url": "https://laws.e-gov.go.jp/law/418CO0000000379",
+   "edition": "consolidated, fetched 2026-11-14",
+   "licence": "public-law",
+   "verified": "2026-11-14"
+  },
+  {
+   "id": "jp-mlit-design-standard",
+   "title": "Architectural design standard for smooth movement of elderly and disabled persons (revision summary, March 2021)",
+   "publisher": "MLIT",
+   "url": "https://www.mlit.go.jp/common/001391184.pdf",
+   "edition": "2021-03",
+   "licence": "public-law",
+   "verified": "2026-11-14"
+  }
+ ]
+}

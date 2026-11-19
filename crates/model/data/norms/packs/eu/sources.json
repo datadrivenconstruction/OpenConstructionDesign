@@ -1,0 +1,20 @@
+{
+ "sources": [
+  {
+   "id": "eu-practice",
+   "title": "Envelope of member-state practice (editor summary)",
+   "licence": "own",
+   "verified": null,
+   "publisher": "DDC",
+   "edition": "2026.11"
+  },
+  {
+   "id": "en17210",
+   "title": "EN 17210:2021 Accessibility and usability of the built environment",
+   "licence": "copyright-numbers-only",
+   "verified": null,
+   "publisher": "CEN",
+   "edition": "2021"
+  }
+ ]
+}

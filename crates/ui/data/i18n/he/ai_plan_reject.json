@@ -1,0 +1,10 @@
+{
+ "ai.plan.reject_ask": {
+  "one": "לדחות # שינוי?",
+  "two": "לדחות # שינויים?",
+  "other": "לדחות # שינויים?"
+ },
+ "ai.plan.reject_ask.hint": "הטיוטה וסימוני הבדיקה שלך יימחקו. המודל נשאר כמות שהוא.",
+ "ai.plan.reject_confirm": "דחה",
+ "ai.plan.reject_keep": "שמור"
+}

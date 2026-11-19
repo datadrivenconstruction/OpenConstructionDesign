@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "Insérer une couche dessous",
+ "type_layers.layer.delete": "Supprimer la couche",
+ "type_layers.layer.delete_last": "Un type a besoin d'au moins une couche",
+ "type_layers.value.bad": "Valeur positive non valide",
+ "type_layers.value.required": "Obligatoire",
+ "type_layers.unsaved.title": "Modifications non appliquées à {name}",
+ "type_layers.unsaved.body": "Les appliquer au type, ou les abandonner ?",
+ "type_layers.unsaved.discard": "Abandonner"
+}

@@ -1,0 +1,11 @@
+{
+ "xlsx_read_as.title": "重命名的图纸？",
+ "xlsx_read_as.detail": "图纸 {found} 具有 {sheet} 的列（匹配度 {score}%）。除非您选择，否则不会读取。",
+ "xlsx_read_as.detail_many": "有多张图纸符合 {sheet}：{found}。未为您自动选择；请选择要读取的图纸。",
+ "xlsx_read_as.read_as": "将“{found}”按 {sheet} 读取",
+ "xlsx_read_as.read_as_tip": "仅适用于本次导入。图纸不会被重命名；应用时仅将新行的 ID 写入其中。",
+ "xlsx_read_as.active": "在本次导入中，图纸“{found}”按 {sheet} 读取。",
+ "xlsx_read_as.undo": "不按 {sheet} 读取",
+ "xlsx_read_as.undo_tip": "恢复为工作簿中的图纸名称。",
+ "xlsx_read_as.not_rewritten": "工作簿未被重写：重命名的图纸将按其自身名称读取。请将其改回原名，以保持工作簿同步。"
+}

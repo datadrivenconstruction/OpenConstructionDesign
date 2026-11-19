@@ -1,0 +1,7 @@
+{
+ "spline.opt.spline": "Spline",
+ "spline.opt.spline_tip": "Mur spline : cliquez les points par lesquels il passe, Entrée ou Échap pour terminer",
+ "spline.wt.three_points": "un mur spline nécessite au moins trois points",
+ "spline.wt.no_curtain": "un mur-rideau n'a pas d'axe spline",
+ "spline.wt.added": "mur spline ajouté"
+}

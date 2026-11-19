@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "입면 {t}을(를) 가져오지 못했습니다 ({why}). 아무것도 변경되지 않았습니다",
+ "host_shape.shape.elev_prompt_in": "입면, ft-in…",
+ "host_shape.shape.elev_in": "{v} in"
+}

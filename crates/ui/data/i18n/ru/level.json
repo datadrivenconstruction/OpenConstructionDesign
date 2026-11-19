@@ -1,0 +1,13 @@
+{
+ "level.err_open": "уровень не открыт: {e}",
+ "level.need_name": "уровню нужны имя и отметка",
+ "level.created": "уровень «{name}» создан",
+ "level.err_create": "уровень не создан: {e}",
+ "level.err_edit": "уровень не изменён: {e}",
+ "level.edited": "уровень «{name}» изменён",
+ "level.edited_stale": "уровень «{name}» изменён, вид не обновлён: {e}",
+ "level.last": "последний уровень не удаляется",
+ "level.deleted": "уровень удалён",
+ "level.not_empty": "уровень не пуст: сначала удалите его элементы",
+ "level.err_delete": "уровень не удалён: {e}"
+}

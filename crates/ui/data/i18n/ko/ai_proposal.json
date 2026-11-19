@@ -1,0 +1,13 @@
+{
+ "ai.proposal.title": "에이전트 제안",
+ "ai.proposal.meta": "{actor} · 작업: {ops}",
+ "ai.proposal.apply.desc": "제안 전체를 한 단계로 적용합니다. Ctrl+Z로 실행 취소할 수 있습니다",
+ "ai.proposal.applying": "적용 중…",
+ "ai.proposal.applied": "제안이 적용되었습니다. Ctrl+Z로 실행 취소할 수 있습니다.",
+ "ai.proposal.applied_resync": "제안이 적용되었지만 뷰가 아직 갱신되지 않았습니다. 자동으로 새로 고쳐지며, Ctrl+Z로 이 단계를 실행 취소할 수 있습니다.",
+ "ai.proposal.stale": "미리 보기 이후 모델이 변경되었습니다. 에이전트에게 제안을 다시 요청하십시오.",
+ "ai.proposal.toast.applied": "제안이 적용되었습니다. Ctrl+Z로 실행 취소할 수 있습니다.",
+ "ai.proposal.toast.stale": "미리 보기 이후 모델이 변경되어 아무것도 적용되지 않았습니다. 다시 미리 보십시오: 에이전트에게 새로 제안하도록 요청하십시오.",
+ "ai.proposal.toast.refused": "제안이 적용되지 않음: {reason}",
+ "ai.proposal.rejected": "제안이 거부되었습니다."
+}

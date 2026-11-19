@@ -1,0 +1,6 @@
+{
+ "ai_toast.toast_not_refreshed": "Zastosowano jako krok cofania {n} (Ctrl+Z cofa), ale widok się nie odświeżył. Przeładuj widok.",
+ "ai.optx.reload_failed": "Wariant „{name}” zastosowano i zapisano, ale widok się nie przeładował: {e}",
+ "ai.cmp.stale": "Nieaktualne",
+ "ai.cmp.stale_tip": "Ten wariant powstał z wcześniejszego stanu modelu. Wygeneruj go ponownie, aby zastosować."
+}

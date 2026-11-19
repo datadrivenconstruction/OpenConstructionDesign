@@ -1,0 +1,7 @@
+brief = "Table with four legs; width and depth as parameters."
+category = "furniture"
+must = param Width
+must = param Depth
+must = solids >= 5
+must = ports 0
+must = flex Width 1280 2000

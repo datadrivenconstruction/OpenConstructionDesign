@@ -1,0 +1,8 @@
+{
+ "cmd.props.param_lock": "پیرامیٹر کی قدر لاک یا انلاک کریں",
+ "locked_values.kept": "{n} لاک شدہ قدریں محفوظ",
+ "locked_values.locked": "“{name}” لاک: XLSX اسپریڈشیٹ درآمد، بڑے پیمانے پر ترمیم اور AI اسے برقرار رکھتے ہیں",
+ "locked_values.unlocked": "“{name}” انلاک ہو گیا",
+ "locked_values.locked_tip": "لاک: XLSX اسپریڈشیٹ درآمد، بڑے پیمانے پر ترمیم اور AI یہ قدر برقرار رکھتے ہیں۔ انلاک کے لیے کلک کریں  ·  Ctrl+L",
+ "locked_values.no_row": "پراپرٹیز میں پیرامیٹر کی قطار پر کرسر رکھیں، پھر Ctrl+L دبائیں"
+}

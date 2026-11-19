@@ -1,0 +1,40 @@
+id = "H14_tower_add_floor"
+tier = "hard"
+group = "Editing a complex model via chat"
+title = "Edit by chat: one more viewing platform on the lattice tower"
+lang = "en"
+base = "@H01_lattice_tower_300"
+
+[[turn]]
+say = "Add one more viewing platform at 200 m. Change nothing else on the tower."
+
+[[oracle.grow]]
+spec = "slab"
+min = 1.0
+max = 1.0
+
+[[oracle.geom]]
+kind = "slab_at"
+zmin = 195.0
+zmax = 205.0
+min = 1.0
+
+[[oracle.geom]]
+kind = "edit_kept"
+min = 1.0
+
+[[oracle.geom]]
+kind = "new_within"
+zmin = 195.0
+zmax = 205.0
+new_min = 0.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[[oracle.geom]]
+kind = "free_ends"
+max = 0.0
+
+[oracle.checks]
+new_max = 0

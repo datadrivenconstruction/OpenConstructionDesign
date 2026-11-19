@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "Što se događa nakon izvoza radne knjige",
+ "settings.area_decimals_desc": "Znamenke iza decimalnog separatora u površinama",
+ "settings.volume_decimals_desc": "Znamenke iza decimalnog separatora u volumenima",
+ "settings.frac_desc": "Najmanji razlomak inča u imperijalnim duljinama",
+ "settings.small_area_desc": "Prikazuj površine manje od jedne kvadratne stope u kvadratnim inčima",
+ "settings.sample_desc": "Kako brojevi izgledaju s trenutnim postavkama",
+ "autosave.title_desc": "Čuvaj kopiju za oporavak otvorenog projekta",
+ "autosave.interval_desc": "Vrijeme između kopija za oporavak",
+ "autosave.keep_desc": "Starije kopije za oporavak se uklanjaju",
+ "autosave.folder_desc": "Prazno znači zadanu mapu",
+ "autosave.remind_desc": "Podsjetnik za spremanje projekta koji još nema datoteku",
+ "settings.backend_desc": "Grafički adapter u upotrebi",
+ "settings.news_desc": "Što se promijenilo u ovoj verziji",
+ "settings.assoc_default_desc": "Postavi ovu aplikaciju kao zadanu za datoteke modela",
+ "settings.data_dir_desc": "Ovdje se nalaze predmemorija, kopije za oporavak i dnevnici."
+}

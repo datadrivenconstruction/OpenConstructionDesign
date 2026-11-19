@@ -1,0 +1,175 @@
+{
+ "asset": {
+  "version": "2.0",
+  "generator": "hand-written fixture"
+ },
+ "scene": 0,
+ "scenes": [
+  {
+   "nodes": [
+    0,
+    2
+   ]
+  }
+ ],
+ "nodes": [
+  {
+   "name": "root",
+   "translation": [
+    10,
+    0,
+    0
+   ],
+   "rotation": [
+    0,
+    0.7071067811865476,
+    0,
+    0.7071067811865476
+   ],
+   "scale": [
+    2,
+    2,
+    2
+   ],
+   "children": [
+    1
+   ]
+  },
+  {
+   "name": "strip",
+   "mesh": 0,
+   "translation": [
+    0,
+    0,
+    1
+   ]
+  },
+  {
+   "name": "tri",
+   "mesh": 1,
+   "matrix": [
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    5,
+    0,
+    1
+   ]
+  }
+ ],
+ "meshes": [
+  {
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 0
+     },
+     "indices": 1,
+     "material": 0,
+     "mode": 5
+    }
+   ]
+  },
+  {
+   "primitives": [
+    {
+     "attributes": {
+      "POSITION": 2
+     },
+     "indices": 3,
+     "material": 1
+    }
+   ]
+  }
+ ],
+ "materials": [
+  {
+   "name": "red",
+   "pbrMetallicRoughness": {
+    "baseColorFactor": [
+     1,
+     0,
+     0,
+     1
+    ]
+   }
+  },
+  {
+   "name": "glass",
+   "alphaMode": "BLEND",
+   "pbrMetallicRoughness": {
+    "baseColorFactor": [
+     0.1,
+     0.2,
+     0.3,
+     0.5
+    ]
+   }
+  }
+ ],
+ "accessors": [
+  {
+   "bufferView": 0,
+   "componentType": 5126,
+   "count": 4,
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 1,
+   "componentType": 5123,
+   "count": 4,
+   "type": "SCALAR"
+  },
+  {
+   "bufferView": 2,
+   "componentType": 5126,
+   "count": 3,
+   "type": "VEC3"
+  },
+  {
+   "bufferView": 3,
+   "componentType": 5123,
+   "count": 3,
+   "type": "SCALAR"
+  }
+ ],
+ "bufferViews": [
+  {
+   "buffer": 0,
+   "byteOffset": 0,
+   "byteLength": 48
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 48,
+   "byteLength": 8
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 56,
+   "byteLength": 48,
+   "byteStride": 16
+  },
+  {
+   "buffer": 0,
+   "byteOffset": 104,
+   "byteLength": 6
+  }
+ ],
+ "buffers": [
+  {
+   "byteLength": 110,
+   "uri": "data:application/octet-stream;base64,AAAAAAAAAAAAAAAAAACAPwAAAAAAAAAAAAAAAAAAgD8AAAAAAACAPwAAgD8AAAAAAAABAAIAAwAAAAAAAAAAAAAAAAAAAAAAAACAPwAAAAAAAAAAAAAAAAAAAAAAAIA/AAAAAAAAAAAAAAEAAgA="
+  }
+ ]
+}

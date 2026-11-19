@@ -1,0 +1,11 @@
+{
+ "sketch.points": "נקודות",
+ "sketch.rect": "מלבן",
+ "sketch.circle": "מעגל",
+ "sketch.polygon": "מצולע",
+ "sketch.radius": "R",
+ "sketch.sides": "צלעות",
+ "sketch.circum": "חוסם במעגל",
+ "sketch.shape.tip": "צורת סקיצה (A מחליף). מלבן: שני פינות. מעגל ומצולע: מרכז, ואז רדיוס. הקלד גודל ולחץ Enter כדי לקבע אותו.",
+ "tool.err.zero_size": "גודל אפס: הזז את הנקודה השנייה הרחק מהראשונה"
+}

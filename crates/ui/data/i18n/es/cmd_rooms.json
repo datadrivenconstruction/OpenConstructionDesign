@@ -1,0 +1,6 @@
+{
+ "cmd.arch.room_auto.short": "Colocar salas",
+ "cmd.mod.group_select.short": "Seleccionar grupo",
+ "cmd.mod.group_cancel.short": "Cancelar edición",
+ "cmd.view.place_sheet_list.short": "Colocar lista de hojas"
+}

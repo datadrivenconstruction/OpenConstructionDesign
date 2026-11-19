@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "正在识别 {done}/{total}",
+ "mesh_recognize.all": "全部 {n}",
+ "mesh_recognize.only_confident": "仅置信度高的",
+ "mesh_recognize.confident_tip": "勾选类别匹配且置信度至少为 {pct}% 的行",
+ "mesh_recognize.row_hint": "点击行以勾选。方向键移动，Enter 勾选。",
+ "mesh_recognize.kind_for": "{name} 的类型",
+ "mesh_recognize.source": "源网格",
+ "mesh_recognize.keep": "保留网格",
+ "mesh_recognize.replace": "替换网格",
+ "mesh_recognize.convert_keep": "转换 {n}",
+ "mesh_recognize.convert_remove": "转换 {n} 并删除网格",
+ "mesh_recognize.creates": "将创建 {n}：{kinds}",
+ "mesh_recognize.creates_none": "尚未勾选任何项",
+ "mesh_recognize.stay": "{n} 个源网格保留在模型中",
+ "mesh_recognize.removed": "将删除 {n} 个源网格。撤销可恢复。"
+}

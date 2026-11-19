@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "Uygulanmamış çalışma kitabı değişiklikleri",
+ "workbook_changes.wb.body": "Projeyi kapatmak veya değiştirmek bunları siler.",
+ "workbook_changes.wb.line": "Çalışma kitabı içe aktarma: uygulanmamış {n} değişiklik",
+ "workbook_changes.wb.review": "İncele",
+ "workbook_changes.wb.discard": "At"
+}

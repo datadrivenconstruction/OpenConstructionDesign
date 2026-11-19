@@ -1,0 +1,16 @@
+{
+ "family_overwrite.ow.title": "Loyiha tur qiymatlari almashtirilsinmi?",
+ "family_overwrite.ow.body": "Yuklash {types} dagi {values} ni almashtiradi. Ushbu turlarning joylashtirilgan nusxalari: {instances}.",
+ "family_overwrite.ow.values": {
+  "one": "# qiymat",
+  "other": "# qiymat"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# tur",
+  "other": "# tur"
+ },
+ "family_overwrite.ow.list": "Turlar: {list}",
+ "family_overwrite.ow.more": "yana {n} ta",
+ "family_overwrite.ow.back": "Tahrirlashga qaytish",
+ "family_overwrite.ow.replace": "Qiymatlarni almashtirish"
+}

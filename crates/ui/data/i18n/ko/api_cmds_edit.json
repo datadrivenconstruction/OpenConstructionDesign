@@ -1,0 +1,20 @@
+{
+ "api.cmd.move_elements": "미터 단위 오프셋만큼 요소 이동",
+ "api.cmd.copy_elements": "미터 단위의 하나 이상 오프셋으로 요소 복사",
+ "api.cmd.rotate_elements": "한 점을 기준으로 각도(도)만큼 요소 회전",
+ "api.cmd.mirror_elements": "두 점을 지나는 축을 기준으로 요소 대칭 복사",
+ "api.cmd.scale_elements": "한 점을 기준으로 배율만큼 요소 축척 변경",
+ "api.cmd.array_elements": "요소의 선형 또는 방사형 배열",
+ "api.cmd.offset_wall": "지정한 거리만큼 벽을 평행 복사 (미터)",
+ "api.cmd.split_wall": "한 점에서 벽을 둘로 분할",
+ "api.cmd.pin_elements": "요소 고정 또는 고정 해제",
+ "api.cmd.flip_openings": "문과 창의 경첩 쪽 또는 여닫는 면 뒤집기",
+ "api.cmd.create_level": "미터 단위 표고에 레벨 만들기",
+ "api.cmd.edit_level": "레벨 이름 변경 또는 고도 변경",
+ "api.cmd.delete_level": "레벨 삭제",
+ "api.cmd.place_rooms": "레벨의 닫힌 모든 영역에 실 배치",
+ "api.cmd.join_elements": "요소 결합, 결합 해제 또는 결합 방식 전환",
+ "api.cmd.place_footings": "레벨의 모든 기둥 아래에 기초 배치",
+ "api.cmd.create_terrain": "측량점 또는 경사면으로 지형 만들기",
+ "api.cmd.script_recipes": "자유형 구조의 스크립트 블록과 레시피 읽기"
+}

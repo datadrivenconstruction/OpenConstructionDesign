@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "el valor debe ser mayor que cero",
+ "sched_ops.not_number": "no es un número",
+ "sched_ops.no_host": "no hay muro anfitrión",
+ "sched_ops.wall_length": "no se puede fijar así la longitud de este muro",
+ "sched_ops.no_wall": "no existe ese muro",
+ "sched_ops.no_opening": "no existe ese hueco",
+ "sched_ops.no_curtain": "no existe ese muro cortina",
+ "sched_ops.no_panel": "no existe ese panel",
+ "sched_ops.no_slab": "no existe ese forjado",
+ "sched_ops.no_room": "no existe ese espacio",
+ "sched_ops.slope_range": "pendiente fuera de rango",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

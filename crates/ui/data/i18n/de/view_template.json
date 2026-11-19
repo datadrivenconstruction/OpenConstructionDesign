@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "Geben Sie zuerst einen Vorlagennamen ein",
+ "view_template.name_taken": "Eine Vorlage mit diesem Namen existiert bereits",
+ "view_template.pick_blocked": "Markieren Sie zuerst mindestens eine Ansicht",
+ "view_template.views.one": "{n} Ansicht",
+ "view_template.views.few": "{n} Ansichten",
+ "view_template.views.many": "{n} Ansichten",
+ "view_template.delete.title": "Diese Vorlage löschen?",
+ "view_template.delete.body": "Vorlage „{name}“ wird gelöscht. Verwendet von {used}.",
+ "view_template.delete.unused": "Vorlage „{name}“ wird gelöscht. Keine Ansicht verwendet sie.",
+ "view_template.delete.keeps": "Diese Ansichten behalten ihre aktuelle Grafik und verlieren die Verknüpfung.",
+ "view_template.delete.undo": "Dies lässt sich mit einem Rückgängig-Schritt rückgängig machen.",
+ "view_template.delete.confirm": "Vorlage löschen"
+}

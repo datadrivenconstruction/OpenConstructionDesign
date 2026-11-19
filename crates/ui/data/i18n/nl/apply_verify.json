@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "Toepassen is gestopt: het model blijft zoals het was",
+ "apply_verify.rolled_back": "Toepassen kwam niet overeen met het concept en is teruggedraaid; het model is ongewijzigd. {what}",
+ "apply_verify.diff.missing": "Het concept toont {what} {kind}, maar Toepassen heeft dat niet gedaan.",
+ "apply_verify.diff.extra": "Toepassen {kind} {what}, wat het concept niet toont.",
+ "apply_verify.diff.kind": "Het concept toont {what} {shown}, maar Toepassen {applied} het.",
+ "apply_verify.diff.value": "{what}: “{col}” kwam anders uit dan het concept.",
+ "apply_verify.diff.truncated": "Het concept en de toegepaste wijziging verschillen in omvang.",
+ "apply_verify.diff.unreadable": "De toegepaste wijziging kon niet worden teruggelezen ({e}).",
+ "apply_verify.no_base": "Toepassen is niet uitgevoerd: de kopie om het concept mee te vergelijken ontbreekt. Het model is ongewijzigd; vraag het concept opnieuw aan.",
+ "apply_verify.take_back_failed": "Terugdraaien is mislukt ({e}): gebruik Ongedaan maken.",
+ "apply_verify.kind.created": "aangemaakt",
+ "apply_verify.kind.changed": "gewijzigd",
+ "apply_verify.kind.deleted": "verwijderd",
+ "apply_verify.card.type_row": "Type {type} · {n} elementen krijgen de wijziging"
+}

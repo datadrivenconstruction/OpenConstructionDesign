@@ -1,0 +1,5 @@
+{
+ "xl.msg.level_name_x_is_already_used": "レベル名 '{}' は既に使用されています",
+ "xl.msg.unreadable_id_elements_without_a_row_not_deleted": "ID が読み取れません。このインポートでは行のない要素は削除されません",
+ "xl.msg.wall_type_name_x_is_already_used": "壁タイプ名 '{}' は既に使用されています"
+}

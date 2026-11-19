@@ -1,0 +1,8 @@
+{
+ "script_rec.started": "Opptak: endringene du gjør fra nå av, legges i et skript. Velg «Ta opp handlinger til skript» igjen for å stoppe.",
+ "script_rec.saved": "Skriptet «{name}» er lagret: {n} endringer.",
+ "script_rec.skipped": "{k} endringer gjort med verktøy uten skriptskjema ble ikke tatt opp.",
+ "script_rec.nothing": "Opptaket stoppet: ingen endringer å lagre.",
+ "script_rec.failed": "Opptaket ble ikke lagret: {why}",
+ "script_rec.no_folder": "ingen innstillingsmappe for skript"
+}

@@ -1,0 +1,31 @@
+id = "G15_tank_nozzles__de"
+tier = "hard"
+group = "Any geometry"
+title = "Tank with nozzles"
+lang = "de"
+base = "empty"
+
+[[turn]]
+say = "Ein stehender Lagertank mit 12 m Durchmesser und 14 m Höhe mit Kegeldach, Mannloch, vier Stutzen in verschiedenen Höhen und Richtungen, Leiter und Ringfundament."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "comp:tank|vessel"
+min = 1.0
+
+[[oracle.count]]
+spec = "comp:nozzle|manway|flange"
+min = 5.0
+
+[[oracle.count]]
+spec = "iso_footing+strip_footing+raft+solid"
+min = 1.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

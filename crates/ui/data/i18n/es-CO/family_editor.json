@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "Nueva familia",
+ "family_editor.open_tip": "Abrir familia o borrador",
+ "family_editor.close_named": "Cerrar {name}",
+ "family_editor.unsaved": "Cambios sin guardar",
+ "family_editor.search": "Buscar",
+ "family_editor.nothing": "No se encontró nada",
+ "family_editor.sec_families": "Familias del proyecto",
+ "family_editor.sec_drafts": "Borradores",
+ "family_editor.cap_category": "Categoría",
+ "family_editor.cap_host": "Elemento base",
+ "family_editor.cap_type": "Tipo de vista previa"
+}

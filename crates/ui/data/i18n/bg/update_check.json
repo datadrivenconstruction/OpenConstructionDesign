@@ -1,0 +1,21 @@
+{
+ "cmd.help.check_update": "Провери за актуализации",
+ "update_check.title": "Проверка за актуализации",
+ "update_check.desc": "Изключено по подразбиране. Изпраща до нашия сървър само версията, ОС и архитектурата и вида инсталация. Нищо не се изтегля и не се инсталира.",
+ "update_check.freq.startup": "При стартиране",
+ "update_check.freq.daily": "Всеки ден",
+ "update_check.freq.weekly": "Всяка седмица",
+ "update_check.freq.never": "Никога",
+ "update_check.check_now": "Провери сега",
+ "update_check.dialog.title": "Проверка за актуализации",
+ "update_check.unknown.title": "Проверката за актуализации не можа да се извърши",
+ "update_check.unknown.body": "{e}. Това не означава, че версията е актуална. Опитайте отново по-късно.",
+ "update_check.current": "Имате последната версия ({v}).",
+ "update_check.newer": "Налична е версия {v}",
+ "update_check.date": "Публикувана {d}",
+ "update_check.unfit": "Тази версия ({v}) е по-стара от препоръчителната минимална версия {f}. Препоръчва се актуализация.",
+ "update_check.close": "Затвори",
+ "update_check.open_failed": "Страницата с версията не можа да бъде отворена.",
+ "update_check.toast.newer": "Налична е версия {v}. Помощ > Провери за актуализации.",
+ "update_check.toast.unfit": "Тази версия ({v}) е по-стара от препоръчителната минимална версия {f}."
+}

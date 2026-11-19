@@ -1,0 +1,11 @@
+{
+ "pick_rules.filter": "בחירה: הכול",
+ "pick_rules.filter.on": "בחירה: {n} כבויות",
+ "pick_rules.filter.title": "קטגוריות שלחיצה יכולה לבחור",
+ "pick_rules.filter.all": "בחר את כל הקטגוריות",
+ "pick_rules.filter.tip": "מסנן בחירה: קטגוריות לא מסומנות מדולגות בלחיצה ובריחוף",
+ "pick_rules.here": "פריטים כאן",
+ "pick_rules.here.selected": "נבחרו",
+ "pick_rules.pinned": "בחר פריטים מקובעים",
+ "pick_rules.here.row": "{cat} · {len}"
+}

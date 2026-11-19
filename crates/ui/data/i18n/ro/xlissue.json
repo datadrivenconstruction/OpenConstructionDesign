@@ -1,0 +1,13 @@
+{
+ "xlw.copy_list": "Copiază lista",
+ "xlw.save_list": "Salvează lista…",
+ "xlw.copy_list_tip": "Copiază rândurile afișate (foaie, celulă, id, coloană, valori, motiv) ca text pentru o foaie de calcul",
+ "xlw.save_list_tip": "Salvează rândurile afișate ca fișier .csv lângă registrul de calcul; registrul în sine nu se modifică niciodată",
+ "xlw.list_book_value": "Valoare din registru",
+ "xlw.list_model_value": "Valoare din model",
+ "xlw.list_reason": "Motiv",
+ "xlw.list_copied": "Lista a fost copiată: {n} rânduri",
+ "xlw.list_saved": "Lista a fost salvată: {n} rânduri, {file}",
+ "xlw.list_save_failed": "Lista nu a fost salvată",
+ "xlw.list_nothing": "Nimic de copiat: niciun rând afișat"
+}

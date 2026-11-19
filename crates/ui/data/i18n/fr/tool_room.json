@@ -1,0 +1,9 @@
+{
+ "tool.room": "Pièce",
+ "tool.room.name": "Pièce",
+ "room_tool.room.name": "Nom",
+ "hint.room.place": "Cliquez à l'intérieur d'une boucle de murs fermée pour créer une pièce · Échap — quitter",
+ "tool.err.room_open": "La zone n'est pas fermée : fermez la boucle de murs ou ajoutez un séparateur de pièce",
+ "tool.err.room_check": "Impossible de vérifier les pièces de ce niveau",
+ "tool.err.room_exists": "Une pièce existe déjà dans cette boucle"
+}

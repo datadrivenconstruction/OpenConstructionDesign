@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}, en el nivel",
+ "cmd_buttons.purge.undo": "Quitar es un solo paso de deshacer.",
+ "cmd_buttons.unpin.none": "No hay nada seleccionado que esté fijado",
+ "cmd_buttons.change_type.none": "Seleccione primero muros: su tipo cambia en un solo paso",
+ "cmd_buttons.units.metric": "Unidades: métricas",
+ "cmd_buttons.units.imperial": "Unidades: pies y pulgadas",
+ "cmd_buttons.units.back": "Volver",
+ "cmd_buttons.underlay.on": "Subyacente activado: el nivel inferior se muestra atenuado",
+ "cmd_buttons.underlay.off": "Subyacente desactivado",
+ "cmd_buttons.underlay.none": "Subyacente activado, pero el nivel inferior no tiene nada que mostrar",
+ "cmd_buttons.zoom_sel.no_shape": "La selección no tiene forma que encuadrar en esta vista",
+ "cmd_buttons.close.base": "Las pestañas de planta y 3D siguen abiertas; abra una sección, una hoja o una vista de dibujo para cerrarlas",
+ "tool.equipment": "Equipos",
+ "hint.equipment.place": "Equipos: elija la ubicación · Esc — salir",
+ "cmd_buttons.table.opened": "Tabla abierta junto al modelo",
+ "cmd_buttons.circuits.tip": "Abrir la lista de circuitos eléctricos de este modelo"
+}

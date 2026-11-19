@@ -1,0 +1,5 @@
+{
+ "legend.legend.empty_hint": "Skriv et navn ovenfor og tryk på Opret.",
+ "legend.legend.pick_hint": "Vælg en forklaring fra listen ovenfor.",
+ "legend.legend.taken": "Der findes allerede en forklaring ved navn „{name}“. Angiv et andet navn."
+}

@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "Piesă",
+ "elem.mep_fitting.many": "Piese",
+ "elem.mep_fitting.kind.elbow": "Cot",
+ "elem.mep_fitting.kind.tee": "Teu",
+ "elem.mep_fitting.kind.cross": "Cruce",
+ "elem.mep_fitting.kind.transition": "Reducție",
+ "elem.mep_fitting.kind.cap": "Capac",
+ "elem.mep_fitting.size": "Dimensiune",
+ "elem.mep_fitting.at": "Poziție",
+ "elem.mep_fitting.runs": "Traseul {n}",
+ "elem.mep_fitting.edit_run": "Editează traseul",
+ "elem.mep_fitting.select_runs": "Selectează traseele ei",
+ "elem.mep_fitting.derived": "O piesă urmează traseele ei: schimbi un traseu și piesa se schimbă odată cu el.",
+ "elem.mep_fitting.no_delete": "O piesă nu poate fi ștearsă sau mutată singură. Editează sau șterge traseele ei.",
+ "elem.mep_fitting.hint": "Fă clic pe o piesă în plan pentru a-i vedea traseele.",
+ "elem.mep_fitting.picked": "Piese selectate: {n}"
+}

@@ -1,0 +1,21 @@
+{
+ "ai.receipt.title": {
+  "one": "# değişiklik uygulandı",
+  "other": "# değişiklik uygulandı"
+ },
+ "ai.receipt.more": "+{n} daha",
+ "ai.receipt.list": "Elemanlar",
+ "ai.receipt.show": "Göster",
+ "ai.receipt.show.tip": "Değişen elemanları seçip çerçeveler",
+ "ai.receipt.undo": "Geri al",
+ "ai.receipt.undo.tip": "Tam olarak bu uygulamayı geri al",
+ "ai.receipt.undone": "Geri alındı",
+ "ai.receipt.later": "Sonradan düzenlemeler yapıldı",
+ "ai.receipt.toast_undone": "Uygulanan plan geri alındı",
+ "ai.receipt.draft_family": "Taslak aile: {name}",
+ "ai.receipt.promote": "Çalışır hale getir",
+ "ai.receipt.promote.tip": "Taslak aileyi çalışan bir aileye çevirir (tek geri alma adımı)",
+ "ai.receipt.promoted": "Aile artık çalışıyor",
+ "ai.receipt.promote_failed": "Aile çalışır hale getirilemedi",
+ "cmd.ai.receipt_undo": "Son yapay zeka planını geri al"
+}

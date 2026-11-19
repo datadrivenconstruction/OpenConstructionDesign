@@ -1,0 +1,8 @@
+{
+ "xlsx_idle.idle_title": "आयात करने को कोई बदलाव नहीं",
+ "xlsx_idle.export_name": "निर्यात",
+ "xlsx_idle.export_body": "मॉडल को वर्कबुक में लिखता है। वहां मान संपादित करें, फिर सिंक करें।",
+ "xlsx_idle.sync_name": "सिंक",
+ "xlsx_idle.sync_body": "वर्कबुक फिर से पढ़ता है और अंतर सूचीबद्ध करता है। मॉडल तभी बदलता है जब आप लागू करें।",
+ "xlsx_idle.last_sync": "अंतिम सिंक: {when}"
+}

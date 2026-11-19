@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "Point",
+ "trial.field.distance": "Distance",
+ "trial.field.target": "Element",
+ "trial.refused": "{field}: {reason}. Change it to apply",
+ "trial.preview_off": "Preview off: model too large"
+}

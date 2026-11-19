@@ -1,0 +1,13 @@
+{
+ "mep.sys.duct": "Mandata S1",
+ "mep.sys.pipe": "Acqua fredda C1",
+ "mep.sys.tray": "Forza motrice",
+ "mep.round": "Tondo",
+ "mep.material": "Materiale",
+ "mep3d.elevation": "Quota dal livello",
+ "mep3d.slope": "Pendenza",
+ "mep3d.shape": "Forma",
+ "mep3d.shape.rect": "Rettangolare",
+ "mep3d.shape.round": "Tondo",
+ "mep3d.shape.oval": "Ovale piatto"
+}

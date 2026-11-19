@@ -1,0 +1,3 @@
+{
+ "find_replace.refresh_failed": "Zamijenjeno {n} u {m} elemenata; osvježavanje pogleda nije uspjelo: {e}"
+}

@@ -1,0 +1,7 @@
+{
+ "src.field.kids": "Child rows (panels, vertices)",
+ "src.kids.mine": "{n} child rows, changed here",
+ "src.kids.changed": "child rows changed here",
+ "src.kids.theirs": "child rows changed in the file",
+ "src.kids.take_tip": "The next import takes the file's child rows; they are not applied now."
+}

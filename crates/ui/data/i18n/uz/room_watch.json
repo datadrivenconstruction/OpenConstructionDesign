@@ -1,0 +1,4 @@
+{
+ "room_watch.room.dup": "Xona {room} xona {other} hududida: maydon va hajm faqat {other} xonasida hisoblanadi",
+ "ai.issue.room_dup": "Xona {0} xonasi hududida: uning maydoni shu yerda hisoblanadi"
+}

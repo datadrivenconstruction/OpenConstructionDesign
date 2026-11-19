@@ -1,0 +1,10 @@
+{
+ "cmd.view.axes_full": "Assi completi",
+ "cmd.view.axes_full.desc": "Mostra gli assi X e Y come linee intere sulla pianta. Tieni premuto F9 per mostrarli solo mentre è premuto.",
+ "settings.axes_full": "Assi",
+ "settings.axes_full_desc": "Assi della pianta come linee intere sul foglio. Tieni premuto F9 per una rapida occhiata.",
+ "settings.axes_full_on": "Mostra assi completi",
+ "plan.hud.axes_tip": "Tieni premuto {key} per mostrare gli assi completi",
+ "status.axes_full.on": "Assi completi attivi",
+ "status.axes_full.off": "Assi completi disattivati"
+}

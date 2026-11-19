@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "همه",
+ "clash_list.only_selected": "فقط انتخاب‌شده‌ها",
+ "clash_list.tolerance": "تلورانس",
+ "clash_list.gap": "فاصله",
+ "clash_list.export": "خروجی",
+ "clash_list.col.volume": "حجم",
+ "clash_list.fix.up": "بالا بردن",
+ "clash_list.fix.down": "پایین بردن",
+ "clash_list.fix.sleeve": "غلاف",
+ "clash_list.apply_fix": "اعمال اصلاح",
+ "clash_list.err.tol": "تلورانس: طول وارد کنید (0 یا بیشتر)، مثلاً 50 یا 2 in",
+ "clash_list.sleeve_no_host": "غلاف به یک دیوار یا دال در جفت نیاز دارد",
+ "clash_list.err.gap": "فاصله: طول وارد کنید (0 یا بیشتر)، مثلاً 50 یا 2 in"
+}

@@ -1,0 +1,16 @@
+{
+ "ai.items.all": {
+  "one": "Tutte # voce",
+  "other": "Tutte le # voci"
+ },
+ "ai.items.all.tip": "Spunta o deseleziona ogni voce del piano",
+ "ai.items.checked": "{n} di {m} spuntate",
+ "ai.items.check.tip": "Includi “{title}” in Applica",
+ "ai.items.expand": "Mostra elementi",
+ "ai.items.collapse": "Nascondi elementi",
+ "ai.items.apply": {
+  "one": "Applica # voce",
+  "other": "Applica # voci"
+ },
+ "ai.items.apply_none": "Applica"
+}

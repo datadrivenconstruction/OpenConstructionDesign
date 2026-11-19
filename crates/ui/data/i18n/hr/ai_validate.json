@@ -1,0 +1,14 @@
+{
+ "ai.issue.integrity": "Problem integriteta: {0} {1}: {2}",
+ "ai.issue.opening_outside": "Otvor ne stane u zid: {0}",
+ "ai.issue.opening_overlap": "Otvor se preklapa s otvorom {0}",
+ "ai.issue.wall_warning": "Zid: {0}",
+ "ai.issue.cut_warning": "Rez: {0}",
+ "ai.issue.room_open": "Prostorija nije zatvorena",
+ "ai.issue.material_unknown": "U projektu nema materijala naziva „{0}“: Primijeni bi dodalo novi sa zadanim svojstvima",
+ "ai.issue.material_suggest": "U projektu nema materijala naziva „{0}“: Primijeni bi dodalo novi. Misliš li „{1}“?",
+ "ai.issue.conflict": "Ova stavka se ne može pokrenuti: {0}",
+ "ai.issue.too_large": "{0} elemenata bi se promijenilo, iznad granice od {1}. Potrebno je dopuštenje",
+ "ai.issue.truncated": "Popis promjena stao je na {0} redaka: plan je veći nego što kartica može prikazati. Potrebno je dopuštenje",
+ "ai.issue.replan_failed": "Plan se nije mogao ponovno izračunati. Uzima se nova kopija modela"
+}

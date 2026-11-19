@@ -1,0 +1,3 @@
+{
+ "find_replace.refresh_failed": "הוחלפו {n} ב-{m} אלמנטים; רענון המבט נכשל: {e}"
+}

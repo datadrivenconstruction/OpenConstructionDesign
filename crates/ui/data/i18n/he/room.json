@@ -1,0 +1,6 @@
+{
+ "geom.length": "אורך",
+ "sched.cat.room_seps": "מפרידי חללים",
+ "room.err.point_leave": "חלל {n}: הנקודה תצא מהגבול שלו",
+ "room.err.point_taken": "חלל {n}: הנקודה תיפול בחלל {other}"
+}

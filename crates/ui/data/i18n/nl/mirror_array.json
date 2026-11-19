@@ -1,0 +1,5 @@
+{
+ "mirror_array.err.count": "Het aantal is een geheel getal van 2 tot 200: 4 3000, of 4;300 als de stap drie cijfers heeft",
+ "mirror_array.err.length": "De stap of het totaal is een positieve lengte, bijv. 3 000 of 1.2 m",
+ "mirror_array.err.angle": "De doorloop is een hoek in graden, niet nul en hoogstens 360"
+}

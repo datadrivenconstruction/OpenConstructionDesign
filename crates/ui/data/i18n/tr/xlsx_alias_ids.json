@@ -1,0 +1,7 @@
+{
+ "xlsx_alias_ids.ids_written": "{n} yeni satır yeniden adlandırılmış sayfada kimlik aldı; çalışma kitabının başka hiçbir yeri değişmedi.",
+ "xlsx_alias_ids.ids_open": "Çalışma kitabı başka bir programda açık: {n} yeni satırın kimlikleri yazılmadı. Orada kapatın ve Eşitleyin; bu satırlar yeniden oluşturulmaz.",
+ "xlsx_alias_ids.ids_failed": "{n} yeni satırın kimlikleri yazılamadı; çalışma kitabı olduğu gibi bırakıldı. Bu satırlar bir sonraki Eşitleme'de yeniden oluşturulmaz.",
+ "xlsx_alias_ids.unpaired": "{n} yeni satırın henüz kimliği yok; bunlar hatırlanır ve yeniden oluşturulmaz.",
+ "xlsx_alias_ids.refused": "Hiçbir şey uygulanmadı: {sheets} içindeki yeni satırlar, yeniden adlandırılmış bir sayfa okunurken kimlik alamaz. Sayfayı standart adına geri çevirin (ya da bu satırları kaldırın) ve yeniden Eşitleyin."
+}

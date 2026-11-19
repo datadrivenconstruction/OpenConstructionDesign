@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "주소의 키",
+ "ai_safety.auth.query_name": "주소 매개변수",
+ "ai_safety.need_query_name": "키를 담는 주소 매개변수 이름을 입력하세요",
+ "ai_safety.apply_unlogged": "적용되었지만 변경 기록은 쓰지 않음",
+ "ai_safety.audit_unlogged": "AI 어시스턴트 기록을 쓸 수 없음",
+ "ai_safety.chat_not_saved": "대화를 프로젝트에 저장할 수 없습니다. 다시 시도하는 중입니다.",
+ "ai_safety.clip_clears": "클립보드는 30초 후에 비워집니다",
+ "ai_safety.copied_clears": "복사됨. 클립보드는 30초 후에 비워집니다",
+ "ai_safety.key_session_only": "앱이 닫힐 때까지 키를 보관합니다",
+ "ai.settings.no_data_dir": "이 시스템은 앱 설정 폴더를 제공하지 않습니다"
+}

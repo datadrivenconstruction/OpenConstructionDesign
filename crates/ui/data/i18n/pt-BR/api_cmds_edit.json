@@ -1,0 +1,20 @@
+{
+ "api.cmd.move_elements": "Mover elementos por um deslocamento em metros",
+ "api.cmd.copy_elements": "Copiar elementos por um ou mais deslocamentos em metros",
+ "api.cmd.rotate_elements": "Girar elementos em torno de um ponto por um ângulo em graus",
+ "api.cmd.mirror_elements": "Espelhar elementos em um eixo por dois pontos",
+ "api.cmd.scale_elements": "Escalar elementos em torno de um ponto por um fator",
+ "api.cmd.array_elements": "Matriz linear ou radial de elementos",
+ "api.cmd.offset_wall": "Cópia paralela de uma parede a uma distância em metros",
+ "api.cmd.split_wall": "Dividir uma parede em duas em um ponto",
+ "api.cmd.pin_elements": "Fixar ou desafixar elementos",
+ "api.cmd.flip_openings": "Inverter o lado de abertura ou a face de portas e janelas",
+ "api.cmd.create_level": "Criar um pavimento em uma cota, em metros",
+ "api.cmd.edit_level": "Renomear um pavimento ou alterar sua cota",
+ "api.cmd.delete_level": "Excluir um pavimento",
+ "api.cmd.place_rooms": "Posicionar um ambiente em cada região fechada de um pavimento",
+ "api.cmd.join_elements": "Unir, separar ou alternar junções de geometria",
+ "api.cmd.place_footings": "Posicionar uma sapata sob cada pilar de um pavimento",
+ "api.cmd.create_terrain": "Criar terreno a partir de pontos de levantamento ou de um plano inclinado",
+ "api.cmd.script_recipes": "Ler os blocos de script e as receitas de construções livres"
+}

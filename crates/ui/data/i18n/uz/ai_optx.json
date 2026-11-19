@@ -1,0 +1,10 @@
+{
+ "ai.optx.applied": "“{name}” varianti qo'llandi. Bekor qilish uni qoralamaga qaytaradi",
+ "ai.optx.missing": "{id} varianti endi mavjud emas",
+ "ai.optx.accepted": "{id} varianti allaqachon qo'llangan",
+ "ai.optx.not_draft": "{id} varianti rad etilgan va qo'llanib bo'lmaydi",
+ "ai.optx.stale": "{id} varianti yaratilgandan keyin model o'zgargan: avval uni qayta yarating",
+ "ai.optx.bad_recipe": "Variant retseptini o'qib bo'lmaydi: {e}",
+ "ai.optx.refused": "Variant qo'llanmadi ({code}): {reason}",
+ "ai.optx.failed": "Variant qo'llanmadi: {e}"
+}

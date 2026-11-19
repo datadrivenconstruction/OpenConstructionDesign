@@ -1,0 +1,18 @@
+{
+ "faults.errors": {
+  "one": "# fejl i modellen. Klik for at vise den.",
+  "other": "# fejl i modellen. Klik for at se listen."
+ },
+ "faults.warnings": {
+  "one": "# advarsel i modellen. Klik for at vise den.",
+  "other": "# advarsler i modellen. Klik for at se listen."
+ },
+ "faults.title": "Modelfejl: {n}",
+ "faults.none": "Ingen fejl eller advarsler.",
+ "faults.cat.wall": "Væg",
+ "faults.cat.slab": "Dæk",
+ "faults.cat.opening": "Åbning",
+ "faults.cat.curtain_wall": "Gardinvæg",
+ "faults.cat.ramp": "Rampe",
+ "faults.cat.zone": "Zone"
+}

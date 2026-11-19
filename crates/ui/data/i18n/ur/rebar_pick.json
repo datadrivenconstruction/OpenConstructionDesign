@@ -1,0 +1,7 @@
+{
+ "rebar_pick.pick.empty": "ریبار: ستون، شہتیر، دیوار، سلیب یا فاؤنڈیشن منتخب کریں",
+ "rebar_pick.pick.unsupported": "یہ انتخاب ریبار نہیں ہو سکتا۔ ستون، شہتیر، دیوار، سلیب یا فاؤنڈیشن منتخب کریں",
+ "rebar_pick.pick.keys": "منتخب کرنے کے لیے کلک، مزید کے لیے Shift · فارم کھولنے کے لیے Enter · منسوخ کے لیے Esc",
+ "rebar_pick.pick.open": "فارم کھولیں",
+ "rebar_pick.pick.cancel": "منسوخ کریں"
+}

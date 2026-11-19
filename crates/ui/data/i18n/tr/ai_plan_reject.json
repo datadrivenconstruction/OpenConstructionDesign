@@ -1,0 +1,9 @@
+{
+ "ai.plan.reject_ask": {
+  "one": "# değişiklik reddedilsin mi?",
+  "other": "# değişiklik reddedilsin mi?"
+ },
+ "ai.plan.reject_ask.hint": "Taslak ve işaretleriniz atılır. Model olduğu gibi kalır.",
+ "ai.plan.reject_confirm": "Reddet",
+ "ai.plan.reject_keep": "Tut"
+}

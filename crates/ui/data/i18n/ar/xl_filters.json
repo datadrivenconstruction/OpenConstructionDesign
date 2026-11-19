@@ -1,0 +1,6 @@
+{
+ "xl.msg.filter_on_sheet_x": "مرشّح في الورقة '{}'",
+ "xl.msg.sort_settings_on_sheet_x": "إعدادات الفرز في الورقة '{}'",
+ "xl.msg.hidden_rows_on_sheet_x": "صفوف مخفية في الورقة '{}'",
+ "xl.msg.hidden_columns_on_sheet_x": "أعمدة مخفية في الورقة '{}'"
+}

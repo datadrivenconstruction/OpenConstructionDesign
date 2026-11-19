@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "ยกเลิกการนำไปใช้แล้ว: โมเดลไม่ตรงกับตัวอย่าง {what}",
+ "xlsx_verify.not_written": "{row} ไม่ได้เปลี่ยน",
+ "xlsx_verify.lost": "{row} หายไป",
+ "xlsx_verify.not_deleted": "{row} ไม่ได้ถูกลบ",
+ "xlsx_verify.extra_deleted": "{row} ถูกลบ ทั้งที่ตัวอย่างยังเก็บไว้",
+ "xlsx_verify.created": "{table}: ใหม่ {got} แทนที่จะเป็น {want}",
+ "xlsx_verify.value": "{row}, {field}: คาดว่า {want} (เดิม {old}) ได้ {got}",
+ "xlsx_verify.check_failed": "ตรวจผลลัพธ์ไม่ได้: {e}",
+ "xlsx_verify.plan_failed": "ยังไม่ได้เริ่มนำไปใช้: การตรวจสอบอ่านโมเดลไม่ได้ ({e})",
+ "xlsx_verify.take_back_failed": "ย้อนขั้นตอนนี้ไม่ได้ ({e}) ใช้เลิกทำ",
+ "xlsx_verify.t.wall": "ผนัง",
+ "xlsx_verify.t.opening": "ช่องเปิด",
+ "xlsx_verify.t.room": "ห้อง",
+ "xlsx_verify.t.slab": "พื้น",
+ "xlsx_verify.t.level": "ระดับ",
+ "xlsx_verify.t.wall_type": "ประเภทผนัง",
+ "xlsx_verify.t.slab_type": "ประเภทพื้น",
+ "xlsx_verify.t.col": "เสา",
+ "xlsx_verify.t.beam": "คาน",
+ "xlsx_verify.t.roof": "หลังคา",
+ "xlsx_verify.t.curtain_wall": "ผนังม่าน"
+}

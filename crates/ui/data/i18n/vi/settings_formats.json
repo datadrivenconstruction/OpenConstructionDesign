@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "Điều gì xảy ra sau khi sổ làm việc được xuất",
+ "settings.area_decimals_desc": "Số chữ số sau dấu thập phân trong diện tích",
+ "settings.volume_decimals_desc": "Số chữ số sau dấu thập phân trong thể tích",
+ "settings.frac_desc": "Phân số nhỏ nhất của inch trong chiều dài hệ Anh",
+ "settings.small_area_desc": "Hiển thị diện tích dưới một foot vuông bằng inch vuông",
+ "settings.sample_desc": "Số hiển thị ra sao với các lựa chọn hiện tại",
+ "autosave.title_desc": "Giữ bản khôi phục của dự án đang mở",
+ "autosave.interval_desc": "Khoảng thời gian giữa các bản khôi phục",
+ "autosave.keep_desc": "Các bản khôi phục cũ hơn sẽ bị xóa",
+ "autosave.folder_desc": "Để trống nghĩa là thư mục mặc định",
+ "autosave.remind_desc": "Nhắc lưu dự án chưa có tệp",
+ "settings.backend_desc": "Bộ điều hợp đồ họa đang dùng",
+ "settings.news_desc": "Những gì đã thay đổi trong phiên bản này",
+ "settings.assoc_default_desc": "Đặt ứng dụng này làm mặc định cho tệp mô hình",
+ "settings.data_dir_desc": "Bộ nhớ đệm, bản khôi phục và nhật ký được lưu tại đây."
+}

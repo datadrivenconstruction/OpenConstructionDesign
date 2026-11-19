@@ -1,0 +1,11 @@
+{
+ "job.stage.prepare": "Project voorbereiden",
+ "open_guard.already_open": "{name} is al geopend",
+ "open_guard.from_cache": "{name}: geopend uit de importcache",
+ "open_guard.known_project": "{name} was eerder geïmporteerd: dat project wordt geopend",
+ "open_guard.locate": "Zoeken",
+ "open_guard.mem_low": "Weinig geheugen: het meshbudget is gehalveerd en de opbouw van detailniveaus is gepauzeerd",
+ "open_guard.mem_low_short": "Weinig geheugen: de opbouw van detailniveaus is gepauzeerd tot er geheugen vrijkomt",
+ "open_guard.no_window": "Het venster van dat project kon niet worden gevonden",
+ "open_guard.switch_window": "Naar dat venster gaan"
+}

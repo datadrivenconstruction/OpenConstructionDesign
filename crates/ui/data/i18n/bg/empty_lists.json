@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "Начертай стена",
+ "empty.totals.action": "Начертай стена",
+ "empty.schedule.action": "Добави поле",
+ "empty.schedule_filtered.action": "Изчисти филтъра",
+ "empty.library.action": "Нулирай търсенето",
+ "empty.library.load": "Зареди семейство",
+ "empty.schedule_fields.title": "Няма показани полета",
+ "empty.schedule_fields.action": "Добави поле",
+ "empty.schedule_fields.hint": "Включете поне едно поле, за да видите таблицата."
+}

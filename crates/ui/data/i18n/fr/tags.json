@@ -1,0 +1,13 @@
+{
+ "tags.gone": "L'étiquette n'existe plus",
+ "tags.readonly_wall": "Une étiquette de mur affiche le type et ne peut pas être modifiée ici : changez le type de mur",
+ "tags.readonly_comp": "Une étiquette de composant affiche la famille et ne peut pas être modifiée ici : changez le type",
+ "tags.locked": "L'élément est verrouillé : déverrouillez-le pour modifier l'étiquette",
+ "tags.done": "Valeur d'étiquette écrite",
+ "tags.failed": "Étiquette non modifiée : {e}",
+ "tags.dup_door": "{mark} aussi sur {n} portes",
+ "tags.dup_window": "{mark} aussi sur {n} fenêtres",
+ "tags.dup_room": "{mark} aussi sur {n} pièces",
+ "tags.hint_mark": "Repère",
+ "tags.hint_name": "Nom de la pièce"
+}

@@ -1,0 +1,5 @@
+{
+ "xlsx_readonly.read_only_head": "読み取り専用 — 適用時はコピーに書き込みます",
+ "xlsx_readonly.show_in_folder": "フォルダで表示",
+ "xlsx_readonly.copy_exists": "コピーのファイルは既に存在します。別の名前を選ぶか、削除してください。"
+}

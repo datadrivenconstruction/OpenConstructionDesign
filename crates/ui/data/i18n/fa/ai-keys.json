@@ -1,0 +1,14 @@
+{
+ "ai_keys.header_is_key": "کلیدها در فیلد کلید می‌روند — سرآیندها به‌صورت متن ساده ذخیره می‌شوند",
+ "ai_keys.move": "انتقال به کلید",
+ "ai_keys.remove_line": "حذف از سرآیندها",
+ "ai_keys.save_blocked": "برای ذخیره، کلید را از سرآیندها بیرون بیاورید",
+ "ai_keys.show": "نمایش",
+ "ai_keys.hide": "پنهان",
+ "ai_keys.copy": "کپی",
+ "ai_keys.tokens": "توکن‌ها",
+ "ai_keys.presets": "پیش‌تنظیم‌ها",
+ "ai_keys.preset_k": "{n}k",
+ "ai_keys.preset_m": "{n}M",
+ "ai_keys.images_on": "پشتیبانی می‌شود"
+}

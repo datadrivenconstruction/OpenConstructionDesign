@@ -1,0 +1,13 @@
+{
+ "xlw.copy_list": "Ro'yxatni nusxalash",
+ "xlw.save_list": "Ro'yxatni saqlash…",
+ "xlw.copy_list_tip": "Ko'rsatilgan qatorlarni (varaq, katak, id, ustun, qiymatlar, sabab) elektron jadval uchun matn sifatida nusxalash",
+ "xlw.save_list_tip": "Ko'rsatilgan qatorlarni ish kitobi yonida .csv fayl sifatida saqlash; ish kitobining o'zi hech qachon o'zgarmaydi",
+ "xlw.list_book_value": "Ish kitobi qiymati",
+ "xlw.list_model_value": "Model qiymati",
+ "xlw.list_reason": "Sabab",
+ "xlw.list_copied": "Ro'yxat nusxalandi: {n} qator",
+ "xlw.list_saved": "Ro'yxat saqlandi: {n} qator, {file}",
+ "xlw.list_save_failed": "Ro'yxat saqlanmadi",
+ "xlw.list_nothing": "Nusxalash uchun hech narsa yo'q: qatorlar ko'rsatilmagan"
+}

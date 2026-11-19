@@ -1,0 +1,8 @@
+{
+ "ai_sent.summary": "Bu istekteki proje verisi: {messages} ileti, {tools} araç sonucu, {images} görsel",
+ "ai_sent.copy": "Kopyala",
+ "ai_sent.filter": "Gönderilen isteklerde ara",
+ "ai_sent.no_match": "Hiçbir istek eşleşmiyor.",
+ "ai_sent.instructions": "Talimatlar ve araçlar",
+ "ai_sent.local_note": "Yalnızca bu bilgisayarda, bu oturum için tutulur. Anahtarlar ve parolalar hiçbir zaman gösterilmez."
+}

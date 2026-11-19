@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "此工作簿已存在",
+ "xlsx_exists.foreign": "这不是本项目的工作簿，因此不会被替换。",
+ "xlsx_exists.pending": "其中有 {n} 项编辑尚未应用到模型。",
+ "xlsx_exists.outside": "它有 {n} 行是新导出内容不包含的。",
+ "xlsx_exists.new_name": "导出到 {name}",
+ "xlsx_exists.apply_first": "请先应用这些更改",
+ "xlsx_exists.replace": "替换（旧工作簿移至 _archive）",
+ "xlsx_exists.archived": "旧工作簿已移至 {path}",
+ "xlsx_exists.archive_failed": "无法移动旧工作簿，未导出任何内容：{error}"
+}

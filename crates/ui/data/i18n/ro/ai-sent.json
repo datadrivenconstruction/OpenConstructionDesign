@@ -1,0 +1,8 @@
+{
+ "ai_sent.summary": "Date ale proiectului în această cerere: {messages} mesaje, {tools} rezultate de unelte, {images} imagini",
+ "ai_sent.copy": "Copiază",
+ "ai_sent.filter": "Caută în cererile trimise",
+ "ai_sent.no_match": "Nicio cerere nu corespunde.",
+ "ai_sent.instructions": "Instrucțiuni și unelte",
+ "ai_sent.local_note": "Păstrat doar pe acest calculator, pentru această sesiune. Cheile și parolele nu se arată niciodată."
+}

@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "자유 곡면",
+ "cmd.mass.panelize": "패널로 나누기",
+ "cmd.mass.surface_shell": "곡면 위 지붕",
+ "cmd.mass.thicken": "두께 주기",
+ "hint.mass.freeform.first": "자유 곡면: 평면 직사각형의 첫 모서리 · 높이 입력 · Esc — 취소",
+ "hint.mass.freeform.next": "자유 곡면: 맞은편 모서리 · 높이 입력 · Esc — 취소",
+ "hint.mass.panelize.first": "패널: 3D에서 자유 곡면을 선택하세요 · Esc — 취소",
+ "hint.mass.panelize.value": "패널: 패널 크기 입력 · Enter — 적용 · Esc — 취소",
+ "hint.mass.surface_shell.first": "곡면 위 지붕: 3D에서 자유 곡면을 선택하세요 · Esc — 취소",
+ "hint.mass.surface_shell.value": "곡면 위 지붕: 두께 입력 · Enter — 적용 · Esc — 취소",
+ "hint.mass.thicken.first": "두께: 3D에서 자유 곡면을 선택하세요 · Esc — 취소",
+ "hint.mass.thicken.value": "두께: 두께 입력 (0 — 두께 없음) · Enter — 적용 · Esc — 취소",
+ "status.mass.pick_surface": "자유 곡면을 선택하세요",
+ "status.mass.freeform_small": "직사각형이 너무 작습니다: 각 방향 최소 0.5 m",
+ "name.mass.freeform": "자유 곡면",
+ "rgroup.mass_free": "고급"
+}

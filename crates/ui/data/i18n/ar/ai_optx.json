@@ -1,0 +1,10 @@
+{
+ "ai.optx.applied": "طُبّق الخيار \"{name}\". التراجع يعيده إلى المسودة",
+ "ai.optx.missing": "الخيار {id} لم يعد موجوداً",
+ "ai.optx.accepted": "الخيار {id} مطبّق بالفعل",
+ "ai.optx.not_draft": "رُفض الخيار {id} ولا يمكن تطبيقه",
+ "ai.optx.stale": "تغير النموذج بعد إنشاء الخيار {id}: أعد إنشاءه أولاً",
+ "ai.optx.bad_recipe": "تعذر قراءة وصفة الخيار: {e}",
+ "ai.optx.refused": "لم يُطبَّق الخيار ({code}): {reason}",
+ "ai.optx.failed": "لم يُطبَّق الخيار: {e}"
+}

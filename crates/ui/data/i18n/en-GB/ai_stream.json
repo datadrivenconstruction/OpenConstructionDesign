@@ -1,0 +1,14 @@
+{
+ "ai.stream.waiting": "Waiting for the model",
+ "ai.stream.reading": "Reading the model",
+ "ai.stream.working": "Working",
+ "ai.stream.answering": "Writing the answer",
+ "ai.stream.tools_one": "1 tool",
+ "ai.stream.tools_many": "{n} tools",
+ "ai.stream.secs": "{n} s",
+ "ai.stream.sep": " · ",
+ "ai.stream.stalled": "Still waiting for the model service",
+ "ai.stream.stop": "Stop",
+ "ai.stream.cancelled": "Stopped",
+ "ai.stream.incomplete": "The draft is incomplete. Nothing was applied to the model."
+}

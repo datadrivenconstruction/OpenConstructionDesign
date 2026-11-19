@@ -1,0 +1,22 @@
+{
+ "depth.chip": "Mélység {level}",
+ "depth.chip_tip": "Milyen mélyen dolgozza ki a projektet a következő futtatás: D1 koncepció D5 gyártásig, szakáganként",
+ "depth.all_off": "minden szakág kikapcsolva",
+ "depth.disc.arch": "Épít.",
+ "depth.disc.struct": "Szerk.",
+ "depth.disc.mep": "Gépész",
+ "depth.disc.doc": "Dok.",
+ "depth.project": "Projektmélység",
+ "depth.level.1": "D1 Koncepció: tömegformálás, szintek, területek, egy lap",
+ "depth.level.2": "D2 Vázlat: falak, programszerinti helyiségek, nyílások, rács, alaprajzok",
+ "depth.level.3": "D3 Tervezés: rétegezett típusok, méretezett szerkezet, gépészeti főágak és végpontok, kimutatások",
+ "depth.level.4": "D4 Kivitelezési terv: csomópontok részletei, szerelvények, felületkezelések, betonacél, ágak",
+ "depth.level.5": "D5 Gyártás: hajlítási kimutatások, acélkötések, előregyártás, anyagjegyzék",
+ "depth.as_project": "Azonos",
+ "depth.estimate": "Becslés: körülbelül {elements} elem, {minutes} perc, {tokens} token {calls} hívásban, {sheets} lap",
+ "depth.estimate_none": "A becslés a megtervezett projekttel együtt érkezik: a modell még üres",
+ "depth.heat": "Mélységi hőtérkép",
+ "depth.heat.row": "Mélység",
+ "depth.settings": "A projekt tervezési mélysége",
+ "depth.settings_desc": "Az MI-asszisztens mélysége D1-től D5-ig, kapcsolóval és szakáganként külön mélységgel; a projektfájlban mentődik"
+}

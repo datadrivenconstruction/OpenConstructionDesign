@@ -1,0 +1,12 @@
+{
+ "opt.stair.straight": "Proste",
+ "opt.stair.l": "L",
+ "opt.stair.u": "U",
+ "opt.stair.gap": "Szczelina",
+ "hint.stair.corner": "Schody L: wskaż narożnik zwrotu · Backspace — usuń ostatni punkt · Esc — usuń ostatni punkt, bez punktów — anuluj",
+ "hint.stair.side": "Schody: wskaż bok drugiego biegu · Backspace — usuń ostatni punkt · Esc — usuń ostatni punkt, bez punktów — anuluj",
+ "tool.stair.flights": "{n} stopni (razem {m})",
+ "tool.stair.err_split": "Każdy bieg wymaga co najmniej 2 stopni: pierwszy bieg ma {n} z {m}",
+ "tool.stair.err_comfort": "Stopnica i podstopnica łamią regułę wygody (2R + T)",
+ "tool.stair.err_input": "Wymiar schodów poza zakresem: sprawdź szerokość, wysokość i spocznik"
+}

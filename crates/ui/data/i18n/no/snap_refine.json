@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "Låseradius",
+ "snap_refine.settings.snap_px_desc": "Hvor nær markøren må komme et punkt eller en linje for å låse seg, i skjermpiksler. Større verdi hjelper på berøringsskjermer og skjermer med høy tetthet.",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "Horisontal",
+ "snap_refine.hint.vertical": "Vertikal",
+ "snap_refine.hint.perpendicular": "Vinkelrett på forrige",
+ "snap_refine.hint.parallel": "Parallell med forrige",
+ "snap_refine.hint.on_axis": "På veggakse",
+ "snap_refine.no_snap": "Ingen låsing (Alt)"
+}

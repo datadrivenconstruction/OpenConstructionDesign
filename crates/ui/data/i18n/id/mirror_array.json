@@ -1,0 +1,5 @@
+{
+ "mirror_array.err.count": "Jumlah adalah bilangan bulat dari 2 sampai 200: 4 3000, atau 4;300 jika langkah memiliki tiga digit",
+ "mirror_array.err.length": "Langkah atau total harus panjang positif, misalnya 3 000 atau 1.2 m",
+ "mirror_array.err.angle": "Sapuan adalah sudut dalam derajat, bukan nol dan paling banyak 360"
+}

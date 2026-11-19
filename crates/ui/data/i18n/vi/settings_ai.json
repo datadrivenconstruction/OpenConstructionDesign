@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "Kết nối",
+ "settings.ai_status_desc": "Mô hình mà trợ lý AI sử dụng; khóa được giữ trong kho bảo mật",
+ "settings.ai_not_connected": "Chưa kết nối",
+ "settings.ai_connect": "Cài đặt kết nối",
+ "settings.ai_connect_desc": "Địa chỉ, mô hình và khóa của mô hình riêng của bạn, đám mây hoặc cục bộ",
+ "settings.ai_connect_btn": "Cài đặt kết nối…",
+ "settings.ai_panel": "Bảng trợ lý AI",
+ "settings.ai_panel_desc": "Hỏi bằng lời, xem lại kế hoạch, rồi áp dụng",
+ "settings.ai_open_panel": "Mở bảng AI"
+}

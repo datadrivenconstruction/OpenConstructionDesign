@@ -1,0 +1,5 @@
+{
+ "start_recent.unavailable": "Hiện không khả dụng (ổ đĩa hoặc vị trí mạng không phản hồi): {path}",
+ "start_recent.unavailable_short": "Hiện không khả dụng",
+ "start_recent.retry": "Thử lại"
+}

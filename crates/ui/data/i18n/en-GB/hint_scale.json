@@ -1,0 +1,10 @@
+{
+ "cmd.mod.scale": "Scale",
+ "cmd.mod.scale.desc": "Select elements, then click the base point, a reference length and the new length, or type a factor.",
+ "hint.scale.select": "Scale: select elements · Enter — done",
+ "hint.scale.first": "Scale: pick the base point · Esc — cancel",
+ "hint.scale.second": "Scale: pick the reference length · number — factor · Esc — cancel",
+ "hint.scale.third": "Scale: pick the new length · number — factor · Esc — cancel",
+ "scl.bad_factor": "Scale factor must be a number greater than zero",
+ "scl.zero_ref": "The reference length is zero: pick a point away from the base"
+}

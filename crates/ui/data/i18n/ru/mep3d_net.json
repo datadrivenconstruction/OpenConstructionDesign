@@ -1,0 +1,13 @@
+{
+ "mep.sys.duct": "Приток П1",
+ "mep.sys.pipe": "Холодная вода В1",
+ "mep.sys.tray": "Силовая сеть",
+ "mep.round": "Круглый",
+ "mep.material": "Материал",
+ "mep3d.elevation": "Отметка от уровня",
+ "mep3d.slope": "Уклон",
+ "mep3d.shape": "Форма",
+ "mep3d.shape.rect": "Прямоугольный",
+ "mep3d.shape.round": "Круглый",
+ "mep3d.shape.oval": "Плоскоовальный"
+}

@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "Šahtid",
+ "quick.cat.shaft": "Šaht",
+ "shaft_tool.browser.shaft": "Šaht #{id}",
+ "shaft_tool.shaft.top": "Ülemine tase",
+ "shaft_tool.shaft.cuts": "Lõigatud elemendid",
+ "shaft_tool.shaft.cut_area": "Lõigatud pind",
+ "shaft_tool.shaft.cut_volume": "Lõigatud maht",
+ "elem.no.rooms": "Järgib oma ruume"
+}

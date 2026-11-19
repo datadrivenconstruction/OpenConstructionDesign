@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "Önizleme",
+ "agent_draft.ag.preview.desc": "İmleç düğmenin üzerindeyken bu taslağın öğelerini tuvalde çizer. Hiçbir şey değişmez.",
+ "agent_draft.type.column": "Kolon",
+ "agent_draft.type.roof": "Çatı",
+ "agent_draft.type.ceiling": "Tavan",
+ "agent_draft.type.stair": "Monolitik",
+ "agent_draft.type.railing": "Korkuluk",
+ "agent_draft.type.shaft": "Şaft",
+ "agent_draft.type.axis": "Aks 6.5 mm",
+ "agent_draft.type.refplane": "Referans düzlemi"
+}

@@ -1,0 +1,12 @@
+{
+ "curtain_wall.cw.issue.slab": "البلاطة {id}: {e}",
+ "curtain_wall.cw.issue.body": "الجسم {id}: {e}",
+ "curtain_wall.cw.added": "أُضيفت الواجهات الزجاجية: {n}",
+ "curtain_wall.cw.add_failed": "لم تُبنَ الواجهة الزجاجية: {e}",
+ "curtain_wall.cw.edited_warn": "تغيّرت الواجهة الزجاجية #{id}: {w}",
+ "curtain_wall.cw.edited": "تغيّرت الواجهة الزجاجية #{id}",
+ "curtain_wall.cw.not_changed": "لم يتغير: {e}",
+ "curtain_wall.cw.room_edited": "تغيّرت الغرفة #{id}",
+ "curtain_wall.cw.slope_range": "لم يتغير: الميل خارج النطاق",
+ "curtain_wall.cw.slope_set": "البلاطة #{id}: الميل {pct}"
+}

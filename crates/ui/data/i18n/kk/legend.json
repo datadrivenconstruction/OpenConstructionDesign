@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "Аңыздама",
+ "legend.legend.new_hint": "Жаңа аңыздама атауы",
+ "legend.legend.delete_tip": "Аңыздаманы жою",
+ "legend.legend.delete_placed": "Аңыздаманы жою (орналастырылған: {sheets})",
+ "legend.legend.deleted": "Аңыздама жойылды: {name}",
+ "legend.legend.no_rows": "Жолдар әзірге жоқ. Бірін қосыңыз немесе ағымдағы көріністің стильдерін алыңыз",
+ "legend.legend.replace_q": "{n} жолды осы көріністің стильдерімен ауыстыру керек пе?",
+ "legend.legend.replace": "Ауыстыру",
+ "legend.legend.keep": "Жолдарды сақтау",
+ "legend.col.swatch": "Үлгі",
+ "legend.col.value": "Мән",
+ "legend.col.label": "Белгі"
+}

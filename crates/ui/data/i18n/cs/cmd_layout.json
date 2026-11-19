@@ -1,0 +1,4 @@
+{
+ "cmd.data.sync_xlsx": "Synchronizovat s XLSX-em…",
+ "cmd.data.sync_xlsx.desc": "Znovu načte propojený sešit a zobrazí rozdíly oproti modelu."
+}

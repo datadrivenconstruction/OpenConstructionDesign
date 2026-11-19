@@ -1,0 +1,10 @@
+{
+ "elem.multi.title": "{n} אלמנטים",
+ "elem.multi.varies": "משתנה",
+ "elem.multi.tip": "הזן הערך לכל האלמנטים הנבחרים",
+ "elem.multi.hidden": "{n} שורות רק בחלק מהאלמנטים",
+ "elem.multi.none": "לאלמנטים הנבחרים אין שורות משותפות",
+ "elem.multi.range": "הערך מחוץ לטווח המותר",
+ "elem.multi.changed": "שונו {n} אלמנטים · Ctrl+Z מבטל",
+ "elem.multi.same": "כבר הערך הזה בכל האלמנטים הנבחרים"
+}

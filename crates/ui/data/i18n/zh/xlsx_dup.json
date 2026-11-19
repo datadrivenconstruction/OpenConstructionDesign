@@ -1,0 +1,10 @@
+{
+ "xlsx_dup.dup_undo": "撤销此决定",
+ "xlsx_dup.dup_undo_tip": "已转为新元素的行（{n}）将重新按其 ID 读取",
+ "xlsx_dup.dup_new": "将编辑后的副本创建为新元素",
+ "xlsx_dup.dup_new_tip": "第 {rows} 行将以其数值成为新元素；元素 #{id} 保留其数值（与其余内容合并为一步撤销）",
+ "xl.msg.dup_same": "ID {} 重复：与第 {} 行数值相同；已忽略该行",
+ "xl.msg.dup_unchanged": "ID {} 重复：为导出行的未更改副本；已忽略该行",
+ "xl.msg.dup_conflict": "ID {} 位于第 {} 行，数值不同；未对此 ID 应用任何内容",
+ "xl.msg.dup_conflict_keep": "ID {} 位于第 {} 行，数值不同；未对此 ID 应用任何内容——请保留一行"
+}

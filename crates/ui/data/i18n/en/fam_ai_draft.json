@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "fixed after {n} refused tries, about {tokens} tokens",
+ "ai.fam_offer": "An agent offered the family {name}",
+ "ai.fam_offer.open": "Open in the family editor",
+ "ai.fam_offer.dismiss": "Dismiss",
+ "fe.ai.badge": "AI",
+ "fe.ai.checking": "Checking…",
+ "fe.ai.clean": "The check found nothing",
+ "fe.ai.check_values": "Check with values",
+ "fe.ai.lines": "lines {n}",
+ "fe.ai.changes": "{n} changes against the earlier version",
+ "fe.ai.added": "added: {head} {name}",
+ "fe.ai.removed": "removed: {head} {name}",
+ "fe.ai.changed": "changed: {head} {name}",
+ "fe.ai.reject": "Reject"
+}

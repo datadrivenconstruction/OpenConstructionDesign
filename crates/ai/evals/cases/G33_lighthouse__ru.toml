@@ -1,0 +1,42 @@
+id = "G33_lighthouse__ru"
+tier = "hard"
+group = "Любая геометрия"
+title = "Lighthouse"
+lang = "ru"
+base = "empty"
+
+[[turn]]
+say = "Маяк высотой 40 м: круглая башня, сужающаяся от 8 м в диаметре у основания до 5 м наверху, винтовая лестница внутри, галерея с ограждением, остеклённый фонарь с куполом, домик смотрителя у подножия."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "stair"
+min = 1.0
+
+[[oracle.count]]
+spec = "railing"
+min = 1.0
+
+[[oracle.count]]
+spec = "wall+wall_spline+solid+mesh+freeform+curved"
+min = 1.0
+
+[[oracle.geom]]
+kind = "height"
+min = 36.0
+max = 50.0
+
+[[oracle.geom]]
+kind = "top_ratio"
+# the lantern and dome crown the shaft, so the top band reads narrower than 5 m
+min = 0.3
+max = 0.85
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

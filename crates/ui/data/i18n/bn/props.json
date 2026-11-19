@@ -1,0 +1,18 @@
+{
+ "props.multi.title": {
+  "one": "# উপাদান",
+  "other": "# উপাদান"
+ },
+ "props.multi.cats": {
+  "one": "# ক্যাটেগরি",
+  "other": "# ক্যাটেগরি"
+ },
+ "props.multi.varies": {
+  "one": "বিভিন্ন (#)",
+  "other": "বিভিন্ন (#)"
+ },
+ "props.multi.clear": "নির্বাচন সাফ করুন",
+ "props.multi.undo": "আনডু",
+ "props.multi.narrowed": "নির্বাচন: {n} · {name}",
+ "props.multi.chip_tip": "{name}: {n}  ·  ক্লিক করলে তাদের বৈশিষ্ট্য দেখায়, Ctrl+ক্লিক শুধু এগুলো রাখে"
+}

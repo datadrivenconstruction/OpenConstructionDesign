@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "کشیدن دیوار",
+ "empty.totals.action": "کشیدن دیوار",
+ "empty.schedule.action": "افزودن فیلد",
+ "empty.schedule_filtered.action": "پاک کردن فیلتر",
+ "empty.library.action": "بازنشانی جستجو",
+ "empty.library.load": "بارگذاری خانواده",
+ "empty.schedule_fields.title": "هیچ فیلدی نمایش داده نمی‌شود",
+ "empty.schedule_fields.action": "افزودن فیلد",
+ "empty.schedule_fields.hint": "حداقل یک فیلد را روشن کنید تا جدول دیده شود."
+}

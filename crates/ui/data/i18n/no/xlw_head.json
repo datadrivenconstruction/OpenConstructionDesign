@@ -1,0 +1,15 @@
+{
+ "xlw.hd_never": "Ikke eksportert ennå",
+ "xlw.hd_now": "nettopp",
+ "xlw.hd_min": "for {n} min siden",
+ "xlw.hd_hour": "for {n} t siden",
+ "xlw.hd_day": "for {n} d siden",
+ "xlw.hd_linked": "Koblet",
+ "xlw.hd_watched": "Overvåket",
+ "xlw.hd_stale": "Modellen endret siden eksport",
+ "xlw.ft_export": "Eksporter",
+ "xlw.ft_review": "Gjennomgå",
+ "xlw.ft_apply": "Bruk {n} endringer",
+ "xlw.ft_delete_missing": "Slett manglende",
+ "xlw.ft_keep_missing_tip": "Sletting er på: elementer uten rad slettes ved Bruk. Fjern haken for å beholde dem."
+}

@@ -1,0 +1,31 @@
+id = "G29_helical_ramp__es"
+tier = "hard"
+group = "Any geometry"
+title = "Helical ramp garage"
+lang = "es"
+base = "empty"
+
+[[turn]]
+say = "Un aparcamiento de seis niveles con rampa helicoidal doble (subida y bajada entrelazadas) en el centro de una planta de 40 x 40 m, pendiente del 5%, plazas de 2.5 x 5 m en cada planta, pilares en una malla de 8 m."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "level"
+min = 6.0
+
+[[oracle.count]]
+spec = "slab"
+min = 6.0
+
+[[oracle.count]]
+spec = "col"
+min = 25.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

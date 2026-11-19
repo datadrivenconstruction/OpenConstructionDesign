@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "Воздуховод",
+ "mep3d.pipe": "Труба",
+ "mep3d.tray": "Кабельный лоток",
+ "mep3d.conduit": "Кабелепровод",
+ "mep3d.system": "Система",
+ "mep3d.length": "Длина",
+ "mep3d.diameter": "Диаметр",
+ "mep3d.width": "Ширина",
+ "mep3d.height": "Высота",
+ "mep3d.insulation": "Изоляция",
+ "mep3d.tip": "Enter — применить; фитинги пересчитаются",
+ "mep3d.size_positive": "размер должен быть больше нуля",
+ "mep3d.not_changed": "не изменено: {e}",
+ "mep3d.copied": "участок скопирован",
+ "mep3d.changed": "участок изменён",
+ "mep3d.deleted": "удалено элементов: {n}",
+ "mep3d.not_deleted": "не удалено: {e}",
+ "mep3d.no_wall_type": "нет типа стен",
+ "mep3d.demo.supply": "Приток П1",
+ "mep3d.demo.heating": "Отопление",
+ "mep3d.demo.power": "Силовые"
+}

@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "Îmbină varianta: {name}",
+ "ai_opt_merge.whole": "Îmbină toată varianta",
+ "ai_opt_merge.parts": "Îmbină părțile selectate",
+ "ai_opt_merge.note": "De ce această variantă",
+ "ai_opt_merge.rebased": "Modelul s-a schimbat după ce a fost făcută această variantă: îmbinarea a fost recalculată față de modelul curent. Verifică modificările înainte de aplicare.",
+ "ai_opt_merge.left.not_picked": "Nu a fost ales din variantă",
+ "ai_opt_merge.left.unticked": "Debifat din variantă",
+ "ai_opt_merge.left.conflict": "Nu poate fi adăugat în modelul curent: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "Această variantă nu poate fi îmbinată. O variantă respinsă trebuie mai întâi restaurată.",
+ "ai_opt_merge.refused.stale": "Modelul s-a schimbat după ce a fost făcută această variantă. Recalculează îmbinarea față de modelul curent.",
+ "ai_opt_merge.refused.nothing_picked": "Nimic nu este selectat pentru îmbinare.",
+ "ai_opt_merge.refused.unknown_item": "Elementul {item} nu face parte din această variantă.",
+ "ai_opt_merge.refused.not_in_option": "Elementul selectat nu face parte din această variantă.",
+ "ai_opt_merge.refused.needs_left_out": "Elementul {item} necesită elementul {needs}. Selectează-l și pe acesta sau permite adăugarea dependențelor.",
+ "ai_opt_merge.refused.set_gone": "Elementul {item} se referă la o selecție care nu mai există. Generează din nou varianta.",
+ "ai_opt_merge.refused.busy": "Un alt plan este deschis. Aplică-l sau respinge-l mai întâi.",
+ "ai_opt_merge.refused.failed": "Îmbinarea nu a putut fi pregătită: {reason}",
+ "ai_opt_merge.revive": "Restaurează varianta",
+ "ai_opt_merge.merged": "Îmbinat"
+}

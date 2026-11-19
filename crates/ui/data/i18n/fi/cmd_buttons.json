@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}, tasolla",
+ "cmd_buttons.purge.undo": "Poistaminen on yksi kumoamisvaihe.",
+ "cmd_buttons.unpin.none": "Mikään valittu ei ole lukittu",
+ "cmd_buttons.change_type.none": "Valitse ensin seinät: niiden tyyppi vaihtuu yhdellä askeleella",
+ "cmd_buttons.units.metric": "Yksiköt: metriset",
+ "cmd_buttons.units.imperial": "Yksiköt: jalat ja tuumat",
+ "cmd_buttons.units.back": "Vaihda takaisin",
+ "cmd_buttons.underlay.on": "Pohjakuva päällä: alla oleva taso näkyy himmennettynä",
+ "cmd_buttons.underlay.off": "Pohjakuva pois",
+ "cmd_buttons.underlay.none": "Pohjakuva päällä, mutta alla olevalla tasolla ei ole mitään näytettävää",
+ "cmd_buttons.zoom_sel.no_shape": "Valinnalla ei ole muotoa, jonka tässä näkymässä voisi rajata",
+ "cmd_buttons.close.base": "Pohjapiirros- ja 3D-välilehdet pysyvät auki; leikkauksen, arkin tai piirustusnäkymän voi sulkea avaamalla sen",
+ "tool.equipment": "Laitteet",
+ "hint.equipment.place": "Laitteet: valitse sijainti · Esc poistuu",
+ "cmd_buttons.table.opened": "Taulukko avattu mallin viereen",
+ "cmd_buttons.circuits.tip": "Avaa tämän mallin sähköpiirien luettelo"
+}

@@ -1,0 +1,16 @@
+{
+ "xlsx_recover.title": "Un export în registrul legat a fost întrerupt",
+ "xlsx_recover.both": "Exportul s-a oprit între mutarea registrului anterior deoparte și punerea noului la loc. Nimic nu s-a pierdut: noul registru este complet la {part}, cel anterior este păstrat la {bak}.",
+ "xlsx_recover.part_only": "Exportul s-a oprit înainte ca noul registru să fie pus la loc. Este complet la {part}.",
+ "xlsx_recover.bak_only": "Exportul s-a oprit înainte ca noul registru să fie gata. Registrul anterior este păstrat la {bak}.",
+ "xlsx_recover.finish": "Termină exportul întrerupt",
+ "xlsx_recover.restore": "Restaurează registrul anterior",
+ "xlsx_recover.finished": "Exportul întrerupt este terminat: noul registru este la locul lui.",
+ "xlsx_recover.finished_kept": "Exportul întrerupt este terminat: noul registru este la locul lui, cel anterior este păstrat la {bak}.",
+ "xlsx_recover.restored": "Registrul anterior este din nou la locul lui.",
+ "xlsx_recover.restore_failed": "Registrul anterior nu a putut fi mutat înapoi ({err}). Este păstrat la {path}.",
+ "xlsx_recover.not_restored": "Noul registru nu a putut fi pus la loc, iar cel anterior nu a putut fi mutat înapoi. Nimic nu s-a pierdut: registrul anterior este păstrat la {path}; Sincronizează oferă să termine sau să restaureze.",
+ "xlsx_recover.finish_failed": "Noul registru nu a putut fi pus la loc ({err}). Rămâne la {path}.",
+ "xlsx_recover.dest_back": "Un registru este din nou la {path}: nimic nu a fost mutat.",
+ "xlsx_recover.nothing": "Nimic din exportul întrerupt nu mai este de mutat."
+}

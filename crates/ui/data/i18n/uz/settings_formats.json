@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "Ish kitobi eksport qilingandan keyin nima bo'ladi",
+ "settings.area_decimals_desc": "Maydonlarda o'nlik ajratgichdan keyingi raqamlar",
+ "settings.volume_decimals_desc": "Hajmlarda o'nlik ajratgichdan keyingi raqamlar",
+ "settings.frac_desc": "Imperial uzunliklardagi eng kichik dyuym kasri",
+ "settings.small_area_desc": "Bir kvadrat futdan kichik maydonlarni kvadrat dyuymda ko'rsatish",
+ "settings.sample_desc": "Joriy tanlovlar bilan raqamlar qanday ko'rinadi",
+ "autosave.title_desc": "Ochiq loyihaning tiklash nusxasini saqlash",
+ "autosave.interval_desc": "Tiklash nusxalari orasidagi vaqt",
+ "autosave.keep_desc": "Eski tiklash nusxalari o'chiriladi",
+ "autosave.folder_desc": "Bo'sh bo'lsa, standart papka",
+ "autosave.remind_desc": "Hali fayli yo'q loyihani saqlash haqida eslatma",
+ "settings.backend_desc": "Ishlatilayotgan grafik adapter",
+ "settings.news_desc": "Bu versiyada nima o'zgargan",
+ "settings.assoc_default_desc": "Bu ilovani model fayllari uchun standart qilish",
+ "settings.data_dir_desc": "Kesh, tiklash nusxalari va jurnallar shu yerda saqlanadi."
+}

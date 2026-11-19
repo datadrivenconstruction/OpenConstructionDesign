@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "Hoppede over rader og celler",
+ "xlsx_issues.conflicts_title": "Endret begge steder",
+ "xlsx_issues.missing_title": "Ark mangler i arbeidsboken",
+ "xlsx_issues.look_alike_title": "Arknavnet stemmer ikke",
+ "xlsx_issues.mass_title": "Massesletting krever bekreftelse",
+ "xlsx_issues.sheets_missing": "Arkene {sheets} mangler i arbeidsboken (omdøpt eller slettet); radene deres ble ikke sammenlignet.",
+ "xlsx_issues.keep_model": "Behold modell",
+ "xlsx_issues.take_book": "Ta arbeidsboken",
+ "xlsx_issues.open_book_tip": "Åpner filen i sitt program. Ingenting endres i modellen; forhåndsvisningen lastes på nytt når du har lagret arbeidsboken."
+}

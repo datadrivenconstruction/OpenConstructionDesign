@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "In coda dietro l'operazione in corso: {n}",
+ "import_queue.queue_full": "La coda è piena, {n} file non sono stati aggiunti",
+ "import_queue.changed": "{name} è stato aggiornato dopo la creazione di questo progetto. Aperto il progetto precedente.",
+ "import_queue.import_again": "Importa di nuovo",
+ "import_queue.kept": "L'importazione completata viene conservata",
+ "import_queue.open_it": "Aprila",
+ "import_queue.sum.head": "importazione: {editable} modificabili (muri {walls}, aperture {open}, solai {slabs}, locali {rooms}, altro {other}), {meshes} come mesh",
+ "import_queue.sum.unchanged": ", invariati {n}",
+ "import_queue.sum.updated": ", aggiornati {n}",
+ "import_queue.sum.missing": ", non nell'origine {n} (conservati)",
+ "import_queue.sum.skipped": ", saltati {n}",
+ "import_queue.sum.warnings": ", avvisi {n}",
+ "import_queue.import_failed": "importazione non riuscita: {e}"
+}

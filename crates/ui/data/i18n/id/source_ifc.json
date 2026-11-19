@@ -1,0 +1,7 @@
+{
+ "src.field.kids": "Baris anak (panel, simpul)",
+ "src.kids.mine": "{n} baris anak, diubah di sini",
+ "src.kids.changed": "baris anak diubah di sini",
+ "src.kids.theirs": "baris anak diubah di file",
+ "src.kids.take_tip": "Impor berikutnya mengambil baris anak dari file; belum diterapkan sekarang."
+}

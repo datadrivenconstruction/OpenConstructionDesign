@@ -1,0 +1,8 @@
+{
+ "cmd.file.save_copy": "Enregistrer une copie pour quelqu'un d'autre…",
+ "cmd.file.save_copy.desc": "Enregistre une copie du projet sans consentement IA et, sauf choix contraire, sans le journal IA. Ce projet reste inchangé.",
+ "ai.copy.title": "Enregistrer une copie",
+ "ai.copy.journal": "Inclure le journal IA dans la copie ? Le journal contient les demandes, réponses et adresses. Le consentement au cloud n'est jamais copié : l'autre personne décide pour elle-même. Choisissez Non pour exclure le journal.",
+ "ai.copy.done": "Copie enregistrée : {name}",
+ "ai.copy.same": "Choisissez un autre fichier : une copie ne peut pas remplacer le projet ouvert."
+}

@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "Prvo unesite naziv predloška",
+ "view_template.name_taken": "Predložak s ovim nazivom već postoji",
+ "view_template.pick_blocked": "Prvo označite barem jedan pogled",
+ "view_template.views.one": "{n} pogled",
+ "view_template.views.few": "{n} pogleda",
+ "view_template.views.many": "{n} pogleda",
+ "view_template.delete.title": "Izbrisati ovaj predložak?",
+ "view_template.delete.body": "Predložak „{name}“ bit će izbrisan. Koristi ga {used}.",
+ "view_template.delete.unused": "Predložak „{name}“ bit će izbrisan. Nijedan pogled ga ne koristi.",
+ "view_template.delete.keeps": "Ovi pogledi zadržavaju trenutnu grafiku, ali gube vezu.",
+ "view_template.delete.undo": "To možete poništiti jednom naredbom Poništi.",
+ "view_template.delete.confirm": "Izbriši predložak"
+}

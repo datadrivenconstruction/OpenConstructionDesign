@@ -1,0 +1,5 @@
+{
+ "snap.center": "중심",
+ "dwg_snap.through": "통과점",
+ "dwg_snap.through_tip": "입력한 거리 대신 클릭한 점(끝점, 교차점, 중심에 스냅)을 지나도록 오프셋합니다"
+}

@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "Dormer opening",
+ "cmd.arch.roof_opening": "Roof opening",
+ "cmd.arch.roof_extrusion": "Roof by extrusion",
+ "cmd.arch.ceiling_opening": "Ceiling opening",
+ "cmd.str.slab_opening": "Floor opening",
+ "cmd.ctx.wall.detach": "Detach top",
+ "cmd.ctx.floor.sketch": "Edit boundary",
+ "cmd.ctx.floor.shape": "Edit shape",
+ "host_shape.shape.elev_prompt": "elevation, mm…",
+ "host_shape.shape.elev_mm": "{v} mm",
+ "host_shape.sketch.no_host": "no host under the boundary on this level",
+ "host_shape.issue.roof": "roof {id}: {e}",
+ "host_shape.issue.ceiling": "ceiling {id}: {e}",
+ "host_shape.status.select_slab": "select a slab",
+ "host_shape.status.select_walls": "select walls",
+ "host_shape.status.no_roof_or_level": "no roof or level above",
+ "host_shape.status.top_attached": "wall tops attached",
+ "host_shape.status.top_detached": "wall tops detached",
+ "host_shape.status.straight_wall": "a straight wall is required",
+ "host_shape.status.roof_extruded": "roof by extrusion created",
+ "warn.kind.cut": "Cut or attachment not built"
+}

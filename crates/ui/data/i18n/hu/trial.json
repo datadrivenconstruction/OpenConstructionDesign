@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "Pont",
+ "trial.field.distance": "Távolság",
+ "trial.field.target": "Elem",
+ "trial.refused": "{field}: {reason}. Módosítsd az alkalmazáshoz",
+ "trial.preview_off": "Előnézet kikapcsolva: a modell túl nagy"
+}

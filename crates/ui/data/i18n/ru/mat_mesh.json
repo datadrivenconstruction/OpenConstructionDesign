@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "Импортированные тела",
+ "mat_mesh.mesh.none_selected": "Выберите импортированные тела в 3D-виде, чтобы назначить им этот материал.",
+ "mat_mesh.mesh.current": "Первое выбранное тело: {material}",
+ "mat_mesh.mesh.current_none": "У первого выбранного тела нет материала.",
+ "mat_mesh.mesh.assign": "Назначить выбранным ({n})",
+ "mat_mesh.mesh.assign_tip": "Стиль «Реалистичный» покажет текстуру этого материала на выбранных телах",
+ "mat_mesh.mesh.assign_cat": "Назначить категории {category}",
+ "mat_mesh.mesh.assign_cat_tip": "Все импортированные тела этой категории без собственного материала",
+ "mat_mesh.mesh.clear": "Снять с выбранных",
+ "mat_mesh.mesh.clear_tip": "Выбранные тела вернутся к материалу категории или к обычному цвету",
+ "mat_mesh.mesh.clear_cat": "Снять с категории"
+}

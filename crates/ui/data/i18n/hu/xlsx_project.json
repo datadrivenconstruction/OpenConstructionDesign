@@ -1,0 +1,7 @@
+{
+ "xlsx_project.title": "Ezt a munkafüzetet egy másik projektből exportálták",
+ "xlsx_project.body": "A(z) „{file}” munkafüzet egy másik projekthez tartozik. A projektek között az elemazonosítók eltérnek, ezért soraival itt nem kapcsolódó elemek módosulnának. Semmi sem lett beolvasva ebbe a projektbe.",
+ "xlsx_project.export_new": "A projekt exportálása új munkafüzetbe",
+ "xlsx_project.close": "Bezárás",
+ "xlsx_project.no_project": "Ez a munkafüzet nem jelzi, melyik projekthez tartozik: ellenőrizze, hogy ebből a projektből lett-e exportálva."
+}

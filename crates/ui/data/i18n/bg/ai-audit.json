@@ -1,0 +1,22 @@
+{
+ "ai.audit.tokens": "{n} токена",
+ "ai.audit.filter.all": "Всички",
+ "ai.audit.filter.ai": "AI",
+ "ai.audit.filter.me": "Аз",
+ "ai.audit.search": "Търсене в промените",
+ "ai.audit.search.clear": "Изчисти търсенето",
+ "ai.audit.show_all": "Покажи всички",
+ "ai.audit.empty.hint": "Промените, изготвени или приложени от модел или агент, се показват тук, всяка с начин за връщане.",
+ "ai.audit.no_match": "Няма промени, които да отговарят на филтъра.",
+ "ai.audit.show.tip": "Избира и показва елементите, засегнати от тази промяна",
+ "ai.audit.revert.ask": "Да се върне ли „{what}“? {change}.",
+ "ai.audit.revert.elements": {
+  "one": "# промяна на елемент",
+  "other": "# промени на елементи"
+ },
+ "ai.audit.revert.keeps": "По-новите промени остават. Връщането е една стъпка за отмяна.",
+ "ai.audit.cancel": "Отказ",
+ "ai.audit.toast.reverted": "Върнато: {what}",
+ "ai.audit.toast.undone": "Отменено: {what}",
+ "ai.audit.redo": "Повтори"
+}

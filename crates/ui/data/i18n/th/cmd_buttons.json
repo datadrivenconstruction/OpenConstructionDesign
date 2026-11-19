@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level} ที่ระดับนี้",
+ "cmd_buttons.purge.undo": "การลบเป็นหนึ่งขั้นตอนของการเลิกทำ",
+ "cmd_buttons.unpin.none": "ไม่มีองค์ประกอบที่เลือกซึ่งถูกปักหมุด",
+ "cmd_buttons.change_type.none": "เลือกผนังก่อน: ชนิดจะเปลี่ยนในขั้นตอนเดียว",
+ "cmd_buttons.units.metric": "หน่วย: เมตริก",
+ "cmd_buttons.units.imperial": "หน่วย: ฟุตและนิ้ว",
+ "cmd_buttons.units.back": "สลับกลับ",
+ "cmd_buttons.underlay.on": "เปิดพื้นหลัง: แสดงระดับด้านล่างแบบจาง",
+ "cmd_buttons.underlay.off": "ปิดพื้นหลัง",
+ "cmd_buttons.underlay.none": "เปิดพื้นหลังแล้ว แต่ระดับด้านล่างไม่มีอะไรให้แสดง",
+ "cmd_buttons.zoom_sel.no_shape": "การเลือกไม่มีรูปทรงให้กรอบในมุมมองนี้",
+ "cmd_buttons.close.base": "แท็บแผนผังและ 3D จะยังเปิดอยู่; เปิดหน้าตัด ชีต หรือมุมมองร่างเพื่อปิด",
+ "tool.equipment": "อุปกรณ์",
+ "hint.equipment.place": "อุปกรณ์: เลือกตำแหน่ง · Esc เพื่อออก",
+ "cmd_buttons.table.opened": "เปิดตารางข้างโมเดลแล้ว",
+ "cmd_buttons.circuits.tip": "เปิดรายการวงจรไฟฟ้าของโมเดลนี้"
+}

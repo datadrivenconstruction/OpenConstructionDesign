@@ -1,0 +1,6 @@
+{
+ "quick.keys.rec_hint": "Esc tühistab · Backspace kustutab",
+ "quick.keys.row_lost": "{key} kuulub nüüd käsule „{cmd}“",
+ "quick.keys.row_took": "{key} võetud käsult „{cmd}“",
+ "quick.keys.reset_tip": "Lähtesta vaikeväärtusele"
+}

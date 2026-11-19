@@ -1,0 +1,14 @@
+{
+ "cmd.arch.wall.tile": "جدار",
+ "cmd.arch.door.tile": "باب",
+ "cmd.arch.window.tile": "نافذة",
+ "cmd.arch.floor.tile": "أرضية",
+ "cmd.mod.move.tile": "نقل",
+ "cmd.mod.copy.tile": "نسخ",
+ "cmd.mod.rotate.tile": "تدوير",
+ "cmd.mod.mirror.tile": "مرآة",
+ "cmd.mod.trim.tile": "قص",
+ "cmd.mod.delete.tile": "حذف",
+ "cmd.ann.dim.tile": "بُعد",
+ "cmd.ann.text.tile": "نص"
+}

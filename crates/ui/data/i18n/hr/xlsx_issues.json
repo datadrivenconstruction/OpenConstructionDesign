@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "Preskočeni redci i ćelije",
+ "xlsx_issues.conflicts_title": "Promijenjeno na oba mjesta",
+ "xlsx_issues.missing_title": "List nedostaje u radnoj knjizi",
+ "xlsx_issues.look_alike_title": "Naziv lista se ne podudara",
+ "xlsx_issues.mass_title": "Masovno brisanje treba potvrdu",
+ "xlsx_issues.sheets_missing": "Listovi {sheets} nedostaju u radnoj knjizi (preimenovani ili izbrisani); njihovi redci nisu uspoređeni.",
+ "xlsx_issues.keep_model": "Zadrži model",
+ "xlsx_issues.take_book": "Preuzmi radnu knjigu",
+ "xlsx_issues.open_book_tip": "Otvara datoteku u njezinoj aplikaciji. Ništa se ne mijenja u modelu; pregled se ponovno učitava nakon što spremite radnu knjigu."
+}

@@ -1,0 +1,41 @@
+{
+ "id": "ca",
+ "version": "2026.11",
+ "parent": "generic",
+ "country": "CA",
+ "lang": [
+  "en",
+  "fr"
+ ],
+ "units": {
+  "length": "m",
+  "display": "metric"
+ },
+ "conventions": {
+  "ground_floor": 1,
+  "area_standard": "net",
+  "net_share": 1.0,
+  "note": "Canadian dwelling and office areas in listings are mostly interior (inside-of-wall) floor area; the national code sets no dwelling area, provinces may differ.",
+  "source": null
+ },
+ "status": "tier3",
+ "climate": {
+  "zones": [],
+  "default": null
+ },
+ "research": {
+  "date": "2026-11-14",
+  "missing": [
+   "daylight.window_floor_ratio",
+   "fire.compartment_area_max",
+   "fire.compartment_area_max.sprinklered",
+   "room.height_min.office",
+   "parking.per_dwelling"
+  ],
+  "unreachable": [
+   "https://nrc.canada.ca/en/certifications-evaluations-standards/codes-canada/codes-canada-publications/national-building-code-canada-2020 (403)",
+   "https://nrc-publications.canada.ca (guessed record URLs 404)"
+  ]
+ },
+ "note": "Numbers with verified=true were read in the cited clause; the rest are hints with a note of where we looked. Wording is our own; no text of a standard is stored."
+}

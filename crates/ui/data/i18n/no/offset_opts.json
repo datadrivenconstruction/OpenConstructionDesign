@@ -1,0 +1,7 @@
+{
+ "offset_opts.dist_positive": "Forskyvningsavstanden må være større enn null; siden følger markøren",
+ "offset_opts.count_bad": "Heltall fra {min} til {max}",
+ "offset_opts.done_tip": "Fullfør valget og start verktøyet",
+ "offset_opts.iso.apply_tip": "Gjør den midlertidige skjulingen permanent for denne visningen",
+ "offset_opts.iso.exit": "Avslutt midlertidig modus"
+}

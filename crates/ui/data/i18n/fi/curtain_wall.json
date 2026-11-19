@@ -1,0 +1,12 @@
+{
+ "curtain_wall.cw.issue.slab": "laatta {id}: {e}",
+ "curtain_wall.cw.issue.body": "runko {id}: {e}",
+ "curtain_wall.cw.added": "Verhoseiniä lisätty: {n}",
+ "curtain_wall.cw.add_failed": "Verhoseinää ei rakennettu: {e}",
+ "curtain_wall.cw.edited_warn": "Verhoseinä #{id} muutettu: {w}",
+ "curtain_wall.cw.edited": "Verhoseinä #{id} muutettu",
+ "curtain_wall.cw.not_changed": "Ei muutettu: {e}",
+ "curtain_wall.cw.room_edited": "Huone #{id} muutettu",
+ "curtain_wall.cw.slope_range": "Ei muutettu: kaltevuus alueen ulkopuolella",
+ "curtain_wall.cw.slope_set": "Laatta #{id}: kaltevuus {pct}"
+}

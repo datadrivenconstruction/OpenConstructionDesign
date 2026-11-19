@@ -1,0 +1,215 @@
+{
+ "typology": "apartment",
+ "source": "decret2002-120",
+ "clause": "art. 4 typical flat programme",
+ "variants": [
+  {
+   "code": "t1",
+   "select": {
+    "room_kind": [
+     "living",
+     "bedroom"
+    ],
+    "count": 1
+   },
+   "rooms": [
+    {
+     "kind": "living",
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "kitchen",
+     "daylight": true,
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "bath",
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "hall",
+     "verified": false
+    }
+   ],
+   "allowed": [
+    "storage",
+    "corridor",
+    "wc"
+   ],
+   "circulation_max": 0.18,
+   "storage_max": 0.05,
+   "source": "decret2002-120",
+   "clause": "art. 4 typical flat programme",
+   "verified": false
+  },
+  {
+   "code": "t2",
+   "select": {
+    "room_kind": [
+     "living",
+     "bedroom"
+    ],
+    "count": 2
+   },
+   "rooms": [
+    {
+     "kind": "living",
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "kitchen",
+     "daylight": true,
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "bath",
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "hall",
+     "verified": false
+    }
+   ],
+   "allowed": [
+    "storage",
+    "corridor",
+    "wc"
+   ],
+   "circulation_max": 0.18,
+   "storage_max": 0.05,
+   "source": "decret2002-120",
+   "clause": "art. 4 typical flat programme",
+   "verified": false
+  },
+  {
+   "code": "t3",
+   "select": {
+    "room_kind": [
+     "living",
+     "bedroom"
+    ],
+    "count": 3
+   },
+   "rooms": [
+    {
+     "kind": "living",
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "kitchen",
+     "daylight": true,
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "bath",
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "wc",
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "hall",
+     "verified": false
+    }
+   ],
+   "allowed": [
+    "storage",
+    "corridor",
+    "wc"
+   ],
+   "circulation_max": 0.18,
+   "storage_max": 0.05,
+   "source": "decret2002-120",
+   "clause": "art. 4 typical flat programme",
+   "verified": false
+  },
+  {
+   "code": "t4",
+   "select": {
+    "room_kind": [
+     "living",
+     "bedroom"
+    ],
+    "count": 4
+   },
+   "rooms": [
+    {
+     "kind": "living",
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "kitchen",
+     "daylight": true,
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "bath",
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "wc",
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "hall",
+     "verified": false
+    }
+   ],
+   "allowed": [
+    "storage",
+    "corridor",
+    "wc"
+   ],
+   "circulation_max": 0.18,
+   "storage_max": 0.05,
+   "source": "decret2002-120",
+   "clause": "art. 4 typical flat programme",
+   "verified": false
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "Empty input.",
+ "units.err.not_number": "Not a number at position {pos}.",
+ "units.err.unknown_unit": "Unknown unit: {unit}.",
+ "units.err.non_positive": "Length must be above zero.",
+ "units.err.too_large": "Length must not exceed {max} m.",
+ "units.err.bad_angle": "Angle is a number of degrees.",
+ "units.err.unknown_name": "Unknown name: {name}. Value kept.",
+ "units.err.cycle": "Formula loop at {name}. Value kept.",
+ "units.err.bad_expr": "Cannot read the expression at position {pos}. Value kept.",
+ "units.err.div_zero": "Division by zero at position {pos}. Value kept.",
+ "units.err.invalid": "Invalid number.",
+ "units.err.kept": "Not changed: {reason}"
+}

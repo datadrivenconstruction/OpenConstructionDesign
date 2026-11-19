@@ -1,0 +1,7 @@
+{
+ "xlsx_project.title": "Questa cartella è stata esportata da un altro progetto",
+ "xlsx_project.body": "La cartella “{file}” appartiene a un altro progetto. Gli id degli elementi differiscono tra progetti, quindi le sue righe modificherebbero elementi non correlati qui. Nulla è stato letto in questo progetto.",
+ "xlsx_project.export_new": "Esporta questo progetto in una nuova cartella",
+ "xlsx_project.close": "Chiudi",
+ "xlsx_project.no_project": "Questa cartella non indica a quale progetto appartiene: verifica che sia stata esportata da questo progetto."
+}

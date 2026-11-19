@@ -1,0 +1,5 @@
+{
+ "sel_chip.opt.sel_hint": "Dă clic pe un element pentru a-l selecta. Ctrl adaugă, Shift scoate.",
+ "sel_chip.opt.units": "Unități",
+ "sel_chip.sel_chip": "{name}: {n}"
+}

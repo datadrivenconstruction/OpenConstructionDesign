@@ -1,0 +1,14 @@
+{
+ "ai.hist.badge": "AI",
+ "ai.hist.untitled": "AI 更改",
+ "ai.hist.tip": "{title}\n应用者：{actor}\nAI 模型：{model}",
+ "ai.hist.why": "原因：{why}",
+ "ai.hist.reverted": "已撤回",
+ "ai.hist.revert_one": "撤回此 AI 批次",
+ "ai.revert.done": "已撤回 AI 更改：{n}。撤销可将其恢复。",
+ "ai.revert.empty": "没有可撤回的 AI 更改",
+ "ai.revert.not_ai": "此步骤不是 AI 更改",
+ "ai.revert.already": "这些 AI 更改已被撤回",
+ "ai.revert.opaque": "未撤回：无法安全地将这些 AI 更改与之后的工作分开。未做任何更改。",
+ "ai.revert.failed": "撤回失败：{e}"
+}

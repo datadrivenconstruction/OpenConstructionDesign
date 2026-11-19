@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "{name} үлгісімен басқарылады",
+ "view_template.edit_template": "Үлгіні өңдеу",
+ "view_template.locked_tip": "{name} көрініс үлгісімен орнатылған. Оны үлгіде өзгертіңіз.",
+ "view_template.no_filters": "Бұл көріністе сүзгілер жоқ"
+}

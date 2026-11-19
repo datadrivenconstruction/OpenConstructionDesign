@@ -1,0 +1,6 @@
+{
+ "geom.length": "Längd",
+ "sched.cat.room_seps": "Rumsavskiljare",
+ "room.err.point_leave": "Rum {n}: punkten skulle lämna dess gräns",
+ "room.err.point_taken": "Rum {n}: punkten skulle hamna i rum {other}"
+}

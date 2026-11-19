@@ -1,0 +1,11 @@
+{
+ "job.stage.prepare": "Menyiapkan proyek",
+ "open_guard.already_open": "{name} sudah terbuka",
+ "open_guard.from_cache": "{name}: dibuka dari cache impor",
+ "open_guard.known_project": "{name} pernah diimpor: membuka proyek itu",
+ "open_guard.locate": "Cari",
+ "open_guard.mem_low": "Memori rendah: anggaran mesh dipotong separuh dan pembangunan level-of-detail dijeda",
+ "open_guard.mem_low_short": "Memori rendah: pembangunan level-of-detail dijeda sampai memori tersedia",
+ "open_guard.no_window": "Jendela proyek tersebut tidak dapat ditemukan",
+ "open_guard.switch_window": "Pindah ke jendela itu"
+}

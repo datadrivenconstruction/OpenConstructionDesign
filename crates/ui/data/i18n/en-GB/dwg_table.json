@@ -1,0 +1,14 @@
+{
+ "dwg_table.copy": "Copy table",
+ "dwg_table.copy_tip": "Copy the takeoff by layer as a table for a spreadsheet",
+ "dwg_table.copied": "Takeoff copied (tab-separated)",
+ "dwg_table.total": "Total",
+ "dwg_table.col.layer": "Layer",
+ "dwg_table.col.count": "Count",
+ "dwg_table.col.len": "Length, {unit}",
+ "dwg_table.col.area": "Area, {unit}",
+ "dwg_table.unit.mm": "mm",
+ "dwg_table.unit.m2": "m²",
+ "dwg_table.unit.ft": "ft",
+ "dwg_table.unit.ft2": "ft²"
+}

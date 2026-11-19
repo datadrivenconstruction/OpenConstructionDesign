@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "قسم کی مماثلت",
+ "cmd.mod.match_type.short": "قسم کی مماثلت",
+ "cmd.mod.match_type.desc": "دیوار، فرش، کالم یا بیم منتخب کریں، پھر اسی زمرے کے دوسرے عناصر پر کلک کریں تاکہ انہیں اس کی قسم ملے۔ اندر کے تمام پر لاگو کرنے کے لیے کھڑکی گھسیٹیں۔ Esc ماخذ ہٹاتا ہے۔",
+ "hint.match_type.pick": "قسم کی مماثلت: دیوار، فرش، کالم یا بیم منتخب کریں · Esc — باہر",
+ "hint.match_type.apply": "قسم کی مماثلت: ہدف پر کلک کریں یا کھڑکی گھسیٹیں · Esc — دوسرا ماخذ",
+ "match_type.kind.wall": "دیوار",
+ "match_type.kind.slab": "فرش",
+ "match_type.kind.column": "کالم",
+ "match_type.kind.beam": "بیم",
+ "match_type.refuse.category": "دوسرا زمرہ: اس قسم کو صرف {cat} لے سکتا ہے",
+ "match_type.refuse.curtain": "پردہ دیوار: اس کی قسم یہاں مماثل نہیں ہوتی",
+ "match_type.refuse.pinned": "پن شدہ: قسم بدلنے کے لیے پن ہٹائیں",
+ "match_type.pick_bad": "ماخذ کے طور پر دیوار، فرش، کالم یا بیم منتخب کریں",
+ "match_type.same": "پہلے سے یہی قسم ہے",
+ "match_type.done": "قسم لاگو ہوئی: {n}",
+ "match_type.done_skipped": "قسم لاگو ہوئی: {n}، چھوڑی گئی (پن یا پردہ): {skipped}",
+ "match_type.failed": "قسم تبدیل نہیں ہوئی: {err}"
+}

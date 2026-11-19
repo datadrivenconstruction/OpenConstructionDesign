@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "کنترل‌شده توسط قالب {name}",
+ "view_template.edit_template": "ویرایش قالب",
+ "view_template.locked_tip": "توسط قالب نمای {name} تنظیم شده. آن را در قالب تغییر دهید.",
+ "view_template.no_filters": "فیلتری در این نما نیست"
+}

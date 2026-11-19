@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "머리글 아래 필터 행. 텍스트: 부분 일치; 숫자: >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "열 표시 또는 숨기기",
+ "sched_toolbar.groups_tip": "열 기준으로 행을 그룹화하고 소계 표시",
+ "sched_toolbar.formulas_tip": "계산 열",
+ "sched_toolbar.phase": "단계",
+ "sched_toolbar.phase_tip": "행을 가져올 단계",
+ "sched_toolbar.copy_tip": "선택한 행(또는 보이는 모든 행)을 TSV로 복사",
+ "sched_toolbar.import_tip": "내보낸 일람표를 다시 읽습니다: 행은 Id, 열은 머리글 기준. 먼저 개수를 확인한 뒤 실행 취소 1단계로 적용",
+ "sched_toolbar.export_tip": "합계가 포함된 보이는 행과 열; 숫자는 숫자로 유지",
+ "sched_toolbar.need_table": "먼저 일람표를 여세요",
+ "sched_toolbar.busy_open": "파일 대화상자가 이미 열려 있습니다",
+ "sched_toolbar.busy_save": "저장 대화상자가 이미 열려 있습니다",
+ "sched_toolbar.clear_filter": "필터 지우기",
+ "sched_toolbar.fields_title": "열"
+}

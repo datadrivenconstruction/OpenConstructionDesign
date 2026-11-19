@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "Экспорт в таблицу XLSX: объём",
+ "xlsx_scope.intro": "Выберите, что попадёт в книгу. Обратный импорт изменит только эти элементы.",
+ "xlsx_scope.base_whole": "Вся модель",
+ "xlsx_scope.base_level": "Активный уровень",
+ "xlsx_scope.base_selection": "Выделенное",
+ "xlsx_scope.categories": "Категории",
+ "xlsx_scope.cat_walls": "стены",
+ "xlsx_scope.cat_openings": "двери",
+ "xlsx_scope.cat_rooms": "помещения",
+ "xlsx_scope.cat_slabs": "перекрытия",
+ "xlsx_scope.cat_curtains": "витражи",
+ "xlsx_scope.nothing_selected": "Ничего не выделено: выделите элементы или выберите другой объём.",
+ "xlsx_scope.no_categories": "Отметьте хотя бы одну категорию.",
+ "xlsx_scope.no_level": "Активный уровень не найден.",
+ "xlsx_scope.export": "Экспорт",
+ "xlsx_scope.preview_scope": "Объём выгрузки: {scope}. Элементы вне него не меняются и не удаляются."
+}

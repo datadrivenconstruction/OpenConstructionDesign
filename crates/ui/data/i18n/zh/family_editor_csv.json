@@ -1,0 +1,11 @@
+{
+ "fe.csv.apply": "应用导入",
+ "fe.csv.cancel": "放弃预览",
+ "fe.csv.nothing": "没有需要更改的内容：目录与当前类型一致",
+ "fe.csv.preview": "导入预览：{added} 个新类型，{changed} 个已更改，{same} 个未变；{values} 个值将更改",
+ "fe.csv.preview_hint": "空单元格和缺失列保留当前值。应用前不会更改任何内容。",
+ "fe.csv.skipped": "未应用，保留原值：{msg}",
+ "fe.csv.type_added": "新类型 {name}",
+ "fe.csv.type_changed": "类型 {name}",
+ "fe.csv.value": "  {param}: {old} → {new}"
+}

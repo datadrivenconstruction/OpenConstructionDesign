@@ -1,0 +1,8 @@
+{
+ "cmd.props.param_lock": "Lock or unlock parameter value",
+ "locked_values.kept": "{n} locked values kept",
+ "locked_values.locked": "“{name}” locked: XLSX spreadsheet import, bulk edit and AI keep it",
+ "locked_values.unlocked": "“{name}” unlocked",
+ "locked_values.locked_tip": "Locked: XLSX spreadsheet import, bulk edit and AI keep this value. Click to unlock  ·  Ctrl+L",
+ "locked_values.no_row": "Point at a parameter row in Properties, then press Ctrl+L"
+}

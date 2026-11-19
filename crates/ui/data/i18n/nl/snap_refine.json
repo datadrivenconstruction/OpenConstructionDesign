@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "Snapstraal",
+ "snap_refine.settings.snap_px_desc": "Hoe dicht de cursor bij een punt of lijn moet komen om vast te klikken, in schermpixels. Groter helpt op aanraakschermen en displays met hoge dichtheid.",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "Horizontaal",
+ "snap_refine.hint.vertical": "Verticaal",
+ "snap_refine.hint.perpendicular": "Loodrecht op vorige",
+ "snap_refine.hint.parallel": "Evenwijdig aan vorige",
+ "snap_refine.hint.on_axis": "Op wandas",
+ "snap_refine.no_snap": "Geen snap (Alt)"
+}

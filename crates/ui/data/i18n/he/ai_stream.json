@@ -1,0 +1,14 @@
+{
+ "ai.stream.waiting": "ממתין למודל",
+ "ai.stream.reading": "קורא את המודל",
+ "ai.stream.working": "עובד",
+ "ai.stream.answering": "כותב את התשובה",
+ "ai.stream.tools_one": "כלי אחד",
+ "ai.stream.tools_many": "{n} כלים",
+ "ai.stream.secs": "{n} שנ׳",
+ "ai.stream.stalled": "עדיין ממתין לשירות המודל",
+ "ai.stream.stop": "עצור",
+ "ai.stream.cancelled": "נעצר",
+ "ai.stream.incomplete": "הטיוטה לא שלמה. שום דבר לא הוחל על המודל.",
+ "ai.stream.sep": " · "
+}

@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}，位于该标高",
+ "cmd_buttons.purge.undo": "删除为一步撤销操作。",
+ "cmd_buttons.unpin.none": "所选内容中没有已固定的项",
+ "cmd_buttons.change_type.none": "请先选择墙：其类型将在一步内更改",
+ "cmd_buttons.units.metric": "单位：公制",
+ "cmd_buttons.units.imperial": "单位：英尺和英寸",
+ "cmd_buttons.units.back": "切换回去",
+ "cmd_buttons.underlay.on": "底图已开启：下方标高以淡色显示",
+ "cmd_buttons.underlay.off": "底图已关闭",
+ "cmd_buttons.underlay.none": "底图已开启，但下方标高没有可显示的内容",
+ "cmd_buttons.zoom_sel.no_shape": "所选内容在此视图中没有可框选的形状",
+ "cmd_buttons.close.base": "平面图和三维标签页保持打开；打开剖面、图纸或制图视图后即可关闭它",
+ "tool.equipment": "设备",
+ "hint.equipment.place": "设备：选择位置 · Esc 退出",
+ "cmd_buttons.table.opened": "已在模型旁打开表格",
+ "cmd_buttons.circuits.tip": "打开此模型的电气回路列表"
+}

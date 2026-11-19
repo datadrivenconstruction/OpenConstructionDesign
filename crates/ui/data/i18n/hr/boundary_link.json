@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "Odaberi cijeli niz zidova",
+ "cmd.sketch.link_unlink": "Odspoji rub od zida",
+ "cmd.sketch.link_repick": "Ponovno odaberi rub zida",
+ "cmd.ctx.floor.link_unlink": "Odspoji rubove od zidova",
+ "cmd.ctx.floor.link_accept": "Prihvati rubove obrisanih zidova",
+ "boundary_link.hint.loop": "Kliknite zid: zatvoreni niz zidova postaje povezani rubovi",
+ "boundary_link.hint.repick": "Kliknite zid paralelan s rubom: rub će ga pratiti",
+ "boundary_link.need_sketch": "Prvo otvorite skicu granice",
+ "boundary_link.need_edge": "Pokažite na rub skice",
+ "boundary_link.need_straight": "Samo ravni rub može pratiti zid",
+ "boundary_link.need_floor": "Odaberite pod",
+ "boundary_link.no_wall": "Nema zida pod kursorom",
+ "boundary_link.not_parallel": "Zid nije paralelan s rubom",
+ "boundary_link.not_linked": "Ovaj rub nije povezan sa zidom",
+ "boundary_link.unlinked": "Rub odspojen: ostaje na mjestu i više ne prati zid",
+ "boundary_link.accepted": "Rubovi prihvaćeni: ostaju na mjestu kao obični rubovi",
+ "boundary_link.failed": "Nije moguće primijeniti",
+ "boundary_link.lost": "izvorni zid obrisan",
+ "boundary_link.blocked": "ne može pratiti zid"
+}

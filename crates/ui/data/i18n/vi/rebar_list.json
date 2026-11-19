@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "Di chuyển lên",
+ "rebar_list.move_down": "Di chuyển xuống",
+ "rebar_list.remove": "Gỡ bỏ",
+ "rebar_list.zone_remove_last": "Một vùng cần ít nhất một phòng: hãy xóa vùng để gỡ phòng cuối cùng",
+ "rebar_list.rebar_empty_title": "Mô hình này chưa có cốt thép",
+ "rebar_list.rebar_empty_hint": "Đặt cốt thép trong một phần tử chủ và nó sẽ được đưa vào bảng thống kê ở đây.",
+ "rebar_list.rebar_empty_action": "Đặt cốt thép"
+}

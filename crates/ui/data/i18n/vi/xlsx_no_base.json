@@ -1,0 +1,6 @@
+{
+ "xlsx_no_base.title": "Sổ làm việc này không có dữ liệu so sánh",
+ "xlsx_no_base.detail": "Tờ so sánh ẩn bị thiếu hoặc hỏng (chương trình khác đã lưu lại sổ làm việc, hoặc nó được tạo thủ công). Mỗi ô khác biệt sẽ thay giá trị mô hình; các chỉnh sửa mô hình thực hiện từ lần xuất không thể phát hiện. Các hàng thiếu trong sổ làm việc sẽ không bị xóa.",
+ "xlsx_no_base.confirm": "Tôi đã kiểm tra các thay đổi: thay giá trị mô hình ({n})",
+ "xlsx_no_base.confirm_first": "Hãy xác nhận nhập sổ làm việc không có dữ liệu so sánh trước"
+}

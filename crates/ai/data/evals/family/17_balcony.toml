@@ -1,0 +1,7 @@
+brief = "Balcony slab with a railing."
+category = "generic"
+must = param Width
+must = param Depth
+must = solids >= 4
+must = ports 0
+must = flex Width 2400 3750

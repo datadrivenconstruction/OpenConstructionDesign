@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "Draw a closed outline: click points, then Enter or Finish to create",
+ "sketch_hints.sk_finish": "Finish",
+ "sketch_hints.sk_cancel": "Cancel",
+ "sketch_hints.import_warn": "model check warnings: {n} (first: {first})",
+ "sketch_hints.ai.offline.schedule": "Open the schedule",
+ "sketch_hints.ai.offline.check": "Check against rules",
+ "sketch_hints.ai.offline.warnings": "Show warnings",
+ "cmd.file.publish_pdf": "Publish sheets as PDF…",
+ "cmd.file.publish_pdf.desc": "Publishes the chosen sheets to PDF. Same as Export sheets to PDF/SVG.",
+ "sketch_hints.verify_none": "Nothing set by the AI assistant in the selection to verify",
+ "sketch_hints.contours_none": "No toposolid in the model: contours appear once one is created",
+ "sketch_hints.contours_off": "Toposolid contours hidden",
+ "sketch_hints.contours_on": "Toposolid contours shown"
+}

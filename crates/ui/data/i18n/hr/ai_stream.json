@@ -1,0 +1,14 @@
+{
+ "ai.stream.waiting": "Čekanje modela",
+ "ai.stream.reading": "Čitanje modela",
+ "ai.stream.working": "Radi",
+ "ai.stream.answering": "Piše odgovor",
+ "ai.stream.tools_one": "1 alat",
+ "ai.stream.tools_many": "{n} alata",
+ "ai.stream.secs": "{n} s",
+ "ai.stream.stalled": "Još čekam servis modela",
+ "ai.stream.stop": "Zaustavi",
+ "ai.stream.cancelled": "Zaustavljeno",
+ "ai.stream.incomplete": "Nacrt je nepotpun. Ništa nije primijenjeno na model.",
+ "ai.stream.sep": " · "
+}

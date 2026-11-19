@@ -1,0 +1,6 @@
+{
+ "cmd.xlsx.undo_apply": "Anulează ultima aplicare din foaia de calcul",
+ "xlsx_undo.later": "Nu s-a anulat: modelul a fost editat după această aplicare din foaia de calcul. Folosește Ctrl+Z pas cu pas sau panoul Istoric.",
+ "xlsx_undo.gone": "Nimic de anulat: această aplicare din foaia de calcul este deja anulată.",
+ "xlsx_undo.busy": "Termină mai întâi sau anulează desenarea curentă, apoi anulează aplicarea din foaia de calcul."
+}

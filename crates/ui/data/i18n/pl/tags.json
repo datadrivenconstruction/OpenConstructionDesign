@@ -1,0 +1,13 @@
+{
+ "tags.gone": "Znacznik już nie istnieje",
+ "tags.readonly_wall": "Znacznik ściany pokazuje typ i nie można go tu edytować: zmień typ ściany",
+ "tags.readonly_comp": "Znacznik komponentu pokazuje rodzinę i nie można go tu edytować: zmień typ",
+ "tags.locked": "Element jest zablokowany: odblokuj go, aby edytować znacznik",
+ "tags.done": "Wartość znacznika zapisana",
+ "tags.failed": "Znacznik nie zmieniony: {e}",
+ "tags.dup_door": "{mark} także na drzwiach: {n}",
+ "tags.dup_window": "{mark} także na oknach: {n}",
+ "tags.dup_room": "{mark} także na pomieszczeniach: {n}",
+ "tags.hint_mark": "Oznaczenie",
+ "tags.hint_name": "Nazwa pomieszczenia"
+}

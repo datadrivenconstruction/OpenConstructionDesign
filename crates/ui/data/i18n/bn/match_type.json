@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "ধরন মেলান",
+ "cmd.mod.match_type.short": "ধরন মেলান",
+ "cmd.mod.match_type.desc": "একটি দেয়াল, মেঝে, কলাম বা বিম বেছে নিন, তারপর একই বিভাগের অন্যগুলোতে ক্লিক করে সেই ধরন দিন। ভিতরের সবগুলোতে প্রয়োগ করতে একটি জানালা টানুন। Esc উৎস ছেড়ে দেয়।",
+ "hint.match_type.pick": "ধরন মেলান: একটি দেয়াল, মেঝে, কলাম বা বিম বাছুন · Esc — বের হয়",
+ "hint.match_type.apply": "ধরন মেলান: লক্ষ্যে ক্লিক বা জানালা টানুন · Esc — অন্য উৎস",
+ "match_type.kind.wall": "দেয়াল",
+ "match_type.kind.slab": "মেঝে",
+ "match_type.kind.column": "কলাম",
+ "match_type.kind.beam": "বিম",
+ "match_type.refuse.category": "অন্য বিভাগ: এই ধরন শুধু {cat} নিতে পারে",
+ "match_type.refuse.curtain": "কার্টেন ওয়াল: এখানে এর ধরন মেলে না",
+ "match_type.refuse.pinned": "পিন করা: ধরন বদলাতে আগে পিন খুলুন",
+ "match_type.pick_bad": "উৎস হিসেবে একটি দেয়াল, মেঝে, কলাম বা বিম বাছুন",
+ "match_type.same": "ইতিমধ্যে এই ধরন আছে",
+ "match_type.done": "ধরন প্রয়োগ হয়েছে: {n}",
+ "match_type.done_skipped": "ধরন প্রয়োগ হয়েছে: {n}, বাদ (পিন বা কার্টেন): {skipped}",
+ "match_type.failed": "ধরন বদলানো হয়নি: {err}"
+}

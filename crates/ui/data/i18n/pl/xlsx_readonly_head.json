@@ -1,0 +1,5 @@
+{
+ "xlsx_readonly.read_only_head": "Tylko do odczytu — Zastosuj zapisze kopię",
+ "xlsx_readonly.show_in_folder": "Pokaż w folderze",
+ "xlsx_readonly.copy_exists": "Plik kopii już istnieje. Wybierz inną nazwę lub go usuń."
+}

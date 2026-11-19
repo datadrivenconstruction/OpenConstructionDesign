@@ -1,0 +1,23 @@
+{
+ "roof_edge.err.number": "Anna luku",
+ "roof_edge.err.positive": "On oltava suurempi kuin nolla",
+ "roof_edge.err.nonneg": "Ei saa olla negatiivinen",
+ "roof_edge.err.max": "Ei saa ylittää arvoa {max}",
+ "roof_edge.list.empty_hint": "Lisää räystäslistoja, vesikouruja, alakattoja tai kattoikkunoita katto-komennoilla",
+ "roof_edge.edit_tip": "Muokkaa ominaisuuksia",
+ "roof_edge.delete_tip": "Poista",
+ "roof_edge.pe.del_tip": "Poista tämä piste (leikkauksessa on säilytettävä vähintään 3)",
+ "roof_edge.pe.up_tip": "Siirrä tämä piste ylös",
+ "roof_edge.confirm_edge": "Poistetaanko {name}? Ctrl+Z tuo sen takaisin.",
+ "roof_edge.confirm_profile": "Poistetaanko profiili {name}? Ctrl+Z tuo sen takaisin.",
+ "roof_edge.deleted_one": "Poistettiin {name}",
+ "roof_edge.deleted_n": {
+  "one": "Poistettiin # elementti",
+  "other": "Poistettiin # elementtiä"
+ },
+ "roof_edge.profile_deleted": "Profiili poistettu",
+ "roof_edge.profile_in_use": {
+  "one": "Käytössä # reunaelementissä: poista tai muuta se ensin",
+  "other": "Käytössä # reunaelementissä: poista tai muuta ne ensin"
+ }
+}

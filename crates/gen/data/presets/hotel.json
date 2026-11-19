@@ -1,0 +1,92 @@
+{
+ "schema": "gen_preset.v1",
+ "name": "hotel",
+ "aliases": [
+  "motel",
+  "hostel"
+ ],
+ "base": "office",
+ "note": "hotel: built as a corridor plan of guest rooms (bedroom kind) with reception and restaurant below; en-suite baths are not separate rooms",
+ "brief": {
+  "name": {
+   "en": "Hotel",
+   "ru": "Гостиница"
+  }
+ },
+ "rules": {
+  "massing.floor_height": 3.3
+ },
+ "program": {
+  "schema": "gen_program.v1",
+  "spaces": [
+   {
+    "kind": "lobby",
+    "area": 120,
+    "name": {
+     "en": "Reception",
+     "ru": "Вестибюль"
+    },
+    "floor": "ground"
+   },
+   {
+    "kind": "dining",
+    "area": 150,
+    "name": {
+     "en": "Restaurant",
+     "ru": "Ресторан"
+    },
+    "floor": "ground"
+   },
+   {
+    "kind": "office",
+    "area": 20,
+    "count": 2,
+    "name": {
+     "en": "Back office",
+     "ru": "Служебное помещение"
+    },
+    "floor": "ground"
+   },
+   {
+    "kind": "wc",
+    "area": 6,
+    "count": 2,
+    "floor": "ground"
+   },
+   {
+    "kind": "bedroom",
+    "area": 24,
+    "count": 14,
+    "name": {
+     "en": "Guest room",
+     "ru": "Номер"
+    },
+    "floor": "typical"
+   },
+   {
+    "kind": "lobby",
+    "area": 40,
+    "name": {
+     "en": "Reception",
+     "ru": "Вестибюль"
+    },
+    "floor": "single"
+   },
+   {
+    "kind": "bedroom",
+    "area": 22,
+    "count": 8,
+    "name": {
+     "en": "Guest room",
+     "ru": "Номер"
+    },
+    "floor": "single"
+   },
+   {
+    "kind": "wc",
+    "area": 6,
+    "floor": "single"
+   }
+  ]
+ }
+}

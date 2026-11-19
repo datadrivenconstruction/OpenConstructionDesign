@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "Units",
+ "topo_units.unit": "Units in file",
+ "topo_units.unit.m": "m",
+ "topo_units.unit.cm": "cm",
+ "topo_units.unit.mm": "mm",
+ "topo_units.unit.ft": "ft",
+ "topo_units.unit.usft": "US survey ft",
+ "topo_units.unit.in": "in",
+ "topo_units.unit.from_file": "The file names its units: {unit}",
+ "topo_units.unit.suggested": "The file names no units. Suggested by the extent: {unit} — check the result below",
+ "topo_units.extent": "Result in project units: {x} × {y} {u} in plan, height range {z} {u}",
+ "topo_units.extent.none": "Result: nothing to import with these choices",
+ "topo_units.extent.check": "This does not look like a site: check the units"
+}

@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "Betong",
+ "mat.masonry": "Murverk",
+ "mat.brick": "Tegel",
+ "mat.insulation": "Isolering",
+ "mat.plaster": "Puts",
+ "mat.render": "Bruk",
+ "mat.gypsum": "Gipsskiva",
+ "mat.glass": "Glas",
+ "mat.wood": "Trä",
+ "mat.steel": "Stål",
+ "mat.membrane": "Membran",
+ "mat.other": "Annat",
+ "warn.cat.wall": "Vägg",
+ "warn.cat.slab": "Platta",
+ "warn.cat.opening": "Öppning",
+ "warn.cat.curtain_wall": "Glasvägg",
+ "td.mat.custom": "Annat…"
+}

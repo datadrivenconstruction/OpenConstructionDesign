@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "Kapcsolat",
+ "settings.ai_status_desc": "Az MI-asszisztens által használt modell; a kulcsok a biztonságos tárolóban maradnak",
+ "settings.ai_not_connected": "Nincs kapcsolat",
+ "settings.ai_connect": "Kapcsolat beállításai",
+ "settings.ai_connect_desc": "Saját modell címe, modellje és kulcsa, felhőben vagy helyben",
+ "settings.ai_connect_btn": "Kapcsolat beállításai…",
+ "settings.ai_panel": "MI-asszisztens panel",
+ "settings.ai_panel_desc": "Kérdezzen szavakkal, tekintse át a tervet, majd alkalmazza",
+ "settings.ai_open_panel": "MI-panel megnyitása"
+}

@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "Kleebitud {n} lahtrit",
+ "sched_edit.pasted_skipped": "Kleebitud {n} lahtrit, vahele jäetud {k}: {why}",
+ "sched_edit.filled": "Täidetud {n} lahtrit",
+ "sched_edit.filled_skipped": "Täidetud {n} lahtrit, vahele jäetud {k}: {why}",
+ "sched_edit.why_ro": "{n} kirjutuskaitstud",
+ "sched_edit.why_bad": "{n} vale väärtus",
+ "sched_edit.no_cell": "Klõpsa kõigepealt loendi lahtril",
+ "sched_edit.nothing": "Kirjutamiseks pole midagi",
+ "sched_edit.not_refreshed": "Kirjutatud, vaade ei värskendunud: {e}",
+ "sched_edit.failed": "ei muudetud: {e}",
+ "sched_edit.no_changes": "Muudatusi pole: {u} lahtris on juba need väärtused",
+ "sched_edit.same_tail": ", {u} on juba samad"
+}

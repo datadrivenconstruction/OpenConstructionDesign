@@ -1,0 +1,9 @@
+{
+ "ai.settings.num_bad": "عدد نہیں۔ 0.5 جیسا لکھیں۔",
+ "ai.settings.num_comma": "اعشاریہ کے لیے نقطہ استعمال کریں، جیسے 0.5۔",
+ "ai.settings.num_negative": "عدد منفی نہیں ہو سکتا۔",
+ "ai.settings.unit_money": "کرنسی",
+ "ai.settings.unit_tokens": "ٹوکن",
+ "ai.settings.unit_price": "فی 1M ٹوکن",
+ "ai.settings.limits_hint": "0 کا مطلب کوئی حد نہیں۔ جو قدر رد ہو وہ پچھلی حد برقرار رکھتی ہے۔"
+}

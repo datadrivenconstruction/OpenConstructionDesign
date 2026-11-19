@@ -1,0 +1,8 @@
+{
+ "xlsx_idle.idle_title": "Importimiseks muudatusi pole",
+ "xlsx_idle.export_name": "Eksport",
+ "xlsx_idle.export_body": "Kirjutab mudeli töövihikusse. Muuda väärtusi seal, seejärel sünkrooni.",
+ "xlsx_idle.sync_name": "Sünkrooni",
+ "xlsx_idle.sync_body": "Loeb töövihiku uuesti ja loetleb erinevused. Mudel muutub alles siis, kui rakendad.",
+ "xlsx_idle.last_sync": "Viimati sünkroonitud: {when}"
+}

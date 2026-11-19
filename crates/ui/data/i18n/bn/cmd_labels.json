@@ -1,0 +1,14 @@
+{
+ "cmd.arch.wall.tile": "দেয়াল",
+ "cmd.arch.door.tile": "দরজা",
+ "cmd.arch.window.tile": "জানালা",
+ "cmd.arch.floor.tile": "ফ্লোর",
+ "cmd.mod.move.tile": "সরান",
+ "cmd.mod.copy.tile": "কপি",
+ "cmd.mod.rotate.tile": "ঘোরান",
+ "cmd.mod.mirror.tile": "প্রতিফলন",
+ "cmd.mod.trim.tile": "ছাঁটুন",
+ "cmd.mod.delete.tile": "মুছুন",
+ "cmd.ann.dim.tile": "ডাইমেনশন",
+ "cmd.ann.text.tile": "টেক্সট"
+}

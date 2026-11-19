@@ -1,0 +1,4 @@
+{
+ "xl.msg.x_formulas_in_column_x_on_sheet_x_replaced_by_values": "{} rumus di kolom '{}' pada lembar '{}' diganti dengan nilai",
+ "xl.msg.formula_in_a_model_column_not_applied": "rumus di kolom model: hasilnya tidak diterapkan, nilai model tetap; ketik nilai untuk mengubahnya"
+}

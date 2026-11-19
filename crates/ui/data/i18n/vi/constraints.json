@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "Giữ tường này ở chiều dài hiện tại khi chỉnh sửa",
+ "constraints.con.tip.lock_dist": "Giữ khoảng cách giữa hai tường khi chỉnh sửa",
+ "constraints.con.tip.equal": "Giữ các khoảng giữa các tường đã chọn bằng nhau",
+ "constraints.con.tip.align": "Giữ hai tường thẳng hàng",
+ "constraints.con.tip.parallel": "Giữ các tường song song",
+ "constraints.con.tip.perp": "Giữ các tường vuông góc",
+ "constraints.con.tip.align_grid": "Giữ tường trên đường lưới gần nhất",
+ "constraints.con.tip.lock_dist_grid": "Giữ khoảng cách từ tường đến đường lưới gần nhất",
+ "constraints.con.tip.level_gap": "Giữ khoảng cách giữa các cao độ",
+ "constraints.con.tip.top_to_level": "Giữ đỉnh tường ở cao độ phía trên"
+}

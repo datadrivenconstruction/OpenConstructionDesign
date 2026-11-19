@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "Vienti XLSX-taulukkoon: laajuus",
+ "xlsx_scope.intro": "Valitse, mitä työkirjaan menee. Tuominen takaisin muuttaa vain näitä elementtejä.",
+ "xlsx_scope.base_whole": "Koko malli",
+ "xlsx_scope.base_level": "Aktiivinen taso",
+ "xlsx_scope.base_selection": "Valinta",
+ "xlsx_scope.categories": "Luokat",
+ "xlsx_scope.cat_walls": "seinät",
+ "xlsx_scope.cat_openings": "ovet",
+ "xlsx_scope.cat_rooms": "huoneet",
+ "xlsx_scope.cat_slabs": "laatat",
+ "xlsx_scope.cat_curtains": "verhoseinät",
+ "xlsx_scope.nothing_selected": "Mitään ei ole valittu: valitse ensin elementit tai valitse toinen laajuus.",
+ "xlsx_scope.no_categories": "Valitse vähintään yksi luokka.",
+ "xlsx_scope.no_level": "Aktiivista tasoa ei löytynyt.",
+ "xlsx_scope.export": "Vie",
+ "xlsx_scope.preview_scope": "Viety laajuus: {scope}. Sen ulkopuolisia elementtejä ei koskaan muuteta tai poisteta."
+}

@@ -1,0 +1,18 @@
+{
+ "undo.entry_later": "पूर्ववत नहीं हुआ: इसके बाद एक और बदलाव किया गया। पहले वह पूर्ववत करें।",
+ "undo.entry_gone": "पूर्ववत नहीं हुआ: यह बदलाव पहले ही पूर्ववत हो चुका है या इतिहास में नहीं है।",
+ "undo.entry_busy": "पहले वर्तमान ड्रॉइंग पूरी करें या रद्द करें, फिर पूर्ववत करें।",
+ "quick.hud.more": "गुण में और: {names}",
+ "sheet_tools.sheet.more": "अधिक शीट टूल",
+ "job.of": "{d} में से {t}",
+ "job.of.mb": "{d} में से {t} MB",
+ "job.left.under_minute": "एक मिनट से कम बाकी",
+ "job.left.minutes": "लगभग {n} मिनट बाकी",
+ "sheet_tools.start.units": "इकाइयां",
+ "sheet_tools.print.save": {
+  "one": "# शीट सहेजें",
+  "other": "# शीटें सहेजें"
+ },
+ "sheet_tools.sets.delete_ask": "सेट “{name}” हटाएं? इसकी शीटें प्रोजेक्ट में रहेंगी।",
+ "sheet_tools.keep": "रखें"
+}

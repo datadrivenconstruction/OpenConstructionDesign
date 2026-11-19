@@ -1,0 +1,8 @@
+{
+ "xlsx_issues.empty_title": "Tyhjä taulukko työkirjassa",
+ "xlsx_issues.empty_kept": "Taulukko {sheet} on tyhjä: siitä ei luettu mitään, {n} elementtiä säilyy ennallaan. Muut taulukot voidaan silti soveltaa.",
+ "xlsx_issues.empty_none": "Taulukko {sheet} on tyhjä: siitä ei luettu mitään. Muut taulukot voidaan silti soveltaa.",
+ "xlsx_issues.unreadable_title": "Taulukkoa ei voitu lukea",
+ "xlsx_issues.unreadable": "Taulukkoa {sheet} ei voitu lukea, sen osa tiedostosta on vioittunut: siitä ei otettu mitään, ja sen elementit säilyvät ennallaan. Muut taulukot voidaan silti soveltaa.",
+ "xlsx_issues.formulas": "Taulukon {sheet} kaavoja ei voitu lukea, joten laskettua arvoa ei voi erottaa muokkauksesta: tästä taulukosta ei otettu mitään. Muut taulukot voidaan silti soveltaa."
+}

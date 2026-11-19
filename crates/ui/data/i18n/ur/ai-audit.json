@@ -1,0 +1,22 @@
+{
+ "ai.audit.tokens": "{n} ٹوکن",
+ "ai.audit.filter.all": "سب",
+ "ai.audit.filter.ai": "AI",
+ "ai.audit.filter.me": "میں",
+ "ai.audit.search": "تبدیلیاں تلاش کریں",
+ "ai.audit.search.clear": "تلاش صاف کریں",
+ "ai.audit.show_all": "سب دکھائیں",
+ "ai.audit.empty.hint": "ماڈل یا ایجنٹ کی بنائی یا لاگو کی گئی تبدیلیاں یہاں آئیں گی، ہر ایک واپس لوٹنے کے راستے کے ساتھ۔",
+ "ai.audit.no_match": "فلٹر سے کوئی تبدیلی نہیں ملتی۔",
+ "ai.audit.show.tip": "وہ عناصر منتخب کریں اور دکھائیں جنہیں اس تبدیلی نے چھوا",
+ "ai.audit.revert.ask": "“{what}” واپس لیں؟ {change}۔",
+ "ai.audit.revert.elements": {
+  "one": "# عنصر کی تبدیلی",
+  "other": "# عناصر کی تبدیلیاں"
+ },
+ "ai.audit.revert.keeps": "نئی تبدیلیاں برقرار رہتی ہیں۔ واپسی ایک undo مرحلہ ہے۔",
+ "ai.audit.cancel": "منسوخ",
+ "ai.audit.toast.reverted": "واپس لوٹایا گیا: {what}",
+ "ai.audit.toast.undone": "واپس لیا گیا: {what}",
+ "ai.audit.redo": "دوبارہ"
+}

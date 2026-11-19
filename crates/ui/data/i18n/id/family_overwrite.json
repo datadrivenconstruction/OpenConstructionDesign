@@ -1,0 +1,16 @@
+{
+ "family_overwrite.ow.title": "Ganti nilai tipe proyek?",
+ "family_overwrite.ow.body": "Pemuatan mengganti {values} pada {types}. Instans yang sudah ditempatkan dari tipe ini: {instances}.",
+ "family_overwrite.ow.values": {
+  "one": "# nilai",
+  "other": "# nilai"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# tipe",
+  "other": "# tipe"
+ },
+ "family_overwrite.ow.list": "Tipe: {list}",
+ "family_overwrite.ow.more": "dan {n} lainnya",
+ "family_overwrite.ow.back": "Kembali ke penyuntingan",
+ "family_overwrite.ow.replace": "Ganti nilai"
+}

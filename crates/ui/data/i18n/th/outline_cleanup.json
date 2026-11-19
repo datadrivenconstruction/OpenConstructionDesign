@@ -1,0 +1,15 @@
+{
+ "cmd.ctx.floor.clean_outline": "ทำความสะอาดเส้นรอบรูป",
+ "cmd.ctx.floor.clean_outline.desc": "ลบปลายแหลมแคบๆ ตรงจุดที่เส้นรอบพื้นวกกลับมาทับตัวเอง แสดงตัวอย่างก่อน เลิกทำได้หนึ่งขั้น",
+ "outline_cleanup.title": "ทำความสะอาดเส้นรอบรูป",
+ "outline_cleanup.intro": "เส้นรอบของพื้นนี้วกกลับมาทับตัวเองเป็นปลายแหลมแคบๆ: {n} การทำความสะอาดจะลบออก ส่วนอื่นคงเดิม",
+ "outline_cleanup.legend_before": "เส้นหนา: เส้นรอบตอนนี้",
+ "outline_cleanup.legend_after": "เส้นบาง: เส้นรอบหลังทำความสะอาด",
+ "outline_cleanup.undo": "เลิกทำขั้นตอนนี้ได้ในหนึ่งขั้น",
+ "outline_cleanup.apply": "ทำความสะอาด",
+ "outline_cleanup.cancel": "ยกเลิก",
+ "outline_cleanup.done": "ทำความสะอาดเส้นรอบรูปแล้ว ลบปลายแหลม: {n}",
+ "outline_cleanup.none": "เส้นรอบของพื้นนี้ไม่มีปลายแหลม",
+ "outline_cleanup.failed": "ทำความสะอาดเส้นรอบรูปไม่ได้",
+ "outline_cleanup.changed": "เส้นรอบรูปเปลี่ยนไปตั้งแต่ดูตัวอย่าง ยังไม่ได้เขียนอะไร ตรวจตัวอย่างใหม่"
+}

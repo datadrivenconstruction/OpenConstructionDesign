@@ -1,0 +1,8 @@
+{
+ "v3d.proj.to_ortho": "Přepnout na ortogonální",
+ "v3d.proj.to_persp": "Přepnout na perspektivu",
+ "v3d.walk.unit.m": "m/s",
+ "v3d.walk.unit.ft": "ft/s",
+ "v3d.temp.show_all": "Zobrazit vše  ·  Esc",
+ "v3d.msg.deleted_named": "3D pohled {name} smazán"
+}

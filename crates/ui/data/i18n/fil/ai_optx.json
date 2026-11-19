@@ -1,0 +1,10 @@
+{
+ "ai.optx.applied": "Na-apply ang option na “{name}”. Ibinabalik ito ng undo sa draft",
+ "ai.optx.missing": "Wala na ang option {id}",
+ "ai.optx.accepted": "Na-apply na ang option {id}",
+ "ai.optx.not_draft": "Tinanggihan ang option {id} at hindi na ito maaaring i-apply",
+ "ai.optx.stale": "Nagbago ang model pagkatapos gawin ang option {id}: gawin itong muli muna",
+ "ai.optx.bad_recipe": "Hindi mabasa ang recipe ng option: {e}",
+ "ai.optx.refused": "Hindi na-apply ang option ({code}): {reason}",
+ "ai.optx.failed": "Hindi na-apply ang option: {e}"
+}

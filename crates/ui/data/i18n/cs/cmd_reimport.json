@@ -1,0 +1,6 @@
+{
+ "cmd.file.import_again": "Importovat znovu",
+ "cmd.file.import_again.desc": "Sestaví nový projekt ze zdrojového souboru v jeho aktuálním stavu.",
+ "cmd.file.open_kept": "Otevřít ponechaný import",
+ "cmd.file.open_kept.desc": "Otevře dokončený import, který byl ponechán, když byla výzva k neuloženým změnám zrušena."
+}

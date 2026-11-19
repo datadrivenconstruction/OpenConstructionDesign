@@ -1,0 +1,11 @@
+{
+ "sketch.points": "Punkter",
+ "sketch.rect": "Rektangel",
+ "sketch.circle": "Cirkel",
+ "sketch.polygon": "Månghörning",
+ "sketch.radius": "R",
+ "sketch.sides": "Sidor",
+ "sketch.circum": "Omskriven",
+ "sketch.shape.tip": "Skissform (A växlar). Rektangel: två hörn. Cirkel och polygon: centrum, sedan radie. Skriv en storlek och tryck Enter för att låsa den.",
+ "tool.err.zero_size": "Storleken är noll: flytta den andra punkten bort från den första"
+}

@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "מדריך קיצורי מקלדת",
+ "cmd.help.shortcuts.desc": "מציג כל קיצור כפי שהוא מוגדר עכשיו, לפי הקשר. לחץ ? בכל מקום מחוץ לשדה טקסט.",
+ "sheet.title": "קיצורי מקלדת",
+ "sheet.filter": "סנן לפי פקודה או מקש",
+ "sheet.filter_label": "סנן קיצורים",
+ "sheet.customize": "התאמה אישית…",
+ "sheet.close": "סגור",
+ "sheet.esc_close": "לסגירה",
+ "sheet.none": "אין קיצורים תואמים",
+ "sheet.none_hint": "נסה מילה או מקש אחר.",
+ "sheet.sec.general": "כללי",
+ "sheet.sec.plan": "תוכנית",
+ "sheet.sec.view3d": "תלת-ממד",
+ "sheet.sec.schedule": "לוחות",
+ "sheet.sec.sheets": "גיליונות",
+ "sheet.sec.ai": "AI"
+}

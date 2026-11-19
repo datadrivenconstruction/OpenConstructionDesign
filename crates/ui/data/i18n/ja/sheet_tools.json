@@ -1,0 +1,18 @@
+{
+ "undo.entry_later": "元に戻せません: この後に別の変更が行われました。先にその変更を元に戻してください。",
+ "undo.entry_gone": "元に戻せません: この変更は既に元に戻されているか、履歴にありません。",
+ "undo.entry_busy": "現在の作図を完了またはキャンセルしてから元に戻してください。",
+ "quick.hud.more": "プロパティでさらに表示: {names}",
+ "sheet_tools.sheet.more": "その他のシート操作",
+ "job.of": "{t} 中 {d}",
+ "job.of.mb": "{t} MB 中 {d} MB",
+ "job.left.under_minute": "残り 1 分未満",
+ "job.left.minutes": "残り約 {n} 分",
+ "sheet_tools.start.units": "単位",
+ "sheet_tools.print.save": {
+  "one": "# 枚のシートを保存",
+  "other": "# 枚のシートを保存"
+ },
+ "sheet_tools.sets.delete_ask": "セット「{name}」を削除しますか？そのシートはプロジェクトに残ります。",
+ "sheet_tools.keep": "保持"
+}

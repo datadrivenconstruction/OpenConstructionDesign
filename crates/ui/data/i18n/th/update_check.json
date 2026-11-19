@@ -1,0 +1,21 @@
+{
+ "cmd.help.check_update": "ตรวจสอบการอัปเดต",
+ "update_check.title": "ตรวจสอบการอัปเดต",
+ "update_check.desc": "ปิดเป็นค่าเริ่มต้น ส่งเฉพาะเวอร์ชัน ระบบปฏิบัติการ สถาปัตยกรรม และประเภทการติดตั้งไปยังเซิร์ฟเวอร์ของเรา ไม่ดาวน์โหลดหรือติดตั้งอะไรเลย",
+ "update_check.freq.startup": "เมื่อเริ่มโปรแกรม",
+ "update_check.freq.daily": "ทุกวัน",
+ "update_check.freq.weekly": "ทุกสัปดาห์",
+ "update_check.freq.never": "ไม่เลย",
+ "update_check.check_now": "ตรวจสอบตอนนี้",
+ "update_check.dialog.title": "ตรวจสอบการอัปเดต",
+ "update_check.unknown.title": "ไม่สามารถตรวจสอบการอัปเดตได้",
+ "update_check.unknown.body": "{e} ไม่ได้หมายความว่าเวอร์ชันนี้เป็นเวอร์ชันล่าสุด ลองใหม่ภายหลัง",
+ "update_check.current": "คุณใช้เวอร์ชันล่าสุดแล้ว ({v})",
+ "update_check.newer": "มีเวอร์ชัน {v} พร้อมใช้งาน",
+ "update_check.date": "เผยแพร่เมื่อ {d}",
+ "update_check.unfit": "เวอร์ชันนี้ ({v}) เก่ากว่าเวอร์ชันขั้นต่ำที่แนะนำ {f} แนะนำให้อัปเดต",
+ "update_check.close": "ปิด",
+ "update_check.open_failed": "ไม่สามารถเปิดหน้าเผยแพร่ได้",
+ "update_check.toast.newer": "มีเวอร์ชัน {v} พร้อมใช้งาน วิธีใช้ > ตรวจสอบการอัปเดต",
+ "update_check.toast.unfit": "เวอร์ชันนี้ ({v}) เก่ากว่าเวอร์ชันขั้นต่ำที่แนะนำ {f}"
+}

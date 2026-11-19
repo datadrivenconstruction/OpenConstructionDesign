@@ -1,0 +1,20 @@
+{
+ "dwgfillet.fillet": "עיגול פינה",
+ "dwgfillet.cancel": "עצירת עיגול פינה",
+ "dwgfillet.tip": "לחץ על שני הקווים בצדדים לשמירה: שניהם ייחתכו או יוארכו עד לפינה, עם קשת משיקית כאשר הרדיוס גדול מאפס",
+ "dwgfillet.radius": "רדיוס עיגול פינה",
+ "dwgfillet.radius_tip": "רדיוס הקשת ביחידות השרטוט; 0 יוצר פינה חדה",
+ "dwgfillet.st.arm_first": "לחץ על הקו הראשון, בצד שיש לשמור",
+ "dwgfillet.st.arm_second": "לחץ על הקו השני, בצד שיש לשמור",
+ "dwgfillet.st.not_armed": "בחר קודם עיגול פינה",
+ "dwgfillet.st.click_line": "לחץ על קו בודד של השרטוט",
+ "dwgfillet.st.other_drawing": "שני הקווים חייבים להשתייך לאותו שרטוט: התחל מחדש",
+ "dwgfillet.st.changed": "הקו הראשון השתנה: התחל מחדש",
+ "dwgfillet.st.same_line": "בחר קו שני אחר",
+ "dwgfillet.st.parallel": "הקווים מקבילים ואינם נפגשים לעולם: לא ניתן ליצור פינה",
+ "dwgfillet.st.degenerate": "לקו אין אורך",
+ "dwgfillet.st.no_side": "לצד שנלחץ אין אורך מהפינה",
+ "dwgfillet.st.too_big": "הרדיוס גדול מדי לקווים אלה: השתמש ברדיוס קטן יותר",
+ "dwgfillet.st.radius_bad": "הרדיוס חייב להיות אפס או חיובי",
+ "dwgfillet.st.done": "הפינה נוצרה"
+}

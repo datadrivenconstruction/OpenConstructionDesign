@@ -1,0 +1,15 @@
+{
+ "sheet_place.place_view_tip": "Varaqqa ko'rinish yoki jadval joylashtirish",
+ "sheet_place.properties_tip": "Varaq raqami, nomi, qog'oz va revizilar",
+ "sheet_place.print_tip": "Varaqni chop etish yoki eksport qilish",
+ "sheet_place.fit_tip": "Varaqni oynaga moslash",
+ "sheet_place.activate_tip": "Ko'rinishni varaqda joyida tahrirlash: surish, kattalashtirish va kesish",
+ "sheet_place.open_view_tip": "Ko'rinishni o'z yorlig'ida ochish",
+ "sheet_place.done_tip": "Varaqdagi ko'rinishni tahrirlashni tugatish",
+ "sheet_place.reset_crop_tip": "Kesishni olib tashlash va butun ko'rinishni ko'rsatish",
+ "sheet_place.scale_tip": "Varaqdagi tanlangan ko'rinishning masshtabi",
+ "sheet_place.title_tip": "Varaqda ko'rinish ostida ko'rsatiladigan nom",
+ "sheet_place.banner": "Varaqdagi ko'rinish tahrirlanmoqda",
+ "sheet_place.new_set_tip": "Birga chop etiladigan varaqlar to'plamini yaratish",
+ "sheet_place.new_sheet_tip": "Loyihaga varaq qo'shish"
+}

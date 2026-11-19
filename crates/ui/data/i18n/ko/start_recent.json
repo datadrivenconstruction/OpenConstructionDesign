@@ -1,0 +1,5 @@
+{
+ "start_recent.unavailable": "지금 사용할 수 없음(드라이브 또는 네트워크 위치가 응답하지 않음): {path}",
+ "start_recent.unavailable_short": "지금 사용할 수 없음",
+ "start_recent.retry": "재시도"
+}

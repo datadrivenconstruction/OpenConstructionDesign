@@ -1,0 +1,7 @@
+{
+ "offset_opts.dist_positive": "آفسیٹ فاصلہ صفر سے زیادہ ہونا چاہیے؛ سمت کرسر کی پیروی کرتی ہے",
+ "offset_opts.count_bad": "{min} سے {max} تک پورا عدد",
+ "offset_opts.done_tip": "انتخاب مکمل کریں اور ٹول شروع کریں",
+ "offset_opts.iso.apply_tip": "اس ویو کے لیے عارضی چھپانے کو مستقل کریں",
+ "offset_opts.iso.exit": "عارضی موڈ سے نکلیں"
+}

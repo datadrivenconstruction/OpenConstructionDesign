@@ -1,0 +1,58 @@
+id = "H15_hospital_add_theatre"
+tier = "hard"
+group = "Editing a complex model via chat"
+title = "Edit by chat: one more operating theatre on level 3"
+lang = "en"
+base = "@H02_hospital_hvac"
+
+[[turn]]
+say = "Add one more operating theatre on the third floor with its own supply and extract air. Leave every other system as it is."
+
+[[oracle.grow]]
+spec = "room:operating|theatre|theater|surg"
+min = 1.0
+max = 1.0
+
+[[oracle.grow]]
+spec = "mep"
+min = 1.0
+
+[[oracle.geom]]
+kind = "mep_kept"
+min = 1.0
+
+[[oracle.geom]]
+kind = "mep_new_scope"
+systems_max = 2.0
+levels_max = 1.0
+new_min = 1.0
+
+[[oracle.geom]]
+kind = "mep_connected"
+components_max = 1.0
+
+[[oracle.geom]]
+kind = "mep_free_ends"
+max = 0.0
+
+[[oracle.geom]]
+kind = "mep_clashes"
+max = 0.0
+
+[oracle.checks]
+new_max = 0
+
+[[oracle.geom]]
+kind = "sizes_typical"
+share_max = 0.25
+errors_max = 0.0
+
+[[oracle.geom]]
+kind = "terminals_fed"
+share_min = 0.95
+
+[[oracle.geom]]
+kind = "served_rooms"
+rooms = "operating|theatre|theater|surg|operationssaal|quirofano"
+terminal = "air_terminal|diffuser|grille"
+share_min = 1.0

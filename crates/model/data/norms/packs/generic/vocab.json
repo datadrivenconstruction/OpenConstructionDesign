@@ -1,0 +1,77 @@
+{
+ "room_kinds": {
+  "living": [
+   "living",
+   "living room",
+   "lounge"
+  ],
+  "bedroom": [
+   "bedroom"
+  ],
+  "kitchen": [
+   "kitchen"
+  ],
+  "bath": [
+   "bath",
+   "bathroom"
+  ],
+  "wc": [
+   "wc",
+   "toilet"
+  ],
+  "hall": [
+   "hall",
+   "entrance hall"
+  ],
+  "storage": [
+   "storage",
+   "store",
+   "storeroom"
+  ],
+  "office": [
+   "office"
+  ],
+  "meeting": [
+   "meeting",
+   "meeting room"
+  ],
+  "classroom": [
+   "classroom"
+  ],
+  "lab": [
+   "lab",
+   "laboratory"
+  ],
+  "staff": [
+   "staff",
+   "staff room"
+  ],
+  "lobby": [
+   "lobby"
+  ],
+  "technical": [
+   "technical",
+   "plant"
+  ],
+  "corridor": [
+   "corridor"
+  ],
+  "stair": [
+   "stair",
+   "stairs",
+   "staircase"
+  ],
+  "lift": [
+   "lift",
+   "elevator"
+  ]
+ },
+ "purpose": {
+  "residential": "living",
+  "kitchen": "kitchen",
+  "corridor": "corridor",
+  "office": "office",
+  "technical": "technical",
+  "workplace_passage": "corridor"
+ }
+}

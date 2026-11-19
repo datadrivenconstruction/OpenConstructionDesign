@@ -1,0 +1,19 @@
+{
+ "xlsx_confirm.chip": "নিশ্চিত করতে",
+ "xlsx_confirm.section": "আইডি ছাড়া সারি নাম বা নম্বর অনুযায়ী উপাদানের সঙ্গে মেলানো হয়েছে",
+ "xlsx_confirm.tag": "নাম অনুযায়ী মেলানো",
+ "xlsx_confirm.tag_accepted": "মিল গৃহীত",
+ "xlsx_confirm.tag_rejected": "নতুন তৈরি হবে",
+ "xlsx_confirm.kind_room": "রুম",
+ "xlsx_confirm.kind_curtain_wall": "কার্টেন ওয়াল",
+ "xlsx_confirm.row_line": "{kind} #{id}, কী \"{key}\"",
+ "xlsx_confirm.accept": "গ্রহণ",
+ "xlsx_confirm.accept_tip": "এই সারি মেলানো উপাদানে প্রয়োগ করুন (বাকিসহ এক Undo ধাপ)",
+ "xlsx_confirm.reject": "নতুন তৈরি করুন",
+ "xlsx_confirm.reject_tip": "মিলাবেন না: এই সারি একটি নতুন উপাদান তৈরি করে",
+ "xlsx_confirm.decide_first": "আগে নাম অনুযায়ী মেলানো সারিগুলো গ্রহণ বা প্রত্যাখ্যান করুন।",
+ "xl.msg.key_match_many": "কী {} উপাদানের সঙ্গে মেলে; মেলানো হয়নি, সারিটি একটি নতুন তৈরি করে",
+ "xl.msg.key_match_taken": "কী অন্য সারির ব্যবহৃত উপাদানের সঙ্গে মেলে; মেলানো হয়নি, সারিটি একটি নতুন তৈরি করে",
+ "xl.msg.key_match_kept": "রাখা হয়েছে: মিল প্রত্যাখ্যাত, সারি একটি নতুন উপাদান তৈরি করে",
+ "xl.msg.key_match_undecided": "নাম অনুযায়ী মেলানো সারিগুলো সিদ্ধান্তের অপেক্ষায় আছে"
+}

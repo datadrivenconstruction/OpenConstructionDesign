@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "Снэпийн радиус",
+ "snap_refine.settings.snap_px_desc": "Снэп хийхийн тулд курсор цэг эсвэл шугамд хэр ойр ирэх ёстойг дэлгэцийн пикселээр. Том байвал мэдрэгчтэй дэлгэц ба өндөр нягтралтай дэлгэцэд тустай.",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "Хэвтээ",
+ "snap_refine.hint.vertical": "Босоо",
+ "snap_refine.hint.perpendicular": "Өмнөхтэй перпендикуляр",
+ "snap_refine.hint.parallel": "Өмнөхтэй параллель",
+ "snap_refine.hint.on_axis": "Ханын тэнхлэг дээр",
+ "snap_refine.no_snap": "Снэпгүй (Alt)"
+}

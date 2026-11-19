@@ -1,0 +1,11 @@
+{
+ "job.stage.prepare": "Valmistellaan projektia",
+ "open_guard.already_open": "{name} on jo auki",
+ "open_guard.from_cache": "{name}: avattu tuontivälimuistista",
+ "open_guard.known_project": "{name} tuotiin aiemmin: avataan kyseinen projekti",
+ "open_guard.locate": "Etsi",
+ "open_guard.mem_low": "Vähän muistia: verkkojen budjetti puolitettu ja yksityiskohtatason rakennus keskeytetty",
+ "open_guard.mem_low_short": "Vähän muistia: yksityiskohtatason rakennus on keskeytetty, kunnes muistia vapautuu",
+ "open_guard.no_window": "Kyseisen projektin ikkunaa ei löytynyt",
+ "open_guard.switch_window": "Siirry kyseiseen ikkunaan"
+}

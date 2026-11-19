@@ -1,0 +1,9 @@
+{
+ "xl.msg.base_value": "kontrol af genlæsning mislykkedes, den gamle arbejdsbog beholdes: {} ({}) forventede '{}', læste '{}'",
+ "xl.msg.base_missing": "kontrol af genlæsning mislykkedes, den gamle arbejdsbog beholdes: ark {} har ingen række for id {}",
+ "xl.msg.base_extra": "kontrol af genlæsning mislykkedes, den gamle arbejdsbog beholdes: række {} findes ikke i modellen",
+ "xl.msg.base_refused": "kontrol af genlæsning mislykkedes, den gamle arbejdsbog beholdes: {} ({}) blev afvist: {}",
+ "xl.msg.base_sheet": "kontrol af genlæsning mislykkedes, den gamle arbejdsbog beholdes: ark {} mangler, er tomt eller kan ikke læses",
+ "xl.msg.base_newer": "kontrol af genlæsning mislykkedes, den gamle arbejdsbog beholdes: {} celler har ikke modelværdien",
+ "xl.msg.base_unreadable": "kontrol af genlæsning mislykkedes, den gamle arbejdsbog beholdes: den nye arbejdsbog kan ikke læses ({})"
+}

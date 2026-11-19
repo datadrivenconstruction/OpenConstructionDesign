@@ -1,0 +1,15 @@
+{
+ "fe.add_why_empty": "Hãy nhập tên tham số trước",
+ "fe.add_why_exists": "Đã có tham số với tên này; dùng Áp dụng để thay đổi",
+ "fe.apply_why_missing": "Không có tham số tên này; hãy nhập một tên đã tồn tại",
+ "fe.nochange": "Chưa có thay đổi",
+ "options.accept_more": "Chấp nhận…",
+ "options.delete_more": "Xóa…",
+ "options.empty_title": "Chưa có bộ tùy chọn nào",
+ "options.more": "Thao tác khác: {name}",
+ "options.primary_named": "Tùy chọn chính: {name}",
+ "options.primary_tip": "Đặt đây làm tùy chọn chính của bộ",
+ "options.select_first": "Hãy chọn phần tử trong mô hình trước",
+ "options.show_3d": "Hiển thị trong 3D: {name}",
+ "options.show_plan": "Hiển thị trên mặt bằng: {name}"
+}

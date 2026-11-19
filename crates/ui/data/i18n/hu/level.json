@@ -1,0 +1,13 @@
+{
+ "level.err_open": "A szint nem nyílt meg: {e}",
+ "level.need_name": "A szinthez név és magasságszint kell",
+ "level.created": "„{name}” szint létrehozva",
+ "level.err_create": "A szint nem jött létre: {e}",
+ "level.err_edit": "A szint nem változott: {e}",
+ "level.edited": "„{name}” szint módosítva",
+ "level.edited_stale": "„{name}” szint módosítva, a nézet nem frissült: {e}",
+ "level.last": "Az utolsó szint nem törölhető",
+ "level.deleted": "Szint törölve",
+ "level.not_empty": "A szint nem üres: előbb törölje az elemeit",
+ "level.err_delete": "A szint nem lett törölve: {e}"
+}

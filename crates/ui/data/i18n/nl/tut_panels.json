@@ -1,0 +1,9 @@
+{
+ "empty.props_model.title": "Niets geselecteerd",
+ "empty.props_model.hint": "Klik op een element in de weergave om de eigenschappen te zien. Of exporteer alle parameters naar een werkmap, bewerk ze daar en pas ze terug toe.",
+ "empty.props_model.action": "Exporteren naar XLSX",
+ "tut.spreadsheet.title": "XLSX-heen-en-terug",
+ "tut.spreadsheet.1": "Druk hieronder op Exporteren naar XLSX-spreadsheet: kies wat u opneemt en sla de werkmap op.",
+ "tut.spreadsheet.2": "Open de werkmap in een spreadsheet-app, wijzig een cel en sla op. De voorbeeldweergave hier toont de wijziging.",
+ "tut.spreadsheet.3": "Controleer het voorbeeld en druk op Toepassen op model. Ctrl+Z maakt het ongedaan."
+}

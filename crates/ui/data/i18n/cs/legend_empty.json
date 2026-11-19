@@ -1,0 +1,5 @@
+{
+ "legend.legend.empty_hint": "Nahoře zadejte název a stiskněte Vytvořit.",
+ "legend.legend.pick_hint": "Vyberte legendu ze seznamu nahoře.",
+ "legend.legend.taken": "Legenda s názvem „{name}“ již existuje. Zadejte jiný název."
+}

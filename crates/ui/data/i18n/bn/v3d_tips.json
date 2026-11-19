@@ -1,0 +1,8 @@
+{
+ "v3d.proj.to_ortho": "অর্থোগ্রাফিকে বদলান",
+ "v3d.proj.to_persp": "পার্সপেক্টিভে বদলান",
+ "v3d.walk.unit.m": "মি/সে",
+ "v3d.walk.unit.ft": "ft/s",
+ "v3d.temp.show_all": "সব দেখান  ·  Esc",
+ "v3d.msg.deleted_named": "৩D ভিউ {name} মুছে ফেলা হয়েছে"
+}

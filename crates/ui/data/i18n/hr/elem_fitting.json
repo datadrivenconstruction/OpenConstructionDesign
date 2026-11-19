@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "Spojnica",
+ "elem.mep_fitting.many": "Fitinzi",
+ "elem.mep_fitting.kind.elbow": "Koljeno",
+ "elem.mep_fitting.kind.tee": "T-komad",
+ "elem.mep_fitting.kind.cross": "Križ",
+ "elem.mep_fitting.kind.transition": "Prijelaz",
+ "elem.mep_fitting.kind.cap": "Zatvarač",
+ "elem.mep_fitting.size": "Veličina",
+ "elem.mep_fitting.at": "Položaj",
+ "elem.mep_fitting.runs": "Dionica {n}",
+ "elem.mep_fitting.edit_run": "Uredi dionicu",
+ "elem.mep_fitting.select_runs": "Odaberi njegove dionice",
+ "elem.mep_fitting.derived": "Fitting prati svoje dionice: promijeni dionicu i fitting se mijenja s njom.",
+ "elem.mep_fitting.no_delete": "Fitting se ne može sam obrisati ni pomaknuti. Uredi ili obriši njegove dionice.",
+ "elem.mep_fitting.hint": "Klikni fitting u tlocrtu da vidiš njegove dionice.",
+ "elem.mep_fitting.picked": "Odabrano fitinga: {n}"
+}

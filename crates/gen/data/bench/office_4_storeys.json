@@ -1,0 +1,58 @@
+{
+ "schema": "gen_bench.v1",
+ "group": "office",
+ "spec": {
+  "typology": "office",
+  "floors": 4,
+  "lang": "ru",
+  "rooms": [
+   {
+    "kind": "office",
+    "area": 30,
+    "count": 4
+   },
+   {
+    "kind": "meeting",
+    "area": 40
+   },
+   {
+    "kind": "wc",
+    "area": 4,
+    "count": 2
+   }
+  ],
+  "ground_rooms": [
+   {
+    "kind": "lobby",
+    "area": 60
+   },
+   {
+    "kind": "office",
+    "area": 30,
+    "count": 3
+   },
+   {
+    "kind": "wc",
+    "area": 4,
+    "count": 2
+   }
+  ]
+ },
+ "adjacency": [
+  [
+   "meeting",
+   "lobby",
+   1
+  ],
+  [
+   "office",
+   "corridor",
+   2
+  ],
+  [
+   "wc",
+   "corridor",
+   1
+  ]
+ ]
+}

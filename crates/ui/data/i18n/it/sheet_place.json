@@ -1,0 +1,15 @@
+{
+ "sheet_place.place_view_tip": "Posiziona una vista o un prospetto sulla tavola",
+ "sheet_place.properties_tip": "Numero, nome, formato carta e revisioni della tavola",
+ "sheet_place.print_tip": "Stampa o esporta la tavola",
+ "sheet_place.fit_tip": "Adatta la tavola alla finestra",
+ "sheet_place.activate_tip": "Modifica la vista direttamente sulla tavola: sposta, zoom e ritaglio",
+ "sheet_place.open_view_tip": "Apri la vista nella propria scheda",
+ "sheet_place.done_tip": "Termina la modifica della vista sulla tavola",
+ "sheet_place.reset_crop_tip": "Rimuovi il ritaglio e mostra l'intera vista",
+ "sheet_place.scale_tip": "Scala della vista selezionata sulla tavola",
+ "sheet_place.title_tip": "Titolo mostrato sotto la vista sulla tavola",
+ "sheet_place.banner": "Modifica della vista sulla tavola",
+ "sheet_place.new_set_tip": "Crea un set di tavole da stampare insieme",
+ "sheet_place.new_sheet_tip": "Aggiungi una tavola al progetto"
+}

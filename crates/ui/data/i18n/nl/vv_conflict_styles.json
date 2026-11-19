@@ -1,0 +1,6 @@
+{
+ "vv_conflict.styles.conflict": "Objectstijlen van een bewerkte categorie zijn in het model gewijzigd (ongedaan maken of een ander venster) terwijl dit venster wijzigingen had. Uw wijzigingen blijven behouden.",
+ "vv_conflict.styles.keep": "Mijn wijzigingen behouden",
+ "vv_conflict.styles.reload": "Opnieuw laden",
+ "vv_conflict.styles.answer_first": "Kies eerst Mijn wijzigingen behouden of Opnieuw laden"
+}

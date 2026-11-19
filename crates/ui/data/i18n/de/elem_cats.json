@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "Eine Masse kann nicht gedreht oder gespiegelt werden: Ihr Formverlauf hat keinen gedrehten Schritt. Verschieben oder kopieren oder in der neuen Richtung neu zeichnen.",
+ "sched_cats.col.name": "Name",
+ "sched_cats.col.material": "Material",
+ "sched_cats.col.void": "Aussparung",
+ "sched_cats.col.inplace": "Am Ort gefertigt",
+ "sched_cats.col.volume": "Nettovolumen",
+ "sched_cats.col.area": "Oberfläche",
+ "sched_cats.col.floor_area": "Bodenfläche",
+ "sched_cats.col.thickness": "Dicke",
+ "sched_cats.col.points": "Punkte",
+ "elem.toposolid.points": "Vermessungspunkte",
+ "elem.toposolid.count": "Punkte",
+ "elem.toposolid.low": "Niedrigster",
+ "elem.toposolid.high": "Höchster",
+ "elem.toposolid.edit": "Punkte bearbeiten",
+ "elem.toposolid.edit_tip": "Vermessungspunkte im Grundriss wählen, ziehen und ihre Höhe festlegen",
+ "elem.toposolid.pick_hint": "Einen Punkt im Grundriss anklicken, um ihn zu wählen. Erneut klicken, um ihn hinzuzufügen oder zu entfernen.",
+ "elem.toposolid.z": "Höhe ({n})",
+ "elem.toposolid.mixed": "Die gewählten Punkte unterscheiden sich; ein neuer Wert setzt alle.",
+ "elem.toposolid.edit_help": "Einen Punkt ziehen, um ihn zu verschieben. Einen Wert eingeben und Enter drücken, um die Höhe festzulegen. Rücktaste entfernt die gewählten Punkte, Esc beendet.",
+ "elem.toposolid.done": "Fertig"
+}

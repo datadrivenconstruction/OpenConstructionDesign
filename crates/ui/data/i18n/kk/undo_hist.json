@@ -1,0 +1,8 @@
+{
+ "undo.undone": "Қайтарылды: {what}",
+ "undo.redone": "Қайталанды: {what}",
+ "undo.action.edit.redo": "Қайталау",
+ "undo.action.edit.undo": "Қайтару",
+ "hdr.unsaved": "Сақталмаған өзгерістер",
+ "hdr.file_menu": "Файл мәзірі"
+}

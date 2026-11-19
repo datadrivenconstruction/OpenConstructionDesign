@@ -1,0 +1,8 @@
+{
+ "undo.undone": "Отменено: {what}",
+ "undo.redone": "Повторено: {what}",
+ "undo.action.edit.redo": "Повторить",
+ "undo.action.edit.undo": "Отменить",
+ "hdr.unsaved": "Есть несохранённые изменения",
+ "hdr.file_menu": "Меню «Файл»"
+}

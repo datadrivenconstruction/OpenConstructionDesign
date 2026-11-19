@@ -1,0 +1,15 @@
+{
+ "cmd.ctx.floor.clean_outline": "Pulisci contorno",
+ "cmd.ctx.floor.clean_outline.desc": "Rimuove le punte strette dove il contorno del solaio si ripiega su se stesso. Mostra prima un'anteprima; un solo passo di annullamento.",
+ "outline_cleanup.title": "Pulisci contorno",
+ "outline_cleanup.intro": "Il contorno di questo solaio si ripiega su se stesso in punte strette: {n}. La pulizia le rimuove; il resto resta invariato.",
+ "outline_cleanup.legend_before": "Linea spessa: il contorno attuale",
+ "outline_cleanup.legend_after": "Linea sottile: il contorno dopo la pulizia",
+ "outline_cleanup.undo": "Puoi annullare in un solo passo.",
+ "outline_cleanup.apply": "Pulisci",
+ "outline_cleanup.cancel": "Annulla",
+ "outline_cleanup.done": "Contorno pulito, punte rimosse: {n}",
+ "outline_cleanup.none": "Il contorno di questo solaio non ha punte",
+ "outline_cleanup.failed": "Impossibile pulire il contorno",
+ "outline_cleanup.changed": "Il contorno è cambiato dopo l'anteprima; nulla è stato scritto. Verifica la nuova anteprima."
+}

@@ -1,0 +1,12 @@
+{
+ "opt.stair.straight": "Recta",
+ "opt.stair.l": "L",
+ "opt.stair.u": "U",
+ "opt.stair.gap": "Hueco central",
+ "hint.stair.corner": "Escalera en L: elija el vértice de giro · Retroceso — quitar el último punto · Esc — quitar el último punto; sin puntos, cancelar",
+ "hint.stair.side": "Escalera: elija el lado del segundo tramo · Retroceso — quitar el último punto · Esc — quitar el último punto; sin puntos, cancelar",
+ "tool.stair.flights": "{n} contrahuellas (total {m})",
+ "tool.stair.err_split": "Cada tramo necesita al menos 2 contrahuellas: el primer tramo tiene {n} de {m}",
+ "tool.stair.err_comfort": "La contrahuella y la huella incumplen la regla de confort (2R + T)",
+ "tool.stair.err_input": "El tamaño de la escalera está fuera de rango: revise ancho, altura y descansillo"
+}

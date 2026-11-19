@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "ท่อลม",
+ "mep3d.pipe": "ท่อ",
+ "mep3d.tray": "รางสายไฟ",
+ "mep3d.conduit": "ท่อร้อยสาย",
+ "mep3d.system": "ระบบ",
+ "mep3d.length": "ความยาว",
+ "mep3d.diameter": "เส้นผ่านศูนย์กลาง",
+ "mep3d.width": "ความกว้าง",
+ "mep3d.height": "ความสูง",
+ "mep3d.insulation": "ฉนวน",
+ "mep3d.tip": "Enter — นำไปใช้; ข้อต่อจะคำนวณใหม่",
+ "mep3d.size_positive": "ขนาดต้องมากกว่าศูนย์",
+ "mep3d.not_changed": "ไม่ได้เปลี่ยน: {e}",
+ "mep3d.copied": "คัดลอกเส้นทางแล้ว",
+ "mep3d.changed": "เปลี่ยนเส้นทางแล้ว",
+ "mep3d.deleted": "ลบองค์ประกอบแล้ว: {n}",
+ "mep3d.not_deleted": "ไม่ได้ลบ: {e}",
+ "mep3d.no_wall_type": "ไม่มีประเภทผนัง",
+ "mep3d.demo.supply": "จ่ายลม S1",
+ "mep3d.demo.heating": "ทำความร้อน",
+ "mep3d.demo.power": "กำลังไฟ"
+}

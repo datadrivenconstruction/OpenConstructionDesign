@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "שינויים בחוברת העבודה לא הוחלו",
+ "workbook_changes.wb.body": "סגירה או מעבר לפרויקט אחר מסירים אותם.",
+ "workbook_changes.wb.line": "ייבוא חוברת עבודה: {n} שינויים לא הוחלו",
+ "workbook_changes.wb.review": "בדוק",
+ "workbook_changes.wb.discard": "בטל שינויים"
+}

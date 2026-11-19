@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "הגובה {t} לא נקלט ({why}). דבר לא שונה",
+ "host_shape.shape.elev_prompt_in": "גובה, ft-in…",
+ "host_shape.shape.elev_in": "{v} in"
+}

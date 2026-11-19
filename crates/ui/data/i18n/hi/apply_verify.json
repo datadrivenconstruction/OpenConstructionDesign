@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "लागू करना रोका गया: मॉडल पहले जैसा रखा गया",
+ "apply_verify.rolled_back": "लागू बदलाव ड्राफ़्ट से मेल नहीं खाया और पलटा गया; मॉडल अपरिवर्तित है। {what}",
+ "apply_verify.diff.missing": "ड्राफ़्ट {what} {kind} दिखाता है, पर लागू करने ने ऐसा नहीं किया।",
+ "apply_verify.diff.extra": "{what} पर {kind} लागू हुआ, जो ड्राफ़्ट नहीं दिखाता।",
+ "apply_verify.diff.kind": "ड्राफ़्ट {what} {shown} दिखाता है, पर लागू करने ने इसे {applied} किया।",
+ "apply_verify.diff.value": "{what}: “{col}” ड्राफ़्ट से अलग निकला।",
+ "apply_verify.diff.truncated": "ड्राफ़्ट और लागू बदलाव के आकार में अंतर है।",
+ "apply_verify.diff.unreadable": "लागू बदलाव वापस नहीं पढ़ा जा सका ({e})।",
+ "apply_verify.no_base": "लागू नहीं हुआ: ड्राफ़्ट जाँचने के लिए प्रति नहीं है। मॉडल अपरिवर्तित है; ड्राफ़्ट फिर से माँगें।",
+ "apply_verify.take_back_failed": "वापस लेना विफल ({e}): पूर्ववत करें का उपयोग करें।",
+ "apply_verify.kind.created": "बनाया गया",
+ "apply_verify.kind.changed": "बदला गया",
+ "apply_verify.kind.deleted": "हटाया गया",
+ "apply_verify.card.type_row": "प्रकार {type} · {n} तत्व यह बदलाव लेंगे"
+}

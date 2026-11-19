@@ -1,0 +1,40 @@
+{
+ "rebar_hosts.hosts": "Host: {list}",
+ "rebar_hosts.kind.column": "Kolom",
+ "rebar_hosts.kind.beam": "Balok",
+ "rebar_hosts.kind.wall": "Dinding",
+ "rebar_hosts.kind.slab": "Pelat",
+ "rebar_hosts.kind.footing": "Pondasi tapak",
+ "rebar_hosts.kind.raft": "Pelat pondasi",
+ "rebar_hosts.n.column": {
+  "one": "# kolom",
+  "other": "# kolom"
+ },
+ "rebar_hosts.n.beam": {
+  "one": "# balok",
+  "other": "# balok"
+ },
+ "rebar_hosts.n.wall": {
+  "one": "# dinding",
+  "other": "# dinding"
+ },
+ "rebar_hosts.n.slab": {
+  "one": "# pelat",
+  "other": "# pelat"
+ },
+ "rebar_hosts.n.footing": {
+  "one": "# pondasi tapak",
+  "other": "# pondasi tapak"
+ },
+ "rebar_hosts.n.raft": {
+  "one": "# pelat pondasi",
+  "other": "# pelat pondasi"
+ },
+ "rebar_hosts.mixed_note": "Kolom dan balok menerima batang dan sengkang; dinding, pelat, dan pondasi menerima mesh. Pilih satu grup untuk menambah tulangan.",
+ "rebar_hosts.why.mixed": "Pilihan mencampur kolom atau balok dengan dinding, pelat, atau pondasi. Pilih satu grup.",
+ "rebar_hosts.why.area_linear": "Mesh masuk ke dinding, pelat, dan pondasi, bukan kolom atau balok.",
+ "rebar_hosts.why.bars_plate": "Batang memanjang dan sengkang masuk ke kolom dan balok, bukan dinding, pelat, atau pondasi.",
+ "rebar_hosts.why.no_common_face": "Host yang dipilih tidak punya sisi selimut yang sama. Pilih host dari satu jenis.",
+ "rebar_hosts.why.no_type": "Pilih tipe batang.",
+ "rebar_hosts.kind_type": "{kind} · {type}"
+}

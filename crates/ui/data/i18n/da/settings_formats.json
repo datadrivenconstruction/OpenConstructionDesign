@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "Hvad der sker, når en regnearksfil er eksporteret",
+ "settings.area_decimals_desc": "Antal decimaler efter decimalseparatoren i arealer",
+ "settings.volume_decimals_desc": "Antal decimaler efter decimalseparatoren i volumener",
+ "settings.frac_desc": "Mindste brøkdel af en tomme i engelske længder",
+ "settings.small_area_desc": "Vis arealer under én kvadratfod i kvadrattommer",
+ "settings.sample_desc": "Sådan ser tal ud med de aktuelle valg",
+ "autosave.title_desc": "Gem en gendannelseskopi af det åbne projekt",
+ "autosave.interval_desc": "Tid mellem gendannelseskopier",
+ "autosave.keep_desc": "Ældre gendannelseskopier fjernes",
+ "autosave.folder_desc": "Tomt betyder standardmappen",
+ "autosave.remind_desc": "Påmindelse om at gemme et projekt, der endnu ikke har en fil",
+ "settings.backend_desc": "Anvendt grafikadapter",
+ "settings.news_desc": "Hvad der er ændret i denne version",
+ "settings.assoc_default_desc": "Gør denne app til standard for modelfiler",
+ "settings.data_dir_desc": "Cache, gendannelseskopier og logfiler ligger her."
+}

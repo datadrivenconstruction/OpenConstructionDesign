@@ -1,0 +1,16 @@
+{
+ "family_overwrite.ow.title": "Vil du erstatte prosjekttypeverdiene?",
+ "family_overwrite.ow.body": "Innlasting erstatter {values} i {types}. Plasserte forekomster av disse typene: {instances}.",
+ "family_overwrite.ow.values": {
+  "one": "# verdi",
+  "other": "# verdier"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# type",
+  "other": "# typer"
+ },
+ "family_overwrite.ow.list": "Typer: {list}",
+ "family_overwrite.ow.more": "og {n} til",
+ "family_overwrite.ow.back": "Tilbake til redigering",
+ "family_overwrite.ow.replace": "Erstatt verdier"
+}

@@ -1,0 +1,31 @@
+[
+ {
+  "id": "str.truss",
+  "icon": "truss",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "struct",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "str_space",
+  "repeatable": true,
+  "size": "large",
+  "priority": 6
+ },
+ {
+  "id": "str.footing_all",
+  "once": true,
+  "icon": "footing-all",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "struct",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "found",
+  "priority": 7
+ }
+]

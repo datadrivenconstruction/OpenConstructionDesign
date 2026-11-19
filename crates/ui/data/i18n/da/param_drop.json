@@ -1,0 +1,8 @@
+{
+ "param_drop.title": "Fjern parameterværdier?",
+ "param_drop.intro": "{name} er ikke længere knyttet til disse kategorier:",
+ "param_drop.line": "{category}: {values} fjernes",
+ "param_drop.undo": "Ét Ctrl+Z henter dem alle tilbage.",
+ "param_drop.confirm": "Fjern værdier og gem",
+ "param_drop.cancel": "Annullér"
+}

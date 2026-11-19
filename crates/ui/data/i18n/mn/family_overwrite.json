@@ -1,0 +1,16 @@
+{
+ "family_overwrite.ow.title": "Төслийн төрлийн утгуудыг солих уу?",
+ "family_overwrite.ow.body": "Ачаалах нь {types} дахь {values}-г сольдог. Эдгээр төрлийн байрлуулсан тохиолдлууд: {instances}.",
+ "family_overwrite.ow.values": {
+  "one": "# утга",
+  "other": "# утга"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# төрөл",
+  "other": "# төрөл"
+ },
+ "family_overwrite.ow.list": "Төрлүүд: {list}",
+ "family_overwrite.ow.more": "болон {n} өөр",
+ "family_overwrite.ow.back": "Засвар руу буцах",
+ "family_overwrite.ow.replace": "Утгуудыг солих"
+}

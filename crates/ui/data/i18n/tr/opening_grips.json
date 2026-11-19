@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "Menteşe tarafını çevir",
+ "cmd.edit.flip_hand.desc": "Seçili kapı ve pencereleri duvar boyunca aynalar; menteşeler açıklığın diğer ucuna geçer.",
+ "cmd.edit.flip_facing": "Açılım tarafını çevir",
+ "cmd.edit.flip_facing.desc": "Seçili kapı ve pencereleri duvarın diğer tarafına çevirir.",
+ "opening_grips.flip_hand": "Menteşeyi çevir",
+ "opening_grips.flip_hand.tip": "Menteşeler açıklığın diğer ucuna geçer (Shift+F)",
+ "opening_grips.flip_facing": "Tarafı çevir",
+ "opening_grips.flip_facing.tip": "Duvarın diğer tarafındaki açılım (Shift+G)",
+ "opening_grips.flip.done": "Çevrildi: {n}",
+ "opening_grips.flip.none": "Çevirmek için bir kapı veya pencere seçin",
+ "opening_grips.flip.fail": "Çevrilmedi: {why}"
+}

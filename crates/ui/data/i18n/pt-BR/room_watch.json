@@ -1,0 +1,4 @@
+{
+ "room_watch.room.dup": "O ambiente {room} está na região do ambiente {other}: área e volume são contados somente no ambiente {other}",
+ "ai.issue.room_dup": "O ambiente está na região do ambiente {0}: a área dele é contada ali"
+}

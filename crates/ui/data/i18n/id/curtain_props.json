@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "Panel",
+ "curtain_props.cw.panel_cell": "Sel {i}×{j} · dinding tirai #{id}",
+ "curtain_props.cw.kind": "Tipe",
+ "curtain_props.cw.kind.glazed": "Kaca",
+ "curtain_props.cw.kind.solid": "Padat",
+ "curtain_props.cw.kind.door": "Pintu",
+ "curtain_props.cw.kind.window": "Jendela",
+ "curtain_props.cw.kind.empty": "Kosong",
+ "curtain_props.cw.name": "Nama",
+ "curtain_props.cw.swing_side": "Membuka ke sisi lain",
+ "curtain_props.cw.swing_hinge": "Engsel di ujung sel",
+ "curtain_props.cw.size": "Ukuran",
+ "curtain_props.cw.cell_area": "Luas sel",
+ "curtain_props.cw.panel_area": "Luas panel",
+ "curtain_props.cw.prev": "Panel sebelumnya",
+ "curtain_props.cw.next": "Panel berikutnya",
+ "curtain_props.cw.wall": "Pilih dinding",
+ "curtain_props.cw.panel_hint": "Esc — pilihan · Ctrl+Z — batalkan",
+ "curtain_props.cw.status.panel": "Panel {i}×{j} → {kind}",
+ "e3d.err.cw_height": "tinggi dinding tirai harus lebih dari 100 mm"
+}

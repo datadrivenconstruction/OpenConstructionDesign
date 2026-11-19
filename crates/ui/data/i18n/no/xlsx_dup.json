@@ -1,0 +1,10 @@
+{
+ "xlsx_dup.dup_undo": "Angre valget",
+ "xlsx_dup.dup_undo_tip": "Rader gjort om til nye elementer ({n}) leses med sin id igjen",
+ "xlsx_dup.dup_new": "Opprett redigerte kopier som nye elementer",
+ "xlsx_dup.dup_new_tip": "Radene {rows} blir nye elementer med sine verdier; element #{id} beholder sine verdier (ett angrestegg sammen med resten)",
+ "xl.msg.dup_same": "dobbel id {}: samme verdier som rad {}; raden ignorert",
+ "xl.msg.dup_unchanged": "dobbel id {}: uendret kopi av den eksporterte raden; raden ignorert",
+ "xl.msg.dup_conflict": "id {} står på rader {} med ulike verdier; ingenting brukt for denne id-en",
+ "xl.msg.dup_conflict_keep": "id {} står på rader {} med ulike verdier; ingenting brukt for denne id-en — behold én rad"
+}

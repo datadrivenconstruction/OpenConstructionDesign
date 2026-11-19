@@ -1,0 +1,6 @@
+{
+ "vv_conflict.styles.conflict": "Düzenlenmiş bir kategorinin nesne stilleri, bu pencerede düzenleme varken modelde değişti (geri al veya başka pencere). Düzenlemeleriniz korundu.",
+ "vv_conflict.styles.keep": "Düzenlemelerimi koru",
+ "vv_conflict.styles.reload": "Yeniden yükle",
+ "vv_conflict.styles.answer_first": "Önce Düzenlemelerimi koru veya Yeniden yükle seçin"
+}

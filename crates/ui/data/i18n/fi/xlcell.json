@@ -1,0 +1,15 @@
+{
+ "xl.msg.cell_clipped": "teksti katkaistiin solun rajaan; vain luku, muokkausta ei käytetty",
+ "xlcell.status": "Viety. {count} solua lyhennettiin tai jätettiin tyhjiksi — katso yksityiskohdat ikkunasta.",
+ "xlcell.title": "Viennin muuttamat solut",
+ "xlcell.intro": "Näitä soluja ei voitu kirjoittaa sellaisinaan. Koko arvo säilyy mallissa; solu on lukittu, eikä sitä voi muokata työkirjassa.",
+ "xlcell.col_sheet": "Arkki",
+ "xlcell.col_row": "Rivi",
+ "xlcell.col_col": "Sarake",
+ "xlcell.col_id": "Elementin tunnus",
+ "xlcell.col_what": "Mitä tapahtui",
+ "xlcell.what_clipped": "Teksti katkaistu solun rajaan",
+ "xlcell.what_blank": "Ei äärellinen luku, solu jätettiin tyhjäksi",
+ "xlcell.more": "… ja {count} muuta",
+ "xlcell.close": "Sulje"
+}

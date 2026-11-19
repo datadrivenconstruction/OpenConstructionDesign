@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "Көлемді бұруға немесе айнаға салуға болмайды: оның пішін тарихында бұрылған қадам жоқ. Оны жылжытыңыз немесе көшіріңіз, немесе жаңа бағытта қайта салыңыз.",
+ "sched_cats.col.name": "Аты",
+ "sched_cats.col.material": "Материал",
+ "sched_cats.col.void": "Қуыс",
+ "sched_cats.col.inplace": "Орнында",
+ "sched_cats.col.volume": "Таза көлемі",
+ "sched_cats.col.area": "Беті ауданы",
+ "sched_cats.col.floor_area": "Еден ауданы",
+ "sched_cats.col.thickness": "Қалыңдығы",
+ "sched_cats.col.points": "Нүктелер",
+ "elem.toposolid.points": "Геодезиялық нүктелер",
+ "elem.toposolid.count": "Нүктелер",
+ "elem.toposolid.low": "Ең төмен",
+ "elem.toposolid.high": "Ең жоғары",
+ "elem.toposolid.edit": "Нүктелерді өңдеу",
+ "elem.toposolid.edit_tip": "Жоспарда геодезиялық нүктелерді таңдау, сүйреу және биіктігін орнату",
+ "elem.toposolid.pick_hint": "Таңдау үшін жоспардағы нүктені басыңыз. Қосу немесе алып тастау үшін тағы басыңыз.",
+ "elem.toposolid.z": "Биіктік ({n})",
+ "elem.toposolid.mixed": "Таңдалған нүктелер әр түрлі; жаңа мән барлығын орнатады.",
+ "elem.toposolid.edit_help": "Нүктені жылжыту үшін сүйреңіз. Биіктікті орнату үшін мән теріп, Enter басыңыз. Backspace таңдалған нүктелерді жояды, Esc шығады.",
+ "elem.toposolid.done": "Дайын"
+}

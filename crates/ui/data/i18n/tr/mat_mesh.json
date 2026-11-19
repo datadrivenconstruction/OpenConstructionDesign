@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "İçe aktarılmış ağlar",
+ "mat_mesh.mesh.none_selected": "Bu malzemeyi vermek için 3B görünümde içe aktarılmış ağları seçin.",
+ "mat_mesh.mesh.current": "Seçili ilk ağ: {material}",
+ "mat_mesh.mesh.current_none": "Seçili ilk ağın malzemesi yok.",
+ "mat_mesh.mesh.assign": "{n} seçiliye ata",
+ "mat_mesh.mesh.assign_tip": "Gerçekçi stil, bu malzemenin dokusunu seçili ağlarda gösterir",
+ "mat_mesh.mesh.assign_cat": "{category} kategorisine ata",
+ "mat_mesh.mesh.assign_cat_tip": "Kendi malzemesi olmayan, bu kategorideki her içe aktarılmış ağ",
+ "mat_mesh.mesh.clear": "Seçilenleri temizle",
+ "mat_mesh.mesh.clear_tip": "Seçili ağlar kendi kategori malzemesine veya düz renge döner",
+ "mat_mesh.mesh.clear_cat": "Kategoriyi temizle"
+}

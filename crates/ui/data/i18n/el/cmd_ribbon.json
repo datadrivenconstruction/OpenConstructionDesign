@@ -1,0 +1,23 @@
+{
+  "cmd.arch.room_sep.short": "Διαχωριστικό",
+  "cmd.str.footing.short": "Πέδιλο υποστ.",
+  "cmd.str.strip_footing.short": "Ταινιακό θεμ.",
+  "cmd.str.analytical.short": "Αναλυτικό",
+  "cmd.mep.terminal.short": "Τερμ. αέρα",
+  "cmd.mod.isolate.short": "Απομόνωση",
+  "cmd.view.ui.short": "Διεπαφή",
+  "cmd.mgr.params.short": "Παράμετροι",
+  "cmd.ctx.wall.attach.short": "Σύνδεση",
+  "cmd.mass.unjoin.short": "Αποσύνδεση",
+  "cmd.mod.unjoin.short": "Αποσύνδεση",
+  "cmd.arch.void_extrusion.short": "Εξώθηση κενού",
+  "cmd.e3d.snap.short": "Συνδέσεις 3D",
+  "cmd.mgr.open_big.short": "Μεγ. αρχείο…",
+  "cmd.site.edit_points.short": "Σημεία εδάφ.",
+  "cmd.view.reveal_3d.short": "Κατηγορίες",
+  "cmd.help.check_update.short": "Ενημερώσεις",
+  "cmd.ctx.floor.link_unlink.short": "Αποσύν. ακμών",
+  "cmd.ui.onboarding.short": "Ρύθμιση…",
+  "cmd.mod.distribute.short": "Κατανομή",
+  "cmd.data.src_delta.short": "Αλλαγές XLSX…"
+}

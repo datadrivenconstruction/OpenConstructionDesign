@@ -1,0 +1,301 @@
+{
+ "schema": "gen_typology.v1",
+ "name": "secondary_school",
+ "aliases": [
+  "high_school",
+  "secondary_school_building",
+  "gymnasium_school"
+ ],
+ "base": "school",
+ "note": "secondary school: classrooms and laboratories by the floor, a sports hall, canteen and library on the ground floor; air and loads per room class",
+ "brief": {
+  "name": {
+   "en": "Secondary school",
+   "ru": "Средняя школа"
+  },
+  "floors": 3,
+  "floor_height": 3.9
+ },
+ "rules": {
+  "egress.max_travel": 45,
+  "corridor.width": 2.8,
+  "egress.protected_stairs": "enclosed"
+ },
+ "model": {
+  "title": {
+   "en": "Secondary school",
+   "ru": "Средняя школа"
+  },
+  "spaces": [
+   {
+    "class": "entrance",
+    "kind": "lobby",
+    "name": {
+     "en": "Entrance hall",
+     "ru": "Входной вестибюль"
+    },
+    "area": 90,
+    "count": 1,
+    "level": "ground",
+    "zone": "common"
+   },
+   {
+    "class": "admin_s",
+    "kind": "office",
+    "name": {
+     "en": "School office",
+     "ru": "Учительская и канцелярия"
+    },
+    "area": 30,
+    "count": 2,
+    "level": "ground",
+    "zone": "staff"
+   },
+   {
+    "class": "staff_s",
+    "kind": "staff",
+    "name": {
+     "en": "Staff room",
+     "ru": "Комната педагогов"
+    },
+    "area": 40,
+    "count": 1,
+    "level": "ground",
+    "zone": "staff"
+   },
+   {
+    "class": "canteen_s",
+    "kind": "dining",
+    "name": {
+     "en": "School canteen",
+     "ru": "Школьная столовая"
+    },
+    "area": 160,
+    "count": 1,
+    "level": "ground",
+    "zone": "common",
+    "occupancy_m2": 1.5,
+    "demand": {
+     "water_l_day": 6000
+    }
+   },
+   {
+    "class": "gym",
+    "kind": "workshop",
+    "name": {
+     "en": "Sports hall",
+     "ru": "Спортивный зал"
+    },
+    "area": 300,
+    "count": 1,
+    "level": "ground",
+    "zone": "sport",
+    "height_min": 5.0,
+    "occupancy_m2": 4,
+    "live_load_kpa": 5,
+    "demand": {
+     "supply_m3h_m2": 12
+    }
+   },
+   {
+    "class": "changing_s",
+    "kind": "staff",
+    "name": {
+     "en": "Changing room",
+     "ru": "Раздевалка"
+    },
+    "area": 30,
+    "count": 2,
+    "level": "ground",
+    "zone": "sport"
+   },
+   {
+    "class": "library",
+    "kind": "meeting",
+    "name": {
+     "en": "Library",
+     "ru": "Библиотека"
+    },
+    "area": 90,
+    "count": 1,
+    "level": "ground",
+    "zone": "common"
+   },
+   {
+    "class": "wc_s",
+    "kind": "wc",
+    "name": {
+     "en": "Pupils toilet",
+     "ru": "Туалет учащихся"
+    },
+    "area": 12,
+    "count": 4,
+    "level": "ground",
+    "zone": "common"
+   },
+   {
+    "class": "classroom_g",
+    "kind": "classroom",
+    "name": {
+     "en": "Ground-floor classroom",
+     "ru": "Класс первого этажа"
+    },
+    "area": 54,
+    "count": 6,
+    "level": "ground",
+    "zone": "teaching",
+    "occupancy_m2": 2.5,
+    "demand": {
+     "ach": 3
+    }
+   },
+   {
+    "class": "classroom",
+    "kind": "classroom",
+    "name": {
+     "en": "Classroom",
+     "ru": "Класс"
+    },
+    "area": 54,
+    "count": 10,
+    "level": "typical",
+    "zone": "teaching",
+    "occupancy_m2": 2.5,
+    "demand": {
+     "ach": 3
+    }
+   },
+   {
+    "class": "science",
+    "kind": "lab",
+    "name": {
+     "en": "Science laboratory",
+     "ru": "Учебная лаборатория"
+    },
+    "area": 72,
+    "count": 3,
+    "level": "typical",
+    "zone": "teaching",
+    "occupancy_m2": 3.5,
+    "demand": {
+     "ach": 6,
+     "water_l_day": 800
+    }
+   },
+   {
+    "class": "art",
+    "kind": "classroom",
+    "name": {
+     "en": "Art studio",
+     "ru": "Художественная мастерская"
+    },
+    "area": 72,
+    "count": 1,
+    "level": "typical",
+    "zone": "teaching",
+    "occupancy_m2": 3.5
+   },
+   {
+    "class": "it",
+    "kind": "classroom",
+    "name": {
+     "en": "Computer room",
+     "ru": "Компьютерный класс"
+    },
+    "area": 60,
+    "count": 2,
+    "level": "typical",
+    "zone": "teaching",
+    "occupancy_m2": 3,
+    "demand": {
+     "power_w_m2": 60,
+     "cooling_w_m2": 40
+    }
+   },
+   {
+    "class": "wc_s2",
+    "kind": "wc",
+    "name": {
+     "en": "Upper pupils toilet",
+     "ru": "Туалет учащихся верхнего этажа"
+    },
+    "area": 12,
+    "count": 4,
+    "level": "typical",
+    "zone": "common"
+   },
+   {
+    "class": "store_s",
+    "kind": "storage",
+    "name": {
+     "en": "Teaching store",
+     "ru": "Кладовая учебных пособий"
+    },
+    "area": 12,
+    "count": 2,
+    "level": "typical",
+    "zone": "staff"
+   }
+  ],
+  "zones": [
+   {
+    "id": "teaching",
+    "name": {
+     "en": "Teaching",
+     "ru": "Учебная зона"
+    },
+    "adjacent_to": [
+     {
+      "ref": "common",
+      "weight": 1
+     }
+    ]
+   },
+   {
+    "id": "common",
+    "name": {
+     "en": "Common",
+     "ru": "Общая зона"
+    },
+    "adjacent_to": []
+   },
+   {
+    "id": "sport",
+    "name": {
+     "en": "Sport",
+     "ru": "Спортивная зона"
+    },
+    "adjacent_to": [
+     {
+      "ref": "common",
+      "weight": 2
+     }
+    ]
+   },
+   {
+    "id": "staff",
+    "name": {
+     "en": "Staff",
+     "ru": "Административная зона"
+    },
+    "adjacent_to": []
+   }
+  ],
+  "egress": {
+   "exits_min": 2
+  },
+  "structure": {
+   "live_load_kpa": {
+    "rule": "typology.live_load_kpa"
+   }
+  },
+  "spare": {
+   "grow_share": 0.5,
+   "kind": "classroom",
+   "name": {
+    "en": "Classroom",
+    "ru": "Класс"
+   }
+  }
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "ai.plan.apply_updated": "Käytä päivitettyä suunnitelmaa",
+ "ai.plan.keys_anywhere": "Ctrl+Enter käyttää ja Esc pysäyttää pyynnön myös suunnitelmasta tai 3D-näkymästä, paitsi kun kirjoitat tekstikenttään.",
+ "ai.plan.rebased": "Päivitetty nykyistä mallia vastaan: {what}",
+ "ai.value.bad": "”{text}” ei ole kelvollinen arvo kohteelle {name}",
+ "ai.value.both": "Tekoälyavustaja muutti tämän arvon arvoon {agent}, kun kirjoitit arvon {mine}. Valitse se, joka säilytetään.",
+ "ai.value.choose_first": "Valitse ensin oma arvosi tai tekoälyavustajan arvo kortilta",
+ "ai.value.elem": "Elementti {n}: {what}",
+ "ai.value.held": "Arvosi {mine} otetaan käyttöön, kun pyyntö päättyy",
+ "ai.value.keep_agent": "Säilytä {agent}",
+ "ai.value.lost": "Arvoasi {mine} kohteelle {what} kohteessa ”{title}” ei käytetty: tekoälyavustaja poisti tämän arvon kortilta",
+ "ai.value.more": "{n} arvoa lisää: laajenna rivi",
+ "ai.value.refused": "Suunnitelma ei voinut ottaa tätä arvoa, ja se säilyttää edellisen: {why}",
+ "ai.value.refused_next": "Anna toinen arvo tai poista kohdan valinta, jotta se jätetään Käytä-toiminnon ulkopuolelle.",
+ "ai.value.tip": "Korjaa arvo luonnoksessa; malli muuttuu vain Käytä-toiminnolla. Enter vahvistaa, Esc palauttaa.",
+ "ai.value.use_mine": "Käytä {mine}",
+ "ai.value.was": "oli {old}",
+ "ai.value.bad_len": "Kenttä «{name}»: {why}"
+}

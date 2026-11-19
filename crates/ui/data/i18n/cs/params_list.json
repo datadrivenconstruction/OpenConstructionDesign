@@ -1,0 +1,26 @@
+{
+ "params_list.n_params": {
+  "one": "# parametr",
+  "few": "# parametry",
+  "other": "# parametrů"
+ },
+ "params_list.n_values": {
+  "one": "# hodnota",
+  "few": "# hodnoty",
+  "other": "# hodnot"
+ },
+ "params_list.n_elements": {
+  "one": "# prvek",
+  "few": "# prvky",
+  "other": "# prvků"
+ },
+ "params_list.exported": "{params} exportováno do {file}",
+ "params_list.export_failed": "Parametry nebyly exportovány: {why}",
+ "params_list.open_folder": "Otevřít složku",
+ "params_list.delete_tip": "Smazat parametr a jeho hodnoty",
+ "params_list.confirm": "Smazat {name} a jeho {values} na {elements}?",
+ "params_list.confirm_btn": "Smazat",
+ "params_list.cancel": "Zrušit",
+ "params_list.deleted": "Smazán parametr {name} ({values})",
+ "params_list.undo": "Zpět"
+}

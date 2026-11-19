@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "Oś X",
+ "fe.axis.y": "Oś Y",
+ "fe.axis.z": "Oś Z",
+ "fe.col.axis": "Oś",
+ "fe.col.at": "Położenie",
+ "fe.col.mode": "Tryb",
+ "fe.mode.fixed": "Stały",
+ "fe.mode.free": "Swobodny",
+ "fe.types.inherited": "Domyślnie z parametru",
+ "fe.csv.more": "Więcej działań CSV",
+ "fe.ref.selected": "Płaszczyzna: {name}"
+}

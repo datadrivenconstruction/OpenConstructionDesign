@@ -1,0 +1,25 @@
+{
+ "roof_edge.err.number": "Unesite broj",
+ "roof_edge.err.positive": "Mora biti veće od nule",
+ "roof_edge.err.nonneg": "Ne smije biti negativno",
+ "roof_edge.err.max": "Ne smije biti veće od {max}",
+ "roof_edge.list.empty_hint": "Dodajte obloge, oluke, podgledne ploče ili krovne prozore naredbama za krov",
+ "roof_edge.edit_tip": "Uredi svojstva",
+ "roof_edge.delete_tip": "Izbriši",
+ "roof_edge.pe.del_tip": "Ukloni ovu točku (presjek zadržava najmanje 3)",
+ "roof_edge.pe.up_tip": "Pomakni ovu točku gore",
+ "roof_edge.confirm_edge": "Izbrisati {name}? Ctrl+Z ga vraća.",
+ "roof_edge.confirm_profile": "Izbrisati profil {name}? Ctrl+Z ga vraća.",
+ "roof_edge.deleted_one": "Izbrisano: {name}",
+ "roof_edge.deleted_n": {
+  "one": "Obrisan # element",
+  "few": "Obrisana # elementa",
+  "other": "Obrisano # elemenata"
+ },
+ "roof_edge.profile_deleted": "Profil izbrisan",
+ "roof_edge.profile_in_use": {
+  "one": "Koristi # rubni element: prvo ga obrišite ili promijenite",
+  "few": "Koriste # rubna elementa: prvo ih obrišite ili promijenite",
+  "other": "Koristi # rubnih elemenata: prvo ih obrišite ili promijenite"
+ }
+}

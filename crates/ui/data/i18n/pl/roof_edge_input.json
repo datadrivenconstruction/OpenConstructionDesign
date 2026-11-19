@@ -1,0 +1,23 @@
+{
+ "roof_edge.err.number": "Wpisz liczbę",
+ "roof_edge.err.positive": "Musi być większe od zera",
+ "roof_edge.err.nonneg": "Nie może być ujemne",
+ "roof_edge.err.max": "Nie może przekraczać {max}",
+ "roof_edge.list.empty_hint": "Dodaj obrzeża, rynny, podbitki lub świetliki poleceniami dachu",
+ "roof_edge.edit_tip": "Edytuj właściwości",
+ "roof_edge.delete_tip": "Usuń",
+ "roof_edge.pe.del_tip": "Usuń ten punkt (przekrój zachowuje co najmniej 3)",
+ "roof_edge.pe.up_tip": "Przesuń ten punkt w górę",
+ "roof_edge.confirm_edge": "Usunąć {name}? Ctrl+Z przywróci.",
+ "roof_edge.confirm_profile": "Usunąć profil {name}? Ctrl+Z przywróci.",
+ "roof_edge.deleted_one": "Usunięto {name}",
+ "roof_edge.deleted_n": {
+  "one": "Usunięto # element",
+  "other": "Usunięto # elementów"
+ },
+ "roof_edge.profile_deleted": "Profil usunięty",
+ "roof_edge.profile_in_use": {
+  "one": "Używany przez # element krawędzi: najpierw go usuń lub zmień",
+  "other": "Używany przez # elementów krawędzi: najpierw je usuń lub zmień"
+ }
+}

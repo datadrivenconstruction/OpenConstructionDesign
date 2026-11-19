@@ -1,0 +1,11 @@
+{
+ "materials.mat.name_empty": "Material nomini kiriting",
+ "materials.mat.empty_title": "Hali materiallar yo'q",
+ "materials.mat.empty_hint": "Pastda nom kiriting va Qo'shish ni bosing",
+ "materials.mat.nothing_hint": "Qidiruvga mos material yo'q",
+ "materials.mat.clear_search": "Qidiruvni tozalash",
+ "materials.mat.replace_with": "Almashtirish",
+ "materials.mat.delete_refused": "O'chirib bo'lmaydi: material {n} joyda ishlatilgan. Avval uni almashtiring.",
+ "materials.mat.delete_confirm": "“{name}” materialini o'chirilsinmi? Buni bekor qilish mumkin.",
+ "materials.mat.replace_confirm": "{n} ta elementdagi “{from}” “{to}” bilan almashtirilsinmi? “{from}” o'chiriladi. Buni bekor qilish mumkin."
+}

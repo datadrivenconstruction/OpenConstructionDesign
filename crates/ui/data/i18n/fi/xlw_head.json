@@ -1,0 +1,15 @@
+{
+ "xlw.hd_never": "Ei vielä viety",
+ "xlw.hd_now": "juuri äsken",
+ "xlw.hd_min": "{n} min sitten",
+ "xlw.hd_hour": "{n} h sitten",
+ "xlw.hd_day": "{n} pv sitten",
+ "xlw.hd_linked": "Linkitetty",
+ "xlw.hd_watched": "Seurataan",
+ "xlw.hd_stale": "Malli muuttui viennin jälkeen",
+ "xlw.ft_export": "Vie",
+ "xlw.ft_review": "Tarkista",
+ "xlw.ft_apply": "Käytä {n} muutosta",
+ "xlw.ft_delete_missing": "Poista puuttuvat",
+ "xlw.ft_keep_missing_tip": "Poistaminen on päällä: rivittömät elementit poistetaan käytettäessä. Poista valinta säilyttääksesi ne."
+}

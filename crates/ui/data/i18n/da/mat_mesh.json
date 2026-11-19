@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "Importerede mesh",
+ "mat_mesh.mesh.none_selected": "Vælg importerede mesh i 3D-visningen for at give dem dette materiale.",
+ "mat_mesh.mesh.current": "Første valgte mesh: {material}",
+ "mat_mesh.mesh.current_none": "Første valgte mesh har intet materiale.",
+ "mat_mesh.mesh.assign": "Tildel til {n} valgte",
+ "mat_mesh.mesh.assign_tip": "Den realistiske stil viser materialets tekstur på de valgte mesh",
+ "mat_mesh.mesh.assign_cat": "Tildel til kategori {category}",
+ "mat_mesh.mesh.assign_cat_tip": "Alle importerede mesh i kategorien uden eget materiale",
+ "mat_mesh.mesh.clear": "Ryd valgte",
+ "mat_mesh.mesh.clear_tip": "Valgte mesh går tilbage til deres kategoris materiale eller den almindelige farve",
+ "mat_mesh.mesh.clear_cat": "Ryd kategori"
+}

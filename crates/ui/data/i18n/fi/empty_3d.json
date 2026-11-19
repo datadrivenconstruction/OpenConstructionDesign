@@ -1,0 +1,14 @@
+{
+ "empty.v3d_model.title": "3D-näkymässä ei ole vielä mitään",
+ "empty.v3d_model.hint": "Piirrä seinät pohjapiirrokseen, niin ne näkyvät tässä.",
+ "empty.v3d_model.action": "Avaa pohjapiirros",
+ "empty.v3d_hidden.title": "Kaikki elementit on piilotettu tässä näkymässä",
+ "empty.v3d_hidden.hint": "Tilapäinen piilotus tai eristys ei jätä mitään näkyviin. Näkymän grafiikka säilyy asetetussa tilassa.",
+ "empty.v3d_hidden.action": "Näytä kaikki",
+ "empty.v3d_graphics.title": "Näkymän grafiikka piilottaa kaikki luokat",
+ "empty.v3d_graphics.hint": "Tämän näkymän luokkasäännöt eivät jätä mitään näkyviin. Ota luokat takaisin käyttöön näkymän grafiikasta.",
+ "empty.v3d_graphics.action": "Avaa näkymän grafiikka",
+ "empty.v3d_box.title": "Leikkauslaatikko on mallin ulkopuolella",
+ "empty.v3d_box.hint": "Leikkauslaatikko leikkaa pois kaikki elementit. Sovita se takaisin mallin ympärille.",
+ "empty.v3d_box.action": "Nollaa laatikko"
+}

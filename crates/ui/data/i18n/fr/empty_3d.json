@@ -1,0 +1,14 @@
+{
+ "empty.v3d_model.title": "Rien en 3D pour l'instant",
+ "empty.v3d_model.hint": "Dessinez des murs dans le plan et ils apparaîtront ici.",
+ "empty.v3d_model.action": "Ouvrir le plan",
+ "empty.v3d_hidden.title": "Tous les éléments sont masqués dans cette vue",
+ "empty.v3d_hidden.hint": "Le masquage ou l'isolement temporaire ne laisse rien visible. Les graphiques de vue restent tels quels.",
+ "empty.v3d_hidden.action": "Tout afficher",
+ "empty.v3d_graphics.title": "Les graphiques de vue masquent toutes les catégories",
+ "empty.v3d_graphics.hint": "Les règles de catégories de cette vue ne laissent rien visible. Réactivez les catégories dans les graphiques de vue.",
+ "empty.v3d_graphics.action": "Ouvrir les graphiques de vue",
+ "empty.v3d_box.title": "La boîte de coupe est hors du modèle",
+ "empty.v3d_box.hint": "La boîte coupe tous les éléments. Ajustez-la de nouveau autour du modèle.",
+ "empty.v3d_box.action": "Réinitialiser la boîte"
+}

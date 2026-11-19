@@ -1,0 +1,10 @@
+{
+ "type_pick.pick.search": "قسمیں یا موٹائی تلاش کریں",
+ "type_pick.pick.empty": "کوئی ملتی جلتی قسم نہیں",
+ "type_pick.pick.edit": "قسم میں ترمیم…",
+ "type_pick.pick.mixed": "ملی جلی",
+ "type_pick.pick.layers": {
+  "one": "# تہہ",
+  "other": "# تہیں"
+ }
+}

@@ -1,0 +1,6 @@
+{
+ "geom.length": "Lungime",
+ "sched.cat.room_seps": "Separatoare de încăperi",
+ "room.err.point_leave": "Încăperea {n}: punctul ar ieși din contur",
+ "room.err.point_taken": "Încăperea {n}: punctul ar cădea în încăperea {other}"
+}

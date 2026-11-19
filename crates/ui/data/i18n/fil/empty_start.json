@@ -1,0 +1,8 @@
+{
+ "empty.start_recent.title": "Wala pang kamakailang proyekto",
+ "empty.start_recent.hint": "Lilitaw dito ang mga proyektong binuksan mo. Magsimula sa sample model.",
+ "empty.start_recent.action": "Buksan ang sample",
+ "start.recent_open_file": "Buksan ang file…",
+ "start.forgot": "Inalis sa kamakailan: {name}",
+ "start.forgot_undo": "I-undo"
+}

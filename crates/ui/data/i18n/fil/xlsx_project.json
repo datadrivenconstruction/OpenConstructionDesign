@@ -1,0 +1,7 @@
+{
+ "xlsx_project.title": "Na-export ang workbook na ito mula sa ibang proyekto",
+ "xlsx_project.body": "Ang workbook na “{file}” ay kabilang sa ibang proyekto. Magkakaiba ang element id sa bawat proyekto, kaya mababago ng mga row nito ang hindi kaugnay na elemento dito. Walang nabasa sa proyektong ito.",
+ "xlsx_project.export_new": "I-export ang proyektong ito sa bagong workbook",
+ "xlsx_project.close": "Isara",
+ "xlsx_project.no_project": "Hindi sinasabi ng workbook na ito kung aling proyekto ito kabilang: siguraduhing na-export ito mula sa proyektong ito."
+}

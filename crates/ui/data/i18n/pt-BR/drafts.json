@@ -1,0 +1,8 @@
+{
+ "drafts.drafts.head": "Editores abertos contêm edições que ainda não estão no projeto:",
+ "drafts.draft.family": "Família “{name}”",
+ "drafts.draft.line": "Biblioteca de linhas: {name}",
+ "drafts.draft.styles": "Estilos de linha do intervalo de vista",
+ "drafts.btn.save_all": "Salvar tudo",
+ "drafts.drafts.refused": "Um rascunho não pôde ser salvo. Nada foi fechado; o editor com o rascunho continua aberto."
+}

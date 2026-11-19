@@ -1,0 +1,6 @@
+{
+ "vv_conflict.styles.conflict": "Stilovi objekata uređene kategorije promijenili su se u modelu (poništavanje ili drugi prozor) dok je ovaj prozor imao izmjene. Vaše izmjene su sačuvane.",
+ "vv_conflict.styles.keep": "Zadrži moje izmjene",
+ "vv_conflict.styles.reload": "Ponovno učitaj",
+ "vv_conflict.styles.answer_first": "Najprije odaberite Zadrži moje izmjene ili Ponovno učitaj"
+}

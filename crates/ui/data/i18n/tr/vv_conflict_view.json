@@ -1,0 +1,4 @@
+{
+ "vv_conflict.vv.switched": "Etkin görünüm değişti. Bu düzenlemeler {view} görünümüne ait ve henüz uygulanmadı: Uygula bunları {view} görünümüne yazar, At bunları siler.",
+ "vv_conflict.vv.discard": "Düzenlemeleri at"
+}

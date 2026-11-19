@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "Alçado {t} não aceito ({why}). Nada foi alterado",
+ "host_shape.shape.elev_prompt_in": "alçado, pés-polegadas…",
+ "host_shape.shape.elev_in": "{v} pol"
+}

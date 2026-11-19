@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "Ishlayotgan vazifa ortidan navbatda: {n}",
+ "import_queue.queue_full": "Navbat to'lgan, {n} ta fayl qo'shilmadi",
+ "import_queue.changed": "{name} bu loyiha yaratilgandan keyin yangilangan. Oldingi loyiha ochildi.",
+ "import_queue.import_again": "Qayta import qilish",
+ "import_queue.kept": "Tugallangan import saqlanadi",
+ "import_queue.open_it": "Ochish",
+ "import_queue.sum.head": "import: {editable} ta tahrirlanadigan (devorlar {walls}, teshiklar {open}, qavatlar {slabs}, xonalar {rooms}, boshqalari {other}), {meshes} ta mesh sifatida",
+ "import_queue.sum.unchanged": ", o'zgarmagan {n}",
+ "import_queue.sum.updated": ", yangilangan {n}",
+ "import_queue.sum.missing": ", manbada yo'q {n} (saqlangan)",
+ "import_queue.sum.skipped": ", o'tkazib yuborilgan {n}",
+ "import_queue.sum.warnings": ", ogohlantirishlar {n}",
+ "import_queue.import_failed": "import xato: {e}"
+}

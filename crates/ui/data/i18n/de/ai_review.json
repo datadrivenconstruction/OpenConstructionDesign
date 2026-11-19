@@ -1,0 +1,5 @@
+{
+ "ai.plan.apply_n": "{n} angenommene anwenden",
+ "ai.plan.will_apply": "{n} von {m} Änderungen werden angewendet",
+ "ai.plan.keys_hint": "J/K oder Alt+Pfeil hoch/runter bewegt · A annehmen · R ablehnen · Space umschalten · Shift+A / Shift+R ganze Gruppe · Ctrl+Enter anwenden · Esc zurück zur Ansicht (Entwurf bleibt)"
+}

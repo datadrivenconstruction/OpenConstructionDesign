@@ -1,0 +1,5 @@
+{
+ "legend.legend.empty_hint": "Kirjoita nimi yllä ja paina Luo.",
+ "legend.legend.pick_hint": "Valitse selite yllä olevasta luettelosta.",
+ "legend.legend.taken": "Selite nimeltä ”{name}” on jo olemassa. Anna toinen nimi."
+}

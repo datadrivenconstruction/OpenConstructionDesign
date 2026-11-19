@@ -1,0 +1,19 @@
+{
+ "empty.v3d_gpu.title": "এই গ্রাফিক্স অ্যাডাপ্টারে 3D পাওয়া যাচ্ছে না",
+ "empty.v3d_gpu.hint": "মডেল নিরাপদ এবং প্ল্যান কাজ করছে। নিরাপদ গ্রাফিক্স দিয়ে আবার চালু করে 3D আবার চেষ্টা করুন।",
+ "empty.v3d_gpu.action": "নিরাপদ গ্রাফিক্স দিয়ে আবার চালু করুন",
+ "empty.v3d_loading.title": "3D তৈরি হচ্ছে…",
+ "empty.v3d_loading.pct": "খুলছে… {pct} %",
+ "empty.plan_hidden.title": "এই প্ল্যানে সব উপাদান লুকানো",
+ "empty.plan_hidden.hint": "সাময়িক লুকানো বা আলাদা করায় কিছুই দৃশ্যমান নেই।",
+ "empty.plan_hidden.action": "সব দেখান",
+ "empty.plan_graphics.title": "ভিউ গ্রাফিক্স সব ক্যাটেগরি লুকাচ্ছে",
+ "empty.plan_graphics.hint": "এই ভিউয়ের ক্যাটেগরি নিয়ম দেখানোর মতো কিছু রাখে না।",
+ "empty.plan_graphics.action": "ভিউ গ্রাফিক্স খুলুন",
+ "empty.plan_phase.title": "ফেজ ফিল্টার সবকিছু লুকাচ্ছে",
+ "empty.plan_phase.hint": "এই ভিউয়ে দেখানো ফেজে এই লেভেলে কিছু নেই।",
+ "empty.plan_phase.action": "ফেজ বদলান",
+ "empty.plan_level.title": "এই লেভেলে কোনো উপাদান নেই",
+ "empty.plan_level.hint": "এই মডেলের অন্য লেভেলে উপাদান আছে।",
+ "empty.plan_level.action": "যে লেভেলে উপাদান আছে সেখানে যান"
+}

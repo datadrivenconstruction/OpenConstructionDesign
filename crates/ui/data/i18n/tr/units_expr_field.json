@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "Boş girdi.",
+ "units.err.not_number": "{pos} konumunda sayı yok.",
+ "units.err.unknown_unit": "Bilinmeyen birim: {unit}.",
+ "units.err.non_positive": "Uzunluk sıfırdan büyük olmalı.",
+ "units.err.too_large": "Uzunluk {max} m değerini aşmamalı.",
+ "units.err.bad_angle": "Açı derece cinsinden bir sayıdır.",
+ "units.err.unknown_name": "Bilinmeyen ad: {name}. Değer korundu.",
+ "units.err.cycle": "{name} konumunda formül döngüsü. Değer korundu.",
+ "units.err.bad_expr": "{pos} konumundaki ifade okunamadı. Değer korundu.",
+ "units.err.div_zero": "{pos} konumunda sıfıra bölme. Değer korundu.",
+ "units.err.invalid": "Geçersiz sayı.",
+ "units.err.kept": "Değiştirilmedi: {reason}"
+}

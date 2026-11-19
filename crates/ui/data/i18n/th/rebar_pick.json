@@ -1,0 +1,7 @@
+{
+ "rebar_pick.pick.empty": "เหล็กเสริม: เลือกเสา คาน ผนัง พื้น หรือฐานราก",
+ "rebar_pick.pick.unsupported": "การเลือกนี้เสริมเหล็กไม่ได้ เลือกเสา คาน ผนัง พื้น หรือฐานราก",
+ "rebar_pick.pick.keys": "คลิกเพื่อเลือก Shift เพื่อเพิ่ม · Enter เพื่อเปิดฟอร์ม · Esc เพื่อยกเลิก",
+ "rebar_pick.pick.open": "เปิดฟอร์ม",
+ "rebar_pick.pick.cancel": "ยกเลิก"
+}

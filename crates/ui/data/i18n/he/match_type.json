@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "התאמת טיפוס",
+ "cmd.mod.match_type.short": "התאמת טיפוס",
+ "cmd.mod.match_type.desc": "בחרו קיר, רצפה, עמוד או קורה, ואז לחצו על אחרים מאותה קטגוריה כדי לתת להם את הטיפוס שלו. גררו חלון כדי להחיל על כל מה שבתוכו. Esc משחרר את המקור.",
+ "hint.match_type.pick": "התאמת טיפוס: בחרו קיר, רצפה, עמוד או קורה · Esc — יציאה",
+ "hint.match_type.apply": "התאמת טיפוס: לחצו על היעדים או גררו חלון · Esc — מקור אחר",
+ "match_type.kind.wall": "קיר",
+ "match_type.kind.slab": "רצפה",
+ "match_type.kind.column": "עמוד",
+ "match_type.kind.beam": "קורה",
+ "match_type.refuse.category": "קטגוריה אחרת: רק {cat} יכול לקבל טיפוס זה",
+ "match_type.refuse.curtain": "קיר מסך: הטיפוס שלו אינו מותאם כאן",
+ "match_type.refuse.pinned": "נעוץ: בטלו את הנעיצה כדי לשנות את הטיפוס",
+ "match_type.pick_bad": "בחרו קיר, רצפה, עמוד או קורה כמקור",
+ "match_type.same": "כבר הטיפוס הזה",
+ "match_type.done": "הטיפוס הוחל: {n}",
+ "match_type.done_skipped": "הטיפוס הוחל: {n}, דולגו (נעוצים או קיר מסך): {skipped}",
+ "match_type.failed": "הטיפוס לא שונה: {err}"
+}

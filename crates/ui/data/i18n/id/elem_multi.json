@@ -1,0 +1,10 @@
+{
+ "elem.multi.title": "{n} elemen",
+ "elem.multi.varies": "bervariasi",
+ "elem.multi.tip": "Enter mengatur semua elemen terpilih",
+ "elem.multi.hidden": "{n} baris hanya pada beberapa elemen",
+ "elem.multi.none": "Elemen terpilih tidak memiliki baris yang sama",
+ "elem.multi.range": "Nilai di luar rentang yang diizinkan",
+ "elem.multi.changed": "{n} elemen diubah · Ctrl+Z membatalkan",
+ "elem.multi.same": "Nilai ini sudah ada pada semua elemen terpilih"
+}

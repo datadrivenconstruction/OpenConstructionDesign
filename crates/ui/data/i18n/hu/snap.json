@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "Végpont",
+ "snap.midpoint": "Felezőpont",
+ "snap.perpendicular": "Merőleges",
+ "snap.wall_axis": "Falrendszertengely",
+ "snap.wall_face": "Falfelület",
+ "snap.grid": "Rács",
+ "snap.intersection": "Metszéspont",
+ "snap.grid_axis": "Rácsvonal",
+ "snap.ref_plane": "Segédsík",
+ "snap.nearest": "Legközelebbi",
+ "snap.align_x": "X irányban igazítva egy távoli ponthoz",
+ "snap.align_y": "Y irányban igazítva egy távoli ponthoz",
+ "snap.align_xy": "X és Y irányban igazítva"
+}

@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "Ongedaan maken: {what}",
+ "undo_label.redo_what": "Opnieuw doen: {what}",
+ "undo_label.undo_none": "Niets om ongedaan te maken",
+ "undo_label.redo_none": "Niets om opnieuw te doen"
+}

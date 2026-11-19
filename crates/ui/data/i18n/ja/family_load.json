@@ -1,0 +1,4 @@
+{
+ "family_load.refused": "ファミリ「{name}」を読み込めません: {msg}。プロジェクトには何も読み込まれていません。編集内容は保持されます。",
+ "family_load.loaded_all": "{n} 個のファミリを一括で読み込みました: {names}"
+}

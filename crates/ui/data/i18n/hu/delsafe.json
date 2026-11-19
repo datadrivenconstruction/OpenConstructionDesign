@@ -1,0 +1,6 @@
+{
+ "delsafe.ring.opening_shape": "Egy nyílás körvonala önmagát metszené, vagy összeomlana",
+ "delsafe.ring.opening_boundary": "Egy nyílás átmetszené vagy érintené a külső határt",
+ "delsafe.ring.openings_overlap": "Nyílások fednék át vagy érintenék egymást",
+ "xl.msg.delsafe_instance_param_on_types": "a(z) „{}” paraméter példányparaméter; az elemek táblázatában szerkessze, nem alkalmazva"
+}

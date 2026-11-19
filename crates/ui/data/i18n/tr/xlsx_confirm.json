@@ -1,0 +1,19 @@
+{
+ "xlsx_confirm.chip": "onay bekliyor",
+ "xlsx_confirm.section": "Kimliği olmayan satırlar, ada veya numaraya göre bir elemana eşleştirildi",
+ "xlsx_confirm.tag": "ada göre eşleşti",
+ "xlsx_confirm.tag_accepted": "eşleşme kabul edildi",
+ "xlsx_confirm.tag_rejected": "yeni oluşturur",
+ "xlsx_confirm.kind_room": "oda",
+ "xlsx_confirm.kind_curtain_wall": "cephe perdesi",
+ "xlsx_confirm.row_line": "{kind} #{id}, anahtar \"{key}\"",
+ "xlsx_confirm.accept": "Kabul et",
+ "xlsx_confirm.accept_tip": "Bu satırı eşleşen elemana uygula (diğerleriyle birlikte tek geri alma adımı)",
+ "xlsx_confirm.reject": "Yeni oluştur",
+ "xlsx_confirm.reject_tip": "Eşleştirme yok: bu satır yeni bir eleman oluşturur",
+ "xlsx_confirm.decide_first": "Önce ada göre eşleşen satırları kabul edin veya reddedin.",
+ "xl.msg.key_match_many": "anahtar {} elemana uyuyor; eşleştirilmedi, satır yenisini oluşturur",
+ "xl.msg.key_match_taken": "anahtar başka bir satırın kullandığı bir elemana uyuyor; eşleştirilmedi, satır yenisini oluşturur",
+ "xl.msg.key_match_kept": "korundu: eşleşme reddedildi, satır yeni bir eleman oluşturur",
+ "xl.msg.key_match_undecided": "ada göre eşleşen satırlar karar bekliyor"
+}

@@ -1,0 +1,6 @@
+{
+ "project_seed.seed_level": "Podlaží 1",
+ "project_seed.seed_wall_partition": "Příčka 100",
+ "project_seed.seed_wall_masonry": "Zděná 200",
+ "project_seed.seed_wall_exterior": "Vnější 380"
+}

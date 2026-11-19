@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "{n} ұяшық қойылды",
+ "sched_edit.pasted_skipped": "{n} ұяшық қойылды, {k} өткізілді: {why}",
+ "sched_edit.filled": "{n} ұяшық толтырылды",
+ "sched_edit.filled_skipped": "{n} ұяшық толтырылды, {k} өткізілді: {why}",
+ "sched_edit.why_ro": "{n} тек оқуға арналған",
+ "sched_edit.why_bad": "{n} жарамсыз мән",
+ "sched_edit.no_cell": "Алдымен кестеден ұяшықты нұқыңыз",
+ "sched_edit.nothing": "Жазатын ештеңе жоқ",
+ "sched_edit.not_refreshed": "Жазылды, көрініс жаңартылмады: {e}",
+ "sched_edit.failed": "өзгермеді: {e}",
+ "sched_edit.no_changes": "Өзгеріс жоқ: {u} ұяшықта осы мәндер бар",
+ "sched_edit.same_tail": ", {u} бұрыннан бірдей"
+}

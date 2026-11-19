@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "Nakalaan ang {key} ({why}) at hindi maaaring italaga muli",
+ "quick.keys.res_copy": "kopyahin",
+ "quick.keys.res_paste": "i-paste",
+ "quick.keys.res_cut": "gupitin",
+ "quick.keys.res_undo": "bawiin / ulitin",
+ "quick.keys.res_save": "i-save",
+ "quick.keys.res_palette": "palette ng utos",
+ "quick.keys.reserved_conflict": "Ginagamit na ng “{cmd}” ang {key}. Pinananatili ito roon ng Esc.",
+ "quick.keys.reserved_swap": "Palitan",
+ "quick.keys.reserved_take": "Kunin ito",
+ "quick.keys.reserved_keep": "Panatilihin",
+ "quick.keys.reserved_os": "Ginagamit ng system:"
+}

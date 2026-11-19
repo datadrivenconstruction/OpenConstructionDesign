@@ -1,0 +1,7 @@
+{
+ "recover.untitled_note": "Acest proiect nu a fost salvat niciodată",
+ "recover.file_missing": "Fișierul de proiect nu a fost găsit",
+ "recover.banner": "S-au găsit modificări nesalvate dintr-o sesiune anterioară pentru {name}",
+ "recover.banner_review": "Verifică",
+ "recover.later_archived": "Amânat de {n} ori: copiile au fost mutate în arhivă"
+}

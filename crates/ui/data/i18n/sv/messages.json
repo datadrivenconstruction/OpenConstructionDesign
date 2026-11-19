@@ -1,0 +1,7 @@
+{
+ "messages.title": "Meddelanden",
+ "messages.desc": "Historik över meddelanden. Inga nya varningar eller fel.",
+ "messages.desc_new": "{n} nya varningar eller fel. Klicka för att läsa dem.",
+ "messages.copy": "Kopiera alla",
+ "messages.clear": "Rensa alla"
+}

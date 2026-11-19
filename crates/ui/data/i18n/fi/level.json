@@ -1,0 +1,13 @@
+{
+ "level.err_open": "Tasoa ei avattu: {e}",
+ "level.need_name": "Taso tarvitsee nimen ja korkeusaseman",
+ "level.created": "Taso ”{name}” luotu",
+ "level.err_create": "Tasoa ei luotu: {e}",
+ "level.err_edit": "Tasoa ei muutettu: {e}",
+ "level.edited": "Taso ”{name}” muutettu",
+ "level.edited_stale": "Taso ”{name}” muutettu, näkymää ei päivitetty: {e}",
+ "level.last": "Viimeistä tasoa ei voi poistaa",
+ "level.deleted": "Taso poistettu",
+ "level.not_empty": "Taso ei ole tyhjä: poista ensin sen elementit",
+ "level.err_delete": "Tasoa ei poistettu: {e}"
+}

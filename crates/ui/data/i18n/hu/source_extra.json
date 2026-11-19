@@ -1,0 +1,5 @@
+{
+ "src.more": "Több",
+ "src.cf.chosen": "{n} / {m} kiválasztva",
+ "src.opt.allow_mass_warn": "Figyelem: a fájl a legtöbb importált elemmel nem egyezik, ezért az egyesítés sok adatot módosíthat."
+}

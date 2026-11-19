@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "Inserir camada abaixo",
+ "type_layers.layer.delete": "Excluir camada",
+ "type_layers.layer.delete_last": "Um tipo precisa de pelo menos uma camada",
+ "type_layers.value.bad": "Não é um valor positivo válido",
+ "type_layers.value.required": "Obrigatório",
+ "type_layers.unsaved.title": "Alterações não salvas em {name}",
+ "type_layers.unsaved.body": "Aplicá-las ao tipo ou descartá-las?",
+ "type_layers.unsaved.discard": "Descartar"
+}

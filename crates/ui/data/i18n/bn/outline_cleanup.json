@@ -1,0 +1,15 @@
+{
+ "cmd.ctx.floor.clean_outline": "রূপরেখা পরিষ্কার করুন",
+ "cmd.ctx.floor.clean_outline.desc": "মেঝের রূপরেখা যেখানে নিজের উপর ফিরে আসে সেই সরু কাঁটা সরায়। আগে প্রিভিউ দেখায়; এক ধাপে ফিরিয়ে আনা যায়।",
+ "outline_cleanup.title": "রূপরেখা পরিষ্কার করুন",
+ "outline_cleanup.intro": "এই মেঝের রূপরেখা সরু কাঁটায় নিজের উপর ফিরে আসে: {n}। পরিষ্কার করলে সেগুলো সরবে; বাকি সব আগের মতোই থাকবে।",
+ "outline_cleanup.legend_before": "মোটা রেখা: এখনকার রূপরেখা",
+ "outline_cleanup.legend_after": "পাতলা রেখা: পরিষ্কারের পরের রূপরেখা",
+ "outline_cleanup.undo": "এক ধাপে এটি ফিরিয়ে আনা যাবে।",
+ "outline_cleanup.apply": "পরিষ্কার করুন",
+ "outline_cleanup.cancel": "বাতিল",
+ "outline_cleanup.done": "রূপরেখা পরিষ্কার হয়েছে, কাঁটা সরানো হয়েছে: {n}",
+ "outline_cleanup.none": "এই মেঝের রূপরেখায় কোনো কাঁটা নেই",
+ "outline_cleanup.failed": "রূপরেখা পরিষ্কার করা যায়নি",
+ "outline_cleanup.changed": "প্রিভিউয়ের পর রূপরেখা বদলেছে; কিছু লেখা হয়নি। নতুন প্রিভিউ দেখুন।"
+}

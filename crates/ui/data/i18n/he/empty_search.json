@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "לא נמצא דבר",
+ "empty.browser_search.hint": "אין מבט, מפלס, סוג או חדר שתואמים לחיפוש הזה.",
+ "empty.browser_search.action": "נקה חיפוש",
+ "empty.xl_filtered.title": "אין רשומות שתואמות לסינונים",
+ "empty.xl_filtered.hint": "הפעל סוגים נוספים, בחר גיליון אחר או שנה את טקסט החיפוש.",
+ "empty.xl_filtered.action": "נקה סינונים",
+ "empty.xl_nochanges.title": "אין שינויים בחוברת",
+ "empty.xl_nochanges.hint": "החוברת תואמת למודל: ייבוא שלה לא ישנה דבר.",
+ "empty.version_same.title": "המודלים זהים",
+ "empty.version_same.hint": "לא נמצאו הבדלים בין המודל הפתוח לגרסה שנבחרה.",
+ "empty.templates.title": "עדיין אין תבניות מבט",
+ "empty.templates.hint": "צור תבנית מהמבט הנוכחי כדי להשתמש בהגדרותיו במבטים אחרים.",
+ "empty.templates.action": "תן שם לתבנית",
+ "empty.fe_params.title": "עדיין אין פרמטרים",
+ "empty.fe_params.hint": "הוסף פרמטר למטה כדי לשלוט במידות, בחומרים או בנראות.",
+ "empty.fe_params.action": "הוסף פרמטר"
+}

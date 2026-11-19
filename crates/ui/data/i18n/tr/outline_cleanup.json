@@ -1,0 +1,15 @@
+{
+ "cmd.ctx.floor.clean_outline": "Konturu temizle",
+ "cmd.ctx.floor.clean_outline.desc": "Kat konturunun kendi üzerine döndüğü dar uçları kaldırır. Önce önizleme gösterir; tek geri alma adımı.",
+ "outline_cleanup.title": "Konturu temizle",
+ "outline_cleanup.intro": "Bu katın konturu dar uçlar oluşturarak kendi üzerine dönüyor: {n}. Temizleme bunları kaldırır; diğer her şey olduğu gibi kalır.",
+ "outline_cleanup.legend_before": "Kalın çizgi: şu anki kontur",
+ "outline_cleanup.legend_after": "İnce çizgi: temizlemeden sonraki kontur",
+ "outline_cleanup.undo": "Bunu tek adımda geri alabilirsiniz.",
+ "outline_cleanup.apply": "Temizle",
+ "outline_cleanup.cancel": "İptal",
+ "outline_cleanup.done": "Kontur temizlendi, uçlar kaldırıldı: {n}",
+ "outline_cleanup.none": "Bu katın konturunda uç yok",
+ "outline_cleanup.failed": "Kontur temizlenemedi",
+ "outline_cleanup.changed": "Kontur önizlemeden sonra değişti; hiçbir şey yazılmadı. Yeni önizlemeyi kontrol edin."
+}

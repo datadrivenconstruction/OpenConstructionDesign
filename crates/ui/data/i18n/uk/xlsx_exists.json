@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "Ця книга вже існує",
+ "xlsx_exists.foreign": "Це не книга цього проєкту, тому її ніколи не замінюють.",
+ "xlsx_exists.pending": "У ній {n} правок, які ще не застосовано до моделі.",
+ "xlsx_exists.outside": "У ній {n} рядків, яких немає в новому експорті.",
+ "xlsx_exists.new_name": "Експорт до {name}",
+ "xlsx_exists.apply_first": "Спершу застосуйте їх",
+ "xlsx_exists.replace": "Замінити (стару книгу в _archive)",
+ "xlsx_exists.archived": "Стару книгу перенесено до {path}",
+ "xlsx_exists.archive_failed": "Стару книгу не вдалося перемістити, нічого не експортовано: {error}"
+}

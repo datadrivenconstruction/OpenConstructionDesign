@@ -1,0 +1,13 @@
+{
+ "ai.proposal.title": "Ügynök javaslata",
+ "ai.proposal.meta": "{actor} · műveletek: {ops}",
+ "ai.proposal.apply.desc": "A teljes javaslatot egy lépésként alkalmazza; a Ctrl+Z visszavonja",
+ "ai.proposal.applying": "Alkalmazás…",
+ "ai.proposal.applied": "A javaslat alkalmazva. A Ctrl+Z visszavonja.",
+ "ai.proposal.applied_resync": "A javaslat alkalmazva, de a nézet még nem frissült. Magától frissül; a Ctrl+Z visszavonja a lépést.",
+ "ai.proposal.stale": "A modell megváltozott a javaslat előnézete után. Kérd meg az ügynököt, hogy javasolja újra.",
+ "ai.proposal.toast.applied": "Javaslat alkalmazva. A Ctrl+Z visszavonja.",
+ "ai.proposal.toast.stale": "A modell megváltozott az előnézet után, ezért semmi sem lett alkalmazva. Nézd meg újra az előnézetet: kérd meg az ügynököt, hogy új javaslatot tegyen.",
+ "ai.proposal.toast.refused": "A javaslat nem lett alkalmazva: {reason}",
+ "ai.proposal.rejected": "A javaslatot elutasítottuk."
+}

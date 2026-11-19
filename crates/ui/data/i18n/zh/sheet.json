@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "快捷键参考",
+ "cmd.help.shortcuts.desc": "按上下文显示您当前使用的全部快捷键。在文本框之外按 ? 即可打开。",
+ "sheet.title": "键盘快捷键",
+ "sheet.filter": "按命令或按键筛选",
+ "sheet.filter_label": "筛选快捷键",
+ "sheet.customize": "自定义…",
+ "sheet.close": "关闭",
+ "sheet.esc_close": "关闭",
+ "sheet.none": "没有匹配的快捷键",
+ "sheet.none_hint": "请尝试其他词或按键。",
+ "sheet.sec.general": "常规",
+ "sheet.sec.plan": "平面",
+ "sheet.sec.view3d": "三维",
+ "sheet.sec.schedule": "明细表",
+ "sheet.sec.sheets": "图纸",
+ "sheet.sec.ai": "AI"
+}

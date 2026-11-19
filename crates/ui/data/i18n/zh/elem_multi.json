@@ -1,0 +1,10 @@
+{
+ "elem.multi.title": "{n} 个图元",
+ "elem.multi.varies": "不同",
+ "elem.multi.tip": "按 Enter 设置所有所选图元",
+ "elem.multi.hidden": "仅 {n} 行适用于部分图元",
+ "elem.multi.none": "所选图元没有共同的行",
+ "elem.multi.range": "数值超出允许范围",
+ "elem.multi.changed": "已更改 {n} 个图元 · Ctrl+Z 撤销",
+ "elem.multi.same": "所有所选图元已是此数值"
+}

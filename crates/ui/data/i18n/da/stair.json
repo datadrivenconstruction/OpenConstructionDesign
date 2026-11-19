@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "Trapper",
+ "selcat.railing": "Rækværker",
+ "quick.cat.stair": "Trapper",
+ "quick.cat.railing": "Rækværker",
+ "stair.risers": "Trin",
+ "stair.riser": "Trinhøjde",
+ "stair.comfort": "2R + T",
+ "stair.tread_auto": "Trinbredde efter regel",
+ "stair.tread_auto_tip": "Slip den indtastede trinbredde, og lad 2R + T-reglen fastsætte den",
+ "stair.broken": "Denne trappe passer ikke til sine etager",
+ "railing.host_stair": "Placeret på trappe #{id}",
+ "railing.host_path": "Skitsér rækværk",
+ "railing.length": "Længde",
+ "stair.deleted_with": "med {n} tilknyttede rækværker"
+}

@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "Đã dán {n} ô",
+ "sched_edit.pasted_skipped": "Đã dán {n} ô, bỏ qua {k}: {why}",
+ "sched_edit.filled": "Đã điền {n} ô",
+ "sched_edit.filled_skipped": "Đã điền {n} ô, bỏ qua {k}: {why}",
+ "sched_edit.why_ro": "{n} chỉ đọc",
+ "sched_edit.why_bad": "{n} giá trị không hợp lệ",
+ "sched_edit.no_cell": "Hãy nhấn vào một ô của bảng thống kê trước",
+ "sched_edit.nothing": "Không có gì để ghi",
+ "sched_edit.not_refreshed": "Đã ghi, nhưng góc nhìn chưa làm mới: {e}",
+ "sched_edit.failed": "chưa thay đổi: {e}",
+ "sched_edit.no_changes": "Không có thay đổi: {u} ô đã có các giá trị này",
+ "sched_edit.same_tail": ", {u} đã bằng nhau"
+}

@@ -1,0 +1,5 @@
+{
+ "materials.mat.conflict": "This material changed in the model (undo or another window) while the card had edits. Your edits are kept.",
+ "materials.mat.keep": "Keep my edits",
+ "materials.mat.reload": "Reload"
+}

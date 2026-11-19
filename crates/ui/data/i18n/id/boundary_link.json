@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "Pilih seluruh loop dinding",
+ "cmd.sketch.link_unlink": "Lepas tepi dari dinding",
+ "cmd.sketch.link_repick": "Pilih ulang dinding tepi",
+ "cmd.ctx.floor.link_unlink": "Lepas tepi dari dinding",
+ "cmd.ctx.floor.link_accept": "Terima tepi dari dinding yang dihapus",
+ "boundary_link.hint.loop": "Klik dinding: rangkaian dinding tertutup menjadi tepi terhubung",
+ "boundary_link.hint.repick": "Klik dinding yang sejajar dengan tepi: tepi akan mengikutinya",
+ "boundary_link.need_sketch": "Buka sketsa batas terlebih dahulu",
+ "boundary_link.need_edge": "Arahkan ke tepi sketsa",
+ "boundary_link.need_straight": "Hanya tepi lurus yang dapat mengikuti dinding",
+ "boundary_link.need_floor": "Pilih lantai",
+ "boundary_link.no_wall": "Tidak ada dinding di bawah kursor",
+ "boundary_link.not_parallel": "Dinding tidak sejajar dengan tepi",
+ "boundary_link.not_linked": "Tepi ini tidak terhubung ke dinding",
+ "boundary_link.unlinked": "Tepi dilepas: tetap di tempat dan tidak lagi mengikuti dinding",
+ "boundary_link.accepted": "Tepi diterima: tetap di tempat sebagai tepi biasa",
+ "boundary_link.failed": "Tidak dapat diterapkan",
+ "boundary_link.lost": "dinding sumber dihapus",
+ "boundary_link.blocked": "tidak dapat mengikuti dinding"
+}

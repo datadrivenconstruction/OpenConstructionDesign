@@ -1,0 +1,4 @@
+{
+ "dlg.dw.near_origin": "将远离原点的图纸移至原点",
+ "dlg.dw.moved_far": "；已从 ({x}, {y}) m 移至原点，保留偏移"
+}

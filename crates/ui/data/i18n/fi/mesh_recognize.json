@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "Tunnistetaan {done} / {total}",
+ "mesh_recognize.all": "Kaikki {n}",
+ "mesh_recognize.only_confident": "Vain varmat",
+ "mesh_recognize.confident_tip": "Valitsee rivit, joiden laji vastaa luokkaa ja joiden varmuus on vähintään {pct} %",
+ "mesh_recognize.row_hint": "Napsauta riviä valitaksesi sen. Nuolinäppäimet liikkuvat, Enter valitsee.",
+ "mesh_recognize.kind_for": "Laji: {name}",
+ "mesh_recognize.source": "Lähdeverkot",
+ "mesh_recognize.keep": "Säilytä verkot",
+ "mesh_recognize.replace": "Korvaa verkot",
+ "mesh_recognize.convert_keep": "Muunna {n}",
+ "mesh_recognize.convert_remove": "Muunna {n} ja poista verkot",
+ "mesh_recognize.creates": "Luodaan {n}: {kinds}",
+ "mesh_recognize.creates_none": "Ei vielä valittuja",
+ "mesh_recognize.stay": "{n} lähdeverkkoa jää malliin",
+ "mesh_recognize.removed": "{n} lähdeverkkoa poistetaan. Kumoa palauttaa ne."
+}

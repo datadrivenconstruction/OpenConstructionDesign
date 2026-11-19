@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "Автосақтау сәтсіз, соңғы өзгерістер қорғалмаған. {why}",
+ "autosave_status.autosave_open": "Автосақтау параметрлері",
+ "autosave_status.autosave_recovered": "Автосақтау қайта жұмыс істеп тұр.",
+ "autosave_status.autosave_reason": "Себебі: {why}"
+}

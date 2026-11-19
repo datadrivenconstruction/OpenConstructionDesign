@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "แก้ไขแล้ว",
+ "ai.redraft.added": "+{n} เพิ่ม",
+ "ai.redraft.removed": "−{n} ลบ",
+ "ai.redraft.changed": "~{n} เปลี่ยน",
+ "ai.redraft.strip": "{what} ตั้งแต่ครั้งที่คุณดูล่าสุด",
+ "ai.redraft.note": "ตรวจแผนที่แก้ไขแล้ว: {what}",
+ "ai.redraft.more": "+{n} อีก",
+ "ai.redraft.ack": "เข้าใจแล้ว",
+ "ai.redraft.ack.tip": "ทำเครื่องหมายว่าได้เห็นการแก้ไขนี้แล้ว การนำไปใช้จะอ้างถึงการแก้ไขนี้",
+ "ai.redraft.removed_list": "รายการที่ลบ: {n}",
+ "ai.redraft.review_first": "แผนเปลี่ยนหลังข้อความของคุณ: ตรวจสอบการเปลี่ยนแปลงก่อน",
+ "ai.redraft.mark.tip": "ใหม่หรือเปลี่ยนตั้งแต่ครั้งที่คุณดูล่าสุด",
+ "ai.redraft.emptied": "การติดตามลบทุกรายการ: ฉบับร่างว่างเปล่า"
+}

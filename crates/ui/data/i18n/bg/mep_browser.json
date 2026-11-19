@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "Име на системата",
+ "mep_browser.add_blocked": "Първо въведете име на система",
+ "mep_browser.col.insulation": "Изолация",
+ "mep_browser.cancel": "Отказ",
+ "mep_browser.delete.title": "Да се изтрие ли тази система?",
+ "mep_browser.delete.body": "Системата „{name}“ и нейните трасета ({n}) ще бъдат изтрити.",
+ "mep_browser.delete.undo": "Можете да отмените това с една отмяна.",
+ "mep_browser.delete.confirm": "Изтриване на системата"
+}

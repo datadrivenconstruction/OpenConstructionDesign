@@ -1,0 +1,9 @@
+{
+ "drafts.draft.view": "Visningsgrafik for „{name}“",
+ "drafts.draft.filter": "Visningsfilter „{name}“",
+ "drafts.draft.filter_new": "Nyt visningsfilter",
+ "drafts.draft.object_styles": "Objekttyper",
+ "drafts.draft.material": "Materiale „{name}“",
+ "drafts.draft.type": "Type „{name}“",
+ "drafts.draft.params": "Parametre for familien „{name}“"
+}

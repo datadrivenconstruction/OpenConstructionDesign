@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "Ар бир өзгөртүүдө бул дубалдын учурдагы узундугун кармайт",
+ "constraints.con.tip.lock_dist": "Ар бир өзгөртүүдө эки дубалдын ортосундагы аралыкты кармайт",
+ "constraints.con.tip.equal": "Тандалган дубалдардын ортосундагы кадамдарды барабар кармайт",
+ "constraints.con.tip.align": "Эки дубалды бир сызыкта кармайт",
+ "constraints.con.tip.parallel": "Дубалдарды параллель кармайт",
+ "constraints.con.tip.perp": "Дубалдарды туура бурчта кармайт",
+ "constraints.con.tip.align_grid": "Дубалды эң жакын координаталар сызыгында кармайт",
+ "constraints.con.tip.lock_dist_grid": "Дубалдан эң жакын координаталар сызыгына чейинки аралыкты кармайт",
+ "constraints.con.tip.level_gap": "Деңгээлдердин ортосундагы аралыкты кармайт",
+ "constraints.con.tip.top_to_level": "Дубалдын үстүн үстүнкү деңгээлде кармайт"
+}

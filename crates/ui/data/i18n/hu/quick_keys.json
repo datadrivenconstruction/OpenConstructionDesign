@@ -1,0 +1,6 @@
+{
+ "quick.keys.rec_hint": "Az Esc megszakít · a Backspace töröl",
+ "quick.keys.row_lost": "A(z) {key} mostantól a(z) „{cmd}” parancsé",
+ "quick.keys.row_took": "A(z) {key} a(z) „{cmd}” parancstól lett átvéve",
+ "quick.keys.reset_tip": "Visszaállítás az alapértelmezettre"
+}

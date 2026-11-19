@@ -1,0 +1,7 @@
+{
+ "spline.opt.spline": "Spline",
+ "spline.opt.spline_tip": "Muro spline: fai clic sui punti per cui passa, Invio o Esc per terminare",
+ "spline.wt.three_points": "un muro spline richiede tre punti o più",
+ "spline.wt.no_curtain": "una facciata continua non ha un asse spline",
+ "spline.wt.added": "muro spline aggiunto"
+}

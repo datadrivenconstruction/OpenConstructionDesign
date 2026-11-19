@@ -1,0 +1,7 @@
+{
+ "ai.retry.countdown": "Thử lại sau {n} s",
+ "ai.retry.try": "Thử tự động lần {i} trên {max}. Yêu cầu tương tự được gửi lại.",
+ "ai.retry.now": "Thử lại ngay",
+ "ai.retry.gave_up": "Vẫn không có câu trả lời sau {max} lần thử tự động.",
+ "ai.retry.shorten": "Rút ngắn yêu cầu"
+}

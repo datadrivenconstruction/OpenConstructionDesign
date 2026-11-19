@@ -1,0 +1,10 @@
+{
+ "stage_err.kept": "zachowano tabelę {t}: {n} wierszy zapisanych po Dodaj",
+ "stage_err.stage.prev_attached": "Nie dodano: kopia poprzedniego Dodaj jest wciąż otwarta. Uruchom Dodaj ponownie",
+ "stage_err.stage.model_changed": "Nie dodano: model zmienił się podczas odczytu pliku. Uruchom Dodaj ponownie",
+ "stage_err.stage.no_record": "Nie dodano: zaimportowana kopia nie ma zapisu zmian",
+ "stage_err.stage.table_differs": "Nie dodano: tabela {t} różni się między modelem a zaimportowaną kopią",
+ "stage_err.stage.unique_key": "Nie dodano: nie da się przejść za unikalnym kluczem tabeli {t}",
+ "stage_err.stage.table_gone": "Nie dodano: import zmienił tabelę {t}, której kopia już nie ma",
+ "stage_err.stage.copy_held": "Dodano; zaimportowana kopia pozostaje otwarta do następnego Dodaj lub ponownego otwarcia modelu"
+}

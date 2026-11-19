@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "绘制闭合轮廓：依次点击各点，然后按 Enter 或点击“完成”以创建",
+ "sketch_hints.sk_finish": "完成",
+ "sketch_hints.sk_cancel": "取消",
+ "sketch_hints.import_warn": "模型检查警告：{n} 条（首条：{first}）",
+ "sketch_hints.ai.offline.schedule": "打开明细表",
+ "sketch_hints.ai.offline.check": "按规则检查",
+ "sketch_hints.ai.offline.warnings": "显示警告",
+ "cmd.file.publish_pdf": "将图纸发布为 PDF…",
+ "cmd.file.publish_pdf.desc": "将所选图纸发布为 PDF。等同于“导出图纸为 PDF/SVG”。",
+ "sketch_hints.verify_none": "所选内容中没有 AI 助手设置的项可供核验",
+ "sketch_hints.contours_none": "模型中没有地形面：创建后才会显示等高线",
+ "sketch_hints.contours_off": "已隐藏地形等高线",
+ "sketch_hints.contours_on": "已显示地形等高线"
+}

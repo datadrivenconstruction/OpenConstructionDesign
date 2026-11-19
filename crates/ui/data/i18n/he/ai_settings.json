@@ -1,0 +1,9 @@
+{
+ "ai.settings.num_bad": "לא מספר. הקלד כמו 0.5.",
+ "ai.settings.num_comma": "השתמש בנקודה כמפריד עשרוני, כמו 0.5.",
+ "ai.settings.num_negative": "המספר לא יכול להיות שלילי.",
+ "ai.settings.unit_money": "מטבע",
+ "ai.settings.unit_tokens": "טוקנים",
+ "ai.settings.unit_price": "ל-1M טוקנים",
+ "ai.settings.limits_hint": "0 פירושו ללא מגבלה. ערך שנדחה משאיר את המגבלה הקודמת במקומה."
+}

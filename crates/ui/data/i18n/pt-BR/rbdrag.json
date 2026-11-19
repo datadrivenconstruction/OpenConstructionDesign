@@ -1,0 +1,5 @@
+{
+ "rbdrag.beam": "Uma viga hospedada ficaria fora do novo limite.",
+ "rbdrag.rebar": "O conjunto de armadura {id} na laje de fundação ficaria fora do novo limite.",
+ "rbdrag.opening": "Uma abertura ficaria fora do novo limite."
+}

@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "دمج الخيار: {name}",
+ "ai_opt_merge.whole": "دمج الخيار كاملاً",
+ "ai_opt_merge.parts": "دمج الأجزاء المحددة",
+ "ai_opt_merge.note": "لماذا هذا الخيار",
+ "ai_opt_merge.rebased": "تغير النموذج بعد إنشاء هذا الخيار: أُعيد حساب الدمج مقابل النموذج الحالي. راجع التغييرات قبل التطبيق.",
+ "ai_opt_merge.left.not_picked": "غير مختار من الخيار",
+ "ai_opt_merge.left.unticked": "غير محدد في الخيار",
+ "ai_opt_merge.left.conflict": "لا يمكن إضافته إلى النموذج الحالي: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "لا يمكن دمج هذا الخيار. يجب استعادة الخيار المرفوض أولاً.",
+ "ai_opt_merge.refused.stale": "تغير النموذج بعد إنشاء هذا الخيار. أعد حساب الدمج مقابل النموذج الحالي.",
+ "ai_opt_merge.refused.nothing_picked": "لا يوجد شيء محدد للدمج.",
+ "ai_opt_merge.refused.unknown_item": "العنصر {item} ليس جزءاً من هذا الخيار.",
+ "ai_opt_merge.refused.not_in_option": "العنصر المحدد ليس جزءاً من هذا الخيار.",
+ "ai_opt_merge.refused.needs_left_out": "العنصر {item} يحتاج العنصر {needs}. حدده أيضاً، أو اسمح بإضافة التبعيات.",
+ "ai_opt_merge.refused.set_gone": "العنصر {item} يشير إلى تحديد لم يعد موجوداً. أنشئ الخيار مجدداً.",
+ "ai_opt_merge.refused.busy": "توجد خطة أخرى مفتوحة. طبّقها أو ارفضها أولاً.",
+ "ai_opt_merge.refused.failed": "تعذر تحضير الدمج: {reason}",
+ "ai_opt_merge.revive": "استعادة الخيار",
+ "ai_opt_merge.merged": "تم الدمج"
+}

@@ -1,0 +1,19 @@
+{
+ "ai.plan.apply_updated": "Použít aktualizovaný plán",
+ "ai.plan.keys_anywhere": "Ctrl+Enter použije a Esc zastaví požadavek i z plánu nebo 3D pohledu, pokud se právě nepíše do textového pole.",
+ "ai.plan.rebased": "Aktualizováno proti aktuálnímu modelu: {what}",
+ "ai.value.bad": "„{text}“ není platná hodnota pro {name}",
+ "ai.value.both": "AI asistent změnil tuto hodnotu na {agent}, zatímco jste zadali {mine}. Vyberte, kterou ponechat.",
+ "ai.value.choose_first": "Nejprve vyberte svou hodnotu nebo hodnotu AI asistenta na kartě",
+ "ai.value.elem": "Prvek {n}: {what}",
+ "ai.value.held": "Vaše hodnota {mine} se zapíše po dokončení požadavku",
+ "ai.value.keep_agent": "Ponechat {agent}",
+ "ai.value.lost": "Vaše hodnota {mine} pro {what} v „{title}“ nebyla použita: AI asistent tuto hodnotu z karty odebral",
+ "ai.value.more": "dalších hodnot: {n}: rozbalte řádek",
+ "ai.value.refused": "Plán nemohl převzít tuto hodnotu a ponechává předchozí: {why}",
+ "ai.value.refused_next": "Zadejte jinou hodnotu, nebo položku odškrtněte, aby nebyla zahrnuta do Použít.",
+ "ai.value.tip": "Opravte hodnotu v návrhu; model se změní až při Použít. Enter potvrdí, Esc obnoví.",
+ "ai.value.use_mine": "Použít {mine}",
+ "ai.value.was": "bylo {old}",
+ "ai.value.bad_len": "Pole „{name}“: {why}"
+}

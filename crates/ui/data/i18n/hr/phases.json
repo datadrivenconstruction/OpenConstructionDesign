@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D",
+ "phases.current_mark": "aktivna",
+ "phases.make_current": "Postavi kao aktivnu",
+ "phases.col_phase": "Faza",
+ "phases.col_filter": "Filtar",
+ "phases.presets": "Unaprijed postavke tlocrta",
+ "phases.del_title": "Izbriši fazu",
+ "phases.del_text": "Izbrisati fazu „{name}“? Njezini elementi premještaju se u fazu odabranu u nastavku.",
+ "phases.del_into": "Premjesti elemente u",
+ "phases.del_ok": "Izbriši",
+ "phases.col_kind": "Vrsta elementa",
+ "phases.col_count": "Broj",
+ "phases.col_volume": "Volumen"
+}

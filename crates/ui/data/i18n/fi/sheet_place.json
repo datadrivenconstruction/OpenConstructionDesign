@@ -1,0 +1,15 @@
+{
+ "sheet_place.place_view_tip": "Sijoita näkymä tai luettelo lehdelle",
+ "sheet_place.properties_tip": "Lehden numero, nimi, paperi ja revisiot",
+ "sheet_place.print_tip": "Tulosta tai vie lehti",
+ "sheet_place.fit_tip": "Sovita lehti ikkunaan",
+ "sheet_place.activate_tip": "Muokkaa näkymää paikallaan lehdellä: siirrä, zoomaa ja rajaa",
+ "sheet_place.open_view_tip": "Avaa näkymä omassa välilehdessään",
+ "sheet_place.done_tip": "Lopeta näkymän muokkaus lehdellä",
+ "sheet_place.reset_crop_tip": "Poista rajaus ja näytä koko näkymä",
+ "sheet_place.scale_tip": "Valitun näkymän mittakaava lehdellä",
+ "sheet_place.title_tip": "Lehdellä näkymän alla näkyvä nimi",
+ "sheet_place.banner": "Näkymää muokataan lehdellä",
+ "sheet_place.new_set_tip": "Luo lehtisarja tulostettavaksi yhdessä",
+ "sheet_place.new_sheet_tip": "Lisää lehti projektiin"
+}

@@ -1,0 +1,19 @@
+{
+ "empty.v3d_gpu.title": "此图形适配器不支持 3D",
+ "empty.v3d_gpu.hint": "模型正常，平面可用。以安全图形模式重启即可再次尝试 3D。",
+ "empty.v3d_gpu.action": "以安全图形模式重启",
+ "empty.v3d_loading.title": "正在构建 3D…",
+ "empty.v3d_loading.pct": "正在打开… {pct} %",
+ "empty.plan_hidden.title": "此平面中的所有元素均已隐藏",
+ "empty.plan_hidden.hint": "临时隐藏或隔离后，没有可见内容。",
+ "empty.plan_hidden.action": "全部显示",
+ "empty.plan_graphics.title": "视图图形隐藏了所有类别",
+ "empty.plan_graphics.hint": "此视图的类别规则不显示任何内容。",
+ "empty.plan_graphics.action": "打开视图图形设置",
+ "empty.plan_phase.title": "阶段过滤器隐藏了所有内容",
+ "empty.plan_phase.hint": "本楼层中没有此视图所示阶段的内容。",
+ "empty.plan_phase.action": "更改阶段",
+ "empty.plan_level.title": "此楼层没有元素",
+ "empty.plan_level.hint": "此模型的其他楼层有元素。",
+ "empty.plan_level.action": "前往有元素的楼层"
+}

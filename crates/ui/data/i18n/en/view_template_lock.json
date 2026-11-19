@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "Controlled by template {name}",
+ "view_template.edit_template": "Edit template",
+ "view_template.locked_tip": "Set by the view template {name}. Change it in the template.",
+ "view_template.no_filters": "No filters in this view"
+}

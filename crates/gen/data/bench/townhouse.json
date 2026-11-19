@@ -1,0 +1,52 @@
+{
+ "schema": "gen_bench.v1",
+ "group": "house",
+ "spec": {
+  "typology": "house",
+  "floors": 3,
+  "footprint": {
+   "width": 7,
+   "depth": 12
+  },
+  "rooms": [
+   {
+    "kind": "living",
+    "area": 25
+   },
+   {
+    "kind": "kitchen",
+    "area": 12
+   },
+   {
+    "kind": "bedroom",
+    "area": 14,
+    "count": 3
+   },
+   {
+    "kind": "bath",
+    "area": 5
+   },
+   {
+    "kind": "wc",
+    "area": 2
+   }
+  ]
+ },
+ "adjacency": [
+  [
+   "kitchen",
+   "living",
+   3
+  ],
+  [
+   "bedroom",
+   "bath",
+   1
+  ],
+  [
+   "living",
+   "hall",
+   1
+  ]
+ ]
+}

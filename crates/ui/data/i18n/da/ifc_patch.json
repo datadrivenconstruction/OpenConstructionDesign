@@ -1,0 +1,19 @@
+{
+ "ifc_patch.fallback.source_changed": "Rettelse ikke brugt: kildefilen er ændret på disken eller kan ikke læses. Filen blev skrevet om fra modellen.",
+ "ifc_patch.fallback.sources": "Rettelse ikke brugt: projektet har ikke præcis én kilde. Filen blev skrevet om fra modellen.",
+ "ifc_patch.fallback.schema": "Rettelse ikke brugt: kildefilens skema understøttes ikke. Filen blev skrevet om fra modellen.",
+ "ifc_patch.fallback.structure": "Rettelse ikke brugt: kildefilens struktur kan ikke stoles på. Filen blev skrevet om fra modellen.",
+ "ifc_patch.fallback.edit": "Rettelse ikke brugt: en redigering kan ikke sikkert anvendes på kildefilen. Filen blev skrevet om fra modellen.",
+ "ifc_patch.reason.schema": "Kildefilens skema kan ikke rumme denne ændring; elementet forbliver som i kilden",
+ "ifc_patch.reason.prop": "Denne egenskabsredigering kan ikke udtrykkes i kildefilen; værdien forbliver som i kilden",
+ "ifc_patch.reason.no_export": "Dette nye element har ingen repræsentation i IFC",
+ "ifc_patch.reason.link": "Elementet er i filen, men et link til dets materiale eller type skrives ikke; det vises som ikke skrevet",
+ "ifc_patch.drop": "Fjern",
+ "ifc_patch.drop_done": "Ventende links fjernet: {n}; de forsøges ikke igen",
+ "ifc_patch.fallback.building": "Rettelse ikke brugt: en ny etage kræver præcis én bygning i kildefilen, og den har ingen eller flere. Filen blev skrevet om fra modellen.",
+ "ifc_patch.fallback.types": "Rettelse ikke brugt: etager, typer eller materialer er ændret siden importen, og rettelsen kan ikke skrive dem. Filen blev skrevet om fra modellen.",
+ "ifc_patch.fallback.zipped": "Rettelse ikke brugt: en zippet kildefil kan ikke rettes. Filen blev skrevet om fra modellen.",
+ "ifc_patch.fallback.source_kept": "Kildefilen blev ikke overskrevet: denne gemning kan ikke stoles på til at erstatte den. Denne gemning er en kopi ved siden af den.",
+ "ifc_patch.fallback.nested": "Rettelse ikke brugt: et nyt element har indlejrede dele (fx porte), som rettelsen ikke kan skrive. Filen blev skrevet om fra modellen.",
+ "ifc_patch.fallback.shared_part": "Rettelse ikke brugt: en del af en redigeret trappe eller rampe bruges også af et andet element eller en anden relation, og rettelsen kan ikke tage højde for det. Filen blev skrevet om fra modellen."
+}

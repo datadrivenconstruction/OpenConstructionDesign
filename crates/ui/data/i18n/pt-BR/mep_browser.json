@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "Nome do sistema",
+ "mep_browser.add_blocked": "Informe primeiro um nome de sistema",
+ "mep_browser.col.insulation": "Isolamento",
+ "mep_browser.cancel": "Cancelar",
+ "mep_browser.delete.title": "Excluir este sistema?",
+ "mep_browser.delete.body": "O sistema \"{name}\" e seus trechos ({n}) serão excluídos.",
+ "mep_browser.delete.undo": "Você pode desfazer isso com um Desfazer.",
+ "mep_browser.delete.confirm": "Excluir sistema"
+}

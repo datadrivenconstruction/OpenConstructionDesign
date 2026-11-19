@@ -1,0 +1,13 @@
+{
+ "level.err_open": "Sath ochilmadi: {e}",
+ "level.need_name": "Sathga nom va belgi kerak",
+ "level.created": "“{name}” sathi yaratildi",
+ "level.err_create": "Sath yaratilmadi: {e}",
+ "level.err_edit": "Sath o'zgartirilmadi: {e}",
+ "level.edited": "“{name}” sathi o'zgartirildi",
+ "level.edited_stale": "“{name}” sathi o'zgartirildi, ko'rinish yangilanmadi: {e}",
+ "level.last": "Oxirgi sathni o'chirib bo'lmaydi",
+ "level.deleted": "Sath o'chirildi",
+ "level.not_empty": "Sath bo'sh emas: avval uning elementlarini o'chiring",
+ "level.err_delete": "Sath o'chirilmadi: {e}"
+}

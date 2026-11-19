@@ -1,0 +1,18 @@
+{
+ "props.multi.title": {
+  "one": "# elem",
+  "other": "# elem"
+ },
+ "props.multi.cats": {
+  "one": "# kategória",
+  "other": "# kategória"
+ },
+ "props.multi.varies": {
+  "one": "változik (#)",
+  "other": "változik (#)"
+ },
+ "props.multi.clear": "Kijelölés törlése",
+ "props.multi.undo": "Visszavonás",
+ "props.multi.narrowed": "Kijelölés: {n} · {name}",
+ "props.multi.chip_tip": "{name}: {n}  ·  Kattintásra megjelennek a tulajdonságaik, Ctrl+kattintással csak ezek maradnak meg"
+}

@@ -1,0 +1,9 @@
+{
+ "tool.room": "Ruang",
+ "tool.room.name": "Ruang",
+ "room_tool.room.name": "Nama",
+ "hint.room.place": "Klik di dalam loop dinding tertutup untuk membuat ruang · Esc — keluar",
+ "tool.err.room_open": "Area tidak tertutup: tutup loop dinding atau tambahkan pemisah ruang",
+ "tool.err.room_check": "Ruang di level ini tidak dapat diperiksa",
+ "tool.err.room_exists": "Sudah ada ruang di loop ini"
+}

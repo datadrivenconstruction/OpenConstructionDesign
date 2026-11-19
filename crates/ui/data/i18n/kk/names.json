@@ -1,0 +1,19 @@
+{
+ "names.level": "Деңгей {n}",
+ "names.slab": "Плита 200",
+ "names.roof_slab": "Шатыр 200",
+ "names.sheet.plan_section": "1-қабат жоспары және кесіндісі",
+ "names.sheet.plan_view": "1-қабат жоспары",
+ "names.sheet.site_plan": "Учаске жоспары",
+ "names.sheet_set.issue": "1-шығарылым",
+ "names.title.owner": "Project ЖШС",
+ "names.title.creator": "А. Иванов",
+ "names.title.approver": "П. Петров",
+ "names.title.document_type": "Сызба",
+ "names.title.status": "Орындалуда",
+ "names.revision.date": "2026 ж. 4 қараша",
+ "names.revision.description": "Қарау үшін шығарылды",
+ "names.revision.author": "AI",
+ "names.demo.no_levels": "деңгейсіз",
+ "names.demo.no_sheet": "парақ"
+}

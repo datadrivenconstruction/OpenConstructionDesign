@@ -1,0 +1,10 @@
+{
+ "stage_err.kept": "a(z) {t} tábla megtartva: {n} sor íródott az Hozzáadás után",
+ "stage_err.stage.prev_attached": "Nem lett hozzáadva: az előző Hozzáadás másolata még nyitva van. Futtassa újra a Hozzáadást",
+ "stage_err.stage.model_changed": "Nem lett hozzáadva: a modell megváltozott a fájl olvasása közben. Futtassa újra a Hozzáadást",
+ "stage_err.stage.no_record": "Nem lett hozzáadva: az importált másolathoz nincs módosítási napló",
+ "stage_err.stage.table_differs": "Nem lett hozzáadva: a(z) {t} tábla eltér a modell és az importált másolat között",
+ "stage_err.stage.unique_key": "Nem lett hozzáadva: a(z) {t} tábla egyedi kulcsa nem követhető",
+ "stage_err.stage.table_gone": "Nem lett hozzáadva: az importálás módosította a(z) {t} táblát, amelyet a másolat már nem tartalmaz",
+ "stage_err.stage.copy_held": "Hozzáadva; az importált másolat a következő Hozzáadásig vagy a modell újranyitásáig nyitva marad"
+}

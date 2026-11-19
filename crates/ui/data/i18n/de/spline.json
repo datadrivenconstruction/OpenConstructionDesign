@@ -1,0 +1,7 @@
+{
+ "spline.opt.spline": "Spline",
+ "spline.opt.spline_tip": "Spline-Wand: Punkte anklicken, durch die sie verläuft; Enter oder Esc beendet",
+ "spline.wt.three_points": "eine Spline-Wand braucht mindestens drei Punkte",
+ "spline.wt.no_curtain": "eine Vorhangfassade hat keine Spline-Achse",
+ "spline.wt.added": "Spline-Wand hinzugefügt"
+}

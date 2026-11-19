@@ -1,0 +1,9 @@
+{
+ "prop_head.of_type": {
+  "one": "# ebből a típusból",
+  "other": "# ebből a típusból"
+ },
+ "prop_head.override_tip": "Eltér a típustól, kattintson a visszaállításhoz",
+ "prop_head.reset_done": "„{name}” visszaállítva a típus értékére",
+ "prop_head.copy_id": "Kattintson a szám másolásához"
+}

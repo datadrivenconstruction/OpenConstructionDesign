@@ -1,0 +1,13 @@
+{
+ "topo.unit.mm": "мм",
+ "topo.unit.metre": "м",
+ "topo.unit.ft": "фт",
+ "topo.opt.material": "Материал",
+ "topo.row.active": "Активдүү бет",
+ "topo.btn.delete_pad": "Платформаны өчүрүү",
+ "topo.info.loading": "Бет түзүлүүдө…",
+ "topo.info.warn_n": "{n} эскертүү",
+ "topo.info.points_label": "Чекиттер",
+ "topo.import.all_layers": "Бардык катмарлар",
+ "topo.import.need_layer": "Кеминде бир катмарды белгилеңиз"
+}

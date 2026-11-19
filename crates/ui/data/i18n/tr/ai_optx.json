@@ -1,0 +1,10 @@
+{
+ "ai.optx.applied": "\"{name}\" seçeneği uygulandı. Geri al, taslağa döndürür",
+ "ai.optx.missing": "{id} seçeneği artık yok",
+ "ai.optx.accepted": "{id} seçeneği zaten uygulanmış",
+ "ai.optx.not_draft": "{id} seçeneği reddedildi ve uygulanamaz",
+ "ai.optx.stale": "{id} seçeneği oluşturulduktan sonra model değişti: önce yeniden üretin",
+ "ai.optx.bad_recipe": "Seçenek tarifi okunamıyor: {e}",
+ "ai.optx.refused": "Seçenek uygulanmadı ({code}): {reason}",
+ "ai.optx.failed": "Seçenek uygulanmadı: {e}"
+}

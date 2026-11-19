@@ -1,0 +1,19 @@
+{
+ "empty.v3d_gpu.title": "Il 3D non è disponibile su questa scheda grafica",
+ "empty.v3d_gpu.hint": "Il modello è integro e la pianta funziona. Riavvia con grafica sicura per riprovare il 3D.",
+ "empty.v3d_gpu.action": "Riavvia con grafica sicura",
+ "empty.v3d_loading.title": "Creazione 3D…",
+ "empty.v3d_loading.pct": "Apertura… {pct} %",
+ "empty.plan_hidden.title": "Tutti gli elementi sono nascosti in questa pianta",
+ "empty.plan_hidden.hint": "Il nascondimento o l'isolamento temporaneo non lascia nulla visibile.",
+ "empty.plan_hidden.action": "Mostra tutto",
+ "empty.plan_graphics.title": "La grafica di vista nasconde tutte le categorie",
+ "empty.plan_graphics.hint": "Le regole di categoria di questa vista non lasciano nulla da mostrare.",
+ "empty.plan_graphics.action": "Apri grafica di vista",
+ "empty.plan_phase.title": "Il filtro di fase nasconde tutto",
+ "empty.plan_phase.hint": "Nulla su questo livello esiste nella fase mostrata da questa vista.",
+ "empty.plan_phase.action": "Cambia fase",
+ "empty.plan_level.title": "Nessun elemento su questo livello",
+ "empty.plan_level.hint": "Altri livelli di questo modello hanno elementi.",
+ "empty.plan_level.action": "Vai al livello con elementi"
+}

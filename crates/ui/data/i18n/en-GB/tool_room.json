@@ -1,0 +1,9 @@
+{
+ "tool.room": "Room",
+ "tool.room.name": "Room",
+ "room_tool.room.name": "Name",
+ "hint.room.place": "Click inside a closed wall loop to create a room · Esc — exit",
+ "tool.err.room_open": "The region is not closed: close the wall loop or add a room separator",
+ "tool.err.room_check": "Cannot check the rooms of this level",
+ "tool.err.room_exists": "There is already a room in this loop"
+}

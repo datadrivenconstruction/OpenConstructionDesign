@@ -1,0 +1,15 @@
+{
+ "mcp.ask.cancel": "Kanselahin",
+ "mcp.ask.auto.title": "Hayaan ang mga AI agent na mag-apply ng pagbabago nang hindi nagtatanong?",
+ "mcp.ask.auto.body": "Ia-apply agad ng mga konektadong AI agent ang kanilang pagbabago sa mga draft nang hindi naghihintay ng kumpirmasyon mo, kaya maaaring pumasok ang maling pagbabago bago mo ito makita. Nagbabago pa rin ang model mo kapag pinindot mo ang Apply. Tatagal ito hanggang i-off mo, isara ang editor o magbukas ng ibang model.",
+ "mcp.ask.auto.yes": "I-apply nang hindi nagtatanong",
+ "mcp.ask.token.title": "Maglabas ng bagong token?",
+ "mcp.ask.token.body": "Agad na titigil sa paggana ang kasalukuyang token: puputulin ang mga konektadong AI agent at kakailanganin nila ang bagong token. Isang beses lang ito ipinapakita, kaya kopyahin agad.",
+ "mcp.ask.token.yes": "Bagong token",
+ "mcp.auto.chip": "Auto-apply: on",
+ "mcp.auto.chip_tip": "Ina-apply ng mga AI agent ang pagbabago sa mga draft nang hindi nagtatanong. Nagtatapos ito kasama ng session na ito.",
+ "mcp.auto.ask_again": "Magtanong muli",
+ "mcp.token.once": "Kopyahin ngayon ang token na ito: hindi na ito ipapakitang muli.",
+ "mcp.renewed": "Naglabas ng bagong token: hindi na gumagana ang luma",
+ "mcp.copied": "Nakopya"
+}

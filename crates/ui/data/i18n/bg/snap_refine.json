@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "Радиус на привързване",
+ "snap_refine.settings.snap_px_desc": "На колко близо трябва да се приближи курсорът до точка или линия, за да се привърже, в пиксели на екрана. По-големият радиус помага на сензорни екрани и дисплеи с висока плътност.",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "Хоризонтално",
+ "snap_refine.hint.vertical": "Вертикално",
+ "snap_refine.hint.perpendicular": "Перпендикулярно на предишното",
+ "snap_refine.hint.parallel": "Успоредно на предишното",
+ "snap_refine.hint.on_axis": "По оста на стената",
+ "snap_refine.no_snap": "Без привързване (Alt)"
+}

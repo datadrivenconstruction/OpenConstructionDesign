@@ -1,0 +1,24 @@
+{
+ "family_overwrite.ow.title": "استبدال قيم أنواع المشروع؟",
+ "family_overwrite.ow.body": "التحميل يستبدل {values} في {types}. النسخ المُدرجة من هذه الأنواع: {instances}.",
+ "family_overwrite.ow.values": {
+  "one": "# قيمة",
+  "other": "# قيمة",
+  "two": "# قيمتان",
+  "few": "# قيم",
+  "many": "# قيمةً",
+  "zero": "# قيمة"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# نوع",
+  "other": "# نوعاً",
+  "two": "# نوعان",
+  "few": "# أنواع",
+  "many": "# نوعاً",
+  "zero": "# نوعاً"
+ },
+ "family_overwrite.ow.list": "الأنواع: {list}",
+ "family_overwrite.ow.more": "و{n} أخرى",
+ "family_overwrite.ow.back": "العودة إلى التحرير",
+ "family_overwrite.ow.replace": "استبدل القيم"
+}

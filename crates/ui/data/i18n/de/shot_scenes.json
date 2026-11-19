@@ -1,0 +1,9 @@
+{
+ "shot_scenes.site": "Gelände",
+ "shot_scenes.lawn": "Rasen",
+ "shot_scenes.pad": "Sockel",
+ "shot_scenes.block": "Block",
+ "shot_scenes.void": "Aussparung",
+ "shot_scenes.tower": "Turm",
+ "shot_scenes.wall_void": "Wandaussparung"
+}

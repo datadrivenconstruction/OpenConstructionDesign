@@ -1,0 +1,18 @@
+{
+ "ai.items.all": {
+  "one": "כל # פריט",
+  "two": "כל # הפריטים",
+  "other": "כל # הפריטים"
+ },
+ "ai.items.all.tip": "סמן או בטל סימון של כל פריט בתוכנית",
+ "ai.items.checked": "{n} מתוך {m} מסומנים",
+ "ai.items.check.tip": "כלול את “{title}” בהחלה",
+ "ai.items.expand": "הצג אלמנטים",
+ "ai.items.collapse": "הסתר אלמנטים",
+ "ai.items.apply": {
+  "one": "החל # פריט",
+  "two": "החל # פריטים",
+  "other": "החל # פריטים"
+ },
+ "ai.items.apply_none": "החל"
+}

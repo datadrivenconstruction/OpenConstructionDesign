@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "Intervallo di vista",
+ "view_range.range": "Intervallo di vista",
+ "view_range.cut": "Piano di taglio",
+ "view_range.bottom": "Base",
+ "view_range.depth": "Profondità vista",
+ "view_range.cut.hint": "Altezza del piano di taglio sopra il livello. Gli elementi che lo attraversano sono disegnati tagliati.",
+ "view_range.bottom.hint": "Base dell'intervallo, relativa al livello. Sono ammessi valori zero o negativi.",
+ "view_range.depth.hint": "Quanto la vista guarda sotto la base. Zero o più.",
+ "view_range.err.number": "Inserisci una lunghezza in ogni campo",
+ "view_range.err.not_finite": "Inserisci una lunghezza in ogni campo",
+ "view_range.err.cut_not_above_bottom": "Il piano di taglio deve essere sopra la base",
+ "view_range.err.negative_depth": "La profondità della vista non può essere negativa",
+ "view_range.err.top_below_cut": "La sommità dell'intervallo non deve essere sotto il piano di taglio"
+}

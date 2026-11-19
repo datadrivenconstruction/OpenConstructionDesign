@@ -1,0 +1,7 @@
+{
+ "messages.title": "Mesaje",
+ "messages.desc": "Istoricul notificărilor. Fără avertismente sau erori noi.",
+ "messages.desc_new": "{n} avertismente sau erori noi. Faceți clic pentru a le citi.",
+ "messages.copy": "Copiază tot",
+ "messages.clear": "Șterge tot"
+}

@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "یک خط محیطی بسته رسم کنید: نقاط را کلیک کنید، سپس Enter یا پایان را بزنید",
+ "sketch_hints.sk_finish": "پایان",
+ "sketch_hints.sk_cancel": "لغو",
+ "sketch_hints.import_warn": "هشدارهای بررسی مدل: {n} (اولی: {first})",
+ "sketch_hints.ai.offline.schedule": "باز کردن جدول",
+ "sketch_hints.ai.offline.check": "بررسی بر اساس قواعد",
+ "sketch_hints.ai.offline.warnings": "نمایش هشدارها",
+ "cmd.file.publish_pdf": "انتشار برگه‌ها به‌صورت PDF…",
+ "cmd.file.publish_pdf.desc": "برگه‌های انتخاب‌شده را به PDF منتشر می‌کند. مانند خروجی برگه‌ها به PDF/SVG.",
+ "sketch_hints.verify_none": "در انتخاب چیزی نیست که دستیار هوش مصنوعی تنظیم کرده باشد تا بررسی شود",
+ "sketch_hints.contours_none": "سطح توپوگرافی در مدل نیست: کانتورها پس از ساخت یکی ظاهر می‌شوند",
+ "sketch_hints.contours_off": "کانتورهای سطح توپوگرافی پنهان شد",
+ "sketch_hints.contours_on": "کانتورهای سطح توپوگرافی نمایش داده شد"
+}

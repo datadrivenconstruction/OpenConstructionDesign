@@ -1,0 +1,7 @@
+{
+ "messages.title": "Teated",
+ "messages.desc": "Teadete ajalugu. Uusi hoiatusi ega vigu pole.",
+ "messages.desc_new": "{n} uut hoiatust või viga. Klõpsa, et neid lugeda.",
+ "messages.copy": "Kopeeri kõik",
+ "messages.clear": "Tühjenda kõik"
+}

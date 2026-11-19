@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "ভিউসহ শিট নকল করুন",
+ "cmd.view.sheet_duplicate_title": "শিট নকল (শুধু টাইটেল ব্লক)",
+ "sheets.dup.menu_views": "ভিউসহ নকল",
+ "sheets.dup.menu_title": "নকল, শুধু টাইটেল ব্লক",
+ "sheets.dup.done": "{src} থেকে শিট {number} তৈরি হয়েছে: {views}টি ভিউ, {sched}টি সূচি ও লেজেন্ড। রিভিশন কপি হয়নি; শিটটি এখনো ইস্যু হয়নি।",
+ "sheets.dup.none": "নকল করতে একটি শিট খুলুন",
+ "sheets.dup.copy": "কপি",
+ "cmd.view.sheet_duplicate.short": "ভিউসহ নকল",
+ "cmd.view.sheet_duplicate_title.short": "টাইটেল ব্লক নকল"
+}

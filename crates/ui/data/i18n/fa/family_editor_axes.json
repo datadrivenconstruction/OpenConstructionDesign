@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "محور X",
+ "fe.axis.y": "محور Y",
+ "fe.axis.z": "محور Z",
+ "fe.col.axis": "محور",
+ "fe.col.at": "موقعیت",
+ "fe.col.mode": "حالت",
+ "fe.mode.fixed": "ثابت",
+ "fe.mode.free": "آزاد",
+ "fe.types.inherited": "پیش‌فرض از پارامتر",
+ "fe.csv.more": "اقدام‌های بیشتر CSV",
+ "fe.ref.selected": "صفحه: {name}"
+}

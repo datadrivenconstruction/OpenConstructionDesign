@@ -1,0 +1,10 @@
+{
+ "ai.plan.reject_ask": {
+  "one": "Odmítnout # změnu?",
+  "few": "Odmítnout # změny?",
+  "other": "Odmítnout # změn?"
+ },
+ "ai.plan.reject_ask.hint": "Návrh a vaše zaškrtnutí se zahodí. Model zůstane beze změny.",
+ "ai.plan.reject_confirm": "Zamítnout",
+ "ai.plan.reject_keep": "Ponechat"
+}

@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "مخصص",
+ "draw_quality.custom.tip": "{name}: عنصر من هذا المشروع",
+ "draw_quality.custom_note": "العناصر المعلّمة بـ«مخصص» تابعة لهذا المشروع.",
+ "draw_quality.unsaved.lib_body": "هل تحفظها في المكتبة أم تتجاهلها؟",
+ "draw_quality.unsaved.styles_body": "هل تطبّقها على العرض أم تتجاهلها؟",
+ "draw_quality.unsaved.both_body": "هل تطبّقها أم تتجاهلها؟",
+ "draw_quality.halftone": "نصف تدرج {category}",
+ "draw_quality.styles.name": "أنماط الخطوط",
+ "draw_quality.styles.other_level": "تعديلات أنماط غير محفوظة للمستوى {level}: طبّقها أو تراجع عنها لتحرير هذا المستوى."
+}

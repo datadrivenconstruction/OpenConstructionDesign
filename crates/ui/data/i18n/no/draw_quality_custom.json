@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "egendefinert",
+ "draw_quality.custom.tip": "{name}: en oppføring i dette prosjektet",
+ "draw_quality.custom_note": "Oppføringer merket egendefinert hører til dette prosjektet.",
+ "draw_quality.unsaved.lib_body": "Lagre dem i biblioteket, eller forkast dem?",
+ "draw_quality.unsaved.styles_body": "Bruk dem på visningen, eller forkast dem?",
+ "draw_quality.unsaved.both_body": "Bruk dem, eller forkast dem?",
+ "draw_quality.halftone": "{category} halvtone",
+ "draw_quality.styles.name": "Linjetyper",
+ "draw_quality.styles.other_level": "Ikke-lagrede linjetypeendringer for etasje {level}: bruk eller tilbakestill dem for å redigere denne etasjen."
+}

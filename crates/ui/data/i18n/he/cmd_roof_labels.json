@@ -1,0 +1,11 @@
+{
+ "cmd.arch.roof_gable.short": "שפוע דו-צדדי",
+ "cmd.arch.roof_hip.short": "הפוך",
+ "cmd.arch.roof_shed.short": "חד-שיפועי",
+ "cmd.arch.roof_mansard.short": "מנסרד",
+ "cmd.arch.roof_gambrel.short": "גמבריל",
+ "cmd.arch.roof_barrel.short": "חבית",
+ "cmd.arch.roof_edges.short": "קצוות גג",
+ "cmd.arch.roof_opening.short": "פתח",
+ "cmd.mass.roof_by_face.short": "לפי פנים"
+}

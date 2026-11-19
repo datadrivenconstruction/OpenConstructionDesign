@@ -1,0 +1,8 @@
+{
+ "ai_sent.summary": "Projektdata i denne anmodning: {messages} beskeder, {tools} værktøjsresultater, {images} billeder",
+ "ai_sent.copy": "Kopiér",
+ "ai_sent.filter": "Find i sendte anmodninger",
+ "ai_sent.no_match": "Ingen anmodning matcher.",
+ "ai_sent.instructions": "Instruktioner og værktøjer",
+ "ai_sent.local_note": "Gemt kun på denne computer, for denne session. Nøgler og adgangskoder vises aldrig."
+}

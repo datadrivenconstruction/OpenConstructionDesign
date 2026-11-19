@@ -1,0 +1,15 @@
+{
+ "cmd.data.export_step.desc": "Az egész modellt vagy a kijelölést STEP AP214 vagy AP242 formátumban menti: testek pontos sík, henger, kúp, gömb, tórusz és B-spline felületekkel, más elemek síkfelületekként, színekkel, szintenként egy összeállítási csomóponttal.",
+ "cmd.data.export_3mf.desc": "Az egész modellt vagy a kijelölést nyomtatáshoz készült 3MF-ként menti: elemenként egy objektum, színek, mértékegységek, és ellenőrzés, hogy minden test vízzáró-e.",
+ "fmenu.export.step": "STEP pontos testek (.step)",
+ "fmenu.export.3mf": "3MF nyomtatáshoz (.3mf)",
+ "mx.schema": "STEP séma",
+ "mx.schema.ap214": "AP214 (legszélesebb támogatás)",
+ "mx.schema.ap242": "AP242",
+ "mx.watertight": "Nem vízzáró testek",
+ "mx.watertight.report": "Írd ki őket és sorold fel",
+ "mx.watertight.skip": "Hagyd ki őket",
+ "mx.watertight.require": "Export megszakítása",
+ "mx.faceted": "{fmt} mentve: {path} ({exact} pontos test, {n} síkfelületként írva: {first})",
+ "sheets.print.svg": "SVG"
+}

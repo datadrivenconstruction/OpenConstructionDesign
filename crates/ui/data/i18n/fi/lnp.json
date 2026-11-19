@@ -1,0 +1,14 @@
+{
+ "lnp.openings_refused": "{n} aukkoa ei muutettu ({why})",
+ "lnp.params_changed": "arvoja muutettu: {n}",
+ "lnp.params_same": "Ei muutoksia: {u} elementillä on jo tämä arvo",
+ "lnp.params_tip": "Enter käyttää arvon jokaiseen valittuun elementtiin; Esc säilyttää ne",
+ "lnp.locked_hint": "Lukitut arvot säilytetään: {n}",
+ "lnp.panels_one": "Paneeleja muokataan yksi kerrallaan",
+ "lnp.keep_first": "Säilytä ensimmäinen",
+ "lnp.keep_first_tip": "Valitse vain ensimmäinen paneeli muokataksesi sitä",
+ "lnp.clip_from_wall": "Parametrit kopioitu seinästä #{id}",
+ "lnp.clip_from_opening": "Parametrit kopioitu aukosta #{id}",
+ "lnp.match_from": "#{id}:n ominaisuudet sovitettu {n} elementille",
+ "lnp.why_at": "#{id}: {e}"
+}

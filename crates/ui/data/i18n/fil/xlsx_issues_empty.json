@@ -1,0 +1,8 @@
+{
+ "xlsx_issues.empty_title": "Walang laman na sheet sa workbook",
+ "xlsx_issues.empty_kept": "Walang laman ang sheet {sheet}: walang nabasa mula rito, nananatili ang {n} elemento. Maaari pa ring ilapat ang ibang sheet.",
+ "xlsx_issues.empty_none": "Walang laman ang sheet {sheet}: walang nabasa mula rito. Maaari pa ring ilapat ang ibang sheet.",
+ "xlsx_issues.unreadable_title": "Hindi nabasa ang sheet",
+ "xlsx_issues.unreadable": "Hindi nabasa ang sheet {sheet}, sira ang bahagi nito ng file: walang kinuha mula rito at nananatili ang mga elemento nito. Maaari pa ring ilapat ang ibang sheet.",
+ "xlsx_issues.formulas": "Hindi nabasa ang mga formula sa sheet {sheet}, kaya hindi matukoy kung calculated value o edit ang isang value: walang kinuha mula sa sheet na ito. Maaari pa ring ilapat ang ibang sheet."
+}

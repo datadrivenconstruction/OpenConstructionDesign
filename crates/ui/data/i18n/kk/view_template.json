@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "Алдымен үлгі атын енгізіңіз",
+ "view_template.name_taken": "Мұндай атпен үлгі бұрыннан бар",
+ "view_template.pick_blocked": "Алдымен кем дегенде бір көріністі белгілеңіз",
+ "view_template.views.one": "{n} көрініс",
+ "view_template.views.few": "{n} көрініс",
+ "view_template.views.many": "{n} көрініс",
+ "view_template.delete.title": "Бұл үлгі жойылсын ба?",
+ "view_template.delete.body": "\"{name}\" үлгісі жойылады. Пайдаланылған: {used}.",
+ "view_template.delete.unused": "\"{name}\" үлгісі жойылады. Оны ешбір көрініс пайдаланбайды.",
+ "view_template.delete.keeps": "Бұл көріністер ағымдағы графиканы сақтайды, бірақ байланыс үзіледі.",
+ "view_template.delete.undo": "Мұны бір рет Болдырмау арқылы қайтаруға болады.",
+ "view_template.delete.confirm": "Үлгіні жою"
+}

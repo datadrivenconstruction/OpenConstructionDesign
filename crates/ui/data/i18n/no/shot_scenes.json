@@ -1,0 +1,9 @@
+{
+ "shot_scenes.site": "Tomt",
+ "shot_scenes.lawn": "Gressplen",
+ "shot_scenes.pad": "Byggeplate",
+ "shot_scenes.block": "Blokk",
+ "shot_scenes.void": "Hulning",
+ "shot_scenes.tower": "Tårn",
+ "shot_scenes.wall_void": "Veggåpning"
+}

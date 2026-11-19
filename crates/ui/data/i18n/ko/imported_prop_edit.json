@@ -1,0 +1,6 @@
+{
+ "imported_prop_edit.remove": "속성 제거",
+ "imported_prop_edit.remove.tip": "선택한 요소 {n}개에서 속성을 제거합니다 (한 번의 실행 취소 단계). 저장 시 IFC 파일에서 빠집니다",
+ "imported_prop_edit.done": "{key}을(를) 요소 {n}개에서 제거함",
+ "imported_prop_edit.warn.reload": "완료되었지만 뷰가 새로 고쳐지지 않았습니다; 패널을 다시 열거나, 이상하면 실행 취소하세요"
+}

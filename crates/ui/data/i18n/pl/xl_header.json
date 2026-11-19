@@ -1,0 +1,4 @@
+{
+ "xl.msg.x_cells_above_the_header_on_sheet_x": "{} komórek nad nagłówkiem w arkuszu '{}'",
+ "xl.msg.book_changed_during_export": "skoroszyt został zapisany przez inny program podczas eksportu i nie został nadpisany; eksportuj ponownie"
+}

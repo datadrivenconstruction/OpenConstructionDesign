@@ -1,0 +1,8 @@
+{
+ "mep_units.unit.mm": "mm",
+ "mep_units.unit.in": "in",
+ "mep_units.dn": "DN",
+ "mep_units.diameter": "Đường kính",
+ "mep_units.system.new": "Hệ mới",
+ "mep_units.system.none": "Không có hệ"
+}

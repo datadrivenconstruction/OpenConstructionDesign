@@ -1,0 +1,11 @@
+{
+ "empty.sv_notfound.title": "Вид не знайдено",
+ "empty.sv_notfound.hint": "Цей вид видалено або він більше не входить до проєкту.",
+ "empty.sv_notfound.action": "Закрити вид",
+ "empty.sv_cuts_nothing.title": "Цей розріз нічого не перетинає",
+ "empty.sv_cuts_nothing.hint": "Лінія розрізу не перетинає стін, плит чи отворів у межах своєї глибини. Перемістіть лінію або збільшіть глибину виду.",
+ "empty.sv_cuts_nothing.action": "Показати на плані",
+ "empty.sv_shows_nothing.title": "Цей фасад нічого не показує",
+ "empty.sv_shows_nothing.hint": "У глибину виду не потрапляє жодна стіна, плита чи отвір. Перемістіть лінію виду або збільшіть глибину.",
+ "empty.sv_shows_nothing.action": "Показати на плані"
+}

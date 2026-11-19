@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "Upravlja predložak {name}",
+ "view_template.edit_template": "Uredi predložak",
+ "view_template.locked_tip": "Postavljeno predloškom pogleda {name}. Promijenite ga u predlošku.",
+ "view_template.no_filters": "Nema filtara u ovom pogledu"
+}

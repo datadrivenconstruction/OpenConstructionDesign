@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "Κενή εισαγωγή.",
+ "units.err.not_number": "Δεν είναι αριθμός στη θέση {pos}.",
+ "units.err.unknown_unit": "Άγνωστη μονάδα: {unit}.",
+ "units.err.non_positive": "Το μήκος πρέπει να είναι μεγαλύτερο από μηδέν.",
+ "units.err.too_large": "Το μήκος δεν πρέπει να υπερβαίνει τα {max} m.",
+ "units.err.bad_angle": "Η γωνία είναι αριθμός μοιρών.",
+ "units.err.unknown_name": "Άγνωστο όνομα: {name}. Η τιμή διατηρήθηκε.",
+ "units.err.cycle": "Κυκλική εξάρτηση τύπου στο {name}. Η τιμή διατηρήθηκε.",
+ "units.err.bad_expr": "Δεν είναι δυνατή η ανάγνωση της έκφρασης στη θέση {pos}. Η τιμή διατηρήθηκε.",
+ "units.err.div_zero": "Διαίρεση με μηδέν στη θέση {pos}. Η τιμή διατηρήθηκε.",
+ "units.err.invalid": "Μη έγκυρος αριθμός.",
+ "units.err.kept": "Δεν άλλαξε: {reason}"
+}

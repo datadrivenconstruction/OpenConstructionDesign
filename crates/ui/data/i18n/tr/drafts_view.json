@@ -1,0 +1,9 @@
+{
+ "drafts.draft.view": "“{name}” görünüm grafikleri",
+ "drafts.draft.filter": "Görünüm filtresi “{name}”",
+ "drafts.draft.filter_new": "Yeni görünüm filtresi",
+ "drafts.draft.object_styles": "Nesne stilleri",
+ "drafts.draft.material": "Malzeme “{name}”",
+ "drafts.draft.type": "Tip “{name}”",
+ "drafts.draft.params": "“{name}” ailesinin parametreleri"
+}

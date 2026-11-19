@@ -1,0 +1,12 @@
+{
+ "curtain_wall.cw.issue.slab": "dæk {id}: {e}",
+ "curtain_wall.cw.issue.body": "legeme {id}: {e}",
+ "curtain_wall.cw.added": "Gardinvægge tilføjet: {n}",
+ "curtain_wall.cw.add_failed": "Gardinvæg ikke opbygget: {e}",
+ "curtain_wall.cw.edited_warn": "Gardinvæg #{id} ændret: {w}",
+ "curtain_wall.cw.edited": "Gardinvæg #{id} ændret",
+ "curtain_wall.cw.not_changed": "Ikke ændret: {e}",
+ "curtain_wall.cw.room_edited": "Rum #{id} ændret",
+ "curtain_wall.cw.slope_range": "Ikke ændret: hældning uden for området",
+ "curtain_wall.cw.slope_set": "Dæk #{id}: hældning {pct}"
+}

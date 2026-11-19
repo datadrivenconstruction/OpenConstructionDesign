@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "Révisé",
+ "ai.redraft.added": "+{n} ajouté(s)",
+ "ai.redraft.removed": "−{n} supprimé(s)",
+ "ai.redraft.changed": "~{n} modifié(s)",
+ "ai.redraft.strip": "{what} depuis votre dernier examen",
+ "ai.redraft.note": "Plan révisé examiné : {what}",
+ "ai.redraft.more": "+{n} de plus",
+ "ai.redraft.ack": "Compris",
+ "ai.redraft.ack.tip": "Marque cette révision comme vue ; Appliquer la visera ensuite",
+ "ai.redraft.removed_list": "Éléments supprimés : {n}",
+ "ai.redraft.review_first": "Le plan a changé après votre message : examinez d'abord les modifications",
+ "ai.redraft.mark.tip": "Nouveau ou modifié depuis votre dernier examen",
+ "ai.redraft.emptied": "La suite a supprimé tous les éléments : le brouillon est vide"
+}

@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "מזג אפשרות: {name}",
+ "ai_opt_merge.whole": "מזג את כל האפשרות",
+ "ai_opt_merge.parts": "מזג חלקים שנבחרו",
+ "ai_opt_merge.note": "למה האפשרות הזו",
+ "ai_opt_merge.rebased": "המודל השתנה אחרי שנוצרה האפשרות הזו: המיזוג חושב מחדש מול המודל הנוכחי. בדוק את השינויים לפני ההחלה.",
+ "ai_opt_merge.left.not_picked": "לא נבחר מהאפשרות",
+ "ai_opt_merge.left.unticked": "הסימון הוסר מהאפשרות",
+ "ai_opt_merge.left.conflict": "לא ניתן להוסיף למודל הנוכחי: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "אי אפשר למזג את האפשרות הזו. יש להחזיר קודם אפשרות שנדחתה.",
+ "ai_opt_merge.refused.stale": "המודל השתנה אחרי שנוצרה האפשרות הזו. חשב מחדש את המיזוג מול המודל הנוכחי.",
+ "ai_opt_merge.refused.nothing_picked": "לא נבחר דבר למיזוג.",
+ "ai_opt_merge.refused.unknown_item": "פריט {item} אינו חלק מהאפשרות הזו.",
+ "ai_opt_merge.refused.not_in_option": "האלמנט שנבחר אינו חלק מהאפשרות הזו.",
+ "ai_opt_merge.refused.needs_left_out": "פריט {item} דורש את הפריט {needs}. בחר גם אותו, או אפשר להוסיף תלויות.",
+ "ai_opt_merge.refused.set_gone": "פריט {item} מתייחס לבחירה שכבר לא קיימת. צור את האפשרות מחדש.",
+ "ai_opt_merge.refused.busy": "תוכנית אחרת פתוחה. החל או דחה אותה קודם.",
+ "ai_opt_merge.refused.failed": "לא ניתן היה להכין את המיזוג: {reason}",
+ "ai_opt_merge.revive": "שחזר אפשרות",
+ "ai_opt_merge.merged": "מוזג"
+}

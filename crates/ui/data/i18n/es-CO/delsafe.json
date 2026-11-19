@@ -1,0 +1,6 @@
+{
+ "delsafe.ring.opening_shape": "El contorno de un hueco se cortaría a sí mismo o colapsaría",
+ "delsafe.ring.opening_boundary": "Un hueco cortaría o tocaría el contorno exterior",
+ "delsafe.ring.openings_overlap": "Los huecos se solaparían o tocarían entre sí",
+ "xl.msg.delsafe_instance_param_on_types": "el parámetro '{}' es un parámetro de ejemplar; edítelo en la hoja de elementos, no se aplicó"
+}

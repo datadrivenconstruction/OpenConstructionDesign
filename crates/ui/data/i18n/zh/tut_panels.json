@@ -1,0 +1,9 @@
+{
+ "empty.props_model.title": "未选择任何内容",
+ "empty.props_model.hint": "点击视图中的图元以查看其属性。或将所有参数导出到工作簿，在其中编辑后再应用回模型。",
+ "empty.props_model.action": "导出到 XLSX",
+ "tut.spreadsheet.title": "XLSX 电子表格 往返",
+ "tut.spreadsheet.1": "点击下方的“导出到 XLSX 电子表格”：选择要包含的内容并保存工作簿。",
+ "tut.spreadsheet.2": "在 XLSX 电子表格 中打开工作簿，修改单元格并保存。此处的预览会显示更改。",
+ "tut.spreadsheet.3": "检查预览并点击“应用到模型”。Ctrl+Z 可撤销。"
+}

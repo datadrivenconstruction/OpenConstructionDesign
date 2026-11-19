@@ -1,0 +1,19 @@
+{
+ "xlsx_confirm.chip": "để xác nhận",
+ "xlsx_confirm.section": "Các dòng không có mã được khớp với cấu kiện theo tên hoặc số",
+ "xlsx_confirm.tag": "khớp theo tên",
+ "xlsx_confirm.tag_accepted": "đã chấp nhận khớp",
+ "xlsx_confirm.tag_rejected": "tạo mới",
+ "xlsx_confirm.kind_room": "phòng",
+ "xlsx_confirm.kind_curtain_wall": "tường rèm",
+ "xlsx_confirm.row_line": "{kind} #{id}, khóa \"{key}\"",
+ "xlsx_confirm.accept": "Chấp nhận",
+ "xlsx_confirm.accept_tip": "Áp dụng dòng này cho cấu kiện khớp (một bước hoàn tác cùng các dòng khác)",
+ "xlsx_confirm.reject": "Tạo mới",
+ "xlsx_confirm.reject_tip": "Không khớp: dòng này tạo một cấu kiện mới",
+ "xlsx_confirm.decide_first": "Hãy chấp nhận hoặc từ chối các dòng được khớp theo tên trước.",
+ "xl.msg.key_match_many": "khóa khớp với {} cấu kiện; chưa khớp, dòng sẽ tạo mới",
+ "xl.msg.key_match_taken": "khóa khớp với một cấu kiện đã được dòng khác dùng; chưa khớp, dòng sẽ tạo mới",
+ "xl.msg.key_match_kept": "đã giữ: khớp bị từ chối, dòng tạo một cấu kiện mới",
+ "xl.msg.key_match_undecided": "các dòng được khớp theo tên đang chờ quyết định"
+}

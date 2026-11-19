@@ -1,0 +1,6 @@
+{
+ "xl.msg.filter_on_sheet_x": "'{}' sayfasındaki filtre",
+ "xl.msg.sort_settings_on_sheet_x": "'{}' sayfasındaki sıralama ayarları",
+ "xl.msg.hidden_rows_on_sheet_x": "'{}' sayfasındaki gizli satırlar",
+ "xl.msg.hidden_columns_on_sheet_x": "'{}' sayfasındaki gizli sütunlar"
+}

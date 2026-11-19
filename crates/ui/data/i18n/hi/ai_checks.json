@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "मापा गया {value}, सीमा {limit}",
+ "ai_checks.check.cap": "{total} में से {shown} निष्कर्ष दिख रहे हैं। त्रुटियाँ पहले आती हैं: उन्हें ठीक करें और फिर चलाएँ।",
+ "ai_checks.check.run_again": "फिर चलाएँ",
+ "ai_checks.check.goto": "चुनें और ज़ूम करें",
+ "ai_checks.check.never_title": "अभी जाँच नहीं हुई",
+ "ai_checks.check.never_hint": "जाँच चलाएँ, निष्कर्ष यहाँ दिखेंगे।",
+ "ai_checks.check.sec.error": "त्रुटियाँ",
+ "ai_checks.check.sec.warning": "चेतावनियाँ",
+ "ai_checks.check.sec.info": "नोट"
+}

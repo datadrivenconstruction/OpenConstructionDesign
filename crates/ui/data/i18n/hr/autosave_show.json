@@ -1,0 +1,4 @@
+{
+ "cmd.mgr.autosave_show": "Prikaži automatsko spremanje",
+ "cmd.mgr.autosave_show.desc": "Otvara prozor automatskog spremanja; ostaje otvoren ako je već prikazan."
+}

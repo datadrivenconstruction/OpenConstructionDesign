@@ -1,0 +1,6 @@
+{
+ "project_seed.seed_level": "Verdieping 1",
+ "project_seed.seed_wall_partition": "Binnenwand 100",
+ "project_seed.seed_wall_masonry": "Metselwerk 200",
+ "project_seed.seed_wall_exterior": "Buitenwand 380"
+}

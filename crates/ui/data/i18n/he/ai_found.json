@@ -1,0 +1,46 @@
+{
+ "ai.tool.show_elements": "מציג אלמנטים",
+ "ai.tool.isolate_elements": "מבודד אלמנטים",
+ "ai.tool.color_by": "צביעה לפי ערך",
+ "ai.tool.reset_view": "מאפס את המבט",
+ "ai_found.found.query": "נמצא",
+ "ai_found.found.show": "מוצג",
+ "ai_found.found.isolate": "מבודד",
+ "ai_found.found.hide": "מוסתר",
+ "ai_found.found.color": "צבוע",
+ "ai_found.found.count": "{n} מתוך {m}",
+ "ai_found.found.none": "אין התאמות. נסה מסנן רחב יותר.",
+ "ai_found.found.show_btn": "הצג",
+ "ai_found.found.show_tip": "בחר את האלמנטים האלה והתמקד בהם בתוכנית ובתלת-ממד",
+ "ai_found.found.isolate_btn": "בודד",
+ "ai_found.found.isolate_tip": "הצג רק את האלמנטים האלה עד לאיפוס המבט",
+ "ai_found.found.select_btn": "בחר",
+ "ai_found.found.select_tip": "בחר את האלמנטים האלה בלי להזיז את המבט",
+ "ai_found.legend.title": "צביעה לפי {by}",
+ "ai_found.legend.row_tip": "לחץ כדי לבחור את האלמנטים האלה",
+ "ai_found.legend.empty_value": "אין ערך",
+ "ai_found.legend.other": {
+  "one": "# ערך נוסף",
+  "two": "# ערכים נוספים",
+  "other": "# ערכים נוספים"
+ },
+ "ai_found.view.title": "מבט של עוזר ה-AI",
+ "ai_found.view.reset": "אפס מבט",
+ "ai_found.view.reset_tip": "החזר את המבט שהיה לפני ששינה אותו עוזר ה-AI",
+ "ai_found.view.shown": {
+  "one": "# אלמנט מוצג",
+  "two": "# אלמנטים מוצגים",
+  "other": "# אלמנטים מוצגים"
+ },
+ "ai_found.view.isolated": {
+  "one": "# אלמנט מבודד",
+  "two": "# אלמנטים מבודדים",
+  "other": "# אלמנטים מבודדים"
+ },
+ "ai_found.view.hidden": {
+  "one": "# אלמנט מוסתר",
+  "two": "# אלמנטים מוסתרים",
+  "other": "# אלמנטים מוסתרים"
+ },
+ "ai_found.found.line": "{what}: {count}"
+}

@@ -1,0 +1,59 @@
+{
+ "del.k.door": {
+  "one": "# dør",
+  "other": "# døre"
+ },
+ "del.k.window": {
+  "one": "# vindue",
+  "other": "# vinduer"
+ },
+ "del.k.opening": {
+  "one": "# åbning",
+  "other": "# åbninger"
+ },
+ "del.k.comp": {
+  "one": "# værtskomponent",
+  "other": "# værtskomponenter"
+ },
+ "del.k.rebar": {
+  "one": "# armeringssæt",
+  "other": "# armeringssæt"
+ },
+ "del.k.port": {
+  "one": "# værts-VVS-tilslutning",
+  "other": "# værts-VVS-tilslutninger"
+ },
+ "del.k.joist": {
+  "one": "# bjælke",
+  "other": "# bjælker"
+ },
+ "del.k.railing": {
+  "one": "# rækværk",
+  "other": "# rækværk"
+ },
+ "del.k.tag": {
+  "one": "# markering",
+  "other": "# markeringer"
+ },
+ "del.k.dim": {
+  "one": "# mål (frakoblet)",
+  "other": "# mål (frakoblede)"
+ },
+ "del.also": "Berørt også: {list}",
+ "del.rooms": {
+  "one": "# rum mister en afgrænsningsvæg",
+  "other": "# rum mister hver en afgrænsningsvæg"
+ },
+ "del.cancelled": "Sletning annulleret, intet ændret",
+ "del.confirm.title": "Slet med afhængige",
+ "del.confirm.lead": {
+  "one": "# valgt element tager disse med sig:",
+  "other": "# valgte elementer tager disse med sig:"
+ },
+ "del.confirm.levels": {
+  "one": "# af dem ligger på en anden etage",
+  "other": "# af dem ligger på andre etager"
+ },
+ "del.confirm.all": "Slet alle",
+ "del.confirm.cancel": "Annuller"
+}

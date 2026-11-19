@@ -1,0 +1,4 @@
+{
+ "dlg.dw.near_origin": "Flytta en ritning som ligger långt bort till origo",
+ "dlg.dw.moved_far": "; flyttad till origo från ({x}, {y}) m, förskjutningen behölls"
+}

@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "Yang terjadi setelah buku kerja diekspor",
+ "settings.area_decimals_desc": "Digit setelah pemisah desimal pada luas",
+ "settings.volume_decimals_desc": "Digit setelah pemisah desimal pada volume",
+ "settings.frac_desc": "Pecahan terkecil inci pada panjang imperial",
+ "settings.small_area_desc": "Tampilkan luas di bawah satu kaki persegi dalam inci persegi",
+ "settings.sample_desc": "Tampilan angka dengan pilihan saat ini",
+ "autosave.title_desc": "Simpan salinan pemulihan proyek yang terbuka",
+ "autosave.interval_desc": "Jeda antara salinan pemulihan",
+ "autosave.keep_desc": "Salinan pemulihan yang lebih lama akan dihapus",
+ "autosave.folder_desc": "Kosong berarti folder default",
+ "autosave.remind_desc": "Pengingat untuk menyimpan proyek yang belum punya berkas",
+ "settings.backend_desc": "Adaptor grafis yang digunakan",
+ "settings.news_desc": "Yang berubah di versi ini",
+ "settings.assoc_default_desc": "Jadikan aplikasi ini default untuk berkas model",
+ "settings.data_dir_desc": "Cache, salinan pemulihan, dan log disimpan di sini."
+}

@@ -1,0 +1,14 @@
+{
+ "empty.v3d_model.title": "Intet i 3D endnu",
+ "empty.v3d_model.hint": "Tegn vægge i planen, så vises de her.",
+ "empty.v3d_model.action": "Åbn plan",
+ "empty.v3d_hidden.title": "Alle elementer er skjult i denne visning",
+ "empty.v3d_hidden.hint": "Midlertidig skjulning eller isolering skjuler alt. Visningsgrafikken beholdes som angivet.",
+ "empty.v3d_hidden.action": "Vis alle",
+ "empty.v3d_graphics.title": "Visningsgrafikken skjuler alle kategorier",
+ "empty.v3d_graphics.hint": "Kategorireglerne for denne visning skjuler alt. Slå kategorier til igen under Visningsgrafik.",
+ "empty.v3d_graphics.action": "Åbn visningsgrafik",
+ "empty.v3d_box.title": "Snitboksen er uden for modellen",
+ "empty.v3d_box.hint": "Boksen skærer alle elementer væk. Tilpas den igen om modellen.",
+ "empty.v3d_box.action": "Nulstil boks"
+}

@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "{name} diskte değişti.",
+ "src.watch.update": "Modeli güncelle",
+ "src.watch.compare": "Karşılaştır",
+ "src.watch.ignore": "Bu sürümü yoksay",
+ "src.watch.missing": "{name}: kaynak dosya bulunamadı. Çalışma devam ediyor.",
+ "src.watch.locate": "Bul…",
+ "src.watch.dismiss": "Kapat",
+ "src.watch.more": "ve {n} kaynak dosya daha",
+ "src.watch.done": "{name} dosyasından güncellendi: {updated} değişen, {kept} alan düzenlendiği gibi korundu, {conflicts} çakışma, {locked} kilitli değer korundu"
+}

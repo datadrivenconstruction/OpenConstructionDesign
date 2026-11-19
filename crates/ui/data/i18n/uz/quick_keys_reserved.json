@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key} band ({why}) va qayta tayinlab bo'lmaydi",
+ "quick.keys.res_copy": "nusxalash",
+ "quick.keys.res_paste": "joylashtirish",
+ "quick.keys.res_cut": "kesish",
+ "quick.keys.res_undo": "bekor qilish / qaytarish",
+ "quick.keys.res_save": "saqlash",
+ "quick.keys.res_palette": "buyruqlar palitrasi",
+ "quick.keys.reserved_conflict": "{key} allaqachon “{cmd}” tomonidan ishlatilmoqda. Esc uni u yerda qoldiradi.",
+ "quick.keys.reserved_swap": "Almashtirish",
+ "quick.keys.reserved_take": "Egallash",
+ "quick.keys.reserved_keep": "Qoldirish",
+ "quick.keys.reserved_os": "Tizim tomonidan band:"
+}

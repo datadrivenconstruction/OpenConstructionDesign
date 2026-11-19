@@ -1,0 +1,9 @@
+{
+ "shot_scenes.site": "Teren",
+ "shot_scenes.lawn": "Trawnik",
+ "shot_scenes.pad": "Platforma",
+ "shot_scenes.block": "Blok",
+ "shot_scenes.void": "Wycięcie",
+ "shot_scenes.tower": "Wieża",
+ "shot_scenes.wall_void": "Wycięcie w ścianie"
+}

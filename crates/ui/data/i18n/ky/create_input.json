@@ -1,0 +1,14 @@
+{
+ "cmd.mod.divide": "Бөлүү",
+ "cmd.mod.divide.short": "Бөлүү",
+ "cmd.mod.divide.desc": "Дубалды бирдей бөлүктөргө бир кадамда бөлөт. Бөлүктөрдүн санын жазып, андан кийин дубалды басыңыз.",
+ "whereis.mod.divide": "бөлүү, бирдей бөлүктөр, бөлүктөргө кесүү, дубалды сегменттөө",
+ "hint.split.parts": "Бөлүү: дубалды басыңыз · сан — бөлүктөр (2–100) · Esc — жокко чыгаруу",
+ "create_input.divide.bad_parts": "«{text}» бөлүктөрдүн саны эмес: {max} чейинки бүтүн санды жазыңыз",
+ "create_input.ws.err.empty": "Макеттин атын жазыңыз",
+ "create_input.ws.err.long": "Ат өтө узун: ең көп 40 белги",
+ "create_input.ws.err.preset": "Бул ат курулган макетке таандык",
+ "create_input.ws.err.full": "Ең көп 24 сакталган макет: адегенде бирөөнү алып салыңыз",
+ "create_input.seldim.locked": "Аралык {v} бекитилген",
+ "create_input.seldim.positive": "Аралык нөлдөн чоң болушу керек"
+}

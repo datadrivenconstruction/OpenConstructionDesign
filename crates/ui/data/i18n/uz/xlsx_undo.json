@@ -1,0 +1,6 @@
+{
+ "cmd.xlsx.undo_apply": "Oxirgi XLSX jadval qo'llashni bekor qilish",
+ "xlsx_undo.later": "Bekor qilinmadi: bu XLSX jadval qo'llashdan keyin model tahrirlangan. Ctrl+Z ni bosqichma-bosqich yoki Tarix panelini ishlating.",
+ "xlsx_undo.gone": "Bekor qilinadigan narsa yo'q: bu XLSX jadval qo'llash allaqachon bekor qilingan.",
+ "xlsx_undo.busy": "Avval joriy chizmani tugating yoki bekor qiling, so'ng XLSX jadval qo'llashni bekor qiling."
+}

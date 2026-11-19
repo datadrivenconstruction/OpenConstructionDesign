@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}, a szinten",
+ "cmd_buttons.purge.undo": "Az eltávolítás egy visszavonási lépés.",
+ "cmd_buttons.unpin.none": "Nincs kijelölt rögzített elem",
+ "cmd_buttons.change_type.none": "Előbb jelölj ki falakat: típusuk egy lépésben változik",
+ "cmd_buttons.units.metric": "Mértékegységek: metrikus",
+ "cmd_buttons.units.imperial": "Mértékegységek: láb és hüvelyk",
+ "cmd_buttons.units.back": "Vissza a váltáshoz",
+ "cmd_buttons.underlay.on": "Alátét bekapcsolva: az alatta lévő szint halványítva jelenik meg",
+ "cmd_buttons.underlay.off": "Alátét kikapcsolva",
+ "cmd_buttons.underlay.none": "Alátét bekapcsolva, de az alatta lévő szintnek nincs mit megjeleníteni",
+ "cmd_buttons.zoom_sel.no_shape": "A kijelölésnek ebben a nézetben nincs keretezhető alakja",
+ "cmd_buttons.close.base": "Az alaprajz és a 3D lapok nyitva maradnak; metszet, lap vagy szerkesztési nézet megnyitásával zárható be",
+ "tool.equipment": "Berendezés",
+ "hint.equipment.place": "Berendezés: válassz helyet · Esc a kilépéshez",
+ "cmd_buttons.table.opened": "Táblázat megnyitva a modell mellett",
+ "cmd_buttons.circuits.tip": "Ennek a modellnek az elektromos áramköreinek listájának megnyitása"
+}

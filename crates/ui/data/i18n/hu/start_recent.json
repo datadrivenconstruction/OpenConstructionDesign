@@ -1,0 +1,5 @@
+{
+ "start_recent.unavailable": "Jelenleg nem elérhető (a meghajtó vagy a hálózati hely nem válaszol): {path}",
+ "start_recent.unavailable_short": "Jelenleg nem elérhető",
+ "start_recent.retry": "Újrapróbálkozás"
+}

@@ -1,0 +1,9 @@
+{
+ "ai.settings.num_bad": "Không phải số. Nhập dạng như 0.5.",
+ "ai.settings.num_comma": "Dùng dấu chấm làm dấu thập phân, như 0.5.",
+ "ai.settings.num_negative": "Số không thể âm.",
+ "ai.settings.unit_money": "đơn vị tiền tệ",
+ "ai.settings.unit_tokens": "token",
+ "ai.settings.unit_price": "trên 1 triệu token",
+ "ai.settings.limits_hint": "0 nghĩa là không giới hạn. Giá trị bị từ chối sẽ giữ giới hạn trước đó."
+}

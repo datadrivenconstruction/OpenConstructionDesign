@@ -1,0 +1,4 @@
+{
+ "ai.issue.delete_large": "{0} elemen akan dihapus, melebihi batas {1}. Diperlukan izin",
+ "ai.issue.refused_large": "{0} elemen akan berubah, melebihi batas keras {1}. Pecah rencana menjadi bagian-bagian lebih kecil"
+}

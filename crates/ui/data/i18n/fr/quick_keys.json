@@ -1,0 +1,6 @@
+{
+ "quick.keys.rec_hint": "Échap annule · Retour arrière efface",
+ "quick.keys.row_lost": "{key} appartient maintenant à « {cmd} »",
+ "quick.keys.row_took": "{key} retiré de « {cmd} »",
+ "quick.keys.reset_tip": "Rétablir la valeur par défaut"
+}

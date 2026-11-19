@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}, на рівні",
+ "cmd_buttons.purge.undo": "Видалення — один крок скасування.",
+ "cmd_buttons.unpin.none": "Серед вибраних нічого не закріплено",
+ "cmd_buttons.change_type.none": "Спершу виберіть стіни: їх тип змінюється одним кроком",
+ "cmd_buttons.units.metric": "Одиниці: метричні",
+ "cmd_buttons.units.imperial": "Одиниці: фути й дюйми",
+ "cmd_buttons.units.back": "Повернутися",
+ "cmd_buttons.underlay.on": "Підкладка увімкнена: нижній рівень показано блідо",
+ "cmd_buttons.underlay.off": "Підкладка вимкнена",
+ "cmd_buttons.underlay.none": "Підкладка увімкнена, але на нижньому рівні немає що показувати",
+ "cmd_buttons.zoom_sel.no_shape": "У вибраного немає форми для кадрування в цьому виді",
+ "cmd_buttons.close.base": "Вкладки «План» і «3D» залишаються відкритими; щоб закрити їх, відкрийте розріз, аркуш або креслярський вид",
+ "tool.equipment": "Обладнання",
+ "hint.equipment.place": "Обладнання: виберіть місце · Esc — вийти",
+ "cmd_buttons.table.opened": "Таблицю відкрито поруч із моделлю",
+ "cmd_buttons.circuits.tip": "Відкриває список електричних кіл цієї моделі"
+}

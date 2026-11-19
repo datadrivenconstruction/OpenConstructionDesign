@@ -1,0 +1,4 @@
+{
+ "ai.issue.delete_large": "{0} elemente ar fi șterse, peste limita de {1}. Este nevoie de permisiune",
+ "ai.issue.refused_large": "{0} elemente s-ar schimba, peste limita fermă de {1}. Împarte planul în părți mai mici"
+}

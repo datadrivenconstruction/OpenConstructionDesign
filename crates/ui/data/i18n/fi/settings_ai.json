@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "Yhteys",
+ "settings.ai_status_desc": "Malli, jota tekoälyavustaja käyttää; avaimet pysyvät suojatussa tallennuksessa",
+ "settings.ai_not_connected": "Ei yhteyttä",
+ "settings.ai_connect": "Yhteysasetukset",
+ "settings.ai_connect_desc": "Oman mallisi osoite, malli ja avain, pilvessä tai paikallisesti",
+ "settings.ai_connect_btn": "Yhteysasetukset…",
+ "settings.ai_panel": "Tekoälyavustajan paneeli",
+ "settings.ai_panel_desc": "Kysy sanoin, tarkista suunnitelma ja käytä sitten",
+ "settings.ai_open_panel": "Avaa tekoälypaneeli"
+}

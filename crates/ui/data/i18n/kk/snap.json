@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "Соңғы нүкте",
+ "snap.midpoint": "Ортаңғы нүкте",
+ "snap.perpendicular": "Перпендикуляр",
+ "snap.wall_axis": "Қабырға осі",
+ "snap.wall_face": "Қабырға беті",
+ "snap.grid": "Тор",
+ "snap.intersection": "Қиылысу",
+ "snap.grid_axis": "Торлы сызық",
+ "snap.ref_plane": "Анықтамалық жазықтық",
+ "snap.nearest": "Ең жақын",
+ "snap.align_x": "Қашықтағы нүктемен X бойынша тураланған",
+ "snap.align_y": "Қашықтағы нүктемен Y бойынша тураланған",
+ "snap.align_xy": "X және Y бойынша тураланған"
+}

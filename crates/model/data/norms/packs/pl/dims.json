@@ -1,0 +1,121 @@
+{
+ "items": [
+  {
+   "key": "room.height_min",
+   "value": 2.5,
+   "unit": "m",
+   "source": "wt2002-consolidated-2022",
+   "clause": "par. 72(1), table: rooms in residential buildings, min clear height 2.5 m",
+   "verified": true,
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2022/1225/text.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Habitable rooms in dwellings need at least 2.5 m clear height; attic rooms in houses may be 2.2 m.",
+   "note": "read 2026-11-14: api.sejm.gov.pl/eli/acts/DU/2022/1225/text.pdf; attic rooms in single-family houses 2.2 m"
+  },
+  {
+   "key": "door.clear_min",
+   "value": 0.8,
+   "unit": "m",
+   "source": "wt2002-consolidated-2022",
+   "clause": "par. 75(1) (not par. 77): doors to rooms for permanent stay and kitchens, min clear width 0.8 m, height 2 m",
+   "verified": true,
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2022/1225/text.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Interior doors to habitable rooms and kitchens need 0.8 m clear width and 2 m height; clause number in pack should be par. 75(1).",
+   "note": "read 2026-11-14: api.sejm.gov.pl/eli/acts/DU/2022/1225/text.pdf; clause number corrected from par. 77 to par. 75(1); flat entrance doors are 0.9 m under par. 62(1)"
+  },
+  {
+   "key": "door.clear_min.office",
+   "value": 0.9,
+   "unit": "m",
+   "source": "wt2002-consolidated-2022",
+   "clause": "par. 75(2) (not par. 77): interior doors in public-use buildings, min 0.9 m clear width, 2 m height",
+   "verified": true,
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2022/1225/text.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "In public-use buildings interior doors (except technical or utility rooms) need 0.9 m clear width and 2 m height.",
+   "note": "read 2026-11-14: api.sejm.gov.pl/eli/acts/DU/2022/1225/text.pdf; technical and storage rooms excepted; applies to public-use buildings (office as typical case)"
+  },
+  {
+   "key": "door.clear_min.accessible",
+   "value": 0.9,
+   "unit": "m",
+   "source": "wt2002-consolidated-2022",
+   "clause": "par. 62(1), par. 75(2), par. 85(2)(3) (not par. 86): entrance and public-building doors 0.9 m; WC cabins adapted for disabled users 0.9 m",
+   "verified": true,
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2022/1225/text.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "No dedicated accessible-door rule, but entrance doors, public-building interior doors and accessible WC cabin doors all need at least 0.9 m clear width.",
+   "note": "read 2026-11-14: api.sejm.gov.pl/eli/acts/DU/2022/1225/text.pdf; no single accessible-door clause; 0.9 m is the common minimum for the doors disabled users must pass; par. 86 itself only requires threshold-free doors"
+  },
+  {
+   "key": "accessible.turning_circle",
+   "value": 1.5,
+   "unit": "m",
+   "source": "wt2002",
+   "clause": "par. 86",
+   "verified": false,
+   "note": "read 2026-11-14: api.sejm.gov.pl/eli/acts/DU/2022/1225/text.pdf; the law gives a 1.5 m square, not a circle diameter, so kept unverified as a proxy"
+  },
+  {
+   "key": "ramp.slope_max",
+   "value": 0.06,
+   "unit": "ratio",
+   "source": "wt2002-consolidated-2022",
+   "clause": "par. 70, table: pedestrian and wheelchair ramps rising over 0.5 m, max 6 % outdoors uncovered, 8 % indoors or under a roof",
+   "verified": true,
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2022/1225/text.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "For ramps rising over 0.5 m the maximum gradient is 6 percent outdoors and 8 percent indoors or covered; shorter rises allow steeper slopes.",
+   "note": "read 2026-11-14: api.sejm.gov.pl/eli/acts/DU/2022/1225/text.pdf; value 0.06 is the outdoor figure; indoor 0.08; rise up to 0.5 m: 8 % outdoors / 10 % indoors; up to 0.15 m: 15 %"
+  },
+  {
+   "key": "insolation.hours_min",
+   "value": 3.0,
+   "unit": "h",
+   "source": "wt2002-consolidated-2022",
+   "clause": "par. 60(1)-(3): at least 3 h sunlight on equinox days, 07:00-17:00 for habitable rooms; one room suffices in multi-room flats; city-centre infill may drop to 1.5 h",
+   "verified": true,
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2022/1225/text.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Habitable rooms need 3 hours of sun at the equinox within 07:00-17:00, only one room per multi-room flat; dense city centres may use 1.5 hours.",
+   "note": "read 2026-11-14: api.sejm.gov.pl/eli/acts/DU/2022/1225/text.pdf"
+  },
+  {
+   "key": "egress.travel_max",
+   "value": 40.0,
+   "unit": "m",
+   "source": "wt2002",
+   "clause": "par. 237(1) item 1, ZL zones: 40 m to an exit",
+   "verified": true,
+   "note": "read 2026-11-14: api.sejm.gov.pl/eli/acts/DU/2022/1225/text.pdf (consolidated text 2022); act repealed 2026-09-21 (api.sejm.gov.pl/eli/acts/DU/2022/1225), no successor in force on 2026-11-14, still applies by declaration until 2028-03-20"
+  },
+  {
+   "key": "daylight.window_floor_ratio",
+   "value": 0.125,
+   "unit": "ratio",
+   "source": "wt2002",
+   "clause": "par. 57(2), rooms for people to stay: window to floor area at least 1:8",
+   "verified": true,
+   "note": "read 2026-11-14: api.sejm.gov.pl/eli/acts/DU/2022/1225/text.html"
+  },
+  {
+   "key": "corridor.width_min.accessible",
+   "value": 1.2,
+   "unit": "m",
+   "source": "wt2002",
+   "clause": "corridors",
+   "verified": false,
+   "note": "searched 2026-11-14: read full consolidated text api.sejm.gov.pl/eli/acts/DU/2022/1225/text.pdf; no dedicated accessible-corridor width rule found, 1.2 m is only the dwelling-corridor figure"
+  },
+  {
+   "key": "fire.compartment_area_max",
+   "value": 5000,
+   "unit": "m2",
+   "source": "wt2002",
+   "clause": "par. 227(1), ZL zone in a medium-high building: 5000 m2",
+   "verified": true,
+   "note": "read 2026-11-14: api.sejm.gov.pl/eli/acts/DU/2022/1225/text.pdf; sprinklers allow enlargement"
+  }
+ ]
+}

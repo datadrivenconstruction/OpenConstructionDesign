@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "Wskaż cały obieg ścian",
+ "cmd.sketch.link_unlink": "Odepnij krawędź od ściany",
+ "cmd.sketch.link_repick": "Wskaż ponownie ścianę krawędzi",
+ "cmd.ctx.floor.link_unlink": "Odepnij krawędzie od ścian",
+ "cmd.ctx.floor.link_accept": "Przyjmij krawędzie usuniętych ścian",
+ "boundary_link.hint.loop": "Kliknij ścianę: zamknięty ciąg ścian stanie się połączonymi krawędziami",
+ "boundary_link.hint.repick": "Kliknij ścianę równoległą do krawędzi: krawędź będzie za nią podążać",
+ "boundary_link.need_sketch": "Najpierw otwórz szkic obrysu",
+ "boundary_link.need_edge": "Wskaż krawędź szkicu",
+ "boundary_link.need_straight": "Tylko prosta krawędź może podążać za ścianą",
+ "boundary_link.need_floor": "Zaznacz stropu",
+ "boundary_link.no_wall": "Brak ściany pod kursorem",
+ "boundary_link.not_parallel": "Ściana nie jest równoległa do krawędzi",
+ "boundary_link.not_linked": "Ta krawędź nie jest połączona ze ścianą",
+ "boundary_link.unlinked": "Krawędź odpięta: zostaje na miejscu i nie podąża już za ścianą",
+ "boundary_link.accepted": "Krawędzie przyjęte: zostają na miejscu jako zwykłe krawędzie",
+ "boundary_link.failed": "Nie udało się zastosować",
+ "boundary_link.lost": "ściana źródłowa usunięta",
+ "boundary_link.blocked": "nie może podążać za ścianą"
+}

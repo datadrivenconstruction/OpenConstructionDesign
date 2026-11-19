@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "Панел",
+ "curtain_props.cw.panel_cell": "Клетка {i}×{j} · фасадна стена №{id}",
+ "curtain_props.cw.kind": "Тип",
+ "curtain_props.cw.kind.glazed": "Стъкло",
+ "curtain_props.cw.kind.solid": "Плътно",
+ "curtain_props.cw.kind.door": "Врата",
+ "curtain_props.cw.kind.window": "Прозорец",
+ "curtain_props.cw.kind.empty": "Празно",
+ "curtain_props.cw.name": "Име",
+ "curtain_props.cw.swing_side": "Отваря се към другата страна",
+ "curtain_props.cw.swing_hinge": "Шарнир в края на клетката",
+ "curtain_props.cw.size": "Размер",
+ "curtain_props.cw.cell_area": "Площ на клетката",
+ "curtain_props.cw.panel_area": "Площ на панела",
+ "curtain_props.cw.prev": "Предишен панел",
+ "curtain_props.cw.next": "Следващ панел",
+ "curtain_props.cw.wall": "Изберете стената",
+ "curtain_props.cw.panel_hint": "Esc — избор · Ctrl+Z — отмяна",
+ "curtain_props.cw.status.panel": "Панел {i}×{j} → {kind}",
+ "e3d.err.cw_height": "височината на фасадната стена трябва да е над 100 mm"
+}

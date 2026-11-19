@@ -1,0 +1,12 @@
+{
+ "curtain_wall.cw.issue.slab": "床 {id}: {e}",
+ "curtain_wall.cw.issue.body": "本体 {id}: {e}",
+ "curtain_wall.cw.added": "追加したカーテンウォール: {n}",
+ "curtain_wall.cw.add_failed": "カーテンウォールを作成できませんでした: {e}",
+ "curtain_wall.cw.edited_warn": "カーテンウォール #{id} を変更しました: {w}",
+ "curtain_wall.cw.edited": "カーテンウォール #{id} を変更しました",
+ "curtain_wall.cw.not_changed": "変更されていません: {e}",
+ "curtain_wall.cw.room_edited": "部屋 #{id} を変更しました",
+ "curtain_wall.cw.slope_range": "変更されていません: 勾配が範囲外です",
+ "curtain_wall.cw.slope_set": "床 #{id}: 勾配 {pct}"
+}

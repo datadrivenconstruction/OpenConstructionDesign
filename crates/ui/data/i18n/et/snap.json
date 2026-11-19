@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "Lõpp-punkt",
+ "snap.midpoint": "Keskpunkt",
+ "snap.perpendicular": "Risti",
+ "snap.wall_axis": "Seina telg",
+ "snap.wall_face": "Seina pind",
+ "snap.grid": "Ruudustik",
+ "snap.intersection": "Lõikepunkt",
+ "snap.grid_axis": "Telgjoon",
+ "snap.ref_plane": "Võrdlustasand",
+ "snap.nearest": "Lähim",
+ "snap.align_x": "Joondatud X-suunas kaugpunktiga",
+ "snap.align_y": "Joondatud Y-suunas kaugpunktiga",
+ "snap.align_xy": "Joondatud X- ja Y-suunas"
+}

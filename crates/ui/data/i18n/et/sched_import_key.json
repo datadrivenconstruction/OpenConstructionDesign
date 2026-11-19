@@ -1,0 +1,6 @@
+{
+ "sched_import.no_key": "Sellel töövihikul pole eksporditeabe kirjet (vanem eksport): pärast seda eksporti mudelis muudetud lahtreid võidakse üle kirjutada. Kontrolli muudetud lahtreid enne rakendamist.",
+ "sched_import.n_kept": "Mudelis muudetud pärast eksporti, jäetud alles: {n}",
+ "sched_import.n_conflict": "Muudetud nii töövihikus kui mudelis, ei rakendatud: {n}",
+ "sched_import.why_conflict": "muudetud mudelis pärast eksporti (nüüd {model}), ei rakendatud"
+}

@@ -1,0 +1,10 @@
+{
+ "xlsx_dup.dup_undo": "Annulla decisione",
+ "xlsx_dup.dup_undo_tip": "Le righe trasformate in nuovi elementi ({n}) vengono rilette di nuovo con il loro id",
+ "xlsx_dup.dup_new": "Crea le copie modificate come nuovi elementi",
+ "xlsx_dup.dup_new_tip": "Le righe {rows} diventano nuovi elementi con i loro valori; l'elemento #{id} mantiene i suoi valori (un passo di annullamento con il resto)",
+ "xl.msg.dup_same": "id duplicato {}: stessi valori della riga {}; riga ignorata",
+ "xl.msg.dup_unchanged": "id duplicato {}: copia non modificata della riga esportata; riga ignorata",
+ "xl.msg.dup_conflict": "id {} è sulle righe {} con valori diversi; nulla applicato per questo id",
+ "xl.msg.dup_conflict_keep": "id {} è sulle righe {} con valori diversi; nulla applicato per questo id — mantieni una riga"
+}

@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "This workbook already exists",
+ "xlsx_exists.foreign": "It is not a workbook of this project, so it is never replaced.",
+ "xlsx_exists.pending": "It holds {n} edits that are not applied to the model yet.",
+ "xlsx_exists.outside": "It has {n} rows that the new export does not carry.",
+ "xlsx_exists.new_name": "Export to {name}",
+ "xlsx_exists.apply_first": "Apply them first",
+ "xlsx_exists.replace": "Replace (old book to _archive)",
+ "xlsx_exists.archived": "Old workbook moved to {path}",
+ "xlsx_exists.archive_failed": "The old workbook could not be moved, nothing was exported: {error}"
+}

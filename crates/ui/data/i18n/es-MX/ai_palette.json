@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "Preguntar a la IA: {q}",
+ "ai.palette.connect": "Conecte la IA para preguntar",
+ "ai.palette.draft.apply": "Aplicar borrador ({n})",
+ "ai.palette.draft.reject": "Rechazar borrador",
+ "ai.palette.draft.next": "Siguiente cambio del borrador",
+ "ai.palette.draft.show": "Mostrar borrador en la vista",
+ "cmd.ai.next_change": "Siguiente cambio del borrador",
+ "cmd.ai.next_change.desc": "Mueve la vista al siguiente elemento que cambia el borrador.",
+ "cmd.ai.show_draft": "Mostrar borrador de la IA en la vista",
+ "cmd.ai.show_draft.desc": "Ajusta la vista a todo lo que cambia el borrador."
+}

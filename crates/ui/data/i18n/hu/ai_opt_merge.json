@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "Változat összefésülése: {name}",
+ "ai_opt_merge.whole": "Teljes változat összefésülése",
+ "ai_opt_merge.parts": "A kijelölt részek összefésülése",
+ "ai_opt_merge.note": "Miért ez a változat",
+ "ai_opt_merge.rebased": "A modell megváltozott a változat készítése után: az összefésülés az aktuális modellhez lett újraszámítva. Alkalmazás előtt ellenőrizze a módosításokat.",
+ "ai_opt_merge.left.not_picked": "A változatból nincs kiválasztva",
+ "ai_opt_merge.left.unticked": "A változatban ki van véve a jelölésből",
+ "ai_opt_merge.left.conflict": "Nem vehető fel az aktuális modellbe: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "Ez a változat nem fésülhető össze. Az elutasított változatot előbb vissza kell állítani.",
+ "ai_opt_merge.refused.stale": "A modell megváltozott a változat készítése után. Számítsa újra az összefésülést az aktuális modellhez.",
+ "ai_opt_merge.refused.nothing_picked": "Nincs kijelölve semmi az összefésüléshez.",
+ "ai_opt_merge.refused.unknown_item": "A(z) {item} tétel nem része ennek a változatnak.",
+ "ai_opt_merge.refused.not_in_option": "A kijelölt elem nem része ennek a változatnak.",
+ "ai_opt_merge.refused.needs_left_out": "A(z) {item} tétel a(z) {needs} tételt igényli. Jelölje ki azt is, vagy engedélyezze a függőségek hozzáadását.",
+ "ai_opt_merge.refused.set_gone": "A(z) {item} tétel olyan kijelölésre hivatkozik, amely már nem létezik. Hozza létre újra a változatot.",
+ "ai_opt_merge.refused.busy": "Másik terv van megnyitva. Előbb alkalmazza vagy utasítsa el.",
+ "ai_opt_merge.refused.failed": "Az összefésülést nem lehetett előkészíteni: {reason}",
+ "ai_opt_merge.revive": "Változat visszaállítása",
+ "ai_opt_merge.merged": "Összefésülve"
+}

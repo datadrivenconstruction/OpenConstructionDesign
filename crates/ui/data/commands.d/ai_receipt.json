@@ -1,0 +1,14 @@
+[
+ {
+  "id": "ai.receipt_undo",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "P"
+  ],
+  "stage": "M2",
+  "group": "ai"
+ }
+]

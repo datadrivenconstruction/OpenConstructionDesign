@@ -1,0 +1,212 @@
+{
+ "items": [
+  {
+   "key": "egress.travel_max",
+   "value": 40,
+   "unit": "m",
+   "source": "vn-qcvn06",
+   "clause": "Annex G, G.1.1 Table G.1",
+   "url": "https://congbao.chinhphu.vn/van-ban/thong-tu-so-06-2022-tt-bxd-38322.htm",
+   "accessed": "2026-11-14",
+   "paraphrase": "Apartment front door to nearest stair or exit: 40 m for fire class I/II, S0 structure, door between stairs (25 m on a dead-end corridor; less for lower classes).",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ],
+    "sprinklered": false
+   },
+   "verified": true,
+   "note": "read 2026-11-14 in the Government Gazette PDF text layer (congbao.chinhphu.vn, issue 921-926/2022). 40 m is the best-case row."
+  },
+  {
+   "key": "egress.travel_max.office",
+   "value": 60,
+   "unit": "m",
+   "source": "vn-qcvn06",
+   "clause": "Annex G, G.1.2.1 Table G.2a row 1",
+   "url": "https://congbao.chinhphu.vn/van-ban/thong-tu-so-06-2022-tt-bxd-38322.htm",
+   "accessed": "2026-11-14",
+   "paraphrase": "Public-building room door to nearest exit: 60 m for class I-III with escape flow density up to 2 persons/m2, door between exits.",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "sprinklered": false
+   },
+   "verified": true,
+   "note": "read 2026-11-14 in the Government Gazette PDF text layer (congbao.chinhphu.vn, issue 921-926/2022). Offices fall under public buildings; limit falls with higher flow density (50/40/35/20 m)."
+  },
+  {
+   "key": "fire.compartment_area_max",
+   "value": 2500,
+   "unit": "m2",
+   "source": "vn-qcvn06",
+   "clause": "Annex H, H.1 Table H.1",
+   "url": "https://congbao.chinhphu.vn/van-ban/thong-tu-so-06-2022-tt-bxd-38322.htm",
+   "accessed": "2026-11-14",
+   "paraphrase": "Apartment floor area per compartment: 2500 m2 for fire class I or II with non-combustible structure, falling to 1800 or less for lower classes.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ],
+    "sprinklered": false
+   },
+   "verified": true,
+   "note": "read 2026-11-14 in the Government Gazette PDF text layer (congbao.chinhphu.vn, issue 921-926/2022). Class I S0: 2500 m2; class II S0: 2500, S1: 2200; class III 1800; class IV 1000 or less."
+  },
+  {
+   "key": "fire.compartment_area_max.office",
+   "value": 4000,
+   "unit": "m2",
+   "source": "vn-qcvn06",
+   "clause": "Annex H, H.2.1 Table H.2",
+   "url": "https://congbao.chinhphu.vn/van-ban/thong-tu-so-06-2022-tt-bxd-38322.htm",
+   "accessed": "2026-11-14",
+   "paraphrase": "Public building (office) floor per compartment, class II S0: 4000 m2 for 2 to 9 above-ground storeys, 2200 m2 at 10-16 storeys.",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "sprinklered": false,
+    "max_floors": 9
+   },
+   "verified": true,
+   "note": "read 2026-11-14 in the Government Gazette PDF text layer (congbao.chinhphu.vn, issue 921-926/2022). Class II S0, 2-9 storeys 4000 m2, 10-16 storeys 2200 m2; office taken as a public building."
+  },
+  {
+   "key": "stair.width_min",
+   "value": 0.9,
+   "unit": "m",
+   "source": "vn-qcvn06",
+   "clause": "3.4.1",
+   "url": "https://congbao.chinhphu.vn/van-ban/thong-tu-so-06-2022-tt-bxd-38322.htm",
+   "accessed": "2026-11-14",
+   "paraphrase": "Escape stair flight at least 90 cm wide generally; 120 cm where over 200 people on a floor; 135 cm for hospital-type uses.",
+   "verified": true,
+   "note": "read 2026-11-14 in the Government Gazette PDF text layer (congbao.chinhphu.vn, issue 921-926/2022). 0.9 m general; 1.2 m where over 200 persons on any upper floor; 1.35 m for F1.1 buildings."
+  },
+  {
+   "key": "stair.riser_max",
+   "value": 0.22,
+   "unit": "m",
+   "source": "vn-qcvn06",
+   "clause": "3.4.2",
+   "url": "https://congbao.chinhphu.vn/van-ban/thong-tu-so-06-2022-tt-bxd-38322.htm",
+   "accessed": "2026-11-14",
+   "paraphrase": "Escape stair riser no more than 22 cm.",
+   "verified": true,
+   "note": "read 2026-11-14 in the Government Gazette PDF text layer (congbao.chinhphu.vn, issue 921-926/2022). Tread 25 cm minimum except outdoor stairs; riser max 22 cm."
+  },
+  {
+   "key": "stair.tread_min",
+   "value": 0.25,
+   "unit": "m",
+   "source": "vn-qcvn06",
+   "clause": "3.4.2",
+   "url": "https://congbao.chinhphu.vn/van-ban/thong-tu-so-06-2022-tt-bxd-38322.htm",
+   "accessed": "2026-11-14",
+   "paraphrase": "Escape stair tread at least 25 cm, except external stairs.",
+   "verified": true,
+   "note": "read 2026-11-14 in the Government Gazette PDF text layer (congbao.chinhphu.vn, issue 921-926/2022). Tread 25 cm minimum except outdoor stairs; riser max 22 cm."
+  },
+  {
+   "key": "room.height_min",
+   "value": 2.6,
+   "unit": "m",
+   "source": "vn-qcvn04",
+   "clause": "2.2.10",
+   "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2026/10/95-vbhn-bxd-2026.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Clear height of habitable rooms in apartment buildings is at least 2.6 m (2.3 m for kitchens and bathrooms).",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 in the gazette consolidated PDF"
+  },
+  {
+   "key": "ramp.slope_max",
+   "value": 0.083333,
+   "unit": "ratio",
+   "source": "vn-qcvn10-2024",
+   "clause": "2.2.3",
+   "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2024/8/06-bxd.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Accessible ramp slope is at most 1/12, clear width 1.2 m or more, landing every 9 m of length.",
+   "verified": true,
+   "note": "read 2026-11-14 in the ministry circular PDF on datafiles.chinhphu.vn (text layer)."
+  },
+  {
+   "key": "load.floor_residential",
+   "value": 1.5,
+   "unit": "kN/m2",
+   "source": "vn-tcvn2737",
+   "clause": "table of imposed loads",
+   "url": "https://tieuchuan.vn",
+   "accessed": "2026-11-14",
+   "paraphrase": "Imposed floor load for living rooms in the national loading standard is about 1.5 kN/m2.",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: TCVN 2737:2023 on thuvienphapluat.vn, ibst.vn (only wind guide fetched), nsti.vista.gov.vn (redirect); standard is sold, only non-official mirrors or secondary summaries available"
+  },
+  {
+   "key": "load.floor_office",
+   "value": 2.0,
+   "unit": "kN/m2",
+   "source": "vn-tcvn2737",
+   "clause": "table of imposed loads",
+   "url": "https://tieuchuan.vn",
+   "accessed": "2026-11-14",
+   "paraphrase": "Imposed floor load for offices is about 2.0 kN/m2.",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: same hosts as residential row; standard is sold, no free official table readable"
+  },
+  {
+   "key": "door.clear_min.accessible",
+   "value": 0.8,
+   "unit": "m",
+   "source": "vn-qcvn10-2024",
+   "clause": "2.3.1",
+   "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2024/8/06-bxd.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Clear width of doors to rooms inside an accessible building is at least 0.8 m; the building entrance door needs 0.9 m.",
+   "verified": true,
+   "note": "read 2026-11-14 in the ministry circular PDF on datafiles.chinhphu.vn (text layer); 0.9 m for entrance doors."
+  },
+  {
+   "key": "fire.compartment_area_max.sprinklered",
+   "value": 8000,
+   "unit": "m2",
+   "source": "vn-qcvn06",
+   "clause": "Annex H, H.2.12.2 with Table H.2",
+   "url": "https://congbao.chinhphu.vn/van-ban/thong-tu-so-06-2022-tt-bxd-38322.htm",
+   "accessed": "2026-11-14",
+   "paraphrase": "Whole-building automatic extinguishing allows the Table H.2 compartment area to be raised up to twofold for class I/II S0 public buildings; 4000 x 2.",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "sprinklered": true,
+    "max_floors": 9
+   },
+   "verified": true,
+   "note": "read 2026-11-14 in the Government Gazette PDF text layer (congbao.chinhphu.vn, issue 921-926/2022). Factor 2 and 4000 m2 both read; product derived. No such factor read for the residential table H.1."
+  },
+  {
+   "key": "accessible.turning_circle",
+   "value": 1.4,
+   "unit": "m",
+   "source": "vn-qcvn10-2024",
+   "clause": "2.2.3, 2.3.2",
+   "url": "https://datafiles.chinhphu.vn/cpp/files/vbpq/2024/8/06-bxd.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "The regulation asks for 1.4 m x 1.4 m clear wheelchair manoeuvring squares at ramp ends and doors; no circle diameter is given.",
+   "verified": false,
+   "note": "read 2026-11-14: datafiles.chinhphu.vn/cpp/files/vbpq/2024/8/06-bxd.pdf; full text has no circle diameter, only 1.4 m squares, kept unverified as a proxy"
+  }
+ ]
+}

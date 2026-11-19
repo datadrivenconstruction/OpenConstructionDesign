@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "{total} ішінен {done} танылды",
+ "mesh_recognize.all": "Барлығы {n}",
+ "mesh_recognize.only_confident": "Тек сенімдісі",
+ "mesh_recognize.confident_tip": "Санаты сай келетін және сенімділігі кем дегенде {pct}% жолдарды белгілейді",
+ "mesh_recognize.row_hint": "Белгілеу үшін жолды басыңыз. Бағыттағы пернелер жылжытады, Enter белгілейді.",
+ "mesh_recognize.kind_for": "{name} түрі",
+ "mesh_recognize.source": "Бастапқы торлар",
+ "mesh_recognize.keep": "Торларды сақтау",
+ "mesh_recognize.replace": "Торларды ауыстыру",
+ "mesh_recognize.convert_keep": "{n} түрлендіру",
+ "mesh_recognize.convert_remove": "{n} түрлендіру және торларды жою",
+ "mesh_recognize.creates": "{n} жасалады: {kinds}",
+ "mesh_recognize.creates_none": "Әзірге ешнәрсе белгіленбеген",
+ "mesh_recognize.stay": "{n} бастапқы тор модельде қалады",
+ "mesh_recognize.removed": "{n} бастапқы тор жойылады. Болдырмау оларды қайтарады."
+}

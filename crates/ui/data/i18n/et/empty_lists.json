@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "Joonista sein",
+ "empty.totals.action": "Joonista sein",
+ "empty.schedule.action": "Lisa väli",
+ "empty.schedule_filtered.action": "Tühista filter",
+ "empty.library.action": "Lähtesta otsing",
+ "empty.library.load": "Lae perekond",
+ "empty.schedule_fields.title": "Ühtegi välja ei näidata",
+ "empty.schedule_fields.action": "Lisa väli",
+ "empty.schedule_fields.hint": "Lülita sisse vähemalt üks väli, et tabelit näha."
+}

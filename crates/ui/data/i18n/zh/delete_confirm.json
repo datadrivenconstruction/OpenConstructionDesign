@@ -1,0 +1,59 @@
+{
+ "del.k.door": {
+  "other": "# 扇门",
+  "one": "# 扇门"
+ },
+ "del.k.window": {
+  "other": "# 扇窗",
+  "one": "# 扇窗"
+ },
+ "del.k.opening": {
+  "other": "# 个洞口",
+  "one": "# 个洞口"
+ },
+ "del.k.comp": {
+  "other": "# 个宿主构件",
+  "one": "# 个宿主构件"
+ },
+ "del.k.rebar": {
+  "other": "# 组钢筋",
+  "one": "# 组钢筋"
+ },
+ "del.k.port": {
+  "other": "# 个宿主 MEP 端口",
+  "one": "# 个宿主 MEP 端口"
+ },
+ "del.k.joist": {
+  "other": "# 个框架梁",
+  "one": "# 个框架梁"
+ },
+ "del.k.railing": {
+  "other": "# 个栏杆",
+  "one": "# 个栏杆"
+ },
+ "del.k.tag": {
+  "other": "# 个标记",
+  "one": "# 个标记"
+ },
+ "del.k.dim": {
+  "other": "# 个标注（已解除关联）",
+  "one": "# 个标注（已解除关联）"
+ },
+ "del.also": "同时受影响：{list}",
+ "del.rooms": {
+  "other": "# 个房间将失去一面边界墙",
+  "one": "# 个房间将失去一面边界墙"
+ },
+ "del.cancelled": "已取消删除，未作任何更改",
+ "del.confirm.title": "连同从属对象删除",
+ "del.confirm.lead": {
+  "other": "# 个所选图元会连带删除以下内容：",
+  "one": "# 个所选图元会连带删除以下内容："
+ },
+ "del.confirm.levels": {
+  "other": "其中 # 个位于其他标高",
+  "one": "其中 # 个位于其他标高"
+ },
+ "del.confirm.all": "全部删除",
+ "del.confirm.cancel": "取消"
+}

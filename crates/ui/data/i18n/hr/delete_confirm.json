@@ -1,0 +1,72 @@
+{
+ "del.k.door": {
+  "one": "# vrata",
+  "few": "# vrata",
+  "other": "# vrata"
+ },
+ "del.k.window": {
+  "one": "# prozor",
+  "few": "# prozora",
+  "other": "# prozora"
+ },
+ "del.k.opening": {
+  "one": "# otvor",
+  "few": "# otvora",
+  "other": "# otvora"
+ },
+ "del.k.comp": {
+  "one": "# ugrađena komponenta",
+  "few": "# ugrađene komponente",
+  "other": "# ugrađenih komponenti"
+ },
+ "del.k.rebar": {
+  "one": "# skup armature",
+  "few": "# skupa armature",
+  "other": "# skupova armature"
+ },
+ "del.k.port": {
+  "one": "# ugrađeni MEP priključak",
+  "few": "# ugrađena MEP priključka",
+  "other": "# ugrađenih MEP priključaka"
+ },
+ "del.k.joist": {
+  "one": "# konstruktivna greda",
+  "few": "# konstruktivne grede",
+  "other": "# konstruktivnih greda"
+ },
+ "del.k.railing": {
+  "one": "# ograda",
+  "few": "# ograde",
+  "other": "# ograda"
+ },
+ "del.k.tag": {
+  "one": "# oznaka",
+  "few": "# oznake",
+  "other": "# oznaka"
+ },
+ "del.k.dim": {
+  "one": "# kota (odvojena)",
+  "few": "# kote (odvojene)",
+  "other": "# kota (odvojenih)"
+ },
+ "del.also": "Također zahvaćeno: {list}",
+ "del.rooms": {
+  "one": "# prostorija gubi jedan granični zid",
+  "few": "# prostorije gube jedan granični zid",
+  "other": "# prostorija gubi jedan granični zid"
+ },
+ "del.cancelled": "Brisanje otkazano, ništa nije promijenjeno",
+ "del.confirm.title": "Brisanje sa zavisnim elementima",
+ "del.confirm.lead": {
+  "one": "# odabrani element sa sobom nosi i ove:",
+  "few": "# odabrana elementa sa sobom nose i ove:",
+  "other": "# odabranih elemenata sa sobom nosi i ove:"
+ },
+ "del.confirm.levels": {
+  "one": "# od njih nalazi se na drugoj razini",
+  "few": "# od njih nalaze se na drugim razinama",
+  "other": "# od njih nalazi se na drugim razinama"
+ },
+ "del.confirm.all": "Obriši sve",
+ "del.confirm.cancel": "Odustani"
+}

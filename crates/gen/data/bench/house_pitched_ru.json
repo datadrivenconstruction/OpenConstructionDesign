@@ -1,0 +1,30 @@
+{
+ "schema": "gen_bench.v1",
+ "group": "house",
+ "spec": {
+  "typology": "house",
+  "floors": 2,
+  "lang": "ru",
+  "roof": {
+   "kind": "pitched",
+   "slope": 30
+  }
+ },
+ "adjacency": [
+  [
+   "kitchen",
+   "living",
+   3
+  ],
+  [
+   "bedroom",
+   "bath",
+   1
+  ],
+  [
+   "living",
+   "hall",
+   1
+  ]
+ ]
+}

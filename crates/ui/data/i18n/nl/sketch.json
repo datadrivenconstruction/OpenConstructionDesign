@@ -1,0 +1,11 @@
+{
+ "sketch.points": "Punten",
+ "sketch.rect": "Rechthoek",
+ "sketch.circle": "Cirkel",
+ "sketch.polygon": "Veelhoek",
+ "sketch.radius": "R",
+ "sketch.sides": "Zijden",
+ "sketch.circum": "Omgeschreven",
+ "sketch.shape.tip": "Schetsvorm (A wisselt). Rechthoek: twee hoeken. Cirkel en veelhoek: middelpunt, dan straal. Typ een maat en druk op Enter om hem vast te zetten.",
+ "tool.err.zero_size": "Nulmaat: verplaats het tweede punt weg van het eerste"
+}

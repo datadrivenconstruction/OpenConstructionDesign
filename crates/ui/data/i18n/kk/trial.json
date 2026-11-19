@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "Нүкте",
+ "trial.field.distance": "Қашықтық",
+ "trial.field.target": "Элемент",
+ "trial.refused": "{field}: {reason}. Қолдану үшін өзгертіңіз",
+ "trial.preview_off": "Алдын ала қарау өшірулі: модель тым үлкен"
+}

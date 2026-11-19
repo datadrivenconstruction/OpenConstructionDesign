@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "덕트",
+ "mep3d.pipe": "배관",
+ "mep3d.tray": "케이블 트레이",
+ "mep3d.conduit": "전선관",
+ "mep3d.system": "시스템",
+ "mep3d.length": "길이",
+ "mep3d.diameter": "직경",
+ "mep3d.width": "너비",
+ "mep3d.height": "높이",
+ "mep3d.insulation": "단열",
+ "mep3d.tip": "Enter — 적용; 이음쇠는 다시 계산됩니다",
+ "mep3d.size_positive": "치수는 0보다 커야 합니다",
+ "mep3d.not_changed": "변경되지 않음: {e}",
+ "mep3d.copied": "배관 경로 복사됨",
+ "mep3d.changed": "배관 경로 변경됨",
+ "mep3d.deleted": "삭제된 요소: {n}",
+ "mep3d.not_deleted": "삭제되지 않음: {e}",
+ "mep3d.no_wall_type": "벽 유형 없음",
+ "mep3d.demo.supply": "급기 S1",
+ "mep3d.demo.heating": "난방",
+ "mep3d.demo.power": "동력"
+}

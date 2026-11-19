@@ -1,0 +1,22 @@
+{
+ "cmd.arch.grid_pick": "Telgvõrk joonest",
+ "cmd.arch.grid_pick.desc": "Teeb telgvõrgu täpselt valitud joonistusjoone järgi praegusel korrusel; nimed jätkavad jada. Tab võtab korraga kõik sama joonistuskihi paralleelsed jooned. Iga valik on üks tagasivõtmise samm.",
+ "cmd.struct.beam_pick": "Tala joonest",
+ "cmd.struct.beam_pick.desc": "Paigutab praeguse tüübi tala aktiivsele korrusele valitud joonistusjoone järgi. Tab võtab ühendatud ahela. Iga valik on üks tagasivõtmise samm.",
+ "hint.grid_pick.one": "Telgvõrk joonest: vali joonistusjoon · Tab kõik selle kihi paralleelsed jooned · Esc väljub",
+ "hint.grid_pick.more": "Telgvõrk joonest: vali joon, et võtta kõik selle kihi paralleelsed jooned · Tab üks joon · Esc — desarmeeri",
+ "hint.beam_pick.one": "Tala joonest: vali joonistusjoon · Tab ühendatud ahel · Esc väljub",
+ "hint.beam_pick.more": "Tala joonest: vali joon, et võtta selle ahel · Tab üks joon · Esc — desarmeeri",
+ "line_pick.st.start_grid": "Vali joonistusjoon. Tab: kõik selle kihi paralleelsed jooned",
+ "line_pick.st.start_beam": "Vali joonistusjoon {type} tala jaoks. Tab: ühendatud ahel",
+ "line_pick.st.grid_done": "Telgvõrk {name} lisatud",
+ "line_pick.st.grids_done": "{n} telgvõrku lisatud: {first} — {last}",
+ "line_pick.st.beam_done": "Tala {type} lisatud",
+ "line_pick.st.beams_done": "{n} talda {type} lisatud",
+ "line_pick.st.on_grid": "Sellel joonel on juba telgvõrk {name}",
+ "line_pick.st.on_beam": "Sellel joonel on juba tala {id}",
+ "line_pick.st.no_layer": "Joonte joonistuskihte ei tunta veel, proovi uuesti",
+ "line_pick.st.no_beam_type": "Kataloogis pole talaprofiili",
+ "line_pick.st.reload_warn": "Loodud, aga vaadet ei saanud uuesti laadida: {err}",
+ "line_pick.st.failed": "Ei loodud: {err}"
+}

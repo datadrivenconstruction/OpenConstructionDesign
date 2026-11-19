@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "Foaia anterioară (Page Up)",
+ "sheets.print.next": "Foaia următoare (Page Down)",
+ "sheets.print.fit": "Potrivește pagina (dublu clic)",
+ "sheets.print.no_sheets": "Nicio foaie de previzualizat",
+ "sheets.print.building": "Se generează pagina…",
+ "sheets.print.stop_build": "Oprește",
+ "sheets.print.build_stopped": "Generarea paginii a fost oprită",
+ "sheets.print.retry": "Generează din nou",
+ "sheets.print.build_failed": "Previzualizarea nu a putut fi generată"
+}

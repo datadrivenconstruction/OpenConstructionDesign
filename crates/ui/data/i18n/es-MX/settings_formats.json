@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "Qué ocurre después de exportar un libro",
+ "settings.area_decimals_desc": "Cifras después del separador decimal en áreas",
+ "settings.volume_decimals_desc": "Cifras después del separador decimal en volúmenes",
+ "settings.frac_desc": "Fracción más pequeña de pulgada en longitudes imperiales",
+ "settings.small_area_desc": "Mostrar áreas menores de un pie cuadrado en pulgadas cuadradas",
+ "settings.sample_desc": "Cómo se ven los números con las opciones actuales",
+ "autosave.title_desc": "Mantener una copia de recuperación del proyecto abierto",
+ "autosave.interval_desc": "Tiempo entre copias de recuperación",
+ "autosave.keep_desc": "Se eliminan las copias de recuperación más antiguas",
+ "autosave.folder_desc": "Vacío significa la carpeta predeterminada",
+ "autosave.remind_desc": "Recordatorio para guardar un proyecto que aún no tiene archivo",
+ "settings.backend_desc": "Adaptador gráfico en uso",
+ "settings.news_desc": "Qué cambió en esta versión",
+ "settings.assoc_default_desc": "Hacer de esta aplicación la predeterminada para archivos de modelo",
+ "settings.data_dir_desc": "Aquí se guardan las cachés, las copias de recuperación y los registros."
+}

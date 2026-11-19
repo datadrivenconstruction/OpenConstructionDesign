@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "Nacrtaj zid",
+ "empty.totals.action": "Nacrtaj zid",
+ "empty.schedule.action": "Dodaj polje",
+ "empty.schedule_filtered.action": "Obriši filtar",
+ "empty.library.action": "Poništi pretragu",
+ "empty.library.load": "Učitaj obitelj",
+ "empty.schedule_fields.title": "Nema prikazanih polja",
+ "empty.schedule_fields.action": "Dodaj polje",
+ "empty.schedule_fields.hint": "Uključite barem jedno polje da vidite tablicu."
+}

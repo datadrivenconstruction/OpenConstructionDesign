@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "Styret af skabelonen {name}",
+ "view_template.edit_template": "Rediger skabelon",
+ "view_template.locked_tip": "Angivet af visningsskabelonen {name}. Ændr den i skabelonen.",
+ "view_template.no_filters": "Ingen filtre i denne visning"
+}

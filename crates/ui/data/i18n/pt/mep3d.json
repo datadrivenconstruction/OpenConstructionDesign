@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "Conduta",
+ "mep3d.pipe": "Tubagem",
+ "mep3d.tray": "Caleira de cabos",
+ "mep3d.conduit": "Tubo-conduta",
+ "mep3d.system": "Sistema",
+ "mep3d.length": "Comprimento",
+ "mep3d.diameter": "Diâmetro",
+ "mep3d.width": "Largura",
+ "mep3d.height": "Altura",
+ "mep3d.insulation": "Isolamento",
+ "mep3d.tip": "Enter — aplicar; as peças são recalculadas",
+ "mep3d.size_positive": "a dimensão deve ser superior a zero",
+ "mep3d.not_changed": "não alterado: {e}",
+ "mep3d.copied": "percurso copiado",
+ "mep3d.changed": "percurso alterado",
+ "mep3d.deleted": "elementos eliminados: {n}",
+ "mep3d.not_deleted": "não eliminado: {e}",
+ "mep3d.no_wall_type": "sem tipo de parede",
+ "mep3d.demo.supply": "Insuflação S1",
+ "mep3d.demo.heating": "Aquecimento",
+ "mep3d.demo.power": "Energia"
+}

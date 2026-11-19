@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}, på etasjen",
+ "cmd_buttons.purge.undo": "Fjerning er ett angretrinn.",
+ "cmd_buttons.unpin.none": "Ingenting valgt er festet",
+ "cmd_buttons.change_type.none": "Velg vegger først: typen deres endres i ett trinn",
+ "cmd_buttons.units.metric": "Enheter: metrisk",
+ "cmd_buttons.units.imperial": "Enheter: fot og tommer",
+ "cmd_buttons.units.back": "Bytt tilbake",
+ "cmd_buttons.underlay.on": "Underlag på: etasjen under vises nedtonet",
+ "cmd_buttons.underlay.off": "Underlag av",
+ "cmd_buttons.underlay.none": "Underlag på, men etasjen under har ingenting å vise",
+ "cmd_buttons.zoom_sel.no_shape": "Utvalget har ingen form å ramme inn i denne visningen",
+ "cmd_buttons.close.base": "Plan- og 3D-fanene forblir åpne; åpne et snitt, et ark eller en tegnevisning for å lukke den",
+ "tool.equipment": "Utstyr",
+ "hint.equipment.place": "Utstyr: velg plassering · Esc for å avslutte",
+ "cmd_buttons.table.opened": "Tabell åpnet ved siden av modellen",
+ "cmd_buttons.circuits.tip": "Åpne listen over elektriske kretser i denne modellen"
+}

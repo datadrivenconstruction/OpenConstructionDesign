@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "Колдонуу артка кайтарылды: модель алдын ала көрүнүшкө дал келген жок. {what}",
+ "xlsx_verify.not_written": "{row} өзгөрткөн жок.",
+ "xlsx_verify.lost": "{row} жоголду.",
+ "xlsx_verify.not_deleted": "{row} өчүрүлгөн жок.",
+ "xlsx_verify.extra_deleted": "{row} өчүрүлдү, алдын ала көрүнүш аны сактайт.",
+ "xlsx_verify.created": "{table}: {want} күтүлгөн, {got} жаңы түзүлдү.",
+ "xlsx_verify.value": "{row}, {field}: {want} күтүлдү (болгон {old}), {got} алынды.",
+ "xlsx_verify.check_failed": "Натыйжаны текшерүүгө болбойт: {e}",
+ "xlsx_verify.plan_failed": "Колдонуу башталган жок: текшерүү моделди окуй алган жок ({e}).",
+ "xlsx_verify.take_back_failed": "Кадамды артка кайтаруу мүмкүн болгон жок ({e}): Артка кайтарууну колдонуңуз.",
+ "xlsx_verify.t.wall": "Дубал",
+ "xlsx_verify.t.opening": "Тешик",
+ "xlsx_verify.t.room": "Бөлмө",
+ "xlsx_verify.t.slab": "Кабат",
+ "xlsx_verify.t.level": "Деңгээл",
+ "xlsx_verify.t.wall_type": "Дубал түрү",
+ "xlsx_verify.t.slab_type": "Кабат түрү",
+ "xlsx_verify.t.col": "Колонна",
+ "xlsx_verify.t.beam": "Тирөө",
+ "xlsx_verify.t.roof": "Чатыр",
+ "xlsx_verify.t.curtain_wall": "Айнек дубал"
+}

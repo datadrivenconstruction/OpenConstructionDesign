@@ -1,0 +1,23 @@
+{
+ "cmd.app.report": "Báo cáo sự cố…",
+ "cmd.app.report.desc": "Mô tả điều gì đã sai và lưu một gói trên máy tính này: nội dung bạn nhập, thông tin bản dựng và hệ thống, ảnh cửa sổ và bản ghi sự cố gần nhất. Không gửi gì đi.",
+ "report.title": "Báo cáo sự cố",
+ "report.what": "Điều đã xảy ra",
+ "report.expected": "Điều bạn mong đợi",
+ "report.steps": "Các bước để lặp lại",
+ "report.opt.shot": "Kèm ảnh cửa sổ",
+ "report.opt.model": "Kèm bản sao của mô hình",
+ "report.opt.model.note": "Mặc định tắt. Bản sao chứa dữ liệu dự án của bạn, không kèm nhật ký AI.",
+ "report.opt.paths": "Giữ tên người dùng trong đường dẫn tệp",
+ "report.local": "Gói chỉ được lưu trên máy tính này. Không có gì được gửi tự động.",
+ "report.blocked": "Hãy mô tả điều đã xảy ra trước.",
+ "report.save": "Lưu gói",
+ "report.copy": "Sao chép nội dung",
+ "report.cancel": "Hủy",
+ "report.copied": "Đã sao chép nội dung báo cáo.",
+ "report.saved": "Đã lưu gói: {path}",
+ "report.failed": "Không thể lưu gói: {err}",
+ "report.model.fail": "Không thể tạo bản sao mô hình, chưa lưu gì: {err}",
+ "report.crash.notice": "Phiên trước đã kết thúc do sự cố.",
+ "report.crash.action": "Báo cáo sự cố"
+}

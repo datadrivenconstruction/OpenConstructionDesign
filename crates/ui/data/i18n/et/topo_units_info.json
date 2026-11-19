@@ -1,0 +1,13 @@
+{
+ "topo.unit.mm": "mm",
+ "topo.unit.metre": "m",
+ "topo.unit.ft": "ft",
+ "topo.opt.material": "Materjal",
+ "topo.row.active": "Aktiivne pind",
+ "topo.btn.delete_pad": "Kustuta alus",
+ "topo.info.loading": "Pinna koostamine…",
+ "topo.info.warn_n": "{n} hoiatust",
+ "topo.info.points_label": "Punktid",
+ "topo.import.all_layers": "Kõik kihid",
+ "topo.import.need_layer": "Märgi vähemalt üks kiht"
+}

@@ -1,0 +1,46 @@
+{
+ "id": "vn",
+ "version": "2026.11",
+ "parent": "generic",
+ "country": "VN",
+ "lang": [
+  "vi"
+ ],
+ "units": {
+  "length": "m",
+  "display": "metric"
+ },
+ "conventions": {
+  "ground_floor": 1,
+  "area_standard": "net",
+  "net_share": 1.0,
+  "note": "Apartment areas are commonly given as clear internal (thong thuy) area; the technical regulation itself speaks of usable area (dien tich su dung).",
+  "source": "vn-qcvn04"
+ },
+ "status": "tier3",
+ "climate": {
+  "zones": [],
+  "default": null
+ },
+ "research": {
+  "date": "2026-11-14",
+  "missing": [
+   "daylight.window_floor_ratio",
+   "corridor.width_min.accessible",
+   "accessible.turning_circle",
+   "stair.riser_max.house",
+   "stair.tread_min.house",
+   "stair.width_min.house",
+   "room.height_min.office",
+   "parking.per_dwelling"
+  ],
+  "unreachable": [
+   "https://thuvienphapluat.vn (403)",
+   "https://luatvietnam.vn (blocked page)",
+   "https://vbpl.vn QCVN 10-2014 PDF (not a valid file)",
+   "datafiles.chinhphu.vn 92-vbhn-bxd-2026.pdf (consolidated fire regulation, not found)",
+   "https://web.archive.org (429 rate limit); QCVN 10:2024/BXD has no explicit corridor width, QCVN 04:2021 gives no window ratio or parking count"
+  ]
+ },
+ "note": "Numbers with verified=true were read in the cited clause; the rest are hints with a note of where we looked. Wording is our own; no text of a standard is stored."
+}

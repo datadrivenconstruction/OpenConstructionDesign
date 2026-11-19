@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "Escaliers",
+ "selcat.railing": "Garde-corps",
+ "quick.cat.stair": "Escaliers",
+ "quick.cat.railing": "Garde-corps",
+ "stair.risers": "Contremarches",
+ "stair.riser": "Hauteur de contremarche",
+ "stair.comfort": "2H + g",
+ "stair.tread_auto": "Giron selon la règle",
+ "stair.tread_auto_tip": "Ignorer le giron saisi et laisser la règle 2H + g le fixer",
+ "stair.broken": "Cet escalier ne correspond pas à ses niveaux",
+ "railing.host_stair": "Hébergé par l'escalier #{id}",
+ "railing.host_path": "Garde-corps esquissé",
+ "railing.length": "Longueur",
+ "stair.deleted_with": "avec {n} garde-corps hébergés"
+}

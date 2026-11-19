@@ -1,0 +1,6 @@
+{
+ "units.err.parse": "Não é um comprimento: o valor anterior foi mantido. Informe um número com unidade opcional, por exemplo 2500 ou 8'-2\"",
+ "ui.scale.set": "Escala da interface: {pct}%",
+ "cmd.ui.scale_up": "Aumentar a escala da interface",
+ "cmd.ui.scale_down": "Reduzir a escala da interface"
+}

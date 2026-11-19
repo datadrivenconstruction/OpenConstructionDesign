@@ -1,0 +1,5 @@
+{
+ "xlsx_delete.delete_missing": "Excluir linhas ausentes da pasta de trabalho",
+ "xlsx_delete.not_removed": "não removido: sem dados de comparação",
+ "xlsx_delete.no_base_reason": "Indisponível: a pasta de trabalho não tem dados de comparação, então uma linha ausente não pode ser distinguida de uma removida por engano. Nada é excluído ao aplicar."
+}

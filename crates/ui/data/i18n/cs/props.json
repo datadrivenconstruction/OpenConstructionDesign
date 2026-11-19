@@ -1,0 +1,21 @@
+{
+ "props.multi.title": {
+  "one": "# prvek",
+  "few": "# prvky",
+  "other": "# prvků"
+ },
+ "props.multi.cats": {
+  "one": "# kategorie",
+  "few": "# kategorie",
+  "other": "# kategorií"
+ },
+ "props.multi.varies": {
+  "one": "různé (#)",
+  "few": "různé (#)",
+  "other": "různé (#)"
+ },
+ "props.multi.clear": "Zrušit výběr",
+ "props.multi.undo": "Zpět",
+ "props.multi.narrowed": "Výběr: {n} · {name}",
+ "props.multi.chip_tip": "{name}: {n}  ·  Kliknutí zobrazí jejich vlastnosti, Ctrl+kliknutí ponechá pouze tyto"
+}

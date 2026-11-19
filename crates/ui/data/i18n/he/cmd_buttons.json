@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}, במפלס",
+ "cmd_buttons.purge.undo": "המחיקה היא שלב ביטול אחד.",
+ "cmd_buttons.unpin.none": "אין אלמנט נבחר שמקובע",
+ "cmd_buttons.change_type.none": "בחר קודם קירות: הטיפוס שלהם משתנה בשלב אחד",
+ "cmd_buttons.units.metric": "יחידות: מטריות",
+ "cmd_buttons.units.imperial": "יחידות: רגל ואינץ׳",
+ "cmd_buttons.units.back": "חזור",
+ "cmd_buttons.underlay.on": "שכבת רקע פעילה: המפלס שמתחת מוצג בעמעום",
+ "cmd_buttons.underlay.off": "שכבת רקע כבויה",
+ "cmd_buttons.underlay.none": "שכבת רקע פעילה, אבל למפלס שמתחת אין מה להציג",
+ "cmd_buttons.zoom_sel.no_shape": "לבחירה אין צורה שניתן למסגר במבט הזה",
+ "cmd_buttons.close.base": "לשוניות התכנית והתלת-ממד נשארות פתוחות; כדי לסגור, פתח חתך, גיליון או מבט שרטוט",
+ "tool.equipment": "ציוד",
+ "hint.equipment.place": "ציוד: בחר מיקום · Esc ליציאה",
+ "cmd_buttons.table.opened": "הטבלה נפתחה לצד המודל",
+ "cmd_buttons.circuits.tip": "פתח את רשימת מעגלי החשמל של המודל הזה"
+}

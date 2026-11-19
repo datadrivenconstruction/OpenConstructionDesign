@@ -1,0 +1,11 @@
+{
+ "type_pick.pick.search": "Caută tipuri sau grosime",
+ "type_pick.pick.empty": "Niciun tip care să corespundă",
+ "type_pick.pick.edit": "Editează tipul…",
+ "type_pick.pick.mixed": "Mixt",
+ "type_pick.pick.layers": {
+  "one": "# strat",
+  "few": "# straturi",
+  "other": "# de straturi"
+ }
+}

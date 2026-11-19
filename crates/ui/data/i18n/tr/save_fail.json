@@ -1,0 +1,16 @@
+{
+ "save_fail.save_fail.title": "Proje kaydedilmedi",
+ "save_fail.save_fail.kept": "Düzenlemeleriniz burada hâlâ açık. Düzenleyici açık kaldığı sürece hiçbir şey kaybolmaz.",
+ "save_fail.save_fail.details": "Ayrıntılar",
+ "save_fail.save_fail.copy": "Kopyala",
+ "save_fail.save_fail.save_as": "Farklı kaydet…",
+ "save_fail.save_fail.retry": "Yeniden dene",
+ "save_fail.save_fail.close": "Kapat",
+ "save_fail.cause.full": "Disk dolu. Yer açın veya projeyi başka bir sürücüye kaydedin.",
+ "save_fail.cause.denied": "Bu klasör veya dosya salt okunur ya da buraya yazma izniniz yok. Başka bir klasör seçin.",
+ "save_fail.cause.locked": "Dosya başka bir programda açık. Orada kapatın, sonra Yeniden dene'ye basın.",
+ "save_fail.cause.missing": "Klasör artık yok. Başka bir klasör seçin veya geri yükleyip Yeniden dene'ye basın.",
+ "save_fail.cause.offline": "Sürücü veya ağ klasörü kullanılamıyor. Yeniden bağlayıp Yeniden dene'ye basın veya başka yere kaydedin.",
+ "save_fail.cause.too_long": "Dosya yolu çok uzun. Daha kısa bir klasör veya dosya adı seçin.",
+ "save_fail.cause.other": "Dosya yazılamadı: {detail}"
+}

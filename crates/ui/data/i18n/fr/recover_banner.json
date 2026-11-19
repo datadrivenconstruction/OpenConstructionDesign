@@ -1,0 +1,7 @@
+{
+ "recover.untitled_note": "Ce projet n'a jamais été enregistré",
+ "recover.file_missing": "Fichier de projet introuvable",
+ "recover.banner": "Travail non enregistré d'une session précédente trouvé pour {name}",
+ "recover.banner_review": "Examiner",
+ "recover.later_archived": "Reporté {n} fois : instantanés déplacés dans les archives"
+}

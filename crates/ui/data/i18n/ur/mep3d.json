@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "ڈکٹ",
+ "mep3d.pipe": "پائپ",
+ "mep3d.tray": "کیبل ٹرے",
+ "mep3d.conduit": "کنڈٹ",
+ "mep3d.system": "سسٹم",
+ "mep3d.length": "لمبائی",
+ "mep3d.diameter": "قطر",
+ "mep3d.width": "چوڑائی",
+ "mep3d.height": "اونچائی",
+ "mep3d.insulation": "انسولیشن",
+ "mep3d.tip": "Enter — لاگو؛ فٹنگز دوبارہ حساب ہوتی ہیں",
+ "mep3d.size_positive": "سائز صفر سے زیادہ ہونا چاہیے",
+ "mep3d.not_changed": "تبدیل نہیں ہوا: {e}",
+ "mep3d.copied": "رن کاپی ہوا",
+ "mep3d.changed": "رن تبدیل ہوا",
+ "mep3d.deleted": "حذف شدہ عناصر: {n}",
+ "mep3d.not_deleted": "حذف نہیں ہوا: {e}",
+ "mep3d.no_wall_type": "دیوار کی قسم نہیں",
+ "mep3d.demo.supply": "سپلائی S1",
+ "mep3d.demo.heating": "ہیٹنگ",
+ "mep3d.demo.power": "پاور"
+}

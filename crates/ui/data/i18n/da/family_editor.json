@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "Ny familie",
+ "family_editor.open_tip": "Åbn familie eller kladde",
+ "family_editor.close_named": "Luk {name}",
+ "family_editor.unsaved": "Ikke-gemte ændringer",
+ "family_editor.search": "Søg",
+ "family_editor.nothing": "Intet fundet",
+ "family_editor.sec_families": "Projektfamilier",
+ "family_editor.sec_drafts": "Kladder",
+ "family_editor.cap_category": "Kategori",
+ "family_editor.cap_host": "Vært",
+ "family_editor.cap_type": "Forhåndsvisningstype"
+}

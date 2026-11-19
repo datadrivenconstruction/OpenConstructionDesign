@@ -1,0 +1,14 @@
+{
+ "empty.v3d_model.title": "Még nincs semmi a 3D-ben",
+ "empty.v3d_model.hint": "Rajzoljon falakat az alaprajzon, és itt megjelennek.",
+ "empty.v3d_model.action": "Alaprajz megnyitása",
+ "empty.v3d_hidden.title": "Ebben a nézetben minden elem rejtett",
+ "empty.v3d_hidden.hint": "Az ideiglenes elrejtés vagy elkülönítés miatt semmi sem látszik. A nézet grafikája marad a beállítás szerint.",
+ "empty.v3d_hidden.action": "Mind megjelenítése",
+ "empty.v3d_graphics.title": "A nézet grafikája minden kategóriát elrejt",
+ "empty.v3d_graphics.hint": "A nézet kategóriaszabályai miatt semmi sem látszik. Kapcsolja vissza a kategóriákat a nézet grafikájában.",
+ "empty.v3d_graphics.action": "Nézet grafikájának megnyitása",
+ "empty.v3d_box.title": "A metszeti doboz a modellen kívül van",
+ "empty.v3d_box.hint": "A doboz minden elemet levág. Igazítsa vissza a modell köré.",
+ "empty.v3d_box.action": "Doboz visszaállítása"
+}

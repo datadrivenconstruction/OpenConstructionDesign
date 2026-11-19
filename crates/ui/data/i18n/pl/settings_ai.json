@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "Połączenie",
+ "settings.ai_status_desc": "Model używany przez asystenta AI; klucze pozostają w bezpiecznym magazynie",
+ "settings.ai_not_connected": "Brak połączenia",
+ "settings.ai_connect": "Ustawienia połączenia",
+ "settings.ai_connect_desc": "Adres, model i klucz własnego modelu, w chmurze lub lokalnie",
+ "settings.ai_connect_btn": "Ustawienia połączenia…",
+ "settings.ai_panel": "Panel asystenta AI",
+ "settings.ai_panel_desc": "Zapytaj słowami, przejrzyj plan, potem zastosuj",
+ "settings.ai_open_panel": "Otwórz panel AI"
+}

@@ -1,0 +1,5 @@
+{
+ "legend.legend.empty_hint": "ऊपर नाम लिखें और बनाएँ दबाएँ।",
+ "legend.legend.pick_hint": "ऊपर की सूची से लीजेंड चुनें।",
+ "legend.legend.taken": "“{name}” नाम का लीजेंड पहले से है। दूसरा नाम लिखें।"
+}

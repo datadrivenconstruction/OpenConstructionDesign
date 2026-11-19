@@ -1,0 +1,11 @@
+{
+ "job.stage.prepare": "Inihahanda ang proyekto",
+ "open_guard.already_open": "Bukas na ang {name}",
+ "open_guard.from_cache": "{name}: binuksan mula sa import cache",
+ "open_guard.known_project": "Na-import na dati ang {name}: binubuksan ang proyektong iyon",
+ "open_guard.locate": "Hanapin",
+ "open_guard.mem_low": "Kulang sa memory: hinati sa kalahati ang mesh budget at naka-pause ang level-of-detail build",
+ "open_guard.mem_low_short": "Kulang sa memory: naka-pause ang level-of-detail build hanggang makabakante ang memory",
+ "open_guard.no_window": "Hindi nahanap ang window ng proyektong iyon",
+ "open_guard.switch_window": "Lumipat sa window na iyon"
+}

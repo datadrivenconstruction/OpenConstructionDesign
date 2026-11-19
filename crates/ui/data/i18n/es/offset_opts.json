@@ -1,0 +1,7 @@
+{
+ "offset_opts.dist_positive": "La distancia de desplazamiento debe ser mayor que cero; el lado sigue al cursor",
+ "offset_opts.count_bad": "Número entero de {min} a {max}",
+ "offset_opts.done_tip": "Terminar la selección e iniciar la herramienta",
+ "offset_opts.iso.apply_tip": "Hacer permanente el ocultado temporal en esta vista",
+ "offset_opts.iso.exit": "Salir del modo temporal"
+}

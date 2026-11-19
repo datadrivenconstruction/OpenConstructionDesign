@@ -1,0 +1,13 @@
+{
+ "topo.unit.mm": "mm",
+ "topo.unit.metre": "m",
+ "topo.unit.ft": "ft",
+ "topo.opt.material": "วัสดุ",
+ "topo.row.active": "พื้นผิวที่ใช้งาน",
+ "topo.btn.delete_pad": "ลบแผ่นรอง",
+ "topo.info.loading": "กำลังสร้างพื้นผิว…",
+ "topo.info.warn_n": "{n} คำเตือน",
+ "topo.info.points_label": "จุด",
+ "topo.import.all_layers": "ทุกเลเยอร์",
+ "topo.import.need_layer": "เลือกอย่างน้อยหนึ่งเลเยอร์"
+}

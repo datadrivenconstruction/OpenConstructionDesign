@@ -1,0 +1,10 @@
+{
+ "cmd.mod.scale": "Échelle",
+ "cmd.mod.scale.desc": "Sélectionnez les éléments, puis cliquez sur le point de base, une longueur de référence et la nouvelle longueur, ou saisissez un facteur.",
+ "hint.scale.select": "Échelle : sélectionnez les éléments · Entrée — terminer",
+ "hint.scale.first": "Échelle : choisissez le point de base · Échap — annuler",
+ "hint.scale.second": "Échelle : choisissez la longueur de référence · nombre — facteur · Échap — annuler",
+ "hint.scale.third": "Échelle : choisissez la nouvelle longueur · nombre — facteur · Échap — annuler",
+ "scl.bad_factor": "Le facteur d'échelle doit être un nombre supérieur à zéro",
+ "scl.zero_ref": "La longueur de référence est nulle : choisissez un point éloigné du point de base"
+}

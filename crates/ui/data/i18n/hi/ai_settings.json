@@ -1,0 +1,9 @@
+{
+ "ai.settings.num_bad": "संख्या नहीं है। 0.5 जैसे लिखें।",
+ "ai.settings.num_comma": "दशमलव चिह्न के रूप में बिंदु (.) का उपयोग करें, जैसे 0.5।",
+ "ai.settings.num_negative": "संख्या ऋणात्मक नहीं हो सकती।",
+ "ai.settings.unit_money": "मुद्रा",
+ "ai.settings.unit_tokens": "टोकन",
+ "ai.settings.unit_price": "प्रति 10 लाख टोकन",
+ "ai.settings.limits_hint": "0 का अर्थ है कोई सीमा नहीं। अस्वीकृत मान पिछली सीमा ही रखता है।"
+}

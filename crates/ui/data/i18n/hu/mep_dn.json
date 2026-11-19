@@ -1,0 +1,5 @@
+{
+ "mep_dn.dn.unset": "Nincs beállítva",
+ "mep_dn.slope.err": "Adjon meg lejtést %-ban, pl. 1.5",
+ "mep_dn.err.rejected": "az érték nem fogadható el"
+}

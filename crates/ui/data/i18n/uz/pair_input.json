@@ -1,0 +1,6 @@
+{
+ "pair_input.pair_hint": "Ikki qiymat nuqtali vergul bilan ajratiladi: @1000;500",
+ "pair_input.old_pair": "Ikki butun son orasidagi vergul endi juftlik hosil qilmaydi: ikki qiymat uchun 6000;4000 yoki o'nlik uchun 6000,5 yozing",
+ "pair_input.op.bad_length": "Uzunlik emas: {text} ({why}). Hech narsa o'zgartirilmadi",
+ "pair_input.op.bad_count": "{text} soni qabul qilinmadi: {min} dan {max} gacha butun son"
+}

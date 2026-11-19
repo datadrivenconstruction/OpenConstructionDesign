@@ -1,0 +1,11 @@
+{
+ "job.stage.prepare": "Долбоор даярдалууда",
+ "open_guard.already_open": "{name} буга чейин ачык",
+ "open_guard.from_cache": "{name}: импорт кэшинен ачылды",
+ "open_guard.known_project": "{name} мурун импортолгон: ошол долбоор ачылууда",
+ "open_guard.locate": "Табуу",
+ "open_guard.mem_low": "Эс аз: меш бюджети эки эсеге кыскартылды жана деталдаштыруу деңгээлин түзүү токтотулду",
+ "open_guard.mem_low_short": "Эс аз: деталдаштыруу деңгээлин түзүү эс бошоно электе токтотулду",
+ "open_guard.no_window": "Ал долбоордун терезеси табылган жок",
+ "open_guard.switch_window": "Ал терезеге өтүү"
+}

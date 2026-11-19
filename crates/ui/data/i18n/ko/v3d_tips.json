@@ -1,0 +1,8 @@
+{
+ "v3d.proj.to_ortho": "직교 투영으로 전환",
+ "v3d.proj.to_persp": "원근 투영으로 전환",
+ "v3d.walk.unit.m": "m/s",
+ "v3d.walk.unit.ft": "ft/s",
+ "v3d.temp.show_all": "모두 표시  ·  Esc",
+ "v3d.msg.deleted_named": "3D 뷰 {name} 삭제됨"
+}

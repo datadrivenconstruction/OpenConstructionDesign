@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "कंक्रीट",
+ "mat.masonry": "चिनाई",
+ "mat.brick": "ईंट",
+ "mat.insulation": "इंसुलेशन",
+ "mat.plaster": "प्लास्टर",
+ "mat.render": "रेंडर",
+ "mat.gypsum": "जिप्सम बोर्ड",
+ "mat.glass": "काँच",
+ "mat.wood": "लकड़ी",
+ "mat.steel": "स्टील",
+ "mat.membrane": "झिल्ली",
+ "mat.other": "अन्य",
+ "warn.cat.wall": "दीवार",
+ "warn.cat.slab": "स्लैब",
+ "warn.cat.opening": "ओपनिंग",
+ "warn.cat.curtain_wall": "कर्टेन वॉल",
+ "td.mat.custom": "अन्य…"
+}

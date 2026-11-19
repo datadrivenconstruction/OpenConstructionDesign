@@ -1,0 +1,15 @@
+{
+ "text_style.lbl.text_style": "Стил на текста",
+ "text_style.lbl.align": "Подравняване",
+ "text_style.lbl.head": "Стрелка",
+ "text_style.lbl.line_style": "Стил на линията",
+ "text_style.lbl.fill": "Запълване",
+ "text_style.lbl.detail": "Детайл",
+ "text_style.lbl.width": "Ширина",
+ "text_style.bad_number": "Въведете число от {min} до {max}",
+ "text_style.tip.next_ring": "Затваряне на този контур и начало на друг в същата област",
+ "text_style.tip.edit_text": "Редактиране на текста на място",
+ "text_style.tip.add_leader": "Добавяне на водеща линия към този текст",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°"
+}

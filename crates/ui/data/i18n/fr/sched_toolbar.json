@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "Ligne de filtre sous les en-têtes. Texte : sous-chaîne ; nombres : >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "Afficher ou masquer les colonnes",
+ "sched_toolbar.groups_tip": "Regrouper les lignes par colonnes, avec sous-totaux",
+ "sched_toolbar.formulas_tip": "Colonnes calculées",
+ "sched_toolbar.phase": "Phase",
+ "sched_toolbar.phase_tip": "Phase dont les lignes sont prises",
+ "sched_toolbar.copy_tip": "Lignes sélectionnées (ou toutes les visibles) au format TSV",
+ "sched_toolbar.import_tip": "Relire un tableau exporté : lignes par Id, colonnes par en-tête ; comptes d'abord, puis une étape d'annulation",
+ "sched_toolbar.export_tip": "Lignes et colonnes visibles avec totaux ; les nombres restent des nombres",
+ "sched_toolbar.need_table": "Ouvrez d'abord un tableau",
+ "sched_toolbar.busy_open": "Une boîte de dialogue d'ouverture est déjà ouverte",
+ "sched_toolbar.busy_save": "Une boîte de dialogue d'enregistrement est déjà ouverte",
+ "sched_toolbar.clear_filter": "Effacer le filtre",
+ "sched_toolbar.fields_title": "Colonnes"
+}

@@ -1,0 +1,7 @@
+{
+ "xlsx_project.title": "Acest registru a fost exportat dintr-un alt proiect",
+ "xlsx_project.body": "Registrul „{file}” aparține unui alt proiect. Id-urile elementelor diferă între proiecte, deci rândurile lui ar modifica elemente fără legătură aici. Nimic nu a fost citit în acest proiect.",
+ "xlsx_project.export_new": "Exportă acest proiect într-un registru nou",
+ "xlsx_project.close": "Închide",
+ "xlsx_project.no_project": "Acest registru nu spune căruia proiect aparține: verifică dacă a fost exportat din acest proiect."
+}

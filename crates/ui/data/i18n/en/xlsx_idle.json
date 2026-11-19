@@ -1,0 +1,8 @@
+{
+ "xlsx_idle.idle_title": "No changes to import",
+ "xlsx_idle.export_name": "Export",
+ "xlsx_idle.export_body": "Writes the model to a workbook. Edit values there, then sync.",
+ "xlsx_idle.sync_name": "Sync",
+ "xlsx_idle.sync_body": "Reads the workbook again and lists what differs. The model changes only when you apply.",
+ "xlsx_idle.last_sync": "Last synced: {when}"
+}

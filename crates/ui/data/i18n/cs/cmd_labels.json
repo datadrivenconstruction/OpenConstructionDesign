@@ -1,0 +1,14 @@
+{
+ "cmd.arch.wall.tile": "Stěna",
+ "cmd.arch.door.tile": "Dveře",
+ "cmd.arch.window.tile": "Okno",
+ "cmd.arch.floor.tile": "Podlaha",
+ "cmd.mod.move.tile": "Posunout",
+ "cmd.mod.copy.tile": "Kopírovat",
+ "cmd.mod.rotate.tile": "Otočit",
+ "cmd.mod.mirror.tile": "Zrcadlit",
+ "cmd.mod.trim.tile": "Oříznout",
+ "cmd.mod.delete.tile": "Smazat",
+ "cmd.ann.dim.tile": "Kóta",
+ "cmd.ann.text.tile": "Text"
+}

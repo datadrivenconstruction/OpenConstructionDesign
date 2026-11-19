@@ -1,0 +1,5 @@
+{
+ "lv.level.deleted_attach": "Etasje slettet; {n} vegger mistet festet i toppen",
+ "lv.level.rooms": "{n} rom får målethøyden for den nye etasjen ({dz} m): {names}. Trykk Flytt igjen for å bekrefte",
+ "lv.level.pinned": "Etasje ikke slettet: festede elementer kan ikke flyttes til en annen etasje: {names}. Løsne dem først"
+}

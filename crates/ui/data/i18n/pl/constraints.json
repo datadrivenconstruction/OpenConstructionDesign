@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "Utrzymuje tę ścianę w bieżącej długości przy każdej edycji",
+ "constraints.con.tip.lock_dist": "Utrzymuje odległość między dwiema ścianami przy każdej edycji",
+ "constraints.con.tip.equal": "Utrzymuje równe odstępy między zaznaczonymi ścianami",
+ "constraints.con.tip.align": "Utrzymuje obie ściany na jednej linii",
+ "constraints.con.tip.parallel": "Utrzymuje ściany równoległe",
+ "constraints.con.tip.perp": "Utrzymuje ściany pod kątem prostym",
+ "constraints.con.tip.align_grid": "Utrzymuje ścianę na najbliższej linii siatki",
+ "constraints.con.tip.lock_dist_grid": "Utrzymuje odległość ściany od najbliższej linii siatki",
+ "constraints.con.tip.level_gap": "Utrzymuje odstęp między poziomami",
+ "constraints.con.tip.top_to_level": "Utrzymuje górę ściany na poziomie powyżej"
+}

@@ -1,0 +1,6 @@
+{
+ "delsafe.ring.opening_shape": "Conturul unei deschideri s-ar intersecta cu el însuși sau s-ar prăbuși",
+ "delsafe.ring.opening_boundary": "O deschidere ar tăia sau atinge limita exterioară",
+ "delsafe.ring.openings_overlap": "Deschiderile s-ar suprapune sau s-ar atinge între ele",
+ "xl.msg.delsafe_instance_param_on_types": "parametrul '{}' este un parametru de instanță; editează-l în foaia elementelor, nu s-a aplicat"
+}

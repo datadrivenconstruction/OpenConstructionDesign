@@ -1,0 +1,14 @@
+{
+ "cmd.mod.divide": "Jaa yhtä suuriin osiin",
+ "cmd.mod.divide.short": "Jaa",
+ "cmd.mod.divide.desc": "Jakaa seinän yhtä suuriin osiin yhdellä kertaa. Kirjoita osien määrä ja napsauta sitten seinää.",
+ "whereis.mod.divide": "jaa, yhtä suuret osat, leikkaa palasiksi, jaa seinä",
+ "hint.split.parts": "Jaa: napsauta seinää · numero — osia (2–100) · Esc — peru",
+ "create_input.divide.bad_parts": "«{text}» ei ole osien määrä: kirjoita kokonaisluku väliltä 2–{max}",
+ "create_input.ws.err.empty": "Kirjoita asettelun nimi",
+ "create_input.ws.err.long": "Nimi on liian pitkä: enintään 40 merkkiä",
+ "create_input.ws.err.preset": "Tämä nimi kuuluu sisäänrakennettuun asetteluun",
+ "create_input.ws.err.full": "Enintään 24 tallennettua asettelua: poista ensin yksi",
+ "create_input.seldim.locked": "Etäisyys {v} lukittu",
+ "create_input.seldim.positive": "Etäisyyden on oltava suurempi kuin nolla"
+}

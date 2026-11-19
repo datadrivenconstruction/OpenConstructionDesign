@@ -1,0 +1,14 @@
+{
+ "empty.v3d_model.title": "3B'de henüz bir şey yok",
+ "empty.v3d_model.hint": "Planda duvar çizin, burada görünürler.",
+ "empty.v3d_model.action": "Planı aç",
+ "empty.v3d_hidden.title": "Bu görünümde tüm öğeler gizli",
+ "empty.v3d_hidden.hint": "Geçici gizleme veya izolasyon hiçbir şeyi bırakmıyor. Görünüm grafikleri olduğu gibi kalır.",
+ "empty.v3d_hidden.action": "Tümünü göster",
+ "empty.v3d_graphics.title": "Görünüm grafikleri tüm kategorileri gizliyor",
+ "empty.v3d_graphics.hint": "Bu görünümün kategori kuralları hiçbir şeyi göstermiyor. Görünüm grafiklerinde kategorileri yeniden açın.",
+ "empty.v3d_graphics.action": "Görünüm grafiklerini aç",
+ "empty.v3d_box.title": "Kesit kutusu modelin dışında",
+ "empty.v3d_box.hint": "Kutu her öğeyi kesiyor. Modelin etrafına yeniden yerleştirin.",
+ "empty.v3d_box.action": "Kutuyu sıfırla"
+}

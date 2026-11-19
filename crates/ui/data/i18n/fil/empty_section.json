@@ -1,0 +1,11 @@
+{
+ "empty.sv_notfound.title": "Hindi nahanap ang view",
+ "empty.sv_notfound.hint": "Binura ang view na ito o wala na ito sa proyekto.",
+ "empty.sv_notfound.action": "Isara ang view",
+ "empty.sv_cuts_nothing.title": "Walang pinuputol ang section na ito",
+ "empty.sv_cuts_nothing.hint": "Walang pader, slab o butas na natatamaan ng cut line sa loob ng lalim nito. Ilipat ang linya o gawing mas malalim ang view.",
+ "empty.sv_cuts_nothing.action": "Ipakita sa plano",
+ "empty.sv_shows_nothing.title": "Walang ipinapakita ang elevation na ito",
+ "empty.sv_shows_nothing.hint": "Walang pader, slab o butas sa loob ng lalim ng view. Ilipat ang view line o gawing mas malalim ang view.",
+ "empty.sv_shows_nothing.action": "Ipakita sa plano"
+}

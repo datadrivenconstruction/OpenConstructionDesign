@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "Μετακίνηση πάνω",
+ "rebar_list.move_down": "Μετακίνηση κάτω",
+ "rebar_list.remove": "Αφαίρεση",
+ "rebar_list.zone_remove_last": "Μια ζώνη χρειάζεται τουλάχιστον έναν χώρο: διαγράψτε τη ζώνη για να αφαιρέσετε τον τελευταίο",
+ "rebar_list.rebar_empty_title": "Δεν υπάρχει οπλισμός σε αυτό το μοντέλο",
+ "rebar_list.rebar_empty_hint": "Τοποθετήστε οπλισμό σε φιλοξενούν στοιχείο και θα προγραμματιστεί εδώ.",
+ "rebar_list.rebar_empty_action": "Τοποθέτηση οπλισμού"
+}

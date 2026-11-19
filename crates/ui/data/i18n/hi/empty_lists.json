@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "दीवार बनाएँ",
+ "empty.totals.action": "दीवार बनाएँ",
+ "empty.schedule.action": "फ़ील्ड जोड़ें",
+ "empty.schedule_filtered.action": "फ़िल्टर हटाएँ",
+ "empty.library.action": "खोज रीसेट करें",
+ "empty.library.load": "परिवार लोड करें",
+ "empty.schedule_fields.title": "कोई फ़ील्ड नहीं दिख रहा",
+ "empty.schedule_fields.action": "फ़ील्ड जोड़ें",
+ "empty.schedule_fields.hint": "तालिका देखने के लिए कम से कम एक फ़ील्ड चालू करें।"
+}

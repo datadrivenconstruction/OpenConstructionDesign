@@ -1,0 +1,19 @@
+{
+ "names.level": "Nivel {n}",
+ "names.slab": "Placă 200",
+ "names.roof_slab": "Acoperiș 200",
+ "names.sheet.plan_section": "Plan și secțiune etaj 1",
+ "names.sheet.plan_view": "Plan etaj 1",
+ "names.sheet.site_plan": "Plan de situație",
+ "names.sheet_set.issue": "Emisiunea 1",
+ "names.title.owner": "Project SRL",
+ "names.title.creator": "Ionescu A.",
+ "names.title.approver": "Popescu P.",
+ "names.title.document_type": "Plan",
+ "names.title.status": "În lucru",
+ "names.revision.date": "4 nov. 2026",
+ "names.revision.description": "Emis spre revizuire",
+ "names.revision.author": "AI",
+ "names.demo.no_levels": "fără niveluri",
+ "names.demo.no_sheet": "planșă"
+}

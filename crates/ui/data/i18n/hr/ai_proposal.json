@@ -1,0 +1,13 @@
+{
+ "ai.proposal.title": "Prijedlog agenta",
+ "ai.proposal.meta": "{actor} · operacije: {ops}",
+ "ai.proposal.apply.desc": "Primjenjuje cijeli prijedlog kao jedan korak; Ctrl+Z ga poništava",
+ "ai.proposal.applying": "Primjenjujem…",
+ "ai.proposal.applied": "Prijedlog je primijenjen. Ctrl+Z ga poništava.",
+ "ai.proposal.applied_resync": "Prijedlog je primijenjen, ali pogled još nije ažuriran. Osvježava se sam; Ctrl+Z poništava korak.",
+ "ai.proposal.stale": "Model se promijenio nakon pregleda ovog prijedloga. Zamolite agenta da ga ponovno predloži.",
+ "ai.proposal.toast.applied": "Prijedlog primijenjen. Ctrl+Z ga poništava.",
+ "ai.proposal.toast.stale": "Model se promijenio nakon pregleda, pa ništa nije primijenjeno. Pregledajte ponovno: zamolite agenta da predloži iznova.",
+ "ai.proposal.toast.refused": "Prijedlog nije primijenjen: {reason}",
+ "ai.proposal.rejected": "Prijedlog je odbijen."
+}

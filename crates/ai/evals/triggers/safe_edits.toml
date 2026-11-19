@@ -1,0 +1,15 @@
+# Requests that must make the agent read ddc://skills/safe_edits first (yes), and ones that must not (no).
+skill = "safe_edits"
+yes = [
+  "Add a platform at 200 m to the existing tower and leave everything else as it is",
+  "добавь операционную на 3 этаже к существующей системе вентиляции",
+  "Replace all 200 mm interior walls on level 2 with the 150 mm type",
+  "Verschiebe die Treppe im Bestand um einen Meter nach Osten",
+  "Elimina las puertas duplicadas del nivel 1 sin tocar el resto",
+  "Fix the blocking findings of the last check on level 4",
+]
+no = [
+  "Build a 300 m lattice tower from scratch on an empty site",
+  "Design ventilation for a new hospital on an empty project",
+  "What is the total floor area?",
+]

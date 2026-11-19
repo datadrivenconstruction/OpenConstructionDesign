@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "Слияние варианта: {name}",
+ "ai_opt_merge.whole": "Слить вариант целиком",
+ "ai_opt_merge.parts": "Слить выбранные части",
+ "ai_opt_merge.note": "Почему этот вариант",
+ "ai_opt_merge.rebased": "Модель изменилась после создания варианта: слияние пересчитано по текущей модели. Проверьте изменения перед применением.",
+ "ai_opt_merge.left.not_picked": "Не выбрано в варианте",
+ "ai_opt_merge.left.unticked": "Отключено в варианте",
+ "ai_opt_merge.left.conflict": "Нельзя добавить в текущую модель: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "Этот вариант нельзя слить. Отклонённый вариант сначала нужно восстановить.",
+ "ai_opt_merge.refused.stale": "Модель изменилась после создания варианта. Пересчитайте слияние по текущей модели.",
+ "ai_opt_merge.refused.nothing_picked": "Ничего не выбрано для слияния.",
+ "ai_opt_merge.refused.unknown_item": "Пункта {item} нет в этом варианте.",
+ "ai_opt_merge.refused.not_in_option": "Выбранный элемент не входит в этот вариант.",
+ "ai_opt_merge.refused.needs_left_out": "Пункту {item} нужен пункт {needs}. Выберите и его или разрешите добавлять зависимости.",
+ "ai_opt_merge.refused.set_gone": "Пункт {item} ссылается на выборку, которой больше нет. Создайте вариант заново.",
+ "ai_opt_merge.refused.busy": "Открыт другой план. Сначала примените или отклоните его.",
+ "ai_opt_merge.refused.failed": "Не удалось подготовить слияние: {reason}",
+ "ai_opt_merge.revive": "Восстановить вариант",
+ "ai_opt_merge.merged": "Слит"
+}

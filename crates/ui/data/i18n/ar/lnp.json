@@ -1,0 +1,14 @@
+{
+ "lnp.openings_refused": "لم تُغيَّر {n} فتحات ({why})",
+ "lnp.params_changed": "القيم المتغيرة: {n}",
+ "lnp.params_same": "لا تغييرات: {u} عنصر يحمل هذه القيمة بالفعل",
+ "lnp.params_tip": "Enter لتطبيق القيمة على كل عنصر محدد؛ Esc للإبقاء عليها",
+ "lnp.locked_hint": "القيم المقفلة محفوظة: {n}",
+ "lnp.panels_one": "تُحرَّر الألواح واحداً تلو الآخر",
+ "lnp.keep_first": "الإبقاء على الأول",
+ "lnp.keep_first_tip": "حدّد اللوح الأول فقط لتحريره",
+ "lnp.clip_from_wall": "نُسخت المعاملات من الجدار #{id}",
+ "lnp.clip_from_opening": "نُسخت المعاملات من الفتحة #{id}",
+ "lnp.match_from": "طُبّقت خصائص #{id} على {n} عنصر",
+ "lnp.why_at": "#{id}: {e}"
+}

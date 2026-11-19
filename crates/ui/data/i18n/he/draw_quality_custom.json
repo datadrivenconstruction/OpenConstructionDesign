@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "מותאם",
+ "draw_quality.custom.tip": "{name}: רשומה של הפרויקט הזה",
+ "draw_quality.custom_note": "רשומות שמסומנות כמותאמות שייכות לפרויקט הזה.",
+ "draw_quality.unsaved.lib_body": "לשמור אותם לספרייה, או לבטל אותם?",
+ "draw_quality.unsaved.styles_body": "להחיל אותם על המבט, או לבטל אותם?",
+ "draw_quality.unsaved.both_body": "להחיל אותם, או לבטל אותם?",
+ "draw_quality.halftone": "גוון חצי: {category}",
+ "draw_quality.styles.name": "סגנונות קו",
+ "draw_quality.styles.other_level": "עריכות סגנון שלא נשמרו במפלס {level}: החל אותן או בטל כדי לערוך את המפלס הזה."
+}

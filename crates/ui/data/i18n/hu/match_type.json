@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "Típus átvétele",
+ "cmd.mod.match_type.short": "Típus átvétele",
+ "cmd.mod.match_type.desc": "Jelöljön ki egy falat, padlót, pillért vagy gerendát, majd kattintson más, azonos kategóriájú elemekre, hogy megkapják a típusát. Húzzon ablakot az összes benne lévőre alkalmazáshoz. Esc eldobja a forrást.",
+ "hint.match_type.pick": "Típus átvétele: jelöljön ki egy falat, padlót, pillért vagy gerendát · Esc — kilépés",
+ "hint.match_type.apply": "Típus átvétele: kattintson a célelemekre vagy húzzon ablakot · Esc — másik forrás",
+ "match_type.kind.wall": "fal",
+ "match_type.kind.slab": "padló",
+ "match_type.kind.column": "pillér",
+ "match_type.kind.beam": "gerenda",
+ "match_type.refuse.category": "Más kategória: ezt a típust csak {cat} kaphatja meg",
+ "match_type.refuse.curtain": "Függönyfal: típusa itt nem vehető át",
+ "match_type.refuse.pinned": "Rögzítve: a típus módosításához oldja fel",
+ "match_type.pick_bad": "Forrásként jelöljön ki egy falat, padlót, pillért vagy gerendát",
+ "match_type.same": "Már ez a típus",
+ "match_type.done": "Típus alkalmazva: {n}",
+ "match_type.done_skipped": "Típus alkalmazva: {n}, kihagyva (rögzített vagy függönyfal): {skipped}",
+ "match_type.failed": "A típus nem változott: {err}"
+}

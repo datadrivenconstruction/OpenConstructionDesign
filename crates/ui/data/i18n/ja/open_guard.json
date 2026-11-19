@@ -1,0 +1,11 @@
+{
+ "job.stage.prepare": "プロジェクトを準備中",
+ "open_guard.already_open": "{name} は既に開いています",
+ "open_guard.from_cache": "{name}: 取り込みキャッシュから開きました",
+ "open_guard.known_project": "{name} は以前に取り込まれています。そのプロジェクトを開きます",
+ "open_guard.locate": "場所を指定",
+ "open_guard.mem_low": "メモリ不足: メッシュの予算を半分にし、詳細度レベルの生成を一時停止しました",
+ "open_guard.mem_low_short": "メモリ不足: メモリに空きができるまで詳細度レベルの生成を一時停止しています",
+ "open_guard.no_window": "そのプロジェクトのウィンドウが見つかりませんでした",
+ "open_guard.switch_window": "そのウィンドウに切り替え"
+}

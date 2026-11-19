@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "tùy chỉnh",
+ "draw_quality.custom.tip": "{name}: một mục của dự án này",
+ "draw_quality.custom_note": "Các mục đánh dấu tùy chỉnh thuộc về dự án này.",
+ "draw_quality.unsaved.lib_body": "Lưu vào thư viện, hay bỏ đi?",
+ "draw_quality.unsaved.styles_body": "Áp dụng cho góc nhìn, hay bỏ đi?",
+ "draw_quality.unsaved.both_body": "Áp dụng, hay bỏ đi?",
+ "draw_quality.halftone": "Nửa tông {category}",
+ "draw_quality.styles.name": "Kiểu đường",
+ "draw_quality.styles.other_level": "Chỉnh sửa kiểu chưa lưu của cao độ {level}: áp dụng hoặc hoàn lại để sửa cao độ này."
+}

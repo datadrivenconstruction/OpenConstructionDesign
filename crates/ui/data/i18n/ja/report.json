@@ -1,0 +1,23 @@
+{
+ "cmd.app.report": "問題を報告…",
+ "cmd.app.report.desc": "何が起きたかを説明し、このコンピュータに報告パッケージを保存します: 入力したテキスト、ビルドとシステムの情報、ウィンドウの画像、直近のクラッシュ記録。何も送信されません。",
+ "report.title": "問題を報告",
+ "report.what": "何が起きたか",
+ "report.expected": "期待していた結果",
+ "report.steps": "再現する手順",
+ "report.opt.shot": "ウィンドウの画像を含める",
+ "report.opt.model": "モデルのコピーを含める",
+ "report.opt.model.note": "既定ではオフです。プロジェクトデータのコピーを含みますが、AI の記録は含みません。",
+ "report.opt.paths": "ファイルパスにユーザー名を残す",
+ "report.local": "報告パッケージはこのコンピュータにのみ保存されます。自動的には何も送信されません。",
+ "report.blocked": "先に何が起きたかを説明してください。",
+ "report.save": "パッケージを保存",
+ "report.copy": "テキストをコピー",
+ "report.cancel": "キャンセル",
+ "report.copied": "報告テキストをコピーしました。",
+ "report.saved": "パッケージを保存しました: {path}",
+ "report.failed": "報告パッケージを保存できませんでした: {err}",
+ "report.model.fail": "モデルのコピーを作成できず、何も保存されませんでした: {err}",
+ "report.crash.notice": "前回のセッションはクラッシュして終了しました。",
+ "report.crash.action": "問題を報告"
+}

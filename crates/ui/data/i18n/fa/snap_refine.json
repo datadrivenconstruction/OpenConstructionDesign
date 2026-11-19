@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "شعاع چسبندگی",
+ "snap_refine.settings.snap_px_desc": "نشانگر چقدر باید به یک نقطه یا خط نزدیک شود تا بچسبد، بر حسب پیکسل صفحه. مقادیر بزرگ‌تر برای صفحه‌لمسی و نمایشگرهای با تراکم بالا مفیدند.",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "افقی",
+ "snap_refine.hint.vertical": "قائم",
+ "snap_refine.hint.perpendicular": "عمود بر قبلی",
+ "snap_refine.hint.parallel": "موازی با قبلی",
+ "snap_refine.hint.on_axis": "روی محور دیوار",
+ "snap_refine.no_snap": "بدون چسبندگی (Alt)"
+}

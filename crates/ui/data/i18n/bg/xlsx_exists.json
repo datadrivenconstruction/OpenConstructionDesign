@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "Тази работна книга вече съществува",
+ "xlsx_exists.foreign": "Не е работна книга на този проект, затова никога не се заменя.",
+ "xlsx_exists.pending": "Съдържа {n} редакции, които още не са приложени към модела.",
+ "xlsx_exists.outside": "Има {n} реда, които новият експорт не съдържа.",
+ "xlsx_exists.new_name": "Експорт в {name}",
+ "xlsx_exists.apply_first": "Първо ги приложете",
+ "xlsx_exists.replace": "Замяна (старата книга в _archive)",
+ "xlsx_exists.archived": "Старата работна книга е преместена в {path}",
+ "xlsx_exists.archive_failed": "Старата работна книга не можа да бъде преместена, нищо не е експортирано: {error}"
+}

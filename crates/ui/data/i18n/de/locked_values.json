@@ -1,0 +1,8 @@
+{
+ "cmd.props.param_lock": "Parameterwert sperren oder entsperren",
+ "locked_values.kept": "{n} gesperrte Werte behalten",
+ "locked_values.locked": "„{name}“ gesperrt: XLSX-Import, Sammelbearbeitung und KI lassen ihn unverändert",
+ "locked_values.unlocked": "„{name}“ entsperrt",
+ "locked_values.locked_tip": "Gesperrt: XLSX-Import, Sammelbearbeitung und KI behalten diesen Wert. Klicken zum Entsperren  ·  Strg+L",
+ "locked_values.no_row": "Auf eine Parameterzeile in den Eigenschaften zeigen, dann Strg+L drücken"
+}

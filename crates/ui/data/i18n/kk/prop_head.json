@@ -1,0 +1,9 @@
+{
+ "prop_head.of_type": {
+  "one": "# осы түрдегі",
+  "other": "# осы түрдегі"
+ },
+ "prop_head.override_tip": "Түрден өзгеше, қалпына келтіру үшін нұқыңыз",
+ "prop_head.reset_done": "“{name}” түр мәніне қайтарылды",
+ "prop_head.copy_id": "Нөмірді көшіру үшін нұқыңыз"
+}

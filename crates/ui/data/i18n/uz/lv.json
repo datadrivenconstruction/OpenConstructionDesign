@@ -1,0 +1,5 @@
+{
+ "lv.level.deleted_attach": "Sath o'chirildi; {n} ta devor yuqori bog'lanishini yo'qotdi",
+ "lv.level.rooms": "{n} ta xona maqsadli sath balandligini oladi ({dz} m): {names}. Tasdiqlash uchun yana Ko'chirish ni bosing",
+ "lv.level.pinned": "Sath o'chirilmadi: mahkamlangan elementlarni boshqa sathga o'tkazib bo'lmaydi: {names}. Avval ularni mahkamlashni olib tashlang"
+}

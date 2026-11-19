@@ -1,0 +1,8 @@
+{
+ "xlsx_idle.idle_title": "Không có thay đổi để nhập",
+ "xlsx_idle.export_name": "Xuất",
+ "xlsx_idle.export_body": "Ghi mô hình ra sổ làm việc. Sửa giá trị ở đó, rồi đồng bộ.",
+ "xlsx_idle.sync_name": "Đồng bộ",
+ "xlsx_idle.sync_body": "Đọc lại sổ làm việc và liệt kê khác biệt. Mô hình chỉ thay đổi khi bạn áp dụng.",
+ "xlsx_idle.last_sync": "Đồng bộ lần cuối: {when}"
+}

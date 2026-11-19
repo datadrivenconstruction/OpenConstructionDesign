@@ -1,0 +1,32 @@
+{
+ "schema": "gen_bench.v1",
+ "group": "irregular_site",
+ "spec": {
+  "typology": "apartment_section",
+  "floors": 5,
+  "footprint": {
+   "shape": "l",
+   "width": 60,
+   "depth": 48,
+   "angle": 60,
+   "arm": 15
+  }
+ },
+ "adjacency": [
+  [
+   "kitchen",
+   "living",
+   3
+  ],
+  [
+   "bedroom",
+   "bath",
+   1
+  ],
+  [
+   "bath",
+   "hall",
+   1
+  ]
+ ]
+}

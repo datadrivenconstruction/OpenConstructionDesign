@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "Преглед",
+ "agent_draft.ag.preview.desc": "Очертава елементите на тази чернова върху работното поле, докато показалецът е на бутона. Нищо не се променя.",
+ "agent_draft.type.column": "Колона",
+ "agent_draft.type.roof": "Покрив",
+ "agent_draft.type.ceiling": "Таван",
+ "agent_draft.type.stair": "Монолитно",
+ "agent_draft.type.railing": "Парапет",
+ "agent_draft.type.shaft": "Шахта",
+ "agent_draft.type.axis": "Ос 6.5 mm",
+ "agent_draft.type.refplane": "Референтна равнина"
+}

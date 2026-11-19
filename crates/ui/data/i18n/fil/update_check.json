@@ -1,0 +1,21 @@
+{
+ "cmd.help.check_update": "Tingnan ang mga update",
+ "update_check.title": "Pagtingin ng update",
+ "update_check.desc": "Naka-off bilang default. Ipinapadala lamang sa server namin ang bersyon, OS at arkitektura, at uri ng install. Hindi ito nagda-download o nag-i-install ng anuman.",
+ "update_check.freq.startup": "Sa pagsisimula",
+ "update_check.freq.daily": "Araw-araw",
+ "update_check.freq.weekly": "Lingguhan",
+ "update_check.freq.never": "Hindi kailanman",
+ "update_check.check_now": "Tingnan ngayon",
+ "update_check.dialog.title": "Pagtingin ng update",
+ "update_check.unknown.title": "Hindi matingnan ang mga update",
+ "update_check.unknown.body": "{e}. Hindi ibig sabihin nito na kasalukuyan ang bersyong ito. Subukan ulit mamaya.",
+ "update_check.current": "Ito ang pinakabagong bersyon mo ({v}).",
+ "update_check.newer": "May bersyong {v} na available",
+ "update_check.date": "Inilabas {d}",
+ "update_check.unfit": "Mas luma ang bersyong ito ({v}) kaysa sa pinakamababang inirerekomendang bersyon na {f}. Inirerekomenda ang pag-update.",
+ "update_check.close": "Isara",
+ "update_check.open_failed": "Hindi mabuksan ang release page.",
+ "update_check.toast.newer": "May bersyong {v} na available. Help > Check for updates.",
+ "update_check.toast.unfit": "Mas luma ang bersyong ito ({v}) kaysa sa pinakamababang inirerekomendang bersyon na {f}."
+}

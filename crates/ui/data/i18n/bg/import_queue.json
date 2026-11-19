@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "В опашка след изпълняващата се задача: {n}",
+ "import_queue.queue_full": "Опашката е пълна, {n} файла не са добавени",
+ "import_queue.changed": "{name} е променен след създаването на този проект. Отворен е предишният проект.",
+ "import_queue.import_again": "Импортирай отново",
+ "import_queue.kept": "Завършеният импорт е запазен",
+ "import_queue.open_it": "Отвори го",
+ "import_queue.sum.head": "импорт: {editable} редактируеми (стени {walls}, отвори {open}, подове {slabs}, помещения {rooms}, други {other}), {meshes} като мрежа",
+ "import_queue.sum.unchanged": ", непроменени {n}",
+ "import_queue.sum.updated": ", обновени {n}",
+ "import_queue.sum.missing": ", липсват в източника {n} (запазени)",
+ "import_queue.sum.skipped": ", пропуснати {n}",
+ "import_queue.sum.warnings": ", предупреждения {n}",
+ "import_queue.import_failed": "импортът е неуспешен: {e}"
+}

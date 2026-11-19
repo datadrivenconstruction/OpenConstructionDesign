@@ -1,0 +1,6 @@
+{
+ "geom.length": "Longitud",
+ "sched.cat.room_seps": "Separadores de espacio",
+ "room.err.point_leave": "Espacio {n}: el punto saldría de su contorno",
+ "room.err.point_taken": "Espacio {n}: el punto caería en el espacio {other}"
+}

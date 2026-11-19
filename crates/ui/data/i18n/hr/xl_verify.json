@@ -1,0 +1,9 @@
+{
+ "xl.msg.base_value": "provjera čitanja nije uspjela, stara radna knjiga je zadržana: {} ({}) očekivano '{}', pročitano '{}'",
+ "xl.msg.base_missing": "provjera čitanja nije uspjela, stara radna knjiga je zadržana: list {} nema redak za id {}",
+ "xl.msg.base_extra": "provjera čitanja nije uspjela, stara radna knjiga je zadržana: redak {} ne postoji u modelu",
+ "xl.msg.base_refused": "provjera čitanja nije uspjela, stara radna knjiga je zadržana: {} ({}) je odbijen: {}",
+ "xl.msg.base_sheet": "provjera čitanja nije uspjela, stara radna knjiga je zadržana: list {} nedostaje, prazan je ili se ne može čitati",
+ "xl.msg.base_newer": "provjera čitanja nije uspjela, stara radna knjiga je zadržana: {} ćelija ne sadrži vrijednost modela",
+ "xl.msg.base_unreadable": "provjera čitanja nije uspjela, stara radna knjiga je zadržana: novu radnu knjigu nije moguće pročitati ({})"
+}

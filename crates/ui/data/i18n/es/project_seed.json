@@ -1,0 +1,6 @@
+{
+ "project_seed.seed_level": "Nivel 1",
+ "project_seed.seed_wall_partition": "Tabique 100",
+ "project_seed.seed_wall_masonry": "Mampostería 200",
+ "project_seed.seed_wall_exterior": "Exterior 380"
+}

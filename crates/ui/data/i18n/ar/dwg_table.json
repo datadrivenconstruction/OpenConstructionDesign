@@ -1,0 +1,14 @@
+{
+ "dwg_table.copy": "نسخ الجدول",
+ "dwg_table.copy_tip": "انسخ جدول الكميات حسب الطبقة كجدول لبرنامج الجداول الإلكترونية",
+ "dwg_table.copied": "تم نسخ جدول الكميات (مفصول بجدولة)",
+ "dwg_table.total": "الإجمالي",
+ "dwg_table.col.layer": "الطبقة",
+ "dwg_table.col.count": "العدد",
+ "dwg_table.col.len": "الطول، {unit}",
+ "dwg_table.col.area": "المساحة، {unit}",
+ "dwg_table.unit.mm": "مم",
+ "dwg_table.unit.m2": "م²",
+ "dwg_table.unit.ft": "قدم",
+ "dwg_table.unit.ft2": "قدم²"
+}

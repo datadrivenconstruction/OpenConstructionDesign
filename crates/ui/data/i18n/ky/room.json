@@ -1,0 +1,6 @@
+{
+ "geom.length": "Узундук",
+ "sched.cat.room_seps": "Бөлмөлөрдү бөлгүчтөр",
+ "room.err.point_leave": "Бөлмө {n}: чекит анын чегинен чыгып кетет",
+ "room.err.point_taken": "Бөлмө {n}: чекит {other} бөлмөсүнө түшүп калат"
+}

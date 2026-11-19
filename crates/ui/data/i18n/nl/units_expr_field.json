@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "Lege invoer.",
+ "units.err.not_number": "Geen getal op positie {pos}.",
+ "units.err.unknown_unit": "Onbekende eenheid: {unit}.",
+ "units.err.non_positive": "Lengte moet groter zijn dan nul.",
+ "units.err.too_large": "Lengte mag niet groter zijn dan {max} m.",
+ "units.err.bad_angle": "Hoek is een aantal graden.",
+ "units.err.unknown_name": "Onbekende naam: {name}. Waarde behouden.",
+ "units.err.cycle": "Formulelus bij {name}. Waarde behouden.",
+ "units.err.bad_expr": "De expressie op positie {pos} kan niet worden gelezen. Waarde behouden.",
+ "units.err.div_zero": "Deling door nul op positie {pos}. Waarde behouden.",
+ "units.err.invalid": "Ongeldig getal.",
+ "units.err.kept": "Niet gewijzigd: {reason}"
+}

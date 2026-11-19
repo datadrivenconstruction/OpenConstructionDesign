@@ -1,0 +1,5 @@
+{
+ "undo.action": "Desfazer",
+ "undo.action_keys": "Desfazer ({keys})",
+ "undo.ai_applied": "Alterações aplicadas"
+}

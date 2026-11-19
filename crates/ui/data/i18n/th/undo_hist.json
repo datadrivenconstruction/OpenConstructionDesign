@@ -1,0 +1,8 @@
+{
+ "undo.undone": "เลิกทำแล้ว: {what}",
+ "undo.redone": "ทำซ้ำแล้ว: {what}",
+ "undo.action.edit.redo": "ทำซ้ำ",
+ "undo.action.edit.undo": "เลิกทำ",
+ "hdr.unsaved": "การเปลี่ยนแปลงที่ยังไม่บันทึก",
+ "hdr.file_menu": "เมนูไฟล์"
+}

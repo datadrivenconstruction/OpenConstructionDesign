@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "پچھلی شیٹ (Page Up)",
+ "sheets.print.next": "اگلی شیٹ (Page Down)",
+ "sheets.print.fit": "صفحہ فِٹ کریں (ڈبل کلک)",
+ "sheets.print.no_sheets": "پیش نظارہ کے لیے کوئی شیٹ نہیں",
+ "sheets.print.building": "صفحہ بنایا جا رہا ہے…",
+ "sheets.print.stop_build": "روکیں",
+ "sheets.print.build_stopped": "صفحہ بنانا روک دیا گیا",
+ "sheets.print.retry": "دوبارہ بنائیں",
+ "sheets.print.build_failed": "پیش نظارہ نہیں بن سکا"
+}

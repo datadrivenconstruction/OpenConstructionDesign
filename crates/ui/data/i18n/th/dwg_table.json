@@ -1,0 +1,14 @@
+{
+ "dwg_table.copy": "คัดลอกตาราง",
+ "dwg_table.copy_tip": "คัดลอกปริมาณงานตามเลเยอร์เป็นตารางสำหรับสเปรดชีต",
+ "dwg_table.copied": "คัดลอกปริมาณงานแล้ว (คั่นด้วยแท็บ)",
+ "dwg_table.total": "รวม",
+ "dwg_table.col.layer": "เลเยอร์",
+ "dwg_table.col.count": "จำนวน",
+ "dwg_table.col.len": "ความยาว, {unit}",
+ "dwg_table.col.area": "พื้นที่, {unit}",
+ "dwg_table.unit.mm": "mm",
+ "dwg_table.unit.m2": "m²",
+ "dwg_table.unit.ft": "ft",
+ "dwg_table.unit.ft2": "ft²"
+}

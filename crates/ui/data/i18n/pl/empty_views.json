@@ -1,0 +1,19 @@
+{
+ "empty.v3d_gpu.title": "3D jest niedostępne na tym adapterze grafiki",
+ "empty.v3d_gpu.hint": "Model jest bezpieczny i plan działa. Uruchom ponownie z bezpieczną grafiką, aby spróbować 3D jeszcze raz.",
+ "empty.v3d_gpu.action": "Uruchom ponownie z bezpieczną grafiką",
+ "empty.v3d_loading.title": "Budowanie 3D…",
+ "empty.v3d_loading.pct": "Otwieranie… {pct} %",
+ "empty.plan_hidden.title": "Wszystkie elementy są ukryte w tym planie",
+ "empty.plan_hidden.hint": "Tymczasowe ukrycie lub izolacja nie pozostawia nic widocznego.",
+ "empty.plan_hidden.action": "Pokaż wszystko",
+ "empty.plan_graphics.title": "Grafika widoku ukrywa wszystkie kategorie",
+ "empty.plan_graphics.hint": "Reguły kategorii tego widoku nie pozostawiają nic do pokazania.",
+ "empty.plan_graphics.action": "Otwórz grafikę widoku",
+ "empty.plan_phase.title": "Filtr faz ukrywa wszystko",
+ "empty.plan_phase.hint": "Nic na tym poziomie nie istnieje w fazie pokazanej przez ten widok.",
+ "empty.plan_phase.action": "Zmień fazę",
+ "empty.plan_level.title": "Brak elementów na tym poziomie",
+ "empty.plan_level.hint": "Inne poziomy tego modelu mają elementy.",
+ "empty.plan_level.action": "Przejdź do poziomu z elementami"
+}

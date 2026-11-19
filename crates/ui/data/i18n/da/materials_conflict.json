@@ -1,0 +1,5 @@
+{
+ "materials.mat.conflict": "Dette materiale blev ændret i modellen (fortryd eller et andet vindue), mens kortet havde redigeringer. Dine redigeringer beholdes.",
+ "materials.mat.keep": "Behold mine redigeringer",
+ "materials.mat.reload": "Genindlæs"
+}

@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "Rögzítési sugár",
+ "snap_refine.settings.snap_px_desc": "Mennyire kell közel kerülnie a kurzornak egy ponthoz vagy vonalhoz a rögzítéshez, képernyőpixelben. Nagyobb érték érintőképernyőkön és nagy pontsűrűségű kijelzőkön segít.",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "Vízszintes",
+ "snap_refine.hint.vertical": "Függőleges",
+ "snap_refine.hint.perpendicular": "Az előzőre merőleges",
+ "snap_refine.hint.parallel": "Az előzővel párhuzamos",
+ "snap_refine.hint.on_axis": "Falrendszertengelyen",
+ "snap_refine.no_snap": "Rögzítés nélkül (Alt)"
+}

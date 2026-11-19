@@ -1,0 +1,19 @@
+family Air Handling Unit
+category equipment
+host floor
+ifc IfcUnitaryEquipment AIRHANDLER
+param Length length type 2000mm
+param Width length type 1000mm
+param Height length type 1400mm
+param PortD length type 400mm
+param Source number type 1
+param Casing material type "Steel White"
+type "2000x1000" Length=2000mm
+type "3000x1400" Length=3000mm, Width=1400mm, Height=1800mm, PortD=630mm
+type "118x55 in" Length=3000mm, Width=1400mm, Height=1800mm, PortD=630mm
+type "900x600" Length=900mm, Width=600mm, Height=500mm, PortD=160mm
+extrude Body rect(-Length / 2, -Width / 2, Length / 2, Width / 2) z(0mm, Height) mat(Casing) show(3d, elev)
+symbol rect(-Length / 2, -Width / 2, Length / 2, Width / 2)
+symbol line(-Length / 2, -Width / 2, Length / 2, Width / 2) show(medium, fine)
+connector Supply duct supply_air at(Length / 4, 0, Height) dir(0, 0, 1) size(PortD)
+connector Return duct return_air at(-Length / 4, 0, Height) dir(0, 0, 1) size(PortD)

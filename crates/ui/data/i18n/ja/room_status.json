@@ -1,0 +1,4 @@
+{
+ "room_status.open": "部屋 {room} は閉じた領域ではなくなりました",
+ "warn.kind.room_open": "閉じていない部屋"
+}

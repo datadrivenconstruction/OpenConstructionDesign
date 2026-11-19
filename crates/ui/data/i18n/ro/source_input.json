@@ -1,0 +1,4 @@
+{
+ "source_input.err.number": "„{text}” nu este un număr; acest parametru conține un număr. Nimic nu a fost scris",
+ "source_input.err.comma": "„{text}”: folosește punct pentru zecimale (1.5); virgula grupează doar miile (1,000). Nimic nu a fost scris"
+}

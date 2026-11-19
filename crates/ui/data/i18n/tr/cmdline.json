@@ -1,0 +1,13 @@
+{
+ "cmdl.mode_cmd": "Komut",
+ "cmdl.mode_ai": "YZ",
+ "cmdl.toggle": "Komutlar veya YZ asistanı (Ctrl+J)",
+ "cmdl.hint": "Komut veya kısaltma (W, L, M, RO), nokta #x;y, @dx;dy, d<açı. Ctrl+J: YZ asistanına sor",
+ "cmdl.hint_ai": "Model hakkında ya da bir değişiklik için YZ asistanına sorun. Ctrl+J: komutlara dön",
+ "cmdl.sent": "YZ asistanına gönderildi",
+ "cmdl.failed": "“{text}” burada çalıştırılamadı",
+ "cmdl.no_tool": "Önce bir çizim komutu başlatın, sonra noktalarını girin",
+ "cmdl.unknown": "“{text}” komutu yok. Ctrl+J bunu YZ asistanına gönderir",
+ "cmdl.bad": "“{text}” okunamadı: {e}",
+ "cmdl.shape": "“{text}” bir nokta değil: x;y, #x;y, @dx;dy ya da pozitif mesafe<açı girin"
+}

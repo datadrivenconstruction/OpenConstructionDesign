@@ -1,0 +1,22 @@
+{
+ "ai.audit.tokens": "{n} token",
+ "ai.audit.filter.all": "Tất cả",
+ "ai.audit.filter.ai": "AI",
+ "ai.audit.filter.me": "Tôi",
+ "ai.audit.search": "Tìm thay đổi",
+ "ai.audit.search.clear": "Xóa tìm kiếm",
+ "ai.audit.show_all": "Hiện tất cả",
+ "ai.audit.empty.hint": "Thay đổi do mô hình hoặc tác tử soạn hoặc áp dụng sẽ hiện ở đây, mỗi mục kèm cách hoàn lại.",
+ "ai.audit.no_match": "Không có thay đổi nào khớp bộ lọc.",
+ "ai.audit.show.tip": "Chọn và hiện các phần tử mà thay đổi này đã tác động",
+ "ai.audit.revert.ask": "Hoàn lại “{what}”? {change}.",
+ "ai.audit.revert.elements": {
+  "one": "# thay đổi phần tử",
+  "other": "# thay đổi phần tử"
+ },
+ "ai.audit.revert.keeps": "Thay đổi mới hơn được giữ lại. Việc hoàn lại là một bước hoàn tác.",
+ "ai.audit.cancel": "Hủy",
+ "ai.audit.toast.reverted": "Đã hoàn lại: {what}",
+ "ai.audit.toast.undone": "Đã hoàn tác: {what}",
+ "ai.audit.redo": "Làm lại"
+}

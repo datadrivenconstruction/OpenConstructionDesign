@@ -1,0 +1,14 @@
+{
+ "dwg_table.copy": "Kopeeri tabel",
+ "dwg_table.copy_tip": "Kopeeri koguloend kihtide kaupa tabelina tabelarvutusse",
+ "dwg_table.copied": "Koguloend kopeeritud (tabulaatoriga eraldatud)",
+ "dwg_table.total": "Kokku",
+ "dwg_table.col.layer": "Kiht",
+ "dwg_table.col.count": "Arv",
+ "dwg_table.col.len": "Pikkus, {unit}",
+ "dwg_table.col.area": "Pindala, {unit}",
+ "dwg_table.unit.mm": "mm",
+ "dwg_table.unit.m2": "m²",
+ "dwg_table.unit.ft": "ft",
+ "dwg_table.unit.ft2": "ft²"
+}

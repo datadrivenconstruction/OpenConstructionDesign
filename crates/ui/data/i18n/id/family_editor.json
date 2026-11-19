@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "Keluarga baru",
+ "family_editor.open_tip": "Buka keluarga atau draf",
+ "family_editor.close_named": "Tutup {name}",
+ "family_editor.unsaved": "Perubahan belum disimpan",
+ "family_editor.search": "Cari",
+ "family_editor.nothing": "Tidak ditemukan",
+ "family_editor.sec_families": "Keluarga proyek",
+ "family_editor.sec_drafts": "Draf",
+ "family_editor.cap_category": "Kategori",
+ "family_editor.cap_host": "Host",
+ "family_editor.cap_type": "Tipe pratinjau"
+}

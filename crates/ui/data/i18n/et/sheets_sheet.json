@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "Dubleeri leht koos vaadetega",
+ "cmd.view.sheet_duplicate_title": "Dubleeri leht (ainult tiitelplokk)",
+ "sheets.dup.menu_views": "Dubleeri koos vaadetega",
+ "sheets.dup.menu_title": "Dubleeri, ainult tiitelplokk",
+ "sheets.dup.done": "Leht {number} loodud lehelt {src}: {views} vaadet, {sched} loendit ja legendi. Versioone ei kopeerita; leht on välja andmata.",
+ "sheets.dup.none": "Dubleerimiseks ava leht",
+ "sheets.dup.copy": "koopia",
+ "cmd.view.sheet_duplicate.short": "Dubleeri koos vaadetega",
+ "cmd.view.sheet_duplicate_title.short": "Dubleeri tiitelplokk"
+}

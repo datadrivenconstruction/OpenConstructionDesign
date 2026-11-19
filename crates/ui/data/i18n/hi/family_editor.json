@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "नई फ़ैमिली",
+ "family_editor.open_tip": "फ़ैमिली या ड्राफ़्ट खोलें",
+ "family_editor.close_named": "{name} बंद करें",
+ "family_editor.unsaved": "बिना सहेजे बदलाव",
+ "family_editor.search": "खोजें",
+ "family_editor.nothing": "कुछ नहीं मिला",
+ "family_editor.sec_families": "प्रोजेक्ट फ़ैमिली",
+ "family_editor.sec_drafts": "ड्राफ़्ट",
+ "family_editor.cap_category": "श्रेणी",
+ "family_editor.cap_host": "होस्ट",
+ "family_editor.cap_type": "पूर्वावलोकन प्रकार"
+}

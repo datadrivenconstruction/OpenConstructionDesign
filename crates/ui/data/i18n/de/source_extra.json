@@ -1,0 +1,5 @@
+{
+ "src.more": "Mehr",
+ "src.cf.chosen": "{n} von {m} ausgewählt",
+ "src.opt.allow_mass_warn": "Achtung: Die Datei passt nicht zu den meisten importierten Elementen, daher kann das Zusammenführen viele Daten ändern."
+}

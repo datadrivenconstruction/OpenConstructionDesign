@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "Εισάγετε πρώτα όνομα προτύπου",
+ "view_template.name_taken": "Υπάρχει ήδη πρότυπο με αυτό το όνομα",
+ "view_template.pick_blocked": "Επιλέξτε πρώτα τουλάχιστον μία προβολή",
+ "view_template.views.one": "{n} προβολή",
+ "view_template.views.few": "{n} προβολές",
+ "view_template.views.many": "{n} προβολών",
+ "view_template.delete.title": "Διαγραφή αυτού του προτύπου;",
+ "view_template.delete.body": "Το πρότυπο «{name}» θα διαγραφεί. Χρησιμοποιείται από {used}.",
+ "view_template.delete.unused": "Το πρότυπο «{name}» θα διαγραφεί. Καμία προβολή δεν το χρησιμοποιεί.",
+ "view_template.delete.keeps": "Αυτές οι προβολές διατηρούν τα τρέχοντα γραφικά τους και χάνουν τη σύνδεση.",
+ "view_template.delete.undo": "Μπορείτε να το αναιρέσετε με μία Αναίρεση.",
+ "view_template.delete.confirm": "Διαγραφή προτύπου"
+}

@@ -1,0 +1,6 @@
+{
+ "xlsx_no_base.title": "This workbook has no comparison data",
+ "xlsx_no_base.detail": "The hidden comparison sheet is missing or damaged (another program re-saved the workbook, or it was made by hand). Every differing cell replaces the model value; model edits made since the export cannot be detected. Rows missing from the workbook are not deleted.",
+ "xlsx_no_base.confirm": "I checked the changes: replace the model values ({n})",
+ "xlsx_no_base.confirm_first": "Confirm the import of a workbook without comparison data first"
+}

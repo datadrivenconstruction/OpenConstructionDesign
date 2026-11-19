@@ -1,0 +1,5 @@
+{
+ "elem.panel_select_wall": "Pilih dinding",
+ "cmd.elem.panel_select_wall": "Pilih dinding",
+ "elem.left_in_place": "Dibiarkan di tempat: {kinds}. Panel mengikuti dindingnya; massa dan anotasi dihapus dengan sendirinya."
+}

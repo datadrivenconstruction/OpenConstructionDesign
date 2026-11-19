@@ -1,0 +1,25 @@
+family Locker Bank
+category casework
+host floor
+ifc IfcFurniture NOTDEFINED
+param Width length type 1200mm
+param Depth length type 500mm
+param Height length type 1800mm
+param Doors int type = max(1, round(Width / 300mm))
+param Plinth length type 100mm
+param Wall length type 20mm
+param Gap length type 3mm
+param Metal material type "Steel Grey"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Back y = Depth / 2
+type "1200x500x1800" Width=1200mm, Depth=500mm, Height=1800mm
+type "900x500x1800" Width=900mm, Depth=500mm, Height=1800mm
+type "48x20x72in" Width=48in, Depth=20in, Height=72in, Plinth=4in, Wall=0.75in, Gap=0.1in
+extrude Plinth rect(Left, Front + 30mm, Right, Back) z(0, Plinth) mat(Metal) show(3d, elev)
+extrude Carcass rect(Left, Front + Wall, Right, Back) z(Plinth, Height) mat(Metal) show(3d, elev)
+extrude DoorPlane rect(Left, Front, Right, Front + Wall) z(Plinth + Gap, Height - Gap) mat(Metal) show(3d, elev)
+symbol rect(Left, Front, Right, Back)
+symbol line(Left, Front + Wall, Right, Front + Wall) show(medium, fine)
+symbol line(Left + Width / Doors, Front, Left + Width / Doors, Front + Wall) show(medium, fine)

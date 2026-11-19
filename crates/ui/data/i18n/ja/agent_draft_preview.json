@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "プレビュー",
+ "agent_draft.ag.preview.desc": "ボタン上にポインタがある間、この下書きの要素をキャンバスに輪郭表示します。何も変更されません。",
+ "agent_draft.type.column": "柱",
+ "agent_draft.type.roof": "屋根",
+ "agent_draft.type.ceiling": "天井",
+ "agent_draft.type.stair": "一体型",
+ "agent_draft.type.railing": "手摺",
+ "agent_draft.type.shaft": "シャフト",
+ "agent_draft.type.axis": "通り芯 6.5 mm",
+ "agent_draft.type.refplane": "参照面"
+}

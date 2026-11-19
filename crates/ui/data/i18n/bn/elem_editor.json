@@ -1,0 +1,4 @@
+{
+ "elem.spreadsheet.applied": "XLSX স্প্রেডশিট থেকে আমদানি: {what}",
+ "elem.spreadsheet.failed": "XLSX স্প্রেডশিট আমদানি ব্যর্থ: {e}"
+}

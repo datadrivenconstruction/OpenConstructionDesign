@@ -1,0 +1,22 @@
+{
+ "depth.chip": "Sügavus {level}",
+ "depth.chip_tip": "Kui kaugele järgmine käivitus projekti viib: D1 kontseptsioonist D5 valmistamiseni, erialade kaupa",
+ "depth.all_off": "kõik erialad väljas",
+ "depth.disc.arch": "Arh",
+ "depth.disc.struct": "Kand",
+ "depth.disc.mep": "MEP",
+ "depth.disc.doc": "Dok",
+ "depth.project": "Projekti sügavus",
+ "depth.level.1": "D1 Kontseptsioon: mahud, korrused, pinnad, üks leht",
+ "depth.level.2": "D2 Eskiis: seinad, ruumid programmi järgi, avad, telgvõrk, plaanid",
+ "depth.level.3": "D3 Projekt: kihilised tüübid, dimensioneeritud konstruktsioon, MEP peatrassid ja väljalasked, loendid",
+ "depth.level.4": "D4 Töötekst: detailid, kinnitusvahendid, viimistlus, armatuur, liitmikud, harud",
+ "depth.level.5": "D5 Valmistamine: painutusloendid, terasliited, prefab, materjalinimekiri",
+ "depth.as_project": "Sama",
+ "depth.estimate": "Hinnang: umbes {elements} elementi, {minutes} min, {tokens} tokenit {calls} kutsungis, {sheets} lehte",
+ "depth.estimate_none": "Hinnang tuleb koos koostatud projektiga: mudel on veel tühi",
+ "depth.heat": "Sügavuse soojuskaart",
+ "depth.heat.row": "Sügavus",
+ "depth.settings": "Selle projekti projekteerimissügavus",
+ "depth.settings_desc": "Sügavus, mida tehisintellekti assistent järgib, D1 kuni D5, lüliti ja eraldi sügavus igal erialal; salvestatakse projektifaili"
+}

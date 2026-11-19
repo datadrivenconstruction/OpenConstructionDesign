@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "Pregled",
+ "agent_draft.ag.preview.desc": "Ocrtava elemente ovog nacrta na radnoj površini dok je pokazivač na gumbu. Ništa se ne mijenja.",
+ "agent_draft.type.column": "Stup",
+ "agent_draft.type.roof": "Krov",
+ "agent_draft.type.ceiling": "Strop",
+ "agent_draft.type.stair": "Monolitno",
+ "agent_draft.type.railing": "Ograda",
+ "agent_draft.type.shaft": "Okno",
+ "agent_draft.type.axis": "Os 6.5 mm",
+ "agent_draft.type.refplane": "Referentna ravnina"
+}

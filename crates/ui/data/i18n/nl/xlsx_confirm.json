@@ -1,0 +1,19 @@
+{
+ "xlsx_confirm.chip": "te bevestigen",
+ "xlsx_confirm.section": "Rijen zonder id die op naam of nummer aan een element zijn gekoppeld",
+ "xlsx_confirm.tag": "gekoppeld op naam",
+ "xlsx_confirm.tag_accepted": "koppeling geaccepteerd",
+ "xlsx_confirm.tag_rejected": "maakt nieuw",
+ "xlsx_confirm.kind_room": "ruimte",
+ "xlsx_confirm.kind_curtain_wall": "gordijngevel",
+ "xlsx_confirm.row_line": "{kind} #{id}, sleutel \"{key}\"",
+ "xlsx_confirm.accept": "Accepteren",
+ "xlsx_confirm.accept_tip": "Pas deze rij toe op het gevonden element (één ongedaan-stap samen met de rest)",
+ "xlsx_confirm.reject": "Nieuw aanmaken",
+ "xlsx_confirm.reject_tip": "Niet koppelen: deze rij maakt een nieuw element",
+ "xlsx_confirm.decide_first": "Accepteer of wijs eerst de rijen af die op naam zijn gevonden.",
+ "xl.msg.key_match_many": "sleutel komt overeen met {} elementen; niet gekoppeld, de rij maakt een nieuwe",
+ "xl.msg.key_match_taken": "sleutel komt overeen met een element dat door een andere rij wordt gebruikt; niet gekoppeld, de rij maakt een nieuwe",
+ "xl.msg.key_match_kept": "bewaard: koppeling afgewezen, rij maakt een nieuw element",
+ "xl.msg.key_match_undecided": "rijen die op naam zijn gekoppeld wachten op een beslissing"
+}

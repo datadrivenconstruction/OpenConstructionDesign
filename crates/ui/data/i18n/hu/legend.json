@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "Jelmagyarázat",
+ "legend.legend.new_hint": "Új jelmagyarázat neve",
+ "legend.legend.delete_tip": "Jelmagyarázat törlése",
+ "legend.legend.delete_placed": "Jelmagyarázat törlése (elhelyezve: {sheets})",
+ "legend.legend.deleted": "Jelmagyarázat törölve: {name}",
+ "legend.legend.no_rows": "Még nincsenek sorok. Adjon hozzá egyet, vagy vegye át az aktuális nézet stílusait",
+ "legend.legend.replace_q": "Lecseréli {n} sort ennek a nézetnek a stílusaira?",
+ "legend.legend.replace": "Csere",
+ "legend.legend.keep": "Sorok megtartása",
+ "legend.col.swatch": "Minta",
+ "legend.col.value": "Érték",
+ "legend.col.label": "Felirat"
+}

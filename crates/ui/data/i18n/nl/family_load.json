@@ -1,0 +1,4 @@
+{
+ "family_load.refused": "Familie “{name}” kan niet worden geladen: {msg}. Er is niets in het project geladen; je wijzigingen blijven behouden.",
+ "family_load.loaded_all": "{n} families in één keer geladen: {names}"
+}

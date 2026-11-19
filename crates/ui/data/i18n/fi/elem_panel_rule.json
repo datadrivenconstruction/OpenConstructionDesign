@@ -1,0 +1,5 @@
+{
+ "elem.panel_select_wall": "Valitse seinä",
+ "cmd.elem.panel_select_wall": "Valitse seinä",
+ "elem.left_in_place": "Jätettiin paikalleen: {kinds}. Paneeli kuuluu omaan seinäänsä; massat ja merkinnät poistetaan itsenäisesti."
+}

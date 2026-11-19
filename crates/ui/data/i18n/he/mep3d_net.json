@@ -1,0 +1,13 @@
+{
+ "mep.sys.duct": "אספקה S1",
+ "mep.sys.pipe": "מים קרים C1",
+ "mep.sys.tray": "חשמל",
+ "mep.round": "עגול",
+ "mep.material": "חומר",
+ "mep3d.elevation": "מפלס מעל מפלס בסיס",
+ "mep3d.slope": "שיפוע",
+ "mep3d.shape": "צורה",
+ "mep3d.shape.rect": "מלבני",
+ "mep3d.shape.round": "עגול",
+ "mep3d.shape.oval": "אובלי שטוח"
+}

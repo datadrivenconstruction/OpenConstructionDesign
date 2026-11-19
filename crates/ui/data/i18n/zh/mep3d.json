@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "风管",
+ "mep3d.pipe": "管道",
+ "mep3d.tray": "桥架",
+ "mep3d.conduit": "导管",
+ "mep3d.system": "系统",
+ "mep3d.length": "长度",
+ "mep3d.diameter": "直径",
+ "mep3d.width": "宽度",
+ "mep3d.height": "高度",
+ "mep3d.insulation": "保温",
+ "mep3d.tip": "Enter — 应用；管件将重新计算",
+ "mep3d.size_positive": "尺寸必须大于零",
+ "mep3d.not_changed": "未更改：{e}",
+ "mep3d.copied": "管段已复制",
+ "mep3d.changed": "管段已更改",
+ "mep3d.deleted": "已删除构件：{n}",
+ "mep3d.not_deleted": "未删除：{e}",
+ "mep3d.no_wall_type": "无墙体类型",
+ "mep3d.demo.supply": "送风 S1",
+ "mep3d.demo.heating": "供暖",
+ "mep3d.demo.power": "电力"
+}

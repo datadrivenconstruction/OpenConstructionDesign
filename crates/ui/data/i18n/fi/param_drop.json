@@ -1,0 +1,8 @@
+{
+ "param_drop.title": "Poistetaanko parametriarvot?",
+ "param_drop.intro": "{name} ei ole enää sidottu näihin luokkiin:",
+ "param_drop.line": "{category}: {values} poistetaan",
+ "param_drop.undo": "Yksi Ctrl+Z palauttaa ne kaikki.",
+ "param_drop.confirm": "Poista arvot ja tallenna",
+ "param_drop.cancel": "Peruuta"
+}

@@ -1,0 +1,5 @@
+{
+ "snap.center": "Centrum",
+ "dwg_snap.through": "Genomgångspunkt",
+ "dwg_snap.through_tip": "Förskjut genom den klickade punkten (fäster i ändar, korsningar, centrum) i stället för det angivna avståndet"
+}

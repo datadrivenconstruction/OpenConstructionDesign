@@ -1,0 +1,8 @@
+{
+ "cmd.props.param_lock": "Lukitse tai vapauta parametrin arvo",
+ "locked_values.kept": "{n} lukittua arvoa säilytetty",
+ "locked_values.locked": "”{name}” lukittu: XLSX-tuonti, joukkomuokkaus ja tekoäly säilyttävät sen",
+ "locked_values.unlocked": "”{name}” vapautettu",
+ "locked_values.locked_tip": "Lukittu: XLSX-tuonti, joukkomuokkaus ja tekoäly säilyttävät tämän arvon. Napsauta vapauttaaksesi  ·  Ctrl+L",
+ "locked_values.no_row": "Osoita ominaisuusrivi Ominaisuudet-paneelissa ja paina Ctrl+L"
+}

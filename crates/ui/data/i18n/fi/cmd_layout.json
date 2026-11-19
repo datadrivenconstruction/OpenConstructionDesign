@@ -1,0 +1,4 @@
+{
+ "cmd.data.sync_xlsx": "Synkronoi XLSX-taulukon kanssa…",
+ "cmd.data.sync_xlsx.desc": "Lukee linkitetyn työkirjan uudelleen ja näyttää erot mallista."
+}

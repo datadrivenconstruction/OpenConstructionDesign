@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "المفتاح في العنوان",
+ "ai_safety.auth.query_name": "معامل العنوان",
+ "ai_safety.need_query_name": "سمِّ معامل العنوان الذي يحمل المفتاح",
+ "ai_safety.apply_unlogged": "طُبّق، لكن سجل التغييرات لم يُكتب",
+ "ai_safety.audit_unlogged": "تعذرت كتابة سجل مساعد الذكاء",
+ "ai_safety.chat_not_saved": "تعذر حفظ المحادثة في المشروع. جارٍ المحاولة مجدداً.",
+ "ai_safety.clip_clears": "تُفرَّغ الحافظة خلال 30 ث",
+ "ai_safety.copied_clears": "تم النسخ. تُفرَّغ الحافظة خلال 30 ث",
+ "ai_safety.key_session_only": "يُحتفظ بالمفتاح حتى يُغلق التطبيق",
+ "ai.settings.no_data_dir": "هذا النظام لا يوفر مجلداً لإعدادات التطبيق"
+}

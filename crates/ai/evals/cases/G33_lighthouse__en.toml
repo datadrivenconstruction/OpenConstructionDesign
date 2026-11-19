@@ -1,0 +1,42 @@
+id = "G33_lighthouse__en"
+tier = "hard"
+group = "Any geometry"
+title = "Lighthouse"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "A lighthouse 40 m high: a round tower tapering from 8 m diameter at the base to 5 m at the top, a spiral stair inside, a gallery with a railing, a glazed lantern room with a dome, a keeper house at the foot."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "stair"
+min = 1.0
+
+[[oracle.count]]
+spec = "railing"
+min = 1.0
+
+[[oracle.count]]
+spec = "wall+wall_spline+solid+mesh+freeform+curved"
+min = 1.0
+
+[[oracle.geom]]
+kind = "height"
+min = 36.0
+max = 50.0
+
+[[oracle.geom]]
+kind = "top_ratio"
+# the lantern and dome crown the shaft, so the top band reads narrower than 5 m
+min = 0.3
+max = 0.85
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

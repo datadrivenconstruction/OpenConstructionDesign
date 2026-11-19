@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "Saluran udara",
+ "mep3d.pipe": "Pipa",
+ "mep3d.tray": "Cable tray",
+ "mep3d.conduit": "Konduit",
+ "mep3d.system": "Sistem",
+ "mep3d.length": "Panjang",
+ "mep3d.diameter": "Diameter",
+ "mep3d.width": "Lebar",
+ "mep3d.height": "Tinggi",
+ "mep3d.insulation": "Insulasi",
+ "mep3d.tip": "Enter — terapkan; fitting dihitung ulang",
+ "mep3d.size_positive": "ukuran harus lebih besar dari nol",
+ "mep3d.not_changed": "tidak diubah: {e}",
+ "mep3d.copied": "jalur disalin",
+ "mep3d.changed": "jalur diubah",
+ "mep3d.deleted": "elemen dihapus: {n}",
+ "mep3d.not_deleted": "tidak dihapus: {e}",
+ "mep3d.no_wall_type": "tidak ada tipe dinding",
+ "mep3d.demo.supply": "Suplai S1",
+ "mep3d.demo.heating": "Pemanasan",
+ "mep3d.demo.power": "Daya"
+}

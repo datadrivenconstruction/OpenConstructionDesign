@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "{name} diskda o'zgargan.",
+ "src.watch.update": "Modelni yangilash",
+ "src.watch.compare": "Solishtirish",
+ "src.watch.ignore": "Bu versiyani e'tiborsiz qoldirish",
+ "src.watch.missing": "{name}: manba fayl topilmadi. Ish davom etadi.",
+ "src.watch.locate": "Topish…",
+ "src.watch.dismiss": "Yopish",
+ "src.watch.more": "va yana {n} ta manba fayl",
+ "src.watch.done": "{name} dan yangilandi: {updated} ta o'zgargan, {kept} maydon tahrirlangan holda saqlandi, {conflicts} ziddiyat, {locked} qulflangan qiymat saqlandi"
+}

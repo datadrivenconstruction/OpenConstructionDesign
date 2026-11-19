@@ -1,0 +1,11 @@
+{
+ "xlsx_read_as.title": "Zmieniony arkusz?",
+ "xlsx_read_as.detail": "Arkusz {found} ma kolumny {sheet} (zgodność {score}%). Nie jest odczytywany, chyba że go wybierzesz.",
+ "xlsx_read_as.detail_many": "Więcej niż jeden arkusz pasuje do {sheet}: {found}. Nic nie wybrano za Ciebie; wybierz ten do odczytu.",
+ "xlsx_read_as.read_as": "Odczytaj „{found}” jako {sheet}",
+ "xlsx_read_as.read_as_tip": "Tylko dla tego importu. Arkusz nie jest zmieniany; Zastosuj zapisuje w nim tylko id nowych wierszy.",
+ "xlsx_read_as.active": "Arkusz „{found}” jest odczytywany jako {sheet} w tym imporcie.",
+ "xlsx_read_as.undo": "Nie czytaj jako {sheet}",
+ "xlsx_read_as.undo_tip": "Powrót do nazw arkuszy takich, jakie są w skoroszycie.",
+ "xlsx_read_as.not_rewritten": "Skoroszytu nie przepisano: zmieniony arkusz jest odczytywany pod własną nazwą. Przywróć mu nazwę, aby skoroszyt był zsynchronizowany."
+}

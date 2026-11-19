@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "Mi történik a munkafüzet exportálása után",
+ "settings.area_decimals_desc": "A területek tizedesjel utáni jegyei",
+ "settings.volume_decimals_desc": "A térfogatok tizedesjel utáni jegyei",
+ "settings.frac_desc": "A legkisebb törthüvelyk birodalmi hosszúságoknál",
+ "settings.small_area_desc": "Az egy négyzetlábnál kisebb területek megjelenítése négyzethüvelykben",
+ "settings.sample_desc": "Hogyan néznek ki a számok a jelenlegi beállításokkal",
+ "autosave.title_desc": "A megnyitott projekt helyreállítási másolatának megőrzése",
+ "autosave.interval_desc": "Helyreállítási másolatok közötti idő",
+ "autosave.keep_desc": "A régebbi helyreállítási másolatok törlődnek",
+ "autosave.folder_desc": "Üresen az alapértelmezett mappa",
+ "autosave.remind_desc": "Emlékeztető a még fájl nélküli projekt mentésére",
+ "settings.backend_desc": "Használt grafikus illesztő",
+ "settings.news_desc": "Mi változott ebben a verzióban",
+ "settings.assoc_default_desc": "Ez az alkalmazás legyen az alapértelmezett a modellfájlokhoz",
+ "settings.data_dir_desc": "Itt találhatók a gyorsítótárak, a helyreállítási másolatok és a naplók."
+}

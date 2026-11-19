@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "Uygulama geri alındı: model önizlemeyle eşleşmedi. {what}",
+ "xlsx_verify.not_written": "{row} değiştirilmedi.",
+ "xlsx_verify.lost": "{row} kayboldu.",
+ "xlsx_verify.not_deleted": "{row} silinmedi.",
+ "xlsx_verify.extra_deleted": "{row} silindi, ancak önizleme onu tutuyordu.",
+ "xlsx_verify.created": "{table}: {want} yerine {got} yeni.",
+ "xlsx_verify.value": "{row}, {field}: beklenen {want} (eski {old}), gelen {got}.",
+ "xlsx_verify.check_failed": "Sonuç denetlenemedi: {e}",
+ "xlsx_verify.plan_failed": "Uygulama başlatılmadı: denetim modeli okuyamadı ({e}).",
+ "xlsx_verify.take_back_failed": "Adım geri alınamadı ({e}): Geri al'ı kullanın.",
+ "xlsx_verify.t.wall": "Duvar",
+ "xlsx_verify.t.opening": "Açıklık",
+ "xlsx_verify.t.room": "Oda",
+ "xlsx_verify.t.slab": "Döşeme",
+ "xlsx_verify.t.level": "Kat",
+ "xlsx_verify.t.wall_type": "Duvar tipi",
+ "xlsx_verify.t.slab_type": "Döşeme tipi",
+ "xlsx_verify.t.col": "Kolon",
+ "xlsx_verify.t.beam": "Kiriş",
+ "xlsx_verify.t.roof": "Çatı",
+ "xlsx_verify.t.curtain_wall": "Perde duvar"
+}

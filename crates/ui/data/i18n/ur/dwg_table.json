@@ -1,0 +1,14 @@
+{
+ "dwg_table.copy": "ٹیبل کاپی کریں",
+ "dwg_table.copy_tip": "لیئر کے حساب سے ٹیک آف کو اسپریڈ شیٹ کے لیے ٹیبل کے طور پر کاپی کریں",
+ "dwg_table.copied": "ٹیک آف کاپی ہو گیا (ٹیب سے الگ)",
+ "dwg_table.total": "کل",
+ "dwg_table.col.layer": "لیئر",
+ "dwg_table.col.count": "تعداد",
+ "dwg_table.col.len": "لمبائی، {unit}",
+ "dwg_table.col.area": "رقبہ، {unit}",
+ "dwg_table.unit.mm": "mm",
+ "dwg_table.unit.m2": "m²",
+ "dwg_table.unit.ft": "ft",
+ "dwg_table.unit.ft2": "ft²"
+}

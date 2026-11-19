@@ -1,0 +1,25 @@
+{
+ "schema": "gen_bench.v1",
+ "group": "mixed_use",
+ "spec": {
+  "typology": "mixed_use",
+  "floors": 6
+ },
+ "adjacency": [
+  [
+   "retail",
+   "lobby",
+   1
+  ],
+  [
+   "office",
+   "corridor",
+   2
+  ],
+  [
+   "wc",
+   "corridor",
+   1
+  ]
+ ]
+}

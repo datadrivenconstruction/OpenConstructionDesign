@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "Легенда",
+ "legend.legend.new_hint": "Ново име на легенда",
+ "legend.legend.delete_tip": "Изтриване на легендата",
+ "legend.legend.delete_placed": "Изтриване на легендата (поставена на: {sheets})",
+ "legend.legend.deleted": "Легендата е изтрита: {name}",
+ "legend.legend.no_rows": "Още няма редове. Добавете ред или вземете стиловете на текущия изглед",
+ "legend.legend.replace_q": "Да се заменят ли {n} реда със стиловете на този изглед?",
+ "legend.legend.replace": "Замяна",
+ "legend.legend.keep": "Запазване на редовете",
+ "legend.col.swatch": "Проба",
+ "legend.col.value": "Стойност",
+ "legend.col.label": "Етикет"
+}

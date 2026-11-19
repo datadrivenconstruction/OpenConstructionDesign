@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "Az egész modellt vagy a kijelölést bináris STL-ként menti méterben vagy milliméterben.",
+ "cmd.data.export_obj.desc": "Az egész modellt vagy a kijelölést OBJ-ként menti MTL-fájllal: elemenként egy csoport, színek anyagonként.",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "OBJ anyagokkal (.obj)",
+ "open_file.filter.mesh": "3D hálók (glTF, STEP, STL, OBJ)",
+ "mx.title": "{fmt} exportálása",
+ "mx.scope": "Mit exportáljon",
+ "mx.scope.all": "Teljes modell",
+ "mx.scope.sel": "Kijelölés ({n} elem)",
+ "mx.units": "Mértékegységek a fájlban",
+ "mx.units.m": "Méter",
+ "mx.units.mm": "Milliméter",
+ "mx.export": "Exportálás…",
+ "mx.saved": "{fmt} mentve: {path} ({parts} elem, {tris} háromszög)",
+ "mx.partial": "{fmt} {n} hibával mentve, egyes testek hiányozhatnak: {path}",
+ "mx.failed": "A {fmt} exportálása sikertelen: {error}",
+ "mx.imported": "{file}: {n} elem importálva ({tris} háromszög)",
+ "mx.imported_notes": "{file}: {n} elem importálva ({tris} háromszög), {w} megjegyzés: {first}"
+}

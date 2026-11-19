@@ -1,0 +1,19 @@
+{
+ "names.level": "Poziom {n}",
+ "names.slab": "Strop 200",
+ "names.roof_slab": "Dach 200",
+ "names.sheet.plan_section": "Rzut i przekrój kondygnacji 1",
+ "names.sheet.plan_view": "Rzut kondygnacji 1",
+ "names.sheet.site_plan": "Plan zagospodarowania terenu",
+ "names.sheet_set.issue": "Wydanie 1",
+ "names.title.owner": "Projekt Sp. z o.o.",
+ "names.title.creator": "A. Iwanow",
+ "names.title.approver": "P. Pietrow",
+ "names.title.document_type": "Rysunek",
+ "names.title.status": "W toku",
+ "names.revision.date": "4 lis 2026",
+ "names.revision.description": "Wydano do przeglądu",
+ "names.revision.author": "AI",
+ "names.demo.no_levels": "brak poziomów",
+ "names.demo.no_sheet": "arkusz"
+}

@@ -1,0 +1,334 @@
+{
+ "items": [
+  {
+   "key": "room.height_min",
+   "value": 2.4,
+   "unit": "m",
+   "source": "mbo2022",
+   "clause": "par. 47(1)",
+   "verified": true
+  },
+  {
+   "key": "door.clear_min.accessible",
+   "value": 0.9,
+   "unit": "m",
+   "source": "din18040-2",
+   "clause": "doors",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: VV TB annex A 4.2 and DIN 18040-2/18065 on nullbarriere.de, bauministerkonferenz.de, state VV TB PDFs; DIN texts paywalled, free VV TB lists the standard only with deviations not opened"
+  },
+  {
+   "key": "accessible.turning_circle",
+   "value": 1.5,
+   "unit": "m",
+   "source": "din18040-2",
+   "clause": "movement areas",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: VV TB annex A 4.2 and DIN 18040-2/18065 on nullbarriere.de, bauministerkonferenz.de, state VV TB PDFs; DIN texts paywalled, free VV TB lists the standard only with deviations not opened"
+  },
+  {
+   "key": "ramp.slope_max",
+   "value": 0.06,
+   "unit": "ratio",
+   "source": "din18040-2",
+   "clause": "ramps",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: VV TB annex A 4.2 and DIN 18040-2/18065 on nullbarriere.de, bauministerkonferenz.de, state VV TB PDFs; DIN texts paywalled, free VV TB lists the standard only with deviations not opened"
+  },
+  {
+   "key": "corridor.width_min",
+   "value": 1.0,
+   "unit": "m",
+   "source": "din18065",
+   "clause": "table 1 / state codes",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: VV TB annex A 4.2 and DIN 18040-2/18065 on nullbarriere.de, bauministerkonferenz.de, state VV TB PDFs; DIN texts paywalled, free VV TB lists the standard only with deviations not opened"
+  },
+  {
+   "key": "egress.travel_max",
+   "value": 35.0,
+   "unit": "m",
+   "source": "mbo2022",
+   "clause": "par. 35(2) sentence 1, exit within 35 m",
+   "verified": true,
+   "note": "read 2026-11-13: bauministerkonferenz.de/Dokumente/42323530.pdf (MBO Nov 2002, amended 25.09.2020)"
+  },
+  {
+   "key": "building.high_rise_height",
+   "value": 22.0,
+   "unit": "m",
+   "source": "mbo2022",
+   "clause": "par. 2(4) no. 1, high-rise above 22 m",
+   "verified": true,
+   "note": "read 2026-11-13: bauministerkonferenz.de/Dokumente/42323530.pdf (MBO Nov 2002, amended 25.09.2020)"
+  },
+  {
+   "key": "building.class5_height",
+   "value": 13.0,
+   "unit": "m",
+   "source": "mbo2022",
+   "clause": "par. 2(3) sentence 1 no. 4 and 5, class 4 up to 13 m, class 5 above",
+   "verified": true,
+   "note": "read 2026-11-13: bauministerkonferenz.de/Dokumente/42323530.pdf (MBO Nov 2002, amended 25.09.2020)"
+  },
+  {
+   "key": "daylight.window_floor_ratio",
+   "value": 0.125,
+   "unit": "ratio",
+   "source": "mbo2022",
+   "clause": "par. 47(2), windows of habitable rooms 1/8 of the floor area",
+   "verified": true,
+   "note": "read 2026-11-14: bauministerkonferenz.de/Dokumente/42323530.pdf (MBO Nov 2002, amended 25.09.2020)"
+  },
+  {
+   "key": "corridor.width_min.accessible",
+   "value": 1.2,
+   "unit": "m",
+   "source": "din18040-2",
+   "clause": "movement areas",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: VV TB annex A 4.2 and DIN 18040-2/18065 on nullbarriere.de, bauministerkonferenz.de, state VV TB PDFs; DIN texts paywalled, free VV TB lists the standard only with deviations not opened"
+  },
+  {
+   "key": "fire.compartment_area_max",
+   "value": 1600,
+   "unit": "m2",
+   "source": "mbo2022",
+   "clause": "par. 30(2), fire walls at most 40 m apart",
+   "verified": false,
+   "note": "read 2026-11-14: bauministerkonferenz.de/Dokumente/42323530.pdf; par. 30(2) sets a 40 m spacing, no floor-area limit; 1600 m2 is derived (40 x 40), not a clause value"
+  },
+  {
+   "key": "climate.heating_design_temp",
+   "value": -14.0,
+   "unit": "C",
+   "source": "din-ts12831-1",
+   "clause": "national supplement, table of standard outdoor temperatures, Berlin",
+   "url": "https://www.dinmedia.de/",
+   "accessed": "2026-11-15",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-15: paid standard, not read; value from secondary summaries for Berlin; the project location overrides it"
+  },
+  {
+   "key": "climate.cooling_design_temp",
+   "value": 32.0,
+   "unit": "C",
+   "source": "din4710",
+   "clause": "summer design dry bulb, typical German site",
+   "url": "https://www.dinmedia.de/",
+   "accessed": "2026-11-15",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-15: paid standard, not read; representative summer design value from secondary summaries"
+  },
+  {
+   "key": "ventilation.oa_per_person",
+   "value": 25.2,
+   "unit": "m3/h",
+   "source": "din-en16798-1",
+   "clause": "annex B, category II, rate for occupants",
+   "orig": {
+    "value": 7,
+    "unit": "l/s"
+   },
+   "url": "https://www.dinmedia.de/",
+   "accessed": "2026-11-15",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-15: paid standard, not read; secondary summaries agree on 7 l/s per person for category II"
+  },
+  {
+   "key": "ventilation.oa_per_area",
+   "value": 2.52,
+   "unit": "m3/h m2",
+   "source": "din-en16798-1",
+   "clause": "annex B, category II, low-polluting building",
+   "orig": {
+    "value": 0.7,
+    "unit": "l/s m2"
+   },
+   "url": "https://www.dinmedia.de/",
+   "accessed": "2026-11-15",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-15: paid standard, not read; secondary summaries agree on 0.7 l/s per m2 for a low-polluting building"
+  },
+  {
+   "key": "egress.occupant_area.assembly",
+   "value": 1.0,
+   "unit": "m2",
+   "source": "mvstaettvo",
+   "clause": "MVStättVO §1 Abs.2 S.1 Nr.1 (seats at tables)",
+   "verified": true,
+   "url": "https://www.bauministerkonferenz.de/Dokumente/4231724917250.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "For seating at tables the visitor count is one person per square metre of the assembly room floor area; standing places count at least two per m2.",
+   "note": "read 2026-11-14: bauministerkonferenz.de/Dokumente/4231724917250.pdf; MVStättVO Fassung Juni 2005, amended 07/2014; room floor area excluding areas visitors cannot access; applies only to venues above the §1(1) size thresholds"
+  },
+  {
+   "key": "egress.exit_width_min",
+   "value": 0.8,
+   "unit": "m",
+   "source": "asr-a2.3",
+   "clause": "ASR A2.3 Tab.1 row 1 col B (door, up to 5 persons); 0.90 for 6-50 persons (rows 2-3)",
+   "verified": true,
+   "url": "https://digiasr.blogs.ruhr-uni-bochum.de/wp-content/uploads/2024/12/ASR-A2.3_markiert.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "A door on a main escape route serving up to five people may be 0.80 m clear; for more people at least 0.90 m, and 0.90 is recommended for new builds.",
+   "note": "read 2026-11-14: digiasr.blogs.ruhr-uni-bochum.de ASR-A2.3_markiert.pdf (unofficial reading copy of the GMBl text); ASR A2.3 Ausgabe März 2022; workplace rule, not building code"
+  },
+  {
+   "key": "egress.door_width_per_person",
+   "value": 0.006,
+   "unit": "m",
+   "source": "asr-a2.3",
+   "clause": "ASR A2.3 Tab.1 col C rows 5-7 (1.20 m/200, 1.80 m/300, 2.40 m/400 persons)",
+   "verified": true,
+   "url": "https://digiasr.blogs.ruhr-uni-bochum.de/wp-content/uploads/2024/12/ASR-A2.3_markiert.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Clear main-escape-route width is 1.20 m at 200 persons, 1.80 m at 300 and 2.40 m at 400, about 6 mm per person; door column B gives 1.05/1.65/2.25 m.",
+   "note": "read 2026-11-14: same file; derived by division from a stepped table (no stated per-person figure); door column B is slightly lower (about 5.3-5.6 mm)"
+  },
+  {
+   "key": "egress.stair_width_per_person",
+   "value": 0.006,
+   "unit": "m",
+   "source": "asr-a2.3",
+   "clause": "ASR A2.3 Tab.1 col C (all persons of all levels in the catchment) and Tab.2 (stairs, per level)",
+   "verified": true,
+   "url": "https://digiasr.blogs.ruhr-uni-bochum.de/wp-content/uploads/2024/12/ASR-A2.3_markiert.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Stairs in stair enclosures use the same total-persons table as corridors (about 6 mm per person), or alternatively Table 2 with 1.00 m up to 30 persons per level.",
+   "note": "read 2026-11-14: same file; derived; Tab.2 alternative: 1.00 m to 30 persons/level, 1.20 to 40, 1.40 to 50, 1.80 to 60, 2.40 to 70; building-code stair width is DIN 18065 (not read)"
+  },
+  {
+   "key": "fire.wall_spacing_max",
+   "value": 40.0,
+   "unit": "m",
+   "source": "mbo2022",
+   "clause": "MBO §30 Abs.2 Nr.2 (innere Brandwand)",
+   "verified": true,
+   "url": "https://bauministerkonferenz.de/Dokumente/42323530.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Extended buildings must be divided by internal fire walls at spacings of no more than 40 m.",
+   "note": "read 2026-11-14: bauministerkonferenz.de/Dokumente/42323530.pdf; MBO Fassung Nov 2002, amended 25.09.2020 (2022 amendment not read); Muster-Industriebaurichtlinie uses area-based compartments for industrial buildings (not read)"
+  },
+  {
+   "key": "fire.compartment_wall_rating",
+   "value": 90,
+   "unit": "min",
+   "source": "mbo2022",
+   "clause": "MBO §30 Abs.3 S.1 (Brandwand: feuerbeständig, nichtbrennbar, with mechanical load); §29 Abs.3 Trennwand min. feuerhemmend",
+   "verified": false,
+   "url": "https://bauministerkonferenz.de/Dokumente/42323530.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Internal fire walls must be fire-resistant (feuerbeständig) and non-combustible even under added mechanical loading; ordinary partitions need the floor's resistance, at least feuerhemmend.",
+   "note": "unverifiable_free: searched 2026-11-14: MBO §29/§30 read (bauministerkonferenz.de/Dokumente/42323530.pdf) and name the classes, but the minute figures (feuerbeständig = 90, feuerhemmend = 30 for Trennwand floor) come from the MVV TB / DIN 4102 / EN 13501 convention, not MBO text"
+  },
+  {
+   "key": "fire.stair_enclosure_rating",
+   "value": 60,
+   "unit": "min",
+   "source": "mbo2022",
+   "clause": "MBO §35 Abs.4 S.1 Nr.2 (Gebäudeklasse 4, up to 13 m: hochfeuerhemmend under mechanical load); Nr.3 GK 3 feuerhemmend",
+   "verified": false,
+   "url": "https://bauministerkonferenz.de/Dokumente/42323530.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Escape-stair enclosure walls in class-4 buildings (up to 13 m) must be highly fire-retardant including mechanical impact; class 3 only fire-retardant.",
+   "note": "unverifiable_free: searched 2026-11-14: clause read in the MBO PDF, but the minute conversion (hochfeuerhemmend = 60, feuerhemmend = 30) is from MVV TB / DIN 4102-2 / EN 13501, not MBO text"
+  },
+  {
+   "key": "fire.stair_enclosure_rating_tall",
+   "value": 90,
+   "unit": "min",
+   "source": "mbo2022",
+   "clause": "MBO §35 Abs.4 S.1 Nr.1 (Gebäudeklasse 5: Bauart von Brandwänden); §30 Abs.3",
+   "verified": false,
+   "url": "https://bauministerkonferenz.de/Dokumente/42323530.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "In class-5 buildings (above 13 m) the stair enclosure walls must be built to fire-wall standard, i.e. fire-resistant and non-combustible under mechanical load.",
+   "note": "unverifiable_free: searched 2026-11-14: clause read in the MBO PDF; 90 min is the standard value of feuerbeständig, not in MBO text; trigger is height above 13 m (GK 5, §2 Abs.3), not storeys; high-rise (above 22 m) is under the Muster-Hochhaus-Richtlinie (not read)"
+  },
+  {
+   "key": "envelope.u_wall",
+   "value": 0.28,
+   "unit": "W/m2K",
+   "source": "geg",
+   "clause": "annex 1, reference building table, exterior wall",
+   "verified": false,
+   "note": "not read against the clause: value recalled from the edition named, an engineer checks it before relying on it",
+   "paraphrase": "The reference dwelling the energy demand is compared with has exterior walls of U 0.28 W/m2K."
+  },
+  {
+   "key": "envelope.u_roof",
+   "value": 0.2,
+   "unit": "W/m2K",
+   "source": "geg",
+   "clause": "annex 1, reference building table, roof and top floor",
+   "verified": false,
+   "note": "not read against the clause: value recalled from the edition named, an engineer checks it before relying on it",
+   "paraphrase": "The reference dwelling has a roof or top ceiling of U 0.20 W/m2K."
+  },
+  {
+   "key": "envelope.u_ground",
+   "value": 0.35,
+   "unit": "W/m2K",
+   "source": "geg",
+   "clause": "annex 1, reference building table, slab and walls against the ground",
+   "verified": false,
+   "note": "not read against the clause: value recalled from the edition named, an engineer checks it before relying on it",
+   "paraphrase": "The reference dwelling has a ground slab of U 0.35 W/m2K."
+  },
+  {
+   "key": "acoustic.rw_party",
+   "value": 53,
+   "unit": "dB",
+   "source": "din4109-1",
+   "clause": "table 2, walls between dwellings",
+   "verified": false,
+   "note": "not read against the clause: value recalled from the edition named, an engineer checks it before relying on it",
+   "paraphrase": "Walls between flats need an apparent sound reduction index of at least 53 dB; we hold the wall element to it."
+  },
+  {
+   "key": "acoustic.rw_floor",
+   "value": 54,
+   "unit": "dB",
+   "source": "din4109-1",
+   "clause": "table 2, floors between dwellings",
+   "verified": false,
+   "note": "not read against the clause: value recalled from the edition named, an engineer checks it before relying on it",
+   "paraphrase": "Floors between flats need an apparent sound reduction index of at least 54 dB; we hold the slab to it."
+  },
+  {
+   "key": "stair.riser_max",
+   "value": 0.19,
+   "unit": "m",
+   "source": "din18065",
+   "clause": "table 1, dwelling stairs riser 14 to 19 cm",
+   "verified": false,
+   "accessed": "2026-11-15",
+   "paraphrase": "A dwelling stair step rises at most 19 cm.",
+   "note": "to_verify: DIN 18065 is paywalled; same number as rule de.res.riser/de.res.tread, no free official text"
+  },
+  {
+   "key": "stair.going_min",
+   "value": 0.26,
+   "unit": "m",
+   "source": "din18065",
+   "clause": "table 1, dwelling stairs going from 26 cm",
+   "verified": false,
+   "accessed": "2026-11-15",
+   "paraphrase": "A dwelling stair tread is at least 26 cm deep.",
+   "note": "to_verify: DIN 18065 is paywalled; same number as rule de.res.riser/de.res.tread, no free official text"
+  },
+  {
+   "key": "guard.height_min",
+   "value": 0.9,
+   "unit": "m",
+   "source": "mbo2022",
+   "clause": "par. 38(4) no. 1, fall height 1 m to 12 m: 0.90 m; no. 2 above 12 m: 1.10 m",
+   "verified": true,
+   "url": "https://bauministerkonferenz.de/Dokumente/42323530.pdf",
+   "accessed": "2026-11-15",
+   "paraphrase": "A guard where the fall is 1 to 12 m stands at least 0.90 m, above 12 m at least 1.10 m.",
+   "note": "read 2026-11-15: bauministerkonferenz.de/Dokumente/42323530.pdf, par. 38(4)"
+  }
+ ]
+}

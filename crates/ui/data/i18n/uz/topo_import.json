@@ -1,0 +1,4 @@
+{
+ "topo_import.topo.ambiguous": "{n} qator o'tkazib yuborildi: raqam ikki xil o'qiladi (1,250 = 1.25 yoki 1250?) va faylda o'nlik belgi yo'q",
+ "topo_import.topo.grouped": "{n} nuqta raqam guruhlari bilan o'qildi (1 250,5 yoki 1,234.5)"
+}

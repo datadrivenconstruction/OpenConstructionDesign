@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "Desfazer: {what}",
+ "undo_label.redo_what": "Refazer: {what}",
+ "undo_label.undo_none": "Nada para desfazer",
+ "undo_label.redo_none": "Nada para refazer"
+}

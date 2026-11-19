@@ -1,0 +1,1145 @@
+{
+ "schema": "gen_typology_programs.v1",
+ "about": "Default programme of a brief that names a building type and no rooms: keyword lists per language, shares of the floor area, en/ru names. A type with `preset` or `typology` hands over to that preset or base typology instead of repeating its programme.",
+ "note": {
+  "en": "no rooms in the brief: the default {what} programme was filled by rule, sized to the floor area",
+  "ru": "в брифе нет помещений: программа {what} по умолчанию набрана по правилам по площади этажа"
+ },
+ "upper_height": 4.0,
+ "tall_words": ["tall", "high", "double height", "triple height", "soaring", "высок*", "двусветн*", "hoch", "alto", "alta", "高"],
+ "levels_note": {
+  "en": "several storeys: the ground level is {h} m high for its tall room, the other levels keep the normal height",
+  "ru": "несколько этажей: нижний уровень высотой {h} м под высокий зал, остальные этажи обычной высоты"
+ },
+ "delegate_note": {
+  "en": "the brief names a {what}: built from its {via}",
+  "ru": "бриф называет тип «{what}»: собрано по его {via}"
+ },
+ "outline_note": {
+  "en": "no outline in the brief: a {w} x {d} m plan was derived from the floor area {a} m2",
+  "ru": "в брифе нет контура: план {w} x {d} м выведен из площади этажа {a} м2"
+ },
+ "tall_note": {
+  "en": "the tallest room needs {h} m: a one-storey building raises its storey to it (up to typology.tall_space_max); this one has {n} storeys of {f} m, so the tall room stays at that height",
+  "ru": "самому высокому залу нужно {h} м: одноэтажное здание поднимает этаж до этой высоты (до typology.tall_space_max); здесь {n} этажей по {f} м, зал остаётся такой высоты"
+ },
+ "raise_note": {
+  "en": "a one-storey {what}: the storey is {h} m high for its tall space (typology.tall_space_max {cap} m)",
+  "ru": "одноэтажное здание «{what}»: этаж высотой {h} м под высокий зал (typology.tall_space_max {cap} м)"
+ },
+ "qualifiers": [
+  "corridor",
+  "access",
+  "entrance",
+  "entry",
+  "road",
+  "street",
+  "square",
+  "quarter",
+  "district",
+  "station road",
+  "коридор",
+  "доступ",
+  "вход",
+  "улица",
+  "площадь",
+  "квартал",
+  "korridor",
+  "zugang",
+  "eingang",
+  "strasse",
+  "platz",
+  "viertel",
+  "pasillo",
+  "acceso",
+  "entrada",
+  "calle",
+  "plaza",
+  "barrio",
+  "走廊",
+  "入口",
+  "街",
+  "广场",
+  "街区"
+ ],
+ "types": [
+  {
+   "id": "fire_station",
+   "words": [
+    "fire station",
+    "firehouse",
+    "fire house",
+    "пожарное депо",
+    "пожарная часть",
+    "feuerwache",
+    "feuerwehr",
+    "estación de bomberos",
+    "parque de bomberos",
+    "消防站"
+   ],
+   "what": {
+    "en": "fire station",
+    "ru": "пожарного депо"
+   },
+   "floors": 1,
+   "floor_height": 6.0,
+   "floor_area": 1400,
+   "aspect": 2.0,
+   "name": {
+    "en": "Fire station",
+    "ru": "Пожарное депо"
+   },
+   "lines": [
+    {
+     "floor": "ground",
+     "kind": "workshop",
+     "share": 0.28,
+     "count": 1,
+     "min": 120,
+     "max": 700,
+     "name": {
+      "en": "Apparatus bay",
+      "ru": "Гараж техники"
+     },
+     "tall": 7.5
+    },
+    {
+     "floor": "ground",
+     "kind": "storage",
+     "share": 0.07,
+     "count": 1,
+     "min": 30,
+     "max": 200,
+     "name": {
+      "en": "Equipment store",
+      "ru": "Склад снаряжения"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "workshop",
+     "share": 0.04,
+     "count": 1,
+     "min": 30,
+     "max": 200,
+     "name": {
+      "en": "Workshop",
+      "ru": "Мастерская"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "lobby",
+     "share": 0.04,
+     "count": 1,
+     "min": 20,
+     "max": 120,
+     "name": {
+      "en": "Entrance",
+      "ru": "Вестибюль"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "office",
+     "share": 0.04,
+     "count": 2,
+     "min": 15,
+     "max": 80,
+     "name": {
+      "en": "Watch room",
+      "ru": "Дежурная часть"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "wc",
+     "share": 0.012,
+     "count": 3,
+     "min": 8,
+     "max": 40,
+     "name": {
+      "en": "WC and showers",
+      "ru": "Санузел и душевые"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "gym",
+     "share": 0.05,
+     "count": 1,
+     "min": 40,
+     "max": 200,
+     "name": {
+      "en": "Training room",
+      "ru": "Спортзал"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "bedroom",
+     "share": 0.06,
+     "count": 6,
+     "min": 10,
+     "max": 40,
+     "name": {
+      "en": "Dormitory",
+      "ru": "Спальня"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "dining",
+     "share": 0.04,
+     "count": 1,
+     "min": 30,
+     "max": 200,
+     "name": {
+      "en": "Mess",
+      "ru": "Столовая"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "meeting",
+     "share": 0.04,
+     "count": 1,
+     "min": 30,
+     "max": 200,
+     "name": {
+      "en": "Briefing room",
+      "ru": "Учебный класс"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "office",
+     "share": 0.03,
+     "count": 2,
+     "min": 15,
+     "max": 80,
+     "name": {
+      "en": "Office",
+      "ru": "Кабинет"
+     }
+    }
+   ]
+  },
+  {
+   "id": "sports_hall",
+   "words": [
+    "sports hall",
+    "sport hall",
+    "sports centre",
+    "sports center",
+    "sportshall",
+    "спортзал*",
+    "спортивный зал",
+    "спортивный комплекс",
+    "sporthalle",
+    "turnhalle",
+    "polideportivo",
+    "pabellón deportivo",
+    "体育馆",
+    "体育館"
+   ],
+   "what": {
+    "en": "sports hall",
+    "ru": "спортивного зала"
+   },
+   "floors": 1,
+   "floor_height": 6.0,
+   "floor_area": 1800,
+   "aspect": 1.8,
+   "name": {
+    "en": "Sports hall",
+    "ru": "Спортивный зал"
+   },
+   "lines": [
+    {
+     "floor": "ground",
+     "kind": "gym",
+     "share": 0.5,
+     "count": 1,
+     "min": 300,
+     "max": 1500,
+     "name": {
+      "en": "Main court",
+      "ru": "Игровой зал"
+     },
+     "tall": 9.0
+    },
+    {
+     "floor": "ground",
+     "kind": "gym",
+     "share": 0.08,
+     "count": 1,
+     "min": 60,
+     "max": 400,
+     "name": {
+      "en": "Fitness room",
+      "ru": "Тренажёрный зал"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "lobby",
+     "share": 0.06,
+     "count": 1,
+     "min": 30,
+     "max": 200,
+     "name": {
+      "en": "Entrance hall",
+      "ru": "Вестибюль"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "staff",
+     "share": 0.06,
+     "count": 2,
+     "min": 20,
+     "max": 150,
+     "name": {
+      "en": "Changing room",
+      "ru": "Раздевалка"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "wc",
+     "share": 0.02,
+     "count": 2,
+     "min": 10,
+     "max": 60,
+     "name": {
+      "en": "Showers and WC",
+      "ru": "Душевые и санузел"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "storage",
+     "share": 0.05,
+     "count": 1,
+     "min": 30,
+     "max": 200,
+     "name": {
+      "en": "Equipment store",
+      "ru": "Инвентарная"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "cafe",
+     "share": 0.03,
+     "count": 1,
+     "min": 20,
+     "max": 150,
+     "name": {
+      "en": "Cafe",
+      "ru": "Кафе"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "office",
+     "share": 0.02,
+     "count": 2,
+     "min": 12,
+     "max": 60,
+     "name": {
+      "en": "Office",
+      "ru": "Кабинет"
+     }
+    }
+   ]
+  },
+  {
+   "id": "theatre",
+   "words": [
+    "theatre",
+    "theater",
+    "concert hall",
+    "opera house",
+    "philharmon",
+    "театр*",
+    "концертный зал",
+    "филармони*",
+    "konzerthaus",
+    "konzertsaal",
+    "opernhaus",
+    "teatro",
+    "auditorio",
+    "剧院",
+    "劇院",
+    "音乐厅",
+    "音樂廳",
+    "歌剧院"
+   ],
+   "what": {
+    "en": "theatre",
+    "ru": "театра"
+   },
+   "floors": 1,
+   "floor_height": 6.0,
+   "floor_area": 2400,
+   "aspect": 1.5,
+   "name": {
+    "en": "Theatre",
+    "ru": "Театр"
+   },
+   "lines": [
+    {
+     "floor": "ground",
+     "kind": "lobby",
+     "share": 0.12,
+     "count": 1,
+     "min": 80,
+     "max": 600,
+     "name": {
+      "en": "Foyer",
+      "ru": "Фойе"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "hall",
+     "share": 0.3,
+     "count": 1,
+     "min": 200,
+     "max": 1100,
+     "name": {
+      "en": "Auditorium",
+      "ru": "Зрительный зал"
+     },
+     "tall": 14.0
+    },
+    {
+     "floor": "ground",
+     "kind": "hall",
+     "share": 0.12,
+     "count": 1,
+     "min": 80,
+     "max": 500,
+     "name": {
+      "en": "Stage",
+      "ru": "Сцена"
+     },
+     "tall": 14.0
+    },
+    {
+     "floor": "ground",
+     "kind": "staff",
+     "share": 0.03,
+     "count": 4,
+     "min": 12,
+     "max": 80,
+     "name": {
+      "en": "Dressing room",
+      "ru": "Гримёрная"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "workshop",
+     "share": 0.03,
+     "count": 1,
+     "min": 30,
+     "max": 200,
+     "name": {
+      "en": "Scenery workshop",
+      "ru": "Декорационный цех"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "storage",
+     "share": 0.04,
+     "count": 1,
+     "min": 30,
+     "max": 250,
+     "name": {
+      "en": "Props store",
+      "ru": "Реквизиторская"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "cafe",
+     "share": 0.04,
+     "count": 1,
+     "min": 30,
+     "max": 250,
+     "name": {
+      "en": "Bar",
+      "ru": "Буфет"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "meeting",
+     "share": 0.03,
+     "count": 2,
+     "min": 20,
+     "max": 120,
+     "name": {
+      "en": "Rehearsal room",
+      "ru": "Репетиционная"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "wc",
+     "share": 0.008,
+     "count": 4,
+     "min": 8,
+     "max": 60,
+     "name": {
+      "en": "WC",
+      "ru": "Санузел"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "office",
+     "share": 0.015,
+     "count": 2,
+     "min": 12,
+     "max": 80,
+     "name": {
+      "en": "Office",
+      "ru": "Администрация"
+     }
+    }
+   ]
+  },
+  {
+   "id": "church",
+   "words": [
+    "church",
+    "temple",
+    "chapel",
+    "cathedral",
+    "mosque",
+    "synagogue",
+    "церк*",
+    "храм*",
+    "собор*",
+    "часовн*",
+    "мечет*",
+    "kirche",
+    "tempel",
+    "kapelle",
+    "kathedrale",
+    "iglesia",
+    "templo",
+    "capilla",
+    "catedral",
+    "教堂",
+    "寺庙",
+    "礼拜堂",
+    "大教堂",
+    "清真寺"
+   ],
+   "what": {
+    "en": "church",
+    "ru": "храма"
+   },
+   "floors": 1,
+   "floor_height": 6.0,
+   "floor_area": 900,
+   "aspect": 1.4,
+   "name": {
+    "en": "Church",
+    "ru": "Храм"
+   },
+   "lines": [
+    {
+     "floor": "ground",
+     "kind": "hall",
+     "share": 0.55,
+     "count": 1,
+     "min": 150,
+     "max": 800,
+     "name": {
+      "en": "Nave",
+      "ru": "Основной зал"
+     },
+     "tall": 12.0
+    },
+    {
+     "floor": "ground",
+     "kind": "lobby",
+     "share": 0.08,
+     "count": 1,
+     "min": 20,
+     "max": 150,
+     "name": {
+      "en": "Narthex",
+      "ru": "Притвор"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "hall",
+     "share": 0.1,
+     "count": 1,
+     "min": 30,
+     "max": 200,
+     "name": {
+      "en": "Sanctuary",
+      "ru": "Алтарная часть"
+     },
+     "tall": 12.0
+    },
+    {
+     "floor": "ground",
+     "kind": "storage",
+     "share": 0.03,
+     "count": 1,
+     "min": 10,
+     "max": 100,
+     "name": {
+      "en": "Vestry",
+      "ru": "Ризница"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "hall",
+     "share": 0.12,
+     "count": 1,
+     "min": 40,
+     "max": 250,
+     "name": {
+      "en": "Community hall",
+      "ru": "Приходской зал"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "office",
+     "share": 0.03,
+     "count": 1,
+     "min": 12,
+     "max": 60,
+     "name": {
+      "en": "Office",
+      "ru": "Канцелярия"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "wc",
+     "share": 0.01,
+     "count": 2,
+     "min": 6,
+     "max": 30,
+     "name": {
+      "en": "WC",
+      "ru": "Санузел"
+     }
+    }
+   ]
+  },
+  {
+   "id": "library",
+   "words": [
+    "library",
+    "библиотек*",
+    "bibliothek",
+    "biblioteca",
+    "图书馆",
+    "圖書館"
+   ],
+   "what": {
+    "en": "library",
+    "ru": "библиотеки"
+   },
+   "floors": 2,
+   "floor_height": 4.5,
+   "floor_area": 1800,
+   "aspect": 1.6,
+   "name": {
+    "en": "Library",
+    "ru": "Библиотека"
+   },
+   "lines": [
+    {
+     "floor": "ground",
+     "kind": "lobby",
+     "share": 0.06,
+     "count": 1,
+     "min": 30,
+     "max": 250,
+     "name": {
+      "en": "Entrance hall",
+      "ru": "Вестибюль"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "hall",
+     "share": 0.3,
+     "count": 2,
+     "min": 80,
+     "max": 600,
+     "name": {
+      "en": "Reading hall",
+      "ru": "Читальный зал"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "storage",
+     "share": 0.16,
+     "count": 2,
+     "min": 60,
+     "max": 500,
+     "name": {
+      "en": "Stacks",
+      "ru": "Книгохранилище"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "meeting",
+     "share": 0.06,
+     "count": 1,
+     "min": 30,
+     "max": 250,
+     "name": {
+      "en": "Children's room",
+      "ru": "Детская комната"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "cafe",
+     "share": 0.04,
+     "count": 1,
+     "min": 20,
+     "max": 200,
+     "name": {
+      "en": "Cafe",
+      "ru": "Кафе"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "office",
+     "share": 0.02,
+     "count": 2,
+     "min": 12,
+     "max": 80,
+     "name": {
+      "en": "Office",
+      "ru": "Кабинет"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "wc",
+     "share": 0.008,
+     "count": 2,
+     "min": 8,
+     "max": 40,
+     "name": {
+      "en": "WC",
+      "ru": "Санузел"
+     }
+    },
+    {
+     "floor": "typical",
+     "kind": "hall",
+     "share": 0.34,
+     "count": 2,
+     "min": 80,
+     "max": 700,
+     "name": {
+      "en": "Reading hall",
+      "ru": "Читальный зал"
+     }
+    },
+    {
+     "floor": "typical",
+     "kind": "storage",
+     "share": 0.18,
+     "count": 2,
+     "min": 60,
+     "max": 500,
+     "name": {
+      "en": "Stacks",
+      "ru": "Книгохранилище"
+     }
+    },
+    {
+     "floor": "typical",
+     "kind": "meeting",
+     "share": 0.025,
+     "count": 4,
+     "min": 10,
+     "max": 60,
+     "name": {
+      "en": "Study room",
+      "ru": "Кабинет для занятий"
+     }
+    },
+    {
+     "floor": "typical",
+     "kind": "office",
+     "share": 0.02,
+     "count": 2,
+     "min": 12,
+     "max": 80,
+     "name": {
+      "en": "Office",
+      "ru": "Кабинет"
+     }
+    },
+    {
+     "floor": "typical",
+     "kind": "wc",
+     "share": 0.008,
+     "count": 2,
+     "min": 8,
+     "max": 40,
+     "name": {
+      "en": "WC",
+      "ru": "Санузел"
+     }
+    }
+   ]
+  },
+  {
+   "id": "museum",
+   "words": [
+    "museum",
+    "gallery",
+    "музе*",
+    "галере*",
+    "kunsthalle",
+    "galerie",
+    "museo",
+    "galería",
+    "galeria",
+    "博物馆",
+    "博物館",
+    "美术馆",
+    "美術館",
+    "画廊",
+    "展览馆"
+   ],
+   "what": {
+    "en": "museum",
+    "ru": "музея"
+   },
+   "floors": 3,
+   "floor_height": 5.0,
+   "floor_area": 2800,
+   "aspect": 1.75,
+   "name": {
+    "en": "Museum",
+    "ru": "Музей"
+   },
+   "lines": [
+    {
+     "floor": "ground",
+     "kind": "atrium",
+     "share": 0.16,
+     "count": 1,
+     "min": 60,
+     "max": 900,
+     "name": {
+      "en": "Atrium",
+      "ru": "Атриум"
+     },
+     "asked_by": ["atrium", "атриум*", "atrio", "atrium"],
+     "tall_asked": 12.0
+    },
+    {
+     "floor": "ground",
+     "kind": "foyer",
+     "share": 0.05,
+     "count": 1,
+     "min": 30,
+     "max": 400,
+     "name": {
+      "en": "Foyer",
+      "ru": "Фойе"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "gallery",
+     "share": 0.31,
+     "count": 5,
+     "min": 60,
+     "max": 500,
+     "name": {
+      "en": "Gallery",
+      "ru": "Выставочный зал"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "cafe",
+     "share": 0.04,
+     "count": 1,
+     "min": 30,
+     "max": 300,
+     "name": {
+      "en": "Cafe",
+      "ru": "Кафе"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "retail",
+     "share": 0.03,
+     "count": 1,
+     "min": 20,
+     "max": 200,
+     "name": {
+      "en": "Shop",
+      "ru": "Магазин"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "workshop",
+     "share": 0.03,
+     "count": 1,
+     "min": 20,
+     "max": 200,
+     "name": {
+      "en": "Workshop",
+      "ru": "Мастерская"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "storage",
+     "share": 0.03,
+     "count": 1,
+     "min": 20,
+     "max": 300,
+     "name": {
+      "en": "Storage",
+      "ru": "Фонды"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "wc",
+     "share": 0.006,
+     "count": 2,
+     "min": 8,
+     "max": 40,
+     "name": {
+      "en": "WC",
+      "ru": "Санузел"
+     }
+    },
+    {
+     "floor": "ground",
+     "kind": "office",
+     "share": 0.015,
+     "count": 2,
+     "min": 12,
+     "max": 80,
+     "name": {
+      "en": "Office",
+      "ru": "Офис"
+     }
+    },
+    {
+     "floor": "typical",
+     "kind": "gallery",
+     "share": 0.36,
+     "count": 4,
+     "min": 60,
+     "max": 600,
+     "name": {
+      "en": "Gallery",
+      "ru": "Выставочный зал"
+     }
+    },
+    {
+     "floor": "typical",
+     "kind": "workshop",
+     "share": 0.02,
+     "count": 1,
+     "min": 20,
+     "max": 200,
+     "name": {
+      "en": "Workshop",
+      "ru": "Мастерская"
+     }
+    },
+    {
+     "floor": "typical",
+     "kind": "storage",
+     "share": 0.03,
+     "count": 1,
+     "min": 20,
+     "max": 300,
+     "name": {
+      "en": "Storage",
+      "ru": "Фонды"
+     }
+    },
+    {
+     "floor": "typical",
+     "kind": "wc",
+     "share": 0.006,
+     "count": 2,
+     "min": 8,
+     "max": 40,
+     "name": {
+      "en": "WC",
+      "ru": "Санузел"
+     }
+    },
+    {
+     "floor": "typical",
+     "kind": "office",
+     "share": 0.015,
+     "count": 3,
+     "min": 12,
+     "max": 80,
+     "name": {
+      "en": "Office",
+      "ru": "Офис"
+     }
+    }
+   ]
+  },
+  {
+   "id": "hotel",
+   "words": [
+    "hotel",
+    "hôtel",
+    "гостиниц*",
+    "отел*",
+    "酒店",
+    "旅馆",
+    "旅館"
+   ],
+   "what": {
+    "en": "hotel",
+    "ru": "гостиницы"
+   },
+   "preset": "hotel",
+   "floors": 4,
+   "floor_height": 3.4,
+   "floor_area": 1200,
+   "aspect": 3.0,
+   "name": {
+    "en": "Hotel",
+    "ru": "Гостиница"
+   }
+  },
+  {
+   "id": "clinic",
+   "words": [
+    "clinic",
+    "клиник*",
+    "поликлиник*",
+    "klinik",
+    "clínica",
+    "clinica",
+    "诊所",
+    "診所"
+   ],
+   "what": {
+    "en": "clinic",
+    "ru": "клиники"
+   },
+   "preset": "clinic",
+   "floors": 3,
+   "floor_height": 3.6,
+   "floor_area": 900,
+   "aspect": 2.5,
+   "name": {
+    "en": "Clinic",
+    "ru": "Клиника"
+   }
+  },
+  {
+   "id": "warehouse",
+   "words": [
+    "warehouse",
+    "склад*",
+    "lagerhalle",
+    "almacén",
+    "仓库",
+    "倉庫"
+   ],
+   "what": {
+    "en": "warehouse",
+    "ru": "склада"
+   },
+   "preset": "warehouse",
+   "floors": 1,
+   "floor_height": 8.0,
+   "floor_area": 4000,
+   "aspect": 2.0,
+   "name": {
+    "en": "Warehouse",
+    "ru": "Склад"
+   }
+  },
+  {
+   "id": "school",
+   "words": [
+    "school",
+    "школ*",
+    "schule",
+    "escuela",
+    "colegio",
+    "学校",
+    "學校"
+   ],
+   "what": {
+    "en": "school",
+    "ru": "школы"
+   },
+   "typology": "school",
+   "floors": 3,
+   "floor_height": 3.6,
+   "floor_area": 1500,
+   "aspect": 2.5,
+   "name": {
+    "en": "School",
+    "ru": "Школа"
+   }
+  },
+  {
+   "id": "office",
+   "words": [
+    "office building",
+    "офисное здание",
+    "бизнес-центр",
+    "bürogebäude",
+    "edificio de oficinas",
+    "办公楼",
+    "办公大楼"
+   ],
+   "what": {
+    "en": "office",
+    "ru": "офиса"
+   },
+   "typology": "office",
+   "floors": 4,
+   "floor_height": 3.6,
+   "floor_area": 1200,
+   "aspect": 2.5,
+   "name": {
+    "en": "Office building",
+    "ru": "Офисное здание"
+   }
+  }
+ ]
+}

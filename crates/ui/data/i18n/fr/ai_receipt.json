@@ -1,0 +1,21 @@
+{
+ "ai.receipt.title": {
+  "one": "# modification appliquée",
+  "other": "# modifications appliquées"
+ },
+ "ai.receipt.more": "+{n} de plus",
+ "ai.receipt.list": "Éléments",
+ "ai.receipt.show": "Afficher",
+ "ai.receipt.show.tip": "Sélectionner et cadrer les éléments modifiés",
+ "ai.receipt.undo": "Annuler",
+ "ai.receipt.undo.tip": "Annule exactement cette application",
+ "ai.receipt.undone": "Annulé",
+ "ai.receipt.later": "Des modifications ultérieures ont été faites",
+ "ai.receipt.toast_undone": "Le plan appliqué a été annulé",
+ "ai.receipt.draft_family": "Famille du brouillon : {name}",
+ "ai.receipt.promote": "Rendre active",
+ "ai.receipt.promote.tip": "Transforme la famille du brouillon en famille active (une seule étape d'annulation)",
+ "ai.receipt.promoted": "La famille est maintenant active",
+ "ai.receipt.promote_failed": "La famille n'a pas pu être rendue active",
+ "cmd.ai.receipt_undo": "Annuler le dernier plan IA"
+}

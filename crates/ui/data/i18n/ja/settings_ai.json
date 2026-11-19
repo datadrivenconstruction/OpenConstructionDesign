@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "接続",
+ "settings.ai_status_desc": "AI アシスタントが使用するモデル。キーは安全なストアに保存されます",
+ "settings.ai_not_connected": "未接続",
+ "settings.ai_connect": "接続設定",
+ "settings.ai_connect_desc": "お使いのモデル（クラウドまたはローカル）のアドレス、モデル名、キー",
+ "settings.ai_connect_btn": "接続設定…",
+ "settings.ai_panel": "AI アシスタントパネル",
+ "settings.ai_panel_desc": "言葉で依頼し、平面図を確認してから適用",
+ "settings.ai_open_panel": "AI パネルを開く"
+}

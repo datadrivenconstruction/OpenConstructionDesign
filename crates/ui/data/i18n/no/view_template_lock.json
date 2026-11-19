@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "Styres av malen {name}",
+ "view_template.edit_template": "Rediger mal",
+ "view_template.locked_tip": "Satt av visningsmalen {name}. Endre den i malen.",
+ "view_template.no_filters": "Ingen filtre i denne visningen"
+}

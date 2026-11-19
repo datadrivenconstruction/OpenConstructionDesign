@@ -1,0 +1,4 @@
+{
+ "xl.msg.layer_cells_unplaced": "hindi nailagay ang {} cell ng type '{}' layer {} sa sheet '{}'",
+ "xl.msg.layer_hidden_unplaced": "hindi nailagay ang nakatagong row ng type '{}' layer {} sa sheet '{}'"
+}

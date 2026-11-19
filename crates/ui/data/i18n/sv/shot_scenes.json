@@ -1,0 +1,9 @@
+{
+ "shot_scenes.site": "Tomt",
+ "shot_scenes.lawn": "Gräsmatta",
+ "shot_scenes.pad": "Plattform",
+ "shot_scenes.block": "Blockobjekt",
+ "shot_scenes.void": "Tomrum",
+ "shot_scenes.tower": "Torn",
+ "shot_scenes.wall_void": "Vägghål"
+}

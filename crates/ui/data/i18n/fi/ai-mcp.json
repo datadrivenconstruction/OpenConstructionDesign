@@ -1,0 +1,15 @@
+{
+ "mcp.ask.cancel": "Peruuta",
+ "mcp.ask.auto.title": "Annetaanko tekoälyagenttien käyttää muutoksia kysymättä?",
+ "mcp.ask.auto.body": "Yhdistetyt tekoälyagentit käyttävät muutoksensa luonnoksiin heti odottamatta vahvistustasi, joten virheellinen muutos voi päätyä luonnokseen ennen kuin näet sen. Malli muuttuu edelleen vasta, kun painat Käytä. Tämä on voimassa, kunnes kytket sen pois, suljet editorin tai avaat toisen mallin.",
+ "mcp.ask.auto.yes": "Käytä kysymättä",
+ "mcp.ask.token.title": "Luodaanko uusi tunnus?",
+ "mcp.ask.token.body": "Nykyinen tunnus lakkaa toimimasta heti: yhdistetyt tekoälyagentit katkaistaan ja tarvitsevat uuden tunnuksen. Se näytetään vain kerran, joten kopioi se heti.",
+ "mcp.ask.token.yes": "Uusi tunnus",
+ "mcp.auto.chip": "Automaattinen käyttö päällä",
+ "mcp.auto.chip_tip": "Tekoälyagentit käyttävät muutoksia luonnoksiin kysymättä. Päättyy tämän istunnon mukana.",
+ "mcp.auto.ask_again": "Kysy uudelleen",
+ "mcp.token.once": "Kopioi tämä tunnus nyt: sitä ei näytetä uudelleen.",
+ "mcp.renewed": "Uusi tunnus luotu: vanha ei enää toimi",
+ "mcp.copied": "Kopioitu"
+}

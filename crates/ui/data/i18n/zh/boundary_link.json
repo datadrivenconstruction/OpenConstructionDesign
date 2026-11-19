@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "选择整段墙环",
+ "cmd.sketch.link_unlink": "断开边与墙的链接",
+ "cmd.sketch.link_repick": "重新选择边所在的墙",
+ "cmd.ctx.floor.link_unlink": "断开边与墙的链接",
+ "cmd.ctx.floor.link_accept": "接受已删除墙的边",
+ "boundary_link.hint.loop": "单击一面墙：闭合的墙段将成为链接边",
+ "boundary_link.hint.repick": "单击与该边平行的墙：该边将跟随它",
+ "boundary_link.need_sketch": "请先打开边界草图",
+ "boundary_link.need_edge": "请指向草图的一条边",
+ "boundary_link.need_straight": "只有直边才能跟随墙",
+ "boundary_link.need_floor": "请选择一块楼板",
+ "boundary_link.no_wall": "光标下没有墙",
+ "boundary_link.not_parallel": "墙与该边不平行",
+ "boundary_link.not_linked": "该边未链接到墙",
+ "boundary_link.unlinked": "边已断开链接：保持原位，不再跟随墙",
+ "boundary_link.accepted": "边已接受：保持原位，作为普通边",
+ "boundary_link.failed": "无法应用",
+ "boundary_link.lost": "源墙已删除",
+ "boundary_link.blocked": "无法跟随墙"
+}

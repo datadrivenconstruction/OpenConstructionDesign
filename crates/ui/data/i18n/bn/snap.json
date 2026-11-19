@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "শেষ বিন্দু",
+ "snap.midpoint": "মধ্যবিন্দু",
+ "snap.perpendicular": "লম্ব",
+ "snap.wall_axis": "দেয়ালের অক্ষ",
+ "snap.wall_face": "দেয়ালের তল",
+ "snap.grid": "গ্রিড",
+ "snap.intersection": "ছেদ",
+ "snap.grid_axis": "গ্রিড লাইন",
+ "snap.ref_plane": "রেফারেন্স প্লেন",
+ "snap.nearest": "নিকটতম",
+ "snap.align_x": "দূরবর্তী বিন্দুর সঙ্গে X-এ সারিবদ্ধ",
+ "snap.align_y": "দূরবর্তী বিন্দুর সঙ্গে Y-এ সারিবদ্ধ",
+ "snap.align_xy": "X ও Y-এ সারিবদ্ধ"
+}

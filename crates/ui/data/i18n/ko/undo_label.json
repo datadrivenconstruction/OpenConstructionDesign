@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "실행 취소: {what}",
+ "undo_label.redo_what": "다시 실행: {what}",
+ "undo_label.undo_none": "실행 취소할 항목이 없습니다",
+ "undo_label.redo_none": "다시 실행할 항목이 없습니다"
+}

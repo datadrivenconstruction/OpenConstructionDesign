@@ -1,0 +1,4 @@
+{
+ "vv_conflict.vv.switched": "Aktivni pogled se promijenio. Ove izmjene pripadaju pogledu {view} i još nisu primijenjene: Primijeni ih zapisuje u {view}, Odbaci ih briše.",
+ "vv_conflict.vv.discard": "Odbaci izmjene"
+}

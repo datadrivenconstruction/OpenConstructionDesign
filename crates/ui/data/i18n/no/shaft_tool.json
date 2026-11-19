@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "Sjakter",
+ "quick.cat.shaft": "Sjakt",
+ "shaft_tool.browser.shaft": "Sjakt #{id}",
+ "shaft_tool.shaft.top": "Øverste etasje",
+ "shaft_tool.shaft.cuts": "Kuttede elementer",
+ "shaft_tool.shaft.cut_area": "Kuttareal",
+ "shaft_tool.shaft.cut_volume": "Kuttvolum",
+ "elem.no.rooms": "Følger rommene den holder"
+}

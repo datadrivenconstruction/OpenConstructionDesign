@@ -1,0 +1,55 @@
+[package]
+name = "ddc-io"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Import and export: IFC, DXF, XLSX, PDF, glTF; closed formats via an out-of-process bridge"
+
+[[bin]]
+name = "ddc-bridge-sample"
+path = "src/bin/ddc-bridge-sample.rs"
+test = false
+
+[features]
+# hooks for tests only; run those with --features test-hooks
+test-hooks = ["ddc-model/test-hooks"]
+# DXF text writer, kept for test fixtures only; product builds leave it off
+dxf-write = []
+# revision package for the ERP link: elements.parquet writer (E2) and the contract schema check; off by default
+link = ["dep:parquet", "dep:bytes", "dep:regex"]
+
+[dependencies]
+web-time.workspace = true
+ddc-bridge-proto = { path = "../bridge-proto" }
+ddc-model = { path = "../model" }
+ddc-ops = { path = "../ops" }
+ed25519-dalek = "2.2"
+sha2 = "0.10"
+ddc-geom = { path = "../geom" }
+rusqlite.workspace = true
+serde_json.workspace = true
+base64.workspace = true
+miniz_oxide = "0.9.1"
+png = "0.17"
+subsetter = "0.2.6"
+ttf-parser = "0.25.1"
+calamine = "0.38.0"
+encoding_rs = "0.8"
+rust_xlsxwriter = "0.102"
+zip = { version = "9.0.5", default-features = false, features = ["deflate"] }
+parquet = { version = "56.2.1", default-features = false, features = ["zstd"], optional = true }
+bytes = { version = "1", optional = true }
+regex = { version = "1", optional = true }
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.59", features = ["Win32_Foundation", "Win32_Security", "Win32_Security_Authorization", "Win32_Storage_FileSystem", "Win32_System_SystemInformation", "Win32_System_Threading"] }
+
+[dev-dependencies]
+ddc-io = { path = ".", features = ["dxf-write"] }
+# sample floors for the plan-from-image bench (tests/plan_image_bench.rs)
+ddc-gen = { path = "../gen" }
+proptest = { version = "1", default-features = false, features = ["std"] }
+roxmltree = "0.20"

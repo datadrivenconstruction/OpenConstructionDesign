@@ -1,0 +1,11 @@
+{
+ "xlsx_read_as.title": "Folha renomeada?",
+ "xlsx_read_as.detail": "A folha {found} tem as colunas de {sheet} ({score}% de correspondência). Não é lida, a menos que seja escolhida.",
+ "xlsx_read_as.detail_many": "Mais de uma folha corresponde a {sheet}: {found}. Nada é escolhido por você; escolha a que deve ser lida.",
+ "xlsx_read_as.read_as": "Ler “{found}” como {sheet}",
+ "xlsx_read_as.read_as_tip": "Apenas para esta importação. A folha não é renomeada; Aplicar apenas grava os ids das novas linhas nela.",
+ "xlsx_read_as.active": "A folha “{found}” é lida como {sheet} nesta importação.",
+ "xlsx_read_as.undo": "Não ler como {sheet}",
+ "xlsx_read_as.undo_tip": "Voltar aos nomes das folhas como estão na pasta de trabalho.",
+ "xlsx_read_as.not_rewritten": "A pasta de trabalho não foi reescrita: uma folha renomeada é lida pelo próprio nome. Renomeie-a de volta para manter a pasta de trabalho sincronizada."
+}

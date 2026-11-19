@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "پیش‌نمایش",
+ "agent_draft.ag.preview.desc": "تا وقتی نشانگر روی دکمه است، عناصر این پیش‌نویس را روی بوم مشخص کنید. چیزی تغییر نمی‌کند.",
+ "agent_draft.type.column": "ستون",
+ "agent_draft.type.roof": "بام",
+ "agent_draft.type.ceiling": "سقف",
+ "agent_draft.type.stair": "یکپارچه",
+ "agent_draft.type.railing": "نرده",
+ "agent_draft.type.shaft": "شفت",
+ "agent_draft.type.axis": "محور 6.5 mm",
+ "agent_draft.type.refplane": "صفحه مرجع"
+}

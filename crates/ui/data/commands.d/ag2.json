@@ -1,0 +1,14 @@
+[
+ {
+  "id": "props.verify_ai",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "P"
+  ],
+  "stage": "M3",
+  "group": "props"
+ }
+]

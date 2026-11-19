@@ -1,0 +1,10 @@
+{
+ "elem.multi.title": "{n} elementer",
+ "elem.multi.varies": "varierer",
+ "elem.multi.tip": "Angiv en værdi for alle valgte elementer",
+ "elem.multi.hidden": "{n} rækker kun på nogle elementer",
+ "elem.multi.none": "De valgte elementer har ingen rækker til fælles",
+ "elem.multi.range": "Værdien ligger uden for det tilladte område",
+ "elem.multi.changed": "Ændrede {n} elementer · Ctrl+Z fortryder",
+ "elem.multi.same": "Allerede denne værdi på alle valgte elementer"
+}

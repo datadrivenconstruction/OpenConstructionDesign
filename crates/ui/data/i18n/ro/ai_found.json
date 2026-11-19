@@ -1,0 +1,46 @@
+{
+ "ai.tool.show_elements": "Afișare elemente",
+ "ai.tool.isolate_elements": "Izolare elemente",
+ "ai.tool.color_by": "Colorare după valoare",
+ "ai.tool.reset_view": "Resetare vedere",
+ "ai_found.found.query": "Găsite",
+ "ai_found.found.show": "Afișate",
+ "ai_found.found.isolate": "Izolate",
+ "ai_found.found.hide": "Ascunse",
+ "ai_found.found.color": "Colorate",
+ "ai_found.found.count": "{n} din {m}",
+ "ai_found.found.none": "Nimic nu corespunde. Încearcă un filtru mai larg.",
+ "ai_found.found.show_btn": "Arată",
+ "ai_found.found.show_tip": "Selectează aceste elemente și apropie vederea de ele în plan și 3D",
+ "ai_found.found.isolate_btn": "Izolează",
+ "ai_found.found.isolate_tip": "Arată doar aceste elemente până la Resetează vederea",
+ "ai_found.found.select_btn": "Selectează",
+ "ai_found.found.select_tip": "Selectează aceste elemente fără a muta vederea",
+ "ai_found.legend.title": "Colorare după {by}",
+ "ai_found.legend.row_tip": "Fă clic pentru a selecta aceste elemente",
+ "ai_found.legend.empty_value": "Fără valoare",
+ "ai_found.legend.other": {
+  "one": "# valoare suplimentară",
+  "few": "# valori suplimentare",
+  "other": "# de valori suplimentare"
+ },
+ "ai_found.view.title": "Vederea asistentului AI",
+ "ai_found.view.reset": "Resetează vederea",
+ "ai_found.view.reset_tip": "Readu vederea de dinaintea modificării făcute de asistentul AI",
+ "ai_found.view.shown": {
+  "one": "# element afișat",
+  "few": "# elemente afișate",
+  "other": "# de elemente afișate"
+ },
+ "ai_found.view.isolated": {
+  "one": "# element izolat",
+  "few": "# elemente izolate",
+  "other": "# de elemente izolate"
+ },
+ "ai_found.view.hidden": {
+  "one": "# element ascuns",
+  "few": "# elemente ascunse",
+  "other": "# de elemente ascunse"
+ },
+ "ai_found.found.line": "{what}: {count}"
+}

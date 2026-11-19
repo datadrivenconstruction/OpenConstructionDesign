@@ -1,0 +1,14 @@
+{
+ "ai.issue.integrity": "Bütünlük sorunu: {0} {1}: {2}",
+ "ai.issue.opening_outside": "Açıklık duvara sığmıyor: {0}",
+ "ai.issue.opening_overlap": "Açıklık {0} numaralı açıklıkla çakışıyor",
+ "ai.issue.wall_warning": "Duvar: {0}",
+ "ai.issue.cut_warning": "Kesme: {0}",
+ "ai.issue.room_open": "Oda kapalı değil",
+ "ai.issue.material_unknown": "Projede \"{0}\" adlı malzeme yok: Uygula varsayılan özelliklerle yeni bir tane ekler",
+ "ai.issue.material_suggest": "Projede \"{0}\" adlı malzeme yok: Uygula yeni bir tane ekler. Şunu mu demek istediniz: \"{1}\"?",
+ "ai.issue.conflict": "Bu öğe çalışamaz: {0}",
+ "ai.issue.too_large": "{0} eleman değişecek, {1} sınırının üzerinde. İzin gerekli",
+ "ai.issue.truncated": "Değişiklik listesi {0} satırda durdu: plan kartın gösterebileceğinden büyük. İzin gerekli",
+ "ai.issue.replan_failed": "Plan yeniden hesaplanamadı. Modelin yeni bir kopyası alınıyor"
+}

@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "Powierzchnia swobodna",
+ "cmd.mass.panelize": "Podziel na panele",
+ "cmd.mass.surface_shell": "Dach po powierzchni",
+ "cmd.mass.thicken": "Grubość",
+ "hint.mass.freeform.first": "Powierzchnia swobodna: pierwszy róg prostokąta w rzucie · wpisz wyniesienie · Esc — anuluj",
+ "hint.mass.freeform.next": "Powierzchnia swobodna: przeciwległy róg · wpisz wyniesienie · Esc — anuluj",
+ "hint.mass.panelize.first": "Panele: wskaż powierzchnię swobodną w 3D · Esc — anuluj",
+ "hint.mass.panelize.value": "Panele: wpisz wielkość panelu · Enter — zastosuj · Esc — anuluj",
+ "hint.mass.surface_shell.first": "Dach po powierzchni: wskaż powierzchnię swobodną w 3D · Esc — anuluj",
+ "hint.mass.surface_shell.value": "Dach po powierzchni: wpisz grubość · Enter — zastosuj · Esc — anuluj",
+ "hint.mass.thicken.first": "Grubość: wskaż powierzchnię swobodną w 3D · Esc — anuluj",
+ "hint.mass.thicken.value": "Grubość: wpisz grubość (0 — bez grubości) · Enter — zastosuj · Esc — anuluj",
+ "status.mass.pick_surface": "Wskaż powierzchnię swobodną",
+ "status.mass.freeform_small": "Prostokąt jest za mały: co najmniej 0,5 m w każdym kierunku",
+ "name.mass.freeform": "Powierzchnia swobodna",
+ "rgroup.mass_free": "Zaawansowane"
+}

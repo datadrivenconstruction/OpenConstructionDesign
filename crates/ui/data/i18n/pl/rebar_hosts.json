@@ -1,0 +1,40 @@
+{
+ "rebar_hosts.hosts": "Elementy nadrzędne: {list}",
+ "rebar_hosts.kind.column": "Słup",
+ "rebar_hosts.kind.beam": "Belka",
+ "rebar_hosts.kind.wall": "Ściana",
+ "rebar_hosts.kind.slab": "Płyta stropowa",
+ "rebar_hosts.kind.footing": "Stopa",
+ "rebar_hosts.kind.raft": "Płyta fundamentowa",
+ "rebar_hosts.n.column": {
+  "one": "# słup",
+  "other": "# słupów"
+ },
+ "rebar_hosts.n.beam": {
+  "one": "# belka",
+  "other": "# belek"
+ },
+ "rebar_hosts.n.wall": {
+  "one": "# ściana",
+  "other": "# ścian"
+ },
+ "rebar_hosts.n.slab": {
+  "one": "# płyta stropowa",
+  "other": "# płyt stropowych"
+ },
+ "rebar_hosts.n.footing": {
+  "one": "# stopa",
+  "other": "# stóp"
+ },
+ "rebar_hosts.n.raft": {
+  "one": "# płyta fundamentowa",
+  "other": "# płyt fundamentowych"
+ },
+ "rebar_hosts.mixed_note": "Słupy i belki przyjmują pręty i strzemiona; ściany, płyty i fundamenty przyjmują siatkę. Zaznacz jedną grupę, aby dodać zbrojenie.",
+ "rebar_hosts.why.mixed": "Zaznaczenie łączy słupy lub belki ze ścianami, płytami lub fundamentami. Zaznacz jedną grupę.",
+ "rebar_hosts.why.area_linear": "Siatka trafia do ścian, płyt i fundamentów, nie do słupów ani belek.",
+ "rebar_hosts.why.bars_plate": "Pręty podłużne i strzemiona trafiają do słupów i belek, nie do ścian, płyt ani fundamentów.",
+ "rebar_hosts.why.no_common_face": "Wybrane elementy nadrzędne nie mają wspólnej ściany otuliny. Zaznacz elementy jednego rodzaju.",
+ "rebar_hosts.why.no_type": "Wybierz typ pręta.",
+ "rebar_hosts.kind_type": "{kind} · {type}"
+}

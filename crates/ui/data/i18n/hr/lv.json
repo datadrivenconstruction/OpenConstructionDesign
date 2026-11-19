@@ -1,0 +1,5 @@
+{
+ "lv.level.deleted_attach": "Razina obrisana; {n} zidova izgubilo je gornju vezu",
+ "lv.level.rooms": "{n} prostorija preuzima visinu ciljne razine ({dz} m): {names}. Pritisnite Pomakni ponovno za potvrdu",
+ "lv.level.pinned": "Razina nije obrisana: prikvačeni elementi ne mogu prijeći na drugu razinu: {names}. Prvo ih otkvačite"
+}

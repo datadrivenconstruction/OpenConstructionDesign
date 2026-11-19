@@ -1,0 +1,10 @@
+{
+ "elem.multi.title": "{n} elementos",
+ "elem.multi.varies": "varia",
+ "elem.multi.tip": "Enter define todos os elementos selecionados",
+ "elem.multi.hidden": "{n} linhas somente em alguns elementos",
+ "elem.multi.none": "Os elementos selecionados não têm linhas em comum",
+ "elem.multi.range": "O valor está fora do intervalo permitido",
+ "elem.multi.changed": "Alterados {n} elementos · Ctrl+Z desfaz",
+ "elem.multi.same": "Já este valor em todos os elementos selecionados"
+}

@@ -1,0 +1,59 @@
+[
+ {
+  "id": "mass.freeform",
+  "icon": "freeform",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "mass",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "mass_free",
+  "repeatable": true,
+  "priority": 6
+ },
+ {
+  "id": "mass.panelize",
+  "icon": "panelize",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "mass",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "mass_free",
+  "priority": 6
+ },
+ {
+  "id": "mass.surface_shell",
+  "icon": "surface-shell",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "mass",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "mass_free",
+  "priority": 6
+ },
+ {
+  "id": "mass.thicken",
+  "icon": "thicken",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "mass",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "mass_free",
+  "priority": 6
+ }
+]

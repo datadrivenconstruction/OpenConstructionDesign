@@ -1,0 +1,6 @@
+{
+ "cmd.file.import_again": "Reimportă",
+ "cmd.file.import_again.desc": "Creează un proiect nou din fișierul sursă în starea în care se află acum.",
+ "cmd.file.open_kept": "Deschide importul păstrat",
+ "cmd.file.open_kept.desc": "Deschide importul finalizat, păstrat când solicitarea de modificări nesalvate a fost anulată."
+}

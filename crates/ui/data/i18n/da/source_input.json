@@ -1,0 +1,4 @@
+{
+ "source_input.err.number": "„{text}“ er ikke et tal; denne parameter indeholder et tal. Intet skrevet",
+ "source_input.err.comma": "„{text}“: brug et punktum til decimaler (1.5); et komma grupperer kun tusinder (1,000). Intet skrevet"
+}

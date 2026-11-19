@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "Kalit manzilda",
+ "ai_safety.auth.query_name": "Manzil parametri",
+ "ai_safety.need_query_name": "Kalitni olib yuruvchi manzil parametri nomini kiriting",
+ "ai_safety.apply_unlogged": "Qo'llandi, lekin o'zgarishlar jurnali yozilmadi",
+ "ai_safety.audit_unlogged": "AI yordamchisi jurnalini yozib bo'lmadi",
+ "ai_safety.chat_not_saved": "Suhbatni loyihaga saqlab bo'lmadi. Qayta urinilmoqda.",
+ "ai_safety.clip_clears": "Nusxa buferi 30 s dan keyin tozalanadi",
+ "ai_safety.copied_clears": "Nusxalandi. Nusxa buferi 30 s dan keyin tozalanadi",
+ "ai_safety.key_session_only": "Kalit ilova yopilguncha saqlanadi",
+ "ai.settings.no_data_dir": "bu tizim ilova sozlamalari uchun papka bermaydi"
+}

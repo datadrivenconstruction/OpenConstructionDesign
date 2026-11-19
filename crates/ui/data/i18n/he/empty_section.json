@@ -1,0 +1,11 @@
+{
+ "empty.sv_notfound.title": "המבט לא נמצא",
+ "empty.sv_notfound.hint": "המבט הזה נמחק או שאינו חלק מהפרויקט עוד.",
+ "empty.sv_notfound.action": "סגור מבט",
+ "empty.sv_cuts_nothing.title": "החתך הזה לא חותך דבר",
+ "empty.sv_cuts_nothing.hint": "קו החתך אינו פוגש קירות, רצפות או פתחים בתוך עומקו. הזז את הקו או הגדל את עומק המבט.",
+ "empty.sv_cuts_nothing.action": "הצג בתוכנית",
+ "empty.sv_shows_nothing.title": "החזית הזו לא מציגה דבר",
+ "empty.sv_shows_nothing.hint": "אין קירות, רצפות או פתחים בתוך עומק המבט. הזז את קו המבט או הגדל את עומק המבט.",
+ "empty.sv_shows_nothing.action": "הצג בתוכנית"
+}

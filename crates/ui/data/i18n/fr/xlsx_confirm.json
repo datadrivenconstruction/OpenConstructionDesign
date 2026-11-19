@@ -1,0 +1,19 @@
+{
+ "xlsx_confirm.chip": "à confirmer",
+ "xlsx_confirm.section": "Lignes sans identifiant associées à un élément par nom ou numéro",
+ "xlsx_confirm.tag": "associé par nom",
+ "xlsx_confirm.tag_accepted": "association acceptée",
+ "xlsx_confirm.tag_rejected": "crée un nouveau",
+ "xlsx_confirm.kind_room": "pièce",
+ "xlsx_confirm.kind_curtain_wall": "mur-rideau",
+ "xlsx_confirm.row_line": "{kind} #{id}, clé « {key} »",
+ "xlsx_confirm.accept": "Accepter",
+ "xlsx_confirm.accept_tip": "Applique cette ligne à l'élément correspondant (une étape d'annulation avec les autres)",
+ "xlsx_confirm.reject": "Créer nouveau",
+ "xlsx_confirm.reject_tip": "Ne pas associer : cette ligne crée un nouvel élément",
+ "xlsx_confirm.decide_first": "Acceptez ou refusez d'abord les lignes associées par nom.",
+ "xl.msg.key_match_many": "la clé correspond à {} éléments ; non associée, la ligne en crée un nouveau",
+ "xl.msg.key_match_taken": "la clé correspond à un élément utilisé par une autre ligne ; non associée, la ligne en crée un nouveau",
+ "xl.msg.key_match_kept": "conservé : association refusée, la ligne crée un nouvel élément",
+ "xl.msg.key_match_undecided": "les lignes associées par nom attendent une décision"
+}

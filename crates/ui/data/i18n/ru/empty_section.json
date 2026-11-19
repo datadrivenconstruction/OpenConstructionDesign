@@ -1,0 +1,11 @@
+{
+ "empty.sv_notfound.title": "Вид не найден",
+ "empty.sv_notfound.hint": "Этот вид удалён или больше не входит в проект.",
+ "empty.sv_notfound.action": "Закрыть вид",
+ "empty.sv_cuts_nothing.title": "Этот разрез ничего не пересекает",
+ "empty.sv_cuts_nothing.hint": "Линия разреза не задевает стены, перекрытия и проёмы в пределах глубины. Сдвиньте линию или увеличьте глубину вида.",
+ "empty.sv_cuts_nothing.action": "Показать на плане",
+ "empty.sv_shows_nothing.title": "На этом фасаде ничего нет",
+ "empty.sv_shows_nothing.hint": "В пределах глубины вида нет стен, перекрытий и проёмов. Сдвиньте линию вида или увеличьте глубину.",
+ "empty.sv_shows_nothing.action": "Показать на плане"
+}

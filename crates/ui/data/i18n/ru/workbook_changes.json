@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "Правки книги не применены",
+ "workbook_changes.wb.body": "При закрытии или переходе к другому проекту они будут потеряны.",
+ "workbook_changes.wb.line": "Импорт книги: {n} изменений не применено",
+ "workbook_changes.wb.review": "Просмотреть",
+ "workbook_changes.wb.discard": "Отбросить"
+}

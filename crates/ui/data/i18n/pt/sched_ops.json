@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "o valor deve ser maior que zero",
+ "sched_ops.not_number": "não é um número",
+ "sched_ops.no_host": "nenhuma parede hospedeira",
+ "sched_ops.wall_length": "este comprimento de parede não pode ser definido assim",
+ "sched_ops.no_wall": "parede inexistente",
+ "sched_ops.no_opening": "abertura inexistente",
+ "sched_ops.no_curtain": "fachada-cortina inexistente",
+ "sched_ops.no_panel": "painel inexistente",
+ "sched_ops.no_slab": "laje inexistente",
+ "sched_ops.no_room": "ambiente inexistente",
+ "sched_ops.slope_range": "inclinação fora do intervalo",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "Lukiaukko",
+ "cmd.arch.roof_opening": "Vesikattoaukko",
+ "cmd.arch.roof_extrusion": "Vesikatto puristuksella",
+ "cmd.arch.ceiling_opening": "Kattoaukko",
+ "cmd.str.slab_opening": "Lattia-aukko",
+ "cmd.ctx.wall.detach": "Irrota yläosa",
+ "cmd.ctx.floor.sketch": "Muokkaa rajaa",
+ "cmd.ctx.floor.shape": "Muokkaa muotoa",
+ "host_shape.shape.elev_prompt": "korkeusasema, mm…",
+ "host_shape.shape.elev_mm": "{v} mm",
+ "host_shape.sketch.no_host": "rajan alla ei ole isäntäelementtiä tällä tasolla",
+ "host_shape.issue.roof": "vesikatto {id}: {e}",
+ "host_shape.issue.ceiling": "katto {id}: {e}",
+ "host_shape.status.select_slab": "valitse laatta",
+ "host_shape.status.select_walls": "valitse seinät",
+ "host_shape.status.no_roof_or_level": "yläpuolella ei ole vesikattoa tai tasoa",
+ "host_shape.status.top_attached": "seinien yläosat kiinnitetty",
+ "host_shape.status.top_detached": "seinien yläosat irrotettu",
+ "host_shape.status.straight_wall": "vaaditaan suora seinä",
+ "host_shape.status.roof_extruded": "vesikatto puristuksella luotu",
+ "warn.kind.cut": "Leikkausta tai liitosta ei rakennettu"
+}

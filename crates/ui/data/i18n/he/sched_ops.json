@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "הערך חייב להיות גדול מאפס",
+ "sched_ops.not_number": "לא מספר",
+ "sched_ops.no_host": "אין קיר מארח",
+ "sched_ops.wall_length": "לא ניתן לקבוע את אורך הקיר בדרך זו",
+ "sched_ops.no_wall": "אין קיר כזה",
+ "sched_ops.no_opening": "אין פתח כזה",
+ "sched_ops.no_curtain": "אין קיר מסך כזה",
+ "sched_ops.no_panel": "אין לוח כזה",
+ "sched_ops.no_slab": "אין רצפה כזו",
+ "sched_ops.no_room": "אין חדר כזה",
+ "sched_ops.slope_range": "שיפוע מחוץ לטווח",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

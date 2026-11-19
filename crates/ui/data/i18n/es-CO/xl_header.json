@@ -1,0 +1,4 @@
+{
+ "xl.msg.x_cells_above_the_header_on_sheet_x": "{} celdas por encima del encabezado en la hoja '{}'",
+ "xl.msg.book_changed_during_export": "el libro fue guardado por otro programa durante la exportación y no se sobrescribió; exporte de nuevo"
+}

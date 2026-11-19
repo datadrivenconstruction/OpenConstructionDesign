@@ -1,0 +1,34 @@
+id = "S01_zh_house_brief"
+tier = "smoke"
+group = ""
+title = "House from a free-text brief (Chinese)"
+lang = "zh"
+base = "empty"
+
+[[turn]]
+say = "请设计一栋供四口之家居住的两层独立住宅，总面积约160平方米：开放式厨房与客厅相连，三间卧室，两间浴室，一间书房，首层设一个单车位车库，双坡屋顶。请直接建模。"
+
+[[oracle.count]]
+spec = "level"
+min = 2.0
+
+[[oracle.count]]
+spec = "room"
+min = 8.0
+
+[[oracle.count]]
+spec = "roof"
+min = 1.0
+
+[[oracle.count]]
+spec = "stair"
+min = 1.0
+
+[[oracle.count]]
+spec = "opening"
+min = 10.0
+
+[[oracle.count]]
+spec = "level"
+min = 2.0
+max = 3.0

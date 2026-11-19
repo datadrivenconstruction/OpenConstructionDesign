@@ -1,0 +1,16 @@
+{
+ "cmd.drawing.to_detail": "Gambar menjadi detail",
+ "cmd.drawing.to_detail.desc": "Mengubah primitif gambar yang dipilih, atau seluruh gambar pada lantai ini, menjadi garis detail, catatan teks, dan area pada denah. Gambar tetap seperti semula.",
+ "detail_items.st.no_drawing": "Tidak ada gambar pada lantai ini",
+ "detail_items.st.nothing": "Tidak ada yang diubah: tidak ada garis, busur, teks, atau isian pada layer yang tampak",
+ "detail_items.st.done": "Item detail ditambahkan: garis {lines}, teks {texts}, area {regions}",
+ "detail_items.st.failed": "Item detail tidak dapat ditambahkan: {e}",
+ "detail_items.st.warn": "Item detail ditambahkan, tetapi tampilan tidak dapat diperbarui (garis {lines}, teks {texts}, area {regions}): {e}. Batalkan untuk menghapusnya.",
+ "detail_items.st.bad_view": "Item detail memerlukan tampilan denah atau potongan",
+ "detail_items.st.no_transform": "Tampilan ini tidak memiliki sistem koordinat yang dapat dipakai untuk gambar; tidak ada yang ditambahkan",
+ "drafting_tools.free.plan_only": "Perintah ini bekerja pada elemen denah; buka denah",
+ "drafting_tools.free.zero": "Kedua titik berimpit; tidak ada yang ditambahkan",
+ "drafting_tools.free.select_first": "Pilih item tampilan ini yang akan didistribusikan terlebih dahulu",
+ "drafting_tools.free.pick_item": "Klik item pada tampilan ini untuk memberinya tag",
+ "drafting_tools.free.dim_kind": "Hanya dimensi linear yang berfungsi pada tampilan gambar kerja"
+}

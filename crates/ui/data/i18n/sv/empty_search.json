@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "Inget hittades",
+ "empty.browser_search.hint": "Ingen vy, våning, typ eller rum matchar sökningen.",
+ "empty.browser_search.action": "Rensa sökningen",
+ "empty.xl_filtered.title": "Inga poster matchar filtren",
+ "empty.xl_filtered.hint": "Slå på fler typer, välj ett annat blad eller ändra söktexten.",
+ "empty.xl_filtered.action": "Rensa filter",
+ "empty.xl_nochanges.title": "Inga ändringar i arbetsboken",
+ "empty.xl_nochanges.hint": "Arbetsboken stämmer med modellen: importen skulle inte ändra något.",
+ "empty.version_same.title": "Modellerna är identiska",
+ "empty.version_same.hint": "Inga skillnader hittades mellan den öppna modellen och den valda versionen.",
+ "empty.templates.title": "Inga vymallar ännu",
+ "empty.templates.hint": "Skapa en från den aktuella vyn för att återanvända dess inställningar i andra vyer.",
+ "empty.templates.action": "Namnge en mall",
+ "empty.fe_params.title": "Inga parametrar ännu",
+ "empty.fe_params.hint": "Lägg till en parameter nedan för att styra mått, material eller synlighet.",
+ "empty.fe_params.action": "Lägg till en parameter"
+}

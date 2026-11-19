@@ -1,0 +1,4 @@
+{
+ "tool.err.drawing_open": "이 점 주변의 도면 선들이 루프로 닫히지 않습니다",
+ "tool.err.drawing_crossing": "이 점 주변의 도면 루프가 자기 자신과 교차합니다"
+}

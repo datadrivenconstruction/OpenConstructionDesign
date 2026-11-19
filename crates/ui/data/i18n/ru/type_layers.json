@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "Вставить слой ниже",
+ "type_layers.layer.delete": "Удалить слой",
+ "type_layers.layer.delete_last": "В типе должен остаться хотя бы один слой",
+ "type_layers.value.bad": "Нужно положительное число",
+ "type_layers.value.required": "Обязательное поле",
+ "type_layers.unsaved.title": "Несохранённые изменения типа {name}",
+ "type_layers.unsaved.body": "Применить их к типу или отменить?",
+ "type_layers.unsaved.discard": "Не применять"
+}

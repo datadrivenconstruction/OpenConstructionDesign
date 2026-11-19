@@ -1,0 +1,8 @@
+{
+ "undo.undone": "Anulado: {what}",
+ "undo.redone": "Refeito: {what}",
+ "undo.action.edit.redo": "Refazer",
+ "undo.action.edit.undo": "Anular",
+ "hdr.unsaved": "Alterações não guardadas",
+ "hdr.file_menu": "Menu Ficheiro"
+}

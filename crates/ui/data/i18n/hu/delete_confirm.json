@@ -1,0 +1,59 @@
+{
+ "del.k.door": {
+  "one": "# ajtó",
+  "other": "# ajtó"
+ },
+ "del.k.window": {
+  "one": "# ablak",
+  "other": "# ablak"
+ },
+ "del.k.opening": {
+  "one": "# nyílás",
+  "other": "# nyílás"
+ },
+ "del.k.comp": {
+  "one": "# befogadott elem",
+  "other": "# befogadott elem"
+ },
+ "del.k.rebar": {
+  "one": "# vasalatkészlet",
+  "other": "# vasalatkészlet"
+ },
+ "del.k.port": {
+  "one": "# befogadott gépészeti csatlakozó",
+  "other": "# befogadott gépészeti csatlakozó"
+ },
+ "del.k.joist": {
+  "one": "# vázgerenda",
+  "other": "# vázgerenda"
+ },
+ "del.k.railing": {
+  "one": "# korlát",
+  "other": "# korlát"
+ },
+ "del.k.tag": {
+  "one": "# címke",
+  "other": "# címke"
+ },
+ "del.k.dim": {
+  "one": "# méretezés (leválasztva)",
+  "other": "# méretezés (leválasztva)"
+ },
+ "del.also": "Szintén érintett: {list}",
+ "del.rooms": {
+  "one": "# helyiség elveszíti egy határoló falát",
+  "other": "# helyiség elveszíti egy határoló falát"
+ },
+ "del.cancelled": "Törlés megszakítva, semmi nem változott",
+ "del.confirm.title": "Törlés a függőkkel",
+ "del.confirm.lead": {
+  "one": "# kijelölt elem ezeket is magával viszi:",
+  "other": "# kijelölt elem ezeket is magával viszi:"
+ },
+ "del.confirm.levels": {
+  "one": "# közülük egy másik szinten van",
+  "other": "# közülük más szinteken van"
+ },
+ "del.confirm.all": "Összes törlése",
+ "del.confirm.cancel": "Mégse"
+}

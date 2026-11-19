@@ -1,0 +1,7 @@
+{
+ "ai.retry.countdown": "Ponowienie za {n} s",
+ "ai.retry.try": "Automatyczna próba {i} z {max}. To samo zapytanie zostanie wysłane ponownie.",
+ "ai.retry.now": "Ponów teraz",
+ "ai.retry.gave_up": "Nadal brak odpowiedzi po {max} automatycznych próbach.",
+ "ai.retry.shorten": "Skróć zapytanie"
+}

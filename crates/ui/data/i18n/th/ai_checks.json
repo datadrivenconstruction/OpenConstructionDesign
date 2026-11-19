@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "วัดได้ {value} จำกัดที่ {limit}",
+ "ai_checks.check.cap": "แสดง {shown} จาก {total} รายการที่พบ ข้อผิดพลาดมาก่อน แก้ไขแล้วรันใหม่",
+ "ai_checks.check.run_again": "รันอีกครั้ง",
+ "ai_checks.check.goto": "เลือกและซูม",
+ "ai_checks.check.never_title": "ยังไม่ได้ตรวจ",
+ "ai_checks.check.never_hint": "รันการตรวจสอบแล้วผลจะปรากฏที่นี่",
+ "ai_checks.check.sec.error": "ข้อผิดพลาด",
+ "ai_checks.check.sec.warning": "คำเตือน",
+ "ai_checks.check.sec.info": "หมายเหตุ"
+}

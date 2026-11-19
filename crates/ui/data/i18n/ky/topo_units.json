@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "Бирликтер",
+ "topo_units.unit": "Файлдагы бирликтер",
+ "topo_units.unit.m": "м",
+ "topo_units.unit.cm": "см",
+ "topo_units.unit.mm": "мм",
+ "topo_units.unit.ft": "фт",
+ "topo_units.unit.usft": "АКШ сурвей футу",
+ "topo_units.unit.in": "дюйм",
+ "topo_units.unit.from_file": "Файл бирликтерди көрсөтөт: {unit}",
+ "topo_units.unit.suggested": "Файл бирликтерди атабайт. Өлчөмү боюнча сунушталган: {unit} — төмөнкү натыйжаны текшериңиз",
+ "topo_units.extent": "Долбоордун бирликтериндеги натыйжа: план боюнча {x} × {y} {u}, бийиктик диапазону {z} {u}",
+ "topo_units.extent.none": "Натыйжа: тандалган жөндөөлөр менен импорттоого эч нерсе жок",
+ "topo_units.extent.check": "Бул участок окшобойт: бирликтерди текшериңиз"
+}

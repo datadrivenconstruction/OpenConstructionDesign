@@ -1,0 +1,29 @@
+{
+ "recover.ago_now": "刚刚",
+ "recover.ago_min": {
+  "other": "# 分钟前",
+  "one": "# 分钟前"
+ },
+ "recover.ago_hour": {
+  "other": "# 小时前",
+  "one": "# 小时前"
+ },
+ "recover.ago_yesterday": "昨天",
+ "recover.ago_day": {
+  "other": "# 天前",
+  "one": "# 天前"
+ },
+ "recover.empty": "没有剩余快照",
+ "recover.empty_hint": "此项目没有可恢复的内容。",
+ "recover.all_damaged": "所有快照均已损坏，无法恢复。",
+ "recover.keys_hint": "上下键选择快照，Enter 移至“恢复”",
+ "recover.row_tip": "保存于 {time}",
+ "recover.row_damaged_tip": "无法恢复：{reason}",
+ "recover.archive_ask": "将此快照移至归档？",
+ "recover.discard_ask": {
+  "other": "将所有 # 个快照移至归档？之后将不再提供。",
+  "one": "将所有 # 个快照移至归档？之后将不再提供。"
+ },
+ "recover.confirm_yes": "移至归档",
+ "recover.confirm_no": "保留快照"
+}

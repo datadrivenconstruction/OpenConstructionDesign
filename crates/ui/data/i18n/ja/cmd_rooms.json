@@ -1,0 +1,6 @@
+{
+ "cmd.arch.room_auto.short": "部屋を配置",
+ "cmd.mod.group_select.short": "グループを選択",
+ "cmd.mod.group_cancel.short": "編集をキャンセル",
+ "cmd.view.place_sheet_list.short": "シート一覧を配置"
+}

@@ -1,0 +1,13 @@
+{
+ "topo.unit.mm": "mm",
+ "topo.unit.metre": "m",
+ "topo.unit.ft": "ft",
+ "topo.opt.material": "Materyal",
+ "topo.row.active": "Aktibong surface",
+ "topo.btn.delete_pad": "Burahin ang pad",
+ "topo.info.loading": "Binubuo ang surface…",
+ "topo.info.warn_n": "{n} na babala",
+ "topo.info.points_label": "Mga punto",
+ "topo.import.all_layers": "Lahat ng layer",
+ "topo.import.need_layer": "Pumili ng kahit isang layer"
+}

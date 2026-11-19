@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "测得 {value}，限值 {limit}",
+ "ai_checks.check.cap": "正在显示 {total} 项检查结果中的 {shown} 项。错误优先：修复后请重新运行检查。",
+ "ai_checks.check.run_again": "重新运行",
+ "ai_checks.check.goto": "选择并缩放",
+ "ai_checks.check.never_title": "尚未检查",
+ "ai_checks.check.never_hint": "运行检查后，结果将显示在此处。",
+ "ai_checks.check.sec.error": "错误",
+ "ai_checks.check.sec.warning": "警告",
+ "ai_checks.check.sec.info": "备注"
+}

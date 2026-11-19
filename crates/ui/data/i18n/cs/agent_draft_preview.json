@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "Náhled",
+ "agent_draft.ag.preview.desc": "Dokud je ukazatel na tlačítku, obrysuje prvky tohoto konceptu na plátně. Nic se nemění.",
+ "agent_draft.type.column": "Sloup",
+ "agent_draft.type.roof": "Střecha",
+ "agent_draft.type.ceiling": "Strop",
+ "agent_draft.type.stair": "Monolitické",
+ "agent_draft.type.railing": "Zábradlí",
+ "agent_draft.type.shaft": "Šachta",
+ "agent_draft.type.axis": "Osa 6.5 mm",
+ "agent_draft.type.refplane": "Referenční rovina"
+}

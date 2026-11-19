@@ -1,0 +1,14 @@
+{
+ "dwg_table.copy": "Copiar tabla",
+ "dwg_table.copy_tip": "Copiar las mediciones por capa como tabla para una hoja de cálculo",
+ "dwg_table.copied": "Mediciones copiadas (separadas por tabulación)",
+ "dwg_table.total": "Total",
+ "dwg_table.col.layer": "Capa",
+ "dwg_table.col.count": "Cantidad",
+ "dwg_table.col.len": "Longitud, {unit}",
+ "dwg_table.col.area": "Superficie, {unit}",
+ "dwg_table.unit.mm": "mm",
+ "dwg_table.unit.m2": "m²",
+ "dwg_table.unit.ft": "ft",
+ "dwg_table.unit.ft2": "ft²"
+}

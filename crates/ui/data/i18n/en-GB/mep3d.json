@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "Duct",
+ "mep3d.pipe": "Pipe",
+ "mep3d.tray": "Cable tray",
+ "mep3d.conduit": "Conduit",
+ "mep3d.system": "System",
+ "mep3d.length": "Length",
+ "mep3d.diameter": "Diameter",
+ "mep3d.width": "Width",
+ "mep3d.height": "Height",
+ "mep3d.insulation": "Insulation",
+ "mep3d.tip": "Enter — apply; fittings are recomputed",
+ "mep3d.size_positive": "size must be greater than zero",
+ "mep3d.not_changed": "not changed: {e}",
+ "mep3d.copied": "run copied",
+ "mep3d.changed": "run changed",
+ "mep3d.deleted": "elements deleted: {n}",
+ "mep3d.not_deleted": "not deleted: {e}",
+ "mep3d.no_wall_type": "no wall type",
+ "mep3d.demo.supply": "Supply S1",
+ "mep3d.demo.heating": "Heating",
+ "mep3d.demo.power": "Power"
+}

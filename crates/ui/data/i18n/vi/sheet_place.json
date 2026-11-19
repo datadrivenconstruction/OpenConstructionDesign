@@ -1,0 +1,15 @@
+{
+ "sheet_place.place_view_tip": "Đặt góc nhìn hoặc bảng thống kê lên bản vẽ",
+ "sheet_place.properties_tip": "Số bản vẽ, tên, khổ giấy và phiên bản",
+ "sheet_place.print_tip": "In hoặc xuất bản vẽ",
+ "sheet_place.fit_tip": "Vừa bản vẽ với cửa sổ",
+ "sheet_place.activate_tip": "Chỉnh sửa góc nhìn ngay trên bản vẽ: di chuyển, phóng to và cắt",
+ "sheet_place.open_view_tip": "Mở góc nhìn trong thẻ riêng",
+ "sheet_place.done_tip": "Kết thúc chỉnh sửa góc nhìn trên bản vẽ",
+ "sheet_place.reset_crop_tip": "Bỏ vùng cắt và hiển thị toàn bộ góc nhìn",
+ "sheet_place.scale_tip": "Tỷ lệ của góc nhìn đã chọn trên bản vẽ",
+ "sheet_place.title_tip": "Tên hiển thị dưới góc nhìn trên bản vẽ",
+ "sheet_place.banner": "Đang chỉnh sửa góc nhìn trên bản vẽ",
+ "sheet_place.new_set_tip": "Tạo một bộ bản vẽ để in cùng nhau",
+ "sheet_place.new_sheet_tip": "Thêm một bản vẽ vào dự án"
+}

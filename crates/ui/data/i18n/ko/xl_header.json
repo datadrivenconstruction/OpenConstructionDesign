@@ -1,0 +1,4 @@
+{
+ "xl.msg.x_cells_above_the_header_on_sheet_x": "{}개 셀이 시트 '{}'의 머리글 위에 있습니다",
+ "xl.msg.book_changed_during_export": "내보내기 중 다른 프로그램이 통합 문서를 저장하여 덮어쓰지 않았습니다. 다시 내보내십시오"
+}

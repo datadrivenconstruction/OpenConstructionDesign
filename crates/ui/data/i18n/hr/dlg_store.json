@@ -1,0 +1,10 @@
+{
+ "dlg.dw.store.unloaded": "Crtež „{name}” nije se mogao pročitati iz projekta i ostaje u datoteci nepromijenjen",
+ "dlg.dw.store.source_missing": "Crtež „{name}”: izvorna datoteka nije pronađena, prikazana je kopija spremljena u projektu",
+ "dlg.dw.store.source_changed": "Crtež „{name}”: izvorna datoteka promijenila se otkad je postavljena, prikazana je kopija spremljena u projektu",
+ "dlg.dw.store.unreadable": "Postavljene crteže spremljene u projektu nije moguće pročitati",
+ "dlg.dw.store.not_saved": "Crteži nisu spremljeni: {why}",
+ "dlg.dw.store.why_read": "postavljeni crteži spremljeni u projektu nije moguće pročitati",
+ "dlg.dw.store.why_write": "datoteka projekta nije se mogla ažurirati",
+ "dlg.dw.store.missing_in_file": "Spremljena datoteka ne sadrži svaki postavljeni crtež"
+}

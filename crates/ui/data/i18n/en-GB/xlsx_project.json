@@ -1,0 +1,7 @@
+{
+ "xlsx_project.title": "This workbook was exported from another project",
+ "xlsx_project.body": "Workbook “{file}” belongs to another project. Element ids differ between projects, so its rows would change unrelated elements here. Nothing was read into this project.",
+ "xlsx_project.export_new": "Export this project to a new workbook",
+ "xlsx_project.close": "Close",
+ "xlsx_project.no_project": "This workbook does not say which project it belongs to: check that it was exported from this project."
+}

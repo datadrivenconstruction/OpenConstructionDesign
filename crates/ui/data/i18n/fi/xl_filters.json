@@ -1,0 +1,6 @@
+{
+ "xl.msg.filter_on_sheet_x": "suodatin arkilla '{}'",
+ "xl.msg.sort_settings_on_sheet_x": "lajittelun asetukset arkilla '{}'",
+ "xl.msg.hidden_rows_on_sheet_x": "piilotetut rivit arkilla '{}'",
+ "xl.msg.hidden_columns_on_sheet_x": "piilotetut sarakkeet arkilla '{}'"
+}

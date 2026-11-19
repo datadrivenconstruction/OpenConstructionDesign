@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "Raccord",
+ "elem.mep_fitting.many": "Raccords",
+ "elem.mep_fitting.kind.elbow": "Coude",
+ "elem.mep_fitting.kind.tee": "Té",
+ "elem.mep_fitting.kind.cross": "Croix",
+ "elem.mep_fitting.kind.transition": "Transition",
+ "elem.mep_fitting.kind.cap": "Bouchon",
+ "elem.mep_fitting.size": "Dimension",
+ "elem.mep_fitting.at": "Position",
+ "elem.mep_fitting.runs": "Tronçon {n}",
+ "elem.mep_fitting.edit_run": "Modifier le tronçon",
+ "elem.mep_fitting.select_runs": "Sélectionner ses tronçons",
+ "elem.mep_fitting.derived": "Un raccord suit ses tronçons : si vous modifiez un tronçon, le raccord change avec lui.",
+ "elem.mep_fitting.no_delete": "Un raccord ne peut pas être supprimé ni déplacé seul. Modifiez ou supprimez ses tronçons.",
+ "elem.mep_fitting.hint": "Cliquez sur un raccord dans le plan pour voir ses tronçons.",
+ "elem.mep_fitting.picked": "Raccords sélectionnés : {n}"
+}

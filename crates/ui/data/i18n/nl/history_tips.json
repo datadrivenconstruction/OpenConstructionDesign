@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "Ongedaan gemaakt — Ctrl+Y maakt opnieuw",
+ "history.hist.empty": "Nog geen wijzigingen",
+ "history.hist.empty_hint": "Uw bewerkingen verschijnen hier. Klik op een stap om ernaar terug te keren.",
+ "history.hist.revert_all_n": "Alle AI-wijzigingen terugdraaien ({n})"
+}

@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "X огу",
+ "fe.axis.y": "Y огу",
+ "fe.axis.z": "Z огу",
+ "fe.col.axis": "Ок",
+ "fe.col.at": "Позиция",
+ "fe.col.mode": "Режим",
+ "fe.mode.fixed": "Бекитилген",
+ "fe.mode.free": "Эркин",
+ "fe.types.inherited": "Параметрден демейки маани",
+ "fe.csv.more": "CSV боюнча дагы аракеттер",
+ "fe.ref.selected": "Тегиздик: {name}"
+}

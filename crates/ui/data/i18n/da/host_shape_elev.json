@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "Kote {t} blev ikke taget ({why}). Intet blev ændret",
+ "host_shape.shape.elev_prompt_in": "kote, ft-in…",
+ "host_shape.shape.elev_in": "{v} in"
+}

@@ -1,0 +1,13 @@
+{
+ "level.err_open": "Level tidak dibuka: {e}",
+ "level.need_name": "Level membutuhkan nama dan elevasi",
+ "level.created": "Level \"{name}\" dibuat",
+ "level.err_create": "Level tidak dibuat: {e}",
+ "level.err_edit": "Level tidak diubah: {e}",
+ "level.edited": "Level \"{name}\" diubah",
+ "level.edited_stale": "Level \"{name}\" diubah, tampilan tidak disegarkan: {e}",
+ "level.last": "Level terakhir tidak dapat dihapus",
+ "level.deleted": "Level dihapus",
+ "level.not_empty": "Level tidak kosong: hapus elemennya dulu",
+ "level.err_delete": "Level tidak dihapus: {e}"
+}

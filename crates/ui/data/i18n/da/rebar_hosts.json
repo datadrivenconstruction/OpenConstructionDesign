@@ -1,0 +1,40 @@
+{
+ "rebar_hosts.hosts": "Værter: {list}",
+ "rebar_hosts.kind.column": "Søjle",
+ "rebar_hosts.kind.beam": "Bjælke",
+ "rebar_hosts.kind.wall": "Væg",
+ "rebar_hosts.kind.slab": "Plade",
+ "rebar_hosts.kind.footing": "Fundament",
+ "rebar_hosts.kind.raft": "Fundamentplade",
+ "rebar_hosts.n.column": {
+  "one": "# søjle",
+  "other": "# søjler"
+ },
+ "rebar_hosts.n.beam": {
+  "one": "# bjælke",
+  "other": "# bjælker"
+ },
+ "rebar_hosts.n.wall": {
+  "one": "# væg",
+  "other": "# vægge"
+ },
+ "rebar_hosts.n.slab": {
+  "one": "# plade",
+  "other": "# plader"
+ },
+ "rebar_hosts.n.footing": {
+  "one": "# fundament",
+  "other": "# fundamenter"
+ },
+ "rebar_hosts.n.raft": {
+  "one": "# fundamentplade",
+  "other": "# fundamentplader"
+ },
+ "rebar_hosts.mixed_note": "Søjler og bjælker tager armeringsjern og bøjler; vægge, plader og fundamenter tager net. Vælg én gruppe for at tilføje armering.",
+ "rebar_hosts.why.mixed": "Valget blander søjler eller bjælker med vægge, plader eller fundamenter. Vælg én gruppe.",
+ "rebar_hosts.why.area_linear": "Net går i vægge, plader og fundamenter, ikke i søjler eller bjælker.",
+ "rebar_hosts.why.bars_plate": "Længdearmering og bøjler går i søjler og bjælker, ikke i vægge, plader eller fundamenter.",
+ "rebar_hosts.why.no_common_face": "De valgte værter har ingen fælles dækningsflade. Vælg værter af samme type.",
+ "rebar_hosts.why.no_type": "Vælg en armeringstype.",
+ "rebar_hosts.kind_type": "{kind} · {type}"
+}

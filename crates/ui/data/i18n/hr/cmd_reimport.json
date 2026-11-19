@@ -1,0 +1,6 @@
+{
+ "cmd.file.import_again": "Uvezi ponovno",
+ "cmd.file.import_again.desc": "Izrađuje novi projekt iz izvorne datoteke u njezinom trenutnom stanju.",
+ "cmd.file.open_kept": "Otvori sačuvani uvoz",
+ "cmd.file.open_kept.desc": "Otvara dovršeni uvoz koji je sačuvan kad je upit o nespremljenim promjenama bio otkazan."
+}

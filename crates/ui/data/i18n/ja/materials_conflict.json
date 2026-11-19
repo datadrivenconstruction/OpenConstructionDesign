@@ -1,0 +1,5 @@
+{
+ "materials.mat.conflict": "カードを編集中に、このマテリアルがモデルで変更されました (元に戻す、または別のウィンドウ)。編集内容は保持されます。",
+ "materials.mat.keep": "編集内容を保持",
+ "materials.mat.reload": "再読み込み"
+}

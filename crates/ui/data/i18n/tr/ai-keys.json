@@ -1,0 +1,14 @@
+{
+ "ai_keys.header_is_key": "Anahtarlar Anahtar alanına girilir — başlıklar düz metin olarak kaydedilir",
+ "ai_keys.move": "Anahtar alanına taşı",
+ "ai_keys.remove_line": "Başlıklardan kaldır",
+ "ai_keys.save_blocked": "Kaydetmek için anahtarı başlıklardan çıkarın",
+ "ai_keys.show": "Göster",
+ "ai_keys.hide": "Gizle",
+ "ai_keys.copy": "Kopyala",
+ "ai_keys.tokens": "belirteç",
+ "ai_keys.presets": "Hazır ayarlar",
+ "ai_keys.preset_k": "{n}B",
+ "ai_keys.preset_m": "{n}M",
+ "ai_keys.images_on": "Destekleniyor"
+}

@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "Bê tông",
+ "mat.masonry": "Xây",
+ "mat.brick": "Gạch",
+ "mat.insulation": "Cách nhiệt",
+ "mat.plaster": "Vữa trát",
+ "mat.render": "Lớp phủ",
+ "mat.gypsum": "Tấm thạch cao",
+ "mat.glass": "Kính",
+ "mat.wood": "Gỗ",
+ "mat.steel": "Thép",
+ "mat.membrane": "Màng",
+ "mat.other": "Khác",
+ "warn.cat.wall": "Tường",
+ "warn.cat.slab": "Sàn",
+ "warn.cat.opening": "Lỗ mở",
+ "warn.cat.curtain_wall": "Tường rèm",
+ "td.mat.custom": "Khác…"
+}

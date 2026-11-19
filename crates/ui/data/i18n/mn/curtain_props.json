@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "Хавтан",
+ "curtain_props.cw.panel_cell": "Тор {i}×{j} · хөшиг хана #{id}",
+ "curtain_props.cw.kind": "Төрөл",
+ "curtain_props.cw.kind.glazed": "Шил",
+ "curtain_props.cw.kind.solid": "Бүтэн",
+ "curtain_props.cw.kind.door": "Хаалга",
+ "curtain_props.cw.kind.window": "Цонх",
+ "curtain_props.cw.kind.empty": "Хоосон",
+ "curtain_props.cw.name": "Нэр",
+ "curtain_props.cw.swing_side": "Нөгөө тал руу нээгдэнэ",
+ "curtain_props.cw.swing_hinge": "Нугалам торын төгсгөлд",
+ "curtain_props.cw.size": "Хэмжээ",
+ "curtain_props.cw.cell_area": "Торын талбай",
+ "curtain_props.cw.panel_area": "Хавтангийн талбай",
+ "curtain_props.cw.prev": "Өмнөх хавтан",
+ "curtain_props.cw.next": "Дараагийн хавтан",
+ "curtain_props.cw.wall": "Хана сонгоно уу",
+ "curtain_props.cw.panel_hint": "Esc — сонголт · Ctrl+Z — буцаах",
+ "curtain_props.cw.status.panel": "Хавтан {i}×{j} → {kind}",
+ "e3d.err.cw_height": "хөшиг ханын өндөр 100 мм-ээс их байх ёстой"
+}

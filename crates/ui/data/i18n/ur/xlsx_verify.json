@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "لاگو واپس لیا گیا: ماڈل پیش نظارہ سے میل نہیں کھاتا تھا۔ {what}",
+ "xlsx_verify.not_written": "{row} نہیں بدلی۔",
+ "xlsx_verify.lost": "{row} غائب ہو گئی۔",
+ "xlsx_verify.not_deleted": "{row} حذف نہیں ہوئی۔",
+ "xlsx_verify.extra_deleted": "{row} حذف ہوئی، حالانکہ پیش نظارہ اسے رکھتا ہے۔",
+ "xlsx_verify.created": "{table}: {want} کی جگہ {got} نئے۔",
+ "xlsx_verify.value": "{row}، {field}: متوقع {want} (پہلے {old})، ملا {got}۔",
+ "xlsx_verify.check_failed": "نتیجہ جانچا نہیں جا سکا: {e}",
+ "xlsx_verify.plan_failed": "لاگو شروع نہیں ہوا: جانچ ماڈل نہیں پڑھ سکی ({e})۔",
+ "xlsx_verify.take_back_failed": "یہ مرحلہ واپس نہیں ہو سکا ({e}): Undo استعمال کریں۔",
+ "xlsx_verify.t.wall": "دیوار",
+ "xlsx_verify.t.opening": "کھلا حصہ",
+ "xlsx_verify.t.room": "کمرہ",
+ "xlsx_verify.t.slab": "فرش",
+ "xlsx_verify.t.level": "سطح",
+ "xlsx_verify.t.wall_type": "دیوار کی قسم",
+ "xlsx_verify.t.slab_type": "فرش کی قسم",
+ "xlsx_verify.t.col": "ستون",
+ "xlsx_verify.t.beam": "شہتیر",
+ "xlsx_verify.t.roof": "چھت",
+ "xlsx_verify.t.curtain_wall": "پردہ دیوار"
+}

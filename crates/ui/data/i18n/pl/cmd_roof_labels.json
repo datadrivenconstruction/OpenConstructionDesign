@@ -1,0 +1,11 @@
+{
+ "cmd.arch.roof_gable.short": "Dwuspadowy",
+ "cmd.arch.roof_hip.short": "Czterospadowy",
+ "cmd.arch.roof_shed.short": "Jednospadowy",
+ "cmd.arch.roof_mansard.short": "Mansardowy",
+ "cmd.arch.roof_gambrel.short": "Łamany",
+ "cmd.arch.roof_barrel.short": "Kolebkowy",
+ "cmd.arch.roof_edges.short": "Krawędzie dachu",
+ "cmd.arch.roof_opening.short": "Otwór",
+ "cmd.mass.roof_by_face.short": "Z płaszczyzny"
+}

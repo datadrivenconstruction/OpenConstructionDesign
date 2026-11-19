@@ -1,0 +1,6 @@
+{
+ "imported_prop_edit.remove": "Ukloni svojstvo",
+ "imported_prop_edit.remove.tip": "Uklanja svojstvo s {n} odabranih elemenata u jednom koraku poništavanja; pri spremanju se briše iz IFC datoteke",
+ "imported_prop_edit.done": "{key} uklonjeno s {n} elemenata",
+ "imported_prop_edit.warn.reload": "Gotovo, ali pogled nije osvježen; ponovno otvorite panel ili poništite ako izgleda krivo"
+}

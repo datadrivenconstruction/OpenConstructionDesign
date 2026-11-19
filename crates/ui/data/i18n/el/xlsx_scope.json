@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "Εξαγωγή σε υπολογιστικό φύλλο: εύρος",
+ "xlsx_scope.intro": "Επιλέξτε τι θα μπει στο βιβλίο. Η επαναφορά του στο μοντέλο αλλάζει μόνο αυτά τα στοιχεία.",
+ "xlsx_scope.base_whole": "Ολόκληρο το μοντέλο",
+ "xlsx_scope.base_level": "Ενεργό επίπεδο",
+ "xlsx_scope.base_selection": "Επιλογή",
+ "xlsx_scope.categories": "Κατηγορίες",
+ "xlsx_scope.cat_walls": "τοίχοι",
+ "xlsx_scope.cat_openings": "πόρτες",
+ "xlsx_scope.cat_rooms": "χώροι",
+ "xlsx_scope.cat_slabs": "πλάκες",
+ "xlsx_scope.cat_curtains": "κουρτινοτοίχοι",
+ "xlsx_scope.nothing_selected": "Δεν υπάρχει επιλογή: επιλέξτε πρώτα στοιχεία ή διαλέξτε άλλο εύρος.",
+ "xlsx_scope.no_categories": "Επιλέξτε τουλάχιστον μία κατηγορία.",
+ "xlsx_scope.no_level": "Το ενεργό επίπεδο δεν βρέθηκε.",
+ "xlsx_scope.export": "Εξαγωγή",
+ "xlsx_scope.preview_scope": "Εύρος εξαγωγής: {scope}. Τα στοιχεία εκτός εύρους δεν αλλάζουν και δεν διαγράφονται ποτέ."
+}

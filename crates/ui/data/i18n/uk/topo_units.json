@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "Одиниці",
+ "topo_units.unit": "Одиниці у файлі",
+ "topo_units.unit.m": "м",
+ "topo_units.unit.cm": "см",
+ "topo_units.unit.mm": "мм",
+ "topo_units.unit.ft": "фут",
+ "topo_units.unit.usft": "US survey фут",
+ "topo_units.unit.in": "дюйм",
+ "topo_units.unit.from_file": "Файл вказує одиниці: {unit}",
+ "topo_units.unit.suggested": "У файлі одиниць не вказано. За розміром ділянки запропоновано: {unit} — перевірте результат нижче",
+ "topo_units.extent": "Результат у одиницях проєкту: {x} × {y} {u} у плані, діапазон висот {z} {u}",
+ "topo_units.extent.none": "Результат: за цими вибором нічого імпортувати",
+ "topo_units.extent.check": "Схоже, це не ділянка: перевірте одиниці"
+}

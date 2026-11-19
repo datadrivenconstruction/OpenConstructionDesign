@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "الكل",
+ "clash_list.only_selected": "المحدد فقط",
+ "clash_list.tolerance": "التفاوت",
+ "clash_list.gap": "الفجوة",
+ "clash_list.export": "تصدير",
+ "clash_list.col.volume": "الحجم",
+ "clash_list.fix.up": "نقل للأعلى",
+ "clash_list.fix.down": "نقل للأسفل",
+ "clash_list.fix.sleeve": "جلبة",
+ "clash_list.apply_fix": "تطبيق الإصلاح",
+ "clash_list.err.tol": "التفاوت: أدخل طولاً (0 أو أكثر)، مثل 50 أو 2 in",
+ "clash_list.sleeve_no_host": "تحتاج الجلبة إلى جدار أو بلاطة في الزوج",
+ "clash_list.err.gap": "الفجوة: أدخل طولاً (0 أو أكثر)، مثل 50 أو 2 in"
+}

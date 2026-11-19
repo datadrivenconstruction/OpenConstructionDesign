@@ -1,0 +1,10 @@
+{
+ "elem.multi.title": "{n} elementos",
+ "elem.multi.varies": "varía",
+ "elem.multi.tip": "Intro aplica a todos los elementos seleccionados",
+ "elem.multi.hidden": "{n} filas solo en algunos elementos",
+ "elem.multi.none": "Los elementos seleccionados no tienen filas en común",
+ "elem.multi.range": "El valor está fuera del rango permitido",
+ "elem.multi.changed": "Cambiados {n} elementos · Ctrl+Z deshace",
+ "elem.multi.same": "Ya es este valor en todos los elementos seleccionados"
+}

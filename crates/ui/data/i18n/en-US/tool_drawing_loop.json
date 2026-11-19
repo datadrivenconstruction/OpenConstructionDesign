@@ -1,0 +1,4 @@
+{
+ "tool.err.drawing_open": "The drawing lines around this point do not close into a loop",
+ "tool.err.drawing_crossing": "The drawing loop around this point crosses itself"
+}

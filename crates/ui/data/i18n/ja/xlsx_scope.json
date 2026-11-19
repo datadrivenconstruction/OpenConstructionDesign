@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "XLSX スプレッドシート への書き出し: 範囲",
+ "xlsx_scope.intro": "ブックに含める内容を選択してください。ブックを取り込むと、これらの要素だけが変更されます。",
+ "xlsx_scope.base_whole": "モデル全体",
+ "xlsx_scope.base_level": "アクティブなレベル",
+ "xlsx_scope.base_selection": "選択",
+ "xlsx_scope.categories": "カテゴリ",
+ "xlsx_scope.cat_walls": "壁",
+ "xlsx_scope.cat_openings": "ドア",
+ "xlsx_scope.cat_rooms": "部屋",
+ "xlsx_scope.cat_slabs": "床",
+ "xlsx_scope.cat_curtains": "カーテンウォール",
+ "xlsx_scope.nothing_selected": "何も選択されていません。先に要素を選択するか、別の範囲を選んでください。",
+ "xlsx_scope.no_categories": "少なくとも 1 つのカテゴリをチェックしてください。",
+ "xlsx_scope.no_level": "アクティブなレベルが見つかりませんでした。",
+ "xlsx_scope.export": "書き出し",
+ "xlsx_scope.preview_scope": "書き出し範囲: {scope}。範囲外の要素は変更または削除されません。"
+}

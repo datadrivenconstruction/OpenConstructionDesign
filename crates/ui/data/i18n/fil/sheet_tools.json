@@ -1,0 +1,18 @@
+{
+ "undo.entry_later": "Hindi na-undo: may ibang pagbabagong ginawa pagkatapos nito. I-undo muna iyon.",
+ "undo.entry_gone": "Hindi na-undo: naka-undo na ito o wala na sa history.",
+ "undo.entry_busy": "Tapusin o kanselahin muna ang kasalukuyang drawing, saka i-undo.",
+ "quick.hud.more": "Iba pa sa Properties: {names}",
+ "sheet_tools.sheet.more": "Iba pang sheet tool",
+ "job.of": "{d} sa {t}",
+ "job.of.mb": "{d} sa {t} MB",
+ "job.left.under_minute": "wala pang isang minuto na lang",
+ "job.left.minutes": "mga {n} min na lang",
+ "sheet_tools.start.units": "Mga yunit",
+ "sheet_tools.print.save": {
+  "one": "I-save ang # sheet",
+  "other": "I-save ang # na sheet"
+ },
+ "sheet_tools.sets.delete_ask": "Burahin ang set na “{name}”? Mananatili sa proyekto ang mga sheet nito.",
+ "sheet_tools.keep": "Itira"
+}

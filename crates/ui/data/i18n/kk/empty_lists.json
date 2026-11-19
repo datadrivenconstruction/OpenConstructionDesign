@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "Қабырға салу",
+ "empty.totals.action": "Қабырға салу",
+ "empty.schedule.action": "Өріс қосу",
+ "empty.schedule_filtered.action": "Сүзгіні тазалау",
+ "empty.library.action": "Іздеуді тазалау",
+ "empty.library.load": "Отбасын жүктеу",
+ "empty.schedule_fields.title": "Көрсетілген өрістер жоқ",
+ "empty.schedule_fields.action": "Өріс қосу",
+ "empty.schedule_fields.hint": "Кестені көру үшін кемінде бір өрісті қосыңыз."
+}

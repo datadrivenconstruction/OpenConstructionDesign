@@ -1,0 +1,8 @@
+{
+ "v3d.proj.to_ortho": "Switch to orthographic",
+ "v3d.proj.to_persp": "Switch to perspective",
+ "v3d.walk.unit.m": "m/s",
+ "v3d.walk.unit.ft": "ft/s",
+ "v3d.temp.show_all": "Show all  ·  Esc",
+ "v3d.msg.deleted_named": "Deleted 3D view {name}"
+}

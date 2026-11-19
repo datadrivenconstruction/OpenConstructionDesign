@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "Prethodni list (Page Up)",
+ "sheets.print.next": "Sljedeći list (Page Down)",
+ "sheets.print.fit": "Prilagodi stranicu (dvostruki klik)",
+ "sheets.print.no_sheets": "Nema listova za pregled",
+ "sheets.print.building": "Izrađujem stranicu…",
+ "sheets.print.stop_build": "Zaustavi",
+ "sheets.print.build_stopped": "Izrada stranice zaustavljena",
+ "sheets.print.retry": "Izradi ponovno",
+ "sheets.print.build_failed": "Pregled nije mogao biti izrađen"
+}

@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "Béton",
+ "mat.masonry": "Maçonnerie",
+ "mat.brick": "Brique",
+ "mat.insulation": "Isolant",
+ "mat.plaster": "Plâtre",
+ "mat.render": "Enduit",
+ "mat.gypsum": "Plaque de plâtre",
+ "mat.glass": "Verre",
+ "mat.wood": "Bois",
+ "mat.steel": "Acier",
+ "mat.membrane": "Membrane",
+ "mat.other": "Autre",
+ "warn.cat.wall": "Mur",
+ "warn.cat.slab": "Dalle",
+ "warn.cat.opening": "Ouverture",
+ "warn.cat.curtain_wall": "Mur-rideau",
+ "td.mat.custom": "Autre…"
+}

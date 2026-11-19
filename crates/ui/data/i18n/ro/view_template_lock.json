@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "Controlat de șablonul {name}",
+ "view_template.edit_template": "Editează șablonul",
+ "view_template.locked_tip": "Setat de șablonul de vedere {name}. Modifică-l în șablon.",
+ "view_template.no_filters": "Niciun filtru în această vedere"
+}

@@ -1,0 +1,21 @@
+{
+ "mep.row.system": "Tizim",
+ "mep.row.elevation": "Boshlang'ich sath",
+ "mep.row.slope": "Qiyalik",
+ "mep.row.material": "Material",
+ "mep.row.dev_elevation": "Sath",
+ "mep.row.no_system": "Bu tizim endi mavjud emas. Boshqasini tanlang.",
+ "mep.row.no_points": "Liniyada nuqtalar yo'q, shuning uchun sathi ham yo'q.",
+ "mep.row.system_domain": "{system} tizimi bu liniya turini ({kind}) qabul qilmaydi. Shu tarmoq turidagi tizimni tanlang.",
+ "mep.row.material_pipes": "Material faqat quvurlarga qo'llanadi; bu liniya — {kind}.",
+ "mep.row.no_catalog": "Bu material uchun liniyaga mos katalog o'lchamlari yo'q.",
+ "mep.mat.none": "Belgilanmagan",
+ "mep.mat.steel": "Po'lat",
+ "mep.mat.copper": "Mis",
+ "mep.mat.pvc": "PVX",
+ "mep.mat.pp": "Polipropilen",
+ "mep.err.follow_blocked": "Ulangan liniya bu o'zgarishga ergashib bo'lmaydi: yangi joyda uning qismi uchun joy yo'q. Qurilmani kamroq siljiting yoki avval liniyani uzing.",
+ "mep.err.follow_slope": "Ulangan liniyaning qiyaligini yangi joyda saqlab bo'lmaydi: u tizimning eng kichik qiyaligidan pastga tushadi. Qurilmani balandlikda kamroq siljiting yoki avval liniyani uzing.",
+ "mep.err.follow_port_lost": "Tahrirdan keyin bu liniya turgan ulagich mavjud emas. Avval liniyani boshqa joyga o'tkazing yoki qurilma turini saqlang.",
+ "mep.err.follow_device": "Bu liniya qurilma ulagichida tugaydi va undan chiqa olmaydi. Uning o'rniga qurilmani siljiting yoki avval liniyani uzing."
+}

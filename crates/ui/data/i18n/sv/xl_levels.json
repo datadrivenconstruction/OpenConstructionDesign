@@ -1,0 +1,5 @@
+{
+ "xl.msg.level_name_x_is_already_used": "nivånamnet '{}' används redan",
+ "xl.msg.unreadable_id_elements_without_a_row_not_deleted": "oläsbart id: element utan rad tas inte bort vid den här importen",
+ "xl.msg.wall_type_name_x_is_already_used": "väggtypsnamnet '{}' används redan"
+}

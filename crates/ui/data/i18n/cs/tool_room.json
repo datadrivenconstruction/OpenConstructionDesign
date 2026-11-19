@@ -1,0 +1,9 @@
+{
+ "tool.room": "Místnost",
+ "tool.room.name": "Místnost",
+ "room_tool.room.name": "Název",
+ "hint.room.place": "Klikněte dovnitř uzavřené smyčky stěn pro vytvoření místnosti · Esc — ukončit",
+ "tool.err.room_open": "Oblast není uzavřená: uzavřete smyčku stěn nebo přidejte oddělovač místností",
+ "tool.err.room_check": "Místnosti tohoto podlaží nelze zkontrolovat",
+ "tool.err.room_exists": "V této smyčce už místnost je"
+}

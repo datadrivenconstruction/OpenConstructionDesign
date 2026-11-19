@@ -1,0 +1,505 @@
+{
+  "about": "Fit-out rules of generated rooms. A brief may patch them with a 'furnish' object (merge patch). Lengths in metres. Item body: w along the wall it backs on, d into the room; side: [band width, band starts this far from the back, how many of the two bands must be free]. Set parts: 'at' is the body corner nearest the set origin (u along the wall, v into the room), 'front' where the piece's front looks: in (into the room), out (to the wall), left, right. Rooms: rule sets by id, tried in 'order' (lowest first); the first whose needs a room meets wins; a patch changes one rule by its id, or removes it with null.",
+  "door_gap": "fit.door_gap",
+  "outward_door_below": "fit.outward_door_below",
+  "drainage": {"fall": "fit.drain.fall", "max_drop": "fit.drain.max_drop", "floor_fall": "fit.drain.floor_fall", "max_floor_drop": "fit.drain.max_floor_drop", "note": "Branch falls and lengths are design defaults for unvented branches; check them against the drainage standard of the project."},
+  "items": {
+    "wc": {"family": "WC", "type": "Floor 650", "ifc": "IfcSanitaryTerminal", "body": [0.38, 0.65], "org": "wall", "front": "fit.wc.front", "side": ["fit.wc.side", 0.0, 2], "wet": true, "drain": {"dn": "fit.dn.wc", "max_run": "fit.drain.run_wc"}},
+    "wc_acc": {"family": "WC", "type": "Accessible 700", "ifc": "IfcSanitaryTerminal", "body": [0.38, 0.7], "org": "wall", "front": "fit.wc_acc.front", "wet": true, "drain": {"dn": "fit.dn.wc", "max_run": "fit.drain.run_wc"}},
+    "basin": {"family": "Washbasin", "type": "500", "ifc": "IfcSanitaryTerminal", "body": [0.5, 0.55], "org": "wall", "front": "fit.basin.front", "side": ["fit.basin.side", 0.0, 2], "wet": true, "drain": {"dn": "fit.dn.small", "max_run": "fit.drain.run_small"}},
+    "basin_acc": {"family": "Washbasin", "type": "600", "ifc": "IfcSanitaryTerminal", "body": [0.6, 0.65], "org": "wall", "front": "fit.basin_acc.front", "side": ["fit.basin.side", 0.0, 2], "wet": true, "drain": {"dn": "fit.dn.small", "max_run": "fit.drain.run_small"}},
+    "urinal": {"family": "Urinal", "type": "Standard 360", "ifc": "IfcSanitaryTerminal", "body": [0.36, 0.37], "org": "wall", "front": "fit.urinal.front", "side": ["fit.urinal.side", 0.0, 2], "wet": true, "drain": {"dn": "fit.dn.shower", "max_run": "fit.drain.run_small"}},
+    "tub": {"family": "Bathtub", "type": "1700x750", "ifc": "IfcSanitaryTerminal", "body": [1.7, 0.75], "org": "centre", "front": "fit.bath.front", "wet": true, "drain": {"dn": "fit.dn.small", "max_run": "fit.drain.run_small"}},
+    "tub_s": {"family": "Bathtub", "type": "1500x700", "ifc": "IfcSanitaryTerminal", "body": [1.5, 0.7], "org": "centre", "front": "fit.bath.front", "wet": true, "drain": {"dn": "fit.dn.small", "max_run": "fit.drain.run_small"}},
+    "shower": {"family": "Shower Tray", "type": "900x900", "ifc": "IfcSanitaryTerminal", "body": [0.9, 0.9], "org": "centre", "front": "fit.shower.front", "wet": true, "drain": {"dn": "fit.dn.shower", "max_run": "fit.drain.run_small"}},
+    "shower_s": {"family": "Shower Tray", "type": "800x800", "ifc": "IfcSanitaryTerminal", "body": [0.8, 0.8], "org": "centre", "front": "fit.shower.front", "wet": true, "drain": {"dn": "fit.dn.shower", "max_run": "fit.drain.run_small"}},
+    "floor_drain": {"family": "Floor Drain", "type": "150", "ifc": "IfcWasteTerminal", "body": [0.15, 0.15], "org": "centre", "wet": true, "drain": {"dn": "fit.dn.shower", "max_run": "fit.drain.run_small"}},
+    "grab_rail": {"family": "Grab Rail", "type": "600", "ifc": "IfcRailing", "body": [0.6, 0.1], "org": "wall", "raised": true},
+    "hinged_rail": {"family": "Hinged Grab Rail", "type": "800", "ifc": "IfcRailing", "body": [0.1, 0.8], "org": "wall", "raised": true},
+    "sink": {"family": "Sink", "type": "600x450", "ifc": "IfcSanitaryTerminal", "body": [0.6, 0.45], "org": "centre", "on": ["counter_1200"], "wet": true, "drain": {"dn": "fit.dn.small", "max_run": "fit.drain.run_kitchen"}},
+    "sink_s": {"family": "Sink", "type": "600x450", "ifc": "IfcSanitaryTerminal", "body": [0.6, 0.45], "org": "centre", "on": ["counter_900"], "wet": true, "drain": {"dn": "fit.dn.small", "max_run": "fit.drain.run_kitchen"}},
+    "counter_300": {"family": "Kitchen Counter", "type": "300", "ifc": "IfcFurniture", "body": [0.3, 0.6], "org": "corner"},
+    "counter_450": {"family": "Kitchen Counter", "type": "450", "ifc": "IfcFurniture", "body": [0.45, 0.6], "org": "corner"},
+    "counter_600": {"family": "Kitchen Counter", "type": "600", "ifc": "IfcFurniture", "body": [0.6, 0.6], "org": "corner"},
+    "counter_900": {"family": "Kitchen Counter", "type": "900", "ifc": "IfcFurniture", "body": [0.9, 0.6], "org": "corner"},
+    "counter_1200": {"family": "Kitchen Counter", "type": "1200", "ifc": "IfcFurniture", "body": [1.2, 0.6], "org": "corner"},
+    "dishwasher": {"family": "Dishwasher", "type": "600", "ifc": "IfcElectricAppliance", "body": [0.6, 0.6], "org": "centre", "front": "fit.appliance.front", "wet": true, "drain": {"dn": "fit.dn.small", "max_run": "fit.drain.run_kitchen"}},
+    "washer": {"family": "Washing Machine", "type": "600", "ifc": "IfcElectricAppliance", "body": [0.6, 0.6], "org": "centre", "front": "fit.appliance.front", "wet": true, "drain": {"dn": "fit.dn.small", "max_run": "fit.drain.run_kitchen"}},
+    "cooker": {"family": "Cooker", "type": "600", "ifc": "IfcElectricAppliance", "body": [0.6, 0.6], "org": "centre", "front": "fit.appliance.front"},
+    "fridge": {"family": "Refrigerator", "type": "600x650x1850", "ifc": "IfcElectricAppliance", "body": [0.6, 0.65], "org": "centre", "front": "fit.appliance.front", "tall": true},
+    "bed2": {"family": "Bed", "type": "Double 1600x2000", "ifc": "IfcFurniture", "body": [1.6, 2.0], "org": "centre", "front": "fit.bed.front", "side": ["fit.bed.side", "fit.bed.side_from", 2]},
+    "bed1": {"family": "Bed", "type": "Single 900x2000", "ifc": "IfcFurniture", "body": [0.9, 2.0], "org": "centre", "front": "fit.bed.front", "side": ["fit.bed.side", "fit.bed.side_from", 1]},
+    "bedside": {"family": "Bedside Table", "type": "450x400", "ifc": "IfcFurniture", "body": [0.45, 0.4], "org": "centre"},
+    "locker": {"family": "Bedside Table", "type": "500x450 Locker", "ifc": "IfcFurniture", "body": [0.5, 0.45], "org": "centre"},
+    "wardrobe": {"family": "Wardrobe", "type": "1000x600x2100", "ifc": "IfcFurniture", "body": [1.0, 0.6], "org": "front", "front": "fit.wardrobe.front", "tall": true},
+    "sofa": {"family": "Sofa", "type": "2000", "ifc": "IfcFurniture", "body": [2.0, 0.9], "org": "centre", "front": "fit.sofa.front"},
+    "armchair": {"family": "Armchair", "type": "750x800", "ifc": "IfcFurniture", "body": [0.75, 0.8], "org": "centre", "front": "fit.seat.front"},
+    "table": {"family": "Table", "type": "1200x800", "ifc": "IfcFurniture", "body": [1.2, 0.8], "org": "centre"},
+    "table_l": {"family": "Table", "type": "1600x800", "ifc": "IfcFurniture", "body": [1.6, 0.8], "org": "centre"},
+    "school_desk": {"family": "Table", "type": "1200x500", "ifc": "IfcFurniture", "body": [1.2, 0.5], "org": "centre"},
+    "chair": {"family": "Chair", "type": "450x500", "ifc": "IfcFurniture", "body": [0.45, 0.5], "org": "centre"},
+    "desk": {"family": "Desk", "type": "1400x700", "ifc": "IfcFurniture", "body": [1.4, 0.7], "org": "centre"},
+    "radiator": {"family": "Radiator", "type": "1000x500", "ifc": "IfcSpaceHeater", "body": [1.0, 0.15], "org": "wall"},
+    "radiator_s": {"family": "Radiator", "type": "600x500", "ifc": "IfcSpaceHeater", "body": [0.6, 0.15], "org": "wall"},
+    "ward_bed": {"family": "Hospital Bed", "type": "900x2100", "ifc": "IfcFurniture", "body": [0.9, 2.1], "org": "centre", "front": "fit.ward_bed.front", "side": ["fit.ward_bed.side", "fit.ward_bed.side_from", 1]},
+    "rack": {"family": "Storage Rack", "type": "2700x1100x4500", "ifc": "IfcFurniture", "body": [2.7, 1.1], "org": "centre", "tall": true},
+    "rack_s": {"family": "Storage Rack", "type": "1800x600x2400", "ifc": "IfcFurniture", "body": [1.8, 0.6], "org": "centre", "tall": true},
+    "car": {"family": "Car", "type": "Sedan 1800x4700", "ifc": "IfcBuildingElementProxy", "body": [1.8, 4.7], "org": "centre"},
+    "reception": {"family": "Reception Desk", "type": "2400x800", "ifc": "IfcFurniture", "body": [2.4, 0.8], "org": "centre", "front": "fit.reception.front"},
+    "lockers": {"family": "Locker Bank", "type": "1200x500x1800", "ifc": "IfcFurniture", "body": [1.2, 0.5], "org": "centre", "front": "fit.lockers.front", "tall": true},
+    "workbench": {"family": "Workbench", "type": "2000x800", "ifc": "IfcFurniture", "body": [2.0, 0.8], "org": "centre", "front": "fit.bench.front"},
+    "lab_bench": {"family": "Lab Bench", "type": "3000x750", "ifc": "IfcFurniture", "body": [3.0, 0.75], "org": "centre", "front": "fit.bench.front"},
+    "shelf": {"family": "Shelf Unit", "type": "1200x900x1600", "ifc": "IfcFurniture", "body": [1.2, 0.9], "org": "centre", "tall": true},
+    "shelf_s": {"family": "Shelf Unit", "type": "900x600x1400", "ifc": "IfcFurniture", "body": [0.9, 0.6], "org": "centre", "front": "fit.shelf.front", "tall": true},
+    "board": {"family": "Whiteboard", "type": "2400x1200", "ifc": "IfcBuildingElementProxy", "body": [2.4, 0.1], "org": "wall", "front": "fit.board.front", "raised": true},
+    "treadmill": {"family": "Treadmill", "type": "800x2000", "ifc": "IfcFurniture", "body": [0.8, 2.0], "org": "centre"},
+    "wall_cab_300": {"family": "Wall Cabinet", "type": "300", "ifc": "IfcFurniture", "body": [0.3, 0.35], "org": "corner", "tall": true, "on": ["counter_300"]},
+    "wall_cab_450": {"family": "Wall Cabinet", "type": "450", "ifc": "IfcFurniture", "body": [0.45, 0.35], "org": "corner", "tall": true, "on": ["counter_450"]},
+    "wall_cab_600": {"family": "Wall Cabinet", "type": "600", "ifc": "IfcFurniture", "body": [0.6, 0.35], "org": "corner", "tall": true, "on": ["counter_600", "dishwasher"]},
+    "wall_cab_900": {"family": "Wall Cabinet", "type": "900", "ifc": "IfcFurniture", "body": [0.9, 0.35], "org": "corner", "tall": true, "on": ["counter_900"]},
+    "wall_cab_1200": {"family": "Wall Cabinet", "type": "1200", "ifc": "IfcFurniture", "body": [1.2, 0.35], "org": "corner", "tall": true, "on": ["counter_1200"]},
+    "hood": {"family": "Cooker Hood", "type": "600", "ifc": "IfcElectricAppliance", "body": [0.6, 0.5], "org": "centre", "on": ["cooker"]},
+    "heater": {"family": "Water Heater", "type": "80 l", "ifc": "IfcElectricAppliance", "body": [0.45, 0.45], "org": "wall", "front": "fit.heater.front", "raised": true, "wet": true},
+    "mirror": {"family": "Mirror", "type": "500x700", "ifc": "IfcFurniture", "body": [0.5, 0.02], "org": "wall", "on": ["basin"]},
+    "mirror_l": {"family": "Mirror", "type": "600x800", "ifc": "IfcFurniture", "body": [0.6, 0.02], "org": "wall", "on": ["basin_acc"]},
+    "towel_rail": {"family": "Towel Rail", "type": "500x800", "ifc": "IfcFurniture", "body": [0.5, 0.1], "org": "wall", "raised": true},
+    "paper_holder": {"family": "Toilet Roll Holder", "type": "150", "ifc": "IfcFurniture", "body": [0.15, 0.12], "org": "wall", "raised": true},
+    "coat_rack": {"family": "Coat Rack", "type": "900", "ifc": "IfcFurniture", "body": [0.9, 0.25], "org": "wall", "raised": true},
+    "shoe_cab": {"family": "Shoe Cabinet", "type": "800x350", "ifc": "IfcFurniture", "body": [0.8, 0.35], "org": "centre", "front": "fit.hall.front"},
+    "coffee_table": {"family": "Coffee Table", "type": "1000x600", "ifc": "IfcFurniture", "body": [1.0, 0.6], "org": "centre"},
+    "tv_unit": {"family": "TV Unit", "type": "1600x450", "ifc": "IfcFurniture", "body": [1.6, 0.45], "org": "centre", "front": "fit.tv.front"},
+    "couch": {"family": "Examination Couch", "type": "1900x650", "ifc": "IfcFurniture", "body": [1.9, 0.65], "org": "centre", "front": "fit.couch.front", "side": ["fit.couch.side", 0.0, 1]},
+    "med_cab": {"family": "Medical Cabinet", "type": "800x400", "ifc": "IfcFurniture", "body": [0.8, 0.4], "org": "centre", "front": "fit.shelf.front", "tall": true}
+  },
+  "sets": {
+    "bed_double": {"w": 2.8, "d": 2.0, "front": "fit.bed.front", "parts": [
+      {"item": "bed2", "at": [0.6, 0.0]},
+      {"item": "bedside", "at": [0.1, 0.0]},
+      {"item": "bedside", "at": [2.25, 0.0]}
+    ]},
+    "bed_single": {"w": 2.1, "d": 2.0, "front": "fit.bed.front", "parts": [
+      {"item": "bed1", "at": [0.6, 0.0]},
+      {"item": "bedside", "at": [0.1, 0.0]}
+    ]},
+    "bed_single_wall": {"w": 1.5, "d": 2.0, "front": "fit.bed.front", "corner": true, "parts": [
+      {"item": "bed1", "at": [0.0, 0.0]},
+      {"item": "bedside", "at": [0.95, 0.0]}
+    ]},
+    "desk_set": {"w": 1.4, "d": 1.5, "parts": [
+      {"item": "desk", "at": [0.0, 0.0]},
+      {"item": "chair", "at": [0.475, 0.8], "front": "out"}
+    ]},
+    "workplace": {"w": 1.4, "d": 1.5, "parts": [
+      {"item": "desk", "at": [0.0, 0.0], "front": "in"},
+      {"item": "chair", "at": [0.475, 0.8], "front": "out"}
+    ]},
+    "table_4": {"w": 1.2, "d": 2.1, "parts": [
+      {"item": "table", "at": [0.0, 0.65]},
+      {"item": "chair", "at": [0.075, 0.0], "front": "in"},
+      {"item": "chair", "at": [0.675, 0.0], "front": "in"},
+      {"item": "chair", "at": [0.075, 1.6], "front": "out"},
+      {"item": "chair", "at": [0.675, 1.6], "front": "out"}
+    ]},
+    "table_6": {"w": 1.6, "d": 2.1, "parts": [
+      {"item": "table_l", "at": [0.0, 0.65]},
+      {"item": "chair", "at": [0.0, 0.0], "front": "in"},
+      {"item": "chair", "at": [0.575, 0.0], "front": "in"},
+      {"item": "chair", "at": [1.15, 0.0], "front": "in"},
+      {"item": "chair", "at": [0.0, 1.6], "front": "out"},
+      {"item": "chair", "at": [0.575, 1.6], "front": "out"},
+      {"item": "chair", "at": [1.15, 1.6], "front": "out"}
+    ]},
+    "pupil_pair": {"w": 1.2, "d": 1.0, "parts": [
+      {"item": "school_desk", "at": [0.0, 0.0], "front": "in"},
+      {"item": "chair", "at": [0.075, 0.5], "front": "out"},
+      {"item": "chair", "at": [0.675, 0.5], "front": "out"}
+    ]},
+    "teacher": {"w": 1.4, "d": 1.2, "parts": [
+      {"item": "desk", "at": [0.0, 0.5], "front": "out"},
+      {"item": "chair", "at": [0.475, 0.0], "front": "in"}
+    ]},
+    "ward_bay": {"w": 2.5, "d": 2.1, "front": "fit.ward_bed.front", "parts": [
+      {"item": "ward_bed", "at": [0.75, 0.0]},
+      {"item": "locker", "at": [0.2, 0.0]},
+      {"item": "armchair", "at": [1.7, 1.2], "front": "left"}
+    ]},
+    "sink_unit": {"w": 1.2, "d": 0.6, "parts": [
+      {"item": "counter_1200", "at": [0.0, 0.0]},
+      {"item": "sink", "at": [0.1, 0.075]}
+    ]},
+    "sink_unit_s": {"w": 0.9, "d": 0.6, "parts": [
+      {"item": "counter_900", "at": [0.0, 0.0]},
+      {"item": "sink_s", "at": [0.15, 0.075]}
+    ]},
+    "wc_acc_set": {"w": 1.55, "d": 0.8, "front": "fit.wc_acc.set_front", "corner": true, "parts": [
+      {"item": "wc_acc", "at": [0.26, 0.0]},
+      {"item": "grab_rail", "at": [0.0, 0.1], "front": "right"},
+      {"item": "hinged_rail", "at": [0.75, 0.0]}
+    ]},
+    "rack_rows": {"w": 2.7, "d": 2.2, "parts": [
+      {"item": "rack", "at": [0.0, 0.0], "front": "out"},
+      {"item": "rack", "at": [0.0, 1.1]}
+    ]},
+    "rack_rows_s": {"w": 1.8, "d": 1.2, "parts": [
+      {"item": "rack_s", "at": [0.0, 0.0], "front": "out"},
+      {"item": "rack_s", "at": [0.0, 0.6]}
+    ]},
+    "walkin_shower": {"w": 1.2, "d": 1.2, "corner": true, "fall": true, "parts": [
+      {"item": "floor_drain", "at": [0.525, 0.525]},
+      {"item": "grab_rail", "at": [0.3, 0.0]}
+    ]},
+    "lounge": {"w": 2.0, "d": 1.95, "front": "fit.living.lounge_front", "parts": [
+      {"item": "sofa", "at": [0.0, 0.0]},
+      {"item": "coffee_table", "at": [0.5, 1.35]}
+    ]},
+    "floor_fall": {"w": 1.0, "d": 1.0, "fall": true, "parts": [
+      {"item": "floor_drain", "at": [0.425, 0.425]}
+    ]},
+    "consult": {"w": 1.95, "d": 1.5, "parts": [
+      {"item": "desk", "at": [0.0, 0.0]},
+      {"item": "chair", "at": [0.475, 0.8], "front": "out"},
+      {"item": "chair", "at": [1.45, 0.125], "front": "left"}
+    ]}
+  },
+  "runs": {
+    "kitchen": {
+      "depth": "fit.kitchen.depth",
+      "front": "fit.kitchen.front",
+      "turn": true,
+      "tail": "fit.kitchen.tail",
+      "fill": [
+        "counter_1200",
+        "counter_900",
+        "counter_600",
+        "counter_450",
+        "counter_300"
+      ],
+      "corner": "counter_600",
+      "seqs": [
+        [
+          {
+            "item": "fridge"
+          },
+          {
+            "gap": [
+              0.0,
+              0.3,
+              0.45,
+              0.6,
+              0.9
+            ]
+          },
+          {
+            "set": "sink_unit"
+          },
+          {
+            "item": "dishwasher",
+            "optional": true
+          },
+          {
+            "gap": [
+              0.0,
+              0.3,
+              0.45,
+              0.6,
+              0.9,
+              1.2
+            ]
+          },
+          {
+            "item": "cooker"
+          },
+          {
+            "gap": [
+              0.3,
+              0.45,
+              0.6
+            ]
+          }
+        ],
+        [
+          {
+            "set": "sink_unit"
+          },
+          {
+            "item": "dishwasher",
+            "optional": true
+          },
+          {
+            "gap": [
+              0.0,
+              0.3,
+              0.45,
+              0.6,
+              0.9,
+              1.2
+            ]
+          },
+          {
+            "item": "cooker"
+          },
+          {
+            "gap": [
+              0.3,
+              0.45,
+              0.6,
+              0.9
+            ]
+          },
+          {
+            "item": "fridge"
+          }
+        ]
+      ],
+      "triangle": {
+        "items": [
+          "sink",
+          "cooker",
+          "fridge"
+        ],
+        "leg": [
+          "fit.kitchen.leg_min",
+          "fit.kitchen.leg_max"
+        ],
+        "sum": [
+          "fit.kitchen.sum_min",
+          "fit.kitchen.sum_max"
+        ],
+        "from_area": "fit.kitchen.triangle_area"
+      }
+    },
+    "kitchenette": {
+      "depth": "fit.kitchen.depth",
+      "front": "fit.kitchenette.front",
+      "turn": true,
+      "tail": "fit.kitchenette.tail",
+      "fill": [
+        "counter_1200",
+        "counter_900",
+        "counter_600",
+        "counter_450",
+        "counter_300"
+      ],
+      "corner": "counter_600",
+      "seqs": [
+        [
+          {
+            "set": "sink_unit_s"
+          },
+          {
+            "gap": [
+              0.0,
+              0.3,
+              0.6
+            ]
+          },
+          {
+            "item": "fridge",
+            "optional": true
+          }
+        ],
+        [
+          {
+            "set": "sink_unit_s"
+          }
+        ]
+      ]
+    }
+  },
+  "rooms": {
+    "data_centre": {"order": 5, "kind": ["technical", "storage", "office", "hall", "workshop", "lab", "meeting", "staff", "retail", "classroom"], "tags": ["data_hall", "battery_room", "ups_room", "cooling_plant"], "name_has": ["data hall", "data centre hall", "data center hall", "white space", "server", "computer room", "it hall", "machine room", "машинный зал", "машзал", "серверн", "зал цод", "rechenzentrum", "rechnerraum", "salle informatique", "salle serveur", "sala de servidores", "sala de datos", "sala server", "机房", "数据大厅", "サーバ", "battery", "batteries", "аккумулятор", "акб", "batterie", "baterías", "电池", "ups", "uninterruptible", "electrical room", "switchgear", "power room", "ибп", "бесперебойн", "электрощитов", "электропомещ", "usv", "onduleur", "chiller", "cooling plant", "chilled water plant", "холодильн", "чиллер", "kälte", "kaelte", "groupe froid", "enfriadora", "冷站", "冷冻机"], "note": "Data centre rooms: the data centre fit-out places their units (gen/src/project/dc), the room furnishing places none.", "steps": []},
+    "bath_accessible": {"order": 10, "kind": "bath", "tags": ["accessible"], "name_has": ["accessible", "доступн", "мгн", "инвалид"], "priority": 0, "steps": [
+      {"place": "walkin_shower", "sides": "wet", "need": 1},
+      {"place": "wc_acc_set", "sides": "wet", "need": 1},
+      {"place": "basin_acc", "sides": "wet", "need": 1},
+      {"turning": "fit.access.turning", "need": 1},
+      {"attach": "mirror_l", "to": ["basin_acc"], "at": "on", "need": 1},
+      {"attach": "paper_holder", "to": ["wc", "wc_acc"], "at": "beside", "gap": "fit.wc.holder_gap", "need": 1},
+      {"attach": "towel_rail", "to": ["basin", "basin_acc", "tub", "tub_s", "shower", "shower_s"], "at": "beside", "gap": "fit.bath.towel_gap", "max": 1, "need": 0}
+    ]},
+    "bath_full": {"order": 20, "kind": "bath", "min_area": "fit.bath.full_area", "priority": 0, "steps": [
+      {"choose": [[{"place": "tub", "sides": "wet", "need": 1}, {"place": "basin", "sides": "wet", "need": 1}, {"place": "wc", "sides": "wet", "need": 1}], [{"place": "tub_s", "sides": "wet", "need": 1}, {"place": "basin", "sides": "wet", "need": 1}, {"place": "wc", "sides": "wet", "need": 1}], [{"place": "shower", "sides": "wet", "need": 1}, {"place": "basin", "sides": "wet", "need": 1}, {"place": "wc", "sides": "wet", "need": 1}], [{"place": "shower_s", "sides": "wet", "need": 1}, {"place": "basin", "sides": "wet", "need": 1}, {"place": "wc", "sides": "wet", "need": 1}]]},
+      {"place": "washer", "sides": "wet", "once": "dwelling"},
+      {"attach": "mirror", "to": ["basin"], "at": "on", "need": 1},
+      {"attach": "paper_holder", "to": ["wc", "wc_acc"], "at": "beside", "gap": "fit.wc.holder_gap", "need": 1},
+      {"attach": "towel_rail", "to": ["basin", "basin_acc", "tub", "tub_s", "shower", "shower_s"], "at": "beside", "gap": "fit.bath.towel_gap", "max": 1, "need": 0},
+      {"place": "heater", "sides": "wet", "once": "dwelling", "typology": ["house"], "when": "fit.heater.local", "need": 0}
+    ]},
+    "bath": {"order": 30, "kind": "bath", "priority": 0, "steps": [
+      {"choose": [[{"place": "tub", "sides": "wet", "need": 1}, {"place": "basin", "sides": "wet", "need": 1}], [{"place": "tub_s", "sides": "wet", "need": 1}, {"place": "basin", "sides": "wet", "need": 1}], [{"place": "shower", "sides": "wet", "need": 1}, {"place": "basin", "sides": "wet", "need": 1}], [{"place": "shower_s", "sides": "wet", "need": 1}, {"place": "basin", "sides": "wet", "need": 1}]]},
+      {"place": "washer", "sides": "wet", "once": "dwelling"},
+      {"attach": "mirror", "to": ["basin"], "at": "on", "need": 1},
+      {"attach": "towel_rail", "to": ["basin", "basin_acc", "tub", "tub_s", "shower", "shower_s"], "at": "beside", "gap": "fit.bath.towel_gap", "max": 1, "need": 0},
+      {"place": "heater", "sides": "wet", "once": "dwelling", "typology": ["house"], "when": "fit.heater.local", "need": 0}
+    ]},
+    "wc_block": {"order": 40, "kind": "wc", "owner": "public", "min_area": "fit.wc_block.min_area", "steps": [
+      {"place": "wc", "sides": "longest", "count": "fit.wc_block.max_wc", "need": 2},
+      {"place": "urinal", "sides": "others", "per": {"item": "wc", "ratio": "fit.wc_block.urinal_ratio", "min": 1}, "need": 1},
+      {"place": "basin", "sides": "others", "per": {"item": "wc", "ratio": "fit.wc_block.basin_ratio", "min": 1}, "need": 1},
+      {"attach": "paper_holder", "to": ["wc", "wc_acc"], "at": "beside", "gap": "fit.wc.holder_gap", "need": 1},
+      {"attach": "mirror", "to": ["basin"], "at": "on", "need": 1}
+    ]},
+    "wc_accessible_tag": {"order": 45, "kind": "wc", "tags": ["accessible"], "steps": [
+      {"place": "wc_acc_set", "sides": "wet", "need": 1},
+      {"place": "basin_acc", "sides": "wet", "need": 1},
+      {"turning": "fit.access.turning", "need": 1},
+      {"attach": "paper_holder", "to": ["wc", "wc_acc"], "at": "beside", "gap": "fit.wc.holder_gap", "need": 1},
+      {"attach": "mirror_l", "to": ["basin_acc"], "at": "on", "need": 1}
+    ]},
+    "wc_accessible": {"order": 50, "kind": "wc", "owner": "public", "min_area": "fit.wc_acc.min_area", "min_width": "fit.wc_acc.min_width", "steps": [
+      {"place": "wc_acc_set", "sides": "wet", "need": 1},
+      {"place": "basin_acc", "sides": "wet", "need": 1},
+      {"turning": "fit.access.turning", "need": 1},
+      {"attach": "paper_holder", "to": ["wc", "wc_acc"], "at": "beside", "gap": "fit.wc.holder_gap", "need": 1},
+      {"attach": "mirror_l", "to": ["basin_acc"], "at": "on", "need": 1}
+    ]},
+    "wc": {"order": 60, "kind": "wc", "steps": [
+      {"place": "wc", "sides": "wet", "centred": true, "need": 1},
+      {"place": "basin", "sides": "wet", "need": 0},
+      {"attach": "paper_holder", "to": ["wc", "wc_acc"], "at": "beside", "gap": "fit.wc.holder_gap", "need": 1},
+      {"attach": "mirror", "to": ["basin"], "at": "on", "need": 0}
+    ]},
+    "kitchen": {"order": 70, "kind": "kitchen", "priority": 1, "steps": [
+      {"run": "kitchen", "need": 1},
+      {"attach": "hood", "to": ["cooker"], "at": "on", "need": 1},
+      {"attach": "wall_cab_1200", "to": ["counter_1200"], "at": "on", "need": 0},
+      {"attach": "wall_cab_900", "to": ["counter_900"], "at": "on", "need": 0},
+      {"attach": "wall_cab_600", "to": ["counter_600", "dishwasher"], "at": "on", "need": 0},
+      {"attach": "wall_cab_450", "to": ["counter_450"], "at": "on", "need": 0},
+      {"attach": "wall_cab_300", "to": ["counter_300"], "at": "on", "need": 0},
+      {"place": "washer", "sides": "wet", "once": "dwelling"},
+      {"grid": "table_4", "module": ["fit.dining.module_w", "fit.dining.module_d"], "start": "fit.kitchen.table_start", "max": 1, "min_area": "fit.kitchen.table_area"},
+      {"place": "heater", "sides": "wet", "once": "dwelling", "typology": ["house"], "when": "fit.heater.local", "need": 0},
+      {"windows": ["radiator", "radiator_s"]}
+    ]},
+    "kitchen_small": {"order": 80, "kind": "kitchen", "priority": 1, "steps": [
+      {"run": "kitchenette", "need": 1},
+      {"attach": "wall_cab_1200", "to": ["counter_1200"], "at": "on", "need": 0},
+      {"attach": "wall_cab_900", "to": ["counter_900"], "at": "on", "need": 0},
+      {"attach": "wall_cab_600", "to": ["counter_600", "dishwasher"], "at": "on", "need": 0},
+      {"attach": "wall_cab_450", "to": ["counter_450"], "at": "on", "need": 0},
+      {"attach": "wall_cab_300", "to": ["counter_300"], "at": "on", "need": 0},
+      {"windows": ["radiator", "radiator_s"]}
+    ]},
+    "living": {"order": 90, "kind": "living", "steps": [
+      {"place": ["lounge", "sofa"], "sides": "dark", "centred": true, "need": 1},
+      {"place": "tv_unit", "sides": "opposite:sofa", "centred": true, "need": 0},
+      {"place": "armchair", "sides": "all", "need": 0},
+      {"grid": "table_4", "module": ["fit.dining.module_w", "fit.dining.module_d"], "start": "fit.living.table_start", "max": 1, "min_area": "fit.living.table_area"},
+      {"place": "shelf_s", "sides": "dark", "need": 0, "min_area": "fit.living.shelf_area"},
+      {"windows": ["radiator", "radiator_s"]}
+    ]},
+    "hotel_room": {"order": 100, "kind": "bedroom", "tags": ["guest"], "name_has": ["hotel", "guest", "гостин", "номер"], "steps": [
+      {"place": ["bed_double", "bed_single", "bed_single_wall"], "sides": "dark", "centred": true, "need": 1},
+      {"place": "desk_set", "sides": "all", "need": 1},
+      {"place": "wardrobe", "sides": "dark", "need": 1},
+      {"place": "armchair", "sides": "all", "need": 0},
+      {"place": "tv_unit", "sides": "all", "need": 0},
+      {"windows": ["radiator", "radiator_s"]}
+    ]},
+    "guest_room": {"order": 110, "kind": "bedroom", "owner": "public", "steps": [
+      {"place": ["bed_double", "bed_single", "bed_single_wall"], "sides": "dark", "centred": true, "need": 1},
+      {"place": "desk_set", "sides": "all", "need": 1},
+      {"place": "wardrobe", "sides": "dark", "need": 1},
+      {"place": "armchair", "sides": "all", "need": 0},
+      {"place": "tv_unit", "sides": "all", "need": 0},
+      {"windows": ["radiator", "radiator_s"]}
+    ]},
+    "bedroom_double": {"order": 120, "kind": "bedroom", "min_area": "fit.bedroom.double_area", "min_width": "fit.bedroom.double_width", "steps": [
+      {"place": "bed_double", "sides": "dark", "centred": true, "need": 1},
+      {"place": "wardrobe", "sides": "dark", "need": 1},
+      {"place": "desk_set", "sides": "all", "need": 0, "min_area": "fit.bedroom.desk_area"},
+      {"windows": ["radiator", "radiator_s"]}
+    ]},
+    "bedroom": {"order": 130, "kind": "bedroom", "steps": [
+      {"place": ["bed_single", "bed_single_wall"], "sides": "dark", "centred": true, "need": 1},
+      {"place": "wardrobe", "sides": "dark", "need": 0},
+      {"place": "desk_set", "sides": "all", "need": 0, "min_area": "fit.bedroom.single_desk_area"},
+      {"windows": ["radiator", "radiator_s"]}
+    ]},
+    "hall": {"order": 140, "kind": "hall", "owner": "dwelling", "steps": [
+      {"place": "coat_rack", "sides": "all", "need": 0},
+      {"place": "shoe_cab", "sides": "all", "need": 0},
+      {"place": "wardrobe", "sides": "dark", "need": 0}
+    ]},
+    "treatment": {"order": 145, "kind": "office", "tags": ["clinical"], "name_has": ["consult", "treatment", "examination", "кабинет врача", "процедурн", "смотров"], "steps": [
+      {"place": "couch", "sides": "dark", "need": 1},
+      {"place": "consult", "sides": "all", "need": 1},
+      {"place": "basin", "sides": "all", "need": 1},
+      {"attach": "mirror", "to": ["basin"], "at": "on", "need": 0},
+      {"place": "med_cab", "sides": "dark", "need": 0},
+      {"windows": ["radiator", "radiator_s"]}
+    ]},
+    "office": {"order": 150, "kind": ["office", "staff"], "steps": [
+      {"windows": ["radiator", "radiator_s"]},
+      {"grid": "workplace", "module": ["fit.office.module_w", "fit.office.module_d"], "start": "fit.office.start", "max": "fit.office.max_desks", "sides": "longest", "need": 1, "occupancy": ["fit.office.area_per_desk", 1]},
+      {"place": "lockers", "sides": "dark", "need": 0},
+      {"place": "shelf_s", "sides": "dark", "need": 0}
+    ]},
+    "meeting": {"order": 160, "kind": "meeting", "steps": [
+      {"place": "board", "sides": "dark", "centred": true, "need": 1},
+      {"grid": "table_6", "module": ["fit.meeting.module_large_w", "fit.meeting.module_large_d"], "start": "fit.meeting.start", "max": "fit.meeting.max_tables", "sides": "of:board", "need": 1, "min_area": "fit.meeting.large_area"},
+      {"grid": "table_4", "module": ["fit.meeting.module_w", "fit.meeting.module_d"], "start": "fit.meeting.start_small", "max": "fit.meeting.max_tables", "sides": "of:board", "need": 1},
+      {"windows": ["radiator", "radiator_s"]}
+    ]},
+    "classroom": {"order": 170, "kind": "classroom", "steps": [
+      {"place": "board", "sides": "dark", "centred": true, "need": 1},
+      {"grid": "teacher", "module": ["fit.classroom.teacher_module_w", "fit.classroom.teacher_module_d"], "start": "fit.classroom.teacher_start", "max": 1, "sides": "of:board", "need": 1},
+      {"grid": "pupil_pair", "module": ["fit.classroom.pair_module_w", "fit.classroom.pair_module_d"], "start": "fit.classroom.first_row", "max": "fit.classroom.max_pairs", "sides": "of:board", "need": 1, "occupancy": ["fit.classroom.area_per_pupil", 2]},
+      {"place": "shelf_s", "sides": "opposite:board", "need": 0},
+      {"windows": ["radiator", "radiator_s"]}
+    ]},
+    "lab": {"order": 180, "kind": "lab", "steps": [
+      {"place": "lab_bench", "sides": "dark", "count": "fit.lab.wall_benches", "need": 1},
+      {"grid": "lab_bench", "module": ["fit.lab.module_w", "fit.lab.module_d"], "start": "fit.lab.start", "max": "fit.lab.max_islands"},
+      {"place": "basin", "sides": "all", "need": 1},
+      {"windows": ["radiator", "radiator_s"]}
+    ]},
+    "ward": {"order": 190, "kind": "ward", "steps": [
+      {"grid": "ward_bay", "module": ["fit.ward.bay_w", "fit.ward.bay_d"], "start": 0.0, "max": "fit.ward.max_beds", "rows": 1, "sides": "dark", "need": 1},
+      {"grid": "ward_bay", "module": ["fit.ward.bay_w", "fit.ward.bay_d"], "start": 0.0, "max": "fit.ward.max_beds", "rows": 1, "sides": "opposite:ward_bed"},
+      {"place": "basin_acc", "sides": "all", "need": 1},
+      {"windows": ["radiator", "radiator_s"]}
+    ]},
+    "dining": {"order": 200, "kind": "dining", "steps": [
+      {"grid": "table_4", "module": ["fit.dining.module_w", "fit.dining.module_d"], "start": "fit.dining.start", "max": "fit.dining.max_tables", "need": 1, "occupancy": ["fit.dining.area_per_seat", 4]},
+      {"windows": ["radiator", "radiator_s"]}
+    ]},
+    "lobby": {"order": 210, "kind": "lobby", "steps": [
+      {"place": "reception", "sides": "dark", "centred": true, "need": 0},
+      {"place": "sofa", "sides": "all", "count": "fit.lobby.sofas"},
+      {"place": "armchair", "sides": "all", "count": "fit.lobby.armchairs"},
+      {"windows": ["radiator", "radiator_s"]}
+    ]},
+    "retail": {"order": 220, "kind": "retail", "steps": [
+      {"place": "reception", "sides": "dark"},
+      {"grid": "shelf", "module": ["fit.retail.module_w", "fit.retail.module_d"], "start": "fit.retail.start", "max": "fit.retail.max_shelves"},
+      {"windows": ["radiator", "radiator_s"]}
+    ]},
+    "workshop": {"order": 230, "kind": "workshop", "steps": [
+      {"place": "workbench", "sides": "dark", "count": "fit.workshop.benches", "need": 1},
+      {"windows": ["radiator", "radiator_s"]}
+    ]},
+    "gym": {"order": 240, "kind": "gym", "steps": [
+      {"place": "lockers", "sides": "dark"},
+      {"grid": "treadmill", "module": ["fit.gym.module_w", "fit.gym.module_d"], "start": "fit.gym.start", "max": "fit.gym.max_machines", "need": 1},
+      {"windows": ["radiator", "radiator_s"]}
+    ]},
+    "storage_high": {"order": 250, "kind": "storage", "min_area": "fit.storage.hall_area", "min_height": "fit.storage.high_height", "steps": [
+      {"grid": "rack_rows", "module": ["fit.storage.high_module_w", "fit.storage.high_module_d"], "start": "fit.storage.start", "max": "fit.storage.max_racks", "sides": "longest", "need": 1}
+    ]},
+    "storage_hall": {"order": 260, "kind": "storage", "min_area": "fit.storage.hall_area", "steps": [
+      {"grid": "rack_rows_s", "module": ["fit.storage.module_w", "fit.storage.module_d"], "start": "fit.storage.start", "max": "fit.storage.max_racks", "sides": "longest", "need": 1}
+    ]},
+    "storage": {"order": 270, "kind": "storage", "steps": [
+      {"place": "rack_s", "sides": "dark", "count": "fit.storage.racks"}
+    ]},
+    "parking": {"order": 280, "kind": "parking", "steps": [
+      {"bays": "car", "stall": ["fit.parking.stall_w", "fit.parking.stall_l"], "aisle": "fit.parking.aisle", "need": 1}
+    ]},
+    "technical": {"order": 290, "kind": "technical", "steps": [
+      {"place": "floor_fall", "sides": "wet", "need": 1},
+      {"place": "heater", "sides": "wet", "once": "dwelling", "typology": ["house"], "when": "fit.heater.local", "need": 0}
+    ]}
+  }
+}

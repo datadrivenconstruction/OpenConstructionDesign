@@ -1,0 +1,6 @@
+{
+ "imported_prop_edit.remove": "Özelliği kaldır",
+ "imported_prop_edit.remove.tip": "Seçili {n} elemandan özelliği tek geri alma adımında kaldırır; kaydedildiğinde IFC dosyasından silinir",
+ "imported_prop_edit.done": "{key} {n} elemandan kaldırıldı",
+ "imported_prop_edit.warn.reload": "Tamam, ancak görünüm yenilenmedi; panel yeniden açın veya yanlış görünüyorsa geri alın"
+}

@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "संशोधित",
+ "ai.redraft.added": "+{n} जोड़े गए",
+ "ai.redraft.removed": "−{n} हटाए गए",
+ "ai.redraft.changed": "~{n} बदले गए",
+ "ai.redraft.strip": "आपकी पिछली जाँच के बाद से: {what}",
+ "ai.redraft.note": "संशोधित योजना देखी गई: {what}",
+ "ai.redraft.more": "+{n} और",
+ "ai.redraft.ack": "समझ गया",
+ "ai.redraft.ack.tip": "इस संशोधन को देखा हुआ चिह्नित करें; लागू करें तब इसे लक्षित करेगा",
+ "ai.redraft.removed_list": "हटाए गए आइटम: {n}",
+ "ai.redraft.review_first": "आपके संदेश के बाद योजना बदल गई: पहले बदलावों की समीक्षा करें",
+ "ai.redraft.mark.tip": "आपकी पिछली जाँच के बाद नया या बदला गया",
+ "ai.redraft.emptied": "फ़ॉलो-अप ने सभी आइटम हटा दिए: ड्राफ़्ट खाली है"
+}

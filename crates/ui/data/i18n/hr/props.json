@@ -1,0 +1,21 @@
+{
+ "props.multi.title": {
+  "one": "# element",
+  "few": "# elementa",
+  "other": "# elemenata"
+ },
+ "props.multi.cats": {
+  "one": "# kategorija",
+  "few": "# kategorije",
+  "other": "# kategorija"
+ },
+ "props.multi.varies": {
+  "one": "različito (#)",
+  "few": "različito (#)",
+  "other": "različito (#)"
+ },
+ "props.multi.clear": "Poništi odabir",
+ "props.multi.undo": "Poništi",
+ "props.multi.narrowed": "Odabir: {n} · {name}",
+ "props.multi.chip_tip": "{name}: {n}  ·  Klik prikazuje njihova svojstva, Ctrl+klik zadržava samo ove"
+}

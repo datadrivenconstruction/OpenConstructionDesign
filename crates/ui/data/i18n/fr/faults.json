@@ -1,0 +1,18 @@
+{
+ "faults.errors": {
+  "one": "# erreur dans le modèle. Cliquez pour l'afficher.",
+  "other": "# erreurs dans le modèle. Cliquez pour voir la liste."
+ },
+ "faults.warnings": {
+  "one": "# avertissement dans le modèle. Cliquez pour l'afficher.",
+  "other": "# avertissements dans le modèle. Cliquez pour voir la liste."
+ },
+ "faults.title": "Défauts du modèle : {n}",
+ "faults.none": "Aucune erreur ni avertissement.",
+ "faults.cat.wall": "Mur",
+ "faults.cat.slab": "Dalle",
+ "faults.cat.opening": "Ouverture",
+ "faults.cat.curtain_wall": "Mur-rideau",
+ "faults.cat.ramp": "Rampe",
+ "faults.cat.zone": "Zone"
+}

@@ -1,0 +1,8 @@
+{
+ "undo.undone": "Fortrudt: {what}",
+ "undo.redone": "Gentaget: {what}",
+ "undo.action.edit.redo": "Gentag",
+ "undo.action.edit.undo": "Fortryd",
+ "hdr.unsaved": "Ugemte ændringer",
+ "hdr.file_menu": "Filmenu"
+}

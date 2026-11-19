@@ -1,0 +1,4 @@
+{
+ "room_status.open": "룸 {room}이(가) 더 이상 닫혀 있지 않습니다",
+ "warn.kind.room_open": "닫히지 않은 룸"
+}

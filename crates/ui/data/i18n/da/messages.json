@@ -1,0 +1,7 @@
+{
+ "messages.title": "Meddelelser",
+ "messages.desc": "Historik over meddelelser. Ingen nye advarsler eller fejl.",
+ "messages.desc_new": "{n} nye advarsler eller fejl. Klik for at læse dem.",
+ "messages.copy": "Kopiér alle",
+ "messages.clear": "Ryd alle"
+}

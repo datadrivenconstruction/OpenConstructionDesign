@@ -1,0 +1,26 @@
+[
+ {
+  "id": "mod.select_same_cat",
+  "icon": "same-cat",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "C",
+   "M"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "mod.select_same_cat_project",
+  "icon": "same-cat-project",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "C",
+   "M"
+  ],
+  "stage": "M1"
+ }
+]

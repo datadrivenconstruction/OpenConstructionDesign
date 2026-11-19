@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "Alterações da planilha não aplicadas",
+ "workbook_changes.wb.body": "Fechar ou trocar o projeto descarta essas alterações.",
+ "workbook_changes.wb.line": "Importação de planilha: {n} alterações não aplicadas",
+ "workbook_changes.wb.review": "Revisar",
+ "workbook_changes.wb.discard": "Descartar"
+}

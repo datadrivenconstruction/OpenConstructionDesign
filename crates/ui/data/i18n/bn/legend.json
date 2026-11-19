@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "লিজেন্ড",
+ "legend.legend.new_hint": "নতুন লিজেন্ডের নাম",
+ "legend.legend.delete_tip": "লিজেন্ড মুছুন",
+ "legend.legend.delete_placed": "লিজেন্ড মুছুন (যেখানে বসানো: {sheets})",
+ "legend.legend.deleted": "লিজেন্ড মুছেছে: {name}",
+ "legend.legend.no_rows": "এখনো কোনো সারি নেই। একটি যোগ করুন, বা বর্তমান ভিউয়ের স্টাইল নিন",
+ "legend.legend.replace_q": "{n}টি সারি এই ভিউয়ের স্টাইল দিয়ে বদলাবেন?",
+ "legend.legend.replace": "বদলান",
+ "legend.legend.keep": "সারি রাখুন",
+ "legend.col.swatch": "রঙের নমুনা",
+ "legend.col.value": "মান",
+ "legend.col.label": "লেবেল"
+}

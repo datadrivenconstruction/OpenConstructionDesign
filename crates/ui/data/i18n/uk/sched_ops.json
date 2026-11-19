@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "значення має бути більшим за нуль",
+ "sched_ops.not_number": "не число",
+ "sched_ops.no_host": "немає стіни-основи",
+ "sched_ops.wall_length": "цю довжину стіни не можна так задати",
+ "sched_ops.no_wall": "такої стіни немає",
+ "sched_ops.no_opening": "такого отвору немає",
+ "sched_ops.no_curtain": "такої навісної стіни немає",
+ "sched_ops.no_panel": "такої панелі немає",
+ "sched_ops.no_slab": "такого перекриття немає",
+ "sched_ops.no_room": "такого приміщення немає",
+ "sched_ops.slope_range": "ухил поза діапазоном",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

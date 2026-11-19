@@ -1,0 +1,7 @@
+{
+ "spline.opt.spline": "スプライン",
+ "spline.opt.spline_tip": "スプライン壁: 通過させたい点をクリックし、Enter または Esc で終了",
+ "spline.wt.three_points": "スプライン壁には 3 点以上が必要です",
+ "spline.wt.no_curtain": "カーテンウォールにはスプライン軸がありません",
+ "spline.wt.added": "スプライン壁を追加しました"
+}

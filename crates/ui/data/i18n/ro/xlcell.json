@@ -1,0 +1,15 @@
+{
+ "xl.msg.cell_clipped": "textul a fost tăiat la limita celulei; doar citire, modificarea nu este aplicată",
+ "xlcell.status": "Exportat. {count} celule au fost scurtate sau lăsate goale — vezi fereastra cu detalii.",
+ "xlcell.title": "Celule modificate de export",
+ "xlcell.intro": "Aceste celule nu au putut fi scrise așa cum sunt. Valoarea completă rămâne în model; celula este blocată și nu poate fi editată în registru.",
+ "xlcell.col_sheet": "Foaie",
+ "xlcell.col_row": "Rând",
+ "xlcell.col_col": "Coloană",
+ "xlcell.col_id": "Id element",
+ "xlcell.col_what": "Ce s-a întâmplat",
+ "xlcell.what_clipped": "Text tăiat la limita celulei",
+ "xlcell.what_blank": "Nu este un număr finit, celula a fost lăsată goală",
+ "xlcell.more": "… și încă {count}",
+ "xlcell.close": "Închide"
+}

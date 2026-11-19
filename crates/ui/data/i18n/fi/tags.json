@@ -1,0 +1,13 @@
+{
+ "tags.gone": "Tunnistetta ei enää ole",
+ "tags.readonly_wall": "Seinän tunniste näyttää tyypin eikä sitä voi muokata tässä: vaihda seinätyyppi",
+ "tags.readonly_comp": "Komponentin tunniste näyttää perheen eikä sitä voi muokata tässä: vaihda tyyppi",
+ "tags.locked": "Elementti on lukittu: avaa lukitus muokataksesi tunnistetta",
+ "tags.done": "Tunnisteen arvo kirjoitettu",
+ "tags.failed": "Tunnistetta ei muutettu: {e}",
+ "tags.dup_door": "{mark} myös {n} ovessa",
+ "tags.dup_window": "{mark} myös {n} ikkunassa",
+ "tags.dup_room": "{mark} myös {n} huoneessa",
+ "tags.hint_mark": "Merkintä",
+ "tags.hint_name": "Huoneen nimi"
+}

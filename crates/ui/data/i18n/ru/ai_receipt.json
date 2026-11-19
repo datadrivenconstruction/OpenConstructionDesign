@@ -1,0 +1,23 @@
+{
+ "ai.receipt.title": {
+  "one": "Применено # изменение",
+  "few": "Применено # изменения",
+  "many": "Применено # изменений",
+  "other": "Применено # изменения"
+ },
+ "ai.receipt.more": "ещё {n}",
+ "ai.receipt.list": "Элементы",
+ "ai.receipt.show": "Показать",
+ "ai.receipt.show.tip": "Выделить изменённые элементы и показать их",
+ "ai.receipt.undo": "Отменить",
+ "ai.receipt.undo.tip": "Отменить именно это применение",
+ "ai.receipt.undone": "Отменено",
+ "ai.receipt.later": "Были более поздние правки",
+ "ai.receipt.toast_undone": "Применённый план отменён",
+ "ai.receipt.draft_family": "Черновик семейства: {name}",
+ "ai.receipt.promote": "Сделать рабочим",
+ "ai.receipt.promote.tip": "Перевести черновик семейства в рабочее (один шаг отмены)",
+ "ai.receipt.promoted": "Семейство стало рабочим",
+ "ai.receipt.promote_failed": "Не удалось сделать семейство рабочим",
+ "cmd.ai.receipt_undo": "Отменить последний план ИИ"
+}

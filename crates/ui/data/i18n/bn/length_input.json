@@ -1,0 +1,4 @@
+{
+ "length_input.opt.bad_length": "দৈর্ঘ্য নয়: mm লিখুন, বা ইম্পেরিয়াল এককে ft-in লিখুন",
+ "length_input.opt.times": "×"
+}

@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "X axis",
+ "fe.axis.y": "Y axis",
+ "fe.axis.z": "Z axis",
+ "fe.col.axis": "Axis",
+ "fe.col.at": "Position",
+ "fe.col.mode": "Mode",
+ "fe.mode.fixed": "Fixed",
+ "fe.mode.free": "Free",
+ "fe.types.inherited": "Default from parameter",
+ "fe.csv.more": "More CSV actions",
+ "fe.ref.selected": "Plane: {name}"
+}

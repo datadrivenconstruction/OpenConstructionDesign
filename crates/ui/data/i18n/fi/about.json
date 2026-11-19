@@ -1,0 +1,33 @@
+{
+ "cmd.help.licenses": "Avoimen lähdekoodin lisenssit",
+ "cmd.help.licenses.desc": "Luettelee tämän koontiversion käyttämät avoimen lähdekoodin kirjastot lisensseineen.",
+ "about.product": "DDC Editor",
+ "about.version": "Versio",
+ "about.build": "Koontiversio",
+ "about.schema": "Mallin skeema",
+ "about.system": "Järjestelmä",
+ "about.gpu": "Grafiikkasovitin",
+ "about.language": "Kieli",
+ "about.copy": "Kopioi versiotiedot",
+ "about.copy_desc": "Versio, koontiversio, järjestelmä ja grafiikkasovitin virheilmoitukseen. Ei tiedostopolkuja.",
+ "about.copied": "Versiotiedot kopioitu",
+ "about.licenses": "Avoimen lähdekoodin lisenssit",
+ "about.licenses_desc": "Tässä koontiversiossa käytetyt kirjastot ja niiden lisenssit",
+ "about.licenses.open": "Näytä",
+ "about.licenses.title": "Avoimen lähdekoodin lisenssit",
+ "about.licenses.note": "DDC Editor sisältää alla luetut kirjastot. Jokainen pysyy oman lisenssinsä ja tekijänoikeusilmoituksensa alaisena. Koko lisenssitekstit: THIRD_PARTY_LICENSES.txt sovelluksen vieressä.",
+ "about.licenses.full": "Koko lisenssitekstit",
+ "about.licenses.list": "Komponenttiluettelo",
+ "about.licenses.close": "Sulje",
+ "about.licenses.col_name": "Komponentti",
+ "about.licenses.col_license": "Lisenssi",
+ "about.licenses.count": {
+  "one": "# komponentti",
+  "other": "# komponenttia"
+ },
+ "about.licenses.count_of": "{shown} / {total} komponenttia",
+ "about.licenses.search_hint": "Hae nimen tai lisenssin mukaan…",
+ "about.licenses.search_clear": "Tyhjennä haku",
+ "about.licenses.none": "Ei tuloksia",
+ "about.licenses.none_hint": "Kokeile kirjaston nimen osaa tai lisenssiä, kuten MIT."
+}

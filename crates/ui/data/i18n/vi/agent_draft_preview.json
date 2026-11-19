@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "Xem trước",
+ "agent_draft.ag.preview.desc": "Phác thảo các cấu kiện của bản nháp này trên canvas khi con trỏ ở trên nút. Không có gì bị thay đổi.",
+ "agent_draft.type.column": "Cột",
+ "agent_draft.type.roof": "Mái",
+ "agent_draft.type.ceiling": "Trần",
+ "agent_draft.type.stair": "Liền khối",
+ "agent_draft.type.railing": "Lan can",
+ "agent_draft.type.shaft": "Giếng",
+ "agent_draft.type.axis": "Trục 6.5 mm",
+ "agent_draft.type.refplane": "Mặt phẳng tham chiếu"
+}

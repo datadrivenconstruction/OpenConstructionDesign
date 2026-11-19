@@ -1,0 +1,9 @@
+{
+ "cmd.mass.timeline_family": "Historia do rodziny",
+ "cmd.mass.timeline_family.desc": "Tworzy rodzinę komponentów z historii konstrukcji wybranej bryły. Parametry historii stają się parametrami rodziny.",
+ "mass_family.done": "Utworzono rodzinę {name}, parametrów: {n}",
+ "mass_family.refused": "Nie utworzono rodziny: {e}",
+ "mass_family.no_mass": "Najpierw wybierz bryłę parametryczną",
+ "mass_family.add_modifier": "Dodaj modyfikator",
+ "mass_family.needs_faces": "Wymagane są wybrane ściany: użyj narzędzia na karcie Bryły"
+}

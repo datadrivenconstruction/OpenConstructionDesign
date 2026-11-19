@@ -1,0 +1,14 @@
+{
+ "ai.hist.badge": "AI",
+ "ai.hist.untitled": "AI muudatused",
+ "ai.hist.tip": "{title}\nRakendas: {actor}\nTehisintellekti mudel: {model}",
+ "ai.hist.why": "Miks: {why}",
+ "ai.hist.reverted": "tagasi võetud",
+ "ai.hist.revert_one": "Võta see AI-partii tagasi",
+ "ai.revert.done": "AI muudatused tagasi võetud: {n}. Tühistamine toob need tagasi.",
+ "ai.revert.empty": "Tagasivõtmiseks AI muudatusi ei ole",
+ "ai.revert.not_ai": "See samm ei ole AI muudatus",
+ "ai.revert.already": "Need AI muudatused on juba tagasi võetud",
+ "ai.revert.opaque": "Ei võetud tagasi: neid AI muudatusi ei saa hilisematest töödest ohutult eraldada. Midagi ei muudetud.",
+ "ai.revert.failed": "Tagasivõtmine ebaõnnestus: {e}"
+}

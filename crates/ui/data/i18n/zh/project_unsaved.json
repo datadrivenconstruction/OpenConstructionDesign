@@ -1,0 +1,7 @@
+{
+ "project_unsaved.unsaved.model": "模型更改未保存。",
+ "project_unsaved.unsaved.drawings": {
+  "other": "# 个已放置的图纸未保存到项目中：其更改将丢失。",
+  "one": "# 个已放置的图纸未保存到项目中：其更改将丢失。"
+ }
+}

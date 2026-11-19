@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "Una massa non può essere ruotata o specchiata: la sua storia di forma non ha un passo di rotazione. Spostala o copiala, oppure ridisegnala nella nuova direzione.",
+ "sched_cats.col.name": "Nome",
+ "sched_cats.col.material": "Materiale",
+ "sched_cats.col.void": "Vuoto",
+ "sched_cats.col.inplace": "Gettato in opera",
+ "sched_cats.col.volume": "Volume netto",
+ "sched_cats.col.area": "Area superficiale",
+ "sched_cats.col.floor_area": "Area di pavimento",
+ "sched_cats.col.thickness": "Spessore",
+ "sched_cats.col.points": "Punti",
+ "elem.toposolid.points": "Punti di rilievo",
+ "elem.toposolid.count": "Punti",
+ "elem.toposolid.low": "Più basso",
+ "elem.toposolid.high": "Più alto",
+ "elem.toposolid.edit": "Modifica punti",
+ "elem.toposolid.edit_tip": "Seleziona, trascina e imposta la quota dei punti di rilievo in pianta",
+ "elem.toposolid.pick_hint": "Fai clic su un punto in pianta per selezionarlo. Fai di nuovo clic per aggiungerlo o rimuoverlo.",
+ "elem.toposolid.z": "Quota ({n})",
+ "elem.toposolid.mixed": "I punti selezionati hanno valori diversi; un nuovo valore li imposta tutti.",
+ "elem.toposolid.edit_help": "Trascina un punto per spostarlo. Digita un valore e premi Invio per impostare la quota. Backspace rimuove i punti selezionati, Esc esce.",
+ "elem.toposolid.done": "Fatto"
+}

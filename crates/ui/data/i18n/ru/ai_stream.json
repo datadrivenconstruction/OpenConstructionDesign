@@ -1,0 +1,14 @@
+{
+ "ai.stream.waiting": "Ожидание модели",
+ "ai.stream.reading": "Чтение модели",
+ "ai.stream.working": "Работаю",
+ "ai.stream.answering": "Пишу ответ",
+ "ai.stream.tools_one": "1 инструмент",
+ "ai.stream.tools_many": "Инструментов: {n}",
+ "ai.stream.secs": "{n} с",
+ "ai.stream.sep": " · ",
+ "ai.stream.stalled": "Сервис модели всё ещё не отвечает",
+ "ai.stream.stop": "Остановить",
+ "ai.stream.cancelled": "Остановлено",
+ "ai.stream.incomplete": "Черновик неполный. В модель ничего не применено."
+}

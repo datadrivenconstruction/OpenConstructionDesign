@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "Potrubí",
+ "mep3d.pipe": "Trubka",
+ "mep3d.tray": "Kabelový žlab",
+ "mep3d.conduit": "Chránička",
+ "mep3d.system": "Systém",
+ "mep3d.length": "Délka",
+ "mep3d.diameter": "Průměr",
+ "mep3d.width": "Šířka",
+ "mep3d.height": "Výška",
+ "mep3d.insulation": "Izolace",
+ "mep3d.tip": "Enter — použít; tvarovky se přepočítají",
+ "mep3d.size_positive": "velikost musí být větší než nula",
+ "mep3d.not_changed": "nezměněno: {e}",
+ "mep3d.copied": "trasa zkopírována",
+ "mep3d.changed": "trasa změněna",
+ "mep3d.deleted": "smazáno prvků: {n}",
+ "mep3d.not_deleted": "nesmazáno: {e}",
+ "mep3d.no_wall_type": "bez typu stěny",
+ "mep3d.demo.supply": "Přívod S1",
+ "mep3d.demo.heating": "Topení",
+ "mep3d.demo.power": "Silnoproud"
+}

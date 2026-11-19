@@ -1,0 +1,31 @@
+id = "G15_tank_nozzles"
+tier = "hard"
+group = "Any geometry"
+title = "Tank with nozzles"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "A vertical storage tank 12 m diameter 14 m tall with a conical roof, manway, four nozzles at different heights and orientations, ladder, and a ring foundation."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "comp:tank|vessel"
+min = 1.0
+
+[[oracle.count]]
+spec = "comp:nozzle|manway|flange"
+min = 5.0
+
+[[oracle.count]]
+spec = "iso_footing+strip_footing+raft+solid"
+min = 1.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key} est réservé ({why}) et ne peut pas être réaffecté",
+ "quick.keys.res_copy": "copier",
+ "quick.keys.res_paste": "coller",
+ "quick.keys.res_cut": "couper",
+ "quick.keys.res_undo": "annuler / rétablir",
+ "quick.keys.res_save": "enregistrer",
+ "quick.keys.res_palette": "palette de commandes",
+ "quick.keys.reserved_conflict": "{key} est déjà utilisé par « {cmd} ». Échap le conserve là.",
+ "quick.keys.reserved_swap": "Échanger",
+ "quick.keys.reserved_take": "Prendre",
+ "quick.keys.reserved_keep": "Conserver",
+ "quick.keys.reserved_os": "Pris par le système :"
+}

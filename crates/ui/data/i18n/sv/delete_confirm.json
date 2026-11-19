@@ -1,0 +1,59 @@
+{
+ "del.k.door": {
+  "one": "# dörr",
+  "other": "# dörrar"
+ },
+ "del.k.window": {
+  "one": "# fönster",
+  "other": "# fönster"
+ },
+ "del.k.opening": {
+  "one": "# öppning",
+  "other": "# öppningar"
+ },
+ "del.k.comp": {
+  "one": "# värdbunden komponent",
+  "other": "# värdbundna komponenter"
+ },
+ "del.k.rebar": {
+  "one": "# armeringsuppsättning",
+  "other": "# armeringsuppsättningar"
+ },
+ "del.k.port": {
+  "one": "# värdbunden VVS-anslutning",
+  "other": "# värdbundna VVS-anslutningar"
+ },
+ "del.k.joist": {
+  "one": "# bjälke",
+  "other": "# bjälkar"
+ },
+ "del.k.railing": {
+  "one": "# räcke",
+  "other": "# räcken"
+ },
+ "del.k.tag": {
+  "one": "# märkning",
+  "other": "# märkningar"
+ },
+ "del.k.dim": {
+  "one": "# mått (frikopplat)",
+  "other": "# mått (frikopplade)"
+ },
+ "del.also": "Berörs också: {list}",
+ "del.rooms": {
+  "one": "# rum förlorar en begränsande vägg",
+  "other": "# rum förlorar begränsande väggar"
+ },
+ "del.cancelled": "Borttagningen avbröts, inget ändrades",
+ "del.confirm.title": "Ta bort med beroende",
+ "del.confirm.lead": {
+  "one": "# valt element tar med sig dessa:",
+  "other": "# valda element tar med sig dessa:"
+ },
+ "del.confirm.levels": {
+  "one": "# av dem ligger på en annan våning",
+  "other": "# av dem ligger på andra våningar"
+ },
+ "del.confirm.all": "Ta bort alla",
+ "del.confirm.cancel": "Avbryt"
+}

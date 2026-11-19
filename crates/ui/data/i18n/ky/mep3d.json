@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "Аба түтүгү",
+ "mep3d.pipe": "Түтүк",
+ "mep3d.tray": "Кабель лотогу",
+ "mep3d.conduit": "Кабель түтүгү",
+ "mep3d.system": "Система",
+ "mep3d.length": "Узундук",
+ "mep3d.diameter": "Диаметр",
+ "mep3d.width": "Туурасы",
+ "mep3d.height": "Бийиктик",
+ "mep3d.insulation": "Изоляция",
+ "mep3d.tip": "Enter — колдонуу; фитингдер кайра эсептелет",
+ "mep3d.size_positive": "өлчөм нөлдөн чоң болушу керек",
+ "mep3d.not_changed": "өзгөрген жок: {e}",
+ "mep3d.copied": "линия көчүрүлдү",
+ "mep3d.changed": "линия өзгөрдү",
+ "mep3d.deleted": "өчүрүлгөн элементтер: {n}",
+ "mep3d.not_deleted": "өчүрүлгөн жок: {e}",
+ "mep3d.no_wall_type": "дубалдын түрү жок",
+ "mep3d.demo.supply": "Берүү S1",
+ "mep3d.demo.heating": "Жылытуу",
+ "mep3d.demo.power": "Күч"
+}

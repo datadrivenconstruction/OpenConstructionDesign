@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "Scale",
+ "selcat.railing": "Parapetti",
+ "quick.cat.stair": "Scale",
+ "quick.cat.railing": "Parapetti",
+ "stair.risers": "Alzate",
+ "stair.riser": "Altezza alzata",
+ "stair.comfort": "2A + P",
+ "stair.tread_auto": "Pedata secondo regola",
+ "stair.tread_auto_tip": "Annulla la pedata digitata e lascia che la regola 2A + P la imposti",
+ "stair.broken": "Questa scala non si adatta ai suoi livelli",
+ "railing.host_stair": "Ospitato sulla scala #{id}",
+ "railing.host_path": "Parapetto a schizzo",
+ "railing.length": "Lunghezza",
+ "stair.deleted_with": "con {n} parapetti ospitati"
+}

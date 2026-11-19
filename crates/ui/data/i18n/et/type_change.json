@@ -1,0 +1,13 @@
+{
+ "type_change.affects_walls": {
+  "one": "mõjutab # seina",
+  "other": "mõjutab # seina"
+ },
+ "type_change.affects": {
+  "one": "mõjutab # elementi",
+  "other": "mõjutab # elementi"
+ },
+ "type_change.tick_types": "Rakenda tüübimuudatused kõigile nende tüüpide {n} elemendile",
+ "type_change.tick_types_first": "Märgi kõigepealt tüübimuudatus: iga selle tüübi element võtab selle üle",
+ "xl.msg.types_first": "kinnita kõigepealt tüübimuudatused"
+}

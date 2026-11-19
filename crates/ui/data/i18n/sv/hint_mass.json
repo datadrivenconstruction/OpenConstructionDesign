@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "Fri yta",
+ "cmd.mass.panelize": "Dela upp i paneler",
+ "cmd.mass.surface_shell": "Tak på yta",
+ "cmd.mass.thicken": "Tjocklek",
+ "hint.mass.freeform.first": "Fri yta: första hörnet av planens rektangel · skriv höjningen · Esc — avbryt",
+ "hint.mass.freeform.next": "Fri yta: motsatt hörn · skriv höjningen · Esc — avbryt",
+ "hint.mass.panelize.first": "Paneler: välj en fri yta i 3D · Esc — avbryt",
+ "hint.mass.panelize.value": "Paneler: skriv panelstorleken · Enter — tillämpa · Esc — avbryt",
+ "hint.mass.surface_shell.first": "Tak på yta: välj en fri yta i 3D · Esc — avbryt",
+ "hint.mass.surface_shell.value": "Tak på yta: skriv tjockleken · Enter — tillämpa · Esc — avbryt",
+ "hint.mass.thicken.first": "Tjocklek: välj en fri yta i 3D · Esc — avbryt",
+ "hint.mass.thicken.value": "Tjocklek: skriv tjockleken (0 — endast yta) · Enter — tillämpa · Esc — avbryt",
+ "status.mass.pick_surface": "Välj en fri yta",
+ "status.mass.freeform_small": "Rektangeln är för liten: minst 0,5 m åt varje håll",
+ "name.mass.freeform": "Fri yta",
+ "rgroup.mass_free": "Avancerat"
+}

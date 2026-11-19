@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "Vad som händer när en arbetsbok har exporterats",
+ "settings.area_decimals_desc": "Antal decimaler för areor",
+ "settings.volume_decimals_desc": "Antal decimaler för volymer",
+ "settings.frac_desc": "Minsta bråkdel av en tum i imperiska längder",
+ "settings.small_area_desc": "Visa areor under en kvadratfot i kvadrattum",
+ "settings.sample_desc": "Hur siffrorna ser ut med de aktuella valen",
+ "autosave.title_desc": "Behåll en återställningskopia av det öppna projektet",
+ "autosave.interval_desc": "Tid mellan återställningskopior",
+ "autosave.keep_desc": "Äldre återställningskopior tas bort",
+ "autosave.folder_desc": "Tomt betyder standardmappen",
+ "autosave.remind_desc": "Påminnelse om att spara ett projekt som ännu saknar fil",
+ "settings.backend_desc": "Använd grafikadapter",
+ "settings.news_desc": "Vad som ändrats i den här versionen",
+ "settings.assoc_default_desc": "Gör den här appen till standard för modellfiler",
+ "settings.data_dir_desc": "Cache, återställningskopior och loggar sparas här."
+}

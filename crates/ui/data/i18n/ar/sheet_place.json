@@ -1,0 +1,15 @@
+{
+ "sheet_place.place_view_tip": "وضع عرض أو جدول على الورقة",
+ "sheet_place.properties_tip": "رقم الورقة واسمها ومقاسها والمراجعات",
+ "sheet_place.print_tip": "طباعة الورقة أو تصديرها",
+ "sheet_place.fit_tip": "ملاءمة الورقة لنافذة العرض",
+ "sheet_place.activate_tip": "عدّل العرض مباشرة على الورقة: تحريك وتكبير واقتطاع",
+ "sheet_place.open_view_tip": "فتح العرض في علامة تبويب مستقلة",
+ "sheet_place.done_tip": "إنهاء تحرير العرض على الورقة",
+ "sheet_place.reset_crop_tip": "إزالة الاقتطاع وعرض العرض كاملًا",
+ "sheet_place.scale_tip": "مقياس العرض المحدد على الورقة",
+ "sheet_place.title_tip": "العنوان الظاهر أسفل العرض على الورقة",
+ "sheet_place.banner": "تحرير العرض على الورقة",
+ "sheet_place.new_set_tip": "إنشاء مجموعة أوراق للطباعة معًا",
+ "sheet_place.new_sheet_tip": "إضافة ورقة إلى المشروع"
+}

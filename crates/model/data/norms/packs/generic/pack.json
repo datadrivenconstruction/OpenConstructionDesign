@@ -1,0 +1,26 @@
+{
+ "id": "generic",
+ "version": "2026.11",
+ "parent": null,
+ "country": null,
+ "lang": [
+  "en"
+ ],
+ "units": {
+  "length": "m",
+  "display": "metric"
+ },
+ "conventions": {
+  "ground_floor": 0,
+  "area_standard": "net",
+  "net_share": 1.0,
+  "note": "International default: street level is the ground floor, areas are room areas inside the walls. Our own summary, not checked against a clause.",
+  "source": null
+ },
+ "status": "generic",
+ "climate": {
+  "zones": [],
+  "default": null
+ },
+ "note": "International defaults for countries without a pack of their own. No number here is checked against a national document: all are advice."
+}

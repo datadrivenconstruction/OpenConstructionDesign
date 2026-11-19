@@ -1,0 +1,4 @@
+{
+ "source_input.err.number": "“{text}” is not a number; this parameter holds a number. Nothing written",
+ "source_input.err.comma": "“{text}”: use a point for decimals (1.5); a comma only groups thousands (1,000). Nothing written"
+}

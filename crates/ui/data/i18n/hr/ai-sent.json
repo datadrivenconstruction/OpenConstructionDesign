@@ -1,0 +1,8 @@
+{
+ "ai_sent.summary": "Podaci projekta u ovom zahtjevu: {messages} poruka, {tools} rezultata alata, {images} slika",
+ "ai_sent.copy": "Kopiraj",
+ "ai_sent.filter": "Traži u poslanim zahtjevima",
+ "ai_sent.no_match": "Nijedan zahtjev ne odgovara.",
+ "ai_sent.instructions": "Upute i alati",
+ "ai_sent.local_note": "Čuva se samo na ovom računalu, za ovu sesiju. Ključevi i lozinke se nikad ne prikazuju."
+}

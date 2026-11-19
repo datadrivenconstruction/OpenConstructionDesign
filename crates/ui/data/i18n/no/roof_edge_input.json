@@ -1,0 +1,23 @@
+{
+ "roof_edge.err.number": "Skriv inn et tall",
+ "roof_edge.err.positive": "Må være større enn null",
+ "roof_edge.err.nonneg": "Må ikke være negativ",
+ "roof_edge.err.max": "Må ikke overstige {max}",
+ "roof_edge.list.empty_hint": "Legg til fascia, takrenner, undertak eller takvinduer med takkommandoene",
+ "roof_edge.edit_tip": "Rediger egenskaper",
+ "roof_edge.delete_tip": "Slett",
+ "roof_edge.pe.del_tip": "Fjern dette punktet (en seksjon beholder minst 3)",
+ "roof_edge.pe.up_tip": "Flytt dette punktet opp",
+ "roof_edge.confirm_edge": "Slette {name}? Ctrl+Z henter den tilbake.",
+ "roof_edge.confirm_profile": "Slette profilen {name}? Ctrl+Z henter den tilbake.",
+ "roof_edge.deleted_one": "Slettet {name}",
+ "roof_edge.deleted_n": {
+  "one": "Slettet # element",
+  "other": "Slettet # elementer"
+ },
+ "roof_edge.profile_deleted": "Profil slettet",
+ "roof_edge.profile_in_use": {
+  "one": "Brukt av # kantelement: slett eller endre det først",
+  "other": "Brukt av # kantelementer: slett eller endre dem først"
+ }
+}

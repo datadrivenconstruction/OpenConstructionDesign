@@ -1,0 +1,160 @@
+[
+  {
+    "id": "e3d.gizmo",
+    "icon": "gizmo",
+    "mnemonic": null,
+    "shortcuts": [],
+    "tab": "modify",
+    "surfaces": [
+      "R"
+    ],
+    "stage": "M3",
+    "group": "edit3d"
+  },
+  {
+    "id": "e3d.box",
+    "icon": "box-select",
+    "mnemonic": null,
+    "shortcuts": [],
+    "tab": "modify",
+    "surfaces": [
+      "R"
+    ],
+    "stage": "M3",
+    "group": "edit3d"
+  },
+  {
+    "id": "e3d.measure",
+    "icon": "measure",
+    "mnemonic": null,
+    "shortcuts": [],
+    "tab": "modify",
+    "surfaces": [],
+    "stage": "M3",
+    "group": "edit3d",
+    "priority": 6
+  },
+  {
+    "id": "e3d.snap",
+    "icon": "snap-3d",
+    "mnemonic": null,
+    "shortcuts": [],
+    "tab": "modify",
+    "surfaces": [
+      "R"
+    ],
+    "stage": "M3",
+    "group": "edit3d",
+    "priority": 6
+  },
+  {
+    "id": "e3d.wall",
+    "icon": "wall-3d",
+    "mnemonic": null,
+    "shortcuts": [],
+    "tab": "modify",
+    "surfaces": [
+      "R"
+    ],
+    "stage": "M3",
+    "group": "edit3d",
+    "repeatable": true,
+    "priority": 6
+  },
+  {
+    "id": "e3d.floor",
+    "icon": "floor-3d",
+    "mnemonic": null,
+    "shortcuts": [],
+    "tab": "modify",
+    "surfaces": [
+      "R"
+    ],
+    "stage": "M3",
+    "group": "edit3d",
+    "repeatable": true,
+    "priority": 6
+  },
+  {
+    "id": "e3d.column",
+    "icon": "column-3d",
+    "mnemonic": null,
+    "shortcuts": [],
+    "tab": "modify",
+    "surfaces": [
+      "R"
+    ],
+    "stage": "M3",
+    "group": "edit3d",
+    "repeatable": true,
+    "priority": 6
+  },
+  {
+    "id": "e3d.beam",
+    "icon": "beam-3d",
+    "mnemonic": null,
+    "shortcuts": [],
+    "tab": "modify",
+    "surfaces": [
+      "R"
+    ],
+    "stage": "M3",
+    "group": "edit3d",
+    "repeatable": true,
+    "priority": 6
+  },
+  {
+    "id": "e3d.wp_level",
+    "icon": "wp-level",
+    "mnemonic": null,
+    "shortcuts": [],
+    "tab": "modify",
+    "surfaces": [
+      "R"
+    ],
+    "stage": "M3",
+    "group": "workplane",
+    "priority": 6,
+    "variants": [
+      "e3d.wp_face",
+      "e3d.wp_ref",
+      "e3d.wp_pick"
+    ]
+  },
+  {
+    "id": "e3d.wp_face",
+    "icon": "wp-face",
+    "mnemonic": null,
+    "shortcuts": [],
+    "tab": "modify",
+    "surfaces": [
+      "R"
+    ],
+    "stage": "M3",
+    "group": "workplane"
+  },
+  {
+    "id": "e3d.wp_ref",
+    "icon": "wp-ref",
+    "mnemonic": null,
+    "shortcuts": [],
+    "tab": "modify",
+    "surfaces": [
+      "R"
+    ],
+    "stage": "M3",
+    "group": "workplane"
+  },
+  {
+    "id": "e3d.wp_pick",
+    "icon": "wp-points",
+    "mnemonic": null,
+    "shortcuts": [],
+    "tab": "modify",
+    "surfaces": [
+      "R"
+    ],
+    "stage": "M3",
+    "group": "workplane"
+  }
+]

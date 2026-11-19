@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "Doblehin ang sheet kasama ang mga view",
+ "cmd.view.sheet_duplicate_title": "Doblehin ang sheet (title block lamang)",
+ "sheets.dup.menu_views": "Doblehin kasama ang mga view",
+ "sheets.dup.menu_title": "Doblehin, title block lamang",
+ "sheets.dup.done": "Nagawa ang sheet {number} mula sa {src}: {views} view, {sched} schedule at legend. Hindi kinopya ang mga revision; hindi pa ito na-issue.",
+ "sheets.dup.none": "Magbukas ng sheet para madoble ito",
+ "sheets.dup.copy": "kopya",
+ "cmd.view.sheet_duplicate.short": "Doblehin kasama ang mga view",
+ "cmd.view.sheet_duplicate_title.short": "Doblehin ang title block"
+}

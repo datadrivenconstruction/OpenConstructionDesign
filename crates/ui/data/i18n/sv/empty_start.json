@@ -1,0 +1,8 @@
+{
+ "empty.start_recent.title": "Inga senaste projekt ännu",
+ "empty.start_recent.hint": "Projekt du öppnar visas här. Börja med exempelmodellen.",
+ "empty.start_recent.action": "Öppna exempel",
+ "start.recent_open_file": "Öppna fil…",
+ "start.forgot": "Borttagen från senaste: {name}",
+ "start.forgot_undo": "Ångra"
+}

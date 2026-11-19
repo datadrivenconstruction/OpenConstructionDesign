@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "찾을 수 없음",
+ "empty.browser_search.hint": "이 검색과 일치하는 뷰, 레벨, 유형 또는 룸이 없습니다.",
+ "empty.browser_search.action": "검색 지우기",
+ "empty.xl_filtered.title": "필터와 일치하는 항목 없음",
+ "empty.xl_filtered.hint": "더 많은 종류를 켜거나, 다른 시트를 고르거나, 검색어를 바꾸세요.",
+ "empty.xl_filtered.action": "필터 지우기",
+ "empty.xl_nochanges.title": "통합 문서에 변경 없음",
+ "empty.xl_nochanges.hint": "통합 문서가 모델과 일치합니다: 가져오면 변경되는 것이 없습니다.",
+ "empty.version_same.title": "모델이 동일합니다",
+ "empty.version_same.hint": "열린 모델과 선택한 버전 사이에 차이가 없습니다.",
+ "empty.templates.title": "아직 뷰 템플릿이 없습니다",
+ "empty.templates.hint": "현재 뷰에서 하나를 만들면 다른 뷰에서 그 설정을 재사용할 수 있습니다.",
+ "empty.templates.action": "템플릿 이름 지정",
+ "empty.fe_params.title": "아직 매개변수가 없습니다",
+ "empty.fe_params.hint": "아래에 매개변수를 추가하면 크기, 재료 또는 가시성을 제어합니다.",
+ "empty.fe_params.action": "매개변수 추가"
+}

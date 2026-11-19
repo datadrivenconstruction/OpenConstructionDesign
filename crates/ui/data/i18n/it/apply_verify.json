@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "Applicazione interrotta: il modello è rimasto com'era",
+ "apply_verify.rolled_back": "L'applicazione non corrispondeva alla bozza ed è stata annullata; il modello è invariato. {what}",
+ "apply_verify.diff.missing": "La bozza mostra {what} {kind}, ma Applica non lo ha fatto.",
+ "apply_verify.diff.extra": "Applica {kind} {what}, che la bozza non mostra.",
+ "apply_verify.diff.kind": "La bozza mostra {what} {shown}, ma Applica {applied} lo.",
+ "apply_verify.diff.value": "{what}: “{col}” è risultato diverso dalla bozza.",
+ "apply_verify.diff.truncated": "La bozza e la modifica applicata differiscono per dimensione.",
+ "apply_verify.diff.unreadable": "La modifica applicata non è stata riletta ({e}).",
+ "apply_verify.no_base": "Applicazione non eseguita: manca la copia con cui verificare la bozza. Il modello è invariato; richiedi di nuovo la bozza.",
+ "apply_verify.take_back_failed": "Annullamento non riuscito ({e}): usa Annulla.",
+ "apply_verify.kind.created": "creato",
+ "apply_verify.kind.changed": "modificato",
+ "apply_verify.kind.deleted": "eliminato",
+ "apply_verify.card.type_row": "Tipo {type} · {n} elementi ricevono la modifica"
+}

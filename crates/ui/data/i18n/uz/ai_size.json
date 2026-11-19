@@ -1,0 +1,10 @@
+{
+ "ai.size.count": "~{n} / {max} token",
+ "ai.size.block": "Bu model uchun juda uzun: taxminan {n} token, {max} gacha sig'adi va javob uchun joy qoldiradi — qisqartiring yoki bo'ling",
+ "ai.size.trim": "Sig'dirish uchun qisqartirish",
+ "ai.size.trim_tip": "Xabarning oxirini sig'adigan qilib kesadi. Siz bosmaguningizcha hech narsa kesilmaydi.",
+ "ai.size.drop_view": "Ko'rinishni chiqarib tashlash",
+ "ai.size.drop_level": "Qavatni chiqarib tashlash",
+ "ai.size.drop_selection": "Tanlovni chiqarib tashlash",
+ "ai.size.sep": ","
+}

@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "Lap duplikálása nézetekkel",
+ "cmd.view.sheet_duplicate_title": "Lap duplikálása (csak a címtábla)",
+ "sheets.dup.menu_views": "Duplikálás nézetekkel",
+ "sheets.dup.menu_title": "Duplikálás, csak a címtábla",
+ "sheets.dup.done": "A(z) {number} lap létrehozva ebből: {src}: {views} nézet, {sched} kimutatás és jelmagyarázat. A módosítások nem másolódnak; a lap nincs kiadva.",
+ "sheets.dup.none": "Nyisson meg egy lapot a duplikáláshoz",
+ "sheets.dup.copy": "másolat",
+ "cmd.view.sheet_duplicate.short": "Duplikálás nézetekkel",
+ "cmd.view.sheet_duplicate_title.short": "Címtábla duplikálása"
+}

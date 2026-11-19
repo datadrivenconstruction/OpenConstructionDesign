@@ -1,0 +1,6 @@
+{
+ "project_seed.seed_level": "लेवल 1",
+ "project_seed.seed_wall_partition": "विभाजन 100",
+ "project_seed.seed_wall_masonry": "चिनाई 200",
+ "project_seed.seed_wall_exterior": "बाहरी 380"
+}

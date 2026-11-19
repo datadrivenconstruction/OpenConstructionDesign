@@ -1,0 +1,4 @@
+{
+ "ai.issue.delete_large": "{0} eleman silinecek, {1} sınırının üzerinde. İzin gerekli",
+ "ai.issue.refused_large": "{0} eleman değişecek, {1} kesin sınırının üzerinde. Planı daha küçük parçalara bölün"
+}

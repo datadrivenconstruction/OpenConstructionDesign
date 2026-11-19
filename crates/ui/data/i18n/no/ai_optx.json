@@ -1,0 +1,10 @@
+{
+ "ai.optx.applied": "Alternativ «{name}» brukt. Angre returnerer det til utkast",
+ "ai.optx.missing": "Alternativ {id} finnes ikke lenger",
+ "ai.optx.accepted": "Alternativ {id} er allerede brukt",
+ "ai.optx.not_draft": "Alternativ {id} ble avvist og kan ikke brukes",
+ "ai.optx.stale": "Modellen ble endret etter at alternativ {id} ble laget: generer det på nytt først",
+ "ai.optx.bad_recipe": "Oppskriften for alternativet kan ikke leses: {e}",
+ "ai.optx.refused": "Alternativet ble ikke brukt ({code}): {reason}",
+ "ai.optx.failed": "Alternativet ble ikke brukt: {e}"
+}

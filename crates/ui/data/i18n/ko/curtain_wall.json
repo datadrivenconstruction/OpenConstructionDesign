@@ -1,0 +1,12 @@
+{
+ "curtain_wall.cw.issue.slab": "바닥 {id}: {e}",
+ "curtain_wall.cw.issue.body": "본체 {id}: {e}",
+ "curtain_wall.cw.added": "추가된 커튼월: {n}",
+ "curtain_wall.cw.add_failed": "커튼월을 만들 수 없음: {e}",
+ "curtain_wall.cw.edited_warn": "커튼월 #{id} 변경됨: {w}",
+ "curtain_wall.cw.edited": "커튼월 #{id} 변경됨",
+ "curtain_wall.cw.not_changed": "변경되지 않음: {e}",
+ "curtain_wall.cw.room_edited": "실 #{id} 변경됨",
+ "curtain_wall.cw.slope_range": "변경되지 않음: 기울기가 범위를 벗어남",
+ "curtain_wall.cw.slope_set": "바닥 #{id}: 기울기 {pct}"
+}

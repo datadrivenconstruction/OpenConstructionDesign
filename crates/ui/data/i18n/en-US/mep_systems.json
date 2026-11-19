@@ -1,0 +1,21 @@
+{
+ "mep.row.system": "System",
+ "mep.row.elevation": "Start elevation",
+ "mep.row.slope": "Slope",
+ "mep.row.material": "Material",
+ "mep.row.dev_elevation": "Elevation",
+ "mep.row.no_system": "That system no longer exists. Pick another one.",
+ "mep.row.no_points": "The run has no points, so it has no elevation.",
+ "mep.row.system_domain": "System {system} does not take this run type ({kind}). Pick a system of the same network type.",
+ "mep.row.material_pipes": "A material applies to pipes only; this run is a {kind}.",
+ "mep.row.no_catalog": "The material has no catalog sizes for this run.",
+ "mep.mat.none": "Not set",
+ "mep.mat.steel": "Steel",
+ "mep.mat.copper": "Copper",
+ "mep.mat.pvc": "PVC",
+ "mep.mat.pp": "Polypropylene",
+ "mep.err.follow_blocked": "A connected run cannot follow this change: there is no room for its leg at the new place. Move the device less, or disconnect the run first.",
+ "mep.err.follow_slope": "A connected run has a fall that cannot be kept at the new place: it would drop below the least fall of its system. Move the device less in height, or disconnect the run first.",
+ "mep.err.follow_port_lost": "A connector this run sat on no longer exists after the edit. Move the run away first, or keep the device type.",
+ "mep.err.follow_device": "This run ends on a device connector and cannot leave it. Move the device instead, or disconnect the run first."
+}

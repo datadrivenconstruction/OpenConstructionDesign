@@ -1,0 +1,14 @@
+{
+ "save_guard.save.empty_over_full": "Er is niets opgeslagen: het model is leeg, en het bestand bevat al inhoud. Het bestand is ongewijzigd. Gebruik Opslaan als om naar een andere naam te schrijven.",
+ "save_guard.refuse.body": "Er is niets opgeslagen: het model is leeg, en {name} bevat al inhoud. Het bestand is ongewijzigd.",
+ "save_guard.refuse.foreign": "Dit is geen DDC Editor-bestand, dus het kan niet worden vervangen. Gebruik Opslaan als om naar een andere naam te schrijven.",
+ "save_guard.refuse.ask": "{name} vervangen? Het bevat {what}. Het wordt eerst naar de map _archive ernaast verplaatst, daarna wordt het lege model geschreven.",
+ "save_guard.refuse.holds_db": "{n} elementen en inhoudsrijen",
+ "save_guard.refuse.holds_ifc": "IFC met producten",
+ "save_guard.refuse.replace": "Toch vervangen…",
+ "save_guard.refuse.replace_yes": "Verplaatsen en vervangen",
+ "save_guard.refuse.save_as": "Opslaan als…",
+ "save_guard.refuse.cancel": "Annuleren",
+ "save_guard.replace.moved": "Het vorige bestand is naar {path} verplaatst",
+ "save_guard.replace.move_failed": "{name} kon niet opzij worden gezet: {error}. Er is niets geschreven."
+}

@@ -1,0 +1,28 @@
+{
+ "assemblies": [
+  {
+   "id": "ext_wall_default",
+   "role": "exterior_wall",
+   "u_value": 0.32,
+   "region": "Moscow",
+   "source": "sp50.13330",
+   "verified": false
+  },
+  {
+   "id": "roof_default",
+   "role": "roof",
+   "u_value": 0.21,
+   "region": "Moscow",
+   "source": "sp50.13330",
+   "verified": false
+  },
+  {
+   "id": "window_default",
+   "role": "window",
+   "u_value": 1.67,
+   "region": "Moscow",
+   "source": "sp50.13330",
+   "verified": false
+  }
+ ]
+}

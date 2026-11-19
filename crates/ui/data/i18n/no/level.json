@@ -1,0 +1,13 @@
+{
+ "level.err_open": "Etasje ikke åpnet: {e}",
+ "level.need_name": "En etasje trenger et navn og en kote",
+ "level.created": "Etasjen “{name}” opprettet",
+ "level.err_create": "Etasje ikke opprettet: {e}",
+ "level.err_edit": "Etasje ikke endret: {e}",
+ "level.edited": "Etasjen “{name}” endret",
+ "level.edited_stale": "Etasjen “{name}” endret, visningen ikke oppdatert: {e}",
+ "level.last": "Den siste etasjen kan ikke slettes",
+ "level.deleted": "Etasje slettet",
+ "level.not_empty": "Etasjen er ikke tom: slett elementene først",
+ "level.err_delete": "Etasje ikke slettet: {e}"
+}

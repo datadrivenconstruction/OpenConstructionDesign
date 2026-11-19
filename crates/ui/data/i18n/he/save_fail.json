@@ -1,0 +1,16 @@
+{
+ "save_fail.save_fail.title": "הפרויקט לא נשמר",
+ "save_fail.save_fail.kept": "העריכות שלך עדיין פתוחות כאן. דבר לא אובד כל עוד העורך פתוח.",
+ "save_fail.save_fail.details": "פרטים",
+ "save_fail.save_fail.copy": "העתק",
+ "save_fail.save_fail.save_as": "שמור בשם…",
+ "save_fail.save_fail.retry": "נסה שוב",
+ "save_fail.save_fail.close": "סגור",
+ "save_fail.cause.full": "הדיסק מלא. פנה מקום או שמור את הפרויקט בכונן אחר.",
+ "save_fail.cause.denied": "התיקייה או הקובץ לקריאה בלבד, או שאין לך הרשאה לכתוב כאן. בחר תיקייה אחרת.",
+ "save_fail.cause.locked": "הקובץ פתוח בתוכנה אחרת. סגור אותו שם, ואז לחץ על נסה שוב.",
+ "save_fail.cause.missing": "התיקייה אינה קיימת עוד. בחר תיקייה אחרת, או שחזר אותה ולחץ על נסה שוב.",
+ "save_fail.cause.offline": "הכונן או תיקיית הרשת אינם זמינים. חבר אותם מחדש ולחץ על נסה שוב, או שמור במקום אחר.",
+ "save_fail.cause.too_long": "נתיב הקובץ ארוך מדי. בחר תיקייה או שם קובץ קצרים יותר.",
+ "save_fail.cause.other": "לא ניתן היה לכתוב את הקובץ: {detail}"
+}

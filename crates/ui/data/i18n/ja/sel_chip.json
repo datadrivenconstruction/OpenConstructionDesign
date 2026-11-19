@@ -1,0 +1,5 @@
+{
+ "sel_chip.opt.sel_hint": "要素をクリックして選択。Ctrl で追加、Shift で除外。",
+ "sel_chip.opt.units": "単位",
+ "sel_chip.sel_chip": "{name}: {n}"
+}

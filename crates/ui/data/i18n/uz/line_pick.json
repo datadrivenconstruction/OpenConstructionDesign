@@ -1,0 +1,22 @@
+{
+ "cmd.arch.grid_pick": "Chiziq bo'yicha to'r",
+ "cmd.arch.grid_pick.desc": "Joriy sathning chizma chizig'i bo'ylab aniq to'r yaratadi; nomlar ketma-ketlikni davom ettiradi. Tab bir vaqtda shu chizma qatlamidagi barcha parallel chiziqlarni oladi. Har bir tanlash — bitta qaytarish qadami.",
+ "cmd.struct.beam_pick": "Chiziq bo'yicha to'sin",
+ "cmd.struct.beam_pick.desc": "Faol sathda joriy turdagi to'sinni tanlangan chizma chizig'i bo'ylab joylashtiradi. Tab bog'langan zanjirni oladi. Har bir tanlash — bitta qaytarish qadami.",
+ "hint.grid_pick.one": "Chiziq bo'yicha to'r: chizma chizig'ini tanlang · Tab — qatlamidagi barcha parallel chiziqlar · Esc — chiqish",
+ "hint.grid_pick.more": "Chiziq bo'yicha to'r: chiziqni tanlang — uning qatlamidagi barcha parallel chiziqlar olinadi · Tab — bitta chiziq · Esc — o'chirish",
+ "hint.beam_pick.one": "Chiziq bo'yicha to'sin: chizma chizig'ini tanlang · Tab — bog'langan zanjir · Esc — chiqish",
+ "hint.beam_pick.more": "Chiziq bo'yicha to'sin: zanjirni olish uchun chiziqni tanlang · Tab — bitta chiziq · Esc — o'chirish",
+ "line_pick.st.start_grid": "Chizma chizig'ini tanlang. Tab: qatlamidagi barcha parallel chiziqlar",
+ "line_pick.st.start_beam": "{type} to'sin uchun chizma chizig'ini tanlang. Tab: bog'langan zanjir",
+ "line_pick.st.grid_done": "{name} to'r qo'shildi",
+ "line_pick.st.grids_done": "{n} ta to'r qo'shildi: {first} — {last}",
+ "line_pick.st.beam_done": "{type} to'sin qo'shildi",
+ "line_pick.st.beams_done": "{n} ta {type} to'sin qo'shildi",
+ "line_pick.st.on_grid": "Bu chiziqda allaqachon {name} to'r bor",
+ "line_pick.st.on_beam": "Bu chiziqda allaqachon {id} to'sin bor",
+ "line_pick.st.no_layer": "Chiziqlarning chizma qatlamlari hali noma'lum, qayta urinib ko'ring",
+ "line_pick.st.no_beam_type": "Katalogda to'sin kesimi yo'q",
+ "line_pick.st.reload_warn": "Yaratildi, lekin ko'rinish qayta yuklanmadi: {err}",
+ "line_pick.st.failed": "Yaratilmadi: {err}"
+}

@@ -1,0 +1,4 @@
+{
+ "sf.restored": "A(z) {file} beállítási fájl sérült volt; az utolsó jó másolat visszaállítva. A sérült fájl ezen a néven marad meg: {broken}.",
+ "sf.reset": "A(z) {file} beállítási fájl sérült, és egyik mentése sem használható; alapértékek vannak érvényben. A sérült fájl ezen a néven marad meg: {broken}."
+}

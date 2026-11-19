@@ -1,0 +1,10 @@
+{
+ "ai.size.sep": ",",
+ "ai.size.count": "~{n} / {max} tokens",
+ "ai.size.block": "Too long for this model: ~{n} tokens, up to {max} fit and leave room for the reply — shorten it or split it",
+ "ai.size.trim": "Trim to fit",
+ "ai.size.trim_tip": "Cut the end of the message so it fits. Nothing is cut until you click.",
+ "ai.size.drop_view": "Leave out the view",
+ "ai.size.drop_level": "Leave out the level",
+ "ai.size.drop_selection": "Leave out the selection"
+}

@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "Ange ett mallnamn först",
+ "view_template.name_taken": "En mall med det här namnet finns redan",
+ "view_template.pick_blocked": "Markera minst en vy först",
+ "view_template.views.one": "{n} vy",
+ "view_template.views.few": "{n} vyer",
+ "view_template.views.many": "{n} vyer",
+ "view_template.delete.title": "Ta bort den här mallen?",
+ "view_template.delete.body": "Mallen “{name}” tas bort. Används av {used}.",
+ "view_template.delete.unused": "Mallen “{name}” tas bort. Ingen vy använder den.",
+ "view_template.delete.keeps": "De här vyerna behåller sin nuvarande grafik men förlorar kopplingen.",
+ "view_template.delete.undo": "Du kan ångra detta med ett enda Ångra.",
+ "view_template.delete.confirm": "Ta bort mall"
+}

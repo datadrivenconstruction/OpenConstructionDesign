@@ -1,0 +1,12 @@
+{
+ "curtain_wall.cw.issue.slab": "sàn {id}: {e}",
+ "curtain_wall.cw.issue.body": "thân {id}: {e}",
+ "curtain_wall.cw.added": "Đã thêm tường rèm: {n}",
+ "curtain_wall.cw.add_failed": "Chưa dựng tường rèm: {e}",
+ "curtain_wall.cw.edited_warn": "Đã thay đổi tường rèm #{id}: {w}",
+ "curtain_wall.cw.edited": "Đã thay đổi tường rèm #{id}",
+ "curtain_wall.cw.not_changed": "Chưa thay đổi: {e}",
+ "curtain_wall.cw.room_edited": "Đã thay đổi phòng #{id}",
+ "curtain_wall.cw.slope_range": "Chưa thay đổi: độ dốc nằm ngoài phạm vi",
+ "curtain_wall.cw.slope_set": "Sàn #{id}: độ dốc {pct}"
+}

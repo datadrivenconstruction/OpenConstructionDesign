@@ -1,0 +1,15 @@
+[
+ {
+  "id": "arch.room_auto",
+  "icon": "room-auto",
+  "mnemonic": "RN",
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M3",
+  "group": "rooms"
+ }
+]

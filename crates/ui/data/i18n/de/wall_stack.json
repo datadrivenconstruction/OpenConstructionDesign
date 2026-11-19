@@ -1,0 +1,10 @@
+{
+ "wall_stack.we.stack_caption": "Verbundtyp",
+ "wall_stack.we.side_left": "Linke Seite",
+ "wall_stack.we.side_right": "Rechte Seite",
+ "wall_stack.we.from": "Von",
+ "wall_stack.we.to": "Bis",
+ "wall_stack.we.bottom": "Unten",
+ "wall_stack.we.delete_tip": "Dieses Profil löschen",
+ "wall_stack.we.from_after_to": "„Von“ muss vor „Bis“ liegen"
+}

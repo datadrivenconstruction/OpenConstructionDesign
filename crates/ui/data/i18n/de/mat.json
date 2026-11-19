@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "Beton",
+ "mat.masonry": "Mauerwerk",
+ "mat.brick": "Ziegel",
+ "mat.insulation": "Dämmung",
+ "mat.plaster": "Putz",
+ "mat.render": "Außenputz",
+ "mat.gypsum": "Gipskarton",
+ "mat.glass": "Glas",
+ "mat.wood": "Holz",
+ "mat.steel": "Stahl",
+ "mat.membrane": "Abdichtung",
+ "mat.other": "Sonstige",
+ "warn.cat.wall": "Wand",
+ "warn.cat.slab": "Geschossdecke",
+ "warn.cat.opening": "Öffnung",
+ "warn.cat.curtain_wall": "Vorhangfassade",
+ "td.mat.custom": "Sonstige…"
+}

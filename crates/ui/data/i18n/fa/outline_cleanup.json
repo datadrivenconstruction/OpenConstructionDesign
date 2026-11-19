@@ -1,0 +1,15 @@
+{
+ "cmd.ctx.floor.clean_outline": "پاکسازی خط محیط",
+ "cmd.ctx.floor.clean_outline.desc": "خارهای باریکی را که خط محیط کف به خودش برمی‌گردد حذف می‌کند. ابتدا پیش‌نمایش نشان داده می‌شود؛ یک مرحله واگرد.",
+ "outline_cleanup.title": "پاکسازی خط محیط",
+ "outline_cleanup.intro": "خط محیط این کف در خارهای باریکی به خودش برمی‌گردد: {n}. پاکسازی آن‌ها را حذف می‌کند؛ بقیه بدون تغییر می‌مانند.",
+ "outline_cleanup.legend_before": "خط ضخیم: خط محیط اکنون",
+ "outline_cleanup.legend_after": "خط نازک: خط محیط پس از پاکسازی",
+ "outline_cleanup.undo": "می‌توانید این را در یک مرحله واگرد کنید.",
+ "outline_cleanup.apply": "پاکسازی",
+ "outline_cleanup.cancel": "لغو",
+ "outline_cleanup.done": "خط محیط پاکسازی شد، خارها حذف شدند: {n}",
+ "outline_cleanup.none": "خط محیط این کف خار ندارد",
+ "outline_cleanup.failed": "خط محیط پاکسازی نشد",
+ "outline_cleanup.changed": "خط محیط پس از پیش‌نمایش تغییر کرده؛ چیزی نوشته نشد. پیش‌نمایش جدید را بررسی کنید."
+}

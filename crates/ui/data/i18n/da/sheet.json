@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "Genvejsoversigt",
+ "cmd.help.shortcuts.desc": "Viser alle genveje, som de er nu, efter kontekst. Tryk på ? uden for et tekstfelt.",
+ "sheet.title": "Tastaturgenveje",
+ "sheet.filter": "Filtrér efter kommando eller tast",
+ "sheet.filter_label": "Filtrér genveje",
+ "sheet.customize": "Tilpas…",
+ "sheet.close": "Luk",
+ "sheet.esc_close": "for at lukke",
+ "sheet.none": "Ingen genveje matcher",
+ "sheet.none_hint": "Prøv et andet ord eller en anden tast.",
+ "sheet.sec.general": "Generelt",
+ "sheet.sec.plan": "Plan",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "Lister",
+ "sheet.sec.sheets": "Ark",
+ "sheet.sec.ai": "AI"
+}

@@ -1,0 +1,5 @@
+{
+ "drafts_overwrite.ow.project": "Het opslaan van het project wacht op dit antwoord. Vervang waarden om door te gaan met opslaan; Terug naar bewerken behoudt elke wijziging en schrijft niets.",
+ "drafts_overwrite.drafts.ow_wait": "Opslaan wacht op uw antwoord in de familie-editor: het laden van een familie zou waarden van projecttypen vervangen. Er is niets gesloten.",
+ "drafts_overwrite.drafts.ow_back": "Opslaan is gestopt: waarden van projecttypen zijn bewaard en de familiewijzigingen staan nog open. Er is niets gesloten."
+}

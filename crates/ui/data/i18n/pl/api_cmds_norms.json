@@ -1,0 +1,8 @@
+{
+ "api.cmd.norms_lookup": "Znajdź przepisy pakietu norm projektu wg tematu, elementu lub kodu",
+ "api.cmd.norms_check": "Sprawdź model według pakietu norm projektu i wypisz ustalenia",
+ "api.cmd.norms_programme": "Typowy program pomieszczeń w kraju projektu dla danego typu budynku",
+ "api.cmd.select_similar": "Zaznacz każdy podobny element: ten sam typ lub kategoria, na tym poziomie lub w całym projekcie",
+ "api.cmd.create_drawing_set": "Przygotuj komplet rysunków do wydruku: rzuty, przekroje, elewacje, zestawienia i tabliczki",
+ "api.cmd.deliver_project": "Od opisu do plików w jednym kroku: projekt i jego komplet rysunków, wyeksportowane po Zastosuj"
+}

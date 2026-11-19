@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "Aperçu",
+ "agent_draft.ag.preview.desc": "Met en contour les éléments de ce brouillon sur la zone de dessin tant que le pointeur reste sur le bouton. Rien n'est modifié.",
+ "agent_draft.type.column": "Poteau",
+ "agent_draft.type.roof": "Toiture",
+ "agent_draft.type.ceiling": "Plafond",
+ "agent_draft.type.stair": "Monolithique",
+ "agent_draft.type.railing": "Garde-corps",
+ "agent_draft.type.shaft": "Puits",
+ "agent_draft.type.axis": "Axe 6,5 mm",
+ "agent_draft.type.refplane": "Plan de référence"
+}

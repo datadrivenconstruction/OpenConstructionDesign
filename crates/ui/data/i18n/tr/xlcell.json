@@ -1,0 +1,15 @@
+{
+ "xl.msg.cell_clipped": "metin hücre sınırına sığması için kesildi; salt okunur, düzenleme uygulanmadı",
+ "xlcell.status": "Dışa aktarıldı. {count} hücre kısaltıldı veya boş bırakıldı — ayrıntılar penceresine bakın.",
+ "xlcell.title": "Dışa aktarma tarafından değiştirilen hücreler",
+ "xlcell.intro": "Bu hücreler olduğu gibi yazılamadı. Tam değer modelde kalır; hücre kilitlenir ve çalışma kitabında düzenlenemez.",
+ "xlcell.col_sheet": "Sayfa",
+ "xlcell.col_row": "Satır",
+ "xlcell.col_col": "Kolon",
+ "xlcell.col_id": "Öğe kimliği",
+ "xlcell.col_what": "Ne oldu",
+ "xlcell.what_clipped": "Metin hücre sınırına göre kesildi",
+ "xlcell.what_blank": "Sonlu bir sayı değil, hücre boş bırakıldı",
+ "xlcell.more": "… ve {count} tane daha",
+ "xlcell.close": "Kapat"
+}

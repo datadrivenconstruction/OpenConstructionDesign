@@ -1,0 +1,8 @@
+{
+ "cmd.file.save_copy": "Spremi kopiju za drugu osobu…",
+ "cmd.file.save_copy.desc": "Sprema kopiju projekta bez AI suglasnosti i, osim ako ne odlučiš drugačije, bez AI dnevnika. Ovaj projekt ostaje isti.",
+ "ai.copy.title": "Spremi kopiju",
+ "ai.copy.journal": "Uključiti AI dnevnik u kopiju? Dnevnik sadrži zahtjeve, odgovore i adrese. Suglasnost za oblak se nikad ne kopira: druga osoba odlučuje sama. Odaberi Ne da izostaviš dnevnik.",
+ "ai.copy.done": "Kopija spremljena: {name}",
+ "ai.copy.same": "Odaberi drugu datoteku: kopija ne može zamijeniti otvoreni projekt."
+}

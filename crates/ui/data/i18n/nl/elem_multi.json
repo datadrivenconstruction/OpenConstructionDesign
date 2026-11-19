@@ -1,0 +1,10 @@
+{
+ "elem.multi.title": "{n} elementen",
+ "elem.multi.varies": "varieert",
+ "elem.multi.tip": "Enter stelt alle geselecteerde elementen in",
+ "elem.multi.hidden": "{n} rijen alleen bij sommige elementen",
+ "elem.multi.none": "De geselecteerde elementen hebben geen rijen gemeen",
+ "elem.multi.range": "De waarde ligt buiten het toegestane bereik",
+ "elem.multi.changed": "{n} elementen gewijzigd · Ctrl+Z maakt ongedaan",
+ "elem.multi.same": "Deze waarde staat al bij alle geselecteerde elementen"
+}

@@ -1,0 +1,5 @@
+{
+ "palette.find_named": "Εύρεση στοιχείων με όνομα «{q}»",
+ "palette.search_help": "Βοήθεια αναζήτησης για «{q}»",
+ "palette.not_found": "Δεν υπάρχει όνομα «{q}»"
+}

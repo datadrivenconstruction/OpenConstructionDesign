@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "Maglagay muna ng pangalan ng template",
+ "view_template.name_taken": "May template na may ganitong pangalan na",
+ "view_template.pick_blocked": "Lagyan muna ng check ang kahit isang view",
+ "view_template.views.one": "{n} tanaw",
+ "view_template.views.few": "{n} na view",
+ "view_template.views.many": "{n} na view",
+ "view_template.delete.title": "Burahin ang template na ito?",
+ "view_template.delete.body": "Buburahin ang template na \"{name}\". Ginagamit ito ng {used}.",
+ "view_template.delete.unused": "Buburahin ang template na \"{name}\". Walang view na gumagamit nito.",
+ "view_template.delete.keeps": "Itatago ng mga view na ito ang kasalukuyang graphics at mawawala ang link.",
+ "view_template.delete.undo": "Maibabalik ito gamit ang isang Undo.",
+ "view_template.delete.confirm": "Burahin ang template"
+}

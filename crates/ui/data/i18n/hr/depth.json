@@ -1,0 +1,22 @@
+{
+ "depth.chip": "Dubina {level}",
+ "depth.chip_tip": "Koliko daleko sljedeće pokretanje razrađuje projekt: od D1 koncepta do D5 izrade, po disciplini",
+ "depth.all_off": "sve discipline isključene",
+ "depth.disc.arch": "Arh",
+ "depth.disc.struct": "Kon",
+ "depth.disc.mep": "MEP",
+ "depth.disc.doc": "Dok",
+ "depth.project": "Dubina projekta",
+ "depth.level.1": "D1 Koncept: volumen, etaže, površine, jedan list",
+ "depth.level.2": "D2 Skica: zidovi, prostorije po programu, otvori, mreža, tlocrti",
+ "depth.level.3": "D3 Projekt: slojeviti tipovi, dimenzionirana konstrukcija, glavni vodovi MEP-a i završeci, tablice",
+ "depth.level.4": "D4 Radni: detalji spojeva, okov, završne obrade, armatura, ogranci",
+ "depth.level.5": "D5 Izrada: tablice savijanja, čelični spojevi, montažni elementi, troškovnik",
+ "depth.as_project": "Isto",
+ "depth.estimate": "Procjena: oko {elements} elemenata, {minutes} min, {tokens} tokena u {calls} poziva, {sheets} listova",
+ "depth.estimate_none": "Procjena dolazi s izrađenim nacrtom projekta: model je još prazan",
+ "depth.heat": "Toplinska karta dubine",
+ "depth.heat.row": "Dubina",
+ "depth.settings": "Razina razrade ovog projekta",
+ "depth.settings_desc": "Razina do koje AI asistent radi, D1 do D5, s prekidačem i vlastitom razinom po disciplini; sprema se u datoteku projekta"
+}

@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "Spoji varijantu: {name}",
+ "ai_opt_merge.whole": "Spoji cijelu varijantu",
+ "ai_opt_merge.parts": "Spoji odabrane dijelove",
+ "ai_opt_merge.note": "Zašto ova varijanta",
+ "ai_opt_merge.rebased": "Model se promijenio nakon izrade ove varijante: spajanje je ponovno izračunato prema trenutnom modelu. Provjeri promjene prije primjene.",
+ "ai_opt_merge.left.not_picked": "Nije odabrano iz varijante",
+ "ai_opt_merge.left.unticked": "Odznačeno u varijanti",
+ "ai_opt_merge.left.conflict": "Ne može se dodati trenutnom modelu: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "Ova varijanta se ne može spojiti. Odbijenu varijantu prvo treba vratiti.",
+ "ai_opt_merge.refused.stale": "Model se promijenio nakon izrade ove varijante. Ponovno izračunaj spajanje prema trenutnom modelu.",
+ "ai_opt_merge.refused.nothing_picked": "Nema odabranog za spajanje.",
+ "ai_opt_merge.refused.unknown_item": "Stavka {item} nije dio ove varijante.",
+ "ai_opt_merge.refused.not_in_option": "Odabrani element nije dio ove varijante.",
+ "ai_opt_merge.refused.needs_left_out": "Stavka {item} treba stavku {needs}. Odaberi i nju ili dopusti dodavanje ovisnosti.",
+ "ai_opt_merge.refused.set_gone": "Stavka {item} upućuje na odabir koji više ne postoji. Ponovno generiraj varijantu.",
+ "ai_opt_merge.refused.busy": "Otvoren je drugi plan. Prvo ga primijeni ili odbij.",
+ "ai_opt_merge.refused.failed": "Spajanje se nije moglo pripremiti: {reason}",
+ "ai_opt_merge.revive": "Vrati varijantu",
+ "ai_opt_merge.merged": "Spojeno"
+}

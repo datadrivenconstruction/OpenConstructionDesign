@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "Ohitetut rivit ja solut",
+ "xlsx_issues.conflicts_title": "Muutettu molemmissa paikoissa",
+ "xlsx_issues.missing_title": "Arkki puuttuu työkirjasta",
+ "xlsx_issues.look_alike_title": "Arkin nimi ei täsmää",
+ "xlsx_issues.mass_title": "Massapoisto vaatii vahvistuksen",
+ "xlsx_issues.sheets_missing": "Arkit {sheets} puuttuvat työkirjasta (nimetty uudelleen tai poistettu); niiden rivejä ei verrattu.",
+ "xlsx_issues.keep_model": "Säilytä malli",
+ "xlsx_issues.take_book": "Ota työkirjan arvo",
+ "xlsx_issues.open_book_tip": "Avaa tiedoston sovelluksessaan. Mikään ei muutu mallissa; esikatselu päivittyy, kun tallennat työkirjan."
+}

@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "Đã hoàn tác — Ctrl+Y làm lại",
+ "history.hist.empty": "Chưa có thay đổi",
+ "history.hist.empty_hint": "Các chỉnh sửa của bạn hiển thị ở đây. Nhấp vào bước bất kỳ để quay về.",
+ "history.hist.revert_all_n": "Hoàn tác mọi thay đổi AI ({n})"
+}

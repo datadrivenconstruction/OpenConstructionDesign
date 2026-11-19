@@ -1,0 +1,9 @@
+{
+ "tool.room": "Oda",
+ "tool.room.name": "Oda",
+ "room_tool.room.name": "Ad",
+ "hint.room.place": "Kapalı bir duvar döngüsünün içine tıklayarak oda oluşturun · Esc — çık",
+ "tool.err.room_open": "Bölge kapalı değil: duvar döngüsünü kapatın veya bir oda ayırıcı ekleyin",
+ "tool.err.room_check": "Bu seviyenin odaları kontrol edilemiyor",
+ "tool.err.room_exists": "Bu döngüde zaten bir oda var"
+}

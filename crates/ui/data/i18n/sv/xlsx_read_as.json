@@ -1,0 +1,11 @@
+{
+ "xlsx_read_as.title": "Omdöpt blad?",
+ "xlsx_read_as.detail": "Bladet {found} har kolumnerna i {sheet} ({score} % träff). Det läses inte om du inte väljer det.",
+ "xlsx_read_as.detail_many": "Fler än ett blad passar {sheet}: {found}. Inget väljs åt dig; välj det som ska läsas.",
+ "xlsx_read_as.read_as": "Läs “{found}” som {sheet}",
+ "xlsx_read_as.read_as_tip": "Endast för den här importen. Bladet byts inte namn; Tillämpa skriver bara id för nya rader i det.",
+ "xlsx_read_as.active": "Bladet “{found}” läses som {sheet} i den här importen.",
+ "xlsx_read_as.undo": "Läs inte som {sheet}",
+ "xlsx_read_as.undo_tip": "Tillbaka till bladnamnen som de är i arbetsboken.",
+ "xlsx_read_as.not_rewritten": "Arbetsboken skrevs inte om: ett omdöpt blad läses under sitt eget namn. Byt namn tillbaka för att hålla arbetsboken synkroniserad."
+}

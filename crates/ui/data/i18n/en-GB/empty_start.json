@@ -1,0 +1,8 @@
+{
+ "empty.start_recent.title": "No recent projects yet",
+ "empty.start_recent.hint": "Projects you open show up here. Start with the sample model.",
+ "empty.start_recent.action": "Open sample",
+ "start.recent_open_file": "Open file…",
+ "start.forgot": "Removed from recent: {name}",
+ "start.forgot_undo": "Undo"
+}

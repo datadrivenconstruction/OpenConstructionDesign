@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "Uygulama durduruldu: model olduğu gibi kaldı",
+ "apply_verify.rolled_back": "Uygulama taslakla eşleşmedi ve geri alındı; model değişmedi. {what}",
+ "apply_verify.diff.missing": "Taslak {what} {kind} gösteriyor, ancak Uygula bunu yapmadı.",
+ "apply_verify.diff.extra": "Taslakta görünmeyen, uygulanan {kind} {what}.",
+ "apply_verify.diff.kind": "Taslak {what} {shown} gösteriyor, ancak Uygula onu {applied} yaptı.",
+ "apply_verify.diff.value": "{what}: “{col}” taslaktakinden farklı çıktı.",
+ "apply_verify.diff.truncated": "Taslak ile uygulanan değişiklik boyut olarak farklı.",
+ "apply_verify.diff.unreadable": "Uygulanan değişiklik geri okunamadı ({e}).",
+ "apply_verify.no_base": "Uygulama çalıştırılmadı: taslağın karşılaştırılacağı kopya eksik. Model değişmedi; taslağı yeniden isteyin.",
+ "apply_verify.take_back_failed": "Geri alma başarısız ({e}): Geri al'ı kullanın.",
+ "apply_verify.kind.created": "oluşturuldu",
+ "apply_verify.kind.changed": "değiştirildi",
+ "apply_verify.kind.deleted": "silindi",
+ "apply_verify.card.type_row": "Tür {type} · {n} öğe değişikliği alır"
+}

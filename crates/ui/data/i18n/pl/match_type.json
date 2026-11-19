@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "Dopasuj typ",
+ "cmd.mod.match_type.short": "Dopasuj typ",
+ "cmd.mod.match_type.desc": "Wskaż ścianę, strop, słup lub belkę, a następnie kliknij inne tej samej kategorii, aby nadać im jej typ. Przeciągnij okno, aby zastosować do wszystkich w środku. Esc porzuca źródło.",
+ "hint.match_type.pick": "Dopasuj typ: wskaż ścianę, strop, słup lub belkę · Esc — wyjście",
+ "hint.match_type.apply": "Dopasuj typ: kliknij cele lub przeciągnij okno · Esc — inne źródło",
+ "match_type.kind.wall": "ściana",
+ "match_type.kind.slab": "strop",
+ "match_type.kind.column": "słup",
+ "match_type.kind.beam": "belka",
+ "match_type.refuse.category": "Inna kategoria: tylko {cat} może przyjąć ten typ",
+ "match_type.refuse.curtain": "Ściana osłonowa: jej typ nie jest tu dopasowywany",
+ "match_type.refuse.pinned": "Przypięte: odepnij, aby zmienić typ",
+ "match_type.pick_bad": "Wskaż jako źródło ścianę, strop, słup lub belkę",
+ "match_type.same": "To już ten typ",
+ "match_type.done": "Zastosowano typ: {n}",
+ "match_type.done_skipped": "Zastosowano typ: {n}, pominięto (przypięte lub osłonowe): {skipped}",
+ "match_type.failed": "Nie zmieniono typu: {err}"
+}

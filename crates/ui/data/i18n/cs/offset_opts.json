@@ -1,0 +1,7 @@
+{
+ "offset_opts.dist_positive": "Vzdálenost odsazení musí být větší než nula; strana sleduje kurzor",
+ "offset_opts.count_bad": "Celé číslo od {min} do {max}",
+ "offset_opts.done_tip": "Dokončit výběr a spustit nástroj",
+ "offset_opts.iso.apply_tip": "Trvale zachovat dočasné skrytí pro tento pohled",
+ "offset_opts.iso.exit": "Ukončit dočasný režim"
+}

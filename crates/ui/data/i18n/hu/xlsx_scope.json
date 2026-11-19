@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "Exportálás táblázatba: hatókör",
+ "xlsx_scope.intro": "Válassza ki, mi kerüljön a munkafüzetbe. A visszaimportálás csak ezeket az elemeket módosítja.",
+ "xlsx_scope.base_whole": "Teljes modell",
+ "xlsx_scope.base_level": "Aktív szint",
+ "xlsx_scope.base_selection": "Kijelölés",
+ "xlsx_scope.categories": "Kategóriák",
+ "xlsx_scope.cat_walls": "falak",
+ "xlsx_scope.cat_openings": "ajtók",
+ "xlsx_scope.cat_rooms": "helyiségek",
+ "xlsx_scope.cat_slabs": "födémek",
+ "xlsx_scope.cat_curtains": "függönyfalak",
+ "xlsx_scope.nothing_selected": "Nincs kijelölés: előbb jelöljön ki elemeket, vagy válasszon másik hatókört.",
+ "xlsx_scope.no_categories": "Jelöljön be legalább egy kategóriát.",
+ "xlsx_scope.no_level": "Az aktív szint nem található.",
+ "xlsx_scope.export": "Exportálás",
+ "xlsx_scope.preview_scope": "Exportált hatókör: {scope}. Az azon kívül eső elemek soha nem módosulnak és nem törlődnek."
+}

@@ -1,0 +1,14 @@
+{
+ "cmd.arch.wall.tile": "Duvar",
+ "cmd.arch.door.tile": "Kapı",
+ "cmd.arch.window.tile": "Pencere",
+ "cmd.arch.floor.tile": "Döşeme",
+ "cmd.mod.move.tile": "Taşı",
+ "cmd.mod.copy.tile": "Kopyala",
+ "cmd.mod.rotate.tile": "Döndür",
+ "cmd.mod.mirror.tile": "Aynala",
+ "cmd.mod.trim.tile": "Kırp",
+ "cmd.mod.delete.tile": "Sil",
+ "cmd.ann.dim.tile": "Ölçü",
+ "cmd.ann.text.tile": "Metin"
+}

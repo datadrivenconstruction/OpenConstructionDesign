@@ -1,0 +1,14 @@
+{
+ "dwg_table.copy": "Kopiera tabell",
+ "dwg_table.copy_tip": "Kopiera mängdförteckningen per lager som en tabell för kalkylblad",
+ "dwg_table.copied": "Mängdförteckning kopierad (tabbseparerad)",
+ "dwg_table.total": "Summa",
+ "dwg_table.col.layer": "Lager",
+ "dwg_table.col.count": "Antal",
+ "dwg_table.col.len": "Längd, {unit}",
+ "dwg_table.col.area": "Yta, {unit}",
+ "dwg_table.unit.mm": "mm",
+ "dwg_table.unit.m2": "m²",
+ "dwg_table.unit.ft": "ft",
+ "dwg_table.unit.ft2": "ft²"
+}

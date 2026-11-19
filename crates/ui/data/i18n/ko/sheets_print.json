@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "이전 시트 (Page Up)",
+ "sheets.print.next": "다음 시트 (Page Down)",
+ "sheets.print.fit": "페이지 맞춤 (두 번 클릭)",
+ "sheets.print.no_sheets": "미리볼 시트가 없습니다",
+ "sheets.print.building": "페이지 생성 중…",
+ "sheets.print.stop_build": "중지",
+ "sheets.print.build_stopped": "페이지 생성이 중지됨",
+ "sheets.print.retry": "다시 생성",
+ "sheets.print.build_failed": "미리보기를 만들 수 없습니다"
+}

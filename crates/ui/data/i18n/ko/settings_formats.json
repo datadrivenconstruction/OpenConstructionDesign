@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "통합 문서를 내보낸 후 동작",
+ "settings.area_decimals_desc": "면적의 소수점 구분자 뒤 자릿수",
+ "settings.volume_decimals_desc": "체적의 소수점 구분자 뒤 자릿수",
+ "settings.frac_desc": "인치 단위 길이에서 가장 작은 분수 단위",
+ "settings.small_area_desc": "1제곱피트보다 작은 면적은 제곱인치로 표시",
+ "settings.sample_desc": "현재 선택에 따라 숫자가 표시되는 방식",
+ "autosave.title_desc": "열린 프로젝트의 복구 사본을 보관합니다",
+ "autosave.interval_desc": "복구 사본 사이의 간격",
+ "autosave.keep_desc": "더 오래된 복구 사본은 삭제됩니다",
+ "autosave.folder_desc": "비워 두면 기본 폴더를 사용합니다",
+ "autosave.remind_desc": "아직 파일이 없는 프로젝트를 저장하라는 알림",
+ "settings.backend_desc": "사용 중인 그래픽 어댑터",
+ "settings.news_desc": "이 버전에서 바뀐 내용",
+ "settings.assoc_default_desc": "이 앱을 모델 파일의 기본 앱으로 설정합니다",
+ "settings.data_dir_desc": "캐시, 복구 사본, 로그가 여기에 저장됩니다."
+}

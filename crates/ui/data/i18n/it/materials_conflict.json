@@ -1,0 +1,5 @@
+{
+ "materials.mat.conflict": "Questo materiale è stato modificato nel modello (annulla o altra finestra) mentre la scheda aveva modifiche. Le tue modifiche sono mantenute.",
+ "materials.mat.keep": "Mantieni le mie modifiche",
+ "materials.mat.reload": "Ricarica"
+}

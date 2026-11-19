@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "চলমান কাজের পেছনে সারিতে: {n}",
+ "import_queue.queue_full": "সারি পূর্ণ, {n}টি ফাইল যোগ হয়নি",
+ "import_queue.changed": "{name} এই প্রকল্প তৈরির পরে হালনাগাদ হয়েছে। আগের প্রকল্পটি খোলা হয়েছে।",
+ "import_queue.import_again": "আবার আমদানি",
+ "import_queue.kept": "সম্পন্ন আমদানি রাখা হয়েছে",
+ "import_queue.open_it": "খুলুন",
+ "import_queue.sum.head": "আমদানি: {editable}টি সম্পাদনাযোগ্য (দেয়াল {walls}, খোলা অংশ {open}, মেঝে {slabs}, কক্ষ {rooms}, অন্যান্য {other}), {meshes}টি মেশ হিসেবে",
+ "import_queue.sum.unchanged": ", অপরিবর্তিত {n}",
+ "import_queue.sum.updated": ", হালনাগাদ {n}",
+ "import_queue.sum.missing": ", উৎসে নেই {n} (রাখা হয়েছে)",
+ "import_queue.sum.skipped": ", বাদ {n}",
+ "import_queue.sum.warnings": ", সতর্কতা {n}",
+ "import_queue.import_failed": "আমদানি ব্যর্থ: {e}"
+}

@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "өлшенген {value}, шегі {limit}",
+ "ai_checks.check.cap": "{total} ішінен {shown} табылған мәселе көрсетілді. Алдымен қателерді түзетіп, қайта іске қосыңыз.",
+ "ai_checks.check.run_again": "Қайта іске қосу",
+ "ai_checks.check.goto": "Таңдау және жақындату",
+ "ai_checks.check.never_title": "Әлі тексерілмеген",
+ "ai_checks.check.never_hint": "Тексеруді іске қосыңыз, мәселелер осында көрінеді.",
+ "ai_checks.check.sec.error": "Қателер",
+ "ai_checks.check.sec.warning": "Ескертулер",
+ "ai_checks.check.sec.info": "Ескертпелер"
+}

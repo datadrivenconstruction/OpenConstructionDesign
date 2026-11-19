@@ -1,0 +1,6 @@
+walls=[(0,0)-(6,0)]
+# Section mark: two ends and the depth, one record; the tool stays for the next mark
+tool(arch.section) → scope=Drafting hint="arch.section.first"
+click(3,-2) click(3,2) → scope=Drafting journal=+0
+move(4,0) click(4,0) → journal=+1 scope=Drafting
+key(Escape) key(Escape) → scope=Idle

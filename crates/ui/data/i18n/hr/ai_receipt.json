@@ -1,0 +1,22 @@
+{
+ "ai.receipt.title": {
+  "one": "Primijenjena # promjena",
+  "few": "Primijenjene # promjene",
+  "other": "Primijenjeno # promjena"
+ },
+ "ai.receipt.more": "+{n} više",
+ "ai.receipt.list": "Elementi",
+ "ai.receipt.show": "Prikaži",
+ "ai.receipt.show.tip": "Odaberi i uokviri promijenjene elemente",
+ "ai.receipt.undo": "Poništi",
+ "ai.receipt.undo.tip": "Vraća točno ovu primjenu",
+ "ai.receipt.undone": "Poništeno",
+ "ai.receipt.later": "Kasnije su rađene izmjene",
+ "ai.receipt.toast_undone": "Primijenjeni plan je poništen",
+ "ai.receipt.draft_family": "Obitelj nacrta: {name}",
+ "ai.receipt.promote": "Učini radnom",
+ "ai.receipt.promote.tip": "Pretvara obitelj nacrta u radnu (jedan korak poništavanja)",
+ "ai.receipt.promoted": "Obitelj je sada radna",
+ "ai.receipt.promote_failed": "Obitelj se nije mogla učiniti radnom",
+ "cmd.ai.receipt_undo": "Poništi posljednji AI plan"
+}

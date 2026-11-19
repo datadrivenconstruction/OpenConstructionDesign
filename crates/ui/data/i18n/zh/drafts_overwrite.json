@@ -1,0 +1,5 @@
+{
+ "drafts_overwrite.ow.project": "保存项目需等待此选择。替换值即可继续保存；“返回编辑”会保留所有编辑且不写入任何内容。",
+ "drafts_overwrite.drafts.ow_wait": "保存正在等待您在族编辑器中作出选择：载入族会替换项目类型值。未关闭任何内容。",
+ "drafts_overwrite.drafts.ow_back": "保存已停止：已保留项目类型值，族编辑仍保持打开。未关闭任何内容。"
+}

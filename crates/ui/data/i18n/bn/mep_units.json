@@ -1,0 +1,8 @@
+{
+ "mep_units.unit.mm": "mm",
+ "mep_units.unit.in": "in",
+ "mep_units.dn": "DN",
+ "mep_units.diameter": "ব্যাস",
+ "mep_units.system.new": "নতুন সিস্টেম",
+ "mep_units.system.none": "কোনো সিস্টেম নেই"
+}

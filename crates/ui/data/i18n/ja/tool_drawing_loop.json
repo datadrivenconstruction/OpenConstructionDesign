@@ -1,0 +1,4 @@
+{
+ "tool.err.drawing_open": "この点の周りの図面の線が、ループに閉じていません",
+ "tool.err.drawing_crossing": "この点の周りの図面のループが自己交差しています"
+}

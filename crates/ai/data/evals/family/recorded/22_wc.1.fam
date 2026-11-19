@@ -1,0 +1,30 @@
+family WC
+category plumbing
+host wall
+ifc IfcSanitaryTerminal TOILETPAN
+param FlowCold number type 0.1
+param FlowWaste number type 1.6
+param Width length type 380mm
+param Depth length type 650mm
+param Height length type 400mm
+param TankW length type 380mm
+param TankD length type 160mm
+param TankH length type 780mm
+param Elevation length instance 0mm
+param China material type "Vitreous China"
+ref Wall y = 0
+ref Centre x = 0
+type "Floor 650" Depth=650mm
+type "Wall-hung 540" Depth=540mm, TankD=120mm, TankH=560mm
+type "Accessible 700" Depth=700mm, Height=480mm
+type "Compact 26in" Width=14in, Depth=26in, Height=15in, TankW=15in, TankD=6in, TankH=30in
+extrude Tank rect(Centre - TankW / 2, Wall, Centre + TankW / 2, Wall + TankD) z(Elevation + Height, Elevation + TankH) mat(China) show(3d, elev)
+blend Pedestal circle(Centre, (TankD + Depth) / 2, 120mm) circle(Centre, (TankD + Depth) / 2, Width / 2 - 20mm) z(Elevation, Elevation + Height - 60mm) mat(China) show(3d, elev)
+extrude Back rect(Centre - Width / 2 + 40mm, Wall, Centre + Width / 2 - 40mm, (TankD + Depth) / 2) z(Elevation + 100mm, Elevation + Height - 60mm) mat(China) show(medium, fine, 3d, elev)
+extrude Seat circle(Centre, (TankD + Depth) / 2, Width / 2) z(Elevation + Height - 60mm, Elevation + Height) mat(China) show(3d, elev)
+symbol rect(Centre - TankW / 2, Wall, Centre + TankW / 2, Wall + TankD)
+symbol circle(Centre, (TankD + Depth) / 2, Width / 2)
+symbol line(Centre - Width / 2, (TankD + Depth) / 2, Centre - Width / 2 + 40mm, Wall + TankD) show(medium, fine)
+symbol line(Centre + Width / 2, (TankD + Depth) / 2, Centre + Width / 2 - 40mm, Wall + TankD) show(medium, fine)
+connector Waste pipe sanitary at(Centre, Wall + 150mm, Elevation) dir(0, 0, -1) size(100mm)
+connector Cold pipe cold_water at(Centre + TankW / 2 - 50mm, Wall, Elevation + TankH - 100mm) dir(0, -1, 0) size(15mm)

@@ -1,0 +1,14 @@
+{
+ "empty.v3d_model.title": "U 3D još nema ničega",
+ "empty.v3d_model.hint": "Nacrtajte zidove u tlocrtu i pojavit će se ovdje.",
+ "empty.v3d_model.action": "Otvori tlocrt",
+ "empty.v3d_hidden.title": "Svi su elementi skriveni u ovom pogledu",
+ "empty.v3d_hidden.hint": "Privremeno skrivanje ili izolacija ne ostavljaju ništa vidljivim. Grafika pogleda ostaje kakva je postavljena.",
+ "empty.v3d_hidden.action": "Prikaži sve",
+ "empty.v3d_graphics.title": "Grafika pogleda skriva sve kategorije",
+ "empty.v3d_graphics.hint": "Pravila kategorija ovog pogleda ne ostavljaju ništa vidljivim. Ponovno uključite kategorije u grafici pogleda.",
+ "empty.v3d_graphics.action": "Otvori grafiku pogleda",
+ "empty.v3d_box.title": "Okvir presjeka je izvan modela",
+ "empty.v3d_box.hint": "Okvir odrezuje svaki element. Ponovno ga postavite oko modela.",
+ "empty.v3d_box.action": "Vrati okvir"
+}

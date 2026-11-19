@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "Тайлбар",
+ "legend.legend.new_hint": "Шинэ тайлбарын нэр",
+ "legend.legend.delete_tip": "Тайлбарыг устгах",
+ "legend.legend.delete_placed": "Тайлбарыг устгах (дээр байрлсан: {sheets})",
+ "legend.legend.deleted": "Тайлбарыг устгасан: {name}",
+ "legend.legend.no_rows": "Мөр алга. Нэмнэ үү эсвэл одоогийн харагдацын загваруудыг авна уу",
+ "legend.legend.replace_q": "{n} мөрийг энэ харагдацын загвараар солих уу?",
+ "legend.legend.replace": "Солих",
+ "legend.legend.keep": "Мөрүүдийг үлдээх",
+ "legend.col.swatch": "Өнгө",
+ "legend.col.value": "Утга",
+ "legend.col.label": "Шошго"
+}

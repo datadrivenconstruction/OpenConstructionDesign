@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "Matchtype",
+ "cmd.mod.match_type.short": "Matchtype",
+ "cmd.mod.match_type.desc": "Vælg en væg, et gulv, en søjle eller en bjælke, og klik derefter på andre af samme kategori for at give dem dens type. Træk et vindue for at anvende på alle inden i. Esc opgiver kilden.",
+ "hint.match_type.pick": "Match type: vælg en væg, et gulv, en søjle eller en bjælke · Esc — afslut",
+ "hint.match_type.apply": "Match type: klik på mål eller træk et vindue · Esc — anden kilde",
+ "match_type.kind.wall": "væg",
+ "match_type.kind.slab": "gulv",
+ "match_type.kind.column": "søjle",
+ "match_type.kind.beam": "bjælke",
+ "match_type.refuse.category": "Anden kategori: kun en {cat} kan få denne type",
+ "match_type.refuse.curtain": "Facadevæg: dens type matches ikke her",
+ "match_type.refuse.pinned": "Fastgjort: løsn den for at ændre typen",
+ "match_type.pick_bad": "Vælg en væg, et gulv, en søjle eller en bjælke som kilde",
+ "match_type.same": "Allerede denne type",
+ "match_type.done": "Type anvendt: {n}",
+ "match_type.done_skipped": "Type anvendt: {n}, sprunget over (fastgjort eller facade): {skipped}",
+ "match_type.failed": "Type ikke ændret: {err}"
+}

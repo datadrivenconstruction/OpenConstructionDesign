@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "Hva som skjer etter at en arbeidsbok er eksportert",
+ "settings.area_decimals_desc": "Sifre etter desimalskilletegnet i arealer",
+ "settings.volume_decimals_desc": "Sifre etter desimalskilletegnet i volumer",
+ "settings.frac_desc": "Minste brøkdel av en tomme i imperiallengder",
+ "settings.small_area_desc": "Vis arealer under én kvadratfot i kvadrattommer",
+ "settings.sample_desc": "Slik ser tall ut med gjeldende valg",
+ "autosave.title_desc": "Behold en gjenopprettingskopi av det åpne prosjektet",
+ "autosave.interval_desc": "Tid mellom gjenopprettingskopier",
+ "autosave.keep_desc": "Eldre gjenopprettingskopier fjernes",
+ "autosave.folder_desc": "Tomt betyr standardmappen",
+ "autosave.remind_desc": "Påminnelse om å lagre et prosjekt som ikke har en fil ennå",
+ "settings.backend_desc": "Grafikkadapter i bruk",
+ "settings.news_desc": "Hva som er endret i denne versjonen",
+ "settings.assoc_default_desc": "Gjør denne appen til standard for modellfiler",
+ "settings.data_dir_desc": "Mellomlagring, gjenopprettingskopier og logger ligger her."
+}

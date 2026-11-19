@@ -1,0 +1,5 @@
+{
+ "rbdrag.beam": "承载梁将落在新边界之外。",
+ "rbdrag.rebar": "基础楼板上的钢筋组 {id} 将落在新边界之外。",
+ "rbdrag.opening": "洞口将落在新边界之外。"
+}

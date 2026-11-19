@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "مطابقة النوع",
+ "cmd.mod.match_type.short": "مطابقة النوع",
+ "cmd.mod.match_type.desc": "اختر جداراً أو أرضية أو عموداً أو كمرة، ثم انقر على عناصر أخرى من الفئة نفسها لإعطائها نوعه. اسحب نافذة لتطبيقه على كل ما بداخلها. Esc يلغي المصدر.",
+ "hint.match_type.pick": "مطابقة النوع: اختر جداراً أو أرضية أو عموداً أو كمرة  ·  Esc — خروج",
+ "hint.match_type.apply": "مطابقة النوع: انقر على الأهداف أو اسحب نافذة  ·  Esc — مصدر آخر",
+ "match_type.kind.wall": "جدار",
+ "match_type.kind.slab": "أرضية",
+ "match_type.kind.column": "عمود",
+ "match_type.kind.beam": "كمرة",
+ "match_type.refuse.category": "فئة أخرى: يمكن لـ{cat} فقط أخذ هذا النوع",
+ "match_type.refuse.curtain": "جدار ستارة: لا يُطابَق نوعه هنا",
+ "match_type.refuse.pinned": "مثبت: ألغِ تثبيته لتغيير النوع",
+ "match_type.pick_bad": "اختر جداراً أو أرضية أو عموداً أو كمرة كمصدر",
+ "match_type.same": "هذا النوع بالفعل",
+ "match_type.done": "طُبّق النوع على {n}",
+ "match_type.done_skipped": "طُبّق النوع على {n}، وتم تخطي {skipped} (مثبت أو ستارة)",
+ "match_type.failed": "لم يتغير النوع: {err}"
+}

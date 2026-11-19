@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "Өткізілген жолдар мен ұяшықтар",
+ "xlsx_issues.conflicts_title": "Екі жерде де өзгертілген",
+ "xlsx_issues.missing_title": "Жұмыс кітабында парақ жоқ",
+ "xlsx_issues.look_alike_title": "Парақ атауы сай келмейді",
+ "xlsx_issues.mass_title": "Жаппай жоюды растау керек",
+ "xlsx_issues.sheets_missing": "{sheets} парақтары жұмыс кітабында жоқ (атауы өзгертілген немесе жойылған); олардың жолдары салыстырылмады.",
+ "xlsx_issues.keep_model": "Модельді сақтау",
+ "xlsx_issues.take_book": "Жұмыс кітабын алу",
+ "xlsx_issues.open_book_tip": "Файлды оның қолданбасында ашады. Модель өзгермейді; жұмыс кітабын сақтағаннан кейін алдын ала қарау қайта жүктеледі."
+}

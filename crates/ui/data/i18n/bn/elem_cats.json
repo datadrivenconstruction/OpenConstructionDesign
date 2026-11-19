@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "ভর ঘোরানো বা মিরর করা যায় না: এর ফর্ম ইতিহাসে ঘোরানো ধাপ নেই। সরান বা কপি করুন, অথবা নতুন দিকে আবার আঁকুন।",
+ "sched_cats.col.name": "নাম",
+ "sched_cats.col.material": "উপাদান",
+ "sched_cats.col.void": "ফাঁকা",
+ "sched_cats.col.inplace": "স্থানে ঢালাই",
+ "sched_cats.col.volume": "নিট আয়তন",
+ "sched_cats.col.area": "তলের ক্ষেত্রফল",
+ "sched_cats.col.floor_area": "মেঝের ক্ষেত্রফল",
+ "sched_cats.col.thickness": "পুরুত্ব",
+ "sched_cats.col.points": "বিন্দু",
+ "elem.toposolid.points": "জরিপ বিন্দু",
+ "elem.toposolid.count": "বিন্দু",
+ "elem.toposolid.low": "সর্বনিম্ন",
+ "elem.toposolid.high": "সর্বোচ্চ",
+ "elem.toposolid.edit": "বিন্দু সম্পাদনা",
+ "elem.toposolid.edit_tip": "প্ল্যানে জরিপ বিন্দু বেছে নিন, টানুন এবং এলিভেশন ঠিক করুন",
+ "elem.toposolid.pick_hint": "বিন্দু বেছে নিতে প্ল্যানে ক্লিক করুন। যোগ বা বাদ দিতে আবার ক্লিক করুন।",
+ "elem.toposolid.z": "এলিভেশন ({n})",
+ "elem.toposolid.mixed": "বেছে নেওয়া বিন্দুগুলো আলাদা; নতুন মান সবগুলোতে বসবে।",
+ "elem.toposolid.edit_help": "একটি বিন্দু সরাতে টানুন। মান লিখে Enter চাপলে এলিভেশন ঠিক হয়। Backspace বেছে নেওয়া বিন্দু মোছে, Esc বের হয়।",
+ "elem.toposolid.done": "সম্পন্ন"
+}

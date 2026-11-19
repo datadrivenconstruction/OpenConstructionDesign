@@ -1,0 +1,6 @@
+{
+ "delsafe.ring.opening_shape": "Teshik konturi o'z-o'zini kesib o'tadi yoki qulaydi",
+ "delsafe.ring.opening_boundary": "Teshik tashqi chegarani kesib o'tadi yoki unga tegadi",
+ "delsafe.ring.openings_overlap": "Teshiklar bir-birini qoplaydi yoki tegib turadi",
+ "xl.msg.delsafe_instance_param_on_types": "'{}' parametri nusxa parametri; uni elementlar varag'ida tahrirlang, qo'llanmadi"
+}

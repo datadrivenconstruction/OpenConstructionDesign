@@ -1,0 +1,4 @@
+{
+ "room_watch.room.dup": "Room {room} Room {other} के क्षेत्र में है: क्षेत्रफल और आयतन केवल Room {other} में गिने जाते हैं",
+ "ai.issue.room_dup": "यह Room, Room {0} के क्षेत्र में है: इसका क्षेत्रफल वहीं गिना जाता है"
+}

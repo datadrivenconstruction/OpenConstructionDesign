@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "Вмъкване на слой отдолу",
+ "type_layers.layer.delete": "Изтриване на слой",
+ "type_layers.layer.delete_last": "Типът трябва да има поне един слой",
+ "type_layers.value.bad": "Не е валидна положителна стойност",
+ "type_layers.value.required": "Задължително",
+ "type_layers.unsaved.title": "Незапазени промени в {name}",
+ "type_layers.unsaved.body": "Да се приложат ли към типа, или да се отхвърлят?",
+ "type_layers.unsaved.discard": "Отхвърляне"
+}

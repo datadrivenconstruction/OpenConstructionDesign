@@ -1,0 +1,16 @@
+{
+ "cmd.drawing.to_detail": "Desen în detaliu",
+ "cmd.drawing.to_detail.desc": "Transformă primitivele de desen selectate, sau întregul desen de pe acest nivel, în linii de detaliu, note text și regiuni pe plan. Desenul rămâne neschimbat.",
+ "detail_items.st.no_drawing": "Nu există desen pe acest nivel",
+ "detail_items.st.nothing": "Nimic de convertit: nu există linii, arce, texte sau umpleri pe straturile vizibile",
+ "detail_items.st.done": "Elemente de detaliu adăugate: linii {lines}, texte {texts}, regiuni {regions}",
+ "detail_items.st.failed": "Elementele de detaliu nu au putut fi adăugate: {e}",
+ "detail_items.st.warn": "Elementele de detaliu au fost adăugate, dar vederea nu a putut fi actualizată (linii {lines}, texte {texts}, regiuni {regions}): {e}. Anularea le elimină.",
+ "detail_items.st.bad_view": "Elementele de detaliu necesită o vedere de plan sau de secțiune",
+ "detail_items.st.no_transform": "Această vedere nu are un sistem de coordonate utilizabil pentru desen; nu s-a adăugat nimic",
+ "drafting_tools.free.plan_only": "Această comandă lucrează cu elementele planului; deschideți un plan",
+ "drafting_tools.free.zero": "Cele două puncte coincid; nu s-a adăugat nimic",
+ "drafting_tools.free.select_first": "Mai întâi selectați elementele acestei vederi pe care vreți să le distribuiți",
+ "drafting_tools.free.pick_item": "Faceți clic pe un element al acestei vederi pentru a-l marca",
+ "drafting_tools.free.dim_kind": "În o vedere de desenare funcționează doar cotele liniare"
+}

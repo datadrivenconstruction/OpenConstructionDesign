@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "전체",
+ "clash_list.only_selected": "선택한 항목만",
+ "clash_list.tolerance": "허용 오차",
+ "clash_list.gap": "간격",
+ "clash_list.export": "내보내기",
+ "clash_list.col.volume": "체적",
+ "clash_list.fix.up": "위로 이동",
+ "clash_list.fix.down": "아래로 이동",
+ "clash_list.fix.sleeve": "슬리브",
+ "clash_list.apply_fix": "수정 적용",
+ "clash_list.err.tol": "허용 오차: 길이(0 이상)를 입력하세요. 예: 50 또는 2 in",
+ "clash_list.sleeve_no_host": "슬리브에는 쌍 안에 벽 또는 슬래브가 필요합니다",
+ "clash_list.err.gap": "간격: 길이(0 이상)를 입력하세요. 예: 50 또는 2 in"
+}

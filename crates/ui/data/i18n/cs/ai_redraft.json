@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "Revidováno",
+ "ai.redraft.added": "+{n} přidáno",
+ "ai.redraft.removed": "−{n} odstraněno",
+ "ai.redraft.changed": "~{n} změněno",
+ "ai.redraft.strip": "{what} od vašeho posledního pohledu",
+ "ai.redraft.note": "Revidovaný plán zkontrolován: {what}",
+ "ai.redraft.more": "+{n} dalších",
+ "ai.redraft.ack": "Rozumím",
+ "ai.redraft.ack.tip": "Označí tuto revizi jako viděnou; Použít pak cílí na ni",
+ "ai.redraft.removed_list": "Odstraněné položky: {n}",
+ "ai.redraft.review_first": "Plán se změnil po vaší zprávě: nejprve zkontrolujte změny",
+ "ai.redraft.mark.tip": "Nové nebo změněné od vašeho posledního pohledu",
+ "ai.redraft.emptied": "Následná zpráva odstranila všechny položky: návrh je prázdný"
+}

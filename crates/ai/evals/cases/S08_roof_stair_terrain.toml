@@ -1,0 +1,30 @@
+id = "S08_roof_stair_terrain"
+tier = "smoke"
+group = ""
+title = "Roof, stair and terrain"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "Two-storey villa, about 220 m2, on a 40 x 30 m plot that slopes 3 m down from south to north. Hip roof with a 35 degree slope and 0.6 m overhang, an internal stair with risers of at most 0.17 m. Model the terrain of the plot too. Build it."
+
+[[oracle.count]]
+spec = "level"
+min = 2.0
+
+[[oracle.count]]
+spec = "roof"
+min = 1.0
+
+[[oracle.count]]
+spec = "stair"
+min = 1.0
+
+[[oracle.count]]
+spec = "toposolid"
+min = 1.0
+
+[[oracle.count]]
+spec = "level"
+min = 2.0
+max = 3.0

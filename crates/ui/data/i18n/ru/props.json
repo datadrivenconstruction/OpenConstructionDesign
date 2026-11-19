@@ -1,0 +1,24 @@
+{
+ "props.multi.title": {
+  "one": "# элемент",
+  "few": "# элемента",
+  "many": "# элементов",
+  "other": "# элементов"
+ },
+ "props.multi.cats": {
+  "one": "# категория",
+  "few": "# категории",
+  "many": "# категорий",
+  "other": "# категорий"
+ },
+ "props.multi.varies": {
+  "one": "разные (#)",
+  "few": "разные (#)",
+  "many": "разные (#)",
+  "other": "разные (#)"
+ },
+ "props.multi.clear": "Сбросить выбор",
+ "props.multi.undo": "Отменить",
+ "props.multi.narrowed": "Выбрано: {n} · {name}",
+ "props.multi.chip_tip": "{name}: {n}  ·  Клик показывает их свойства, Ctrl+клик оставляет только их"
+}

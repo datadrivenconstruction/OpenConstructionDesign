@@ -1,0 +1,33 @@
+{
+ "cmd.help.licenses": "Ачык булактуу лицензиялар",
+ "cmd.help.licenses.desc": "Бул курам колдонгон ачык булактуу китепканаларды жана алардын лицензияларын көрсөтөт.",
+ "about.product": "DDC Editor",
+ "about.version": "Версия",
+ "about.build": "Курама",
+ "about.schema": "Модель схемасы",
+ "about.system": "Система",
+ "about.gpu": "Графика адаптери",
+ "about.language": "Тил",
+ "about.copy": "Версия маалыматын көчүрүү",
+ "about.copy_desc": "Ката жөнүндө отчет үчүн версия, курама, система жана графика адаптери. Файл жолдору жок.",
+ "about.copied": "Версия маалыматы көчүрүлдү",
+ "about.licenses": "Ачык булактуу лицензиялар",
+ "about.licenses_desc": "Бул курамда колдонулган китепканалар жана алардын лицензиялары",
+ "about.licenses.open": "Көрүү",
+ "about.licenses.title": "Ачык булактуу лицензиялар",
+ "about.licenses.note": "DDC Editor төмөндөгү китепканаларды камтыйт. Ар бири өзүнүн лицензиясы жана автордук укук эскертмеси менен калат. Лицензиялардын толук тексттери: тиркеменин жанындагы THIRD_PARTY_LICENSES.txt.",
+ "about.licenses.full": "Лицензиялардын толук тексттери",
+ "about.licenses.list": "Компоненттердин тизмеси",
+ "about.licenses.close": "Жабуу",
+ "about.licenses.col_name": "Компонент",
+ "about.licenses.col_license": "Лицензия",
+ "about.licenses.count": {
+  "one": "# компонент",
+  "other": "# компонент"
+ },
+ "about.licenses.count_of": "{total} компоненттин {shown}",
+ "about.licenses.search_hint": "Аты же лицензия боюнча издөө…",
+ "about.licenses.search_clear": "Издөөнү тазалоо",
+ "about.licenses.none": "Эч нерсе табылган жок",
+ "about.licenses.none_hint": "Китепкананын аты же MIT сыяктуу лицензиянын бир бөлүгүн издеп көрүңүз."
+}

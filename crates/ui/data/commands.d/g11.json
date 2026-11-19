@@ -1,0 +1,43 @@
+[
+ {
+  "id": "mgr.family_editor",
+  "icon": "family-editor",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "components",
+  "priority": 4,
+  "variants": [
+   "mgr.family_new",
+   "mgr.family_flex"
+  ]
+ },
+ {
+  "id": "mgr.family_new",
+  "icon": "family-new",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "components"
+ },
+ {
+  "id": "mgr.family_flex",
+  "icon": "family-flex",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "components"
+ }
+]

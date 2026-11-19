@@ -1,0 +1,11 @@
+{
+ "sketch.points": "Pisteet",
+ "sketch.rect": "Suorakulmio",
+ "sketch.circle": "Ympyrä",
+ "sketch.polygon": "Monikulmio",
+ "sketch.radius": "R",
+ "sketch.sides": "Sivut",
+ "sketch.circum": "Ympäri piirretty",
+ "sketch.shape.tip": "Luonnoksen muoto (A vaihtaa). Suorakulmio: kaksi kulmaa. Ympyrä ja monikulmio: keskipiste, sitten säde. Kirjoita koko ja paina Enter lukitaksesi sen.",
+ "tool.err.zero_size": "Nollakokoinen: siirrä toista pistettä kauemmas ensimmäisestä"
+}

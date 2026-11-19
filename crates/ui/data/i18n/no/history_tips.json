@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "Angret — Ctrl+Y gjør om",
+ "history.hist.empty": "Ingen endringer ennå",
+ "history.hist.empty_hint": "Redigeringene dine vises her. Klikk på et steg for å gå tilbake til det.",
+ "history.hist.revert_all_n": "Tilbakestill alle AI-endringer ({n})"
+}

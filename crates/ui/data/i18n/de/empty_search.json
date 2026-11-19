@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "Nichts gefunden",
+ "empty.browser_search.hint": "Keine Ansicht, Ebene, kein Typ und kein Raum passt zu dieser Suche.",
+ "empty.browser_search.action": "Suche zurücksetzen",
+ "empty.xl_filtered.title": "Keine Einträge entsprechen den Filtern",
+ "empty.xl_filtered.hint": "Aktivieren Sie weitere Arten, wählen Sie ein anderes Blatt oder ändern Sie den Suchtext.",
+ "empty.xl_filtered.action": "Filter löschen",
+ "empty.xl_nochanges.title": "Keine Änderungen in der Arbeitsmappe",
+ "empty.xl_nochanges.hint": "Die Arbeitsmappe entspricht dem Modell: Ein Import würde nichts ändern.",
+ "empty.version_same.title": "Die Modelle sind identisch",
+ "empty.version_same.hint": "Zwischen dem geöffneten Modell und der gewählten Version wurden keine Unterschiede gefunden.",
+ "empty.templates.title": "Noch keine Ansichtsvorlagen",
+ "empty.templates.hint": "Erstellen Sie eine aus der aktuellen Ansicht, um ihre Einstellungen auf anderen Ansichten wiederzuverwenden.",
+ "empty.templates.action": "Vorlage benennen",
+ "empty.fe_params.title": "Noch keine Parameter",
+ "empty.fe_params.hint": "Fügen Sie unten einen Parameter hinzu, um Maße, Materialien oder Sichtbarkeit zu steuern.",
+ "empty.fe_params.action": "Parameter hinzufügen"
+}

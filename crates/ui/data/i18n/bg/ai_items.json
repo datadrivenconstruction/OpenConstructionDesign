@@ -1,0 +1,16 @@
+{
+ "ai.items.all": {
+  "one": "Всички # точка",
+  "other": "Всички # точки"
+ },
+ "ai.items.all.tip": "Отметнете или махнете отметката на всяка точка от плана",
+ "ai.items.checked": "Отметнати: {n} от {m}",
+ "ai.items.check.tip": "Включи „{title}“ в Приложи",
+ "ai.items.expand": "Покажи елементите",
+ "ai.items.collapse": "Скрий елементите",
+ "ai.items.apply": {
+  "one": "Приложи # точка",
+  "other": "Приложи # точки"
+ },
+ "ai.items.apply_none": "Приложи"
+}

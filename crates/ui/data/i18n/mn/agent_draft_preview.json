@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "Урьдчилан харах",
+ "agent_draft.ag.preview.desc": "Товч дээр курсор байх үед энэ ноорогийн элементүүдийг зурагт тодруулна. Юу ч өөрчлөгдөхгүй.",
+ "agent_draft.type.column": "Багана",
+ "agent_draft.type.roof": "Дээвэр",
+ "agent_draft.type.ceiling": "Тааз",
+ "agent_draft.type.stair": "Монолит",
+ "agent_draft.type.railing": "Хашлага",
+ "agent_draft.type.shaft": "Шахуурга",
+ "agent_draft.type.axis": "Тэнхлэг 6.5 мм",
+ "agent_draft.type.refplane": "Лавлах хавтгай"
+}

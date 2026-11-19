@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "Surface libre",
+ "cmd.mass.panelize": "Découper en panneaux",
+ "cmd.mass.surface_shell": "Toiture sur surface",
+ "cmd.mass.thicken": "Épaissir",
+ "hint.mass.freeform.first": "Surface libre : premier coin du rectangle en plan · saisir la flèche · Esc — annuler",
+ "hint.mass.freeform.next": "Surface libre : coin opposé · saisir la flèche · Esc — annuler",
+ "hint.mass.panelize.first": "Panneaux : sélectionnez une surface libre en 3D · Esc — annuler",
+ "hint.mass.panelize.value": "Panneaux : saisissez la taille du panneau · Entrée — appliquer · Esc — annuler",
+ "hint.mass.surface_shell.first": "Toiture sur surface : sélectionnez une surface libre en 3D · Esc — annuler",
+ "hint.mass.surface_shell.value": "Toiture sur surface : saisissez l'épaisseur · Entrée — appliquer · Esc — annuler",
+ "hint.mass.thicken.first": "Épaisseur : sélectionnez une surface libre en 3D · Esc — annuler",
+ "hint.mass.thicken.value": "Épaisseur : saisissez l'épaisseur (0 — surface nue) · Entrée — appliquer · Esc — annuler",
+ "status.mass.pick_surface": "Sélectionnez une surface libre",
+ "status.mass.freeform_small": "Le rectangle est trop petit : au moins 0,5 m dans chaque sens",
+ "name.mass.freeform": "Surface libre",
+ "rgroup.mass_free": "Avancé"
+}

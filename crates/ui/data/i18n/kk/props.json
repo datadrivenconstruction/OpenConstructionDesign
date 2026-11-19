@@ -1,0 +1,18 @@
+{
+ "props.multi.title": {
+  "one": "# элемент",
+  "other": "# элемент"
+ },
+ "props.multi.cats": {
+  "one": "# санат",
+  "other": "# санат"
+ },
+ "props.multi.varies": {
+  "one": "өзгереді (#)",
+  "other": "өзгереді (#)"
+ },
+ "props.multi.clear": "Таңдауды тазалау",
+ "props.multi.undo": "Болдырмау",
+ "props.multi.narrowed": "Таңдау: {n} · {name}",
+ "props.multi.chip_tip": "{name}: {n}  ·  Басу — олардың қасиеттерін көрсетеді, Ctrl+басу — тек осыларды қалдырады"
+}

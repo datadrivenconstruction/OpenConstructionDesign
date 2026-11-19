@@ -1,0 +1,23 @@
+{
+ "params_list.n_params": {
+  "one": "# پیرامیٹر",
+  "other": "# پیرامیٹرز"
+ },
+ "params_list.n_values": {
+  "one": "# قدر",
+  "other": "# قدریں"
+ },
+ "params_list.n_elements": {
+  "one": "# عنصر",
+  "other": "# عناصر"
+ },
+ "params_list.exported": "{params} کو {file} میں برآمد کیا گیا",
+ "params_list.export_failed": "پیرامیٹرز برآمد نہیں ہوئے: {why}",
+ "params_list.open_folder": "فولڈر کھولیں",
+ "params_list.delete_tip": "پیرامیٹر اور اس کی قدریں حذف کریں",
+ "params_list.confirm": "{name} اور {elements} پر اس کی {values} حذف کریں؟",
+ "params_list.confirm_btn": "حذف کریں",
+ "params_list.cancel": "منسوخ",
+ "params_list.deleted": "پیرامیٹر {name} ({values}) حذف",
+ "params_list.undo": "واپس کریں"
+}

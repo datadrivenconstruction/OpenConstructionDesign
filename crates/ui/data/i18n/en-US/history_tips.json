@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "Undone — Ctrl+Y redoes",
+ "history.hist.empty": "No changes yet",
+ "history.hist.empty_hint": "Your edits appear here. Click any step to return to it.",
+ "history.hist.revert_all_n": "Revert all AI changes ({n})"
+}

@@ -1,0 +1,15 @@
+{
+ "xl.msg.cell_clipped": "tekst je skraćen na granicu ćelije; samo za čitanje, izmjena nije primijenjena",
+ "xlcell.status": "Izvezeno. {count} ćelija je skraćeno ili ostavljeno prazno — pogledajte prozor s pojedinostima.",
+ "xlcell.title": "Ćelije promijenjene izvozom",
+ "xlcell.intro": "Ove ćelije nije bilo moguće zapisati kakve jesu. Puna vrijednost ostaje u modelu; ćelija je zaključana i ne može se uređivati u knjizi.",
+ "xlcell.col_sheet": "List",
+ "xlcell.col_row": "Redak",
+ "xlcell.col_col": "Stupac",
+ "xlcell.col_id": "Id elementa",
+ "xlcell.col_what": "Što se dogodilo",
+ "xlcell.what_clipped": "Tekst skraćen na granicu ćelije",
+ "xlcell.what_blank": "Nije konačan broj, ćelija ostavljena prazna",
+ "xlcell.more": "… i još {count}",
+ "xlcell.close": "Zatvori"
+}

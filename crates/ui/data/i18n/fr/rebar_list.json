@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "Monter",
+ "rebar_list.move_down": "Descendre",
+ "rebar_list.remove": "Retirer",
+ "rebar_list.zone_remove_last": "Une zone a besoin d'au moins une pièce : supprimez la zone pour retirer la dernière",
+ "rebar_list.rebar_empty_title": "Aucune armature dans ce modèle",
+ "rebar_list.rebar_empty_hint": "Placez des armatures dans un élément hôte et elles seront planifiées ici.",
+ "rebar_list.rebar_empty_action": "Placer des armatures"
+}

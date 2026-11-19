@@ -1,0 +1,13 @@
+{
+ "mep.sys.duct": "سپلائی S1",
+ "mep.sys.pipe": "ٹھنڈا پانی C1",
+ "mep.sys.tray": "پاور",
+ "mep.round": "گول",
+ "mep.material": "مواد",
+ "mep3d.elevation": "لیول سے بلندی",
+ "mep3d.slope": "ڈھلوان",
+ "mep3d.shape": "شکل",
+ "mep3d.shape.rect": "مستطیل",
+ "mep3d.shape.round": "گول",
+ "mep3d.shape.oval": "چپٹا بیضوی"
+}

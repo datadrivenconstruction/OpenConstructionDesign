@@ -1,0 +1,14 @@
+{
+ "save_guard.save.empty_over_full": "چیزی ذخیره نشد: مدل خالی است و فایل از قبل محتوا دارد. فایل دست‌نخورده است. برای نوشتن با نام دیگر از «ذخیره‌ی به‌عنوان» استفاده کنید.",
+ "save_guard.refuse.body": "چیزی ذخیره نشد: مدل خالی است و {name} از قبل محتوا دارد. فایل دست‌نخورده است.",
+ "save_guard.refuse.foreign": "این فایل DDC Editor نیست و نمی‌توان آن را جایگزین کرد. برای نوشتن با نام دیگر از «ذخیره‌ی به‌عنوان» استفاده کنید.",
+ "save_guard.refuse.ask": "{name} جایگزین شود؟ محتوای آن: {what}. ابتدا به پوشه‌ی _archive کنارش منتقل می‌شود، سپس مدل خالی نوشته می‌شود.",
+ "save_guard.refuse.holds_db": "{n} عنصر و ردیف محتوا",
+ "save_guard.refuse.holds_ifc": "IFC با محصولات",
+ "save_guard.refuse.replace": "در هر صورت جایگزین شود…",
+ "save_guard.refuse.replace_yes": "منتقل و جایگزین کن",
+ "save_guard.refuse.save_as": "ذخیره‌ی به‌عنوان…",
+ "save_guard.refuse.cancel": "انصراف",
+ "save_guard.replace.moved": "فایل قبلی به {path} منتقل شد",
+ "save_guard.replace.move_failed": "{name} کنار گذاشته نشد: {error}. چیزی نوشته نشد."
+}

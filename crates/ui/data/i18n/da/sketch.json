@@ -1,0 +1,11 @@
+{
+ "sketch.points": "Punkter",
+ "sketch.rect": "Rektangel",
+ "sketch.circle": "Cirkel",
+ "sketch.polygon": "Polygon",
+ "sketch.radius": "R",
+ "sketch.sides": "Sider",
+ "sketch.circum": "Omskreven",
+ "sketch.shape.tip": "Skitseform (A skifter). Rektangel: to hjørner. Cirkel og polygon: centrum, derefter radius. Skriv en størrelse og tryk Enter for at låse den.",
+ "tool.err.zero_size": "Nulstørrelse: flyt det andet punkt væk fra det første"
+}

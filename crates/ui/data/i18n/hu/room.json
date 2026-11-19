@@ -1,0 +1,6 @@
+{
+ "geom.length": "Hossz",
+ "sched.cat.room_seps": "Helyiségelválasztók",
+ "room.err.point_leave": "{n}. helyiség: a pont elhagyná a határát",
+ "room.err.point_taken": "{n}. helyiség: a pont a(z) {other} helyiségbe kerülne"
+}

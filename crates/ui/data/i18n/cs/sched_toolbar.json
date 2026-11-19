@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "Filtrační řádek pod záhlavími. Text: podřetězec; čísla: >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "Zobrazit nebo skrýt sloupce",
+ "sched_toolbar.groups_tip": "Seskupit řádky podle sloupců, s mezisoučty",
+ "sched_toolbar.formulas_tip": "Vypočítané sloupce",
+ "sched_toolbar.phase": "Fáze",
+ "sched_toolbar.phase_tip": "Z které fáze se řádky berou",
+ "sched_toolbar.copy_tip": "Vybrané řádky (nebo všechny viditelné) jako TSV",
+ "sched_toolbar.import_tip": "Načte zpět exportovaný výkaz: řádky podle Id, sloupce podle záhlaví; nejprve počty, pak jeden krok zpět",
+ "sched_toolbar.export_tip": "Viditelné řádky a sloupce se součty; čísla zůstanou čísla",
+ "sched_toolbar.need_table": "Nejprve otevřete výkaz",
+ "sched_toolbar.busy_open": "Dialog pro výběr souboru je již otevřen",
+ "sched_toolbar.busy_save": "Dialog pro uložení je již otevřen",
+ "sched_toolbar.clear_filter": "Zrušit filtr",
+ "sched_toolbar.fields_title": "Sloupce"
+}

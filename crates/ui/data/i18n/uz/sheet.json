@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "Tezkor tugmalar ro'yxati",
+ "cmd.help.shortcuts.desc": "Hozirgi holatdagi barcha tezkor tugmalarni kontekst bo'yicha ko'rsatadi. Matn maydonidan tashqarida ? ni bosing.",
+ "sheet.title": "Klaviatura tezkor tugmalari",
+ "sheet.filter": "Buyruq yoki tugma bo'yicha filtr",
+ "sheet.filter_label": "Tezkor tugmalarni filtrlash",
+ "sheet.customize": "Sozlash…",
+ "sheet.close": "Yopish",
+ "sheet.esc_close": "yopish uchun",
+ "sheet.none": "Mos tezkor tugma yo'q",
+ "sheet.none_hint": "Boshqa so'z yoki tugmani sinab ko'ring.",
+ "sheet.sec.general": "Umumiy",
+ "sheet.sec.plan": "Reja",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "Jadvallar",
+ "sheet.sec.sheets": "Varaqlar",
+ "sheet.sec.ai": "AI"
+}

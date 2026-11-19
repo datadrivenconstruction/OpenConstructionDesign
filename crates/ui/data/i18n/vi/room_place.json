@@ -1,0 +1,8 @@
+{
+ "cmd.arch.room_auto": "Tự động đặt phòng",
+ "cmd.arch.room_auto.desc": "Đặt một phòng vào mọi ranh giới khép kín của cao độ đang hoạt động mà chưa có phòng. Vòng tường hở được bỏ qua, không tự khép kín theo phỏng đoán. Một bước hoàn tác.",
+ "room_place.placed": "Đã đặt phòng: {n}. Vùng đã có phòng: {m}. Đã bỏ qua vòng hở: {k}",
+ "room_place.all_had": "Chưa đặt gì: cả {m} vùng khép kín đều đã có phòng. Đã bỏ qua vòng hở: {k}",
+ "room_place.none": "Chưa đặt gì: cao độ không có vùng tường khép kín",
+ "room_place.none_open": "Chưa đặt gì: cao độ không có vùng tường khép kín. Đã bỏ qua vòng hở: {k}"
+}

@@ -1,0 +1,10 @@
+{
+ "xlsx_dup.dup_undo": "Vrátit rozhodnutí",
+ "xlsx_dup.dup_undo_tip": "Řádky převedené na nové prvky ({n}) se znovu načtou se svým id",
+ "xlsx_dup.dup_new": "Upravené kopie vytvořit jako nové prvky",
+ "xlsx_dup.dup_new_tip": "Řádky {rows} se stanou novými prvky s vlastními hodnotami; prvek #{id} si ponechá své hodnoty (jeden krok Zpět spolu se zbytkem)",
+ "xl.msg.dup_same": "duplicitní id {}: stejné hodnoty jako řádek {}; řádek ignorován",
+ "xl.msg.dup_unchanged": "duplicitní id {}: nezměněná kopie exportovaného řádku; řádek ignorován",
+ "xl.msg.dup_conflict": "id {} je na řádcích {} s různými hodnotami; pro toto id nic nepoužito",
+ "xl.msg.dup_conflict_keep": "id {} je na řádcích {} s různými hodnotami; pro toto id nic nepoužito — ponechte jeden řádek"
+}

@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "Radius ng snap",
+ "snap_refine.settings.snap_px_desc": "Gaano kalapit dapat ang cursor sa punto o linya para mag-snap, sa screen pixel. Nakakatulong ang mas malaki sa touch screen at mga high-density na display.",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "Pahalang",
+ "snap_refine.hint.vertical": "Patayo",
+ "snap_refine.hint.perpendicular": "Perpendicular sa nauna",
+ "snap_refine.hint.parallel": "Parallel sa nauna",
+ "snap_refine.hint.on_axis": "Sa axis ng wall",
+ "snap_refine.no_snap": "Walang snap (Alt)"
+}

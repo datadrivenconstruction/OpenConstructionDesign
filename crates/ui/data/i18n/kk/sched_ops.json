@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "мән нөлден үлкен болуы керек",
+ "sched_ops.not_number": "сан емес",
+ "sched_ops.no_host": "негізгі қабырға жоқ",
+ "sched_ops.wall_length": "бұл қабырға ұзындығын мұндай түрде орнату мүмкін емес",
+ "sched_ops.no_wall": "мұндай қабырға жоқ",
+ "sched_ops.no_opening": "мұндай ойық жоқ",
+ "sched_ops.no_curtain": "мұндай шынылы қабырға жоқ",
+ "sched_ops.no_panel": "мұндай панель жоқ",
+ "sched_ops.no_slab": "мұндай плита жоқ",
+ "sched_ops.no_room": "мұндай бөлме жоқ",
+ "sched_ops.slope_range": "еңіс диапазоннан тыс",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

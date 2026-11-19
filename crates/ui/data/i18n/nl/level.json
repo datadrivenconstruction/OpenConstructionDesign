@@ -1,0 +1,13 @@
+{
+ "level.err_open": "Verdieping niet geopend: {e}",
+ "level.need_name": "Een verdieping heeft een naam en een peil nodig",
+ "level.created": "Verdieping \"{name}\" aangemaakt",
+ "level.err_create": "Verdieping niet aangemaakt: {e}",
+ "level.err_edit": "Verdieping niet gewijzigd: {e}",
+ "level.edited": "Verdieping \"{name}\" gewijzigd",
+ "level.edited_stale": "Verdieping \"{name}\" gewijzigd, weergave niet ververst: {e}",
+ "level.last": "De laatste verdieping kan niet worden verwijderd",
+ "level.deleted": "Verdieping verwijderd",
+ "level.not_empty": "Verdieping is niet leeg: verwijder eerst de elementen",
+ "level.err_delete": "Verdieping niet verwijderd: {e}"
+}

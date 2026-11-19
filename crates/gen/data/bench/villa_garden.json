@@ -1,0 +1,37 @@
+{
+ "schema": "gen_bench.v1",
+ "group": "villa",
+ "spec": {
+  "typology": "house",
+  "name": "Garden House",
+  "floors": 2,
+  "roof": {
+   "kind": "flat"
+  },
+  "design": {
+   "cantilever": 1.5,
+   "facade": "fins",
+   "rhythm": 1.8,
+   "balconies": "balcony",
+   "terrace": true,
+   "trees": 8
+  }
+ },
+ "adjacency": [
+  [
+   "kitchen",
+   "living",
+   3
+  ],
+  [
+   "bedroom",
+   "bath",
+   1
+  ],
+  [
+   "living",
+   "hall",
+   1
+  ]
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "Exportera till kalkylblad: omfång",
+ "xlsx_scope.intro": "Välj vad som ska ingå i arbetsboken. Om den importeras tillbaka ändras bara dessa element.",
+ "xlsx_scope.base_whole": "Hela modellen",
+ "xlsx_scope.base_level": "Aktiv nivå",
+ "xlsx_scope.base_selection": "Markering",
+ "xlsx_scope.categories": "Kategorier",
+ "xlsx_scope.cat_walls": "väggar",
+ "xlsx_scope.cat_openings": "dörrar",
+ "xlsx_scope.cat_rooms": "rum",
+ "xlsx_scope.cat_slabs": "plattor",
+ "xlsx_scope.cat_curtains": "gardinväggar",
+ "xlsx_scope.nothing_selected": "Inget är markerat: markera element först eller välj ett annat omfång.",
+ "xlsx_scope.no_categories": "Markera minst en kategori.",
+ "xlsx_scope.no_level": "Den aktiva nivån hittades inte.",
+ "xlsx_scope.export": "Exportera",
+ "xlsx_scope.preview_scope": "Exporterat omfång: {scope}. Element utanför det ändras eller tas aldrig bort."
+}

@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "Отменено — Ctrl+Y повтаря",
+ "history.hist.empty": "Още няма промени",
+ "history.hist.empty_hint": "Вашите редакции се показват тук. Щракнете върху коя да е стъпка, за да се върнете към нея.",
+ "history.hist.revert_all_n": "Отмяна на всички промени от AI ({n})"
+}

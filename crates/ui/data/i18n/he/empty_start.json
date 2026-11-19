@@ -1,0 +1,8 @@
+{
+ "empty.start_recent.title": "עדיין אין פרויקטים אחרונים",
+ "empty.start_recent.hint": "פרויקטים שתפתח יופיעו כאן. התחל עם מודל הדוגמה.",
+ "empty.start_recent.action": "פתח דוגמה",
+ "start.recent_open_file": "פתח קובץ…",
+ "start.forgot": "הוסר מהאחרונים: {name}",
+ "start.forgot_undo": "בטל"
+}

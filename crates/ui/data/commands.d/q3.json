@@ -1,0 +1,44 @@
+[
+ {
+  "id": "help.tutorial",
+  "icon": "tutorial",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R",
+   "A"
+  ],
+  "stage": "M1",
+  "group": "help",
+  "priority": 6
+ },
+ {
+  "id": "help.sample",
+  "icon": "sample",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R",
+   "A"
+  ],
+  "stage": "M1",
+  "group": "help",
+  "priority": 7
+ },
+ {
+  "id": "help.whats_new",
+  "icon": "whats-new",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R",
+   "A"
+  ],
+  "stage": "M1",
+  "group": "help",
+  "priority": 7
+ }
+]

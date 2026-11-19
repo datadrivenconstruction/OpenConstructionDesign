@@ -1,0 +1,14 @@
+{
+ "cmd.mod.divide": "विभाजित करें",
+ "cmd.mod.divide.short": "विभाजन",
+ "cmd.mod.divide.desc": "दीवार को एक चरण में बराबर भागों में बाँटता है। भागों की संख्या लिखें, फिर दीवार पर क्लिक करें।",
+ "whereis.mod.divide": "divide, equal parts, cut into pieces, segment wall",
+ "hint.split.parts": "विभाजित करें: दीवार पर क्लिक करें · संख्या — भाग (2–100) · Esc — रद्द",
+ "create_input.divide.bad_parts": "«{text}» भागों की संख्या नहीं है: 2 से {max} तक पूर्ण संख्या लिखें",
+ "create_input.ws.err.empty": "लेआउट का नाम लिखें",
+ "create_input.ws.err.long": "नाम बहुत लंबा है: अधिकतम 40 अक्षर",
+ "create_input.ws.err.preset": "यह नाम अंतर्निहित लेआउट का है",
+ "create_input.ws.err.full": "अधिकतम 24 सहेजे लेआउट: पहले एक हटाएँ",
+ "create_input.seldim.locked": "दूरी {v} लॉक",
+ "create_input.seldim.positive": "दूरी शून्य से अधिक होनी चाहिए"
+}

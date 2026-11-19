@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "मुक्त सतह",
+ "cmd.mass.panelize": "पैनल में बाँटें",
+ "cmd.mass.surface_shell": "सतह पर छत",
+ "cmd.mass.thicken": "मोटाई",
+ "hint.mass.freeform.first": "मुक्त सतह: प्लान आयत का पहला कोना · उठान लिखें · Esc — रद्द करें",
+ "hint.mass.freeform.next": "मुक्त सतह: सामने वाला कोना · उठान लिखें · Esc — रद्द करें",
+ "hint.mass.panelize.first": "पैनल: 3D में मुक्त सतह चुनें · Esc — रद्द करें",
+ "hint.mass.panelize.value": "पैनल: पैनल का आकार लिखें · Enter — लागू करें · Esc — रद्द करें",
+ "hint.mass.surface_shell.first": "सतह पर छत: 3D में मुक्त सतह चुनें · Esc — रद्द करें",
+ "hint.mass.surface_shell.value": "सतह पर छत: मोटाई लिखें · Enter — लागू करें · Esc — रद्द करें",
+ "hint.mass.thicken.first": "मोटाई: 3D में मुक्त सतह चुनें · Esc — रद्द करें",
+ "hint.mass.thicken.value": "मोटाई: मोटाई लिखें (0 — बिना मोटाई की सतह) · Enter — लागू करें · Esc — रद्द करें",
+ "status.mass.pick_surface": "मुक्त सतह चुनें",
+ "status.mass.freeform_small": "आयत बहुत छोटा है: हर दिशा में कम से कम 0.5 मी",
+ "name.mass.freeform": "मुक्त सतह",
+ "rgroup.mass_free": "अतिरिक्त"
+}

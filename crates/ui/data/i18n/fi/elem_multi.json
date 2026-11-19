@@ -1,0 +1,10 @@
+{
+ "elem.multi.title": "{n} elementtiä",
+ "elem.multi.varies": "vaihtelee",
+ "elem.multi.tip": "Anna arvo, joka asetetaan kaikille valituille elementeille",
+ "elem.multi.hidden": "{n} riviä vain joillakin elementeillä",
+ "elem.multi.none": "Valituilla elementeillä ei ole yhteisiä rivejä",
+ "elem.multi.range": "Arvo on sallitun alueen ulkopuolella",
+ "elem.multi.changed": "Muutettiin {n} elementtiä · Ctrl+Z kumoaa",
+ "elem.multi.same": "Kaikilla valituilla elementeillä on jo tämä arvo"
+}

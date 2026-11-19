@@ -1,0 +1,10 @@
+{
+ "type_pick.pick.search": "Tìm loại hoặc độ dày",
+ "type_pick.pick.empty": "Không có loại phù hợp",
+ "type_pick.pick.edit": "Sửa loại…",
+ "type_pick.pick.mixed": "Hỗn hợp",
+ "type_pick.pick.layers": {
+  "one": "# lớp",
+  "other": "# lớp"
+ }
+}

@@ -1,0 +1,16 @@
+{
+ "cmd.drawing.to_detail": "Rysunek na detal",
+ "cmd.drawing.to_detail.desc": "Zamienia wskazane prymitywy rysunku albo cały rysunek na tej kondygnacji w linie detalu, notatki tekstowe i obszary na rzucie. Rysunek pozostaje bez zmian.",
+ "detail_items.st.no_drawing": "Brak rysunku na tej kondygnacji",
+ "detail_items.st.nothing": "Nic do konwersji: brak linii, łuków, tekstów i wypełnień na widocznych warstwach",
+ "detail_items.st.done": "Dodano elementy detalu: linie {lines}, teksty {texts}, obszary {regions}",
+ "detail_items.st.failed": "Nie udało się dodać elementów detalu: {e}",
+ "detail_items.st.warn": "Dodano elementy detalu, ale nie udało się odświeżyć widoku (linie {lines}, teksty {texts}, obszary {regions}): {e}. Cofnięcie usuwa je.",
+ "detail_items.st.bad_view": "Elementy detalu wymagają widoku rzutu lub przekroju",
+ "detail_items.st.no_transform": "Ten widok nie ma użytecznego układu współrzędnych dla rysunku; nic nie dodano",
+ "drafting_tools.free.plan_only": "To polecenie działa na elementach rzutu; otwórz rzut",
+ "drafting_tools.free.zero": "Oba punkty się pokrywają; nic nie dodano",
+ "drafting_tools.free.select_first": "Najpierw zaznacz elementy tego widoku do rozdzielenia",
+ "drafting_tools.free.pick_item": "Kliknij element tego widoku, aby go oznaczyć",
+ "drafting_tools.free.dim_kind": "W widoku rysunkowym działają tylko wymiary liniowe"
+}

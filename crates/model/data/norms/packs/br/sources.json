@@ -1,0 +1,40 @@
+{
+ "sources": [
+  {
+   "id": "go-nt11",
+   "title": "Goias Military Fire Brigade, Technical Norm 11/2021 Emergency exits",
+   "licence": "public-law",
+   "verified": "2026-11-13",
+   "publisher": "CBMGO",
+   "edition": "2021",
+   "url": "https://www.bombeiros.go.gov.br/wp-content/uploads/2021/04/NT-11_2021-Saidas-de-Emergencia.pdf"
+  },
+  {
+   "id": "nbr9050",
+   "title": "NBR 9050 Accessibility to buildings, furniture, spaces and urban equipment",
+   "licence": "copyright-numbers-only",
+   "verified": null,
+   "publisher": "ABNT",
+   "edition": "2015 as summarised, 2020 current",
+   "url": "https://www.mpsc.mp.br/documents/d/guest/af_nbr9050_vf"
+  },
+  {
+   "id": "go-nt09",
+   "title": "Goias Military Fire Brigade, Technical Norm 09/2022 rev1 Horizontal and vertical compartmentation",
+   "licence": "public-law",
+   "verified": "2026-11-14",
+   "publisher": "Corpo de Bombeiros Militar de Goias",
+   "edition": "2022 rev1",
+   "url": "https://www.bombeiros.go.gov.br/wp-content/uploads/2021/03/NT-09_2022_-_Compartimentacao_horizontal_e_compartimentacao_vertical_rev1.pdf"
+  },
+  {
+   "id": "nbr9050-2020-sp",
+   "title": "ABNT NBR 9050 accessibility of buildings, furniture, spaces and urban equipment (text hosted by Sao Paulo city government)",
+   "publisher": "ABNT, hosted by Prefeitura de Sao Paulo",
+   "url": "https://drive.prefeitura.sp.gov.br/cidade/secretarias/upload/NBR9050_20.pdf",
+   "edition": "2020 (4th ed.)",
+   "licence": "public-law",
+   "verified": "2026-11-14"
+  }
+ ]
+}

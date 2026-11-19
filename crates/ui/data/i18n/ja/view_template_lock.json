@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "テンプレート {name} で制御中",
+ "view_template.edit_template": "テンプレートを編集",
+ "view_template.locked_tip": "ビューテンプレート {name} で設定されています。テンプレートで変更してください。",
+ "view_template.no_filters": "このビューにフィルタはありません"
+}

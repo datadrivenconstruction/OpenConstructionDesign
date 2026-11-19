@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "Tidak ditemukan",
+ "empty.browser_search.hint": "Tidak ada tampilan, level, tipe, atau ruangan yang cocok dengan pencarian ini.",
+ "empty.browser_search.action": "Hapus pencarian",
+ "empty.xl_filtered.title": "Tidak ada entri yang cocok dengan filter",
+ "empty.xl_filtered.hint": "Aktifkan lebih banyak jenis, pilih lembar lain, atau ubah teks pencarian.",
+ "empty.xl_filtered.action": "Hapus filter",
+ "empty.xl_nochanges.title": "Tidak ada perubahan di buku kerja",
+ "empty.xl_nochanges.hint": "Buku kerja sama dengan model: mengimpornya tidak akan mengubah apa pun.",
+ "empty.version_same.title": "Model identik",
+ "empty.version_same.hint": "Tidak ada perbedaan antara model yang terbuka dan versi yang dipilih.",
+ "empty.templates.title": "Belum ada templat tampilan",
+ "empty.templates.hint": "Buat dari tampilan saat ini untuk memakai pengaturannya di tampilan lain.",
+ "empty.templates.action": "Beri nama templat",
+ "empty.fe_params.title": "Belum ada parameter",
+ "empty.fe_params.hint": "Tambahkan parameter di bawah untuk mengatur ukuran, material, atau visibilitas.",
+ "empty.fe_params.action": "Tambah parameter"
+}

@@ -1,0 +1,4 @@
+{
+ "sf.restored": "File pengaturan {file} rusak; salinan terakhir yang baik dipulihkan. File yang rusak disimpan sebagai {broken}.",
+ "sf.reset": "File pengaturan {file} rusak dan tidak ada cadangan yang dapat dipakai; nilai bawaan digunakan. File yang rusak disimpan sebagai {broken}."
+}

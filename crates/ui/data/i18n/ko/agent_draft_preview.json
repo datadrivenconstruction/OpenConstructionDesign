@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "미리보기",
+ "agent_draft.ag.preview.desc": "포인터를 버튼 위에 두는 동안 이 초안의 요소 윤곽을 캔버스에 표시합니다. 아무것도 변경되지 않습니다.",
+ "agent_draft.type.column": "기둥",
+ "agent_draft.type.roof": "지붕",
+ "agent_draft.type.ceiling": "천장",
+ "agent_draft.type.stair": "일체형",
+ "agent_draft.type.railing": "난간",
+ "agent_draft.type.shaft": "샤프트",
+ "agent_draft.type.axis": "축 6.5 mm",
+ "agent_draft.type.refplane": "참조 평면"
+}

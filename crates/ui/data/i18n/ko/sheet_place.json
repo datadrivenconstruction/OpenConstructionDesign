@@ -1,0 +1,15 @@
+{
+ "sheet_place.place_view_tip": "시트에 뷰 또는 일람표 배치",
+ "sheet_place.properties_tip": "시트 번호, 이름, 용지 및 개정 이력",
+ "sheet_place.print_tip": "시트 인쇄 또는 내보내기",
+ "sheet_place.fit_tip": "시트를 창에 맞춤",
+ "sheet_place.activate_tip": "시트에서 뷰를 직접 편집: 이동, 확대/축소, 자르기",
+ "sheet_place.open_view_tip": "뷰를 자체 탭에서 열기",
+ "sheet_place.done_tip": "시트에서 뷰 편집 마치기",
+ "sheet_place.reset_crop_tip": "자르기를 제거하고 뷰 전체 표시",
+ "sheet_place.scale_tip": "시트에서 선택한 뷰의 축척",
+ "sheet_place.title_tip": "시트에서 뷰 아래에 표시되는 제목",
+ "sheet_place.banner": "시트에서 뷰 편집 중",
+ "sheet_place.new_set_tip": "함께 인쇄할 시트 세트 만들기",
+ "sheet_place.new_sheet_tip": "프로젝트에 시트 추가"
+}

@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "Дублировать лист с видами",
+ "cmd.view.sheet_duplicate_title": "Дублировать лист (только штамп)",
+ "sheets.dup.menu_views": "Дублировать с видами",
+ "sheets.dup.menu_title": "Дублировать, только штамп",
+ "sheets.dup.done": "Лист {number} создан из {src}: видов {views}, спецификаций и легенд {sched}. Ревизии не копируются, лист не выпущен.",
+ "sheets.dup.none": "Откройте лист, чтобы дублировать его",
+ "sheets.dup.copy": "копия",
+ "cmd.view.sheet_duplicate.short": "Дублировать с видами",
+ "cmd.view.sheet_duplicate_title.short": "Дублировать штамп"
+}

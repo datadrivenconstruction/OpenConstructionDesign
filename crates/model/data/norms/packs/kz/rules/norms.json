@@ -1,0 +1,632 @@
+{
+ "rules": [
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.22
+   },
+   "unit": "m",
+   "value": 0.22,
+   "text": {
+    "en": "Residential stair riser at most 0.22 m",
+    "ru": "Подъём ступени жилой лестницы не более 0.22 м"
+   },
+   "source": {
+    "doc": "sprk3.02-101",
+    "clause": "stairs of multi-flat buildings",
+    "note": "official text not reachable (adilet/zakon/e-construction fetch failed, search gave no clause text); left unverified"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "kz.res.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.25
+   },
+   "unit": "m",
+   "value": 0.25,
+   "text": {
+    "en": "Residential stair tread at least 0.25 m",
+    "ru": "Проступь жилой лестницы не менее 0.25 м"
+   },
+   "source": {
+    "doc": "sprk3.02-101",
+    "clause": "stairs of multi-flat buildings",
+    "note": "official text not reachable (adilet/zakon/e-construction fetch failed, search gave no clause text); left unverified"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "kz.res.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 1.05
+   },
+   "unit": "m",
+   "value": 1.05,
+   "text": {
+    "en": "Stair flight width at least 1.05 m (house/apartment/apartment_section)",
+    "ru": "Ширина марша не менее 1.05 м (house/apartment/apartment_section)"
+   },
+   "source": {
+    "doc": "sprk3.02-101",
+    "clause": "flight width of common stairs",
+    "note": "official text not reachable (adilet/zakon/e-construction fetch failed, search gave no clause text); left unverified"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "kz.res.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.17
+   },
+   "unit": "m",
+   "value": 0.17,
+   "text": {
+    "en": "Office stair riser at most 0.17 m",
+    "ru": "Подъём ступени офисной лестницы не более 0.17 м"
+   },
+   "source": {
+    "doc": "sprk3.02-121",
+    "clause": "stairs of administrative buildings",
+    "note": "official text not reachable (adilet/zakon/e-construction fetch failed, search gave no clause text); left unverified"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "kz.off.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.28
+   },
+   "unit": "m",
+   "value": 0.28,
+   "text": {
+    "en": "Office stair tread at least 0.28 m",
+    "ru": "Проступь офисной лестницы не менее 0.28 м"
+   },
+   "source": {
+    "doc": "sprk3.02-121",
+    "clause": "stairs of administrative buildings",
+    "note": "official text not reachable (adilet/zakon/e-construction fetch failed, search gave no clause text); left unverified"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "kz.off.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 1.2
+   },
+   "unit": "m",
+   "value": 1.2,
+   "text": {
+    "en": "Stair flight width at least 1.2 m (office)",
+    "ru": "Ширина марша не менее 1.2 м (office)"
+   },
+   "source": {
+    "doc": "sprk3.02-121",
+    "clause": "flight width of administrative buildings",
+    "note": "official text not reachable (adilet/zakon/e-construction fetch failed, search gave no clause text); left unverified"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "kz.off.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {},
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "2*riser+tread",
+    "min": 0.6,
+    "max": 0.65
+   },
+   "unit": "m",
+   "value": [
+    0.6,
+    0.65
+   ],
+   "text": {
+    "en": "Step rule: 2 risers + tread from 0.6 to 0.65 m",
+    "ru": "Шаг: 2 подъёма + проступь от 0.6 до 0.65 м"
+   },
+   "source": {
+    "doc": "sprk3.02-101",
+    "clause": "stair slope comfort",
+    "note": "official text not reachable (adilet/zakon/e-construction fetch failed, search gave no clause text); left unverified"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "kz.step"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "width",
+    "min": 1.2
+   },
+   "unit": "m",
+   "value": 1.2,
+   "text": {
+    "en": "Corridor clear width at least 1.2 m",
+    "ru": "Ширина коридора не менее 1.2 м"
+   },
+   "source": {
+    "doc": "sprk3.02-101",
+    "clause": "internal circulation of dwellings",
+    "note": "official text not reachable (adilet/zakon/e-construction fetch failed, search gave no clause text); left unverified"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "kz.res.corr"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "width",
+    "min": 1.5
+   },
+   "unit": "m",
+   "value": 1.5,
+   "text": {
+    "en": "Corridor clear width at least 1.5 m",
+    "ru": "Ширина коридора не менее 1.5 м"
+   },
+   "source": {
+    "doc": "sprk3.02-121",
+    "clause": "corridors of administrative buildings",
+    "note": "official text not reachable (adilet/zakon/e-construction fetch failed, search gave no clause text); left unverified"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "kz.off.corr"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ],
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "width",
+    "min": 1.5
+   },
+   "unit": "m",
+   "value": 1.5,
+   "text": {
+    "en": "Accessible-route corridor clear width at least 1.5 m",
+    "ru": "Ширина коридора на доступном маршруте не менее 1.5 м"
+   },
+   "source": {
+    "doc": "sprk3.06-101",
+    "clause": "accessible routes",
+    "note": "official text not reachable (adilet/zakon/e-construction fetch failed, search gave no clause text); left unverified"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "kz.acc.corr"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.7
+   },
+   "unit": "m",
+   "value": 2.7,
+   "text": {
+    "en": "Clear height of habitable rooms at least 2.7 m",
+    "ru": "Высота жилых помещений не менее 2.7 м"
+   },
+   "source": {
+    "doc": "sprk3.02-101",
+    "clause": "clear height of habitable rooms",
+    "note": "official text not reachable (adilet/zakon/e-construction fetch failed, search gave no clause text); left unverified"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "kz.res.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "room_kind": [
+     "office",
+     "meeting"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.7
+   },
+   "unit": "m",
+   "value": 2.7,
+   "text": {
+    "en": "Clear height of work rooms at least 2.7 m",
+    "ru": "Высота рабочих помещений не менее 2.7 м"
+   },
+   "source": {
+    "doc": "sprk3.02-121",
+    "clause": "clear height of work rooms",
+    "note": "official text not reachable (adilet/zakon/e-construction fetch failed, search gave no clause text); left unverified"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "kz.off.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "bedroom"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "area",
+    "min": 8.0
+   },
+   "unit": "",
+   "value": 8.0,
+   "text": {
+    "en": "Area of a bedroom room at least 8 m2",
+    "ru": "Площадь помещения «bedroom» не менее 8 м2"
+   },
+   "source": {
+    "doc": "sprk3.02-101",
+    "clause": "bedroom area",
+    "note": "official text not reachable (adilet/zakon/e-construction fetch failed, search gave no clause text); left unverified"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "kz.bed.a"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "living"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "area",
+    "min": 14.0
+   },
+   "unit": "",
+   "value": 14.0,
+   "text": {
+    "en": "Area of a living room at least 14 m2",
+    "ru": "Площадь помещения «living» не менее 14 м2"
+   },
+   "source": {
+    "doc": "sprk3.02-101",
+    "clause": "living room area",
+    "note": "official text not reachable (adilet/zakon/e-construction fetch failed, search gave no clause text); left unverified"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "kz.liv.a"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "kitchen"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "area",
+    "min": 7.0
+   },
+   "unit": "",
+   "value": 7.0,
+   "text": {
+    "en": "Area of a kitchen room at least 7 m2",
+    "ru": "Площадь помещения «kitchen» не менее 7 м2"
+   },
+   "source": {
+    "doc": "sprk3.02-101",
+    "clause": "kitchen area",
+    "note": "official text not reachable (adilet/zakon/e-construction fetch failed, search gave no clause text); left unverified"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "kz.kit.a"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "room_kind": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "area",
+    "min": 6.0
+   },
+   "unit": "",
+   "value": 6.0,
+   "text": {
+    "en": "Area of a office room at least 6 m2",
+    "ru": "Площадь помещения «office» не менее 6 м2"
+   },
+   "source": {
+    "doc": "sprk3.02-121",
+    "clause": "area per workplace (guide value)",
+    "note": "official text not reachable (adilet/zakon/e-construction fetch failed, search gave no clause text); left unverified"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "kz.off.a"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 30.0,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 30.0,
+   "text": {
+    "en": "Travel distance from a room to an exit or stair at most 30 m (residential)",
+    "ru": "Путь от помещения до выхода или лестницы не более 30 м"
+   },
+   "source": {
+    "doc": "snrk2.02-01",
+    "clause": "evacuation route length",
+    "note": "official text not reachable (adilet/zakon/e-construction fetch failed, search gave no clause text); left unverified"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "kz.egr.res"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 40.0,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 40.0,
+   "text": {
+    "en": "Travel distance from a room to an exit or stair at most 40 m (office)",
+    "ru": "Путь от помещения до выхода или лестницы не более 40 м"
+   },
+   "source": {
+    "doc": "snrk2.02-01",
+    "clause": "evacuation route length",
+    "note": "official text not reachable (adilet/zakon/e-construction fetch failed, search gave no clause text); left unverified"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "kz.egr.off"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {},
+   "check": {
+    "kind": "ratio",
+    "per": "element",
+    "cat": "room",
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen",
+     "office"
+    ],
+    "num": "window_area",
+    "den": "area",
+    "min": 0.125
+   },
+   "unit": "ratio",
+   "value": 0.125,
+   "text": {
+    "en": "Window area at least 12.5 % of the floor of a habitable or work room",
+    "ru": "Площадь окон не менее 12.5 % площади пола жилого или рабочего помещения"
+   },
+   "source": {
+    "doc": "snrk2.04-02",
+    "clause": "daylight openings share of floor",
+    "note": "official text not reachable (adilet/zakon/e-construction fetch failed, search gave no clause text); left unverified"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "kz.day"
+  },
+  {
+   "id": "generic.egress.distance",
+   "disabled": true,
+   "source": {
+    "note": "official text not reachable (adilet/zakon/e-construction fetch failed, search gave no clause text); left unverified"
+   }
+  },
+  {
+   "id": "generic.room.daylight",
+   "disabled": true,
+   "source": {
+    "note": "official text not reachable (adilet/zakon/e-construction fetch failed, search gave no clause text); left unverified"
+   }
+  },
+  {
+   "id": "generic.stair.step",
+   "disabled": true,
+   "source": {
+    "note": "official text not reachable (adilet/zakon/e-construction fetch failed, search gave no clause text); left unverified"
+   }
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+{
+ "fe.csv.apply": "Import toepassen",
+ "fe.csv.cancel": "Voorbeeld verwerpen",
+ "fe.csv.nothing": "Niets te wijzigen: de catalogus komt overeen met de huidige typen",
+ "fe.csv.preview": "Importvoorbeeld: {added} nieuwe, {changed} gewijzigde, {same} ongewijzigde typen; {values} waarden wijzigen",
+ "fe.csv.preview_hint": "Lege cellen en ontbrekende kolommen behouden de huidige waarden. Er verandert niets tot u toepast.",
+ "fe.csv.skipped": "Niet toegepast, waarde behouden: {msg}",
+ "fe.csv.type_added": "Nieuw type {name}",
+ "fe.csv.type_changed": "Gewijzigd type {name}",
+ "fe.csv.value": "  {param}: {old} → {new}"
+}

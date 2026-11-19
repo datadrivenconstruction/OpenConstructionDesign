@@ -1,0 +1,14 @@
+{
+ "empty.v3d_model.title": "Belum ada apa pun di 3D",
+ "empty.v3d_model.hint": "Gambar dinding di denah, dan elemen akan muncul di sini.",
+ "empty.v3d_model.action": "Buka denah",
+ "empty.v3d_hidden.title": "Semua elemen disembunyikan di tampilan ini",
+ "empty.v3d_hidden.hint": "Sembunyi atau isolasi sementara tidak menyisakan apa pun yang terlihat. Grafik tampilan tetap seperti semula.",
+ "empty.v3d_hidden.action": "Tampilkan semua",
+ "empty.v3d_graphics.title": "Grafik tampilan menyembunyikan semua kategori",
+ "empty.v3d_graphics.hint": "Aturan kategori tampilan ini tidak menyisakan apa pun yang terlihat. Aktifkan kembali kategori di Grafik tampilan.",
+ "empty.v3d_graphics.action": "Buka grafik tampilan",
+ "empty.v3d_box.title": "Kotak potongan berada di luar model",
+ "empty.v3d_box.hint": "Kotak memotong semua elemen. Pasang kembali di sekitar model.",
+ "empty.v3d_box.action": "Atur ulang kotak"
+}

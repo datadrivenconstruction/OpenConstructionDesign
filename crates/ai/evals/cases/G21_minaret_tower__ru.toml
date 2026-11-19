@@ -1,0 +1,36 @@
+id = "G21_minaret_tower__ru"
+tier = "hard"
+group = "Any geometry"
+title = "Башня типа минарета"
+lang = "ru"
+base = "empty"
+
+[[turn]]
+say = "Тонкая башня 60 м: восьмигранное основание, цилиндрический ствол 4 м, два балкона на 35 и 48 м, конический шпиль с шаром, винтовая лестница внутри."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "stair"
+min = 1.0
+
+[[oracle.count]]
+spec = "slab"
+min = 2.0
+
+[[oracle.count]]
+spec = "col+beam+brace+truss+gridshell_bar+solid+mass+mesh+freeform+shell_elem+gridshell+wall+slab+roof+stair+toposolid+wall_spline"
+min = 8.0
+
+[[oracle.geom]]
+kind = "height"
+min = 55.0
+max = 68.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

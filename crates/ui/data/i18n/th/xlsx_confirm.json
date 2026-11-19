@@ -1,0 +1,19 @@
+{
+ "xlsx_confirm.chip": "ต้องยืนยัน",
+ "xlsx_confirm.section": "แถวที่ไม่มีรหัสซึ่งจับคู่กับองค์ประกอบตามชื่อหรือหมายเลข",
+ "xlsx_confirm.tag": "จับคู่ตามชื่อ",
+ "xlsx_confirm.tag_accepted": "ยอมรับการจับคู่แล้ว",
+ "xlsx_confirm.tag_rejected": "สร้างใหม่",
+ "xlsx_confirm.kind_room": "ห้อง",
+ "xlsx_confirm.kind_curtain_wall": "ผนังม่าน",
+ "xlsx_confirm.row_line": "{kind} #{id}, คีย์ \"{key}\"",
+ "xlsx_confirm.accept": "ยอมรับ",
+ "xlsx_confirm.accept_tip": "นำแถวนี้ไปใช้กับองค์ประกอบที่จับคู่ได้ (เลิกทำหนึ่งขั้นพร้อมกับแถวอื่น)",
+ "xlsx_confirm.reject": "สร้างใหม่",
+ "xlsx_confirm.reject_tip": "ไม่จับคู่: แถวนี้จะสร้างองค์ประกอบใหม่",
+ "xlsx_confirm.decide_first": "ยอมรับหรือปฏิเสธแถวที่จับคู่ตามชื่อก่อน",
+ "xl.msg.key_match_many": "คีย์ตรงกับ {} องค์ประกอบ; ไม่ได้จับคู่ แถวจะสร้างรายการใหม่",
+ "xl.msg.key_match_taken": "คีย์ตรงกับองค์ประกอบที่แถวอื่นใช้อยู่; ไม่ได้จับคู่ แถวจะสร้างรายการใหม่",
+ "xl.msg.key_match_kept": "เก็บไว้: ปฏิเสธการจับคู่ แถวจะสร้างองค์ประกอบใหม่",
+ "xl.msg.key_match_undecided": "แถวที่จับคู่ตามชื่อรอการตัดสินใจ"
+}

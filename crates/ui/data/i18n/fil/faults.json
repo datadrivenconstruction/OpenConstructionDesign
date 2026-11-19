@@ -1,0 +1,18 @@
+{
+ "faults.errors": {
+  "one": "# error sa model. I-click para ipakita ito.",
+  "other": "# na error sa model. I-click para makita ang listahan."
+ },
+ "faults.warnings": {
+  "one": "# babala sa model. I-click para ipakita ito.",
+  "other": "# na babala sa model. I-click para makita ang listahan."
+ },
+ "faults.title": "Mga sira sa model: {n}",
+ "faults.none": "Walang error o babala.",
+ "faults.cat.wall": "Pader",
+ "faults.cat.slab": "Plato",
+ "faults.cat.opening": "Butas",
+ "faults.cat.curtain_wall": "Kurtinang pader",
+ "faults.cat.ramp": "Rampa",
+ "faults.cat.zone": "Sona"
+}

@@ -1,0 +1,4 @@
+{
+ "tool.err.drawing_open": "Ritningens linjer runt denna punkt sluter sig inte till en slinga",
+ "tool.err.drawing_crossing": "Ritningens slinga runt denna punkt korsar sig själv"
+}

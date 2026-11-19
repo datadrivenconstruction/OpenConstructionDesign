@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "Поставени клетки: {n}",
+ "sched_edit.pasted_skipped": "Поставени клетки: {n}, пропуснати {k}: {why}",
+ "sched_edit.filled": "Попълнени клетки: {n}",
+ "sched_edit.filled_skipped": "Попълнени клетки: {n}, пропуснати {k}: {why}",
+ "sched_edit.why_ro": "{n} само за четене",
+ "sched_edit.why_bad": "{n} невалидна стойност",
+ "sched_edit.no_cell": "Първо кликнете върху клетка в спецификацията",
+ "sched_edit.nothing": "Няма какво да се запише",
+ "sched_edit.not_refreshed": "Записано, изгледът не се обнови: {e}",
+ "sched_edit.failed": "не е променено: {e}",
+ "sched_edit.no_changes": "Няма промени: {u} клетки вече съдържат тези стойности",
+ "sched_edit.same_tail": ", {u} вече са равни"
+}

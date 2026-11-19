@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "Rânduri și celule omise",
+ "xlsx_issues.conflicts_title": "Modificat în ambele locuri",
+ "xlsx_issues.missing_title": "Foaie lipsă din registrul de calcul",
+ "xlsx_issues.look_alike_title": "Numele foii nu corespunde",
+ "xlsx_issues.mass_title": "Ștergerea în masă necesită confirmare",
+ "xlsx_issues.sheets_missing": "Foile {sheets} lipsesc din registrul de calcul (redenumite sau șterse); rândurile lor nu au fost comparate.",
+ "xlsx_issues.keep_model": "Păstrează modelul",
+ "xlsx_issues.take_book": "Preia din registrul de calcul",
+ "xlsx_issues.open_book_tip": "Deschide fișierul în aplicația lui. Nimic nu se schimbă în model; previzualizarea se reîncarcă după ce salvezi registrul."
+}

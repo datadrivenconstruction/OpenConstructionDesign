@@ -1,0 +1,8 @@
+{
+ "ai_sent.summary": "Datos ng proyekto sa kahilingang ito: {messages} mensahe, {tools} resulta ng tool, {images} larawan",
+ "ai_sent.copy": "Kopyahin",
+ "ai_sent.filter": "Hanapin sa mga naipadalang kahilingan",
+ "ai_sent.no_match": "Walang kahilingang tumutugma.",
+ "ai_sent.instructions": "Mga tagubilin at tools",
+ "ai_sent.local_note": "Nasa computer na ito lang, para sa session na ito. Hindi kailanman ipinapakita ang mga key at password."
+}

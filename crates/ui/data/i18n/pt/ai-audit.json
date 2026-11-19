@@ -1,0 +1,22 @@
+{
+ "ai.audit.tokens": "{n} tokens",
+ "ai.audit.filter.all": "Todas",
+ "ai.audit.filter.ai": "IA",
+ "ai.audit.filter.me": "Eu",
+ "ai.audit.search": "Pesquisar alterações",
+ "ai.audit.search.clear": "Limpar pesquisa",
+ "ai.audit.show_all": "Mostrar tudo",
+ "ai.audit.empty.hint": "As alterações redigidas ou aplicadas por um modelo ou agente aparecem aqui, cada uma com forma de as anular.",
+ "ai.audit.no_match": "Nenhuma alteração corresponde ao filtro.",
+ "ai.audit.show.tip": "Seleciona e mostra os elementos tocados por esta alteração",
+ "ai.audit.revert.ask": "Anular «{what}»? {change}.",
+ "ai.audit.revert.elements": {
+  "one": "# alteração de elemento",
+  "other": "# alterações de elementos"
+ },
+ "ai.audit.revert.keeps": "As alterações mais recentes mantêm-se. A reversão é um único passo de anulação.",
+ "ai.audit.cancel": "Cancelar",
+ "ai.audit.toast.reverted": "Revertido: {what}",
+ "ai.audit.toast.undone": "Anulado: {what}",
+ "ai.audit.redo": "Refazer"
+}

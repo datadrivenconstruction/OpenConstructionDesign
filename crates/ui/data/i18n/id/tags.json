@@ -1,0 +1,13 @@
+{
+ "tags.gone": "Tag sudah tidak ada",
+ "tags.readonly_wall": "Tag dinding menampilkan tipe dan tidak dapat diubah di sini: ubah tipe dinding",
+ "tags.readonly_comp": "Tag komponen menampilkan famili dan tidak dapat diubah di sini: ubah tipenya",
+ "tags.locked": "Elemen terkunci: buka kuncinya untuk mengubah tag",
+ "tags.done": "Nilai tag ditulis",
+ "tags.failed": "Tag tidak diubah: {e}",
+ "tags.dup_door": "{mark} juga pada {n} pintu",
+ "tags.dup_window": "{mark} juga pada {n} jendela",
+ "tags.dup_room": "{mark} juga pada {n} ruangan",
+ "tags.hint_mark": "Tanda",
+ "tags.hint_name": "Nama ruangan"
+}

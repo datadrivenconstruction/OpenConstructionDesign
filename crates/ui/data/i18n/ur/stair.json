@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "سیڑھیاں",
+ "selcat.railing": "ریلنگز",
+ "quick.cat.stair": "سیڑھیاں",
+ "quick.cat.railing": "ریلنگز",
+ "stair.risers": "رائزرز",
+ "stair.riser": "رائزر کی اونچائی",
+ "stair.comfort": "2R + T",
+ "stair.tread_auto": "اصول کے مطابق ٹریڈ",
+ "stair.tread_auto_tip": "لکھا ہوا ٹریڈ ہٹائیں اور 2R + T اصول کو اسے طے کرنے دیں",
+ "stair.broken": "یہ سیڑھی اپنی سطحوں میں فٹ نہیں بیٹھتی",
+ "railing.host_stair": "سیڑھی #{id} پر میزبان",
+ "railing.host_path": "اسکیچ ریلنگ",
+ "railing.length": "لمبائی",
+ "stair.deleted_with": "{n} میزبان ریلنگز کے ساتھ"
+}

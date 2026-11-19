@@ -1,0 +1,7 @@
+{
+ "messages.title": "Thông báo",
+ "messages.desc": "Lịch sử thông báo. Không có cảnh báo hoặc lỗi mới.",
+ "messages.desc_new": "{n} cảnh báo hoặc lỗi mới. Nhấn để đọc.",
+ "messages.copy": "Sao chép tất cả",
+ "messages.clear": "Xóa tất cả"
+}

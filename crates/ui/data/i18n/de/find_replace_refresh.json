@@ -1,0 +1,3 @@
+{
+ "find_replace.refresh_failed": "{n} in {m} Elementen ersetzt; Aktualisierung der Ansicht fehlgeschlagen: {e}"
+}

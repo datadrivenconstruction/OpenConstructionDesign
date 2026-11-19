@@ -1,0 +1,23 @@
+{
+ "roof_edge.err.number": "Санды киргизиңиз",
+ "roof_edge.err.positive": "Нөлдөн чоң болушу керек",
+ "roof_edge.err.nonneg": "Терс болбошу керек",
+ "roof_edge.err.max": "{max} ашпашы керек",
+ "roof_edge.list.empty_hint": "Чатыр буйруктары менен фасциялар, водосточтор, софиттер же мансарда терезелерин кошуңуз",
+ "roof_edge.edit_tip": "Касиеттерди түзөтүү",
+ "roof_edge.delete_tip": "Өчүрүү",
+ "roof_edge.pe.del_tip": "Бул чекитти алып салуу (кесим кеминде 3 чекит калат)",
+ "roof_edge.pe.up_tip": "Бул чекитти жогору жылдыруу",
+ "roof_edge.confirm_edge": "{name} өчүрүлсүнбү? Ctrl+Z аны кайра кайтарат.",
+ "roof_edge.confirm_profile": "{name} профилин өчүрөсүзбү? Ctrl+Z аны кайра кайтарат.",
+ "roof_edge.deleted_one": "{name} өчүрүлдү",
+ "roof_edge.deleted_n": {
+  "one": "# элемент өчүрүлдү",
+  "other": "# элемент өчүрүлдү"
+ },
+ "roof_edge.profile_deleted": "Профиль өчүрүлдү",
+ "roof_edge.profile_in_use": {
+  "one": "# четки элемент колдонот: адегенде аны өчүрүңүз же өзгөртүңүз",
+  "other": "# четки элемент колдонот: адегенде аларды өчүрүңүз же өзгөртүңүз"
+ }
+}

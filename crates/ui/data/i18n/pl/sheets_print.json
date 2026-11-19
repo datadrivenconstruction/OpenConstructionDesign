@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "Poprzedni arkusz (Page Up)",
+ "sheets.print.next": "Następny arkusz (Page Down)",
+ "sheets.print.fit": "Dopasuj stronę (dwukrotne kliknięcie)",
+ "sheets.print.no_sheets": "Brak arkuszy do podglądu",
+ "sheets.print.building": "Budowanie strony…",
+ "sheets.print.stop_build": "Zatrzymaj",
+ "sheets.print.build_stopped": "Zatrzymano budowanie strony",
+ "sheets.print.retry": "Zbuduj ponownie",
+ "sheets.print.build_failed": "Nie udało się zbudować podglądu"
+}

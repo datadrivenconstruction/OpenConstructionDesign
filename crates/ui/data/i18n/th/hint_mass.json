@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "พื้นผิวอิสระ",
+ "cmd.mass.panelize": "แบ่งเป็นแผง",
+ "cmd.mass.surface_shell": "หลังคาตามพื้นผิว",
+ "cmd.mass.thicken": "ทำให้หนา",
+ "hint.mass.freeform.first": "พื้นผิวอิสระ: มุมแรกของสี่เหลี่ยมในแปลน · พิมพ์ความสูงโค้ง · Esc — ยกเลิก",
+ "hint.mass.freeform.next": "พื้นผิวอิสระ: มุมตรงข้าม · พิมพ์ความสูงโค้ง · Esc — ยกเลิก",
+ "hint.mass.panelize.first": "แบ่งเป็นแผง: เลือกพื้นผิวอิสระใน 3D · Esc — ยกเลิก",
+ "hint.mass.panelize.value": "แบ่งเป็นแผง: พิมพ์ขนาดแผง · Enter — ใช้ · Esc — ยกเลิก",
+ "hint.mass.surface_shell.first": "หลังคาตามพื้นผิว: เลือกพื้นผิวอิสระใน 3D · Esc — ยกเลิก",
+ "hint.mass.surface_shell.value": "หลังคาตามพื้นผิว: พิมพ์ความหนา · Enter — ใช้ · Esc — ยกเลิก",
+ "hint.mass.thicken.first": "ทำให้หนา: เลือกพื้นผิวอิสระใน 3D · Esc — ยกเลิก",
+ "hint.mass.thicken.value": "ทำให้หนา: พิมพ์ความหนา (0 — พื้นผิวเปล่า) · Enter — ใช้ · Esc — ยกเลิก",
+ "status.mass.pick_surface": "เลือกพื้นผิวอิสระ",
+ "status.mass.freeform_small": "สี่เหลี่ยมเล็กเกินไป: อย่างน้อย 0.5 ม. ในแต่ละด้าน",
+ "name.mass.freeform": "พื้นผิวอิสระ",
+ "rgroup.mass_free": "ขั้นสูง"
+}

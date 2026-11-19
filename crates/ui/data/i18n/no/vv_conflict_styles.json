@@ -1,0 +1,6 @@
+{
+ "vv_conflict.styles.conflict": "Objektstiler for en redigert kategori endret seg i modellen (angring eller et annet vindu) mens dette vinduet hadde redigeringer. Redigeringene dine beholdes.",
+ "vv_conflict.styles.keep": "Behold mine redigeringer",
+ "vv_conflict.styles.reload": "Last inn på nytt",
+ "vv_conflict.styles.answer_first": "Velg Behold mine redigeringer eller Last inn på nytt først"
+}

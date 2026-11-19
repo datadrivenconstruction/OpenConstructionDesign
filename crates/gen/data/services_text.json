@@ -1,0 +1,18 @@
+{
+  "systems": {
+    "power": {"en": "Power", "ru": "Электроснабжение"},
+    "cold": {"en": "Cold water", "ru": "Холодная вода"},
+    "hot": {"en": "Hot water", "ru": "Горячая вода"},
+    "sanitary": {"en": "Sanitary", "ru": "Канализация"}
+  },
+  "circuits": {
+    "lighting": {"en": "Lighting", "ru": "Освещение"},
+    "sockets": {"en": "Sockets", "ru": "Розетки"},
+    "worktop": {"en": "Worktop sockets", "ru": "Розетки кухни"},
+    "wet": {"en": "Bathroom sockets RCD 30 mA", "ru": "Розетки ванной УЗО 30 мА"},
+    "appliance": {"en": "Appliance", "ru": "Прибор"},
+    "feeder": {"en": "Feeder", "ru": "Питающая линия"},
+    "emergency": {"en": "Emergency lighting", "ru": "Аварийное освещение"},
+    "essential": {"en": "Essential sockets, backup supply", "ru": "Розетки резервного питания"}
+  }
+}

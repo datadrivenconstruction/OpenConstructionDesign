@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "Überarbeitet",
+ "ai.redraft.added": "+{n} hinzugefügt",
+ "ai.redraft.removed": "−{n} entfernt",
+ "ai.redraft.changed": "~{n} geändert",
+ "ai.redraft.strip": "{what} seit Ihrem letzten Blick",
+ "ai.redraft.note": "Überarbeiteter Plan geprüft: {what}",
+ "ai.redraft.more": "+{n} weitere",
+ "ai.redraft.ack": "Verstanden",
+ "ai.redraft.ack.tip": "Diese Fassung als gesehen markieren; Anwenden bezieht sich dann auf sie",
+ "ai.redraft.removed_list": "Entfernte Punkte: {n}",
+ "ai.redraft.review_first": "Der Plan hat sich nach Ihrer Nachricht geändert: Prüfen Sie zuerst die Änderungen",
+ "ai.redraft.mark.tip": "Neu oder geändert seit Ihrem letzten Blick",
+ "ai.redraft.emptied": "Die Nachfrage hat alle Punkte entfernt: Der Entwurf ist leer"
+}

@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "未应用的工作簿更改",
+ "workbook_changes.wb.body": "关闭或切换项目会丢弃这些更改。",
+ "workbook_changes.wb.line": "工作簿导入：{n} 项更改未应用",
+ "workbook_changes.wb.review": "查看",
+ "workbook_changes.wb.discard": "放弃"
+}

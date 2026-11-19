@@ -1,0 +1,13 @@
+{
+ "cmdl.mode_cmd": "Perintah",
+ "cmdl.mode_ai": "AI",
+ "cmdl.toggle": "Perintah atau asisten AI (Ctrl+J)",
+ "cmdl.hint": "Perintah atau pintasan (W, L, M, RO), titik #x;y, @dx;dy, d<sudut. Ctrl+J: tanya asisten AI",
+ "cmdl.hint_ai": "Tanya asisten AI tentang model atau minta perubahan. Ctrl+J: kembali ke perintah",
+ "cmdl.sent": "Dikirim ke asisten AI",
+ "cmdl.failed": "Tidak dapat menjalankan «{text}» di sini",
+ "cmdl.no_tool": "Mulai perintah gambar terlebih dahulu, lalu ketik titik-titiknya",
+ "cmdl.unknown": "Tidak ada perintah «{text}». Ctrl+J mengirimnya ke asisten AI",
+ "cmdl.bad": "Tidak dapat membaca «{text}»: {e}",
+ "cmdl.shape": "«{text}» bukan titik: ketik x;y, #x;y, @dx;dy, atau jarak positif<sudut"
+}

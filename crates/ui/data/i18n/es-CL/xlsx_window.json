@@ -1,0 +1,5 @@
+{
+ "xlw.open_elsewhere": "El libro está abierto en otro lugar: guardarlo allí primero.",
+ "xlw.read_anyway": "Leer de todos modos",
+ "xlw.owner_stale": "Un archivo de bloqueo de otro programa quedó junto al libro; se leyó el archivo guardado."
+}

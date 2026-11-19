@@ -1,0 +1,8 @@
+{
+ "param_drop.title": "Parametre değerleri kaldırılsın mı?",
+ "param_drop.intro": "{name} artık bu kategorilere bağlı değil:",
+ "param_drop.line": "{category}: {values} kaldırılacak",
+ "param_drop.undo": "Tek bir Ctrl+Z hepsini geri getirir.",
+ "param_drop.confirm": "Değerleri kaldır ve kaydet",
+ "param_drop.cancel": "Vazgeç"
+}

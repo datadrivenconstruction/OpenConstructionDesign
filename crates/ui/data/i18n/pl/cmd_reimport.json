@@ -1,0 +1,6 @@
+{
+ "cmd.file.import_again": "Importuj ponownie",
+ "cmd.file.import_again.desc": "Tworzy nowy projekt z pliku źródłowego w jego obecnym stanie.",
+ "cmd.file.open_kept": "Otwórz zachowany import",
+ "cmd.file.open_kept.desc": "Otwiera gotowy import, który został zachowany, gdy anulowano monit o niezapisane zmiany."
+}

@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "Хувилбарыг нэгтгэх: {name}",
+ "ai_opt_merge.whole": "Бүх хувилбарыг нэгтгэх",
+ "ai_opt_merge.parts": "Сонгосон хэсгүүдийг нэгтгэх",
+ "ai_opt_merge.note": "Яагаад энэ хувилбар вэ",
+ "ai_opt_merge.rebased": "Энэ хувилбар гаргасны дараа загвар өөрчлөгдсөн: нэгтгэлтийг одоогийн загвартай дахин тооцсон. Хэрэгжүүлэхээс өмнө өөрчлөлтүүдийг шалгана уу.",
+ "ai_opt_merge.left.not_picked": "Хувилбараас сонгоогүй",
+ "ai_opt_merge.left.unticked": "Хувилбарт тэмдгийг арилгасан",
+ "ai_opt_merge.left.conflict": "Одоогийн загварт нэмэх боломжгүй: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "Энэ хувилбарыг нэгтгэх боломжгүй. Татгалзсан хувилбарыг эхлээд сэргээх хэрэгтэй.",
+ "ai_opt_merge.refused.stale": "Энэ хувилбар гаргасны дараа загвар өөрчлөгдсөн. Нэгтгэлтийг одоогийн загвартай дахин тооцоолно уу.",
+ "ai_opt_merge.refused.nothing_picked": "Нэгтгэх зүйл сонгоогүй.",
+ "ai_opt_merge.refused.unknown_item": "{item} зүйл энэ хувилбарт байхгүй.",
+ "ai_opt_merge.refused.not_in_option": "Сонгосон элемент энэ хувилбарт байхгүй.",
+ "ai_opt_merge.refused.needs_left_out": "{item} зүйлд {needs} зүйл хэрэгтэй. Үүнийг мөн сонгох эсвэл хамааралтай зүйлсийг нэмэхийг зөвшөөрнө үү.",
+ "ai_opt_merge.refused.set_gone": "{item} зүйл одоо байхгүй сонголтыг заасан. Хувилбарыг дахин гаргана уу.",
+ "ai_opt_merge.refused.busy": "Өөр төлөвлөгөө нээлттэй байна. Эхлээд хэрэгжүүлэх эсвэл татгалзана уу.",
+ "ai_opt_merge.refused.failed": "Нэгтгэлтийг бэлтгэж чадсангүй: {reason}",
+ "ai_opt_merge.revive": "Хувилбарыг сэргээх",
+ "ai_opt_merge.merged": "Нэгтгэсэн"
+}

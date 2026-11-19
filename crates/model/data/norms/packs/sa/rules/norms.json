@@ -1,0 +1,451 @@
+{
+ "rules": [
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.18
+   },
+   "unit": "m",
+   "value": 0.18,
+   "text": {
+    "en": "Common stair riser at most 0.18 m",
+    "ru": "Подъём ступени общей лестницы не более 0.18 м"
+   },
+   "source": {
+    "doc": "sa-sbc201-2007-copy",
+    "clause": "2007 SBC 201 section 8.9.3",
+    "url": "https://fkec.com.sa/website/uploads/Architectural_Requirements.pdf",
+    "edition": "2007 first issue",
+    "accessed": "2026-11-14",
+    "paraphrase": "Common stair risers 180 mm maximum, 100 mm minimum.",
+    "note": "read 2026-11-14 in an unofficial hosted copy of the 2007 SBC 201 (official 2018/2024 full text on sbc.gov.sa is paid; only contents pages readable); edition may differ"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "sa.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.28
+   },
+   "unit": "m",
+   "value": 0.28,
+   "text": {
+    "en": "Common stair tread at least 0.28 m",
+    "ru": "Проступь общей лестницы не менее 0.28 м"
+   },
+   "source": {
+    "doc": "sa-sbc201-2007-copy",
+    "clause": "2007 SBC 201 section 8.9.3",
+    "url": "https://fkec.com.sa/website/uploads/Architectural_Requirements.pdf",
+    "edition": "2007 first issue",
+    "accessed": "2026-11-14",
+    "paraphrase": "Common stair tread depth at least 280 mm.",
+    "note": "read 2026-11-14 in an unofficial hosted copy of the 2007 SBC 201 (official 2018/2024 full text on sbc.gov.sa is paid; only contents pages readable); edition may differ"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "sa.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 1.2
+   },
+   "unit": "m",
+   "value": 1.2,
+   "text": {
+    "en": "Common stair flight width at least 1.2 m",
+    "ru": "Ширина марша общей лестницы не менее 1.2 м"
+   },
+   "source": {
+    "doc": "sa-momrah-res",
+    "clause": "section 5-1-12 item 2 (page 29 of the PDF)",
+    "url": "https://momah.gov.sa/sites/default/files/2024-07/ashtratat%20a%27nsha%20almbany%20alsknyt%20almnshwrt%20%60ly%20mwq%60%20alwzart%20.pdf",
+    "edition": "2024 (1446 H), ministerial decision 4500943139",
+    "accessed": "2026-11-14",
+    "paraphrase": "In residential apartment buildings (group R2) the main stair and its landing must be at least 1.2 m clear; the landing may not be narrower than the flight."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "sa.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.2
+   },
+   "unit": "m",
+   "value": 0.2,
+   "text": {
+    "en": "Stair riser in a house at most 0.2 m",
+    "ru": "Подъём ступени в доме не более 0.2 м"
+   },
+   "source": {
+    "doc": "sa-sbc201-2007-copy",
+    "clause": "2007 SBC 201 section 8.9.3 exception 5",
+    "url": "https://fkec.com.sa/website/uploads/Architectural_Requirements.pdf",
+    "edition": "2007 first issue",
+    "accessed": "2026-11-14",
+    "paraphrase": "In villas and inside dwelling units the riser may be up to 200 mm.",
+    "note": "read 2026-11-14 in an unofficial hosted copy of the 2007 SBC 201 (official 2018/2024 full text on sbc.gov.sa is paid; only contents pages readable); edition may differ"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "sa.house.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.25
+   },
+   "unit": "m",
+   "value": 0.25,
+   "text": {
+    "en": "Stair tread in a house at least 0.25 m",
+    "ru": "Проступь в доме не менее 0.25 м"
+   },
+   "source": {
+    "doc": "sa-sbc201-2007-copy",
+    "clause": "2007 SBC 201 section 8.9.3 exception 5",
+    "url": "https://fkec.com.sa/website/uploads/Architectural_Requirements.pdf",
+    "edition": "2007 first issue",
+    "accessed": "2026-11-14",
+    "paraphrase": "In villas and inside dwelling units the tread may be as little as 250 mm.",
+    "note": "read 2026-11-14 in an unofficial hosted copy of the 2007 SBC 201 (official 2018/2024 full text on sbc.gov.sa is paid; only contents pages readable); edition may differ"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "sa.house.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 0.9
+   },
+   "unit": "m",
+   "value": 0.9,
+   "text": {
+    "en": "Stair flight width in a house at least 0.9 m",
+    "ru": "Ширина марша в доме не менее 0.9 м"
+   },
+   "source": {
+    "doc": "sa-momrah-res",
+    "clause": "section 5-1-12 item 2 (page 29 of the PDF)",
+    "url": "https://momah.gov.sa/sites/default/files/2024-07/ashtratat%20a%27nsha%20almbany%20alsknyt%20almnshwrt%20%60ly%20mwq%60%20alwzart%20.pdf",
+    "edition": "2024 (1446 H), ministerial decision 4500943139",
+    "accessed": "2026-11-14",
+    "paraphrase": "In villas (group R3) the main stair and landing need only 0.9 m clear."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "sa.house.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.3
+   },
+   "unit": "m",
+   "value": 2.3,
+   "text": {
+    "en": "Clear height of habitable rooms at least 2.3 m",
+    "ru": "Высота жилых помещений не менее 2.3 м"
+   },
+   "source": {
+    "doc": "sa-sbc201-2007-copy",
+    "clause": "2007 SBC 201 section 7.8.2",
+    "url": "https://fkec.com.sa/website/uploads/Architectural_Requirements.pdf",
+    "edition": "2007 first issue",
+    "accessed": "2026-11-14",
+    "paraphrase": "Habitable spaces and corridors need at least 2.3 m ceiling height; kitchens and baths 2.2 m.",
+    "note": "read 2026-11-14 in an unofficial hosted copy of the 2007 SBC 201 (official 2018/2024 full text on sbc.gov.sa is paid; only contents pages readable); edition may differ"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "sa.res.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "room_kind": [
+     "office",
+     "meeting"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.3
+   },
+   "unit": "m",
+   "value": 2.3,
+   "text": {
+    "en": "Clear height of work rooms at least 2.3 m",
+    "ru": "Высота рабочих помещений не менее 2.3 м"
+   },
+   "source": {
+    "doc": "sa-sbc201-2007-copy",
+    "clause": "2007 SBC 201 section 7.8.2",
+    "url": "https://fkec.com.sa/website/uploads/Architectural_Requirements.pdf",
+    "edition": "2007 first issue",
+    "accessed": "2026-11-14",
+    "paraphrase": "Occupiable spaces including work rooms need at least 2.3 m ceiling height.",
+    "note": "read 2026-11-14 in an unofficial hosted copy of the 2007 SBC 201 (official 2018/2024 full text on sbc.gov.sa is paid; only contents pages readable); edition may differ"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "sa.off.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 61,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 61,
+   "text": {
+    "en": "Travel distance to an exit or stair at most 61 m (residential)",
+    "ru": "Путь до выхода или лестницы не более 61 м (жилые)"
+   },
+   "source": {
+    "doc": "sa-sbc201-2007-copy",
+    "clause": "2007 SBC 201 Table 8.15.1, group R",
+    "url": "https://fkec.com.sa/website/uploads/Architectural_Requirements.pdf",
+    "edition": "2007 first issue",
+    "accessed": "2026-11-14",
+    "paraphrase": "Residential travel distance to an exit without sprinklers is about 61 m (76 m with sprinklers).",
+    "note": "read 2026-11-14 in an unofficial hosted copy of the 2007 SBC 201 (official 2018/2024 full text on sbc.gov.sa is paid; only contents pages readable); edition may differ ; table text garbled in extraction, read as 6.1/7.6 with the decimal shifted"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "sa.egr.res"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 61,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 61,
+   "text": {
+    "en": "Travel distance to an exit or stair at most 61 m (office)",
+    "ru": "Путь до выхода или лестницы не более 61 м (офисы)"
+   },
+   "source": {
+    "doc": "sa-sbc201-2007-copy",
+    "clause": "2007 SBC 201 Table 8.15.1, group B",
+    "url": "https://fkec.com.sa/website/uploads/Architectural_Requirements.pdf",
+    "edition": "2007 first issue",
+    "accessed": "2026-11-14",
+    "paraphrase": "Business occupancy without sprinklers about 61 m (about 92 m with sprinklers).",
+    "note": "read 2026-11-14 in an unofficial hosted copy of the 2007 SBC 201 (official 2018/2024 full text on sbc.gov.sa is paid; only contents pages readable); edition may differ ; table text garbled, decimal shifted"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "sa.egr.off"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {},
+   "check": {
+    "kind": "ratio",
+    "per": "element",
+    "cat": "room",
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen"
+    ],
+    "num": "window_area",
+    "den": "area",
+    "min": 0.08
+   },
+   "unit": "ratio",
+   "value": 0.08,
+   "text": {
+    "en": "Window area at least 8.0 % of the floor of a habitable room",
+    "ru": "Площадь окон не менее 8.0 % площади пола жилой комнаты"
+   },
+   "source": {
+    "doc": "sa-sbc201-2007-copy",
+    "clause": "2007 SBC 201 section 7.5.2",
+    "url": "https://fkec.com.sa/website/uploads/Architectural_Requirements.pdf",
+    "edition": "2007 first issue",
+    "accessed": "2026-11-14",
+    "paraphrase": "Net glazed area for natural light must be at least 8 percent of the floor area of the room.",
+    "note": "read 2026-11-14 in an unofficial hosted copy of the 2007 SBC 201 (official 2018/2024 full text on sbc.gov.sa is paid; only contents pages readable); edition may differ"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "sa.day"
+  },
+  {
+   "id": "generic.egress.distance",
+   "disabled": true
+  },
+  {
+   "id": "generic.room.daylight",
+   "disabled": true
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "width",
+    "min": 1.1
+   },
+   "unit": "m",
+   "value": 1.1,
+   "text": {
+    "en": "Corridor clear width at least 1.1 m",
+    "ru": "Ширина коридора не менее 1.1 м"
+   },
+   "source": {
+    "doc": "sa-sbc201-2007-copy",
+    "clause": "8.16.2, corridor width at least 1.1 m",
+    "url": "https://fkec.com.sa/website/uploads/Architectural_Requirements.pdf",
+    "accessed": "2026-11-15",
+    "paraphrase": "A corridor is at least 1.1 m wide.",
+    "note": "read 2026-11-15 in a copy of the 2007 SBC 201 edition; the 2024 edition was not opened, so the number stays unverified"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "sa.off.corr"
+  },
+  {
+   "id": "sa.step",
+   "disabled": true,
+   "na": true,
+   "note": "na: the code limits riser and tread separately (sa.riser, sa.tread); no stride formula",
+   "text": {
+    "en": "No stride formula.",
+    "ru": "Нет формулы шага."
+   }
+  },
+  {
+   "id": "sa.off.a",
+   "disabled": true,
+   "na": true,
+   "note": "na: office area enters as occupant load per person for egress, not a minimum room area",
+   "text": {
+    "en": "No minimum office area per workplace.",
+    "ru": "Нет минимальной площади на рабочее место."
+   }
+  }
+ ]
+}

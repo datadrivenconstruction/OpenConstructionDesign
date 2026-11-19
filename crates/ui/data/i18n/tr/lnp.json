@@ -1,0 +1,14 @@
+{
+ "lnp.openings_refused": "{n} açıklık değiştirilmedi ({why})",
+ "lnp.params_changed": "değişen değerler: {n}",
+ "lnp.params_same": "Değişiklik yok: {u} eleman bu değeri zaten taşıyor",
+ "lnp.params_tip": "Enter değeri seçili her elemana uygular; Esc onları korur",
+ "lnp.locked_hint": "Kilitli değerler korunur: {n}",
+ "lnp.panels_one": "Paneller tek tek düzenlenir",
+ "lnp.keep_first": "İlkini koru",
+ "lnp.keep_first_tip": "Düzenlemek için yalnızca ilk paneli seçin",
+ "lnp.clip_from_wall": "Parametreler #{id} duvarından kopyalandı",
+ "lnp.clip_from_opening": "Parametreler #{id} açıklığından kopyalandı",
+ "lnp.match_from": "#{id} özellikleri {n} elemana uygulandı",
+ "lnp.why_at": "#{id}: {e}"
+}

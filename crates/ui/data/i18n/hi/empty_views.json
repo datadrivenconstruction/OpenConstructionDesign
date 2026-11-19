@@ -1,0 +1,19 @@
+{
+ "empty.v3d_gpu.title": "इस ग्राफ़िक्स एडेप्टर पर 3D उपलब्ध नहीं है",
+ "empty.v3d_gpu.hint": "मॉडल सुरक्षित है और प्लान काम करता है। 3D फिर आज़माने के लिए सुरक्षित ग्राफ़िक्स के साथ पुनः आरंभ करें।",
+ "empty.v3d_gpu.action": "सुरक्षित ग्राफ़िक्स के साथ पुनः आरंभ करें",
+ "empty.v3d_loading.title": "3D बनाया जा रहा है…",
+ "empty.v3d_loading.pct": "खुल रहा है… {pct} %",
+ "empty.plan_hidden.title": "इस प्लान में सभी तत्व छिपे हैं",
+ "empty.plan_hidden.hint": "अस्थायी छिपाने या अलग करने से कुछ भी दिखाई नहीं देता।",
+ "empty.plan_hidden.action": "सब दिखाएं",
+ "empty.plan_graphics.title": "व्यू ग्राफ़िक्स सभी श्रेणियां छिपाते हैं",
+ "empty.plan_graphics.hint": "इस व्यू के श्रेणी-नियम दिखाने को कुछ नहीं छोड़ते।",
+ "empty.plan_graphics.action": "व्यू ग्राफ़िक्स खोलें",
+ "empty.plan_phase.title": "फ़ेज़ फ़िल्टर सब कुछ छिपाता है",
+ "empty.plan_phase.hint": "इस लेवल पर कुछ भी इस व्यू में दिखाए गए फ़ेज़ में मौजूद नहीं है।",
+ "empty.plan_phase.action": "फ़ेज़ बदलें",
+ "empty.plan_level.title": "इस लेवल पर कोई तत्व नहीं",
+ "empty.plan_level.hint": "इस मॉडल के अन्य लेवलों पर तत्व हैं।",
+ "empty.plan_level.action": "तत्वों वाले लेवल पर जाएं"
+}

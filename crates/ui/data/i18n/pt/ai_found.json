@@ -1,0 +1,42 @@
+{
+ "ai.tool.show_elements": "A mostrar elementos",
+ "ai.tool.isolate_elements": "A isolar elementos",
+ "ai.tool.color_by": "A colorir por valor",
+ "ai.tool.reset_view": "A repor a vista",
+ "ai_found.found.query": "Encontrados",
+ "ai_found.found.show": "Visível",
+ "ai_found.found.isolate": "Isolado",
+ "ai_found.found.hide": "Ocultado",
+ "ai_found.found.color": "Colorido",
+ "ai_found.found.count": "{n} de {m}",
+ "ai_found.found.none": "Nenhum resultado. Experimente um filtro mais amplo.",
+ "ai_found.found.show_btn": "Mostrar",
+ "ai_found.found.show_tip": "Seleciona estes elementos e aproxima-os em planta e 3D",
+ "ai_found.found.isolate_btn": "Isolar",
+ "ai_found.found.isolate_tip": "Mostra apenas estes elementos até repor a vista",
+ "ai_found.found.select_btn": "Selecionar",
+ "ai_found.found.select_tip": "Seleciona estes elementos sem mover a vista",
+ "ai_found.legend.title": "Colorir por {by}",
+ "ai_found.legend.row_tip": "Clique para selecionar estes elementos",
+ "ai_found.legend.empty_value": "Sem valor",
+ "ai_found.legend.other": {
+  "one": "# valor adicional",
+  "other": "# valores adicionais"
+ },
+ "ai_found.view.title": "Vista do assistente de IA",
+ "ai_found.view.reset": "Repor vista",
+ "ai_found.view.reset_tip": "Repõe a vista de antes de o assistente de IA a alterar",
+ "ai_found.view.shown": {
+  "one": "# elemento visível",
+  "other": "# elementos visíveis"
+ },
+ "ai_found.view.isolated": {
+  "one": "# elemento isolado",
+  "other": "# elementos isolados"
+ },
+ "ai_found.view.hidden": {
+  "one": "# elemento oculto",
+  "other": "# elementos ocultos"
+ },
+ "ai_found.found.line": "{what}: {count}"
+}

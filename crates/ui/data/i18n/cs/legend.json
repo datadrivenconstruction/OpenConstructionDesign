@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "Legenda",
+ "legend.legend.new_hint": "Název nové legendy",
+ "legend.legend.delete_tip": "Smazat legendu",
+ "legend.legend.delete_placed": "Smazat legendu (umístěna na: {sheets})",
+ "legend.legend.deleted": "Legenda smazána: {name}",
+ "legend.legend.no_rows": "Zatím žádné řádky. Přidejte jeden nebo převezměte styly aktuálního pohledu",
+ "legend.legend.replace_q": "Nahradit {n} řádků styly tohoto pohledu?",
+ "legend.legend.replace": "Nahradit",
+ "legend.legend.keep": "Ponechat řádky",
+ "legend.col.swatch": "Vzorek",
+ "legend.col.value": "Hodnota",
+ "legend.col.label": "Popisek"
+}

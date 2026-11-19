@@ -1,0 +1,15 @@
+{
+ "mcp.ask.cancel": "Cancelar",
+ "mcp.ask.auto.title": "Permitir que os agentes de IA apliquem alterações sem perguntar?",
+ "mcp.ask.auto.body": "Os agentes de IA ligados vão aplicar as suas alterações nos rascunhos imediatamente, sem esperar pela sua confirmação; por isso uma alteração errada pode entrar antes de a ver. O modelo só muda quando premir Aplicar. Isto dura até desativar, fechar o editor ou abrir outro modelo.",
+ "mcp.ask.auto.yes": "Aplicar sem perguntar",
+ "mcp.ask.token.title": "Emitir um novo token?",
+ "mcp.ask.token.body": "O token atual deixa de funcionar de imediato: os agentes de IA ligados são desligados e precisarão do novo token. É mostrado apenas uma vez, por isso copie-o já.",
+ "mcp.ask.token.yes": "Novo token",
+ "mcp.auto.chip": "Aplicação automática ativa",
+ "mcp.auto.chip_tip": "Os agentes de IA aplicam alterações aos rascunhos sem perguntar. Termina com esta sessão.",
+ "mcp.auto.ask_again": "Voltar a perguntar",
+ "mcp.token.once": "Copie já este token: não voltará a ser mostrado.",
+ "mcp.renewed": "Novo token emitido: o anterior deixou de funcionar",
+ "mcp.copied": "Copiado"
+}

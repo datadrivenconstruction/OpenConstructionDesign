@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "Az alkalmazás leállítva: a modell változatlan maradt",
+ "apply_verify.rolled_back": "Az alkalmazás nem egyezett a vázlattal, és vissza lett vonva; a modell változatlan. {what}",
+ "apply_verify.diff.missing": "A vázlat {what} {kind} módosítást mutat, de az Alkalmazás nem hajtotta végre.",
+ "apply_verify.diff.extra": "{kind} {what} alkalmazása, amelyet a vázlat nem mutat.",
+ "apply_verify.diff.kind": "A vázlat {what} {shown} módosítást mutat, de az Alkalmazás {applied}.",
+ "apply_verify.diff.value": "{what}: a(z) „{col}” a vázlattól eltérő lett.",
+ "apply_verify.diff.truncated": "A vázlat és az alkalmazott módosítás mérete eltér.",
+ "apply_verify.diff.unreadable": "Az alkalmazott módosítás nem olvasható vissza ({e}).",
+ "apply_verify.no_base": "Az alkalmazás nem futott: hiányzik a vázlat ellenőrzéséhez szükséges másolat. A modell változatlan; kérje újra a vázlatot.",
+ "apply_verify.take_back_failed": "A visszavonás nem sikerült ({e}): használja a Visszavonást.",
+ "apply_verify.kind.created": "létrehozva",
+ "apply_verify.kind.changed": "módosítva",
+ "apply_verify.kind.deleted": "törölve",
+ "apply_verify.card.type_row": "{type} típus · {n} elem veszi át a módosítást"
+}

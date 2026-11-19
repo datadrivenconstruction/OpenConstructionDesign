@@ -1,0 +1,19 @@
+{
+ "ai.plan.apply_updated": "Aplicar plan actualizado",
+ "ai.plan.keys_anywhere": "Ctrl+Intro aplica y Esc detiene la solicitud también desde el plan o la vista 3D, salvo que esté escribiendo en un campo de texto.",
+ "ai.plan.rebased": "Actualizado con el modelo actual: {what}",
+ "ai.value.bad": "«{text}» no es un valor válido para {name}",
+ "ai.value.bad_len": "{name}: {why}",
+ "ai.value.both": "El asistente de IA cambió este valor a {agent} mientras usted introducía {mine}. Elija cuál conservar.",
+ "ai.value.choose_first": "Primero elija su valor o el del asistente de IA en la tarjeta",
+ "ai.value.elem": "Elemento {n}: {what}",
+ "ai.value.held": "Su valor {mine} se aplicará cuando termine la solicitud",
+ "ai.value.keep_agent": "Conservar {agent}",
+ "ai.value.lost": "Su valor {mine} para {what} en «{title}» no se usó: el asistente de IA eliminó ese valor de la tarjeta",
+ "ai.value.more": "{n} valores más: expanda la fila",
+ "ai.value.refused": "El plan no pudo aceptar este valor y conserva el anterior: {why}",
+ "ai.value.refused_next": "Introduzca otro valor o desmarque el elemento para excluirlo de Aplicar.",
+ "ai.value.tip": "Corrija el valor en el borrador; el modelo cambia solo al Aplicar. Intro confirma, Esc restaura.",
+ "ai.value.use_mine": "Usar {mine}",
+ "ai.value.was": "era {old}"
+}

@@ -1,0 +1,9 @@
+{
+ "cmd.mass.timeline_family": "ציר זמן למשפחה",
+ "cmd.mass.timeline_family.desc": "יוצר משפחת רכיבים מציר הזמן של הבנייה של המסה הנבחרת. פרמטרי ציר הזמן הופכים לפרמטרים של המשפחה.",
+ "mass_family.done": "נוצרה משפחה {name} עם {n} פרמטרים",
+ "mass_family.refused": "המשפחה לא נוצרה: {e}",
+ "mass_family.no_mass": "בחר קודם מסה פרמטרית",
+ "mass_family.add_modifier": "הוסף מודיפיקטור",
+ "mass_family.needs_faces": "נדרשות פאות נבחרות: השתמש בכלי בלשונית «מסות»"
+}

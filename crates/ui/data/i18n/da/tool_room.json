@@ -1,0 +1,9 @@
+{
+ "tool.room": "Rum",
+ "tool.room.name": "Rum",
+ "room_tool.room.name": "Navn",
+ "hint.room.place": "Klik inde i en lukket vægløkke for at oprette et rum · Esc — afslut",
+ "tool.err.room_open": "Området er ikke lukket: luk vægløkken eller tilføj en rumadskiller",
+ "tool.err.room_check": "Rummene på denne etage kan ikke kontrolleres",
+ "tool.err.room_exists": "Der er allerede et rum i denne løkke"
+}

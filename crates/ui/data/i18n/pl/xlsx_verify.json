@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "Zastosowanie cofnięto: model nie zgadzał się z podglądem. {what}",
+ "xlsx_verify.not_written": "{row} nie został zmieniony.",
+ "xlsx_verify.lost": "{row} zniknął.",
+ "xlsx_verify.not_deleted": "{row} nie został usunięty.",
+ "xlsx_verify.extra_deleted": "{row} został usunięty, choć podgląd go zachowuje.",
+ "xlsx_verify.created": "{table}: {got} nowych zamiast {want}.",
+ "xlsx_verify.value": "{row}, {field}: oczekiwano {want} (było {old}), podano {got}.",
+ "xlsx_verify.check_failed": "Nie udało się sprawdzić wyniku: {e}",
+ "xlsx_verify.plan_failed": "Zastosowanie nie zostało uruchomione: sprawdzenie nie mogło odczytać modelu ({e}).",
+ "xlsx_verify.take_back_failed": "Nie udało się cofnąć kroku ({e}): użyj Cofnij.",
+ "xlsx_verify.t.wall": "Ściana",
+ "xlsx_verify.t.opening": "Otwór",
+ "xlsx_verify.t.room": "Pomieszczenie",
+ "xlsx_verify.t.slab": "Płyta stropowa",
+ "xlsx_verify.t.level": "Poziom",
+ "xlsx_verify.t.wall_type": "Typ ściany",
+ "xlsx_verify.t.slab_type": "Typ płyty stropowej",
+ "xlsx_verify.t.col": "Słup",
+ "xlsx_verify.t.beam": "Belka",
+ "xlsx_verify.t.roof": "Dach",
+ "xlsx_verify.t.curtain_wall": "Ściana osłonowa"
+}

@@ -1,0 +1,5 @@
+{
+ "src.more": "Rohkem",
+ "src.cf.chosen": "{n} / {m} valitud",
+ "src.opt.allow_mass_warn": "Ettevaatust: fail ei vasta enamikule imporditud elementidele, seega võib ühendamine muuta palju andmeid."
+}

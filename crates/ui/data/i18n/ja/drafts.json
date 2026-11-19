@@ -1,0 +1,8 @@
+{
+ "drafts.drafts.head": "開いているエディタに、まだプロジェクトに保存されていない編集があります:",
+ "drafts.draft.family": "ファミリ「{name}」",
+ "drafts.draft.line": "線のライブラリ: {name}",
+ "drafts.draft.styles": "ビュー範囲の線のスタイル",
+ "drafts.btn.save_all": "すべて保存",
+ "drafts.drafts.refused": "下書きを保存できませんでした。何も閉じられておらず、下書きのあるエディタは開いたままです。"
+}

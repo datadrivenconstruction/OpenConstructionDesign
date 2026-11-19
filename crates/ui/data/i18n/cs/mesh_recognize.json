@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "Rozpoznáno {done} z {total}",
+ "mesh_recognize.all": "Všech {n}",
+ "mesh_recognize.only_confident": "Pouze jisté",
+ "mesh_recognize.confident_tip": "Zaškrtne řádky, jejichž druh odpovídá kategorii a jejichž jistota je alespoň {pct} %",
+ "mesh_recognize.row_hint": "Kliknutím na řádek ho zaškrtnete. Šipky posouvají, Enter zaškrtává.",
+ "mesh_recognize.kind_for": "Druh pro {name}",
+ "mesh_recognize.source": "Zdrojové sítě",
+ "mesh_recognize.keep": "Ponechat sítě",
+ "mesh_recognize.replace": "Nahradit sítě",
+ "mesh_recognize.convert_keep": "Převést {n}",
+ "mesh_recognize.convert_remove": "Převést {n} a odstranit sítě",
+ "mesh_recognize.creates": "Vytvoří {n}: {kinds}",
+ "mesh_recognize.creates_none": "Zatím nic zaškrtnuto",
+ "mesh_recognize.stay": "{n} zdrojových sítí zůstane v modelu",
+ "mesh_recognize.removed": "{n} zdrojových sítí bude odstraněno. Zpět je obnoví."
+}

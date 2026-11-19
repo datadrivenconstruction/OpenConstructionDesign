@@ -1,0 +1,15 @@
+{
+ "type_change.affects_walls": {
+  "one": "ovlivní # stěnu",
+  "few": "ovlivní # stěny",
+  "other": "ovlivní # stěn"
+ },
+ "type_change.affects": {
+  "one": "ovlivní # prvek",
+  "few": "ovlivní # prvky",
+  "other": "ovlivní # prvků"
+ },
+ "type_change.tick_types": "Použít změny typů na všech {n} prvcích těchto typů",
+ "type_change.tick_types_first": "Nejprve zaškrtněte změnu typu: každý prvek daného typu ji převezme",
+ "xl.msg.types_first": "nejprve potvrďte změny typů"
+}

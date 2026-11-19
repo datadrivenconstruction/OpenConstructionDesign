@@ -1,0 +1,5 @@
+{
+ "start_recent.unavailable": "Momentan nicht verfügbar (Laufwerk oder Netzwerkpfad antwortet nicht): {path}",
+ "start_recent.unavailable_short": "Momentan nicht verfügbar",
+ "start_recent.retry": "Wiederholen"
+}

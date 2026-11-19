@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "Coladas {n} células",
+ "sched_edit.pasted_skipped": "Coladas {n} células, {k} ignoradas: {why}",
+ "sched_edit.filled": "Preenchidas {n} células",
+ "sched_edit.filled_skipped": "Preenchidas {n} células, {k} ignoradas: {why}",
+ "sched_edit.why_ro": "{n} somente leitura",
+ "sched_edit.why_bad": "{n} valor inválido",
+ "sched_edit.no_cell": "Clique primeiro em uma célula da tabela",
+ "sched_edit.nothing": "Nada a gravar",
+ "sched_edit.not_refreshed": "Gravado, mas a vista não foi atualizada: {e}",
+ "sched_edit.failed": "não alterado: {e}",
+ "sched_edit.no_changes": "Sem alterações: {u} células já têm estes valores",
+ "sched_edit.same_tail": ", {u} já iguais"
+}

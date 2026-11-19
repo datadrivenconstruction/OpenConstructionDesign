@@ -1,0 +1,183 @@
+{
+ "items": [
+  {
+   "key": "room.height_min",
+   "value": 2.2,
+   "unit": "m",
+   "source": "decret2002-120",
+   "clause": "art. 4",
+   "verified": true
+  },
+  {
+   "key": "dwelling.main_room_area_min",
+   "value": 9.0,
+   "unit": "m2",
+   "source": "decret2002-120",
+   "clause": "art. 4 one room at least this area",
+   "verified": true
+  },
+  {
+   "key": "dwelling.main_room_volume_min",
+   "value": 20.0,
+   "unit": "m3",
+   "source": "decret2002-120",
+   "clause": "art. 4 one room at least this volume",
+   "verified": true
+  },
+  {
+   "key": "door.clear_min.accessible",
+   "value": 0.77,
+   "unit": "m",
+   "source": "arrete2015-12-24",
+   "clause": "art. 11, interior door nominal 0.80 m = clear passage 0.77 m (entrance door 0.83 m clear)",
+   "verified": true,
+   "note": "read 2026-11-13: JORF 27 Dec 2015 text 100 of 196, copy at gers.gouv.fr; was 0.8, which is the nominal width"
+  },
+  {
+   "key": "accessible.turning_circle",
+   "value": 1.5,
+   "unit": "m",
+   "source": "arrete2015-12-24",
+   "clause": "art. 13, free space of at least 1.50 m diameter in kitchen and bathroom",
+   "verified": true,
+   "note": "read 2026-11-13: JORF 27 Dec 2015 text 100 of 196, copy at gers.gouv.fr"
+  },
+  {
+   "key": "ramp.slope_max",
+   "value": 0.05,
+   "unit": "ratio",
+   "source": "arrete2015-12-24",
+   "clause": "art. 2, inclined plane up to 5 percent; 8 percent over 2 m and 10 percent over 0.5 m tolerated",
+   "verified": true,
+   "note": "read 2026-11-13: JORF 27 Dec 2015 text 100 of 196, copy at gers.gouv.fr"
+  },
+  {
+   "key": "building.tall_threshold",
+   "value": 50.0,
+   "unit": "m",
+   "source": "cch-r146-3",
+   "clause": "R146-3: a building is a tall building (IGH) if the floor of its top level is more than 50 m above the highest ground usable by rescue vehicles for residential use; 28 m for other uses",
+   "verified": true,
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043819081",
+   "accessed": "2026-11-14",
+   "paraphrase": "Residential buildings whose top floor level is above 50 m (measured from highest rescue-vehicle ground) are tall buildings; other uses 28 m.",
+   "note": "read 2026-11-14: legifrance.gouv.fr/codes/article_lc/LEGIARTI000043819081; residential use; the 28 m threshold applies to non-residential"
+  },
+  {
+   "key": "egress.travel_max",
+   "value": 40.0,
+   "unit": "m",
+   "source": "code-travail",
+   "clause": "art. R4216-11, workplaces: distance to reach a stair never more than 40 m",
+   "verified": true,
+   "note": "read 2026-11-14: code.travail.gouv.fr/code-du-travail/r4216-11; office base case, dwelling rules (order of 31 Jan 1986) not read"
+  },
+  {
+   "key": "daylight.window_floor_ratio",
+   "value": 0.1,
+   "unit": "ratio",
+   "source": "rsd",
+   "clause": "window at least one tenth of floor area",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: legifrance CCH, RSD Hauts-de-Seine art. 40 (1/6); the national model RSD text not read, value differs by department"
+  },
+  {
+   "key": "corridor.width_min.accessible",
+   "value": 1.2,
+   "unit": "m",
+   "source": "arrete2015-12-24",
+   "clause": "art. 2 II and 5 II, accessible route 1.20 m wide",
+   "verified": true,
+   "note": "read 2026-11-14: gers.gouv.fr copy of the JO text (2015 edition, later amendments not checked)"
+  },
+  {
+   "key": "fire.compartment_area_max",
+   "value": 2500,
+   "unit": "m2",
+   "source": "cch",
+   "clause": "fire compartment area",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: legifrance CCH, order of 31 Jan 1986, labour code R4216, order of 5 Aug 1992; no general per-storey compartment area for dwellings or offices found"
+  },
+  {
+   "key": "corridor.width_min",
+   "value": 0.9,
+   "unit": "m",
+   "source": "code-travail",
+   "clause": "R4216-8 and R4216-9, one unit of passage, 0.90 m",
+   "verified": false,
+   "url": "https://code.travail.gouv.fr/code-du-travail/r4216-8",
+   "accessed": "2026-11-15",
+   "paraphrase": "A workplace exit route is at least one unit of passage, 0.90 m.",
+   "note": "to_verify: R4216-8 read 2026-11-15 gives the units per headcount and names 0.90 m; the unit width itself is in R4216-9, not opened"
+  },
+  {
+   "key": "building.high_rise_height",
+   "value": 50.0,
+   "unit": "m",
+   "source": "cch-r146-3",
+   "clause": "R146-3, tall building: top floor more than 50 m above rescue ground for dwellings (28 m for other uses)",
+   "verified": true,
+   "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000043819081",
+   "accessed": "2026-11-15",
+   "paraphrase": "A dwelling building whose top floor is over 50 m above rescue ground is a tall building.",
+   "note": "same clause as dim building.tall_threshold, read 2026-11-14"
+  },
+  {
+   "key": "building.class5_height",
+   "na": true,
+   "value": null,
+   "unit": "m",
+   "source": "arrete1986-01-31",
+   "verified": false,
+   "note": "na: dwellings are grouped in four fire families by storeys and top-floor height (8 m, 28 m, 50 m), not by a 13 m class",
+   "text": {
+    "en": "No 13 m building class: dwellings fall into fire families by storeys and height.",
+    "ru": "Нет класса здания 13 м: жилые дома делятся на пожарные семейства по этажности и высоте."
+   }
+  },
+  {
+   "key": "stair.riser_max",
+   "value": 0.17,
+   "unit": "m",
+   "orig": {
+    "value": 17,
+    "unit": "cm"
+   },
+   "source": "arrete2015-12-24",
+   "clause": "art. 6, 6.1 II 1o, common stairs riser at most 17 cm (18 cm inside a dwelling, art. 12)",
+   "verified": true,
+   "url": "https://www.gers.gouv.fr/index.php/contenu/telechargement/16832/129369/file/Arr%C3%AAt%C3%A9%20du%2027%20d%C3%A9cembre%202015%20BHC%20et%20MI%20neufs.pdf",
+   "accessed": "2026-11-15",
+   "paraphrase": "A common stair step rises at most 17 cm.",
+   "note": "read 2026-11-15: gers.gouv.fr copy of the JO text of 27 Dec 2015 (order of 24 Dec 2015)"
+  },
+  {
+   "key": "stair.going_min",
+   "value": 0.28,
+   "unit": "m",
+   "orig": {
+    "value": 28,
+    "unit": "cm"
+   },
+   "source": "arrete2015-12-24",
+   "clause": "art. 6, 6.1 II 1o, common stairs going at least 28 cm (24 cm inside a dwelling, art. 12)",
+   "verified": true,
+   "url": "https://www.gers.gouv.fr/index.php/contenu/telechargement/16832/129369/file/Arr%C3%AAt%C3%A9%20du%2027%20d%C3%A9cembre%202015%20BHC%20et%20MI%20neufs.pdf",
+   "accessed": "2026-11-15",
+   "paraphrase": "A common stair tread is at least 28 cm.",
+   "note": "read 2026-11-15: gers.gouv.fr copy of the JO text of 27 Dec 2015 (order of 24 Dec 2015)"
+  },
+  {
+   "key": "guard.height_min",
+   "value": 1.0,
+   "unit": "m",
+   "source": "nfp01-012",
+   "clause": "guard height 1.00 m (0.80 m over a parapet at least 0.20 m thick)",
+   "verified": false,
+   "accessed": "2026-11-15",
+   "paraphrase": "A guard stands at least 1.00 m above the floor.",
+   "note": "to_verify: standard is paywalled; number as widely cited, clause not read"
+  }
+ ]
+}

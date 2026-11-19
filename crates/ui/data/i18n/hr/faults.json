@@ -1,0 +1,20 @@
+{
+ "faults.errors": {
+  "one": "# greška u modelu. Kliknite za prikaz.",
+  "few": "# greške u modelu. Kliknite za popis.",
+  "other": "# grešaka u modelu. Kliknite za popis."
+ },
+ "faults.warnings": {
+  "one": "# upozorenje u modelu. Kliknite za prikaz.",
+  "few": "# upozorenja u modelu. Kliknite za popis.",
+  "other": "# upozorenja u modelu. Kliknite za popis."
+ },
+ "faults.title": "Greške modela: {n}",
+ "faults.none": "Nema grešaka ni upozorenja.",
+ "faults.cat.wall": "Zid",
+ "faults.cat.slab": "Ploča",
+ "faults.cat.opening": "Otvor",
+ "faults.cat.curtain_wall": "Zavjesni zid",
+ "faults.cat.ramp": "Rampa",
+ "faults.cat.zone": "Zona"
+}

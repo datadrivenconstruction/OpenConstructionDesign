@@ -1,0 +1,13 @@
+id = "S11_hi_rule_conflict"
+tier = "smoke"
+group = ""
+title = "Conflicting rules (Hindi): refuse or ask"
+lang = "hi"
+base = "empty"
+
+[[turn]]
+say = "कार्यालय भवन, 8 मंज़िला। ये सख़्त नियम हैं, इनमें से किसी में भी ढील न दें: भवन की गहराई अधिकतम 9 मीटर; गलियारा ठीक 2.4 मीटर चौड़ा; गलियारे के दोनों ओर कार्यालय, प्रत्येक कार्यालय कम से कम 6 मीटर गहरा; मंज़िल की ऊँचाई 2.4 मीटर। इसे बनाइए।"
+
+[[oracle.text]]
+name = "names the conflict instead of building"
+re = "(conflict|contradict|incompatib|impossible|cannot|can.t|not possible|trade.?off|relax|противореч|несовмест|нельзя|невозможно|ослаб)"

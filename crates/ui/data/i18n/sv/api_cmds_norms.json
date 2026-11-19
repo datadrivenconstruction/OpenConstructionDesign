@@ -1,0 +1,8 @@
+{
+ "api.cmd.norms_lookup": "Hitta reglerna i projektets normpaket efter ämne, element eller kod",
+ "api.cmd.norms_check": "Kontrollera modellen mot projektets normpaket och lista anmärkningarna",
+ "api.cmd.norms_programme": "Typiskt rumsprogram för projektets land för en byggnadstyp",
+ "api.cmd.select_similar": "Markera alla liknande element: samma typ eller kategori, på den här nivån eller i hela projektet",
+ "api.cmd.create_drawing_set": "Ta fram en utskriftsbar ritningsuppsättning: planer, sektioner, fasader, listor och titelblock",
+ "api.cmd.deliver_project": "Från underlag till filer i ett steg: projektet och dess ritningsuppsättning, exporterade efter Tillämpa"
+}

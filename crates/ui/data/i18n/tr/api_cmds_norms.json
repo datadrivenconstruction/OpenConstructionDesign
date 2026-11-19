@@ -1,0 +1,8 @@
+{
+ "api.cmd.norms_lookup": "Proje norm paketinin kurallarını konu, eleman veya koda göre bulun",
+ "api.cmd.norms_check": "Modeli projenin norm paketine göre denetleyin ve bulguları listeleyin",
+ "api.cmd.norms_programme": "Bir bina tipi için projenin ülkesine ait tipik oda programı",
+ "api.cmd.select_similar": "Buna benzer her elemanı seçin: aynı tip veya kategori, bu katta veya tüm projede",
+ "api.cmd.create_drawing_set": "Yazdırılabilir bir çizim seti taslağı oluşturun: planlar, kesitler, kotlar, listeler ve başlık blokları",
+ "api.cmd.deliver_project": "Özet metninden dosyalara tek adımda: proje ve çizim seti, Uygula'dan sonra dışa aktarılır"
+}

@@ -1,0 +1,9 @@
+{
+ "prop_head.of_type": {
+  "other": "# 个此类型的对象",
+  "one": "# 个此类型的对象"
+ },
+ "prop_head.override_tip": "与类型不同，点击重置",
+ "prop_head.reset_done": "“{name}”已重置为类型值",
+ "prop_head.copy_id": "点击复制编号"
+}

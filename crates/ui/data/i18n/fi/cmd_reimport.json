@@ -1,0 +1,6 @@
+{
+ "cmd.file.import_again": "Tuo uudelleen",
+ "cmd.file.import_again.desc": "Rakenna uusi projekti lähdetiedostosta sellaisena kuin se nyt on.",
+ "cmd.file.open_kept": "Avaa säilytetty tuonti",
+ "cmd.file.open_kept.desc": "Avaa valmis tuonti, joka säilytettiin, kun tallentamattomien muutosten kysely peruutettiin."
+}

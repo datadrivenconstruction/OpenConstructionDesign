@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "Alla",
+ "clash_list.only_selected": "Endast markerade",
+ "clash_list.tolerance": "Tolerans",
+ "clash_list.gap": "Glapp",
+ "clash_list.export": "Exportera",
+ "clash_list.col.volume": "Volym",
+ "clash_list.fix.up": "Flytta upp",
+ "clash_list.fix.down": "Flytta ner",
+ "clash_list.fix.sleeve": "Hylsa",
+ "clash_list.apply_fix": "Tillämpa åtgärd",
+ "clash_list.err.tol": "Tolerans: ange en längd (0 eller mer), t.ex. 50 eller 2 tum",
+ "clash_list.sleeve_no_host": "Hylsan kräver en vägg eller platta i paret",
+ "clash_list.err.gap": "Glapp: ange en längd (0 eller mer), t.ex. 50 eller 2 tum"
+}

@@ -1,0 +1,18 @@
+{
+ "props.multi.title": {
+  "one": "# element",
+  "other": "# elementer"
+ },
+ "props.multi.cats": {
+  "one": "# kategori",
+  "other": "# kategorier"
+ },
+ "props.multi.varies": {
+  "one": "varierer (#)",
+  "other": "varierer (#)"
+ },
+ "props.multi.clear": "Ryd valg",
+ "props.multi.undo": "Fortryd",
+ "props.multi.narrowed": "Valg: {n} · {name}",
+ "props.multi.chip_tip": "{name}: {n}  ·  Klik viser deres egenskaber, Ctrl+klik beholder kun disse"
+}

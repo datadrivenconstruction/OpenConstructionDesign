@@ -1,0 +1,5 @@
+{
+ "undo.action": "元に戻す",
+ "undo.action_keys": "元に戻す ({keys})",
+ "undo.ai_applied": "変更を適用しました"
+}

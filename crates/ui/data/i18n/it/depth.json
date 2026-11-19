@@ -1,0 +1,22 @@
+{
+ "depth.chip": "Livello {level}",
+ "depth.chip_tip": "Quanto a fondo lavora la prossima esecuzione: da D1 concetto a D5 fabbricazione, per disciplina",
+ "depth.all_off": "tutte le discipline disattivate",
+ "depth.disc.arch": "Arch",
+ "depth.disc.struct": "Strutt",
+ "depth.disc.mep": "MEP",
+ "depth.disc.doc": "Doc",
+ "depth.project": "Livello di progetto",
+ "depth.level.1": "D1 Concetto: volumetria, piani, superfici, una tavola",
+ "depth.level.2": "D2 Schizzo: muri, locali per programma, aperture, griglia, piante",
+ "depth.level.3": "D3 Progetto: tipi stratificati, struttura dimensionata, dorsali e terminali di impianto, computi",
+ "depth.level.4": "D4 Esecutivo: dettagli di giunzione, ferramenta, finiture, armature, derivazioni",
+ "depth.level.5": "D5 Fabbricazione: distinte di piegatura, collegamenti in acciaio, prefabbricati, distinta materiali",
+ "depth.as_project": "Come progetto",
+ "depth.estimate": "Stima: circa {elements} elementi, {minutes} min, {tokens} token in {calls} chiamate, {sheets} tavole",
+ "depth.estimate_none": "La stima arriva con il progetto preparato: il modello è ancora vuoto",
+ "depth.heat": "Mappa di calore del livello",
+ "depth.heat.row": "Livello",
+ "depth.settings": "Livello di dettaglio di questo progetto",
+ "depth.settings_desc": "Livello a cui lavora l'assistente IA, da D1 a D5, con un interruttore e un livello proprio per disciplina; salvato nel file di progetto"
+}

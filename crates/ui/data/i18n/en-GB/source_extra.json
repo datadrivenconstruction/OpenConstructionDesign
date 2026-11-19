@@ -1,0 +1,5 @@
+{
+ "src.more": "More",
+ "src.cf.chosen": "{n} of {m} chosen",
+ "src.opt.allow_mass_warn": "Careful: the file does not match most imported elements, so the merge may change a lot of data."
+}

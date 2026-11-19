@@ -1,0 +1,6 @@
+{
+ "vv_conflict.styles.conflict": "Tahrirlangan kategoriyaning obyekt uslublari modelda o'zgardi (bekor qilish yoki boshqa oyna orqali), bu oynada tahrirlar bor edi. Tahrirlaringiz saqlanadi.",
+ "vv_conflict.styles.keep": "Tahrirlarimni saqlash",
+ "vv_conflict.styles.reload": "Qayta yuklash",
+ "vv_conflict.styles.answer_first": "Avval “Tahrirlarimni saqlash” yoki “Qayta yuklash”ni tanlang"
+}

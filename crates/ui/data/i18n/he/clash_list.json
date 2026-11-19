@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "הכול",
+ "clash_list.only_selected": "רק נבחרים",
+ "clash_list.tolerance": "סובלנות",
+ "clash_list.gap": "רווח",
+ "clash_list.export": "ייצוא",
+ "clash_list.col.volume": "נפח",
+ "clash_list.fix.up": "הזז למעלה",
+ "clash_list.fix.down": "הזז למטה",
+ "clash_list.fix.sleeve": "שרוול",
+ "clash_list.apply_fix": "החל תיקון",
+ "clash_list.err.tol": "סובלנות: הזן אורך (0 או יותר), למשל 50 או 2 in",
+ "clash_list.sleeve_no_host": "שרוול דורש קיר או רצפה בזוג",
+ "clash_list.err.gap": "רווח: הזן אורך (0 או יותר), למשל 50 או 2 in"
+}

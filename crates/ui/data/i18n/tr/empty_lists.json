@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "Duvar çiz",
+ "empty.totals.action": "Duvar çiz",
+ "empty.schedule.action": "Alan ekle",
+ "empty.schedule_filtered.action": "Filtreyi temizle",
+ "empty.library.action": "Aramayı sıfırla",
+ "empty.library.load": "Aile yükle",
+ "empty.schedule_fields.title": "Gösterilen alan yok",
+ "empty.schedule_fields.action": "Alan ekle",
+ "empty.schedule_fields.hint": "Tabloyu görmek için en az bir alanı açın."
+}

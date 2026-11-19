@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "هذا المصنف موجود بالفعل",
+ "xlsx_exists.foreign": "ليس مصنفاً لهذا المشروع، لذلك لا يُستبدل أبداً.",
+ "xlsx_exists.pending": "يحتوي على {n} تعديلات غير مطبّقة على النموذج بعد.",
+ "xlsx_exists.outside": "يحتوي على {n} صفاً لا يحمله التصدير الجديد.",
+ "xlsx_exists.new_name": "تصدير إلى {name}",
+ "xlsx_exists.apply_first": "طبّقها أولاً",
+ "xlsx_exists.replace": "استبدال (المصنف القديم إلى _archive)",
+ "xlsx_exists.archived": "تم نقل المصنف القديم إلى {path}",
+ "xlsx_exists.archive_failed": "تعذّر نقل المصنف القديم، ولم يُصدَّر شيء: {error}"
+}

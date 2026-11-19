@@ -1,0 +1,8 @@
+{
+ "param_drop.title": "Да се премахнат ли стойностите на параметрите?",
+ "param_drop.intro": "{name} вече не е свързан с тези категории:",
+ "param_drop.line": "{category}: {values} ще бъдат премахнати",
+ "param_drop.undo": "Един Ctrl+Z ги връща всички.",
+ "param_drop.confirm": "Премахване на стойностите и запазване",
+ "param_drop.cancel": "Отказ"
+}

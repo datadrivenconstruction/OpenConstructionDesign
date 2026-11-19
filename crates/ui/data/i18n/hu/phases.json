@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D",
+ "phases.current_mark": "aktuális",
+ "phases.make_current": "Aktuálissá tétel",
+ "phases.col_phase": "Fázis",
+ "phases.col_filter": "Szűrő",
+ "phases.presets": "Alaprajzi előbeállítások",
+ "phases.del_title": "Fázis törlése",
+ "phases.del_text": "Törli a(z) \"{name}\" fázist? Elemei az alul kiválasztott fázisba kerülnek.",
+ "phases.del_into": "Elemek áthelyezése ide",
+ "phases.del_ok": "Törlés",
+ "phases.col_kind": "Elemtípus",
+ "phases.col_count": "Darab",
+ "phases.col_volume": "Térfogat"
+}

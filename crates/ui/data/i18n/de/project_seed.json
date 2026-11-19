@@ -1,0 +1,6 @@
+{
+ "project_seed.seed_level": "Geschoss 1",
+ "project_seed.seed_wall_partition": "Trennwand 100",
+ "project_seed.seed_wall_masonry": "Mauerwerk 200",
+ "project_seed.seed_wall_exterior": "Außenwand 380"
+}

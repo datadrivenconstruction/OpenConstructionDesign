@@ -1,0 +1,8 @@
+{
+ "undo.undone": "Vráceno: {what}",
+ "undo.redone": "Znovu provedeno: {what}",
+ "undo.action.edit.redo": "Znovu",
+ "undo.action.edit.undo": "Zpět",
+ "hdr.unsaved": "Neuložené změny",
+ "hdr.file_menu": "Nabídka Soubor"
+}

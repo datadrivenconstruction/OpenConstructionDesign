@@ -1,0 +1,72 @@
+{
+ "del.k.door": {
+  "one": "# dveře",
+  "few": "# dveře",
+  "other": "# dveří"
+ },
+ "del.k.window": {
+  "one": "# okno",
+  "few": "# okna",
+  "other": "# oken"
+ },
+ "del.k.opening": {
+  "one": "# otvor",
+  "few": "# otvory",
+  "other": "# otvorů"
+ },
+ "del.k.comp": {
+  "one": "# hostovaná komponenta",
+  "few": "# hostované komponenty",
+  "other": "# hostovaných komponent"
+ },
+ "del.k.rebar": {
+  "one": "# sada výztuže",
+  "few": "# sady výztuže",
+  "other": "# sad výztuže"
+ },
+ "del.k.port": {
+  "one": "# hostovaný MEP port",
+  "few": "# hostované MEP porty",
+  "other": "# hostovaných MEP portů"
+ },
+ "del.k.joist": {
+  "one": "# trám",
+  "few": "# trámy",
+  "other": "# trámů"
+ },
+ "del.k.railing": {
+  "one": "# zábradlí",
+  "few": "# zábradlí",
+  "other": "# zábradlí"
+ },
+ "del.k.tag": {
+  "one": "# značka",
+  "few": "# značky",
+  "other": "# značek"
+ },
+ "del.k.dim": {
+  "one": "# kóta (odpojená)",
+  "few": "# kóty (odpojené)",
+  "other": "# kót (odpojených)"
+ },
+ "del.also": "Dotčeno také: {list}",
+ "del.rooms": {
+  "one": "# místnost ztratí obvodovou stěnu",
+  "few": "# místnosti ztratí obvodovou stěnu",
+  "other": "# místností ztratí obvodovou stěnu"
+ },
+ "del.cancelled": "Smazání zrušeno, nic nezměněno",
+ "del.confirm.title": "Smazat včetně závislostí",
+ "del.confirm.lead": {
+  "one": "# vybraný prvek s sebou odstraní tyto:",
+  "few": "# vybrané prvky s sebou odstraní tyto:",
+  "other": "# vybraných prvků s sebou odstraní tyto:"
+ },
+ "del.confirm.levels": {
+  "one": "# z nich je na jiné úrovni",
+  "few": "# z nich jsou na jiných úrovních",
+  "other": "# z nich je na jiných úrovních"
+ },
+ "del.confirm.all": "Smazat vše",
+ "del.confirm.cancel": "Zrušit"
+}

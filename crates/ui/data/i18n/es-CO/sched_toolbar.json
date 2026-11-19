@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "Filtro en la fila bajo los encabezados. Texto: subcadena; números: >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "Mostrar u ocultar columnas",
+ "sched_toolbar.groups_tip": "Agrupar filas por columnas, con subtotales",
+ "sched_toolbar.formulas_tip": "Columnas calculadas",
+ "sched_toolbar.phase": "Fase",
+ "sched_toolbar.phase_tip": "De qué fase se toman las filas",
+ "sched_toolbar.copy_tip": "Filas seleccionadas (o todas las visibles) como TSV",
+ "sched_toolbar.import_tip": "Lea una planilla exportada: filas por Id, columnas por encabezado; primero los recuentos y luego un paso de deshacer",
+ "sched_toolbar.export_tip": "Filas y columnas visibles con totales; los números siguen siendo números",
+ "sched_toolbar.need_table": "Abra primero una planilla",
+ "sched_toolbar.busy_open": "Ya hay un cuadro de diálogo de apertura de archivo",
+ "sched_toolbar.busy_save": "Ya hay un cuadro de diálogo de guardado",
+ "sched_toolbar.clear_filter": "Quitar filtro",
+ "sched_toolbar.fields_title": "Columnas"
+}

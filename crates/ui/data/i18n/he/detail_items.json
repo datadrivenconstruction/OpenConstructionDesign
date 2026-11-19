@@ -1,0 +1,16 @@
+{
+ "cmd.drawing.to_detail": "שרטוט לפרט",
+ "cmd.drawing.to_detail.desc": "הופך את אלמנטי השרטוט שנבחרו, או את כל השרטוט במפלס זה, לקווי פרט, הערות טקסט ואזורים בתוכנית. השרטוט נשאר כמות שהוא.",
+ "detail_items.st.no_drawing": "אין שרטוט במפלס זה",
+ "detail_items.st.nothing": "אין מה להמיר: אין קווים, קשתות, טקסטים או מילויים בשכבות המוצגות",
+ "detail_items.st.done": "נוספו פריטי פרט: קווים {lines}, טקסטים {texts}, אזורים {regions}",
+ "detail_items.st.failed": "לא ניתן להוסיף פריטי פרט: {e}",
+ "detail_items.st.warn": "נוספו פריטי פרט, אך לא ניתן היה לרענן את המבט (קווים {lines}, טקסטים {texts}, אזורים {regions}): {e}. בטל מסיר אותם.",
+ "detail_items.st.bad_view": "פריטי פרט דורשים מבט תוכנית או חתך",
+ "detail_items.st.no_transform": "למבט זה אין מערכת קואורדינטות שמישה לשרטוט; לא נוסף דבר",
+ "drafting_tools.free.plan_only": "פקודה זו פועלת על אלמנטים של תוכנית; יש לפתוח תוכנית",
+ "drafting_tools.free.zero": "שתי הנקודות חופפות; לא נוסף דבר",
+ "drafting_tools.free.select_first": "יש לבחור קודם את הפריטים של מבט זה לחלוקה",
+ "drafting_tools.free.pick_item": "לחץ על פריט של מבט זה כדי לסמן אותו",
+ "drafting_tools.free.dim_kind": "בתצוגת שרטוט עובדות רק מידות ליניאריות"
+}

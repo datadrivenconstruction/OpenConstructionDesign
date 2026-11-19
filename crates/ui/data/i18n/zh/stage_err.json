@@ -1,0 +1,10 @@
+{
+ "stage_err.kept": "已保留表 {t}：添加后写入 {n} 行",
+ "stage_err.stage.prev_attached": "未添加：上次添加的副本仍处于打开状态。请重新执行添加",
+ "stage_err.stage.model_changed": "未添加：读取文件期间模型已更改。请重新执行添加",
+ "stage_err.stage.no_record": "未添加：导入的副本没有更改记录",
+ "stage_err.stage.table_differs": "未添加：表 {t} 在模型与导入的副本中不一致",
+ "stage_err.stage.unique_key": "未添加：无法追踪表 {t} 的唯一键",
+ "stage_err.stage.table_gone": "未添加：导入更改了表 {t}，而副本中已不存在该表",
+ "stage_err.stage.copy_held": "已添加；导入的副本将保持打开，直至下次添加或重新打开模型"
+}

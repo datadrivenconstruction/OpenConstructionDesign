@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "Nokta",
+ "trial.field.distance": "Mesafe",
+ "trial.field.target": "Eleman",
+ "trial.refused": "{field}: {reason}. Uygulamak için değiştirin",
+ "trial.preview_off": "Önizleme kapalı: model çok büyük"
+}

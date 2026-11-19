@@ -1,0 +1,7 @@
+{
+ "xlsx_alias_ids.ids_written": "{n} rânduri noi au primit id-urile în foaia ta redenumită; nimic altceva din registru nu s-a schimbat.",
+ "xlsx_alias_ids.ids_open": "Registrul este deschis în alt program: id-urile a {n} rânduri noi nu au fost scrise. Închide-l acolo și sincronizează; aceste rânduri nu sunt create din nou.",
+ "xlsx_alias_ids.ids_failed": "Id-urile a {n} rânduri noi nu au putut fi scrise; registrul a rămas neschimbat. Aceste rânduri nu sunt create din nou la următoarea sincronizare.",
+ "xlsx_alias_ids.unpaired": "{n} rânduri noi nu au încă id; sunt reținute și nu sunt create din nou.",
+ "xlsx_alias_ids.refused": "Nimic nu a fost aplicat: rândurile noi din {sheets} nu pot primi id-uri cât timp o foaie redenumită este citită. Redenumește foaia la numele standard (sau șterge aceste rânduri) și sincronizează din nou."
+}

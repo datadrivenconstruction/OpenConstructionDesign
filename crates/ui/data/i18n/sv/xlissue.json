@@ -1,0 +1,13 @@
+{
+ "xlw.copy_list": "Kopiera lista",
+ "xlw.save_list": "Spara lista…",
+ "xlw.copy_list_tip": "Kopiera raderna som visas (blad, cell, id, kolumn, värden, orsak) som text till ett kalkylblad",
+ "xlw.save_list_tip": "Spara raderna som visas som en .csv-fil bredvid arbetsboken; själva arbetsboken ändras aldrig",
+ "xlw.list_book_value": "Värde i arbetsboken",
+ "xlw.list_model_value": "Modellvärde",
+ "xlw.list_reason": "Orsak",
+ "xlw.list_copied": "Lista kopierad: {n} rader",
+ "xlw.list_saved": "Lista sparad: {n} rader, {file}",
+ "xlw.list_save_failed": "Listan sparades inte",
+ "xlw.list_nothing": "Inget att kopiera: inga rader visas"
+}

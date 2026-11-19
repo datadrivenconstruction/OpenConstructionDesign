@@ -1,0 +1,12 @@
+{
+ "opt.stair.straight": "直線",
+ "opt.stair.l": "L 字",
+ "opt.stair.u": "U 字",
+ "opt.stair.gap": "吹き抜け",
+ "hint.stair.corner": "L 字階段: 折れ曲がる角を指定 · Backspace — 最後の点を削除 · Esc — 最後の点を削除、点がなければキャンセル",
+ "hint.stair.side": "階段: 2 番目の階段の側を指定 · Backspace — 最後の点を削除 · Esc — 最後の点を削除、点がなければキャンセル",
+ "tool.stair.flights": "{n} 段 (合計 {m})",
+ "tool.stair.err_split": "各階段は少なくとも 2 段必要です: 最初の階段は {m} 段中 {n} 段",
+ "tool.stair.err_comfort": "蹴上げと踏面が歩行の快適性ルール (2R + T) を満たしません",
+ "tool.stair.err_input": "階段のサイズが範囲外です。幅、高さ、踊り場を確認してください"
+}

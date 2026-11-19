@@ -1,0 +1,13 @@
+{
+ "ai.proposal.title": "Agent proposal",
+ "ai.proposal.meta": "{actor} · operations: {ops}",
+ "ai.proposal.apply.desc": "Applies the whole proposal as one step; Ctrl+Z undoes it",
+ "ai.proposal.applying": "Applying…",
+ "ai.proposal.applied": "The proposal was applied. Ctrl+Z undoes it.",
+ "ai.proposal.applied_resync": "The proposal was applied, but the view did not update yet. It refreshes on its own; Ctrl+Z undoes the step.",
+ "ai.proposal.stale": "The model changed after this proposal was previewed. Ask the agent to propose it again.",
+ "ai.proposal.toast.applied": "Proposal applied. Ctrl+Z undoes it.",
+ "ai.proposal.toast.stale": "The model changed after the preview, so nothing was applied. Preview again: ask the agent to propose it anew.",
+ "ai.proposal.toast.refused": "Proposal not applied: {reason}",
+ "ai.proposal.rejected": "The proposal was rejected."
+}

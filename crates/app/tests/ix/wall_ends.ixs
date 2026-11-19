@@ -1,0 +1,2 @@
+# A typed length lands exactly: the ends of the wall by index
+tool(WA) click(0,0) move(1,0.02) type("6000") key(Enter) key(Escape) → walls=1 wall[0].a=(0,0) wall[0].b=(6,0)

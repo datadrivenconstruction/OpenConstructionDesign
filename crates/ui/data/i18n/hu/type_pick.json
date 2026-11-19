@@ -1,0 +1,10 @@
+{
+ "type_pick.pick.search": "Típusok vagy vastagság keresése",
+ "type_pick.pick.empty": "Nincs illeszkedő típus",
+ "type_pick.pick.edit": "Típus szerkesztése…",
+ "type_pick.pick.mixed": "Vegyes",
+ "type_pick.pick.layers": {
+  "one": "# réteg",
+  "other": "# réteg"
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "cmd.help.licenses": "ओपन-सोर्स लाइसेंस",
+ "cmd.help.licenses.desc": "इस बिल्ड में उपयोग की गई ओपन-सोर्स लाइब्रेरी और उनके लाइसेंस दिखाता है।",
+ "about.product": "DDC Editor",
+ "about.version": "संस्करण",
+ "about.build": "बिल्ड",
+ "about.schema": "मॉडल स्कीमा",
+ "about.system": "सिस्टम",
+ "about.gpu": "ग्राफ़िक्स एडैप्टर",
+ "about.language": "भाषा",
+ "about.copy": "संस्करण की जानकारी कॉपी करें",
+ "about.copy_desc": "बग रिपोर्ट के लिए संस्करण, बिल्ड, सिस्टम और ग्राफ़िक्स एडैप्टर। फ़ाइल पथ नहीं।",
+ "about.copied": "संस्करण की जानकारी कॉपी हो गई",
+ "about.licenses": "ओपन-सोर्स लाइसेंस",
+ "about.licenses_desc": "इस बिल्ड में उपयोग की गई लाइब्रेरी और उनके लाइसेंस",
+ "about.licenses.open": "देखें",
+ "about.licenses.title": "ओपन-सोर्स लाइसेंस",
+ "about.licenses.note": "DDC Editor में नीचे दी गई लाइब्रेरी शामिल हैं। हर एक अपने लाइसेंस और कॉपीराइट सूचना के अधीन है। पूरे लाइसेंस पाठ: एप्लिकेशन के बगल में THIRD_PARTY_LICENSES.txt।",
+ "about.licenses.full": "पूरे लाइसेंस पाठ",
+ "about.licenses.list": "घटक सूची",
+ "about.licenses.close": "बंद करें",
+ "about.licenses.col_name": "घटक",
+ "about.licenses.col_license": "लाइसेंस",
+ "about.licenses.count": {
+  "one": "# घटक",
+  "other": "# घटक"
+ },
+ "about.licenses.count_of": "{total} में से {shown} घटक",
+ "about.licenses.search_hint": "नाम या लाइसेंस से खोजें…",
+ "about.licenses.search_clear": "खोज साफ़ करें",
+ "about.licenses.none": "कुछ नहीं मिला",
+ "about.licenses.none_hint": "लाइब्रेरी के नाम का हिस्सा या MIT जैसा लाइसेंस आज़माएँ।"
+}

@@ -1,0 +1,6 @@
+{
+ "cmd.xlsx.undo_apply": "Das letzte Anwenden aus XLSX-Tabelle rückgängig machen",
+ "xlsx_undo.later": "Nicht rückgängig gemacht: Das Modell wurde nach diesem Anwenden aus XLSX-Tabelle bearbeitet. Verwenden Sie Strg+Z schrittweise oder das Verlaufsfenster.",
+ "xlsx_undo.gone": "Nichts rückgängig zu machen: Dieses Anwenden aus XLSX-Tabelle ist bereits rückgängig gemacht.",
+ "xlsx_undo.busy": "Schließen Sie zuerst die aktuelle Zeichnung ab oder brechen Sie sie ab, dann machen Sie das Anwenden aus XLSX-Tabelle rückgängig."
+}

@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "下にレイヤを挿入",
+ "type_layers.layer.delete": "レイヤを削除",
+ "type_layers.layer.delete_last": "タイプには少なくとも 1 つのレイヤが必要です",
+ "type_layers.value.bad": "有効な正の値ではありません",
+ "type_layers.value.required": "必須",
+ "type_layers.unsaved.title": "{name} の未保存の変更",
+ "type_layers.unsaved.body": "タイプに適用しますか、それとも破棄しますか？",
+ "type_layers.unsaved.discard": "破棄"
+}

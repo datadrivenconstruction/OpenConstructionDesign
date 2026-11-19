@@ -1,0 +1,14 @@
+{
+ "ai.hist.badge": "AI",
+ "ai.hist.untitled": "AI-muutokset",
+ "ai.hist.tip": "{title}\nKäyttäjä: {actor}\nTekoälymalli: {model}",
+ "ai.hist.why": "Syy: {why}",
+ "ai.hist.reverted": "peruttu",
+ "ai.hist.revert_one": "Peru tämä AI-erä",
+ "ai.revert.done": "AI-muutokset peruttu: {n}. Kumoaminen palauttaa ne.",
+ "ai.revert.empty": "Ei AI-muutoksia peruttavaksi",
+ "ai.revert.not_ai": "Tämä askel ei ole AI-muutos",
+ "ai.revert.already": "Nämä AI-muutokset on jo peruttu",
+ "ai.revert.opaque": "Ei peruttu: näitä AI-muutoksia ei voi erottaa myöhemmästä työstä turvallisesti. Mitään ei muutettu.",
+ "ai.revert.failed": "Peruutus epäonnistui: {e}"
+}

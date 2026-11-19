@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "Tangga",
+ "selcat.railing": "Railing",
+ "quick.cat.stair": "Tangga",
+ "quick.cat.railing": "Railing",
+ "stair.risers": "Injakan",
+ "stair.riser": "Tinggi injakan",
+ "stair.comfort": "2R + T",
+ "stair.tread_auto": "Injak menurut aturan",
+ "stair.tread_auto_tip": "Lepaskan lebar injak yang diketik dan biarkan aturan 2R + T yang menentukannya",
+ "stair.broken": "Tangga ini tidak sesuai dengan level-nya",
+ "railing.host_stair": "Melekat pada tangga #{id}",
+ "railing.host_path": "Railing sketsa",
+ "railing.length": "Panjang",
+ "stair.deleted_with": "dengan {n} railing yang melekat"
+}

@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "Otwór lukarny",
+ "cmd.arch.roof_opening": "Otwór w dachu",
+ "cmd.arch.roof_extrusion": "Dach przez wyciągnięcie",
+ "cmd.arch.ceiling_opening": "Otwór w suficie",
+ "cmd.str.slab_opening": "Otwór w stropie",
+ "cmd.ctx.wall.detach": "Odłącz górę",
+ "cmd.ctx.floor.sketch": "Edytuj obrys",
+ "cmd.ctx.floor.shape": "Edytuj kształt",
+ "host_shape.shape.elev_prompt": "rzędna, mm…",
+ "host_shape.shape.elev_mm": "{v} mm",
+ "host_shape.sketch.no_host": "brak elementu nośnego pod obrysem na tym poziomie",
+ "host_shape.issue.roof": "dach {id}: {e}",
+ "host_shape.issue.ceiling": "sufit {id}: {e}",
+ "host_shape.status.select_slab": "zaznacz płytę stropową",
+ "host_shape.status.select_walls": "zaznacz ściany",
+ "host_shape.status.no_roof_or_level": "brak dachu lub poziomu powyżej",
+ "host_shape.status.top_attached": "górne krawędzie ścian połączone",
+ "host_shape.status.top_detached": "górne krawędzie ścian odłączone",
+ "host_shape.status.straight_wall": "wymagana prosta ściana",
+ "host_shape.status.roof_extruded": "utworzono dach przez wyciągnięcie",
+ "warn.kind.cut": "Wycięcie lub połączenie nie zbudowane"
+}

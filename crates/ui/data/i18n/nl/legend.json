@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "Legenda",
+ "legend.legend.new_hint": "Nieuwe legendanaam",
+ "legend.legend.delete_tip": "Legenda verwijderen",
+ "legend.legend.delete_placed": "Legenda verwijderen (geplaatst op: {sheets})",
+ "legend.legend.deleted": "Legenda verwijderd: {name}",
+ "legend.legend.no_rows": "Nog geen rijen. Voeg er een toe of neem de stijlen van de huidige weergave over",
+ "legend.legend.replace_q": "{n} rijen vervangen door de stijlen van deze weergave?",
+ "legend.legend.replace": "Vervangen",
+ "legend.legend.keep": "Rijen behouden",
+ "legend.col.swatch": "Kleurstaal",
+ "legend.col.value": "Waarde",
+ "legend.col.label": "Etiket"
+}

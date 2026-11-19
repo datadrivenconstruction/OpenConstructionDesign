@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "Rentang tampilan",
+ "view_range.range": "Rentang tampilan",
+ "view_range.cut": "Bidang potong",
+ "view_range.bottom": "Bawah",
+ "view_range.depth": "Kedalaman tampilan",
+ "view_range.cut.hint": "Tinggi bidang potong di atas level. Elemen yang melintasinya digambar terpotong.",
+ "view_range.bottom.hint": "Bawah rentang, relatif terhadap level. Nilai nol atau negatif diizinkan.",
+ "view_range.depth.hint": "Seberapa jauh tampilan melihat di bawah bagian bawah. Nol atau lebih.",
+ "view_range.err.number": "Masukkan panjang di setiap kolom",
+ "view_range.err.not_finite": "Masukkan panjang di setiap kolom",
+ "view_range.err.cut_not_above_bottom": "Bidang potong harus di atas bagian bawah",
+ "view_range.err.negative_depth": "Kedalaman tampilan tidak boleh negatif",
+ "view_range.err.top_below_cut": "Bagian atas rentang tidak boleh di bawah bidang potong"
+}

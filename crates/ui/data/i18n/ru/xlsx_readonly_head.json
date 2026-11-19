@@ -1,0 +1,5 @@
+{
+ "xlsx_readonly.read_only_head": "Только чтение — «Применить» запишет копию",
+ "xlsx_readonly.show_in_folder": "Показать в папке",
+ "xlsx_readonly.copy_exists": "Файл копии уже существует. Выберите другое имя или удалите его."
+}

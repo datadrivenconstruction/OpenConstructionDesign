@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "Άξονας X",
+ "fe.axis.y": "Άξονας Y",
+ "fe.axis.z": "Άξονας Z",
+ "fe.col.axis": "Άξονας",
+ "fe.col.at": "Θέση",
+ "fe.col.mode": "Λειτουργία",
+ "fe.mode.fixed": "Σταθερό",
+ "fe.mode.free": "Ελεύθερο",
+ "fe.types.inherited": "Προεπιλογή από παράμετρο",
+ "fe.csv.more": "Περισσότερες ενέργειες CSV",
+ "fe.ref.selected": "Επίπεδο: {name}"
+}

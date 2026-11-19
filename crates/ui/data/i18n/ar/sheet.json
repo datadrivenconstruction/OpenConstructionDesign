@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "مرجع اختصارات لوحة المفاتيح",
+ "cmd.help.shortcuts.desc": "يعرض كل الاختصارات كما هي مضبوطة الآن، مرتبة حسب السياق. اضغط ? في أي مكان خارج حقل النص.",
+ "sheet.title": "اختصارات لوحة المفاتيح",
+ "sheet.filter": "تصفية بالأمر أو المفتاح",
+ "sheet.filter_label": "تصفية الاختصارات",
+ "sheet.customize": "تخصيص…",
+ "sheet.close": "إغلاق",
+ "sheet.esc_close": "للإغلاق",
+ "sheet.none": "لا توجد اختصارات مطابقة",
+ "sheet.none_hint": "جرّب كلمة أو مفتاحاً آخر.",
+ "sheet.sec.general": "عام",
+ "sheet.sec.plan": "المخطط",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "الجداول",
+ "sheet.sec.sheets": "الأوراق",
+ "sheet.sec.ai": "AI"
+}

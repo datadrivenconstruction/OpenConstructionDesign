@@ -1,0 +1,10 @@
+{
+ "type_pick.pick.search": "Tur yoki qalinlik bo'yicha qidirish",
+ "type_pick.pick.empty": "Mos tur yo'q",
+ "type_pick.pick.edit": "Turni tahrirlash…",
+ "type_pick.pick.mixed": "Aralash",
+ "type_pick.pick.layers": {
+  "one": "# qatlam",
+  "other": "# qatlam"
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "Pagsamahin ang option: {name}",
+ "ai_opt_merge.whole": "Pagsamahin ang buong option",
+ "ai_opt_merge.parts": "Pagsamahin ang mga napiling bahagi",
+ "ai_opt_merge.note": "Bakit ang option na ito",
+ "ai_opt_merge.rebased": "Nagbago ang model pagkatapos gawin ang option na ito: muling kinalkula ang pagsasama laban sa kasalukuyang model. Suriin ang mga pagbabago bago mag-apply.",
+ "ai_opt_merge.left.not_picked": "Hindi napili mula sa option",
+ "ai_opt_merge.left.unticked": "Inalisan ng tsek sa option",
+ "ai_opt_merge.left.conflict": "Hindi maidagdag sa kasalukuyang model: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "Hindi maisasama ang option na ito. Kailangang ibalik muna ang tinanggihang option.",
+ "ai_opt_merge.refused.stale": "Nagbago ang model pagkatapos gawin ang option na ito. Muling kalkulahin ang pagsasama laban sa kasalukuyang model.",
+ "ai_opt_merge.refused.nothing_picked": "Walang napili para pagsamahin.",
+ "ai_opt_merge.refused.unknown_item": "Ang item {item} ay wala sa option na ito.",
+ "ai_opt_merge.refused.not_in_option": "Ang napiling elemento ay wala sa option na ito.",
+ "ai_opt_merge.refused.needs_left_out": "Kailangan ng item {item} ang item {needs}. Piliin din ito, o payagan ang pagdagdag ng mga dependency.",
+ "ai_opt_merge.refused.set_gone": "Tumutukoy ang item {item} sa pagpiling wala na. Gumawa muli ng option.",
+ "ai_opt_merge.refused.busy": "May bukas na ibang plan. I-apply o tanggihan muna ito.",
+ "ai_opt_merge.refused.failed": "Hindi maihanda ang pagsasama: {reason}",
+ "ai_opt_merge.revive": "Ibalik ang option",
+ "ai_opt_merge.merged": "Naipagsama"
+}

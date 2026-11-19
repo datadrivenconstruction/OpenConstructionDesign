@@ -1,0 +1,5 @@
+{
+ "caps.refused": "{kinds}: {reason}. Mitään ei muutettu.",
+ "caps.panel": "Paneeli liikkuu koko verhoseinänsä mukana. Valitse seinä",
+ "caps.unsupported": "Tämä työkalu ei muokkaa näitä elementtejä"
+}

@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "Hàng và ô đã bỏ qua",
+ "xlsx_issues.conflicts_title": "Đã thay đổi ở cả hai nơi",
+ "xlsx_issues.missing_title": "Thiếu tờ trong sổ làm việc",
+ "xlsx_issues.look_alike_title": "Tên tờ không khớp",
+ "xlsx_issues.mass_title": "Xóa hàng loạt cần xác nhận",
+ "xlsx_issues.sheets_missing": "Thiếu các tờ {sheets} trong sổ làm việc (đã đổi tên hoặc xóa); các hàng của chúng chưa được so sánh.",
+ "xlsx_issues.keep_model": "Giữ mô hình",
+ "xlsx_issues.take_book": "Lấy từ sổ làm việc",
+ "xlsx_issues.open_book_tip": "Mở tệp trong ứng dụng của nó. Không có gì thay đổi trong mô hình; bản xem trước tải lại sau khi bạn lưu sổ làm việc."
+}

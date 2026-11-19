@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "טווח מבט",
+ "view_range.range": "טווח מבט",
+ "view_range.cut": "מישור חיתוך",
+ "view_range.bottom": "תחתית",
+ "view_range.depth": "עומק מבט",
+ "view_range.cut.hint": "גובה מישור החיתוך מעל המפלס. רכיבים החוצים אותו מצוירים חתוכים.",
+ "view_range.bottom.hint": "תחתית הטווח, ביחס למפלס. מותרים ערכי אפס או שליליים.",
+ "view_range.depth.hint": "עד כמה המבט מסתכל מתחת לתחתית. אפס או יותר.",
+ "view_range.err.number": "הזן אורך בכל שדה",
+ "view_range.err.not_finite": "הזן אורך בכל שדה",
+ "view_range.err.cut_not_above_bottom": "מישור החיתוך חייב להיות מעל התחתית",
+ "view_range.err.negative_depth": "עומק המבט אינו יכול להיות שלילי",
+ "view_range.err.top_below_cut": "החלק העליון של הטווח לא יכול להיות מתחת למישור החיתוך"
+}

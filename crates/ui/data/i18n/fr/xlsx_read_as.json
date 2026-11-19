@@ -1,0 +1,11 @@
+{
+ "xlsx_read_as.title": "Feuille renommée ?",
+ "xlsx_read_as.detail": "La feuille {found} a les colonnes de {sheet} (correspondance de {score} %). Elle n'est pas lue, sauf si vous la choisissez.",
+ "xlsx_read_as.detail_many": "Plusieurs feuilles correspondent à {sheet} : {found}. Rien n'est choisi à votre place : sélectionnez celle à lire.",
+ "xlsx_read_as.read_as": "Lire « {found} » comme {sheet}",
+ "xlsx_read_as.read_as_tip": "Pour cet import uniquement. La feuille n'est pas renommée ; l'application écrit seulement les id des nouvelles lignes.",
+ "xlsx_read_as.active": "La feuille « {found} » est lue comme {sheet} dans cet import.",
+ "xlsx_read_as.undo": "Ne pas lire comme {sheet}",
+ "xlsx_read_as.undo_tip": "Retour aux noms de feuilles tels qu'ils sont dans le classeur.",
+ "xlsx_read_as.not_rewritten": "Le classeur n'a pas été réécrit : une feuille renommée est lue sous son propre nom. Renommez-la pour garder le classeur synchronisé."
+}

@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "Käyttö keskeytettiin: malli säilytetään ennallaan",
+ "apply_verify.rolled_back": "Käyttö ei vastannut luonnosta ja se peruttiin; malli on ennallaan. {what}",
+ "apply_verify.diff.missing": "Luonnos näyttää {what} {kind}, mutta käyttö ei tehnyt sitä.",
+ "apply_verify.diff.extra": "Käytettiin {kind} {what}, jota luonnos ei näytä.",
+ "apply_verify.diff.kind": "Luonnos näyttää {what} {shown}, mutta käyttö teki sille: {applied}.",
+ "apply_verify.diff.value": "{what}: “{col}” tuli ulos eri arvolla kuin luonnoksessa.",
+ "apply_verify.diff.truncated": "Luonnoksen ja käytetyn muutoksen koko eroaa.",
+ "apply_verify.diff.unreadable": "Käytettyä muutosta ei voitu lukea takaisin ({e}).",
+ "apply_verify.no_base": "Käyttöä ei suoritettu: vertailukopio, jolla luonnos tarkistetaan, puuttuu. Malli on ennallaan; pyydä luonnos uudelleen.",
+ "apply_verify.take_back_failed": "Peruuttaminen epäonnistui ({e}): käytä Kumoa-toimintoa.",
+ "apply_verify.kind.created": "luotu",
+ "apply_verify.kind.changed": "muutettu",
+ "apply_verify.kind.deleted": "poistettu",
+ "apply_verify.card.type_row": "Tyyppi {type} · {n} elementtiä ottaa muutoksen"
+}

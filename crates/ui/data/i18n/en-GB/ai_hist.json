@@ -1,0 +1,14 @@
+{
+ "ai.hist.badge": "AI",
+ "ai.hist.untitled": "AI changes",
+ "ai.hist.tip": "{title}\nApplied by: {actor}\nAI model: {model}",
+ "ai.hist.why": "Why: {why}",
+ "ai.hist.reverted": "reverted",
+ "ai.hist.revert_one": "Revert this AI batch",
+ "ai.revert.done": "AI changes reverted: {n}. Undo brings them back.",
+ "ai.revert.empty": "There are no AI changes to revert",
+ "ai.revert.not_ai": "This step is not an AI change",
+ "ai.revert.already": "These AI changes are already reverted",
+ "ai.revert.opaque": "Not reverted: these AI changes cannot be separated from later work safely. Nothing was changed.",
+ "ai.revert.failed": "Revert failed: {e}"
+}

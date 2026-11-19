@@ -1,0 +1,7 @@
+{
+ "src.field.kids": "Podřízené řádky (panely, vrcholy)",
+ "src.kids.mine": "podřízených řádků: {n}, změněno zde",
+ "src.kids.changed": "podřízené řádky změněny zde",
+ "src.kids.theirs": "podřízené řádky změněny v souboru",
+ "src.kids.take_tip": "Při dalším importu se převezmou podřízené řádky ze souboru; teď se neaplikují."
+}

@@ -1,0 +1,374 @@
+{
+ "items": [
+  {
+   "key": "egress.travel_max",
+   "value": 45,
+   "unit": "m",
+   "source": "za-sans10400-t",
+   "clause": "cl. 4.16.2-4.16.4",
+   "url": "https://archive.org/stream/za.sans.10400.t.2011/za.sans.10400.t.2011_djvu.txt",
+   "accessed": "2026-11-14",
+   "paraphrase": "Beyond 45 m to the nearest escape door a second escape route with emergency route is required; emergency routes allow 45 m, or 60 m with life-safety sprinklers.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ],
+    "sprinklered": false
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via archive.org text copy, SANS 10400-T; 45 m to nearest escape door before a second route and emergency route are required; 60 m with life-safety sprinklers (4.16.4)"
+  },
+  {
+   "key": "egress.travel_max.office",
+   "value": 45,
+   "unit": "m",
+   "source": "za-sans10400-t",
+   "clause": "cl. 4.16.2-4.16.4",
+   "url": "https://archive.org/stream/za.sans.10400.t.2011/za.sans.10400.t.2011_djvu.txt",
+   "accessed": "2026-11-14",
+   "paraphrase": "Same 45 m rule applies to all occupancies including offices; 60 m with life-safety sprinklers and protected walls.",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "sprinklered": false
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via archive.org text copy, SANS 10400-T; same 45 m rule for all occupancies"
+  },
+  {
+   "key": "daylight.window_floor_ratio",
+   "value": 0.1,
+   "unit": "ratio",
+   "source": "za-sans10400-o",
+   "clause": "cl. 4.2.1.1.3(b)",
+   "url": "https://archive.org/stream/za.sans.10400.o.2011/za.sans.10400.o.2011_djvu.txt",
+   "accessed": "2026-11-14",
+   "paraphrase": "Window opening area at least a tenth of room floor area in buildings other than small category-1 F2/H3/H4 buildings (minimum 0.2 m2).",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via archive.org text copy, SANS 10400-O; 10 percent of floor area (or 0.2 m2 if greater) for other buildings"
+  },
+  {
+   "key": "daylight.window_floor_ratio.house",
+   "value": 0.05,
+   "unit": "ratio",
+   "source": "za-sans10400-o",
+   "clause": "cl. 4.2.1.1.3(a)",
+   "url": "https://archive.org/stream/za.sans.10400.o.2011/za.sans.10400.o.2011_djvu.txt",
+   "accessed": "2026-11-14",
+   "paraphrase": "Five percent of floor area suffices for category-1 buildings of occupancy class F2, H3 or H4 (small dwellings).",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via archive.org text copy, SANS 10400-O; 5 percent for category 1 buildings of occupancy F2, H3, H4"
+  },
+  {
+   "key": "corridor.width_min.accessible",
+   "value": 0.9,
+   "unit": "m",
+   "source": "za-sans10400-s",
+   "clause": "cl. 4.4.1.4",
+   "url": "https://archive.org/stream/za.sans.10400.s.2011/za.sans.10400.s.2011_djvu.txt",
+   "accessed": "2026-11-14",
+   "paraphrase": "Clear walking width of an accessible route at least 900 mm; passing spaces 1.5 x 1.5 m at 5 m intervals where narrower than 1.5 m.",
+   "verified": true,
+   "note": "read 2026-11-14 via archive.org text copy, SANS 10400-S; 900 mm clear walking surface; passing spaces 1.5 x 1.5 m every 5 m if narrower than 1.5 m"
+  },
+  {
+   "key": "door.clear_min.accessible",
+   "value": 0.75,
+   "unit": "m",
+   "source": "za-sans10400-s",
+   "clause": "cl. 4.6.1.1",
+   "url": "https://archive.org/stream/za.sans.10400.s.2011/za.sans.10400.s.2011_djvu.txt",
+   "accessed": "2026-11-14",
+   "paraphrase": "Accessible doorway clear opening at least 750 mm (800 mm recommended); toilet doors 900 mm.",
+   "verified": true,
+   "note": "read 2026-11-14 via archive.org text copy, SANS 10400-S; 750 mm clear opening, 800 mm recommended"
+  },
+  {
+   "key": "accessible.turning_circle",
+   "value": 1.5,
+   "unit": "m",
+   "source": "za-sans10400-s",
+   "clause": "cl. 4.4.2.1",
+   "url": "https://archive.org/stream/za.sans.10400.s.2011/za.sans.10400.s.2011_djvu.txt",
+   "accessed": "2026-11-14",
+   "paraphrase": "Wheelchair turning space of 1.5 m diameter.",
+   "verified": true,
+   "note": "read 2026-11-14 via archive.org text copy, SANS 10400-S; 1.5 m diameter turning space"
+  },
+  {
+   "key": "ramp.slope_max",
+   "value": 0.0833,
+   "unit": "ratio",
+   "source": "za-sans10400-s",
+   "clause": "cl. 4.8.2(a)",
+   "url": "https://archive.org/stream/za.sans.10400.s.2011/za.sans.10400.s.2011_djvu.txt",
+   "accessed": "2026-11-14",
+   "paraphrase": "Accessible ramp gradient no steeper than 1:12 along its centre line.",
+   "verified": true,
+   "note": "read 2026-11-14 via archive.org text copy, SANS 10400-S; 1:12 along the centre line; Table 2 limits rise per run"
+  },
+  {
+   "key": "fire.compartment_area_max",
+   "value": 2500,
+   "unit": "m2",
+   "source": "za-sans10400-t",
+   "clause": "cl. 4.4, Table 3 (all other occupancies)",
+   "url": "https://archive.org/stream/za.sans.10400.t.2011/za.sans.10400.t.2011_djvu.txt",
+   "accessed": "2026-11-14",
+   "paraphrase": "Division area limit without fixed extinguishment: 2500 m2 for residential (other occupancies) and 5000 m2 for offices (class G1).",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "house"
+    ],
+    "sprinklered": false
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via archive.org text copy, SANS 10400-T; 2500 m2 without extinguishing installation"
+  },
+  {
+   "key": "fire.compartment_area_max.sprinklered",
+   "value": 5000,
+   "unit": "m2",
+   "source": "za-sans10400-t",
+   "clause": "cl. 4.4, Table 3 (all other occupancies)",
+   "url": "https://archive.org/stream/za.sans.10400.t.2011/za.sans.10400.t.2011_djvu.txt",
+   "accessed": "2026-11-14",
+   "paraphrase": "With fixed extinguishment: residential 5000 m2 on two or more storeys; offices unlimited on one storey, 10000 m2 on two or more.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "house"
+    ],
+    "sprinklered": true
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via archive.org text copy, SANS 10400-T; 5000 m2 for two or more storeys with fixed installation, no limit for one storey"
+  },
+  {
+   "key": "stair.riser_max",
+   "value": 0.2,
+   "unit": "m",
+   "source": "za-sans10400-m",
+   "clause": "cl. 4.2.5",
+   "url": "https://archive.org/stream/za.sans.10400.m.2011/za.sans.10400.m.2011_djvu.txt",
+   "accessed": "2026-11-14",
+   "paraphrase": "Rise of any step at most 200 mm (170 mm where Part S accessibility applies).",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office",
+     "house"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via archive.org text copy, SANS 10400-M; rise of any step not above 200 mm"
+  },
+  {
+   "key": "stair.tread_min",
+   "value": 0.25,
+   "unit": "m",
+   "source": "za-sans10400-m",
+   "clause": "cl. 4.2.6",
+   "url": "https://archive.org/stream/za.sans.10400.m.2011/za.sans.10400.m.2011_djvu.txt",
+   "accessed": "2026-11-14",
+   "paraphrase": "Going of a tread at least 250 mm; going plus twice the rise between 570 and 650 mm.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office",
+     "house"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via archive.org text copy, SANS 10400-M; going not below 250 mm"
+  },
+  {
+   "key": "stair.width_min",
+   "value": 1.0,
+   "unit": "m",
+   "source": "za-sans10400-t",
+   "clause": "cl. 4.23.7 and Table 10, row <100 persons",
+   "url": "https://archive.org/stream/za.sans.10400.t.2011/za.sans.10400.t.2011_djvu.txt",
+   "accessed": "2026-11-14",
+   "paraphrase": "Escape routes for up to 100 persons need 1000 mm width, rising with occupant numbers; Part M absolute stair minimum is 750 mm, Part S 900 mm.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via archive.org text copy, SANS 10400-T; escape stair width 1000 mm for up to 100 persons (1500 mm where Part S applies)"
+  },
+  {
+   "key": "stair.width_min.house",
+   "value": 0.75,
+   "unit": "m",
+   "source": "za-sans10400-m",
+   "clause": "cl. 4.2.1",
+   "url": "https://archive.org/stream/za.sans.10400.m.2011/za.sans.10400.m.2011_djvu.txt",
+   "accessed": "2026-11-14",
+   "paraphrase": "General stairway width at least 750 mm between enclosing walls or balustrades.",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via archive.org text copy, SANS 10400-M; any stairway at least 750 mm wide"
+  },
+  {
+   "key": "room.height_min",
+   "value": 2.4,
+   "unit": "m",
+   "source": "za-sans10400-c",
+   "clause": "cl. 4.3.1, Table 2",
+   "url": "https://archive.org/stream/za.sans.10400.c.2010/za.sans.10400.c.2010_djvu.txt",
+   "accessed": "2026-11-14",
+   "paraphrase": "Bedrooms need 2.4 m over at least 6 m2; other dwelling habitable rooms 2.4 m over 70 percent of floor and 2.1 m elsewhere.",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via archive.org text copy, SANS 10400-C; 2.4 m; bedroom 2.4 m over at least 6 m2, other dwelling rooms 2.4 m over 70 percent of area"
+  },
+  {
+   "key": "room.height_min.office",
+   "value": 2.4,
+   "unit": "m",
+   "source": "za-sans10400-c",
+   "clause": "cl. 4.3.1, Table 2",
+   "url": "https://archive.org/stream/za.sans.10400.c.2010/za.sans.10400.c.2010_djvu.txt",
+   "accessed": "2026-11-14",
+   "paraphrase": "Habitable rooms not otherwise listed, which covers office rooms, need 2.4 m; passages 2.1 m.",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via archive.org text copy, SANS 10400-C; 2.4 m from the row for other habitable rooms; no separate office row read"
+  },
+  {
+   "key": "fire.compartment_area_max.office",
+   "value": 5000,
+   "unit": "m2",
+   "source": "za-sans10400-t",
+   "clause": "cl. 4.4, Table 3 (G1)",
+   "url": "https://archive.org/stream/za.sans.10400.t.2011/za.sans.10400.t.2011_djvu.txt",
+   "accessed": "2026-11-14",
+   "paraphrase": "Office occupancy division area limit without a fixed extinguishing installation.",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "sprinklered": false
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via archive.org text copy, SANS 10400-T"
+  },
+  {
+   "key": "fire.compartment_area_max.sprinklered.office",
+   "value": 10000,
+   "unit": "m2",
+   "source": "za-sans10400-t",
+   "clause": "cl. 4.4, Table 3 (G1, two storeys and over)",
+   "url": "https://archive.org/stream/za.sans.10400.t.2011/za.sans.10400.t.2011_djvu.txt",
+   "accessed": "2026-11-14",
+   "paraphrase": "Office division area limit with a fixed installation in a building of two or more storeys.",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "sprinklered": true
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via archive.org text copy, SANS 10400-T"
+  },
+  {
+   "key": "corridor.width_min",
+   "value": 1.0,
+   "unit": "m",
+   "source": "za-sans10400-t",
+   "clause": "4.21 and Table 10, escape route for fewer than 100 persons 1 000 mm (1 500 mm where Part S applies)",
+   "verified": true,
+   "url": "https://archive.org/stream/za.sans.10400.t.2011/za.sans.10400.t.2011_djvu.txt",
+   "accessed": "2026-11-15",
+   "paraphrase": "An escape route for under 100 people is at least 1 000 mm wide.",
+   "note": "read 2026-11-15: archive.org text of SANS 10400-T:2011"
+  },
+  {
+   "key": "building.high_rise_height",
+   "value": 30.0,
+   "unit": "m",
+   "source": "za-sans10400-t",
+   "clause": "4.31.2 and 4.46.1, buildings over 30 m need detection systems and a fire lift",
+   "verified": true,
+   "url": "https://archive.org/stream/za.sans.10400.t.2011/za.sans.10400.t.2011_djvu.txt",
+   "accessed": "2026-11-15",
+   "paraphrase": "Buildings over 30 m high take the stricter fire measures.",
+   "note": "read 2026-11-15: archive.org text of SANS 10400-T:2011"
+  },
+  {
+   "key": "stair.going_min",
+   "value": 0.25,
+   "unit": "m",
+   "source": "za-sans10400-m",
+   "clause": "cl. 4.2.6",
+   "verified": true,
+   "url": "https://archive.org/stream/za.sans.10400.m.2011/za.sans.10400.m.2011_djvu.txt",
+   "accessed": "2026-11-15",
+   "paraphrase": "A stair tread is at least 250 mm.",
+   "note": "same clause as dim stair.tread_min"
+  },
+  {
+   "key": "guard.height_min",
+   "value": 1.0,
+   "unit": "m",
+   "source": "za-sans10400-m",
+   "clause": "4.3.1, flights with more than three risers protected by a wall or balustrade at least 1 m high",
+   "verified": true,
+   "url": "https://archive.org/stream/za.sans.10400.m.2011/za.sans.10400.m.2011_djvu.txt",
+   "accessed": "2026-11-15",
+   "paraphrase": "A flight of more than three risers has protection at least 1 m high on both sides.",
+   "note": "read 2026-11-15: archive.org text of SANS 10400-M:2011"
+  },
+  {
+   "key": "building.class5_height",
+   "na": true,
+   "value": null,
+   "unit": "m",
+   "source": "za-sans10400-t",
+   "verified": false,
+   "note": "na: occupancy classes and a 30 m height band (building.high_rise_height), no 13 m class",
+   "text": {
+    "en": "No 13 m building class.",
+    "ru": "Нет класса здания 13 м."
+   }
+  }
+ ]
+}

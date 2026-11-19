@@ -1,0 +1,4 @@
+{
+ "source_input.err.number": "“{text}” ay hindi numero; numero ang hawak ng parameter na ito. Walang naisulat",
+ "source_input.err.comma": "“{text}”: gumamit ng tuldok para sa decimal (1.5); ang kuwit ay para lang sa libo (1,000). Walang naisulat"
+}

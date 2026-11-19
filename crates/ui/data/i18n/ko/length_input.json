@@ -1,0 +1,4 @@
+{
+ "length_input.opt.bad_length": "길이가 아닙니다. mm로 입력하거나, 인치 단위에서는 ft-in으로 입력하세요",
+ "length_input.opt.times": "×"
+}

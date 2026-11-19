@@ -1,0 +1,32 @@
+id = "G16_fins_facade__ru"
+tier = "hard"
+group = "Любая геометрия"
+title = "Parametric fins facade"
+lang = "ru"
+base = "empty"
+
+[[turn]]
+say = "Шестиэтажный офисный блок 30 x 18 м с параметрическим фасадом из вертикальных рёбер: глубина ребра меняется по синусоиде от 0.2 до 0.9 м вдоль фасада, шаг 600 мм, остекление за рёбрами."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "level"
+min = 6.0
+
+[[oracle.count]]
+spec = "col+beam+brace+truss+gridshell_bar+solid+mass+mesh+freeform+shell_elem+gridshell+wall+slab+roof+stair+toposolid+wall_spline"
+min = 200.0
+
+[[oracle.geom]]
+kind = "height"
+min = 18.0
+max = 24.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

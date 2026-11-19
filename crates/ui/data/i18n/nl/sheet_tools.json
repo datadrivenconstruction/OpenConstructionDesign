@@ -1,0 +1,18 @@
+{
+ "undo.entry_later": "Niet ongedaan gemaakt: er is na deze wijziging een andere wijziging gemaakt. Maak die eerst ongedaan.",
+ "undo.entry_gone": "Niet ongedaan gemaakt: deze wijziging is al ongedaan gemaakt of staat niet meer in de geschiedenis.",
+ "undo.entry_busy": "Rond eerst de huidige tekening af of annuleer die, en maak daarna ongedaan.",
+ "quick.hud.more": "Meer in Eigenschappen: {names}",
+ "sheet_tools.sheet.more": "Meer bladgereedschappen",
+ "job.of": "{d} van {t}",
+ "job.of.mb": "{d} van {t} MB",
+ "job.left.under_minute": "minder dan een minuut over",
+ "job.left.minutes": "ongeveer {n} min over",
+ "sheet_tools.start.units": "Eenheden",
+ "sheet_tools.print.save": {
+  "one": "# blad opslaan",
+  "other": "# bladen opslaan"
+ },
+ "sheet_tools.sets.delete_ask": "De set “{name}” verwijderen? De bladen blijven in het project.",
+ "sheet_tools.keep": "Behouden"
+}

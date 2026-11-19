@@ -1,0 +1,4 @@
+{
+ "tool.err.drawing_open": "Liniile desenului din jurul acestui punct nu se închid într-o buclă",
+ "tool.err.drawing_crossing": "Bucla desenului din jurul acestui punct se intersectează cu ea însăși"
+}

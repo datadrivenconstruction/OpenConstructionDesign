@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "Concreto",
+ "mat.masonry": "Alvenaria",
+ "mat.brick": "Tijolo",
+ "mat.insulation": "Isolamento",
+ "mat.plaster": "Reboco",
+ "mat.render": "Revestimento",
+ "mat.gypsum": "Placa de gesso",
+ "mat.glass": "Vidro",
+ "mat.wood": "Madeira",
+ "mat.steel": "Aço",
+ "mat.membrane": "Membrana",
+ "mat.other": "Outro",
+ "warn.cat.wall": "Parede",
+ "warn.cat.slab": "Laje",
+ "warn.cat.opening": "Abertura",
+ "warn.cat.curtain_wall": "Parede-cortina",
+ "td.mat.custom": "Outro…"
+}

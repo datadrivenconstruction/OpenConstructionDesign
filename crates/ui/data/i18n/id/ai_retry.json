@@ -1,0 +1,7 @@
+{
+ "ai.retry.countdown": "Mencoba lagi dalam {n} detik",
+ "ai.retry.try": "Percobaan otomatis {i} dari {max}. Permintaan yang sama dikirim ulang.",
+ "ai.retry.now": "Coba sekarang",
+ "ai.retry.gave_up": "Masih tidak ada jawaban setelah {max} percobaan otomatis.",
+ "ai.retry.shorten": "Persingkat permintaan"
+}

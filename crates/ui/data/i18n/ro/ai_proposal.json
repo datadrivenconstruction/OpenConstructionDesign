@@ -1,0 +1,13 @@
+{
+ "ai.proposal.title": "Propunerea agentului",
+ "ai.proposal.meta": "{actor} · operații: {ops}",
+ "ai.proposal.apply.desc": "Aplică întreaga propunere ca un singur pas; Ctrl+Z o anulează",
+ "ai.proposal.applying": "Se aplică…",
+ "ai.proposal.applied": "Propunerea a fost aplicată. Ctrl+Z o anulează.",
+ "ai.proposal.applied_resync": "Propunerea a fost aplicată, dar vederea nu s-a actualizat încă. Se reîmprospătează singură; Ctrl+Z anulează pasul.",
+ "ai.proposal.stale": "Modelul s-a modificat după previzualizarea propunerii. Cereți agentului să o propună din nou.",
+ "ai.proposal.toast.applied": "Propunere aplicată. Ctrl+Z o anulează.",
+ "ai.proposal.toast.stale": "Modelul s-a modificat după previzualizare, deci nu s-a aplicat nimic. Previzualizați din nou: cereți agentului să o propună din nou.",
+ "ai.proposal.toast.refused": "Propunere neaplicată: {reason}",
+ "ai.proposal.rejected": "Propunerea a fost respinsă."
+}

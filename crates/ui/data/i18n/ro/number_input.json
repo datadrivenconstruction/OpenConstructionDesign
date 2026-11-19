@@ -1,0 +1,4 @@
+{
+ "number_input.bad_number": "Nu este un număr: introdu cifre cu punct zecimal (1.5)",
+ "number_input.at_grids_tip": "Plasează un stâlp la fiecare intersecție de grilă de pe acest nivel"
+}

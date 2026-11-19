@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "หน่วย",
+ "topo_units.unit": "หน่วยในไฟล์",
+ "topo_units.unit.m": "m",
+ "topo_units.unit.cm": "cm",
+ "topo_units.unit.mm": "mm",
+ "topo_units.unit.ft": "ft",
+ "topo_units.unit.usft": "US survey ฟุต",
+ "topo_units.unit.in": "in",
+ "topo_units.unit.from_file": "ไฟล์ระบุหน่วยของมัน: {unit}",
+ "topo_units.unit.suggested": "ไฟล์ไม่ระบุหน่วย แนะนำจากขนาด: {unit} ตรวจผลลัพธ์ด้านล่าง",
+ "topo_units.extent": "ผลลัพธ์ในหน่วยโปรเจกต์: {x} × {y} {u} บนแปลน ช่วงความสูง {z} {u}",
+ "topo_units.extent.none": "ผลลัพธ์: ไม่มีอะไรให้นำเข้าด้วยตัวเลือกเหล่านี้",
+ "topo_units.extent.check": "ดูไม่เหมือนพื้นที่ก่อสร้าง ตรวจสอบหน่วย"
+}

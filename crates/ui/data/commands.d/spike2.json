@@ -1,0 +1,32 @@
+[
+ {
+  "id": "ctx.ceiling.clean_outline",
+  "icon": "outline-clean-ceiling",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "profile",
+  "context": [
+   "ceiling"
+  ]
+ },
+ {
+  "id": "ctx.shaft.clean_outline",
+  "icon": "outline-clean-shaft",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "profile",
+  "context": [
+   "shaft"
+  ]
+ }
+]

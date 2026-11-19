@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "Жаңа отбасы",
+ "family_editor.open_tip": "Отбасын немесе жобаны ашу",
+ "family_editor.close_named": "{name} жабу",
+ "family_editor.unsaved": "Сақталмаған өзгерістер",
+ "family_editor.search": "Іздеу",
+ "family_editor.nothing": "Ештеңе табылмады",
+ "family_editor.sec_families": "Жоба отбасылары",
+ "family_editor.sec_drafts": "Черновиктер",
+ "family_editor.cap_category": "Санат",
+ "family_editor.cap_host": "Негіз",
+ "family_editor.cap_type": "Алдын ала қарау түрі"
+}

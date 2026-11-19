@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "Balik sisi engsel",
+ "cmd.edit.flip_hand.desc": "Mencerminkan pintu dan jendela yang dipilih sepanjang dinding sehingga engsel pindah ke ujung lain bukaan.",
+ "cmd.edit.flip_facing": "Balik sisi bukaan",
+ "cmd.edit.flip_facing.desc": "Memutar pintu dan jendela yang dipilih ke sisi lain dinding.",
+ "opening_grips.flip_hand": "Balik engsel",
+ "opening_grips.flip_hand.tip": "Engsel pindah ke ujung lain bukaan (Shift+F)",
+ "opening_grips.flip_facing": "Balik sisi",
+ "opening_grips.flip_facing.tip": "Bukaan ke sisi lain dinding (Shift+G)",
+ "opening_grips.flip.done": "Dibalik: {n}",
+ "opening_grips.flip.none": "Pilih pintu atau jendela untuk dibalik",
+ "opening_grips.flip.fail": "Tidak dibalik: {why}"
+}

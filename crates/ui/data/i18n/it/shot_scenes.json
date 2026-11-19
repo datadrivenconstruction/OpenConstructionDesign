@@ -1,0 +1,9 @@
+{
+ "shot_scenes.site": "Sito",
+ "shot_scenes.lawn": "Prato",
+ "shot_scenes.pad": "Piazzola",
+ "shot_scenes.block": "Blocco",
+ "shot_scenes.void": "Vuoto",
+ "shot_scenes.tower": "Torre",
+ "shot_scenes.wall_void": "Vuoto nel muro"
+}

@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "Muudetud",
+ "ai.redraft.added": "+{n} lisatud",
+ "ai.redraft.removed": "−{n} eemaldatud",
+ "ai.redraft.changed": "~{n} muudetud",
+ "ai.redraft.strip": "{what} pärast sinu viimast vaatamist",
+ "ai.redraft.note": "Muudetud plaan üle vaadatud: {what}",
+ "ai.redraft.more": "+{n} veel",
+ "ai.redraft.ack": "Selge",
+ "ai.redraft.ack.tip": "Märgi see redaktsioon nähtuks; Rakenda siis sihib seda",
+ "ai.redraft.removed_list": "Eemaldatud read: {n}",
+ "ai.redraft.review_first": "Plaan muutus pärast sinu sõnumit: vaata kõigepealt muudatused üle",
+ "ai.redraft.mark.tip": "Uus või muudetud pärast sinu viimast vaatamist",
+ "ai.redraft.emptied": "Järelpäring eemaldas kõik read: mustand on tühi"
+}

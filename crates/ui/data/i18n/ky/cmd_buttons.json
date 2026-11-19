@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}, кабатта",
+ "cmd_buttons.purge.undo": "Өчүрүү бир Кайтаруу кадамы.",
+ "cmd_buttons.unpin.none": "Тандалгандардын ичинде бекитилгени жок",
+ "cmd_buttons.change_type.none": "Адегенде дубалдарды тандаңыз: алардын түрү бир кадамда өзгөрөт",
+ "cmd_buttons.units.metric": "Бирликтер: метрикалык",
+ "cmd_buttons.units.imperial": "Бирликтер: фут жана дюйм",
+ "cmd_buttons.units.back": "Кайра которулуу",
+ "cmd_buttons.underlay.on": "Астыңкы катман күйүк: төмөнкү кабат ачык көрсөтүлөт",
+ "cmd_buttons.underlay.off": "Астыңкы катман өчүк",
+ "cmd_buttons.underlay.none": "Астыңкы катман күйүк, бирок төмөнкү кабатта көрсөтүүчү эч нерсе жок",
+ "cmd_buttons.zoom_sel.no_shape": "Тандоодо бул көрүнүштө алкактоочу форма жок",
+ "cmd_buttons.close.base": "План жана 3D өтмөктөр ачык калат; аны жабуу үчүн кесимди, баракты же чийме көрүнүшүн ачыңыз",
+ "tool.equipment": "Жабдуу",
+ "hint.equipment.place": "Жабдуу: абалын тандаңыз · Esc — чыгуу",
+ "cmd_buttons.table.opened": "Таблица модель жанында ачылды",
+ "cmd_buttons.circuits.tip": "Бул модельдин электр схемаларынын тизмесин ачат"
+}

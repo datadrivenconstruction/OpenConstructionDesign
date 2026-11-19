@@ -1,0 +1,9 @@
+{
+ "shot_scenes.site": "Șantier",
+ "shot_scenes.lawn": "Gazon",
+ "shot_scenes.pad": "Platformă",
+ "shot_scenes.block": "Bloc",
+ "shot_scenes.void": "Gol",
+ "shot_scenes.tower": "Turn",
+ "shot_scenes.wall_void": "Gol de perete"
+}

@@ -1,0 +1,4 @@
+{
+ "tool.err.drawing_open": "Les lignes de tracé autour de ce point ne forment pas une boucle fermée",
+ "tool.err.drawing_crossing": "La boucle de tracé autour de ce point se croise elle-même"
+}

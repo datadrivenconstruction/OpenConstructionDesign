@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "Přehled klávesových zkratek",
+ "cmd.help.shortcuts.desc": "Zobrazí všechny zkratky tak, jak je máte nastavené, podle kontextu. Stiskněte ? kdekoli mimo textové pole.",
+ "sheet.title": "Klávesové zkratky",
+ "sheet.filter": "Filtrovat podle příkazu nebo klávesy",
+ "sheet.filter_label": "Filtrovat zkratky",
+ "sheet.customize": "Upravit…",
+ "sheet.close": "Zavřít",
+ "sheet.esc_close": "pro zavření",
+ "sheet.none": "Žádné odpovídající zkratky",
+ "sheet.none_hint": "Zkuste jiné slovo nebo klávesu.",
+ "sheet.sec.general": "Obecné",
+ "sheet.sec.plan": "Půdorys",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "Výkazy",
+ "sheet.sec.sheets": "Listy",
+ "sheet.sec.ai": "AI"
+}

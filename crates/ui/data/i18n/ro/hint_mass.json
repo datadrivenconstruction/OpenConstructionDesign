@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "Suprafață liberă",
+ "cmd.mass.panelize": "Împarte în panouri",
+ "cmd.mass.surface_shell": "Acoperiș pe suprafață",
+ "cmd.mass.thicken": "Grosime",
+ "hint.mass.freeform.first": "Suprafață liberă: primul colț al dreptunghiului din plan · introdu ridicarea · Esc — anulează",
+ "hint.mass.freeform.next": "Suprafață liberă: colțul opus · introdu ridicarea · Esc — anulează",
+ "hint.mass.panelize.first": "Panouri: alege o suprafață liberă în 3D · Esc — anulează",
+ "hint.mass.panelize.value": "Panouri: introdu dimensiunea panoului · Enter — aplică · Esc — anulează",
+ "hint.mass.surface_shell.first": "Acoperiș pe suprafață: alege o suprafață liberă în 3D · Esc — anulează",
+ "hint.mass.surface_shell.value": "Acoperiș pe suprafață: introdu grosimea · Enter — aplică · Esc — anulează",
+ "hint.mass.thicken.first": "Grosime: alege o suprafață liberă în 3D · Esc — anulează",
+ "hint.mass.thicken.value": "Grosime: introdu grosimea (0 — suprafață fără grosime) · Enter — aplică · Esc — anulează",
+ "status.mass.pick_surface": "Alege o suprafață liberă",
+ "status.mass.freeform_small": "Dreptunghiul este prea mic: cel puțin 0,5 m pe fiecare latură",
+ "name.mass.freeform": "Suprafață liberă",
+ "rgroup.mass_free": "Suplimentar"
+}

@@ -1,0 +1,18 @@
+{
+ "undo.entry_later": "Ei kumottu: tämän jälkeen tehtiin toinen muutos. Kumoa se ensin.",
+ "undo.entry_gone": "Ei kumottu: tämä muutos on jo kumottu tai ei enää historiassa.",
+ "undo.entry_busy": "Viimeistele tai peruuta nykyinen piirros ensin, kumoa sitten.",
+ "quick.hud.more": "Lisää Ominaisuuksissa: {names}",
+ "sheet_tools.sheet.more": "Lisää arkkityökaluja",
+ "job.of": "{d} / {t}",
+ "job.of.mb": "{d} / {t} MB",
+ "job.left.under_minute": "alle minuutti jäljellä",
+ "job.left.minutes": "noin {n} min jäljellä",
+ "sheet_tools.start.units": "Yksiköt",
+ "sheet_tools.print.save": {
+  "one": "Tallenna # arkki",
+  "other": "Tallenna # arkkia"
+ },
+ "sheet_tools.sets.delete_ask": "Poistetaanko sarja “{name}”? Sen arkit pysyvät projektissa.",
+ "sheet_tools.keep": "Säilytä"
+}

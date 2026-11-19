@@ -1,0 +1,5 @@
+{
+ "lv.level.deleted_attach": "Nivån borttagen; {n} väggar förlorade sin överkantskoppling",
+ "lv.level.rooms": "{n} rum tar målnivåns höjd ({dz} m): {names}. Tryck Flytta igen för att bekräfta",
+ "lv.level.pinned": "Nivån togs inte bort: fastlåsta element kan inte flyttas till en annan nivå: {names}. Lås upp dem först"
+}

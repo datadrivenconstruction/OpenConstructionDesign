@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "1 set toevoegen",
+ "rebar_sets.add_n": "{n} sets toevoegen",
+ "rebar_sets.pick.search": "Staaftypen zoeken",
+ "rebar_sets.pick.empty": "Geen overeenkomende staaftypen",
+ "rebar_sets.unit.deg": "°"
+}

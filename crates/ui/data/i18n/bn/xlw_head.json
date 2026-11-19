@@ -1,0 +1,15 @@
+{
+ "xlw.hd_never": "এখনো এক্সপোর্ট হয়নি",
+ "xlw.hd_now": "এইমাত্র",
+ "xlw.hd_min": "{n} মিনিট আগে",
+ "xlw.hd_hour": "{n} ঘণ্টা আগে",
+ "xlw.hd_day": "{n} দিন আগে",
+ "xlw.hd_linked": "সংযুক্ত",
+ "xlw.hd_watched": "পর্যবেক্ষণে",
+ "xlw.hd_stale": "এক্সপোর্টের পরে মডেল বদলেছে",
+ "xlw.ft_export": "এক্সপোর্ট",
+ "xlw.ft_review": "পর্যালোচনা",
+ "xlw.ft_apply": "{n}টি পরিবর্তন প্রয়োগ করুন",
+ "xlw.ft_delete_missing": "অনুপস্থিত মুছুন",
+ "xlw.ft_keep_missing_tip": "মোছা চালু: প্রয়োগের সময় সারিহীন উপাদান মুছে যাবে। রাখতে টিক তুলুন।"
+}

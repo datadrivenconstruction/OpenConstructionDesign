@@ -1,0 +1,5 @@
+{
+ "xl.msg.level_name_x_is_already_used": "लेवल नाम '{}' पहले से उपयोग में है",
+ "xl.msg.unreadable_id_elements_without_a_row_not_deleted": "न पढ़ा जाने वाला id: बिना पंक्ति वाले तत्व इस आयात में नहीं हटाए जाते",
+ "xl.msg.wall_type_name_x_is_already_used": "दीवार प्रकार नाम '{}' पहले से उपयोग में है"
+}

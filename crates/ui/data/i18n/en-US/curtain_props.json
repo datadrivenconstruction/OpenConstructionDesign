@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "Panel",
+ "curtain_props.cw.panel_cell": "Cell {i}×{j} · curtain wall #{id}",
+ "curtain_props.cw.kind": "Type",
+ "curtain_props.cw.kind.glazed": "Glass",
+ "curtain_props.cw.kind.solid": "Solid",
+ "curtain_props.cw.kind.door": "Door",
+ "curtain_props.cw.kind.window": "Window",
+ "curtain_props.cw.kind.empty": "Empty",
+ "curtain_props.cw.name": "Name",
+ "curtain_props.cw.swing_side": "Opens to the other side",
+ "curtain_props.cw.swing_hinge": "Hinge at the cell end",
+ "curtain_props.cw.size": "Size",
+ "curtain_props.cw.cell_area": "Cell area",
+ "curtain_props.cw.panel_area": "Panel area",
+ "curtain_props.cw.prev": "Previous panel",
+ "curtain_props.cw.next": "Next panel",
+ "curtain_props.cw.wall": "Select the wall",
+ "curtain_props.cw.panel_hint": "Esc — selection · Ctrl+Z — undo",
+ "curtain_props.cw.status.panel": "Panel {i}×{j} → {kind}",
+ "e3d.err.cw_height": "curtain wall height must be over 100 mm"
+}

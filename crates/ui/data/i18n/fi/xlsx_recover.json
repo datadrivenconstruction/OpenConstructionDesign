@@ -1,0 +1,16 @@
+{
+ "xlsx_recover.title": "Vienti linkitettyyn työkirjaan keskeytyi",
+ "xlsx_recover.both": "Vienti pysähtyi, kun edellistä työkirjaa siirrettiin sivuun ja uutta asetettiin paikalleen. Mitään ei menetetty: uusi työkirja on valmis kohteessa {part}, edellinen säilytetään kohteessa {bak}.",
+ "xlsx_recover.part_only": "Vienti pysähtyi ennen kuin uusi työkirja asetettiin paikalleen. Se on valmis kohteessa {part}.",
+ "xlsx_recover.bak_only": "Vienti pysähtyi ennen kuin uusi työkirja oli valmis. Edellinen työkirja säilytetään kohteessa {bak}.",
+ "xlsx_recover.finish": "Viimeistele keskeytynyt vienti",
+ "xlsx_recover.restore": "Palauta edellinen työkirja",
+ "xlsx_recover.finished": "Keskeytynyt vienti on valmis: uusi työkirja on paikallaan.",
+ "xlsx_recover.finished_kept": "Keskeytynyt vienti on valmis: uusi työkirja on paikallaan, edellinen säilytetään kohteessa {bak}.",
+ "xlsx_recover.restored": "Edellinen työkirja on palautettu paikalleen.",
+ "xlsx_recover.restore_failed": "Edellistä työkirjaa ei voitu siirtää takaisin ({err}). Se säilytetään kohteessa {path}.",
+ "xlsx_recover.not_restored": "Uutta työkirjaa ei voitu asettaa paikalleen eikä edellistä voitu siirtää takaisin. Mitään ei menetetty: edellinen työkirja säilytetään kohteessa {path}; Synkronoi tarjoaa viimeistelyn tai palautuksen.",
+ "xlsx_recover.finish_failed": "Uutta työkirjaa ei voitu asettaa paikalleen ({err}). Se jää kohteeseen {path}.",
+ "xlsx_recover.dest_back": "Työkirja on palannut kohteeseen {path}: mitään ei siirretty.",
+ "xlsx_recover.nothing": "Keskeytyneestä viennistä ei ole mitään siirrettävää."
+}

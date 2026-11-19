@@ -1,0 +1,4 @@
+{
+ "xl.msg.x_formulas_in_column_x_on_sheet_x_replaced_by_values": "শিট '{}'-এর কলাম '{}'-এর {}টি সূত্র মান দিয়ে বদলানো হয়েছে",
+ "xl.msg.formula_in_a_model_column_not_applied": "মডেল কলামে সূত্র: এর ফল প্রয়োগ হয়নি, মডেলের মান থাকে; বদলাতে একটি মান লিখুন"
+}

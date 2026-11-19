@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "Rozsah pohledu",
+ "view_range.range": "Rozsah pohledu",
+ "view_range.cut": "Řezná rovina",
+ "view_range.bottom": "Spodní",
+ "view_range.depth": "Hloubka pohledu",
+ "view_range.cut.hint": "Výška řezné roviny nad podlažím. Prvky, které ji protínají, se zobrazí řezané.",
+ "view_range.bottom.hint": "Spodní hrana rozsahu vzhledem k podlaží. Nulové nebo záporné hodnoty jsou povoleny.",
+ "view_range.depth.hint": "Jak daleko pohled sahá pod spodní hranu. Nula nebo více.",
+ "view_range.err.number": "Zadejte délku do každého pole",
+ "view_range.err.not_finite": "Zadejte délku do každého pole",
+ "view_range.err.cut_not_above_bottom": "Řezná rovina musí být nad spodní hranou",
+ "view_range.err.negative_depth": "Hloubka pohledu nemůže být záporná",
+ "view_range.err.top_below_cut": "Horní hrana rozsahu nesmí být pod řeznou rovinou"
+}

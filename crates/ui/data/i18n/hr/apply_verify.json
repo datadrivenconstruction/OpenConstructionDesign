@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "Primjena je zaustavljena: model je zadržan kakav je bio",
+ "apply_verify.rolled_back": "Primjena se nije podudarala s nacrtom i vraćena je; model je nepromijenjen. {what}",
+ "apply_verify.diff.missing": "Nacrt prikazuje {what} {kind}, ali Primijeni to nije učinio.",
+ "apply_verify.diff.extra": "Primijeni {kind} {what}, što nacrt ne prikazuje.",
+ "apply_verify.diff.kind": "Nacrt prikazuje {what} {shown}, ali Primijeni ga je {applied}.",
+ "apply_verify.diff.value": "{what}: „{col}“ razlikuje se od nacrta.",
+ "apply_verify.diff.truncated": "Nacrt i primijenjena promjena razlikuju se po opsegu.",
+ "apply_verify.diff.unreadable": "Primijenjena promjena nije se mogla pročitati natrag ({e}).",
+ "apply_verify.no_base": "Primjena nije pokrenuta: nedostaje kopija za provjeru nacrta. Model je nepromijenjen; zatražite nacrt ponovno.",
+ "apply_verify.take_back_failed": "Vraćanje nije uspjelo ({e}): upotrijebite Poništi.",
+ "apply_verify.kind.created": "stvoreno",
+ "apply_verify.kind.changed": "promijenjeno",
+ "apply_verify.kind.deleted": "izbrisano",
+ "apply_verify.card.type_row": "Tip {type} · {n} elemenata prima promjenu"
+}

@@ -1,0 +1,5 @@
+# Curtain wall: a chain of two clicks, Esc ends it (one record), the next Esc leaves the tool
+tool(arch.curtain_wall) click(0,0) → scope=Drafting hint="arch.curtain_wall.next"
+click(5,0) → journal=+0
+key(Escape) → journal=+1 scope=Drafting
+key(Escape) → scope=Idle

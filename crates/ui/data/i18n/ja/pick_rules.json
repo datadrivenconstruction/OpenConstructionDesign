@@ -1,0 +1,11 @@
+{
+ "pick_rules.filter": "選択: すべて",
+ "pick_rules.filter.on": "選択: {n} 個オフ",
+ "pick_rules.filter.title": "クリックで選択できるカテゴリ",
+ "pick_rules.filter.all": "すべてのカテゴリを選択可能",
+ "pick_rules.filter.tip": "選択フィルタ: チェックの外れたカテゴリはクリックとホバーの対象になりません",
+ "pick_rules.here": "ここにある項目",
+ "pick_rules.here.selected": "選択済み",
+ "pick_rules.pinned": "固定された項目を選択",
+ "pick_rules.here.row": "{cat} · {len}"
+}

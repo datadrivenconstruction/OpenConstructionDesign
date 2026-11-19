@@ -1,0 +1,42 @@
+{
+ "ai.tool.show_elements": "Elementlar ko'rsatilmoqda",
+ "ai.tool.isolate_elements": "Elementlar ajratilmoqda",
+ "ai.tool.color_by": "Qiymat bo'yicha rang berilmoqda",
+ "ai.tool.reset_view": "Ko'rinish tiklanmoqda",
+ "ai_found.found.query": "Topildi",
+ "ai_found.found.show": "Ko'rsatilgan",
+ "ai_found.found.isolate": "Ajratilgan",
+ "ai_found.found.hide": "Yashirilgan",
+ "ai_found.found.color": "Rangli",
+ "ai_found.found.count": "{m} tadan {n}",
+ "ai_found.found.none": "Mos keladigan narsa yo'q. Filtrni kengroq qiling.",
+ "ai_found.found.show_btn": "Ko'rsatish",
+ "ai_found.found.show_tip": "Shu elementlarni tanlab, plan va 3D da ularga yaqinlashtirish",
+ "ai_found.found.isolate_btn": "Ajratish",
+ "ai_found.found.isolate_tip": "Ko'rinishni tiklamaguncha faqat shu elementlarni ko'rsatish",
+ "ai_found.found.select_btn": "Tanlash",
+ "ai_found.found.select_tip": "Ko'rinishni siljitmasdan shu elementlarni tanlash",
+ "ai_found.legend.title": "Rang bo'yicha: {by}",
+ "ai_found.legend.row_tip": "Shu elementlarni tanlash uchun bosing",
+ "ai_found.legend.empty_value": "Qiymat yo'q",
+ "ai_found.legend.other": {
+  "one": "# ta qo'shimcha qiymat",
+  "other": "# ta qo'shimcha qiymat"
+ },
+ "ai_found.view.title": "AI yordamchisi ko'rinishi",
+ "ai_found.view.reset": "Ko'rinishni tiklash",
+ "ai_found.view.reset_tip": "AI yordamchisi o'zgartirishidan oldingi ko'rinishni qaytarish",
+ "ai_found.view.shown": {
+  "one": "# ta element ko'rsatildi",
+  "other": "# ta element ko'rsatildi"
+ },
+ "ai_found.view.isolated": {
+  "one": "# ta element ajratildi",
+  "other": "# ta element ajratildi"
+ },
+ "ai_found.view.hidden": {
+  "one": "# ta element yashirildi",
+  "other": "# ta element yashirildi"
+ },
+ "ai_found.found.line": "{what}: {count}"
+}

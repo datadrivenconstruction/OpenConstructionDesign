@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}, на уровне",
+ "cmd_buttons.purge.undo": "Удаление — один шаг отмены.",
+ "cmd_buttons.unpin.none": "Среди выбранного нет закреплённых элементов",
+ "cmd_buttons.change_type.none": "Сначала выберите стены: их тип меняется одним шагом",
+ "cmd_buttons.units.metric": "Единицы: метрические",
+ "cmd_buttons.units.imperial": "Единицы: футы и дюймы",
+ "cmd_buttons.units.back": "Вернуть",
+ "cmd_buttons.underlay.on": "Подложка включена: нижний уровень показан бледно",
+ "cmd_buttons.underlay.off": "Подложка выключена",
+ "cmd_buttons.underlay.none": "Подложка включена, но на нижнем уровне нечего показывать",
+ "cmd_buttons.zoom_sel.no_shape": "У выбранного нет формы, которую можно показать в этом виде",
+ "cmd_buttons.close.base": "План и 3D остаются открытыми; закрываются разрез, лист и чертёжный вид",
+ "tool.equipment": "Оборудование",
+ "hint.equipment.place": "Оборудование: укажите место · Esc — выход",
+ "cmd_buttons.table.opened": "Таблица открыта рядом с моделью",
+ "cmd_buttons.circuits.tip": "Открыть список электрических цепей модели"
+}

@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "исправлено после {n} отказов, около {tokens} токенов",
+ "ai.fam_offer": "Агент предложил семейство {name}",
+ "ai.fam_offer.open": "Открыть в редакторе семейств",
+ "ai.fam_offer.dismiss": "Отклонить",
+ "fe.ai.badge": "ИИ",
+ "fe.ai.checking": "Проверка…",
+ "fe.ai.clean": "Проверка ничего не нашла",
+ "fe.ai.check_values": "Проверить значениями",
+ "fe.ai.lines": "строки {n}",
+ "fe.ai.changes": "Изменений относительно прежней версии: {n}",
+ "fe.ai.added": "добавлено: {head} {name}",
+ "fe.ai.removed": "удалено: {head} {name}",
+ "fe.ai.changed": "изменено: {head} {name}",
+ "fe.ai.reject": "Отклонить"
+}

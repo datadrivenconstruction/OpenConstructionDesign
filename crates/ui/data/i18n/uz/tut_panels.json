@@ -1,0 +1,9 @@
+{
+ "empty.props_model.title": "Hech narsa tanlanmagan",
+ "empty.props_model.hint": "Xususiyatlarini ko'rish uchun ko'rinishda elementni bosing. Yoki barcha parametrlarni jadvalga eksport qiling, u yerda tahrirlab, qaytarib qo'llang.",
+ "empty.props_model.action": "XLSX'ga eksport",
+ "tut.spreadsheet.title": "XLSX jadval bilan aylanma almashinuv",
+ "tut.spreadsheet.1": "Quyidagi XLSX'ga eksport tugmasini bosing: nimani kiritishni tanlang va jadvalni saqlang.",
+ "tut.spreadsheet.2": "Jadvalni XLSX'da oching, katakni o'zgartiring va saqlang. Bu yerdagi oldindan ko'rinish o'zgarishni ko'rsatadi.",
+ "tut.spreadsheet.3": "Oldindan ko'rinishni tekshiring va Modelga qo'llash tugmasini bosing. Ctrl+Z uni bekor qiladi."
+}

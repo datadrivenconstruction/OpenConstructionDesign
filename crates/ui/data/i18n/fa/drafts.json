@@ -1,0 +1,8 @@
+{
+ "drafts.drafts.head": "ویرایشگرهای باز تغییراتی دارند که هنوز در پروژه نیستند:",
+ "drafts.draft.family": "خانواده “{name}”",
+ "drafts.draft.line": "کتابخانه خط: {name}",
+ "drafts.draft.styles": "سبک‌های خط محدوده نما",
+ "drafts.btn.save_all": "ذخیره همه",
+ "drafts.drafts.refused": "پیش‌نویسی ذخیره نشد. چیزی بسته نشد؛ ویرایشگر حاوی پیش‌نویس باز است."
+}

@@ -1,0 +1,23 @@
+{
+ "params_list.n_params": {
+  "one": "# parametri",
+  "other": "# parametria"
+ },
+ "params_list.n_values": {
+  "one": "# arvo",
+  "other": "# arvoa"
+ },
+ "params_list.n_elements": {
+  "one": "# elementti",
+  "other": "# elementtiä"
+ },
+ "params_list.exported": "{params} viety tiedostoon {file}",
+ "params_list.export_failed": "Parametreja ei viety: {why}",
+ "params_list.open_folder": "Avaa kansio",
+ "params_list.delete_tip": "Poista parametri ja sen arvot",
+ "params_list.confirm": "Poista {name} ja sen {values} elementeillä {elements}?",
+ "params_list.confirm_btn": "Poista",
+ "params_list.cancel": "Peruuta",
+ "params_list.deleted": "Parametri {name} poistettu ({values})",
+ "params_list.undo": "Kumoa"
+}

@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key}은(는) 예약되어 있어({why}) 다시 지정할 수 없습니다",
+ "quick.keys.res_copy": "복사",
+ "quick.keys.res_paste": "붙여넣기",
+ "quick.keys.res_cut": "잘라내기",
+ "quick.keys.res_undo": "실행 취소 / 다시 실행",
+ "quick.keys.res_save": "저장",
+ "quick.keys.res_palette": "명령 팔레트",
+ "quick.keys.reserved_conflict": "{key}은(는) 이미 “{cmd}”에서 사용 중입니다. Esc를 누르면 그대로 유지됩니다.",
+ "quick.keys.reserved_swap": "교환",
+ "quick.keys.reserved_take": "가져오기",
+ "quick.keys.reserved_keep": "유지",
+ "quick.keys.reserved_os": "시스템이 사용 중:"
+}

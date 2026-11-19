@@ -1,0 +1,11 @@
+{
+ "xlsx_read_as.title": "Átnevezett lap?",
+ "xlsx_read_as.detail": "A(z) {found} lap a(z) {sheet} oszlopaival egyezik ({score}%). Nem lesz beolvasva, ha nem Ön választja.",
+ "xlsx_read_as.detail_many": "Több lap is illik a(z) {sheet} lapra: {found}. Nincs automatikus választás; válassza ki a beolvasandót.",
+ "xlsx_read_as.read_as": "„{found}” beolvasása mint {sheet}",
+ "xlsx_read_as.read_as_tip": "Csak ehhez az importáláshoz. A lap nincs átnevezve; az Alkalmazás csak az új sorok azonosítóit írja bele.",
+ "xlsx_read_as.active": "A(z) „{found}” lap ebben az importálásban {sheet} lapként lesz beolvasva.",
+ "xlsx_read_as.undo": "Ne olvassa be mint {sheet}",
+ "xlsx_read_as.undo_tip": "Vissza a munkafüzetben lévő lapnevekhez.",
+ "xlsx_read_as.not_rewritten": "A munkafüzet nincs újraírva: az átnevezett lap a saját nevén lesz beolvasva. A szinkron megtartásához nevezze vissza."
+}

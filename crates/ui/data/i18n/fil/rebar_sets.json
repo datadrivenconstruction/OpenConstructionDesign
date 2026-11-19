@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "Magdagdag ng 1 set",
+ "rebar_sets.add_n": "Magdagdag ng {n} na set",
+ "rebar_sets.pick.search": "Maghanap ng bar type",
+ "rebar_sets.pick.empty": "Walang tumutugmang bar type",
+ "rebar_sets.unit.deg": "°"
+}

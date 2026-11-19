@@ -1,0 +1,22 @@
+{
+ "cmd.arch.grid_pick": "Grelha por linha",
+ "cmd.arch.grid_pick.desc": "Cria uma grelha exatamente ao longo de uma linha de desenho escolhida no nível atual; os nomes continuam a série. Tab seleciona todas as linhas paralelas da mesma camada de desenho de uma só vez. Cada escolha é um passo de anulação.",
+ "cmd.struct.beam_pick": "Viga por linha",
+ "cmd.struct.beam_pick.desc": "Coloca uma viga do tipo atual no nível ativo ao longo de uma linha de desenho escolhida. Tab seleciona a cadeia ligada. Cada escolha é um passo de anulação.",
+ "hint.grid_pick.one": "Grelha por linha: escolha uma linha de desenho · Tab todas as linhas paralelas da sua camada · Esc sair",
+ "hint.grid_pick.more": "Grelha por linha: escolha uma linha para tomar todas as linhas paralelas da sua camada · Tab uma linha · Esc desarma",
+ "hint.beam_pick.one": "Viga por linha: escolha uma linha de desenho · Tab cadeia ligada · Esc sair",
+ "hint.beam_pick.more": "Viga por linha: escolha uma linha para tomar a sua cadeia · Tab uma linha · Esc desarma",
+ "line_pick.st.start_grid": "Escolha uma linha de desenho. Tab: todas as linhas paralelas da sua camada",
+ "line_pick.st.start_beam": "Escolha uma linha de desenho para uma viga {type}. Tab: cadeia ligada",
+ "line_pick.st.grid_done": "Grelha {name} adicionada",
+ "line_pick.st.grids_done": "{n} grelhas adicionadas: {first} — {last}",
+ "line_pick.st.beam_done": "Viga {type} adicionada",
+ "line_pick.st.beams_done": "{n} vigas {type} adicionadas",
+ "line_pick.st.on_grid": "Esta linha já tem a grelha {name}",
+ "line_pick.st.on_beam": "Esta linha já tem a viga {id}",
+ "line_pick.st.no_layer": "As camadas de desenho das linhas ainda não são conhecidas; tente novamente",
+ "line_pick.st.no_beam_type": "Não existe secção de viga no catálogo",
+ "line_pick.st.reload_warn": "Criado, mas a vista não pôde ser recarregada: {err}",
+ "line_pick.st.failed": "Não criado: {err}"
+}

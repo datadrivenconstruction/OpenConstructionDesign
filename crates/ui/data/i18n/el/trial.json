@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "Σημείο",
+ "trial.field.distance": "Απόσταση",
+ "trial.field.target": "Στοιχείο",
+ "trial.refused": "{field}: {reason}. Αλλάξτε το για να εφαρμοστεί",
+ "trial.preview_off": "Η προεπισκόπηση είναι κλειστή: το μοντέλο είναι πολύ μεγάλο"
+}

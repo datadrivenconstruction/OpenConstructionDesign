@@ -1,0 +1,7 @@
+brief = "Open shelf unit with a parameter for the number of shelves."
+category = "casework"
+must = param Width
+must = param Depth
+must = solids >= 12
+must = ports 0
+must = flex Width 960 1500

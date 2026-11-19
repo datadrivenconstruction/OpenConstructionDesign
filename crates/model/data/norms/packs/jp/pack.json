@@ -1,0 +1,33 @@
+{
+ "id": "jp",
+ "version": "2026.11",
+ "parent": "generic",
+ "country": "JP",
+ "lang": [
+  "ja"
+ ],
+ "units": {
+  "length": "m",
+  "display": "metric"
+ },
+ "conventions": {
+  "ground_floor": 1,
+  "area_standard": "gross",
+  "net_share": 0.85,
+  "note": "The Act measures floor area to wall centrelines, so a stated total or building area is a gross figure; sale and registry areas differ by practice. Net share is our own estimate.",
+  "source": null
+ },
+ "status": "tier3",
+ "climate": {
+  "zones": [],
+  "default": null
+ },
+ "research": {
+  "date": "2026-11-14",
+  "missing": [
+   "parking.per_dwelling"
+  ],
+  "unreachable": []
+ },
+ "note": "Numbers with verified=true were read in the cited clause; the rest are hints with a note of where we looked. Wording is our own; no text of a standard is stored."
+}

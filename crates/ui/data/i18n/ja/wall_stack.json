@@ -1,0 +1,10 @@
+{
+ "wall_stack.we.stack_caption": "複合タイプ",
+ "wall_stack.we.side_left": "左面",
+ "wall_stack.we.side_right": "右面",
+ "wall_stack.we.from": "開始",
+ "wall_stack.we.to": "終了",
+ "wall_stack.we.bottom": "下端",
+ "wall_stack.we.delete_tip": "このプロファイルを削除",
+ "wall_stack.we.from_after_to": "「開始」は「終了」より前にしてください"
+}

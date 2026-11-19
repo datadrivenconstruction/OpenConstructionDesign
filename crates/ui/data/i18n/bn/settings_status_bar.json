@@ -1,0 +1,10 @@
+{
+ "cmd.view.axes_full": "পূর্ণ অক্ষ",
+ "cmd.view.axes_full.desc": "প্ল্যানজুড়ে X ও Y অক্ষ পূর্ণ রেখা হিসেবে দেখায়। শুধু চাপা থাকা অবস্থায় দেখতে F9 ধরে রাখুন।",
+ "settings.axes_full": "অক্ষ",
+ "settings.axes_full_desc": "শিটজুড়ে প্ল্যানের অক্ষ পূর্ণ রেখা হিসেবে। দ্রুত দেখতে F9 ধরে রাখুন।",
+ "settings.axes_full_on": "পূর্ণ অক্ষ দেখান",
+ "plan.hud.axes_tip": "পূর্ণ অক্ষ দেখতে {key} ধরে রাখুন",
+ "status.axes_full.on": "পূর্ণ অক্ষ চালু",
+ "status.axes_full.off": "পূর্ণ অক্ষ বন্ধ"
+}

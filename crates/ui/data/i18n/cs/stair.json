@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "Schodiště",
+ "selcat.railing": "Zábradlí",
+ "quick.cat.stair": "Schodiště",
+ "quick.cat.railing": "Zábradlí",
+ "stair.risers": "Stupně",
+ "stair.riser": "Výška stupně",
+ "stair.comfort": "2R + T",
+ "stair.tread_auto": "Šířka stupně podle pravidla",
+ "stair.tread_auto_tip": "Zahodit zadanou šířku stupně a nechat ji nastavit pravidlem 2R + T",
+ "stair.broken": "Toto schodiště neodpovídá svým podlažím",
+ "railing.host_stair": "Nese schodiště č. {id}",
+ "railing.host_path": "Zábradlí kreslené skicou",
+ "railing.length": "Délka",
+ "stair.deleted_with": "s {n} nesenými zábradlími"
+}

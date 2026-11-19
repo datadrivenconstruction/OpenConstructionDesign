@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "匹配类型",
+ "cmd.mod.match_type.short": "匹配类型",
+ "cmd.mod.match_type.desc": "先拾取一面墙、楼板、柱或梁，然后点击同类其他构件，使其采用相同类型。拖动框选可应用于框内所有构件。按 Esc 清除源构件。",
+ "hint.match_type.pick": "匹配类型：拾取一面墙、楼板、柱或梁 · Esc — 退出",
+ "hint.match_type.apply": "匹配类型：点击目标或拖动框选 · Esc — 更换源构件",
+ "match_type.kind.wall": "墙",
+ "match_type.kind.slab": "楼板",
+ "match_type.kind.column": "柱",
+ "match_type.kind.beam": "梁",
+ "match_type.refuse.category": "其他类别：只有{cat}可采用此类型",
+ "match_type.refuse.curtain": "幕墙：此处不匹配其类型",
+ "match_type.refuse.pinned": "已固定：请先取消固定以更改类型",
+ "match_type.pick_bad": "请拾取一面墙、楼板、柱或梁作为源构件",
+ "match_type.same": "已是此类型",
+ "match_type.done": "已应用类型：{n}",
+ "match_type.done_skipped": "已应用类型：{n}，已跳过（已固定或为幕墙）：{skipped}",
+ "match_type.failed": "类型未更改：{err}"
+}

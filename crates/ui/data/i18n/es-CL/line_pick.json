@@ -1,0 +1,22 @@
+{
+ "cmd.arch.grid_pick": "Malla por línea",
+ "cmd.arch.grid_pick.desc": "Crea una malla exactamente sobre una línea de dibujo seleccionada del nivel actual; los nombres continúan la serie. Tab toma todas las líneas paralelas de la misma capa de dibujo a la vez. Cada selección es un paso de deshacer.",
+ "cmd.struct.beam_pick": "Viga por línea",
+ "cmd.struct.beam_pick.desc": "Coloca una viga del tipo actual en el nivel activo a lo largo de una línea de dibujo seleccionada. Tab toma la cadena conectada. Cada selección es un paso de deshacer.",
+ "hint.grid_pick.one": "Malla por línea: seleccione una línea de dibujo · Tab todas las paralelas de su capa · Esc salir",
+ "hint.grid_pick.more": "Malla por línea: seleccione una línea para tomar todas las paralelas de su capa · Tab una línea · Esc desactivar",
+ "hint.beam_pick.one": "Viga por línea: seleccione una línea de dibujo · Tab cadena conectada · Esc salir",
+ "hint.beam_pick.more": "Viga por línea: seleccione una línea para tomar su cadena · Tab una línea · Esc desactivar",
+ "line_pick.st.start_grid": "Seleccione una línea de dibujo. Tab: todas las paralelas de su capa",
+ "line_pick.st.start_beam": "Seleccione una línea de dibujo para una viga {type}. Tab: cadena conectada",
+ "line_pick.st.grid_done": "Malla {name} añadida",
+ "line_pick.st.grids_done": "{n} mallas añadidas: {first} — {last}",
+ "line_pick.st.beam_done": "Viga {type} añadida",
+ "line_pick.st.beams_done": "{n} vigas {type} añadidas",
+ "line_pick.st.on_grid": "Esta línea ya tiene la malla {name}",
+ "line_pick.st.on_beam": "Esta línea ya tiene la viga {id}",
+ "line_pick.st.no_layer": "Aún no se conocen las capas de dibujo de las líneas; inténtelo de nuevo",
+ "line_pick.st.no_beam_type": "No hay sección de viga en el catálogo",
+ "line_pick.st.reload_warn": "Creado, pero la vista no se pudo recargar: {err}",
+ "line_pick.st.failed": "No creado: {err}"
+}

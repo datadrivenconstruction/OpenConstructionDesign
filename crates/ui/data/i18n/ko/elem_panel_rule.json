@@ -1,0 +1,5 @@
+{
+ "elem.panel_select_wall": "벽 선택",
+ "cmd.elem.panel_select_wall": "벽 선택",
+ "elem.left_in_place": "제자리에 남음: {kinds}. 패널은 해당 벽에 속하며, 매스와 주석은 각각 삭제됩니다."
+}

@@ -1,0 +1,6 @@
+{
+ "imported_prop_edit.remove": "Remover propriedade",
+ "imported_prop_edit.remove.tip": "Remove a propriedade de {n} elemento(s) selecionado(s) numa só etapa de desfazer; ela é retirada do arquivo IFC ao salvar",
+ "imported_prop_edit.done": "{key} removida de {n} elemento(s)",
+ "imported_prop_edit.warn.reload": "Concluído, mas a vista não foi atualizada; reabra o painel ou desfaça se algo parecer errado"
+}

@@ -1,0 +1,8 @@
+{
+ "empty.start_recent.title": "ابھی کوئی حالیہ پروجیکٹ نہیں",
+ "empty.start_recent.hint": "جو پروجیکٹ آپ کھولتے ہیں یہاں ظاہر ہوں گے۔ نمونہ ماڈل سے شروع کریں۔",
+ "empty.start_recent.action": "نمونہ کھولیں",
+ "start.recent_open_file": "فائل کھولیں…",
+ "start.forgot": "حالیہ فہرست سے ہٹایا گیا: {name}",
+ "start.forgot_undo": "واپس"
+}

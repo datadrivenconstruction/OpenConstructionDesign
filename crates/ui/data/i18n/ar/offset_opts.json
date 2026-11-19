@@ -1,0 +1,7 @@
+{
+ "offset_opts.dist_positive": "يجب أن تكون مسافة الإزاحة أكبر من صفر؛ الجانب يتبع المؤشر",
+ "offset_opts.count_bad": "عدد صحيح من {min} إلى {max}",
+ "offset_opts.done_tip": "إنهاء التحديد وبدء الأداة",
+ "offset_opts.iso.apply_tip": "جعل الإخفاء المؤقت دائماً لهذا العرض",
+ "offset_opts.iso.exit": "الخروج من الوضع المؤقت"
+}

@@ -1,0 +1,6 @@
+{
+ "cmd.ui.pane.next": "Sonraki bölme",
+ "cmd.ui.pane.next.desc": "Klavye odağını bir sonraki görünür bölmeye taşır: tarayıcı, tuval, özellikler, sohbet.",
+ "cmd.ui.pane.prev": "Önceki bölme",
+ "cmd.ui.pane.prev.desc": "Klavye odağını bir önceki görünür bölmeye taşır."
+}

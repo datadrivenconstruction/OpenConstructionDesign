@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "Takkupa",
+ "cmd.arch.roof_opening": "Öppning i tak",
+ "cmd.arch.roof_extrusion": "Tak genom extrudering",
+ "cmd.arch.ceiling_opening": "Öppning i tak",
+ "cmd.str.slab_opening": "Öppning i golv",
+ "cmd.ctx.wall.detach": "Lös upp toppen",
+ "cmd.ctx.floor.sketch": "Redigera gräns",
+ "cmd.ctx.floor.shape": "Redigera form",
+ "host_shape.shape.elev_prompt": "höjd, mm…",
+ "host_shape.shape.elev_mm": "{v} mm",
+ "host_shape.sketch.no_host": "ingen värd under gränsen på den här våningen",
+ "host_shape.issue.roof": "takkonstruktion {id}: {e}",
+ "host_shape.issue.ceiling": "tak {id}: {e}",
+ "host_shape.status.select_slab": "välj en platta",
+ "host_shape.status.select_walls": "välj väggar",
+ "host_shape.status.no_roof_or_level": "inget tak eller nivå ovanför",
+ "host_shape.status.top_attached": "väggtoppar kopplade",
+ "host_shape.status.top_detached": "väggtoppar lösgjorda",
+ "host_shape.status.straight_wall": "en rak vägg krävs",
+ "host_shape.status.roof_extruded": "tak genom extrudering skapat",
+ "warn.kind.cut": "Urtag eller koppling inte byggd"
+}

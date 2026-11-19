@@ -1,0 +1,8 @@
+{
+ "cmd.arch.room_auto": "Inserisci stanze automaticamente",
+ "cmd.arch.room_auto.desc": "Inserisce una stanza in ogni contorno chiuso del livello attivo che ne è privo. Gli anelli di muri aperti vengono saltati, mai chiusi per supposizione. Un solo passo di annullamento.",
+ "room_place.placed": "Stanze inserite: {n}. Regioni che avevano già una stanza: {m}. Anelli aperti saltati: {k}",
+ "room_place.all_had": "Nulla inserito: tutte le {m} regioni chiuse hanno già una stanza. Anelli aperti saltati: {k}",
+ "room_place.none": "Nulla inserito: il livello non ha regioni di muri chiuse",
+ "room_place.none_open": "Nulla inserito: il livello non ha regioni di muri chiuse. Anelli aperti saltati: {k}"
+}

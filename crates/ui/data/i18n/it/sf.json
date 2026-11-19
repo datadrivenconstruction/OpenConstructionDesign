@@ -1,0 +1,4 @@
+{
+ "sf.restored": "Il file di impostazioni {file} era danneggiato; è stata ripristinata l'ultima copia valida. Il file danneggiato è conservato come {broken}.",
+ "sf.reset": "Il file di impostazioni {file} era danneggiato e nessuna copia di backup era utilizzabile; si usano i valori predefiniti. Il file danneggiato è conservato come {broken}."
+}

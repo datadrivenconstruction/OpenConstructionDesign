@@ -1,0 +1,5 @@
+{
+ "snap.center": "Centro",
+ "dwg_snap.through": "Punto di passaggio",
+ "dwg_snap.through_tip": "Esegue l'offset passando per il punto cliccato (aggancia a estremità, incroci, centri) invece della distanza digitata"
+}

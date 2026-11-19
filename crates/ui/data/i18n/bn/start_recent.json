@@ -1,0 +1,5 @@
+{
+ "start_recent.unavailable": "এখন পাওয়া যাচ্ছে না (ড্রাইভ বা নেটওয়ার্ক অবস্থান সাড়া দিচ্ছে না): {path}",
+ "start_recent.unavailable_short": "এখন পাওয়া যাচ্ছে না",
+ "start_recent.retry": "আবার চেষ্টা করুন"
+}

@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "Élévation {t} non prise en compte ({why}). Rien n'a été modifié",
+ "host_shape.shape.elev_prompt_in": "élévation, pi-po…",
+ "host_shape.shape.elev_in": "{v} po"
+}

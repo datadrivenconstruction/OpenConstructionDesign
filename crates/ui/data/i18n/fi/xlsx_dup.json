@@ -1,0 +1,10 @@
+{
+ "xlsx_dup.dup_undo": "Kumoa päätös",
+ "xlsx_dup.dup_undo_tip": "Uusiksi elementeiksi käännetyt rivit ({n}) luetaan taas tunnuksellaan",
+ "xlsx_dup.dup_new": "Luo muokatut kopiot uusina elementteinä",
+ "xlsx_dup.dup_new_tip": "Rivit {rows} tulevat uusiksi elementeiksi arvoillaan; elementti #{id} säilyttää arvonsa (yksi kumoamisvaihe muun kanssa)",
+ "xl.msg.dup_same": "kaksoiskappale tunnus {}: samat arvot kuin rivillä {}; rivi ohitettu",
+ "xl.msg.dup_unchanged": "kaksoiskappale tunnus {}: muuttumaton kopio viedystä rivistä; rivi ohitettu",
+ "xl.msg.dup_conflict": "tunnus {} on riveillä {} eri arvoilla; tälle tunnukselle ei käytetty mitään",
+ "xl.msg.dup_conflict_keep": "tunnus {} on riveillä {} eri arvoilla; tälle tunnukselle ei käytetty mitään — säilytä yksi rivi"
+}

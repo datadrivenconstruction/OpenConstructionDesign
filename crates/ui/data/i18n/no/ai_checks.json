@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "målt {value}, grense {limit}",
+ "ai_checks.check.cap": "Viser {shown} av {total} funn. Feil kommer først: rett dem og kjør på nytt.",
+ "ai_checks.check.run_again": "Kjør på nytt",
+ "ai_checks.check.goto": "Velg og zoom",
+ "ai_checks.check.never_title": "Ikke kontrollert ennå",
+ "ai_checks.check.never_hint": "Kjør kontrollene, så vises funnene her.",
+ "ai_checks.check.sec.error": "Feil",
+ "ai_checks.check.sec.warning": "Advarsler",
+ "ai_checks.check.sec.info": "Merknader"
+}

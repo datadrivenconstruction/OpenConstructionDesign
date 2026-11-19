@@ -1,0 +1,559 @@
+# Command contracts: one row per registry command (gate: e2e_contracts).
+# id | routes | sel | undo | active | exec | note
+# routes: P palette + registry surfaces (R ribbon, C context bar, M radial, A app bar, D browser, ...).
+# sel: "-" none, "*" any, else selection categories; a selection command run with nothing
+#   selected must change nothing and push no undo step.
+# undo: undo steps one run adds (0, 1, "?" = at most one). active: tool | once | ?.
+# exec: run = scripted headless run with oracles; todo = handler not scripted yet (counted);
+#   skip = never run headless (reason in note). Commands without a handler are always run:
+#   they must refuse in words and change nothing.
+
+arch.wall | P R M | - | 0 | tool | run |
+arch.wall_room | P R | - | 0 | tool | run |
+arch.wall_pick | P R | - | ? | ? | todo |
+arch.door | P R M C | - | 0 | tool | run |
+arch.window | P R M C | - | 0 | tool | run |
+arch.component | P R M | - | ? | ? | todo |
+arch.column | P R | - | ? | ? | todo |
+arch.roof | P R | - | ? | ? | todo |
+arch.ceiling | P R | - | ? | ? | todo |
+arch.floor | P R M | - | ? | ? | todo |
+arch.curtain_wall | P R | - | 0 | tool | run |
+arch.stair | P R | - | ? | ? | todo |
+arch.railing | P R | - | ? | ? | todo |
+arch.ramp | P R | - | ? | ? | todo |
+arch.shaft | P R | - | ? | ? | todo |
+arch.opening | P R C | - | ? | ? | todo |
+arch.room | P R M | - | ? | ? | todo |
+arch.room_sep | P R | - | ? | ? | todo |
+arch.zone | P R | - | ? | ? | todo |
+arch.level | P R | - | ? | ? | todo |
+arch.grid | P R | - | ? | ? | todo |
+arch.refplane | P R | - | ? | ? | todo |
+str.beam | P R M | - | ? | ? | todo |
+str.column | P R M | - | ? | ? | todo |
+str.wall | P R | - | 0 | tool | run |
+str.slab | P R | - | ? | ? | todo |
+str.footing | P R | - | ? | ? | todo |
+str.beam_system | P R | - | ? | ? | todo |
+str.brace | P R | - | ? | ? | todo |
+str.grid | P R | - | ? | ? | todo |
+str.at_grids | P R | - | ? | ? | todo |
+str.strip_footing | P R | - | ? | ? | todo |
+str.raft | P R | - | ? | ? | todo |
+str.rebar | P R | - | ? | ? | todo |
+str.analytical | P R | - | ? | ? | todo |
+str.level | P R | - | ? | ? | todo |
+str.refplane | P R | - | ? | ? | todo |
+mep.duct | P R M | - | ? | ? | todo |
+mep.fitting | P R C | - | ? | ? | todo |
+mep.equipment | P R | - | ? | ? | todo |
+mep.terminal | P R | - | ? | ? | todo |
+mep.pipe | P R M | - | ? | ? | todo |
+mep.fixture | P R | - | ? | ? | todo |
+mep.tray | P R | - | ? | ? | todo |
+mep.device | P R | - | ? | ? | todo |
+mep.light | P R | - | ? | ? | todo |
+mep.conduit | P R | - | ? | ? | todo |
+mep.connect | P R | - | ? | ? | todo |
+mep.system | P R C | - | ? | ? | todo |
+mep.check_system | P | - | ? | ? | todo |
+mep.route | P R C | - | 0 | tool | run |
+ann.dim | P R M C | - | ? | ? | todo |
+ann.dim_angular | P R | - | ? | ? | todo |
+ann.dim_radial | P R | - | ? | ? | todo |
+ann.spot_elev | P R | - | ? | ? | todo |
+ann.dim_auto | P R C | - | ? | ? | todo |
+ann.text | P R M | - | ? | ? | todo |
+ann.tag | P R M C | - | ? | ? | todo |
+ann.tag_all | P R | - | ? | ? | todo |
+ann.leader | P R | - | ? | ? | todo |
+ann.detail | P R | - | ? | ? | todo |
+ann.region | P R | - | ? | ? | todo |
+ann.detail_line | P R | - | ? | ? | todo |
+ann.cloud | P R | - | ? | ? | todo |
+ann.legend | P R | - | ? | ? | todo |
+mod.paste | P R | * | 0 | once | run |
+mod.cut | P R | * | 1 | once | run |
+mod.copy_clip | P R | * | 0 | once | run |
+mod.match | P R C | * | 0 | tool | run |
+mod.join | P R C | * | 0 | once | run |
+mod.cut_geom | P R | * | 0 | tool | run |
+mod.align | P R M | * | 0 | tool | run |
+mod.offset | P R | * | 0 | tool | run |
+mod.mirror | P R C | * | 0 | tool | run |
+mod.mirror_draw | P R | * | 0 | tool | run |
+mod.move | P R M C | * | 0 | tool | run |
+mod.copy | P R M C | * | 0 | tool | run |
+mod.rotate | P R M C | * | 0 | tool | run |
+mod.trim | P R M | * | 0 | tool | run |
+mod.extend | P R | * | 0 | tool | run |
+mod.split | P R | * | 0 | tool | run |
+mod.array | P R | * | 0 | tool | run |
+mod.pin | P R C | * | 1 | once | run |
+mod.unpin | P R | * | 0 | once | run |
+mod.delete | P R M C | wall | 1 | once | run |
+mod.group | P R C | - | 0 | once | run |
+mod.hide | P C M R | * | 0 | once | run |
+mod.isolate | P C M R | * | 0 | once | run |
+mod.reveal | P R | * | 0 | once | run |
+mod.measure | P R | * | 0 | tool | run |
+view.filters | P R D | - | ? | ? | todo |
+view.template | P R D | - | ? | ? | todo |
+view.detail_level | P R | - | ? | ? | todo |
+view.style | P R | - | ? | ? | todo |
+view.thin_lines | P R | - | ? | ? | todo |
+view.3d | P R A | - | 0 | once | run |
+view.section | P R M | - | 0 | tool | run |
+view.plan | P R D | - | 0 | once | run |
+view.schedule | P R D | - | ? | ? | todo |
+view.elevation | P R | - | 1 | once | run | adds the compass elevations
+view.tabs | P R | - | ? | ? | todo |
+view.tile | P R | - | ? | ? | todo |
+view.panes | P | - | 0 | once | run |
+view.pane_max | P | - | 0 | once | run |
+view.ui | P R | - | ? | ? | todo |
+view.zoom_fit | P R M | - | 0 | once | run |
+view.level_up | P R | - | 0 | once | run |
+view.level_down | P R | - | 0 | once | run |
+view.underlay | P R | - | 0 | once | run |
+view.section_box | P C M R | - | 0 | once | run |
+view.diff | P | - | ? | ? | todo |
+view.sheet | P R D | - | ? | ? | todo |
+view.place | P R D | - | ? | ? | todo |
+mgr.units | P R | - | ? | ? | skip | switches process-wide units shared by parallel tests
+mgr.snaps | P R | - | ? | ? | todo |
+mgr.materials | P R | - | ? | ? | todo |
+mgr.object_styles | P R | - | ? | ? | todo |
+mgr.keymap | P R | - | ? | ? | todo |
+mgr.project_info | P R | - | ? | ? | todo |
+mgr.phases | P R | - | ? | ? | todo |
+mgr.level | P R D | - | 0 | once | run |
+mgr.grid | P R | - | ? | ? | todo |
+mgr.coords | P | - | ? | ? | todo |
+mgr.library | P R | - | ? | ? | todo |
+mgr.load | P | - | ? | ? | todo |
+mgr.types | P R D | - | ? | ? | todo |
+mgr.params | P R | - | ? | ? | todo |
+mgr.purge | P R | - | ? | ? | todo |
+mgr.autosave | P R | - | 0 | once | run |
+mgr.warnings | P R | - | ? | ? | todo |
+mgr.links | P R D | - | ? | ? | todo |
+mgr.import_cad | P R | - | 0 | once | run |
+mgr.import_pdf | P R | - | ? | ? | skip | native file dialog
+mgr.workplane | P R C | - | 0 | once | run |
+mgr.scripts | P R | - | ? | ? | todo |
+mgr.record | P R | - | ? | ? | todo |
+data.import_xlsx | P R | - | ? | ? | todo |
+data.export_xlsx | P R C | - | ? | ? | todo |
+data.sync_xlsx | P R | - | ? | ? | todo |
+data.export_ifc | P R | - | ? | ? | todo |
+data.export_pdf | P R | - | ? | ? | todo |
+data.export_gltf | P R | - | ? | ? | todo |
+data.export_stl | P R | - | ? | ? | todo |
+data.export_obj | P R | - | ? | ? | todo |
+data.table | P R C | - | ? | ? | todo |
+data.compare | P | - | ? | ? | todo |
+data.check | P R I | - | ? | ? | todo |
+data.clash | P R I | - | ? | ? | todo |
+data.query | P R | - | ? | ? | todo |
+data.classify | P R | - | 0 | once | run |
+ai.ask | P J | - | ? | ? | todo |
+ai.explain | P C J R | - | ? | ? | todo |
+ctx.wall.profile | P R | wall | 0 | once | run |
+ctx.wall.attach | P R | wall | ? | ? | todo |
+ctx.mep.fitting | P R | duct,pipe | ? | ? | todo |
+arch.section | P M | - | 0 | tool | run |
+mod.change_type | P C M | - | 0 | once | run |
+mod.select_similar | P C M | - | 0 | once | run |
+mod.select_filter | P C H | - | 0 | once | run |
+mod.ungroup | P C | - | 0 | once | run |
+mod.explain | P C E | - | 0 | once | run |
+view.warnings | P C M | - | 0 | once | run |
+view.zoom_sel | P C | - | ? | ? | todo |
+view.hide_cat | P C | - | ? | ? | todo |
+view.sync_sel | P H | - | ? | ? | todo |
+view.maximize | P F | - | ? | ? | todo |
+mgr.level_rename | P D | - | 0 | once | run |
+mgr.level_delete | P D | - | ? | once | run | refused or one step, depending on hosted elements
+mgr.settings | P A | - | ? | ? | todo |
+ai.fix | P I J | - | ? | ? | todo |
+app.palette | P A | - | 0 | once | run |
+app.where_is | P A | - | 0 | once | run |
+file.new | P A | - | ? | ? | todo |
+file.open | P A | - | ? | ? | skip | native file dialog
+file.save | P A | - | ? | ? | todo |
+file.save_as | P A | - | ? | ? | todo |
+edit.undo | P A | - | ? | ? | skip | undo/redo walks: e2e_random_ops, random_ops_save_reopen_identical
+edit.redo | P A | - | ? | ? | skip | undo/redo walks: e2e_random_ops, random_ops_save_reopen_identical
+edit.cut | P A | - | 0 | once | run |
+edit.copy | P A | - | 0 | once | run |
+edit.paste | P A | - | 0 | tool | run |
+edit.paste_aligned | P A | - | ? | ? | skip | result depends on the process-wide clipboard left by earlier rows
+edit.select_all | P A | - | 0 | once | run |
+edit.find_replace | P A | - | 0 | once | run |
+app.find | P A | - | ? | ? | todo |
+view.goto | P A | - | ? | ? | todo |
+view.close | P A | - | ? | ? | todo |
+view.next | P A | - | ? | ? | todo |
+view.plan_here | P A | - | 0 | once | run |
+view.section_here | P A | - | ? | ? | todo |
+app.history | P A | - | ? | ? | todo |
+panel.browser | P A | - | ? | ? | todo |
+panel.properties | P A | - | ? | ? | todo |
+panel.issues | P A | - | ? | ? | todo |
+ui.layout.set.1 | P A | - | ? | ? | todo |
+ui.layout.set.2 | P A | - | ? | ? | todo |
+ui.layout.set.3 | P A | - | ? | ? | todo |
+ui.layout.set.4 | P A | - | ? | ? | todo |
+ui.layout.set.5 | P A | - | ? | ? | todo |
+ui.layout.next | P A | - | ? | ? | todo |
+ui.layout.prev | P A | - | ? | ? | todo |
+ui.layout.settings | P A | - | ? | ? | todo |
+app.help | P A | - | ? | ? | todo |
+app.repeat | P A | - | ? | ? | todo |
+ai.panel | P P | - | ? | ? | todo |
+ai.settings | P P | - | ? | ? | todo |
+ai.apply | P P | - | ? | ? | todo |
+ai.reject | P P | - | ? | ? | todo |
+ai.cancel | P P | - | ? | ? | todo |
+ai.audit | P P | - | ? | ? | todo |
+ai.what_sent | P P | - | ? | ? | todo |
+ai.mcp_confirm | P P | - | ? | ? | todo |
+ai.mcp_revoke | P P | - | ? | ? | todo |
+ai.mcp_settings | P P | - | ? | ? | todo |
+file.save_copy | P P | - | ? | ? | todo |
+mod.apply_hide | P C M | * | 0 | once | run |
+mod.select_similar_project | P C M | - | 0 | once | run |
+view.perf_stats | P R | - | ? | ? | todo |
+edit.flip_hand | P C A | opening | 1 | once | run |
+edit.flip_facing | P C A | opening | 1 | once | run |
+data.merge_file | P R | - | 0 | once | run |
+data.compare_version | P R | - | 0 | once | run |
+mgr.design_options | P R | - | ? | ? | todo |
+mass.extrude | P R M | - | ? | ? | todo |
+mass.revolve | P R M | - | ? | ? | todo |
+mass.sweep | P R M | - | ? | ? | todo |
+mass.blend | P R M | - | ? | ? | todo |
+mass.swept_blend | P R M | - | ? | ? | todo |
+mass.void | P R M | - | ? | ? | todo |
+mass.push_pull | P R M | - | ? | ? | todo |
+mass.fillet | P R M | - | ? | ? | todo |
+mass.chamfer | P R M | - | ? | ? | todo |
+mass.shell | P R M | - | ? | ? | todo |
+mass.offset | P R M | - | ? | ? | todo |
+mass.split_face | P R M | - | ? | ? | todo |
+mass.paint | P R M | - | ? | ? | todo |
+mass.union | P R M | - | ? | ? | todo |
+mass.subtract | P R M | - | ? | ? | todo |
+mass.intersect | P R M | - | ? | ? | todo |
+mass.join | P R M | - | ? | ? | todo |
+mass.unjoin | P R M | - | ? | ? | todo |
+mass.cut | P R M | - | ? | ? | todo |
+mass.wall_by_face | P R M | - | ? | ? | todo |
+mass.curtain_by_face | P R M | - | ? | ? | todo |
+mass.slab_by_face | P R M | - | ? | ? | todo |
+mass.roof_by_face | P R M | - | ? | ? | todo |
+mass.floors | P R M | - | ? | ? | todo |
+ui.panel.browser | P A | - | ? | ? | todo |
+ui.panel.props | P A | - | ? | ? | todo |
+ui.panels.reset | P A | - | ? | ? | todo |
+ui.start | P A | - | ? | ? | todo |
+edit.paste_levels | P R C | - | 0 | once | run |
+mod.unjoin | P R C | * | 0 | once | run |
+mod.switch_join | P R C | * | 0 | once | run |
+mod.group_select | P R C | * | 0 | once | run |
+mod.group_edit | P R C | * | 0 | once | run |
+mod.group_add | P R C | - | 0 | once | run |
+mod.group_remove | P R C | - | 0 | once | run |
+mod.group_finish | P R C | - | 0 | once | run |
+mod.group_place | P R C | - | 0 | once | run |
+mod.group_delete | P R C | - | 0 | once | run |
+mod.group_cancel | P R C | - | 0 | once | run |
+ann.spot_coord | P R | - | ? | ? | todo |
+ann.dim_chain | P R | - | ? | ? | todo |
+view.issue_revision | P R D | - | ? | ? | todo |
+view.place_sheet_list | P R D | - | ? | ? | todo |
+view.place_legend | P R D | - | ? | ? | todo |
+mep.disconnect | P R | - | ? | ? | todo |
+mep.browser | P R | - | ? | ? | todo |
+app.ctx_tips | P A | - | ? | ? | todo |
+help.reference | P A | - | ? | ? | todo |
+arch.solid_extrusion | P R | - | ? | ? | todo |
+arch.void_extrusion | P R | - | ? | ? | todo |
+arch.solid_blend | P R | - | ? | ? | todo |
+arch.void_blend | P R | - | ? | ? | todo |
+arch.solid_revolve | P R | - | ? | ? | todo |
+arch.void_revolve | P R | - | ? | ? | todo |
+arch.solid_sweep | P R | - | ? | ? | todo |
+arch.void_sweep | P R | - | ? | ? | todo |
+arch.solid_swept_blend | P R | - | ? | ? | todo |
+arch.void_swept_blend | P R | - | ? | ? | todo |
+data.src_panel | P R | - | ? | ? | todo |
+data.src_reimport | P R | - | ? | ? | todo |
+data.src_conflicts | P R | - | ? | ? | todo |
+data.src_delta | P R | - | ? | ? | todo |
+data.src_ifc | P R | - | ? | ? | todo |
+mgr.link_add | P D | - | ? | ? | todo |
+mgr.link_reload | P D | - | ? | ? | todo |
+mgr.family_editor | P R | - | ? | ? | todo |
+mgr.family_new | P R | - | ? | ? | todo |
+mgr.family_flex | P R | - | ? | ? | todo |
+e3d.gizmo | P R | - | ? | ? | todo |
+e3d.box | P R | - | ? | ? | todo |
+e3d.measure | P | - | ? | ? | todo |
+e3d.snap | P R | - | ? | ? | todo |
+e3d.wall | P R | - | ? | ? | todo |
+e3d.floor | P R | - | ? | ? | todo |
+e3d.column | P R | - | ? | ? | todo |
+e3d.beam | P R | - | ? | ? | todo |
+e3d.wp_level | P R | - | ? | ? | todo |
+e3d.wp_face | P R | - | ? | ? | todo |
+e3d.wp_ref | P R | - | ? | ? | todo |
+e3d.wp_pick | P R | - | ? | ? | todo |
+mgr.open_big | P R | - | ? | ? | todo |
+mgr.mesh_cache | P R | - | ? | ? | todo |
+data.mesh_convert | P R C M | - | ? | ? | todo |
+data.mesh_edit | P R C M | - | ? | ? | todo |
+site.toposolid | P R M | - | ? | ? | todo |
+site.toposolid_import | P R M | - | ? | ? | todo |
+site.boundary | P R M | - | ? | ? | todo |
+site.subregion | P R M | - | ? | ? | todo |
+site.pad | P R M | - | ? | ? | todo |
+site.smooth | P R M | - | ? | ? | todo |
+site.flatten | P R M | - | ? | ? | todo |
+site.edit_points | P R M | - | ? | ? | todo |
+site.contours | P R M | - | ? | ? | todo |
+site.properties | P R M | - | ? | ? | todo |
+str.truss | P R | - | ? | ? | todo |
+str.footing_all | P R | - | ? | ? | todo |
+arch.roof_gable | P R C | - | ? | ? | todo |
+arch.roof_hip | P R C | - | ? | ? | todo |
+arch.roof_shed | P R C | - | ? | ? | todo |
+arch.roof_mansard | P R C | - | ? | ? | todo |
+arch.roof_gambrel | P R C | - | ? | ? | todo |
+arch.roof_barrel | P R C | - | ? | ? | todo |
+arch.roof_join | P R C | - | ? | ? | todo |
+arch.roof_unjoin | P R C | - | ? | ? | todo |
+arch.fascia | P R C | - | ? | ? | todo |
+arch.gutter | P R C | - | ? | ? | todo |
+arch.soffit | P R C | - | ? | ? | todo |
+arch.skylight | P R C | - | ? | ? | todo |
+str.slab_edge | P R C | - | ? | ? | todo |
+arch.wall_sweep | P R C | - | ? | ? | todo |
+arch.wall_cornice | P R C | - | ? | ? | todo |
+arch.wall_reveal | P R C | - | ? | ? | todo |
+arch.roof_taper | P R C | - | ? | ? | todo |
+arch.roof_edges | P R C | - | ? | ? | todo |
+arch.sweep_profiles | P R C | - | ? | ? | todo |
+view.home_3d | P R | - | ? | ? | todo |
+view.zoom_sel_3d | P R | - | ? | ? | todo |
+view.projection | P R | - | ? | ? | todo |
+view.walk | P R | - | ? | ? | todo |
+view.style_shaded | P R | - | ? | ? | todo |
+view.style_consistent | P R | - | ? | ? | todo |
+view.style_hidden | P R | - | ? | ? | todo |
+view.style_wireframe | P R | - | ? | ? | todo |
+view.style_xray | P R | - | ? | ? | todo |
+view.vg_3d | P R | - | ? | ? | todo |
+view.section_box_fit | P R | - | ? | ? | todo |
+view.section_caps | P R | - | ? | ? | todo |
+view.level_3d | P R | - | ? | ? | todo |
+view.save_3d | P R | - | ? | ? | todo |
+view.hide_cat_3d | P R C | * | ? | ? | todo |
+view.isolate_cat_3d | P R C | * | ? | ? | todo |
+view.reveal_3d | P R C | * | ? | ? | todo |
+sel.connected | P C M | wall | ? | ? | todo |
+sel.run | P C | wall | ? | ? | todo |
+sel.invert | P C | * | ? | ? | todo |
+sel.prev | P A | - | ? | ? | todo |
+sel.set_save | P C | * | ? | ? | todo |
+sel.sets | P A | - | ? | ? | todo |
+edit.copy_params | P C | wall,door,window | 0 | once | run |
+edit.paste_params | P C | wall,door,window | 0 | once | run |
+app.menu | P A | - | ? | ? | todo |
+app.tips | P A | - | ? | ? | todo |
+app.hud | P A | - | ? | ? | todo |
+app.recent_bar | P A | - | ? | ? | todo |
+set.theme | P A | - | ? | ? | todo |
+set.lang | P A | - | ? | ? | todo |
+view.style_shaded_plain | P R | - | ? | ? | todo |
+view.style_realistic | P R | - | ? | ? | todo |
+view.gfx_auto | P R | - | ? | ? | todo |
+view.gfx_speed | P R | - | ? | ? | todo |
+view.gfx_balanced | P R | - | ? | ? | todo |
+view.gfx_quality | P R | - | ? | ? | todo |
+file.import | P A | - | ? | ? | todo |
+file.import_review | P A | - | ? | ? | todo |
+file.save_ifc | P A | - | ? | ? | todo |
+file.save_ifc_as | P A | - | ? | ? | todo |
+help.tutorial | P R A | - | ? | ? | todo |
+help.sample | P R A | - | ? | ? | todo |
+help.whats_new | P R A | - | ? | ? | todo |
+str.rebar_schedule | P R | - | ? | ? | todo |
+str.rebar_delete | P R | - | ? | ? | todo |
+str.rebar_toggle | P R | - | ? | ? | todo |
+str.analytical_export | P R | - | ? | ? | todo |
+view.range | P R | - | ? | ? | todo |
+view.sheet_set | P R D | - | ? | ? | todo |
+view.sheets_for_levels | P R D | - | ? | ? | todo |
+view.print_sheets | P R D | - | ? | ? | todo |
+arch.dormer | P R C | - | ? | ? | todo |
+arch.roof_opening | P R C | - | ? | ? | todo |
+arch.roof_extrusion | P R C | - | ? | ? | todo |
+arch.ceiling_opening | P R C | - | ? | ? | todo |
+str.slab_opening | P R C | - | ? | ? | todo |
+ctx.wall.detach | P R | wall | ? | ? | todo |
+ctx.floor.sketch | P R | floor | ? | ? | todo |
+ctx.floor.shape | P R | floor | ? | ? | todo |
+mod.wall_edit | P R C | wall,door,window | 0 | once | run |
+mod.curtain_edit | P R C | curtain | 0 | once | run |
+mod.select_same_cat | P C M | - | 0 | once | run |
+mod.select_same_cat_project | P C M | - | 0 | once | run |
+mod.distribute | P R C | door,window | 0 | tool | run |
+ann.number | P R C | - | ? | ? | todo |
+data.clash_report | P R I | - | ? | ? | todo |
+data.issues | P | - | 0 | once | skip | opens a window; import and export use native file dialogs
+data.issue_new | P | - | 0 | once | skip | screenshot capture over several frames
+mod.demolish | P R C | wall,door,window,curtain,floor | 1 | once | run |
+mgr.project_params | P R | - | ? | ? | todo |
+elem.panel_select_wall | P | - | ? | ? | todo |
+ui.layout.back | P A | - | 0 | once | todo |
+view.grid_toggle | P | - | 0 | once | todo |
+view.snap_toggle | P | - | 0 | once | todo |
+view.ortho_toggle | P | - | 0 | once | todo |
+help.check_update | P R A | - | 0 | once | todo |
+app.report | P | - | 0 | once | todo |
+sketch.link_loop | P | - | ? | ? | todo |
+sketch.link_unlink | P | - | ? | ? | todo |
+sketch.link_repick | P | - | ? | ? | todo |
+ctx.floor.link_unlink | P R | floor | ? | ? | todo |
+ctx.floor.link_accept | P R | floor | ? | ? | todo |
+props.param_lock | P | - | ? | ? | todo |
+file.ifc_replace_original | P A | - | ? | ? | todo |
+file.import_again | P A | - | ? | ? | todo |
+file.open_kept | P A | - | ? | ? | todo |
+ui.pane.next | P A | - | ? | ? | todo |
+ui.pane.prev | P A | - | ? | ? | todo |
+mgr.autosave_show | P A | - | ? | ? | todo |
+ai.home | P R | - | ? | ? | todo |
+data.export_ifc4 | P C | - | ? | ? | skip | opens a dialog needing input
+data.export_ifc4x3 | P C | - | ? | ? | skip | opens a dialog needing input
+data.export_ifc2x3 | P C | - | ? | ? | skip | opens a dialog needing input
+data.export_step | P R | - | ? | ? | skip | opens a dialog needing input
+data.export_3mf | P R | - | ? | ? | skip | opens a dialog needing input
+props.verify_ai | P | - | ? | ? | todo |
+wall_types.library | P | - | ? | ? | todo |
+wall_types.swap | P | - | ? | ? | todo |
+arch.grid_set | P | - | ? | ? | todo |
+ai.next_change | P | - | ? | ? | todo |
+ai.show_draft | P | - | ? | ? | todo |
+ai.receipt_undo | P | - | ? | ? | todo |
+ai.mode_chat | P | - | ? | ? | todo |
+ai.mode_build | P | - | ? | ? | todo |
+ai.mode_review | P | - | ? | ? | todo |
+view.axes_full | P | - | ? | ? | todo |
+mod.divide | P R C | * | ? | ? | todo |
+mass.push_region | P R M | - | ? | ? | todo |
+mass.draft | P R M | - | ? | ? | todo |
+file.deliver | P R | - | ? | ? | todo |
+ui.scale_up | P A | - | ? | ? | todo |
+ui.scale_down | P A | - | ? | ? | todo |
+drawing.to_detail | P R | - | ? | ? | todo |
+view.drafting_new | P R D | - | ? | ? | todo |
+view.drafting_open | P R D | - | ? | ? | todo |
+ui.ribbon.toggle | P R A | - | ? | ? | todo |
+ui.bar.options | P R A | - | ? | ? | todo |
+ui.bar.status | P R A | - | ? | ? | todo |
+ui.clean_screen | P R A | - | ? | ? | todo |
+ui.ai.work | P A | - | ? | ? | todo |
+ui.ai.preview | P A | - | ? | ? | todo |
+gen.rules | P R | - | ? | ? | todo |
+arch.grid_pick | P R | - | ? | ? | todo |
+struct.beam_pick | P R | - | ? | ? | todo |
+e3d.measure.distance | P | - | ? | ? | todo |
+e3d.measure.clear | P | - | ? | ? | todo |
+e3d.measure.angle | P | - | ? | ? | todo |
+e3d.measure.area | P | - | ? | ? | todo |
+e3d.measure.volume | P | - | ? | ? | todo |
+e3d.measure.slope | P | - | ? | ? | todo |
+e3d.measure.chain | P | - | ? | ? | todo |
+ann.measure_distance | P | - | ? | ? | todo |
+ann.measure_clear | P | - | ? | ? | todo |
+ann.measure_angle | P | - | ? | ? | todo |
+ann.measure_area | P | - | ? | ? | todo |
+mod.match_type | P R C | wall,floor,column,beam | ? | ? | todo |
+str.gridshell | P R | - | ? | ? | todo |
+mass.freeform | P R M | - | ? | ? | todo |
+mass.panelize | P R M | - | ? | ? | todo |
+mass.surface_shell | P R M | - | ? | ? | todo |
+mass.thicken | P R M | - | ? | ? | todo |
+arch.room_auto | P R M | - | ? | ? | todo |
+mgr.schedules | P R | - | ? | ? | todo |
+mod.scale | P R M C | * | ? | ? | todo |
+view.sheet_duplicate | P R D | - | ? | ? | todo |
+view.sheet_duplicate_title | P R D | - | ? | ? | todo |
+view.drawing_set | P R D | - | ? | ? | todo |
+ctx.floor.clean_outline | P R | floor | ? | ? | todo |
+ctx.ceiling.clean_outline | P R | ceiling | ? | ? | todo |
+ctx.shaft.clean_outline | P R | shaft | ? | ? | todo |
+ui.appearance | P | - | ? | ? | todo |
+ui.look.studio | P | - | ? | ? | todo |
+ui.look.engineer | P | - | ? | ? | todo |
+ui.look.night | P | - | ? | ? | todo |
+ui.look.focus | P | - | ? | ? | todo |
+ui.look.contrast | P | - | ? | ? | todo |
+ui.look.colour | P | - | ? | ? | todo |
+ui.look.classic | P | - | ? | ? | todo |
+ui.look.reset | P | - | ? | ? | todo |
+ui.theme.light | P | - | ? | ? | todo |
+ui.theme.dark | P | - | ? | ? | todo |
+ui.theme.auto | P | - | ? | ? | todo |
+ui.accent.blue | P | - | ? | ? | todo |
+ui.accent.teal | P | - | ? | ? | todo |
+ui.accent.violet | P | - | ? | ? | todo |
+ui.accent.orange | P | - | ? | ? | todo |
+ui.accent.rose | P | - | ? | ? | todo |
+ui.accent.green | P | - | ? | ? | todo |
+ui.accent.azure | P | - | ? | ? | todo |
+ui.accent.graphite | P | - | ? | ? | todo |
+ui.accent.reset | P | - | ? | ? | todo |
+ui.font.inter | P | - | ? | ? | todo |
+ui.font.plex | P | - | ? | ? | todo |
+ui.font.system | P | - | ? | ? | todo |
+ui.text.larger | P | - | ? | ? | todo |
+ui.text.smaller | P | - | ? | ? | todo |
+ui.text.reset | P | - | ? | ? | todo |
+ui.scale.reset | P | - | ? | ? | todo |
+ui.density.compact | P | - | ? | ? | todo |
+ui.density.normal | P | - | ? | ? | todo |
+ui.density.comfortable | P | - | ? | ? | todo |
+ui.density.auto | P | - | ? | ? | todo |
+ui.icons.studio | P | - | ? | ? | todo |
+ui.icons.outline | P | - | ? | ? | todo |
+ui.icons.duotone | P | - | ? | ? | todo |
+ui.icons.filled | P | - | ? | ? | todo |
+ui.icons.outline_duotone | P | - | ? | ? | todo |
+ui.icons.duotone_all | P | - | ? | ? | todo |
+ui.icons.filled_outline | P | - | ? | ? | todo |
+ui.ribbon.full | P | - | ? | ? | todo |
+ui.ribbon.tabs | P | - | ? | ? | todo |
+ui.ribbon.toolbar | P | - | ? | ? | todo |
+ui.layout.mode.reset | P | - | ? | ? | todo |
+ui.layout.mode.save_as | P | - | ? | ? | skip | opens a dialog needing input
+ui.layout.mode.export | P | - | ? | ? | skip | opens a dialog needing input
+ui.layout.mode.import | P | - | ? | ? | skip | opens a dialog needing input
+ui.onboarding | P R A | - | ? | ? | skip | opens a dialog needing input
+ui.focus.ai | P | - | ? | ? | todo |
+ui.focus.drawings | P | - | ? | ? | todo |
+ui.focus.model | P | - | ? | ? | todo |
+ui.focus.data | P | - | ? | ? | todo |
+mass.timeline_family | P R M | - | ? | ? | todo |
+help.licenses | P | - | ? | ? | todo |
+help.shortcuts | P R A | - | ? | ? | todo |
+browser.row_open | P D | - | ? | ? | todo |
+browser.row_rename | P D | - | ? | ? | todo |
+browser.row_delete | P D | - | ? | ? | todo |
+file.publish_pdf | P | - | ? | ? | skip | opens a dialog needing input
+xs50.undo_apply | P | - | ? | ? | todo |
+xs57.undo_import | P | - | ? | ? | todo |

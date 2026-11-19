@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "Кілт мекенжайда",
+ "ai_safety.auth.query_name": "Мекенжай параметрі",
+ "ai_safety.need_query_name": "Кілтті тасушы мекенжай параметрінің атын көрсетіңіз",
+ "ai_safety.apply_unlogged": "Қолданылды, бірақ өзгерістер журналы жазылмады",
+ "ai_safety.audit_unlogged": "AI көмекшісінің журналы жазылмады",
+ "ai_safety.chat_not_saved": "Чат жобаға сақталмады. Қайта әрекет етіліп жатыр.",
+ "ai_safety.clip_clears": "Көшірме буфері 30 с ішінде тазаланады",
+ "ai_safety.copied_clears": "Көшірілді. Көшірме буфері 30 с ішінде тазаланады",
+ "ai_safety.key_session_only": "Кілт қолданба жабылғанша сақталады",
+ "ai.settings.no_data_dir": "бұл жүйе қолданба параметрлері үшін қалта бермейді"
+}

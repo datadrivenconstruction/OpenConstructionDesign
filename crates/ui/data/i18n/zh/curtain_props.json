@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "嵌板",
+ "curtain_props.cw.panel_cell": "单元 {i}×{j} · 幕墙 #{id}",
+ "curtain_props.cw.kind": "类型",
+ "curtain_props.cw.kind.glazed": "玻璃",
+ "curtain_props.cw.kind.solid": "实体",
+ "curtain_props.cw.kind.door": "门",
+ "curtain_props.cw.kind.window": "窗",
+ "curtain_props.cw.kind.empty": "空",
+ "curtain_props.cw.name": "名称",
+ "curtain_props.cw.swing_side": "向另一侧开启",
+ "curtain_props.cw.swing_hinge": "合页位于单元端部",
+ "curtain_props.cw.size": "尺寸",
+ "curtain_props.cw.cell_area": "单元面积",
+ "curtain_props.cw.panel_area": "嵌板面积",
+ "curtain_props.cw.prev": "上一个嵌板",
+ "curtain_props.cw.next": "下一个嵌板",
+ "curtain_props.cw.wall": "请选择墙",
+ "curtain_props.cw.panel_hint": "Esc — 选择 · Ctrl+Z — 撤销",
+ "curtain_props.cw.status.panel": "嵌板 {i}×{j} → {kind}",
+ "e3d.err.cw_height": "幕墙高度必须大于 100 mm"
+}

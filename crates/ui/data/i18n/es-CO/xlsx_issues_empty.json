@@ -1,0 +1,8 @@
+{
+ "xlsx_issues.empty_title": "Lámina vacía en el libro",
+ "xlsx_issues.empty_kept": "La lámina {sheet} está vacía: no se leyó nada de ella, {n} elementos se mantienen. Las demás láminas aún se pueden aplicar.",
+ "xlsx_issues.empty_none": "La lámina {sheet} está vacía: no se leyó nada de ella. Las demás láminas aún se pueden aplicar.",
+ "xlsx_issues.unreadable_title": "No se pudo leer la lámina",
+ "xlsx_issues.unreadable": "No se pudo leer la lámina {sheet}, su parte del archivo está dañada: no se tomó nada de ella y sus elementos se mantienen. Las demás láminas aún se pueden aplicar.",
+ "xlsx_issues.formulas": "No se pudieron leer las fórmulas de la lámina {sheet}, así que un valor calculado no se distingue de una edición: no se tomó nada de esta lámina. Las demás láminas aún se pueden aplicar."
+}

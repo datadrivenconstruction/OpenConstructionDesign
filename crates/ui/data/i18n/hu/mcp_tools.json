@@ -1,0 +1,5 @@
+{
+ "mcp.set.hide": "Elrejtés",
+ "mcp.set.copy_config": "MI-ügynök-beállítás másolása",
+ "mcp.set.no_token": "Még nincs hozzáférési token. Először kapcsolja be a szervert."
+}

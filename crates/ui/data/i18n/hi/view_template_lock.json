@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "टेम्पलेट {name} द्वारा नियंत्रित",
+ "view_template.edit_template": "टेम्पलेट संपादित करें",
+ "view_template.locked_tip": "व्यू टेम्पलेट {name} द्वारा सेट। इसे टेम्पलेट में बदलें।",
+ "view_template.no_filters": "इस व्यू में कोई फ़िल्टर नहीं"
+}

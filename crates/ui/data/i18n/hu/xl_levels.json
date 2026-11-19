@@ -1,0 +1,5 @@
+{
+ "xl.msg.level_name_x_is_already_used": "a(z) '{}' szintnév már használatban van",
+ "xl.msg.unreadable_id_elements_without_a_row_not_deleted": "olvashatatlan azonosító: a sor nélküli elemek ebben az importálásban nem törlődnek",
+ "xl.msg.wall_type_name_x_is_already_used": "a(z) '{}' falfajta-név már használatban van"
+}

@@ -1,0 +1,6 @@
+{
+ "quick.keys.rec_hint": "Esc ακυρώνει · Backspace καθαρίζει",
+ "quick.keys.row_lost": "Το {key} ανήκει τώρα στο «{cmd}»",
+ "quick.keys.row_took": "Το {key} πάρθηκε από το «{cmd}»",
+ "quick.keys.reset_tip": "Επαναφορά στην προεπιλογή"
+}

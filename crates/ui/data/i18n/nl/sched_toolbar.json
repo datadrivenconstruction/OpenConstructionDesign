@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "Filterrij onder de koppen. Tekst: deeltekst; getallen: >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "Kolommen tonen of verbergen",
+ "sched_toolbar.groups_tip": "Rijen groeperen op kolommen, met subtotalen",
+ "sched_toolbar.formulas_tip": "Berekende kolommen",
+ "sched_toolbar.phase": "Fase",
+ "sched_toolbar.phase_tip": "Uit welke fase de rijen worden gehaald",
+ "sched_toolbar.copy_tip": "Geselecteerde rijen (of alle zichtbare) als TSV",
+ "sched_toolbar.import_tip": "Lees een geëxporteerde lijst terug: rijen op Id, kolommen op kop; eerst de aantallen, dan één stap ongedaan maken",
+ "sched_toolbar.export_tip": "Zichtbare rijen en kolommen met totalen; getallen blijven getallen",
+ "sched_toolbar.need_table": "Open eerst een lijst",
+ "sched_toolbar.busy_open": "Er is al een bestandsdialoog open",
+ "sched_toolbar.busy_save": "Er is al een opslagdialoog open",
+ "sched_toolbar.clear_filter": "Filter wissen",
+ "sched_toolbar.fields_title": "Kolommen"
+}

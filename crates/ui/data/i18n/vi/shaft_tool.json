@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "Lỗ giếng",
+ "quick.cat.shaft": "Lỗ giếng",
+ "shaft_tool.browser.shaft": "Lỗ giếng #{id}",
+ "shaft_tool.shaft.top": "Cao độ trên cùng",
+ "shaft_tool.shaft.cuts": "Phần tử bị cắt",
+ "shaft_tool.shaft.cut_area": "Diện tích cắt",
+ "shaft_tool.shaft.cut_volume": "Thể tích cắt",
+ "elem.no.rooms": "Theo các phòng mà nó chứa"
+}

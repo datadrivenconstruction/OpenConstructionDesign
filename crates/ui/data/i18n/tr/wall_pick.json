@@ -1,0 +1,13 @@
+{
+ "cmd.arch.wall_pick": "Çizgiden duvar",
+ "cmd.arch.wall_pick.desc": "Mevcut katta seçilen bir çizim çizgisine duvar yerleştirir. F çizgideki eksen ile yüzü değiştirir, Tab bağlı zinciri alır. Her seçim bir geri alma adımıdır. Perde duvarlar için de çalışır.",
+ "hint.wall_pick.center": "Çizgiden duvar: bir çizim çizgisi seçin · çizgi üzerinde eksen · F yüz · Tab zincir · Esc çık",
+ "hint.wall_pick.face": "Çizgiden duvar: bir çizim çizgisi seçin · çizgi üzerinde yüz, imleç tarafı · F eksen · Tab zincir · Esc çık",
+ "hint.wall_pick.center_chain": "Çizgiden duvar: zincirini almak için bir çizgi seçin · çizgi üzerinde eksen · F yüz · Tab tek çizgi",
+ "hint.wall_pick.face_chain": "Çizgiden duvar: zincirini almak için bir çizgi seçin · çizgi üzerinde yüz · F eksen · Tab tek çizgi",
+ "wall_pick.st.start": "Bir çizim çizgisi seçin. F: eksen veya yüz, Tab: bağlı zincir",
+ "wall_pick.st.no_lines": "Bu katta görünür çizim çizgisi yok",
+ "wall_pick.st.miss": "Burada çizim çizgisi yok",
+ "wall_pick.st.on_wall": "Bu çizgi zaten {id} duvarının altında",
+ "wall_pick.st.tight": "Yüz ofseti sığmıyor: zincirde bir parça duvar kalınlığından kısa"
+}

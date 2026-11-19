@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "ফ্রিফর্ম তল",
+ "cmd.mass.panelize": "প্যানেলে ভাগ করুন",
+ "cmd.mass.surface_shell": "তলের উপর ছাদ",
+ "cmd.mass.thicken": "পুরুত্ব",
+ "hint.mass.freeform.first": "ফ্রিফর্ম: প্ল্যান আয়তক্ষেত্রের প্রথম কোণ · উচ্চতা লিখুন · Esc — বাতিল",
+ "hint.mass.freeform.next": "ফ্রিফর্ম: বিপরীত কোণ · উচ্চতা লিখুন · Esc — বাতিল",
+ "hint.mass.panelize.first": "প্যানেলাইজ: 3D-তে একটি ফ্রিফর্ম তল বেছে নিন · Esc — বাতিল",
+ "hint.mass.panelize.value": "প্যানেলাইজ: প্যানেলের আকার লিখুন · Enter — প্রয়োগ · Esc — বাতিল",
+ "hint.mass.surface_shell.first": "তলের উপর ছাদ: 3D-তে একটি ফ্রিফর্ম তল বেছে নিন · Esc — বাতিল",
+ "hint.mass.surface_shell.value": "তলের উপর ছাদ: পুরুত্ব লিখুন · Enter — প্রয়োগ · Esc — বাতিল",
+ "hint.mass.thicken.first": "পুরুত্ব: 3D-তে একটি ফ্রিফর্ম তল বেছে নিন · Esc — বাতিল",
+ "hint.mass.thicken.value": "পুরুত্ব: পুরুত্ব লিখুন (0 — শুধু তল) · Enter — প্রয়োগ · Esc — বাতিল",
+ "status.mass.pick_surface": "একটি ফ্রিফর্ম তল বেছে নিন",
+ "status.mass.freeform_small": "আয়তক্ষেত্রটি খুব ছোট: প্রতি দিকে কমপক্ষে 0.5 মি",
+ "name.mass.freeform": "ফ্রিফর্ম তল",
+ "rgroup.mass_free": "অতিরিক্ত"
+}

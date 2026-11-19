@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "見つかりません",
+ "empty.browser_search.hint": "この検索に一致するビュー、レベル、タイプ、部屋はありません。",
+ "empty.browser_search.action": "検索をクリア",
+ "empty.xl_filtered.title": "フィルターに一致する項目がありません",
+ "empty.xl_filtered.hint": "さらに種類をオンにするか、別のシートを選ぶか、検索文字列を変更してください。",
+ "empty.xl_filtered.action": "フィルターをクリア",
+ "empty.xl_nochanges.title": "ブックに変更はありません",
+ "empty.xl_nochanges.hint": "ブックはモデルと一致しています。読み込んでも何も変わりません。",
+ "empty.version_same.title": "モデルは同一です",
+ "empty.version_same.hint": "開いているモデルと選択したバージョンの間に違いは見つかりませんでした。",
+ "empty.templates.title": "ビューテンプレートはまだありません",
+ "empty.templates.hint": "現在のビューから作成すると、その設定を他のビューで再利用できます。",
+ "empty.templates.action": "テンプレートに名前を付ける",
+ "empty.fe_params.title": "まだパラメータがありません",
+ "empty.fe_params.hint": "下でパラメータを追加すると、寸法、材料、表示を制御できます。",
+ "empty.fe_params.action": "パラメータを追加"
+}

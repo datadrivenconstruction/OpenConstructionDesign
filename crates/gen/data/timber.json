@@ -1,0 +1,8 @@
+{
+  "about": "Glulam post-and-beam frame sections of a timber project (design.structure timber or timber_frame): the beam type name and material, and the section catalogue as [width, depth] in m, shallowest first. The spans and panel width are rules (timber.*).",
+  "beam": {
+    "prefix": "Gen Glulam Beam",
+    "material": "Glulam Timber",
+    "sections": [[0.14, 0.28], [0.16, 0.36], [0.2, 0.44], [0.2, 0.52], [0.24, 0.6], [0.28, 0.72], [0.32, 0.88]]
+  }
+}

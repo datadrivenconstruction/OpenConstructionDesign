@@ -1,0 +1,12 @@
+{
+ "curtain_wall.cw.issue.slab": "רצפה {id}: {e}",
+ "curtain_wall.cw.issue.body": "גוף {id}: {e}",
+ "curtain_wall.cw.added": "קירות מסך שנוספו: {n}",
+ "curtain_wall.cw.add_failed": "קיר מסך לא נבנה: {e}",
+ "curtain_wall.cw.edited_warn": "קיר מסך #{id} שונה: {w}",
+ "curtain_wall.cw.edited": "קיר מסך #{id} שונה",
+ "curtain_wall.cw.not_changed": "לא שונה: {e}",
+ "curtain_wall.cw.room_edited": "חדר #{id} שונה",
+ "curtain_wall.cw.slope_range": "לא שונה: השיפוע מחוץ לטווח",
+ "curtain_wall.cw.slope_set": "רצפה #{id}: שיפוע {pct}"
+}

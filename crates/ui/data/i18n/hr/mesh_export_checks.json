@@ -1,0 +1,15 @@
+{
+ "cmd.data.export_step.desc": "Sprema cijeli model ili odabir kao STEP AP214 ili AP242: tijela s točnim ravninskim, cilindričnim, stožastim, sfernim, toroidnim i B-spline plohama, ostali elementi kao ravninske plohe, boje, jedan čvor sklopa po razini.",
+ "cmd.data.export_3mf.desc": "Sprema cijeli model ili odabir kao 3MF za ispis: jedan objekt po elementu, boje, jedinice i provjera da je svako tijelo vodonepropusno.",
+ "fmenu.export.step": "STEP točna tijela (.step)",
+ "fmenu.export.3mf": "3MF za ispis (.3mf)",
+ "mx.schema": "STEP shema",
+ "mx.schema.ap214": "AP214 (najšira podrška)",
+ "mx.schema.ap242": "AP242",
+ "mx.watertight": "Tijela koja nisu vodonepropusna",
+ "mx.watertight.report": "Zapiši ih i popiši",
+ "mx.watertight.skip": "Izostavi ih",
+ "mx.watertight.require": "Otkaži izvoz",
+ "mx.faceted": "{fmt} spremljen: {path} ({exact} točnih tijela, {n} zapisano kao ravninske plohe: {first})",
+ "sheets.print.svg": "SVG"
+}

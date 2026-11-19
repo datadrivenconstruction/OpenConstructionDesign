@@ -1,0 +1,23 @@
+{
+ "cmd.app.report": "Zgłoś problem…",
+ "cmd.app.report.desc": "Opisuje, co poszło nie tak, i zapisuje pakiet na tym komputerze: Twój tekst, dane o wersji i systemie, zrzut okna oraz ostatni zapis awarii. Nic nie jest wysyłane.",
+ "report.title": "Zgłoś problem",
+ "report.what": "Co się stało",
+ "report.expected": "Czego się spodziewano",
+ "report.steps": "Kroki, aby to odtworzyć",
+ "report.opt.shot": "Dołącz zrzut okna",
+ "report.opt.model": "Dołącz kopię modelu",
+ "report.opt.model.note": "Domyślnie wyłączone. Kopia zawiera dane projektu, bez dziennika AI.",
+ "report.opt.paths": "Zachowaj nazwy użytkowników w ścieżkach plików",
+ "report.local": "Pakiet zapisywany jest tylko na tym komputerze. Nic nie jest wysyłane automatycznie.",
+ "report.blocked": "Najpierw opisz, co się stało.",
+ "report.save": "Zapisz pakiet",
+ "report.copy": "Kopiuj tekst",
+ "report.cancel": "Anuluj",
+ "report.copied": "Tekst zgłoszenia skopiowany.",
+ "report.saved": "Zapisano pakiet: {path}",
+ "report.failed": "Nie udało się zapisać pakietu: {err}",
+ "report.model.fail": "Nie udało się wykonać kopii modelu, niczego nie zapisano: {err}",
+ "report.crash.notice": "Poprzednia sesja zakończyła się awarią.",
+ "report.crash.action": "Zgłoś problem"
+}

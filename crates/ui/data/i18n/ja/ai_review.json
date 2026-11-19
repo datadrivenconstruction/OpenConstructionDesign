@@ -1,0 +1,5 @@
+{
+ "ai.plan.apply_n": "承認した {n} 件を適用",
+ "ai.plan.will_apply": "{m} 件中 {n} 件の変更を適用します",
+ "ai.plan.keys_hint": "J/K または Alt+上/下 で移動 · A 承認 · R 却下 · Space 切り替え · Shift+A / Shift+R はグループ全体 · Ctrl+Enter 適用 · Esc でビューに戻る（ドラフトは保持）"
+}

@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "Avtosaqlash amalga oshmadi, oxirgi o'zgarishlar himoyalanmagan. {why}",
+ "autosave_status.autosave_open": "Avtosaqlash sozlamalari",
+ "autosave_status.autosave_recovered": "Avtosaqlash yana ishlamoqda.",
+ "autosave_status.autosave_reason": "Sabab: {why}"
+}

@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "Төменгі қабат қосу",
+ "type_layers.layer.delete": "Қабатты жою",
+ "type_layers.layer.delete_last": "Түрде кем дегенде бір қабат болуы керек",
+ "type_layers.value.bad": "Жарамды оң мән емес",
+ "type_layers.value.required": "Міндетті",
+ "type_layers.unsaved.title": "{name} үшін сақталмаған өзгерістер",
+ "type_layers.unsaved.body": "Түрге қолданасыз ба, әлде тастайсыз ба?",
+ "type_layers.unsaved.discard": "Тастау"
+}

@@ -1,0 +1,7 @@
+{
+ "messages.title": "الرسائل",
+ "messages.desc": "سجل التنبيهات. لا توجد تحذيرات أو أخطاء جديدة.",
+ "messages.desc_new": "{n} تحذيرات أو أخطاء جديدة. انقر لقراءتها.",
+ "messages.copy": "نسخ الكل",
+ "messages.clear": "مسح الكل"
+}

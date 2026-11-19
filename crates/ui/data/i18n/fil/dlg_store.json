@@ -1,0 +1,10 @@
+{
+ "dlg.dw.store.unloaded": "Hindi mabasa mula sa proyekto ang drawing na “{name}” at mananatiling hindi nagbabago sa file",
+ "dlg.dw.store.source_missing": "Drawing “{name}”: hindi nahanap ang source file, ipinapakita ang kopyang nasa proyekto",
+ "dlg.dw.store.source_changed": "Drawing “{name}”: nagbago ang source file mula nang mailagay ito, ipinapakita ang kopyang nasa proyekto",
+ "dlg.dw.store.unreadable": "Hindi mabasa ang mga nakalagay na drawing na nakaimbak sa proyekto",
+ "dlg.dw.store.not_saved": "Hindi nasave ang mga drawing: {why}",
+ "dlg.dw.store.why_read": "hindi mabasa ang mga nakalagay na drawing na nakaimbak sa proyekto",
+ "dlg.dw.store.why_write": "hindi ma-update ang project file",
+ "dlg.dw.store.missing_in_file": "Hindi naglalaman ng lahat ng nailagay na drawing ang na-save na file"
+}

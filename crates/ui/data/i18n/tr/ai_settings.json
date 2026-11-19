@@ -1,0 +1,9 @@
+{
+ "ai.settings.num_bad": "Sayı değil. 0.5 gibi yazın.",
+ "ai.settings.num_comma": "Ondalık ayracı olarak nokta kullanın, örneğin 0.5.",
+ "ai.settings.num_negative": "Sayı negatif olamaz.",
+ "ai.settings.unit_money": "para birimi",
+ "ai.settings.unit_tokens": "belirteç",
+ "ai.settings.unit_price": "1 milyon belirteç başına",
+ "ai.settings.limits_hint": "0 sınır yok demektir. Reddedilen bir değer önceki sınırı korur."
+}

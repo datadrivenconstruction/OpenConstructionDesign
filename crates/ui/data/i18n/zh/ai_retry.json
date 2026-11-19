@@ -1,0 +1,7 @@
+{
+ "ai.retry.countdown": "{n} 秒后重试",
+ "ai.retry.try": "自动重试第 {i} 次，共 {max} 次。将重新发送同一请求。",
+ "ai.retry.now": "立即重试",
+ "ai.retry.gave_up": "自动重试 {max} 次后仍无回复。",
+ "ai.retry.shorten": "缩短请求"
+}

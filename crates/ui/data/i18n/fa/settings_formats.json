@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "پس از خروجی گرفتن از کتاب‌کار چه اتفاقی می‌افتد",
+ "settings.area_decimals_desc": "ارقام بعد از جداکننده اعشار در مساحت‌ها",
+ "settings.volume_decimals_desc": "ارقام بعد از جداکننده اعشار در حجم‌ها",
+ "settings.frac_desc": "کوچک‌ترین کسر اینچ در طول‌های امپریال",
+ "settings.small_area_desc": "مساحت‌های کمتر از یک فوت مربع را بر حسب اینچ مربع نشان بده",
+ "settings.sample_desc": "اعداد با انتخاب‌های فعلی چگونه نمایش داده می‌شوند",
+ "autosave.title_desc": "نگه‌داشتن نسخه بازیابی از پروژه باز",
+ "autosave.interval_desc": "فاصله بین نسخه‌های بازیابی",
+ "autosave.keep_desc": "نسخه‌های بازیابی قدیمی‌تر حذف می‌شوند",
+ "autosave.folder_desc": "خالی بودن یعنی پوشه پیش‌فرض",
+ "autosave.remind_desc": "یادآوری ذخیره پروژه‌ای که هنوز فایل ندارد",
+ "settings.backend_desc": "آداپتور گرافیکی در حال استفاده",
+ "settings.news_desc": "چه چیزهایی در این نسخه تغییر کرده",
+ "settings.assoc_default_desc": "این برنامه را پیش‌فرض فایل‌های مدل کن",
+ "settings.data_dir_desc": "حافظه‌های موقت، نسخه‌های بازیابی و گزارش‌ها اینجا ذخیره می‌شوند."
+}

@@ -1,0 +1,7287 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "definitions": {
+    "Actor": {
+      "description": "Who produced the envelope (recorded per journal row).",
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "enum": [
+                "user"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "enum": [
+                "xlsx"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "enum": [
+                "script"
+              ],
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind",
+            "name"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "enum": [
+                "ai"
+              ],
+              "type": "string"
+            },
+            "model": {
+              "type": "string"
+            },
+            "session": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind",
+            "model",
+            "session"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "enum": [
+                "agent"
+              ],
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "kind",
+            "name"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "Angle": {
+      "additionalProperties": false,
+      "description": "An angle with its unit.",
+      "properties": {
+        "unit": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/AngleUnit"
+            }
+          ],
+          "description": "Angle unit of `v`: deg or rad. Required."
+        },
+        "v": {
+          "description": "Magnitude, expressed in `unit`.",
+          "format": "double",
+          "type": "number"
+        }
+      },
+      "required": [
+        "unit",
+        "v"
+      ],
+      "type": "object"
+    },
+    "AngleUnit": {
+      "description": "Units allowed where the schema expects an angle.",
+      "enum": [
+        "deg",
+        "rad"
+      ],
+      "type": "string"
+    },
+    "Axis": {
+      "enum": [
+        "x",
+        "y",
+        "z"
+      ],
+      "type": "string"
+    },
+    "BoolKind": {
+      "enum": [
+        "cut",
+        "union",
+        "intersect"
+      ],
+      "type": "string"
+    },
+    "Cat": {
+      "description": "Element category. The wire name (`Cat::key`) is the stable prefix of `cat:id` labels.",
+      "oneOf": [
+        {
+          "enum": [
+            "wall",
+            "door",
+            "window",
+            "opening",
+            "curtain_wall",
+            "curtain_panel",
+            "slab",
+            "roof",
+            "ceiling",
+            "column",
+            "beam",
+            "brace",
+            "truss",
+            "beam_system",
+            "footing",
+            "strip_footing",
+            "raft",
+            "stair",
+            "railing",
+            "ramp",
+            "component",
+            "room",
+            "zone",
+            "shaft",
+            "mep_run",
+            "mep_device",
+            "rebar",
+            "solid",
+            "mass",
+            "mesh",
+            "topography",
+            "level",
+            "grid",
+            "ref_plane",
+            "annotation",
+            "group",
+            "wtype",
+            "stype",
+            "mtype",
+            "family",
+            "param",
+            "option_set",
+            "design_option"
+          ],
+          "type": "string"
+        },
+        {
+          "description": "Freeform NURBS surface or shell.",
+          "enum": [
+            "freeform"
+          ],
+          "type": "string"
+        },
+        {
+          "description": "Curtain system of panels and mullions on a freeform surface.",
+          "enum": [
+            "panel_system"
+          ],
+          "type": "string"
+        },
+        {
+          "description": "Roof or slab hosted on a freeform surface.",
+          "enum": [
+            "surface_shell"
+          ],
+          "type": "string"
+        },
+        {
+          "description": "Diagrid, gridshell or cable net on a host surface.",
+          "enum": [
+            "gridshell"
+          ],
+          "type": "string"
+        },
+        {
+          "description": "v1 type ref; read as a wall type (the only v1 meaning). New envelopes name the table.",
+          "enum": [
+            "type"
+          ],
+          "type": "string"
+        }
+      ]
+    },
+    "ConvertTo": {
+      "description": "Target kind of `geometry.convert`.",
+      "oneOf": [
+        {
+          "enum": [
+            "copies",
+            "path"
+          ],
+          "type": "string"
+        },
+        {
+          "description": "Closed mesh to a parametric solid.",
+          "enum": [
+            "solid"
+          ],
+          "type": "string"
+        },
+        {
+          "description": "Solid to a plain mesh.",
+          "enum": [
+            "mesh"
+          ],
+          "type": "string"
+        },
+        {
+          "description": "Mesh to the best native element (wall, slab, roof, column, beam).",
+          "enum": [
+            "parametric"
+          ],
+          "type": "string"
+        }
+      ]
+    },
+    "Curve3": {
+      "additionalProperties": false,
+      "description": "A curve given by points (absolute coordinates).",
+      "properties": {
+        "degree": {
+          "description": "Polynomial degree, 1..5 (default 3, lowered when there are too few points).",
+          "format": "uint32",
+          "minimum": 0.0,
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "fit": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/CurveFit"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "`through`: the curve passes through the points (default); `control`: the points are B-spline control points; `polyline`: straight segments."
+        },
+        "pts": {
+          "items": {
+            "$ref": "#/definitions/P3"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "pts"
+      ],
+      "type": "object"
+    },
+    "CurveAlign": {
+      "enum": [
+        "tangent",
+        "fixed"
+      ],
+      "type": "string"
+    },
+    "CurveFit": {
+      "enum": [
+        "through",
+        "control",
+        "polyline"
+      ],
+      "type": "string"
+    },
+    "Dir3": {
+      "additionalProperties": false,
+      "description": "Unitless direction; the executor normalises it.",
+      "properties": {
+        "x": {
+          "format": "double",
+          "type": "number"
+        },
+        "y": {
+          "format": "double",
+          "type": "number"
+        },
+        "z": {
+          "format": "double",
+          "type": "number"
+        }
+      },
+      "required": [
+        "x",
+        "y",
+        "z"
+      ],
+      "type": "object"
+    },
+    "Div": {
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "by": {
+              "enum": [
+                "count"
+              ],
+              "type": "string"
+            },
+            "n": {
+              "format": "uint32",
+              "minimum": 0.0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "by",
+            "n"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "by": {
+              "enum": [
+                "step"
+              ],
+              "type": "string"
+            },
+            "d": {
+              "$ref": "#/definitions/Len"
+            }
+          },
+          "required": [
+            "by",
+            "d"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "End": {
+      "enum": [
+        "a",
+        "b"
+      ],
+      "type": "string"
+    },
+    "FamilyForm": {
+      "additionalProperties": false,
+      "properties": {
+        "form": {
+          "$ref": "#/definitions/Form"
+        },
+        "material": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "name": {
+          "type": "string"
+        },
+        "visible_if": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "form",
+        "name"
+      ],
+      "type": "object"
+    },
+    "FamilyParam": {
+      "additionalProperties": false,
+      "properties": {
+        "default": {
+          "$ref": "#/definitions/Value"
+        },
+        "formula": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "instance": {
+          "type": "boolean"
+        },
+        "kind": {
+          "$ref": "#/definitions/ParamKind"
+        },
+        "name": {
+          "type": "string"
+        },
+        "unit": {
+          "description": "Unit of the value, or null when dimensionless. The key must be present.",
+          "enum": [
+            "m",
+            "cm",
+            "mm",
+            "ft",
+            "in",
+            "m2",
+            "mm2",
+            "m3",
+            "deg",
+            "rad",
+            "kg",
+            "kg/m3",
+            "kN",
+            "kPa",
+            "s",
+            "pct"
+          ],
+          "type": "string"
+        }
+      },
+      "required": [
+        "default",
+        "instance",
+        "kind",
+        "name",
+        "unit"
+      ],
+      "type": "object"
+    },
+    "FamilyRule": {
+      "additionalProperties": false,
+      "description": "Constraint inside a family: planes by name, optional driving parameter.",
+      "properties": {
+        "kind": {
+          "$ref": "#/definitions/RuleKind"
+        },
+        "param": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "planes": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "kind",
+        "planes"
+      ],
+      "type": "object"
+    },
+    "Field": {
+      "additionalProperties": false,
+      "description": "One named field of a `Set` or of a new element's extra rows.",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "value": {
+          "$ref": "#/definitions/Value"
+        }
+      },
+      "required": [
+        "name",
+        "value"
+      ],
+      "type": "object"
+    },
+    "Form": {
+      "description": "Solid-building form (maps to `gsolid::Form` and `mass::MassSpec`).",
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "end": {
+              "$ref": "#/definitions/Len"
+            },
+            "frame": {
+              "$ref": "#/definitions/Frame"
+            },
+            "kind": {
+              "enum": [
+                "extrude"
+              ],
+              "type": "string"
+            },
+            "profile": {
+              "$ref": "#/definitions/Profile"
+            },
+            "start": {
+              "$ref": "#/definitions/Len"
+            }
+          },
+          "required": [
+            "end",
+            "frame",
+            "kind",
+            "profile",
+            "start"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "angle": {
+              "$ref": "#/definitions/Angle"
+            },
+            "axis_a": {
+              "$ref": "#/definitions/P3"
+            },
+            "axis_b": {
+              "$ref": "#/definitions/P3"
+            },
+            "frame": {
+              "$ref": "#/definitions/Frame"
+            },
+            "kind": {
+              "enum": [
+                "revolve"
+              ],
+              "type": "string"
+            },
+            "profile": {
+              "$ref": "#/definitions/Profile"
+            }
+          },
+          "required": [
+            "angle",
+            "axis_a",
+            "axis_b",
+            "frame",
+            "kind",
+            "profile"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "description": "`twist`: total turn of the profile from start to end; `scale`: profile scale at the path end (1 = none), linear along the path. Both need an open path and a plain profile.",
+          "properties": {
+            "kind": {
+              "enum": [
+                "sweep"
+              ],
+              "type": "string"
+            },
+            "path": {
+              "$ref": "#/definitions/Path"
+            },
+            "profile": {
+              "$ref": "#/definitions/Profile"
+            },
+            "scale": {
+              "format": "double",
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "twist": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/Angle"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "kind",
+            "path",
+            "profile"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "enum": [
+                "loft"
+              ],
+              "type": "string"
+            },
+            "path": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/Path"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "sections": {
+              "items": {
+                "$ref": "#/definitions/Section"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "kind",
+            "sections"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "a": {
+              "$ref": "#/definitions/Profile"
+            },
+            "b": {
+              "$ref": "#/definitions/Profile"
+            },
+            "kind": {
+              "enum": [
+                "swept_blend"
+              ],
+              "type": "string"
+            },
+            "path": {
+              "$ref": "#/definitions/Path"
+            }
+          },
+          "required": [
+            "a",
+            "b",
+            "kind",
+            "path"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "Frame": {
+      "additionalProperties": false,
+      "description": "Local frame: profile lies in the x/y plane of the frame, `z` is the extrusion direction.",
+      "properties": {
+        "origin": {
+          "$ref": "#/definitions/P3"
+        },
+        "x": {
+          "$ref": "#/definitions/Dir3"
+        },
+        "z": {
+          "$ref": "#/definitions/Dir3"
+        }
+      },
+      "required": [
+        "origin",
+        "x",
+        "z"
+      ],
+      "type": "object"
+    },
+    "Group": {
+      "additionalProperties": false,
+      "description": "Unit of partial merge: a person may take some groups; `depends_on` names earlier groups.",
+      "properties": {
+        "depends_on": {
+          "default": [],
+          "items": {
+            "format": "uint32",
+            "minimum": 0.0,
+            "type": "integer"
+          },
+          "type": "array"
+        },
+        "id": {
+          "format": "uint32",
+          "minimum": 0.0,
+          "type": "integer"
+        },
+        "ops": {
+          "items": {
+            "$ref": "#/definitions/Op"
+          },
+          "type": "array"
+        },
+        "title": {
+          "type": "string"
+        },
+        "why": {
+          "description": "Optional rationale for this group; additive, absent on older envelopes.",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "ops",
+        "title"
+      ],
+      "type": "object"
+    },
+    "IfcClass": {
+      "additionalProperties": false,
+      "description": "IFC entity of a part: `class` like IfcMember, `predefined` one of its enum values (CHORD).",
+      "properties": {
+        "class": {
+          "type": "string"
+        },
+        "predefined": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "class"
+      ],
+      "type": "object"
+    },
+    "LatticeHost": {
+      "description": "Host surface of a grid structure (absolute coordinates).",
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "description": "Spherical cap on a base circle; `oculus` is the radius of the top ring (default a tenth of the radius: a grid cannot meet in the pole).",
+          "properties": {
+            "center": {
+              "$ref": "#/definitions/P3"
+            },
+            "oculus": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/Len"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "radius": {
+              "$ref": "#/definitions/Len"
+            },
+            "rise": {
+              "$ref": "#/definitions/Len"
+            },
+            "shape": {
+              "enum": [
+                "dome"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "center",
+            "radius",
+            "rise",
+            "shape"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "description": "Circular barrel vault over the level axis `a`-`b` at the springing line.",
+          "properties": {
+            "a": {
+              "$ref": "#/definitions/P3"
+            },
+            "b": {
+              "$ref": "#/definitions/P3"
+            },
+            "rise": {
+              "$ref": "#/definitions/Len"
+            },
+            "shape": {
+              "enum": [
+                "vault"
+              ],
+              "type": "string"
+            },
+            "span": {
+              "$ref": "#/definitions/Len"
+            }
+          },
+          "required": [
+            "a",
+            "b",
+            "rise",
+            "shape",
+            "span"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "description": "Saddle over an `lx` x `ly` rectangle, corners at +-`rise`, turned by `angle`.",
+          "properties": {
+            "angle": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/Angle"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "center": {
+              "$ref": "#/definitions/P3"
+            },
+            "lx": {
+              "$ref": "#/definitions/Len"
+            },
+            "ly": {
+              "$ref": "#/definitions/Len"
+            },
+            "rise": {
+              "$ref": "#/definitions/Len"
+            },
+            "shape": {
+              "enum": [
+                "hypar"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "center",
+            "lx",
+            "ly",
+            "rise",
+            "shape"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "description": "Flat grid over a `w` x `h` rectangle from `corner`, turned by `angle`.",
+          "properties": {
+            "angle": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/Angle"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "corner": {
+              "$ref": "#/definitions/P3"
+            },
+            "h": {
+              "$ref": "#/definitions/Len"
+            },
+            "shape": {
+              "enum": [
+                "plane"
+              ],
+              "type": "string"
+            },
+            "w": {
+              "$ref": "#/definitions/Len"
+            }
+          },
+          "required": [
+            "corner",
+            "h",
+            "shape",
+            "w"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "description": "Dish (paraboloid of revolution) from its `vertex`: rim `radius`, `depth` from the vertex to the rim plane (at most the radius), axis tilted by `tilt` from the vertical toward the plan direction `azimuth`; `hub` is the radius of the inner ring the dish stands on (default a tenth of the radius).",
+          "properties": {
+            "azimuth": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/Angle"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "depth": {
+              "$ref": "#/definitions/Len"
+            },
+            "hub": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/Len"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "radius": {
+              "$ref": "#/definitions/Len"
+            },
+            "shape": {
+              "enum": [
+                "paraboloid"
+              ],
+              "type": "string"
+            },
+            "tilt": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/Angle"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "vertex": {
+              "$ref": "#/definitions/P3"
+            }
+          },
+          "required": [
+            "depth",
+            "radius",
+            "shape",
+            "vertex"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "LatticeKind": {
+      "description": "What a grid structure is built as.",
+      "oneOf": [
+        {
+          "description": "Straight members between ball nodes.",
+          "enum": [
+            "diagrid"
+          ],
+          "type": "string"
+        },
+        {
+          "description": "Continuous curved laths clamped at the crossings.",
+          "enum": [
+            "gridshell"
+          ],
+          "type": "string"
+        },
+        {
+          "description": "Straight cables between clamps.",
+          "enum": [
+            "cable_net"
+          ],
+          "type": "string"
+        }
+      ]
+    },
+    "LatticePattern": {
+      "enum": [
+        "diagrid",
+        "triangular",
+        "quad_braced",
+        "quad"
+      ],
+      "type": "string"
+    },
+    "LatticeSupports": {
+      "oneOf": [
+        {
+          "description": "The springing ring or line.",
+          "enum": [
+            "base"
+          ],
+          "type": "string"
+        },
+        {
+          "description": "Every boundary node.",
+          "enum": [
+            "edges"
+          ],
+          "type": "string"
+        },
+        {
+          "description": "The four corners of an open grid.",
+          "enum": [
+            "corners"
+          ],
+          "type": "string"
+        }
+      ]
+    },
+    "Len": {
+      "additionalProperties": false,
+      "description": "A length with its unit, e.g. `{\"v\": 2100.0, \"unit\": \"mm\"}`.",
+      "properties": {
+        "unit": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/LenUnit"
+            }
+          ],
+          "description": "Length unit of `v`: m, cm, mm, ft or in. Required."
+        },
+        "v": {
+          "description": "Magnitude, expressed in `unit`.",
+          "format": "double",
+          "type": "number"
+        }
+      },
+      "required": [
+        "unit",
+        "v"
+      ],
+      "type": "object"
+    },
+    "LenUnit": {
+      "description": "Units allowed where the schema expects a length.",
+      "enum": [
+        "m",
+        "cm",
+        "mm",
+        "ft",
+        "in"
+      ],
+      "type": "string"
+    },
+    "MemberRole": {
+      "description": "What row a `geometry.member` makes.",
+      "oneOf": [
+        {
+          "enum": [
+            "beam",
+            "brace"
+          ],
+          "type": "string"
+        },
+        {
+          "description": "A bar of a gridshell; only a gridshell (`geometry.gridshell`) holds these, so the model refuses a free one.",
+          "enum": [
+            "gridshell_bar"
+          ],
+          "type": "string"
+        }
+      ]
+    },
+    "Mullion": {
+      "additionalProperties": false,
+      "description": "Rectangular mullion section along every panel edge (default 60 x 150 mm).",
+      "properties": {
+        "depth": {
+          "$ref": "#/definitions/Len"
+        },
+        "width": {
+          "$ref": "#/definitions/Len"
+        }
+      },
+      "required": [
+        "depth",
+        "width"
+      ],
+      "type": "object"
+    },
+    "NewEl": {
+      "description": "New element, one variant per family row of the element contract. `fields` carries the family's remaining rows by name; `Generic` covers families without a typed variant yet.",
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "a": {
+              "$ref": "#/definitions/Place"
+            },
+            "b": {
+              "$ref": "#/definitions/Place"
+            },
+            "fields": {
+              "items": {
+                "$ref": "#/definitions/Field"
+              },
+              "type": "array"
+            },
+            "height": {
+              "$ref": "#/definitions/Len"
+            },
+            "kind": {
+              "enum": [
+                "wall"
+              ],
+              "type": "string"
+            },
+            "level": {
+              "$ref": "#/definitions/Ref"
+            },
+            "top": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/Ref"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "type": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/Ref"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "a",
+            "b",
+            "fields",
+            "height",
+            "kind",
+            "level"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "at": {
+              "$ref": "#/definitions/Place"
+            },
+            "fields": {
+              "items": {
+                "$ref": "#/definitions/Field"
+              },
+              "type": "array"
+            },
+            "host": {
+              "$ref": "#/definitions/Ref"
+            },
+            "kind": {
+              "enum": [
+                "door"
+              ],
+              "type": "string"
+            },
+            "type": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/Ref"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "at",
+            "fields",
+            "host",
+            "kind"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "at": {
+              "$ref": "#/definitions/Place"
+            },
+            "fields": {
+              "items": {
+                "$ref": "#/definitions/Field"
+              },
+              "type": "array"
+            },
+            "host": {
+              "$ref": "#/definitions/Ref"
+            },
+            "kind": {
+              "enum": [
+                "window"
+              ],
+              "type": "string"
+            },
+            "sill": {
+              "$ref": "#/definitions/Len"
+            },
+            "type": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/Ref"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "at",
+            "fields",
+            "host",
+            "kind",
+            "sill"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "at": {
+              "$ref": "#/definitions/Place"
+            },
+            "h": {
+              "$ref": "#/definitions/Len"
+            },
+            "host": {
+              "$ref": "#/definitions/Ref"
+            },
+            "kind": {
+              "enum": [
+                "opening"
+              ],
+              "type": "string"
+            },
+            "sill": {
+              "$ref": "#/definitions/Len"
+            },
+            "w": {
+              "$ref": "#/definitions/Len"
+            }
+          },
+          "required": [
+            "at",
+            "h",
+            "host",
+            "kind",
+            "sill",
+            "w"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "boundary": {
+              "items": {
+                "$ref": "#/definitions/Place"
+              },
+              "type": "array"
+            },
+            "fields": {
+              "items": {
+                "$ref": "#/definitions/Field"
+              },
+              "type": "array"
+            },
+            "kind": {
+              "enum": [
+                "slab"
+              ],
+              "type": "string"
+            },
+            "level": {
+              "$ref": "#/definitions/Ref"
+            },
+            "offset": {
+              "$ref": "#/definitions/Len"
+            },
+            "type": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/Ref"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "boundary",
+            "fields",
+            "kind",
+            "level",
+            "offset"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "boundary": {
+              "items": {
+                "$ref": "#/definitions/Place"
+              },
+              "type": "array"
+            },
+            "fields": {
+              "items": {
+                "$ref": "#/definitions/Field"
+              },
+              "type": "array"
+            },
+            "kind": {
+              "enum": [
+                "roof"
+              ],
+              "type": "string"
+            },
+            "level": {
+              "$ref": "#/definitions/Ref"
+            },
+            "slope": {
+              "$ref": "#/definitions/Angle"
+            },
+            "type": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/Ref"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "boundary",
+            "fields",
+            "kind",
+            "level",
+            "slope"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "boundary": {
+              "items": {
+                "$ref": "#/definitions/Place"
+              },
+              "type": "array"
+            },
+            "fields": {
+              "items": {
+                "$ref": "#/definitions/Field"
+              },
+              "type": "array"
+            },
+            "height": {
+              "$ref": "#/definitions/Len"
+            },
+            "kind": {
+              "enum": [
+                "ceiling"
+              ],
+              "type": "string"
+            },
+            "level": {
+              "$ref": "#/definitions/Ref"
+            },
+            "type": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/Ref"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "boundary",
+            "fields",
+            "height",
+            "kind",
+            "level"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "at": {
+              "$ref": "#/definitions/Place"
+            },
+            "fields": {
+              "items": {
+                "$ref": "#/definitions/Field"
+              },
+              "type": "array"
+            },
+            "height": {
+              "$ref": "#/definitions/Len"
+            },
+            "kind": {
+              "enum": [
+                "column"
+              ],
+              "type": "string"
+            },
+            "level": {
+              "$ref": "#/definitions/Ref"
+            },
+            "rotation": {
+              "$ref": "#/definitions/Angle"
+            },
+            "top": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/Ref"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "type": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/Ref"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "at",
+            "fields",
+            "height",
+            "kind",
+            "level",
+            "rotation"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "a": {
+              "$ref": "#/definitions/Place"
+            },
+            "b": {
+              "$ref": "#/definitions/Place"
+            },
+            "fields": {
+              "items": {
+                "$ref": "#/definitions/Field"
+              },
+              "type": "array"
+            },
+            "kind": {
+              "enum": [
+                "beam"
+              ],
+              "type": "string"
+            },
+            "level": {
+              "$ref": "#/definitions/Ref"
+            },
+            "type": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/Ref"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "a",
+            "b",
+            "fields",
+            "kind",
+            "level"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "a": {
+              "$ref": "#/definitions/Place"
+            },
+            "b": {
+              "$ref": "#/definitions/Place"
+            },
+            "fields": {
+              "items": {
+                "$ref": "#/definitions/Field"
+              },
+              "type": "array"
+            },
+            "kind": {
+              "enum": [
+                "stair"
+              ],
+              "type": "string"
+            },
+            "level": {
+              "$ref": "#/definitions/Ref"
+            },
+            "top": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/Ref"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "type": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/Ref"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "width": {
+              "$ref": "#/definitions/Len"
+            }
+          },
+          "required": [
+            "a",
+            "b",
+            "fields",
+            "kind",
+            "level",
+            "width"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "fields": {
+              "items": {
+                "$ref": "#/definitions/Field"
+              },
+              "type": "array"
+            },
+            "height": {
+              "$ref": "#/definitions/Len"
+            },
+            "host": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/Ref"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "kind": {
+              "enum": [
+                "railing"
+              ],
+              "type": "string"
+            },
+            "level": {
+              "$ref": "#/definitions/Ref"
+            },
+            "path": {
+              "items": {
+                "$ref": "#/definitions/Place"
+              },
+              "type": "array"
+            },
+            "type": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/Ref"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "fields",
+            "height",
+            "kind",
+            "level",
+            "path"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "at": {
+              "$ref": "#/definitions/Place"
+            },
+            "kind": {
+              "enum": [
+                "room"
+              ],
+              "type": "string"
+            },
+            "level": {
+              "$ref": "#/definitions/Ref"
+            },
+            "name": {
+              "type": "string"
+            },
+            "number": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "at",
+            "kind",
+            "level",
+            "name"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "at": {
+              "$ref": "#/definitions/Place"
+            },
+            "family": {
+              "$ref": "#/definitions/Ref"
+            },
+            "fields": {
+              "items": {
+                "$ref": "#/definitions/Field"
+              },
+              "type": "array"
+            },
+            "host": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/Ref"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "kind": {
+              "enum": [
+                "component"
+              ],
+              "type": "string"
+            },
+            "level": {
+              "$ref": "#/definitions/Ref"
+            },
+            "rotation": {
+              "$ref": "#/definitions/Angle"
+            },
+            "type": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/Ref"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "at",
+            "family",
+            "fields",
+            "kind",
+            "level",
+            "rotation"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "fields": {
+              "items": {
+                "$ref": "#/definitions/Field"
+              },
+              "type": "array"
+            },
+            "kind": {
+              "enum": [
+                "mep_run"
+              ],
+              "type": "string"
+            },
+            "level": {
+              "$ref": "#/definitions/Ref"
+            },
+            "path": {
+              "items": {
+                "$ref": "#/definitions/Place"
+              },
+              "type": "array"
+            },
+            "size": {
+              "$ref": "#/definitions/Len"
+            },
+            "system": {
+              "type": "string"
+            },
+            "type": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/Ref"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "fields",
+            "kind",
+            "level",
+            "path",
+            "size",
+            "system"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "at": {
+              "items": {
+                "$ref": "#/definitions/Place"
+              },
+              "type": "array"
+            },
+            "cat": {
+              "$ref": "#/definitions/Cat"
+            },
+            "fields": {
+              "items": {
+                "$ref": "#/definitions/Field"
+              },
+              "type": "array"
+            },
+            "kind": {
+              "enum": [
+                "generic"
+              ],
+              "type": "string"
+            },
+            "level": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/Ref"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "type": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/Ref"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "at",
+            "cat",
+            "fields",
+            "kind"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "Op": {
+      "description": "One edit. Wire form is internally tagged: `{\"op\": \"set\", ...}`; sub-op families add `\"action\"`: `{\"op\": \"type\", \"action\": \"duplicate\", ...}`.",
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "el": {
+              "$ref": "#/definitions/NewEl"
+            },
+            "op": {
+              "enum": [
+                "create"
+              ],
+              "type": "string"
+            },
+            "slot": {
+              "format": "uint32",
+              "minimum": 0.0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "el",
+            "op",
+            "slot"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "fields": {
+              "items": {
+                "$ref": "#/definitions/Field"
+              },
+              "type": "array"
+            },
+            "op": {
+              "enum": [
+                "set"
+              ],
+              "type": "string"
+            },
+            "target": {
+              "$ref": "#/definitions/Targets"
+            }
+          },
+          "required": [
+            "fields",
+            "op",
+            "target"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "op": {
+              "enum": [
+                "set_type"
+              ],
+              "type": "string"
+            },
+            "target": {
+              "$ref": "#/definitions/Targets"
+            },
+            "to": {
+              "$ref": "#/definitions/Ref"
+            }
+          },
+          "required": [
+            "op",
+            "target",
+            "to"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "op": {
+              "enum": [
+                "delete"
+              ],
+              "type": "string"
+            },
+            "target": {
+              "$ref": "#/definitions/Targets"
+            }
+          },
+          "required": [
+            "op",
+            "target"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "copy": {
+              "default": false,
+              "type": "boolean"
+            },
+            "op": {
+              "enum": [
+                "transform"
+              ],
+              "type": "string"
+            },
+            "target": {
+              "$ref": "#/definitions/Targets"
+            },
+            "xf": {
+              "$ref": "#/definitions/Xform"
+            }
+          },
+          "required": [
+            "op",
+            "target",
+            "xf"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "op": {
+              "enum": [
+                "pattern"
+              ],
+              "type": "string"
+            },
+            "out": {
+              "allOf": [
+                {
+                  "$ref": "#/definitions/PatternOut"
+                }
+              ],
+              "default": "copies"
+            },
+            "pattern": {
+              "$ref": "#/definitions/Pattern"
+            },
+            "source": {
+              "$ref": "#/definitions/Targets"
+            }
+          },
+          "required": [
+            "op",
+            "pattern",
+            "source"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "description": "Geometry ops (section 4, 9). The result keeps its parameters so a later `Set` re-evaluates.",
+          "oneOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "action": {
+                  "enum": [
+                    "solid"
+                  ],
+                  "type": "string"
+                },
+                "form": {
+                  "$ref": "#/definitions/Form"
+                },
+                "ifc": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/definitions/IfcClass"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "Semantic IFC class of the part; none exports a generic proxy."
+                },
+                "level": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/definitions/Ref"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "material": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "name": {
+                  "description": "What the part is (\"diagonal CHS 508x20\"); the solid row's name.",
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "role": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/definitions/RoleTag"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "Component role of the part: a component row of this family is written at `at`."
+                },
+                "slot": {
+                  "format": "uint32",
+                  "minimum": 0.0,
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "action",
+                "form",
+                "slot"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "action": {
+                  "enum": [
+                    "mass"
+                  ],
+                  "type": "string"
+                },
+                "form": {
+                  "$ref": "#/definitions/Form"
+                },
+                "level": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/definitions/Ref"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "name": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "slot": {
+                  "format": "uint32",
+                  "minimum": 0.0,
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "action",
+                "form",
+                "slot"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "a": {
+                  "$ref": "#/definitions/Ref"
+                },
+                "action": {
+                  "enum": [
+                    "boolean"
+                  ],
+                  "type": "string"
+                },
+                "b": {
+                  "$ref": "#/definitions/Tool"
+                },
+                "keep_tool": {
+                  "type": "boolean"
+                },
+                "kind": {
+                  "$ref": "#/definitions/BoolKind"
+                }
+              },
+              "required": [
+                "a",
+                "action",
+                "b",
+                "keep_tool",
+                "kind"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "description": "Cut a wall or slab by a form (`solids_cut.rs`).",
+              "properties": {
+                "action": {
+                  "enum": [
+                    "void"
+                  ],
+                  "type": "string"
+                },
+                "form": {
+                  "$ref": "#/definitions/Form"
+                },
+                "host": {
+                  "$ref": "#/definitions/Ref"
+                }
+              },
+              "required": [
+                "action",
+                "form",
+                "host"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "description": "Replace the form parameters of an existing solid or mass.",
+              "properties": {
+                "action": {
+                  "enum": [
+                    "reshape"
+                  ],
+                  "type": "string"
+                },
+                "form": {
+                  "$ref": "#/definitions/Form"
+                },
+                "target": {
+                  "$ref": "#/definitions/Ref"
+                }
+              },
+              "required": [
+                "action",
+                "form",
+                "target"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "description": "Change the geometry kind of a mesh or solid; the receipt lists what is lost.",
+              "properties": {
+                "action": {
+                  "enum": [
+                    "convert"
+                  ],
+                  "type": "string"
+                },
+                "target": {
+                  "$ref": "#/definitions/Ref"
+                },
+                "to": {
+                  "$ref": "#/definitions/ConvertTo"
+                }
+              },
+              "required": [
+                "action",
+                "target",
+                "to"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "description": "Freeform NURBS surface (a shell when `thickness` is set): roofs, canopies, facades.",
+              "properties": {
+                "action": {
+                  "enum": [
+                    "freeform"
+                  ],
+                  "type": "string"
+                },
+                "level": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/definitions/Ref"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "material": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "name": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "side": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/definitions/ShellSide"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "slot": {
+                  "format": "uint32",
+                  "minimum": 0.0,
+                  "type": "integer"
+                },
+                "surface": {
+                  "$ref": "#/definitions/SurfaceBy"
+                },
+                "thickness": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/definitions/Len"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "trim": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/definitions/UvTrim"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "action",
+                "slot",
+                "surface"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "description": "Move control point (`i` along u, `j` along v) of a freeform surface to `to`.",
+              "properties": {
+                "action": {
+                  "enum": [
+                    "edit_point"
+                  ],
+                  "type": "string"
+                },
+                "i": {
+                  "format": "uint32",
+                  "minimum": 0.0,
+                  "type": "integer"
+                },
+                "j": {
+                  "format": "uint32",
+                  "minimum": 0.0,
+                  "type": "integer"
+                },
+                "target": {
+                  "$ref": "#/definitions/Ref"
+                },
+                "to": {
+                  "$ref": "#/definitions/P3"
+                }
+              },
+              "required": [
+                "action",
+                "i",
+                "j",
+                "target",
+                "to"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "description": "Shell thickness of a freeform surface; zero leaves a bare surface.",
+              "properties": {
+                "action": {
+                  "enum": [
+                    "thicken"
+                  ],
+                  "type": "string"
+                },
+                "side": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/definitions/ShellSide"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "target": {
+                  "$ref": "#/definitions/Ref"
+                },
+                "thickness": {
+                  "$ref": "#/definitions/Len"
+                }
+              },
+              "required": [
+                "action",
+                "target",
+                "thickness"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "description": "Trim loops of a freeform surface in normalized surface parameters; none clears them.",
+              "properties": {
+                "action": {
+                  "enum": [
+                    "trim"
+                  ],
+                  "type": "string"
+                },
+                "target": {
+                  "$ref": "#/definitions/Ref"
+                },
+                "trim": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/definitions/UvTrim"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "action",
+                "target"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "description": "New control net of a freeform surface (`count_u` x `count_v` points, degree default 3); the receipt states the largest deviation from the old shape.",
+              "properties": {
+                "action": {
+                  "enum": [
+                    "rebuild"
+                  ],
+                  "type": "string"
+                },
+                "count_u": {
+                  "format": "uint32",
+                  "minimum": 0.0,
+                  "type": "integer"
+                },
+                "count_v": {
+                  "format": "uint32",
+                  "minimum": 0.0,
+                  "type": "integer"
+                },
+                "degree_u": {
+                  "format": "uint32",
+                  "minimum": 0.0,
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "degree_v": {
+                  "format": "uint32",
+                  "minimum": 0.0,
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "target": {
+                  "$ref": "#/definitions/Ref"
+                }
+              },
+              "required": [
+                "action",
+                "count_u",
+                "count_v",
+                "target"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "description": "Curtain system on a freeform surface: a panel grid with mullions along its edges. `columns` divide along u, `rows` along v (or at absolute heights); `planarize` runs that many rounds of planar-quad optimisation (default none).",
+              "properties": {
+                "action": {
+                  "enum": [
+                    "panelize"
+                  ],
+                  "type": "string"
+                },
+                "cold": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/definitions/Len"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "columns": {
+                  "$ref": "#/definitions/PanelDiv"
+                },
+                "flat": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/definitions/Len"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "Largest diagonal gap of a panel still taken as flat (default 1 mm) and as cold-bent (default 20 mm); beyond it a panel is hot-bent."
+                },
+                "glass": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/definitions/Len"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "description": "Panel (glass) thickness, default 24 mm."
+                },
+                "host": {
+                  "$ref": "#/definitions/Ref"
+                },
+                "material": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "mullion": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/definitions/Mullion"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "name": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "pattern": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/definitions/PanelPattern"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "planarize": {
+                  "format": "uint32",
+                  "minimum": 0.0,
+                  "type": [
+                    "integer",
+                    "null"
+                  ]
+                },
+                "rows": {
+                  "$ref": "#/definitions/PanelDiv"
+                },
+                "slot": {
+                  "format": "uint32",
+                  "minimum": 0.0,
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "action",
+                "columns",
+                "host",
+                "rows",
+                "slot"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "description": "Roof or slab on a freeform surface: `layers` stack along the surface normal from the `side` (default normal); `openings` are plan polygons cut through the stack. The element follows later edits of the host.",
+              "properties": {
+                "action": {
+                  "enum": [
+                    "surface_shell"
+                  ],
+                  "type": "string"
+                },
+                "host": {
+                  "$ref": "#/definitions/Ref"
+                },
+                "kind": {
+                  "$ref": "#/definitions/ShellKind"
+                },
+                "layers": {
+                  "items": {
+                    "$ref": "#/definitions/ShellLayer"
+                  },
+                  "type": "array"
+                },
+                "name": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "openings": {
+                  "items": {
+                    "items": {
+                      "$ref": "#/definitions/P2"
+                    },
+                    "type": "array"
+                  },
+                  "type": [
+                    "array",
+                    "null"
+                  ]
+                },
+                "side": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/definitions/ShellSide"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "slot": {
+                  "format": "uint32",
+                  "minimum": 0.0,
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "action",
+                "host",
+                "kind",
+                "layers",
+                "slot"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "description": "Diagrid, gridshell or cable net on an analytic host: nodes on a `count_u` x `count_v` lattice of the host, members of the catalogue section `member` (boundary members `edge`, default `member`), ball or clamp nodes of diameter `node` (none sizes them).",
+              "properties": {
+                "action": {
+                  "enum": [
+                    "gridshell"
+                  ],
+                  "type": "string"
+                },
+                "count_u": {
+                  "format": "uint32",
+                  "minimum": 0.0,
+                  "type": "integer"
+                },
+                "count_v": {
+                  "format": "uint32",
+                  "minimum": 0.0,
+                  "type": "integer"
+                },
+                "edge": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "host": {
+                  "$ref": "#/definitions/LatticeHost"
+                },
+                "kind": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/definitions/LatticeKind"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "level": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/definitions/Ref"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "member": {
+                  "type": "string"
+                },
+                "node": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/definitions/Len"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "pattern": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/definitions/LatticePattern"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "slot": {
+                  "format": "uint32",
+                  "minimum": 0.0,
+                  "type": "integer"
+                },
+                "supports": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/definitions/LatticeSupports"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "action",
+                "count_u",
+                "count_v",
+                "host",
+                "member",
+                "slot"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "description": "One straight structural member from `start` to `end` (absolute coordinates) of the catalogue section `section` (\"CHS 88.9x5\"): a beam or brace row; `rotation` turns the section about its axis.",
+              "properties": {
+                "action": {
+                  "enum": [
+                    "member"
+                  ],
+                  "type": "string"
+                },
+                "end": {
+                  "$ref": "#/definitions/P3"
+                },
+                "level": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/definitions/Ref"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "role": {
+                  "$ref": "#/definitions/MemberRole"
+                },
+                "rotation": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/definitions/Angle"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "section": {
+                  "type": "string"
+                },
+                "slot": {
+                  "format": "uint32",
+                  "minimum": 0.0,
+                  "type": "integer"
+                },
+                "start": {
+                  "$ref": "#/definitions/P3"
+                }
+              },
+              "required": [
+                "action",
+                "end",
+                "role",
+                "section",
+                "slot",
+                "start"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "description": "Flat plate of `thickness` on the polygon `outline` (absolute coordinates) with `openings` cut through it (see [`plate_kind`]): a horizontal plate is a slab with the openings as holes, an upright rectangular one a wall with a void opening row per opening (its bounding rectangle in the plate). Tilted plates are refused.",
+              "properties": {
+                "action": {
+                  "enum": [
+                    "plate"
+                  ],
+                  "type": "string"
+                },
+                "level": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/definitions/Ref"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "material": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "openings": {
+                  "items": {
+                    "items": {
+                      "$ref": "#/definitions/P3"
+                    },
+                    "type": "array"
+                  },
+                  "type": "array"
+                },
+                "outline": {
+                  "items": {
+                    "$ref": "#/definitions/P3"
+                  },
+                  "type": "array"
+                },
+                "slot": {
+                  "format": "uint32",
+                  "minimum": 0.0,
+                  "type": "integer"
+                },
+                "thickness": {
+                  "$ref": "#/definitions/Len"
+                }
+              },
+              "required": [
+                "action",
+                "openings",
+                "outline",
+                "slot",
+                "thickness"
+              ],
+              "type": "object"
+            }
+          ],
+          "properties": {
+            "op": {
+              "enum": [
+                "geometry"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "op"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "op": {
+              "enum": [
+                "constrain"
+              ],
+              "type": "string"
+            },
+            "rule": {
+              "$ref": "#/definitions/Rule"
+            }
+          },
+          "required": [
+            "op",
+            "rule"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "oneOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "action": {
+                  "enum": [
+                    "duplicate"
+                  ],
+                  "type": "string"
+                },
+                "fields": {
+                  "items": {
+                    "$ref": "#/definitions/Field"
+                  },
+                  "type": "array"
+                },
+                "from": {
+                  "$ref": "#/definitions/Ref"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "slot": {
+                  "format": "uint32",
+                  "minimum": 0.0,
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "action",
+                "fields",
+                "from",
+                "name",
+                "slot"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "action": {
+                  "enum": [
+                    "rename"
+                  ],
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "target": {
+                  "$ref": "#/definitions/Ref"
+                }
+              },
+              "required": [
+                "action",
+                "name",
+                "target"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "action": {
+                  "enum": [
+                    "set"
+                  ],
+                  "type": "string"
+                },
+                "fields": {
+                  "items": {
+                    "$ref": "#/definitions/Field"
+                  },
+                  "type": "array"
+                },
+                "target": {
+                  "$ref": "#/definitions/Ref"
+                }
+              },
+              "required": [
+                "action",
+                "fields",
+                "target"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "description": "Instances move to `replace_with` first; without it, a type in use is refused.",
+              "properties": {
+                "action": {
+                  "enum": [
+                    "delete"
+                  ],
+                  "type": "string"
+                },
+                "replace_with": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/definitions/Ref"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "target": {
+                  "$ref": "#/definitions/Ref"
+                }
+              },
+              "required": [
+                "action",
+                "target"
+              ],
+              "type": "object"
+            }
+          ],
+          "properties": {
+            "op": {
+              "enum": [
+                "type"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "op"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "oneOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "action": {
+                  "enum": [
+                    "define"
+                  ],
+                  "type": "string"
+                },
+                "cats": {
+                  "items": {
+                    "$ref": "#/definitions/Cat"
+                  },
+                  "type": "array"
+                },
+                "group": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "instance": {
+                  "type": "boolean"
+                },
+                "kind": {
+                  "$ref": "#/definitions/ParamKind"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "unit": {
+                  "description": "Unit of values of this parameter, or null when dimensionless. The key must be present.",
+                  "enum": [
+                    "m",
+                    "cm",
+                    "mm",
+                    "ft",
+                    "in",
+                    "m2",
+                    "mm2",
+                    "m3",
+                    "deg",
+                    "rad",
+                    "kg",
+                    "kg/m3",
+                    "kN",
+                    "kPa",
+                    "s",
+                    "pct"
+                  ],
+                  "type": "string"
+                }
+              },
+              "required": [
+                "action",
+                "cats",
+                "instance",
+                "kind",
+                "name",
+                "unit"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "action": {
+                  "enum": [
+                    "rename"
+                  ],
+                  "type": "string"
+                },
+                "from": {
+                  "type": "string"
+                },
+                "to": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "action",
+                "from",
+                "to"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "action": {
+                  "enum": [
+                    "delete"
+                  ],
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "action",
+                "name"
+              ],
+              "type": "object"
+            }
+          ],
+          "properties": {
+            "op": {
+              "enum": [
+                "param"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "op"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "oneOf": [
+            {
+              "additionalProperties": false,
+              "description": "Lands as a draft family; `tests` are the flex-check parameter sets.",
+              "properties": {
+                "action": {
+                  "enum": [
+                    "define"
+                  ],
+                  "type": "string"
+                },
+                "cat": {
+                  "$ref": "#/definitions/Cat"
+                },
+                "constraints": {
+                  "items": {
+                    "$ref": "#/definitions/FamilyRule"
+                  },
+                  "type": "array"
+                },
+                "forms": {
+                  "items": {
+                    "$ref": "#/definitions/FamilyForm"
+                  },
+                  "type": "array"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "params": {
+                  "items": {
+                    "$ref": "#/definitions/FamilyParam"
+                  },
+                  "type": "array"
+                },
+                "planes": {
+                  "items": {
+                    "$ref": "#/definitions/RefPlaneDef"
+                  },
+                  "type": "array"
+                },
+                "slot": {
+                  "format": "uint32",
+                  "minimum": 0.0,
+                  "type": "integer"
+                },
+                "tests": {
+                  "items": {
+                    "items": {
+                      "$ref": "#/definitions/Field"
+                    },
+                    "type": "array"
+                  },
+                  "type": "array"
+                }
+              },
+              "required": [
+                "action",
+                "cat",
+                "constraints",
+                "forms",
+                "name",
+                "params",
+                "planes",
+                "slot",
+                "tests"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "action": {
+                  "enum": [
+                    "set_formula"
+                  ],
+                  "type": "string"
+                },
+                "formula": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "param": {
+                  "type": "string"
+                },
+                "target": {
+                  "$ref": "#/definitions/Ref"
+                }
+              },
+              "required": [
+                "action",
+                "param",
+                "target"
+              ],
+              "type": "object"
+            }
+          ],
+          "properties": {
+            "op": {
+              "enum": [
+                "family"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "op"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "oneOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "action": {
+                  "enum": [
+                    "create"
+                  ],
+                  "type": "string"
+                },
+                "elevation": {
+                  "$ref": "#/definitions/Len"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "slot": {
+                  "format": "uint32",
+                  "minimum": 0.0,
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "action",
+                "elevation",
+                "name",
+                "slot"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "action": {
+                  "enum": [
+                    "rename"
+                  ],
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "target": {
+                  "$ref": "#/definitions/Ref"
+                }
+              },
+              "required": [
+                "action",
+                "name",
+                "target"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "action": {
+                  "enum": [
+                    "set_elevation"
+                  ],
+                  "type": "string"
+                },
+                "elevation": {
+                  "$ref": "#/definitions/Len"
+                },
+                "target": {
+                  "$ref": "#/definitions/Ref"
+                }
+              },
+              "required": [
+                "action",
+                "elevation",
+                "target"
+              ],
+              "type": "object"
+            }
+          ],
+          "properties": {
+            "op": {
+              "enum": [
+                "level"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "op"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "oneOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "a": {
+                  "$ref": "#/definitions/P2"
+                },
+                "action": {
+                  "enum": [
+                    "create"
+                  ],
+                  "type": "string"
+                },
+                "b": {
+                  "$ref": "#/definitions/P2"
+                },
+                "bulge": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "slot": {
+                  "format": "uint32",
+                  "minimum": 0.0,
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "a",
+                "action",
+                "b",
+                "bulge",
+                "name",
+                "slot"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "action": {
+                  "enum": [
+                    "rename"
+                  ],
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "target": {
+                  "$ref": "#/definitions/Ref"
+                }
+              },
+              "required": [
+                "action",
+                "name",
+                "target"
+              ],
+              "type": "object"
+            }
+          ],
+          "properties": {
+            "op": {
+              "enum": [
+                "grid"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "op"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "oneOf": [
+            {
+              "additionalProperties": false,
+              "properties": {
+                "action": {
+                  "enum": [
+                    "create_set"
+                  ],
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "slot": {
+                  "format": "uint32",
+                  "minimum": 0.0,
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "action",
+                "name",
+                "slot"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "action": {
+                  "enum": [
+                    "add"
+                  ],
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "set": {
+                  "$ref": "#/definitions/Ref"
+                },
+                "slot": {
+                  "format": "uint32",
+                  "minimum": 0.0,
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "action",
+                "name",
+                "set",
+                "slot"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "action": {
+                  "enum": [
+                    "assign"
+                  ],
+                  "type": "string"
+                },
+                "option": {
+                  "$ref": "#/definitions/Ref"
+                },
+                "target": {
+                  "$ref": "#/definitions/Targets"
+                }
+              },
+              "required": [
+                "action",
+                "option",
+                "target"
+              ],
+              "type": "object"
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "action": {
+                  "enum": [
+                    "accept"
+                  ],
+                  "type": "string"
+                },
+                "option": {
+                  "$ref": "#/definitions/Ref"
+                }
+              },
+              "required": [
+                "action",
+                "option"
+              ],
+              "type": "object"
+            }
+          ],
+          "properties": {
+            "op": {
+              "enum": [
+                "option"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "op"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "P2": {
+      "additionalProperties": false,
+      "description": "Plan point (project coordinates).",
+      "properties": {
+        "unit": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/LenUnit"
+            }
+          ],
+          "description": "Length unit of x and y: m, cm, mm, ft or in. Required."
+        },
+        "x": {
+          "description": "X coordinate, expressed in `unit`.",
+          "format": "double",
+          "type": "number"
+        },
+        "y": {
+          "description": "Y coordinate, expressed in `unit`.",
+          "format": "double",
+          "type": "number"
+        }
+      },
+      "required": [
+        "unit",
+        "x",
+        "y"
+      ],
+      "type": "object"
+    },
+    "P3": {
+      "additionalProperties": false,
+      "description": "Model point (project coordinates, z up).",
+      "properties": {
+        "unit": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/LenUnit"
+            }
+          ],
+          "description": "Length unit of x, y and z: m, cm, mm, ft or in. Required."
+        },
+        "x": {
+          "description": "X component, expressed in `unit`.",
+          "format": "double",
+          "type": "number"
+        },
+        "y": {
+          "description": "Y component, expressed in `unit`.",
+          "format": "double",
+          "type": "number"
+        },
+        "z": {
+          "description": "Z component (up), expressed in `unit`.",
+          "format": "double",
+          "type": "number"
+        }
+      },
+      "required": [
+        "unit",
+        "x",
+        "y",
+        "z"
+      ],
+      "type": "object"
+    },
+    "PanelDiv": {
+      "description": "How a direction of a panel grid is divided.",
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "description": "`n` panels at equal parameter steps.",
+          "properties": {
+            "by": {
+              "enum": [
+                "count"
+              ],
+              "type": "string"
+            },
+            "n": {
+              "format": "uint32",
+              "minimum": 0.0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "by",
+            "n"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "description": "`n` panels of equal length along the surface.",
+          "properties": {
+            "by": {
+              "enum": [
+                "equal"
+              ],
+              "type": "string"
+            },
+            "n": {
+              "format": "uint32",
+              "minimum": 0.0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "by",
+            "n"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "description": "Panels of about this length along the surface (count rounded up).",
+          "properties": {
+            "by": {
+              "enum": [
+                "width"
+              ],
+              "type": "string"
+            },
+            "width": {
+              "$ref": "#/definitions/Len"
+            }
+          },
+          "required": [
+            "by",
+            "width"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "description": "Row lines where the surface crosses these absolute heights, rising (rows only).",
+          "properties": {
+            "by": {
+              "enum": [
+                "heights"
+              ],
+              "type": "string"
+            },
+            "heights": {
+              "items": {
+                "$ref": "#/definitions/Len"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "by",
+            "heights"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "PanelPattern": {
+      "enum": [
+        "quad",
+        "triangle",
+        "diamond"
+      ],
+      "type": "string"
+    },
+    "ParamKind": {
+      "enum": [
+        "text",
+        "integer",
+        "number",
+        "length",
+        "area",
+        "volume",
+        "angle",
+        "bool",
+        "ref"
+      ],
+      "type": "string"
+    },
+    "Path": {
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "bulges": {
+              "items": {
+                "format": "double",
+                "type": "number"
+              },
+              "type": "array"
+            },
+            "closed": {
+              "type": "boolean"
+            },
+            "kind": {
+              "enum": [
+                "polyline"
+              ],
+              "type": "string"
+            },
+            "pts": {
+              "items": {
+                "$ref": "#/definitions/P3"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "bulges",
+            "closed",
+            "kind",
+            "pts"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "description": "`wall:5/axis`, `slab:9/edge:3`, `grid:A`, a drawing polyline.",
+          "properties": {
+            "kind": {
+              "enum": [
+                "ref"
+              ],
+              "type": "string"
+            },
+            "of": {
+              "$ref": "#/definitions/Ref"
+            }
+          },
+          "required": [
+            "kind",
+            "of"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "Pattern": {
+      "description": "Section 4.4.",
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "count": {
+              "format": "uint32",
+              "minimum": 0.0,
+              "type": "integer"
+            },
+            "dir": {
+              "$ref": "#/definitions/Dir3"
+            },
+            "kind": {
+              "enum": [
+                "linear"
+              ],
+              "type": "string"
+            },
+            "spacing": {
+              "$ref": "#/definitions/Spacing"
+            }
+          },
+          "required": [
+            "count",
+            "dir",
+            "kind",
+            "spacing"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "angle": {
+              "$ref": "#/definitions/Angle"
+            },
+            "axis": {
+              "$ref": "#/definitions/Dir3"
+            },
+            "center": {
+              "$ref": "#/definitions/P3"
+            },
+            "count": {
+              "format": "uint32",
+              "minimum": 0.0,
+              "type": "integer"
+            },
+            "kind": {
+              "enum": [
+                "radial"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "angle",
+            "axis",
+            "center",
+            "count",
+            "kind"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "align": {
+              "$ref": "#/definitions/CurveAlign"
+            },
+            "count": {
+              "format": "uint32",
+              "minimum": 0.0,
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "kind": {
+              "enum": [
+                "along_curve"
+              ],
+              "type": "string"
+            },
+            "path": {
+              "$ref": "#/definitions/Path"
+            },
+            "spacing": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/Len"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "start_offset": {
+              "$ref": "#/definitions/Len"
+            }
+          },
+          "required": [
+            "align",
+            "kind",
+            "path",
+            "start_offset"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "align": {
+              "$ref": "#/definitions/SurfAlign"
+            },
+            "face": {
+              "$ref": "#/definitions/Ref"
+            },
+            "kind": {
+              "enum": [
+                "on_surface"
+              ],
+              "type": "string"
+            },
+            "u": {
+              "$ref": "#/definitions/Div"
+            },
+            "v": {
+              "$ref": "#/definitions/Div"
+            }
+          },
+          "required": [
+            "align",
+            "face",
+            "kind",
+            "u",
+            "v"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "angle": {
+              "$ref": "#/definitions/Angle"
+            },
+            "dx": {
+              "$ref": "#/definitions/Len"
+            },
+            "dy": {
+              "$ref": "#/definitions/Len"
+            },
+            "kind": {
+              "enum": [
+                "grid_2d"
+              ],
+              "type": "string"
+            },
+            "nx": {
+              "format": "uint32",
+              "minimum": 0.0,
+              "type": "integer"
+            },
+            "ny": {
+              "format": "uint32",
+              "minimum": 0.0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "angle",
+            "dx",
+            "dy",
+            "kind",
+            "nx",
+            "ny"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "a": {
+              "$ref": "#/definitions/Ref"
+            },
+            "b": {
+              "$ref": "#/definitions/Ref"
+            },
+            "count": {
+              "format": "uint32",
+              "minimum": 0.0,
+              "type": "integer"
+            },
+            "ends": {
+              "type": "boolean"
+            },
+            "kind": {
+              "enum": [
+                "distribute"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "a",
+            "b",
+            "count",
+            "ends",
+            "kind"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "PatternOut": {
+      "description": "Pattern output: plain copies (default, export-friendly) or one re-evaluating element.",
+      "enum": [
+        "copies",
+        "element"
+      ],
+      "type": "string"
+    },
+    "Place": {
+      "description": "A point given by intent; the solver resolves it and the intent is stored.",
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "enum": [
+                "at"
+              ],
+              "type": "string"
+            },
+            "p": {
+              "$ref": "#/definitions/P3"
+            }
+          },
+          "required": [
+            "kind",
+            "p"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "d": {
+              "$ref": "#/definitions/Len"
+            },
+            "from": {
+              "$ref": "#/definitions/Ref"
+            },
+            "kind": {
+              "enum": [
+                "offset"
+              ],
+              "type": "string"
+            },
+            "side": {
+              "$ref": "#/definitions/Side"
+            }
+          },
+          "required": [
+            "d",
+            "from",
+            "kind",
+            "side"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "along": {
+              "$ref": "#/definitions/Len"
+            },
+            "from_end": {
+              "$ref": "#/definitions/End"
+            },
+            "host": {
+              "$ref": "#/definitions/Ref"
+            },
+            "kind": {
+              "enum": [
+                "on_host"
+              ],
+              "type": "string"
+            },
+            "side": {
+              "$ref": "#/definitions/Side"
+            },
+            "z": {
+              "$ref": "#/definitions/Len"
+            }
+          },
+          "required": [
+            "along",
+            "from_end",
+            "host",
+            "kind",
+            "side",
+            "z"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "a": {
+              "$ref": "#/definitions/Ref"
+            },
+            "b": {
+              "$ref": "#/definitions/Ref"
+            },
+            "kind": {
+              "enum": [
+                "crossing"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "a",
+            "b",
+            "kind"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "enum": [
+                "center"
+              ],
+              "type": "string"
+            },
+            "of": {
+              "$ref": "#/definitions/Ref"
+            }
+          },
+          "required": [
+            "kind",
+            "of"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "enum": [
+                "align_to"
+              ],
+              "type": "string"
+            },
+            "refs": {
+              "items": {
+                "$ref": "#/definitions/Ref"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "kind",
+            "refs"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "description": "Point at parameter `t` (0..1) from `a` to `b`.",
+          "properties": {
+            "a": {
+              "$ref": "#/definitions/Ref"
+            },
+            "b": {
+              "$ref": "#/definitions/Ref"
+            },
+            "kind": {
+              "enum": [
+                "between"
+              ],
+              "type": "string"
+            },
+            "t": {
+              "format": "double",
+              "type": "number"
+            }
+          },
+          "required": [
+            "a",
+            "b",
+            "kind",
+            "t"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "enum": [
+                "snap"
+              ],
+              "type": "string"
+            },
+            "kinds": {
+              "items": {
+                "$ref": "#/definitions/SnapKind"
+              },
+              "type": "array"
+            },
+            "max": {
+              "$ref": "#/definitions/Len"
+            },
+            "near": {
+              "$ref": "#/definitions/P3"
+            }
+          },
+          "required": [
+            "kind",
+            "kinds",
+            "max",
+            "near"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "Profile": {
+      "description": "Named section shape with parameters (lowered to `gsolid::Section` / `profile.rs`).",
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "h": {
+              "$ref": "#/definitions/Len"
+            },
+            "shape": {
+              "enum": [
+                "rect"
+              ],
+              "type": "string"
+            },
+            "w": {
+              "$ref": "#/definitions/Len"
+            }
+          },
+          "required": [
+            "h",
+            "shape",
+            "w"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "r": {
+              "$ref": "#/definitions/Len"
+            },
+            "shape": {
+              "enum": [
+                "circle"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "r",
+            "shape"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "r_in": {
+              "$ref": "#/definitions/Len"
+            },
+            "r_out": {
+              "$ref": "#/definitions/Len"
+            },
+            "shape": {
+              "enum": [
+                "ring"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "r_in",
+            "r_out",
+            "shape"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "b": {
+              "$ref": "#/definitions/Len"
+            },
+            "h": {
+              "$ref": "#/definitions/Len"
+            },
+            "shape": {
+              "enum": [
+                "i"
+              ],
+              "type": "string"
+            },
+            "tf": {
+              "$ref": "#/definitions/Len"
+            },
+            "tw": {
+              "$ref": "#/definitions/Len"
+            }
+          },
+          "required": [
+            "b",
+            "h",
+            "shape",
+            "tf",
+            "tw"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "b": {
+              "$ref": "#/definitions/Len"
+            },
+            "h": {
+              "$ref": "#/definitions/Len"
+            },
+            "shape": {
+              "enum": [
+                "h"
+              ],
+              "type": "string"
+            },
+            "tf": {
+              "$ref": "#/definitions/Len"
+            },
+            "tw": {
+              "$ref": "#/definitions/Len"
+            }
+          },
+          "required": [
+            "b",
+            "h",
+            "shape",
+            "tf",
+            "tw"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "b": {
+              "$ref": "#/definitions/Len"
+            },
+            "h": {
+              "$ref": "#/definitions/Len"
+            },
+            "shape": {
+              "enum": [
+                "c"
+              ],
+              "type": "string"
+            },
+            "tf": {
+              "$ref": "#/definitions/Len"
+            },
+            "tw": {
+              "$ref": "#/definitions/Len"
+            }
+          },
+          "required": [
+            "b",
+            "h",
+            "shape",
+            "tf",
+            "tw"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "b": {
+              "$ref": "#/definitions/Len"
+            },
+            "h": {
+              "$ref": "#/definitions/Len"
+            },
+            "shape": {
+              "enum": [
+                "t"
+              ],
+              "type": "string"
+            },
+            "tf": {
+              "$ref": "#/definitions/Len"
+            },
+            "tw": {
+              "$ref": "#/definitions/Len"
+            }
+          },
+          "required": [
+            "b",
+            "h",
+            "shape",
+            "tf",
+            "tw"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "b": {
+              "$ref": "#/definitions/Len"
+            },
+            "h": {
+              "$ref": "#/definitions/Len"
+            },
+            "shape": {
+              "enum": [
+                "l"
+              ],
+              "type": "string"
+            },
+            "t": {
+              "$ref": "#/definitions/Len"
+            }
+          },
+          "required": [
+            "b",
+            "h",
+            "shape",
+            "t"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "b": {
+              "$ref": "#/definitions/Len"
+            },
+            "h": {
+              "$ref": "#/definitions/Len"
+            },
+            "shape": {
+              "enum": [
+                "z"
+              ],
+              "type": "string"
+            },
+            "t": {
+              "$ref": "#/definitions/Len"
+            }
+          },
+          "required": [
+            "b",
+            "h",
+            "shape",
+            "t"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "h": {
+              "$ref": "#/definitions/Len"
+            },
+            "shape": {
+              "enum": [
+                "tube"
+              ],
+              "type": "string"
+            },
+            "t": {
+              "$ref": "#/definitions/Len"
+            },
+            "w": {
+              "$ref": "#/definitions/Len"
+            }
+          },
+          "required": [
+            "h",
+            "shape",
+            "t",
+            "w"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "pts": {
+              "items": {
+                "$ref": "#/definitions/P2"
+              },
+              "type": "array"
+            },
+            "shape": {
+              "enum": [
+                "polygon"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "pts",
+            "shape"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "description": "`bulges[i]` belongs to the segment from `pts[i]`; empty means all straight.",
+          "properties": {
+            "bulges": {
+              "items": {
+                "format": "double",
+                "type": "number"
+              },
+              "type": "array"
+            },
+            "closed": {
+              "type": "boolean"
+            },
+            "pts": {
+              "items": {
+                "$ref": "#/definitions/P2"
+              },
+              "type": "array"
+            },
+            "shape": {
+              "enum": [
+                "polyline"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "bulges",
+            "closed",
+            "pts",
+            "shape"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "holes": {
+              "items": {
+                "items": {
+                  "$ref": "#/definitions/P2"
+                },
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "outer": {
+              "items": {
+                "$ref": "#/definitions/P2"
+              },
+              "type": "array"
+            },
+            "shape": {
+              "enum": [
+                "rings"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "holes",
+            "outer",
+            "shape"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "description": "A stored profile type.",
+          "properties": {
+            "of": {
+              "$ref": "#/definitions/Ref"
+            },
+            "shape": {
+              "enum": [
+                "stored"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "of",
+            "shape"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "Ref": {
+      "description": "Reference to something in the model or created earlier in the same envelope.",
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "description": "Existing row: `wall:55`.",
+          "properties": {
+            "by": {
+              "enum": [
+                "id"
+              ],
+              "type": "string"
+            },
+            "cat": {
+              "$ref": "#/definitions/Cat"
+            },
+            "id": {
+              "format": "int64",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "by",
+            "cat",
+            "id"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "description": "Created by an earlier op of this envelope (its `slot`).",
+          "properties": {
+            "by": {
+              "enum": [
+                "new"
+              ],
+              "type": "string"
+            },
+            "slot": {
+              "format": "uint32",
+              "minimum": 0.0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "by",
+            "slot"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "description": "Frozen selection set by name.",
+          "properties": {
+            "by": {
+              "enum": [
+                "set"
+              ],
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "by",
+            "name"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "description": "By unique name within the category (levels, grids, types, families).",
+          "properties": {
+            "by": {
+              "enum": [
+                "name"
+              ],
+              "type": "string"
+            },
+            "cat": {
+              "$ref": "#/definitions/Cat"
+            },
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "by",
+            "cat",
+            "name"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "description": "Named face, edge or axis of another ref: `wall:55/face:left`, `slab:9/edge:3`.",
+          "properties": {
+            "by": {
+              "enum": [
+                "part"
+              ],
+              "type": "string"
+            },
+            "of": {
+              "$ref": "#/definitions/Ref"
+            },
+            "part": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "by",
+            "of",
+            "part"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "RefPlaneDef": {
+      "additionalProperties": false,
+      "description": "Reference plane of a family rig, normal to `axis`.",
+      "properties": {
+        "axis": {
+          "$ref": "#/definitions/Axis"
+        },
+        "formula": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "name": {
+          "type": "string"
+        },
+        "offset": {
+          "$ref": "#/definitions/Len"
+        }
+      },
+      "required": [
+        "axis",
+        "name",
+        "offset"
+      ],
+      "type": "object"
+    },
+    "RoleTag": {
+      "additionalProperties": false,
+      "description": "A component row written beside a part: it counts as a `name` (blade, gondola), placed at `at`.",
+      "properties": {
+        "at": {
+          "$ref": "#/definitions/P3"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "at",
+        "name"
+      ],
+      "type": "object"
+    },
+    "Rule": {
+      "additionalProperties": false,
+      "description": "Persisted constraint (`constraint_rule`).",
+      "properties": {
+        "kind": {
+          "$ref": "#/definitions/RuleKind"
+        },
+        "refs": {
+          "items": {
+            "$ref": "#/definitions/Ref"
+          },
+          "type": "array"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/Value"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "refs"
+      ],
+      "type": "object"
+    },
+    "RuleKind": {
+      "enum": [
+        "align",
+        "distance",
+        "equal",
+        "parallel",
+        "perpendicular",
+        "coincident",
+        "distribute",
+        "lock"
+      ],
+      "type": "string"
+    },
+    "Section": {
+      "additionalProperties": false,
+      "properties": {
+        "frame": {
+          "$ref": "#/definitions/Frame"
+        },
+        "profile": {
+          "$ref": "#/definitions/Profile"
+        }
+      },
+      "required": [
+        "frame",
+        "profile"
+      ],
+      "type": "object"
+    },
+    "ShellKind": {
+      "description": "What a surface shell is in the model.",
+      "enum": [
+        "roof",
+        "slab"
+      ],
+      "type": "string"
+    },
+    "ShellLayer": {
+      "additionalProperties": false,
+      "description": "One layer of a surface shell, listed along the surface normal.",
+      "properties": {
+        "material": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "thickness": {
+          "$ref": "#/definitions/Len"
+        }
+      },
+      "required": [
+        "thickness"
+      ],
+      "type": "object"
+    },
+    "ShellSide": {
+      "description": "Which way the shell grows from the surface (its normal follows u x v).",
+      "enum": [
+        "normal",
+        "reverse",
+        "center"
+      ],
+      "type": "string"
+    },
+    "Side": {
+      "enum": [
+        "left",
+        "right",
+        "center"
+      ],
+      "type": "string"
+    },
+    "SnapKind": {
+      "enum": [
+        "endpoint",
+        "midpoint",
+        "intersection",
+        "nearest",
+        "perpendicular",
+        "center",
+        "grid",
+        "face"
+      ],
+      "type": "string"
+    },
+    "Spacing": {
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "by": {
+              "enum": [
+                "step"
+              ],
+              "type": "string"
+            },
+            "d": {
+              "$ref": "#/definitions/Len"
+            }
+          },
+          "required": [
+            "by",
+            "d"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "description": "Spread `count` copies over `total`.",
+          "properties": {
+            "by": {
+              "enum": [
+                "fit"
+              ],
+              "type": "string"
+            },
+            "total": {
+              "$ref": "#/definitions/Len"
+            }
+          },
+          "required": [
+            "by",
+            "total"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "SurfAlign": {
+      "enum": [
+        "normal",
+        "up"
+      ],
+      "type": "string"
+    },
+    "SurfaceBy": {
+      "description": "How a freeform surface is made.",
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "description": "Skinned through the section curves in order; `degree` across them (default 3). `params` gives the v parameter of each curve (rising from 0 to 1, one per curve); two lofts that share a column of points and the same `params` meet on one edge. None takes chord-length parameters from the curves.",
+          "properties": {
+            "by": {
+              "enum": [
+                "loft"
+              ],
+              "type": "string"
+            },
+            "curves": {
+              "items": {
+                "$ref": "#/definitions/Curve3"
+              },
+              "type": "array"
+            },
+            "degree": {
+              "format": "uint32",
+              "minimum": 0.0,
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "params": {
+              "items": {
+                "format": "double",
+                "type": "number"
+              },
+              "type": [
+                "array",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "by",
+            "curves"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "description": "Straight rulings between two curves.",
+          "properties": {
+            "a": {
+              "$ref": "#/definitions/Curve3"
+            },
+            "b": {
+              "$ref": "#/definitions/Curve3"
+            },
+            "by": {
+              "enum": [
+                "ruled"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "a",
+            "b",
+            "by"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "description": "Profile curve turned about the axis from `axis_a` to `axis_b`.",
+          "properties": {
+            "angle": {
+              "$ref": "#/definitions/Angle"
+            },
+            "axis_a": {
+              "$ref": "#/definitions/P3"
+            },
+            "axis_b": {
+              "$ref": "#/definitions/P3"
+            },
+            "by": {
+              "enum": [
+                "revolve"
+              ],
+              "type": "string"
+            },
+            "profile": {
+              "$ref": "#/definitions/Curve3"
+            }
+          },
+          "required": [
+            "angle",
+            "axis_a",
+            "axis_b",
+            "by",
+            "profile"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "description": "Control net: `rows[i][j]`, rows along u; all rows the same length. `weights` (same shape, plain numbers > 0) makes it rational.",
+          "properties": {
+            "by": {
+              "enum": [
+                "points"
+              ],
+              "type": "string"
+            },
+            "degree_u": {
+              "format": "uint32",
+              "minimum": 0.0,
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "degree_v": {
+              "format": "uint32",
+              "minimum": 0.0,
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "rows": {
+              "items": {
+                "items": {
+                  "$ref": "#/definitions/P3"
+                },
+                "type": "array"
+              },
+              "type": "array"
+            },
+            "weights": {
+              "items": {
+                "items": {
+                  "format": "double",
+                  "type": "number"
+                },
+                "type": "array"
+              },
+              "type": [
+                "array",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "by",
+            "rows"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "description": "Network of curves: `u_curves` in order across v, `v_curves` in order across u; every u-curve meets every v-curve. `tolerance` (default 1 mm) bounds both the gaps at the crossings and the deviation of the surface from the curves.",
+          "properties": {
+            "by": {
+              "enum": [
+                "network"
+              ],
+              "type": "string"
+            },
+            "degree": {
+              "format": "uint32",
+              "minimum": 0.0,
+              "type": [
+                "integer",
+                "null"
+              ]
+            },
+            "tolerance": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/Len"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "u_curves": {
+              "items": {
+                "$ref": "#/definitions/Curve3"
+              },
+              "type": "array"
+            },
+            "v_curves": {
+              "items": {
+                "$ref": "#/definitions/Curve3"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "by",
+            "u_curves",
+            "v_curves"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "description": "Spherical cap over the circle of plan `radius` around `center` (the rim height), rising `rise` (at most the radius; equal makes a hemisphere). Exact.",
+          "properties": {
+            "by": {
+              "enum": [
+                "dome"
+              ],
+              "type": "string"
+            },
+            "center": {
+              "$ref": "#/definitions/P3"
+            },
+            "radius": {
+              "$ref": "#/definitions/Len"
+            },
+            "rise": {
+              "$ref": "#/definitions/Len"
+            }
+          },
+          "required": [
+            "by",
+            "center",
+            "radius",
+            "rise"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "description": "Segmental barrel vault along the level line `a` -> `b` (the springing), its arc spanning `span` and rising `rise` (at most half the span). Exact.",
+          "properties": {
+            "a": {
+              "$ref": "#/definitions/P3"
+            },
+            "b": {
+              "$ref": "#/definitions/P3"
+            },
+            "by": {
+              "enum": [
+                "vault"
+              ],
+              "type": "string"
+            },
+            "rise": {
+              "$ref": "#/definitions/Len"
+            },
+            "span": {
+              "$ref": "#/definitions/Len"
+            }
+          },
+          "required": [
+            "a",
+            "b",
+            "by",
+            "rise",
+            "span"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "Targets": {
+      "description": "What an op acts on.",
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "by": {
+              "enum": [
+                "refs"
+              ],
+              "type": "string"
+            },
+            "refs": {
+              "items": {
+                "$ref": "#/definitions/Ref"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "by",
+            "refs"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "description": "Frozen selection set by name.",
+          "properties": {
+            "by": {
+              "enum": [
+                "set"
+              ],
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "by",
+            "name"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "description": "Filter DSL of `query_elements`, evaluated when the envelope is applied.",
+          "properties": {
+            "by": {
+              "enum": [
+                "filter"
+              ],
+              "type": "string"
+            },
+            "cat": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/Cat"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "query": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "by",
+            "query"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "Tool": {
+      "description": "Second operand of a boolean.",
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "kind": {
+              "enum": [
+                "ref"
+              ],
+              "type": "string"
+            },
+            "of": {
+              "$ref": "#/definitions/Ref"
+            }
+          },
+          "required": [
+            "kind",
+            "of"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "form": {
+              "$ref": "#/definitions/Form"
+            },
+            "kind": {
+              "enum": [
+                "form"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "form",
+            "kind"
+          ],
+          "type": "object"
+        }
+      ]
+    },
+    "UvTrim": {
+      "additionalProperties": false,
+      "description": "Trim loops as `[u, v]` pairs of normalized surface parameters (0..1, plain numbers).",
+      "properties": {
+        "holes": {
+          "description": "Cut-outs inside the kept region.",
+          "items": {
+            "items": {
+              "items": {
+                "format": "double",
+                "type": "number"
+              },
+              "maxItems": 2,
+              "minItems": 2,
+              "type": "array"
+            },
+            "type": "array"
+          },
+          "type": "array"
+        },
+        "outer": {
+          "description": "Kept region; none keeps the whole surface.",
+          "items": {
+            "items": {
+              "format": "double",
+              "type": "number"
+            },
+            "maxItems": 2,
+            "minItems": 2,
+            "type": "array"
+          },
+          "type": [
+            "array",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "holes"
+      ],
+      "type": "object"
+    },
+    "V3": {
+      "additionalProperties": false,
+      "description": "Displacement (has a length unit, unlike `Dir3`).",
+      "properties": {
+        "unit": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/LenUnit"
+            }
+          ],
+          "description": "Length unit of x, y and z: m, cm, mm, ft or in. Required."
+        },
+        "x": {
+          "description": "X component, expressed in `unit`.",
+          "format": "double",
+          "type": "number"
+        },
+        "y": {
+          "description": "Y component, expressed in `unit`.",
+          "format": "double",
+          "type": "number"
+        },
+        "z": {
+          "description": "Z component (up), expressed in `unit`.",
+          "format": "double",
+          "type": "number"
+        }
+      },
+      "required": [
+        "unit",
+        "x",
+        "y",
+        "z"
+      ],
+      "type": "object"
+    },
+    "Value": {
+      "additionalProperties": false,
+      "description": "A parameter value. `unit` must be present on the wire; `null` means dimensionless (text, count, bool, ratio given as a plain number).",
+      "properties": {
+        "unit": {
+          "description": "Unit of `v` (m, mm, ft, m2, m3, deg, kg, kN, kPa, s, pct, ...) or null for a plain number, text or bool. The key must be present.",
+          "enum": [
+            "m",
+            "cm",
+            "mm",
+            "ft",
+            "in",
+            "m2",
+            "mm2",
+            "m3",
+            "deg",
+            "rad",
+            "kg",
+            "kg/m3",
+            "kN",
+            "kPa",
+            "s",
+            "pct"
+          ],
+          "type": "string"
+        },
+        "v": {
+          "description": "The value, expressed in `unit` when a unit is given."
+        }
+      },
+      "required": [
+        "unit",
+        "v"
+      ],
+      "type": "object"
+    },
+    "Xform": {
+      "description": "Rigid transform (no scale).",
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "properties": {
+            "by": {
+              "$ref": "#/definitions/V3"
+            },
+            "kind": {
+              "enum": [
+                "move"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "by",
+            "kind"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "properties": {
+            "angle": {
+              "$ref": "#/definitions/Angle"
+            },
+            "axis": {
+              "$ref": "#/definitions/Dir3"
+            },
+            "center": {
+              "$ref": "#/definitions/P3"
+            },
+            "kind": {
+              "enum": [
+                "rotate"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "angle",
+            "axis",
+            "center",
+            "kind"
+          ],
+          "type": "object"
+        },
+        {
+          "additionalProperties": false,
+          "description": "Mirror about the vertical plane through `a`-`b`.",
+          "properties": {
+            "a": {
+              "$ref": "#/definitions/P3"
+            },
+            "b": {
+              "$ref": "#/definitions/P3"
+            },
+            "kind": {
+              "enum": [
+                "mirror"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "a",
+            "b",
+            "kind"
+          ],
+          "type": "object"
+        }
+      ]
+    }
+  },
+  "description": "One envelope = one journal entry = one undo step.",
+  "properties": {
+    "actor": {
+      "$ref": "#/definitions/Actor"
+    },
+    "groups": {
+      "items": {
+        "$ref": "#/definitions/Group"
+      },
+      "type": "array"
+    },
+    "title": {
+      "type": "string"
+    },
+    "v": {
+      "format": "uint32",
+      "minimum": 0.0,
+      "type": "integer"
+    },
+    "why": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "actor",
+    "groups",
+    "title",
+    "v"
+  ],
+  "title": "ddc-ops wire v2",
+  "type": "object",
+  "x-categories": [
+    "wall",
+    "door",
+    "window",
+    "opening",
+    "curtain_wall",
+    "curtain_panel",
+    "slab",
+    "roof",
+    "ceiling",
+    "column",
+    "beam",
+    "brace",
+    "truss",
+    "beam_system",
+    "footing",
+    "strip_footing",
+    "raft",
+    "stair",
+    "railing",
+    "ramp",
+    "component",
+    "room",
+    "zone",
+    "shaft",
+    "mep_run",
+    "mep_device",
+    "rebar",
+    "solid",
+    "mass",
+    "mesh",
+    "topography",
+    "freeform",
+    "panel_system",
+    "surface_shell",
+    "gridshell",
+    "level",
+    "grid",
+    "ref_plane",
+    "annotation",
+    "group",
+    "type",
+    "wtype",
+    "stype",
+    "mtype",
+    "family",
+    "param",
+    "option_set",
+    "design_option"
+  ],
+  "x-examples": {
+    "elements": {
+      "beam": {
+        "a": {
+          "kind": "center",
+          "of": {
+            "by": "new",
+            "slot": 18
+          }
+        },
+        "b": {
+          "kind": "at",
+          "p": {
+            "unit": "m",
+            "x": 6.0,
+            "y": 0.0,
+            "z": 3.0
+          }
+        },
+        "fields": [],
+        "kind": "beam",
+        "level": {
+          "by": "new",
+          "slot": 1
+        },
+        "type": null
+      },
+      "ceiling": {
+        "boundary": [
+          {
+            "kind": "snap",
+            "kinds": [
+              "endpoint"
+            ],
+            "max": {
+              "unit": "mm",
+              "v": 100.0
+            },
+            "near": {
+              "unit": "m",
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          {
+            "kind": "align_to",
+            "refs": [
+              {
+                "by": "new",
+                "slot": 10
+              },
+              {
+                "by": "new",
+                "slot": 11
+              }
+            ]
+          },
+          {
+            "kind": "at",
+            "p": {
+              "unit": "m",
+              "x": 6.0,
+              "y": 4.0,
+              "z": 0.0
+            }
+          }
+        ],
+        "fields": [],
+        "height": {
+          "unit": "m",
+          "v": 2.7
+        },
+        "kind": "ceiling",
+        "level": {
+          "by": "new",
+          "slot": 1
+        },
+        "type": null
+      },
+      "column": {
+        "at": {
+          "a": {
+            "by": "new",
+            "slot": 2
+          },
+          "b": {
+            "by": "name",
+            "cat": "grid",
+            "name": "1"
+          },
+          "kind": "crossing"
+        },
+        "fields": [],
+        "height": {
+          "unit": "m",
+          "v": 3.0
+        },
+        "kind": "column",
+        "level": {
+          "by": "new",
+          "slot": 1
+        },
+        "rotation": {
+          "unit": "deg",
+          "v": 0.0
+        },
+        "top": {
+          "by": "name",
+          "cat": "level",
+          "name": "L1"
+        },
+        "type": {
+          "by": "name",
+          "cat": "mtype",
+          "name": "C 400x400"
+        }
+      },
+      "component": {
+        "at": {
+          "kind": "center",
+          "of": {
+            "by": "new",
+            "slot": 22
+          }
+        },
+        "family": {
+          "by": "new",
+          "slot": 4
+        },
+        "fields": [
+          {
+            "name": "W",
+            "value": {
+              "unit": "m",
+              "v": 1.6
+            }
+          }
+        ],
+        "host": null,
+        "kind": "component",
+        "level": {
+          "by": "new",
+          "slot": 1
+        },
+        "rotation": {
+          "unit": "deg",
+          "v": 90.0
+        },
+        "type": null
+      },
+      "door": {
+        "at": {
+          "along": {
+            "unit": "m",
+            "v": 1.2
+          },
+          "from_end": "a",
+          "host": {
+            "by": "new",
+            "slot": 10
+          },
+          "kind": "on_host",
+          "side": "left",
+          "z": {
+            "unit": "m",
+            "v": 0.0
+          }
+        },
+        "fields": [
+          {
+            "name": "fire_rating",
+            "value": {
+              "unit": null,
+              "v": "EI30"
+            }
+          }
+        ],
+        "host": {
+          "by": "new",
+          "slot": 10
+        },
+        "kind": "door",
+        "type": {
+          "by": "name",
+          "cat": "type",
+          "name": "Door 900x2100"
+        }
+      },
+      "generic": {
+        "at": [
+          {
+            "kind": "center",
+            "of": {
+              "by": "new",
+              "slot": 18
+            }
+          }
+        ],
+        "cat": "footing",
+        "fields": [
+          {
+            "name": "depth",
+            "value": {
+              "unit": "mm",
+              "v": 600.0
+            }
+          }
+        ],
+        "kind": "generic",
+        "level": {
+          "by": "name",
+          "cat": "level",
+          "name": "L1"
+        },
+        "type": null
+      },
+      "mep_run": {
+        "fields": [],
+        "kind": "mep_run",
+        "level": {
+          "by": "new",
+          "slot": 1
+        },
+        "path": [
+          {
+            "kind": "at",
+            "p": {
+              "unit": "m",
+              "x": 0.0,
+              "y": 2.0,
+              "z": 2.9
+            }
+          },
+          {
+            "kind": "at",
+            "p": {
+              "unit": "m",
+              "x": 6.0,
+              "y": 2.0,
+              "z": 2.9
+            }
+          }
+        ],
+        "size": {
+          "unit": "mm",
+          "v": 400.0
+        },
+        "system": "supply air",
+        "type": null
+      },
+      "opening": {
+        "at": {
+          "kind": "center",
+          "of": {
+            "by": "id",
+            "cat": "wall",
+            "id": 55
+          }
+        },
+        "h": {
+          "unit": "m",
+          "v": 2.0
+        },
+        "host": {
+          "by": "id",
+          "cat": "wall",
+          "id": 55
+        },
+        "kind": "opening",
+        "sill": {
+          "unit": "m",
+          "v": 0.0
+        },
+        "w": {
+          "unit": "m",
+          "v": 1.0
+        }
+      },
+      "railing": {
+        "fields": [],
+        "height": {
+          "unit": "mm",
+          "v": 1100.0
+        },
+        "host": {
+          "by": "new",
+          "slot": 20
+        },
+        "kind": "railing",
+        "level": {
+          "by": "name",
+          "cat": "level",
+          "name": "L1"
+        },
+        "path": [
+          {
+            "kind": "at",
+            "p": {
+              "unit": "m",
+              "x": 1.0,
+              "y": 1.0,
+              "z": 0.0
+            }
+          },
+          {
+            "kind": "at",
+            "p": {
+              "unit": "m",
+              "x": 1.0,
+              "y": 5.0,
+              "z": 0.0
+            }
+          }
+        ],
+        "type": null
+      },
+      "roof": {
+        "boundary": [
+          {
+            "kind": "at",
+            "p": {
+              "unit": "m",
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          {
+            "kind": "at",
+            "p": {
+              "unit": "m",
+              "x": 6.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          {
+            "kind": "at",
+            "p": {
+              "unit": "m",
+              "x": 6.0,
+              "y": 4.0,
+              "z": 0.0
+            }
+          },
+          {
+            "kind": "at",
+            "p": {
+              "unit": "m",
+              "x": 0.0,
+              "y": 4.0,
+              "z": 0.0
+            }
+          }
+        ],
+        "fields": [],
+        "kind": "roof",
+        "level": {
+          "by": "new",
+          "slot": 1
+        },
+        "slope": {
+          "unit": "deg",
+          "v": 30.0
+        },
+        "type": null
+      },
+      "room": {
+        "at": {
+          "kind": "at",
+          "p": {
+            "unit": "m",
+            "x": 3.0,
+            "y": 2.0,
+            "z": 0.0
+          }
+        },
+        "kind": "room",
+        "level": {
+          "by": "new",
+          "slot": 1
+        },
+        "name": "Kitchen",
+        "number": "3.04"
+      },
+      "slab": {
+        "boundary": [
+          {
+            "kind": "at",
+            "p": {
+              "unit": "m",
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          {
+            "kind": "at",
+            "p": {
+              "unit": "m",
+              "x": 6.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          {
+            "kind": "at",
+            "p": {
+              "unit": "m",
+              "x": 6.0,
+              "y": 4.0,
+              "z": 0.0
+            }
+          },
+          {
+            "kind": "at",
+            "p": {
+              "unit": "m",
+              "x": 0.0,
+              "y": 4.0,
+              "z": 0.0
+            }
+          }
+        ],
+        "fields": [],
+        "kind": "slab",
+        "level": {
+          "by": "new",
+          "slot": 1
+        },
+        "offset": {
+          "unit": "m",
+          "v": 0.0
+        },
+        "type": null
+      },
+      "stair": {
+        "a": {
+          "kind": "at",
+          "p": {
+            "unit": "m",
+            "x": 1.0,
+            "y": 1.0,
+            "z": 0.0
+          }
+        },
+        "b": {
+          "kind": "at",
+          "p": {
+            "unit": "m",
+            "x": 1.0,
+            "y": 5.0,
+            "z": 0.0
+          }
+        },
+        "fields": [
+          {
+            "name": "risers",
+            "value": {
+              "unit": null,
+              "v": 18
+            }
+          }
+        ],
+        "kind": "stair",
+        "level": {
+          "by": "name",
+          "cat": "level",
+          "name": "L1"
+        },
+        "top": {
+          "by": "new",
+          "slot": 1
+        },
+        "type": null,
+        "width": {
+          "unit": "mm",
+          "v": 1200.0
+        }
+      },
+      "wall": {
+        "a": {
+          "kind": "at",
+          "p": {
+            "unit": "m",
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "b": {
+          "kind": "at",
+          "p": {
+            "unit": "m",
+            "x": 6.0,
+            "y": 0.0,
+            "z": 0.0
+          }
+        },
+        "fields": [],
+        "height": {
+          "unit": "m",
+          "v": 3.0
+        },
+        "kind": "wall",
+        "level": {
+          "by": "new",
+          "slot": 1
+        },
+        "top": null,
+        "type": {
+          "by": "new",
+          "slot": 3
+        }
+      },
+      "window": {
+        "at": {
+          "a": {
+            "by": "part",
+            "of": {
+              "by": "new",
+              "slot": 10
+            },
+            "part": "end:a"
+          },
+          "b": {
+            "by": "part",
+            "of": {
+              "by": "new",
+              "slot": 10
+            },
+            "part": "end:b"
+          },
+          "kind": "between",
+          "t": 0.75
+        },
+        "fields": [],
+        "host": {
+          "by": "new",
+          "slot": 10
+        },
+        "kind": "window",
+        "sill": {
+          "unit": "mm",
+          "v": 900.0
+        },
+        "type": null
+      }
+    },
+    "ops": {
+      "constrain": {
+        "op": "constrain",
+        "rule": {
+          "kind": "distance",
+          "refs": [
+            {
+              "by": "part",
+              "of": {
+                "by": "new",
+                "slot": 10
+              },
+              "part": "face:left"
+            },
+            {
+              "by": "part",
+              "of": {
+                "by": "new",
+                "slot": 11
+              },
+              "part": "face:right"
+            }
+          ],
+          "value": {
+            "unit": "m",
+            "v": 4.0
+          }
+        }
+      },
+      "create": {
+        "el": {
+          "a": {
+            "kind": "at",
+            "p": {
+              "unit": "m",
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "b": {
+            "kind": "at",
+            "p": {
+              "unit": "m",
+              "x": 6.0,
+              "y": 0.0,
+              "z": 0.0
+            }
+          },
+          "fields": [],
+          "height": {
+            "unit": "m",
+            "v": 3.0
+          },
+          "kind": "wall",
+          "level": {
+            "by": "new",
+            "slot": 1
+          },
+          "top": null,
+          "type": {
+            "by": "new",
+            "slot": 3
+          }
+        },
+        "op": "create",
+        "slot": 10
+      },
+      "delete": {
+        "op": "delete",
+        "target": {
+          "by": "refs",
+          "refs": [
+            {
+              "by": "id",
+              "cat": "wall",
+              "id": 56
+            }
+          ]
+        }
+      },
+      "family.define": {
+        "action": "define",
+        "cat": "component",
+        "constraints": [
+          {
+            "kind": "distance",
+            "param": "W",
+            "planes": [
+              "left",
+              "right"
+            ]
+          }
+        ],
+        "forms": [
+          {
+            "form": {
+              "end": {
+                "unit": "mm",
+                "v": 750.0
+              },
+              "frame": {
+                "origin": {
+                  "unit": "m",
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "x": {
+                  "x": 1.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "z": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 1.0
+                }
+              },
+              "kind": "extrude",
+              "profile": {
+                "h": {
+                  "unit": "mm",
+                  "v": 500.0
+                },
+                "shape": "rect",
+                "w": {
+                  "unit": "mm",
+                  "v": 300.0
+                }
+              },
+              "start": {
+                "unit": "mm",
+                "v": 720.0
+              }
+            },
+            "material": "oak",
+            "name": "top",
+            "visible_if": "W > 0"
+          }
+        ],
+        "name": "Table",
+        "op": "family",
+        "params": [
+          {
+            "default": {
+              "unit": "mm",
+              "v": 1200.0
+            },
+            "formula": null,
+            "instance": true,
+            "kind": "length",
+            "name": "W",
+            "unit": "mm"
+          },
+          {
+            "default": {
+              "unit": null,
+              "v": 4
+            },
+            "formula": "rounddown(W / 600 mm) * 2",
+            "instance": false,
+            "kind": "integer",
+            "name": "Seats",
+            "unit": null
+          }
+        ],
+        "planes": [
+          {
+            "axis": "x",
+            "formula": null,
+            "name": "left",
+            "offset": {
+              "unit": "m",
+              "v": 0.0
+            }
+          },
+          {
+            "axis": "x",
+            "formula": "W",
+            "name": "right",
+            "offset": {
+              "unit": "mm",
+              "v": 1200.0
+            }
+          }
+        ],
+        "slot": 4,
+        "tests": [
+          [
+            {
+              "name": "W",
+              "value": {
+                "unit": "mm",
+                "v": 900.0
+              }
+            }
+          ],
+          [
+            {
+              "name": "W",
+              "value": {
+                "unit": "m",
+                "v": 2.4
+              }
+            }
+          ]
+        ]
+      },
+      "family.set_formula": {
+        "action": "set_formula",
+        "formula": null,
+        "op": "family",
+        "param": "Seats",
+        "target": {
+          "by": "new",
+          "slot": 4
+        }
+      },
+      "geometry.boolean": {
+        "a": {
+          "by": "new",
+          "slot": 30
+        },
+        "action": "boolean",
+        "b": {
+          "form": {
+            "end": {
+              "unit": "m",
+              "v": 3.0
+            },
+            "frame": {
+              "origin": {
+                "unit": "m",
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "x": {
+                "x": 1.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "z": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 1.0
+              }
+            },
+            "kind": "extrude",
+            "profile": {
+              "r": {
+                "unit": "mm",
+                "v": 100.0
+              },
+              "shape": "circle"
+            },
+            "start": {
+              "unit": "m",
+              "v": 0.0
+            }
+          },
+          "kind": "form"
+        },
+        "keep_tool": false,
+        "kind": "cut",
+        "op": "geometry"
+      },
+      "geometry.convert": {
+        "action": "convert",
+        "op": "geometry",
+        "target": {
+          "by": "id",
+          "cat": "mesh",
+          "id": 77
+        },
+        "to": "parametric"
+      },
+      "geometry.edit_point": {
+        "action": "edit_point",
+        "i": 1,
+        "j": 1,
+        "op": "geometry",
+        "target": {
+          "by": "new",
+          "slot": 32
+        },
+        "to": {
+          "unit": "m",
+          "x": 6.0,
+          "y": 4.0,
+          "z": 9.0
+        }
+      },
+      "geometry.freeform": {
+        "action": "freeform",
+        "level": {
+          "by": "name",
+          "cat": "level",
+          "name": "L1"
+        },
+        "material": "Concrete",
+        "name": "Roof shell",
+        "op": "geometry",
+        "side": "reverse",
+        "slot": 32,
+        "surface": {
+          "by": "loft",
+          "curves": [
+            {
+              "degree": 2,
+              "fit": "through",
+              "pts": [
+                {
+                  "unit": "m",
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 6.0
+                },
+                {
+                  "unit": "m",
+                  "x": 6.0,
+                  "y": 0.0,
+                  "z": 7.5
+                },
+                {
+                  "unit": "m",
+                  "x": 12.0,
+                  "y": 0.0,
+                  "z": 6.0
+                }
+              ]
+            },
+            {
+              "degree": 2,
+              "fit": "through",
+              "pts": [
+                {
+                  "unit": "m",
+                  "x": 0.0,
+                  "y": 4.0,
+                  "z": 6.0
+                },
+                {
+                  "unit": "m",
+                  "x": 6.0,
+                  "y": 4.0,
+                  "z": 8.5
+                },
+                {
+                  "unit": "m",
+                  "x": 12.0,
+                  "y": 4.0,
+                  "z": 6.0
+                }
+              ]
+            },
+            {
+              "degree": 2,
+              "fit": "through",
+              "pts": [
+                {
+                  "unit": "m",
+                  "x": 0.0,
+                  "y": 8.0,
+                  "z": 6.0
+                },
+                {
+                  "unit": "m",
+                  "x": 6.0,
+                  "y": 8.0,
+                  "z": 9.5
+                },
+                {
+                  "unit": "m",
+                  "x": 12.0,
+                  "y": 8.0,
+                  "z": 6.0
+                }
+              ]
+            }
+          ],
+          "degree": 2
+        },
+        "thickness": {
+          "unit": "mm",
+          "v": 150.0
+        },
+        "trim": null
+      },
+      "geometry.gridshell": {
+        "action": "gridshell",
+        "count_u": 16,
+        "count_v": 4,
+        "edge": "CHS 168.3x8",
+        "host": {
+          "center": {
+            "unit": "m",
+            "x": 60.0,
+            "y": 10.0,
+            "z": 3.0
+          },
+          "oculus": {
+            "unit": "m",
+            "v": 1.5
+          },
+          "radius": {
+            "unit": "m",
+            "v": 12.0
+          },
+          "rise": {
+            "unit": "m",
+            "v": 5.0
+          },
+          "shape": "dome"
+        },
+        "kind": "diagrid",
+        "level": {
+          "by": "name",
+          "cat": "level",
+          "name": "L1"
+        },
+        "member": "CHS 88.9x5",
+        "node": null,
+        "op": "geometry",
+        "pattern": "diagrid",
+        "slot": 38,
+        "supports": "base"
+      },
+      "geometry.mass": {
+        "action": "mass",
+        "form": {
+          "kind": "loft",
+          "path": {
+            "bulges": [],
+            "closed": false,
+            "kind": "polyline",
+            "pts": [
+              {
+                "unit": "m",
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              {
+                "unit": "m",
+                "x": 6.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            ]
+          },
+          "sections": [
+            {
+              "frame": {
+                "origin": {
+                  "unit": "m",
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "x": {
+                  "x": 1.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "z": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 1.0
+                }
+              },
+              "profile": {
+                "h": {
+                  "unit": "mm",
+                  "v": 500.0
+                },
+                "shape": "rect",
+                "w": {
+                  "unit": "mm",
+                  "v": 300.0
+                }
+              }
+            }
+          ]
+        },
+        "level": null,
+        "name": "Tower",
+        "op": "geometry",
+        "slot": 31
+      },
+      "geometry.member": {
+        "action": "member",
+        "end": {
+          "unit": "m",
+          "x": 76.0,
+          "y": 0.0,
+          "z": 3.0
+        },
+        "level": {
+          "by": "name",
+          "cat": "level",
+          "name": "L1"
+        },
+        "op": "geometry",
+        "role": "beam",
+        "rotation": null,
+        "section": "IPE 300",
+        "slot": 39,
+        "start": {
+          "unit": "m",
+          "x": 70.0,
+          "y": 0.0,
+          "z": 3.0
+        }
+      },
+      "geometry.panelize": {
+        "action": "panelize",
+        "cold": {
+          "unit": "mm",
+          "v": 20.0
+        },
+        "columns": {
+          "by": "width",
+          "width": {
+            "unit": "mm",
+            "v": 1500.0
+          }
+        },
+        "flat": {
+          "unit": "mm",
+          "v": 1.0
+        },
+        "glass": {
+          "unit": "mm",
+          "v": 24.0
+        },
+        "host": {
+          "by": "new",
+          "slot": 33
+        },
+        "material": "Glass",
+        "mullion": {
+          "depth": {
+            "unit": "mm",
+            "v": 150.0
+          },
+          "width": {
+            "unit": "mm",
+            "v": 60.0
+          }
+        },
+        "name": "Canopy glazing",
+        "op": "geometry",
+        "pattern": "quad",
+        "planarize": 100,
+        "rows": {
+          "by": "equal",
+          "n": 6
+        },
+        "slot": 34
+      },
+      "geometry.plate": {
+        "action": "plate",
+        "level": {
+          "by": "name",
+          "cat": "level",
+          "name": "L1"
+        },
+        "material": "S355",
+        "op": "geometry",
+        "openings": [
+          [
+            {
+              "unit": "m",
+              "x": 71.0,
+              "y": 5.0,
+              "z": 1.0
+            },
+            {
+              "unit": "m",
+              "x": 72.0,
+              "y": 5.0,
+              "z": 1.0
+            },
+            {
+              "unit": "m",
+              "x": 72.0,
+              "y": 5.0,
+              "z": 2.0
+            }
+          ]
+        ],
+        "outline": [
+          {
+            "unit": "m",
+            "x": 70.0,
+            "y": 5.0,
+            "z": 0.0
+          },
+          {
+            "unit": "m",
+            "x": 74.0,
+            "y": 5.0,
+            "z": 0.0
+          },
+          {
+            "unit": "m",
+            "x": 74.0,
+            "y": 5.0,
+            "z": 3.0
+          },
+          {
+            "unit": "m",
+            "x": 70.0,
+            "y": 5.0,
+            "z": 3.0
+          }
+        ],
+        "slot": 42,
+        "thickness": {
+          "unit": "mm",
+          "v": 8.0
+        }
+      },
+      "geometry.rebuild": {
+        "action": "rebuild",
+        "count_u": 6,
+        "count_v": 5,
+        "degree_u": 3,
+        "degree_v": null,
+        "op": "geometry",
+        "target": {
+          "by": "new",
+          "slot": 32
+        }
+      },
+      "geometry.reshape": {
+        "action": "reshape",
+        "form": {
+          "a": {
+            "h": {
+              "unit": "mm",
+              "v": 500.0
+            },
+            "shape": "rect",
+            "w": {
+              "unit": "mm",
+              "v": 300.0
+            }
+          },
+          "b": {
+            "of": {
+              "by": "name",
+              "cat": "mtype",
+              "name": "HEA 200"
+            },
+            "shape": "stored"
+          },
+          "kind": "swept_blend",
+          "path": {
+            "bulges": [],
+            "closed": false,
+            "kind": "polyline",
+            "pts": [
+              {
+                "unit": "m",
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              {
+                "unit": "m",
+                "x": 6.0,
+                "y": 0.0,
+                "z": 0.0
+              }
+            ]
+          }
+        },
+        "op": "geometry",
+        "target": {
+          "by": "new",
+          "slot": 31
+        }
+      },
+      "geometry.solid": {
+        "action": "solid",
+        "form": {
+          "end": {
+            "unit": "m",
+            "v": 3.0
+          },
+          "frame": {
+            "origin": {
+              "unit": "m",
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "x": {
+              "x": 1.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "z": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 1.0
+            }
+          },
+          "kind": "extrude",
+          "profile": {
+            "h": {
+              "unit": "mm",
+              "v": 500.0
+            },
+            "shape": "rect",
+            "w": {
+              "unit": "mm",
+              "v": 300.0
+            }
+          },
+          "start": {
+            "unit": "m",
+            "v": 0.0
+          }
+        },
+        "level": {
+          "by": "new",
+          "slot": 1
+        },
+        "material": "concrete",
+        "op": "geometry",
+        "slot": 30
+      },
+      "geometry.surface_shell": {
+        "action": "surface_shell",
+        "host": {
+          "by": "new",
+          "slot": 35
+        },
+        "kind": "roof",
+        "layers": [
+          {
+            "material": "Concrete",
+            "name": "Structure",
+            "thickness": {
+              "unit": "mm",
+              "v": 150.0
+            }
+          },
+          {
+            "material": "Mineral wool",
+            "name": null,
+            "thickness": {
+              "unit": "mm",
+              "v": 100.0
+            }
+          }
+        ],
+        "name": "Dome roof",
+        "op": "geometry",
+        "openings": [
+          [
+            {
+              "unit": "m",
+              "x": 31.0,
+              "y": 11.0
+            },
+            {
+              "unit": "m",
+              "x": 32.0,
+              "y": 11.0
+            },
+            {
+              "unit": "m",
+              "x": 32.0,
+              "y": 12.0
+            },
+            {
+              "unit": "m",
+              "x": 31.0,
+              "y": 12.0
+            }
+          ]
+        ],
+        "side": "normal",
+        "slot": 37
+      },
+      "geometry.thicken": {
+        "action": "thicken",
+        "op": "geometry",
+        "side": "center",
+        "target": {
+          "by": "new",
+          "slot": 32
+        },
+        "thickness": {
+          "unit": "mm",
+          "v": 200.0
+        }
+      },
+      "geometry.trim": {
+        "action": "trim",
+        "op": "geometry",
+        "target": {
+          "by": "new",
+          "slot": 32
+        },
+        "trim": {
+          "holes": [
+            [
+              [
+                0.4,
+                0.4
+              ],
+              [
+                0.6,
+                0.4
+              ],
+              [
+                0.6,
+                0.6
+              ],
+              [
+                0.4,
+                0.6
+              ]
+            ]
+          ],
+          "outer": null
+        }
+      },
+      "geometry.void": {
+        "action": "void",
+        "form": {
+          "end": {
+            "unit": "m",
+            "v": 0.5
+          },
+          "frame": {
+            "origin": {
+              "unit": "m",
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "x": {
+              "x": 1.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "z": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 1.0
+            }
+          },
+          "kind": "extrude",
+          "profile": {
+            "h": {
+              "unit": "mm",
+              "v": 500.0
+            },
+            "shape": "rect",
+            "w": {
+              "unit": "mm",
+              "v": 300.0
+            }
+          },
+          "start": {
+            "unit": "m",
+            "v": -0.5
+          }
+        },
+        "host": {
+          "by": "new",
+          "slot": 10
+        },
+        "op": "geometry"
+      },
+      "grid.create": {
+        "a": {
+          "unit": "m",
+          "x": 0.0,
+          "y": -1.0
+        },
+        "action": "create",
+        "b": {
+          "unit": "m",
+          "x": 0.0,
+          "y": 20.0
+        },
+        "bulge": 0.0,
+        "name": "A",
+        "op": "grid",
+        "slot": 2
+      },
+      "grid.rename": {
+        "action": "rename",
+        "name": "A1",
+        "op": "grid",
+        "target": {
+          "by": "new",
+          "slot": 2
+        }
+      },
+      "level.create": {
+        "action": "create",
+        "elevation": {
+          "unit": "m",
+          "v": 3.0
+        },
+        "name": "L2",
+        "op": "level",
+        "slot": 1
+      },
+      "level.rename": {
+        "action": "rename",
+        "name": "Level 2",
+        "op": "level",
+        "target": {
+          "by": "new",
+          "slot": 1
+        }
+      },
+      "level.set_elevation": {
+        "action": "set_elevation",
+        "elevation": {
+          "unit": "mm",
+          "v": -150.0
+        },
+        "op": "level",
+        "target": {
+          "by": "name",
+          "cat": "level",
+          "name": "L1"
+        }
+      },
+      "option.accept": {
+        "action": "accept",
+        "op": "option",
+        "option": {
+          "by": "new",
+          "slot": 41
+        }
+      },
+      "option.add": {
+        "action": "add",
+        "name": "Island",
+        "op": "option",
+        "set": {
+          "by": "new",
+          "slot": 40
+        },
+        "slot": 41
+      },
+      "option.assign": {
+        "action": "assign",
+        "op": "option",
+        "option": {
+          "by": "new",
+          "slot": 41
+        },
+        "target": {
+          "by": "refs",
+          "refs": [
+            {
+              "by": "new",
+              "slot": 23
+            }
+          ]
+        }
+      },
+      "option.create_set": {
+        "action": "create_set",
+        "name": "Kitchen layout",
+        "op": "option",
+        "slot": 40
+      },
+      "param.define": {
+        "action": "define",
+        "cats": [
+          "door",
+          "wall"
+        ],
+        "group": "identity",
+        "instance": true,
+        "kind": "text",
+        "name": "FireRating",
+        "op": "param",
+        "unit": null
+      },
+      "param.delete": {
+        "action": "delete",
+        "name": "Old code",
+        "op": "param"
+      },
+      "param.rename": {
+        "action": "rename",
+        "from": "FireRating",
+        "op": "param",
+        "to": "Fire rating"
+      },
+      "pattern": {
+        "op": "pattern",
+        "out": "copies",
+        "pattern": {
+          "count": 4,
+          "dir": {
+            "x": 1.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "kind": "linear",
+          "spacing": {
+            "by": "step",
+            "d": {
+              "unit": "m",
+              "v": 6.0
+            }
+          }
+        },
+        "source": {
+          "by": "refs",
+          "refs": [
+            {
+              "by": "new",
+              "slot": 18
+            }
+          ]
+        }
+      },
+      "set": {
+        "fields": [
+          {
+            "name": "height",
+            "value": {
+              "unit": "m",
+              "v": 3.2
+            }
+          },
+          {
+            "name": "comment",
+            "value": {
+              "unit": null,
+              "v": "by option A"
+            }
+          },
+          {
+            "name": "load_bearing",
+            "value": {
+              "unit": null,
+              "v": true
+            }
+          }
+        ],
+        "op": "set",
+        "target": {
+          "by": "refs",
+          "refs": [
+            {
+              "by": "new",
+              "slot": 10
+            },
+            {
+              "by": "new",
+              "slot": 11
+            }
+          ]
+        }
+      },
+      "set_type": {
+        "op": "set_type",
+        "target": {
+          "by": "filter",
+          "cat": "door",
+          "query": "level = 'L1'"
+        },
+        "to": {
+          "by": "name",
+          "cat": "type",
+          "name": "Door 1000x2100"
+        }
+      },
+      "transform": {
+        "copy": false,
+        "op": "transform",
+        "target": {
+          "by": "refs",
+          "refs": [
+            {
+              "by": "new",
+              "slot": 19
+            }
+          ]
+        },
+        "xf": {
+          "by": {
+            "unit": "m",
+            "x": 0.0,
+            "y": 0.5,
+            "z": 0.0
+          },
+          "kind": "move"
+        }
+      },
+      "type.delete": {
+        "action": "delete",
+        "op": "type",
+        "replace_with": {
+          "by": "new",
+          "slot": 3
+        },
+        "target": {
+          "by": "id",
+          "cat": "wtype",
+          "id": 40
+        }
+      },
+      "type.duplicate": {
+        "action": "duplicate",
+        "fields": [
+          {
+            "name": "thickness",
+            "value": {
+              "unit": "mm",
+              "v": 250.0
+            }
+          }
+        ],
+        "from": {
+          "by": "name",
+          "cat": "wtype",
+          "name": "Wall 200"
+        },
+        "name": "Wall 250",
+        "op": "type",
+        "slot": 3
+      },
+      "type.rename": {
+        "action": "rename",
+        "name": "Wall 250 brick",
+        "op": "type",
+        "target": {
+          "by": "new",
+          "slot": 3
+        }
+      },
+      "type.set": {
+        "action": "set",
+        "fields": [
+          {
+            "name": "material",
+            "value": {
+              "unit": null,
+              "v": "brick"
+            }
+          }
+        ],
+        "op": "type",
+        "target": {
+          "by": "new",
+          "slot": 3
+        }
+      }
+    }
+  }
+}

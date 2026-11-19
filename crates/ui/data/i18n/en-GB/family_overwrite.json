@@ -1,0 +1,16 @@
+{
+ "family_overwrite.ow.title": "Replace project type values?",
+ "family_overwrite.ow.body": "Loading replaces {values} in {types}. Placed instances of these types: {instances}.",
+ "family_overwrite.ow.values": {
+  "one": "# value",
+  "other": "# values"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# type",
+  "other": "# types"
+ },
+ "family_overwrite.ow.list": "Types: {list}",
+ "family_overwrite.ow.more": "and {n} more",
+ "family_overwrite.ow.back": "Back to editing",
+ "family_overwrite.ow.replace": "Replace values"
+}

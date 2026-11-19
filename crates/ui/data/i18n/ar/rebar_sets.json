@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "إضافة مجموعة واحدة",
+ "rebar_sets.add_n": "إضافة {n} مجموعات",
+ "rebar_sets.pick.search": "ابحث في أنواع القضبان",
+ "rebar_sets.pick.empty": "لا توجد أنواع قضبان مطابقة",
+ "rebar_sets.unit.deg": "°"
+}

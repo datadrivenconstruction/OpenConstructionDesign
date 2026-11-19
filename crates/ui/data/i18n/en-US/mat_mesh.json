@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "Imported meshes",
+ "mat_mesh.mesh.none_selected": "Select imported meshes in the 3D view to give them this material.",
+ "mat_mesh.mesh.current": "First selected mesh: {material}",
+ "mat_mesh.mesh.current_none": "First selected mesh has no material.",
+ "mat_mesh.mesh.assign": "Assign to {n} selected",
+ "mat_mesh.mesh.assign_tip": "The Realistic style shows this material's texture on the selected meshes",
+ "mat_mesh.mesh.assign_cat": "Assign to category {category}",
+ "mat_mesh.mesh.assign_cat_tip": "Every imported mesh of that category without its own material",
+ "mat_mesh.mesh.clear": "Clear selected",
+ "mat_mesh.mesh.clear_tip": "Selected meshes go back to their category material or the plain colour",
+ "mat_mesh.mesh.clear_cat": "Clear category"
+}

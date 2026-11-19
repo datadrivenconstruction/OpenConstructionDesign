@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "コンクリート",
+ "mat.masonry": "組積",
+ "mat.brick": "レンガ",
+ "mat.insulation": "断熱材",
+ "mat.plaster": "漆喰",
+ "mat.render": "モルタル仕上げ",
+ "mat.gypsum": "石膏ボード",
+ "mat.glass": "ガラス",
+ "mat.wood": "木材",
+ "mat.steel": "鋼材",
+ "mat.membrane": "膜",
+ "mat.other": "その他",
+ "warn.cat.wall": "壁",
+ "warn.cat.slab": "スラブ",
+ "warn.cat.opening": "開口部",
+ "warn.cat.curtain_wall": "カーテンウォール",
+ "td.mat.custom": "その他…"
+}

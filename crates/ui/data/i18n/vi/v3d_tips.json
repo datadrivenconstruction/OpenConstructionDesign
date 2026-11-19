@@ -1,0 +1,8 @@
+{
+ "v3d.proj.to_ortho": "Chuyển sang chiếu trực giao",
+ "v3d.proj.to_persp": "Chuyển sang chiếu phối cảnh",
+ "v3d.walk.unit.m": "m/s",
+ "v3d.walk.unit.ft": "ft/s",
+ "v3d.temp.show_all": "Hiển thị tất cả  ·  Esc",
+ "v3d.msg.deleted_named": "Đã xóa góc nhìn 3D {name}"
+}

@@ -1,0 +1,9 @@
+{
+ "ai.plan.reject_ask": {
+  "one": "# Änderung ablehnen?",
+  "other": "# Änderungen ablehnen?"
+ },
+ "ai.plan.reject_ask.hint": "Entwurf und Ihre Häkchen werden verworfen. Das Modell bleibt unverändert.",
+ "ai.plan.reject_confirm": "Ablehnen",
+ "ai.plan.reject_keep": "Behalten"
+}

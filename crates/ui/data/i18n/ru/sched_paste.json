@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "Вставлено ячеек: {n}",
+ "sched_edit.pasted_skipped": "Вставлено ячеек: {n}, пропущено {k}: {why}",
+ "sched_edit.filled": "Заполнено ячеек: {n}",
+ "sched_edit.filled_skipped": "Заполнено ячеек: {n}, пропущено {k}: {why}",
+ "sched_edit.why_ro": "только чтение: {n}",
+ "sched_edit.why_bad": "неверное значение: {n}",
+ "sched_edit.no_cell": "Сначала щёлкните ячейку ведомости",
+ "sched_edit.nothing": "Нечего записывать",
+ "sched_edit.not_refreshed": "Записано, вид не обновился: {e}",
+ "sched_edit.failed": "не изменено: {e}",
+ "sched_edit.no_changes": "Без изменений: в {u} ячейках уже такие значения",
+ "sched_edit.same_tail": ", уже равны: {u}"
+}

@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "Единицы",
+ "topo_units.unit": "Единицы в файле",
+ "topo_units.unit.m": "м",
+ "topo_units.unit.cm": "см",
+ "topo_units.unit.mm": "мм",
+ "topo_units.unit.ft": "фут",
+ "topo_units.unit.usft": "геодезический фут США",
+ "topo_units.unit.in": "дюйм",
+ "topo_units.unit.from_file": "Единицы указаны в файле: {unit}",
+ "topo_units.unit.suggested": "В файле нет единиц. Предложено по габариту: {unit} — проверьте итог ниже",
+ "topo_units.extent": "Итог в единицах проекта: {x} × {y} {u} в плане, перепад высот {z} {u}",
+ "topo_units.extent.none": "Итог: с этими настройками импортировать нечего",
+ "topo_units.extent.check": "Это не похоже на участок: проверьте единицы"
+}

@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "Narysuj ścianę",
+ "empty.totals.action": "Narysuj ścianę",
+ "empty.schedule.action": "Dodaj pole",
+ "empty.schedule_filtered.action": "Wyczyść filtr",
+ "empty.library.action": "Resetuj wyszukiwanie",
+ "empty.library.load": "Wczytaj rodzinę",
+ "empty.schedule_fields.title": "Brak pokazanych pól",
+ "empty.schedule_fields.action": "Dodaj pole",
+ "empty.schedule_fields.hint": "Włącz co najmniej jedno pole, aby zobaczyć tabelę."
+}

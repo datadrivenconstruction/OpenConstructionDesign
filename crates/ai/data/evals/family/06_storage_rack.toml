@@ -1,0 +1,7 @@
+brief = "Pallet storage rack with beams and uprights; width, depth and height as parameters."
+category = "casework"
+must = param Width
+must = param Depth
+must = solids >= 14
+must = ports 0
+must = flex Width 2160 3375

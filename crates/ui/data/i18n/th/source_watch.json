@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "{name} มีการเปลี่ยนแปลงบนดิสก์",
+ "src.watch.update": "อัปเดตโมเดล",
+ "src.watch.compare": "เปรียบเทียบ",
+ "src.watch.ignore": "ไม่สนใจเวอร์ชันนี้",
+ "src.watch.missing": "{name}: ไม่พบไฟล์แหล่งที่มา งานดำเนินต่อไป",
+ "src.watch.locate": "ค้นหาตำแหน่ง…",
+ "src.watch.dismiss": "ปิด",
+ "src.watch.more": "และไฟล์แหล่งที่มาอีก {n} ไฟล์",
+ "src.watch.done": "อัปเดตจาก {name}: เปลี่ยน {updated}, เก็บฟิลด์ที่แก้ไขไว้ {kept}, ข้อขัดแย้ง {conflicts}, เก็บค่าที่ล็อก {locked}"
+}

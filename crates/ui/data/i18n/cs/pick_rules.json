@@ -1,0 +1,11 @@
+{
+ "pick_rules.filter": "Výběr: vše",
+ "pick_rules.filter.on": "Výběr: vypnuto {n}",
+ "pick_rules.filter.title": "Kategorie, které lze vybrat kliknutím",
+ "pick_rules.filter.all": "Vybírat všechny kategorie",
+ "pick_rules.filter.tip": "Filtr výběru: nezaškrtnuté kategorie se přeskakují při kliknutí a najetí",
+ "pick_rules.here": "Položky zde",
+ "pick_rules.here.selected": "vybráno",
+ "pick_rules.pinned": "Vybrat připnuté položky",
+ "pick_rules.here.row": "{cat} · {len}"
+}

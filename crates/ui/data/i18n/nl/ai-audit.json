@@ -1,0 +1,22 @@
+{
+ "ai.audit.tokens": "{n} tokens",
+ "ai.audit.filter.all": "Alle",
+ "ai.audit.filter.ai": "AI",
+ "ai.audit.filter.me": "Ik",
+ "ai.audit.search": "Wijzigingen zoeken",
+ "ai.audit.search.clear": "Zoekopdracht wissen",
+ "ai.audit.show_all": "Alles tonen",
+ "ai.audit.empty.hint": "Wijzigingen opgesteld of toegepast door een model of agent verschijnen hier, elk met een manier om ze terug te draaien.",
+ "ai.audit.no_match": "Geen wijzigingen voldoen aan het filter.",
+ "ai.audit.show.tip": "Selecteer en toon de elementen die deze wijziging raakte",
+ "ai.audit.revert.ask": "“{what}” terugnemen? {change}.",
+ "ai.audit.revert.elements": {
+  "one": "# element gewijzigd",
+  "other": "# elementen gewijzigd"
+ },
+ "ai.audit.revert.keeps": "Nieuwere wijzigingen blijven behouden. Het terugdraaien is één ongedaan-stap.",
+ "ai.audit.cancel": "Annuleren",
+ "ai.audit.toast.reverted": "Teruggedraaid: {what}",
+ "ai.audit.toast.undone": "Ongedaan gemaakt: {what}",
+ "ai.audit.redo": "Opnieuw"
+}

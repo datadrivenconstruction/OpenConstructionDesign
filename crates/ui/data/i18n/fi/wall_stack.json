@@ -1,0 +1,10 @@
+{
+ "wall_stack.we.stack_caption": "Yhdistelmätyyppi",
+ "wall_stack.we.side_left": "Vasen pinta",
+ "wall_stack.we.side_right": "Oikea pinta",
+ "wall_stack.we.from": "Alku",
+ "wall_stack.we.to": "Loppu",
+ "wall_stack.we.bottom": "Alaosa",
+ "wall_stack.we.delete_tip": "Poista tämä profiili",
+ "wall_stack.we.from_after_to": "”Alku” on oltava ennen ”Loppua”"
+}

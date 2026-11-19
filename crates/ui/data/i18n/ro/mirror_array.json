@@ -1,0 +1,5 @@
+{
+ "mirror_array.err.count": "Numărul este un întreg de la 2 la 200: 4 3000, sau 4;300 când pasul are trei cifre",
+ "mirror_array.err.length": "Pasul sau totalul este o lungime pozitivă, de ex. 3 000 sau 1.2 m",
+ "mirror_array.err.angle": "Parcurgerea este un unghi în grade, nu zero și cel mult 360"
+}

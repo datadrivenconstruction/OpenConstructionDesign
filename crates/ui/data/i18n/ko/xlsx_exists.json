@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "이 통합 문서는 이미 있습니다",
+ "xlsx_exists.foreign": "이 프로젝트의 통합 문서가 아니므로 절대 교체하지 않습니다.",
+ "xlsx_exists.pending": "모델에 아직 적용되지 않은 편집이 {n}개 있습니다.",
+ "xlsx_exists.outside": "새 내보내기에 없는 행이 {n}개 있습니다.",
+ "xlsx_exists.new_name": "{name}(으)로 내보내기",
+ "xlsx_exists.apply_first": "먼저 적용하세요",
+ "xlsx_exists.replace": "바꾸기 (기존 통합 문서는 _archive로)",
+ "xlsx_exists.archived": "기존 통합 문서를 {path}(으)로 옮겼습니다",
+ "xlsx_exists.archive_failed": "기존 통합 문서를 옮기지 못해 아무것도 내보내지 않았습니다: {error}"
+}

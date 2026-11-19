@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "AI-дан сұрау: {q}",
+ "ai.palette.connect": "Сұрау үшін AI-ды қосыңыз",
+ "ai.palette.draft.apply": "Жобаны қолдану ({n})",
+ "ai.palette.draft.reject": "Жобаны қабылдамау",
+ "ai.palette.draft.next": "Жобаның келесі өзгерісі",
+ "ai.palette.draft.show": "Жобаны көріністе көрсету",
+ "cmd.ai.next_change": "Жобаның келесі өзгерісі",
+ "cmd.ai.next_change.desc": "Көрініс жобаның келесі өзгеретін элементіне көшеді.",
+ "cmd.ai.show_draft": "AI жобасын көріністе көрсету",
+ "cmd.ai.show_draft.desc": "Көріністі жобаның барлық өзгерістеріне сыйғызады."
+}

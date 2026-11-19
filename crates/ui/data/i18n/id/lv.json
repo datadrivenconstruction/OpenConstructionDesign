@@ -1,0 +1,5 @@
+{
+ "lv.level.deleted_attach": "Level dihapus; {n} dinding kehilangan lampiran atapnya",
+ "lv.level.rooms": "{n} ruang mengambil tinggi level tujuan ({dz} m): {names}. Tekan Pindahkan lagi untuk mengonfirmasi",
+ "lv.level.pinned": "Level tidak dihapus: elemen yang dikunci tidak bisa pindah ke level lain: {names}. Lepas kuncinya dulu"
+}

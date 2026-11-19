@@ -1,0 +1,5 @@
+walls=[(0,0)-(6,0)]
+zoom=100
+# SNAP-4: Alt gives the free point
+tool(WA) mod(Alt,down) move(5.95,0.05) → snap=Free p=(5.95,0.05)
+mod(Alt,up) move(5.95,0.05) → snap=Endpoint p=(6,0)

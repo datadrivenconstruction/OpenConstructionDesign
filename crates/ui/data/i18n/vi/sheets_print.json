@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "Tờ trước (Page Up)",
+ "sheets.print.next": "Tờ tiếp theo (Page Down)",
+ "sheets.print.fit": "Vừa trang (nhấp đúp)",
+ "sheets.print.no_sheets": "Không có tờ để xem trước",
+ "sheets.print.building": "Đang dựng trang…",
+ "sheets.print.stop_build": "Dừng",
+ "sheets.print.build_stopped": "Đã dừng dựng trang",
+ "sheets.print.retry": "Dựng lại",
+ "sheets.print.build_failed": "Không thể dựng bản xem trước"
+}

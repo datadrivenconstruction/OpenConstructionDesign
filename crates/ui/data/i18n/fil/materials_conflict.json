@@ -1,0 +1,5 @@
+{
+ "materials.mat.conflict": "Nabago ang materyal na ito sa modelo (undo o ibang window) habang may edit ang card. Itinatago ang iyong mga edit.",
+ "materials.mat.keep": "Itira ang aking mga edit",
+ "materials.mat.reload": "I-reload"
+}

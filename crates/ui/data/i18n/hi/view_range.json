@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "व्यू रेंज",
+ "view_range.range": "व्यू रेंज",
+ "view_range.cut": "कट तल",
+ "view_range.bottom": "निचला सिरा",
+ "view_range.depth": "व्यू गहराई",
+ "view_range.cut.hint": "लेवल के ऊपर कट तल की ऊंचाई। उसे पार करने वाले तत्व कटे हुए दिखते हैं।",
+ "view_range.bottom.hint": "रेंज का निचला सिरा, लेवल के सापेक्ष। शून्य या ऋणात्मक मान अनुमत हैं।",
+ "view_range.depth.hint": "व्यू निचले सिरे से कितना नीचे देखता है। शून्य या अधिक।",
+ "view_range.err.number": "हर फ़ील्ड में लंबाई दर्ज करें",
+ "view_range.err.not_finite": "हर फ़ील्ड में लंबाई दर्ज करें",
+ "view_range.err.cut_not_above_bottom": "कट तल निचले सिरे से ऊपर होना चाहिए",
+ "view_range.err.negative_depth": "व्यू गहराई ऋणात्मक नहीं हो सकती",
+ "view_range.err.top_below_cut": "रेंज का ऊपरी सिरा कट तल से नीचे नहीं होना चाहिए"
+}

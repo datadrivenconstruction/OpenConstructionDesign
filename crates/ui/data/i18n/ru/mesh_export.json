@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "Сохраняет всю модель или выбор в двоичный STL в метрах или миллиметрах.",
+ "cmd.data.export_obj.desc": "Сохраняет всю модель или выбор в OBJ с файлом MTL: группа на элемент, цвета по материалам.",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "OBJ с материалами (.obj)",
+ "open_file.filter.mesh": "3D-сетки (glTF, STEP, STL, OBJ)",
+ "mx.title": "Экспорт {fmt}",
+ "mx.scope": "Что экспортировать",
+ "mx.scope.all": "Вся модель",
+ "mx.scope.sel": "Выбор (элементов: {n})",
+ "mx.units": "Единицы в файле",
+ "mx.units.m": "Метры",
+ "mx.units.mm": "Миллиметры",
+ "mx.export": "Экспорт…",
+ "mx.saved": "{fmt} сохранён: {path} (элементов: {parts}, треугольников: {tris})",
+ "mx.partial": "{fmt} сохранён с проблемами ({n}), часть тел может отсутствовать: {path}",
+ "mx.failed": "Экспорт {fmt} не удался: {error}",
+ "mx.imported": "{file}: импортировано элементов: {n} (треугольников: {tris})",
+ "mx.imported_notes": "{file}: импортировано элементов: {n} (треугольников: {tris}), замечаний: {w}: {first}"
+}

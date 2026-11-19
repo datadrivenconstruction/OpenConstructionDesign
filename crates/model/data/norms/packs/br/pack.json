@@ -1,0 +1,26 @@
+{
+ "id": "br",
+ "version": "2026.11",
+ "parent": "generic",
+ "country": "BR",
+ "lang": [
+  "pt"
+ ],
+ "units": {
+  "length": "m",
+  "display": "metric"
+ },
+ "conventions": {
+  "ground_floor": 0,
+  "area_standard": "net",
+  "net_share": 1.0,
+  "note": "Ground floor (terreo) is 0; dwelling area is the private useful area of the rooms. Our own summary, not checked against a clause.",
+  "source": null
+ },
+ "status": "tier3",
+ "climate": {
+  "zones": [],
+  "default": null
+ },
+ "note": "Numbers with verified=true were checked against the cited clause of a primary text; verified=false numbers come from a secondary reproduction named in the source note. Wording is our own."
+}

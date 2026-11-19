@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "Titik",
+ "trial.field.distance": "Jarak",
+ "trial.field.target": "Elemen",
+ "trial.refused": "{field}: {reason}. Ubah untuk menerapkan",
+ "trial.preview_off": "Pratinjau nonaktif: model terlalu besar"
+}

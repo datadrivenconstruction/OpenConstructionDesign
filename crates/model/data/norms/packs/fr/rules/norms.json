@@ -1,0 +1,672 @@
+{
+ "rules": [
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {},
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "2*riser+tread",
+    "min": 0.6,
+    "max": 0.64
+   },
+   "unit": "m",
+   "value": [
+    0.6,
+    0.64
+   ],
+   "text": {
+    "en": "Step rule: 2 risers + tread from 0.6 to 0.64 m",
+    "ru": "Шаг: 2 подъёма + проступь от 0.6 до 0.64 м"
+   },
+   "source": {
+    "doc": "cch",
+    "clause": "stride rule (2 risers + tread), common design practice",
+    "note": "official text not reachable; legifrance fetch failed, secondary sources only"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "fr.step"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.17
+   },
+   "unit": "m",
+   "value": 0.17,
+   "text": {
+    "en": "Common stair riser at most 0.17 m",
+    "ru": "Подъём ступени общей лестницы не более 0.17 м"
+   },
+   "source": {
+    "doc": "arrete2015-12-24",
+    "clause": "art. 6, 6.1 II 1o, stairs of common parts",
+    "url": "https://www.gers.gouv.fr/index.php/contenu/telechargement/16832/129369/file/Arr%C3%AAt%C3%A9%20du%2027%20d%C3%A9cembre%202015%20BHC%20et%20MI%20neufs.pdf",
+    "accessed": "2026-11-15",
+    "paraphrase": "A common stair step rises at most 17 cm.",
+    "note": "read 2026-11-15: gers.gouv.fr copy of the JO text of 27 Dec 2015 (order of 24 Dec 2015)"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "fr.res.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.28
+   },
+   "unit": "m",
+   "value": 0.28,
+   "text": {
+    "en": "Common stair tread at least 0.28 m",
+    "ru": "Проступь общей лестницы не менее 0.28 м"
+   },
+   "source": {
+    "doc": "arrete2015-12-24",
+    "clause": "art. 6, 6.1 II 1o, stairs of common parts",
+    "url": "https://www.gers.gouv.fr/index.php/contenu/telechargement/16832/129369/file/Arr%C3%AAt%C3%A9%20du%2027%20d%C3%A9cembre%202015%20BHC%20et%20MI%20neufs.pdf",
+    "accessed": "2026-11-15",
+    "paraphrase": "A common stair tread is at least 28 cm.",
+    "note": "read 2026-11-15: gers.gouv.fr copy of the JO text of 27 Dec 2015 (order of 24 Dec 2015)"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "fr.res.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 1.0
+   },
+   "unit": "m",
+   "value": 1.0,
+   "text": {
+    "en": "Common stair width at least 1 m between handrails",
+    "ru": "Ширина общей лестницы не менее 1 м между поручнями"
+   },
+   "source": {
+    "doc": "arrete2015-12-24",
+    "clause": "art. 6, 6.1 II 1o, stairs of common parts",
+    "url": "https://www.gers.gouv.fr/index.php/contenu/telechargement/16832/129369/file/Arr%C3%AAt%C3%A9%20du%2027%20d%C3%A9cembre%202015%20BHC%20et%20MI%20neufs.pdf",
+    "accessed": "2026-11-15",
+    "paraphrase": "A common stair is at least 1.00 m wide between handrails.",
+    "note": "read 2026-11-15: gers.gouv.fr copy of the JO text of 27 Dec 2015 (order of 24 Dec 2015)"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "fr.res.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.17
+   },
+   "unit": "m",
+   "value": 0.17,
+   "text": {
+    "en": "Office stair riser at most 0.17 m",
+    "ru": "Подъём ступени офисной лестницы не более 0.17 м"
+   },
+   "source": {
+    "doc": "code-travail",
+    "clause": "stairs, workplaces",
+    "note": "official text not reachable; legifrance fetch failed, secondary sources only"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "fr.off.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.28
+   },
+   "unit": "m",
+   "value": 0.28,
+   "text": {
+    "en": "Office stair tread at least 0.28 m",
+    "ru": "Проступь офисной лестницы не менее 0.28 м"
+   },
+   "source": {
+    "doc": "code-travail",
+    "clause": "stairs, workplaces",
+    "note": "official text not reachable; legifrance fetch failed, secondary sources only"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "fr.off.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 1.0
+   },
+   "unit": "m",
+   "value": 1.0,
+   "text": {
+    "en": "Stair flight width at least 1 m (office)",
+    "ru": "Ширина марша не менее 1 м (office)"
+   },
+   "source": {
+    "doc": "code-travail",
+    "clause": "stairs, workplaces; wider by occupancy",
+    "note": "official text not reachable; legifrance fetch failed, secondary sources only"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "fr.off.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "width",
+    "min": 1.2
+   },
+   "unit": "m",
+   "value": 1.2,
+   "text": {
+    "en": "Corridor clear width at least 1.2 m",
+    "ru": "Ширина коридора не менее 1.2 м"
+   },
+   "source": {
+    "doc": "arrete2015-12-24",
+    "clause": "accessible dwellings, circulation",
+    "note": "official text not reachable; legifrance fetch failed, secondary sources only"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "fr.res.corr"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "width",
+    "min": 1.4
+   },
+   "unit": "m",
+   "value": 1.4,
+   "text": {
+    "en": "Corridor clear width at least 1.4 m",
+    "ru": "Ширина коридора не менее 1.4 м"
+   },
+   "source": {
+    "doc": "code-travail",
+    "clause": "circulation by occupancy",
+    "note": "official text not reachable; legifrance fetch failed, secondary sources only"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "fr.off.corr"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ],
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "width",
+    "min": 1.2
+   },
+   "unit": "m",
+   "value": 1.2,
+   "text": {
+    "en": "Accessible-route corridor clear width at least 1.2 m",
+    "ru": "Ширина коридора на доступном маршруте не менее 1.2 м"
+   },
+   "source": {
+    "doc": "arrete2015-12-24",
+    "clause": "accessible dwellings, circulation",
+    "note": "official text not reachable; legifrance fetch failed, secondary sources only"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "fr.acc.corr"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.2
+   },
+   "unit": "m",
+   "value": 2.2,
+   "text": {
+    "en": "Clear height of habitable rooms at least 2.2 m",
+    "ru": "Высота жилых помещений не менее 2.2 м"
+   },
+   "source": {
+    "doc": "decret2002-120",
+    "clause": "art. 4 minimum height of a dwelling"
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "fr.res.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "room_kind": [
+     "office",
+     "meeting"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.5
+   },
+   "unit": "m",
+   "value": 2.5,
+   "text": {
+    "en": "Clear height of work rooms at least 2.5 m",
+    "ru": "Высота рабочих помещений не менее 2.5 м"
+   },
+   "source": {
+    "doc": "code-travail",
+    "clause": "workplace height",
+    "note": "official text not reachable; legifrance fetch failed, secondary sources only"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "fr.off.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "room_kind": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "area",
+    "min": 10.0
+   },
+   "unit": "",
+   "value": 10.0,
+   "text": {
+    "en": "Area of a office room at least 10 m2",
+    "ru": "Площадь помещения «office» не менее 10 м2"
+   },
+   "source": {
+    "doc": "code-travail",
+    "clause": "area per workplace (guide value)",
+    "note": "official text not reachable; legifrance fetch failed, secondary sources only"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "fr.off.a"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 40.0,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 40.0,
+   "text": {
+    "en": "Travel distance from a room to an exit or stair at most 40 m (office)",
+    "ru": "Путь от помещения до выхода или лестницы не более 40 м"
+   },
+   "source": {
+    "doc": "code-travail",
+    "clause": "evacuation routes, length",
+    "note": "official text not reachable; legifrance fetch failed, secondary sources only"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "fr.egr.off"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {},
+   "check": {
+    "kind": "ratio",
+    "per": "element",
+    "cat": "room",
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen",
+     "office"
+    ],
+    "num": "window_area",
+    "den": "area",
+    "min": 0.1667
+   },
+   "unit": "ratio",
+   "value": 0.1667,
+   "text": {
+    "en": "Window area at least 16.67 % of the floor of a habitable or work room",
+    "ru": "Площадь окон не менее 16.67 % площади пола жилого или рабочего помещения"
+   },
+   "source": {
+    "doc": "rsd",
+    "clause": "daylight opening share of floor (departmental sanitary rules)",
+    "note": "official text not reachable; legifrance fetch failed, secondary sources only"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "fr.day"
+  },
+  {
+   "id": "eu.acc.corr",
+   "disabled": true
+  },
+  {
+   "id": "eu.day",
+   "disabled": true
+  },
+  {
+   "id": "eu.egr.off",
+   "disabled": true
+  },
+  {
+   "id": "eu.off.a",
+   "disabled": true
+  },
+  {
+   "id": "eu.off.corr",
+   "disabled": true
+  },
+  {
+   "id": "eu.off.h",
+   "disabled": true
+  },
+  {
+   "id": "eu.off.riser",
+   "disabled": true
+  },
+  {
+   "id": "eu.off.sw",
+   "disabled": true
+  },
+  {
+   "id": "eu.off.tread",
+   "disabled": true
+  },
+  {
+   "id": "eu.res.corr",
+   "disabled": true
+  },
+  {
+   "id": "eu.res.h",
+   "disabled": true
+  },
+  {
+   "id": "eu.res.riser",
+   "disabled": true
+  },
+  {
+   "id": "eu.res.sw",
+   "disabled": true
+  },
+  {
+   "id": "eu.res.tread",
+   "disabled": true
+  },
+  {
+   "id": "eu.step",
+   "disabled": true
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.18
+   },
+   "unit": "m",
+   "value": 0.18,
+   "text": {
+    "en": "Stair riser inside a dwelling at most 0.18 m",
+    "ru": "Подъём ступени внутриквартирной лестницы не более 0.18 м"
+   },
+   "source": {
+    "doc": "arrete2015-12-24",
+    "clause": "art. 12 II 1o, stairs inside dwellings",
+    "url": "https://www.gers.gouv.fr/index.php/contenu/telechargement/16832/129369/file/Arr%C3%AAt%C3%A9%20du%2027%20d%C3%A9cembre%202015%20BHC%20et%20MI%20neufs.pdf",
+    "accessed": "2026-11-15",
+    "paraphrase": "A stair inside a dwelling rises at most 18 cm per step.",
+    "note": "read 2026-11-15: gers.gouv.fr copy of the JO text of 27 Dec 2015 (order of 24 Dec 2015)"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "fr.house.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.24
+   },
+   "unit": "m",
+   "value": 0.24,
+   "text": {
+    "en": "Stair tread inside a dwelling at least 0.24 m",
+    "ru": "Проступь внутриквартирной лестницы не менее 0.24 м"
+   },
+   "source": {
+    "doc": "arrete2015-12-24",
+    "clause": "art. 12 II 1o, stairs inside dwellings",
+    "url": "https://www.gers.gouv.fr/index.php/contenu/telechargement/16832/129369/file/Arr%C3%AAt%C3%A9%20du%2027%20d%C3%A9cembre%202015%20BHC%20et%20MI%20neufs.pdf",
+    "accessed": "2026-11-15",
+    "paraphrase": "A stair inside a dwelling has treads of at least 24 cm.",
+    "note": "read 2026-11-15: gers.gouv.fr copy of the JO text of 27 Dec 2015 (order of 24 Dec 2015)"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "fr.house.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 0.8
+   },
+   "unit": "m",
+   "value": 0.8,
+   "text": {
+    "en": "Stair width inside a dwelling at least 0.8 m",
+    "ru": "Ширина внутриквартирной лестницы не менее 0.8 м"
+   },
+   "source": {
+    "doc": "arrete2015-12-24",
+    "clause": "art. 12 II 1o, stairs inside dwellings",
+    "url": "https://www.gers.gouv.fr/index.php/contenu/telechargement/16832/129369/file/Arr%C3%AAt%C3%A9%20du%2027%20d%C3%A9cembre%202015%20BHC%20et%20MI%20neufs.pdf",
+    "accessed": "2026-11-15",
+    "paraphrase": "A stair inside a dwelling is at least 0.80 m wide.",
+    "note": "read 2026-11-15: gers.gouv.fr copy of the JO text of 27 Dec 2015 (order of 24 Dec 2015)"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "fr.stair.sw_house"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 15.0,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 15.0,
+   "text": {
+    "en": "From a dwelling door to the stair at most 15 m",
+    "ru": "От двери квартиры до лестницы не более 15 м"
+   },
+   "source": {
+    "doc": "arrete1986-01-31",
+    "clause": "art. 31, distance from the dwelling landing door to the stair door or open air (stricter in some building families)",
+    "url": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000000474032/",
+    "accessed": "2026-11-15",
+    "paraphrase": "The walk from a flat door to a stair or the open air is at most 15 m.",
+    "note": "to_verify: original 1986 wording seen in a search summary; current consolidated article and family limits (7 m, 10 m) not read"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "fr.egr.res"
+  }
+ ]
+}

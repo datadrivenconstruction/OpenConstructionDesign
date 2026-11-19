@@ -1,0 +1,6 @@
+{
+ "project_seed.seed_level": "Kat 1",
+ "project_seed.seed_wall_partition": "Bölme 100",
+ "project_seed.seed_wall_masonry": "Tuğla 200",
+ "project_seed.seed_wall_exterior": "Dış 380"
+}

@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "Qo'llash bekor qilindi: model oldindan ko'rishga mos kelmadi. {what}",
+ "xlsx_verify.not_written": "{row} o'zgartirilmadi.",
+ "xlsx_verify.lost": "{row} yo'qoldi.",
+ "xlsx_verify.not_deleted": "{row} o'chirilmadi.",
+ "xlsx_verify.extra_deleted": "{row} o'chirildi, garchi oldindan ko'rish uni saqlab qolsa ham.",
+ "xlsx_verify.created": "{table}: {want} o'rniga {got} ta yangi.",
+ "xlsx_verify.value": "{row}, {field}: kutilgan {want} (oldin {old}), olindi {got}.",
+ "xlsx_verify.check_failed": "Natijani tekshirib bo'lmadi: {e}",
+ "xlsx_verify.plan_failed": "Qo'llash boshlanmadi: tekshirish modelni o'qiy olmadi ({e}).",
+ "xlsx_verify.take_back_failed": "Qadamni bekor qilib bo'lmadi ({e}): Bekor qilish dan foydalaning.",
+ "xlsx_verify.t.wall": "Devor",
+ "xlsx_verify.t.opening": "Teshik",
+ "xlsx_verify.t.room": "Xona",
+ "xlsx_verify.t.slab": "Plita",
+ "xlsx_verify.t.level": "Sath",
+ "xlsx_verify.t.wall_type": "Devor turi",
+ "xlsx_verify.t.slab_type": "Plita turi",
+ "xlsx_verify.t.col": "Ustun",
+ "xlsx_verify.t.beam": "To'sin",
+ "xlsx_verify.t.roof": "Tom",
+ "xlsx_verify.t.curtain_wall": "Pardali devor"
+}

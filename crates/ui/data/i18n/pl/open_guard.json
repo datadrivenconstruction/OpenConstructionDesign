@@ -1,0 +1,11 @@
+{
+ "job.stage.prepare": "Przygotowanie projektu",
+ "open_guard.already_open": "{name} jest już otwarty",
+ "open_guard.from_cache": "{name}: otwarto z pamięci podręcznej importu",
+ "open_guard.known_project": "{name} był już importowany: otwieram ten projekt",
+ "open_guard.locate": "Wskaż",
+ "open_guard.mem_low": "Mało pamięci: budżet siatek zmniejszono o połowę, a budowa poziomów szczegółowości wstrzymana",
+ "open_guard.mem_low_short": "Mało pamięci: budowa poziomów szczegółowości wstrzymana do zwolnienia pamięci",
+ "open_guard.no_window": "Nie znaleziono okna tego projektu",
+ "open_guard.switch_window": "Przełącz do tego okna"
+}

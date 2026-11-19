@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "Tillämpningen stoppades: modellen behålls som den var",
+ "apply_verify.rolled_back": "Tillämpningen stämde inte med utkastet och togs tillbaka; modellen är oförändrad. {what}",
+ "apply_verify.diff.missing": "Utkastet visar {what} {kind}, men Tillämpa gjorde inte det.",
+ "apply_verify.diff.extra": "Tillämpa {kind} {what}, som utkastet inte visar.",
+ "apply_verify.diff.kind": "Utkastet visar {what} {shown}, men Tillämpa {applied} den.",
+ "apply_verify.diff.value": "{what}: “{col}” blev annorlunda än utkastet.",
+ "apply_verify.diff.truncated": "Utkastet och den tillämpade ändringen skiljer sig åt i storlek.",
+ "apply_verify.diff.unreadable": "Den tillämpade ändringen kunde inte läsas tillbaka ({e}).",
+ "apply_verify.no_base": "Tillämpningen kördes inte: kopian att kontrollera utkastet mot saknas. Modellen är oförändrad; begär utkastet igen.",
+ "apply_verify.take_back_failed": "Det gick inte att ta tillbaka ({e}): använd Ångra.",
+ "apply_verify.kind.created": "skapad",
+ "apply_verify.kind.changed": "ändrad",
+ "apply_verify.kind.deleted": "borttagen",
+ "apply_verify.card.type_row": "Typ {type} · {n} element får ändringen"
+}

@@ -1,0 +1,6 @@
+{
+ "cmd.xlsx.undo_apply": "Vrátit poslední použití tabulky XLSX",
+ "xlsx_undo.later": "Nevráceno: model byl po tomto použití tabulky XLSX upraven. Použijte Ctrl+Z krok za krokem nebo panel Historie.",
+ "xlsx_undo.gone": "Není co vrátit: toto použití tabulky XLSX je již vráceno.",
+ "xlsx_undo.busy": "Nejprve dokončete nebo zrušte aktuální kreslení, poté vraťte použití tabulky XLSX."
+}

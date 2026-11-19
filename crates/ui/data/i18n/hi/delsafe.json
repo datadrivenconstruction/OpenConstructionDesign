@@ -1,0 +1,6 @@
+{
+ "delsafe.ring.opening_shape": "खुलाव की रूपरेखा स्वयं को काटेगी या ढह जाएगी",
+ "delsafe.ring.opening_boundary": "खुलाव बाहरी सीमा को काटेगा या छुएगा",
+ "delsafe.ring.openings_overlap": "खुलाव एक-दूसरे को ढकेंगे या छुएँगे",
+ "xl.msg.delsafe_instance_param_on_types": "पैरामीटर '{}' इंस्टेंस पैरामीटर है; उसे elements शीट पर संपादित करें, लागू नहीं हुआ"
+}

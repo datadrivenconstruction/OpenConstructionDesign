@@ -1,0 +1,22 @@
+{
+ "ai.audit.tokens": "{n} Tokens",
+ "ai.audit.filter.all": "Alle",
+ "ai.audit.filter.ai": "KI",
+ "ai.audit.filter.me": "Eigene",
+ "ai.audit.search": "Änderungen durchsuchen",
+ "ai.audit.search.clear": "Suche löschen",
+ "ai.audit.show_all": "Alle anzeigen",
+ "ai.audit.empty.hint": "Hier erscheinen Änderungen, die ein Modell oder ein Agent entworfen oder angewendet hat, jeweils mit einem Weg zurück.",
+ "ai.audit.no_match": "Keine Änderungen entsprechen dem Filter.",
+ "ai.audit.show.tip": "Die von dieser Änderung berührten Elemente wählen und anzeigen",
+ "ai.audit.revert.ask": "„{what}“ zurücknehmen? {change}.",
+ "ai.audit.revert.elements": {
+  "one": "# Elementänderung",
+  "other": "# Elementänderungen"
+ },
+ "ai.audit.revert.keeps": "Neuere Änderungen bleiben erhalten. Das Zurücknehmen ist ein Rückgängig-Schritt.",
+ "ai.audit.cancel": "Abbrechen",
+ "ai.audit.toast.reverted": "Zurückgenommen: {what}",
+ "ai.audit.toast.undone": "Rückgängig gemacht: {what}",
+ "ai.audit.redo": "Wiederholen"
+}

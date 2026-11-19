@@ -1,0 +1,43 @@
+{
+ "room_kinds": {
+  "living": [
+   "great room",
+   "family room",
+   "den"
+  ],
+  "kitchen": [
+   "kitchenette"
+  ],
+  "bath": [
+   "bathroom",
+   "full bath",
+   "restroom"
+  ],
+  "wc": [
+   "half bath",
+   "powder room"
+  ],
+  "hall": [
+   "foyer",
+   "entry"
+  ],
+  "corridor": [
+   "hallway"
+  ],
+  "storage": [
+   "closet",
+   "pantry",
+   "utility room"
+  ],
+  "office": [
+   "private office",
+   "open office"
+  ],
+  "meeting": [
+   "conference room"
+  ],
+  "technical": [
+   "mechanical room"
+  ]
+ }
+}

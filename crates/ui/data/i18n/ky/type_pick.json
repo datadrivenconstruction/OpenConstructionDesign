@@ -1,0 +1,10 @@
+{
+ "type_pick.pick.search": "Түрлөрдү же калыңдыкты издөө",
+ "type_pick.pick.empty": "Дал келген түрлөр жок",
+ "type_pick.pick.edit": "Түрдү түзөтүү…",
+ "type_pick.pick.mixed": "Аралаш",
+ "type_pick.pick.layers": {
+  "one": "# катмар",
+  "other": "# катмар"
+ }
+}

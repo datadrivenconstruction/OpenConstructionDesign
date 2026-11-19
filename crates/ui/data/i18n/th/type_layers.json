@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "แทรกเลเยอร์ด้านล่าง",
+ "type_layers.layer.delete": "ลบเลเยอร์",
+ "type_layers.layer.delete_last": "ประเภทต้องมีเลเยอร์อย่างน้อยหนึ่งชั้น",
+ "type_layers.value.bad": "ไม่ใช่ค่าบวกที่ถูกต้อง",
+ "type_layers.value.required": "จำเป็นต้องกรอก",
+ "type_layers.unsaved.title": "มีการเปลี่ยนแปลงที่ยังไม่บันทึกใน {name}",
+ "type_layers.unsaved.body": "นำไปใช้กับประเภทหรือยกเลิกหรือไม่",
+ "type_layers.unsaved.discard": "ยกเลิกการเปลี่ยนแปลง"
+}

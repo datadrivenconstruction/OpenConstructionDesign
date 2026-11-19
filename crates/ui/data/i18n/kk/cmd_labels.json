@@ -1,0 +1,14 @@
+{
+ "cmd.arch.wall.tile": "Қабырға",
+ "cmd.arch.door.tile": "Есік",
+ "cmd.arch.window.tile": "Терезе",
+ "cmd.arch.floor.tile": "Еден",
+ "cmd.mod.move.tile": "Жылжыту",
+ "cmd.mod.copy.tile": "Көшірмелеу",
+ "cmd.mod.rotate.tile": "Айналдыру",
+ "cmd.mod.mirror.tile": "Симметрия",
+ "cmd.mod.trim.tile": "Қию",
+ "cmd.mod.delete.tile": "Жою",
+ "cmd.ann.dim.tile": "Өлшем",
+ "cmd.ann.text.tile": "Мәтін"
+}

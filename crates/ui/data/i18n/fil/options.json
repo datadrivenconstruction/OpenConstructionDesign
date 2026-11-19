@@ -1,0 +1,15 @@
+{
+ "fe.add_why_empty": "Maglagay muna ng pangalan ng parameter",
+ "fe.add_why_exists": "May parameter na ng ganitong pangalan; gamitin ang Ilapat para baguhin ito",
+ "fe.apply_why_missing": "Walang parameter na ganito ang pangalan; mag-type ng umiiral na pangalan",
+ "fe.nochange": "Wala pang pagbabago",
+ "options.accept_more": "Tanggapin…",
+ "options.delete_more": "Burahin…",
+ "options.empty_title": "Wala pang option set",
+ "options.more": "Higit pang aksyon: {name}",
+ "options.primary_named": "Pangunahing option: {name}",
+ "options.primary_tip": "Gawing pangunahing option ng set ito",
+ "options.select_first": "Pumili muna ng elemento sa model",
+ "options.show_3d": "Ipakita sa 3D: {name}",
+ "options.show_plan": "Ipakita sa plan: {name}"
+}

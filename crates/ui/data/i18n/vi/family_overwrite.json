@@ -1,0 +1,16 @@
+{
+ "family_overwrite.ow.title": "Thay thế giá trị kiểu của dự án?",
+ "family_overwrite.ow.body": "Tải sẽ thay thế {values} trong {types}. Các thực thể đã đặt của những loại này: {instances}.",
+ "family_overwrite.ow.values": {
+  "one": "# giá trị",
+  "other": "# giá trị"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# loại",
+  "other": "# loại"
+ },
+ "family_overwrite.ow.list": "Loại: {list}",
+ "family_overwrite.ow.more": "và {n} mục nữa",
+ "family_overwrite.ow.back": "Quay lại chỉnh sửa",
+ "family_overwrite.ow.replace": "Thay thế giá trị"
+}

@@ -1,0 +1,27 @@
+id = "G39_parabolic_dish__ru"
+tier = "hard"
+group = "Любая геометрия"
+title = "Parabolic dish antenna"
+lang = "ru"
+base = "empty"
+
+[[turn]]
+say = "Спроектируй параболическую антенну диаметром 18 м и глубиной 4.5 м как стальную сетчатую оболочку на параболоиде: кольцевые и радиальные трубчатые стержни, ось наклонена на 30 градусов, рефлектор опирается на центральное кольцо на высоте 8 м над землёй."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "gridshell"
+min = 1.0
+
+[[oracle.count]]
+spec = "gridshell_bar+beam+brace"
+min = 150.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

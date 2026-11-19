@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "Automaattinen tallennus epäonnistui, viimeisimpiä muutoksia ei suojata. {why}",
+ "autosave_status.autosave_open": "Automaattisen tallennuksen asetukset",
+ "autosave_status.autosave_recovered": "Automaattinen tallennus toimii taas.",
+ "autosave_status.autosave_reason": "Syy: {why}"
+}

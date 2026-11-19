@@ -1,0 +1,14 @@
+{
+ "ai.stream.waiting": "Ootan mudelit",
+ "ai.stream.reading": "Loen mudelit",
+ "ai.stream.working": "Töötan",
+ "ai.stream.answering": "Kirjutan vastust",
+ "ai.stream.tools_one": "1 tööriist",
+ "ai.stream.tools_many": "{n} tööriista",
+ "ai.stream.secs": "{n} s",
+ "ai.stream.stalled": "Ootan veel mudeliteenust",
+ "ai.stream.stop": "Peata",
+ "ai.stream.cancelled": "Peatatud",
+ "ai.stream.incomplete": "Mustand on poolik. Midagi ei rakendatud mudelile.",
+ "ai.stream.sep": " · "
+}

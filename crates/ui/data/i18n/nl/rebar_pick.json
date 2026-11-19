@@ -1,0 +1,7 @@
+{
+ "rebar_pick.pick.empty": "Wapening: kies een kolom, balk, wand, vloer of fundering",
+ "rebar_pick.pick.unsupported": "Deze selectie kan niet worden gewapend. Kies een kolom, balk, wand, vloer of fundering",
+ "rebar_pick.pick.keys": "Klik om te kiezen, Shift om meer toe te voegen · Enter om het formulier te openen · Esc om te annuleren",
+ "rebar_pick.pick.open": "Formulier openen",
+ "rebar_pick.pick.cancel": "Annuleren"
+}

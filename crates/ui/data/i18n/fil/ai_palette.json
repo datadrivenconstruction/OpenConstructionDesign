@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "Magtanong sa AI: {q}",
+ "ai.palette.connect": "Ikonekta ang AI para makapagtanong",
+ "ai.palette.draft.apply": "I-apply ang draft ({n})",
+ "ai.palette.draft.reject": "Tanggihan ang draft",
+ "ai.palette.draft.next": "Susunod na pagbabago sa draft",
+ "ai.palette.draft.show": "Ipakita ang draft sa view",
+ "cmd.ai.next_change": "Susunod na pagbabago sa draft",
+ "cmd.ai.next_change.desc": "Inililipat ang view sa susunod na elementong binabago ng draft.",
+ "cmd.ai.show_draft": "Ipakita ang draft ng AI sa view",
+ "cmd.ai.show_draft.desc": "Ina-fit ang view sa lahat ng binabago ng draft."
+}

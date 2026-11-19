@@ -1,0 +1,15 @@
+{
+ "xlw.hd_never": "Belum diekspor",
+ "xlw.hd_now": "baru saja",
+ "xlw.hd_min": "{n} mnt lalu",
+ "xlw.hd_hour": "{n} jam lalu",
+ "xlw.hd_day": "{n} hari lalu",
+ "xlw.hd_linked": "Tertaut",
+ "xlw.hd_watched": "Diawasi",
+ "xlw.hd_stale": "Model berubah sejak ekspor",
+ "xlw.ft_export": "Ekspor",
+ "xlw.ft_review": "Tinjau",
+ "xlw.ft_apply": "Terapkan {n} perubahan",
+ "xlw.ft_delete_missing": "Hapus yang hilang",
+ "xlw.ft_keep_missing_tip": "Penghapusan aktif: elemen tanpa baris akan dihapus saat Terapkan. Hilangkan centang untuk mempertahankannya."
+}

@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "Voorbeeld",
+ "agent_draft.ag.preview.desc": "Schetst de elementen van dit concept op het canvas zolang de aanwijzer op de knop staat. Er wordt niets gewijzigd.",
+ "agent_draft.type.column": "Kolom",
+ "agent_draft.type.roof": "Dak",
+ "agent_draft.type.ceiling": "Plafond",
+ "agent_draft.type.stair": "Monolithisch",
+ "agent_draft.type.railing": "Leuning",
+ "agent_draft.type.shaft": "Schacht",
+ "agent_draft.type.axis": "As 6.5 mm",
+ "agent_draft.type.refplane": "Referentievlak"
+}

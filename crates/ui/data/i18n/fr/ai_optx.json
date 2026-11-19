@@ -1,0 +1,10 @@
+{
+ "ai.optx.applied": "Variante « {name} » appliquée. Annuler la remet en brouillon",
+ "ai.optx.missing": "La variante {id} n'existe plus",
+ "ai.optx.accepted": "La variante {id} est déjà appliquée",
+ "ai.optx.not_draft": "La variante {id} a été rejetée et ne peut pas être appliquée",
+ "ai.optx.stale": "Le modèle a changé après la création de la variante {id} : régénérez-la d'abord",
+ "ai.optx.bad_recipe": "La recette de la variante ne peut pas être lue : {e}",
+ "ai.optx.refused": "La variante n'a pas été appliquée ({code}) : {reason}",
+ "ai.optx.failed": "La variante n'a pas été appliquée : {e}"
+}

@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "वर्कबुक एक्सपोर्ट होने के बाद क्या होता है",
+ "settings.area_decimals_desc": "क्षेत्रफल में दशमलव विभाजक के बाद के अंक",
+ "settings.volume_decimals_desc": "आयतन में दशमलव विभाजक के बाद के अंक",
+ "settings.frac_desc": "इम्पीरियल लंबाई में इंच का सबसे छोटा भिन्न",
+ "settings.small_area_desc": "एक वर्ग फ़ुट से छोटे क्षेत्रफल वर्ग इंच में दिखाएँ",
+ "settings.sample_desc": "वर्तमान चुनावों के साथ संख्याएँ कैसी दिखती हैं",
+ "autosave.title_desc": "खुले प्रोजेक्ट की रिकवरी प्रति रखें",
+ "autosave.interval_desc": "रिकवरी प्रतियों के बीच का समय",
+ "autosave.keep_desc": "पुरानी रिकवरी प्रतियाँ हटा दी जाती हैं",
+ "autosave.folder_desc": "खाली का अर्थ डिफ़ॉल्ट फ़ोल्डर",
+ "autosave.remind_desc": "जिस प्रोजेक्ट की अभी फ़ाइल नहीं है, उसे सहेजने की याद दिलाना",
+ "settings.backend_desc": "उपयोग में ग्राफ़िक्स एडैप्टर",
+ "settings.news_desc": "इस संस्करण में क्या बदला",
+ "settings.assoc_default_desc": "मॉडल फ़ाइलों के लिए यह ऐप डिफ़ॉल्ट बनाएँ",
+ "settings.data_dir_desc": "कैश, रिकवरी प्रतियाँ और लॉग यहाँ रहते हैं।"
+}

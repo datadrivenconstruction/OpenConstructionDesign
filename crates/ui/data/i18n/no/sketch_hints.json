@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "Tegn en lukket kontur: klikk punkter, og trykk Enter eller Fullfør for å lage",
+ "sketch_hints.sk_finish": "Fullfør",
+ "sketch_hints.sk_cancel": "Avbryt",
+ "sketch_hints.import_warn": "advarsler fra modellkontroll: {n} (første: {first})",
+ "sketch_hints.ai.offline.schedule": "Åpne listen",
+ "sketch_hints.ai.offline.check": "Kontroller mot regler",
+ "sketch_hints.ai.offline.warnings": "Vis advarsler",
+ "cmd.file.publish_pdf": "Publiser ark som PDF…",
+ "cmd.file.publish_pdf.desc": "Publiserer de valgte arkene til PDF. Samme som Eksporter ark til PDF/SVG.",
+ "sketch_hints.verify_none": "Ingenting satt av AI-assistenten i valget å verifisere",
+ "sketch_hints.contours_none": "Ingen terrengflate i modellen: koter vises når en er laget",
+ "sketch_hints.contours_off": "Kotelinjer for terrengflate skjult",
+ "sketch_hints.contours_on": "Kotelinjer for terrengflate vist"
+}

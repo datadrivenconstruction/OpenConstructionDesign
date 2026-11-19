@@ -1,0 +1,9 @@
+{
+ "ai.plan.reject_ask": {
+  "one": "Rejeter # modification ?",
+  "other": "Rejeter # modifications ?"
+ },
+ "ai.plan.reject_ask.hint": "Le brouillon et vos coches sont supprimés. Le modèle reste inchangé.",
+ "ai.plan.reject_confirm": "Rejeter",
+ "ai.plan.reject_keep": "Conserver"
+}

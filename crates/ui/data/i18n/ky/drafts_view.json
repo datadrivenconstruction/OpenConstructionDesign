@@ -1,0 +1,9 @@
+{
+ "drafts.draft.view": "“{name}” көрүнүш графикасы",
+ "drafts.draft.filter": "Көрүнүш чыпкасы “{name}”",
+ "drafts.draft.filter_new": "Жаңы көрүнүш чыпкасы",
+ "drafts.draft.object_styles": "Объекттердин стилдери",
+ "drafts.draft.material": "“{name}” материалы",
+ "drafts.draft.type": "“{name}” түрү",
+ "drafts.draft.params": "“{name}” үй-бүлөсүнүн параметрлери"
+}

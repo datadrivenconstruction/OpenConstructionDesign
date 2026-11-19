@@ -1,0 +1,9 @@
+{
+ "cmd.mass.timeline_family": "历史转族",
+ "cmd.mass.timeline_family.desc": "根据所选体量的特征历史创建构件族。历史参数将成为族参数。",
+ "mass_family.done": "已创建族 {name}，参数 {n} 个",
+ "mass_family.refused": "未创建族：{e}",
+ "mass_family.no_mass": "请先选择参数化体量",
+ "mass_family.add_modifier": "添加修改器",
+ "mass_family.needs_faces": "需要选中的面：请在“体量”选项卡上使用此工具"
+}

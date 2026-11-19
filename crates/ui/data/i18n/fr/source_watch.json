@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "{name} a changé sur le disque.",
+ "src.watch.update": "Mettre à jour le modèle",
+ "src.watch.compare": "Comparer",
+ "src.watch.ignore": "Ignorer cette version",
+ "src.watch.missing": "{name} : fichier source introuvable. Le travail continue.",
+ "src.watch.locate": "Localiser…",
+ "src.watch.dismiss": "Ignorer",
+ "src.watch.more": "et {n} autres fichiers source",
+ "src.watch.done": "Mis à jour depuis {name} : {updated} modifiés, {kept} champs conservés tels que modifiés, {conflicts} conflits, {locked} valeurs verrouillées conservées"
+}

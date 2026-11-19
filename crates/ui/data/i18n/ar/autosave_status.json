@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "فشل الحفظ التلقائي، أحدث التغييرات غير محمية. {why}",
+ "autosave_status.autosave_open": "إعدادات الحفظ التلقائي",
+ "autosave_status.autosave_recovered": "عاد الحفظ التلقائي للعمل.",
+ "autosave_status.autosave_reason": "السبب: {why}"
+}

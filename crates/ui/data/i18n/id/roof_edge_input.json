@@ -1,0 +1,23 @@
+{
+ "roof_edge.err.number": "Masukkan angka",
+ "roof_edge.err.positive": "Harus lebih besar dari nol",
+ "roof_edge.err.nonneg": "Tidak boleh negatif",
+ "roof_edge.err.max": "Tidak boleh melebihi {max}",
+ "roof_edge.list.empty_hint": "Tambahkan fasia, talang, soffit, atau skylight dengan perintah atap",
+ "roof_edge.edit_tip": "Edit properti",
+ "roof_edge.delete_tip": "Hapus",
+ "roof_edge.pe.del_tip": "Hapus titik ini (potongan mempertahankan minimal 3)",
+ "roof_edge.pe.up_tip": "Pindahkan titik ini ke atas",
+ "roof_edge.confirm_edge": "Hapus {name}? Ctrl+Z mengembalikannya.",
+ "roof_edge.confirm_profile": "Hapus profil {name}? Ctrl+Z mengembalikannya.",
+ "roof_edge.deleted_one": "{name} dihapus",
+ "roof_edge.deleted_n": {
+  "one": "# elemen dihapus",
+  "other": "# elemen dihapus"
+ },
+ "roof_edge.profile_deleted": "Profil dihapus",
+ "roof_edge.profile_in_use": {
+  "one": "Dipakai oleh # elemen tepi: hapus atau ubah dulu",
+  "other": "Dipakai oleh # elemen tepi: hapus atau ubah dulu"
+ }
+}

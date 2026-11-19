@@ -1,0 +1,4 @@
+{
+ "elem.spreadsheet.applied": "Импортирано от електронна таблица: {what}",
+ "elem.spreadsheet.failed": "Импортът от електронна таблица не успя: {e}"
+}

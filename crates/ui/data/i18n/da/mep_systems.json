@@ -1,0 +1,21 @@
+{
+ "mep.row.system": "System",
+ "mep.row.elevation": "Startkote",
+ "mep.row.slope": "Hældning",
+ "mep.row.material": "Materiale",
+ "mep.row.dev_elevation": "Kote",
+ "mep.row.no_system": "Systemet findes ikke længere. Vælg et andet.",
+ "mep.row.no_points": "Strækningen har ingen punkter, så den har ingen kote.",
+ "mep.row.system_domain": "System {system} tager ikke denne strækningstype ({kind}). Vælg et system af samme netværkstype.",
+ "mep.row.material_pipes": "Et materiale gælder kun for rør; denne strækning er en {kind}.",
+ "mep.row.no_catalog": "Materialet har ingen katalogstørrelser for denne strækning.",
+ "mep.mat.none": "Ikke angivet",
+ "mep.mat.steel": "Stål",
+ "mep.mat.copper": "Kobber",
+ "mep.mat.pvc": "PVC",
+ "mep.mat.pp": "Polypropylen",
+ "mep.err.follow_blocked": "En tilsluttet strækning kan ikke følge denne ændring: der er ikke plads til dens ben på det nye sted. Flyt enheden mindre, eller frakobl strækningen først.",
+ "mep.err.follow_slope": "En tilsluttet strækning har et fald, der ikke kan bevares på det nye sted: det ville falde under det mindste fald i dens system. Flyt enheden mindre i højden, eller frakobl strækningen først.",
+ "mep.err.follow_port_lost": "En tilslutning, som denne strækning sad på, findes ikke længere efter redigeringen. Flyt strækningen væk først, eller behold enhedstypen.",
+ "mep.err.follow_device": "Denne strækning ender i en enhedstilslutning og kan ikke forlade den. Flyt i stedet enheden, eller frakobl strækningen først."
+}

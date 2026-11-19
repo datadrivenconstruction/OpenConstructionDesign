@@ -1,0 +1,33 @@
+{
+ "cmd.help.licenses": "Open source-licenser",
+ "cmd.help.licenses.desc": "Viser de open source-biblioteker, denne build bruger, med deres licenser.",
+ "about.product": "DDC Editor",
+ "about.version": "Version",
+ "about.build": "Build",
+ "about.schema": "Modelskema",
+ "about.system": "System",
+ "about.gpu": "Grafikadapter",
+ "about.language": "Sprog",
+ "about.copy": "Kopiér versionsoplysninger",
+ "about.copy_desc": "Version, build, system og grafikadapter til en fejlrapport. Ingen filstier.",
+ "about.copied": "Versionsoplysninger kopieret",
+ "about.licenses": "Open source-licenser",
+ "about.licenses_desc": "Biblioteker brugt i denne build og deres licenser",
+ "about.licenses.open": "Vis",
+ "about.licenses.title": "Open source-licenser",
+ "about.licenses.note": "DDC Editor indeholder bibliotekerne nedenfor. Hver forbliver under sin egen licens og copyrightmeddelelse. Fulde licenstekster: THIRD_PARTY_LICENSES.txt ved siden af programmet.",
+ "about.licenses.full": "Fulde licenstekster",
+ "about.licenses.list": "Komponentliste",
+ "about.licenses.close": "Luk",
+ "about.licenses.col_name": "Komponent",
+ "about.licenses.col_license": "Licens",
+ "about.licenses.count": {
+  "one": "# komponent",
+  "other": "# komponenter"
+ },
+ "about.licenses.count_of": "{shown} af {total} komponenter",
+ "about.licenses.search_hint": "Søg efter navn eller licens…",
+ "about.licenses.search_clear": "Ryd søgning",
+ "about.licenses.none": "Intet fundet",
+ "about.licenses.none_hint": "Prøv en del af et biblioteksnavn eller en licens, fx MIT."
+}

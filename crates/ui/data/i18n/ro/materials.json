@@ -1,0 +1,11 @@
+{
+ "materials.mat.name_empty": "Introdu un nume de material",
+ "materials.mat.empty_title": "Niciun material încă",
+ "materials.mat.empty_hint": "Scrie un nume mai jos și apasă Adaugă",
+ "materials.mat.nothing_hint": "Niciun material nu corespunde căutării",
+ "materials.mat.clear_search": "Șterge căutarea",
+ "materials.mat.replace_with": "Înlocuiește cu",
+ "materials.mat.delete_refused": "Nu poate fi șters: materialul este folosit în {n} locuri. Înlocuiește-l mai întâi.",
+ "materials.mat.delete_confirm": "Ștergi materialul „{name}”? Poți anula această acțiune.",
+ "materials.mat.replace_confirm": "Înlocuiești „{from}” cu „{to}” în {n} elemente? „{from}” este eliminat. Poți anula această acțiune."
+}

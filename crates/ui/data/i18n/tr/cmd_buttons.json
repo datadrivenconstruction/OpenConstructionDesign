@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}, kat üzerinde",
+ "cmd_buttons.purge.undo": "Kaldırma tek bir geri alma adımıdır.",
+ "cmd_buttons.unpin.none": "Seçili öğelerden hiçbiri sabitlenmemiş",
+ "cmd_buttons.change_type.none": "Önce duvarları seçin: tipleri tek adımda değişir",
+ "cmd_buttons.units.metric": "Birimler: metrik",
+ "cmd_buttons.units.imperial": "Birimler: fit ve inç",
+ "cmd_buttons.units.back": "Geri dön",
+ "cmd_buttons.underlay.on": "Alt katman açık: alttaki kat soluk gösterilir",
+ "cmd_buttons.underlay.off": "Alt katman kapalı",
+ "cmd_buttons.underlay.none": "Alt katman açık, ancak alttaki katta gösterilecek bir şey yok",
+ "cmd_buttons.zoom_sel.no_shape": "Seçimin bu görünümde çerçevelenecek bir şekli yok",
+ "cmd_buttons.close.base": "Plan ve 3B sekmeleri açık kalır; kapatmak için bir kesit, pafta veya çizim görünümü açın",
+ "tool.equipment": "Ekipman",
+ "hint.equipment.place": "Ekipman: konumu seçin · Çıkmak için Esc",
+ "cmd_buttons.table.opened": "Tablo modelin yanında açıldı",
+ "cmd_buttons.circuits.tip": "Bu modelin elektrik devrelerinin listesini açar"
+}

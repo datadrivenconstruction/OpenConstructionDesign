@@ -1,0 +1,9 @@
+{
+ "cmd.mass.timeline_family": "Từ lịch sử sang họ cấu kiện",
+ "cmd.mass.timeline_family.desc": "Tạo họ cấu kiện từ lịch sử dựng hình của khối đã chọn. Các tham số của lịch sử trở thành tham số của họ.",
+ "mass_family.done": "Đã tạo họ {name} với {n} tham số",
+ "mass_family.refused": "Chưa tạo họ: {e}",
+ "mass_family.no_mass": "Trước tiên hãy chọn khối tham số",
+ "mass_family.add_modifier": "Thêm bộ điều chỉnh",
+ "mass_family.needs_faces": "Cần chọn các mặt: dùng công cụ trên thẻ Khối"
+}

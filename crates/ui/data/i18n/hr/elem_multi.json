@@ -1,0 +1,10 @@
+{
+ "elem.multi.title": "{n} elemenata",
+ "elem.multi.varies": "razlikuje se",
+ "elem.multi.tip": "Unos postavlja sve odabrane elemente",
+ "elem.multi.hidden": "{n} redaka samo na nekim elementima",
+ "elem.multi.none": "Odabrani elementi nemaju zajedničkih redaka",
+ "elem.multi.range": "Vrijednost je izvan dopuštenog raspona",
+ "elem.multi.changed": "Promijenjeno elemenata: {n} · Ctrl+Z poništava",
+ "elem.multi.same": "Ta vrijednost već je na svim odabranim elementima"
+}

@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "Tomt input.",
+ "units.err.not_number": "Ikke et tal ved position {pos}.",
+ "units.err.unknown_unit": "Ukendt enhed: {unit}.",
+ "units.err.non_positive": "Længden skal være større end nul.",
+ "units.err.too_large": "Længden må ikke overstige {max} m.",
+ "units.err.bad_angle": "Vinklen skal være et antal grader.",
+ "units.err.unknown_name": "Ukendt navn: {name}. Værdien beholdes.",
+ "units.err.cycle": "Formelløkke ved {name}. Værdien beholdes.",
+ "units.err.bad_expr": "Udtrykket kan ikke læses ved position {pos}. Værdien beholdes.",
+ "units.err.div_zero": "Division med nul ved position {pos}. Værdien beholdes.",
+ "units.err.invalid": "Ugyldigt tal.",
+ "units.err.kept": "Ikke ændret: {reason}"
+}

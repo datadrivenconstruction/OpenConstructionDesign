@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "Poništi: {what}",
+ "undo_label.redo_what": "Ponovi: {what}",
+ "undo_label.undo_none": "Nema što poništiti",
+ "undo_label.redo_none": "Nema što ponoviti"
+}

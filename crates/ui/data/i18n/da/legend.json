@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "Forklaring",
+ "legend.legend.new_hint": "Navn på ny forklaring",
+ "legend.legend.delete_tip": "Slet forklaring",
+ "legend.legend.delete_placed": "Slet forklaring (placeret på: {sheets})",
+ "legend.legend.deleted": "Forklaring slettet: {name}",
+ "legend.legend.no_rows": "Ingen rækker endnu. Tilføj en, eller overtag typerne fra den aktuelle visning",
+ "legend.legend.replace_q": "Erstat {n} rækker med typerne fra denne visning?",
+ "legend.legend.replace": "Erstat",
+ "legend.legend.keep": "Behold rækker",
+ "legend.col.swatch": "Farveprøve",
+ "legend.col.value": "Værdi",
+ "legend.col.label": "Etiket"
+}

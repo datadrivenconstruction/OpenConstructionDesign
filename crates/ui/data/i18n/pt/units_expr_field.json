@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "Entrada vazia.",
+ "units.err.not_number": "Não é um número na posição {pos}.",
+ "units.err.unknown_unit": "Unidade desconhecida: {unit}.",
+ "units.err.non_positive": "O comprimento deve ser maior que zero.",
+ "units.err.too_large": "O comprimento não deve exceder {max} m.",
+ "units.err.bad_angle": "O ângulo é um número de graus.",
+ "units.err.unknown_name": "Nome desconhecido: {name}. Valor mantido.",
+ "units.err.cycle": "Laço de fórmula em {name}. Valor mantido.",
+ "units.err.bad_expr": "Não é possível ler a expressão na posição {pos}. Valor mantido.",
+ "units.err.div_zero": "Divisão por zero na posição {pos}. Valor mantido.",
+ "units.err.invalid": "Número inválido.",
+ "units.err.kept": "Não alterado: {reason}"
+}

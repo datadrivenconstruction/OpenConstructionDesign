@@ -1,0 +1,20 @@
+{
+ "api.cmd.move_elements": "Pindahkan elemen sejauh offset dalam meter",
+ "api.cmd.copy_elements": "Salin elemen dengan satu atau lebih offset dalam meter",
+ "api.cmd.rotate_elements": "Putar elemen terhadap titik sebesar sudut dalam derajat",
+ "api.cmd.mirror_elements": "Cermin elemen terhadap sumbu melalui dua titik",
+ "api.cmd.scale_elements": "Skala elemen terhadap titik dengan faktor",
+ "api.cmd.array_elements": "Array linier atau radial dari elemen",
+ "api.cmd.offset_wall": "Salinan sejajar dinding pada jarak dalam meter",
+ "api.cmd.split_wall": "Bagi dinding menjadi dua di satu titik",
+ "api.cmd.pin_elements": "Kunci atau lepas kunci elemen",
+ "api.cmd.flip_openings": "Balik sisi engsel atau arah hadap pintu dan jendela",
+ "api.cmd.create_level": "Buat level pada elevasi dalam meter",
+ "api.cmd.edit_level": "Ganti nama level atau ubah elevasinya",
+ "api.cmd.delete_level": "Hapus level",
+ "api.cmd.place_rooms": "Tempatkan ruang di setiap area tertutup pada level",
+ "api.cmd.join_elements": "Gabung, lepas, atau ganti sambungan geometri",
+ "api.cmd.place_footings": "Tempatkan pondasi di setiap kolom pada level",
+ "api.cmd.create_terrain": "Buat medan dari titik survei atau bidang miring",
+ "api.cmd.script_recipes": "Baca blok skrip dan resep konstruksi bebas"
+}

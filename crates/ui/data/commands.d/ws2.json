@@ -1,0 +1,15 @@
+[
+ {
+  "id": "ui.layout.back",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [
+   "Shift+F4"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ }
+]

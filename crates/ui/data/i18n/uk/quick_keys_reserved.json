@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key} зарезервовано ({why}), її не можна призначити знову",
+ "quick.keys.res_copy": "копіювати",
+ "quick.keys.res_paste": "вставити",
+ "quick.keys.res_cut": "вирізати",
+ "quick.keys.res_undo": "відміна / повтор",
+ "quick.keys.res_save": "зберегти",
+ "quick.keys.res_palette": "палітра команд",
+ "quick.keys.reserved_conflict": "{key} вже використовується для «{cmd}». Esc залишає її там.",
+ "quick.keys.reserved_swap": "Поміняти",
+ "quick.keys.reserved_take": "Призначити",
+ "quick.keys.reserved_keep": "Залишити",
+ "quick.keys.reserved_os": "Зайнято системою:"
+}

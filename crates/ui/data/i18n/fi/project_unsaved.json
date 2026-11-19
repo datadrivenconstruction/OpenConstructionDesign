@@ -1,0 +1,7 @@
+{
+ "project_unsaved.unsaved.model": "Mallin muutoksia ei ole tallennettu.",
+ "project_unsaved.unsaved.drawings": {
+  "one": "# sijoitettu piirustus ei ole tallennettu projektiin: sen muutokset menetetään.",
+  "other": "# sijoitettua piirustusta ei ole tallennettu projektiin: niiden muutokset menetetään."
+ }
+}

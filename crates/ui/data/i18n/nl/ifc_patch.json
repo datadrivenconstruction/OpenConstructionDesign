@@ -1,0 +1,19 @@
+{
+ "ifc_patch.fallback.source_changed": "Patch niet gebruikt: het bronbestand is op schijf gewijzigd of kan niet worden gelezen. Het bestand is opnieuw uit het model geschreven.",
+ "ifc_patch.fallback.sources": "Patch niet gebruikt: het project heeft niet precies één bron. Het bestand is opnieuw uit het model geschreven.",
+ "ifc_patch.fallback.schema": "Patch niet gebruikt: het schema van het bronbestand wordt niet ondersteund. Het bestand is opnieuw uit het model geschreven.",
+ "ifc_patch.fallback.structure": "Patch niet gebruikt: de structuur van het bronbestand kon niet worden vertrouwd. Het bestand is opnieuw uit het model geschreven.",
+ "ifc_patch.fallback.edit": "Patch niet gebruikt: een bewerking kan niet veilig op het bronbestand worden toegepast. Het bestand is opnieuw uit het model geschreven.",
+ "ifc_patch.reason.schema": "Het schema van het bronbestand kan deze wijziging niet bevatten; het element blijft zoals in de bron",
+ "ifc_patch.reason.prop": "Deze eigenschapswijziging kan niet in het bronbestand worden uitgedrukt; de waarde blijft zoals in de bron",
+ "ifc_patch.reason.no_export": "Dit nieuwe element heeft geen weergave in IFC",
+ "ifc_patch.reason.link": "Het element staat in het bestand, maar een koppeling naar zijn materiaal of type wordt niet geschreven; het staat als niet geschreven vermeld",
+ "ifc_patch.drop": "Verwijderen",
+ "ifc_patch.drop_done": "Openstaande koppelingen verwijderd: {n}; ze worden niet meer opnieuw geprobeerd",
+ "ifc_patch.fallback.building": "Patch niet gebruikt: een nieuwe verdieping vereist precies één gebouw in het bronbestand, en er is er geen of meerdere. Het bestand is opnieuw uit het model geschreven.",
+ "ifc_patch.fallback.types": "Patch niet gebruikt: verdiepingen, types of materialen zijn sinds de import gewijzigd, en de patch kan die niet schrijven. Het bestand is opnieuw uit het model geschreven.",
+ "ifc_patch.fallback.zipped": "Patch niet gebruikt: een gezipt bronbestand kan niet worden gepatcht. Het bestand is opnieuw uit het model geschreven.",
+ "ifc_patch.fallback.source_kept": "Het bronbestand is niet overschreven: deze opslag kon niet betrouwbaar worden geacht om het te vervangen. Deze opslag is een kopie ernaast.",
+ "ifc_patch.fallback.nested": "Patch niet gebruikt: een nieuw element heeft geneste onderdelen (zoals aansluitingen), die de patch niet kan schrijven. Het bestand is opnieuw uit het model geschreven.",
+ "ifc_patch.fallback.shared_part": "Patch niet gebruikt: een onderdeel van een bewerkte trap of helling wordt ook door een ander element of relatie gebruikt, wat de patch niet kan verwerken. Het bestand is opnieuw uit het model geschreven."
+}

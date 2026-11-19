@@ -1,0 +1,33 @@
+[
+ {
+  "id": "browser.row_open",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "context_keys": ["Enter"],
+  "tab": null,
+  "surfaces": ["D"],
+  "stage": "M1"
+ },
+ {
+  "id": "browser.row_rename",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "context_keys": ["F2"],
+  "tab": null,
+  "surfaces": ["D"],
+  "stage": "M1"
+ },
+ {
+  "id": "browser.row_delete",
+  "once": true,
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "context_keys": ["Del"],
+  "tab": null,
+  "surfaces": ["D"],
+  "stage": "M1"
+ }
+]

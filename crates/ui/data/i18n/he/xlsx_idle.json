@@ -1,0 +1,8 @@
+{
+ "xlsx_idle.idle_title": "אין שינויים לייבוא",
+ "xlsx_idle.export_name": "ייצוא",
+ "xlsx_idle.export_body": "כותב את המודל לחוברת עבודה. ערוך בה ערכים, ואז סנכרן.",
+ "xlsx_idle.sync_name": "סנכרון",
+ "xlsx_idle.sync_body": "קורא מחדש את חוברת העבודה ומציג מה שונה. המודל משתנה רק כשאתה מחיל.",
+ "xlsx_idle.last_sync": "סונכרן לאחרונה: {when}"
+}

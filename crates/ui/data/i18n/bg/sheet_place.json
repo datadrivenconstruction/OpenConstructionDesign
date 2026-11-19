@@ -1,0 +1,15 @@
+{
+ "sheet_place.place_view_tip": "Поставя изглед или спецификация върху листа",
+ "sheet_place.properties_tip": "Номер на листа, име, хартия и ревизии",
+ "sheet_place.print_tip": "Печата или експортира листа",
+ "sheet_place.fit_tip": "Побира листа в прозореца",
+ "sheet_place.activate_tip": "Редактирайте изгледа директно на листа: местене, мащабиране и изрязване",
+ "sheet_place.open_view_tip": "Отваря изгледа в собствен таб",
+ "sheet_place.done_tip": "Завършете редакцията на изгледа върху листа",
+ "sheet_place.reset_crop_tip": "Премахва изрязването и показва целия изглед",
+ "sheet_place.scale_tip": "Мащаб на избрания изглед върху листа",
+ "sheet_place.title_tip": "Заглавие, показвано под изгледа върху листа",
+ "sheet_place.banner": "Редактиране на изглед върху листа",
+ "sheet_place.new_set_tip": "Създава комплект листове за печат заедно",
+ "sheet_place.new_sheet_tip": "Добавя лист към проекта"
+}

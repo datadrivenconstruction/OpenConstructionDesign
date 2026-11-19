@@ -1,0 +1,19 @@
+{
+ "ifc_patch.fallback.source_changed": "Yamoq ishlatilmadi: manba fayl diskda o'zgargan yoki o'qib bo'lmaydi. Fayl model asosida qayta yozildi.",
+ "ifc_patch.fallback.sources": "Yamoq ishlatilmadi: loyihada aniq bitta manba yo'q. Fayl model asosida qayta yozildi.",
+ "ifc_patch.fallback.schema": "Yamoq ishlatilmadi: manba faylning sxemasi qo'llab-quvvatlanmaydi. Fayl model asosida qayta yozildi.",
+ "ifc_patch.fallback.structure": "Yamoq ishlatilmadi: manba faylning tuzilishiga ishonib bo'lmadi. Fayl model asosida qayta yozildi.",
+ "ifc_patch.fallback.edit": "Yamoq ishlatilmadi: tahrirni manba fayliga xavfsiz qo'llab bo'lmaydi. Fayl model asosida qayta yozildi.",
+ "ifc_patch.reason.schema": "Manba faylining sxemasi bu tahrirni saqlay olmaydi; element manbadagidek qoladi",
+ "ifc_patch.reason.prop": "Bu xususiyat tahriri manba faylida ifodalanmaydi; qiymat manbadagidek qoladi",
+ "ifc_patch.reason.no_export": "Bu yangi elementning IFC da tasviri yo'q",
+ "ifc_patch.reason.link": "Element faylda bor, lekin uning material yoki turiga havola yozilmaydi; yozilmagan deb ro'yxatga olingan",
+ "ifc_patch.drop": "Tashlash",
+ "ifc_patch.drop_done": "Kutilayotgan havolalar tashlandi: {n}; ular endi qayta urinilmaydi",
+ "ifc_patch.fallback.building": "Yamoq ishlatilmadi: yangi sath uchun manba faylda aniq bitta bino bo'lishi kerak, u esa yo'q yoki bir nechta. Fayl model asosida qayta yozildi.",
+ "ifc_patch.fallback.types": "Yamoq ishlatilmadi: import'dan keyin sathlar, turlar yoki materiallar o'zgargan, yamoq ularni yoza olmaydi. Fayl model asosida qayta yozildi.",
+ "ifc_patch.fallback.zipped": "Yamoq ishlatilmadi: zip fayl sifatida arxivlangan manba faylni yamash mumkin emas. Fayl model asosida qayta yozildi.",
+ "ifc_patch.fallback.source_kept": "Manba fayl ustiga yozilmadi: bu saqlash uni almashtirishga ishonchli emas edi. Bu saqlash uning yonidagi nusxa.",
+ "ifc_patch.fallback.nested": "Yamoq ishlatilmadi: yangi elementning ichki qismlari bor (masalan, portlar), yamoq ularni yoza olmaydi. Fayl model asosida qayta yozildi.",
+ "ifc_patch.fallback.shared_part": "Yamoq ishlatilmadi: tahrirlangan zina yoki pandusning qismi boshqa element yoki bog'lanish tomonidan ham ishlatilgan, yamoq buni hisobga ola olmaydi. Fayl model asosida qayta yozildi."
+}

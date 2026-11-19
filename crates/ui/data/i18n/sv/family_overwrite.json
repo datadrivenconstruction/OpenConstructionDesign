@@ -1,0 +1,16 @@
+{
+ "family_overwrite.ow.title": "Ersätt projektets typvärden?",
+ "family_overwrite.ow.body": "Inläsningen ersätter {values} i {types}. Placerade instanser av dessa typer: {instances}.",
+ "family_overwrite.ow.values": {
+  "one": "# värde",
+  "other": "# värden"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# typ",
+  "other": "# typer"
+ },
+ "family_overwrite.ow.list": "Typer: {list}",
+ "family_overwrite.ow.more": "och {n} till",
+ "family_overwrite.ow.back": "Tillbaka till redigering",
+ "family_overwrite.ow.replace": "Ersätt värden"
+}

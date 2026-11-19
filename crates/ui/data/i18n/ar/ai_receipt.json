@@ -1,0 +1,25 @@
+{
+ "ai.receipt.title": {
+  "zero": "طُبّق # تغيير",
+  "one": "طُبّق تغيير واحد",
+  "two": "طُبّق تغييران",
+  "few": "طُبّق # تغييرات",
+  "many": "طُبّق # تغييراً",
+  "other": "طُبّق # تغيير"
+ },
+ "ai.receipt.more": "+{n} أخرى",
+ "ai.receipt.list": "العناصر",
+ "ai.receipt.show": "عرض",
+ "ai.receipt.show.tip": "حدّد العناصر المتغيرة وركّز عليها",
+ "ai.receipt.undo": "تراجع",
+ "ai.receipt.undo.tip": "تراجع عن هذا التطبيق بالضبط",
+ "ai.receipt.undone": "تم التراجع",
+ "ai.receipt.later": "أُجريت تعديلات لاحقة",
+ "ai.receipt.toast_undone": "تم التراجع عن الخطة المطبّقة",
+ "ai.receipt.draft_family": "عائلة المسودة: {name}",
+ "ai.receipt.promote": "اجعلها فعّالة",
+ "ai.receipt.promote.tip": "حوّل عائلة المسودة إلى عائلة فعّالة (خطوة تراجع واحدة)",
+ "ai.receipt.promoted": "العائلة فعّالة الآن",
+ "ai.receipt.promote_failed": "تعذر جعل العائلة فعّالة",
+ "cmd.ai.receipt_undo": "التراجع عن آخر خطة للذكاء"
+}

@@ -1,0 +1,5 @@
+{
+ "xlsx_readonly.read_only_head": "읽기 전용 — 적용하면 사본을 씁니다",
+ "xlsx_readonly.show_in_folder": "폴더에서 보기",
+ "xlsx_readonly.copy_exists": "사본 파일이 이미 있습니다. 다른 이름을 고르거나 파일을 삭제하세요."
+}

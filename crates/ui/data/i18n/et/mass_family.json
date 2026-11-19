@@ -1,0 +1,9 @@
+{
+ "cmd.mass.timeline_family": "Ajalugu perekonnaks",
+ "cmd.mass.timeline_family.desc": "Loob valitud parameetrilise massi konstruktsiooniajaloost komponendiperekonna. Ajaloo parameetrid muutuvad perekonna parameetriteks.",
+ "mass_family.done": "Perekond {name} loodud, parameetreid: {n}",
+ "mass_family.refused": "Perekonda ei loodud: {e}",
+ "mass_family.no_mass": "Valige kõigepealt parameetriline mass",
+ "mass_family.add_modifier": "Lisa modifikaator",
+ "mass_family.needs_faces": "Vajab valitud tahke: kasutage tööriista vahekaardil „Mahud“"
+}

@@ -1,0 +1,8 @@
+{
+ "cmd.props.param_lock": "Zaključaj ili otključaj vrijednost parametra",
+ "locked_values.kept": "zadržano zaključanih vrijednosti: {n}",
+ "locked_values.locked": "“{name}” zaključano: uvoz iz XLSX-a, grupna izmjena i AI ga zadržavaju",
+ "locked_values.unlocked": "“{name}” otključano",
+ "locked_values.locked_tip": "Zaključano: uvoz iz XLSX-a, grupna izmjena i AI zadržavaju ovu vrijednost. Kliknite za otključavanje  ·  Ctrl+L",
+ "locked_values.no_row": "Postavite kursor na redak parametra u Svojstvima, zatim pritisnite Ctrl+L"
+}

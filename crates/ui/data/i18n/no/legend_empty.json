@@ -1,0 +1,5 @@
+{
+ "legend.legend.empty_hint": "Skriv et navn over og trykk Opprett.",
+ "legend.legend.pick_hint": "Velg en tegnforklaring fra listen over.",
+ "legend.legend.taken": "Det finnes allerede en tegnforklaring som heter “{name}”. Skriv et annet navn."
+}

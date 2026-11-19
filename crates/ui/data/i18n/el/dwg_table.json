@@ -1,0 +1,14 @@
+{
+ "dwg_table.copy": "Αντιγραφή πίνακα",
+ "dwg_table.copy_tip": "Αντιγράφει την καταμέτρηση ανά στρώμα ως πίνακα για υπολογιστικό φύλλο",
+ "dwg_table.copied": "Η καταμέτρηση αντιγράφηκε (χωρισμένη με tab)",
+ "dwg_table.total": "Σύνολο",
+ "dwg_table.col.layer": "Στρώμα",
+ "dwg_table.col.count": "Πλήθος",
+ "dwg_table.col.len": "Μήκος, {unit}",
+ "dwg_table.col.area": "Εμβαδόν, {unit}",
+ "dwg_table.unit.mm": "mm",
+ "dwg_table.unit.m2": "m²",
+ "dwg_table.unit.ft": "ft",
+ "dwg_table.unit.ft2": "ft²"
+}

@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "Хаагдсан контур зур: цэг дарж, дараа нь Enter эсвэл Дуусгах дарна уу",
+ "sketch_hints.sk_finish": "Дуусгах",
+ "sketch_hints.sk_cancel": "Цуцлах",
+ "sketch_hints.import_warn": "загварын шалгалтын анхааруулга: {n} (эхнийх нь: {first})",
+ "sketch_hints.ai.offline.schedule": "Хуваарийг нээх",
+ "sketch_hints.ai.offline.check": "Дүрмээр шалгах",
+ "sketch_hints.ai.offline.warnings": "Анхааруулгуудыг харуулах",
+ "cmd.file.publish_pdf": "Хуудсуудыг PDF-ээр нийтлэх…",
+ "cmd.file.publish_pdf.desc": "Сонгосон хуудсуудыг PDF-ээр нийтэлнэ. Хуудсуудыг PDF/SVG-ээр экспортлохтой адил.",
+ "sketch_hints.verify_none": "Сонголтод AI туслахын тохируулсан зүйл алга, шалгах зүйлгүй",
+ "sketch_hints.contours_none": "Загварт гадаргуугийн загвар алга: нэгийг үүсгэсний дараа горхол гарна",
+ "sketch_hints.contours_off": "Гадаргуугийн горхол нуугдсан",
+ "sketch_hints.contours_on": "Гадаргуугийн горхол харагдаж байна"
+}

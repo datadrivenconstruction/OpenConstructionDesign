@@ -1,0 +1,337 @@
+{
+ "schema": "gen_typology.v1",
+ "name": "mixed_use_podium",
+ "aliases": [
+  "retail_podium",
+  "podium_building",
+  "shops_and_offices"
+ ],
+ "base": "office",
+ "note": "mixed-use podium: shops and a supermarket on the ground floor, offices above, two car-park levels below ground with plant and tank rooms; the outside walls below ground are retaining walls",
+ "brief": {
+  "name": {
+   "en": "Mixed-use podium",
+   "ru": "Многофункциональный подиум"
+  },
+  "floors": 6,
+  "floor_height": 4.2,
+  "basements": 2,
+  "footprint": {
+   "width": 70,
+   "depth": 30
+  }
+ },
+ "rules": {
+  "egress.max_travel": 45,
+  "corridor.width": 2.4,
+  "egress.protected_stairs": "enclosed"
+ },
+ "model": {
+  "title": {
+   "en": "Mixed-use podium",
+   "ru": "Многофункциональный подиум"
+  },
+  "spaces": [
+   {
+    "class": "lobby_m",
+    "kind": "lobby",
+    "name": {
+     "en": "Podium lobby",
+     "ru": "Вестибюль подиума"
+    },
+    "area": 90,
+    "count": 1,
+    "level": "ground",
+    "zone": "common"
+   },
+   {
+    "class": "shop",
+    "kind": "retail",
+    "name": {
+     "en": "Shop",
+     "ru": "Магазин"
+    },
+    "area": 90,
+    "count": 5,
+    "level": "ground",
+    "zone": "retail",
+    "occupancy_m2": 4,
+    "demand": {
+     "power_w_m2": 60,
+     "supply_m3h_m2": 8
+    }
+   },
+   {
+    "class": "market",
+    "kind": "retail",
+    "name": {
+     "en": "Supermarket",
+     "ru": "Супермаркет"
+    },
+    "area": 420,
+    "count": 1,
+    "level": "ground",
+    "zone": "retail",
+    "height_min": 4.0,
+    "occupancy_m2": 4,
+    "live_load_kpa": 5,
+    "demand": {
+     "power_w_m2": 90,
+     "cooling_w_m2": 80,
+     "supply_m3h_m2": 8
+    }
+   },
+   {
+    "class": "dock",
+    "kind": "storage",
+    "name": {
+     "en": "Loading dock",
+     "ru": "Разгрузочная"
+    },
+    "area": 90,
+    "count": 1,
+    "level": "ground",
+    "zone": "service",
+    "light": "none",
+    "live_load_kpa": 10
+   },
+   {
+    "class": "wc_m",
+    "kind": "wc",
+    "name": {
+     "en": "Public toilet",
+     "ru": "Общественный туалет"
+    },
+    "area": 6,
+    "count": 4,
+    "level": "ground",
+    "zone": "common"
+   },
+   {
+    "class": "open_m",
+    "kind": "office",
+    "name": {
+     "en": "Open-plan office",
+     "ru": "Открытый офис"
+    },
+    "area": 72,
+    "count": 2,
+    "level": "typical",
+    "zone": "office"
+   },
+   {
+    "class": "office_m",
+    "kind": "office",
+    "name": {
+     "en": "Cellular office",
+     "ru": "Офис"
+    },
+    "area": 18,
+    "count": 6,
+    "level": "typical",
+    "zone": "office"
+   },
+   {
+    "class": "meeting_m",
+    "kind": "meeting",
+    "name": {
+     "en": "Meeting room",
+     "ru": "Переговорная"
+    },
+    "area": 24,
+    "count": 2,
+    "level": "typical",
+    "zone": "office"
+   },
+   {
+    "class": "wc_m2",
+    "kind": "wc",
+    "name": {
+     "en": "Upper toilet",
+     "ru": "Санузел верхнего этажа"
+    },
+    "area": 6,
+    "count": 2,
+    "level": "typical",
+    "zone": "common"
+   },
+   {
+    "class": "plant_m",
+    "kind": "technical",
+    "name": {
+     "en": "Plant room",
+     "ru": "Венткамера"
+    },
+    "area": 80,
+    "count": 1,
+    "level": "below:1",
+    "zone": "services",
+    "light": "none",
+    "demand": {
+     "ach": 10,
+     "power_w_m2": 60
+    }
+   },
+   {
+    "class": "bins",
+    "kind": "storage",
+    "name": {
+     "en": "Bin store",
+     "ru": "Мусорная"
+    },
+    "area": 30,
+    "count": 1,
+    "level": "below:1",
+    "zone": "services",
+    "light": "none"
+   },
+   {
+    "class": "park1",
+    "kind": "parking",
+    "name": {
+     "en": "Car park, upper level",
+     "ru": "Парковка, верхний уровень"
+    },
+    "area": 600,
+    "count": 1,
+    "level": "below:1",
+    "zone": "parking",
+    "light": "none",
+    "live_load_kpa": 2.5,
+    "demand": {
+     "ach": 6
+    }
+   },
+   {
+    "class": "pumps",
+    "kind": "technical",
+    "name": {
+     "en": "Pump and tank room",
+     "ru": "Насосная и ёмкости"
+    },
+    "area": 70,
+    "count": 1,
+    "level": "below:2",
+    "zone": "services",
+    "light": "none",
+    "demand": {
+     "ach": 8,
+     "power_w_m2": 60,
+     "water_l_day": 8000
+    }
+   },
+   {
+    "class": "park2",
+    "kind": "parking",
+    "name": {
+     "en": "Car park, lower level",
+     "ru": "Парковка, нижний уровень"
+    },
+    "area": 600,
+    "count": 1,
+    "level": "below:2",
+    "zone": "parking",
+    "light": "none",
+    "live_load_kpa": 2.5,
+    "demand": {
+     "ach": 6
+    }
+   }
+  ],
+  "zones": [
+   {
+    "id": "retail",
+    "name": {
+     "en": "Retail",
+     "ru": "Торговая зона"
+    },
+    "adjacent_to": [
+     {
+      "ref": "common",
+      "weight": 1
+     }
+    ]
+   },
+   {
+    "id": "common",
+    "name": {
+     "en": "Common",
+     "ru": "Общая зона"
+    },
+    "adjacent_to": []
+   },
+   {
+    "id": "office",
+    "name": {
+     "en": "Office",
+     "ru": "Офисы"
+    },
+    "adjacent_to": []
+   },
+   {
+    "id": "service",
+    "name": {
+     "en": "Service",
+     "ru": "Обслуживание"
+    },
+    "adjacent_to": [
+     {
+      "ref": "retail",
+      "weight": 1
+     }
+    ]
+   },
+   {
+    "id": "services",
+    "name": {
+     "en": "Services",
+     "ru": "Инженерные помещения"
+    },
+    "adjacent_to": []
+   },
+   {
+    "id": "parking",
+    "name": {
+     "en": "Parking",
+     "ru": "Парковка"
+    },
+    "adjacent_to": []
+   }
+  ],
+  "egress": {
+   "exits_min": 2
+  },
+  "structure": {
+   "live_load_kpa": {
+    "rule": "typology.live_load_kpa"
+   }
+  },
+  "below": {
+   "levels": [
+    {
+     "name": {
+      "en": "Car park level 1",
+      "ru": "Парковка, уровень 1"
+     },
+     "fill": "park1"
+    },
+    {
+     "name": {
+      "en": "Car park level 2",
+      "ru": "Парковка, уровень 2"
+     },
+     "fill": "park2"
+    }
+   ],
+   "retaining": true
+  },
+  "spare": {
+   "grow_share": 0.5,
+   "kind": "retail",
+   "name": {
+    "en": "Shop",
+    "ru": "Магазин"
+   }
+  }
+ }
+}

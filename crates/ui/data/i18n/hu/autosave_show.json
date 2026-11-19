@@ -1,0 +1,4 @@
+{
+ "cmd.mgr.autosave_show": "Automentés megjelenítése",
+ "cmd.mgr.autosave_show.desc": "Megnyitja az automentési ablakot; ha már látszik, nyitva marad."
+}

@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "Εισαγωγή στρώματος από κάτω",
+ "type_layers.layer.delete": "Διαγραφή στρώματος",
+ "type_layers.layer.delete_last": "Ένας τύπος χρειάζεται τουλάχιστον ένα στρώμα",
+ "type_layers.value.bad": "Μη έγκυρη θετική τιμή",
+ "type_layers.value.required": "Υποχρεωτικό",
+ "type_layers.unsaved.title": "Μη αποθηκευμένες αλλαγές στο {name}",
+ "type_layers.unsaved.body": "Να εφαρμοστούν στον τύπο ή να απορριφθούν;",
+ "type_layers.unsaved.discard": "Απόρριψη"
+}

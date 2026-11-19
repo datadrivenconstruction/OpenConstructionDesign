@@ -1,0 +1,6 @@
+{
+ "cmd.xlsx.undo_apply": "Urungkan penerapan spreadsheet XLSX terakhir",
+ "xlsx_undo.later": "Tidak diurungkan: model diedit setelah penerapan spreadsheet XLSX ini. Gunakan Ctrl+Z langkah demi langkah atau panel Riwayat.",
+ "xlsx_undo.gone": "Tidak ada yang dapat diurungkan: penerapan spreadsheet XLSX ini sudah diurungkan.",
+ "xlsx_undo.busy": "Selesaikan atau batalkan gambar saat ini dulu, lalu urungkan penerapan spreadsheet XLSX."
+}

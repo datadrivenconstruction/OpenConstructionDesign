@@ -1,0 +1,3 @@
+{
+ "find_replace.refresh_failed": "Napalitan ang {n} sa {m} elemento; nabigo ang pag-refresh ng view: {e}"
+}

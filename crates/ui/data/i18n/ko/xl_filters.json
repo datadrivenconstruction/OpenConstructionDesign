@@ -1,0 +1,6 @@
+{
+ "xl.msg.filter_on_sheet_x": "시트 '{}'의 필터",
+ "xl.msg.sort_settings_on_sheet_x": "시트 '{}'의 정렬 설정",
+ "xl.msg.hidden_rows_on_sheet_x": "시트 '{}'의 숨겨진 행",
+ "xl.msg.hidden_columns_on_sheet_x": "시트 '{}'의 숨겨진 열"
+}

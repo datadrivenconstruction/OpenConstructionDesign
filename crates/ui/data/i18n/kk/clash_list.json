@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "Барлығы",
+ "clash_list.only_selected": "Тек таңдалғандары",
+ "clash_list.tolerance": "Төзімділік",
+ "clash_list.gap": "Саңылау",
+ "clash_list.export": "Экспорттау",
+ "clash_list.col.volume": "Көлем",
+ "clash_list.fix.up": "Жоғары жылжыту",
+ "clash_list.fix.down": "Төмен жылжыту",
+ "clash_list.fix.sleeve": "Гильза",
+ "clash_list.apply_fix": "Түзетуді қолдану",
+ "clash_list.err.tol": "Төзімділік: ұзындықты енгізіңіз (0 немесе одан көп), мысалы 50 немесе 2 дюйм",
+ "clash_list.sleeve_no_host": "Гильзаға жұп ішінде қабырға немесе плита керек",
+ "clash_list.err.gap": "Саңылау: ұзындықты енгізіңіз (0 немесе одан көп), мысалы 50 немесе 2 дюйм"
+}

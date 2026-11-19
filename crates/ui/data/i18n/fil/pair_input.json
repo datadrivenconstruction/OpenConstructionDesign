@@ -1,0 +1,6 @@
+{
+ "pair_input.pair_hint": "Pinaghihiwalay ng semicolon ang dalawang halaga: @1000;500",
+ "pair_input.old_pair": "Hindi na nagiging pares ang kuwit sa pagitan ng dalawang buong numero: mag-type ng 6000;4000 para sa dalawang halaga, o 6000,5 para sa decimal",
+ "pair_input.op.bad_length": "Hindi haba: {text} ({why}). Walang nabago",
+ "pair_input.op.bad_count": "Hindi kinuha ang bilang na {text}: buong bilang mula {min} hanggang {max}"
+}

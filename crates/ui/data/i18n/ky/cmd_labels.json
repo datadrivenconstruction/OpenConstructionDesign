@@ -1,0 +1,14 @@
+{
+ "cmd.arch.wall.tile": "Дубал",
+ "cmd.arch.door.tile": "Эшик",
+ "cmd.arch.window.tile": "Терезе",
+ "cmd.arch.floor.tile": "Пол",
+ "cmd.mod.move.tile": "Жылдыруу",
+ "cmd.mod.copy.tile": "Көчүрүү",
+ "cmd.mod.rotate.tile": "Буруу",
+ "cmd.mod.mirror.tile": "Чагылдыруу",
+ "cmd.mod.trim.tile": "Кыркуу",
+ "cmd.mod.delete.tile": "Өчүрүү",
+ "cmd.ann.dim.tile": "Өлчөм",
+ "cmd.ann.text.tile": "Текст"
+}

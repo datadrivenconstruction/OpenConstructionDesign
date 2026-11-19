@@ -1,0 +1,5 @@
+{
+ "materials.mat.conflict": "Acest material s-a schimbat în model (anulare sau altă fereastră) cât timp fișa avea modificări. Modificările tale sunt păstrate.",
+ "materials.mat.keep": "Păstrează modificările mele",
+ "materials.mat.reload": "Reîncarcă"
+}

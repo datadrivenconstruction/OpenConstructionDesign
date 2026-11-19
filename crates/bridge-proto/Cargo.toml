@@ -1,0 +1,12 @@
+[package]
+name = "ddc-bridge-proto"
+version = "1.0.0"
+edition.workspace = true
+# Permissive so that out-of-process bridges may link it; the rest of the tree is AGPL.
+license = "Apache-2.0"
+publish = false
+repository.workspace = true
+rust-version.workspace = true
+description = "Neutral interchange frames between the DDC editor and out-of-process import bridges (no file-format knowledge)."
+
+[dependencies]

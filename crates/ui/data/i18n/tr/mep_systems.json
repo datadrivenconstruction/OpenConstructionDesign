@@ -1,0 +1,21 @@
+{
+ "mep.row.system": "Sistem",
+ "mep.row.elevation": "Başlangıç kotu",
+ "mep.row.slope": "Eğim",
+ "mep.row.material": "Malzeme",
+ "mep.row.dev_elevation": "Kot",
+ "mep.row.no_system": "Bu sistem artık yok. Başka birini seçin.",
+ "mep.row.no_points": "Hattın noktası yok, bu yüzden kotu da yok.",
+ "mep.row.system_domain": "{system} sistemi bu hat türünü ({kind}) kabul etmiyor. Aynı ağ türünde bir sistem seçin.",
+ "mep.row.material_pipes": "Malzeme yalnızca borulara uygulanır; bu hat bir {kind}.",
+ "mep.row.no_catalog": "Malzemenin bu hat için katalog ölçüsü yok.",
+ "mep.mat.none": "Ayarlanmadı",
+ "mep.mat.steel": "Çelik",
+ "mep.mat.copper": "Bakır",
+ "mep.mat.pvc": "PVC",
+ "mep.mat.pp": "Polipropilen",
+ "mep.err.follow_blocked": "Bağlı bir hat bu değişikliği izleyemez: yeni yerde bacağı için yer yok. Cihazı daha az taşıyın ya da önce hattın bağlantısını kesin.",
+ "mep.err.follow_slope": "Bağlı bir hattın eğimi yeni yerde korunamaz: sistemin en küçük eğiminin altına düşer. Cihazı yükseklikte daha az taşıyın ya da önce hattın bağlantısını kesin.",
+ "mep.err.follow_port_lost": "Düzenlemeden sonra bu hattın oturduğu bağlantı noktası artık yok. Önce hattı uzaklaştırın ya da cihaz tipini koruyun.",
+ "mep.err.follow_device": "Bu hat bir cihaz bağlantı noktasında bitiyor ve oradan ayrılamaz. Bunun yerine cihazı taşıyın ya da önce hattın bağlantısını kesin."
+}

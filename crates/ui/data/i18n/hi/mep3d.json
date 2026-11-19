@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "डक्ट",
+ "mep3d.pipe": "पाइप",
+ "mep3d.tray": "केबल ट्रे",
+ "mep3d.conduit": "कंड्यूट",
+ "mep3d.system": "सिस्टम",
+ "mep3d.length": "लंबाई",
+ "mep3d.diameter": "व्यास",
+ "mep3d.width": "चौड़ाई",
+ "mep3d.height": "ऊँचाई",
+ "mep3d.insulation": "इंसुलेशन",
+ "mep3d.tip": "Enter — लागू करें; फ़िटिंग दोबारा गिनी जाती हैं",
+ "mep3d.size_positive": "आकार शून्य से बड़ा होना चाहिए",
+ "mep3d.not_changed": "नहीं बदला: {e}",
+ "mep3d.copied": "रन कॉपी किया गया",
+ "mep3d.changed": "रन बदला गया",
+ "mep3d.deleted": "हटाए गए एलिमेंट: {n}",
+ "mep3d.not_deleted": "नहीं हटाया: {e}",
+ "mep3d.no_wall_type": "दीवार का टाइप नहीं है",
+ "mep3d.demo.supply": "सप्लाई S1",
+ "mep3d.demo.heating": "हीटिंग",
+ "mep3d.demo.power": "पावर"
+}

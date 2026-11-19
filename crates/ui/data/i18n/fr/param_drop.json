@@ -1,0 +1,8 @@
+{
+ "param_drop.title": "Supprimer les valeurs de paramètre ?",
+ "param_drop.intro": "{name} n'est plus lié à ces catégories :",
+ "param_drop.line": "{category} : {values} seront supprimées",
+ "param_drop.undo": "Un Ctrl+Z les rétablit toutes.",
+ "param_drop.confirm": "Supprimer les valeurs et enregistrer",
+ "param_drop.cancel": "Annuler"
+}

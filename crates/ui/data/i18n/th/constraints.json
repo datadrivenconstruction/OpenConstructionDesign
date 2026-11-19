@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "คงความยาวปัจจุบันของผนังนี้ในทุกการแก้ไข",
+ "constraints.con.tip.lock_dist": "คงระยะห่างระหว่างผนังสองด้านในทุกการแก้ไข",
+ "constraints.con.tip.equal": "ทำให้ช่วงระหว่างผนังที่เลือกเท่ากัน",
+ "constraints.con.tip.align": "ทำให้ผนังทั้งสองอยู่บนเส้นเดียวกัน",
+ "constraints.con.tip.parallel": "คงให้ผนังขนานกัน",
+ "constraints.con.tip.perp": "คงให้ผนังตั้งฉาก",
+ "constraints.con.tip.align_grid": "ให้ผนังอยู่บนเส้นกริดที่ใกล้ที่สุด",
+ "constraints.con.tip.lock_dist_grid": "คงระยะจากผนังถึงเส้นกริดที่ใกล้ที่สุด",
+ "constraints.con.tip.level_gap": "คงช่องว่างระหว่างระดับ",
+ "constraints.con.tip.top_to_level": "คงให้ด้านบนของผนังอยู่ที่ระดับด้านบน"
+}

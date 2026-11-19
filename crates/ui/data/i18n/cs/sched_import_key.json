@@ -1,0 +1,6 @@
+{
+ "sched_import.no_key": "Tento sešit nemá záznam exportu (starší export): buňky změněné v modelu po tomto exportu mohou být přepsány. Před použitím zkontrolujte změněné buňky.",
+ "sched_import.n_kept": "Změněno v modelu po exportu, ponecháno: {n}",
+ "sched_import.n_conflict": "Změněno v sešitu i v modelu, nepoužito: {n}",
+ "sched_import.why_conflict": "změněno v modelu po exportu (nyní {model}), nepoužito"
+}

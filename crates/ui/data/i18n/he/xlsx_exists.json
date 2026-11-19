@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "חוברת העבודה הזו כבר קיימת",
+ "xlsx_exists.foreign": "זו אינה חוברת עבודה של הפרויקט הזה, ולכן היא לעולם לא מוחלפת.",
+ "xlsx_exists.pending": "יש בה {n} עריכות שעדיין לא הוחלו על המודל.",
+ "xlsx_exists.outside": "יש בה {n} שורות שהייצוא החדש אינו כולל.",
+ "xlsx_exists.new_name": "ייצוא ל-{name}",
+ "xlsx_exists.apply_first": "החל אותם קודם",
+ "xlsx_exists.replace": "החלף (החוברת הישנה לארכיון)",
+ "xlsx_exists.archived": "חוברת העבודה הישנה הועברה ל-{path}",
+ "xlsx_exists.archive_failed": "חוברת העבודה הישנה לא הועברה, דבר לא יוצא: {error}"
+}

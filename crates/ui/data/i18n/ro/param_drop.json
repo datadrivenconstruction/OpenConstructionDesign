@@ -1,0 +1,8 @@
+{
+ "param_drop.title": "Elimini valorile parametrului?",
+ "param_drop.intro": "{name} nu mai este legat de aceste categorii:",
+ "param_drop.line": "{category}: {values} vor fi eliminate",
+ "param_drop.undo": "Un singur Ctrl+Z le readuce pe toate.",
+ "param_drop.confirm": "Elimină valorile și salvează",
+ "param_drop.cancel": "Anulează"
+}

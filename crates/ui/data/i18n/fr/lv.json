@@ -1,0 +1,5 @@
+{
+ "lv.level.deleted_attach": "Niveau supprimé ; {n} murs ont perdu leur attache supérieure",
+ "lv.level.rooms": "{n} pièces prennent la hauteur du niveau cible ({dz} m) : {names}. Appuyez de nouveau sur Déplacer pour confirmer",
+ "lv.level.pinned": "Niveau non supprimé : les éléments épinglés ne peuvent pas passer à un autre niveau : {names}. Désépinglez-les d’abord"
+}

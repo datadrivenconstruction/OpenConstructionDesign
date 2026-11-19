@@ -1,0 +1,7 @@
+{
+ "messages.title": "Mensajes",
+ "messages.desc": "Historial de avisos. No hay advertencias ni errores nuevos.",
+ "messages.desc_new": "{n} advertencias o errores nuevos. Haga clic para leerlos.",
+ "messages.copy": "Copiar todo",
+ "messages.clear": "Borrar todo"
+}

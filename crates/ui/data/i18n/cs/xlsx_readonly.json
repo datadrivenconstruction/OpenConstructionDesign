@@ -1,0 +1,6 @@
+{
+ "xlsx_readonly.read_only": "Sešit je pouze pro čtení (vlastnost souboru nebo oprávnění složky). Exportujte do kopie, nebo zrušte příznak Pouze pro čtení ve vlastnostech souboru a zkuste to znovu.",
+ "xlsx_readonly.export_copy": "Exportovat do kopie",
+ "xlsx_readonly.no_copy_name": "Pro kopii vedle sešitu není volný název.",
+ "xlsx_readonly.copied": "Sešit zůstal beze změny. Vedle něj byla zapsána aktualizovaná kopie a nyní je propojena: {path}"
+}

@@ -1,0 +1,9 @@
+{
+ "cmd.mass.timeline_family": "Tarixdan oilaga",
+ "cmd.mass.timeline_family.desc": "Tanlangan massaning qurilish tarixidan komponentlar oilasini yaratadi. Tarix parametrlari oila parametrlariga aylanadi.",
+ "mass_family.done": "{name} oilasi yaratildi, parametrlar: {n}",
+ "mass_family.refused": "Oila yaratilmadi: {e}",
+ "mass_family.no_mass": "Avval parametrik massani tanlang",
+ "mass_family.add_modifier": "Modifikator qo'shish",
+ "mass_family.needs_faces": "Tanlangan yoqlar kerak: asbobni Massing yorlig'ida ishlating"
+}

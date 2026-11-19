@@ -1,0 +1,16 @@
+{
+ "save_fail.save_fail.title": "Hindi na-save ang proyekto",
+ "save_fail.save_fail.kept": "Nandito pa rin ang iyong mga pagbabago. Walang nawawala habang bukas ang editor.",
+ "save_fail.save_fail.details": "Mga detalye",
+ "save_fail.save_fail.copy": "Kopyahin",
+ "save_fail.save_fail.save_as": "I-save bilang…",
+ "save_fail.save_fail.retry": "Subukan muli",
+ "save_fail.save_fail.close": "Isara",
+ "save_fail.cause.full": "Puno ang disk. Magbakante ng espasyo o i-save ang proyekto sa ibang drive.",
+ "save_fail.cause.denied": "Read-only ang folder o file na ito, o walang pahintulot na magsulat dito. Pumili ng ibang folder.",
+ "save_fail.cause.locked": "Bukas ang file sa ibang programa. Isara muna ito roon, saka pindutin ang Subukan muli.",
+ "save_fail.cause.missing": "Wala na ang folder. Pumili ng ibang folder, o ibalik ito at pindutin ang Subukan muli.",
+ "save_fail.cause.offline": "Hindi available ang drive o network folder. Ikonekta ulit ito at pindutin ang Subukan muli, o mag-save sa ibang lugar.",
+ "save_fail.cause.too_long": "Masyadong mahaba ang path ng file. Pumili ng mas maikling folder o pangalan ng file.",
+ "save_fail.cause.other": "Hindi naisulat ang file: {detail}"
+}

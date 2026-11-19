@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "đo được {value}, giới hạn {limit}",
+ "ai_checks.check.cap": "Đang hiện {shown} trên {total} phát hiện. Lỗi hiện trước: hãy sửa rồi chạy lại.",
+ "ai_checks.check.run_again": "Chạy lại",
+ "ai_checks.check.goto": "Chọn và phóng to",
+ "ai_checks.check.never_title": "Chưa kiểm tra",
+ "ai_checks.check.never_hint": "Chạy kiểm tra và các phát hiện sẽ hiện ở đây.",
+ "ai_checks.check.sec.error": "Lỗi",
+ "ai_checks.check.sec.warning": "Cảnh báo",
+ "ai_checks.check.sec.info": "Ghi chú"
+}

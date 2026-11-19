@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "적용을 되돌렸습니다: 모델이 미리보기와 일치하지 않았습니다. {what}",
+ "xlsx_verify.not_written": "{row}이(가) 변경되지 않았습니다.",
+ "xlsx_verify.lost": "{row}이(가) 사라졌습니다.",
+ "xlsx_verify.not_deleted": "{row}이(가) 삭제되지 않았습니다.",
+ "xlsx_verify.extra_deleted": "미리보기에는 남아 있었지만 {row}이(가) 삭제되었습니다.",
+ "xlsx_verify.created": "{table}: 예상 {want}개 대신 새로 {got}개가 생성되었습니다.",
+ "xlsx_verify.value": "{row}, {field}: 예상 {want} (이전 {old}), 실제 {got}.",
+ "xlsx_verify.check_failed": "결과를 검사할 수 없습니다: {e}",
+ "xlsx_verify.plan_failed": "적용을 시작하지 않았습니다: 검사에서 모델을 읽을 수 없습니다 ({e}).",
+ "xlsx_verify.take_back_failed": "단계를 실행 취소하지 못했습니다 ({e}). 실행 취소를 사용하세요.",
+ "xlsx_verify.t.wall": "벽",
+ "xlsx_verify.t.opening": "개구부",
+ "xlsx_verify.t.room": "실",
+ "xlsx_verify.t.slab": "바닥",
+ "xlsx_verify.t.level": "레벨",
+ "xlsx_verify.t.wall_type": "벽 유형",
+ "xlsx_verify.t.slab_type": "바닥 유형",
+ "xlsx_verify.t.col": "기둥",
+ "xlsx_verify.t.beam": "보",
+ "xlsx_verify.t.roof": "지붕",
+ "xlsx_verify.t.curtain_wall": "커튼월"
+}

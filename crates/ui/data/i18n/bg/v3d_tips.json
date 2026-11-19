@@ -1,0 +1,8 @@
+{
+ "v3d.proj.to_ortho": "Превключи към ортогонална",
+ "v3d.proj.to_persp": "Превключи към перспектива",
+ "v3d.walk.unit.m": "м/с",
+ "v3d.walk.unit.ft": "ft/s",
+ "v3d.temp.show_all": "Покажи всички  ·  Esc",
+ "v3d.msg.deleted_named": "3D изгледът {name} е изтрит"
+}

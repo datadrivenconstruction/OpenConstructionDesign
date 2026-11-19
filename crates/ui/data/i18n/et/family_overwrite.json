@@ -1,0 +1,16 @@
+{
+ "family_overwrite.ow.title": "Asendada projekti tüübi väärtused?",
+ "family_overwrite.ow.body": "Laadimine asendab tüüpides {types} väärtused {values}. Nende tüüpide paigutatud eksemplarid: {instances}.",
+ "family_overwrite.ow.values": {
+  "one": "# väärtus",
+  "other": "# väärtust"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# tüüp",
+  "other": "# tüüpi"
+ },
+ "family_overwrite.ow.list": "Tüübid: {list}",
+ "family_overwrite.ow.more": "ja veel {n}",
+ "family_overwrite.ow.back": "Tagasi muutmise juurde",
+ "family_overwrite.ow.replace": "Asenda väärtused"
+}

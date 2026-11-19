@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "Разпознаване на {done} от {total}",
+ "mesh_recognize.all": "Всички {n}",
+ "mesh_recognize.only_confident": "Само сигурните",
+ "mesh_recognize.confident_tip": "Отмятане на редовете, чийто вид съвпада с категорията и чиято увереност е поне {pct}%",
+ "mesh_recognize.row_hint": "Щракнете върху ред, за да го отметнете. Стрелките местят, Enter отмята.",
+ "mesh_recognize.kind_for": "Вид за {name}",
+ "mesh_recognize.source": "Изходни мрежи",
+ "mesh_recognize.keep": "Запазване на мрежите",
+ "mesh_recognize.replace": "Замяна на мрежите",
+ "mesh_recognize.convert_keep": "Преобразуване на {n}",
+ "mesh_recognize.convert_remove": "Преобразуване на {n} и премахване на мрежите",
+ "mesh_recognize.creates": "Ще се създадат {n}: {kinds}",
+ "mesh_recognize.creates_none": "Още нищо не е отметнато",
+ "mesh_recognize.stay": "{n} изходни мрежи остават в модела",
+ "mesh_recognize.removed": "{n} изходни мрежи ще бъдат премахнати. Отмяната ги възстановява."
+}

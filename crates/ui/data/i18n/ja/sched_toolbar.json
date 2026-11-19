@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "ヘッダー下の行でフィルター。テキスト: 部分一致。数値: >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "列の表示・非表示",
+ "sched_toolbar.groups_tip": "列でグループ化し小計を表示",
+ "sched_toolbar.formulas_tip": "計算列",
+ "sched_toolbar.phase": "フェーズ",
+ "sched_toolbar.phase_tip": "行を取得するフェーズ",
+ "sched_toolbar.copy_tip": "選択した行 (または表示中のすべて) を TSV でコピー",
+ "sched_toolbar.import_tip": "書き出した集計表を読み戻します。ID で行、ヘッダーで列を照合。件数を先に表示し、その後元に戻す操作 1 回分として適用",
+ "sched_toolbar.export_tip": "表示中の行と列を合計付きで出力。数値は数値のまま",
+ "sched_toolbar.need_table": "先に集計表を開いてください",
+ "sched_toolbar.busy_open": "ファイル選択ダイアログは既に開いています",
+ "sched_toolbar.busy_save": "保存ダイアログは既に開いています",
+ "sched_toolbar.clear_filter": "フィルターをクリア",
+ "sched_toolbar.fields_title": "列"
+}

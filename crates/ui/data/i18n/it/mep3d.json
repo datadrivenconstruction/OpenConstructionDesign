@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "Canale",
+ "mep3d.pipe": "Tubo",
+ "mep3d.tray": "Canale portacavi",
+ "mep3d.conduit": "Tubazione",
+ "mep3d.system": "Sistema",
+ "mep3d.length": "Lunghezza",
+ "mep3d.diameter": "Diametro",
+ "mep3d.width": "Larghezza",
+ "mep3d.height": "Altezza",
+ "mep3d.insulation": "Isolamento",
+ "mep3d.tip": "Invio — applica; i raccordi vengono ricalcolati",
+ "mep3d.size_positive": "la dimensione deve essere maggiore di zero",
+ "mep3d.not_changed": "non modificato: {e}",
+ "mep3d.copied": "tratta copiata",
+ "mep3d.changed": "tratta modificata",
+ "mep3d.deleted": "elementi eliminati: {n}",
+ "mep3d.not_deleted": "non eliminato: {e}",
+ "mep3d.no_wall_type": "nessun tipo di muro",
+ "mep3d.demo.supply": "Mandata S1",
+ "mep3d.demo.heating": "Riscaldamento",
+ "mep3d.demo.power": "Forza motrice"
+}

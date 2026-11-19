@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "اختتامی نقطہ",
+ "snap.midpoint": "درمیانی نقطہ",
+ "snap.perpendicular": "عمود",
+ "snap.wall_axis": "دیوار کا محور",
+ "snap.wall_face": "دیوار کا چہرہ",
+ "snap.grid": "گرڈ",
+ "snap.intersection": "تقاطع",
+ "snap.grid_axis": "گرڈ لائن",
+ "snap.ref_plane": "ریفرنس پلین",
+ "snap.nearest": "قریب ترین",
+ "snap.align_x": "دور کے نقطے کے ساتھ X میں سیدھ",
+ "snap.align_y": "دور کے نقطے کے ساتھ Y میں سیدھ",
+ "snap.align_xy": "X اور Y میں سیدھ"
+}

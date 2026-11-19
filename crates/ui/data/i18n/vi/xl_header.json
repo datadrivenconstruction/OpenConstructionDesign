@@ -1,0 +1,4 @@
+{
+ "xl.msg.x_cells_above_the_header_on_sheet_x": "{} ô phía trên tiêu đề trên trang '{}'",
+ "xl.msg.book_changed_during_export": "sổ bảng tính đã được chương trình khác lưu trong lúc xuất và không bị ghi đè; hãy xuất lại"
+}

@@ -1,0 +1,11 @@
+{
+ "empty.sv_notfound.title": "ไม่พบมุมมอง",
+ "empty.sv_notfound.hint": "มุมมองนี้ถูกลบหรือไม่ได้เป็นส่วนหนึ่งของโปรเจกต์แล้ว",
+ "empty.sv_notfound.action": "ปิดมุมมอง",
+ "empty.sv_cuts_nothing.title": "หน้าตัดนี้ไม่ตัดอะไร",
+ "empty.sv_cuts_nothing.hint": "เส้นตัดไม่พบผนัง พื้น หรือช่องเปิดภายในความลึกของเส้น ย้ายเส้นหรือทำให้มุมมองลึกขึ้น",
+ "empty.sv_cuts_nothing.action": "แสดงบนแปลน",
+ "empty.sv_shows_nothing.title": "รูปด้านนี้ไม่แสดงอะไร",
+ "empty.sv_shows_nothing.hint": "ไม่มีผนัง พื้น หรือช่องเปิดอยู่ในความลึกของมุมมอง ย้ายเส้นมุมมองหรือทำให้มุมมองลึกขึ้น",
+ "empty.sv_shows_nothing.action": "แสดงบนแปลน"
+}

@@ -1,0 +1,11 @@
+{
+ "materials.mat.name_empty": "ম্যাটেরিয়ালের নাম লিখুন",
+ "materials.mat.empty_title": "এখনো কোনো ম্যাটেরিয়াল নেই",
+ "materials.mat.empty_hint": "নিচে নাম লিখে Add চাপুন",
+ "materials.mat.nothing_hint": "অনুসন্ধানের সঙ্গে কোনো ম্যাটেরিয়াল মেলেনি",
+ "materials.mat.clear_search": "অনুসন্ধান সাফ করুন",
+ "materials.mat.replace_with": "এর দিয়ে বদলান",
+ "materials.mat.delete_refused": "মোছা যাবে না: ম্যাটেরিয়ালটি {n} জায়গায় ব্যবহৃত। আগে এটি বদলান।",
+ "materials.mat.delete_confirm": "ম্যাটেরিয়াল “{name}” মুছবেন? এটি আনডু করা যাবে।",
+ "materials.mat.replace_confirm": "{n}টি উপাদানে “{from}” বদলে “{to}” বসাবেন? “{from}” মুছে যাবে। এটি আনডু করা যাবে।"
+}

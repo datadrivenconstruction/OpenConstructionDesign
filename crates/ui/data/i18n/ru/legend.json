@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "Легенда",
+ "legend.legend.new_hint": "Название новой легенды",
+ "legend.legend.delete_tip": "Удалить легенду",
+ "legend.legend.delete_placed": "Удалить легенду (размещена на листах: {sheets})",
+ "legend.legend.deleted": "Легенда удалена: {name}",
+ "legend.legend.no_rows": "Строк пока нет. Добавьте строку или возьмите стили текущего вида",
+ "legend.legend.replace_q": "Заменить строки ({n}) стилями этого вида?",
+ "legend.legend.replace": "Заменить",
+ "legend.legend.keep": "Оставить",
+ "legend.col.swatch": "Образец",
+ "legend.col.value": "Значение",
+ "legend.col.label": "Подпись"
+}

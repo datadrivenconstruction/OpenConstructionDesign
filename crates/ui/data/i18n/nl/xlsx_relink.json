@@ -1,0 +1,14 @@
+{
+ "xlsx_relink.title": "Het gekoppelde werkboek is verplaatst of hernoemd",
+ "xlsx_relink.body": "Werkboek “{file}” staat niet meer in {folder}. Bewerkingen die erin zijn getypt, komen pas terug nadat het opnieuw is gekoppeld.",
+ "xlsx_relink.found_one": "“{file}” gevonden in {folder}: hetzelfde project en dezelfde export. Koppelen?",
+ "xlsx_relink.found_many": "{n} werkboeken van dit project en deze export zijn gevonden. Kies de te koppelen:",
+ "xlsx_relink.found_none": "Er is geen werkboek van deze export naast de oude plek gevonden. Zoek het, of exporteer een nieuw werkboek.",
+ "xlsx_relink.link": "“{file}” koppelen",
+ "xlsx_relink.find": "Zoeken…",
+ "xlsx_relink.find_title": "Het gekoppelde werkboek zoeken",
+ "xlsx_relink.export_new": "Nieuw werkboek exporteren",
+ "xlsx_relink.close": "Sluiten",
+ "xlsx_relink.gone": "Werkboek “{file}” staat niet meer in zijn map. Bewerkingen die erin zijn getypt, komen pas terug nadat het opnieuw is gekoppeld.",
+ "xlsx_relink.found_one_short": "“{file}” gevonden: hetzelfde project en dezelfde export. Koppelen?"
+}

@@ -1,0 +1,8 @@
+levels=[3]
+level=2
+walls=[(0,0)-(6,0)]
+# Move on the level above: the 3D pointer lands on that level's plane, the same record as the plan
+tool(select) click(3,0) → selected=1 scope=Idle
+tool(MV) → scope=Moving
+click(0,0) → scope=Moving journal=+0
+click(1.2,0) → journal=+1 scope=Idle

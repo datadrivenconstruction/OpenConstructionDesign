@@ -1,0 +1,8 @@
+{
+ "param_drop.title": "删除参数值？",
+ "param_drop.intro": "{name} 已不再绑定到以下类别：",
+ "param_drop.line": "{category}：{values} 将被删除",
+ "param_drop.undo": "一次 Ctrl+Z 即可全部恢复。",
+ "param_drop.confirm": "删除值并保存",
+ "param_drop.cancel": "取消"
+}

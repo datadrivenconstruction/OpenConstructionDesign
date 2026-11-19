@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "Ko'rinish diapazoni",
+ "view_range.range": "Ko'rinish diapazoni",
+ "view_range.cut": "Kesim tekisligi",
+ "view_range.bottom": "Pastki",
+ "view_range.depth": "Ko'rinish chuqurligi",
+ "view_range.cut.hint": "Kesim tekisligining sath ustidagi balandligi. Uni kesib o'tgan elementlar kesilgan holda chiziladi.",
+ "view_range.bottom.hint": "Diapazonning pastki qismi, sathga nisbatan. Nol yoki manfiy qiymatlarga ruxsat beriladi.",
+ "view_range.depth.hint": "Ko'rinish pastki chegaradan qanchalik pastga qarashi. Nol yoki undan ko'p.",
+ "view_range.err.number": "Har bir maydonga uzunlik kiriting",
+ "view_range.err.not_finite": "Har bir maydonga uzunlik kiriting",
+ "view_range.err.cut_not_above_bottom": "Kesim tekisligi pastki chegaradan yuqorida bo'lishi kerak",
+ "view_range.err.negative_depth": "Ko'rinish chuqurligi manfiy bo'lishi mumkin emas",
+ "view_range.err.top_below_cut": "Diapazon yuqorisi kesim tekisligidan past bo'lmasligi kerak"
+}

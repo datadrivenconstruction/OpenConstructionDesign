@@ -1,0 +1,15 @@
+{
+ "cmd.ctx.floor.clean_outline": "Konturni tozalash",
+ "cmd.ctx.floor.clean_outline.desc": "Qavat konturi o'zi ustiga qaytadigan tor uchlarni olib tashlaydi. Avval oldindan ko'rinish ko'rsatiladi; bitta bekor qilish qadami.",
+ "outline_cleanup.title": "Konturni tozalash",
+ "outline_cleanup.intro": "Bu qavat konturi tor uchlarda o'zi ustiga qaytadi: {n}. Tozalash ularni olib tashlaydi; qolgan hammasi o'zgarishsiz qoladi.",
+ "outline_cleanup.legend_before": "Qalin chiziq: hozirgi kontur",
+ "outline_cleanup.legend_after": "Ingichka chiziq: tozalangandan keyingi kontur",
+ "outline_cleanup.undo": "Buni bitta qadamda bekor qilish mumkin.",
+ "outline_cleanup.apply": "Tozalash",
+ "outline_cleanup.cancel": "Bekor qilish",
+ "outline_cleanup.done": "Kontur tozalandi, uchlar olib tashlandi: {n}",
+ "outline_cleanup.none": "Bu qavat konturida uchlar yo'q",
+ "outline_cleanup.failed": "Konturni tozalab bo'lmadi",
+ "outline_cleanup.changed": "Kontur oldindan ko'rishdan keyin o'zgargan; hech narsa yozilmadi. Yangi oldindan ko'rinishni tekshiring."
+}

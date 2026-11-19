@@ -1,0 +1,22 @@
+{
+ "depth.chip": "Djup {level}",
+ "depth.chip_tip": "Hur långt nästa körning arbetar fram projektet: D1 koncept till D5 tillverkning, per disciplin",
+ "depth.all_off": "alla discipliner av",
+ "depth.disc.arch": "Arkitekt",
+ "depth.disc.struct": "Konstr",
+ "depth.disc.mep": "Installation",
+ "depth.disc.doc": "Dok",
+ "depth.project": "Projektdjup",
+ "depth.level.1": "D1 Koncept: volymer, våningar, ytor, ett blad",
+ "depth.level.2": "D2 Skiss: väggar, rum enligt program, öppningar, axelnät, planer",
+ "depth.level.3": "D3 Projektering: skiktade typer, dimensionerad konstruktion, installationshuvudledningar och utlopp, scheman",
+ "depth.level.4": "D4 Arbetsritning: knutdetaljer, beslag, ytskikt, armering, grenar",
+ "depth.level.5": "D5 Tillverkning: böjlistor, stålanslutningar, prefab, materialförteckning",
+ "depth.as_project": "Samma",
+ "depth.estimate": "Uppskattning: ca {elements} element, {minutes} min, {tokens} tokens i {calls} anrop, {sheets} blad",
+ "depth.estimate_none": "Uppskattningen kommer med det utarbetade projektet: modellen är fortfarande tom",
+ "depth.heat": "Djupvärmekarta",
+ "depth.heat.row": "Djup",
+ "depth.settings": "Projekteringsdjup för detta projekt",
+ "depth.settings_desc": "Djupet som AI-assistenten arbetar mot, D1 till D5, med en brytare och eget djup per disciplin; sparas i projektfilen"
+}

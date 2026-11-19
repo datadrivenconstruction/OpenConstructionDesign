@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "বিন্দু",
+ "trial.field.distance": "দূরত্ব",
+ "trial.field.target": "উপাদান",
+ "trial.refused": "{field}: {reason}। প্রয়োগ করতে বদলান",
+ "trial.preview_off": "প্রিভিউ বন্ধ: মডেল অনেক বড়"
+}

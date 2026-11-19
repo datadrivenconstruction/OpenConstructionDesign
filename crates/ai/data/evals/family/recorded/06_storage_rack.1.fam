@@ -1,0 +1,37 @@
+family Storage Rack
+category casework
+host floor
+ifc IfcFurniture NOTDEFINED
+param Width length type 2700mm
+param Depth length type 1100mm
+param Height length type 4500mm
+param Levels int type 4
+param Post length type 90mm
+param Beam length type 120mm
+param Frame material type "Steel Blue"
+param Beams material type "Steel Orange"
+param Pitch length type = (Height - Beam) / Levels
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Back y = Depth / 2
+type "2700x1100x4500" Width=2700mm, Depth=1100mm, Height=4500mm, Levels=4
+type "1800x600x2400" Width=1800mm, Depth=600mm, Height=2400mm, Levels=3, Post=60mm, Beam=80mm
+type "108x44x180in" Width=108in, Depth=44in, Height=180in, Levels=4, Post=3.5in, Beam=4.7in
+extrude Post1 rect(Left, Front, Left + Post, Front + Post) z(0, Height) mat(Frame) show(3d, elev)
+extrude Post2 rect(Left, Back - Post, Left + Post, Back) z(0, Height) mat(Frame) show(3d, elev)
+extrude Post3 rect(Right - Post, Front, Right, Front + Post) z(0, Height) mat(Frame) show(3d, elev)
+extrude Post4 rect(Right - Post, Back - Post, Right, Back) z(0, Height) mat(Frame) show(3d, elev)
+extrude Post5 rect(-Post / 2, Front, Post / 2, Front + Post) z(0, Height) mat(Frame) show(3d, elev)
+extrude Post6 rect(-Post / 2, Back - Post, Post / 2, Back) z(0, Height) mat(Frame) show(3d, elev)
+extrude Beam1F rect(Left, Front, Right, Front + Post) z(Pitch - Beam / 2, Pitch + Beam / 2) mat(Beams) show(3d, elev)
+extrude Beam1B rect(Left, Back - Post, Right, Back) z(Pitch - Beam / 2, Pitch + Beam / 2) mat(Beams) show(3d, elev)
+extrude Beam2F rect(Left, Front, Right, Front + Post) z(2 * Pitch - Beam / 2, 2 * Pitch + Beam / 2) mat(Beams) show(3d, elev)
+extrude Beam2B rect(Left, Back - Post, Right, Back) z(2 * Pitch - Beam / 2, 2 * Pitch + Beam / 2) mat(Beams) show(3d, elev)
+extrude Beam3F rect(Left, Front, Right, Front + Post) z(3 * Pitch - Beam / 2, 3 * Pitch + Beam / 2) mat(Beams) show(3d, elev)
+extrude Beam3B rect(Left, Back - Post, Right, Back) z(3 * Pitch - Beam / 2, 3 * Pitch + Beam / 2) mat(Beams) show(3d, elev)
+extrude BeamTopF rect(Left, Front, Right, Front + Post) z(Height - Beam, Height) mat(Beams) show(3d, elev)
+extrude BeamTopB rect(Left, Back - Post, Right, Back) z(Height - Beam, Height) mat(Beams) show(3d, elev)
+symbol rect(Left, Front, Right, Back)
+symbol line(0, Front, 0, Back) show(medium, fine)
+symbol line(Left, 0, Right, 0) show(fine)

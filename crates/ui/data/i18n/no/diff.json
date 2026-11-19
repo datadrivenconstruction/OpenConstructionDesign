@@ -1,0 +1,7 @@
+{
+ "diff.kind.added": "lagt til",
+ "diff.kind.changed": "endret",
+ "diff.kind.deleted": "slettet",
+ "diff.kind.refused": "avvist",
+ "diff.kind.conflict": "konflikt"
+}

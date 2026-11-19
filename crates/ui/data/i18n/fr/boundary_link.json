@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "Choisir toute la boucle de murs",
+ "cmd.sketch.link_unlink": "Dissocier le bord du mur",
+ "cmd.sketch.link_repick": "Rechoisir le mur du bord",
+ "cmd.ctx.floor.link_unlink": "Dissocier les bords des murs",
+ "cmd.ctx.floor.link_accept": "Accepter les bords des murs supprimés",
+ "boundary_link.hint.loop": "Cliquez sur un mur : la boucle fermée de murs devient des bords liés",
+ "boundary_link.hint.repick": "Cliquez sur un mur parallèle au bord : le bord le suivra",
+ "boundary_link.need_sketch": "Ouvrez d'abord l'esquisse de contour",
+ "boundary_link.need_edge": "Pointez un bord de l'esquisse",
+ "boundary_link.need_straight": "Seul un bord droit peut suivre un mur",
+ "boundary_link.need_floor": "Sélectionnez une dalle",
+ "boundary_link.no_wall": "Aucun mur sous le curseur",
+ "boundary_link.not_parallel": "Le mur n'est pas parallèle au bord",
+ "boundary_link.not_linked": "Ce bord n'est pas lié à un mur",
+ "boundary_link.unlinked": "Bord dissocié : il reste en place et ne suit plus le mur",
+ "boundary_link.accepted": "Bords acceptés : ils restent en place comme bords ordinaires",
+ "boundary_link.failed": "Impossible d'appliquer",
+ "boundary_link.lost": "mur source supprimé",
+ "boundary_link.blocked": "impossible de suivre le mur"
+}

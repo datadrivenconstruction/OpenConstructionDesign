@@ -1,0 +1,10 @@
+{
+ "ai.size.count": "~{n} / {max} žetooni",
+ "ai.size.block": "Mudeli jaoks liiga pikk: ~{n} žetooni, kuni {max} mahub ja jätab ruumi vastusele — lühenda või jaga",
+ "ai.size.trim": "Lühenda mahutamiseks",
+ "ai.size.trim_tip": "Lõika sõnumi lõpp, et see mahuks. Midagi ei lõigata enne, kui klõpsad.",
+ "ai.size.drop_view": "Jäta vaade välja",
+ "ai.size.drop_level": "Jäta tase välja",
+ "ai.size.drop_selection": "Jäta valik välja",
+ "ai.size.sep": ","
+}

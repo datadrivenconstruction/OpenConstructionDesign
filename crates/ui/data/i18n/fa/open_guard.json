@@ -1,0 +1,11 @@
+{
+ "job.stage.prepare": "آماده‌سازی پروژه",
+ "open_guard.already_open": "{name} از قبل باز است",
+ "open_guard.from_cache": "{name}: از حافظهٔ واردسازی باز شد",
+ "open_guard.known_project": "{name} قبلاً وارد شده بود: آن پروژه باز می‌شود",
+ "open_guard.locate": "یافتن",
+ "open_guard.mem_low": "حافظهٔ کم: بودجهٔ شبکه نصف شد و ساخت سطح جزئیات متوقف شد",
+ "open_guard.mem_low_short": "حافظهٔ کم: ساخت سطح جزئیات تا آزاد شدن حافظه متوقف است",
+ "open_guard.no_window": "پنجرهٔ آن پروژه پیدا نشد",
+ "open_guard.switch_window": "رفتن به آن پنجره"
+}

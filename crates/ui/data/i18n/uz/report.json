@@ -1,0 +1,23 @@
+{
+ "cmd.app.report": "Muammo haqida xabar berish…",
+ "cmd.app.report.desc": "Nima noto'g'ri ketganini tasvirlaydi va bu kompyuterda to'plam saqlaydi: matningiz, versiya va tizim ma'lumotlari, oyna rasmi va oxirgi nosozlik yozuvi. Hech narsa yuborilmaydi.",
+ "report.title": "Muammo haqida xabar berish",
+ "report.what": "Nima bo'ldi",
+ "report.expected": "Kutilgan natija",
+ "report.steps": "Takrorlash bosqichlari",
+ "report.opt.shot": "Oyna rasmini qo'shish",
+ "report.opt.model": "Model nusxasini qo'shish",
+ "report.opt.model.note": "Standart bo'yicha o'chiq. Nusxada loyiha ma'lumotlaringiz bor, AI jurnalisiz.",
+ "report.opt.paths": "Fayl yo'llarida foydalanuvchi nomlarini saqlash",
+ "report.local": "To'plam faqat shu kompyuterda saqlanadi. Hech narsa avtomatik yuborilmaydi.",
+ "report.blocked": "Avval nima bo'lganini tasvirlab bering.",
+ "report.save": "To'plamni saqlash",
+ "report.copy": "Matnni nusxalash",
+ "report.cancel": "Bekor qilish",
+ "report.copied": "Hisobot matni nusxalandi.",
+ "report.saved": "To'plam saqlandi: {path}",
+ "report.failed": "To'plamni saqlab bo'lmadi: {err}",
+ "report.model.fail": "Model nusxasini yaratib bo'lmadi, hech narsa saqlanmadi: {err}",
+ "report.crash.notice": "Oldingi seans nosozlik bilan tugadi.",
+ "report.crash.action": "Muammo haqida xabar berish"
+}

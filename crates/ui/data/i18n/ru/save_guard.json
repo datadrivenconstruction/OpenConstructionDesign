@@ -1,0 +1,14 @@
+{
+ "save_guard.save.empty_over_full": "Ничего не сохранено: модель пуста, а в файле уже есть данные. Файл не тронут. Используйте «Сохранить как», чтобы записать под другим именем.",
+ "save_guard.refuse.body": "Ничего не сохранено: модель пуста, а в {name} уже есть данные. Файл не тронут.",
+ "save_guard.refuse.foreign": "Это не файл OpenConstructionDesign, поэтому заменить его нельзя. Используйте «Сохранить как», чтобы записать под другим именем.",
+ "save_guard.refuse.ask": "Заменить {name}? В нём {what}. Сначала он будет перенесён в папку _archive рядом, затем записана пустая модель.",
+ "save_guard.refuse.holds_db": "элементов и строк данных: {n}",
+ "save_guard.refuse.holds_ifc": "IFC с изделиями",
+ "save_guard.refuse.replace": "Всё равно заменить…",
+ "save_guard.refuse.replace_yes": "Перенести и заменить",
+ "save_guard.refuse.save_as": "Сохранить как…",
+ "save_guard.refuse.cancel": "Отмена",
+ "save_guard.replace.moved": "Прежний файл перенесён в {path}",
+ "save_guard.replace.move_failed": "Не удалось перенести {name}: {error}. Ничего не записано."
+}

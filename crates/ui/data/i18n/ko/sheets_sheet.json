@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "뷰와 함께 시트 복제",
+ "cmd.view.sheet_duplicate_title": "시트 복제(타이틀 블록만)",
+ "sheets.dup.menu_views": "뷰와 함께 복제",
+ "sheets.dup.menu_title": "복제, 타이틀 블록만",
+ "sheets.dup.done": "{src}에서 시트 {number} 생성: 뷰 {views}개, 일람표 및 범례 {sched}개. 개정 이력은 복사되지 않으며, 시트는 발행되지 않은 상태입니다.",
+ "sheets.dup.none": "복제하려면 시트를 여세요",
+ "sheets.dup.copy": "사본",
+ "cmd.view.sheet_duplicate.short": "뷰와 함께 복제",
+ "cmd.view.sheet_duplicate_title.short": "타이틀 블록 복제"
+}

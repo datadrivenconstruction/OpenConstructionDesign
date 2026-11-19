@@ -1,0 +1,4 @@
+{
+ "sf.restored": "Innstillingsfilen {file} var skadet; siste gode kopi ble gjenopprettet. Den skadede filen beholdes som {broken}.",
+ "sf.reset": "Innstillingsfilen {file} var skadet, og ingen sikkerhetskopi var brukbar; standardverdier brukes. Den skadede filen beholdes som {broken}."
+}

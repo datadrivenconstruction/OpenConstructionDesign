@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "Връзка",
+ "settings.ai_status_desc": "Моделът, който използва AI асистентът; ключовете остават в защитеното хранилище",
+ "settings.ai_not_connected": "Не е свързан",
+ "settings.ai_connect": "Настройки на връзката",
+ "settings.ai_connect_desc": "Адрес, модел и ключ на вашия собствен модел, облачен или локален",
+ "settings.ai_connect_btn": "Настройки на връзката…",
+ "settings.ai_panel": "Панел на AI асистента",
+ "settings.ai_panel_desc": "Задайте въпрос с думи, прегледайте плана, след което приложете",
+ "settings.ai_open_panel": "Отваряне на панела на AI"
+}

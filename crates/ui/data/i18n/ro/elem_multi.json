@@ -1,0 +1,10 @@
+{
+ "elem.multi.title": "{n} elemente",
+ "elem.multi.varies": "variază",
+ "elem.multi.tip": "Introduceți pentru a seta toate elementele selectate",
+ "elem.multi.hidden": "{n} rânduri doar la unele elemente",
+ "elem.multi.none": "Elementele selectate nu au rânduri comune",
+ "elem.multi.range": "Valoarea este în afara intervalului permis",
+ "elem.multi.changed": "Modificate {n} elemente · Ctrl+Z anulează",
+ "elem.multi.same": "Deja această valoare la toate elementele selectate"
+}

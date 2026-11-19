@@ -1,0 +1,59 @@
+{
+ "del.k.door": {
+  "one": "# 개의 문",
+  "other": "# 개의 문"
+ },
+ "del.k.window": {
+  "one": "# 개의 창",
+  "other": "# 개의 창"
+ },
+ "del.k.opening": {
+  "one": "# 개의 개구부",
+  "other": "# 개의 개구부"
+ },
+ "del.k.comp": {
+  "one": "# 개의 호스팅 구성요소",
+  "other": "# 개의 호스팅 구성요소"
+ },
+ "del.k.rebar": {
+  "one": "# 개의 철근 세트",
+  "other": "# 개의 철근 세트"
+ },
+ "del.k.port": {
+  "one": "# 개의 호스팅 MEP 포트",
+  "other": "# 개의 호스팅 MEP 포트"
+ },
+ "del.k.joist": {
+  "one": "# 개의 프레이밍 보",
+  "other": "# 개의 프레이밍 보"
+ },
+ "del.k.railing": {
+  "one": "# 개의 난간",
+  "other": "# 개의 난간"
+ },
+ "del.k.tag": {
+  "one": "# 개의 태그",
+  "other": "# 개의 태그"
+ },
+ "del.k.dim": {
+  "one": "# 개의 치수(분리됨)",
+  "other": "# 개의 치수(분리됨)"
+ },
+ "del.also": "함께 영향을 받음: {list}",
+ "del.rooms": {
+  "one": "# 개의 룸이 경계 벽 하나를 잃습니다",
+  "other": "# 개의 룸이 경계 벽 하나를 잃습니다"
+ },
+ "del.cancelled": "삭제 취소됨, 변경 사항 없음",
+ "del.confirm.title": "종속 항목과 함께 삭제",
+ "del.confirm.lead": {
+  "one": "선택한 요소 # 개가 다음 항목을 함께 가져갑니다:",
+  "other": "선택한 요소 # 개가 다음 항목을 함께 가져갑니다:"
+ },
+ "del.confirm.levels": {
+  "one": "그중 # 개는 다른 레벨에 있습니다",
+  "other": "그중 # 개는 다른 레벨에 있습니다"
+ },
+ "del.confirm.all": "모두 삭제",
+ "del.confirm.cancel": "취소"
+}

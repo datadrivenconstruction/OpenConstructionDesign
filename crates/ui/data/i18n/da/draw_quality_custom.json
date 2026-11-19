@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "brugerdefineret",
+ "draw_quality.custom.tip": "{name}: en post i dette projekt",
+ "draw_quality.custom_note": "Poster markeret brugerdefineret hører til dette projekt.",
+ "draw_quality.unsaved.lib_body": "Gem dem i biblioteket, eller kassér dem?",
+ "draw_quality.unsaved.styles_body": "Anvend dem på visningen, eller kassér dem?",
+ "draw_quality.unsaved.both_body": "Anvend dem, eller kassér dem?",
+ "draw_quality.halftone": "{category} halvtone",
+ "draw_quality.styles.name": "Linjetyper",
+ "draw_quality.styles.other_level": "Ikke-gemte typeredigeringer for etage {level}: anvend eller fortryd dem for at redigere denne etage."
+}

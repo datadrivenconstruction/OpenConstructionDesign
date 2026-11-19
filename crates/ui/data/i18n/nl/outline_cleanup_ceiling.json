@@ -1,0 +1,11 @@
+{
+ "cmd.ctx.ceiling.clean_outline": "Omtrek opschonen",
+ "cmd.ctx.ceiling.clean_outline.desc": "Verwijdert smalle puntjes waar de plafondomtrek op zichzelf terugbuigt. Toont eerst een voorbeeld; één stap ongedaan maken.",
+ "cmd.ctx.shaft.clean_outline": "Omtrek opschonen",
+ "cmd.ctx.shaft.clean_outline.desc": "Verwijdert smalle puntjes waar de schachtomtrek op zichzelf terugbuigt. Toont eerst een voorbeeld; één stap ongedaan maken.",
+ "outline_cleanup.intro_ceiling": "De omtrek van dit plafond buigt op smalle plekken terug op zichzelf: {n} puntjes. Opschonen verwijdert ze; de rest blijft ongewijzigd.",
+ "outline_cleanup.intro_shaft": "De omtrek van deze schacht buigt op smalle plekken terug op zichzelf: {n} puntjes. Opschonen verwijdert ze; de rest blijft ongewijzigd.",
+ "outline_cleanup.none_ceiling": "De omtrek van dit plafond heeft geen puntjes",
+ "outline_cleanup.none_shaft": "De omtrek van deze schacht heeft geen puntjes",
+ "outline_cleanup.need_host": "Selecteer een vloer, plafond of schacht"
+}

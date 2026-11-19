@@ -1,0 +1,9 @@
+{
+ "drafts.draft.view": "“{name}”的视图图形",
+ "drafts.draft.filter": "视图过滤器“{name}”",
+ "drafts.draft.filter_new": "新建视图过滤器",
+ "drafts.draft.object_styles": "对象样式",
+ "drafts.draft.material": "材质“{name}”",
+ "drafts.draft.type": "类型“{name}”",
+ "drafts.draft.params": "族“{name}”的参数"
+}

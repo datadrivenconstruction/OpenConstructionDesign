@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "Scări",
+ "selcat.railing": "Balustrade",
+ "quick.cat.stair": "Scări",
+ "quick.cat.railing": "Balustrade",
+ "stair.risers": "Contratrepte",
+ "stair.riser": "Înălțimea contratreptei",
+ "stair.comfort": "2R + T",
+ "stair.tread_auto": "Treaptă după regulă",
+ "stair.tread_auto_tip": "Renunță la treapta scrisă și lasă regula 2R + T s-o stabilească",
+ "stair.broken": "Această scară nu se potrivește cu nivelurile ei",
+ "railing.host_stair": "Găzduită pe scara #{id}",
+ "railing.host_path": "Balustradă desenată",
+ "railing.length": "Lungime",
+ "stair.deleted_with": "cu {n} balustrade găzduite"
+}

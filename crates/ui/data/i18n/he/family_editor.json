@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "משפחה חדשה",
+ "family_editor.open_tip": "פתח משפחה או טיוטה",
+ "family_editor.close_named": "סגור את {name}",
+ "family_editor.unsaved": "שינויים שלא נשמרו",
+ "family_editor.search": "חיפוש",
+ "family_editor.nothing": "לא נמצא דבר",
+ "family_editor.sec_families": "משפחות הפרויקט",
+ "family_editor.sec_drafts": "טיוטות",
+ "family_editor.cap_category": "קטגוריה",
+ "family_editor.cap_host": "מארח",
+ "family_editor.cap_type": "סוג לתצוגה מקדימה"
+}

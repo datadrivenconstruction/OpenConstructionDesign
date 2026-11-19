@@ -1,0 +1,13 @@
+{
+ "cmdl.mode_cmd": "Lệnh",
+ "cmdl.mode_ai": "AI",
+ "cmdl.toggle": "Lệnh hoặc trợ lý AI (Ctrl+J)",
+ "cmdl.hint": "Lệnh hoặc lối tắt (W, L, M, RO), điểm #x;y, @dx;dy, d<góc. Ctrl+J: hỏi trợ lý AI",
+ "cmdl.hint_ai": "Hỏi trợ lý AI về mô hình hoặc yêu cầu thay đổi. Ctrl+J: quay lại lệnh",
+ "cmdl.sent": "Đã gửi tới trợ lý AI",
+ "cmdl.failed": "Không thể chạy “{text}” tại đây",
+ "cmdl.no_tool": "Hãy bắt đầu lệnh vẽ trước, sau đó nhập các điểm của nó",
+ "cmdl.unknown": "Không có lệnh “{text}”. Ctrl+J sẽ gửi cho trợ lý AI",
+ "cmdl.bad": "Không đọc được “{text}”: {e}",
+ "cmdl.shape": "“{text}” không phải là điểm: nhập x;y, #x;y, @dx;dy hoặc khoảng cách dương<góc"
+}

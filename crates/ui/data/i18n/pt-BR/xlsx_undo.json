@@ -1,0 +1,6 @@
+{
+ "cmd.xlsx.undo_apply": "Desfazer a última aplicação do XLSX",
+ "xlsx_undo.later": "Não desfeito: o modelo foi editado após esta aplicação do planilha XLSX. Use Ctrl+Z passo a passo ou o painel Histórico.",
+ "xlsx_undo.gone": "Nada a desfazer: esta aplicação do planilha XLSX já foi desfeita.",
+ "xlsx_undo.busy": "Conclua ou cancele primeiro o desenho atual, depois desfaça a aplicação do planilha XLSX."
+}

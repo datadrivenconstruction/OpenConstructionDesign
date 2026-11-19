@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "เมชนำเข้า",
+ "mat_mesh.mesh.none_selected": "เลือกเมชนำเข้าในมุมมอง 3D เพื่อกำหนดวัสดุนี้",
+ "mat_mesh.mesh.current": "เมชที่เลือกแรก: {material}",
+ "mat_mesh.mesh.current_none": "เมชที่เลือกแรกไม่มีวัสดุ",
+ "mat_mesh.mesh.assign": "กำหนดให้ {n} ที่เลือก",
+ "mat_mesh.mesh.assign_tip": "สไตล์สมจริงจะแสดงพื้นผิวของวัสดุนี้บนเมชที่เลือก",
+ "mat_mesh.mesh.assign_cat": "กำหนดให้หมวด {category}",
+ "mat_mesh.mesh.assign_cat_tip": "ทุกเมชนำเข้าของหมวดนั้นที่ไม่มีวัสดุของตัวเอง",
+ "mat_mesh.mesh.clear": "ล้างที่เลือก",
+ "mat_mesh.mesh.clear_tip": "เมชที่เลือกจะกลับไปใช้วัสดุของหมวดหรือสีเรียบ",
+ "mat_mesh.mesh.clear_cat": "ล้างหมวด"
+}

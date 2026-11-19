@@ -1,0 +1,9 @@
+{
+ "prop_head.of_type": {
+  "one": "# thuộc loại này",
+  "other": "# thuộc loại này"
+ },
+ "prop_head.override_tip": "Khác với loại, nhấn để đặt lại",
+ "prop_head.reset_done": "“{name}” đã đặt lại theo giá trị của loại",
+ "prop_head.copy_id": "Nhấn để sao chép số"
+}

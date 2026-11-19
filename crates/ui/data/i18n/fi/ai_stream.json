@@ -1,0 +1,14 @@
+{
+ "ai.stream.waiting": "Odotetaan mallia",
+ "ai.stream.reading": "Luetaan mallia",
+ "ai.stream.working": "Työskennellään",
+ "ai.stream.answering": "Kirjoitetaan vastausta",
+ "ai.stream.tools_one": "1 työkalu",
+ "ai.stream.tools_many": "{n} työkalua",
+ "ai.stream.secs": "{n} s",
+ "ai.stream.stalled": "Odotetaan yhä mallipalvelua",
+ "ai.stream.stop": "Pysäytä",
+ "ai.stream.cancelled": "Pysäytetty",
+ "ai.stream.incomplete": "Luonnos on keskeneräinen. Mitään ei käytetty malliin.",
+ "ai.stream.sep": " · "
+}

@@ -1,0 +1,23 @@
+{
+ "roof_edge.err.number": "Ange ett tal",
+ "roof_edge.err.positive": "Måste vara större än noll",
+ "roof_edge.err.nonneg": "Får inte vara negativ",
+ "roof_edge.err.max": "Får inte överstiga {max}",
+ "roof_edge.list.empty_hint": "Lägg till take-bräda, hängrännor, sofflag eller takfönster med takkommandona",
+ "roof_edge.edit_tip": "Redigera egenskaper",
+ "roof_edge.delete_tip": "Ta bort",
+ "roof_edge.pe.del_tip": "Ta bort den här punkten (en sektion behåller minst 3)",
+ "roof_edge.pe.up_tip": "Flytta den här punkten uppåt",
+ "roof_edge.confirm_edge": "Ta bort {name}? Ctrl+Z återställer den.",
+ "roof_edge.confirm_profile": "Ta bort profilen {name}? Ctrl+Z återställer den.",
+ "roof_edge.deleted_one": "Borttagen {name}",
+ "roof_edge.deleted_n": {
+  "one": "Borttaget # element",
+  "other": "Borttagna # element"
+ },
+ "roof_edge.profile_deleted": "Profilen borttagen",
+ "roof_edge.profile_in_use": {
+  "one": "Används av # kantelement: ta bort eller ändra det först",
+  "other": "Används av # kantelement: ta bort eller ändra dem först"
+ }
+}

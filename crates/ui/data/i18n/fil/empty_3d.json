@@ -1,0 +1,14 @@
+{
+ "empty.v3d_model.title": "Wala pang nasa 3D",
+ "empty.v3d_model.hint": "Gumuhit ng pader sa plano at lilitaw ang mga ito dito.",
+ "empty.v3d_model.action": "Buksan ang plano",
+ "empty.v3d_hidden.title": "Nakatago ang lahat ng elemento sa view na ito",
+ "empty.v3d_hidden.hint": "Walang nakikita dahil sa pansamantalang pagtatago o pag-isolate. Mananatili ang view graphics gaya ng itinakda.",
+ "empty.v3d_hidden.action": "Ipakita lahat",
+ "empty.v3d_graphics.title": "Itinatago ng view graphics ang lahat ng kategorya",
+ "empty.v3d_graphics.hint": "Walang nakikita dahil sa mga patakaran ng kategorya ng view na ito. I-on muli ang mga kategorya sa View graphics.",
+ "empty.v3d_graphics.action": "Buksan ang view graphics",
+ "empty.v3d_box.title": "Nasa labas ng modelo ang section box",
+ "empty.v3d_box.hint": "Pinuputol ng box ang bawat elemento. Ayusin itong muli sa paligid ng modelo.",
+ "empty.v3d_box.action": "I-reset ang box"
+}

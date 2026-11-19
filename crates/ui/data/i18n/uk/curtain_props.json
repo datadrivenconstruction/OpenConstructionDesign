@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "Панель",
+ "curtain_props.cw.panel_cell": "Комірка {i}×{j} · навісна стіна №{id}",
+ "curtain_props.cw.kind": "Тип",
+ "curtain_props.cw.kind.glazed": "Скло",
+ "curtain_props.cw.kind.solid": "Глуха",
+ "curtain_props.cw.kind.door": "Двері",
+ "curtain_props.cw.kind.window": "Вікно",
+ "curtain_props.cw.kind.empty": "Порожня",
+ "curtain_props.cw.name": "Назва",
+ "curtain_props.cw.swing_side": "Відкривається в інший бік",
+ "curtain_props.cw.swing_hinge": "Петля на торці комірки",
+ "curtain_props.cw.size": "Розмір",
+ "curtain_props.cw.cell_area": "Площа комірки",
+ "curtain_props.cw.panel_area": "Площа панелі",
+ "curtain_props.cw.prev": "Попередня панель",
+ "curtain_props.cw.next": "Наступна панель",
+ "curtain_props.cw.wall": "Виберіть стіну",
+ "curtain_props.cw.panel_hint": "Esc — вибір · Ctrl+Z — відміна",
+ "curtain_props.cw.status.panel": "Панель {i}×{j} → {kind}",
+ "e3d.err.cw_height": "висота навісної стіни має бути більшою за 100 мм"
+}

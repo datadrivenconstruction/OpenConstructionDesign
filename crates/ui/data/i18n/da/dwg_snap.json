@@ -1,0 +1,5 @@
+{
+ "snap.center": "Centrum",
+ "dwg_snap.through": "Gennemgangspunkt",
+ "dwg_snap.through_tip": "Forskyd gennem det klikkede punkt (fastlåser til ender, skæringer, centre) i stedet for den skrevne afstand"
+}

@@ -1,0 +1,24 @@
+{
+ "props.multi.title": {
+  "one": "# елемент",
+  "other": "# елементів",
+  "few": "# елементи",
+  "many": "# елементів"
+ },
+ "props.multi.cats": {
+  "one": "# категорія",
+  "other": "# категорій",
+  "few": "# категорії",
+  "many": "# категорій"
+ },
+ "props.multi.varies": {
+  "one": "різниться (#)",
+  "other": "різниться (#)",
+  "few": "різниться (#)",
+  "many": "різниться (#)"
+ },
+ "props.multi.clear": "Очистити вибір",
+ "props.multi.undo": "Скасувати",
+ "props.multi.narrowed": "Вибрано: {n} · {name}",
+ "props.multi.chip_tip": "{name}: {n}  ·  Клік показує їх властивості, Ctrl+клік залишає лише ці"
+}

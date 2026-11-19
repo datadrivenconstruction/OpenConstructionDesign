@@ -1,0 +1,7 @@
+{
+ "xlsx_alias_ids.ids_written": "{n} uut rida said oma id-d ümbernimetatud lehel; töövihikus ei muutunud muud.",
+ "xlsx_alias_ids.ids_open": "Töövihik on avatud teises programmis: {n} uue rea id-sid ei kirjutatud. Sulge see seal ja sünkrooni; neid ridu ei luuda uuesti.",
+ "xlsx_alias_ids.ids_failed": "{n} uue rea id-sid ei saanud kirjutada; töövihik jäeti samaks. Neid ridu ei luuda järgmisel sünkroonimisel uuesti.",
+ "xlsx_alias_ids.unpaired": "{n} uuel real pole veel id-d; need on meeles ega looda uuesti.",
+ "xlsx_alias_ids.refused": "Midagi ei rakendatud: uusi ridu lehtedel {sheets} ei saa id-sid, kui ümbernimetatud lehte loetakse. Nimeta leht tagasi standardnimeks (või eemalda need read) ja sünkrooni uuesti."
+}

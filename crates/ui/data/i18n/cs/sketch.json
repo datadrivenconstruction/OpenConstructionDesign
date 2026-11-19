@@ -1,0 +1,11 @@
+{
+ "sketch.points": "Body",
+ "sketch.rect": "Obdélník",
+ "sketch.circle": "Kružnice",
+ "sketch.polygon": "Mnohoúhelník",
+ "sketch.radius": "R",
+ "sketch.sides": "Strany",
+ "sketch.circum": "Opsaný",
+ "sketch.shape.tip": "Tvar náčrtu (A přepíná). Obdélník: dva rohy. Kružnice a mnohoúhelník: střed, pak poloměr. Zadejte velikost a stiskněte Enter pro její pevné nastavení.",
+ "tool.err.zero_size": "Nulová velikost: posuňte druhý bod dál od prvního"
+}

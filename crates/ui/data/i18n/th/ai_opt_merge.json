@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "รวมตัวเลือก: {name}",
+ "ai_opt_merge.whole": "รวมทั้งตัวเลือก",
+ "ai_opt_merge.parts": "รวมส่วนที่เลือก",
+ "ai_opt_merge.note": "เหตุผลของตัวเลือกนี้",
+ "ai_opt_merge.rebased": "โมเดลเปลี่ยนหลังจากสร้างตัวเลือกนี้: คำนวณการรวมใหม่กับโมเดลปัจจุบันแล้ว ตรวจสอบการเปลี่ยนแปลงก่อนนำไปใช้",
+ "ai_opt_merge.left.not_picked": "ไม่ได้เลือกจากตัวเลือก",
+ "ai_opt_merge.left.unticked": "ยกเลิกการติ๊กในตัวเลือก",
+ "ai_opt_merge.left.conflict": "เพิ่มเข้าโมเดลปัจจุบันไม่ได้: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "ตัวเลือกนี้รวมไม่ได้ ต้องกู้คืนตัวเลือกที่ปฏิเสธก่อน",
+ "ai_opt_merge.refused.stale": "โมเดลเปลี่ยนหลังจากสร้างตัวเลือกนี้ คำนวณการรวมใหม่กับโมเดลปัจจุบัน",
+ "ai_opt_merge.refused.nothing_picked": "ไม่ได้เลือกอะไรให้รวม",
+ "ai_opt_merge.refused.unknown_item": "รายการ {item} ไม่ได้อยู่ในตัวเลือกนี้",
+ "ai_opt_merge.refused.not_in_option": "องค์ประกอบที่เลือกไม่ได้อยู่ในตัวเลือกนี้",
+ "ai_opt_merge.refused.needs_left_out": "รายการ {item} ต้องใช้รายการ {needs} เลือกรายการนั้นด้วย หรืออนุญาตให้เพิ่มส่วนที่ต้องพึ่งพา",
+ "ai_opt_merge.refused.set_gone": "รายการ {item} อ้างถึงชุดที่เลือกซึ่งไม่มีอยู่แล้ว สร้างตัวเลือกใหม่",
+ "ai_opt_merge.refused.busy": "มีแผนอื่นเปิดอยู่ นำไปใช้หรือปฏิเสธก่อน",
+ "ai_opt_merge.refused.failed": "เตรียมการรวมไม่ได้: {reason}",
+ "ai_opt_merge.revive": "กู้คืนตัวเลือก",
+ "ai_opt_merge.merged": "รวมแล้ว"
+}

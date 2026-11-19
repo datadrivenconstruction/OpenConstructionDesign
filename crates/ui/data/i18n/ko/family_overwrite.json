@@ -1,0 +1,16 @@
+{
+ "family_overwrite.ow.title": "프로젝트 유형 값을 바꿀까요?",
+ "family_overwrite.ow.body": "불러오기를 하면 {types}의 {values}이(가) 바뀝니다. 이 유형들의 배치된 인스턴스: {instances}.",
+ "family_overwrite.ow.values": {
+  "one": "# 값",
+  "other": "# 값"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# 유형",
+  "other": "# 유형"
+ },
+ "family_overwrite.ow.list": "유형: {list}",
+ "family_overwrite.ow.more": "외 {n}개",
+ "family_overwrite.ow.back": "편집으로 돌아가기",
+ "family_overwrite.ow.replace": "값 바꾸기"
+}

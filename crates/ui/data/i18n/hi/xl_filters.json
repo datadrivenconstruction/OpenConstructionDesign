@@ -1,0 +1,6 @@
+{
+ "xl.msg.filter_on_sheet_x": "शीट '{}' पर फ़िल्टर",
+ "xl.msg.sort_settings_on_sheet_x": "शीट '{}' पर क्रम-सेटिंग",
+ "xl.msg.hidden_rows_on_sheet_x": "शीट '{}' पर छिपी पंक्तियाँ",
+ "xl.msg.hidden_columns_on_sheet_x": "शीट '{}' पर छिपे कॉलम"
+}

@@ -1,0 +1,15 @@
+[
+ {
+  "id": "view.perf_stats",
+  "icon": "perf-stats",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "nav",
+  "priority": 8
+ }
+]

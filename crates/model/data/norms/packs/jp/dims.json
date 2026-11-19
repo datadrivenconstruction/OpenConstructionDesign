@@ -1,0 +1,304 @@
+{
+ "items": [
+  {
+   "key": "egress.travel_max",
+   "value": 50,
+   "unit": "m",
+   "source": "jp-bsa-order",
+   "clause": "Art. 120 para 1 table, row 2",
+   "url": "https://laws.e-gov.go.jp/law/325CO0000000338",
+   "accessed": "2026-11-14",
+   "paraphrase": "Walking distance from a room in an apartment/hotel type use to a direct stair; 50 m when main structure is fire-resistant/quasi-fire-resistant/noncombustible, else 30 m.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ],
+    "sprinklered": false
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via e-Gov law data API (consolidated text)"
+  },
+  {
+   "key": "egress.travel_max.office",
+   "value": 50,
+   "unit": "m",
+   "source": "jp-bsa-order",
+   "clause": "Art. 120 para 1 table, row 3",
+   "url": "https://laws.e-gov.go.jp/law/325CO0000000338",
+   "accessed": "2026-11-14",
+   "paraphrase": "Same limit for general rooms such as offices: 50 m with fire-rated or noncombustible structure, 40 m otherwise; plus 10 m with quasi-noncombustible finishes (Art. 120 para 2).",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "sprinklered": false
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via e-Gov law data API (consolidated text)"
+  },
+  {
+   "key": "daylight.window_floor_ratio",
+   "value": 0.142857,
+   "unit": "ratio",
+   "source": "jp-bsa-order",
+   "clause": "Art. 19 para 3 table, row 3 (under Act Art. 28)",
+   "url": "https://laws.e-gov.go.jp/law/325CO0000000338",
+   "accessed": "2026-11-14",
+   "paraphrase": "Effective daylight opening area must be at least one seventh of the floor area of dwelling living rooms; it is effective area, not nominal glazing.",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via e-Gov law data API (consolidated text)"
+  },
+  {
+   "key": "corridor.width_min.accessible",
+   "value": 1.2,
+   "unit": "m",
+   "source": "jp-bf-order",
+   "clause": "Art. 19, accessible route corridor item",
+   "url": "https://laws.e-gov.go.jp/law/418CO0000000379",
+   "accessed": "2026-11-14",
+   "paraphrase": "Corridors on the accessible route need a clear width of at least 120 cm.",
+   "verified": true,
+   "note": "read 2026-11-14 via e-Gov law data API (consolidated text)"
+  },
+  {
+   "key": "door.clear_min.accessible",
+   "value": 0.8,
+   "unit": "m",
+   "source": "jp-bf-order",
+   "clause": "Art. 19, accessible route entrance item",
+   "url": "https://laws.e-gov.go.jp/law/418CO0000000379",
+   "accessed": "2026-11-14",
+   "paraphrase": "Doors on the accessible route need a clear opening of at least 80 cm.",
+   "verified": true,
+   "note": "read 2026-11-14 via e-Gov law data API (consolidated text)"
+  },
+  {
+   "key": "accessible.turning_circle",
+   "value": 1.5,
+   "unit": "m",
+   "source": "jp-mlit-design-standard",
+   "clause": "Design standard (guidance, not Order text): wheelchair toilet cubicle inscribed circle at least 150 cm diameter; revised to 180 cm for large public buildings of 2000 m2 and above",
+   "url": "https://www.mlit.go.jp/common/001391184.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "The ministry design standard uses a 150 cm inscribed circle for wheelchair turning, raised to 180 cm for toilets in buildings over 2000 m2 serving the public.",
+   "verified": true,
+   "note": "read 2026-11-14: mlit.go.jp/common/001391184.pdf; 150 cm is the baseline turning circle in the ministry design standard; 180 cm applies to large public toilets after the 2021 revision; not binding law text"
+  },
+  {
+   "key": "ramp.slope_max",
+   "value": 0.083333,
+   "unit": "ratio",
+   "source": "jp-bf-order",
+   "clause": "Art. 19, accessible route ramp item",
+   "url": "https://laws.e-gov.go.jp/law/418CO0000000379",
+   "accessed": "2026-11-14",
+   "paraphrase": "Ramp gradient on the accessible route may not exceed 1:12 (1:8 where the rise is 16 cm or less).",
+   "verified": true,
+   "note": "read 2026-11-14 via e-Gov law data API (consolidated text)"
+  },
+  {
+   "key": "fire.compartment_area_max",
+   "value": 1500,
+   "unit": "m2",
+   "source": "jp-bsa-order",
+   "clause": "Art. 112 para 1",
+   "url": "https://laws.e-gov.go.jp/law/325CO0000000338",
+   "accessed": "2026-11-14",
+   "paraphrase": "Fire-rated buildings over 1500 m2 must be divided by one-hour rated construction into compartments of at most 1500 m2.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ],
+    "sprinklered": false
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via e-Gov law data API (consolidated text)"
+  },
+  {
+   "key": "fire.compartment_area_max.sprinklered",
+   "value": 3000,
+   "unit": "m2",
+   "source": "jp-bsa-order",
+   "clause": "Art. 112 para 1 (half-area counting for automatic sprinkler zones)",
+   "url": "https://laws.e-gov.go.jp/law/325CO0000000338",
+   "accessed": "2026-11-14",
+   "paraphrase": "Floor area covered by automatic sprinklers counts at half, so a fully sprinklered floor allows about double the compartment size.",
+   "applies": {
+    "sprinklered": true
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via e-Gov law data API (consolidated text); 3000 is derived by the half-count rule."
+  },
+  {
+   "key": "stair.riser_max",
+   "value": 0.2,
+   "unit": "m",
+   "source": "jp-bsa-order",
+   "clause": "Art. 23 para 1 table, row 3",
+   "url": "https://laws.e-gov.go.jp/law/325CO0000000338",
+   "accessed": "2026-11-14",
+   "paraphrase": "For stairs serving upper floors with over 200 m2 of habitable rooms (typical shared apartment stairs): riser at most 20 cm.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via e-Gov law data API (consolidated text); row 4 (smaller floors) allows 22 cm."
+  },
+  {
+   "key": "stair.tread_min",
+   "value": 0.24,
+   "unit": "m",
+   "source": "jp-bsa-order",
+   "clause": "Art. 23 para 1 table, row 3",
+   "url": "https://laws.e-gov.go.jp/law/325CO0000000338",
+   "accessed": "2026-11-14",
+   "paraphrase": "Same row: tread at least 24 cm (21 cm in row 4).",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via e-Gov law data API (consolidated text)"
+  },
+  {
+   "key": "stair.width_min",
+   "value": 1.2,
+   "unit": "m",
+   "source": "jp-bsa-order",
+   "clause": "Art. 23 para 1 table, row 3",
+   "url": "https://laws.e-gov.go.jp/law/325CO0000000338",
+   "accessed": "2026-11-14",
+   "paraphrase": "Same row: stair and landing width at least 120 cm (75 cm in row 4).",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via e-Gov law data API (consolidated text)"
+  },
+  {
+   "key": "stair.riser_max.house",
+   "value": 0.23,
+   "unit": "m",
+   "source": "jp-bsa-order",
+   "clause": "Art. 23 para 1 proviso",
+   "url": "https://laws.e-gov.go.jp/law/325CO0000000338",
+   "accessed": "2026-11-14",
+   "paraphrase": "Stairs inside a dwelling (not shared apartment stairs) may have risers up to 23 cm.",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via e-Gov law data API (consolidated text)"
+  },
+  {
+   "key": "stair.tread_min.house",
+   "value": 0.15,
+   "unit": "m",
+   "source": "jp-bsa-order",
+   "clause": "Art. 23 para 1 proviso",
+   "url": "https://laws.e-gov.go.jp/law/325CO0000000338",
+   "accessed": "2026-11-14",
+   "paraphrase": "Stairs inside a dwelling may have treads as small as 15 cm.",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via e-Gov law data API (consolidated text)"
+  },
+  {
+   "key": "stair.width_min.house",
+   "value": 0.75,
+   "unit": "m",
+   "source": "jp-bsa-order",
+   "clause": "Art. 23 para 1 table, row 4",
+   "url": "https://laws.e-gov.go.jp/law/325CO0000000338",
+   "accessed": "2026-11-14",
+   "paraphrase": "Dwelling stairs fall in the general row: width at least 75 cm.",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via e-Gov law data API (consolidated text)"
+  },
+  {
+   "key": "room.height_min",
+   "value": 2.1,
+   "unit": "m",
+   "source": "jp-bsa-order",
+   "clause": "Art. 21 para 1",
+   "url": "https://laws.e-gov.go.jp/law/325CO0000000338",
+   "accessed": "2026-11-14",
+   "paraphrase": "Habitable rooms need a ceiling height of at least 2.1 m (average where the ceiling varies).",
+   "verified": true,
+   "note": "read 2026-11-14 via e-Gov law data API (consolidated text)"
+  },
+  {
+   "key": "room.height_min.office",
+   "value": 2.1,
+   "unit": "m",
+   "source": "jp-bsa-order",
+   "clause": "Art. 21 para 1",
+   "url": "https://laws.e-gov.go.jp/law/325CO0000000338",
+   "accessed": "2026-11-14",
+   "paraphrase": "The same 2.1 m applies to any habitable room including offices; occupational health rules may demand more.",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 via e-Gov law data API (consolidated text)"
+  },
+  {
+   "key": "load.floor_residential",
+   "value": 1.8,
+   "unit": "kN/m2",
+   "source": "jp-bsa-order",
+   "clause": "Art. 85 table, row 1, column for floor design",
+   "url": "https://laws.e-gov.go.jp/law/325CO0000000338",
+   "accessed": "2026-11-14",
+   "paraphrase": "Floor slab design load for dwelling rooms is 1800 N/m2 (1300 for frames, 600 for seismic).",
+   "verified": true,
+   "note": "read 2026-11-14 via e-Gov law data API (consolidated text)"
+  },
+  {
+   "key": "load.floor_office",
+   "value": 2.9,
+   "unit": "kN/m2",
+   "source": "jp-bsa-order",
+   "clause": "Art. 85 table, row 2, column for floor design",
+   "url": "https://laws.e-gov.go.jp/law/325CO0000000338",
+   "accessed": "2026-11-14",
+   "paraphrase": "Floor slab design load for offices is 2900 N/m2 (1800 for frames, 800 for seismic).",
+   "verified": true,
+   "note": "read 2026-11-14 via e-Gov law data API (consolidated text)"
+  }
+ ]
+}

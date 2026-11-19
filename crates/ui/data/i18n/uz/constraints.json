@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "Har bir tahrirda bu devorning joriy uzunligini saqlaydi",
+ "constraints.con.tip.lock_dist": "Har bir tahrirda ikki devor orasidagi masofani saqlaydi",
+ "constraints.con.tip.equal": "Tanlangan devorlar orasidagi qadamlarni teng saqlaydi",
+ "constraints.con.tip.align": "Ikkala devorni bir chiziqda saqlaydi",
+ "constraints.con.tip.parallel": "Devorlarni parallel saqlaydi",
+ "constraints.con.tip.perp": "Devorlarni to'g'ri burchakda saqlaydi",
+ "constraints.con.tip.align_grid": "Devorni eng yaqin to'r chizig'ida saqlaydi",
+ "constraints.con.tip.lock_dist_grid": "Devordan eng yaqin to'r chizig'igacha masofani saqlaydi",
+ "constraints.con.tip.level_gap": "Sathlar orasidagi masofani saqlaydi",
+ "constraints.con.tip.top_to_level": "Devor yuqorisini yuqoridagi sathda saqlaydi"
+}

@@ -1,0 +1,7 @@
+{
+ "messages.title": "メッセージ",
+ "messages.desc": "通知の履歴。新しい警告やエラーはありません。",
+ "messages.desc_new": "新しい警告またはエラーが {n} 件あります。クリックして確認してください。",
+ "messages.copy": "すべてコピー",
+ "messages.clear": "すべてクリア"
+}

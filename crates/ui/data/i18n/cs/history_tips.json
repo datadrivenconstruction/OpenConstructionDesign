@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "Vráceno — Ctrl+Y znovu provede",
+ "history.hist.empty": "Zatím žádné změny",
+ "history.hist.empty_hint": "Vaše úpravy se zobrazí zde. Kliknutím na krok se k němu vrátíte.",
+ "history.hist.revert_all_n": "Vrátit všechny změny AI ({n})"
+}

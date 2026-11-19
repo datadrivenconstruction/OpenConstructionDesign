@@ -1,0 +1,16 @@
+{
+ "xlsx_recover.title": "Ekspor ke buku kerja tertaut terputus",
+ "xlsx_recover.both": "Ekspor berhenti di antara memindahkan buku kerja sebelumnya dan menaruh yang baru. Tidak ada yang hilang: buku kerja baru lengkap di {part}, yang sebelumnya disimpan di {bak}.",
+ "xlsx_recover.part_only": "Ekspor berhenti sebelum buku kerja baru ditempatkan. Buku kerja sudah lengkap di {part}.",
+ "xlsx_recover.bak_only": "Ekspor berhenti sebelum buku kerja baru siap. Buku kerja sebelumnya disimpan di {bak}.",
+ "xlsx_recover.finish": "Selesaikan ekspor yang terputus",
+ "xlsx_recover.restore": "Pulihkan buku kerja sebelumnya",
+ "xlsx_recover.finished": "Ekspor yang terputus sudah selesai: buku kerja baru sudah di tempatnya.",
+ "xlsx_recover.finished_kept": "Ekspor yang terputus sudah selesai: buku kerja baru sudah di tempatnya, yang sebelumnya disimpan di {bak}.",
+ "xlsx_recover.restored": "Buku kerja sebelumnya sudah kembali di tempatnya.",
+ "xlsx_recover.restore_failed": "Buku kerja sebelumnya tidak dapat dipindahkan kembali ({err}). Disimpan di {path}.",
+ "xlsx_recover.not_restored": "Buku kerja baru tidak dapat ditempatkan dan yang sebelumnya tidak dapat dipindahkan kembali. Tidak ada yang hilang: buku kerja sebelumnya disimpan di {path}; Sinkronkan menawarkan untuk menyelesaikan atau memulihkan.",
+ "xlsx_recover.finish_failed": "Buku kerja baru tidak dapat ditempatkan ({err}). Tetap di {path}.",
+ "xlsx_recover.dest_back": "Buku kerja kembali di {path}: tidak ada yang dipindahkan.",
+ "xlsx_recover.nothing": "Tidak ada sisa ekspor yang terputus untuk dipindahkan."
+}

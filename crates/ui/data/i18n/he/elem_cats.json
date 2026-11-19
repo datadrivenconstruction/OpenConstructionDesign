@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "מסה אינה ניתנת לסיבוב או לשיקוף: להיסטוריית הצורה שלה אין שלב מסובב. הזז או העתק אותה, או שרטט אותה מחדש בכיוון החדש.",
+ "sched_cats.col.name": "שם",
+ "sched_cats.col.material": "חומר",
+ "sched_cats.col.void": "חלל",
+ "sched_cats.col.inplace": "במקום",
+ "sched_cats.col.volume": "נפח נטו",
+ "sched_cats.col.area": "שטח פנים",
+ "sched_cats.col.floor_area": "שטח רצפה",
+ "sched_cats.col.thickness": "עובי",
+ "sched_cats.col.points": "נקודות",
+ "elem.toposolid.points": "נקודות מדידה",
+ "elem.toposolid.count": "נקודות",
+ "elem.toposolid.low": "הנמוך ביותר",
+ "elem.toposolid.high": "הגבוה ביותר",
+ "elem.toposolid.edit": "עריכת נקודות",
+ "elem.toposolid.edit_tip": "בחירה, גרירה וקביעת גובה של נקודות מדידה בתוכנית",
+ "elem.toposolid.pick_hint": "לחץ על נקודה בתוכנית כדי לבחור בה. לחץ שוב כדי להוסיף או להסיר.",
+ "elem.toposolid.z": "גובה ({n})",
+ "elem.toposolid.mixed": "הנקודות שנבחרו שונות; ערך חדש יקבע את כולן.",
+ "elem.toposolid.edit_help": "גרור נקודה כדי להזיז אותה. הקלד ערך ולחץ Enter כדי לקבוע את הגובה. Backspace מסיר את הנקודות שנבחרו, Esc יוצא.",
+ "elem.toposolid.done": "בוצע"
+}

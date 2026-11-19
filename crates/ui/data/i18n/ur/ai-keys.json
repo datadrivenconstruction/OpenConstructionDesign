@@ -1,0 +1,14 @@
+{
+ "ai_keys.header_is_key": "کلیدیں Key فیلڈ میں ڈالیں — ہیڈرز سادہ متن میں محفوظ ہوتے ہیں",
+ "ai_keys.move": "Key میں منتقل کریں",
+ "ai_keys.remove_line": "ہیڈرز سے ہٹائیں",
+ "ai_keys.save_blocked": "محفوظ کرنے کے لیے کلید ہیڈرز سے نکالیں",
+ "ai_keys.show": "دکھائیں",
+ "ai_keys.hide": "چھپائیں",
+ "ai_keys.copy": "نقل",
+ "ai_keys.tokens": "ٹوکن",
+ "ai_keys.presets": "پیش سیٹ",
+ "ai_keys.preset_k": "{n}k",
+ "ai_keys.preset_m": "{n}M",
+ "ai_keys.images_on": "معاون"
+}

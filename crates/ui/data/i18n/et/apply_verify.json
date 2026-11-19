@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "Rakendamine peatati: mudel jäetakse samaks",
+ "apply_verify.rolled_back": "Rakendamine ei vastanud mustandile ja võeti tagasi; mudel on muutumata. {what}",
+ "apply_verify.diff.missing": "Mustand näitab {what} {kind}, aga rakendamine seda ei teinud.",
+ "apply_verify.diff.extra": "Rakendati {kind} {what}, mida mustand ei näita.",
+ "apply_verify.diff.kind": "Mustand näitab {what} {shown}, aga rakendati {applied}.",
+ "apply_verify.diff.value": "{what}: „{col}“ tuli välja teistsugune kui mustandis.",
+ "apply_verify.diff.truncated": "Mustand ja rakendatud muudatus erinevad suuruselt.",
+ "apply_verify.diff.unreadable": "Rakendatud muudatust ei saanud tagasi lugeda ({e}).",
+ "apply_verify.no_base": "Rakendamist ei käivitatud: mustandi kontrollimiseks vajalik koopia puudub. Mudel on muutumata; küsi mustand uuesti.",
+ "apply_verify.take_back_failed": "Tagasivõtmine ebaõnnestus ({e}): kasuta Võta tagasi.",
+ "apply_verify.kind.created": "loodud",
+ "apply_verify.kind.changed": "muudetud",
+ "apply_verify.kind.deleted": "kustutatud",
+ "apply_verify.card.type_row": "Tüüp {type} · {n} elementi võtavad muudatuse"
+}

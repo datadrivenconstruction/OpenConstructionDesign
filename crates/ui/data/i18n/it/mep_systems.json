@@ -1,0 +1,21 @@
+{
+ "mep.row.system": "Sistema",
+ "mep.row.elevation": "Quota iniziale",
+ "mep.row.slope": "Pendenza",
+ "mep.row.material": "Materiale",
+ "mep.row.dev_elevation": "Quota",
+ "mep.row.no_system": "Questo sistema non esiste più. Scegline un altro.",
+ "mep.row.no_points": "La tratta non ha punti, quindi non ha quota.",
+ "mep.row.system_domain": "Il sistema {system} non accetta questo tipo di tratta ({kind}). Scegli un sistema dello stesso tipo di rete.",
+ "mep.row.material_pipes": "Il materiale si applica solo ai tubi; questa tratta è di tipo {kind}.",
+ "mep.row.no_catalog": "Il materiale non ha dimensioni di catalogo per questa tratta.",
+ "mep.mat.none": "Non impostato",
+ "mep.mat.steel": "Acciaio",
+ "mep.mat.copper": "Rame",
+ "mep.mat.pvc": "PVC",
+ "mep.mat.pp": "Polipropilene",
+ "mep.err.follow_blocked": "Una tratta collegata non può seguire questa modifica: nella nuova posizione non c'è spazio per il suo tratto. Sposta meno il dispositivo, oppure scollega prima la tratta.",
+ "mep.err.follow_slope": "Una tratta collegata ha una pendenza che non può essere mantenuta nella nuova posizione: scenderebbe sotto la pendenza minima del suo sistema. Sposta il dispositivo di meno in altezza, oppure scollega prima la tratta.",
+ "mep.err.follow_port_lost": "Un connettore su cui questa tratta si appoggiava non esiste più dopo la modifica. Sposta prima la tratta, oppure mantieni il tipo di dispositivo.",
+ "mep.err.follow_device": "Questa tratta termina su un connettore di dispositivo e non può staccarsene. Sposta invece il dispositivo, oppure scollega prima la tratta."
+}

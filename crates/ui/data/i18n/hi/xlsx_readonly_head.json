@@ -1,0 +1,5 @@
+{
+ "xlsx_readonly.read_only_head": "केवल-पढ़ना — लागू करने पर प्रति लिखी जाएगी",
+ "xlsx_readonly.show_in_folder": "फ़ोल्डर में दिखाएँ",
+ "xlsx_readonly.copy_exists": "प्रति वाली फ़ाइल पहले से मौजूद है। कोई और नाम चुनें या उसे हटाएँ।"
+}

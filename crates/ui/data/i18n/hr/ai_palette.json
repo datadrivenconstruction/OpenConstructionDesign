@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "Pitaj AI: {q}",
+ "ai.palette.connect": "Poveži AI za pitanje",
+ "ai.palette.draft.apply": "Primijeni nacrt ({n})",
+ "ai.palette.draft.reject": "Odbij nacrt",
+ "ai.palette.draft.next": "Sljedeća promjena nacrta",
+ "ai.palette.draft.show": "Prikaži nacrt u pogledu",
+ "cmd.ai.next_change": "Sljedeća promjena nacrta",
+ "cmd.ai.next_change.desc": "Pomiče pogled na sljedeći element koji nacrt mijenja.",
+ "cmd.ai.show_draft": "Prikaži AI nacrt u pogledu",
+ "cmd.ai.show_draft.desc": "Prilagođava pogled svemu što nacrt mijenja."
+}

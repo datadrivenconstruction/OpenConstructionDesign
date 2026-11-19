@@ -1,0 +1,4 @@
+{
+ "tool.err.drawing_open": "A pont körüli rajzvonalak nem zárnak hurokba",
+ "tool.err.drawing_crossing": "Ez a pont körüli rajzi hurok keresztezi önmagát"
+}

@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "Koncový bod",
+ "snap.midpoint": "Střed",
+ "snap.perpendicular": "Kolmice",
+ "snap.wall_axis": "Osa stěny",
+ "snap.wall_face": "Líc stěny",
+ "snap.grid": "Mřížka",
+ "snap.intersection": "Průsečík",
+ "snap.grid_axis": "Osa mřížky",
+ "snap.ref_plane": "Referenční rovina",
+ "snap.nearest": "Nejbližší",
+ "snap.align_x": "Zarovnáno v X se vzdáleným bodem",
+ "snap.align_y": "Zarovnáno v Y se vzdáleným bodem",
+ "snap.align_xy": "Zarovnáno v X a Y"
+}

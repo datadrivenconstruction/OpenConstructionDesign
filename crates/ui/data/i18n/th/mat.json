@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "คอนกรีต",
+ "mat.masonry": "งานก่อ",
+ "mat.brick": "อิฐ",
+ "mat.insulation": "ฉนวน",
+ "mat.plaster": "ปูนฉาบ",
+ "mat.render": "ปูนฉาบผิว",
+ "mat.gypsum": "แผ่นยิปซั่ม",
+ "mat.glass": "กระจก",
+ "mat.wood": "ไม้",
+ "mat.steel": "เหล็ก",
+ "mat.membrane": "เยื่อกันซึม",
+ "mat.other": "อื่นๆ",
+ "warn.cat.wall": "ผนัง",
+ "warn.cat.slab": "พื้น",
+ "warn.cat.opening": "ช่องเปิด",
+ "warn.cat.curtain_wall": "ผนังม่าน",
+ "td.mat.custom": "อื่นๆ…"
+}

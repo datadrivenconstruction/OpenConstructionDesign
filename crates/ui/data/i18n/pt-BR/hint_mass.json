@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "Superfície livre",
+ "cmd.mass.panelize": "Dividir em painéis",
+ "cmd.mass.surface_shell": "Cobertura sobre superfície",
+ "cmd.mass.thicken": "Espessura",
+ "hint.mass.freeform.first": "Superfície livre: primeiro canto do retângulo em planta · introduza a flecha · Esc — cancelar",
+ "hint.mass.freeform.next": "Superfície livre: canto oposto · introduza a flecha · Esc — cancelar",
+ "hint.mass.panelize.first": "Painéis: escolha uma superfície livre em 3D · Esc — cancelar",
+ "hint.mass.panelize.value": "Painéis: introduza a dimensão do painel · Enter — aplicar · Esc — cancelar",
+ "hint.mass.surface_shell.first": "Cobertura sobre superfície: escolha uma superfície livre em 3D · Esc — cancelar",
+ "hint.mass.surface_shell.value": "Cobertura sobre superfície: introduza a espessura · Enter — aplicar · Esc — cancelar",
+ "hint.mass.thicken.first": "Espessura: escolha uma superfície livre em 3D · Esc — cancelar",
+ "hint.mass.thicken.value": "Espessura: introduza a espessura (0 — superfície sem espessura) · Enter — aplicar · Esc — cancelar",
+ "status.mass.pick_surface": "Escolha uma superfície livre",
+ "status.mass.freeform_small": "O retângulo é demasiado pequeno: no mínimo 0,5 m em cada sentido",
+ "name.mass.freeform": "Superfície livre",
+ "rgroup.mass_free": "Avançado"
+}

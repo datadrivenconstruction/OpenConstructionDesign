@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "New family",
+ "family_editor.open_tip": "Open family or draft",
+ "family_editor.close_named": "Close {name}",
+ "family_editor.unsaved": "Unsaved changes",
+ "family_editor.search": "Search",
+ "family_editor.nothing": "Nothing found",
+ "family_editor.sec_families": "Project families",
+ "family_editor.sec_drafts": "Drafts",
+ "family_editor.cap_category": "Category",
+ "family_editor.cap_host": "Host",
+ "family_editor.cap_type": "Preview type"
+}

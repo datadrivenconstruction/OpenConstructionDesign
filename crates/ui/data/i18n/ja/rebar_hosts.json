@@ -1,0 +1,40 @@
+{
+ "rebar_hosts.hosts": "ホスト: {list}",
+ "rebar_hosts.kind.column": "柱",
+ "rebar_hosts.kind.beam": "梁",
+ "rebar_hosts.kind.wall": "壁",
+ "rebar_hosts.kind.slab": "スラブ",
+ "rebar_hosts.kind.footing": "基礎",
+ "rebar_hosts.kind.raft": "基礎スラブ",
+ "rebar_hosts.n.column": {
+  "one": "# 柱",
+  "other": "# 柱"
+ },
+ "rebar_hosts.n.beam": {
+  "one": "# 梁",
+  "other": "# 梁"
+ },
+ "rebar_hosts.n.wall": {
+  "one": "# 壁",
+  "other": "# 壁"
+ },
+ "rebar_hosts.n.slab": {
+  "one": "# スラブ",
+  "other": "# スラブ"
+ },
+ "rebar_hosts.n.footing": {
+  "one": "# 基礎",
+  "other": "# 基礎"
+ },
+ "rebar_hosts.n.raft": {
+  "one": "# 基礎スラブ",
+  "other": "# 基礎スラブ"
+ },
+ "rebar_hosts.mixed_note": "柱と梁には主筋とスターラップ、壁、スラブ、基礎にはメッシュを配置します。鉄筋を追加するには 1 つのグループを選択してください。",
+ "rebar_hosts.why.mixed": "選択に柱または梁と、壁、スラブ、基礎が混在しています。1 つのグループを選択してください。",
+ "rebar_hosts.why.area_linear": "メッシュは壁、スラブ、基礎に配置され、柱や梁には配置されません。",
+ "rebar_hosts.why.bars_plate": "主筋とスターラップは柱と梁に配置され、壁、スラブ、基礎には配置されません。",
+ "rebar_hosts.why.no_common_face": "選択したホストに共通のかぶり面がありません。同じ種類のホストを選択してください。",
+ "rebar_hosts.why.no_type": "鉄筋タイプを選択してください。",
+ "rebar_hosts.kind_type": "{kind} · {type}"
+}

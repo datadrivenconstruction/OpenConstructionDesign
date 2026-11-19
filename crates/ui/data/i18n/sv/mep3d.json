@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "Kanal",
+ "mep3d.pipe": "Rör",
+ "mep3d.tray": "Kabelbrygga",
+ "mep3d.conduit": "Kabelrör",
+ "mep3d.system": "Systemtyp",
+ "mep3d.length": "Längd",
+ "mep3d.diameter": "Dimension",
+ "mep3d.width": "Bredd",
+ "mep3d.height": "Höjd",
+ "mep3d.insulation": "Isolering",
+ "mep3d.tip": "Enter — tillämpa; kopplingar beräknas om",
+ "mep3d.size_positive": "måttet måste vara större än noll",
+ "mep3d.not_changed": "inte ändrad: {e}",
+ "mep3d.copied": "dragningen kopierad",
+ "mep3d.changed": "dragningen ändrad",
+ "mep3d.deleted": "element borttagna: {n}",
+ "mep3d.not_deleted": "inte borttagen: {e}",
+ "mep3d.no_wall_type": "ingen väggtyp",
+ "mep3d.demo.supply": "Tilluft S1",
+ "mep3d.demo.heating": "Värme",
+ "mep3d.demo.power": "Kraft"
+}

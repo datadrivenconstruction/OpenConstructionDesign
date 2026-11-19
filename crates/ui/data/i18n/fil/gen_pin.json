@@ -1,0 +1,7 @@
+{
+ "gen.pin.room": "Binago mo ang isang kuwarto ng nabuong proyekto. I-pin ito para manatili ito sa lugar kapag may rebisyon.",
+ "gen.pin.storey": "Binago mo ang isang palapag ng nabuong proyekto. I-pin ito para mapanatili ng rebisyon ang mga pader at bukas nito.",
+ "gen.pin.action": "I-pin",
+ "gen.pin.done": "Na-pin: pananatilihin ng rebisyon ng proyekto ito at ilalagay ang iba sa paligid nito",
+ "gen.pin.failed": "Hindi ma-pin"
+}

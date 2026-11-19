@@ -1,0 +1,19 @@
+{
+ "names.level": "Podlaží {n}",
+ "names.slab": "Deska 200",
+ "names.roof_slab": "Střecha 200",
+ "names.sheet.plan_section": "Půdorys a řez 1. podlaží",
+ "names.sheet.plan_view": "Půdorys 1. podlaží",
+ "names.sheet.site_plan": "Situace",
+ "names.sheet_set.issue": "Vydání 1",
+ "names.title.owner": "Project s.r.o.",
+ "names.title.creator": "A. Dvořák",
+ "names.title.approver": "J. Novák",
+ "names.title.document_type": "Výkres",
+ "names.title.status": "Rozpracováno",
+ "names.revision.date": "4. 11. 2026",
+ "names.revision.description": "Vydáno ke kontrole",
+ "names.revision.author": "AI",
+ "names.demo.no_levels": "bez podlaží",
+ "names.demo.no_sheet": "list"
+}

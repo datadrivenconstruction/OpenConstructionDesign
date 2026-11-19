@@ -1,0 +1,11 @@
+{
+ "fe.csv.apply": "Käytä tuontia",
+ "fe.csv.cancel": "Hylkää esikatselu",
+ "fe.csv.nothing": "Ei muutettavaa: luettelo vastaa nykyisiä tyyppejä",
+ "fe.csv.preview": "Tuonnin esikatselu: {added} uutta, {changed} muutettua, {same} ennallaan olevaa tyyppiä; {values} arvoa muuttuu",
+ "fe.csv.preview_hint": "Tyhjät solut ja puuttuvat sarakkeet säilyttävät nykyiset arvot. Mitään ei muutu ennen käyttöä.",
+ "fe.csv.skipped": "Ei käytetty, arvo säilytetty: {msg}",
+ "fe.csv.type_added": "Uusi tyyppi {name}",
+ "fe.csv.type_changed": "Tyyppi {name}",
+ "fe.csv.value": "  {param}: {old} → {new}"
+}

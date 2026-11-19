@@ -1,0 +1,20 @@
+{
+ "dwgfillet.fillet": "Pyöristys",
+ "dwgfillet.cancel": "Lopeta pyöristys",
+ "dwgfillet.tip": "Napsauta kahta viivaa säilytettävillä puolilla: molemmat katkaistaan tai jatketaan kulmaan, tangenttikaarella kun säde on suurempi kuin nolla",
+ "dwgfillet.radius": "Pyöristyssäde",
+ "dwgfillet.radius_tip": "Kaaren säde piirustusyksiköissä; 0 tekee terävän kulman",
+ "dwgfillet.st.arm_first": "Napsauta ensimmäistä viivaa sillä puolella, joka säilytetään",
+ "dwgfillet.st.arm_second": "Napsauta toista viivaa sillä puolella, joka säilytetään",
+ "dwgfillet.st.not_armed": "Valitse ensin Pyöristys",
+ "dwgfillet.st.click_line": "Napsauta yksittäistä piirustuksen viivaa",
+ "dwgfillet.st.other_drawing": "Molempien viivojen täytyy kuulua samaan piirustukseen: aloita alusta",
+ "dwgfillet.st.changed": "Ensimmäinen viiva muuttui: aloita alusta",
+ "dwgfillet.st.same_line": "Valitse eri toinen viiva",
+ "dwgfillet.st.parallel": "Viivat ovat yhdensuuntaiset eivätkä koskaan kohtaa: kulmaa ei voi tehdä",
+ "dwgfillet.st.degenerate": "Viivalla ei ole pituutta",
+ "dwgfillet.st.no_side": "Napsautetulla puolella ei ole pituutta kulmasta",
+ "dwgfillet.st.too_big": "Säde on liian suuri näille viivoille: käytä pienempää sädettä",
+ "dwgfillet.st.radius_bad": "Säteen täytyy olla nolla tai positiivinen",
+ "dwgfillet.st.done": "Kulma tehty"
+}

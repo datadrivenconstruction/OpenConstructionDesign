@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "ফিরিয়ে আনুন: {what}",
+ "undo_label.redo_what": "পুনরায় করুন: {what}",
+ "undo_label.undo_none": "ফিরিয়ে আনার কিছু নেই",
+ "undo_label.redo_none": "পুনরায় করার কিছু নেই"
+}

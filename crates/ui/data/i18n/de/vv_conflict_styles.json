@@ -1,0 +1,6 @@
+{
+ "vv_conflict.styles.conflict": "Objektstile einer bearbeiteten Kategorie wurden im Modell geändert (Rückgängig oder anderes Fenster), während dieses Fenster Änderungen hatte. Ihre Änderungen bleiben erhalten.",
+ "vv_conflict.styles.keep": "Meine Änderungen behalten",
+ "vv_conflict.styles.reload": "Neu laden",
+ "vv_conflict.styles.answer_first": "Wählen Sie zuerst „Meine Änderungen behalten“ oder „Neu laden“"
+}

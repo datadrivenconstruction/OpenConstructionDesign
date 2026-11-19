@@ -1,0 +1,14 @@
+{
+ "empty.v3d_model.title": "W 3D nic jeszcze nie ma",
+ "empty.v3d_model.hint": "Narysuj ściany w planie, a pojawią się tutaj.",
+ "empty.v3d_model.action": "Otwórz plan",
+ "empty.v3d_hidden.title": "Wszystkie elementy są ukryte w tym widoku",
+ "empty.v3d_hidden.hint": "Tymczasowe ukrycie lub izolacja nie pozostawia nic widocznego. Grafika widoku zostaje bez zmian.",
+ "empty.v3d_hidden.action": "Pokaż wszystko",
+ "empty.v3d_graphics.title": "Grafika widoku ukrywa wszystkie kategorie",
+ "empty.v3d_graphics.hint": "Reguły kategorii tego widoku nie pokazują nic. Włącz kategorie ponownie w grafice widoku.",
+ "empty.v3d_graphics.action": "Otwórz grafikę widoku",
+ "empty.v3d_box.title": "Pudełko przekroju jest poza modelem",
+ "empty.v3d_box.hint": "Pudełko odcina każdy element. Dopasuj je ponownie do modelu.",
+ "empty.v3d_box.action": "Zresetuj pudełko"
+}

@@ -1,0 +1,33 @@
+{
+ "cmd.help.licenses": "Open-sourcelicenties",
+ "cmd.help.licenses.desc": "Toont de open-sourcebibliotheken die in deze build worden gebruikt, met hun licenties.",
+ "about.product": "DDC Editor",
+ "about.version": "Versie",
+ "about.build": "Buildnummer",
+ "about.schema": "Modelschema",
+ "about.system": "Systeem",
+ "about.gpu": "Grafische adapter",
+ "about.language": "Taal",
+ "about.copy": "Versie-informatie kopiëren",
+ "about.copy_desc": "Versie, build, systeem en grafische adapter voor een foutrapport. Geen bestandspaden.",
+ "about.copied": "Versie-informatie gekopieerd",
+ "about.licenses": "Open-sourcelicenties",
+ "about.licenses_desc": "Bibliotheken die in deze build worden gebruikt, en hun licenties",
+ "about.licenses.open": "Bekijken",
+ "about.licenses.title": "Open-sourcelicenties",
+ "about.licenses.note": "DDC Editor bevat de onderstaande bibliotheken. Elke bibliotheek blijft onder de eigen licentie en auteursrechtvermelding vallen. Volledige licentieteksten: THIRD_PARTY_LICENSES.txt naast de toepassing.",
+ "about.licenses.full": "Volledige licentieteksten",
+ "about.licenses.list": "Lijst van componenten",
+ "about.licenses.close": "Sluiten",
+ "about.licenses.col_name": "Onderdeel",
+ "about.licenses.col_license": "Licentie",
+ "about.licenses.count": {
+  "one": "# component",
+  "other": "# componenten"
+ },
+ "about.licenses.count_of": "{shown} van {total} componenten",
+ "about.licenses.search_hint": "Zoeken op naam of licentie…",
+ "about.licenses.search_clear": "Zoekopdracht wissen",
+ "about.licenses.none": "Niets gevonden",
+ "about.licenses.none_hint": "Probeer een deel van een bibliotheeknaam of een licentie zoals MIT."
+}

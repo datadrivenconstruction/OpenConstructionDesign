@@ -1,0 +1,16 @@
+{
+ "ai.items.all": {
+  "one": "Tout # élément",
+  "other": "Tous les # éléments"
+ },
+ "ai.items.all.tip": "Cocher ou décocher chaque élément du plan",
+ "ai.items.checked": "{n} sur {m} cochés",
+ "ai.items.check.tip": "Inclure « {title} » dans l'application",
+ "ai.items.expand": "Afficher les éléments",
+ "ai.items.collapse": "Masquer les éléments",
+ "ai.items.apply": {
+  "one": "Appliquer # élément",
+  "other": "Appliquer # éléments"
+ },
+ "ai.items.apply_none": "Appliquer"
+}

@@ -1,0 +1,5 @@
+{
+ "legend.legend.empty_hint": "Adjon meg fent egy nevet, és nyomja meg a Létrehozás gombot.",
+ "legend.legend.pick_hint": "Válasszon jelmagyarázatot a fenti listából.",
+ "legend.legend.taken": "A(z) \"{name}\" nevű jelmagyarázat már létezik. Adjon meg másik nevet."
+}

@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "端点",
+ "snap.midpoint": "中点",
+ "snap.perpendicular": "垂線",
+ "snap.wall_axis": "壁の軸",
+ "snap.wall_face": "壁面",
+ "snap.grid": "グリッド",
+ "snap.intersection": "交点",
+ "snap.grid_axis": "通り芯線",
+ "snap.ref_plane": "参照面",
+ "snap.nearest": "最近点",
+ "snap.align_x": "遠くの点と X 方向に揃っています",
+ "snap.align_y": "遠くの点と Y 方向に揃っています",
+ "snap.align_xy": "X 方向と Y 方向に揃っています"
+}

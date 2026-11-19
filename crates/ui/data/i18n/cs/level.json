@@ -1,0 +1,13 @@
+{
+ "level.err_open": "Podlaží neotevřeno: {e}",
+ "level.need_name": "Podlaží potřebuje název a kótu",
+ "level.created": "Podlaží „{name}“ vytvořeno",
+ "level.err_create": "Podlaží nevytvořeno: {e}",
+ "level.err_edit": "Podlaží nezměněno: {e}",
+ "level.edited": "Podlaží „{name}“ změněno",
+ "level.edited_stale": "Podlaží „{name}“ změněno, pohled se neobnovil: {e}",
+ "level.last": "Poslední podlaží nelze smazat",
+ "level.deleted": "Podlaží smazáno",
+ "level.not_empty": "Podlaží není prázdné: nejprve smažte jeho prvky",
+ "level.err_delete": "Podlaží nesmazáno: {e}"
+}

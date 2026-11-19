@@ -1,0 +1,8 @@
+brief = "Section of a lattice tower: four corner posts as a nested family, diagonal braces on all four faces, width and height as parameters, equal bay steps by constraint."
+category = "generic"
+must = param Width
+must = param Height
+must = nests 4
+must = solids >= 4
+must = bbox z 3000
+must = flex Height 2000 4000

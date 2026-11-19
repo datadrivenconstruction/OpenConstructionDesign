@@ -1,0 +1,6 @@
+{
+ "geom.length": "길이",
+ "sched.cat.room_seps": "룸 구분선",
+ "room.err.point_leave": "룸 {n}: 점이 경계를 벗어나게 됨",
+ "room.err.point_taken": "룸 {n}: 점이 룸 {other}에 놓이게 됨"
+}

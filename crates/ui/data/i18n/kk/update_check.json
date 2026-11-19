@@ -1,0 +1,21 @@
+{
+ "cmd.help.check_update": "Жаңартуларды тексеру",
+ "update_check.title": "Жаңартуды тексеру",
+ "update_check.desc": "Әдепкі бойынша өшірулі. Серверге тек нұсқаны, ОЖ мен архитектураны және орнату түрін жібереді. Ештеңе жүктемейді және орнатпайды.",
+ "update_check.freq.startup": "Іске қосылғанда",
+ "update_check.freq.daily": "Күн сайын",
+ "update_check.freq.weekly": "Апта сайын",
+ "update_check.freq.never": "Ешқашан",
+ "update_check.check_now": "Қазір тексеру",
+ "update_check.dialog.title": "Жаңартуды тексеру",
+ "update_check.unknown.title": "Жаңартуларды тексеру мүмкін болмады",
+ "update_check.unknown.body": "{e}. Бұл нұсқаның соңғы екенін білдірмейді. Кейінірек қайталап көріңіз.",
+ "update_check.current": "Сізде соңғы нұсқа бар ({v}).",
+ "update_check.newer": "{v} нұсқасы қолжетімді",
+ "update_check.date": "Шығарылған күні {d}",
+ "update_check.unfit": "Бұл нұсқа ({v}) ұсынылатын ең төмен {f} нұсқасынан ескі. Жаңарту ұсынылады.",
+ "update_check.close": "Жабу",
+ "update_check.open_failed": "Шығарылым бетін ашу мүмкін болмады.",
+ "update_check.toast.newer": "{v} нұсқасы қолжетімді. Анықтама > Жаңартуларды тексеру.",
+ "update_check.toast.unfit": "Бұл нұсқа ({v}) ұсынылатын ең төмен {f} нұсқасынан ескі."
+}

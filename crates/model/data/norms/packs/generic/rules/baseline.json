@@ -1,0 +1,415 @@
+{
+ "rules": [
+  {
+   "id": "generic.stair.step",
+   "text": {
+    "en": "Step rule: 2 risers + tread from 0.60 to 0.65 m",
+    "ru": "Шаг: 2 подъёма + проступь от 0,60 до 0,65 м"
+   },
+   "source": {
+    "doc": "intl-baseline",
+    "clause": "stair.step"
+   },
+   "severity": "warning",
+   "applies": {},
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "2*riser+tread",
+    "min": 0.6,
+    "max": 0.65
+   },
+   "unit": "m",
+   "verified": false,
+   "depth": 3,
+   "discipline": "arch"
+  },
+  {
+   "id": "generic.room.daylight",
+   "text": {
+    "en": "Window area at least 1/8 of the floor of a habitable room",
+    "ru": "Площадь окон не менее 1/8 площади пола жилого помещения"
+   },
+   "source": {
+    "doc": "intl-baseline",
+    "clause": "daylight.window_floor_ratio"
+   },
+   "severity": "warning",
+   "applies": {},
+   "check": {
+    "kind": "ratio",
+    "per": "element",
+    "cat": "room",
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen",
+     "office",
+     "classroom",
+     "meeting"
+    ],
+    "num": "window_area",
+    "den": "area",
+    "min": 0.125
+   },
+   "unit": "ratio",
+   "verified": false,
+   "depth": 2,
+   "discipline": "arch",
+   "value": 0.125
+  },
+  {
+   "id": "generic.circulation.residential",
+   "text": {
+    "en": "Corridors and halls at most 18 % of the dwelling area",
+    "ru": "Коридоры и холлы не более 18 % площади жилья"
+   },
+   "source": {
+    "doc": "intl-baseline",
+    "clause": "circulation.residential"
+   },
+   "severity": "warning",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "ratio",
+    "per": "total",
+    "group_by": "unit",
+    "num": {
+     "room_kind": [
+      "corridor",
+      "hall"
+     ]
+    },
+    "den": {},
+    "max": 0.18
+   },
+   "unit": "ratio",
+   "verified": false,
+   "depth": 1,
+   "discipline": "arch",
+   "value": 0.18
+  },
+  {
+   "id": "generic.circulation.office",
+   "text": {
+    "en": "Corridors and halls at most 25 % of the floor area",
+    "ru": "Коридоры и холлы не более 25 % площади этажа"
+   },
+   "source": {
+    "doc": "intl-baseline",
+    "clause": "circulation.office"
+   },
+   "severity": "warning",
+   "applies": {
+    "typology": [
+     "office",
+     "school"
+    ]
+   },
+   "check": {
+    "kind": "ratio",
+    "per": "total",
+    "group_by": "level",
+    "num": {
+     "room_kind": [
+      "corridor",
+      "hall",
+      "lobby"
+     ]
+    },
+    "den": {},
+    "max": 0.25
+   },
+   "unit": "ratio",
+   "verified": false,
+   "depth": 1,
+   "discipline": "arch",
+   "value": 0.25
+  },
+  {
+   "id": "generic.storage.share",
+   "text": {
+    "en": "Storage at most 5 % of the dwelling area",
+    "ru": "Кладовые не более 5 % площади жилья"
+   },
+   "source": {
+    "doc": "intl-baseline",
+    "clause": "programme.storage_max"
+   },
+   "severity": "warning",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "ratio",
+    "per": "total",
+    "group_by": "unit",
+    "num": {
+     "room_kind": [
+      "storage"
+     ]
+    },
+    "den": {},
+    "max": 0.05
+   },
+   "unit": "ratio",
+   "verified": false,
+   "depth": 1,
+   "discipline": "arch",
+   "value": 0.05
+  },
+  {
+   "id": "generic.egress.distance",
+   "text": {
+    "en": "Travel distance from a room to an exit or a stair at most 30 m",
+    "ru": "Путь от помещения до выхода или лестницы не более 30 м"
+   },
+   "source": {
+    "doc": "intl-baseline",
+    "clause": "egress.travel_max"
+   },
+   "severity": "warning",
+   "applies": {},
+   "check": {
+    "kind": "distance",
+    "max": 30.0,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "verified": false,
+   "depth": 2,
+   "discipline": "fire",
+   "value": 30.0
+  },
+  {
+   "id": "generic.wet.stack",
+   "text": {
+    "en": "Wet rooms stand over wet rooms of the storey below",
+    "ru": "Мокрые помещения над мокрыми помещениями нижнего этажа"
+   },
+   "source": {
+    "doc": "intl-baseline",
+    "clause": "programme.wet_core"
+   },
+   "severity": "warning",
+   "applies": {},
+   "check": {
+    "kind": "stack",
+    "room_kind": [
+     "bath",
+     "wc",
+     "kitchen"
+    ]
+   },
+   "unit": "",
+   "verified": false,
+   "depth": 2,
+   "discipline": "mep"
+  },
+  {
+   "id": "generic.adjacency.residential",
+   "text": {
+    "en": "Kitchen opens to a living room, hall or corridor; no WC or bath door into a kitchen",
+    "ru": "Кухня связана с гостиной, холлом или коридором; вход в уборную и ванную не из кухни"
+   },
+   "source": {
+    "doc": "intl-baseline",
+    "clause": "programme.adjacency"
+   },
+   "severity": "warning",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "adjacency",
+    "require": [
+     {
+      "a": "kitchen",
+      "b": [
+       "living",
+       "hall",
+       "corridor"
+      ]
+     }
+    ],
+    "forbid": [
+     [
+      "wc",
+      "kitchen"
+     ],
+     [
+      "bath",
+      "kitchen"
+     ]
+    ]
+   },
+   "unit": "",
+   "verified": false,
+   "depth": 2,
+   "discipline": "arch"
+  },
+  {
+   "id": "generic.programme.house",
+   "text": {
+    "en": "House has the rooms of its programme",
+    "ru": "Дом содержит помещения своей программы"
+   },
+   "source": {
+    "doc": "intl-baseline",
+    "clause": "programme.house"
+   },
+   "severity": "warning",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "check": {
+    "kind": "programme",
+    "typology": "house"
+   },
+   "unit": "m2",
+   "verified": false,
+   "depth": 1,
+   "discipline": "arch"
+  },
+  {
+   "id": "generic.programme.apartment",
+   "text": {
+    "en": "Apartment has the rooms of its programme",
+    "ru": "Квартира содержит помещения своей программы"
+   },
+   "source": {
+    "doc": "intl-baseline",
+    "clause": "programme.apartment"
+   },
+   "severity": "warning",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "programme",
+    "typology": "apartment"
+   },
+   "unit": "m2",
+   "verified": false,
+   "depth": 1,
+   "discipline": "arch"
+  },
+  {
+   "id": "generic.stair.headroom",
+   "text": {
+    "en": "Stair headroom at least 2.0 m",
+    "ru": "Высота прохода над лестницей не менее 2,0 м"
+   },
+   "source": {
+    "doc": "intl-baseline",
+    "clause": "stair.headroom"
+   },
+   "severity": "warning",
+   "applies": {},
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "headroom",
+    "min": 2.0
+   },
+   "unit": "m",
+   "verified": false,
+   "depth": 3,
+   "discipline": "arch"
+  },
+  {
+   "id": "generic.door.width",
+   "text": {
+    "en": "Door clear width at least 0.8 m",
+    "ru": "Ширина дверного проёма не менее 0,8 м"
+   },
+   "source": {
+    "doc": "intl-baseline",
+    "clause": "door.width"
+   },
+   "severity": "warning",
+   "applies": {},
+   "check": {
+    "kind": "formula",
+    "cat": "door",
+    "expr": "width",
+    "min": 0.8
+   },
+   "unit": "m",
+   "verified": false,
+   "depth": 3,
+   "discipline": "arch"
+  },
+  {
+   "id": "generic.corridor.width",
+   "text": {
+    "en": "Corridor clear width at least 1.0 m",
+    "ru": "Ширина коридора не менее 1,0 м"
+   },
+   "source": {
+    "doc": "intl-baseline",
+    "clause": "corridor.width"
+   },
+   "severity": "warning",
+   "applies": {
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "width",
+    "min": 1.0
+   },
+   "unit": "m",
+   "verified": false,
+   "depth": 3,
+   "discipline": "arch"
+  },
+  {
+   "id": "generic.guard.height",
+   "text": {
+    "en": "Guard (railing) height at least 0.9 m",
+    "ru": "Высота ограждения не менее 0,9 м"
+   },
+   "source": {
+    "doc": "intl-baseline",
+    "clause": "guard.height"
+   },
+   "severity": "warning",
+   "applies": {},
+   "check": {
+    "kind": "formula",
+    "cat": "railing",
+    "expr": "height",
+    "min": 0.9
+   },
+   "unit": "m",
+   "verified": false,
+   "depth": 3,
+   "discipline": "arch"
+  }
+ ]
+}

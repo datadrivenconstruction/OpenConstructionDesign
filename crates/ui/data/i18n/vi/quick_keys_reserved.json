@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key} được dành riêng ({why}) và không thể gán lại",
+ "quick.keys.res_copy": "sao chép",
+ "quick.keys.res_paste": "dán",
+ "quick.keys.res_cut": "cắt",
+ "quick.keys.res_undo": "hoàn tác / làm lại",
+ "quick.keys.res_save": "lưu",
+ "quick.keys.res_palette": "bảng lệnh",
+ "quick.keys.reserved_conflict": "{key} đã được dùng cho “{cmd}”. Esc sẽ giữ nguyên ở đó.",
+ "quick.keys.reserved_swap": "Hoán đổi",
+ "quick.keys.reserved_take": "Lấy phím này",
+ "quick.keys.reserved_keep": "Giữ",
+ "quick.keys.reserved_os": "Hệ điều hành đang dùng:"
+}

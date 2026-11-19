@@ -1,0 +1,4 @@
+{
+ "family_load.refused": "Famili “{name}” tidak dapat dimuat: {msg}. Tidak ada yang dimuat ke proyek; suntingan Anda dipertahankan.",
+ "family_load.loaded_all": "{n} famili dimuat sekaligus: {names}"
+}

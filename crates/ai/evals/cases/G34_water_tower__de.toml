@@ -1,0 +1,44 @@
+id = "G34_water_tower__de"
+tier = "hard"
+group = "Any geometry"
+title = "Water tower"
+lang = "de"
+base = "empty"
+
+[[turn]]
+say = "Ein Wasserturm: Behälter mit 10 m Durchmesser und 500 m3 auf vier geneigten 30 m hohen Stützen, unten 12 m und unter dem Behälter 6 m auseinander, Kreuzverbände in jedem Feld, Steigleiter mit Rückenschutz und Laufsteg um den Behälter."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "col"
+min = 4.0
+
+[[oracle.count]]
+spec = "beam+brace"
+min = 12.0
+
+[[oracle.count]]
+spec = "comp:tank|vessel|cistern+solid+mesh+freeform"
+min = 1.0
+
+[[oracle.geom]]
+kind = "height"
+min = 34.0
+max = 48.0
+
+[[oracle.geom]]
+kind = "waist"
+ratio_max = 0.8
+at_min = 0.4
+at_max = 0.95
+flare_min = 1.1
+bands = 10.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

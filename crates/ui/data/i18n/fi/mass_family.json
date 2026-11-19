@@ -1,0 +1,9 @@
+{
+ "cmd.mass.timeline_family": "Historia perheeksi",
+ "cmd.mass.timeline_family.desc": "Luo komponenttiperheen valitun massan piirustushistoriasta. Historian parametrit muuttuvat perheen parametreiksi.",
+ "mass_family.done": "Perhe {name} luotu, parametreja: {n}",
+ "mass_family.refused": "Perhettä ei luotu: {e}",
+ "mass_family.no_mass": "Valitse ensin parametrinen massa",
+ "mass_family.add_modifier": "Lisää muokkain",
+ "mass_family.needs_faces": "Tarvitaan valitut pinnat: käytä työkalua Massoittelu-välilehdellä"
+}

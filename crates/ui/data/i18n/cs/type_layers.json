@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "Vložit vrstvu pod",
+ "type_layers.layer.delete": "Smazat vrstvu",
+ "type_layers.layer.delete_last": "Typ musí mít alespoň jednu vrstvu",
+ "type_layers.value.bad": "Neplatná kladná hodnota",
+ "type_layers.value.required": "Povinné",
+ "type_layers.unsaved.title": "Neuložené změny v {name}",
+ "type_layers.unsaved.body": "Použít je na typ, nebo je zahodit?",
+ "type_layers.unsaved.discard": "Zahodit"
+}

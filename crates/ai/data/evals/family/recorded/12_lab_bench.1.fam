@@ -1,0 +1,32 @@
+family Lab Bench
+category casework
+host floor
+ifc IfcFurniture NOTDEFINED
+param Width length type 3000mm
+param Depth length type 750mm
+param Height length type 900mm
+param Worktop length type 30mm
+param Plinth length type 100mm
+param Upright length type 50mm
+param ShelfH length type 1500mm
+param ShelfD length type 250mm
+param Shelf length type 25mm
+param UprightH length type 1200mm
+param Carcass material type "Melamine White"
+param Resin material type "Epoxy Black"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Back y = Depth / 2
+type "3000x750" Width=3000mm, Depth=750mm
+type "120x30in" Width=120in, Depth=30in, Height=36in, Worktop=1.2in, Plinth=4in, Upright=2in, ShelfH=60in, ShelfD=10in, Shelf=1in, UprightH=48in
+extrude Plinth rect(Left, Front + 50mm, Right, Back) z(0, Plinth) mat(Carcass) show(3d, elev)
+extrude Cabinet rect(Left, Front + 20mm, Right, Back) z(Plinth, Height - Worktop) mat(Carcass) show(3d, elev)
+extrude Worktop rect(Left, Front, Right, Back) z(Height - Worktop, Height) mat(Resin) show(3d, elev)
+extrude UprightL rect(Left, Back - Upright, Left + Upright, Back) z(Height, Height + UprightH) mat(Carcass) show(3d, elev)
+extrude UprightM rect(-Upright / 2, Back - Upright, Upright / 2, Back) z(Height, Height + UprightH) mat(Carcass) show(3d, elev)
+extrude UprightR rect(Right - Upright, Back - Upright, Right, Back) z(Height, Height + UprightH) mat(Carcass) show(3d, elev)
+extrude ReagentShelf rect(Left, Back - ShelfD, Right, Back - Upright) z(Height + 400mm, Height + 400mm + Shelf) mat(Carcass) show(3d, elev)
+symbol rect(Left, Front, Right, Back)
+symbol rect(Left, Back - ShelfD, Right, Back) show(medium, fine)
+symbol line(Left, Front + 20mm, Right, Front + 20mm) show(medium, fine)

@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "Saves the whole model or the selection as binary STL in metres or millimetres.",
+ "cmd.data.export_obj.desc": "Saves the whole model or the selection as OBJ with an MTL file: one group per element, colours by material.",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "OBJ with materials (.obj)",
+ "open_file.filter.mesh": "3D meshes (glTF, STEP, STL, OBJ)",
+ "mx.title": "Export {fmt}",
+ "mx.scope": "What to export",
+ "mx.scope.all": "Whole model",
+ "mx.scope.sel": "Selection ({n} elements)",
+ "mx.units": "Units in the file",
+ "mx.units.m": "Metres",
+ "mx.units.mm": "Millimetres",
+ "mx.export": "Export…",
+ "mx.saved": "{fmt} saved: {path} ({parts} elements, {tris} triangles)",
+ "mx.partial": "{fmt} saved with {n} problems, some bodies may be missing: {path}",
+ "mx.failed": "{fmt} export failed: {error}",
+ "mx.imported": "{file}: {n} elements imported ({tris} triangles)",
+ "mx.imported_notes": "{file}: {n} elements imported ({tris} triangles), {w} notes: {first}"
+}

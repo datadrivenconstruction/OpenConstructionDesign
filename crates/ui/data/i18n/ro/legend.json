@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "Legendă",
+ "legend.legend.new_hint": "Nume nou pentru legendă",
+ "legend.legend.delete_tip": "Șterge legenda",
+ "legend.legend.delete_placed": "Șterge legenda (plasată pe: {sheets})",
+ "legend.legend.deleted": "Legenda a fost ștearsă: {name}",
+ "legend.legend.no_rows": "Niciun rând încă. Adaugă unul sau preia stilurile vederii curente",
+ "legend.legend.replace_q": "Înlocuiești {n} rânduri cu stilurile acestei vederi?",
+ "legend.legend.replace": "Înlocuiește",
+ "legend.legend.keep": "Păstrează rândurile",
+ "legend.col.swatch": "Mostră",
+ "legend.col.value": "Valoare",
+ "legend.col.label": "Etichetă"
+}

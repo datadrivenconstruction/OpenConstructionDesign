@@ -1,0 +1,46 @@
+{
+ "rebar_hosts.hosts": "Domaćini: {list}",
+ "rebar_hosts.kind.column": "Stup",
+ "rebar_hosts.kind.beam": "Greda",
+ "rebar_hosts.kind.wall": "Zid",
+ "rebar_hosts.kind.slab": "Ploča",
+ "rebar_hosts.kind.footing": "Temelj",
+ "rebar_hosts.kind.raft": "Temeljna ploča",
+ "rebar_hosts.n.column": {
+  "one": "# stup",
+  "few": "# stupa",
+  "other": "# stupova"
+ },
+ "rebar_hosts.n.beam": {
+  "one": "# greda",
+  "few": "# grede",
+  "other": "# greda"
+ },
+ "rebar_hosts.n.wall": {
+  "one": "# zid",
+  "few": "# zida",
+  "other": "# zidova"
+ },
+ "rebar_hosts.n.slab": {
+  "one": "# ploča",
+  "few": "# ploče",
+  "other": "# ploča"
+ },
+ "rebar_hosts.n.footing": {
+  "one": "# temelj",
+  "few": "# temelja",
+  "other": "# temelja"
+ },
+ "rebar_hosts.n.raft": {
+  "one": "# temeljna ploča",
+  "few": "# temeljne ploče",
+  "other": "# temeljnih ploča"
+ },
+ "rebar_hosts.mixed_note": "Stupovi i grede primaju šipke i spone; zidovi, ploče i temelji primaju mrežu. Za dodavanje armature odaberite jednu skupinu.",
+ "rebar_hosts.why.mixed": "Odabir miješa stupove ili grede sa zidovima, pločama ili temeljima. Odaberite jednu skupinu.",
+ "rebar_hosts.why.area_linear": "Mreža ide u zidove, ploče i temelje, a ne u stupove ili grede.",
+ "rebar_hosts.why.bars_plate": "Uzdužne šipke i spone idu u stupove i grede, a ne u zidove, ploče ili temelje.",
+ "rebar_hosts.why.no_common_face": "Odabrani domaćini nemaju zajedničku plohu zaštitnog sloja. Odaberite domaćine jedne vrste.",
+ "rebar_hosts.why.no_type": "Odaberite tip šipke.",
+ "rebar_hosts.kind_type": "{kind} · {type}"
+}

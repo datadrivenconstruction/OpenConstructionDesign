@@ -1,0 +1,5 @@
+{
+ "palette.find_named": "ค้นหาองค์ประกอบชื่อ \"{q}\"",
+ "palette.search_help": "ค้นหาความช่วยเหลือสำหรับ \"{q}\"",
+ "palette.not_found": "ไม่มีอะไรชื่อ \"{q}\""
+}

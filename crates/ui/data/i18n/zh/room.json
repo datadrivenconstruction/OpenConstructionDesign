@@ -1,0 +1,6 @@
+{
+ "geom.length": "长度",
+ "sched.cat.room_seps": "房间分隔线",
+ "room.err.point_leave": "房间 {n}：该点将越出其边界",
+ "room.err.point_taken": "房间 {n}：该点将落入房间 {other}"
+}

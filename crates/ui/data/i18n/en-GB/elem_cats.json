@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "A mass cannot be turned or mirrored: its form history has no rotated step. Move or copy it, or redraw it in the new direction.",
+ "sched_cats.col.name": "Name",
+ "sched_cats.col.material": "Material",
+ "sched_cats.col.void": "Void",
+ "sched_cats.col.inplace": "In-place",
+ "sched_cats.col.volume": "Net volume",
+ "sched_cats.col.area": "Surface area",
+ "sched_cats.col.floor_area": "Floor area",
+ "sched_cats.col.thickness": "Thickness",
+ "sched_cats.col.points": "Points",
+ "elem.toposolid.points": "Survey points",
+ "elem.toposolid.count": "Points",
+ "elem.toposolid.low": "Lowest",
+ "elem.toposolid.high": "Highest",
+ "elem.toposolid.edit": "Edit points",
+ "elem.toposolid.edit_tip": "Pick, drag and set the elevation of survey points in the plan",
+ "elem.toposolid.pick_hint": "Click a point in the plan to pick it. Click again to add or remove.",
+ "elem.toposolid.z": "Elevation ({n})",
+ "elem.toposolid.mixed": "The picked points differ; a new value sets them all.",
+ "elem.toposolid.edit_help": "Drag a point to move it. Type a value and press Enter to set the elevation. Backspace removes the picked points, Esc leaves.",
+ "elem.toposolid.done": "Done"
+}

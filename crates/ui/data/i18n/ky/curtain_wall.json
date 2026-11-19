@@ -1,0 +1,12 @@
+{
+ "curtain_wall.cw.issue.slab": "плита {id}: {e}",
+ "curtain_wall.cw.issue.body": "дене {id}: {e}",
+ "curtain_wall.cw.added": "Айнек дубалдар кошулду: {n}",
+ "curtain_wall.cw.add_failed": "Айнек дубал курулган жок: {e}",
+ "curtain_wall.cw.edited_warn": "#{id} айнек дубалы өзгөрдү: {w}",
+ "curtain_wall.cw.edited": "#{id} айнек дубалы өзгөрдү",
+ "curtain_wall.cw.not_changed": "Өзгөрүлгөн жок: {e}",
+ "curtain_wall.cw.room_edited": "#{id} бөлмөсү өзгөрдү",
+ "curtain_wall.cw.slope_range": "Өзгөрүлгөн жок: эңкейиш диапазондон тышкары",
+ "curtain_wall.cw.slope_set": "Плита #{id}: эңкейиш {pct}"
+}

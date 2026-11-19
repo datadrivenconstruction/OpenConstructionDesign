@@ -1,0 +1,5 @@
+{
+ "lv.level.deleted_attach": "Podlaží smazáno; {n} stěnám se ztratilo horní uchycení",
+ "lv.level.rooms": "{n} místností převezme výšku cílového podlaží ({dz} m): {names}. Pro potvrzení stiskněte Přesunout znovu",
+ "lv.level.pinned": "Podlaží nesmazáno: připnuté prvky nelze přesunout na jiné podlaží: {names}. Nejprve je odepněte"
+}

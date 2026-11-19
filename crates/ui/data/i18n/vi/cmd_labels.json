@@ -1,0 +1,14 @@
+{
+ "cmd.arch.wall.tile": "Tường",
+ "cmd.arch.door.tile": "Cửa đi",
+ "cmd.arch.window.tile": "Cửa sổ",
+ "cmd.arch.floor.tile": "Sàn",
+ "cmd.mod.move.tile": "Di chuyển",
+ "cmd.mod.copy.tile": "Sao chép",
+ "cmd.mod.rotate.tile": "Xoay",
+ "cmd.mod.mirror.tile": "Đối xứng",
+ "cmd.mod.trim.tile": "Cắt",
+ "cmd.mod.delete.tile": "Xóa",
+ "cmd.ann.dim.tile": "Kích thước",
+ "cmd.ann.text.tile": "Chữ"
+}

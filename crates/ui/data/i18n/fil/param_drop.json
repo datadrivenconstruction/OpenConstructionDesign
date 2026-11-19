@@ -1,0 +1,8 @@
+{
+ "param_drop.title": "Alisin ang mga halaga ng parameter?",
+ "param_drop.intro": "Hindi na nakatali ang {name} sa mga kategoryang ito:",
+ "param_drop.line": "{category}: aalisin ang {values}",
+ "param_drop.undo": "Ibabalik lahat ng isang Ctrl+Z.",
+ "param_drop.confirm": "Alisin ang mga halaga at i-save",
+ "param_drop.cancel": "Kanselahin"
+}

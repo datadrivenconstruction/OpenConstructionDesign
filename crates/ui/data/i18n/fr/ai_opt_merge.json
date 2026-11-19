@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "Fusionner l'option : {name}",
+ "ai_opt_merge.whole": "Fusionner toute l'option",
+ "ai_opt_merge.parts": "Fusionner les parties sélectionnées",
+ "ai_opt_merge.note": "Pourquoi cette option",
+ "ai_opt_merge.rebased": "Le modèle a changé après la création de cette option : la fusion a été recalculée sur le modèle actuel. Vérifiez les modifications avant d'appliquer.",
+ "ai_opt_merge.left.not_picked": "Non retenu dans l'option",
+ "ai_opt_merge.left.unticked": "Décoché dans l'option",
+ "ai_opt_merge.left.conflict": "Impossible à ajouter au modèle actuel : {reason}",
+ "ai_opt_merge.refused.not_mergeable": "Cette option ne peut pas être fusionnée. Une option rejetée doit d'abord être restaurée.",
+ "ai_opt_merge.refused.stale": "Le modèle a changé après la création de cette option. Recalculez la fusion sur le modèle actuel.",
+ "ai_opt_merge.refused.nothing_picked": "Rien n'est sélectionné pour la fusion.",
+ "ai_opt_merge.refused.unknown_item": "L'élément {item} ne fait pas partie de cette option.",
+ "ai_opt_merge.refused.not_in_option": "L'élément sélectionné ne fait pas partie de cette option.",
+ "ai_opt_merge.refused.needs_left_out": "L'élément {item} requiert l'élément {needs}. Sélectionnez-le aussi, ou autorisez l'ajout des dépendances.",
+ "ai_opt_merge.refused.set_gone": "L'élément {item} renvoie à une sélection qui n'existe plus. Générez de nouveau l'option.",
+ "ai_opt_merge.refused.busy": "Un autre plan est ouvert. Appliquez-le ou rejetez-le d'abord.",
+ "ai_opt_merge.refused.failed": "La fusion n'a pas pu être préparée : {reason}",
+ "ai_opt_merge.revive": "Restaurer l'option",
+ "ai_opt_merge.merged": "Fusionné"
+}

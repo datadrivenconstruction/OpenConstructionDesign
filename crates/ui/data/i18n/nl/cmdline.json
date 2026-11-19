@@ -1,0 +1,13 @@
+{
+ "cmdl.mode_cmd": "Opdr",
+ "cmdl.mode_ai": "AI",
+ "cmdl.toggle": "Opdrachten of de AI-assistent (Ctrl+J)",
+ "cmdl.hint": "Opdracht of alias (W, L, M, RO), punt #x;y, @dx;dy, d<hoek. Ctrl+J: vraag de AI-assistent",
+ "cmdl.hint_ai": "Vraag de AI-assistent over het model of om een wijziging. Ctrl+J: terug naar opdrachten",
+ "cmdl.sent": "Verzonden naar de AI-assistent",
+ "cmdl.failed": "“{text}” kan hier niet worden uitgevoerd",
+ "cmdl.no_tool": "Start eerst een tekenopdracht en voer daarna de punten in",
+ "cmdl.unknown": "Geen opdracht “{text}”. Ctrl+J stuurt deze naar de AI-assistent",
+ "cmdl.bad": "“{text}” kan niet worden gelezen: {e}",
+ "cmdl.shape": "“{text}” is geen punt: voer x;y, #x;y, @dx;dy of een positieve afstand<hoek in"
+}

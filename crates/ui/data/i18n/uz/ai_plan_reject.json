@@ -1,0 +1,9 @@
+{
+ "ai.plan.reject_ask": {
+  "one": "# ta o'zgarishni rad etilsinmi?",
+  "other": "# ta o'zgarishni rad etilsinmi?"
+ },
+ "ai.plan.reject_ask.hint": "Qoralama va belgilangan tekshiruvlar yo'qoladi. Model o'zgarishsiz qoladi.",
+ "ai.plan.reject_confirm": "Rad etish",
+ "ai.plan.reject_keep": "Saqlash"
+}

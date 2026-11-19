@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "۳بعدی",
+ "phases.current_mark": "جاری",
+ "phases.make_current": "تبدیل به جاری",
+ "phases.col_phase": "فاز",
+ "phases.col_filter": "فیلتر",
+ "phases.presets": "پیش‌تنظیم‌های پلان",
+ "phases.del_title": "حذف فاز",
+ "phases.del_text": "فاز «{name}» حذف شود؟ عناصرش به فازی که در پایین انتخاب می‌کنید منتقل می‌شوند.",
+ "phases.del_into": "انتقال عناصر به",
+ "phases.del_ok": "حذف",
+ "phases.col_kind": "نوع عنصر",
+ "phases.col_count": "تعداد",
+ "phases.col_volume": "حجم"
+}

@@ -1,0 +1,150 @@
+[
+ {
+  "id": "site.toposolid",
+  "icon": "toposolid",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M2",
+  "group": "site",
+  "repeatable": true,
+  "priority": 6,
+  "variants": [
+   "site.toposolid_import"
+  ]
+ },
+ {
+  "id": "site.toposolid_import",
+  "dialog": true,
+  "icon": "import",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M2",
+  "group": "site"
+ },
+ {
+  "id": "site.boundary",
+  "icon": "boundary",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M2",
+  "group": "site",
+  "repeatable": true,
+  "priority": 7
+ },
+ {
+  "id": "site.subregion",
+  "icon": "subregion",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M2",
+  "group": "site",
+  "repeatable": true,
+  "priority": 7
+ },
+ {
+  "id": "site.pad",
+  "icon": "pad",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M2",
+  "group": "site",
+  "repeatable": true,
+  "priority": 7
+ },
+ {
+  "id": "site.smooth",
+  "icon": "smooth",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M2",
+  "group": "site",
+  "priority": 8
+ },
+ {
+  "id": "site.flatten",
+  "icon": "flatten",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M2",
+  "group": "site",
+  "priority": 8
+ },
+ {
+  "id": "site.edit_points",
+  "icon": "edit-points",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M2",
+  "group": "site",
+  "priority": 8
+ },
+ {
+  "id": "site.contours",
+  "icon": "contours",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M2",
+  "group": "site",
+  "priority": 8
+ },
+ {
+  "id": "site.properties",
+  "icon": "site",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "arch",
+  "surfaces": [
+   "R",
+   "M"
+  ],
+  "stage": "M2",
+  "group": "site",
+  "priority": 8,
+  "launcher": true
+ }
+]

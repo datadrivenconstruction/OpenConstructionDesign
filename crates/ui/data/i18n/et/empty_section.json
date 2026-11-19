@@ -1,0 +1,11 @@
+{
+ "empty.sv_notfound.title": "Vaadet ei leitud",
+ "empty.sv_notfound.hint": "See vaade on kustutatud või pole enam projekti osa.",
+ "empty.sv_notfound.action": "Sulge vaade",
+ "empty.sv_cuts_nothing.title": "See lõige ei lõika midagi",
+ "empty.sv_cuts_nothing.hint": "Lõikejoon ei ristu oma sügavuses ühegi seina, plaadi ega avaga. Teisalda joont või tee vaade sügavamaks.",
+ "empty.sv_cuts_nothing.action": "Näita plaanil",
+ "empty.sv_shows_nothing.title": "See fassaadivaade ei näita midagi",
+ "empty.sv_shows_nothing.hint": "Vaate sügavusse ei jää ühtegi seina, plaati ega ava. Teisalda vaatejoont või tee vaade sügavamaks.",
+ "empty.sv_shows_nothing.action": "Näita plaanil"
+}

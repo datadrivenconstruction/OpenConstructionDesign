@@ -1,0 +1,8 @@
+{
+ "cmd.props.param_lock": "প্যারামিটার মান লক বা আনলক করুন",
+ "locked_values.kept": "{n}টি লক করা মান রাখা হয়েছে",
+ "locked_values.locked": "“{name}” লক করা হয়েছে: XLSX স্প্রেডশিট আমদানি, ব্যাপক সম্পাদনা ও AI এটি রাখে",
+ "locked_values.unlocked": "“{name}” আনলক হয়েছে",
+ "locked_values.locked_tip": "লক করা: XLSX স্প্রেডশিট আমদানি, ব্যাপক সম্পাদনা ও AI এই মান রাখে। আনলক করতে ক্লিক করুন  ·  Ctrl+L",
+ "locked_values.no_row": "বৈশিষ্ট্যে একটি প্যারামিটার সারিতে কার্সর রেখে Ctrl+L চাপুন"
+}

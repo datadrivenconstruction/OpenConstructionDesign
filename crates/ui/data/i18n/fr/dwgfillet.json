@@ -1,0 +1,20 @@
+{
+ "dwgfillet.fillet": "Raccord",
+ "dwgfillet.cancel": "Arrêter le raccord",
+ "dwgfillet.tip": "Cliquez sur deux lignes, du côté à conserver : elles sont raccourcies ou prolongées jusqu'à l'angle, avec un arc tangent si le rayon est supérieur à zéro",
+ "dwgfillet.radius": "Rayon de raccord",
+ "dwgfillet.radius_tip": "Rayon de l'arc en unités du dessin ; 0 donne un angle vif",
+ "dwgfillet.st.arm_first": "Cliquez sur la première ligne, du côté à conserver",
+ "dwgfillet.st.arm_second": "Cliquez sur la deuxième ligne, du côté à conserver",
+ "dwgfillet.st.not_armed": "Choisissez d'abord Raccord",
+ "dwgfillet.st.click_line": "Cliquez sur une seule ligne du dessin",
+ "dwgfillet.st.other_drawing": "Les deux lignes doivent appartenir au même dessin : recommencez",
+ "dwgfillet.st.changed": "La première ligne a changé : recommencez",
+ "dwgfillet.st.same_line": "Choisissez une autre seconde ligne",
+ "dwgfillet.st.parallel": "Les lignes sont parallèles et ne se rejoignent jamais : aucun angle ne peut être créé",
+ "dwgfillet.st.degenerate": "Une ligne n'a pas de longueur",
+ "dwgfillet.st.no_side": "Le côté cliqué n'a pas de longueur à partir de l'angle",
+ "dwgfillet.st.too_big": "Le rayon est trop grand pour ces lignes : utilisez un rayon plus petit",
+ "dwgfillet.st.radius_bad": "Le rayon doit être nul ou positif",
+ "dwgfillet.st.done": "Angle créé"
+}

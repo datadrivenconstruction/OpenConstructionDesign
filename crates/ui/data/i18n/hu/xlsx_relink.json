@@ -1,0 +1,14 @@
+{
+ "xlsx_relink.title": "A csatolt munkafüzet át lett helyezve vagy át lett nevezve",
+ "xlsx_relink.body": "A(z) „{file}” munkafüzet már nincs a(z) {folder} mappában. Az ebbe beírt szerkesztések csak az újbóli csatolás után térnek vissza.",
+ "xlsx_relink.found_one": "Megtalálva: „{file}” itt: {folder}: ugyanaz a projekt és ugyanaz az export. Csatoljuk?",
+ "xlsx_relink.found_many": "{n} munkafüzet található ehhez a projekthez és exportálásához. Válassza ki a csatolandót:",
+ "xlsx_relink.found_none": "A mellette nem található ennek az exportnak a munkafüzete. Keresse meg, vagy exportáljon új munkafüzetet.",
+ "xlsx_relink.link": "„{file}” csatolása",
+ "xlsx_relink.find": "Keresés…",
+ "xlsx_relink.find_title": "A csatolt munkafüzet megkeresése",
+ "xlsx_relink.export_new": "Új munkafüzet exportálása",
+ "xlsx_relink.close": "Bezárás",
+ "xlsx_relink.gone": "A(z) „{file}” munkafüzet már nincs a mappájában. Az ebbe beírt szerkesztések csak az újbóli csatolás után térnek vissza.",
+ "xlsx_relink.found_one_short": "Megtalálva: „{file}”: ugyanaz a projekt és ugyanaz az export. Csatoljuk?"
+}

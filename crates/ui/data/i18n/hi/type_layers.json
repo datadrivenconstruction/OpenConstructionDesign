@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "नीचे परत जोड़ें",
+ "type_layers.layer.delete": "परत हटाएँ",
+ "type_layers.layer.delete_last": "टाइप में कम से कम एक परत चाहिए",
+ "type_layers.value.bad": "मान सही सकारात्मक नहीं है",
+ "type_layers.value.required": "आवश्यक",
+ "type_layers.unsaved.title": "{name} में बिना सहेजे बदलाव",
+ "type_layers.unsaved.body": "उन्हें टाइप पर लागू करें, या छोड़ दें?",
+ "type_layers.unsaved.discard": "छोड़ें"
+}

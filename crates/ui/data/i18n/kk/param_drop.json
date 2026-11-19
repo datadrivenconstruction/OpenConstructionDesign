@@ -1,0 +1,8 @@
+{
+ "param_drop.title": "Параметр мәндері жойылсын ба?",
+ "param_drop.intro": "{name} енді осы санаттарға байланбаған:",
+ "param_drop.line": "{category}: {values} жойылады",
+ "param_drop.undo": "Бір Ctrl+Z барлығын қайтарады.",
+ "param_drop.confirm": "Мәндерді жою және сақтау",
+ "param_drop.cancel": "Бас тарту"
+}

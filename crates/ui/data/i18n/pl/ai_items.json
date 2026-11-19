@@ -1,0 +1,16 @@
+{
+ "ai.items.all": {
+  "one": "Wszystkie # pozycja",
+  "other": "Wszystkie # pozycji"
+ },
+ "ai.items.all.tip": "Zaznacz lub odznacz każdą pozycję planu",
+ "ai.items.checked": "Zaznaczono {n} z {m}",
+ "ai.items.check.tip": "Uwzględnij „{title}” w Zastosuj",
+ "ai.items.expand": "Pokaż elementy",
+ "ai.items.collapse": "Ukryj elementy",
+ "ai.items.apply": {
+  "one": "Zastosuj # pozycję",
+  "other": "Zastosuj # pozycji"
+ },
+ "ai.items.apply_none": "Zastosuj"
+}

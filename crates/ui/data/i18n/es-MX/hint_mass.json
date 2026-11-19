@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "Superficie libre",
+ "cmd.mass.panelize": "Dividir en paneles",
+ "cmd.mass.surface_shell": "Cubierta sobre superficie",
+ "cmd.mass.thicken": "Espesor",
+ "hint.mass.freeform.first": "Superficie libre: primera esquina del rectángulo en planta · escriba la elevación · Esc — cancelar",
+ "hint.mass.freeform.next": "Superficie libre: esquina opuesta · escriba la elevación · Esc — cancelar",
+ "hint.mass.panelize.first": "Paneles: seleccione una superficie libre en 3D · Esc — cancelar",
+ "hint.mass.panelize.value": "Paneles: escriba el tamaño del panel · Intro — aplicar · Esc — cancelar",
+ "hint.mass.surface_shell.first": "Cubierta sobre superficie: seleccione una superficie libre en 3D · Esc — cancelar",
+ "hint.mass.surface_shell.value": "Cubierta sobre superficie: escriba el espesor · Intro — aplicar · Esc — cancelar",
+ "hint.mass.thicken.first": "Espesor: seleccione una superficie libre en 3D · Esc — cancelar",
+ "hint.mass.thicken.value": "Espesor: escriba el espesor (0 — superficie sin espesor) · Intro — aplicar · Esc — cancelar",
+ "status.mass.pick_surface": "Seleccione una superficie libre",
+ "status.mass.freeform_small": "El rectángulo es demasiado pequeño: al menos 0,5 m en cada sentido",
+ "name.mass.freeform": "Superficie libre",
+ "rgroup.mass_free": "Avanzado"
+}

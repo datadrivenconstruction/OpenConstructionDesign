@@ -1,0 +1,15 @@
+{
+ "mcp.ask.cancel": "Anulează",
+ "mcp.ask.auto.title": "Lași agenții AI să aplice modificările fără întrebare?",
+ "mcp.ask.auto.body": "Agenții AI conectați vor aplica imediat modificările în ciorne, fără să aștepte confirmarea ta, așa că o modificare greșită poate ajunge înainte să o vezi. Modelul tău se schimbă doar când apeși Aplică. Asta rămâne activ până o oprești, închizi editorul sau deschizi alt model.",
+ "mcp.ask.auto.yes": "Aplică fără întrebare",
+ "mcp.ask.token.title": "Emiți un token nou?",
+ "mcp.ask.token.body": "Tokenul actual încetează imediat să funcționeze: agenții AI conectați sunt deconectați și vor avea nevoie de noul token. Se afișează o singură dată, așa că copiază-l imediat.",
+ "mcp.ask.token.yes": "Token nou",
+ "mcp.auto.chip": "Aplicare automată activă",
+ "mcp.auto.chip_tip": "Agenții AI aplică modificările în ciorne fără întrebare. Se termină odată cu această sesiune.",
+ "mcp.auto.ask_again": "Întreabă din nou",
+ "mcp.token.once": "Copiază acum acest token: nu va mai fi afișat.",
+ "mcp.renewed": "Token nou emis: cel vechi nu mai funcționează",
+ "mcp.copied": "Copiat"
+}

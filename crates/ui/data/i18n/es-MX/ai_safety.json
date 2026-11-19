@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "Clave en la dirección",
+ "ai_safety.auth.query_name": "Parámetro de la dirección",
+ "ai_safety.need_query_name": "Indique el parámetro de la dirección que lleva la clave",
+ "ai_safety.apply_unlogged": "Aplicado, pero no se pudo escribir el registro de cambios",
+ "ai_safety.audit_unlogged": "No se pudo escribir el registro del asistente de IA",
+ "ai_safety.chat_not_saved": "No se pudo guardar el chat en el proyecto. Reintentando.",
+ "ai_safety.clip_clears": "El portapapeles se borra en 30 s",
+ "ai_safety.copied_clears": "Copiado. El portapapeles se borra en 30 s",
+ "ai_safety.key_session_only": "Clave guardada hasta cerrar la aplicación",
+ "ai.settings.no_data_dir": "este sistema no ofrece una carpeta para la configuración de la aplicación"
+}

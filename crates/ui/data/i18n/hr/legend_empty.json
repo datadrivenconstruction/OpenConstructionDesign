@@ -1,0 +1,5 @@
+{
+ "legend.legend.empty_hint": "Unesite naziv iznad i pritisnite Stvori.",
+ "legend.legend.pick_hint": "Odaberite legendu s popisa iznad.",
+ "legend.legend.taken": "Legenda naziva „{name}“ već postoji. Unesite drugi naziv."
+}

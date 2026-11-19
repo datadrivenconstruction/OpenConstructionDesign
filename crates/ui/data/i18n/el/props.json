@@ -1,0 +1,18 @@
+{
+ "props.multi.title": {
+  "one": "# στοιχείο",
+  "other": "# στοιχεία"
+ },
+ "props.multi.cats": {
+  "one": "# κατηγορία",
+  "other": "# κατηγορίες"
+ },
+ "props.multi.varies": {
+  "one": "ποικίλλει (#)",
+  "other": "ποικίλλει (#)"
+ },
+ "props.multi.clear": "Εκκαθάριση επιλογής",
+ "props.multi.undo": "Αναίρεση",
+ "props.multi.narrowed": "Επιλογή: {n} · {name}",
+ "props.multi.chip_tip": "{name}: {n}  ·  Κλικ εμφανίζει τις ιδιότητές τους, Ctrl+κλικ κρατά μόνο αυτά"
+}

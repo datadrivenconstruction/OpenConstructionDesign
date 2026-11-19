@@ -1,0 +1,12 @@
+{
+ "curtain_wall.cw.issue.slab": "ploča {id}: {e}",
+ "curtain_wall.cw.issue.body": "tijelo {id}: {e}",
+ "curtain_wall.cw.added": "Dodano zavjesnih zidova: {n}",
+ "curtain_wall.cw.add_failed": "Zavjesni zid nije izrađen: {e}",
+ "curtain_wall.cw.edited_warn": "Zavjesni zid #{id} promijenjen: {w}",
+ "curtain_wall.cw.edited": "Zavjesni zid #{id} promijenjen",
+ "curtain_wall.cw.not_changed": "Nije promijenjeno: {e}",
+ "curtain_wall.cw.room_edited": "Prostorija #{id} promijenjena",
+ "curtain_wall.cw.slope_range": "Nije promijenjeno: nagib izvan raspona",
+ "curtain_wall.cw.slope_set": "Ploča #{id}: nagib {pct}"
+}

@@ -1,0 +1,7 @@
+{
+ "messages.title": "Komunikaty",
+ "messages.desc": "Historia komunikatów. Brak nowych ostrzeżeń i błędów.",
+ "messages.desc_new": "Nowe ostrzeżenia lub błędy: {n}. Kliknij, aby je przeczytać.",
+ "messages.copy": "Kopiuj wszystko",
+ "messages.clear": "Wyczyść wszystko"
+}

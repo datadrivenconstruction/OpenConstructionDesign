@@ -1,0 +1,9 @@
+{
+ "shot_scenes.site": "Terreno",
+ "shot_scenes.lawn": "Gramado",
+ "shot_scenes.pad": "Plataforma",
+ "shot_scenes.block": "Bloco",
+ "shot_scenes.void": "Vazio",
+ "shot_scenes.tower": "Torre",
+ "shot_scenes.wall_void": "Vazio de parede"
+}

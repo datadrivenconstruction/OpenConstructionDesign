@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "Ілініс радиусы",
+ "snap_refine.settings.snap_px_desc": "Ілінуі үшін курсор нүктеге немесе сызыққа қаншалықты жақын болуы керек, экран пикселімен. Үлкенірек мән сенсорлы экрандар мен жоғары тығыздықтағы дисплейлерде ыңғайлы.",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "Көлденең",
+ "snap_refine.hint.vertical": "Тік",
+ "snap_refine.hint.perpendicular": "Алдыңғыға перпендикуляр",
+ "snap_refine.hint.parallel": "Алдыңғыға параллель",
+ "snap_refine.hint.on_axis": "Қабырға осінде",
+ "snap_refine.no_snap": "Ілінусіз (Alt)"
+}

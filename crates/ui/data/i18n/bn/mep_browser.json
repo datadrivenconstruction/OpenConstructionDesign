@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "সিস্টেমের নাম",
+ "mep_browser.add_blocked": "আগে একটি সিস্টেমের নাম লিখুন",
+ "mep_browser.col.insulation": "ইনসুলেশন",
+ "mep_browser.cancel": "বাতিল",
+ "mep_browser.delete.title": "এই সিস্টেমটি মুছবেন?",
+ "mep_browser.delete.body": "সিস্টেম \"{name}\" ও এর {n}টি রান মুছে যাবে।",
+ "mep_browser.delete.undo": "একবার আনডু দিয়ে এটি ফেরানো যায়।",
+ "mep_browser.delete.confirm": "সিস্টেম মুছুন"
+}

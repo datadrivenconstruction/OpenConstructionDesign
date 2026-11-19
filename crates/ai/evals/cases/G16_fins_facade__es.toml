@@ -1,0 +1,32 @@
+id = "G16_fins_facade__es"
+tier = "hard"
+group = "Any geometry"
+title = "Parametric fins facade"
+lang = "es"
+base = "empty"
+
+[[turn]]
+say = "Un edificio de oficinas de seis plantas de 30 x 18 m con fachada paramétrica de lamas verticales: la profundidad de las lamas varía senoidalmente de 0.2 a 0.9 m a lo largo, separación de 600 mm, acristalamiento detrás."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "level"
+min = 6.0
+
+[[oracle.count]]
+spec = "col+beam+brace+truss+gridshell_bar+solid+mass+mesh+freeform+shell_elem+gridshell+wall+slab+roof+stair+toposolid+wall_spline"
+min = 200.0
+
+[[oracle.geom]]
+kind = "height"
+min = 18.0
+max = 24.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

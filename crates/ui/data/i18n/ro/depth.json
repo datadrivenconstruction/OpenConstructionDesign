@@ -1,0 +1,22 @@
+{
+ "depth.chip": "Detaliu {level}",
+ "depth.chip_tip": "Cât de departe elaborează următoarea rulare proiectul: D1 concept până la D5 fabricație, pe discipline",
+ "depth.all_off": "toate disciplinele dezactivate",
+ "depth.disc.arch": "Arh",
+ "depth.disc.struct": "Struct.",
+ "depth.disc.mep": "MEP",
+ "depth.disc.doc": "Doc",
+ "depth.project": "Detaliul proiectului",
+ "depth.level.1": "D1 Concept: volumetrie, niveluri, suprafețe, o planșă",
+ "depth.level.2": "D2 Schiță: pereți, încăperi după program, deschideri, grilă, planuri",
+ "depth.level.3": "D3 Proiect: tipuri pe straturi, structură dimensionată, magistrale MEP și terminale, tabele",
+ "depth.level.4": "D4 Execuție: detalii de îmbinare, feronerie, finisaje, armare, ramificații",
+ "depth.level.5": "D5 Fabricație: tabele de îndoire, îmbinări metalice, prefabricate, lista de materiale",
+ "depth.as_project": "Același",
+ "depth.estimate": "Estimare: aproximativ {elements} elemente, {minutes} min, {tokens} tokeni în {calls} apeluri, {sheets} planșe",
+ "depth.estimate_none": "Estimarea vine odată cu proiectul schițat: modelul este încă gol",
+ "depth.heat": "Hartă termică a detaliului",
+ "depth.heat.row": "Detaliu",
+ "depth.settings": "Nivelul de detaliu al proiectării acestui proiect",
+ "depth.settings_desc": "Nivelul de detaliu la care lucrează asistentul AI, D1 până la D5, cu un comutator și detaliu propriu pe disciplină; se salvează în fișierul proiectului"
+}

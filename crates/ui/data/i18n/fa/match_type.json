@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "تطبیق نوع",
+ "cmd.mod.match_type.short": "تطبیق نوع",
+ "cmd.mod.match_type.desc": "یک دیوار، کف، ستون یا تیر را انتخاب کنید، سپس روی بقیهٔ همان دسته کلیک کنید تا نوعش را بگیرند. یک پنجره بکشید تا همه داخلش اعمال شود. Esc منبع را رها می‌کند.",
+ "hint.match_type.pick": "تطبیق نوع: یک دیوار، کف، ستون یا تیر انتخاب کنید · Esc — خروج",
+ "hint.match_type.apply": "تطبیق نوع: روی اهداف کلیک کنید یا پنجره بکشید · Esc — منبع دیگر",
+ "match_type.kind.wall": "دیوار",
+ "match_type.kind.slab": "کف",
+ "match_type.kind.column": "ستون",
+ "match_type.kind.beam": "تیر",
+ "match_type.refuse.category": "دستهٔ دیگر: فقط {cat} می‌تواند این نوع را بگیرد",
+ "match_type.refuse.curtain": "دیوار پرده‌ای: نوعش اینجا تطبیق داده نمی‌شود",
+ "match_type.refuse.pinned": "سنجاق‌شده: برای تغییر نوع ابتدا سنجاقش را بردارید",
+ "match_type.pick_bad": "یک دیوار، کف، ستون یا تیر به‌عنوان منبع انتخاب کنید",
+ "match_type.same": "از قبل همین نوع است",
+ "match_type.done": "نوع اعمال شد: {n}",
+ "match_type.done_skipped": "نوع اعمال شد: {n}، رد شد (سنجاق‌شده یا دیوار پرده‌ای): {skipped}",
+ "match_type.failed": "نوع تغییر نکرد: {err}"
+}

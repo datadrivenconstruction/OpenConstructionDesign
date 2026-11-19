@@ -1,0 +1,13 @@
+{
+ "cmdl.mode_cmd": "Com",
+ "cmdl.mode_ai": "IA",
+ "cmdl.toggle": "Comandos ou assistente de IA (Ctrl+J)",
+ "cmdl.hint": "Comando ou atalho (W, L, M, RO), ponto #x;y, @dx;dy, d<ângulo. Ctrl+J: pergunte ao assistente de IA",
+ "cmdl.hint_ai": "Pergunte ao assistente de IA sobre o modelo ou peça uma alteração. Ctrl+J: voltar aos comandos",
+ "cmdl.sent": "Enviado ao assistente de IA",
+ "cmdl.failed": "Não é possível executar «{text}» aqui",
+ "cmdl.no_tool": "Comece primeiro um comando de desenho e depois introduza os seus pontos",
+ "cmdl.unknown": "Comando «{text}» inexistente. Ctrl+J envia-o ao assistente de IA",
+ "cmdl.bad": "Não é possível ler «{text}»: {e}",
+ "cmdl.shape": "«{text}» não é um ponto: introduza x;y, #x;y, @dx;dy ou uma distância positiva<ângulo"
+}

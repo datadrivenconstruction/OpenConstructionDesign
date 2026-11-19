@@ -1,0 +1,22 @@
+{
+ "sources": [
+  {
+   "id": "nl-bbl",
+   "title": "Building decree for the living environment (Bbl)",
+   "publisher": "Dutch government (Staatsblad consolidated, hosted by IPLO)",
+   "url": "https://wetten.overheid.nl/BWBR0041297/",
+   "edition": "consolidated text in force 2024-01-01; later amendments (2026) announced, not checked",
+   "licence": "public-law",
+   "verified": "2026-11-14"
+  },
+  {
+   "id": "nl-iplo",
+   "title": "IPLO national-rules pages for new buildings",
+   "publisher": "Dutch government (IPLO)",
+   "url": "https://iplo.nl/regelgeving/regels-voor-activiteiten/technische-bouwactiviteit/nieuwbouw/rijksregels/",
+   "edition": "web pages read 2026-11-14",
+   "licence": "public-law",
+   "verified": null
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "{n} hücre yapıştırıldı",
+ "sched_edit.pasted_skipped": "{n} hücre yapıştırıldı, {k} atlandı: {why}",
+ "sched_edit.filled": "{n} hücre dolduruldu",
+ "sched_edit.filled_skipped": "{n} hücre dolduruldu, {k} atlandı: {why}",
+ "sched_edit.why_ro": "{n} salt okunur",
+ "sched_edit.why_bad": "{n} geçersiz değer",
+ "sched_edit.no_cell": "Önce çizelgede bir hücreye tıklayın",
+ "sched_edit.nothing": "Yazılacak bir şey yok",
+ "sched_edit.not_refreshed": "Yazıldı, görünüm yenilenmedi: {e}",
+ "sched_edit.failed": "değiştirilmedi: {e}",
+ "sched_edit.no_changes": "Değişiklik yok: {u} hücre zaten bu değerleri içeriyor",
+ "sched_edit.same_tail": ", {u} zaten eşit"
+}

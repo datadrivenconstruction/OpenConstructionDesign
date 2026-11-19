@@ -1,0 +1,21 @@
+{
+ "mep.row.system": "System",
+ "mep.row.elevation": "Startkote",
+ "mep.row.slope": "Fall",
+ "mep.row.material": "Materiale",
+ "mep.row.dev_elevation": "Kote",
+ "mep.row.no_system": "Det systemet finnes ikke lenger. Velg et annet.",
+ "mep.row.no_points": "Løpet har ingen punkter, så det har ingen kote.",
+ "mep.row.system_domain": "System {system} tar ikke imot denne løpstypen ({kind}). Velg et system av samme nettverkstype.",
+ "mep.row.material_pipes": "Et materiale gjelder bare for rør; dette løpet er en {kind}.",
+ "mep.row.no_catalog": "Materialet har ingen katalogstørrelser for dette løpet.",
+ "mep.mat.none": "Ikke angitt",
+ "mep.mat.steel": "Stål",
+ "mep.mat.copper": "Kobber",
+ "mep.mat.pvc": "PVC",
+ "mep.mat.pp": "Polypropylen",
+ "mep.err.follow_blocked": "Et tilkoblet løp kan ikke følge denne endringen: det er ikke plass til benet på det nye stedet. Flytt enheten mindre, eller koble løpet fra først.",
+ "mep.err.follow_slope": "Et tilkoblet løp har et fall som ikke kan beholdes på det nye stedet: det ville synke under minstefallet for systemet. Flytt enheten mindre i høyden, eller koble løpet fra først.",
+ "mep.err.follow_port_lost": "En tilkobling løpet satt på finnes ikke lenger etter redigeringen. Flytt løpet bort først, eller behold enhetstypen.",
+ "mep.err.follow_device": "Dette løpet ender i en enhetstilkobling og kan ikke forlate den. Flytt enheten i stedet, eller koble løpet fra først."
+}

@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "измерено {value}, граница {limit}",
+ "ai_checks.check.cap": "Показани са {shown} от {total} констатации. Грешките са първи: поправете ги и стартирайте отново.",
+ "ai_checks.check.run_again": "Стартиране отново",
+ "ai_checks.check.goto": "Избор и мащабиране",
+ "ai_checks.check.never_title": "Още не е проверено",
+ "ai_checks.check.never_hint": "Стартирайте проверките и констатациите ще се появят тук.",
+ "ai_checks.check.sec.error": "Грешки",
+ "ai_checks.check.sec.warning": "Предупреждения",
+ "ai_checks.check.sec.info": "Бележки"
+}

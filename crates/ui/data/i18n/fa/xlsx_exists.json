@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "این کتاب‌کار از قبل وجود دارد",
+ "xlsx_exists.foreign": "این کتاب‌کار این پروژه نیست، پس هرگز جایگزین نمی‌شود.",
+ "xlsx_exists.pending": "{n} ویرایش دارد که هنوز روی مدل اعمال نشده.",
+ "xlsx_exists.outside": "{n} ردیف دارد که خروجی جدید ندارد.",
+ "xlsx_exists.new_name": "خروجی به {name}",
+ "xlsx_exists.apply_first": "ابتدا آن‌ها را اعمال کنید",
+ "xlsx_exists.replace": "جایگزینی (کتاب قدیمی به _archive)",
+ "xlsx_exists.archived": "کتاب‌کار قدیمی به {path} منتقل شد",
+ "xlsx_exists.archive_failed": "کتاب‌کار قدیمی جابه‌جا نشد، چیزی خروجی گرفته نشد: {error}"
+}

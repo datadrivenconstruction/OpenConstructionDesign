@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "Ten skoroszyt już istnieje",
+ "xlsx_exists.foreign": "To nie jest skoroszyt tego projektu, więc nigdy nie zostanie zastąpiony.",
+ "xlsx_exists.pending": "Zawiera {n} edycji, które nie są jeszcze zastosowane do modelu.",
+ "xlsx_exists.outside": "Ma {n} wierszy, których nowy eksport nie zawiera.",
+ "xlsx_exists.new_name": "Eksportuj do {name}",
+ "xlsx_exists.apply_first": "Najpierw je zastosuj",
+ "xlsx_exists.replace": "Zastąp (stary skoroszyt do _archive)",
+ "xlsx_exists.archived": "Stary skoroszyt przeniesiono do {path}",
+ "xlsx_exists.archive_failed": "Nie udało się przenieść starego skoroszytu, nic nie wyeksportowano: {error}"
+}

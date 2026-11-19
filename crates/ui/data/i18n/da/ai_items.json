@@ -1,0 +1,16 @@
+{
+ "ai.items.all": {
+  "one": "Alle # punkt",
+  "other": "Alle # punkter"
+ },
+ "ai.items.all.tip": "Markér eller fravælg hvert punkt i planen",
+ "ai.items.checked": "{n} af {m} markeret",
+ "ai.items.check.tip": "Medtag “{title}” i Anvend",
+ "ai.items.expand": "Vis elementer",
+ "ai.items.collapse": "Skjul elementer",
+ "ai.items.apply": {
+  "one": "Anvend # punkt",
+  "other": "Anvend # punkter"
+ },
+ "ai.items.apply_none": "Anvend"
+}

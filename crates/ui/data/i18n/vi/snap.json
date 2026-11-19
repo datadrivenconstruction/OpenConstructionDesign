@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "Điểm cuối",
+ "snap.midpoint": "Trung điểm",
+ "snap.perpendicular": "Vuông góc",
+ "snap.wall_axis": "Trục tường",
+ "snap.wall_face": "Mặt tường",
+ "snap.grid": "Lưới",
+ "snap.intersection": "Giao điểm",
+ "snap.grid_axis": "Đường lưới",
+ "snap.ref_plane": "Mặt phẳng tham chiếu",
+ "snap.nearest": "Gần nhất",
+ "snap.align_x": "Thẳng hàng theo X với một điểm ở xa",
+ "snap.align_y": "Thẳng hàng theo Y với một điểm ở xa",
+ "snap.align_xy": "Thẳng hàng theo X và Y"
+}

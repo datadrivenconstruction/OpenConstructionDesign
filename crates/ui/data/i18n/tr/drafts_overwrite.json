@@ -1,0 +1,5 @@
+{
+ "drafts_overwrite.ow.project": "Projeyi kaydetme bu yanıtı bekliyor. Değerleri değiştirip kaydetmeye devam edin; Düzenlemeye dön her düzenlemeyi korur ve hiçbir şey yazmaz.",
+ "drafts_overwrite.drafts.ow_wait": "Kaydetme, aile düzenleyicisindeki yanıtınızı bekliyor: bir aileyi yüklemek proje tipi değerlerini değiştirir. Hiçbir şey kapatılmadı.",
+ "drafts_overwrite.drafts.ow_back": "Kaydetme durduruldu: proje tipi değerleri korundu ve aile düzenlemeleri hâlâ açık. Hiçbir şey kapatılmadı."
+}

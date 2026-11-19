@@ -1,0 +1,14 @@
+{
+ "empty.v3d_model.title": "Todavía no hay nada en 3D",
+ "empty.v3d_model.hint": "Dibuje muros en la planta y aparecerán aquí.",
+ "empty.v3d_model.action": "Abrir planta",
+ "empty.v3d_hidden.title": "Todos los elementos están ocultos en esta vista",
+ "empty.v3d_hidden.hint": "El ocultar o aislar temporal no deja nada visible. Los gráficos de vista se mantienen.",
+ "empty.v3d_hidden.action": "Mostrar todo",
+ "empty.v3d_graphics.title": "Los gráficos de vista ocultan todas las categorías",
+ "empty.v3d_graphics.hint": "Las reglas por categoría de esta vista no dejan nada visible. Vuelva a activar categorías en Gráficos de vista.",
+ "empty.v3d_graphics.action": "Abrir gráficos de vista",
+ "empty.v3d_box.title": "La caja de sección está fuera del modelo",
+ "empty.v3d_box.hint": "La caja corta todos los elementos. Vuelva a ajustarla alrededor del modelo.",
+ "empty.v3d_box.action": "Restablecer caja"
+}

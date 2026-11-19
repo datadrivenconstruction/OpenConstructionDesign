@@ -1,0 +1,10 @@
+{
+ "ai.optx.applied": "Variant „{name}” rakendatud. Tühista viib selle tagasi mustandiks",
+ "ai.optx.missing": "Varianti {id} enam ei ole",
+ "ai.optx.accepted": "Variant {id} on juba rakendatud",
+ "ai.optx.not_draft": "Variant {id} lükati tagasi ja seda ei saa rakendada",
+ "ai.optx.stale": "Mudelit muudeti pärast variandi {id} koostamist: genereeri see esmalt uuesti",
+ "ai.optx.bad_recipe": "Variandi retsepti ei saa lugeda: {e}",
+ "ai.optx.refused": "Varianti ei rakendatud ({code}): {reason}",
+ "ai.optx.failed": "Varianti ei rakendatud: {e}"
+}

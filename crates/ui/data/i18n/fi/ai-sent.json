@@ -1,0 +1,8 @@
+{
+ "ai_sent.summary": "Projektin tiedot tässä pyynnössä: {messages} viestiä, {tools} työkalun tulosta, {images} kuvaa",
+ "ai_sent.copy": "Kopioi",
+ "ai_sent.filter": "Etsi lähetetyistä pyynnöistä",
+ "ai_sent.no_match": "Mikään pyyntö ei täsmää.",
+ "ai_sent.instructions": "Ohjeet ja työkalut",
+ "ai_sent.local_note": "Säilytetään vain tällä tietokoneella, tälle istunnolle. Avaimia ja salasanoja ei näytetä koskaan."
+}

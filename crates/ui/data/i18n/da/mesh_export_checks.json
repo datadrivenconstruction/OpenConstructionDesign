@@ -1,0 +1,15 @@
+{
+ "cmd.data.export_step.desc": "Gemmer hele modellen eller valget som STEP AP214 eller AP242: solider med eksakte plane, cylindriske, koniske, sfæriske, toroidale og B-spline-flader, andre elementer som plane flader, farver, én samlingsknude pr. etage.",
+ "cmd.data.export_3mf.desc": "Gemmer hele modellen eller valget som 3MF til print: ét objekt pr. element, farver, enheder og en kontrol af, at hvert legeme er vandtæt.",
+ "fmenu.export.step": "STEP eksakte solider (.step)",
+ "fmenu.export.3mf": "3MF til print (.3mf)",
+ "mx.schema": "STEP-skema",
+ "mx.schema.ap214": "AP214 (bredest understøttet)",
+ "mx.schema.ap242": "AP242",
+ "mx.watertight": "Legemer der ikke er vandtætte",
+ "mx.watertight.report": "Skriv dem og list dem",
+ "mx.watertight.skip": "Udelad dem",
+ "mx.watertight.require": "Annullér eksporten",
+ "mx.faceted": "{fmt} gemt: {path} ({exact} eksakte solider, {n} skrevet som plane flader: {first})",
+ "sheets.print.svg": "SVG"
+}

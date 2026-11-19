@@ -1,0 +1,10 @@
+{
+ "stage_err.kept": "tabla conservada {t}: {n} filas escritas tras el Añadir",
+ "stage_err.stage.prev_attached": "No añadido: la copia del Añadir anterior sigue abierta. Vuelva a ejecutar Añadir",
+ "stage_err.stage.model_changed": "No añadido: el modelo cambió mientras se leía el archivo. Vuelva a ejecutar Añadir",
+ "stage_err.stage.no_record": "No añadido: la copia importada no tiene registro de cambios",
+ "stage_err.stage.table_differs": "No añadido: la tabla {t} difiere entre el modelo y la copia importada",
+ "stage_err.stage.unique_key": "No añadido: no se puede seguir una clave única de la tabla {t}",
+ "stage_err.stage.table_gone": "No añadido: la importación modificó la tabla {t}, que la copia ya no contiene",
+ "stage_err.stage.copy_held": "Añadido; la copia importada permanece abierta hasta el siguiente Añadir o hasta reabrir el modelo"
+}

@@ -1,0 +1,8 @@
+{
+ "mep_units.unit.mm": "мм",
+ "mep_units.unit.in": "дюйм",
+ "mep_units.dn": "DN",
+ "mep_units.diameter": "Диаметр",
+ "mep_units.system.new": "Жаңы система",
+ "mep_units.system.none": "Система жок"
+}

@@ -1,0 +1,11 @@
+{
+ "empty.sv_notfound.title": "ویو نہیں ملا",
+ "empty.sv_notfound.hint": "یہ ویو حذف ہو گیا یا اب پروجیکٹ کا حصہ نہیں۔",
+ "empty.sv_notfound.action": "ویو بند کریں",
+ "empty.sv_cuts_nothing.title": "یہ سیکشن کچھ نہیں کاٹتا",
+ "empty.sv_cuts_nothing.hint": "کٹ لائن اپنی گہرائی میں کوئی دیوار، سلیب یا کھلا حصہ نہیں کاٹتی۔ لائن منتقل کریں یا ویو گہرا کریں۔",
+ "empty.sv_cuts_nothing.action": "پلان پر دکھائیں",
+ "empty.sv_shows_nothing.title": "یہ ایلیویشن کچھ نہیں دکھاتی",
+ "empty.sv_shows_nothing.hint": "ویو کی گہرائی میں کوئی دیوار، سلیب یا کھلا حصہ نہیں آتا۔ ویو لائن منتقل کریں یا ویو گہرا کریں۔",
+ "empty.sv_shows_nothing.action": "پلان پر دکھائیں"
+}

@@ -1,0 +1,10 @@
+{
+ "cmd.mod.scale": "Skala",
+ "cmd.mod.scale.desc": "Välj element, klicka sedan på baspunkten, en referenslängd och den nya längden, eller skriv en faktor.",
+ "hint.scale.select": "Skala: välj element · Enter — klar",
+ "hint.scale.first": "Skala: välj baspunkten · Esc — avbryt",
+ "hint.scale.second": "Skala: välj referenslängden · tal — faktor · Esc — avbryt",
+ "hint.scale.third": "Skala: välj den nya längden · tal — faktor · Esc — avbryt",
+ "scl.bad_factor": "Skalfaktorn måste vara ett tal större än noll",
+ "scl.zero_ref": "Referenslängden är noll: välj en punkt på avstånd från basen"
+}

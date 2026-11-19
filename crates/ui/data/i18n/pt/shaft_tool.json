@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "Poços",
+ "quick.cat.shaft": "Poço",
+ "shaft_tool.browser.shaft": "Poço n.º {id}",
+ "shaft_tool.shaft.top": "Nível superior",
+ "shaft_tool.shaft.cuts": "Elementos cortados",
+ "shaft_tool.shaft.cut_area": "Área cortada",
+ "shaft_tool.shaft.cut_volume": "Volume cortado",
+ "elem.no.rooms": "Acompanha os espaços que contém"
+}

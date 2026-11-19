@@ -1,0 +1,35 @@
+family Shelf Unit
+category casework
+host floor
+ifc IfcFurniture NOTDEFINED
+param Width length type 1200mm
+param Depth length type 900mm
+param Height length type 1600mm
+param Shelves int type 4
+param Base length type 150mm
+param Panel length type 30mm
+param Shelf length type 25mm
+param Spine length type 20mm
+param Pitch length type = (Height - Base - Shelf) / Shelves
+param Steel material type "Steel White"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Back y = Depth / 2
+type "1200x900x1600" Width=1200mm, Depth=900mm, Height=1600mm, Shelves=4
+type "900x600x1400" Width=900mm, Depth=600mm, Height=1400mm, Shelves=3
+type "48x36x64in" Width=48in, Depth=36in, Height=64in, Shelves=4, Base=6in, Panel=1.2in, Shelf=1in, Spine=0.8in
+extrude BaseBlock rect(Left, Front + 50mm, Right, Back - 50mm) z(0, Base) mat(Steel) show(3d, elev)
+extrude SideL rect(Left, Front, Left + Panel, Back) z(Base, Height) mat(Steel) show(3d, elev)
+extrude SideR rect(Right - Panel, Front, Right, Back) z(Base, Height) mat(Steel) show(3d, elev)
+extrude SpineWall rect(Left + Panel, -Spine / 2, Right - Panel, Spine / 2) z(Base, Height) mat(Steel) show(3d, elev)
+extrude Shelf1F rect(Left + Panel, Front, Right - Panel, -Spine / 2) z(Base + Pitch - Shelf, Base + Pitch) mat(Steel) show(3d, elev)
+extrude Shelf1B rect(Left + Panel, Spine / 2, Right - Panel, Back) z(Base + Pitch - Shelf, Base + Pitch) mat(Steel) show(3d, elev)
+extrude Shelf2F rect(Left + Panel, Front, Right - Panel, -Spine / 2) z(Base + 2 * Pitch - Shelf, Base + 2 * Pitch) mat(Steel) show(3d, elev)
+extrude Shelf2B rect(Left + Panel, Spine / 2, Right - Panel, Back) z(Base + 2 * Pitch - Shelf, Base + 2 * Pitch) mat(Steel) show(3d, elev)
+extrude Shelf3F rect(Left + Panel, Front, Right - Panel, -Spine / 2) z(Base + 3 * Pitch - Shelf, Base + 3 * Pitch) mat(Steel) show(3d, elev)
+extrude Shelf3B rect(Left + Panel, Spine / 2, Right - Panel, Back) z(Base + 3 * Pitch - Shelf, Base + 3 * Pitch) mat(Steel) show(3d, elev)
+extrude TopF rect(Left + Panel, Front, Right - Panel, -Spine / 2) z(Height - Shelf, Height) mat(Steel) show(3d, elev)
+extrude TopB rect(Left + Panel, Spine / 2, Right - Panel, Back) z(Height - Shelf, Height) mat(Steel) show(3d, elev)
+symbol rect(Left, Front, Right, Back)
+symbol line(Left, 0, Right, 0) show(medium, fine)

@@ -1,0 +1,6 @@
+{
+ "geom.length": "Pituus",
+ "sched.cat.room_seps": "Huoneiden erottimet",
+ "room.err.point_leave": "Huone {n}: piste siirtyisi rajansa ulkopuolelle",
+ "room.err.point_taken": "Huone {n}: piste osuisi huoneeseen {other}"
+}

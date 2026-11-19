@@ -1,0 +1,5 @@
+{
+ "legend.legend.empty_hint": "在上方输入名称并按“创建”。",
+ "legend.legend.pick_hint": "请从上方列表中选择图例。",
+ "legend.legend.taken": "已存在名为“{name}”的图例，请输入其他名称。"
+}

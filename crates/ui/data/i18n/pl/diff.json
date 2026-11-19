@@ -1,0 +1,7 @@
+{
+ "diff.kind.added": "dodano",
+ "diff.kind.changed": "zmieniono",
+ "diff.kind.deleted": "usunięto",
+ "diff.kind.refused": "odrzucono",
+ "diff.kind.conflict": "konflikt"
+}

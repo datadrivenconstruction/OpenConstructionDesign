@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "أدخل اسم القالب أولاً",
+ "view_template.name_taken": "يوجد قالب بهذا الاسم بالفعل",
+ "view_template.pick_blocked": "حدّد عرضاً واحداً على الأقل أولاً",
+ "view_template.views.one": "{n} عرض",
+ "view_template.views.few": "{n} عروض",
+ "view_template.views.many": "{n} عرضاً",
+ "view_template.delete.title": "حذف هذا القالب؟",
+ "view_template.delete.body": "سيُحذف القالب «{name}». مستخدم في {used}.",
+ "view_template.delete.unused": "سيُحذف القالب «{name}». لا يستخدمه أي عرض.",
+ "view_template.delete.keeps": "تحتفظ هذه العروض برسومها الحالية وتفقد الارتباط.",
+ "view_template.delete.undo": "يمكنك التراجع عن ذلك بخطوة تراجع واحدة.",
+ "view_template.delete.confirm": "حذف القالب"
+}

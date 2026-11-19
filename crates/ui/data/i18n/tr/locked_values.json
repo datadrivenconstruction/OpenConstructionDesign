@@ -1,0 +1,8 @@
+{
+ "cmd.props.param_lock": "Parametre değerini kilitle veya kilidini aç",
+ "locked_values.kept": "{n} kilitli değer korundu",
+ "locked_values.locked": "“{name}” kilitlendi: XLSX tablosu içe aktarma, toplu düzenleme ve yapay zeka bunu korur",
+ "locked_values.unlocked": "“{name}” kilidi açıldı",
+ "locked_values.locked_tip": "Kilitli: XLSX tablosu içe aktarma, toplu düzenleme ve yapay zeka bu değeri korur. Kilidi açmak için tıklayın  ·  Ctrl+L",
+ "locked_values.no_row": "Özellikler panelinde bir parametre satırına gelin, sonra Ctrl+L'ye basın"
+}

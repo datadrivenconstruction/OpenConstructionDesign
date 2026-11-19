@@ -1,0 +1,40 @@
+id = "G35_ski_jump"
+tier = "hard"
+group = "Any geometry"
+title = "Ski jump"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "A ski jump: a steel truss inrun 90 m long at 35 degrees on columns, a start tower with a stair, the take-off table 25 m above the foot of the landing hill, a landing slope profile 120 m long, a judges tower beside the landing."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "col"
+min = 6.0
+
+[[oracle.count]]
+spec = "beam+brace+truss"
+min = 30.0
+
+[[oracle.count]]
+spec = "stair"
+min = 1.0
+
+[[oracle.count]]
+spec = "slab+toposolid+freeform+solid+mesh+roof"
+min = 1.0
+
+[[oracle.geom]]
+kind = "height"
+min = 65.0
+max = 90.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

@@ -1,0 +1,14 @@
+{
+ "ai.issue.integrity": "Yaxlitlik muammosi: {0} {1}: {2}",
+ "ai.issue.opening_outside": "Teshik devorga sig'maydi: {0}",
+ "ai.issue.opening_overlap": "Teshik {0} teshigi bilan ustma-ust tushadi",
+ "ai.issue.wall_warning": "Devor: {0}",
+ "ai.issue.cut_warning": "Kesish: {0}",
+ "ai.issue.room_open": "Xona yopilmagan",
+ "ai.issue.material_unknown": "Loyihada “{0}” nomli material yo'q: Qo'llash yangisini standart xususiyatlar bilan qo'shadi",
+ "ai.issue.material_suggest": "Loyihada “{0}” nomli material yo'q: Qo'llash yangisini qo'shadi. “{1}” ni nazarda tutdingizmi?",
+ "ai.issue.conflict": "Bu band ishlay olmaydi: {0}",
+ "ai.issue.too_large": "{0} ta element o'zgaradi, bu {1} chegarasidan ko'p. Ruxsat kerak",
+ "ai.issue.truncated": "O'zgarishlar ro'yxati {0} qatorda to'xtadi: reja kartada ko'rsatiladigan hajmdan katta. Ruxsat kerak",
+ "ai.issue.replan_failed": "Reja qayta hisoblanmadi. Modelning yangi nusxasi olinmoqda"
+}

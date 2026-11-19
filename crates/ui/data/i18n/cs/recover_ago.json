@@ -1,0 +1,33 @@
+{
+ "recover.ago_now": "právě teď",
+ "recover.ago_min": {
+  "one": "před # min",
+  "few": "před # min",
+  "other": "před # min"
+ },
+ "recover.ago_hour": {
+  "one": "před # hodinou",
+  "few": "před # hodinami",
+  "other": "před # hodinami"
+ },
+ "recover.ago_yesterday": "včera",
+ "recover.ago_day": {
+  "one": "před # dnem",
+  "few": "před # dny",
+  "other": "před # dny"
+ },
+ "recover.empty": "Nezůstal žádný snímek",
+ "recover.empty_hint": "Pro tento projekt není co obnovit.",
+ "recover.all_damaged": "Všechny snímky jsou poškozené, žádný nelze obnovit.",
+ "recover.keys_hint": "Šipkami nahoru a dolů vyberte snímek, Enter přejde na Obnovit",
+ "recover.row_tip": "Uloženo {time}",
+ "recover.row_damaged_tip": "Nelze obnovit: {reason}",
+ "recover.archive_ask": "Přesunout tento snímek do archivu?",
+ "recover.discard_ask": {
+  "one": "Přesunout snímek do archivu? Znovu se nenabídne.",
+  "few": "Přesunout všechny # snímky do archivu? Znovu se nenabídnou.",
+  "other": "Přesunout všech # snímků do archivu? Znovu se nenabídnou."
+ },
+ "recover.confirm_yes": "Přesunout do archivu",
+ "recover.confirm_no": "Ponechat snímky"
+}

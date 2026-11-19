@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "تم التراجع عن التطبيق: النموذج لا يطابق المعاينة. {what}",
+ "xlsx_verify.not_written": "لم يتغيّر {row}.",
+ "xlsx_verify.lost": "اختفى {row}.",
+ "xlsx_verify.not_deleted": "لم يُحذف {row}.",
+ "xlsx_verify.extra_deleted": "حُذف {row}، رغم أن المعاينة تُبقي عليه.",
+ "xlsx_verify.created": "{table}: {got} جديد بدلاً من {want}.",
+ "xlsx_verify.value": "{row}، {field}: متوقَّع {want} (كان {old})، والمقروء {got}.",
+ "xlsx_verify.check_failed": "تعذّر التحقق من النتيجة: {e}",
+ "xlsx_verify.plan_failed": "لم يبدأ التطبيق: تعذّر على الفحص قراءة النموذج ({e}).",
+ "xlsx_verify.take_back_failed": "تعذّر التراجع عن الخطوة ({e}): استخدم «تراجع».",
+ "xlsx_verify.t.wall": "جدار",
+ "xlsx_verify.t.opening": "فتحة",
+ "xlsx_verify.t.room": "غرفة",
+ "xlsx_verify.t.slab": "أرضية",
+ "xlsx_verify.t.level": "منسوب",
+ "xlsx_verify.t.wall_type": "نوع الجدار",
+ "xlsx_verify.t.slab_type": "نوع الأرضية",
+ "xlsx_verify.t.col": "عمود",
+ "xlsx_verify.t.beam": "كمرة",
+ "xlsx_verify.t.roof": "سقف",
+ "xlsx_verify.t.curtain_wall": "جدار ستارة"
+}

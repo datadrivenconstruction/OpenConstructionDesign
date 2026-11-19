@@ -1,0 +1,16 @@
+{
+ "cmd.drawing.to_detail": "Dessin vers détail",
+ "cmd.drawing.to_detail.desc": "Transforme les primitives de dessin choisies, ou tout le dessin de ce niveau, en lignes de détail, textes et zones du plan. Le dessin reste inchangé.",
+ "detail_items.st.no_drawing": "Aucun dessin sur ce niveau",
+ "detail_items.st.nothing": "Rien à convertir : aucune ligne, arc, texte ni remplissage sur les calques visibles",
+ "detail_items.st.done": "Éléments de détail ajoutés : lignes {lines}, textes {texts}, zones {regions}",
+ "detail_items.st.failed": "Impossible d'ajouter les éléments de détail : {e}",
+ "detail_items.st.warn": "Éléments de détail ajoutés, mais la vue n'a pas pu être actualisée (lignes {lines}, textes {texts}, zones {regions}) : {e}. Annuler les supprime.",
+ "detail_items.st.bad_view": "Les éléments de détail nécessitent une vue en plan ou en coupe",
+ "detail_items.st.no_transform": "Cette vue n'a pas de système de coordonnées utilisable pour le dessin ; rien n'a été ajouté",
+ "drafting_tools.free.plan_only": "Cette commande s'applique aux éléments du plan ; ouvrez un plan",
+ "drafting_tools.free.zero": "Les deux points coïncident ; rien n'a été ajouté",
+ "drafting_tools.free.select_first": "Sélectionnez d'abord les éléments de cette vue à répartir",
+ "drafting_tools.free.pick_item": "Cliquez sur un élément de cette vue pour le repérer",
+ "drafting_tools.free.dim_kind": "Seules les cotes linéaires fonctionnent dans une vue de dessin"
+}

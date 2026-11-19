@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "Řídí šablona {name}",
+ "view_template.edit_template": "Upravit šablonu",
+ "view_template.locked_tip": "Nastaveno šablonou pohledu {name}. Změňte to v šabloně.",
+ "view_template.no_filters": "V tomto pohledu nejsou žádné filtry"
+}

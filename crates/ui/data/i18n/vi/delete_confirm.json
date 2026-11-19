@@ -1,0 +1,59 @@
+{
+ "del.k.door": {
+  "one": "# cửa đi",
+  "other": "# cửa đi"
+ },
+ "del.k.window": {
+  "one": "# cửa sổ",
+  "other": "# cửa sổ"
+ },
+ "del.k.opening": {
+  "one": "# lỗ mở",
+  "other": "# lỗ mở"
+ },
+ "del.k.comp": {
+  "one": "# cấu kiện được gắn",
+  "other": "# cấu kiện được gắn"
+ },
+ "del.k.rebar": {
+  "one": "# bộ cốt thép",
+  "other": "# bộ cốt thép"
+ },
+ "del.k.port": {
+  "one": "# cổng MEP được gắn",
+  "other": "# cổng MEP được gắn"
+ },
+ "del.k.joist": {
+  "one": "# dầm khung",
+  "other": "# dầm khung"
+ },
+ "del.k.railing": {
+  "one": "# lan can",
+  "other": "# lan can"
+ },
+ "del.k.tag": {
+  "one": "# nhãn",
+  "other": "# nhãn"
+ },
+ "del.k.dim": {
+  "one": "# kích thước (đã tách)",
+  "other": "# kích thước (đã tách)"
+ },
+ "del.also": "Cũng bị ảnh hưởng: {list}",
+ "del.rooms": {
+  "one": "# phòng mất một tường biên",
+  "other": "# phòng mất một tường biên"
+ },
+ "del.cancelled": "Đã hủy xóa, không có gì thay đổi",
+ "del.confirm.title": "Xóa kèm phần tử phụ thuộc",
+ "del.confirm.lead": {
+  "one": "# phần tử đã chọn kéo theo các thành phần sau:",
+  "other": "# phần tử đã chọn kéo theo các thành phần sau:"
+ },
+ "del.confirm.levels": {
+  "one": "# trong số đó nằm trên cao độ khác",
+  "other": "# trong số đó nằm trên các cao độ khác"
+ },
+ "del.confirm.all": "Xóa tất cả",
+ "del.confirm.cancel": "Hủy"
+}

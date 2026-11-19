@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "Ask AI: {q}",
+ "ai.palette.connect": "Connect AI to ask",
+ "ai.palette.draft.apply": "Apply draft ({n})",
+ "ai.palette.draft.reject": "Reject draft",
+ "ai.palette.draft.next": "Next draft change",
+ "ai.palette.draft.show": "Show draft in view",
+ "cmd.ai.next_change": "Next draft change",
+ "cmd.ai.next_change.desc": "Moves the view to the next element the draft changes.",
+ "cmd.ai.show_draft": "Show AI draft in view",
+ "cmd.ai.show_draft.desc": "Fits the view to everything the draft changes."
+}

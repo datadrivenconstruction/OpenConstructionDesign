@@ -1,0 +1,18 @@
+{
+ "faults.errors": {
+  "one": "# galat di model. Klik untuk menampilkannya.",
+  "other": "# galat di model. Klik untuk melihat daftarnya."
+ },
+ "faults.warnings": {
+  "one": "# peringatan di model. Klik untuk menampilkannya.",
+  "other": "# peringatan di model. Klik untuk melihat daftarnya."
+ },
+ "faults.title": "Kesalahan model: {n}",
+ "faults.none": "Tidak ada galat atau peringatan.",
+ "faults.cat.wall": "Dinding",
+ "faults.cat.slab": "Pelat",
+ "faults.cat.opening": "Bukaan",
+ "faults.cat.curtain_wall": "Dinding tirai",
+ "faults.cat.ramp": "Rampa",
+ "faults.cat.zone": "Zona"
+}

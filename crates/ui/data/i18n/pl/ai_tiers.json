@@ -1,0 +1,4 @@
+{
+ "ai.issue.delete_large": "{0} elementów zostałoby usuniętych, powyżej limitu {1}. Potrzebna jest zgoda",
+ "ai.issue.refused_large": "{0} elementów zmieniłoby się, powyżej twardego limitu {1}. Podziel plan na mniejsze części"
+}

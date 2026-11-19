@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "Importerte nett",
+ "mat_mesh.mesh.none_selected": "Velg importerte nett i 3D-visningen for å gi dem dette materialet.",
+ "mat_mesh.mesh.current": "Første valgte nett: {material}",
+ "mat_mesh.mesh.current_none": "Første valgte nett har ikke materiale.",
+ "mat_mesh.mesh.assign": "Tilordne til {n} valgte",
+ "mat_mesh.mesh.assign_tip": "Den realistiske stilen viser dette materialets tekstur på de valgte nettene",
+ "mat_mesh.mesh.assign_cat": "Tilordne til kategori {category}",
+ "mat_mesh.mesh.assign_cat_tip": "Hvert importert nett i kategorien uten eget materiale",
+ "mat_mesh.mesh.clear": "Tøm valgte",
+ "mat_mesh.mesh.clear_tip": "Valgte nett går tilbake til kategorimaterialet eller ren farge",
+ "mat_mesh.mesh.clear_cat": "Tøm kategori"
+}

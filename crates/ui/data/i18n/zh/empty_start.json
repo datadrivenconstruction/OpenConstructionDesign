@@ -1,0 +1,8 @@
+{
+ "empty.start_recent.title": "尚无最近的项目",
+ "empty.start_recent.hint": "您打开的项目会显示在此处。可从示例模型开始。",
+ "empty.start_recent.action": "打开示例",
+ "start.recent_open_file": "打开文件…",
+ "start.forgot": "已从最近列表中移除：{name}",
+ "start.forgot_undo": "撤销"
+}

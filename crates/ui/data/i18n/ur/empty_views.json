@@ -1,0 +1,19 @@
+{
+ "empty.v3d_gpu.title": "اس گرافکس اڈاپٹر پر 3D دستیاب نہیں",
+ "empty.v3d_gpu.hint": "ماڈل محفوظ ہے اور پلان کام کر رہا ہے۔ 3D دوبارہ آزمانے کے لیے محفوظ گرافکس کے ساتھ دوبارہ شروع کریں۔",
+ "empty.v3d_gpu.action": "محفوظ گرافکس کے ساتھ دوبارہ شروع کریں",
+ "empty.v3d_loading.title": "3D بن رہا ہے…",
+ "empty.v3d_loading.pct": "کھل رہا ہے… {pct} %",
+ "empty.plan_hidden.title": "اس پلان میں تمام عناصر چھپے ہیں",
+ "empty.plan_hidden.hint": "عارضی چھپانا یا آئسولیٹ کرنا کچھ بھی نظر نہیں آنے دیتا۔",
+ "empty.plan_hidden.action": "سب دکھائیں",
+ "empty.plan_graphics.title": "ویو گرافکس تمام زمرے چھپا رہے ہیں",
+ "empty.plan_graphics.hint": "اس ویو کے زمرہ قواعد دکھانے کو کچھ نہیں چھوڑتے۔",
+ "empty.plan_graphics.action": "ویو گرافکس کھولیں",
+ "empty.plan_phase.title": "فیز فلٹر سب کچھ چھپا رہا ہے",
+ "empty.plan_phase.hint": "اس ویو کے فیز میں اس سطح پر کچھ موجود نہیں۔",
+ "empty.plan_phase.action": "فیز بدلیں",
+ "empty.plan_level.title": "اس سطح پر کوئی عنصر نہیں",
+ "empty.plan_level.hint": "اس ماڈل کی دوسری سطحوں پر عناصر ہیں۔",
+ "empty.plan_level.action": "عناصر والی سطح پر جائیں"
+}

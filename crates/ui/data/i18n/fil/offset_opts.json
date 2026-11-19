@@ -1,0 +1,7 @@
+{
+ "offset_opts.dist_positive": "Dapat mas malaki sa zero ang offset distance; susunod ang gilid sa cursor",
+ "offset_opts.count_bad": "Buong bilang mula {min} hanggang {max}",
+ "offset_opts.done_tip": "Tapusin ang pagpili at simulan ang tool",
+ "offset_opts.iso.apply_tip": "Gawing permanente ang pansamantalang pagtatago sa view na ito",
+ "offset_opts.iso.exit": "Lumabas sa pansamantalang mode"
+}

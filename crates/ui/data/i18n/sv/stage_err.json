@@ -1,0 +1,10 @@
+{
+ "stage_err.kept": "tabell {t} behållen: {n} rader skrivna efter Lägg till",
+ "stage_err.stage.prev_attached": "Inte tillagd: kopian från föregående Lägg till är fortfarande öppen. Kör Lägg till igen",
+ "stage_err.stage.model_changed": "Inte tillagd: modellen ändrades medan filen lästes. Kör Lägg till igen",
+ "stage_err.stage.no_record": "Inte tillagd: den importerade kopian saknar ändringspost",
+ "stage_err.stage.table_differs": "Inte tillagd: tabell {t} skiljer sig mellan modellen och den importerade kopian",
+ "stage_err.stage.unique_key": "Inte tillagd: en unik nyckel i tabell {t} kan inte följas",
+ "stage_err.stage.table_gone": "Inte tillagd: importen ändrade tabell {t}, som kopian inte längre har",
+ "stage_err.stage.copy_held": "Tillagd; den importerade kopian förblir öppen till nästa Lägg till eller tills modellen öppnas igen"
+}

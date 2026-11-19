@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "Aksis X",
+ "fe.axis.y": "Aksis Y",
+ "fe.axis.z": "Aksis Z",
+ "fe.col.axis": "Aksis",
+ "fe.col.at": "Posisyon",
+ "fe.col.mode": "Modo",
+ "fe.mode.fixed": "Nakapirmi",
+ "fe.mode.free": "Malaya",
+ "fe.types.inherited": "Default mula sa parameter",
+ "fe.csv.more": "Iba pang CSV action",
+ "fe.ref.selected": "Eroplano: {name}"
+}

@@ -1,0 +1,10 @@
+{
+ "view_gfx.vv.visible_tip": "Видим в този изглед",
+ "view_gfx.vv.enabled_tip": "Прилагане на този филтър в този изглед",
+ "view_gfx.vv.reset_tip": "Връщане към стойността по подразбиране на проекта",
+ "view_gfx.vv.col.actions": "Действия",
+ "view_gfx.vv.nothing_to_apply": "Няма промени за прилагане",
+ "view_gfx.flt.save_blocked": "Именувайте филтъра и попълнете всеки параметър на правилата",
+ "view_gfx.flt.confirm_delete": "Изтриване за всички изгледи?",
+ "view_gfx.flt.param_pick": "Избор…"
+}

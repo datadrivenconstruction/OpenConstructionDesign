@@ -1,0 +1,13 @@
+{
+ "xlw.copy_list": "Lijst kopiëren",
+ "xlw.save_list": "Lijst opslaan…",
+ "xlw.copy_list_tip": "Kopieer de getoonde rijen (blad, cel, id, kolom, waarden, reden) als tekst voor een spreadsheet",
+ "xlw.save_list_tip": "Sla de getoonde rijen op als .csv-bestand naast het werkboek; het werkboek zelf wordt nooit gewijzigd",
+ "xlw.list_book_value": "Waarde in werkboek",
+ "xlw.list_model_value": "Modelwaarde",
+ "xlw.list_reason": "Reden",
+ "xlw.list_copied": "Lijst gekopieerd: {n} rijen",
+ "xlw.list_saved": "Lijst opgeslagen: {n} rijen, {file}",
+ "xlw.list_save_failed": "Lijst niet opgeslagen",
+ "xlw.list_nothing": "Niets om te kopiëren: geen rijen getoond"
+}

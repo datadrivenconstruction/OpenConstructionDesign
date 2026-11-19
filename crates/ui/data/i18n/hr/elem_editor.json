@@ -1,0 +1,4 @@
+{
+ "elem.spreadsheet.applied": "Uvezeno iz proračunske tablice: {what}",
+ "elem.spreadsheet.failed": "Uvoz iz proračunske tablice nije uspio: {e}"
+}

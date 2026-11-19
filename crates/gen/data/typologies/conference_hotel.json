@@ -1,0 +1,437 @@
+{
+ "schema": "gen_typology.v1",
+ "name": "conference_hotel",
+ "aliases": [
+  "hotel_with_ballroom",
+  "hotel_podium",
+  "banqueting_hotel"
+ ],
+ "base": "apartment_section",
+ "note": "hotel: guest rooms and suites, each with its own ensuite bathroom, on both sides of one corridor over a two-storey podium; the ground floor holds the lobby, restaurant and its kitchen, the first floor the ballroom with its foyer and meeting rooms, one level below ground the laundry, stores, staff changing and plant",
+ "brief": {
+  "name": {
+   "en": "Hotel",
+   "ru": "Гостиница"
+  },
+  "floors": 9,
+  "floor_height": 3.6,
+  "lifts": 4,
+  "corridor": 2.0,
+  "basements": 1,
+  "footprint": {
+   "width": 72,
+   "depth": 26
+  }
+ },
+ "rules": {
+  "egress.max_travel": 40,
+  "corridor.width": 2.0,
+  "egress.protected_stairs": "enclosed",
+  "room.apartment_frontage": 3.6
+ },
+ "model": {
+  "title": {
+   "en": "Hotel",
+   "ru": "Гостиница"
+  },
+  "spaces": [
+   {
+    "class": "lobby_h",
+    "kind": "lobby",
+    "name": {
+     "en": "Hotel lobby",
+     "ru": "Вестибюль гостиницы"
+    },
+    "area": 120,
+    "count": 1,
+    "level": "typical",
+    "zone": "public",
+    "periodic": "podium0",
+    "occupancy_m2": 3
+   },
+   {
+    "class": "reception_h",
+    "kind": "office",
+    "name": {
+     "en": "Reception",
+     "ru": "Стойка регистрации"
+    },
+    "area": 24,
+    "count": 1,
+    "level": "typical",
+    "zone": "public",
+    "adjacent_to": [
+     {
+      "ref": "lobby_h",
+      "weight": 4
+     }
+    ],
+    "periodic": "podium0"
+   },
+   {
+    "class": "restaurant",
+    "kind": "dining",
+    "name": {
+     "en": "Restaurant",
+     "ru": "Ресторан"
+    },
+    "area": 160,
+    "count": 1,
+    "level": "typical",
+    "zone": "public",
+    "periodic": "podium0",
+    "occupancy_m2": 1.5,
+    "live_load_kpa": 4,
+    "demand": {
+     "supply_m3h_m2": 20,
+     "power_w_m2": 60
+    }
+   },
+   {
+    "class": "kitchen_h",
+    "kind": "kitchen",
+    "name": {
+     "en": "Hotel kitchen",
+     "ru": "Кухня гостиницы"
+    },
+    "area": 70,
+    "count": 1,
+    "level": "typical",
+    "zone": "boh",
+    "light": "none",
+    "adjacent_to": [
+     {
+      "ref": "restaurant",
+      "weight": 4
+     }
+    ],
+    "periodic": "podium0",
+    "demand": {
+     "ach": 25,
+     "power_w_m2": 150,
+     "cooling_w_m2": 60,
+     "water_l_day": 6000
+    }
+   },
+   {
+    "class": "staff_h",
+    "kind": "staff",
+    "name": {
+     "en": "Staff room",
+     "ru": "Комната персонала"
+    },
+    "area": 24,
+    "count": 2,
+    "level": "typical",
+    "zone": "boh",
+    "periodic": "podium0"
+   },
+   {
+    "class": "wc_h",
+    "kind": "wc",
+    "name": {
+     "en": "Public toilet",
+     "ru": "Общественный туалет"
+    },
+    "area": 8,
+    "count": 4,
+    "level": "typical",
+    "zone": "public",
+    "periodic": "podium0"
+   },
+   {
+    "class": "ballroom",
+    "kind": "meeting",
+    "name": {
+     "en": "Ballroom",
+     "ru": "Бальный зал"
+    },
+    "area": 360,
+    "count": 1,
+    "level": "typical",
+    "zone": "events",
+    "periodic": "podium1",
+    "occupancy_m2": 1.0,
+    "live_load_kpa": 5,
+    "demand": {
+     "supply_m3h_m2": 25,
+     "power_w_m2": 40
+    }
+   },
+   {
+    "class": "foyer_h",
+    "kind": "lobby",
+    "name": {
+     "en": "Pre-function foyer",
+     "ru": "Фойе бального зала"
+    },
+    "area": 90,
+    "count": 1,
+    "level": "typical",
+    "zone": "events",
+    "adjacent_to": [
+     {
+      "ref": "ballroom",
+      "weight": 4
+     }
+    ],
+    "periodic": "podium1",
+    "occupancy_m2": 2
+   },
+   {
+    "class": "meeting_h",
+    "kind": "meeting",
+    "name": {
+     "en": "Meeting room",
+     "ru": "Переговорная"
+    },
+    "area": 36,
+    "count": 4,
+    "level": "typical",
+    "zone": "events",
+    "periodic": "podium1",
+    "occupancy_m2": 2
+   },
+   {
+    "class": "wc_h2",
+    "kind": "wc",
+    "name": {
+     "en": "Event toilet",
+     "ru": "Туалет зала"
+    },
+    "area": 8,
+    "count": 4,
+    "level": "typical",
+    "zone": "events",
+    "periodic": "podium1"
+   },
+   {
+    "class": "laundry",
+    "kind": "technical",
+    "name": {
+     "en": "Laundry",
+     "ru": "Прачечная"
+    },
+    "area": 120,
+    "count": 1,
+    "level": "below:1",
+    "zone": "boh",
+    "light": "none",
+    "demand": {
+     "ach": 15,
+     "power_w_m2": 80,
+     "water_l_day": 12000
+    }
+   },
+   {
+    "class": "store_h",
+    "kind": "storage",
+    "name": {
+     "en": "Hotel store",
+     "ru": "Склад гостиницы"
+    },
+    "area": 60,
+    "count": 2,
+    "level": "below:1",
+    "zone": "boh",
+    "light": "none"
+   },
+   {
+    "class": "changing_h",
+    "kind": "staff",
+    "name": {
+     "en": "Staff changing room",
+     "ru": "Гардероб персонала"
+    },
+    "area": 40,
+    "count": 2,
+    "level": "below:1",
+    "zone": "boh",
+    "light": "none"
+   },
+   {
+    "class": "plant_h",
+    "kind": "technical",
+    "name": {
+     "en": "Plant room",
+     "ru": "Венткамера"
+    },
+    "area": 100,
+    "count": 1,
+    "level": "below:1",
+    "zone": "services",
+    "light": "none",
+    "demand": {
+     "ach": 10,
+     "power_w_m2": 60
+    }
+   }
+  ],
+  "units": [
+   {
+    "name": {
+     "en": "Guest room",
+     "ru": "Номер"
+    },
+    "count": {
+     "rule": "typology.hotel.rooms"
+    },
+    "rooms": [
+     {
+      "kind": "bedroom",
+      "area": 22,
+      "count": 1,
+      "name": {
+       "en": "Guest room",
+       "ru": "Номер"
+      }
+     },
+     {
+      "kind": "bath",
+      "area": 4.5,
+      "count": 1,
+      "name": {
+       "en": "Ensuite bathroom",
+       "ru": "Санузел номера"
+      }
+     },
+     {
+      "kind": "hall",
+      "area": 3,
+      "count": 1
+     }
+    ]
+   },
+   {
+    "name": {
+     "en": "Suite",
+     "ru": "Люкс"
+    },
+    "count": {
+     "rule": "typology.hotel.suites"
+    },
+    "rooms": [
+     {
+      "kind": "living",
+      "area": 22,
+      "count": 1,
+      "name": {
+       "en": "Suite sitting room",
+       "ru": "Гостиная люкса"
+      }
+     },
+     {
+      "kind": "bedroom",
+      "area": 20,
+      "count": 1,
+      "name": {
+       "en": "Suite bedroom",
+       "ru": "Спальня люкса"
+      }
+     },
+     {
+      "kind": "bath",
+      "area": 6,
+      "count": 1,
+      "name": {
+       "en": "Suite ensuite bathroom",
+       "ru": "Санузел люкса"
+      }
+     },
+     {
+      "kind": "wc",
+      "area": 1.8,
+      "count": 1
+     },
+     {
+      "kind": "hall",
+      "area": 5,
+      "count": 1
+     }
+    ]
+   }
+  ],
+  "zones": [
+   {
+    "id": "public",
+    "name": {
+     "en": "Public",
+     "ru": "Общая зона"
+    },
+    "adjacent_to": [
+     {
+      "ref": "events",
+      "weight": 1
+     }
+    ]
+   },
+   {
+    "id": "events",
+    "name": {
+     "en": "Events",
+     "ru": "Банкетная зона"
+    },
+    "adjacent_to": [
+     {
+      "ref": "public",
+      "weight": 1
+     }
+    ]
+   },
+   {
+    "id": "boh",
+    "name": {
+     "en": "Back of house",
+     "ru": "Служебная зона"
+    },
+    "adjacent_to": []
+   },
+   {
+    "id": "services",
+    "name": {
+     "en": "Services",
+     "ru": "Инженерные помещения"
+    },
+    "adjacent_to": []
+   }
+  ],
+  "periodic": [
+   {
+    "id": "podium0",
+    "every": 0,
+    "at": [
+     0
+    ],
+    "replaces": true
+   },
+   {
+    "id": "podium1",
+    "every": 0,
+    "at": [
+     1
+    ],
+    "replaces": true
+   }
+  ],
+  "egress": {
+   "exits_min": 2
+  },
+  "structure": {
+   "live_load_kpa": {
+    "rule": "typology.live_load_kpa"
+   }
+  },
+  "below": {
+   "levels": [
+    {
+     "name": {
+      "en": "Back-of-house level",
+      "ru": "Служебный уровень"
+     },
+     "fill": "store_h"
+    }
+   ],
+   "retaining": true
+  }
+ }
+}

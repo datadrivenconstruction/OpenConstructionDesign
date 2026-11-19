@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "Жаңы үй-бүлө",
+ "family_editor.open_tip": "Үй-бүлөнү же долбоорду ачуу",
+ "family_editor.close_named": "{name} жабуу",
+ "family_editor.unsaved": "Сакталбаган өзгөртүүлөр",
+ "family_editor.search": "Издөө",
+ "family_editor.nothing": "Эч нерсе табылган жок",
+ "family_editor.sec_families": "Долбоор үй-бүлөлөрү",
+ "family_editor.sec_drafts": "Долбоорлор",
+ "family_editor.cap_category": "Категория",
+ "family_editor.cap_host": "Негиз элемент",
+ "family_editor.cap_type": "Алдын ала көрүү түрү"
+}

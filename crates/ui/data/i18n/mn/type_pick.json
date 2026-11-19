@@ -1,0 +1,10 @@
+{
+ "type_pick.pick.search": "Төрөл эсвэл зузаанаар хайх",
+ "type_pick.pick.empty": "Таарсан төрөл алга",
+ "type_pick.pick.edit": "Төрөл засах…",
+ "type_pick.pick.mixed": "Холимог",
+ "type_pick.pick.layers": {
+  "one": "# давхарга",
+  "other": "# давхарга"
+ }
+}

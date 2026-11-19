@@ -1,0 +1,14 @@
+{
+ "cmd.arch.wall.tile": "벽",
+ "cmd.arch.door.tile": "문",
+ "cmd.arch.window.tile": "창",
+ "cmd.arch.floor.tile": "바닥",
+ "cmd.mod.move.tile": "이동",
+ "cmd.mod.copy.tile": "복사",
+ "cmd.mod.rotate.tile": "회전",
+ "cmd.mod.mirror.tile": "대칭",
+ "cmd.mod.trim.tile": "자르기",
+ "cmd.mod.delete.tile": "삭제",
+ "cmd.ann.dim.tile": "치수",
+ "cmd.ann.text.tile": "텍스트"
+}

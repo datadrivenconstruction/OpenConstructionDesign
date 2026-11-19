@@ -1,0 +1,10 @@
+{
+ "view_gfx.vv.visible_tip": "Terlihat di tampilan ini",
+ "view_gfx.vv.enabled_tip": "Terapkan filter ini di tampilan ini",
+ "view_gfx.vv.reset_tip": "Kembali ke default proyek",
+ "view_gfx.vv.col.actions": "Tindakan",
+ "view_gfx.vv.nothing_to_apply": "Tidak ada perubahan untuk diterapkan",
+ "view_gfx.flt.save_blocked": "Beri nama filter dan isi setiap parameter aturan",
+ "view_gfx.flt.confirm_delete": "Hapus untuk semua tampilan?",
+ "view_gfx.flt.param_pick": "Pilih…"
+}

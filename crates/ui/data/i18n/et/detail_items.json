@@ -1,0 +1,16 @@
+{
+ "cmd.drawing.to_detail": "Joonis detailiks",
+ "cmd.drawing.to_detail.desc": "Muudab valitud jooniselemendid või selle korruse kogu joonise detailjoonteks, tekstimärkmeteks ja aladeks plaanil. Joonis jääb muutmata.",
+ "detail_items.st.no_drawing": "Sellel korrusel pole joonist",
+ "detail_items.st.nothing": "Teisendada pole midagi: nähtavatel kihtidel pole jooni, kaari, tekste ega täitmisi",
+ "detail_items.st.done": "Detailelemendid lisatud: jooned {lines}, tekstid {texts}, alad {regions}",
+ "detail_items.st.failed": "Detailelemente ei õnnestunud lisada: {e}",
+ "detail_items.st.warn": "Detailelemendid lisatud, kuid vaadet ei õnnestunud värskendada (jooned {lines}, tekstid {texts}, alad {regions}): {e}. Tagasivõtmine eemaldab need.",
+ "detail_items.st.bad_view": "Detailelemendid vajavad plaani- või lõikevaadet",
+ "detail_items.st.no_transform": "Sellel vaatel pole joonise jaoks kasutatavat koordinaatsüsteemi; midagi ei lisatud",
+ "drafting_tools.free.plan_only": "See käsk töötab plaani elementidega; ava plaan",
+ "drafting_tools.free.zero": "Kaks punkti langevad kokku; midagi ei lisatud",
+ "drafting_tools.free.select_first": "Vali kõigepealt selle vaate elemendid, mida jaotada",
+ "drafting_tools.free.pick_item": "Märgistamiseks klõpsa selle vaate elemendil",
+ "drafting_tools.free.dim_kind": "Joonistusvaates töötavad ainult lineaarsed mõõtmed"
+}

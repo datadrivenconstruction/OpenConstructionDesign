@@ -1,0 +1,15 @@
+{
+ "cmd.ctx.floor.clean_outline": "Limpar contorno",
+ "cmd.ctx.floor.clean_outline.desc": "Remove pontas estreitas onde o contorno da laje volta sobre si mesmo. Mostra uma pré-visualização antes; uma etapa de desfazer.",
+ "outline_cleanup.title": "Limpar contorno",
+ "outline_cleanup.intro": "O contorno desta laje volta sobre si mesmo em pontas estreitas: {n}. A limpeza as remove; o restante permanece como está.",
+ "outline_cleanup.legend_before": "Linha grossa: o contorno agora",
+ "outline_cleanup.legend_after": "Linha fina: o contorno após a limpeza",
+ "outline_cleanup.undo": "Você pode desfazer isso em uma etapa.",
+ "outline_cleanup.apply": "Limpar",
+ "outline_cleanup.cancel": "Cancelar",
+ "outline_cleanup.done": "Contorno limpo, pontas removidas: {n}",
+ "outline_cleanup.none": "O contorno desta laje não tem pontas",
+ "outline_cleanup.failed": "Não foi possível limpar o contorno",
+ "outline_cleanup.changed": "O contorno mudou desde a pré-visualização; nada foi gravado. Verifique a nova pré-visualização."
+}

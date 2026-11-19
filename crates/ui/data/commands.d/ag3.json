@@ -1,0 +1,4 @@
+[
+  {"id": "wall_types.library", "icon": "", "mnemonic": null, "shortcuts": [], "tab": "manage", "surfaces": ["P"], "stage": "M2", "group": "components"},
+  {"id": "wall_types.swap", "icon": "", "mnemonic": null, "shortcuts": [], "tab": "manage", "surfaces": ["P"], "stage": "M2", "group": "components"}
+]

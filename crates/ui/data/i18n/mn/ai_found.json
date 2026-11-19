@@ -1,0 +1,42 @@
+{
+ "ai.tool.show_elements": "Элементүүдийг харуулж байна",
+ "ai.tool.isolate_elements": "Элементүүдийг тусгаарлаж байна",
+ "ai.tool.color_by": "Утгаар будаж байна",
+ "ai.tool.reset_view": "Харагдацыг анхны байдалд буцааж байна",
+ "ai_found.found.query": "Олдсон",
+ "ai_found.found.show": "Харуулсан",
+ "ai_found.found.isolate": "Тусгаарласан",
+ "ai_found.found.hide": "Нуусан",
+ "ai_found.found.color": "Будсан",
+ "ai_found.found.count": "{n} / {m}",
+ "ai_found.found.none": "Тохирох зүйл байхгүй. Шүүлтүүрээ өргөсгөнө үү.",
+ "ai_found.found.show_btn": "Харуулах",
+ "ai_found.found.show_tip": "Эдгээр элементийг сонгож, план болон 3D дээр ойртуулна",
+ "ai_found.found.isolate_btn": "Тусгаарлах",
+ "ai_found.found.isolate_tip": "Харагдацыг анхны байдалд буцаах хүртэл зөвхөн эдгээр элементийг харуулна",
+ "ai_found.found.select_btn": "Сонгох",
+ "ai_found.found.select_tip": "Эдгээр элементийг харагдацыг хөдөлгөлгүйгээр сонгох",
+ "ai_found.legend.title": "Өнгө: {by}",
+ "ai_found.legend.row_tip": "Эдгээр элементийг сонгохын тулд дарна уу",
+ "ai_found.legend.empty_value": "Утга байхгүй",
+ "ai_found.legend.other": {
+  "one": "# бусад утга",
+  "other": "# бусад утга"
+ },
+ "ai_found.view.title": "AI туслахын харагдац",
+ "ai_found.view.reset": "Харагдацыг анхны байдалд буцаах",
+ "ai_found.view.reset_tip": "AI туслахаас өмнөх харагдацыг сэргээнэ",
+ "ai_found.view.shown": {
+  "one": "# элемент харуулсан",
+  "other": "# элемент харуулсан"
+ },
+ "ai_found.view.isolated": {
+  "one": "# элемент тусгаарласан",
+  "other": "# элемент тусгаарласан"
+ },
+ "ai_found.view.hidden": {
+  "one": "# элемент нуусан",
+  "other": "# элемент нуусан"
+ },
+ "ai_found.found.line": "{what}: {count}"
+}

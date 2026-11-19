@@ -1,0 +1,37 @@
+id = "G38_tensile_sail__en"
+tier = "hard"
+group = "Any geometry"
+title = "Tensile membrane sail"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "A four-point tensile membrane sail over a 15 x 15 m plaza: two 8 m masts at opposite corners and two 3 m anchor posts at the other two, edge cables, a saddle-shaped surface."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "col"
+min = 4.0
+
+[[oracle.count]]
+spec = "freeform+mesh+shell_elem+solid+gridshell"
+min = 1.0
+
+[[oracle.geom]]
+kind = "saddle_curve"
+share_min = 0.5
+warp_min = 2.0
+
+[[oracle.geom]]
+kind = "height"
+min = 7.5
+max = 10.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

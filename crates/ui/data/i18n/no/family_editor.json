@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "Ny familie",
+ "family_editor.open_tip": "Åpne familie eller utkast",
+ "family_editor.close_named": "Lukk {name}",
+ "family_editor.unsaved": "Ikke-lagrede endringer",
+ "family_editor.search": "Søk",
+ "family_editor.nothing": "Ingenting funnet",
+ "family_editor.sec_families": "Prosjektfamilier",
+ "family_editor.sec_drafts": "Utkast",
+ "family_editor.cap_category": "Kategori",
+ "family_editor.cap_host": "Vert",
+ "family_editor.cap_type": "Forhåndsvisningstype"
+}

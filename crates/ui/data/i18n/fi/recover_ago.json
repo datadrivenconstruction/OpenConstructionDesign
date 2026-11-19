@@ -1,0 +1,29 @@
+{
+ "recover.ago_now": "juuri äsken",
+ "recover.ago_min": {
+  "one": "# min sitten",
+  "other": "# min sitten"
+ },
+ "recover.ago_hour": {
+  "one": "# tunti sitten",
+  "other": "# tuntia sitten"
+ },
+ "recover.ago_yesterday": "eilen",
+ "recover.ago_day": {
+  "one": "# päivä sitten",
+  "other": "# päivää sitten"
+ },
+ "recover.empty": "Ei jäljellä olevia tallenteita",
+ "recover.empty_hint": "Tälle projektille ei ole mitään palautettavaa.",
+ "recover.all_damaged": "Kaikki tallenteet ovat vaurioituneet, mitään ei voida palauttaa.",
+ "recover.keys_hint": "Ylös ja Alas valitsevat tallenteen, Enter siirtää kohtaan Palauta",
+ "recover.row_tip": "Tallennettu {time}",
+ "recover.row_damaged_tip": "Ei voi palauttaa: {reason}",
+ "recover.archive_ask": "Siirretäänkö tämä tallenne arkistoon?",
+ "recover.discard_ask": {
+  "one": "Siirretäänkö tallenne arkistoon? Sitä ei tarjota uudelleen.",
+  "other": "Siirretäänkö kaikki # tallennetta arkistoon? Niitä ei tarjota uudelleen."
+ },
+ "recover.confirm_yes": "Siirrä arkistoon",
+ "recover.confirm_no": "Säilytä tallenteet"
+}

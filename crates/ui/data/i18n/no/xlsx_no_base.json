@@ -1,0 +1,6 @@
+{
+ "xlsx_no_base.title": "Denne arbeidsboken har ingen sammenligningsdata",
+ "xlsx_no_base.detail": "Det skjulte sammenligningsarket mangler eller er skadet (et annet program lagret arbeidsboken på nytt, eller den er laget for hånd). Hver celle som er forskjellig erstatter modellverdien; modellredigeringer gjort siden eksporten kan ikke oppdages. Rader som mangler i arbeidsboken slettes ikke.",
+ "xlsx_no_base.confirm": "Jeg har kontrollert endringene: erstatt modellverdiene ({n})",
+ "xlsx_no_base.confirm_first": "Bekreft importen av en arbeidsbok uten sammenligningsdata først"
+}

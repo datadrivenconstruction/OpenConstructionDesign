@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "Familie nouă",
+ "family_editor.open_tip": "Deschide familia sau ciorna",
+ "family_editor.close_named": "Închide {name}",
+ "family_editor.unsaved": "Modificări nesalvate",
+ "family_editor.search": "Caută",
+ "family_editor.nothing": "Nimic găsit",
+ "family_editor.sec_families": "Familiile proiectului",
+ "family_editor.sec_drafts": "Ciorne",
+ "family_editor.cap_category": "Categorie",
+ "family_editor.cap_host": "Gazdă",
+ "family_editor.cap_type": "Tip de previzualizare"
+}

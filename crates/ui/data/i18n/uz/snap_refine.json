@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "Tutib olish radiusi",
+ "snap_refine.settings.snap_px_desc": "Tutib olish uchun kursor nuqta yoki chiziqqa qanchalik yaqin kelishi kerak, ekran piksellarida. Sensorli ekranlar va yuqori zichlikli displeylarda kattaroq qiymat qulay.",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "Gorizontal",
+ "snap_refine.hint.vertical": "Vertikal",
+ "snap_refine.hint.perpendicular": "Oldingiga perpendikulyar",
+ "snap_refine.hint.parallel": "Oldingiga parallel",
+ "snap_refine.hint.on_axis": "Devor o'qi bo'yicha",
+ "snap_refine.no_snap": "Tutib olinmaydi (Alt)"
+}

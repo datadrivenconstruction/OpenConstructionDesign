@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "Axe X",
+ "fe.axis.y": "Axe Y",
+ "fe.axis.z": "Axe Z",
+ "fe.col.axis": "Axe",
+ "fe.col.at": "Position",
+ "fe.col.mode": "Mode",
+ "fe.mode.fixed": "Fixe",
+ "fe.mode.free": "Libre",
+ "fe.types.inherited": "Valeur par défaut du paramètre",
+ "fe.csv.more": "Autres actions CSV",
+ "fe.ref.selected": "Plan : {name}"
+}

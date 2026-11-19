@@ -1,0 +1,14 @@
+{
+ "cmd.arch.wall.tile": "Хана",
+ "cmd.arch.door.tile": "Хаалга",
+ "cmd.arch.window.tile": "Цонх",
+ "cmd.arch.floor.tile": "Шал",
+ "cmd.mod.move.tile": "Зөөх",
+ "cmd.mod.copy.tile": "Хуулах",
+ "cmd.mod.rotate.tile": "Эргүүлэх",
+ "cmd.mod.mirror.tile": "Толиорох",
+ "cmd.mod.trim.tile": "Тайрах",
+ "cmd.mod.delete.tile": "Устгах",
+ "cmd.ann.dim.tile": "Хэмжээ",
+ "cmd.ann.text.tile": "Текст"
+}

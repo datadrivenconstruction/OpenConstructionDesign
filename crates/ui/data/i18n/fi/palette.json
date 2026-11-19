@@ -1,0 +1,5 @@
+{
+ "palette.find_named": "Etsi nimellä \"{q}\" olevat elementit",
+ "palette.search_help": "Hae ohjetta haulla \"{q}\"",
+ "palette.not_found": "Ei nimeä \"{q}\""
+}

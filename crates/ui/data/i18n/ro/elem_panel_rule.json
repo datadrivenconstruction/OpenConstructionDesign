@@ -1,0 +1,5 @@
+{
+ "elem.panel_select_wall": "Selectează peretele",
+ "cmd.elem.panel_select_wall": "Selectează peretele",
+ "elem.left_in_place": "Lăsate pe loc: {kinds}. Un panou aparține peretelui său; masele și adnotările se șterg separat."
+}

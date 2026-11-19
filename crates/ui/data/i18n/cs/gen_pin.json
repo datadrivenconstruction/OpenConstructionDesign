@@ -1,0 +1,7 @@
+{
+ "gen.pin.room": "Změnili jste místnost vygenerovaného projektu. Zamkněte ji, aby ji revize projektu ponechala na místě.",
+ "gen.pin.storey": "Změnili jste podlaží vygenerovaného projektu. Zamkněte je, aby revize projektu zachovala jeho stěny a otvory.",
+ "gen.pin.action": "Zamknout",
+ "gen.pin.done": "Zamčeno: revize projektu ji zachová a ostatní prvky rozmístí kolem ní",
+ "gen.pin.failed": "Nepodařilo se zamknout"
+}

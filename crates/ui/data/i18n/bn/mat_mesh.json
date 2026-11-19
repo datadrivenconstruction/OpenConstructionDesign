@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "আমদানি করা মেশ",
+ "mat_mesh.mesh.none_selected": "এই উপকরণ দিতে ৩D ভিউতে আমদানি করা মেশ নির্বাচন করুন।",
+ "mat_mesh.mesh.current": "প্রথম নির্বাচিত মেশ: {material}",
+ "mat_mesh.mesh.current_none": "প্রথম নির্বাচিত মেশের কোনো উপকরণ নেই।",
+ "mat_mesh.mesh.assign": "{n}টি নির্বাচিতে প্রয়োগ করুন",
+ "mat_mesh.mesh.assign_tip": "বাস্তবসম্মত স্টাইল নির্বাচিত মেশে এই উপকরণের টেক্সচার দেখায়",
+ "mat_mesh.mesh.assign_cat": "বিভাগ {category}-এ প্রয়োগ করুন",
+ "mat_mesh.mesh.assign_cat_tip": "ওই বিভাগের প্রতিটি আমদানি করা মেশ, যার নিজস্ব উপকরণ নেই",
+ "mat_mesh.mesh.clear": "নির্বাচিত মুছুন",
+ "mat_mesh.mesh.clear_tip": "নির্বাচিত মেশ বিভাগের উপকরণ বা সাধারণ রংয়ে ফিরবে",
+ "mat_mesh.mesh.clear_cat": "বিভাগ মুছুন"
+}

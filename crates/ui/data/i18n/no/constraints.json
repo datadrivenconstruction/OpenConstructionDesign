@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "Holder denne veggen på gjeldende lengde ved hver redigering",
+ "constraints.con.tip.lock_dist": "Holder avstanden mellom de to veggene ved hver redigering",
+ "constraints.con.tip.equal": "Holder trinnene mellom de valgte veggene like",
+ "constraints.con.tip.align": "Holder begge veggene på én linje",
+ "constraints.con.tip.parallel": "Holder veggene parallelle",
+ "constraints.con.tip.perp": "Holder veggene i rett vinkel",
+ "constraints.con.tip.align_grid": "Holder veggen på nærmeste akselinje",
+ "constraints.con.tip.lock_dist_grid": "Holder avstanden fra veggen til nærmeste akselinje",
+ "constraints.con.tip.level_gap": "Holder avstanden mellom etasjene",
+ "constraints.con.tip.top_to_level": "Holder toppen av veggen på etasjen over"
+}

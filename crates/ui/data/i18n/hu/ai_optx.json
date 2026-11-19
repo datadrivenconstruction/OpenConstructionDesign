@@ -1,0 +1,10 @@
+{
+ "ai.optx.applied": "A(z) „{name}” változat alkalmazva. A visszavonás vázlatba állítja vissza",
+ "ai.optx.missing": "A(z) {id} változat már nem létezik",
+ "ai.optx.accepted": "A(z) {id} változat már alkalmazva van",
+ "ai.optx.not_draft": "A(z) {id} változat elutasításra került, nem alkalmazható",
+ "ai.optx.stale": "A(z) {id} változat készítése után a modell megváltozott: előbb készítse újra",
+ "ai.optx.bad_recipe": "A változat receptje nem olvasható: {e}",
+ "ai.optx.refused": "A változat nem lett alkalmazva ({code}): {reason}",
+ "ai.optx.failed": "A változat nem lett alkalmazva: {e}"
+}

@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "{name} şablonu tarafından denetleniyor",
+ "view_template.edit_template": "Şablonu düzenle",
+ "view_template.locked_tip": "{name} görünüm şablonu tarafından ayarlandı. Değiştirmek için şablonda düzenleyin.",
+ "view_template.no_filters": "Bu görünümde filtre yok"
+}

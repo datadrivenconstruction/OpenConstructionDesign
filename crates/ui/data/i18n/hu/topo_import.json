@@ -1,0 +1,4 @@
+{
+ "topo_import.topo.ambiguous": "{n} sor kihagyva: a szám kétféleképpen olvasható (1,250 = 1.25 vagy 1250?), és a fájl nem mutat tizedesjelet",
+ "topo_import.topo.grouped": "{n} pont számjegycsoportokkal lett beolvasva (1 250,5 vagy 1,234.5)"
+}

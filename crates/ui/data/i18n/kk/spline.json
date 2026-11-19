@@ -1,0 +1,7 @@
+{
+ "spline.opt.spline": "Сплайн",
+ "spline.opt.spline_tip": "Сплайн қабырға: өтетін нүктелерді басыңыз, аяқтау үшін Enter немесе Esc",
+ "spline.wt.three_points": "сплайн қабырғаға үш немесе одан көп нүкте керек",
+ "spline.wt.no_curtain": "шыны қабырғада сплайн осі жоқ",
+ "spline.wt.added": "сплайн қабырға қосылды"
+}

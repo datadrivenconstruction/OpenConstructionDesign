@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "Отмени: {what}",
+ "undo_label.redo_what": "Повтори: {what}",
+ "undo_label.undo_none": "Няма какво да се отмени",
+ "undo_label.redo_none": "Няма какво да се повтори"
+}

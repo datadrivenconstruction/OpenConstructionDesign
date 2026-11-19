@@ -1,0 +1,5 @@
+{
+ "lv.level.deleted_attach": "Nivel șters; {n} pereți și-au pierdut atașarea de la partea de sus",
+ "lv.level.rooms": "{n} încăperi preiau înălțimea nivelului țintă ({dz} m): {names}. Apăsați din nou Mută pentru confirmare",
+ "lv.level.pinned": "Nivel nemodificat: elementele fixate nu pot trece pe alt nivel: {names}. Mai întâi defixați-le"
+}

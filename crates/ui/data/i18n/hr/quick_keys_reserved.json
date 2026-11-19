@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key} je rezervirana ({why}) i ne može se ponovno dodijeliti",
+ "quick.keys.res_copy": "kopiraj",
+ "quick.keys.res_paste": "zalijepi",
+ "quick.keys.res_cut": "izreži",
+ "quick.keys.res_undo": "poništi / ponovi",
+ "quick.keys.res_save": "spremi",
+ "quick.keys.res_palette": "paleta naredbi",
+ "quick.keys.reserved_conflict": "{key} već koristi „{cmd}”. Esc ga zadržava tamo.",
+ "quick.keys.reserved_swap": "Zamijeni",
+ "quick.keys.reserved_take": "Preuzmi",
+ "quick.keys.reserved_keep": "Zadrži",
+ "quick.keys.reserved_os": "Zauzeo sustav:"
+}

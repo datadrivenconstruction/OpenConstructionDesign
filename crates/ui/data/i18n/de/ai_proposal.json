@@ -1,0 +1,13 @@
+{
+ "ai.proposal.title": "Agenten-Vorschlag",
+ "ai.proposal.meta": "{actor} · Vorgänge: {ops}",
+ "ai.proposal.apply.desc": "Übernimmt den gesamten Vorschlag als einen Schritt; Strg+Z macht ihn rückgängig",
+ "ai.proposal.applying": "Wird übernommen…",
+ "ai.proposal.applied": "Der Vorschlag wurde übernommen. Strg+Z macht ihn rückgängig.",
+ "ai.proposal.applied_resync": "Der Vorschlag wurde übernommen, die Ansicht ist aber noch nicht aktualisiert. Sie aktualisiert sich selbst; Strg+Z macht den Schritt rückgängig.",
+ "ai.proposal.stale": "Das Modell wurde nach der Vorschau geändert. Lassen Sie den Agenten den Vorschlag erneut erstellen.",
+ "ai.proposal.toast.applied": "Vorschlag übernommen. Strg+Z macht ihn rückgängig.",
+ "ai.proposal.toast.stale": "Das Modell wurde nach der Vorschau geändert, daher wurde nichts übernommen. Vorschau erneut: Lassen Sie den Agenten den Vorschlag neu erstellen.",
+ "ai.proposal.toast.refused": "Vorschlag nicht übernommen: {reason}",
+ "ai.proposal.rejected": "Der Vorschlag wurde abgelehnt."
+}

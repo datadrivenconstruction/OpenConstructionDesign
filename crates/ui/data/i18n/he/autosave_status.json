@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "השמירה האוטומטית נכשלה, השינויים האחרונים אינם מוגנים. {why}",
+ "autosave_status.autosave_open": "הגדרות שמירה אוטומטית",
+ "autosave_status.autosave_recovered": "השמירה האוטומטית פועלת שוב.",
+ "autosave_status.autosave_reason": "סיבה: {why}"
+}

@@ -1,0 +1,10 @@
+{
+ "view_gfx.vv.visible_tip": "اس ویو میں نظر آتا ہے",
+ "view_gfx.vv.enabled_tip": "یہ فلٹر اس ویو میں لاگو کریں",
+ "view_gfx.vv.reset_tip": "پروجیکٹ کے ڈیفالٹ پر واپس",
+ "view_gfx.vv.col.actions": "اعمال",
+ "view_gfx.vv.nothing_to_apply": "لاگو کرنے کے لیے کوئی تبدیلی نہیں",
+ "view_gfx.flt.save_blocked": "فلٹر کا نام رکھیں اور ہر قاعدے کا پیرامیٹر بھریں",
+ "view_gfx.flt.confirm_delete": "تمام ویوز کے لیے حذف کریں؟",
+ "view_gfx.flt.param_pick": "منتخب کریں…"
+}

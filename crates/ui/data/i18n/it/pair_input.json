@@ -1,0 +1,6 @@
+{
+ "pair_input.pair_hint": "Due valori si separano con il punto e virgola: @1000;500",
+ "pair_input.old_pair": "Una virgola tra due numeri interi non forma più una coppia: scrivi 6000;4000 per due valori o 6000,5 per un decimale",
+ "pair_input.op.bad_length": "Non è una lunghezza: {text} ({why}). Nulla è stato modificato",
+ "pair_input.op.bad_count": "Il conteggio {text} non è stato preso: un numero intero da {min} a {max}"
+}

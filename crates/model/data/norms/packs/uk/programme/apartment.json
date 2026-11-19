@@ -1,0 +1,188 @@
+{
+ "typology": "apartment",
+ "source": "ndss",
+ "clause": "table 1 typical flat programme (counts include the living room)",
+ "variants": [
+  {
+   "code": "1b2p",
+   "select": {
+    "room_kind": [
+     "living",
+     "bedroom"
+    ],
+    "count": 2
+   },
+   "area_min": 50.0,
+   "rooms": [
+    {
+     "kind": "living",
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 7.5,
+     "daylight": true,
+     "min_width": 2.15,
+     "verified": true
+    },
+    {
+     "kind": "kitchen",
+     "daylight": true,
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "bath",
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "hall",
+     "verified": false
+    }
+   ],
+   "allowed": [
+    "storage",
+    "corridor",
+    "wc"
+   ],
+   "circulation_max": 0.18,
+   "storage_max": 0.05,
+   "source": "ndss",
+   "clause": "table 1 typical flat programme (counts include the living room)",
+   "verified": true
+  },
+  {
+   "code": "2b4p",
+   "select": {
+    "room_kind": [
+     "living",
+     "bedroom"
+    ],
+    "count": 3
+   },
+   "area_min": 70.0,
+   "rooms": [
+    {
+     "kind": "living",
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 7.5,
+     "daylight": true,
+     "min_width": 2.15,
+     "verified": true
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 7.5,
+     "daylight": true,
+     "min_width": 2.15,
+     "verified": true
+    },
+    {
+     "kind": "kitchen",
+     "daylight": true,
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "bath",
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "wc",
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "hall",
+     "verified": false
+    }
+   ],
+   "allowed": [
+    "storage",
+    "corridor",
+    "wc"
+   ],
+   "circulation_max": 0.18,
+   "storage_max": 0.05,
+   "source": "ndss",
+   "clause": "table 1 typical flat programme (counts include the living room)",
+   "verified": true
+  },
+  {
+   "code": "3b4p",
+   "select": {
+    "room_kind": [
+     "living",
+     "bedroom"
+    ],
+    "count": 4
+   },
+   "area_min": 74.0,
+   "rooms": [
+    {
+     "kind": "living",
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 7.5,
+     "daylight": true,
+     "min_width": 2.15,
+     "verified": true
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 7.5,
+     "daylight": true,
+     "min_width": 2.15,
+     "verified": true
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 7.5,
+     "daylight": true,
+     "min_width": 2.15,
+     "verified": true
+    },
+    {
+     "kind": "kitchen",
+     "daylight": true,
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "bath",
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "wc",
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "hall",
+     "verified": false
+    }
+   ],
+   "allowed": [
+    "storage",
+    "corridor",
+    "wc"
+   ],
+   "circulation_max": 0.18,
+   "storage_max": 0.05,
+   "source": "ndss",
+   "clause": "table 1 typical flat programme (counts include the living room)",
+   "verified": true
+  }
+ ]
+}

@@ -1,0 +1,476 @@
+[
+ {
+  "id": "ui.appearance",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.look.studio",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.look.engineer",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.look.night",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.look.focus",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.look.contrast",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.look.colour",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.look.classic",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.look.reset",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1",
+  "once": true
+ },
+ {
+  "id": "ui.theme.light",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.theme.dark",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.theme.auto",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.accent.blue",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.accent.teal",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.accent.violet",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.accent.orange",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.accent.rose",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.accent.green",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.accent.azure",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.accent.graphite",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.accent.reset",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1",
+  "once": true
+ },
+ {
+  "id": "ui.font.inter",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.font.plex",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.font.system",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.text.larger",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.text.smaller",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.text.reset",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1",
+  "once": true
+ },
+ {
+  "id": "ui.scale.reset",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1",
+  "once": true
+ },
+ {
+  "id": "ui.density.compact",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.density.normal",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.density.comfortable",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.density.auto",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.icons.studio",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.icons.outline",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.icons.duotone",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.icons.filled",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.icons.outline_duotone",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.icons.duotone_all",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1",
+  "once": true
+ },
+ {
+  "id": "ui.icons.filled_outline",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.ribbon.full",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.ribbon.tabs",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.ribbon.toolbar",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.layout.mode.reset",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1",
+  "once": true
+ },
+ {
+  "id": "ui.layout.mode.save_as",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1",
+  "dialog": true
+ },
+ {
+  "id": "ui.layout.mode.export",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1",
+  "dialog": true
+ },
+ {
+  "id": "ui.layout.mode.import",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1",
+  "dialog": true
+ },
+ {
+  "id": "ui.onboarding",
+  "icon": "setup",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R",
+   "A"
+  ],
+  "stage": "M1",
+  "group": "help",
+  "priority": 8,
+  "dialog": true
+ },
+ {
+  "id": "ui.focus.ai",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.focus.drawings",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.focus.model",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ },
+ {
+  "id": "ui.focus.data",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "M1"
+ }
+]

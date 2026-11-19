@@ -1,0 +1,19 @@
+{
+ "ifc_patch.fallback.source_changed": "A foltozás nem használható: a forrásfájl megváltozott a lemezen, vagy nem olvasható. A fájl a modellből lett újraírva.",
+ "ifc_patch.fallback.sources": "A foltozás nem használható: a projektnek nincs pontosan egy forrása. A fájl a modellből lett újraírva.",
+ "ifc_patch.fallback.schema": "A foltozás nem használható: a forrásfájl sémája nem támogatott. A fájl a modellből lett újraírva.",
+ "ifc_patch.fallback.structure": "A foltozás nem használható: a forrásfájl szerkezetének nem lehet megbízni. A fájl a modellből lett újraírva.",
+ "ifc_patch.fallback.edit": "A foltozás nem használható: a módosítás biztonságosan nem alkalmazható a forrásfájlra. A fájl a modellből lett újraírva.",
+ "ifc_patch.reason.schema": "A forrásfájl sémája nem tudja tárolni ezt a módosítást; az elem a forrásban marad",
+ "ifc_patch.reason.prop": "Ezt a tulajdonságmódosítást nem lehet kifejezni a forrásfájlban; az érték a forrásban marad",
+ "ifc_patch.reason.no_export": "Ennek az új elemnek nincs IFC-ábrázolása",
+ "ifc_patch.reason.link": "Az elem benne van a fájlban, de anyagához vagy típusához tartozó hivatkozás nem íródik; nem írt elemként szerepel",
+ "ifc_patch.drop": "Eldobás",
+ "ifc_patch.drop_done": "Függő hivatkozások eldobva: {n}; többé nem próbálkozunk újra",
+ "ifc_patch.fallback.building": "A foltozás nem használható: új szinthez pontosan egy épület kell a forrásfájlban, de nincs vagy több van. A fájl a modellből lett újraírva.",
+ "ifc_patch.fallback.types": "A foltozás nem használható: az importálás óta szintek, típusok vagy anyagok változtak, és a foltozás ezeket nem tudja írni. A fájl a modellből lett újraírva.",
+ "ifc_patch.fallback.zipped": "A foltozás nem használható: tömörített forrásfájl nem foltozható. A fájl a modellből lett újraírva.",
+ "ifc_patch.fallback.source_kept": "A forrásfájl nem lett felülírva: ezt a mentést nem lehetett megbízhatóan lecserélni vele. Ez a mentés egy másolat mellette.",
+ "ifc_patch.fallback.nested": "A foltozás nem használható: egy új elemnek beágyazott részei vannak (például csatlakozók), amelyeket a foltozás nem tud írni. A fájl a modellből lett újraírva.",
+ "ifc_patch.fallback.shared_part": "A foltozás nem használható: egy szerkesztett lépcső vagy rámpa egyik része egy másik elem vagy kapcsolat is használja, amit a foltozás nem tud figyelembe venni. A fájl a modellből lett újraírva."
+}

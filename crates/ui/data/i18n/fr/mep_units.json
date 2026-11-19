@@ -1,0 +1,8 @@
+{
+ "mep_units.unit.mm": "mm",
+ "mep_units.unit.in": "po",
+ "mep_units.dn": "DN",
+ "mep_units.diameter": "Diamètre",
+ "mep_units.system.new": "Nouveau système",
+ "mep_units.system.none": "Aucun système"
+}

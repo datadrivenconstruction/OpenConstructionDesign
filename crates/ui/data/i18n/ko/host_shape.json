@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "도머 개구부",
+ "cmd.arch.roof_opening": "지붕 개구부",
+ "cmd.arch.roof_extrusion": "압출로 지붕 만들기",
+ "cmd.arch.ceiling_opening": "천장 개구부",
+ "cmd.str.slab_opening": "바닥 개구부",
+ "cmd.ctx.wall.detach": "상단 분리",
+ "cmd.ctx.floor.sketch": "경계 편집",
+ "cmd.ctx.floor.shape": "형상 편집",
+ "host_shape.shape.elev_prompt": "입면, mm…",
+ "host_shape.shape.elev_mm": "{v} mm",
+ "host_shape.sketch.no_host": "이 레벨에서 경계 아래에 호스트가 없습니다",
+ "host_shape.issue.roof": "지붕 {id}: {e}",
+ "host_shape.issue.ceiling": "천장 {id}: {e}",
+ "host_shape.status.select_slab": "슬래브를 선택하세요",
+ "host_shape.status.select_walls": "벽을 선택하세요",
+ "host_shape.status.no_roof_or_level": "위에 지붕 또는 레벨이 없습니다",
+ "host_shape.status.top_attached": "벽 상단 연결됨",
+ "host_shape.status.top_detached": "벽 상단 분리됨",
+ "host_shape.status.straight_wall": "직선 벽이 필요합니다",
+ "host_shape.status.roof_extruded": "압출 지붕 생성됨",
+ "warn.kind.cut": "절단 또는 연결이 만들어지지 않음"
+}

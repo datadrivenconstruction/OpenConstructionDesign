@@ -1,0 +1,4 @@
+{
+ "vv_conflict.vv.switched": "Aktiivinen näkymä vaihtui. Nämä muokkaukset kuuluvat kohteeseen {view} eikä niitä ole vielä otettu käyttöön: Käytä kirjoittaa ne kohteeseen {view}, Hylkää poistaa ne.",
+ "vv_conflict.vv.discard": "Hylkää muokkaukset"
+}

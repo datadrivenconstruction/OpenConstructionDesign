@@ -1,0 +1,10 @@
+{
+ "cmd.view.axes_full": "Tam eksenler",
+ "cmd.view.axes_full.desc": "X ve Y eksenlerini planın tamamında tam çizgi olarak gösterir. Yalnızca basılı tutulduğunda görmek için F9 tuşunu basılı tutun.",
+ "settings.axes_full": "Eksenler",
+ "settings.axes_full_desc": "Pafta boyunca tam çizgi olarak plan eksenleri. Hızlıca bakmak için F9 tuşunu basılı tutun.",
+ "settings.axes_full_on": "Tam eksenleri göster",
+ "plan.hud.axes_tip": "Tam eksenleri göstermek için {key} tuşunu basılı tutun",
+ "status.axes_full.on": "Tam eksenler açık",
+ "status.axes_full.off": "Tam eksenler kapalı"
+}

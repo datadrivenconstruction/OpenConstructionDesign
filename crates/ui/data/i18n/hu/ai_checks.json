@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "mért érték: {value}, határ: {limit}",
+ "ai_checks.check.cap": "{shown} / {total} megállapítás látható. A hibák vannak elöl: javítsa őket, és futtassa újra.",
+ "ai_checks.check.run_again": "Újrafuttatás",
+ "ai_checks.check.goto": "Kijelölés és nagyítás",
+ "ai_checks.check.never_title": "Még nincs ellenőrizve",
+ "ai_checks.check.never_hint": "Futtassa az ellenőrzéseket, és az eredmények itt jelennek meg.",
+ "ai_checks.check.sec.error": "Hibák",
+ "ai_checks.check.sec.warning": "Figyelmeztetések",
+ "ai_checks.check.sec.info": "Megjegyzések"
+}

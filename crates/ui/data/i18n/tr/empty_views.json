@@ -1,0 +1,19 @@
+{
+ "empty.v3d_gpu.title": "Bu grafik adaptöründe 3D kullanılamıyor",
+ "empty.v3d_gpu.hint": "Model güvenli ve plan çalışıyor. 3D'yi yeniden denemek için güvenli grafiklerle yeniden başlatın.",
+ "empty.v3d_gpu.action": "Güvenli grafiklerle yeniden başlat",
+ "empty.v3d_loading.title": "3D oluşturuluyor…",
+ "empty.v3d_loading.pct": "Açılıyor… {pct} %",
+ "empty.plan_hidden.title": "Bu plandaki tüm öğeler gizli",
+ "empty.plan_hidden.hint": "Geçici gizleme veya izolasyon görünür bir şey bırakmıyor.",
+ "empty.plan_hidden.action": "Tümünü göster",
+ "empty.plan_graphics.title": "Görünüm grafikleri tüm kategorileri gizliyor",
+ "empty.plan_graphics.hint": "Bu görünümün kategori kuralları gösterilecek bir şey bırakmıyor.",
+ "empty.plan_graphics.action": "Görünüm grafiklerini aç",
+ "empty.plan_phase.title": "Faz filtresi her şeyi gizliyor",
+ "empty.plan_phase.hint": "Bu kattaki hiçbir şey bu görünümde gösterilen fazda değil.",
+ "empty.plan_phase.action": "Fazı değiştir",
+ "empty.plan_level.title": "Bu katta öğe yok",
+ "empty.plan_level.hint": "Bu modelin diğer katlarında öğeler var.",
+ "empty.plan_level.action": "Öğeli kata git"
+}

@@ -1,0 +1,8 @@
+{
+ "cmd.props.param_lock": "Bloquear ou desbloquear valor do parâmetro",
+ "locked_values.kept": "{n} valores bloqueados mantidos",
+ "locked_values.locked": "“{name}” bloqueado: importação planilha XLSX, edição em massa e IA mantêm-no",
+ "locked_values.unlocked": "“{name}” desbloqueado",
+ "locked_values.locked_tip": "Bloqueado: importação planilha XLSX, edição em massa e IA mantêm este valor. Clique para desbloquear  ·  Ctrl+L",
+ "locked_values.no_row": "Aponte para uma linha de parâmetro em Propriedades e prima Ctrl+L"
+}

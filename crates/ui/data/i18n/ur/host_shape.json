@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "ڈورمر اوپننگ",
+ "cmd.arch.roof_opening": "چھت میں اوپننگ",
+ "cmd.arch.roof_extrusion": "ایکسٹروژن سے چھت",
+ "cmd.arch.ceiling_opening": "سیلنگ میں اوپننگ",
+ "cmd.str.slab_opening": "فرش میں اوپننگ",
+ "cmd.ctx.wall.detach": "اوپر سے الگ کریں",
+ "cmd.ctx.floor.sketch": "باؤنڈری میں ترمیم",
+ "cmd.ctx.floor.shape": "شکل میں ترمیم",
+ "host_shape.shape.elev_prompt": "بلندی، mm…",
+ "host_shape.shape.elev_mm": "{v} mm",
+ "host_shape.sketch.no_host": "اس لیول پر باؤنڈری کے نیچے کوئی میزبان نہیں",
+ "host_shape.issue.roof": "چھت {id}: {e}",
+ "host_shape.issue.ceiling": "سیلنگ {id}: {e}",
+ "host_shape.status.select_slab": "سلیب منتخب کریں",
+ "host_shape.status.select_walls": "دیواریں منتخب کریں",
+ "host_shape.status.no_roof_or_level": "اوپر کوئی چھت یا لیول نہیں",
+ "host_shape.status.top_attached": "دیواروں کے اوپری سرے جوڑ دیے گئے",
+ "host_shape.status.top_detached": "دیواروں کے اوپری سرے الگ کر دیے گئے",
+ "host_shape.status.straight_wall": "سیدھی دیوار درکار ہے",
+ "host_shape.status.roof_extruded": "ایکسٹروژن سے چھت بن گئی",
+ "warn.kind.cut": "کٹ یا جوڑ نہیں بنا"
+}

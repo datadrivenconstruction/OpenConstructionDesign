@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "每次编辑时保持此墙的当前长度",
+ "constraints.con.tip.lock_dist": "每次编辑时保持两面墙之间的距离",
+ "constraints.con.tip.equal": "使所选墙之间的间距保持相等",
+ "constraints.con.tip.align": "使两面墙保持在同一条线上",
+ "constraints.con.tip.parallel": "保持墙面平行",
+ "constraints.con.tip.perp": "保持墙面成直角",
+ "constraints.con.tip.align_grid": "使墙保持在最近的轴网线上",
+ "constraints.con.tip.lock_dist_grid": "保持墙到最近轴网线的距离",
+ "constraints.con.tip.level_gap": "保持楼层之间的间距",
+ "constraints.con.tip.top_to_level": "保持墙顶位于上方楼层标高处"
+}

@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "medido {value}, límite {limit}",
+ "ai_checks.check.cap": "Mostrando {shown} de {total} hallazgos. Los errores van primero: corríjalos y ejecute de nuevo.",
+ "ai_checks.check.run_again": "Ejecutar de nuevo",
+ "ai_checks.check.goto": "Seleccionar y acercar",
+ "ai_checks.check.never_title": "Todavía no comprobado",
+ "ai_checks.check.never_hint": "Ejecute las comprobaciones y los hallazgos aparecerán aquí.",
+ "ai_checks.check.sec.error": "Errores",
+ "ai_checks.check.sec.warning": "Advertencias",
+ "ai_checks.check.sec.info": "Notas"
+}

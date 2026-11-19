@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "Přeskočené řádky a buňky",
+ "xlsx_issues.conflicts_title": "Změněno na obou místech",
+ "xlsx_issues.missing_title": "List v sešitu chybí",
+ "xlsx_issues.look_alike_title": "Název listu neodpovídá",
+ "xlsx_issues.mass_title": "Hromadné smazání vyžaduje potvrzení",
+ "xlsx_issues.sheets_missing": "Listy {sheets} v sešitu chybí (přejmenovány nebo smazány); jejich řádky nebyly porovnány.",
+ "xlsx_issues.keep_model": "Ponechat model",
+ "xlsx_issues.take_book": "Převzít ze sešitu",
+ "xlsx_issues.open_book_tip": "Otevře soubor v jeho aplikaci. V modelu se nic nemění; náhled se po uložení sešitu znovu načte."
+}

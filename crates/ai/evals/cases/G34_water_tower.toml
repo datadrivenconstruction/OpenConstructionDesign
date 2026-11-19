@@ -1,0 +1,44 @@
+id = "G34_water_tower"
+tier = "hard"
+group = "Any geometry"
+title = "Water tower"
+lang = "es"
+base = "empty"
+
+[[turn]]
+say = "Un depósito elevado de agua: cuba de 10 m de diámetro y 500 m3 sobre cuatro pilares inclinados de 30 m, separados 12 m en la base y 6 m bajo la cuba, con arriostramiento en X en cada tramo, escalera de gato y pasarela perimetral alrededor de la cuba."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "col"
+min = 4.0
+
+[[oracle.count]]
+spec = "beam+brace"
+min = 12.0
+
+[[oracle.count]]
+spec = "comp:tank|vessel|cistern+solid+mesh+freeform"
+min = 1.0
+
+[[oracle.geom]]
+kind = "height"
+min = 34.0
+max = 48.0
+
+[[oracle.geom]]
+kind = "waist"
+ratio_max = 0.8
+at_min = 0.4
+at_max = 0.95
+flare_min = 1.1
+bands = 10.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

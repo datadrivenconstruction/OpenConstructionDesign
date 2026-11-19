@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "Hoogte {t} is niet overgenomen ({why}). Er is niets gewijzigd",
+ "host_shape.shape.elev_prompt_in": "hoogte, ft-in…",
+ "host_shape.shape.elev_in": "{v} in"
+}

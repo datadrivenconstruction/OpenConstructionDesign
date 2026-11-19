@@ -1,0 +1,11 @@
+{
+ "job.stage.prepare": "Loyiha tayyorlanmoqda",
+ "open_guard.already_open": "{name} allaqachon ochiq",
+ "open_guard.from_cache": "{name}: import keshidan ochildi",
+ "open_guard.known_project": "{name} avval import qilingan: shu loyiha ochilmoqda",
+ "open_guard.locate": "Topish",
+ "open_guard.mem_low": "Xotira kam: mesh byudjeti yarmiga kamaytirildi, tafsilot darajasini qurish to'xtatildi",
+ "open_guard.mem_low_short": "Xotira kam: xotira bo'shamaguncha tafsilot darajasini qurish to'xtatildi",
+ "open_guard.no_window": "Bu loyihaning oynasi topilmadi",
+ "open_guard.switch_window": "Shu oynaga o'tish"
+}

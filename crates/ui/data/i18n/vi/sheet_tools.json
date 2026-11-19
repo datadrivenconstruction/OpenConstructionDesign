@@ -1,0 +1,18 @@
+{
+ "undo.entry_later": "Chưa hoàn tác: có thay đổi khác được thực hiện sau nó. Hãy hoàn tác thay đổi đó trước.",
+ "undo.entry_gone": "Chưa hoàn tác: thay đổi này đã được hoàn tác hoặc không còn trong lịch sử.",
+ "undo.entry_busy": "Hãy hoàn thành hoặc hủy bản vẽ hiện tại trước, rồi mới hoàn tác.",
+ "quick.hud.more": "Thêm trong Thuộc tính: {names}",
+ "sheet_tools.sheet.more": "Thêm công cụ tờ",
+ "job.of": "{d} trên {t}",
+ "job.of.mb": "{d} trên {t} MB",
+ "job.left.under_minute": "còn chưa đầy một phút",
+ "job.left.minutes": "còn khoảng {n} phút",
+ "sheet_tools.start.units": "Đơn vị",
+ "sheet_tools.print.save": {
+  "one": "Lưu # tờ",
+  "other": "Lưu # tờ"
+ },
+ "sheet_tools.sets.delete_ask": "Xóa bộ “{name}”? Các tờ của nó vẫn ở trong dự án.",
+ "sheet_tools.keep": "Giữ"
+}

@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "Midagi ei leitud",
+ "empty.browser_search.hint": "Selle otsinguga ei sobi ükski vaade, tase, tüüp ega ruum.",
+ "empty.browser_search.action": "Tühista otsing",
+ "empty.xl_filtered.title": "Filtritele ei vasta ükski kirje",
+ "empty.xl_filtered.hint": "Lülita sisse rohkem liike, vali teine leht või muuda otsingutekstu.",
+ "empty.xl_filtered.action": "Tühista filtrid",
+ "empty.xl_nochanges.title": "Töövihikus muudatusi pole",
+ "empty.xl_nochanges.hint": "Töövihik vastab mudelile: impordimine ei muudaks midagi.",
+ "empty.version_same.title": "Mudelid on identsed",
+ "empty.version_same.hint": "Avatud mudeli ja valitud versiooni vahel erinevusi ei leitud.",
+ "empty.templates.title": "Vaate malle veel pole",
+ "empty.templates.hint": "Loo praegusest vaatest mall, et selle seadeid teistes vaadetes taaskasutada.",
+ "empty.templates.action": "Nimeta mall",
+ "empty.fe_params.title": "Parameetreid veel pole",
+ "empty.fe_params.hint": "Lisa allpool parameeter, et juhtida mõõtmeid, materjale või nähtavust.",
+ "empty.fe_params.action": "Lisa parameeter"
+}

@@ -1,0 +1,3 @@
+{
+ "find_replace.refresh_failed": "{n} csere {m} elemben; a nézet frissítése sikertelen: {e}"
+}

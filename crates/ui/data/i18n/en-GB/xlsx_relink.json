@@ -1,0 +1,14 @@
+{
+ "xlsx_relink.title": "The linked workbook was moved or renamed",
+ "xlsx_relink.body": "Workbook “{file}” is no longer in {folder}. Edits typed into it come back only after it is linked again.",
+ "xlsx_relink.found_one": "Found “{file}” in {folder}: the same project and the same export. Link it?",
+ "xlsx_relink.found_many": "{n} workbooks of this project and this export were found. Pick the one to link:",
+ "xlsx_relink.found_none": "No workbook of this export was found next to it. Find it, or export a new workbook.",
+ "xlsx_relink.link": "Link “{file}”",
+ "xlsx_relink.find": "Find it…",
+ "xlsx_relink.find_title": "Find the linked workbook",
+ "xlsx_relink.export_new": "Export new workbook",
+ "xlsx_relink.close": "Close",
+ "xlsx_relink.gone": "Workbook “{file}” is no longer in its folder. Edits typed into it come back only after it is linked again.",
+ "xlsx_relink.found_one_short": "Found “{file}”: the same project and the same export. Link it?"
+}

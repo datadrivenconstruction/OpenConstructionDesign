@@ -1,0 +1,7 @@
+{
+ "diff.kind.added": "qo'shildi",
+ "diff.kind.changed": "o'zgartirildi",
+ "diff.kind.deleted": "o'chirildi",
+ "diff.kind.refused": "rad etildi",
+ "diff.kind.conflict": "ziddiyat"
+}

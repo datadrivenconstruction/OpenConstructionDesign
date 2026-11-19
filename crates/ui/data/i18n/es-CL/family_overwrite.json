@@ -1,0 +1,16 @@
+{
+ "family_overwrite.ow.title": "¿Reemplazar los valores de los tipos del proyecto?",
+ "family_overwrite.ow.body": "La carga reemplaza {values} en {types}. Instancias colocadas de estos tipos: {instances}.",
+ "family_overwrite.ow.values": {
+  "one": "# valor",
+  "other": "# valores"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# tipo",
+  "other": "# tipos"
+ },
+ "family_overwrite.ow.list": "Tipos: {list}",
+ "family_overwrite.ow.more": "y {n} más",
+ "family_overwrite.ow.back": "Volver a editar",
+ "family_overwrite.ow.replace": "Reemplazar valores"
+}

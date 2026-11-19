@@ -1,0 +1,9 @@
+{
+ "ai.plan.reject_ask": {
+  "one": "# تبدیلی مسترد کریں؟",
+  "other": "# تبدیلیاں مسترد کریں؟"
+ },
+ "ai.plan.reject_ask.hint": "مسودہ اور آپ کے نشانات ضائع ہو جائیں گے۔ ماڈل جیسا ہے ویسا رہے گا۔",
+ "ai.plan.reject_confirm": "مسترد",
+ "ai.plan.reject_keep": "رکھیں"
+}

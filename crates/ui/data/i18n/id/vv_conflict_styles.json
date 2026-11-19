@@ -1,0 +1,6 @@
+{
+ "vv_conflict.styles.conflict": "Gaya objek dari kategori yang diedit berubah di model (urungkan atau jendela lain) saat jendela ini memiliki suntingan. Suntingan Anda dipertahankan.",
+ "vv_conflict.styles.keep": "Simpan suntingan saya",
+ "vv_conflict.styles.reload": "Muat ulang",
+ "vv_conflict.styles.answer_first": "Pilih Simpan suntingan saya atau Muat ulang terlebih dahulu"
+}

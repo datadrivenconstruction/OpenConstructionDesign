@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "{name} shabloni boshqaradi",
+ "view_template.edit_template": "Shablonni tahrirlash",
+ "view_template.locked_tip": "{name} ko'rinish shabloni o'rnatgan. Uni shablonda o'zgartiring.",
+ "view_template.no_filters": "Bu ko'rinishda filtrlar yo'q"
+}

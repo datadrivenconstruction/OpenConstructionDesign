@@ -1,0 +1,15 @@
+{
+ "mcp.ask.cancel": "Abbrechen",
+ "mcp.ask.auto.title": "KI-Agenten Änderungen ohne Nachfrage anwenden lassen?",
+ "mcp.ask.auto.body": "Verbundene KI-Agenten wenden ihre Änderungen sofort auf Entwürfe an, ohne Ihre Bestätigung abzuwarten; eine falsche Änderung kann also landen, bevor Sie sie sehen. Ihr Modell ändert sich erst, wenn Sie Anwenden drücken. Das gilt, bis Sie es ausschalten, den Editor schließen oder ein anderes Modell öffnen.",
+ "mcp.ask.auto.yes": "Ohne Nachfrage anwenden",
+ "mcp.ask.token.title": "Neues Token ausstellen?",
+ "mcp.ask.token.body": "Das aktuelle Token funktioniert sofort nicht mehr: verbundene KI-Agenten werden getrennt und brauchen das neue Token. Es wird nur einmal angezeigt, kopieren Sie es also sofort.",
+ "mcp.ask.token.yes": "Neues Token",
+ "mcp.auto.chip": "Automatisches Anwenden ein",
+ "mcp.auto.chip_tip": "KI-Agenten wenden Änderungen ohne Nachfrage auf Entwürfe an. Endet mit dieser Sitzung.",
+ "mcp.auto.ask_again": "Wieder nachfragen",
+ "mcp.token.once": "Kopieren Sie dieses Token jetzt: es wird nicht erneut angezeigt.",
+ "mcp.renewed": "Neues Token ausgestellt: das alte funktioniert nicht mehr",
+ "mcp.copied": "Kopiert"
+}

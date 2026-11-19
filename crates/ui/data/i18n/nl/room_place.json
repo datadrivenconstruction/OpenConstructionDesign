@@ -1,0 +1,8 @@
+{
+ "cmd.arch.room_auto": "Ruimten automatisch plaatsen",
+ "cmd.arch.room_auto.desc": "Plaatst een ruimte in elke gesloten begrenzing van de actieve verdieping die er nog geen heeft. Open wandlussen worden overgeslagen en nooit op gok gesloten. Eén stap ongedaan maken.",
+ "room_place.placed": "Geplaatste ruimten: {n}. Gebieden die al een ruimte hadden: {m}. Open lussen overgeslagen: {k}",
+ "room_place.all_had": "Niets geplaatst: alle {m} gesloten gebieden hebben al een ruimte. Open lussen overgeslagen: {k}",
+ "room_place.none": "Niets geplaatst: de verdieping heeft geen gesloten wandgebieden",
+ "room_place.none_open": "Niets geplaatst: de verdieping heeft geen gesloten wandgebieden. Open lussen overgeslagen: {k}"
+}

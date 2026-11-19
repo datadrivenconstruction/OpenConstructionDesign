@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "Попередній аркуш (Page Up)",
+ "sheets.print.next": "Наступний аркуш (Page Down)",
+ "sheets.print.fit": "Вмістити сторінку (подвійний клік)",
+ "sheets.print.no_sheets": "Немає аркушів для перегляду",
+ "sheets.print.building": "Побудова сторінки…",
+ "sheets.print.stop_build": "Зупинити",
+ "sheets.print.build_stopped": "Побудову сторінки зупинено",
+ "sheets.print.retry": "Побудувати знову",
+ "sheets.print.build_failed": "Не вдалося побудувати попередній перегляд"
+}

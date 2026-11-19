@@ -1,0 +1,8 @@
+{
+ "v3d.proj.to_ortho": "Перейти до ортогональної проєкції",
+ "v3d.proj.to_persp": "Перейти до перспективи",
+ "v3d.walk.unit.m": "м/с",
+ "v3d.walk.unit.ft": "фут/с",
+ "v3d.temp.show_all": "Показати всі  ·  Esc",
+ "v3d.msg.deleted_named": "Видалено 3D-вид {name}"
+}

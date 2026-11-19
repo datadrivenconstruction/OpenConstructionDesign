@@ -1,0 +1,7 @@
+{
+ "recover.untitled_note": "Този проект никога не е бил запазван",
+ "recover.file_missing": "Файлът на проекта не е намерен",
+ "recover.banner": "Открита е незаписана работа от предишна сесия за {name}",
+ "recover.banner_review": "Преглед",
+ "recover.later_archived": "Отложено {n} пъти: снимките са преместени в архива"
+}

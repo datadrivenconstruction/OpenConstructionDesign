@@ -1,0 +1,18 @@
+family AHU Six
+category equipment
+host floor
+param Length length type 2400mm
+param Width length type 1100mm
+param Height length type 1500mm
+param DuctD length type 400mm
+param PipeD length type 50mm
+type "2400x1100" Length=2400mm
+type "3200x1400" Length=3200mm, Width=1400mm, Height=1900mm, DuctD=630mm
+extrude Casing rect(-Length / 2, -Width / 2, Length / 2, Width / 2) z(0, Height)
+symbol rect(-Length / 2, -Width / 2, Length / 2, Width / 2)
+connector Supply duct supply_air at(Length / 4, 0, Height) dir(0, 0, 1) size(DuctD)
+connector Return duct return_air at(-Length / 4, 0, Height) dir(0, 0, 1) size(DuctD)
+connector Exhaust duct exhaust_air at(0, 0, Height) dir(0, 0, 1) size(DuctD)
+connector HotWater pipe hot_water at(Length / 2, -Width / 4, Height / 2) dir(1, 0, 0) size(PipeD)
+connector ColdWater pipe cold_water at(Length / 2, Width / 4, Height / 2) dir(1, 0, 0) size(PipeD)
+connector Power conduit power at(-Length / 2, 0, Height / 2) dir(-1, 0, 0) size(32mm)

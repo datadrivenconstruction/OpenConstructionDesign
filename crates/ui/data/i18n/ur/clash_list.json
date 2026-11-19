@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "سب",
+ "clash_list.only_selected": "صرف منتخب",
+ "clash_list.tolerance": "ٹالرنس",
+ "clash_list.gap": "خلا",
+ "clash_list.export": "برآمد",
+ "clash_list.col.volume": "حجم",
+ "clash_list.fix.up": "اوپر لے جائیں",
+ "clash_list.fix.down": "نیچے لے جائیں",
+ "clash_list.fix.sleeve": "سلیو",
+ "clash_list.apply_fix": "درستگی لاگو کریں",
+ "clash_list.err.tol": "ٹالرنس: لمبائی درج کریں (0 یا زیادہ)، مثلاً 50 یا 2 in",
+ "clash_list.sleeve_no_host": "سلیو کے لیے جوڑے میں دیوار یا سلیب درکار ہے",
+ "clash_list.err.gap": "خلا: لمبائی درج کریں (0 یا زیادہ)، مثلاً 50 یا 2 in"
+}

@@ -1,0 +1,16 @@
+{
+ "cmd.drawing.to_detail": "Drawing to detail",
+ "cmd.drawing.to_detail.desc": "Turns the picked drawing primitives, or the whole drawing on this level, into detail lines, text notes and regions on the plan. The drawing stays as it is.",
+ "detail_items.st.no_drawing": "No drawing on this level",
+ "detail_items.st.nothing": "Nothing to convert: no lines, arcs, texts or fills on shown layers",
+ "detail_items.st.done": "Detail items added: lines {lines}, texts {texts}, regions {regions}",
+ "detail_items.st.failed": "Could not add detail items: {e}",
+ "detail_items.st.warn": "Detail items added, but the view could not be refreshed (lines {lines}, texts {texts}, regions {regions}): {e}. Undo removes them.",
+ "detail_items.st.bad_view": "Detail items need a plan or section view",
+ "detail_items.st.no_transform": "This view has no usable coordinate system for the drawing; nothing was added",
+ "drafting_tools.free.plan_only": "This command works on plan elements; open a plan",
+ "drafting_tools.free.zero": "The two points coincide; nothing was added",
+ "drafting_tools.free.select_first": "Select the items of this view to distribute first",
+ "drafting_tools.free.pick_item": "Click an item of this view to tag it",
+ "drafting_tools.free.dim_kind": "Only linear dimensions work in a drafting view"
+}

@@ -1,0 +1,8 @@
+{
+ "drafts.drafts.head": "Les éditeurs ouverts contiennent des modifications qui ne sont pas encore dans le projet :",
+ "drafts.draft.family": "Famille « {name} »",
+ "drafts.draft.line": "Bibliothèque de lignes : {name}",
+ "drafts.draft.styles": "Styles de ligne de la plage de vue",
+ "drafts.btn.save_all": "Tout enregistrer",
+ "drafts.drafts.refused": "Un brouillon n'a pas pu être enregistré. Rien n'a été fermé ; l'éditeur contenant le brouillon reste ouvert."
+}

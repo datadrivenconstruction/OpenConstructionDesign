@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D",
+ "phases.current_mark": "aktuell",
+ "phases.make_current": "Als aktuell festlegen",
+ "phases.col_phase": "Phase",
+ "phases.col_filter": "Filter",
+ "phases.presets": "Plan-Voreinstellungen",
+ "phases.del_title": "Phase löschen",
+ "phases.del_text": "Phase „{name}“ löschen? Ihre Elemente werden in die unten gewählte Phase verschoben.",
+ "phases.del_into": "Elemente verschieben nach",
+ "phases.del_ok": "Löschen",
+ "phases.col_kind": "Elementtyp",
+ "phases.col_count": "Anzahl",
+ "phases.col_volume": "Volumen"
+}

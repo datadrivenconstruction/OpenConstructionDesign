@@ -1,0 +1,6 @@
+{
+ "delsafe.ring.opening_shape": "Omrisset av en åpning ville krysse seg selv eller falle sammen",
+ "delsafe.ring.opening_boundary": "En åpning ville krysse eller berøre ytre avgrensning",
+ "delsafe.ring.openings_overlap": "Åpninger ville overlappe eller berøre hverandre",
+ "xl.msg.delsafe_instance_param_on_types": "parameteren '{}' er en forekomstparameter; rediger den på elementarket, ikke brukt"
+}

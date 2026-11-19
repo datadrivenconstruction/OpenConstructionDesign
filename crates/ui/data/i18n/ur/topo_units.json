@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "اکائیاں",
+ "topo_units.unit": "فائل میں اکائیاں",
+ "topo_units.unit.m": "m",
+ "topo_units.unit.cm": "cm",
+ "topo_units.unit.mm": "mm",
+ "topo_units.unit.ft": "ft",
+ "topo_units.unit.usft": "US survey ft",
+ "topo_units.unit.in": "in",
+ "topo_units.unit.from_file": "فائل اپنی اکائیاں بتاتی ہے: {unit}",
+ "topo_units.unit.suggested": "فائل اکائیوں کا نام نہیں لیتی۔ وسعت سے تجویز کردہ: {unit} — نیچے کا نتیجہ جانچیں",
+ "topo_units.extent": "پروجیکٹ اکائیوں میں نتیجہ: پلان میں {x} × {y} {u}، اونچائی کی رینج {z} {u}",
+ "topo_units.extent.none": "نتیجہ: ان انتخابات سے درآمد کرنے کو کچھ نہیں",
+ "topo_units.extent.check": "یہ سائٹ نہیں لگتی: اکائیاں جانچیں"
+}

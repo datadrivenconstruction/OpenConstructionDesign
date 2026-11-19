@@ -1,0 +1,10 @@
+{
+ "ai.optx.applied": "옵션 “{name}” 적용됨. 실행 취소하면 초안으로 돌아갑니다",
+ "ai.optx.missing": "옵션 {id}이 더 이상 없습니다",
+ "ai.optx.accepted": "옵션 {id}은 이미 적용됨",
+ "ai.optx.not_draft": "옵션 {id}은 거부되어 적용할 수 없습니다",
+ "ai.optx.stale": "옵션 {id}을 만든 후 모델이 변경되었습니다: 먼저 다시 생성하세요",
+ "ai.optx.bad_recipe": "옵션 레시피를 읽을 수 없음: {e}",
+ "ai.optx.refused": "옵션이 적용되지 않음 ({code}): {reason}",
+ "ai.optx.failed": "옵션이 적용되지 않음: {e}"
+}

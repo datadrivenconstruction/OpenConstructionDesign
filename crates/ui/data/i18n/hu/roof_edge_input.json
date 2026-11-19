@@ -1,0 +1,23 @@
+{
+ "roof_edge.err.number": "Adjon meg egy számot",
+ "roof_edge.err.positive": "Nullánál nagyobbnak kell lennie",
+ "roof_edge.err.nonneg": "Nem lehet negatív",
+ "roof_edge.err.max": "Nem lehet nagyobb {max}-nál",
+ "roof_edge.list.empty_hint": "Homlokzati szegélyek, ereszcsatornák, ereszdeszkák vagy tetőablakok hozzáadása a tető parancsaival",
+ "roof_edge.edit_tip": "Tulajdonságok szerkesztése",
+ "roof_edge.delete_tip": "Törlés",
+ "roof_edge.pe.del_tip": "Pont eltávolítása (egy metszet legalább 3 pontot tart meg)",
+ "roof_edge.pe.up_tip": "Pont mozgatása felfelé",
+ "roof_edge.confirm_edge": "Törli: {name}? A Ctrl+Z visszahozza.",
+ "roof_edge.confirm_profile": "Törli a(z) {name} profilt? A Ctrl+Z visszahozza.",
+ "roof_edge.deleted_one": "Törölve: {name}",
+ "roof_edge.deleted_n": {
+  "one": "# elem törölve",
+  "other": "# elem törölve"
+ },
+ "roof_edge.profile_deleted": "Profil törölve",
+ "roof_edge.profile_in_use": {
+  "one": "# szélelem használja: előbb törölje vagy módosítsa",
+  "other": "# szélelem használja: előbb törölje vagy módosítsa"
+ }
+}

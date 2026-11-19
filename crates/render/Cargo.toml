@@ -1,0 +1,25 @@
+[package]
+name = "ddc-render"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "wgpu viewport renderer: scene chunks, instancing, camera, picking, offscreen"
+
+[dependencies]
+web-time.workspace = true
+wgpu = { version = "25", optional = true }
+glam = { version = "0.30", features = ["bytemuck"] }
+bytemuck = { version = "1", features = ["derive"] }
+pollster = { version = "0.4", optional = true }
+
+[features]
+default = ["gpu"]
+# the GPU renderer; without it only the scene, camera, picking and style data remain
+gpu = ["dep:wgpu", "dep:pollster"]
+
+[dev-dependencies]
+# lattice_bench example: the detailed lattice tower as instanced prototypes
+ddc-geom = { path = "../geom" }

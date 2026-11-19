@@ -1,0 +1,20 @@
+{
+ "api.cmd.move_elements": "Mută elementele cu un deplasament în metri",
+ "api.cmd.copy_elements": "Copiază elemente prin una sau mai multe deplasări în metri",
+ "api.cmd.rotate_elements": "Rotește elementele în jurul unui punct cu un unghi în grade",
+ "api.cmd.mirror_elements": "Oglindește elementele față de o axă prin două puncte",
+ "api.cmd.scale_elements": "Scalează elementele în jurul unui punct cu un factor",
+ "api.cmd.array_elements": "Matrice liniară sau radială de elemente",
+ "api.cmd.offset_wall": "Copie paralelă a unui perete la o distanță în metri",
+ "api.cmd.split_wall": "Împarte un perete în două într-un punct",
+ "api.cmd.pin_elements": "Fixează sau eliberează elementele",
+ "api.cmd.flip_openings": "Inversează partea balamalei sau fața ușilor și ferestrelor",
+ "api.cmd.create_level": "Creează un nivel la o cotă în metri",
+ "api.cmd.edit_level": "Redenumește un nivel sau schimbă cota lui",
+ "api.cmd.delete_level": "Șterge un nivel",
+ "api.cmd.place_rooms": "Plasează o încăpere în fiecare regiune închisă a unui nivel",
+ "api.cmd.join_elements": "Îmbină, desparte sau schimbă îmbinările geometriei",
+ "api.cmd.place_footings": "Plasează o fundație sub fiecare stâlp al unui nivel",
+ "api.cmd.create_terrain": "Creează un teren din puncte de măsurătoare sau dintr-un plan înclinat",
+ "api.cmd.script_recipes": "Citește blocurile de scriere și rețetele structurilor libere"
+}

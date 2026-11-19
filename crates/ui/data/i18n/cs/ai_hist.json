@@ -1,0 +1,14 @@
+{
+ "ai.hist.badge": "AI",
+ "ai.hist.untitled": "Změny AI",
+ "ai.hist.tip": "{title}\nPoužil: {actor}\nAI model: {model}",
+ "ai.hist.why": "Proč: {why}",
+ "ai.hist.reverted": "vráceno",
+ "ai.hist.revert_one": "Vrátit tuto dávku AI",
+ "ai.revert.done": "Změny AI vráceny: {n}. Vrácením zpět je znovu obnovíte.",
+ "ai.revert.empty": "Nejsou žádné změny AI k vrácení",
+ "ai.revert.not_ai": "Tento krok není změnou AI",
+ "ai.revert.already": "Tyto změny AI jsou již vráceny",
+ "ai.revert.opaque": "Nevráceno: tyto změny AI nelze bezpečně oddělit od pozdější práce. Nic nebylo změněno.",
+ "ai.revert.failed": "Vrácení selhalo: {e}"
+}

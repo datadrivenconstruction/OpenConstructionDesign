@@ -1,0 +1,8 @@
+{
+ "empty.start_recent.title": "لا توجد مشاريع حديثة بعد",
+ "empty.start_recent.hint": "تظهر هنا المشاريع التي تفتحها. ابدأ بالنموذج التجريبي.",
+ "empty.start_recent.action": "فتح مثال",
+ "start.recent_open_file": "فتح ملف…",
+ "start.forgot": "أُزيل من الأخيرة: {name}",
+ "start.forgot_undo": "تراجع"
+}

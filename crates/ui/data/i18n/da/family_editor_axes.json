@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "X-akse",
+ "fe.axis.y": "Y-akse",
+ "fe.axis.z": "Z-akse",
+ "fe.col.axis": "Akse",
+ "fe.col.at": "Position",
+ "fe.col.mode": "Tilstand",
+ "fe.mode.fixed": "Fast",
+ "fe.mode.free": "Fri",
+ "fe.types.inherited": "Standard fra parameter",
+ "fe.csv.more": "Flere CSV-handlinger",
+ "fe.ref.selected": "Plan: {name}"
+}

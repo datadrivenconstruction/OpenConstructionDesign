@@ -1,0 +1,6 @@
+{
+ "vv_conflict.styles.conflict": "在此窗口有未保存编辑时，模型中已更改某个已编辑类别的对象样式（撤销或其他窗口所致）。您的编辑已保留。",
+ "vv_conflict.styles.keep": "保留我的编辑",
+ "vv_conflict.styles.reload": "重新加载",
+ "vv_conflict.styles.answer_first": "请先选择“保留我的编辑”或“先重新加载”"
+}

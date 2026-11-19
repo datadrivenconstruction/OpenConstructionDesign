@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "단위",
+ "topo_units.unit": "파일의 단위",
+ "topo_units.unit.m": "m",
+ "topo_units.unit.cm": "cm",
+ "topo_units.unit.mm": "mm",
+ "topo_units.unit.ft": "ft",
+ "topo_units.unit.usft": "미국 측량 ft",
+ "topo_units.unit.in": "in",
+ "topo_units.unit.from_file": "파일에 단위가 적혀 있습니다: {unit}",
+ "topo_units.unit.suggested": "파일에 단위가 없습니다. 범위로 추정한 단위: {unit} — 아래 결과를 확인하세요",
+ "topo_units.extent": "프로젝트 단위 결과: 평면 {x} × {y} {u}, 높이 범위 {z} {u}",
+ "topo_units.extent.none": "결과: 이 설정으로 가져올 항목이 없습니다",
+ "topo_units.extent.check": "대지처럼 보이지 않습니다: 단위를 확인하세요"
+}

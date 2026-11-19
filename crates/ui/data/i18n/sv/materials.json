@@ -1,0 +1,11 @@
+{
+ "materials.mat.name_empty": "Ange ett materialnamn",
+ "materials.mat.empty_title": "Inga material ännu",
+ "materials.mat.empty_hint": "Skriv ett namn nedan och tryck på Lägg till",
+ "materials.mat.nothing_hint": "Inget material matchar sökningen",
+ "materials.mat.clear_search": "Rensa sökning",
+ "materials.mat.replace_with": "Ersätt med",
+ "materials.mat.delete_refused": "Kan inte ta bort: materialet används på {n} ställen. Ersätt det först.",
+ "materials.mat.delete_confirm": "Ta bort materialet “{name}”? Du kan ångra detta.",
+ "materials.mat.replace_confirm": "Ersätt “{from}” med “{to}” i {n} element? “{from}” tas bort. Du kan ångra detta."
+}

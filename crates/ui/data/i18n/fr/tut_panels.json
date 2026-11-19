@@ -1,0 +1,9 @@
+{
+ "empty.props_model.title": "Rien de sélectionné",
+ "empty.props_model.hint": "Cliquez un élément dans la vue pour voir ses propriétés. Ou exportez tous les paramètres dans un classeur, modifiez-les-y puis réappliquez-les.",
+ "empty.props_model.action": "Exporter vers XLSX",
+ "tut.spreadsheet.title": "Aller-retour XLSX",
+ "tut.spreadsheet.1": "Appuyez sur Exporter vers tableur XLSX ci-dessous : choisissez le contenu et enregistrez le classeur.",
+ "tut.spreadsheet.2": "Ouvrez le classeur dans un tableur, modifiez une cellule et enregistrez. L'aperçu ici affiche la modification.",
+ "tut.spreadsheet.3": "Vérifiez l'aperçu et appuyez sur Appliquer au modèle. Ctrl+Z annule."
+}

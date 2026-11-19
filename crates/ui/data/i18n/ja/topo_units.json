@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "単位",
+ "topo_units.unit": "ファイル内の単位",
+ "topo_units.unit.m": "m",
+ "topo_units.unit.cm": "cm",
+ "topo_units.unit.mm": "mm",
+ "topo_units.unit.ft": "ft",
+ "topo_units.unit.usft": "US survey ft",
+ "topo_units.unit.in": "in",
+ "topo_units.unit.from_file": "ファイルで指定された単位: {unit}",
+ "topo_units.unit.suggested": "ファイルに単位の指定がありません。範囲から推定した単位: {unit}。下の結果を確認してください",
+ "topo_units.extent": "プロジェクト単位での結果: 平面 {x} × {y} {u}、高さ範囲 {z} {u}",
+ "topo_units.extent.none": "結果: この設定では取り込むものがありません",
+ "topo_units.extent.check": "敷地のように見えません。単位を確認してください"
+}

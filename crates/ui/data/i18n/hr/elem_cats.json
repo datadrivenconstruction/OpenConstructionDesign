@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "Masa se ne može okrenuti ni zrcaliti: njezina povijest oblika nema zakrenuti korak. Pomaknite ili kopirajte je ili je ponovno nacrtajte u novom smjeru.",
+ "sched_cats.col.name": "Naziv",
+ "sched_cats.col.material": "Materijal",
+ "sched_cats.col.void": "Šupljina",
+ "sched_cats.col.inplace": "Na mjestu",
+ "sched_cats.col.volume": "Neto volumen",
+ "sched_cats.col.area": "Površina plohe",
+ "sched_cats.col.floor_area": "Površina etaže",
+ "sched_cats.col.thickness": "Debljina",
+ "sched_cats.col.points": "Točke",
+ "elem.toposolid.points": "Geodetske točke",
+ "elem.toposolid.count": "Točke",
+ "elem.toposolid.low": "Najniža",
+ "elem.toposolid.high": "Najviša",
+ "elem.toposolid.edit": "Uredi točke",
+ "elem.toposolid.edit_tip": "Odabir, povlačenje i postavljanje kote geodetskih točaka na tlocrtu",
+ "elem.toposolid.pick_hint": "Kliknite točku na tlocrtu da je odaberete. Kliknite ponovno za dodavanje ili uklanjanje.",
+ "elem.toposolid.z": "Kota ({n})",
+ "elem.toposolid.mixed": "Odabrane točke se razlikuju; nova vrijednost postavlja sve.",
+ "elem.toposolid.edit_help": "Povucite točku da je pomaknete. Upišite vrijednost i pritisnite Enter za postavljanje kote. Backspace uklanja odabrane točke, Esc izlazi.",
+ "elem.toposolid.done": "Gotovo"
+}

@@ -1,0 +1,10 @@
+{
+ "ai.optx.applied": "Variant \"{name}\" anvendt. Fortryd sender den tilbage til udkast",
+ "ai.optx.missing": "Variant {id} findes ikke længere",
+ "ai.optx.accepted": "Variant {id} er allerede anvendt",
+ "ai.optx.not_draft": "Variant {id} blev afvist og kan ikke anvendes",
+ "ai.optx.stale": "Modellen ændrede sig, efter variant {id} blev lavet: generér den først igen",
+ "ai.optx.bad_recipe": "Variantopskriften kan ikke læses: {e}",
+ "ai.optx.refused": "Varianten blev ikke anvendt ({code}): {reason}",
+ "ai.optx.failed": "Varianten blev ikke anvendt: {e}"
+}

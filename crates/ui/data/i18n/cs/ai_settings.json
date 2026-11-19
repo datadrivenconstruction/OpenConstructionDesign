@@ -1,0 +1,9 @@
+{
+ "ai.settings.num_bad": "Není číslo. Zadejte jej například jako 0.5.",
+ "ai.settings.num_comma": "Jako desetinný oddělovač použijte tečku, například 0.5.",
+ "ai.settings.num_negative": "Číslo nemůže být záporné.",
+ "ai.settings.unit_money": "měna",
+ "ai.settings.unit_tokens": "tokenů",
+ "ai.settings.unit_price": "za 1 M tokenů",
+ "ai.settings.limits_hint": "0 znamená bez limitu. Odmítnutá hodnota ponechá předchozí limit."
+}

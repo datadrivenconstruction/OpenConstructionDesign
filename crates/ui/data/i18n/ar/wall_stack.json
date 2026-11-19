@@ -1,0 +1,10 @@
+{
+ "wall_stack.we.stack_caption": "نوع مركّب",
+ "wall_stack.we.side_left": "الوجه الأيسر",
+ "wall_stack.we.side_right": "الوجه الأيمن",
+ "wall_stack.we.from": "من",
+ "wall_stack.we.to": "إلى",
+ "wall_stack.we.bottom": "أسفل",
+ "wall_stack.we.delete_tip": "حذف هذا المقطع",
+ "wall_stack.we.from_after_to": "يجب أن يكون «من» قبل «إلى»"
+}

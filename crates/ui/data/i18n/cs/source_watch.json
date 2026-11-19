@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "{name} se změnil na disku.",
+ "src.watch.update": "Aktualizovat model",
+ "src.watch.compare": "Porovnat",
+ "src.watch.ignore": "Ignorovat tuto verzi",
+ "src.watch.missing": "{name}: zdrojový soubor nenalezen. Práce pokračuje.",
+ "src.watch.locate": "Najít…",
+ "src.watch.dismiss": "Skrýt",
+ "src.watch.more": "a dalších zdrojových souborů: {n}",
+ "src.watch.done": "Aktualizováno z {name}: změněno {updated}, polí ponecháno jako upravených {kept}, konfliktů {conflicts}, uzamčených hodnot ponecháno {locked}"
+}

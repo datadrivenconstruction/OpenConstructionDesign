@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "Voer eerst een sjabloonnaam in",
+ "view_template.name_taken": "Er bestaat al een sjabloon met deze naam",
+ "view_template.pick_blocked": "Vink eerst minstens één weergave aan",
+ "view_template.views.one": "{n} weergave",
+ "view_template.views.few": "{n} weergaven",
+ "view_template.views.many": "{n} weergaven",
+ "view_template.delete.title": "Dit sjabloon verwijderen?",
+ "view_template.delete.body": "Sjabloon “{name}” wordt verwijderd. Gebruikt door {used}.",
+ "view_template.delete.unused": "Sjabloon “{name}” wordt verwijderd. Geen enkele weergave gebruikt het.",
+ "view_template.delete.keeps": "Deze weergaven behouden hun huidige grafiek en verliezen de koppeling.",
+ "view_template.delete.undo": "U kunt dit ongedaan maken met één Ongedaan maken.",
+ "view_template.delete.confirm": "Sjabloon verwijderen"
+}

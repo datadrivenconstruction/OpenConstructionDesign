@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "Beton",
+ "mat.masonry": "Zidărie",
+ "mat.brick": "Cărămidă",
+ "mat.insulation": "Izolație",
+ "mat.plaster": "Tencuială",
+ "mat.render": "Tencuială decorativă",
+ "mat.gypsum": "Placă de gips-carton",
+ "mat.glass": "Sticlă",
+ "mat.wood": "Lemn",
+ "mat.steel": "Oțel",
+ "mat.membrane": "Membrană",
+ "mat.other": "Altele",
+ "warn.cat.wall": "Perete",
+ "warn.cat.slab": "Placă",
+ "warn.cat.opening": "Deschidere",
+ "warn.cat.curtain_wall": "Fațadă cortină",
+ "td.mat.custom": "Altele…"
+}

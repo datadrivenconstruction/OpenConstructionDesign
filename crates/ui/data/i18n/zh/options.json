@@ -1,0 +1,15 @@
+{
+ "fe.add_why_empty": "请先输入参数名称",
+ "fe.add_why_exists": "同名参数已存在；请使用“应用”进行修改",
+ "fe.apply_why_missing": "没有此名称的参数；请输入现有名称",
+ "fe.nochange": "尚无更改",
+ "options.accept_more": "接受…",
+ "options.delete_more": "删除…",
+ "options.empty_title": "尚无选项集",
+ "options.more": "更多操作：{name}",
+ "options.primary_named": "主要选项：{name}",
+ "options.primary_tip": "将其设为该集的主要选项",
+ "options.select_first": "请先在模型中选择图元",
+ "options.show_3d": "在三维中显示：{name}",
+ "options.show_plan": "在平面中显示：{name}"
+}

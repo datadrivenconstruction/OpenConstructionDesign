@@ -1,0 +1,7 @@
+{
+ "rebar_pick.pick.empty": "Vasalás: válasszon pillért, gerendát, falat, födémet vagy alapot",
+ "rebar_pick.pick.unsupported": "Ezt a kijelölést nem lehet vasalni. Válasszon pillért, gerendát, falat, födémet vagy alapot",
+ "rebar_pick.pick.keys": "Kattintás a kiválasztáshoz, Shift további hozzáadásához · Enter a űrlap megnyitásához · Esc a megszakításhoz",
+ "rebar_pick.pick.open": "Űrlap megnyitása",
+ "rebar_pick.pick.cancel": "Mégse"
+}

@@ -1,0 +1,5 @@
+{
+ "xl.msg.level_name_x_is_already_used": "το όνομα επιπέδου '{}' χρησιμοποιείται ήδη",
+ "xl.msg.unreadable_id_elements_without_a_row_not_deleted": "μη αναγνώσιμο id: τα στοιχεία χωρίς γραμμή δεν διαγράφονται σε αυτή την εισαγωγή",
+ "xl.msg.wall_type_name_x_is_already_used": "το όνομα τύπου τοίχου '{}' χρησιμοποιείται ήδη"
+}

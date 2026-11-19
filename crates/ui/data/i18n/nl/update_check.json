@@ -1,0 +1,21 @@
+{
+ "cmd.help.check_update": "Controleren op updates",
+ "update_check.title": "Updatecontrole",
+ "update_check.desc": "Standaard uit. Stuurt alleen de versie, het besturingssysteem en de architectuur, en het soort installatie naar onze server. Downloadt of installeert nooit iets.",
+ "update_check.freq.startup": "Bij het opstarten",
+ "update_check.freq.daily": "Dagelijks",
+ "update_check.freq.weekly": "Wekelijks",
+ "update_check.freq.never": "Nooit",
+ "update_check.check_now": "Nu controleren",
+ "update_check.dialog.title": "Updatecontrole",
+ "update_check.unknown.title": "Kon niet controleren op updates",
+ "update_check.unknown.body": "{e}. Dit betekent niet dat deze versie actueel is. Probeer het later opnieuw.",
+ "update_check.current": "U heeft de nieuwste versie ({v}).",
+ "update_check.newer": "Versie {v} is beschikbaar",
+ "update_check.date": "Uitgebracht {d}",
+ "update_check.unfit": "Deze versie ({v}) is ouder dan de minimaal aanbevolen versie {f}. Bijwerken wordt aanbevolen.",
+ "update_check.close": "Sluiten",
+ "update_check.open_failed": "De releasepagina kon niet worden geopend.",
+ "update_check.toast.newer": "Versie {v} is beschikbaar. Help > Controleren op updates.",
+ "update_check.toast.unfit": "Deze versie ({v}) is ouder dan de minimaal aanbevolen versie {f}."
+}

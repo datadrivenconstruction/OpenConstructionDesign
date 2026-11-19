@@ -1,0 +1,9 @@
+{
+ "empty.props_model.title": "何も選択されていません",
+ "empty.props_model.hint": "ビューで要素をクリックするとプロパティが表示されます。または、すべてのパラメータをブックに書き出して編集し、戻して適用できます。",
+ "empty.props_model.action": "XLSX スプレッドシート に書き出す",
+ "tut.spreadsheet.title": "XLSX スプレッドシート の往復",
+ "tut.spreadsheet.1": "下の「XLSX スプレッドシート に書き出す」を押し、含めるものを選んでブックを保存します。",
+ "tut.spreadsheet.2": "ブックを XLSX スプレッドシート で開き、セルを変更して保存します。ここのプレビューに変更が表示されます。",
+ "tut.spreadsheet.3": "プレビューを確認し、「モデルに適用」を押します。Ctrl+Z で元に戻せます。"
+}

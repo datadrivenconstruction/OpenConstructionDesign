@@ -1,0 +1,22 @@
+{
+ "ai.audit.tokens": "{n} tokenenheter",
+ "ai.audit.filter.all": "Alla",
+ "ai.audit.filter.ai": "AI",
+ "ai.audit.filter.me": "Jag",
+ "ai.audit.search": "Sök ändringar",
+ "ai.audit.search.clear": "Rensa sökning",
+ "ai.audit.show_all": "Visa alla",
+ "ai.audit.empty.hint": "Ändringar utarbetade eller tillämpade av en modell eller agent visas här, var och en med en väg tillbaka.",
+ "ai.audit.no_match": "Inga ändringar matchar filtret.",
+ "ai.audit.show.tip": "Markera och visa elementen som den här ändringen berörde",
+ "ai.audit.revert.ask": "Ta tillbaka \"{what}\"? {change}.",
+ "ai.audit.revert.elements": {
+  "one": "# elementändring",
+  "other": "# elementändringar"
+ },
+ "ai.audit.revert.keeps": "Nyare ändringar består. Återställningen är ett ångra-steg.",
+ "ai.audit.cancel": "Avbryt",
+ "ai.audit.toast.reverted": "Återställd: {what}",
+ "ai.audit.toast.undone": "Ångrat: {what}",
+ "ai.audit.redo": "Gör om"
+}

@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "Hueco de buhardilla",
+ "cmd.arch.roof_opening": "Hueco en cubierta",
+ "cmd.arch.roof_extrusion": "Cubierta por extrusión",
+ "cmd.arch.ceiling_opening": "Hueco en techo",
+ "cmd.str.slab_opening": "Hueco en forjado",
+ "cmd.ctx.wall.detach": "Desvincular parte superior",
+ "cmd.ctx.floor.sketch": "Editar contorno",
+ "cmd.ctx.floor.shape": "Editar forma",
+ "host_shape.shape.elev_prompt": "alzado, mm…",
+ "host_shape.shape.elev_mm": "{v} mm",
+ "host_shape.sketch.no_host": "no hay soporte bajo el contorno en este nivel",
+ "host_shape.issue.roof": "cubierta {id}: {e}",
+ "host_shape.issue.ceiling": "techo {id}: {e}",
+ "host_shape.status.select_slab": "seleccione un forjado",
+ "host_shape.status.select_walls": "seleccione muros",
+ "host_shape.status.no_roof_or_level": "no hay cubierta ni nivel encima",
+ "host_shape.status.top_attached": "parte superior de muros vinculada",
+ "host_shape.status.top_detached": "parte superior de muros desvinculada",
+ "host_shape.status.straight_wall": "se requiere un muro recto",
+ "host_shape.status.roof_extruded": "cubierta por extrusión creada",
+ "warn.kind.cut": "Corte o unión no creados"
+}

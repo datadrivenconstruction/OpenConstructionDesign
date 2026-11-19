@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "Ачкыч даректе",
+ "ai_safety.auth.query_name": "Дарек параметри",
+ "ai_safety.need_query_name": "Ачкычты алып жүргөн дарек параметринин атын бериңиз",
+ "ai_safety.apply_unlogged": "Колдонулду, бирок өзгөртүүлөрдүн журналы жазылган жок",
+ "ai_safety.audit_unlogged": "AI жардамчысынын журналы жазылган жок",
+ "ai_safety.chat_not_saved": "Сүйлөшүү долбоорго сакталган жок. Кайра аракет кылынууда.",
+ "ai_safety.clip_clears": "Буфер 30 с ичинде тазаланат",
+ "ai_safety.copied_clears": "Көчүрүлдү. Буфер 30 с ичинде тазаланат",
+ "ai_safety.key_session_only": "Ачкыч колдонмо жабылганга чейин сакталат",
+ "ai.settings.no_data_dir": "бул система колдонмонун жөндөөлөрү үчүн папка бербейт"
+}

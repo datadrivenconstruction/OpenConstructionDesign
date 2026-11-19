@@ -1,0 +1,6 @@
+{
+ "geom.length": "Length",
+ "sched.cat.room_seps": "Room separators",
+ "room.err.point_leave": "Room {n}: point would leave its boundary",
+ "room.err.point_taken": "Room {n}: point would land in room {other}"
+}

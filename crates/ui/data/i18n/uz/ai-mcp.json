@@ -1,0 +1,15 @@
+{
+ "mcp.ask.cancel": "Bekor qilish",
+ "mcp.ask.auto.title": "AI agentlariga so'ramasdan o'zgarishlarni qo'llashga ruxsat berilsinmi?",
+ "mcp.ask.auto.body": "Ulangan AI agentlari o'z o'zgarishlarini darhol qoralamalarga qo'llaydi, sizning tasdig'ingizni kutmasdan; shuning uchun noto'g'ri o'zgarish siz ko'rmasdan oldin tushib qolishi mumkin. Modelingiz faqat Qo'llash ni bosganingizda o'zgaradi. Bu o'chirguncha, muharrirni yopguncha yoki boshqa modelni ochguncha davom etadi.",
+ "mcp.ask.auto.yes": "So'ramasdan qo'llash",
+ "mcp.ask.token.title": "Yangi token berilsinmi?",
+ "mcp.ask.token.body": "Joriy token darhol ishlamaydi: ulangan AI agentlari uzilib qoladi va yangi tokenni talab qiladi. U faqat bir marta ko'rsatiladi, shuning uchun darhol nusxa oling.",
+ "mcp.ask.token.yes": "Yangi token",
+ "mcp.auto.chip": "Avto-qo'llash yoqilgan",
+ "mcp.auto.chip_tip": "AI agentlari o'zgarishlarni so'ramasdan qoralamalarga qo'llaydi. Bu seans bilan tugaydi.",
+ "mcp.auto.ask_again": "Yana so'rash",
+ "mcp.token.once": "Tokenni hozir nusxalang: u qaytadan ko'rsatilmaydi.",
+ "mcp.renewed": "Yangi token berildi: eskisi endi ishlamaydi",
+ "mcp.copied": "Nusxalandi"
+}

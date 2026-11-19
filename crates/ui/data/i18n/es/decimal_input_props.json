@@ -1,0 +1,3 @@
+{
+ "decimal_input.err.comma": "«{text}»: usar el punto para los decimales (1.5); la coma solo separa miles (1,000). No se escribió nada"
+}

@@ -1,0 +1,8 @@
+{
+ "param_drop.title": "প্যারামিটারের মান সরাবেন?",
+ "param_drop.intro": "{name} আর এই ক্যাটেগরিগুলোর সঙ্গে বাঁধা নেই:",
+ "param_drop.line": "{category}: {values} সরানো হবে",
+ "param_drop.undo": "একবার Ctrl+Z দিলে সব ফিরবে।",
+ "param_drop.confirm": "মান সরান ও সেভ করুন",
+ "param_drop.cancel": "বাতিল"
+}

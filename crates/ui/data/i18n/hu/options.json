@@ -1,0 +1,15 @@
+{
+ "fe.add_why_empty": "Előbb adjon meg egy paraméternevet",
+ "fe.add_why_exists": "Ilyen nevű paraméter már van; a módosításhoz használja az Alkalmazást",
+ "fe.apply_why_missing": "Nincs ilyen nevű paraméter; írjon be létező nevet",
+ "fe.nochange": "Még nincs módosítás",
+ "options.accept_more": "Elfogadás…",
+ "options.delete_more": "Törlés…",
+ "options.empty_title": "Még nincsenek opciókészletek",
+ "options.more": "További műveletek: {name}",
+ "options.primary_named": "Fő opció: {name}",
+ "options.primary_tip": "A készlet főopciójává tétel",
+ "options.select_first": "Előbb jelöljön ki elemeket a modellben",
+ "options.show_3d": "Megjelenítés 3D-ben: {name}",
+ "options.show_plan": "Megjelenítés alaprajzon: {name}"
+}

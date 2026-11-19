@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "سفارشی",
+ "draw_quality.custom.tip": "{name}: ورودی این پروژه",
+ "draw_quality.custom_note": "ورودی‌های با برچسب سفارشی به این پروژه تعلق دارند.",
+ "draw_quality.unsaved.lib_body": "آن‌ها را در کتابخانه ذخیره کنیم یا کنار بگذاریم؟",
+ "draw_quality.unsaved.styles_body": "آن‌ها را روی نما اعمال کنیم یا کنار بگذاریم؟",
+ "draw_quality.unsaved.both_body": "آن‌ها را اعمال کنیم یا کنار بگذاریم؟",
+ "draw_quality.halftone": "نیم‌تُن {category}",
+ "draw_quality.styles.name": "سبک‌های خط",
+ "draw_quality.styles.other_level": "ویرایش‌های ذخیره‌نشده سبک‌های تراز {level}: برای ویرایش این تراز، آن‌ها را اعمال یا برگردانید."
+}

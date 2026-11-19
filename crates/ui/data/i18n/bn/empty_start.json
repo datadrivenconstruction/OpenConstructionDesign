@@ -1,0 +1,8 @@
+{
+ "empty.start_recent.title": "এখনো কোনো সাম্প্রতিক প্রকল্প নেই",
+ "empty.start_recent.hint": "আপনার খোলা প্রকল্পগুলো এখানে দেখাবে। নমুনা মডেল দিয়ে শুরু করুন।",
+ "empty.start_recent.action": "নমুনা খুলুন",
+ "start.recent_open_file": "ফাইল খুলুন…",
+ "start.forgot": "সাম্প্রতিক তালিকা থেকে সরানো হয়েছে: {name}",
+ "start.forgot_undo": "আনডু"
+}

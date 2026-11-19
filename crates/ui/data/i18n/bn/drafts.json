@@ -1,0 +1,8 @@
+{
+ "drafts.drafts.head": "খোলা এডিটরে এমন সম্পাদনা আছে যা এখনো প্রকল্পে নেই:",
+ "drafts.draft.family": "ফ্যামিলি “{name}”",
+ "drafts.draft.line": "লাইন লাইব্রেরি: {name}",
+ "drafts.draft.styles": "ভিউ রেঞ্জের লাইন স্টাইল",
+ "drafts.btn.save_all": "সব সেভ করুন",
+ "drafts.drafts.refused": "একটি খসড়া সেভ করা যায়নি। কিছু বন্ধ হয়নি; খসড়াসহ এডিটরটি খোলা আছে।"
+}

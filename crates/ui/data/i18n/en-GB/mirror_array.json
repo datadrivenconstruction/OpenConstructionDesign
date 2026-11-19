@@ -1,0 +1,5 @@
+{
+ "mirror_array.err.count": "The count is a whole number from 2 to 200: 4 3000, or 4;300 when the step has three digits",
+ "mirror_array.err.length": "The step or total is a positive length, e.g. 3 000 or 1.2 m",
+ "mirror_array.err.angle": "The sweep is an angle in degrees, not zero and at most 360"
+}

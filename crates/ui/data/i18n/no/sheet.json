@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "Hurtigtastoversikt",
+ "cmd.help.shortcuts.desc": "Viser alle hurtigtaster slik du har dem nå, etter kontekst. Trykk ? hvor som helst utenfor et tekstfelt.",
+ "sheet.title": "Hurtigtaster",
+ "sheet.filter": "Filtrer etter kommando eller tast",
+ "sheet.filter_label": "Filtrer snarveier",
+ "sheet.customize": "Tilpass…",
+ "sheet.close": "Lukk",
+ "sheet.esc_close": "for å lukke",
+ "sheet.none": "Ingen snarveier passer",
+ "sheet.none_hint": "Prøv et annet ord eller en annen tast.",
+ "sheet.sec.general": "Generelt",
+ "sheet.sec.plan": "Plan",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "Lister",
+ "sheet.sec.sheets": "Ark",
+ "sheet.sec.ai": "AI"
+}

@@ -1,0 +1,5 @@
+{
+ "xlsx_delete.delete_missing": "Smazat řádky chybějící v sešitu",
+ "xlsx_delete.not_removed": "neodstraněno: chybí porovnávací data",
+ "xlsx_delete.no_base_reason": "Nedostupné: sešit nemá porovnávací data, takže chybějící řádek nelze odlišit od omylem odstraněného. Při použití se nic nesmaže."
+}

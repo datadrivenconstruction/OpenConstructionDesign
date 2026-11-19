@@ -1,0 +1,6 @@
+{
+ "geom.length": "ความยาว",
+ "sched.cat.room_seps": "ตัวแบ่งห้อง",
+ "room.err.point_leave": "ห้อง {n}: จุดจะหลุดออกจากขอบเขต",
+ "room.err.point_taken": "ห้อง {n}: จุดจะไปตกในห้อง {other}"
+}

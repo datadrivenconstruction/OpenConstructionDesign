@@ -1,0 +1,6 @@
+{
+ "quick.keys.rec_hint": "Esc avbryter · Backspace rensar",
+ "quick.keys.row_lost": "{key} tillhör nu “{cmd}”",
+ "quick.keys.row_took": "{key} togs från “{cmd}”",
+ "quick.keys.reset_tip": "Återställ till standard"
+}

@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "Import qilingan meshlar",
+ "mat_mesh.mesh.none_selected": "Bu materialni berish uchun 3D ko'rinishda import qilingan meshlarni tanlang.",
+ "mat_mesh.mesh.current": "Birinchi tanlangan mesh: {material}",
+ "mat_mesh.mesh.current_none": "Birinchi tanlangan meshda material yo'q.",
+ "mat_mesh.mesh.assign": "{n} ta tanlanganga biriktirish",
+ "mat_mesh.mesh.assign_tip": "Realistik uslub bu materialning teksturasini tanlangan meshlarda ko'rsatadi",
+ "mat_mesh.mesh.assign_cat": "{category} toifasiga biriktirish",
+ "mat_mesh.mesh.assign_cat_tip": "Shu toifadagi o'z materialiga ega bo'lmagan har bir import qilingan mesh",
+ "mat_mesh.mesh.clear": "Tanlanganlarni tozalash",
+ "mat_mesh.mesh.clear_tip": "Tanlangan meshlar o'z toifa materialiga yoki oddiy rangga qaytadi",
+ "mat_mesh.mesh.clear_cat": "Toifani tozalash"
+}

@@ -1,0 +1,349 @@
+{
+ "rules": [
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.18
+   },
+   "unit": "m",
+   "value": 0.18,
+   "text": {
+    "en": "Common stair riser at most 0.18 m",
+    "ru": "Подъём ступени общей лестницы не более 0.18 м"
+   },
+   "source": {
+    "doc": "ca-nbc20",
+    "clause": "3.4.6.8.(2); Table 9.8.4.1 (public)",
+    "url": "https://publications.gc.ca/collections/collection_2022/cnrc-nrc/NR24-28-2020-eng.pdf",
+    "edition": "2020",
+    "accessed": "2026-11-14",
+    "paraphrase": "Exit and public stairs: riser between 125 and 180 mm."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ca.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.28
+   },
+   "unit": "m",
+   "value": 0.28,
+   "text": {
+    "en": "Common stair tread at least 0.28 m",
+    "ru": "Проступь общей лестницы не менее 0.28 м"
+   },
+   "source": {
+    "doc": "ca-nbc20",
+    "clause": "3.4.6.8.(1); Table 9.8.4.2 (public)",
+    "url": "https://publications.gc.ca/collections/collection_2022/cnrc-nrc/NR24-28-2020-eng.pdf",
+    "edition": "2020",
+    "accessed": "2026-11-14",
+    "paraphrase": "Exit and public stairs: run at least 280 mm."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ca.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 1.1
+   },
+   "unit": "m",
+   "value": 1.1,
+   "text": {
+    "en": "Common stair flight width at least 1.1 m",
+    "ru": "Ширина марша общей лестницы не менее 1.1 м"
+   },
+   "source": {
+    "doc": "ca-nbc20",
+    "clause": "Table 3.4.3.2.-A",
+    "url": "https://publications.gc.ca/collections/collection_2022/cnrc-nrc/NR24-28-2020-eng.pdf",
+    "edition": "2020",
+    "accessed": "2026-11-14",
+    "paraphrase": "Exit stairs in residential and business occupancies need 1100 mm clear width; 900 mm where the stair serves at most 2 storeys above exit level."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ca.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.2
+   },
+   "unit": "m",
+   "value": 0.2,
+   "text": {
+    "en": "Stair riser in a house at most 0.2 m",
+    "ru": "Подъём ступени в доме не более 0.2 м"
+   },
+   "source": {
+    "doc": "ca-nbc20",
+    "clause": "Table 9.8.4.1 (private)",
+    "url": "https://publications.gc.ca/collections/collection_2022/cnrc-nrc/NR24-28-2020-eng.pdf",
+    "edition": "2020",
+    "accessed": "2026-11-14",
+    "paraphrase": "Stairs serving a single dwelling: riser between 125 and 200 mm."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ca.house.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.255
+   },
+   "unit": "m",
+   "value": 0.255,
+   "text": {
+    "en": "Stair tread in a house at least 0.255 m",
+    "ru": "Проступь в доме не менее 0.255 м"
+   },
+   "source": {
+    "doc": "ca-nbc20",
+    "clause": "Table 9.8.4.2 (private)",
+    "url": "https://publications.gc.ca/collections/collection_2022/cnrc-nrc/NR24-28-2020-eng.pdf",
+    "edition": "2020",
+    "accessed": "2026-11-14",
+    "paraphrase": "Stairs serving a single dwelling: run between 255 and 355 mm."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ca.house.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 0.86
+   },
+   "unit": "m",
+   "value": 0.86,
+   "text": {
+    "en": "Stair flight width in a house at least 0.86 m",
+    "ru": "Ширина марша в доме не менее 0.86 м"
+   },
+   "source": {
+    "doc": "ca-nbc20",
+    "clause": "9.8.2.1.(2),(4)",
+    "url": "https://publications.gc.ca/collections/collection_2022/cnrc-nrc/NR24-28-2020-eng.pdf",
+    "edition": "2020",
+    "accessed": "2026-11-14",
+    "paraphrase": "Stairs within or serving a single dwelling unit need at least 860 mm width."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ca.house.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.1
+   },
+   "unit": "m",
+   "value": 2.1,
+   "text": {
+    "en": "Clear height of habitable rooms at least 2.1 m",
+    "ru": "Высота жилых помещений не менее 2.1 м"
+   },
+   "source": {
+    "doc": "ca-nbc20",
+    "clause": "Table 9.5.3.1",
+    "url": "https://publications.gc.ca/collections/collection_2022/cnrc-nrc/NR24-28-2020-eng.pdf",
+    "edition": "2020",
+    "accessed": "2026-11-14",
+    "paraphrase": "Residential living, dining, kitchen and bedroom spaces need ceiling height of 2.1 m over most of the room; corridors and baths have lower area rules."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ca.res.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ],
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "width",
+    "min": 1.0
+   },
+   "unit": "m",
+   "value": 1.0,
+   "text": {
+    "en": "Accessible-route corridor clear width at least 1.0 m",
+    "ru": "Ширина коридора на доступном маршруте не менее 1.0 м"
+   },
+   "source": {
+    "doc": "ca-nbc20",
+    "clause": "3.8.3.2.(1)",
+    "url": "https://publications.gc.ca/collections/collection_2022/cnrc-nrc/NR24-28-2020-eng.pdf",
+    "edition": "2020",
+    "accessed": "2026-11-14",
+    "paraphrase": "A barrier-free path of travel needs a clear width of 1000 mm, reducible to 850 mm over at most 600 mm length."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ca.acc.corr"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 30,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 30,
+   "text": {
+    "en": "Travel distance to an exit or stair at most 30 m (residential)",
+    "ru": "Путь до выхода или лестницы не более 30 м (жилые)"
+   },
+   "source": {
+    "doc": "ca-nbc20",
+    "clause": "3.4.2.5.(1)(f)",
+    "url": "https://publications.gc.ca/collections/collection_2022/cnrc-nrc/NR24-28-2020-eng.pdf",
+    "edition": "2020",
+    "accessed": "2026-11-14",
+    "paraphrase": "Where several exits are required, travel to the nearest one is limited to 30 m for occupancies not named in the other cases, including residential, unsprinklered."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ca.egr.res"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 40,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 40,
+   "text": {
+    "en": "Travel distance to an exit or stair at most 40 m (office)",
+    "ru": "Путь до выхода или лестницы не более 40 м (офисы)"
+   },
+   "source": {
+    "doc": "ca-nbc20",
+    "clause": "3.4.2.5.(1)(b)",
+    "url": "https://publications.gc.ca/collections/collection_2022/cnrc-nrc/NR24-28-2020-eng.pdf",
+    "edition": "2020",
+    "accessed": "2026-11-14",
+    "paraphrase": "Business and personal services floor areas: travel to at least one exit limited to 40 m (45 m if sprinklered throughout)."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "ca.egr.off"
+  },
+  {
+   "id": "generic.egress.distance",
+   "disabled": true
+  }
+ ]
+}

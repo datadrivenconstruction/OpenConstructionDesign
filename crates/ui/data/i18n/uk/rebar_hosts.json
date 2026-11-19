@@ -1,0 +1,52 @@
+{
+ "rebar_hosts.hosts": "Основи: {list}",
+ "rebar_hosts.kind.column": "Колона",
+ "rebar_hosts.kind.beam": "Балка",
+ "rebar_hosts.kind.wall": "Стіна",
+ "rebar_hosts.kind.slab": "Плита",
+ "rebar_hosts.kind.footing": "Фундамент",
+ "rebar_hosts.kind.raft": "Фундаментна плита",
+ "rebar_hosts.n.column": {
+  "one": "# колона",
+  "other": "# колон",
+  "few": "# колони",
+  "many": "# колон"
+ },
+ "rebar_hosts.n.beam": {
+  "one": "# балка",
+  "other": "# балок",
+  "few": "# балки",
+  "many": "# балок"
+ },
+ "rebar_hosts.n.wall": {
+  "one": "# стіна",
+  "other": "# стін",
+  "few": "# стіни",
+  "many": "# стін"
+ },
+ "rebar_hosts.n.slab": {
+  "one": "# плита",
+  "other": "# плит",
+  "few": "# плити",
+  "many": "# плит"
+ },
+ "rebar_hosts.n.footing": {
+  "one": "# фундамент",
+  "other": "# фундаментів",
+  "few": "# фундаменти",
+  "many": "# фундаментів"
+ },
+ "rebar_hosts.n.raft": {
+  "one": "# фундаментна плита",
+  "other": "# фундаментних плит",
+  "few": "# фундаментні плити",
+  "many": "# фундаментних плит"
+ },
+ "rebar_hosts.mixed_note": "Колони і балки отримують стрижні та хомути; стіни, плити і фундаменти — сітку. Виберіть одну групу, щоб додати арматуру.",
+ "rebar_hosts.why.mixed": "Вибірка змішує колони чи балки зі стінами, плитами або фундаментами. Виберіть одну групу.",
+ "rebar_hosts.why.area_linear": "Сітка йде в стіни, плити і фундаменти, а не в колони чи балки.",
+ "rebar_hosts.why.bars_plate": "Поздовжні стрижні і хомути йдуть у колони і балки, а не в стіни, плити чи фундаменти.",
+ "rebar_hosts.why.no_common_face": "Вибрані основи не мають спільної грані захисного шару. Виберіть основи одного типу.",
+ "rebar_hosts.why.no_type": "Виберіть тип арматури.",
+ "rebar_hosts.kind_type": "{kind} · {type}"
+}

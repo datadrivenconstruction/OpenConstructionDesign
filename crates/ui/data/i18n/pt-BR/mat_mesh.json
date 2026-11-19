@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "Malhas importadas",
+ "mat_mesh.mesh.none_selected": "Selecione malhas importadas na vista 3D para atribuir este material.",
+ "mat_mesh.mesh.current": "Primeira malha selecionada: {material}",
+ "mat_mesh.mesh.current_none": "A primeira malha selecionada não tem material.",
+ "mat_mesh.mesh.assign": "Atribuir a {n} selecionados",
+ "mat_mesh.mesh.assign_tip": "O estilo Realista mostra a textura deste material nas malhas selecionadas",
+ "mat_mesh.mesh.assign_cat": "Atribuir à categoria {category}",
+ "mat_mesh.mesh.assign_cat_tip": "Toda malha importada dessa categoria sem material próprio",
+ "mat_mesh.mesh.clear": "Limpar selecionadas",
+ "mat_mesh.mesh.clear_tip": "As malhas selecionadas voltam ao material da categoria ou à cor simples",
+ "mat_mesh.mesh.clear_cat": "Limpar categoria"
+}

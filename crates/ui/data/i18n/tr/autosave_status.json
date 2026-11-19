@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "Otomatik kayıt başarısız, son değişiklikler korunmuyor. {why}",
+ "autosave_status.autosave_open": "Otomatik kayıt ayarları",
+ "autosave_status.autosave_recovered": "Otomatik kayıt yeniden çalışıyor.",
+ "autosave_status.autosave_reason": "Neden: {why}"
+}

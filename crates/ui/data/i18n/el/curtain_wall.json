@@ -1,0 +1,12 @@
+{
+ "curtain_wall.cw.issue.slab": "πλάκα {id}: {e}",
+ "curtain_wall.cw.issue.body": "σώμα {id}: {e}",
+ "curtain_wall.cw.added": "Προστέθηκαν κουρτινοτοίχοι: {n}",
+ "curtain_wall.cw.add_failed": "Ο κουρτινοτοίχος δεν κατασκευάστηκε: {e}",
+ "curtain_wall.cw.edited_warn": "Ο κουρτινοτοίχος #{id} άλλαξε: {w}",
+ "curtain_wall.cw.edited": "Ο κουρτινοτοίχος #{id} άλλαξε",
+ "curtain_wall.cw.not_changed": "Δεν άλλαξε: {e}",
+ "curtain_wall.cw.room_edited": "Ο χώρος #{id} άλλαξε",
+ "curtain_wall.cw.slope_range": "Δεν άλλαξε: η κλίση είναι εκτός εύρους",
+ "curtain_wall.cw.slope_set": "Πλάκα #{id}: κλίση {pct}"
+}

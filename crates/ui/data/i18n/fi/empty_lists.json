@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "Piirrä seinä",
+ "empty.totals.action": "Piirrä seinä",
+ "empty.schedule.action": "Lisää kenttä",
+ "empty.schedule_filtered.action": "Tyhjennä suodatin",
+ "empty.library.action": "Nollaa haku",
+ "empty.library.load": "Lataa perhe",
+ "empty.schedule_fields.title": "Kenttiä ei näytetä",
+ "empty.schedule_fields.action": "Lisää kenttä",
+ "empty.schedule_fields.hint": "Ota käyttöön vähintään yksi kenttä nähdäksesi taulukon."
+}

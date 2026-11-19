@@ -1,0 +1,23 @@
+{
+ "params_list.n_params": {
+  "one": "# tham số",
+  "other": "# tham số"
+ },
+ "params_list.n_values": {
+  "one": "# giá trị",
+  "other": "# giá trị"
+ },
+ "params_list.n_elements": {
+  "one": "# phần tử",
+  "other": "# phần tử"
+ },
+ "params_list.exported": "Đã xuất {params} sang {file}",
+ "params_list.export_failed": "Chưa xuất được tham số: {why}",
+ "params_list.open_folder": "Mở thư mục",
+ "params_list.delete_tip": "Xóa tham số và các giá trị của nó",
+ "params_list.confirm": "Xóa {name} và {values} của nó trên {elements}?",
+ "params_list.confirm_btn": "Xóa",
+ "params_list.cancel": "Hủy",
+ "params_list.deleted": "Đã xóa tham số {name} ({values})",
+ "params_list.undo": "Hoàn tác"
+}

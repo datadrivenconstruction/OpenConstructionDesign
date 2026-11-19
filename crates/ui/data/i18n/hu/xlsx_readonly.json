@@ -1,0 +1,6 @@
+{
+ "xlsx_readonly.read_only": "A munkafüzet csak olvasható (fájltulajdonság vagy mappajogosultság). Exportálja másolatba, vagy törölje a Csak olvasható jelölést a fájl tulajdonságai között, és próbálja újra.",
+ "xlsx_readonly.export_copy": "Exportálás másolatba",
+ "xlsx_readonly.no_copy_name": "Nincs szabad név a munkafüzet melletti másolatnak.",
+ "xlsx_readonly.copied": "A munkafüzet változatlanul maradt. Mellette frissített másolat készült, és most ez van csatolva: {path}"
+}

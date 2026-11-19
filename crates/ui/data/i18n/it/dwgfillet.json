@@ -1,0 +1,20 @@
+{
+ "dwgfillet.fillet": "Raccordo",
+ "dwgfillet.cancel": "Interrompi raccordo",
+ "dwgfillet.tip": "Fai clic su due linee dal lato da mantenere: entrambe vengono tagliate o estese fino all'angolo, con un arco tangente se il raggio è maggiore di zero",
+ "dwgfillet.radius": "Raggio di raccordo",
+ "dwgfillet.radius_tip": "Raggio dell'arco in unità di disegno; 0 crea un angolo vivo",
+ "dwgfillet.st.arm_first": "Fai clic sulla prima linea, dal lato da mantenere",
+ "dwgfillet.st.arm_second": "Fai clic sulla seconda linea, dal lato da mantenere",
+ "dwgfillet.st.not_armed": "Scegli prima Raccordo",
+ "dwgfillet.st.click_line": "Fai clic su una singola linea del disegno",
+ "dwgfillet.st.other_drawing": "Entrambe le linee devono appartenere allo stesso disegno: ricomincia",
+ "dwgfillet.st.changed": "La prima linea è cambiata: ricomincia",
+ "dwgfillet.st.same_line": "Scegli una seconda linea diversa",
+ "dwgfillet.st.parallel": "Le linee sono parallele e non si incontrano mai: non si può creare un angolo",
+ "dwgfillet.st.degenerate": "Una linea non ha lunghezza",
+ "dwgfillet.st.no_side": "Il lato selezionato non ha lunghezza a partire dall'angolo",
+ "dwgfillet.st.too_big": "Il raggio è troppo grande per queste linee: usa un raggio minore",
+ "dwgfillet.st.radius_bad": "Il raggio deve essere zero o positivo",
+ "dwgfillet.st.done": "Angolo creato"
+}

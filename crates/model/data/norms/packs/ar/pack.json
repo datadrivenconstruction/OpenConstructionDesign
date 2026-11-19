@@ -1,0 +1,40 @@
+{
+ "id": "ar",
+ "version": "2026.11",
+ "parent": "generic",
+ "country": "AR",
+ "lang": [
+  "es"
+ ],
+ "units": {
+  "length": "m",
+  "display": "metric"
+ },
+ "conventions": {
+  "ground_floor": 0,
+  "area_standard": "gross",
+  "net_share": 0.85,
+  "note": "Argentine plans and listings usually quote covered area measured to the outside of walls (superficie cubierta, gross); not confirmed from a code clause. Net share is our own estimate.",
+  "source": null
+ },
+ "status": "tier3",
+ "climate": {
+  "zones": [],
+  "default": null
+ },
+ "research": {
+  "date": "2026-11-14",
+  "missing": [
+   "parking.per_dwelling",
+   "load.floor_residential",
+   "load.floor_office"
+  ],
+  "unreachable": [
+   "https://www.argentina.gob.ar/normativa/nacional/45816/texto (HTTP 500)",
+   "https://www.argentina.gob.ar/normativa/nacional/decreto-467-1998-50661/texto (HTTP 500)",
+   "https://www.fio.unicen.edu.ar/extension/seh/images/pdf/cap18/anexovii-351-79.pdf (404)",
+   "https://www.argentina.gob.ar/normativa/recurso/32030/dto351-1979-anexo7/htm (404)"
+  ]
+ },
+ "note": "Numbers with verified=true were read in the cited clause; the rest are hints with a note of where we looked. Wording is our own; no text of a standard is stored."
+}

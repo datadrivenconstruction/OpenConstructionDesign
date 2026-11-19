@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "özel",
+ "draw_quality.custom.tip": "{name}: bu projenin girdisi",
+ "draw_quality.custom_note": "“özel” işaretli girdiler bu projeye aittir.",
+ "draw_quality.unsaved.lib_body": "Kütüphaneye kaydedilsin mi, yoksa atılsın mı?",
+ "draw_quality.unsaved.styles_body": "Görünüme uygulansın mı, yoksa atılsın mı?",
+ "draw_quality.unsaved.both_body": "Uygulansın mı, yoksa atılsın mı?",
+ "draw_quality.halftone": "{category} yarım ton",
+ "draw_quality.styles.name": "Çizgi stilleri",
+ "draw_quality.styles.other_level": "{level} seviyesinin kaydedilmemiş stil düzenlemeleri: bu seviyeyi düzenlemek için uygulayın veya geri alın."
+}

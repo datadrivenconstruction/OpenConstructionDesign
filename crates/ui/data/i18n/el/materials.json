@@ -1,0 +1,11 @@
+{
+ "materials.mat.name_empty": "Εισάγετε όνομα υλικού",
+ "materials.mat.empty_title": "Δεν υπάρχουν υλικά ακόμα",
+ "materials.mat.empty_hint": "Πληκτρολογήστε ένα όνομα παρακάτω και πατήστε Προσθήκη",
+ "materials.mat.nothing_hint": "Κανένα υλικό δεν ταιριάζει στην αναζήτηση",
+ "materials.mat.clear_search": "Εκκαθάριση αναζήτησης",
+ "materials.mat.replace_with": "Αντικατάσταση με",
+ "materials.mat.delete_refused": "Δεν γίνεται διαγραφή: το υλικό χρησιμοποιείται σε {n} θέσεις. Αντικαταστήστε το πρώτα.",
+ "materials.mat.delete_confirm": "Διαγραφή υλικού “{name}”; Μπορείτε να το αναιρέσετε.",
+ "materials.mat.replace_confirm": "Αντικατάσταση του “{from}” με το “{to}” σε {n} στοιχεία; Το “{from}” αφαιρείται. Μπορείτε να το αναιρέσετε."
+}

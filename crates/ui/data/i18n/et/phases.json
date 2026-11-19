@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D",
+ "phases.current_mark": "praegune",
+ "phases.make_current": "Muuda praeguseks",
+ "phases.col_phase": "Faas",
+ "phases.col_filter": "Filter",
+ "phases.presets": "Plaani eelseadistused",
+ "phases.del_title": "Kustuta faas",
+ "phases.del_text": "Kas kustutada faas \"{name}\"? Selle elemendid teisaldatakse allpool valitud faasi.",
+ "phases.del_into": "Teisalda elemendid faasi",
+ "phases.del_ok": "Kustuta",
+ "phases.col_kind": "Elemendi tüüp",
+ "phases.col_count": "Arv",
+ "phases.col_volume": "Maht"
+}

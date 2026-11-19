@@ -1,0 +1,15 @@
+{
+ "cmd.data.export_step.desc": "Menyimpan seluruh model atau pilihan sebagai STEP AP214 atau AP242: solid dengan permukaan bidang, silinder, kerucut, bola, toroid, dan B-spline yang presisi, elemen lain sebagai permukaan bidang, warna, satu node rakitan per level.",
+ "cmd.data.export_3mf.desc": "Menyimpan seluruh model atau pilihan sebagai 3MF untuk pencetakan: satu objek per elemen, warna, satuan, dan pemeriksaan bahwa setiap badan kedap air.",
+ "fmenu.export.step": "STEP solid presisi (.step)",
+ "fmenu.export.3mf": "3MF untuk pencetakan (.3mf)",
+ "mx.schema": "Skema STEP",
+ "mx.schema.ap214": "AP214 (dukungan paling luas)",
+ "mx.schema.ap242": "AP242",
+ "mx.watertight": "Badan yang tidak kedap air",
+ "mx.watertight.report": "Tulis dan daftarkan",
+ "mx.watertight.skip": "Lewati",
+ "mx.watertight.require": "Batalkan ekspor",
+ "mx.faceted": "{fmt} disimpan: {path} ({exact} solid presisi, {n} ditulis sebagai permukaan bidang: {first})",
+ "sheets.print.svg": "SVG"
+}

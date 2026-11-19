@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "Bryły masowej nie można obracać ani odbijać: jej historia kształtu nie ma kroku obrotu. Przesuń lub skopiuj ją albo narysuj ponownie w nowym kierunku.",
+ "sched_cats.col.name": "Nazwa",
+ "sched_cats.col.material": "Materiał",
+ "sched_cats.col.void": "Pustka",
+ "sched_cats.col.inplace": "Wylewany na miejscu",
+ "sched_cats.col.volume": "Objętość netto",
+ "sched_cats.col.area": "Pole powierzchni",
+ "sched_cats.col.floor_area": "Pole posadzki",
+ "sched_cats.col.thickness": "Grubość",
+ "sched_cats.col.points": "Punkty",
+ "elem.toposolid.points": "Punkty pomiarowe",
+ "elem.toposolid.count": "Punkty",
+ "elem.toposolid.low": "Najniższa",
+ "elem.toposolid.high": "Najwyższa",
+ "elem.toposolid.edit": "Edytuj punkty",
+ "elem.toposolid.edit_tip": "Wskazuj, przeciągaj i ustawiaj rzędną punktów pomiarowych na rzucie",
+ "elem.toposolid.pick_hint": "Kliknij punkt na rzucie, aby go wskazać. Kliknij ponownie, aby dodać lub usunąć.",
+ "elem.toposolid.z": "Rzędna ({n})",
+ "elem.toposolid.mixed": "Wskazane punkty różnią się; nowa wartość ustawi wszystkie.",
+ "elem.toposolid.edit_help": "Przeciągnij punkt, aby go przesunąć. Wpisz wartość i naciśnij Enter, aby ustawić rzędną. Backspace usuwa wskazane punkty, Esc wychodzi.",
+ "elem.toposolid.done": "Gotowe"
+}

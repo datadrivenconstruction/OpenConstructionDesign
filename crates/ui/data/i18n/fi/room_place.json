@@ -1,0 +1,8 @@
+{
+ "cmd.arch.room_auto": "Sijoita huoneet automaattisesti",
+ "cmd.arch.room_auto.desc": "Sijoittaa huoneen jokaiseen aktiivisen tason suljettuun rajaan, jossa sitä ei vielä ole. Avoimia seinäsilmukoita ohitetaan, niitä ei sulkea arvaamalla. Yksi kumoamisvaihe.",
+ "room_place.placed": "Huoneita sijoitettu: {n}. Alueet, joissa oli jo huone: {m}. Avoimia silmukoita ohitettu: {k}",
+ "room_place.all_had": "Ei sijoitettu mitään: kaikilla {m} suljetulla alueella on jo huone. Avoimia silmukoita ohitettu: {k}",
+ "room_place.none": "Ei sijoitettu mitään: tasolla ei ole suljettuja seinäalueita",
+ "room_place.none_open": "Ei sijoitettu mitään: tasolla ei ole suljettuja seinäalueita. Avoimia silmukoita ohitettu: {k}"
+}

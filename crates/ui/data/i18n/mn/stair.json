@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "Шатнууд",
+ "selcat.railing": "Хашлагууд",
+ "quick.cat.stair": "Шатнууд",
+ "quick.cat.railing": "Хашлагууд",
+ "stair.risers": "Өсгөгчүүд",
+ "stair.riser": "Өсгөгчийн өндөр",
+ "stair.comfort": "2R + T",
+ "stair.tread_auto": "Дүрмээр тэвшин",
+ "stair.tread_auto_tip": "Бичсэн тэвшинг хасаж, 2R + T дүрмээр тогтоолгоно",
+ "stair.broken": "Энэ шат түвшиндээ таарахгүй байна",
+ "railing.host_stair": "Шат #{id} дээр суурилсан",
+ "railing.host_path": "Эскизийн хашлага",
+ "railing.length": "Урт",
+ "stair.deleted_with": "{n} суурилсан хашлагатай"
+}

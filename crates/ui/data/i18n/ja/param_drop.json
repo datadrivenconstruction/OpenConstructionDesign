@@ -1,0 +1,8 @@
+{
+ "param_drop.title": "パラメータの値を削除しますか？",
+ "param_drop.intro": "{name} はこれらのカテゴリにもう割り当てられていません:",
+ "param_drop.line": "{category}: {values} が削除されます",
+ "param_drop.undo": "Ctrl+Z を 1 回押すとすべて元に戻ります。",
+ "param_drop.confirm": "値を削除して保存",
+ "param_drop.cancel": "キャンセル"
+}

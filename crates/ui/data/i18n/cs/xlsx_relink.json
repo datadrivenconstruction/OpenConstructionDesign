@@ -1,0 +1,14 @@
+{
+ "xlsx_relink.title": "Propojený sešit byl přesunut nebo přejmenován",
+ "xlsx_relink.body": "Sešit „{file}“ již není v {folder}. Úpravy, které jsme do něj zapsali, se vrátí až po novém propojení.",
+ "xlsx_relink.found_one": "Nalezen „{file}“ v {folder}: stejný projekt i stejný export. Propojit jej?",
+ "xlsx_relink.found_many": "Nalezeno {n} sešitů tohoto projektu a tohoto exportu. Vyberte ten, který propojit:",
+ "xlsx_relink.found_none": "Vedle něj nebyl nalezen žádný sešit tohoto exportu. Najděte jej, nebo exportujte nový sešit.",
+ "xlsx_relink.link": "Propojit „{file}“",
+ "xlsx_relink.find": "Najít…",
+ "xlsx_relink.find_title": "Najít propojený sešit",
+ "xlsx_relink.export_new": "Exportovat nový sešit",
+ "xlsx_relink.close": "Zavřít",
+ "xlsx_relink.gone": "Sešit „{file}“ již není ve své složce. Úpravy, které jsme do něj zapsali, se vrátí až po novém propojení.",
+ "xlsx_relink.found_one_short": "Nalezen „{file}“: stejný projekt i stejný export. Propojit jej?"
+}

@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "Бүгд",
+ "clash_list.only_selected": "Зөвхөн сонгосон",
+ "clash_list.tolerance": "Хүлцэл",
+ "clash_list.gap": "Зай",
+ "clash_list.export": "Экспорт",
+ "clash_list.col.volume": "Эзлэхүүн",
+ "clash_list.fix.up": "Дээш зөөх",
+ "clash_list.fix.down": "Доош зөөх",
+ "clash_list.fix.sleeve": "Гуурс",
+ "clash_list.apply_fix": "Засварыг хэрэглэх",
+ "clash_list.err.tol": "Хүлцэл: урт оруулна уу (0 ба түүнээс их), жишээ нь 50 эсвэл 2 in",
+ "clash_list.sleeve_no_host": "Гуурсанд хосолсон хосын хана эсвэл дал хэрэгтэй",
+ "clash_list.err.gap": "Зай: урт оруулна уу (0 ба түүнээс их), жишээ нь 50 эсвэл 2 in"
+}

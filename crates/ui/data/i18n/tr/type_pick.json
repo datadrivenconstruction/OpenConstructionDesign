@@ -1,0 +1,10 @@
+{
+ "type_pick.pick.search": "Tip veya kalınlığa göre ara",
+ "type_pick.pick.empty": "Eşleşen tip yok",
+ "type_pick.pick.edit": "Tipi düzenle…",
+ "type_pick.pick.mixed": "Karışık",
+ "type_pick.pick.layers": {
+  "one": "# katman",
+  "other": "# katman"
+ }
+}

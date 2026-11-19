@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "Фитинг",
+ "elem.mep_fitting.many": "Фитинги",
+ "elem.mep_fitting.kind.elbow": "Отвод",
+ "elem.mep_fitting.kind.tee": "Тройник",
+ "elem.mep_fitting.kind.cross": "Крестовина",
+ "elem.mep_fitting.kind.transition": "Переход",
+ "elem.mep_fitting.kind.cap": "Заглушка",
+ "elem.mep_fitting.size": "Размер",
+ "elem.mep_fitting.at": "Положение",
+ "elem.mep_fitting.runs": "Участок {n}",
+ "elem.mep_fitting.edit_run": "Править участок",
+ "elem.mep_fitting.select_runs": "Выбрать его участки",
+ "elem.mep_fitting.derived": "Фитинг следует за участками: меняете участок, и фитинг меняется вместе с ним.",
+ "elem.mep_fitting.no_delete": "Фитинг нельзя удалить или сдвинуть отдельно. Правьте или удаляйте его участки.",
+ "elem.mep_fitting.hint": "Щёлкните фитинг в плане, чтобы увидеть его участки.",
+ "elem.mep_fitting.picked": "Выбрано фитингов: {n}"
+}

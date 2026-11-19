@@ -1,0 +1,16 @@
+{
+ "family_overwrite.ow.title": "प्रोजेक्ट प्रकार के मान बदलें?",
+ "family_overwrite.ow.body": "लोड करने से {types} में {values} बदलेंगे। इन प्रकारों के लगे हुए इंस्टेंस: {instances}।",
+ "family_overwrite.ow.values": {
+  "one": "# मान",
+  "other": "# मान"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# प्रकार",
+  "other": "# प्रकार"
+ },
+ "family_overwrite.ow.list": "प्रकार: {list}",
+ "family_overwrite.ow.more": "और {n} अन्य",
+ "family_overwrite.ow.back": "संपादन पर वापस",
+ "family_overwrite.ow.replace": "मान बदलें"
+}

@@ -1,0 +1,18 @@
+{
+ "undo.entry_later": "No deshecho: se hizo otro cambio después. Deshaga ese primero.",
+ "undo.entry_gone": "No deshecho: este cambio ya está deshecho o ya no está en el historial.",
+ "undo.entry_busy": "Termine o cancele primero el dibujo actual y luego deshaga.",
+ "quick.hud.more": "Más en Propiedades: {names}",
+ "sheet_tools.sheet.more": "Más herramientas de lámina",
+ "job.of": "{d} de {t}",
+ "job.of.mb": "{d} de {t} MB",
+ "job.left.under_minute": "queda menos de un minuto",
+ "job.left.minutes": "quedan unos {n} min",
+ "sheet_tools.start.units": "Unidades",
+ "sheet_tools.print.save": {
+  "one": "Guardar # lámina",
+  "other": "Guardar # láminas"
+ },
+ "sheet_tools.sets.delete_ask": "¿Eliminar el juego “{name}”? Sus láminas permanecen en el proyecto.",
+ "sheet_tools.keep": "Conservar"
+}

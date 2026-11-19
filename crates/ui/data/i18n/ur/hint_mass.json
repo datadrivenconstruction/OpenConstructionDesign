@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "آزاد سطح",
+ "cmd.mass.panelize": "پینلز میں تقسیم",
+ "cmd.mass.surface_shell": "سطح پر چھت",
+ "cmd.mass.thicken": "موٹا کریں",
+ "hint.mass.freeform.first": "آزاد سطح: پلان مستطیل کا پہلا کونا · بلندی درج کریں · Esc — منسوخ",
+ "hint.mass.freeform.next": "آزاد سطح: مخالف کونا · بلندی درج کریں · Esc — منسوخ",
+ "hint.mass.panelize.first": "پینلز میں تقسیم: 3D میں ایک آزاد سطح منتخب کریں · Esc — منسوخ",
+ "hint.mass.panelize.value": "پینلز میں تقسیم: پینل کا سائز درج کریں · Enter — لاگو کریں · Esc — منسوخ",
+ "hint.mass.surface_shell.first": "سطح پر چھت: 3D میں ایک آزاد سطح منتخب کریں · Esc — منسوخ",
+ "hint.mass.surface_shell.value": "سطح پر چھت: موٹائی درج کریں · Enter — لاگو کریں · Esc — منسوخ",
+ "hint.mass.thicken.first": "موٹا کریں: 3D میں ایک آزاد سطح منتخب کریں · Esc — منسوخ",
+ "hint.mass.thicken.value": "موٹا کریں: موٹائی درج کریں (0 — بغیر موٹائی کی سطح) · Enter — لاگو کریں · Esc — منسوخ",
+ "status.mass.pick_surface": "ایک آزاد سطح منتخب کریں",
+ "status.mass.freeform_small": "مستطیل بہت چھوٹا ہے: ہر طرف کم از کم 0.5 میٹر",
+ "name.mass.freeform": "آزاد سطح",
+ "rgroup.mass_free": "اعلیٰ"
+}

@@ -1,0 +1,10 @@
+{
+ "wall_stack.we.stack_caption": "Құрама түр",
+ "wall_stack.we.side_left": "Сол жақ бет",
+ "wall_stack.we.side_right": "Оң жақ бет",
+ "wall_stack.we.from": "Бастап",
+ "wall_stack.we.to": "Дейін",
+ "wall_stack.we.bottom": "Төменгі",
+ "wall_stack.we.delete_tip": "Бұл профильді жою",
+ "wall_stack.we.from_after_to": "«Бастап» мәні «Дейін» мәнінен бұрын болуы керек"
+}

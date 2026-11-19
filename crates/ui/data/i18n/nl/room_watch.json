@@ -1,0 +1,4 @@
+{
+ "room_watch.room.dup": "Ruimte {room} ligt in het gebied van ruimte {other}: oppervlakte en volume worden alleen in ruimte {other} geteld",
+ "ai.issue.room_dup": "De ruimte ligt in het gebied van ruimte {0}: de oppervlakte wordt daar meegeteld"
+}

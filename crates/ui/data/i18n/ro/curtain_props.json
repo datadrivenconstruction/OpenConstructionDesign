@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "Panou",
+ "curtain_props.cw.panel_cell": "Celula {i}×{j} · perete cortină #{id}",
+ "curtain_props.cw.kind": "Tip",
+ "curtain_props.cw.kind.glazed": "Sticlă",
+ "curtain_props.cw.kind.solid": "Plin",
+ "curtain_props.cw.kind.door": "Ușă",
+ "curtain_props.cw.kind.window": "Fereastră",
+ "curtain_props.cw.kind.empty": "Gol",
+ "curtain_props.cw.name": "Nume",
+ "curtain_props.cw.swing_side": "Se deschide spre cealaltă parte",
+ "curtain_props.cw.swing_hinge": "Balama la capătul celulei",
+ "curtain_props.cw.size": "Dimensiune",
+ "curtain_props.cw.cell_area": "Suprafața celulei",
+ "curtain_props.cw.panel_area": "Suprafața panoului",
+ "curtain_props.cw.prev": "Panoul anterior",
+ "curtain_props.cw.next": "Panoul următor",
+ "curtain_props.cw.wall": "Selectați peretele",
+ "curtain_props.cw.panel_hint": "Esc — selecție · Ctrl+Z — anulare",
+ "curtain_props.cw.status.panel": "Panoul {i}×{j} → {kind}",
+ "e3d.err.cw_height": "înălțimea peretelui cortină trebuie să depășească 100 mm"
+}

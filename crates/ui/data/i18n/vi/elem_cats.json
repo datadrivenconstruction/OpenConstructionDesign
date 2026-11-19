@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "Khối không thể xoay hoặc lấy đối xứng: lịch sử hình dạng của nó không có bước xoay. Hãy di chuyển hoặc sao chép, hoặc vẽ lại theo hướng mới.",
+ "sched_cats.col.name": "Tên",
+ "sched_cats.col.material": "Vật liệu",
+ "sched_cats.col.void": "Lỗ rỗng",
+ "sched_cats.col.inplace": "Tại chỗ",
+ "sched_cats.col.volume": "Thể tích thực",
+ "sched_cats.col.area": "Diện tích bề mặt",
+ "sched_cats.col.floor_area": "Diện tích sàn",
+ "sched_cats.col.thickness": "Độ dày",
+ "sched_cats.col.points": "Điểm",
+ "elem.toposolid.points": "Điểm khảo sát",
+ "elem.toposolid.count": "Điểm",
+ "elem.toposolid.low": "Thấp nhất",
+ "elem.toposolid.high": "Cao nhất",
+ "elem.toposolid.edit": "Sửa điểm",
+ "elem.toposolid.edit_tip": "Chọn, kéo và đặt cao độ các điểm khảo sát trên mặt bằng",
+ "elem.toposolid.pick_hint": "Nhấp một điểm trên mặt bằng để chọn. Nhấp lại để thêm hoặc bỏ.",
+ "elem.toposolid.z": "Cao độ ({n})",
+ "elem.toposolid.mixed": "Các điểm đã chọn khác nhau; giá trị mới sẽ đặt cho tất cả.",
+ "elem.toposolid.edit_help": "Kéo một điểm để di chuyển. Nhập giá trị và nhấn Enter để đặt cao độ. Backspace xóa các điểm đã chọn, Esc thoát.",
+ "elem.toposolid.done": "Xong"
+}

@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "Maglagay ng layer sa ibaba",
+ "type_layers.layer.delete": "Burahin ang layer",
+ "type_layers.layer.delete_last": "Kailangan ng type ng kahit isang layer",
+ "type_layers.value.bad": "Hindi wastong positibong halaga",
+ "type_layers.value.required": "Kailangan",
+ "type_layers.unsaved.title": "Hindi pa naii-save na pagbabago sa {name}",
+ "type_layers.unsaved.body": "Ilapat sa type, o itapon?",
+ "type_layers.unsaved.discard": "Itapon"
+}

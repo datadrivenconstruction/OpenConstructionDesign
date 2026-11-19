@@ -1,0 +1,9 @@
+{
+ "prop_head.of_type": {
+  "one": "# af denne type",
+  "other": "# af denne type"
+ },
+ "prop_head.override_tip": "Afviger fra typen, klik for at nulstille",
+ "prop_head.reset_done": "“{name}” nulstillet til typeværdien",
+ "prop_head.copy_id": "Klik for at kopiere nummeret"
+}

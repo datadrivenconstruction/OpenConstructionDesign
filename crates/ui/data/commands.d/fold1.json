@@ -1,0 +1,94 @@
+[
+ {
+  "id": "ui.ribbon.toggle",
+  "icon": "fold-ribbon",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+F1"
+  ],
+  "tab": "view",
+  "surfaces": [
+   "R",
+   "A"
+  ],
+  "stage": "M1",
+  "group": "windows",
+  "priority": 7
+ },
+ {
+  "id": "ui.bar.options",
+  "icon": "fold-options",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+Alt+O"
+  ],
+  "tab": "view",
+  "surfaces": [
+   "R",
+   "A"
+  ],
+  "stage": "M1",
+  "group": "windows",
+  "priority": 8
+ },
+ {
+  "id": "ui.bar.status",
+  "icon": "fold-status",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+Alt+U"
+  ],
+  "tab": "view",
+  "surfaces": [
+   "R",
+   "A"
+  ],
+  "stage": "M1",
+  "group": "windows",
+  "priority": 8
+ },
+ {
+  "id": "ui.clean_screen",
+  "icon": "clean-screen",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+Shift+F1"
+  ],
+  "tab": "view",
+  "surfaces": [
+   "R",
+   "A"
+  ],
+  "stage": "M1",
+  "group": "windows",
+  "priority": 7
+ },
+ {
+  "id": "ui.ai.work",
+  "icon": "fold-ai-work",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+Alt+A"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1",
+  "group": "view"
+ },
+ {
+  "id": "ui.ai.preview",
+  "icon": "fold-ai-preview",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+Alt+R"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1",
+  "group": "view"
+ }
+]

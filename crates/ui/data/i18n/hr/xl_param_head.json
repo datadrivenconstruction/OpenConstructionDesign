@@ -1,0 +1,7 @@
+{
+ "xl.msg.param_ambiguous": "stupac '{}' može biti bilo koji od parametara {}; upišite točan naziv parametra, nije primijenjeno",
+ "xl.msg.param_tag_stale": "stupac '{}' navodi parametar koji ovaj projekt nema; nije primijenjeno",
+ "xl.msg.dup_col_note": "stupac '{}' u {} ponavlja stupac '{}' u {}; jednake vrijednosti se primjenjuju jednom, a redak u kojem se razlikuju zadržava vrijednost modela",
+ "xl.msg.dup_col_differs": "stupci '{}' i '{}' se razlikuju u {} i {}; vrijednost modela ostaje — zadržite jedan stupac",
+ "xl.msg.dup_col_id": "stupci '{}' i '{}' se razlikuju u {} i {}, redak se ne može identificirati; ništa nije primijenjeno — zadržite jedan stupac"
+}

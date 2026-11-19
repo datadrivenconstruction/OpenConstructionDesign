@@ -1,0 +1,20 @@
+{
+ "dwgfillet.fillet": "Zaobljenje",
+ "dwgfillet.cancel": "Zaustavi zaobljenje",
+ "dwgfillet.tip": "Kliknite dvije linije na stranama koje želite zadržati: obje se skraćuju ili produžuju do kuta, uz tangencijalni luk kad je polumjer veći od nule",
+ "dwgfillet.radius": "Polumjer zaobljenja",
+ "dwgfillet.radius_tip": "Polumjer luka u jedinicama crteža; 0 daje oštar kut",
+ "dwgfillet.st.arm_first": "Kliknite prvu liniju na strani koju želite zadržati",
+ "dwgfillet.st.arm_second": "Kliknite drugu liniju na strani koju želite zadržati",
+ "dwgfillet.st.not_armed": "Prvo odaberite Zaobljenje",
+ "dwgfillet.st.click_line": "Kliknite jednu liniju crteža",
+ "dwgfillet.st.other_drawing": "Obje linije moraju pripadati istom crtežu: počnite ponovno",
+ "dwgfillet.st.changed": "Prva linija je promijenjena: počnite ponovno",
+ "dwgfillet.st.same_line": "Odaberite drugu liniju",
+ "dwgfillet.st.parallel": "Linije su paralelne i nikad se ne sijeku: kut se ne može izraditi",
+ "dwgfillet.st.degenerate": "Linija nema duljinu",
+ "dwgfillet.st.no_side": "Kliknuta strana nema duljinu od kuta",
+ "dwgfillet.st.too_big": "Polumjer je prevelik za ove linije: upotrijebite manji polumjer",
+ "dwgfillet.st.radius_bad": "Polumjer mora biti nula ili pozitivan",
+ "dwgfillet.st.done": "Kut izrađen"
+}

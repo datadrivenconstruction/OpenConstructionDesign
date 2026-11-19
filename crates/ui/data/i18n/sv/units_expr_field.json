@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "Tom inmatning.",
+ "units.err.not_number": "Inte ett tal på position {pos}.",
+ "units.err.unknown_unit": "Okänd enhet: {unit}.",
+ "units.err.non_positive": "Längden måste vara större än noll.",
+ "units.err.too_large": "Längden får inte överstiga {max} m.",
+ "units.err.bad_angle": "Vinkeln anges i grader.",
+ "units.err.unknown_name": "Okänt namn: {name}. Värdet behålls.",
+ "units.err.cycle": "Formelslinga vid {name}. Värdet behålls.",
+ "units.err.bad_expr": "Uttrycket på position {pos} kan inte läsas. Värdet behålls.",
+ "units.err.div_zero": "Division med noll på position {pos}. Värdet behålls.",
+ "units.err.invalid": "Ogiltigt tal.",
+ "units.err.kept": "Inte ändrat: {reason}"
+}

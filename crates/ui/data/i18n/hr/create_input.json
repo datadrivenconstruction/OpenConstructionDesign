@@ -1,0 +1,14 @@
+{
+ "cmd.mod.divide": "Podijeli",
+ "cmd.mod.divide.short": "Podijeli",
+ "cmd.mod.divide.desc": "Dijeli zid na jednake dijelove u jednom koraku. Upiši broj dijelova, zatim klikni zid.",
+ "whereis.mod.divide": "podijeli, jednaki dijelovi, izreži na komade, segmentiraj zid",
+ "hint.split.parts": "Podijeli: klikni zid · broj — dijelova (2–100) · Esc — odustani",
+ "create_input.divide.bad_parts": "„{text}” nije broj dijelova: upiši cijeli broj od 2 do {max}",
+ "create_input.ws.err.empty": "Upiši naziv rasporeda",
+ "create_input.ws.err.long": "Naziv je predugačak: najviše 40 znakova",
+ "create_input.ws.err.preset": "Taj naziv pripada ugrađenom rasporedu",
+ "create_input.ws.err.full": "Najviše 24 spremljena rasporeda: prvo ukloni jedan",
+ "create_input.seldim.locked": "Udaljenost {v} zaključana",
+ "create_input.seldim.positive": "Udaljenost mora biti veća od nule"
+}

@@ -1,0 +1,21 @@
+{
+ "ai.receipt.title": {
+  "one": "Applicata # modifica",
+  "other": "Applicate # modifiche"
+ },
+ "ai.receipt.more": "+{n} altri",
+ "ai.receipt.list": "Elementi",
+ "ai.receipt.show": "Mostra",
+ "ai.receipt.show.tip": "Seleziona e inquadra gli elementi modificati",
+ "ai.receipt.undo": "Annulla",
+ "ai.receipt.undo.tip": "Ritira esattamente questa applicazione",
+ "ai.receipt.undone": "Annullato",
+ "ai.receipt.later": "Sono state fatte modifiche successive",
+ "ai.receipt.toast_undone": "Il piano applicato è stato annullato",
+ "ai.receipt.draft_family": "Famiglia in bozza: {name}",
+ "ai.receipt.promote": "Rendi operativa",
+ "ai.receipt.promote.tip": "Trasforma la famiglia in bozza in una operativa (un solo passo di annullamento)",
+ "ai.receipt.promoted": "La famiglia è ora operativa",
+ "ai.receipt.promote_failed": "Impossibile rendere operativa la famiglia",
+ "cmd.ai.receipt_undo": "Annulla ultimo piano IA"
+}

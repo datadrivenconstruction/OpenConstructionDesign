@@ -1,0 +1,7 @@
+{
+ "spline.opt.spline": "Spline",
+ "spline.opt.spline_tip": "Perete spline: faceți clic pe punctele prin care trece, Enter sau Esc pentru a termina",
+ "spline.wt.three_points": "un perete spline are nevoie de cel puțin trei puncte",
+ "spline.wt.no_curtain": "un perete cortină nu are ax spline",
+ "spline.wt.added": "perete spline adăugat"
+}

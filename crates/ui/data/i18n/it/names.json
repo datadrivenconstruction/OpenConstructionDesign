@@ -1,0 +1,19 @@
+{
+ "names.level": "Livello {n}",
+ "names.slab": "Solaio 200",
+ "names.roof_slab": "Copertura 200",
+ "names.sheet.plan_section": "Pianta e sezione piano 1",
+ "names.sheet.plan_view": "Pianta piano 1",
+ "names.sheet.site_plan": "Planimetria",
+ "names.sheet_set.issue": "Emissione 1",
+ "names.title.owner": "Project Ltd",
+ "names.title.creator": "A. Ivanov",
+ "names.title.approver": "P. Petrov",
+ "names.title.document_type": "Disegno",
+ "names.title.status": "In corso",
+ "names.revision.date": "4 nov 2026",
+ "names.revision.description": "Emesso per revisione",
+ "names.revision.author": "IA",
+ "names.demo.no_levels": "nessun livello",
+ "names.demo.no_sheet": "tavola"
+}

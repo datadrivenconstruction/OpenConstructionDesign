@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "すべて",
+ "clash_list.only_selected": "選択のみ",
+ "clash_list.tolerance": "許容差",
+ "clash_list.gap": "間隔",
+ "clash_list.export": "書き出し",
+ "clash_list.col.volume": "体積",
+ "clash_list.fix.up": "上に移動",
+ "clash_list.fix.down": "下に移動",
+ "clash_list.fix.sleeve": "スリーブ",
+ "clash_list.apply_fix": "修正を適用",
+ "clash_list.err.tol": "許容差: 長さを入力してください (0 以上)。例: 50 または 2 in",
+ "clash_list.sleeve_no_host": "スリーブには組の中に壁またはスラブが必要です",
+ "clash_list.err.gap": "間隔: 長さを入力してください (0 以上)。例: 50 または 2 in"
+}

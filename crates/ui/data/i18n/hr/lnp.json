@@ -1,0 +1,14 @@
+{
+ "lnp.openings_refused": "{n} otvora nije promijenjeno ({why})",
+ "lnp.params_changed": "promijenjenih vrijednosti: {n}",
+ "lnp.params_same": "Nema promjena: {u} elemenata već ima ovu vrijednost",
+ "lnp.params_tip": "Enter primjenjuje vrijednost na sve odabrane elemente; Esc ih zadržava",
+ "lnp.locked_hint": "Zaključane vrijednosti se zadržavaju: {n}",
+ "lnp.panels_one": "Paneli se uređuju jedan po jedan",
+ "lnp.keep_first": "Zadrži prvi",
+ "lnp.keep_first_tip": "Odaberite samo prvi panel za uređivanje",
+ "lnp.clip_from_wall": "Parametri kopirani sa zida #{id}",
+ "lnp.clip_from_opening": "Parametri kopirani s otvora #{id}",
+ "lnp.match_from": "Svojstva iz #{id} primijenjena na {n} elemenata",
+ "lnp.why_at": "#{id}: {e}"
+}

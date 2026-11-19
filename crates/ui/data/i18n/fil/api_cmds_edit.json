@@ -1,0 +1,20 @@
+{
+ "api.cmd.move_elements": "Ilipat ang mga elemento ayon sa offset sa metro",
+ "api.cmd.copy_elements": "Kopyahin ang mga elemento sa isa o higit pang offset sa metro",
+ "api.cmd.rotate_elements": "I-rotate ang mga elemento sa paligid ng punto ayon sa anggulo sa degree",
+ "api.cmd.mirror_elements": "I-mirror ang mga elemento sa axis na dumaraan sa dalawang punto",
+ "api.cmd.scale_elements": "I-scale ang mga elemento sa paligid ng punto ayon sa factor",
+ "api.cmd.array_elements": "Linear o radial na array ng mga elemento",
+ "api.cmd.offset_wall": "Parallel na kopya ng pader sa layong nasa metro",
+ "api.cmd.split_wall": "Hatiin sa dalawa ang pader sa isang punto",
+ "api.cmd.pin_elements": "I-pin o i-unpin ang mga elemento",
+ "api.cmd.flip_openings": "I-flip ang panig ng bisagra o harap ng mga pinto at bintana",
+ "api.cmd.create_level": "Gumawa ng level sa elevation sa metro",
+ "api.cmd.edit_level": "Palitan ang pangalan ng antas o baguhin ang elevation nito",
+ "api.cmd.delete_level": "Burahin ang isang antas",
+ "api.cmd.place_rooms": "Maglagay ng kuwarto sa bawat saradong rehiyon ng antas",
+ "api.cmd.join_elements": "Pagdugtungin, tanggalin ang pagdudugtong o palitan ang geometry joins",
+ "api.cmd.place_footings": "Maglagay ng footing sa ilalim ng bawat column ng antas",
+ "api.cmd.create_terrain": "Gumawa ng terrain mula sa mga survey point o sloped na eroplano",
+ "api.cmd.script_recipes": "Basahin ang mga building block at recipe ng script para sa malayang konstruksyon"
+}

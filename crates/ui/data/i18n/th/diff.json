@@ -1,0 +1,7 @@
+{
+ "diff.kind.added": "เพิ่ม",
+ "diff.kind.changed": "เปลี่ยน",
+ "diff.kind.deleted": "ลบ",
+ "diff.kind.refused": "ปฏิเสธ",
+ "diff.kind.conflict": "ขัดแย้ง"
+}

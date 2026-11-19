@@ -1,0 +1,14 @@
+{
+ "empty.v3d_model.title": "Nimic în 3D încă",
+ "empty.v3d_model.hint": "Desenează pereți în plan și vor apărea aici.",
+ "empty.v3d_model.action": "Deschide planul",
+ "empty.v3d_hidden.title": "Toate elementele sunt ascunse în această vedere",
+ "empty.v3d_hidden.hint": "Ascunderea sau izolarea temporară nu lasă nimic vizibil. Grafica vederii rămâne cum a fost setată.",
+ "empty.v3d_hidden.action": "Arată tot",
+ "empty.v3d_graphics.title": "Grafica vederii ascunde toate categoriile",
+ "empty.v3d_graphics.hint": "Regulile de categorie ale acestei vederi nu lasă nimic vizibil. Reactivează categoriile în Grafica vederii.",
+ "empty.v3d_graphics.action": "Deschide grafica vederii",
+ "empty.v3d_box.title": "Caseta de secțiune este în afara modelului",
+ "empty.v3d_box.hint": "Caseta taie fiecare element. Încadreaz-o din nou în jurul modelului.",
+ "empty.v3d_box.action": "Resetează caseta"
+}

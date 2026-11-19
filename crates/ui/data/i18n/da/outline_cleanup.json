@@ -1,0 +1,15 @@
+{
+ "cmd.ctx.floor.clean_outline": "Ryd op i kontur",
+ "cmd.ctx.floor.clean_outline.desc": "Fjerner smalle spidser, hvor gulvkonturen vender tilbage på sig selv. Viser en forhåndsvisning først; ét fortrydelsestrin.",
+ "outline_cleanup.title": "Ryd op i kontur",
+ "outline_cleanup.intro": "Konturen af dette gulv vender tilbage på sig selv i smalle spidser: {n}. Oprydning fjerner dem; alt andet forbliver som det er.",
+ "outline_cleanup.legend_before": "Tyk linje: konturen nu",
+ "outline_cleanup.legend_after": "Tynd linje: konturen efter oprydning",
+ "outline_cleanup.undo": "Dette kan fortrydes i ét trin.",
+ "outline_cleanup.apply": "Ryd op",
+ "outline_cleanup.cancel": "Annuller",
+ "outline_cleanup.done": "Kontur ryddet op, spidser fjernet: {n}",
+ "outline_cleanup.none": "Konturen af dette gulv har ingen spidser",
+ "outline_cleanup.failed": "Konturen kunne ikke ryddes op",
+ "outline_cleanup.changed": "Konturen er ændret siden forhåndsvisningen; intet blev skrevet. Kontrollér den nye forhåndsvisning."
+}

@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "{n} cellules collées",
+ "sched_edit.pasted_skipped": "{n} cellules collées, {k} ignorées : {why}",
+ "sched_edit.filled": "{n} cellules remplies",
+ "sched_edit.filled_skipped": "{n} cellules remplies, {k} ignorées : {why}",
+ "sched_edit.why_ro": "{n} en lecture seule",
+ "sched_edit.why_bad": "{n} valeur incorrecte",
+ "sched_edit.no_cell": "Cliquez d'abord sur une cellule du tableau",
+ "sched_edit.nothing": "Rien à écrire",
+ "sched_edit.not_refreshed": "Écrit, la vue ne s'est pas rafraîchie : {e}",
+ "sched_edit.failed": "non modifié : {e}",
+ "sched_edit.no_changes": "Aucune modification : {u} cellules ont déjà ces valeurs",
+ "sched_edit.same_tail": ", {u} déjà identiques"
+}

@@ -1,0 +1,6 @@
+{
+ "quick.keys.rec_hint": "Esc iptal eder · Backspace temizler",
+ "quick.keys.row_lost": "{key} artık “{cmd}” komutuna ait",
+ "quick.keys.row_took": "{key} “{cmd}” komutundan alındı",
+ "quick.keys.reset_tip": "Varsayılana sıfırla"
+}

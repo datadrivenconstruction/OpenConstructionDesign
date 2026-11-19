@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "Rien trouvé",
+ "empty.browser_search.hint": "Aucune vue, aucun niveau, aucun type ni aucune pièce ne correspond à cette recherche.",
+ "empty.browser_search.action": "Effacer la recherche",
+ "empty.xl_filtered.title": "Aucune entrée ne correspond aux filtres",
+ "empty.xl_filtered.hint": "Activez d'autres types, choisissez une autre feuille ou modifiez le texte de recherche.",
+ "empty.xl_filtered.action": "Effacer les filtres",
+ "empty.xl_nochanges.title": "Aucune modification dans le classeur",
+ "empty.xl_nochanges.hint": "Le classeur correspond au modèle : l'importer ne changerait rien.",
+ "empty.version_same.title": "Les modèles sont identiques",
+ "empty.version_same.hint": "Aucune différence entre le modèle ouvert et la version choisie.",
+ "empty.templates.title": "Aucun gabarit de vue pour l'instant",
+ "empty.templates.hint": "Créez-en un à partir de la vue courante pour réutiliser ses réglages sur d'autres vues.",
+ "empty.templates.action": "Nommer un gabarit",
+ "empty.fe_params.title": "Aucun paramètre pour l'instant",
+ "empty.fe_params.hint": "Ajoutez un paramètre ci-dessous pour piloter les dimensions, les matériaux ou la visibilité.",
+ "empty.fe_params.action": "Ajouter un paramètre"
+}

@@ -1,0 +1,22 @@
+{
+ "cmd.arch.grid_pick": "按线创建轴网",
+ "cmd.arch.grid_pick.desc": "沿当前标高中选定的图纸线精确创建轴网；编号按系列延续。Tab 键可一次选取同一图纸图层中的所有平行线。每次拾取为一步撤销。",
+ "cmd.struct.beam_pick": "按线创建梁",
+ "cmd.struct.beam_pick.desc": "沿选定的图纸线在当前标高上放置当前类型的梁。Tab 键可选取相连的整条线段。每次拾取为一步撤销。",
+ "hint.grid_pick.one": "按线创建轴网：拾取图纸线 · Tab 选取其图层中的所有平行线 · Esc 退出",
+ "hint.grid_pick.more": "按线创建轴网：拾取一条线以选取其图层中的所有平行线 · Tab 仅选一条线 · Esc 取消",
+ "hint.beam_pick.one": "按线创建梁：拾取图纸线 · Tab 选取相连线段 · Esc 退出",
+ "hint.beam_pick.more": "按线创建梁：拾取一条线以选取其连续线段 · Tab 仅选一条线 · Esc 取消",
+ "line_pick.st.start_grid": "拾取图纸线。Tab：其图层中的所有平行线",
+ "line_pick.st.start_beam": "为 {type} 梁拾取图纸线。Tab：相连线段",
+ "line_pick.st.grid_done": "已添加轴网 {name}",
+ "line_pick.st.grids_done": "已添加 {n} 条轴网：{first} — {last}",
+ "line_pick.st.beam_done": "已添加梁 {type}",
+ "line_pick.st.beams_done": "已添加 {n} 根梁 {type}",
+ "line_pick.st.on_grid": "此线已有轴网 {name}",
+ "line_pick.st.on_beam": "此线已有梁 {id}",
+ "line_pick.st.no_layer": "线条所在的图纸图层尚未识别，请重试",
+ "line_pick.st.no_beam_type": "目录中没有梁截面",
+ "line_pick.st.reload_warn": "已创建，但视图无法重新加载：{err}",
+ "line_pick.st.failed": "未能创建：{err}"
+}

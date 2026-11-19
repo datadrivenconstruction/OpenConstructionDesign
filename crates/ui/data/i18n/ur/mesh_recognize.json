@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "{total} میں سے {done} پہچانے جا رہے ہیں",
+ "mesh_recognize.all": "سب {n}",
+ "mesh_recognize.only_confident": "صرف پختہ",
+ "mesh_recognize.confident_tip": "وہ قطاریں منتخب کرتا ہے جن کی قسم زمرے سے میل کھاتی ہے اور اعتماد کم از کم {pct}% ہے",
+ "mesh_recognize.row_hint": "منتخب کرنے کے لیے قطار پر کلک کریں۔ تیر کی کلیدیں حرکت دیتی ہیں، Enter منتخب کرتا ہے۔",
+ "mesh_recognize.kind_for": "{name} کی قسم",
+ "mesh_recognize.source": "ماخذ میش",
+ "mesh_recognize.keep": "میش رکھیں",
+ "mesh_recognize.replace": "میش بدلیں",
+ "mesh_recognize.convert_keep": "{n} تبدیل کریں",
+ "mesh_recognize.convert_remove": "{n} تبدیل کریں اور میش ہٹائیں",
+ "mesh_recognize.creates": "{n} بنائے جائیں گے: {kinds}",
+ "mesh_recognize.creates_none": "ابھی کچھ منتخب نہیں",
+ "mesh_recognize.stay": "{n} ماخذ میش ماڈل میں رہتے ہیں",
+ "mesh_recognize.removed": "{n} ماخذ میش ہٹائے جائیں گے۔ واپس کرنے سے یہ لوٹ آتے ہیں۔"
+}

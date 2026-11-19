@@ -1,0 +1,9 @@
+{
+ "drafts.draft.view": "View graphics of “{name}”",
+ "drafts.draft.filter": "View filter “{name}”",
+ "drafts.draft.filter_new": "New view filter",
+ "drafts.draft.object_styles": "Object styles",
+ "drafts.draft.material": "Material “{name}”",
+ "drafts.draft.type": "Type “{name}”",
+ "drafts.draft.params": "Parameters of family “{name}”"
+}

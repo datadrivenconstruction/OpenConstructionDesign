@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "自動保存に失敗しました。最新の変更は保護されていません。{why}",
+ "autosave_status.autosave_open": "自動保存の設定",
+ "autosave_status.autosave_recovered": "自動保存が再び機能しています。",
+ "autosave_status.autosave_reason": "理由: {why}"
+}

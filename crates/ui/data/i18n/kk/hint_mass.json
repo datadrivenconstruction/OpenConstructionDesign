@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "Еркін бет",
+ "cmd.mass.panelize": "Панельдерге бөлу",
+ "cmd.mass.surface_shell": "Бет бойынша шатыр",
+ "cmd.mass.thicken": "Қалыңдату",
+ "hint.mass.freeform.first": "Еркін бет: жоспар тік төртбұрышының бірінші бұрышы · сан енгізіңіз — көтерілу · Esc — бас тарту",
+ "hint.mass.freeform.next": "Еркін бет: қарама-қарсы бұрыш · сан енгізіңіз — көтерілу · Esc — бас тарту",
+ "hint.mass.panelize.first": "Панельдерге бөлу: 3D-да еркін бетті таңдаңыз · Esc — бас тарту",
+ "hint.mass.panelize.value": "Панельдерге бөлу: панель өлшемін енгізіңіз · Enter — қолдану · Esc — бас тарту",
+ "hint.mass.surface_shell.first": "Бет бойынша шатыр: 3D-да еркін бетті таңдаңыз · Esc — бас тарту",
+ "hint.mass.surface_shell.value": "Бет бойынша шатыр: қалыңдығын енгізіңіз · Enter — қолдану · Esc — бас тарту",
+ "hint.mass.thicken.first": "Қалыңдату: 3D-да еркін бетті таңдаңыз · Esc — бас тарту",
+ "hint.mass.thicken.value": "Қалыңдату: қалыңдығын енгізіңіз (0 — қалыңдықсыз бет) · Enter — қолдану · Esc — бас тарту",
+ "status.mass.pick_surface": "Еркін бетті таңдаңыз",
+ "status.mass.freeform_small": "Тік төртбұрыш тым кішкентай: әр бағытта кемінде 0,5 м",
+ "name.mass.freeform": "Еркін бет",
+ "rgroup.mass_free": "Қосымша"
+}

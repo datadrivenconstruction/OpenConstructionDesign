@@ -1,0 +1,7 @@
+{
+ "recover.untitled_note": "Энэ төслийг хэзээ ч хадгалаагүй",
+ "recover.file_missing": "Төслийн файл олдсонгүй",
+ "recover.banner": "{name}-д өмнөх сессээс хадгалаагүй ажил олдлоо",
+ "recover.banner_review": "Шалгах",
+ "recover.later_archived": "{n} удаа хойшлуулсан: агшин зуурын хуулбарууд архивт шилжлээ"
+}

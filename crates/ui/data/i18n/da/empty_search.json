@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "Intet fundet",
+ "empty.browser_search.hint": "Ingen visning, etage, type eller rum matcher denne søgning.",
+ "empty.browser_search.action": "Ryd søgning",
+ "empty.xl_filtered.title": "Ingen poster matcher filtrene",
+ "empty.xl_filtered.hint": "Slå flere typer til, vælg et andet ark, eller ændr søgeteksten.",
+ "empty.xl_filtered.action": "Ryd filtre",
+ "empty.xl_nochanges.title": "Ingen ændringer i projektmappen",
+ "empty.xl_nochanges.hint": "Projektmappen svarer til modellen: import ville ikke ændre noget.",
+ "empty.version_same.title": "Modellerne er identiske",
+ "empty.version_same.hint": "Der blev ikke fundet forskelle mellem den åbne model og den valgte version.",
+ "empty.templates.title": "Ingen visningsskabeloner endnu",
+ "empty.templates.hint": "Opret en ud fra den aktuelle visning for at genbruge dens indstillinger i andre visninger.",
+ "empty.templates.action": "Navngiv en skabelon",
+ "empty.fe_params.title": "Ingen parametre endnu",
+ "empty.fe_params.hint": "Tilføj en parameter nedenfor for at styre størrelser, materialer eller synlighed.",
+ "empty.fe_params.action": "Tilføj en parameter"
+}

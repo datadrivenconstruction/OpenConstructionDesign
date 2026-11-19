@@ -1,0 +1,11 @@
+{
+ "cmd.arch.roof_gable.short": "Două ape",
+ "cmd.arch.roof_hip.short": "Patru ape",
+ "cmd.arch.roof_shed.short": "Pultă",
+ "cmd.arch.roof_mansard.short": "Mansardă frântă",
+ "cmd.arch.roof_gambrel.short": "Mansardă",
+ "cmd.arch.roof_barrel.short": "Boltă",
+ "cmd.arch.roof_edges.short": "Margini de acoperiș",
+ "cmd.arch.roof_opening.short": "Gol",
+ "cmd.mass.roof_by_face.short": "Pe față"
+}

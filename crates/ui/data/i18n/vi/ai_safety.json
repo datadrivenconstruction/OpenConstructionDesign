@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "Khóa trong địa chỉ",
+ "ai_safety.auth.query_name": "Tham số địa chỉ",
+ "ai_safety.need_query_name": "Đặt tên tham số địa chỉ mang khóa",
+ "ai_safety.apply_unlogged": "Đã áp dụng, nhưng nhật ký thay đổi chưa được ghi",
+ "ai_safety.audit_unlogged": "Không ghi được nhật ký của trợ lý AI",
+ "ai_safety.chat_not_saved": "Không lưu được cuộc trò chuyện vào dự án. Đang thử lại.",
+ "ai_safety.clip_clears": "Bộ nhớ tạm sẽ xóa sau 30 s",
+ "ai_safety.copied_clears": "Đã sao chép. Bộ nhớ tạm sẽ xóa sau 30 s",
+ "ai_safety.key_session_only": "Khóa được giữ đến khi ứng dụng đóng",
+ "ai.settings.no_data_dir": "hệ thống này không cấp thư mục cho cài đặt ứng dụng"
+}

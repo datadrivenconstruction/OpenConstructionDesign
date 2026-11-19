@@ -1,0 +1,13 @@
+{
+ "topo.unit.mm": "mm",
+ "topo.unit.metre": "m",
+ "topo.unit.ft": "ft",
+ "topo.opt.material": "Material",
+ "topo.row.active": "Suprafață activă",
+ "topo.btn.delete_pad": "Șterge platforma",
+ "topo.info.loading": "Se construiește suprafața…",
+ "topo.info.warn_n": "{n} avertismente",
+ "topo.info.points_label": "Puncte",
+ "topo.import.all_layers": "Toate straturile",
+ "topo.import.need_layer": "Bifează cel puțin un strat"
+}

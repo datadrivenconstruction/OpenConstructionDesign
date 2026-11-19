@@ -1,0 +1,5 @@
+# Wall: two clicks, Esc ends the chain (one record), the next Esc leaves the tool
+tool(WA) click(0,0) → state=Drafting{1} hint="arch.wall.next"
+click(5,0) → walls=0
+key(Escape) → walls=1 joints=0 journal=+1 state=Drafting{0} hint="arch.wall.first"
+key(Escape) → state=Idle scope=Idle

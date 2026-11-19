@@ -1,0 +1,5 @@
+{
+ "legend.legend.empty_hint": "Scrie un nume mai sus și apasă Creează.",
+ "legend.legend.pick_hint": "Alege o legendă din lista de mai sus.",
+ "legend.legend.taken": "Există deja o legendă numită \"{name}\". Introdu alt nume."
+}

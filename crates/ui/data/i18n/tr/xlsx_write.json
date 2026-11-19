@@ -1,0 +1,4 @@
+{
+ "xlsx_write.denied": "Bu klasöre yazma izni yok. Çalışma kitabı değiştirilmedi. Dışa aktarmayı başka bir klasöre kaydedin.",
+ "xlsx_write.save_to": "Şuraya kaydet…"
+}

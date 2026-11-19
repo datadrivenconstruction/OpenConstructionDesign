@@ -1,0 +1,7 @@
+{
+ "diff.kind.added": "προστέθηκε",
+ "diff.kind.changed": "άλλαξε",
+ "diff.kind.deleted": "διαγράφηκε",
+ "diff.kind.refused": "απορρίφθηκε",
+ "diff.kind.conflict": "σύγκρουση"
+}

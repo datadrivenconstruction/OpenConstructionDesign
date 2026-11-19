@@ -1,0 +1,10 @@
+{
+ "type_pick.pick.search": "Maghanap ng type o kapal",
+ "type_pick.pick.empty": "Walang tumutugmang type",
+ "type_pick.pick.edit": "I-edit ang type…",
+ "type_pick.pick.mixed": "Halo",
+ "type_pick.pick.layers": {
+  "one": "# layer",
+  "other": "# na layer"
+ }
+}

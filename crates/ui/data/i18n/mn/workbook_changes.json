@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "Хэрэглэгдээгүй ажлын номын өөрчлөлтүүд",
+ "workbook_changes.wb.body": "Хаах эсвэл төсөл солих нь тэдгээрийг хасна.",
+ "workbook_changes.wb.line": "Ажлын номын импорт: {n} өөрчлөлт хэрэглэгдээгүй",
+ "workbook_changes.wb.review": "Шалгах",
+ "workbook_changes.wb.discard": "Хаях"
+}

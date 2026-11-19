@@ -1,0 +1,16 @@
+{
+ "ai.items.all": {
+  "one": "Alle # punkt",
+  "other": "Alle # punkter"
+ },
+ "ai.items.all.tip": "Kryss av eller av hvert punkt i planen",
+ "ai.items.checked": "{n} av {m} avkrysset",
+ "ai.items.check.tip": "Ta med «{title}» i Bruk",
+ "ai.items.expand": "Vis elementer",
+ "ai.items.collapse": "Skjul elementer",
+ "ai.items.apply": {
+  "one": "Bruk # punkt",
+  "other": "Bruk # punkter"
+ },
+ "ai.items.apply_none": "Bruk"
+}

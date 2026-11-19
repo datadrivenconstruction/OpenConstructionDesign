@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "Ажиллаж буй даалгаврын ард дараалалд: {n}",
+ "import_queue.queue_full": "Дараалал дүүрсэн, {n} файл нэмэгдээгүй",
+ "import_queue.changed": "{name} энэ төсөл үүссэний дараа шинэчлэгдсэн. Өмнөх төслийг нээлээ.",
+ "import_queue.import_again": "Дахин импортлох",
+ "import_queue.kept": "Дууссан импорт хадгалагдлаа",
+ "import_queue.open_it": "Нээх",
+ "import_queue.sum.head": "импорт: {editable} засах боломжтой (хана {walls}, нээлт {open}, шал {slabs}, өрөө {rooms}, бусад {other}), {meshes} сүлжээ",
+ "import_queue.sum.unchanged": ", өөрчлөгдөөгүй {n}",
+ "import_queue.sum.updated": ", шинэчлэгдсэн {n}",
+ "import_queue.sum.missing": ", эхэд байхгүй {n} (хадгалагдсан)",
+ "import_queue.sum.skipped": ", алгассан {n}",
+ "import_queue.sum.warnings": ", анхааруулга {n}",
+ "import_queue.import_failed": "импорт амжилтгүй: {e}"
+}

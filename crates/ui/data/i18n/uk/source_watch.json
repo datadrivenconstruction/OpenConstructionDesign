@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "{name} змінено на диску.",
+ "src.watch.update": "Оновити модель",
+ "src.watch.compare": "Порівняти",
+ "src.watch.ignore": "Ігнорувати цю версію",
+ "src.watch.missing": "{name}: вихідний файл не знайдено. Робота триває.",
+ "src.watch.locate": "Знайти…",
+ "src.watch.dismiss": "Закрити",
+ "src.watch.more": "і ще вихідних файлів: {n}",
+ "src.watch.done": "Оновлено з {name}: змінено {updated}, полів збережено як відредаговані {kept}, конфліктів {conflicts}, заблокованих значень збережено {locked}"
+}

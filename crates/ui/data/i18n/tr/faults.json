@@ -1,0 +1,18 @@
+{
+ "faults.errors": {
+  "one": "# model hatası. Göstermek için tıklayın.",
+  "other": "# model hatası. Listeyi görmek için tıklayın."
+ },
+ "faults.warnings": {
+  "one": "# model uyarısı. Göstermek için tıklayın.",
+  "other": "# model uyarısı. Listeyi görmek için tıklayın."
+ },
+ "faults.title": "Model sorunları: {n}",
+ "faults.none": "Hata veya uyarı yok.",
+ "faults.cat.wall": "Duvar",
+ "faults.cat.slab": "Döşeme",
+ "faults.cat.opening": "Açıklık",
+ "faults.cat.curtain_wall": "Cephe perdesi",
+ "faults.cat.ramp": "Rampa",
+ "faults.cat.zone": "Bölge"
+}

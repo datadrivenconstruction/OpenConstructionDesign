@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "Anvendelsen blev fortrudt: modellen svarede ikke til forhåndsvisningen. {what}",
+ "xlsx_verify.not_written": "{row} blev ikke ændret.",
+ "xlsx_verify.lost": "{row} forsvandt.",
+ "xlsx_verify.not_deleted": "{row} blev ikke slettet.",
+ "xlsx_verify.extra_deleted": "{row} blev slettet, selvom forhåndsvisningen beholder den.",
+ "xlsx_verify.created": "{table}: {got} nye i stedet for {want}.",
+ "xlsx_verify.value": "{row}, {field}: forventede {want} (var {old}), fik {got}.",
+ "xlsx_verify.check_failed": "Resultatet kunne ikke kontrolleres: {e}",
+ "xlsx_verify.plan_failed": "Anvendelse blev ikke startet: kontrollen kunne ikke læse modellen ({e}).",
+ "xlsx_verify.take_back_failed": "Trinnet kunne ikke fortrydes ({e}): brug Fortryd.",
+ "xlsx_verify.t.wall": "Væg",
+ "xlsx_verify.t.opening": "Åbning",
+ "xlsx_verify.t.room": "Rum",
+ "xlsx_verify.t.slab": "Gulv",
+ "xlsx_verify.t.level": "Etage",
+ "xlsx_verify.t.wall_type": "Vægtype",
+ "xlsx_verify.t.slab_type": "Gulvtype",
+ "xlsx_verify.t.col": "Søjle",
+ "xlsx_verify.t.beam": "Bjælke",
+ "xlsx_verify.t.roof": "Tag",
+ "xlsx_verify.t.curtain_wall": "Gardinvæg"
+}

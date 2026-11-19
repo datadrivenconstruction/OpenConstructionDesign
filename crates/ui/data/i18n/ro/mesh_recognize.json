@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "Se recunosc {done} din {total}",
+ "mesh_recognize.all": "Toate {n}",
+ "mesh_recognize.only_confident": "Doar cele sigure",
+ "mesh_recognize.confident_tip": "Bifează rândurile al căror tip corespunde categoriei și a căror încredere este de cel puțin {pct}%",
+ "mesh_recognize.row_hint": "Dă clic pe un rând pentru a-l bifa. Tastele săgeți mută, Enter bifează.",
+ "mesh_recognize.kind_for": "Tip pentru {name}",
+ "mesh_recognize.source": "Plase sursă",
+ "mesh_recognize.keep": "Păstrează plasele",
+ "mesh_recognize.replace": "Înlocuiește plasele",
+ "mesh_recognize.convert_keep": "Convertește {n}",
+ "mesh_recognize.convert_remove": "Convertește {n} și elimină plasele",
+ "mesh_recognize.creates": "Va crea {n}: {kinds}",
+ "mesh_recognize.creates_none": "Nimic bifat încă",
+ "mesh_recognize.stay": "{n} plase sursă rămân în model",
+ "mesh_recognize.removed": "{n} plase sursă vor fi eliminate. Anularea le readuce."
+}

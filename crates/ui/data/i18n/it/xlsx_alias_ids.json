@@ -1,0 +1,7 @@
+{
+ "xlsx_alias_ids.ids_written": "{n} nuove righe hanno ricevuto il loro id nella tavola rinominata; nient'altro nella cartella è cambiato.",
+ "xlsx_alias_ids.ids_open": "La cartella è aperta in un altro programma: non sono stati scritti gli id di {n} nuove righe. Chiudila lì e sincronizza; queste righe non verranno create di nuovo.",
+ "xlsx_alias_ids.ids_failed": "Non è stato possibile scrivere gli id di {n} nuove righe; la cartella è rimasta com'era. Queste righe non verranno create di nuovo alla prossima sincronizzazione.",
+ "xlsx_alias_ids.unpaired": "{n} nuove righe non hanno ancora un id; sono ricordate e non verranno create di nuovo.",
+ "xlsx_alias_ids.refused": "Nulla è stato applicato: le nuove righe in {sheets} non possono ricevere l'id mentre una tavola rinominata viene letta. Rinomina la tavola al nome standard (o rimuovi queste righe) e sincronizza di nuovo."
+}

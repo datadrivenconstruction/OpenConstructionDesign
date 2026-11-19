@@ -1,0 +1,6 @@
+{
+ "xlsx_readonly.read_only": "Buku kerja hanya baca (properti berkas atau izin folder). Ekspor ke salinan, atau hapus Hanya baca di properti berkas lalu coba lagi.",
+ "xlsx_readonly.export_copy": "Ekspor ke salinan",
+ "xlsx_readonly.no_copy_name": "Tidak ada nama bebas untuk salinan di samping buku kerja.",
+ "xlsx_readonly.copied": "Buku kerja dibiarkan apa adanya. Salinan yang disegarkan telah ditulis di sampingnya dan kini tertaut: {path}"
+}

@@ -1,0 +1,6 @@
+{
+ "delsafe.ring.opening_shape": "En öppningskontur skulle korsa sig själv eller kollapsa",
+ "delsafe.ring.opening_boundary": "En öppning skulle korsa eller röra ytterkanten",
+ "delsafe.ring.openings_overlap": "Öppningar skulle överlappa eller röra varandra",
+ "xl.msg.delsafe_instance_param_on_types": "parametern '{}' är en instansparameter; redigera den på elementbladet, inte tillämpad"
+}

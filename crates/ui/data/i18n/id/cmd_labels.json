@@ -1,0 +1,14 @@
+{
+ "cmd.arch.wall.tile": "Dinding",
+ "cmd.arch.door.tile": "Pintu",
+ "cmd.arch.window.tile": "Jendela",
+ "cmd.arch.floor.tile": "Lantai",
+ "cmd.mod.move.tile": "Pindah",
+ "cmd.mod.copy.tile": "Salin",
+ "cmd.mod.rotate.tile": "Putar",
+ "cmd.mod.mirror.tile": "Cermin",
+ "cmd.mod.trim.tile": "Potong",
+ "cmd.mod.delete.tile": "Hapus",
+ "cmd.ann.dim.tile": "Dimensi",
+ "cmd.ann.text.tile": "Teks"
+}

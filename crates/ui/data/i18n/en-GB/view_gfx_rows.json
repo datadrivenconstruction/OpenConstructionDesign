@@ -1,0 +1,10 @@
+{
+ "view_gfx.vv.visible_tip": "Visible in this view",
+ "view_gfx.vv.enabled_tip": "Apply this filter in this view",
+ "view_gfx.vv.reset_tip": "Back to the project default",
+ "view_gfx.vv.col.actions": "Actions",
+ "view_gfx.vv.nothing_to_apply": "No changes to apply",
+ "view_gfx.flt.save_blocked": "Name the filter and fill in every rule parameter",
+ "view_gfx.flt.confirm_delete": "Delete for all views?",
+ "view_gfx.flt.param_pick": "Pick…"
+}

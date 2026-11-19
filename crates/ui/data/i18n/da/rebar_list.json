@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "Flyt op",
+ "rebar_list.move_down": "Flyt ned",
+ "rebar_list.remove": "Fjern",
+ "rebar_list.zone_remove_last": "En zone skal have mindst ét rum: slet zonen for at fjerne den sidste",
+ "rebar_list.rebar_empty_title": "Ingen armering i denne model",
+ "rebar_list.rebar_empty_hint": "Placér armering i et værtselement, så planlægges den her.",
+ "rebar_list.rebar_empty_action": "Placér armering"
+}

@@ -1,0 +1,4 @@
+{
+ "sf.restored": "Soubor nastavení {file} byl poškozen; obnovena byla poslední funkční kopie. Poškozený soubor je ponechán jako {broken}.",
+ "sf.reset": "Soubor nastavení {file} byl poškozen a žádná záloha nebyla použitelná; použity jsou výchozí hodnoty. Poškozený soubor je ponechán jako {broken}."
+}

@@ -1,0 +1,10 @@
+{
+ "cmd.view.axes_full": "Volledige assen",
+ "cmd.view.axes_full.desc": "Toont de X- en Y-assen als volledige lijnen over de plattegrond. Houd F9 ingedrukt om ze alleen zolang de toets is ingedrukt te tonen.",
+ "settings.axes_full": "Assen",
+ "settings.axes_full_desc": "Assen van de plattegrond als volledige lijnen over het blad. Houd F9 ingedrukt voor een snelle blik.",
+ "settings.axes_full_on": "Volledige assen tonen",
+ "plan.hud.axes_tip": "Houd {key} ingedrukt om volledige assen te tonen",
+ "status.axes_full.on": "Volledige assen aan",
+ "status.axes_full.off": "Volledige assen uit"
+}

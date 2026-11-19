@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "Enheter",
+ "topo_units.unit": "Enheter i filen",
+ "topo_units.unit.m": "m",
+ "topo_units.unit.cm": "cm",
+ "topo_units.unit.mm": "mm",
+ "topo_units.unit.ft": "fot",
+ "topo_units.unit.usft": "US survey-fot",
+ "topo_units.unit.in": "tum",
+ "topo_units.unit.from_file": "Filen anger sina enheter: {unit}",
+ "topo_units.unit.suggested": "Filen anger inga enheter. Föreslagen utifrån omfånget: {unit} — kontrollera resultatet nedan",
+ "topo_units.extent": "Resultat i projektets enheter: {x} × {y} {u} i plan, höjdintervall {z} {u}",
+ "topo_units.extent.none": "Resultat: inget att importera med de här valen",
+ "topo_units.extent.check": "Det här ser inte ut som en tomt: kontrollera enheterna"
+}

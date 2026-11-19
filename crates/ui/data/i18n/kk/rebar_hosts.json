@@ -1,0 +1,40 @@
+{
+ "rebar_hosts.hosts": "Негіздер: {list}",
+ "rebar_hosts.kind.column": "Баған",
+ "rebar_hosts.kind.beam": "Арқалық",
+ "rebar_hosts.kind.wall": "Қабырға",
+ "rebar_hosts.kind.slab": "Плита",
+ "rebar_hosts.kind.footing": "Іргетас",
+ "rebar_hosts.kind.raft": "Іргетас плитасы",
+ "rebar_hosts.n.column": {
+  "one": "# баған",
+  "other": "# баған"
+ },
+ "rebar_hosts.n.beam": {
+  "one": "# арқалық",
+  "other": "# арқалық"
+ },
+ "rebar_hosts.n.wall": {
+  "one": "# қабырға",
+  "other": "# қабырға"
+ },
+ "rebar_hosts.n.slab": {
+  "one": "# плита",
+  "other": "# плита"
+ },
+ "rebar_hosts.n.footing": {
+  "one": "# іргетас",
+  "other": "# іргетас"
+ },
+ "rebar_hosts.n.raft": {
+  "one": "# іргетас плитасы",
+  "other": "# іргетас плитасы"
+ },
+ "rebar_hosts.mixed_note": "Бағаналар мен арқалықтарға арматура және тік байланыстар; қабырғалар, плиталар және іргетастарға тор кіреді. Арматура қосу үшін бір топты таңдаңыз.",
+ "rebar_hosts.why.mixed": "Таңдауда бағаналар немесе арқалықтар қабырғалармен, плиталармен немесе іргетастармен араласқан. Бір топты таңдаңыз.",
+ "rebar_hosts.why.area_linear": "Тор қабырғаларға, плиталар мен іргетастарға кіреді, бағаналар мен арқалықтарға емес.",
+ "rebar_hosts.why.bars_plate": "Бойлық арматура мен тік байланыстар бағаналар мен арқалықтарға кіреді, қабырғаларға, плиталар мен іргетастарға емес.",
+ "rebar_hosts.why.no_common_face": "Таңдалған негіздердің ортақ қорғаныс беті жоқ. Бір түрдегі негіздерді таңдаңыз.",
+ "rebar_hosts.why.no_type": "Арматура түрін таңдаңыз.",
+ "rebar_hosts.kind_type": "{kind} · {type}"
+}

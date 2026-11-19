@@ -1,0 +1,10 @@
+{
+ "cmd.view.axes_full": "Vollständige Achsen",
+ "cmd.view.axes_full.desc": "Zeigt die X- und Y-Achsen als durchgehende Linien über den Grundriss. F9 halten, um sie nur bei gedrückter Taste anzuzeigen.",
+ "settings.axes_full": "Achsen",
+ "settings.axes_full_desc": "Grundrissachsen als durchgehende Linien über das Blatt. F9 halten für einen kurzen Blick.",
+ "settings.axes_full_on": "Vollständige Achsen anzeigen",
+ "plan.hud.axes_tip": "{key} halten, um vollständige Achsen anzuzeigen",
+ "status.axes_full.on": "Vollständige Achsen an",
+ "status.axes_full.off": "Vollständige Achsen aus"
+}

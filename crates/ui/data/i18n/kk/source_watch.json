@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "{name} дискіде өзгерді.",
+ "src.watch.update": "Модельді жаңарту",
+ "src.watch.compare": "Салыстыру",
+ "src.watch.ignore": "Бұл нұсқаны елемеу",
+ "src.watch.missing": "{name}: дереккөз файлы табылмады. Жұмыс жалғасады.",
+ "src.watch.locate": "Табу…",
+ "src.watch.dismiss": "Жабу",
+ "src.watch.more": "және тағы {n} дереккөз файлы",
+ "src.watch.done": "{name} жаңартылды: {updated} өзгерді, {kept} өңделген өрістер сақталды, {conflicts} қақтығыс, {locked} құлыпталған мән сақталды"
+}

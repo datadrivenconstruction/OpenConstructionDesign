@@ -1,0 +1,8 @@
+{
+ "api.cmd.norms_lookup": "Find the rules of the project's norm pack by topic, element or code",
+ "api.cmd.norms_check": "Check the model against the project's norm pack and list the findings",
+ "api.cmd.norms_programme": "Typical room programme of the project's country for a building type",
+ "api.cmd.select_similar": "Select every element like this one: same type or category, on this level or in the whole project",
+ "api.cmd.create_drawing_set": "Draft a printable drawing set: plans, sections, elevations, schedules and title blocks",
+ "api.cmd.deliver_project": "From a brief to files in one step: the project and its drawing set, exported after Apply"
+}

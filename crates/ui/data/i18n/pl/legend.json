@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "Legenda",
+ "legend.legend.new_hint": "Nazwa nowej legendy",
+ "legend.legend.delete_tip": "Usuń legendę",
+ "legend.legend.delete_placed": "Usuń legendę (umieszczona na: {sheets})",
+ "legend.legend.deleted": "Usunięto legendę: {name}",
+ "legend.legend.no_rows": "Brak wierszy. Dodaj jeden lub przejmij style bieżącego widoku",
+ "legend.legend.replace_q": "Zastąpić {n} wierszy stylami tego widoku?",
+ "legend.legend.replace": "Zastąp",
+ "legend.legend.keep": "Zachowaj wiersze",
+ "legend.col.swatch": "Próbka",
+ "legend.col.value": "Wartość",
+ "legend.col.label": "Etykieta"
+}

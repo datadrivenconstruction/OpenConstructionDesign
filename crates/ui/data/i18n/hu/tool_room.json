@@ -1,0 +1,9 @@
+{
+ "tool.room": "Helyiség",
+ "tool.room.name": "Helyiség",
+ "room_tool.room.name": "Név",
+ "hint.room.place": "Kattintson egy zárt falhurokon belül helyiség létrehozásához · Esc — kilépés",
+ "tool.err.room_open": "A terület nincs lezárva: zárja le a falhurkot, vagy adjon hozzá helyiségelválasztót",
+ "tool.err.room_check": "Ennek a szintnek a helyiségeit nem lehet ellenőrizni",
+ "tool.err.room_exists": "Ebben a hurokban már van helyiség"
+}

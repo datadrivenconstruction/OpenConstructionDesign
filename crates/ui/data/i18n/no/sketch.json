@@ -1,0 +1,11 @@
+{
+ "sketch.points": "Punkter",
+ "sketch.rect": "Rektangel",
+ "sketch.circle": "Sirkel",
+ "sketch.polygon": "Mangekant",
+ "sketch.radius": "R",
+ "sketch.sides": "Sider",
+ "sketch.circum": "Omskrevet",
+ "sketch.shape.tip": "Skissens form (A bytter). Rektangel: to hjørner. Sirkel og mangekant: sentrum, deretter radius. Skriv inn en størrelse og trykk Enter for å låse den.",
+ "tool.err.zero_size": "Nullstørrelse: flytt det andre punktet bort fra det første"
+}

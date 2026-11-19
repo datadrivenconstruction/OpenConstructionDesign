@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "Phụ kiện nối",
+ "elem.mep_fitting.many": "Các phụ kiện nối",
+ "elem.mep_fitting.kind.elbow": "Co",
+ "elem.mep_fitting.kind.tee": "Tê",
+ "elem.mep_fitting.kind.cross": "Chữ thập",
+ "elem.mep_fitting.kind.transition": "Chuyển tiếp",
+ "elem.mep_fitting.kind.cap": "Nắp chụp",
+ "elem.mep_fitting.size": "Kích thước",
+ "elem.mep_fitting.at": "Vị trí",
+ "elem.mep_fitting.runs": "Tuyến {n}",
+ "elem.mep_fitting.edit_run": "Sửa tuyến",
+ "elem.mep_fitting.select_runs": "Chọn các tuyến của nó",
+ "elem.mep_fitting.derived": "Phụ kiện nối đi theo tuyến của nó: đổi tuyến thì phụ kiện đổi theo.",
+ "elem.mep_fitting.no_delete": "Không thể xóa hoặc di chuyển riêng phụ kiện nối. Hãy sửa hoặc xóa các tuyến của nó.",
+ "elem.mep_fitting.hint": "Bấm một phụ kiện trên mặt bằng để xem các tuyến của nó.",
+ "elem.mep_fitting.picked": "Đã chọn phụ kiện nối: {n}"
+}

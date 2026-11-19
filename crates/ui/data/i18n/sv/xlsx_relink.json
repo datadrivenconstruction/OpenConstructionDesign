@@ -1,0 +1,14 @@
+{
+ "xlsx_relink.title": "Den länkade arbetsboken flyttades eller döptes om",
+ "xlsx_relink.body": "Arbetsboken “{file}” finns inte längre i {folder}. Redigeringar som skrivs i den kommer tillbaka först efter att den länkats igen.",
+ "xlsx_relink.found_one": "Hittade “{file}” i {folder}: samma projekt och samma export. Länka den?",
+ "xlsx_relink.found_many": "{n} arbetsböcker från det här projektet och den här exporten hittades. Välj den som ska länkas:",
+ "xlsx_relink.found_none": "Ingen arbetsbok från den här exporten hittades bredvid. Hitta den, eller exportera en ny arbetsbok.",
+ "xlsx_relink.link": "Länka “{file}”",
+ "xlsx_relink.find": "Hitta den…",
+ "xlsx_relink.find_title": "Hitta den länkade arbetsboken",
+ "xlsx_relink.export_new": "Exportera ny arbetsbok",
+ "xlsx_relink.close": "Stäng",
+ "xlsx_relink.gone": "Arbetsboken “{file}” finns inte längre i sin mapp. Redigeringar som skrivs i den kommer tillbaka först efter att den länkats igen.",
+ "xlsx_relink.found_one_short": "Hittade “{file}”: samma projekt och samma export. Länka den?"
+}

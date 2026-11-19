@@ -1,0 +1,6 @@
+{
+ "cmd.file.import_again": "重新导入",
+ "cmd.file.import_again.desc": "根据源文件当前状态重新建立新项目。",
+ "cmd.file.open_kept": "打开已保留的导入",
+ "cmd.file.open_kept.desc": "打开在取消未保存更改提示时保留的已完成导入。"
+}

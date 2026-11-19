@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "Назва системи",
+ "mep_browser.add_blocked": "Спочатку введіть назву системи",
+ "mep_browser.col.insulation": "Ізоляція",
+ "mep_browser.cancel": "Скасувати",
+ "mep_browser.delete.title": "Видалити цю систему?",
+ "mep_browser.delete.body": "Систему «{name}» та її прогони ({n}) буде видалено.",
+ "mep_browser.delete.undo": "Це можна скасувати однією дією «Скасувати».",
+ "mep_browser.delete.confirm": "Видалити систему"
+}

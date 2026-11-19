@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "גרמי מדרגות",
+ "selcat.railing": "מעקות",
+ "quick.cat.stair": "גרמי מדרגות",
+ "quick.cat.railing": "מעקות",
+ "stair.risers": "מדרגות אנכיות",
+ "stair.riser": "גובה מדרגה",
+ "stair.comfort": "2R + T",
+ "stair.tread_auto": "משטח הליכה לפי כלל",
+ "stair.tread_auto_tip": "בטל את משטח ההליכה שהוקלד ותן לכלל 2R + T לקבוע אותו",
+ "stair.broken": "גרם מדרגות זה אינו מתאים למפלסים שלו",
+ "railing.host_stair": "מחובר לגרם מדרגות #{id}",
+ "railing.host_path": "מעקה בסקיצה",
+ "railing.length": "אורך",
+ "stair.deleted_with": "עם {n} מעקות מחוברים"
+}

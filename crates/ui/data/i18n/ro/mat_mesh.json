@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "Plase importate",
+ "mat_mesh.mesh.none_selected": "Selectați plase importate în vederea 3D pentru a le da acest material.",
+ "mat_mesh.mesh.current": "Prima plasă selectată: {material}",
+ "mat_mesh.mesh.current_none": "Prima plasă selectată nu are material.",
+ "mat_mesh.mesh.assign": "Atribuie la {n} selectate",
+ "mat_mesh.mesh.assign_tip": "Stilul Realist arată textura acestui material pe plasele selectate",
+ "mat_mesh.mesh.assign_cat": "Atribuie categoriei {category}",
+ "mat_mesh.mesh.assign_cat_tip": "Fiecare plasă importată din acea categorie fără material propriu",
+ "mat_mesh.mesh.clear": "Golește selecția",
+ "mat_mesh.mesh.clear_tip": "Plasele selectate revin la materialul categoriei sau la culoarea simplă",
+ "mat_mesh.mesh.clear_cat": "Golește categoria"
+}

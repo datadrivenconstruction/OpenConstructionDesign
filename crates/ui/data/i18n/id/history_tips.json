@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "Diurungkan — Ctrl+Y mengulangi",
+ "history.hist.empty": "Belum ada perubahan",
+ "history.hist.empty_hint": "Suntingan Anda muncul di sini. Klik langkah mana pun untuk kembali ke sana.",
+ "history.hist.revert_all_n": "Batalkan semua perubahan AI ({n})"
+}

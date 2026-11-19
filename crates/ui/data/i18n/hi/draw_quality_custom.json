@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "कस्टम",
+ "draw_quality.custom.tip": "{name}: इस प्रोजेक्ट की एंट्री",
+ "draw_quality.custom_note": "“कस्टम” चिह्नित एंट्री इस प्रोजेक्ट की हैं।",
+ "draw_quality.unsaved.lib_body": "उन्हें लाइब्रेरी में सहेजें, या छोड़ें?",
+ "draw_quality.unsaved.styles_body": "उन्हें व्यू पर लागू करें, या छोड़ें?",
+ "draw_quality.unsaved.both_body": "उन्हें लागू करें, या छोड़ें?",
+ "draw_quality.halftone": "{category} हाफ़टोन",
+ "draw_quality.styles.name": "लाइन स्टाइल",
+ "draw_quality.styles.other_level": "स्तर {level} के बिना सहेजे स्टाइल बदलाव: इस स्तर को संपादित करने के लिए उन्हें लागू करें या वापस लें।"
+}

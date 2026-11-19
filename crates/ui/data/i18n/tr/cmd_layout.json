@@ -1,0 +1,4 @@
+{
+ "cmd.data.sync_xlsx": "XLSX tablosu ile eşitle…",
+ "cmd.data.sync_xlsx.desc": "Bağlı çalışma kitabını yeniden okur ve modelden farkları gösterir."
+}

@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "कब्ज़े की तरफ़ पलटें",
+ "cmd.edit.flip_hand.desc": "चुने गए दरवाज़े और खिड़कियाँ दीवार के साथ मिरर करता है ताकि कब्ज़े ओपनिंग के दूसरे सिरे पर चले जाएँ।",
+ "cmd.edit.flip_facing": "खुलने की तरफ़ पलटें",
+ "cmd.edit.flip_facing.desc": "चुने गए दरवाज़े और खिड़कियाँ दीवार की दूसरी तरफ़ घुमा देता है।",
+ "opening_grips.flip_hand": "कब्ज़ा पलटें",
+ "opening_grips.flip_hand.tip": "कब्ज़े ओपनिंग के दूसरे सिरे पर (Shift+F)",
+ "opening_grips.flip_facing": "तरफ़ पलटें",
+ "opening_grips.flip_facing.tip": "दीवार की दूसरी तरफ़ खुलना (Shift+G)",
+ "opening_grips.flip.done": "पलटा गया: {n}",
+ "opening_grips.flip.none": "दरवाज़ा या खिड़की चुनें जिसे पलटना है",
+ "opening_grips.flip.fail": "नहीं पलटा गया: {why}"
+}

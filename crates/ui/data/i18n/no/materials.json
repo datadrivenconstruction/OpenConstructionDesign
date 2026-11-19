@@ -1,0 +1,11 @@
+{
+ "materials.mat.name_empty": "Skriv inn et materialnavn",
+ "materials.mat.empty_title": "Ingen materialer ennå",
+ "materials.mat.empty_hint": "Skriv et navn nedenfor og trykk Legg til",
+ "materials.mat.nothing_hint": "Ingen materialer passer til søket",
+ "materials.mat.clear_search": "Fjern søk",
+ "materials.mat.replace_with": "Erstatt med",
+ "materials.mat.delete_refused": "Kan ikke slette: materialet brukes på {n} steder. Erstatt det først.",
+ "materials.mat.delete_confirm": "Slette materialet “{name}”? Du kan angre dette.",
+ "materials.mat.replace_confirm": "Erstatte “{from}” med “{to}” i {n} elementer? “{from}” fjernes. Du kan angre dette."
+}

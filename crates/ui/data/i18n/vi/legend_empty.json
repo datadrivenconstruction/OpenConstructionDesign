@@ -1,0 +1,5 @@
+{
+ "legend.legend.empty_hint": "Nhập tên ở trên rồi nhấn Tạo.",
+ "legend.legend.pick_hint": "Chọn chú giải trong danh sách ở trên.",
+ "legend.legend.taken": "Đã có chú giải tên “{name}”. Hãy nhập tên khác."
+}

@@ -1,0 +1,7 @@
+{
+ "recover.untitled_note": "โปรเจกต์นี้ยังไม่เคยถูกบันทึก",
+ "recover.file_missing": "ไม่พบไฟล์โปรเจกต์",
+ "recover.banner": "พบงานที่ยังไม่ได้บันทึกจากเซสชันก่อนหน้าของ {name}",
+ "recover.banner_review": "ตรวจทาน",
+ "recover.later_archived": "เลื่อนออกไป {n} ครั้ง: ย้ายสแนปช็อตไปยังที่เก็บถาวรแล้ว"
+}

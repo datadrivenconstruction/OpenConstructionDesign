@@ -1,0 +1,7 @@
+{
+ "offset_opts.dist_positive": "অফসেট দূরত্ব শূন্যের বেশি হতে হবে; দিক কার্সরের অনুসরণ করে",
+ "offset_opts.count_bad": "{min} থেকে {max} পর্যন্ত একটি পূর্ণসংখ্যা",
+ "offset_opts.done_tip": "নির্বাচন শেষ করে টুল শুরু করুন",
+ "offset_opts.iso.apply_tip": "এই ভিউয়ের জন্য সাময়িক লুকানো স্থায়ী করুন",
+ "offset_opts.iso.exit": "সাময়িক মোড থেকে বের হন"
+}

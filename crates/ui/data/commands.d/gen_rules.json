@@ -1,0 +1,16 @@
+[
+ {
+  "id": "gen.rules",
+  "icon": "gen-rules",
+  "mnemonic": "GN",
+  "shortcuts": [],
+  "tab": "data",
+  "surfaces": [
+   "R",
+   "P"
+  ],
+  "stage": "M2",
+  "group": "ai",
+  "priority": 3
+ }
+]

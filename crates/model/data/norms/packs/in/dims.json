@@ -1,0 +1,196 @@
+{
+ "items": [
+  {
+   "key": "door.exit_clear_min",
+   "value": 1.0,
+   "unit": "m",
+   "source": "nbcs2026-f",
+   "clause": "4.4.2.4.1 b) exit doorway at least 1000 mm wide",
+   "verified": true
+  },
+  {
+   "key": "door.exit_height_min",
+   "value": 2.0,
+   "unit": "m",
+   "source": "nbcs2026-f",
+   "clause": "4.4.2.4.1 b) exit doorway at least 2000 mm high",
+   "verified": true
+  },
+  {
+   "key": "ramp.slope_max.egress",
+   "value": 0.0833,
+   "unit": "ratio",
+   "source": "nbcs2026-f",
+   "clause": "4.4.2.4.3.5 b) ramp slope at most 1 in 12 (8 percent)",
+   "verified": true
+  },
+  {
+   "key": "ramp.landing_min",
+   "value": 1.5,
+   "unit": "m",
+   "source": "nbcs2026-f",
+   "clause": "4.4.2.4.3.5 d) h) landings at least 1.5 m by 1.5 m, 1.5 m long",
+   "verified": true
+  },
+  {
+   "key": "exit.height_min",
+   "value": 2.4,
+   "unit": "m",
+   "source": "nbcs2026-f",
+   "clause": "4.2.11 clear ceiling height of exits and exit passageways 2.4 m",
+   "verified": true
+  },
+  {
+   "key": "corridor.dead_end_max",
+   "value": 15.0,
+   "unit": "m",
+   "source": "nbcs2026-f",
+   "clause": "4.4.2.2 c) dead-end corridor 15 m, 6 m for educational, institutional, assembly",
+   "verified": true
+  },
+  {
+   "key": "stair.flight_risers_max",
+   "value": 15,
+   "unit": "count",
+   "source": "nbcs2026-f",
+   "clause": "4.4.2.4.3.1 no more than 15 risers in a flight (12 recommended)",
+   "verified": true
+  },
+  {
+   "key": "egress.travel_max",
+   "value": 30.0,
+   "unit": "m",
+   "source": "nbcs2026-f",
+   "clause": "table 4 (cl. 4.4.2.1), types 1 and 2 unsprinklered: 30 m",
+   "verified": true,
+   "note": "read 2026-11-14: dfes.goa.gov.in/wp-content/uploads/2026/05/sp7_2026_nbcs-212-1480.pdf"
+  },
+  {
+   "key": "corridor.width_min.accessible",
+   "value": 1.2,
+   "unit": "m",
+   "source": "hg-india-2021",
+   "clause": "4.4.1, corridor 1200 mm for one wheelchair",
+   "verified": true,
+   "note": "read 2026-11-14: divyangjan.depwd.gov.in/upload/uploadfiles/2262.pdf; NBCS 2026 part F gives no accessible corridor width"
+  },
+  {
+   "key": "fire.compartment_area_max",
+   "value": 750,
+   "unit": "m2",
+   "source": "nbcs2026-f",
+   "clause": "table 6 (cl. 4.5.3), business unsprinklered: 750 m2",
+   "verified": true,
+   "note": "read 2026-11-14: dfes.goa.gov.in/wp-content/uploads/2026/05/sp7_2026_nbcs-212-1480.pdf; was 2500, which matches no row; states may override"
+  },
+  {
+   "key": "building.high_rise_height",
+   "value": 24.0,
+   "unit": "m",
+   "source": "nbcs2026-f",
+   "clause": "2.39, high rise building 24 m or above in height",
+   "verified": true,
+   "url": "https://dfes.goa.gov.in/wp-content/uploads/2026/05/sp7_2026_nbcs-212-1480.pdf",
+   "accessed": "2026-11-15",
+   "paraphrase": "A building of 24 m or more is high-rise whatever its use.",
+   "note": "read 2026-11-15: dfes.goa.gov.in copy of the code part on fire and life safety (2026)"
+  },
+  {
+   "key": "corridor.width_min",
+   "value": 1.0,
+   "unit": "m",
+   "source": "nbcs2026-f",
+   "clause": "4.4.2.4.2 a) corridor not narrower than the exit doorways it serves; 4.4.2.4.1 b) exit doorway at least 1000 mm",
+   "verified": false,
+   "url": "https://dfes.goa.gov.in/wp-content/uploads/2026/05/sp7_2026_nbcs-212-1480.pdf",
+   "accessed": "2026-11-15",
+   "paraphrase": "An egress corridor is at least as wide as its exit doors, 1000 mm or more.",
+   "note": "derived by the editor from two read clauses"
+  },
+  {
+   "key": "stair.riser_max",
+   "value": 0.15,
+   "unit": "m",
+   "source": "nbcs2026-f",
+   "clause": "4.4.2.4.3.1 riser at most 150 mm, other buildings",
+   "verified": true,
+   "url": "https://dfes.goa.gov.in/wp-content/uploads/2026/05/sp7_2026_nbcs-212-1480.pdf",
+   "accessed": "2026-11-15",
+   "paraphrase": "A stair in flats and offices rises at most 150 mm per step.",
+   "note": "same clause as rule in.oth.riser"
+  },
+  {
+   "key": "stair.going_min",
+   "value": 0.25,
+   "unit": "m",
+   "source": "nbcs2026-f",
+   "clause": "4.4.2.4.3.1 tread at least 250 mm, residential",
+   "verified": true,
+   "url": "https://dfes.goa.gov.in/wp-content/uploads/2026/05/sp7_2026_nbcs-212-1480.pdf",
+   "accessed": "2026-11-15",
+   "paraphrase": "A residential stair tread is at least 250 mm.",
+   "note": "same clause as rule in.res.tread"
+  },
+  {
+   "key": "guard.height_min",
+   "value": 1.0,
+   "unit": "m",
+   "source": "nbcs2026-f",
+   "clause": "4.4.2.4.3.4 h), handrails on external stairs 1000 to 1200 mm high",
+   "verified": false,
+   "url": "https://dfes.goa.gov.in/wp-content/uploads/2026/05/sp7_2026_nbcs-212-1480.pdf",
+   "accessed": "2026-11-15",
+   "paraphrase": "External stair handrails stand 1000 to 1200 mm high.",
+   "note": "the clause is for external stairs; a general guard height in other code parts was not read"
+  },
+  {
+   "key": "door.clear_min.accessible",
+   "value": 0.9,
+   "unit": "m",
+   "source": "hg-india-2021",
+   "clause": "doors in residential buildings, clear width at least 900 mm excluding frame and leaf",
+   "verified": true,
+   "url": "https://divyangjan.depwd.gov.in/upload/uploadfiles/2262.pdf",
+   "accessed": "2026-11-15",
+   "paraphrase": "An accessible door gives 900 mm clear.",
+   "note": "read 2026-11-15: depwd.gov.in harmonised guidelines 2021 PDF"
+  },
+  {
+   "key": "accessible.turning_circle",
+   "value": 1.5,
+   "unit": "m",
+   "source": "hg-india-2021",
+   "clause": "6.1 residential buildings, wheelchair turning diameter at least 1500 mm",
+   "verified": true,
+   "url": "https://divyangjan.depwd.gov.in/upload/uploadfiles/2262.pdf",
+   "accessed": "2026-11-15",
+   "paraphrase": "A wheelchair needs a 1500 mm turning circle.",
+   "note": "read 2026-11-15: depwd.gov.in harmonised guidelines 2021 PDF"
+  },
+  {
+   "key": "ramp.slope_max",
+   "value": 0.0833,
+   "unit": "ratio",
+   "source": "hg-india-2021",
+   "clause": "3.10 and table 3.4, ramp gradient not steeper than 1:12",
+   "verified": true,
+   "url": "https://divyangjan.depwd.gov.in/upload/uploadfiles/2262.pdf",
+   "accessed": "2026-11-15",
+   "paraphrase": "A ramp is no steeper than 1 in 12.",
+   "note": "read 2026-11-15: depwd.gov.in harmonised guidelines 2021 PDF"
+  },
+  {
+   "key": "building.class5_height",
+   "na": true,
+   "value": null,
+   "unit": "m",
+   "source": "nbcs2026-f",
+   "verified": false,
+   "note": "na: the code uses a 24 m high-rise line and occupancy groups, no 13 m class",
+   "text": {
+    "en": "No 13 m building class.",
+    "ru": "Нет класса здания 13 м."
+   }
+  }
+ ]
+}

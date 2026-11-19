@@ -1,0 +1,11 @@
+{
+ "xlsx_read_as.title": "Hernoemd blad?",
+ "xlsx_read_as.detail": "Blad {found} heeft de kolommen van {sheet} ({score}% overeenkomst). Het wordt niet gelezen tenzij u het kiest.",
+ "xlsx_read_as.detail_many": "Meer dan één blad past bij {sheet}: {found}. Er wordt niets voor u gekozen; kies het blad dat u wilt lezen.",
+ "xlsx_read_as.read_as": "“{found}” lezen als {sheet}",
+ "xlsx_read_as.read_as_tip": "Alleen voor deze import. Het blad wordt niet hernoemd; Toepassen schrijft alleen de id's van nieuwe rijen erin.",
+ "xlsx_read_as.active": "Blad “{found}” wordt bij deze import als {sheet} gelezen.",
+ "xlsx_read_as.undo": "Niet lezen als {sheet}",
+ "xlsx_read_as.undo_tip": "Terug naar de bladnamen zoals ze in het werkboek staan.",
+ "xlsx_read_as.not_rewritten": "Het werkboek is niet herschreven: een hernoemd blad wordt onder zijn eigen naam gelezen. Hernoem het terug om het werkboek synchroon te houden."
+}

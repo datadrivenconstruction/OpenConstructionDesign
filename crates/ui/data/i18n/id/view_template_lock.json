@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "Dikendalikan oleh templat {name}",
+ "view_template.edit_template": "Edit templat",
+ "view_template.locked_tip": "Diatur oleh templat tampilan {name}. Ubah di templat.",
+ "view_template.no_filters": "Tidak ada filter di tampilan ini"
+}

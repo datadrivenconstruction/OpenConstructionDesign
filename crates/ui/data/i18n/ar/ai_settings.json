@@ -1,0 +1,9 @@
+{
+ "ai.settings.num_bad": "ليس رقماً. اكتبه مثل 0.5.",
+ "ai.settings.num_comma": "استخدم النقطة كفاصلة عشرية، مثل 0.5.",
+ "ai.settings.num_negative": "لا يمكن أن يكون الرقم سالباً.",
+ "ai.settings.unit_money": "العملة",
+ "ai.settings.unit_tokens": "رموز",
+ "ai.settings.unit_price": "لكل مليون رمز",
+ "ai.settings.limits_hint": "0 تعني بلا حد. القيمة المرفوضة تُبقي الحد السابق كما هو."
+}

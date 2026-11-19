@@ -1,0 +1,11 @@
+{
+ "sketch.points": "बिंदु",
+ "sketch.rect": "आयत",
+ "sketch.circle": "वृत्त",
+ "sketch.polygon": "बहुभुज",
+ "sketch.radius": "R",
+ "sketch.sides": "भुजाएँ",
+ "sketch.circum": "परिवृत्त",
+ "sketch.shape.tip": "स्केच आकार (A से बदलें)। आयत: दो कोने। वृत्त और बहुभुज: केंद्र, फिर त्रिज्या। आकार तय करने के लिए माप लिखें और Enter दबाएँ।",
+ "tool.err.zero_size": "शून्य आकार: दूसरे बिंदु को पहले से दूर हटाएँ"
+}

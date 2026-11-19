@@ -1,0 +1,7 @@
+{
+ "ai.retry.countdown": "Försöker igen om {n} s",
+ "ai.retry.try": "Automatiskt försök {i} av {max}. Samma begäran skickas igen.",
+ "ai.retry.now": "Försök nu",
+ "ai.retry.gave_up": "Fortfarande inget svar efter {max} automatiska försök.",
+ "ai.retry.shorten": "Förkorta begäran"
+}

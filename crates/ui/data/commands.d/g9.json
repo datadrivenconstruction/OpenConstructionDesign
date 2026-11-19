@@ -1,0 +1,181 @@
+[
+ {
+  "id": "sel.connected",
+  "icon": "sel-connected",
+  "mnemonic": "SJ",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "C",
+   "M"
+  ],
+  "stage": "M1",
+  "context": [
+   "wall"
+  ]
+ },
+ {
+  "id": "sel.run",
+  "icon": "sel-chain",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "C"
+  ],
+  "stage": "M1",
+  "context": [
+   "wall"
+  ]
+ },
+ {
+  "id": "sel.invert",
+  "icon": "sel-invert",
+  "mnemonic": "SI",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "C"
+  ],
+  "stage": "M1",
+  "context": [
+   "*"
+  ]
+ },
+ {
+  "id": "sel.prev",
+  "icon": "sel-prev",
+  "mnemonic": "SP",
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "sel.set_save",
+  "icon": "set-save",
+  "mnemonic": "SV",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "C"
+  ],
+  "stage": "M1",
+  "context": [
+   "*"
+  ]
+ },
+ {
+  "id": "sel.sets",
+  "icon": "sel-sets",
+  "mnemonic": "SQ",
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "edit.copy_params",
+  "icon": "copy-params",
+  "mnemonic": "CP",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "C"
+  ],
+  "stage": "M1",
+  "context": [
+   "wall",
+   "door",
+   "window"
+  ]
+ },
+ {
+  "id": "edit.paste_params",
+  "icon": "paste-params",
+  "mnemonic": "PP",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "C"
+  ],
+  "stage": "M1",
+  "context": [
+   "wall",
+   "door",
+   "window"
+  ]
+ },
+ {
+  "id": "app.menu",
+  "icon": "context-menu",
+  "mnemonic": null,
+  "shortcuts": [
+   "Shift+F10"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "app.tips",
+  "icon": "tips",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "app.hud",
+  "icon": "hud",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "app.recent_bar",
+  "icon": "recent-bar",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "set.theme",
+  "icon": "theme",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ },
+ {
+  "id": "set.lang",
+  "icon": "language",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1"
+ }
+]

@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "ابتدا نام قالب را وارد کنید",
+ "view_template.name_taken": "قالبی با این نام از قبل وجود دارد",
+ "view_template.pick_blocked": "ابتدا حداقل یک نما را علامت بزنید",
+ "view_template.views.one": "{n} نما",
+ "view_template.views.few": "{n} نما",
+ "view_template.views.many": "{n} نما",
+ "view_template.delete.title": "این قالب حذف شود؟",
+ "view_template.delete.body": "قالب «{name}» حذف خواهد شد. توسط {used} استفاده می‌شود.",
+ "view_template.delete.unused": "قالب «{name}» حذف خواهد شد. هیچ نمایی از آن استفاده نمی‌کند.",
+ "view_template.delete.keeps": "این نماها گرافیک فعلی خود را نگه می‌دارند و پیوند را از دست می‌دهند.",
+ "view_template.delete.undo": "با یک بار واگرد می‌توانید این کار را برگردانید.",
+ "view_template.delete.confirm": "حذف قالب"
+}

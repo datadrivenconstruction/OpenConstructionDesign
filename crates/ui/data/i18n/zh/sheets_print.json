@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "上一张图纸（Page Up）",
+ "sheets.print.next": "下一张图纸（Page Down）",
+ "sheets.print.fit": "适合页面（双击）",
+ "sheets.print.no_sheets": "没有可预览的图纸",
+ "sheets.print.building": "正在生成页面…",
+ "sheets.print.stop_build": "停止",
+ "sheets.print.build_stopped": "页面生成已停止",
+ "sheets.print.retry": "重新生成",
+ "sheets.print.build_failed": "无法生成预览"
+}

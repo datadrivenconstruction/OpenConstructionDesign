@@ -1,0 +1,4 @@
+{
+ "source_input.err.number": "„{text}“ není číslo; tento parametr obsahuje číslo. Nic nebylo zapsáno",
+ "source_input.err.comma": "„{text}“: pro desetinná čísla použijte tečku (1.5); čárka slouží jen k oddělení tisíců (1,000). Nic nebylo zapsáno"
+}

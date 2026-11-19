@@ -1,0 +1,21 @@
+{
+ "mep.row.system": "Sustav",
+ "mep.row.elevation": "Početna kota",
+ "mep.row.slope": "Nagib",
+ "mep.row.material": "Materijal",
+ "mep.row.dev_elevation": "Kota",
+ "mep.row.no_system": "Taj sustav više ne postoji. Odaberite drugi.",
+ "mep.row.no_points": "Trasa nema točaka pa nema kotu.",
+ "mep.row.system_domain": "Sustav {system} ne prima ovu vrstu trase ({kind}). Odaberite sustav iste vrste mreže.",
+ "mep.row.material_pipes": "Materijal se primjenjuje samo na cijevi; ova trasa je {kind}.",
+ "mep.row.no_catalog": "Materijal nema kataloške veličine za ovu trasu.",
+ "mep.mat.none": "Nije postavljeno",
+ "mep.mat.steel": "Čelik",
+ "mep.mat.copper": "Bakar",
+ "mep.mat.pvc": "PVC",
+ "mep.mat.pp": "Polipropilen",
+ "mep.err.follow_blocked": "Povezana trasa ne može pratiti ovu promjenu: na novom mjestu nema mjesta za njezin krak. Pomaknite uređaj manje ili prvo odspojite trasu.",
+ "mep.err.follow_slope": "Povezana trasa ima pad koji se ne može zadržati na novom mjestu: pao bi ispod najmanjeg pada svog sustava. Pomaknite uređaj manje po visini ili prvo odspojite trasu.",
+ "mep.err.follow_port_lost": "Priključak na kojem je ova trasa bila više ne postoji nakon promjene. Prvo pomaknite trasu ili zadržite vrstu uređaja.",
+ "mep.err.follow_device": "Ova trasa završava na priključku uređaja i ne može ga napustiti. Pomaknite uređaj ili prvo odspojite trasu."
+}

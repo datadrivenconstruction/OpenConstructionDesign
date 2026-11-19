@@ -1,0 +1,5 @@
+{
+ "ai.plan.apply_n": "Qabul qilingan {n} ta ni qo'llash",
+ "ai.plan.will_apply": "{m} ta o'zgarishdan {n} tasi qo'llanadi",
+ "ai.plan.keys_hint": "J/K yoki Alt+Yuqori/Pastki — siljitish · A — qabul · R — rad · Space — belgilash · Shift+A / Shift+R — butun guruh · Ctrl+Enter — qo'llash · Esc — ko'rinishga qaytish (qoralama saqlanadi)"
+}

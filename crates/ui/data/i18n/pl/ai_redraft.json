@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "Poprawiony",
+ "ai.redraft.added": "+{n} dodane",
+ "ai.redraft.removed": "−{n} usunięte",
+ "ai.redraft.changed": "~{n} zmienione",
+ "ai.redraft.strip": "{what} od Twojego ostatniego spojrzenia",
+ "ai.redraft.note": "Poprawiony plan przejrzany: {what}",
+ "ai.redraft.more": "+{n} więcej",
+ "ai.redraft.ack": "Rozumiem",
+ "ai.redraft.ack.tip": "Oznacza tę wersję jako przejrzaną; Zastosuj odtąd jej dotyczy",
+ "ai.redraft.removed_list": "Usunięte pozycje: {n}",
+ "ai.redraft.review_first": "Plan zmienił się po Twojej wiadomości: najpierw przejrzyj zmiany",
+ "ai.redraft.mark.tip": "Nowe lub zmienione od Twojego ostatniego spojrzenia",
+ "ai.redraft.emptied": "Kolejna wiadomość usunęła wszystkie pozycje: szkic jest pusty"
+}

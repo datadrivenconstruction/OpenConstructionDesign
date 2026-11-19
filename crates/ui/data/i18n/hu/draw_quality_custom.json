@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "egyéni",
+ "draw_quality.custom.tip": "{name}: ennek a projektnek a bejegyzése",
+ "draw_quality.custom_note": "Az egyéni jelölésű bejegyzések ehhez a projekthez tartoznak.",
+ "draw_quality.unsaved.lib_body": "Mentse őket a könyvtárba, vagy elveti?",
+ "draw_quality.unsaved.styles_body": "Alkalmazza őket a nézetre, vagy elveti?",
+ "draw_quality.unsaved.both_body": "Alkalmazza őket, vagy elveti?",
+ "draw_quality.halftone": "{category} félárnyalat",
+ "draw_quality.styles.name": "Vonalstílusok",
+ "draw_quality.styles.other_level": "A(z) {level} szint mentetlen stílusszerkesztései: alkalmazza vagy vonja vissza őket a szint szerkesztéséhez."
+}

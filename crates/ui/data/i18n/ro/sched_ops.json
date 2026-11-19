@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "valoarea trebuie să fie mai mare decât zero",
+ "sched_ops.not_number": "nu este un număr",
+ "sched_ops.no_host": "niciun perete gazdă",
+ "sched_ops.wall_length": "această lungime de perete nu poate fi setată astfel",
+ "sched_ops.no_wall": "nu există un astfel de perete",
+ "sched_ops.no_opening": "nu există o astfel de deschidere",
+ "sched_ops.no_curtain": "nu există o astfel de fațadă cortină",
+ "sched_ops.no_panel": "nu există un astfel de panou",
+ "sched_ops.no_slab": "nu există o astfel de placă",
+ "sched_ops.no_room": "nu există o astfel de cameră",
+ "sched_ops.slope_range": "panta este în afara intervalului",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

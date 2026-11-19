@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "Vybrat celou smyčku stěn",
+ "cmd.sketch.link_unlink": "Odpojit hranu od stěny",
+ "cmd.sketch.link_repick": "Znovu vybrat hranovou stěnu",
+ "cmd.ctx.floor.link_unlink": "Odpojit hrany od stěn",
+ "cmd.ctx.floor.link_accept": "Přijmout hrany smazaných stěn",
+ "boundary_link.hint.loop": "Klikněte na stěnu: uzavřená řada stěn se stane propojenými hranami",
+ "boundary_link.hint.repick": "Klikněte na stěnu rovnoběžnou s hranou: hrana ji bude sledovat",
+ "boundary_link.need_sketch": "Nejprve otevřete náčrt hranice",
+ "boundary_link.need_edge": "Ukažte na hranu náčrtu",
+ "boundary_link.need_straight": "Stěnu může sledovat jen přímá hrana",
+ "boundary_link.need_floor": "Vyberte podlahu",
+ "boundary_link.no_wall": "Pod kurzorem není stěna",
+ "boundary_link.not_parallel": "Stěna není rovnoběžná s hranou",
+ "boundary_link.not_linked": "Tato hrana není propojena se stěnou",
+ "boundary_link.unlinked": "Hrana odpojena: zůstane na místě a již nebude sledovat stěnu",
+ "boundary_link.accepted": "Hrany přijaty: zůstanou na místě jako běžné hrany",
+ "boundary_link.failed": "Nepodařilo se použít",
+ "boundary_link.lost": "zdrojová stěna smazána",
+ "boundary_link.blocked": "stěnu nelze sledovat"
+}

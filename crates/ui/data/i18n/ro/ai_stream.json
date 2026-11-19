@@ -1,0 +1,14 @@
+{
+ "ai.stream.waiting": "Se așteaptă modelul",
+ "ai.stream.reading": "Se citește modelul",
+ "ai.stream.working": "Lucrează",
+ "ai.stream.answering": "Se scrie răspunsul",
+ "ai.stream.tools_one": "1 unealtă",
+ "ai.stream.tools_many": "{n} unelte",
+ "ai.stream.secs": "{n} s",
+ "ai.stream.stalled": "Încă se așteaptă serviciul modelului",
+ "ai.stream.stop": "Oprește",
+ "ai.stream.cancelled": "Oprit",
+ "ai.stream.incomplete": "Ciorna este incompletă. Nimic nu a fost aplicat modelului.",
+ "ai.stream.sep": " · "
+}

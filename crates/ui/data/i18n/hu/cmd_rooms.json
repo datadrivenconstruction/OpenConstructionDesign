@@ -1,0 +1,6 @@
+{
+ "cmd.arch.room_auto.short": "Helyiségek elhelyezése",
+ "cmd.mod.group_select.short": "Csoport kijelölése",
+ "cmd.mod.group_cancel.short": "Szerkesztés megszakítása",
+ "cmd.view.place_sheet_list.short": "Tervlapjegyzék elhelyezése"
+}

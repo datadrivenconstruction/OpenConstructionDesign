@@ -1,0 +1,22 @@
+{
+ "ai.audit.tokens": "{n} token",
+ "ai.audit.filter.all": "Lahat",
+ "ai.audit.filter.ai": "AI",
+ "ai.audit.filter.me": "Ako",
+ "ai.audit.search": "Maghanap ng pagbabago",
+ "ai.audit.search.clear": "I-clear ang paghahanap",
+ "ai.audit.show_all": "Ipakita lahat",
+ "ai.audit.empty.hint": "Dito lalabas ang mga pagbabagong ginawa ng model o agent, bawat isa may paraan pabalik.",
+ "ai.audit.no_match": "Walang pagbabagong tumutugma sa filter.",
+ "ai.audit.show.tip": "Piliin at ipakita ang mga elementong naapektuhan ng pagbabagong ito",
+ "ai.audit.revert.ask": "Bawiin ang “{what}”? {change}.",
+ "ai.audit.revert.elements": {
+  "one": "# pagbabago ng elemento",
+  "other": "# pagbabago ng elemento"
+ },
+ "ai.audit.revert.keeps": "Nananatili ang mas bagong pagbabago. Isang undo step ang pagbawi.",
+ "ai.audit.cancel": "Kanselahin",
+ "ai.audit.toast.reverted": "Nabawi: {what}",
+ "ai.audit.toast.undone": "Na-undo: {what}",
+ "ai.audit.redo": "Ulitin"
+}

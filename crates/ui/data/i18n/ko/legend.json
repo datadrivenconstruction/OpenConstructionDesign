@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "범례",
+ "legend.legend.new_hint": "새 범례 이름",
+ "legend.legend.delete_tip": "범례 삭제",
+ "legend.legend.delete_placed": "범례 삭제 (배치된 시트: {sheets})",
+ "legend.legend.deleted": "범례 삭제됨: {name}",
+ "legend.legend.no_rows": "아직 행이 없습니다. 하나 추가하거나 현재 뷰의 스타일을 가져오세요",
+ "legend.legend.replace_q": "{n}개 행을 이 뷰의 스타일로 바꿀까요?",
+ "legend.legend.replace": "바꾸기",
+ "legend.legend.keep": "행 유지",
+ "legend.col.swatch": "색상 견본",
+ "legend.col.value": "값",
+ "legend.col.label": "라벨"
+}

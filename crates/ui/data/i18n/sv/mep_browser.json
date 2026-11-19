@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "Systemnamn",
+ "mep_browser.add_blocked": "Ange ett systemnamn först",
+ "mep_browser.col.insulation": "Isolering",
+ "mep_browser.cancel": "Avbryt",
+ "mep_browser.delete.title": "Ta bort det här systemet?",
+ "mep_browser.delete.body": "Systemet “{name}” och dess körningar ({n}) tas bort.",
+ "mep_browser.delete.undo": "Du kan ångra detta med ett enda Ångra.",
+ "mep_browser.delete.confirm": "Ta bort system"
+}

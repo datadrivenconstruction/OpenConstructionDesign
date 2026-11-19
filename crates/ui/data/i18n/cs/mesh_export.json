@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "Uloží celý model nebo výběr jako binární STL v metrech nebo milimetrech.",
+ "cmd.data.export_obj.desc": "Uloží celý model nebo výběr jako OBJ se souborem MTL: jedna skupina na prvek, barvy podle materiálu.",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "OBJ s materiály (.obj)",
+ "open_file.filter.mesh": "3D sítě (glTF, STEP, STL, OBJ)",
+ "mx.title": "Export {fmt}",
+ "mx.scope": "Co exportovat",
+ "mx.scope.all": "Celý model",
+ "mx.scope.sel": "Výběr ({n} prvků)",
+ "mx.units": "Jednotky v souboru",
+ "mx.units.m": "Metry",
+ "mx.units.mm": "Milimetry",
+ "mx.export": "Exportovat…",
+ "mx.saved": "{fmt} uložen: {path} ({parts} prvků, {tris} trojúhelníků)",
+ "mx.partial": "{fmt} uložen s {n} problémy, některá tělesa mohou chybět: {path}",
+ "mx.failed": "Export {fmt} selhal: {error}",
+ "mx.imported": "{file}: importováno {n} prvků ({tris} trojúhelníků)",
+ "mx.imported_notes": "{file}: importováno {n} prvků ({tris} trojúhelníků), {w} poznámek: {first}"
+}

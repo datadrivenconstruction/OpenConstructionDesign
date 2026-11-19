@@ -1,0 +1,8 @@
+brief = "Cabinet whose shelves appear by condition: two shelves shown only when the cabinet is taller than 1200 mm, one tall door panel; height and width as parameters."
+category = "casework"
+must = param Height
+must = param Width
+must = visible ShelfA
+must = visible ShelfB
+must = solids >= 4
+must = bbox z 1800

@@ -1,0 +1,8 @@
+{
+ "empty.start_recent.title": "Még nincsenek legutóbbi projektek",
+ "empty.start_recent.hint": "A megnyitott projektek itt jelennek meg. Kezdje a mintamodellel.",
+ "empty.start_recent.action": "Minta megnyitása",
+ "start.recent_open_file": "Fájl megnyitása…",
+ "start.forgot": "Eltávolítva a legutóbbiak közül: {name}",
+ "start.forgot_undo": "Visszavonás"
+}

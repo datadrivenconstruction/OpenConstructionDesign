@@ -1,0 +1,11 @@
+{
+ "empty.sv_notfound.title": "Visning ikke fundet",
+ "empty.sv_notfound.hint": "Denne visning er slettet eller er ikke længere en del af projektet.",
+ "empty.sv_notfound.action": "Luk visning",
+ "empty.sv_cuts_nothing.title": "Dette snit skærer intet",
+ "empty.sv_cuts_nothing.hint": "Snitlinjen rammer ingen vægge, plader eller åbninger inden for sin dybde. Flyt linjen eller gør visningen dybere.",
+ "empty.sv_cuts_nothing.action": "Vis på plan",
+ "empty.sv_shows_nothing.title": "Denne facade viser intet",
+ "empty.sv_shows_nothing.hint": "Ingen vægge, plader eller åbninger ligger inden for visningens dybde. Flyt visningslinjen eller gør visningen dybere.",
+ "empty.sv_shows_nothing.action": "Vis på plan"
+}

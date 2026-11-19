@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "การเชื่อมต่อ",
+ "settings.ai_status_desc": "โมเดลที่ผู้ช่วย AI ใช้ คีย์เก็บอยู่ในที่เก็บที่ปลอดภัย",
+ "settings.ai_not_connected": "ยังไม่ได้เชื่อมต่อ",
+ "settings.ai_connect": "การตั้งค่าการเชื่อมต่อ",
+ "settings.ai_connect_desc": "ที่อยู่ โมเดล และคีย์ของโมเดลของคุณเอง ทั้งบนคลาวด์หรือในเครื่อง",
+ "settings.ai_connect_btn": "การตั้งค่าการเชื่อมต่อ…",
+ "settings.ai_panel": "แผงผู้ช่วย AI",
+ "settings.ai_panel_desc": "ถามด้วยคำพูด ตรวจแผน แล้วนำไปใช้",
+ "settings.ai_open_panel": "เปิดแผงผู้ช่วย AI"
+}

@@ -1,0 +1,22 @@
+{
+ "cmd.arch.grid_pick": "Siatka po linii",
+ "cmd.arch.grid_pick.desc": "Tworzy siatkę dokładnie wzdłuż wskazanej linii rysunku bieżącego poziomu; nazwy kontynuują serię. Tab bierze od razu wszystkie równoległe linie tej samej warstwy rysunku. Każde wskazanie to jeden krok cofnięcia.",
+ "cmd.struct.beam_pick": "Belka po linii",
+ "cmd.struct.beam_pick.desc": "Umieszcza belkę bieżącego typu na aktywnym poziomie wzdłuż wskazanej linii rysunku. Tab bierze połączony łańcuch. Każde wskazanie to jeden krok cofnięcia.",
+ "hint.grid_pick.one": "Siatka po linii: wskaż linię rysunku · Tab wszystkie równoległe linie jej warstwy · Esc wychodzi",
+ "hint.grid_pick.more": "Siatka po linii: wskaż linię, aby wziąć wszystkie równoległe linie jej warstwy · Tab jedna linia · Esc wyłącza",
+ "hint.beam_pick.one": "Belka po linii: wskaż linię rysunku · Tab połączony łańcuch · Esc wychodzi",
+ "hint.beam_pick.more": "Belka po linii: wskaż linię, aby wziąć jej łańcuch · Tab jedna linia · Esc wyłącza",
+ "line_pick.st.start_grid": "Wskaż linię rysunku. Tab: wszystkie równoległe linie jej warstwy",
+ "line_pick.st.start_beam": "Wskaż linię rysunku dla belki {type}. Tab: połączony łańcuch",
+ "line_pick.st.grid_done": "Dodano siatkę {name}",
+ "line_pick.st.grids_done": "Dodano siatek: {n}: {first} — {last}",
+ "line_pick.st.beam_done": "Dodano belkę {type}",
+ "line_pick.st.beams_done": "Dodano belki {type}: {n}",
+ "line_pick.st.on_grid": "Ta linia ma już siatkę {name}",
+ "line_pick.st.on_beam": "Ta linia ma już belkę {id}",
+ "line_pick.st.no_layer": "Warstwy rysunku dla tych linii nie są jeszcze znane, spróbuj ponownie",
+ "line_pick.st.no_beam_type": "Brak przekroju belki w katalogu",
+ "line_pick.st.reload_warn": "Utworzono, ale widoku nie udało się przeładować: {err}",
+ "line_pick.st.failed": "Nie utworzono: {err}"
+}

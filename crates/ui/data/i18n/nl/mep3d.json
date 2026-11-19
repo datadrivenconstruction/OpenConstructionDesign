@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "Kanaal",
+ "mep3d.pipe": "Buis",
+ "mep3d.tray": "Kabelgoot",
+ "mep3d.conduit": "Leidingkanaal",
+ "mep3d.system": "Systeem",
+ "mep3d.length": "Lengte",
+ "mep3d.diameter": "Doorsnede",
+ "mep3d.width": "Breedte",
+ "mep3d.height": "Hoogte",
+ "mep3d.insulation": "Isolatie",
+ "mep3d.tip": "Enter — toepassen; fittingen worden opnieuw berekend",
+ "mep3d.size_positive": "afmeting moet groter zijn dan nul",
+ "mep3d.not_changed": "niet gewijzigd: {e}",
+ "mep3d.copied": "tracé gekopieerd",
+ "mep3d.changed": "tracé gewijzigd",
+ "mep3d.deleted": "verwijderde elementen: {n}",
+ "mep3d.not_deleted": "niet verwijderd: {e}",
+ "mep3d.no_wall_type": "geen wandtype",
+ "mep3d.demo.supply": "Toevoer S1",
+ "mep3d.demo.heating": "Verwarming",
+ "mep3d.demo.power": "Kracht"
+}

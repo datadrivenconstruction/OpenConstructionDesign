@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "Ново семейство",
+ "family_editor.open_tip": "Отваряне на семейство или чернова",
+ "family_editor.close_named": "Затваряне на {name}",
+ "family_editor.unsaved": "Незапазени промени",
+ "family_editor.search": "Търсене",
+ "family_editor.nothing": "Нищо не е намерено",
+ "family_editor.sec_families": "Семейства на проекта",
+ "family_editor.sec_drafts": "Чернови",
+ "family_editor.cap_category": "Категория",
+ "family_editor.cap_host": "Основа",
+ "family_editor.cap_type": "Преглеждан тип"
+}

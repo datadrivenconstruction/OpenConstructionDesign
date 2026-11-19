@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "Хана зурах",
+ "empty.totals.action": "Хана зурах",
+ "empty.schedule.action": "Багана нэмэх",
+ "empty.schedule_filtered.action": "Шүүлтүүрийг цэвэрлэх",
+ "empty.library.action": "Хайлтыг шинэчлэх",
+ "empty.library.load": "Гэр бүл ачаалах",
+ "empty.schedule_fields.title": "Харуулах багана байхгүй",
+ "empty.schedule_fields.action": "Багана нэмэх",
+ "empty.schedule_fields.hint": "Хүснэгтийг харахын тулд дор хаяж нэг багана асаана уу."
+}

@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "Inserisci strato sotto",
+ "type_layers.layer.delete": "Elimina strato",
+ "type_layers.layer.delete_last": "Un tipo richiede almeno uno strato",
+ "type_layers.value.bad": "Non è un valore positivo valido",
+ "type_layers.value.required": "Obbligatorio",
+ "type_layers.unsaved.title": "Modifiche non salvate a {name}",
+ "type_layers.unsaved.body": "Applicarle al tipo o scartarle?",
+ "type_layers.unsaved.discard": "Scarta"
+}

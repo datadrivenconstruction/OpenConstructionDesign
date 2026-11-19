@@ -1,0 +1,9 @@
+{
+ "drafts.draft.view": "Видимость и графика вида «{name}»",
+ "drafts.draft.filter": "Фильтр вида «{name}»",
+ "drafts.draft.filter_new": "Новый фильтр вида",
+ "drafts.draft.object_styles": "Стили объектов",
+ "drafts.draft.material": "Материал «{name}»",
+ "drafts.draft.type": "Тип «{name}»",
+ "drafts.draft.params": "Параметры семейства «{name}»"
+}

@@ -1,0 +1,8 @@
+{
+ "cmd.arch.room_auto": "Colocar espacios automáticamente",
+ "cmd.arch.room_auto.desc": "Coloca un espacio en cada contorno cerrado de la planta activa que no tenga ninguno. Los bucles de muros abiertos se omiten, nunca se cierran por suposición. Un paso de deshacer.",
+ "room_place.placed": "Espacios colocados: {n}. Recintos que ya tenían espacio: {m}. Bucles abiertos omitidos: {k}",
+ "room_place.all_had": "No se colocó nada: los {m} recintos cerrados ya tienen un espacio. Bucles abiertos omitidos: {k}",
+ "room_place.none": "No se colocó nada: la planta no tiene recintos de muros cerrados",
+ "room_place.none_open": "No se colocó nada: la planta no tiene recintos de muros cerrados. Bucles abiertos omitidos: {k}"
+}

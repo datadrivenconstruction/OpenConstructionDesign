@@ -1,0 +1,5 @@
+{
+ "elem.panel_select_wall": "Vybrat stěnu",
+ "cmd.elem.panel_select_wall": "Vybrat stěnu",
+ "elem.left_in_place": "Ponecháno na místě: {kinds}. Panel patří ke své stěně; hmoty a anotace se mažou samostatně."
+}

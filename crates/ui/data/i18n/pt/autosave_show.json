@@ -1,0 +1,4 @@
+{
+ "cmd.mgr.autosave_show": "Mostrar salvamento automático",
+ "cmd.mgr.autosave_show.desc": "Abre a janela de salvamento automático; permanece aberta se já estiver visível."
+}

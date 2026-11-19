@@ -1,0 +1,9 @@
+{
+ "first_card.card.title": "Experimente o ciclo de ida e volta com o XLSX",
+ "first_card.card.step1": "Selecione uma parede",
+ "first_card.card.step2": "Altere uma das suas propriedades",
+ "first_card.card.step3": "Edite no planilha XLSX, verifique a pré-visualização e Aplique",
+ "first_card.card.spreadsheet": "Editar no XLSX",
+ "first_card.card.skip": "Ignorar",
+ "first_card.card.done": "Concluído: o modelo e o livro de planilha XLSX coincidem"
+}

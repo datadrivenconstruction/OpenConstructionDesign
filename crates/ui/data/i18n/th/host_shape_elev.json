@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "ไม่ได้ใช้ระดับความสูง {t} ({why}) ยังไม่มีการเปลี่ยนแปลงใด ๆ",
+ "host_shape.shape.elev_prompt_in": "ระดับความสูง, ฟุต-นิ้ว…",
+ "host_shape.shape.elev_in": "{v} นิ้ว"
+}

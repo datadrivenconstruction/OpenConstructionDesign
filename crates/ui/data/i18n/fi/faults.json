@@ -1,0 +1,18 @@
+{
+ "faults.errors": {
+  "one": "# virhe mallissa. Napsauta näyttääksesi sen.",
+  "other": "# virhettä mallissa. Napsauta nähdäksesi luettelon."
+ },
+ "faults.warnings": {
+  "one": "# varoitus mallissa. Napsauta näyttääksesi sen.",
+  "other": "# varoitusta mallissa. Napsauta nähdäksesi luettelon."
+ },
+ "faults.title": "Mallivirheet: {n}",
+ "faults.none": "Ei virheitä tai varoituksia.",
+ "faults.cat.wall": "Seinä",
+ "faults.cat.slab": "Laatta",
+ "faults.cat.opening": "Aukko",
+ "faults.cat.curtain_wall": "Verhoseinä",
+ "faults.cat.ramp": "Luiska",
+ "faults.cat.zone": "Vyöhyke"
+}

@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "Asse X",
+ "fe.axis.y": "Asse Y",
+ "fe.axis.z": "Asse Z",
+ "fe.col.axis": "Asse",
+ "fe.col.at": "Posizione",
+ "fe.col.mode": "Modalità",
+ "fe.mode.fixed": "Fisso",
+ "fe.mode.free": "Libero",
+ "fe.types.inherited": "Predefinito dal parametro",
+ "fe.csv.more": "Altre azioni CSV",
+ "fe.ref.selected": "Piano: {name}"
+}

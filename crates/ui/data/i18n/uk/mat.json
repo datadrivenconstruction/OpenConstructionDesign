@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "Бетон",
+ "mat.masonry": "Кладка",
+ "mat.brick": "Цегла",
+ "mat.insulation": "Утеплювач",
+ "mat.plaster": "Штукатурка",
+ "mat.render": "Оздоблення",
+ "mat.gypsum": "Гіпсокартон",
+ "mat.glass": "Скло",
+ "mat.wood": "Деревина",
+ "mat.steel": "Сталь",
+ "mat.membrane": "Мембрана",
+ "mat.other": "Інше",
+ "warn.cat.wall": "Стіна",
+ "warn.cat.slab": "Плита",
+ "warn.cat.opening": "Отвір",
+ "warn.cat.curtain_wall": "Навісна стіна",
+ "td.mat.custom": "Інше…"
+}

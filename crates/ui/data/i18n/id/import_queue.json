@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "Antre di belakang tugas yang berjalan: {n}",
+ "import_queue.queue_full": "Antrean penuh, {n} file tidak ditambahkan",
+ "import_queue.changed": "{name} diperbarui setelah proyek ini dibuat. Membuka proyek sebelumnya.",
+ "import_queue.import_again": "Impor ulang",
+ "import_queue.kept": "Impor yang selesai disimpan",
+ "import_queue.open_it": "Buka",
+ "import_queue.sum.head": "impor: {editable} dapat diedit (dinding {walls}, bukaan {open}, lantai {slabs}, ruang {rooms}, lainnya {other}), {meshes} sebagai mesh",
+ "import_queue.sum.unchanged": ", tidak berubah {n}",
+ "import_queue.sum.updated": ", diperbarui {n}",
+ "import_queue.sum.missing": ", tidak ada di sumber {n} (disimpan)",
+ "import_queue.sum.skipped": ", dilewati {n}",
+ "import_queue.sum.warnings": ", peringatan {n}",
+ "import_queue.import_failed": "impor gagal: {e}"
+}

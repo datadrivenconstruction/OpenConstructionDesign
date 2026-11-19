@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "Controlado por la plantilla {name}",
+ "view_template.edit_template": "Editar plantilla",
+ "view_template.locked_tip": "Definido por la plantilla de vista {name}. Modifíquelo en la plantilla.",
+ "view_template.no_filters": "No hay filtros en esta vista"
+}

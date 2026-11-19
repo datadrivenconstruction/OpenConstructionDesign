@@ -1,0 +1,12 @@
+{
+ "curtain_wall.cw.issue.slab": "vloer {id}: {e}",
+ "curtain_wall.cw.issue.body": "lichaam {id}: {e}",
+ "curtain_wall.cw.added": "Gordijngevels toegevoegd: {n}",
+ "curtain_wall.cw.add_failed": "Gordijngevel niet gebouwd: {e}",
+ "curtain_wall.cw.edited_warn": "Gordijngevel #{id} gewijzigd: {w}",
+ "curtain_wall.cw.edited": "Gordijngevel #{id} gewijzigd",
+ "curtain_wall.cw.not_changed": "Niet gewijzigd: {e}",
+ "curtain_wall.cw.room_edited": "Ruimte #{id} gewijzigd",
+ "curtain_wall.cw.slope_range": "Niet gewijzigd: helling buiten bereik",
+ "curtain_wall.cw.slope_set": "Vloer #{id}: helling {pct}"
+}

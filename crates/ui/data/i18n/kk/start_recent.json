@@ -1,0 +1,5 @@
+{
+ "start_recent.unavailable": "Қазір қолжетімсіз (диск немесе желілік орын жауап бермейді): {path}",
+ "start_recent.unavailable_short": "Қазір қолжетімсіз",
+ "start_recent.retry": "Қайта әрекет ету"
+}

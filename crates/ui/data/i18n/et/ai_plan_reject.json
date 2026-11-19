@@ -1,0 +1,9 @@
+{
+ "ai.plan.reject_ask": {
+  "one": "Kas lükata # muudatus tagasi?",
+  "other": "Kas lükata # muudatust tagasi?"
+ },
+ "ai.plan.reject_ask.hint": "Mustand ja sinu märkeruudud hüljatakse. Mudel jääb samaks.",
+ "ai.plan.reject_confirm": "Lükka tagasi",
+ "ai.plan.reject_keep": "Jäta"
+}

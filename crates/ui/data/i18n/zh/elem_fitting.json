@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "管件",
+ "elem.mep_fitting.many": "管件",
+ "elem.mep_fitting.kind.elbow": "弯头",
+ "elem.mep_fitting.kind.tee": "三通",
+ "elem.mep_fitting.kind.cross": "四通",
+ "elem.mep_fitting.kind.transition": "变径",
+ "elem.mep_fitting.kind.cap": "封头",
+ "elem.mep_fitting.size": "尺寸",
+ "elem.mep_fitting.at": "位置",
+ "elem.mep_fitting.runs": "管段 {n}",
+ "elem.mep_fitting.edit_run": "编辑管段",
+ "elem.mep_fitting.select_runs": "选择其管段",
+ "elem.mep_fitting.derived": "管件随其管段变化：修改管段时管件会随之更新。",
+ "elem.mep_fitting.no_delete": "管件不能单独删除或移动，请编辑或删除其管段。",
+ "elem.mep_fitting.hint": "在平面图中单击管件以查看其管段。",
+ "elem.mep_fitting.picked": "已选择管件：{n}"
+}

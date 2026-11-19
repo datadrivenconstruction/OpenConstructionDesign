@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "Lista skrótów klawiszowych",
+ "cmd.help.shortcuts.desc": "Pokazuje wszystkie skróty według kontekstu, tak jak są ustawione teraz. Naciśnij ? poza polem tekstowym.",
+ "sheet.title": "Skróty klawiszowe",
+ "sheet.filter": "Filtruj po poleceniu lub klawiszu",
+ "sheet.filter_label": "Filtruj skróty",
+ "sheet.customize": "Dostosuj…",
+ "sheet.close": "Zamknij",
+ "sheet.esc_close": "aby zamknąć",
+ "sheet.none": "Brak pasujących skrótów",
+ "sheet.none_hint": "Spróbuj innego słowa lub klawisza.",
+ "sheet.sec.general": "Ogólne",
+ "sheet.sec.plan": "Plan",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "Zestawienia",
+ "sheet.sec.sheets": "Arkusze",
+ "sheet.sec.ai": "AI"
+}

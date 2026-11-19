@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "Añadir 1 juego",
+ "rebar_sets.add_n": "Añadir {n} juegos",
+ "rebar_sets.pick.search": "Buscar tipos de barra",
+ "rebar_sets.pick.empty": "Ningún tipo de barra coincide",
+ "rebar_sets.unit.deg": "°"
+}

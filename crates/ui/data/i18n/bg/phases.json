@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D",
+ "phases.current_mark": "текуща",
+ "phases.make_current": "Задаване като текуща",
+ "phases.col_phase": "Фаза",
+ "phases.col_filter": "Филтър",
+ "phases.presets": "Предварителни настройки на плана",
+ "phases.del_title": "Изтриване на фаза",
+ "phases.del_text": "Да се изтрие ли фазата „{name}“? Елементите ѝ се преместват във фазата, избрана по-долу.",
+ "phases.del_into": "Преместване на елементите в",
+ "phases.del_ok": "Изтриване",
+ "phases.col_kind": "Тип елемент",
+ "phases.col_count": "Брой",
+ "phases.col_volume": "Обем"
+}

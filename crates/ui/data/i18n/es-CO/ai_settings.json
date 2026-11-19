@@ -1,0 +1,9 @@
+{
+ "ai.settings.num_bad": "No es un número. Escríbalo como 0.5.",
+ "ai.settings.num_comma": "Use el punto como separador decimal, por ejemplo 0.5.",
+ "ai.settings.num_negative": "El número no puede ser negativo.",
+ "ai.settings.unit_money": "moneda",
+ "ai.settings.unit_tokens": "tokens",
+ "ai.settings.unit_price": "por 1 M de tokens",
+ "ai.settings.limits_hint": "0 significa sin límite. Un valor rechazado mantiene el límite anterior."
+}

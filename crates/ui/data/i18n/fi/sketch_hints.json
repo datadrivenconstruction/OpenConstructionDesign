@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "Piirrä suljettu ääriviiva: napsauta pisteitä, sitten Enter tai Viimeistele luodaksesi",
+ "sketch_hints.sk_finish": "Viimeistele",
+ "sketch_hints.sk_cancel": "Peruuta",
+ "sketch_hints.import_warn": "mallin tarkistuksen varoituksia: {n} (ensimmäinen: {first})",
+ "sketch_hints.ai.offline.schedule": "Avaa luettelo",
+ "sketch_hints.ai.offline.check": "Tarkista säännöistä",
+ "sketch_hints.ai.offline.warnings": "Näytä varoitukset",
+ "cmd.file.publish_pdf": "Julkaise arkit PDF:nä…",
+ "cmd.file.publish_pdf.desc": "Julkaisee valitut arkit PDF:nä. Sama kuin Vie arkit PDF/SVG:nä.",
+ "sketch_hints.verify_none": "Valinnassa ei ole tekoälyavustajan asettamia arvoja tarkistettavaksi",
+ "sketch_hints.contours_none": "Mallissa ei ole topopintaa: korkeuskäyrät näkyvät, kun sellainen luodaan",
+ "sketch_hints.contours_off": "Topopinnan korkeuskäyrät piilotettu",
+ "sketch_hints.contours_on": "Topopinnan korkeuskäyrät näytetty"
+}

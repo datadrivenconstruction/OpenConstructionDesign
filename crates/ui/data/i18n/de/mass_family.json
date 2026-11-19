@@ -1,0 +1,9 @@
+{
+ "cmd.mass.timeline_family": "Verlauf in Familie",
+ "cmd.mass.timeline_family.desc": "Erstellt eine Bauteilfamilie aus dem Konstruktionsverlauf der gewählten Form. Die Verlaufsparameter werden zu Familienparametern.",
+ "mass_family.done": "Familie {name} mit {n} Parametern erstellt",
+ "mass_family.refused": "Keine Familie erstellt: {e}",
+ "mass_family.no_mass": "Wählen Sie zuerst eine parametrische Form",
+ "mass_family.add_modifier": "Modifikator hinzufügen",
+ "mass_family.needs_faces": "Gewählte Flächen erforderlich: verwenden Sie das Werkzeug auf der Registerkarte „Formen“"
+}

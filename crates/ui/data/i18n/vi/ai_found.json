@@ -1,0 +1,42 @@
+{
+ "ai.tool.show_elements": "Đang hiện phần tử",
+ "ai.tool.isolate_elements": "Đang cô lập phần tử",
+ "ai.tool.color_by": "Tô màu theo giá trị",
+ "ai.tool.reset_view": "Đang đặt lại góc nhìn",
+ "ai_found.found.query": "Đã tìm thấy",
+ "ai_found.found.show": "Đã hiện",
+ "ai_found.found.isolate": "Đã cô lập",
+ "ai_found.found.hide": "Đã ẩn",
+ "ai_found.found.color": "Đã tô màu",
+ "ai_found.found.count": "{n} trong {m}",
+ "ai_found.found.none": "Không có kết quả khớp. Hãy thử bộ lọc rộng hơn.",
+ "ai_found.found.show_btn": "Hiện",
+ "ai_found.found.show_tip": "Chọn các phần tử này và phóng tới chúng trên mặt bằng và 3D",
+ "ai_found.found.isolate_btn": "Cô lập",
+ "ai_found.found.isolate_tip": "Chỉ hiện các phần tử này cho đến khi Đặt lại góc nhìn",
+ "ai_found.found.select_btn": "Chọn",
+ "ai_found.found.select_tip": "Chọn các phần tử này mà không di chuyển góc nhìn",
+ "ai_found.legend.title": "Tô màu theo {by}",
+ "ai_found.legend.row_tip": "Nhấp để chọn các phần tử này",
+ "ai_found.legend.empty_value": "Không có giá trị",
+ "ai_found.legend.other": {
+  "one": "# giá trị khác",
+  "other": "# giá trị khác"
+ },
+ "ai_found.view.title": "Góc nhìn của trợ lý AI",
+ "ai_found.view.reset": "Đặt lại góc nhìn",
+ "ai_found.view.reset_tip": "Khôi phục góc nhìn trước khi trợ lý AI thay đổi",
+ "ai_found.view.shown": {
+  "one": "# phần tử đã hiện",
+  "other": "# phần tử đã hiện"
+ },
+ "ai_found.view.isolated": {
+  "one": "# phần tử đã cô lập",
+  "other": "# phần tử đã cô lập"
+ },
+ "ai_found.view.hidden": {
+  "one": "# phần tử đã ẩn",
+  "other": "# phần tử đã ẩn"
+ },
+ "ai_found.found.line": "{what}: {count}"
+}

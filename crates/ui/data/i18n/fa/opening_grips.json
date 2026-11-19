@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "جابه‌جایی سمت لولا",
+ "cmd.edit.flip_hand.desc": "درها و پنجره‌های انتخاب‌شده را در امتداد دیوار قرینه می‌کند تا لولاها به انتهای دیگر بازشو بروند.",
+ "cmd.edit.flip_facing": "جابه‌جایی سمت بازشو",
+ "cmd.edit.flip_facing.desc": "درها و پنجره‌های انتخاب‌شده را به سمت دیگر دیوار می‌چرخاند.",
+ "opening_grips.flip_hand": "جابه‌جایی لولا",
+ "opening_grips.flip_hand.tip": "لولاها به انتهای دیگر بازشو (Shift+F)",
+ "opening_grips.flip_facing": "جابه‌جایی سمت",
+ "opening_grips.flip_facing.tip": "بازشو به سمت دیگر دیوار (Shift+G)",
+ "opening_grips.flip.done": "جابه‌جا شد: {n}",
+ "opening_grips.flip.none": "برای جابه‌جایی یک در یا پنجره را انتخاب کنید",
+ "opening_grips.flip.fail": "جابه‌جا نشد: {why}"
+}

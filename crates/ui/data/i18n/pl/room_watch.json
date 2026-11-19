@@ -1,0 +1,4 @@
+{
+ "room_watch.room.dup": "Pomieszczenie {room} znajduje się w obszarze pomieszczenia {other}: pole i objętość liczone są tylko w pomieszczeniu {other}",
+ "ai.issue.room_dup": "Pomieszczenie znajduje się w obszarze pomieszczenia {0}: jego pole jest liczone tam"
+}

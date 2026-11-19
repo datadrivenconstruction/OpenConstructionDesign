@@ -1,0 +1,15 @@
+{
+ "cmd.ctx.floor.clean_outline": "נקה מתאר",
+ "cmd.ctx.floor.clean_outline.desc": "מסיר קוצים צרים במקומות שבהם מתאר הרצפה פונה אחורה על עצמו. מציג תצוגה מקדימה קודם; צעד ביטול אחד.",
+ "outline_cleanup.title": "נקה מתאר",
+ "outline_cleanup.intro": "המתאר של רצפה זו פונה אחורה על עצמו בקוצים צרים: {n}. הניקוי מסיר אותם; כל היתר נשאר כמו שהוא.",
+ "outline_cleanup.legend_before": "קו עבה: המתאר כעת",
+ "outline_cleanup.legend_after": "קו דק: המתאר לאחר הניקוי",
+ "outline_cleanup.undo": "ניתן לבטל זאת בצעד אחד.",
+ "outline_cleanup.apply": "נקה",
+ "outline_cleanup.cancel": "ביטול",
+ "outline_cleanup.done": "המתאר נוקה, הוסרו קוצים: {n}",
+ "outline_cleanup.none": "למתאר של רצפה זו אין קוצים",
+ "outline_cleanup.failed": "לא ניתן לנקות את המתאר",
+ "outline_cleanup.changed": "המתאר השתנה מאז התצוגה המקדימה; דבר לא נכתב. בדוק את התצוגה המקדימה החדשה."
+}

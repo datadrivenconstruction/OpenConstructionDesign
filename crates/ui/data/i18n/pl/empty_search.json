@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "Nic nie znaleziono",
+ "empty.browser_search.hint": "Żaden widok, poziom, typ ani pomieszczenie nie pasuje do tego wyszukiwania.",
+ "empty.browser_search.action": "Wyczyść wyszukiwanie",
+ "empty.xl_filtered.title": "Żaden wpis nie pasuje do filtrów",
+ "empty.xl_filtered.hint": "Włącz więcej rodzajów, wybierz inny arkusz albo zmień tekst wyszukiwania.",
+ "empty.xl_filtered.action": "Wyczyść filtry",
+ "empty.xl_nochanges.title": "Brak zmian w skoroszycie",
+ "empty.xl_nochanges.hint": "Skoroszyt zgadza się z modelem: import nic by nie zmienił.",
+ "empty.version_same.title": "Modele są identyczne",
+ "empty.version_same.hint": "Nie znaleziono różnic między otwartym modelem a wybraną wersją.",
+ "empty.templates.title": "Brak szablonów widoków",
+ "empty.templates.hint": "Utwórz go z bieżącego widoku, aby użyć jego ustawień w innych widokach.",
+ "empty.templates.action": "Nazwij szablon",
+ "empty.fe_params.title": "Brak parametrów",
+ "empty.fe_params.hint": "Dodaj parametr poniżej, aby sterować wymiarami, materiałami lub widocznością.",
+ "empty.fe_params.action": "Dodaj parametr"
+}

@@ -1,0 +1,16 @@
+{
+ "family_overwrite.ow.title": "Korvataanko projektin tyyppiarvot?",
+ "family_overwrite.ow.body": "Lataus korvaa {values} tyypeissä {types}. Näiden tyyppien sijoitetut esiintymät: {instances}.",
+ "family_overwrite.ow.values": {
+  "one": "# arvo",
+  "other": "# arvoa"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# tyyppi",
+  "other": "# tyyppiä"
+ },
+ "family_overwrite.ow.list": "Tyypit: {list}",
+ "family_overwrite.ow.more": "ja {n} muuta",
+ "family_overwrite.ow.back": "Takaisin muokkaukseen",
+ "family_overwrite.ow.replace": "Korvaa arvot"
+}

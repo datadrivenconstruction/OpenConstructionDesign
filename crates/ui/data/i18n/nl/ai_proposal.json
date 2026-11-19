@@ -1,0 +1,13 @@
+{
+ "ai.proposal.title": "Voorstel van de agent",
+ "ai.proposal.meta": "{actor} · bewerkingen: {ops}",
+ "ai.proposal.apply.desc": "Past het hele voorstel toe als één stap; Ctrl+Z maakt het ongedaan",
+ "ai.proposal.applying": "Toepassen…",
+ "ai.proposal.applied": "Het voorstel is toegepast. Ctrl+Z maakt het ongedaan.",
+ "ai.proposal.applied_resync": "Het voorstel is toegepast, maar de weergave is nog niet bijgewerkt. Die ververst zich vanzelf; Ctrl+Z maakt de stap ongedaan.",
+ "ai.proposal.stale": "Het model is gewijzigd nadat dit voorstel werd bekeken. Vraag de agent het opnieuw voor te stellen.",
+ "ai.proposal.toast.applied": "Voorstel toegepast. Ctrl+Z maakt het ongedaan.",
+ "ai.proposal.toast.stale": "Het model is gewijzigd na de voorbeeldweergave, dus er is niets toegepast. Bekijk opnieuw: vraag de agent het voorstel opnieuw te doen.",
+ "ai.proposal.toast.refused": "Voorstel niet toegepast: {reason}",
+ "ai.proposal.rejected": "Het voorstel is afgewezen."
+}

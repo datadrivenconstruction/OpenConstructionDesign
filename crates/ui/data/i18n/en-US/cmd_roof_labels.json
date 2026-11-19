@@ -1,0 +1,11 @@
+{
+ "cmd.arch.roof_gable.short": "Gable",
+ "cmd.arch.roof_hip.short": "Hip",
+ "cmd.arch.roof_shed.short": "Shed",
+ "cmd.arch.roof_mansard.short": "Mansard",
+ "cmd.arch.roof_gambrel.short": "Gambrel",
+ "cmd.arch.roof_barrel.short": "Barrel",
+ "cmd.arch.roof_edges.short": "Roof edges",
+ "cmd.arch.roof_opening.short": "Opening",
+ "cmd.mass.roof_by_face.short": "By face"
+}

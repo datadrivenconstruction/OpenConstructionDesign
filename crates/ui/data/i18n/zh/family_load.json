@@ -1,0 +1,4 @@
+{
+ "family_load.refused": "无法加载族“{name}”：{msg}。未向项目加载任何内容；您的编辑已保留。",
+ "family_load.loaded_all": "一步加载了 {n} 个族：{names}"
+}

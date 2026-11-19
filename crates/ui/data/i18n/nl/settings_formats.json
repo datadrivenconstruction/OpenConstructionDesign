@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "Wat er gebeurt nadat een werkboek is geëxporteerd",
+ "settings.area_decimals_desc": "Cijfers na het decimaalteken bij oppervlakten",
+ "settings.volume_decimals_desc": "Cijfers na het decimaalteken bij volumes",
+ "settings.frac_desc": "Kleinste breukdeel van een duim bij imperiale lengtes",
+ "settings.small_area_desc": "Oppervlakten onder één vierkante voet tonen in vierkante inch",
+ "settings.sample_desc": "Hoe getallen eruitzien met de huidige keuzes",
+ "autosave.title_desc": "Een herstelkopie van het geopende project bewaren",
+ "autosave.interval_desc": "Tijd tussen herstelkopieën",
+ "autosave.keep_desc": "Oudere herstelkopieën worden verwijderd",
+ "autosave.folder_desc": "Leeg betekent de standaardmap",
+ "autosave.remind_desc": "Herinnering om een project op te slaan dat nog geen bestand heeft",
+ "settings.backend_desc": "Gebruikte grafische adapter",
+ "settings.news_desc": "Wat er in deze versie is veranderd",
+ "settings.assoc_default_desc": "Deze app instellen als standaard voor modelbestanden",
+ "settings.data_dir_desc": "Caches, herstelkopieën en logboeken staan hier."
+}

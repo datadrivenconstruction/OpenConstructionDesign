@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "Blad dupliceren met weergaven",
+ "cmd.view.sheet_duplicate_title": "Blad dupliceren (alleen titelblok)",
+ "sheets.dup.menu_views": "Dupliceren met weergaven",
+ "sheets.dup.menu_title": "Dupliceren, alleen titelblok",
+ "sheets.dup.done": "Blad {number} gemaakt van {src}: {views} weergaven, {sched} lijsten en legenda's. Revisies worden niet gekopieerd; het blad is niet uitgegeven.",
+ "sheets.dup.none": "Open een blad om het te dupliceren",
+ "sheets.dup.copy": "kopie",
+ "cmd.view.sheet_duplicate.short": "Dupliceren met weergaven",
+ "cmd.view.sheet_duplicate_title.short": "Titelblok dupliceren"
+}

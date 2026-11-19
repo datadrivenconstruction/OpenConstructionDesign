@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "Thay đổi sổ làm việc chưa áp dụng",
+ "workbook_changes.wb.body": "Đóng hoặc chuyển dự án sẽ bỏ các thay đổi này.",
+ "workbook_changes.wb.line": "Nhập sổ làm việc: {n} thay đổi chưa áp dụng",
+ "workbook_changes.wb.review": "Xem lại",
+ "workbook_changes.wb.discard": "Bỏ"
+}

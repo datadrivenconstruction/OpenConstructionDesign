@@ -1,0 +1,4 @@
+{
+ "source_input.err.number": "“{text}” ei ole luku; tämä parametri on luku. Mitään ei kirjoitettu",
+ "source_input.err.comma": "“{text}”: käytä desimaaleihin pistettä (1.5); pilkku ryhmittelee vain tuhansia (1,000). Mitään ei kirjoitettu"
+}

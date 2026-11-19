@@ -1,0 +1,10 @@
+{
+ "elem.multi.title": "{n} elementi",
+ "elem.multi.varies": "erineb",
+ "elem.multi.tip": "Sisestus määrab kõik valitud elemendid",
+ "elem.multi.hidden": "{n} rida ainult osadel elementidel",
+ "elem.multi.none": "Valitud elementidel pole ühiseid ridu",
+ "elem.multi.range": "Väärtus on lubatud vahemikust väljas",
+ "elem.multi.changed": "Muudetud {n} elementi · Ctrl+Z võtab tagasi",
+ "elem.multi.same": "Kõigil valitud elementidel on juba see väärtus"
+}

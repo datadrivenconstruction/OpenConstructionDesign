@@ -1,0 +1,16 @@
+{
+ "xlsx_recover.title": "Bağlı çalışma kitabına dışa aktarma kesintiye uğradı",
+ "xlsx_recover.both": "Dışa aktarma, önceki çalışma kitabını kenara alırken ile yenisini yerine koyma arasında durdu. Hiçbir şey kaybolmadı: yeni çalışma kitabı {part} konumunda eksiksiz, önceki {bak} konumunda saklandı.",
+ "xlsx_recover.part_only": "Dışa aktarma, yeni çalışma kitabı yerine konmadan önce durdu. {part} konumunda eksiksiz.",
+ "xlsx_recover.bak_only": "Dışa aktarma, yeni çalışma kitabı hazır olmadan durdu. Önceki çalışma kitabı {bak} konumunda saklandı.",
+ "xlsx_recover.finish": "Kesintiye uğrayan dışa aktarmayı tamamla",
+ "xlsx_recover.restore": "Önceki çalışma kitabını geri yükle",
+ "xlsx_recover.finished": "Kesintiye uğrayan dışa aktarma tamamlandı: yeni çalışma kitabı yerinde.",
+ "xlsx_recover.finished_kept": "Kesintiye uğrayan dışa aktarma tamamlandı: yeni çalışma kitabı yerinde, önceki {bak} konumunda saklandı.",
+ "xlsx_recover.restored": "Önceki çalışma kitabı yerine geri konuldu.",
+ "xlsx_recover.restore_failed": "Önceki çalışma kitabı geri taşınamadı ({err}). {path} konumunda saklı.",
+ "xlsx_recover.not_restored": "Yeni çalışma kitabı yerine konulamadı ve önceki geri taşınamadı. Hiçbir şey kaybolmadı: önceki çalışma kitabı {path} konumunda saklı; Eşitle, tamamlamayı ya da geri yüklemeyi önerir.",
+ "xlsx_recover.finish_failed": "Yeni çalışma kitabı yerine konulamadı ({err}). {path} konumunda kalır.",
+ "xlsx_recover.dest_back": "{path} konumunda bir çalışma kitabı geri döndü: hiçbir şey taşınmadı.",
+ "xlsx_recover.nothing": "Kesintiye uğrayan dışa aktarmadan taşınacak bir şey kalmadı."
+}

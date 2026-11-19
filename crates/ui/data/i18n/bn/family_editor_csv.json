@@ -1,0 +1,11 @@
+{
+ "fe.csv.apply": "আমদানি প্রয়োগ করুন",
+ "fe.csv.cancel": "প্রিভিউ বাতিল",
+ "fe.csv.nothing": "বদলানোর কিছু নেই: ক্যাটালগ বর্তমান টাইপের সঙ্গে মেলে",
+ "fe.csv.preview": "আমদানি প্রিভিউ: {added} নতুন, {changed} বদলানো, {same} অপরিবর্তিত টাইপ; {values}টি মান বদলাবে",
+ "fe.csv.preview_hint": "খালি ঘর ও অনুপস্থিত কলাম বর্তমান মান রাখে। প্রয়োগ না করা পর্যন্ত কিছু বদলায় না।",
+ "fe.csv.skipped": "প্রয়োগ হয়নি, মান রাখা হয়েছে: {msg}",
+ "fe.csv.type_added": "নতুন টাইপ {name}",
+ "fe.csv.type_changed": "টাইপ {name}",
+ "fe.csv.value": "  {param}: {old} → {new}"
+}

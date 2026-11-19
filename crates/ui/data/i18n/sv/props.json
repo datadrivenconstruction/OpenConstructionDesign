@@ -1,0 +1,18 @@
+{
+ "props.multi.title": {
+  "one": "# element",
+  "other": "# element"
+ },
+ "props.multi.cats": {
+  "one": "# kategori",
+  "other": "# kategorier"
+ },
+ "props.multi.varies": {
+  "one": "varierar (#)",
+  "other": "varierar (#)"
+ },
+ "props.multi.clear": "Rensa markering",
+ "props.multi.undo": "Ångra",
+ "props.multi.narrowed": "Markering: {n} · {name}",
+ "props.multi.chip_tip": "{name}: {n}  ·  Klicka visar deras egenskaper, Ctrl+klick behåller bara dessa"
+}

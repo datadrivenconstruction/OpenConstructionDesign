@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "Előző lap (Page Up)",
+ "sheets.print.next": "Következő lap (Page Down)",
+ "sheets.print.fit": "Oldalhoz igazítás (dupla kattintás)",
+ "sheets.print.no_sheets": "Nincs előnézetben megjeleníthető lap",
+ "sheets.print.building": "Oldal készítése…",
+ "sheets.print.stop_build": "Leállítás",
+ "sheets.print.build_stopped": "Oldalkészítés leállítva",
+ "sheets.print.retry": "Újraépítés",
+ "sheets.print.build_failed": "Az előnézet nem készíthető el"
+}

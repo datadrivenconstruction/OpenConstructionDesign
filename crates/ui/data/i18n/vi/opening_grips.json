@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "Lật phía bản lề",
+ "cmd.edit.flip_hand.desc": "Đối xứng các cửa đi và cửa sổ đã chọn dọc theo tường để bản lề chuyển sang đầu kia của lỗ mở.",
+ "cmd.edit.flip_facing": "Lật phía mở của cửa",
+ "cmd.edit.flip_facing.desc": "Đưa các cửa đi và cửa sổ đã chọn sang phía bên kia của tường.",
+ "opening_grips.flip_hand": "Lật bản lề",
+ "opening_grips.flip_hand.tip": "Bản lề chuyển sang đầu kia của lỗ mở (Shift+F)",
+ "opening_grips.flip_facing": "Lật phía mở",
+ "opening_grips.flip_facing.tip": "Mở sang phía bên kia của tường (Shift+G)",
+ "opening_grips.flip.done": "Đã lật: {n}",
+ "opening_grips.flip.none": "Chọn một cửa đi hoặc cửa sổ để lật",
+ "opening_grips.flip.fail": "Chưa lật: {why}"
+}

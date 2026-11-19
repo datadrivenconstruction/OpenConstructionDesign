@@ -1,0 +1,22 @@
+{
+ "cmd.arch.grid_pick": "Çizgiden aks",
+ "cmd.arch.grid_pick.desc": "Geçerli kattaki seçilen bir çizim çizgisi boyunca tam olarak aks oluşturur; adlar seriye devam eder. Tab, aynı çizim katmanındaki tüm paralel çizgileri bir kerede alır. Her seçim tek geri alma adımıdır.",
+ "cmd.struct.beam_pick": "Çizgiden kiriş",
+ "cmd.struct.beam_pick.desc": "Geçerli kattaki seçilen bir çizim çizgisi boyunca, etkin tipte kiriş yerleştirir. Tab bağlı zinciri alır. Her seçim tek geri alma adımıdır.",
+ "hint.grid_pick.one": "Çizgiden aks: bir çizim çizgisi seçin · Tab katmanındaki tüm paralel çizgiler · Esc çık",
+ "hint.grid_pick.more": "Çizgiden aks: katmanındaki tüm paralel çizgileri almak için bir çizgi seçin · Tab tek çizgi · Esc devre dışı",
+ "hint.beam_pick.one": "Çizgiden kiriş: bir çizim çizgisi seçin · Tab bağlı zincir · Esc çık",
+ "hint.beam_pick.more": "Çizgiden kiriş: zincirini almak için bir çizgi seçin · Tab tek çizgi · Esc devre dışı",
+ "line_pick.st.start_grid": "Bir çizim çizgisi seçin. Tab: katmanındaki tüm paralel çizgiler",
+ "line_pick.st.start_beam": "{type} kirişi için bir çizim çizgisi seçin. Tab: bağlı zincir",
+ "line_pick.st.grid_done": "{name} aksı eklendi",
+ "line_pick.st.grids_done": "{n} aks eklendi: {first} — {last}",
+ "line_pick.st.beam_done": "{type} kiriş eklendi",
+ "line_pick.st.beams_done": "{n} {type} kiriş eklendi",
+ "line_pick.st.on_grid": "Bu çizgide zaten {name} aksı var",
+ "line_pick.st.on_beam": "Bu çizgide zaten {id} kirişi var",
+ "line_pick.st.no_layer": "Çizgilerin çizim katmanları henüz bilinmiyor, yeniden deneyin",
+ "line_pick.st.no_beam_type": "Kataloğda kiriş kesiti yok",
+ "line_pick.st.reload_warn": "Oluşturuldu, ancak görünüm yeniden yüklenemedi: {err}",
+ "line_pick.st.failed": "Oluşturulmadı: {err}"
+}

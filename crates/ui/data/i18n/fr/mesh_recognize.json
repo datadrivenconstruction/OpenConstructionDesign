@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "Reconnaissance {done} sur {total}",
+ "mesh_recognize.all": "Tous les {n}",
+ "mesh_recognize.only_confident": "Seulement les sûrs",
+ "mesh_recognize.confident_tip": "Coche les lignes dont la nature correspond à la catégorie et dont la confiance est d'au moins {pct} %",
+ "mesh_recognize.row_hint": "Cliquez une ligne pour la cocher. Les flèches déplacent, Entrée coche.",
+ "mesh_recognize.kind_for": "Nature pour {name}",
+ "mesh_recognize.source": "Maillages sources",
+ "mesh_recognize.keep": "Garder les maillages",
+ "mesh_recognize.replace": "Remplacer les maillages",
+ "mesh_recognize.convert_keep": "Convertir {n}",
+ "mesh_recognize.convert_remove": "Convertir {n} et supprimer les maillages",
+ "mesh_recognize.creates": "Va créer {n} : {kinds}",
+ "mesh_recognize.creates_none": "Rien de coché pour l'instant",
+ "mesh_recognize.stay": "{n} maillages sources restent dans le modèle",
+ "mesh_recognize.removed": "{n} maillages sources seront supprimés. Annuler les restaure."
+}

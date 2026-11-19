@@ -1,0 +1,6 @@
+{
+ "units.err.parse": "Nu este o lungime: valoarea veche este păstrată. Introduceți un număr cu unitate opțională, de exemplu 2500 sau 8'-2\"",
+ "ui.scale.set": "Scara interfeței: {pct}%",
+ "cmd.ui.scale_up": "Mărește scara interfeței",
+ "cmd.ui.scale_down": "Micșorează scara interfeței"
+}

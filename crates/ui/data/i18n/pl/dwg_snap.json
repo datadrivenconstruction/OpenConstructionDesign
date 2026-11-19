@@ -1,0 +1,5 @@
+{
+ "snap.center": "Środek",
+ "dwg_snap.through": "Punkt przez",
+ "dwg_snap.through_tip": "Przesunięcie przez kliknięty punkt (przyciąga do końców, przecięć, środków) zamiast wpisanej odległości"
+}

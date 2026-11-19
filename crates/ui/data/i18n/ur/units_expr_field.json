@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "خالی ان پٹ۔",
+ "units.err.not_number": "پوزیشن {pos} پر عدد نہیں۔",
+ "units.err.unknown_unit": "نامعلوم اکائی: {unit}۔",
+ "units.err.non_positive": "لمبائی صفر سے زیادہ ہونی چاہیے۔",
+ "units.err.too_large": "لمبائی {max} m سے زیادہ نہیں ہو سکتی۔",
+ "units.err.bad_angle": "زاویہ ڈگریوں کا عدد ہونا چاہیے۔",
+ "units.err.unknown_name": "نامعلوم نام: {name}۔ قدر برقرار۔",
+ "units.err.cycle": "{name} پر فارمولا لوپ۔ قدر برقرار۔",
+ "units.err.bad_expr": "پوزیشن {pos} پر اظہار پڑھا نہیں جا سکا۔ قدر برقرار۔",
+ "units.err.div_zero": "پوزیشن {pos} پر صفر سے تقسیم۔ قدر برقرار۔",
+ "units.err.invalid": "غلط عدد۔",
+ "units.err.kept": "تبدیل نہیں ہوا: {reason}"
+}

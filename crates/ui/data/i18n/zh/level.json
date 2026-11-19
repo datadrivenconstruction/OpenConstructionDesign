@@ -1,0 +1,13 @@
+{
+ "level.err_open": "未能打开标高：{e}",
+ "level.need_name": "标高需要名称和标高值",
+ "level.created": "已创建标高“{name}”",
+ "level.err_create": "未能创建标高：{e}",
+ "level.err_edit": "未能更改标高：{e}",
+ "level.edited": "标高“{name}”已更改",
+ "level.edited_stale": "标高“{name}”已更改，视图未刷新：{e}",
+ "level.last": "无法删除最后一个标高",
+ "level.deleted": "标高已删除",
+ "level.not_empty": "标高不为空：请先删除其中的构件",
+ "level.err_delete": "未能删除标高：{e}"
+}

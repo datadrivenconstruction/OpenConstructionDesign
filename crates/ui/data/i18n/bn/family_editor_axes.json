@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "X অক্ষ",
+ "fe.axis.y": "Y অক্ষ",
+ "fe.axis.z": "Z অক্ষ",
+ "fe.col.axis": "অক্ষ",
+ "fe.col.at": "অবস্থান",
+ "fe.col.mode": "মোড",
+ "fe.mode.fixed": "স্থির",
+ "fe.mode.free": "মুক্ত",
+ "fe.types.inherited": "প্যারামিটার থেকে ডিফল্ট",
+ "fe.csv.more": "আরও CSV কার্যক্রম",
+ "fe.ref.selected": "প্লেন: {name}"
+}

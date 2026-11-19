@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "Ilmanvaihtokanava",
+ "mep3d.pipe": "Putki",
+ "mep3d.tray": "Kaapelihylly",
+ "mep3d.conduit": "Putki",
+ "mep3d.system": "Järjestelmä",
+ "mep3d.length": "Pituus",
+ "mep3d.diameter": "Halkaisija",
+ "mep3d.width": "Leveys",
+ "mep3d.height": "Korkeus",
+ "mep3d.insulation": "Eriste",
+ "mep3d.tip": "Enter — käytä; liittimet lasketaan uudelleen",
+ "mep3d.size_positive": "koon on oltava suurempi kuin nolla",
+ "mep3d.not_changed": "ei muutettu: {e}",
+ "mep3d.copied": "reitti kopioitu",
+ "mep3d.changed": "reitti muutettu",
+ "mep3d.deleted": "elementtejä poistettu: {n}",
+ "mep3d.not_deleted": "ei poistettu: {e}",
+ "mep3d.no_wall_type": "ei seinätyyppiä",
+ "mep3d.demo.supply": "Syöttö S1",
+ "mep3d.demo.heating": "Lämmitys",
+ "mep3d.demo.power": "Voimavirta"
+}

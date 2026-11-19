@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "Masukkan nama templat dulu",
+ "view_template.name_taken": "Templat dengan nama ini sudah ada",
+ "view_template.pick_blocked": "Centang minimal satu tampilan dulu",
+ "view_template.views.one": "{n} tampilan",
+ "view_template.views.few": "{n} tampilan",
+ "view_template.views.many": "{n} tampilan",
+ "view_template.delete.title": "Hapus templat ini?",
+ "view_template.delete.body": "Templat \"{name}\" akan dihapus. Dipakai oleh {used}.",
+ "view_template.delete.unused": "Templat \"{name}\" akan dihapus. Tidak ada tampilan yang memakainya.",
+ "view_template.delete.keeps": "Tampilan ini mempertahankan grafiknya saat ini dan kehilangan tautan.",
+ "view_template.delete.undo": "Anda dapat mengurungkannya dengan satu Urungkan.",
+ "view_template.delete.confirm": "Hapus templat"
+}

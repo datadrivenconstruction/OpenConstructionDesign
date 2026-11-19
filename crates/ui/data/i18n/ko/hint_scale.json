@@ -1,0 +1,10 @@
+{
+ "cmd.mod.scale": "축척",
+ "cmd.mod.scale.desc": "요소를 선택한 다음 기준점, 기준 길이, 새 길이를 클릭하거나 배율을 입력하세요.",
+ "hint.scale.select": "축척: 요소 선택 · Enter — 완료",
+ "hint.scale.first": "축척: 기준점 지정 · Esc — 취소",
+ "hint.scale.second": "축척: 기준 길이 지정 · 숫자 — 배율 · Esc — 취소",
+ "hint.scale.third": "축척: 새 길이 지정 · 숫자 — 배율 · Esc — 취소",
+ "scl.bad_factor": "축척 배율은 0보다 큰 숫자여야 합니다",
+ "scl.zero_ref": "기준 길이가 0입니다: 기준점에서 떨어진 점을 지정하세요"
+}

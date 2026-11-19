@@ -1,0 +1,7 @@
+{
+ "diff.kind.added": "dodano",
+ "diff.kind.changed": "promijenjeno",
+ "diff.kind.deleted": "obrisano",
+ "diff.kind.refused": "odbijeno",
+ "diff.kind.conflict": "sukob"
+}

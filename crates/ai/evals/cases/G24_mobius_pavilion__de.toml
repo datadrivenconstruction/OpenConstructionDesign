@@ -1,0 +1,23 @@
+id = "G24_mobius_pavilion__de"
+tier = "hard"
+group = "Any geometry"
+title = "Mobius band pavilion"
+lang = "de"
+base = "empty"
+
+[[turn]]
+say = "Ein Pavillon in Form eines Möbiusbandes: Band 3 m breit, Schleife 18 m im Durchmesser, 6 m Spitzenhöhe, eine halbe Verdrehung, Stahlrippen im Abstand von 1 m unter einer durchgehenden Fläche."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "solid+mesh+freeform+shell_elem+beam"
+min = 20.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

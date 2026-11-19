@@ -1,0 +1,4 @@
+{
+ "sf.restored": "Datoteka postavki {file} je bila oštećena; vraćena je zadnja ispravna kopija. Oštećena datoteka je zadržana kao {broken}.",
+ "sf.reset": "Datoteka postavki {file} je oštećena i nijedna kopija nije upotrebljiva; koriste se zadane vrijednosti. Oštećena datoteka je zadržana kao {broken}."
+}

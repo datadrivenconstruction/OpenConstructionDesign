@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "ส่งออกไปยังสเปรดชีต: ขอบเขต",
+ "xlsx_scope.intro": "เลือกสิ่งที่จะใส่ในสมุดงาน การนำเข้ากลับจะเปลี่ยนเฉพาะองค์ประกอบเหล่านี้",
+ "xlsx_scope.base_whole": "ทั้งโมเดล",
+ "xlsx_scope.base_level": "ระดับที่ใช้งาน",
+ "xlsx_scope.base_selection": "การเลือก",
+ "xlsx_scope.categories": "หมวดหมู่",
+ "xlsx_scope.cat_walls": "ผนัง",
+ "xlsx_scope.cat_openings": "ประตู",
+ "xlsx_scope.cat_rooms": "ห้อง",
+ "xlsx_scope.cat_slabs": "พื้น",
+ "xlsx_scope.cat_curtains": "ผนังม่าน",
+ "xlsx_scope.nothing_selected": "ยังไม่ได้เลือกอะไร: เลือกองค์ประกอบก่อนหรือเลือกขอบเขตอื่น",
+ "xlsx_scope.no_categories": "เลือกอย่างน้อยหนึ่งหมวดหมู่",
+ "xlsx_scope.no_level": "ไม่พบระดับที่ใช้งาน",
+ "xlsx_scope.export": "ส่งออก",
+ "xlsx_scope.preview_scope": "ขอบเขตที่ส่งออก: {scope} องค์ประกอบนอกขอบเขตจะไม่ถูกเปลี่ยนหรือลบ"
+}

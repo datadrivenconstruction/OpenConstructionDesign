@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "Input kosong.",
+ "units.err.not_number": "Bukan angka di posisi {pos}.",
+ "units.err.unknown_unit": "Satuan tidak dikenal: {unit}.",
+ "units.err.non_positive": "Panjang harus lebih dari nol.",
+ "units.err.too_large": "Panjang tidak boleh melebihi {max} m.",
+ "units.err.bad_angle": "Sudut harus berupa angka derajat.",
+ "units.err.unknown_name": "Nama tidak dikenal: {name}. Nilai dipertahankan.",
+ "units.err.cycle": "Loop rumus di {name}. Nilai dipertahankan.",
+ "units.err.bad_expr": "Ekspresi di posisi {pos} tidak terbaca. Nilai dipertahankan.",
+ "units.err.div_zero": "Pembagian dengan nol di posisi {pos}. Nilai dipertahankan.",
+ "units.err.invalid": "Angka tidak valid.",
+ "units.err.kept": "Tidak diubah: {reason}"
+}

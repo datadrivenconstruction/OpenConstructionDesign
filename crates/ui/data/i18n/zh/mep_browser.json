@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "系统名称",
+ "mep_browser.add_blocked": "请先输入系统名称",
+ "mep_browser.col.insulation": "保温",
+ "mep_browser.cancel": "取消",
+ "mep_browser.delete.title": "删除此系统？",
+ "mep_browser.delete.body": "系统“{name}”及其运行记录（{n} 条）将被删除。",
+ "mep_browser.delete.undo": "可通过一次撤销恢复。",
+ "mep_browser.delete.confirm": "删除系统"
+}

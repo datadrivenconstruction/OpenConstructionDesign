@@ -1,0 +1,14 @@
+{
+ "cmd.mod.divide": "Del",
+ "cmd.mod.divide.short": "Del",
+ "cmd.mod.divide.desc": "Deler en vegg i like deler i ett steg. Skriv inn antall deler, og klikk deretter på veggen.",
+ "whereis.mod.divide": "del, like deler, kutt i biter, segmenter vegg",
+ "hint.split.parts": "Del: klikk på en vegg · tall — deler (2–100) · Esc — avbryt",
+ "create_input.divide.bad_parts": "«{text}» er ikke et antall deler: skriv et heltall fra 2 til {max}",
+ "create_input.ws.err.empty": "Skriv inn et navn for oppsettet",
+ "create_input.ws.err.long": "Navnet er for langt: høyst 40 tegn",
+ "create_input.ws.err.preset": "Navnet tilhører et innebygd oppsett",
+ "create_input.ws.err.full": "Høyst 24 lagrede oppsett: fjern ett først",
+ "create_input.seldim.locked": "Avstand {v} låst",
+ "create_input.seldim.positive": "Avstanden må være over null"
+}

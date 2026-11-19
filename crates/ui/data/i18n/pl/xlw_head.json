@@ -1,0 +1,15 @@
+{
+ "xlw.hd_never": "Jeszcze nie wyeksportowano",
+ "xlw.hd_now": "przed chwilą",
+ "xlw.hd_min": "{n} min temu",
+ "xlw.hd_hour": "{n} godz. temu",
+ "xlw.hd_day": "{n} dni temu",
+ "xlw.hd_linked": "Powiązany",
+ "xlw.hd_watched": "Obserwowany",
+ "xlw.hd_stale": "Model zmieniony od eksportu",
+ "xlw.ft_export": "Eksportuj",
+ "xlw.ft_review": "Przejrzyj",
+ "xlw.ft_apply": "Zastosuj {n} zmian",
+ "xlw.ft_delete_missing": "Usuń brakujące",
+ "xlw.ft_keep_missing_tip": "Usuwanie jest włączone: elementy bez wiersza zostaną usunięte przy Zastosuj. Odznacz, aby je zachować."
+}

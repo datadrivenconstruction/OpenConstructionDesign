@@ -1,0 +1,21 @@
+{
+ "mep.row.system": "System",
+ "mep.row.elevation": "Rzędna początku",
+ "mep.row.slope": "Spadek",
+ "mep.row.material": "Materiał",
+ "mep.row.dev_elevation": "Rzędna",
+ "mep.row.no_system": "Ten system już nie istnieje. Wybierz inny.",
+ "mep.row.no_points": "Trasa nie ma punktów, więc nie ma rzędnej.",
+ "mep.row.system_domain": "System {system} nie obsługuje tego typu trasy ({kind}). Wybierz system tego samego typu sieci.",
+ "mep.row.material_pipes": "Materiał dotyczy tylko rur; ta trasa to {kind}.",
+ "mep.row.no_catalog": "Materiał nie ma w katalogu rozmiarów dla tej trasy.",
+ "mep.mat.none": "Nie ustawiono",
+ "mep.mat.steel": "Stal",
+ "mep.mat.copper": "Miedź",
+ "mep.mat.pvc": "PVC",
+ "mep.mat.pp": "Polipropylen",
+ "mep.err.follow_blocked": "Połączona trasa nie może podążyć za tą zmianą: w nowym miejscu nie ma miejsca na jej odcinek. Przesuń urządzenie mniej albo najpierw rozłącz trasę.",
+ "mep.err.follow_slope": "Połączona trasa ma spadek, którego nie da się zachować w nowym miejscu: spadłby poniżej najmniejszego spadku jej systemu. Zmień wysokość urządzenia mniej albo najpierw rozłącz trasę.",
+ "mep.err.follow_port_lost": "Przyłącze, na którym leżała trasa, po edycji już nie istnieje. Najpierw przesuń trasę albo zachowaj typ urządzenia.",
+ "mep.err.follow_device": "Ta trasa kończy się na przyłączu urządzenia i nie może go opuścić. Przesuń zamiast tego urządzenie albo najpierw rozłącz trasę."
+}

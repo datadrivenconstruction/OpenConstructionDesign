@@ -1,0 +1,23 @@
+{
+  "cmd.arch.room_sep.short": "Romskiller",
+  "cmd.str.footing.short": "Søylefot",
+  "cmd.str.strip_footing.short": "Stripefot",
+  "cmd.str.analytical.short": "Analytisk",
+  "cmd.mep.terminal.short": "Luftterminal",
+  "cmd.mod.isolate.short": "Isoler",
+  "cmd.view.ui.short": "Grensesnitt",
+  "cmd.mgr.params.short": "Parametere",
+  "cmd.ctx.wall.attach.short": "Legg ved",
+  "cmd.mass.unjoin.short": "Koble fra",
+  "cmd.mod.unjoin.short": "Koble fra",
+  "cmd.arch.void_extrusion.short": "Hulekstrusjon",
+  "cmd.e3d.snap.short": "3D-snap",
+  "cmd.mgr.open_big.short": "Stor fil…",
+  "cmd.site.edit_points.short": "Terrengpunkt",
+  "cmd.view.reveal_3d.short": "Vis kategorier",
+  "cmd.help.check_update.short": "Oppdateringer",
+  "cmd.ctx.floor.link_unlink.short": "Løsne kanter",
+  "cmd.ui.onboarding.short": "Oppsett…",
+  "cmd.mod.distribute.short": "Fordel",
+  "cmd.data.src_delta.short": "XLSX-endr.…"
+}

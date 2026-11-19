@@ -1,0 +1,15 @@
+{
+ "mcp.ask.cancel": "Odustani",
+ "mcp.ask.auto.title": "Dopustiti AI agentima da primjenjuju promjene bez pitanja?",
+ "mcp.ask.auto.body": "Povezani AI agenti primjenjivat će promjene u nacrtima odmah, bez čekanja tvoje potvrde, pa pogrešna promjena može sletjeti prije nego je vidiš. Tvoj model se i dalje mijenja samo kad pritisneš Primijeni. Vrijedi dok ga ne isključiš, ne zatvoriš uređivač ili ne otvoriš drugi model.",
+ "mcp.ask.auto.yes": "Primijeni bez pitanja",
+ "mcp.ask.token.title": "Izdati novi token?",
+ "mcp.ask.token.body": "Trenutni token odmah prestaje raditi: povezani AI agenti bit će odvojeni i trebat će im novi token. Prikazuje se samo jednom, zato ga odmah kopiraj.",
+ "mcp.ask.token.yes": "Novi token",
+ "mcp.auto.chip": "Automatska primjena uključena",
+ "mcp.auto.chip_tip": "AI agenti primjenjuju promjene u nacrtima bez pitanja. Završava s ovom sesijom.",
+ "mcp.auto.ask_again": "Pitaj ponovno",
+ "mcp.token.once": "Kopiraj ovaj token sada: neće se ponovno prikazati.",
+ "mcp.renewed": "Izdan novi token: stari više ne radi",
+ "mcp.copied": "Kopirano"
+}

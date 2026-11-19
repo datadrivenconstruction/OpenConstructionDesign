@@ -1,0 +1,19 @@
+{
+ "ifc_patch.fallback.source_changed": "Hindi ginamit ang patch: nabago sa disk ang source file o hindi ito mabasa. Muling isinulat ang file mula sa modelo.",
+ "ifc_patch.fallback.sources": "Hindi ginamit ang patch: wala sa proyekto ang eksaktong isang source. Muling isinulat ang file mula sa modelo.",
+ "ifc_patch.fallback.schema": "Hindi ginamit ang patch: hindi suportado ang schema ng source file. Muling isinulat ang file mula sa modelo.",
+ "ifc_patch.fallback.structure": "Hindi ginamit ang patch: hindi mapagkakatiwalaan ang istruktura ng source file. Muling isinulat ang file mula sa modelo.",
+ "ifc_patch.fallback.edit": "Hindi ginamit ang patch: hindi ligtas na mailalapat ang isang edit sa source file. Muling isinulat ang file mula sa modelo.",
+ "ifc_patch.reason.schema": "Hindi kayang isulat ng schema ng source file ang pagbabagong ito; mananatili ang elemento gaya ng sa source",
+ "ifc_patch.reason.prop": "Hindi maipapahayag sa source file ang pag-edit ng property na ito; mananatili ang halaga gaya ng nasa source",
+ "ifc_patch.reason.no_export": "Walang representasyon sa IFC ang bagong elementong ito",
+ "ifc_patch.reason.link": "Nasa file ang elemento, pero hindi naisusulat ang link sa materyal o type nito; nakalista ito bilang hindi naisulat",
+ "ifc_patch.drop": "Alisin",
+ "ifc_patch.drop_done": "Inalis ang mga naghihintay na link: {n}; hindi na ulit susubukan",
+ "ifc_patch.fallback.building": "Hindi ginamit ang patch: kailangan ng bagong level ng eksaktong isang gusali sa source file, at wala o marami ito. Muling isinulat ang file mula sa modelo.",
+ "ifc_patch.fallback.types": "Hindi ginamit ang patch: nabago ang mga level, type o materyal mula sa import, at hindi maisusulat ng patch ang mga iyon. Muling isinulat ang file mula sa modelo.",
+ "ifc_patch.fallback.zipped": "Hindi ginamit ang patch: hindi maaaring i-patch ang naka-zip na source file. Muling isinulat ang file mula sa modelo.",
+ "ifc_patch.fallback.source_kept": "Hindi na-overwrite ang source file: hindi mapagkakatiwalaan ang pag-save na ito para palitan ito. Ang pag-save na ito ay kopya sa tabi nito.",
+ "ifc_patch.fallback.nested": "Hindi ginamit ang patch: may nakapaloob na bahagi ang bagong elemento (gaya ng mga port), na hindi maisusulat ng patch. Muling isinulat ang file mula sa modelo.",
+ "ifc_patch.fallback.shared_part": "Hindi ginamit ang patch: ang bahagi ng na-edit na hagdan o rampa ay ginagamit din ng ibang elemento o relasyon, na hindi kayang ipaliwanag ng patch. Muling isinulat ang file mula sa modelo."
+}

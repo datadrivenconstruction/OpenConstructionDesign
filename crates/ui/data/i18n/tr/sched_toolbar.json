@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "Başlıkların altındaki filtre satırı. Metin: içerir; sayılar: >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "Sütunları göster veya gizle",
+ "sched_toolbar.groups_tip": "Satırları sütunlara göre ara toplamlarla grupla",
+ "sched_toolbar.formulas_tip": "Hesaplanan sütunlar",
+ "sched_toolbar.phase": "Faz",
+ "sched_toolbar.phase_tip": "Satırların hangi fazdan alındığı",
+ "sched_toolbar.copy_tip": "Seçili satırlar (veya görünen tümü) TSV olarak",
+ "sched_toolbar.import_tip": "Dışa aktarılmış bir çizelgeyi geri okuyun: satırlar Id'ye, sütunlar başlığa göre; önce sayımlar, sonra tek geri alma adımı",
+ "sched_toolbar.export_tip": "Toplamlarla görünen satırlar ve sütunlar; sayılar sayı olarak kalır",
+ "sched_toolbar.need_table": "Önce bir çizelge açın",
+ "sched_toolbar.busy_open": "Bir dosya iletişim kutusu zaten açık",
+ "sched_toolbar.busy_save": "Bir kaydetme iletişim kutusu zaten açık",
+ "sched_toolbar.clear_filter": "Filtreyi temizle",
+ "sched_toolbar.fields_title": "Sütunlar"
+}

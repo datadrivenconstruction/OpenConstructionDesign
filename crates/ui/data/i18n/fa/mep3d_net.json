@@ -1,0 +1,13 @@
+{
+ "mep.sys.duct": "تأمین S1",
+ "mep.sys.pipe": "آب سرد C1",
+ "mep.sys.tray": "برق",
+ "mep.round": "گرد",
+ "mep.material": "مصالح",
+ "mep3d.elevation": "ارتفاع از تراز",
+ "mep3d.slope": "شیب",
+ "mep3d.shape": "شکل",
+ "mep3d.shape.rect": "مستطیلی",
+ "mep3d.shape.round": "گرد",
+ "mep3d.shape.oval": "بیضی تخت"
+}

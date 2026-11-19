@@ -1,0 +1,14 @@
+{
+ "cmd.arch.wall.tile": "Pader",
+ "cmd.arch.door.tile": "Pinto",
+ "cmd.arch.window.tile": "Bintana",
+ "cmd.arch.floor.tile": "Palapag",
+ "cmd.mod.move.tile": "Ilipat",
+ "cmd.mod.copy.tile": "Kopyahin",
+ "cmd.mod.rotate.tile": "I-rotate",
+ "cmd.mod.mirror.tile": "Salamin",
+ "cmd.mod.trim.tile": "Putulin",
+ "cmd.mod.delete.tile": "Burahin",
+ "cmd.ann.dim.tile": "Dimensyon",
+ "cmd.ann.text.tile": "Teksto"
+}

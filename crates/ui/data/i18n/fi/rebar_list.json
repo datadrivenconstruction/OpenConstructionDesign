@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "Siirrä ylös",
+ "rebar_list.move_down": "Siirrä alas",
+ "rebar_list.remove": "Poista",
+ "rebar_list.zone_remove_last": "Vyöhyke tarvitsee vähintään yhden huoneen: poista vyöhyke, jos haluat poistaa viimeisen",
+ "rebar_list.rebar_empty_title": "Tässä mallissa ei ole raudoitusta",
+ "rebar_list.rebar_empty_hint": "Sijoita raudoitus isäntäelementtiin, niin se näkyy tässä luettelossa.",
+ "rebar_list.rebar_empty_action": "Sijoita raudoitus"
+}

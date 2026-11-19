@@ -1,0 +1,33 @@
+{
+ "cmd.help.licenses": "ใบอนุญาตโอเพนซอร์ส",
+ "cmd.help.licenses.desc": "แสดงรายการไลบรารีโอเพนซอร์สที่บิลด์นี้ใช้พร้อมใบอนุญาตของแต่ละรายการ",
+ "about.product": "DDC Editor",
+ "about.version": "เวอร์ชัน",
+ "about.build": "บิลด์",
+ "about.schema": "สคีมาโมเดล",
+ "about.system": "ระบบ",
+ "about.gpu": "อะแดปเตอร์กราฟิก",
+ "about.language": "ภาษา",
+ "about.copy": "คัดลอกข้อมูลเวอร์ชัน",
+ "about.copy_desc": "เวอร์ชัน บิลด์ ระบบ และอะแดปเตอร์กราฟิกสำหรับรายงานข้อผิดพลาด ไม่มีพาธของไฟล์",
+ "about.copied": "คัดลอกข้อมูลเวอร์ชันแล้ว",
+ "about.licenses": "ใบอนุญาตโอเพนซอร์ส",
+ "about.licenses_desc": "ไลบรารีที่ใช้ในบิลด์นี้และใบอนุญาตของแต่ละรายการ",
+ "about.licenses.open": "ดู",
+ "about.licenses.title": "ใบอนุญาตโอเพนซอร์ส",
+ "about.licenses.note": "DDC Editor รวมไลบรารีด้านล่างไว้ แต่ละรายการยังคงอยู่ภายใต้ใบอนุญาตและประกาศลิขสิทธิ์ของตนเอง ข้อความใบอนุญาตฉบับเต็ม: THIRD_PARTY_LICENSES.txt อยู่ข้างแอปพลิเคชัน",
+ "about.licenses.full": "ข้อความใบอนุญาตฉบับเต็ม",
+ "about.licenses.list": "รายการส่วนประกอบ",
+ "about.licenses.close": "ปิด",
+ "about.licenses.col_name": "ส่วนประกอบ",
+ "about.licenses.col_license": "ใบอนุญาต",
+ "about.licenses.count": {
+  "one": "# ส่วนประกอบ",
+  "other": "# ส่วนประกอบ"
+ },
+ "about.licenses.count_of": "{shown} จาก {total} ส่วนประกอบ",
+ "about.licenses.search_hint": "ค้นหาตามชื่อหรือใบอนุญาต…",
+ "about.licenses.search_clear": "ล้างการค้นหา",
+ "about.licenses.none": "ไม่พบรายการ",
+ "about.licenses.none_hint": "ลองค้นด้วยบางส่วนของชื่อไลบรารีหรือใบอนุญาต เช่น MIT"
+}

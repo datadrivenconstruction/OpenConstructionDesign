@@ -1,0 +1,14 @@
+{
+ "ai_keys.header_is_key": "Кілттер Key өрісіне жазылады — тақырыптар ашық мәтінмен сақталады",
+ "ai_keys.move": "Key-ге жылжыту",
+ "ai_keys.remove_line": "Тақырыптардан алып тастау",
+ "ai_keys.save_blocked": "Сақтау үшін кілтті тақырыптардан шығарыңыз",
+ "ai_keys.show": "Көрсету",
+ "ai_keys.hide": "Жасыру",
+ "ai_keys.copy": "Көшіру",
+ "ai_keys.tokens": "токендер",
+ "ai_keys.presets": "Үлгілер",
+ "ai_keys.preset_k": "{n}k",
+ "ai_keys.preset_m": "{n}M",
+ "ai_keys.images_on": "Қолдау көрсетіледі"
+}

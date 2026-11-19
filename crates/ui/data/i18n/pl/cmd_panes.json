@@ -1,0 +1,6 @@
+{
+ "cmd.ui.pane.next": "Następny panel",
+ "cmd.ui.pane.next.desc": "Przenosi fokus klawiatury do następnego widocznego panelu: przeglądarki, płótna, właściwości, czatu.",
+ "cmd.ui.pane.prev": "Poprzedni panel",
+ "cmd.ui.pane.prev.desc": "Przenosi fokus klawiatury do poprzedniego widocznego panelu."
+}

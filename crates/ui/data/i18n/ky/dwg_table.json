@@ -1,0 +1,14 @@
+{
+ "dwg_table.copy": "Таблицаны көчүрүү",
+ "dwg_table.copy_tip": "Катмар боюнча санакты электрондук таблица үчүн таблица катары көчүрүү",
+ "dwg_table.copied": "Санак көчүрүлдү (табуляция менен бөлүнгөн)",
+ "dwg_table.total": "Жыйынтык",
+ "dwg_table.col.layer": "Катмар",
+ "dwg_table.col.count": "Саны",
+ "dwg_table.col.len": "Узундугу, {unit}",
+ "dwg_table.col.area": "Аянты, {unit}",
+ "dwg_table.unit.mm": "мм",
+ "dwg_table.unit.m2": "м²",
+ "dwg_table.unit.ft": "фут",
+ "dwg_table.unit.ft2": "фут²"
+}

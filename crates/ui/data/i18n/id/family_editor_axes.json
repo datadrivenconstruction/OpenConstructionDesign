@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "Sumbu X",
+ "fe.axis.y": "Sumbu Y",
+ "fe.axis.z": "Sumbu Z",
+ "fe.col.axis": "Sumbu",
+ "fe.col.at": "Posisi",
+ "fe.col.mode": "Mode",
+ "fe.mode.fixed": "Tetap",
+ "fe.mode.free": "Bebas",
+ "fe.types.inherited": "Default dari parameter",
+ "fe.csv.more": "Tindakan CSV lainnya",
+ "fe.ref.selected": "Bidang: {name}"
+}

@@ -1,0 +1,7 @@
+{
+ "xlsx_project.title": "Dette regneark blev eksporteret fra et andet projekt",
+ "xlsx_project.body": "Regnearket „{file}“ hører til et andet projekt. Element-id'er er forskellige mellem projekter, så dets rækker ville ændre urelaterede elementer her. Intet blev læst ind i dette projekt.",
+ "xlsx_project.export_new": "Eksportér dette projekt til et nyt regneark",
+ "xlsx_project.close": "Luk",
+ "xlsx_project.no_project": "Dette regneark siger ikke, hvilket projekt det hører til: kontrollér at det blev eksporteret fra dette projekt."
+}

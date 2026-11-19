@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "कुंजी पते में",
+ "ai_safety.auth.query_name": "पता-पैरामीटर",
+ "ai_safety.need_query_name": "वह पता-पैरामीटर नाम दें जिसमें कुंजी जाती है",
+ "ai_safety.apply_unlogged": "लागू हो गया, पर बदलाव-लॉग नहीं लिखा गया",
+ "ai_safety.audit_unlogged": "AI सहायक का लॉग नहीं लिखा जा सका",
+ "ai_safety.chat_not_saved": "चैट प्रोजेक्ट में सेव नहीं हो सकी। फिर से प्रयास हो रहा है।",
+ "ai_safety.clip_clears": "क्लिपबोर्ड 30 सेकंड में साफ़ हो जाएगा",
+ "ai_safety.copied_clears": "कॉपी हो गया। क्लिपबोर्ड 30 सेकंड में साफ़ हो जाएगा",
+ "ai_safety.key_session_only": "कुंजी ऐप बंद होने तक रहेगी",
+ "ai.settings.no_data_dir": "इस सिस्टम में ऐप सेटिंग्स के लिए फ़ोल्डर नहीं मिलता"
+}

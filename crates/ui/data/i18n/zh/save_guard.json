@@ -1,0 +1,14 @@
+{
+ "save_guard.save.empty_over_full": "未保存任何内容：模型为空，而文件已包含内容。文件未改动。请使用“另存为”以其他名称保存。",
+ "save_guard.refuse.body": "未保存任何内容：模型为空，而 {name} 已包含内容。文件未改动。",
+ "save_guard.refuse.foreign": "这不是 DDC Editor 文件，无法替换。请使用“另存为”以其他名称保存。",
+ "save_guard.refuse.ask": "替换 {name}？其中包含{what}。将先把它移入同级的 _archive 文件夹，然后写入空模型。",
+ "save_guard.refuse.holds_db": "{n} 个图元和内容行",
+ "save_guard.refuse.holds_ifc": "含构件的 IFC",
+ "save_guard.refuse.replace": "仍要替换…",
+ "save_guard.refuse.replace_yes": "移动并替换",
+ "save_guard.refuse.save_as": "另存为…",
+ "save_guard.refuse.cancel": "取消",
+ "save_guard.replace.moved": "原文件已移至 {path}",
+ "save_guard.replace.move_failed": "无法将 {name} 移开：{error}。未写入任何内容。"
+}

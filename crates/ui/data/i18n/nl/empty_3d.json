@@ -1,0 +1,14 @@
+{
+ "empty.v3d_model.title": "Nog niets in 3D",
+ "empty.v3d_model.hint": "Teken wanden in de plattegrond; ze verschijnen hier.",
+ "empty.v3d_model.action": "Plattegrond openen",
+ "empty.v3d_hidden.title": "Alle elementen zijn in deze weergave verborgen",
+ "empty.v3d_hidden.hint": "Tijdelijk verbergen of isoleren laat niets zichtbaar. De weergave-instellingen blijven zoals ingesteld.",
+ "empty.v3d_hidden.action": "Alles tonen",
+ "empty.v3d_graphics.title": "De weergave-instellingen verbergen elke categorie",
+ "empty.v3d_graphics.hint": "De categorieregels van deze weergave laten niets zichtbaar. Zet categorieën weer aan in de weergave-instellingen.",
+ "empty.v3d_graphics.action": "Weergave-instellingen openen",
+ "empty.v3d_box.title": "De sectiedoos ligt buiten het model",
+ "empty.v3d_box.hint": "De sectiedoos snijdt elk element weg. Pas hem weer om het model heen.",
+ "empty.v3d_box.action": "Sectiedoos resetten"
+}

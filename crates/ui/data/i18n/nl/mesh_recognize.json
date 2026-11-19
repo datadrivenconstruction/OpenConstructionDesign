@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "{done} van {total} herkennen",
+ "mesh_recognize.all": "Alle {n}",
+ "mesh_recognize.only_confident": "Alleen zekere",
+ "mesh_recognize.confident_tip": "Vinkt rijen aan waarvan de soort bij de categorie past en waarvan de zekerheid minstens {pct}% is",
+ "mesh_recognize.row_hint": "Klik op een rij om hem aan te vinken. Pijltoetsen verplaatsen, Enter vinkt aan.",
+ "mesh_recognize.kind_for": "Soort voor {name}",
+ "mesh_recognize.source": "Bronmeshes",
+ "mesh_recognize.keep": "Meshes behouden",
+ "mesh_recognize.replace": "Meshes vervangen",
+ "mesh_recognize.convert_keep": "{n} converteren",
+ "mesh_recognize.convert_remove": "{n} converteren en meshes verwijderen",
+ "mesh_recognize.creates": "Maakt {n} aan: {kinds}",
+ "mesh_recognize.creates_none": "Nog niets aangevinkt",
+ "mesh_recognize.stay": "{n} bronmeshes blijven in het model",
+ "mesh_recognize.removed": "{n} bronmeshes worden verwijderd. Ongedaan maken brengt ze terug."
+}

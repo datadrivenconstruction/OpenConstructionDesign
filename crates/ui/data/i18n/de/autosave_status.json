@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "Automatisches Speichern fehlgeschlagen, die letzten Änderungen sind nicht gesichert. {why}",
+ "autosave_status.autosave_open": "Einstellungen für automatisches Speichern",
+ "autosave_status.autosave_recovered": "Automatisches Speichern funktioniert wieder.",
+ "autosave_status.autosave_reason": "Grund: {why}"
+}

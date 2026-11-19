@@ -1,0 +1,7 @@
+{
+ "recover.untitled_note": "این پروژه هرگز ذخیره نشده است",
+ "recover.file_missing": "فایل پروژه پیدا نشد",
+ "recover.banner": "کار ذخیره‌نشده‌ای از نشست قبلی برای {name} پیدا شد",
+ "recover.banner_review": "بررسی",
+ "recover.later_archived": "{n} بار به تعویق افتاد: نسخه‌های لحظه‌ای به بایگانی منتقل شدند"
+}

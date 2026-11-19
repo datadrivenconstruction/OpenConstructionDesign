@@ -1,0 +1,9 @@
+{
+ "drafts.draft.view": "กราฟิกมุมมองของ “{name}”",
+ "drafts.draft.filter": "ตัวกรองมุมมอง “{name}”",
+ "drafts.draft.filter_new": "ตัวกรองมุมมองใหม่",
+ "drafts.draft.object_styles": "สไตล์ของวัตถุ",
+ "drafts.draft.material": "วัสดุ “{name}”",
+ "drafts.draft.type": "ประเภท “{name}”",
+ "drafts.draft.params": "พารามิเตอร์ของแฟมิลี “{name}”"
+}

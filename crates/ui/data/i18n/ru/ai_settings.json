@@ -1,0 +1,9 @@
+{
+ "ai.settings.num_bad": "Это не число. Введите, например, 0,5.",
+ "ai.settings.num_comma": "Десятичный разделитель здесь точка, например 0.5.",
+ "ai.settings.num_negative": "Число не может быть отрицательным.",
+ "ai.settings.unit_money": "валюта",
+ "ai.settings.unit_tokens": "токенов",
+ "ai.settings.unit_price": "за 1 млн токенов",
+ "ai.settings.limits_hint": "0 означает без лимита. Если значение отклонено, прежний лимит остаётся."
+}

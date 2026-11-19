@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}, pada level",
+ "cmd_buttons.purge.undo": "Penghapusan adalah satu langkah urungkan.",
+ "cmd_buttons.unpin.none": "Tidak ada pilihan yang disematkan",
+ "cmd_buttons.change_type.none": "Pilih dinding dulu: tipenya berubah dalam satu langkah",
+ "cmd_buttons.units.metric": "Satuan: metrik",
+ "cmd_buttons.units.imperial": "Satuan: kaki dan inci",
+ "cmd_buttons.units.back": "Kembali beralih",
+ "cmd_buttons.underlay.on": "Underlay aktif: level di bawahnya ditampilkan redup",
+ "cmd_buttons.underlay.off": "Underlay nonaktif",
+ "cmd_buttons.underlay.none": "Underlay aktif, tetapi level di bawah tidak punya yang bisa ditampilkan",
+ "cmd_buttons.zoom_sel.no_shape": "Pilihan tidak punya bentuk untuk dibingkai di tampilan ini",
+ "cmd_buttons.close.base": "Tab denah dan 3D tetap terbuka; buka potongan, lembar, atau tampilan gambar untuk menutupnya",
+ "tool.equipment": "Peralatan",
+ "hint.equipment.place": "Peralatan: pilih lokasi · Esc untuk keluar",
+ "cmd_buttons.table.opened": "Tabel dibuka di samping model",
+ "cmd_buttons.circuits.tip": "Buka daftar sirkuit listrik model ini"
+}

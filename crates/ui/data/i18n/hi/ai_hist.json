@@ -1,0 +1,14 @@
+{
+ "ai.hist.badge": "AI",
+ "ai.hist.untitled": "AI बदलाव",
+ "ai.hist.tip": "{title}\nलागू किया: {actor}\nAI मॉडल: {model}",
+ "ai.hist.why": "क्यों: {why}",
+ "ai.hist.reverted": "वापस लिया गया",
+ "ai.hist.revert_one": "यह AI बैच वापस लें",
+ "ai.revert.done": "AI बदलाव वापस लिए गए: {n}। पूर्ववत करने पर वे लौट आते हैं।",
+ "ai.revert.empty": "वापस लेने के लिए कोई AI बदलाव नहीं है",
+ "ai.revert.not_ai": "यह चरण AI बदलाव नहीं है",
+ "ai.revert.already": "ये AI बदलाव पहले ही वापस लिए जा चुके हैं",
+ "ai.revert.opaque": "वापस नहीं लिया: ये AI बदलाव बाद के काम से सुरक्षित रूप से अलग नहीं हो सकते। कुछ नहीं बदला गया।",
+ "ai.revert.failed": "वापसी विफल: {e}"
+}

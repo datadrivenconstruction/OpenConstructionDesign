@@ -1,0 +1,11 @@
+{
+ "cmd.arch.roof_gable.short": "切妻",
+ "cmd.arch.roof_hip.short": "寄棟",
+ "cmd.arch.roof_shed.short": "片流れ",
+ "cmd.arch.roof_mansard.short": "マンサード",
+ "cmd.arch.roof_gambrel.short": "腰折れ",
+ "cmd.arch.roof_barrel.short": "かまぼこ",
+ "cmd.arch.roof_edges.short": "屋根の端部",
+ "cmd.arch.roof_opening.short": "開口",
+ "cmd.mass.roof_by_face.short": "面から"
+}

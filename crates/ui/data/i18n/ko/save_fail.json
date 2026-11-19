@@ -1,0 +1,16 @@
+{
+ "save_fail.save_fail.title": "프로젝트가 저장되지 않음",
+ "save_fail.save_fail.kept": "편집 내용은 여기 그대로 열려 있습니다. 편집기가 열려 있는 동안에는 아무것도 잃지 않습니다.",
+ "save_fail.save_fail.details": "자세히",
+ "save_fail.save_fail.copy": "복사",
+ "save_fail.save_fail.save_as": "다른 이름으로 저장…",
+ "save_fail.save_fail.retry": "재시도",
+ "save_fail.save_fail.close": "닫기",
+ "save_fail.cause.full": "디스크가 가득 찼습니다. 공간을 확보하거나 다른 드라이브에 프로젝트를 저장하세요.",
+ "save_fail.cause.denied": "이 폴더 또는 파일은 읽기 전용이거나 여기에 쓸 권한이 없습니다. 다른 폴더를 선택하세요.",
+ "save_fail.cause.locked": "다른 프로그램에서 파일이 열려 있습니다. 그곳에서 닫은 뒤 재시도를 누르세요.",
+ "save_fail.cause.missing": "폴더가 더 이상 없습니다. 다른 폴더를 선택하거나 복원한 뒤 재시도를 누르세요.",
+ "save_fail.cause.offline": "드라이브 또는 네트워크 폴더를 사용할 수 없습니다. 다시 연결한 뒤 재시도를 누르거나 다른 곳에 저장하세요.",
+ "save_fail.cause.too_long": "파일 경로가 너무 깁니다. 더 짧은 폴더 또는 파일 이름을 선택하세요.",
+ "save_fail.cause.other": "파일을 쓸 수 없습니다: {detail}"
+}

@@ -1,0 +1,55 @@
+[
+ {
+  "id": "str.rebar_schedule",
+  "icon": "rebar-schedule",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "struct",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "rebar",
+  "size": "medium"
+ },
+ {
+  "id": "str.rebar_delete",
+  "once": true,
+  "icon": "rebar-delete",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "struct",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "rebar",
+  "size": "medium"
+ },
+ {
+  "id": "str.rebar_toggle",
+  "icon": "rebar-show",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "struct",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "rebar",
+  "size": "medium"
+ },
+ {
+  "id": "str.analytical_export",
+  "dialog": true,
+  "icon": "analytical-out",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "struct",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "rebar"
+ }
+]

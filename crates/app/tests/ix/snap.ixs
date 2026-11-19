@@ -1,0 +1,15 @@
+zoom=100
+walls=[(0,0)-(6,0)]
+# Snaps of the wall tool (INTERACTIONS §1.6); 100 px/m: radius 12 px = 0.12 m
+# SNAP-1: the wall end wins inside the radius
+tool(WA) move(5.95,0.05) → snap=Endpoint p=(6,0) state=Drafting{0}
+# SNAP-4: Alt frees the point under the resting cursor; releasing it brings the end back
+mod(Alt,down) → snap=Free p=(5.95,0.05)
+mod(Alt,up) → snap=Endpoint p=(6,0)
+# SNAP-2: the midpoint first, Tab steps on to the near face (the axis point is the midpoint here)
+move(3.0,0.03) → snap=Midpoint p=(3,0)
+key(Tab) → snap=WallFace
+SNAP-2 move(3.0,0.03) key(Tab) → snap=WallAxis; key(Tab) → snap=WallFace; key(Tab) → snap=WallFace #pending 80
+SNAP-5 hover(6,0,300) move(6.0,3.0) → snap=AlignX p=(6,3) #pending 81
+SNAP-6 move(5.95,0) → snap=Endpoint; move(5.84,0) → snap=Endpoint; move(5.70,0) → snap=WallFace #pending 81
+SNAP-7 move(3.0,0.03) mod(Shift,down) type("M") click(3.0,0.03) → snap=Midpoint #pending 79

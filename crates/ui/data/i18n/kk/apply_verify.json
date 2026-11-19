@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "Қолдану тоқтатылды: модель бұрынғыдай сақталды",
+ "apply_verify.rolled_back": "Қолдану жобаға сай келмеді және болдырылды; модель өзгермеді. {what}",
+ "apply_verify.diff.missing": "Жоба {what} {kind} көрсетеді, бірақ қолдану оны орындамады.",
+ "apply_verify.diff.extra": "{what} {kind} қолдану, бұл жоба көрсетпейді.",
+ "apply_verify.diff.kind": "Жоба {what} {shown} көрсетеді, бірақ оны {applied} қолданады.",
+ "apply_verify.diff.value": "{what}: “{col}” жобадан өзгеше шықты.",
+ "apply_verify.diff.truncated": "Жоба мен қолданылған өзгеріс өлшемі бойынша өзгешеленеді.",
+ "apply_verify.diff.unreadable": "Қолданылған өзгерісті кері оқу мүмкін болмады ({e}).",
+ "apply_verify.no_base": "Қолдану іске қосылмады: жобаны тексеруге арналған көшірме жоқ. Модель өзгермеді; жобаны қайта сұраңыз.",
+ "apply_verify.take_back_failed": "Қайтару сәтсіз аяқталды ({e}): Болдыруды пайдаланыңыз.",
+ "apply_verify.kind.created": "жасалды",
+ "apply_verify.kind.changed": "өзгертілді",
+ "apply_verify.kind.deleted": "жойылды",
+ "apply_verify.card.type_row": "{type} түрі · {n} элемент өзгерісті қабылдайды"
+}

@@ -1,0 +1,13 @@
+{
+ "level.err_open": "Level not opened: {e}",
+ "level.need_name": "A level needs a name and an elevation",
+ "level.created": "Level \"{name}\" created",
+ "level.err_create": "Level not created: {e}",
+ "level.err_edit": "Level not changed: {e}",
+ "level.edited": "Level \"{name}\" changed",
+ "level.edited_stale": "Level \"{name}\" changed, view not refreshed: {e}",
+ "level.last": "The last level cannot be deleted",
+ "level.deleted": "Level deleted",
+ "level.not_empty": "Level is not empty: delete its elements first",
+ "level.err_delete": "Level not deleted: {e}"
+}

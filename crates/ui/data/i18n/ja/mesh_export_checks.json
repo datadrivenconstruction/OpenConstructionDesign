@@ -1,0 +1,15 @@
+{
+ "cmd.data.export_step.desc": "モデル全体または選択範囲を STEP AP214 または AP242 として保存します。ソリッドは平面、円柱、円錐、球、トーラス、B スプラインの正確な面で、その他の要素は平面として、色と、階ごとに 1 つのアセンブリノードとともに保存されます。",
+ "cmd.data.export_3mf.desc": "モデル全体または選択範囲を印刷用の 3MF として保存します。要素ごとに 1 オブジェクト、色、単位、各ボディが水密かどうかの確認を含みます。",
+ "fmenu.export.step": "STEP 正確なソリッド (.step)",
+ "fmenu.export.3mf": "印刷用 3MF (.3mf)",
+ "mx.schema": "STEP スキーマ",
+ "mx.schema.ap214": "AP214 (最も広くサポート)",
+ "mx.schema.ap242": "AP242",
+ "mx.watertight": "水密でないボディ",
+ "mx.watertight.report": "書き出して一覧にする",
+ "mx.watertight.skip": "除外する",
+ "mx.watertight.require": "書き出しを取り消す",
+ "mx.faceted": "{fmt} を保存しました: {path} ({exact} 個の正確なソリッド、{n} 個は平面として書き出し: {first})",
+ "sheets.print.svg": "SVG"
+}

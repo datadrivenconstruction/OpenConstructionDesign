@@ -1,0 +1,31 @@
+id = "G29_helical_ramp"
+tier = "hard"
+group = "Any geometry"
+title = "Helical ramp garage"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "A six-level car park with a double helical ramp (up and down interleaved) in the centre of a 40 x 40 m plan, 5% slope, parking bays 2.5 x 5 m on each floor, columns on a 8 m grid."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "level"
+min = 6.0
+
+[[oracle.count]]
+spec = "slab"
+min = 6.0
+
+[[oracle.count]]
+spec = "col"
+min = 25.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

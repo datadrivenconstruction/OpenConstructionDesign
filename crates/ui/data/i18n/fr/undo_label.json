@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "Annuler : {what}",
+ "undo_label.redo_what": "Rétablir : {what}",
+ "undo_label.undo_none": "Rien à annuler",
+ "undo_label.redo_none": "Rien à rétablir"
+}

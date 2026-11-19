@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "מקרא",
+ "legend.legend.new_hint": "שם מקרא חדש",
+ "legend.legend.delete_tip": "מחק מקרא",
+ "legend.legend.delete_placed": "מחק מקרא (מוצב על: {sheets})",
+ "legend.legend.deleted": "המקרא נמחק: {name}",
+ "legend.legend.no_rows": "עדיין אין שורות. הוסף אחת או קח את הסגנונות של המבט הנוכחי",
+ "legend.legend.replace_q": "להחליף {n} שורות בסגנונות של המבט הזה?",
+ "legend.legend.replace": "החלף",
+ "legend.legend.keep": "שמור שורות",
+ "legend.col.swatch": "דגימת צבע",
+ "legend.col.value": "ערך",
+ "legend.col.label": "תווית"
+}

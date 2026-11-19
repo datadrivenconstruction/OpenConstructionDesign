@@ -1,0 +1,104 @@
+{
+ "schema": "gen_preset.v1",
+ "name": "clinic",
+ "aliases": [
+  "klinik",
+  "poliklinik",
+  "clinica",
+  "clínica",
+  "诊所",
+  "поликлиника",
+  "клиника",
+  "medical_centre",
+  "medical_center"
+ ],
+ "base": "office",
+ "note": "clinic: built as a corridor plan of consulting rooms (office kind) and wards; operating theatres and medical gases are not built",
+ "brief": {
+  "name": {
+   "en": "Clinic",
+   "ru": "Поликлиника"
+  }
+ },
+ "rules": {},
+ "program": {
+  "schema": "gen_program.v1",
+  "spaces": [
+   {
+    "kind": "lobby",
+    "area": 40,
+    "name": {
+     "en": "Reception",
+     "ru": "Регистратура"
+    },
+    "floor": "ground"
+   },
+   {
+    "kind": "office",
+    "area": 16,
+    "count": 4,
+    "name": {
+     "en": "Consulting room",
+     "ru": "Кабинет врача"
+    },
+    "floor": "ground"
+   },
+   {
+    "kind": "wc",
+    "area": 4,
+    "count": 2,
+    "floor": "ground"
+   },
+   {
+    "kind": "office",
+    "area": 16,
+    "count": 6,
+    "name": {
+     "en": "Consulting room",
+     "ru": "Кабинет врача"
+    },
+    "floor": "typical"
+   },
+   {
+    "kind": "ward",
+    "area": 18,
+    "count": 4,
+    "name": {
+     "en": "Ward",
+     "ru": "Палата"
+    },
+    "floor": "typical"
+   },
+   {
+    "kind": "wc",
+    "area": 4,
+    "count": 2,
+    "floor": "typical"
+   },
+   {
+    "kind": "lobby",
+    "area": 30,
+    "name": {
+     "en": "Reception",
+     "ru": "Регистратура"
+    },
+    "floor": "single"
+   },
+   {
+    "kind": "office",
+    "area": 16,
+    "count": 4,
+    "name": {
+     "en": "Consulting room",
+     "ru": "Кабинет врача"
+    },
+    "floor": "single"
+   },
+   {
+    "kind": "wc",
+    "area": 4,
+    "floor": "single"
+   }
+  ]
+ }
+}

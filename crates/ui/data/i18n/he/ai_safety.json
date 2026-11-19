@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "מפתח בכתובת",
+ "ai_safety.auth.query_name": "פרמטר כתובת",
+ "ai_safety.need_query_name": "ציין את שם פרמטר הכתובת שנושא את המפתח",
+ "ai_safety.apply_unlogged": "הוחל, אך יומן השינויים לא נכתב",
+ "ai_safety.audit_unlogged": "לא ניתן לכתוב את יומן עוזר ה-AI",
+ "ai_safety.chat_not_saved": "לא ניתן לשמור את הצ׳אט בפרויקט. מנסה שוב.",
+ "ai_safety.clip_clears": "הלוח הזמני מתרוקן בעוד 30 שניות",
+ "ai_safety.copied_clears": "הועתק. הלוח הזמני מתרוקן בעוד 30 שניות",
+ "ai_safety.key_session_only": "המפתח נשמר עד סגירת האפליקציה",
+ "ai.settings.no_data_dir": "המערכת הזו אינה מספקת תיקייה להגדרות האפליקציה"
+}

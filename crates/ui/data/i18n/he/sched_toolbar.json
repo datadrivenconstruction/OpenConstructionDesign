@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "שורת סינון מתחת לכותרות. טקסט: מחרוזת חלקית; מספרים: >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "הצג או הסתר עמודות",
+ "sched_toolbar.groups_tip": "קבץ שורות לפי עמודות, עם סיכומי ביניים",
+ "sched_toolbar.formulas_tip": "עמודות מחושבות",
+ "sched_toolbar.phase": "שלב",
+ "sched_toolbar.phase_tip": "מאיזה שלב נלקחות השורות",
+ "sched_toolbar.copy_tip": "השורות הנבחרות (או כל הנראות) כ-TSV",
+ "sched_toolbar.import_tip": "קרא טבלה מיוצאת בחזרה: שורות לפי Id, עמודות לפי כותרת; קודם הספירה, ואז צעד ביטול אחד",
+ "sched_toolbar.export_tip": "שורות ועמודות נראות עם סיכומים; מספרים נשארים מספרים",
+ "sched_toolbar.need_table": "פתח קודם טבלה",
+ "sched_toolbar.busy_open": "תיבת דו-שיח לפתיחת קובץ כבר פתוחה",
+ "sched_toolbar.busy_save": "תיבת דו-שיח לשמירה כבר פתוחה",
+ "sched_toolbar.clear_filter": "נקה סינון",
+ "sched_toolbar.fields_title": "עמודות"
+}

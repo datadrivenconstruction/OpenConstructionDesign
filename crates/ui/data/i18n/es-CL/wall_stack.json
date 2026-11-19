@@ -1,0 +1,10 @@
+{
+ "wall_stack.we.stack_caption": "Tipo compuesto",
+ "wall_stack.we.side_left": "Cara izquierda",
+ "wall_stack.we.side_right": "Cara derecha",
+ "wall_stack.we.from": "Desde",
+ "wall_stack.we.to": "Hasta",
+ "wall_stack.we.bottom": "Inferior",
+ "wall_stack.we.delete_tip": "Eliminar este perfil",
+ "wall_stack.we.from_after_to": "“Desde” debe ser anterior a “Hasta”"
+}

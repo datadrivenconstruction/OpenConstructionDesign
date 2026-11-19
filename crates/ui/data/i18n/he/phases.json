@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "תלת-ממד",
+ "phases.current_mark": "נוכחי",
+ "phases.make_current": "הפוך לנוכחי",
+ "phases.col_phase": "שלב",
+ "phases.col_filter": "מסנן",
+ "phases.presets": "הגדרות מוכנות של תוכנית",
+ "phases.del_title": "מחק שלב",
+ "phases.del_text": "למחוק את השלב \"{name}\"? הרכיבים שלו יועברו לשלב שייבחר למטה.",
+ "phases.del_into": "העבר רכיבים אל",
+ "phases.del_ok": "מחק",
+ "phases.col_kind": "סוג רכיב",
+ "phases.col_count": "ספירה",
+ "phases.col_volume": "נפח"
+}

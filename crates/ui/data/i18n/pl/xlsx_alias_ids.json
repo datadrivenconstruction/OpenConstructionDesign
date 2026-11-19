@@ -1,0 +1,7 @@
+{
+ "xlsx_alias_ids.ids_written": "{n} nowych wierszy otrzymało id w zmienionym arkuszu; nic innego w skoroszycie się nie zmieniło.",
+ "xlsx_alias_ids.ids_open": "Skoroszyt jest otwarty w innym programie: id {n} nowych wierszy nie zostały zapisane. Zamknij go tam i synchronizuj; te wiersze nie zostaną utworzone ponownie.",
+ "xlsx_alias_ids.ids_failed": "Nie udało się zapisać id {n} nowych wierszy; skoroszyt pozostawiono bez zmian. Te wiersze nie zostaną utworzone ponownie przy następnej synchronizacji.",
+ "xlsx_alias_ids.unpaired": "{n} nowych wierszy nie ma jeszcze id; są zapamiętane i nie zostaną utworzone ponownie.",
+ "xlsx_alias_ids.refused": "Nic nie zastosowano: nowe wiersze w {sheets} nie mogą dostać id, gdy odczytywany jest zmieniony arkusz. Przywróć arkuszowi standardową nazwę (lub usuń te wiersze) i synchronizuj ponownie."
+}

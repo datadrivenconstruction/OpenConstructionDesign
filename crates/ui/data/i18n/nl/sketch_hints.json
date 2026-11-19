@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "Teken een gesloten contour: klik punten aan en druk op Enter of Afronden om te maken",
+ "sketch_hints.sk_finish": "Afronden",
+ "sketch_hints.sk_cancel": "Annuleren",
+ "sketch_hints.import_warn": "waarschuwingen modelcontrole: {n} (eerste: {first})",
+ "sketch_hints.ai.offline.schedule": "De schedule openen",
+ "sketch_hints.ai.offline.check": "Controleren aan de regels",
+ "sketch_hints.ai.offline.warnings": "Waarschuwingen tonen",
+ "cmd.file.publish_pdf": "Bladen als PDF publiceren…",
+ "cmd.file.publish_pdf.desc": "Publiceert de gekozen bladen naar PDF. Hetzelfde als Bladen exporteren naar PDF/SVG.",
+ "sketch_hints.verify_none": "Niets in de selectie door de AI-assistent ingesteld om te controleren",
+ "sketch_hints.contours_none": "Geen topovlak in het model: contourlijnen verschijnen zodra er een is aangemaakt",
+ "sketch_hints.contours_off": "Contourlijnen van het topovlak verborgen",
+ "sketch_hints.contours_on": "Contourlijnen van het topovlak getoond"
+}

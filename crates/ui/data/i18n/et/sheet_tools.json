@@ -1,0 +1,18 @@
+{
+ "undo.entry_later": "Ei võetud tagasi: pärast seda tehti veel muudatusi. Võta kõigepealt need tagasi.",
+ "undo.entry_gone": "Ei võetud tagasi: see muudatus on juba tagasi võetud või pole enam ajaloos.",
+ "undo.entry_busy": "Lõpeta või tühista kõigepealt praegune joonistus, siis võta tagasi.",
+ "quick.hud.more": "Rohkem atribuutides: {names}",
+ "sheet_tools.sheet.more": "Rohkem lehe tööriistu",
+ "job.of": "{d} / {t}",
+ "job.of.mb": "{d} / {t} MB",
+ "job.left.under_minute": "alla minuti jäänud",
+ "job.left.minutes": "umbes {n} min jäänud",
+ "sheet_tools.start.units": "Ühikud",
+ "sheet_tools.print.save": {
+  "one": "Salvesta # leht",
+  "other": "Salvesta # lehte"
+ },
+ "sheet_tools.sets.delete_ask": "Kas kustutada komplekt „{name}“? Selle lehed jäävad projekti.",
+ "sheet_tools.keep": "Säilita"
+}

@@ -1,0 +1,6 @@
+{
+ "delsafe.ring.opening_shape": "Đường bao của lỗ mở sẽ tự cắt hoặc bị sụp",
+ "delsafe.ring.opening_boundary": "Một lỗ mở sẽ cắt hoặc chạm vào biên ngoài",
+ "delsafe.ring.openings_overlap": "Các lỗ mở sẽ chồng lên hoặc chạm nhau",
+ "xl.msg.delsafe_instance_param_on_types": "tham số '{}' là tham số thể hiện; hãy sửa trên trang phần tử, chưa áp dụng"
+}

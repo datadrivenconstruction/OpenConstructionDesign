@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "数值必须大于零",
+ "sched_ops.not_number": "不是数字",
+ "sched_ops.no_host": "无宿主墙",
+ "sched_ops.wall_length": "此墙长度无法这样设置",
+ "sched_ops.no_wall": "无此墙",
+ "sched_ops.no_opening": "无此洞口",
+ "sched_ops.no_curtain": "无此幕墙",
+ "sched_ops.no_panel": "无此嵌板",
+ "sched_ops.no_slab": "无此楼板",
+ "sched_ops.no_room": "无此房间",
+ "sched_ops.slope_range": "坡度超出范围",
+ "sched_ops.place": "#{id}：{why}",
+ "sched_ops.model": "{e}"
+}

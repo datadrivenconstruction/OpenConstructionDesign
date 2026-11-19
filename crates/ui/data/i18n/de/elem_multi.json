@@ -1,0 +1,10 @@
+{
+ "elem.multi.title": "{n} Elemente",
+ "elem.multi.varies": "uneinheitlich",
+ "elem.multi.tip": "Enter setzt alle ausgewählten Elemente",
+ "elem.multi.hidden": "{n} Zeilen nur bei einigen Elementen",
+ "elem.multi.none": "Die ausgewählten Elemente haben keine gemeinsamen Zeilen",
+ "elem.multi.range": "Der Wert liegt außerhalb des zulässigen Bereichs",
+ "elem.multi.changed": "{n} Elemente geändert · Strg+Z macht rückgängig",
+ "elem.multi.same": "Bei allen ausgewählten Elementen steht bereits dieser Wert"
+}

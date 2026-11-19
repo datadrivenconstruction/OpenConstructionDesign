@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "Nic nenalezeno",
+ "empty.browser_search.hint": "Žádný pohled, podlaží, typ ani místnost neodpovídá hledání.",
+ "empty.browser_search.action": "Vymazat hledání",
+ "empty.xl_filtered.title": "Žádné položky neodpovídají filtrům",
+ "empty.xl_filtered.hint": "Zapněte další druhy, vyberte jiný list nebo změňte hledaný text.",
+ "empty.xl_filtered.action": "Zrušit filtry",
+ "empty.xl_nochanges.title": "Žádné změny v sešitu",
+ "empty.xl_nochanges.hint": "Sešit odpovídá modelu: jeho import by nic nezměnil.",
+ "empty.version_same.title": "Modely jsou shodné",
+ "empty.version_same.hint": "Mezi otevřeným modelem a zvolenou verzí nebyly nalezeny žádné rozdíly.",
+ "empty.templates.title": "Zatím žádné šablony pohledů",
+ "empty.templates.hint": "Vytvořte ji z aktuálního pohledu a použijte jeho nastavení na jiných pohledech.",
+ "empty.templates.action": "Pojmenovat šablonu",
+ "empty.fe_params.title": "Zatím žádné parametry",
+ "empty.fe_params.hint": "Přidejte parametr níže pro řízení velikostí, materiálů nebo viditelnosti.",
+ "empty.fe_params.action": "Přidat parametr"
+}

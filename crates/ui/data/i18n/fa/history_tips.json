@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "واگرد شد — Ctrl+Y بازانجام می‌کند",
+ "history.hist.empty": "هنوز تغییری نیست",
+ "history.hist.empty_hint": "ویرایش‌های شما اینجا ظاهر می‌شوند. برای برگشت به هر مرحله روی آن کلیک کنید.",
+ "history.hist.revert_all_n": "برگرداندن همه تغییرات هوش مصنوعی ({n})"
+}

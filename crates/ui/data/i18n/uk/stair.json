@@ -1,0 +1,16 @@
+{
+ "selcat.stair": "Сходи",
+ "selcat.railing": "Огородження",
+ "quick.cat.stair": "Сходи",
+ "quick.cat.railing": "Огородження",
+ "stair.risers": "Підступці",
+ "stair.riser": "Висота підступця",
+ "stair.comfort": "2R + T",
+ "stair.tread_auto": "Проступ за правилом",
+ "stair.tread_auto_tip": "Скинути введений проступ і задати його за правилом 2R + T",
+ "stair.broken": "Ці сходи не відповідають своїм рівням",
+ "railing.host_stair": "На сходах #{id}",
+ "railing.host_path": "Креслене огородження",
+ "railing.length": "Довжина",
+ "stair.deleted_with": "з {n} огородженнями"
+}

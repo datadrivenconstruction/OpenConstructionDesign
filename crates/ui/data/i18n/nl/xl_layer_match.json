@@ -1,0 +1,4 @@
+{
+ "xl.msg.layer_cells_unplaced": "{} cellen van type '{}' laag {} op blad '{}' konden niet worden geplaatst",
+ "xl.msg.layer_hidden_unplaced": "verborgen rij van type '{}' laag {} op blad '{}' kon niet worden geplaatst"
+}

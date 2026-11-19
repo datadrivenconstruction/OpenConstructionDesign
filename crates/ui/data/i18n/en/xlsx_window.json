@@ -1,0 +1,5 @@
+{
+ "xlw.open_elsewhere": "The workbook is open elsewhere — save it there first.",
+ "xlw.read_anyway": "Read anyway",
+ "xlw.owner_stale": "A lock file of another program is left beside the workbook; the saved file was read."
+}

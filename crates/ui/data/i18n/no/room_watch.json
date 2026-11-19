@@ -1,0 +1,4 @@
+{
+ "room_watch.room.dup": "Rom {room} ligger i området til rom {other}: areal og volum regnes bare i rom {other}",
+ "ai.issue.room_dup": "Rommet ligger i området til rom {0}: arealet regnes med der"
+}

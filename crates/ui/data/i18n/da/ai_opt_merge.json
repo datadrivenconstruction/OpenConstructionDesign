@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "Sammenflet variant: {name}",
+ "ai_opt_merge.whole": "Sammenflet hele varianten",
+ "ai_opt_merge.parts": "Sammenflet valgte dele",
+ "ai_opt_merge.note": "Hvorfor denne variant",
+ "ai_opt_merge.rebased": "Modellen ændrede sig, efter denne variant blev lavet: sammenfletningen blev genberegnet mod den aktuelle model. Kontrollér ændringerne, før du anvender.",
+ "ai_opt_merge.left.not_picked": "Ikke valgt fra varianten",
+ "ai_opt_merge.left.unticked": "Fravalgt i varianten",
+ "ai_opt_merge.left.conflict": "Kan ikke tilføjes til den aktuelle model: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "Denne variant kan ikke sammenflettes. En afvist variant skal gendannes først.",
+ "ai_opt_merge.refused.stale": "Modellen ændrede sig, efter denne variant blev lavet. Genberegn sammenfletningen mod den aktuelle model.",
+ "ai_opt_merge.refused.nothing_picked": "Intet er valgt til sammenfletning.",
+ "ai_opt_merge.refused.unknown_item": "Punkt {item} er ikke en del af denne variant.",
+ "ai_opt_merge.refused.not_in_option": "Det valgte element er ikke en del af denne variant.",
+ "ai_opt_merge.refused.needs_left_out": "Punkt {item} kræver punkt {needs}. Vælg det også, eller tillad at afhængigheder tilføjes.",
+ "ai_opt_merge.refused.set_gone": "Punkt {item} henviser til en markering, der ikke længere findes. Generér varianten igen.",
+ "ai_opt_merge.refused.busy": "En anden plan er åben. Anvend eller afvis den først.",
+ "ai_opt_merge.refused.failed": "Sammenfletningen kunne ikke forberedes: {reason}",
+ "ai_opt_merge.revive": "Gendan variant",
+ "ai_opt_merge.merged": "Sammenflettet"
+}

@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "Az automatikus mentés nem sikerült, a legutóbbi módosítások nincsenek védve. {why}",
+ "autosave_status.autosave_open": "Automatikus mentés beállításai",
+ "autosave_status.autosave_recovered": "Az automatikus mentés ismét működik.",
+ "autosave_status.autosave_reason": "Ok: {why}"
+}

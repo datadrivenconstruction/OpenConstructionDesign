@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "Vrátit: {what}",
+ "undo_label.redo_what": "Obnovit: {what}",
+ "undo_label.undo_none": "Nic k vrácení",
+ "undo_label.redo_none": "Nic k obnovení"
+}

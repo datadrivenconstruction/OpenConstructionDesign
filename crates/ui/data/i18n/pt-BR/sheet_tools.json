@@ -1,0 +1,18 @@
+{
+ "undo.entry_later": "Não desfeito: outra alteração foi feita depois dela. Desfaça aquela primeiro.",
+ "undo.entry_gone": "Não desfeito: esta alteração já foi desfeita ou não está mais no histórico.",
+ "undo.entry_busy": "Conclua ou cancele primeiro o desenho atual, depois desfaça.",
+ "quick.hud.more": "Mais em Propriedades: {names}",
+ "sheet_tools.sheet.more": "Mais ferramentas de folha",
+ "job.of": "{d} de {t}",
+ "job.of.mb": "{d} de {t} MB",
+ "job.left.under_minute": "menos de um minuto restante",
+ "job.left.minutes": "cerca de {n} min restantes",
+ "sheet_tools.start.units": "Unidades",
+ "sheet_tools.print.save": {
+  "one": "Salvar # folha",
+  "other": "Salvar # folhas"
+ },
+ "sheet_tools.sets.delete_ask": "Excluir o conjunto “{name}”? Suas folhas permanecem no projeto.",
+ "sheet_tools.keep": "Manter"
+}

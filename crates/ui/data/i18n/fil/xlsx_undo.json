@@ -1,0 +1,6 @@
+{
+ "cmd.xlsx.undo_apply": "I-undo ang huling spreadsheet na XLSX apply",
+ "xlsx_undo.later": "Hindi na-undo: na-edit ang modelo pagkatapos ng spreadsheet na XLSX apply na ito. Gamitin ang Ctrl+Z nang paisa-isa o ang History panel.",
+ "xlsx_undo.gone": "Walang maaaring i-undo: na-undo na ang spreadsheet na XLSX apply na ito.",
+ "xlsx_undo.busy": "Tapusin o kanselahin muna ang kasalukuyang drawing, saka i-undo ang spreadsheet na XLSX apply."
+}

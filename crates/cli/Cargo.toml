@@ -1,0 +1,37 @@
+[package]
+name = "ddc-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Headless CLI of the free, open-source CAD-BIM editor (AGPL-3.0)"
+
+# Headless batch tool: no window, no GPU. Thin over the io and model crates.
+[[bin]]
+name = "ddc"
+path = "src/main.rs"
+
+[features]
+# DXF export: off in the public build
+dxf-export = ["ddc-io/dxf-write"]
+# ERP link commands (`ddc gen`, `ddc publish`); pulls in the editor crate, off by default
+link = ["dep:ddc-app", "ddc-app/link"]
+
+[dependencies]
+web-time.workspace = true
+ddc-geom = { path = "../geom" }
+ddc-model = { path = "../model" }
+ddc-io = { path = "../io" }
+ddc-ops = { path = "../ops" }
+ddc-script = { path = "../script" }
+serde_json.workspace = true
+ddc-app = { path = "../app", default-features = false, optional = true }
+
+[dev-dependencies]
+ddc-model = { path = "../model" }
+ddc-io = { path = "../io" }
+serde_json.workspace = true
+roxmltree = "0.20"
+zip = { version = "9.0.5", default-features = false, features = ["deflate"] }

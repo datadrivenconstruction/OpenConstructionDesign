@@ -1,0 +1,15 @@
+{
+ "fe.add_why_empty": "ป้อนชื่อพารามิเตอร์ก่อน",
+ "fe.add_why_exists": "มีพารามิเตอร์ชื่อนี้อยู่แล้ว ใช้ นำไปใช้ เพื่อเปลี่ยน",
+ "fe.apply_why_missing": "ไม่มีพารามิเตอร์ชื่อนี้ ป้อนชื่อที่มีอยู่",
+ "fe.nochange": "ยังไม่มีการเปลี่ยนแปลง",
+ "options.accept_more": "ยอมรับ…",
+ "options.delete_more": "ลบ…",
+ "options.empty_title": "ยังไม่มีชุดตัวเลือก",
+ "options.more": "การกระทำเพิ่มเติม: {name}",
+ "options.primary_named": "ตัวเลือกหลัก: {name}",
+ "options.primary_tip": "ตั้งเป็นตัวเลือกหลักของชุด",
+ "options.select_first": "เลือกองค์ประกอบในโมเดลก่อน",
+ "options.show_3d": "แสดงใน 3D: {name}",
+ "options.show_plan": "แสดงในแผนผัง: {name}"
+}

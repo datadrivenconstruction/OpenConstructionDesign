@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "Скасовано — Ctrl+Y повертає",
+ "history.hist.empty": "Змін ще немає",
+ "history.hist.empty_hint": "Ваші правки з’являються тут. Клацніть будь-який крок, щоб повернутися до нього.",
+ "history.hist.revert_all_n": "Скасувати всі зміни ШІ ({n})"
+}

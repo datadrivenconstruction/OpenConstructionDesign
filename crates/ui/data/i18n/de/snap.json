@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "Endpunkt",
+ "snap.midpoint": "Mittelpunkt",
+ "snap.perpendicular": "Senkrecht",
+ "snap.wall_axis": "Wandachse",
+ "snap.wall_face": "Wandfläche",
+ "snap.grid": "Raster",
+ "snap.intersection": "Schnittpunkt",
+ "snap.grid_axis": "Rasterlinie",
+ "snap.ref_plane": "Bezugsebene",
+ "snap.nearest": "Nächster Punkt",
+ "snap.align_x": "In X mit einem entfernten Punkt ausgerichtet",
+ "snap.align_y": "In Y mit einem entfernten Punkt ausgerichtet",
+ "snap.align_xy": "In X und Y ausgerichtet"
+}

@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "Скасувати: {what}",
+ "undo_label.redo_what": "Повторити: {what}",
+ "undo_label.undo_none": "Немає що скасовувати",
+ "undo_label.redo_none": "Немає що повторювати"
+}

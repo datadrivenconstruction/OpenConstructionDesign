@@ -1,0 +1,20 @@
+{
+ "api.cmd.move_elements": "نقل العناصر بإزاحة بالمتر",
+ "api.cmd.copy_elements": "نسخ العناصر بإزاحة أو أكثر بالمتر",
+ "api.cmd.rotate_elements": "تدوير العناصر حول نقطة بزاوية بالدرجات",
+ "api.cmd.mirror_elements": "عكس العناصر حول محور يمر بنقطتين",
+ "api.cmd.scale_elements": "تحجيم العناصر حول نقطة بمعامل",
+ "api.cmd.array_elements": "مصفوفة خطية أو شعاعية من العناصر",
+ "api.cmd.offset_wall": "نسخ جدار موازٍ على مسافة بالمتر",
+ "api.cmd.split_wall": "تقسيم جدار إلى جزأين عند نقطة",
+ "api.cmd.pin_elements": "تثبيت العناصر أو إلغاء تثبيتها",
+ "api.cmd.flip_openings": "قلب جهة مفصلة الأبواب والنوافذ أو وجهها",
+ "api.cmd.create_level": "إنشاء مستوى على منسوب بالمتر",
+ "api.cmd.edit_level": "إعادة تسمية مستوى أو تغيير منسوبه",
+ "api.cmd.delete_level": "حذف مستوى",
+ "api.cmd.place_rooms": "وضع غرفة في كل منطقة مغلقة من مستوى",
+ "api.cmd.join_elements": "وصل العناصر أو فصلها أو تبديل وصلات الهندسة",
+ "api.cmd.place_footings": "وضع قاعدة تحت كل عمود في مستوى",
+ "api.cmd.create_terrain": "إنشاء تضاريس من نقاط المسح أو من مستوٍ مائل",
+ "api.cmd.script_recipes": "قراءة كتل النصوص البرمجية ووصفاتها للإنشاءات الحرة"
+}

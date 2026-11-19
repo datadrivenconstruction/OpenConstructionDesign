@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "{name} がディスク上で変更されました。",
+ "src.watch.update": "モデルを更新",
+ "src.watch.compare": "比較",
+ "src.watch.ignore": "この版を無視",
+ "src.watch.missing": "{name}: ソースファイルが見つかりません。作業は続けられます。",
+ "src.watch.locate": "場所を指定…",
+ "src.watch.dismiss": "閉じる",
+ "src.watch.more": "ほか {n} 件のソースファイル",
+ "src.watch.done": "{name} から更新しました: {updated} 件変更、編集済みとして {kept} フィールドを保持、競合 {conflicts} 件、ロックされた値 {locked} 件を保持"
+}

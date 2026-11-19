@@ -1,0 +1,11 @@
+{
+ "sketch.points": "Points",
+ "sketch.rect": "Rectangle",
+ "sketch.circle": "Circle",
+ "sketch.polygon": "Polygon",
+ "sketch.radius": "R",
+ "sketch.sides": "Sides",
+ "sketch.circum": "Circumscribed",
+ "sketch.shape.tip": "Sketch shape (A switches). Rectangle: two corners. Circle and polygon: centre, then radius. Type a size and press Enter to fix it.",
+ "tool.err.zero_size": "Zero size: move the second point away from the first"
+}

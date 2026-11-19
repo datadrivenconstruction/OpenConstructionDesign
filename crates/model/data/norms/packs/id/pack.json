@@ -1,0 +1,50 @@
+{
+ "id": "id",
+ "version": "2026.11",
+ "parent": "generic",
+ "country": "ID",
+ "lang": [
+  "id"
+ ],
+ "units": {
+  "length": "m",
+  "display": "metric"
+ },
+ "conventions": {
+  "ground_floor": 1,
+  "area_standard": "gross",
+  "net_share": 0.85,
+  "note": "Building coefficients (KDB/KLB) and permit areas use gross floor area measured to outside of walls; apartment sales may quote net area. Net share is our own estimate.",
+  "source": null
+ },
+ "status": "tier3",
+ "climate": {
+  "zones": [],
+  "default": null
+ },
+ "research": {
+  "date": "2026-11-14",
+  "missing": [
+   "daylight.window_floor_ratio",
+   "accessible.turning_circle",
+   "fire.compartment_area_max",
+   "fire.compartment_area_max.sprinklered",
+   "stair.riser_max.house",
+   "stair.tread_min.house",
+   "stair.width_min.house",
+   "room.height_min",
+   "room.height_min.office",
+   "parking.per_dwelling"
+  ],
+  "unreachable": [
+   "https://jdih.kemenkoinfra.go.id salinan PP 16/2021 (invalid file)",
+   "https://klinikkonstruksi.jogjaprov.go.id Permen PUPR 14/2017 (11 MB scan, not parsed)",
+   "https://www.peraturan.go.id/files/bn1148-2017.pdf (not retrievable)",
+   "PP 16/2021 annex parts 2+ (not fetched)",
+   "https://jdih.pu.go.id (no connection; Permen PU 26/2008 PDF and detail pages)",
+   "https://peraturan.bpk.go.id (403 to automated clients)",
+   "web.archive.org: no snapshots of jdih.pu.go.id or peraturan.bpk.go.id PDFs"
+  ]
+ },
+ "note": "Numbers with verified=true were read in the cited clause; the rest are hints with a note of where we looked. Wording is our own; no text of a standard is stored."
+}

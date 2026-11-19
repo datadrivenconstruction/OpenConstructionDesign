@@ -1,0 +1,32 @@
+[
+ {
+  "id": "mod.distribute",
+  "icon": "distribute",
+  "mnemonic": "DB",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "modify",
+  "context": [
+   "door",
+   "window"
+  ]
+ },
+ {
+  "id": "ann.number",
+  "icon": "numbering",
+  "mnemonic": "NU",
+  "shortcuts": [],
+  "tab": "annotate",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M5",
+  "group": "text"
+ }
+]

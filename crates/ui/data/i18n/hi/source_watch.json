@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "{name} डिस्क पर बदल गई है।",
+ "src.watch.update": "मॉडल अपडेट करें",
+ "src.watch.compare": "तुलना करें",
+ "src.watch.ignore": "यह संस्करण छोड़ें",
+ "src.watch.missing": "{name}: स्रोत फ़ाइल नहीं मिली। काम जारी है।",
+ "src.watch.locate": "खोजें…",
+ "src.watch.dismiss": "बंद करें",
+ "src.watch.more": "और {n} स्रोत फ़ाइलें",
+ "src.watch.done": "{name} से अपडेट: {updated} बदले, {kept} फ़ील्ड संपादन के अनुसार रखे, {conflicts} टकराव, {locked} लॉक किए गए मान रखे गए"
+}

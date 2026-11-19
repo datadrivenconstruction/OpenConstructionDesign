@@ -1,0 +1,10 @@
+{
+ "wall_stack.we.stack_caption": "Tipo composto",
+ "wall_stack.we.side_left": "Faccia sinistra",
+ "wall_stack.we.side_right": "Faccia destra",
+ "wall_stack.we.from": "Da",
+ "wall_stack.we.to": "A",
+ "wall_stack.we.bottom": "Inferiore",
+ "wall_stack.we.delete_tip": "Elimina questo profilo",
+ "wall_stack.we.from_after_to": "'Da' deve venire prima di 'A'"
+}

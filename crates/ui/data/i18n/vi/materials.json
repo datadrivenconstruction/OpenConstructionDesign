@@ -1,0 +1,11 @@
+{
+ "materials.mat.name_empty": "Nhập tên vật liệu",
+ "materials.mat.empty_title": "Chưa có vật liệu",
+ "materials.mat.empty_hint": "Nhập tên bên dưới rồi nhấn Thêm",
+ "materials.mat.nothing_hint": "Không có vật liệu nào khớp với tìm kiếm",
+ "materials.mat.clear_search": "Xóa tìm kiếm",
+ "materials.mat.replace_with": "Thay bằng",
+ "materials.mat.delete_refused": "Không thể xóa: vật liệu đang được dùng ở {n} nơi. Hãy thay thế trước.",
+ "materials.mat.delete_confirm": "Xóa vật liệu “{name}”? Bạn có thể hoàn tác.",
+ "materials.mat.replace_confirm": "Thay “{from}” bằng “{to}” ở {n} cấu kiện? “{from}” sẽ bị xóa. Bạn có thể hoàn tác."
+}

@@ -1,0 +1,229 @@
+{
+ "typology": "apartment",
+ "source": "dbn-v2.2-15",
+ "clause": "typical flat programme",
+ "variants": [
+  {
+   "code": "k1",
+   "select": {
+    "room_kind": [
+     "living",
+     "bedroom"
+    ],
+    "count": 1
+   },
+   "rooms": [
+    {
+     "kind": "living",
+     "min_area": 14.0,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "kitchen",
+     "min_area": 7.0,
+     "daylight": true,
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "bath",
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "hall",
+     "verified": false
+    }
+   ],
+   "allowed": [
+    "storage",
+    "corridor",
+    "wc"
+   ],
+   "circulation_max": 0.18,
+   "storage_max": 0.05,
+   "source": "dbn-v2.2-15",
+   "clause": "typical flat programme",
+   "verified": false
+  },
+  {
+   "code": "k2",
+   "select": {
+    "room_kind": [
+     "living",
+     "bedroom"
+    ],
+    "count": 2
+   },
+   "rooms": [
+    {
+     "kind": "living",
+     "min_area": 14.0,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 8.0,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "kitchen",
+     "min_area": 7.0,
+     "daylight": true,
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "bath",
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "hall",
+     "verified": false
+    }
+   ],
+   "allowed": [
+    "storage",
+    "corridor",
+    "wc"
+   ],
+   "circulation_max": 0.18,
+   "storage_max": 0.05,
+   "source": "dbn-v2.2-15",
+   "clause": "typical flat programme",
+   "verified": false
+  },
+  {
+   "code": "k3",
+   "select": {
+    "room_kind": [
+     "living",
+     "bedroom"
+    ],
+    "count": 3
+   },
+   "rooms": [
+    {
+     "kind": "living",
+     "min_area": 14.0,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 8.0,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 8.0,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "kitchen",
+     "min_area": 7.0,
+     "daylight": true,
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "bath",
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "wc",
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "hall",
+     "verified": false
+    }
+   ],
+   "allowed": [
+    "storage",
+    "corridor",
+    "wc"
+   ],
+   "circulation_max": 0.18,
+   "storage_max": 0.05,
+   "source": "dbn-v2.2-15",
+   "clause": "typical flat programme",
+   "verified": false
+  },
+  {
+   "code": "k4",
+   "select": {
+    "room_kind": [
+     "living",
+     "bedroom"
+    ],
+    "count": 4
+   },
+   "rooms": [
+    {
+     "kind": "living",
+     "min_area": 14.0,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 8.0,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 8.0,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "bedroom",
+     "min_area": 8.0,
+     "daylight": true,
+     "verified": false
+    },
+    {
+     "kind": "kitchen",
+     "min_area": 7.0,
+     "daylight": true,
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "bath",
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "wc",
+     "wet": true,
+     "verified": false
+    },
+    {
+     "kind": "hall",
+     "verified": false
+    }
+   ],
+   "allowed": [
+    "storage",
+    "corridor",
+    "wc"
+   ],
+   "circulation_max": 0.18,
+   "storage_max": 0.05,
+   "source": "dbn-v2.2-15",
+   "clause": "typical flat programme",
+   "verified": false
+  }
+ ]
+}

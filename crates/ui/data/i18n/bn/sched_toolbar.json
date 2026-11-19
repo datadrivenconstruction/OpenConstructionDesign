@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "শিরোনামের নিচের ফিল্টার সারি। লেখা: অংশ; সংখ্যা: >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "কলাম দেখান বা লুকান",
+ "sched_toolbar.groups_tip": "কলাম অনুযায়ী সারি গোষ্ঠীবদ্ধ করুন, উপ-মোটসহ",
+ "sched_toolbar.formulas_tip": "গণনাকৃত কলাম",
+ "sched_toolbar.phase": "ফেজ",
+ "sched_toolbar.phase_tip": "কোন ফেজ থেকে সারি নেওয়া হবে",
+ "sched_toolbar.copy_tip": "নির্বাচিত সারি (বা সব দৃশ্যমান) TSV হিসেবে",
+ "sched_toolbar.import_tip": "রপ্তানি করা সূচি ফিরিয়ে পড়ুন: সারি Id অনুযায়ী, কলাম শিরোনাম অনুযায়ী; আগে গণনা, তারপর এক ধাপে ফিরিয়ে আনা",
+ "sched_toolbar.export_tip": "দৃশ্যমান সারি ও কলাম, মোটসহ; সংখ্যা সংখ্যাই থাকে",
+ "sched_toolbar.need_table": "আগে একটি সূচি খুলুন",
+ "sched_toolbar.busy_open": "ফাইল ডায়ালগ ইতিমধ্যে খোলা",
+ "sched_toolbar.busy_save": "সংরক্ষণ ডায়ালগ ইতিমধ্যে খোলা",
+ "sched_toolbar.clear_filter": "ফিল্টার মুছুন",
+ "sched_toolbar.fields_title": "কলাম"
+}

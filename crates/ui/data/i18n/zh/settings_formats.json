@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "工作簿导出后执行的操作",
+ "settings.area_decimals_desc": "面积中小数点后的位数",
+ "settings.volume_decimals_desc": "体积中小数点后的位数",
+ "settings.frac_desc": "英制长度中的最小分数单位",
+ "settings.small_area_desc": "将小于一平方英尺的面积以平方英寸显示",
+ "settings.sample_desc": "按当前选择显示数字的效果",
+ "autosave.title_desc": "为已打开的项目保留恢复副本",
+ "autosave.interval_desc": "恢复副本之间的时间间隔",
+ "autosave.keep_desc": "较旧的恢复副本将被删除",
+ "autosave.folder_desc": "留空表示默认文件夹",
+ "autosave.remind_desc": "提醒保存尚无文件的项目",
+ "settings.backend_desc": "正在使用的图形适配器",
+ "settings.news_desc": "此版本的更新内容",
+ "settings.assoc_default_desc": "将此应用设为模型文件的默认程序",
+ "settings.data_dir_desc": "缓存、恢复副本和日志保存在此处。"
+}

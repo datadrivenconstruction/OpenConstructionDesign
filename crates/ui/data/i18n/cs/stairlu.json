@@ -1,0 +1,12 @@
+{
+ "opt.stair.straight": "Přímé",
+ "opt.stair.l": "L",
+ "opt.stair.u": "U",
+ "opt.stair.gap": "Mezera",
+ "hint.stair.corner": "Schodiště L: vyberte roh zlomu · Backspace — odebrat poslední bod · Esc — odebrat poslední bod, bez bodů — zrušit",
+ "hint.stair.side": "Schodiště: vyberte stranu druhého ramene · Backspace — odebrat poslední bod · Esc — odebrat poslední bod, bez bodů — zrušit",
+ "tool.stair.flights": "{n} stupňů (celkem {m})",
+ "tool.stair.err_split": "Každé rameno potřebuje alespoň 2 stupně: první rameno má {n} z {m}",
+ "tool.stair.err_comfort": "Výška a šířka stupně porušují pravidlo pohodlí (2R + T)",
+ "tool.stair.err_input": "Velikost schodiště je mimo rozsah: zkontrolujte šířku, výšku a podesty"
+}

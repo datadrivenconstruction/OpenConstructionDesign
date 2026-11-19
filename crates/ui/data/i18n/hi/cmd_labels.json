@@ -1,0 +1,14 @@
+{
+ "cmd.arch.wall.tile": "दीवार",
+ "cmd.arch.door.tile": "दरवाज़ा",
+ "cmd.arch.window.tile": "खिड़की",
+ "cmd.arch.floor.tile": "मंज़िल",
+ "cmd.mod.move.tile": "ले जाएँ",
+ "cmd.mod.copy.tile": "कॉपी",
+ "cmd.mod.rotate.tile": "घुमाएँ",
+ "cmd.mod.mirror.tile": "मिरर",
+ "cmd.mod.trim.tile": "ट्रिम",
+ "cmd.mod.delete.tile": "हटाएँ",
+ "cmd.ann.dim.tile": "आयाम",
+ "cmd.ann.text.tile": "टेक्स्ट"
+}

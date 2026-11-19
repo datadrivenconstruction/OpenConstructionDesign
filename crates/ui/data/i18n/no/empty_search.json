@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "Ingenting funnet",
+ "empty.browser_search.hint": "Ingen visning, etasje, type eller rom samsvarer med dette søket.",
+ "empty.browser_search.action": "Fjern søk",
+ "empty.xl_filtered.title": "Ingen oppføringer samsvarer med filtrene",
+ "empty.xl_filtered.hint": "Slå på flere typer, velg et annet ark eller endre søketeksten.",
+ "empty.xl_filtered.action": "Fjern filtre",
+ "empty.xl_nochanges.title": "Ingen endringer i arbeidsboken",
+ "empty.xl_nochanges.hint": "Arbeidsboken samsvarer med modellen: import ville ikke endret noe.",
+ "empty.version_same.title": "Modellene er identiske",
+ "empty.version_same.hint": "Ingen forskjeller ble funnet mellom den åpne modellen og den valgte versjonen.",
+ "empty.templates.title": "Ingen visningsmaler ennå",
+ "empty.templates.hint": "Lag en fra gjeldende visning for å gjenbruke innstillingene på andre visninger.",
+ "empty.templates.action": "Gi en mal navn",
+ "empty.fe_params.title": "Ingen parametere ennå",
+ "empty.fe_params.hint": "Legg til en parameter under for å styre størrelser, materialer eller synlighet.",
+ "empty.fe_params.action": "Legg til en parameter"
+}

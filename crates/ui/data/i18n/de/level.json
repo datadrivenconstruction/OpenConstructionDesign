@@ -1,0 +1,13 @@
+{
+ "level.err_open": "Geschoss nicht geöffnet: {e}",
+ "level.need_name": "Ein Geschoss braucht einen Namen und eine Höhe",
+ "level.created": "Geschoss „{name}“ erstellt",
+ "level.err_create": "Geschoss nicht erstellt: {e}",
+ "level.err_edit": "Geschoss nicht geändert: {e}",
+ "level.edited": "Geschoss „{name}“ geändert",
+ "level.edited_stale": "Geschoss „{name}“ geändert, Ansicht nicht aktualisiert: {e}",
+ "level.last": "Das letzte Geschoss kann nicht gelöscht werden",
+ "level.deleted": "Geschoss gelöscht",
+ "level.not_empty": "Geschoss ist nicht leer: zuerst seine Elemente löschen",
+ "level.err_delete": "Geschoss nicht gelöscht: {e}"
+}

@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "混凝土",
+ "mat.masonry": "砌体",
+ "mat.brick": "砖",
+ "mat.insulation": "保温",
+ "mat.plaster": "抹灰",
+ "mat.render": "粉刷",
+ "mat.gypsum": "石膏板",
+ "mat.glass": "玻璃",
+ "mat.wood": "木材",
+ "mat.steel": "钢",
+ "mat.membrane": "防水膜",
+ "mat.other": "其他",
+ "warn.cat.wall": "墙",
+ "warn.cat.slab": "楼板",
+ "warn.cat.opening": "洞口",
+ "warn.cat.curtain_wall": "幕墙",
+ "td.mat.custom": "其他…"
+}

@@ -1,0 +1,7 @@
+{
+ "xl.msg.param_ambiguous": "kolumnen '{}' kan vara vilken som helst av parametrarna {}; skriv det exakta parameternamnet, inte tillämpat",
+ "xl.msg.param_tag_stale": "kolumnen '{}' anger en parameter som projektet inte har; inte tillämpad",
+ "xl.msg.dup_col_note": "kolumnen '{}' i {} upprepar kolumnen '{}' i {}; lika värden tillämpas en gång, en rad där de skiljer sig behåller modellvärdet",
+ "xl.msg.dup_col_differs": "kolumnerna '{}' och '{}' skiljer sig i {} och {}; modellvärdet behålls, behåll en kolumn",
+ "xl.msg.dup_col_id": "kolumnerna '{}' och '{}' skiljer sig i {} och {}, raden kan inte identifieras; inget tillämpades, behåll en kolumn"
+}

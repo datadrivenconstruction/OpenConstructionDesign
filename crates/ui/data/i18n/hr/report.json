@@ -1,0 +1,23 @@
+{
+ "cmd.app.report": "Prijavi problem…",
+ "cmd.app.report.desc": "Opisuje što je pošlo po zlu i sprema paket na ovom računalu: vaš tekst, podatke o verziji i sustavu, sliku prozora i zadnji zapis o padu. Ništa se ne šalje.",
+ "report.title": "Prijavi problem",
+ "report.what": "Što se dogodilo",
+ "report.expected": "Što ste očekivali",
+ "report.steps": "Koraci za ponavljanje",
+ "report.opt.shot": "Uključi sliku prozora",
+ "report.opt.model": "Uključi kopiju modela",
+ "report.opt.model.note": "Isključeno prema zadanim postavkama. Kopija sadrži podatke vašeg projekta, bez AI dnevnika.",
+ "report.opt.paths": "Zadrži korisnička imena u putanjama datoteka",
+ "report.local": "Paket se sprema samo na ovom računalu. Ništa se ne šalje automatski.",
+ "report.blocked": "Najprije opišite što se dogodilo.",
+ "report.save": "Spremi paket",
+ "report.copy": "Kopiraj tekst",
+ "report.cancel": "Odustani",
+ "report.copied": "Tekst izvješća kopiran.",
+ "report.saved": "Paket spremljen: {path}",
+ "report.failed": "Paket nije bilo moguće spremiti: {err}",
+ "report.model.fail": "Kopija modela nije izrađena, ništa nije spremljeno: {err}",
+ "report.crash.notice": "Prethodna sesija završila je padom.",
+ "report.crash.action": "Prijavi problem"
+}

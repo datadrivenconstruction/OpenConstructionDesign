@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "Kabit",
+ "elem.mep_fitting.many": "Mga fitting",
+ "elem.mep_fitting.kind.elbow": "Siko",
+ "elem.mep_fitting.kind.tee": "Hugis-T",
+ "elem.mep_fitting.kind.cross": "Krus",
+ "elem.mep_fitting.kind.transition": "Transisyon",
+ "elem.mep_fitting.kind.cap": "Takip",
+ "elem.mep_fitting.size": "Laki",
+ "elem.mep_fitting.at": "Posisyon",
+ "elem.mep_fitting.runs": "Takbo {n}",
+ "elem.mep_fitting.edit_run": "I-edit ang run",
+ "elem.mep_fitting.select_runs": "Piliin ang mga run nito",
+ "elem.mep_fitting.derived": "Sumusunod ang fitting sa mga run nito: kapag binago ang run, nagbabago rin ang fitting.",
+ "elem.mep_fitting.no_delete": "Hindi mabubura o mailipat nang mag-isa ang fitting. I-edit o burahin ang mga run nito.",
+ "elem.mep_fitting.hint": "I-click ang isang fitting sa plan para makita ang mga run nito.",
+ "elem.mep_fitting.picked": "Mga napiling fitting: {n}"
+}

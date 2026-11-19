@@ -1,0 +1,21 @@
+{
+ "mep.row.system": "Systemtyp",
+ "mep.row.elevation": "Startnivå",
+ "mep.row.slope": "Lutning",
+ "mep.row.material": "Materialtyp",
+ "mep.row.dev_elevation": "Nivå",
+ "mep.row.no_system": "Systemet finns inte längre. Välj ett annat.",
+ "mep.row.no_points": "Ledningen har inga punkter, så den har ingen nivå.",
+ "mep.row.system_domain": "System {system} tar inte emot denna ledningstyp ({kind}). Välj ett system av samma nättyp.",
+ "mep.row.material_pipes": "Ett material gäller endast rör; denna ledning är en {kind}.",
+ "mep.row.no_catalog": "Materialet har inga katalogdimensioner för denna ledning.",
+ "mep.mat.none": "Ej angivet",
+ "mep.mat.steel": "Stål",
+ "mep.mat.copper": "Koppar",
+ "mep.mat.pvc": "PVC",
+ "mep.mat.pp": "Polypropen",
+ "mep.err.follow_blocked": "En ansluten ledning kan inte följa denna ändring: det finns inget utrymme för dess ben på den nya platsen. Flytta enheten mindre, eller koppla först bort ledningen.",
+ "mep.err.follow_slope": "En ansluten ledning har ett fall som inte kan behållas på den nya platsen: det skulle sjunka under systemets minsta fall. Flytta enheten mindre i höjdled, eller koppla först bort ledningen.",
+ "mep.err.follow_port_lost": "En anslutning som denna ledning satt på finns inte längre efter ändringen. Flytta ledningen bort först, eller behåll enhetstypen.",
+ "mep.err.follow_device": "Denna ledning slutar vid en enhetsanslutning och kan inte lämna den. Flytta enheten i stället, eller koppla först bort ledningen."
+}

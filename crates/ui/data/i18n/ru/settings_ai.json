@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "Подключение",
+ "settings.ai_status_desc": "Модель, с которой работает ИИ-помощник; ключи хранятся в защищённом хранилище",
+ "settings.ai_not_connected": "Не подключено",
+ "settings.ai_connect": "Настройки подключения",
+ "settings.ai_connect_desc": "Адрес, модель и ключ вашей модели, облачной или локальной",
+ "settings.ai_connect_btn": "Настройки подключения…",
+ "settings.ai_panel": "Панель ИИ-помощника",
+ "settings.ai_panel_desc": "Опишите задачу словами, проверьте план и примените",
+ "settings.ai_open_panel": "Открыть панель ИИ"
+}

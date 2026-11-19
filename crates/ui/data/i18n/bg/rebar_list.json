@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "Премести нагоре",
+ "rebar_list.move_down": "Премести надолу",
+ "rebar_list.remove": "Премахни",
+ "rebar_list.zone_remove_last": "Зоната трябва да има поне едно помещение: изтрийте зоната, за да премахнете последното",
+ "rebar_list.rebar_empty_title": "Няма армировка в този модел",
+ "rebar_list.rebar_empty_hint": "Поставете армировка в носещ елемент и тя ще се появи тук в спецификацията.",
+ "rebar_list.rebar_empty_action": "Постави армировка"
+}

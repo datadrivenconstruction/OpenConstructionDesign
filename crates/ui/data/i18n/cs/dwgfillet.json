@@ -1,0 +1,20 @@
+{
+ "dwgfillet.fillet": "Zaoblit",
+ "dwgfillet.cancel": "Zastavit zaoblení",
+ "dwgfillet.tip": "Klikněte na dvě čáry na strany, které chcete zachovat: obě se oříznou nebo prodlouží do rohu, s tečným obloukem, je-li poloměr větší než nula",
+ "dwgfillet.radius": "Poloměr zaoblení",
+ "dwgfillet.radius_tip": "Poloměr oblouku v jednotkách výkresu; 0 vytvoří ostrý roh",
+ "dwgfillet.st.arm_first": "Klikněte na první čáru na stranu, kterou chcete zachovat",
+ "dwgfillet.st.arm_second": "Klikněte na druhou čáru na stranu, kterou chcete zachovat",
+ "dwgfillet.st.not_armed": "Nejprve zvolte Zaoblit",
+ "dwgfillet.st.click_line": "Klikněte na jednu čáru výkresu",
+ "dwgfillet.st.other_drawing": "Obě čáry musí patřit do stejného výkresu: začněte znovu",
+ "dwgfillet.st.changed": "První čára se změnila: začněte znovu",
+ "dwgfillet.st.same_line": "Vyberte jinou druhou čáru",
+ "dwgfillet.st.parallel": "Čáry jsou rovnoběžné a nikdy se nesetkají: roh nelze vytvořit",
+ "dwgfillet.st.degenerate": "Čára nemá délku",
+ "dwgfillet.st.no_side": "Na kliknuté straně není od rohu žádná délka",
+ "dwgfillet.st.too_big": "Poloměr je pro tyto čáry příliš velký: zvolte menší",
+ "dwgfillet.st.radius_bad": "Poloměr musí být nula nebo kladný",
+ "dwgfillet.st.done": "Roh vytvořen"
+}

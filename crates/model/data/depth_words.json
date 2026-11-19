@@ -1,0 +1,22 @@
+{
+  "d_letters": ["d", "д"],
+  "stages": [
+    ["концепт", 1],
+    ["concept", 1],
+    ["эскиз", 2],
+    ["sketch design", 2],
+    ["schematic design", 2],
+    ["стадия п", 3],
+    ["стадии п", 3],
+    ["design development", 3],
+    ["рабочк", 4],
+    ["рабочей документ", 4],
+    ["рабочая документ", 4],
+    ["рабочую документ", 4],
+    ["construction documents", 4],
+    ["working drawings", 4],
+    ["изготовлен", 5],
+    ["fabrication", 5],
+    ["shop drawings", 5]
+  ]
+}

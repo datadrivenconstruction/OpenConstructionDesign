@@ -1,0 +1,6 @@
+{
+ "cmd.ui.pane.next": "Next pane",
+ "cmd.ui.pane.next.desc": "Moves keyboard focus to the next visible pane: browser, canvas, properties, chat.",
+ "cmd.ui.pane.prev": "Previous pane",
+ "cmd.ui.pane.prev.desc": "Moves keyboard focus to the previous visible pane."
+}

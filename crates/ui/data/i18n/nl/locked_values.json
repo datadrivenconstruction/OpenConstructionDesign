@@ -1,0 +1,8 @@
+{
+ "cmd.props.param_lock": "Parameterwaarde vergrendelen of ontgrendelen",
+ "locked_values.kept": "{n} vergrendelde waarden behouden",
+ "locked_values.locked": "“{name}” vergrendeld: XLSX-import, gezamenlijk bewerken en AI laten de waarde staan",
+ "locked_values.unlocked": "“{name}” ontgrendeld",
+ "locked_values.locked_tip": "Vergrendeld: XLSX-import, gezamenlijk bewerken en AI laten deze waarde staan. Klik om te ontgrendelen  ·  Ctrl+L",
+ "locked_values.no_row": "Wijs een parameterrij in Eigenschappen aan en druk op Ctrl+L"
+}

@@ -1,0 +1,6 @@
+{
+ "pair_input.pair_hint": "Dua nilai dipisahkan dengan titik koma: @1000;500",
+ "pair_input.old_pair": "Koma di antara dua bilangan bulat tidak lagi membentuk pasangan: ketik 6000;4000 untuk dua nilai atau 6000,5 untuk desimal",
+ "pair_input.op.bad_length": "Bukan panjang: {text} ({why}). Tidak ada yang diubah",
+ "pair_input.op.bad_count": "Jumlah {text} tidak diambil: bilangan bulat dari {min} sampai {max}"
+}

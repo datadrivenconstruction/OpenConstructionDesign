@@ -1,0 +1,11 @@
+{
+ "empty.sv_notfound.title": "Vyn hittades inte",
+ "empty.sv_notfound.hint": "Vyn har tagits bort eller ingår inte längre i projektet.",
+ "empty.sv_notfound.action": "Stäng vyn",
+ "empty.sv_cuts_nothing.title": "Den här sektionen skär inget",
+ "empty.sv_cuts_nothing.hint": "Snittlinjen möter inga väggar, plattor eller öppningar inom sitt djup. Flytta linjen eller gör vyn djupare.",
+ "empty.sv_cuts_nothing.action": "Visa i plan",
+ "empty.sv_shows_nothing.title": "Den här fasaden visar inget",
+ "empty.sv_shows_nothing.hint": "Inga väggar, plattor eller öppningar ligger inom vyns djup. Flytta vylinjen eller gör vyn djupare.",
+ "empty.sv_shows_nothing.action": "Visa i plan"
+}

@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "Revisado",
+ "ai.redraft.added": "+{n} añadidos",
+ "ai.redraft.removed": "−{n} eliminados",
+ "ai.redraft.changed": "~{n} modificados",
+ "ai.redraft.strip": "{what} desde su última revisión",
+ "ai.redraft.note": "Plan revisado examinado: {what}",
+ "ai.redraft.more": "+{n} más",
+ "ai.redraft.ack": "Entendido",
+ "ai.redraft.ack.tip": "Marcar esta revisión como vista; Aplicar la usará como destino",
+ "ai.redraft.removed_list": "Elementos eliminados: {n}",
+ "ai.redraft.review_first": "El plan cambió después de su mensaje: revise primero los cambios",
+ "ai.redraft.mark.tip": "Nuevo o modificado desde su última revisión",
+ "ai.redraft.emptied": "El seguimiento eliminó todos los elementos: el borrador está vacío"
+}

@@ -1,0 +1,14 @@
+{
+ "ai.stream.waiting": "En attente du modèle",
+ "ai.stream.reading": "Lecture du modèle",
+ "ai.stream.working": "En cours",
+ "ai.stream.answering": "Rédaction de la réponse",
+ "ai.stream.tools_one": "1 outil",
+ "ai.stream.tools_many": "{n} outils",
+ "ai.stream.secs": "{n} s",
+ "ai.stream.stalled": "Toujours en attente du service du modèle",
+ "ai.stream.stop": "Arrêter",
+ "ai.stream.cancelled": "Arrêté",
+ "ai.stream.incomplete": "Le brouillon est incomplet. Rien n’a été appliqué au modèle.",
+ "ai.stream.sep": " · "
+}

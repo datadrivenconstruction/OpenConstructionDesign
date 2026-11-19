@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "Dibuje un contorno cerrado: haga clic en los puntos y luego Intro o Terminar para crear",
+ "sketch_hints.sk_finish": "Terminar",
+ "sketch_hints.sk_cancel": "Cancelar",
+ "sketch_hints.import_warn": "advertencias de comprobación del modelo: {n} (primera: {first})",
+ "sketch_hints.ai.offline.schedule": "Abrir la tabla",
+ "sketch_hints.ai.offline.check": "Comprobar con las reglas",
+ "sketch_hints.ai.offline.warnings": "Mostrar advertencias",
+ "cmd.file.publish_pdf": "Publicar láminas en PDF…",
+ "cmd.file.publish_pdf.desc": "Publica las láminas elegidas en PDF. Igual que Exportar láminas a PDF/SVG.",
+ "sketch_hints.verify_none": "No hay nada definido por el asistente de IA en la selección para verificar",
+ "sketch_hints.contours_none": "No hay toposólido en el modelo: las curvas de nivel aparecen al crear uno",
+ "sketch_hints.contours_off": "Curvas de nivel del toposólido ocultas",
+ "sketch_hints.contours_on": "Curvas de nivel del toposólido visibles"
+}

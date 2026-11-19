@@ -1,0 +1,20 @@
+{
+ "api.cmd.move_elements": "Nihuta elemente meetrites antud nihkega",
+ "api.cmd.copy_elements": "Kopeeri elemendid ühe või mitme nihkega meetrites",
+ "api.cmd.rotate_elements": "Pööra elemente punkti ümber antud nurga võrra kraadides",
+ "api.cmd.mirror_elements": "Peegelda elemendid läbi kahe punkti kaudu kulgeva telje",
+ "api.cmd.scale_elements": "Skaleeri elemente punkti suhtes antud teguriga",
+ "api.cmd.array_elements": "Elementide lineaarne või radiaalne massiiv",
+ "api.cmd.offset_wall": "Seina paralleelkoopia meetrites antud kaugusel",
+ "api.cmd.split_wall": "Jaga sein punktis kaheks",
+ "api.cmd.pin_elements": "Fikseeri või vabasta elemendid",
+ "api.cmd.flip_openings": "Pööra uste ja akende avamise pool või külg",
+ "api.cmd.create_level": "Loo tase meetrites antud kõrgusmärgiga",
+ "api.cmd.edit_level": "Muuda taseme nime või kõrgust",
+ "api.cmd.delete_level": "Kustuta tase",
+ "api.cmd.place_rooms": "Paiguta ruum iga taseme suletud alasse",
+ "api.cmd.join_elements": "Ühenda, eralda või vaheta geomeetria ühendusi",
+ "api.cmd.place_footings": "Paiguta iga taseme posti alla vundament",
+ "api.cmd.create_terrain": "Loo maastik mõõdistuspunktidest või kaldpinnast",
+ "api.cmd.script_recipes": "Loe vabade konstruktsioonide skriptiplokke ja retsepte"
+}

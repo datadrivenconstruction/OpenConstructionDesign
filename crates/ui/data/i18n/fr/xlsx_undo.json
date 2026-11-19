@@ -1,0 +1,6 @@
+{
+ "cmd.xlsx.undo_apply": "Annuler la dernière application XLSX",
+ "xlsx_undo.later": "Non annulé : le modèle a été modifié après cette application tableur XLSX. Utilisez Ctrl+Z pas à pas ou le panneau Historique.",
+ "xlsx_undo.gone": "Rien à annuler : cette application tableur XLSX est déjà annulée.",
+ "xlsx_undo.busy": "Terminez ou annulez d'abord le dessin en cours, puis annulez l'application tableur XLSX."
+}

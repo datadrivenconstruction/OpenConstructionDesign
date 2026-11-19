@@ -1,0 +1,11 @@
+{
+ "job.stage.prepare": "Projekt wird vorbereitet",
+ "open_guard.already_open": "{name} ist bereits geöffnet",
+ "open_guard.from_cache": "{name}: aus dem Importcache geöffnet",
+ "open_guard.known_project": "{name} wurde zuvor importiert: dieses Projekt wird geöffnet",
+ "open_guard.locate": "Suchen",
+ "open_guard.mem_low": "Wenig Speicher: das Netzbudget wird halbiert und der Aufbau der Detailstufen angehalten",
+ "open_guard.mem_low_short": "Wenig Speicher: der Aufbau der Detailstufen ist angehalten, bis Speicher frei wird",
+ "open_guard.no_window": "Das Fenster dieses Projekts wurde nicht gefunden",
+ "open_guard.switch_window": "Zu diesem Fenster wechseln"
+}

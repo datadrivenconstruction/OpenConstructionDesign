@@ -1,0 +1,5 @@
+{
+ "lv.level.deleted_attach": "Nivel eliminado; {n} muros perdieron su conexión superior",
+ "lv.level.rooms": "{n} espacios tomarán la altura del nivel de destino ({dz} m): {names}. Pulse Mover de nuevo para confirmar",
+ "lv.level.pinned": "Nivel no eliminado: los elementos fijados no pueden pasar a otro nivel: {names}. Desfíjelos primero"
+}

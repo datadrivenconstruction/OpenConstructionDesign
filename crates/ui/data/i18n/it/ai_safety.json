@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "Chiave nell'indirizzo",
+ "ai_safety.auth.query_name": "Parametro dell'indirizzo",
+ "ai_safety.need_query_name": "Indica il parametro dell'indirizzo che porta la chiave",
+ "ai_safety.apply_unlogged": "Applicato, ma il registro delle modifiche non è stato scritto",
+ "ai_safety.audit_unlogged": "Impossibile scrivere il registro dell'assistente IA",
+ "ai_safety.chat_not_saved": "La chat non è stata salvata nel progetto. Nuovo tentativo in corso.",
+ "ai_safety.clip_clears": "Gli appunti si svuotano tra 30 s",
+ "ai_safety.copied_clears": "Copiato. Gli appunti si svuotano tra 30 s",
+ "ai_safety.key_session_only": "Chiave conservata fino alla chiusura dell'app",
+ "ai.settings.no_data_dir": "questo sistema non fornisce una cartella per le impostazioni dell'app"
+}

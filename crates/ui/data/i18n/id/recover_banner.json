@@ -1,0 +1,7 @@
+{
+ "recover.untitled_note": "Proyek ini belum pernah disimpan",
+ "recover.file_missing": "File proyek tidak ditemukan",
+ "recover.banner": "Pekerjaan yang belum disimpan dari sesi sebelumnya ditemukan untuk {name}",
+ "recover.banner_review": "Tinjau",
+ "recover.later_archived": "Ditunda {n} kali: snapshot dipindahkan ke arsip"
+}

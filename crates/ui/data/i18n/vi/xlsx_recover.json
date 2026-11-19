@@ -1,0 +1,16 @@
+{
+ "xlsx_recover.title": "Một lần xuất vào sổ làm việc đã liên kết bị gián đoạn",
+ "xlsx_recover.both": "Lần xuất dừng giữa lúc chuyển sổ làm việc trước sang một bên và đặt bản mới vào chỗ. Không mất gì: sổ làm việc mới đầy đủ tại {part}, bản trước được giữ tại {bak}.",
+ "xlsx_recover.part_only": "Lần xuất dừng trước khi sổ làm việc mới được đặt vào chỗ. Nó đã đầy đủ tại {part}.",
+ "xlsx_recover.bak_only": "Lần xuất dừng trước khi sổ làm việc mới sẵn sàng. Sổ làm việc trước được giữ tại {bak}.",
+ "xlsx_recover.finish": "Hoàn tất lần xuất bị gián đoạn",
+ "xlsx_recover.restore": "Khôi phục sổ làm việc trước",
+ "xlsx_recover.finished": "Lần xuất bị gián đoạn đã hoàn tất: sổ làm việc mới đã ở đúng chỗ.",
+ "xlsx_recover.finished_kept": "Lần xuất bị gián đoạn đã hoàn tất: sổ làm việc mới đã ở đúng chỗ, bản trước được giữ tại {bak}.",
+ "xlsx_recover.restored": "Sổ làm việc trước đã trở lại đúng chỗ.",
+ "xlsx_recover.restore_failed": "Không thể chuyển sổ làm việc trước trở lại ({err}). Nó được giữ tại {path}.",
+ "xlsx_recover.not_restored": "Không thể đặt sổ làm việc mới vào chỗ, và sổ làm việc trước cũng không thể chuyển trở lại. Không mất gì: sổ làm việc trước được giữ tại {path}; Đồng bộ sẽ đề nghị hoàn tất hoặc khôi phục.",
+ "xlsx_recover.finish_failed": "Không thể đặt sổ làm việc mới vào chỗ ({err}). Nó vẫn ở {path}.",
+ "xlsx_recover.dest_back": "Sổ làm việc đã trở lại {path}: không có gì bị chuyển.",
+ "xlsx_recover.nothing": "Không còn gì của lần xuất bị gián đoạn để chuyển."
+}

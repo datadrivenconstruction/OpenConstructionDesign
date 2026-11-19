@@ -1,0 +1,19 @@
+{
+ "empty.v3d_gpu.title": "3D är inte tillgängligt på den här grafikadaptern",
+ "empty.v3d_gpu.hint": "Modellen är säker och planen fungerar. Starta om med säker grafik för att försöka med 3D igen.",
+ "empty.v3d_gpu.action": "Starta om med säker grafik",
+ "empty.v3d_loading.title": "Bygger 3D…",
+ "empty.v3d_loading.pct": "Öppnar… {pct} %",
+ "empty.plan_hidden.title": "Alla element är dolda i den här planen",
+ "empty.plan_hidden.hint": "Tillfällig dold eller isolerad visning lämnar inget synligt.",
+ "empty.plan_hidden.action": "Visa alla",
+ "empty.plan_graphics.title": "Vygrafiken döljer alla kategorier",
+ "empty.plan_graphics.hint": "Kategorireglerna för den här vyn lämnar inget att visa.",
+ "empty.plan_graphics.action": "Öppna vygrafik",
+ "empty.plan_phase.title": "Fasfiltret döljer allt",
+ "empty.plan_phase.hint": "Inget på den här nivån finns i fasen som visas av den här vyn.",
+ "empty.plan_phase.action": "Byt fas",
+ "empty.plan_level.title": "Inga element på den här nivån",
+ "empty.plan_level.hint": "Andra nivåer i modellen har element.",
+ "empty.plan_level.action": "Gå till nivån med element"
+}

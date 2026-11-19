@@ -1,0 +1,8 @@
+{
+ "script_rec.started": "Rekaman: perubahan yang Anda buat mulai sekarang akan masuk ke skrip. Pilih «Rekam tindakan ke skrip» lagi untuk berhenti.",
+ "script_rec.saved": "Skrip «{name}» disimpan: {n} perubahan.",
+ "script_rec.skipped": "{k} perubahan dari alat tanpa bentuk skrip tidak direkam.",
+ "script_rec.nothing": "Rekaman dihentikan: tidak ada perubahan untuk disimpan.",
+ "script_rec.failed": "Rekaman tidak disimpan: {why}",
+ "script_rec.no_folder": "tidak ada folder pengaturan untuk skrip"
+}

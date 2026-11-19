@@ -1,0 +1,41 @@
+{
+ "id": "kr",
+ "version": "2026.11",
+ "parent": "generic",
+ "country": "KR",
+ "lang": [
+  "ko"
+ ],
+ "units": {
+  "length": "m",
+  "display": "metric"
+ },
+ "conventions": {
+  "ground_floor": 1,
+  "area_standard": "net",
+  "net_share": 1.0,
+  "note": "Apartment sizes are normally quoted as exclusive-use area (jeonyong myeonjeok), inside the unit walls and excluding shared areas.",
+  "source": null
+ },
+ "status": "tier3",
+ "climate": {
+  "zones": [],
+  "default": null
+ },
+ "research": {
+  "date": "2026-11-14",
+  "missing": [
+   "stair.riser_max.house",
+   "stair.tread_min.house",
+   "stair.width_min.house",
+   "load.floor_residential",
+   "load.floor_office"
+  ],
+  "unreachable": [
+   "https://molit.go.kr/USR/law/m_46/dtl.jsp?r_id=3821 (redirect loop)",
+   "https://www.law.go.kr article pages other than the lsLinkProc print view (script-loaded); open API needs a registered key",
+   "https://web.archive.org (429 rate limit for 2024 snapshots)"
+  ]
+ },
+ "note": "Numbers with verified=true were read in the cited clause; the rest are hints with a note of where we looked. Wording is our own; no text of a standard is stored."
+}

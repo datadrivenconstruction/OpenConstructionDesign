@@ -1,0 +1,7 @@
+{
+ "ai.retry.countdown": "Se reia în {n} s",
+ "ai.retry.try": "Încercarea automată {i} din {max}. Aceeași cerere se trimite din nou.",
+ "ai.retry.now": "Reia acum",
+ "ai.retry.gave_up": "Încă fără răspuns după {max} încercări automate.",
+ "ai.retry.shorten": "Scurtează cererea"
+}

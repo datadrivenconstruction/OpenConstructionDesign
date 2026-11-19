@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "Yopiq kontur chizing: nuqtalarni bosing, so'ng yaratish uchun Enter yoki Tugatish",
+ "sketch_hints.sk_finish": "Tugatish",
+ "sketch_hints.sk_cancel": "Bekor qilish",
+ "sketch_hints.import_warn": "model tekshiruvi ogohlantirishlari: {n} (birinchisi: {first})",
+ "sketch_hints.ai.offline.schedule": "Jadvalni ochish",
+ "sketch_hints.ai.offline.check": "Qoidalar bo'yicha tekshirish",
+ "sketch_hints.ai.offline.warnings": "Ogohlantirishlarni ko'rsatish",
+ "cmd.file.publish_pdf": "Varaqlarni PDF ga nashr qilish…",
+ "cmd.file.publish_pdf.desc": "Tanlangan varaqlarni PDF ga nashr qiladi. Varaqlarni PDF/SVG ga eksport qilish bilan bir xil.",
+ "sketch_hints.verify_none": "Tanlovda AI yordamchisi o'rnatgan narsa yo'q",
+ "sketch_hints.contours_none": "Modelda topografik yuza yo'q: bittasi yaratilgach, konturlar paydo bo'ladi",
+ "sketch_hints.contours_off": "Topografik kontur yashirildi",
+ "sketch_hints.contours_on": "Topografik kontur ko'rsatildi"
+}

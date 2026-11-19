@@ -1,0 +1,3 @@
+walls=[(0,0)-(6,0) (6,0)-(6,4) (6,4)-(0,4) (0,4)-(0,0)]
+# Window on the east wall, typed distance from the wall end
+tool(WN) move(6,0.6) type("1000") key(Enter) → rows(opening)=1 journal=+1

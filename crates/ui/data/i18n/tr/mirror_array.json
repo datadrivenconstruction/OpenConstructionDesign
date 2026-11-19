@@ -1,0 +1,5 @@
+{
+ "mirror_array.err.count": "Adet 2 ile 200 arasında bir tam sayıdır: 4 3000 ya da adım üç haneliyse 4;300",
+ "mirror_array.err.length": "Adım veya toplam pozitif bir uzunluktur, ör. 3 000 ya da 1.2 m",
+ "mirror_array.err.angle": "Tarama, sıfır olmayan ve en fazla 360 olan derece cinsinden bir açıdır"
+}

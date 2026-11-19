@@ -1,0 +1,14 @@
+[
+ {
+  "id": "mgr.schedules",
+  "icon": "project-params",
+  "mnemonic": "SM",
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M2",
+  "group": "project"
+ }
+]

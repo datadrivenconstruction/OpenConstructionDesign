@@ -1,0 +1,8 @@
+brief = "Bathtub with waste and water connections."
+category = "plumbing"
+must = param FlowCold
+must = param FlowHot
+must = solids >= 5
+must = ports 3
+must = port pipe 3
+must = flex Length 1360 2125

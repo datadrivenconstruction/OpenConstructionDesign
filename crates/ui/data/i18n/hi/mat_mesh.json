@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "इम्पोर्टेड मेश",
+ "mat_mesh.mesh.none_selected": "इस सामग्री को देने के लिए 3D व्यू में इम्पोर्टेड मेश चुनें।",
+ "mat_mesh.mesh.current": "पहला चुना गया मेश: {material}",
+ "mat_mesh.mesh.current_none": "पहले चुने गए मेश की कोई सामग्री नहीं है।",
+ "mat_mesh.mesh.assign": "{n} चुने गए पर लागू करें",
+ "mat_mesh.mesh.assign_tip": "Realistic शैली चुने गए मेश पर इस सामग्री का टेक्सचर दिखाती है",
+ "mat_mesh.mesh.assign_cat": "श्रेणी {category} पर लागू करें",
+ "mat_mesh.mesh.assign_cat_tip": "उस श्रेणी का हर इम्पोर्टेड मेश, जिसकी अपनी सामग्री नहीं है",
+ "mat_mesh.mesh.clear": "चुने गए साफ़ करें",
+ "mat_mesh.mesh.clear_tip": "चुने गए मेश अपनी श्रेणी की सामग्री या सादे रंग पर लौट जाते हैं",
+ "mat_mesh.mesh.clear_cat": "श्रेणी साफ़ करें"
+}

@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}, na razini",
+ "cmd_buttons.purge.undo": "Uklanjanje je jedan korak poništavanja.",
+ "cmd_buttons.unpin.none": "Nijedan odabrani element nije prikvačen",
+ "cmd_buttons.change_type.none": "Najprije odaberite zidove: njihova vrsta mijenja se u jednom koraku",
+ "cmd_buttons.units.metric": "Jedinice: metričke",
+ "cmd_buttons.units.imperial": "Jedinice: stope i palci",
+ "cmd_buttons.units.back": "Vrati prebacivanje",
+ "cmd_buttons.underlay.on": "Podloga uključena: razina ispod prikazana je zatamnjeno",
+ "cmd_buttons.underlay.off": "Podloga isključena",
+ "cmd_buttons.underlay.none": "Podloga uključena, ali razina ispod nema što prikazati",
+ "cmd_buttons.zoom_sel.no_shape": "Odabir nema oblik za uokvirivanje u ovom pogledu",
+ "cmd_buttons.close.base": "Kartice tlocrta i 3D ostaju otvorene; otvorite presjek, list ili nacrt da biste ga zatvorili",
+ "tool.equipment": "Oprema",
+ "hint.equipment.place": "Oprema: odaberite mjesto · Esc za izlaz",
+ "cmd_buttons.table.opened": "Tablica otvorena uz model",
+ "cmd_buttons.circuits.tip": "Otvara popis električnih strujnih krugova ovog modela"
+}

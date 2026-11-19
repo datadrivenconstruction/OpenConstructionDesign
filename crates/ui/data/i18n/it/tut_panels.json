@@ -1,0 +1,9 @@
+{
+ "empty.props_model.title": "Nulla selezionato",
+ "empty.props_model.hint": "Clicca un elemento nella vista per vedere le sue proprietà. Oppure esporta tutti i parametri in una cartella di lavoro, modificali lì e riapplicali.",
+ "empty.props_model.action": "Esporta in un foglio di calcolo",
+ "tut.spreadsheet.title": "Andata e ritorno con un foglio di calcolo",
+ "tut.spreadsheet.1": "Premi Esporta in un foglio di calcolo qui sotto: scegli cosa includere e salva la cartella di lavoro.",
+ "tut.spreadsheet.2": "Apri la cartella in un foglio di calcolo, modifica una cella e salvala. L'anteprima qui mostra la modifica.",
+ "tut.spreadsheet.3": "Controlla l'anteprima e premi Applica al modello. Ctrl+Z lo annulla."
+}

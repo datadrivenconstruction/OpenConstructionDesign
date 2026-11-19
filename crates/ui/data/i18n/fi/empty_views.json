@@ -1,0 +1,19 @@
+{
+ "empty.v3d_gpu.title": "3D ei ole käytettävissä tällä grafiikkasovittimella",
+ "empty.v3d_gpu.hint": "Malli on turvallinen ja pohjapiirros toimii. Käynnistä uudelleen turvallisella grafiikalla kokeillaksesi 3D:tä uudelleen.",
+ "empty.v3d_gpu.action": "Käynnistä turvallisella grafiikalla uudelleen",
+ "empty.v3d_loading.title": "Rakennetaan 3D:tä…",
+ "empty.v3d_loading.pct": "Avataan… {pct} %",
+ "empty.plan_hidden.title": "Kaikki elementit on piilotettu tässä pohjapiirroksessa",
+ "empty.plan_hidden.hint": "Tilapäinen piilotus tai eristys ei jätä mitään näkyviin.",
+ "empty.plan_hidden.action": "Näytä kaikki",
+ "empty.plan_graphics.title": "Näkymän grafiikka piilottaa kaikki luokat",
+ "empty.plan_graphics.hint": "Tämän näkymän luokkasäännöt eivät jätä mitään näytettävää.",
+ "empty.plan_graphics.action": "Avaa näkymän grafiikka",
+ "empty.plan_phase.title": "Vaihesuodatin piilottaa kaiken",
+ "empty.plan_phase.hint": "Tällä tasolla ei ole mitään, mikä näkyy tämän näkymän vaiheessa.",
+ "empty.plan_phase.action": "Vaihda vaihe",
+ "empty.plan_level.title": "Tällä tasolla ei ole elementtejä",
+ "empty.plan_level.hint": "Mallin muilla tasoilla on elementtejä.",
+ "empty.plan_level.action": "Siirry tasolle, jolla on elementtejä"
+}

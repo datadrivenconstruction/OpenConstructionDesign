@@ -1,0 +1,6 @@
+{
+ "cmd.file.import_again": "יבא שוב",
+ "cmd.file.import_again.desc": "בונה פרויקט חדש מקובץ המקור במצבו הנוכחי.",
+ "cmd.file.open_kept": "פתח יבוא שנשמר",
+ "cmd.file.open_kept.desc": "פותח את היבוא שהושלם ונשמר כאשר הודעת השינויים שלא נשמרו בוטלה."
+}

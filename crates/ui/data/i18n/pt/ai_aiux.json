@@ -1,0 +1,19 @@
+{
+ "ai.plan.apply_updated": "Aplicar plano atualizado",
+ "ai.plan.keys_anywhere": "Ctrl+Enter aplica e Esc interrompe a solicitação também a partir do plano ou da vista 3D, a menos que um campo de texto esteja sendo digitado.",
+ "ai.plan.rebased": "Atualizado com o modelo atual: {what}",
+ "ai.value.bad": "\"{text}\" não é um valor válido para {name}",
+ "ai.value.both": "O assistente de IA alterou este valor para {agent} enquanto você digitava {mine}. Escolha o que manter.",
+ "ai.value.choose_first": "Escolha primeiro o seu valor ou o do assistente de IA no cartão",
+ "ai.value.elem": "Elemento {n}: {what}",
+ "ai.value.held": "Seu valor {mine} será aplicado quando a solicitação terminar",
+ "ai.value.keep_agent": "Manter {agent}",
+ "ai.value.lost": "Seu valor {mine} para {what} em \"{title}\" não foi usado: o assistente de IA removeu esse valor do cartão",
+ "ai.value.more": "Mais {n} valores: expanda a linha",
+ "ai.value.refused": "O plano não pôde aceitar este valor e mantém o anterior: {why}",
+ "ai.value.refused_next": "Digite outro valor ou desmarque o item para deixá-lo fora da aplicação.",
+ "ai.value.tip": "Corrija o valor no rascunho; o modelo muda somente ao Aplicar. Enter confirma, Esc restaura.",
+ "ai.value.use_mine": "Usar {mine}",
+ "ai.value.was": "era {old}",
+ "ai.value.bad_len": "Campo «{name}»: {why}"
+}

@@ -1,0 +1,15 @@
+{
+ "fe.add_why_empty": "Introduceți mai întâi un nume de parametru",
+ "fe.add_why_exists": "Există deja un parametru cu acest nume; folosiți Aplică pentru a-l modifica",
+ "fe.apply_why_missing": "Niciun parametru cu acest nume; tastați un nume existent",
+ "fe.nochange": "Nicio modificare încă",
+ "options.accept_more": "Acceptă…",
+ "options.delete_more": "Șterge…",
+ "options.empty_title": "Niciun set de opțiuni încă",
+ "options.more": "Alte acțiuni: {name}",
+ "options.primary_named": "Opțiune principală: {name}",
+ "options.primary_tip": "Fă aceasta opțiunea principală a setului",
+ "options.select_first": "Mai întâi selectați elemente în model",
+ "options.show_3d": "Arată în 3D: {name}",
+ "options.show_plan": "Arată în plan: {name}"
+}

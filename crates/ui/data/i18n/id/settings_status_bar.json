@@ -1,0 +1,10 @@
+{
+ "cmd.view.axes_full": "Sumbu penuh",
+ "cmd.view.axes_full.desc": "Menampilkan sumbu X dan Y sebagai garis penuh di denah. Tahan F9 untuk menampilkannya hanya saat ditekan.",
+ "settings.axes_full": "Sumbu",
+ "settings.axes_full_desc": "Sumbu denah sebagai garis penuh di seluruh lembar. Tahan F9 untuk melihat sekilas.",
+ "settings.axes_full_on": "Tampilkan sumbu penuh",
+ "plan.hud.axes_tip": "Tahan {key} untuk menampilkan sumbu penuh",
+ "status.axes_full.on": "Sumbu penuh aktif",
+ "status.axes_full.off": "Sumbu penuh nonaktif"
+}

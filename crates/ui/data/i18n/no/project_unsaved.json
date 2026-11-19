@@ -1,0 +1,7 @@
+{
+ "project_unsaved.unsaved.model": "Modellendringer er ikke lagret.",
+ "project_unsaved.unsaved.drawings": {
+  "one": "# plassert tegning er ikke lagret i prosjektet: endringene går tapt.",
+  "other": "# plasserte tegninger er ikke lagret i prosjektet: endringene går tapt."
+ }
+}

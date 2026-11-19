@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "Beton",
+ "mat.masonry": "Terma devor",
+ "mat.brick": "G'isht",
+ "mat.insulation": "Izolyatsiya",
+ "mat.plaster": "Suvoq",
+ "mat.render": "Pardozlash qatlami",
+ "mat.gypsum": "Gipskarton",
+ "mat.glass": "Shisha",
+ "mat.wood": "Yog'och",
+ "mat.steel": "Po'lat",
+ "mat.membrane": "Membrana",
+ "mat.other": "Boshqa",
+ "warn.cat.wall": "Devor",
+ "warn.cat.slab": "Plita",
+ "warn.cat.opening": "Teshik",
+ "warn.cat.curtain_wall": "Parda devor",
+ "td.mat.custom": "Boshqa…"
+}

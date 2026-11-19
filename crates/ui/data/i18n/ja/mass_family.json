@@ -1,0 +1,9 @@
+{
+ "cmd.mass.timeline_family": "履歴からファミリーへ",
+ "cmd.mass.timeline_family.desc": "選択した形状の作成履歴からコンポーネントファミリーを作成します。履歴のパラメータはファミリーのパラメータになります。",
+ "mass_family.done": "ファミリー {name} を作成しました。パラメータ数: {n}",
+ "mass_family.refused": "ファミリーは作成されませんでした: {e}",
+ "mass_family.no_mass": "先にパラメトリック形状を選択してください",
+ "mass_family.add_modifier": "修飾子を追加",
+ "mass_family.needs_faces": "選択した面が必要です: 形状タブでこのツールを使用してください"
+}

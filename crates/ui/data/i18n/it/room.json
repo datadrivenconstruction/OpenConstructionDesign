@@ -1,0 +1,6 @@
+{
+ "geom.length": "Lunghezza",
+ "sched.cat.room_seps": "Separatori di locali",
+ "room.err.point_leave": "Locale {n}: il punto uscirebbe dal suo contorno",
+ "room.err.point_taken": "Locale {n}: il punto cadrebbe nel locale {other}"
+}

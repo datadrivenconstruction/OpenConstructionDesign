@@ -1,0 +1,14 @@
+{
+ "cmd.mod.divide": "Împarte",
+ "cmd.mod.divide.short": "Împarte",
+ "cmd.mod.divide.desc": "Împarte un perete în părți egale dintr-o dată. Scrie numărul de părți, apoi fă clic pe perete.",
+ "whereis.mod.divide": "împarte, părți egale, taie în bucăți, segmentează peretele",
+ "hint.split.parts": "Divizare: fă clic pe un perete · număr — părți (2–100) · Esc — anulare",
+ "create_input.divide.bad_parts": "«{text}» nu este un număr de părți: scrie un număr întreg de la 2 la {max}",
+ "create_input.ws.err.empty": "Scrie un nume pentru aranjament",
+ "create_input.ws.err.long": "Numele este prea lung: cel mult 40 de caractere",
+ "create_input.ws.err.preset": "Acest nume aparține unui aranjament integrat",
+ "create_input.ws.err.full": "Cel mult 24 de aranjamente salvate: șterge mai întâi unul",
+ "create_input.seldim.locked": "Distanța {v} blocată",
+ "create_input.seldim.positive": "Distanța trebuie să fie peste zero"
+}

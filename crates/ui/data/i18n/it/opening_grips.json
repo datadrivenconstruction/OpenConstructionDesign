@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "Inverti lato cerniera",
+ "cmd.edit.flip_hand.desc": "Specchia lungo il muro le porte e le finestre selezionate, così le cerniere passano all'altra estremità dell'apertura.",
+ "cmd.edit.flip_facing": "Inverti lato apertura",
+ "cmd.edit.flip_facing.desc": "Ribalta le porte e le finestre selezionate sull'altro lato del muro.",
+ "opening_grips.flip_hand": "Inverti cerniera",
+ "opening_grips.flip_hand.tip": "Cerniere sull'altra estremità dell'apertura (Maiusc+F)",
+ "opening_grips.flip_facing": "Inverti lato",
+ "opening_grips.flip_facing.tip": "Apertura sull'altro lato del muro (Maiusc+G)",
+ "opening_grips.flip.done": "Invertito: {n}",
+ "opening_grips.flip.none": "Seleziona una porta o una finestra da invertire",
+ "opening_grips.flip.fail": "Non invertito: {why}"
+}

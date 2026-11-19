@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "Idom",
+ "elem.mep_fitting.many": "Idomok",
+ "elem.mep_fitting.kind.elbow": "Könyök",
+ "elem.mep_fitting.kind.tee": "T-idom",
+ "elem.mep_fitting.kind.cross": "Kereszt",
+ "elem.mep_fitting.kind.transition": "Átmenet",
+ "elem.mep_fitting.kind.cap": "Lezáró",
+ "elem.mep_fitting.size": "Méret",
+ "elem.mep_fitting.at": "Helyzet",
+ "elem.mep_fitting.runs": "{n}. szakasz",
+ "elem.mep_fitting.edit_run": "Szakasz szerkesztése",
+ "elem.mep_fitting.select_runs": "Szakaszainak kijelölése",
+ "elem.mep_fitting.derived": "Az idom követi a szakaszait: ha a szakaszt módosítja, az idom is változik vele.",
+ "elem.mep_fitting.no_delete": "Az idom önmagában nem törölhető és nem mozgatható. Szerkessze vagy törölje a szakaszait.",
+ "elem.mep_fitting.hint": "Kattintson egy idomra az alaprajzon, hogy lássa a szakaszait.",
+ "elem.mep_fitting.picked": "Kijelölt idomok: {n}"
+}

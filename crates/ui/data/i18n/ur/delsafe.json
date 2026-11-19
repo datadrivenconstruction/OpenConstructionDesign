@@ -1,0 +1,6 @@
+{
+ "delsafe.ring.opening_shape": "خلے کا خاکہ خود کو کاٹے گا یا گر جائے گا",
+ "delsafe.ring.opening_boundary": "ایک خلا بیرونی حد کو کاٹے گا یا چھوئے گا",
+ "delsafe.ring.openings_overlap": "خلائیں ایک دوسرے پر چڑھیں گی یا چھوئیں گی",
+ "xl.msg.delsafe_instance_param_on_types": "پیرامیٹر '{}' ایک انسٹینس پیرامیٹر ہے؛ اسے اجزا کی شیٹ پر بدلیں، لاگو نہیں ہوا"
+}

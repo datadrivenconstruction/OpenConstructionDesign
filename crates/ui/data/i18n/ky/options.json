@@ -1,0 +1,15 @@
+{
+ "fe.add_why_empty": "Адегенде параметрдин атын киргизиңиз",
+ "fe.add_why_exists": "Мындай аталыштагы параметр бар; аны өзгөртүү үчүн Колдонууну басыңыз",
+ "fe.apply_why_missing": "Мындай аталыштагы параметр жок; бар атты териңиз",
+ "fe.nochange": "Азырынча өзгөрүүлөр жок",
+ "options.accept_more": "Кабыл алуу…",
+ "options.delete_more": "Өчүрүү…",
+ "options.empty_title": "Варианттардын топтомдору азырынча жок",
+ "options.more": "Дагы аракеттер: {name}",
+ "options.primary_named": "Негизги вариант: {name}",
+ "options.primary_tip": "Муну топтомдун негизги варианты кылуу",
+ "options.select_first": "Адегенде модельдеги элементтерди тандаңыз",
+ "options.show_3d": "3Dде көрсөтүү: {name}",
+ "options.show_plan": "Планда көрсөтүү: {name}"
+}

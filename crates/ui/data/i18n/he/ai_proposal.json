@@ -1,0 +1,13 @@
+{
+ "ai.proposal.title": "הצעת סוכן",
+ "ai.proposal.meta": "{actor} · פעולות: {ops}",
+ "ai.proposal.apply.desc": "מחיל את ההצעה כולה כשלב אחד; Ctrl+Z מבטל אותה",
+ "ai.proposal.applying": "מחיל…",
+ "ai.proposal.applied": "ההצעה הוחלה. Ctrl+Z מבטל אותה.",
+ "ai.proposal.applied_resync": "ההצעה הוחלה, אך המבט עדיין לא התעדכן. הוא מתרענן מעצמו; Ctrl+Z מבטל את השלב.",
+ "ai.proposal.stale": "המודל השתנה אחרי שההצעה נבדקה. בקש מהסוכן להציע אותה שוב.",
+ "ai.proposal.toast.applied": "ההצעה הוחלה. Ctrl+Z מבטל אותה.",
+ "ai.proposal.toast.stale": "המודל השתנה אחרי התצוגה המקדימה, ולכן לא הוחל דבר. בצע תצוגה מקדימה שוב: בקש מהסוכן להציע מחדש.",
+ "ai.proposal.toast.refused": "ההצעה לא הוחלה: {reason}",
+ "ai.proposal.rejected": "ההצעה נדחתה."
+}

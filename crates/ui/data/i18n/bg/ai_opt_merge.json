@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "Слей вариант: {name}",
+ "ai_opt_merge.whole": "Слей целия вариант",
+ "ai_opt_merge.parts": "Слей избраните части",
+ "ai_opt_merge.note": "Защо този вариант",
+ "ai_opt_merge.rebased": "Моделът се промени след създаването на този вариант: сливането е преизчислено спрямо текущия модел. Проверете промените, преди да приложите.",
+ "ai_opt_merge.left.not_picked": "Не е избрано от варианта",
+ "ai_opt_merge.left.unticked": "Махната отметка във варианта",
+ "ai_opt_merge.left.conflict": "Не може да се добави към текущия модел: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "Този вариант не може да се слее. Отхвърлен вариант първо трябва да се възстанови.",
+ "ai_opt_merge.refused.stale": "Моделът се промени след създаването на този вариант. Преизчислете сливането спрямо текущия модел.",
+ "ai_opt_merge.refused.nothing_picked": "Нищо не е избрано за сливане.",
+ "ai_opt_merge.refused.unknown_item": "Точка {item} не е част от този вариант.",
+ "ai_opt_merge.refused.not_in_option": "Избраният елемент не е част от този вариант.",
+ "ai_opt_merge.refused.needs_left_out": "Точка {item} изисква точка {needs}. Изберете и нея или разрешете добавянето на зависимостите.",
+ "ai_opt_merge.refused.set_gone": "Точка {item} сочи към избор, който вече не съществува. Генерирайте варианта отново.",
+ "ai_opt_merge.refused.busy": "Друг план е отворен. Първо го приложете или отхвърлете.",
+ "ai_opt_merge.refused.failed": "Сливането не можа да бъде подготвено: {reason}",
+ "ai_opt_merge.revive": "Възстанови вариант",
+ "ai_opt_merge.merged": "Слято"
+}

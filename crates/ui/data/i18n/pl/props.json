@@ -1,0 +1,18 @@
+{
+ "props.multi.title": {
+  "one": "# element",
+  "other": "# elementów"
+ },
+ "props.multi.cats": {
+  "one": "# kategoria",
+  "other": "# kategorii"
+ },
+ "props.multi.varies": {
+  "one": "zmienia się (#)",
+  "other": "zmienia się (#)"
+ },
+ "props.multi.clear": "Wyczyść zaznaczenie",
+ "props.multi.undo": "Cofnij",
+ "props.multi.narrowed": "Zaznaczenie: {n} · {name}",
+ "props.multi.chip_tip": "{name}: {n}  ·  Kliknięcie pokazuje ich właściwości, Ctrl+kliknięcie zostawia tylko te"
+}

@@ -1,0 +1,8 @@
+{
+ "mep_units.unit.mm": "mm",
+ "mep_units.unit.in": "英寸",
+ "mep_units.dn": "DN",
+ "mep_units.diameter": "直径",
+ "mep_units.system.new": "新建系统",
+ "mep_units.system.none": "无系统"
+}

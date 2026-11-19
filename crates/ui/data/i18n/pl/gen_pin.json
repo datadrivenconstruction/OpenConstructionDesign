@@ -1,0 +1,7 @@
+{
+ "gen.pin.room": "Zmieniono pomieszczenie wygenerowanego projektu. Zablokuj je, aby poprawka projektu zostawiła je na miejscu.",
+ "gen.pin.storey": "Zmieniono kondygnację wygenerowanego projektu. Zablokuj ją, aby poprawka projektu zachowała jej ściany i otwory.",
+ "gen.pin.action": "Zablokuj",
+ "gen.pin.done": "Zablokowano: poprawka projektu zachowa to, a resztę rozmieści wokół",
+ "gen.pin.failed": "Nie udało się zablokować"
+}

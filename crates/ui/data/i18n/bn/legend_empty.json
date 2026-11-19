@@ -1,0 +1,5 @@
+{
+ "legend.legend.empty_hint": "উপরে নাম লিখে Create চাপুন।",
+ "legend.legend.pick_hint": "উপরের তালিকা থেকে একটি লিজেন্ড বাছুন।",
+ "legend.legend.taken": "“{name}” নামে লিজেন্ড আগে থেকেই আছে। অন্য নাম লিখুন।"
+}

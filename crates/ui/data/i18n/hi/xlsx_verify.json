@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "लागू करना पलटा गया: मॉडल पूर्वावलोकन से मेल नहीं खाता था। {what}",
+ "xlsx_verify.not_written": "{row} नहीं बदली गई।",
+ "xlsx_verify.lost": "{row} गायब हो गई।",
+ "xlsx_verify.not_deleted": "{row} हटाई नहीं गई।",
+ "xlsx_verify.extra_deleted": "{row} हटाई गई, जबकि पूर्वावलोकन में वह रखी गई थी।",
+ "xlsx_verify.created": "{table}: {want} की जगह {got} नए।",
+ "xlsx_verify.value": "{row}, {field}: अपेक्षित {want} (था {old}), मिला {got}।",
+ "xlsx_verify.check_failed": "परिणाम जाँचा नहीं जा सका: {e}",
+ "xlsx_verify.plan_failed": "लागू करना शुरू नहीं हुआ: जाँच मॉडल नहीं पढ़ सकी ({e})।",
+ "xlsx_verify.take_back_failed": "चरण पलटा नहीं जा सका ({e}): पूर्ववत करें का उपयोग करें।",
+ "xlsx_verify.t.wall": "दीवार",
+ "xlsx_verify.t.opening": "ओपनिंग",
+ "xlsx_verify.t.room": "कमरा",
+ "xlsx_verify.t.slab": "फ़्लोर",
+ "xlsx_verify.t.level": "लेवल",
+ "xlsx_verify.t.wall_type": "दीवार प्रकार",
+ "xlsx_verify.t.slab_type": "फ़्लोर प्रकार",
+ "xlsx_verify.t.col": "कॉलम",
+ "xlsx_verify.t.beam": "बीम",
+ "xlsx_verify.t.roof": "छत",
+ "xlsx_verify.t.curtain_wall": "कर्टन वॉल"
+}

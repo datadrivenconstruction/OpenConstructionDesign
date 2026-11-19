@@ -1,0 +1,23 @@
+id = "G10_chair__de"
+tier = "hard"
+group = "Any geometry"
+title = "Chair"
+lang = "de"
+base = "empty"
+
+[[turn]]
+say = "Modelliere einen Esszimmerstuhl: Sitzfläche 45 x 45 cm auf 45 cm Höhe, Rückenlehne bis 90 cm, vier verjüngte Beine, zwei Rückenstreben, abgerundete Sitzkante."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "col+beam+brace+truss+gridshell_bar+solid+mass+mesh+freeform+shell_elem+gridshell+wall+slab+roof+stair+toposolid+wall_spline+comp:chair|seat|leg"
+min = 5.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

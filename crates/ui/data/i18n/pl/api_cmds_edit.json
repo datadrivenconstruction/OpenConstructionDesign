@@ -1,0 +1,20 @@
+{
+ "api.cmd.move_elements": "Przesuń elementy o wektor w metrach",
+ "api.cmd.copy_elements": "Kopiuj elementy o jedno lub więcej przesunięć w metrach",
+ "api.cmd.rotate_elements": "Obróć elementy wokół punktu o kąt w stopniach",
+ "api.cmd.mirror_elements": "Odbij elementy względem osi przechodzącej przez dwa punkty",
+ "api.cmd.scale_elements": "Skaluj elementy względem punktu o współczynnik",
+ "api.cmd.array_elements": "Układ liniowy lub promienisty elementów",
+ "api.cmd.offset_wall": "Równoległa kopia ściany w odległości w metrach",
+ "api.cmd.split_wall": "Podziel ścianę na dwie w punkcie",
+ "api.cmd.pin_elements": "Zablokuj lub odblokuj elementy",
+ "api.cmd.flip_openings": "Odwróć stronę zawiasów lub kierunek otwierania drzwi i okien",
+ "api.cmd.create_level": "Utwórz poziom na rzędnej w metrach",
+ "api.cmd.edit_level": "Zmień nazwę poziomu lub jego rzędną",
+ "api.cmd.delete_level": "Usuń poziom",
+ "api.cmd.place_rooms": "Umieść pomieszczenie w każdym zamkniętym obszarze poziomu",
+ "api.cmd.join_elements": "Połącz, rozłącz lub zamień połączenia geometrii",
+ "api.cmd.place_footings": "Umieść stopę fundamentową pod każdym słupem poziomu",
+ "api.cmd.create_terrain": "Utwórz teren z punktów pomiarowych lub z nachylonej płaszczyzny",
+ "api.cmd.script_recipes": "Przeczytaj bloki skryptów i przepisy swobodnych konstrukcji"
+}

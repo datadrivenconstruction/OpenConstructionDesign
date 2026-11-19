@@ -1,0 +1,7 @@
+{
+ "_doc": "Command ids renamed after release: old id -> current id. User key maps, sequences and usage saved under an old id are mapped on load. Rows are permanent: never remove one.",
+ "renames": {
+  "xs50.undo_apply": "xlsx.undo_apply",
+  "xs57.undo_import": "keys.undo_import"
+ }
+}

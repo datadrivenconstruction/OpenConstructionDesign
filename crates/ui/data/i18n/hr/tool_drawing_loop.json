@@ -1,0 +1,4 @@
+{
+ "tool.err.drawing_open": "Linije crteža oko ove točke ne zatvaraju se u petlju",
+ "tool.err.drawing_crossing": "Petlja crteža oko ove točke siječe samu sebe"
+}

@@ -1,0 +1,7 @@
+{
+ "recover.untitled_note": "Ez a projekt soha nem lett mentve",
+ "recover.file_missing": "A projektfájl nem található",
+ "recover.banner": "Egy korábbi munkamenetből mentetlen munka maradt: {name}",
+ "recover.banner_review": "Áttekintés",
+ "recover.later_archived": "Halasztva {n} alkalommal: a pillanatképek az archívumba kerültek"
+}

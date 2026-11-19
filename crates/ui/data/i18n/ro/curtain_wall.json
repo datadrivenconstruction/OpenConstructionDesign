@@ -1,0 +1,12 @@
+{
+ "curtain_wall.cw.issue.slab": "planșeu {id}: {e}",
+ "curtain_wall.cw.issue.body": "corp {id}: {e}",
+ "curtain_wall.cw.added": "Fațade cortină adăugate: {n}",
+ "curtain_wall.cw.add_failed": "Fațada cortină nu a fost construită: {e}",
+ "curtain_wall.cw.edited_warn": "Fațada cortină #{id} modificată: {w}",
+ "curtain_wall.cw.edited": "Fațada cortină #{id} a fost modificată",
+ "curtain_wall.cw.not_changed": "Nemodificat: {e}",
+ "curtain_wall.cw.room_edited": "Încăperea #{id} a fost modificată",
+ "curtain_wall.cw.slope_range": "Nemodificat: panta este în afara intervalului",
+ "curtain_wall.cw.slope_set": "Planșeul #{id}: panta {pct}"
+}

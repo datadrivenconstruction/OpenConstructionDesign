@@ -1,0 +1,13 @@
+{
+ "cmdl.mode_cmd": "Cmd",
+ "cmdl.mode_ai": "AI",
+ "cmdl.toggle": "Mga command o ang AI assistant (Ctrl+J)",
+ "cmdl.hint": "Command o alias (W, L, M, RO), punto #x;y, @dx;dy, d<anggulo. Ctrl+J: magtanong sa AI assistant",
+ "cmdl.hint_ai": "Magtanong sa AI assistant tungkol sa model o humiling ng pagbabago. Ctrl+J: balik sa mga command",
+ "cmdl.sent": "Naipadala sa AI assistant",
+ "cmdl.failed": "Hindi maisagawa dito ang “{text}”",
+ "cmdl.no_tool": "Simulan muna ang isang drawing command, saka i-type ang mga punto nito",
+ "cmdl.unknown": "Walang command na “{text}”. Ipapadala ito ng Ctrl+J sa AI assistant",
+ "cmdl.bad": "Hindi mabasa ang “{text}”: {e}",
+ "cmdl.shape": "Ang “{text}” ay hindi punto: i-type ang x;y, #x;y, @dx;dy o positibong distansya<anggulo"
+}

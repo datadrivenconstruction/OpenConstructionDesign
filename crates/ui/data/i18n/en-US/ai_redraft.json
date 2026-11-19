@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "Revised",
+ "ai.redraft.added": "+{n} added",
+ "ai.redraft.removed": "−{n} removed",
+ "ai.redraft.changed": "~{n} changed",
+ "ai.redraft.strip": "{what} since your last look",
+ "ai.redraft.note": "Revised plan reviewed: {what}",
+ "ai.redraft.more": "+{n} more",
+ "ai.redraft.ack": "Got it",
+ "ai.redraft.ack.tip": "Mark this revision as seen; Apply then targets it",
+ "ai.redraft.removed_list": "Removed items: {n}",
+ "ai.redraft.review_first": "The plan changed after your message: review the changes first",
+ "ai.redraft.mark.tip": "New or changed since your last look",
+ "ai.redraft.emptied": "The follow-up removed every item: the draft is empty"
+}

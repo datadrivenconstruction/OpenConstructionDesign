@@ -1,0 +1,28 @@
+id = "G18_fractal_tree__es"
+tier = "hard"
+group = "Any geometry"
+title = "Fractal tree structure"
+lang = "es"
+base = "empty"
+
+[[turn]]
+say = "Una cubierta estructural en forma de árbol: un tronco que se ramifica recursivamente en 4 generaciones, cada rama se divide en 3, las ramas se reducen con factor 0.7, altura total 12 m, con un tablero de cubierta sobre la copa."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "col+beam+brace+solid"
+min = 80.0
+
+[[oracle.geom]]
+kind = "height"
+min = 10.0
+max = 15.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

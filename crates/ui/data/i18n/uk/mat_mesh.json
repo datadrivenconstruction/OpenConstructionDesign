@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "Імпортовані сітки",
+ "mat_mesh.mesh.none_selected": "Виберіть імпортовані сітки у 3D-вигляді, щоб призначити їм цей матеріал.",
+ "mat_mesh.mesh.current": "Перша вибрана сітка: {material}",
+ "mat_mesh.mesh.current_none": "Перша вибрана сітка не має матеріалу.",
+ "mat_mesh.mesh.assign": "Призначити вибраним: {n}",
+ "mat_mesh.mesh.assign_tip": "Реалістичний стиль показує текстуру цього матеріалу на вибраних сітках",
+ "mat_mesh.mesh.assign_cat": "Призначити категорії {category}",
+ "mat_mesh.mesh.assign_cat_tip": "Кожна імпортована сітка цієї категорії без власного матеріалу",
+ "mat_mesh.mesh.clear": "Очистити вибрані",
+ "mat_mesh.mesh.clear_tip": "Вибрані сітки повертаються до матеріалу категорії або до простого кольору",
+ "mat_mesh.mesh.clear_cat": "Очистити категорію"
+}

@@ -1,0 +1,14 @@
+{
+ "ai.stream.waiting": "في انتظار النموذج",
+ "ai.stream.reading": "جارٍ قراءة النموذج",
+ "ai.stream.working": "جارٍ العمل",
+ "ai.stream.answering": "جارٍ كتابة الرد",
+ "ai.stream.tools_one": "أداة واحدة",
+ "ai.stream.tools_many": "{n} أدوات",
+ "ai.stream.secs": "{n} ث",
+ "ai.stream.stalled": "ما زال في انتظار خدمة النموذج",
+ "ai.stream.stop": "إيقاف",
+ "ai.stream.cancelled": "أُوقف",
+ "ai.stream.incomplete": "المسودة غير مكتملة. لم يُطبَّق شيء على النموذج.",
+ "ai.stream.sep": " · "
+}

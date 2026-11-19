@@ -1,0 +1,7 @@
+brief = "Three-seat sofa."
+category = "furniture"
+must = param Width
+must = param Depth
+must = solids >= 5
+must = ports 0
+must = flex Width 1600 2500

@@ -1,0 +1,15 @@
+{
+ "cmd.data.export_step.desc": "Uloží celý model nebo výběr jako STEP AP214 nebo AP242: tělesa s přesnými rovinnými, válcovými, kuželovými, kulovými, toroidními a B-spline plochami, ostatní prvky jako rovinné plochy, barvy, jeden uzel sestavy na podlaží.",
+ "cmd.data.export_3mf.desc": "Uloží celý model nebo výběr jako 3MF pro tisk: jeden objekt na prvek, barvy, jednotky a kontrolu, že každé těleso je uzavřené.",
+ "fmenu.export.step": "STEP přesná tělesa (.step)",
+ "fmenu.export.3mf": "3MF pro tisk (.3mf)",
+ "mx.schema": "Schéma STEP",
+ "mx.schema.ap214": "AP214 (nejširší podpora)",
+ "mx.schema.ap242": "AP242",
+ "mx.watertight": "Tělesa, která nejsou uzavřená",
+ "mx.watertight.report": "Zapsat je a vypsat",
+ "mx.watertight.skip": "Vynechat je",
+ "mx.watertight.require": "Zrušit export",
+ "mx.faceted": "{fmt} uložen: {path} ({exact} přesných těles, {n} zapsáno jako rovinné plochy: {first})",
+ "sheets.print.svg": "SVG"
+}

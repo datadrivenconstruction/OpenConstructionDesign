@@ -1,0 +1,15 @@
+{
+ "cmd.ctx.floor.clean_outline": "रूपरेखा साफ़ करें",
+ "cmd.ctx.floor.clean_outline.desc": "जहाँ फ़्लोर की रूपरेखा खुद पर मुड़ती है, वहाँ पतली नुकीली रेखाएँ हटाता है। पहले प्रीव्यू दिखाता है; एक अनडू स्टेप।",
+ "outline_cleanup.title": "रूपरेखा साफ़ करें",
+ "outline_cleanup.intro": "इस फ़्लोर की रूपरेखा संकरी नोकों पर खुद पर मुड़ती है: {n}। सफ़ाई से वे हट जाएँगी; बाकी सब वैसा ही रहेगा।",
+ "outline_cleanup.legend_before": "मोटी रेखा: अभी की रूपरेखा",
+ "outline_cleanup.legend_after": "पतली रेखा: सफ़ाई के बाद की रूपरेखा",
+ "outline_cleanup.undo": "इसे एक स्टेप में अनडू किया जा सकता है।",
+ "outline_cleanup.apply": "साफ़ करें",
+ "outline_cleanup.cancel": "रद्द करें",
+ "outline_cleanup.done": "रूपरेखा साफ़ हुई, हटाई गई नुकीली रेखाएँ: {n}",
+ "outline_cleanup.none": "इस फ़्लोर की रूपरेखा में कोई नोक नहीं है",
+ "outline_cleanup.failed": "रूपरेखा साफ़ नहीं हो सकी",
+ "outline_cleanup.changed": "प्रीव्यू के बाद रूपरेखा बदल गई; कुछ नहीं लिखा गया। नया प्रीव्यू देखें।"
+}

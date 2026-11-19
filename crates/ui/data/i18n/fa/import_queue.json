@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "در صف پشت کار در حال اجرا: {n}",
+ "import_queue.queue_full": "صف پر است، {n} فایل اضافه نشدند",
+ "import_queue.changed": "{name} بعد از ساخته شدن این پروژه به‌روز شده است. پروژهٔ قبلی باز شد.",
+ "import_queue.import_again": "واردسازی دوباره",
+ "import_queue.kept": "واردسازی تمام‌شده نگه داشته می‌شود",
+ "import_queue.open_it": "بازش کن",
+ "import_queue.sum.head": "واردسازی: {editable} قابل ویرایش (دیوارها {walls}، بازشوها {open}، کف‌ها {slabs}، فضاها {rooms}، سایر {other})، {meshes} به‌صورت شیء",
+ "import_queue.sum.unchanged": "، بدون تغییر {n}",
+ "import_queue.sum.updated": "، به‌روز شد {n}",
+ "import_queue.sum.missing": "، در منبع نیست {n} (نگه داشته شد)",
+ "import_queue.sum.skipped": "، رد شد {n}",
+ "import_queue.sum.warnings": "، هشدارها {n}",
+ "import_queue.import_failed": "واردسازی ناموفق: {e}"
+}

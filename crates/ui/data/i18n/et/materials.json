@@ -1,0 +1,11 @@
+{
+ "materials.mat.name_empty": "Sisesta materjali nimi",
+ "materials.mat.empty_title": "Materjale veel pole",
+ "materials.mat.empty_hint": "Sisesta allpool nimi ja vajuta Lisa",
+ "materials.mat.nothing_hint": "Otsingule ei vasta ükski materjal",
+ "materials.mat.clear_search": "Tühista otsing",
+ "materials.mat.replace_with": "Asenda",
+ "materials.mat.delete_refused": "Ei saa kustutada: materjali kasutatakse {n} kohas. Asenda see kõigepealt.",
+ "materials.mat.delete_confirm": "Kas kustutada materjal “{name}”? Seda saab tagasi võtta.",
+ "materials.mat.replace_confirm": "Kas asendada “{from}” väärtusega “{to}” {n} elemendis? “{from}” eemaldatakse. Seda saab tagasi võtta."
+}

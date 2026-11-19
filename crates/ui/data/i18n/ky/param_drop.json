@@ -1,0 +1,8 @@
+{
+ "param_drop.title": "Параметрдин маанилерин өчүрөсүзбү?",
+ "param_drop.intro": "{name} параметри эми бул категорияларга байланган эмес:",
+ "param_drop.line": "{category}: {values} өчүрүлөт",
+ "param_drop.undo": "Бир Ctrl+Z аларды баарын кайтарат.",
+ "param_drop.confirm": "Маанилерди өчүрүп, сактоо",
+ "param_drop.cancel": "Жокко чыгаруу"
+}

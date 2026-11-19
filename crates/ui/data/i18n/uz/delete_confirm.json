@@ -1,0 +1,59 @@
+{
+ "del.k.door": {
+  "one": "# ta eshik",
+  "other": "# ta eshik"
+ },
+ "del.k.window": {
+  "one": "# ta deraza",
+  "other": "# ta deraza"
+ },
+ "del.k.opening": {
+  "one": "# ta teshik",
+  "other": "# ta teshik"
+ },
+ "del.k.comp": {
+  "one": "# ta joylashtirilgan komponent",
+  "other": "# ta joylashtirilgan komponent"
+ },
+ "del.k.rebar": {
+  "one": "# ta armatura to'plami",
+  "other": "# ta armatura to'plami"
+ },
+ "del.k.port": {
+  "one": "# ta joylashtirilgan MEP porti",
+  "other": "# ta joylashtirilgan MEP porti"
+ },
+ "del.k.joist": {
+  "one": "# ta karkas to'sin",
+  "other": "# ta karkas to'sin"
+ },
+ "del.k.railing": {
+  "one": "# ta panjara",
+  "other": "# ta panjara"
+ },
+ "del.k.tag": {
+  "one": "# ta belgi",
+  "other": "# ta belgi"
+ },
+ "del.k.dim": {
+  "one": "# ta o'lcham (ajratilgan)",
+  "other": "# ta o'lcham (ajratilgan)"
+ },
+ "del.also": "Shuningdek ta'sirlanadi: {list}",
+ "del.rooms": {
+  "one": "# ta xona chegara devorini yo'qotadi",
+  "other": "# ta xona chegara devorini yo'qotadi"
+ },
+ "del.cancelled": "O'chirish bekor qilindi, hech narsa o'zgarmadi",
+ "del.confirm.title": "Bog'liqliklari bilan o'chirish",
+ "del.confirm.lead": {
+  "one": "# ta tanlangan element quyidagilarni ham olib ketadi:",
+  "other": "# ta tanlangan element quyidagilarni ham olib ketadi:"
+ },
+ "del.confirm.levels": {
+  "one": "ularning # tasi boshqa qavatda",
+  "other": "ularning # tasi boshqa qavatda"
+ },
+ "del.confirm.all": "Hammasini o'chirish",
+ "del.confirm.cancel": "Bekor qilish"
+}

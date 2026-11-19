@@ -1,0 +1,10 @@
+{
+ "type_pick.pick.search": "タイプまたは厚さを検索",
+ "type_pick.pick.empty": "一致するタイプはありません",
+ "type_pick.pick.edit": "タイプを編集…",
+ "type_pick.pick.mixed": "混在",
+ "type_pick.pick.layers": {
+  "one": "# レイヤ",
+  "other": "# レイヤ"
+ }
+}

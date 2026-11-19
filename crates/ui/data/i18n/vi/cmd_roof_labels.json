@@ -1,0 +1,11 @@
+{
+ "cmd.arch.roof_gable.short": "Đầu hồi",
+ "cmd.arch.roof_hip.short": "Chóp",
+ "cmd.arch.roof_shed.short": "Một dốc",
+ "cmd.arch.roof_mansard.short": "Mansard",
+ "cmd.arch.roof_gambrel.short": "Chữ M",
+ "cmd.arch.roof_barrel.short": "Vòm",
+ "cmd.arch.roof_edges.short": "Mép mái",
+ "cmd.arch.roof_opening.short": "Lỗ mở",
+ "cmd.mass.roof_by_face.short": "Theo mặt"
+}

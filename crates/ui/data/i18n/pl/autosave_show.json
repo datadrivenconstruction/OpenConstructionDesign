@@ -1,0 +1,4 @@
+{
+ "cmd.mgr.autosave_show": "Pokaż autozapis",
+ "cmd.mgr.autosave_show.desc": "Otwiera okno autozapisu; pozostaje otwarte, jeśli jest już widoczne."
+}

@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "স্বয়ংক্রিয় সংরক্ষণ ব্যর্থ, সর্বশেষ পরিবর্তন সুরক্ষিত নয়। {why}",
+ "autosave_status.autosave_open": "স্বয়ংক্রিয় সংরক্ষণের সেটিংস",
+ "autosave_status.autosave_recovered": "স্বয়ংক্রিয় সংরক্ষণ আবার কাজ করছে।",
+ "autosave_status.autosave_reason": "কারণ: {why}"
+}

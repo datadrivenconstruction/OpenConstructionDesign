@@ -1,0 +1,10 @@
+{
+ "elem.multi.title": "{n} elements",
+ "elem.multi.varies": "varies",
+ "elem.multi.tip": "Enter sets all selected elements",
+ "elem.multi.hidden": "{n} rows only on some elements",
+ "elem.multi.none": "The selected elements have no rows in common",
+ "elem.multi.range": "The value is outside the allowed range",
+ "elem.multi.changed": "Changed {n} elements · Ctrl+Z undoes",
+ "elem.multi.same": "Already this value on all selected elements"
+}

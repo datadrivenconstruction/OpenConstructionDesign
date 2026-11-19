@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "En masse kan ikke snus eller speiles: formhistorikken har ingen rotert steg. Flytt eller kopier den, eller tegn den på nytt i ny retning.",
+ "sched_cats.col.name": "Navn",
+ "sched_cats.col.material": "Materiale",
+ "sched_cats.col.void": "Hulrom",
+ "sched_cats.col.inplace": "Støpt på stedet",
+ "sched_cats.col.volume": "Netto volum",
+ "sched_cats.col.area": "Overflateareal",
+ "sched_cats.col.floor_area": "Gulvareal",
+ "sched_cats.col.thickness": "Tykkelse",
+ "sched_cats.col.points": "Punkter",
+ "elem.toposolid.points": "Målepunkter",
+ "elem.toposolid.count": "Punkter",
+ "elem.toposolid.low": "Lavest",
+ "elem.toposolid.high": "Høyest",
+ "elem.toposolid.edit": "Rediger punkter",
+ "elem.toposolid.edit_tip": "Velg, dra og sett kote for målepunkter i planen",
+ "elem.toposolid.pick_hint": "Klikk på et punkt i planen for å velge det. Klikk igjen for å legge til eller fjerne.",
+ "elem.toposolid.z": "Kote ({n})",
+ "elem.toposolid.mixed": "De valgte punktene er ulike; en ny verdi setter dem alle.",
+ "elem.toposolid.edit_help": "Dra et punkt for å flytte det. Skriv inn en verdi og trykk Enter for å sette koten. Backspace fjerner de valgte punktene, Esc avslutter.",
+ "elem.toposolid.done": "Ferdig"
+}

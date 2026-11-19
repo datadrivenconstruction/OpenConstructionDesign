@@ -1,0 +1,13 @@
+{
+ "cmdl.mode_cmd": "Cmd",
+ "cmdl.mode_ai": "AI",
+ "cmdl.toggle": "Commands or the AI assistant (Ctrl+J)",
+ "cmdl.hint": "Command or alias (W, L, M, RO), point #x;y, @dx;dy, d<angle. Ctrl+J: ask the AI assistant",
+ "cmdl.hint_ai": "Ask the AI assistant about the model or for a change. Ctrl+J: back to commands",
+ "cmdl.sent": "Sent to the AI assistant",
+ "cmdl.failed": "Could not run “{text}” here",
+ "cmdl.no_tool": "Start a drawing command first, then type its points",
+ "cmdl.unknown": "No command “{text}”. Ctrl+J sends it to the AI assistant",
+ "cmdl.bad": "Cannot read “{text}”: {e}",
+ "cmdl.shape": "“{text}” is not a point: type x;y, #x;y, @dx;dy or a positive distance<angle"
+}

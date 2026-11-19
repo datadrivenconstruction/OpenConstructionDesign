@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "Styrs av mallen {name}",
+ "view_template.edit_template": "Redigera mall",
+ "view_template.locked_tip": "Angivet av vymallen {name}. Ändra det i mallen.",
+ "view_template.no_filters": "Inga filter i den här vyn"
+}

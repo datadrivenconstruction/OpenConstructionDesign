@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "Хуудсыг харагдацтай хамт хуулах",
+ "cmd.view.sheet_duplicate_title": "Хуудсыг хуулах (зөвхөн титлийн хэсэг)",
+ "sheets.dup.menu_views": "Харагдацтай хамт хуулах",
+ "sheets.dup.menu_title": "Хуулах, зөвхөн титлийн хэсэг",
+ "sheets.dup.done": "{src}-с {number} хуудас үүслээ: {views} харагдац, {sched} хүснэгт ба тайлбар. Засваруудыг хуулаагүй; хуудас гаргаагүй.",
+ "sheets.dup.none": "Хуулахын тулд хуудас нээнэ үү",
+ "sheets.dup.copy": "хуулбар",
+ "cmd.view.sheet_duplicate.short": "Харагдацтай хуулах",
+ "cmd.view.sheet_duplicate_title.short": "Титлийн хэсгийг хуулах"
+}

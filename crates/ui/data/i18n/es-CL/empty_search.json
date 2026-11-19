@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "No se ha encontrado nada",
+ "empty.browser_search.hint": "Ninguna vista, nivel, tipo o local coincide con esta búsqueda.",
+ "empty.browser_search.action": "Borrar búsqueda",
+ "empty.xl_filtered.title": "Ninguna entrada coincide con los filtros",
+ "empty.xl_filtered.hint": "Active más tipos, elija otra hoja o cambie el texto de búsqueda.",
+ "empty.xl_filtered.action": "Borrar filtros",
+ "empty.xl_nochanges.title": "Sin cambios en el libro",
+ "empty.xl_nochanges.hint": "El libro coincide con el modelo: importarlo no cambiaría nada.",
+ "empty.version_same.title": "Los modelos son idénticos",
+ "empty.version_same.hint": "No se encontraron diferencias entre el modelo abierto y la versión elegida.",
+ "empty.templates.title": "Todavía no hay plantillas de vista",
+ "empty.templates.hint": "Cree una a partir de la vista actual para reutilizar sus ajustes en otras vistas.",
+ "empty.templates.action": "Asignar nombre a una plantilla",
+ "empty.fe_params.title": "Todavía no hay parámetros",
+ "empty.fe_params.hint": "Añada un parámetro abajo para controlar tamaños, materiales o visibilidad.",
+ "empty.fe_params.action": "Añadir un parámetro"
+}

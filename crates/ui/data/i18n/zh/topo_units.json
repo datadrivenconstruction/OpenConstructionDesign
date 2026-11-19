@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "单位",
+ "topo_units.unit": "文件中的单位",
+ "topo_units.unit.m": "m",
+ "topo_units.unit.cm": "cm",
+ "topo_units.unit.mm": "mm",
+ "topo_units.unit.ft": "英尺",
+ "topo_units.unit.usft": "美国测量英尺",
+ "topo_units.unit.in": "英寸",
+ "topo_units.unit.from_file": "文件中标明的单位：{unit}",
+ "topo_units.unit.suggested": "文件未标明单位。根据范围推测为 {unit}——请检查下方结果",
+ "topo_units.extent": "项目单位下的结果：平面 {x} × {y} {u}，高度范围 {z} {u}",
+ "topo_units.extent.none": "结果：按当前选择没有可导入的内容",
+ "topo_units.extent.check": "这看起来不像场地：请检查单位"
+}

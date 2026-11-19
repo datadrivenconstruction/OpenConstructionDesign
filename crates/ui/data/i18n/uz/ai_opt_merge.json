@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "Variantni birlashtirish: {name}",
+ "ai_opt_merge.whole": "Butun variantni birlashtirish",
+ "ai_opt_merge.parts": "Tanlangan qismlarni birlashtirish",
+ "ai_opt_merge.note": "Nima uchun bu variant",
+ "ai_opt_merge.rebased": "Bu variant yaratilgandan keyin model o'zgardi: birlashtirish joriy model bo'yicha qayta hisoblandi. Qo'llashdan oldin o'zgarishlarni tekshiring.",
+ "ai_opt_merge.left.not_picked": "Variantdan tanlanmagan",
+ "ai_opt_merge.left.unticked": "Variantda belgisi olib tashlangan",
+ "ai_opt_merge.left.conflict": "Joriy modelga qo'shib bo'lmaydi: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "Bu variantni birlashtirib bo'lmaydi. Rad etilgan variantni avval tiklash kerak.",
+ "ai_opt_merge.refused.stale": "Bu variant yaratilgandan keyin model o'zgardi. Birlashtirishni joriy model bo'yicha qayta hisoblang.",
+ "ai_opt_merge.refused.nothing_picked": "Birlashtirish uchun hech narsa tanlanmagan.",
+ "ai_opt_merge.refused.unknown_item": "{item} bandi bu variantga kirmaydi.",
+ "ai_opt_merge.refused.not_in_option": "Tanlangan element bu variantga kirmaydi.",
+ "ai_opt_merge.refused.needs_left_out": "{item} bandi {needs} bandini talab qiladi. Uni ham tanlang yoki bog'liqliklarni qo'shishga ruxsat bering.",
+ "ai_opt_merge.refused.set_gone": "{item} bandi endi mavjud bo'lmagan tanlovga murojaat qiladi. Variantni qaytadan yarating.",
+ "ai_opt_merge.refused.busy": "Boshqa reja ochiq. Avval uni qo'llang yoki rad eting.",
+ "ai_opt_merge.refused.failed": "Birlashtirishni tayyorlab bo'lmadi: {reason}",
+ "ai_opt_merge.revive": "Variantni tiklash",
+ "ai_opt_merge.merged": "Birlashtirildi"
+}

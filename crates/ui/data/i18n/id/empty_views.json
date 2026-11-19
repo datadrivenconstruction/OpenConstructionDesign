@@ -1,0 +1,19 @@
+{
+ "empty.v3d_gpu.title": "3D tidak tersedia pada adaptor grafis ini",
+ "empty.v3d_gpu.hint": "Model aman dan denah berfungsi. Mulai ulang dengan grafis aman untuk mencoba 3D lagi.",
+ "empty.v3d_gpu.action": "Mulai ulang dengan grafis aman",
+ "empty.v3d_loading.title": "Membuat 3D…",
+ "empty.v3d_loading.pct": "Membuka… {pct} %",
+ "empty.plan_hidden.title": "Semua elemen disembunyikan di denah ini",
+ "empty.plan_hidden.hint": "Sembunyi atau isolasi sementara tidak menyisakan apa pun yang terlihat.",
+ "empty.plan_hidden.action": "Tampilkan semua",
+ "empty.plan_graphics.title": "Grafik tampilan menyembunyikan semua kategori",
+ "empty.plan_graphics.hint": "Aturan kategori tampilan ini tidak menyisakan apa pun untuk ditampilkan.",
+ "empty.plan_graphics.action": "Buka grafik tampilan",
+ "empty.plan_phase.title": "Filter fase menyembunyikan semuanya",
+ "empty.plan_phase.hint": "Tidak ada yang di level ini pada fase yang ditampilkan tampilan ini.",
+ "empty.plan_phase.action": "Ubah fase",
+ "empty.plan_level.title": "Tidak ada elemen di level ini",
+ "empty.plan_level.hint": "Level lain pada model ini memiliki elemen.",
+ "empty.plan_level.action": "Pindah ke level yang berisi elemen"
+}

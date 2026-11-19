@@ -1,0 +1,58 @@
+{
+ "ai.tool.show_elements": "إظهار العناصر",
+ "ai.tool.isolate_elements": "عزل العناصر",
+ "ai.tool.color_by": "التلوين حسب القيمة",
+ "ai.tool.reset_view": "إعادة ضبط العرض",
+ "ai_found.found.query": "وُجد",
+ "ai_found.found.show": "معروض",
+ "ai_found.found.isolate": "معزول",
+ "ai_found.found.hide": "مخفي",
+ "ai_found.found.color": "ملوَّن",
+ "ai_found.found.count": "{n} من {m}",
+ "ai_found.found.none": "لا توجد نتائج مطابقة. جرّب مرشحًا أوسع.",
+ "ai_found.found.show_btn": "إظهار",
+ "ai_found.found.show_tip": "تحديد هذه العناصر والتكبير عليها في المسقط والمجسم",
+ "ai_found.found.isolate_btn": "عزل",
+ "ai_found.found.isolate_tip": "إظهار هذه العناصر فقط حتى إعادة ضبط العرض",
+ "ai_found.found.select_btn": "تحديد",
+ "ai_found.found.select_tip": "تحديد هذه العناصر دون تحريك العرض",
+ "ai_found.legend.title": "التلوين حسب {by}",
+ "ai_found.legend.row_tip": "انقر لتحديد هذه العناصر",
+ "ai_found.legend.empty_value": "لا توجد قيمة",
+ "ai_found.legend.other": {
+  "zero": "# قيمة أخرى",
+  "one": "قيمة أخرى واحدة",
+  "two": "قيمتان أخريان",
+  "few": "# قيم أخرى",
+  "many": "# قيمة أخرى",
+  "other": "# قيمة أخرى"
+ },
+ "ai_found.view.title": "عرض مساعد الذكاء الاصطناعي",
+ "ai_found.view.reset": "إعادة ضبط العرض",
+ "ai_found.view.reset_tip": "استعادة العرض كما كان قبل أن يغيّره مساعد الذكاء الاصطناعي",
+ "ai_found.view.shown": {
+  "zero": "لا عناصر معروضة",
+  "one": "عنصر معروض واحد",
+  "two": "عنصران معروضان",
+  "few": "# عناصر معروضة",
+  "many": "# عنصرًا معروضًا",
+  "other": "# عنصر معروض"
+ },
+ "ai_found.view.isolated": {
+  "zero": "لا عناصر معزولة",
+  "one": "عنصر معزول واحد",
+  "two": "عنصران معزولان",
+  "few": "# عناصر معزولة",
+  "many": "# عنصرًا معزولًا",
+  "other": "# عنصر معزول"
+ },
+ "ai_found.view.hidden": {
+  "zero": "لا عناصر مخفية",
+  "one": "عنصر مخفٍ واحد",
+  "two": "عنصران مخفيان",
+  "few": "# عناصر مخفية",
+  "many": "# عنصرًا مخفيًا",
+  "other": "# عنصر مخفٍ"
+ },
+ "ai_found.found.line": "{what}: {count}"
+}

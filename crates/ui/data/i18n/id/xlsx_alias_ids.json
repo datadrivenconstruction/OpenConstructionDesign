@@ -1,0 +1,7 @@
+{
+ "xlsx_alias_ids.ids_written": "{n} baris baru mendapat id di lembar yang diganti namanya; tidak ada yang lain di buku kerja yang berubah.",
+ "xlsx_alias_ids.ids_open": "Buku kerja sedang dibuka di program lain: id dari {n} baris baru tidak ditulis. Tutup di sana lalu Sinkronkan; baris ini tidak dibuat ulang.",
+ "xlsx_alias_ids.ids_failed": "Id dari {n} baris baru tidak dapat ditulis; buku kerja dibiarkan seperti semula. Baris ini tidak dibuat ulang pada Sinkronkan berikutnya.",
+ "xlsx_alias_ids.unpaired": "{n} baris baru belum punya id; baris ini diingat dan tidak dibuat ulang.",
+ "xlsx_alias_ids.refused": "Tidak ada yang diterapkan: baris baru di {sheets} tidak dapat mendapat id selama lembar yang diganti nama dibaca. Ganti nama lembar ke nama standarnya (atau hapus baris ini) lalu Sinkronkan lagi."
+}

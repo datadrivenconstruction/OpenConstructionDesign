@@ -1,0 +1,11 @@
+{
+ "sketch.points": "Points",
+ "sketch.rect": "Rectangle",
+ "sketch.circle": "Cercle",
+ "sketch.polygon": "Polygone",
+ "sketch.radius": "R",
+ "sketch.sides": "Côtés",
+ "sketch.circum": "Circonscrit",
+ "sketch.shape.tip": "Forme d'esquisse (A permute). Rectangle : deux coins. Cercle et polygone : centre, puis rayon. Saisissez une dimension et appuyez sur Entrée pour la fixer.",
+ "tool.err.zero_size": "Taille nulle : éloignez le deuxième point du premier"
+}

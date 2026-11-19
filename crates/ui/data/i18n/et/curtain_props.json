@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "Paneel",
+ "curtain_props.cw.panel_cell": "Lahter {i}×{j} · kardinsein #{id}",
+ "curtain_props.cw.kind": "Tüüp",
+ "curtain_props.cw.kind.glazed": "Klaas",
+ "curtain_props.cw.kind.solid": "Tahke",
+ "curtain_props.cw.kind.door": "Uks",
+ "curtain_props.cw.kind.window": "Aken",
+ "curtain_props.cw.kind.empty": "Tühi",
+ "curtain_props.cw.name": "Nimi",
+ "curtain_props.cw.swing_side": "Avaneb teisele poole",
+ "curtain_props.cw.swing_hinge": "Saranad lahtri otsas",
+ "curtain_props.cw.size": "Suurus",
+ "curtain_props.cw.cell_area": "Lahtri pindala",
+ "curtain_props.cw.panel_area": "Paneeli pindala",
+ "curtain_props.cw.prev": "Eelmine paneel",
+ "curtain_props.cw.next": "Järgmine paneel",
+ "curtain_props.cw.wall": "Vali sein",
+ "curtain_props.cw.panel_hint": "Esc — valik · Ctrl+Z — võta tagasi",
+ "curtain_props.cw.status.panel": "Paneel {i}×{j} → {kind}",
+ "e3d.err.cw_height": "kardinseina kõrgus peab olema üle 100 mm"
+}

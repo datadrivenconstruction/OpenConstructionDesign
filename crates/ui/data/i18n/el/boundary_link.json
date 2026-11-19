@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "Επιλογή ολόκληρου βρόχου τοίχων",
+ "cmd.sketch.link_unlink": "Αποσύνδεση ακμής από τοίχο",
+ "cmd.sketch.link_repick": "Επανεπιλογή τοίχου ακμής",
+ "cmd.ctx.floor.link_unlink": "Αποσύνδεση ακμών από τοίχους",
+ "cmd.ctx.floor.link_accept": "Αποδοχή ακμών τοίχων που διαγράφηκαν",
+ "boundary_link.hint.loop": "Κάντε κλικ σε έναν τοίχο: η κλειστή σειρά τοίχων γίνεται συνδεδεμένες ακμές",
+ "boundary_link.hint.repick": "Κάντε κλικ σε τοίχο παράλληλο προς την ακμή: η ακμή θα τον ακολουθεί",
+ "boundary_link.need_sketch": "Ανοίξτε πρώτα το σκαρίφημα ορίου",
+ "boundary_link.need_edge": "Δείξτε μια ακμή του σκαριφήματος",
+ "boundary_link.need_straight": "Μόνο μια ευθύγραμμη ακμή μπορεί να ακολουθήσει τοίχο",
+ "boundary_link.need_floor": "Επιλέξτε ένα πάτωμα",
+ "boundary_link.no_wall": "Κανένας τοίχος κάτω από τον κέρσορα",
+ "boundary_link.not_parallel": "Ο τοίχος δεν είναι παράλληλος προς την ακμή",
+ "boundary_link.not_linked": "Αυτή η ακμή δεν είναι συνδεδεμένη με τοίχο",
+ "boundary_link.unlinked": "Η ακμή αποσυνδέθηκε: μένει στη θέση της και δεν ακολουθεί πια τον τοίχο",
+ "boundary_link.accepted": "Οι ακμές έγιναν δεκτές: παραμένουν στη θέση τους ως συνηθισμένες ακμές",
+ "boundary_link.failed": "Δεν ήταν δυνατή η εφαρμογή",
+ "boundary_link.lost": "ο αρχικός τοίχος διαγράφηκε",
+ "boundary_link.blocked": "δεν μπορεί να ακολουθήσει τον τοίχο"
+}

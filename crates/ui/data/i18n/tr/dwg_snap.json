@@ -1,0 +1,5 @@
+{
+ "snap.center": "Merkez",
+ "dwg_snap.through": "Geçiş noktası",
+ "dwg_snap.through_tip": "Yazılan mesafe yerine tıklanan noktadan ofset (uçlara, kesişimlere, merkezlere yapışır)"
+}

@@ -1,0 +1,8 @@
+{
+ "undo.undone": "已撤销:{what}",
+ "undo.redone": "已重做:{what}",
+ "undo.action.edit.redo": "重做",
+ "undo.action.edit.undo": "撤销",
+ "hdr.unsaved": "有未保存的更改",
+ "hdr.file_menu": "文件菜单"
+}

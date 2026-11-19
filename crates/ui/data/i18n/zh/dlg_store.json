@@ -1,0 +1,10 @@
+{
+ "dlg.dw.store.unloaded": "图纸“{name}”无法从项目中读取，已在文件中保持不变",
+ "dlg.dw.store.source_missing": "图纸“{name}”：未找到源文件，当前显示项目中保存的副本",
+ "dlg.dw.store.source_changed": "图纸“{name}”：放置后源文件已更改，当前显示项目中保存的副本",
+ "dlg.dw.store.unreadable": "无法读取项目中保存的已放置图纸",
+ "dlg.dw.store.not_saved": "图纸未保存：{why}",
+ "dlg.dw.store.why_read": "无法读取项目中保存的已放置图纸",
+ "dlg.dw.store.why_write": "无法更新项目文件",
+ "dlg.dw.store.missing_in_file": "已保存的文件未包含所有已放置的图纸"
+}

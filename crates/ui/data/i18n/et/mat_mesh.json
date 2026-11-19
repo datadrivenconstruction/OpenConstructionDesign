@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "Imporditud võrgud",
+ "mat_mesh.mesh.none_selected": "Vali 3D-vaates imporditud võrgud, et anda neile see materjal.",
+ "mat_mesh.mesh.current": "Esimese valitud võrgu materjal: {material}",
+ "mat_mesh.mesh.current_none": "Esimesel valitud võrgul pole materjali.",
+ "mat_mesh.mesh.assign": "Määra {n} valitud elemendile",
+ "mat_mesh.mesh.assign_tip": "Realistlik stiil näitab selle materjali tekstuuri valitud võrkudel",
+ "mat_mesh.mesh.assign_cat": "Määra kategooriale {category}",
+ "mat_mesh.mesh.assign_cat_tip": "Iga imporditud võrk selles kategoorias, millel pole oma materjali",
+ "mat_mesh.mesh.clear": "Tühjenda valitud",
+ "mat_mesh.mesh.clear_tip": "Valitud võrgud lähevad tagasi oma kategooria materjali või lihtsa värvi juurde",
+ "mat_mesh.mesh.clear_cat": "Tühjenda kategooria"
+}

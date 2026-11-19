@@ -1,0 +1,19 @@
+{
+ "xlsx_confirm.chip": "de confirmat",
+ "xlsx_confirm.section": "Rânduri fără id, potrivite cu un element după nume sau număr",
+ "xlsx_confirm.tag": "potrivit după nume",
+ "xlsx_confirm.tag_accepted": "potrivire acceptată",
+ "xlsx_confirm.tag_rejected": "creează nou",
+ "xlsx_confirm.kind_room": "încăpere",
+ "xlsx_confirm.kind_curtain_wall": "fațadă cortină",
+ "xlsx_confirm.row_line": "{kind} #{id}, cheia „{key}”",
+ "xlsx_confirm.accept": "Acceptă",
+ "xlsx_confirm.accept_tip": "Aplică acest rând elementului potrivit (un pas de anulare împreună cu restul)",
+ "xlsx_confirm.reject": "Creează nou",
+ "xlsx_confirm.reject_tip": "Fără potrivire: acest rând creează un element nou",
+ "xlsx_confirm.decide_first": "Acceptați sau respingeți mai întâi rândurile potrivite după nume.",
+ "xl.msg.key_match_many": "cheia corespunde cu {} elemente; nepotrivit, rândul creează unul nou",
+ "xl.msg.key_match_taken": "cheia corespunde cu un element folosit de alt rând; nepotrivit, rândul creează unul nou",
+ "xl.msg.key_match_kept": "păstrat: potrivirea a fost respinsă, rândul creează un element nou",
+ "xl.msg.key_match_undecided": "rândurile potrivite după nume așteaptă o decizie"
+}

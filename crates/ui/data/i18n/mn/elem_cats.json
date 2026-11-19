@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "Массыг эргүүлэх эсвэл тусгах боломжгүй: түүний хэлбэрийн түүхэнд эргүүлсэн алхам байхгүй. Зөөх эсвэл хуулах, эсвэл шинэ чиглэлээр дахин зурна уу.",
+ "sched_cats.col.name": "Нэр",
+ "sched_cats.col.material": "Материал",
+ "sched_cats.col.void": "Хөндий",
+ "sched_cats.col.inplace": "Газар дээр нь хийгдсэн",
+ "sched_cats.col.volume": "Цэвэр эзлэхүүн",
+ "sched_cats.col.area": "Гадаргуугийн талбай",
+ "sched_cats.col.floor_area": "Шалны талбай",
+ "sched_cats.col.thickness": "Зузаан",
+ "sched_cats.col.points": "Цэгүүд",
+ "elem.toposolid.points": "Хэмжилтийн цэгүүд",
+ "elem.toposolid.count": "Цэгүүд",
+ "elem.toposolid.low": "Хамгийн доод",
+ "elem.toposolid.high": "Хамгийн өндөр",
+ "elem.toposolid.edit": "Цэгүүдийг засах",
+ "elem.toposolid.edit_tip": "Планд хэмжилтийн цэгүүдийг сонгох, чирэх, өндрийг тогтоох",
+ "elem.toposolid.pick_hint": "Планд цэг дарж сонгоно уу. Нэмэх эсвэл хасахын тулд дахин дарна уу.",
+ "elem.toposolid.z": "Өндөр ({n})",
+ "elem.toposolid.mixed": "Сонгосон цэгүүд өөр байна; шинэ утга бүгдийг нь тогтооно.",
+ "elem.toposolid.edit_help": "Цэгийг зөөхийн тулд чирнэ үү. Өндрийг тогтоохын тулд утга бичээд Enter дарна уу. Backspace сонгосон цэгүүдийг устгана, Esc гарна.",
+ "elem.toposolid.done": "Дууслаа"
+}

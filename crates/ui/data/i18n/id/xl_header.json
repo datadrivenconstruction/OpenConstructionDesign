@@ -1,0 +1,4 @@
+{
+ "xl.msg.x_cells_above_the_header_on_sheet_x": "{} sel di atas header pada lembar '{}'",
+ "xl.msg.book_changed_during_export": "buku kerja disimpan oleh program lain selama ekspor dan tidak ditimpa; ekspor ulang"
+}

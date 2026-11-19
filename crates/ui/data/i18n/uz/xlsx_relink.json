@@ -1,0 +1,14 @@
+{
+ "xlsx_relink.title": "Bog'langan ish kitobi ko'chirilgan yoki qayta nomlangan",
+ "xlsx_relink.body": "“{file}” ish kitobi endi {folder} da yo'q. Unga kiritilgan tahrirlar, u qayta bog'langandan keyingina qaytadi.",
+ "xlsx_relink.found_one": "“{file}” {folder} da topildi: bir xil loyiha va bir xil eksport. Bog'laymi?",
+ "xlsx_relink.found_many": "Bu loyiha va bu eksportga tegishli {n} ta ish kitobi topildi. Bog'lash uchun birini tanlang:",
+ "xlsx_relink.found_none": "Yonida bu eksportning ish kitobi topilmadi. Uni toping yoki yangi ish kitobini eksport qiling.",
+ "xlsx_relink.link": "“{file}” ni bog'lash",
+ "xlsx_relink.find": "Topish…",
+ "xlsx_relink.find_title": "Bog'langan ish kitobini toping",
+ "xlsx_relink.export_new": "Yangi ish kitobini eksport qilish",
+ "xlsx_relink.close": "Yopish",
+ "xlsx_relink.gone": "“{file}” ish kitobi o'z papkasida yo'q. Unga kiritilgan tahrirlar, u qayta bog'langandan keyingina qaytadi.",
+ "xlsx_relink.found_one_short": "“{file}” topildi: bir xil loyiha va bir xil eksport. Bog'laymi?"
+}

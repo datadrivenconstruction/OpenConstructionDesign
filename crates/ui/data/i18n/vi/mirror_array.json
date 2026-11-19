@@ -1,0 +1,5 @@
+{
+ "mirror_array.err.count": "Số lượng là số nguyên từ 2 đến 200: 4 3000, hoặc 4;300 khi bước có ba chữ số",
+ "mirror_array.err.length": "Bước hoặc tổng phải là chiều dài dương, ví dụ 3 000 hoặc 1.2 m",
+ "mirror_array.err.angle": "Góc quét tính bằng độ, không bằng không và tối đa 360"
+}

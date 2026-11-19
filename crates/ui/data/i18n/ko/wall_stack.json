@@ -1,0 +1,10 @@
+{
+ "wall_stack.we.stack_caption": "복합 유형",
+ "wall_stack.we.side_left": "왼쪽 면",
+ "wall_stack.we.side_right": "오른쪽 면",
+ "wall_stack.we.from": "시작",
+ "wall_stack.we.to": "끝",
+ "wall_stack.we.bottom": "하단",
+ "wall_stack.we.delete_tip": "이 프로파일 삭제",
+ "wall_stack.we.from_after_to": "'시작'은 '끝'보다 앞이어야 합니다"
+}

@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "Tábla",
+ "curtain_props.cw.panel_cell": "Cella {i}×{j} · függönyfal #{id}",
+ "curtain_props.cw.kind": "Típus",
+ "curtain_props.cw.kind.glazed": "Üveg",
+ "curtain_props.cw.kind.solid": "Tömör",
+ "curtain_props.cw.kind.door": "Ajtó",
+ "curtain_props.cw.kind.window": "Ablak",
+ "curtain_props.cw.kind.empty": "Üres",
+ "curtain_props.cw.name": "Név",
+ "curtain_props.cw.swing_side": "A másik oldalra nyílik",
+ "curtain_props.cw.swing_hinge": "Zsanér a cella végén",
+ "curtain_props.cw.size": "Méret",
+ "curtain_props.cw.cell_area": "Cella területe",
+ "curtain_props.cw.panel_area": "Panel területe",
+ "curtain_props.cw.prev": "Előző panel",
+ "curtain_props.cw.next": "Következő panel",
+ "curtain_props.cw.wall": "Válassza ki a falat",
+ "curtain_props.cw.panel_hint": "Esc — kijelölés · Ctrl+Z — visszavonás",
+ "curtain_props.cw.status.panel": "Tábla {i}×{j} → {kind}",
+ "e3d.err.cw_height": "a függönyfal magassága legalább 100 mm legyen"
+}

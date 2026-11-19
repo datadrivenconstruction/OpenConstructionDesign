@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "Αναστροφή πλευράς μεντεσέ",
+ "cmd.edit.flip_hand.desc": "Καθρεφτίζει τις επιλεγμένες πόρτες και παράθυρα κατά μήκος του τοίχου, ώστε οι μεντεσέδες να μετακινηθούν στο άλλο άκρο του ανοίγματος.",
+ "cmd.edit.flip_facing": "Αναστροφή πλευράς ανοίγματος",
+ "cmd.edit.flip_facing.desc": "Αναστρέφει τις επιλεγμένες πόρτες και παράθυρα προς την άλλη πλευρά του τοίχου.",
+ "opening_grips.flip_hand": "Αναστροφή μεντεσέ",
+ "opening_grips.flip_hand.tip": "Μεντεσέδες στο άλλο άκρο του ανοίγματος (Shift+F)",
+ "opening_grips.flip_facing": "Αναστροφή πλευράς",
+ "opening_grips.flip_facing.tip": "Άνοιγμα προς την άλλη πλευρά του τοίχου (Shift+G)",
+ "opening_grips.flip.done": "Αναστράφηκε: {n}",
+ "opening_grips.flip.none": "Επιλέξτε πόρτα ή παράθυρο για αναστροφή",
+ "opening_grips.flip.fail": "Δεν αναστράφηκε: {why}"
+}

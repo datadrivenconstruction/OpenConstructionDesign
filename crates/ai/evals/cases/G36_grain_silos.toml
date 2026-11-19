@@ -1,0 +1,36 @@
+id = "G36_grain_silos"
+tier = "hard"
+group = "Any geometry"
+title = "Grain elevator"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "A grain elevator: two rows of four cylindrical silos, 8 m diameter and 30 m high, a 42 m headhouse tower with stairs, a conveyor gallery along the silo tops, hopper bottoms on columns."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "comp:silo|bin|tank|hopper+curved+wall_spline"
+min = 8.0
+
+[[oracle.count]]
+spec = "stair"
+min = 1.0
+
+[[oracle.count]]
+spec = "col"
+min = 8.0
+
+[[oracle.geom]]
+kind = "height"
+min = 40.0
+max = 48.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

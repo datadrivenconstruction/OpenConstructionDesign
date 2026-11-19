@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "Intervalo de vista",
+ "view_range.range": "Intervalo de vista",
+ "view_range.cut": "Plano de corte",
+ "view_range.bottom": "Inferior",
+ "view_range.depth": "Profundidade da vista",
+ "view_range.cut.hint": "Altura do plano de corte acima do nível. Elementos que o atravessam são desenhados cortados.",
+ "view_range.bottom.hint": "Base do intervalo, em relação ao nível. Valores zero ou negativos são permitidos.",
+ "view_range.depth.hint": "Até onde a vista olha abaixo da base. Zero ou mais.",
+ "view_range.err.number": "Informe um comprimento em cada campo",
+ "view_range.err.not_finite": "Informe um comprimento em cada campo",
+ "view_range.err.cut_not_above_bottom": "O plano de corte deve estar acima da base",
+ "view_range.err.negative_depth": "A profundidade da vista não pode ser negativa",
+ "view_range.err.top_below_cut": "O topo do intervalo não pode ficar abaixo do plano de corte"
+}

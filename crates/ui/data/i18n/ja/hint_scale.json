@@ -1,0 +1,10 @@
+{
+ "cmd.mod.scale": "尺度変更",
+ "cmd.mod.scale.desc": "要素を選択し、基点、基準長、新しい長さをクリックするか、倍率を入力します。",
+ "hint.scale.select": "尺度変更: 要素を選択 · Enter — 完了",
+ "hint.scale.first": "尺度変更: 基点を指定 · Esc — キャンセル",
+ "hint.scale.second": "尺度変更: 基準長を指定 · 数値 — 倍率 · Esc — キャンセル",
+ "hint.scale.third": "尺度変更: 新しい長さを指定 · 数値 — 倍率 · Esc — キャンセル",
+ "scl.bad_factor": "尺度の倍率は 0 より大きい数値にしてください",
+ "scl.zero_ref": "基準長が 0 です。基点から離れた点を指定してください"
+}

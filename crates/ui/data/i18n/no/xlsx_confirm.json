@@ -1,0 +1,19 @@
+{
+ "xlsx_confirm.chip": "til bekreftelse",
+ "xlsx_confirm.section": "Rader uten id matchet mot et element etter navn eller nummer",
+ "xlsx_confirm.tag": "matchet på navn",
+ "xlsx_confirm.tag_accepted": "match godtatt",
+ "xlsx_confirm.tag_rejected": "oppretter ny",
+ "xlsx_confirm.kind_room": "rom",
+ "xlsx_confirm.kind_curtain_wall": "glassfasade",
+ "xlsx_confirm.row_line": "{kind} #{id}, nøkkel \"{key}\"",
+ "xlsx_confirm.accept": "Godta",
+ "xlsx_confirm.accept_tip": "Bruk denne raden på det matchede elementet (ett angrertrinn sammen med resten)",
+ "xlsx_confirm.reject": "Opprett ny",
+ "xlsx_confirm.reject_tip": "Ikke match: denne raden oppretter et nytt element",
+ "xlsx_confirm.decide_first": "Godta eller avvis radene som er matchet på navn først.",
+ "xl.msg.key_match_many": "nøkkelen samsvarer med {} elementer; ikke matchet, raden oppretter et nytt",
+ "xl.msg.key_match_taken": "nøkkelen samsvarer med et element som brukes av en annen rad; ikke matchet, raden oppretter et nytt",
+ "xl.msg.key_match_kept": "beholdt: match avvist, raden oppretter et nytt element",
+ "xl.msg.key_match_undecided": "rader som er matchet på navn venter på en avgjørelse"
+}

@@ -1,0 +1,9 @@
+brief = "Wall water heater with water connections."
+category = "plumbing"
+must = param Power
+must = param Volume
+must = solids >= 1
+must = ports 3
+must = port conduit 1
+must = port pipe 2
+must = flex Diameter 360 562

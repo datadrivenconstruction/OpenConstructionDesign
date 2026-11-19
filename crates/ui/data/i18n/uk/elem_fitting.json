@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "Фітинг",
+ "elem.mep_fitting.many": "Фітинги",
+ "elem.mep_fitting.kind.elbow": "Коліно",
+ "elem.mep_fitting.kind.tee": "Трійник",
+ "elem.mep_fitting.kind.cross": "Хрестовина",
+ "elem.mep_fitting.kind.transition": "Перехід",
+ "elem.mep_fitting.kind.cap": "Заглушка",
+ "elem.mep_fitting.size": "Розмір",
+ "elem.mep_fitting.at": "Положення",
+ "elem.mep_fitting.runs": "Траса {n}",
+ "elem.mep_fitting.edit_run": "Редагувати трасу",
+ "elem.mep_fitting.select_runs": "Виберіть його траси",
+ "elem.mep_fitting.derived": "Фітинг слідує за своїми трасами: зміна траси змінює і фітинг.",
+ "elem.mep_fitting.no_delete": "Фітинг не можна видалити або перемістити окремо. Редагуйте або видаліть його траси.",
+ "elem.mep_fitting.hint": "Клацніть фітинг у плані, щоб побачити його траси.",
+ "elem.mep_fitting.picked": "Вибрано фітингів: {n}"
+}

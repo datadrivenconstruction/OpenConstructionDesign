@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}، على المستوى",
+ "cmd_buttons.purge.undo": "الإزالة خطوة تراجع واحدة.",
+ "cmd_buttons.unpin.none": "لا شيء محدد مثبّت",
+ "cmd_buttons.change_type.none": "حدّد الجدران أولاً: يتغير نوعها في خطوة واحدة",
+ "cmd_buttons.units.metric": "الوحدات: متري",
+ "cmd_buttons.units.imperial": "الوحدات: قدم وبوصة",
+ "cmd_buttons.units.back": "العودة",
+ "cmd_buttons.underlay.on": "الطبقة السفلية مفعّلة: يظهر المستوى الأسفل باهتاً",
+ "cmd_buttons.underlay.off": "الطبقة السفلية متوقفة",
+ "cmd_buttons.underlay.none": "الطبقة السفلية مفعّلة، لكن المستوى الأسفل لا يحوي ما يُعرض",
+ "cmd_buttons.zoom_sel.no_shape": "التحديد ليس له شكل يمكن تأطيره في هذا العرض",
+ "cmd_buttons.close.base": "تبقى لسانا المسقط وثلاثي الأبعاد مفتوحين؛ افتح مقطعاً أو ورقة أو عرض رسم لإغلاقه",
+ "tool.equipment": "معدات",
+ "hint.equipment.place": "معدات: حدّد الموقع · Esc للخروج",
+ "cmd_buttons.table.opened": "فُتح الجدول بجانب النموذج",
+ "cmd_buttons.circuits.tip": "افتح قائمة الدوائر الكهربائية لهذا النموذج"
+}

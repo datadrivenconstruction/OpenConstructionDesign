@@ -1,0 +1,26 @@
+{
+ "assemblies": [
+  {
+   "id": "ext_wall_default",
+   "role": "exterior_wall",
+   "u_value": 0.3,
+   "source": "intl-baseline",
+   "verified": false
+  },
+  {
+   "id": "roof_default",
+   "role": "roof",
+   "u_value": 0.2,
+   "source": "intl-baseline",
+   "verified": false
+  },
+  {
+   "id": "window_default",
+   "role": "window",
+   "u_value": 1.4,
+   "g_value": 0.5,
+   "source": "intl-baseline",
+   "verified": false
+  }
+ ]
+}

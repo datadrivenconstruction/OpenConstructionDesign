@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "giá trị phải lớn hơn 0",
+ "sched_ops.not_number": "không phải số",
+ "sched_ops.no_host": "không có tường chủ",
+ "sched_ops.wall_length": "không thể đặt chiều dài tường này như vậy",
+ "sched_ops.no_wall": "không có tường như vậy",
+ "sched_ops.no_opening": "không có lỗ mở như vậy",
+ "sched_ops.no_curtain": "không có tường rèm như vậy",
+ "sched_ops.no_panel": "không có tấm như vậy",
+ "sched_ops.no_slab": "không có sàn như vậy",
+ "sched_ops.no_room": "không có phòng như vậy",
+ "sched_ops.slope_range": "độ dốc ngoài phạm vi",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

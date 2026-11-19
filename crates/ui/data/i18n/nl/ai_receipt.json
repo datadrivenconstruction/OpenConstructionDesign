@@ -1,0 +1,21 @@
+{
+ "ai.receipt.title": {
+  "one": "# wijziging toegepast",
+  "other": "# wijzigingen toegepast"
+ },
+ "ai.receipt.more": "+{n} meer",
+ "ai.receipt.list": "Elementen",
+ "ai.receipt.show": "Tonen",
+ "ai.receipt.show.tip": "Selecteer en kader de gewijzigde elementen",
+ "ai.receipt.undo": "Ongedaan maken",
+ "ai.receipt.undo.tip": "Neemt precies deze toepassing terug",
+ "ai.receipt.undone": "Ongedaan gemaakt",
+ "ai.receipt.later": "Er zijn later wijzigingen gemaakt",
+ "ai.receipt.toast_undone": "Het toegepaste plan is ongedaan gemaakt",
+ "ai.receipt.draft_family": "Conceptfamilie: {name}",
+ "ai.receipt.promote": "Werkend maken",
+ "ai.receipt.promote.tip": "Maakt de conceptfamilie een werkende familie (één ongedaan-stap)",
+ "ai.receipt.promoted": "De familie is nu werkend",
+ "ai.receipt.promote_failed": "De familie kon niet werkend worden gemaakt",
+ "cmd.ai.receipt_undo": "Laatste AI-plan ongedaan maken"
+}

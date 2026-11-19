@@ -1,0 +1,10 @@
+{
+ "stage_err.kept": "Tabelle {t} beibehalten: {n} Zeilen nach dem Hinzufügen geschrieben",
+ "stage_err.stage.prev_attached": "Nicht hinzugefügt: die Kopie des vorherigen Hinzufügens ist noch geöffnet. Hinzufügen erneut ausführen",
+ "stage_err.stage.model_changed": "Nicht hinzugefügt: das Modell hat sich beim Lesen der Datei geändert. Hinzufügen erneut ausführen",
+ "stage_err.stage.no_record": "Nicht hinzugefügt: die importierte Kopie hat kein Änderungsprotokoll",
+ "stage_err.stage.table_differs": "Nicht hinzugefügt: Tabelle {t} unterscheidet sich zwischen Modell und importierter Kopie",
+ "stage_err.stage.unique_key": "Nicht hinzugefügt: ein eindeutiger Schlüssel von Tabelle {t} kann nicht verfolgt werden",
+ "stage_err.stage.table_gone": "Nicht hinzugefügt: der Import hat Tabelle {t} geändert, die in der Kopie nicht mehr vorhanden ist",
+ "stage_err.stage.copy_held": "Hinzugefügt; die importierte Kopie bleibt bis zum nächsten Hinzufügen oder Wiederöffnen des Modells geöffnet"
+}

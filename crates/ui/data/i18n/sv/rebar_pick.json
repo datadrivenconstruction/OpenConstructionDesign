@@ -1,0 +1,7 @@
+{
+ "rebar_pick.pick.empty": "Armering: välj en pelare, balk, vägg, platta eller grund",
+ "rebar_pick.pick.unsupported": "Den här markeringen kan inte armeras. Välj en pelare, balk, vägg, platta eller grund",
+ "rebar_pick.pick.keys": "Klicka för att välja, Shift för att lägga till fler · Enter öppnar formuläret · Esc avbryter",
+ "rebar_pick.pick.open": "Öppna formulär",
+ "rebar_pick.pick.cancel": "Avbryt"
+}

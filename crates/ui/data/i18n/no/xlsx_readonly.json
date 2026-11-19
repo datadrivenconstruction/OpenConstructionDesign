@@ -1,0 +1,6 @@
+{
+ "xlsx_readonly.read_only": "Arbeidsboken er skrivebeskyttet (filegenskap eller mappetillatelse). Eksporter til en kopi, eller fjern Skrivebeskyttet i filegenskapene og prøv igjen.",
+ "xlsx_readonly.export_copy": "Eksporter til en kopi",
+ "xlsx_readonly.no_copy_name": "Ingen ledig navn for en kopi ved siden av arbeidsboken.",
+ "xlsx_readonly.copied": "Arbeidsboken ble latt være som den er. En oppdatert kopi ble skrevet ved siden av og er koblet nå: {path}"
+}

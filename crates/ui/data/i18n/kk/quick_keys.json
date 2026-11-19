@@ -1,0 +1,6 @@
+{
+ "quick.keys.rec_hint": "Esc — бас тарту · Backspace — тазалау",
+ "quick.keys.row_lost": "{key} енді “{cmd}” командасына тиесілі",
+ "quick.keys.row_took": "{key} “{cmd}” командасынан алынды",
+ "quick.keys.reset_tip": "Әдепкіге қайтару"
+}

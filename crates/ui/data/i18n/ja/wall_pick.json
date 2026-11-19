@@ -1,0 +1,13 @@
+{
+ "cmd.arch.wall_pick": "線から壁",
+ "cmd.arch.wall_pick.desc": "現在のレベルで選択した図面の線上に壁を配置します。F で線上の通り方または面を切り替え、Tab で接続された連続線を選択します。各クリックが 1 回の元に戻し操作になります。カーテンウォールにも対応します。",
+ "hint.wall_pick.center": "線から壁: 図面の線を選択 · 線上の通り芯 · F 面 · Tab 連続線 · Esc 終了",
+ "hint.wall_pick.face": "線から壁: 図面の線を選択 · 線上の面、カーソル側 · F 通り芯 · Tab 連続線 · Esc 終了",
+ "hint.wall_pick.center_chain": "線から壁: 線を選択して連続線を取得 · 線上の通り芯 · F 面 · Tab 1 本の線のみ",
+ "hint.wall_pick.face_chain": "線から壁: 線を選択して連続線を取得 · 線上の面 · F 通り芯 · Tab 1 本の線のみ",
+ "wall_pick.st.start": "図面の線を選択してください。F: 通り芯または面、Tab: 接続された連続線",
+ "wall_pick.st.no_lines": "このレベルに表示されている図面の線はありません",
+ "wall_pick.st.miss": "ここに図面の線はありません",
+ "wall_pick.st.on_wall": "この線はすでに壁 {id} の下にあります",
+ "wall_pick.st.tight": "面のオフセットが収まりません: 連続線の一部が壁の厚さより短くなっています"
+}

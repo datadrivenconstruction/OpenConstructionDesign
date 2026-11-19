@@ -1,0 +1,8 @@
+{
+ "xlsx_issues.empty_title": "工作簿中的空图纸",
+ "xlsx_issues.empty_kept": "图纸 {sheet} 为空：未从中读取任何内容，{n} 个元素保持不变。其他图纸仍可应用。",
+ "xlsx_issues.empty_none": "图纸 {sheet} 为空：未从中读取任何内容。其他图纸仍可应用。",
+ "xlsx_issues.unreadable_title": "无法读取图纸",
+ "xlsx_issues.unreadable": "图纸 {sheet} 无法读取，其文件部分已损坏：未从中读取任何内容，其元素保持不变。其他图纸仍可应用。",
+ "xlsx_issues.formulas": "图纸 {sheet} 上的公式无法读取，因此无法区分计算值与编辑：未从此图纸读取任何内容。其他图纸仍可应用。"
+}

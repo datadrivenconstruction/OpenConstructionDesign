@@ -1,0 +1,5 @@
+{
+ "xlsx_delete.delete_missing": "Ta bort rader som saknas i arbetsboken",
+ "xlsx_delete.not_removed": "inte borttagen: inga jämförelsedata",
+ "xlsx_delete.no_base_reason": "Inte tillgängligt: arbetsboken saknar jämförelsedata, så en saknad rad kan inte skiljas från en som tagits bort av misstag. Inget tas bort vid Tillämpa."
+}

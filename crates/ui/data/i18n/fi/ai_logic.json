@@ -1,0 +1,6 @@
+{
+ "ai_toast.toast_not_refreshed": "Käytetty kumoamisaskeleena {n} (Ctrl+Z kumoaa sen), mutta näkymää ei päivitetty. Lataa näkymä uudelleen.",
+ "ai.optx.reload_failed": "Vaihtoehto \"{name}\" on käytetty ja tallennettu, mutta näkymää ei ladattu uudelleen: {e}",
+ "ai.cmp.stale": "Vanhentunut",
+ "ai.cmp.stale_tip": "Tämä vaihtoehto tehtiin vanhemmasta mallin tilasta. Luo se uudelleen, jotta voit käyttää sitä."
+}

@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "Beton",
+ "mat.masonry": "Murværk",
+ "mat.brick": "Mursten",
+ "mat.insulation": "Isolering",
+ "mat.plaster": "Puds",
+ "mat.render": "Pudsbelægning",
+ "mat.gypsum": "Gipsplade",
+ "mat.glass": "Glas",
+ "mat.wood": "Træ",
+ "mat.steel": "Stål",
+ "mat.membrane": "Membran",
+ "mat.other": "Andet",
+ "warn.cat.wall": "Væg",
+ "warn.cat.slab": "Dæk",
+ "warn.cat.opening": "Åbning",
+ "warn.cat.curtain_wall": "Gardinvæg",
+ "td.mat.custom": "Andet…"
+}

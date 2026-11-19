@@ -1,0 +1,8 @@
+{
+ "ai_sent.summary": "Projektdaten in dieser Anfrage: {messages} Nachrichten, {tools} Werkzeugergebnisse, {images} Bilder",
+ "ai_sent.copy": "Kopieren",
+ "ai_sent.filter": "In gesendeten Anfragen suchen",
+ "ai_sent.no_match": "Keine Anfrage passt.",
+ "ai_sent.instructions": "Anweisungen und Werkzeuge",
+ "ai_sent.local_note": "Nur auf diesem Computer und nur für diese Sitzung gespeichert. Schlüssel und Passwörter werden nie angezeigt."
+}

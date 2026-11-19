@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}、レベル上",
+ "cmd_buttons.purge.undo": "削除は 1 回の取り消しで元に戻せます。",
+ "cmd_buttons.unpin.none": "選択中の要素にピン留めされたものはありません",
+ "cmd_buttons.change_type.none": "先に壁を選択してください: 種類が一度に変更されます",
+ "cmd_buttons.units.metric": "単位: メートル法",
+ "cmd_buttons.units.imperial": "単位: フィートとインチ",
+ "cmd_buttons.units.back": "切り替えを戻す",
+ "cmd_buttons.underlay.on": "下敷きをオン: 下のレベルが薄く表示されます",
+ "cmd_buttons.underlay.off": "下敷きをオフ",
+ "cmd_buttons.underlay.none": "下敷きはオンですが、下のレベルに表示するものがありません",
+ "cmd_buttons.zoom_sel.no_shape": "選択内容にはこのビューで範囲を合わせられる形状がありません",
+ "cmd_buttons.close.base": "平面図と 3D のタブは開いたままになります。閉じるには断面、シート、または製図ビューを開いてください",
+ "tool.equipment": "設備",
+ "hint.equipment.place": "設備: 配置場所を指定 · Esc で終了",
+ "cmd_buttons.table.opened": "モデルの横に表を開きました",
+ "cmd_buttons.circuits.tip": "このモデルの電気回路の一覧を開きます"
+}

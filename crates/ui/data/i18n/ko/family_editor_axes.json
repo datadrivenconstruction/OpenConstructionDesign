@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "X축",
+ "fe.axis.y": "Y축",
+ "fe.axis.z": "Z축",
+ "fe.col.axis": "축",
+ "fe.col.at": "위치",
+ "fe.col.mode": "모드",
+ "fe.mode.fixed": "고정",
+ "fe.mode.free": "자유",
+ "fe.types.inherited": "매개변수의 기본값",
+ "fe.csv.more": "CSV 작업 더 보기",
+ "fe.ref.selected": "평면: {name}"
+}

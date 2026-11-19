@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "Flytt opp",
+ "rebar_list.move_down": "Flytt ned",
+ "rebar_list.remove": "Fjern",
+ "rebar_list.zone_remove_last": "En sone trenger minst ett rom: slett sonen for å fjerne det siste",
+ "rebar_list.rebar_empty_title": "Ingen armering i denne modellen",
+ "rebar_list.rebar_empty_hint": "Plasser armering i et vertselement, så listes den her.",
+ "rebar_list.rebar_empty_action": "Plasser armering"
+}

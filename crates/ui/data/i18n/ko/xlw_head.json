@@ -1,0 +1,15 @@
+{
+ "xlw.hd_never": "아직 내보내지 않음",
+ "xlw.hd_now": "방금",
+ "xlw.hd_min": "{n}분 전",
+ "xlw.hd_hour": "{n}시간 전",
+ "xlw.hd_day": "{n}일 전",
+ "xlw.hd_linked": "연결됨",
+ "xlw.hd_watched": "감시 중",
+ "xlw.hd_stale": "내보낸 후 모델이 변경됨",
+ "xlw.ft_export": "내보내기",
+ "xlw.ft_review": "검토",
+ "xlw.ft_apply": "변경 {n}개 적용",
+ "xlw.ft_delete_missing": "없는 항목 삭제",
+ "xlw.ft_keep_missing_tip": "삭제가 켜져 있으면 행이 없는 요소는 적용 시 삭제됩니다. 끄면 유지됩니다."
+}

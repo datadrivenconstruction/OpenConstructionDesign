@@ -1,0 +1,144 @@
+[
+ {
+  "id": "ai.panel",
+  "icon": "spark",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "P"
+  ],
+  "stage": "M2",
+  "group": "ai"
+ },
+ {
+  "id": "ai.settings",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "P"
+  ],
+  "stage": "M2",
+  "group": "ai"
+ },
+ {
+  "id": "ai.apply",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+Alt+Enter"
+  ],
+  "tab": null,
+  "surfaces": [
+   "P"
+  ],
+  "stage": "M2",
+  "group": "ai"
+ },
+ {
+  "id": "ai.reject",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+Alt+Backspace"
+  ],
+  "tab": null,
+  "surfaces": [
+   "P"
+  ],
+  "stage": "M2",
+  "group": "ai"
+ },
+ {
+  "id": "ai.next_change",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+Alt+N"
+  ],
+  "tab": null,
+  "surfaces": [
+   "P"
+  ],
+  "stage": "M2",
+  "group": "ai"
+ },
+ {
+  "id": "ai.show_draft",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+Alt+D"
+  ],
+  "tab": null,
+  "surfaces": [
+   "P"
+  ],
+  "stage": "M2",
+  "group": "ai"
+ },
+ {
+  "id": "ai.cancel",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+Alt+."
+  ],
+  "tab": null,
+  "surfaces": [
+   "P"
+  ],
+  "stage": "M2",
+  "group": "ai"
+ },
+ {
+  "id": "ai.audit",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "P"
+  ],
+  "stage": "M2",
+  "group": "ai"
+ },
+ {
+  "id": "ai.what_sent",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "P"
+  ],
+  "stage": "M2",
+  "group": "ai"
+ },
+ {
+  "id": "ai.mcp_confirm",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "P"
+  ],
+  "stage": "M2",
+  "group": "ai"
+ },
+ {
+  "id": "ai.mcp_revoke",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "P"
+  ],
+  "stage": "M2",
+  "group": "ai"
+ }
+]

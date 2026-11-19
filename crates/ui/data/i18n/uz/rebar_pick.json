@@ -1,0 +1,7 @@
+{
+ "rebar_pick.pick.empty": "Armatura: ustun, to'sin, devor, plita yoki poydevorni tanlang",
+ "rebar_pick.pick.unsupported": "Bu tanlovni armaturalash mumkin emas. Ustun, to'sin, devor, plita yoki poydevorni tanlang",
+ "rebar_pick.pick.keys": "Tanlash uchun bosing, ko'proq qo'shish uchun Shift · Shaklni ochish uchun Enter · Bekor qilish uchun Esc",
+ "rebar_pick.pick.open": "Shaklni ochish",
+ "rebar_pick.pick.cancel": "Bekor qilish"
+}

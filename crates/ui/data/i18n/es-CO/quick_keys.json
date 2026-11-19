@@ -1,0 +1,6 @@
+{
+ "quick.keys.rec_hint": "Esc cancela · Retroceso borra",
+ "quick.keys.row_lost": "{key} ahora pertenece a “{cmd}”",
+ "quick.keys.row_took": "{key} tomada de “{cmd}”",
+ "quick.keys.reset_tip": "Restablecer al predeterminado"
+}

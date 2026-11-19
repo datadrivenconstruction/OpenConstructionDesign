@@ -1,0 +1,9 @@
+{
+ "ai.plan.reject_ask": {
+  "one": "¿Rechazar # cambio?",
+  "other": "¿Rechazar # cambios?"
+ },
+ "ai.plan.reject_ask.hint": "Se descartan el borrador y sus marcas de revisión. El modelo no cambia.",
+ "ai.plan.reject_confirm": "Rechazar",
+ "ai.plan.reject_keep": "Conservar"
+}

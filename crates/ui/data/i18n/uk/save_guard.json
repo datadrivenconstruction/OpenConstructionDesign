@@ -1,0 +1,14 @@
+{
+ "save_guard.save.empty_over_full": "Нічого не збережено: модель порожня, а файл уже містить дані. Файл не змінено. Використайте «Зберегти як», щоб записати під іншою назвою.",
+ "save_guard.refuse.body": "Нічого не збережено: модель порожня, а в {name} вже є вміст. Файл не змінено.",
+ "save_guard.refuse.foreign": "Це не файл DDC Editor, тому його не можна замінити. Використайте «Зберегти як», щоб записати під іншою назвою.",
+ "save_guard.refuse.ask": "Замінити {name}? Він містить {what}. Спочатку його буде переміщено в теку _archive поруч, а потім записано порожню модель.",
+ "save_guard.refuse.holds_db": "{n} елементів і рядків даних",
+ "save_guard.refuse.holds_ifc": "IFC з елементами",
+ "save_guard.refuse.replace": "Замінити все одно…",
+ "save_guard.refuse.replace_yes": "Перемістити і замінити",
+ "save_guard.refuse.save_as": "Зберегти як…",
+ "save_guard.refuse.cancel": "Скасувати",
+ "save_guard.replace.moved": "Попередній файл перенесено до {path}",
+ "save_guard.replace.move_failed": "Не вдалося перемістити {name} убік: {error}. Нічого не записано."
+}

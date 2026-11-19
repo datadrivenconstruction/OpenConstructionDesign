@@ -1,0 +1,22 @@
+{
+ "cmd.arch.grid_pick": "شبكة بالخط",
+ "cmd.arch.grid_pick.desc": "ينشئ شبكة بدقة على امتداد خط رسم محدد في المستوى الحالي؛ وتتابع الأسماء السلسلة. Tab يأخذ كل الخطوط المتوازية في طبقة الرسم نفسها دفعة واحدة. كل اختيار خطوة تراجع واحدة.",
+ "cmd.struct.beam_pick": "كمرة بالخط",
+ "cmd.struct.beam_pick.desc": "يضع كمرة من النوع الحالي في المستوى النشط على امتداد خط رسم محدد. Tab يأخذ السلسلة المتصلة. كل اختيار خطوة تراجع واحدة.",
+ "hint.grid_pick.one": "شبكة بالخط: اختر خط رسم  ·  Tab كل الخطوط المتوازية في طبقته  ·  Esc خروج",
+ "hint.grid_pick.more": "شبكة بالخط: اختر خطاً لأخذ كل الخطوط المتوازية في طبقته  ·  Tab خط واحد  ·  Esc إلغاء التفعيل",
+ "hint.beam_pick.one": "كمرة بالخط: اختر خط رسم  ·  Tab السلسلة المتصلة  ·  Esc خروج",
+ "hint.beam_pick.more": "كمرة بالخط: اختر خطاً لأخذ سلسلته  ·  Tab خط واحد  ·  Esc إلغاء التفعيل",
+ "line_pick.st.start_grid": "اختر خط رسم. Tab: كل الخطوط المتوازية في طبقته",
+ "line_pick.st.start_beam": "اختر خط رسم لكمرة {type}. Tab: السلسلة المتصلة",
+ "line_pick.st.grid_done": "أُضيفت الشبكة {name}",
+ "line_pick.st.grids_done": "أُضيفت {n} شبكات: {first} — {last}",
+ "line_pick.st.beam_done": "تمت إضافة الكمرة {type}",
+ "line_pick.st.beams_done": "أُضيفت {n} كمرات {type}",
+ "line_pick.st.on_grid": "لهذا الخط شبكة {name} بالفعل",
+ "line_pick.st.on_beam": "لهذا الخط كمرة {id} بالفعل",
+ "line_pick.st.no_layer": "طبقات الرسم للخطوط غير معروفة بعد، حاول مرة أخرى",
+ "line_pick.st.no_beam_type": "لا يوجد مقطع كمرة في الكتالوج",
+ "line_pick.st.reload_warn": "أُنشئت، لكن تعذّر تحديث العرض: {err}",
+ "line_pick.st.failed": "لم تُنشأ: {err}"
+}

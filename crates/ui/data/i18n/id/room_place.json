@@ -1,0 +1,8 @@
+{
+ "cmd.arch.room_auto": "Tempatkan ruangan otomatis",
+ "cmd.arch.room_auto.desc": "Menempatkan ruangan di setiap batas tertutup pada level aktif yang belum memilikinya. Loop dinding terbuka dilewati, tidak ditutup berdasarkan tebakan. Satu langkah batal.",
+ "room_place.placed": "Ruangan ditempatkan: {n}. Area yang sudah memiliki ruangan: {m}. Loop terbuka dilewati: {k}",
+ "room_place.all_had": "Tidak ada yang ditempatkan: dari {m} area tertutup, semuanya sudah memiliki ruangan. Loop terbuka dilewati: {k}",
+ "room_place.none": "Tidak ada yang ditempatkan: level tidak memiliki area dinding tertutup",
+ "room_place.none_open": "Tidak ada yang ditempatkan: level tidak memiliki area dinding tertutup. Loop terbuka dilewati: {k}"
+}

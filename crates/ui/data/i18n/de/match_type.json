@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "Typ übertragen",
+ "cmd.mod.match_type.short": "Typ übertragen",
+ "cmd.mod.match_type.desc": "Eine Wand, Decke, Stütze oder einen Träger wählen, dann auf andere derselben Kategorie klicken, um ihnen den Typ zu geben. Ein Fenster ziehen, um auf alle darin anzuwenden. Esc gibt die Quelle frei.",
+ "hint.match_type.pick": "Typ übertragen: Wand, Decke, Stütze oder Träger wählen · Esc — beenden",
+ "hint.match_type.apply": "Typ übertragen: Ziele anklicken oder ein Fenster ziehen · Esc — andere Quelle",
+ "match_type.kind.wall": "Wand",
+ "match_type.kind.slab": "Decke",
+ "match_type.kind.column": "Stütze",
+ "match_type.kind.beam": "Träger",
+ "match_type.refuse.category": "Andere Kategorie: nur eine/n {cat} kann diesen Typ aufnehmen",
+ "match_type.refuse.curtain": "Vorhangfassade: ihr Typ wird hier nicht übertragen",
+ "match_type.refuse.pinned": "Fixiert: zum Ändern des Typs zuerst lösen",
+ "match_type.pick_bad": "Als Quelle eine Wand, Decke, Stütze oder einen Träger wählen",
+ "match_type.same": "Bereits dieser Typ",
+ "match_type.done": "Typ angewendet: {n}",
+ "match_type.done_skipped": "Typ angewendet: {n}, übersprungen (fixiert oder Vorhang): {skipped}",
+ "match_type.failed": "Typ nicht geändert: {err}"
+}

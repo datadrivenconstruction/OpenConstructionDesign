@@ -1,0 +1,8 @@
+{
+ "xlsx_idle.idle_title": "Walang babaguhin sa import",
+ "xlsx_idle.export_name": "I-export",
+ "xlsx_idle.export_body": "Isinusulat ang modelo sa workbook. I-edit ang mga halaga doon, saka i-sync.",
+ "xlsx_idle.sync_name": "I-sync",
+ "xlsx_idle.sync_body": "Binabasa muli ang workbook at inililista ang pagkakaiba. Babaguhin lang ang modelo kapag nag-apply ka.",
+ "xlsx_idle.last_sync": "Huling na-sync: {when}"
+}

@@ -1,0 +1,7 @@
+{
+ "diff.kind.added": "נוסף",
+ "diff.kind.changed": "שונה",
+ "diff.kind.deleted": "נמחק",
+ "diff.kind.refused": "נדחה",
+ "diff.kind.conflict": "התנגשות"
+}

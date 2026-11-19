@@ -1,0 +1,11 @@
+{
+ "empty.sv_notfound.title": "A nézet nem található",
+ "empty.sv_notfound.hint": "Ez a nézet törlődött, vagy már nem része a projektnek.",
+ "empty.sv_notfound.action": "Nézet bezárása",
+ "empty.sv_cuts_nothing.title": "Ez a metszet nem vág semmit",
+ "empty.sv_cuts_nothing.hint": "A vágási vonal mélységén belül nem metsz falat, födémet vagy nyílást. Mozgassa a vonalat, vagy növelje a nézet mélységét.",
+ "empty.sv_cuts_nothing.action": "Megjelenítés az alaprajzon",
+ "empty.sv_shows_nothing.title": "Ez a homlokzat nem mutat semmit",
+ "empty.sv_shows_nothing.hint": "A nézet mélységén belül nincs fal, födém vagy nyílás. Mozgassa a nézetvonalat, vagy növelje a nézet mélységét.",
+ "empty.sv_shows_nothing.action": "Megjelenítés az alaprajzon"
+}

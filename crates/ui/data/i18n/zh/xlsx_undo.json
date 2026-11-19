@@ -1,0 +1,6 @@
+{
+ "cmd.xlsx.undo_apply": "撤销上次 XLSX 电子表格 应用",
+ "xlsx_undo.later": "未撤销：此 XLSX 电子表格 应用之后模型又被编辑。请逐步使用 Ctrl+Z 或历史面板。",
+ "xlsx_undo.gone": "没有可撤销的内容：此次 XLSX 电子表格 应用已撤销。",
+ "xlsx_undo.busy": "请先完成或取消当前绘制，然后再撤销 XLSX 电子表格 应用。"
+}

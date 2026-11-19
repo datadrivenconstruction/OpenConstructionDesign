@@ -1,0 +1,42 @@
+{
+ "ai.tool.show_elements": "Visualizzazione degli elementi",
+ "ai.tool.isolate_elements": "Isolamento degli elementi",
+ "ai.tool.color_by": "Colorazione per valore",
+ "ai.tool.reset_view": "Ripristino della vista",
+ "ai_found.found.query": "Trovati",
+ "ai_found.found.show": "Mostrati",
+ "ai_found.found.isolate": "Isolati",
+ "ai_found.found.hide": "Nascosti",
+ "ai_found.found.color": "Colorati",
+ "ai_found.found.count": "{n} di {m}",
+ "ai_found.found.none": "Nessuna corrispondenza. Prova un filtro più ampio.",
+ "ai_found.found.show_btn": "Mostra",
+ "ai_found.found.show_tip": "Seleziona questi elementi e ingrandiscili in pianta e in 3D",
+ "ai_found.found.isolate_btn": "Isola",
+ "ai_found.found.isolate_tip": "Mostra solo questi elementi fino a Ripristina vista",
+ "ai_found.found.select_btn": "Seleziona",
+ "ai_found.found.select_tip": "Seleziona questi elementi senza spostare la vista",
+ "ai_found.legend.title": "Colora per {by}",
+ "ai_found.legend.row_tip": "Clicca per selezionare questi elementi",
+ "ai_found.legend.empty_value": "Nessun valore",
+ "ai_found.legend.other": {
+  "one": "# altro valore",
+  "other": "# altri valori"
+ },
+ "ai_found.view.title": "Vista dell'assistente IA",
+ "ai_found.view.reset": "Ripristina vista",
+ "ai_found.view.reset_tip": "Ripristina la vista com'era prima che l'assistente IA la cambiasse",
+ "ai_found.view.shown": {
+  "one": "# elemento mostrato",
+  "other": "# elementi mostrati"
+ },
+ "ai_found.view.isolated": {
+  "one": "# elemento isolato",
+  "other": "# elementi isolati"
+ },
+ "ai_found.view.hidden": {
+  "one": "# elemento nascosto",
+  "other": "# elementi nascosti"
+ },
+ "ai_found.found.line": "{what}: {count}"
+}

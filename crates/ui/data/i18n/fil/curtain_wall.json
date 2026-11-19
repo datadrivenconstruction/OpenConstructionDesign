@@ -1,0 +1,12 @@
+{
+ "curtain_wall.cw.issue.slab": "Plato #{id}: {e}",
+ "curtain_wall.cw.issue.body": "katawan {id}: {e}",
+ "curtain_wall.cw.added": "Nadagdag na curtain wall: {n}",
+ "curtain_wall.cw.add_failed": "Hindi nabuo ang curtain wall: {e}",
+ "curtain_wall.cw.edited_warn": "Nabago ang curtain wall #{id}: {w}",
+ "curtain_wall.cw.edited": "Nabago ang curtain wall #{id}",
+ "curtain_wall.cw.not_changed": "Hindi nabago: {e}",
+ "curtain_wall.cw.room_edited": "Nabago ang room #{id}",
+ "curtain_wall.cw.slope_range": "Hindi nabago: nasa labas ng saklaw ang slope",
+ "curtain_wall.cw.slope_set": "Plato #{id}: dalisdis {pct}"
+}

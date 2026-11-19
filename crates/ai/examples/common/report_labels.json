@@ -1,0 +1,22 @@
+{
+ "title": "AI generation: live tests",
+ "subtitle": "Matrix of 32 prompts and 16 hard tasks (H, V, Q), objective automatic scoring of each task. Model:",
+ "note": "Scoring is automatic: the model is built and passes the gates, no collisions (walls, rooms, openings), floors, areas and room composition match the brief, reference numbers and terms appear in the answer for V/Q tasks, element growth in the model after Apply. Keyword-based checks are marked \"(keyword)\". Cost accounts for the cache.",
+ "t_ok": "tasks passed all checks",
+ "t_checks": "checks passed",
+ "t_cost": "total for the run",
+ "t_in": "input tokens / task",
+ "t_out": "output tokens / task",
+ "t_cache": "input from cache",
+ "t_time": "average time",
+ "runs": "All runs",
+ "c_id": "Task",
+ "c_ok": "",
+ "c_score": "Checks",
+ "c_in": "Input",
+ "c_out": "Output",
+ "c_cost": "Cost",
+ "c_time": "Time",
+ "c_tools": "Calls",
+ "c_failed": "Failed"
+}

@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "Tizim nomi",
+ "mep_browser.add_blocked": "Avval tizim nomini kiriting",
+ "mep_browser.col.insulation": "Izolyatsiya",
+ "mep_browser.cancel": "Bekor qilish",
+ "mep_browser.delete.title": "Bu tizim o'chirilsinmi?",
+ "mep_browser.delete.body": "“{name}” tizimi va uning yo'nalishlari ({n}) o'chiriladi.",
+ "mep_browser.delete.undo": "Buni bitta Bekor qilish bilan qaytarish mumkin.",
+ "mep_browser.delete.confirm": "Tizimni o'chirish"
+}

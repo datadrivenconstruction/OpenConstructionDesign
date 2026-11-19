@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "स्नैप त्रिज्या",
+ "snap_refine.settings.snap_px_desc": "स्नैप होने के लिए कर्सर किसी बिंदु या रेखा के कितना पास हो, स्क्रीन पिक्सेल में। टच स्क्रीन और उच्च घनत्व डिस्प्ले पर बड़ा मान मदद करता है।",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "क्षैतिज",
+ "snap_refine.hint.vertical": "ऊर्ध्वाधर",
+ "snap_refine.hint.perpendicular": "पिछले के लंबवत",
+ "snap_refine.hint.parallel": "पिछले के समानांतर",
+ "snap_refine.hint.on_axis": "दीवार की धुरी पर",
+ "snap_refine.no_snap": "स्नैप नहीं (Alt)"
+}

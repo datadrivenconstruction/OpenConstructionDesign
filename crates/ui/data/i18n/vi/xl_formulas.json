@@ -1,0 +1,4 @@
+{
+ "xl.msg.x_formulas_in_column_x_on_sheet_x_replaced_by_values": "{} công thức trong cột '{}' trên tờ '{}' đã được thay bằng giá trị",
+ "xl.msg.formula_in_a_model_column_not_applied": "công thức trong cột mô hình: kết quả không được áp dụng, giữ giá trị mô hình; nhập một giá trị để thay đổi"
+}

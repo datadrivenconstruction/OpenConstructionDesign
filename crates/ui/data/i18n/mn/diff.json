@@ -1,0 +1,7 @@
+{
+ "diff.kind.added": "нэмэгдсэн",
+ "diff.kind.changed": "өөрчлөгдсөн",
+ "diff.kind.deleted": "устгагдсан",
+ "diff.kind.refused": "татгалзсан",
+ "diff.kind.conflict": "зөрчил"
+}

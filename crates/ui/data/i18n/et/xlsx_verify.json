@@ -1,0 +1,23 @@
+{
+ "xlsx_verify.rolled_back": "Rakendamine tühistati: mudel ei vastanud eelvaatele. {what}",
+ "xlsx_verify.not_written": "{row} ei muudetud.",
+ "xlsx_verify.lost": "{row} kadus.",
+ "xlsx_verify.not_deleted": "{row} ei kustutatud.",
+ "xlsx_verify.extra_deleted": "{row} kustutati, kuigi eelvaade seda säilitab.",
+ "xlsx_verify.created": "{table}: {got} uut, oodati {want}.",
+ "xlsx_verify.value": "{row}, {field}: oodati {want} (oli {old}), saadi {got}.",
+ "xlsx_verify.check_failed": "Tulemust ei saanud kontrollida: {e}",
+ "xlsx_verify.plan_failed": "Rakendamist ei alustatud: kontroll ei saanud mudelit lugeda ({e}).",
+ "xlsx_verify.take_back_failed": "Sammu ei saanud tagasi võtta ({e}): kasuta Võta tagasi.",
+ "xlsx_verify.t.wall": "Sein",
+ "xlsx_verify.t.opening": "Ava",
+ "xlsx_verify.t.room": "Ruum",
+ "xlsx_verify.t.slab": "Põrand",
+ "xlsx_verify.t.level": "Korrus",
+ "xlsx_verify.t.wall_type": "Seinatüüp",
+ "xlsx_verify.t.slab_type": "Põranda tüüp",
+ "xlsx_verify.t.col": "Post",
+ "xlsx_verify.t.beam": "Tala",
+ "xlsx_verify.t.roof": "Katus",
+ "xlsx_verify.t.curtain_wall": "Klaasfassaad"
+}

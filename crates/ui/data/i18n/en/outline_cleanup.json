@@ -1,0 +1,15 @@
+{
+ "cmd.ctx.floor.clean_outline": "Clean up outline",
+ "cmd.ctx.floor.clean_outline.desc": "Removes narrow spikes where the floor outline turns back on itself. Shows a preview first; one undo step.",
+ "outline_cleanup.title": "Clean up outline",
+ "outline_cleanup.intro": "The outline of this floor turns back on itself in narrow spikes: {n}. Clean-up removes them; everything else stays as it is.",
+ "outline_cleanup.legend_before": "Thick line: the outline now",
+ "outline_cleanup.legend_after": "Thin line: the outline after clean-up",
+ "outline_cleanup.undo": "You can undo this in one step.",
+ "outline_cleanup.apply": "Clean up",
+ "outline_cleanup.cancel": "Cancel",
+ "outline_cleanup.done": "Outline cleaned up, spikes removed: {n}",
+ "outline_cleanup.none": "The outline of this floor has no spikes",
+ "outline_cleanup.failed": "Could not clean up the outline",
+ "outline_cleanup.changed": "The outline changed since the preview; nothing was written. Check the new preview."
+}

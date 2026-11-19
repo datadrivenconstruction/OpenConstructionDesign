@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "Spørg AI: {q}",
+ "ai.palette.connect": "Forbind AI for at spørge",
+ "ai.palette.draft.apply": "Anvend udkast ({n})",
+ "ai.palette.draft.reject": "Afvis udkast",
+ "ai.palette.draft.next": "Næste udkastændring",
+ "ai.palette.draft.show": "Vis udkast i visningen",
+ "cmd.ai.next_change": "Næste udkastændring",
+ "cmd.ai.next_change.desc": "Flytter visningen til det næste element, udkastet ændrer.",
+ "cmd.ai.show_draft": "Vis AI-udkast i visningen",
+ "cmd.ai.show_draft.desc": "Tilpasser visningen til alt, udkastet ændrer."
+}

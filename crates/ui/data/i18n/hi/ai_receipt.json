@@ -1,0 +1,21 @@
+{
+ "ai.receipt.title": {
+  "one": "# AI बदलाव लागू हुआ",
+  "other": "# AI बदलाव लागू हुए"
+ },
+ "ai.receipt.more": "+{n} और",
+ "ai.receipt.list": "तत्व",
+ "ai.receipt.show": "दिखाएँ",
+ "ai.receipt.show.tip": "बदले गए तत्व चुनें और फ़्रेम करें",
+ "ai.receipt.undo": "वापस लें",
+ "ai.receipt.undo.tip": "ठीक यह लागू करना वापस लें",
+ "ai.receipt.undone": "वापस लिया गया",
+ "ai.receipt.later": "बाद में संपादन किए गए",
+ "ai.receipt.toast_undone": "लागू की गई योजना वापस ले ली गई",
+ "ai.receipt.draft_family": "ड्राफ़्ट फ़ैमिली: {name}",
+ "ai.receipt.promote": "कार्यशील बनाएँ",
+ "ai.receipt.promote.tip": "ड्राफ़्ट फ़ैमिली को कार्यशील बनाएँ (एक पूर्ववत-चरण)",
+ "ai.receipt.promoted": "फ़ैमिली अब कार्यशील है",
+ "ai.receipt.promote_failed": "फ़ैमिली को कार्यशील नहीं बनाया जा सका",
+ "cmd.ai.receipt_undo": "अंतिम AI योजना वापस लें"
+}

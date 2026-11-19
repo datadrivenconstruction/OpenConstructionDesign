@@ -1,0 +1,7 @@
+{
+ "fmenu.export": "名前を付けて保存 / エクスポート",
+ "fmenu.export.ifc4x3": "IFC 4.3",
+ "fmenu.export.ifc2x3": "IFC 2x3",
+ "fmenu.export.glb": "glTF バイナリ (.glb)",
+ "fmenu.export.pdf": "PDF または SVG (図面)"
+}

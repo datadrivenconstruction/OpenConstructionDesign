@@ -1,0 +1,4 @@
+{
+ "length_input.opt.bad_length": "長さではありません: mm で入力するか、ヤードポンド法では ft-in で入力してください",
+ "length_input.opt.times": "×"
+}

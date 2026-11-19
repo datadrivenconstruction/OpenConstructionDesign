@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "इकाइयाँ",
+ "topo_units.unit": "फ़ाइल की इकाइयाँ",
+ "topo_units.unit.m": "m",
+ "topo_units.unit.cm": "cm",
+ "topo_units.unit.mm": "mm",
+ "topo_units.unit.ft": "ft",
+ "topo_units.unit.usft": "US survey ft",
+ "topo_units.unit.in": "in",
+ "topo_units.unit.from_file": "फ़ाइल अपनी इकाइयाँ बताती है: {unit}",
+ "topo_units.unit.suggested": "फ़ाइल में इकाइयाँ नहीं हैं। विस्तार से सुझाई गई: {unit} — नीचे परिणाम जाँचें",
+ "topo_units.extent": "प्रोजेक्ट इकाइयों में परिणाम: प्लान में {x} × {y} {u}, ऊँचाई सीमा {z} {u}",
+ "topo_units.extent.none": "परिणाम: इन विकल्पों से आयात को कुछ नहीं",
+ "topo_units.extent.check": "यह साइट जैसा नहीं दिखता: इकाइयाँ जाँचें"
+}

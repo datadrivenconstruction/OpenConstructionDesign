@@ -1,0 +1,11 @@
+{
+ "pick_rules.filter": "Tanlash: hammasi",
+ "pick_rules.filter.on": "Tanlash: {n} o'chirilgan",
+ "pick_rules.filter.title": "Bosish bilan tanlanishi mumkin bo'lgan kategoriyalar",
+ "pick_rules.filter.all": "Barcha kategoriyalarni tanlash",
+ "pick_rules.filter.tip": "Tanlash filtri: belgilanmagan kategoriyalar bosish va sichqoncha ustida o'tishda o'tkazib yuboriladi",
+ "pick_rules.here": "Bu yerdagi elementlar",
+ "pick_rules.here.selected": "tanlangan",
+ "pick_rules.pinned": "Mahkamlangan elementlarni tanlash",
+ "pick_rules.here.row": "{cat} · {len}"
+}

@@ -1,0 +1,15 @@
+{
+ "cmd.data.export_step.desc": "Salvează întregul model sau selecția ca STEP AP214 sau AP242: corpuri solide cu fețe exacte plane, cilindrice, conice, sferice, toroidale și B-spline, celelalte elemente ca fețe plane, culori, un nod de ansamblu pe fiecare nivel.",
+ "cmd.data.export_3mf.desc": "Salvează întregul model sau selecția ca 3MF pentru imprimare: un obiect pentru fiecare element, culori, unități și verificarea că fiecare corp este etanș.",
+ "fmenu.export.step": "STEP corpuri exacte (.step)",
+ "fmenu.export.3mf": "3MF pentru imprimare (.3mf)",
+ "mx.schema": "Schema STEP",
+ "mx.schema.ap214": "AP214 (cel mai larg suport)",
+ "mx.schema.ap242": "AP242",
+ "mx.watertight": "Corpuri care nu sunt etanșe",
+ "mx.watertight.report": "Scrie-le și listează-le",
+ "mx.watertight.skip": "Lasă-le deoparte",
+ "mx.watertight.require": "Anulează exportul",
+ "mx.faceted": "{fmt} salvat: {path} ({exact} corpuri exacte, {n} scrise ca fețe plane: {first})",
+ "sheets.print.svg": "SVG"
+}

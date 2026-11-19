@@ -1,0 +1,67 @@
+{
+ "schema": "gen_bench.v1",
+ "group": "free_form",
+ "spec": {
+  "typology": "apartment_section",
+  "name": "Y Block",
+  "floors": 6,
+  "roof": {
+   "kind": "hip",
+   "slope": 25
+  },
+  "footprint": {
+   "wings": [
+    {
+     "from": [
+      0,
+      0
+     ],
+     "to": [
+      0.0,
+      30.0
+     ],
+     "width": 15
+    },
+    {
+     "from": [
+      0,
+      0
+     ],
+     "to": [
+      -25.981,
+      -15.0
+     ],
+     "width": 15
+    },
+    {
+     "from": [
+      0,
+      0
+     ],
+     "to": [
+      25.981,
+      -15.0
+     ],
+     "width": 15
+    }
+   ]
+  }
+ },
+ "adjacency": [
+  [
+   "kitchen",
+   "living",
+   3
+  ],
+  [
+   "bedroom",
+   "bath",
+   1
+  ],
+  [
+   "bath",
+   "hall",
+   1
+  ]
+ ]
+}

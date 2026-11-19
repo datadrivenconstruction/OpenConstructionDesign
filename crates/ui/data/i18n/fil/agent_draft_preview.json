@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "Silip",
+ "agent_draft.ag.preview.desc": "Ibalangkas ang mga elemento ng draft na ito sa canvas habang nasa button ang pointer. Walang babaguhin.",
+ "agent_draft.type.column": "Kolum",
+ "agent_draft.type.roof": "Bubong",
+ "agent_draft.type.ceiling": "Kisame",
+ "agent_draft.type.stair": "Monolitiko",
+ "agent_draft.type.railing": "Riles",
+ "agent_draft.type.shaft": "Puwang",
+ "agent_draft.type.axis": "Aksis 6.5 mm",
+ "agent_draft.type.refplane": "Eroplanong sanggunian"
+}

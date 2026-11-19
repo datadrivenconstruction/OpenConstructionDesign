@@ -1,0 +1,6 @@
+{
+ "project_seed.seed_level": "Nivelul 1",
+ "project_seed.seed_wall_partition": "Compartimentare 100",
+ "project_seed.seed_wall_masonry": "Zidărie 200",
+ "project_seed.seed_wall_exterior": "Exterior 380"
+}

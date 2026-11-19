@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "Wszystkie",
+ "clash_list.only_selected": "Tylko zaznaczone",
+ "clash_list.tolerance": "Tolerancja",
+ "clash_list.gap": "Odstęp",
+ "clash_list.export": "Eksportuj",
+ "clash_list.col.volume": "Objętość",
+ "clash_list.fix.up": "Przesuń w górę",
+ "clash_list.fix.down": "Przesuń w dół",
+ "clash_list.fix.sleeve": "Tuleja",
+ "clash_list.apply_fix": "Zastosuj poprawkę",
+ "clash_list.err.tol": "Tolerancja: wpisz długość (0 lub więcej), np. 50 lub 2 in",
+ "clash_list.sleeve_no_host": "Tuleja wymaga ściany lub płyty stropowej w parze",
+ "clash_list.err.gap": "Odstęp: wpisz długość (0 lub więcej), np. 50 lub 2 in"
+}

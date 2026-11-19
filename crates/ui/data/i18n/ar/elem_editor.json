@@ -1,0 +1,4 @@
+{
+ "elem.spreadsheet.applied": "تم الاستيراد من جدول XLSX: {what}",
+ "elem.spreadsheet.failed": "فشل استيراد جدول XLSX: {e}"
+}

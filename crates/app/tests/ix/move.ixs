@@ -1,0 +1,5 @@
+walls=[(0,0)-(6,0) (6,0)-(6,4) (6,4)-(0,4) (0,4)-(0,0)]
+# Move: drag the selected door along its wall, one record
+tool(DR) click(3.02,0.03) → rows(opening)=1 journal=+1
+tool(select) click(3,0) → selected=1 state=Idle
+drag(3,0→4,0) → rows(opening)=1 journal=+2 state=Idle

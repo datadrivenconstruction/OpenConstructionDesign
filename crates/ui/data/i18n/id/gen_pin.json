@@ -1,0 +1,7 @@
+{
+ "gen.pin.room": "Anda mengubah ruangan proyek yang dihasilkan. Kunci agar revisi mempertahankannya di tempatnya.",
+ "gen.pin.storey": "Anda mengubah lantai proyek yang dihasilkan. Kunci agar revisi mempertahankan dinding dan bukaannya.",
+ "gen.pin.action": "Kunci",
+ "gen.pin.done": "Terkunci: revisi proyek mempertahankannya dan menempatkan sisanya di sekelilingnya",
+ "gen.pin.failed": "Tidak dapat mengunci"
+}

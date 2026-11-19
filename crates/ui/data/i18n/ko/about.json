@@ -1,0 +1,33 @@
+{
+ "cmd.help.licenses": "오픈 소스 라이선스",
+ "cmd.help.licenses.desc": "이 빌드가 사용하는 오픈 소스 라이브러리와 라이선스 목록을 표시합니다.",
+ "about.product": "DDC Editor",
+ "about.version": "버전",
+ "about.build": "빌드",
+ "about.schema": "모델 스키마",
+ "about.system": "시스템",
+ "about.gpu": "그래픽 어댑터",
+ "about.language": "언어",
+ "about.copy": "버전 정보 복사",
+ "about.copy_desc": "버그 보고용 버전, 빌드, 시스템, 그래픽 어댑터 정보. 파일 경로는 포함되지 않습니다.",
+ "about.copied": "버전 정보를 복사했습니다",
+ "about.licenses": "오픈 소스 라이선스",
+ "about.licenses_desc": "이 빌드에서 사용하는 라이브러리와 해당 라이선스",
+ "about.licenses.open": "보기",
+ "about.licenses.title": "오픈 소스 라이선스",
+ "about.licenses.note": "DDC Editor에는 아래 라이브러리가 포함되어 있습니다. 각 라이브러리는 자체 라이선스와 저작권 고지를 따릅니다. 전체 라이선스 본문: 애플리케이션 옆의 THIRD_PARTY_LICENSES.txt",
+ "about.licenses.full": "전체 라이선스 본문",
+ "about.licenses.list": "구성 요소 목록",
+ "about.licenses.close": "닫기",
+ "about.licenses.col_name": "구성 요소",
+ "about.licenses.col_license": "라이선스",
+ "about.licenses.count": {
+  "one": "# 구성 요소",
+  "other": "# 구성 요소"
+ },
+ "about.licenses.count_of": "{total}개 중 {shown}개 구성 요소",
+ "about.licenses.search_hint": "이름 또는 라이선스로 검색…",
+ "about.licenses.search_clear": "검색 지우기",
+ "about.licenses.none": "찾은 항목이 없습니다",
+ "about.licenses.none_hint": "라이브러리 이름의 일부나 MIT 같은 라이선스 이름으로 검색해 보세요."
+}

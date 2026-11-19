@@ -1,0 +1,6 @@
+{
+ "xl.msg.filter_on_sheet_x": "filter on sheet '{}'",
+ "xl.msg.sort_settings_on_sheet_x": "sort settings on sheet '{}'",
+ "xl.msg.hidden_rows_on_sheet_x": "hidden rows on sheet '{}'",
+ "xl.msg.hidden_columns_on_sheet_x": "hidden columns on sheet '{}'"
+}

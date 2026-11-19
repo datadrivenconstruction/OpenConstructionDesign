@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "यह वर्कबुक पहले से मौजूद है",
+ "xlsx_exists.foreign": "यह इस प्रोजेक्ट की वर्कबुक नहीं है, इसलिए इसे कभी नहीं बदला जाता।",
+ "xlsx_exists.pending": "इसमें {n} संपादन हैं जो अभी मॉडल पर लागू नहीं हुए।",
+ "xlsx_exists.outside": "इसमें {n} पंक्तियां हैं जो नया निर्यात नहीं रखता।",
+ "xlsx_exists.new_name": "{name} में निर्यात करें",
+ "xlsx_exists.apply_first": "पहले उन्हें लागू करें",
+ "xlsx_exists.replace": "बदलें (पुरानी बुक _archive में)",
+ "xlsx_exists.archived": "पुरानी वर्कबुक {path} पर ले जाई गई",
+ "xlsx_exists.archive_failed": "पुरानी वर्कबुक नहीं ले जाई जा सकी, कुछ निर्यात नहीं हुआ: {error}"
+}

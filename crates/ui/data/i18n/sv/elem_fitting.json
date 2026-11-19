@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "Kopplingsdel",
+ "elem.mep_fitting.many": "Kopplingsdelar",
+ "elem.mep_fitting.kind.elbow": "Knä",
+ "elem.mep_fitting.kind.tee": "T-stycke",
+ "elem.mep_fitting.kind.cross": "Kryss",
+ "elem.mep_fitting.kind.transition": "Övergång",
+ "elem.mep_fitting.kind.cap": "Ändlock",
+ "elem.mep_fitting.size": "Storlek",
+ "elem.mep_fitting.at": "Placering",
+ "elem.mep_fitting.runs": "Sträcka {n}",
+ "elem.mep_fitting.edit_run": "Redigera sträcka",
+ "elem.mep_fitting.select_runs": "Välj dess sträckor",
+ "elem.mep_fitting.derived": "En kopplingsdel följer sina sträckor: ändrar du en sträcka ändras kopplingsdelen med den.",
+ "elem.mep_fitting.no_delete": "En kopplingsdel kan inte tas bort eller flyttas själv. Redigera eller ta bort dess sträckor.",
+ "elem.mep_fitting.hint": "Klicka på en kopplingsdel i planen för att se dess sträckor.",
+ "elem.mep_fitting.picked": "Valda kopplingsdelar: {n}"
+}

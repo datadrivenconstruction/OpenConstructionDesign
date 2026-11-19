@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "Einheiten",
+ "topo_units.unit": "Einheiten in der Datei",
+ "topo_units.unit.m": "m",
+ "topo_units.unit.cm": "cm",
+ "topo_units.unit.mm": "mm",
+ "topo_units.unit.ft": "ft",
+ "topo_units.unit.usft": "US-Survey-ft",
+ "topo_units.unit.in": "in",
+ "topo_units.unit.from_file": "Die Datei gibt ihre Einheiten an: {unit}",
+ "topo_units.unit.suggested": "Die Datei nennt keine Einheiten. Vorschlag nach Ausdehnung: {unit} — prüfen Sie das Ergebnis unten",
+ "topo_units.extent": "Ergebnis in Projekteinheiten: {x} × {y} {u} im Plan, Höhenbereich {z} {u}",
+ "topo_units.extent.none": "Ergebnis: Mit diesen Auswahlen ist nichts zu importieren",
+ "topo_units.extent.check": "Das sieht nicht nach einem Gelände aus: Prüfen Sie die Einheiten"
+}

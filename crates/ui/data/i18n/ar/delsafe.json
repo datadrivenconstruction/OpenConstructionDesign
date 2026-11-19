@@ -1,0 +1,6 @@
+{
+ "delsafe.ring.opening_shape": "مخطط الفتحة سيتقاطع مع نفسه أو ينهار",
+ "delsafe.ring.opening_boundary": "ستتقاطع فتحة مع الحد الخارجي أو تلامسه",
+ "delsafe.ring.openings_overlap": "ستتداخل الفتحات أو تلامس بعضها",
+ "xl.msg.delsafe_instance_param_on_types": "المعامل '{}' معامل للنسخة؛ عدّله في ورقة العناصر، لم يُطبَّق"
+}

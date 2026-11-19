@@ -1,0 +1,9 @@
+{
+ "empty.props_model.title": "Tidak ada yang dipilih",
+ "empty.props_model.hint": "Klik elemen di tampilan untuk melihat propertinya. Atau ekspor semua parameter ke buku kerja, ubah di sana, lalu terapkan kembali.",
+ "empty.props_model.action": "Ekspor ke XLSX",
+ "tut.spreadsheet.title": "Siklus XLSX",
+ "tut.spreadsheet.1": "Tekan Ekspor ke spreadsheet XLSX di bawah: pilih apa yang disertakan dan simpan buku kerjanya.",
+ "tut.spreadsheet.2": "Buka buku kerja di spreadsheet XLSX, ubah sel, dan simpan. Pratinjau di sini menampilkan perubahannya.",
+ "tut.spreadsheet.3": "Periksa pratinjau dan tekan Terapkan ke model. Ctrl+Z membatalkannya."
+}

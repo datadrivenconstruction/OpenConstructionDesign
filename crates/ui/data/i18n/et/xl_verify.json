@@ -1,0 +1,9 @@
+{
+ "xl.msg.base_value": "lugemiskontroll ebaõnnestus, vana töövihik jääb alles: {} ({}) oodati '{}', loeti '{}'",
+ "xl.msg.base_missing": "lugemiskontroll ebaõnnestus, vana töövihik jääb alles: lehel {} puudub rida id-le {}",
+ "xl.msg.base_extra": "lugemiskontroll ebaõnnestus, vana töövihik jääb alles: rida {} ei ole mudelis",
+ "xl.msg.base_refused": "lugemiskontroll ebaõnnestus, vana töövihik jääb alles: {} ({}) keelduti: {}",
+ "xl.msg.base_sheet": "lugemiskontroll ebaõnnestus, vana töövihik jääb alles: leht {} puudub, on tühi või loetamatu",
+ "xl.msg.base_newer": "lugemiskontroll ebaõnnestus, vana töövihik jääb alles: {} lahtrit ei sisalda mudeli väärtust",
+ "xl.msg.base_unreadable": "lugemiskontroll ebaõnnestus, vana töövihik jääb alles: uut töövihikut ei saa lugeda ({})"
+}

@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "X-telg",
+ "fe.axis.y": "Y-telg",
+ "fe.axis.z": "Z-telg",
+ "fe.col.axis": "Telg",
+ "fe.col.at": "Asukoht",
+ "fe.col.mode": "Režiim",
+ "fe.mode.fixed": "Fikseeritud",
+ "fe.mode.free": "Vaba",
+ "fe.types.inherited": "Vaikimisi parameetrist",
+ "fe.csv.more": "Rohkem CSV-toiminguid",
+ "fe.ref.selected": "Tasand: {name}"
+}

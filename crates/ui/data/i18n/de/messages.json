@@ -1,0 +1,7 @@
+{
+ "messages.title": "Meldungen",
+ "messages.desc": "Verlauf der Hinweise. Keine neuen Warnungen oder Fehler.",
+ "messages.desc_new": "{n} neue Warnungen oder Fehler. Klicken, um sie zu lesen.",
+ "messages.copy": "Alle kopieren",
+ "messages.clear": "Alle löschen"
+}

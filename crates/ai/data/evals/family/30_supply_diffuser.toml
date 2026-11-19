@@ -1,0 +1,8 @@
+brief = "Ceiling supply air diffuser with a duct connection."
+category = "air_terminal"
+must = param Size
+must = param NeckD
+must = solids >= 2
+must = ports 1
+must = port duct 1
+must = flex Size 480 750

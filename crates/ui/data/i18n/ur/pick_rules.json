@@ -1,0 +1,11 @@
+{
+ "pick_rules.filter": "چنیں: سب",
+ "pick_rules.filter.on": "چنیں: {n} بند",
+ "pick_rules.filter.title": "کلک سے چنے جانے والے زمرے",
+ "pick_rules.filter.all": "تمام زمرے چنیں",
+ "pick_rules.filter.tip": "انتخاب فلٹر: غیر نشان زد زمرے کلک اور ہوور میں چھوڑ دیے جاتے ہیں",
+ "pick_rules.here": "یہاں کے آئٹمز",
+ "pick_rules.here.selected": "منتخب",
+ "pick_rules.pinned": "پن شدہ آئٹمز منتخب کریں",
+ "pick_rules.here.row": "{cat} · {len}"
+}

@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "เลือกทั้งวงผนัง",
+ "cmd.sketch.link_unlink": "ยกเลิกการเชื่อมขอบกับผนัง",
+ "cmd.sketch.link_repick": "เลือกผนังขอบใหม่",
+ "cmd.ctx.floor.link_unlink": "ยกเลิกการเชื่อมขอบกับผนัง",
+ "cmd.ctx.floor.link_accept": "รับขอบจากผนังที่ถูกลบ",
+ "boundary_link.hint.loop": "คลิกผนัง: ชุดผนังที่ปิดเป็นวงจะกลายเป็นขอบที่เชื่อมไว้",
+ "boundary_link.hint.repick": "คลิกผนังที่ขนานกับขอบ: ขอบจะตามผนังนั้น",
+ "boundary_link.need_sketch": "เปิดสเกตช์ขอบเขตก่อน",
+ "boundary_link.need_edge": "ชี้ไปที่ขอบของสเกตช์",
+ "boundary_link.need_straight": "มีเพียงขอบตรงเท่านั้นที่ตามผนังได้",
+ "boundary_link.need_floor": "เลือกพื้น",
+ "boundary_link.no_wall": "ไม่มีผนังใต้เคอร์เซอร์",
+ "boundary_link.not_parallel": "ผนังไม่ขนานกับขอบ",
+ "boundary_link.not_linked": "ขอบนี้ไม่ได้เชื่อมกับผนัง",
+ "boundary_link.unlinked": "ยกเลิกการเชื่อมขอบแล้ว: ขอบจะคงที่และไม่ตามผนังอีก",
+ "boundary_link.accepted": "รับขอบแล้ว: ขอบจะคงอยู่ที่เดิมเป็นขอบปกติ",
+ "boundary_link.failed": "นำไปใช้ไม่ได้",
+ "boundary_link.lost": "ผนังต้นทางถูกลบ",
+ "boundary_link.blocked": "ไม่สามารถตามผนังได้"
+}

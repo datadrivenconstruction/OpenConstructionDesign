@@ -1,0 +1,13 @@
+{
+ "cmd.arch.wall_pick": "Perete după linie",
+ "cmd.arch.wall_pick.desc": "Plasează un perete pe o linie de desen aleasă a nivelului curent. F schimbă axa sau fața pe linie, Tab ia lanțul conectat. Fiecare alegere este un pas de anulare. Funcționează și pentru pereții cortină.",
+ "hint.wall_pick.center": "Perete după linie: alege o linie de desen · axa pe linie · F față · Tab lanț · Esc ieșire",
+ "hint.wall_pick.face": "Perete după linie: alege o linie de desen · fața pe linie, de partea cursorului · F axă · Tab lanț · Esc ieșire",
+ "hint.wall_pick.center_chain": "Perete după linie: alege o linie pentru a-i lua lanțul · axa pe linie · F față · Tab o singură linie",
+ "hint.wall_pick.face_chain": "Perete după linie: alege o linie pentru a-i lua lanțul · fața pe linie · F axă · Tab o singură linie",
+ "wall_pick.st.start": "Alege o linie de desen. F: axă sau față, Tab: lanț conectat",
+ "wall_pick.st.no_lines": "Nicio linie de desen vizibilă pe acest nivel",
+ "wall_pick.st.miss": "Nicio linie de desen aici",
+ "wall_pick.st.on_wall": "Această linie se află deja sub peretele {id}",
+ "wall_pick.st.tight": "Decalajul feței nu încape: un segment al lanțului este mai scurt decât grosimea peretelui"
+}

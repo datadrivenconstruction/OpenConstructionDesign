@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "Nakapila sa likod ng tumatakbong job: {n}",
+ "import_queue.queue_full": "Puno na ang pila, {n} file ang hindi naidagdag",
+ "import_queue.changed": "Na-update ang {name} pagkatapos magawa ang proyektong ito. Binuksan ang nakaraang proyekto.",
+ "import_queue.import_again": "I-import muli",
+ "import_queue.kept": "Itinitira ang tapos na import",
+ "import_queue.open_it": "Buksan ito",
+ "import_queue.sum.head": "import: {editable} na maaaring i-edit (mga pader {walls}, opening {open}, sahig {slabs}, kuwarto {rooms}, iba pa {other}), {meshes} bilang mesh",
+ "import_queue.sum.unchanged": ", hindi nabago {n}",
+ "import_queue.sum.updated": ", na-update {n}",
+ "import_queue.sum.missing": ", wala sa pinagmulan {n} (itinira)",
+ "import_queue.sum.skipped": ", nilaktawan {n}",
+ "import_queue.sum.warnings": ", babala {n}",
+ "import_queue.import_failed": "nabigo ang import: {e}"
+}

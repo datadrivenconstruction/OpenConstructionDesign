@@ -1,0 +1,23 @@
+family Wardrobe
+category casework
+host floor
+ifc IfcFurniture NOTDEFINED
+param Width length type 1000mm
+param Depth length type 600mm
+param Height length type 2100mm
+param Plinth length type 80mm
+param Recess length type 50mm
+param Doors int type = max(1, round(Width / 500mm))
+param Board material type "Oak Veneer"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = 0
+ref Back y = Depth
+type "1000x600x2100" Width=1000mm, Depth=600mm, Height=2100mm
+type "1500x600x2200" Width=1500mm, Depth=600mm, Height=2200mm
+type "48x24x84in" Width=48in, Depth=24in, Height=84in, Plinth=3in, Recess=2in
+extrude Plinth rect(Left, Front + Recess, Right, Back) z(0, Plinth) mat(Board) show(3d, elev)
+extrude Body rect(Left, Front, Right, Back) z(Plinth, Height) mat(Board) show(3d, elev)
+symbol rect(Left, Front, Right, Back)
+symbol line(Left, Front, Right, Back) show(medium, fine)
+symbol line(Left, Back, Right, Front) show(medium, fine)

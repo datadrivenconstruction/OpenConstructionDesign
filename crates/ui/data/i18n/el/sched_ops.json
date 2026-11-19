@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "η τιμή πρέπει να είναι μεγαλύτερη από μηδέν",
+ "sched_ops.not_number": "δεν είναι αριθμός",
+ "sched_ops.no_host": "δεν υπάρχει φιλοξενών τοίχος",
+ "sched_ops.wall_length": "αυτό το μήκος τοίχου δεν μπορεί να οριστεί έτσι",
+ "sched_ops.no_wall": "δεν υπάρχει τέτοιος τοίχος",
+ "sched_ops.no_opening": "δεν υπάρχει τέτοιο άνοιγμα",
+ "sched_ops.no_curtain": "δεν υπάρχει τέτοια κουρτίνα τοίχου",
+ "sched_ops.no_panel": "δεν υπάρχει τέτοιο πάνελ",
+ "sched_ops.no_slab": "δεν υπάρχει τέτοια πλάκα",
+ "sched_ops.no_room": "δεν υπάρχει τέτοιος χώρος",
+ "sched_ops.slope_range": "κλίση εκτός ορίων",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

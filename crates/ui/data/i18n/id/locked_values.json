@@ -1,0 +1,8 @@
+{
+ "cmd.props.param_lock": "Kunci atau buka kunci nilai parameter",
+ "locked_values.kept": "{n} nilai terkunci dipertahankan",
+ "locked_values.locked": "“{name}” dikunci: impor spreadsheet XLSX, edit massal, dan AI tidak mengubahnya",
+ "locked_values.unlocked": "“{name}” dibuka kuncinya",
+ "locked_values.locked_tip": "Terkunci: impor spreadsheet XLSX, edit massal, dan AI mempertahankan nilai ini. Klik untuk membuka kunci  ·  Ctrl+L",
+ "locked_values.no_row": "Arahkan ke baris parameter di Properti, lalu tekan Ctrl+L"
+}

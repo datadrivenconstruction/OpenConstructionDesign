@@ -1,0 +1,11 @@
+{
+ "empty.sv_notfound.title": "Харагдац олдсонгүй",
+ "empty.sv_notfound.hint": "Энэ харагдац устсан эсвэл төслийн нэг хэсэг биш болсон.",
+ "empty.sv_notfound.action": "Харагдацыг хаах",
+ "empty.sv_cuts_nothing.title": "Энэ огтлол юу ч огтлохгүй байна",
+ "empty.sv_cuts_nothing.hint": "Огтлолын шугам гүнийнхээ дотор ханы, дал, нүхтэй уулзахгүй байна. Шугамыг зөөх эсвэл харагдацыг гүнээр болгоно уу.",
+ "empty.sv_cuts_nothing.action": "Планд харуулах",
+ "empty.sv_shows_nothing.title": "Энэ фасад юу ч харуулахгүй байна",
+ "empty.sv_shows_nothing.hint": "Харагдацын гүнд ханы, дал, нүх байхгүй. Харагдацын шугамыг зөөх эсвэл харагдацыг гүнээр болгоно уу.",
+ "empty.sv_shows_nothing.action": "Планд харуулах"
+}

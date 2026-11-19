@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "Yukarı taşı",
+ "rebar_list.move_down": "Aşağı taşı",
+ "rebar_list.remove": "Kaldır",
+ "rebar_list.zone_remove_last": "Bölgede en az bir oda olmalı: son odayı kaldırmak için bölgeyi silin",
+ "rebar_list.rebar_empty_title": "Bu modelde donatı yok",
+ "rebar_list.rebar_empty_hint": "Donatıyı bir ana öğeye yerleştirin; burada planlanacak.",
+ "rebar_list.rebar_empty_action": "Donatı yerleştir"
+}

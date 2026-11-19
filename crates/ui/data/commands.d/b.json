@@ -1,0 +1,30 @@
+[
+ {
+  "id": "mod.apply_hide",
+  "icon": "hide-apply",
+  "mnemonic": "HA",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "C",
+   "M"
+  ],
+  "stage": "M1",
+  "group": "visib",
+  "context": [
+   "*"
+  ]
+ },
+ {
+  "id": "mod.select_similar_project",
+  "icon": "similar-project",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "C",
+   "M"
+  ],
+  "stage": "M1"
+ }
+]

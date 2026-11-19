@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "Export to XLSX spreadsheet: scope",
+ "xlsx_scope.intro": "Choose what goes into the workbook. Importing it back changes only these elements.",
+ "xlsx_scope.base_whole": "Whole model",
+ "xlsx_scope.base_level": "Active level",
+ "xlsx_scope.base_selection": "Selection",
+ "xlsx_scope.categories": "Categories",
+ "xlsx_scope.cat_walls": "walls",
+ "xlsx_scope.cat_openings": "doors",
+ "xlsx_scope.cat_rooms": "rooms",
+ "xlsx_scope.cat_slabs": "slabs",
+ "xlsx_scope.cat_curtains": "curtain walls",
+ "xlsx_scope.nothing_selected": "Nothing is selected: select elements first or pick another scope.",
+ "xlsx_scope.no_categories": "Tick at least one category.",
+ "xlsx_scope.no_level": "The active level was not found.",
+ "xlsx_scope.export": "Export",
+ "xlsx_scope.preview_scope": "Exported scope: {scope}. Elements outside it are never changed or deleted."
+}

@@ -1,0 +1,32 @@
+family Bathtub
+category plumbing
+host floor
+ifc IfcSanitaryTerminal BATH
+param FlowCold number type 0.3
+param FlowHot number type 0.2
+param FlowWaste number type 0.6
+param Length length type 1700mm
+param Width length type 750mm
+param Height length type 560mm
+param Wall length type 60mm
+param Bottom length type 60mm
+param Acrylic material type "Acrylic White"
+param Capacity volume type = (Length - 2 * Wall) * (Width - 2 * Wall) * (Height - Bottom) * 0.8
+ref Left x = -Length / 2
+ref Right x = Length / 2
+ref Front y = -Width / 2
+ref Back y = Width / 2
+type "1700x750" Length=1700mm, Width=750mm
+type "1500x700" Length=1500mm, Width=700mm
+type "60x30in" Length=60in, Width=30in, Height=22in, Wall=2.5in, Bottom=2.5in
+extrude Base rect(Left, Front, Right, Back) z(0, Bottom) mat(Acrylic) show(3d, elev)
+extrude SideF rect(Left, Front, Right, Front + Wall) z(Bottom, Height) mat(Acrylic) show(3d, elev)
+extrude SideB rect(Left, Back - Wall, Right, Back) z(Bottom, Height) mat(Acrylic) show(3d, elev)
+extrude EndL rect(Left, Front + Wall, Left + Wall, Back - Wall) z(Bottom, Height) mat(Acrylic) show(3d, elev)
+extrude EndR rect(Right - Wall, Front + Wall, Right, Back - Wall) z(Bottom, Height) mat(Acrylic) show(3d, elev)
+symbol rect(Left, Front, Right, Back)
+symbol rect(Left + Wall, Front + Wall, Right - Wall, Back - Wall)
+symbol circle(Right - Wall - 100mm, 0, 25mm) show(medium, fine)
+connector Waste pipe sanitary at(Right - Wall - 100mm, 0, 0) dir(0, 0, -1) size(40mm)
+connector Cold pipe cold_water at(Right - Wall - 50mm, Back, Height - 100mm) dir(0, 1, 0) size(15mm)
+connector Hot pipe hot_water at(Right - Wall - 150mm, Back, Height - 100mm) dir(0, 1, 0) size(15mm)

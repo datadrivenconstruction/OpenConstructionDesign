@@ -1,0 +1,47 @@
+{
+ "id": "cz",
+ "version": "2026.11",
+ "parent": "eu",
+ "country": "CZ",
+ "lang": [
+  "cs"
+ ],
+ "units": {
+  "length": "m",
+  "display": "metric"
+ },
+ "conventions": {
+  "ground_floor": 1,
+  "area_standard": "usable",
+  "net_share": 1.0,
+  "note": "Czech briefs typically give uzitna plocha (usable floor area inside walls); the street-level storey is called 1.NP (first above-ground floor). Net share is our own estimate.",
+  "source": null
+ },
+ "status": "tier3",
+ "climate": {
+  "zones": [],
+  "default": null
+ },
+ "research": {
+  "date": "2026-11-14",
+  "missing": [
+   "egress.travel_max",
+   "egress.travel_max.office",
+   "fire.compartment_area_max",
+   "fire.compartment_area_max.sprinklered",
+   "stair.riser_max",
+   "stair.tread_min",
+   "stair.width_min",
+   "stair.riser_max.house",
+   "stair.tread_min.house",
+   "parking.per_dwelling",
+   "load.floor_residential",
+   "load.floor_office"
+  ],
+  "unreachable": [
+   "CSN 73 0802 / 73 0833 fire values and CSN 73 4130 stair geometry are paid standards, not reached",
+   "146/2024: parking is per floor area (1 space per 120 m2, Annex 1 Table 1), no per-dwelling count; text beyond char 200000 unread"
+  ]
+ },
+ "note": "Numbers with verified=true were read in the cited clause; the rest are hints with a note of where we looked. Wording is our own; no text of a standard is stored."
+}

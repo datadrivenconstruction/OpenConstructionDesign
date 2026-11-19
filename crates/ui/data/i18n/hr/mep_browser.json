@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "Naziv sustava",
+ "mep_browser.add_blocked": "Prvo unesite naziv sustava",
+ "mep_browser.col.insulation": "Izolacija",
+ "mep_browser.cancel": "Odustani",
+ "mep_browser.delete.title": "Izbrisati ovaj sustav?",
+ "mep_browser.delete.body": "Sustav „{name}“ i njegovi vodovi ({n}) bit će izbrisani.",
+ "mep_browser.delete.undo": "To možete poništiti jednom naredbom Poništi.",
+ "mep_browser.delete.confirm": "Izbriši sustav"
+}

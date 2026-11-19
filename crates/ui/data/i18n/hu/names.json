@@ -1,0 +1,19 @@
+{
+ "names.level": "{n}. szint",
+ "names.slab": "Padló 200",
+ "names.roof_slab": "Tető 200",
+ "names.sheet.plan_section": "1. emelet alaprajza és metszete",
+ "names.sheet.plan_view": "1. emelet alaprajza",
+ "names.sheet.site_plan": "Helyszínrajz",
+ "names.sheet_set.issue": "1. kiadás",
+ "names.title.owner": "Projekt Kft.",
+ "names.title.creator": "Kovács A.",
+ "names.title.approver": "Nagy P.",
+ "names.title.document_type": "Rajz",
+ "names.title.status": "Folyamatban",
+ "names.revision.date": "2026. nov. 4.",
+ "names.revision.description": "Véleményezésre kiadva",
+ "names.revision.author": "MI",
+ "names.demo.no_levels": "nincs szint",
+ "names.demo.no_sheet": "lap"
+}

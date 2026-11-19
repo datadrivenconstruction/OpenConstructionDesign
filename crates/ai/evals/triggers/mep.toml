@@ -1,0 +1,16 @@
+# Requests that must make the agent read ddc://skills/mep first (yes), and ones that must not (no).
+skill = "mep"
+yes = [
+  "Design supply and exhaust ventilation for the hospital, with a separate system for the operating theatres",
+  "проложи трубопроводы технологической установки по эстакаде от насосов к аппаратам",
+  "Route chilled water from the plant room to the fan coils on every floor",
+  "Plane die Sprinkleranlage für die Tiefgarage",
+  "Diseña la climatización del centro de datos con pasillos fríos y calientes",
+  "Add drainage with proper fall from all bathrooms to the main stack",
+]
+no = [
+  "покрась стены в белый",
+  "Build a 300 m lattice tower with three platforms",
+  "Move the north wall 500 mm outwards",
+  "How many rooms are on level 3?",
+]

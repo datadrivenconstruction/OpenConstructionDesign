@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "Wand zeichnen",
+ "empty.totals.action": "Wand zeichnen",
+ "empty.schedule.action": "Feld hinzufügen",
+ "empty.schedule_filtered.action": "Filter löschen",
+ "empty.library.action": "Suche zurücksetzen",
+ "empty.library.load": "Familie laden",
+ "empty.schedule_fields.title": "Keine Felder angezeigt",
+ "empty.schedule_fields.action": "Feld hinzufügen",
+ "empty.schedule_fields.hint": "Aktivieren Sie mindestens ein Feld, um die Tabelle zu sehen."
+}

@@ -1,0 +1,23 @@
+{
+ "ai.receipt.title": {
+  "one": "Застосовано # зміну",
+  "other": "Застосовано # змін",
+  "few": "Застосовано # зміни",
+  "many": "Застосовано # змін"
+ },
+ "ai.receipt.more": "ще +{n}",
+ "ai.receipt.list": "Елементи",
+ "ai.receipt.show": "Показати",
+ "ai.receipt.show.tip": "Вибрати й показати змінені елементи",
+ "ai.receipt.undo": "Скасувати",
+ "ai.receipt.undo.tip": "Відмінити саме це застосування",
+ "ai.receipt.undone": "Скасовано",
+ "ai.receipt.later": "Були пізніші редагування",
+ "ai.receipt.toast_undone": "Застосований план скасовано",
+ "ai.receipt.draft_family": "Чернетка сімейства: {name}",
+ "ai.receipt.promote": "Зробити робочим",
+ "ai.receipt.promote.tip": "Перетворити чернеткове сімейство на робоче (один крок скасування)",
+ "ai.receipt.promoted": "Сімейство тепер робоче",
+ "ai.receipt.promote_failed": "Не вдалося зробити сімейство робочим",
+ "cmd.ai.receipt_undo": "Скасувати останній план ШІ"
+}

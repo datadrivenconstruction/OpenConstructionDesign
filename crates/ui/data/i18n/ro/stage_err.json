@@ -1,0 +1,10 @@
+{
+ "stage_err.kept": "tabelul {t} a fost păstrat: {n} rânduri scrise după Adaugă",
+ "stage_err.stage.prev_attached": "Nu a fost adăugat: copia adăugării anterioare este încă deschisă. Rulează din nou Adaugă",
+ "stage_err.stage.model_changed": "Nu a fost adăugat: modelul s-a schimbat în timpul citirii fișierului. Rulează din nou Adaugă",
+ "stage_err.stage.no_record": "Nu a fost adăugat: copia importată nu are un registru de modificări",
+ "stage_err.stage.table_differs": "Nu a fost adăugat: tabelul {t} diferă între model și copia importată",
+ "stage_err.stage.unique_key": "Nu a fost adăugat: nu se poate urmări o cheie unică a tabelului {t}",
+ "stage_err.stage.table_gone": "Nu a fost adăugat: importul a modificat tabelul {t}, pe care copia nu îl mai are",
+ "stage_err.stage.copy_held": "Adăugat; copia importată rămâne deschisă până la următoarea Adăugare sau redeschiderea modelului"
+}

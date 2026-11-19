@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "立面 {t} 未被采用（{why}）。未更改任何内容",
+ "host_shape.shape.elev_prompt_in": "立面，英尺-英寸…",
+ "host_shape.shape.elev_in": "{v} 英寸"
+}

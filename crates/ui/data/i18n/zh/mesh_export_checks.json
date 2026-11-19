@@ -1,0 +1,15 @@
+{
+ "cmd.data.export_step.desc": "将整个模型或所选内容保存为 STEP AP214 或 AP242：实体保留精确的平面、圆柱、圆锥、球面、环面和 B 样条曲面，其他元素为平面，并保留颜色，每个标高一个装配节点。",
+ "cmd.data.export_3mf.desc": "将整个模型或所选内容保存为用于打印的 3MF：每个元素一个对象，保留颜色和单位，并检查每个实体是否水密。",
+ "fmenu.export.step": "STEP 精确实体 (.step)",
+ "fmenu.export.3mf": "用于打印的 3MF (.3mf)",
+ "mx.schema": "STEP 架构",
+ "mx.schema.ap214": "AP214（支持最广）",
+ "mx.schema.ap242": "AP242",
+ "mx.watertight": "非水密实体",
+ "mx.watertight.report": "写入并列出",
+ "mx.watertight.skip": "排除",
+ "mx.watertight.require": "取消导出",
+ "mx.faceted": "已保存 {fmt}：{path}（{exact} 个精确实体，{n} 个以平面面写入：{first}）",
+ "sheets.print.svg": "SVG"
+}

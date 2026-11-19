@@ -1,0 +1,8 @@
+{
+ "cmd.file.save_copy": "Salvesta koopia kellelegi teisele…",
+ "cmd.file.save_copy.desc": "Salvestab projekti koopia ilma AI nõusolekuta ja, kui just teisiti ei vali, ilma AI logita. See projekt jääb samaks.",
+ "ai.copy.title": "Salvesta koopia",
+ "ai.copy.journal": "Kas lisada koopiasse AI logi? Logi sisaldab päringuid, vastuseid ja aadresse. Pilvenõusolekut ei kopeerita kunagi: teine inimene otsustab ise. Vali Ei, et logi jätta välja.",
+ "ai.copy.done": "Koopia salvestatud: {name}",
+ "ai.copy.same": "Vali teine fail: koopia ei saa avatud projekti asendada."
+}

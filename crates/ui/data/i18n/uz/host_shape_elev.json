@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "{t} balandligi olinmadi ({why}). Hech narsa o'zgartirilmadi",
+ "host_shape.shape.elev_prompt_in": "balandlik, fut-dyuym…",
+ "host_shape.shape.elev_in": "{v} dyuym"
+}

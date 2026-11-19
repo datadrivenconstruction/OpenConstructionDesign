@@ -1,0 +1,12 @@
+{
+ "opt.stair.straight": "Dritta",
+ "opt.stair.l": "L",
+ "opt.stair.u": "U",
+ "opt.stair.gap": "Vuoto",
+ "hint.stair.corner": "Scala a L: scegli l'angolo di svolta · Backspace — rimuovi l'ultimo punto · Esc — rimuovi l'ultimo punto; senza punti — annulla",
+ "hint.stair.side": "Scala: scegli il lato della seconda rampa · Backspace — rimuovi l'ultimo punto · Esc — rimuovi l'ultimo punto; senza punti — annulla",
+ "tool.stair.flights": "{n} alzate (totale {m})",
+ "tool.stair.err_split": "Ogni rampa richiede almeno 2 alzate: la prima rampa ne ha {n} su {m}",
+ "tool.stair.err_comfort": "Alzata e pedata non rispettano la regola di comfort (2A + P)",
+ "tool.stair.err_input": "Dimensione della scala fuori intervallo: controlla larghezza, altezza e pianerottolo"
+}

@@ -1,0 +1,10 @@
+{
+ "type_pick.pick.search": "Szukaj typów lub grubości",
+ "type_pick.pick.empty": "Brak pasujących typów",
+ "type_pick.pick.edit": "Edytuj typ…",
+ "type_pick.pick.mixed": "Różne",
+ "type_pick.pick.layers": {
+  "one": "# warstwa",
+  "other": "# warstw"
+ }
+}

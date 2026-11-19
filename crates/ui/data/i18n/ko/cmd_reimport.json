@@ -1,0 +1,6 @@
+{
+ "cmd.file.import_again": "다시 가져오기",
+ "cmd.file.import_again.desc": "현재 상태의 원본 파일로 새 프로젝트를 만듭니다.",
+ "cmd.file.open_kept": "보관된 가져오기 열기",
+ "cmd.file.open_kept.desc": "저장되지 않은 변경 확인 창을 취소했을 때 보관된 완료된 가져오기를 엽니다."
+}

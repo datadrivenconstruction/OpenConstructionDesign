@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "Autosave failed, latest changes are not protected. {why}",
+ "autosave_status.autosave_open": "Autosave settings",
+ "autosave_status.autosave_recovered": "Autosave works again.",
+ "autosave_status.autosave_reason": "Reason: {why}"
+}

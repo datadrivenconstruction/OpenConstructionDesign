@@ -1,0 +1,18 @@
+{
+ "faults.errors": {
+  "one": "# viga mudelis. Klõpsa, et seda näha.",
+  "other": "# viga mudelis. Klõpsa, et loendit näha."
+ },
+ "faults.warnings": {
+  "one": "# hoiatus mudelis. Klõpsa, et seda näha.",
+  "other": "# hoiatust mudelis. Klõpsa, et loendit näha."
+ },
+ "faults.title": "Mudeli rikked: {n}",
+ "faults.none": "Vigu ega hoiatusi pole.",
+ "faults.cat.wall": "Sein",
+ "faults.cat.slab": "Plaat",
+ "faults.cat.opening": "Ava",
+ "faults.cat.curtain_wall": "Kardinasein",
+ "faults.cat.ramp": "Rambi",
+ "faults.cat.zone": "Tsoon"
+}

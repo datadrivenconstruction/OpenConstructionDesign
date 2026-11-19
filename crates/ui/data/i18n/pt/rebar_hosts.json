@@ -1,0 +1,40 @@
+{
+ "rebar_hosts.hosts": "Hospedeiros: {list}",
+ "rebar_hosts.kind.column": "Pilar",
+ "rebar_hosts.kind.beam": "Viga",
+ "rebar_hosts.kind.wall": "Parede",
+ "rebar_hosts.kind.slab": "Laje",
+ "rebar_hosts.kind.footing": "Sapata",
+ "rebar_hosts.kind.raft": "Laje de fundação",
+ "rebar_hosts.n.column": {
+  "one": "# pilar",
+  "other": "# pilares"
+ },
+ "rebar_hosts.n.beam": {
+  "one": "# viga",
+  "other": "# vigas"
+ },
+ "rebar_hosts.n.wall": {
+  "one": "# parede",
+  "other": "# paredes"
+ },
+ "rebar_hosts.n.slab": {
+  "one": "# laje",
+  "other": "# lajes"
+ },
+ "rebar_hosts.n.footing": {
+  "one": "# sapata",
+  "other": "# sapatas"
+ },
+ "rebar_hosts.n.raft": {
+  "one": "# laje de fundação",
+  "other": "# lajes de fundação"
+ },
+ "rebar_hosts.mixed_note": "Pilares e vigas recebem barras e estribos; paredes, lajes e fundações recebem malha. Selecione um grupo para adicionar armadura.",
+ "rebar_hosts.why.mixed": "A seleção mistura pilares ou vigas com paredes, lajes ou fundações. Selecione um grupo.",
+ "rebar_hosts.why.area_linear": "A malha vai em paredes, lajes e fundações, não em pilares ou vigas.",
+ "rebar_hosts.why.bars_plate": "Barras longitudinais e estribos vão em pilares e vigas, não em paredes, lajes ou fundações.",
+ "rebar_hosts.why.no_common_face": "Os hospedeiros selecionados não têm face de cobrimento em comum. Selecione hospedeiros de um tipo.",
+ "rebar_hosts.why.no_type": "Escolha um tipo de barra.",
+ "rebar_hosts.kind_type": "{kind} · {type}"
+}

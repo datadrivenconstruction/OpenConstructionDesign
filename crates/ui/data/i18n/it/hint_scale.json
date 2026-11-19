@@ -1,0 +1,10 @@
+{
+ "cmd.mod.scale": "Scala",
+ "cmd.mod.scale.desc": "Seleziona gli elementi, poi clicca il punto base, una lunghezza di riferimento e la nuova lunghezza, oppure digita un fattore.",
+ "hint.scale.select": "Scala: seleziona elementi · Invio — fatto",
+ "hint.scale.first": "Scala: scegli il punto base · Esc — annulla",
+ "hint.scale.second": "Scala: scegli la lunghezza di riferimento · numero — fattore · Esc — annulla",
+ "hint.scale.third": "Scala: scegli la nuova lunghezza · numero — fattore · Esc — annulla",
+ "scl.bad_factor": "Il fattore di scala deve essere un numero maggiore di zero",
+ "scl.zero_ref": "La lunghezza di riferimento è zero: scegli un punto lontano dal punto base"
+}

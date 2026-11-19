@@ -1,0 +1,15 @@
+{
+ "fe.add_why_empty": "Enter a parameter name first",
+ "fe.add_why_exists": "A parameter with this name already exists; use Apply to change it",
+ "fe.apply_why_missing": "No parameter with this name; type an existing name",
+ "fe.nochange": "No changes yet",
+ "options.accept_more": "Accept…",
+ "options.delete_more": "Delete…",
+ "options.empty_title": "No option sets yet",
+ "options.more": "More actions: {name}",
+ "options.primary_named": "Primary option: {name}",
+ "options.primary_tip": "Make this the primary option of the set",
+ "options.select_first": "Select elements in the model first",
+ "options.show_3d": "Show in 3D: {name}",
+ "options.show_plan": "Show in plan: {name}"
+}

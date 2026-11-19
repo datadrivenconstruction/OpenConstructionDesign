@@ -1,0 +1,10 @@
+{
+ "cmd.view.axes_full": "전체 축",
+ "cmd.view.axes_full.desc": "평면 전체에 걸쳐 X, Y 축을 선으로 표시합니다. F9를 누르고 있는 동안만 표시하려면 F9를 누르세요.",
+ "settings.axes_full": "축",
+ "settings.axes_full_desc": "시트 전체에 걸친 평면 축선. F9를 누르면 잠깐 볼 수 있습니다.",
+ "settings.axes_full_on": "전체 축 표시",
+ "plan.hud.axes_tip": "{key}를 누르고 있으면 전체 축 표시",
+ "status.axes_full.on": "전체 축 켜짐",
+ "status.axes_full.off": "전체 축 꺼짐"
+}

@@ -1,0 +1,6 @@
+{
+ "geom.length": "長さ",
+ "sched.cat.room_seps": "室の区切り",
+ "room.err.point_leave": "室 {n}: 点が境界の外に出てしまいます",
+ "room.err.point_taken": "室 {n}: 点が室 {other} の中に入ってしまいます"
+}

@@ -1,0 +1,6 @@
+{
+ "cmd.ui.pane.next": "Panneau suivant",
+ "cmd.ui.pane.next.desc": "Déplace le focus clavier vers le panneau visible suivant parmi navigateur, zone de dessin, propriétés et chat.",
+ "cmd.ui.pane.prev": "Panneau précédent",
+ "cmd.ui.pane.prev.desc": "Déplace le focus clavier vers le panneau visible précédent."
+}

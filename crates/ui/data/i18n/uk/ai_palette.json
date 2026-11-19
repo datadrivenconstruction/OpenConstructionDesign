@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "Запитати AI: {q}",
+ "ai.palette.connect": "Підключіть AI, щоб запитати",
+ "ai.palette.draft.apply": "Застосувати чернетку ({n})",
+ "ai.palette.draft.reject": "Відхилити чернетку",
+ "ai.palette.draft.next": "Наступна зміна в чернетці",
+ "ai.palette.draft.show": "Показати чернетку у виді",
+ "cmd.ai.next_change": "Наступна зміна в чернетці",
+ "cmd.ai.next_change.desc": "Переміщує вид до наступного елемента, який змінює чернетка.",
+ "cmd.ai.show_draft": "Показати чернетку AI у виді",
+ "cmd.ai.show_draft.desc": "Підганяє вид під усе, що змінює чернетка."
+}

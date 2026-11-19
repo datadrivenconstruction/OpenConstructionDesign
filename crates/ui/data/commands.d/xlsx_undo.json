@@ -1,0 +1,12 @@
+[
+ {
+  "id": "xlsx.undo_apply",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "Mx",
+  "group": "exchange"
+ }
+]

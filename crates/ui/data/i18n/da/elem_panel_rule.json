@@ -1,0 +1,5 @@
+{
+ "elem.panel_select_wall": "Vælg væg",
+ "cmd.elem.panel_select_wall": "Vælg væg",
+ "elem.left_in_place": "Efterladt: {kinds}. Et panel hører til sin væg; masser og annoteringer slettes selv."
+}

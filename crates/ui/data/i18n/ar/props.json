@@ -1,0 +1,30 @@
+{
+ "props.multi.title": {
+  "one": "# عنصر",
+  "other": "# عنصراً",
+  "two": "# عنصران",
+  "few": "# عناصر",
+  "many": "# عنصراً",
+  "zero": "# عنصراً"
+ },
+ "props.multi.cats": {
+  "one": "# فئة",
+  "other": "# فئات",
+  "two": "# فئتان",
+  "few": "# فئات",
+  "many": "# فئةً",
+  "zero": "# فئات"
+ },
+ "props.multi.varies": {
+  "one": "متنوع (#)",
+  "other": "متنوع (#)",
+  "two": "متنوع (#)",
+  "few": "متنوع (#)",
+  "many": "متنوع (#)",
+  "zero": "متنوع (#)"
+ },
+ "props.multi.clear": "مسح التحديد",
+ "props.multi.undo": "تراجع",
+ "props.multi.narrowed": "التحديد: {n} · {name}",
+ "props.multi.chip_tip": "{name}: {n}  ·  النقر يعرض خصائصها، وCtrl+النقر يُبقي هذه فقط"
+}

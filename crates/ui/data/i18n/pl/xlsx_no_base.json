@@ -1,0 +1,6 @@
+{
+ "xlsx_no_base.title": "Ten skoroszyt nie ma danych porównania",
+ "xlsx_no_base.detail": "Ukryty arkusz porównania jest niedostępny lub uszkodzony (inny program zapisał skoroszyt ponownie albo został zrobiony ręcznie). Każda różniąca się komórka zastępuje wartość modelu; zmian modelu wykonanych od eksportu nie da się wykryć. Wiersze brakujące w skoroszycie nie są usuwane.",
+ "xlsx_no_base.confirm": "Sprawdziłem zmiany: zamień wartości modelu ({n})",
+ "xlsx_no_base.confirm_first": "Najpierw potwierdź import skoroszytu bez danych porównania"
+}

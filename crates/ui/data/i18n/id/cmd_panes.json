@@ -1,0 +1,6 @@
+{
+ "cmd.ui.pane.next": "Panel berikutnya",
+ "cmd.ui.pane.next.desc": "Memindahkan fokus keyboard ke panel terlihat berikutnya: browser, kanvas, properti, chat.",
+ "cmd.ui.pane.prev": "Panel sebelumnya",
+ "cmd.ui.pane.prev.desc": "Memindahkan fokus keyboard ke panel terlihat sebelumnya."
+}

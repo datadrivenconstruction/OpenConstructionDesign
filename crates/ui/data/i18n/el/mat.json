@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "Σκυρόδεμα",
+ "mat.masonry": "Τοιχοποιία",
+ "mat.brick": "Τούβλο",
+ "mat.insulation": "Μόνωση",
+ "mat.plaster": "Σοβάς",
+ "mat.render": "Επίχρισμα",
+ "mat.gypsum": "Γυψοσανίδα",
+ "mat.glass": "Γυαλί",
+ "mat.wood": "Ξύλο",
+ "mat.steel": "Χάλυβας",
+ "mat.membrane": "Μεμβράνη",
+ "mat.other": "Άλλο",
+ "warn.cat.wall": "Τοίχος",
+ "warn.cat.slab": "Πλάκα",
+ "warn.cat.opening": "Άνοιγμα",
+ "warn.cat.curtain_wall": "Κουρτίνα τοίχου",
+ "td.mat.custom": "Άλλο…"
+}

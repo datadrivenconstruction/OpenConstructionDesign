@@ -1,0 +1,10 @@
+{
+ "prop_head.of_type": {
+  "one": "# ovog tipa",
+  "few": "# ovog tipa",
+  "other": "# ovog tipa"
+ },
+ "prop_head.override_tip": "Razlikuje se od vrste, kliknite za poništavanje",
+ "prop_head.reset_done": "„{name}” vraćeno na vrijednost vrste",
+ "prop_head.copy_id": "Kliknite za kopiranje broja"
+}

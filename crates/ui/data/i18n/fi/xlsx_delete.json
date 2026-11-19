@@ -1,0 +1,5 @@
+{
+ "xlsx_delete.delete_missing": "Poista työkirjasta puuttuvat rivit",
+ "xlsx_delete.not_removed": "ei poistettu: ei vertailutietoja",
+ "xlsx_delete.no_base_reason": "Ei käytettävissä: työkirjassa ei ole vertailutietoja, joten puuttuvaa riviä ei voi erottaa vahingossa poistetusta. Mitään ei poisteta käytettäessä."
+}

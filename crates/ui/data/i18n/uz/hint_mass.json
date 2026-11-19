@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "Erkin sirt",
+ "cmd.mass.panelize": "Panellarga bo'lish",
+ "cmd.mass.surface_shell": "Sirt bo'yicha tom",
+ "cmd.mass.thicken": "Qalinlik",
+ "hint.mass.freeform.first": "Erkin sirt: reja to'rtburchagining birinchi burchagi · qalqish balandligini kiriting · Esc — bekor qilish",
+ "hint.mass.freeform.next": "Erkin sirt: qarama-qarshi burchak · qalqish balandligini kiriting · Esc — bekor qilish",
+ "hint.mass.panelize.first": "Panellar: 3D da erkin sirtni tanlang · Esc — bekor qilish",
+ "hint.mass.panelize.value": "Panellar: panel o'lchamini kiriting · Enter — qo'llash · Esc — bekor qilish",
+ "hint.mass.surface_shell.first": "Sirt bo'yicha tom: 3D da erkin sirtni tanlang · Esc — bekor qilish",
+ "hint.mass.surface_shell.value": "Sirt bo'yicha tom: qalinligini kiriting · Enter — qo'llash · Esc — bekor qilish",
+ "hint.mass.thicken.first": "Qalinlik: 3D da erkin sirtni tanlang · Esc — bekor qilish",
+ "hint.mass.thicken.value": "Qalinlik: qalinligini kiriting (0 — yalang'och sirt) · Enter — qo'llash · Esc — bekor qilish",
+ "status.mass.pick_surface": "Erkin sirtni tanlang",
+ "status.mass.freeform_small": "To'rtburchak juda kichik: har yo'nalishda kamida 0,5 m",
+ "name.mass.freeform": "Erkin sirt",
+ "rgroup.mass_free": "Qo'shimcha"
+}

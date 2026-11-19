@@ -1,0 +1,11 @@
+{
+ "cmd.arch.roof_gable.short": "गेबल",
+ "cmd.arch.roof_hip.short": "हिप",
+ "cmd.arch.roof_shed.short": "शेड",
+ "cmd.arch.roof_mansard.short": "मैनसार्ड",
+ "cmd.arch.roof_gambrel.short": "गैम्ब्रल",
+ "cmd.arch.roof_barrel.short": "बैरल",
+ "cmd.arch.roof_edges.short": "छत के किनारे",
+ "cmd.arch.roof_opening.short": "ओपनिंग",
+ "cmd.mass.roof_by_face.short": "सतह अनुसार"
+}

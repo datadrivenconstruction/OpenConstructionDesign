@@ -1,0 +1,11 @@
+{
+ "xlsx_read_as.title": "名前が変更されたシート?",
+ "xlsx_read_as.detail": "シート {found} は {sheet} と同じ列を持っています (一致度 {score}%)。選択しない限り読み込まれません。",
+ "xlsx_read_as.detail_many": "{sheet} に一致するシートが複数あります: {found}。自動選択はしません。読み込むものを選んでください。",
+ "xlsx_read_as.read_as": "「{found}」を {sheet} として読み込む",
+ "xlsx_read_as.read_as_tip": "この取り込みのみ有効です。シートの名前は変更されません。適用時は新しい行の ID のみを書き込みます。",
+ "xlsx_read_as.active": "この取り込みでは、シート「{found}」を {sheet} として読み込みます。",
+ "xlsx_read_as.undo": "{sheet} として読み込まない",
+ "xlsx_read_as.undo_tip": "ブック内のシート名の状態に戻します。",
+ "xlsx_read_as.not_rewritten": "ブックは書き直されません。名前を変更したシートは元の名前のまま読み込まれます。ブックと同期するには元の名前に戻してください。"
+}

@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key} は予約されているため（{why}）、割り当てられません",
+ "quick.keys.res_copy": "コピー",
+ "quick.keys.res_paste": "貼り付け",
+ "quick.keys.res_cut": "切り取り",
+ "quick.keys.res_undo": "元に戻す / やり直し",
+ "quick.keys.res_save": "保存",
+ "quick.keys.res_palette": "コマンドパレット",
+ "quick.keys.reserved_conflict": "{key} は既に「{cmd}」で使用されています。Esc を押すと、そのまま残ります。",
+ "quick.keys.reserved_swap": "入れ替え",
+ "quick.keys.reserved_take": "取得する",
+ "quick.keys.reserved_keep": "保持",
+ "quick.keys.reserved_os": "システムが使用中:"
+}

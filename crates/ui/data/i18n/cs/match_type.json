@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "Sladit typ",
+ "cmd.mod.match_type.short": "Sladit typ",
+ "cmd.mod.match_type.desc": "Zvolte stěnu, podlahu, sloup nebo trám a pak klikněte na další prvky stejné kategorie, aby převzaly jejich typ. Tažením okna použijete na vše uvnitř. Esc zruší zdroj.",
+ "hint.match_type.pick": "Sladit typ: zvolte stěnu, podlahu, sloup nebo trám · Esc — ukončit",
+ "hint.match_type.apply": "Sladit typ: klikněte na cíle nebo táhněte okno · Esc — jiný zdroj",
+ "match_type.kind.wall": "stěna",
+ "match_type.kind.slab": "podlaha",
+ "match_type.kind.column": "sloup",
+ "match_type.kind.beam": "trám",
+ "match_type.refuse.category": "Jiná kategorie: tento typ může převzít jen {cat}",
+ "match_type.refuse.curtain": "Fasádní stěna: její typ zde nelze sladit",
+ "match_type.refuse.pinned": "Připnuto: pro změnu typu jej odepněte",
+ "match_type.pick_bad": "Zvolte stěnu, podlahu, sloup nebo trám jako zdroj",
+ "match_type.same": "Už je tento typ",
+ "match_type.done": "Typ použit: {n}",
+ "match_type.done_skipped": "Typ použit: {n}, přeskočeno (připnuté nebo fasádní): {skipped}",
+ "match_type.failed": "Typ nezměněn: {err}"
+}

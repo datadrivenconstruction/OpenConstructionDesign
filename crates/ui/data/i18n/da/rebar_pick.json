@@ -1,0 +1,7 @@
+{
+ "rebar_pick.pick.empty": "Armering: vælg en søjle, bjælke, væg, plade eller et fundament",
+ "rebar_pick.pick.unsupported": "Dette valg kan ikke armeres. Vælg en søjle, bjælke, væg, plade eller et fundament",
+ "rebar_pick.pick.keys": "Klik for at vælge, Shift for at tilføje flere · Enter åbner formularen · Esc annullerer",
+ "rebar_pick.pick.open": "Åbn formular",
+ "rebar_pick.pick.cancel": "Annullér"
+}

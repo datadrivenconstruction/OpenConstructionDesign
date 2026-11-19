@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "L'application a été arrêtée : le modèle est conservé tel quel",
+ "apply_verify.rolled_back": "L'application ne correspondait pas au brouillon et a été annulée ; le modèle est inchangé. {what}",
+ "apply_verify.diff.missing": "Le brouillon affiche {what} {kind}, mais l'application ne l'a pas fait.",
+ "apply_verify.diff.extra": "L'application {kind} {what}, que le brouillon n'affiche pas.",
+ "apply_verify.diff.kind": "Le brouillon affiche {what} {shown}, mais l'application {applied} cette modification.",
+ "apply_verify.diff.value": "{what} : « {col} » est différent du brouillon.",
+ "apply_verify.diff.truncated": "Le brouillon et la modification appliquée n'ont pas la même taille.",
+ "apply_verify.diff.unreadable": "La modification appliquée n'a pas pu être relue ({e}).",
+ "apply_verify.no_base": "L'application n'a pas été lancée : la copie de référence du brouillon est absente. Le modèle est inchangé ; demandez à nouveau le brouillon.",
+ "apply_verify.take_back_failed": "L'annulation a échoué ({e}) : utilisez Annuler.",
+ "apply_verify.kind.created": "créé",
+ "apply_verify.kind.changed": "modifié",
+ "apply_verify.kind.deleted": "supprimé",
+ "apply_verify.card.type_row": "Type {type} · {n} éléments reçoivent la modification"
+}

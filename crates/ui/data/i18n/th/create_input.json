@@ -1,0 +1,14 @@
+{
+ "cmd.mod.divide": "แบ่งเท่า ๆ กัน",
+ "cmd.mod.divide.short": "แบ่ง",
+ "cmd.mod.divide.desc": "แบ่งผนังเป็นส่วนเท่า ๆ กันในขั้นตอนเดียว พิมพ์จำนวนส่วน แล้วคลิกผนัง",
+ "whereis.mod.divide": "แบ่ง, ส่วนเท่า ๆ กัน, ตัดเป็นชิ้น, แบ่งส่วนผนัง",
+ "hint.split.parts": "แบ่งเท่า ๆ กัน: คลิกผนัง · ตัวเลข — จำนวนส่วน (2–100) · Esc — ยกเลิก",
+ "create_input.divide.bad_parts": "«{text}» ไม่ใช่จำนวนส่วน: พิมพ์จำนวนเต็มตั้งแต่ 2 ถึง {max}",
+ "create_input.ws.err.empty": "พิมพ์ชื่อของเลย์เอาต์",
+ "create_input.ws.err.long": "ชื่อยาวเกินไป: ไม่เกิน 40 ตัวอักษร",
+ "create_input.ws.err.preset": "ชื่อนี้เป็นของเลย์เอาต์ที่มาพร้อมระบบ",
+ "create_input.ws.err.full": "บันทึกเลย์เอาต์ได้สูงสุด 24 รายการ: ลบหนึ่งรายการก่อน",
+ "create_input.seldim.locked": "ระยะ {v} ถูกล็อก",
+ "create_input.seldim.positive": "ระยะต้องมากกว่าศูนย์"
+}

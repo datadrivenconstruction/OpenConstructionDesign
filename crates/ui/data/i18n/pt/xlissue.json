@@ -1,0 +1,13 @@
+{
+ "xlw.copy_list": "Copiar lista",
+ "xlw.save_list": "Salvar lista…",
+ "xlw.copy_list_tip": "Copia as linhas exibidas (folha, célula, id, coluna, valores, motivo) como texto para uma planilha",
+ "xlw.save_list_tip": "Salva as linhas exibidas como arquivo .csv junto à pasta de trabalho; a pasta de trabalho em si nunca é alterada",
+ "xlw.list_book_value": "Valor da pasta de trabalho",
+ "xlw.list_model_value": "Valor do modelo",
+ "xlw.list_reason": "Motivo",
+ "xlw.list_copied": "Lista copiada: {n} linhas",
+ "xlw.list_saved": "Lista salva: {n} linhas, {file}",
+ "xlw.list_save_failed": "Lista não salva",
+ "xlw.list_nothing": "Nada para copiar: nenhuma linha exibida"
+}

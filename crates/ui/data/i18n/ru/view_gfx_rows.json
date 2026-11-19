@@ -1,0 +1,10 @@
+{
+ "view_gfx.vv.visible_tip": "Показывать на этом виде",
+ "view_gfx.vv.enabled_tip": "Применять фильтр на этом виде",
+ "view_gfx.vv.reset_tip": "Вернуть настройку проекта",
+ "view_gfx.vv.col.actions": "Действия",
+ "view_gfx.vv.nothing_to_apply": "Нет изменений для применения",
+ "view_gfx.flt.save_blocked": "Назовите фильтр и заполните параметр каждого правила",
+ "view_gfx.flt.confirm_delete": "Удалить для всех видов?",
+ "view_gfx.flt.param_pick": "Выбрать…"
+}

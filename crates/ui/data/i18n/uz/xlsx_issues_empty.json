@@ -1,0 +1,8 @@
+{
+ "xlsx_issues.empty_title": "Ish kitobida bo'sh varaq",
+ "xlsx_issues.empty_kept": "{sheet} varag'i bo'sh: undan hech narsa o'qilmadi, {n} ta element o'z holicha qoladi. Boshqa varoqlarni qo'llash mumkin.",
+ "xlsx_issues.empty_none": "{sheet} varag'i bo'sh: undan hech narsa o'qilmadi. Boshqa varoqlarni qo'llash mumkin.",
+ "xlsx_issues.unreadable_title": "Varaqni o'qib bo'lmadi",
+ "xlsx_issues.unreadable": "{sheet} varag'ini o'qib bo'lmadi, faylning bu qismi buzilgan: undan hech narsa olinmadi va uning elementlari o'z holicha qoladi. Boshqa varoqlarni qo'llash mumkin.",
+ "xlsx_issues.formulas": "{sheet} varag'idagi formulalarni o'qib bo'lmadi, shuning uchun hisoblangan qiymatni tahrirdan ajratib bo'lmaydi: bu varaqdan hech narsa olinmadi. Boshqa varoqlarni qo'llash mumkin."
+}

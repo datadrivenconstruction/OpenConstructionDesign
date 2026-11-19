@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "XLSX-ге экспорттоо: масштаб",
+ "xlsx_scope.intro": "Жумуш китебине эмне кирерин тандаңыз. Аны кайра импорттоодо бул элементтер гана өзгөрөт.",
+ "xlsx_scope.base_whole": "Бүтүн модель",
+ "xlsx_scope.base_level": "Активдүү деңгээл",
+ "xlsx_scope.base_selection": "Тандоо",
+ "xlsx_scope.categories": "Категориялар",
+ "xlsx_scope.cat_walls": "дубалдар",
+ "xlsx_scope.cat_openings": "эшиктер",
+ "xlsx_scope.cat_rooms": "бөлмөлөр",
+ "xlsx_scope.cat_slabs": "плиталар",
+ "xlsx_scope.cat_curtains": "айнек дубалдар",
+ "xlsx_scope.nothing_selected": "Эч нерсе тандалган жок: адегенде элементтерди тандаңыз же башка масштабды тандаңыз.",
+ "xlsx_scope.no_categories": "Кеминде бир категорияны белгилеңиз.",
+ "xlsx_scope.no_level": "Активдүү деңгээл табылган жок.",
+ "xlsx_scope.export": "Экспорттоо",
+ "xlsx_scope.preview_scope": "Экспорттолгон масштаб: {scope}. Андан тышкаркы элементтер эч качан өзгөртүлбөйт же өчүрүлбөйт."
+}

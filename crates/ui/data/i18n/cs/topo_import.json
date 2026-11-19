@@ -1,0 +1,4 @@
+{
+ "topo_import.topo.ambiguous": "{n} řádků přeskočeno: číslo lze číst dvojím způsobem (1,250 = 1.25 nebo 1250?) a soubor neukazuje desetinný znak",
+ "topo_import.topo.grouped": "{n} bodů načteno s oddělenými skupinami číslic (1 250,5 nebo 1,234.5)"
+}

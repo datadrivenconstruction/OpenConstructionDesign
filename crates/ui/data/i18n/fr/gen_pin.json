@@ -1,0 +1,7 @@
+{
+ "gen.pin.room": "Vous avez modifié un local du projet généré. Épinglez-le pour qu'une révision le conserve à sa place.",
+ "gen.pin.storey": "Vous avez modifié un étage du projet généré. Épinglez-le pour qu'une révision conserve ses murs et ses ouvertures.",
+ "gen.pin.action": "Épingler",
+ "gen.pin.done": "Épinglé : une révision du projet le conserve et place le reste autour",
+ "gen.pin.failed": "Impossible d'épingler"
+}

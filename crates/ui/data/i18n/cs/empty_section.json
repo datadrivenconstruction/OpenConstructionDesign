@@ -1,0 +1,11 @@
+{
+ "empty.sv_notfound.title": "Pohled nenalezen",
+ "empty.sv_notfound.hint": "Tento pohled byl smazán nebo již není součástí projektu.",
+ "empty.sv_notfound.action": "Zavřít pohled",
+ "empty.sv_cuts_nothing.title": "Tento řez neprotíná nic",
+ "empty.sv_cuts_nothing.hint": "Řezná čára nezasahuje do žádné stěny, desky ani otvoru v její hloubce. Posuňte čáru nebo zvětšete hloubku pohledu.",
+ "empty.sv_cuts_nothing.action": "Zobrazit v půdorysu",
+ "empty.sv_shows_nothing.title": "Tento pohled nezobrazuje nic",
+ "empty.sv_shows_nothing.hint": "V hloubce pohledu nejsou žádné stěny, desky ani otvory. Posuňte čáru pohledu nebo zvětšete hloubku pohledu.",
+ "empty.sv_shows_nothing.action": "Zobrazit v půdorysu"
+}

@@ -1,0 +1,15 @@
+{
+ "xl.msg.cell_clipped": "matn katak chegarasiga sig'dirish uchun qisqartirildi; faqat o'qish, tahrir qo'llanmadi",
+ "xlcell.status": "Eksport qilindi. {count} ta katak qisqartirildi yoki bo'sh qoldirildi — batafsil oynani ko'ring.",
+ "xlcell.title": "Eksport o'zgartirgan katakchalar",
+ "xlcell.intro": "Bu kataklarni o'z holicha yozib bo'lmadi. To'liq qiymat modelda qoladi; katak qulflangan va kitobda tahrirlanmaydi.",
+ "xlcell.col_sheet": "Varaq",
+ "xlcell.col_row": "Qator",
+ "xlcell.col_col": "Ustun",
+ "xlcell.col_id": "Element id",
+ "xlcell.col_what": "Nima sodir bo'ldi",
+ "xlcell.what_clipped": "Matn katak chegarasiga qisqartirildi",
+ "xlcell.what_blank": "Chekli raqam emas, katak bo'sh qoldirildi",
+ "xlcell.more": "… va yana {count} ta",
+ "xlcell.close": "Yopish"
+}

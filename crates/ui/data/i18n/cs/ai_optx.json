@@ -1,0 +1,10 @@
+{
+ "ai.optx.applied": "Varianta „{name}“ použita. Zpět ji vrátí do návrhu",
+ "ai.optx.missing": "Varianta {id} již neexistuje",
+ "ai.optx.accepted": "Varianta {id} je již použita",
+ "ai.optx.not_draft": "Varianta {id} byla zamítnuta a nelze ji použít",
+ "ai.optx.stale": "Model se změnil po vytvoření varianty {id}: nejprve ji vygenerujte znovu",
+ "ai.optx.bad_recipe": "Postup varianty nelze přečíst: {e}",
+ "ai.optx.refused": "Varianta nebyla použita ({code}): {reason}",
+ "ai.optx.failed": "Varianta nebyla použita: {e}"
+}

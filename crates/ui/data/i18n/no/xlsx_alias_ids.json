@@ -1,0 +1,7 @@
+{
+ "xlsx_alias_ids.ids_written": "{n} nye rader fikk sin id i det omdøpte arket; ingenting annet i arbeidsboken endret seg.",
+ "xlsx_alias_ids.ids_open": "Arbeidsboken er åpen i et annet program: id-ene til {n} nye rader ble ikke skrevet. Lukk den der og synkroniser; disse radene opprettes ikke på nytt.",
+ "xlsx_alias_ids.ids_failed": "Id-ene til {n} nye rader kunne ikke skrives; arbeidsboken ble latt være som den var. Disse radene opprettes ikke på nytt ved neste synkronisering.",
+ "xlsx_alias_ids.unpaired": "{n} nye rader har ingen id ennå; de huskes og opprettes ikke på nytt.",
+ "xlsx_alias_ids.refused": "Ingenting ble brukt: nye rader i {sheets} kan ikke få sine id-er mens et omdøpt ark leses. Gi arket tilbake sitt standardnavn (eller fjern disse radene) og synkroniser på nytt."
+}

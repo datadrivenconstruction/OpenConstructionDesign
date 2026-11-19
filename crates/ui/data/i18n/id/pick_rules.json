@@ -1,0 +1,11 @@
+{
+ "pick_rules.filter": "Pilih: semua",
+ "pick_rules.filter.on": "Pilih: {n} nonaktif",
+ "pick_rules.filter.title": "Kategori yang dapat dipilih dengan klik",
+ "pick_rules.filter.all": "Pilih semua kategori",
+ "pick_rules.filter.tip": "Filter pilihan: kategori yang tidak dicentang dilewati saat diklik dan disorot",
+ "pick_rules.here": "Item di sini",
+ "pick_rules.here.selected": "dipilih",
+ "pick_rules.pinned": "Pilih item yang dikunci",
+ "pick_rules.here.row": "{cat} · {len}"
+}

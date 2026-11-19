@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "Държи тази стена с текущата ѝ дължина при всяка редакция",
+ "constraints.con.tip.lock_dist": "Държи разстоянието между двете стени при всяка редакция",
+ "constraints.con.tip.equal": "Държи стъпките между избраните стени равни",
+ "constraints.con.tip.align": "Държи двете стени на една линия",
+ "constraints.con.tip.parallel": "Държи стените успоредни",
+ "constraints.con.tip.perp": "Държи стените под прав ъгъл",
+ "constraints.con.tip.align_grid": "Държи стената на най-близката линия на мрежата",
+ "constraints.con.tip.lock_dist_grid": "Държи разстоянието от стената до най-близката линия на мрежата",
+ "constraints.con.tip.level_gap": "Държи разстоянието между нивата",
+ "constraints.con.tip.top_to_level": "Държи горната част на стената на нивото над нея"
+}

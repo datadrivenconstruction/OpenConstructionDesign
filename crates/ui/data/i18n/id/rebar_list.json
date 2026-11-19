@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "Pindah ke atas",
+ "rebar_list.move_down": "Pindah ke bawah",
+ "rebar_list.remove": "Hapus",
+ "rebar_list.zone_remove_last": "Zona memerlukan minimal satu ruangan: hapus zona untuk menghapus yang terakhir",
+ "rebar_list.rebar_empty_title": "Tidak ada tulangan di model ini",
+ "rebar_list.rebar_empty_hint": "Tempatkan tulangan di elemen inang dan tulangan akan dijadwalkan di sini.",
+ "rebar_list.rebar_empty_action": "Tempatkan tulangan"
+}

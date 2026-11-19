@@ -1,0 +1,19 @@
+{
+ "xlsx_confirm.chip": "att bekräfta",
+ "xlsx_confirm.section": "Rader utan id matchade mot ett element via namn eller nummer",
+ "xlsx_confirm.tag": "matchad via namn",
+ "xlsx_confirm.tag_accepted": "matchning godkänd",
+ "xlsx_confirm.tag_rejected": "skapar nytt",
+ "xlsx_confirm.kind_room": "rum",
+ "xlsx_confirm.kind_curtain_wall": "glasfasad",
+ "xlsx_confirm.row_line": "{kind} #{id}, nyckel \"{key}\"",
+ "xlsx_confirm.accept": "Godkänn",
+ "xlsx_confirm.accept_tip": "Tillämpa den här raden på det matchade elementet (ett ångrasteg tillsammans med resten)",
+ "xlsx_confirm.reject": "Skapa ny",
+ "xlsx_confirm.reject_tip": "Matcha inte: den här raden skapar ett nytt element",
+ "xlsx_confirm.decide_first": "Godkänn eller avvisa de rader som matchats med namn först.",
+ "xl.msg.key_match_many": "nyckeln matchar {} element; inte matchad, raden skapar ett nytt",
+ "xl.msg.key_match_taken": "nyckeln matchar ett element som används av en annan rad; inte matchad, raden skapar ett nytt",
+ "xl.msg.key_match_kept": "behållen: matchningen avvisad, raden skapar ett nytt element",
+ "xl.msg.key_match_undecided": "rader som matchats med namn väntar på ett beslut"
+}

@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "Xuất sang bảng tính: phạm vi",
+ "xlsx_scope.intro": "Chọn những gì đưa vào sổ làm việc. Nhập lại sẽ chỉ thay đổi các cấu kiện này.",
+ "xlsx_scope.base_whole": "Toàn bộ mô hình",
+ "xlsx_scope.base_level": "Cao độ đang dùng",
+ "xlsx_scope.base_selection": "Lựa chọn",
+ "xlsx_scope.categories": "Danh mục",
+ "xlsx_scope.cat_walls": "tường",
+ "xlsx_scope.cat_openings": "cửa",
+ "xlsx_scope.cat_rooms": "phòng",
+ "xlsx_scope.cat_slabs": "sàn",
+ "xlsx_scope.cat_curtains": "tường rèm",
+ "xlsx_scope.nothing_selected": "Chưa chọn gì: hãy chọn cấu kiện trước hoặc chọn phạm vi khác.",
+ "xlsx_scope.no_categories": "Chọn ít nhất một danh mục.",
+ "xlsx_scope.no_level": "Không tìm thấy cao độ đang dùng.",
+ "xlsx_scope.export": "Xuất",
+ "xlsx_scope.preview_scope": "Phạm vi xuất: {scope}. Cấu kiện ngoài phạm vi không bao giờ bị thay đổi hay xóa."
+}

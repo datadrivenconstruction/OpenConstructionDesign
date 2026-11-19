@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "ダクト",
+ "mep3d.pipe": "配管",
+ "mep3d.tray": "ケーブルトレイ",
+ "mep3d.conduit": "配管",
+ "mep3d.system": "システム",
+ "mep3d.length": "長さ",
+ "mep3d.diameter": "直径",
+ "mep3d.width": "幅",
+ "mep3d.height": "高さ",
+ "mep3d.insulation": "保温材",
+ "mep3d.tip": "Enter — 適用。継手は再計算されます",
+ "mep3d.size_positive": "サイズは 0 より大きい必要があります",
+ "mep3d.not_changed": "変更されませんでした: {e}",
+ "mep3d.copied": "配管をコピーしました",
+ "mep3d.changed": "配管を変更しました",
+ "mep3d.deleted": "削除した要素: {n}",
+ "mep3d.not_deleted": "削除されませんでした: {e}",
+ "mep3d.no_wall_type": "壁タイプがありません",
+ "mep3d.demo.supply": "給気 S1",
+ "mep3d.demo.heating": "暖房",
+ "mep3d.demo.power": "電源"
+}

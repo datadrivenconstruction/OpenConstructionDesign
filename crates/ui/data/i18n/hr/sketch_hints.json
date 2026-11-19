@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "Nacrtajte zatvoreni obris: kliknite točke, zatim Enter ili Završi za stvaranje",
+ "sketch_hints.sk_finish": "Završi",
+ "sketch_hints.sk_cancel": "Odustani",
+ "sketch_hints.import_warn": "upozorenja provjere modela: {n} (prvo: {first})",
+ "sketch_hints.ai.offline.schedule": "Otvori tablicu",
+ "sketch_hints.ai.offline.check": "Provjeri prema pravilima",
+ "sketch_hints.ai.offline.warnings": "Prikaži upozorenja",
+ "cmd.file.publish_pdf": "Objavi listove kao PDF…",
+ "cmd.file.publish_pdf.desc": "Objavljuje odabrane listove u PDF. Isto kao izvoz listova u PDF/SVG.",
+ "sketch_hints.verify_none": "U odabiru nema ničega što je AI asistent postavio za provjeru",
+ "sketch_hints.contours_none": "U modelu nema topo-površine: konture se pojavljuju nakon njezina stvaranja",
+ "sketch_hints.contours_off": "Konture topo-površine skrivene",
+ "sketch_hints.contours_on": "Konture topo-površine prikazane"
+}

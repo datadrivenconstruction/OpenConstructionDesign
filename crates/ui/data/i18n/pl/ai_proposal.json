@@ -1,0 +1,13 @@
+{
+ "ai.proposal.title": "Propozycja agenta",
+ "ai.proposal.meta": "{actor} · operacje: {ops}",
+ "ai.proposal.apply.desc": "Stosuje całą propozycję jako jeden krok; Ctrl+Z ją cofa",
+ "ai.proposal.applying": "Stosowanie…",
+ "ai.proposal.applied": "Propozycja została zastosowana. Ctrl+Z ją cofa.",
+ "ai.proposal.applied_resync": "Propozycja została zastosowana, ale widok jeszcze się nie zaktualizował. Odświeży się sam; Ctrl+Z cofa krok.",
+ "ai.proposal.stale": "Model zmienił się po podglądzie tej propozycji. Poproś agenta o ponowne zaproponowanie.",
+ "ai.proposal.toast.applied": "Propozycja zastosowana. Ctrl+Z ją cofa.",
+ "ai.proposal.toast.stale": "Model zmienił się po podglądzie, więc nic nie zastosowano. Podejrzyj ponownie: poproś agenta o nową propozycję.",
+ "ai.proposal.toast.refused": "Propozycja nie została zastosowana: {reason}",
+ "ai.proposal.rejected": "Propozycja została odrzucona."
+}

@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "Snu hengselside",
+ "cmd.edit.flip_hand.desc": "Speiler de valgte dørene og vinduene langs veggen, slik at hengslene flytter seg til andre enden av åpningen.",
+ "cmd.edit.flip_facing": "Snu åpningsside",
+ "cmd.edit.flip_facing.desc": "Snur de valgte dørene og vinduene til andre siden av veggen.",
+ "opening_grips.flip_hand": "Snu hengsel",
+ "opening_grips.flip_hand.tip": "Hengsler til andre enden av åpningen (Shift+F)",
+ "opening_grips.flip_facing": "Snu side",
+ "opening_grips.flip_facing.tip": "Åpning til andre siden av veggen (Shift+G)",
+ "opening_grips.flip.done": "Snudd: {n}",
+ "opening_grips.flip.none": "Velg en dør eller et vindu for å snu",
+ "opening_grips.flip.fail": "Ikke snudd: {why}"
+}

@@ -1,0 +1,6 @@
+walls=[(0,0)-(6,0)]
+# Rotate: centre, reference, target; one record
+tool(select) click(3,0) → selected=1
+tool(RO) → scope=Moving
+click(3,0) click(6,0) → journal=+0 scope=Moving
+click(3,3) → journal=+1 scope=Idle

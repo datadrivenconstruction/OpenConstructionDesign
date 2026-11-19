@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "Menyimpan seluruh model atau pilihan sebagai STL biner dalam meter atau milimeter.",
+ "cmd.data.export_obj.desc": "Menyimpan seluruh model atau pilihan sebagai OBJ dengan file MTL: satu grup per elemen, warna berdasarkan material.",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "OBJ dengan material (.obj)",
+ "open_file.filter.mesh": "Mesh 3D (glTF, STEP, STL, OBJ)",
+ "mx.title": "Ekspor {fmt}",
+ "mx.scope": "Yang akan diekspor",
+ "mx.scope.all": "Seluruh model",
+ "mx.scope.sel": "Pilihan ({n} elemen)",
+ "mx.units": "Satuan dalam file",
+ "mx.units.m": "Meter",
+ "mx.units.mm": "Milimeter",
+ "mx.export": "Ekspor…",
+ "mx.saved": "{fmt} disimpan: {path} ({parts} elemen, {tris} segitiga)",
+ "mx.partial": "{fmt} disimpan dengan {n} masalah, beberapa badan mungkin hilang: {path}",
+ "mx.failed": "Ekspor {fmt} gagal: {error}",
+ "mx.imported": "{file}: {n} elemen diimpor ({tris} segitiga)",
+ "mx.imported_notes": "{file}: {n} elemen diimpor ({tris} segitiga), {w} catatan: {first}"
+}

@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key} нөөцлөгдсөн ({why}) тул дахин оноох боломжгүй",
+ "quick.keys.res_copy": "хуулах",
+ "quick.keys.res_paste": "буулгах",
+ "quick.keys.res_cut": "таслах",
+ "quick.keys.res_undo": "буцаах / дахин хийх",
+ "quick.keys.res_save": "хадгалах",
+ "quick.keys.res_palette": "командын хайлт",
+ "quick.keys.reserved_conflict": "{key} аль хэдийн “{cmd}” командад ашиглагдсан байна. Esc нь үүнийг хэвээр нь үлдээнэ.",
+ "quick.keys.reserved_swap": "Солих",
+ "quick.keys.reserved_take": "Авах",
+ "quick.keys.reserved_keep": "Хэвээр нь үлдээх",
+ "quick.keys.reserved_os": "Системд эзэлсэн:"
+}

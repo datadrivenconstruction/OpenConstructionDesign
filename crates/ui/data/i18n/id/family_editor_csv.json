@@ -1,0 +1,11 @@
+{
+ "fe.csv.apply": "Terapkan impor",
+ "fe.csv.cancel": "Buang pratinjau",
+ "fe.csv.nothing": "Tidak ada yang diubah: katalog sama dengan tipe saat ini",
+ "fe.csv.preview": "Pratinjau impor: {added} baru, {changed} diubah, {same} tipe tidak berubah; {values} nilai berubah",
+ "fe.csv.preview_hint": "Sel kosong dan kolom yang hilang mempertahankan nilai saat ini. Tidak ada yang berubah sampai Anda menerapkan.",
+ "fe.csv.skipped": "Tidak diterapkan, nilai dipertahankan: {msg}",
+ "fe.csv.type_added": "Tipe baru {name}",
+ "fe.csv.type_changed": "Tipe {name}",
+ "fe.csv.value": "  {param}: {old} → {new}"
+}

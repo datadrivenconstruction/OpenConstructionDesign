@@ -1,0 +1,6 @@
+{
+ "vv_conflict.styles.conflict": "Egy szerkesztett kategória objektumstílusai megváltoztak a modellben (visszavonás vagy másik ablak miatt), miközben ez az ablak módosításokat tartalmazott. A módosításaid megmaradnak.",
+ "vv_conflict.styles.keep": "Módosításaim megtartása",
+ "vv_conflict.styles.reload": "Újratöltés",
+ "vv_conflict.styles.answer_first": "Válaszd a Módosításaim megtartása vagy az Újratöltés lehetőséget"
+}

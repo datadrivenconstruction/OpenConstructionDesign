@@ -1,0 +1,6 @@
+{
+ "imported_prop_edit.remove": "Eigenschap verwijderen",
+ "imported_prop_edit.remove.tip": "Verwijdert de eigenschap van {n} geselecteerd(e) element(en) in één ongedaan-stap; bij opslaan wordt ze uit het IFC-bestand verwijderd",
+ "imported_prop_edit.done": "{key} verwijderd van {n} element(en)",
+ "imported_prop_edit.warn.reload": "Klaar, maar de weergave is niet ververst; open het paneel opnieuw of maak ongedaan als het er verkeerd uitziet"
+}

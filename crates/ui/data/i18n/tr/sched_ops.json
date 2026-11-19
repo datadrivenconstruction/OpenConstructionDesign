@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "değer sıfırdan büyük olmalı",
+ "sched_ops.not_number": "sayı değil",
+ "sched_ops.no_host": "ana duvar yok",
+ "sched_ops.wall_length": "bu duvar uzunluğu bu şekilde ayarlanamaz",
+ "sched_ops.no_wall": "böyle bir duvar yok",
+ "sched_ops.no_opening": "böyle bir açıklık yok",
+ "sched_ops.no_curtain": "böyle bir cephe perdesi yok",
+ "sched_ops.no_panel": "böyle bir panel yok",
+ "sched_ops.no_slab": "böyle bir döşeme yok",
+ "sched_ops.no_room": "böyle bir oda yok",
+ "sched_ops.slope_range": "eğim aralık dışında",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

@@ -1,0 +1,9 @@
+{
+ "ai.settings.num_bad": "Сан эмес. 0.5 сыяктуу териңиз.",
+ "ai.settings.num_comma": "Оңдук белги катары чекитти колдонуңуз, мисалы 0.5.",
+ "ai.settings.num_negative": "Сан терс болушу мүмкүн эмес.",
+ "ai.settings.unit_money": "валюта",
+ "ai.settings.unit_tokens": "токен",
+ "ai.settings.unit_price": "1M токенге",
+ "ai.settings.limits_hint": "0 — чек жок. Четке кагылган маани мурунку чекти калтырат."
+}

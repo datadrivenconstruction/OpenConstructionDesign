@@ -1,0 +1,4 @@
+{
+ "family_load.refused": "“{name}” ailesi yüklenemiyor: {msg}. Projeye hiçbir şey yüklenmedi; düzenlemeleriniz korundu.",
+ "family_load.loaded_all": "{n} aile tek adımda yüklendi: {names}"
+}

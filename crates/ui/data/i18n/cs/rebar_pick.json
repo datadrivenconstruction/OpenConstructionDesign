@@ -1,0 +1,7 @@
+{
+ "rebar_pick.pick.empty": "Výztuž: vyberte sloup, trám, stěnu, desku nebo patku",
+ "rebar_pick.pick.unsupported": "Tento výběr nelze vyztužit. Vyberte sloup, trám, stěnu, desku nebo patku",
+ "rebar_pick.pick.keys": "Klikem vyberte, Shift přidá další · Enter otevře formulář · Esc zruší",
+ "rebar_pick.pick.open": "Otevřít formulář",
+ "rebar_pick.pick.cancel": "Zrušit"
+}

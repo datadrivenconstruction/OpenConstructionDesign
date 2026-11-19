@@ -1,0 +1,14 @@
+{
+ "save_guard.save.empty_over_full": "Нищо не е записано: моделът е празен, а файлът вече съдържа данни. Файлът не е променен. Използвайте Запази като, за да запишете под друго име.",
+ "save_guard.refuse.body": "Нищо не е записано: моделът е празен, а {name} вече съдържа данни. Файлът не е променен.",
+ "save_guard.refuse.foreign": "Това не е файл на DDC Editor, затова не може да бъде заменен. Използвайте Запази като, за да запишете под друго име.",
+ "save_guard.refuse.ask": "Да се замени ли {name}? Съдържа {what}. Преди това той се премества в папката _archive до него, после се записва празният модел.",
+ "save_guard.refuse.holds_db": "{n} елемента и реда със съдържание",
+ "save_guard.refuse.holds_ifc": "IFC с елементи",
+ "save_guard.refuse.replace": "Замени въпреки това…",
+ "save_guard.refuse.replace_yes": "Премести и замени",
+ "save_guard.refuse.save_as": "Запази като…",
+ "save_guard.refuse.cancel": "Отказ",
+ "save_guard.replace.moved": "Предишният файл е преместен в {path}",
+ "save_guard.replace.move_failed": "{name} не можа да бъде преместен настрани: {error}. Нищо не е записано."
+}

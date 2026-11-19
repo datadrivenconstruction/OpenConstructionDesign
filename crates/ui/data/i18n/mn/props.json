@@ -1,0 +1,18 @@
+{
+ "props.multi.title": {
+  "one": "# элемент",
+  "other": "# элемент"
+ },
+ "props.multi.cats": {
+  "one": "# ангилал",
+  "other": "# ангилал"
+ },
+ "props.multi.varies": {
+  "one": "өөр өөр (#)",
+  "other": "өөр өөр (#)"
+ },
+ "props.multi.clear": "Сонголтыг арилгах",
+ "props.multi.undo": "Буцаах",
+ "props.multi.narrowed": "Сонголт: {n} · {name}",
+ "props.multi.chip_tip": "{name}: {n}  ·  Дарвал шинж чанарыг нь харуулна, Ctrl+дарвал зөвхөн эдгээрийг үлдээнэ"
+}

@@ -1,0 +1,13 @@
+{
+ "level.err_open": "Nivelul nu a fost deschis: {e}",
+ "level.need_name": "Un nivel are nevoie de un nume și de o cotă",
+ "level.created": "Nivelul „{name}” creat",
+ "level.err_create": "Nivelul nu a fost creat: {e}",
+ "level.err_edit": "Nivelul nu a fost modificat: {e}",
+ "level.edited": "Nivelul „{name}” modificat",
+ "level.edited_stale": "Nivelul „{name}” modificat, vederea nu a fost reîmprospătată: {e}",
+ "level.last": "Ultimul nivel nu poate fi șters",
+ "level.deleted": "Nivel șters",
+ "level.not_empty": "Nivelul nu este gol: mai întâi ștergeți elementele sale",
+ "level.err_delete": "Nivelul nu a fost șters: {e}"
+}

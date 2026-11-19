@@ -1,0 +1,9 @@
+{
+ "cmd.mass.timeline_family": "Historie do rodiny",
+ "cmd.mass.timeline_family.desc": "Vytvoří rodinu komponent z historie prvků vybrané hmoty. Parametry historie se stanou parametry rodiny.",
+ "mass_family.done": "Vytvořena rodina {name}, parametrů: {n}",
+ "mass_family.refused": "Rodina nebyla vytvořena: {e}",
+ "mass_family.no_mass": "Nejprve vyberte parametrickou hmotu",
+ "mass_family.add_modifier": "Přidat modifikátor",
+ "mass_family.needs_faces": "Potřebné vybrané plochy: použijte nástroj na kartě Hmoty"
+}

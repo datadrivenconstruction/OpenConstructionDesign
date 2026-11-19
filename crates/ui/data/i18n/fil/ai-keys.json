@@ -1,0 +1,14 @@
+{
+ "ai_keys.header_is_key": "Ilagay ang mga key sa Key field — naka-save sa plain text ang mga header",
+ "ai_keys.move": "Ilipat sa Key",
+ "ai_keys.remove_line": "Alisin sa mga header",
+ "ai_keys.save_blocked": "Ilipat ang key sa labas ng mga header para ma-save",
+ "ai_keys.show": "Ipakita",
+ "ai_keys.hide": "Itago",
+ "ai_keys.copy": "Kopyahin",
+ "ai_keys.tokens": "token",
+ "ai_keys.presets": "Mga preset",
+ "ai_keys.preset_k": "{n}k",
+ "ai_keys.preset_m": "{n}M",
+ "ai_keys.images_on": "Suportado"
+}

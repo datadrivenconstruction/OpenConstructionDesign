@@ -1,0 +1,5 @@
+{
+ "lv.level.deleted_attach": "标高已删除；{n} 面墙失去顶部连接",
+ "lv.level.rooms": "{n} 个房间将采用目标标高高度（{dz} m）：{names}。再次按“移动”以确认",
+ "lv.level.pinned": "标高未删除：已固定的构件无法移至其他标高：{names}。请先取消固定"
+}

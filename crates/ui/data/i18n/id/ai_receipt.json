@@ -1,0 +1,21 @@
+{
+ "ai.receipt.title": {
+  "one": "Menerapkan # perubahan",
+  "other": "Menerapkan # perubahan"
+ },
+ "ai.receipt.more": "+{n} lainnya",
+ "ai.receipt.list": "Elemen",
+ "ai.receipt.show": "Tampilkan",
+ "ai.receipt.show.tip": "Pilih dan bingkai elemen yang berubah",
+ "ai.receipt.undo": "Urungkan",
+ "ai.receipt.undo.tip": "Batalkan tepat penerapan ini",
+ "ai.receipt.undone": "Diurungkan",
+ "ai.receipt.later": "Ada pengeditan berikutnya",
+ "ai.receipt.toast_undone": "Rencana yang diterapkan telah diurungkan",
+ "ai.receipt.draft_family": "Famili draf: {name}",
+ "ai.receipt.promote": "Jadikan kerja",
+ "ai.receipt.promote.tip": "Ubah famili draf menjadi famili kerja (satu langkah urung)",
+ "ai.receipt.promoted": "Famili kini berstatus kerja",
+ "ai.receipt.promote_failed": "Famili tidak dapat dijadikan kerja",
+ "cmd.ai.receipt_undo": "Urungkan rencana AI terakhir"
+}

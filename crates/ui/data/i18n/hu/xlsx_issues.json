@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "Kihagyott sorok és cellák",
+ "xlsx_issues.conflicts_title": "Mindkét helyen módosítva",
+ "xlsx_issues.missing_title": "A lap hiányzik a munkafüzetből",
+ "xlsx_issues.look_alike_title": "A lap neve nem egyezik",
+ "xlsx_issues.mass_title": "Tömeges törléshez megerősítés szükséges",
+ "xlsx_issues.sheets_missing": "A(z) {sheets} lapok hiányoznak a munkafüzetből (átnevezve vagy törölve); soraik nem lettek összehasonlítva.",
+ "xlsx_issues.keep_model": "Modell megtartása",
+ "xlsx_issues.take_book": "Munkafüzet értékének átvétele",
+ "xlsx_issues.open_book_tip": "Megnyitja a fájlt az alkalmazásában. A modell nem változik; a munkafüzet mentése után az előnézet újratöltődik."
+}

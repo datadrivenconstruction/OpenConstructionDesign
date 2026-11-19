@@ -1,0 +1,19 @@
+{
+ "names.level": "Nivel {n}",
+ "names.slab": "Forjado 200",
+ "names.roof_slab": "Cubierta 200",
+ "names.sheet.plan_section": "Planta y sección de la planta 1",
+ "names.sheet.plan_view": "Planta 1",
+ "names.sheet.site_plan": "Plano de situación",
+ "names.sheet_set.issue": "Emisión 1",
+ "names.title.owner": "Proyecto Ltda.",
+ "names.title.creator": "A. González",
+ "names.title.approver": "P. Pérez",
+ "names.title.document_type": "Plano",
+ "names.title.status": "En curso",
+ "names.revision.date": "4 nov 2026",
+ "names.revision.description": "Emitido para revisión",
+ "names.revision.author": "IA",
+ "names.demo.no_levels": "sin niveles",
+ "names.demo.no_sheet": "lámina"
+}

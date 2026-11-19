@@ -1,0 +1,15 @@
+{
+ "xl.msg.cell_clipped": "texten kortades för att få plats i cellen; skrivskyddad, redigeringen tillämpades inte",
+ "xlcell.status": "Exporterad. {count} celler kortades eller lämnades tomma — se detaljfönstret.",
+ "xlcell.title": "Celler som ändrades av exporten",
+ "xlcell.intro": "Dessa celler kunde inte skrivas som de är. Hela värdet finns kvar i modellen; cellen är låst och kan inte redigeras i arbetsboken.",
+ "xlcell.col_sheet": "Blad",
+ "xlcell.col_row": "Rad",
+ "xlcell.col_col": "Kolumn",
+ "xlcell.col_id": "Element-id",
+ "xlcell.col_what": "Vad hände",
+ "xlcell.what_clipped": "Text kortad till cellgränsen",
+ "xlcell.what_blank": "Inte ett ändligt tal, cellen lämnades tom",
+ "xlcell.more": "… och {count} till",
+ "xlcell.close": "Stäng"
+}

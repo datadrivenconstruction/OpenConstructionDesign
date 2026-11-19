@@ -1,0 +1,13 @@
+{
+ "level.err_open": "Chưa mở cao độ: {e}",
+ "level.need_name": "Cao độ cần có tên và độ cao",
+ "level.created": "Đã tạo cao độ “{name}”",
+ "level.err_create": "Chưa tạo cao độ: {e}",
+ "level.err_edit": "Chưa đổi cao độ: {e}",
+ "level.edited": "Đã đổi cao độ “{name}”",
+ "level.edited_stale": "Đã đổi cao độ “{name}”, góc nhìn chưa làm mới: {e}",
+ "level.last": "Không thể xóa cao độ cuối cùng",
+ "level.deleted": "Đã xóa cao độ",
+ "level.not_empty": "Cao độ chưa trống: hãy xóa các phần tử trên đó trước",
+ "level.err_delete": "Chưa xóa cao độ: {e}"
+}

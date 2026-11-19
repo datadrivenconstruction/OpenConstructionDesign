@@ -1,0 +1,15 @@
+{
+ "text_style.lbl.text_style": "Style de texte",
+ "text_style.lbl.align": "Alignement",
+ "text_style.lbl.head": "Pointe de flèche",
+ "text_style.lbl.line_style": "Style de ligne",
+ "text_style.lbl.fill": "Remplissage",
+ "text_style.lbl.detail": "Détail",
+ "text_style.lbl.width": "Épaisseur",
+ "text_style.bad_number": "Saisissez un nombre de {min} à {max}",
+ "text_style.tip.next_ring": "Fermer ce contour et en commencer un autre dans la même zone",
+ "text_style.tip.edit_text": "Modifier le texte sur place",
+ "text_style.tip.add_leader": "Ajouter un repère à ce texte",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°"
+}

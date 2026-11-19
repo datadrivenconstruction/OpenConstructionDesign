@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "Schachten",
+ "quick.cat.shaft": "Schacht",
+ "shaft_tool.browser.shaft": "Schacht #{id}",
+ "shaft_tool.shaft.top": "Bovenste verdieping",
+ "shaft_tool.shaft.cuts": "Gesneden elementen",
+ "shaft_tool.shaft.cut_area": "Snijoppervlak",
+ "shaft_tool.shaft.cut_volume": "Snijvolume",
+ "elem.no.rooms": "Volgt de ruimten die het bevat"
+}

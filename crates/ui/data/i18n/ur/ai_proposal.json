@@ -1,0 +1,13 @@
+{
+ "ai.proposal.title": "ایجنٹ کی تجویز",
+ "ai.proposal.meta": "{actor} · آپریشنز: {ops}",
+ "ai.proposal.apply.desc": "پوری تجویز ایک قدم میں لاگو کرتا ہے؛ Ctrl+Z اسے واپس کرتا ہے",
+ "ai.proposal.applying": "لاگو ہو رہا ہے…",
+ "ai.proposal.applied": "تجویز لاگو ہو گئی۔ Ctrl+Z اسے واپس کرتا ہے۔",
+ "ai.proposal.applied_resync": "تجویز لاگو ہو گئی، مگر ویو ابھی اپ ڈیٹ نہیں ہوا۔ یہ خود بخود تازہ ہو جائے گا؛ Ctrl+Z اس قدم کو واپس کرتا ہے۔",
+ "ai.proposal.stale": "پیش نظارے کے بعد ماڈل بدل گیا۔ ایجنٹ سے دوبارہ تجویز مانگیں۔",
+ "ai.proposal.toast.applied": "تجویز لاگو ہو گئی۔ Ctrl+Z اسے واپس کرتا ہے۔",
+ "ai.proposal.toast.stale": "پیش نظارے کے بعد ماڈل بدل گیا، اس لیے کچھ لاگو نہیں ہوا۔ دوبارہ پیش نظارہ کریں: ایجنٹ سے نئی تجویز مانگیں۔",
+ "ai.proposal.toast.refused": "تجویز لاگو نہیں ہوئی: {reason}",
+ "ai.proposal.rejected": "تجویز مسترد کر دی گئی۔"
+}

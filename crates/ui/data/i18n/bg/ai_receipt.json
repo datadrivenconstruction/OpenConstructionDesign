@@ -1,0 +1,21 @@
+{
+ "ai.receipt.title": {
+  "one": "Приложена # промяна",
+  "other": "Приложени # промени"
+ },
+ "ai.receipt.more": "+още {n}",
+ "ai.receipt.list": "Елементи",
+ "ai.receipt.show": "Покажи",
+ "ai.receipt.show.tip": "Избира и центрира променените елементи",
+ "ai.receipt.undo": "Отмени",
+ "ai.receipt.undo.tip": "Връща точно това приложване",
+ "ai.receipt.undone": "Отменено",
+ "ai.receipt.later": "Има направени по-късни редакции",
+ "ai.receipt.toast_undone": "Приложеният план е отменен",
+ "ai.receipt.draft_family": "Чернова на семейство: {name}",
+ "ai.receipt.promote": "Направи работещо",
+ "ai.receipt.promote.tip": "Превръща черновото семейство в работещо (една стъпка за отмяна)",
+ "ai.receipt.promoted": "Семейството вече е работещо",
+ "ai.receipt.promote_failed": "Семейството не можа да стане работещо",
+ "cmd.ai.receipt_undo": "Отмени последния план на AI"
+}

@@ -1,0 +1,9 @@
+{
+ "empty.props_model.title": "선택된 항목 없음",
+ "empty.props_model.hint": "뷰에서 요소를 클릭하면 속성이 표시됩니다. 또는 모든 매개변수를 통합 문서로 내보내 편집한 뒤 다시 적용하세요.",
+ "empty.props_model.action": "XLSX 스프레드시트로 내보내기",
+ "tut.spreadsheet.title": "XLSX 스프레드시트 왕복 작업",
+ "tut.spreadsheet.1": "아래의 내보내기를 누르세요: 포함할 항목을 선택하고 통합 문서를 저장합니다.",
+ "tut.spreadsheet.2": "XLSX 스프레드시트에서 통합 문서를 열고 셀을 변경한 뒤 저장하세요. 여기의 미리보기에 변경 사항이 표시됩니다.",
+ "tut.spreadsheet.3": "미리보기를 확인하고 모델에 적용을 누르세요. Ctrl+Z로 실행 취소합니다."
+}

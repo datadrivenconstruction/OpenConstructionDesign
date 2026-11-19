@@ -1,0 +1,13 @@
+{
+ "cmd.arch.wall_pick": "Wall by line",
+ "cmd.arch.wall_pick.desc": "Places a wall on a picked drawing line of the current level. F switches axis or face on the line, Tab takes the connected chain. Each pick is one undo step. Works for curtain walls too.",
+ "hint.wall_pick.center": "Wall by line: pick a drawing line · axis on the line · F face · Tab chain · Esc exit",
+ "hint.wall_pick.face": "Wall by line: pick a drawing line · face on the line, cursor side · F axis · Tab chain · Esc exit",
+ "hint.wall_pick.center_chain": "Wall by line: pick a line to take its chain · axis on the line · F face · Tab one line",
+ "hint.wall_pick.face_chain": "Wall by line: pick a line to take its chain · face on the line · F axis · Tab one line",
+ "wall_pick.st.start": "Pick a drawing line. F: axis or face, Tab: connected chain",
+ "wall_pick.st.no_lines": "No visible drawing lines on this level",
+ "wall_pick.st.miss": "No drawing line here",
+ "wall_pick.st.on_wall": "This line is already under wall {id}",
+ "wall_pick.st.tight": "The face offset does not fit: a segment of the chain is shorter than the wall thickness"
+}

@@ -1,0 +1,8 @@
+{
+ "drafts.drafts.head": "Åbne editorer indeholder redigeringer, der ikke er i projektet endnu:",
+ "drafts.draft.family": "Familie „{name}“",
+ "drafts.draft.line": "Linjebibliotek: {name}",
+ "drafts.draft.styles": "Linjetyper for visningsområde",
+ "drafts.btn.save_all": "Gem alle",
+ "drafts.drafts.refused": "Et udkast kunne ikke gemmes. Intet blev lukket; editoren med udkastet er åben."
+}

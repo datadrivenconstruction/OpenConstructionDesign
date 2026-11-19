@@ -1,0 +1,33 @@
+{
+ "cmd.help.licenses": "Açık kaynak lisansları",
+ "cmd.help.licenses.desc": "Bu derlemede kullanılan açık kaynak kütüphaneleri ve lisanslarını listeler.",
+ "about.product": "DDC Editor",
+ "about.version": "Sürüm",
+ "about.build": "Derleme",
+ "about.schema": "Model şeması",
+ "about.system": "Sistem",
+ "about.gpu": "Grafik adaptörü",
+ "about.language": "Dil",
+ "about.copy": "Sürüm bilgisini kopyala",
+ "about.copy_desc": "Hata bildirimi için sürüm, derleme, sistem ve grafik adaptörü. Dosya yolu yok.",
+ "about.copied": "Sürüm bilgisi kopyalandı",
+ "about.licenses": "Açık kaynak lisansları",
+ "about.licenses_desc": "Bu derlemede kullanılan kütüphaneler ve lisansları",
+ "about.licenses.open": "Görüntüle",
+ "about.licenses.title": "Açık kaynak lisansları",
+ "about.licenses.note": "DDC Editor aşağıdaki kütüphaneleri içerir. Her biri kendi lisansı ve telif hakkı bildirimi altında kalır. Tam lisans metinleri: uygulamanın yanındaki THIRD_PARTY_LICENSES.txt dosyasında.",
+ "about.licenses.full": "Tam lisans metinleri",
+ "about.licenses.list": "Bileşen listesi",
+ "about.licenses.close": "Kapat",
+ "about.licenses.col_name": "Bileşen",
+ "about.licenses.col_license": "Lisans",
+ "about.licenses.count": {
+  "one": "# bileşen",
+  "other": "# bileşen"
+ },
+ "about.licenses.count_of": "{shown} / {total} bileşen",
+ "about.licenses.search_hint": "Ada veya lisansa göre ara…",
+ "about.licenses.search_clear": "Aramayı temizle",
+ "about.licenses.none": "Bulunamadı",
+ "about.licenses.none_hint": "Kütüphane adının bir parçasını veya MIT gibi bir lisansı deneyin."
+}

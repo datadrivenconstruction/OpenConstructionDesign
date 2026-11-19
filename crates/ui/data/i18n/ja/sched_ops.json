@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "値は 0 より大きくする必要があります",
+ "sched_ops.not_number": "数値ではありません",
+ "sched_ops.no_host": "ホストの壁がありません",
+ "sched_ops.wall_length": "この壁の長さはそのように設定できません",
+ "sched_ops.no_wall": "そのような壁はありません",
+ "sched_ops.no_opening": "そのような開口部はありません",
+ "sched_ops.no_curtain": "そのようなカーテンウォールはありません",
+ "sched_ops.no_panel": "そのようなパネルはありません",
+ "sched_ops.no_slab": "そのようなスラブはありません",
+ "sched_ops.no_room": "そのような部屋はありません",
+ "sched_ops.slope_range": "勾配が範囲外です",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

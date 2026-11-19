@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "mitattu {value}, raja {limit}",
+ "ai_checks.check.cap": "Näytetään {shown} / {total} havaintoa. Virheet tulevat ensin: korjaa ne ja aja uudelleen.",
+ "ai_checks.check.run_again": "Aja uudelleen",
+ "ai_checks.check.goto": "Valitse ja zoomaa",
+ "ai_checks.check.never_title": "Ei vielä tarkistettu",
+ "ai_checks.check.never_hint": "Aja tarkistukset, niin havainnot näkyvät tässä.",
+ "ai_checks.check.sec.error": "Virheet",
+ "ai_checks.check.sec.warning": "Varoitukset",
+ "ai_checks.check.sec.info": "Huomautukset"
+}

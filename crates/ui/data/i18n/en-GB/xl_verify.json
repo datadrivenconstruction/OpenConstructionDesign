@@ -1,0 +1,9 @@
+{
+ "xl.msg.base_value": "read-back check failed, the old workbook is kept: {} ({}) expected '{}', read '{}'",
+ "xl.msg.base_missing": "read-back check failed, the old workbook is kept: sheet {} has no row for id {}",
+ "xl.msg.base_extra": "read-back check failed, the old workbook is kept: row {} is not in the model",
+ "xl.msg.base_refused": "read-back check failed, the old workbook is kept: {} ({}) was refused: {}",
+ "xl.msg.base_sheet": "read-back check failed, the old workbook is kept: sheet {} is missing, empty or unreadable",
+ "xl.msg.base_newer": "read-back check failed, the old workbook is kept: {} cells do not hold the model value",
+ "xl.msg.base_unreadable": "read-back check failed, the old workbook is kept: the new workbook cannot be read ({})"
+}

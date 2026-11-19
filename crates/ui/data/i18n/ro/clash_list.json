@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "Toate",
+ "clash_list.only_selected": "Doar selectate",
+ "clash_list.tolerance": "Toleranță",
+ "clash_list.gap": "Interval",
+ "clash_list.export": "Exportă",
+ "clash_list.col.volume": "Volum",
+ "clash_list.fix.up": "Mută în sus",
+ "clash_list.fix.down": "Mută în jos",
+ "clash_list.fix.sleeve": "Manșon",
+ "clash_list.apply_fix": "Aplică remedierea",
+ "clash_list.err.tol": "Toleranță: introdu o lungime (0 sau mai mult), de ex. 50 sau 2 in",
+ "clash_list.sleeve_no_host": "Manșonul are nevoie de un perete sau de o placă în pereche",
+ "clash_list.err.gap": "Interval: introdu o lungime (0 sau mai mult), de ex. 50 sau 2 in"
+}

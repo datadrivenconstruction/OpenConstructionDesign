@@ -1,0 +1,8 @@
+{
+ "ai_sent.summary": "本请求中的项目数据：{messages} 条消息，{tools} 个工具结果，{images} 张图像",
+ "ai_sent.copy": "复制",
+ "ai_sent.filter": "在已发送的请求中查找",
+ "ai_sent.no_match": "没有匹配的请求。",
+ "ai_sent.instructions": "指令和工具",
+ "ai_sent.local_note": "仅保存在本计算机上，仅限本次会话。密钥和密码永不显示。"
+}

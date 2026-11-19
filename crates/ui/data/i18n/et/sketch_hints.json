@@ -1,0 +1,15 @@
+{
+ "sketch_hints.sk_start": "Joonista suletud kontuur: klõpsa punkte, siis Enter või Lõpeta loomiseks",
+ "sketch_hints.sk_finish": "Lõpeta",
+ "sketch_hints.sk_cancel": "Tühista",
+ "sketch_hints.import_warn": "mudelikontrolli hoiatusi: {n} (esimene: {first})",
+ "sketch_hints.ai.offline.schedule": "Ava loend",
+ "sketch_hints.ai.offline.check": "Kontrolli reeglite vastu",
+ "sketch_hints.ai.offline.warnings": "Näita hoiatusi",
+ "cmd.file.publish_pdf": "Avalda lehed PDF-ina…",
+ "cmd.file.publish_pdf.desc": "Avaldab valitud lehed PDF-ina. Sama mis Ekspordi lehed PDF/SVG-na.",
+ "sketch_hints.verify_none": "Valikus pole AI assistendi määratud midagi kontrollimiseks",
+ "sketch_hints.contours_none": "Mudelis pole topoplatsi: kontuurid ilmuvad, kui see luuakse",
+ "sketch_hints.contours_off": "Topoplatsi kontuurid on peidetud",
+ "sketch_hints.contours_on": "Topoplatsi kontuurid on näidatud"
+}

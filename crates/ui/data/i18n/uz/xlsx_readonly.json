@@ -1,0 +1,6 @@
+{
+ "xlsx_readonly.read_only": "Ish kitobi faqat o'qish uchun (fayl xususiyati yoki papka ruxsati). Nusxaga eksport qiling yoki fayl xususiyatlarida Faqat o'qish ni olib tashlab, qayta urinib ko'ring.",
+ "xlsx_readonly.export_copy": "Nusxaga eksport qilish",
+ "xlsx_readonly.no_copy_name": "Ish kitobi yonida nusxa uchun bo'sh nom yo'q.",
+ "xlsx_readonly.copied": "Ish kitobi o'z holicha qoldirildi. Yonida yangilangan nusxa yozildi va hozir bog'langan: {path}"
+}

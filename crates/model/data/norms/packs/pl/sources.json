@@ -1,0 +1,22 @@
+{
+ "sources": [
+  {
+   "id": "wt2002",
+   "title": "Regulation on technical conditions of buildings (WT 2002; repealed 2026-09-21, applies by declaration until 2028-03-20, no successor in force)",
+   "licence": "public-law",
+   "verified": "2026-11-14",
+   "publisher": "Minister of Development",
+   "edition": "consolidated text Dz.U. 2022 poz. 1225",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2022/1225"
+  },
+  {
+   "id": "wt2002-consolidated-2022",
+   "title": "Regulation on technical conditions for buildings, consolidated text (Dz.U. 2022 poz. 1225)",
+   "publisher": "Sejm / ISAP",
+   "url": "https://api.sejm.gov.pl/eli/acts/DU/2022/1225/text.pdf",
+   "edition": "2022-06-09",
+   "licence": "public-law",
+   "verified": "2026-11-14"
+  }
+ ]
+}

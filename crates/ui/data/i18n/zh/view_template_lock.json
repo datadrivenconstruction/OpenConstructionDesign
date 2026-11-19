@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "由模板 {name} 控制",
+ "view_template.edit_template": "编辑模板",
+ "view_template.locked_tip": "由视图模板 {name} 设置。请在模板中修改。",
+ "view_template.no_filters": "此视图中没有过滤器"
+}

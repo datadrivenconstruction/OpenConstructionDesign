@@ -1,0 +1,13 @@
+{
+ "type_change.affects_walls": {
+  "one": "nakaaapekto sa # dingding",
+  "other": "nakaaapekto sa # dingding"
+ },
+ "type_change.affects": {
+  "one": "nakaaapekto sa # elemento",
+  "other": "nakaaapekto sa # elemento"
+ },
+ "type_change.tick_types": "Ilapat ang mga pagbabago sa uri sa lahat ng {n} elemento ng mga uring ito",
+ "type_change.tick_types_first": "Lagyan muna ng tsek ang pagbabago sa uri: kukunin ito ng bawat elemento ng uri",
+ "xl.msg.types_first": "kumpirmahin muna ang mga pagbabago sa uri"
+}

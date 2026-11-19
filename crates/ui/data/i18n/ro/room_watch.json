@@ -1,0 +1,4 @@
+{
+ "room_watch.room.dup": "Încăperea {room} se află în regiunea încăperii {other}: suprafața și volumul se numără doar în încăperea {other}",
+ "ai.issue.room_dup": "Încăperea se află în regiunea încăperii {0}: suprafața ei este numărată acolo"
+}

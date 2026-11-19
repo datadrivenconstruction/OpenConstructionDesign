@@ -1,0 +1,9 @@
+{
+ "elem.deleted": "Elemente gelöscht: {n}",
+ "elem.deleted_kept": "Elemente gelöscht: {n}; belassen: {k} (Paneele und nicht löschbare Elemente)",
+ "elem.not_deleted": "nicht gelöscht: {e}",
+ "elem.not_deletable": "Dieses Element kann nicht gelöscht werden",
+ "elem.panel": "Vorhangfassadenpaneel",
+ "elem.panel_refused": "Ein Paneel ist Teil seiner Vorhangfassade und kann nicht einzeln gelöscht werden. Wählen Sie die gesamte Wand zum Löschen aus.",
+ "elem.reload_failed": "Gelöscht, aber die Ansicht wurde nicht aktualisiert: {e}"
+}

@@ -1,0 +1,26 @@
+id = "S09_ifc_roundtrip"
+tier = "smoke"
+group = ""
+title = "IFC export and reimport counts"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "Three-storey school with 12 classrooms, a sports hall, a canteen, staff room and toilets on every floor, flat roof. Build it."
+
+[[oracle.count]]
+spec = "level"
+min = 3.0
+
+[[oracle.count]]
+spec = "room"
+min = 20.0
+
+[[oracle.count]]
+spec = "level"
+min = 3.0
+max = 4.0
+
+[[oracle.count]]
+spec = "room:class"
+min = 12.0

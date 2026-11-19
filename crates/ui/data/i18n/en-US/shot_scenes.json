@@ -1,0 +1,9 @@
+{
+ "shot_scenes.site": "Site",
+ "shot_scenes.lawn": "Lawn",
+ "shot_scenes.pad": "Pad",
+ "shot_scenes.block": "Block",
+ "shot_scenes.void": "Void",
+ "shot_scenes.tower": "Tower",
+ "shot_scenes.wall_void": "Wall void"
+}

@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "Ve frontě za běžící úlohou: {n}",
+ "import_queue.queue_full": "Fronta je plná, {n} souborů nebylo přidáno",
+ "import_queue.changed": "{name} byl aktualizován po vytvoření tohoto projektu. Otevřen předchozí projekt.",
+ "import_queue.import_again": "Importovat znovu",
+ "import_queue.kept": "Dokončený import je zachován",
+ "import_queue.open_it": "Otevřít",
+ "import_queue.sum.head": "import: upravitelných {editable} (stěny {walls}, otvory {open}, desky {slabs}, místnosti {rooms}, ostatní {other}), {meshes} jako síť",
+ "import_queue.sum.unchanged": ", beze změny {n}",
+ "import_queue.sum.updated": ", aktualizováno {n}",
+ "import_queue.sum.missing": ", ve zdroji chybí {n} (ponecháno)",
+ "import_queue.sum.skipped": ", přeskočeno {n}",
+ "import_queue.sum.warnings": ", upozornění {n}",
+ "import_queue.import_failed": "import selhal: {e}"
+}

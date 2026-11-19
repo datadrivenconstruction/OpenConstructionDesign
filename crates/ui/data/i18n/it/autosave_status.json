@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "Salvataggio automatico non riuscito, le ultime modifiche non sono protette. {why}",
+ "autosave_status.autosave_open": "Impostazioni del salvataggio automatico",
+ "autosave_status.autosave_recovered": "Il salvataggio automatico funziona di nuovo.",
+ "autosave_status.autosave_reason": "Motivo: {why}"
+}

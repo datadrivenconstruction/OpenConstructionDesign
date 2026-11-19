@@ -1,0 +1,22 @@
+{
+ "ai.audit.tokens": "{n} tokenów",
+ "ai.audit.filter.all": "Wszystkie",
+ "ai.audit.filter.ai": "AI",
+ "ai.audit.filter.me": "Ja",
+ "ai.audit.search": "Szukaj zmian",
+ "ai.audit.search.clear": "Wyczyść wyszukiwanie",
+ "ai.audit.show_all": "Pokaż wszystkie",
+ "ai.audit.empty.hint": "Zmiany przygotowane lub zastosowane przez model albo agenta pojawią się tutaj, każda z możliwością cofnięcia.",
+ "ai.audit.no_match": "Żadne zmiany nie pasują do filtra.",
+ "ai.audit.show.tip": "Zaznacz i pokaż elementy, których dotyczyła ta zmiana",
+ "ai.audit.revert.ask": "Cofnąć „{what}”? {change}.",
+ "ai.audit.revert.elements": {
+  "one": "# zmiana elementu",
+  "other": "# zmian elementów"
+ },
+ "ai.audit.revert.keeps": "Nowsze zmiany zostają. Cofnięcie to jeden krok cofania.",
+ "ai.audit.cancel": "Anuluj",
+ "ai.audit.toast.reverted": "Wycofano: {what}",
+ "ai.audit.toast.undone": "Cofnięto: {what}",
+ "ai.audit.redo": "Ponów"
+}

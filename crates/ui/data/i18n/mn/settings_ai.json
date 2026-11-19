@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "Холболт",
+ "settings.ai_status_desc": "AI туслахын ашигладаг загвар; түлхүүрүүд найдвартай санд хадгалагдана",
+ "settings.ai_not_connected": "Холбогдоогүй",
+ "settings.ai_connect": "Холболтын тохиргоо",
+ "settings.ai_connect_desc": "Таны өөрийн загварын хаяг, модель, түлхүүр — үүлэн эсвэл локал",
+ "settings.ai_connect_btn": "Холболтын тохиргоо…",
+ "settings.ai_panel": "AI туслахын самбар",
+ "settings.ai_panel_desc": "Үгээр асуу, планыг шалга, дараа нь хэрэглэ",
+ "settings.ai_open_panel": "AI самбарыг нээх"
+}

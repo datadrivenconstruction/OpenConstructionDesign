@@ -1,0 +1,11 @@
+{
+ "materials.mat.name_empty": "Voer een materiaalnaam in",
+ "materials.mat.empty_title": "Nog geen materialen",
+ "materials.mat.empty_hint": "Typ hieronder een naam en druk op Toevoegen",
+ "materials.mat.nothing_hint": "Geen materiaal komt overeen met de zoekopdracht",
+ "materials.mat.clear_search": "Zoekopdracht wissen",
+ "materials.mat.replace_with": "Vervangen door",
+ "materials.mat.delete_refused": "Kan niet verwijderen: het materiaal wordt op {n} plaatsen gebruikt. Vervang het eerst.",
+ "materials.mat.delete_confirm": "Materiaal “{name}” verwijderen? U kunt dit ongedaan maken.",
+ "materials.mat.replace_confirm": "“{from}” vervangen door “{to}” in {n} elementen? “{from}” wordt verwijderd. U kunt dit ongedaan maken."
+}

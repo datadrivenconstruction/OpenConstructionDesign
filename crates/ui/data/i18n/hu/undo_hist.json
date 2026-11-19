@@ -1,0 +1,8 @@
+{
+ "undo.undone": "Visszavonva: {what}",
+ "undo.redone": "Újra végrehajtva: {what}",
+ "undo.action.edit.redo": "Újra",
+ "undo.action.edit.undo": "Visszavonás",
+ "hdr.unsaved": "Nem mentett módosítások",
+ "hdr.file_menu": "Fájl menü"
+}

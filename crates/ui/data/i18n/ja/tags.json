@@ -1,0 +1,13 @@
+{
+ "tags.gone": "タグはもう存在しません",
+ "tags.readonly_wall": "壁のタグはタイプを表示するもので、ここでは編集できません。壁タイプを変更してください",
+ "tags.readonly_comp": "コンポーネントのタグはファミリを表示するもので、ここでは編集できません。タイプを変更してください",
+ "tags.locked": "要素はロックされています。タグを編集するにはロックを解除してください",
+ "tags.done": "タグの値を書き込みました",
+ "tags.failed": "タグを変更できませんでした: {e}",
+ "tags.dup_door": "{mark} は他に {n} 個のドアにもあります",
+ "tags.dup_window": "{mark} は他に {n} 個の窓にもあります",
+ "tags.dup_room": "{mark} は他に {n} 個の部屋にもあります",
+ "tags.hint_mark": "符号",
+ "tags.hint_name": "部屋名"
+}

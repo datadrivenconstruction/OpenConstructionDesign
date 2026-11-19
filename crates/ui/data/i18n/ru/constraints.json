@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "Держит длину стены при каждой правке",
+ "constraints.con.tip.lock_dist": "Держит расстояние между двумя стенами при каждой правке",
+ "constraints.con.tip.equal": "Держит равными шаги между выбранными стенами",
+ "constraints.con.tip.align": "Держит обе стены на одной прямой",
+ "constraints.con.tip.parallel": "Держит стены параллельными",
+ "constraints.con.tip.perp": "Держит стены под прямым углом",
+ "constraints.con.tip.align_grid": "Держит стену на ближайшей оси сетки",
+ "constraints.con.tip.lock_dist_grid": "Держит расстояние от стены до ближайшей оси сетки",
+ "constraints.con.tip.level_gap": "Держит расстояние между уровнями",
+ "constraints.con.tip.top_to_level": "Держит верх стены на уровне выше"
+}

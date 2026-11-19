@@ -1,0 +1,4 @@
+{
+ "family_load.refused": "Hindi ma-load ang family na “{name}”: {msg}. Walang na-load sa proyekto; napanatili ang iyong mga edit.",
+ "family_load.loaded_all": "{n} family ang na-load nang sabay-sabay: {names}"
+}

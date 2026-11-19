@@ -1,0 +1,10 @@
+{
+ "ai.size.count": "約 {n} / {max} トークン",
+ "ai.size.block": "このモデルには長すぎます: 約 {n} トークン、返答の余地を残して収まるのは {max} まで。短くするか分割してください",
+ "ai.size.trim": "収まるように切り詰める",
+ "ai.size.trim_tip": "メッセージの末尾を切り、収まるようにします。クリックするまで何も切り取られません。",
+ "ai.size.drop_view": "ビューを除外",
+ "ai.size.drop_level": "レベルを除外",
+ "ai.size.drop_selection": "選択を除外",
+ "ai.size.sep": ","
+}

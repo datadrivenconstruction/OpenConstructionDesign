@@ -1,0 +1,6 @@
+{
+ "sched_import.no_key": "Questa cartella non ha un registro di esportazione (esportazione più vecchia): le celle modificate nel modello dopo quell'esportazione possono essere sovrascritte. Verifica le celle modificate prima di Applica.",
+ "sched_import.n_kept": "Modificato nel modello dopo l'esportazione, mantenuto: {n}",
+ "sched_import.n_conflict": "Modificato sia nella cartella sia nel modello, non applicato: {n}",
+ "sched_import.why_conflict": "modificato nel modello dopo l'esportazione (ora {model}), non applicato"
+}

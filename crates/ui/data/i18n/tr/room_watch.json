@@ -1,0 +1,4 @@
+{
+ "room_watch.room.dup": "Oda {room}, oda {other} bölgesinde: alan ve hacim yalnızca oda {other} içinde sayılır",
+ "ai.issue.room_dup": "Oda {0} odasının bölgesinde: alanı orada sayılıyor"
+}

@@ -1,0 +1,9 @@
+{
+ "cmd.mass.timeline_family": "Storia in famiglia",
+ "cmd.mass.timeline_family.desc": "Crea una famiglia di componenti dalla storia di costruzione della forma selezionata. I parametri della storia diventano parametri della famiglia.",
+ "mass_family.done": "Famiglia {name} creata con {n} parametri",
+ "mass_family.refused": "Famiglia non creata: {e}",
+ "mass_family.no_mass": "Seleziona prima una forma parametrica",
+ "mass_family.add_modifier": "Aggiungi modificatore",
+ "mass_family.needs_faces": "Servono facce selezionate: usa lo strumento nella scheda Volumetrie"
+}

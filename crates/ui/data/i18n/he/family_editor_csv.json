@@ -1,0 +1,11 @@
+{
+ "fe.csv.apply": "החל ייבוא",
+ "fe.csv.cancel": "בטל תצוגה מקדימה",
+ "fe.csv.nothing": "אין מה לשנות: הקטלוג תואם לסוגים הנוכחיים",
+ "fe.csv.preview": "תצוגה מקדימה של ייבוא: {added} חדשים, {changed} שונו, {same} סוגים ללא שינוי; {values} ערכים משתנים",
+ "fe.csv.preview_hint": "תאים ריקים ועמודות חסרות משאירים את הערכים הנוכחיים. דבר לא משתנה עד שתחיל.",
+ "fe.csv.skipped": "לא הוחל, הערך נשמר: {msg}",
+ "fe.csv.type_added": "סוג חדש {name}",
+ "fe.csv.type_changed": "סוג {name}",
+ "fe.csv.value": "  {param}: {old} → {new}"
+}

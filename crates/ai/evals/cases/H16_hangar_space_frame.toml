@@ -1,0 +1,63 @@
+id = "H16_hangar_space_frame"
+tier = "hard"
+group = "Long-span buildings"
+title = "Aircraft hangar, 80 m clear span"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "Aircraft maintenance hangar, 100 by 80 metres inside with no columns in the middle, 20 m clear height. The roof is a space frame or deep trusses spanning the 80 m, big sliding doors along one long side, an overhead crane runway, a small office and workshop block along the back wall."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "truss+gridshell_bar+beam+brace"
+min = 300.0
+
+[[oracle.count]]
+spec = "roof"
+min = 1.0
+
+[[oracle.count]]
+spec = "comp:crane+beam"
+min = 2.0
+
+[[oracle.count]]
+spec = "opening+comp:door|gate"
+min = 1.0
+
+[[oracle.count]]
+spec = "room"
+min = 2.0
+
+[[oracle.geom]]
+kind = "height"
+min = 18.0
+max = 40.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1
+"IfcColumn" = 1
+"IfcBeam" = 1
+"IfcRoof" = 1
+
+[[oracle.geom]]
+kind = "free_ends"
+max = 0.0
+
+[oracle.checks]
+new_max = 0
+
+[[oracle.geom]]
+kind = "clear_span"
+target = 80.0
+tol = 0.1
+
+[[oracle.geom]]
+kind = "supports_connected"
+min = 4.0

@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "Massaa ei voi kääntää tai peilata: sen muotohistoriassa ei ole kierrettyä vaihetta. Siirrä tai kopioi se, tai piirrä uudelleen uuteen suuntaan.",
+ "sched_cats.col.name": "Nimi",
+ "sched_cats.col.material": "Materiaali",
+ "sched_cats.col.void": "Tyhjä tila",
+ "sched_cats.col.inplace": "Paikallavalettu",
+ "sched_cats.col.volume": "Nettotilavuus",
+ "sched_cats.col.area": "Pinta-ala",
+ "sched_cats.col.floor_area": "Lattiapinta-ala",
+ "sched_cats.col.thickness": "Paksuus",
+ "sched_cats.col.points": "Pisteet",
+ "elem.toposolid.points": "Mittauspisteet",
+ "elem.toposolid.count": "Pisteet",
+ "elem.toposolid.low": "Matalin",
+ "elem.toposolid.high": "Korkein",
+ "elem.toposolid.edit": "Muokkaa pisteitä",
+ "elem.toposolid.edit_tip": "Valitse, vedä ja aseta mittauspisteiden korkeusasema pohjapiirroksessa",
+ "elem.toposolid.pick_hint": "Napsauta pistettä pohjapiirroksessa valitaksesi sen. Napsauta uudelleen lisätäksesi tai poistaaksesi.",
+ "elem.toposolid.z": "Korkeusasema ({n})",
+ "elem.toposolid.mixed": "Valitut pisteet eroavat toisistaan; uusi arvo asettaa ne kaikki.",
+ "elem.toposolid.edit_help": "Vedä pistettä siirtääksesi sitä. Kirjoita arvo ja paina Enter asettaaksesi korkeusaseman. Askelpalautin poistaa valitut pisteet, Esc poistuu.",
+ "elem.toposolid.done": "Valmis"
+}

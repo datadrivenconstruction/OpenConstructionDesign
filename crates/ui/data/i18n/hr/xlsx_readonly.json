@@ -1,0 +1,6 @@
+{
+ "xlsx_readonly.read_only": "Radna knjiga je samo za čitanje (svojstvo datoteke ili dozvola mape). Izvezite u kopiju ili uklonite oznaku samo za čitanje u svojstvima datoteke i pokušajte ponovno.",
+ "xlsx_readonly.export_copy": "Izvezi u kopiju",
+ "xlsx_readonly.no_copy_name": "Nema slobodnog naziva za kopiju uz radnu knjigu.",
+ "xlsx_readonly.copied": "Radna knjiga je ostavljena kakva jest. Osvježena kopija zapisana je uz nju i sada je povezana: {path}"
+}

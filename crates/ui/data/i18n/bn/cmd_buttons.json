@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}, লেভেলে",
+ "cmd_buttons.purge.undo": "মুছে ফেলা একটি Undo ধাপ।",
+ "cmd_buttons.unpin.none": "নির্বাচিত কিছু পিন করা নেই",
+ "cmd_buttons.change_type.none": "আগে দেয়াল নির্বাচন করুন: একটি ধাপে তাদের টাইপ বদলাবে",
+ "cmd_buttons.units.metric": "একক: মেট্রিক",
+ "cmd_buttons.units.imperial": "একক: ফুট ও ইঞ্চি",
+ "cmd_buttons.units.back": "ফিরে যান",
+ "cmd_buttons.underlay.on": "আন্ডারলে চালু: নিচের লেভেল ফিকে করে দেখানো হচ্ছে",
+ "cmd_buttons.underlay.off": "আন্ডারলে বন্ধ",
+ "cmd_buttons.underlay.none": "আন্ডারলে চালু, কিন্তু নিচের লেভেলে দেখানোর কিছু নেই",
+ "cmd_buttons.zoom_sel.no_shape": "নির্বাচনের এই ভিউতে ফ্রেম করার মতো আকৃতি নেই",
+ "cmd_buttons.close.base": "প্ল্যান ও 3D ট্যাব খোলা থাকে; বন্ধ করতে একটি সেকশন, শিট বা ড্রাফটিং ভিউ খুলুন",
+ "tool.equipment": "সরঞ্জাম",
+ "hint.equipment.place": "সরঞ্জাম: অবস্থান বেছে নিন · Esc — বাতিল",
+ "cmd_buttons.table.opened": "মডেলের পাশে টেবিল খোলা হয়েছে",
+ "cmd_buttons.circuits.tip": "এই মডেলের বৈদ্যুতিক সার্কিটের তালিকা খুলুন"
+}

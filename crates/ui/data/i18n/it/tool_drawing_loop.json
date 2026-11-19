@@ -1,0 +1,4 @@
+{
+ "tool.err.drawing_open": "Le linee del disegno attorno a questo punto non si chiudono in un contorno",
+ "tool.err.drawing_crossing": "Il contorno del disegno attorno a questo punto si interseca da solo"
+}

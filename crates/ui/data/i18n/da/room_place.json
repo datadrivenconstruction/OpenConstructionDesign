@@ -1,0 +1,8 @@
+{
+ "cmd.arch.room_auto": "Placér rum automatisk",
+ "cmd.arch.room_auto.desc": "Placerer et rum i hver lukket afgrænsning på den aktive etage, der ikke har et. Åbne vægløkker springes over og lukkes aldrig ved gætteri. Ét fortrydelsestrin.",
+ "room_place.placed": "Rum placeret: {n}. Områder der allerede havde et rum: {m}. Åbne løkker sprunget over: {k}",
+ "room_place.all_had": "Intet placeret: alle {m} lukkede områder har allerede et rum. Åbne løkker sprunget over: {k}",
+ "room_place.none": "Intet placeret: etagen har ingen lukkede vægområder",
+ "room_place.none_open": "Intet placeret: etagen har ingen lukkede vægområder. Åbne løkker sprunget over: {k}"
+}

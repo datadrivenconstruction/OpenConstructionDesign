@@ -1,0 +1,6 @@
+{
+ "imported_prop_edit.remove": "Usuń właściwość",
+ "imported_prop_edit.remove.tip": "Usuwa właściwość z zaznaczonych elementów: {n} w jednym kroku cofnięcia; zostanie usunięta z pliku IFC przy zapisie",
+ "imported_prop_edit.done": "Usunięto {key} z elementów: {n}",
+ "imported_prop_edit.warn.reload": "Gotowe, ale widok nie został odświeżony; otwórz panel ponownie lub cofnij, jeśli wygląda źle"
+}

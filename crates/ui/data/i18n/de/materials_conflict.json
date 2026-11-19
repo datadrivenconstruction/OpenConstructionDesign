@@ -1,0 +1,5 @@
+{
+ "materials.mat.conflict": "Dieses Material wurde im Modell geändert (Rückgängig oder anderes Fenster), während die Karte Bearbeitungen hatte. Ihre Bearbeitungen bleiben erhalten.",
+ "materials.mat.keep": "Meine Bearbeitungen behalten",
+ "materials.mat.reload": "Neu laden"
+}

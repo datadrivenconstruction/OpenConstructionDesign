@@ -1,0 +1,23 @@
+{
+ "cmd.app.report": "Teata probleemist…",
+ "cmd.app.report.desc": "Kirjeldab, mis läks valesti, ja salvestab selle arvutisse paketina: sinu tekst, versiooni ja süsteemi andmed, akna pildi ning viimase vearekordi. Midagi ei saadeta.",
+ "report.title": "Teata probleemist",
+ "report.what": "Mis juhtus",
+ "report.expected": "Mida ootasid",
+ "report.steps": "Sammud probleemi kordamiseks",
+ "report.opt.shot": "Lisa akna pilt",
+ "report.opt.model": "Lisa mudeli koopia",
+ "report.opt.model.note": "Vaikimisi väljas. Koopia sisaldab sinu projektiandmeid ilma AI päevikuta.",
+ "report.opt.paths": "Säilita kasutajanimed failiteedes",
+ "report.local": "Pakett salvestatakse ainult sellesse arvutisse. Midagi ei saadeta automaatselt.",
+ "report.blocked": "Kirjelda kõigepealt, mis juhtus.",
+ "report.save": "Salvesta pakett",
+ "report.copy": "Kopeeri tekst",
+ "report.cancel": "Tühista",
+ "report.copied": "Aruande tekst kopeeritud.",
+ "report.saved": "Pakett salvestatud: {path}",
+ "report.failed": "Paketti ei õnnestunud salvestada: {err}",
+ "report.model.fail": "Mudeli koopiat ei õnnestunud teha, midagi ei salvestatud: {err}",
+ "report.crash.notice": "Eelmine seanss lõppes krahhiga.",
+ "report.crash.action": "Teata probleemist"
+}

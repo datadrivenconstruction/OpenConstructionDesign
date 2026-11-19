@@ -1,0 +1,49 @@
+{
+ "sources": [
+  {
+   "id": "kr-bld-decree",
+   "title": "Enforcement Decree of the Building Act (bilingual, amended to 2024-12)",
+   "publisher": "Korea Legislation Research Institute",
+   "url": "https://elaw.klri.re.kr/kor_service/lawViewMultiContent.do?hseq=69117",
+   "edition": "through Presidential Decree 35082 (2024-12-17)",
+   "licence": "public-law",
+   "verified": "2026-11-14"
+  },
+  {
+   "id": "kr-rules",
+   "title": "Ministerial rules on evacuation and fire-protection structure of buildings; housing construction standards; accessibility act rules",
+   "publisher": "Ministry of Land, Infrastructure and Transport",
+   "url": "https://www.law.go.kr",
+   "edition": "unknown",
+   "licence": "public-law",
+   "verified": null
+  },
+  {
+   "id": "kr-evac-rule",
+   "title": "Ministerial rule on evacuation and fire-protection structure of buildings",
+   "publisher": "Ministry of Land, Infrastructure and Transport (law.go.kr)",
+   "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsNm=%EA%B1%B4%EC%B6%95%EB%AC%BC%EC%9D%98%20%ED%94%BC%EB%82%9C%E3%86%8D%EB%B0%A9%ED%99%94%EA%B5%AC%EC%A1%B0%20%EB%93%B1%EC%9D%98%20%EA%B8%B0%EC%A4%80%EC%97%90%20%EA%B4%80%ED%95%9C%20%EA%B7%9C%EC%B9%99&joNo=001400000&mode=11",
+   "edition": "as shown on law.go.kr, read 2026-11-14",
+   "licence": "public-law",
+   "verified": "2026-11-14"
+  },
+  {
+   "id": "kr-housing-std",
+   "title": "Regulation on housing construction standards",
+   "publisher": "Ministry of Land, Infrastructure and Transport (law.go.kr)",
+   "url": "https://www.law.go.kr/LSW/lsLinkProc.do?lsNm=%EC%A3%BC%ED%83%9D%EA%B1%B4%EC%84%A4%EA%B8%B0%EC%A4%80%20%EB%93%B1%EC%97%90%20%EA%B4%80%ED%95%9C%20%EA%B7%9C%EC%A0%95&joNo=001600000&mode=11",
+   "edition": "as shown on law.go.kr, read 2026-11-14",
+   "licence": "public-law",
+   "verified": "2026-11-14"
+  },
+  {
+   "id": "kr-access-rule",
+   "title": "Enforcement rule of the act on promoting convenience for disabled, elderly and pregnant persons, annex 1 (detailed standards)",
+   "publisher": "Ministry of Health and Welfare (law.go.kr)",
+   "url": "https://www.law.go.kr/LSW//flDownload.do?gubun=&flSeq=135226913&bylClsCd=110201",
+   "edition": "annex amended 2023-12-11",
+   "licence": "public-law",
+   "verified": "2026-11-14"
+  }
+ ]
+}

@@ -1,0 +1,6 @@
+{
+ "cmd.ui.pane.next": "Nästa panel",
+ "cmd.ui.pane.next.desc": "Flyttar tangentbordsfokus till nästa synliga panel (projektväljare, arbetsyta, egenskaper, chatt).",
+ "cmd.ui.pane.prev": "Föregående panel",
+ "cmd.ui.pane.prev.desc": "Flyttar tangentbordsfokus till föregående synliga panel."
+}

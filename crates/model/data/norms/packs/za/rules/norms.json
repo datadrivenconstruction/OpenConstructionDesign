@@ -1,0 +1,382 @@
+{
+ "rules": [
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.2
+   },
+   "unit": "m",
+   "value": 0.2,
+   "text": {
+    "en": "Common stair riser at most 0.2 m",
+    "ru": "Подъём ступени общей лестницы не более 0.2 м"
+   },
+   "source": {
+    "doc": "za-sans10400-m",
+    "clause": "cl. 4.2.5",
+    "url": "https://archive.org/stream/za.sans.10400.m.2011/za.sans.10400.m.2011_djvu.txt",
+    "edition": "Edition 3, 2011",
+    "accessed": "2026-11-14",
+    "paraphrase": "Rise of any step at most 200 mm (170 mm where Part S accessibility applies)."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "za.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.25
+   },
+   "unit": "m",
+   "value": 0.25,
+   "text": {
+    "en": "Common stair tread at least 0.25 m",
+    "ru": "Проступь общей лестницы не менее 0.25 м"
+   },
+   "source": {
+    "doc": "za-sans10400-m",
+    "clause": "cl. 4.2.6",
+    "url": "https://archive.org/stream/za.sans.10400.m.2011/za.sans.10400.m.2011_djvu.txt",
+    "edition": "Edition 3, 2011",
+    "accessed": "2026-11-14",
+    "paraphrase": "Going of a tread at least 250 mm; going plus twice the rise between 570 and 650 mm."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "za.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 1.0
+   },
+   "unit": "m",
+   "value": 1.0,
+   "text": {
+    "en": "Common stair flight width at least 1.0 m",
+    "ru": "Ширина марша общей лестницы не менее 1.0 м"
+   },
+   "source": {
+    "doc": "za-sans10400-t",
+    "clause": "cl. 4.23.7 and Table 10, row <100 persons",
+    "url": "https://archive.org/stream/za.sans.10400.t.2011/za.sans.10400.t.2011_djvu.txt",
+    "edition": "Edition 3, 2011",
+    "accessed": "2026-11-14",
+    "paraphrase": "Escape routes for up to 100 persons need 1000 mm width, rising with occupant numbers; Part M absolute stair minimum is 750 mm, Part S 900 mm."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "za.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 0.75
+   },
+   "unit": "m",
+   "value": 0.75,
+   "text": {
+    "en": "Stair flight width in a house at least 0.75 m",
+    "ru": "Ширина марша в доме не менее 0.75 м"
+   },
+   "source": {
+    "doc": "za-sans10400-m",
+    "clause": "cl. 4.2.1",
+    "url": "https://archive.org/stream/za.sans.10400.m.2011/za.sans.10400.m.2011_djvu.txt",
+    "edition": "Edition 3, 2011",
+    "accessed": "2026-11-14",
+    "paraphrase": "General stairway width at least 750 mm between enclosing walls or balustrades."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "za.house.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.4
+   },
+   "unit": "m",
+   "value": 2.4,
+   "text": {
+    "en": "Clear height of habitable rooms at least 2.4 m",
+    "ru": "Высота жилых помещений не менее 2.4 м"
+   },
+   "source": {
+    "doc": "za-sans10400-c",
+    "clause": "cl. 4.3.1, Table 2",
+    "url": "https://archive.org/stream/za.sans.10400.c.2010/za.sans.10400.c.2010_djvu.txt",
+    "edition": "Edition 3, 2010",
+    "accessed": "2026-11-14",
+    "paraphrase": "Bedrooms need 2.4 m over at least 6 m2; other dwelling habitable rooms 2.4 m over 70 percent of floor and 2.1 m elsewhere."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "za.res.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "room_kind": [
+     "office",
+     "meeting"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.4
+   },
+   "unit": "m",
+   "value": 2.4,
+   "text": {
+    "en": "Clear height of work rooms at least 2.4 m",
+    "ru": "Высота рабочих помещений не менее 2.4 м"
+   },
+   "source": {
+    "doc": "za-sans10400-c",
+    "clause": "cl. 4.3.1, Table 2",
+    "url": "https://archive.org/stream/za.sans.10400.c.2010/za.sans.10400.c.2010_djvu.txt",
+    "edition": "Edition 3, 2010",
+    "accessed": "2026-11-14",
+    "paraphrase": "Habitable rooms not otherwise listed, which covers office rooms, need 2.4 m; passages 2.1 m."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "za.off.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ],
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "width",
+    "min": 0.9
+   },
+   "unit": "m",
+   "value": 0.9,
+   "text": {
+    "en": "Accessible-route corridor clear width at least 0.9 m",
+    "ru": "Ширина коридора на доступном маршруте не менее 0.9 м"
+   },
+   "source": {
+    "doc": "za-sans10400-s",
+    "clause": "cl. 4.4.1.4",
+    "url": "https://archive.org/stream/za.sans.10400.s.2011/za.sans.10400.s.2011_djvu.txt",
+    "edition": "Edition 3, 2011",
+    "accessed": "2026-11-14",
+    "paraphrase": "Clear walking width of an accessible route at least 900 mm; passing spaces 1.5 x 1.5 m at 5 m intervals where narrower than 1.5 m."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "za.acc.corr"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 45,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 45,
+   "text": {
+    "en": "Travel distance to an exit or stair at most 45 m (residential)",
+    "ru": "Путь до выхода или лестницы не более 45 м (жилые)"
+   },
+   "source": {
+    "doc": "za-sans10400-t",
+    "clause": "cl. 4.16.2-4.16.4",
+    "url": "https://archive.org/stream/za.sans.10400.t.2011/za.sans.10400.t.2011_djvu.txt",
+    "edition": "Edition 3, 2011",
+    "accessed": "2026-11-14",
+    "paraphrase": "Beyond 45 m to the nearest escape door a second escape route with emergency route is required; emergency routes allow 45 m, or 60 m with life-safety sprinklers."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "za.egr.res"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 45,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 45,
+   "text": {
+    "en": "Travel distance to an exit or stair at most 45 m (office)",
+    "ru": "Путь до выхода или лестницы не более 45 м (офисы)"
+   },
+   "source": {
+    "doc": "za-sans10400-t",
+    "clause": "cl. 4.16.2-4.16.4",
+    "url": "https://archive.org/stream/za.sans.10400.t.2011/za.sans.10400.t.2011_djvu.txt",
+    "edition": "Edition 3, 2011",
+    "accessed": "2026-11-14",
+    "paraphrase": "Same 45 m rule applies to all occupancies including offices; 60 m with life-safety sprinklers and protected walls."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "za.egr.off"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {},
+   "check": {
+    "kind": "ratio",
+    "per": "element",
+    "cat": "room",
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen"
+    ],
+    "num": "window_area",
+    "den": "area",
+    "min": 0.1
+   },
+   "unit": "ratio",
+   "value": 0.1,
+   "text": {
+    "en": "Window area at least 10.0 % of the floor of a habitable room",
+    "ru": "Площадь окон не менее 10.0 % площади пола жилой комнаты"
+   },
+   "source": {
+    "doc": "za-sans10400-o",
+    "clause": "cl. 4.2.1.1.3(b)",
+    "url": "https://archive.org/stream/za.sans.10400.o.2011/za.sans.10400.o.2011_djvu.txt",
+    "edition": "Edition 3, 2011",
+    "accessed": "2026-11-14",
+    "paraphrase": "Window opening area at least a tenth of room floor area in buildings other than small category-1 F2/H3/H4 buildings (minimum 0.2 m2)."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "za.day"
+  },
+  {
+   "id": "generic.egress.distance",
+   "disabled": true
+  },
+  {
+   "id": "generic.room.daylight",
+   "disabled": true
+  },
+  {
+   "id": "za.step",
+   "disabled": true,
+   "na": true,
+   "note": "na: the stair part sets riser and tread limits separately (za.riser, za.tread); no stride formula found in SANS 10400-M:2011 (read 2026-11-15)",
+   "text": {
+    "en": "No stride formula: riser and tread are limited separately.",
+    "ru": "Нет формулы шага: подъём и проступь ограничены отдельно."
+   }
+  },
+  {
+   "id": "za.off.a",
+   "disabled": true,
+   "na": true,
+   "note": "na: the habitable-room part sizes dwelling rooms; no minimum office area per workplace in the national regulations read",
+   "text": {
+    "en": "No minimum office area per workplace.",
+    "ru": "Нет минимальной площади на рабочее место."
+   }
+  }
+ ]
+}

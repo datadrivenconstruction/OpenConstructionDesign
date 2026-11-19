@@ -1,0 +1,551 @@
+# UI command -> API tool or why it is UI-only. Columns: command, kind, tool or model call, note.
+# kind: api | view | nav | dialog | select | file | session | clipboard | gap (edits the model, no API form yet).
+ai.apply	api	ops_propose	applies AI draft as one undo step
+ai.ask	session	-	sends prompt to AI chat
+ai.audit	dialog	-	opens AI audit window
+ai.cancel	session	-	cancels running AI request
+ai.explain	session	-	asks AI to explain selection
+ai.fix	session	-	asks AI to propose a fix draft
+ai.home	session	-	opens the AI home, resolved to ai.ask
+ai.mcp_confirm	session	-	confirms external MCP client access
+ai.mcp_revoke	session	-	revokes MCP client access
+ai.mcp_settings	dialog	-	opens MCP settings
+ai.next_change	nav	-	jumps to next change in draft
+ai.panel	dialog	-	toggles AI panel
+ai.receipt_undo	session	-	undoes last AI receipt
+ai.reject	session	-	discards AI draft
+ai.settings	dialog	-	opens AI settings
+ai.show_draft	view	-	shows draft preview in scene
+ai.what_sent	dialog	-	shows data sent to model
+ann.cloud	gap	m.add_anno	revision cloud annotation
+ann.detail	gap	m.add_anno	detail region annotation
+ann.detail_line	gap	m.add_anno	detail line annotation
+ann.dim	gap	m.add_dims	linear dimension tool
+ann.dim_angular	gap	m.add_dims	angular dimension tool
+ann.dim_auto	gap	m.add_dims	auto dimensions for walls
+ann.dim_chain	gap	m.add_dims	dimension chain from walls
+ann.dim_radial	gap	m.add_dims	radial dimension tool
+ann.leader	gap	m.add_anno	leader annotation
+ann.legend	dialog	-	opens legends window; edits inside via add_legend
+ann.number	gap	m.set_mark	assigns element mark numbers
+ann.region	gap	m.add_anno	filled region annotation
+ann.spot_coord	gap	m.add_anno	spot coordinate annotation
+ann.spot_elev	gap	m.add_anno	spot elevation annotation
+ann.tag	gap	m.tag_element	tags element
+ann.tag_all	gap	m.tag_all	tags all elements by category
+ann.text	gap	m.add_anno	text note annotation
+app.ctx_tips	session	-	toggles contextual tips
+app.find	dialog	-	opens find bar
+app.help	dialog	-	opens help
+app.history	dialog	-	toggles command history panel
+app.hud	view	-	toggles HUD overlay
+app.menu	dialog	-	opens quick menu
+app.palette	dialog	-	toggles command palette
+app.recent_bar	view	-	toggles recent commands bar
+app.repeat	session	-	repeats last command (meta)
+app.report	dialog	-	opens report window
+app.tips	session	-	reopens tips card
+app.where_is	session	-	no handler; command locator
+arch.ceiling	api	create_elements:ceiling	ceiling by loop
+arch.ceiling_opening	gap	m.add_host_opening	ceiling opening by sketch
+arch.column	api	create_elements:column	column placement
+arch.component	api	create_elements:comp	component placement
+arch.curtain_wall	api	create_elements:curtain	curtain wall by line
+arch.door	api	create_elements:door	door on wall click
+arch.dormer	gap	m.add_host_opening	dormer in roof by sketch
+arch.fascia	gap	m.add_sweep	fascia sweep on roof edges
+arch.floor	api	create_elements:floor	floor slab by loop
+arch.grid	api	create_elements:grid	grid line by two points
+arch.grid_pick	api	create_elements:grid	grids from underlay lines
+arch.grid_set	api	create_grids	grid family dialog creates grids
+arch.gutter	gap	m.add_sweep	gutter sweep on roof edges
+arch.level	api	create_level	add/edit level
+arch.opening	api	create_elements:opening	void opening in wall
+arch.railing	gap	m.add_railing	railing by path
+arch.ramp	gap	m.add_ramp	ramp by path
+arch.refplane	gap	m.add_ref_plane	reference plane
+arch.roof	api	create_elements:roof	roof by loop
+arch.roof_barrel	gap	m.add_barrel_roof	barrel roof dialog
+arch.roof_edges	dialog	-	roof edge elements list/properties
+arch.roof_extrusion	gap	m.add_roof	roof by extrusion over wall
+arch.roof_gable	gap	m.apply_roof_preset	applies gable preset to roof
+arch.roof_gambrel	gap	m.apply_roof_preset	applies gambrel preset to roof
+arch.roof_hip	gap	m.apply_roof_preset	applies hip preset to roof
+arch.roof_join	gap	m.join_roof	joins roof to target roof
+arch.roof_mansard	gap	m.apply_roof_preset	applies mansard preset to roof
+arch.roof_opening	gap	m.add_host_opening	roof opening by sketch
+arch.roof_shed	gap	m.apply_roof_preset	applies shed preset to roof
+arch.roof_taper	gap	m.add_taper_on_slab	tapered insulation on slab
+arch.roof_unjoin	gap	m.unjoin_roof	unjoins roofs
+arch.room	api	create_elements:room	room by point
+arch.room_auto	api	place_rooms	places rooms in all closed loops
+arch.room_sep	gap	m.add_room_sep	room separator line
+arch.section	gap	ed.model.add_view_def	section view definition
+arch.shaft	api	create_elements:shaft	shaft by loop
+arch.skylight	gap	m.add_skylight	skylight on roof
+arch.soffit	gap	m.add_soffit	soffit under roof
+arch.solid_blend	api	ops_propose:geometry.solid	blend solid sketch
+arch.solid_extrusion	api	ops_propose:geometry.solid	extrusion solid sketch
+arch.solid_revolve	api	ops_propose:geometry.solid	revolve solid sketch
+arch.solid_sweep	api	ops_propose:geometry.solid	sweep solid sketch
+arch.solid_swept_blend	api	ops_propose:geometry.solid	swept blend solid sketch
+arch.stair	api	create_elements:stair	stair by run (straight via API)
+arch.sweep_profiles	dialog	-	sweep profile library window
+arch.void_blend	api	ops_propose:geometry.void	blend void sketch
+arch.void_extrusion	api	ops_propose:geometry.void	extrusion void sketch
+arch.void_revolve	api	ops_propose:geometry.void	revolve void sketch
+arch.void_sweep	api	ops_propose:geometry.void	sweep void sketch
+arch.void_swept_blend	api	ops_propose:geometry.void	swept blend void sketch
+arch.wall	api	create_elements:wall	wall polyline tool
+arch.wall_cornice	gap	m.add_sweep	wall cornice sweep
+arch.wall_pick	gap	ed.commit_walls	walls from underlay lines
+arch.wall_reveal	gap	m.add_sweep	wall reveal sweep
+arch.wall_room	api	create_elements:wall	four walls by rectangle
+arch.wall_sweep	gap	m.add_sweep	wall sweep
+arch.window	api	create_elements:window	window on wall click
+arch.zone	gap	m.add_zone	zone from rooms
+browser.row_delete	api	delete_elements	deletes level/view/element row
+browser.row_open	nav	-	opens level/view/tab from browser
+browser.row_rename	gap	m.update_level	renames level/view/type row
+ctx.ceiling.clean_outline	gap	m.apply_ceiling_outline_cleanup	cleans ceiling outline after preview
+ctx.floor.clean_outline	gap	m.apply_slab_outline_cleanup	cleans slab outline after preview
+ctx.floor.link_accept	gap	m.accept_lost_edges	accepts lost boundary links
+ctx.floor.link_unlink	gap	m.unlink_boundary_edges	unlinks slab boundary edges
+ctx.floor.shape	gap	m.set_slab_shape	edits slab shape
+ctx.floor.sketch	gap	sketch_mode	edits slab boundary sketch
+ctx.mep.fitting	gap	-	no handler registered
+ctx.shaft.clean_outline	gap	m.apply_shaft_outline_cleanup	cleans shaft outline after preview
+ctx.wall.attach	gap	m.attach_wall_top	attaches wall top to roof/level
+ctx.wall.detach	gap	m.detach_wall_top	detaches wall top
+ctx.wall.profile	gap	-	no handler registered
+data.check	api	run_checks	runs model checks, shows results
+data.clash	api	clash	opens clash window
+data.clash_report	dialog	-	opens clash window (report)
+data.classify	gap	-	no handler registered
+data.compare	dialog	-	alias of data.compare_version
+data.compare_version	dialog	-	opens version diff view
+data.export_gltf	file	-	exports glTF file
+data.export_stl	file	-	exports STL file
+data.export_obj	file	-	exports OBJ file with MTL
+data.export_ifc	api	export_ifc	exports IFC copy
+data.export_ifc2x3	api	deliver_project:ifc_schema=IFC2X3	exports IFC2X3 file
+data.export_ifc4	api	deliver_project:ifc_schema=IFC4	exports IFC4 file
+data.export_ifc4x3	api	deliver_project:ifc_schema=IFC4X3	exports IFC4x3 file
+data.export_pdf	file	-	prints sheets to PDF
+data.export_xlsx	api	export_schedule	exports XLSX book
+data.import_xlsx	api	update_elements	applies XLSX edits to model
+data.issue_new	api	create_issue	creates issue topic
+data.issues	dialog	-	opens issues list
+data.merge_file	gap	m.merge_apply	merges another project file
+data.mesh_convert	gap	m.convert_meshes	opens window converting meshes to elements
+data.mesh_edit	dialog	-	opens mesh edit window
+data.query	dialog	-	no handler; query panel
+data.src_conflicts	dialog	-	shows source conflicts window
+data.src_delta	file	-	exports delta xlsx
+data.src_ifc	file	-	exports IFC copy of source
+data.src_panel	dialog	-	toggles source panel
+data.src_reimport	gap	commit_plan_with	reimports source into model
+data.sync_xlsx	api	update_elements	syncs XLSX book into model
+data.table	nav	-	switches dock to table layout
+drawing.to_detail	gap	m.add_annos_batch	converts view to detail annotations
+e3d.beam	api	create_elements:beam	3D beam creation
+e3d.box	view	-	3D box tool
+e3d.column	api	create_elements:column	3D column creation
+e3d.floor	api	create_elements:floor	3D floor creation
+e3d.gizmo	view	-	toggles transform gizmo
+e3d.measure	view	-	3D measure tool
+e3d.snap	view	-	toggles 3D snaps
+e3d.wall	api	create_elements:wall	3D wall creation
+e3d.wp_face	view	-	work plane from face
+e3d.wp_level	view	-	work plane at level
+e3d.wp_pick	view	-	work plane from 3 points
+e3d.wp_ref	view	-	cycle 3D work plane over ref planes
+edit.copy	clipboard	-	copy selection to clipboard
+edit.copy_params	clipboard	-	copy wall/opening params to clip
+edit.cut	gap	m.delete_items	clip copy then delete selection
+edit.find_replace	gap	m.replace_text	dialog; confirm replaces text in model
+edit.flip_facing	api	flip_openings	flip opening facing side
+edit.flip_hand	api	flip_openings	flip opening hand
+edit.paste	gap	m.clip_paste	paste clipboard elements at cursor
+edit.paste_aligned	gap	m.clip_paste	paste in same position
+edit.paste_levels	gap	m.clip_paste_levels	paste to selected levels
+edit.paste_params	gap	ed.apply_edits	apply copied wall/opening params
+edit.redo	session	-	redo history
+edit.select_all	select	-	select all visible
+edit.undo	session	-	undo history
+elem.panel_select_wall	select	-	selects host wall of curtain panel
+file.ifc_replace_original	file	-	toggle save-over-original target
+file.import	file	-	pick file, import as new project
+file.import_again	file	-	rebuild project from changed source
+file.import_review	dialog	-	opens import report
+file.new	file	-	new project
+file.open	file	-	open project
+file.open_kept	file	-	open kept build
+file.save	file	-	save project
+file.save_as	file	-	save as
+file.save_copy	file	-	save copy
+file.save_ifc	api	export_ifc	export IFC
+file.save_ifc_as	api	export_ifc	export IFC as
+gen.rules	dialog	-	opens generation rules window; edits go through rule tools
+help.check_update	session	-	check for update
+help.licenses	session	-	licenses window
+help.reference	session	-	toggle reference dock
+help.sample	file	-	opens sample project
+help.shortcuts	session	-	shortcut sheet
+help.tutorial	session	-	start tour
+help.whats_new	session	-	news window
+mass.blend	api	ops_propose:geometry.mass	mass tool; pick then commit
+mass.chamfer	api	edit_mass:chamfer	mass tool; pick then commit
+mass.curtain_by_face	gap	m.curtain_by_face	mass tool; pick then commit
+mass.cut	gap	m.cut_geometry	mass tool; pick then commit
+mass.extrude	api	ops_propose:geometry.mass	mass tool; pick then commit
+mass.fillet	api	edit_mass:fillet	mass tool; pick then commit
+mass.floors	gap	m.floor_slabs	mass tool; pick then commit
+mass.intersect	api	ops_propose:geometry.boolean	mass tool; pick then commit
+mass.join	gap	m.join_geometry	mass tool; pick then commit
+mass.offset	api	edit_mass:offset	mass tool; pick then commit
+mass.paint	gap	m.paint_face	mass tool; pick then commit
+mass.push_pull	api	edit_mass:push_pull	mass tool; pick then commit
+mass.revolve	api	ops_propose:geometry.mass	mass tool; pick then commit
+mass.roof_by_face	gap	m.roof_by_face	mass tool; pick then commit
+mass.shell	api	edit_mass:shell	mass tool; pick then commit
+mass.slab_by_face	gap	m.slab_by_face	mass tool; pick then commit
+mass.split_face	api	edit_mass:split_face	mass tool; pick then commit
+mass.subtract	api	ops_propose:geometry.boolean	mass tool; pick then commit
+mass.sweep	api	ops_propose:geometry.mass	mass tool; pick then commit
+mass.swept_blend	api	ops_propose:geometry.mass	mass tool; pick then commit
+mass.union	api	ops_propose:geometry.boolean	mass tool; pick then commit
+mass.unjoin	gap	m.unjoin_geometry	mass tool; pick then commit
+mass.void	api	ops_propose:geometry.void	mass tool; pick then commit
+mass.wall_by_face	gap	m.wall_by_face	mass tool; pick then commit
+mep.browser	dialog	-	MEP browser window
+mep.check_system	dialog	-	system check window
+mep.conduit	api	create_elements:mep	draw conduit run
+mep.connect	gap	m.mep_attach/mep_connect_end	connect run end
+mep.device	gap	m.mep_place	place device on run
+mep.disconnect	gap	m.mep_detach/mep_detach_end	disconnect run end
+mep.duct	api	create_elements:mep	draw duct run
+mep.equipment	api	create_elements:comp	place equipment component
+mep.fitting	select	-	selects fittings touching selected runs
+mep.fixture	gap	m.mep_place	place fixture on run
+mep.light	gap	m.mep_place	place light on run
+mep.pipe	api	create_elements:mep	draw pipe run
+mep.route	api	route_mep	auto-route MEP network with sizing and variants
+mep.system	dialog	-	system manager window
+mep.terminal	api	place_fixtures	place air terminal or device with connectors
+mep.tray	api	create_elements:mep	draw cable tray run
+mgr.autosave	dialog	-	toggle autosave window
+mgr.autosave_show	dialog	-	recovery window
+mgr.coords	dialog	-	project info / coordinates window
+mgr.design_options	dialog	-	design options window
+mgr.family_editor	dialog	-	opens family editor
+mgr.family_flex	dialog	-	family flex window
+mgr.family_new	dialog	-	new blank family doc in editor
+mgr.grid	api	create_grids	grid draw tool
+mgr.import_cad	file	-	opens CAD/project import window
+mgr.import_pdf	dialog	-	no handler registered; PDF underlay
+mgr.keymap	dialog	-	key map window
+mgr.level	api	create_level	level window; add or edit level
+mgr.level_delete	api	delete_level	delete current level
+mgr.level_rename	api	edit_level	rename/re-elevate current level
+mgr.library	dialog	-	family library panel
+mgr.link_add	dialog	-	opens links window
+mgr.link_reload	view	-	reload linked models for display
+mgr.links	dialog	-	links window
+mgr.load	dialog	-	family library panel
+mgr.materials	dialog	-	materials window
+mgr.mesh_cache	file	-	builds mesh cache; elements unchanged
+mgr.object_styles	dialog	-	object styles window
+mgr.open_big	file	-	open big file in background
+mgr.params	dialog	-	parameters panel
+mgr.phases	dialog	-	phases window
+mgr.project_info	dialog	-	project info window
+mgr.project_params	dialog	-	project parameters window
+mgr.purge	dialog	-	purge list dialog; purge_unused data_ui.rs:956 inside
+mgr.record	session	-	no handler; record actions to script
+mgr.scripts	dialog	-	no handler; scripts window
+mgr.settings	dialog	-	settings window
+mgr.snaps	view	-	snap toggle (alias view.snap_toggle)
+mgr.types	dialog	-	types browser
+mgr.units	view	-	toggles display units, not model
+mgr.warnings	dialog	-	warnings window (alias view.warnings)
+mgr.workplane	view	-	no handler; work plane
+mod.align	gap	m.align	align wall to line
+mod.apply_hide	view	-	make temp hide permanent in view
+mod.array	api	array_elements	linear/radial array
+mod.change_type	dialog	-	opens types browser
+mod.copy	api	copy_elements	copy by vector
+mod.copy_clip	clipboard	-	alias edit.copy
+mod.curtain_edit	dialog	-	curtain panel editor window
+mod.cut	gap	m.delete_items	alias edit.cut
+mod.cut_geom	gap	m.cut_geometry	alias mass.cut
+mod.delete	api	delete_elements	delete selection
+mod.demolish	gap	m.demolish	mark selection demolished in view phase
+mod.distribute	gap	m.distribute/set_distribution	distribute openings along wall
+mod.divide	api	split_wall	divide wall into equal parts (parts)
+mod.explain	session	-	no handler; explain element
+mod.extend	gap	m.trim_to_at	extend wall to boundary
+mod.group	gap	m.group_create	name dialog then creates group
+mod.group_add	session	-	stages member for group edit
+mod.group_cancel	session	-	cancel group edit
+mod.group_delete	gap	m.group_delete	dialog; deletes group definition
+mod.group_edit	session	-	enter group edit; staged until finish
+mod.group_finish	gap	m.group_finish_edit	commit group member changes
+mod.group_place	gap	m.group_place	place group instance on click
+mod.group_remove	session	-	stages member removal for group edit
+mod.group_select	select	-	select all group members
+mod.hide	view	-	temporary hide on screen
+mod.isolate	view	-	temporary isolate on screen
+mod.join	api	join_elements	join or unjoin toggle
+mod.match	gap	m.match_properties	match properties to targets
+mod.match_type	api	replace_type	match type from source element
+mod.measure	view	-	alias e3d.measure; measuring only
+mod.mirror	api	mirror_elements	mirror about picked axis
+mod.mirror_draw	api	mirror_elements	mirror about drawn axis
+mod.move	api	move_elements	move by vector
+mod.offset	api	offset_wall	offset wall
+mod.paste	gap	m.clip_paste	alias edit.paste
+mod.pin	api	pin_elements	pin or unpin selection
+mod.reveal	view	-	reset temp hide/isolate
+mod.rotate	api	rotate_elements	rotate about point
+mod.scale	api	scale_elements	scale about point
+mod.select_filter	select	-	selection only
+mod.select_same_cat	select	-	selection only
+mod.select_same_cat_project	select	-	selection only
+mod.select_similar	api	select_similar	same type in view or level
+mod.select_similar_project	api	select_similar	same type in project (scope project)
+mod.split	api	split_wall	split wall at point
+mod.switch_join	api	join_elements	switch wall join order
+mod.trim	gap	m.trim_corner_at/trim_to_at	trim/extend walls to reference
+mod.ungroup	gap	m.group_ungroup_many	ungroup selected groups
+mod.unjoin	api	join_elements	unjoin selected elements
+mod.unpin	api	pin_elements	unpin selected elements
+mod.wall_edit	dialog	-	toggles wall edit panel
+panel.browser	dialog	-	alias ui.panel.browser
+panel.issues	dialog	-	toggle issues panel
+panel.properties	dialog	-	alias ui.panel.props
+props.param_lock	gap	m.set_param_lock/clear_param_lock	toggle parameter lock
+props.verify_ai	gap	m.verify_values	mark AI-set values verified
+sel.connected	select	-	select connected walls
+sel.invert	select	-	invert selection
+sel.prev	select	-	restore previous selection
+sel.run	select	-	select wall run
+sel.set_save	select	-	saves selection set in app state
+sel.sets	select	-	selection sets list
+set.lang	session	-	UI language
+set.theme	session	-	UI theme
+site.boundary	gap	m.set_topo_boundary	set toposolid boundary
+site.contours	view	-	toggle contour display
+site.edit_points	gap	m.move_topo_point(s)/delete_topo_points/add_topo_points	edit toposolid points
+site.flatten	gap	m.flatten_topo	flatten toposolid region
+site.pad	gap	m.add_pad	add building pad
+site.properties	dialog	-	opens site properties window
+site.smooth	gap	m.smooth_topo	smooth toposolid region
+site.subregion	gap	m.add_topo_region	add toposolid subregion
+site.toposolid	api	create_terrain	create toposolid from points
+site.toposolid_import	gap	m.add_toposolid/set_site	import terrain file into toposolid
+sketch.link_loop	gap	m.unlink_boundary_edges/accept_lost_edges	link sketch edges to wall loop
+sketch.link_repick	gap	sketch	re-pick sketch edge link
+sketch.link_unlink	gap	m.unlink_boundary_edges	unlink hovered sketch edge
+str.analytical	view	-	toggle analytical model display
+str.analytical_export	file	-	export analytical JSON file
+str.at_grids	api	create_elements:column	columns at grid intersections
+str.beam	api	create_elements:beam	draw structural beam
+str.beam_system	gap	m.add_beam_system	create beam system
+str.brace	gap	m.add_brace	draw brace
+str.column	api	create_elements:column	place structural column
+str.footing	gap	m.add_footing	place isolated footing
+str.footing_all	api	place_footings	footings under all columns
+str.grid	api	create_elements:grid	alias arch.grid; draw grid
+str.level	api	create_level	alias arch.level; add level
+str.raft	gap	m.add_raft	create raft foundation
+str.rebar	gap	m.add_rebar_sets	add rebar via form
+str.rebar_delete	gap	m.delete_rebar/delete_host_rebar	delete rebar sets
+str.rebar_schedule	dialog	-	opens rebar schedule window
+str.rebar_toggle	view	-	show/hide rebar
+str.refplane	gap	m.add_ref_plane	alias arch.refplane; reference plane
+str.slab	api	create_elements:floor	structural slab from sketch
+str.slab_edge	gap	m.add_sweep	slab edge sweep
+str.slab_opening	api	create_elements:opening	opening in slab via sketch
+str.strip_footing	gap	m.add_strip_footings	strip footing under walls
+str.truss	gap	m.add_truss	create truss
+str.wall	api	create_elements:wall	structural wall tool
+struct.beam_pick	api	create_elements:beam	beams from picked linework
+ui.layout.back	nav	-	layout history back
+ui.layout.next	nav	-	next layout
+ui.layout.prev	nav	-	previous layout
+ui.layout.set.1	nav	-	switch to layout 1
+ui.layout.set.2	nav	-	switch to layout 2
+ui.layout.set.3	nav	-	switch to layout 3
+ui.layout.set.4	nav	-	switch to layout 4
+ui.layout.set.5	nav	-	switch to layout 5
+ui.layout.settings	dialog	-	opens settings window
+ui.pane.next	nav	-	focus next pane
+ui.pane.prev	nav	-	focus previous pane
+ui.panel.browser	dialog	-	toggle browser panel
+ui.panel.props	dialog	-	toggle properties panel
+ui.panels.reset	session	-	reset panel layout
+ui.scale_down	session	-	UI scale down
+ui.scale_up	session	-	UI scale up
+ui.start	dialog	-	start screen
+view.3d	nav	-	switch to 3D view
+view.axes_full	view	-	full axes in plan HUD
+view.close	nav	-	no handler found; close view
+view.detail_level	gap	m.edit_view_gfx	per-view detail level
+view.diff	dialog	-	alias data.compare_version
+view.drafting_new	gap	m.add_drafting	new drafting view
+view.drafting_open	dialog	-	drafting views manager
+view.elevation	gap	m.add_compass_elevations	create compass elevations
+view.filters	dialog	-	opens view filters window
+view.gfx_auto	view	-	graphics performance level
+view.gfx_balanced	view	-	graphics performance level
+view.gfx_quality	view	-	graphics performance level
+view.gfx_speed	view	-	graphics performance level
+view.goto	nav	-	no handler found; go to view
+view.grid_toggle	view	-	toggle plan grid
+view.hide_cat	gap	m.edit_view_gfx	hide category in view graphics
+view.hide_cat_3d	view	-	temporary 3D category hide
+view.home_3d	nav	-	3D home camera
+view.isolate_cat_3d	view	-	temporary 3D category isolate
+view.issue_revision	dialog	-	opens revision issue window
+view.level_3d	nav	-	3D level filter
+view.level_down	nav	-	step level down
+view.level_up	nav	-	step level up
+view.maximize	nav	-	maximize pane
+view.next	nav	-	no handler found; next view
+view.ortho_toggle	view	-	toggle ortho
+view.perf_stats	view	-	performance stats overlay
+view.place	dialog	-	opens place-on-sheet dialog
+view.place_legend	dialog	-	opens place dialog on legend
+view.place_sheet_list	gap	m.add_viewport	place sheet list on sheet
+view.plan	nav	-	switch to plan
+view.plan_here	nav	-	switch to plan
+view.print_sheets	dialog	-	opens print window
+view.projection	view	-	ortho/perspective camera
+view.range	dialog	-	opens view range window
+view.reveal_3d	view	-	clear temporary hide
+view.save_3d	gap	m.add_view3d	save named 3D view
+view.schedule	nav	-	switch to data layout
+view.section	gap	section	draw section view
+view.section_box	view	-	toggle 3D section box
+view.section_box_fit	view	-	fit section box
+view.section_caps	view	-	toggle section caps
+view.section_here	nav	-	no handler found
+view.sheet	dialog	-	opens new sheet dialog
+view.sheet_duplicate	gap	m.duplicate_sheet	duplicate active sheet with views
+view.sheet_duplicate_title	gap	m.duplicate_sheet	duplicate sheet without views
+view.sheet_set	dialog	-	sheet sets window
+view.sheets_for_levels	gap	m.add_plan_sheet_set	create plan sheets per level
+view.snap_toggle	view	-	toggle snaps
+view.style	view	-	cycle visual style
+view.style_consistent	view	-	visual style
+view.style_hidden	view	-	visual style
+view.style_realistic	view	-	visual style
+view.style_shaded	view	-	visual style
+view.style_shaded_plain	view	-	visual style
+view.style_wireframe	view	-	visual style
+view.style_xray	view	-	visual style
+view.sync_sel	select	-	no handler found
+view.tabs	nav	-	no handler found
+view.template	dialog	-	opens view template window
+view.thin_lines	view	-	thin lines toggle, app state
+view.tile	nav	-	no handler found
+view.panes	nav	-	split the view area into panes
+view.pane_max	nav	-	maximize the active pane
+view.ui	dialog	-	alias ui.layout.settings
+view.underlay	view	-	toggle underlay display
+view.vg_3d	dialog	-	3D visibility panel
+view.walk	nav	-	walk camera mode
+view.warnings	dialog	-	toggle warnings panel
+view.zoom_fit	nav	-	zoom to fit
+view.zoom_sel	nav	-	alias view.zoom_sel_3d
+view.zoom_sel_3d	nav	-	zoom to selection
+wall_types.library	dialog	-	wall type library window
+wall_types.swap	dialog	-	wall type swap dialog
+xlsx.undo_apply	session	-	undo last XLSX apply
+keys.undo_import	session	-	undo key import
+data.export_step	file	-	exports STEP file
+data.export_3mf	file	-	exports 3MF file
+ai.mode_chat	session	-	AI panel in chat mode
+ai.mode_build	session	-	AI panel in build mode
+ai.mode_review	session	-	AI panel in review mode
+mass.push_region	api	edit_mass:push_region	mass tool; push an outlined face region
+mass.draft	api	edit_mass:draft	mass tool; draft angle on picked faces
+file.deliver	api	deliver_project	delivery package window; writes the files
+ui.ribbon.toggle	view	-	collapse or expand the ribbon
+ui.bar.options	view	-	show or hide the options bar
+ui.bar.status	view	-	show or hide the status bar
+ui.clean_screen	view	-	hide panels around the canvas
+ui.ai.work	session	-	AI work panel
+ui.ai.preview	session	-	AI preview panel
+e3d.measure.distance	api	measure_save:distance	3D measure tool; saves a distance
+e3d.measure.clear	api	measure_save:clear	3D measure tool; saves a clearance
+e3d.measure.angle	api	measure_save:angle	3D measure tool; saves an angle
+e3d.measure.area	api	measure_save:area	3D measure tool; saves an area
+e3d.measure.volume	api	measure_save:volume	3D measure tool; saves a volume
+e3d.measure.slope	api	measure_save:slope	3D measure tool; saves a slope
+e3d.measure.chain	view	-	3D point chain; shows lengths, writes nothing
+ann.measure_distance	api	measure_save:distance	view measure tool; saves a distance
+ann.measure_clear	api	measure_save:clear	view measure tool; saves a clearance
+ann.measure_angle	api	measure_save:angle	view measure tool; saves an angle
+ann.measure_area	api	measure_save:area	view measure tool; saves an area
+str.gridshell	api	ops_propose:geometry.gridshell	gridshell on a surface
+mass.freeform	api	ops_propose:geometry.freeform	freeform surface mass
+mass.panelize	api	ops_propose:geometry.panelize	panels on a surface
+mass.surface_shell	api	ops_propose:geometry.surface_shell	shell from a surface
+mass.thicken	api	ops_propose:geometry.thicken	thickens a surface
+mgr.schedules	dialog	-	schedules window
+view.drawing_set	api	create_drawing_set	drawing set window; creates the sheets
+ui.appearance	dialog	-	opens settings at the appearance page
+ui.look.studio	view	-	switches the UI look
+ui.look.engineer	view	-	switches the UI look
+ui.look.night	view	-	switches the UI look
+ui.look.focus	view	-	switches the UI look
+ui.look.contrast	view	-	switches the UI look
+ui.look.colour	view	-	switches the UI look
+ui.look.classic	view	-	switches the UI look
+ui.look.reset	view	-	switches the UI look
+ui.theme.light	view	-	switches light or dark theme
+ui.theme.dark	view	-	switches light or dark theme
+ui.theme.auto	view	-	switches light or dark theme
+ui.accent.blue	view	-	switches the accent colour
+ui.accent.teal	view	-	switches the accent colour
+ui.accent.violet	view	-	switches the accent colour
+ui.accent.orange	view	-	switches the accent colour
+ui.accent.rose	view	-	switches the accent colour
+ui.accent.green	view	-	switches the accent colour
+ui.accent.azure	view	-	switches the accent colour
+ui.accent.graphite	view	-	switches the accent colour
+ui.accent.reset	view	-	switches the accent colour
+ui.font.inter	view	-	switches the UI font
+ui.font.plex	view	-	switches the UI font
+ui.font.system	view	-	switches the UI font
+ui.text.larger	view	-	UI text size
+ui.text.smaller	view	-	UI text size
+ui.text.reset	view	-	UI text size
+ui.scale.reset	view	-	UI scale back to default
+ui.density.compact	view	-	switches UI density
+ui.density.normal	view	-	switches UI density
+ui.density.comfortable	view	-	switches UI density
+ui.density.auto	view	-	switches UI density
+ui.icons.studio	view	-	switches the icon style
+ui.icons.outline	view	-	switches the icon style
+ui.icons.duotone	view	-	switches the icon style
+ui.icons.filled	view	-	switches the icon style
+ui.icons.outline_duotone	view	-	switches the icon style
+ui.icons.duotone_all	view	-	switches the icon style
+ui.icons.filled_outline	view	-	switches the icon style
+ui.ribbon.full	view	-	switches the ribbon style
+ui.ribbon.tabs	view	-	switches the ribbon style
+ui.ribbon.toolbar	view	-	switches the ribbon style
+ui.layout.mode.reset	view	-	layout preset back to its default
+ui.layout.mode.save_as	dialog	-	names the current layout as a preset
+ui.layout.mode.export	file	-	writes the layout preset to a file
+ui.layout.mode.import	file	-	reads a layout preset from a file
+ui.onboarding	dialog	-	opens the first-run guide
+ui.focus.ai	view	-	arranges panels for one kind of work
+ui.focus.drawings	view	-	arranges panels for one kind of work
+ui.focus.model	view	-	arranges panels for one kind of work
+ui.focus.data	view	-	arranges panels for one kind of work
+mass.timeline_family	api	mass_to_family	selected mass history as a component family
+file.publish_pdf	file	-	alias data.export_pdf; prints sheets to PDF

@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "输入为空。",
+ "units.err.not_number": "位置 {pos} 处不是数字。",
+ "units.err.unknown_unit": "未知单位：{unit}。",
+ "units.err.non_positive": "长度必须大于零。",
+ "units.err.too_large": "长度不得超过 {max} m。",
+ "units.err.bad_angle": "角度应为度数。",
+ "units.err.unknown_name": "未知名称：{name}。已保留原值。",
+ "units.err.cycle": "{name} 处存在公式循环。已保留原值。",
+ "units.err.bad_expr": "无法读取位置 {pos} 处的表达式。已保留原值。",
+ "units.err.div_zero": "位置 {pos} 处除数为零。已保留原值。",
+ "units.err.invalid": "无效数字。",
+ "units.err.kept": "未更改：{reason}"
+}

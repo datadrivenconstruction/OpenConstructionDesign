@@ -1,0 +1,8 @@
+{
+ "cmd.props.param_lock": "قفل قيمة المعامل أو فتحها",
+ "locked_values.kept": "تم الإبقاء على {n} قيمة مقفلة",
+ "locked_values.locked": "“{name}” مقفل: الاستيراد من جدول XLSX والتحرير الجماعي والذكاء الاصطناعي تحافظ عليه",
+ "locked_values.unlocked": "“{name}” مفتوح",
+ "locked_values.locked_tip": "مقفل: الاستيراد من جدول XLSX والتحرير الجماعي والذكاء الاصطناعي تحافظ على هذه القيمة. انقر لفتحها  ·  Ctrl+L",
+ "locked_values.no_row": "حدّد صف معامل في الخصائص، ثم اضغط Ctrl+L"
+}

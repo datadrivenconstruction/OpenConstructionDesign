@@ -1,0 +1,14 @@
+{
+ "dwg_table.copy": "Copier le tableau",
+ "dwg_table.copy_tip": "Copier le métré par calque sous forme de tableau pour un tableur",
+ "dwg_table.copied": "Métré copié (séparé par des tabulations)",
+ "dwg_table.total": "Total",
+ "dwg_table.col.layer": "Calque",
+ "dwg_table.col.count": "Nombre",
+ "dwg_table.col.len": "Longueur, {unit}",
+ "dwg_table.col.area": "Surface, {unit}",
+ "dwg_table.unit.mm": "mm",
+ "dwg_table.unit.m2": "m²",
+ "dwg_table.unit.ft": "ft",
+ "dwg_table.unit.ft2": "ft²"
+}

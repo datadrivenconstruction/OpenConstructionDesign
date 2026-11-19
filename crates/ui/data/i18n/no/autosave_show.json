@@ -1,0 +1,4 @@
+{
+ "cmd.mgr.autosave_show": "Vis autolagring",
+ "cmd.mgr.autosave_show.desc": "Åpne vinduet for autolagring; det forblir åpent hvis det allerede vises."
+}

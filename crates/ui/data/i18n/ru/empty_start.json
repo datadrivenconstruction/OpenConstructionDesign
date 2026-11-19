@@ -1,0 +1,8 @@
+{
+ "empty.start_recent.title": "Недавних проектов пока нет",
+ "empty.start_recent.hint": "Открытые проекты появятся здесь. Начните с учебной модели.",
+ "empty.start_recent.action": "Открыть пример",
+ "start.recent_open_file": "Открыть файл…",
+ "start.forgot": "Убрано из недавних: {name}",
+ "start.forgot_undo": "Отменить"
+}

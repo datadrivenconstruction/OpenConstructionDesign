@@ -1,0 +1,5 @@
+{
+ "lv.level.deleted_attach": "Geschoss gelöscht; {n} Wände verloren ihre Oberkantenbindung",
+ "lv.level.rooms": "{n} Räume übernehmen die Höhe des Zielgeschosses ({dz} m): {names}. Zur Bestätigung erneut Verschieben drücken",
+ "lv.level.pinned": "Geschoss nicht gelöscht: fixierte Elemente können nicht auf ein anderes Geschoss wechseln: {names}. Zuerst lösen"
+}

@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "Umetni sloj ispod",
+ "type_layers.layer.delete": "Izbriši sloj",
+ "type_layers.layer.delete_last": "Tip mora imati barem jedan sloj",
+ "type_layers.value.bad": "Nije ispravna pozitivna vrijednost",
+ "type_layers.value.required": "Obavezno",
+ "type_layers.unsaved.title": "Nespremljene promjene za {name}",
+ "type_layers.unsaved.body": "Primijeniti ih na tip ili odbaciti?",
+ "type_layers.unsaved.discard": "Odbaci"
+}

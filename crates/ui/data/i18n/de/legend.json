@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "Legende",
+ "legend.legend.new_hint": "Name der neuen Legende",
+ "legend.legend.delete_tip": "Legende löschen",
+ "legend.legend.delete_placed": "Legende löschen (platziert auf: {sheets})",
+ "legend.legend.deleted": "Legende gelöscht: {name}",
+ "legend.legend.no_rows": "Noch keine Zeilen. Fügen Sie eine hinzu oder übernehmen Sie die Stile der aktuellen Ansicht",
+ "legend.legend.replace_q": "{n} Zeilen durch die Stile dieser Ansicht ersetzen?",
+ "legend.legend.replace": "Ersetzen",
+ "legend.legend.keep": "Zeilen behalten",
+ "legend.col.swatch": "Muster",
+ "legend.col.value": "Wert",
+ "legend.col.label": "Bezeichnung"
+}

@@ -1,0 +1,4 @@
+{
+ "sf.restored": "Le fichier de réglages {file} était endommagé ; la dernière copie valide a été restaurée. Le fichier endommagé est conservé sous le nom {broken}.",
+ "sf.reset": "Le fichier de réglages {file} était endommagé et aucune sauvegarde n'était utilisable ; les valeurs par défaut sont appliquées. Le fichier endommagé est conservé sous le nom {broken}."
+}

@@ -1,0 +1,9 @@
+{
+ "ai.settings.num_bad": "عدد نیست. مثل 0.5 تایپ کنید.",
+ "ai.settings.num_comma": "برای جداکنندهٔ اعشار نقطه بگذارید، مثل 0.5.",
+ "ai.settings.num_negative": "عدد نمی‌تواند منفی باشد.",
+ "ai.settings.unit_money": "واحد پول",
+ "ai.settings.unit_tokens": "توکن",
+ "ai.settings.unit_price": "برای هر ۱ میلیون توکن",
+ "ai.settings.limits_hint": "۰ یعنی بدون محدودیت. مقداری که پذیرفته نشود، محدودیت قبلی را نگه می‌دارد."
+}

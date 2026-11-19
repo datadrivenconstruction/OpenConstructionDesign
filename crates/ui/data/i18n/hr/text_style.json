@@ -1,0 +1,15 @@
+{
+ "text_style.lbl.text_style": "Stil teksta",
+ "text_style.lbl.align": "Poravnanje",
+ "text_style.lbl.head": "Vrh strelice",
+ "text_style.lbl.line_style": "Stil linije",
+ "text_style.lbl.fill": "Ispuna",
+ "text_style.lbl.detail": "Detalj",
+ "text_style.lbl.width": "Širina",
+ "text_style.bad_number": "Unesite broj od {min} do {max}",
+ "text_style.tip.next_ring": "Zatvori ovu konturu i započni drugu u istom području",
+ "text_style.tip.edit_text": "Uredi tekst na mjestu",
+ "text_style.tip.add_leader": "Dodaj vodilicu ovom tekstu",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°"
+}

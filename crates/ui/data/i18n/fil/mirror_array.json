@@ -1,0 +1,5 @@
+{
+ "mirror_array.err.count": "Buong bilang mula 2 hanggang 200 ang bilang: 4 3000, o 4;300 kapag may tatlong digit ang step",
+ "mirror_array.err.length": "Dapat positibong haba ang step o kabuuan, hal. 3 000 o 1.2 m",
+ "mirror_array.err.angle": "Anggulo sa degrees ang sweep, hindi zero at hanggang 360"
+}

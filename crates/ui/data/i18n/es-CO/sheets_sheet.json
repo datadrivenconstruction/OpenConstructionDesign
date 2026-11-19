@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "Duplicar lámina con vistas",
+ "cmd.view.sheet_duplicate_title": "Duplicar lámina (solo cajetín)",
+ "sheets.dup.menu_views": "Duplicar con vistas",
+ "sheets.dup.menu_title": "Duplicar, solo cajetín",
+ "sheets.dup.done": "Lámina {number} creada a partir de {src}: {views} vistas, {sched} planillas y leyendas. Las revisiones no se copian; la lámina no está emitida.",
+ "sheets.dup.none": "Abra una lámina para duplicarla",
+ "sheets.dup.copy": "copia",
+ "cmd.view.sheet_duplicate.short": "Duplicar con vistas",
+ "cmd.view.sheet_duplicate_title.short": "Duplicar cajetín"
+}

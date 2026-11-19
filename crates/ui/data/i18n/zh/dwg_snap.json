@@ -1,0 +1,5 @@
+{
+ "snap.center": "圆心",
+ "dwg_snap.through": "通过点",
+ "dwg_snap.through_tip": "通过所点击的点偏移（捕捉端点、交点、圆心），而非输入的距离"
+}

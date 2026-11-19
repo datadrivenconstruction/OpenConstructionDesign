@@ -1,0 +1,5 @@
+{
+ "src.more": "Více",
+ "src.cf.chosen": "vybráno {n} z {m}",
+ "src.opt.allow_mass_warn": "Pozor: soubor neodpovídá většině importovaných prvků, sloučení tak může změnit velké množství dat."
+}

@@ -1,0 +1,11 @@
+{
+ "cmd.ctx.ceiling.clean_outline": "Körvonal tisztítása",
+ "cmd.ctx.ceiling.clean_outline.desc": "Eltávolítja a keskeny csúcsokat, ahol a mennyezet körvonala visszafordul önmagába. Előbb előnézetet mutat; egy visszavonási lépés.",
+ "cmd.ctx.shaft.clean_outline": "Körvonal tisztítása",
+ "cmd.ctx.shaft.clean_outline.desc": "Eltávolítja a keskeny csúcsokat, ahol az akna körvonala visszafordul önmagába. Előbb előnézetet mutat; egy visszavonási lépés.",
+ "outline_cleanup.intro_ceiling": "Ennek a mennyezetnek a körvonala keskeny csúcsokban fordul vissza önmagába: {n}. A tisztítás eltávolítja őket; minden más marad, ahogy van.",
+ "outline_cleanup.intro_shaft": "Ennek az aknának a körvonala keskeny csúcsokban fordul vissza önmagába: {n}. A tisztítás eltávolítja őket; minden más marad, ahogy van.",
+ "outline_cleanup.none_ceiling": "Ennek a mennyezetnek a körvonalán nincsenek csúcsok",
+ "outline_cleanup.none_shaft": "Ennek az aknának a körvonalán nincsenek csúcsok",
+ "outline_cleanup.need_host": "Válasszon ki egy padlót, mennyezetet vagy aknát"
+}

@@ -1,0 +1,14 @@
+{
+ "cmd.mod.divide": "Bagi",
+ "cmd.mod.divide.short": "Bagi",
+ "cmd.mod.divide.desc": "Membagi dinding menjadi bagian sama besar sekaligus. Ketik jumlah bagian, lalu klik dinding.",
+ "whereis.mod.divide": "bagi, bagian sama besar, potong jadi beberapa bagian, segmen dinding",
+ "hint.split.parts": "Bagi: klik dinding · angka — jumlah bagian (2–100) · Esc — batal",
+ "create_input.divide.bad_parts": "«{text}» bukan jumlah bagian: ketik bilangan bulat dari 2 sampai {max}",
+ "create_input.ws.err.empty": "Ketik nama untuk tata letak",
+ "create_input.ws.err.long": "Nama terlalu panjang: paling banyak 40 karakter",
+ "create_input.ws.err.preset": "Nama itu milik tata letak bawaan",
+ "create_input.ws.err.full": "Paling banyak 24 tata letak tersimpan: hapus satu dulu",
+ "create_input.seldim.locked": "Jarak {v} terkunci",
+ "create_input.seldim.positive": "Jarak harus di atas nol"
+}

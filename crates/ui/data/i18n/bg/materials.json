@@ -1,0 +1,11 @@
+{
+ "materials.mat.name_empty": "Въведете име на материал",
+ "materials.mat.empty_title": "Още няма материали",
+ "materials.mat.empty_hint": "Въведете име по-долу и натиснете Добавяне",
+ "materials.mat.nothing_hint": "Няма материал, който да съвпада с търсенето",
+ "materials.mat.clear_search": "Изчистване на търсенето",
+ "materials.mat.replace_with": "Замяна с",
+ "materials.mat.delete_refused": "Не може да се изтрие: материалът се използва на {n} места. Първо го заменете.",
+ "materials.mat.delete_confirm": "Да се изтрие ли материалът „{name}“? Можете да отмените това.",
+ "materials.mat.replace_confirm": "Да се замени ли „{from}“ с „{to}“ в {n} елемента? „{from}“ се премахва. Можете да отмените това."
+}

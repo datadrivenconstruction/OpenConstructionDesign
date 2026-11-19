@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "Přidat 1 sadu",
+ "rebar_sets.add_n": "Přidat {n} sad",
+ "rebar_sets.pick.search": "Hledat typy prutů",
+ "rebar_sets.pick.empty": "Žádné odpovídající typy prutů",
+ "rebar_sets.unit.deg": "°"
+}

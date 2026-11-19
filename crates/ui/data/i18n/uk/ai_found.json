@@ -1,0 +1,50 @@
+{
+ "ai.tool.show_elements": "Показ елементів",
+ "ai.tool.isolate_elements": "Ізоляція елементів",
+ "ai.tool.color_by": "Забарвлення за значенням",
+ "ai.tool.reset_view": "Скидання вигляду",
+ "ai_found.found.query": "Знайдено",
+ "ai_found.found.show": "Показано",
+ "ai_found.found.isolate": "Ізольовано",
+ "ai_found.found.hide": "Приховано",
+ "ai_found.found.color": "Забарвлено",
+ "ai_found.found.count": "{n} із {m}",
+ "ai_found.found.none": "Нічого не збігається. Спробуйте ширший фільтр.",
+ "ai_found.found.show_btn": "Показати",
+ "ai_found.found.show_tip": "Вибрати ці елементи і наблизити їх у плані та 3D",
+ "ai_found.found.isolate_btn": "Ізолювати",
+ "ai_found.found.isolate_tip": "Показати лише ці елементи до «Скинути вигляд»",
+ "ai_found.found.select_btn": "Вибрати",
+ "ai_found.found.select_tip": "Вибрати ці елементи, не змінюючи вигляд",
+ "ai_found.legend.title": "Забарвлення за: {by}",
+ "ai_found.legend.row_tip": "Клацніть, щоб вибрати ці елементи",
+ "ai_found.legend.empty_value": "Немає значення",
+ "ai_found.legend.other": {
+  "one": "ще # значення",
+  "other": "ще # значень",
+  "few": "ще # значення",
+  "many": "ще # значень"
+ },
+ "ai_found.view.title": "Вигляд асистента ШІ",
+ "ai_found.view.reset": "Скинути вигляд",
+ "ai_found.view.reset_tip": "Повернути вигляд, який був до змін асистента ШІ",
+ "ai_found.view.shown": {
+  "one": "# елемент показано",
+  "other": "# елементів показано",
+  "few": "# елементи показано",
+  "many": "# елементів показано"
+ },
+ "ai_found.view.isolated": {
+  "one": "# елемент ізольовано",
+  "other": "# елементів ізольовано",
+  "few": "# елементи ізольовано",
+  "many": "# елементів ізольовано"
+ },
+ "ai_found.view.hidden": {
+  "one": "# елемент приховано",
+  "other": "# елементів приховано",
+  "few": "# елементи приховано",
+  "many": "# елементів приховано"
+ },
+ "ai_found.found.line": "{what}: {count}"
+}

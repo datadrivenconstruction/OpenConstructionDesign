@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key} שמור ({why}) ולא ניתן להקצותו מחדש",
+ "quick.keys.res_copy": "העתק",
+ "quick.keys.res_paste": "הדבק",
+ "quick.keys.res_cut": "גזור",
+ "quick.keys.res_undo": "בטל / בצע שוב",
+ "quick.keys.res_save": "שמור",
+ "quick.keys.res_palette": "חלון פקודות",
+ "quick.keys.reserved_conflict": "{key} כבר בשימוש על ידי “{cmd}”. Esc משאיר אותו שם.",
+ "quick.keys.reserved_swap": "החלף",
+ "quick.keys.reserved_take": "קח אותו",
+ "quick.keys.reserved_keep": "שמור",
+ "quick.keys.reserved_os": "תפוס על ידי המערכת:"
+}

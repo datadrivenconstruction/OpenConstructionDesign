@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "Vaba pind",
+ "cmd.mass.panelize": "Jaota paneelideks",
+ "cmd.mass.surface_shell": "Katus pinnal",
+ "cmd.mass.thicken": "Paksendamine",
+ "hint.mass.freeform.first": "Vaba pind: plaani ristküliku esimene nurk · sisesta tõus · Esc — tühista",
+ "hint.mass.freeform.next": "Vaba pind: vastasnurk · sisesta tõus · Esc — tühista",
+ "hint.mass.panelize.first": "Paneelid: valige 3D-s vaba pind · Esc — tühista",
+ "hint.mass.panelize.value": "Paneelid: sisestage paneeli suurus · Enter — rakenda · Esc — tühista",
+ "hint.mass.surface_shell.first": "Katus pinnal: valige 3D-s vaba pind · Esc — tühista",
+ "hint.mass.surface_shell.value": "Katus pinnal: sisestage paksus · Enter — rakenda · Esc — tühista",
+ "hint.mass.thicken.first": "Paksendamine: valige 3D-s vaba pind · Esc — tühista",
+ "hint.mass.thicken.value": "Paksendamine: sisestage paksus (0 — ilma paksuseta pind) · Enter — rakenda · Esc — tühista",
+ "status.mass.pick_surface": "Valige vaba pind",
+ "status.mass.freeform_small": "Ristkülik on liiga väike: vähemalt 0,5 m igas suunas",
+ "name.mass.freeform": "Vaba pind",
+ "rgroup.mass_free": "Lisaks"
+}

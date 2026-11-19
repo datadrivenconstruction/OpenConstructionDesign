@@ -1,0 +1,21 @@
+{
+ "cmd.help.check_update": "Tarkista päivitykset",
+ "update_check.title": "Päivitystarkistus",
+ "update_check.desc": "Oletuksena pois päältä. Lähettää palvelimellemme vain version, käyttöjärjestelmän ja arkkitehtuurin sekä asennustyypin. Ei lataa eikä asenna mitään.",
+ "update_check.freq.startup": "Käynnistettäessä",
+ "update_check.freq.daily": "Päivittäin",
+ "update_check.freq.weekly": "Viikoittain",
+ "update_check.freq.never": "Ei koskaan",
+ "update_check.check_now": "Tarkista nyt",
+ "update_check.dialog.title": "Päivitystarkistus",
+ "update_check.unknown.title": "Päivityksiä ei voitu tarkistaa",
+ "update_check.unknown.body": "{e}. Tämä ei tarkoita, että versio on ajan tasalla. Yritä myöhemmin uudelleen.",
+ "update_check.current": "Sinulla on uusin versio ({v}).",
+ "update_check.newer": "Versio {v} on saatavilla",
+ "update_check.date": "Julkaistu {d}",
+ "update_check.unfit": "Tämä versio ({v}) on vanhempi kuin suositeltu vähimmäisversio {f}. Päivitys on suositeltava.",
+ "update_check.close": "Sulje",
+ "update_check.open_failed": "Julkaisusivua ei voitu avata.",
+ "update_check.toast.newer": "Versio {v} on saatavilla. Ohje > Tarkista päivitykset.",
+ "update_check.toast.unfit": "Tämä versio ({v}) on vanhempi kuin suositeltu vähimmäisversio {f}."
+}

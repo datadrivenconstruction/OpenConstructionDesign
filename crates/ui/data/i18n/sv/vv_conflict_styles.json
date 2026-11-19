@@ -1,0 +1,6 @@
+{
+ "vv_conflict.styles.conflict": "Objektstilar för en redigerad kategori ändrades i modellen (ångra eller ett annat fönster) medan det här fönstret hade ändringar. Dina ändringar behålls.",
+ "vv_conflict.styles.keep": "Behåll mina ändringar",
+ "vv_conflict.styles.reload": "Ladda om",
+ "vv_conflict.styles.answer_first": "Välj Behåll mina ändringar eller Ladda om först"
+}

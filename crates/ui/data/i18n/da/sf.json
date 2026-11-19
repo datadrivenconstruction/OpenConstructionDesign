@@ -1,0 +1,4 @@
+{
+ "sf.restored": "Indstillingsfilen {file} var beskadiget; den sidste gode kopi blev gendannet. Den beskadigede fil gemmes som {broken}.",
+ "sf.reset": "Indstillingsfilen {file} var beskadiget, og ingen brugbar sikkerhedskopi fandtes; standardværdierne bruges. Den beskadigede fil gemmes som {broken}."
+}

@@ -1,0 +1,11 @@
+{
+ "sketch.points": "Pontok",
+ "sketch.rect": "Téglalap",
+ "sketch.circle": "Kör",
+ "sketch.polygon": "Sokszög",
+ "sketch.radius": "R",
+ "sketch.sides": "Oldalak",
+ "sketch.circum": "Köré írt",
+ "sketch.shape.tip": "Vázlatalakzat (A vált). Téglalap: két sarok. Kör és sokszög: középpont, majd sugár. Adjon meg méretet, és a rögzítéshez nyomjon Entert.",
+ "tool.err.zero_size": "Nulla méret: a második pontot távolítsa el az elsőtől"
+}

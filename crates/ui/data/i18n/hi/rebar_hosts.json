@@ -1,0 +1,40 @@
+{
+ "rebar_hosts.hosts": "होस्ट: {list}",
+ "rebar_hosts.kind.column": "कॉलम",
+ "rebar_hosts.kind.beam": "बीम",
+ "rebar_hosts.kind.wall": "दीवार",
+ "rebar_hosts.kind.slab": "स्लैब",
+ "rebar_hosts.kind.footing": "फ़ुटिंग",
+ "rebar_hosts.kind.raft": "नींव स्लैब",
+ "rebar_hosts.n.column": {
+  "one": "# कॉलम",
+  "other": "# कॉलम"
+ },
+ "rebar_hosts.n.beam": {
+  "one": "# बीम",
+  "other": "# बीम"
+ },
+ "rebar_hosts.n.wall": {
+  "one": "# दीवार",
+  "other": "# दीवारें"
+ },
+ "rebar_hosts.n.slab": {
+  "one": "# स्लैब",
+  "other": "# स्लैब"
+ },
+ "rebar_hosts.n.footing": {
+  "one": "# फ़ुटिंग",
+  "other": "# फ़ुटिंग"
+ },
+ "rebar_hosts.n.raft": {
+  "one": "# नींव स्लैब",
+  "other": "# नींव स्लैब"
+ },
+ "rebar_hosts.mixed_note": "कॉलम और बीम में बार और स्टिरप लगते हैं; दीवार, स्लैब और नींव में मेश। रीइनफ़ोर्समेंट जोड़ने के लिए एक समूह चुनें।",
+ "rebar_hosts.why.mixed": "चयन में कॉलम या बीम के साथ दीवार, स्लैब या नींव हैं। एक समूह चुनें।",
+ "rebar_hosts.why.area_linear": "मेश दीवारों, स्लैब और नींव में जाता है, कॉलम या बीम में नहीं।",
+ "rebar_hosts.why.bars_plate": "लॉन्गिट्यूडिनल बार और स्टिरप कॉलम और बीम में जाते हैं, दीवार, स्लैब या नींव में नहीं।",
+ "rebar_hosts.why.no_common_face": "चुने होस्ट का कोई साझा कवर फ़लक नहीं है। एक प्रकार के होस्ट चुनें।",
+ "rebar_hosts.why.no_type": "बार प्रकार चुनें।",
+ "rebar_hosts.kind_type": "{kind} · {type}"
+}

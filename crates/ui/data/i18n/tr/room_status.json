@@ -1,0 +1,4 @@
+{
+ "room_status.open": "{room} odası artık kapalı değil",
+ "warn.kind.room_open": "Kapalı olmayan odalar"
+}

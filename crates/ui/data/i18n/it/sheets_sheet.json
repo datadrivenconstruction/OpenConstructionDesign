@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "Duplica tavola con viste",
+ "cmd.view.sheet_duplicate_title": "Duplica tavola (solo cartiglio)",
+ "sheets.dup.menu_views": "Duplica con viste",
+ "sheets.dup.menu_title": "Duplica, solo cartiglio",
+ "sheets.dup.done": "Tavola {number} creata da {src}: {views} viste, {sched} prospetti e legende. Le revisioni non sono copiate; la tavola non è emessa.",
+ "sheets.dup.none": "Apri una tavola per duplicarla",
+ "sheets.dup.copy": "copia",
+ "cmd.view.sheet_duplicate.short": "Duplica con viste",
+ "cmd.view.sheet_duplicate_title.short": "Duplica cartiglio"
+}

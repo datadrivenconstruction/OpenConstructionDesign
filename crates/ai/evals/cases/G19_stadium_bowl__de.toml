@@ -1,0 +1,27 @@
+id = "G19_stadium_bowl__de"
+tier = "hard"
+group = "Any geometry"
+title = "Stadium bowl"
+lang = "de"
+base = "empty"
+
+[[turn]]
+say = "Eine Fußballstadion-Schüssel: Spielfeld 105 x 68 m, zweirängige Tribüne mit 40 Reihen, Zugänge (Vomitorien), Dachring auf Masten, Fassungsvermögen etwa 40000."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "slab+solid+mesh+freeform+stair"
+min = 40.0
+
+[[oracle.count]]
+spec = "col+beam+brace"
+min = 50.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

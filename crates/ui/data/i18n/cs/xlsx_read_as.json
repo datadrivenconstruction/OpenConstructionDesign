@@ -1,0 +1,11 @@
+{
+ "xlsx_read_as.title": "Přejmenovaný list?",
+ "xlsx_read_as.detail": "List {found} má sloupce listu {sheet} (shoda {score} %). Nenačte se, pokud jej nezvolíte.",
+ "xlsx_read_as.detail_many": "Více listů odpovídá {sheet}: {found}. Nic se nevybírá automaticky; zvolte ten, který se má načíst.",
+ "xlsx_read_as.read_as": "Číst „{found}“ jako {sheet}",
+ "xlsx_read_as.read_as_tip": "Pouze pro tento import. List se nepřejmenuje; Použít do něj zapíše pouze id nových řádků.",
+ "xlsx_read_as.active": "List „{found}“ se v tomto importu načte jako {sheet}.",
+ "xlsx_read_as.undo": "Nečíst jako {sheet}",
+ "xlsx_read_as.undo_tip": "Zpět k názvům listů tak, jak jsou v sešitu.",
+ "xlsx_read_as.not_rewritten": "Sešit nebyl přepsán: přejmenovaný list se čte pod vlastním názvem. Pro udržení synchronizace jej přejmenujte zpět."
+}

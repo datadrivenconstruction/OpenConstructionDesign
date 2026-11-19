@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "উচ্চতা {t} নেওয়া হয়নি ({why})। কিছু পরিবর্তন করা হয়নি",
+ "host_shape.shape.elev_prompt_in": "উচ্চতা, ft-in…",
+ "host_shape.shape.elev_in": "{v} in"
+}

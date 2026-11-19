@@ -1,0 +1,23 @@
+{
+ "roof_edge.err.number": "یک عدد وارد کنید",
+ "roof_edge.err.positive": "باید بزرگ‌تر از صفر باشد",
+ "roof_edge.err.nonneg": "نباید منفی باشد",
+ "roof_edge.err.max": "نباید از {max} بیشتر باشد",
+ "roof_edge.list.empty_hint": "نما، ناودان، زیرسقف یا نورگیر را با فرمان‌های بام اضافه کنید",
+ "roof_edge.edit_tip": "ویرایش ویژگی‌ها",
+ "roof_edge.delete_tip": "حذف",
+ "roof_edge.pe.del_tip": "این نقطه را حذف کن (یک برش حداقل ۳ نقطه نگه می‌دارد)",
+ "roof_edge.pe.up_tip": "این نقطه را بالا ببر",
+ "roof_edge.confirm_edge": "{name} حذف شود؟ Ctrl+Z آن را برمی‌گرداند.",
+ "roof_edge.confirm_profile": "پروفیل {name} حذف شود؟ Ctrl+Z آن را برمی‌گرداند.",
+ "roof_edge.deleted_one": "{name} حذف شد",
+ "roof_edge.deleted_n": {
+  "one": "# عنصر حذف شد",
+  "other": "# عنصر حذف شد"
+ },
+ "roof_edge.profile_deleted": "پروفیل حذف شد",
+ "roof_edge.profile_in_use": {
+  "one": "توسط # عنصر لبه استفاده می‌شود: ابتدا آن را حذف یا تغییر دهید",
+  "other": "توسط # عنصر لبه استفاده می‌شود: ابتدا آن‌ها را حذف یا تغییر دهید"
+ }
+}

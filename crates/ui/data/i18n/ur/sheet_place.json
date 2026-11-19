@@ -1,0 +1,15 @@
+{
+ "sheet_place.place_view_tip": "شیٹ پر ویو یا شیڈول رکھیں",
+ "sheet_place.properties_tip": "شیٹ نمبر، نام، کاغذ اور ریویژنز",
+ "sheet_place.print_tip": "شیٹ پرنٹ یا برآمد کریں",
+ "sheet_place.fit_tip": "شیٹ کو ونڈو میں فٹ کریں",
+ "sheet_place.activate_tip": "شیٹ پر ویو میں براہ راست تدوین: پین، زوم اور کراپ",
+ "sheet_place.open_view_tip": "ویو کو اس کے اپنے ٹیب میں کھولیں",
+ "sheet_place.done_tip": "شیٹ پر ویو کی تدوین ختم کریں",
+ "sheet_place.reset_crop_tip": "کراپ ہٹائیں اور پوری ویو دکھائیں",
+ "sheet_place.scale_tip": "شیٹ پر منتخب ویو کا اسکیل",
+ "sheet_place.title_tip": "شیٹ پر ویو کے نیچے دکھایا جانے والا عنوان",
+ "sheet_place.banner": "شیٹ پر ویو کی تدوین",
+ "sheet_place.new_set_tip": "ایک ساتھ پرنٹ ہونے والی شیٹس کا سیٹ بنائیں",
+ "sheet_place.new_sheet_tip": "پروجیکٹ میں شیٹ شامل کریں"
+}

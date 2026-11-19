@@ -1,0 +1,9 @@
+{
+ "tool.room": "部屋",
+ "tool.room.name": "部屋",
+ "room_tool.room.name": "名前",
+ "hint.room.place": "閉じた壁の輪郭内をクリックして部屋を作成 · Esc — 終了",
+ "tool.err.room_open": "領域が閉じていません: 壁の輪郭を閉じるか、部屋区切りを追加してください",
+ "tool.err.room_check": "このレベルの部屋を確認できません",
+ "tool.err.room_exists": "この輪郭内にはすでに部屋があります"
+}

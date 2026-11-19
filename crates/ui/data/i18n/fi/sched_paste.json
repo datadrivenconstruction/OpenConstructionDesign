@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "Liitettiin {n} solua",
+ "sched_edit.pasted_skipped": "Liitettiin {n} solua, ohitettiin {k}: {why}",
+ "sched_edit.filled": "Täytettiin {n} solua",
+ "sched_edit.filled_skipped": "Täytettiin {n} solua, ohitettiin {k}: {why}",
+ "sched_edit.why_ro": "{n} vain luettavissa",
+ "sched_edit.why_bad": "{n} virheellinen arvo",
+ "sched_edit.no_cell": "Napsauta ensin luettelon solua",
+ "sched_edit.nothing": "Ei kirjoitettavaa",
+ "sched_edit.not_refreshed": "Kirjoitettu, mutta näkymää ei päivitetty: {e}",
+ "sched_edit.failed": "ei muutettu: {e}",
+ "sched_edit.no_changes": "Ei muutoksia: {u} solussa on jo nämä arvot",
+ "sched_edit.same_tail": ", {u} jo samoja"
+}

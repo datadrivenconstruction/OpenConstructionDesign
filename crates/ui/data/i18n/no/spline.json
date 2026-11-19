@@ -1,0 +1,7 @@
+{
+ "spline.opt.spline": "Spline",
+ "spline.opt.spline_tip": "Splinevegg: klikk punktene den går gjennom, Enter eller Esc for å avslutte",
+ "spline.wt.three_points": "en splinevegg trenger tre punkter eller flere",
+ "spline.wt.no_curtain": "en gardinvegg har ingen splineakse",
+ "spline.wt.added": "splinevegg lagt til"
+}

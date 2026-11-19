@@ -1,0 +1,7 @@
+{
+ "ai.retry.countdown": "Ponovni pokušaj za {n} s",
+ "ai.retry.try": "Automatski pokušaj {i} od {max}. Isti zahtjev se šalje ponovno.",
+ "ai.retry.now": "Ponovi odmah",
+ "ai.retry.gave_up": "I dalje nema odgovora nakon {max} automatskih pokušaja.",
+ "ai.retry.shorten": "Skrati zahtjev"
+}

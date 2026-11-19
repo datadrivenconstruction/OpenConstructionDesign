@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "壁の閉じた連続を選択",
+ "cmd.sketch.link_unlink": "エッジと壁のリンクを解除",
+ "cmd.sketch.link_repick": "エッジの壁を選び直す",
+ "cmd.ctx.floor.link_unlink": "エッジと壁のリンクを解除",
+ "cmd.ctx.floor.link_accept": "削除された壁のエッジを受け入れる",
+ "boundary_link.hint.loop": "壁をクリック: 閉じた壁の連続がリンクされたエッジになります",
+ "boundary_link.hint.repick": "エッジと平行な壁をクリック: エッジがその壁に追従します",
+ "boundary_link.need_sketch": "先に境界スケッチを開いてください",
+ "boundary_link.need_edge": "スケッチのエッジを指定してください",
+ "boundary_link.need_straight": "直線のエッジだけが壁に追従できます",
+ "boundary_link.need_floor": "床を選択してください",
+ "boundary_link.no_wall": "カーソル下に壁がありません",
+ "boundary_link.not_parallel": "壁がエッジと平行ではありません",
+ "boundary_link.not_linked": "このエッジは壁にリンクされていません",
+ "boundary_link.unlinked": "エッジのリンクを解除しました。位置は残り、壁に追従しなくなります",
+ "boundary_link.accepted": "エッジを受け入れました。通常のエッジとしてその位置に残ります",
+ "boundary_link.failed": "適用できませんでした",
+ "boundary_link.lost": "元の壁が削除されました",
+ "boundary_link.blocked": "壁に追従できません"
+}

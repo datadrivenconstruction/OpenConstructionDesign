@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "Отразить петли",
+ "cmd.edit.flip_hand.desc": "Отражает выбранные двери и окна вдоль стены: петли переходят на другой конец проёма.",
+ "cmd.edit.flip_facing": "Сменить сторону открывания",
+ "cmd.edit.flip_facing.desc": "Переносит открывание выбранных дверей и окон на другую сторону стены.",
+ "opening_grips.flip_hand": "Отразить петли",
+ "opening_grips.flip_hand.tip": "Петли на другой конец проёма (Shift+F)",
+ "opening_grips.flip_facing": "Сменить сторону",
+ "opening_grips.flip_facing.tip": "Открывание на другую сторону стены (Shift+G)",
+ "opening_grips.flip.done": "Отражено: {n}",
+ "opening_grips.flip.none": "Выберите дверь или окно",
+ "opening_grips.flip.fail": "Не отражено: {why}"
+}

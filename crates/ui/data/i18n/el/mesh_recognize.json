@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "Αναγνώριση {done} από {total}",
+ "mesh_recognize.all": "Όλα τα {n}",
+ "mesh_recognize.only_confident": "Μόνο βέβαια",
+ "mesh_recognize.confident_tip": "Επιλέγει γραμμές με τύπο που ταιριάζει στην κατηγορία και βεβαιότητα τουλάχιστον {pct}%",
+ "mesh_recognize.row_hint": "Κλικ σε γραμμή για επιλογή. Τα βέλη μετακινούν, το Enter επιλέγει.",
+ "mesh_recognize.kind_for": "Τύπος για {name}",
+ "mesh_recognize.source": "Πλέγματα προέλευσης",
+ "mesh_recognize.keep": "Διατήρηση πλεγμάτων",
+ "mesh_recognize.replace": "Αντικατάσταση πλεγμάτων",
+ "mesh_recognize.convert_keep": "Μετατροπή {n}",
+ "mesh_recognize.convert_remove": "Μετατροπή {n} και αφαίρεση πλεγμάτων",
+ "mesh_recognize.creates": "Θα δημιουργηθούν {n}: {kinds}",
+ "mesh_recognize.creates_none": "Δεν έχει επιλεγεί τίποτα ακόμα",
+ "mesh_recognize.stay": "{n} πλέγματα προέλευσης παραμένουν στο μοντέλο",
+ "mesh_recognize.removed": "Τα {n} πλέγματα προέλευσης θα αφαιρεθούν. Το Αναίρεση τα επαναφέρει."
+}

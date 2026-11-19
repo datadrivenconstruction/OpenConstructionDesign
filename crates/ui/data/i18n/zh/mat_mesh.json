@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "已导入网格",
+ "mat_mesh.mesh.none_selected": "在三维视图中选择已导入的网格，以赋予其此材质。",
+ "mat_mesh.mesh.current": "第一个所选网格：{material}",
+ "mat_mesh.mesh.current_none": "第一个所选网格没有材质。",
+ "mat_mesh.mesh.assign": "分配给 {n} 个所选项",
+ "mat_mesh.mesh.assign_tip": "“真实感”样式会在所选网格上显示此材质的纹理",
+ "mat_mesh.mesh.assign_cat": "分配给类别 {category}",
+ "mat_mesh.mesh.assign_cat_tip": "该类别中每个没有自有材质的已导入网格",
+ "mat_mesh.mesh.clear": "清除所选",
+ "mat_mesh.mesh.clear_tip": "所选网格恢复为其类别材质或纯色",
+ "mat_mesh.mesh.clear_cat": "清除类别"
+}

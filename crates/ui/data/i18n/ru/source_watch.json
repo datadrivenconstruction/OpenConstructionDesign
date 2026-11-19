@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "{name}: файл изменился на диске.",
+ "src.watch.update": "Обновить модель",
+ "src.watch.compare": "Сравнить",
+ "src.watch.ignore": "Игнорировать эту версию",
+ "src.watch.missing": "{name}: исходный файл не найден. Работа продолжается.",
+ "src.watch.locate": "Найти…",
+ "src.watch.dismiss": "Скрыть",
+ "src.watch.more": "и ещё исходных файлов: {n}",
+ "src.watch.done": "Обновлено из {name}: изменено {updated}, оставлено как правлено полей {kept}, конфликтов {conflicts}, закреплённых значений сохранено {locked}"
+}

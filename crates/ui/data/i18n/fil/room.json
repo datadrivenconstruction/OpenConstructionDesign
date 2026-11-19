@@ -1,0 +1,6 @@
+{
+ "geom.length": "Haba",
+ "sched.cat.room_seps": "Mga room separator",
+ "room.err.point_leave": "Kuwarto {n}: lalabas sa hangganan nito ang punto",
+ "room.err.point_taken": "Kuwarto {n}: mapupunta ang punto sa kuwarto {other}"
+}

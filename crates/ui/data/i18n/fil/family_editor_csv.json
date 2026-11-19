@@ -1,0 +1,11 @@
+{
+ "fe.csv.apply": "Ilapat ang import",
+ "fe.csv.cancel": "Itapon ang preview",
+ "fe.csv.nothing": "Walang babaguhin: tugma ang catalog sa kasalukuyang types",
+ "fe.csv.preview": "Preview ng import: {added} bago, {changed} nabago, {same} hindi nabago ang types; {values} na halaga ang magbabago",
+ "fe.csv.preview_hint": "Hindi binabago ng walang lamang cell at nawawalang column ang kasalukuyang halaga. Walang magbabago hangga't hindi ka nag-a-apply.",
+ "fe.csv.skipped": "Hindi nailapat, itinira ang halaga: {msg}",
+ "fe.csv.type_added": "Bagong type {name}",
+ "fe.csv.type_changed": "Uri {name}",
+ "fe.csv.value": "  {param}: {old} → {new}"
+}

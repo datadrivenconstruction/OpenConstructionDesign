@@ -1,0 +1,6 @@
+{
+ "units.err.parse": "Inte en längd: det gamla värdet behålls. Ange ett tal med valfri enhet, till exempel 2500 eller 8'-2\"",
+ "ui.scale.set": "Gränssnittsskala: {pct} %",
+ "cmd.ui.scale_up": "Öka gränssnittsskalan",
+ "cmd.ui.scale_down": "Minska gränssnittsskalan"
+}

@@ -1,0 +1,11 @@
+{
+ "cmd.arch.roof_gable.short": "双坡",
+ "cmd.arch.roof_hip.short": "四坡",
+ "cmd.arch.roof_shed.short": "单坡",
+ "cmd.arch.roof_mansard.short": "折线坡",
+ "cmd.arch.roof_gambrel.short": "钟形",
+ "cmd.arch.roof_barrel.short": "筒拱",
+ "cmd.arch.roof_edges.short": "屋顶边缘",
+ "cmd.arch.roof_opening.short": "洞口",
+ "cmd.mass.roof_by_face.short": "按面"
+}

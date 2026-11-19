@@ -1,0 +1,19 @@
+{
+ "ifc_patch.fallback.source_changed": "Patch nicht verwendet: die Quelldatei wurde auf dem Datenträger geändert oder lässt sich nicht lesen. Die Datei wurde aus dem Modell neu geschrieben.",
+ "ifc_patch.fallback.sources": "Patch nicht verwendet: das Projekt hat nicht genau eine Quelle. Die Datei wurde aus dem Modell neu geschrieben.",
+ "ifc_patch.fallback.schema": "Patch nicht verwendet: das Schema der Quelldatei wird nicht unterstützt. Die Datei wurde aus dem Modell neu geschrieben.",
+ "ifc_patch.fallback.structure": "Patch nicht verwendet: der Aufbau der Quelldatei ist nicht vertrauenswürdig. Die Datei wurde aus dem Modell neu geschrieben.",
+ "ifc_patch.fallback.edit": "Patch nicht verwendet: eine Änderung lässt sich nicht sicher in die Quelldatei übernehmen. Die Datei wurde aus dem Modell neu geschrieben.",
+ "ifc_patch.reason.schema": "Das Schema der Quelldatei kann diese Änderung nicht aufnehmen; das Element bleibt wie in der Quelle",
+ "ifc_patch.reason.prop": "Diese Eigenschaftsänderung lässt sich in der Quelldatei nicht ausdrücken; der Wert bleibt wie in der Quelle",
+ "ifc_patch.reason.no_export": "Dieses neue Element hat keine Darstellung in IFC",
+ "ifc_patch.reason.link": "Das Element ist in der Datei enthalten, aber eine Verknüpfung zu seinem Material oder Typ wird nicht geschrieben; es ist als nicht geschrieben aufgeführt",
+ "ifc_patch.drop": "Verwerfen",
+ "ifc_patch.drop_done": "Ausstehende Verknüpfungen verworfen: {n}; sie werden nicht mehr wiederholt",
+ "ifc_patch.fallback.building": "Patch nicht verwendet: ein neues Geschoss braucht genau ein Gebäude in der Quelldatei, dort sind es keines oder mehrere. Die Datei wurde aus dem Modell neu geschrieben.",
+ "ifc_patch.fallback.types": "Patch nicht verwendet: Geschosse, Typen oder Materialien haben sich seit dem Import geändert, und der Patch kann das nicht schreiben. Die Datei wurde aus dem Modell neu geschrieben.",
+ "ifc_patch.fallback.zipped": "Patch nicht verwendet: eine gezippte Quelldatei kann nicht gepatcht werden. Die Datei wurde aus dem Modell neu geschrieben.",
+ "ifc_patch.fallback.source_kept": "Die Quelldatei wurde nicht überschrieben: diesem Speichern kann man nicht genug vertrauen, um sie zu ersetzen. Dieses Speichern ist eine Kopie daneben.",
+ "ifc_patch.fallback.nested": "Patch nicht verwendet: ein neues Element hat verschachtelte Teile (etwa Anschlüsse), die der Patch nicht schreiben kann. Die Datei wurde aus dem Modell neu geschrieben.",
+ "ifc_patch.fallback.shared_part": "Patch nicht verwendet: ein Teil einer bearbeiteten Treppe oder Rampe wird auch von einem anderen Element oder einer Beziehung genutzt, was der Patch nicht berücksichtigen kann. Die Datei wurde aus dem Modell neu geschrieben."
+}

@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "পুরো দেয়াল লুপ বেছে নিন",
+ "cmd.sketch.link_unlink": "দেয়াল থেকে প্রান্তের সংযোগ বিচ্ছিন্ন করুন",
+ "cmd.sketch.link_repick": "প্রান্তের দেয়াল আবার বেছে নিন",
+ "cmd.ctx.floor.link_unlink": "দেয়াল থেকে প্রান্তের সংযোগ বিচ্ছিন্ন করুন",
+ "cmd.ctx.floor.link_accept": "মুছে ফেলা দেয়ালের প্রান্ত গ্রহণ করুন",
+ "boundary_link.hint.loop": "একটি দেয়ালে ক্লিক করুন: বন্ধ দেয়াল-ধারা সংযুক্ত প্রান্তে পরিণত হবে",
+ "boundary_link.hint.repick": "প্রান্তের সমান্তরাল একটি দেয়ালে ক্লিক করুন: প্রান্ত সেটি অনুসরণ করবে",
+ "boundary_link.need_sketch": "আগে সীমানা স্কেচ খুলুন",
+ "boundary_link.need_edge": "স্কেচের একটি প্রান্তের দিকে নির্দেশ করুন",
+ "boundary_link.need_straight": "শুধু সরল প্রান্ত দেয়াল অনুসরণ করতে পারে",
+ "boundary_link.need_floor": "একটি মেঝে নির্বাচন করুন",
+ "boundary_link.no_wall": "কার্সরের নিচে কোনো দেয়াল নেই",
+ "boundary_link.not_parallel": "দেয়ালটি প্রান্তের সমান্তরাল নয়",
+ "boundary_link.not_linked": "এই প্রান্ত কোনো দেয়ালের সঙ্গে যুক্ত নয়",
+ "boundary_link.unlinked": "প্রান্তের সংযোগ বিচ্ছিন্ন: এটি আগের জায়গায় থাকবে এবং আর দেয়াল অনুসরণ করবে না",
+ "boundary_link.accepted": "প্রান্ত গ্রহণ করা হয়েছে: এগুলো সাধারণ প্রান্ত হিসেবে আগের জায়গায় থাকবে",
+ "boundary_link.failed": "প্রয়োগ করা যায়নি",
+ "boundary_link.lost": "উৎস দেয়াল মুছে ফেলা হয়েছে",
+ "boundary_link.blocked": "দেয়াল অনুসরণ করতে পারছে না"
+}

@@ -1,0 +1,11 @@
+{
+ "job.stage.prepare": "پروجیکٹ تیار ہو رہا ہے",
+ "open_guard.already_open": "{name} پہلے سے کھلا ہے",
+ "open_guard.from_cache": "{name}: درآمد کیش سے کھولا گیا",
+ "open_guard.known_project": "{name} پہلے درآمد ہوا تھا: وہ پروجیکٹ کھولا جا رہا ہے",
+ "open_guard.locate": "تلاش کریں",
+ "open_guard.mem_low": "میموری کم: میش بجٹ آدھا کیا گیا اور لیول آف ڈیٹیل بنانا روک دیا گیا",
+ "open_guard.mem_low_short": "میموری کم: میموری خالی ہونے تک لیول آف ڈیٹیل بنانا روکا گیا",
+ "open_guard.no_window": "اس پروجیکٹ کی ونڈو نہیں ملی",
+ "open_guard.switch_window": "اس ونڈو پر جائیں"
+}

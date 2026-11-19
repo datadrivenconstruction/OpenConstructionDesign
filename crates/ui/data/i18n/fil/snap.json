@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "Dulo",
+ "snap.midpoint": "Gitnang punto",
+ "snap.perpendicular": "Patayo",
+ "snap.wall_axis": "Axis ng wall",
+ "snap.wall_face": "Face ng wall",
+ "snap.grid": "Kuwadrikulo",
+ "snap.intersection": "Interseksyon",
+ "snap.grid_axis": "Linya ng grid",
+ "snap.ref_plane": "Eroplanong sanggunian",
+ "snap.nearest": "Pinakamalapit",
+ "snap.align_x": "Nakahanay sa X sa isang malayong punto",
+ "snap.align_y": "Nakahanay sa Y sa isang malayong punto",
+ "snap.align_xy": "Nakahanay sa X at Y"
+}

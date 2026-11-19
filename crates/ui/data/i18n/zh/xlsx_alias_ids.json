@@ -1,0 +1,7 @@
+{
+ "xlsx_alias_ids.ids_written": "{n} 个新行已在您重命名的图纸中获得 ID；工作簿的其他内容未更改。",
+ "xlsx_alias_ids.ids_open": "工作簿已在其他程序中打开：未写入 {n} 个新行的 ID。请在该程序中关闭后同步；这些行不会被重新创建。",
+ "xlsx_alias_ids.ids_failed": "无法写入 {n} 个新行的 ID；工作簿保持原样。这些行在下次同步时不会被重新创建。",
+ "xlsx_alias_ids.unpaired": "{n} 个新行尚无 ID；已记录，不会被重新创建。",
+ "xlsx_alias_ids.refused": "未应用任何内容：在读取重命名的图纸时，{sheets} 中的新行无法获得 ID。请将图纸改回标准名称（或删除这些行），然后重新同步。"
+}

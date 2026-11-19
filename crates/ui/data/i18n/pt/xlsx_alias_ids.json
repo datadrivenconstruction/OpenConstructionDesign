@@ -1,0 +1,7 @@
+{
+ "xlsx_alias_ids.ids_written": "{n} novas linhas receberam os ids na folha renomeada; nada mais na pasta de trabalho mudou.",
+ "xlsx_alias_ids.ids_open": "A pasta de trabalho está aberta em outro programa: os ids de {n} novas linhas não foram gravados. Feche-a lá e sincronize; essas linhas não serão criadas novamente.",
+ "xlsx_alias_ids.ids_failed": "Não foi possível gravar os ids de {n} novas linhas; a pasta de trabalho foi mantida como estava. Essas linhas não serão criadas novamente na próxima sincronização.",
+ "xlsx_alias_ids.unpaired": "{n} novas linhas ainda não têm id; elas são lembradas e não serão criadas novamente.",
+ "xlsx_alias_ids.refused": "Nada foi aplicado: novas linhas em {sheets} não podem receber ids enquanto uma folha renomeada é lida. Renomeie a folha de volta para o nome padrão (ou remova essas linhas) e sincronize novamente."
+}

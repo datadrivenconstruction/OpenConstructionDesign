@@ -1,0 +1,8 @@
+{
+ "empty.start_recent.title": "Още няма скорошни проекти",
+ "empty.start_recent.hint": "Проектите, които отваряте, се показват тук. Започнете с примерния модел.",
+ "empty.start_recent.action": "Отваряне на примерния модел",
+ "start.recent_open_file": "Отваряне на файл…",
+ "start.forgot": "Премахнато от скорошните: {name}",
+ "start.forgot_undo": "Отмяна"
+}

@@ -1,0 +1,40 @@
+{
+ "rebar_hosts.hosts": "Dragers: {list}",
+ "rebar_hosts.kind.column": "Kolom",
+ "rebar_hosts.kind.beam": "Balk",
+ "rebar_hosts.kind.wall": "Wand",
+ "rebar_hosts.kind.slab": "Vloer",
+ "rebar_hosts.kind.footing": "Fundering",
+ "rebar_hosts.kind.raft": "Funderingsplaat",
+ "rebar_hosts.n.column": {
+  "one": "# kolom",
+  "other": "# kolommen"
+ },
+ "rebar_hosts.n.beam": {
+  "one": "# balk",
+  "other": "# balken"
+ },
+ "rebar_hosts.n.wall": {
+  "one": "# wand",
+  "other": "# wanden"
+ },
+ "rebar_hosts.n.slab": {
+  "one": "# vloer",
+  "other": "# vloeren"
+ },
+ "rebar_hosts.n.footing": {
+  "one": "# fundering",
+  "other": "# funderingen"
+ },
+ "rebar_hosts.n.raft": {
+  "one": "# funderingsplaat",
+  "other": "# funderingsplaten"
+ },
+ "rebar_hosts.mixed_note": "Kolommen en balken krijgen staven en beugels; wanden, vloeren en funderingen krijgen mesh. Selecteer één groep om wapening toe te voegen.",
+ "rebar_hosts.why.mixed": "De selectie mengt kolommen of balken met wanden, vloeren of funderingen. Selecteer één groep.",
+ "rebar_hosts.why.area_linear": "Mesh hoort bij wanden, vloeren en funderingen, niet bij kolommen of balken.",
+ "rebar_hosts.why.bars_plate": "Lengtestaven en beugels horen bij kolommen en balken, niet bij wanden, vloeren of funderingen.",
+ "rebar_hosts.why.no_common_face": "De geselecteerde dragers hebben geen gemeenschappelijk dekkingsvlak. Selecteer dragers van één soort.",
+ "rebar_hosts.why.no_type": "Kies een staaftype.",
+ "rebar_hosts.kind_type": "{kind} · {type}"
+}

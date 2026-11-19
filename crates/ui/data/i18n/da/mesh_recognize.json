@@ -1,0 +1,17 @@
+{
+ "mesh_recognize.recognizing": "Genkender {done} af {total}",
+ "mesh_recognize.all": "Alle {n}",
+ "mesh_recognize.only_confident": "Kun sikre",
+ "mesh_recognize.confident_tip": "Markerer rækker, hvis type passer til kategorien, og hvis sikkerhed er mindst {pct} %",
+ "mesh_recognize.row_hint": "Klik på en række for at markere den. Piletaster flytter, Enter markerer.",
+ "mesh_recognize.kind_for": "Type for {name}",
+ "mesh_recognize.source": "Kildemasker",
+ "mesh_recognize.keep": "Behold masker",
+ "mesh_recognize.replace": "Erstat masker",
+ "mesh_recognize.convert_keep": "Konvertér {n}",
+ "mesh_recognize.convert_remove": "Konvertér {n} og fjern masker",
+ "mesh_recognize.creates": "Opretter {n}: {kinds}",
+ "mesh_recognize.creates_none": "Intet markeret endnu",
+ "mesh_recognize.stay": "{n} kildemasker forbliver i modellen",
+ "mesh_recognize.removed": "{n} kildemasker fjernes. Fortryd henter dem tilbage."
+}

@@ -1,0 +1,6 @@
+{
+ "quick.keys.rec_hint": "Esc 취소 · Backspace 지우기",
+ "quick.keys.row_lost": "{key}은(는) 이제 “{cmd}”에 속합니다",
+ "quick.keys.row_took": "{key}을(를) “{cmd}”에서 가져왔습니다",
+ "quick.keys.reset_tip": "기본값으로 재설정"
+}

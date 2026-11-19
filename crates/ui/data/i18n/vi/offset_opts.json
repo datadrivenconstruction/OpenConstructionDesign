@@ -1,0 +1,7 @@
+{
+ "offset_opts.dist_positive": "Khoảng cách dịch chuyển phải lớn hơn không; phía theo con trỏ",
+ "offset_opts.count_bad": "Số nguyên từ {min} đến {max}",
+ "offset_opts.done_tip": "Kết thúc lựa chọn và bắt đầu công cụ",
+ "offset_opts.iso.apply_tip": "Biến việc ẩn tạm thời thành cố định cho góc nhìn này",
+ "offset_opts.iso.exit": "Thoát chế độ tạm thời"
+}

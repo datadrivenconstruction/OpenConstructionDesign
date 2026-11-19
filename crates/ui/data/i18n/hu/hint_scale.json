@@ -1,0 +1,10 @@
+{
+ "cmd.mod.scale": "Léptékezés",
+ "cmd.mod.scale.desc": "Jelöljön ki elemeket, majd kattintson az alappontra, egy referenciahosszra és az új hosszra, vagy írjon be szorzót.",
+ "hint.scale.select": "Léptékezés: jelöljön ki elemeket · Enter — kész",
+ "hint.scale.first": "Léptékezés: válassza ki az alappontot · Esc — mégse",
+ "hint.scale.second": "Léptékezés: válassza ki a referenciahosszt · szám — szorzó · Esc — mégse",
+ "hint.scale.third": "Léptékezés: válassza ki az új hosszt · szám — szorzó · Esc — mégse",
+ "scl.bad_factor": "A léptéktényezőnek nullánál nagyobb számnak kell lennie",
+ "scl.zero_ref": "A referenciahossz nulla: válasszon egy pontot az alappontától távol"
+}

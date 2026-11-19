@@ -1,0 +1,5 @@
+{
+ "snap.center": "Középpont",
+ "dwg_snap.through": "Átmenő pont",
+ "dwg_snap.through_tip": "Eltolás a megkattintott ponton át (a végpontokhoz, metszéspontokhoz, középpontokhoz illeszkedik) a megadott távolság helyett"
+}

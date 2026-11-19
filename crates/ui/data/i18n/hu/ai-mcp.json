@@ -1,0 +1,15 @@
+{
+ "mcp.ask.cancel": "Mégse",
+ "mcp.ask.auto.title": "Alkalmazhatják az MI-ügynökök a módosításokat kérdezés nélkül?",
+ "mcp.ask.auto.body": "A csatlakoztatott MI-ügynökök azonnal alkalmazzák módosításaikat a vázlatokban, az Ön megerősítésére várakozás nélkül, így egy hibás módosítás azelőtt bekerülhet, hogy látná. A modelljén továbbra is csak az Alkalmaz gombra változik. Ez addig marad érvényben, amíg ki nem kapcsolja, be nem zárja a szerkesztőt, vagy másik modellt nem nyit meg.",
+ "mcp.ask.auto.yes": "Alkalmazás kérdezés nélkül",
+ "mcp.ask.token.title": "Új token kiállítása?",
+ "mcp.ask.token.body": "A jelenlegi token azonnal érvényét veszti: a csatlakoztatott MI-ügynökök le lesznek vágva, és az új tokenre lesz szükségük. Csak egyszer látszik, ezért azonnal másolja ki.",
+ "mcp.ask.token.yes": "Új token",
+ "mcp.auto.chip": "Automatikus alkalmazás: be",
+ "mcp.auto.chip_tip": "Az MI-ügynökök kérdezés nélkül alkalmazzák a módosításokat a vázlatokban. A munkamenettel együtt véget ér.",
+ "mcp.auto.ask_again": "Kérdezzen újra",
+ "mcp.token.once": "Most másolja ki a tokent: később nem jelenik meg újra.",
+ "mcp.renewed": "Új token kiállítva: a régi már nem működik",
+ "mcp.copied": "Másolva"
+}

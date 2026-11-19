@@ -1,0 +1,10 @@
+{
+ "wall_stack.we.stack_caption": "Složeni tip",
+ "wall_stack.we.side_left": "Lijeva ploha",
+ "wall_stack.we.side_right": "Desna ploha",
+ "wall_stack.we.from": "Od",
+ "wall_stack.we.to": "Do",
+ "wall_stack.we.bottom": "Dno",
+ "wall_stack.we.delete_tip": "Izbriši ovaj profil",
+ "wall_stack.we.from_after_to": "„Od“ mora biti prije „Do“"
+}

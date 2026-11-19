@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "Η εφαρμογή σταμάτησε: το μοντέλο κρατήθηκε όπως ήταν",
+ "apply_verify.rolled_back": "Η εφαρμογή δεν ταίριαξε με το σχέδιο και αναιρέθηκε· το μοντέλο μένει αμετάβλητο. {what}",
+ "apply_verify.diff.missing": "Το σχέδιο δείχνει {what} {kind}, αλλά η Εφαρμογή δεν το έκανε.",
+ "apply_verify.diff.extra": "Εφαρμογή {kind} {what}, το οποίο το σχέδιο δεν δείχνει.",
+ "apply_verify.diff.kind": "Το σχέδιο δείχνει {what} {shown}, αλλά η Εφαρμογή {applied} το.",
+ "apply_verify.diff.value": "{what}: το “{col}” βγήκε διαφορετικό από το σχέδιο.",
+ "apply_verify.diff.truncated": "Το σχέδιο και η εφαρμοσμένη αλλαγή διαφέρουν σε μέγεθος.",
+ "apply_verify.diff.unreadable": "Η εφαρμοσμένη αλλαγή δεν μπόρεσε να διαβαστεί πίσω ({e}).",
+ "apply_verify.no_base": "Η εφαρμογή δεν έτρεξε: λείπει το αντίγραφο για τον έλεγχο του σχεδίου. Το μοντέλο μένει αμετάβλητο· ζητήστε ξανά το σχέδιο.",
+ "apply_verify.take_back_failed": "Η αναίρεση απέτυχε ({e}): χρησιμοποιήστε την Αναίρεση.",
+ "apply_verify.kind.created": "δημιουργήθηκε",
+ "apply_verify.kind.changed": "άλλαξε",
+ "apply_verify.kind.deleted": "διαγράφηκε",
+ "apply_verify.card.type_row": "Τύπος {type} · {n} στοιχεία δέχονται την αλλαγή"
+}

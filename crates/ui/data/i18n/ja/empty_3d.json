@@ -1,0 +1,14 @@
+{
+ "empty.v3d_model.title": "3D にはまだ何もありません",
+ "empty.v3d_model.hint": "平面図に壁を描くと、ここに表示されます。",
+ "empty.v3d_model.action": "平面図を開く",
+ "empty.v3d_hidden.title": "このビューではすべての要素が非表示です",
+ "empty.v3d_hidden.hint": "一時的な非表示または分離により表示されるものがありません。ビューのグラフィックは設定どおりです。",
+ "empty.v3d_hidden.action": "すべて表示",
+ "empty.v3d_graphics.title": "ビューのグラフィックがすべてのカテゴリを非表示にしています",
+ "empty.v3d_graphics.hint": "このビューのカテゴリ規則により表示されるものがありません。ビューのグラフィックでカテゴリを再度オンにしてください。",
+ "empty.v3d_graphics.action": "ビューのグラフィックを開く",
+ "empty.v3d_box.title": "断面ボックスがモデルの外にあります",
+ "empty.v3d_box.hint": "断面ボックスがすべての要素を切り取っています。モデルを囲むように戻してください。",
+ "empty.v3d_box.action": "ボックスをリセット"
+}

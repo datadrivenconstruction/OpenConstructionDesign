@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "Lỗ mở mái dốc",
+ "cmd.arch.roof_opening": "Lỗ mở mái",
+ "cmd.arch.roof_extrusion": "Mái bằng đùn",
+ "cmd.arch.ceiling_opening": "Lỗ mở trần",
+ "cmd.str.slab_opening": "Lỗ mở sàn",
+ "cmd.ctx.wall.detach": "Tách đỉnh",
+ "cmd.ctx.floor.sketch": "Sửa ranh giới",
+ "cmd.ctx.floor.shape": "Sửa hình dạng",
+ "host_shape.shape.elev_prompt": "cao độ, mm…",
+ "host_shape.shape.elev_mm": "{v} mm",
+ "host_shape.sketch.no_host": "không có phần tử chủ dưới ranh giới ở cao độ này",
+ "host_shape.issue.roof": "mái {id}: {e}",
+ "host_shape.issue.ceiling": "trần {id}: {e}",
+ "host_shape.status.select_slab": "chọn một sàn",
+ "host_shape.status.select_walls": "chọn tường",
+ "host_shape.status.no_roof_or_level": "không có mái hoặc cao độ phía trên",
+ "host_shape.status.top_attached": "đã gắn đỉnh tường",
+ "host_shape.status.top_detached": "đã tách đỉnh tường",
+ "host_shape.status.straight_wall": "cần một bức tường thẳng",
+ "host_shape.status.roof_extruded": "đã tạo mái bằng đùn",
+ "warn.kind.cut": "Phép cắt hoặc liên kết chưa được dựng"
+}

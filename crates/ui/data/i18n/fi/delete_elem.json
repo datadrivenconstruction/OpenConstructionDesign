@@ -1,0 +1,9 @@
+{
+ "elem.deleted": "Poistettuja elementtejä: {n}",
+ "elem.deleted_kept": "Poistettuja elementtejä: {n}; jätettiin paikalleen: {k} (paneelit ja elementit, joita ei voi poistaa)",
+ "elem.not_deleted": "ei poistettu: {e}",
+ "elem.not_deletable": "Tätä elementtiä ei voi poistaa",
+ "elem.panel": "verhoseinän paneeli",
+ "elem.panel_refused": "Paneeli on osa verhoseinää, eikä sitä voi poistaa erikseen. Valitse koko seinä, jotta se poistuu.",
+ "elem.reload_failed": "Poistettu, mutta näkymä ei päivittynyt: {e}"
+}

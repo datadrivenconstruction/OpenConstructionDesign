@@ -1,0 +1,8 @@
+{
+ "script_rec.started": "Salvestamine: sellest hetkest tehtud muudatused lähevad skriptiks. Peatamiseks valige uuesti „Salvesta tegevused skriptiks“.",
+ "script_rec.saved": "Skript „{name}“ salvestatud: muudatusi — {n}.",
+ "script_rec.skipped": "Skriptivormita tööriistade {k} muudatust ei salvestatud.",
+ "script_rec.nothing": "Salvestamine peatatud: salvestada pole midagi.",
+ "script_rec.failed": "Salvestist ei salvestatud: {why}",
+ "script_rec.no_folder": "skriptide seadete kausta pole"
+}

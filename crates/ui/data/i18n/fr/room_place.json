@@ -1,0 +1,8 @@
+{
+ "cmd.arch.room_auto": "Placer les pièces automatiquement",
+ "cmd.arch.room_auto.desc": "Place une pièce dans chaque contour fermé du niveau actif qui n'en a pas. Les boucles de murs ouvertes sont ignorées, jamais fermées par approximation. Une étape d'annulation.",
+ "room_place.placed": "Pièces placées : {n}. Zones qui avaient déjà une pièce : {m}. Boucles ouvertes ignorées : {k}",
+ "room_place.all_had": "Rien placé : les {m} zones fermées ont déjà une pièce. Boucles ouvertes ignorées : {k}",
+ "room_place.none": "Rien placé : le niveau n'a pas de zones de murs fermées",
+ "room_place.none_open": "Rien placé : le niveau n'a pas de zones de murs fermées. Boucles ouvertes ignorées : {k}"
+}

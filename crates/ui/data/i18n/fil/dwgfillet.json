@@ -1,0 +1,20 @@
+{
+ "dwgfillet.fillet": "Bilog na gilid",
+ "dwgfillet.cancel": "Itigil ang fillet",
+ "dwgfillet.tip": "I-click ang dalawang line sa mga gilid na itatago: parehong puputulin o pahahabain hanggang sa sulok, na may tangent arc kapag mas mataas sa zero ang radius",
+ "dwgfillet.radius": "Radius ng fillet",
+ "dwgfillet.radius_tip": "Radius ng arc sa mga unit ng drawing; ang 0 ay gagawa ng matalim na sulok",
+ "dwgfillet.st.arm_first": "I-click ang unang line sa panig na itatago",
+ "dwgfillet.st.arm_second": "I-click ang pangalawang line sa panig na itatago",
+ "dwgfillet.st.not_armed": "Piliin muna ang Fillet",
+ "dwgfillet.st.click_line": "I-click ang isang line ng drawing",
+ "dwgfillet.st.other_drawing": "Dapat kabilang sa iisang drawing ang dalawang line: magsimula muli",
+ "dwgfillet.st.changed": "Nabago ang unang line: magsimula muli",
+ "dwgfillet.st.same_line": "Pumili ng ibang pangalawang line",
+ "dwgfillet.st.parallel": "Magkahanay ang mga line at hindi nagtatagpo: walang maigagawang sulok",
+ "dwgfillet.st.degenerate": "Walang haba ang isang line",
+ "dwgfillet.st.no_side": "Walang haba mula sa sulok ang na-click na gilid",
+ "dwgfillet.st.too_big": "Masyadong malaki ang radius para sa mga line na ito: gumamit ng mas maliit na radius",
+ "dwgfillet.st.radius_bad": "Dapat zero o positibo ang radius",
+ "dwgfillet.st.done": "Nagawa ang sulok"
+}

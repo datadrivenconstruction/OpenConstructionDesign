@@ -1,0 +1,15 @@
+{
+ "xl.msg.cell_clipped": "文本已截断以符合单元格上限；只读，未应用编辑",
+ "xlcell.status": "已导出。{count} 个单元格被缩短或留空——请查看详情窗口。",
+ "xlcell.title": "导出时更改的单元格",
+ "xlcell.intro": "这些单元格无法按原样写入。完整值保留在模型中；该单元格已锁定，无法在工作簿中编辑。",
+ "xlcell.col_sheet": "图纸",
+ "xlcell.col_row": "行",
+ "xlcell.col_col": "列",
+ "xlcell.col_id": "元素 ID",
+ "xlcell.col_what": "发生了什么",
+ "xlcell.what_clipped": "文本已截断至单元格上限",
+ "xlcell.what_blank": "不是有限数字，单元格已留空",
+ "xlcell.more": "……另有 {count} 项",
+ "xlcell.close": "关闭"
+}

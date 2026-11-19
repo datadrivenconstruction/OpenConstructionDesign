@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "Өткөрүлгөн саптар жана уячалар",
+ "xlsx_issues.conflicts_title": "Эки жерде тең өзгөртүлгөн",
+ "xlsx_issues.missing_title": "Барак жумуш китебинде жок",
+ "xlsx_issues.look_alike_title": "Барактын аты туура келбейт",
+ "xlsx_issues.mass_title": "Массалык өчүрүү ырастоону талап кылат",
+ "xlsx_issues.sheets_missing": "{sheets} барактары жумуш китебинде жок (аты өзгөрүлгөн же өчүрүлгөн); алардын саптары салыштырылган жок.",
+ "xlsx_issues.keep_model": "Модельди калтыруу",
+ "xlsx_issues.take_book": "Жумуш китебин алуу",
+ "xlsx_issues.open_book_tip": "Файлды анын колдонмосунда ачат. Моделде эч нерсе өзгөрбөйт; жумуш китебин сактагандан кийин алдын ала көрүнүш жаңыланат."
+}

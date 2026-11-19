@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key} on reserveeritud ({why}) ja seda ei saa ümber määrata",
+ "quick.keys.res_copy": "kopeeri",
+ "quick.keys.res_paste": "kleebi",
+ "quick.keys.res_cut": "lõika",
+ "quick.keys.res_undo": "võta tagasi / tee uuesti",
+ "quick.keys.res_save": "salvesta",
+ "quick.keys.res_palette": "käsuotsing",
+ "quick.keys.reserved_conflict": "{key} on juba kasutusel käsuga „{cmd}“. Esc jätab selle sinna.",
+ "quick.keys.reserved_swap": "Vaheta",
+ "quick.keys.reserved_take": "Võta see",
+ "quick.keys.reserved_keep": "Jäta",
+ "quick.keys.reserved_os": "Süsteem on hõivanud:"
+}

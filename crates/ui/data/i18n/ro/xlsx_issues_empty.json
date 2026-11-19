@@ -1,0 +1,8 @@
+{
+ "xlsx_issues.empty_title": "Foaie goală în registrul de lucru",
+ "xlsx_issues.empty_kept": "Foaia {sheet} este goală: nu s-a citit nimic din ea, {n} elemente rămân neschimbate. Celelalte foi pot fi încă aplicate.",
+ "xlsx_issues.empty_none": "Foaia {sheet} este goală: nu s-a citit nimic din ea. Celelalte foi pot fi încă aplicate.",
+ "xlsx_issues.unreadable_title": "Foaia nu a putut fi citită",
+ "xlsx_issues.unreadable": "Foaia {sheet} nu a putut fi citită, partea ei din fișier este deteriorată: nu s-a preluat nimic din ea, iar elementele sale rămân neschimbate. Celelalte foi pot fi încă aplicate.",
+ "xlsx_issues.formulas": "Formulele din foaia {sheet} nu au putut fi citite, deci o valoare calculată nu poate fi distinsă de o modificare: nu s-a preluat nimic din această foaie. Celelalte foi pot fi încă aplicate."
+}

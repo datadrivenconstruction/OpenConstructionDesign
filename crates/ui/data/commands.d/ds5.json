@@ -1,0 +1,85 @@
+[
+ {
+  "id": "ui.panel.browser",
+  "icon": "browser",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+B"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1",
+  "group": "view"
+ },
+ {
+  "id": "ui.panel.props",
+  "icon": "properties",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+Alt+B"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1",
+  "group": "view"
+ },
+ {
+  "id": "ui.panels.reset",
+  "once": true,
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1",
+  "group": "view"
+ },
+ {
+  "id": "ui.start",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1",
+  "group": "help"
+ },
+ {
+  "id": "ui.scale_up",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+Equals",
+   "Ctrl+Shift+Equals",
+   "Ctrl+Plus"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1",
+  "group": "view"
+ },
+ {
+  "id": "ui.scale_down",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [
+   "Ctrl+Minus"
+  ],
+  "tab": null,
+  "surfaces": [
+   "A"
+  ],
+  "stage": "M1",
+  "group": "view"
+ }
+]

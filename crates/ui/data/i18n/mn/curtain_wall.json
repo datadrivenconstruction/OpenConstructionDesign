@@ -1,0 +1,12 @@
+{
+ "curtain_wall.cw.issue.slab": "шал {id}: {e}",
+ "curtain_wall.cw.issue.body": "бие {id}: {e}",
+ "curtain_wall.cw.added": "Нэмсэн шилэн ханууд: {n}",
+ "curtain_wall.cw.add_failed": "Шилэн хана бүтээгдсэнгүй: {e}",
+ "curtain_wall.cw.edited_warn": "Шилэн хана #{id} өөрчлөгдлөө: {w}",
+ "curtain_wall.cw.edited": "Шилэн хана #{id} өөрчлөгдлөө",
+ "curtain_wall.cw.not_changed": "Өөрчлөгдөөгүй: {e}",
+ "curtain_wall.cw.room_edited": "Өрөө #{id} өөрчлөгдлөө",
+ "curtain_wall.cw.slope_range": "Өөрчлөгдөөгүй: налуу хязгаараас гадуур",
+ "curtain_wall.cw.slope_set": "Шал #{id}: налуу {pct}"
+}

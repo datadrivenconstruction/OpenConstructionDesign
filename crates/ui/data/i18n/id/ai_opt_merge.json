@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "Gabungkan opsi: {name}",
+ "ai_opt_merge.whole": "Gabungkan seluruh opsi",
+ "ai_opt_merge.parts": "Gabungkan bagian yang dipilih",
+ "ai_opt_merge.note": "Mengapa opsi ini",
+ "ai_opt_merge.rebased": "Model berubah setelah opsi ini dibuat: penggabungan dihitung ulang terhadap model saat ini. Periksa perubahannya sebelum menerapkan.",
+ "ai_opt_merge.left.not_picked": "Tidak dipilih dari opsi",
+ "ai_opt_merge.left.unticked": "Centang dihapus di opsi",
+ "ai_opt_merge.left.conflict": "Tidak bisa ditambahkan ke model saat ini: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "Opsi ini tidak bisa digabungkan. Opsi yang ditolak harus dipulihkan dulu.",
+ "ai_opt_merge.refused.stale": "Model berubah setelah opsi ini dibuat. Hitung ulang penggabungan terhadap model saat ini.",
+ "ai_opt_merge.refused.nothing_picked": "Tidak ada yang dipilih untuk digabungkan.",
+ "ai_opt_merge.refused.unknown_item": "Item {item} bukan bagian dari opsi ini.",
+ "ai_opt_merge.refused.not_in_option": "Elemen yang dipilih bukan bagian dari opsi ini.",
+ "ai_opt_merge.refused.needs_left_out": "Item {item} memerlukan item {needs}. Pilih juga, atau izinkan dependensi ditambahkan.",
+ "ai_opt_merge.refused.set_gone": "Item {item} merujuk ke pilihan yang sudah tidak ada. Buat ulang opsi.",
+ "ai_opt_merge.refused.busy": "Rencana lain sedang terbuka. Terapkan atau tolak terlebih dahulu.",
+ "ai_opt_merge.refused.failed": "Penggabungan tidak dapat disiapkan: {reason}",
+ "ai_opt_merge.revive": "Pulihkan opsi",
+ "ai_opt_merge.merged": "Digabungkan"
+}

@@ -1,0 +1,29 @@
+{
+ "recover.ago_now": "poco fa",
+ "recover.ago_min": {
+  "one": "# min fa",
+  "other": "# min fa"
+ },
+ "recover.ago_hour": {
+  "one": "# ora fa",
+  "other": "# ore fa"
+ },
+ "recover.ago_yesterday": "ieri",
+ "recover.ago_day": {
+  "one": "# giorno fa",
+  "other": "# giorni fa"
+ },
+ "recover.empty": "Nessuna istantanea rimasta",
+ "recover.empty_hint": "Nulla da ripristinare per questo progetto.",
+ "recover.all_damaged": "Tutte le istantanee sono danneggiate, nessuna può essere ripristinata.",
+ "recover.keys_hint": "Su e Giù scelgono un'istantanea, Invio passa a Ripristina",
+ "recover.row_tip": "Salvata {time}",
+ "recover.row_damaged_tip": "Impossibile ripristinare: {reason}",
+ "recover.archive_ask": "Spostare questa istantanea nell'archivio?",
+ "recover.discard_ask": {
+  "one": "Spostare l'istantanea nell'archivio? Non verrà più proposta.",
+  "other": "Spostare tutte le # istantanee nell'archivio? Non verranno più proposte."
+ },
+ "recover.confirm_yes": "Sposta in archivio",
+ "recover.confirm_no": "Mantieni istantanee"
+}

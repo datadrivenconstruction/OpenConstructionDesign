@@ -1,0 +1,7 @@
+{
+ "xl.msg.param_ambiguous": "a coluna '{}' pode ser qualquer um dos parâmetros {}; digite o nome exato do parâmetro, não aplicado",
+ "xl.msg.param_tag_stale": "a coluna '{}' nomeia um parâmetro que este projeto não tem; não aplicado",
+ "xl.msg.dup_col_note": "a coluna '{}' em {} repete a coluna '{}' em {}; valores iguais são aplicados uma vez, uma linha onde diferem mantém o valor do modelo",
+ "xl.msg.dup_col_differs": "as colunas '{}' e '{}' diferem em {} e {}; o valor do modelo permanece — mantenha uma coluna",
+ "xl.msg.dup_col_id": "as colunas '{}' e '{}' diferem em {} e {}, a linha não pode ser identificada; nada aplicado — mantenha uma coluna"
+}

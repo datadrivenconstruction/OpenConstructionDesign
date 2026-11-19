@@ -1,0 +1,21 @@
+{
+ "cmd.help.check_update": "Zkontrolovat aktualizace",
+ "update_check.title": "Kontrola aktualizací",
+ "update_check.desc": "Ve výchozím nastavení vypnuto. Odesílá pouze verzi, operační systém a architekturu a druh instalace na náš server. Nic nestahuje ani neinstaluje.",
+ "update_check.freq.startup": "Při spuštění",
+ "update_check.freq.daily": "Denně",
+ "update_check.freq.weekly": "Týdně",
+ "update_check.freq.never": "Nikdy",
+ "update_check.check_now": "Zkontrolovat nyní",
+ "update_check.dialog.title": "Kontrola aktualizací",
+ "update_check.unknown.title": "Aktualizace nelze zkontrolovat",
+ "update_check.unknown.body": "{e}. To neznamená, že tato verze je aktuální. Zkuste to později.",
+ "update_check.current": "Máte nejnovější verzi ({v}).",
+ "update_check.newer": "Je k dispozici verze {v}",
+ "update_check.date": "Vydáno {d}",
+ "update_check.unfit": "Tato verze ({v}) je starší než doporučená minimální verze {f}. Doporučujeme aktualizovat.",
+ "update_check.close": "Zavřít",
+ "update_check.open_failed": "Stránku s vydáním nelze otevřít.",
+ "update_check.toast.newer": "Je k dispozici verze {v}. Nápověda > Zkontrolovat aktualizace.",
+ "update_check.toast.unfit": "Tato verze ({v}) je starší než doporučená minimální verze {f}."
+}

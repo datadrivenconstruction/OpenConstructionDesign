@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "Uus perekond",
+ "family_editor.open_tip": "Ava perekond või mustand",
+ "family_editor.close_named": "Sulge {name}",
+ "family_editor.unsaved": "Salvestamata muudatused",
+ "family_editor.search": "Otsi",
+ "family_editor.nothing": "Midagi ei leitud",
+ "family_editor.sec_families": "Projekti perekonnad",
+ "family_editor.sec_drafts": "Mustandid",
+ "family_editor.cap_category": "Kategooria",
+ "family_editor.cap_host": "Põhielement",
+ "family_editor.cap_type": "Eelvaate tüüp"
+}

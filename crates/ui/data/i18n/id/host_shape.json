@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "Bukaan dormer",
+ "cmd.arch.roof_opening": "Bukaan atap",
+ "cmd.arch.roof_extrusion": "Atap dengan ekstrusi",
+ "cmd.arch.ceiling_opening": "Bukaan plafon",
+ "cmd.str.slab_opening": "Bukaan lantai",
+ "cmd.ctx.wall.detach": "Lepas ujung atas",
+ "cmd.ctx.floor.sketch": "Ubah batas",
+ "cmd.ctx.floor.shape": "Ubah bentuk",
+ "host_shape.shape.elev_prompt": "elevasi, mm…",
+ "host_shape.shape.elev_mm": "{v} mm",
+ "host_shape.sketch.no_host": "tidak ada inang di bawah batas pada level ini",
+ "host_shape.issue.roof": "atap {id}: {e}",
+ "host_shape.issue.ceiling": "plafon {id}: {e}",
+ "host_shape.status.select_slab": "pilih pelat",
+ "host_shape.status.select_walls": "pilih dinding",
+ "host_shape.status.no_roof_or_level": "tidak ada atap atau level di atas",
+ "host_shape.status.top_attached": "ujung dinding dilekatkan",
+ "host_shape.status.top_detached": "ujung dinding dilepas",
+ "host_shape.status.straight_wall": "diperlukan dinding lurus",
+ "host_shape.status.roof_extruded": "atap dengan ekstrusi dibuat",
+ "warn.kind.cut": "Potongan atau sambungan belum dibuat"
+}

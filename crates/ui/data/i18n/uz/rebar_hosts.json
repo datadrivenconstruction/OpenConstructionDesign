@@ -1,0 +1,40 @@
+{
+ "rebar_hosts.hosts": "Asoslar: {list}",
+ "rebar_hosts.kind.column": "Ustun",
+ "rebar_hosts.kind.beam": "To'sin",
+ "rebar_hosts.kind.wall": "Devor",
+ "rebar_hosts.kind.slab": "Plita",
+ "rebar_hosts.kind.footing": "Poydevor",
+ "rebar_hosts.kind.raft": "Poydevor plitasi",
+ "rebar_hosts.n.column": {
+  "one": "# ustun",
+  "other": "# ustun"
+ },
+ "rebar_hosts.n.beam": {
+  "one": "# to'sin",
+  "other": "# to'sin"
+ },
+ "rebar_hosts.n.wall": {
+  "one": "# devor",
+  "other": "# devor"
+ },
+ "rebar_hosts.n.slab": {
+  "one": "# plita",
+  "other": "# plita"
+ },
+ "rebar_hosts.n.footing": {
+  "one": "# poydevor",
+  "other": "# poydevor"
+ },
+ "rebar_hosts.n.raft": {
+  "one": "# poydevor plitasi",
+  "other": "# poydevor plitasi"
+ },
+ "rebar_hosts.mixed_note": "Ustun va to'sinlarga armatura va bog'lamlar; devor, plita va poydevorlarga to'r kiradi. Armatura qo'shish uchun bitta guruhni tanlang.",
+ "rebar_hosts.why.mixed": "Tanlovda ustun yoki to'sinlar devor, plita yoki poydevorlar bilan aralashgan. Bitta guruhni tanlang.",
+ "rebar_hosts.why.area_linear": "To'r devor, plita va poydevorlarga kiradi, ustun yoki to'sinlarga emas.",
+ "rebar_hosts.why.bars_plate": "Bo'ylama armatura va bog'lamlar ustun va to'sinlarga kiradi, devor, plita yoki poydevorlarga emas.",
+ "rebar_hosts.why.no_common_face": "Tanlangan asoslarda umumiy qoplama yuzi yo'q. Bir turdagi asoslarni tanlang.",
+ "rebar_hosts.why.no_type": "Armatura turini tanlang.",
+ "rebar_hosts.kind_type": "{kind} · {type}"
+}

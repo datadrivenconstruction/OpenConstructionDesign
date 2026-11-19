@@ -1,0 +1,9 @@
+{
+ "xl.msg.base_value": "pemeriksaan baca ulang gagal, workbook lama dipertahankan: {} ({}) diharapkan '{}', terbaca '{}'",
+ "xl.msg.base_missing": "pemeriksaan baca ulang gagal, workbook lama dipertahankan: lembar {} tidak punya baris untuk id {}",
+ "xl.msg.base_extra": "pemeriksaan baca ulang gagal, workbook lama dipertahankan: baris {} tidak ada di model",
+ "xl.msg.base_refused": "pemeriksaan baca ulang gagal, workbook lama dipertahankan: {} ({}) ditolak: {}",
+ "xl.msg.base_sheet": "pemeriksaan baca ulang gagal, workbook lama dipertahankan: lembar {} hilang, kosong, atau tidak terbaca",
+ "xl.msg.base_newer": "pemeriksaan baca ulang gagal, workbook lama dipertahankan: {} sel tidak memuat nilai model",
+ "xl.msg.base_unreadable": "pemeriksaan baca ulang gagal, workbook lama dipertahankan: workbook baru tidak dapat dibaca ({})"
+}

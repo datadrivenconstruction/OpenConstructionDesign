@@ -1,0 +1,13 @@
+{
+ "cmd.arch.wall_pick": "Wand nach Linie",
+ "cmd.arch.wall_pick.desc": "Platziert eine Wand auf einer gewählten Zeichnungslinie des aktuellen Geschosses. F wechselt zwischen Achse und Fläche auf der Linie, Tab übernimmt die verbundene Kette. Jede Auswahl ist ein Rückgängig-Schritt. Funktioniert auch für Vorhangfassaden.",
+ "hint.wall_pick.center": "Wand nach Linie: Zeichnungslinie wählen · Achse auf der Linie · F Fläche · Tab Kette · Esc beenden",
+ "hint.wall_pick.face": "Wand nach Linie: Zeichnungslinie wählen · Fläche auf der Linie, Cursorseite · F Achse · Tab Kette · Esc beenden",
+ "hint.wall_pick.center_chain": "Wand nach Linie: Linie wählen, um ihre Kette zu übernehmen · Achse auf der Linie · F Fläche · Tab eine Linie",
+ "hint.wall_pick.face_chain": "Wand nach Linie: Linie wählen, um ihre Kette zu übernehmen · Fläche auf der Linie · F Achse · Tab eine Linie",
+ "wall_pick.st.start": "Zeichnungslinie wählen. F: Achse oder Fläche, Tab: verbundene Kette",
+ "wall_pick.st.no_lines": "Keine sichtbaren Zeichnungslinien auf dieser Ebene",
+ "wall_pick.st.miss": "Hier keine Zeichnungslinie",
+ "wall_pick.st.on_wall": "Diese Linie liegt bereits unter Wand {id}",
+ "wall_pick.st.tight": "Der Flächenversatz passt nicht: Ein Abschnitt der Kette ist kürzer als die Wanddicke"
+}

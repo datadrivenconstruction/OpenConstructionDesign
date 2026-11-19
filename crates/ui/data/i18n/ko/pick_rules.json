@@ -1,0 +1,11 @@
+{
+ "pick_rules.filter": "선택: 모두",
+ "pick_rules.filter.on": "선택: {n}개 끔",
+ "pick_rules.filter.title": "클릭으로 고를 수 있는 범주",
+ "pick_rules.filter.all": "모든 범주 선택",
+ "pick_rules.filter.tip": "선택 필터: 체크 해제된 범주는 클릭과 마우스 올림에서 건너뜁니다",
+ "pick_rules.here": "여기 있는 항목",
+ "pick_rules.here.selected": "선택됨",
+ "pick_rules.pinned": "고정된 항목 선택",
+ "pick_rules.here.row": "{cat} · {len}"
+}

@@ -1,0 +1,10 @@
+{
+ "view_gfx.vv.visible_tip": "در این نما قابل‌مشاهده",
+ "view_gfx.vv.enabled_tip": "این فیلتر را در این نما اعمال کن",
+ "view_gfx.vv.reset_tip": "بازگشت به پیش‌فرض پروژه",
+ "view_gfx.vv.col.actions": "اقدام‌ها",
+ "view_gfx.vv.nothing_to_apply": "تغییری برای اعمال نیست",
+ "view_gfx.flt.save_blocked": "فیلتر را نام‌گذاری کنید و پارامتر هر قاعده را پر کنید",
+ "view_gfx.flt.confirm_delete": "برای همه نماها حذف شود؟",
+ "view_gfx.flt.param_pick": "انتخاب…"
+}

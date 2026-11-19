@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "视图范围",
+ "view_range.range": "视图范围",
+ "view_range.cut": "剖切面",
+ "view_range.bottom": "底部",
+ "view_range.depth": "视图深度",
+ "view_range.cut.hint": "剖切面相对于楼层标高的高度。与之相交的元素将以剖切方式显示。",
+ "view_range.bottom.hint": "范围底部，相对于楼层标高。允许为零或负值。",
+ "view_range.depth.hint": "视图向底部以下延伸的距离。零或更大。",
+ "view_range.err.number": "请在每个字段中输入长度",
+ "view_range.err.not_finite": "请在每个字段中输入长度",
+ "view_range.err.cut_not_above_bottom": "剖切面必须高于底部",
+ "view_range.err.negative_depth": "视图深度不能为负",
+ "view_range.err.top_below_cut": "范围顶部不得低于剖切面"
+}

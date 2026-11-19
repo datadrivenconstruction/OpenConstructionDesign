@@ -1,0 +1,16 @@
+{
+ "xlsx_recover.title": "Eksport seotud töövihikusse katkes",
+ "xlsx_recover.both": "Eksport peatus pärast seda, kui eelmine töövihik oli kõrvale liigutatud, aga enne uue paigutamist. Midagi pole kadunud: uus töövihik on täielik asukohas {part}, eelmine jäetakse asukohta {bak}.",
+ "xlsx_recover.part_only": "Eksport peatus enne, kui uus töövihik paigale pandi. See on täielik asukohas {part}.",
+ "xlsx_recover.bak_only": "Eksport peatus enne, kui uus töövihik oli valmis. Eelmine töövihik jäetakse asukohta {bak}.",
+ "xlsx_recover.finish": "Lõpeta katkestatud eksport",
+ "xlsx_recover.restore": "Taasta eelmine töövihik",
+ "xlsx_recover.finished": "Katkestatud eksport on lõpetatud: uus töövihik on paigas.",
+ "xlsx_recover.finished_kept": "Katkestatud eksport on lõpetatud: uus töövihik on paigas, eelmine jäetakse asukohta {bak}.",
+ "xlsx_recover.restored": "Eelmine töövihik on tagasi paigas.",
+ "xlsx_recover.restore_failed": "Eelmist töövihikut ei saanud tagasi liigutada ({err}). See jääb asukohta {path}.",
+ "xlsx_recover.not_restored": "Uut töövihikut ei saanud paika panna ja eelmist ei saanud tagasi liigutada. Midagi pole kadunud: eelmine töövihik jäetakse asukohta {path}; sünkroonimine pakub lõpetamist või taastamist.",
+ "xlsx_recover.finish_failed": "Uut töövihikut ei saanud paika panna ({err}). See jääb asukohta {path}.",
+ "xlsx_recover.dest_back": "Töövihik on tagasi asukohas {path}: midagi ei liigutatud.",
+ "xlsx_recover.nothing": "Katkestatud eksportist pole midagi teisaldada."
+}

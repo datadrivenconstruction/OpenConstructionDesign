@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "O'tkazib yuborilgan qatorlar va kataklar",
+ "xlsx_issues.conflicts_title": "Ikkala joyda o'zgartirilgan",
+ "xlsx_issues.missing_title": "Varaq ish kitobida yo'q",
+ "xlsx_issues.look_alike_title": "Varaq nomi mos kelmaydi",
+ "xlsx_issues.mass_title": "Ommaviy o'chirish tasdiqlanishi kerak",
+ "xlsx_issues.sheets_missing": "{sheets} varaqlari ish kitobida yo'q (nomi o'zgargan yoki o'chirilgan); ularning qatorlari solishtirilmadi.",
+ "xlsx_issues.keep_model": "Modelni saqlash",
+ "xlsx_issues.take_book": "Ish kitobini olish",
+ "xlsx_issues.open_book_tip": "Faylni uning ilovasida ochadi. Model o'zgarmaydi; ish kitobini saqlaganingizdan keyin oldindan ko'rish qayta yuklanadi."
+}

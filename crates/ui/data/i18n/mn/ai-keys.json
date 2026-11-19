@@ -1,0 +1,14 @@
+{
+ "ai_keys.header_is_key": "Түлхүүрүүд Түлхүүр талбарт байх ёстой — заголовкууд текстээр хадгалагддаг",
+ "ai_keys.move": "Түлхүүр рүү зөөх",
+ "ai_keys.remove_line": "Заголовкуудаас устгах",
+ "ai_keys.save_blocked": "Хадгалахын тулд түлхүүрийг заголовкуудаас гаргана уу",
+ "ai_keys.show": "Харуулах",
+ "ai_keys.hide": "Нуух",
+ "ai_keys.copy": "Хуулах",
+ "ai_keys.tokens": "токен",
+ "ai_keys.presets": "Бэлэн тохиргоо",
+ "ai_keys.preset_k": "{n}k",
+ "ai_keys.preset_m": "{n}M",
+ "ai_keys.images_on": "Дэмжигдсэн"
+}

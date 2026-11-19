@@ -1,0 +1,11 @@
+{
+ "cmd.arch.roof_gable.short": "A dos aguas",
+ "cmd.arch.roof_hip.short": "A cuatro aguas",
+ "cmd.arch.roof_shed.short": "A un agua",
+ "cmd.arch.roof_mansard.short": "Mansarda",
+ "cmd.arch.roof_gambrel.short": "Quebrada",
+ "cmd.arch.roof_barrel.short": "Bóveda",
+ "cmd.arch.roof_edges.short": "Bordes de cubierta",
+ "cmd.arch.roof_opening.short": "Hueco",
+ "cmd.mass.roof_by_face.short": "Por cara"
+}

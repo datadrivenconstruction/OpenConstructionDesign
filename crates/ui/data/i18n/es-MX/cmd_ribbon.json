@@ -1,0 +1,23 @@
+{
+  "cmd.arch.room_sep.short": "Separador",
+  "cmd.str.footing.short": "Zapata pilar",
+  "cmd.str.strip_footing.short": "Zapata corr.",
+  "cmd.str.analytical.short": "Analítico",
+  "cmd.mep.terminal.short": "Difusor",
+  "cmd.mod.isolate.short": "Aislar",
+  "cmd.view.ui.short": "Interfaz",
+  "cmd.mgr.params.short": "Parámetros",
+  "cmd.ctx.wall.attach.short": "Adjuntar",
+  "cmd.mass.unjoin.short": "Desunir",
+  "cmd.mod.unjoin.short": "Desunir",
+  "cmd.arch.void_extrusion.short": "Extr. hueco",
+  "cmd.e3d.snap.short": "Ajustes 3D",
+  "cmd.mgr.open_big.short": "Archivo grande…",
+  "cmd.site.edit_points.short": "Puntos topo",
+  "cmd.view.reveal_3d.short": "Ver categorías",
+  "cmd.help.check_update.short": "Actualizar",
+  "cmd.ctx.floor.link_unlink.short": "Quitar bordes",
+  "cmd.ui.onboarding.short": "Configurar…",
+  "cmd.mod.distribute.short": "Distribuir",
+  "cmd.data.src_delta.short": "Cambios hoja de cálculo XLSX…"
+}

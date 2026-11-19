@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "Panel",
+ "curtain_props.cw.panel_cell": "Hücre {i}×{j} · perde duvar #{id}",
+ "curtain_props.cw.kind": "Tip",
+ "curtain_props.cw.kind.glazed": "Cam",
+ "curtain_props.cw.kind.solid": "Dolu",
+ "curtain_props.cw.kind.door": "Kapı",
+ "curtain_props.cw.kind.window": "Pencere",
+ "curtain_props.cw.kind.empty": "Boş",
+ "curtain_props.cw.name": "Ad",
+ "curtain_props.cw.swing_side": "Diğer tarafa açılır",
+ "curtain_props.cw.swing_hinge": "Menteşe hücre ucunda",
+ "curtain_props.cw.size": "Boyut",
+ "curtain_props.cw.cell_area": "Hücre alanı",
+ "curtain_props.cw.panel_area": "Panel alanı",
+ "curtain_props.cw.prev": "Önceki panel",
+ "curtain_props.cw.next": "Sonraki panel",
+ "curtain_props.cw.wall": "Duvarı seçin",
+ "curtain_props.cw.panel_hint": "Esc — seçim · Ctrl+Z — geri al",
+ "curtain_props.cw.status.panel": "Panel {i}×{j} → {kind}",
+ "e3d.err.cw_height": "perde duvar yüksekliği 100 mm'den büyük olmalı"
+}

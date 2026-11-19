@@ -1,0 +1,323 @@
+{
+ "rules": [
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.16
+   },
+   "unit": "m",
+   "value": 0.16,
+   "text": {
+    "en": "Common stair riser at most 0.16 m",
+    "ru": "Подъём ступени общей лестницы не более 0.16 м"
+   },
+   "source": {
+    "doc": "tr-planli",
+    "clause": "Art. 31 para 2 item a",
+    "url": "https://www.alomaliye.com/wp-content/uploads/2017/07/planli-alanlar-01-07-2026.pdf",
+    "edition": "consolidated through the amendment of 2026-07-01 (RG 33297)",
+    "accessed": "2026-11-14",
+    "paraphrase": "Riser may not exceed 16 cm in buildings without a lift and 18 cm in buildings with one."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "tr.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.27
+   },
+   "unit": "m",
+   "value": 0.27,
+   "text": {
+    "en": "Common stair tread at least 0.27 m",
+    "ru": "Проступь общей лестницы не менее 0.27 м"
+   },
+   "source": {
+    "doc": "tr-planli",
+    "clause": "Art. 31 para 2 item b",
+    "url": "https://www.alomaliye.com/wp-content/uploads/2017/07/planli-alanlar-01-07-2026.pdf",
+    "edition": "consolidated through the amendment of 2026-07-01 (RG 33297)",
+    "accessed": "2026-11-14",
+    "paraphrase": "Tread is computed from twice the riser plus the tread being 60 to 64 cm, but never below 27 cm."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "tr.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 1.2
+   },
+   "unit": "m",
+   "value": 1.2,
+   "text": {
+    "en": "Common stair flight width at least 1.2 m",
+    "ru": "Ширина марша общей лестницы не менее 1.2 м"
+   },
+   "source": {
+    "doc": "tr-planli",
+    "clause": "Art. 31 para 1 item a",
+    "url": "https://www.alomaliye.com/wp-content/uploads/2017/07/planli-alanlar-01-07-2026.pdf",
+    "edition": "consolidated through the amendment of 2026-07-01 (RG 33297)",
+    "accessed": "2026-11-14",
+    "paraphrase": "Common stair flights and landings in housing are at least 1.2 m (1.5 m in other buildings), and not less than the escape width worked out under the fire regulation."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "tr.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 1.0
+   },
+   "unit": "m",
+   "value": 1.0,
+   "text": {
+    "en": "Stair flight width in a house at least 1.0 m",
+    "ru": "Ширина марша в доме не менее 1.0 м"
+   },
+   "source": {
+    "doc": "tr-planli",
+    "clause": "Art. 31 para 1 item a",
+    "url": "https://www.alomaliye.com/wp-content/uploads/2017/07/planli-alanlar-01-07-2026.pdf",
+    "edition": "consolidated through the amendment of 2026-07-01 (RG 33297)",
+    "accessed": "2026-11-14",
+    "paraphrase": "Stairs inside a single dwelling unit may be as narrow as 1.0 m."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "tr.house.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.6
+   },
+   "unit": "m",
+   "value": 2.6,
+   "text": {
+    "en": "Clear height of habitable rooms at least 2.6 m",
+    "ru": "Высота жилых помещений не менее 2.6 м"
+   },
+   "source": {
+    "doc": "tr-planli",
+    "clause": "Art. 28 para 4",
+    "url": "https://www.alomaliye.com/wp-content/uploads/2017/07/planli-alanlar-01-07-2026.pdf",
+    "edition": "consolidated through the amendment of 2026-07-01 (RG 33297)",
+    "accessed": "2026-11-14",
+    "paraphrase": "Occupied storeys need 2.6 m clear height (2.4 m where an aviation limit fixes the storey count); bathrooms, store rooms and passages may drop to 2.2 m."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "tr.res.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "room_kind": [
+     "office",
+     "meeting"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.6
+   },
+   "unit": "m",
+   "value": 2.6,
+   "text": {
+    "en": "Clear height of work rooms at least 2.6 m",
+    "ru": "Высота рабочих помещений не менее 2.6 м"
+   },
+   "source": {
+    "doc": "tr-planli",
+    "clause": "Art. 28 para 4",
+    "url": "https://www.alomaliye.com/wp-content/uploads/2017/07/planli-alanlar-01-07-2026.pdf",
+    "edition": "consolidated through the amendment of 2026-07-01 (RG 33297)",
+    "accessed": "2026-11-14",
+    "paraphrase": "The same occupied-storey minimum of 2.6 m applies to offices."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "tr.off.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ],
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "width",
+    "min": 1.5
+   },
+   "unit": "m",
+   "value": 1.5,
+   "text": {
+    "en": "Accessible-route corridor clear width at least 1.5 m",
+    "ru": "Ширина коридора на доступном маршруте не менее 1.5 м"
+   },
+   "source": {
+    "doc": "tr-planli",
+    "clause": "Art. 30 para 1",
+    "url": "https://www.alomaliye.com/wp-content/uploads/2017/07/planli-alanlar-01-07-2026.pdf",
+    "edition": "consolidated through the amendment of 2026-07-01 (RG 33297)",
+    "accessed": "2026-11-14",
+    "paraphrase": "Entrance corridor up to the main stair or lift is at least 1.5 m wide in ordinary buildings and 2.2 m in public buildings."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "tr.acc.corr"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 20,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 20,
+   "text": {
+    "en": "Travel distance to an exit or stair at most 20 m (residential)",
+    "ru": "Путь до выхода или лестницы не более 20 м (жилые)"
+   },
+   "source": {
+    "doc": "tr-fire",
+    "clause": "Art. 48 para 2",
+    "url": "https://www.aile.gov.tr/eyhgm/mevzuat/ulusal-mevzuat/yonetmelikler/binalarin-yangindan-korunmasi-hakkinda-yonetmelik/",
+    "edition": "consolidated, amendments to 2015-03-16",
+    "accessed": "2026-11-14",
+    "paraphrase": "In dwellings above four storeys the run from any point inside a unit to its exit door is capped at 20 m, or 30 m if the unit is sprinklered."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "tr.egr.res"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 45,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 45,
+   "text": {
+    "en": "Travel distance to an exit or stair at most 45 m (office)",
+    "ru": "Путь до выхода или лестницы не более 45 м (офисы)"
+   },
+   "source": {
+    "doc": "tr-fire",
+    "clause": "Annex Ek-5/B, row for office buildings",
+    "url": "https://www.aile.gov.tr/eyhgm/mevzuat/ulusal-mevzuat/yonetmelikler/binalarin-yangindan-korunmasi-hakkinda-yonetmelik/",
+    "edition": "consolidated, amendments to 2015-03-16",
+    "accessed": "2026-11-14",
+    "paraphrase": "Offices: 45 m to an exit with two escape directions and no sprinklers (75 m sprinklered); 15 m (30 m) when only one direction exists."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "tr.egr.off"
+  },
+  {
+   "id": "generic.egress.distance",
+   "disabled": true
+  }
+ ]
+}

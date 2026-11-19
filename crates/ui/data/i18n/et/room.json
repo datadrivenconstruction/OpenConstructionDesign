@@ -1,0 +1,6 @@
+{
+ "geom.length": "Pikkus",
+ "sched.cat.room_seps": "Ruumide eraldajad",
+ "room.err.point_leave": "Ruum {n}: punkt lahkuks selle piirist",
+ "room.err.point_taken": "Ruum {n}: punkt satuks ruumi {other}"
+}

@@ -1,0 +1,18 @@
+{
+ "cmd.mass.freeform": "Эркин бет",
+ "cmd.mass.panelize": "Панелдерге бөлүү",
+ "cmd.mass.surface_shell": "Бет боюнча чатыр",
+ "cmd.mass.thicken": "Калыңдатуу",
+ "hint.mass.freeform.first": "Эркин бет: планда тик бурчтуктун биринчи бурчу · сан — көтөрүлүү · Esc — жокко чыгаруу",
+ "hint.mass.freeform.next": "Эркин бет: карама-каршы бурч · сан — көтөрүлүү · Esc — жокко чыгаруу",
+ "hint.mass.panelize.first": "Панелдер: 3D да эркин бетти тандаңыз · Esc — жокко чыгаруу",
+ "hint.mass.panelize.value": "Панелдер: панелдин өлчөмүн киргизиңиз · Enter — колдонуу · Esc — жокко чыгаруу",
+ "hint.mass.surface_shell.first": "Бет боюнча чатыр: 3D да эркин бетти тандаңыз · Esc — жокко чыгаруу",
+ "hint.mass.surface_shell.value": "Бет боюнча чатыр: калыңдыгын киргизиңиз · Enter — колдонуу · Esc — жокко чыгаруу",
+ "hint.mass.thicken.first": "Калыңдатуу: 3D да эркин бетти тандаңыз · Esc — жокко чыгаруу",
+ "hint.mass.thicken.value": "Калыңдатуу: калыңдыгын киргизиңиз (0 — калыңдыксыз бет) · Enter — колдонуу · Esc — жокко чыгаруу",
+ "status.mass.pick_surface": "Эркин бетти тандаңыз",
+ "status.mass.freeform_small": "Тик бурчтук өтө кичине: ар бир тарапы боюнча кеминде 0,5 м",
+ "name.mass.freeform": "Эркин бет",
+ "rgroup.mass_free": "Кошумча"
+}

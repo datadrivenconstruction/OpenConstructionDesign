@@ -1,0 +1,14 @@
+{
+ "ai_keys.header_is_key": "A kulcsok a Kulcs mezőbe valók — a fejlécek egyszerű szövegként mentődnek",
+ "ai_keys.move": "Áthelyezés a Kulcsba",
+ "ai_keys.remove_line": "Eltávolítás a fejlécekből",
+ "ai_keys.save_blocked": "A mentéshez vegye ki a kulcsot a fejlécekből",
+ "ai_keys.show": "Megjelenítés",
+ "ai_keys.hide": "Elrejtés",
+ "ai_keys.copy": "Másolás",
+ "ai_keys.tokens": "tokenek",
+ "ai_keys.presets": "Előre beállítások",
+ "ai_keys.preset_k": "{n}k",
+ "ai_keys.preset_m": "{n}M",
+ "ai_keys.images_on": "Támogatott"
+}

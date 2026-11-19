@@ -1,0 +1,217 @@
+{
+ "rules": [
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.17
+   },
+   "unit": "m",
+   "value": 0.17,
+   "text": {
+    "en": "Common stair riser at most 0.17 m",
+    "ru": "Подъём ступени общей лестницы не более 0.17 м"
+   },
+   "source": {
+    "doc": "id-pp16",
+    "clause": "Annex, public stairs",
+    "url": "https://dpmptsp.subang.go.id/izin/contoh_doc/PP-Nomor-16-Tahun-2021-Lamp.-Bagian-1-compressed.pdf",
+    "edition": "2021",
+    "accessed": "2026-11-14",
+    "paraphrase": "Public stair riser between 15 and 17 cm."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "id.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.3
+   },
+   "unit": "m",
+   "value": 0.3,
+   "text": {
+    "en": "Common stair tread at least 0.3 m",
+    "ru": "Проступь общей лестницы не менее 0.3 м"
+   },
+   "source": {
+    "doc": "id-pp16",
+    "clause": "Annex, public stairs",
+    "url": "https://dpmptsp.subang.go.id/izin/contoh_doc/PP-Nomor-16-Tahun-2021-Lamp.-Bagian-1-compressed.pdf",
+    "edition": "2021",
+    "accessed": "2026-11-14",
+    "paraphrase": "Public stair tread at least 30 cm."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "id.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 0.9
+   },
+   "unit": "m",
+   "value": 0.9,
+   "text": {
+    "en": "Common stair flight width at least 0.9 m",
+    "ru": "Ширина марша общей лестницы не менее 0.9 м"
+   },
+   "source": {
+    "doc": "id-pp16",
+    "clause": "Annex, exit stairs",
+    "url": "https://dpmptsp.subang.go.id/izin/contoh_doc/PP-Nomor-16-Tahun-2021-Lamp.-Bagian-1-compressed.pdf",
+    "edition": "2021",
+    "accessed": "2026-11-14",
+    "paraphrase": "Exit stair and landing width at least 90 cm for up to 50 people and 112 cm above that."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "id.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ],
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "width",
+    "min": 0.92
+   },
+   "unit": "m",
+   "value": 0.92,
+   "text": {
+    "en": "Accessible-route corridor clear width at least 0.92 m",
+    "ru": "Ширина коридора на доступном маршруте не менее 0.92 м"
+   },
+   "source": {
+    "doc": "id-pp16",
+    "clause": "Annex, corridor figures",
+    "url": "https://dpmptsp.subang.go.id/izin/contoh_doc/PP-Nomor-16-Tahun-2021-Lamp.-Bagian-1-compressed.pdf",
+    "edition": "2021",
+    "accessed": "2026-11-14",
+    "paraphrase": "Corridor effective width at least 92 cm for a wheelchair user, with 152 cm recommended for passing."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "id.acc.corr"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 53,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 53,
+   "text": {
+    "en": "Travel distance to an exit or stair at most 53 m (residential)",
+    "ru": "Путь до выхода или лестницы не более 53 м (жилые)"
+   },
+   "source": {
+    "doc": "id-permen26-2008",
+    "clause": "Chapter III, Table A.3.11, apartments, new",
+    "url": "https://pelayanan.jakarta.go.id/download/regulasi/peraturan-menteri-pekerjaan-umum-nomor-26-prt-m-2008-tentang-persyaratan-teknis-sistem-proteksi-kebakaran-pada-bangunan-gedung-dan-lingkungan.pdf",
+    "edition": "26/PRT/M/2008",
+    "accessed": "2026-11-14",
+    "paraphrase": "Total travel distance to an exit in new apartment buildings without sprinklers is 53 m (99 m with sprinklers)."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "id.egr.res"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 61,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 61,
+   "text": {
+    "en": "Travel distance to an exit or stair at most 61 m (office)",
+    "ru": "Путь до выхода или лестницы не более 61 м (офисы)"
+   },
+   "source": {
+    "doc": "id-permen26-2008",
+    "clause": "Chapter III, Table A.3.11, business occupancy, new",
+    "url": "https://pelayanan.jakarta.go.id/download/regulasi/peraturan-menteri-pekerjaan-umum-nomor-26-prt-m-2008-tentang-persyaratan-teknis-sistem-proteksi-kebakaran-pada-bangunan-gedung-dan-lingkungan.pdf",
+    "edition": "26/PRT/M/2008",
+    "accessed": "2026-11-14",
+    "paraphrase": "Total travel distance to an exit in new office (business) buildings without sprinklers is 61 m (91 m with sprinklers)."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "id.egr.off"
+  },
+  {
+   "id": "generic.egress.distance",
+   "disabled": true
+  }
+ ]
+}

@@ -1,0 +1,27 @@
+id = "G26_ferris_wheel__de"
+tier = "hard"
+group = "Any geometry"
+title = "Ferris wheel"
+lang = "de"
+base = "empty"
+
+[[turn]]
+say = "Ein Riesenrad mit 50 m Durchmesser auf einem A-Bock: Kranzfachwerk, 36 Seilspeichen, 24 Gondeln, Achse, Einstiegsplattform und Fundamente."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "comp:gondola|cabin|capsule"
+min = 24.0
+
+[[oracle.count]]
+spec = "beam+brace+col"
+min = 70.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

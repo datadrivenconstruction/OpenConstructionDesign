@@ -1,0 +1,14 @@
+{
+ "cmd.mod.divide": "Del",
+ "cmd.mod.divide.short": "Del",
+ "cmd.mod.divide.desc": "Deler en væg i lige store dele i ét trin. Skriv antallet af dele, og klik derefter på væggen.",
+ "whereis.mod.divide": "del, lige dele, skær i stykker, segmentér væg",
+ "hint.split.parts": "Del: klik på en væg · tal — dele (2–100) · Esc — annullér",
+ "create_input.divide.bad_parts": "„{text}“ er ikke et antal dele: skriv et helt tal fra 2 til {max}",
+ "create_input.ws.err.empty": "Skriv et navn til layoutet",
+ "create_input.ws.err.long": "Navnet er for langt: højst 40 tegn",
+ "create_input.ws.err.preset": "Det navn hører til et indbygget layout",
+ "create_input.ws.err.full": "Højst 24 gemte layouts: fjern først ét",
+ "create_input.seldim.locked": "Afstand {v} låst",
+ "create_input.seldim.positive": "Afstanden skal være over nul"
+}

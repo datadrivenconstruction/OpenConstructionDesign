@@ -1,0 +1,7 @@
+{
+ "spline.opt.spline": "Spline",
+ "spline.opt.spline_tip": "Spline fal: kattints a pontokra, amelyeken átmegy; Enter vagy Esc a befejezéshez",
+ "spline.wt.three_points": "a spline falhoz három vagy több pont kell",
+ "spline.wt.no_curtain": "a függönyfalnak nincs spline tengelye",
+ "spline.wt.added": "spline fal hozzáadva"
+}

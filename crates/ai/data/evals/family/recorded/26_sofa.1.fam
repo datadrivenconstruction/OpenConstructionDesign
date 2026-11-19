@@ -1,0 +1,30 @@
+family Sofa
+category furniture
+host floor
+ifc IfcFurniture SOFA
+param Width length type 2000mm
+param Depth length type 900mm
+param Height length type 800mm
+param SeatH length type 420mm
+param Arm length type 200mm
+param ArmH length type 600mm
+param Back length type 200mm
+param Base length type 200mm
+param Fabric material type "Upholstery Grey"
+ref Left x = -Width / 2
+ref Right x = Width / 2
+ref Front y = -Depth / 2
+ref Rear y = Depth / 2
+type "2000" Width=2000mm
+type "2400" Width=2400mm
+type "84in" Width=84in, Depth=36in, Height=32in, SeatH=17in, Arm=8in, ArmH=24in, Back=8in, Base=8in
+extrude Base rect(Left + Arm, Front, Right - Arm, Rear - Back) z(0, Base) mat(Fabric) show(3d, elev)
+extrude Seat rect(Left + Arm, Front, Right - Arm, Rear - Back) z(Base, SeatH) mat(Fabric) show(3d, elev)
+extrude Back rect(Left, Rear - Back, Right, Rear) z(0, Height) mat(Fabric) show(3d, elev)
+extrude ArmL rect(Left, Front, Left + Arm, Rear - Back) z(0, ArmH) mat(Fabric) show(3d, elev)
+extrude ArmR rect(Right - Arm, Front, Right, Rear - Back) z(0, ArmH) mat(Fabric) show(3d, elev)
+symbol rect(Left, Front, Right, Rear)
+symbol line(Left + Arm, Rear - Back, Right - Arm, Rear - Back)
+symbol line(Left + Arm, Front, Left + Arm, Rear - Back)
+symbol line(Right - Arm, Front, Right - Arm, Rear - Back)
+symbol line(0, Front, 0, Rear - Back) show(fine)

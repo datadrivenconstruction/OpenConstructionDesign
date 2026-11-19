@@ -1,0 +1,59 @@
+{
+ "del.k.door": {
+  "one": "# uks",
+  "other": "# ust"
+ },
+ "del.k.window": {
+  "one": "# aken",
+  "other": "# akent"
+ },
+ "del.k.opening": {
+  "one": "# avaus",
+  "other": "# avaust"
+ },
+ "del.k.comp": {
+  "one": "# kinnitatud komponent",
+  "other": "# kinnitatud komponenti"
+ },
+ "del.k.rebar": {
+  "one": "# armatuurikomplekt",
+  "other": "# armatuurikomplekti"
+ },
+ "del.k.port": {
+  "one": "# kinnitatud MEP-liitmik",
+  "other": "# kinnitatud MEP-liitmikku"
+ },
+ "del.k.joist": {
+  "one": "# raamtala",
+  "other": "# raamtalad"
+ },
+ "del.k.railing": {
+  "one": "# piire",
+  "other": "# piiret"
+ },
+ "del.k.tag": {
+  "one": "# märgis",
+  "other": "# märgist"
+ },
+ "del.k.dim": {
+  "one": "# mõõde (lahti ühendatud)",
+  "other": "# mõõdet (lahti ühendatud)"
+ },
+ "del.also": "Mõjutatud ka: {list}",
+ "del.rooms": {
+  "one": "# ruum kaotab ühe piirdeseina",
+  "other": "# ruumi kaotavad piirdeseina"
+ },
+ "del.cancelled": "Kustutamine tühistatud, midagi ei muudetud",
+ "del.confirm.title": "Kustuta koos sõltuvustega",
+ "del.confirm.lead": {
+  "one": "# valitud element võtab selle endaga kaasa:",
+  "other": "# valitud elementi võtavad need endaga kaasa:"
+ },
+ "del.confirm.levels": {
+  "one": "# neist on teisel tasemel",
+  "other": "# neist on teistel tasemetel"
+ },
+ "del.confirm.all": "Kustuta kõik",
+ "del.confirm.cancel": "Tühista"
+}

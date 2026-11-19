@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "Okna",
+ "quick.cat.shaft": "Okno",
+ "shaft_tool.browser.shaft": "Okno #{id}",
+ "shaft_tool.shaft.top": "Gornja razina",
+ "shaft_tool.shaft.cuts": "Elementi koji se režu",
+ "shaft_tool.shaft.cut_area": "Površina otvora",
+ "shaft_tool.shaft.cut_volume": "Volumen otvora",
+ "elem.no.rooms": "Prati prostorije koje sadrži"
+}

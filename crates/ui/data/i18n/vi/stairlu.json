@@ -1,0 +1,12 @@
+{
+ "opt.stair.straight": "Thẳng",
+ "opt.stair.l": "L",
+ "opt.stair.u": "U",
+ "opt.stair.gap": "Khoảng hở",
+ "hint.stair.corner": "Cầu thang chữ L: chọn góc rẽ · Backspace — xóa điểm cuối · Esc — xóa điểm cuối; khi không còn điểm — hủy",
+ "hint.stair.side": "Cầu thang: chọn phía của vế thứ hai · Backspace — xóa điểm cuối · Esc — xóa điểm cuối; khi không còn điểm — hủy",
+ "tool.stair.flights": "{n} bậc (tổng {m})",
+ "tool.stair.err_split": "Mỗi vế cần ít nhất 2 bậc: vế đầu có {n} trên {m}",
+ "tool.stair.err_comfort": "Alzada và bản bậc vi phạm quy tắc thoải mái (2R + T)",
+ "tool.stair.err_input": "Kích thước cầu thang nằm ngoài phạm vi: kiểm tra chiều rộng, chiều cao và chiếu nghỉ"
+}

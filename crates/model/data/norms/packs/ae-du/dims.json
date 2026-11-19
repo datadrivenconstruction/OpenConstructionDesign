@@ -1,0 +1,234 @@
+{
+ "items": [
+  {
+   "key": "room.height_min",
+   "value": 2.7,
+   "unit": "m",
+   "source": "ae-du-dbc",
+   "clause": "B.5.3, Table B.4",
+   "url": "https://dm.gov.ae/wp-content/uploads/2021/12/Dubai%20Building%20Code_English_2021%20Edition_compressed.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Living and bedroom spaces in residential and hotel use need a clear height of 2.7 m measured from finished floor to soffit.",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 in the PDF fetched from the Dubai Municipality media mirror (dmpmedia.dm.gov.ae), same file as the dm.gov.ae link"
+  },
+  {
+   "key": "room.height_min.office",
+   "value": 2.5,
+   "unit": "m",
+   "source": "ae-du-dbc",
+   "clause": "B.5.3, Table B.4",
+   "url": "https://dm.gov.ae/wp-content/uploads/2021/12/Dubai%20Building%20Code_English_2021%20Edition_compressed.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Business occupancy offices need a clear height of 2.5 m.",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "daylight.window_floor_ratio",
+   "value": 0.1,
+   "unit": "ratio",
+   "source": "ae-du-dbc",
+   "clause": "B.6.5.2.1, Table B.8",
+   "url": "https://dm.gov.ae/wp-content/uploads/2021/12/Dubai%20Building%20Code_English_2021%20Edition_compressed.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Net glazing area must be at least one tenth of the room area for living and bedroom spaces (kitchen excluded) and for office workstation areas.",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "corridor.width_min.accessible",
+   "value": 1.0,
+   "unit": "m",
+   "source": "ae-du-dbc",
+   "clause": "C.5.5, Table C.3",
+   "url": "https://dm.gov.ae/wp-content/uploads/2021/12/Dubai%20Building%20Code_English_2021%20Edition_compressed.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Internal accessible routes must be at least 1.0 m clear (1.2 m recommended); external accessible routes are 1.2 m minimum.",
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "door.clear_min.accessible",
+   "value": 0.915,
+   "unit": "m",
+   "source": "ae-du-dbc",
+   "clause": "C.5.8.1 item c",
+   "url": "https://dm.gov.ae/wp-content/uploads/2021/12/Dubai%20Building%20Code_English_2021%20Edition_compressed.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Single accessible doors, except toilet doors, need 915 mm clear between door face and stop with the leaf open at 90 degrees.",
+   "verified": true,
+   "note": "read 2026-11-14; general entry doors in B.6.5.1 Table B.7 use the same 915 mm"
+  },
+  {
+   "key": "accessible.turning_circle",
+   "value": 1.5,
+   "unit": "m",
+   "source": "ae-du-dbc",
+   "clause": "C.5.5, Table C.3 and Figure C.2",
+   "url": "https://dm.gov.ae/wp-content/uploads/2021/12/Dubai%20Building%20Code_English_2021%20Edition_compressed.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Turns and changes of direction on accessible routes need a 1.5 m space (1.575 m recommended).",
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "ramp.slope_max",
+   "value": 0.0833,
+   "unit": "ratio",
+   "source": "ae-du-dbc",
+   "clause": "C.5.9.1.1, Table C.13",
+   "url": "https://dm.gov.ae/wp-content/uploads/2021/12/Dubai%20Building%20Code_English_2021%20Edition_compressed.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Ramps may not be steeper than 8.33 percent (1:12); gentler slopes are recommended for larger rises, and ramps are needed above 5 percent.",
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "stair.riser_max",
+   "value": 0.18,
+   "unit": "m",
+   "source": "ae-du-dbc",
+   "clause": "B.6.4.1.4",
+   "url": "https://dm.gov.ae/wp-content/uploads/2021/12/Dubai%20Building%20Code_English_2021%20Edition_compressed.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Riser height is limited to the range 100 to 180 mm; regular-use stairs are recommended at 150 to 165 mm (B.6.4.1.6).",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "stair.tread_min",
+   "value": 0.28,
+   "unit": "m",
+   "source": "ae-du-dbc",
+   "clause": "B.6.4.1.4",
+   "url": "https://dm.gov.ae/wp-content/uploads/2021/12/Dubai%20Building%20Code_English_2021%20Edition_compressed.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Tread depth must be at least 280 mm; regular-use stairs are recommended at 300 mm or more.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "stair.width_min",
+   "value": 1.2,
+   "unit": "m",
+   "source": "ae-du-dbc",
+   "clause": "B.6.4.1.3",
+   "url": "https://dm.gov.ae/wp-content/uploads/2021/12/Dubai%20Building%20Code_English_2021%20Edition_compressed.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Every stairway needs at least 1.2 m clear width; exit stairs may need more depending on occupant count under the national fire code.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "stair.riser_max.house",
+   "value": 0.18,
+   "unit": "m",
+   "source": "ae-du-dbc",
+   "clause": "K.5.5.2.3 (Villas part)",
+   "url": "https://dm.gov.ae/wp-content/uploads/2021/12/Dubai%20Building%20Code_English_2021%20Edition_compressed.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Villa stair risers fall in the 100 to 180 mm range, the same as the general rule.",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "stair.tread_min.house",
+   "value": 0.28,
+   "unit": "m",
+   "source": "ae-du-dbc",
+   "clause": "K.5.5.2.3 (Villas part)",
+   "url": "https://dm.gov.ae/wp-content/uploads/2021/12/Dubai%20Building%20Code_English_2021%20Edition_compressed.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Villa stair treads must be at least 280 mm deep.",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "stair.width_min.house",
+   "value": 1.0,
+   "unit": "m",
+   "source": "ae-du-dbc",
+   "clause": "K.5.5.2.2 (Villas part)",
+   "url": "https://dm.gov.ae/wp-content/uploads/2021/12/Dubai%20Building%20Code_English_2021%20Edition_compressed.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Stairways in villas need at least 1.0 m clear width, narrower than the 1.2 m general rule.",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14"
+  },
+  {
+   "key": "parking.per_dwelling",
+   "value": 1,
+   "unit": "count",
+   "source": "ae-du-dbc",
+   "clause": "B.7.2.6.1 parking ratio table, residential rows",
+   "url": "https://dm.gov.ae/wp-content/uploads/2021/12/Dubai%20Building%20Code_English_2021%20Edition_compressed.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Studios through 2-bedroom units need one bay each, 3 and 4-bedroom units two bays, 5-bedroom, duplex and penthouse units three bays.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14; Dubai emirate rule, value 1 is the studio to 2-bedroom case"
+  }
+ ]
+}

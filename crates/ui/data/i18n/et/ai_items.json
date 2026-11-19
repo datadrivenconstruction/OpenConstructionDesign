@@ -1,0 +1,16 @@
+{
+ "ai.items.all": {
+  "one": "Kõik # rida",
+  "other": "Kõik # rida"
+ },
+ "ai.items.all.tip": "Märgi või eemalda märge plaani kõigil ridadel",
+ "ai.items.checked": "{n} / {m} märgitud",
+ "ai.items.check.tip": "Lisa „{title}” rakendamisse",
+ "ai.items.expand": "Näita elemente",
+ "ai.items.collapse": "Peida elemendid",
+ "ai.items.apply": {
+  "one": "Rakenda # rida",
+  "other": "Rakenda # rida"
+ },
+ "ai.items.apply_none": "Rakenda"
+}

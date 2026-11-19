@@ -1,0 +1,18 @@
+family VAV Box
+category equipment
+host ceiling
+ifc IfcAirTerminalBox VARIABLEFLOWPRESSUREDEPENDANT
+param Length length type 900mm
+param Width length type 450mm
+param Height length type 300mm
+param Drop length type 200mm
+param InletD length type 250mm
+param Flow number type 600
+param Casing material type "Steel White"
+type "160" Width=350mm, Height=250mm, InletD=160mm, Flow=250
+type "250" InletD=250mm, Flow=600
+type "315" Length=1100mm, Width=550mm, Height=350mm, InletD=315mm, Flow=1100
+extrude Body rect(-Length / 2, -Width / 2, Length / 2, Width / 2) z(Drop, Drop + Height) mat(Casing) show(3d, elev)
+symbol rect(-Length / 2, -Width / 2, Length / 2, Width / 2)
+symbol line(-Length / 2, 0mm, Length / 2, 0mm) show(medium, fine)
+connector Inlet duct supply_air at(-Length / 2, 0, Drop + Height / 2) dir(-1, 0, 0) size(InletD)

@@ -1,0 +1,14 @@
+{
+ "lnp.openings_refused": "{n} lỗ mở không đổi ({why})",
+ "lnp.params_changed": "giá trị đã đổi: {n}",
+ "lnp.params_same": "Không có thay đổi: {u} phần tử đã có giá trị này",
+ "lnp.params_tip": "Enter áp dụng giá trị cho mọi phần tử đã chọn; Esc giữ nguyên",
+ "lnp.locked_hint": "Các giá trị khóa được giữ: {n}",
+ "lnp.panels_one": "Tấm được sửa từng cái một",
+ "lnp.keep_first": "Giữ phần tử đầu",
+ "lnp.keep_first_tip": "Chỉ chọn tấm đầu tiên để sửa",
+ "lnp.clip_from_wall": "Đã sao chép tham số từ tường #{id}",
+ "lnp.clip_from_opening": "Đã sao chép tham số từ lỗ mở #{id}",
+ "lnp.match_from": "Thuộc tính của #{id} đã khớp cho {n} phần tử",
+ "lnp.why_at": "#{id}: {e}"
+}

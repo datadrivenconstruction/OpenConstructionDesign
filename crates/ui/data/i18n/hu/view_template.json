@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "Előbb adjon meg sablonnevet",
+ "view_template.name_taken": "Ilyen nevű sablon már létezik",
+ "view_template.pick_blocked": "Előbb jelöljön be legalább egy nézetet",
+ "view_template.views.one": "{n} nézet",
+ "view_template.views.few": "{n} nézet",
+ "view_template.views.many": "{n} nézet",
+ "view_template.delete.title": "Törli ezt a sablont?",
+ "view_template.delete.body": "A(z) \"{name}\" sablon törlődik. Használja: {used}.",
+ "view_template.delete.unused": "A(z) \"{name}\" sablon törlődik. Egyetlen nézet sem használja.",
+ "view_template.delete.keeps": "Ezek a nézetek megtartják jelenlegi grafikájukat, de elvesztik a kapcsolatot.",
+ "view_template.delete.undo": "Ez egy Visszavonással visszavonható.",
+ "view_template.delete.confirm": "Sablon törlése"
+}

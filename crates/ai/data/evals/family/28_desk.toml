@@ -1,0 +1,7 @@
+brief = "Office desk with a drawer pedestal."
+category = "furniture"
+must = param Width
+must = param Depth
+must = solids >= 4
+must = ports 0
+must = flex Width 1120 1750

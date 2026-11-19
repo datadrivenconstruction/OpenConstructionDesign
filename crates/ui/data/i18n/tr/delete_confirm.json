@@ -1,0 +1,59 @@
+{
+ "del.k.door": {
+  "one": "# kapı",
+  "other": "# kapı"
+ },
+ "del.k.window": {
+  "one": "# pencere",
+  "other": "# pencere"
+ },
+ "del.k.opening": {
+  "one": "# açıklık",
+  "other": "# açıklık"
+ },
+ "del.k.comp": {
+  "one": "# yerleşik bileşen",
+  "other": "# yerleşik bileşen"
+ },
+ "del.k.rebar": {
+  "one": "# donatı seti",
+  "other": "# donatı seti"
+ },
+ "del.k.port": {
+  "one": "# yerleşik MEP bağlantı noktası",
+  "other": "# yerleşik MEP bağlantı noktası"
+ },
+ "del.k.joist": {
+  "one": "# çerçeve kirişi",
+  "other": "# çerçeve kirişi"
+ },
+ "del.k.railing": {
+  "one": "# korkuluk",
+  "other": "# korkuluk"
+ },
+ "del.k.tag": {
+  "one": "# etiket",
+  "other": "# etiket"
+ },
+ "del.k.dim": {
+  "one": "# ölçü (bağımsız)",
+  "other": "# ölçü (bağımsız)"
+ },
+ "del.also": "Ayrıca etkilenen: {list}",
+ "del.rooms": {
+  "one": "# oda bir sınır duvarını kaybeder",
+  "other": "# oda sınır duvarlarını kaybeder"
+ },
+ "del.cancelled": "Silme iptal edildi, hiçbir şey değişmedi",
+ "del.confirm.title": "Bağımlılarla birlikte sil",
+ "del.confirm.lead": {
+  "one": "Seçili # öğe bunları da beraberinde götürür:",
+  "other": "Seçili # öğe bunları da beraberinde götürür:"
+ },
+ "del.confirm.levels": {
+  "one": "Bunlardan # öğe başka bir katta",
+  "other": "Bunlardan # öğe başka katlarda"
+ },
+ "del.confirm.all": "Tümünü sil",
+ "del.confirm.cancel": "İptal"
+}

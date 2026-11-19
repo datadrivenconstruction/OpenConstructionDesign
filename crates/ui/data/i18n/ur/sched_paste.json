@@ -1,0 +1,14 @@
+{
+ "sched_edit.pasted": "{n} خانے پیسٹ کیے گئے",
+ "sched_edit.pasted_skipped": "{n} خانے پیسٹ کیے گئے، {k} چھوڑے گئے: {why}",
+ "sched_edit.filled": "{n} خانے بھرے گئے",
+ "sched_edit.filled_skipped": "{n} خانے بھرے گئے، {k} چھوڑے گئے: {why}",
+ "sched_edit.why_ro": "{n} صرف پڑھنے کے لیے",
+ "sched_edit.why_bad": "{n} غلط قدر",
+ "sched_edit.no_cell": "پہلے شیڈول میں کوئی خانہ کلک کریں",
+ "sched_edit.nothing": "لکھنے کے لیے کچھ نہیں",
+ "sched_edit.not_refreshed": "لکھا گیا، مگر ویو ریفریش نہیں ہوا: {e}",
+ "sched_edit.failed": "تبدیل نہیں ہوا: {e}",
+ "sched_edit.no_changes": "کوئی تبدیلی نہیں: {u} خانوں میں پہلے ہی یہی قدریں ہیں",
+ "sched_edit.same_tail": "، {u} پہلے ہی برابر"
+}

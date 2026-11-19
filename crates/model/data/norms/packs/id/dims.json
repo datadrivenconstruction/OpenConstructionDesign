@@ -1,0 +1,166 @@
+{
+ "items": [
+  {
+   "key": "door.clear_min.accessible",
+   "value": 0.8,
+   "unit": "m",
+   "source": "id-pp16",
+   "clause": "Annex, horizontal links, doors (technical standard)",
+   "url": "https://dpmptsp.subang.go.id/izin/contoh_doc/PP-Nomor-16-Tahun-2021-Lamp.-Bagian-1-compressed.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Main public-building entrance doors have 90 cm effective opening, other doors 80 cm; 80 cm also for disabled-access doors.",
+   "verified": true,
+   "note": "read 2026-11-14 in scanned annex part 1 of PP 16/2021 hosted by a regional government licensing site; OCR text, annex page ~380; main entrance 0.9 m."
+  },
+  {
+   "key": "corridor.width_min.accessible",
+   "value": 0.92,
+   "unit": "m",
+   "source": "id-pp16",
+   "clause": "Annex, corridor figures",
+   "url": "https://dpmptsp.subang.go.id/izin/contoh_doc/PP-Nomor-16-Tahun-2021-Lamp.-Bagian-1-compressed.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Corridor effective width at least 92 cm for a wheelchair user, with 152 cm recommended for passing.",
+   "verified": true,
+   "note": "read 2026-11-14 in scanned annex part 1 of PP 16/2021 hosted by a regional government licensing site; OCR text, annex page ~393-394, from figure labels."
+  },
+  {
+   "key": "ramp.slope_max",
+   "value": 0.083333,
+   "unit": "ratio",
+   "source": "id-pp16",
+   "clause": "Annex, ramp requirements (figures 133 and 135)",
+   "url": "https://dpmptsp.subang.go.id/izin/contoh_doc/PP-Nomor-16-Tahun-2021-Lamp.-Bagian-1-compressed.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Ramps outside buildings at most 1:12 (about 6 degrees); indoor ramps may reach 1:10 (about 7 degrees); run at most 9 m.",
+   "verified": true,
+   "note": "read 2026-11-14 in scanned annex part 1 of PP 16/2021 hosted by a regional government licensing site; OCR text, annex page ~425-426."
+  },
+  {
+   "key": "stair.riser_max",
+   "value": 0.17,
+   "unit": "m",
+   "source": "id-pp16",
+   "clause": "Annex, public stairs",
+   "url": "https://dpmptsp.subang.go.id/izin/contoh_doc/PP-Nomor-16-Tahun-2021-Lamp.-Bagian-1-compressed.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Public stair riser between 15 and 17 cm.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 in scanned annex part 1 of PP 16/2021 hosted by a regional government licensing site; OCR text, annex page ~410."
+  },
+  {
+   "key": "stair.tread_min",
+   "value": 0.3,
+   "unit": "m",
+   "source": "id-pp16",
+   "clause": "Annex, public stairs",
+   "url": "https://dpmptsp.subang.go.id/izin/contoh_doc/PP-Nomor-16-Tahun-2021-Lamp.-Bagian-1-compressed.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Public stair tread at least 30 cm.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 in scanned annex part 1 of PP 16/2021 hosted by a regional government licensing site; OCR text, annex page ~410."
+  },
+  {
+   "key": "stair.width_min",
+   "value": 0.9,
+   "unit": "m",
+   "source": "id-pp16",
+   "clause": "Annex, exit stairs",
+   "url": "https://dpmptsp.subang.go.id/izin/contoh_doc/PP-Nomor-16-Tahun-2021-Lamp.-Bagian-1-compressed.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Exit stair and landing width at least 90 cm for up to 50 people and 112 cm above that.",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "verified": true,
+   "note": "read 2026-11-14 in scanned annex part 1 of PP 16/2021 hosted by a regional government licensing site; OCR text, annex page ~446-450."
+  },
+  {
+   "key": "load.floor_residential",
+   "value": 1.92,
+   "unit": "kN/m2",
+   "orig": {
+    "value": 40,
+    "unit": "psf"
+   },
+   "source": "id-sni1727",
+   "clause": "live load table, residential",
+   "url": "https://bsn.go.id",
+   "accessed": "2026-11-14",
+   "paraphrase": "Imposed load for dwelling floors is 40 psf in the loading standard.",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: SNI 1727:2020 on bsn/pu.go.id and general web; official standard is sold, only university theses (secondary) cite it and none confirmed the residential row"
+  },
+  {
+   "key": "load.floor_office",
+   "value": 2.4,
+   "unit": "kN/m2",
+   "orig": {
+    "value": 50,
+    "unit": "psf"
+   },
+   "source": "id-sni1727",
+   "clause": "live load table, offices",
+   "url": "https://bsn.go.id",
+   "accessed": "2026-11-14",
+   "paraphrase": "Imposed load for office floors is 50 psf.",
+   "verified": false,
+   "note": "unverifiable_free: searched 2026-11-14: SNI 1727:2020 on bsn/pu.go.id and general web; official standard is sold; only secondary theses mention 2.4 kN/m2 for offices, not an official text"
+  },
+  {
+   "key": "egress.travel_max",
+   "value": 53,
+   "unit": "m",
+   "source": "id-permen26-2008",
+   "clause": "Chapter III, Table A.3.11, apartments, new",
+   "url": "https://pelayanan.jakarta.go.id/download/regulasi/peraturan-menteri-pekerjaan-umum-nomor-26-prt-m-2008-tentang-persyaratan-teknis-sistem-proteksi-kebakaran-pada-bangunan-gedung-dan-lingkungan.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Total travel distance to an exit in new apartment buildings without sprinklers is 53 m (99 m with sprinklers).",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ],
+    "sprinklered": false
+   },
+   "verified": true,
+   "note": "read 2026-11-14 in the regional government copy (pelayanan.jakarta.go.id) of the ministerial regulation; official jdih.pu.go.id unreachable. Table text extraction has footnote marks; row and columns read."
+  },
+  {
+   "key": "egress.travel_max.office",
+   "value": 61,
+   "unit": "m",
+   "source": "id-permen26-2008",
+   "clause": "Chapter III, Table A.3.11, business occupancy, new",
+   "url": "https://pelayanan.jakarta.go.id/download/regulasi/peraturan-menteri-pekerjaan-umum-nomor-26-prt-m-2008-tentang-persyaratan-teknis-sistem-proteksi-kebakaran-pada-bangunan-gedung-dan-lingkungan.pdf",
+   "accessed": "2026-11-14",
+   "paraphrase": "Total travel distance to an exit in new office (business) buildings without sprinklers is 61 m (91 m with sprinklers).",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "sprinklered": false
+   },
+   "verified": true,
+   "note": "read 2026-11-14 in the regional government copy (pelayanan.jakarta.go.id) of the ministerial regulation; official jdih.pu.go.id unreachable. "
+  }
+ ]
+}

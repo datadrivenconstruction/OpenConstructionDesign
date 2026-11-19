@@ -1,0 +1,9 @@
+{
+ "prop_head.of_type": {
+  "one": "# ta shu turdagi",
+  "other": "# ta shu turdagi"
+ },
+ "prop_head.override_tip": "Turdan farq qiladi, qaytarish uchun bosing",
+ "prop_head.reset_done": "“{name}” turdagi qiymatga qaytarildi",
+ "prop_head.copy_id": "Raqamni nusxalash uchun bosing"
+}

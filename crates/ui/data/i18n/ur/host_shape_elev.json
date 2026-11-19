@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "بلندی {t} نہیں لی گئی ({why})۔ کچھ تبدیل نہیں ہوا",
+ "host_shape.shape.elev_prompt_in": "بلندی، فٹ-انچ…",
+ "host_shape.shape.elev_in": "{v} انچ"
+}

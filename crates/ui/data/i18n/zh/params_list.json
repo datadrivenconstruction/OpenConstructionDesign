@@ -1,0 +1,23 @@
+{
+ "params_list.n_params": {
+  "other": "# 个参数",
+  "one": "# 个参数"
+ },
+ "params_list.n_values": {
+  "other": "# 个值",
+  "one": "# 个值"
+ },
+ "params_list.n_elements": {
+  "other": "# 个图元",
+  "one": "# 个图元"
+ },
+ "params_list.exported": "{params} 已导出到 {file}",
+ "params_list.export_failed": "未导出参数：{why}",
+ "params_list.open_folder": "打开文件夹",
+ "params_list.delete_tip": "删除参数及其值",
+ "params_list.confirm": "删除 {name} 及其在 {elements} 上的 {values}？",
+ "params_list.confirm_btn": "删除",
+ "params_list.cancel": "取消",
+ "params_list.deleted": "已删除参数 {name}（{values}）",
+ "params_list.undo": "撤销"
+}

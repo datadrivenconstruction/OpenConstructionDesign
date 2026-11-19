@@ -1,0 +1,6 @@
+{
+ "xl.msg.filter_on_sheet_x": "'{}' хуудас дээрх шүүлтүүр",
+ "xl.msg.sort_settings_on_sheet_x": "'{}' хуудас дээрх эрэмбэлэлтийн тохиргоо",
+ "xl.msg.hidden_rows_on_sheet_x": "'{}' хуудас дээрх нуусан мөр",
+ "xl.msg.hidden_columns_on_sheet_x": "'{}' хуудас дээрх нуусан багана"
+}

@@ -1,0 +1,22 @@
+{
+ "depth.chip": "Diepte {level}",
+ "depth.chip_tip": "Hoe ver de volgende run het project uitwerkt: D1 concept tot D5 fabricage, per discipline",
+ "depth.all_off": "alle disciplines uit",
+ "depth.disc.arch": "Architectuur",
+ "depth.disc.struct": "Constr",
+ "depth.disc.mep": "MEP",
+ "depth.disc.doc": "Documenten",
+ "depth.project": "Projectdiepte",
+ "depth.level.1": "D1 Concept: massa, verdiepingen, oppervlakten, één blad",
+ "depth.level.2": "D2 Schets: wanden, ruimten per programma, openingen, raster, plattegronden",
+ "depth.level.3": "D3 Ontwerp: gelaagde typen, gedimensioneerde constructie, MEP-hoofdleidingen en eindpunten, lijsten",
+ "depth.level.4": "D4 Uitwerking: aansluitdetails, beslag, afwerking, wapening, aftakkingen",
+ "depth.level.5": "D5 Fabricage: buigstaten, staalverbindingen, prefab, hoeveelheidsstaat",
+ "depth.as_project": "Hetzelfde",
+ "depth.estimate": "Inschatting: ongeveer {elements} elementen, {minutes} min, {tokens} tokens in {calls} aanroepen, {sheets} bladen",
+ "depth.estimate_none": "De inschatting komt met het opgestelde project: het model is nog leeg",
+ "depth.heat": "Dieptewarmtekaart",
+ "depth.heat.row": "Diepte",
+ "depth.settings": "Ontwerpdiepte van dit project",
+ "depth.settings_desc": "Diepte waarop de AI-assistent werkt, D1 tot D5, met een schakelaar en eigen diepte per discipline; wordt opgeslagen in het projectbestand"
+}

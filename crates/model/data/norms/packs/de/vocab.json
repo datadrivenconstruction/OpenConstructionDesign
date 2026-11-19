@@ -1,0 +1,46 @@
+{
+ "room_kinds": {
+  "living": [
+   "wohnzimmer",
+   "wohnen"
+  ],
+  "bedroom": [
+   "schlafzimmer",
+   "elternschlafzimmer",
+   "kinderzimmer"
+  ],
+  "kitchen": [
+   "küche",
+   "kueche"
+  ],
+  "bath": [
+   "bad",
+   "badezimmer"
+  ],
+  "wc": [
+   "wc",
+   "gäste-wc",
+   "toilette"
+  ],
+  "hall": [
+   "diele",
+   "eingang"
+  ],
+  "corridor": [
+   "flur",
+   "gang"
+  ],
+  "storage": [
+   "abstellraum",
+   "abstellkammer",
+   "hauswirtschaftsraum"
+  ],
+  "office": [
+   "büro",
+   "arbeitszimmer"
+  ],
+  "meeting": [
+   "besprechungsraum"
+  ]
+ }
+}

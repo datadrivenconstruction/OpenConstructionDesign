@@ -1,0 +1,13 @@
+{
+ "topo.unit.mm": "mm",
+ "topo.unit.metre": "m",
+ "topo.unit.ft": "ft",
+ "topo.opt.material": "Υλικό",
+ "topo.row.active": "Ενεργή επιφάνεια",
+ "topo.btn.delete_pad": "Διαγραφή πλατφόρμας",
+ "topo.info.loading": "Δημιουργία επιφάνειας…",
+ "topo.info.warn_n": "{n} προειδοποιήσεις",
+ "topo.info.points_label": "Σημεία",
+ "topo.import.all_layers": "Όλα τα στρώματα",
+ "topo.import.need_layer": "Επιλέξτε τουλάχιστον ένα στρώμα"
+}

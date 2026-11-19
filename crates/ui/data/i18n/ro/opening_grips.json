@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "Inversează partea balamalei",
+ "cmd.edit.flip_hand.desc": "Oglindește ușile și ferestrele selectate de-a lungul peretelui, astfel încât balamalele să treacă la celălalt capăt al deschiderii.",
+ "cmd.edit.flip_facing": "Inversează partea deschiderii",
+ "cmd.edit.flip_facing.desc": "Rotește ușile și ferestrele selectate pe cealaltă parte a peretelui.",
+ "opening_grips.flip_hand": "Inversează balamaua",
+ "opening_grips.flip_hand.tip": "Balamalele trec la celălalt capăt al deschiderii (Shift+F)",
+ "opening_grips.flip_facing": "Inversează partea",
+ "opening_grips.flip_facing.tip": "Deschidere spre cealaltă parte a peretelui (Shift+G)",
+ "opening_grips.flip.done": "Inversat: {n}",
+ "opening_grips.flip.none": "Selectează o ușă sau o fereastră pentru a o inversa",
+ "opening_grips.flip.fail": "Neinversat: {why}"
+}

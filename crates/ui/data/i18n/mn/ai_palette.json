@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "AI-аас асуух: {q}",
+ "ai.palette.connect": "Асуухын тулд AI-г холбоно уу",
+ "ai.palette.draft.apply": "Ноорогыг хэрэгжүүлэх ({n})",
+ "ai.palette.draft.reject": "Ноорогыг татгалзах",
+ "ai.palette.draft.next": "Ноорогын дараагийн өөрчлөлт",
+ "ai.palette.draft.show": "Ноорогыг харагдацад харуулах",
+ "cmd.ai.next_change": "Ноорогын дараагийн өөрчлөлт",
+ "cmd.ai.next_change.desc": "Харагдацыг ноорогын дараагийн өөрчлөгдөх элемент рүү шилжүүлнэ.",
+ "cmd.ai.show_draft": "AI ноорогыг харагдацад харуулах",
+ "cmd.ai.show_draft.desc": "Харагдацыг ноорогын бүх өөрчлөлтөд тохируулна."
+}

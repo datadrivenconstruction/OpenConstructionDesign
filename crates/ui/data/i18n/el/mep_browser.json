@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "Όνομα συστήματος",
+ "mep_browser.add_blocked": "Εισάγετε πρώτα όνομα συστήματος",
+ "mep_browser.col.insulation": "Μόνωση",
+ "mep_browser.cancel": "Άκυρο",
+ "mep_browser.delete.title": "Διαγραφή αυτού του συστήματος;",
+ "mep_browser.delete.body": "Το σύστημα «{name}» και οι διαδρομές του ({n}) θα διαγραφούν.",
+ "mep_browser.delete.undo": "Μπορείτε να το αναιρέσετε με μία Αναίρεση.",
+ "mep_browser.delete.confirm": "Διαγραφή συστήματος"
+}

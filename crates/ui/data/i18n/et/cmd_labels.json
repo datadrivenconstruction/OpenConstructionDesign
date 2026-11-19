@@ -1,0 +1,14 @@
+{
+ "cmd.arch.wall.tile": "Sein",
+ "cmd.arch.door.tile": "Uks",
+ "cmd.arch.window.tile": "Aken",
+ "cmd.arch.floor.tile": "Põrand",
+ "cmd.mod.move.tile": "Nihuta",
+ "cmd.mod.copy.tile": "Kopeeri",
+ "cmd.mod.rotate.tile": "Pööra",
+ "cmd.mod.mirror.tile": "Peegelda",
+ "cmd.mod.trim.tile": "Lõika",
+ "cmd.mod.delete.tile": "Kustuta",
+ "cmd.ann.dim.tile": "Mõõde",
+ "cmd.ann.text.tile": "Tekst"
+}

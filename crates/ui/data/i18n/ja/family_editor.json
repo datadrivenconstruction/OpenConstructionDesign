@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "新しいファミリ",
+ "family_editor.open_tip": "ファミリまたは下書きを開く",
+ "family_editor.close_named": "{name} を閉じる",
+ "family_editor.unsaved": "未保存の変更",
+ "family_editor.search": "検索",
+ "family_editor.nothing": "見つかりません",
+ "family_editor.sec_families": "プロジェクトのファミリ",
+ "family_editor.sec_drafts": "下書き",
+ "family_editor.cap_category": "カテゴリ",
+ "family_editor.cap_host": "ホスト",
+ "family_editor.cap_type": "プレビュータイプ"
+}

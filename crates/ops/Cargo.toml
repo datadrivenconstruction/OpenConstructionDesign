@@ -1,0 +1,16 @@
+[package]
+name = "ddc-ops"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Serialisable edit language shared by tools, imports, scripts and agents"
+
+# Wire types only: no model, app or UI dependencies.
+[dependencies]
+serde.workspace = true
+schemars.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true

@@ -1,0 +1,7 @@
+{
+ "rebar_pick.pick.empty": "Armatura: scegli un pilastro, una trave, un muro, un solaio o un plinto",
+ "rebar_pick.pick.unsupported": "Questa selezione non può essere armata. Scegli un pilastro, una trave, un muro, un solaio o un plinto",
+ "rebar_pick.pick.keys": "Clic per scegliere, Shift per aggiungere · Invio apre il modulo · Esc annulla",
+ "rebar_pick.pick.open": "Apri modulo",
+ "rebar_pick.pick.cancel": "Annulla"
+}

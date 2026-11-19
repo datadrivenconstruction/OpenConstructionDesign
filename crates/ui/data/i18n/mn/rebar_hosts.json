@@ -1,0 +1,40 @@
+{
+ "rebar_hosts.hosts": "Хостууд: {list}",
+ "rebar_hosts.kind.column": "Багана",
+ "rebar_hosts.kind.beam": "Дам",
+ "rebar_hosts.kind.wall": "Хана",
+ "rebar_hosts.kind.slab": "Дал",
+ "rebar_hosts.kind.footing": "Суурь",
+ "rebar_hosts.kind.raft": "Суурийн дал",
+ "rebar_hosts.n.column": {
+  "one": "# багана",
+  "other": "# багана"
+ },
+ "rebar_hosts.n.beam": {
+  "one": "# дам",
+  "other": "# дам"
+ },
+ "rebar_hosts.n.wall": {
+  "one": "# хана",
+  "other": "# хана"
+ },
+ "rebar_hosts.n.slab": {
+  "one": "# дал",
+  "other": "# дал"
+ },
+ "rebar_hosts.n.footing": {
+  "one": "# суурь",
+  "other": "# суурь"
+ },
+ "rebar_hosts.n.raft": {
+  "one": "# суурийн дал",
+  "other": "# суурийн дал"
+ },
+ "rebar_hosts.mixed_note": "Багана ба дам нь арматур, хүнд хүрээ авна; хана, дал, суурь нь тор авна. Арматур нэмэхийн тулд нэг бүлгийг сонгоно уу.",
+ "rebar_hosts.why.mixed": "Сонголт багана эсвэл дамыг хана, дал, суурьтай холисон байна. Нэг бүлгийг сонгоно уу.",
+ "rebar_hosts.why.area_linear": "Тор нь хана, дал, суурьд орно; багана, дамд орохгүй.",
+ "rebar_hosts.why.bars_plate": "Босоо арматур ба хүнд хүрээ нь багана, дамд орно; хана, дал, суурьд орохгүй.",
+ "rebar_hosts.why.no_common_face": "Сонгосон хостууд нийтлэг хамгаалалтын гадаргуугүй байна. Нэг төрлийн хост сонгоно уу.",
+ "rebar_hosts.why.no_type": "Арматурын төрлийг сонгоно уу.",
+ "rebar_hosts.kind_type": "{kind} · {type}"
+}

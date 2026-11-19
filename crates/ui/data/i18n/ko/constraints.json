@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "모든 편집에서 이 벽의 현재 길이 유지",
+ "constraints.con.tip.lock_dist": "모든 편집에서 두 벽 사이의 거리 유지",
+ "constraints.con.tip.equal": "선택한 벽 사이의 간격을 같게 유지",
+ "constraints.con.tip.align": "두 벽을 한 선 위에 유지",
+ "constraints.con.tip.parallel": "벽을 서로 평행하게 유지",
+ "constraints.con.tip.perp": "벽을 직각으로 유지",
+ "constraints.con.tip.align_grid": "벽을 가장 가까운 그리드선에 유지",
+ "constraints.con.tip.lock_dist_grid": "벽에서 가장 가까운 그리드선까지의 거리 유지",
+ "constraints.con.tip.level_gap": "레벨 사이의 간격 유지",
+ "constraints.con.tip.top_to_level": "벽 상단을 위의 레벨에 맞춰 유지"
+}

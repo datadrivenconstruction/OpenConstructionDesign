@@ -1,0 +1,6 @@
+{
+ "cmd.ui.pane.next": "Volgend paneel",
+ "cmd.ui.pane.next.desc": "Verplaatst het toetsenbordfocus naar het volgende zichtbare paneel (browser, canvas, eigenschappen, chat).",
+ "cmd.ui.pane.prev": "Vorig paneel",
+ "cmd.ui.pane.prev.desc": "Verplaatst het toetsenbordfocus naar het vorige zichtbare paneel."
+}

@@ -1,0 +1,4 @@
+{
+ "vv_conflict.vv.switched": "Aktiivne vaade vahetus. Need muudatused kuuluvad vaatele {view} ja pole veel rakendatud: Rakenda kirjutab need vaatele {view}, Loobu viskab need ära.",
+ "vv_conflict.vv.discard": "Loobu muudatustest"
+}

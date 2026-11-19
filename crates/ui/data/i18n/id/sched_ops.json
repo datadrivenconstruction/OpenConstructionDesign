@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "nilai harus lebih dari nol",
+ "sched_ops.not_number": "bukan angka",
+ "sched_ops.no_host": "tidak ada dinding inang",
+ "sched_ops.wall_length": "panjang dinding ini tidak dapat diatur demikian",
+ "sched_ops.no_wall": "tidak ada dinding seperti itu",
+ "sched_ops.no_opening": "tidak ada bukaan seperti itu",
+ "sched_ops.no_curtain": "tidak ada dinding tirai seperti itu",
+ "sched_ops.no_panel": "tidak ada panel seperti itu",
+ "sched_ops.no_slab": "tidak ada pelat seperti itu",
+ "sched_ops.no_room": "tidak ada ruangan seperti itu",
+ "sched_ops.slope_range": "kemiringan di luar rentang",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

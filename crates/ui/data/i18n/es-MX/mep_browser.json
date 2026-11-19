@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "Nombre del sistema",
+ "mep_browser.add_blocked": "Primero introduzca un nombre de sistema",
+ "mep_browser.col.insulation": "Aislamiento",
+ "mep_browser.cancel": "Cancelar",
+ "mep_browser.delete.title": "¿Eliminar este sistema?",
+ "mep_browser.delete.body": "Se eliminarán el sistema \"{name}\" y sus tramos ({n}).",
+ "mep_browser.delete.undo": "Puede deshacerlo con un Deshacer.",
+ "mep_browser.delete.confirm": "Eliminar sistema"
+}

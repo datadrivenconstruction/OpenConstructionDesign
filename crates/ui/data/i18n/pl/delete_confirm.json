@@ -1,0 +1,59 @@
+{
+ "del.k.door": {
+  "one": "# drzwi",
+  "other": "Drzwi: #"
+ },
+ "del.k.window": {
+  "one": "# okno",
+  "other": "Okna: #"
+ },
+ "del.k.opening": {
+  "one": "# otwór",
+  "other": "Otwory: #"
+ },
+ "del.k.comp": {
+  "one": "# zagnieżdżony komponent",
+  "other": "Zagnieżdżone komponenty: #"
+ },
+ "del.k.rebar": {
+  "one": "# zestaw zbrojenia",
+  "other": "Zestawy zbrojenia: #"
+ },
+ "del.k.port": {
+  "one": "# zagnieżdżony port MEP",
+  "other": "Zagnieżdżone porty MEP: #"
+ },
+ "del.k.joist": {
+  "one": "# belka",
+  "other": "Belki: #"
+ },
+ "del.k.railing": {
+  "one": "# balustrada",
+  "other": "Balustrady: #"
+ },
+ "del.k.tag": {
+  "one": "# znacznik",
+  "other": "Znaczniki: #"
+ },
+ "del.k.dim": {
+  "one": "# wymiar (odłączony)",
+  "other": "Wymiary (odłączone): #"
+ },
+ "del.also": "Dotyczy także: {list}",
+ "del.rooms": {
+  "one": "# pomieszczenie traci ścianę graniczną",
+  "other": "Pomieszczenia tracą ścianę graniczną: #"
+ },
+ "del.cancelled": "Usuwanie anulowane, nic nie zmieniono",
+ "del.confirm.title": "Usuń wraz z zależnościami",
+ "del.confirm.lead": {
+  "one": "# zaznaczony element zabiera ze sobą:",
+  "other": "Zaznaczenie (#) zabiera ze sobą:"
+ },
+ "del.confirm.levels": {
+  "one": "# z nich jest na innym poziomie",
+  "other": "Na innych poziomach: #"
+ },
+ "del.confirm.all": "Usuń wszystko",
+ "del.confirm.cancel": "Anuluj"
+}

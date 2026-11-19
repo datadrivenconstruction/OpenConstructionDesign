@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "Uç nokta",
+ "snap.midpoint": "Orta nokta",
+ "snap.perpendicular": "Dik",
+ "snap.wall_axis": "Duvar ekseni",
+ "snap.wall_face": "Duvar yüzü",
+ "snap.grid": "Aks",
+ "snap.intersection": "Kesişim",
+ "snap.grid_axis": "Aks çizgisi",
+ "snap.ref_plane": "Referans düzlemi",
+ "snap.nearest": "En yakın",
+ "snap.align_x": "Uzak noktayla X’te hizalı",
+ "snap.align_y": "Uzak noktayla Y’de hizalı",
+ "snap.align_xy": "X ve Y’de hizalı"
+}

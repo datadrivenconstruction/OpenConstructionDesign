@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "No se tomó la cota {t} ({why}). No se cambió nada",
+ "host_shape.shape.elev_prompt_in": "cota, pies-pulg…",
+ "host_shape.shape.elev_in": "{v} pulg"
+}

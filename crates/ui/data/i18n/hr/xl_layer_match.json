@@ -1,0 +1,4 @@
+{
+ "xl.msg.layer_cells_unplaced": "{} ćelija tipa '{}' sloj {} na listu '{}' nije moguće postaviti",
+ "xl.msg.layer_hidden_unplaced": "skriveni redak tipa '{}' sloj {} na listu '{}' nije moguće postaviti"
+}

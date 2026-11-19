@@ -1,0 +1,12 @@
+{
+ "opt.stair.straight": "Dreaptă",
+ "opt.stair.l": "L",
+ "opt.stair.u": "U",
+ "opt.stair.gap": "Gol",
+ "hint.stair.corner": "Scară în L: alegeți colțul de cotitură · Backspace — elimină ultimul punct · Esc — elimină ultimul punct; fără puncte — anulează",
+ "hint.stair.side": "Scară: alegeți latura celei de-a doua rampe · Backspace — elimină ultimul punct · Esc — elimină ultimul punct; fără puncte — anulează",
+ "tool.stair.flights": "{n} contratrepte (total {m})",
+ "tool.stair.err_split": "Fiecare rampă are nevoie de cel puțin 2 contratrepte: prima rampă are {n} din {m}",
+ "tool.stair.err_comfort": "Contratreapta și treapta încalcă regula de confort (2R + T)",
+ "tool.stair.err_input": "Dimensiunea scării este în afara intervalului: verificați lățimea, înălțimea și paliera"
+}

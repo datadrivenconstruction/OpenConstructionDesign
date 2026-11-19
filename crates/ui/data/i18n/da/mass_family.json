@@ -1,0 +1,9 @@
+{
+ "cmd.mass.timeline_family": "Historik til familie",
+ "cmd.mass.timeline_family.desc": "Opretter en komponentfamilie ud fra byggehistorikken for den valgte masse. Historikparametrene bliver til familieparametre.",
+ "mass_family.done": "Familien {name} er oprettet med {n} parametre",
+ "mass_family.refused": "Ingen familie oprettet: {e}",
+ "mass_family.no_mass": "Vælg først en parametrisk masse",
+ "mass_family.add_modifier": "Tilføj modifikator",
+ "mass_family.needs_faces": "Kræver valgte flader: brug værktøjet på fanen Masser"
+}

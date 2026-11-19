@@ -1,0 +1,10 @@
+{
+ "view_gfx.vv.visible_tip": "Vizibil în această vedere",
+ "view_gfx.vv.enabled_tip": "Aplică acest filtru în această vedere",
+ "view_gfx.vv.reset_tip": "Revino la valoarea implicită a proiectului",
+ "view_gfx.vv.col.actions": "Acțiuni",
+ "view_gfx.vv.nothing_to_apply": "Nicio modificare de aplicat",
+ "view_gfx.flt.save_blocked": "Denumește filtrul și completează fiecare parametru al regulii",
+ "view_gfx.flt.confirm_delete": "Ștergi pentru toate vederile?",
+ "view_gfx.flt.param_pick": "Alege…"
+}

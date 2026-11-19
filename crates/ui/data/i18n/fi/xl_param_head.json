@@ -1,0 +1,7 @@
+{
+ "xl.msg.param_ambiguous": "sarake '{}' voi vastata mitä tahansa parametreista {}; kirjoita tarkka parametrin nimi, ei sovellettu",
+ "xl.msg.param_tag_stale": "sarake '{}' viittaa parametriin, jota tässä projektissa ei ole; ei sovellettu",
+ "xl.msg.dup_col_note": "sarake '{}' kohdassa {} toistaa sarakkeen '{}' kohdassa {}; samat arvot sovelletaan kerran, rivillä jossa ne eroavat säilyy mallin arvo",
+ "xl.msg.dup_col_differs": "sarakkeet '{}' ja '{}' eroavat kohdissa {} ja {}; mallin arvo säilyy, säilytä yksi sarake",
+ "xl.msg.dup_col_id": "sarakkeet '{}' ja '{}' eroavat kohdissa {} ja {}, riviä ei voi tunnistaa; mitään ei sovellettu, säilytä yksi sarake"
+}

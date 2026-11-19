@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "Paneeli",
+ "curtain_props.cw.panel_cell": "Solu {i}×{j} · verhoseinä #{id}",
+ "curtain_props.cw.kind": "Tyyppi",
+ "curtain_props.cw.kind.glazed": "Lasi",
+ "curtain_props.cw.kind.solid": "Umpi",
+ "curtain_props.cw.kind.door": "Ovi",
+ "curtain_props.cw.kind.window": "Ikkuna",
+ "curtain_props.cw.kind.empty": "Tyhjä",
+ "curtain_props.cw.name": "Nimi",
+ "curtain_props.cw.swing_side": "Aukeaa toiselle puolelle",
+ "curtain_props.cw.swing_hinge": "Saranat solun päässä",
+ "curtain_props.cw.size": "Koko",
+ "curtain_props.cw.cell_area": "Solun pinta-ala",
+ "curtain_props.cw.panel_area": "Paneelin pinta-ala",
+ "curtain_props.cw.prev": "Edellinen paneeli",
+ "curtain_props.cw.next": "Seuraava paneeli",
+ "curtain_props.cw.wall": "Valitse seinä",
+ "curtain_props.cw.panel_hint": "Esc — valinta · Ctrl+Z — kumoa",
+ "curtain_props.cw.status.panel": "Paneeli {i}×{j} → {kind}",
+ "e3d.err.cw_height": "verhoseinän korkeuden täytyy olla yli 100 mm"
+}

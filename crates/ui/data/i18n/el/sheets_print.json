@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "Προηγούμενο φύλλο (Page Up)",
+ "sheets.print.next": "Επόμενο φύλλο (Page Down)",
+ "sheets.print.fit": "Προσαρμογή σελίδας (διπλό κλικ)",
+ "sheets.print.no_sheets": "Δεν υπάρχουν φύλλα για προεπισκόπηση",
+ "sheets.print.building": "Δημιουργία σελίδας…",
+ "sheets.print.stop_build": "Διακοπή",
+ "sheets.print.build_stopped": "Η δημιουργία σελίδας σταμάτησε",
+ "sheets.print.retry": "Δημιουργία ξανά",
+ "sheets.print.build_failed": "Δεν ήταν δυνατή η δημιουργία της προεπισκόπησης"
+}

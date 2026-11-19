@@ -1,0 +1,4 @@
+{
+ "ai.issue.delete_large": "{0} Elemente würden gelöscht, über dem Grenzwert von {1}. Freigabe ist nötig",
+ "ai.issue.refused_large": "{0} Elemente würden geändert, über der harten Grenze von {1}. Plan in kleinere Teile aufteilen"
+}

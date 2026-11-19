@@ -1,0 +1,21 @@
+{
+ "cmd.help.check_update": "بررسی به‌روزرسانی",
+ "update_check.title": "بررسی به‌روزرسانی",
+ "update_check.desc": "به‌طور پیش‌فرض خاموش است. فقط نسخه، سیستم‌عامل، معماری و نوع نصب را برای سرور ما می‌فرستد. هیچ‌چیز را دانلود یا نصب نمی‌کند.",
+ "update_check.freq.startup": "هنگام راه‌اندازی",
+ "update_check.freq.daily": "روزانه",
+ "update_check.freq.weekly": "هفتگی",
+ "update_check.freq.never": "هرگز",
+ "update_check.check_now": "بررسی اکنون",
+ "update_check.dialog.title": "بررسی به‌روزرسانی",
+ "update_check.unknown.title": "بررسی به‌روزرسانی‌ها ممکن نشد",
+ "update_check.unknown.body": "{e}. این به معنای فعلی بودن این نسخه نیست. بعداً دوباره امتحان کنید.",
+ "update_check.current": "شما آخرین نسخه را دارید ({v}).",
+ "update_check.newer": "نسخه‌ی {v} موجود است",
+ "update_check.date": "منتشرشده در {d}",
+ "update_check.unfit": "این نسخه ({v}) از کمترین نسخه‌ی توصیه‌شده {f} قدیمی‌تر است. به‌روزرسانی توصیه می‌شود.",
+ "update_check.close": "بستن",
+ "update_check.open_failed": "صفحه‌ی انتشار باز نشد.",
+ "update_check.toast.newer": "نسخه‌ی {v} موجود است. راهنما > بررسی به‌روزرسانی.",
+ "update_check.toast.unfit": "این نسخه ({v}) از کمترین نسخه‌ی توصیه‌شده {f} قدیمی‌تر است."
+}

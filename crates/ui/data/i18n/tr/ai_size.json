@@ -1,0 +1,10 @@
+{
+ "ai.size.count": "~{n} / {max} belirteç",
+ "ai.size.block": "Bu model için çok uzun: ~{n} belirteç, yanıt için yer bırakarak en fazla {max} sığar — kısaltın veya bölün",
+ "ai.size.trim": "Sığacak şekilde kırp",
+ "ai.size.trim_tip": "İletinin sonunu sığacak şekilde keser. Siz tıklayana kadar hiçbir şey kesilmez.",
+ "ai.size.drop_view": "Görünümü dışarıda bırak",
+ "ai.size.drop_level": "Katı dışarıda bırak",
+ "ai.size.drop_selection": "Seçimi dışarıda bırak",
+ "ai.size.sep": ","
+}

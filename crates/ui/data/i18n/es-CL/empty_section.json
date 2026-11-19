@@ -1,0 +1,11 @@
+{
+ "empty.sv_notfound.title": "Vista no encontrada",
+ "empty.sv_notfound.hint": "Esta vista se eliminó o ya no forma parte del proyecto.",
+ "empty.sv_notfound.action": "Cerrar vista",
+ "empty.sv_cuts_nothing.title": "Esta sección no corta nada",
+ "empty.sv_cuts_nothing.hint": "La línea de corte no toca muros, forjados ni huecos dentro de su profundidad. Mueva la línea o haga la vista más profunda.",
+ "empty.sv_cuts_nothing.action": "Mostrar en planta",
+ "empty.sv_shows_nothing.title": "Este alzado no muestra nada",
+ "empty.sv_shows_nothing.hint": "No hay muros, forjados ni huecos dentro de la profundidad de la vista. Mueva la línea de vista o haga la vista más profunda.",
+ "empty.sv_shows_nothing.action": "Mostrar en planta"
+}

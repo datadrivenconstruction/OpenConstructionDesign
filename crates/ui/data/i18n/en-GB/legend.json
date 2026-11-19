@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "Legend",
+ "legend.legend.new_hint": "New legend name",
+ "legend.legend.delete_tip": "Delete legend",
+ "legend.legend.delete_placed": "Delete legend (placed on: {sheets})",
+ "legend.legend.deleted": "Legend deleted: {name}",
+ "legend.legend.no_rows": "No rows yet. Add one or take the styles of the current view",
+ "legend.legend.replace_q": "Replace {n} rows with the styles of this view?",
+ "legend.legend.replace": "Replace",
+ "legend.legend.keep": "Keep rows",
+ "legend.col.swatch": "Swatch",
+ "legend.col.value": "Value",
+ "legend.col.label": "Label"
+}

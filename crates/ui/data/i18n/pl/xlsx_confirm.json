@@ -1,0 +1,19 @@
+{
+ "xlsx_confirm.chip": "do potwierdzenia",
+ "xlsx_confirm.section": "Wiersze bez identyfikatora dopasowane do elementu po nazwie lub numerze",
+ "xlsx_confirm.tag": "dopasowane po nazwie",
+ "xlsx_confirm.tag_accepted": "dopasowanie zaakceptowane",
+ "xlsx_confirm.tag_rejected": "tworzy nowy",
+ "xlsx_confirm.kind_room": "pomieszczenie",
+ "xlsx_confirm.kind_curtain_wall": "ściana osłonowa",
+ "xlsx_confirm.row_line": "{kind} #{id}, klucz „{key}”",
+ "xlsx_confirm.accept": "Akceptuj",
+ "xlsx_confirm.accept_tip": "Zastosuj ten wiersz do dopasowanego elementu (jeden krok cofnięcia wraz z resztą)",
+ "xlsx_confirm.reject": "Utwórz nowy",
+ "xlsx_confirm.reject_tip": "Nie dopasowuj: ten wiersz tworzy nowy element",
+ "xlsx_confirm.decide_first": "Najpierw zaakceptuj lub odrzuć wiersze dopasowane po nazwie.",
+ "xl.msg.key_match_many": "klucz pasuje do elementów: {}; nie dopasowano, wiersz tworzy nowy",
+ "xl.msg.key_match_taken": "klucz pasuje do elementu użytego przez inny wiersz; nie dopasowano, wiersz tworzy nowy",
+ "xl.msg.key_match_kept": "zachowano: dopasowanie odrzucone, wiersz tworzy nowy element",
+ "xl.msg.key_match_undecided": "wiersze dopasowane po nazwie czekają na decyzję"
+}

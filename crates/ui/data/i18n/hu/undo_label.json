@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "Visszavonás: {what}",
+ "undo_label.redo_what": "Újra: {what}",
+ "undo_label.undo_none": "Nincs mit visszavonni",
+ "undo_label.redo_none": "Nincs mit újra végrehajtani"
+}

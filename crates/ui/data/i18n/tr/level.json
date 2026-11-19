@@ -1,0 +1,13 @@
+{
+ "level.err_open": "Kat açılmadı: {e}",
+ "level.need_name": "Bir katın adı ve kotu olmalı",
+ "level.created": "“{name}” katı oluşturuldu",
+ "level.err_create": "Kat oluşturulmadı: {e}",
+ "level.err_edit": "Kat değiştirilmedi: {e}",
+ "level.edited": "“{name}” katı değiştirildi",
+ "level.edited_stale": "“{name}” katı değiştirildi, görünüm yenilenmedi: {e}",
+ "level.last": "Son kat silinemez",
+ "level.deleted": "Kat silindi",
+ "level.not_empty": "Kat boş değil: önce elemanlarını silin",
+ "level.err_delete": "Kat silinmedi: {e}"
+}

@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "Beton",
+ "mat.masonry": "Duvar örgüsü",
+ "mat.brick": "Tuğla",
+ "mat.insulation": "Yalıtım",
+ "mat.plaster": "Sıva",
+ "mat.render": "Dış sıva",
+ "mat.gypsum": "Alçıpan",
+ "mat.glass": "Cam",
+ "mat.wood": "Ahşap",
+ "mat.steel": "Çelik",
+ "mat.membrane": "Membran",
+ "mat.other": "Diğer",
+ "warn.cat.wall": "Duvar",
+ "warn.cat.slab": "Döşeme",
+ "warn.cat.opening": "Açıklık",
+ "warn.cat.curtain_wall": "Perde duvar",
+ "td.mat.custom": "Diğer…"
+}

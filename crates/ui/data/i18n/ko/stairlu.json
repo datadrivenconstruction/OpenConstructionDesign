@@ -1,0 +1,12 @@
+{
+ "opt.stair.straight": "직선",
+ "opt.stair.l": "L자",
+ "opt.stair.u": "U자",
+ "opt.stair.gap": "간격",
+ "hint.stair.corner": "L자 계단: 꺾이는 모서리 지정 · Backspace — 마지막 점 제거 · Esc — 마지막 점 제거, 점이 없으면 취소",
+ "hint.stair.side": "계단: 두 번째 단 구간의 쪽 지정 · Backspace — 마지막 점 제거 · Esc — 마지막 점 제거, 점이 없으면 취소",
+ "tool.stair.flights": "챌판 {n}개(총 {m})",
+ "tool.stair.err_split": "각 단 구간에는 챌판이 최소 2개 필요합니다: 첫 구간은 {m}개 중 {n}개",
+ "tool.stair.err_comfort": "챌판과 디딤판이 편안함 규칙(2R + T)을 위반합니다",
+ "tool.stair.err_input": "계단 크기가 범위를 벗어남: 폭, 높이, 참을 확인하세요"
+}

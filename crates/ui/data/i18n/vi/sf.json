@@ -1,0 +1,4 @@
+{
+ "sf.restored": "Tệp cài đặt {file} bị hỏng; đã khôi phục bản sao tốt gần nhất. Tệp hỏng được giữ lại với tên {broken}.",
+ "sf.reset": "Tệp cài đặt {file} bị hỏng và không có bản sao lưu nào dùng được; sử dụng mặc định. Tệp hỏng được giữ lại với tên {broken}."
+}

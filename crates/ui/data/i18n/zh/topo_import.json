@@ -1,0 +1,4 @@
+{
+ "topo_import.topo.ambiguous": "{n} 行已跳过：数字有两种读法（1,250 = 1.25 还是 1250？），且文件未显示小数点",
+ "topo_import.topo.grouped": "{n} 个点以数字分组读取（1 250,5 或 1,234.5）"
+}

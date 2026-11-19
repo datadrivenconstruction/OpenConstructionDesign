@@ -1,0 +1,11 @@
+{
+ "materials.mat.name_empty": "재료 이름을 입력하세요",
+ "materials.mat.empty_title": "아직 재료가 없습니다",
+ "materials.mat.empty_hint": "아래에 이름을 입력하고 추가를 누르세요",
+ "materials.mat.nothing_hint": "검색과 일치하는 재료가 없습니다",
+ "materials.mat.clear_search": "검색 지우기",
+ "materials.mat.replace_with": "다음으로 바꾸기",
+ "materials.mat.delete_refused": "삭제할 수 없습니다: 재료가 {n}곳에서 사용 중입니다. 먼저 바꾸세요.",
+ "materials.mat.delete_confirm": "재료 “{name}”을(를) 삭제할까요? 이 작업은 실행 취소할 수 있습니다.",
+ "materials.mat.replace_confirm": "{n}개 요소의 “{from}”을(를) “{to}”(으)로 바꿀까요? “{from}”은(는) 제거됩니다. 이 작업은 실행 취소할 수 있습니다."
+}

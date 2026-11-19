@@ -1,0 +1,14 @@
+{
+ "dwg_table.copy": "Копіювати таблицю",
+ "dwg_table.copy_tip": "Скопіювати відомість обсягів за шарами як таблицю для електронної таблиці",
+ "dwg_table.copied": "Відомість скопійовано (з табуляцією)",
+ "dwg_table.total": "Разом",
+ "dwg_table.col.layer": "Шар",
+ "dwg_table.col.count": "Кількість",
+ "dwg_table.col.len": "Довжина, {unit}",
+ "dwg_table.col.area": "Площа, {unit}",
+ "dwg_table.unit.mm": "мм",
+ "dwg_table.unit.m2": "м²",
+ "dwg_table.unit.ft": "фт",
+ "dwg_table.unit.ft2": "фт²"
+}

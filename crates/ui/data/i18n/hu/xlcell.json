@@ -1,0 +1,15 @@
+{
+ "xl.msg.cell_clipped": "a szöveg a cellakorlátra lett vágva; csak olvasható, a szerkesztés nincs alkalmazva",
+ "xlcell.status": "Exportálva. {count} cella lett lerövidítve vagy üresen hagyva — lásd a részletek ablakát.",
+ "xlcell.title": "Az exportálás által módosított cellák",
+ "xlcell.intro": "Ezeket a cellákat nem lehetett változatlanul kiírni. A teljes érték a modellben marad; a cella zárolva van, és a munkafüzetben nem szerkeszthető.",
+ "xlcell.col_sheet": "Lap",
+ "xlcell.col_row": "Sor",
+ "xlcell.col_col": "Oszlop",
+ "xlcell.col_id": "Elem azonosítója",
+ "xlcell.col_what": "Mi történt",
+ "xlcell.what_clipped": "A szöveg a cellakorlátra lett vágva",
+ "xlcell.what_blank": "Nem véges szám, a cella üresen maradt",
+ "xlcell.more": "… és még {count}",
+ "xlcell.close": "Bezárás"
+}

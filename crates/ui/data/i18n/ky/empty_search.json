@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "Эч нерсе табылган жок",
+ "empty.browser_search.hint": "Бул издөөгө көрүнүш, кабат, тип же бөлмө туура келбейт.",
+ "empty.browser_search.action": "Издөөнү тазалоо",
+ "empty.xl_filtered.title": "Чыпкаларга туура келген жазуулар жок",
+ "empty.xl_filtered.hint": "Дагы түрлөрдү күйгүзүңүз, башка баракты тандаңыз же издөө текстин өзгөртүңүз.",
+ "empty.xl_filtered.action": "Чыпкаларды тазалоо",
+ "empty.xl_nochanges.title": "Китепте өзгөрүү жок",
+ "empty.xl_nochanges.hint": "Китеп моделге дал келет: аны импорттоо эч нерсени өзгөртпөйт.",
+ "empty.version_same.title": "Модельдер бирдей",
+ "empty.version_same.hint": "Ачык модель менен тандалган версиянын ортосунда айырмачылык табылган жок.",
+ "empty.templates.title": "Азырынча көрүнүш шаблондору жок",
+ "empty.templates.hint": "Башка көрүнүштөрдө жөндөөлөрүн колдонуу үчүн учурдагы көрүнүштөн түзүңүз.",
+ "empty.templates.action": "Шаблонду атоо",
+ "empty.fe_params.title": "Азырынча параметрлер жок",
+ "empty.fe_params.hint": "Өлчөмдөрдү, материалдарды же көрүнүштү башкаруу үчүн төмөндө параметр кошуңуз.",
+ "empty.fe_params.action": "Параметр кошуу"
+}

@@ -1,0 +1,7 @@
+{
+ "rebar_pick.pick.empty": "Armatuur: vali post, tala, sein, plaat või vundament",
+ "rebar_pick.pick.unsupported": "Seda valikut ei saa armeerida. Vali post, tala, sein, plaat või vundament",
+ "rebar_pick.pick.keys": "Klõps valib, Shift lisab veel · Enter avab vormi · Esc tühistab",
+ "rebar_pick.pick.open": "Ava vorm",
+ "rebar_pick.pick.cancel": "Tühista"
+}

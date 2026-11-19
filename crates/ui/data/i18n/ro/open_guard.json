@@ -1,0 +1,11 @@
+{
+ "job.stage.prepare": "Se pregătește proiectul",
+ "open_guard.already_open": "{name} este deja deschis",
+ "open_guard.from_cache": "{name}: deschis din memoria cache a importului",
+ "open_guard.known_project": "{name} a fost importat anterior: se deschide acel proiect",
+ "open_guard.locate": "Localizează",
+ "open_guard.mem_low": "Memorie puțină: bugetul de plase este înjumătățit, iar construcția nivelurilor de detaliu este suspendată",
+ "open_guard.mem_low_short": "Memorie puțină: construcția nivelurilor de detaliu este suspendată până se eliberează memorie",
+ "open_guard.no_window": "Fereastra acelui proiect nu a putut fi găsită",
+ "open_guard.switch_window": "Comută la acea fereastră"
+}

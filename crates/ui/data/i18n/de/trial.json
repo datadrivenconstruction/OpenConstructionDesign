@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "Punkt",
+ "trial.field.distance": "Abstand",
+ "trial.field.target": "Element",
+ "trial.refused": "{field}: {reason}. Zum Übernehmen ändern",
+ "trial.preview_off": "Vorschau aus: Modell zu groß"
+}

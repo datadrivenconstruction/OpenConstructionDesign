@@ -1,0 +1,10 @@
+{
+ "stage_err.kept": "đã giữ bảng {t}: {n} hàng được ghi sau khi Thêm",
+ "stage_err.stage.prev_attached": "Chưa thêm: bản sao của lần Thêm trước vẫn đang mở. Hãy chạy Thêm lại",
+ "stage_err.stage.model_changed": "Chưa thêm: mô hình đã thay đổi trong lúc đọc tệp. Hãy chạy Thêm lại",
+ "stage_err.stage.no_record": "Chưa thêm: bản sao đã nhập không có bản ghi thay đổi",
+ "stage_err.stage.table_differs": "Chưa thêm: bảng {t} khác nhau giữa mô hình và bản sao đã nhập",
+ "stage_err.stage.unique_key": "Chưa thêm: không thể theo dõi khóa duy nhất của bảng {t}",
+ "stage_err.stage.table_gone": "Chưa thêm: lần nhập đã thay đổi bảng {t}, nhưng bản sao không còn bảng này",
+ "stage_err.stage.copy_held": "Đã thêm; bản sao đã nhập vẫn mở cho đến lần Thêm tiếp theo hoặc khi mở lại mô hình"
+}

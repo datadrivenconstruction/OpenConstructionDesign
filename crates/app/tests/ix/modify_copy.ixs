@@ -1,0 +1,6 @@
+walls=[(0,0)-(6,0)]
+# Copy: the selected wall copied 3 m up; Copy stays for more copies, Esc twice leaves
+tool(select) click(3,0) → selected=1
+tool(CO) → scope=Moving
+click(0,0) click(0,3) → walls=2 journal=+1 scope=Moving
+key(Escape) key(Escape) → scope=Idle walls=2

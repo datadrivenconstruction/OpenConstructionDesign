@@ -1,0 +1,23 @@
+{
+ "cmd.app.report": "Ilmoita ongelmasta…",
+ "cmd.app.report.desc": "Kuvaa, mikä meni vikaan, ja tallentaa paketin tälle tietokoneelle: tekstisi, version ja järjestelmätiedot, ikkunakuvan sekä viimeisimmän kaatumistiedon. Mitään ei lähetetä.",
+ "report.title": "Ilmoita ongelmasta",
+ "report.what": "Mitä tapahtui",
+ "report.expected": "Mitä odotit",
+ "report.steps": "Toistamisen vaiheet",
+ "report.opt.shot": "Sisällytä kuva ikkunasta",
+ "report.opt.model": "Sisällytä kopio mallista",
+ "report.opt.model.note": "Oletuksena pois. Kopio sisältää projektitietosi ilman tekoälyn lokia.",
+ "report.opt.paths": "Säilytä käyttäjänimet tiedostopoluissa",
+ "report.local": "Paketti tallennetaan vain tälle tietokoneelle. Mitään ei lähetetä automaattisesti.",
+ "report.blocked": "Kuvaa ensin, mitä tapahtui.",
+ "report.save": "Tallenna paketti",
+ "report.copy": "Kopioi teksti",
+ "report.cancel": "Peruuta",
+ "report.copied": "Raportin teksti kopioitu.",
+ "report.saved": "Paketti tallennettu: {path}",
+ "report.failed": "Pakettia ei voitu tallentaa: {err}",
+ "report.model.fail": "Mallin kopiota ei voitu tehdä, mitään ei tallennettu: {err}",
+ "report.crash.notice": "Edellinen istunto päättyi kaatumiseen.",
+ "report.crash.action": "Ilmoita ongelmasta"
+}

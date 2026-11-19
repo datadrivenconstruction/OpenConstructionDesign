@@ -1,0 +1,22 @@
+{
+ "depth.chip": "Độ sâu {level}",
+ "depth.chip_tip": "Mức triển khai mà lần chạy tiếp theo sẽ thực hiện: D1 phác ý đến D5 chế tạo, theo từng bộ môn",
+ "depth.all_off": "tắt tất cả bộ môn",
+ "depth.disc.arch": "KT",
+ "depth.disc.struct": "KC",
+ "depth.disc.mep": "MEP",
+ "depth.disc.doc": "Hồ sơ",
+ "depth.project": "Độ sâu dự án",
+ "depth.level.1": "D1 Ý tưởng: khối tích, các tầng, diện tích, một tờ",
+ "depth.level.2": "D2 Phác thảo: tường, phòng theo chương trình, lỗ mở, lưới, mặt bằng",
+ "depth.level.3": "D3 Thiết kế: loại lớp, kết cấu đã định kích thước, tuyến MEP chính và đầu cuối, bảng thống kê",
+ "depth.level.4": "D4 Thi công: chi tiết nút, phụ kiện, hoàn thiện, cốt thép, nhánh",
+ "depth.level.5": "D5 Chế tạo: bảng uốn thép, liên kết thép, cấu kiện đúc sẵn, bảng khối lượng vật liệu",
+ "depth.as_project": "Như dự án",
+ "depth.estimate": "Ước tính: khoảng {elements} phần tử, {minutes} phút, {tokens} token trong {calls} lượt gọi, {sheets} tờ",
+ "depth.estimate_none": "Ước tính đi kèm dự án đã soạn: mô hình vẫn đang trống",
+ "depth.heat": "Bản đồ nhiệt độ sâu",
+ "depth.heat.row": "Độ sâu",
+ "depth.settings": "Độ sâu thiết kế của dự án này",
+ "depth.settings_desc": "Độ sâu mà trợ lý AI làm việc, từ D1 đến D5, có công tắc và độ sâu riêng cho từng bộ môn; được lưu trong tệp dự án"
+}

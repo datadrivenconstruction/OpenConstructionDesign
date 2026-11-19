@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "Võta tagasi: {what}",
+ "undo_label.redo_what": "Tee uuesti: {what}",
+ "undo_label.undo_none": "Pole midagi tagasi võtta",
+ "undo_label.redo_none": "Pole midagi uuesti teha"
+}

@@ -1,0 +1,22 @@
+{
+ "cmd.arch.grid_pick": "Akse etter linje",
+ "cmd.arch.grid_pick.desc": "Lager en akse nøyaktig langs en valgt tegnelinje på gjeldende etasje; navnene fortsetter serien. Tab tar alle parallelle linjer på samme tegnelag samtidig. Hvert valg er ett angrepstrinn.",
+ "cmd.struct.beam_pick": "Bjelke etter linje",
+ "cmd.struct.beam_pick.desc": "Plasserer en bjelke av gjeldende type på aktiv etasje langs en valgt tegnelinje. Tab tar den sammenkoblede kjeden. Hvert valg er ett angrepstrinn.",
+ "hint.grid_pick.one": "Akse etter linje: velg en tegnelinje · Tab alle parallelle linjer på laget · Esc avslutter",
+ "hint.grid_pick.more": "Akse etter linje: velg en linje for å ta alle parallelle linjer på laget · Tab én linje · Esc deaktiverer",
+ "hint.beam_pick.one": "Bjelke etter linje: velg en tegnelinje · Tab sammenkoblet kjede · Esc avslutter",
+ "hint.beam_pick.more": "Bjelke etter linje: velg en linje for å ta kjeden · Tab én linje · Esc deaktiverer",
+ "line_pick.st.start_grid": "Velg en tegnelinje. Tab: alle parallelle linjer på laget",
+ "line_pick.st.start_beam": "Velg en tegnelinje for en {type}-bjelke. Tab: sammenkoblet kjede",
+ "line_pick.st.grid_done": "Akse {name} lagt til",
+ "line_pick.st.grids_done": "{n} akser lagt til: {first} — {last}",
+ "line_pick.st.beam_done": "Bjelke {type} lagt til",
+ "line_pick.st.beams_done": "{n} bjelker {type} lagt til",
+ "line_pick.st.on_grid": "Denne linjen har allerede akse {name}",
+ "line_pick.st.on_beam": "Denne linjen har allerede bjelke {id}",
+ "line_pick.st.no_layer": "Tegnelagene for linjene er ikke kjent ennå, prøv igjen",
+ "line_pick.st.no_beam_type": "Ingen bjelkeprofil i katalogen",
+ "line_pick.st.reload_warn": "Opprettet, men visningen kunne ikke lastes på nytt: {err}",
+ "line_pick.st.failed": "Ikke opprettet: {err}"
+}

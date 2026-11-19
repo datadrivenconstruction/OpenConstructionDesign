@@ -1,0 +1,10 @@
+{
+ "cmd.mod.scale": "Skala",
+ "cmd.mod.scale.desc": "Pilih elemen, lalu klik titik dasar, panjang referensi, dan panjang baru, atau ketik faktor.",
+ "hint.scale.select": "Skala: pilih elemen · Enter — selesai",
+ "hint.scale.first": "Skala: pilih titik dasar · Esc — batal",
+ "hint.scale.second": "Skala: pilih panjang referensi · angka — faktor · Esc — batal",
+ "hint.scale.third": "Skala: pilih panjang baru · angka — faktor · Esc — batal",
+ "scl.bad_factor": "Faktor skala harus angka lebih dari nol",
+ "scl.zero_ref": "Panjang referensi nol: pilih titik yang jauh dari dasar"
+}

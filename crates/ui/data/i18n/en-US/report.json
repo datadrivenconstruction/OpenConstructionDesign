@@ -1,0 +1,23 @@
+{
+ "cmd.app.report": "Report a problem…",
+ "cmd.app.report.desc": "Describes what went wrong and saves a bundle on this computer: your text, build and system facts, a window picture and the last crash record. Nothing is sent.",
+ "report.title": "Report a problem",
+ "report.what": "What happened",
+ "report.expected": "What you expected",
+ "report.steps": "Steps to repeat it",
+ "report.opt.shot": "Include a picture of the window",
+ "report.opt.model": "Include a copy of the model",
+ "report.opt.model.note": "Off by default. The copy holds your project data, without the AI journal.",
+ "report.opt.paths": "Keep user names in file paths",
+ "report.local": "The bundle is saved on this computer only. Nothing is sent automatically.",
+ "report.blocked": "Describe what happened first.",
+ "report.save": "Save bundle",
+ "report.copy": "Copy text",
+ "report.cancel": "Cancel",
+ "report.copied": "Report text copied.",
+ "report.saved": "Bundle saved: {path}",
+ "report.failed": "The bundle could not be saved: {err}",
+ "report.model.fail": "The model copy could not be made, nothing was saved: {err}",
+ "report.crash.notice": "The previous session ended with a crash.",
+ "report.crash.action": "Report a problem"
+}

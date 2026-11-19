@@ -1,0 +1,23 @@
+{
+ "cmd.app.report": "Problem melden…",
+ "cmd.app.report.desc": "Beschreibt, was schiefgelaufen ist, und speichert ein Paket auf diesem Computer: Ihren Text, Build- und Systeminformationen, ein Fensterbild und den letzten Absturzbericht. Es wird nichts gesendet.",
+ "report.title": "Problem melden",
+ "report.what": "Was passiert ist",
+ "report.expected": "Was Sie erwartet haben",
+ "report.steps": "Schritte zur Reproduktion",
+ "report.opt.shot": "Ein Bild des Fensters einschließen",
+ "report.opt.model": "Eine Kopie des Modells einschließen",
+ "report.opt.model.note": "Standardmäßig aus. Die Kopie enthält Ihre Projektdaten ohne das KI-Journal.",
+ "report.opt.paths": "Benutzernamen in Dateipfaden beibehalten",
+ "report.local": "Das Paket wird nur auf diesem Computer gespeichert. Es wird nichts automatisch gesendet.",
+ "report.blocked": "Beschreiben Sie zuerst, was passiert ist.",
+ "report.save": "Paket speichern",
+ "report.copy": "Text kopieren",
+ "report.cancel": "Abbrechen",
+ "report.copied": "Berichtstext kopiert.",
+ "report.saved": "Paket gespeichert: {path}",
+ "report.failed": "Das Paket konnte nicht gespeichert werden: {err}",
+ "report.model.fail": "Die Kopie des Modells konnte nicht erstellt werden, es wurde nichts gespeichert: {err}",
+ "report.crash.notice": "Die vorherige Sitzung wurde durch einen Absturz beendet.",
+ "report.crash.action": "Problem melden"
+}

@@ -1,0 +1,4 @@
+{
+ "xl.msg.layer_cells_unplaced": "{} komórek typu '{}' warstwy {} w arkuszu '{}' nie udało się umieścić",
+ "xl.msg.layer_hidden_unplaced": "ukryty wiersz typu '{}' warstwy {} w arkuszu '{}' nie udało się umieścić"
+}

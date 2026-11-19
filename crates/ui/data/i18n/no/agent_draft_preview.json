@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "Forhåndsvis",
+ "agent_draft.ag.preview.desc": "Tegner konturen av elementene i dette utkastet på lerretet mens pekeren er på knappen. Ingenting endres.",
+ "agent_draft.type.column": "Søyle",
+ "agent_draft.type.roof": "Takflate",
+ "agent_draft.type.ceiling": "Tak",
+ "agent_draft.type.stair": "Monolittisk",
+ "agent_draft.type.railing": "Rekkverk",
+ "agent_draft.type.shaft": "Sjakt",
+ "agent_draft.type.axis": "Akse 6,5 mm",
+ "agent_draft.type.refplane": "Referanseplan"
+}

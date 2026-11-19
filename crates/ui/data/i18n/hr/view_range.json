@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "Raspon pogleda",
+ "view_range.range": "Raspon pogleda",
+ "view_range.cut": "Ravnina presjeka",
+ "view_range.bottom": "Dno",
+ "view_range.depth": "Dubina pogleda",
+ "view_range.cut.hint": "Visina ravnine presjeka iznad razine. Elementi koji je sijeku crtaju se presječeni.",
+ "view_range.bottom.hint": "Donja granica raspona, u odnosu na razinu. Dopuštene su nulte ili negativne vrijednosti.",
+ "view_range.depth.hint": "Koliko pogled seže ispod dna. Nula ili više.",
+ "view_range.err.number": "Unesite duljinu u svako polje",
+ "view_range.err.not_finite": "Unesite duljinu u svako polje",
+ "view_range.err.cut_not_above_bottom": "Ravnina presjeka mora biti iznad dna",
+ "view_range.err.negative_depth": "Dubina pogleda ne može biti negativna",
+ "view_range.err.top_below_cut": "Vrh raspona ne smije biti ispod ravnine presjeka"
+}

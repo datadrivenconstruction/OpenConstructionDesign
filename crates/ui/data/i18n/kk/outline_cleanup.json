@@ -1,0 +1,15 @@
+{
+ "cmd.ctx.floor.clean_outline": "Контурды тазалау",
+ "cmd.ctx.floor.clean_outline.desc": "Еден контуры өзіне қайтатын тар шыңдарды жояды. Алдымен алдын ала қарау көрсетіледі; бір болдырмау қадамы.",
+ "outline_cleanup.title": "Контурды тазалау",
+ "outline_cleanup.intro": "Бұл еденнің контуры тар шыңдармен өзіне қайтады: {n}. Тазалау оларды жояды; қалғанының бәрі өзгеріссіз қалады.",
+ "outline_cleanup.legend_before": "Қалың сызық: қазіргі контур",
+ "outline_cleanup.legend_after": "Жұқа сызық: тазалаудан кейінгі контур",
+ "outline_cleanup.undo": "Мұны бір қадамда болдыруға болады.",
+ "outline_cleanup.apply": "Тазалау",
+ "outline_cleanup.cancel": "Бас тарту",
+ "outline_cleanup.done": "Контур тазаланды, шыңдар жойылды: {n}",
+ "outline_cleanup.none": "Бұл еденнің контурында шыңдар жоқ",
+ "outline_cleanup.failed": "Контурды тазалау мүмкін болмады",
+ "outline_cleanup.changed": "Алдын ала қараудан кейін контур өзгерді; ештеңе жазылмады. Жаңа алдын ала қарауды тексеріңіз."
+}

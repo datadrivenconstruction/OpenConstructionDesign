@@ -1,0 +1,21 @@
+{
+ "cmd.help.check_update": "Sök efter uppdateringar",
+ "update_check.title": "Sök efter uppdatering",
+ "update_check.desc": "Av som standard. Skickar bara versionen, operativsystemet och arkitekturen samt installationstypen till vår server. Laddar aldrig ner eller installerar något.",
+ "update_check.freq.startup": "Vid start",
+ "update_check.freq.daily": "Dagligen",
+ "update_check.freq.weekly": "Veckovis",
+ "update_check.freq.never": "Aldrig",
+ "update_check.check_now": "Sök nu",
+ "update_check.dialog.title": "Sök efter uppdatering",
+ "update_check.unknown.title": "Kunde inte söka efter uppdateringar",
+ "update_check.unknown.body": "{e}. Det betyder inte att den här versionen är aktuell. Försök igen senare.",
+ "update_check.current": "Du har den senaste versionen ({v}).",
+ "update_check.newer": "Version {v} finns tillgänglig",
+ "update_check.date": "Släppt {d}",
+ "update_check.unfit": "Den här versionen ({v}) är äldre än den lägsta rekommenderade versionen {f}. Uppdatering rekommenderas.",
+ "update_check.close": "Stäng",
+ "update_check.open_failed": "Utgivningssidan kunde inte öppnas.",
+ "update_check.toast.newer": "Version {v} finns tillgänglig. Hjälp > Sök efter uppdateringar.",
+ "update_check.toast.unfit": "Den här versionen ({v}) är äldre än den lägsta rekommenderade versionen {f}."
+}

@@ -1,0 +1,8 @@
+{
+ "v3d.proj.to_ortho": "切换为正交投影",
+ "v3d.proj.to_persp": "切换为透视投影",
+ "v3d.walk.unit.m": "m/s",
+ "v3d.walk.unit.ft": "英尺/秒",
+ "v3d.temp.show_all": "显示全部  ·  Esc",
+ "v3d.msg.deleted_named": "已删除三维视图 {name}"
+}

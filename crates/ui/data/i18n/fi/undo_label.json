@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "Kumoa: {what}",
+ "undo_label.redo_what": "Tee uudelleen: {what}",
+ "undo_label.undo_none": "Ei kumottavaa",
+ "undo_label.redo_none": "Ei tehtävää uudelleen"
+}

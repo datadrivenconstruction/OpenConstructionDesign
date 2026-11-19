@@ -1,0 +1,7 @@
+{
+ "ai.retry.countdown": "{n}초 후 다시 시도",
+ "ai.retry.try": "자동 시도 {i} / {max}. 같은 요청을 다시 보냅니다.",
+ "ai.retry.now": "지금 다시 시도",
+ "ai.retry.gave_up": "자동 시도 {max}회 후에도 응답이 없습니다.",
+ "ai.retry.shorten": "요청 줄이기"
+}

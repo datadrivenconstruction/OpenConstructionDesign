@@ -1,0 +1,11 @@
+{
+ "sketch.points": "Nuqtalar",
+ "sketch.rect": "To'rtburchak",
+ "sketch.circle": "Aylana",
+ "sketch.polygon": "Ko'pburchak",
+ "sketch.radius": "R",
+ "sketch.sides": "Tomonlar",
+ "sketch.circum": "Opisangan",
+ "sketch.shape.tip": "Eskiz shakli (A almashtiradi). To'rtburchak: ikki burchak. Aylana va ko'pburchak: markaz, so'ng radius. O'lchamni kiriting va Enter bosing, u qotadi.",
+ "tool.err.zero_size": "Nol o'lcham: ikkinchi nuqtani birinchisidan uzoqlashtiring"
+}

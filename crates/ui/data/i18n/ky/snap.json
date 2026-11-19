@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "Учу",
+ "snap.midpoint": "Ортосу",
+ "snap.perpendicular": "Перпендикуляр",
+ "snap.wall_axis": "Дубалдын огу",
+ "snap.wall_face": "Дубалдын бети",
+ "snap.grid": "Тор",
+ "snap.intersection": "Кесилиш",
+ "snap.grid_axis": "Тор сызыгы",
+ "snap.ref_plane": "Шилтеме тегиздиги",
+ "snap.nearest": "Жакынкы",
+ "snap.align_x": "Алыскы чекит менен X огунда тегизделген",
+ "snap.align_y": "Алыскы чекит менен Y огунда тегизделген",
+ "snap.align_xy": "X жана Y огунда тегизделген"
+}

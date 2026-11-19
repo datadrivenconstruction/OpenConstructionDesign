@@ -1,0 +1,7 @@
+{
+ "gen.pin.room": "Módosította a generált projekt egyik helyiségét. Rögzítse, hogy a felülvizsgálat a helyén hagyja.",
+ "gen.pin.storey": "Módosította a generált projekt egyik szintjét. Rögzítse, hogy a felülvizsgálat megtartsa a falait és nyílásait.",
+ "gen.pin.action": "Rögzítés",
+ "gen.pin.done": "Rögzítve: a projekt felülvizsgálata megtartja ezt, a többit pedig köréje helyezi",
+ "gen.pin.failed": "Nem sikerült rögzíteni"
+}

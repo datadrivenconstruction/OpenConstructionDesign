@@ -1,0 +1,5 @@
+{
+ "drafts_overwrite.ow.project": "Ukládání projektu čeká na tuto odpověď. Nahraďte hodnoty a pokračujte v ukládání; Zpět k úpravám ponechá každou úpravu a nic nezapíše.",
+ "drafts_overwrite.drafts.ow_wait": "Ukládání čeká na vaši odpověď v editoru rodin: načtení rodiny by nahradilo hodnoty typů projektu. Nic nebylo zavřeno.",
+ "drafts_overwrite.drafts.ow_back": "Ukládání zastaveno: hodnoty typů projektu byly ponechány a úpravy rodin zůstávají otevřené. Nic nebylo zavřeno."
+}

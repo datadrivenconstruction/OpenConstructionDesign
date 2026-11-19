@@ -1,0 +1,6 @@
+{
+ "view_template.locked": "템플릿 {name}이(가) 관리함",
+ "view_template.edit_template": "템플릿 편집",
+ "view_template.locked_tip": "뷰 템플릿 {name}에서 설정되었습니다. 템플릿에서 변경하세요.",
+ "view_template.no_filters": "이 뷰에는 필터가 없습니다"
+}

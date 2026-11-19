@@ -1,0 +1,11 @@
+{
+ "sketch.points": "Mga point",
+ "sketch.rect": "Parihaba",
+ "sketch.circle": "Bilog",
+ "sketch.polygon": "Poligon",
+ "sketch.radius": "Rad.",
+ "sketch.sides": "Mga gilid",
+ "sketch.circum": "Nakapaligid",
+ "sketch.shape.tip": "Hugis ng sketch (nililipat ng A). Parihaba: dalawang sulok. Bilog at polygon: sentro, saka radius. Mag-type ng laki at pindutin ang Enter para ayusin ito.",
+ "tool.err.zero_size": "Zero ang laki: ilayo ang pangalawang point sa una"
+}

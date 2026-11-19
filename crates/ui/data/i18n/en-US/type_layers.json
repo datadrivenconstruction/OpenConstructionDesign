@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "Insert layer below",
+ "type_layers.layer.delete": "Delete layer",
+ "type_layers.layer.delete_last": "A type needs at least one layer",
+ "type_layers.value.bad": "Not a valid positive value",
+ "type_layers.value.required": "Required",
+ "type_layers.unsaved.title": "Unsaved changes to {name}",
+ "type_layers.unsaved.body": "Apply them to the type, or discard them?",
+ "type_layers.unsaved.discard": "Discard"
+}

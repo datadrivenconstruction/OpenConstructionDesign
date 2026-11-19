@@ -1,0 +1,6 @@
+{
+ "xl.msg.filter_on_sheet_x": "filtre de la feuille « {} »",
+ "xl.msg.sort_settings_on_sheet_x": "paramètres de tri de la feuille « {} »",
+ "xl.msg.hidden_rows_on_sheet_x": "lignes masquées de la feuille « {} »",
+ "xl.msg.hidden_columns_on_sheet_x": "colonnes masquées de la feuille « {} »"
+}

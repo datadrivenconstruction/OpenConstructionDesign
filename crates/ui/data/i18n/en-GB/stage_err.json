@@ -1,0 +1,10 @@
+{
+ "stage_err.kept": "kept table {t}: {n} rows written after the Add",
+ "stage_err.stage.prev_attached": "Not added: the copy of the previous Add is still open. Run Add again",
+ "stage_err.stage.model_changed": "Not added: the model changed while the file was read. Run Add again",
+ "stage_err.stage.no_record": "Not added: the imported copy has no change record",
+ "stage_err.stage.table_differs": "Not added: table {t} differs between the model and the imported copy",
+ "stage_err.stage.unique_key": "Not added: a unique key of table {t} cannot be followed",
+ "stage_err.stage.table_gone": "Not added: the import changed table {t}, which the copy no longer has",
+ "stage_err.stage.copy_held": "Added; the imported copy stays open until the next Add or reopening the model"
+}

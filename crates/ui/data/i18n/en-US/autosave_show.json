@@ -1,0 +1,4 @@
+{
+ "cmd.mgr.autosave_show": "Show autosave",
+ "cmd.mgr.autosave_show.desc": "Open the autosave window; it stays open if already shown."
+}

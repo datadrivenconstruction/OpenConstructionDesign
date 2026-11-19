@@ -1,0 +1,5 @@
+{
+ "palette.find_named": "Tìm phần tử có tên \"{q}\"",
+ "palette.search_help": "Trợ giúp tìm kiếm cho \"{q}\"",
+ "palette.not_found": "Không có gì tên \"{q}\""
+}

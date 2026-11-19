@@ -1,0 +1,7 @@
+{
+ "project_unsaved.unsaved.model": "Modelændringer er ikke gemt.",
+ "project_unsaved.unsaved.drawings": {
+  "one": "# placeret tegning er ikke gemt i projektet: dens ændringer går tabt.",
+  "other": "# placerede tegninger er ikke gemt i projektet: deres ændringer går tabt."
+ }
+}

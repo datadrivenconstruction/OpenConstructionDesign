@@ -1,0 +1,7 @@
+{
+ "spline.opt.spline": "اسپلاین",
+ "spline.opt.spline_tip": "دیوار اسپلاین: روی نقاطی که عبور می‌کند کلیک کنید؛ Enter یا Esc برای پایان",
+ "spline.wt.three_points": "دیوار اسپلاین حداقل به سه نقطه نیاز دارد",
+ "spline.wt.no_curtain": "دیوار پرده‌ای محور اسپلاین ندارد",
+ "spline.wt.added": "دیوار اسپلاین افزوده شد"
+}

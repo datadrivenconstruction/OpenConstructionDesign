@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "Tấm",
+ "curtain_props.cw.panel_cell": "Ô {i}×{j} · tường rèm #{id}",
+ "curtain_props.cw.kind": "Loại",
+ "curtain_props.cw.kind.glazed": "Kính",
+ "curtain_props.cw.kind.solid": "Đặc",
+ "curtain_props.cw.kind.door": "Cửa đi",
+ "curtain_props.cw.kind.window": "Cửa sổ",
+ "curtain_props.cw.kind.empty": "Trống",
+ "curtain_props.cw.name": "Tên",
+ "curtain_props.cw.swing_side": "Mở sang phía bên kia",
+ "curtain_props.cw.swing_hinge": "Bản lề tại đầu ô",
+ "curtain_props.cw.size": "Kích thước",
+ "curtain_props.cw.cell_area": "Diện tích ô",
+ "curtain_props.cw.panel_area": "Diện tích tấm",
+ "curtain_props.cw.prev": "Tấm trước",
+ "curtain_props.cw.next": "Tấm kế tiếp",
+ "curtain_props.cw.wall": "Chọn tường",
+ "curtain_props.cw.panel_hint": "Esc — chọn · Ctrl+Z — hoàn tác",
+ "curtain_props.cw.status.panel": "Tấm {i}×{j} → {kind}",
+ "e3d.err.cw_height": "chiều cao tường rèm phải lớn hơn 100 mm"
+}

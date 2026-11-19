@@ -1,0 +1,22 @@
+{
+ "cmd.arch.grid_pick": "Grid ayon sa linya",
+ "cmd.arch.grid_pick.desc": "Gumagawa ng grid nang eksakto sa napiling linya ng drawing sa kasalukuyang level; nagpapatuloy ang mga pangalan sa serye. Kinukuha ng Tab ang bawat parallel na linya ng parehong drawing layer nang sabay. Bawat pick ay isang undo step.",
+ "cmd.struct.beam_pick": "Beam ayon sa linya",
+ "cmd.struct.beam_pick.desc": "Naglalagay ng beam ng kasalukuyang type sa aktibong level kasunod ng napiling linya ng drawing. Kinukuha ng Tab ang magkakadikit na kadena. Bawat pick ay isang undo step.",
+ "hint.grid_pick.one": "Grid ayon sa linya: pumili ng linya ng drawing · Tab lahat ng parallel na linya ng layer nito · Esc para lumabas",
+ "hint.grid_pick.more": "Grid ayon sa linya: pumili ng linya para kunin ang lahat ng parallel na linya ng layer nito · Tab isang linya · Esc para i-disarm",
+ "hint.beam_pick.one": "Beam ayon sa linya: pumili ng linya ng drawing · Tab magkakadikit na kadena · Esc para lumabas",
+ "hint.beam_pick.more": "Beam ayon sa linya: pumili ng linya para kunin ang kadena nito · Tab isang linya · Esc para i-disarm",
+ "line_pick.st.start_grid": "Pumili ng linya ng drawing. Tab: lahat ng parallel na linya ng layer nito",
+ "line_pick.st.start_beam": "Pumili ng linya ng drawing para sa beam na {type}. Tab: magkakadikit na kadena",
+ "line_pick.st.grid_done": "Nadagdag ang grid {name}",
+ "line_pick.st.grids_done": "Nadagdag ang {n} grid: {first} — {last}",
+ "line_pick.st.beam_done": "Nadagdag ang beam {type}",
+ "line_pick.st.beams_done": "Nadagdag ang {n} beam {type}",
+ "line_pick.st.on_grid": "May grid {name} na ang linyang ito",
+ "line_pick.st.on_beam": "May beam {id} na ang linyang ito",
+ "line_pick.st.no_layer": "Hindi pa alam ang mga layer ng drawing ng mga linya, subukan muli",
+ "line_pick.st.no_beam_type": "Walang seksyon ng beam sa catalog",
+ "line_pick.st.reload_warn": "Nagawa, pero hindi ma-reload ang view: {err}",
+ "line_pick.st.failed": "Hindi nagawa: {err}"
+}

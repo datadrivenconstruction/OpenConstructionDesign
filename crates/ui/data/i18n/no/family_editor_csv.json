@@ -1,0 +1,11 @@
+{
+ "fe.csv.apply": "Bruk import",
+ "fe.csv.cancel": "Forkast forhåndsvisning",
+ "fe.csv.nothing": "Ingenting å endre: katalogen stemmer med gjeldende typer",
+ "fe.csv.preview": "Forhåndsvisning av import: {added} nye, {changed} endrede, {same} uendrede typer; {values} verdier endres",
+ "fe.csv.preview_hint": "Tomme celler og manglende kolonner beholder gjeldende verdier. Ingenting endres før du bruker.",
+ "fe.csv.skipped": "Ikke brukt, verdi beholdt: {msg}",
+ "fe.csv.type_added": "Ny type {name}",
+ "fe.csv.type_changed": "Type {name}",
+ "fe.csv.value": "  {param}: {old} → {new}"
+}

@@ -1,0 +1,40 @@
+{
+ "rebar_hosts.hosts": "Основи: {list}",
+ "rebar_hosts.kind.column": "Колона",
+ "rebar_hosts.kind.beam": "Греда",
+ "rebar_hosts.kind.wall": "Стена",
+ "rebar_hosts.kind.slab": "Плоча",
+ "rebar_hosts.kind.footing": "Фундамент",
+ "rebar_hosts.kind.raft": "Фундаментна плоча",
+ "rebar_hosts.n.column": {
+  "one": "# колона",
+  "other": "# колони"
+ },
+ "rebar_hosts.n.beam": {
+  "one": "# греда",
+  "other": "# греди"
+ },
+ "rebar_hosts.n.wall": {
+  "one": "# стена",
+  "other": "# стени"
+ },
+ "rebar_hosts.n.slab": {
+  "one": "# плоча",
+  "other": "# плочи"
+ },
+ "rebar_hosts.n.footing": {
+  "one": "# фундамент",
+  "other": "# фундамента"
+ },
+ "rebar_hosts.n.raft": {
+  "one": "# фундаментна плоча",
+  "other": "# фундаментни плочи"
+ },
+ "rebar_hosts.mixed_note": "Колоните и гредите приемат пръти и хомути; стените, плочите и фундаментите приемат мрежа. Изберете една група, за да добавите армировка.",
+ "rebar_hosts.why.mixed": "Изборът смесва колони или греди със стени, плочи или фундаменти. Изберете една група.",
+ "rebar_hosts.why.area_linear": "Мрежата се поставя в стени, плочи и фундаменти, не в колони или греди.",
+ "rebar_hosts.why.bars_plate": "Надлъжните пръти и хомутите се поставят в колони и греди, не в стени, плочи или фундаменти.",
+ "rebar_hosts.why.no_common_face": "Избраните основи нямат обща защитна страна. Изберете основи от един вид.",
+ "rebar_hosts.why.no_type": "Изберете тип арматура.",
+ "rebar_hosts.kind_type": "{kind} · {type}"
+}

@@ -1,0 +1,14 @@
+[
+ {
+  "id": "drawing.to_detail",
+  "icon": "to-detail",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "annotate",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M5",
+  "group": "symbols"
+ }
+]

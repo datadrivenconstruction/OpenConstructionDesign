@@ -1,0 +1,7 @@
+{
+ "xl.msg.param_ambiguous": "cột '{}' có thể là bất kỳ tham số nào trong {}; hãy nhập đúng tên tham số, chưa áp dụng",
+ "xl.msg.param_tag_stale": "cột '{}' ghi tên một tham số mà dự án này không có; chưa áp dụng",
+ "xl.msg.dup_col_note": "cột '{}' trong {} lặp lại cột '{}' trong {}; các giá trị giống nhau được áp dụng một lần, hàng nào khác nhau sẽ giữ giá trị của mô hình",
+ "xl.msg.dup_col_differs": "cột '{}' và '{}' khác nhau ở {} và {}; giữ giá trị của mô hình — hãy giữ một cột",
+ "xl.msg.dup_col_id": "cột '{}' và '{}' khác nhau ở {} và {}, không xác định được hàng; chưa áp dụng gì — hãy giữ một cột"
+}

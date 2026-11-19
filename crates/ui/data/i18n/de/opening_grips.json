@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "Anschlagseite spiegeln",
+ "cmd.edit.flip_hand.desc": "Spiegelt die gewählten Türen und Fenster entlang der Wand, sodass die Scharniere an das andere Ende der Öffnung wandern.",
+ "cmd.edit.flip_facing": "Öffnungsseite spiegeln",
+ "cmd.edit.flip_facing.desc": "Schlägt die gewählten Türen und Fenster auf die andere Seite der Wand.",
+ "opening_grips.flip_hand": "Anschlag spiegeln",
+ "opening_grips.flip_hand.tip": "Scharniere auf das andere Ende der Öffnung (Shift+F)",
+ "opening_grips.flip_facing": "Seite spiegeln",
+ "opening_grips.flip_facing.tip": "Öffnung auf die andere Seite der Wand (Shift+G)",
+ "opening_grips.flip.done": "Gespiegelt: {n}",
+ "opening_grips.flip.none": "Tür oder Fenster zum Spiegeln wählen",
+ "opening_grips.flip.fail": "Nicht gespiegelt: {why}"
+}

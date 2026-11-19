@@ -1,0 +1,3 @@
+{
+ "find_replace.refresh_failed": "Înlocuite {n} în {m} elemente; reîmprospătarea vederii a eșuat: {e}"
+}

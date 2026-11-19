@@ -1,0 +1,6 @@
+{
+ "cmd.ui.pane.next": "Sljedeći panel",
+ "cmd.ui.pane.next.desc": "Premješta fokus tipkovnice na sljedeći vidljivi panel (preglednik, platno, svojstva, razgovor).",
+ "cmd.ui.pane.prev": "Prethodni panel",
+ "cmd.ui.pane.prev.desc": "Premješta fokus tipkovnice na prethodni vidljivi panel."
+}

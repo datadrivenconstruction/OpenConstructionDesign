@@ -1,0 +1,21 @@
+{
+ "mep.row.system": "Sistema",
+ "mep.row.elevation": "Elevation ng simula",
+ "mep.row.slope": "Dalisdis",
+ "mep.row.material": "Materyales",
+ "mep.row.dev_elevation": "Elevasyon",
+ "mep.row.no_system": "Wala na ang sistemang iyon. Pumili ng iba.",
+ "mep.row.no_points": "Walang punto ang run, kaya wala itong elevation.",
+ "mep.row.system_domain": "Hindi tumatanggap ng ganitong run ang sistemang {system} ({kind}). Pumili ng sistemang kapareho ng uri ng network.",
+ "mep.row.material_pipes": "Para sa tubo lang ang materyales; {kind} ang run na ito.",
+ "mep.row.no_catalog": "Walang katalogo ng laki ang materyales para sa run na ito.",
+ "mep.mat.none": "Hindi nakatakda",
+ "mep.mat.steel": "Bakal",
+ "mep.mat.copper": "Tanso",
+ "mep.mat.pvc": "PVC",
+ "mep.mat.pp": "Polipropilena",
+ "mep.err.follow_blocked": "Hindi masusundan ng nakakabit na run ang pagbabagong ito: walang puwang para sa binti nito sa bagong lugar. Ilipat nang kaunti ang device, o idiskonekta muna ang run.",
+ "mep.err.follow_slope": "Hindi mapapanatili sa bagong lugar ang pagbaba ng nakakabit na run: lalampas ito sa pinakamababang pagbaba ng sistema nito. Ilipat nang mas kaunti ang device sa taas, o idiskonekta muna ang run.",
+ "mep.err.follow_port_lost": "Nawala na pagkatapos ng edit ang connector na kinaroroonan ng run na ito. Ilayo muna ang run, o panatilihin ang uri ng device.",
+ "mep.err.follow_device": "Nagtatapos ang run na ito sa connector ng device at hindi ito maaaring umalis doon. Ilipat ang device, o idiskonekta muna ang run."
+}

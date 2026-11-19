@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "सभी",
+ "clash_list.only_selected": "केवल चुने हुए",
+ "clash_list.tolerance": "सहनशीलता",
+ "clash_list.gap": "अंतर",
+ "clash_list.export": "एक्सपोर्ट",
+ "clash_list.col.volume": "आयतन",
+ "clash_list.fix.up": "ऊपर ले जाएँ",
+ "clash_list.fix.down": "नीचे ले जाएँ",
+ "clash_list.fix.sleeve": "स्लीव",
+ "clash_list.apply_fix": "सुधार लागू करें",
+ "clash_list.err.tol": "सहनशीलता: लंबाई लिखें (0 या अधिक), जैसे 50 या 2 in",
+ "clash_list.sleeve_no_host": "स्लीव के लिए जोड़े में दीवार या स्लैब चाहिए",
+ "clash_list.err.gap": "अंतर: लंबाई लिखें (0 या अधिक), जैसे 50 या 2 in"
+}

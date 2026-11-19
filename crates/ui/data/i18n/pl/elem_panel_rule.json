@@ -1,0 +1,5 @@
+{
+ "elem.panel_select_wall": "Zaznacz ścianę",
+ "cmd.elem.panel_select_wall": "Zaznacz ścianę",
+ "elem.left_in_place": "Pozostawiono na miejscu: {kinds}. Panel należy do swojej ściany; bryły i adnotacje są usuwane osobno."
+}

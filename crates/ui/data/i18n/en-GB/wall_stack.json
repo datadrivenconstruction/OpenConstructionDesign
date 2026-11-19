@@ -1,0 +1,10 @@
+{
+ "wall_stack.we.stack_caption": "Compound type",
+ "wall_stack.we.side_left": "Left face",
+ "wall_stack.we.side_right": "Right face",
+ "wall_stack.we.from": "From",
+ "wall_stack.we.to": "To",
+ "wall_stack.we.bottom": "Bottom",
+ "wall_stack.we.delete_tip": "Delete this profile",
+ "wall_stack.we.from_after_to": "'From' must be before 'To'"
+}

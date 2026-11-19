@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "Перевернути сторону петель",
+ "cmd.edit.flip_hand.desc": "Відображає вибрані двері й вікна вздовж стіни, щоб петлі перейшли на інший кінець отвору.",
+ "cmd.edit.flip_facing": "Перевернути сторону відкривання",
+ "cmd.edit.flip_facing.desc": "Перевертає вибрані двері й вікна на інший бік стіни.",
+ "opening_grips.flip_hand": "Перевернути петлі",
+ "opening_grips.flip_hand.tip": "Петлі на інший кінець отвору (Shift+F)",
+ "opening_grips.flip_facing": "Перевернути сторону",
+ "opening_grips.flip_facing.tip": "Відкривання на інший бік стіни (Shift+G)",
+ "opening_grips.flip.done": "Перевернуто: {n}",
+ "opening_grips.flip.none": "Виберіть двері або вікно, щоб перевернути",
+ "opening_grips.flip.fail": "Не перевернуто: {why}"
+}

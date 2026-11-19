@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "теңшелген",
+ "draw_quality.custom.tip": "{name}: осы жобаның жазбасы",
+ "draw_quality.custom_note": "Теңшелген деп белгіленген жазбалар осы жобаға тиесілі.",
+ "draw_quality.unsaved.lib_body": "Оларды кітапханаға сақтайсыз ба, әлде тастайсыз ба?",
+ "draw_quality.unsaved.styles_body": "Оларды көріністе қолданасыз ба, әлде тастайсыз ба?",
+ "draw_quality.unsaved.both_body": "Оларды қолданасыз ба, әлде тастайсыз ба?",
+ "draw_quality.halftone": "{category} жартылай тон",
+ "draw_quality.styles.name": "Сызық стильдері",
+ "draw_quality.styles.other_level": "{level} деңгейінің сақталмаған стиль өзгерістері: бұл деңгейді өңдеу үшін оларды қолданыңыз немесе қайтарыңыз."
+}

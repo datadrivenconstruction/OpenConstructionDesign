@@ -1,0 +1,10 @@
+{
+ "wall_stack.we.stack_caption": "Összetett típus",
+ "wall_stack.we.side_left": "Bal oldal",
+ "wall_stack.we.side_right": "Jobb oldal",
+ "wall_stack.we.from": "Kezdet",
+ "wall_stack.we.to": "Vég",
+ "wall_stack.we.bottom": "Alsó",
+ "wall_stack.we.delete_tip": "Ez a profil törlése",
+ "wall_stack.we.from_after_to": "A „Kezdet” a „Vég” előtt kell legyen"
+}

@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "Desfeito — Ctrl+Y refaz",
+ "history.hist.empty": "Nenhuma alteração ainda",
+ "history.hist.empty_hint": "Suas edições aparecem aqui. Clique em qualquer etapa para voltar a ela.",
+ "history.hist.revert_all_n": "Reverter todas as alterações de IA ({n})"
+}

@@ -1,0 +1,21 @@
+{
+ "ai_opt_merge.title": "Об’єднати варіант: {name}",
+ "ai_opt_merge.whole": "Об’єднати весь варіант",
+ "ai_opt_merge.parts": "Об’єднати вибрані частини",
+ "ai_opt_merge.note": "Чому цей варіант",
+ "ai_opt_merge.rebased": "Модель змінилася після створення цього варіанта: об’єднання перераховано щодо поточної моделі. Перевірте зміни перед застосуванням.",
+ "ai_opt_merge.left.not_picked": "Не вибрано з варіанта",
+ "ai_opt_merge.left.unticked": "Знято в варіанті",
+ "ai_opt_merge.left.conflict": "Не можна додати до поточної моделі: {reason}",
+ "ai_opt_merge.refused.not_mergeable": "Цей варіант не можна об’єднати. Відхилений варіант спершу треба відновити.",
+ "ai_opt_merge.refused.stale": "Модель змінилася після створення цього варіанта. Перерахуйте об’єднання щодо поточної моделі.",
+ "ai_opt_merge.refused.nothing_picked": "Нічого не вибрано для об’єднання.",
+ "ai_opt_merge.refused.unknown_item": "Пункт {item} не входить до цього варіанта.",
+ "ai_opt_merge.refused.not_in_option": "Вибраний елемент не входить до цього варіанта.",
+ "ai_opt_merge.refused.needs_left_out": "Пункт {item} потребує пункту {needs}. Виберіть і його або дозвольте додавати залежності.",
+ "ai_opt_merge.refused.set_gone": "Пункт {item} посилається на вибірку, якої більше немає. Згенеруйте варіант знову.",
+ "ai_opt_merge.refused.busy": "Відкрито інший план. Спочатку застосуйте або відхиліть його.",
+ "ai_opt_merge.refused.failed": "Не вдалося підготувати об’єднання: {reason}",
+ "ai_opt_merge.revive": "Відновити варіант",
+ "ai_opt_merge.merged": "Об’єднано"
+}

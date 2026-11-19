@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "Dupliciraj list s pogledima",
+ "cmd.view.sheet_duplicate_title": "Dupliciraj list (samo naslovni okvir)",
+ "sheets.dup.menu_views": "Dupliciraj s pogledima",
+ "sheets.dup.menu_title": "Dupliciraj, samo naslovni okvir",
+ "sheets.dup.done": "List {number} izrađen iz {src}: {views} pogleda, {sched} tablica i legendi. Revizije se ne kopiraju; list je neizdan.",
+ "sheets.dup.none": "Otvorite list za dupliciranje",
+ "sheets.dup.copy": "kopija",
+ "cmd.view.sheet_duplicate.short": "Dupliciraj s pogledima",
+ "cmd.view.sheet_duplicate_title.short": "Dupliciraj naslovni okvir"
+}

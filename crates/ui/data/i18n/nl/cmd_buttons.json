@@ -1,0 +1,18 @@
+{
+ "cmd_buttons.wpw.now.on_level": "{level}, op de verdieping",
+ "cmd_buttons.purge.undo": "Verwijderen is één ongedaan-maken-stap.",
+ "cmd_buttons.unpin.none": "Niets in de selectie is vastgezet",
+ "cmd_buttons.change_type.none": "Selecteer eerst wanden: hun type wijzigt in één stap",
+ "cmd_buttons.units.metric": "Eenheden: metrisch",
+ "cmd_buttons.units.imperial": "Eenheden: voet en inch",
+ "cmd_buttons.units.back": "Terugschakelen",
+ "cmd_buttons.underlay.on": "Onderlaag aan: de verdieping eronder wordt gedimd getoond",
+ "cmd_buttons.underlay.off": "Onderlaag uit",
+ "cmd_buttons.underlay.none": "Onderlaag aan, maar de verdieping eronder heeft niets om te tonen",
+ "cmd_buttons.zoom_sel.no_shape": "De selectie heeft in deze weergave geen vorm om in beeld te brengen",
+ "cmd_buttons.close.base": "De tabbladen Plattegrond en 3D blijven open; open een doorsnede, een blad of een tekeningweergave om dit te sluiten",
+ "tool.equipment": "Installatie",
+ "hint.equipment.place": "Installatie: kies de locatie · Esc — afsluiten",
+ "cmd_buttons.table.opened": "Tabel geopend naast het model",
+ "cmd_buttons.circuits.tip": "Open de lijst met elektrische circuits van dit model"
+}

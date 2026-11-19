@@ -1,0 +1,13 @@
+{
+ "tags.gone": "태그가 더 이상 없습니다",
+ "tags.readonly_wall": "벽 태그는 유형을 표시하며 여기서 편집할 수 없습니다: 벽 유형을 변경하세요",
+ "tags.readonly_comp": "구성요소 태그는 패밀리를 표시하며 여기서 편집할 수 없습니다: 유형을 변경하세요",
+ "tags.locked": "요소가 잠겨 있습니다: 태그를 편집하려면 잠금을 해제하세요",
+ "tags.done": "태그 값 기록됨",
+ "tags.failed": "태그 변경되지 않음: {e}",
+ "tags.dup_door": "{mark}이(가) 문 {n}개에도 있음",
+ "tags.dup_window": "{mark}이(가) 창 {n}개에도 있음",
+ "tags.dup_room": "{mark}이(가) 룸 {n}개에도 있음",
+ "tags.hint_mark": "마크",
+ "tags.hint_name": "룸 이름"
+}

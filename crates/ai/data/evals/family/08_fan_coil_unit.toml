@@ -1,0 +1,8 @@
+brief = "Ceiling fan coil unit with water and condensate connections."
+category = "equipment"
+must = param Length
+must = param Width
+must = solids >= 1
+must = ports 2
+must = port duct 2
+must = flex Length 800 1250

@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "Intrare goală.",
+ "units.err.not_number": "Nu este un număr la poziția {pos}.",
+ "units.err.unknown_unit": "Unitate necunoscută: {unit}.",
+ "units.err.non_positive": "Lungimea trebuie să fie mai mare decât zero.",
+ "units.err.too_large": "Lungimea nu trebuie să depășească {max} m.",
+ "units.err.bad_angle": "Unghiul este un număr de grade.",
+ "units.err.unknown_name": "Nume necunoscut: {name}. Valoarea a fost păstrată.",
+ "units.err.cycle": "Buclă de formulă la {name}. Valoarea a fost păstrată.",
+ "units.err.bad_expr": "Expresia nu poate fi citită la poziția {pos}. Valoarea a fost păstrată.",
+ "units.err.div_zero": "Împărțire la zero la poziția {pos}. Valoarea a fost păstrată.",
+ "units.err.invalid": "Număr nevalid.",
+ "units.err.kept": "Nemodificat: {reason}"
+}

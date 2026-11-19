@@ -1,0 +1,13 @@
+{
+ "xlval.pe_hosts": "golul #{id} nu s-ar mai potrivi: {e}",
+ "xlval.walls_refused": "{n} pereți nemodificați ({why})",
+ "xl.msg.opening_has_no_wall_to_sit_in": "golul nu are perete în care să stea",
+ "xl.msg.opening_size_must_be_0_and_sill_0": "dimensiunea golului trebuie să fie > 0 și pragul >= 0",
+ "xl.msg.opening_runs_from_x_m_to_x_m_the_wall_is_x_m_long": "golul merge de la {} m la {} m, peretele are {} m lungime",
+ "xl.msg.opening_top_x_m_is_above_the_wall_height_x_m": "partea de sus a golului {} m este peste înălțimea peretelui {} m",
+ "xl.msg.opening_overlaps_the_new_opening_in_row_x": "golul se suprapune cu golul nou din rândul {}",
+ "xl.msg.opening_overlaps_opening_x": "golul se suprapune cu golul {}",
+ "xl.msg.wall_height_x_m_is_below_the_top_x_m_of_opening_x": "înălțimea peretelui {} m este sub partea de sus {} m a golului {}",
+ "xl.msg.wall_length_x_m_is_shorter_than_the_end_x_m_of_opening_x": "lungimea peretelui {} m este mai mică decât capătul {} m al golului {}",
+ "xl.msg.opening_x_would_no_longer_fit_the_wall": "golul {} nu s-ar mai potrivi în perete"
+}

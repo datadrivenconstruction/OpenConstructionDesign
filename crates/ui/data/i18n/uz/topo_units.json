@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "Birliklar",
+ "topo_units.unit": "Fayldagi birliklar",
+ "topo_units.unit.m": "m",
+ "topo_units.unit.cm": "sm",
+ "topo_units.unit.mm": "mm",
+ "topo_units.unit.ft": "fut",
+ "topo_units.unit.usft": "AQSh fut (survey)",
+ "topo_units.unit.in": "dyuym",
+ "topo_units.unit.from_file": "Fayl birliklarni ko'rsatadi: {unit}",
+ "topo_units.unit.suggested": "Fayl birliklarni ko'rsatmaydi. Hajm bo'yicha taklif: {unit} — quyidagi natijani tekshiring",
+ "topo_units.extent": "Loyiha birliklarida natija: plan bo'yicha {x} × {y} {u}, balandlik diapazoni {z} {u}",
+ "topo_units.extent.none": "Natija: tanlangan sozlamalar bilan import qilinadigan hech narsa yo'q",
+ "topo_units.extent.check": "Bu uchastkaga o'xshamayapti: birliklarni tekshiring"
+}

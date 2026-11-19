@@ -1,0 +1,7 @@
+{
+ "messages.title": "Viestit",
+ "messages.desc": "Ilmoitusten historia. Ei uusia varoituksia tai virheitä.",
+ "messages.desc_new": "{n} uutta varoitusta tai virhettä. Napsauta lukeaksesi ne.",
+ "messages.copy": "Kopioi kaikki",
+ "messages.clear": "Tyhjennä kaikki"
+}

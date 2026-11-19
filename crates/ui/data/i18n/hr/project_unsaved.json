@@ -1,0 +1,8 @@
+{
+ "project_unsaved.unsaved.model": "Promjene modela nisu spremljene.",
+ "project_unsaved.unsaved.drawings": {
+  "one": "# postavljeni crtež nije spremljen u projekt: njegove promjene bit će izgubljene.",
+  "few": "# postavljena crteža nisu spremljena u projekt: njihove promjene bit će izgubljene.",
+  "other": "# postavljenih crteža nije spremljeno u projekt: njihove promjene bit će izgubljene."
+ }
+}

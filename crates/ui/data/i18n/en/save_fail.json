@@ -1,0 +1,16 @@
+{
+ "save_fail.save_fail.title": "Project not saved",
+ "save_fail.save_fail.kept": "Your edits are still open here. Nothing is lost while the editor stays open.",
+ "save_fail.save_fail.details": "Details",
+ "save_fail.save_fail.copy": "Copy",
+ "save_fail.save_fail.save_as": "Save as…",
+ "save_fail.save_fail.retry": "Retry",
+ "save_fail.save_fail.close": "Close",
+ "save_fail.cause.full": "The disk is full. Free up space or save the project to another drive.",
+ "save_fail.cause.denied": "This folder or file is read-only, or you have no permission to write here. Choose another folder.",
+ "save_fail.cause.locked": "The file is open in another program. Close it there, then press Retry.",
+ "save_fail.cause.missing": "The folder no longer exists. Choose another folder, or restore it and press Retry.",
+ "save_fail.cause.offline": "The drive or network folder is not available. Reconnect it and press Retry, or save elsewhere.",
+ "save_fail.cause.too_long": "The file path is too long. Choose a shorter folder or file name.",
+ "save_fail.cause.other": "The file could not be written: {detail}"
+}

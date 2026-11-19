@@ -1,0 +1,4 @@
+{
+ "number_input.bad_number": "数値ではありません: 小数点付きで入力してください (1.5)",
+ "number_input.at_grids_tip": "このレベルのすべてのグリッド交点に柱を配置"
+}

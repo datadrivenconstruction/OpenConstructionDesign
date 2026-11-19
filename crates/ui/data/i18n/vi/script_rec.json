@@ -1,0 +1,8 @@
+{
+ "script_rec.started": "Đang ghi: các chỉnh sửa từ lúc này sẽ đưa vào một tập lệnh. Chọn lại “Ghi thao tác vào tập lệnh” để dừng.",
+ "script_rec.saved": "Đã lưu tập lệnh “{name}”: {n} chỉnh sửa.",
+ "script_rec.skipped": "Không ghi {k} chỉnh sửa do công cụ không có dạng lệnh.",
+ "script_rec.nothing": "Đã dừng ghi: không có chỉnh sửa nào để lưu.",
+ "script_rec.failed": "Bản ghi chưa được lưu: {why}",
+ "script_rec.no_folder": "không có thư mục cài đặt cho tập lệnh"
+}

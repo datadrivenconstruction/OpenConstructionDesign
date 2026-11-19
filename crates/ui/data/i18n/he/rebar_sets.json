@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "הוסף סט 1",
+ "rebar_sets.add_n": "הוסף {n} סטים",
+ "rebar_sets.pick.search": "חפש סוגי מוטות",
+ "rebar_sets.pick.empty": "אין סוגי מוטות תואמים",
+ "rebar_sets.unit.deg": "°"
+}

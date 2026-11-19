@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D",
+ "phases.current_mark": "kasalukuyan",
+ "phases.make_current": "Gawing kasalukuyan",
+ "phases.col_phase": "Yugto",
+ "phases.col_filter": "Filter",
+ "phases.presets": "Mga preset ng plano",
+ "phases.del_title": "Burahin ang phase",
+ "phases.del_text": "Burahin ang phase na \"{name}\"? Ililipat ang mga elemento nito sa phase na pipiliin sa ibaba.",
+ "phases.del_into": "Ilipat ang mga elemento sa",
+ "phases.del_ok": "Burahin",
+ "phases.col_kind": "Uri ng elemento",
+ "phases.col_count": "Bilang",
+ "phases.col_volume": "Bolyum"
+}

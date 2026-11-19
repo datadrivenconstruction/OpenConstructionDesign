@@ -1,0 +1,64 @@
+{
+ "rebar_hosts.hosts": "المضيفات: {list}",
+ "rebar_hosts.kind.column": "عمود",
+ "rebar_hosts.kind.beam": "كمرة",
+ "rebar_hosts.kind.wall": "جدار",
+ "rebar_hosts.kind.slab": "بلاطة",
+ "rebar_hosts.kind.footing": "أساس منفرد",
+ "rebar_hosts.kind.raft": "لبشة أساس",
+ "rebar_hosts.n.column": {
+  "one": "# عمود",
+  "other": "# أعمدة",
+  "two": "# عمودان",
+  "few": "# أعمدة",
+  "many": "# عموداً",
+  "zero": "# أعمدة"
+ },
+ "rebar_hosts.n.beam": {
+  "one": "# كمرة",
+  "other": "# كمرات",
+  "two": "# كمرتان",
+  "few": "# كمرات",
+  "many": "# كمرةً",
+  "zero": "# كمرات"
+ },
+ "rebar_hosts.n.wall": {
+  "one": "# جدار",
+  "other": "# جدران",
+  "two": "# جداران",
+  "few": "# جدران",
+  "many": "# جداراً",
+  "zero": "# جدران"
+ },
+ "rebar_hosts.n.slab": {
+  "one": "# بلاطة",
+  "other": "# بلاطات",
+  "two": "# بلاطتان",
+  "few": "# بلاطات",
+  "many": "# بلاطةً",
+  "zero": "# بلاطات"
+ },
+ "rebar_hosts.n.footing": {
+  "one": "# أساس منفرد",
+  "other": "# أساسات منفردة",
+  "two": "# أساسان منفردان",
+  "few": "# أساسات منفردة",
+  "many": "# أساساً منفرداً",
+  "zero": "# أساسات منفردة"
+ },
+ "rebar_hosts.n.raft": {
+  "one": "# لبشة أساس",
+  "other": "# لبشات أساس",
+  "two": "# لبشتان أساس",
+  "few": "# لبشات أساس",
+  "many": "# لبشةً أساس",
+  "zero": "# لبشات أساس"
+ },
+ "rebar_hosts.mixed_note": "تأخذ الأعمدة والكمرات القضبان والكانات؛ وتأخذ الجدران والبلاطات والأساسات الشبك. حدّد مجموعة واحدة لإضافة التسليح.",
+ "rebar_hosts.why.mixed": "التحديد يخلط أعمدة أو كمرات مع جدران أو بلاطات أو أساسات. حدّد مجموعة واحدة.",
+ "rebar_hosts.why.area_linear": "تذهب الشبكة إلى الجدران والبلاطات والأساسات، لا إلى الأعمدة أو الكمرات.",
+ "rebar_hosts.why.bars_plate": "تذهب القضبان الطولية والكانات إلى الأعمدة والكمرات، لا إلى الجدران أو البلاطات أو الأساسات.",
+ "rebar_hosts.why.no_common_face": "المضيفات المحددة لا تشترك في وجه غطاء واحد. حدّد مضيفات من نوع واحد.",
+ "rebar_hosts.why.no_type": "اختر نوع القضيب.",
+ "rebar_hosts.kind_type": "{kind} · {type}"
+}

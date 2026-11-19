@@ -1,0 +1,19 @@
+{
+ "xlsx_confirm.chip": "zur Bestätigung",
+ "xlsx_confirm.section": "Zeilen ohne ID, die über Name oder Nummer einem Element zugeordnet wurden",
+ "xlsx_confirm.tag": "nach Name zugeordnet",
+ "xlsx_confirm.tag_accepted": "Zuordnung angenommen",
+ "xlsx_confirm.tag_rejected": "erstellt neu",
+ "xlsx_confirm.kind_room": "Raum",
+ "xlsx_confirm.kind_curtain_wall": "Vorhangfassade",
+ "xlsx_confirm.row_line": "{kind} #{id}, Schlüssel \"{key}\"",
+ "xlsx_confirm.accept": "Übernehmen",
+ "xlsx_confirm.accept_tip": "Diese Zeile auf das zugeordnete Element anwenden (ein Rückgängig-Schritt zusammen mit den übrigen)",
+ "xlsx_confirm.reject": "Neu erstellen",
+ "xlsx_confirm.reject_tip": "Nicht zuordnen: Diese Zeile erstellt ein neues Element",
+ "xlsx_confirm.decide_first": "Zuerst die nach Name zugeordneten Zeilen annehmen oder ablehnen.",
+ "xl.msg.key_match_many": "Schlüssel passt zu {} Elementen; nicht zugeordnet, die Zeile erstellt ein neues",
+ "xl.msg.key_match_taken": "Schlüssel passt zu einem Element, das eine andere Zeile nutzt; nicht zugeordnet, die Zeile erstellt ein neues",
+ "xl.msg.key_match_kept": "beibehalten: Zuordnung abgelehnt, die Zeile erstellt ein neues Element",
+ "xl.msg.key_match_undecided": "nach Name zugeordnete Zeilen warten auf eine Entscheidung"
+}

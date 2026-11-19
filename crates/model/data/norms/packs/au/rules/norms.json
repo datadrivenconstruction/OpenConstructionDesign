@@ -1,0 +1,394 @@
+{
+ "rules": [
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.19
+   },
+   "unit": "m",
+   "value": 0.19,
+   "text": {
+    "en": "Common stair riser at most 0.19 m",
+    "ru": "Подъём ступени общей лестницы не более 0.19 м"
+   },
+   "source": {
+    "doc": "au-ncc22-v1",
+    "clause": "D3D14, Table D3D14",
+    "url": "https://ncc.abcb.gov.au/editions/ncc-2022/adopted/volume-one/d-access-and-egress/part-d3-construction-exits",
+    "edition": "NCC 2022",
+    "accessed": "2026-11-14",
+    "paraphrase": "Riser of a required stair between 115 and 190 mm."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "au.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.25
+   },
+   "unit": "m",
+   "value": 0.25,
+   "text": {
+    "en": "Common stair tread at least 0.25 m",
+    "ru": "Проступь общей лестницы не менее 0.25 м"
+   },
+   "source": {
+    "doc": "au-ncc22-v1",
+    "clause": "D3D14, Table D3D14",
+    "url": "https://ncc.abcb.gov.au/editions/ncc-2022/adopted/volume-one/d-access-and-egress/part-d3-construction-exits",
+    "edition": "NCC 2022",
+    "accessed": "2026-11-14",
+    "paraphrase": "Going at least 250 mm in public stairs, 240 mm in private stairs, maximum 355 mm; 2R+G between 550 and 700 mm."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "au.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section",
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 1.0
+   },
+   "unit": "m",
+   "value": 1.0,
+   "text": {
+    "en": "Common stair flight width at least 1.0 m",
+    "ru": "Ширина марша общей лестницы не менее 1.0 м"
+   },
+   "source": {
+    "doc": "au-ncc22-v1",
+    "clause": "D2D8(1)",
+    "url": "https://ncc.abcb.gov.au/editions/ncc-2022/adopted/volume-one/d-access-and-egress/part-d2-provision-escape",
+    "edition": "NCC 2022",
+    "accessed": "2026-11-14",
+    "paraphrase": "Exit width of at least 1 m for up to 100 occupants, growing in steps with occupant numbers."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "au.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.19
+   },
+   "unit": "m",
+   "value": 0.19,
+   "text": {
+    "en": "Stair riser in a house at most 0.19 m",
+    "ru": "Подъём ступени в доме не более 0.19 м"
+   },
+   "source": {
+    "doc": "au-ncc22-hp",
+    "clause": "Table 11.2.2a",
+    "url": "https://ncc.abcb.gov.au/editions/ncc-2022/adopted/housing-provisions/11-safe-movement-and-access/part-112-stairway-and-ramp-construction",
+    "edition": "NCC 2022",
+    "accessed": "2026-11-14",
+    "paraphrase": "House stair riser range 115-190 mm."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "au.house.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.24
+   },
+   "unit": "m",
+   "value": 0.24,
+   "text": {
+    "en": "Stair tread in a house at least 0.24 m",
+    "ru": "Проступь в доме не менее 0.24 м"
+   },
+   "source": {
+    "doc": "au-ncc22-hp",
+    "clause": "Table 11.2.2a",
+    "url": "https://ncc.abcb.gov.au/editions/ncc-2022/adopted/housing-provisions/11-safe-movement-and-access/part-112-stairway-and-ramp-construction",
+    "edition": "NCC 2022",
+    "accessed": "2026-11-14",
+    "paraphrase": "House stair going range 240-355 mm."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "au.house.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.4
+   },
+   "unit": "m",
+   "value": 2.4,
+   "text": {
+    "en": "Clear height of habitable rooms at least 2.4 m",
+    "ru": "Высота жилых помещений не менее 2.4 м"
+   },
+   "source": {
+    "doc": "au-ncc22-v1",
+    "clause": "F5D2(1)(c)",
+    "url": "https://ncc.abcb.gov.au/editions/ncc-2022/adopted/volume-one/f-health-and-amenity/part-f5-room-heights",
+    "edition": "NCC 2022",
+    "accessed": "2026-11-14",
+    "paraphrase": "Habitable rooms (not kitchens) in Class 2/3/4 part: minimum ceiling height 2.4 m; kitchens, corridors 2.1 m."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "au.res.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "room_kind": [
+     "office",
+     "meeting"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.4
+   },
+   "unit": "m",
+   "value": 2.4,
+   "text": {
+    "en": "Clear height of work rooms at least 2.4 m",
+    "ru": "Высота рабочих помещений не менее 2.4 м"
+   },
+   "source": {
+    "doc": "au-ncc22-v1",
+    "clause": "F5D2(3)(a)",
+    "url": "https://ncc.abcb.gov.au/editions/ncc-2022/adopted/volume-one/f-health-and-amenity/part-f5-room-heights",
+    "edition": "NCC 2022",
+    "accessed": "2026-11-14",
+    "paraphrase": "Rooms in Class 5-8 buildings generally need 2.4 m; corridors 2.1 m."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "au.off.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ],
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "width",
+    "min": 1.0
+   },
+   "unit": "m",
+   "value": 1.0,
+   "text": {
+    "en": "Accessible-route corridor clear width at least 1.0 m",
+    "ru": "Ширина коридора на доступном маршруте не менее 1.0 м"
+   },
+   "source": {
+    "doc": "au-as1428-1",
+    "clause": "AS 1428.1 continuous accessible path of travel",
+    "url": "https://www.standards.org.au",
+    "edition": "AS 1428.1",
+    "accessed": "2026-11-14",
+    "paraphrase": "Accessible path of travel clear width of about 1000 mm (passing spaces at intervals per NCC D4D4(3)(a)).",
+    "note": "NCC D4D4 read 2026-11-14 but gives no width; 1.0 m is from memory of AS 1428.1 (paid), not checked"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "au.acc.corr"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 20,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 20,
+   "text": {
+    "en": "Travel distance to an exit or stair at most 20 m (residential)",
+    "ru": "Путь до выхода или лестницы не более 20 м (жилые)"
+   },
+   "source": {
+    "doc": "au-ncc22-v1",
+    "clause": "D2D5(1)(a)-(b)",
+    "url": "https://ncc.abcb.gov.au/editions/ncc-2022/adopted/volume-one/d-access-and-egress/part-d2-provision-escape",
+    "edition": "NCC 2022",
+    "accessed": "2026-11-14",
+    "paraphrase": "Class 2/3 flat entrance doors may be up to 20 m from a single exit at the egress level; otherwise 6 m to an exit or to a point with two escape directions."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "au.egr.res"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 40,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 40,
+   "text": {
+    "en": "Travel distance to an exit or stair at most 40 m (office)",
+    "ru": "Путь до выхода или лестницы не более 40 м (офисы)"
+   },
+   "source": {
+    "doc": "au-ncc22-v1",
+    "clause": "D2D5(3)(a)",
+    "url": "https://ncc.abcb.gov.au/editions/ncc-2022/adopted/volume-one/d-access-and-egress/part-d2-provision-escape",
+    "edition": "NCC 2022",
+    "accessed": "2026-11-14",
+    "paraphrase": "Class 5-9 floors: no point beyond 20 m from an exit or two-direction point, and the distance to at least one exit must not exceed 40 m."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "au.egr.off"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {},
+   "check": {
+    "kind": "ratio",
+    "per": "element",
+    "cat": "room",
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen"
+    ],
+    "num": "window_area",
+    "den": "area",
+    "min": 0.1
+   },
+   "unit": "ratio",
+   "value": 0.1,
+   "text": {
+    "en": "Window area at least 10.0 % of the floor of a habitable room",
+    "ru": "Площадь окон не менее 10.0 % площади пола жилой комнаты"
+   },
+   "source": {
+    "doc": "au-ncc22-v1",
+    "clause": "F6D3(1)(a)",
+    "url": "https://ncc.abcb.gov.au/editions/ncc-2022/adopted/volume-one/f-health-and-amenity/part-f6-light-and-ventilation",
+    "edition": "NCC 2022",
+    "accessed": "2026-11-14",
+    "paraphrase": "Habitable rooms in Class 2 and Class 4 parts need glazed area of at least a tenth of the floor area (roof lights 3 percent)."
+   },
+   "verified": true,
+   "severity": "error",
+   "id": "au.day"
+  },
+  {
+   "id": "generic.egress.distance",
+   "disabled": true
+  },
+  {
+   "id": "generic.room.daylight",
+   "disabled": true
+  }
+ ]
+}

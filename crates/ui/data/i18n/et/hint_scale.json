@@ -1,0 +1,10 @@
+{
+ "cmd.mod.scale": "Mõõtkava muutmine",
+ "cmd.mod.scale.desc": "Vali elemendid, seejärel klõpsa baaspunktil, viitepikkusel ja uuel pikkusel või sisesta tegur.",
+ "hint.scale.select": "Skaala: vali elemendid · Enter — valmis",
+ "hint.scale.first": "Skaala: vali baaspunkt · Esc — tühista",
+ "hint.scale.second": "Skaala: vali viitepikkus · arv — tegur · Esc — tühista",
+ "hint.scale.third": "Skaala: vali uus pikkus · arv — tegur · Esc — tühista",
+ "scl.bad_factor": "Skaalategur peab olema arv, mis on suurem kui null",
+ "scl.zero_ref": "Viitepikkus on null: vali punkt, mis on baaspunktist eemal"
+}

@@ -1,0 +1,6 @@
+{
+ "ai_toast.toast_not_refreshed": "Primijenjeno kao korak poništavanja {n} (Ctrl+Z ga poništava), ali pogled nije osvježen. Ponovno učitaj pogled.",
+ "ai.optx.reload_failed": "Varijanta „{name}“ je primijenjena i spremljena, ali pogled nije ponovno učitan: {e}",
+ "ai.cmp.stale": "Zastarjelo",
+ "ai.cmp.stale_tip": "Ova varijanta je izrađena na starijem stanju modela. Ponovno je generiraj za primjenu."
+}

@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "בטל: {what}",
+ "undo_label.redo_what": "בצע שוב: {what}",
+ "undo_label.undo_none": "אין מה לבטל",
+ "undo_label.redo_none": "אין מה לבצע שוב"
+}

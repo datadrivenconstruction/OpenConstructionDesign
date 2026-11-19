@@ -1,0 +1,5 @@
+{
+ "start_recent.unavailable": "Зараз недоступно (диск або мережеве розташування не відповідає): {path}",
+ "start_recent.unavailable_short": "Зараз недоступно",
+ "start_recent.retry": "Повторити"
+}

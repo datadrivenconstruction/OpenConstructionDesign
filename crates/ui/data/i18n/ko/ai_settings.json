@@ -1,0 +1,9 @@
+{
+ "ai.settings.num_bad": "숫자가 아닙니다. 0.5처럼 입력하세요.",
+ "ai.settings.num_comma": "소수점으로 점을 사용하세요, 예: 0.5.",
+ "ai.settings.num_negative": "숫자는 음수일 수 없습니다.",
+ "ai.settings.unit_money": "통화",
+ "ai.settings.unit_tokens": "토큰",
+ "ai.settings.unit_price": "100만 토큰당",
+ "ai.settings.limits_hint": "0은 한도 없음을 뜻합니다. 거부된 값은 이전 한도를 그대로 둡니다."
+}

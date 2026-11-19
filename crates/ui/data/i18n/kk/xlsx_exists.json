@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "Бұл жұмыс кітабы бұрыннан бар",
+ "xlsx_exists.foreign": "Бұл осы жобаның жұмыс кітабы емес, сондықтан ол ешқашан ауыстырылмайды.",
+ "xlsx_exists.pending": "Онда модельге әлі қолданылмаған {n} өңдеу бар.",
+ "xlsx_exists.outside": "Онда жаңа экспорт қамтымайтын {n} жол бар.",
+ "xlsx_exists.new_name": "{name} файлына экспорттау",
+ "xlsx_exists.apply_first": "Алдымен оларды қолданыңыз",
+ "xlsx_exists.replace": "Ауыстыру (ескі кітап _archive-қа)",
+ "xlsx_exists.archived": "Ескі жұмыс кітабы {path} орнына жылжытылды",
+ "xlsx_exists.archive_failed": "Ескі жұмыс кітабын жылжыту мүмкін болмады, ешнәрсе экспортталмады: {error}"
+}

@@ -1,0 +1,14 @@
+{
+ "ai.stream.waiting": "Чака се моделът",
+ "ai.stream.reading": "Чете се моделът",
+ "ai.stream.working": "Работи се",
+ "ai.stream.answering": "Пише се отговорът",
+ "ai.stream.tools_one": "1 инструмент",
+ "ai.stream.tools_many": "{n} инструмента",
+ "ai.stream.secs": "{n} s",
+ "ai.stream.stalled": "Още се чака услугата на модела",
+ "ai.stream.stop": "Спри",
+ "ai.stream.cancelled": "Спряно",
+ "ai.stream.incomplete": "Черновата е непълна. Нищо не е приложено към модела.",
+ "ai.stream.sep": " · "
+}

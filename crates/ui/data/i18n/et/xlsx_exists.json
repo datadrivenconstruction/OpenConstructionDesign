@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "See töövihik on juba olemas",
+ "xlsx_exists.foreign": "See pole selle projekti töövihik, seega seda ei asendata kunagi.",
+ "xlsx_exists.pending": "Sellel on {n} muudatust, mida pole veel mudelile rakendatud.",
+ "xlsx_exists.outside": "Sellel on {n} rida, mida uus eksport ei sisalda.",
+ "xlsx_exists.new_name": "Ekspordi failiks {name}",
+ "xlsx_exists.apply_first": "Rakenda need kõigepealt",
+ "xlsx_exists.replace": "Asenda (vana töövihik kausta _archive)",
+ "xlsx_exists.archived": "Vana töövihik teisaldati asukohta {path}",
+ "xlsx_exists.archive_failed": "Vana töövihikut ei saanud teisaldada, midagi ei eksporditud: {error}"
+}

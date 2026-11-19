@@ -1,0 +1,4 @@
+{
+ "vv_conflict.vv.switched": "A vista ativa mudou. Estas edições pertencem a {view} e ainda não foram aplicadas: Aplicar as grava em {view}; Descartar as elimina.",
+ "vv_conflict.vv.discard": "Descartar edições"
+}

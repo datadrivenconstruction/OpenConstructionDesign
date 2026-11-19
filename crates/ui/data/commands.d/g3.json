@@ -1,0 +1,29 @@
+[
+ {
+  "id": "mgr.open_big",
+  "dialog": true,
+  "icon": "open-big",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "model",
+  "priority": 6
+ },
+ {
+  "id": "mgr.mesh_cache",
+  "icon": "mesh-cache",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "manage",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "model",
+  "priority": 7
+ }
+]

@@ -1,0 +1,14 @@
+{
+ "ai.hist.badge": "YZ",
+ "ai.hist.untitled": "Yapay zeka değişiklikleri",
+ "ai.hist.tip": "{title}\nUygulayan: {actor}\nYapay zeka modeli: {model}",
+ "ai.hist.why": "Neden: {why}",
+ "ai.hist.reverted": "geri alındı",
+ "ai.hist.revert_one": "Bu yapay zeka grubunu geri al",
+ "ai.revert.done": "Yapay zeka değişiklikleri geri alındı: {n}. Geri Al ile yeniden gelirler.",
+ "ai.revert.empty": "Geri alınacak yapay zeka değişikliği yok",
+ "ai.revert.not_ai": "Bu adım bir yapay zeka değişikliği değil",
+ "ai.revert.already": "Bu yapay zeka değişiklikleri zaten geri alındı",
+ "ai.revert.opaque": "Geri alınmadı: bu yapay zeka değişiklikleri sonraki işlerden güvenle ayrılamıyor. Hiçbir şey değiştirilmedi.",
+ "ai.revert.failed": "Geri alma başarısız: {e}"
+}

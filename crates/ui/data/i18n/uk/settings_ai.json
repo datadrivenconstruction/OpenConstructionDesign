@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "Підключення",
+ "settings.ai_status_desc": "Модель, яку використовує AI-асистент; ключі зберігаються в захищеному сховищі",
+ "settings.ai_not_connected": "Не підключено",
+ "settings.ai_connect": "Налаштування підключення",
+ "settings.ai_connect_desc": "Адреса, модель і ключ вашої моделі: хмарної або локальної",
+ "settings.ai_connect_btn": "Налаштування підключення…",
+ "settings.ai_panel": "Панель AI-асистента",
+ "settings.ai_panel_desc": "Запитуйте словами, перевіряйте план, потім застосовуйте",
+ "settings.ai_open_panel": "Відкрити панель AI"
+}

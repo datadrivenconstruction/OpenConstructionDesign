@@ -1,0 +1,21 @@
+{
+ "cmd.help.check_update": "Se etter oppdateringer",
+ "update_check.title": "Oppdateringssjekk",
+ "update_check.desc": "Av som standard. Sender bare versjonen, operativsystem og arkitektur, og installasjonstypen til serveren vår. Laster aldri ned eller installerer noe.",
+ "update_check.freq.startup": "Ved oppstart",
+ "update_check.freq.daily": "Daglig",
+ "update_check.freq.weekly": "Ukentlig",
+ "update_check.freq.never": "Aldri",
+ "update_check.check_now": "Se etter nå",
+ "update_check.dialog.title": "Oppdateringssjekk",
+ "update_check.unknown.title": "Kunne ikke se etter oppdateringer",
+ "update_check.unknown.body": "{e}. Dette betyr ikke at denne versjonen er oppdatert. Prøv igjen senere.",
+ "update_check.current": "Du har den nyeste versjonen ({v}).",
+ "update_check.newer": "Versjon {v} er tilgjengelig",
+ "update_check.date": "Utgitt {d}",
+ "update_check.unfit": "Denne versjonen ({v}) er eldre enn anbefalt minimumsversjon {f}. Oppdatering anbefales.",
+ "update_check.close": "Lukk",
+ "update_check.open_failed": "Kunne ikke åpne utgivelsessiden.",
+ "update_check.toast.newer": "Versjon {v} er tilgjengelig. Hjelp > Se etter oppdateringer.",
+ "update_check.toast.unfit": "Denne versjonen ({v}) er eldre enn anbefalt minimumsversjon {f}."
+}

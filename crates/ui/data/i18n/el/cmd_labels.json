@@ -1,0 +1,14 @@
+{
+ "cmd.arch.wall.tile": "Τοίχος",
+ "cmd.arch.door.tile": "Πόρτα",
+ "cmd.arch.window.tile": "Παράθυρο",
+ "cmd.arch.floor.tile": "Πλάκα",
+ "cmd.mod.move.tile": "Μετακίνηση",
+ "cmd.mod.copy.tile": "Αντιγραφή",
+ "cmd.mod.rotate.tile": "Περιστροφή",
+ "cmd.mod.mirror.tile": "Κατοπτρισμός",
+ "cmd.mod.trim.tile": "Περικοπή",
+ "cmd.mod.delete.tile": "Διαγραφή",
+ "cmd.ann.dim.tile": "Διάσταση",
+ "cmd.ann.text.tile": "Κείμενο"
+}

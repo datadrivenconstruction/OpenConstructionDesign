@@ -1,0 +1,6 @@
+{
+ "sched_import.no_key": "Den här arbetsboken saknar exportpost (en äldre export): celler som ändrats i modellen efter den exporten kan skrivas över. Kontrollera de ändrade cellerna före Tillämpa.",
+ "sched_import.n_kept": "Ändrad i modellen efter exporten, behållen: {n}",
+ "sched_import.n_conflict": "Ändrad både i arbetsboken och i modellen, inte tillämpad: {n}",
+ "sched_import.why_conflict": "ändrad i modellen efter exporten (nu {model}), inte tillämpad"
+}

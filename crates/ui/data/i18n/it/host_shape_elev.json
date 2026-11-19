@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "Quota {t} non acquisita ({why}). Nulla è stato modificato",
+ "host_shape.shape.elev_prompt_in": "quota, piedi-pollici…",
+ "host_shape.shape.elev_in": "{v} in"
+}

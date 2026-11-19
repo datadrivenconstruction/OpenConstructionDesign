@@ -1,0 +1,42 @@
+{
+ "ai.tool.show_elements": "Показване на елементи",
+ "ai.tool.isolate_elements": "Изолиране на елементи",
+ "ai.tool.color_by": "Оцветяване по стойност",
+ "ai.tool.reset_view": "Нулиране на изгледа",
+ "ai_found.found.query": "Намерени",
+ "ai_found.found.show": "Показани",
+ "ai_found.found.isolate": "Изолирани",
+ "ai_found.found.hide": "Скрити",
+ "ai_found.found.color": "Оцветени",
+ "ai_found.found.count": "{n} от {m}",
+ "ai_found.found.none": "Няма съвпадения. Опитайте по-широк филтър.",
+ "ai_found.found.show_btn": "Покажи",
+ "ai_found.found.show_tip": "Избира тези елементи и ги показва в план и 3D",
+ "ai_found.found.isolate_btn": "Изолирай",
+ "ai_found.found.isolate_tip": "Показва само тези елементи до Нулиране на изгледа",
+ "ai_found.found.select_btn": "Избери",
+ "ai_found.found.select_tip": "Избира тези елементи, без да премества изгледа",
+ "ai_found.legend.title": "Оцветяване по {by}",
+ "ai_found.legend.row_tip": "Щракнете, за да изберете тези елементи",
+ "ai_found.legend.empty_value": "Няма стойност",
+ "ai_found.legend.other": {
+  "one": "# още стойност",
+  "other": "# още стойности"
+ },
+ "ai_found.view.title": "Изглед от AI асистент",
+ "ai_found.view.reset": "Нулиране на изгледа",
+ "ai_found.view.reset_tip": "Връща изгледа от преди AI асистентът да го промени",
+ "ai_found.view.shown": {
+  "one": "# показан елемент",
+  "other": "# показани елемента"
+ },
+ "ai_found.view.isolated": {
+  "one": "# изолиран елемент",
+  "other": "# изолирани елемента"
+ },
+ "ai_found.view.hidden": {
+  "one": "# скрит елемент",
+  "other": "# скрити елемента"
+ },
+ "ai_found.found.line": "{what}: {count}"
+}

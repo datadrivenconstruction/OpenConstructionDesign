@@ -1,0 +1,16 @@
+{
+ "cmd.drawing.to_detail": "تحويل الرسم إلى تفاصيل",
+ "cmd.drawing.to_detail.desc": "يحوّل عناصر الرسم المحددة، أو كل الرسم في هذا المستوى، إلى خطوط تفصيل وملاحظات نصية ومناطق على المخطط. يبقى الرسم كما هو.",
+ "detail_items.st.no_drawing": "لا يوجد رسم في هذا المستوى",
+ "detail_items.st.nothing": "لا شيء للتحويل: لا توجد خطوط أو أقواس أو نصوص أو تعبئات في الطبقات الظاهرة",
+ "detail_items.st.done": "أُضيفت عناصر التفصيل: خطوط {lines}، نصوص {texts}، مناطق {regions}",
+ "detail_items.st.failed": "تعذّرت إضافة عناصر التفصيل: {e}",
+ "detail_items.st.warn": "أُضيفت عناصر التفصيل، لكن تعذّر تحديث المنظر (خطوط {lines}، نصوص {texts}، مناطق {regions}): {e}. التراجع يزيلها.",
+ "detail_items.st.bad_view": "تحتاج عناصر التفصيل إلى منظر مخطط أو قطاع",
+ "detail_items.st.no_transform": "لا يملك هذا المنظر نظام إحداثيات صالحاً للرسم؛ لم تتم الإضافة",
+ "drafting_tools.free.plan_only": "يعمل هذا الأمر على عناصر المخطط؛ افتح مخططاً",
+ "drafting_tools.free.zero": "النقطتان متطابقتان؛ لم تتم الإضافة",
+ "drafting_tools.free.select_first": "حدّد عناصر هذا المنظر أولاً لتوزيعها",
+ "drafting_tools.free.pick_item": "انقر على عنصر من هذا المنظر لوسمه",
+ "drafting_tools.free.dim_kind": "تعمل الأبعاد الخطية فقط في منظر الرسم"
+}

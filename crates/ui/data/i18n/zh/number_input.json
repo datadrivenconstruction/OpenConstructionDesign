@@ -1,0 +1,4 @@
+{
+ "number_input.bad_number": "不是数字：请输入带小数点的数字（如 1.5）",
+ "number_input.at_grids_tip": "在本层每个轴网交点处放置柱"
+}

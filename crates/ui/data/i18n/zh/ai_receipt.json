@@ -1,0 +1,21 @@
+{
+ "ai.receipt.title": {
+  "other": "已应用 # 项更改",
+  "one": "已应用 # 项更改"
+ },
+ "ai.receipt.more": "另有 {n} 项",
+ "ai.receipt.list": "元素",
+ "ai.receipt.show": "显示",
+ "ai.receipt.show.tip": "选中并框显已更改的元素",
+ "ai.receipt.undo": "撤销",
+ "ai.receipt.undo.tip": "仅撤回本次应用",
+ "ai.receipt.undone": "已撤销",
+ "ai.receipt.later": "之后已进行编辑",
+ "ai.receipt.toast_undone": "已撤销所应用的计划",
+ "ai.receipt.draft_family": "草稿族：{name}",
+ "ai.receipt.promote": "设为工作族",
+ "ai.receipt.promote.tip": "将草稿族转为工作族（一步撤销）",
+ "ai.receipt.promoted": "该族现已成为工作族",
+ "ai.receipt.promote_failed": "无法将该族设为工作族",
+ "cmd.ai.receipt_undo": "撤销上一次 AI 计划"
+}

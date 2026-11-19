@@ -1,0 +1,14 @@
+{
+ "ai_keys.header_is_key": "कुंजियाँ कुंजी फ़ील्ड में जाती हैं — हेडर सादे पाठ में सहेजे जाते हैं",
+ "ai_keys.move": "कुंजी में ले जाएँ",
+ "ai_keys.remove_line": "हेडर से हटाएँ",
+ "ai_keys.save_blocked": "सहेजने के लिए कुंजी हेडर से बाहर निकालें",
+ "ai_keys.show": "दिखाएँ",
+ "ai_keys.hide": "छिपाएँ",
+ "ai_keys.copy": "कॉपी करें",
+ "ai_keys.tokens": "टोकन",
+ "ai_keys.presets": "प्रीसेट",
+ "ai_keys.preset_k": "{n}k",
+ "ai_keys.preset_m": "{n}M",
+ "ai_keys.images_on": "समर्थित"
+}

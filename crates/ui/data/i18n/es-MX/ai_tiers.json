@@ -1,0 +1,4 @@
+{
+ "ai.issue.delete_large": "Se eliminarían {0} elementos, por encima del límite de {1}. Se necesita permiso",
+ "ai.issue.refused_large": "Cambiarían {0} elementos, por encima del límite máximo de {1}. Divida el plan en partes más pequeñas"
+}

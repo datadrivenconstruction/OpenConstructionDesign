@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "Revize edildi",
+ "ai.redraft.added": "+{n} eklendi",
+ "ai.redraft.removed": "−{n} kaldırıldı",
+ "ai.redraft.changed": "~{n} değişti",
+ "ai.redraft.strip": "Son bakışınızdan beri: {what}",
+ "ai.redraft.note": "Revize plan gözden geçirildi: {what}",
+ "ai.redraft.more": "+{n} daha",
+ "ai.redraft.ack": "Anladım",
+ "ai.redraft.ack.tip": "Bu revizyonu görüldü olarak işaretler; Uygula bundan sonra buna göre çalışır",
+ "ai.redraft.removed_list": "Kaldırılan öğeler: {n}",
+ "ai.redraft.review_first": "Plan mesajınızdan sonra değişti: önce değişiklikleri gözden geçirin",
+ "ai.redraft.mark.tip": "Son bakışınızdan beri yeni veya değişmiş",
+ "ai.redraft.emptied": "Takip isteği her öğeyi kaldırdı: taslak boş"
+}

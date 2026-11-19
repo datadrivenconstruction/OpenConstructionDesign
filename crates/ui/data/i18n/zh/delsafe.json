@@ -1,0 +1,6 @@
+{
+ "delsafe.ring.opening_shape": "洞口轮廓将自相交或塌陷",
+ "delsafe.ring.opening_boundary": "开洞将与外边界相交或接触",
+ "delsafe.ring.openings_overlap": "洞口将相互重叠或接触",
+ "xl.msg.delsafe_instance_param_on_types": "参数“{}”为实例参数；请在构件表中编辑，未应用"
+}

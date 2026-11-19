@@ -1,0 +1,13 @@
+{
+ "cmdl.mode_cmd": "Kom",
+ "cmdl.mode_ai": "AI",
+ "cmdl.toggle": "Kommandon eller AI-assistenten (Ctrl+J)",
+ "cmdl.hint": "Kommando eller alias (W, L, M, RO), punkt #x;y, @dx;dy, d<vinkel. Ctrl+J: fråga AI-assistenten",
+ "cmdl.hint_ai": "Fråga AI-assistenten om modellen eller be om en ändring. Ctrl+J: tillbaka till kommandon",
+ "cmdl.sent": "Skickat till AI-assistenten",
+ "cmdl.failed": "Kunde inte köra «{text}» här",
+ "cmdl.no_tool": "Starta först ett ritkommando och skriv sedan dess punkter",
+ "cmdl.unknown": "Inget kommando «{text}». Ctrl+J skickar det till AI-assistenten",
+ "cmdl.bad": "Kan inte läsa «{text}»: {e}",
+ "cmdl.shape": "«{text}» är inte en punkt: skriv x;y, #x;y, @dx;dy eller ett positivt avstånd<vinkel"
+}

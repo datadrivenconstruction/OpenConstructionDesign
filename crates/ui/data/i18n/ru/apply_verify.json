@@ -1,0 +1,16 @@
+{
+ "apply_verify.err.diverged": "Применение остановлено: модель осталась прежней",
+ "apply_verify.rolled_back": "Применение не совпало с черновиком и отменено; модель не изменилась. {what}",
+ "apply_verify.diff.missing": "В черновике {what}: {kind}, но применение этого не сделало.",
+ "apply_verify.diff.extra": "Применение затронуло {what} ({kind}), а в черновике этого нет.",
+ "apply_verify.diff.kind": "В черновике {what}: {shown}, а применение: {applied}.",
+ "apply_verify.diff.value": "{what}: «{col}» получилось не таким, как в черновике.",
+ "apply_verify.diff.truncated": "Черновик и применённое изменение различаются по объёму.",
+ "apply_verify.diff.unreadable": "Применённое изменение не удалось прочитать ({e}).",
+ "apply_verify.no_base": "Применение не выполнено: нет копии, с которой сверить черновик. Модель не изменилась; запросите черновик заново.",
+ "apply_verify.take_back_failed": "Отменить не удалось ({e}): используйте «Отменить».",
+ "apply_verify.kind.created": "создан",
+ "apply_verify.kind.changed": "изменён",
+ "apply_verify.kind.deleted": "удалён",
+ "apply_verify.card.type_row": "Тип {type} · изменение получат элементов: {n}"
+}

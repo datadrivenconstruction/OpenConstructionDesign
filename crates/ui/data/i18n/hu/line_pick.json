@@ -1,0 +1,22 @@
+{
+ "cmd.arch.grid_pick": "Rács vonal alapján",
+ "cmd.arch.grid_pick.desc": "Rácsot készít pontosan a kijelölt rajzvonal mentén az aktuális szinten; a nevek folytatják a sorozatot. A Tab egyszerre veszi az azonos rajzrétegen lévő összes párhuzamos vonalat. Minden kijelölés egy visszavonási lépés.",
+ "cmd.struct.beam_pick": "Gerenda vonal alapján",
+ "cmd.struct.beam_pick.desc": "Az aktuális szinten az aktuális típusú gerendát helyezi el a kijelölt rajzvonal mentén. A Tab az összekapcsolt láncot veszi. Minden kijelölés egy visszavonási lépés.",
+ "hint.grid_pick.one": "Rács vonal alapján: jelöljön ki egy rajzvonalat · Tab az azonos rétegen lévő összes párhuzamos vonal · Esc kilép",
+ "hint.grid_pick.more": "Rács vonal alapján: jelöljön ki egy vonalat, hogy vegye az azonos rétegen lévő összes párhuzamos vonalat · Tab egy vonal · Esc kikapcsol",
+ "hint.beam_pick.one": "Gerenda vonal alapján: jelöljön ki egy rajzvonalat · Tab összekapcsolt lánc · Esc kilép",
+ "hint.beam_pick.more": "Gerenda vonal alapján: jelöljön ki egy vonalat a láncához · Tab egy vonal · Esc kikapcsol",
+ "line_pick.st.start_grid": "Jelöljön ki egy rajzvonalat. Tab: az azonos rétegen lévő összes párhuzamos vonal",
+ "line_pick.st.start_beam": "Jelöljön ki egy rajzvonalat a {type} gerendához. Tab: összekapcsolt lánc",
+ "line_pick.st.grid_done": "{name} rács hozzáadva",
+ "line_pick.st.grids_done": "{n} rács hozzáadva: {first} — {last}",
+ "line_pick.st.beam_done": "{type} gerenda hozzáadva",
+ "line_pick.st.beams_done": "{n} db {type} gerenda hozzáadva",
+ "line_pick.st.on_grid": "Ezen a vonalon már van {name} rács",
+ "line_pick.st.on_beam": "Ezen a vonalon már van {id} gerenda",
+ "line_pick.st.no_layer": "A vonalak rajzrétegei még nem ismertek, próbálja újra",
+ "line_pick.st.no_beam_type": "Nincs gerendaszelvény a katalógusban",
+ "line_pick.st.reload_warn": "Létrejött, de a nézet nem töltődött újra: {err}",
+ "line_pick.st.failed": "Nem jött létre: {err}"
+}

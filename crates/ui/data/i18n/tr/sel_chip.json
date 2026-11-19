@@ -1,0 +1,5 @@
+{
+ "sel_chip.opt.sel_hint": "Seçmek için bir öğeye tıklayın. Ctrl ekler, Shift çıkarır.",
+ "sel_chip.opt.units": "Birimler",
+ "sel_chip.sel_chip": "{name}: {n}"
+}

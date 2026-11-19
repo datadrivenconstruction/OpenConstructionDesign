@@ -1,0 +1,10 @@
+{
+ "cmd.mod.scale": "Mittakaava",
+ "cmd.mod.scale.desc": "Valitse elementit, napsauta sitten perustepistettä, vertailupituutta ja uutta pituutta, tai kirjoita kerroin.",
+ "hint.scale.select": "Mittakaava: valitse elementit · Enter — valmis",
+ "hint.scale.first": "Mittakaava: valitse perustepiste · Esc — peruuta",
+ "hint.scale.second": "Mittakaava: valitse vertailupituus · luku — kerroin · Esc — peruuta",
+ "hint.scale.third": "Mittakaava: valitse uusi pituus · luku — kerroin · Esc — peruuta",
+ "scl.bad_factor": "Mittakaavakertoimen on oltava luku, joka on suurempi kuin nolla",
+ "scl.zero_ref": "Vertailupituus on nolla: valitse piste kaukana perustepisteestä"
+}

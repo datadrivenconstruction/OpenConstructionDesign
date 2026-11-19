@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "Szyby",
+ "quick.cat.shaft": "Szyb",
+ "shaft_tool.browser.shaft": "Szyb #{id}",
+ "shaft_tool.shaft.top": "Poziom górny",
+ "shaft_tool.shaft.cuts": "Wycinane elementy",
+ "shaft_tool.shaft.cut_area": "Powierzchnia wycięcia",
+ "shaft_tool.shaft.cut_volume": "Objętość wycięcia",
+ "elem.no.rooms": "Podąża za pomieszczeniami, które zawiera"
+}

@@ -1,0 +1,6 @@
+{
+ "delsafe.ring.opening_shape": "Eine Öffnungskontur würde sich selbst schneiden oder zusammenfallen",
+ "delsafe.ring.opening_boundary": "Eine Öffnung würde die äußere Begrenzung schneiden oder berühren",
+ "delsafe.ring.openings_overlap": "Öffnungen würden sich überlappen oder berühren",
+ "xl.msg.delsafe_instance_param_on_types": "Parameter '{}' ist ein Exemplarparameter; auf dem Elementblatt bearbeiten, nicht angewendet"
+}

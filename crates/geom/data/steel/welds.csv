@@ -1,0 +1,33 @@
+# Fillet welds. Legs in mm.
+# Minimum leg by the thicker of the joined parts (up to `t_max` mm).
+[min_leg]
+t_max,leg
+6,3
+10,4
+20,5
+32,6
+50,8
+1000,10
+
+# Leg sizes a detail may use.
+[legs]
+leg
+3
+4
+5
+6
+8
+10
+12
+14
+16
+
+# leg_max_t: a leg is at most this share of the thinner part;
+# len_min_mm / len_min_leg: a run is at least max(len_min_mm, len_min_leg * leg).
+[rules]
+key,value,unit
+leg_max_t,1.0,t
+len_min_mm,30,mm
+len_min_leg,6,leg
+# ultimate strength of the weld metal used by the simplified check, MPa
+fu,470,mpa

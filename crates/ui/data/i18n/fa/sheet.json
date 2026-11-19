@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "مرجع میانبرهای صفحه‌کلید",
+ "cmd.help.shortcuts.desc": "همه میانبرها را همان‌طور که اکنون دارید، بر حسب بافت نشان می‌دهد. خارج از فیلد متن، ؟ را فشار دهید.",
+ "sheet.title": "میانبرهای صفحه‌کلید",
+ "sheet.filter": "فیلتر بر اساس فرمان یا کلید",
+ "sheet.filter_label": "فیلتر میانبرها",
+ "sheet.customize": "سفارشی‌سازی…",
+ "sheet.close": "بستن",
+ "sheet.esc_close": "برای بستن",
+ "sheet.none": "میانبری مطابقت ندارد",
+ "sheet.none_hint": "کلمه یا کلید دیگری را امتحان کنید.",
+ "sheet.sec.general": "عمومی",
+ "sheet.sec.plan": "پلان",
+ "sheet.sec.view3d": "۳بعدی",
+ "sheet.sec.schedule": "جدول‌ها",
+ "sheet.sec.sheets": "برگه‌ها",
+ "sheet.sec.ai": "هوش مصنوعی"
+}

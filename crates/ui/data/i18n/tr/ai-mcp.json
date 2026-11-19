@@ -1,0 +1,15 @@
+{
+ "mcp.ask.cancel": "İptal",
+ "mcp.ask.auto.title": "Yapay zeka ajanları sormadan değişiklik uygulasın mı?",
+ "mcp.ask.auto.body": "Bağlı yapay zeka ajanları değişikliklerini onayınızı beklemeden hemen taslaklara uygular; bu yüzden yanlış bir değişiklik siz görmeden de işlenebilir. Modeliniz yalnızca Uygula'ya bastığınızda değişir. Bu, kapatana, düzenleyiciyi kapatana veya başka bir model açana kadar sürer.",
+ "mcp.ask.auto.yes": "Sormadan uygula",
+ "mcp.ask.token.title": "Yeni belirteç verilsin mi?",
+ "mcp.ask.token.body": "Mevcut belirteç hemen çalışmaz hale gelir: bağlı yapay zeka ajanlarının bağlantısı kesilir ve yeni belirteç gerekir. Yalnızca bir kez gösterilir, bu yüzden hemen kopyalayın.",
+ "mcp.ask.token.yes": "Yeni belirteç",
+ "mcp.auto.chip": "Otomatik uygulama açık",
+ "mcp.auto.chip_tip": "Yapay zeka ajanları taslaklara sormadan uygular. Bu oturumla birlikte sona erer.",
+ "mcp.auto.ask_again": "Yeniden sor",
+ "mcp.token.once": "Bu belirteci şimdi kopyalayın: bir daha gösterilmeyecek.",
+ "mcp.renewed": "Yeni belirteç verildi: eskisi artık çalışmıyor",
+ "mcp.copied": "Kopyalandı"
+}

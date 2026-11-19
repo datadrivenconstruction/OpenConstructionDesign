@@ -1,0 +1,10 @@
+{
+ "mep_browser.name_hint": "System name",
+ "mep_browser.add_blocked": "Enter a system name first",
+ "mep_browser.col.insulation": "Insulation",
+ "mep_browser.cancel": "Cancel",
+ "mep_browser.delete.title": "Delete this system?",
+ "mep_browser.delete.body": "System \"{name}\" and its runs ({n}) will be deleted.",
+ "mep_browser.delete.undo": "You can undo this with one Undo.",
+ "mep_browser.delete.confirm": "Delete system"
+}

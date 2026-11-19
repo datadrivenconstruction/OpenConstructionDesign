@@ -1,0 +1,11 @@
+{
+ "cmd.arch.roof_gable.short": "গেবল",
+ "cmd.arch.roof_hip.short": "হিপ",
+ "cmd.arch.roof_shed.short": "শেড",
+ "cmd.arch.roof_mansard.short": "ম্যানসার্ড",
+ "cmd.arch.roof_gambrel.short": "গ্যাম্বরেল",
+ "cmd.arch.roof_barrel.short": "ব্যারেল",
+ "cmd.arch.roof_edges.short": "ছাদের প্রান্ত",
+ "cmd.arch.roof_opening.short": "ওপেনিং",
+ "cmd.mass.roof_by_face.short": "তল থেকে"
+}

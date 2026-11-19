@@ -1,0 +1,8 @@
+{
+ "api.cmd.norms_lookup": "주제, 요소 또는 코드로 프로젝트 규정 묶음의 규칙 찾기",
+ "api.cmd.norms_check": "모델을 프로젝트의 규정 묶음과 대조하고 지적 사항을 나열",
+ "api.cmd.norms_programme": "건물 유형별 프로젝트 국가의 일반적인 실 프로그램",
+ "api.cmd.select_similar": "이와 같은 모든 요소 선택: 같은 유형 또는 범주, 이 레벨 또는 프로젝트 전체",
+ "api.cmd.create_drawing_set": "인쇄 가능한 도면 세트 초안 작성: 평면, 단면, 입면, 일람표, 타이틀 블록",
+ "api.cmd.deliver_project": "브리프에서 파일까지 한 번에: 적용 후 프로젝트와 도면 세트를 내보냄"
+}

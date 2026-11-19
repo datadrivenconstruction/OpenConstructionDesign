@@ -1,0 +1,14 @@
+{
+ "dwg_table.copy": "Copiere tabel",
+ "dwg_table.copy_tip": "Copiați cantitatea pe straturi ca tabel pentru o foaie de calcul",
+ "dwg_table.copied": "Cantitatea a fost copiată (separată prin tabulator)",
+ "dwg_table.total": "Total",
+ "dwg_table.col.layer": "Strat",
+ "dwg_table.col.count": "Număr",
+ "dwg_table.col.len": "Lungime, {unit}",
+ "dwg_table.col.area": "Suprafață, {unit}",
+ "dwg_table.unit.mm": "mm",
+ "dwg_table.unit.m2": "m²",
+ "dwg_table.unit.ft": "ft",
+ "dwg_table.unit.ft2": "ft²"
+}

@@ -1,0 +1,4 @@
+{
+ "xl.msg.x_cells_above_the_header_on_sheet_x": "{} 个单元格位于工作表“{}”的表头上方",
+ "xl.msg.book_changed_during_export": "导出期间工作簿已被其他程序保存，未被覆盖；请重新导出"
+}

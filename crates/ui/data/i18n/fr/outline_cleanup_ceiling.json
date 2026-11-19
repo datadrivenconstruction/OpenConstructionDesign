@@ -1,0 +1,11 @@
+{
+ "cmd.ctx.ceiling.clean_outline": "Nettoyer le contour",
+ "cmd.ctx.ceiling.clean_outline.desc": "Supprime les pointes étroites où le contour du plafond revient sur lui-même. Affiche d'abord un aperçu ; une étape d'annulation.",
+ "cmd.ctx.shaft.clean_outline": "Nettoyer le contour",
+ "cmd.ctx.shaft.clean_outline.desc": "Supprime les pointes étroites où le contour de la gaine revient sur lui-même. Affiche d'abord un aperçu ; une étape d'annulation.",
+ "outline_cleanup.intro_ceiling": "Le contour de ce plafond revient sur lui-même en pointes étroites : {n}. Le nettoyage les supprime ; le reste ne change pas.",
+ "outline_cleanup.intro_shaft": "Le contour de cette gaine revient sur lui-même en pointes étroites : {n}. Le nettoyage les supprime ; le reste ne change pas.",
+ "outline_cleanup.none_ceiling": "Le contour de ce plafond n'a aucune pointe",
+ "outline_cleanup.none_shaft": "Le contour de cette gaine n'a aucune pointe",
+ "outline_cleanup.need_host": "Sélectionnez une dalle, un plafond ou une gaine"
+}

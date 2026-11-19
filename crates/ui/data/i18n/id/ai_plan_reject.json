@@ -1,0 +1,9 @@
+{
+ "ai.plan.reject_ask": {
+  "one": "Tolak # perubahan?",
+  "other": "Tolak # perubahan?"
+ },
+ "ai.plan.reject_ask.hint": "Draf dan tanda centang Anda dibuang. Model tetap seperti semula.",
+ "ai.plan.reject_confirm": "Tolak",
+ "ai.plan.reject_keep": "Simpan"
+}

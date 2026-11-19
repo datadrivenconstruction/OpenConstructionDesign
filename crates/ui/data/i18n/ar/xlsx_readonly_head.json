@@ -1,0 +1,5 @@
+{
+ "xlsx_readonly.read_only_head": "للقراءة فقط — سيكتب التطبيق نسخة",
+ "xlsx_readonly.show_in_folder": "أظهر في المجلد",
+ "xlsx_readonly.copy_exists": "ملف النسخة موجود بالفعل. اختر اسماً آخر أو احذفه."
+}

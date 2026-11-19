@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "Tambahkan 1 set",
+ "rebar_sets.add_n": "Tambahkan {n} set",
+ "rebar_sets.pick.search": "Cari tipe batang",
+ "rebar_sets.pick.empty": "Tidak ada tipe batang yang cocok",
+ "rebar_sets.unit.deg": "°"
+}

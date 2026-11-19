@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "Sisesta kõigepealt malli nimi",
+ "view_template.name_taken": "Sellise nimega mall on juba olemas",
+ "view_template.pick_blocked": "Märgi kõigepealt vähemalt üks vaade",
+ "view_template.views.one": "{n} vaade",
+ "view_template.views.few": "{n} vaadet",
+ "view_template.views.many": "{n} vaadet",
+ "view_template.delete.title": "Kas kustutada see mall?",
+ "view_template.delete.body": "Mall \"{name}\" kustutatakse. Kasutusel: {used}.",
+ "view_template.delete.unused": "Mall \"{name}\" kustutatakse. Ükski vaade seda ei kasuta.",
+ "view_template.delete.keeps": "Need vaated säilitavad praeguse graafika ja kaotavad seose.",
+ "view_template.delete.undo": "Selle saab tagasi võtta ühe käsuga Võta tagasi.",
+ "view_template.delete.confirm": "Kustuta mall"
+}

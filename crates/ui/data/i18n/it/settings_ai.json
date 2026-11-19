@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "Connessione",
+ "settings.ai_status_desc": "Il modello usato dall'assistente IA; le chiavi restano nell'archivio sicuro",
+ "settings.ai_not_connected": "Non connesso",
+ "settings.ai_connect": "Impostazioni di connessione",
+ "settings.ai_connect_desc": "Indirizzo, modello e chiave del tuo modello, nel cloud o in locale",
+ "settings.ai_connect_btn": "Impostazioni di connessione…",
+ "settings.ai_panel": "Pannello dell'assistente IA",
+ "settings.ai_panel_desc": "Chiedi a parole, verifica il piano, poi applica",
+ "settings.ai_open_panel": "Apri pannello IA"
+}

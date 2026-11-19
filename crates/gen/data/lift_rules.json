@@ -1,0 +1,18 @@
+{
+  "about": "Lift catalogue of the generator: car classes, speed bands. Design catalogue values for sizing; a country norm pack or a brief rule can raise the clearances. Lengths in metres, loads in kg.",
+  "clear_w": 0.5,
+  "clear_d": 0.45,
+  "layout": {"car_gap": 0.1, "edge_probe": 0.05, "lobby_step": 0.3, "lobby_reach": 6.0, "machine_gap": 0.1, "machine_hang": 0.2},
+  "classes": [
+    {"id": "630", "persons": 8, "car": [1.1, 1.4], "door": 0.9},
+    {"id": "800", "persons": 10, "car": [1.35, 1.4], "door": 0.9},
+    {"id": "1000", "persons": 13, "car": [1.1, 2.1], "door": 1.1},
+    {"id": "1275", "persons": 17, "car": [1.4, 2.1], "door": 1.1},
+    {"id": "1600", "persons": 21, "car": [1.6, 2.4], "door": 1.2}
+  ],
+  "bands": [
+    {"id": "slow", "upto_speed": 1.0, "pit": 1.1, "head": 3.8, "machine": [0.6, 0.4, 0.5]},
+    {"id": "medium", "upto_speed": 2.5, "pit": 1.6, "head": 4.4, "machine": [0.8, 0.5, 0.6]},
+    {"id": "fast", "upto_speed": 99.0, "pit": 2.5, "head": 5.6, "machine": [1.0, 0.7, 0.8]}
+  ]
+}

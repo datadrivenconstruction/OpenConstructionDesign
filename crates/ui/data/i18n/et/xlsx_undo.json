@@ -1,0 +1,6 @@
+{
+ "cmd.xlsx.undo_apply": "Võta viimane XLSX-tabeli rakendamine tagasi",
+ "xlsx_undo.later": "Ei võetud tagasi: pärast seda XLSX-tabeli rakendamist muudeti mudelit. Kasuta Ctrl+Z sammhaaval või ajaloo paneeli.",
+ "xlsx_undo.gone": "Tagasivõetavat pole: see XLSX-tabeli rakendamine on juba tagasi võetud.",
+ "xlsx_undo.busy": "Lõpeta või tühista kõigepealt praegune joonistus, siis võta XLSX-tabeli rakendamine tagasi."
+}

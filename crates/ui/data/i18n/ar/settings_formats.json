@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "ما الذي يحدث بعد تصدير ملف العمل",
+ "settings.area_decimals_desc": "الخانات بعد الفاصلة العشرية في المساحات",
+ "settings.volume_decimals_desc": "الخانات بعد الفاصلة العشرية في الأحجام",
+ "settings.frac_desc": "أصغر كسر من البوصة في الأطوال الإمبراطورية",
+ "settings.small_area_desc": "عرض المساحات الأصغر من قدم مربع بالبوصات المربعة",
+ "settings.sample_desc": "كيف تبدو الأرقام بالاختيارات الحالية",
+ "autosave.title_desc": "الاحتفاظ بنسخة استرداد للمشروع المفتوح",
+ "autosave.interval_desc": "الوقت بين نسخ الاسترداد",
+ "autosave.keep_desc": "تُحذف نسخ الاسترداد الأقدم",
+ "autosave.folder_desc": "فارغ يعني المجلد الافتراضي",
+ "autosave.remind_desc": "تذكير بحفظ مشروع ليس له ملف بعد",
+ "settings.backend_desc": "محوّل الرسوميات المستخدم",
+ "settings.news_desc": "ما الذي تغيّر في هذا الإصدار",
+ "settings.assoc_default_desc": "اجعل هذا التطبيق الافتراضي لملفات النموذج",
+ "settings.data_dir_desc": "تُحفظ هنا الذاكرة المؤقتة ونسخ الاسترداد والسجلات."
+}

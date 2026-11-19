@@ -1,0 +1,9 @@
+{
+ "drafts.draft.view": "“{name}”-ийн харагдацын график",
+ "drafts.draft.filter": "Харагдацын шүүлтүүр “{name}”",
+ "drafts.draft.filter_new": "Шинэ харагдацын шүүлтүүр",
+ "drafts.draft.object_styles": "Объектын загварууд",
+ "drafts.draft.material": "Материал “{name}”",
+ "drafts.draft.type": "Төрөл “{name}”",
+ "drafts.draft.params": "“{name}” бүлгийн параметрүүд"
+}

@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "X 轴",
+ "fe.axis.y": "Y 轴",
+ "fe.axis.z": "Z 轴",
+ "fe.col.axis": "轴",
+ "fe.col.at": "位置",
+ "fe.col.mode": "模式",
+ "fe.mode.fixed": "固定",
+ "fe.mode.free": "自由",
+ "fe.types.inherited": "来自参数的默认值",
+ "fe.csv.more": "更多 CSV 操作",
+ "fe.ref.selected": "平面：{name}"
+}

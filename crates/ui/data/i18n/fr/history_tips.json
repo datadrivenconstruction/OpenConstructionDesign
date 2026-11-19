@@ -1,0 +1,6 @@
+{
+ "history.hist.undone_tip": "Annulé — Ctrl+Y rétablit",
+ "history.hist.empty": "Aucune modification pour l'instant",
+ "history.hist.empty_hint": "Vos modifications apparaissent ici. Cliquez sur une étape pour y revenir.",
+ "history.hist.revert_all_n": "Annuler toutes les modifications de l'IA ({n})"
+}

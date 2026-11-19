@@ -1,0 +1,7 @@
+{
+ "offset_opts.dist_positive": "Offset distance must be greater than zero; the side follows the cursor",
+ "offset_opts.count_bad": "Whole number from {min} to {max}",
+ "offset_opts.done_tip": "Finish the selection and start the tool",
+ "offset_opts.iso.apply_tip": "Make the temporary hiding permanent for this view",
+ "offset_opts.iso.exit": "Exit temporary mode"
+}

@@ -1,0 +1,10 @@
+{
+ "cmd.mod.scale": "Escala",
+ "cmd.mod.scale.desc": "Selecione os elementos e clique no ponto base, em um comprimento de referência e no novo comprimento, ou digite um fator.",
+ "hint.scale.select": "Escala: selecione os elementos · Enter — concluir",
+ "hint.scale.first": "Escala: escolha o ponto base · Esc — cancelar",
+ "hint.scale.second": "Escala: escolha o comprimento de referência · número — fator · Esc — cancelar",
+ "hint.scale.third": "Escala: escolha o novo comprimento · número — fator · Esc — cancelar",
+ "scl.bad_factor": "O fator de escala deve ser um número maior que zero",
+ "scl.zero_ref": "O comprimento de referência é zero: escolha um ponto afastado da base"
+}

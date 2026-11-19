@@ -1,0 +1,21 @@
+{
+ "ai.receipt.title": {
+  "one": "# تغییر اعمال شد",
+  "other": "# تغییر اعمال شد"
+ },
+ "ai.receipt.more": "+{n} دیگر",
+ "ai.receipt.list": "عنصرها",
+ "ai.receipt.show": "نمایش",
+ "ai.receipt.show.tip": "عنصرهای تغییرکرده را انتخاب و قاب کن",
+ "ai.receipt.undo": "واگرد",
+ "ai.receipt.undo.tip": "دقیقاً همین اعمال را برمی‌دارد",
+ "ai.receipt.undone": "واگرد شد",
+ "ai.receipt.later": "ویرایش‌های بعدی انجام شده",
+ "ai.receipt.toast_undone": "برنامهٔ اعمال‌شده واگرد شد",
+ "ai.receipt.draft_family": "خانوادهٔ پیش‌نویس: {name}",
+ "ai.receipt.promote": "کاری کن",
+ "ai.receipt.promote.tip": "خانوادهٔ پیش‌نویس را به خانوادهٔ کاری تبدیل می‌کند (یک گام واگرد)",
+ "ai.receipt.promoted": "خانواده اکنون کاری است",
+ "ai.receipt.promote_failed": "خانواده کاری نشد",
+ "cmd.ai.receipt_undo": "واگرد آخرین برنامهٔ هوش مصنوعی"
+}

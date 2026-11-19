@@ -1,0 +1,5 @@
+{
+ "elem.panel_select_wall": "Вибрати стіну",
+ "cmd.elem.panel_select_wall": "Вибрати стіну",
+ "elem.left_in_place": "Залишено: {kinds}. Панель належить своїй стіні; маси й позначки видаляються окремо."
+}

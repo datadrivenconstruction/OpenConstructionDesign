@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "Capăt",
+ "snap.midpoint": "Mijloc",
+ "snap.perpendicular": "Perpendicular",
+ "snap.wall_axis": "Axa peretelui",
+ "snap.wall_face": "Fața peretelui",
+ "snap.grid": "Grilă",
+ "snap.intersection": "Intersecție",
+ "snap.grid_axis": "Linie de grilă",
+ "snap.ref_plane": "Plan de referință",
+ "snap.nearest": "Cel mai apropiat",
+ "snap.align_x": "Aliniat pe X cu un punct îndepărtat",
+ "snap.align_y": "Aliniat pe Y cu un punct îndepărtat",
+ "snap.align_xy": "Aliniat pe X și Y"
+}

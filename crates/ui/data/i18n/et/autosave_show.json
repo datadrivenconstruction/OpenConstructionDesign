@@ -1,0 +1,4 @@
+{
+ "cmd.mgr.autosave_show": "Näita automaattallennust",
+ "cmd.mgr.autosave_show.desc": "Ava automaattallennuse aken; kui see on juba nähtav, jääb see avatuks."
+}

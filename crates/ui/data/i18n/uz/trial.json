@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "Nuqta",
+ "trial.field.distance": "Masofa",
+ "trial.field.target": "Element",
+ "trial.refused": "{field}: {reason}. Qo'llash uchun o'zgartiring",
+ "trial.preview_off": "Oldindan ko'rish o'chiq: model juda katta"
+}

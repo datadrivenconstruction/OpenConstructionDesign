@@ -1,0 +1,2 @@
+# Reference plane by two points
+tool(arch.refplane) click(-2,3) click(8,3) → rows(ref_plane)=1 journal=+1

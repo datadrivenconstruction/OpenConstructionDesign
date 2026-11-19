@@ -1,0 +1,22 @@
+{
+ "curtain_props.cw.panel": "Panel",
+ "curtain_props.cw.panel_cell": "Celle {i}×{j} · gardinvæg #{id}",
+ "curtain_props.cw.kind": "Type",
+ "curtain_props.cw.kind.glazed": "Glas",
+ "curtain_props.cw.kind.solid": "Massiv",
+ "curtain_props.cw.kind.door": "Dør",
+ "curtain_props.cw.kind.window": "Vindue",
+ "curtain_props.cw.kind.empty": "Tom",
+ "curtain_props.cw.name": "Navn",
+ "curtain_props.cw.swing_side": "Åbner til den anden side",
+ "curtain_props.cw.swing_hinge": "Hængsel i cellens ende",
+ "curtain_props.cw.size": "Størrelse",
+ "curtain_props.cw.cell_area": "Cellens areal",
+ "curtain_props.cw.panel_area": "Panelareal",
+ "curtain_props.cw.prev": "Forrige panel",
+ "curtain_props.cw.next": "Næste panel",
+ "curtain_props.cw.wall": "Vælg væggen",
+ "curtain_props.cw.panel_hint": "Esc — valg · Ctrl+Z — fortryd",
+ "curtain_props.cw.status.panel": "Panel {i}×{j} → {kind}",
+ "e3d.err.cw_height": "gardinvæggens højde skal være over 100 mm"
+}

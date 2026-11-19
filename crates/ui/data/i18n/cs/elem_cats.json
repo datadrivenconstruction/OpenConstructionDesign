@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "Hmotu nelze otočit ani zrcadlit: historie jejího tvaru nemá otočený krok. Přesuňte nebo zkopírujte ji, nebo ji nakreslete v novém směru.",
+ "sched_cats.col.name": "Název",
+ "sched_cats.col.material": "Materiál",
+ "sched_cats.col.void": "Dutina",
+ "sched_cats.col.inplace": "Na místě",
+ "sched_cats.col.volume": "Čistý objem",
+ "sched_cats.col.area": "Povrchová plocha",
+ "sched_cats.col.floor_area": "Plocha podlahy",
+ "sched_cats.col.thickness": "Tloušťka",
+ "sched_cats.col.points": "Body",
+ "elem.toposolid.points": "Zaměřovací body",
+ "elem.toposolid.count": "Body",
+ "elem.toposolid.low": "Nejnižší",
+ "elem.toposolid.high": "Nejvyšší",
+ "elem.toposolid.edit": "Upravit body",
+ "elem.toposolid.edit_tip": "Vybírejte, přetahujte a nastavujte kótu zaměřovacích bodů v půdorysu",
+ "elem.toposolid.pick_hint": "Kliknutím na bod v půdorysu jej vyberete. Dalším kliknutím přidáte nebo odeberete.",
+ "elem.toposolid.z": "Kóta ({n})",
+ "elem.toposolid.mixed": "Vybrané body se liší; nová hodnota nastaví všechny.",
+ "elem.toposolid.edit_help": "Přetažením bod přesunete. Zadejte hodnotu a stiskněte Enter pro nastavení kóty. Backspace odstraní vybrané body, Esc ukončí.",
+ "elem.toposolid.done": "Hotovo"
+}

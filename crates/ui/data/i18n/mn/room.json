@@ -1,0 +1,6 @@
+{
+ "geom.length": "Урт",
+ "sched.cat.room_seps": "Өрөөний хуваагч",
+ "room.err.point_leave": "Өрөө {n}: цэг хилээс гарах болно",
+ "room.err.point_taken": "Өрөө {n}: цэг {other} өрөөнд орох болно"
+}

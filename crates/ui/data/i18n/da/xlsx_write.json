@@ -1,0 +1,4 @@
+{
+ "xlsx_write.denied": "Ingen rettigheder til at skrive i denne mappe. Regnearket blev ikke ændret. Gem eksporten i en anden mappe.",
+ "xlsx_write.save_to": "Gem i…"
+}

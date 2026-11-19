@@ -1,0 +1,12 @@
+{
+ "opt.stair.straight": "Sirge",
+ "opt.stair.l": "L",
+ "opt.stair.u": "U",
+ "opt.stair.gap": "Vahe",
+ "hint.stair.corner": "L-trepp: vali pöördenurk · Backspace — eemalda viimane punkt · Esc — eemalda viimane punkt; punktideta — tühista",
+ "hint.stair.side": "Trepp: vali teise trepilennu külg · Backspace — eemalda viimane punkt · Esc — eemalda viimane punkt; punktideta — tühista",
+ "tool.stair.flights": "{n} astmikku (kokku {m})",
+ "tool.stair.err_split": "Igas trepilennus peab olema vähemalt 2 astmikku: esimeses lennus on {n} / {m}",
+ "tool.stair.err_comfort": "Astmik ja sammuk rikuvad mugavusreegli (2R + T)",
+ "tool.stair.err_input": "Trepi mõõdud on vahemikust väljas: kontrolli laiust, kõrgust ja vahepodesti"
+}

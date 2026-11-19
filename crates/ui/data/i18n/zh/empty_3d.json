@@ -1,0 +1,14 @@
+{
+ "empty.v3d_model.title": "三维中尚无内容",
+ "empty.v3d_model.hint": "在平面中绘制墙，它们会出现在此处。",
+ "empty.v3d_model.action": "打开平面",
+ "empty.v3d_hidden.title": "此视图中所有图元均已隐藏",
+ "empty.v3d_hidden.hint": "临时隐藏或隔离后没有可见内容。视图图形设置保持不变。",
+ "empty.v3d_hidden.action": "显示全部",
+ "empty.v3d_graphics.title": "视图图形设置隐藏了所有类别",
+ "empty.v3d_graphics.hint": "此视图的类别规则使所有内容都不可见。请在视图图形设置中重新开启类别。",
+ "empty.v3d_graphics.action": "打开视图图形设置",
+ "empty.v3d_box.title": "剖切框位于模型之外",
+ "empty.v3d_box.hint": "范围框会剪切掉每个图元。请将其重新适配到模型周围。",
+ "empty.v3d_box.action": "重置范围框"
+}

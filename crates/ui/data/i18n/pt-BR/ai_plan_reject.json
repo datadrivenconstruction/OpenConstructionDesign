@@ -1,0 +1,9 @@
+{
+ "ai.plan.reject_ask": {
+  "one": "Rejeitar # alteração?",
+  "other": "Rejeitar # alterações?"
+ },
+ "ai.plan.reject_ask.hint": "O rascunho e as marcações serão descartados. O modelo permanece como está.",
+ "ai.plan.reject_confirm": "Rejeitar",
+ "ai.plan.reject_keep": "Manter"
+}

@@ -1,0 +1,11 @@
+{
+ "fe.csv.apply": "Importálás alkalmazása",
+ "fe.csv.cancel": "Előnézet elvetése",
+ "fe.csv.nothing": "Nincs módosítandó: a katalógus megegyezik a jelenlegi típusokkal",
+ "fe.csv.preview": "Importálási előnézet: {added} új, {changed} módosított, {same} változatlan típus; {values} érték változik",
+ "fe.csv.preview_hint": "Az üres cellák és a hiányzó oszlopok megtartják a jelenlegi értékeket. Az alkalmazásig semmi sem változik.",
+ "fe.csv.skipped": "Nincs alkalmazva, az érték megmarad: {msg}",
+ "fe.csv.type_added": "Új típus: {name}",
+ "fe.csv.type_changed": "Típus: {name}",
+ "fe.csv.value": "  {param}: {old} → {new}"
+}

@@ -1,0 +1,8 @@
+{
+ "xlsx_idle.idle_title": "Nincs importálandó módosítás",
+ "xlsx_idle.export_name": "Exportálás",
+ "xlsx_idle.export_body": "A modellt munkafüzetbe írja. Ott szerkessze az értékeket, majd szinkronizáljon.",
+ "xlsx_idle.sync_name": "Szinkronizálás",
+ "xlsx_idle.sync_body": "Újra beolvassa a munkafüzetet, és felsorolja az eltéréseket. A modell csak alkalmazáskor változik.",
+ "xlsx_idle.last_sync": "Utolsó szinkronizálás: {when}"
+}

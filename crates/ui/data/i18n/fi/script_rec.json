@@ -1,0 +1,8 @@
+{
+ "script_rec.started": "Tallennus käynnissä: muokkaukset, jotka teet tästä eteenpäin, menevät skriptiin. Lopeta valitsemalla «Tallenna toiminnot skriptiin» uudelleen.",
+ "script_rec.saved": "Skripti «{name}» tallennettu: muokkauksia {n}.",
+ "script_rec.skipped": "Muokkauksia, jotka tehtiin työkaluilla ilman skriptilomaketta, ei tallennettu: {k}.",
+ "script_rec.nothing": "Tallennus pysäytetty: tallennettavia muokkauksia ei ole.",
+ "script_rec.failed": "Tallennusta ei tehty: {why}",
+ "script_rec.no_folder": "ei asetuskansiota skripteille"
+}

@@ -1,0 +1,12 @@
+{
+ "opt.stair.straight": "Tuwid",
+ "opt.stair.l": "Hugis L",
+ "opt.stair.u": "Hugis U",
+ "opt.stair.gap": "Puwang",
+ "hint.stair.corner": "L na hagdan: pumili ng sulok ng pagliko · Backspace — alisin ang huling point · Esc — alisin ang huling point; kung wala nang point, kanselahin",
+ "hint.stair.side": "Hagdan: pumili ng panig ng ikalawang flight · Backspace — alisin ang huling point · Esc — alisin ang huling point; kung wala nang point, kanselahin",
+ "tool.stair.flights": "{n} riser (kabuuan {m})",
+ "tool.stair.err_split": "Kailangan ng bawat flight ng hindi bababa sa 2 riser: ang unang flight ay may {n} sa {m}",
+ "tool.stair.err_comfort": "Lumalabag ang riser at tread sa panuntunan ng ginhawa (2R + T)",
+ "tool.stair.err_input": "Wala sa saklaw ang laki ng hagdan: suriin ang lapad, taas at landing"
+}

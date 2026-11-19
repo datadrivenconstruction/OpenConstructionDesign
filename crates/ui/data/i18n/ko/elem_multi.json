@@ -1,0 +1,10 @@
+{
+ "elem.multi.title": "요소 {n}개",
+ "elem.multi.varies": "다양함",
+ "elem.multi.tip": "값을 입력하면 선택한 모든 요소에 적용됩니다",
+ "elem.multi.hidden": "{n}개 행은 일부 요소에만 있음",
+ "elem.multi.none": "선택한 요소에 공통 행이 없습니다",
+ "elem.multi.range": "값이 허용 범위를 벗어났습니다",
+ "elem.multi.changed": "요소 {n}개 변경됨 · Ctrl+Z로 실행 취소",
+ "elem.multi.same": "선택한 모든 요소에 이미 이 값이 있습니다"
+}

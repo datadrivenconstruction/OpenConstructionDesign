@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "Μονάδες",
+ "topo_units.unit": "Μονάδες στο αρχείο",
+ "topo_units.unit.m": "m",
+ "topo_units.unit.cm": "cm",
+ "topo_units.unit.mm": "mm",
+ "topo_units.unit.ft": "ft",
+ "topo_units.unit.usft": "US survey ft",
+ "topo_units.unit.in": "in",
+ "topo_units.unit.from_file": "Το αρχείο δηλώνει τις μονάδες του: {unit}",
+ "topo_units.unit.suggested": "Το αρχείο δεν δηλώνει μονάδες. Προτείνεται από την έκταση: {unit} — ελέγξτε το αποτέλεσμα παρακάτω",
+ "topo_units.extent": "Αποτέλεσμα σε μονάδες έργου: {x} × {y} {u} σε κάτοψη, εύρος ύψους {z} {u}",
+ "topo_units.extent.none": "Αποτέλεσμα: τίποτα για εισαγωγή με αυτές τις επιλογές",
+ "topo_units.extent.check": "Δεν μοιάζει με οικόπεδο: ελέγξτε τις μονάδες"
+}

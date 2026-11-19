@@ -1,0 +1,5 @@
+{
+ "elem.panel_select_wall": "Wand selecteren",
+ "cmd.elem.panel_select_wall": "Wand selecteren",
+ "elem.left_in_place": "Ter plaatse gelaten: {kinds}. Een paneel hoort bij zijn wand; massa's en annotaties worden vanzelf verwijderd."
+}

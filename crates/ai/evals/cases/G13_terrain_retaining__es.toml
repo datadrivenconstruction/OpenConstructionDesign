@@ -1,0 +1,31 @@
+id = "G13_terrain_retaining__es"
+tier = "hard"
+group = "Any geometry"
+title = "Terrain with retaining walls"
+lang = "es"
+base = "empty"
+
+[[turn]]
+say = "Un solar en pendiente de 60 x 40 m con 6 m de desnivel, aterrazado en tres niveles con muros de contención de hormigón de hasta 2.5 m, escaleras entre las terrazas y una rampa."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "toposolid+mesh"
+min = 1.0
+
+[[oracle.count]]
+spec = "wall"
+min = 3.0
+
+[[oracle.count]]
+spec = "stair"
+min = 1.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "X осі",
+ "fe.axis.y": "Y осі",
+ "fe.axis.z": "Z осі",
+ "fe.col.axis": "Ось",
+ "fe.col.at": "Орны",
+ "fe.col.mode": "Режим",
+ "fe.mode.fixed": "Бекітілген",
+ "fe.mode.free": "Еркін",
+ "fe.types.inherited": "Параметрден әдепкі",
+ "fe.csv.more": "CSV қосымша әрекеттері",
+ "fe.ref.selected": "Жазықтық: {name}"
+}

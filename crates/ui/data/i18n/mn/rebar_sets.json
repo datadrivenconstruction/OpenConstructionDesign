@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "1 багц нэмэх",
+ "rebar_sets.add_n": "{n} багц нэмэх",
+ "rebar_sets.pick.search": "Арматурын төрлөөр хайх",
+ "rebar_sets.pick.empty": "Таарсан арматурын төрөл алга",
+ "rebar_sets.unit.deg": "°"
+}

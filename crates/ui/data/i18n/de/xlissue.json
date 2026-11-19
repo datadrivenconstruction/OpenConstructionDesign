@@ -1,0 +1,13 @@
+{
+ "xlw.copy_list": "Liste kopieren",
+ "xlw.save_list": "Liste speichern…",
+ "xlw.copy_list_tip": "Die angezeigten Zeilen (Blatt, Zelle, Id, Spalte, Werte, Grund) als Text für eine Tabellenkalkulation kopieren",
+ "xlw.save_list_tip": "Die angezeigten Zeilen als .csv-Datei neben der Arbeitsmappe speichern; die Arbeitsmappe selbst wird nie geändert",
+ "xlw.list_book_value": "Wert der Arbeitsmappe",
+ "xlw.list_model_value": "Modellwert",
+ "xlw.list_reason": "Grund",
+ "xlw.list_copied": "Liste kopiert: {n} Zeilen",
+ "xlw.list_saved": "Liste gespeichert: {n} Zeilen, {file}",
+ "xlw.list_save_failed": "Liste nicht gespeichert",
+ "xlw.list_nothing": "Nichts zu kopieren: keine Zeilen angezeigt"
+}

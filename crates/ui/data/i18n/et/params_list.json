@@ -1,0 +1,23 @@
+{
+ "params_list.n_params": {
+  "one": "# parameeter",
+  "other": "# parameetrit"
+ },
+ "params_list.n_values": {
+  "one": "# väärtus",
+  "other": "# väärtust"
+ },
+ "params_list.n_elements": {
+  "one": "# element",
+  "other": "# elementi"
+ },
+ "params_list.exported": "{params} eksporditud faili {file}",
+ "params_list.export_failed": "Parameetreid ei eksporditud: {why}",
+ "params_list.open_folder": "Ava kaust",
+ "params_list.delete_tip": "Kustuta parameeter ja selle väärtused",
+ "params_list.confirm": "Kustutada parameeter {name} ja selle {values} elemendil {elements}?",
+ "params_list.confirm_btn": "Kustuta",
+ "params_list.cancel": "Tühista",
+ "params_list.deleted": "Parameeter {name} kustutatud ({values})",
+ "params_list.undo": "Võta tagasi"
+}

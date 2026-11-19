@@ -1,0 +1,19 @@
+{
+ "names.level": "Verdieping {n}",
+ "names.slab": "Vloer 200",
+ "names.roof_slab": "Dak 200",
+ "names.sheet.plan_section": "Plattegrond en doorsnede verdieping 1",
+ "names.sheet.plan_view": "Plattegrond verdieping 1",
+ "names.sheet.site_plan": "Situatietekening",
+ "names.sheet_set.issue": "Uitgave 1",
+ "names.title.owner": "Project B.V.",
+ "names.title.creator": "A. Ivanov",
+ "names.title.approver": "P. Petrov",
+ "names.title.document_type": "Tekening",
+ "names.title.status": "In uitvoering",
+ "names.revision.date": "4 nov 2026",
+ "names.revision.description": "Uitgegeven voor beoordeling",
+ "names.revision.author": "AI",
+ "names.demo.no_levels": "geen verdiepingen",
+ "names.demo.no_sheet": "tekening"
+}

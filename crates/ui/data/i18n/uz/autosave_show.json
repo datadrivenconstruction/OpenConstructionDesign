@@ -1,0 +1,4 @@
+{
+ "cmd.mgr.autosave_show": "Avtosaqlashni ko'rsatish",
+ "cmd.mgr.autosave_show.desc": "Avtosaqlash oynasini ochadi; agar u allaqachon ko'rsatilgan bo'lsa, ochiq qoladi."
+}

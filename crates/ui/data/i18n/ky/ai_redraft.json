@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "Ревизияланган",
+ "ai.redraft.added": "+{n} кошулду",
+ "ai.redraft.removed": "−{n} алынды",
+ "ai.redraft.changed": "~{n} өзгөрдү",
+ "ai.redraft.strip": "Акыркы карап чыгуудан бери: {what}",
+ "ai.redraft.note": "Ревизияланган план каралды: {what}",
+ "ai.redraft.more": "+{n} дагы",
+ "ai.redraft.ack": "Түшүндүм",
+ "ai.redraft.ack.tip": "Бул ревизияны көрүлгөн деп белгилөө; андан кийин Колдонуу ушуну максат кылат",
+ "ai.redraft.removed_list": "Алынган пункттар: {n}",
+ "ai.redraft.review_first": "Сиздин билдирүүңүздөн кийин план өзгөрдү: адегенде өзгөртүүлөрдү карап чыгыңыз",
+ "ai.redraft.mark.tip": "Акыркы карап чыгуудан бери жаңы же өзгөргөн",
+ "ai.redraft.emptied": "Кийинки суроо бардык пунктту алып салды: черновик бош"
+}

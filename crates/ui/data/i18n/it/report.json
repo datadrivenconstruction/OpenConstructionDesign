@@ -1,0 +1,23 @@
+{
+ "cmd.app.report": "Segnala un problema…",
+ "cmd.app.report.desc": "Descrive cosa è andato storto e salva un pacchetto su questo computer — il tuo testo, i dati di build e di sistema, un'immagine della finestra e l'ultimo registro di arresto anomalo. Non viene inviato nulla.",
+ "report.title": "Segnala un problema",
+ "report.what": "Cosa è successo",
+ "report.expected": "Cosa ti aspettavi",
+ "report.steps": "Passaggi per riprodurlo",
+ "report.opt.shot": "Includi un'immagine della finestra",
+ "report.opt.model": "Includi una copia del modello",
+ "report.opt.model.note": "Disattivata per impostazione predefinita. La copia contiene i dati del progetto, senza il registro IA.",
+ "report.opt.paths": "Mantieni i nomi utente nei percorsi dei file",
+ "report.local": "Il pacchetto viene salvato solo su questo computer. Nulla viene inviato automaticamente.",
+ "report.blocked": "Descrivi prima cosa è successo.",
+ "report.save": "Salva pacchetto",
+ "report.copy": "Copia testo",
+ "report.cancel": "Annulla",
+ "report.copied": "Testo del rapporto copiato.",
+ "report.saved": "Pacchetto salvato: {path}",
+ "report.failed": "Impossibile salvare il pacchetto: {err}",
+ "report.model.fail": "Impossibile creare la copia del modello, nulla è stato salvato: {err}",
+ "report.crash.notice": "La sessione precedente si è chiusa con un arresto anomalo.",
+ "report.crash.action": "Segnala un problema"
+}

@@ -1,0 +1,19 @@
+{
+ "empty.v3d_gpu.title": "このグラフィックアダプタでは 3D を使用できません",
+ "empty.v3d_gpu.hint": "モデルは安全で、平面図は動作しています。セーフグラフィックスで再起動して 3D を再度試してください。",
+ "empty.v3d_gpu.action": "セーフグラフィックスで再起動",
+ "empty.v3d_loading.title": "3D を作成中…",
+ "empty.v3d_loading.pct": "開いています… {pct} %",
+ "empty.plan_hidden.title": "この平面図ではすべての要素が非表示です",
+ "empty.plan_hidden.hint": "一時的な非表示または分離により表示されるものがありません。",
+ "empty.plan_hidden.action": "すべて表示",
+ "empty.plan_graphics.title": "ビューのグラフィックがすべてのカテゴリを非表示にしています",
+ "empty.plan_graphics.hint": "このビューのカテゴリ規則で表示するものがありません。",
+ "empty.plan_graphics.action": "ビューのグラフィックを開く",
+ "empty.plan_phase.title": "フェーズフィルタですべて非表示になっています",
+ "empty.plan_phase.hint": "このレベルにあるもののうち、このビューに表示されるフェーズに存在するものはありません。",
+ "empty.plan_phase.action": "フェーズを変更",
+ "empty.plan_level.title": "このレベルに要素がありません",
+ "empty.plan_level.hint": "このモデルの他のレベルには要素があります。",
+ "empty.plan_level.action": "要素のあるレベルへ移動"
+}

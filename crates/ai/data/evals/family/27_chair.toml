@@ -1,0 +1,7 @@
+brief = "Chair with four legs and a back."
+category = "furniture"
+must = param Width
+must = param Depth
+must = solids >= 6
+must = ports 0
+must = flex Width 360 562

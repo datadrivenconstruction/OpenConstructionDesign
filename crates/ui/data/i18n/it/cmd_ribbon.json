@@ -1,0 +1,23 @@
+{
+  "cmd.arch.room_sep.short": "Separatore",
+  "cmd.str.footing.short": "Plinto pilastro",
+  "cmd.str.strip_footing.short": "Fond. continua",
+  "cmd.str.analytical.short": "Analitico",
+  "cmd.mep.terminal.short": "Terminale aria",
+  "cmd.mod.isolate.short": "Isola",
+  "cmd.view.ui.short": "Interfaccia",
+  "cmd.mgr.params.short": "Parametri",
+  "cmd.ctx.wall.attach.short": "Collega",
+  "cmd.mass.unjoin.short": "Scollega",
+  "cmd.mod.unjoin.short": "Scollega",
+  "cmd.arch.void_extrusion.short": "Estr. vuoto",
+  "cmd.e3d.snap.short": "Snap 3D",
+  "cmd.mgr.open_big.short": "File grande…",
+  "cmd.site.edit_points.short": "Punti topo",
+  "cmd.view.reveal_3d.short": "Mostra cat.",
+  "cmd.help.check_update.short": "Aggiornamenti",
+  "cmd.ctx.floor.link_unlink.short": "Scollega bordi",
+  "cmd.ui.onboarding.short": "Configura…",
+  "cmd.mod.distribute.short": "Distribuisci",
+  "cmd.data.src_delta.short": "Modifiche foglio di calcolo XLSX…"
+}

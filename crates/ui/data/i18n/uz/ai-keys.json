@@ -1,0 +1,14 @@
+{
+ "ai_keys.header_is_key": "Kalitlar Kalit maydoniga yoziladi — sarlavhalar ochiq matnda saqlanadi",
+ "ai_keys.move": "Kalitga ko'chirish",
+ "ai_keys.remove_line": "Sarlavhalardan olib tashlash",
+ "ai_keys.save_blocked": "Saqlash uchun kalitni sarlavhalardan chiqaring",
+ "ai_keys.show": "Ko'rsatish",
+ "ai_keys.hide": "Yashirish",
+ "ai_keys.copy": "Nusxalash",
+ "ai_keys.tokens": "tokenlar",
+ "ai_keys.presets": "Oldindan sozlamalar",
+ "ai_keys.preset_k": "{n}k",
+ "ai_keys.preset_m": "{n}M",
+ "ai_keys.images_on": "Qo'llab-quvvatlanadi"
+}

@@ -1,0 +1,13 @@
+{
+ "ai.proposal.title": "Ajan önerisi",
+ "ai.proposal.meta": "{actor} · işlemler: {ops}",
+ "ai.proposal.apply.desc": "Tüm öneriyi tek adım olarak uygular; Ctrl+Z geri alır",
+ "ai.proposal.applying": "Uygulanıyor…",
+ "ai.proposal.applied": "Öneri uygulandı. Ctrl+Z geri alır.",
+ "ai.proposal.applied_resync": "Öneri uygulandı, ancak görünüm henüz güncellenmedi. Kendiliğinden yenilenecek; Ctrl+Z adımı geri alır.",
+ "ai.proposal.stale": "Öneri önizlendikten sonra model değişti. Ajandan öneriyi yeniden isteyin.",
+ "ai.proposal.toast.applied": "Öneri uygulandı. Ctrl+Z geri alır.",
+ "ai.proposal.toast.stale": "Önizlemeden sonra model değişti, bu yüzden hiçbir şey uygulanmadı. Yeniden önizleyin: ajandan öneriyi yeniden isteyin.",
+ "ai.proposal.toast.refused": "Öneri uygulanmadı: {reason}",
+ "ai.proposal.rejected": "Öneri reddedildi."
+}

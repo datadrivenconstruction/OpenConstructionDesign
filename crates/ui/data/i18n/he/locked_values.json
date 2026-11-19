@@ -1,0 +1,8 @@
+{
+ "cmd.props.param_lock": "נעילה או ביטול נעילה של ערך פרמטר",
+ "locked_values.kept": "נשמרו {n} ערכים נעולים",
+ "locked_values.locked": "“{name}” נעול: ייבוא מ-גיליון XLSX, עריכה המונית ו-AI שומרים עליו",
+ "locked_values.unlocked": "“{name}” שוחרר",
+ "locked_values.locked_tip": "נעול: ייבוא מ-גיליון XLSX, עריכה המונית ו-AI שומרים על ערך זה. לחצו לביטול נעילה  ·  Ctrl+L",
+ "locked_values.no_row": "הצביעו על שורת פרמטר בחלונית המאפיינים, ואז לחצו Ctrl+L"
+}

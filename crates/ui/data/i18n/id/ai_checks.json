@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "terukur {value}, batas {limit}",
+ "ai_checks.check.cap": "Menampilkan {shown} dari {total} temuan. Galat ditampilkan lebih dulu: perbaiki lalu jalankan lagi.",
+ "ai_checks.check.run_again": "Jalankan lagi",
+ "ai_checks.check.goto": "Pilih dan perbesar",
+ "ai_checks.check.never_title": "Belum diperiksa",
+ "ai_checks.check.never_hint": "Jalankan pemeriksaan dan temuannya muncul di sini.",
+ "ai_checks.check.sec.error": "Galat",
+ "ai_checks.check.sec.warning": "Peringatan",
+ "ai_checks.check.sec.info": "Catatan"
+}

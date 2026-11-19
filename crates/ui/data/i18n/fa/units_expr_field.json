@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "ورودی خالی است.",
+ "units.err.not_number": "در موقعیت {pos} عدد نیست.",
+ "units.err.unknown_unit": "واحد ناشناخته: {unit}.",
+ "units.err.non_positive": "طول باید بزرگ‌تر از صفر باشد.",
+ "units.err.too_large": "طول نباید از {max} m بیشتر باشد.",
+ "units.err.bad_angle": "زاویه باید عددی بر حسب درجه باشد.",
+ "units.err.unknown_name": "نام ناشناخته: {name}. مقدار حفظ شد.",
+ "units.err.cycle": "حلقه‌ی فرمول در {name}. مقدار حفظ شد.",
+ "units.err.bad_expr": "عبارت در موقعیت {pos} خوانده نشد. مقدار حفظ شد.",
+ "units.err.div_zero": "تقسیم بر صفر در موقعیت {pos}. مقدار حفظ شد.",
+ "units.err.invalid": "عدد نامعتبر است.",
+ "units.err.kept": "تغییر نکرد: {reason}"
+}

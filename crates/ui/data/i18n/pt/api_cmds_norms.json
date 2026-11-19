@@ -1,0 +1,8 @@
+{
+ "api.cmd.norms_lookup": "Encontrar as regras do pacote de normas do projeto por tema, elemento ou código",
+ "api.cmd.norms_check": "Verificar o modelo contra o pacote de normas do projeto e listar as constatações",
+ "api.cmd.norms_programme": "Programa típico de ambientes do país do projeto para um tipo de edificação",
+ "api.cmd.select_similar": "Selecionar todos os elementos iguais a este: mesmo tipo ou categoria, neste nível ou em todo o projeto",
+ "api.cmd.create_drawing_set": "Criar um conjunto de desenhos para impressão: plantas, cortes, alçados, tabelas e blocos de título",
+ "api.cmd.deliver_project": "Do briefing aos arquivos em uma única etapa: o projeto e o seu conjunto de desenhos, exportados após Aplicar"
+}

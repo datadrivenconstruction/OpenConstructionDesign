@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "Prazan unos.",
+ "units.err.not_number": "Nije broj na položaju {pos}.",
+ "units.err.unknown_unit": "Nepoznata mjerna jedinica: {unit}.",
+ "units.err.non_positive": "Duljina mora biti veća od nule.",
+ "units.err.too_large": "Duljina ne smije biti veća od {max} m.",
+ "units.err.bad_angle": "Kut je broj stupnjeva.",
+ "units.err.unknown_name": "Nepoznat naziv: {name}. Vrijednost je zadržana.",
+ "units.err.cycle": "Petlja formule kod {name}. Vrijednost je zadržana.",
+ "units.err.bad_expr": "Izraz na položaju {pos} nije moguće pročitati. Vrijednost je zadržana.",
+ "units.err.div_zero": "Dijeljenje nulom na položaju {pos}. Vrijednost je zadržana.",
+ "units.err.invalid": "Neispravan broj.",
+ "units.err.kept": "Nije promijenjeno: {reason}"
+}

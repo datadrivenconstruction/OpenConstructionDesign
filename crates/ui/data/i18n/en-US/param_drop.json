@@ -1,0 +1,8 @@
+{
+ "param_drop.title": "Remove parameter values?",
+ "param_drop.intro": "{name} is no longer bound to these categories:",
+ "param_drop.line": "{category}: {values} will be removed",
+ "param_drop.undo": "One Ctrl+Z brings them all back.",
+ "param_drop.confirm": "Remove values and save",
+ "param_drop.cancel": "Cancel"
+}

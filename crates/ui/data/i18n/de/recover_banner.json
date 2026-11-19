@@ -1,0 +1,7 @@
+{
+ "recover.untitled_note": "Dieses Projekt wurde nie gespeichert",
+ "recover.file_missing": "Die Projektdatei wurde nicht gefunden",
+ "recover.banner": "Nicht gespeicherte Arbeit aus einer früheren Sitzung für {name} gefunden",
+ "recover.banner_review": "Prüfen",
+ "recover.later_archived": "{n}-mal verschoben: Sicherungen ins Archiv verschoben"
+}

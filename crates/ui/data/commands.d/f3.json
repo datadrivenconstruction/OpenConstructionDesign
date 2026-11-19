@@ -1,0 +1,163 @@
+[
+ {
+  "id": "edit.paste_levels",
+  "dialog": true,
+  "icon": "paste-levels",
+  "mnemonic": "PT",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "modify"
+ },
+ {
+  "id": "mod.unjoin",
+  "once": true,
+  "icon": "unjoin-geom",
+  "mnemonic": "UJ",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "modify",
+  "context": [
+   "*"
+  ]
+ },
+ {
+  "id": "mod.switch_join",
+  "icon": "switch-join",
+  "mnemonic": "JS",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "modify",
+  "context": [
+   "*"
+  ]
+ },
+ {
+  "id": "mod.group_select",
+  "icon": "group-select",
+  "mnemonic": "GS",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "modify",
+  "context": [
+   "*"
+  ]
+ },
+ {
+  "id": "mod.group_edit",
+  "icon": "group-edit",
+  "mnemonic": "GE",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "modify",
+  "context": [
+   "*"
+  ]
+ },
+ {
+  "id": "mod.group_add",
+  "icon": "group-add",
+  "mnemonic": "GA",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "modify"
+ },
+ {
+  "id": "mod.group_remove",
+  "once": true,
+  "icon": "group-remove",
+  "mnemonic": "GX",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "modify"
+ },
+ {
+  "id": "mod.group_finish",
+  "icon": "group-finish",
+  "mnemonic": "GF",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "modify"
+ },
+ {
+  "id": "mod.group_place",
+  "dialog": true,
+  "icon": "group-place",
+  "mnemonic": "GL",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "modify"
+ },
+ {
+  "id": "mod.group_delete",
+  "dialog": true,
+  "once": true,
+  "icon": "group-delete",
+  "mnemonic": "DG",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "modify"
+ },
+ {
+  "id": "mod.group_cancel",
+  "icon": "group-cancel",
+  "mnemonic": "GQ",
+  "shortcuts": [],
+  "tab": "modify",
+  "surfaces": [
+   "R",
+   "C"
+  ],
+  "stage": "M3",
+  "group": "modify"
+ }
+]

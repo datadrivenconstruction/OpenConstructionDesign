@@ -1,0 +1,6 @@
+{
+ "project_seed.seed_level": "1-деңгей",
+ "project_seed.seed_wall_partition": "Бөлгіш 100",
+ "project_seed.seed_wall_masonry": "Қалау 200",
+ "project_seed.seed_wall_exterior": "Сыртқы 380"
+}

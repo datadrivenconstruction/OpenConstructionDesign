@@ -1,0 +1,14 @@
+{
+ "xlsx_relink.title": "Povezana radna knjiga je premještena ili preimenovana",
+ "xlsx_relink.body": "Radna knjiga „{file}“ više nije u mapi {folder}. Izmjene upisane u nju vraćaju se tek nakon ponovnog povezivanja.",
+ "xlsx_relink.found_one": "Pronađena je „{file}“ u {folder}: isti projekt i isti izvoz. Povezati?",
+ "xlsx_relink.found_many": "Pronađeno je {n} radnih knjiga ovog projekta i ovog izvoza. Odaberite onu za povezivanje:",
+ "xlsx_relink.found_none": "Uz nju nije pronađena nijedna radna knjiga ovog izvoza. Pronađite je ili izvezite novu radnu knjigu.",
+ "xlsx_relink.link": "Poveži „{file}“",
+ "xlsx_relink.find": "Pronađi je…",
+ "xlsx_relink.find_title": "Pronađi povezanu radnu knjigu",
+ "xlsx_relink.export_new": "Izvezi novu radnu knjigu",
+ "xlsx_relink.close": "Zatvori",
+ "xlsx_relink.gone": "Radna knjiga „{file}“ više nije u svojoj mapi. Izmjene upisane u nju vraćaju se tek nakon ponovnog povezivanja.",
+ "xlsx_relink.found_one_short": "Pronađena je „{file}“: isti projekt i isti izvoz. Povezati?"
+}

@@ -1,0 +1,12 @@
+{
+ "curtain_wall.cw.issue.slab": "फ़्लोर {id}: {e}",
+ "curtain_wall.cw.issue.body": "बॉडी {id}: {e}",
+ "curtain_wall.cw.added": "कर्टेन वॉल जोड़ी गईं: {n}",
+ "curtain_wall.cw.add_failed": "कर्टेन वॉल नहीं बनी: {e}",
+ "curtain_wall.cw.edited_warn": "कर्टेन वॉल #{id} बदली गई: {w}",
+ "curtain_wall.cw.edited": "कर्टेन वॉल #{id} बदली गई",
+ "curtain_wall.cw.not_changed": "नहीं बदला: {e}",
+ "curtain_wall.cw.room_edited": "Room #{id} बदला गया",
+ "curtain_wall.cw.slope_range": "नहीं बदला: ढलान सीमा से बाहर",
+ "curtain_wall.cw.slope_set": "फ़्लोर #{id}: ढलान {pct}"
+}

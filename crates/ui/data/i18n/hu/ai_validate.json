@@ -1,0 +1,14 @@
+{
+ "ai.issue.integrity": "Sérültségi probléma: {0} {1}: {2}",
+ "ai.issue.opening_outside": "A nyílás nem fér el a falban: {0}",
+ "ai.issue.opening_overlap": "A nyílás átfedésben van a(z) {0} nyílással",
+ "ai.issue.wall_warning": "Fal: {0}",
+ "ai.issue.cut_warning": "Vágás: {0}",
+ "ai.issue.room_open": "A helyiség nincs lezárva",
+ "ai.issue.material_unknown": "Nincs „{0}” nevű anyag a projektben: az alkalmazás alapértelmezett tulajdonságokkal hozna létre újat",
+ "ai.issue.material_suggest": "Nincs „{0}” nevű anyag a projektben: az alkalmazás új anyagot hozna létre. A(z) „{1}” anyagot értette?",
+ "ai.issue.conflict": "Ez a tétel nem futtatható: {0}",
+ "ai.issue.too_large": "{0} elem változna, ami meghaladja a(z) {1} korlátot. Engedély szükséges",
+ "ai.issue.truncated": "A módosítások listája {0} sornál megállt: a terv nagyobb, mint amit a kártya meg tud jeleníteni. Engedély szükséges",
+ "ai.issue.replan_failed": "A tervet nem lehetett újraszámítani. A modell új másolata készül"
+}

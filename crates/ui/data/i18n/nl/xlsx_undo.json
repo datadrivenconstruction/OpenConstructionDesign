@@ -1,0 +1,6 @@
+{
+ "cmd.xlsx.undo_apply": "Laatste spreadsheet-toepassing ongedaan maken",
+ "xlsx_undo.later": "Niet ongedaan gemaakt: het model is na deze spreadsheet-toepassing bewerkt. Gebruik Ctrl+Z stap voor stap of het paneel Geschiedenis.",
+ "xlsx_undo.gone": "Niets om ongedaan te maken: deze spreadsheet-toepassing is al ongedaan gemaakt.",
+ "xlsx_undo.busy": "Rond eerst de huidige tekening af of annuleer die, en maak daarna de spreadsheet-toepassing ongedaan."
+}

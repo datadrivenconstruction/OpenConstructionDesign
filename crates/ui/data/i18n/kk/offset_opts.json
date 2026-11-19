@@ -1,0 +1,7 @@
+{
+ "offset_opts.dist_positive": "Ығысу қашықтығы нөлден үлкен болуы керек; жақ курсорды ілеседі",
+ "offset_opts.count_bad": "{min} мен {max} аралығындағы бүтін сан",
+ "offset_opts.done_tip": "Таңдауды аяқтап, құралды бастау",
+ "offset_opts.iso.apply_tip": "Осы көріністе уақытша жасыруды тұрақты ету",
+ "offset_opts.iso.exit": "Уақытша режимнен шығу"
+}

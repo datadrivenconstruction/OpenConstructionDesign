@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "Järjekorras käimasoleva töö taga: {n}",
+ "import_queue.queue_full": "Järjekord on täis, {n} faili ei lisatud",
+ "import_queue.changed": "{name} uuendati pärast selle projekti tegemist. Avati eelmine projekt.",
+ "import_queue.import_again": "Impordi uuesti",
+ "import_queue.kept": "Valmis import jäetakse alles",
+ "import_queue.open_it": "Ava see",
+ "import_queue.sum.head": "import: {editable} muudetavat (seinad {walls}, avad {open}, põrandad {slabs}, ruumid {rooms}, muud {other}), {meshes} võrkudena",
+ "import_queue.sum.unchanged": ", muutmata {n}",
+ "import_queue.sum.updated": ", uuendatud {n}",
+ "import_queue.sum.missing": ", lähtefailis puudub {n} (alles jäetud)",
+ "import_queue.sum.skipped": ", vahele jäetud {n}",
+ "import_queue.sum.warnings": ", hoiatusi {n}",
+ "import_queue.import_failed": "import ebaõnnestus: {e}"
+}

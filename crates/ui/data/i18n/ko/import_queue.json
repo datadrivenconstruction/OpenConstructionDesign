@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "실행 중인 작업 뒤 대기: {n}",
+ "import_queue.queue_full": "대기열이 가득 차서 파일 {n}개가 추가되지 않았습니다",
+ "import_queue.changed": "{name}이(가) 이 프로젝트를 만든 뒤 업데이트되었습니다. 이전 프로젝트를 열었습니다.",
+ "import_queue.import_again": "다시 가져오기",
+ "import_queue.kept": "완료된 가져오기는 보관됩니다",
+ "import_queue.open_it": "열기",
+ "import_queue.sum.head": "가져오기: 편집 가능 {editable} (벽 {walls}, 개구부 {open}, 바닥 {slabs}, 룸 {rooms}, 기타 {other}), 메시 {meshes}",
+ "import_queue.sum.unchanged": ", 변경 없음 {n}",
+ "import_queue.sum.updated": ", 갱신 {n}",
+ "import_queue.sum.missing": ", 원본에 없음 {n} (유지됨)",
+ "import_queue.sum.skipped": ", 건너뜀 {n}",
+ "import_queue.sum.warnings": ", 경고 {n}",
+ "import_queue.import_failed": "가져오기 실패: {e}"
+}

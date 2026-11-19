@@ -1,0 +1,6 @@
+{
+ "pair_input.pair_hint": "Kaks väärtust eraldatakse semikoolonilt: @1000;500",
+ "pair_input.old_pair": "Kaks täisarvu eraldav koma ei moodusta enam paari: sisesta 6000;4000 kahe väärtuse jaoks või 6000,5 kümnendarvu jaoks",
+ "pair_input.op.bad_length": "Pole pikkus: {text} ({why}). Midagi ei muudetud",
+ "pair_input.op.bad_count": "Arvu {text} ei võetud: täisarv vahemikus {min} kuni {max}"
+}

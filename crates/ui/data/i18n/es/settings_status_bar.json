@@ -1,0 +1,10 @@
+{
+ "cmd.view.axes_full": "Ejes completos",
+ "cmd.view.axes_full.desc": "Muestra los ejes X e Y como líneas completas en la planta. Mantenga F9 pulsado para mostrarlos solo mientras lo hace.",
+ "settings.axes_full": "Ejes",
+ "settings.axes_full_desc": "Ejes de planta como líneas completas en la hoja. Mantenga F9 para una vista rápida.",
+ "settings.axes_full_on": "Mostrar ejes completos",
+ "plan.hud.axes_tip": "Mantenga {key} para mostrar los ejes completos",
+ "status.axes_full.on": "Ejes completos activados",
+ "status.axes_full.off": "Ejes completos desactivados"
+}

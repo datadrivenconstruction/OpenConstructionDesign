@@ -1,0 +1,16 @@
+{
+ "cmd.drawing.to_detail": "도면을 상세로",
+ "cmd.drawing.to_detail.desc": "선택한 도면 요소 또는 이 층의 도면 전체를 평면의 상세 선, 텍스트 메모, 영역으로 바꿉니다. 원래 도면은 그대로 둡니다.",
+ "detail_items.st.no_drawing": "이 층에는 도면이 없습니다",
+ "detail_items.st.nothing": "변환할 항목이 없습니다: 표시된 레이어에 선, 호, 텍스트, 채우기가 없습니다",
+ "detail_items.st.done": "상세 항목 추가됨: 선 {lines}, 텍스트 {texts}, 영역 {regions}",
+ "detail_items.st.failed": "상세 항목을 추가하지 못했습니다: {e}",
+ "detail_items.st.warn": "상세 항목은 추가됐지만 뷰를 새로 고치지 못했습니다(선 {lines}, 텍스트 {texts}, 영역 {regions}): {e}. 실행 취소로 제거할 수 있습니다.",
+ "detail_items.st.bad_view": "상세 항목은 평면 또는 단면 뷰에서만 만들 수 있습니다",
+ "detail_items.st.no_transform": "이 뷰에는 도면에 쓸 수 있는 좌표계가 없습니다. 아무것도 추가되지 않았습니다",
+ "drafting_tools.free.plan_only": "이 명령은 평면 요소에서 작동합니다. 평면을 여세요",
+ "drafting_tools.free.zero": "두 점이 겹칩니다. 아무것도 추가되지 않았습니다",
+ "drafting_tools.free.select_first": "먼저 배분할 이 뷰의 항목을 선택하세요",
+ "drafting_tools.free.pick_item": "이 뷰의 항목을 클릭해 태그를 지정하세요",
+ "drafting_tools.free.dim_kind": "제도 뷰에서는 선형 치수만 사용할 수 있습니다"
+}

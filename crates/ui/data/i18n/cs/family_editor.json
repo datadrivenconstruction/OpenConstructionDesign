@@ -1,0 +1,13 @@
+{
+ "family_editor.new_family": "Nová rodina",
+ "family_editor.open_tip": "Otevřít rodinu nebo koncept",
+ "family_editor.close_named": "Zavřít {name}",
+ "family_editor.unsaved": "Neuložené změny",
+ "family_editor.search": "Hledat",
+ "family_editor.nothing": "Nic nenalezeno",
+ "family_editor.sec_families": "Rodiny projektu",
+ "family_editor.sec_drafts": "Koncepty",
+ "family_editor.cap_category": "Kategorie",
+ "family_editor.cap_host": "Hostitel",
+ "family_editor.cap_type": "Typ náhledu"
+}

@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "الشبكات المستوردة",
+ "mat_mesh.mesh.none_selected": "حدّد الشبكات المستوردة في العرض ثلاثي الأبعاد لإعطائها هذه المادة.",
+ "mat_mesh.mesh.current": "أول شبكة محددة: {material}",
+ "mat_mesh.mesh.current_none": "أول شبكة محددة ليس لها مادة.",
+ "mat_mesh.mesh.assign": "تعيين لـ {n} محدد",
+ "mat_mesh.mesh.assign_tip": "يعرض النمط الواقعي ملمس هذه المادة على الشبكات المحددة",
+ "mat_mesh.mesh.assign_cat": "تعيين للفئة {category}",
+ "mat_mesh.mesh.assign_cat_tip": "كل شبكة مستوردة من تلك الفئة بدون مادة خاصة بها",
+ "mat_mesh.mesh.clear": "مسح المحدد",
+ "mat_mesh.mesh.clear_tip": "تعود الشبكات المحددة إلى مادة فئتها أو إلى اللون العادي",
+ "mat_mesh.mesh.clear_cat": "مسح الفئة"
+}

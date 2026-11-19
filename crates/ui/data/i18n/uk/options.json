@@ -1,0 +1,15 @@
+{
+ "fe.add_why_empty": "Спочатку введіть назву параметра",
+ "fe.add_why_exists": "Параметр із такою назвою вже є; щоб змінити його, скористайтеся «Застосувати»",
+ "fe.apply_why_missing": "Немає параметра з такою назвою; введіть назву наявного",
+ "fe.nochange": "Змін ще немає",
+ "options.accept_more": "Прийняти…",
+ "options.delete_more": "Видалити…",
+ "options.empty_title": "Наборів варіантів ще немає",
+ "options.more": "Інші дії: {name}",
+ "options.primary_named": "Основний варіант: {name}",
+ "options.primary_tip": "Зробити це основним варіантом набору",
+ "options.select_first": "Спочатку виберіть елементи в моделі",
+ "options.show_3d": "Показати в 3D: {name}",
+ "options.show_plan": "Показати в плані: {name}"
+}

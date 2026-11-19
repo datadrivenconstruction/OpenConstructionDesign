@@ -1,0 +1,10 @@
+{
+ "xlsx_dup.dup_undo": "Undo decision",
+ "xlsx_dup.dup_undo_tip": "Rows turned into new elements ({n}) are read with their id again",
+ "xlsx_dup.dup_new": "Create edited copies as new elements",
+ "xlsx_dup.dup_new_tip": "Rows {rows} become new elements with their values; element #{id} keeps its values (one undo step with the rest)",
+ "xl.msg.dup_same": "duplicate id {}: same values as row {}; row ignored",
+ "xl.msg.dup_unchanged": "duplicate id {}: unchanged copy of the exported row; row ignored",
+ "xl.msg.dup_conflict": "id {} is on rows {} with different values; nothing applied for this id",
+ "xl.msg.dup_conflict_keep": "id {} is on rows {} with different values; nothing applied for this id — keep one row"
+}

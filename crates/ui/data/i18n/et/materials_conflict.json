@@ -1,0 +1,5 @@
+{
+ "materials.mat.conflict": "See materjal muudeti mudelis (tagasivõtmine või teine aken), kui kaardil olid muudatused. Sinu muudatused jäetakse alles.",
+ "materials.mat.keep": "Säilita minu muudatused",
+ "materials.mat.reload": "Laadi uuesti"
+}

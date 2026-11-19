@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "Импортлосон торууд",
+ "mat_mesh.mesh.none_selected": "Энэ материалыг өгөхийн тулд 3D харагдацад импортлосон торуудыг сонгоно уу.",
+ "mat_mesh.mesh.current": "Эхний сонгосон тор: {material}",
+ "mat_mesh.mesh.current_none": "Эхний сонгосон торт материал байхгүй.",
+ "mat_mesh.mesh.assign": "Сонгосон {n}-д оноох",
+ "mat_mesh.mesh.assign_tip": "Бодит хэв маяг сонгосон торууд дээр энэ материалын бүтцийг харуулна",
+ "mat_mesh.mesh.assign_cat": "{category} ангилалд оноох",
+ "mat_mesh.mesh.assign_cat_tip": "Өөрийн материалгүй тухайн ангиллын бүх импортлосон тор",
+ "mat_mesh.mesh.clear": "Сонгосныг цэвэрлэх",
+ "mat_mesh.mesh.clear_tip": "Сонгосон торууд ангиллын материал эсвэл энгийн өнгөнд буцна",
+ "mat_mesh.mesh.clear_cat": "Ангиллыг цэвэрлэх"
+}

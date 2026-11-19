@@ -1,0 +1,14 @@
+{
+ "cmd.arch.wall.tile": "ผนัง",
+ "cmd.arch.door.tile": "ประตู",
+ "cmd.arch.window.tile": "หน้าต่าง",
+ "cmd.arch.floor.tile": "พื้น",
+ "cmd.mod.move.tile": "ย้าย",
+ "cmd.mod.copy.tile": "คัดลอก",
+ "cmd.mod.rotate.tile": "หมุน",
+ "cmd.mod.mirror.tile": "สะท้อน",
+ "cmd.mod.trim.tile": "ตัด",
+ "cmd.mod.delete.tile": "ลบ",
+ "cmd.ann.dim.tile": "ขนาด",
+ "cmd.ann.text.tile": "ข้อความ"
+}

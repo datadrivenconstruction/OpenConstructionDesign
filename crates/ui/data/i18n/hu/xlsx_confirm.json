@@ -1,0 +1,19 @@
+{
+ "xlsx_confirm.chip": "megerősítésre vár",
+ "xlsx_confirm.section": "Azonosító nélküli sorok, amelyek névvel vagy számmal párosítva elemekhez kerültek",
+ "xlsx_confirm.tag": "névvel párosítva",
+ "xlsx_confirm.tag_accepted": "párosítás elfogadva",
+ "xlsx_confirm.tag_rejected": "új elemet hoz létre",
+ "xlsx_confirm.kind_room": "helyiség",
+ "xlsx_confirm.kind_curtain_wall": "függönyfal",
+ "xlsx_confirm.row_line": "{kind} #{id}, kulcs: „{key}”",
+ "xlsx_confirm.accept": "Elfogadás",
+ "xlsx_confirm.accept_tip": "Alkalmazza ezt a sort a párosított elemre (egy visszavonási lépés a többivel együtt)",
+ "xlsx_confirm.reject": "Új létrehozása",
+ "xlsx_confirm.reject_tip": "Nincs párosítás: ez a sor új elemet hoz létre",
+ "xlsx_confirm.decide_first": "Előbb fogadd el vagy utasítsd el a névvel párosított sorokat.",
+ "xl.msg.key_match_many": "a kulcs {} elemnek felel meg; nincs párosítva, a sor új elemet hoz létre",
+ "xl.msg.key_match_taken": "a kulcs egy másik sor által használt elemnek felel meg; nincs párosítva, a sor új elemet hoz létre",
+ "xl.msg.key_match_kept": "megtartva: a párosítás elutasítva, a sor új elemet hoz létre",
+ "xl.msg.key_match_undecided": "a névvel párosított sorok döntésre várnak"
+}

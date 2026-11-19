@@ -1,0 +1,4 @@
+{
+ "room_watch.room.dup": "房间 {room} 位于房间 {other} 的范围内：面积和体积仅计入房间 {other}",
+ "ai.issue.room_dup": "该房间位于房间 {0} 的范围内：其面积计入该房间"
+}

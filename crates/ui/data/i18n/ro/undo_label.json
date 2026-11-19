@@ -1,0 +1,6 @@
+{
+ "undo_label.undo_what": "Anulare: {what}",
+ "undo_label.redo_what": "Refacere: {what}",
+ "undo_label.undo_none": "Nimic de anulat",
+ "undo_label.redo_none": "Nimic de refăcut"
+}

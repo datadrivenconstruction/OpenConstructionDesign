@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "Jednostki",
+ "topo_units.unit": "Jednostki w pliku",
+ "topo_units.unit.m": "m",
+ "topo_units.unit.cm": "cm",
+ "topo_units.unit.mm": "mm",
+ "topo_units.unit.ft": "ft",
+ "topo_units.unit.usft": "stopy US survey",
+ "topo_units.unit.in": "in",
+ "topo_units.unit.from_file": "Plik określa swoje jednostki: {unit}",
+ "topo_units.unit.suggested": "Plik nie określa jednostek. Zaproponowano na podstawie rozmiaru: {unit} — sprawdź wynik poniżej",
+ "topo_units.extent": "Wynik w jednostkach projektu: {x} × {y} {u} w planie, zakres wysokości {z} {u}",
+ "topo_units.extent.none": "Wynik: nic do zaimportowania przy tych wyborach",
+ "topo_units.extent.check": "To nie wygląda na działkę: sprawdź jednostki"
+}

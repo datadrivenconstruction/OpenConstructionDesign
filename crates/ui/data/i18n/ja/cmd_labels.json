@@ -1,0 +1,14 @@
+{
+ "cmd.arch.wall.tile": "壁",
+ "cmd.arch.door.tile": "ドア",
+ "cmd.arch.window.tile": "窓",
+ "cmd.arch.floor.tile": "床",
+ "cmd.mod.move.tile": "移動",
+ "cmd.mod.copy.tile": "コピー",
+ "cmd.mod.rotate.tile": "回転",
+ "cmd.mod.mirror.tile": "鏡像",
+ "cmd.mod.trim.tile": "トリム",
+ "cmd.mod.delete.tile": "削除",
+ "cmd.ann.dim.tile": "寸法",
+ "cmd.ann.text.tile": "テキスト"
+}

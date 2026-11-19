@@ -1,0 +1,6 @@
+{
+ "sched_import.no_key": "Buku kerja ini tidak punya catatan ekspor (ekspor lama): sel yang diubah di model setelah ekspor itu dapat tertimpa. Periksa sel yang diubah sebelum Terapkan.",
+ "sched_import.n_kept": "Diubah di model setelah ekspor, dipertahankan: {n}",
+ "sched_import.n_conflict": "Diubah di buku kerja dan model, tidak diterapkan: {n}",
+ "sched_import.why_conflict": "diubah di model setelah ekspor (sekarang {model}), tidak diterapkan"
+}

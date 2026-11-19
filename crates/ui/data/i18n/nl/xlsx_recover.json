@@ -1,0 +1,16 @@
+{
+ "xlsx_recover.title": "Een export naar het gekoppelde werkboek is onderbroken",
+ "xlsx_recover.both": "De export stopte tussen het opzij zetten van het vorige werkboek en het plaatsen van het nieuwe. Er gaat niets verloren: het nieuwe werkboek is compleet op {part}, het vorige is bewaard op {bak}.",
+ "xlsx_recover.part_only": "De export stopte voordat het nieuwe werkboek op zijn plaats werd gezet. Het is compleet op {part}.",
+ "xlsx_recover.bak_only": "De export stopte voordat het nieuwe werkboek klaar was. Het vorige werkboek is bewaard op {bak}.",
+ "xlsx_recover.finish": "De onderbroken export afronden",
+ "xlsx_recover.restore": "Het vorige werkboek herstellen",
+ "xlsx_recover.finished": "De onderbroken export is afgerond: het nieuwe werkboek staat op zijn plaats.",
+ "xlsx_recover.finished_kept": "De onderbroken export is afgerond: het nieuwe werkboek staat op zijn plaats, het vorige is bewaard op {bak}.",
+ "xlsx_recover.restored": "Het vorige werkboek staat weer op zijn plaats.",
+ "xlsx_recover.restore_failed": "Het vorige werkboek kon niet worden teruggezet ({err}). Het is bewaard op {path}.",
+ "xlsx_recover.not_restored": "Het nieuwe werkboek kon niet op zijn plaats worden gezet en het vorige kon niet worden teruggezet. Er gaat niets verloren: het vorige werkboek is bewaard op {path}; Synchroniseren biedt aan om af te ronden of te herstellen.",
+ "xlsx_recover.finish_failed": "Het nieuwe werkboek kon niet op zijn plaats worden gezet ({err}). Het blijft op {path}.",
+ "xlsx_recover.dest_back": "Er staat weer een werkboek op {path}: er is niets verplaatst.",
+ "xlsx_recover.nothing": "Er is niets van de onderbroken export om te verplaatsen."
+}

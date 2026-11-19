@@ -1,0 +1,16 @@
+{
+ "save_fail.save_fail.title": "Projektia ei tallennettu",
+ "save_fail.save_fail.kept": "Muutoksesi ovat yhä avoinna täällä. Mitään ei menetetä, kun editori pysyy auki.",
+ "save_fail.save_fail.details": "Tiedot",
+ "save_fail.save_fail.copy": "Kopioi",
+ "save_fail.save_fail.save_as": "Tallenna nimellä…",
+ "save_fail.save_fail.retry": "Yritä uudelleen",
+ "save_fail.save_fail.close": "Sulje",
+ "save_fail.cause.full": "Levy on täynnä. Vapauta tilaa tai tallenna projekti toiselle levylle.",
+ "save_fail.cause.denied": "Tämä kansio tai tiedosto on vain luettavissa, tai sinulla ei ole oikeutta kirjoittaa tänne. Valitse toinen kansio.",
+ "save_fail.cause.locked": "Tiedosto on auki toisessa ohjelmassa. Sulje se siellä ja paina Yritä uudelleen.",
+ "save_fail.cause.missing": "Kansiota ei enää ole. Valitse toinen kansio tai palauta se ja paina Yritä uudelleen.",
+ "save_fail.cause.offline": "Asema tai verkkokansio ei ole käytettävissä. Yhdistä se uudelleen ja paina Yritä uudelleen, tai tallenna muualle.",
+ "save_fail.cause.too_long": "Tiedostopolku on liian pitkä. Valitse lyhyempi kansio tai tiedostonimi.",
+ "save_fail.cause.other": "Tiedostoa ei voitu kirjoittaa: {detail}"
+}

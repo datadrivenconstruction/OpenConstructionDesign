@@ -1,0 +1,690 @@
+{
+ "rules": [
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.175
+   },
+   "unit": "m",
+   "value": 0.175,
+   "text": {
+    "en": "Residential stair riser at most 0.175 m",
+    "ru": "Подъём ступени жилой лестницы не более 0.175 м"
+   },
+   "source": {
+    "doc": "wt2002",
+    "clause": "par. 68(1) table, multi-family / public-use row",
+    "url": "https://eli.gov.pl/api/acts/DU/2022/1225/text/O/D20221225.pdf",
+    "edition": "2022 consolidated text (Dz.U. 2022 poz. 1225)"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "pl.res.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.25
+   },
+   "unit": "m",
+   "value": 0.25,
+   "text": {
+    "en": "Residential stair tread at least 0.25 m",
+    "ru": "Проступь жилой лестницы не менее 0.25 м"
+   },
+   "source": {
+    "doc": "wt2002",
+    "clause": "par. 68 (multi-family stairs)",
+    "note": "no explicit tread minimum in par. 68 table; tread follows from 2h+s = 0.60-0.65 m"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "pl.res.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 1.2
+   },
+   "unit": "m",
+   "value": 1.2,
+   "text": {
+    "en": "Stair flight width at least 1.2 m (apartment/apartment_section)",
+    "ru": "Ширина марша не менее 1.2 м (apartment/apartment_section)"
+   },
+   "source": {
+    "doc": "wt2002",
+    "clause": "par. 68(1) table, multi-family / public-use row",
+    "url": "https://eli.gov.pl/api/acts/DU/2022/1225/text/O/D20221225.pdf",
+    "edition": "2022 consolidated text (Dz.U. 2022 poz. 1225)"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "pl.res.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 0.8
+   },
+   "unit": "m",
+   "value": 0.8,
+   "text": {
+    "en": "Stair flight width at least 0.8 m (house)",
+    "ru": "Ширина марша не менее 0.8 м (house)"
+   },
+   "source": {
+    "doc": "wt2002",
+    "clause": "par. 68(1) table, single-family row",
+    "url": "https://eli.gov.pl/api/acts/DU/2022/1225/text/O/D20221225.pdf",
+    "edition": "2022 consolidated text (Dz.U. 2022 poz. 1225)"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "pl.stair.sw_house"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "riser",
+    "max": 0.175
+   },
+   "unit": "m",
+   "value": 0.175,
+   "text": {
+    "en": "Office stair riser at most 0.175 m",
+    "ru": "Подъём ступени офисной лестницы не более 0.175 м"
+   },
+   "source": {
+    "doc": "wt2002",
+    "clause": "par. 68(1) table, multi-family / public-use row",
+    "url": "https://eli.gov.pl/api/acts/DU/2022/1225/text/O/D20221225.pdf",
+    "edition": "2022 consolidated text (Dz.U. 2022 poz. 1225)"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "pl.off.riser"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "tread",
+    "min": 0.3
+   },
+   "unit": "m",
+   "value": 0.3,
+   "text": {
+    "en": "Office stair tread at least 0.3 m",
+    "ru": "Проступь офисной лестницы не менее 0.3 м"
+   },
+   "source": {
+    "doc": "wt2002",
+    "clause": "par. 68 (public-use buildings)",
+    "note": "no explicit tread minimum in par. 68 table; tread follows from 2h+s = 0.60-0.65 m"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "pl.off.tread"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "width",
+    "min": 1.2
+   },
+   "unit": "m",
+   "value": 1.2,
+   "text": {
+    "en": "Stair flight width at least 1.2 m (office)",
+    "ru": "Ширина марша не менее 1.2 м (office)"
+   },
+   "source": {
+    "doc": "wt2002",
+    "clause": "par. 68(1) table, multi-family / public-use row",
+    "url": "https://eli.gov.pl/api/acts/DU/2022/1225/text/O/D20221225.pdf",
+    "edition": "2022 consolidated text (Dz.U. 2022 poz. 1225)"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "pl.off.sw"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {},
+   "check": {
+    "kind": "formula",
+    "cat": "stair",
+    "expr": "2*riser+tread",
+    "min": 0.6,
+    "max": 0.65
+   },
+   "unit": "m",
+   "value": [
+    0.6,
+    0.65
+   ],
+   "text": {
+    "en": "Step rule: 2 risers + tread from 0.6 to 0.65 m",
+    "ru": "Шаг: 2 подъёма + проступь от 0.6 до 0.65 м"
+   },
+   "source": {
+    "doc": "wt2002",
+    "clause": "par. 68(4) 2h+s = 0.60-0.65 m",
+    "url": "https://eli.gov.pl/api/acts/DU/2022/1225/text/O/D20221225.pdf",
+    "edition": "2022 consolidated text (Dz.U. 2022 poz. 1225)"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "pl.step"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "width",
+    "min": 1.2
+   },
+   "unit": "m",
+   "value": 1.2,
+   "text": {
+    "en": "Corridor clear width at least 1.2 m",
+    "ru": "Ширина коридора не менее 1.2 м"
+   },
+   "source": {
+    "doc": "wt2002",
+    "clause": "par. 95(2) corridors inside a dwelling",
+    "url": "https://eli.gov.pl/api/acts/DU/2022/1225/text/O/D20221225.pdf",
+    "edition": "2022 consolidated text (Dz.U. 2022 poz. 1225)"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "pl.res.corr"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "width",
+    "min": 1.4
+   },
+   "unit": "m",
+   "value": 1.4,
+   "text": {
+    "en": "Corridor clear width at least 1.4 m",
+    "ru": "Ширина коридора не менее 1.4 м"
+   },
+   "source": {
+    "doc": "wt2002",
+    "clause": "par. 91 circulation, public-use buildings",
+    "note": "no 1.4 m corridor width found in the 2022 consolidated text"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "pl.off.corr"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section",
+     "office"
+    ],
+    "room_kind": [
+     "corridor"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "width",
+    "min": 1.5
+   },
+   "unit": "m",
+   "value": 1.5,
+   "text": {
+    "en": "Accessible-route corridor clear width at least 1.5 m",
+    "ru": "Ширина коридора на доступном маршруте не менее 1.5 м"
+   },
+   "source": {
+    "doc": "wt2002",
+    "clause": "par. 86 accessible routes",
+    "note": "par. 86 gives a 1.5 x 1.5 m manoeuvre space, not a corridor width"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "pl.acc.corr"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.5
+   },
+   "unit": "m",
+   "value": 2.5,
+   "text": {
+    "en": "Clear height of habitable rooms at least 2.5 m",
+    "ru": "Высота жилых помещений не менее 2.5 м"
+   },
+   "source": {
+    "doc": "wt2002",
+    "clause": "par. 72(1) table, rooms in residential buildings",
+    "url": "https://eli.gov.pl/api/acts/DU/2022/1225/text/O/D20221225.pdf",
+    "edition": "2022 consolidated text (Dz.U. 2022 poz. 1225)"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "pl.res.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "office"
+    ],
+    "room_kind": [
+     "office",
+     "meeting"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "height",
+    "min": 2.5
+   },
+   "unit": "m",
+   "value": 2.5,
+   "text": {
+    "en": "Clear height of work rooms at least 2.5 m",
+    "ru": "Высота рабочих помещений не менее 2.5 м"
+   },
+   "source": {
+    "doc": "wt2002",
+    "clause": "par. 72 with workplace rules",
+    "note": "par. 72 table: work rooms 2.5 m for up to 4 persons, 3.0 m for more; rule scope ambiguous"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "pl.off.h"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "bedroom"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "area",
+    "min": 8.0
+   },
+   "unit": "",
+   "value": 8.0,
+   "text": {
+    "en": "Area of a bedroom room at least 8 m2",
+    "ru": "Площадь помещения «bedroom» не менее 8 м2"
+   },
+   "source": {
+    "doc": "wt2002",
+    "clause": "par. 94 room area in a dwelling",
+    "note": "2022 consolidated par. 94 sets only 25 m2 dwelling minimum; no 8 m2 room rule in text"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "pl.bed.a"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "living"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "area",
+    "min": 16.0
+   },
+   "unit": "",
+   "value": 16.0,
+   "text": {
+    "en": "Area of a living room at least 16 m2",
+    "ru": "Площадь помещения «living» не менее 16 м2"
+   },
+   "source": {
+    "doc": "wt2002",
+    "clause": "par. 94",
+    "note": "2022 consolidated par. 94 sets only 25 m2 dwelling minimum; 16 m2 room rule not in text"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "pl.liv.a"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ],
+    "room_kind": [
+     "kitchen"
+    ]
+   },
+   "check": {
+    "kind": "formula",
+    "cat": "room",
+    "expr": "area",
+    "min": 5.0
+   },
+   "unit": "",
+   "value": 5.0,
+   "text": {
+    "en": "Area of a kitchen room at least 5 m2",
+    "ru": "Площадь помещения «kitchen» не менее 5 м2"
+   },
+   "source": {
+    "doc": "wt2002",
+    "clause": "par. 94 kitchen",
+    "note": "2022 consolidated par. 94 sets only 25 m2 dwelling minimum; no 5 m2 kitchen rule in text"
+   },
+   "verified": false,
+   "severity": "warning",
+   "id": "pl.kit.a"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "house",
+     "apartment",
+     "apartment_section"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 40.0,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 40.0,
+   "text": {
+    "en": "Travel distance from a room to an exit or stair at most 40 m (residential)",
+    "ru": "Путь от помещения до выхода или лестницы не более 30 м"
+   },
+   "source": {
+    "doc": "wt2002",
+    "clause": "par. 237(1)(1) evacuation passage in ZL zones",
+    "url": "https://eli.gov.pl/api/acts/DU/2022/1225/text/O/D20221225.pdf",
+    "edition": "2022 consolidated text (Dz.U. 2022 poz. 1225)"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "pl.egr.res"
+  },
+  {
+   "depth": 2,
+   "discipline": "fire",
+   "applies": {
+    "typology": [
+     "office"
+    ]
+   },
+   "check": {
+    "kind": "distance",
+    "max": 40.0,
+    "exit_kinds": [
+     "stair"
+    ]
+   },
+   "unit": "m",
+   "value": 40.0,
+   "text": {
+    "en": "Travel distance from a room to an exit or stair at most 40 m (office)",
+    "ru": "Путь от помещения до выхода или лестницы не более 40 м"
+   },
+   "source": {
+    "doc": "wt2002",
+    "clause": "par. 237(1)(1) evacuation passage in ZL zones",
+    "url": "https://eli.gov.pl/api/acts/DU/2022/1225/text/O/D20221225.pdf",
+    "edition": "2022 consolidated text (Dz.U. 2022 poz. 1225)"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "pl.egr.off"
+  },
+  {
+   "depth": 2,
+   "discipline": "arch",
+   "applies": {},
+   "check": {
+    "kind": "ratio",
+    "per": "element",
+    "cat": "room",
+    "room_kind": [
+     "living",
+     "bedroom",
+     "kitchen",
+     "office"
+    ],
+    "num": "window_area",
+    "den": "area",
+    "min": 0.125
+   },
+   "unit": "ratio",
+   "value": 0.125,
+   "text": {
+    "en": "Window area at least 12.5 % of the floor of a habitable or work room",
+    "ru": "Площадь окон не менее 12.5 % площади пола жилого или рабочего помещения"
+   },
+   "source": {
+    "doc": "wt2002",
+    "clause": "par. 57(2) window area to floor area at least 1:8",
+    "url": "https://eli.gov.pl/api/acts/DU/2022/1225/text/O/D20221225.pdf",
+    "edition": "2022 consolidated text (Dz.U. 2022 poz. 1225)"
+   },
+   "verified": true,
+   "severity": "warning",
+   "id": "pl.day"
+  },
+  {
+   "id": "eu.acc.corr",
+   "disabled": true
+  },
+  {
+   "id": "eu.bed.a",
+   "disabled": true
+  },
+  {
+   "id": "eu.day",
+   "disabled": true
+  },
+  {
+   "id": "eu.egr.off",
+   "disabled": true
+  },
+  {
+   "id": "eu.egr.res",
+   "disabled": true
+  },
+  {
+   "id": "eu.kit.a",
+   "disabled": true
+  },
+  {
+   "id": "eu.liv.a",
+   "disabled": true
+  },
+  {
+   "id": "eu.off.corr",
+   "disabled": true
+  },
+  {
+   "id": "eu.off.h",
+   "disabled": true
+  },
+  {
+   "id": "eu.off.riser",
+   "disabled": true
+  },
+  {
+   "id": "eu.off.sw",
+   "disabled": true
+  },
+  {
+   "id": "eu.off.tread",
+   "disabled": true
+  },
+  {
+   "id": "eu.res.corr",
+   "disabled": true
+  },
+  {
+   "id": "eu.res.h",
+   "disabled": true
+  },
+  {
+   "id": "eu.res.riser",
+   "disabled": true
+  },
+  {
+   "id": "eu.res.sw",
+   "disabled": true
+  },
+  {
+   "id": "eu.res.tread",
+   "disabled": true
+  },
+  {
+   "id": "eu.step",
+   "disabled": true
+  }
+ ]
+}

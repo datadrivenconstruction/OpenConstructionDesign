@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "ดูตัวอย่าง",
+ "agent_draft.ag.preview.desc": "ขีดเส้นรอบองค์ประกอบของฉบับร่างนี้บนผืนผ้าใบขณะเคอร์เซอร์อยู่บนปุ่ม ไม่มีการเปลี่ยนแปลงใด",
+ "agent_draft.type.column": "เสา",
+ "agent_draft.type.roof": "หลังคา",
+ "agent_draft.type.ceiling": "ฝ้าเพดาน",
+ "agent_draft.type.stair": "หล่อในที่",
+ "agent_draft.type.railing": "ราวกันตก",
+ "agent_draft.type.shaft": "ปล่อง",
+ "agent_draft.type.axis": "แกน 6.5 mm",
+ "agent_draft.type.refplane": "ระนาบอ้างอิง"
+}

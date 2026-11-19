@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "I kø bak kjørende jobb: {n}",
+ "import_queue.queue_full": "Køen er full, {n} filer ble ikke lagt til",
+ "import_queue.changed": "{name} ble oppdatert etter at dette prosjektet ble laget. Åpnet det forrige prosjektet.",
+ "import_queue.import_again": "Importer på nytt",
+ "import_queue.kept": "Den ferdige importen beholdes",
+ "import_queue.open_it": "Åpne den",
+ "import_queue.sum.head": "import: {editable} redigerbare (vegger {walls}, åpninger {open}, gulv {slabs}, rom {rooms}, annet {other}), {meshes} som nett",
+ "import_queue.sum.unchanged": ", uendret {n}",
+ "import_queue.sum.updated": ", oppdatert {n}",
+ "import_queue.sum.missing": ", ikke i kilden {n} (beholdt)",
+ "import_queue.sum.skipped": ", hoppet over {n}",
+ "import_queue.sum.warnings": ", advarsler {n}",
+ "import_queue.import_failed": "import mislyktes: {e}"
+}

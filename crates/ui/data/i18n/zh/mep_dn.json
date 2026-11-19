@@ -1,0 +1,5 @@
+{
+ "mep_dn.dn.unset": "未设置",
+ "mep_dn.slope.err": "请输入坡度百分比，例如 1.5",
+ "mep_dn.err.rejected": "该值不被接受"
+}

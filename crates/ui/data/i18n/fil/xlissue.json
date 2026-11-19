@@ -1,0 +1,13 @@
+{
+ "xlw.copy_list": "Kopyahin ang listahan",
+ "xlw.save_list": "I-save ang listahan…",
+ "xlw.copy_list_tip": "Kopyahin ang mga ipinapakitang row (sheet, cell, id, column, halaga, dahilan) bilang teksto para sa spreadsheet",
+ "xlw.save_list_tip": "I-save ang mga ipinapakitang row bilang .csv file sa tabi ng workbook; hindi kailanman babaguhin ang workbook mismo",
+ "xlw.list_book_value": "Halaga sa workbook",
+ "xlw.list_model_value": "Halaga sa modelo",
+ "xlw.list_reason": "Dahilan",
+ "xlw.list_copied": "Nakopya ang listahan: {n} row",
+ "xlw.list_saved": "Na-save ang listahan: {n} row, {file}",
+ "xlw.list_save_failed": "Hindi na-save ang listahan",
+ "xlw.list_nothing": "Walang makokopya: walang nakikitang row"
+}

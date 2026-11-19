@@ -1,0 +1,12 @@
+{
+ "ai.palette.ask_q": "询问 AI：{q}",
+ "ai.palette.connect": "连接 AI 以提问",
+ "ai.palette.draft.apply": "应用草稿（{n}）",
+ "ai.palette.draft.reject": "拒绝草稿",
+ "ai.palette.draft.next": "下一处草稿更改",
+ "ai.palette.draft.show": "在视图中显示草稿",
+ "cmd.ai.next_change": "下一处草稿更改",
+ "cmd.ai.next_change.desc": "将视图移至草稿更改的下一个元素。",
+ "cmd.ai.show_draft": "在视图中显示 AI 草稿",
+ "cmd.ai.show_draft.desc": "调整视图以容纳草稿更改的全部内容。"
+}

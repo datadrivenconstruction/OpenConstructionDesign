@@ -1,0 +1,15 @@
+{
+ "text_style.lbl.text_style": "ٹیکسٹ اسٹائل",
+ "text_style.lbl.align": "محاذ بندی",
+ "text_style.lbl.head": "تیر کا سرا",
+ "text_style.lbl.line_style": "لائن اسٹائل",
+ "text_style.lbl.fill": "فِل",
+ "text_style.lbl.detail": "تفصیل",
+ "text_style.lbl.width": "چوڑائی",
+ "text_style.bad_number": "{min} سے {max} تک عدد درج کریں",
+ "text_style.tip.next_ring": "یہ کنٹور بند کریں اور اسی علاقے میں ایک اور شروع کریں",
+ "text_style.tip.edit_text": "متن براہِ راست ترمیم کریں",
+ "text_style.tip.add_leader": "اس متن میں لیڈر لائن شامل کریں",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°"
+}

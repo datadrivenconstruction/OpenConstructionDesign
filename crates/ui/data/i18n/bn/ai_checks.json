@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "পরিমাপ {value}, সীমা {limit}",
+ "ai_checks.check.cap": "{total}টির মধ্যে {shown}টি ফলাফল দেখানো হচ্ছে। আগে ত্রুটিগুলো ঠিক করে আবার চালান।",
+ "ai_checks.check.run_again": "আবার চালান",
+ "ai_checks.check.goto": "বাছুন ও জুম করুন",
+ "ai_checks.check.never_title": "এখনো যাচাই করা হয়নি",
+ "ai_checks.check.never_hint": "যাচাই চালালে ফলাফল এখানে দেখাবে।",
+ "ai_checks.check.sec.error": "ত্রুটি",
+ "ai_checks.check.sec.warning": "সতর্কতা",
+ "ai_checks.check.sec.info": "নোট"
+}

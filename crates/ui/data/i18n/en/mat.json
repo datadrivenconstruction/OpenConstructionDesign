@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "Concrete",
+ "mat.masonry": "Masonry",
+ "mat.brick": "Brick",
+ "mat.insulation": "Insulation",
+ "mat.plaster": "Plaster",
+ "mat.render": "Render",
+ "mat.gypsum": "Gypsum board",
+ "mat.glass": "Glass",
+ "mat.wood": "Wood",
+ "mat.steel": "Steel",
+ "mat.membrane": "Membrane",
+ "mat.other": "Other",
+ "warn.cat.wall": "Wall",
+ "warn.cat.slab": "Slab",
+ "warn.cat.opening": "Opening",
+ "warn.cat.curtain_wall": "Curtain wall",
+ "td.mat.custom": "Other…"
+}

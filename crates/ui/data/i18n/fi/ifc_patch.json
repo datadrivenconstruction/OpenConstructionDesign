@@ -1,0 +1,19 @@
+{
+ "ifc_patch.fallback.source_changed": "Paikkausta ei käytetty: lähdetiedosto muuttui levyllä tai sitä ei voi lukea. Tiedosto kirjoitettiin uudelleen mallista.",
+ "ifc_patch.fallback.sources": "Paikkausta ei käytetty: projektissa ei ole täsmälleen yhtä lähdettä. Tiedosto kirjoitettiin uudelleen mallista.",
+ "ifc_patch.fallback.schema": "Paikkausta ei käytetty: lähdetiedoston skeemaa ei tueta. Tiedosto kirjoitettiin uudelleen mallista.",
+ "ifc_patch.fallback.structure": "Paikkausta ei käytetty: lähdetiedoston rakenteeseen ei voitu luottaa. Tiedosto kirjoitettiin uudelleen mallista.",
+ "ifc_patch.fallback.edit": "Paikkausta ei käytetty: muutosta ei voi turvallisesti soveltaa lähdetiedostoon. Tiedosto kirjoitettiin uudelleen mallista.",
+ "ifc_patch.reason.schema": "Lähdetiedoston rakenne ei tue tätä muokkausta; elementti säilyy lähteen mukaisena",
+ "ifc_patch.reason.prop": "Tätä ominaisuusmuokkausta ei voi ilmaista lähdetiedostossa; arvo pysyy lähteessä ennallaan",
+ "ifc_patch.reason.no_export": "Tällä uudella elementillä ei ole esitystä IFC-muodossa",
+ "ifc_patch.reason.link": "Elementti on tiedostossa, mutta linkkiä sen materiaaliin tai tyyppiin ei kirjoiteta; se on listattu kirjoittamattomana",
+ "ifc_patch.drop": "Pudota",
+ "ifc_patch.drop_done": "Odottavat linkit pudotettu: {n}; niitä ei yritetä enää uudelleen",
+ "ifc_patch.fallback.building": "Paikkausta ei käytetty: uusi taso tarvitsee lähteessä täsmälleen yhden rakennuksen, ja sitä on nolla tai useita. Tiedosto kirjoitettiin uudelleen mallista.",
+ "ifc_patch.fallback.types": "Paikkausta ei käytetty: tasot, tyypit tai materiaalit ovat muuttuneet tuonnin jälkeen, eikä paikkaus voi kirjoittaa niitä. Tiedosto kirjoitettiin uudelleen mallista.",
+ "ifc_patch.fallback.zipped": "Paikkausta ei voi käyttää pakattuun lähdetiedostoon. Tiedosto kirjoitettiin uudelleen mallista.",
+ "ifc_patch.fallback.source_kept": "Lähdetiedostoa ei ylikirjoitettu: tätä tallennusta ei voitu luottaa korvaamaan sitä. Tämä tallennus on kopio sen viereen.",
+ "ifc_patch.fallback.nested": "Paikkausta ei käytetty: uudella elementillä on sisäkkäisiä osia (kuten liittimiä), joita paikkaus ei voi kirjoittaa. Tiedosto kirjoitettiin uudelleen mallista.",
+ "ifc_patch.fallback.shared_part": "Paikkausta ei käytetty: muokatun portaan tai luiskan osaa käyttää myös toinen elementti tai suhde, eikä paikkaus voi huomioida sitä. Tiedosto kirjoitettiin uudelleen mallista."
+}

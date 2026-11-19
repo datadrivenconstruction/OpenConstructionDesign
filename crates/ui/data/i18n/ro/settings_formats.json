@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "Ce se întâmplă după exportul unui registru de calcul",
+ "settings.area_decimals_desc": "Cifre după separatorul zecimal la suprafețe",
+ "settings.volume_decimals_desc": "Cifre după separatorul zecimal la volume",
+ "settings.frac_desc": "Cea mai mică fracțiune de țol în lungimi imperiale",
+ "settings.small_area_desc": "Arată suprafețele sub un picior pătrat în inci pătrați",
+ "settings.sample_desc": "Cum arată numerele cu alegerile actuale",
+ "autosave.title_desc": "Păstrează o copie de recuperare a proiectului deschis",
+ "autosave.interval_desc": "Timpul dintre copiile de recuperare",
+ "autosave.keep_desc": "Copiile de recuperare mai vechi sunt șterse",
+ "autosave.folder_desc": "Gol înseamnă folderul implicit",
+ "autosave.remind_desc": "Memento pentru salvarea unui proiect care nu are încă un fișier",
+ "settings.backend_desc": "Adaptorul grafic folosit",
+ "settings.news_desc": "Ce s-a schimbat în această versiune",
+ "settings.assoc_default_desc": "Fă din această aplicație implicită pentru fișierele de model",
+ "settings.data_dir_desc": "Aici se află memoria cache, copiile de recuperare și jurnalele."
+}

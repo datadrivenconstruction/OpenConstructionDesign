@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "XLSX'e dışa aktar: kapsam",
+ "xlsx_scope.intro": "Çalışma kitabına neyin gireceğini seçin. Geri içe aktarmak yalnızca bu öğeleri değiştirir.",
+ "xlsx_scope.base_whole": "Tüm model",
+ "xlsx_scope.base_level": "Etkin kat",
+ "xlsx_scope.base_selection": "Seçim",
+ "xlsx_scope.categories": "Kategoriler",
+ "xlsx_scope.cat_walls": "duvarlar",
+ "xlsx_scope.cat_openings": "kapılar",
+ "xlsx_scope.cat_rooms": "odalar",
+ "xlsx_scope.cat_slabs": "döşemeler",
+ "xlsx_scope.cat_curtains": "perde duvarlar",
+ "xlsx_scope.nothing_selected": "Hiçbir şey seçili değil: önce öğeleri seçin veya başka bir kapsam seçin.",
+ "xlsx_scope.no_categories": "En az bir kategori işaretleyin.",
+ "xlsx_scope.no_level": "Etkin kat bulunamadı.",
+ "xlsx_scope.export": "Dışa aktar",
+ "xlsx_scope.preview_scope": "Dışa aktarılan kapsam: {scope}. Kapsam dışındaki öğeler asla değiştirilmez veya silinmez."
+}

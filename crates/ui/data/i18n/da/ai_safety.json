@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "Nøgle i adressen",
+ "ai_safety.auth.query_name": "Adresseparameter",
+ "ai_safety.need_query_name": "Angiv adresseparameteren, der bærer nøglen",
+ "ai_safety.apply_unlogged": "Anvendt, men ændringsloggen blev ikke skrevet",
+ "ai_safety.audit_unlogged": "AI-assistentens log kunne ikke skrives",
+ "ai_safety.chat_not_saved": "Chatten kunne ikke gemmes i projektet. Prøver igen.",
+ "ai_safety.clip_clears": "Udklipsholderen ryddes om 30 s",
+ "ai_safety.copied_clears": "Kopieret. Udklipsholderen ryddes om 30 s",
+ "ai_safety.key_session_only": "Nøglen gemmes, indtil appen lukkes",
+ "ai.settings.no_data_dir": "dette system giver ingen mappe til appindstillinger"
+}

@@ -1,0 +1,21 @@
+{
+ "ai.receipt.title": {
+  "one": "Zastosowano # zmianę",
+  "other": "Zastosowano # zmian"
+ },
+ "ai.receipt.more": "+{n} więcej",
+ "ai.receipt.list": "Elementy",
+ "ai.receipt.show": "Pokaż",
+ "ai.receipt.show.tip": "Zaznacz i pokaż zmienione elementy",
+ "ai.receipt.undo": "Cofnij",
+ "ai.receipt.undo.tip": "Cofa dokładnie to zastosowanie",
+ "ai.receipt.undone": "Cofnięto",
+ "ai.receipt.later": "Wykonano późniejsze edycje",
+ "ai.receipt.toast_undone": "Zastosowany plan został cofnięty",
+ "ai.receipt.draft_family": "Rodzina szkicu: {name}",
+ "ai.receipt.promote": "Zrób roboczą",
+ "ai.receipt.promote.tip": "Zamienia rodzinę szkicu w roboczą (jeden krok cofania)",
+ "ai.receipt.promoted": "Rodzina jest teraz robocza",
+ "ai.receipt.promote_failed": "Nie udało się zrobić z rodziny roboczej",
+ "cmd.ai.receipt_undo": "Cofnij ostatni plan AI"
+}

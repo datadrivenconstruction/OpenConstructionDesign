@@ -1,0 +1,6 @@
+{
+ "delsafe.ring.opening_shape": "קו מתאר של פתח היה חוצה את עצמו או מתמוטט",
+ "delsafe.ring.opening_boundary": "פתח היה חוצה או נוגע בקו המתאר החיצוני",
+ "delsafe.ring.openings_overlap": "פתחים היו חופפים או נוגעים זה בזה",
+ "xl.msg.delsafe_instance_param_on_types": "הפרמטר '{}' הוא פרמטר מופע; ערוך אותו בגיליון האלמנטים, לא הוחל"
+}

@@ -1,0 +1,16 @@
+{
+ "ai.items.all": {
+  "one": "Barcha # ta band",
+  "other": "Barcha # ta band"
+ },
+ "ai.items.all.tip": "Rejaning har bir bandini belgilash yoki belgisini olib tashlash",
+ "ai.items.checked": "{m} tadan {n} tasi belgilangan",
+ "ai.items.check.tip": "“{title}” ni Qo'llash ga kiritish",
+ "ai.items.expand": "Elementlarni ko'rsatish",
+ "ai.items.collapse": "Elementlarni yashirish",
+ "ai.items.apply": {
+  "one": "# ta bandni qo'llash",
+  "other": "# ta bandni qo'llash"
+ },
+ "ai.items.apply_none": "Qo'llash"
+}

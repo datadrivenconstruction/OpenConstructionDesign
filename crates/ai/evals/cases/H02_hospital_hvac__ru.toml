@@ -1,0 +1,113 @@
+id = "H02_hospital_hvac__ru"
+tier = "hard"
+group = "Инженерные системы"
+title = "Hospital wing with full HVAC (ru)"
+lang = "ru"
+base = "empty"
+
+[[turn]]
+say = "Больничный корпус, четыре этажа, всего около 6000 м2. Палаты, две операционные, реанимация, лаборатория, диагностика, аптека, помещения персонала и коридоры. Нужна вся вентиляция, сделанная как следует: приточно-вытяжные установки в венткамере на крыше, воздуховоды притока, вытяжки и удаления, рассчитанные по расходу, противопожарные и дымовые клапаны там, где воздуховоды пересекают стены отсеков, операционные и изоляторы с давлением, отличным от коридоров, вертикальные шахты, и в каждое помещение должен подаваться воздух. Расчёт сечений напиши в ответе."
+
+[[oracle.count]]
+spec = "level"
+min = 3.0
+
+[[oracle.count]]
+spec = "room"
+min = 40.0
+
+[[oracle.count]]
+spec = "mep_run"
+min = 100.0
+
+[[oracle.count]]
+spec = "level"
+min = 3.0
+max = 6.0
+
+[[oracle.count]]
+spec = "room:operating|theatre|theater|surg"
+min = 2.0
+
+[[oracle.count]]
+spec = "room:icu|intensive"
+min = 1.0
+
+[[oracle.count]]
+spec = "room:ward|patient|bed"
+min = 4.0
+
+[[oracle.count]]
+spec = "comp:ahu|air.?handling"
+min = 2.0
+
+[[oracle.count]]
+spec = "mep:duct"
+min = 150.0
+
+[[oracle.count]]
+spec = "sysk:supply"
+min = 1.0
+
+[[oracle.count]]
+spec = "sysk:return"
+min = 1.0
+
+[[oracle.count]]
+spec = "sysk:exhaust|extract"
+min = 1.0
+
+[[oracle.count]]
+spec = "comp:damper"
+min = 8.0
+
+[[oracle.count]]
+spec = "shaft"
+min = 3.0
+
+[[oracle.geom]]
+kind = "mep_connected"
+ends_min = 0.9
+
+[[oracle.geom]]
+kind = "mep_clashes"
+max = 0.0
+
+[[oracle.geom]]
+kind = "served_rooms"
+terminal = "air_terminal|diffuser|grille"
+exclude = "stair|shaft|lift|plant|riser|duct|void|elevator"
+share_min = 0.9
+
+[[oracle.text]]
+name = "explains pressure zoning"
+re = "(pressur|cascade|negative|positive|isolation|druck|kaskade|presi[oó]n|sobrepresi|depresi|overdruck|давлен)"
+
+[[oracle.text]]
+name = "cites a norm or standard"
+re = "(EN ?\\d|ISO ?\\d|DIN ?\\d|UNE ?\\d|CTE|RITE|ASHRAE|HTM|VDI|SP ?\\d|СП ?\\d|NFPA|FGI)"
+
+[[oracle.claim]]
+name = "fire dampers"
+say = "(fire|smoke) damper|brandschutzklappe|rauch\\w*klappe|compuertas? (cortafuego|de humo)|противопожарн\\w+ клапан|дымов\\w+ клапан"
+have = "comp:damper"
+min = 2.0
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1
+"IfcWall" = 1
+"IfcSlab" = 1
+"IfcDuctSegment|IfcPipeSegment|IfcCableCarrierSegment" = 1
+
+[[oracle.geom]]
+kind = "terminals_fed"
+share_min = 0.95
+
+[[oracle.geom]]
+kind = "mep_free_ends"
+max = 0.0
+
+[[oracle.geom]]
+kind = "sizes_typical"
+share_max = 0.25
+errors_max = 0.0

@@ -1,0 +1,11 @@
+{
+ "sheets.print.prev": "Eelmine leht (Page Up)",
+ "sheets.print.next": "Järgmine leht (Page Down)",
+ "sheets.print.fit": "Sobita leht (topeltklõps)",
+ "sheets.print.no_sheets": "Eelvaateks lehti pole",
+ "sheets.print.building": "Lehe koostamine…",
+ "sheets.print.stop_build": "Peata",
+ "sheets.print.build_stopped": "Lehe koostamine peatati",
+ "sheets.print.retry": "Koosta uuesti",
+ "sheets.print.build_failed": "Eelvaadet ei õnnestunud koostada"
+}

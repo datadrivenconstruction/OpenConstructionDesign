@@ -1,0 +1,18 @@
+{
+ "faults.errors": {
+  "one": "# erro no modelo. Clique para mostrá-lo.",
+  "other": "# erros no modelo. Clique para ver a lista."
+ },
+ "faults.warnings": {
+  "one": "# aviso no modelo. Clique para mostrá-lo.",
+  "other": "# avisos no modelo. Clique para ver a lista."
+ },
+ "faults.title": "Falhas do modelo: {n}",
+ "faults.none": "Sem erros nem avisos.",
+ "faults.cat.wall": "Parede",
+ "faults.cat.slab": "Laje",
+ "faults.cat.opening": "Abertura",
+ "faults.cat.curtain_wall": "Cortina de vidro",
+ "faults.cat.ramp": "Rampa",
+ "faults.cat.zone": "Zona"
+}

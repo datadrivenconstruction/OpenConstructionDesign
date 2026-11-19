@@ -1,0 +1,5 @@
+{
+ "undo.action": "撤销",
+ "undo.action_keys": "撤销（{keys}）",
+ "undo.ai_applied": "更改已应用"
+}

@@ -1,0 +1,5 @@
+{
+ "snap.center": "Centru",
+ "dwg_snap.through": "Punct de trecere",
+ "dwg_snap.through_tip": "Decalare prin punctul indicat (se fixează de capete, intersecții, centre) în loc de distanța introdusă"
+}

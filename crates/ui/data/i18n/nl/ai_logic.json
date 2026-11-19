@@ -1,0 +1,6 @@
+{
+ "ai_toast.toast_not_refreshed": "Toegepast als ongedaan-stap {n} (Ctrl+Z maakt hem ongedaan), maar de weergave is niet ververst. Laad de weergave opnieuw.",
+ "ai.optx.reload_failed": "Optie \"{name}\" is toegepast en opgeslagen, maar de weergave is niet herladen: {e}",
+ "ai.cmp.stale": "Verouderd",
+ "ai.cmp.stale_tip": "Deze optie is gebaseerd op een oudere modelstatus. Genereer hem opnieuw om toe te passen."
+}

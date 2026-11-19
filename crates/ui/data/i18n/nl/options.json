@@ -1,0 +1,15 @@
+{
+ "fe.add_why_empty": "Voer eerst een parameternaam in",
+ "fe.add_why_exists": "Er bestaat al een parameter met deze naam; gebruik Toepassen om hem te wijzigen",
+ "fe.apply_why_missing": "Geen parameter met deze naam; typ een bestaande naam",
+ "fe.nochange": "Nog geen wijzigingen",
+ "options.accept_more": "Accepteren…",
+ "options.delete_more": "Verwijderen…",
+ "options.empty_title": "Nog geen optiesets",
+ "options.more": "Meer acties: {name}",
+ "options.primary_named": "Hoofdoptie: {name}",
+ "options.primary_tip": "Maak dit de hoofdoptie van de set",
+ "options.select_first": "Selecteer eerst elementen in het model",
+ "options.show_3d": "Tonen in 3D: {name}",
+ "options.show_plan": "Tonen in plattegrond: {name}"
+}

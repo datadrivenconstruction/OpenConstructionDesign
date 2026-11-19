@@ -1,0 +1,12 @@
+{
+ "opt.stair.straight": "Lige",
+ "opt.stair.l": "L",
+ "opt.stair.u": "U",
+ "opt.stair.gap": "Hul",
+ "hint.stair.corner": "L-trappe: vælg hjørnet · Backspace — fjern sidste punkt · Esc — fjern sidste punkt; uden punkter — annullér",
+ "hint.stair.side": "Trappe: vælg siden af det andet løb · Backspace — fjern sidste punkt · Esc — fjern sidste punkt; uden punkter — annullér",
+ "tool.stair.flights": "{n} optrin (i alt {m})",
+ "tool.stair.err_split": "Hvert løb skal have mindst 2 optrin: første løb har {n} af {m}",
+ "tool.stair.err_comfort": "Trin og optrædning bryder komfortreglen (2R + T)",
+ "tool.stair.err_input": "Trappestørrelsen er uden for området: kontrollér bredde, højde og podest"
+}

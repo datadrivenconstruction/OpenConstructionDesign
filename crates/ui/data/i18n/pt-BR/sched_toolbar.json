@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "Filtro na linha abaixo dos cabeçalhos. Texto: parte do texto; números: >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "Mostrar ou ocultar colunas",
+ "sched_toolbar.groups_tip": "Agrupar linhas por colunas, com subtotais",
+ "sched_toolbar.formulas_tip": "Colunas calculadas",
+ "sched_toolbar.phase": "Fase",
+ "sched_toolbar.phase_tip": "De qual fase as linhas são obtidas",
+ "sched_toolbar.copy_tip": "Linhas selecionadas (ou todas as visíveis) como TSV",
+ "sched_toolbar.import_tip": "Lê uma tabela exportada: linhas pelo Id, colunas pelo cabeçalho; contagens primeiro, depois uma etapa de desfazer",
+ "sched_toolbar.export_tip": "Linhas e colunas visíveis com totais; números continuam números",
+ "sched_toolbar.need_table": "Abra primeiro uma tabela",
+ "sched_toolbar.busy_open": "Uma caixa de diálogo de arquivo já está aberta",
+ "sched_toolbar.busy_save": "Uma caixa de diálogo de salvar já está aberta",
+ "sched_toolbar.clear_filter": "Limpar filtro",
+ "sched_toolbar.fields_title": "Colunas"
+}

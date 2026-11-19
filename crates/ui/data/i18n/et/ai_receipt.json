@@ -1,0 +1,21 @@
+{
+ "ai.receipt.title": {
+  "one": "Rakendatud # muudatus",
+  "other": "Rakendatud # muudatust"
+ },
+ "ai.receipt.more": "+{n} veel",
+ "ai.receipt.list": "Elemendid",
+ "ai.receipt.show": "Näita",
+ "ai.receipt.show.tip": "Vali ja too vaatesse muudetud elemendid",
+ "ai.receipt.undo": "Tühista",
+ "ai.receipt.undo.tip": "Võta tagasi just see rakendamine",
+ "ai.receipt.undone": "Tühistatud",
+ "ai.receipt.later": "Hiljem on tehtud muudatusi",
+ "ai.receipt.toast_undone": "Rakendatud plaan tühistati",
+ "ai.receipt.draft_family": "Mustandi perekond: {name}",
+ "ai.receipt.promote": "Muuda töötavaks",
+ "ai.receipt.promote.tip": "Muudab mustandi perekonna töötavaks (üks tagasivõtu samm)",
+ "ai.receipt.promoted": "Perekond on nüüd töötav",
+ "ai.receipt.promote_failed": "Perekonda ei saanud töötavaks muuta",
+ "cmd.ai.receipt_undo": "Tühista viimane AI plaan"
+}

@@ -1,0 +1,15 @@
+{
+ "import_queue.queued": "Đang chờ sau tác vụ đang chạy: {n}",
+ "import_queue.queue_full": "Hàng đợi đã đầy, {n} tệp chưa được thêm",
+ "import_queue.changed": "{name} đã được cập nhật sau khi dự án này được tạo. Đã mở dự án trước đó.",
+ "import_queue.import_again": "Nhập lại",
+ "import_queue.kept": "Bản nhập đã hoàn tất được giữ lại",
+ "import_queue.open_it": "Mở",
+ "import_queue.sum.head": "nhập: {editable} có thể sửa (tường {walls}, lỗ mở {open}, sàn {slabs}, phòng {rooms}, khác {other}), {meshes} dạng lưới",
+ "import_queue.sum.unchanged": ", không đổi {n}",
+ "import_queue.sum.updated": ", đã cập nhật {n}",
+ "import_queue.sum.missing": ", không có trong nguồn {n} (đã giữ)",
+ "import_queue.sum.skipped": ", đã bỏ qua {n}",
+ "import_queue.sum.warnings": ", cảnh báo {n}",
+ "import_queue.import_failed": "nhập thất bại: {e}"
+}

@@ -1,0 +1,6 @@
+{
+ "pair_input.pair_hint": "两个值用分号分隔：@1000;500",
+ "pair_input.old_pair": "两个整数之间的逗号不再表示一对值：两个值请输入 6000;4000，小数请输入 6000,5",
+ "pair_input.op.bad_length": "不是长度：{text}（{why}）。未更改任何内容",
+ "pair_input.op.bad_count": "数量 {text} 未被采用：应为 {min} 到 {max} 之间的整数"
+}

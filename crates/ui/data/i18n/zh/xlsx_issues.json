@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "已跳过的行和单元格",
+ "xlsx_issues.conflicts_title": "两处均已更改",
+ "xlsx_issues.missing_title": "工作簿中缺少图纸",
+ "xlsx_issues.look_alike_title": "图纸名称不匹配",
+ "xlsx_issues.mass_title": "大量删除需要确认",
+ "xlsx_issues.sheets_missing": "工作簿中缺少图纸 {sheets}（已重命名或删除）；其行未被比较。",
+ "xlsx_issues.keep_model": "保留模型",
+ "xlsx_issues.take_book": "采用工作簿值",
+ "xlsx_issues.open_book_tip": "在其应用程序中打开文件。模型不会更改；保存工作簿后预览将重新加载。"
+}

@@ -1,0 +1,7 @@
+{
+ "recover.untitled_note": "Dit project is nooit opgeslagen",
+ "recover.file_missing": "Het projectbestand is niet gevonden",
+ "recover.banner": "Niet-opgeslagen werk uit een eerdere sessie is gevonden voor {name}",
+ "recover.banner_review": "Bekijken",
+ "recover.later_archived": "{n} keer uitgesteld: snapshots naar het archief verplaatst"
+}

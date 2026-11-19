@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "Tartunta-alue",
+ "snap_refine.settings.snap_px_desc": "Kuinka lähelle pistettä tai viivaa kohdistimen on tultava, jotta se tarttuu, näyttöpikseleinä. Suurempi arvo auttaa kosketusnäytöillä ja tiheillä näytöillä.",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "Vaakasuora",
+ "snap_refine.hint.vertical": "Pystysuora",
+ "snap_refine.hint.perpendicular": "Kohtisuora edelliseen",
+ "snap_refine.hint.parallel": "Yhdensuuntainen edelliseen",
+ "snap_refine.hint.on_axis": "Seinän akselilla",
+ "snap_refine.no_snap": "Ei tartuntaa (Alt)"
+}

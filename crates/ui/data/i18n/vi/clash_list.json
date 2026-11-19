@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "Tất cả",
+ "clash_list.only_selected": "Chỉ mục đã chọn",
+ "clash_list.tolerance": "Dung sai",
+ "clash_list.gap": "Khe hở",
+ "clash_list.export": "Xuất",
+ "clash_list.col.volume": "Thể tích",
+ "clash_list.fix.up": "Di chuyển lên",
+ "clash_list.fix.down": "Di chuyển xuống",
+ "clash_list.fix.sleeve": "Ống bọc",
+ "clash_list.apply_fix": "Áp dụng sửa",
+ "clash_list.err.tol": "Dung sai: nhập chiều dài (0 trở lên), ví dụ 50 hoặc 2 in",
+ "clash_list.sleeve_no_host": "Ống bọc cần một tường hoặc sàn trong cặp",
+ "clash_list.err.gap": "Khe hở: nhập chiều dài (0 trở lên), ví dụ 50 hoặc 2 in"
+}

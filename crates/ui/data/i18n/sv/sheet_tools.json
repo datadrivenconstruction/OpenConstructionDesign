@@ -1,0 +1,18 @@
+{
+ "undo.entry_later": "Inte ångrat: en annan ändring gjordes efter den. Ångra den först.",
+ "undo.entry_gone": "Inte ångrat: den här ändringen är redan ångrad eller finns inte längre i historiken.",
+ "undo.entry_busy": "Slutför eller avbryt den pågående ritningen först och ångra sedan.",
+ "quick.hud.more": "Fler i Egenskaper: {names}",
+ "sheet_tools.sheet.more": "Fler bladverktyg",
+ "job.of": "{d} av {t}",
+ "job.of.mb": "{d} av {t} MB",
+ "job.left.under_minute": "mindre än en minut kvar",
+ "job.left.minutes": "ungefär {n} min kvar",
+ "sheet_tools.start.units": "Enheter",
+ "sheet_tools.print.save": {
+  "one": "Spara # blad",
+  "other": "Spara # blad"
+ },
+ "sheet_tools.sets.delete_ask": "Ta bort uppsättningen “{name}”? Dess blad finns kvar i projektet.",
+ "sheet_tools.keep": "Behåll"
+}

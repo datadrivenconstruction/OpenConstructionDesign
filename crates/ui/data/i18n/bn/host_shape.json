@@ -1,0 +1,23 @@
+{
+ "cmd.arch.dormer": "ডরমার ফাঁকা অংশ",
+ "cmd.arch.roof_opening": "ছাদের ফাঁকা অংশ",
+ "cmd.arch.roof_extrusion": "এক্সট্রুশনে ছাদ",
+ "cmd.arch.ceiling_opening": "সিলিং ফাঁকা অংশ",
+ "cmd.str.slab_opening": "মেঝের ফাঁকা অংশ",
+ "cmd.ctx.wall.detach": "উপরের অংশ বিচ্ছিন্ন করুন",
+ "cmd.ctx.floor.sketch": "সীমানা সম্পাদনা",
+ "cmd.ctx.floor.shape": "আকার সম্পাদনা",
+ "host_shape.shape.elev_prompt": "উচ্চতা, mm…",
+ "host_shape.shape.elev_mm": "{v} mm",
+ "host_shape.sketch.no_host": "এই লেভেলে সীমানার নিচে কোনো হোস্ট নেই",
+ "host_shape.issue.roof": "ছাদ {id}: {e}",
+ "host_shape.issue.ceiling": "সিলিং {id}: {e}",
+ "host_shape.status.select_slab": "একটি স্ল্যাব নির্বাচন করুন",
+ "host_shape.status.select_walls": "দেয়াল নির্বাচন করুন",
+ "host_shape.status.no_roof_or_level": "উপরে কোনো ছাদ বা লেভেল নেই",
+ "host_shape.status.top_attached": "দেয়ালের উপর যুক্ত হয়েছে",
+ "host_shape.status.top_detached": "দেয়ালের উপর বিচ্ছিন্ন হয়েছে",
+ "host_shape.status.straight_wall": "একটি সরল দেয়াল প্রয়োজন",
+ "host_shape.status.roof_extruded": "এক্সট্রুশনে ছাদ তৈরি হয়েছে",
+ "warn.kind.cut": "কাটা বা সংযুক্তি তৈরি হয়নি"
+}

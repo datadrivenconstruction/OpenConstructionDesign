@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "入力が空です。",
+ "units.err.not_number": "位置 {pos} は数値ではありません。",
+ "units.err.unknown_unit": "不明な単位: {unit}。",
+ "units.err.non_positive": "長さは 0 より大きくする必要があります。",
+ "units.err.too_large": "長さは {max} m を超えられません。",
+ "units.err.bad_angle": "角度は度数で入力してください。",
+ "units.err.unknown_name": "不明な名前: {name}。値は保持されます。",
+ "units.err.cycle": "{name} で数式が循環しています。値は保持されます。",
+ "units.err.bad_expr": "位置 {pos} の式を読み取れません。値は保持されます。",
+ "units.err.div_zero": "位置 {pos} でゼロ除算です。値は保持されます。",
+ "units.err.invalid": "数値が正しくありません。",
+ "units.err.kept": "変更されていません: {reason}"
+}

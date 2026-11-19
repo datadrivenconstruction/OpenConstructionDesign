@@ -1,0 +1,10 @@
+{
+ "type_pick.pick.search": "Rechercher des types ou une épaisseur",
+ "type_pick.pick.empty": "Aucun type correspondant",
+ "type_pick.pick.edit": "Modifier le type…",
+ "type_pick.pick.mixed": "Mixte",
+ "type_pick.pick.layers": {
+  "one": "# couche",
+  "other": "# couches"
+ }
+}

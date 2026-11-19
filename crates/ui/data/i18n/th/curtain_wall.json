@@ -1,0 +1,12 @@
+{
+ "curtain_wall.cw.issue.slab": "พื้น {id}: {e}",
+ "curtain_wall.cw.issue.body": "ตัวอาคาร {id}: {e}",
+ "curtain_wall.cw.added": "เพิ่มผนังม่านแล้ว: {n}",
+ "curtain_wall.cw.add_failed": "ยังไม่ได้สร้างผนังม่าน: {e}",
+ "curtain_wall.cw.edited_warn": "เปลี่ยนผนังม่าน #{id} แล้ว: {w}",
+ "curtain_wall.cw.edited": "เปลี่ยนผนังม่าน #{id} แล้ว",
+ "curtain_wall.cw.not_changed": "ไม่ได้เปลี่ยนแปลง: {e}",
+ "curtain_wall.cw.room_edited": "เปลี่ยนห้อง #{id} แล้ว",
+ "curtain_wall.cw.slope_range": "ไม่ได้เปลี่ยนแปลง: ความลาดอยู่นอกช่วง",
+ "curtain_wall.cw.slope_set": "พื้น #{id}: ความลาด {pct}"
+}

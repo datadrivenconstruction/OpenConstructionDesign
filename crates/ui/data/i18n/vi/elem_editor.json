@@ -1,0 +1,4 @@
+{
+ "elem.spreadsheet.applied": "Đã nhập từ bảng tính: {what}",
+ "elem.spreadsheet.failed": "Nhập từ bảng tính thất bại: {e}"
+}

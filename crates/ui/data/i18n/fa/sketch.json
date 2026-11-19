@@ -1,0 +1,11 @@
+{
+ "sketch.points": "نقاط",
+ "sketch.rect": "مستطیل",
+ "sketch.circle": "دایره",
+ "sketch.polygon": "چندضلعی",
+ "sketch.radius": "R",
+ "sketch.sides": "ضلع‌ها",
+ "sketch.circum": "محیطی",
+ "sketch.shape.tip": "شکل طرح (A تغییر می‌دهد). مستطیل: دو گوشه. دایره و چندضلعی: مرکز، سپس شعاع. اندازه را تایپ کنید و Enter بزنید تا ثابت شود.",
+ "tool.err.zero_size": "اندازه صفر است: نقطه‌ی دوم را از نقطه‌ی اول دور کنید"
+}

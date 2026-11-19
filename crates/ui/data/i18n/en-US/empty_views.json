@@ -1,0 +1,19 @@
+{
+ "empty.v3d_gpu.title": "3D is unavailable on this graphics adapter",
+ "empty.v3d_gpu.hint": "The model is safe and the plan works. Restart with safe graphics to try 3D again.",
+ "empty.v3d_gpu.action": "Restart with safe graphics",
+ "empty.v3d_loading.title": "Building 3D…",
+ "empty.v3d_loading.pct": "Opening… {pct} %",
+ "empty.plan_hidden.title": "All elements are hidden in this plan",
+ "empty.plan_hidden.hint": "Temporary hide or isolate leaves nothing visible.",
+ "empty.plan_hidden.action": "Show all",
+ "empty.plan_graphics.title": "View graphics hide every category",
+ "empty.plan_graphics.hint": "The category rules of this view leave nothing to show.",
+ "empty.plan_graphics.action": "Open view graphics",
+ "empty.plan_phase.title": "The phase filter hides everything",
+ "empty.plan_phase.hint": "Nothing on this level exists in the phase shown by this view.",
+ "empty.plan_phase.action": "Change phase",
+ "empty.plan_level.title": "No elements on this level",
+ "empty.plan_level.hint": "Other levels of this model have elements.",
+ "empty.plan_level.action": "Go to the level with elements"
+}

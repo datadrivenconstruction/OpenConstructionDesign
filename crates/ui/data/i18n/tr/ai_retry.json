@@ -1,0 +1,7 @@
+{
+ "ai.retry.countdown": "{n} sn içinde yeniden denenecek",
+ "ai.retry.try": "Otomatik deneme {i} / {max}. Aynı istek yeniden gönderilir.",
+ "ai.retry.now": "Şimdi yeniden dene",
+ "ai.retry.gave_up": "{max} otomatik denemeden sonra hâlâ yanıt yok.",
+ "ai.retry.shorten": "İsteği kısalt"
+}

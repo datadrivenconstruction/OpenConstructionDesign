@@ -1,0 +1,16 @@
+{
+ "family_overwrite.ow.title": "Αντικατάσταση τιμών τύπων έργου;",
+ "family_overwrite.ow.body": "Η φόρτωση αντικαθιστά {values} στους τύπους {types}. Τοποθετημένα στιγμιότυπα αυτών των τύπων: {instances}.",
+ "family_overwrite.ow.values": {
+  "one": "# τιμή",
+  "other": "# τιμές"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# τύπος",
+  "other": "# τύποι"
+ },
+ "family_overwrite.ow.list": "Τύποι: {list}",
+ "family_overwrite.ow.more": "και {n} ακόμη",
+ "family_overwrite.ow.back": "Επιστροφή στην επεξεργασία",
+ "family_overwrite.ow.replace": "Αντικατάσταση τιμών"
+}

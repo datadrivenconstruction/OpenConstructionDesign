@@ -1,0 +1,33 @@
+{
+ "cmd.help.licenses": "Licencje open-source",
+ "cmd.help.licenses.desc": "Wyświetla biblioteki open-source użyte w tej kompilacji wraz z licencjami.",
+ "about.product": "DDC Editor",
+ "about.version": "Wersja",
+ "about.build": "Kompilacja",
+ "about.schema": "Schemat modelu",
+ "about.system": "System",
+ "about.gpu": "Adapter grafiki",
+ "about.language": "Język",
+ "about.copy": "Kopiuj informacje o wersji",
+ "about.copy_desc": "Wersja, kompilacja, system i adapter grafiki do zgłoszenia błędu. Bez ścieżek plików.",
+ "about.copied": "Skopiowano informacje o wersji",
+ "about.licenses": "Licencje open-source",
+ "about.licenses_desc": "Biblioteki użyte w tej kompilacji i ich licencje",
+ "about.licenses.open": "Zobacz",
+ "about.licenses.title": "Licencje open-source",
+ "about.licenses.note": "DDC Editor zawiera poniższe biblioteki. Każda pozostaje objęta własną licencją i informacją o prawach autorskich. Pełne teksty licencji: THIRD_PARTY_LICENSES.txt obok aplikacji.",
+ "about.licenses.full": "Pełne teksty licencji",
+ "about.licenses.list": "Lista komponentów",
+ "about.licenses.close": "Zamknij",
+ "about.licenses.col_name": "Komponent",
+ "about.licenses.col_license": "Licencja",
+ "about.licenses.count": {
+  "one": "# komponent",
+  "other": "# komponentów"
+ },
+ "about.licenses.count_of": "{shown} z {total} komponentów",
+ "about.licenses.search_hint": "Szukaj po nazwie lub licencji…",
+ "about.licenses.search_clear": "Wyczyść wyszukiwanie",
+ "about.licenses.none": "Nic nie znaleziono",
+ "about.licenses.none_hint": "Spróbuj części nazwy biblioteki lub licencji, np. MIT."
+}

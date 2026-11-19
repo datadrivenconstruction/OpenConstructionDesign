@@ -1,0 +1,8 @@
+{
+ "cmd.props.param_lock": "매개변수 값 잠금 또는 해제",
+ "locked_values.kept": "잠긴 값 {n}개 유지",
+ "locked_values.locked": "“{name}” 잠김: XLSX 스프레드시트 가져오기, 일괄 편집, AI가 유지함",
+ "locked_values.unlocked": "“{name}” 잠금 해제됨",
+ "locked_values.locked_tip": "잠김: XLSX 스프레드시트 가져오기, 일괄 편집, AI가 이 값을 유지합니다. 클릭하여 잠금 해제 · Ctrl+L",
+ "locked_values.no_row": "속성에서 매개변수 행을 가리킨 뒤 Ctrl+L을 누르세요"
+}

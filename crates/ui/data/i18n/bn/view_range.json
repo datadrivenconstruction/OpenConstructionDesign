@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "ভিউ রেঞ্জ",
+ "view_range.range": "ভিউ রেঞ্জ",
+ "view_range.cut": "কাট প্লেন",
+ "view_range.bottom": "নিচ",
+ "view_range.depth": "ভিউ গভীরতা",
+ "view_range.cut.hint": "লেভেলের উপরে কাট প্লেনের উচ্চতা। এটি অতিক্রম করা উপাদান কাটা অবস্থায় আঁকা হয়।",
+ "view_range.bottom.hint": "লেভেলের সাপেক্ষে রেঞ্জের নিচ। শূন্য বা ঋণাত্মক মান অনুমোদিত।",
+ "view_range.depth.hint": "নিচের থেকে ভিউ কতদূর নিচে দেখে। শূন্য বা বেশি।",
+ "view_range.err.number": "প্রতিটি ঘরে দৈর্ঘ্য লিখুন",
+ "view_range.err.not_finite": "প্রতিটি ঘরে দৈর্ঘ্য লিখুন",
+ "view_range.err.cut_not_above_bottom": "কাট প্লেন অবশ্যই নিচের উপরে হতে হবে",
+ "view_range.err.negative_depth": "ভিউ গভীরতা ঋণাত্মক হতে পারে না",
+ "view_range.err.top_below_cut": "রেঞ্জের উপরের প্রান্ত কাট প্লেনের নিচে হতে পারে না"
+}

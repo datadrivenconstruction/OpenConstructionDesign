@@ -1,0 +1,12 @@
+{
+ "ai_safety.auth.query": "地址中的密钥",
+ "ai_safety.auth.query_name": "地址参数",
+ "ai_safety.need_query_name": "请填写携带密钥的地址参数名称",
+ "ai_safety.apply_unlogged": "已应用，但未能写入更改日志",
+ "ai_safety.audit_unlogged": "无法写入 AI 助手日志",
+ "ai_safety.chat_not_saved": "无法将对话保存到项目中，正在重试。",
+ "ai_safety.clip_clears": "剪贴板将在 30 秒后清空",
+ "ai_safety.copied_clears": "已复制。剪贴板将在 30 秒后清空",
+ "ai_safety.key_session_only": "密钥将保留至应用关闭",
+ "ai.settings.no_data_dir": "此系统不提供应用设置文件夹"
+}

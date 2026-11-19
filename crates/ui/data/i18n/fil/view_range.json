@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "Saklaw ng view",
+ "view_range.range": "Saklaw ng view",
+ "view_range.cut": "Eroplano ng hiwa",
+ "view_range.bottom": "Ibaba",
+ "view_range.depth": "Lalim ng view",
+ "view_range.cut.hint": "Taas ng cut plane sa ibabaw ng level. Ang mga elementong tumatawid dito ay ipinapakitang pinutol.",
+ "view_range.bottom.hint": "Ibabang bahagi ng saklaw, kaugnay ng level. Pinapayagan ang zero o negatibong halaga.",
+ "view_range.depth.hint": "Gaano kalayo ang tinitingnan ng view sa ilalim ng ibaba. Zero o higit pa.",
+ "view_range.err.number": "Maglagay ng haba sa bawat field",
+ "view_range.err.not_finite": "Maglagay ng haba sa bawat field",
+ "view_range.err.cut_not_above_bottom": "Dapat nasa itaas ng ibaba ang cut plane",
+ "view_range.err.negative_depth": "Hindi maaaring negatibo ang lalim ng view",
+ "view_range.err.top_below_cut": "Hindi dapat nasa ibaba ng cut plane ang tuktok ng saklaw"
+}

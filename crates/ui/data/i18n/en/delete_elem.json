@@ -1,0 +1,9 @@
+{
+ "elem.deleted": "Elements deleted: {n}",
+ "elem.deleted_kept": "Elements deleted: {n}; left in place: {k} (panels and elements that can't be deleted)",
+ "elem.not_deleted": "not deleted: {e}",
+ "elem.not_deletable": "This element can't be deleted",
+ "elem.panel": "curtain wall panel",
+ "elem.panel_refused": "A panel is part of its curtain wall and can't be deleted on its own. Select the whole wall to delete it.",
+ "elem.reload_failed": "Deleted, but the view didn't update: {e}"
+}

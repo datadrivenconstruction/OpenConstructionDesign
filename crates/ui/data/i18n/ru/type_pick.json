@@ -1,0 +1,12 @@
+{
+ "type_pick.pick.search": "Поиск по названию или толщине",
+ "type_pick.pick.empty": "Типов не найдено",
+ "type_pick.pick.edit": "Изменить тип…",
+ "type_pick.pick.mixed": "Разные",
+ "type_pick.pick.layers": {
+  "one": "# слой",
+  "few": "# слоя",
+  "many": "# слоёв",
+  "other": "# слоя"
+ }
+}

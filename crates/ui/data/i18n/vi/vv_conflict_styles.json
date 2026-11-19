@@ -1,0 +1,6 @@
+{
+ "vv_conflict.styles.conflict": "Kiểu đối tượng của một danh mục đã chỉnh sửa vừa thay đổi trong mô hình (hoàn tác hoặc cửa sổ khác) trong khi cửa sổ này có chỉnh sửa. Chỉnh sửa của bạn được giữ lại.",
+ "vv_conflict.styles.keep": "Giữ chỉnh sửa của tôi",
+ "vv_conflict.styles.reload": "Tải lại",
+ "vv_conflict.styles.answer_first": "Chọn Giữ chỉnh sửa của tôi hoặc Tải lại trước"
+}

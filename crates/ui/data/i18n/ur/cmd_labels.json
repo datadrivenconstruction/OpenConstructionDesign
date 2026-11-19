@@ -1,0 +1,14 @@
+{
+ "cmd.arch.wall.tile": "دیوار",
+ "cmd.arch.door.tile": "دروازہ",
+ "cmd.arch.window.tile": "کھڑکی",
+ "cmd.arch.floor.tile": "فرش",
+ "cmd.mod.move.tile": "حرکت",
+ "cmd.mod.copy.tile": "کاپی",
+ "cmd.mod.rotate.tile": "گھمائیں",
+ "cmd.mod.mirror.tile": "عکس",
+ "cmd.mod.trim.tile": "کاٹیں",
+ "cmd.mod.delete.tile": "حذف",
+ "cmd.ann.dim.tile": "ڈائمنشن",
+ "cmd.ann.text.tile": "متن"
+}

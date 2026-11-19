@@ -1,0 +1,5 @@
+{
+ "mcp.set.hide": "숨기기",
+ "mcp.set.copy_config": "AI 에이전트 설정 복사",
+ "mcp.set.no_token": "아직 접근 토큰이 없습니다. 먼저 서버를 켜세요."
+}

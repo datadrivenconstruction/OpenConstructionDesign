@@ -1,0 +1,6 @@
+{
+ "imported_prop_edit.remove": "删除属性",
+ "imported_prop_edit.remove.tip": "在一步撤销中从所选的 {n} 个构件中删除该属性；保存时将从 IFC 文件中移除",
+ "imported_prop_edit.done": "已从 {n} 个构件中删除 {key}",
+ "imported_prop_edit.warn.reload": "已完成，但视图未刷新；如显示有误，请重新打开面板或撤销"
+}

@@ -1,0 +1,7 @@
+{
+ "xlsx_alias_ids.ids_written": "Nakakuha ng id ang {n} na bagong row sa pinalitan mong sheet; walang ibang nabago sa workbook.",
+ "xlsx_alias_ids.ids_open": "Bukas ang workbook sa ibang program: hindi naisulat ang mga id ng {n} na bagong row. Isara ito doon at mag-Sync; hindi na muling gagawin ang mga row na ito.",
+ "xlsx_alias_ids.ids_failed": "Hindi naisulat ang mga id ng {n} na bagong row; naiwan ang workbook gaya ng dati. Hindi na muling gagawin ang mga row na ito sa susunod na Sync.",
+ "xlsx_alias_ids.unpaired": "Wala pang id ang {n} na bagong row; natatandaan sila at hindi na muling gagawin.",
+ "xlsx_alias_ids.refused": "Walang nailapat: hindi makakakuha ng id ang mga bagong row sa {sheets} habang binabasa ang pinalitang sheet. Ibalik ang pangalan ng sheet sa karaniwang pangalan (o alisin ang mga row na ito) at mag-Sync muli."
+}

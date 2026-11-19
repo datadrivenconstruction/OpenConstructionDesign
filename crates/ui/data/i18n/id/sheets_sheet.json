@@ -1,0 +1,11 @@
+{
+ "cmd.view.sheet_duplicate": "Duplikat lembar dengan tampilan",
+ "cmd.view.sheet_duplicate_title": "Duplikat lembar (hanya blok judul)",
+ "sheets.dup.menu_views": "Duplikat dengan tampilan",
+ "sheets.dup.menu_title": "Duplikat, hanya blok judul",
+ "sheets.dup.done": "Lembar {number} dibuat dari {src}: {views} tampilan, {sched} jadwal dan legenda. Revisi tidak disalin; lembar belum diterbitkan.",
+ "sheets.dup.none": "Buka lembar untuk menduplikatnya",
+ "sheets.dup.copy": "salinan",
+ "cmd.view.sheet_duplicate.short": "Duplikat dengan tampilan",
+ "cmd.view.sheet_duplicate_title.short": "Duplikat blok judul"
+}

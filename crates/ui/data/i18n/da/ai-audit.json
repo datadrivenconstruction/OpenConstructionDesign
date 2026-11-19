@@ -1,0 +1,22 @@
+{
+ "ai.audit.tokens": "{n} tokens",
+ "ai.audit.filter.all": "Alle",
+ "ai.audit.filter.ai": "AI",
+ "ai.audit.filter.me": "Mig",
+ "ai.audit.search": "Søg i ændringer",
+ "ai.audit.search.clear": "Ryd søgning",
+ "ai.audit.show_all": "Vis alle",
+ "ai.audit.empty.hint": "Ændringer udarbejdet eller anvendt af en model eller en agent vises her, hver med en vej tilbage.",
+ "ai.audit.no_match": "Ingen ændringer matcher filteret.",
+ "ai.audit.show.tip": "Vælg og vis de elementer, som denne ændring berørte",
+ "ai.audit.revert.ask": "Tag »{what}« tilbage? {change}.",
+ "ai.audit.revert.elements": {
+  "one": "# elementændring",
+  "other": "# elementændringer"
+ },
+ "ai.audit.revert.keeps": "Nyere ændringer bliver. Tilbagerulningen er ét fortrydelsestrin.",
+ "ai.audit.cancel": "Annuller",
+ "ai.audit.toast.reverted": "Tilbagerullet: {what}",
+ "ai.audit.toast.undone": "Fortrudt: {what}",
+ "ai.audit.redo": "Gentag"
+}

@@ -1,0 +1,5 @@
+{
+ "start_recent.unavailable": "当前不可用（驱动器或网络位置无响应）：{path}",
+ "start_recent.unavailable_short": "当前不可用",
+ "start_recent.retry": "重试"
+}

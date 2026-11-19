@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "kustom",
+ "draw_quality.custom.tip": "{name}: entri proyek ini",
+ "draw_quality.custom_note": "Entri bertanda kustom milik proyek ini.",
+ "draw_quality.unsaved.lib_body": "Simpan ke pustaka, atau buang?",
+ "draw_quality.unsaved.styles_body": "Terapkan ke tampilan, atau buang?",
+ "draw_quality.unsaved.both_body": "Terapkan, atau buang?",
+ "draw_quality.halftone": "Setengah nada {category}",
+ "draw_quality.styles.name": "Gaya garis",
+ "draw_quality.styles.other_level": "Suntingan gaya belum disimpan pada level {level}: terapkan atau kembalikan untuk mengedit level ini."
+}

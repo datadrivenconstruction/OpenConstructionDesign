@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "{key} er reservert ({why}) og kan ikke tilordnes på nytt",
+ "quick.keys.res_copy": "kopier",
+ "quick.keys.res_paste": "lim inn",
+ "quick.keys.res_cut": "klipp ut",
+ "quick.keys.res_undo": "angre / gjør om",
+ "quick.keys.res_save": "lagre",
+ "quick.keys.res_palette": "kommandosøk",
+ "quick.keys.reserved_conflict": "{key} brukes allerede av “{cmd}”. Esc beholder den der.",
+ "quick.keys.reserved_swap": "Bytt",
+ "quick.keys.reserved_take": "Ta den",
+ "quick.keys.reserved_keep": "Behold",
+ "quick.keys.reserved_os": "Tatt av systemet:"
+}

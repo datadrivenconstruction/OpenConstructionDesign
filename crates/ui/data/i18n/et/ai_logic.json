@@ -1,0 +1,6 @@
+{
+ "ai_toast.toast_not_refreshed": "Rakendatud tagasivõtu sammuna {n} (Ctrl+Z võtab selle tagasi), kuid vaadet ei värskendatud. Laadi vaade uuesti.",
+ "ai.optx.reload_failed": "Variant „{name}” on rakendatud ja salvestatud, kuid vaadet ei laaditud uuesti: {e}",
+ "ai.cmp.stale": "Aegunud",
+ "ai.cmp.stale_tip": "See variant koostati mudeli vanema oleku põhjal. Rakendamiseks genereeri see uuesti."
+}

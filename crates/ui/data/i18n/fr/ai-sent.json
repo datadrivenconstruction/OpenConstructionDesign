@@ -1,0 +1,8 @@
+{
+ "ai_sent.summary": "Données du projet dans cette requête : {messages} messages, {tools} résultats d'outils, {images} images",
+ "ai_sent.copy": "Copier",
+ "ai_sent.filter": "Rechercher dans les requêtes envoyées",
+ "ai_sent.no_match": "Aucune requête ne correspond.",
+ "ai_sent.instructions": "Instructions et outils",
+ "ai_sent.local_note": "Conservé uniquement sur cet ordinateur, pour cette session. Les clés et mots de passe ne sont jamais affichés."
+}

@@ -1,0 +1,9 @@
+{
+ "tool.room": "Xona",
+ "tool.room.name": "Xona",
+ "room_tool.room.name": "Nomi",
+ "hint.room.place": "Yopiq devor halqasi ichiga bosing — xona yaratiladi · Esc — chiqish",
+ "tool.err.room_open": "Maydon yopiq emas: devor halqasini yoping yoki xona ajratgich qo'shing",
+ "tool.err.room_check": "Bu qavatning xonalarini tekshirib bo'lmadi",
+ "tool.err.room_exists": "Bu halqada allaqachon xona bor"
+}

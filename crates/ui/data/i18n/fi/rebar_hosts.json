@@ -1,0 +1,40 @@
+{
+ "rebar_hosts.hosts": "Isännät: {list}",
+ "rebar_hosts.kind.column": "Pilari",
+ "rebar_hosts.kind.beam": "Palkki",
+ "rebar_hosts.kind.wall": "Seinä",
+ "rebar_hosts.kind.slab": "Laatta",
+ "rebar_hosts.kind.footing": "Perustus",
+ "rebar_hosts.kind.raft": "Perustuslaatta",
+ "rebar_hosts.n.column": {
+  "one": "# pilari",
+  "other": "# pilaria"
+ },
+ "rebar_hosts.n.beam": {
+  "one": "# palkki",
+  "other": "# palkkia"
+ },
+ "rebar_hosts.n.wall": {
+  "one": "# seinä",
+  "other": "# seinää"
+ },
+ "rebar_hosts.n.slab": {
+  "one": "# laatta",
+  "other": "# laattaa"
+ },
+ "rebar_hosts.n.footing": {
+  "one": "# perustus",
+  "other": "# perustusta"
+ },
+ "rebar_hosts.n.raft": {
+  "one": "# perustuslaatta",
+  "other": "# perustuslaattaa"
+ },
+ "rebar_hosts.mixed_note": "Pilarit ja palkit saavat teräkset ja jousilenkit; seinät, laatat ja perustukset saavat verkon. Valitse yksi ryhmä lisätäksesi raudoitteen.",
+ "rebar_hosts.why.mixed": "Valinta sekoittaa pilareita tai palkkeja seiniin, laattoihin tai perustuksiin. Valitse yksi ryhmä.",
+ "rebar_hosts.why.area_linear": "Verkko menee seinille, laatoille ja perustuksille, ei pilareille tai palkeille.",
+ "rebar_hosts.why.bars_plate": "Pituus- ja jousiteräkset menevät pilareille ja palkeille, ei seinille, laatoille tai perustuksille.",
+ "rebar_hosts.why.no_common_face": "Valituilla isännillä ei ole yhteistä suojapintaa. Valitse saman lajin isännät.",
+ "rebar_hosts.why.no_type": "Valitse teräksen tyyppi.",
+ "rebar_hosts.kind_type": "{kind} · {type}"
+}

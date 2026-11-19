@@ -1,0 +1,18 @@
+{
+ "family_overwrite.ow.title": "להחליף ערכי סוגים בפרויקט?",
+ "family_overwrite.ow.body": "הטעינה מחליפה {values} ב-{types}. מופעים מוצבים של סוגים אלה: {instances}.",
+ "family_overwrite.ow.values": {
+  "one": "# ערך",
+  "two": "# ערכים",
+  "other": "# ערכים"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# סוג",
+  "two": "# סוגים",
+  "other": "# סוגים"
+ },
+ "family_overwrite.ow.list": "סוגים: {list}",
+ "family_overwrite.ow.more": "ועוד {n}",
+ "family_overwrite.ow.back": "חזרה לעריכה",
+ "family_overwrite.ow.replace": "החלף ערכים"
+}

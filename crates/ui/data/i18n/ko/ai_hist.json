@@ -1,0 +1,14 @@
+{
+ "ai.hist.badge": "AI",
+ "ai.hist.untitled": "AI 변경",
+ "ai.hist.tip": "{title}\n적용한 사람: {actor}\nAI 모델: {model}",
+ "ai.hist.why": "이유: {why}",
+ "ai.hist.reverted": "되돌려짐",
+ "ai.hist.revert_one": "이 AI 배치 되돌리기",
+ "ai.revert.done": "AI 변경 되돌림: {n}. 실행 취소하면 다시 돌아옵니다.",
+ "ai.revert.empty": "되돌릴 AI 변경이 없습니다",
+ "ai.revert.not_ai": "이 단계는 AI 변경이 아닙니다",
+ "ai.revert.already": "이 AI 변경은 이미 되돌려졌습니다",
+ "ai.revert.opaque": "되돌리지 않음: 이 AI 변경은 이후 작업과 안전하게 분리할 수 없습니다. 아무것도 바뀌지 않았습니다.",
+ "ai.revert.failed": "되돌리기 실패: {e}"
+}

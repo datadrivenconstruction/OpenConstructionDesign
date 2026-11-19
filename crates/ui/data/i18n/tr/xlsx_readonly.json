@@ -1,0 +1,6 @@
+{
+ "xlsx_readonly.read_only": "Çalışma kitabı salt okunur (dosya özelliği veya klasör izni). Kopyaya aktarın ya da dosya özelliklerinde Salt okunur seçeneğini kaldırıp yeniden deneyin.",
+ "xlsx_readonly.export_copy": "Kopyaya aktar",
+ "xlsx_readonly.no_copy_name": "Çalışma kitabının yanında kopya için boş bir ad yok.",
+ "xlsx_readonly.copied": "Çalışma kitabı olduğu gibi bırakıldı. Yanına yenilenmiş bir kopya yazıldı ve şimdi bağlı: {path}"
+}

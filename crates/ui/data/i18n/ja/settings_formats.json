@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "ブックを書き出した後の動作",
+ "settings.area_decimals_desc": "面積の小数点以下の桁数",
+ "settings.volume_decimals_desc": "体積の小数点以下の桁数",
+ "settings.frac_desc": "ヤードポンド法の長さで扱う最小の分数単位",
+ "settings.small_area_desc": "1 平方フィート未満の面積を平方インチで表示します",
+ "settings.sample_desc": "現在の設定での数値の表示例",
+ "autosave.title_desc": "開いているプロジェクトの復旧用コピーを保持します",
+ "autosave.interval_desc": "復旧用コピーを作成する間隔",
+ "autosave.keep_desc": "古い復旧用コピーは削除されます",
+ "autosave.folder_desc": "空欄の場合は既定のフォルダ",
+ "autosave.remind_desc": "まだファイルのないプロジェクトを保存するための通知",
+ "settings.backend_desc": "使用中のグラフィックアダプタ",
+ "settings.news_desc": "このバージョンの変更点",
+ "settings.assoc_default_desc": "モデルファイルの既定のアプリとしてこのアプリを設定します",
+ "settings.data_dir_desc": "キャッシュ、復旧用コピー、ログはここに保存されます。"
+}

@@ -1,0 +1,6 @@
+{
+ "delsafe.ring.opening_shape": "개구부 외곽선이 자기 자신과 교차하거나 무너집니다",
+ "delsafe.ring.opening_boundary": "개구부가 바깥 경계와 교차하거나 닿습니다",
+ "delsafe.ring.openings_overlap": "개구부끼리 겹치거나 닿습니다",
+ "xl.msg.delsafe_instance_param_on_types": "매개변수 '{}'은(는) 인스턴스 매개변수입니다. 요소 시트에서 편집하세요. 적용되지 않음"
+}

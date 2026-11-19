@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "Legend",
+ "legend.legend.new_hint": "Uue legendi nimi",
+ "legend.legend.delete_tip": "Kustuta legend",
+ "legend.legend.delete_placed": "Kustuta legend (paigutatud: {sheets})",
+ "legend.legend.deleted": "Legend kustutati: {name}",
+ "legend.legend.no_rows": "Ridu veel pole. Lisa üks või võta praeguse vaate stiilid",
+ "legend.legend.replace_q": "Kas asendada {n} rida selle vaate stiilidega?",
+ "legend.legend.replace": "Asenda",
+ "legend.legend.keep": "Säilita read",
+ "legend.col.swatch": "Värvinäidis",
+ "legend.col.value": "Väärtus",
+ "legend.col.label": "Silt"
+}

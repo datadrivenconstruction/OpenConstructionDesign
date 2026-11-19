@@ -1,0 +1,13 @@
+{
+ "cmd.arch.wall_pick": "Ściana po linii",
+ "cmd.arch.wall_pick.desc": "Umieszcza ścianę na wskazanej linii rysunku na bieżącym poziomie. F przełącza oś lub lico na linii, Tab bierze połączony ciąg. Każde wskazanie to jeden krok cofania. Działa także dla ścian osłonowych.",
+ "hint.wall_pick.center": "Ściana po linii: wskaż linię rysunku · oś na linii · F lico · Tab ciąg · Esc wyjście",
+ "hint.wall_pick.face": "Ściana po linii: wskaż linię rysunku · lico na linii, strona kursora · F oś · Tab ciąg · Esc wyjście",
+ "hint.wall_pick.center_chain": "Ściana po linii: wskaż linię, aby wziąć jej ciąg · oś na linii · F lico · Tab jedna linia",
+ "hint.wall_pick.face_chain": "Ściana po linii: wskaż linię, aby wziąć jej ciąg · lico na linii · F oś · Tab jedna linia",
+ "wall_pick.st.start": "Wskaż linię rysunku. F: oś lub lico, Tab: połączony ciąg",
+ "wall_pick.st.no_lines": "Brak widocznych linii rysunku na tym poziomie",
+ "wall_pick.st.miss": "Tu nie ma linii rysunku",
+ "wall_pick.st.on_wall": "Ta linia jest już pod ścianą {id}",
+ "wall_pick.st.tight": "Przesunięcie lica się nie mieści: odcinek ciągu jest krótszy niż grubość ściany"
+}

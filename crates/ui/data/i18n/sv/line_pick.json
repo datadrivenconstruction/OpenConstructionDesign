@@ -1,0 +1,22 @@
+{
+ "cmd.arch.grid_pick": "Rutnät efter linje",
+ "cmd.arch.grid_pick.desc": "Gör ett rutnät exakt längs en vald ritlinje på aktuell nivå; namnen fortsätter serien. Tab tar alla parallella linjer på samma ritlager samtidigt. Varje val är ett ångra-steg.",
+ "cmd.struct.beam_pick": "Balk efter linje",
+ "cmd.struct.beam_pick.desc": "Placerar en balk av aktuell typ på aktiv nivå längs en vald ritlinje. Tab tar den anslutna kedjan. Varje val är ett ångra-steg.",
+ "hint.grid_pick.one": "Rutnät efter linje: välj en ritlinje · Tab alla parallella linjer på dess lager · Esc avslutar",
+ "hint.grid_pick.more": "Rutnät efter linje: välj en linje för att ta alla parallella linjer på dess lager · Tab en linje · Esc avaktiverar",
+ "hint.beam_pick.one": "Balk efter linje: välj en ritlinje · Tab anslutna kedjan · Esc avslutar",
+ "hint.beam_pick.more": "Balk efter linje: välj en linje för att ta dess kedja · Tab en linje · Esc avaktiverar",
+ "line_pick.st.start_grid": "Välj en ritlinje. Tab: alla parallella linjer på dess lager",
+ "line_pick.st.start_beam": "Välj en ritlinje för en {type}-balk. Tab: anslutna kedjan",
+ "line_pick.st.grid_done": "Rutnät {name} tillagt",
+ "line_pick.st.grids_done": "{n} rutnät tillagda: {first} — {last}",
+ "line_pick.st.beam_done": "Balk {type} tillagd",
+ "line_pick.st.beams_done": "{n} balkar {type} tillagda",
+ "line_pick.st.on_grid": "Den här linjen har redan rutnät {name}",
+ "line_pick.st.on_beam": "Den här linjen har redan balk {id}",
+ "line_pick.st.no_layer": "Ritlagren för linjerna är inte kända än, försök igen",
+ "line_pick.st.no_beam_type": "Ingen balkprofil i katalogen",
+ "line_pick.st.reload_warn": "Skapad, men vyn kunde inte laddas om: {err}",
+ "line_pick.st.failed": "Inte skapad: {err}"
+}

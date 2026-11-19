@@ -1,0 +1,6 @@
+{
+ "geom.length": "Довжина",
+ "sched.cat.room_seps": "Роздільники приміщень",
+ "room.err.point_leave": "Приміщення {n}: точка вийшла б за межі",
+ "room.err.point_taken": "Приміщення {n}: точка потрапила б у приміщення {other}"
+}

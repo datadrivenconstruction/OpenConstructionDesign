@@ -1,0 +1,8 @@
+{
+ "cmd.props.param_lock": "Lukusta või ava parameetri väärtus",
+ "locked_values.kept": "{n} lukustatud väärtust jäeti alles",
+ "locked_values.locked": "“{name}” lukustatud: XLSX-tabeli import, massmuutmine ja AI jätavad selle alles",
+ "locked_values.unlocked": "“{name}” lukk avatud",
+ "locked_values.locked_tip": "Lukustatud: XLSX-tabeli import, massmuutmine ja AI jätavad selle väärtuse alles. Klõpsa, et avada lukk  ·  Ctrl+L",
+ "locked_values.no_row": "Osuta omaduste paneelis parameetri reale ja vajuta Ctrl+L"
+}

@@ -1,0 +1,16 @@
+{
+ "xlsx_recover.title": "リンクされたブックへの書き出しが中断されました",
+ "xlsx_recover.both": "以前のブックを脇に移動した後、新しいブックを配置する前に書き出しが停止しました。何も失われていません: 新しいブックは {part} に完成しており、以前のものは {bak} に残っています。",
+ "xlsx_recover.part_only": "新しいブックを配置する前に書き出しが停止しました。{part} に完成しています。",
+ "xlsx_recover.bak_only": "新しいブックの準備が整う前に書き出しが停止しました。以前のブックは {bak} に残っています。",
+ "xlsx_recover.finish": "中断された書き出しを完了する",
+ "xlsx_recover.restore": "以前のブックを復元する",
+ "xlsx_recover.finished": "中断された書き出しを完了しました: 新しいブックを配置しました。",
+ "xlsx_recover.finished_kept": "中断された書き出しを完了しました: 新しいブックを配置し、以前のものは {bak} に残しました。",
+ "xlsx_recover.restored": "以前のブックを元の場所に戻しました。",
+ "xlsx_recover.restore_failed": "以前のブックを戻せませんでした ({err})。{path} に残っています。",
+ "xlsx_recover.not_restored": "新しいブックを配置できず、以前のブックも戻せませんでした。何も失われていません: 以前のブックは {path} に残っています。同期で完了または復元を選べます。",
+ "xlsx_recover.finish_failed": "新しいブックを配置できませんでした ({err})。{path} に残ります。",
+ "xlsx_recover.dest_back": "{path} にブックが戻っています: 何も移動していません。",
+ "xlsx_recover.nothing": "中断された書き出しで移動するものは残っていません。"
+}

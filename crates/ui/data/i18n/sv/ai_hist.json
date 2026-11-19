@@ -1,0 +1,14 @@
+{
+ "ai.hist.badge": "AI",
+ "ai.hist.untitled": "AI-ändringar",
+ "ai.hist.tip": "{title}\nTillämpad av: {actor}\nAI-modell: {model}",
+ "ai.hist.why": "Varför: {why}",
+ "ai.hist.reverted": "återställd",
+ "ai.hist.revert_one": "Återställ denna AI-batch",
+ "ai.revert.done": "AI-ändringar återställda: {n}. Ångra för att ta tillbaka dem.",
+ "ai.revert.empty": "Det finns inga AI-ändringar att återställa",
+ "ai.revert.not_ai": "Det här steget är inte en AI-ändring",
+ "ai.revert.already": "Dessa AI-ändringar är redan återställda",
+ "ai.revert.opaque": "Inte återställd: dessa AI-ändringar kan inte säkert skiljas från senare arbete. Inget ändrades.",
+ "ai.revert.failed": "Återställningen misslyckades: {e}"
+}

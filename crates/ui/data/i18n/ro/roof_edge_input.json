@@ -1,0 +1,25 @@
+{
+ "roof_edge.err.number": "Introdu un număr",
+ "roof_edge.err.positive": "Trebuie să fie mai mare decât zero",
+ "roof_edge.err.nonneg": "Nu trebuie să fie negativ",
+ "roof_edge.err.max": "Nu trebuie să depășească {max}",
+ "roof_edge.list.empty_hint": "Adaugă fascii, jgheaburi, sofite sau luminatoare cu comenzile de acoperiș",
+ "roof_edge.edit_tip": "Editează proprietățile",
+ "roof_edge.delete_tip": "Șterge",
+ "roof_edge.pe.del_tip": "Elimină acest punct (o secțiune păstrează cel puțin 3)",
+ "roof_edge.pe.up_tip": "Mută acest punct în sus",
+ "roof_edge.confirm_edge": "Ștergi {name}? Ctrl+Z îl readuce.",
+ "roof_edge.confirm_profile": "Ștergi profilul {name}? Ctrl+Z îl readuce.",
+ "roof_edge.deleted_one": "Șters {name}",
+ "roof_edge.deleted_n": {
+  "one": "Șters # element",
+  "few": "Șterse # elemente",
+  "other": "Șterse # de elemente"
+ },
+ "roof_edge.profile_deleted": "Profil șters",
+ "roof_edge.profile_in_use": {
+  "one": "Folosit de # element de margine: ștergeți-l sau modificați-l mai întâi",
+  "few": "Folosit de # elemente de margine: ștergeți-le sau modificați-le mai întâi",
+  "other": "Folosit de # de elemente de margine: ștergeți-le sau modificați-le mai întâi"
+ }
+}

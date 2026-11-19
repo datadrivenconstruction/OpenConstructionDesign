@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "Оруулга хоосон байна.",
+ "units.err.not_number": "{pos} байрлалд тоо биш байна.",
+ "units.err.unknown_unit": "Үл мэдэгдэх нэгж: {unit}.",
+ "units.err.non_positive": "Урт тэгээс их байх ёстой.",
+ "units.err.too_large": "Урт {max} м-ээс хэтрэх ёсгүй.",
+ "units.err.bad_angle": "Өнцөг нь градусын тоо байх ёстой.",
+ "units.err.unknown_name": "Үл мэдэгдэх нэр: {name}. Утга хадгалагдлаа.",
+ "units.err.cycle": "{name} дээр томьёоны давталт. Утга хадгалагдлаа.",
+ "units.err.bad_expr": "{pos} байрлалд илэрхийллийг уншиж чадсангүй. Утга хадгалагдлаа.",
+ "units.err.div_zero": "{pos} байрлалд тэгт хуваалт. Утга хадгалагдлаа.",
+ "units.err.invalid": "Буруу тоо.",
+ "units.err.kept": "Өөрчлөгдөөгүй: {reason}"
+}

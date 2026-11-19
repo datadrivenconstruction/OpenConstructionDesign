@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "النقطة",
+ "trial.field.distance": "المسافة",
+ "trial.field.target": "العنصر",
+ "trial.refused": "{field}: {reason}. غيّره للتطبيق",
+ "trial.preview_off": "المعاينة متوقفة: النموذج كبير جدًا"
+}

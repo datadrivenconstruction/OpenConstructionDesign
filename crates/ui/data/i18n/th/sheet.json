@@ -1,0 +1,18 @@
+{
+ "cmd.help.shortcuts": "รายการคีย์ลัด",
+ "cmd.help.shortcuts.desc": "แสดงคีย์ลัดทั้งหมดตามที่ตั้งไว้ตอนนี้ แยกตามบริบท กด ? ที่ใดก็ได้นอกช่องข้อความ",
+ "sheet.title": "คีย์ลัด",
+ "sheet.filter": "กรองตามคำสั่งหรือคีย์",
+ "sheet.filter_label": "กรองคีย์ลัด",
+ "sheet.customize": "ปรับแต่ง…",
+ "sheet.close": "ปิด",
+ "sheet.esc_close": "เพื่อปิด",
+ "sheet.none": "ไม่มีคีย์ลัดที่ตรงกัน",
+ "sheet.none_hint": "ลองคำหรือคีย์อื่น",
+ "sheet.sec.general": "ทั่วไป",
+ "sheet.sec.plan": "แปลน",
+ "sheet.sec.view3d": "3D",
+ "sheet.sec.schedule": "ตาราง",
+ "sheet.sec.sheets": "แผ่นพิมพ์",
+ "sheet.sec.ai": "AI"
+}

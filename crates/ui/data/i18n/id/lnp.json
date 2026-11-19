@@ -1,0 +1,14 @@
+{
+ "lnp.openings_refused": "{n} bukaan tidak diubah ({why})",
+ "lnp.params_changed": "nilai diubah: {n}",
+ "lnp.params_same": "Tidak ada perubahan: {u} elemen sudah memiliki nilai ini",
+ "lnp.params_tip": "Enter menerapkan nilai ke setiap elemen terpilih; Esc membiarkannya",
+ "lnp.locked_hint": "Nilai terkunci dipertahankan: {n}",
+ "lnp.panels_one": "Panel diedit satu per satu",
+ "lnp.keep_first": "Simpan yang pertama",
+ "lnp.keep_first_tip": "Pilih hanya panel pertama untuk mengeditnya",
+ "lnp.clip_from_wall": "Parameter disalin dari dinding #{id}",
+ "lnp.clip_from_opening": "Parameter disalin dari bukaan #{id}",
+ "lnp.match_from": "Properti #{id} diterapkan ke {n} elemen",
+ "lnp.why_at": "#{id}: {e}"
+}

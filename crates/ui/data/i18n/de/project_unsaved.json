@@ -1,0 +1,7 @@
+{
+ "project_unsaved.unsaved.model": "Modelländerungen sind nicht gespeichert.",
+ "project_unsaved.unsaved.drawings": {
+  "one": "# platzierte Zeichnung ist nicht im Projekt gespeichert: ihre Änderungen gehen verloren.",
+  "other": "# platzierte Zeichnungen sind nicht im Projekt gespeichert: ihre Änderungen gehen verloren."
+ }
+}

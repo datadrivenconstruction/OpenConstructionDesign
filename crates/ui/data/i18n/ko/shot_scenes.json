@@ -1,0 +1,9 @@
+{
+ "shot_scenes.site": "대지",
+ "shot_scenes.lawn": "잔디",
+ "shot_scenes.pad": "패드",
+ "shot_scenes.block": "블록",
+ "shot_scenes.void": "보이드",
+ "shot_scenes.tower": "타워",
+ "shot_scenes.wall_void": "벽 보이드"
+}

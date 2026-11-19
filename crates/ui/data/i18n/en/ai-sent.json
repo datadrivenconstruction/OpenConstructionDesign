@@ -1,0 +1,8 @@
+{
+ "ai_sent.summary": "Project data in this request: {messages} messages, {tools} tool results, {images} images",
+ "ai_sent.copy": "Copy",
+ "ai_sent.filter": "Find in sent requests",
+ "ai_sent.no_match": "No request matches.",
+ "ai_sent.instructions": "Instructions and tools",
+ "ai_sent.local_note": "Kept on this computer only, for this session. Keys and passwords are never shown."
+}

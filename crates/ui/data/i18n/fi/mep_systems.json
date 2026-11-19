@@ -1,0 +1,21 @@
+{
+ "mep.row.system": "Järjestelmä",
+ "mep.row.elevation": "Alkupään korkeusasema",
+ "mep.row.slope": "Kaltevuus",
+ "mep.row.material": "Materiaali",
+ "mep.row.dev_elevation": "Korkeusasema",
+ "mep.row.no_system": "Tätä järjestelmää ei enää ole. Valitse toinen.",
+ "mep.row.no_points": "Reitillä ei ole pisteitä, joten sillä ei ole korkeusasemaa.",
+ "mep.row.system_domain": "Järjestelmä {system} ei hyväksy tämän reitin tyyppiä ({kind}). Valitse saman verkkotyypin järjestelmä.",
+ "mep.row.material_pipes": "Materiaali koskee vain putkia; tämä reitti on tyyppiä {kind}.",
+ "mep.row.no_catalog": "Materiaalilla ei ole tämän reitin kokoja luettelossa.",
+ "mep.mat.none": "Ei asetettu",
+ "mep.mat.steel": "Teräs",
+ "mep.mat.copper": "Kupari",
+ "mep.mat.pvc": "PVC",
+ "mep.mat.pp": "Polypropeeni",
+ "mep.err.follow_blocked": "Kytketty reitti ei voi seurata tätä muutosta: sen haaralle ei ole tilaa uudessa kohdassa. Siirrä laitetta vähemmän tai irrota reitti ensin.",
+ "mep.err.follow_slope": "Kytketyllä reitillä on kaltevuus, jota ei voi säilyttää uudessa kohdassa: se laskisi alle järjestelmänsä pienimmän kaltevuuden. Siirrä laitetta vähemmän korkeussuunnassa tai irrota reitti ensin.",
+ "mep.err.follow_port_lost": "Liitin, jonka päällä tämä reitti oli, ei ole enää muokkauksen jälkeen olemassa. Siirrä reittiä ensin pois tai säilytä laitetyyppi.",
+ "mep.err.follow_device": "Tämä reitti päättyy laitteen liittimeen eikä voi irrota siitä. Siirrä laitetta sen sijaan tai irrota reitti ensin."
+}

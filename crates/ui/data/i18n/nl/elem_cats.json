@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "Een massa kan niet worden gedraaid of gespiegeld: haar vormgeschiedenis heeft geen gedraaide stap. Verplaats of kopieer hem, of teken hem opnieuw in de nieuwe richting.",
+ "sched_cats.col.name": "Naam",
+ "sched_cats.col.material": "Materiaal",
+ "sched_cats.col.void": "Uitsparing",
+ "sched_cats.col.inplace": "Ter plaatse gestort",
+ "sched_cats.col.volume": "Netto volume",
+ "sched_cats.col.area": "Oppervlakte",
+ "sched_cats.col.floor_area": "Vloeroppervlakte",
+ "sched_cats.col.thickness": "Dikte",
+ "sched_cats.col.points": "Punten",
+ "elem.toposolid.points": "Meetpunten",
+ "elem.toposolid.count": "Punten",
+ "elem.toposolid.low": "Laagste",
+ "elem.toposolid.high": "Hoogste",
+ "elem.toposolid.edit": "Punten bewerken",
+ "elem.toposolid.edit_tip": "Selecteer, sleep en stel de hoogte in van meetpunten op de plattegrond",
+ "elem.toposolid.pick_hint": "Klik op een punt in de plattegrond om het te selecteren. Klik nogmaals om toe te voegen of te verwijderen.",
+ "elem.toposolid.z": "Hoogte ({n})",
+ "elem.toposolid.mixed": "De geselecteerde punten verschillen; een nieuwe waarde stelt ze allemaal in.",
+ "elem.toposolid.edit_help": "Sleep een punt om het te verplaatsen. Typ een waarde en druk op Enter om de hoogte in te stellen. Backspace verwijdert de geselecteerde punten, Esc sluit af.",
+ "elem.toposolid.done": "Gereed"
+}

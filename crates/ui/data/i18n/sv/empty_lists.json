@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "Rita vägg",
+ "empty.totals.action": "Rita vägg",
+ "empty.schedule.action": "Lägg till fält",
+ "empty.schedule_filtered.action": "Rensa filter",
+ "empty.library.action": "Återställ sökningen",
+ "empty.library.load": "Läs in familj",
+ "empty.schedule_fields.title": "Inga fält visas",
+ "empty.schedule_fields.action": "Lägg till fält",
+ "empty.schedule_fields.hint": "Slå på minst ett fält för att se tabellen."
+}

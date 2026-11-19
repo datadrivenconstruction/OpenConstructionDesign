@@ -1,0 +1,23 @@
+{
+ "roof_edge.err.number": "একটি সংখ্যা লিখুন",
+ "roof_edge.err.positive": "শূন্যের বেশি হতে হবে",
+ "roof_edge.err.nonneg": "ঋণাত্মক হবে না",
+ "roof_edge.err.max": "{max}-এর বেশি হবে না",
+ "roof_edge.list.empty_hint": "ছাদের কমান্ড দিয়ে ফেসিয়া, গাটার, সফিট বা স্কাইলাইট যোগ করুন",
+ "roof_edge.edit_tip": "বৈশিষ্ট্য সম্পাদনা করুন",
+ "roof_edge.delete_tip": "মুছুন",
+ "roof_edge.pe.del_tip": "এই বিন্দু সরান (একটি সেকশনে অন্তত ৩টি থাকে)",
+ "roof_edge.pe.up_tip": "এই বিন্দু উপরে সরান",
+ "roof_edge.confirm_edge": "{name} মুছবেন? Ctrl+Z দিলে ফিরবে।",
+ "roof_edge.confirm_profile": "প্রোফাইল {name} মুছবেন? Ctrl+Z দিলে ফিরবে।",
+ "roof_edge.deleted_one": "{name} মুছেছে",
+ "roof_edge.deleted_n": {
+  "one": "# টি উপাদান মুছেছে",
+  "other": "# টি উপাদান মুছেছে"
+ },
+ "roof_edge.profile_deleted": "প্রোফাইল মুছেছে",
+ "roof_edge.profile_in_use": {
+  "one": "# টি এজ উপাদান এটি ব্যবহার করছে: আগে মুছুন বা বদলান",
+  "other": "# টি এজ উপাদান এগুলো ব্যবহার করছে: আগে মুছুন বা বদলান"
+ }
+}

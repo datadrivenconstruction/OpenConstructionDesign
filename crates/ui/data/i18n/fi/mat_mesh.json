@@ -1,0 +1,13 @@
+{
+ "mat_mesh.mesh.title": "Tuodut verkot",
+ "mat_mesh.mesh.none_selected": "Valitse 3D-näkymästä tuodut verkot antaaksesi niille tämän materiaalin.",
+ "mat_mesh.mesh.current": "Ensimmäinen valittu verkko: {material}",
+ "mat_mesh.mesh.current_none": "Ensimmäisellä valitulla verkolla ei ole materiaalia.",
+ "mat_mesh.mesh.assign": "Määritä {n} valittuun",
+ "mat_mesh.mesh.assign_tip": "Realistinen-tyyli näyttää tämän materiaalin tekstuurin valituissa verkoissa",
+ "mat_mesh.mesh.assign_cat": "Määritä luokkaan {category}",
+ "mat_mesh.mesh.assign_cat_tip": "Jokaiselle tuodulle verkolle tässä luokassa, jolla ei ole omaa materiaalia",
+ "mat_mesh.mesh.clear": "Tyhjennä valitut",
+ "mat_mesh.mesh.clear_tip": "Valitut verkot palaavat luokkansa materiaaliin tai tavalliseen väriin",
+ "mat_mesh.mesh.clear_cat": "Tyhjennä luokka"
+}

@@ -1,0 +1,13 @@
+{
+ "level.err_open": "لم يُفتح المستوى: {e}",
+ "level.need_name": "المستوى يحتاج إلى اسم وارتفاع",
+ "level.created": "تم إنشاء المستوى \"{name}\"",
+ "level.err_create": "لم يُنشأ المستوى: {e}",
+ "level.err_edit": "لم يتغيّر المستوى: {e}",
+ "level.edited": "تم تغيير المستوى \"{name}\"",
+ "level.edited_stale": "تم تغيير المستوى \"{name}\"، ولم يُحدَّث العرض: {e}",
+ "level.last": "لا يمكن حذف المستوى الأخير",
+ "level.deleted": "تم حذف المستوى",
+ "level.not_empty": "المستوى غير فارغ: احذف عناصره أولاً",
+ "level.err_delete": "لم يُحذف المستوى: {e}"
+}

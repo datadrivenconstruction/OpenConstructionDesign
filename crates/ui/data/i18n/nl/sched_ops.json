@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "waarde moet groter zijn dan nul",
+ "sched_ops.not_number": "geen getal",
+ "sched_ops.no_host": "geen hostwand",
+ "sched_ops.wall_length": "deze wandlengte kan zo niet worden ingesteld",
+ "sched_ops.no_wall": "geen zodanige wand",
+ "sched_ops.no_opening": "geen zodanige opening",
+ "sched_ops.no_curtain": "geen zodanige gordijngevel",
+ "sched_ops.no_panel": "geen zodanig paneel",
+ "sched_ops.no_slab": "geen zodanige vloer",
+ "sched_ops.no_room": "geen zodanige ruimte",
+ "sched_ops.slope_range": "helling buiten bereik",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

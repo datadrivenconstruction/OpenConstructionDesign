@@ -1,0 +1,23 @@
+{
+ "params_list.n_params": {
+  "one": "# paraméter",
+  "other": "# paraméter"
+ },
+ "params_list.n_values": {
+  "one": "# érték",
+  "other": "# érték"
+ },
+ "params_list.n_elements": {
+  "one": "# elem",
+  "other": "# elem"
+ },
+ "params_list.exported": "{params} exportálva ide: {file}",
+ "params_list.export_failed": "A paraméterek nincsenek exportálva: {why}",
+ "params_list.open_folder": "Mappa megnyitása",
+ "params_list.delete_tip": "Paraméter és értékeinek törlése",
+ "params_list.confirm": "Törli a(z) {name} paramétert és a(z) {elements} elemen lévő {values} értékét?",
+ "params_list.confirm_btn": "Törlés",
+ "params_list.cancel": "Mégse",
+ "params_list.deleted": "A(z) {name} paraméter ({values}) törölve",
+ "params_list.undo": "Visszavonás"
+}

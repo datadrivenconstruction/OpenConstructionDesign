@@ -1,0 +1,4 @@
+{
+ "hovertip.head": "{cat} : {type}",
+ "hovertip.tail": "{size} — {level}"
+}

@@ -1,0 +1,12 @@
+{
+ "unit.size_b": "{n} B",
+ "unit.size_gb": "{n} GB",
+ "autosave_status.unit.edits": {
+  "one": "düzenleme",
+  "other": "düzenleme"
+ },
+ "autosave_status.unit.copies": {
+  "one": "kopya",
+  "other": "kopya"
+ }
+}

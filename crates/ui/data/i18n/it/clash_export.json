@@ -1,0 +1,9 @@
+{
+ "clash.col.x": "X",
+ "clash.col.y": "Y",
+ "clash.col.z": "Z",
+ "clash.unit.ft3": "ft³",
+ "clash.exported_n": "Report salvato: {n} di {m}, {path}",
+ "clash.exported_f": "Report salvato: {n} di {m} (filtro: {filter}), {path}",
+ "clash.col.unit": "{name}, {unit}"
+}

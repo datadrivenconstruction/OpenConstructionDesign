@@ -1,0 +1,9 @@
+{
+ "shot_scenes.site": "场地",
+ "shot_scenes.lawn": "草地",
+ "shot_scenes.pad": "平台",
+ "shot_scenes.block": "块",
+ "shot_scenes.void": "空洞",
+ "shot_scenes.tower": "塔楼",
+ "shot_scenes.wall_void": "墙洞"
+}

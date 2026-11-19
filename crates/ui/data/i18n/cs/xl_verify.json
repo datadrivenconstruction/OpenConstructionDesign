@@ -1,0 +1,9 @@
+{
+ "xl.msg.base_value": "kontrola po zápisu selhala, starý sešit se ponechá: {} ({}) očekáváno '{}', přečteno '{}'",
+ "xl.msg.base_missing": "kontrola po zápisu selhala, starý sešit se ponechá: list {} nemá řádek pro id {}",
+ "xl.msg.base_extra": "kontrola po zápisu selhala, starý sešit se ponechá: řádek {} není v modelu",
+ "xl.msg.base_refused": "kontrola po zápisu selhala, starý sešit se ponechá: {} ({}) bylo odmítnuto: {}",
+ "xl.msg.base_sheet": "kontrola po zápisu selhala, starý sešit se ponechá: list {} chybí, je prázdný nebo nečitelný",
+ "xl.msg.base_newer": "kontrola po zápisu selhala, starý sešit se ponechá: {} buněk neobsahuje hodnotu modelu",
+ "xl.msg.base_unreadable": "kontrola po zápisu selhala, starý sešit se ponechá: nový sešit nelze přečíst ({})"
+}

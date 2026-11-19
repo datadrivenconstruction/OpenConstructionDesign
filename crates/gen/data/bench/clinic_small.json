@@ -1,0 +1,48 @@
+{
+ "schema": "gen_bench.v1",
+ "group": "clinic",
+ "spec": {
+  "typology": "office",
+  "floors": 2,
+  "rooms": [
+   {
+    "kind": "office",
+    "area": 16,
+    "count": 8
+   },
+   {
+    "kind": "wc",
+    "area": 4,
+    "count": 2
+   }
+  ],
+  "ground_rooms": [
+   {
+    "kind": "lobby",
+    "area": 40
+   },
+   {
+    "kind": "office",
+    "area": 16,
+    "count": 4
+   }
+  ]
+ },
+ "adjacency": [
+  [
+   "office",
+   "corridor",
+   2
+  ],
+  [
+   "ward",
+   "wc",
+   2
+  ],
+  [
+   "lobby",
+   "office",
+   1
+  ]
+ ]
+}

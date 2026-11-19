@@ -1,0 +1,22 @@
+{
+ "depth.chip": "Lalim {level}",
+ "depth.chip_tip": "Hanggang saan iniaayos ng susunod na run ang proyekto: D1 konsepto hanggang D5 fabrication, ayon sa disiplina",
+ "depth.all_off": "naka-off ang lahat ng disiplina",
+ "depth.disc.arch": "Arkitektura",
+ "depth.disc.struct": "Istruktura",
+ "depth.disc.mep": "MEP",
+ "depth.disc.doc": "Dokumento",
+ "depth.project": "Lalim ng proyekto",
+ "depth.level.1": "D1 Konsepto: massing, mga palapag, lugar, isang sheet",
+ "depth.level.2": "D2 Sketch: mga pader, kuwarto ayon sa programa, opening, grid, mga plano",
+ "depth.level.3": "D3 Disenyo: mga layered type, sukat na istruktura, pangunahing MEP at terminal, schedule",
+ "depth.level.4": "D4 Working: junction detail, hardware, finish, reinforcement, mga sangay",
+ "depth.level.5": "D5 Fabrication: bending schedule, steel connection, prefab, bill of materials",
+ "depth.as_project": "Pareho",
+ "depth.estimate": "Tantiya: humigit-kumulang {elements} elemento, {minutes} min, {tokens} token sa {calls} tawag, {sheets} sheet",
+ "depth.estimate_none": "Kasama ng nadraft na proyekto ang tantiya: walang laman pa ang modelo",
+ "depth.heat": "Heat map ng lalim",
+ "depth.heat.row": "Lalim",
+ "depth.settings": "Lalim ng disenyo ng proyektong ito",
+ "depth.settings_desc": "Lalim na sinusundan ng AI katulong, D1 hanggang D5, may switch at sariling lalim kada disiplina; naka-save sa project file"
+}

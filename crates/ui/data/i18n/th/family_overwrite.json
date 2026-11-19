@@ -1,0 +1,16 @@
+{
+ "family_overwrite.ow.title": "แทนที่ค่าประเภทของโครงการ?",
+ "family_overwrite.ow.body": "การโหลดจะแทนที่ค่า {values} ใน{types} อินสแตนซ์ที่วางแล้วของประเภทเหล่านี้: {instances}",
+ "family_overwrite.ow.values": {
+  "one": "# ค่า",
+  "other": "# ค่า"
+ },
+ "family_overwrite.ow.types": {
+  "one": "# ประเภท",
+  "other": "# ประเภท"
+ },
+ "family_overwrite.ow.list": "ประเภท: {list}",
+ "family_overwrite.ow.more": "และอีก {n} รายการ",
+ "family_overwrite.ow.back": "กลับไปแก้ไข",
+ "family_overwrite.ow.replace": "แทนที่ค่า"
+}

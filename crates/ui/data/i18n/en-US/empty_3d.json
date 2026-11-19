@@ -1,0 +1,14 @@
+{
+ "empty.v3d_model.title": "Nothing in 3D yet",
+ "empty.v3d_model.hint": "Draw walls in the plan and they appear here.",
+ "empty.v3d_model.action": "Open plan",
+ "empty.v3d_hidden.title": "All elements are hidden in this view",
+ "empty.v3d_hidden.hint": "Temporary hide or isolate leaves nothing visible. View graphics stay as set.",
+ "empty.v3d_hidden.action": "Show all",
+ "empty.v3d_graphics.title": "View graphics hide every category",
+ "empty.v3d_graphics.hint": "Category rules of this view leave nothing visible. Turn categories back on in View graphics.",
+ "empty.v3d_graphics.action": "Open view graphics",
+ "empty.v3d_box.title": "Section box is outside the model",
+ "empty.v3d_box.hint": "The box cuts away every element. Fit it back around the model.",
+ "empty.v3d_box.action": "Reset box"
+}

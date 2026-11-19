@@ -1,0 +1,14 @@
+{
+ "empty.v3d_model.title": "עדיין אין כלום בתלת-ממד",
+ "empty.v3d_model.hint": "צייר קירות בתוכנית והם יופיעו כאן.",
+ "empty.v3d_model.action": "פתח תוכנית",
+ "empty.v3d_hidden.title": "כל הרכיבים מוסתרים במבט הזה",
+ "empty.v3d_hidden.hint": "הסתרה או בידוד זמניים לא משאירים דבר גלוי. הגרפיקה של המבט נשארת כפי שהוגדרה.",
+ "empty.v3d_hidden.action": "הצג הכול",
+ "empty.v3d_graphics.title": "גרפיקת המבט מסתירה את כל הקטגוריות",
+ "empty.v3d_graphics.hint": "כללי הקטגוריות של המבט הזה לא משאירים דבר גלוי. הפעל מחדש קטגוריות בגרפיקה של המבט.",
+ "empty.v3d_graphics.action": "פתח גרפיקה של המבט",
+ "empty.v3d_box.title": "תיבת החתך נמצאת מחוץ למודל",
+ "empty.v3d_box.hint": "תיבת החתך חותכת כל רכיב. התאם אותה מחדש סביב המודל.",
+ "empty.v3d_box.action": "איפוס התיבה"
+}

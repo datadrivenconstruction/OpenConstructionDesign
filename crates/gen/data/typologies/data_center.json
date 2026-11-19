@@ -1,0 +1,289 @@
+{
+ "schema": "gen_typology.v1",
+ "name": "data_center",
+ "aliases": [
+  "datacenter",
+  "data_centre",
+  "server_hall"
+ ],
+ "base": "office",
+ "note": "data centre: halls of racks with their cooling and power rooms in a two-storey corridor plan; the loads (cooling, power, backup power) are computed per room class and worked out as plant briefs in the shape the plant module takes; racks and cooling units themselves are not placed",
+ "brief": {
+  "name": {
+   "en": "Data centre",
+   "ru": "Центр обработки данных"
+  },
+  "floors": 2,
+  "floor_height": 5.0
+ },
+ "rules": {
+  "egress.max_travel": 45,
+  "corridor.width": 3.0,
+  "egress.protected_stairs": "enclosed"
+ },
+ "model": {
+  "title": {
+   "en": "Data centre",
+   "ru": "Центр обработки данных"
+  },
+  "spaces": [
+   {
+    "class": "lobby",
+    "kind": "lobby",
+    "name": {
+     "en": "Entrance lobby",
+     "ru": "Входной вестибюль"
+    },
+    "area": 50,
+    "count": 1,
+    "level": "ground",
+    "zone": "support"
+   },
+   {
+    "class": "security",
+    "kind": "staff",
+    "name": {
+     "en": "Security room",
+     "ru": "Пост охраны"
+    },
+    "area": 20,
+    "count": 1,
+    "level": "ground",
+    "zone": "support"
+   },
+   {
+    "class": "noc",
+    "kind": "office",
+    "name": {
+     "en": "Network operations centre",
+     "ru": "Центр управления сетью"
+    },
+    "area": 70,
+    "count": 1,
+    "level": "ground",
+    "zone": "support"
+   },
+   {
+    "class": "loading",
+    "kind": "storage",
+    "name": {
+     "en": "Loading and staging room",
+     "ru": "Приёмка и комплектация"
+    },
+    "area": 70,
+    "count": 1,
+    "level": "ground",
+    "zone": "support"
+   },
+   {
+    "class": "wc_dc",
+    "kind": "wc",
+    "name": {
+     "en": "Toilet",
+     "ru": "Санузел"
+    },
+    "area": 5,
+    "count": 2,
+    "level": "ground",
+    "zone": "support"
+   },
+   {
+    "class": "hall",
+    "kind": "technical",
+    "name": {
+     "en": "Data hall",
+     "ru": "Машинный зал"
+    },
+    "area": 400,
+    "count": 2,
+    "level": "any",
+    "zone": "white",
+    "light": "none",
+    "height_min": 3.8,
+    "adjacent_to": [
+     {
+      "ref": "ups",
+      "weight": 3
+     },
+     {
+      "ref": "cooling",
+      "weight": 3
+     }
+    ],
+    "live_load_kpa": 7.5,
+    "demand": {
+     "ach": {
+      "rule": "typology.datahall.ach"
+     },
+     "cooling_w_m2": {
+      "rule": "typology.datahall.cooling_w_m2"
+     },
+     "power_w_m2": {
+      "rule": "typology.datahall.power_w_m2"
+     },
+     "backup_power": true
+    }
+   },
+   {
+    "class": "ups",
+    "kind": "technical",
+    "name": {
+     "en": "UPS and battery room",
+     "ru": "ИБП и аккумуляторная"
+    },
+    "area": 120,
+    "count": 2,
+    "level": "ground",
+    "zone": "power",
+    "light": "none",
+    "live_load_kpa": 10,
+    "demand": {
+     "ach": 12,
+     "power_w_m2": 70,
+     "cooling_w_m2": 90,
+     "backup_power": true
+    }
+   },
+   {
+    "class": "switchgear",
+    "kind": "technical",
+    "name": {
+     "en": "Switchgear room",
+     "ru": "Распределительное устройство"
+    },
+    "area": 80,
+    "count": 2,
+    "level": "ground",
+    "zone": "power",
+    "light": "none",
+    "demand": {
+     "power_w_m2": 50,
+     "cooling_w_m2": 40,
+     "backup_power": true
+    }
+   },
+   {
+    "class": "genset",
+    "kind": "technical",
+    "name": {
+     "en": "Generator room",
+     "ru": "Дизель-генераторная"
+    },
+    "area": 130,
+    "count": 2,
+    "level": "ground",
+    "zone": "power",
+    "light": "none",
+    "demand": {
+     "ach": 20,
+     "cooling_w_m2": 60
+    }
+   },
+   {
+    "class": "cooling",
+    "kind": "technical",
+    "name": {
+     "en": "Cooling plant room",
+     "ru": "Холодильный центр"
+    },
+    "area": 150,
+    "count": 2,
+    "level": "any",
+    "zone": "cooling",
+    "light": "none",
+    "adjacent_to": [
+     {
+      "ref": "hall",
+      "weight": 2
+     }
+    ],
+    "live_load_kpa": 8,
+    "demand": {
+     "ach": 15,
+     "power_w_m2": 60,
+     "cooling_w_m2": 30
+    }
+   }
+  ],
+  "zones": [
+   {
+    "id": "white",
+    "name": {
+     "en": "Data halls",
+     "ru": "Машинные залы"
+    },
+    "adjacent_to": [
+     {
+      "ref": "power",
+      "weight": 3
+     },
+     {
+      "ref": "cooling",
+      "weight": 3
+     }
+    ]
+   },
+   {
+    "id": "power",
+    "name": {
+     "en": "Power",
+     "ru": "Электроснабжение"
+    },
+    "adjacent_to": [
+     {
+      "ref": "white",
+      "weight": 3
+     }
+    ]
+   },
+   {
+    "id": "cooling",
+    "name": {
+     "en": "Cooling",
+     "ru": "Охлаждение"
+    },
+    "adjacent_to": [
+     {
+      "ref": "white",
+      "weight": 3
+     }
+    ]
+   },
+   {
+    "id": "support",
+    "name": {
+     "en": "Support",
+     "ru": "Обслуживание"
+    },
+    "adjacent_to": []
+   }
+  ],
+  "egress": {
+   "exits_min": 2
+  },
+  "structure": {
+   "live_load_kpa": {
+    "rule": "typology.live_load_kpa"
+   }
+  },
+  "spare": {
+   "grow_share": 0.6,
+   "kind": "technical",
+   "name": {
+    "en": "Plant space",
+    "ru": "Технические площади"
+   }
+  },
+  "plant": [
+   {
+    "kind": "pumping_station",
+    "flow_m3h": {
+     "from": "cooling_water_m3h",
+     "share": 1.0
+    },
+    "head_m": 35,
+    "units": 3
+   }
+  ]
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "recover.ago_now": "nettopp",
+ "recover.ago_min": {
+  "one": "# min siden",
+  "other": "# min siden"
+ },
+ "recover.ago_hour": {
+  "one": "# time siden",
+  "other": "# timer siden"
+ },
+ "recover.ago_yesterday": "i går",
+ "recover.ago_day": {
+  "one": "# dag siden",
+  "other": "# dager siden"
+ },
+ "recover.empty": "Ingen øyeblikksbilder igjen",
+ "recover.empty_hint": "Ingenting å gjenopprette for dette prosjektet.",
+ "recover.all_damaged": "Alle øyeblikksbilder er skadet, ingen kan gjenopprettes.",
+ "recover.keys_hint": "Opp og Ned velger et øyeblikksbilde, Enter går til Gjenopprett",
+ "recover.row_tip": "Lagret {time}",
+ "recover.row_damaged_tip": "Kan ikke gjenopprettes: {reason}",
+ "recover.archive_ask": "Flytte dette øyeblikksbildet til arkivet?",
+ "recover.discard_ask": {
+  "one": "Flytte øyeblikksbildet til arkivet? Det tilbys ikke igjen.",
+  "other": "Flytte alle # øyeblikksbilder til arkivet? De tilbys ikke igjen."
+ },
+ "recover.confirm_yes": "Flytt til arkiv",
+ "recover.confirm_no": "Behold øyeblikksbilder"
+}

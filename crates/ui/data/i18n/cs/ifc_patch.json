@@ -1,0 +1,19 @@
+{
+ "ifc_patch.fallback.source_changed": "Záplata nepoužita: zdrojový soubor se na disku změnil nebo nelze přečíst. Soubor byl přepsán z modelu.",
+ "ifc_patch.fallback.sources": "Záplata nepoužita: projekt nemá přesně jeden zdroj. Soubor byl přepsán z modelu.",
+ "ifc_patch.fallback.schema": "Záplata nepoužita: schéma zdrojového souboru není podporováno. Soubor byl přepsán z modelu.",
+ "ifc_patch.fallback.structure": "Záplata nepoužita: strukturě zdrojového souboru nelze důvěřovat. Soubor byl přepsán z modelu.",
+ "ifc_patch.fallback.edit": "Záplata nepoužita: úpravu nelze bezpečně použít na zdrojový soubor. Soubor byl přepsán z modelu.",
+ "ifc_patch.reason.schema": "Schéma zdrojového souboru tuto úpravu nepojme; prvek zůstává beze změny",
+ "ifc_patch.reason.prop": "Tuto úpravu vlastnosti nelze vyjádřit ve zdrojovém souboru; hodnota zůstává jako ve zdroji",
+ "ifc_patch.reason.no_export": "Tento nový prvek nemá zobrazení v IFC",
+ "ifc_patch.reason.link": "Prvek je v souboru, ale odkaz na jeho materiál nebo typ se nezapisuje; je uveden jako nezapsaný",
+ "ifc_patch.drop": "Zahodit",
+ "ifc_patch.drop_done": "Čekající odkazy zahozeny: {n}; už se nebudou opakovat",
+ "ifc_patch.fallback.building": "Záplata nepoužita: nové podlaží potřebuje přesně jednu budovu ve zdrojovém souboru, a ta tam chybí nebo jich je více. Soubor byl přepsán z modelu.",
+ "ifc_patch.fallback.types": "Záplata nepoužita: podlaží, typy nebo materiály se od importu změnily a záplata je nedokáže zapsat. Soubor byl přepsán z modelu.",
+ "ifc_patch.fallback.zipped": "Záplata nepoužita: zabalený zdrojový soubor nelze opravit záplatou. Soubor byl přepsán z modelu.",
+ "ifc_patch.fallback.source_kept": "Zdrojový soubor nebyl přepsán: nelze zaručit, že toto uložení jej smí nahradit. Toto uložení je kopie vedle něj.",
+ "ifc_patch.fallback.nested": "Záplata nepoužita: nový prvek má vnořené části (například přípojky), které záplata nedokáže zapsat. Soubor byl přepsán z modelu.",
+ "ifc_patch.fallback.shared_part": "Záplata nepoužita: část upraveného schodiště nebo rampy používá také jiný prvek nebo vztah, což záplata nedokáže zohlednit. Soubor byl přepsán z modelu."
+}

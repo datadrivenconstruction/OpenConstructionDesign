@@ -1,0 +1,16 @@
+{
+ "save_fail.save_fail.title": "Proiectul nu a fost salvat",
+ "save_fail.save_fail.kept": "Modificările dvs. sunt încă deschise aici. Nu se pierde nimic cât timp editorul rămâne deschis.",
+ "save_fail.save_fail.details": "Detalii",
+ "save_fail.save_fail.copy": "Copiază",
+ "save_fail.save_fail.save_as": "Salvează ca…",
+ "save_fail.save_fail.retry": "Reîncearcă",
+ "save_fail.save_fail.close": "Închide",
+ "save_fail.cause.full": "Discul este plin. Eliberați spațiu sau salvați proiectul pe alt disc.",
+ "save_fail.cause.denied": "Acest dosar sau fișier este doar pentru citire, sau nu aveți permisiune de scriere aici. Alegeți alt dosar.",
+ "save_fail.cause.locked": "Fișierul este deschis în alt program. Închideți-l acolo, apoi apăsați Reîncearcă.",
+ "save_fail.cause.missing": "Dosarul nu mai există. Alegeți alt dosar sau restaurați-l și apăsați Reîncearcă.",
+ "save_fail.cause.offline": "Unitatea sau dosarul de rețea nu este disponibil. Reconectați-l și apăsați Reîncearcă, sau salvați în altă parte.",
+ "save_fail.cause.too_long": "Calea fișierului este prea lungă. Alegeți un dosar sau un nume de fișier mai scurt.",
+ "save_fail.cause.other": "Fișierul nu a putut fi scris: {detail}"
+}

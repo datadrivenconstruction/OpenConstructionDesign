@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "Baris filter di bawah header. Teks: bagian kata; angka: >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "Tampilkan atau sembunyikan kolom",
+ "sched_toolbar.groups_tip": "Kelompokkan baris berdasarkan kolom, dengan subtotal",
+ "sched_toolbar.formulas_tip": "Kolom terhitung",
+ "sched_toolbar.phase": "Fase",
+ "sched_toolbar.phase_tip": "Dari fase mana baris diambil",
+ "sched_toolbar.copy_tip": "Baris terpilih (atau semua yang terlihat) sebagai TSV",
+ "sched_toolbar.import_tip": "Baca kembali jadwal yang diekspor: baris berdasarkan Id, kolom berdasarkan header; hitungan dulu, lalu satu langkah batal",
+ "sched_toolbar.export_tip": "Baris dan kolom yang terlihat dengan total; angka tetap berupa angka",
+ "sched_toolbar.need_table": "Buka jadwal terlebih dahulu",
+ "sched_toolbar.busy_open": "Dialog pilih file sudah terbuka",
+ "sched_toolbar.busy_save": "Dialog simpan sudah terbuka",
+ "sched_toolbar.clear_filter": "Hapus filter",
+ "sched_toolbar.fields_title": "Kolom"
+}

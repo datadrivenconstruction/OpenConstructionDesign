@@ -1,0 +1,14 @@
+{
+ "save_guard.save.empty_over_full": "Nem lett mentve: a modell üres, a fájlban viszont már van tartalom. A fájl érintetlen. Használd a Mentés másként parancsot egy másik néven íráshoz.",
+ "save_guard.refuse.body": "Nem lett mentve: a modell üres, a(z) {name} fájlban viszont már van tartalom. A fájl érintetlen.",
+ "save_guard.refuse.foreign": "Ez nem DDC Editor-fájl, ezért nem cserélhető le. Használd a Mentés másként parancsot egy másik néven íráshoz.",
+ "save_guard.refuse.ask": "Lecseréljük ezt: {name}? Tartalma: {what}. Előbb a mellette lévő _archive mappába kerül, utána íródik ki az üres modell.",
+ "save_guard.refuse.holds_db": "{n} elem és tartalmi sor",
+ "save_guard.refuse.holds_ifc": "IFC termékekkel",
+ "save_guard.refuse.replace": "Csere mindenképp…",
+ "save_guard.refuse.replace_yes": "Áthelyezés és csere",
+ "save_guard.refuse.save_as": "Mentés másként…",
+ "save_guard.refuse.cancel": "Mégse",
+ "save_guard.replace.moved": "Az előző fájl áthelyezve ide: {path}",
+ "save_guard.replace.move_failed": "A(z) {name} fájlt nem sikerült félretenni: {error}. Semmi sem íródott ki."
+}

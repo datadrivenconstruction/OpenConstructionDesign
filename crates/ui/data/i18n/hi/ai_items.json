@@ -1,0 +1,16 @@
+{
+ "ai.items.all": {
+  "one": "सभी # आइटम",
+  "other": "सभी # आइटम"
+ },
+ "ai.items.all.tip": "योजना के हर आइटम को चिह्नित या अचिह्नित करें",
+ "ai.items.checked": "{n} में से {m} चिह्नित",
+ "ai.items.check.tip": "“{title}” को लागू में शामिल करें",
+ "ai.items.expand": "तत्व दिखाएँ",
+ "ai.items.collapse": "तत्व छिपाएँ",
+ "ai.items.apply": {
+  "one": "# आइटम लागू करें",
+  "other": "# आइटम लागू करें"
+ },
+ "ai.items.apply_none": "लागू करें"
+}

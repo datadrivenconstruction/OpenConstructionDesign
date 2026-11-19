@@ -1,0 +1,17 @@
+{
+ "settings.spreadsheet_desc": "Co się dzieje po wyeksportowaniu skoroszytu",
+ "settings.area_decimals_desc": "Liczba cyfr po separatorze dziesiętnym w powierzchniach",
+ "settings.volume_decimals_desc": "Liczba cyfr po separatorze dziesiętnym w objętościach",
+ "settings.frac_desc": "Najmniejszy ułamek cala w długościach imperialnych",
+ "settings.small_area_desc": "Pokazuj powierzchnie poniżej jednej stopy kwadratowej w calach kwadratowych",
+ "settings.sample_desc": "Jak wyglądają liczby przy bieżących ustawieniach",
+ "autosave.title_desc": "Zachowuj kopię odzyskiwania otwartego projektu",
+ "autosave.interval_desc": "Czas między kopiami odzyskiwania",
+ "autosave.keep_desc": "Starsze kopie odzyskiwania są usuwane",
+ "autosave.folder_desc": "Puste oznacza folder domyślny",
+ "autosave.remind_desc": "Przypomnienie o zapisaniu projektu, który nie ma jeszcze pliku",
+ "settings.backend_desc": "Używany adapter grafiki",
+ "settings.news_desc": "Co zmieniło się w tej wersji",
+ "settings.assoc_default_desc": "Ustaw tę aplikację jako domyślną dla plików modeli",
+ "settings.data_dir_desc": "Tutaj znajdują się pamięci podręczne, kopie odzyskiwania i dzienniki."
+}

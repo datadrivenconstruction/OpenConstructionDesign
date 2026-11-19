@@ -1,0 +1,13 @@
+{
+ "ai.proposal.title": "AI 助手方案",
+ "ai.proposal.meta": "{actor} · 操作：{ops}",
+ "ai.proposal.apply.desc": "将整个方案作为一步应用；Ctrl+Z 可撤销",
+ "ai.proposal.applying": "正在应用…",
+ "ai.proposal.applied": "方案已应用。Ctrl+Z 可撤销。",
+ "ai.proposal.applied_resync": "方案已应用，但视图尚未更新。它会自动刷新；Ctrl+Z 可撤销此步。",
+ "ai.proposal.stale": "在预览此方案后模型已更改。请让 AI 助手重新提出方案。",
+ "ai.proposal.toast.applied": "方案已应用。Ctrl+Z 可撤销。",
+ "ai.proposal.toast.stale": "预览后模型已更改，因此未应用任何内容。请重新预览：让 AI 助手重新提出方案。",
+ "ai.proposal.toast.refused": "方案未应用：{reason}",
+ "ai.proposal.rejected": "方案已被拒绝。"
+}

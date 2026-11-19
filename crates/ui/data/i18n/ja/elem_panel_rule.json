@@ -1,0 +1,5 @@
+{
+ "elem.panel_select_wall": "壁を選択",
+ "cmd.elem.panel_select_wall": "壁を選択",
+ "elem.left_in_place": "そのまま残したもの: {kinds}。パネルはその壁に属します。マスと注釈は個別に削除されます。"
+}

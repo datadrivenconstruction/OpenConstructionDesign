@@ -1,0 +1,5 @@
+{
+ "ai.plan.apply_n": "Tillämpa {n} godkända",
+ "ai.plan.will_apply": "{n} av {m} ändringar tillämpas",
+ "ai.plan.keys_hint": "J/K eller Alt+Upp/Ned flyttar · A godkänner · R avvisar · Mellanslag växlar · Shift+A / Shift+R hela gruppen · Ctrl+Enter tillämpar · Esc tillbaka till vyn (behåller utkastet)"
+}

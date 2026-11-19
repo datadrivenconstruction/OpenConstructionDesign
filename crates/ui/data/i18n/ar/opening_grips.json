@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "قلب جهة المفصلة",
+ "cmd.edit.flip_hand.desc": "يعكس الأبواب والنوافذ المحددة على طول الجدار بحيث تنتقل المفصلات إلى الطرف الآخر من الفتحة.",
+ "cmd.edit.flip_facing": "قلب جهة الفتح",
+ "cmd.edit.flip_facing.desc": "يدير الأبواب والنوافذ المحددة إلى الجهة الأخرى من الجدار.",
+ "opening_grips.flip_hand": "قلب المفصلة",
+ "opening_grips.flip_hand.tip": "المفصلات إلى الطرف الآخر من الفتحة (Shift+F)",
+ "opening_grips.flip_facing": "قلب الجهة",
+ "opening_grips.flip_facing.tip": "الفتح إلى الجهة الأخرى من الجدار (Shift+G)",
+ "opening_grips.flip.done": "تم القلب: {n}",
+ "opening_grips.flip.none": "حدد باباً أو نافذة لقلبها",
+ "opening_grips.flip.fail": "لم يُقلب: {why}"
+}

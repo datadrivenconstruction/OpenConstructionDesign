@@ -1,0 +1,13 @@
+{
+ "xlw.copy_list": "Kopier liste",
+ "xlw.save_list": "Lagre liste…",
+ "xlw.copy_list_tip": "Kopier radene som vises (ark, celle, id, kolonne, verdier, årsak) som tekst for et regneark",
+ "xlw.save_list_tip": "Lagre radene som vises som en .csv-fil ved siden av arbeidsboken; selve arbeidsboken endres aldri",
+ "xlw.list_book_value": "Verdi i arbeidsboken",
+ "xlw.list_model_value": "Verdi i modellen",
+ "xlw.list_reason": "Årsak",
+ "xlw.list_copied": "Liste kopiert: {n} rader",
+ "xlw.list_saved": "Liste lagret: {n} rader, {file}",
+ "xlw.list_save_failed": "Listen ble ikke lagret",
+ "xlw.list_nothing": "Ingenting å kopiere: ingen rader vises"
+}

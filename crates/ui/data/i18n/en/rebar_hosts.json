@@ -1,0 +1,40 @@
+{
+ "rebar_hosts.hosts": "Hosts: {list}",
+ "rebar_hosts.kind_type": "{kind} · {type}",
+ "rebar_hosts.kind.column": "Column",
+ "rebar_hosts.kind.beam": "Beam",
+ "rebar_hosts.kind.wall": "Wall",
+ "rebar_hosts.kind.slab": "Slab",
+ "rebar_hosts.kind.footing": "Footing",
+ "rebar_hosts.kind.raft": "Foundation slab",
+ "rebar_hosts.n.column": {
+  "one": "# column",
+  "other": "# columns"
+ },
+ "rebar_hosts.n.beam": {
+  "one": "# beam",
+  "other": "# beams"
+ },
+ "rebar_hosts.n.wall": {
+  "one": "# wall",
+  "other": "# walls"
+ },
+ "rebar_hosts.n.slab": {
+  "one": "# slab",
+  "other": "# slabs"
+ },
+ "rebar_hosts.n.footing": {
+  "one": "# footing",
+  "other": "# footings"
+ },
+ "rebar_hosts.n.raft": {
+  "one": "# foundation slab",
+  "other": "# foundation slabs"
+ },
+ "rebar_hosts.mixed_note": "Columns and beams take bars and stirrups; walls, slabs and foundations take mesh. Select one group to add rebar.",
+ "rebar_hosts.why.mixed": "The selection mixes columns or beams with walls, slabs or foundations. Select one group.",
+ "rebar_hosts.why.area_linear": "Mesh goes into walls, slabs and foundations, not columns or beams.",
+ "rebar_hosts.why.bars_plate": "Longitudinal bars and stirrups go into columns and beams, not walls, slabs or foundations.",
+ "rebar_hosts.why.no_common_face": "The selected hosts have no cover face in common. Select hosts of one kind.",
+ "rebar_hosts.why.no_type": "Choose a bar type."
+}

@@ -1,0 +1,6 @@
+{
+ "vv_conflict.styles.conflict": "Les styles d'objets d'une catégorie modifiée ont changé dans le modèle (annulation ou autre fenêtre) pendant que cette fenêtre avait des modifications. Vos modifications sont conservées.",
+ "vv_conflict.styles.keep": "Garder mes modifications",
+ "vv_conflict.styles.reload": "Recharger",
+ "vv_conflict.styles.answer_first": "Choisissez Garder mes modifications ou Recharger d'abord"
+}

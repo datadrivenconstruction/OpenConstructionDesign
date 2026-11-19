@@ -1,0 +1,15 @@
+{
+ "view_gfx.field.view_range": "Секущий диапазон",
+ "view_range.range": "Секущий диапазон",
+ "view_range.cut": "Секущая плоскость",
+ "view_range.bottom": "Низ",
+ "view_range.depth": "Глубина вида",
+ "view_range.cut.hint": "Высота секущей плоскости над уровнем. Пересечённые ею элементы рисуются в разрезе.",
+ "view_range.bottom.hint": "Низ диапазона относительно уровня. Можно ноль или отрицательное значение.",
+ "view_range.depth.hint": "Насколько ниже низа диапазона видит вид. Ноль или больше.",
+ "view_range.err.number": "Введите длину в каждое поле",
+ "view_range.err.not_finite": "Введите длину в каждое поле",
+ "view_range.err.cut_not_above_bottom": "Секущая плоскость должна быть выше низа",
+ "view_range.err.negative_depth": "Глубина вида не может быть отрицательной",
+ "view_range.err.top_below_cut": "Верх диапазона не может быть ниже секущей плоскости"
+}

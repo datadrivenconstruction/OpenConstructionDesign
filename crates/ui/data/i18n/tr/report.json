@@ -1,0 +1,23 @@
+{
+ "cmd.app.report": "Sorun bildir…",
+ "cmd.app.report.desc": "Neyin ters gittiğini tanımlar ve bu bilgisayarda bir paket kaydeder: metniniz, sürüm ve sistem bilgileri, pencere görüntüsü ve son çökme kaydı. Hiçbir şey gönderilmez.",
+ "report.title": "Sorun bildir",
+ "report.what": "Ne oldu",
+ "report.expected": "Beklediğiniz",
+ "report.steps": "Tekrarlamak için adımlar",
+ "report.opt.shot": "Pencerenin görüntüsünü ekle",
+ "report.opt.model": "Modelin bir kopyasını ekle",
+ "report.opt.model.note": "Varsayılan olarak kapalı. Kopya proje verilerinizi içerir, AI günlüğü hariç.",
+ "report.opt.paths": "Dosya yollarında kullanıcı adlarını koru",
+ "report.local": "Paket yalnızca bu bilgisayarda kaydedilir. Otomatik olarak hiçbir şey gönderilmez.",
+ "report.blocked": "Önce ne olduğunu açıklayın.",
+ "report.save": "Paketi kaydet",
+ "report.copy": "Metni kopyala",
+ "report.cancel": "İptal",
+ "report.copied": "Rapor metni kopyalandı.",
+ "report.saved": "Paket kaydedildi: {path}",
+ "report.failed": "Paket kaydedilemedi: {err}",
+ "report.model.fail": "Model kopyası oluşturulamadı, hiçbir şey kaydedilmedi: {err}",
+ "report.crash.notice": "Önceki oturum bir çökmeyle sonlandı.",
+ "report.crash.action": "Sorun bildir"
+}

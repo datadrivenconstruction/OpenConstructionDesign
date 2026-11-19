@@ -1,0 +1,7 @@
+{
+ "recover.untitled_note": "Dette prosjektet er aldri lagret",
+ "recover.file_missing": "Prosjektfilen ble ikke funnet",
+ "recover.banner": "Ulagret arbeid fra en tidligere økt ble funnet for {name}",
+ "recover.banner_review": "Gjennomgå",
+ "recover.later_archived": "Utsatt {n} ganger: øyeblikksbilder flyttet til arkivet"
+}

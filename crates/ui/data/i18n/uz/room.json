@@ -1,0 +1,6 @@
+{
+ "geom.length": "Uzunlik",
+ "sched.cat.room_seps": "Xona ajratgichlari",
+ "room.err.point_leave": "Xona {n}: nuqta o'z chegarasidan chiqib ketadi",
+ "room.err.point_taken": "Xona {n}: nuqta xona {other} ga tushib qoladi"
+}

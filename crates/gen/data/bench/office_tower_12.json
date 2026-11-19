@@ -1,0 +1,33 @@
+{
+ "schema": "gen_bench.v1",
+ "group": "office_tower",
+ "spec": {
+  "typology": "office",
+  "name": "Office Tower",
+  "floors": 12,
+  "design": {
+   "massing": "tower_podium",
+   "upper_from": 2,
+   "setback": 4,
+   "facade": "curtain",
+   "terrace": true
+  }
+ },
+ "adjacency": [
+  [
+   "meeting",
+   "lobby",
+   1
+  ],
+  [
+   "office",
+   "corridor",
+   2
+  ],
+  [
+   "wc",
+   "corridor",
+   1
+  ]
+ ]
+}

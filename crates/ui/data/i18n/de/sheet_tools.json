@@ -1,0 +1,18 @@
+{
+ "undo.entry_later": "Nicht rückgängig gemacht: Danach wurde eine andere Änderung vorgenommen. Machen Sie zuerst diese rückgängig.",
+ "undo.entry_gone": "Nicht rückgängig gemacht: Diese Änderung ist bereits rückgängig gemacht oder nicht mehr im Verlauf.",
+ "undo.entry_busy": "Beenden oder abbrechen Sie zuerst die aktuelle Zeichnung, dann machen Sie rückgängig.",
+ "quick.hud.more": "Weitere unter Eigenschaften: {names}",
+ "sheet_tools.sheet.more": "Weitere Blattwerkzeuge",
+ "job.of": "{d} von {t}",
+ "job.of.mb": "{d} von {t} MB",
+ "job.left.under_minute": "weniger als eine Minute",
+ "job.left.minutes": "noch etwa {n} Min.",
+ "sheet_tools.start.units": "Einheiten",
+ "sheet_tools.print.save": {
+  "one": "# Blatt speichern",
+  "other": "# Blätter speichern"
+ },
+ "sheet_tools.sets.delete_ask": "Den Satz „{name}“ löschen? Seine Blätter bleiben im Projekt.",
+ "sheet_tools.keep": "Behalten"
+}

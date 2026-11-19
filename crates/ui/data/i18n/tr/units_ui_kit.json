@@ -1,0 +1,6 @@
+{
+ "units.err.parse": "Uzunluk değil: eski değer korundu. İsteğe bağlı birimle sayı girin, örneğin 2500 veya 8'-2\"",
+ "ui.scale.set": "Arayüz ölçeği: {pct}%",
+ "cmd.ui.scale_up": "Arayüz ölçeğini büyüt",
+ "cmd.ui.scale_down": "Arayüz ölçeğini küçült"
+}

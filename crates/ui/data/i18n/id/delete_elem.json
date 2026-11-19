@@ -1,0 +1,9 @@
+{
+ "elem.deleted": "Elemen dihapus: {n}",
+ "elem.deleted_kept": "Elemen dihapus: {n}; dibiarkan: {k} (panel dan elemen yang tidak bisa dihapus)",
+ "elem.not_deleted": "tidak dihapus: {e}",
+ "elem.not_deletable": "Elemen ini tidak bisa dihapus",
+ "elem.panel": "panel curtain wall",
+ "elem.panel_refused": "Panel adalah bagian dari curtain wall-nya dan tidak bisa dihapus sendiri. Pilih seluruh dinding untuk menghapusnya.",
+ "elem.reload_failed": "Dihapus, tetapi tampilan tidak diperbarui: {e}"
+}

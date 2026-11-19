@@ -1,0 +1,6 @@
+{
+ "pair_input.pair_hint": "Dvě hodnoty se oddělují středníkem: @1000;500",
+ "pair_input.old_pair": "Čárka mezi dvěma celými čísly už netvoří dvojici: zadejte 6000;4000 pro dvě hodnoty nebo 6000,5 pro desetinné číslo",
+ "pair_input.op.bad_length": "Není délka: {text} ({why}). Nic nebylo změněno",
+ "pair_input.op.bad_count": "Počet {text} nebyl převzat: celé číslo od {min} do {max}"
+}

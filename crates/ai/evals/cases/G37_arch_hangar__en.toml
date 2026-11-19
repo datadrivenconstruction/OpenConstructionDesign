@@ -1,0 +1,38 @@
+id = "G37_arch_hangar__en"
+tier = "hard"
+group = "Any geometry"
+title = "Arch hangar"
+lang = "en"
+base = "empty"
+
+[[turn]]
+say = "An aircraft hangar with an 80 m column-free span: steel truss arches every 10 m over a 60 m length, purlins and roof bracing, a 16 m arch rise, a full-width hangar door on one gable end."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "beam+brace+truss"
+min = 100.0
+
+[[oracle.count]]
+spec = "opening+comp:door|gate"
+min = 1.0
+
+[[oracle.geom]]
+kind = "clear_span"
+target = 80.0
+tol = 0.1
+supports = "pier|abutment|column|footing|base|bearing|support"
+
+[[oracle.geom]]
+kind = "height"
+min = 14.0
+max = 22.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

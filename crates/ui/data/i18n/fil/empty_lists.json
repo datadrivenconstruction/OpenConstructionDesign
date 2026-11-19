@@ -1,0 +1,11 @@
+{
+ "empty.props.action": "Gumuhit ng pader",
+ "empty.totals.action": "Gumuhit ng pader",
+ "empty.schedule.action": "Magdagdag ng field",
+ "empty.schedule_filtered.action": "Burahin ang filter",
+ "empty.library.action": "I-reset ang paghahanap",
+ "empty.library.load": "I-load ang family",
+ "empty.schedule_fields.title": "Walang ipinapakitang field",
+ "empty.schedule_fields.action": "Magdagdag ng field",
+ "empty.schedule_fields.hint": "I-on ang kahit isang field para makita ang table."
+}

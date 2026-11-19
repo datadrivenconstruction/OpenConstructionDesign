@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "يُبقي هذا الجدار بطوله الحالي عند كل تعديل",
+ "constraints.con.tip.lock_dist": "يُبقي المسافة بين الجدارين عند كل تعديل",
+ "constraints.con.tip.equal": "يُبقي المسافات بين الجدران المحددة متساوية",
+ "constraints.con.tip.align": "يُبقي الجداران على خط واحد",
+ "constraints.con.tip.parallel": "يُبقي الجدران متوازية",
+ "constraints.con.tip.perp": "يُبقي الجدران بزاوية قائمة",
+ "constraints.con.tip.align_grid": "يُبقي الجدار على أقرب خط شبكي",
+ "constraints.con.tip.lock_dist_grid": "يُبقي المسافة من الجدار إلى أقرب خط شبكي",
+ "constraints.con.tip.level_gap": "يُبقي الفجوة بين المستويات",
+ "constraints.con.tip.top_to_level": "يُبقي أعلى الجدار عند المستوى الذي فوقه"
+}

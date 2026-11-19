@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "Päätepiste",
+ "snap.midpoint": "Keskipiste",
+ "snap.perpendicular": "Kohtisuora",
+ "snap.wall_axis": "Seinän akseli",
+ "snap.wall_face": "Seinän pinta",
+ "snap.grid": "Ruudukko",
+ "snap.intersection": "Leikkauspiste",
+ "snap.grid_axis": "Akseliviiva",
+ "snap.ref_plane": "Vertailutaso",
+ "snap.nearest": "Lähin",
+ "snap.align_x": "Kohdistettu X-suunnassa kaukaisen pisteen kanssa",
+ "snap.align_y": "Kohdistettu Y-suunnassa kaukaisen pisteen kanssa",
+ "snap.align_xy": "Kohdistettu X- ja Y-suunnassa"
+}

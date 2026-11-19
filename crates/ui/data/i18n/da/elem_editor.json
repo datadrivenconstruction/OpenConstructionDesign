@@ -1,0 +1,4 @@
+{
+ "elem.spreadsheet.applied": "Importeret fra XLSX-regneark: {what}",
+ "elem.spreadsheet.failed": "XLSX-import mislykkedes: {e}"
+}

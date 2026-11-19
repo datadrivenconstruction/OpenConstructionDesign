@@ -1,0 +1,40 @@
+{
+ "rebar_hosts.hosts": "Hôtes : {list}",
+ "rebar_hosts.kind.column": "Poteau",
+ "rebar_hosts.kind.beam": "Poutre",
+ "rebar_hosts.kind.wall": "Mur",
+ "rebar_hosts.kind.slab": "Dalle",
+ "rebar_hosts.kind.footing": "Semelle",
+ "rebar_hosts.kind.raft": "Radier",
+ "rebar_hosts.n.column": {
+  "one": "# poteau",
+  "other": "# poteaux"
+ },
+ "rebar_hosts.n.beam": {
+  "one": "# poutre",
+  "other": "# poutres"
+ },
+ "rebar_hosts.n.wall": {
+  "one": "# mur",
+  "other": "# murs"
+ },
+ "rebar_hosts.n.slab": {
+  "one": "# dalle",
+  "other": "# dalles"
+ },
+ "rebar_hosts.n.footing": {
+  "one": "# semelle",
+  "other": "# semelles"
+ },
+ "rebar_hosts.n.raft": {
+  "one": "# radier",
+  "other": "# radiers"
+ },
+ "rebar_hosts.mixed_note": "Poteaux et poutres reçoivent des barres et des étriers ; murs, dalles et radiers reçoivent un treillis. Sélectionnez un seul groupe pour ajouter des armatures.",
+ "rebar_hosts.why.mixed": "La sélection mélange poteaux ou poutres avec murs, dalles ou radiers. Sélectionnez un seul groupe.",
+ "rebar_hosts.why.area_linear": "Le treillis va dans les murs, dalles et radiers, pas dans les poteaux ni les poutres.",
+ "rebar_hosts.why.bars_plate": "Les barres longitudinales et les étriers vont dans les poteaux et poutres, pas dans les murs, dalles ou radiers.",
+ "rebar_hosts.why.no_common_face": "Les hôtes sélectionnés n'ont pas de face d'enrobage en commun. Sélectionnez des hôtes d'un même type.",
+ "rebar_hosts.why.no_type": "Choisissez un type de barre.",
+ "rebar_hosts.kind_type": "{kind} · {type}"
+}

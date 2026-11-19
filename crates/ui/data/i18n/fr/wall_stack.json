@@ -1,0 +1,10 @@
+{
+ "wall_stack.we.stack_caption": "Type composé",
+ "wall_stack.we.side_left": "Face gauche",
+ "wall_stack.we.side_right": "Face droite",
+ "wall_stack.we.from": "De",
+ "wall_stack.we.to": "À",
+ "wall_stack.we.bottom": "Bas",
+ "wall_stack.we.delete_tip": "Supprimer ce profil",
+ "wall_stack.we.from_after_to": "« De » doit être avant « À »"
+}

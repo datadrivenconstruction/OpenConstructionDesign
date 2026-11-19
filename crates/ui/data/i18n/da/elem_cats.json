@@ -1,0 +1,23 @@
+{
+ "elem.no.mass_turn": "En masse kan ikke drejes eller spejles: dens formhistorik har ingen roteret trin. Flyt eller kopiér den, eller tegn den igen i den nye retning.",
+ "sched_cats.col.name": "Navn",
+ "sched_cats.col.material": "Materiale",
+ "sched_cats.col.void": "Hulrum",
+ "sched_cats.col.inplace": "På stedet",
+ "sched_cats.col.volume": "Nettovolumen",
+ "sched_cats.col.area": "Overfladeareal",
+ "sched_cats.col.floor_area": "Gulvareal",
+ "sched_cats.col.thickness": "Tykkelse",
+ "sched_cats.col.points": "Punkter",
+ "elem.toposolid.points": "Målepunkter",
+ "elem.toposolid.count": "Punkter",
+ "elem.toposolid.low": "Laveste",
+ "elem.toposolid.high": "Højeste",
+ "elem.toposolid.edit": "Rediger punkter",
+ "elem.toposolid.edit_tip": "Vælg, træk og sæt koten for målepunkter i planen",
+ "elem.toposolid.pick_hint": "Klik på et punkt i planen for at vælge det. Klik igen for at tilføje eller fjerne.",
+ "elem.toposolid.z": "Kote ({n})",
+ "elem.toposolid.mixed": "De valgte punkter er forskellige; en ny værdi sætter dem alle.",
+ "elem.toposolid.edit_help": "Træk et punkt for at flytte det. Skriv en værdi og tryk Enter for at sætte koten. Backspace fjerner de valgte punkter, Esc forlader.",
+ "elem.toposolid.done": "Udført"
+}

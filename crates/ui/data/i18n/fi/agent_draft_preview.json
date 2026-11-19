@@ -1,0 +1,12 @@
+{
+ "agent_draft.ag.preview": "Esikatselu",
+ "agent_draft.ag.preview.desc": "Hahmottaa tämän luonnoksen elementit piirtoalustalle, kun osoitin on painikkeen päällä. Mitään ei muuteta.",
+ "agent_draft.type.column": "Pilari",
+ "agent_draft.type.roof": "Vesikatto",
+ "agent_draft.type.ceiling": "Katto",
+ "agent_draft.type.stair": "Yhtenäinen",
+ "agent_draft.type.railing": "Kaide",
+ "agent_draft.type.shaft": "Kuilu",
+ "agent_draft.type.axis": "Akseli 6,5 mm",
+ "agent_draft.type.refplane": "Vertailutaso"
+}

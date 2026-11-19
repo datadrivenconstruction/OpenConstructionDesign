@@ -1,0 +1,8 @@
+{
+ "drafts.drafts.head": "打开的编辑器中有尚未加入项目的编辑：",
+ "drafts.draft.family": "族“{name}”",
+ "drafts.draft.line": "线库：{name}",
+ "drafts.draft.styles": "视图范围线样式",
+ "drafts.btn.save_all": "全部保存",
+ "drafts.drafts.refused": "草稿无法保存。未关闭任何内容；含草稿的编辑器仍处于打开状态。"
+}

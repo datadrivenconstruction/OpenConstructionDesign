@@ -1,0 +1,9 @@
+{
+ "xl.msg.base_value": "az ellenőrző visszaolvasás sikertelen, a régi munkafüzet megmarad: {} ({}) várt értéke '{}', beolvasott értéke '{}'",
+ "xl.msg.base_missing": "az ellenőrző visszaolvasás sikertelen, a régi munkafüzet megmarad: a(z) {} munkalapon nincs sor a(z) {} azonosítóhoz",
+ "xl.msg.base_extra": "az ellenőrző visszaolvasás sikertelen, a régi munkafüzet megmarad: a(z) {} sor nincs a modellben",
+ "xl.msg.base_refused": "az ellenőrző visszaolvasás sikertelen, a régi munkafüzet megmarad: {} ({}) elutasítva: {}",
+ "xl.msg.base_sheet": "az ellenőrző visszaolvasás sikertelen, a régi munkafüzet megmarad: a(z) {} munkalap hiányzik, üres vagy nem olvasható",
+ "xl.msg.base_newer": "az ellenőrző visszaolvasás sikertelen, a régi munkafüzet megmarad: {} cella nem a modell értékét tartalmazza",
+ "xl.msg.base_unreadable": "az ellenőrző visszaolvasás sikertelen, a régi munkafüzet megmarad: az új munkafüzet nem olvasható ({})"
+}

@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "Høyde {t} ble ikke tatt ({why}). Ingenting ble endret",
+ "host_shape.shape.elev_prompt_in": "høyde, fot-tommer…",
+ "host_shape.shape.elev_in": "{v} in"
+}

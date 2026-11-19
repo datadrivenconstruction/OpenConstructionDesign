@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "Modificări din registrul de calcul neaplicate",
+ "workbook_changes.wb.body": "Închiderea sau schimbarea proiectului le elimină.",
+ "workbook_changes.wb.line": "Import din registrul de calcul: {n} modificări neaplicate",
+ "workbook_changes.wb.review": "Verifică",
+ "workbook_changes.wb.discard": "Renunță"
+}

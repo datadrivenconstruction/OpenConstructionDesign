@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "Workbook changes not applied",
+ "workbook_changes.wb.body": "Closing or switching the project drops them.",
+ "workbook_changes.wb.line": "Workbook import: {n} changes not applied",
+ "workbook_changes.wb.review": "Review",
+ "workbook_changes.wb.discard": "Discard"
+}

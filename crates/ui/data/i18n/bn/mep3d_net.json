@@ -1,0 +1,13 @@
+{
+ "mep.sys.duct": "সরবরাহ S1",
+ "mep.sys.pipe": "ঠান্ডা পানি C1",
+ "mep.sys.tray": "পাওয়ার",
+ "mep.round": "গোল",
+ "mep.material": "উপাদান",
+ "mep3d.elevation": "লেভেল থেকে উচ্চতা",
+ "mep3d.slope": "ঢাল",
+ "mep3d.shape": "আকৃতি",
+ "mep3d.shape.rect": "আয়তাকার",
+ "mep3d.shape.round": "গোল",
+ "mep3d.shape.oval": "চ্যাপ্টা উপবৃত্ত"
+}

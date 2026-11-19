@@ -1,0 +1,41 @@
+{
+ "id": "tr",
+ "version": "2026.11",
+ "parent": "generic",
+ "country": "TR",
+ "lang": [
+  "tr"
+ ],
+ "units": {
+  "length": "m",
+  "display": "metric"
+ },
+ "conventions": {
+  "ground_floor": 0,
+  "area_standard": "gross",
+  "net_share": 0.85,
+  "note": "The zoning regulation defines both gross and net unit area; parking and most legal calculations use the gross area of the independent unit (outer wall faces). Net share is our own estimate.",
+  "source": "tr-planli"
+ },
+ "status": "tier3",
+ "climate": {
+  "zones": [],
+  "default": null
+ },
+ "research": {
+  "date": "2026-11-14",
+  "missing": [
+   "daylight.window_floor_ratio",
+   "stair.riser_max.house",
+   "stair.tread_min.house",
+   "parking.per_dwelling",
+   "load.floor_residential",
+   "load.floor_office"
+  ],
+  "unreachable": [
+   "https://www.mevzuat.gov.tr/ (404 on MevzuatMetin and mevzuat paths tried; shell connection timed out)"
+  ],
+  "note": "Parking is set by the separate parking regulation as a table that depends on unit gross area, so no single per-dwelling number exists. The zoning regulation only requires direct outside light for living rooms and bedrooms without a ratio. The zoning text was read from a legal-publisher PDF copy that carries the gazette amendment marks; the official consolidated page on mevzuat.gov.tr returned a not-found page."
+ },
+ "note": "Numbers with verified=true were read in the cited clause; the rest are hints with a note of where we looked. Wording is our own; no text of a standard is stored."
+}

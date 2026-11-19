@@ -1,0 +1,11 @@
+{
+ "xlsx_issues.skipped_title": "বাদ দেওয়া সারি ও সেল",
+ "xlsx_issues.conflicts_title": "দুই জায়গাতেই বদলেছে",
+ "xlsx_issues.missing_title": "ওয়ার্কবুকে শিট নেই",
+ "xlsx_issues.look_alike_title": "শিটের নাম মিলছে না",
+ "xlsx_issues.mass_title": "ব্যাপক মোছার জন্য নিশ্চিতকরণ দরকার",
+ "xlsx_issues.sheets_missing": "ওয়ার্কবুকে শিট {sheets} নেই (নাম বদলানো বা মোছা); সেগুলোর সারি তুলনা করা হয়নি।",
+ "xlsx_issues.keep_model": "মডেল রাখুন",
+ "xlsx_issues.take_book": "ওয়ার্কবুক নিন",
+ "xlsx_issues.open_book_tip": "ফাইলটি তার অ্যাপ্লিকেশনে খোলে। মডেলে কিছু বদলায় না; ওয়ার্কবুক সেভ করার পরে প্রিভিউ আবার লোড হয়।"
+}

@@ -1,0 +1,9 @@
+{
+ "ai.settings.num_bad": "Не е число. Въведете го така: 0.5.",
+ "ai.settings.num_comma": "Използвайте точка за десетичен знак, например 0.5.",
+ "ai.settings.num_negative": "Числото не може да бъде отрицателно.",
+ "ai.settings.unit_money": "валута",
+ "ai.settings.unit_tokens": "токена",
+ "ai.settings.unit_price": "за 1M токена",
+ "ai.settings.limits_hint": "0 означава без лимит. Отхвърлена стойност оставя предишния лимит."
+}

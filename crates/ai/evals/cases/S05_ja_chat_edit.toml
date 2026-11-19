@@ -1,0 +1,20 @@
+id = "S05_ja_chat_edit"
+tier = "smoke"
+group = ""
+title = "Edit by chat (Japanese): wider kitchen, basement parking"
+lang = "ja"
+base = "@S01_house_brief"
+
+[[turn]]
+say = "キッチンの幅を2m広げてください。"
+
+[[turn]]
+say = "次に、家の下に車2台分の駐車場がある地下階を追加してください。"
+
+[[oracle.count]]
+spec = "level"
+min = 3.0
+
+[[oracle.geom]]
+kind = "edit_kept"
+min = 0.5

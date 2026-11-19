@@ -1,0 +1,8 @@
+{
+ "drafts.drafts.head": "Otvoreni uređivači sadrže izmjene koje još nisu u projektu:",
+ "drafts.draft.family": "Obitelj „{name}“",
+ "drafts.draft.line": "Biblioteka linija: {name}",
+ "drafts.draft.styles": "Stilovi linija raspona pogleda",
+ "drafts.btn.save_all": "Spremi sve",
+ "drafts.drafts.refused": "Nacrt nije mogao biti spremljen. Ništa nije zatvoreno; uređivač s nacrtom je otvoren."
+}

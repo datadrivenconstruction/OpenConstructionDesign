@@ -1,0 +1,109 @@
+[package]
+name = "ddc-app"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Free, open-source CAD-BIM editor in Rust - AGPL-3.0"
+
+[[bin]]
+name = "ddc-app"
+path = "src/main.rs"
+required-features = ["gui"]
+
+[dependencies]
+web-time.workspace = true
+ddc-geom = { path = "../geom" }
+ddc-render = { path = "../render", default-features = false }
+ddc-model = { path = "../model" }
+ddc-ops = { path = "../ops" }
+ddc-ai = { path = "../ai" }
+ddc-gen = { path = "../gen" }
+ddc-script = { path = "../script" }
+serde.workspace = true
+serde_json.workspace = true
+# eval case files and oracle patterns: MIT OR Apache-2.0, both already in the tree
+toml_edit = { version = "0.25", default-features = false, features = ["parse"] }
+regex = "1"
+schemars.workspace = true
+# link cache key and `ddc publish` package hashes; already in the tree: MIT OR Apache-2.0
+sha2 = "0.10"
+# notify-only update check (one GET, no download): MIT OR Apache-2.0
+ureq.workspace = true
+native-tls.workspace = true
+ddc-io = { path = "../io" }
+ddc-ui = { path = "../ui", default-features = false }
+rusqlite.workspace = true
+pollster = { version = "0.4", optional = true }
+# PNG encoder for --screenshot: MIT OR Apache-2.0
+png = "0.17"
+# JPEG decoder for textures: MIT OR Apache-2.0 OR Zlib
+zune-jpeg = "0.5"
+# native save-file dialog: MIT
+rfd = { version = "0.16", optional = true }
+# reads the Info sheet of a linked book (relink); already a dependency of ddc-io: MIT
+calamine = "0.38.0"
+# reads the clipboard back to wipe a copied key; already in the tree: MIT OR Apache-2.0
+arboard = { version = "3", default-features = false, features = ["image-data"], optional = true }
+eframe = { version = "0.32", default-features = false, features = ["wgpu", "accesskit"], optional = true }
+# the egui that eframe re-exports, named directly so the crate builds without a window: MIT OR Apache-2.0
+egui = { version = "0.32", default-features = false, features = ["accesskit"] }
+# ERP link client (`.ddclink`, token, lock, upload): same workspace, Apache-2.0
+ddc-link = { path = "../link", optional = true }
+
+# the .ddcrev zip; already in the tree: MIT
+zip = { version = "9.0.5", default-features = false, features = ["deflate"], optional = true }
+getrandom = { workspace = true, optional = true }
+
+# drive type of an agent-named path (network drives refused); already in the tree: MIT OR Apache-2.0
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.59", features = ["Win32_Storage_FileSystem"] }
+
+[features]
+default = ["gui"]
+# window, GPU, native dialogs and clipboard; off for the headless `ddc` CLI
+gui = ["dep:eframe", "dep:rfd", "dep:arboard", "dep:pollster", "ddc-render/gpu"]
+# SQL statement counter of the model for tests/frame_budget.rs
+test-hooks = ["ddc-model/test-hooks"]
+# ERP link commands (`ddc gen`, `ddc publish`); off by default
+link = ["ddc-io/link", "dep:getrandom", "dep:zip", "dep:ddc-link"]
+# the editor's link tests against the in-process ERP of ddc-link
+link-mock = ["link", "ddc-link/mock-erp"]
+# DXF export (menu-less: headless --export .dxf); off in the public build
+dxf-export = ["ddc-io/dxf-write"]
+
+[build-dependencies]
+# SHA-256 for the build record tag; already in the tree: MIT OR Apache-2.0
+sha2 = "0.10"
+
+[dev-dependencies]
+# DXF writer for drawing fixtures in tests only
+ddc-io = { path = "../io", features = ["dxf-write"] }
+# captures graphics validation errors in tests/offscreen_3d.rs; already in the tree: MIT OR Apache-2.0
+log = "0.4"
+# reads and rewrites a book to add a user column in the re-export tests: MIT / MIT or Apache-2.0
+calamine = "0.38.0"
+rust_xlsxwriter = "0.102"
+# builds a book with a chart sheet for the re-export tests: MIT
+zip = { version = "9.0.5", default-features = false, features = ["deflate"] }
+# the headless `ddc run` on a generated project in tests/e2e_goal.rs
+ddc-cli = { path = "../cli" }
+
+[[test]]
+name = "link_erp"
+required-features = ["link-mock"]
+
+# drawing edits written out with Drawings::export_into, which the public build leaves out
+[[test]]
+name = "e2e_dwg_edit"
+required-features = ["dxf-export"]
+
+[[test]]
+name = "e2e_dwg_edit_corpus"
+required-features = ["dxf-export"]
+
+[[test]]
+name = "link_live"
+required-features = ["link"]

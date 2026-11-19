@@ -1,0 +1,23 @@
+{
+ "roof_edge.err.number": "Maglagay ng numero",
+ "roof_edge.err.positive": "Dapat mas malaki sa zero",
+ "roof_edge.err.nonneg": "Hindi dapat negatibo",
+ "roof_edge.err.max": "Hindi dapat lumampas sa {max}",
+ "roof_edge.list.empty_hint": "Magdagdag ng fascia, gutter, soffit o skylight gamit ang roof command",
+ "roof_edge.edit_tip": "I-edit ang properties",
+ "roof_edge.delete_tip": "Burahin",
+ "roof_edge.pe.del_tip": "Alisin ang puntong ito (hindi bababa sa 3 ang seksyon)",
+ "roof_edge.pe.up_tip": "Ilipat pataas ang puntong ito",
+ "roof_edge.confirm_edge": "Burahin ang {name}? Ibabalik ito ng Ctrl+Z.",
+ "roof_edge.confirm_profile": "Burahin ang profile na {name}? Ibabalik ito ng Ctrl+Z.",
+ "roof_edge.deleted_one": "Nabura ang {name}",
+ "roof_edge.deleted_n": {
+  "one": "Nabura ang # elemento",
+  "other": "Nabura ang # na elemento"
+ },
+ "roof_edge.profile_deleted": "Nabura ang profile",
+ "roof_edge.profile_in_use": {
+  "one": "Ginagamit ng # edge element: burahin o palitan muna ito",
+  "other": "Ginagamit ng # na edge element: burahin o palitan muna sila"
+ }
+}

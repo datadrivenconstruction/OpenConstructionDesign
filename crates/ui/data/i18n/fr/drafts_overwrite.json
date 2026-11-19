@@ -1,0 +1,5 @@
+{
+ "drafts_overwrite.ow.project": "L'enregistrement du projet attend cette réponse. Remplacez les valeurs pour poursuivre l'enregistrement ; Retour à la modification conserve chaque modification et n'écrit rien.",
+ "drafts_overwrite.drafts.ow_wait": "L'enregistrement attend votre réponse dans l'éditeur de famille : charger une famille remplacerait les valeurs de type de projet. Rien n'a été fermé.",
+ "drafts_overwrite.drafts.ow_back": "Enregistrement arrêté : les valeurs de type de projet ont été conservées et les modifications de famille sont toujours ouvertes. Rien n'a été fermé."
+}

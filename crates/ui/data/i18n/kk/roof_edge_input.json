@@ -1,0 +1,23 @@
+{
+ "roof_edge.err.number": "Сан енгізіңіз",
+ "roof_edge.err.positive": "Нөлден үлкен болуы керек",
+ "roof_edge.err.nonneg": "Теріс болмауы керек",
+ "roof_edge.err.max": "{max} мәнінен аспауы керек",
+ "roof_edge.list.empty_hint": "Шатыр командаларымен фасадтар, науалар, сүйенішелер немесе шатыр терезелерін қосыңыз",
+ "roof_edge.edit_tip": "Қасиеттерді өңдеу",
+ "roof_edge.delete_tip": "Жою",
+ "roof_edge.pe.del_tip": "Бұл нүктені алып тастау (кесінді кем дегенде 3 нүкте сақтайды)",
+ "roof_edge.pe.up_tip": "Бұл нүктені жоғары жылжыту",
+ "roof_edge.confirm_edge": "{name} жойылсын ба? Ctrl+Z оны қайтарады.",
+ "roof_edge.confirm_profile": "{name} профилі жойылсын ба? Ctrl+Z оны қайтарады.",
+ "roof_edge.deleted_one": "{name} жойылды",
+ "roof_edge.deleted_n": {
+  "one": "# элемент жойылды",
+  "other": "# элемент жойылды"
+ },
+ "roof_edge.profile_deleted": "Профиль жойылды",
+ "roof_edge.profile_in_use": {
+  "one": "# шекті элемент пайдаланады: алдымен оны жойыңыз немесе өзгертіңіз",
+  "other": "# шекті элемент пайдаланады: алдымен оларды жойыңыз немесе өзгертіңіз"
+ }
+}

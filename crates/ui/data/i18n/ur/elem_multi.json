@@ -1,0 +1,10 @@
+{
+ "elem.multi.title": "{n} عناصر",
+ "elem.multi.varies": "مختلف",
+ "elem.multi.tip": "Enter تمام منتخب عناصر پر لاگو کرتا ہے",
+ "elem.multi.hidden": "{n} قطاریں صرف کچھ عناصر پر",
+ "elem.multi.none": "منتخب عناصر میں کوئی مشترک قطار نہیں",
+ "elem.multi.range": "قدر اجازت شدہ حد سے باہر ہے",
+ "elem.multi.changed": "{n} عناصر تبدیل · واپس کے لیے Ctrl+Z",
+ "elem.multi.same": "تمام منتخب عناصر پر پہلے ہی یہی قدر ہے"
+}

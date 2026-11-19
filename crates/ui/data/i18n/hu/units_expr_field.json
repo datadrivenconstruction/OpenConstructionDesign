@@ -1,0 +1,14 @@
+{
+ "units.err.empty": "Üres bemenet.",
+ "units.err.not_number": "Nem szám a(z) {pos} pozíciónál.",
+ "units.err.unknown_unit": "Ismeretlen mértékegység: {unit}.",
+ "units.err.non_positive": "A hossznak nullánál nagyobbnak kell lennie.",
+ "units.err.too_large": "A hossz nem haladhatja meg a {max} m-t.",
+ "units.err.bad_angle": "A szög fokban megadott szám legyen.",
+ "units.err.unknown_name": "Ismeretlen név: {name}. Az érték megmarad.",
+ "units.err.cycle": "Képletkör a(z) {name} elemnél. Az érték megmarad.",
+ "units.err.bad_expr": "A kifejezés nem olvasható a(z) {pos} pozíciónál. Az érték megmarad.",
+ "units.err.div_zero": "Nullával való osztás a(z) {pos} pozíciónál. Az érték megmarad.",
+ "units.err.invalid": "Érvénytelen szám.",
+ "units.err.kept": "Nincs módosítás: {reason}"
+}

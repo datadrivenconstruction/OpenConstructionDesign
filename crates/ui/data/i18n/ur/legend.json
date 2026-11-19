@@ -1,0 +1,14 @@
+{
+ "legend.legend.pick": "لیجنڈ",
+ "legend.legend.new_hint": "نئے لیجنڈ کا نام",
+ "legend.legend.delete_tip": "لیجنڈ حذف کریں",
+ "legend.legend.delete_placed": "لیجنڈ حذف کریں (لگا ہوا ہے: {sheets})",
+ "legend.legend.deleted": "لیجنڈ حذف ہوا: {name}",
+ "legend.legend.no_rows": "ابھی قطار نہیں۔ ایک شامل کریں یا موجودہ ویو کے اسٹائل لیں",
+ "legend.legend.replace_q": "{n} قطاریں اس ویو کے اسٹائلز سے بدلیں؟",
+ "legend.legend.replace": "بدلیں",
+ "legend.legend.keep": "قطاریں رکھیں",
+ "legend.col.swatch": "رنگ نمونہ",
+ "legend.col.value": "قدر",
+ "legend.col.label": "لیبل"
+}

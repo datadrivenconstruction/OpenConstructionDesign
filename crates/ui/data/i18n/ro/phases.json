@@ -1,0 +1,15 @@
+{
+ "phases.view_3d": "3D",
+ "phases.current_mark": "curentă",
+ "phases.make_current": "Fă curentă",
+ "phases.col_phase": "Etapă",
+ "phases.col_filter": "Filtru",
+ "phases.presets": "Presetări de plan",
+ "phases.del_title": "Șterge etapa",
+ "phases.del_text": "Ștergi etapa \"{name}\"? Elementele ei trec în etapa aleasă mai jos.",
+ "phases.del_into": "Mută elementele în",
+ "phases.del_ok": "Șterge",
+ "phases.col_kind": "Tip element",
+ "phases.col_count": "Număr",
+ "phases.col_volume": "Volum"
+}

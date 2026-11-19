@@ -1,0 +1,9 @@
+{
+ "elem.deleted": "削除した要素: {n}",
+ "elem.deleted_kept": "削除した要素: {n}; 残した要素: {k}（パネルと削除できない要素）",
+ "elem.not_deleted": "未削除: {e}",
+ "elem.not_deletable": "この要素は削除できません",
+ "elem.panel": "カーテンウォールのパネル",
+ "elem.panel_refused": "パネルはカーテンウォールの一部のため、単独では削除できません。壁全体を選択して削除してください。",
+ "elem.reload_failed": "削除しましたが、ビューが更新されませんでした: {e}"
+}

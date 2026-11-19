@@ -1,0 +1,21 @@
+{
+ "cmd.sketch.link_loop": "पूरा दीवार-लूप चुनें",
+ "cmd.sketch.link_unlink": "किनारा दीवार से अलग करें",
+ "cmd.sketch.link_repick": "किनारे की दीवार फिर से चुनें",
+ "cmd.ctx.floor.link_unlink": "किनारों को दीवारों से अलग करें",
+ "cmd.ctx.floor.link_accept": "हटाई गई दीवारों के किनारे स्वीकार करें",
+ "boundary_link.hint.loop": "एक दीवार पर क्लिक करें: बंद दीवार-श्रृंखला जुड़े किनारे बन जाती है",
+ "boundary_link.hint.repick": "किनारे के समानांतर दीवार पर क्लिक करें: किनारा उसका अनुसरण करेगा",
+ "boundary_link.need_sketch": "पहले सीमा स्केच खोलें",
+ "boundary_link.need_edge": "स्केच के किनारे पर इंगित करें",
+ "boundary_link.need_straight": "केवल सीधा किनारा दीवार का अनुसरण कर सकता है",
+ "boundary_link.need_floor": "एक फ़्लोर चुनें",
+ "boundary_link.no_wall": "कर्सर के नीचे कोई दीवार नहीं",
+ "boundary_link.not_parallel": "दीवार किनारे के समानांतर नहीं है",
+ "boundary_link.not_linked": "यह किनारा किसी दीवार से जुड़ा नहीं है",
+ "boundary_link.unlinked": "किनारा अलग हुआ: वह जगह पर रहता है और अब दीवार का अनुसरण नहीं करता",
+ "boundary_link.accepted": "किनारे स्वीकार हुए: वे सामान्य किनारों की तरह जगह पर रहते हैं",
+ "boundary_link.failed": "लागू नहीं हो सका",
+ "boundary_link.lost": "स्रोत दीवार हटाई गई",
+ "boundary_link.blocked": "दीवार का अनुसरण नहीं कर सकता"
+}

@@ -1,0 +1,5 @@
+{
+ "caps.refused": "{kinds}: {reason}. Inget ändrades.",
+ "caps.panel": "En panel flyttas tillsammans med hela sin glasvägg. Välj väggen",
+ "caps.unsupported": "Det här verktyget redigerar inte de här elementen"
+}

@@ -1,0 +1,6 @@
+{
+ "imported_prop_edit.remove": "پراپرٹی ہٹائیں",
+ "imported_prop_edit.remove.tip": "منتخب {n} عنصر(ز) سے پراپرٹی ایک ان ڈو مرحلے میں ہٹاتا ہے؛ محفوظ کرنے پر IFC فائل سے نکل جائے گی",
+ "imported_prop_edit.done": "{key} {n} عنصر(ز) سے ہٹ گئی",
+ "imported_prop_edit.warn.reload": "ہو گیا، مگر ویو تازہ نہیں ہوا؛ اگر غلط لگے تو پینل دوبارہ کھولیں یا ان ڈو کریں"
+}

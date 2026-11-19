@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "Nabago sa disk ang {name}.",
+ "src.watch.update": "I-update ang modelo",
+ "src.watch.compare": "Ihambing",
+ "src.watch.ignore": "Huwag pansinin ang bersyong ito",
+ "src.watch.missing": "{name}: hindi nahanap ang source file. Nagpapatuloy ang trabaho.",
+ "src.watch.locate": "Hanapin…",
+ "src.watch.dismiss": "I-dismiss",
+ "src.watch.more": "at {n} pang source file",
+ "src.watch.done": "Na-update mula sa {name}: {updated} ang nabago, {kept} field ang itinira bilang na-edit, {conflicts} conflict, {locked} naka-lock na halaga ang itinira"
+}

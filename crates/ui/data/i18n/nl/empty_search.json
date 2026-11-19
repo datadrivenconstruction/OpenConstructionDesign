@@ -1,0 +1,18 @@
+{
+ "empty.browser_search.title": "Niets gevonden",
+ "empty.browser_search.hint": "Geen weergave, verdieping, type of ruimte komt overeen met deze zoekopdracht.",
+ "empty.browser_search.action": "Zoekopdracht wissen",
+ "empty.xl_filtered.title": "Geen items voldoen aan de filters",
+ "empty.xl_filtered.hint": "Schakel meer soorten in, kies een ander blad of wijzig de zoektekst.",
+ "empty.xl_filtered.action": "Filters wissen",
+ "empty.xl_nochanges.title": "Geen wijzigingen in de werkmap",
+ "empty.xl_nochanges.hint": "De werkmap komt overeen met het model: importeren zou niets wijzigen.",
+ "empty.version_same.title": "De modellen zijn identiek",
+ "empty.version_same.hint": "Er zijn geen verschillen gevonden tussen het geopende model en de gekozen versie.",
+ "empty.templates.title": "Nog geen weergavesjablonen",
+ "empty.templates.hint": "Maak er een van de huidige weergave om de instellingen op andere weergaven te hergebruiken.",
+ "empty.templates.action": "Een sjabloon benoemen",
+ "empty.fe_params.title": "Nog geen parameters",
+ "empty.fe_params.hint": "Voeg hieronder een parameter toe om maten, materialen of zichtbaarheid aan te sturen.",
+ "empty.fe_params.action": "Parameter toevoegen"
+}

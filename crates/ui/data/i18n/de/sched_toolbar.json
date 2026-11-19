@@ -1,0 +1,16 @@
+{
+ "sched_toolbar.filter_tip": "Filterzeile unter den Kopfzeilen. Text: Teilzeichenfolge; Zahlen: >5, <=3000, =2.5, <>0",
+ "sched_toolbar.columns_tip": "Spalten ein- oder ausblenden",
+ "sched_toolbar.groups_tip": "Zeilen nach Spalten gruppieren, mit Zwischensummen",
+ "sched_toolbar.formulas_tip": "Berechnete Spalten",
+ "sched_toolbar.phase": "Phase",
+ "sched_toolbar.phase_tip": "Aus welcher Phase die Zeilen übernommen werden",
+ "sched_toolbar.copy_tip": "Ausgewählte (oder alle sichtbaren) Zeilen als TSV",
+ "sched_toolbar.import_tip": "Eine exportierte Liste zurücklesen: Zeilen nach Id, Spalten nach Kopfzeile; zuerst Anzahlen, dann ein Rückgängig-Schritt",
+ "sched_toolbar.export_tip": "Sichtbare Zeilen und Spalten mit Summen; Zahlen bleiben Zahlen",
+ "sched_toolbar.need_table": "Öffnen Sie zuerst eine Liste",
+ "sched_toolbar.busy_open": "Ein Dateidialog ist bereits geöffnet",
+ "sched_toolbar.busy_save": "Ein Speicherdialog ist bereits geöffnet",
+ "sched_toolbar.clear_filter": "Filter löschen",
+ "sched_toolbar.fields_title": "Spalten"
+}

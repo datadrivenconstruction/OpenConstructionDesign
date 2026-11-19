@@ -1,0 +1,42 @@
+{
+ "ai.tool.show_elements": "نمایش عنصرها",
+ "ai.tool.isolate_elements": "جداسازی عنصرها",
+ "ai.tool.color_by": "رنگ‌آمیزی بر اساس مقدار",
+ "ai.tool.reset_view": "بازنشانی نما",
+ "ai_found.found.query": "پیدا شد",
+ "ai_found.found.show": "نمایش داده شد",
+ "ai_found.found.isolate": "جداسازی شد",
+ "ai_found.found.hide": "پنهان شد",
+ "ai_found.found.color": "رنگی شد",
+ "ai_found.found.count": "{n} از {m}",
+ "ai_found.found.none": "موردی مطابقت ندارد. فیلتر گسترده‌تری امتحان کنید.",
+ "ai_found.found.show_btn": "نمایش",
+ "ai_found.found.show_tip": "این عنصرها را انتخاب کن و در پلان و سه‌بعدی بزرگ‌نمایی کن",
+ "ai_found.found.isolate_btn": "جداسازی",
+ "ai_found.found.isolate_tip": "فقط این عنصرها را تا بازنشانی نما نشان بده",
+ "ai_found.found.select_btn": "انتخاب",
+ "ai_found.found.select_tip": "این عنصرها را بدون جابه‌جایی نما انتخاب کن",
+ "ai_found.legend.title": "رنگ‌آمیزی بر اساس {by}",
+ "ai_found.legend.row_tip": "برای انتخاب این عنصرها کلیک کنید",
+ "ai_found.legend.empty_value": "بدون مقدار",
+ "ai_found.legend.other": {
+  "one": "# مقدار دیگر",
+  "other": "# مقدار دیگر"
+ },
+ "ai_found.view.title": "نمای دستیار هوش مصنوعی",
+ "ai_found.view.reset": "بازنشانی نما",
+ "ai_found.view.reset_tip": "نمای پیش از تغییر دستیار هوش مصنوعی را برگردان",
+ "ai_found.view.shown": {
+  "one": "# عنصر نمایش داده شد",
+  "other": "# عنصر نمایش داده شد"
+ },
+ "ai_found.view.isolated": {
+  "one": "# عنصر جدا شد",
+  "other": "# عنصر جدا شد"
+ },
+ "ai_found.view.hidden": {
+  "one": "# عنصر پنهان شد",
+  "other": "# عنصر پنهان شد"
+ },
+ "ai_found.found.line": "{what}: {count}"
+}

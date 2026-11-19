@@ -1,0 +1,4 @@
+{
+ "topo_import.topo.ambiguous": "{n} rows skipped: a number reads two ways (1,250 = 1.25 or 1250?) and the file shows no decimal mark",
+ "topo_import.topo.grouped": "{n} points read with digit groups (1 250,5 or 1,234.5)"
+}

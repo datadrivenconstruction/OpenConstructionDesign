@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "معدّلة",
+ "ai.redraft.added": "+{n} مضافة",
+ "ai.redraft.removed": "−{n} محذوفة",
+ "ai.redraft.changed": "~{n} متغيرة",
+ "ai.redraft.strip": "{what} منذ آخر اطلاع لك",
+ "ai.redraft.note": "تمت مراجعة الخطة المعدّلة: {what}",
+ "ai.redraft.more": "+{n} أخرى",
+ "ai.redraft.ack": "فهمت",
+ "ai.redraft.ack.tip": "ضع علامة على أن هذه المراجعة قد رُئيت؛ يستهدفها التطبيق بعد ذلك",
+ "ai.redraft.removed_list": "العناصر المحذوفة: {n}",
+ "ai.redraft.review_first": "تغيرت الخطة بعد رسالتك: راجع التغييرات أولاً",
+ "ai.redraft.mark.tip": "جديدة أو متغيرة منذ آخر اطلاع لك",
+ "ai.redraft.emptied": "أزالت المتابعة كل العناصر: المسودة فارغة"
+}

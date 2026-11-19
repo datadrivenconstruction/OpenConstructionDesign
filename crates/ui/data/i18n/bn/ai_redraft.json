@@ -1,0 +1,15 @@
+{
+ "ai.redraft.badge": "সংশোধিত",
+ "ai.redraft.added": "+{n}টি যোগ",
+ "ai.redraft.removed": "−{n}টি সরানো",
+ "ai.redraft.changed": "~{n}টি বদলেছে",
+ "ai.redraft.strip": "আপনার শেষ দেখার পর {what}",
+ "ai.redraft.note": "সংশোধিত প্ল্যান পর্যালোচিত: {what}",
+ "ai.redraft.more": "+{n}টি আরও",
+ "ai.redraft.ack": "বুঝেছি",
+ "ai.redraft.ack.tip": "এই সংশোধনকে দেখা হিসেবে চিহ্নিত করুন; প্রয়োগ তখন এটিকে লক্ষ্য করে",
+ "ai.redraft.removed_list": "সরানো আইটেম: {n}",
+ "ai.redraft.review_first": "আপনার বার্তার পর প্ল্যান বদলেছে: আগে পরিবর্তনগুলো যাচাই করুন",
+ "ai.redraft.mark.tip": "আপনার শেষ দেখার পর নতুন বা বদলানো",
+ "ai.redraft.emptied": "ফলো-আপ সব আইটেম সরিয়েছে: ড্রাফট খালি"
+}

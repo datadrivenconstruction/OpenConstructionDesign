@@ -1,0 +1,9 @@
+{
+ "cmd.mass.timeline_family": "Povijest u obitelj",
+ "cmd.mass.timeline_family.desc": "Izrađuje obitelj komponenata iz povijesti izgradnje odabrane mase. Parametri povijesti postaju parametri obitelji.",
+ "mass_family.done": "Stvorena obitelj {name}, parametara: {n}",
+ "mass_family.refused": "Obitelj nije stvorena: {e}",
+ "mass_family.no_mass": "Najprije odaberite parametarsku masu",
+ "mass_family.add_modifier": "Dodaj modifikator",
+ "mass_family.needs_faces": "Potrebne su odabrane plohe: upotrijebite alat na kartici „Mase“"
+}

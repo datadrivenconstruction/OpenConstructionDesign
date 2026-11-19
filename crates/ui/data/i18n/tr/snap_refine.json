@@ -1,0 +1,11 @@
+{
+ "snap_refine.settings.snap_px": "Yakalama yarıçapı",
+ "snap_refine.settings.snap_px_desc": "İmlecin bir noktaya veya çizgiye yakalanmak için ne kadar yaklaşması gerektiği, ekran pikseli cinsinden. Dokunmatik ve yüksek yoğunluklu ekranlarda daha büyük değer yardımcı olur.",
+ "snap_refine.settings.px_suffix": " px",
+ "snap_refine.hint.horizontal": "Yatay",
+ "snap_refine.hint.vertical": "Dikey",
+ "snap_refine.hint.perpendicular": "Öncekine dik",
+ "snap_refine.hint.parallel": "Öncekine paralel",
+ "snap_refine.hint.on_axis": "Duvar ekseninde",
+ "snap_refine.no_snap": "Yakalama yok (Alt)"
+}

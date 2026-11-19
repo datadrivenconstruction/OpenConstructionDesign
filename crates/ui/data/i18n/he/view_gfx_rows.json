@@ -1,0 +1,10 @@
+{
+ "view_gfx.vv.visible_tip": "גלוי במבט הזה",
+ "view_gfx.vv.enabled_tip": "החל מסנן זה במבט הזה",
+ "view_gfx.vv.reset_tip": "חזרה לברירת המחדל של הפרויקט",
+ "view_gfx.vv.col.actions": "פעולות",
+ "view_gfx.vv.nothing_to_apply": "אין שינויים להחלה",
+ "view_gfx.flt.save_blocked": "תן שם למסנן ומלא את פרמטר כל כלל",
+ "view_gfx.flt.confirm_delete": "למחוק עבור כל המבטים?",
+ "view_gfx.flt.param_pick": "בחר…"
+}

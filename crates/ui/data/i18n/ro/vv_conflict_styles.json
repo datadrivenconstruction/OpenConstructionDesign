@@ -1,0 +1,6 @@
+{
+ "vv_conflict.styles.conflict": "Stilurile obiectelor unei categorii editate s-au modificat în model (anulare sau altă fereastră) cât timp această fereastră avea modificări. Modificările dvs. sunt păstrate.",
+ "vv_conflict.styles.keep": "Păstrează modificările mele",
+ "vv_conflict.styles.reload": "Reîncarcă",
+ "vv_conflict.styles.answer_first": "Alegeți Păstrează modificările mele sau Reîncarcă mai întâi"
+}

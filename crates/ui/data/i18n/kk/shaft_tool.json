@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "Шахталар",
+ "quick.cat.shaft": "Шахта",
+ "shaft_tool.browser.shaft": "Шахта #{id}",
+ "shaft_tool.shaft.top": "Жоғарғы деңгей",
+ "shaft_tool.shaft.cuts": "Кесілген элементтер",
+ "shaft_tool.shaft.cut_area": "Кесілген аудан",
+ "shaft_tool.shaft.cut_volume": "Кесілген көлем",
+ "elem.no.rooms": "Ішіндегі бөлмелерді қадағалайды"
+}

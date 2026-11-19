@@ -1,0 +1,15 @@
+{
+ "xlw.hd_never": "Not exported yet",
+ "xlw.hd_now": "just now",
+ "xlw.hd_min": "{n} min ago",
+ "xlw.hd_hour": "{n} h ago",
+ "xlw.hd_day": "{n} d ago",
+ "xlw.hd_linked": "Linked",
+ "xlw.hd_watched": "Watched",
+ "xlw.hd_stale": "Model changed since export",
+ "xlw.ft_export": "Export",
+ "xlw.ft_review": "Review",
+ "xlw.ft_apply": "Apply {n} changes",
+ "xlw.ft_delete_missing": "Delete missing",
+ "xlw.ft_keep_missing_tip": "Deleting is on: elements without a row will be deleted on Apply. Untick to keep them."
+}

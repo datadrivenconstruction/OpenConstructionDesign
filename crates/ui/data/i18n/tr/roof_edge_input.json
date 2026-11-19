@@ -1,0 +1,23 @@
+{
+ "roof_edge.err.number": "Bir sayı girin",
+ "roof_edge.err.positive": "Sıfırdan büyük olmalı",
+ "roof_edge.err.nonneg": "Negatif olmamalı",
+ "roof_edge.err.max": "{max} değerini aşmamalı",
+ "roof_edge.list.empty_hint": "Çatı komutlarıyla saçak, oluk, soffit veya çatı penceresi ekleyin",
+ "roof_edge.edit_tip": "Özellikleri düzenle",
+ "roof_edge.delete_tip": "Sil",
+ "roof_edge.pe.del_tip": "Bu noktayı kaldır (kesit en az 3 nokta tutar)",
+ "roof_edge.pe.up_tip": "Bu noktayı yukarı taşı",
+ "roof_edge.confirm_edge": "{name} silinsin mi? Ctrl+Z geri getirir.",
+ "roof_edge.confirm_profile": "{name} profili silinsin mi? Ctrl+Z geri getirir.",
+ "roof_edge.deleted_one": "{name} silindi",
+ "roof_edge.deleted_n": {
+  "one": "# öğe silindi",
+  "other": "# öğe silindi"
+ },
+ "roof_edge.profile_deleted": "Profil silindi",
+ "roof_edge.profile_in_use": {
+  "one": "# kenar öğesi tarafından kullanılıyor: önce silin veya değiştirin",
+  "other": "# kenar öğesi tarafından kullanılıyor: önce silin veya değiştirin"
+ }
+}

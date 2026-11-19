@@ -1,0 +1,11 @@
+{
+ "materials.mat.name_empty": "Материал атын енгізіңіз",
+ "materials.mat.empty_title": "Әзірге материалдар жоқ",
+ "materials.mat.empty_hint": "Төмендегі өріске атын жазып, Қосу басыңыз",
+ "materials.mat.nothing_hint": "Іздеуге сай материал жоқ",
+ "materials.mat.clear_search": "Іздеуді тазалау",
+ "materials.mat.replace_with": "Мынамен ауыстыру",
+ "materials.mat.delete_refused": "Жою мүмкін емес: материал {n} жерде пайдаланылған. Алдымен оны ауыстырыңыз.",
+ "materials.mat.delete_confirm": "“{name}” материалын жою керек пе? Мұны болдыруға болады.",
+ "materials.mat.replace_confirm": "{n} элементтегі “{from}” материалын “{to}” материалына ауыстыру керек пе? “{from}” жойылады. Мұны болдыруға болады."
+}

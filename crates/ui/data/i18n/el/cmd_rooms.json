@@ -1,0 +1,6 @@
+{
+ "cmd.arch.room_auto.short": "Τοποθέτηση χώρων",
+ "cmd.mod.group_select.short": "Επιλογή ομάδας",
+ "cmd.mod.group_cancel.short": "Ακύρωση επεξεργασίας",
+ "cmd.view.place_sheet_list.short": "Τοποθέτηση λίστας φύλλων"
+}

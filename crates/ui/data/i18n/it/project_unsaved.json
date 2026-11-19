@@ -1,0 +1,7 @@
+{
+ "project_unsaved.unsaved.model": "Le modifiche al modello non sono salvate.",
+ "project_unsaved.unsaved.drawings": {
+  "one": "# disegno posizionato non è salvato nel progetto: le sue modifiche andranno perse.",
+  "other": "# disegni posizionati non sono salvati nel progetto: le loro modifiche andranno perse."
+ }
+}

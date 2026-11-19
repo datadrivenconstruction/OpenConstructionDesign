@@ -1,0 +1,6 @@
+{
+ "cmd.arch.room_auto.short": "Placer les pièces",
+ "cmd.mod.group_select.short": "Sélectionner le groupe",
+ "cmd.mod.group_cancel.short": "Annuler la modification",
+ "cmd.view.place_sheet_list.short": "Placer la liste des feuilles"
+}

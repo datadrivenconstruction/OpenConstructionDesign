@@ -1,0 +1,11 @@
+{
+ "src.watch.changed": "{name} השתנה בדיסק.",
+ "src.watch.update": "עדכון המודל",
+ "src.watch.compare": "השוואה",
+ "src.watch.ignore": "התעלמות מגרסה זו",
+ "src.watch.missing": "{name}: קובץ המקור לא נמצא. העבודה ממשיכה.",
+ "src.watch.locate": "איתור…",
+ "src.watch.dismiss": "סגירה",
+ "src.watch.more": "ועוד {n} קובצי מקור",
+ "src.watch.done": "עודכן מ-{name}: שונו {updated}, נשמרו {kept} שדות שנערכו, {conflicts} התנגשויות, נשמרו {locked} ערכים נעולים"
+}

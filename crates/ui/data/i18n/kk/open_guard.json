@@ -1,0 +1,11 @@
+{
+ "job.stage.prepare": "Жоба дайындалуда",
+ "open_guard.already_open": "{name} бұрыннан ашық",
+ "open_guard.from_cache": "{name}: импорт кэшінен ашылды",
+ "open_guard.known_project": "{name} бұрын импортталған: сол жоба ашылуда",
+ "open_guard.locate": "Табу",
+ "open_guard.mem_low": "Жад аз: тор бюджеті екі есе азайтылды, деңгейлік бөлшектеу тоқтатылды",
+ "open_guard.mem_low_short": "Жад аз: жад босағанша деңгейлік бөлшектеу тоқтатылды",
+ "open_guard.no_window": "Бұл жобаның терезесі табылмады",
+ "open_guard.switch_window": "Сол терезеге ауысу"
+}

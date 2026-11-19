@@ -1,0 +1,5 @@
+{
+ "xlsx_delete.delete_missing": "통합 문서에 없는 행 삭제",
+ "xlsx_delete.not_removed": "제거되지 않음: 비교 데이터 없음",
+ "xlsx_delete.no_base_reason": "사용할 수 없음: 통합 문서에 비교 데이터가 없어 실수로 제거된 행과 없는 행을 구분할 수 없습니다. 적용 시 아무것도 삭제되지 않습니다."
+}

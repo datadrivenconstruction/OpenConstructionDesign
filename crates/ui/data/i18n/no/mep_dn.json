@@ -1,0 +1,5 @@
+{
+ "mep_dn.dn.unset": "Ikke satt",
+ "mep_dn.slope.err": "Skriv inn et fall i %, f.eks. 1.5",
+ "mep_dn.err.rejected": "verdien godtas ikke"
+}

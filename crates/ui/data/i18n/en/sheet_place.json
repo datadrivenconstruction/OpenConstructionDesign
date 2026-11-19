@@ -1,0 +1,15 @@
+{
+ "sheet_place.place_view_tip": "Place a view or schedule on the sheet",
+ "sheet_place.properties_tip": "Sheet number, name, paper and revisions",
+ "sheet_place.print_tip": "Print or export the sheet",
+ "sheet_place.fit_tip": "Fit the sheet to the window",
+ "sheet_place.activate_tip": "Edit the view in place on the sheet: pan, zoom and crop it",
+ "sheet_place.open_view_tip": "Open the view in its own tab",
+ "sheet_place.done_tip": "Finish editing the view on the sheet",
+ "sheet_place.reset_crop_tip": "Remove the crop and show the whole view",
+ "sheet_place.scale_tip": "Scale of the selected view on the sheet",
+ "sheet_place.title_tip": "Title shown under the view on the sheet",
+ "sheet_place.banner": "Editing the view on the sheet",
+ "sheet_place.new_set_tip": "Create a set of sheets to print together",
+ "sheet_place.new_sheet_tip": "Add a sheet to the project"
+}

@@ -1,0 +1,15 @@
+{
+ "sheet_place.place_view_tip": "یک نما یا جدول را روی برگه قرار دهید",
+ "sheet_place.properties_tip": "شماره، نام، کاغذ و بازبینی‌های برگه",
+ "sheet_place.print_tip": "چاپ یا خروجی برگه",
+ "sheet_place.fit_tip": "برازش برگه با پنجره",
+ "sheet_place.activate_tip": "نما را همان‌جا روی برگه ویرایش کنید: جابه‌جایی، زوم و برش",
+ "sheet_place.open_view_tip": "نما را در زبانه‌ی خودش باز کنید",
+ "sheet_place.done_tip": "پایان ویرایش نما روی برگه",
+ "sheet_place.reset_crop_tip": "برش را حذف کنید و کل نما را نشان دهید",
+ "sheet_place.scale_tip": "مقیاس نمای انتخاب‌شده روی برگه",
+ "sheet_place.title_tip": "عنوانی که زیر نما روی برگه نمایش داده می‌شود",
+ "sheet_place.banner": "در حال ویرایش نما روی برگه",
+ "sheet_place.new_set_tip": "یک مجموعه برگه برای چاپ همزمان بسازید",
+ "sheet_place.new_sheet_tip": "یک برگه به پروژه اضافه کنید"
+}

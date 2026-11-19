@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "XLSX jadval ga eksport: doira",
+ "xlsx_scope.intro": "Ish kitobiga nima kirishini tanlang. Uni qayta import qilish faqat shu elementlarni o'zgartiradi.",
+ "xlsx_scope.base_whole": "Butun model",
+ "xlsx_scope.base_level": "Faol sath",
+ "xlsx_scope.base_selection": "Tanlov",
+ "xlsx_scope.categories": "Kategoriyalar",
+ "xlsx_scope.cat_walls": "devorlar",
+ "xlsx_scope.cat_openings": "eshiklar",
+ "xlsx_scope.cat_rooms": "xonalar",
+ "xlsx_scope.cat_slabs": "plitalar",
+ "xlsx_scope.cat_curtains": "pardali devorlar",
+ "xlsx_scope.nothing_selected": "Hech narsa tanlanmagan: avval elementlarni tanlang yoki boshqa doirani tanlang.",
+ "xlsx_scope.no_categories": "Kamida bitta kategoriyani belgilang.",
+ "xlsx_scope.no_level": "Faol sath topilmadi.",
+ "xlsx_scope.export": "Eksport",
+ "xlsx_scope.preview_scope": "Eksport qilingan doira: {scope}. Undan tashqaridagi elementlar hech qachon o'zgartirilmaydi yoki o'chirilmaydi."
+}

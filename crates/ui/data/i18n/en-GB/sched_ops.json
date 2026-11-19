@@ -1,0 +1,15 @@
+{
+ "sched_ops.not_positive": "value must be above zero",
+ "sched_ops.not_number": "not a number",
+ "sched_ops.no_host": "no host wall",
+ "sched_ops.wall_length": "this wall length cannot be set so",
+ "sched_ops.no_wall": "no such wall",
+ "sched_ops.no_opening": "no such opening",
+ "sched_ops.no_curtain": "no such curtain wall",
+ "sched_ops.no_panel": "no such panel",
+ "sched_ops.no_slab": "no such slab",
+ "sched_ops.no_room": "no such room",
+ "sched_ops.slope_range": "slope out of range",
+ "sched_ops.place": "#{id}: {why}",
+ "sched_ops.model": "{e}"
+}

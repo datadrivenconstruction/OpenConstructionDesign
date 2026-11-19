@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "Move up",
+ "rebar_list.move_down": "Move down",
+ "rebar_list.remove": "Remove",
+ "rebar_list.zone_remove_last": "A zone needs at least one room: delete the zone to remove the last one",
+ "rebar_list.rebar_empty_title": "No rebar in this model",
+ "rebar_list.rebar_empty_hint": "Place rebar in a host element and it will be scheduled here.",
+ "rebar_list.rebar_empty_action": "Place rebar"
+}

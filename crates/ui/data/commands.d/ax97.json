@@ -1,0 +1,17 @@
+[
+ {
+  "id": "view.axes_full",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [
+   "F9"
+  ],
+  "hold": true,
+  "tab": null,
+  "surfaces": [
+   "P"
+  ],
+  "stage": "M1",
+  "group": "view"
+ }
+]

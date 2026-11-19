@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "上へ移動",
+ "rebar_list.move_down": "下へ移動",
+ "rebar_list.remove": "削除",
+ "rebar_list.zone_remove_last": "ゾーンには少なくとも 1 つの部屋が必要です。最後の部屋を削除するにはゾーンを削除してください",
+ "rebar_list.rebar_empty_title": "このモデルに鉄筋はありません",
+ "rebar_list.rebar_empty_hint": "ホスト要素に鉄筋を配置すると、ここで集計されます。",
+ "rebar_list.rebar_empty_action": "鉄筋を配置"
+}

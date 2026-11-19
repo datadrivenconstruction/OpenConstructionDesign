@@ -1,0 +1,19 @@
+{
+ "mat.concrete": "Beton",
+ "mat.masonry": "Falazat",
+ "mat.brick": "Tégla",
+ "mat.insulation": "Szigetelés",
+ "mat.plaster": "Vakolat",
+ "mat.render": "Vakolatréteg",
+ "mat.gypsum": "Gipszkarton",
+ "mat.glass": "Üveg",
+ "mat.wood": "Fa",
+ "mat.steel": "Acél",
+ "mat.membrane": "Membrán",
+ "mat.other": "Egyéb",
+ "warn.cat.wall": "Fal",
+ "warn.cat.slab": "Födém",
+ "warn.cat.opening": "Nyílás",
+ "warn.cat.curtain_wall": "Üvegfal",
+ "td.mat.custom": "Egyéb…"
+}

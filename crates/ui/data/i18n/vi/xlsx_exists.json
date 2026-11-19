@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "Sổ làm việc này đã tồn tại",
+ "xlsx_exists.foreign": "Đây không phải sổ làm việc của dự án này, nên không bao giờ bị thay thế.",
+ "xlsx_exists.pending": "Có {n} chỉnh sửa chưa áp dụng vào mô hình.",
+ "xlsx_exists.outside": "Có {n} hàng mà bản xuất mới không chứa.",
+ "xlsx_exists.new_name": "Xuất sang {name}",
+ "xlsx_exists.apply_first": "Hãy áp dụng chúng trước",
+ "xlsx_exists.replace": "Thay thế (chuyển sổ cũ vào _archive)",
+ "xlsx_exists.archived": "Đã chuyển sổ làm việc cũ vào {path}",
+ "xlsx_exists.archive_failed": "Không thể chuyển sổ làm việc cũ, chưa xuất gì: {error}"
+}

@@ -1,0 +1,15 @@
+{
+ "cmd.data.export_step.desc": "Sparar hela modellen eller markeringen som STEP AP214 eller AP242: solider med exakta plana, cylindriska, koniska, sfäriska, toroidala och B-spline-ytor, övriga element som plana ytor, färger, en sammansättningsnod per våning.",
+ "cmd.data.export_3mf.desc": "Sparar hela modellen eller markeringen som 3MF för utskrift: ett objekt per element, färger, enheter och en kontroll att varje kropp är vattentät.",
+ "fmenu.export.step": "STEP exakta solider (.step)",
+ "fmenu.export.3mf": "3MF för utskrift (.3mf)",
+ "mx.schema": "STEP-schema",
+ "mx.schema.ap214": "AP214 (bredast stöd)",
+ "mx.schema.ap242": "AP242",
+ "mx.watertight": "Kroppar som inte är vattentäta",
+ "mx.watertight.report": "Skriv dem och lista dem",
+ "mx.watertight.skip": "Utelämna dem",
+ "mx.watertight.require": "Avbryt exporten",
+ "mx.faceted": "{fmt} sparad: {path} ({exact} exakta solider, {n} skrivna som plana ytor: {first})",
+ "sheets.print.svg": "SVG"
+}

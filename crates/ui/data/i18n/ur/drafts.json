@@ -1,0 +1,8 @@
+{
+ "drafts.drafts.head": "کھلے ایڈیٹرز میں ترامیم ہیں جو ابھی پروجیکٹ میں نہیں:",
+ "drafts.draft.family": "فیملی “{name}”",
+ "drafts.draft.line": "لائن لائبریری: {name}",
+ "drafts.draft.styles": "ویو رینج لائن اسٹائلز",
+ "drafts.btn.save_all": "سب محفوظ کریں",
+ "drafts.drafts.refused": "ڈرافٹ محفوظ نہیں ہو سکا۔ کچھ بند نہیں ہوا؛ ڈرافٹ والا ایڈیٹر کھلا ہے۔"
+}

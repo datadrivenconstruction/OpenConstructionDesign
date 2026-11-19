@@ -1,0 +1,6 @@
+{
+ "ai_toast.toast_not_refreshed": "已作为撤销步骤 {n} 应用（Ctrl+Z 可撤销），但视图未刷新。请重新加载视图。",
+ "ai.optx.reload_failed": "方案“{name}”已应用并保存，但视图未能刷新：{e}",
+ "ai.cmp.stale": "已过时",
+ "ai.cmp.stale_tip": "此方案基于较早的模型状态生成。请重新生成后再应用。"
+}

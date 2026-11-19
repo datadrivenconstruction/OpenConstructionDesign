@@ -1,0 +1,23 @@
+{
+ "roof_edge.err.number": "संख्या लिखें",
+ "roof_edge.err.positive": "शून्य से बड़ा होना चाहिए",
+ "roof_edge.err.nonneg": "ऋणात्मक नहीं होना चाहिए",
+ "roof_edge.err.max": "{max} से अधिक नहीं होना चाहिए",
+ "roof_edge.list.empty_hint": "छज्जे, गटर, सॉफ़िट या स्काइलाइट रूफ़ कमांड से जोड़ें",
+ "roof_edge.edit_tip": "गुण संपादित करें",
+ "roof_edge.delete_tip": "हटाएँ",
+ "roof_edge.pe.del_tip": "यह बिंदु हटाएँ (खंड में कम से कम 3 रहते हैं)",
+ "roof_edge.pe.up_tip": "यह बिंदु ऊपर ले जाएँ",
+ "roof_edge.confirm_edge": "{name} हटाएँ? Ctrl+Z इसे वापस लाता है।",
+ "roof_edge.confirm_profile": "प्रोफ़ाइल {name} हटाएँ? Ctrl+Z इसे वापस लाता है।",
+ "roof_edge.deleted_one": "{name} हटाया गया",
+ "roof_edge.deleted_n": {
+  "one": "# तत्व हटाया गया",
+  "other": "# तत्व हटाए गए"
+ },
+ "roof_edge.profile_deleted": "प्रोफ़ाइल हटाई गई",
+ "roof_edge.profile_in_use": {
+  "one": "# किनारे वाले तत्व द्वारा उपयोग: पहले उसे हटाएँ या बदलें",
+  "other": "# किनारे वाले तत्वों द्वारा उपयोग: पहले उन्हें हटाएँ या बदलें"
+ }
+}

@@ -1,0 +1,6 @@
+{
+ "autosave_status.autosave_failed": "Автомат хадгалалт амжилтгүй, сүүлчийн өөрчлөлтүүд хамгаалагдаагүй. {why}",
+ "autosave_status.autosave_open": "Автомат хадгалалтын тохиргоо",
+ "autosave_status.autosave_recovered": "Автомат хадгалалт дахин ажиллаж байна.",
+ "autosave_status.autosave_reason": "Шалтгаан: {why}"
+}

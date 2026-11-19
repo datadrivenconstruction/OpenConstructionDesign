@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "सिरा",
+ "snap.midpoint": "मध्य बिंदु",
+ "snap.perpendicular": "लंबवत",
+ "snap.wall_axis": "Wall अक्ष",
+ "snap.wall_face": "Wall सतह",
+ "snap.grid": "ग्रिड",
+ "snap.intersection": "प्रतिच्छेदन",
+ "snap.grid_axis": "ग्रिड रेखा",
+ "snap.ref_plane": "संदर्भ तल",
+ "snap.nearest": "निकटतम",
+ "snap.align_x": "दूर के बिंदु से X में संरेखित",
+ "snap.align_y": "दूर के बिंदु से Y में संरेखित",
+ "snap.align_xy": "X और Y में संरेखित"
+}

@@ -1,0 +1,12 @@
+{
+ "constraints.con.tip.lock_length": "Тримає цю стіну незмінної довжини при кожній правці",
+ "constraints.con.tip.lock_dist": "Тримає відстань між двома стінами при кожній правці",
+ "constraints.con.tip.equal": "Тримає однаковими кроки між вибраними стінами",
+ "constraints.con.tip.align": "Тримає обидві стіни на одній лінії",
+ "constraints.con.tip.parallel": "Тримає стіни паралельними",
+ "constraints.con.tip.perp": "Тримає стіни під прямим кутом",
+ "constraints.con.tip.align_grid": "Тримає стіну на найближчій осі",
+ "constraints.con.tip.lock_dist_grid": "Тримає відстань від стіни до найближчої осі",
+ "constraints.con.tip.level_gap": "Тримає відстань між рівнями",
+ "constraints.con.tip.top_to_level": "Тримає верх стіни на рівні вище"
+}

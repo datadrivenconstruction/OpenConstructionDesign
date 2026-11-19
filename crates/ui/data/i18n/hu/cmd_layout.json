@@ -1,0 +1,4 @@
+{
+ "cmd.data.sync_xlsx": "Szinkronizálás táblázattal…",
+ "cmd.data.sync_xlsx.desc": "Újra beolvassa a csatolt munkafüzetet, és megmutatja a modelltől való eltéréseket."
+}

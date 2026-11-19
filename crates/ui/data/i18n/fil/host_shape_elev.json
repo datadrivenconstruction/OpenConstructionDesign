@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "Hindi nakuha ang elevation {t} ({why}). Walang nabago",
+ "host_shape.shape.elev_prompt_in": "elevasyon, ft-in…",
+ "host_shape.shape.elev_in": "{v} in"
+}

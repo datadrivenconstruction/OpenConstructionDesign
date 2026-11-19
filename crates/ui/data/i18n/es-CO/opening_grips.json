@@ -1,0 +1,13 @@
+{
+ "cmd.edit.flip_hand": "Invertir lado de bisagra",
+ "cmd.edit.flip_hand.desc": "Refleja las puertas y ventanas seleccionadas a lo largo del muro para que las bisagras pasen al otro extremo del hueco.",
+ "cmd.edit.flip_facing": "Invertir lado de apertura",
+ "cmd.edit.flip_facing.desc": "Gira las puertas y ventanas seleccionadas al otro lado del muro.",
+ "opening_grips.flip_hand": "Invertir bisagra",
+ "opening_grips.flip_hand.tip": "Bisagras en el otro extremo del hueco (Mayús+F)",
+ "opening_grips.flip_facing": "Invertir lado",
+ "opening_grips.flip_facing.tip": "Abertura hacia el otro lado del muro (Mayús+G)",
+ "opening_grips.flip.done": "Invertido: {n}",
+ "opening_grips.flip.none": "Seleccione una puerta o ventana para invertir",
+ "opening_grips.flip.fail": "No invertido: {why}"
+}

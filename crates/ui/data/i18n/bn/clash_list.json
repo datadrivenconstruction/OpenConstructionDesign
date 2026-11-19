@@ -1,0 +1,15 @@
+{
+ "clash_list.all": "সব",
+ "clash_list.only_selected": "শুধু বাছাইকৃত",
+ "clash_list.tolerance": "সহনশীলতা",
+ "clash_list.gap": "ফাঁক",
+ "clash_list.export": "এক্সপোর্ট",
+ "clash_list.col.volume": "আয়তন",
+ "clash_list.fix.up": "উপরে সরান",
+ "clash_list.fix.down": "নিচে সরান",
+ "clash_list.fix.sleeve": "স্লিভ",
+ "clash_list.apply_fix": "সমাধান প্রয়োগ করুন",
+ "clash_list.err.tol": "সহনশীলতা: দৈর্ঘ্য লিখুন (0 বা বেশি), যেমন 50 বা 2 in",
+ "clash_list.sleeve_no_host": "স্লিভের জন্য জোড়ায় একটি দেয়াল বা স্ল্যাব লাগবে",
+ "clash_list.err.gap": "ফাঁক: দৈর্ঘ্য লিখুন (0 বা বেশি), যেমন 50 বা 2 in"
+}

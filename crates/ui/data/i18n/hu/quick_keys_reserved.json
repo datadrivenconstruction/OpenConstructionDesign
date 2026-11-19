@@ -1,0 +1,14 @@
+{
+ "quick.keys.reserved_refused": "A(z) {key} foglalt ({why}), nem rendelhető újra",
+ "quick.keys.res_copy": "másolás",
+ "quick.keys.res_paste": "beillesztés",
+ "quick.keys.res_cut": "kivágás",
+ "quick.keys.res_undo": "visszavonás / újra",
+ "quick.keys.res_save": "mentés",
+ "quick.keys.res_palette": "parancspaletta",
+ "quick.keys.reserved_conflict": "A(z) {key} már használatban van itt: „{cmd}”. Az Esc ott hagyja meg.",
+ "quick.keys.reserved_swap": "Csere",
+ "quick.keys.reserved_take": "Átvétel",
+ "quick.keys.reserved_keep": "Megtartás",
+ "quick.keys.reserved_os": "A rendszer foglalta le:"
+}

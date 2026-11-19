@@ -1,0 +1,21 @@
+{
+ "cmd.help.check_update": "检查更新",
+ "update_check.title": "检查更新",
+ "update_check.desc": "默认关闭。仅向我们的服务器发送版本号、操作系统与架构，以及安装类型。从不下载或安装任何内容。",
+ "update_check.freq.startup": "启动时",
+ "update_check.freq.daily": "每天",
+ "update_check.freq.weekly": "每周",
+ "update_check.freq.never": "从不",
+ "update_check.check_now": "立即检查",
+ "update_check.dialog.title": "检查更新",
+ "update_check.unknown.title": "无法检查更新",
+ "update_check.unknown.body": "{e}。这并不表示此版本是最新的。请稍后重试。",
+ "update_check.current": "您使用的是最新版本（{v}）。",
+ "update_check.newer": "版本 {v} 可用",
+ "update_check.date": "发布于 {d}",
+ "update_check.unfit": "此版本（{v}）低于建议的最低版本 {f}。建议更新。",
+ "update_check.close": "关闭",
+ "update_check.open_failed": "无法打开发布页面。",
+ "update_check.toast.newer": "版本 {v} 可用。请前往“帮助 > 检查更新”。",
+ "update_check.toast.unfit": "此版本（{v}）低于建议的最低版本 {f}。"
+}

@@ -1,0 +1,8 @@
+{
+ "empty.start_recent.title": "Ei vielä viimeaikaisia projekteja",
+ "empty.start_recent.hint": "Avaamasi projektit näkyvät tässä. Aloita esimerkkimallilla.",
+ "empty.start_recent.action": "Avaa esimerkki",
+ "start.recent_open_file": "Avaa tiedosto…",
+ "start.forgot": "Poistettu viimeaikaisista: {name}",
+ "start.forgot_undo": "Kumoa"
+}

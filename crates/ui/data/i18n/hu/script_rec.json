@@ -1,0 +1,8 @@
+{
+ "script_rec.started": "Felvétel: az ezentúli szerkesztések szkriptbe kerülnek. A megállításhoz válassza újra a „Műveletek rögzítése szkriptbe” lehetőséget.",
+ "script_rec.saved": "A(z) „{name}” szkript mentve: szerkesztések száma: {n}.",
+ "script_rec.skipped": "Szkriptes űrlap nélküli eszközökkel végzett {k} szerkesztés nem lett rögzítve.",
+ "script_rec.nothing": "A felvétel leállt: nincs menteni való szerkesztés.",
+ "script_rec.failed": "A felvétel nem lett mentve: {why}",
+ "script_rec.no_folder": "nincs beállítási mappa a szkriptekhez"
+}

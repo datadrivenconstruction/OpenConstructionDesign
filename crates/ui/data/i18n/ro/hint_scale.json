@@ -1,0 +1,10 @@
+{
+ "cmd.mod.scale": "Scară",
+ "cmd.mod.scale.desc": "Selectați elementele, apoi faceți clic pe punctul de bază, pe o lungime de referință și pe noua lungime, sau tastați un factor.",
+ "hint.scale.select": "Scară: selectați elementele · Enter — gata",
+ "hint.scale.first": "Scară: alegeți punctul de bază · Esc — anulează",
+ "hint.scale.second": "Scară: alegeți lungimea de referință · număr — factor · Esc — anulează",
+ "hint.scale.third": "Scară: alegeți noua lungime · număr — factor · Esc — anulează",
+ "scl.bad_factor": "Factorul de scară trebuie să fie un număr mai mare decât zero",
+ "scl.zero_ref": "Lungimea de referință este zero: alegeți un punct departe de bază"
+}

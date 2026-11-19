@@ -1,0 +1,7 @@
+{
+ "workbook_changes.wb.title": "Niezastosowane zmiany skoroszytu",
+ "workbook_changes.wb.body": "Zamknięcie lub przełączenie projektu je usunie.",
+ "workbook_changes.wb.line": "Import skoroszytu: {n} zmian nie zastosowano",
+ "workbook_changes.wb.review": "Przejrzyj",
+ "workbook_changes.wb.discard": "Odrzuć"
+}

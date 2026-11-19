@@ -1,0 +1,10 @@
+{
+ "cmd.view.axes_full": "Повні осі",
+ "cmd.view.axes_full.desc": "Показує осі X і Y як повні лінії через план. Утримуйте F9, щоб показувати їх лише поки клавіша натиснута.",
+ "settings.axes_full": "Осі",
+ "settings.axes_full_desc": "Осі плану як повні лінії на аркуші. F9 для швидкого перегляду.",
+ "settings.axes_full_on": "Показувати повні осі",
+ "plan.hud.axes_tip": "Утримуйте {key}, щоб показати повні осі",
+ "status.axes_full.on": "Повні осі увімкнено",
+ "status.axes_full.off": "Повні осі вимкнено"
+}

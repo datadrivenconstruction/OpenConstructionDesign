@@ -1,0 +1,12 @@
+{
+ "curtain_wall.cw.issue.slab": "forjado {id}: {e}",
+ "curtain_wall.cw.issue.body": "cuerpo {id}: {e}",
+ "curtain_wall.cw.added": "Muros cortina añadidos: {n}",
+ "curtain_wall.cw.add_failed": "Muro cortina no construido: {e}",
+ "curtain_wall.cw.edited_warn": "Muro cortina #{id} modificado: {w}",
+ "curtain_wall.cw.edited": "Muro cortina #{id} modificado",
+ "curtain_wall.cw.not_changed": "No modificado: {e}",
+ "curtain_wall.cw.room_edited": "Espacio #{id} modificado",
+ "curtain_wall.cw.slope_range": "No modificado: pendiente fuera de rango",
+ "curtain_wall.cw.slope_set": "Forjado #{id}: pendiente {pct}"
+}

@@ -1,0 +1,14 @@
+[
+ {
+  "id": "app.report",
+  "dialog": true,
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "P"
+  ],
+  "stage": "M2"
+ }
+]

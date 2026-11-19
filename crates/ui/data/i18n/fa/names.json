@@ -1,0 +1,19 @@
+{
+ "names.level": "تراز {n}",
+ "names.slab": "دال 200",
+ "names.roof_slab": "بام 200",
+ "names.sheet.plan_section": "پلان و برش طبقهٔ 1",
+ "names.sheet.plan_view": "پلان طبقهٔ 1",
+ "names.sheet.site_plan": "پلان محوطه",
+ "names.sheet_set.issue": "انتشار 1",
+ "names.title.owner": "شرکت پروژه",
+ "names.title.creator": "الف. ایوانف",
+ "names.title.approver": "پ. پتروف",
+ "names.title.document_type": "نقشه",
+ "names.title.status": "در حال انجام",
+ "names.revision.date": "۴ نوامبر ۲۰۲۶",
+ "names.revision.description": "برای بازبینی منتشر شد",
+ "names.revision.author": "هوش مصنوعی",
+ "names.demo.no_levels": "بدون تراز",
+ "names.demo.no_sheet": "برگ"
+}

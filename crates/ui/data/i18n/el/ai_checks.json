@@ -1,0 +1,11 @@
+{
+ "ai_checks.check.measure": "μετρήθηκε {value}, όριο {limit}",
+ "ai_checks.check.cap": "Εμφάνιση {shown} από {total} ευρημάτων. Τα σφάλματα έρχονται πρώτα: διορθώστε τα και εκτελέστε ξανά.",
+ "ai_checks.check.run_again": "Εκτέλεση ξανά",
+ "ai_checks.check.goto": "Επιλογή και μεγέθυνση",
+ "ai_checks.check.never_title": "Δεν έχει γίνει έλεγχος ακόμα",
+ "ai_checks.check.never_hint": "Εκτελέστε τους ελέγχους και τα ευρήματα εμφανίζονται εδώ.",
+ "ai_checks.check.sec.error": "Σφάλματα",
+ "ai_checks.check.sec.warning": "Προειδοποιήσεις",
+ "ai_checks.check.sec.info": "Σημειώσεις"
+}

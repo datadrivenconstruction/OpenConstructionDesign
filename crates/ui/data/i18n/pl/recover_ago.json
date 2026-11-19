@@ -1,0 +1,29 @@
+{
+ "recover.ago_now": "przed chwilą",
+ "recover.ago_min": {
+  "one": "# min temu",
+  "other": "# min temu"
+ },
+ "recover.ago_hour": {
+  "one": "# godzinę temu",
+  "other": "# godzin temu"
+ },
+ "recover.ago_yesterday": "wczoraj",
+ "recover.ago_day": {
+  "one": "# dzień temu",
+  "other": "# dni temu"
+ },
+ "recover.empty": "Brak pozostałych kopii",
+ "recover.empty_hint": "Nie ma nic do przywrócenia dla tego projektu.",
+ "recover.all_damaged": "Wszystkie kopie są uszkodzone, żadnej nie można przywrócić.",
+ "recover.keys_hint": "Strzałki w górę i w dół wybierają kopię, Enter przechodzi do Przywróć",
+ "recover.row_tip": "Zapisano {time}",
+ "recover.row_damaged_tip": "Nie można przywrócić: {reason}",
+ "recover.archive_ask": "Przenieść tę kopię do archiwum?",
+ "recover.discard_ask": {
+  "one": "Przenieść kopię do archiwum? Nie zostanie zaproponowana ponownie.",
+  "other": "Przenieść wszystkie # kopii do archiwum? Nie zostaną zaproponowane ponownie."
+ },
+ "recover.confirm_yes": "Przenieś do archiwum",
+ "recover.confirm_no": "Zachowaj kopie"
+}

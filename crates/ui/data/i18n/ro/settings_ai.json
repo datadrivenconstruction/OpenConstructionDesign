@@ -1,0 +1,11 @@
+{
+ "settings.ai_status": "Conexiune",
+ "settings.ai_status_desc": "Modelul folosit de asistentul AI; cheile rămân în depozitul securizat",
+ "settings.ai_not_connected": "Neconectat",
+ "settings.ai_connect": "Setări de conexiune",
+ "settings.ai_connect_desc": "Adresa, modelul și cheia modelului tău, în cloud sau local",
+ "settings.ai_connect_btn": "Setări de conexiune…",
+ "settings.ai_panel": "Panoul asistentului AI",
+ "settings.ai_panel_desc": "Întreabă în cuvinte, verifică planul, apoi aplică",
+ "settings.ai_open_panel": "Deschide panoul AI"
+}

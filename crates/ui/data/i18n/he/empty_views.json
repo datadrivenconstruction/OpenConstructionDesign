@@ -1,0 +1,19 @@
+{
+ "empty.v3d_gpu.title": "תלת-ממד אינו זמין במתאם הגרפיקה הזה",
+ "empty.v3d_gpu.hint": "המודל תקין והתוכנית עובדת. הפעל מחדש עם גרפיקה בטוחה כדי לנסות את התלת-ממד שוב.",
+ "empty.v3d_gpu.action": "הפעל מחדש עם גרפיקה בטוחה",
+ "empty.v3d_loading.title": "בונה תלת-ממד…",
+ "empty.v3d_loading.pct": "פותח… {pct} %",
+ "empty.plan_hidden.title": "כל הרכיבים מוסתרים בתוכנית הזו",
+ "empty.plan_hidden.hint": "הסתרה או בידוד זמניים לא משאירים דבר גלוי.",
+ "empty.plan_hidden.action": "הצג הכול",
+ "empty.plan_graphics.title": "גרפיקת המבט מסתירה את כל הקטגוריות",
+ "empty.plan_graphics.hint": "כללי הקטגוריות של המבט הזה לא משאירים דבר להצגה.",
+ "empty.plan_graphics.action": "פתח גרפיקה של המבט",
+ "empty.plan_phase.title": "מסנן השלבים מסתיר הכול",
+ "empty.plan_phase.hint": "שום דבר במפלס הזה אינו קיים בשלב שהמבט הזה מציג.",
+ "empty.plan_phase.action": "שנה שלב",
+ "empty.plan_level.title": "אין רכיבים במפלס הזה",
+ "empty.plan_level.hint": "למפלסים אחרים של המודל הזה יש רכיבים.",
+ "empty.plan_level.action": "עבור למפלס עם רכיבים"
+}

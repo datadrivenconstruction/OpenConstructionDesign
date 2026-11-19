@@ -1,0 +1,8 @@
+{
+ "v3d.proj.to_ortho": "Byt till parallellprojektion",
+ "v3d.proj.to_persp": "Byt till perspektiv",
+ "v3d.walk.unit.m": "m/s",
+ "v3d.walk.unit.ft": "fot/s",
+ "v3d.temp.show_all": "Visa alla  ·  Esc",
+ "v3d.msg.deleted_named": "3D-vyn {name} borttagen"
+}

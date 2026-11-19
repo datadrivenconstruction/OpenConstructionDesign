@@ -1,0 +1,4 @@
+{
+ "sf.restored": "El archivo de ajustes {file} estaba dañado; se restauró la última copia correcta. El archivo dañado se conserva como {broken}.",
+ "sf.reset": "El archivo de ajustes {file} estaba dañado y no había ninguna copia de seguridad utilizable; se usan los valores por defecto. El archivo dañado se conserva como {broken}."
+}

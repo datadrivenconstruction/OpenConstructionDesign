@@ -1,0 +1,19 @@
+{
+ "cmd.mod.match_type": "Копиране на тип",
+ "cmd.mod.match_type.short": "Копиране на тип",
+ "cmd.mod.match_type.desc": "Посочете стена, под, колона или греда, после щракнете други от същата категория, за да получат неговия тип. Влачете прозорец, за да приложите към всички вътре. Esc отказва източника.",
+ "hint.match_type.pick": "Копиране на тип: посочете стена, под, колона или греда · Esc — излиза",
+ "hint.match_type.apply": "Копиране на тип: щракнете цели или влачете прозорец · Esc — друг източник",
+ "match_type.kind.wall": "стена",
+ "match_type.kind.slab": "под",
+ "match_type.kind.column": "колона",
+ "match_type.kind.beam": "греда",
+ "match_type.refuse.category": "Друга категория: този тип може да приеме само {cat}",
+ "match_type.refuse.curtain": "Витринна стена: типът ѝ не се копира тук",
+ "match_type.refuse.pinned": "Закрепено: откачете го, за да смените типа",
+ "match_type.pick_bad": "Посочете стена, под, колона или греда като източник",
+ "match_type.same": "Вече е този тип",
+ "match_type.done": "Типът е приложен: {n}",
+ "match_type.done_skipped": "Типът е приложен: {n}, пропуснати (закрепени или витрина): {skipped}",
+ "match_type.failed": "Типът не е променен: {err}"
+}

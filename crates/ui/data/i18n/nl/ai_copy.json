@@ -1,0 +1,8 @@
+{
+ "cmd.file.save_copy": "Een kopie voor iemand anders opslaan…",
+ "cmd.file.save_copy.desc": "Slaat een kopie van het project op zonder AI-toestemming en, tenzij u anders kiest, zonder het AI-journaal. Dit project blijft zoals het is.",
+ "ai.copy.title": "Een kopie opslaan",
+ "ai.copy.journal": "Het AI-journaal in de kopie opnemen? Het journaal bevat verzoeken, antwoorden en adressen. Cloudtoestemming wordt nooit gekopieerd: de andere persoon beslist zelf. Kies Nee om het journaal weg te laten.",
+ "ai.copy.done": "Kopie opgeslagen: {name}",
+ "ai.copy.same": "Kies een ander bestand: een kopie kan het geopende project niet vervangen."
+}

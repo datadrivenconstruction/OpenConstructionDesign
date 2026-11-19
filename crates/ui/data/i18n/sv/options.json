@@ -1,0 +1,15 @@
+{
+ "fe.add_why_empty": "Ange först ett parameternamn",
+ "fe.add_why_exists": "En parameter med det här namnet finns redan; använd Tillämpa för att ändra den",
+ "fe.apply_why_missing": "Ingen parameter med det här namnet; skriv ett befintligt namn",
+ "fe.nochange": "Inga ändringar ännu",
+ "options.accept_more": "Acceptera…",
+ "options.delete_more": "Ta bort…",
+ "options.empty_title": "Inga alternativuppsättningar ännu",
+ "options.more": "Fler åtgärder: {name}",
+ "options.primary_named": "Huvudalternativ: {name}",
+ "options.primary_tip": "Gör detta till uppsättningens huvudalternativ",
+ "options.select_first": "Välj element i modellen först",
+ "options.show_3d": "Visa i 3D: {name}",
+ "options.show_plan": "Visa i plan: {name}"
+}

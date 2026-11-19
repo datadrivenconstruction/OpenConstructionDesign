@@ -1,0 +1,16 @@
+{
+ "save_fail.save_fail.title": "Prosjektet ble ikke lagret",
+ "save_fail.save_fail.kept": "Endringene dine er fortsatt åpne her. Ingenting går tapt så lenge redigeringsprogrammet er åpent.",
+ "save_fail.save_fail.details": "Detaljer",
+ "save_fail.save_fail.copy": "Kopier",
+ "save_fail.save_fail.save_as": "Lagre som…",
+ "save_fail.save_fail.retry": "Prøv igjen",
+ "save_fail.save_fail.close": "Lukk",
+ "save_fail.cause.full": "Disken er full. Frigjør plass, eller lagre prosjektet på en annen stasjon.",
+ "save_fail.cause.denied": "Denne mappen eller filen er skrivebeskyttet, eller du mangler tillatelse til å skrive her. Velg en annen mappe.",
+ "save_fail.cause.locked": "Filen er åpen i et annet program. Lukk den der, og trykk Prøv igjen.",
+ "save_fail.cause.missing": "Mappen finnes ikke lenger. Velg en annen mappe, eller gjenopprett den og trykk Prøv igjen.",
+ "save_fail.cause.offline": "Stasjonen eller nettverksmappen er ikke tilgjengelig. Koble til igjen og trykk Prøv igjen, eller lagre et annet sted.",
+ "save_fail.cause.too_long": "Filbanen er for lang. Velg en kortere mappe eller et kortere filnavn.",
+ "save_fail.cause.other": "Filen kunne ikke skrives: {detail}"
+}

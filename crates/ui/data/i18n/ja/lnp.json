@@ -1,0 +1,14 @@
+{
+ "lnp.openings_refused": "開口 {n} 件は変更されませんでした ({why})",
+ "lnp.params_changed": "変更された値: {n}",
+ "lnp.params_same": "変更なし: {u} 個の要素が既にこの値です",
+ "lnp.params_tip": "Enter で選択中のすべての要素に値を適用、Esc で元のままにします",
+ "lnp.locked_hint": "保持されるロック値: {n}",
+ "lnp.panels_one": "パネルは 1 つずつ編集します",
+ "lnp.keep_first": "最初のものを保持",
+ "lnp.keep_first_tip": "最初のパネルのみを選択して編集します",
+ "lnp.clip_from_wall": "壁 #{id} からパラメータをコピーしました",
+ "lnp.clip_from_opening": "開口 #{id} からパラメータをコピーしました",
+ "lnp.match_from": "#{id} のプロパティを {n} 個の要素に適用しました",
+ "lnp.why_at": "#{id}: {e}"
+}

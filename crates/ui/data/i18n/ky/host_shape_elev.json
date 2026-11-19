@@ -1,0 +1,5 @@
+{
+ "host_shape.shape.bad_elev": "Бийиктик {t} алынган жок ({why}). Эч нерсе өзгөргөн жок",
+ "host_shape.shape.elev_prompt_in": "бийиктик, фут-дюйм…",
+ "host_shape.shape.elev_in": "{v} дюйм"
+}

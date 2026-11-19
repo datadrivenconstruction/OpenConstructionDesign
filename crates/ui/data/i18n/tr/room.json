@@ -1,0 +1,6 @@
+{
+ "geom.length": "Uzunluk",
+ "sched.cat.room_seps": "Oda ayırıcıları",
+ "room.err.point_leave": "Oda {n}: nokta sınırından çıkardı",
+ "room.err.point_taken": "Oda {n}: nokta {other} odasına düşerdi"
+}

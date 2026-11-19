@@ -1,0 +1,40 @@
+{
+ "rebar_hosts.hosts": "Põhielemendid: {list}",
+ "rebar_hosts.kind.column": "Post",
+ "rebar_hosts.kind.beam": "Tala",
+ "rebar_hosts.kind.wall": "Sein",
+ "rebar_hosts.kind.slab": "Plaat",
+ "rebar_hosts.kind.footing": "Vundament",
+ "rebar_hosts.kind.raft": "Vundamendiplaat",
+ "rebar_hosts.n.column": {
+  "one": "# post",
+  "other": "# posti"
+ },
+ "rebar_hosts.n.beam": {
+  "one": "# tala",
+  "other": "# tala"
+ },
+ "rebar_hosts.n.wall": {
+  "one": "# sein",
+  "other": "# seina"
+ },
+ "rebar_hosts.n.slab": {
+  "one": "# plaat",
+  "other": "# plaati"
+ },
+ "rebar_hosts.n.footing": {
+  "one": "# vundament",
+  "other": "# vundamenti"
+ },
+ "rebar_hosts.n.raft": {
+  "one": "# vundamendiplaat",
+  "other": "# vundamendiplaati"
+ },
+ "rebar_hosts.mixed_note": "Postid ja talad võtavad vardaid ja vardaraudu; seinad, plaadid ja vundamendid võrku. Armatuuri lisamiseks vali üks grupp.",
+ "rebar_hosts.why.mixed": "Valik segab postid või talad seinte, plaatide või vundamentidega. Vali üks grupp.",
+ "rebar_hosts.why.area_linear": "Võrk läheb seintesse, plaatidesse ja vundamentidesse, mitte postidesse ega taladesse.",
+ "rebar_hosts.why.bars_plate": "Pikivardad ja vardaraud lähevad postidesse ja taladesse, mitte seintesse, plaatidesse ega vundamentidesse.",
+ "rebar_hosts.why.no_common_face": "Valitud põhielementidel pole ühist katvuspinda. Vali ühte liiki põhielemendid.",
+ "rebar_hosts.why.no_type": "Vali varrastüüp.",
+ "rebar_hosts.kind_type": "{kind} · {type}"
+}

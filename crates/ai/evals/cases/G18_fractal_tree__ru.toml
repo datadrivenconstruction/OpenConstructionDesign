@@ -1,0 +1,28 @@
+id = "G18_fractal_tree__ru"
+tier = "hard"
+group = "Любая геометрия"
+title = "Fractal tree structure"
+lang = "ru"
+base = "empty"
+
+[[turn]]
+say = "Древовидное несущее покрытие: один ствол рекурсивно ветвится в 4 поколения, каждая ветвь делится на 3, ветви уменьшаются в 0.7 раза, общая высота 12 м, на кроне кровельный настил."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "col+beam+brace+solid"
+min = 80.0
+
+[[oracle.geom]]
+kind = "height"
+min = 10.0
+max = 15.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

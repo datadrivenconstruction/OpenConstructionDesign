@@ -1,0 +1,5 @@
+{
+ "xl.msg.level_name_x_is_already_used": "түвшний нэр '{}' аль хэдийн ашиглагдсан",
+ "xl.msg.unreadable_id_elements_without_a_row_not_deleted": "унших боломжгүй id: мөргүй элементүүд энэ импортод устгагдахгүй",
+ "xl.msg.wall_type_name_x_is_already_used": "ханын төрлийн нэр '{}' аль хэдийн ашиглагдсан"
+}

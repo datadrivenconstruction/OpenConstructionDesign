@@ -1,0 +1,4 @@
+{
+ "sf.restored": "O arquivo de configurações {file} estava danificado; a última cópia válida foi restaurada. O arquivo danificado foi mantido como {broken}.",
+ "sf.reset": "O arquivo de configurações {file} estava danificado e nenhuma cópia de segurança era utilizável; são usados os padrões. O arquivo danificado foi mantido como {broken}."
+}

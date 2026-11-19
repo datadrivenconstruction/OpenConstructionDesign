@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "Αποθηκεύει ολόκληρο το μοντέλο ή την επιλογή ως δυαδικό STL σε μέτρα ή χιλιοστά.",
+ "cmd.data.export_obj.desc": "Αποθηκεύει ολόκληρο το μοντέλο ή την επιλογή ως OBJ με αρχείο MTL: μία ομάδα ανά στοιχείο, χρώματα ανά υλικό.",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "OBJ με υλικά (.obj)",
+ "open_file.filter.mesh": "Πλέγματα 3D (glTF, STEP, STL, OBJ)",
+ "mx.title": "Εξαγωγή {fmt}",
+ "mx.scope": "Τι εξάγεται",
+ "mx.scope.all": "Ολόκληρο το μοντέλο",
+ "mx.scope.sel": "Επιλογή ({n} στοιχεία)",
+ "mx.units": "Μονάδες στο αρχείο",
+ "mx.units.m": "Μέτρα",
+ "mx.units.mm": "Χιλιοστά",
+ "mx.export": "Εξαγωγή…",
+ "mx.saved": "Αποθηκεύτηκε το {fmt}: {path} ({parts} στοιχεία, {tris} τρίγωνα)",
+ "mx.partial": "Αποθηκεύτηκε το {fmt} με {n} προβλήματα, ορισμένα σώματα ενδέχεται να λείπουν: {path}",
+ "mx.failed": "Η εξαγωγή {fmt} απέτυχε: {error}",
+ "mx.imported": "{file}: εισήχθησαν {n} στοιχεία ({tris} τρίγωνα)",
+ "mx.imported_notes": "{file}: εισήχθησαν {n} στοιχεία ({tris} τρίγωνα), {w} σημειώσεις: {first}"
+}

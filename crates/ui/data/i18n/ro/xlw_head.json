@@ -1,0 +1,15 @@
+{
+ "xlw.hd_never": "Nu este exportat încă",
+ "xlw.hd_now": "chiar acum",
+ "xlw.hd_min": "acum {n} min",
+ "xlw.hd_hour": "acum {n} h",
+ "xlw.hd_day": "acum {n} z",
+ "xlw.hd_linked": "Legat",
+ "xlw.hd_watched": "Urmărit",
+ "xlw.hd_stale": "Modelul s-a schimbat de la export",
+ "xlw.ft_export": "Exportă",
+ "xlw.ft_review": "Verifică",
+ "xlw.ft_apply": "Aplică {n} modificări",
+ "xlw.ft_delete_missing": "Șterge lipsurile",
+ "xlw.ft_keep_missing_tip": "Ștergerea este activă: elementele fără rând vor fi șterse la Aplică. Debifează pentru a le păstra."
+}

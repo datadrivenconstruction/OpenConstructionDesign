@@ -1,0 +1,16 @@
+{
+ "save_fail.save_fail.title": "Projekt nije spremljen",
+ "save_fail.save_fail.kept": "Vaše izmjene su još otvorene ovdje. Ništa se ne gubi dok uređivač ostaje otvoren.",
+ "save_fail.save_fail.details": "Pojedinosti",
+ "save_fail.save_fail.copy": "Kopiraj",
+ "save_fail.save_fail.save_as": "Spremi kao…",
+ "save_fail.save_fail.retry": "Pokušaj ponovo",
+ "save_fail.save_fail.close": "Zatvori",
+ "save_fail.cause.full": "Disk je pun. Oslobodite prostor ili spremite projekt na drugi pogon.",
+ "save_fail.cause.denied": "Ova mapa ili datoteka je samo za čitanje ili nemate dopuštenje za pisanje ovdje. Odaberite drugu mapu.",
+ "save_fail.cause.locked": "Datoteka je otvorena u drugom programu. Zatvorite je ondje, zatim pritisnite Pokušaj ponovo.",
+ "save_fail.cause.missing": "Mapa više ne postoji. Odaberite drugu mapu ili je vratite pa pritisnite Pokušaj ponovo.",
+ "save_fail.cause.offline": "Pogon ili mrežna mapa nisu dostupni. Ponovno ih povežite i pritisnite Pokušaj ponovo ili spremite drugdje.",
+ "save_fail.cause.too_long": "Putanja datoteke je predugačka. Odaberite kraću mapu ili naziv datoteke.",
+ "save_fail.cause.other": "Datoteku nije bilo moguće zapisati: {detail}"
+}

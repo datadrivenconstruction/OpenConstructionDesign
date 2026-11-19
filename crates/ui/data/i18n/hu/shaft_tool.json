@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "Aknák",
+ "quick.cat.shaft": "Akna",
+ "shaft_tool.browser.shaft": "Akna #{id}",
+ "shaft_tool.shaft.top": "Legfelső szint",
+ "shaft_tool.shaft.cuts": "Kivágott elemek",
+ "shaft_tool.shaft.cut_area": "Kivágott terület",
+ "shaft_tool.shaft.cut_volume": "Kivágott térfogat",
+ "elem.no.rooms": "A benne lévő helyiségeket követi"
+}

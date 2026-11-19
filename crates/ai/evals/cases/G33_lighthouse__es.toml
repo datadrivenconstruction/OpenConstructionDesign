@@ -1,0 +1,42 @@
+id = "G33_lighthouse__es"
+tier = "hard"
+group = "Any geometry"
+title = "Lighthouse"
+lang = "es"
+base = "empty"
+
+[[turn]]
+say = "Un faro de 40 m de altura: torre redonda que se estrecha de 8 m de diámetro en la base a 5 m arriba, escalera de caracol interior, galería con barandilla, linterna acristalada con cúpula y casa del farero al pie."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "stair"
+min = 1.0
+
+[[oracle.count]]
+spec = "railing"
+min = 1.0
+
+[[oracle.count]]
+spec = "wall+wall_spline+solid+mesh+freeform+curved"
+min = 1.0
+
+[[oracle.geom]]
+kind = "height"
+min = 36.0
+max = 50.0
+
+[[oracle.geom]]
+kind = "top_ratio"
+# the lantern and dome crown the shaft, so the top band reads narrower than 5 m
+min = 0.3
+max = 0.85
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

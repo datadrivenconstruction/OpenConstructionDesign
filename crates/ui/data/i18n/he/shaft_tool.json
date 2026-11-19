@@ -1,0 +1,10 @@
+{
+ "selcat.shaft": "ארובות",
+ "quick.cat.shaft": "ארובה",
+ "shaft_tool.browser.shaft": "ארובה #{id}",
+ "shaft_tool.shaft.top": "מפלס עליון",
+ "shaft_tool.shaft.cuts": "אלמנטים חתוכים",
+ "shaft_tool.shaft.cut_area": "שטח חיתוך",
+ "shaft_tool.shaft.cut_volume": "נפח חיתוך",
+ "elem.no.rooms": "עוקב אחרי החדרים שהוא מחזיק"
+}

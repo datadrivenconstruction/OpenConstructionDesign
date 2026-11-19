@@ -1,0 +1,5 @@
+{
+ "palette.find_named": "Find elementer ved navn \"{q}\"",
+ "palette.search_help": "Søg i hjælp efter \"{q}\"",
+ "palette.not_found": "Intet ved navn \"{q}\""
+}

@@ -1,0 +1,31 @@
+id = "G13_terrain_retaining__de"
+tier = "hard"
+group = "Any geometry"
+title = "Terrain with retaining walls"
+lang = "de"
+base = "empty"
+
+[[turn]]
+say = "Ein Hanggrundstück 60 x 40 m mit 6 m Gefälle, in drei Ebenen terrassiert mit Betonstützmauern bis 2.5 m, Treppen zwischen den Terrassen und eine Rampe."
+
+[[oracle.count]]
+spec = "level"
+min = 1.0
+
+[[oracle.count]]
+spec = "toposolid+mesh"
+min = 1.0
+
+[[oracle.count]]
+spec = "wall"
+min = 3.0
+
+[[oracle.count]]
+spec = "stair"
+min = 1.0
+
+[[oracle.geom]]
+kind = "no_dup_members"
+
+[oracle.ifc.classes_min]
+"IfcBuildingStorey" = 1

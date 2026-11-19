@@ -1,0 +1,9 @@
+{
+ "shot_scenes.site": "Участок",
+ "shot_scenes.lawn": "Газон",
+ "shot_scenes.pad": "Площадка",
+ "shot_scenes.block": "Блок",
+ "shot_scenes.void": "Вырез",
+ "shot_scenes.tower": "Башня",
+ "shot_scenes.wall_void": "Вырез в стене"
+}

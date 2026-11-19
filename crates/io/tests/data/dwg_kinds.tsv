@@ -1,0 +1,7 @@
+path	kind	expected_lowered	expected_dropped
+dwg-corpus-truth-20261012/acquisition01/candidate220/input.dwg	spline	?	?
+dwg-corpus-truth-20261012/acquisition01/candidate080/input.dwg	ellipse	?	?
+dwg-corpus-truth-20261012/acquisition01/candidate107/input.dwg	mtext	?	?
+dwg-corpus-truth-20261012/acquisition01/candidate136/input.dwg	dimension	?	?
+dwg-corpus-truth-20261012/acquisition01/candidate130/input.dwg	leader	?	?
+dwg-corpus-truth-20261012/acquisition01/candidate107/input.dwg	solid	?	?

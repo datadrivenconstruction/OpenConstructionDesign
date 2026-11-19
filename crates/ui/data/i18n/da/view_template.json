@@ -1,0 +1,14 @@
+{
+ "view_template.name_blank": "Angiv et skabelonnavn først",
+ "view_template.name_taken": "Der findes allerede en skabelon med dette navn",
+ "view_template.pick_blocked": "Markér mindst én visning først",
+ "view_template.views.one": "{n} visning",
+ "view_template.views.few": "{n} visninger",
+ "view_template.views.many": "{n} visninger",
+ "view_template.delete.title": "Slet denne skabelon?",
+ "view_template.delete.body": "Skabelonen „{name}“ slettes. Brugt af {used}.",
+ "view_template.delete.unused": "Skabelonen „{name}“ slettes. Ingen visning bruger den.",
+ "view_template.delete.keeps": "Disse visninger beholder deres nuværende grafik og mister forbindelsen.",
+ "view_template.delete.undo": "Du kan fortryde dette med ét Fortryd.",
+ "view_template.delete.confirm": "Slet skabelon"
+}

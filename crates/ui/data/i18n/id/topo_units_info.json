@@ -1,0 +1,13 @@
+{
+ "topo.unit.mm": "mm",
+ "topo.unit.metre": "m",
+ "topo.unit.ft": "ft",
+ "topo.opt.material": "Bahan",
+ "topo.row.active": "Permukaan aktif",
+ "topo.btn.delete_pad": "Hapus pad",
+ "topo.info.loading": "Membuat permukaan…",
+ "topo.info.warn_n": "{n} peringatan",
+ "topo.info.points_label": "Titik",
+ "topo.import.all_layers": "Semua lapisan",
+ "topo.import.need_layer": "Centang minimal satu lapisan"
+}

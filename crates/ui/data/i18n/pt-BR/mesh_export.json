@@ -1,0 +1,20 @@
+{
+ "cmd.data.export_stl.desc": "Salva o modelo inteiro ou a seleção como STL binário em metros ou milímetros.",
+ "cmd.data.export_obj.desc": "Salva o modelo inteiro ou a seleção como OBJ com arquivo MTL: um grupo por elemento, cores por material.",
+ "fmenu.export.stl": "STL (.stl)",
+ "fmenu.export.obj": "OBJ com materiais (.obj)",
+ "open_file.filter.mesh": "Malhas 3D (glTF, STEP, STL, OBJ)",
+ "mx.title": "Exportar {fmt}",
+ "mx.scope": "O que exportar",
+ "mx.scope.all": "Modelo inteiro",
+ "mx.scope.sel": "Seleção ({n} elementos)",
+ "mx.units": "Unidades no arquivo",
+ "mx.units.m": "Metros",
+ "mx.units.mm": "Milímetros",
+ "mx.export": "Exportar…",
+ "mx.saved": "{fmt} salvo: {path} ({parts} elementos, {tris} triângulos)",
+ "mx.partial": "{fmt} salvo com {n} problemas; alguns corpos podem estar ausentes: {path}",
+ "mx.failed": "Falha na exportação de {fmt}: {error}",
+ "mx.imported": "{file}: {n} elementos importados ({tris} triângulos)",
+ "mx.imported_notes": "{file}: {n} elementos importados ({tris} triângulos), {w} observações: {first}"
+}

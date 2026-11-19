@@ -1,0 +1,15 @@
+{
+ "xl.msg.cell_clipped": "text byl zkrácen na limit buňky; pouze pro čtení, úprava nepoužita",
+ "xlcell.status": "Exportováno. {count} buněk bylo zkráceno nebo ponecháno prázdných — podrobnosti v okně.",
+ "xlcell.title": "Buňky změněné exportem",
+ "xlcell.intro": "Tyto buňky nelze zapsat tak, jak jsou. Plná hodnota zůstává v modelu; buňka je uzamčena a v sešitu ji nelze upravit.",
+ "xlcell.col_sheet": "List",
+ "xlcell.col_row": "Řádek",
+ "xlcell.col_col": "Sloupec",
+ "xlcell.col_id": "Id prvku",
+ "xlcell.col_what": "Co se stalo",
+ "xlcell.what_clipped": "Text zkrácen na limit buňky",
+ "xlcell.what_blank": "Není konečné číslo, buňka ponechána prázdná",
+ "xlcell.more": "… a dalších {count}",
+ "xlcell.close": "Zavřít"
+}

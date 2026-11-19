@@ -1,0 +1,5 @@
+{
+ "materials.mat.conflict": "Ten materiał zmienił się w modelu (cofnięcie lub inne okno), gdy karta miała edycje. Twoje edycje zostały zachowane.",
+ "materials.mat.keep": "Zachowaj moje edycje",
+ "materials.mat.reload": "Wczytaj ponownie"
+}

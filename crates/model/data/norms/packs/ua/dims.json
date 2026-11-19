@@ -1,0 +1,127 @@
+{
+ "items": [
+  {
+   "key": "room.height_min",
+   "value": 2.5,
+   "unit": "m",
+   "source": "dbn-v2.2-15",
+   "clause": "5.6: height of living rooms floor to ceiling at least 2.5 m; at least 2.7 m where mean July temperature is 21 C or more; internal corridors and utility rooms may be 2.1 m",
+   "verified": true,
+   "url": "https://e-construction.gov.ua/laws_detail/3884013503861753171",
+   "accessed": "2026-11-14",
+   "paraphrase": "Living rooms must be at least 2.5 m high, 2.7 m in hot regions; corridors and service rooms inside flats may drop to 2.1 m.",
+   "note": "read 2026-11-14: e-construction.gov.ua/laws_detail/3884013503861753171 (actualised text with Amendment 1, status active)"
+  },
+  {
+   "key": "door.clear_min.accessible",
+   "value": 0.9,
+   "unit": "m",
+   "source": "dbn-v2.2-40",
+   "clause": "6.2.2: clear width of room doors at least 0.9 m in new build (Amendment 3: 0.8 m for major repair or reconstruction); deep openings over 1.0 m need 1.2 m",
+   "verified": true,
+   "url": "https://e-construction.gov.ua/laws_detail/3790590059153983464",
+   "accessed": "2026-11-14",
+   "paraphrase": "Door clear width at least 0.9 m in new buildings, relaxed to 0.8 m when refurbishing; openings deeper than 1 m need 1.2 m.",
+   "note": "read 2026-11-14: e-construction.gov.ua/laws_detail/3790590059153983464 (actualised text with Amendments 1-2 and text of Amendment 3)"
+  },
+  {
+   "key": "accessible.turning_circle",
+   "value": 1.5,
+   "unit": "m",
+   "source": "dbn-v2.2-40",
+   "clause": "6.2.2: diameter of zone for independent wheelchair turning at least 1.5 m",
+   "verified": true,
+   "url": "https://e-construction.gov.ua/laws_detail/3790590059153983464",
+   "accessed": "2026-11-14",
+   "paraphrase": "A wheelchair user needs a turning zone of at least 1.5 m diameter.",
+   "note": "read 2026-11-14: e-construction.gov.ua/laws_detail/3790590059153983464 (Amendment 3 restates 6.2.2 with the same 1.5 m)"
+  },
+  {
+   "key": "ramp.slope_max",
+   "value": 0.08,
+   "unit": "ratio",
+   "source": "dbn-v2.2-40",
+   "clause": "5.3.1 (Amendment 3): slope of open ramps not more than 8 percent (1:12); single rise max 0.8 m with 1.5 m landings",
+   "verified": true,
+   "url": "https://e-construction.gov.ua/laws_detail/3790590059153983464",
+   "accessed": "2026-11-14",
+   "paraphrase": "Open ramps may be at most 8 percent (1:12) steep, with lower slopes required for larger rises per the annex table.",
+   "note": "read 2026-11-14: e-construction.gov.ua/laws_detail/3790590059153983464; max for the outdoor ramps; practical slope depends on rise per annex D (1:20 for 0.5 m rise)"
+  },
+  {
+   "key": "corridor.width_min",
+   "value": 1.8,
+   "unit": "m",
+   "source": "dbn-v2.2-15",
+   "clause": "5.7: corridor in residential buildings between stairs or from a corridor end to a stair, and a gallery, at least 1.8 m wide; 5.22 (Amendment 1) sets 1.5 m only for corridors inside a flat leading to living rooms",
+   "verified": true,
+   "url": "https://e-construction.gov.ua/laws_detail/3884013503861753171",
+   "accessed": "2026-11-14",
+   "paraphrase": "Common corridors and galleries of apartment buildings are at least 1.8 m wide; the 1.5 m figure applies only to corridors inside a flat.",
+   "note": "read 2026-11-14 in the actualised text with Amendment 1 (PDF on e-construction.gov.ua/laws_detail/3884013503861753171); 1.5 m of 5.22 is the in-flat corridor, not the common corridor the generator sizes",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   }
+  },
+  {
+   "key": "stair.width_min",
+   "value": 1.35,
+   "unit": "m",
+   "source": "dbn-v2.2-15",
+   "clause": "5.8 (flight width in sectional, corridor and gallery houses at least 1.35 m); table 5 in 9.2 lists 1.2 to 1.35 m; internal flat stairs and basement stairs 0.9 m",
+   "verified": true,
+   "url": "https://e-construction.gov.ua/laws_detail/3884013503861753171",
+   "accessed": "2026-11-14",
+   "paraphrase": "Common stair flights in apartment buildings are at least 1.35 m wide (table range 1.2 to 1.35 m); only flat-internal and basement stairs may be 0.9 m.",
+   "note": "read 2026-11-14: e-construction.gov.ua/laws_detail/3884013503861753171; no 1.05 m found; text and table 5 differ slightly, 1.35 m is the explicit minimum",
+   "applies": {
+    "typology": [
+     "apartment",
+     "apartment_section"
+    ]
+   }
+  },
+  {
+   "key": "egress.travel_max",
+   "value": 40.0,
+   "unit": "m",
+   "source": "dbn-v2.2-15",
+   "clause": "8.6 table 4, degree I-II: 40 m from an apartment door between stairs",
+   "verified": true,
+   "note": "read 2026-11-14: e-construction.gov.ua/laws_detail/3884013503861753171 (actualised text with amendment 1, 2022; portal marks it archived); 25 m from a dead end"
+  },
+  {
+   "key": "daylight.window_floor_ratio",
+   "value": 0.125,
+   "unit": "ratio",
+   "source": "dbn-v2.2-15",
+   "clause": "10.4, living rooms and kitchens glazed at 1:8 at least",
+   "verified": true,
+   "note": "read 2026-11-14: e-construction.gov.ua/laws_detail/3884013503861753171 (actualised text with amendment 1); 1:10 under roof slopes"
+  },
+  {
+   "key": "corridor.width_min.accessible",
+   "value": 1.5,
+   "unit": "m",
+   "source": "dbn-v2.2-40",
+   "clause": "6.2.4: clear width of movement route in corridors at least 1.5 m for one-way travel, 1.8 m for two-way (Amendment 3 allows 1.2 m during major repair)",
+   "verified": true,
+   "note": "read 2026-11-14: e-construction.gov.ua/laws_detail/3790590059153983464 (actualised text with Amendments 1-2, Amendment 3 text); 1.5 m is one-way case",
+   "url": "https://e-construction.gov.ua/laws_detail/3790590059153983464",
+   "accessed": "2026-11-14",
+   "paraphrase": "Accessible corridors are at least 1.5 m clear for one-way movement and 1.8 m where wheelchairs meet; narrowing to 1.2 m only in major repair."
+  },
+  {
+   "key": "fire.compartment_area_max",
+   "value": 2200,
+   "unit": "m2",
+   "source": "dbn-v2.2-15",
+   "clause": "8.2 table 3, dwellings of degree I or II: 2200 m2 per floor in a compartment",
+   "verified": true,
+   "note": "read 2026-11-14: e-construction.gov.ua/laws_detail/3884013503861753171 (actualised text with amendment 1); was 2500, not in this text"
+  }
+ ]
+}

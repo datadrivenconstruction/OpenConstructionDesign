@@ -1,0 +1,15 @@
+{
+ "snap.endpoint": "קצה",
+ "snap.midpoint": "אמצע",
+ "snap.perpendicular": "מאונך",
+ "snap.wall_axis": "ציר קיר",
+ "snap.wall_face": "פני קיר",
+ "snap.grid": "רשת",
+ "snap.intersection": "חיתוך",
+ "snap.grid_axis": "קו רשת",
+ "snap.ref_plane": "מישור ייחוס",
+ "snap.nearest": "הקרוב ביותר",
+ "snap.align_x": "מיושר ב-X לנקודה מרוחקת",
+ "snap.align_y": "מיושר ב-Y לנקודה מרוחקת",
+ "snap.align_xy": "מיושר ב-X וב-Y"
+}

@@ -1,0 +1,42 @@
+{
+ "ai.tool.show_elements": "Элементтерді көрсету",
+ "ai.tool.isolate_elements": "Элементтерді оқшаулау",
+ "ai.tool.color_by": "Мән бойынша бояу",
+ "ai.tool.reset_view": "Көріністі қалпына келтіру",
+ "ai_found.found.query": "Табылды",
+ "ai_found.found.show": "Көрсетілген",
+ "ai_found.found.isolate": "Оқшауланған",
+ "ai_found.found.hide": "Жасырылған",
+ "ai_found.found.color": "Түсті",
+ "ai_found.found.count": "{n} / {m}",
+ "ai_found.found.none": "Сәйкес келетіні жоқ. Сүзгіні кеңейтіп көріңіз.",
+ "ai_found.found.show_btn": "Көрсету",
+ "ai_found.found.show_tip": "Осы элементтерді таңдап, жоспар мен 3D-де оларға жақындату",
+ "ai_found.found.isolate_btn": "Оқшаулау",
+ "ai_found.found.isolate_tip": "Көріністі қалпына келтіргенше тек осы элементтерді көрсету",
+ "ai_found.found.select_btn": "Таңдау",
+ "ai_found.found.select_tip": "Көріністі жылжытпай осы элементтерді таңдау",
+ "ai_found.legend.title": "Мән бойынша бояу: {by}",
+ "ai_found.legend.row_tip": "Осы элементтерді таңдау үшін басыңыз",
+ "ai_found.legend.empty_value": "Мән жоқ",
+ "ai_found.legend.other": {
+  "one": "# басқа мән",
+  "other": "# басқа мән"
+ },
+ "ai_found.view.title": "AI көмекшісінің көрінісі",
+ "ai_found.view.reset": "Көріністі қалпына келтіру",
+ "ai_found.view.reset_tip": "AI көмекшісі өзгертпес бұрынғы көріністі қайтару",
+ "ai_found.view.shown": {
+  "one": "# элемент көрсетілген",
+  "other": "# элемент көрсетілген"
+ },
+ "ai_found.view.isolated": {
+  "one": "# элемент оқшауланған",
+  "other": "# элемент оқшауланған"
+ },
+ "ai_found.view.hidden": {
+  "one": "# элемент жасырылған",
+  "other": "# элемент жасырылған"
+ },
+ "ai_found.found.line": "{what}: {count}"
+}

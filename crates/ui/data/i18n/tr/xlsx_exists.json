@@ -1,0 +1,11 @@
+{
+ "xlsx_exists.title": "Bu çalışma kitabı zaten var",
+ "xlsx_exists.foreign": "Bu projenin çalışma kitabı değil, bu yüzden asla değiştirilmez.",
+ "xlsx_exists.pending": "Modele henüz uygulanmamış {n} düzenleme içeriyor.",
+ "xlsx_exists.outside": "Yeni dışa aktarımın taşımadığı {n} satırı var.",
+ "xlsx_exists.new_name": "{name} dosyasına dışa aktar",
+ "xlsx_exists.apply_first": "Önce bunları uygulayın",
+ "xlsx_exists.replace": "Değiştir (eski kitap _archive klasörüne)",
+ "xlsx_exists.archived": "Eski çalışma kitabı {path} konumuna taşındı",
+ "xlsx_exists.archive_failed": "Eski çalışma kitabı taşınamadı, hiçbir şey dışa aktarılmadı: {error}"
+}

@@ -1,0 +1,15 @@
+{
+ "cmd.ctx.floor.clean_outline": "輪郭を整理",
+ "cmd.ctx.floor.clean_outline.desc": "床の輪郭が自身に戻る細いスパイクを取り除きます。先にプレビューを表示します。元に戻す操作は 1 回分です。",
+ "outline_cleanup.title": "輪郭を整理",
+ "outline_cleanup.intro": "この床の輪郭には自身に戻る細いスパイクがあります: {n}。整理ではそれらを取り除き、その他はそのままにします。",
+ "outline_cleanup.legend_before": "太い線: 現在の輪郭",
+ "outline_cleanup.legend_after": "細い線: 整理後の輪郭",
+ "outline_cleanup.undo": "この操作は 1 回で元に戻せます。",
+ "outline_cleanup.apply": "整理",
+ "outline_cleanup.cancel": "キャンセル",
+ "outline_cleanup.done": "輪郭を整理し、スパイクを除去しました: {n}",
+ "outline_cleanup.none": "この床の輪郭にスパイクはありません",
+ "outline_cleanup.failed": "輪郭を整理できませんでした",
+ "outline_cleanup.changed": "プレビュー後に輪郭が変更されたため、何も書き込まれませんでした。新しいプレビューを確認してください。"
+}

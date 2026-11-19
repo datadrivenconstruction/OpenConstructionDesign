@@ -1,0 +1,7 @@
+{
+ "src.field.kids": "Alt satırlar (paneller, köşeler)",
+ "src.kids.mine": "{n} alt satır, burada değişti",
+ "src.kids.changed": "alt satırlar burada değişti",
+ "src.kids.theirs": "alt satırlar dosyada değişti",
+ "src.kids.take_tip": "Sonraki içe aktarma dosyanın alt satırlarını alır; şimdi uygulanmazlar."
+}

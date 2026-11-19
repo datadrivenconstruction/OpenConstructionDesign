@@ -1,0 +1,62 @@
+[
+ {
+  "id": "sketch.link_loop",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "Mx",
+  "group": "profile"
+ },
+ {
+  "id": "sketch.link_unlink",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "Mx",
+  "group": "profile"
+ },
+ {
+  "id": "sketch.link_repick",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [],
+  "stage": "Mx",
+  "group": "profile"
+ },
+ {
+  "id": "ctx.floor.link_unlink",
+  "icon": "edge-unlink",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "profile",
+  "context": [
+   "floor"
+  ]
+ },
+ {
+  "id": "ctx.floor.link_accept",
+  "icon": "edge-accept",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": null,
+  "surfaces": [
+   "R"
+  ],
+  "stage": "Mx",
+  "group": "profile",
+  "context": [
+   "floor"
+  ]
+ }
+]

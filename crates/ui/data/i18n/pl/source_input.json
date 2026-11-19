@@ -1,0 +1,4 @@
+{
+ "source_input.err.number": "„{text}” nie jest liczbą; ten parametr przechowuje liczbę. Nic nie zapisano",
+ "source_input.err.comma": "„{text}”: do części dziesiętnych użyj kropki (1.5); przecinek grupuje tylko tysiące (1,000). Nic nie zapisano"
+}

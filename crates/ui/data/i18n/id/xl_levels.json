@@ -1,0 +1,5 @@
+{
+ "xl.msg.level_name_x_is_already_used": "nama level '{}' sudah dipakai",
+ "xl.msg.unreadable_id_elements_without_a_row_not_deleted": "id tidak terbaca: elemen tanpa baris tidak dihapus pada impor ini",
+ "xl.msg.wall_type_name_x_is_already_used": "nama tipe dinding '{}' sudah dipakai"
+}

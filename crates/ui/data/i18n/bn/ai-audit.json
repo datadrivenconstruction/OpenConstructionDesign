@@ -1,0 +1,22 @@
+{
+ "ai.audit.tokens": "{n} টোকেন",
+ "ai.audit.filter.all": "সব",
+ "ai.audit.filter.ai": "AI",
+ "ai.audit.filter.me": "আমি",
+ "ai.audit.search": "পরিবর্তন খুঁজুন",
+ "ai.audit.search.clear": "খোঁজ মুছুন",
+ "ai.audit.show_all": "সব দেখান",
+ "ai.audit.empty.hint": "মডেল বা এজেন্টের খসড়া বা প্রয়োগ করা পরিবর্তন এখানে দেখা যাবে, প্রতিটির সঙ্গে ফিরে যাওয়ার উপায়সহ।",
+ "ai.audit.no_match": "ফিল্টারের সঙ্গে কোনো পরিবর্তন মেলেনি।",
+ "ai.audit.show.tip": "এই পরিবর্তন যে উপাদানগুলো স্পর্শ করেছে সেগুলো নির্বাচন করে দেখান",
+ "ai.audit.revert.ask": "“{what}” ফিরিয়ে নেবেন? {change}।",
+ "ai.audit.revert.elements": {
+  "one": "# টি উপাদানের পরিবর্তন",
+  "other": "# টি উপাদানের পরিবর্তন"
+ },
+ "ai.audit.revert.keeps": "নতুন পরিবর্তনগুলো থাকবে। ফিরিয়ে আনা এক পূর্বাবস্থা ধাপ।",
+ "ai.audit.cancel": "বাতিল",
+ "ai.audit.toast.reverted": "ফিরিয়ে আনা হয়েছে: {what}",
+ "ai.audit.toast.undone": "পূর্বাবস্থা: {what}",
+ "ai.audit.redo": "পুনরায়"
+}

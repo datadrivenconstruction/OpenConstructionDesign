@@ -1,0 +1,18 @@
+{
+  "levels": {
+    "D1": 62.5,
+    "D2": 69.7,
+    "D3": 71.8,
+    "D4": 70.9
+  },
+  "metrics_mean": {
+    "circulation": 41.6,
+    "closed_rooms": 83.3,
+    "daylight": 78.6,
+    "documentation": 64.8,
+    "norm_violations": 82.8,
+    "programme_fit": 75.2,
+    "structural_continuity": 83.3,
+    "wet_stacking": 57.6
+  }
+}

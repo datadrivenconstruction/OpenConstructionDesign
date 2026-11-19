@@ -1,0 +1,6 @@
+{
+ "vv_conflict.styles.conflict": "Nagbago sa model ang object styles ng na-edit na kategorya (undo o ibang window) habang may mga edit ang window na ito. Nananatili ang mga edit mo.",
+ "vv_conflict.styles.keep": "Panatilihin ang mga edit ko",
+ "vv_conflict.styles.reload": "I-reload",
+ "vv_conflict.styles.answer_first": "Piliin ang Keep my edits o Reload muna"
+}

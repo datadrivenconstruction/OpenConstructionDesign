@@ -1,0 +1,8 @@
+{
+ "mep_units.unit.mm": "mm",
+ "mep_units.unit.in": "in",
+ "mep_units.dn": "DN",
+ "mep_units.diameter": "Diameter",
+ "mep_units.system.new": "Nytt system",
+ "mep_units.system.none": "Ingen system"
+}

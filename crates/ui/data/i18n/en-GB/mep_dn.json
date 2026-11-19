@@ -1,0 +1,5 @@
+{
+ "mep_dn.dn.unset": "Not set",
+ "mep_dn.slope.err": "Enter a slope in %, e.g. 1.5",
+ "mep_dn.err.rejected": "the value is not accepted"
+}

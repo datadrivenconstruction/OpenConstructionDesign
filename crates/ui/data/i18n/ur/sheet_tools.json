@@ -1,0 +1,18 @@
+{
+ "undo.entry_later": "واپس نہیں ہوا: اس کے بعد ایک اور تبدیلی ہوئی۔ پہلے وہ واپس کریں۔",
+ "undo.entry_gone": "واپس نہیں ہوا: یہ تبدیلی پہلے ہی واپس ہو چکی یا تاریخ میں نہیں رہی۔",
+ "undo.entry_busy": "پہلے موجودہ ڈرائنگ مکمل یا منسوخ کریں، پھر واپس کریں۔",
+ "quick.hud.more": "Properties میں مزید: {names}",
+ "sheet_tools.sheet.more": "مزید شیٹ ٹولز",
+ "job.of": "{t} میں سے {d}",
+ "job.of.mb": "{t} MB میں سے {d}",
+ "job.left.under_minute": "ایک منٹ سے کم باقی",
+ "job.left.minutes": "تقریباً {n} منٹ باقی",
+ "sheet_tools.start.units": "اکائیاں",
+ "sheet_tools.print.save": {
+  "one": "# شیٹ محفوظ کریں",
+  "other": "# شیٹیں محفوظ کریں"
+ },
+ "sheet_tools.sets.delete_ask": "سیٹ “{name}” حذف کریں؟ اس کی شیٹیں پروجیکٹ میں رہیں گی۔",
+ "sheet_tools.keep": "رکھیں"
+}

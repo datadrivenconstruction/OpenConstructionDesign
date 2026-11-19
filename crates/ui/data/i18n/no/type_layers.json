@@ -1,0 +1,10 @@
+{
+ "type_layers.layer.insert": "Sett inn lag under",
+ "type_layers.layer.delete": "Slett lag",
+ "type_layers.layer.delete_last": "En type trenger minst ett lag",
+ "type_layers.value.bad": "Ikke en gyldig positiv verdi",
+ "type_layers.value.required": "Påkrevd",
+ "type_layers.unsaved.title": "Ikke-lagrede endringer i {name}",
+ "type_layers.unsaved.body": "Bruk dem på typen, eller forkast dem?",
+ "type_layers.unsaved.discard": "Forkast"
+}

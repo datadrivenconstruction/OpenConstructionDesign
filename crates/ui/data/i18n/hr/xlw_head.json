@@ -1,0 +1,15 @@
+{
+ "xlw.hd_never": "Još nije izvezeno",
+ "xlw.hd_now": "upravo sada",
+ "xlw.hd_min": "prije {n} min",
+ "xlw.hd_hour": "prije {n} h",
+ "xlw.hd_day": "prije {n} d",
+ "xlw.hd_linked": "Povezano",
+ "xlw.hd_watched": "Praćeno",
+ "xlw.hd_stale": "Model promijenjen od izvoza",
+ "xlw.ft_export": "Izvoz",
+ "xlw.ft_review": "Pregledaj",
+ "xlw.ft_apply": "Primijeni {n} promjena",
+ "xlw.ft_delete_missing": "Izbriši nedostajuće",
+ "xlw.ft_keep_missing_tip": "Brisanje je uključeno: elementi bez retka bit će izbrisani pri primjeni. Odznačite da ih zadržite."
+}

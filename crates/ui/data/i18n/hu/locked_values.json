@@ -1,0 +1,8 @@
+{
+ "cmd.props.param_lock": "Paraméterérték zárolása vagy feloldása",
+ "locked_values.kept": "{n} zárolt érték megtartva",
+ "locked_values.locked": "„{name}” zárolva: a táblázatimportálás, a tömeges szerkesztés és az MI megtartja",
+ "locked_values.unlocked": "„{name}” feloldva",
+ "locked_values.locked_tip": "Zárolva: a táblázatimportálás, a tömeges szerkesztés és az MI megtartja ezt az értéket. Kattintson a feloldáshoz  ·  Ctrl+L",
+ "locked_values.no_row": "Mutasson a Tulajdonságok panel egyik paramétersorára, majd nyomja meg a Ctrl+L-t"
+}

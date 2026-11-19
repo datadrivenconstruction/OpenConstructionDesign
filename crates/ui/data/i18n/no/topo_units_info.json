@@ -1,0 +1,13 @@
+{
+ "topo.unit.mm": "mm",
+ "topo.unit.metre": "m",
+ "topo.unit.ft": "ft",
+ "topo.opt.material": "Materiale",
+ "topo.row.active": "Aktiv flate",
+ "topo.btn.delete_pad": "Slett plate",
+ "topo.info.loading": "Bygger terrengflaten…",
+ "topo.info.warn_n": "{n} advarsler",
+ "topo.info.points_label": "Punkter",
+ "topo.import.all_layers": "Alle lag",
+ "topo.import.need_layer": "Kryss av for minst ett lag"
+}

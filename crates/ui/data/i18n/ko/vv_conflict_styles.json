@@ -1,0 +1,6 @@
+{
+ "vv_conflict.styles.conflict": "편집 중인 범주의 객체 스타일이 모델에서 바뀌었습니다(실행 취소 또는 다른 창). 이 창에 편집 내용이 있어 편집은 유지됩니다.",
+ "vv_conflict.styles.keep": "내 편집 유지",
+ "vv_conflict.styles.reload": "다시 로드",
+ "vv_conflict.styles.answer_first": "내 편집 유지 또는 먼저 다시 로드를 선택하십시오"
+}

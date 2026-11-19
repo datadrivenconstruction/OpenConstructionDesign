@@ -1,0 +1,18 @@
+{
+ "elem.mep_fitting.one": "이음쇠",
+ "elem.mep_fitting.many": "이음쇠",
+ "elem.mep_fitting.kind.elbow": "엘보",
+ "elem.mep_fitting.kind.tee": "티",
+ "elem.mep_fitting.kind.cross": "십자",
+ "elem.mep_fitting.kind.transition": "전환",
+ "elem.mep_fitting.kind.cap": "캡",
+ "elem.mep_fitting.size": "크기",
+ "elem.mep_fitting.at": "위치",
+ "elem.mep_fitting.runs": "경로 {n}",
+ "elem.mep_fitting.edit_run": "경로 편집",
+ "elem.mep_fitting.select_runs": "연결된 경로 선택",
+ "elem.mep_fitting.derived": "이음쇠는 경로를 따릅니다: 경로를 바꾸면 이음쇠도 함께 바뀝니다.",
+ "elem.mep_fitting.no_delete": "이음쇠는 단독으로 삭제하거나 이동할 수 없습니다. 연결된 경로를 편집하거나 삭제하세요.",
+ "elem.mep_fitting.hint": "평면에서 이음쇠를 클릭하면 경로가 보입니다.",
+ "elem.mep_fitting.picked": "선택된 이음쇠: {n}"
+}

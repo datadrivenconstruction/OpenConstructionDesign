@@ -1,0 +1,5 @@
+{
+ "mirror_array.err.count": "Il conteggio è un numero intero da 2 a 200: 4 3000, oppure 4;300 quando il passo ha tre cifre",
+ "mirror_array.err.length": "Il passo o il totale è una lunghezza positiva, es. 3 000 o 1.2 m",
+ "mirror_array.err.angle": "La rotazione è un angolo in gradi, non zero e al massimo 360"
+}

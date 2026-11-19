@@ -1,0 +1,11 @@
+{
+ "draw_quality.custom": "anpassad",
+ "draw_quality.custom.tip": "{name}: en post i det här projektet",
+ "draw_quality.custom_note": "Poster markerade som anpassade tillhör det här projektet.",
+ "draw_quality.unsaved.lib_body": "Spara dem till biblioteket eller kasta dem?",
+ "draw_quality.unsaved.styles_body": "Tillämpa dem på vyn eller kasta dem?",
+ "draw_quality.unsaved.both_body": "Tillämpa dem eller kasta dem?",
+ "draw_quality.halftone": "{category} halvton",
+ "draw_quality.styles.name": "Linjestilar",
+ "draw_quality.styles.other_level": "Osparade stilredigeringar för nivå {level}: tillämpa eller återställ dem för att redigera den nivån."
+}

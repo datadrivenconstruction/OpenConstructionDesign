@@ -1,0 +1,18 @@
+{
+ "xlsx_scope.title": "Eksport til regneark: omfang",
+ "xlsx_scope.intro": "Vælg hvad der skal med i regnearket. Når det importeres igen, ændres kun disse elementer.",
+ "xlsx_scope.base_whole": "Hele modellen",
+ "xlsx_scope.base_level": "Aktiv etage",
+ "xlsx_scope.base_selection": "Valg",
+ "xlsx_scope.categories": "Kategorier",
+ "xlsx_scope.cat_walls": "vægge",
+ "xlsx_scope.cat_openings": "døre",
+ "xlsx_scope.cat_rooms": "rum",
+ "xlsx_scope.cat_slabs": "plader",
+ "xlsx_scope.cat_curtains": "gardinvægge",
+ "xlsx_scope.nothing_selected": "Intet er valgt: vælg elementer først, eller vælg et andet omfang.",
+ "xlsx_scope.no_categories": "Markér mindst én kategori.",
+ "xlsx_scope.no_level": "Den aktive etage blev ikke fundet.",
+ "xlsx_scope.export": "Eksportér",
+ "xlsx_scope.preview_scope": "Eksporteret omfang: {scope}. Elementer uden for det ændres eller slettes aldrig."
+}

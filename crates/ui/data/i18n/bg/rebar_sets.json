@@ -1,0 +1,7 @@
+{
+ "rebar_sets.add_one": "Добавяне на 1 комплект",
+ "rebar_sets.add_n": "Добавяне на {n} комплекта",
+ "rebar_sets.pick.search": "Търсене на типове арматура",
+ "rebar_sets.pick.empty": "Няма съвпадащи типове арматура",
+ "rebar_sets.unit.deg": "°"
+}

@@ -1,0 +1,13 @@
+{
+ "topo.unit.mm": "мм",
+ "topo.unit.metre": "м",
+ "topo.unit.ft": "фт",
+ "topo.opt.material": "Матеріал",
+ "topo.row.active": "Активна поверхня",
+ "topo.btn.delete_pad": "Видалити майданчик",
+ "topo.info.loading": "Побудова поверхні…",
+ "topo.info.warn_n": "Попереджень: {n}",
+ "topo.info.points_label": "Точки",
+ "topo.import.all_layers": "Усі шари",
+ "topo.import.need_layer": "Позначте щонайменше один шар"
+}

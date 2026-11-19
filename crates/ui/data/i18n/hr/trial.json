@@ -1,0 +1,7 @@
+{
+ "trial.field.point": "Točka",
+ "trial.field.distance": "Udaljenost",
+ "trial.field.target": "Element",
+ "trial.refused": "{field}: {reason}. Promijenite da primijenite",
+ "trial.preview_off": "Pregled isključen: model je prevelik"
+}

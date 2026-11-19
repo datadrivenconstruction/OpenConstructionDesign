@@ -1,0 +1,15 @@
+{
+ "topo_units.unit.section": "Unidades",
+ "topo_units.unit": "Unidades no arquivo",
+ "topo_units.unit.m": "m",
+ "topo_units.unit.cm": "cm",
+ "topo_units.unit.mm": "mm",
+ "topo_units.unit.ft": "pés",
+ "topo_units.unit.usft": "pés de levantamento dos EUA",
+ "topo_units.unit.in": "pol",
+ "topo_units.unit.from_file": "O arquivo indica as unidades: {unit}",
+ "topo_units.unit.suggested": "O arquivo não indica unidades. Sugerido pela extensão: {unit} — verifique o resultado abaixo",
+ "topo_units.extent": "Resultado em unidades do projeto: {x} × {y} {u} em planta, faixa de altura {z} {u}",
+ "topo_units.extent.none": "Resultado: nada a importar com estas escolhas",
+ "topo_units.extent.check": "Isto não parece um terreno: verifique as unidades"
+}

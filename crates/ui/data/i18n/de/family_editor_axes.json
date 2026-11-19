@@ -1,0 +1,13 @@
+{
+ "fe.axis.x": "X-Achse",
+ "fe.axis.y": "Y-Achse",
+ "fe.axis.z": "Z-Achse",
+ "fe.col.axis": "Achse",
+ "fe.col.at": "Position",
+ "fe.col.mode": "Modus",
+ "fe.mode.fixed": "Fest",
+ "fe.mode.free": "Frei",
+ "fe.types.inherited": "Standard aus Parameter",
+ "fe.csv.more": "Weitere CSV-Aktionen",
+ "fe.ref.selected": "Ebene: {name}"
+}

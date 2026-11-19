@@ -1,0 +1,9 @@
+{
+ "rebar_list.move_up": "Sposta su",
+ "rebar_list.move_down": "Sposta giù",
+ "rebar_list.remove": "Rimuovi",
+ "rebar_list.zone_remove_last": "Una zona richiede almeno una stanza: elimina la zona per rimuovere l'ultima",
+ "rebar_list.rebar_empty_title": "Nessuna armatura in questo modello",
+ "rebar_list.rebar_empty_hint": "Posiziona armatura in un elemento ospitante e sarà inserita nel prospetto qui.",
+ "rebar_list.rebar_empty_action": "Posiziona armatura"
+}

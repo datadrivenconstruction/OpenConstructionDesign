@@ -1,0 +1,10 @@
+{
+ "cmd.view.axes_full": "Fulde akser",
+ "cmd.view.axes_full.desc": "Viser X- og Y-aksen som fulde linjer på tværs af planen. Hold F9 nede for kun at vise dem, mens den er trykket.",
+ "settings.axes_full": "Akser",
+ "settings.axes_full_desc": "Planakser som fulde linjer på tværs af arket. Hold F9 for et hurtigt kig.",
+ "settings.axes_full_on": "Vis fulde akser",
+ "plan.hud.axes_tip": "Hold {key} for at vise fulde akser",
+ "status.axes_full.on": "Fulde akser til",
+ "status.axes_full.off": "Fulde akser fra"
+}

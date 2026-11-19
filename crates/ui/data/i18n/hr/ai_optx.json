@@ -1,0 +1,10 @@
+{
+ "ai.optx.applied": "Varijanta „{name}“ primijenjena. Poništi je vraća u nacrt",
+ "ai.optx.missing": "Varijanta {id} više ne postoji",
+ "ai.optx.accepted": "Varijanta {id} je već primijenjena",
+ "ai.optx.not_draft": "Varijanta {id} je odbijena i ne može se primijeniti",
+ "ai.optx.stale": "Model se promijenio nakon izrade varijante {id}: prvo je ponovno generiraj",
+ "ai.optx.bad_recipe": "Recept varijante se ne može pročitati: {e}",
+ "ai.optx.refused": "Varijanta nije primijenjena ({code}): {reason}",
+ "ai.optx.failed": "Varijanta nije primijenjena: {e}"
+}

@@ -1,0 +1,8 @@
+{
+ "xlsx_issues.empty_title": "Çalışma kitabında boş sayfa",
+ "xlsx_issues.empty_kept": "{sheet} sayfası boş: sayfadan hiçbir şey okunmadı, {n} öğe olduğu gibi kalır. Diğer sayfalar yine uygulanabilir.",
+ "xlsx_issues.empty_none": "{sheet} sayfası boş: sayfadan hiçbir şey okunmadı. Diğer sayfalar yine uygulanabilir.",
+ "xlsx_issues.unreadable_title": "Sayfa okunamadı",
+ "xlsx_issues.unreadable": "{sheet} sayfası okunamadı, dosyasının bu bölümü bozuk: sayfadan hiçbir şey alınmadı ve öğeleri olduğu gibi kalır. Diğer sayfalar yine uygulanabilir.",
+ "xlsx_issues.formulas": "{sheet} sayfasındaki formüller okunamadı, bu yüzden hesaplanan değer düzenlemeden ayırt edilemiyor: bu sayfadan hiçbir şey alınmadı. Diğer sayfalar yine uygulanabilir."
+}

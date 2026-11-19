@@ -1,0 +1,13 @@
+{
+ "xlw.copy_list": "Kopioi luettelo",
+ "xlw.save_list": "Tallenna luettelo…",
+ "xlw.copy_list_tip": "Kopioi näytetyt rivit (arkki, solu, tunnus, sarake, arvot, syy) tekstinä taulukkolaskentaan",
+ "xlw.save_list_tip": "Tallenna näytetyt rivit .csv-tiedostona työkirjan viereen; itse työkirjaa ei muuteta koskaan",
+ "xlw.list_book_value": "Työkirjan arvo",
+ "xlw.list_model_value": "Mallin arvo",
+ "xlw.list_reason": "Syy",
+ "xlw.list_copied": "Luettelo kopioitu: {n} riviä",
+ "xlw.list_saved": "Luettelo tallennettu: {n} riviä, {file}",
+ "xlw.list_save_failed": "Luetteloa ei tallennettu",
+ "xlw.list_nothing": "Ei kopioitavaa: rivejä ei näytetä"
+}

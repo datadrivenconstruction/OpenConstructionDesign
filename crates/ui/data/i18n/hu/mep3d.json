@@ -1,0 +1,23 @@
+{
+ "mep3d.duct": "Légcsatorna",
+ "mep3d.pipe": "Csővezeték",
+ "mep3d.tray": "Kábeltálca",
+ "mep3d.conduit": "Védőcső",
+ "mep3d.system": "Rendszer",
+ "mep3d.length": "Hossz",
+ "mep3d.diameter": "Átmérő",
+ "mep3d.width": "Szélesség",
+ "mep3d.height": "Magasság",
+ "mep3d.insulation": "Szigetelés",
+ "mep3d.tip": "Enter — alkalmaz; az idomok újraszámítódnak",
+ "mep3d.size_positive": "a méretnek nullánál nagyobbnak kell lennie",
+ "mep3d.not_changed": "nem változott: {e}",
+ "mep3d.copied": "vezeték másolva",
+ "mep3d.changed": "vezeték módosítva",
+ "mep3d.deleted": "törölt elemek: {n}",
+ "mep3d.not_deleted": "nem lett törölve: {e}",
+ "mep3d.no_wall_type": "nincs faltípus",
+ "mep3d.demo.supply": "Befúvás S1",
+ "mep3d.demo.heating": "Fűtés",
+ "mep3d.demo.power": "Erősáram"
+}
