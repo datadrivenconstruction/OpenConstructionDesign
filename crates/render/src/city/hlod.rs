@@ -460,10 +460,17 @@ impl Source<'_> {
     }
 }
 
-/// Voxel step of the finest proxy of a unit: a fraction of its largest extent, within limits.
+/// Screen error the proxies are built for, px: the city view's tolerance at rest.
+pub const TOL_PX: f32 = 1.5;
+/// A unit's finest proxy must hold until the unit spans this many pixels; only a closer view
+/// loads its full content.
+pub const FULL_PX: f32 = 64.0;
+
+/// Voxel step of the finest proxy of a unit: its error bound `step * SQRT3` stays within
+/// `TOL_PX` while the unit's extent projects to at most `FULL_PX` (finer only by the limits).
 pub fn unit_step(b: &Aabb) -> f32 {
     let e = (b.max - b.min).max_element();
-    (e / 48.0).clamp(0.25, 2.0)
+    (e * TOL_PX / (SQRT3 * FULL_PX)).clamp(0.25, 2.0)
 }
 
 /// Proxy chain of one unit, fine to coarse. The first level is always kept (a unit is never

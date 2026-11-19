@@ -51,7 +51,7 @@ pub struct CityConfig {
 impl Default for CityConfig {
     fn default() -> Self {
         Self {
-            tol_px: 1.5,
+            tol_px: hlod::TOL_PX,
             tol_px_moving: 3.0,
             budget: 1 << 30,
             workers: 0,

@@ -615,10 +615,15 @@ mod tests {
         Scene::new(vec![quad(1, -3.), quad(3, 0.), quad(5, 3.)])
     }
 
-    /// Camera from above framing x in `lo`..`hi`.
+    /// Camera from above framing x in `lo`..`hi`, world x along the picture columns (yaw -90°:
+    /// the default azimuth turned the strip by ~36°, so picture columns did not separate the quads).
+    /// The strip fills the 2:1 test frames with a 5% margin; the bounding-sphere fit alone left
+    /// each quad at ~170 pixels, too few to measure a dither share.
     fn cam_over(lo: f32, hi: f32) -> OrbitCamera {
-        let mut cam = OrbitCamera { pitch: 1.5, ..Default::default() };
+        let mut cam = OrbitCamera { pitch: 1.5, yaw: -std::f32::consts::FRAC_PI_2, ..Default::default() };
         cam.fit(&Aabb { min: Vec3::new(lo, -1., 0.), max: Vec3::new(hi, 1., 0.) }, 1.0);
+        let (aspect, half_y) = (2.0, 1.0);
+        cam.distance = ((hi - lo) * 0.5 / aspect).max(half_y) * 1.05 / (cam.fov_y * 0.5).tan();
         cam
     }
 
@@ -876,13 +881,14 @@ mod tests {
         assert!((share(&p25) - 0.25).abs() < 0.06, "t25 share {}", share(&p25));
         assert!((share(&p50) - 0.50).abs() < 0.06, "t50 share {}", share(&p50));
         assert!(share(&p100) > 0.99, "t100 share {}", share(&p100));
-        // element 3: mean column of the bright pixels between elements 1 and 5
+        // element 3: mean column of its pixels between elements 1 and 5, found against the
+        // picture with element 3 hidden (a brightness cut also takes the light background)
+        let gone = Timeline::new(30, vec![track(3, 4, 0, 100, Effect::Appear { rise: 0.0 })]);
+        let Some(bg) = pic_at(&s, Some((&gone, 0))) else { return };
         let centre = |p: &[u8]| {
-            let band: Vec<usize> = (0..w * h)
-                .filter(|i| {
-                    (col(-2.) + 1..col(2.) - 1).contains(&(i % w)) && p[i * 4..i * 4 + 3].iter().any(|c| *c > 60)
-                })
-                .collect();
+            let l = lit(p, &bg);
+            let band: Vec<usize> = (0..w * h).filter(|i| (col(-2.) + 1..col(2.) - 1).contains(&(i % w)) && l[*i]).collect();
+            assert!(band.len() > 100, "element 3 covers pixels: {}", band.len());
             band.iter().map(|i| (i % w) as f32).sum::<f32>() / band.len().max(1) as f32
         };
         let (c0, c50, c100) = (centre(&p0), centre(&p50), centre(&p100));
@@ -1010,6 +1016,15 @@ mod tests {
             ..Look::default()
         };
         let cut = render_rgba(&s, &cam, (96, 64), &outside).unwrap();
-        assert_eq!(at(&cut, 48, 32), at(&cut, 1, 1), "everything outside the section box is gone");
+        // probe between ground grid lines (1 m step): the frame centre is the origin, where the
+        // grid's axis lines cross, and the grid is not part of the model the section box cuts
+        let c = cam.view_proj(96.0 / 64.0) * Vec3::new(0.5, 0.5, 0.0).extend(1.0);
+        let (x, y) = (((c.x / c.w * 0.5 + 0.5) * 96.0) as usize, ((0.5 - c.y / c.w * 0.5) * 64.0) as usize);
+        assert_ne!(at(&plain, x, y), at(&plain, 1, 1), "the probe lies on the quad");
+        // the ground under the model is shaded by distance from the look-at point, so the
+        // background at the probe may differ from the corner's by a unit
+        let gone = |p: [u8; 3]| p.iter().zip(at(&cut, 1, 1)).all(|(a, b)| a.abs_diff(b) <= 2);
+        assert!(gone(at(&cut, x, y)), "everything outside the section box is gone: {:?} vs {:?}", at(&cut, x, y), at(&cut, 1, 1));
+        assert!(!gone(at(&plain, x, y)), "the probe tells the quad from the background");
     }
 }

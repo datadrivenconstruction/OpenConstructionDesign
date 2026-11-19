@@ -228,10 +228,16 @@ pub(crate) fn capture(rs: &RenderState, app: &mut EditorApp, want: (u32, u32), s
     let big = (want.0 + PAD.0, want.1 + PAD.1);
     let (_, probe) = paint(rs, app, &egui::Context::default(), big, 3, &mut *step);
     let probe = probe.ok_or("the view has no canvas")?;
-    let dim = (
+    let mut dim = (
         want.0 + big.0.saturating_sub(probe.width().round() as u32),
         want.1 + big.1.saturating_sub(probe.height().round() as u32),
     );
+    // panels need not keep their width when the window shrinks: correct until the canvas is `want`
+    for _ in 0..4 {
+        let (_, r) = paint(rs, app, &egui::Context::default(), dim, 3, &mut *step);
+        let Some(off) = r.and_then(|r| crate::ai::render_off::canvas_off(r, want)) else { break };
+        dim = (crate::ai::render_off::shifted(dim.0, off.0), crate::ai::render_off::shifted(dim.1, off.1));
+    }
     let ctx = egui::Context::default();
     // the first image carries pipeline compiles and the first upload: timed apart from the
     // steady frames, the median of single painted frames (readback included)

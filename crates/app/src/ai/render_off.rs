@@ -236,8 +236,14 @@ fn capture_now(
         big.0.saturating_sub(probe.width() as u32),
         big.1.saturating_sub(probe.height() as u32),
     );
-    let dim = (want.0 + chrome.0, want.1 + chrome.1);
-    let (px, seen) = canvas(app, dim, 8, &mut step);
+    let mut dim = (want.0 + chrome.0, want.1 + chrome.1);
+    let (mut px, mut seen) = canvas(app, dim, 8, &mut step);
+    // panels need not keep their width when the window shrinks: correct until the canvas is `want`
+    for _ in 0..4 {
+        let Some(off) = seen.and_then(|r| canvas_off(r, want)) else { break };
+        dim = (shifted(dim.0, off.0), shifted(dim.1, off.1));
+        (px, seen) = canvas(app, dim, 8, &mut step);
+    }
     let r = seen.ok_or("the view has no canvas")?;
     let (x0, y0) = (r.min.x.max(0.0) as u32, r.min.y.max(0.0) as u32);
     let w = (r.width() as u32).min(dim.0.saturating_sub(x0));
@@ -251,6 +257,20 @@ fn capture_now(
         out.extend_from_slice(&px[s..s + (w * 4) as usize]);
     }
     Ok((out, (w, h)))
+}
+
+/// How far the canvas `r` is from `want` in whole pixels, `None` when it is `want`.
+pub(crate) fn canvas_off(r: egui::Rect, want: (u32, u32)) -> Option<(i64, i64)> {
+    let off = (
+        i64::from(want.0) - r.width().round() as i64,
+        i64::from(want.1) - r.height().round() as i64,
+    );
+    (off != (0, 0)).then_some(off)
+}
+
+/// A window side `v` grown by `by` pixels, at least one.
+pub(crate) fn shifted(v: u32, by: i64) -> u32 {
+    (i64::from(v) + by).clamp(1, i64::from(u32::MAX)) as u32
 }
 
 fn image(rgba: &[u8], (w, h): (u32, u32)) -> Result<ImageData, String> {

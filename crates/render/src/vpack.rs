@@ -524,20 +524,27 @@ mod tests {
         assert!(d.max_error() < 4e-6);
     }
 
+    /// Angle in degrees, exact to well below 1e-4: an f32 acos of the dot product cannot resolve
+    /// angles under ~0.02 degrees (one f32 step below 1.0 is already 0.0198 degrees).
+    fn angle_deg(a: Vec3, b: Vec3) -> f64 {
+        let (a, b) = (a.as_dvec3(), b.as_dvec3());
+        a.cross(b).length().atan2(a.dot(b)).to_degrees()
+    }
+
     #[test]
     fn octahedral_normal_within_a_hundredth_of_a_degree() {
-        let mut worst = 0.0f32;
+        let mut worst = 0.0f64;
         for k in 0..50_000u32 {
             let a = k as f32 * 0.618_034 * std::f32::consts::TAU;
             let z = 1.0 - 2.0 * (k as f32 + 0.5) / 50_000.0;
             let r = (1.0 - z * z).sqrt();
             let n = Vec3::new(r * a.cos(), r * a.sin(), z);
-            worst = worst.max(unoct(oct(n)).angle_between(n));
+            worst = worst.max(angle_deg(unoct(oct(n)), n));
         }
         for n in [Vec3::X, -Vec3::X, Vec3::Y, -Vec3::Y, Vec3::Z, -Vec3::Z] {
-            worst = worst.max(unoct(oct(n)).angle_between(n));
+            worst = worst.max(angle_deg(unoct(oct(n)), n));
         }
-        assert!(worst.to_degrees() < 0.01, "{}", worst.to_degrees());
+        assert!(worst < 0.01, "{worst}");
         assert_eq!(unoct(oct(Vec3::ZERO)), Vec3::Z);
     }
 
@@ -568,7 +575,12 @@ mod tests {
     fn same_triangles(m: &SceneMesh, wide: bool) -> Stream {
         let mut v = vec![];
         tri_vertices(m, &mut v);
-        let deq = Deq::of(&bounds(&v));
+        let b = bounds(&v);
+        let deq = Deq::of(&b);
+        // per axis: half a step plus the f32 rounding of the world coordinate (as in
+        // half_millimetre_at_chunk_size_and_far_beyond), over the three axes of a corner
+        let ulp = (b.min.abs().max(b.max.abs()).max_element() + (b.max - b.min).max_element()) * f32::EPSILON;
+        let tol = 3f32.sqrt() * (deq.max_error() + 2.0 * ulp);
         let mut out = None;
         for last in [false, true] {
             let s = pack_tris(&v, deq, wide, last);
@@ -577,15 +589,16 @@ mod tests {
             for (t, (p, n)) in got.iter().enumerate() {
                 let want = &v[t * 3..t * 3 + 3];
                 let i = (0..3)
-                    .find(|&i| (p[i] - Vec3::from(want[0].pos)).length() <= 2.0 * deq.max_error())
+                    .find(|&i| (p[i] - Vec3::from(want[0].pos)).length() <= tol)
                     .expect("corner");
                 for k in 0..3 {
                     let d = (p[(i + k) % 3] - Vec3::from(want[k].pos)).length();
-                    assert!(d <= 2.0 * deq.max_error(), "tri {t} corner {k}: {d}");
+                    assert!(d <= tol, "tri {t} corner {k}: {d} > {tol}");
                 }
                 let wn = Vec3::from(want[0].normal);
                 if wn != Vec3::ZERO {
-                    assert!(n.angle_between(wn).to_degrees() < 0.01, "tri {t}");
+                    let a = angle_deg(*n, wn);
+                    assert!(a < 0.01, "tri {t}: {a}");
                 }
             }
             for k in 0..s.count() {

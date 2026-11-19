@@ -411,7 +411,11 @@ pub fn crease_vertices(m: &SceneMesh, out: &mut Vec<Vertex>) {
             edges.entry(id).or_insert((a, b, Vec::new())).2.push(n);
         }
     }
-    for (a, b, ns) in edges.into_values() {
+    // map order is random per process: sorted, the line buffer (and so the blend order of
+    // overlapping edge fragments) is the same on every run
+    let mut edges: Vec<_> = edges.into_iter().collect();
+    edges.sort_unstable_by_key(|(id, _)| *id);
+    for (_, (a, b, ns)) in edges {
         let crease = match ns.as_slice() {
             [_] => true,
             [n0, rest @ ..] => rest.iter().any(|n| n0.dot(*n).abs() < 0.906),

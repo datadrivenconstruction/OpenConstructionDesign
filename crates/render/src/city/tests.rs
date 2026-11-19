@@ -495,3 +495,34 @@ fn units_without_geometry_never_break_the_tree() {
     settle(&mut v, vp, eye);
     assert_eq!(v.stats().cooked, 2);
 }
+
+/// Every level of every unit is within the rest tolerance where the view switches to it: the
+/// finest one until the unit spans `FULL_PX` (then the full content loads), each coarser one
+/// from the scale its own error allows (it is chosen by that error), so the chain only grows.
+#[test]
+fn each_proxy_level_holds_the_tolerance_at_its_switch() {
+    use super::hlod::{FULL_PX, TOL_PX};
+    let ps = city_projects(&CitySpec::with_blocks(4));
+    let mut units = 0;
+    for p in &ps {
+        let c = cook(p.as_ref(), Vec3::ZERO, 0, 1);
+        for (i, u) in c.units.iter().enumerate() {
+            let extent = (u.bounds.max - u.bounds.min).max_element();
+            let Some(fine) = u.levels.first() else { continue };
+            // pixels per metre at which the unit spans FULL_PX
+            let ppm = FULL_PX / extent;
+            assert!(
+                fine.error * ppm <= TOL_PX + 1e-4,
+                "unit {i}: {extent} m, finest error {} m = {} px at the full switch",
+                fine.error,
+                fine.error * ppm
+            );
+            for w in u.levels.windows(2) {
+                let at = TOL_PX / w[1].error;
+                assert!(at <= TOL_PX / w[0].error, "unit {i}: a coarser level switches in closer");
+            }
+            units += 1;
+        }
+    }
+    assert!(units > 40, "{units} units checked");
+}
