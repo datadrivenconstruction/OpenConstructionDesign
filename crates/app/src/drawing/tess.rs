@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Tessellation cache of plan underlays. Fills, lines and arcs of a drawing are tessellated once
 //! per (drawing id, `Drawings::version`, zoom bucket, style) in a local frame at the bucket's
 //! reference scale, cut into grid pieces. A frame only scales and moves the visible pieces; a

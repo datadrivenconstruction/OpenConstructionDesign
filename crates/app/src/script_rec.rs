@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Recording to a script (`mgr.record`): the first call starts, the next one stops and saves the
 //! edits made meanwhile as one script in the scripts folder. Only edits that came as envelopes
 //! (scripts, tables, proposals, envelope tools) have a script form; the others are counted and

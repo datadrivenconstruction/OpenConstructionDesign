@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Collapsible side docks: a thin rail when folded, by the user or for lack of room; widths
 //! and folded state live in prefs. A click on an automatic rail opens the panel just for now.
 use super::{fold, EditorApp};

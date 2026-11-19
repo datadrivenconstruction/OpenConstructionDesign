@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Keyboard cursor of the schedule table: a painted active cell, arrows/Tab/Home/End moves,
 //! Enter/F2/typing start the edit, Enter commits and steps down, Esc cancels.
 //! The pure parts (`cell_target`, `scroll_for`, `edit_start`, `post_edit`, `keys_enabled`) are

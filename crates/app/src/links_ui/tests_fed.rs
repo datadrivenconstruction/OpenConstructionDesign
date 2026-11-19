@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Federation: link cache (miss, hit, stale, damaged, eviction, data safety), parallel loads,
 //! own render sources (host edits leave link groups alone, moves only rewrite matrices).
 

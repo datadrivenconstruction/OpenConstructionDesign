@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Background job of a collab window: cooperative cancel, elapsed time and the working body
 //! (spinner, elapsed, Cancel). A cancelled job never hands its result back, and its work
 //! folder is discarded by the rules of `workdir`; the user's project is never touched here.

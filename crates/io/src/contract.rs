@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The documents of the editor-ERP contract `ddc-erp-link/1` and a checker for them.
 //!
 //! The schemas are the JSON Schema files of the contract, copied into `contract/schemas`

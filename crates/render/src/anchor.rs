@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Per-element anchors of the image texture projection. A textured element that has an anchor
 //! projects its texture in a frame of its own (origin and rotation about the vertical axis), so
 //! moving or turning it carries the pattern along. Elements without one keep the world-fixed

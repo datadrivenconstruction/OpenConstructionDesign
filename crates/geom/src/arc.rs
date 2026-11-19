@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Arc walls: the axis is a circular arc (a, b, bulge).
 //!
 //! bulge = tan(angle/4), > 0 is counter-clockwise. Layers lie towards the left normal of the axis, so

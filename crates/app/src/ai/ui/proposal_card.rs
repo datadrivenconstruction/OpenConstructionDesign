@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Cards of an agent's `ops_propose`: a draft preview read from the dry run (counts by kind, the
 //! affected elements by name, their outline in the views) with Apply and Reject. Apply is the
 //! only way such an envelope reaches the model (`UiSession::apply_proposal`).

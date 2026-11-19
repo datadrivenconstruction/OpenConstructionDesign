@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! H14, one more viewing platform on the lattice tower, through the chat: the tower is built
 //! and applied first (the case's base), then a second session adds the platform at 200 m with
 //! steel_frame tower_platform, which brings its own deck slab and railing; Apply once, then every oracle

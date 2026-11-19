@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Offset surface by sampling and refit: every control point moves along the surface normal
 //! at its Greville parameters; the result is checked against S + d n on a sample grid and the
 //! net is refined (midpoint knots) until the deviation is within the tolerance. Self-

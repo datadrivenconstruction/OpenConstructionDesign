@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! One table of typed numbers fed to every typed-value path with the decimal mark passed
 //! explicitly: a path gives the table's metres or refuses with a reason, never another number.
 //!

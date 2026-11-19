@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Level: in a section or elevation a click places a level at the cursor elevation with an
 //! auto-name; outside a section the command opens the level dialog. The active level is unchanged.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Imported meshes to editable elements. The "Meshes" window: a mesh list (filter by
 //! category and level), the recognized kind with confidence and a plan preview, batch
 //! conversion; the edit tab has move, rotate, scale, mirror, crop and split

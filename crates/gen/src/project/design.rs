@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Design intent of a brief: massing, facade system, balconies, roof terrace, entrance and
 //! site. Every field has a default; a brief without `design` builds the plain bar it always did.
 

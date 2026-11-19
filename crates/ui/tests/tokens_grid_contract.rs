@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Every size in space/radius/size/control/ribbon/layout sits on the 4 px grid; the few
 //! documented half-steps are listed by path. Elevation is per theme, dark carries an outline.
 use ddc_ui::theme::{focus, ribbon, Density, Mode, Theme, TOKENS_JSON};

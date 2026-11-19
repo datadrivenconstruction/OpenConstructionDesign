@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Spline walls (geometry plan W5). The exact planar NURBS axis lives in `wall_spline`; the
 //! wall itself is a chain of ordinary straight or arc wall rows (`wall_spline_piece`) fitted
 //! to the axis by tangent-continuous biarcs within the wall's tolerance. The pieces carry the

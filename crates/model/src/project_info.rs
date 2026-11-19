@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Project information: name, number, address, client, organization, author, checker, approver,
 //! stage, status, issue date. Stored as properties of `project_info` row 0 (no schema change):
 //! the one store title blocks read, by these keys. The site (north, origin, latitude, longitude)

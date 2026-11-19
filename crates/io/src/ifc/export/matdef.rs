@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! IfcMaterial with its look and physics: one entity set per used material (deduplicated by
 //! name): colour as IfcSurfaceStyleRendering through IfcMaterialDefinitionRepresentation, and
 //! Pset_MaterialCommon / Pset_MaterialThermal (SI) for the properties that are set.

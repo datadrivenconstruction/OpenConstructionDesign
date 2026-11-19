@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `ddc run <project> <script.lua> --out <new>`: draft the script, apply it to a private
 //! copy of the project, save the result to a new file. The input is never touched.
 

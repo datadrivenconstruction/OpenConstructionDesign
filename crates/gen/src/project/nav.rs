@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Plan checks as rules: escape distance, daylight depth, accessible routes and doors, fire
 //! compartment size, and the vertical skeleton (`stack.rs`). A finding names the rule it
 //! breaks, is hard or soft as the rule set says, carries how far past the limit it is for the

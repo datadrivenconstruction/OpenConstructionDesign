@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Who set a parameter value (`value_src`): a badge beside the value with the source in its
 //! tooltip, and "Mark verified" on one value or on every unverified one of the selection.
 //! Each verify is one `run_op`: one undo step.

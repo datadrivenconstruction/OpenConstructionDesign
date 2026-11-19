@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Tool refusal shared by the interaction spine and the AI tool catalogue:
 //! a stable code, an i18n message key with arguments and fixes that name a command by id.
 //! The name `Refusal` at the crate root belongs to `ai_revert`; this one is `refusal::Refusal`.

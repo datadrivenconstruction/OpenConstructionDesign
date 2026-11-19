@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Drawing quality: plan view range (top, cut, bottom, depth), pens in mm per scale with separate
 //! cut and projection styles and halftone, line patterns and hatch families (own libraries).
 //! Settings live in the `drawq_style` key/value table, created on first use (additive, no schema

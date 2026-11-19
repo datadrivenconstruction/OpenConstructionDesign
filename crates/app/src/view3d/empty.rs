@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Empty-state card of the 3D view: an empty model, everything hidden in this view, or a section
 //! box that cuts the whole model away. One centred card with a single way out instead of a blank
 //! grey canvas (`ui_kit::empty_state_action`, keys `empty.<what>.*`).

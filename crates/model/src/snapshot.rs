@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Read-only view of one moment of a working file, for a worker: the save pipeline reads it while
 //! the editor keeps writing (WAL). No upgrade and no hooks, so opening it cannot change the file.
 

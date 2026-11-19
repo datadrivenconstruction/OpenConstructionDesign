@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Parts of a connection as real solids (a frame plus a `gsolid::Form`): plates with holes,
 //! bolt sets (head, washers, shank, nut), anchor rods, fillet welds, balls, sleeves and cones.
 //! Small circles are polygons (shank 12, holes and washers 16 sides): the view tessellation is

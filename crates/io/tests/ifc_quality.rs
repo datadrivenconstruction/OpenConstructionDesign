@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Quality of the exchange IFC of authored models: the structural validator finds nothing in
 //! IFC4, IFC4X3 and IFC2X3 files of a house and a nine-storey section, the validator catches
 //! deliberate damage, the export is byte-identical twice, GlobalIds survive an edit, and the

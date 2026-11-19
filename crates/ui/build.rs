@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Embeds command/i18n fragments: `data/commands.d/*.json`, `data/i18n/<lang>/*.json`.
 //! Help topics: `data/help/<lang>/*.md`. A feature adds a file; no shared list to edit.
 //! Paths stay relative to the crate: checkouts of one source tree share one OUT_DIR and one build-script binary,

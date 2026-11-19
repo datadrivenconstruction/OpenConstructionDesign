@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Stairs and railings on the element path: plan outlines for selection, one-step delete of a
 //! mixed selection, and the properties panel. Rows live in `geom_props`.
 

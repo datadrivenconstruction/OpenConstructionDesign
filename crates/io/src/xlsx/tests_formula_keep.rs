@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Formulas the user typed into the book survive a re-export (sheet_view.rs): in the app's own
 //! columns while their result is still the model value, otherwise listed as a loss; a formula
 //! result is never read as an edit of the element.

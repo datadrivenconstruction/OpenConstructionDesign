@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Openings voiding a slab or roof (IfcRelVoidsElement): an opening body with vertical sides
 //! becomes a plan hole of its host (slab profile hole, roof host opening). Anything else leaves
 //! the host whole and is reported; nothing is dropped silently.

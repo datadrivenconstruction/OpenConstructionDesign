@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A transmission tower: cross-arms with insulator strings, counts and lengths from the rules.
 
 use ddc_gen::steel::build_frame;

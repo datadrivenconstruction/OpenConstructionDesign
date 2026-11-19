@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Randomized (seeded) op sequences per model op family, driven through the Editor
 //! (`run_op` / `apply_xlsx`, `undo`, `redo`). Invariants: integrity clean after every step;
 //! a rejected op changes nothing and pushes no undo step; an accepted op writes exactly one

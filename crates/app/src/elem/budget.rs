@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Budgets of the contract at 50k elements, run by `tools/bench.ps1` in release. They print the
 //! measured time and do not fail on it: budgets are targets until the baseline is recorded and
 //! they are tuned. The property commit asserts its budget at 10k walls in release.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Solid-kernel adapter for the family editor: an operation is a `gsolid::Form` body in a work plane
 //! `gsolid::Frame` (extrude, blend, revolve, sweep along a path, blended sweep;
 //! profiles with arcs and holes). The preview is built by the solid kernel itself; the family

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Loading edited families into the project as one step: every definition is checked first,
 //! then one `run_op` writes them all (one undo step). Any refusal writes nothing, names the
 //! family and leaves every document with its edits.

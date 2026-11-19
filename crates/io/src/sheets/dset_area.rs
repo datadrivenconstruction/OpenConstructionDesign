@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The area and finishes schedules of a drawing set, built from the model: the area schedule
 //! counts rooms by the measurement standard of the project's norm pack (`area_std`), the
 //! finishes schedule lists the finishes of every room (`finishes`). Both name the pack and the

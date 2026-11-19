@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Exact STEP import: B-rep faces with their surfaces and edge curves into
 //! [`crate::exact::Body`] parts, placed like the mesh reader places them (metres).
 

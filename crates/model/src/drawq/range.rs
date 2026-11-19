@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Plan view range: four planes measured from the level elevation (m).
 //! `top` >= `cut` >= `bottom` >= `depth`. Elements are sorted into bands by the vertical extent.
 //! A value type only: the stored range is the plan's view graphics range (see `unify.rs`).

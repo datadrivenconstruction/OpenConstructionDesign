@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The site: the zoning envelope and its named rule conflicts, basements on plotted sites,
 //! the ground level on the terrain, the stepped plinth, approaches at grade, cut and fill.
 

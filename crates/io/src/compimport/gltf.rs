@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! glTF 2.0 reader (.glb or .gltf with embedded or neighbouring buffers): triangles of the
 //! default scene with node transforms, grouped by material name. Metres, y up.
 

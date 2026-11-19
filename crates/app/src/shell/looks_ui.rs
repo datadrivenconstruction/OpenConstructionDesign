@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Looks in the app: the chosen look and its fine controls reach the theme every frame (live,
 //! no restart), a preset fills every control at once, and each option is a palette command.
 use super::fold::RibbonMode;

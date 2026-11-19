@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Shell panels as components: title bar, command surfaces, project browser, tool options,
 //! inspector, view area, data table, status bar. `arrange()` decides which ones show and where.
 use super::*;

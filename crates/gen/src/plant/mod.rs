@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Process plants from a brief: a boiler house, a pumping station, water treatment or a small
 //! process line; a standalone storage tank is built on its own (`tank`). The result is a
 //! P&ID-level graph (equipment with nozzles; lines with service, size and spec; valves and

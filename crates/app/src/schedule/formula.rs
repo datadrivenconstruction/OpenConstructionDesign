@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Computed schedule columns: a formula over the columns of a row (values in SI: m, m2, m3).
 //! Parsing and evaluation belong to the shared formula evaluator (`ddc_geom::component::expr`)
 //! in its schedule dialect: numbers (with a point), `+ - * / ( )`, comparisons

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Per-kind import of real DWG files (paths in tests/data/dwg_kinds.tsv, files stay outside the repo).
 //! Ignored: set DDC_DWG_CORPUS to the private corpus root (paths in the TSV are relative to it)
 //! and run with --ignored. Expected counts marked '?' are printed

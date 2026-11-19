@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Reinforcement (schema 30): bar types, sets attached to a host (column, beam, wall, slab,
 //! isolated footing), cover layers per host face. Bars are not stored: they are built from the
 //! host's current geometry in its coordinate system, so they move, rebuild and are trimmed

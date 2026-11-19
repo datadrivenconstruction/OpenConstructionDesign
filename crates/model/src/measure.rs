@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Saved associative measurements (`measure`): distance, clear gap between faces, angle, area,
 //! perimeter, volume, slope. Each pin names a stable feature of an element (a wall face, a mass
 //! face by its history tag, a level, a room) plus a fallback point.

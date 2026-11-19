@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Parameter sheets of columns, beams, roofs, ceilings, slab and member types: export, edit,
 //! one undo step, read-only geometry, old books without these sheets.
 

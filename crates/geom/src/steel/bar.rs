@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A joined member as a connection sees it: straight axis, section axes, the end at the node,
 //! the faces a plate can sit on, and the section's material along a line (bolt grips).
 

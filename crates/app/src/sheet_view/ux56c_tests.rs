@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Sheet properties and revision issue dialogs on the kit: commit path, undo, render, source.
 use super::props::{self, Props};
 use super::*;

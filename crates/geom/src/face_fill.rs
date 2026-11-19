@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Planar faces filled again from their boundary loops. A face sliced and then moved inside its
 //! plane (a wall side under a sloped top) keeps interior slice points at their old place; its old
 //! triangles then fold over the new outline and show as spikes with missing faces. Refilling from

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Oracles read the saved model (and the answer text), never the model's own claims about it.
 //! A check that cannot be made, because the model has no table for it, FAILS with the reason;
 //! it is neither skipped nor a panic.

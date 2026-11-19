@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Sheet issue: built-in tables (sheet list, legends), project fields in the title block, title-block
 //! cells for editing on the canvas, section and elevation marks on plans with a "view/sheet" reference.
 

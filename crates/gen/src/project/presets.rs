@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Presets (`gen_preset.v1`): a starting set of a typology, as data a user may open, change and
 //! save as their own. A preset is a base typology, brief defaults, a programme
 //! (`gen_program.v1`) and rule values at the preset layer. The built-in presets lie in

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Procedural city for scale benchmarks: a street grid of blocks, parcels with towers (glass
 //! curtain wall, mullions, columns, core, slabs), mid-rise slab buildings (walls, windows, slabs)
 //! and rows of houses (eight types, walls and roof each one instanced prototype). Seeded and

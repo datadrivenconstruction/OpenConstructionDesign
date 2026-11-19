@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Modify tools for opened drawings: offset picked lines and arcs by a typed distance to a
 //! clicked side, join touching lines and arcs into one closed polyline, explode polylines into
 //! their lines and arcs. Each edit is one undo step ([`Step::geometry`]) and marks the drawing

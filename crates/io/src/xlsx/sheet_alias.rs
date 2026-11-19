@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A main sheet the user renamed is recognised by its header row. Nothing is read from it until
 //! the user says so for this import (`KeyDecisions::alias`); the import never writes the workbook
 //! (an Apply only fills the ids of new rows in place, see `id_write`) and two candidates are

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A row copied in the spreadsheet with the same element id never overwrites the original
 //! and never loses an edit: unchanged copies are ignored, one edited row is the edit wherever
 //! it sits, two differing rows are refused until the user turns the copies into new elements.

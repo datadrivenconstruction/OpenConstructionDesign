@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Background jobs (open, import, cache builds): the work runs on its own thread and reports
 //! through a shared [`Progress`]; the UI thread polls each frame, draws a bar with the stage,
 //! ETA and a cancel button, and applies the result itself (the model is only changed there).

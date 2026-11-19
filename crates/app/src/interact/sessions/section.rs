@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The section mark tool as a session that owns its points: two clicks
 //! for the line, the third for the depth side; Esc steps back, then ends the tool.
 use crate::editor::sec::SectionTool;

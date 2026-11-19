@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Terrain (topo solid): constrained Delaunay triangulation of survey points with breaklines,
 //! a boundary and sub-regions; elevation at a point, contours, profile and filled section,
 //! cut/fill volumes, a solid of given thickness, building pads (`grade`), smoothing.

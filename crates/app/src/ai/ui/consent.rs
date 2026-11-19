@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! What leaves the machine: the consent card, the "what was sent" window, the journal, and the
 //! offered schedule export, which goes to a file the person picks and to nowhere else.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Pixel-grid helpers: thin UI lines and plan grid lines land on whole physical pixels at any
 //! display scaling (125 %, 150 %, 175 %), so they stay one device pixel wide and never smear.
 //! All coordinates are egui points; `ppp` is `ctx.pixels_per_point()`.

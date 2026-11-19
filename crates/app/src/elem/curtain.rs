@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Curtain wall family of the element contract (E3): vertical 3D grips (top, bottom) beside the
 //! lifted plan grips, and the panel as a real sub-element with its own properties section.
 //! Plan grips live in `grips.rs` (`Kind::Curtain`): ends, move, arc. Every drag is one model

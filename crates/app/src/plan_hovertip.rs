@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Hover tip in the plan: after a still pause over an item, category, type, size and level.
 //! Pure state and text; the view feeds it the pointer and paints the result.
 

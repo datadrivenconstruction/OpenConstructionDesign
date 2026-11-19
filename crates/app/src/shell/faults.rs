@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Clickable fault counters of the status bar: errors (red) and warnings (yellow) for the whole
 //! model. The list is derived from model warnings on demand, cached by model revision and
 //! language, never stored. Worded refusals use the status line only and are never counted here.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The hangar outfit of a truss hall: the roof cladding over the top chords, a sliding door
 //! across the near gable (y = 0) hung from a track beam under the gable truss, crane runway
 //! beams on corbels along both column lines, and an office and workshop annex of rooms on two

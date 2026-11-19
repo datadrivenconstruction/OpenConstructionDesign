@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Undo property test across element kinds: random create/edit/modify/delete sequences,
 //! integrity after every step, full undo back to each recorded state, replay ("redo")
 //! reproduces the final state. `DDC_UNDO_SEQS` sets the count (default 40; 5000 in release gates).

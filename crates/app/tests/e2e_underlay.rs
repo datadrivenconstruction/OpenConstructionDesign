@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Underlay workflow: .dxf/.dwg file -> underlay -> recognition -> accept -> wall edits ->
 //! undo everything -> every table, the journal included, equals the start dump.
 //! The light test runs on the built-in sample plan; the corpus tests are `--ignored`.

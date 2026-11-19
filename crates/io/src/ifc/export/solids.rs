@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Generic solids -> IfcBuildingElementProxy (a sweep along a smooth path with a role — IfcBeam,
 //! IfcColumn, IfcMember, IfcRailing): extrusion — IfcExtrudedAreaSolid, revolution —
 //! IfcRevolvedAreaSolid (profiles with arcs — IfcIndexedPolyCurve), smooth sweep — an exact body

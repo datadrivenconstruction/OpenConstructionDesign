@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Edge curves (lines, circles, ellipses, polylines, B-splines with or without weights) and
 //! the geometry readers they share with surfaces. Sampling keeps the chord within the
 //! tolerance and every step within [`MAX_STEP`].

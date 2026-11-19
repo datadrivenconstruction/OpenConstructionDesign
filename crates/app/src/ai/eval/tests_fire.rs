@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `room_sep`: the fire separation measured on a hand-made core, in both outcomes.
 
 use super::fire_oracles::{is_rated, measure, Door, Fire, Shaft, Wall};

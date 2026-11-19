@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Model sheets → drawing: viewports (level plan, section/elevation) at scale with cropping, view captions,
 //! schedules, a revision table above the title block, title-block auto fields (name, number, sheet N of M);
 //! a sheet set → a multi-page vector PDF.

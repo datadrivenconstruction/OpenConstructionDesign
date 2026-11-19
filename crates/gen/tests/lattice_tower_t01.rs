@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! T01, the owner's lattice tower "at excellent detail": one steel_frame call (lattice_tower_300 at
 //! detail 3) lands in the model with its joints and meets the deep checks of the live run: member,
 //! brace, joint and part counts, height, taper and curved legs, four legs, section tiers and shapes,

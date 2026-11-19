@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A block of buildings from the chat: a scripted model asks for twelve plots between streets,
 //! the tool builds every building in parallel under the shared site rules, drafts one project
 //! per plot, and Apply writes the whole block in one undo step.

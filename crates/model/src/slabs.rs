@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Slabs: types (layers from top to bottom), instances with an outline and holes, quantities.
 //! Slab top = level elevation + `offset`; layer volume = outline area × thickness (exact).
 //! `slab_qty` is derived: recomputed in the same transaction as the edit.

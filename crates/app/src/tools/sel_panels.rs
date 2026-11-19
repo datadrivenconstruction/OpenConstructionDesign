@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Selection filter, "Tag all" and the distribute/number option bar on the design kit: category
 //! rows with a tri-state header, count and length fields with their validation rules, free of any
 //! panel state so the rules can be tested without a window.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Networks: runs (duct, pipe, tray, conduit) — a chain of points, Enter or a click on a network;
 //! elbows and tees are placed by the model; fixtures — library components connected to a system;
 //! connect/disconnect; auto-route. Each action is a single `run_op`.

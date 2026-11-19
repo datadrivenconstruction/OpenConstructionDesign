@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! 3D picking for all categories: scene bodies per element (walls, openings, curtain walls, slabs from
 //! the editor; other categories are `scene3d` parts), rooms and missing parts come from the
 //! `scene3d` providers; plus grip-provider bodies (`grips::Provider::bodies`).

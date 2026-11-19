@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Barrel roofs. A roof asked as `barrel` is a profile drawn along the long axis of its
 //! outline's tightest box: a half circle, a segment of a circle or a half ellipse across the
 //! short side, by `massing.vault_profile` (`auto` takes the half circle up to

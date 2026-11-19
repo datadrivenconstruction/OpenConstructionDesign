@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Roof edges in the 3D scene registry (`edit3d::scene3d`): profiles, skylights (frame and glass),
 //! soffits and wedges, as bodies with pick targets `Cat::Ext(CAT)` (`sub` is the element kind), deletion
 //! of the selection as one undo step, and the properties window.

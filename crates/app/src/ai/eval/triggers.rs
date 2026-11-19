@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Trigger cases of the modelling guides: requests that must make an agent read a guide first
 //! ("yes") and requests that must not ("no"). The oracle is the audit log of guide reads, never
 //! the text of the answer. Data in `crates/ai/evals/triggers/<skill>.toml`.

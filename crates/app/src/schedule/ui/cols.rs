@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Column widths of the schedule grid: drag the header edge to resize, double-click the edge to
 //! fit the content, text that does not fit is elided with a tooltip. The decisions are pure
 //! functions (clamp, fit, edge hit, scroll to a column) and are tested without a frame.

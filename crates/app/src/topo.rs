@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Terrain and site: terrain points by click with an elevation, survey import (CSV/XYZ/DXF/IFC),
 //! boundary, sub-regions with a material, building pad with slopes, smoothing and flattening of
 //! a region, point editing in plan (drag, typed Z, delete) and in 3D (drag along Z).

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Frame logic for a large model without the GPU (covered by tests): budgets, camera motion and
 //! gradual refinement, GPU memory accounting with eviction, the chunk box tree, the depth
 //! pyramid for occlusion culling, level-of-detail selection, frame counters. Goals and measurement —

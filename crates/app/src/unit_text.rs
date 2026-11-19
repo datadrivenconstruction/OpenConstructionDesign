@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Lengths, areas and volumes for tool hints in the project's units and the UI language.
 //! Thin wrappers over the `units` `*_lang` formatters, which already pick the Russian or the
 //! English separators and unit symbols.

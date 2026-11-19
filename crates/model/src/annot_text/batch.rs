@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Many annotations in one model operation (one undo step), with text and line styles matched to
 //! existing ones by value or created in the same operation. Used to turn drawing primitives into
 //! 2D detail items.

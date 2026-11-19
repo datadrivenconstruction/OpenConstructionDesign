@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Stairs (IfcStair with IfcStairFlight, landing IfcSlab and stringer IfcMember parts through
 //! IfcRelAggregates) and railings (IfcRailing). The exact model rows go to `DDC_Stair` /
 //! `DDC_Railing`, so a round trip is exact; a stair or railing that does not build is skipped

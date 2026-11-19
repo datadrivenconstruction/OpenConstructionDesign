@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The AI draft in the viewport "as it will land": the style of each change kind, the hold-B
 //! "show Before" state, the pulse of a hovered card row, the edge arrow for a hot element that is
 //! off screen and the legend chip. Everything here is pure or paints a copy: the model is never

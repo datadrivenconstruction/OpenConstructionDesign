@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! H05 by construction from the shortest brief: a 40-storey office on a 45 x 45 m plate that
 //! names only a curtain wall and the lifts. Two protected stairs on every storey, sprinklers by
 //! the height rule, rated stair enclosures and a curtain wall on the facade follow from the

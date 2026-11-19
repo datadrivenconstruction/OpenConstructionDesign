@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Any geometry through Apply: a bowed facade becomes one arc wall carrying its windows, and a
 //! barrel brief becomes an extrusion roof of the model that the IFC export carries. An
 //! elliptical tower is one spline wall per storey, kept or rebuilt by key on a revision.

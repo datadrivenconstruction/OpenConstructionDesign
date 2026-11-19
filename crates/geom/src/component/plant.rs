@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Procedural plants: `plant <name> part(wood|foliage) form(..) height(..) crown(..) trunk(..)
 //! clear(..) leaf(..) seed(..)`. A tree is decided once from its spec and seed (lean, uneven crown,
 //! cluster sites, branch angles), so every level of detail shows the same tree: coarse is a

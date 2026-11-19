@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Key storage. Keys live only in the OS vault or, for tests and systems without one,
 //! in process memory. A `Secret` cannot be printed or serialized.
 

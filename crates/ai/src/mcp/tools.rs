@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! What an agent sees: the chat's catalog plus the few tools that exist only here. There is no
 //! second registry of model operations, and no tool for settings, tokens, files, the network or SQL.
 

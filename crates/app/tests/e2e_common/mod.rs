@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Shared helpers for the end-to-end tests (`tests/e2e_*.rs` in ddc-app and ddc-io):
 //! row dumps and content hashes of every table, integrity assertion, seeded RNG,
 //! corpus file lookup for the ignored heavy tests, temp paths.

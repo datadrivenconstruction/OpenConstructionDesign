@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The size of the next message against what the connection can take. The estimate is the one the
 //! conversation uses (`estimate_text_tokens`), the block limit is the one it trims history at
 //! (`context_budget`), so the composer never promises more than a turn can carry. The input is never

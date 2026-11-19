@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! "Replace type…": all instances of a type in the view (current level) or in the whole
 //! project → another type of the same category; preview "N elements on M levels", a single
 //! operation (one undo step), summary in the status bar.

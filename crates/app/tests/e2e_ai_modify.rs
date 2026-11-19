@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The modify commands end to end: each call is a draft, its Apply is one undo step, the model
 //! ends exactly where the ribbon tool's own `Model` call leaves a twin of the fixture, and bad
 //! arguments come back as coded `invalid_args` naming the argument.

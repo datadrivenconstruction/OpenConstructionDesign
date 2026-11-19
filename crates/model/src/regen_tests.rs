@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Partial regeneration equals full regeneration: random edits of all kinds with undo, and after
 //! each one the derived tables are compared with a full regeneration (`set_verify`).
 //! `DDC_REGEN_SEQS` is the number of sequences. The single-edit timing on 10k walls / 500

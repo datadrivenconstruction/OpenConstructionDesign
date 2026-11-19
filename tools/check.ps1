@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 # Compact check: fmt + tests (+ clippy if installed). Prints only results and errors.
 # usage: pwsh tools/check.ps1 [crate|assets] [test-filter]
 param([string]$Crate = "", [string]$Filter = "", [switch]$Live)

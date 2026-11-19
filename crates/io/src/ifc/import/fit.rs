@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Native forms recognised in a triangle mesh (world coordinates): a planar vertical prism
 //! (slab), the floor outline of a body (space), a stack of box or round steps (footing).
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Drawing of model tools in plan: element layer, preview (canvas-palette ghost,
 //! red = invalid), temporary dimensions (click a value to type), 32 px option bar.
 

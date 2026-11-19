@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! STEP physical file reader (ISO 10303-21): one pass over the bytes, typed values,
 //! string escapes decoded, every error names its line and entity; references are checked.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Dimension chain along a wall run: one wall is taken together with collinear neighbours that abut it;
 //! several walls give one chain per straight line. Tiers: ends, joints and openings; axes; overall size.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! User key map over the registry defaults: chords (`Ctrl+Shift+X`, `F5`) and two-letter
 //! sequences per command, conflict detection, import/export as one JSON file (`keymap.json`;
 //! sequences are mirrored to `shortcuts.json` for [`crate::shortcuts2::Keymap::load`]).

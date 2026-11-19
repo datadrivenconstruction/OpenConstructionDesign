@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! After an import: one calm strip under the ribbon (counts, Review, Make editable, close) and a
 //! docked review panel. The strip folds into the status line after [`FOLD_AFTER`]; a failure
 //! uses the same strip in the warning colour and stays until closed. Never a modal.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Geometry oracles on the members of the saved model: extents, taper, curvature, legs,
 //! duplicates, free ends, edit locality, double curvature of a shell.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Drawing to detail (`drawing.to_detail`): the picked drawing primitives, or every primitive on a
 //! shown layer of the drawing, become 2D detail items on the current plan view in one undo step.
 //! Lines and polylines become detail lines (arcs flattened within [`ARC_SAG`]), texts become text

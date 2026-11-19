@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Save of a parameter edit that unticks categories with values: a confirm names each
 //! category and its value count; Cancel keeps everything, Confirm saves as one undo step.
 

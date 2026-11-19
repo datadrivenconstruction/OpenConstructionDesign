@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A small office building for drawing set tests: `floors` storeys of 18 x 12 m on axes 1-4
 //! and A-C, brick walls on the axes, six rooms, seven doors and ten windows a floor, slabs,
 //! straight stairs between floors and project information for the title block.

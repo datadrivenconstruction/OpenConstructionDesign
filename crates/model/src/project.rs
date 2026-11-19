@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Native project file `.ddc` (SQLite). The user's file is never edited in place:
 //! open copies it to a private working file, save writes a temp file beside the target through
 //! the online backup API, fsyncs and renames it over, so a failure or a full disk leaves the old

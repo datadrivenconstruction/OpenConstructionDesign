@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Automatic recovery of a failed turn: a countdown card, then the same prompt and mode again.
 //! Only the turn is resent. A draft is never touched here and nothing is applied: the model
 //! changes only when the person presses Apply.

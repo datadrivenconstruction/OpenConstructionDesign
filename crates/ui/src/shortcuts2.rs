@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Two-letter shortcuts (TOOLS_UI §0): two letters typed in a row without modifiers within
 //! [`SEQ_TIMEOUT`], by physical key (layout-independent). Sequences come from the registry
 //! mnemonics, then the user file `shortcuts.json` (`{"cmd.id": "XY"}`, `""` unbinds).

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Design depth (schema 51): how far each element is worked out, D1 concept .. D5 fabrication
 //! (LOD 100/200/300/350/400), and the discipline that owns it. One row per element in
 //! `elem_depth`, keyed like a parameter value: (table of the row, row id). No row: the element

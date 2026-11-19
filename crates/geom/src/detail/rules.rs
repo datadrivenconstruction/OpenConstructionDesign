@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Numbers the detail builders decide by. Each is a rule of the `detail` group in the generator
 //! rule set (`crates/gen/data/rules.json`, same id, same default); callers with a rule set pass
 //! its values through [`DetailRules::from_lookup`], the rest use the built-in defaults.

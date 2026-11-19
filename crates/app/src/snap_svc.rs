@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! One snap service for draw tools, modify tools and grips: candidates come from the view level's
 //! walls plus grids and reference planes, held in a bucket index cached by (level, revision).
 //! Arc walls and the plan outlines of freeform patches are exact curves: their ends, middle,

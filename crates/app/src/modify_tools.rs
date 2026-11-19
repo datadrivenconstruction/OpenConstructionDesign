@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Edit tools (TOOLS_UI §2) over `ddc_model::modify`: move, copy, rotate,
 //! mirror (element axis / drawn), array (linear/radial), offset, trim to corner,
 //! extend to boundary, split, align. Two flows: pick-first (selection, then command) and

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The view range and the drawing quality styles on the live plan. Every element kind the model
 //! lists in `plan_bands` follows the range of its level: outside it the element is not drawn,
 //! overhead ones are drawn with a pattern, the rest takes the pen of its band (cut or projection

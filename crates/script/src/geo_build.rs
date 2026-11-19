@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Elements of the geometry language: freeform surfaces and shells, lattices between any
 //! curves or inside any volume, and the classification options of `part`.
 

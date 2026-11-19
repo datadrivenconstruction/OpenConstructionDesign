@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Number-parsing lint: no new blind comma-to-point swap and no new bare float parse on user
 //! or stored text. Stored text goes through `ddc_model::parse_invariant` / `parse_stored`,
 //! user input through `ddc_ui::numparse` with an explicit UI mark.

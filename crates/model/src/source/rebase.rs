@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Moving the base after a save over the source (contract 6.4, step 7): the base says what the file
 //! holds, so the next save and the next update see only what changed since. The plan is taken from
 //! the snapshot the file was written from: edits made during the save stay changes.

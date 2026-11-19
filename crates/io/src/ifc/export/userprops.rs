@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Element properties (`prop` table) as property sets. A value whose stored unit label is not
 //! the project unit of its measure is written in that unit with the unit entity of its own
 //! (one per distinct label); project-unit values keep `$`.

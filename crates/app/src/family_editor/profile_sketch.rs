@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Profile sketch panel (Solids tab): points, lines (construction per entity and per tool),
 //! rules and typed dimensions over `ddc_geom::sketch_dims`. A duplicate dimension turns
 //! driven instead of locking the sketch; a conflict marks its whole set and offers

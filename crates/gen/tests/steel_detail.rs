@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! lattice_tower_300 in detail (and the guyed mast) through the generator: rules from the rule set, every decision
 //! explained, the preliminary check reported, edits through rule overrides and an outline.
 

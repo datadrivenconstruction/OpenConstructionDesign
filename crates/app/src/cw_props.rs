@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Properties of a curtain wall, its panel and slab: numbers are edited in place and committed
 //! on release/focus loss as one undoable operation.
 use crate::editor::cw::grid_step;

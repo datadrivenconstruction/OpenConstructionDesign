@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Frozen targets: filter text and frozen sets become concrete refs before the executor runs.
 //!
 //! The model executor resolves refs only (model/src/ops_apply.rs refuses `Filter` and `Set`).

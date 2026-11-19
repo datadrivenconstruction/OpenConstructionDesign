@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! minisign-compatible signature check (Ed25519; "ED" = BLAKE2b-512 prehashed, "Ed" = legacy).
 //! Public key text: base64("Ed" ‖ key_id[8] ‖ pk[32]). Signature file: untrusted comment line,
 //! base64(alg[2] ‖ key_id[8] ‖ sig[64]), "trusted comment: …" line, base64(global_sig[64]).

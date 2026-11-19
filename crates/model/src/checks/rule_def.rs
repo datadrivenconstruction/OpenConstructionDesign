@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Execution of company rules (`RuleDef`): a rule is data, and this code decides the violation.
 //! The first finding argument is the rule id: one engine rule serves all company rules.
 

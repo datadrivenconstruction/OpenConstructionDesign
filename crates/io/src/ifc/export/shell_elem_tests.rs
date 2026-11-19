@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Roofs and slabs on surfaces: an exact advanced body for an open patch, triangles per layer
 //! for a dome with an opening, the layer set, quantities, IFC2X3 down conversion.
 

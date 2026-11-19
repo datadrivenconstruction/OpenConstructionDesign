@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Linetype table support for the model bridge: standard patterns by name and
 //! a completeness pass so no layer or entity references an undefined LTYPE.
 // the completeness pass serves only the test-only DXF writer (`dxf-write`)

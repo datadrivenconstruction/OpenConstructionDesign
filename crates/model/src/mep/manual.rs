@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Manual network editing (schema 37). `mep_port` holds component connections: system, flow
 //! overriding the family value, and the feeder run. Each action is one journal entry
 //! (`mep_group`) plus a check of the system's network: an action that breaks the graph (no room

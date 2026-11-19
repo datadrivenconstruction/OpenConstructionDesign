@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Schedules: equipment, line list with design conditions and isometric legs, valves,
 //! instruments, fittings, supports, steel, and the totals the line list adds up to.
 

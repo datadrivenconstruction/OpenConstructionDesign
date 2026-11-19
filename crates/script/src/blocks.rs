@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Parametric building blocks (docs/design/ICONIC_STRUCTURES.md): one options table in, real
 //! parts out. Every member, panel and slab is its own part with a role name and a material;
 //! members run straight between shared nodes, so axes meet exactly. Options are lengths in

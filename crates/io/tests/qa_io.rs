@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! QA sweep of the import/export entry points: malformed input never panics and yields an
 //! error, round trips keep counts and non-ASCII names, exports are deterministic, an export
 //! never overwrites its input, and a 10k-element model imports in bounded time.

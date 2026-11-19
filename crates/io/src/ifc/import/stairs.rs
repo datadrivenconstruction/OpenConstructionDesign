@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Stairs, ramps and railings. Our own export carries the exact row in `DDC_Stair` /
 //! `DDC_Ramp` / `DDC_Railing` and comes back unchanged. A stair from another file is fitted as a
 //! straight flight from its body (run, width, rise, riser count) and listed as approximated; a

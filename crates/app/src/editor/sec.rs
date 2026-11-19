@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Sections and elevations in the editor: model view definitions (`view_def`), the "Section" tool
 //! (two clicks for the line, a third for depth and view side), plan mark grips, elevations by
 //! compass sides. Each change is one model operation (undo/redo like other commands).

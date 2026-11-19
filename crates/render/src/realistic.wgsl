@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 // Realistic style: procedural surfaces by category, sky reflection and sun highlight. Appended to
 // mesh.wgsl as its own module, so a failure here leaves the shaded pipelines intact.
 

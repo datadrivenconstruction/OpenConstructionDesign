@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Spawns a bridge, streams its frames to a handler, enforces timeouts, cancel and exit checks.
 //! The child is killed on any error, including handler errors and drop.
 

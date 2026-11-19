@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Linked booleans and voids as typed requests. A boolean result is its own form whose tree is
 //! `Bool { op, a, b }` built from the current operand forms; the operands stay separate forms and
 //! the link (`mass_bool`) recomputes the result in the same operation whenever an operand is

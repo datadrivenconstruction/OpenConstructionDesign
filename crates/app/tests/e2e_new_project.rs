@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! End-to-end: a new project built the way a user does it (levels, grids, walls, openings,
 //! slab, roof, rooms, dimensions, tags, schedules, a sheet with a plan and schedules, PDF),
 //! every edit one `run_op` = one undo step, then undo/redo all the way.

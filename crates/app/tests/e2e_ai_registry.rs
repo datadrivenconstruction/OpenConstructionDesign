@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The command registry end to end: a scripted model calls registered commands through the real
 //! worker. An edit is a draft until Apply, Apply is one undo step, and every failure is coded.
 

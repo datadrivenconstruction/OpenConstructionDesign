@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The live briefs that drafted but did not apply: a two-storey villa on a sloping plot and a
 //! seven-storey U-shaped mixed-use block. Each drafts, applies in one step, and every
 //! wall-hosted component of the model stands within its wall.

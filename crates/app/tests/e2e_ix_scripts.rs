@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Every event script in `tests/ix/*.ixs` replays on an empty editor without a window and
 //! its checks hold (INTERACTIONS.md §2).
 use ddc_app::editor::Editor;

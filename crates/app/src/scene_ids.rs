@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! 3D scene element ids (`SceneMesh::element`, u32) and category codes `Sel::Ext`/`Cat::Ext`
 //! (u16) — a single source for all modules. Ranges do not overlap (checked at build time):
 //! editor lists at the bottom; shapes; stable `mep3d` ids (architecture, networks, components);

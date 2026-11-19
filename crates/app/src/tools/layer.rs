@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Plan layer for model-tool elements: grids, reference planes, columns, beams,
 //! roofs, stairs, networks, shafts, ceilings, components. Cached by (revision, level); phase
 //! of the level's plan view: future and earlier-demolished elements are left out, the rest is styled.

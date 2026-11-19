@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Shared schedule columns: construction/demolition phases and category project parameters;
 //! a cell edit is a single model operation (`Editor::run_op`), reverted by Ctrl+Z.
 

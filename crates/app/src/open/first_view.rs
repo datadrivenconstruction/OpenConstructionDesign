@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The view a project opens with: the last one it had (per project, remembered in a small
 //! file next to the preferences), otherwise the plan of the level with most walls, otherwise
 //! 3D. The plan fit ignores far outliers (1st to 99th percentile of the element points).

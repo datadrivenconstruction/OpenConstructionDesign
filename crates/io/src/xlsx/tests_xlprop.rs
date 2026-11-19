@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Property tests of the XLSX round trip on random models: levels, wall types and layers, walls,
 //! doors and windows, parameters of every type (a unit label too), Cyrillic and long names, empty
 //! values. The exported book gets random cell edits (change, clear, junk text, a number in the

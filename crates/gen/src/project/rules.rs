@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The rule set: every number a generation decision depends on, with its range, unit and the
 //! layer that set its value. Layers override in a fixed order: built-in, norm pack, preset,
 //! project, brief/chat. The builder reads values through [`rule`] while [`scoped`] holds the

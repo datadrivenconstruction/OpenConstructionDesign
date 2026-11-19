@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! One corpus sample through the native importers; prints a single `CORPUS {json}` line.
 //! Ignored: driven by `tools/corpus.ps1` with DDC_CORPUS_FILE=<path> (.ifc, .dxf, .pdf).
 //! Sample files stay outside the repository.

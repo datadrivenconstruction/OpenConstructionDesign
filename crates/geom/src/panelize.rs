@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Panelization of a freeform surface (GEOM_PRO_PLAN W7). A structured node grid on the
 //! surface: columns and rows at equal parameter steps, at equal arc length along iso-curves,
 //! or rows where the surface crosses given heights (floor and fin lines). Panels are quads,

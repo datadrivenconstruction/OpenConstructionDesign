@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! An apartment as a zone of the floor, its rooms placed inside it by the same solver: the
 //! apartment's hall stands in for the corridor. Local frame: `x` along the zone's edge on the
 //! public corridor, `y` back from that edge. The strip at `y = 0` is blind (rooms without a

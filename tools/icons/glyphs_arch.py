@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 """Building elements, structure, site and their tools (walls, floors, roofs, grids, levels)."""
 import glyphs_base as B
 from core import (V, badge, badged, chevron, cube, fmt, g_poly, icon, ring)

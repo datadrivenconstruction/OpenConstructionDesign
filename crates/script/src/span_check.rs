@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Preliminary structural check and member sizing of long-span lattices (bridges, roofs,
 //! space frames). The caller builds a [`Lat`] (nodes, members by group, supports, loads of
 //! three cases: permanent, imposed, wind), [`design`] solves it with `ddc-fem`, steps every

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Queries and edits the freeform element needs on a [`Surface`]: exact iso and boundary
 //! curves, knot refinement, transposition, Greville abscissae, closest point (grid start,
 //! then Newton on the squared distance), moving one control point, area by Gauss-Legendre.

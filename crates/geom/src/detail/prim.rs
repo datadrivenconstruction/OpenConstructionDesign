@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Closed-shell primitives of detailed parts: prisms of any profile along any axis, profiles
 //! swept with mitred corners along a polyline in the opening plane, round bars and tubes along
 //! 3D polylines. Every shell is closed and turned outward by its own signed volume.

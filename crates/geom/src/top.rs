@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A non-horizontal wall top: a polyline (u, h) in the wall's unrolled view, with u along the axis from `a` and h above the bottom.
 //! Points are ascending in u; equal u means a step; beyond the end points the top continues horizontally.
 //! Volume is the exact integral of h over the layer plan; the display body is a mesh cut at the

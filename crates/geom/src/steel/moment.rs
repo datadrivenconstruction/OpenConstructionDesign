@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Moment connections: an extended end plate of a beam on a column face (with column web
 //! stiffeners at the beam flanges), and splices of beams or columns, by cover plates (I
 //! sections) or by a pair of bolted end plates (any section).

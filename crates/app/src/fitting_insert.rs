@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `ctx.mep.fitting` ("Insert fitting"): puts a fitting on the selected run. A transition cuts
 //! the run at a distance from its start and gives the rest another size (a catalog DN for a
 //! pipe, a section for a duct, tray or conduit); an end cap closes an open end. Each is one

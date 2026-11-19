@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Drawing underlay window on the design kit: pure helpers (layer toggles, project-unit
 //! fields, delete confirm) and the kit-based rows the window draws with.
 

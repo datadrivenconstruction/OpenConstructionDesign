@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Durable replacement of a user file: the new content is written beside it, synced to the
 //! disk and renamed over it, so a failure or a power cut leaves the old file whole.
 use std::fs::{self, File, OpenOptions};

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Properties panel presentation: header card text, «differs from type» marker, per-category
 //! section state, value/unit cells. Pure helpers first; the data and undo rules stay in the model.
 use crate::editor::{Editor, OpFn};

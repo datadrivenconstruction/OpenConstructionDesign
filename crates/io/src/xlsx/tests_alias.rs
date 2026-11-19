@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A main sheet the user renamed: found by its header row, offered to the user, read only for
 //! the import the user chose it for; the workbook is never written.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Build record written by build.rs (commit, build time, build id, keyed tag); kept in the
 //! executable image for support and release audits, never shown in the UI.
 //!

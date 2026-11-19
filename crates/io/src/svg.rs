@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! SVG export of a drawing or sheet (docs/IO4.md): millimetre page, one group per layer
 //! (hidden layers stay in the file with display none), real line weights, even-odd hatches
 //! and fills, text with rotation, logos as embedded PNG.

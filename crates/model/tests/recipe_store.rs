@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Recipes and the executor ops a rerun needs: reshape of an extruded solid in place, delete of
 //! solids, recipe rows written and undone with the elements in one step.
 

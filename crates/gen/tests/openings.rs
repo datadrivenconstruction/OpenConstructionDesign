@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Typed openings: every door and window of every bench project has a catalogue type, a mark
 //! and a swing; exit doors open outward, stair doors with the escape direction, fire-rated doors
 //! sit in rated walls, and the schedules list the types with their counts.

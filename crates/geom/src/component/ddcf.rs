@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `.ddcf` text format, version 2: header (`ddcf 2`, `version`, `uid`), canonical printer,
 //! pure v1 -> v2 upgrade and errors with `line:col`. Text without a `ddcf` line is v1 and reads
 //! exactly as before.

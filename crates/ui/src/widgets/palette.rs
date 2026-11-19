@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Command palette (Ctrl+K): fuzzy search, recent-first on empty query, keyboard navigation.
 //! The host adds non-command rows (`extras`: elements, views, saved queries) for the current
 //! query; picking one returns its `key` (hosts prefix keys with `@`).

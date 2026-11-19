@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Toggle and checkbox. Both take keyboard focus; Space and Enter flip them.
 use super::text::paint_in;
 use crate::theme::{control, space, stroke, Role};

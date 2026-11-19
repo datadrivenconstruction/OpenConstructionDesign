@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Reusing sent prompts: Up/Down in the composer walks the earlier prompts of this project,
 //! and a person's own message offers Edit (text back into the composer) and Copy.
 //! Nothing here sends: Edit only fills the input.

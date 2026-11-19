@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Re-export refused because the new book would drop parts of the old one. The card lists
 //! them; "Export anyway" runs the same export with exactly that list accepted (the old book
 //! is kept whole beside the new one), "Keep the workbook" leaves everything as it is.

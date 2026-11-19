@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Editing smoke for one imported sample; prints one `LEDGER {json}` line.
 //! Ignored: needs DDC_CORPUS_FILE=<path> (.ifc, .dxf; .rvt/.rfa also need DDC_E2E_PACKAGE,
 //! DDC_DEV_SEED_FILE, DDC_DEV_KEY_ID_FILE). Without it the test returns at once. Samples stay

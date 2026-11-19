@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Read access to the operation journal (`op`): the model-level view under the editor's undo
 //! stack. Rolling back is `Editor::undo` / `jump_history`: the stack must move with the journal.
 

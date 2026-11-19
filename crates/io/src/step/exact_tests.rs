@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Exact STEP round trips: our solids -> STEP -> exact import keep the volume and the face
 //! kinds; the mesh reader of the same file agrees on the volume.
 

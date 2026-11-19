@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Analytical model built from physical elements: axes of load-bearing columns, beams and braces (through
 //! the section centre), mid-surfaces of straight walls and flat slabs. Nodes are merged within
 //! a tolerance, ends snap to more important elements ([`ddc_geom::analytical`]); supports come from

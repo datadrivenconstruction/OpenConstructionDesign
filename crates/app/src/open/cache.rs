@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Import cache: finished builds of a source file with no user edits, kept as ordinary project
 //! files so a second open of the same bytes is a copy, not a read. Our own derived data: safe to
 //! delete at any time, trimmed least recently used first.

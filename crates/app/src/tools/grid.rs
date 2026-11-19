@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Grid line (GR): two clicks; horizontal lines are lettered A, B, C… (Cyrillic letters in a
 //! Russian project), vertical lines are numbered 1, 2, 3…
 

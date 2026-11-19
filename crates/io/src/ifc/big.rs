@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Big IFC files: streaming open (chunked index, lazy decode, no whole-file copy), the plan
 //! built in the caller's thread with progress and cancel, then one bulk transaction.
 //! A cancelled or failed job leaves the model untouched: nothing is written before the

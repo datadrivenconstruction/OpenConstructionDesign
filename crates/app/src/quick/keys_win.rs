@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Keys window: command search, chord recording (Esc cancels, Backspace clears),
 //! two-letter input, reset, conflict list, export and import of the keys file.
 use crate::shell::EditorApp;

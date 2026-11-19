@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Roofs and slabs on freeform surfaces in 3D: one part per element (all its layers),
 //! picking the element. Rebuilt whenever the element or its host changes.
 

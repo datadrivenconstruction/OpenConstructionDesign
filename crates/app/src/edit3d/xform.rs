@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Move/rotate of the 3D selection using existing model operations. Order: move/rotate in
 //! plan via the shared edit operation (`move/copy/rotate_elements`), then vertical and structural
 //! elements via one batch edit (`apply_edits`), then the rest via their own `update_*`.

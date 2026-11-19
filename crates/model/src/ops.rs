@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Operation journal. Design choice: an operation stores inverse SQL commands (JSON) rather than
 //! old/new pairs, so undo is uniform across all tables; row snapshots are taken by `Inv::restore`.
 

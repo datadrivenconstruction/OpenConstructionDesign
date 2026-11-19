@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `create_grids` arguments: two families of grid lines from a count, spacing, labelling,
 //! an angle and an origin. Lengths are metres, angles degrees.
 

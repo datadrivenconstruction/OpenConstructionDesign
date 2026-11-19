@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The command line under the canvas. A word is a short alias (`W` wall, `M` move, `RO` rotate)
 //! or a registry id and runs that command; while a tool draws, a point is typed: `#x;y` absolute,
 //! `@dx;dy` relative, `d<a` / `@d<a` / `<a` polar, `d` along the cursor, any number an expression

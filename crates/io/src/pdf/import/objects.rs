@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! PDF document: xref tables and streams, the /Prev chain (incremental
 //! updates), object streams, recovery by scanning "N G obj" when the xref is broken.
 

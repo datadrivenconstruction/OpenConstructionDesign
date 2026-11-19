@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Rows an Apply created in the linked book: they have no id there until the re-export, so
 //! the project remembers (book, sheet, row fingerprint) -> element and a second Apply of the
 //! same book, even after a restart, does not create them again. The row number is only a

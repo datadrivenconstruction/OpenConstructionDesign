@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Golden round trips of the IFC patch writer, on one fixture in IFC2X3, IFC4 and IFC4X3:
 //! what no edit touches stays byte for byte, the result reads back as the expected model, every
 //! reference resolves, and whatever cannot be trusted refuses instead of writing half a result.

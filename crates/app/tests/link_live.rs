@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The editor's linked session against a LIVE ERP (no mock): driven by `tools/e2e/test_70_editor_live.py`
 //! in the link repo, which boots the ERP, makes revision 1 and writes the `.ddclink`.
 //!

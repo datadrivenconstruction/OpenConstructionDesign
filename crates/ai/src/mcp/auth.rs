@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The token and the checks that keep a web page or a foreign host away from the server.
 
 use crate::secret::{Secret, SecretError, SecretStore};

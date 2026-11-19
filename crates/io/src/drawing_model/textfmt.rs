@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Text details an underlay text carries beyond position and string: justification, style,
 //! width factor, slant, and for multi-line text the attachment point, frame width, line spacing
 //! and the raw content with its formatting codes. Read from TEXT/MTEXT, written back by the export.

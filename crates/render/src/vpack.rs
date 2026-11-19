@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Compressed chunk vertices (20 bytes): position — 21 bits per axis from the chunk origin (high
 //! 16 bits in x/y/z, low 5 in w), normal — octahedral in snorm16x2, element id and tag. Vertices
 //! are shared: triangles use u16 indices in runs of up to 65,536 vertices (glass — u32, its order

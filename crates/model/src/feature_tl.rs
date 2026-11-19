@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Parametric feature timelines of masses (`Form::Timeline`, JSON `"k":"timeline"`): storage
 //! codec, evaluation inside a form history (faces `ftag(op_base + node id, k)`, a process-wide
 //! node cache so an edit rebuilds only what changed), model edits (one undo step each) and the

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Read-back proof of an exported book: a clean book replaces the old one; a book that reads
 //! back otherwise (test hook on the written file) keeps the old book byte for byte and names
 //! the first differing cell. Seeded random models must always pass; a failure names its seed.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Steel connections (g5) in the model: a journaled spec row per connection (type, joined
 //! members, parameters) and its parts as `solid` rows. Regeneration rebuilds every connection
 //! from the current members, so a changed section or a moved member updates the plates,

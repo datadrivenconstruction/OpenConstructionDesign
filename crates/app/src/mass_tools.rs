@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! In-place masses and bodies in the editor: mass meshes for 3D (a face is a separate scene element,
 //! painting is a palette color), the "Masses" tab commands (outline in plan, faces in 3D), push-pull
 //! with live preview and distance input; each commit is one undo step.

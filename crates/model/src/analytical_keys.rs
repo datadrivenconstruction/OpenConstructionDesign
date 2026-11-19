@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Stable keys and the engineer override layer of the analytical model
 //! (docs/design/STRUCTURAL_ANALYSIS.md 1.3, 2.1). Keys come from physical ids, never from vector
 //! indices. Overrides (`an_override`) are applied after `analytical_adj`; for the same field the

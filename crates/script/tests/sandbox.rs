@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Sandbox contract: determinism, limits, no IO, errors with position and hint, params,
 //! keys, rerun scope.
 

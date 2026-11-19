@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Files and folders to a flat list: what the open flow works on.
 use super::decide::{family, Family, LARGE_BYTES, LARGE_FILES};
 use std::path::{Path, PathBuf};

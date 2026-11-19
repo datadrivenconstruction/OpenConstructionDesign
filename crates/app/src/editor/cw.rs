@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Curtain walls and floor slabs in the editor: level loading, 3D meshes (panels as separate
 //! elements, glass with a transparent tag), plan picking, the "Curtain wall" tool, property
 //! edits. Undo is the model journal (`Model::undo`), redo is the `Cmd` commands.

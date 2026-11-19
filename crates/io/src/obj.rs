@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! OBJ + MTL: writer (one `g <element key>` per part, `usemtl` per material, MTL colours) and
 //! reader (groups, objects, polygons as fans, negative indices, MTL `Kd`/`d`/`Tr`).
 //! OBJ has no up axis; the common reading is Y up, so both sides turn Z up <-> Y up by default.

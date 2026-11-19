@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! AI plan items of building services: networks routed by the planner, fixtures and devices
 //! placed from the library, devices powered from a panel. The AI states the intent; the router
 //! builds on the copy at compile time, so Apply replays exactly the build the preview showed.

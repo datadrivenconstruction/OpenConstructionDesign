@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Vertical extent of every plan element of a level and the band it falls into for a view range.
 //! One table drives the live plan, the sheets and the range window, so all element kinds follow
 //! the range, not walls alone.

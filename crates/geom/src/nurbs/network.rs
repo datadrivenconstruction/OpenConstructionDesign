@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Surfaces from a network of curves (Gordon: skin of the u-curves + skin of the v-curves −
 //! tensor interpolation of their crossings) and rebuilding a patch on a new control net.
 //!

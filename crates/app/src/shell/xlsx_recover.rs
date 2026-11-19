@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! An export that replaces the linked book moves the old book to `Book.xlsx.bak` and only then
 //! puts the new one (`Book.export-part.xlsx`) in its place. A crash, a power cut or a failed
 //! move between the two leaves no `Book.xlsx`: these are the leftovers found beside it, and the

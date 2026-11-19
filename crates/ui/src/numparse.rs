@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Locale-aware number reading shared by every numeric field (NumberField, length fields, option
 //! bars). A number is read exactly as the UI language writes it or refused: a separator is never
 //! guessed into a factor of 1000.

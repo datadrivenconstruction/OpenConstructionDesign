@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Freeform export: exact advanced B-rep of a shell (closed, every edge used once each way,
 //! loops connected), a bare rational surface, triangles for a trimmed patch, IFC2X3 down
 //! conversion, and a doubly curved roof shell made through an ops envelope, re-imported.

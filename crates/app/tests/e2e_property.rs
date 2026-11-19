@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Seeded property tests over whole-editor action sequences: create, edit property, move, copy,
 //! rotate, mirror, array, delete, undo, redo, level change, type change, save and reopen,
 //! XLSX export-edit-import and IFC export, on a model that holds every element kind.

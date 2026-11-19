@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Direct modeling on mass bodies (docs/MODEL3.md): push/pull to an inferred target, push/pull
 //! of a region drawn on a face (the face is split), fillets and chamfers on edge sets with
 //! vertex blends at three-edge corners, draft of faces about a neutral plane.

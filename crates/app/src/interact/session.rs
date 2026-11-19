@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `ToolSession`: a tool reads input and the editor, draws a preview and returns
 //! a record to commit. It never writes the model: `Interaction` applies the record through
 //! `Editor::apply_ext` (one undo step, one write path).

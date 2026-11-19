@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Steel frames grown from one rule each: a branching tree whose crown carries a deck ring,
 //! and a stadium roof ring carried on masts.
 //! Every bar is a structural member of the frame, so the model keeps them as columns, beams

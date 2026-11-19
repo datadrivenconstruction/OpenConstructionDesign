@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The depth chip above the composer: "Depth D3 ▾ · AR ST MEP Doc". A click opens the project
 //! setting (depth, discipline switches), the pre-run estimate and the heat map switch. The chip
 //! only reads the model; a change goes out as an action, applied as one undo step.

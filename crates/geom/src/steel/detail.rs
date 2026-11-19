@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Detailing sheet of a built connection: its bolt groups, plates, stiffeners and welds as the
 //! catalogue's constructive rules laid them out, the tightest pitch and the rule findings.
 //! Detailing only: no resistance is computed here (see [`super::forces`]), and the sheet says

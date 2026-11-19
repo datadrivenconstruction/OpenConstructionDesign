@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A schedule laid out by key: category, columns, grouping, sorting and column filters. The
 //! assistant makes one; the view takes it as its own, so the person edits it from there.
 

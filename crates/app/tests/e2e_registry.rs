@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Command registry net: every fragment command (`ui/data/commands.d`) has a handler in the
 //! shell (`REGISTER` handlers or `WIRED`), ru+en label keys and an embedded icon; every
 //! handler belongs to a registry command; literal i18n keys used by the app exist in both

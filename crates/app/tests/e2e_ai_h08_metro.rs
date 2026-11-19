@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! H08, the 18 m deep metro station, through the chat: `load_tools` station, then `plan_station` with the case's depth and
 //! flow, Apply once, then every oracle of the case on the applied model.
 

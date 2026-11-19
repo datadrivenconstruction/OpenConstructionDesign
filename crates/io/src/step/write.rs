@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! STEP AP214 / AP242 writer of exact bodies and assemblies (docs/IO4.md): advanced B-rep
 //! faces on planes, cylinders, cones, spheres, tori and B-spline surfaces; one product per part
 //! and per assembly node, placements by item defined transformations; surface colours.

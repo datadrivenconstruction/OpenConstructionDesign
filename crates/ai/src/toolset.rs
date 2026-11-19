@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! What the chat sends: the core tools always, a catalog group after `load_tools` or after a
 //! call of one of its tools by name, in compact wire form (`data/tool_groups.json`). Requests
 //! come in any language, so the model chooses groups; `intent_groups` (English/Russian subject

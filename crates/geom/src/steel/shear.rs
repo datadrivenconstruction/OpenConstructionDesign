@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Shear connections: beam to column or girder (fin plate or flexible end plate), stair
 //! stringer to its support, purlin cleat on a rafter. Plates follow the member frames, so a
 //! skewed or sloping member gets a plate cut to the support face, not a square one.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The checker itself: it must catch a hole too close to an edge, holes too close together,
 //! a wrong hole size and two bolts in one place, or a clean result would prove nothing.
 

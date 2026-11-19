@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The lift family: a car at the ground stop, a landing door per storey and shaft, a pit under
 //! the ground stop, headroom and machine over the top stop; the count follows the waiting
 //! interval; the shaft always holds the car.

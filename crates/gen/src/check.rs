@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Validity of a layout without a model: every generator passes this before it returns.
 //! The model's own integrity check is the second gate, in the tests of the app crate.
 

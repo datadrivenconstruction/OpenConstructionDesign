@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Curved facades on Apply. The generator keeps a curved facade as straight chords within the
 //! arc tolerance and names each circular run of them ([`curve_walls`]); on Apply such a run is
 //! one arc wall of the model. Its openings move onto the arc at the same place, measured

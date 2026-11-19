@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Analytical model: member axes and panel mid-surfaces → node graph.
 //! Member ends snap to members and panel planes: first to more important ones
 //! (lower `prio`: columns and walls before beams and bracing), then free ends snap to any target closer than

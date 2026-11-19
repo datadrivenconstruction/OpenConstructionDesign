@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Member sizing of the lattice tower by a simple wind and dead-load rule (numbers from the
 //! caller's rules, section ladders in `data/steel/tower_sizing.csv`) and the top sway of the
 //! equivalent cantilever.

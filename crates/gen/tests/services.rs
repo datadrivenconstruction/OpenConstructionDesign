@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Power, lighting, water and drainage designed into every typology: a connected network per
 //! system, nothing clashing, every wet fixture and every lit room served.
 

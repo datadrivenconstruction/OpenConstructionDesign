@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! View annotations (schema 34): text with leaders, detail lines and regions, detail components, elevation and
 //! coordinate marks, revision clouds. An `anno` row belongs to one view (level plan,
 //! section/elevation, legend); coordinates are view coordinates. Region and line geometry is in model

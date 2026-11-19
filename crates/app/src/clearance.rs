@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Live clearance dimensions of a selected plan element: distance from each side of its box to
 //! the nearest wall face, plus a pure label placement cascade (rects in, positions out).
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Design depth: the schema step, save and reopen, undo, the "depth >= N" filter, the
 //! project setting, request words and the pre-run estimate.
 

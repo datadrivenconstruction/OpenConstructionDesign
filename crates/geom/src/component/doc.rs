@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Family editor document: the definition text is the source of truth, edits are made per operator
 //! (add, replace, delete), each is validated by parsing and goes into its own undo history
 //! (separate from the project). Nested `begin … end` blocks always stay at the end of the text.

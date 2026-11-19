@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The standard library of geometry scripts: vectors and transforms, units, params, catalog
 //! profiles, forms, patterns, parts, groups, components, booleans, constraints, measures.
 //! Every refusal names the function first (`extrude: ...`) so the error points at the call.

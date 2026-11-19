@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Schedule widget: category tabs, header with sorting, filter row, virtualized rows
 //! (only visible ones are drawn), cell editing on double click, totals;
 //! groups with subtotals, computed columns and phase selection are per tab.

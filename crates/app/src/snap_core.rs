@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Snap core without UI or session: hits that carry element references, one pixel radius,
 //! hysteresis, the per-point override and the off switch (INTERACTIONS §1.2-1.3).
 //! Input is plain data (cursor, scale, held modifiers), so any tool session can feed it.

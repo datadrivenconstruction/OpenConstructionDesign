@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Files a person attaches to the AI chat: what kind each one is and what can be read out of it
 //! on this machine — text per page, a table (room programme), drawing geometry counts and the
 //! sheet scale. `facts` turns that into project requirements, each with its source.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Shells on a surface (geometry plan W9): the offsets of a layer stack, the exact volume of
 //! a layer by the Steiner formula, plan projection of openings onto the surface, dome and
 //! vault presets (exact rational surfaces).

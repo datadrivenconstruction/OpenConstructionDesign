@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Foundations: pad footings (rectangular and circular, stepped) and a slab with a thickened edge.
 //! Quantities are exact: prism = area × height, circle = πd²/4·h; meshes are for display only
 //! (a circle becomes a 32-gon). A strip footing is a `layered::Strip` with wall joints (model).

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The work column of an AI tab and the bar over its preview. Drawn after the view area with
 //! the whole app in hand, from the one `PanelUi`; the actions run after the draw.
 

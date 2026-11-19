@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Office: 24 x 14 m, three levels of offices along a corridor, grid A-E / 1-3, four layered
 //! wall types, doors and windows, named and numbered rooms, two stairs with railings, floor
 //! slabs (one with a stair hole) and a roof, ducts and pipes with bends and tees, a desk and a

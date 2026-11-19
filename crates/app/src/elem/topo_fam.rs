@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Topography family of the element contract: the plan outline that makes a terrain selectable
 //! by a click inside it, and the properties part for editing its survey points in the plan.
 

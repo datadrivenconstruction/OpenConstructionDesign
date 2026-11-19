@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Settings page «Project / Branding»: the company logo of the open project. A drop zone with a
 //! live preview on a light sheet and on a dark background, «Choose file…», «Remove», and the
 //! choice to start every new project with the same logo.

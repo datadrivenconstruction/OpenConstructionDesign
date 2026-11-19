@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Mesh exchange at size: a 50 400-triangle model (4 200 cubes, one element each) goes out and
 //! back through STL, OBJ, glTF binary and (with `dxf-write`) DXF, and is imported into a model.
 //! Counts and boxes must survive; each step must stay inside a generous time budget.

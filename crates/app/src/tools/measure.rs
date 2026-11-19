@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Saved measurements on a plan or section: the same records the 3D tool writes, drawn as the
 //! dimension primitives are (line between the measured points, value at its middle).
 

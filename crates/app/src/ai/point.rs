@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! "Point and ask": what the person pointed at, as data the assistant can use. The context is
 //! collected on the UI thread from the live editor (the worker only sees the rendered block),
 //! writes nothing to the model, and leaves no trace once the mode is left.

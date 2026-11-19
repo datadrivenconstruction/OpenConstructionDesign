@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Editing of imported meshes: welding and cleanup, merging, face removal, affine
 //! transforms, exact plane section (contours with holes and open polylines),
 //! plane clip and split with caps, closedness/convexity, area and volume.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Connected runs that follow an edit: ghost lines while a grip is dragged (nothing is written
 //! until release) and the status line after the edit when the network has new problems.
 

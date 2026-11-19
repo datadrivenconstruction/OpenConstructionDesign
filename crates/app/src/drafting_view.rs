@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Drafting views in the app: a tab with a named 2D canvas (pan, zoom, adaptive grid) that shows
 //! and edits annotation only, through `annot_text` with `AnnoView::Drafting`; the ann.* tools work
 //! there unchanged and model elements are never drawn. A manager window opens, renames, rescales,

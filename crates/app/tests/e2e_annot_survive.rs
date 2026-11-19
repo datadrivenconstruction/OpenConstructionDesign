@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Workflow: tags, dimensions, text notes and detail lines survive an XLSX import and a save.
 //! Scene, writer and preview helpers follow `e2e_xlsx.rs`. A failure here is a product finding,
 //! the tests assert the contract and nothing is bent to pass.

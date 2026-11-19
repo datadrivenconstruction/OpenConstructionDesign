@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `data/known_gaps.md` is checked here: its stub list equals the registry commands with no
 //! handler and no branch in `EditorApp::run_cmd` (expected empty), and every gap row is sized.
 use crate::editor::Editor;

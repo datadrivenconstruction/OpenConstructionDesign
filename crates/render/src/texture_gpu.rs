@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! GPU side of the image textures: one mipmapped 2D array, a sampler and the parameter table, bound
 //! as group 2 of the realistic pipeline only. Other styles never touch it.
 

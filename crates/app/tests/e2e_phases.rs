@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Workflow: existing walls → demolish in later phases → new walls → schedules by phase.
 //! Default phases are Existing / Demolition / New (positions 0, 1, 2); new elements take the
 //! current phase, "demolish" keeps the element and carries its openings.

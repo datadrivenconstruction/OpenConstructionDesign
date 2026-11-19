@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Validation pipeline tests: every code, stopping after a stage, messages, budgets.
 
 use super::validate::{validate, Limits, Severity, CODES};

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Properties header of a multi-selection: element count, one chip per category (icon, name,
 //! count). A chip click shows that category's rows; Ctrl+click narrows the selection to it
 //! (the model stays untouched, the toast restores the previous selection).

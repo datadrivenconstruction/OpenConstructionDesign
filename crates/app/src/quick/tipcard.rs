@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Tips at the right moment: a quiet card in the lower right corner after the first wall, the
 //! first selection and the first save. Dismissable, shown once, switched off for good by a button
 //! or the command «Tips at the right moment». Logic and texts: `ddc_ui::ctx_tips`.

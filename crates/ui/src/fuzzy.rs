@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Own fuzzy scorer for the command palette: prefix > word prefix > word-initial chain >
 //! substring > subsequence; the query is also tried through the other keyboard layout.
 use crate::commands::{cyr_to_latin, latin_to_cyr, Command, Registry};

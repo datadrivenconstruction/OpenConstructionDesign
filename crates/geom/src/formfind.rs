@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Form finding of nets and gridshells.
 //!
 //! Force density: with a force density q = N / L per edge the equilibrium of the free nodes is

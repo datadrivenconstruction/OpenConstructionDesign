@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! PDF lexer and object parser. Works on a byte slice and never panics:
 //! broken tokens yield `Tok::Bad`, nesting is capped by `MAX_DEPTH`.
 

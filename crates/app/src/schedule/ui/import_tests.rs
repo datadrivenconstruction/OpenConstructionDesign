@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Import flow of the schedule view: read off the UI thread, Cancel, a book saved again after
 //! the preview, the preview list.
 

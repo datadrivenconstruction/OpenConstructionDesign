@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Process plants from a brief: topology with N+1 pumps, every nozzle piped, no clashes,
 //! clearances and reach met, line list adding up to the totals, deterministic, explained.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Letter names of grid axes. Latin without I and O (read as 1 and 0); Cyrillic without
 //! the letters the drawing standard excludes. Past the last letter the letter doubles:
 //! A..Z, AA, BB, ... as drawing standards ask, not the spreadsheet AB, AC.

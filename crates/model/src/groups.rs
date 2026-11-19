@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Groups and pinning. A group definition is a clipboard snapshot (`Clip`) in `el_group.def`;
 //! instance rows are ordinary elements, and `group_member.key` ties them to the definition row.
 //! Editing a definition updates the live rows in place: ids do not change, so dimensions and tags

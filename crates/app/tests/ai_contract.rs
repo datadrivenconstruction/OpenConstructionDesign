@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! One table of cases, three executors: the pure core, the MCP wire and the dialog must leave
 //! the same project, the same journal rows and the same refusal codes.
 

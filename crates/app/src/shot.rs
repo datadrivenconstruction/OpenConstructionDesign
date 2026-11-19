@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Offscreen UI frame → PNG: the same egui code and paint callbacks as the window, without one.
 #[cfg(not(feature = "gui"))]
 use crate::RenderState;

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Test-only lookup of non-English fixture text kept in `tests/data/lang_fixtures.tsv`.
 use std::collections::HashMap;
 use std::sync::OnceLock;

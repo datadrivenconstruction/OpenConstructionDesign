@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Performance levels and frame budgets, without a GPU: tier choice from adapter facts and a
 //! measured probe, adaptive motion controller, fallback limits. Contract: docs/design/GRAPHICS_MODES.md.
 

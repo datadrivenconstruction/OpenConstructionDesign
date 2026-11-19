@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Lock matrix of the XLSX round trip: every column of every sheet has a lock class; an edit
 //! of a locked or read-only cell gives a visible refused row with a localized reason, is never
 //! applied (model and journal unchanged), and a re-export keeps the lock style and the sheet

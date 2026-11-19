@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Company logo, app side: reads a PNG or JPEG file into the stored form, keeps the
 //! optional default logo of new projects in the user's data folder, and stamps the logo on the
 //! recent-project thumbnail.

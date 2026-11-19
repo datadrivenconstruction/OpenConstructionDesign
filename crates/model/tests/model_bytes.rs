@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `Model::to_bytes` / `Model::from_bytes`: the browser build keeps the model in memory and moves
 //! it as file bytes. Every table survives the round trip, the loaded model edits and undoes, a WAL
 //! file loads, and bytes that are not a model are refused as corrupt.

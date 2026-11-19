@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Strings moved to `i18n/{en,ru}/unit_fmt.json` exist in both languages with the same placeholders; EN has no Cyrillic.
 
 use std::collections::BTreeMap;

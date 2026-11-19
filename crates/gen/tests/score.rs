@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Goals with tiers and weights: the penalty splits over rule ids, a weight scales its goal,
 //! and a stronger tier dominates whatever the weaker ones add up to.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! 3D: terrain bodies (by sub-region material) and sites in the scene; point handles in edit
 //! mode — vertical dragging changes the elevation, committed as one operation on release.
 

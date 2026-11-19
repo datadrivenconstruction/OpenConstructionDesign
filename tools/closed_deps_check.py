@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 """Fail if any workspace Cargo.toml can pull in closed code.
 
 Closed bridges live in other repos and talk to the editor only over the published protocol,

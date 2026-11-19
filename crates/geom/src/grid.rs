@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Uniform grid of bounding boxes for neighbour search: a query returns candidates in ascending
 //! index order (a superset of the intersecting boxes), so a "first match" scan gives the same
 //! result as a full brute-force pass. Non-finite boxes are returned by every query.

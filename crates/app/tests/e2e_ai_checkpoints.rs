@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `mark_checkpoint` and `run_checks { since }`: after a change the agent reads only what the
 //! change brought and what it cleared.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Typed geometry requests: sweeps and lofts from a catalogue profile or a polygon along a path
 //! given by points or by a model element, with twist and end scale. One request is one undo
 //! step; a request that cannot be built is refused with a reason and writes nothing.

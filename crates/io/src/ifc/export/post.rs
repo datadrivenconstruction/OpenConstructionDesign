@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Schema choice and the additive post-pass of an authored export: element types with
 //! IfcRelDefinesByType, `Pset_*Common` for the families the builders leave without one, and the
 //! file header (schema, time stamp). Everything added is derived from the written entities and

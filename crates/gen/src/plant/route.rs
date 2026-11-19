@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Orthogonal piping between the nozzles: each line a tree from its root nozzle, routed over the
 //! rack tiers around the units, the walkway, the platforms and the other lines; the drain under
 //! the floor with its fall to the sump. Then the pieces sized by the flow they carry, the

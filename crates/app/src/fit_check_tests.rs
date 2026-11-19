@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The opening checks through a workbook, the panel and AI: each refusal reason with its
 //! address, a mixed book applied as one step, an untouched book, the reasons in en/ru, and
 //! wall edits that would leave a hosted opening out.

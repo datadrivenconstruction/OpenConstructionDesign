@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Lattice frames: a compact node/member graph (16 bytes per member) with truss and box-lattice
 //! generators (Warren, Pratt, K, X bracing; curved chords; tapering), joint derivation with
 //! riveted or bolted gussets, and fastener expansion into instanced sets.

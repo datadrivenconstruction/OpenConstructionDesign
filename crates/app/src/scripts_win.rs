@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Scripts window (`mgr.scripts`, SR). A script is an edit envelope file (the one edit language
 //! of tools, XLSX, the assistant and MCP agents; docs/design/AI_NATIVE.md section 2): JSON with
 //! a title and groups of operations. Scripts live as `*.json` in the `scripts` folder of the

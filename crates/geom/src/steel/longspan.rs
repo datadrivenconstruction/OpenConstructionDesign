@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Long-span frames whose supports are columns of the frame itself: a truss hall (plane trusses
 //! on two column lines, purlins, ties and end-bay bracing), a tied arch bridge on end piers,
 //! and a cantilever roof ring (radial trusses on a front and a back column, the back-span

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Exact in-circle predicate: an f64 filter with an error bound; when the filter is inconclusive,
 //! the determinant is expanded into products of four differences, each an exact sum.
 

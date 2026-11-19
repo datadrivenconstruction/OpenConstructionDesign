@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Editor: model + "Wall" and "Door/Window" tools + history (Ctrl+Z / Ctrl+Y) + selection.
 //! Each gesture is one model operation; redo replays the gesture afresh (new ids are reassigned).
 //! Selection is shared by plan and 3D: `Sel` <-> scene element (`element_of` / `sel_of_element`).

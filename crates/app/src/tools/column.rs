@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Architectural (CL) and structural (SC) column: click inserts, Space rotates 90°,
 //! "At intersections" places columns at all grid intersections in one journal entry.
 

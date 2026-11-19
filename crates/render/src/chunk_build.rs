@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Off-frame chunk vertex building: worker threads turn shared `Arc<SceneMesh>` into flat
 //! vertices, the frame thread only uploads the finished data to the GPU within the budget. The queue is short
 //! (order is set by frame visibility), stale results are dropped by the receiver using the fingerprint.

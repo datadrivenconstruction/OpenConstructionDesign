@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `HotSet` — which pick categories a ray or a click takes in a scope — and `SCOPE_TABLE`,
 //! the one table both `HotSet` and `OverlaySet` are read from.
 use super::overlay::OverlaySet;

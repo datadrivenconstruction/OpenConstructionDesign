@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The command registry (docs/design/API_REGISTRY.md): every model command, read or edit, with a
 //! stable id, a version, typed input and result schemas and an en/ru text key. Chat, external
 //! agents, scripts and the command line all reach the model through `call`; a failure is always

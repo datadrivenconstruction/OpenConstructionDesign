@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The site: the zoning envelope a plot and its rules allow, the terrain under the building,
 //! the ground-floor level a rule picks on it, the pad with its retaining walls and the
 //! terraces of a stepped plinth, the approach from every exterior door to grade, and the cut

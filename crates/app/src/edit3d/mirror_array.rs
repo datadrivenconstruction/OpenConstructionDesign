@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Mirror and Array in the 3D view. Both reuse the plan operations of the model
 //! (`mirror_elements`, `array_linear`, `array_radial`), so hosted-element rules, groups and
 //! undo are those of the plan: one gesture is one undo step, and a family without the

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Seeded fuzz of the creation tools: random click sequences of the loop and two-point tools
 //! with Esc, undo, redo and save + reopen. Failures are product findings; the failing seed and
 //! op are in the panic message. `DDC_FUZZ_SEEDS=n` runs seeds 1..=n (default 3);

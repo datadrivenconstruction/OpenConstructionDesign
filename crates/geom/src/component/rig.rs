@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Sketch of a family's reference planes for the `crate::sketch_solve` solver: plane x = c is the line
 //! (c, −1)→(c, 1), planes y and z are (−1, c)→(1, c); a pinned plane has both points fixed,
 //! a free one has a single degree of freedom (direction locked). A reference line is a point (given

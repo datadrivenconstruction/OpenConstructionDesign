@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The "Open sample" project: a two-storey 12 × 9 m house with all the main categories:
 //! levels, axes, layered walls, doors, windows, a glazed wall, slabs with a stair opening, ceilings,
 //! a roof, a stair with railings, terrace columns and beams, rooms, components, a dimension, marks,

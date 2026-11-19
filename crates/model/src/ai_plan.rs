@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Dry run of an AI plan (docs/design/AI_ASSISTANT.md §5): file copies `base.db`/`work.db`,
 //! row-by-row comparison via ATTACH + EXCEPT, rollback of the working copy, applying as a single
 //! journal entry, stale-plan detection, new integrity violations, materials per level.

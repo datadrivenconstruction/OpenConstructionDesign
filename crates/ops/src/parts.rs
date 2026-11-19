@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Stable names for faces, edges and axes (`wall:55/face:left`, `slab:9/edge:3`,
 //! `solid:4/face:2.5`, `wall:5/axis`, `grid:A`) and their resolution to geometry.
 //!

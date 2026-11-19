@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Vertex removal on boundary elements (slab, ceiling, roof footprint, shaft): the element
 //! always stays, the edit is refused with a reason when the outline or a hosted item would break.
 

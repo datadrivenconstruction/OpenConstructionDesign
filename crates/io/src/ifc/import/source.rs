@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! IFC as a source: a re-import is a 3-way merge, not an overwrite.
 //!
 //! Every linked element is compared field by field (columns, slab outline, properties) with what

@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 """Browser build clock swap: Instant/SystemTime/UNIX_EPOCH from `web_time` in the editor crates.
 
 std::time::Instant::now() panics on wasm32; web_time re-exports std on desktop (no behaviour change).

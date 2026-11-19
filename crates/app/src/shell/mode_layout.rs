@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Panel layout per work mode (modelling, drawings, data, AI): leaving a mode keeps how its
 //! docks, bars and ribbon were arranged, entering one brings its own back. Layouts can be saved
 //! by name, reset, and moved between machines as JSON. Stored in prefs.txt (`ws.mode.<key>`,

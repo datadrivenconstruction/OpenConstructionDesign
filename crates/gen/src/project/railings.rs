@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Guard rails where a floor drops away: both sides of every stair flight, the unwalled edges
 //! of every floor void that is not a stair or shaft well (atria, galleries), and the deck of a
 //! flat roof whose parapet is lower than the guard. Balconies carry their own glass guard.

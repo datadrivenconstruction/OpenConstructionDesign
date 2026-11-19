@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! An Apply that does not rewrite the whole book: a value put back in the book afterwards is
 //! one change, never "model newer"; an untouched book is no change; undo and redo hold.
 use std::path::{Path, PathBuf};

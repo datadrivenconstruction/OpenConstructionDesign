@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! What the assistant found or changed in the view: the chat's result card ("4 of 202" with
 //! Show, Isolate, Select) and the view panel over the viewport (the legend of a color by value,
 //! what is shown or isolated, Reset view). Neither touches the model.

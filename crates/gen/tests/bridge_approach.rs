@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The arch footbridge with what H10 asks of it: guard rails on both deck edges at the rule
 //! spacing and height, built into the model as railing elements; counts of the H10 oracle.
 

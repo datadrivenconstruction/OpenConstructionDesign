@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Display shaping for right-to-left text: egui draws glyphs left to right, one per code point, with
 //! no joining and no bidi. `display` turns logical text into what egui can draw: Arabic letters
 //! replaced by their contextual presentation forms (ar, fa, ur), then the Unicode bidi algorithm

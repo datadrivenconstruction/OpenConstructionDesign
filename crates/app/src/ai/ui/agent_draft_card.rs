@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! "External agent changes": one card per agent connection. Its writes wait here, apart from the
 //! chat's card; Apply takes the ticked operations into the model as one undo step
 //! (`UiSession::apply_agent_draft`), Discard drops them, and a stale draft asks for a re-check.

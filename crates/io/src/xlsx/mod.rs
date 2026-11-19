@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! XLSX round-trip (.xlsx): `export_xlsx` writes the model, `import_xlsx` applies edits as one
 //! undoable operation, all or nothing, with a per-cell report.
 

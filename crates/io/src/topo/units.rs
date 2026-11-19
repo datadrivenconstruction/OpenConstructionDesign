@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Length unit of a terrain source. A survey file or drawing may be in m, cm, mm, ft, US survey ft
 //! or in; the import dialog always asks. The default comes from the file (DXF `$INSUNITS`, a unit
 //! in the survey header row or a `# units: mm` comment), else from the extent as a suggestion.

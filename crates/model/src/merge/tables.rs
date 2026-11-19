@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Which tables merge and how: main tables (`id`) hold elements; parts without `id` belong to an
 //! element and are compared as a group; derived and service tables are not compared. A new table
 //! with `id` joins the merge automatically; its references must be declared in `integrity::REFS`.

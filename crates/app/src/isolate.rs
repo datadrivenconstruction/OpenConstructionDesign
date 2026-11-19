@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Temporarily hide/isolate (HH, HI, HR is reset; TOOLS_UI §3): does not change the model, only
 //! visibility in plan, sections/elevations and 3D; "Apply to view" turns the temporary set into permanently hidden ones.
 //! An opening is visible only together with its host; isolating a wall keeps its openings.

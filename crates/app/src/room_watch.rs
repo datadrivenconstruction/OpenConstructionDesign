@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Rooms that lose their enclosure while walls or room separators are edited. One check is
 //! shared by the editor (status, badge, warnings list) and the AI plan validator.
 //! Also: a status note when an edit puts a second room into a region another room already

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The per-frame read caches (keyed by `Editor::cache_key`) see every way the model goes back:
 //! a rolled-back transaction, a failed atomic plan, a journal rollback, a scoped reload and a
 //! new connection after a level walk.

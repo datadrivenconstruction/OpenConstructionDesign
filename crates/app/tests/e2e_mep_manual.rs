@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Manual MEP through the commands: draw a duct run, attach a terminal to its system, route a
 //! free run between two points. Each gesture is one undo step that restores the model exactly
 //! and redo reproduces it.

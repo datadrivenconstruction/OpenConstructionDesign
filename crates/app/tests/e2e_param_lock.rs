@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A locked parameter value holds on every write path the person can reach: an XLSX book,
 //! the bulk editor and Match Properties, the assistant, save and reopen, IFC save and undo.
 //! The model-level unit tests live in `param_lock_tests.rs`; these go through the editor.

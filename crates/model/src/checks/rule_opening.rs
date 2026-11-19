@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Openings and components with a host: the host exists, the opening is inside the wall, openings do not overlap.
 
 use super::util::{ids, key, Sink, Within};

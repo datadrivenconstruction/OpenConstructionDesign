@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Plan paint helpers: O(1) selection membership and world bounding boxes for screen culling.
 
 use crate::editor::{Editor, Sel};

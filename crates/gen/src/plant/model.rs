@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The plant as model elements: a family and a placement for every unit, every item on a
 //! nozzle stack (reducers, valves, strainers, meters, gauges), every pipe support, the steel of
 //! each platform, stair, ladder and support, and each flue; the pipes as straight pipes of one

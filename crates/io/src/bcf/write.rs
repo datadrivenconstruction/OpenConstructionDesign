@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! BCF writer. Follows the published 2.1 and 3.0 schemas element by element (`schema` checks
 //! every file in the tests): component ids as child elements, the 3.0 aspect ratio and the
 //! camera every 3.0 viewpoint needs, lower-case 3.0 guids, the 2.1 field-of-view range.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Views: a level plan at a cut height. The result is primitives in model coordinates (m),
 //! with no paper quantities: line weights, text heights and dimension offsets are set by the sheet (ddc-io).
 

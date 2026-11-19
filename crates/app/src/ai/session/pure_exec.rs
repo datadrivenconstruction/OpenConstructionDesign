@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A `Core` on the caller's thread: tool calls without a worker, a provider or a window. The
 //! contract tests run the same call here, over the wire and in the dialog and compare results.
 

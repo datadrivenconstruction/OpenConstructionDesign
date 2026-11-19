@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Network run grips in 3D: axis vertices and moving the whole run. Dragging, snaps and
 //! temporary dimensions are the shared 3D grips (`edit3d::grips`, the network provider
 //! `edit3d::mep_grips`); here only the grip kind and the drag result for

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Joins the MCP server to the live editor: the settings step that turns it on, the indicator with
 //! one-click revoke and policy switch, and the hand-over of calls on the UI thread.
 

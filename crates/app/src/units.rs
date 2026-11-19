@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Units and length-input parsing: metric (bare number = mm) and imperial (bare number = inches), both first-class.
 //! Internally everything is in metres.
 

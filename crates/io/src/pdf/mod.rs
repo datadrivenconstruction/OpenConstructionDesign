@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Vector export of sheets to PDF: line weights in mm, RGB, layers (OCG), searchable text.
 //! Our own PDF writer; font — ttf-parser/subsetter, compression — miniz_oxide.
 

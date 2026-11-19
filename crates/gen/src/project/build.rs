@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The deterministic builder. Every typology is a double-loaded plan: room bands on both sides
 //! of a corridor, a core (stair, lift) in the middle, the program packed into the four band
 //! segments. Rooms take their asked area; spare length grows the neighbouring room or becomes

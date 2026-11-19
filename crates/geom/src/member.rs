@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Linear members (columns, beams): sections, catalogue, swept solid and exact quantities.
 //! A section is given in the (y, z) plane: y is transverse (to the left along the run), z is up; the origin is
 //! the centre of the bounding box. Fillets of rolled profiles are not modelled (area is below the tabulated one).

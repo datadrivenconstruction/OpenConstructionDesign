@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! "How much concrete on floor 2": an answer from data, and nothing done to the model.
 
 #[path = "e2e_ai_common/mod.rs"]

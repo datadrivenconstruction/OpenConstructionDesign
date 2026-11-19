@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Outline edges linked to walls (`ddc_model::EdgeLink`): «Pick walls» in sketch mode links
 //! the edges it makes, «Whole loop» picks the closed run of walls under one click, «Unlink
 //! edge» and «Re-pick» act on the edge under the cursor; floor commands unlink every edge or

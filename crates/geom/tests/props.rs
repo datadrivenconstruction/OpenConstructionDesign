@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Kernel property tests. Case count: `DDC_PROP_CASES` (small by default).
 
 use ddc_geom::layered::{join, layer_footprints, set_threads, Joined, Layer, Strip};

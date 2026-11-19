@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Cursor snaps: endpoints, midpoints, perpendicular, wall axis/face, 0/45/90° angles, grid;
 //! datums (`datum_candidates`): intersection ✕, grid axis ◇, reference plane ┆.
 //! Pure logic without UI: takes the cursor and context in meters, returns ordered candidates.

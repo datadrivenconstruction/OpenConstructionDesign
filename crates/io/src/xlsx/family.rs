@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Generic sheets for element families: one sheet per family, one column per editable row of the
 //! caller's element table. Export writes the values; import reports every changed cell and every
 //! bad row, and returns the edits as `PropEdit`s that the caller applies as one undo step.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Rules for trimming walls by a roof: project settings (`meta`) with bounds and defaults.
 //! Each is explained by the text `why.rt_<key>` (en + ru); changed via `Model::set_roof_rule`
 //! (undoable, walls are recomputed in the same operation) and the "Why" window in the app.

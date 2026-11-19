@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Room programme templates as data: the default rooms of each typology, what spare band
 //! length becomes, and the names a typology gives its rooms. A norm pack builds its own
 //! `Programme` and passes it to `parse_spec_with`.

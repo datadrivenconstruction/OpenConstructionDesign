@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The rule set: built-in file, layers, range checks, the brief's `rules`, and the check that
 //! the builder holds no decision number outside the rule set.
 

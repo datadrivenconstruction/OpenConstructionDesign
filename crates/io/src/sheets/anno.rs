@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! View annotations on a sheet: the same strokes as on screen, in sheet mm (PDF and DXF come from the same marks).
 
 use ddc_model::{Anno, AnnoCtx, AnnoStroke, AnnoView, Model, PlanView, ViewPrim};

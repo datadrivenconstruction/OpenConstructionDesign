@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! What else goes with a delete: openings and their fills, hosted components, rebar, tags and
 //! dimensions. A few on the view's level are reported in the status; many, or any on another
 //! level, wait for the user's answer in a confirm dialog.

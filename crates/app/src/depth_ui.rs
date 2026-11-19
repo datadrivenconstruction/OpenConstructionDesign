@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Design depth in the editor: the project setting editor shared by the chat chip
 //! and the Settings window, the chip text, the pre-run estimate line and the depth heat map
 //! (a view tint by element depth, cleared by Reset view like any other coloring).

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The rows of the workbook preview as a list the user can take away: copied as text for a
 //! spreadsheet, or saved as a .csv file next to the book, so refused and conflicting cells can
 //! be fixed in the book one by one. Both follow the filters of the change list.

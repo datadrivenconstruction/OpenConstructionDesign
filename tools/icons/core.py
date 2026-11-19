@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 """Icon geometry core: one drawing on the 24 grid -> snapped optical masters 24/20/16 in three
 directions (outline, duotone, filled). Rules: docs/design/ICONS_V4.md.
 

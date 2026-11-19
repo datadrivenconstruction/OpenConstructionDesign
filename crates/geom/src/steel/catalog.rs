@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Steel connection catalogue: bolts, property classes, stock lengths, spacing rules, fillet
 //! welds, plates and connection defaults, read once from `data/steel/*.csv` (our own data).
 //! The files hold millimetres; everything here is metres, pascals and radians. The realism

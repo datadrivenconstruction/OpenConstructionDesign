@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Connection plates of lattice joints: rivet groups laid out from the member ends, the plate
 //! outline as the convex hull of every rivet's edge-distance disc, and an independent check that
 //! each rivet sits inside its plate with the edge distance and clear of every other rivet.

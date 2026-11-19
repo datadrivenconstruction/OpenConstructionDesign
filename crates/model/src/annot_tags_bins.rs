@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Obstacles of tag placement in a uniform grid: a query tests only what shares a cell with the
 //! candidate, so tagging thousands of openings stays near linear.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! One busy gate for open, add and import, and the queue for requests that arrive meanwhile.
 //! Pure: the app fills [`Jobs`], the rules live here.
 use std::collections::VecDeque;

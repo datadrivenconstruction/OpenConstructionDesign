@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! IFC patch back end: writes a changed copy of an imported file. Every statement that no edit
 //! touches is copied byte for byte; changed elements get new geometry entities, their product
 //! lines are rewritten by GlobalId, deleted ones leave their relations, new ones are appended above

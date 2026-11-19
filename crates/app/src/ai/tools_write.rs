@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Propose tools: each adds a plan item, compiled and run on the scratch copy at once, so the
 //! model hears the exact outcome (`+3 ~0 −0`) and can reference what it just created.
 

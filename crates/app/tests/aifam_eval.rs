@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Evaluation corpus of AI-written families: 30 briefs, the recorded answers of a model
 //! (several attempts where the first one was refused), replayed through the same repair loop the
 //! assistant uses. A task counts as ok when a draft is accepted and every `must` holds on the

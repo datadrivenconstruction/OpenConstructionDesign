@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Chat tools over the generation rules (group `gen`): list and read rules, explain, conflicts
 //! and variants; change rules or locks, or regenerate. The model writes rule patches and locks
 //! only, never geometry. Every change is a revision of the project, drafted for the person's

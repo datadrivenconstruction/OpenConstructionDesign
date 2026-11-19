@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Sizing data: water properties, pipe sizes by velocity, flanges, motors and inline items.
 //! Physical constants and catalogue rows, not decisions: the decisions read `plant.*` rules.
 

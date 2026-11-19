@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! "As built" reveal from a real diff: the AI plan (`ModelDiff`), version comparison
 //! (`VersionDiff`) and merge preview (`MergePlan`) become steps, steps become batches in
 //! build order (`ddc_model::reveal_build_order`), and batches become the render timeline

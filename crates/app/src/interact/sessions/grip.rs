@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Grip drags as one session: an element grip (`grips`), a section/elevation mark
 //! grip (`vdrag`) or an opening slid along its wall (`drag`) owns the input under
 //! `Scope::GripDrag` from the press that grabs it to the release (or the typed value) that

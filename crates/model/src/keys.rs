@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Element keys for the revision link: the one string that names an element across exports.
 //! Precedence: key written by the generator, then the key of the script that made it
 //! (`group/name#n`), then the imported GlobalId, then a key minted once and kept.

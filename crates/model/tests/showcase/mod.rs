@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Showcase projects: reproducible models built in code through the public model API, shared by
 //! the scenario tests of ddc-model, ddc-io and ddc-app (`#[path]` include, see README.md here).
 //! Also the model check every project must pass: `validate` = integrity + per-kind validity.

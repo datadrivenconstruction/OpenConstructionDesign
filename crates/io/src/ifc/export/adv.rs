@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Advanced geometry of an export: the exact / tessellated choice and its note, tapered
 //! extrusions of similar blends, large meshes as IfcPolygonalFaceSet (coplanar triangles
 //! merged into planar faces, holes as voids), and mass forms as proxies (opt-in). Freeform

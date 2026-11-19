@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Electrical circuits through IFC: IfcDistributionCircuit out, circuit rows back.
 
 use ddc_io::ifc::{export_ifc, import_ifc};

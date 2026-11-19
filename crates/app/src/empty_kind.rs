@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Which designed empty state a panel shows. One pure `empty_kind` per panel decides it; the
 //! panel renders `ui_kit::empty_state_lang` with `Kind::what()` (keys `empty.<what>.*`).
 

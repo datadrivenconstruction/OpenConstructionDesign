@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Prints every storey of a project brief as rooms with their boxes and areas, plus the gate
 //! findings: `cargo run -p ddc-gen --example plan_dump -- brief.json`.
 

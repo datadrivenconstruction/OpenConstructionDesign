@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Family thumbnail: software rasterization of a mesh (front-right-top isometric view,
 //! z-buffer, flat shading), RGBA with a transparent background. No GPU, so it works in the model and in tests.
 

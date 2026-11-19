@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Grips in 3D. A [`Provider`] gives an element [`Grip3`] grips (point, drag constraint,
 //! temporary-dimension origin) and writes the result as one model operation.
 //! The built-in provider: plan grips (`crate::grips`) lifted to the element's elevation and

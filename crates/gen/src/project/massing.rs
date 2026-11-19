@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Massing from bars: L, U and courtyard blocks are copies of the double-loaded bar turned
 //! round corner halls that join their corridor ends; a stepped block (set back, podium or
 //! cantilever) is two variants of the bar, one above the other, their stairs on one axis.

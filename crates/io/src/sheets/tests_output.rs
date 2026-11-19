@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Sheet issue: schedule in columns within sheet assembly, link to the model, title block from project fields,
 //! cross-references after renumbering, multi-page PDF, line weights and hatching.
 

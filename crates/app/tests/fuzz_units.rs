@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Mutation fuzz of the typed-length parser. Ignored: run through `tools/fuzz.ps1`.
 
 #[path = "../../io/tests/common/mutate.rs"]

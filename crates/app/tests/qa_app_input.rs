@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! QA net for the input surface of the app: every command has a label and a handler, every
 //! shortcut and two-letter sequence reaches its command, real key events run commands, every
 //! assistant tool is described and reachable, and a refused command or tool says why.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Turns decoded records into the DXF document structure: tables, blocks, entities and the
 //! header variables the drawing pipeline reads (spec: docs/specs/DWG.md §9).
 

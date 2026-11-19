@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! First-run tips: a short deck of `tip.N` strings shown one at a time until dismissed.
 
 /// Tip keys in showing order (`tip.<k>.title` / `tip.<k>.text`).

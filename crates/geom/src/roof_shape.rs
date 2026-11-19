@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Roof shapes on top of `roof`: footprint presets (gable, hip, shed, mansard,
 //! broken-gable with gable ends), extrusion with profile arcs between offsets, attaching an
 //! extrusion to another roof (far end follows the target's top), skylight (rectangular

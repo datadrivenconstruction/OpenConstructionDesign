@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Stair (ST): click = flight start, click = flight end; preview "N risers of M";
 //! alignment line centre/left/right; "Auto railing" — both edges in the same write.
 

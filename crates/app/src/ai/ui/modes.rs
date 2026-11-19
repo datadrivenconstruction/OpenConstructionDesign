@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! AI modes: the chat, build and review tabs at the right end of the view-tab bar. Each draws
 //! the assistant's one conversation (`PanelUi`: the same log, cards and composer as the quick
 //! panel) full size in a work column beside a live preview of the model. Nothing here keeps a

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The palette's draft rows end in the panel's own Apply: the model moves only after it.
 
 #[path = "e2e_ai_common/mod.rs"]

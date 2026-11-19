@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Component records for the writers (build package, drawing blocks, glTF extras, schedules):
 //! one row per instance with its family, type, category, IFC class, resolved parameters (type
 //! and instance, in definition order) and classification codes. One read for all writers, so

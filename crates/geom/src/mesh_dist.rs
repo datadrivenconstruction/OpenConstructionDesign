@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Exact minimum distance between two triangle meshes (clearance), with the closest pair of
 //! points. Touching or crossing meshes are at distance 0. Brute force with box pruning; a pair
 //! of meshes whose triangle product exceeds `MAX_PAIRS` is refused, so a caller falls back to

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Checks of the designed plant against its own rules: every nozzle on exactly one line and
 //! reached by pipe; pipes clear of each other, of the units, of the steel; maintenance zones,
 //! the walkway and the wall clearances free; every hand-operated valve within reach of the

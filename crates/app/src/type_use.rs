@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! How many elements take a change of a type: one counter for the workbook preview and its
 //! Apply tick, the assistant's plan card and the properties panel.
 use ddc_io::xlsx::Report;

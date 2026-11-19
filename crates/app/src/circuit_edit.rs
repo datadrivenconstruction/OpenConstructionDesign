@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! "Circuits" window: the panel circuit list and property editing of the selected circuit: device
 //! load, cosφ and load type, poles and voltage, installation method, temperature, number of
 //! circuits in the group, breaker and cable cross-section overrides. Cable-schedule rules are

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! An agent proposal as a draft: the card's counts, rows and view outline come from the real
 //! executor's dry run on a copy; the live model changes only on the person's Apply, as one step.
 

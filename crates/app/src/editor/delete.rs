@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! One Delete for every selectable element: the whole selection goes through
 //! `Model::delete_items` as one model step and one undo step. A panel is a sub-element: it never
 //! stands for its curtain wall, so it stays and the user is told why.

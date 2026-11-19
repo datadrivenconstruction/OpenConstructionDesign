@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Acceptance snapshots of grips G1-G6 (light+dark) in docs/design/shots/edit/.
 //! `cargo test -p ddc-app shots_g -- --ignored`
 

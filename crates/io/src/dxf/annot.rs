@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Plan stand-ins for records kept verbatim: LEADER and MULTILEADER (leader lines, arrowheads,
 //! dogleg, text), IMAGE (frame and file name) and REGION / 3DSOLID / BODY (extents of the
 //! inline modeler text). Used by INSERT expansion and the drawing import, so DXF and DWG

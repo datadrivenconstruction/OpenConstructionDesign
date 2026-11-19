@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Freeform NURBS elements in 3D: the scene parts (triangles of the exact patch or shell, so
 //! picking and snapping work as for any body) and one grip per control point. A drag moves
 //! the point in its horizontal plane, Ctrl lifts it, Shift at the press moves it along the

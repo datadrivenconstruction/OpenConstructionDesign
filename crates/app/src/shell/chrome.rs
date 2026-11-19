@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! State of the window chrome (start screen, settings, tasks, docks, tree rename) kept as one
 //! field of [`EditorApp`], and the status-line to toast bridge both frame paths share.
 use super::dock_ui::DockUi;

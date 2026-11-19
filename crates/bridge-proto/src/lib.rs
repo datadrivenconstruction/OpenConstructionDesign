@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Bridge protocol v1 (docs/plugins/BRIDGE_PROTOCOL.md): frames a bridge process writes to stdout.
 //! Neutral building data only — levels, types, walls, openings, slabs, rooms, meshes, properties.
 //! Encoding: little-endian, `str` = u32 len + UTF-8, `vec` = u32 count + items, `opt` = u8 0/1 + item.

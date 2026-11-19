@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Fire safety and egress: a long office floor takes more stairs, a crowded hall takes exit
 //! width, a plate over the compartment limit takes fire walls, corridor ends stay within the
 //! dead-end limit, and stair enclosures are rated.

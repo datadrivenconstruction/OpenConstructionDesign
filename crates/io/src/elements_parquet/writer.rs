@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Parquet writer and reader for [`ElementRow`]. Native types: strings, float64, int64.
 //! zstd, row groups of at most [`ROW_GROUP_MAX`] rows, fixed `created_by`: the same rows give
 //! the same bytes.

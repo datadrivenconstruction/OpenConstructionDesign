@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Materials in the clipboard: a snapshot carries the material rows its elements name (with
 //! embedded images) and the material of its imported meshes, by name. A paste into another
 //! project creates the names it lacks and keeps rows that exist there; the differing names are

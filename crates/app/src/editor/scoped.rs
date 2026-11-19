@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Scoped reload after an edit (`run_op`, undo, redo). When the model journal shows only rows of
 //! walls that stay straight on the current level (plus wall and room quantities, properties), the
 //! wall list, plan, snap and host lists are rebuilt for those walls and for the walls whose joins

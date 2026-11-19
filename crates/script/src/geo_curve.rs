@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Curves and placement of the geometry language: `curve.*` constructors (circle, ellipse,
 //! arc through 3 points, helix, spline, Bezier, NURBS, function, offset), the methods every
 //! path has (point, tangent, frame, divide, measure, slice, reverse, closest), surface

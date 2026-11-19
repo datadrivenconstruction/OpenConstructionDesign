@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: AGPL-3.0-only
+# SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 """Name lint: third-party product, company and AI-vendor names must not appear in the tree.
 
 The term list is kept as SHA-256 digests (tools/name_lint/terms.txt) so the repository does

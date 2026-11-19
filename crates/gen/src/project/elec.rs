@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Power and lighting: a board per floor over a cable tray riser (the main board, the source,
 //! on the ground floor), a board in each apartment hall; trays along a wall of the
 //! circulation rooms and a conduit ring in the ceiling void of every other room, fed across a

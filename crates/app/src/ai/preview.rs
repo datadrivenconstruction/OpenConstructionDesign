@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Plan preview: what `build` harvests on the worker from the scratch copy and the untouched base,
 //! and how the UI thread overlays it on the plan and the 3D view. The live model is never touched:
 //! changed and deleted elements are hidden through the view's `Vis`, the rest is drawn on top.

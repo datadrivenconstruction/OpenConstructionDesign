@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Drawing over 3D: selection and hover outlines, grips, gizmo, snap icons,
 //! work-plane grid, selection box (window is solid, crossing is dashed),
 //! temporary dimensions and the value input field.

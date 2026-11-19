@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Section planes of an issue view, in BCF terms: a point on the plane and a direction that
 //! points to the clipped (hidden) side. The editor's section box is six axis-aligned planes;
 //! planes from other tools may be oblique and are kept as they are.

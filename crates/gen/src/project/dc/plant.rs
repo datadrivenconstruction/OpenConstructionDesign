@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The plant of the data centre: UPS and batteries per power path in their rooms, chillers in
 //! the cooling plant room or the yard, generators in the yard; the chillers' headers, a supply
 //! and a return main from each end of them to each hall (paths A and B), and a cable tray

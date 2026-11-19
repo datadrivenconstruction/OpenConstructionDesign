@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! After a hand edit of a room or a storey that a stored project wrote, one toast offers
 //! "Pin": the part becomes a geometry lock of the project, so a revision keeps it in place
 //! and places the rest around it.

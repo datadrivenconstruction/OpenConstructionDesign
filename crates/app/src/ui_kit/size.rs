@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The one file-size formatter: unit names and decimal mark follow the catalog language.
 
 use ddc_ui::widgets::NumberFormat;

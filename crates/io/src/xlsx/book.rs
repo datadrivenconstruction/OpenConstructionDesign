@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Professional book: captions in the project language with a unit suffix, raw column keys in a
 //! hidden `Keys` sheet (per sheet a row of keys, key of column j in cell j+1, and a row of the
 //! captions as exported) and dropdown lists from a hidden `Lists` sheet. Import finds a column's

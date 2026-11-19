@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Size math for GPU buffers that grow with the scene, checked against the device limit.
 
 /// How many rows of a growing buffer fit and how large the allocation is.

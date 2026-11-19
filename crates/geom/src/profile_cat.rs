@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Parametric profile catalogue: a profile is requested by kind name plus named parameters,
 //! each with an explicit unit. Every request is validated (a refusal names the field) and
 //! lowered to a deterministic [`Section`]: outer ring counter-clockwise, holes clockwise,

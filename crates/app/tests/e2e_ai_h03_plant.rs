@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! H03, the small chemical process plant, through the chat: `help` for the design_plant tool (the plant has no recipe note),
 //! `design_plant` with the case's brief, Apply once, then every oracle of the case on the
 //! applied model, each count oracle reported with its number.

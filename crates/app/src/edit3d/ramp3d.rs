@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! 3D ramp provider: targets use the same codes as `Sel::Ext`; selection is shared with the plan.
 
 use std::sync::Arc;

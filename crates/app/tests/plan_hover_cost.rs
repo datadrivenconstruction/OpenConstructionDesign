@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Cost of a plan frame while only the pointer moves over a 1.5k-wall plan: the whole window
 //! frame, and its parts that run per move (the tool's move, the hover pick). Prints the numbers;
 //! the bound holds a moving-pointer frame near an idle one (no whole-plan rebuild per move).

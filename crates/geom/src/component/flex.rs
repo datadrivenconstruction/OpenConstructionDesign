@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Test mode ("flex"): trial parameter values -> evaluation, sketch, body; a failure
 //! names its cause (formula, constraint conflict, dimension or angle changed sign, geometry).
 //! Trial values override type and instance values (like nested-component bindings).

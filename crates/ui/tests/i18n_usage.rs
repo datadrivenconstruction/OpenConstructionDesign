@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Catalog keys against code. Three checks over the embedded locale files and every `.rs` file:
 //! en and ru hold the same keys; every literal key passed to a lookup call exists; every key is
 //! used somewhere. "Used" means its quoted literal appears in a source file or a command

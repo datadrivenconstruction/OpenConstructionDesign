@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Plan colour of a building-services system, readable on the paper of either theme.
 //! The stored colour is the system's identity; what is drawn comes from the theme tokens
 //! `mep.<kind>` for the default systems and from a contrast fix for any custom colour.

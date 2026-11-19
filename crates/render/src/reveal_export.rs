@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Camera for the construction-sequence reveal and windowless frame export: `follow` keeps the
 //! active batch in frame, `render_timeline` yields timeline frames one by one (the caller writes PNGs).
 

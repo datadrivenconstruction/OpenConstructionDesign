@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! XLSX batch through the wire envelope (`Model::apply_envelope`) against the legacy
 //! `apply_edits` path: same final state, one undo step, and the edit kinds the envelope
 //! executor still refuses, listed by name.

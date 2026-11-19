@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Offscreen render without a window: frame timing and pixel readback — for reports and tests.
 
 use crate::camera::OrbitCamera;

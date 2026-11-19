@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Regional gate of automatic building services. The generator's services stage and the
 //! assistant tools that size or lay out services by themselves follow the project setting
 //! `gen.mep_auto`; unset, it is off for the US norm pack and the en-US locale and on elsewhere.

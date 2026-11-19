@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Type changes: an element that now has another type moves between the `IFCRELDEFINESBYTYPE`
 //! relations of the file. Only those relation lines change; the type objects stay as they are. A
 //! type the file has no object for (made in the editor) is a doubt, as the file cannot name it.

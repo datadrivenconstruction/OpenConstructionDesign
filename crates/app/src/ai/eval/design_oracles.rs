@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Oracles for the large-structure, underground, timber and air-delivery hard cases: a clear
 //! span between supports, supports that touch the roof, a roof's reach past its masts, how
 //! deep and how stacked rooms sit, where shafts stand, how much of the walls, slabs and frame

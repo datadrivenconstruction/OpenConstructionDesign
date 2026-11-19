@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `design_plant`: a process plant (boiler house, pumping station, water treatment, process
 //! line) designed from a brief by rules and drafted as one plan item: units with their nozzle
 //! connectors, the items on every nozzle, pipes with their fittings, supports, platforms,

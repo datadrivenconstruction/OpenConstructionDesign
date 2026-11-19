@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Find and replace window (Ctrl+F find only, Ctrl+H with the replace row): text notes, room names and numbers, marks, comments and text
 //! parameter values. The hit list is the preview (hover shows the new text); a click selects the
 //! element and brings it into view; replacing is one `run_op`, so one undo step. Pinned elements

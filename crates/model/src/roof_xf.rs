@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Plan transforms of a roof spec, the helper behind `Target::Roof`. Orientation is kept under a
 //! mirror: rings are reversed with their edge slopes, an extrusion swaps its ends and profile.
 

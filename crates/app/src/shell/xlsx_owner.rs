@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Is the workbook open in another program with unsaved edits? The spreadsheet app keeps an
 //! owner file `~$<name>` next to an open book and holds the book itself with a share lock.
 //! Both are only read here: the owner file is never written, touched or removed.

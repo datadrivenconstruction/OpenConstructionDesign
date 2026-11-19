@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Schedule grouping: rows ordered by the group columns (user sort kept within a group),
 //! a group header with the row count, and subtotals after each group.
 

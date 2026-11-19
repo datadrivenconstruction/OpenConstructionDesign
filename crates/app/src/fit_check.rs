@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Whether every opening fits its wall once a batch of edits stands, over the whole model
 //! (all levels). Opening edits pass `opening_tool::validate`; a wall edit is refused when an
 //! opening it hosts fitted before and would not fit after. Used by the multi-select edits,

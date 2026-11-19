@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Networks and components in 3D and partial scene rebuilds. The log of changed model rows
 //! (`changes_since`) decides what to rebuild after an operation: architecture (walls, openings,
 //! curtain walls, slabs) only if its tables changed; networks only the affected systems

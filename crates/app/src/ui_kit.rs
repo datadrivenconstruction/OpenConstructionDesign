@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Thin UI layer: tokens of the light engineering theme and panel primitives.
 //! Application code uses only this module, not egui styles directly.
 

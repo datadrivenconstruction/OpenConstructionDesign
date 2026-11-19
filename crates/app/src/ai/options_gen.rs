@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `generate_options`: up to eight design options from one request, made in drafts without
 //! confirmation. Pure generation runs on a thread pool; each option is lowered on its own scratch
 //! editor (a copy of the base snapshot, one worker thread each), deduplicated by diff hash and

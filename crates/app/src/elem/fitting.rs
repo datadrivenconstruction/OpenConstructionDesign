@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Fittings of the MEP network as a derived family. The network computes them from its runs, so
 //! a fitting has no row: it is selectable in the plan and in the property panel, its properties
 //! route to the runs, and delete and move refuse with a reason. The selection is

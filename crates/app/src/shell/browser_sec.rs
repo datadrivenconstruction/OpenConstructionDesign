@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Project browser kit: one row, one section header and one quiet add row for every section.
 //!
 //! All rows are `ROW_H` high with the icon centre and the label on the tree's slots, so views,

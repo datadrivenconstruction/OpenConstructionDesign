@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The worker's side of an external agent: every call runs through the same handlers and the
 //! same validation as the chat, and every write lands in the connection's own draft
 //! (`agent_draft.rs`). Only the person's Apply takes a draft into the live model.

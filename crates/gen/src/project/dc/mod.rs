@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Data centre fit-out of a built project: rack rows in hot and cold aisles sized from the IT
 //! load, cooling units along the hall walls, chillers, UPS on two paths with their batteries,
 //! generators in a yard, cable trays over the rows and a dual-path chilled water ring. Rooms

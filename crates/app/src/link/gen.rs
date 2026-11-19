@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `ddc gen`: a `ddc-brief/1` document becomes a generator spec, the spec becomes a model.
 //!
 //! Every brief field ends up in one of three places: used (`mapped`), or named in `unsupported`

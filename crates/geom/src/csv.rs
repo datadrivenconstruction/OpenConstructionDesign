@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! One CSV writer for every export: UTF-8 with a byte order mark, CRLF lines, RFC 4180 quoting,
 //! separator and decimal mark by language (`;` and `,` for Russian, `,` and `.` otherwise), and
 //! text a spreadsheet would run as a formula (`=`, `+`, `-`, `@` first) prefixed with `'`.

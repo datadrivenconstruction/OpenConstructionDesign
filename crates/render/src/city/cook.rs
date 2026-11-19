@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Cooking a project: every unit is loaded once, gets its proxy chain, and a quadtree of group
 //! proxies is built over the units (never across projects). Loaded content is dropped after the
 //! cook; only proxies stay resident.

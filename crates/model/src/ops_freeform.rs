@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Lowering of the freeform ops (`geometry.freeform`, `edit_point`, `thicken`, `trim` and the
 //! freeform case of `convert`, `rebuild`, `panelize`) onto `freeform.rs` and `panel_system.rs`.
 //! Op coordinates are absolute; the patch is stored with z above its level, so every point

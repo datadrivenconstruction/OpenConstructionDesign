@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Real-API measurement of the building generator: drives the app's conversation loop with a
 //! host that only knows generate_project / revise_project, and scores every run objectively.
 //!

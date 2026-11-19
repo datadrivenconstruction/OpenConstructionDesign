@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! NURBS patches as exact faces: freeform surfaces (an open sheet) and shells (two offset
 //! faces and ruled sides stitched into one closed shell). A patch with clamped knots is
 //! bounded by its four iso curves; a side whose control row collapses to a point is a pole,

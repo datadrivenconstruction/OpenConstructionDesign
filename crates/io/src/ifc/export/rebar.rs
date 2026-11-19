@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Rebar and the analytical model -> IFC. Each bar is an IfcReinforcingBar (MAIN / LIGATURE)
 //! with an IfcSweptDiskSolid along an IfcIndexedPolyCurve whose bends and hooks are exact arc
 //! segments, placed in the storey frame; Tag carries the bar mark. The analytical model is an

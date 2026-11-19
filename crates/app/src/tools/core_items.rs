@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Ramps, room separators and zones outside the tools: plan layer, pick outlines, property
 //! rows; the empty-opening command.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! An audit of a furnished storey from what it holds: the fixtures read back through the
 //! shared transform, walls, door swings, windows and columns from the layout, needs from the
 //! room rules. It keeps no state of the placer, so it checks the placer.

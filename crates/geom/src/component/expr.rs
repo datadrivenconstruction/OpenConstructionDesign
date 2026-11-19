@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Parameter formulas: numbers with units (mm cm m in ft ' " deg rad m2 m3), + - * /,
 //! comparisons, and/or/not, functions min max if abs sqrt sin cos tan atan2 round floor ceil.
 //! Dimensions are checked: a length cannot be added to a plain number, sin requires an angle or a number.

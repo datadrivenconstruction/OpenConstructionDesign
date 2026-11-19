@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Compares three files with SQL set operations in temp tables: `mg_map` maps their id to mine,
 //! `mg_add` holds the peer's new rows, `mg_ch` holds base rows with the state on each side,
 //! `mg_cd` holds owners of differing parts. Elements changed on both sides are then compared

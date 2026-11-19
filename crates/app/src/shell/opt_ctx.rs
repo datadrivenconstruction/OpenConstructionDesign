@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Select-mode context of the option bar. Nothing selected: the level and a hint. A selection:
 //! its category and count with a clear button, the wall type for walls, isolate. Pure decisions
 //! first, drawing after; texts come from the catalog passed in, never from the global language.

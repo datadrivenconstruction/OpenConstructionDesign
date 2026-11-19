@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Opening the assistant must leave the canvas its room: below `CANVAS_MIN` the Properties
 //! panel folds while the assistant is open, then the browser if that is not enough; both come
 //! back when it closes. Layout only; nothing here touches a draft, Apply or the model.

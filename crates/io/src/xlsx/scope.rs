@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! What an export carries: the whole model, one level, a selection or chosen categories.
 //! Rows outside the scope are never written, so the baseline never lists them and a re-import
 //! (even with "delete missing") leaves those elements alone.

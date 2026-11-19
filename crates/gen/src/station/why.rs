@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Why the station came out as it did: one reason per decision, naming the rule, its value,
 //! the layer that set it and the effect. The English template fills `effect` for the tool
 //! reply; the UI renders `gen.why.e.<key>` from its own catalog with the same `{slots}`.

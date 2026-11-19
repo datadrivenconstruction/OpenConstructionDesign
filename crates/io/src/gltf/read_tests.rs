@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 use super::*;
 use crate::gltf::{json, write_glb, write_gltf, Scene};
 use crate::meshx::MeshSet;

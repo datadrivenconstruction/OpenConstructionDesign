@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! PDF 1.5 assembly: catalog, pages per sheet, a shared OCG set, Helvetica/WinAnsi.
 //! Text: an embedded TrueType subset (Type0/Identity-H, ToUnicode); without a font —
 //! Helvetica/WinAnsi (other characters are replaced with "?"). Streams are FlateDecode-compressed.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `view_snapshot`: an image of the model from a named pose, drawn by the same code as the
 //! window and without one. Plans and sections are the app's own views painted offscreen
 //! (`render_off`); 3D goes through `ddc_render::headless::render_rgba_on`. The window answers

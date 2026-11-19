@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A type or layer row of a workbook names how many elements it reaches, and Apply needs the
 //! type tick whenever that number is not zero. Languages are passed explicitly, never switched.
 use std::path::{Path, PathBuf};

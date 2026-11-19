@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Change list of the workbook preview: every refused, skipped, changed, created, deleted,
 //! conflicting, locked and ignored cell of the report in one virtual table (only the visible
 //! rows are built), with kind chips, sheet and text filters, sort by column and old -> new values.

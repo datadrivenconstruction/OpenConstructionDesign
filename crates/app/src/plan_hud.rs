@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Plan canvas overlays: the origin axis cross and the bottom-left HUD (view name, scale,
 //! fit-to-view) on quiet chips. Paint and geometry only; no model data is read or changed.
 use crate::ui_kit::Tokens;

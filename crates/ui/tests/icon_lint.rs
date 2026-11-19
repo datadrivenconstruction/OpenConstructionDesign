@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Icon set contract (tools/icons/check.py is the geometry audit): per master one stroke width,
 //! viewBox = master, round caps/joins, no raster, kebab-case names, dots are circles, and every
 //! icon name referenced from source exists in the set.

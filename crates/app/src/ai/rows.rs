@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Element rows the AI queries: the palette rows plus categories the palette cannot select
 //! (roofs, stairs, railings have no `Sel` of their own), with project parameters as props.
 

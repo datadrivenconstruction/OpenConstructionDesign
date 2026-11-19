@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Worksheet cells read back as a plain grid, with the cell kind a caller must not take for a
 //! value: an error (`#REF!`), a formula saved without its result, a formula with its result.
 

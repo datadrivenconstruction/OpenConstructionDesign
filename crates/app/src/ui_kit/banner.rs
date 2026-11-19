@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Banner surface, middle-elided path label and selectable file row: the pieces of the
 //! "source changed" strip and the relink card.
 use ddc_ui::theme::{self, space, stroke, Role};

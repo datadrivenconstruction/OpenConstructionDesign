@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Drawing quality window: the plan view range with a side elevation (four draggable planes and
 //! a probe of what each band holds), the pen table in mm per scale, cut and projection styles per
 //! category, and the line pattern and hatch libraries. Every Apply is one model operation, so one

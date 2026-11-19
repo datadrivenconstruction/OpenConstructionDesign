@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Help with no external documents: an F1 window with search and a context topic (`panel`), the
 //! "First steps" tutorial (`tutorial`), "Open sample" (`sample`), "What's new".
 //! Shell hooks: `register` in `shell::REGISTER`, `frame` in `EditorApp::ui`.

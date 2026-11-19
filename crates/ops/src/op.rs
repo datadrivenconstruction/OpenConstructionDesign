@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `Op` v1 and its sub-op families (AI_NATIVE.md section 2).
 
 use schemars::JsonSchema;

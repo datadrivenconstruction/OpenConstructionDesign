@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! File associations for the current user (no admin rights): `.ddc` is claimed, the other formats
 //! are listed under "Open with", and IFC, RVT and RFA become the default only when asked.
 //! Nothing here runs by itself: it is a user action (Settings, an installer option, or

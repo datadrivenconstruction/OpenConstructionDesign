@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Anchors of wall textures in the realistic style. A textured wall projects its pattern in a frame
 //! of its own, with the origin at its start and the x axis along the wall, so a moved or turned
 //! wall carries the pattern with it. Walls that continue each other in a straight line share the

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Furniture and fixtures from the fit-out rules (`fit_rules`): every room takes the first rule
 //! set whose needs it can meet. Pieces stand against the walls or on a grid, clear of door
 //! swings, columns, one another and the free space each piece keeps in front and beside it;

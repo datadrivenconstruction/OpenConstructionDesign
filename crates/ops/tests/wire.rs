@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Wire contract of `ddc-ops`: round trip, strictness, version and upgrade, explicit units,
 //! golden files (v1 kept as written, read through the upgrade; v2 current).
 

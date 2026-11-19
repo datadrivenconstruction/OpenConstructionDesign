@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Limits of a sheet cell. Text over the cell limit is written cut, in a locked grey cell, with a
 //! marker at the end; a number that is NaN or infinite is written as a blank locked cell. The
 //! model keeps the full value. A cut cell read back is never applied (see `cut_cell`).

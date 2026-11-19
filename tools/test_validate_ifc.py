@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 """Tests of tools/validate_ifc.py: python -m unittest discover -s tools -p "test_*.py"."""
 import os
 import sys

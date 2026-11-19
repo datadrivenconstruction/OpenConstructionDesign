@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Joints panel of a component instance: the assembly's degrees of freedom (rank deficit of
 //! the joint equations), its joints with drive fields inside their limits, limit edits and a
 //! new joint to the ground (one instance selected) or to the other selected instance.

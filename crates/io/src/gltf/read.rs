@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! glTF 2.0 reader (.gltf with embedded or external buffers, .glb) into a [`MeshSet`].
 //!
 //! Node transforms are composed, the scene is turned from Y-up to the model's Z-up

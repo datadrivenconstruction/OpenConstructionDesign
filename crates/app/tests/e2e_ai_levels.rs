@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Levels, automatic rooms and door flips end to end: each call is a draft, its Apply is one
 //! undo step, and the model ends exactly where the ribbon's own call leaves a twin of the
 //! fixture. Refusals are coded and leave the model untouched.

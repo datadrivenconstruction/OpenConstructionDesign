@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Constrained triangulation of one input triangle: points are inserted by splitting the
 //! triangle (or edge) that contains them, constraint segments by walking and flipping the
 //! crossed edges (any triangulation admits a flip while an edge crosses the segment). No

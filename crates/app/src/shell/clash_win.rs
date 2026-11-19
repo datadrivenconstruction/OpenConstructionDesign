@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! "Clashes" window: sets A and B (categories, level, selection), tolerance, hard or clearance;
 //! a threaded check with progress; a table of pairs grouped with statuses and comments (stored
 //! in the project); "Show" — plan and 3D with isolation and highlight; quick fixes; report.

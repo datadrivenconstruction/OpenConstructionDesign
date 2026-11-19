@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Drawing edit round trip: an opened .dxf/.dwg drawing is edited (move, rotate and copy picked
 //! primitives, delete one), every gesture undone and redone, then written with `export_into`
 //! and read back with `read_drawing`. The light tests run on the built-in sample plan plus one

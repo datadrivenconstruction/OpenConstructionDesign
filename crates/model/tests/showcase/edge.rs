@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Edge-case projects: what a model must survive whole. Each builder states the behaviour it
 //! relies on; the scenario tests check the result like any other project.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Raw records the document keeps verbatim (POLYLINE/VERTEX/SEQEND, ELLIPSE, SPLINE, HATCH,
 //! SOLID/TRACE, DIMENSION, LEADER) turned into drawable entities: polylines, fills and inserts of
 //! the anonymous dimension blocks. Curves are evaluated on the true curve within a chord tolerance.

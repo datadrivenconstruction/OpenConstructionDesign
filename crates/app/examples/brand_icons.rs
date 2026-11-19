@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! One-off: render the kit app icon and favicons to PNG (16..256) into `data/brand/png`.
 //! `cargo run -p ddc-app --example brand_icons`; `tools/brand_ico.py` packs the .ico.
 

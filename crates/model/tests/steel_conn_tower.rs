@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The 300 m lattice tower takes gusset plates where its braces end: on the leg columns
 //! (bracing gussets) and where only braces meet, at the X crossings (truss gussets).
 

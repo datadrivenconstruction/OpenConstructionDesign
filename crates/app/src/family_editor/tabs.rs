@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Family editor tabs. Each edit is a document operator (`FamDoc`), validated by
 //! parsing; an error is shown in the message line and the text is unchanged.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Container layer: locates the header-variable, class, handle-map and object sections
 //! for the three storage families (spec: docs/specs/DWG.md §3).
 

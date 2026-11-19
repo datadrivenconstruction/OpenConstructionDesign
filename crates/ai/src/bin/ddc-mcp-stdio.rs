@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Lets an agent that speaks only stdio talk to the running editor.
 //! Port: `--port N` or `DDC_MCP_PORT`. Token: `DDC_MCP_TOKEN`, otherwise the OS key store.
 

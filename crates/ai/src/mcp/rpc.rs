@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! JSON-RPC on the MCP endpoint. Two eras on one path: the current revision is stateless with
 //! metadata in every request; earlier clients open with `initialize` and hold a session.
 

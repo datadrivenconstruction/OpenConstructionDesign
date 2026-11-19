@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Files the person attaches to the chat. They are read here, on this machine; the model gets
 //! only what a tool hands it, and only from files the person shares. Requirements read out of
 //! the files wait on a card until the person confirms them; confirmed ones travel with each turn.

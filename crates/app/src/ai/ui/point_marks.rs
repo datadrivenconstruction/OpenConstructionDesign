@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Marks left where a question was asked: the answer's status, and the model "as it was" before
 //! an applied plan. Session-only: nothing here is written to the project or kept for later.
 

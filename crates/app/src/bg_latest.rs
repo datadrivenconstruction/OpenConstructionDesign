@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Latest-wins background builds (plans, sections, sheets): a new model revision cancels the
 //! stale job, the UI keeps showing the last finished result and swaps to the new one in a single
 //! assignment when it lands. Results of a superseded revision are dropped, never shown.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Profile sketch with typed dimensions on top of `sketch_solve`.
 //! A dimension that adds no new information (its equation depends on earlier ones) is turned
 //! into a driven (reference) dimension instead of locking the sketch; it then only shows the

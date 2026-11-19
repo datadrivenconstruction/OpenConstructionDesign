@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Parameters of a door or window type: everything the detail builders draw from. A type
 //! (its mark, schedule data, fire rating) belongs to the openings model; this struct is the
 //! geometric part of it, so a type maps to one [`OpeningType`] and back without loss.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Resolution of `Place` intents to a point and frame (AI_NATIVE.md section 4.6).
 //!
 //! Pure: the model is seen only through `PlaceModel`, so this runs in tests, in the app

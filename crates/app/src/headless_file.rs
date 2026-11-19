@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Windowless run on a real file: `ddc-app --file <path> [...]`. One pass imports the file,
 //! optionally places an underlay, saves and reopens a project, exports a workbook and
 //! dry-runs its re-import, renders frames, and prints one JSON report. Also the base for

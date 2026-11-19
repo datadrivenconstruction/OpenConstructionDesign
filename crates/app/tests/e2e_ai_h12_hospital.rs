@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! H12, the German hospital wing with full ventilation, through the chat on the brief's own
 //! words: the typology word "Krankenhaus" (an alias of the hospital wing), the brief's feature
 //! words ("Lüftung", "Brandschutzklappen") and services on, built by `generate_project`; Apply

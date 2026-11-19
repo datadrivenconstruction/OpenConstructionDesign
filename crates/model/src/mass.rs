@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! In-place forms and solids: the construction history (`Form`) is stored as a JSON tree and evaluated
 //! into `ddc_geom::csg::Body`. Voids (`void`) cut the elements they are joined to.
 //! Geometry join `geom_join`: the winner cuts the loser (ordered by category priority,

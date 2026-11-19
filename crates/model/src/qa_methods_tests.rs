@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! QA: Model methods on a small building (undo round trips, error paths).
 
 use crate::{LayerSpec, Model, RoomSpec, ShaftSpec, SlabSpec, WallSpec, ZoneSpec};

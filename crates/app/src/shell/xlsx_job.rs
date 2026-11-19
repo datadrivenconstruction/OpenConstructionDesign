@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! XLSX export and re-export on a worker: the model is read through its own connection and
 //! is never changed; the book is written beside the target and moved into place only when
 //! the run was not cancelled, so a cancel or a failure leaves no partial file.

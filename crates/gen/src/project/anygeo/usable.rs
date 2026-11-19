@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The usable-rectangle rule. A room on a turned, skewed or radial grid may be a trapezoid or
 //! a wedge; it is usable when it holds a rectangle in the grid's local axes whose sides are
 //! both at least `grid.min_usable` and whose area is at least `grid.usable_share` of the

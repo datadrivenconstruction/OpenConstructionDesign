@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Fallback triggers of the scoped reload: a schema change, another active level, a change set
 //! above the limit, undo and redo across many steps, an import and its undo. Each takes the
 //! full reload where it must, and the lists always equal a fresh full reload afterwards.

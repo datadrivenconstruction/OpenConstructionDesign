@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 use super::*;
 use crate::quick::overlay::RECENT_SECS;
 use crate::wall_tool::{ortho_point, Rig};

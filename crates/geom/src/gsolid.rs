@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Parametric solids of the generic model: extrusion, blend (loft), revolution, sweep along a path,
 //! and swept blend. Profiles are rings with arcs (bulge); the solid is built in the local system
 //! of the work plane [`Frame`]. Quantities use exact formulas (area and first moment of rings

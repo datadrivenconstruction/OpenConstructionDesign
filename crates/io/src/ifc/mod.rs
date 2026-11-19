@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! IFC: step — STEP writer and reference check, export — walls to IFC4X3_ADD2,
 //! reader — STEP parser, import — IFC2X3/IFC4/IFC4X1..IFC4X3 (and IFCZIP) into native
 //! elements, generic meshes and properties.

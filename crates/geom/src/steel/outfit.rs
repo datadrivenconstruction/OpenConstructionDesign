@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Outfit of the lattice tower: platform railings, stairs and lift guides inside the legs, the
 //! top cabin with its mast, and the masonry piers under the leg feet. Every size comes from the
 //! rule set (`steel.out.*`); every added member ties into the tower's nodes, so the frame stays

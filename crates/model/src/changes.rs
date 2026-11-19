@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Journal of changed rows for partial view rebuilds: a SQLite hook fires on every insert,
 //! update and delete (operations, undo/redo, recomputation of derived tables). Consumers keep
 //! their own cursor and read changes after it; a window overflow means "everything changed".

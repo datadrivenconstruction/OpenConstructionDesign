@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 use std::fmt;
 
 /// What went wrong talking to the ERP. Messages carry the ERP's `detail` text at most, never a

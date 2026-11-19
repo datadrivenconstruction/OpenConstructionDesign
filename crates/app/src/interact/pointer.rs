@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `Pointer`: a cursor in model coordinates — the ray under it and the
 //! work plane it lands on. A view only supplies the projection (`adapter`); sessions see model
 //! points. Everything is f64 so plan, 3D and section agree to 1e-9 m.

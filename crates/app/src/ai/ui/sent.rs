@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The "what was sent" privacy log: one entry per request that left the machine, with when,
 //! to which host, for which model, how large, and which parts were project data. It lives in
 //! memory only, is bounded in count and bytes, and never holds a key: the provider scrubs the

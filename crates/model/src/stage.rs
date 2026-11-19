@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Staged Add: a worker builds the import in a copy of the model file; the model thread
 //! attaches that copy and applies it inside one journal operation (one undo). The copy starts
 //! as this model, so ids are already in this model's id space.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A workbook names the project it was exported from (Info "project"). Element ids are per
 //! project file, so a book of another project is refused before it is read: no preview is
 //! computed against this model and Apply stays off. A book that names no project (older or

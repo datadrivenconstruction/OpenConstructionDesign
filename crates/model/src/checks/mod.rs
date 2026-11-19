@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Model check engine (docs/design/AI_ASSISTANT.md §9), not tied to a country. Whether a rule is
 //! violated is decided deterministically by code; the AI explains and picks fixes. Rules live in `rule_*.rs`;
 //! company rules and packs are `RuleDef` data in the project settings (`ai_policy`).

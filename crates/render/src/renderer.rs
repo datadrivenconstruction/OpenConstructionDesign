@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Frame pipeline: sun shadow map, depth pre-pass, ambient occlusion
 //! (half or full resolution), the main MSAA pass into an internal frame (meshes, edges,
 //! ground with shadow, glass back to front) and output of the frame into the window pass.

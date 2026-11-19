@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Plan constraints: a panel over the selected walls (lock, EQ, align, ∥, ⊥; for a single
 //! wall: align/lock to the nearest parallel axis and top to the level above),
 //! badges on walls (clicking a badge removes the constraint), conflict report in the status line.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The project as a real file: which file the editor is on, its lock, the private working
 //! copy all edits go to, the modified flag, thumbnails and the recent list. Windows and
 //! background jobs for these are in `project_ui`.

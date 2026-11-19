@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Reference scenarios of the geometry plan (g12): recorded tool-call scripts run through the
 //! fake provider, measured and, when `DDC_BENCH_RECORD=1`, appended to
 //! the AI geometry bench ledger. Gates here: 0 live writes before Apply, one undo step,

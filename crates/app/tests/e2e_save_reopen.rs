@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! End-to-end: a rich model is saved (`snapshot_to`) and reopened (`Model::open`); the data,
 //! schema version and undo journal survive, the editor takes the reopened model, and
 //! reopening is idempotent. The heavy variant does the same for an imported IFC file.

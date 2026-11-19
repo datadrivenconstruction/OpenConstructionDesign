@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Big files: import as a background [`Job`] (IFC, DXF, .rvt through its module; a project
 //! goes to `project_ui`) with progress, ETA and cancel; the model changes only on the UI thread, as one
 //! undo step, after the job has finished — a cancelled or failed job changes nothing.

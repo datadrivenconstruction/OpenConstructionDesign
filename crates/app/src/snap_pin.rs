@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! "Pin" of a snap hit: the alignment the hit stands for becomes a rule in `constraint_rule`,
 //! and the solver keeps it afterwards. One table decides which kinds can be pinned: the rule
 //! kinds only know walls, grid axes and levels, so end, middle and crossing points have no pin.

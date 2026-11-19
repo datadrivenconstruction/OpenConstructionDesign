@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A family the assistant drafted, open as a tab of the family editor: the check report of the
 //! text (click a finding to see its lines), the changes against the earlier version by statement
 //! with a reject button each, and a load that stays blocked while the report has errors.

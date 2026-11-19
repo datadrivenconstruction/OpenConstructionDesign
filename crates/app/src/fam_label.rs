@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Display names of built-in families and their types. The English name stays the id (files,
 //! the model and commands use it); only what the person reads is translated.
 use ddc_ui::i18n::Lang;

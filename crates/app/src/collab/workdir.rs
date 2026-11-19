@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Per-job work copies in the temp folder, safe with several editor windows open.
 //! Each process holds `ddc-collab-<pid>.lock` open for its whole life; a leftover from
 //! another pid is touched only when that lock proves the owner gone, and then it is moved

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Own NURBS curves and surfaces (AI_NATIVE.md section 9.2).
 //!
 //! Curves: de Boor evaluation, rational derivatives of any order, knot insertion (Boehm),

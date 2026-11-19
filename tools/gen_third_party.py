@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 """Builds THIRD_PARTY_LICENSES.txt and crates/app/data/licenses.txt from Cargo.lock + registry sources.
 
   python tools/gen_third_party.py           regenerate both files

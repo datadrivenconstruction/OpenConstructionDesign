@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Test-only structural check of BCF files against the published 2.1 and 3.0 schemas: element
 //! order and occurrence, required and allowed attributes, the guid and IFC guid patterns, dates,
 //! numbers and their ranges (2.1 field of view 45..60, 3.0 0..180 and a positive aspect ratio),

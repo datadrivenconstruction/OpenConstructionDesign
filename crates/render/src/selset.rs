@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The whole selection for the 3D shaders: sorted, merged element ranges in a small integer
 //! texture (one range per texel), binary searched per fragment. A texture, not a storage buffer:
 //! the GL fallback device has no storage buffers in fragment shaders. Uploaded only on change.

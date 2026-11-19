@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Partial regeneration of derived tables after an operation and undo. Rows changed since the
 //! last regeneration (the `changes` journal + the transaction's uncommitted rows) form the dirty
 //! set: walls and rooms, slabs, bars, component instances. Dependents: a wall -> its neighbours at

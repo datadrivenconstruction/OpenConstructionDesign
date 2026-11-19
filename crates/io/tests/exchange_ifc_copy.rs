@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Exchange safety, IFC edited copy: whatever the patch writer does (patches, copies, refuses),
 //! the source file keeps its bytes and its modification time. The only file it may create is the
 //! output the caller names.

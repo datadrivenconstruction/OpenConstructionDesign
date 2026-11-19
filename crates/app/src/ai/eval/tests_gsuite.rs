@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The G suite on scripted answers: every G case that has a scripted answer here runs through
 //! the eval executor (plan, Apply, oracles); one run prints the pass rate of the whole suite
 //! and the oracles still failing. Add a case by adding a row to `SCRIPTED`.

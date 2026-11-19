@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: AGPL-3.0-only
+# SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 """Check of the glTF library passport: crates/model/data/gltf/manifest.tsv.
 
 Format (TSV, first line is the header, `#` is a comment):

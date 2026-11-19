@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Plan shapes from one planar arrangement: the union of the arms of a branched plan (L, U,
 //! T, Y, X, H, a closed ring of arms around a court are all the same call) and the cut of a
 //! plate by a straight terrace line. No shape is a special case.

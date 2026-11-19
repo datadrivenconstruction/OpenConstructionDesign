@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Doors and windows as components (schema 50, additive). The wall cut stays an `opening` row,
 //! so every reader of openings (cuts, plans, schedules, IFC) keeps working; the fill is a
 //! wall-hosted component of category door/window linked in `opening_comp`. Its type's Width,

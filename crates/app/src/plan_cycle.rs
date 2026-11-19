@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Tab cycle over the plan hits under the cursor (rule SEL-4 for the plan).
 //! Pure state: the view feeds it pointer positions and the ordered hit list.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Out-of-process import bridges (docs/plugins/BRIDGE_PROTOCOL.md).
 //! sig — minisign-compatible check · discover — installed bridges, trust root · package — signed
 //! file list, private per-run copy · run — process, timeouts, caps, cancel · map — frames → native rows. The whole import is one undoable model operation.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Lowering of `geometry.member` and `geometry.plate` onto real structural rows: a member is
 //! a beam or brace of a catalogue section (found among the member types or added from the
 //! catalogue, as for gridshells); a plate is a slab with holes when flat, or a wall with one

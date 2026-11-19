@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Schema-26 structure -> IFC: isolated/strip footings as IfcFooting (PAD_FOOTING /
 //! STRIP_FOOTING), rafts as IfcSlab BASESLAB, braces as IfcMember BRACE, trusses as an
 //! IfcElementAssembly TRUSS aggregating IfcMember CHORD / POST / STRUT, beam systems as an

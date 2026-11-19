@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! One expression parser for every numeric field: `+ - * / ( )`, unit suffixes, named project
 //! parameters. Lengths are metres inside, angles degrees. A bare number keeps the field's own unit
 //! (mm / in / deg), so `2*w+150` is "twice w plus 150 mm" and `(3000-200)/4` is 700 mm.

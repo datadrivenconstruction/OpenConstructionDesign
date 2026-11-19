@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Fittings as a derived family: the network computes them from its runs, so a fitting has no
 //! row. Its key is stable while the runs and the fitting position stay put.
 

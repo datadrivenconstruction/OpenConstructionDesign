@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Families defined by a program as structured JSON (`FamilyOp::Define`): JSON is read into the
 //! typed `FamilyDef`, validated and flex-checked by `geom::component::define`, then stored as a
 //! draft family (its text carries `status draft`) until a person promotes it.

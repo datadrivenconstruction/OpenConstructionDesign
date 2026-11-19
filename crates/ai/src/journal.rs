@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The task journal: one record per model step of a turn (role, model, tokens, cost, time,
 //! tools called) and the totals, exported as JSON. The chat panel shows it as a step feed.
 

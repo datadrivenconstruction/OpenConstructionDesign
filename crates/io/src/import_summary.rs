@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! What an import brought, in one shape for every reader: how many elements came as editable
 //! (native) elements, how many as meshes, what was skipped and why, and the notes. Stored as
 //! JSON in the project (`src_file.report`) so it can be reopened later.

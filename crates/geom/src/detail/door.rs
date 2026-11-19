@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Door: lining with a planted stop, architraves on both faces, threshold, leaves (flush,
 //! panelled with recessed fields, or glazed with beads), hinges and handles. Built for a swing
 //! to +y with hinges at x = 0, then mirrored for the placement.

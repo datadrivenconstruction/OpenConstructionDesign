@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Parametric geometry of each unit as a family: shells, heads, legs, saddles, casings, motors,
 //! burners, with every nozzle a neck, a flange and a connector at its face. The body boxes the
 //! pipes keep clear of and the maintenance clearances by the rules come with it.

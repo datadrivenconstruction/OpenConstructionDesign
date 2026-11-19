@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Site windows: options of the active terrain tool; "Site" holds the plot properties (name, true-north
 //! angle, project base point, latitude/longitude), terrain properties (name, thickness,
 //! material), contour interval and the site report (cut, fill, area).

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Linked models (read-only): an .rvt/.ifc file, placement (offset, rotation), visibility,
 //! load time. The link content is a separate model in the cache; the host stores only this row.
 //! Adding, placement/visibility changes and removal are journal operations (undo); the load

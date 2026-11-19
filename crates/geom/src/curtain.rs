@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Curtain wall: a grid along the axis (segment or arc) x height, flat panels between grid nodes,
 //! mullions along grid lines. Quantities are exact: panel area = chord x cell height (between
 //! mullion axes). Mullions: vertical ones (including edge ones) run solid over the full height; horizontal

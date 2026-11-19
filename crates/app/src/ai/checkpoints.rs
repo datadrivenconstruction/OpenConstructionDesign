@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Named marks on the change journal, and the findings that stood at each: `run_checks` with
 //! `since` then tells only what the changes after the mark brought, and what they cleared.
 

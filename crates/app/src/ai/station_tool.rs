@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `plan_station`: an underground station from the `station.*` rules as plan items: the levels
 //! below ground it lacks, its own wall, slab and column types, and one item that draws the box,
 //! slabs, wells, stairs, columns and rooms on those levels. The reply carries the reasons.

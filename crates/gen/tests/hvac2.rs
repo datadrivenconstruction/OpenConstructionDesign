@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Mechanical design over the ventilation: room loads, the system the rules choose, VAV boxes
 //! on every supply branch, ducts sized within their caps with real fittings, the pressure of
 //! every path and the fans on the critical one, the water side, and no clash with the structure.

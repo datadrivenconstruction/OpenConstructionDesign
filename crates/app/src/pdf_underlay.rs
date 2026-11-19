@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `mgr.import_pdf` ("PDF underlay"): picks `.pdf` files and opens the "Import drawing" form
 //! with them, each on the level its file name names (else the active one) and the PDF scale
 //! field live. Placing goes through the drawing import every underlay uses.

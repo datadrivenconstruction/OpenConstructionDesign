@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The rules of opening: which format does what in which context, through which door.
 //! Pure, no UI and no disk: the table in `docs/design/OPEN_SAVE.md` section 2.2 is tested here.
 use std::path::{Path, PathBuf};

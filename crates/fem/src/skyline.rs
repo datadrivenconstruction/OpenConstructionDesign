@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Profile (skyline) LDL^T storage, factorization and solves; reverse Cuthill-McKee ordering.
 //! Row i keeps columns first[i]..=i of the lower triangle; after `factor` it holds L and D.
 

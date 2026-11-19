@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Snap for drawing tools: ends, intersections, centres, midpoints and nearest points of
 //! drawing lines and arcs, with the same kinds (and glyphs) as the model tools.
 

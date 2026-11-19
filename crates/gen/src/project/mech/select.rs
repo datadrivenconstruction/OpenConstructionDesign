@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The system the rules pick for a project. Air side: all-air variable volume (VAV) where the
 //! ceiling void takes the ducts and the cooling density stays within what air can carry; fan
 //! coils with dedicated outdoor air where the loads are denser; chilled ceilings with

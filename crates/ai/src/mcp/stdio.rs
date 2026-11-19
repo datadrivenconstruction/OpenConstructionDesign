@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The bridge for agents that speak only stdio: one JSON-RPC message per line, forwarded to the
 //! running editor. It adds no authority: it needs the same token and passes the same checks.
 

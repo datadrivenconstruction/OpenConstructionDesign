@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Project from a brief: every typology passes the gates, errors name the field and the fix,
 //! the same spec gives the same project, and a 9-storey section builds within its budget.
 

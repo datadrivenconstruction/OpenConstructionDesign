@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The `.ddcrev` zip: fixed entry order and timestamps, so equal contents give equal bytes.
 
 use std::collections::BTreeMap;

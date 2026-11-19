@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! XLSX round trip on an IFC-sourced model: import a file, export the book, edit cells
 //! (height, Mark, a user parameter, a wall's level), apply, save the patched `-edited.ifc`
 //! and read it back. The edits must be in the file, GlobalIds and untouched elements must

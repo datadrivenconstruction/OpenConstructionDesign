@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Short measured fill probe for `Auto`: time to shade a small multisampled target to completion
 //! on the GPU, reported per megapixel. Any error gives `None` and `pick_tier` stays conservative.
 

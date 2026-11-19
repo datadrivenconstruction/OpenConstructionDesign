@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! "Widen the doors of L2": the item remembers what it was built on (the door table by filter,
 //! level L2, the host walls and their type) and what it writes (the 12 doors), through a replay.
 

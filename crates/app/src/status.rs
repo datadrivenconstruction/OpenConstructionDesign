@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Severity of a status line, set by the code that raises it instead of guessed from its words.
 use crate::editor::Editor;
 use ddc_ui::notify::Level;

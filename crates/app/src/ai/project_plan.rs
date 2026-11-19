@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A project from a brief as one plan item. The spec is stored and the builder runs on every
 //! compile; each storey writes into its own fixed slot block. Apply also stores the spec and
 //! the element of every slot in the model (`prop`, kind [`RECIPE`], ref 0), so a later

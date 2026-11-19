@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Ball node of a space frame or dome: a solid ball, and on each member a hexagon sleeve, a cone
 //! welded to the tube end and a bolt screwed into the ball. The ball is the smallest of the
 //! series on which the sleeves of the closest pair of members keep a free angle.

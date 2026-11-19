@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Purge unused: wall, slab and member types, component types and families nothing refers to.
 //! `purge_candidates` is the preview; `purge_unused` removes the chosen items in one journal
 //! entry, so one undo brings every row back byte for byte. The last type of a kind is kept

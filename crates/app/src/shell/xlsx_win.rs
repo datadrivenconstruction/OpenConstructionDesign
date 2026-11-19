@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! "Data → Export to XLSX / Import from XLSX": the model workbook and a preview of edits before
 //! applying (added / changed / deleted, cell list, errors with addresses like `Sheet!A1`).
 //! Live link: while the window is open the workbook is polled once a second; once it is saved

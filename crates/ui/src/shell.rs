@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Shell composition: title bar (A), ribbon (B), context bar (C), viewport (F),
 //! command line (G), status bar; palette and toasts float. Routes keyboard to commands.
 use crate::commands::{MnemonicEvent, MnemonicInput};

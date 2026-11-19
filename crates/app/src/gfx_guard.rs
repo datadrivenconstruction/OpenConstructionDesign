@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Startup crash memory. A native driver crash cannot be caught in-process, so a marker file is
 //! written before any GPU call and removed after the first frames. A marker left behind means the
 //! previous start died: this one moves one step along the recovery ladder (`gfx::recovery_ladder`)

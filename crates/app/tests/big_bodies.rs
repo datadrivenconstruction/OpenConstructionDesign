@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! 3D pick bodies after an edit: `Bodies::update` reuses the bodies of unchanged meshes and
 //! placements and equals a full build (same bodies, order, hits).
 //! Budget at 1M placements, in release:

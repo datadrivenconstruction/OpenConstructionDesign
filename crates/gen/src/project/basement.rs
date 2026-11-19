@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Storeys below ground. The corridors, stairs and lifts of the ground floor run straight
 //! down; the rest of the box under the building is parking, narrow leftovers are stores.
 

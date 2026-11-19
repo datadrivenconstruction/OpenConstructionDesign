@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A block of buildings on plots: shared site rules, parallel build, the block check.
 
 use ddc_gen::project::block::{self, BlockInput, Edge};

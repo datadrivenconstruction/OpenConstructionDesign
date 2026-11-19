@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Steel connection bench on a plain member grid (columns, beams, diagonal braces; no named
 //! object): two equal batches placed side by side in one model. Auto connections of the second
 //! batch cost what the first did, each connection stays within a time budget, and the 3D scene

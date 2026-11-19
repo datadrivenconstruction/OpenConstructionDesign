@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Shared helpers of the plan generators: a layout builder and room names.
 
 use crate::{GLayout, GOpening, GRoom, GWall, WallRole};

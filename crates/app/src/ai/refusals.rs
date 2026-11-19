@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The editor's side of typed refusals (`ddc_ai::refusal`): what an `AiError` refuses as, and the
 //! text the person reads where the model read the refusal's JSON.
 

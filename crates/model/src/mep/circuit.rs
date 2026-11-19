@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Electrical circuits (schema 48): a panel (a component with a power connector) feeds numbered
 //! circuits, each a list of device connectors with a load. The physical carrier is the panel's
 //! power network (conduits and trays); circuit cable lengths, currents and the voltage drop are

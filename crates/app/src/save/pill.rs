@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The status bar's source pill (`IFC up to date`, `IFC: 12 edits since`; a click saves) and the
 //! running save for the tasks pill. The text is read once per change of the journal, not per frame.
 

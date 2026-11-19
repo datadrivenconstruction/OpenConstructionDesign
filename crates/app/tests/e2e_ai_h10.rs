@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! H10, the 90 m arch footbridge, through the assistant's tool path: help finds the bridge
 //! recipe, the generator is run from it, the plan is applied (one undo step) and every oracle
 //! of the H10 case is read off the saved model.

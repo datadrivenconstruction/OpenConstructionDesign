@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Rooms: an interior point + name/number/height. The outline is a face of the arrangement of the
 //! level's wall footprints (`ddc_geom::rooms::arrange`). Decision: recompute immediately on any
 //! wall/room edit in the same transaction (like `wall_qty`), with no "stale" flag; no `room_qty`

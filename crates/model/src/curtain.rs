@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Curtain walls: axis (segment/arc), bottom and height, U grid (along the axis) and V grid (along the height) by pitch
 //! or explicit lines, mullions (interior and border), a panel per cell (`curtain_panel` stores
 //! only deviations from glazed). Quantities are computed exactly from the `ddc_geom::curtain` layout.

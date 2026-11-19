@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! One scaffold for every dialog and tool window: size classes, remembered geometry, Enter/Esc,
 //! one primary action, quiet secondary and distinct destructive actions, empty, error and
 //! progress states. Colours come from the theme through `egui::Visuals`.

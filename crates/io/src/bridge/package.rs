@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Signed bridge package: the manifest lists every file with its SHA-256 and is signed as a whole.
 //! Before each run the listed files (and only those) are copied into a private per-run folder,
 //! locked against writes, hashed and compared with the manifest; the copy is what runs, so a swap

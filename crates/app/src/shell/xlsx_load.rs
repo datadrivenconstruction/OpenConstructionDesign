@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Reading a book for the import preview on a worker: the model is read through its own
 //! connection and never changed, so the window stays responsive and a cancel loses nothing.
 use std::path::{Path, PathBuf};

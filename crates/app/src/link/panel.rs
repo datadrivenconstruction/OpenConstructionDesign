@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The ERP project panel and the one command "Publish to ERP". Nothing shows until a link
 //! exists: a `.ddclink` was opened (after the user turned the link on), or the open model
 //! lives in an ERP work folder. Network work runs on a worker thread; the window polls it.

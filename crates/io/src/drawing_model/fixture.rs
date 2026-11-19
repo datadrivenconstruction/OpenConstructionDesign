@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Reference plan for tests and snapshots: two 6×8 m rooms within 300 mm outer walls and a
 //! 200 mm partition, door and window blocks, axes with tags, columns with a solid fill,
 //! an area outline (legacy POLYLINE), MTEXT with codes, a dimension with an anonymous block, pattern

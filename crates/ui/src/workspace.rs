@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Switchable workspaces (docs/design/LAYOUTS.md): layouts are data, `arrange()` is a pure
 //! placement function, persistence is `layout=` in prefs.txt plus `workspaces.json`.
 use crate::theme::{Breakpoints, Mode};

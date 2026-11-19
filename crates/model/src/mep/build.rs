@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A whole planned network written as one journal entry: systems (reused by name), wall sleeves
 //! and slab holes for the crossings, runs, connector links and circuits. The networks it touched
 //! must still build at the end, or everything is rolled back. The planner (`autoroute`) yields a

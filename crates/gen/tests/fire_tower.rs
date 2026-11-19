@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A 40-storey office tower (the bar plan takes depths up to massing.depth, 28 m) with a fire core: two protected stairs on every storey, rated
 //! stair enclosures with rated doors, the firefighting lift, sprinklers and the curtain wall.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Hierarchical lattices: a tower lattice whose long members are lattices themselves, whose
 //! chords may again be laced pairs (up to three lattice levels). Identical members are built
 //! once as prototypes in their own axes and placed by rigid transforms, so a structure of

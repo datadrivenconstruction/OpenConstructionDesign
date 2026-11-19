@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Column base: a base plate under the column end, anchor rods outside the section with
 //! plate washers and nuts, welds all round the section and, for larger sections, stiffeners
 //! in the anchor gaps. The plate lies in the column's end plane, so an inclined or rotated

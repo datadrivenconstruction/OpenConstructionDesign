@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Every showcase project (ddc-model tests/showcase) loaded into the editor: it shows all of
 //! its elements, the editor's book (with the family sheets) comes back untouched with no
 //! change, metric and imperial, and one Walls edit applied as the XLSX window does undoes in

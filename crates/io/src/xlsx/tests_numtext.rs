@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Text cells a spreadsheet coerced into numbers or dates (`01` -> 1, a 19-digit code ->
 //! 1.2e18, `1-2` -> a date) never rename elements or change text parameters; a real numeric
 //! edit still applies; the export writes such text as text.

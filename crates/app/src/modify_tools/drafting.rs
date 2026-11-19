@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The plan lane inside a drafting view: preview of the edit tools in the view's own
 //! coordinates, and the dimension, distribute and mark tools on the view's items. The hidden plan
 //! is never read or written here; snaps come from the view's items alone.

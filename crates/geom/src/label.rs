@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Overlap-free label layout: greedy in order; each label has a list of candidate offsets
 //! (the first is the original position). The first candidate with no overlap with obstacles and already
 //! placed labels is chosen, otherwise the one with the smallest overlap area (ties go to the earlier one).

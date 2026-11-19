@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Stairs along a free run line (GEOM_PRO_PLAN W6). The centre line is a chain of straight and
 //! circular pieces (one bulge per piece), joined tangentially or, between two straight pieces,
 //! at a corner. Nosings are spaced equally along the walk line (offset `walk` from the centre),

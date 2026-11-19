@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Air systems: terminal flows, equal-friction sizing, plenum routing, critical path.
 use super::*;
 use crate::{CompSpec, LayerSpec, SlabSpec};

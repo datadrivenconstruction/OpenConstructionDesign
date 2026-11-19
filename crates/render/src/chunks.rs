@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Scene in chunks for a large model: meshes are split into 16 m cells (opaque and
 //! translucent separately), each chunk has a content fingerprint; after an edit only chunks
 //! with a different fingerprint are re-uploaded to the GPU. Every frame: frustum culling and

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The plan card: counts by created, changed and deleted, per-item check marks, hover to highlight
 //! on the plan and in 3D, click to zoom, and the one primary Apply.
 

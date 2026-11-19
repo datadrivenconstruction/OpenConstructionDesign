@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Air duct sizing by equal friction and pressure loss of a duct path.
 //! Friction: Darcy-Weisbach, friction factor by the Altshul formula (steel duct, k = 0.15 mm).
 

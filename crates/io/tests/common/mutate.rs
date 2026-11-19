@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Deterministic mutation fuzz harness shared by the ignored fuzz tests (io, app).
 //! Budget per target: DDC_FUZZ_SECS (default 3), seed: DDC_FUZZ_SEED (default 1).
 #![allow(dead_code)]

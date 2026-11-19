@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Value provenance (schema 44): who set a project parameter value and whether a person
 //! checked it. One row per value, keyed like a parameter lock: (table of the row, row id,
 //! parameter name); a type parameter sits on the type row.

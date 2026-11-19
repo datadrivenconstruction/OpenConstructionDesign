@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Revision packages (`.ddcrev`, format `ddc-revision/1`) as written by the project link: a zip
 //! with `manifest.json` and the full model `model.ddc` beside exports. Comparing against a
 //! revision needs only the model; it is unpacked with size limits into a work folder.

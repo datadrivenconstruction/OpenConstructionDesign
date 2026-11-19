@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `Editor::run_ops`: model edits as data (docs/design/AI_NATIVE.md section 2, "UI tools").
 //!
 //! An envelope is applied, previewed and replayed through one seam, [`EnvelopeExec`]. The

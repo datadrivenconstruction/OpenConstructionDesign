@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Grid lines and reference planes: pick on the line, edit, move, copy, delete, one undo each.
 
 use crate::editor::{structx, Editor, OpFn, Sel};

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A small XML reader and writer for BCF parts. Elements, attributes, text, CDATA and the five
 //! predefined entities plus numeric references; namespaces are dropped from names. A DOCTYPE is
 //! refused (no entity expansion, nothing to resolve), depth and size are capped.

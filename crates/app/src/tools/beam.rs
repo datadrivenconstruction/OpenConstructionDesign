@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Beam (BM): click start/end, chained; Space flips direction; Z elevation relative to the level.
 
 use super::{column, Active, Rec};

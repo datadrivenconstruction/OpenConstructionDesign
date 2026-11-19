@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Project options window: sets and options, what the current plan and 3D show, enabling selection,
 //! accept and delete (with confirmation: they delete elements).
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Plan transforms of stairs, railings, grids and reference planes, the helper behind the
 //! matching `Target`s. A railing on a stair rides along with it; a grid moves in place, so
 //! dimensions that reference it stay attached, and only columns placed on its intersections

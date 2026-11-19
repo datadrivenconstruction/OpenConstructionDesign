@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Form rows: the one primitive behind every «label — field — unit» line of the app (Properties,
 //! option bars, canvas bars, dialogs, AI tabs). A row has one fixed height; label, field, value
 //! and unit sit on the row's centre line, numbers are right-aligned in tabular digits, units are

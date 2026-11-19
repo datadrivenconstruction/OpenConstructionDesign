@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The ranges a brief may ask for. The spec reader checks against them and the tool schema
 //! shown to the assistant prints them, so the two never disagree.
 

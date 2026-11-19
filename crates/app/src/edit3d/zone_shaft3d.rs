@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! 3D bodies of shafts and zones. A shaft is a translucent prism from its base to its top, drawn
 //! once at its base level. A zone has no volume: a small pad marks it under its first room, at
 //! the same point as its plan marker.

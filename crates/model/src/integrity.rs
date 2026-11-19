@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Integrity: dangling-reference checks and deletion of reference rows with orphans forbidden.
 //! Child "parts" (`OWNED`) are deleted together with their owner; all other references block deletion.
 

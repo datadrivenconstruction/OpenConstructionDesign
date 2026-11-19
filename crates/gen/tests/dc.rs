@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The data centre fit-out against the live hard scenario: about 600 racks in three halls,
 //! cooling units along the halls, chillers N+1, UPS and batteries, generators outside, trays
 //! over the racks and a dual-path chilled water network, every run end joined.

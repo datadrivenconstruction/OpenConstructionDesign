@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Every probe runs for every row of `FAMILIES`, with no per-family test code. `GAPS` is the
 //! ratchet: what fails today is listed, a listed gap that now passes fails the test, an unlisted
 //! failure fails the test, and `GAPS_CEILING` only goes down.

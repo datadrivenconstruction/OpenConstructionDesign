@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The data halls: rack rows in hot and cold aisles between two walls of cooling units, the
 //! rows running from one unit wall to the other so no rack is farther than `dc.crah_throw`;
 //! the cooling units, their chilled water headers in the floor void joined into a ring, and

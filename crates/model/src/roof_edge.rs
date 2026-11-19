@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Roofs and edges (schema step 27): extrusion with arcs and offsets, joining to another
 //! roof, outline-roof presets, skylights (they cut the roof), eave soffit, profile
 //! elements along edges (fascia, gutter, slab edge, wall moulding/cornice, reveal, which is

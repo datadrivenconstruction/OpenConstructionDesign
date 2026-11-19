@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! 3D visual styles and the face-tag bits they use: screen-door transparency (categories,
 //! x-ray) and section fill (poche) carried as a colour directly in the tag. Tag layout:
 //! bit 31 — lines; 30/29 — network colour/shell; 28 — section fill (+ 0xRRGGBB);

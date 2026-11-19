@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `geometry.glb` of a revision (contract README s3): Y-up metres, one node per element named by
 //! its key, extras `{element_key, type_key, ifc_class}` only, equal shapes share one mesh,
 //! triangles with normals, colour by `ifc_class`. The root-less layout keeps vertex data in the

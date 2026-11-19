@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! MEP connections read back from IFC: IfcDistributionPort nested in a network segment or a
 //! component (IfcRelNests, or IfcRelConnectsPortToElement in IFC2X3), joined by
 //! IfcRelConnectsPorts. Run-to-run joins are geometric in the model (ends that meet), so they are

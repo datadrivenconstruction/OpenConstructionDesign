@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Memory facts and the memory ceiling of a bridge child. On Windows the child joins a job
 //! object whose job-wide memory limit stops a runaway decode; the job dies with the guard.
 //! Elsewhere both are no-ops (`None`).

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Slab shape editing: change a vertex/point elevation, add a point, a split line,
 //! a drain sump with automatic slope; variable or constant thickness. Over the plan: fill by dz,
 //! drain arrows on each face (downslope) and live volume/top-area readouts.

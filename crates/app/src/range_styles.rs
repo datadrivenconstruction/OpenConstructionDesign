@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Cut and projection line styles per category of the plan, with halftone. The live plan and the
 //! sheets read the same overrides (`range_layer`, `ViewStyle`). Apply is one undo step.
 

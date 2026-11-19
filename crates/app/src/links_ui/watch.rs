@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Watching link files: a modification time newer than the load gives a calm notice once and
 //! a line in the links window; only the user reloads. The disk is read in a thread: the file may
 //! sit on a slow network folder.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A new level in the IFC patch: appended as a storey of the file's one building, everything
 //! else byte for byte, and a file whose building is not unambiguous refuses.
 

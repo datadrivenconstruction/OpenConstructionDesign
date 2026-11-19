@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Draft checks in the chat: the realism critic answers a geometry step with tasks, its
 //! findings show on the plan card, and `measure` always says where its number comes from.
 

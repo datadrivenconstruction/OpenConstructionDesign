@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Oracles on models built by hand with known numbers, in both outcomes (pass and fail).
 
 use super::case::{self, Case};

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Layout chooser: a live schematic of `arrange()` in the real panel colours (LAYOUTS §4) — no
 //! second render, so a card always matches the actual layout. Also the title bar work-mode
 //! group (view segments + layout button) and its popover, with the pure state they run on.

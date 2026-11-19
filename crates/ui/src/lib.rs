@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! ddc-ui: application shell kit on egui — design tokens → style, icons, command registry,
 //! fuzzy palette, ribbon, context/status bars, toasts, en/ru localization.
 pub mod cmdargs;

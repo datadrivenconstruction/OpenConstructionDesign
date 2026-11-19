@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Wall tops by rule: a straight wall whose flat top reaches the roof and whose axis lies under
 //! it gets a top following the roof underside (`wall.top_auto = 1`, `top_roof` is the roof over
 //! most of the axis). Stretches under several roofs (joints, extensions) take the lowest of the

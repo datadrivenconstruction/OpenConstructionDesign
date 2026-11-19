@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Structure (schema 26): pad footing (click; at a column — under it), strip footing (click on a
 //! wall or two points), slab (outline), brace (two points; ends attach to columns and
 //! beams), truss (bottom chord by two points), beam system (outline). Writing is one undo step.

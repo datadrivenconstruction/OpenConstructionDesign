@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! What a built project owes its typology: the clear heights the spaces ask for, the levels
 //! below ground and the rooms placed on them, the exits and their width for the people the
 //! spaces hold, and the retaining walls against the depth they hold back. A failure means the

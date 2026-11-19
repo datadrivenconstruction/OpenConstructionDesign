@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The draft of one external agent connection. Its writes are plan items like the chat's, kept
 //! apart from the chat's card: the worker swaps them onto the scratch copy for each call, then
 //! puts the chat's plan back. Nothing here reaches the live model; only the person's Apply does,

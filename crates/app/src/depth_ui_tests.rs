@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Depth in the editor: chip and estimate texts in both languages, the setting written as
 //! one undo step, the heat map rows and its on/off through the view state, and the setting
 //! editor laid out inside the narrowest AI panel.

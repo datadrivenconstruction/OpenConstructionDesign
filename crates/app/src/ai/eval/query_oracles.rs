@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Oracles that read the model through the product's own tools: the search language
 //! (`oracle.query`), the totals of the quantity takeoff (`oracle.qty`) and the network check
 //! (`sizes_typical`).

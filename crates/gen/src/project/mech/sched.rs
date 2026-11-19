@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Schedules as tables (header row first) and a schematic of the systems as SVG: the unit and
 //! plant on the roof, the air and water risers, and per storey its terminal units.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The AI's reading of the one product refusal (`ddc_model::refusal`, shared with the tool
 //! spine): which codes the AI answers, their texts, and the wire forms. No second type here.
 //! Texts: `refusal.<code>` (what will work), `refusal.<code>.what` (what happened), en+ru in

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Scenarios as a real architect works: ribbon command by id, clicks and typed digits in the
 //! plan, undo/redo from the keyboard. Nothing is written into the model directly except the
 //! second storey (the level dialog is a window) and the sheet (its window state is not

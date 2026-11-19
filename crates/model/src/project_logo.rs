@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Company logo of the project: one PNG kept as property `png` of `project_logo` row 0, so it
 //! travels inside the project file. The model only guards the container (PNG signature, size);
 //! decoding, scaling and the friendly errors live where the file is picked.

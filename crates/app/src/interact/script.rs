@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Event scripts (INTERACTIONS.md §2): `parse` text into steps, `run` them on an
 //! `Editor` without a window and compare the checks, `record` a live session back into text.
 //! Deterministic: time comes only from `tick`/`hover`, no clock, no randomness.

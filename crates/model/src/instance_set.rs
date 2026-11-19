@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Cached placements and prototype geometry for the 3D scene, without per-row strings or boxes:
 //! a million rows stay a few tens of megabytes. Reads through its own connection when the model
 //! lives in a file, so a background thread does not touch the UI connection.

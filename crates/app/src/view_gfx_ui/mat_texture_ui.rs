@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Texture section of the material card: built-in surfaces as swatches, tile size and rotation,
 //! an image file (kept as a path or stored in the project), and a preview at real scale.
 //! Every change is one undo step through `run`.

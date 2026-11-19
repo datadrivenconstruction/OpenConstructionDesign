@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! State machine of the Wall tool (no UI): mouse/key events -> draft -> commit.
 
 use crate::snap::{candidates, Snap, SnapCtx, SnapKind, SnapWall};

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The loading window of every open and import: it shows in the frame the file is picked or
 //! dropped, before the reader starts, and follows the real pipeline: stages with finished ones
 //! checked, a bar from real counts, MB read or elements of the total, what is read now, elapsed

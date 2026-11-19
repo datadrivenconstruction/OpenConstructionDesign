@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Plan: contours (thin base lines, thickened every `major` with labels), terrain boundary,
 //! subregion fill, building pads and zero-work lines, points in edit mode, tool rubber band,
 //! north arrow. The built terrain is cached by editor revision.

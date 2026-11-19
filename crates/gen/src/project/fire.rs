@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Fire safety and egress. The checks: occupants of every room from its use and floor area,
 //! the exits and exit width each storey and each crowded room needs, the stair width the
 //! occupants of a storey need, dead-end corridors, the spacing of exits, and fire compartments

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `ddc publish <file.ddc> --out <rev.ddcrev>`: a revision package with no window and no GPU.
 //! Built with the `link` feature only; the log lists every repair, skip and assumption.
 

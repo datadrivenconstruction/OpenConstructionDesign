@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! "Overwrite type values": before a load replaces project type values, one question names
 //! the types and counts the values and placed instances. When nothing would change, nothing
 //! is asked. The tick is cleared by every committed load (see `load_set`).

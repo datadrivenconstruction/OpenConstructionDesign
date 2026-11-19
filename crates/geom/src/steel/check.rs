@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Rule checks of a built connection against the catalogue: bolt series and hole sizes, edge
 //! and end distances, pitches, plate thickness, and clashes of bolts with each other, with the
 //! joined members and with plates they do not pass through.

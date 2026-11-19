@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Shared prototypes: one built [`Detail`] per distinct opening type, size and level of detail;
 //! a building's hundred identical windows build once and are placed a hundred times.
 

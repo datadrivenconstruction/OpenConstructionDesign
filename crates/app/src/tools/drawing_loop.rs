@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Closed drawing loop under a point: fallback of the one-click floor, slab and ceiling pick
 //! when no wall region exists. Loops are chains of underlay segments; the smallest closed
 //! chain around the point is the outline, closed chains inside it are holes.

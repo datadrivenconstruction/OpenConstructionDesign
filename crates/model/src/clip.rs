@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Clipboard: a snapshot of selected elements (rows of all their tables, lookups by name,
 //! levels by elevation) and paste with renumbering into the same or another model as one journal entry.
 //! Columns come from the schema, so new columns are copied without changes to this file.

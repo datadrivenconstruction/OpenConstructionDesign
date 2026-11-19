@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Structural analysis job (docs/design/STRUCTURAL_ANALYSIS.md 1.1, 1.6, 1.7): the analytical
 //! model with its keys and overrides plus the stored loads become the solver input
 //! ([`adapter`]), loads are expanded to member and nodal loads ([`loads`]), the frame is solved

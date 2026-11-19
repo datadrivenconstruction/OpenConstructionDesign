@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Steel frame generator: lattice tower, guyed triangular mast, portal frame shed, braced
 //! multi-storey frame, or a single plane truss, with riveted or bolted joints derived and rule-checked.
 

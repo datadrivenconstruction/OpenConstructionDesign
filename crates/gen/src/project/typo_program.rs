@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A brief that names a building type but no rooms or outline: the default programme and plan
 //! come from `data/typology_programs.json` (keywords in en/ru/de/es/zh, area shares, en/ru
 //! names), so the generator never relies on the model to list them. A type that already has a

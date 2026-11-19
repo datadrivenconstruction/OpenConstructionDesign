@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Room kinds the brief names beyond the built-in ones (foyer, gallery, atrium, lobby) and
 //! the apartment limit of a floor, both driven by rules; plus the windowless kitchen check.
 

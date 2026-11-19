@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! An untouched book or panel writes nothing: {metric, imperial} x {point, comma mark} over the
 //! schedule book (walls and doors with project parameters; numbers, and every numeric cell saved
 //! as text) and the imported IFC properties (shown text committed unchanged, read back by the

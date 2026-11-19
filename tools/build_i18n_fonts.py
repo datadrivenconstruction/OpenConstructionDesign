@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: AGPL-3.0-only
+# SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 """Builds the locale fallback fonts in crates/ui/assets/fonts/i18n/ from Noto sources (SIL OFL 1.1).
 
 Usage:  python tools/build_i18n_fonts.py fetch [SRC_DIR] [NAME..]   download the pinned sources (~40 MB)

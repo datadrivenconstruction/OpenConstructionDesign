@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Stairs and railings (schema 14). A stair is defined by bottom/top levels, shape (straight, L, U),
 //! width, maximum riser and tread (or the 2R + T rule); riser count, landings, stringers, exact
 //! solids and quantities come from `ddc_geom::stair`. A railing follows a stair edge or a sketch;

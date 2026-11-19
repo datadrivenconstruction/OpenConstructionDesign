@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Corpus list for the big-file benchmark: rows of the corpus list file
 //! (`| # | KB | why | `path` |`), the biggest files per format first.
 

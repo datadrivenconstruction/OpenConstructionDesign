@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Curtain systems on freeform surfaces (geometry plan W7). Table `panel_system` keeps the
 //! host freeform id, the layout (divisions, pattern, limits, planarize rounds; JSON) and the
 //! mullion and glass sizes. Panels, mullions and quantities are derived from the host on every

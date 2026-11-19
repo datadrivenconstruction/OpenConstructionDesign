@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! View graphics on a sheet: line and fill overrides, thin lines, detail level and material
 //! hatching. The same `ViewPaint` result as on screen; paper does not use the material colour.
 

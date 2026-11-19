@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! 2D drawing: layers, lines, polylines with bulge, arcs, texts, blocks and inserts with attributes.
 //! The `d_*` tables are readable with plain SQL; each add/remove is one undoable operation.
 

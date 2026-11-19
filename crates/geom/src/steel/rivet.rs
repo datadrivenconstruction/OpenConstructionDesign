@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Rivets and instanced fasteners. A riveted joint keeps only its layout parameters; the
 //! individual rivets are compact instances (20 bytes) of a few prototype meshes per size and
 //! level of detail, so a tower with millions of rivets stays in tens of megabytes.

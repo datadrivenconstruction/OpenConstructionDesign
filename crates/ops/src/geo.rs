@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Placement, profiles, forms and patterns (AI_NATIVE.md sections 4.1-4.6).
 
 use schemars::JsonSchema;

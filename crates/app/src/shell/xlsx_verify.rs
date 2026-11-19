@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! XLSX Apply check: the step just written must do exactly what the accepted preview rows
 //! say. The plan is taken from the batch before the write (with the same pinned and locked
 //! split the editor makes); after the write the change journal and the model are compared

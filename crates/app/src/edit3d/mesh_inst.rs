@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Mesh cache (`mesh_geo`/`mesh_proto`) in the 3D scene: placements are drawn as instances, each with its own
 //! pick number. Mapping rule: a row on the active level (or with no level) gets a slot
 //! `Target(Cat::Mesh, id)` in the same range as provider parts, so selection, hiding and

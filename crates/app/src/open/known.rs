@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A model file that is already the source of a project opens that project instead of building
 //! a second one: the lookup goes over the recent projects, reads only their `src_file` rows and
 //! asks the file system for size and mtime (never the file's bytes).

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 use super::*;
 use crate::ai_option::{materialize_options, OptionRec, OptionStatus, Replay};
 use crate::{LayerSpec, WallSpec};

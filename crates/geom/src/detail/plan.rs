@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Plan symbols of a door from its type: each swing leaf drawn open at 90° with its swing arc,
 //! sliding panels with their travel; in the opening's local plan frame (x along, y across).
 

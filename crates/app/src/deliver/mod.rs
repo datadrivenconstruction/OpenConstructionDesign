@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Brief to delivery: one review, one Apply, the files in the background, one result card
 //! (docs/design/FLOW_BRIEF_TO_DELIVERY.md). Every step is an existing piece: the drawing set,
 //! the sheet print and the IFC save job; this module only orders them.

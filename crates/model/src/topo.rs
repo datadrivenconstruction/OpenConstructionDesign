@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Terrain (topo solid) and site properties. Source data is stored: survey points (with stable
 //! numbers for editing), break lines, boundary, subregions, pads; the surface is built on read
 //! (`topo_built`). Elevations are absolute, m. Each edit is one journal operation.

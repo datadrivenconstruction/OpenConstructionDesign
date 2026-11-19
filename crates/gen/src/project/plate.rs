@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Storeys on any footprint. Rooms line the facade loop in bands `band_depth` deep, cut
 //! across the band only where it has its full depth; a corridor fills the plate inside the
 //! bands; the core stands in the middle when it fits every floor, else in the band of the

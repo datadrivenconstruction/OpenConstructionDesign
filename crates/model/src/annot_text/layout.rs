@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Lays out an annotation into strokes: coordinates are view metres; thicknesses, dashes and text heights are
 //! sheet mm. Screen and sheet (PDF, DXF) draw the same result, so label size on paper is the
 //! same at any view scale, while detail geometry stays in model dimensions.

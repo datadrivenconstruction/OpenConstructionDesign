@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The one stacking order of the window, bottom to top:
 //!
 //! 1. `Canvas`: the views and what floats on them (edit bar, hints, overlays, previews);

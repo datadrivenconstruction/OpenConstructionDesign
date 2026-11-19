@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Why a brief cannot be built: the smallest set of its own demands that cannot hold together,
 //! and the nearest relaxations that would let it build. A demand is a rule the brief sets
 //! (under `rules` or through a rule's brief field), a row of its room programme, its storey

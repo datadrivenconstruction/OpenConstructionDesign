@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Saved workspaces: user-named copies of the current layout (`custom:<slug>` in
 //! `workspaces.json`), rename, remove and quick switch. Pure list edits; the shell persists
 //! the result with [`crate::workspace::save_custom`].

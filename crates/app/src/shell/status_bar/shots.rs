@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Offscreen shots of the status bar: every control hovered, pressed and clicked (its menu
 //! open), en and ru, at 1x, 1.25x and 1.5x. `DDC_SHOT_DIR` names the folder, `DDC_SHOT_TAG` the
 //! file prefix. `cargo test -p ddc-app shots_status_bar -- --ignored`

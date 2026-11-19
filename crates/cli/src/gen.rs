@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `ddc gen --brief <brief.json> --out <model.ddc>`: generation with no window and no GPU.
 //! Built with the `link` feature only; the log names every brief field the generator did not use.
 

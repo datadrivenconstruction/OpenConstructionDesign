@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Import wizard backend: model files → meshes by material in model axes (metres, z up), ready
 //! for `ddc_geom::component::from_mesh::family_text`. IFC type objects: `crate::ifc::type_drafts`.
 

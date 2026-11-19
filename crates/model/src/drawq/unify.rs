@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! One view range per plan. The four-plane range of the drawing quality window is a view of the
 //! plan's stored view range (`view_gfx`, template aware, one undo step per change); ranges that
 //! older builds saved under `range:<level>` in `drawq_style` move there on open.

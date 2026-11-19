@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Outline of a tapered or curved tower: half-width over height, either the closed rule
 //! `w(z) = a + b·exp(-z/k)` or a user spline through `(z, w)` points (monotone cubic, so the
 //! leg never bulges between the points the user gave).

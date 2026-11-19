@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Command usage («frecency»: frequency decayed by age) for palette ranking, the recent-commands
 //! bar and «Repeat last». One store per UI thread; the host loads/saves it as JSON.
 use crate::cmdargs::{self, Args};

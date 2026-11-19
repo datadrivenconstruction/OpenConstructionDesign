@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Terrain sources for toposolids: survey point files (CSV/TSV/XYZ), DXF contours, 3D polylines,
 //! faces and points, IFC site/terrain bodies. Output is plain points, breaklines and a boundary;
 //! the model builds the surface.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Data utilities: glTF export, project information with coordinates, purge unused;
 //! DXF export of the edited drawing.
 //! Model edits go through `Editor::run_op`: one window action = one undo step.

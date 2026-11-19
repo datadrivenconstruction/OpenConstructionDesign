@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Run blob format (design 1.4): `DDCB`, u32 version, u32 header length, a JSON header (keys
 //! table and layout), then little-endian f64 values. A run stays readable after the model
 //! changes because the header carries the keys.

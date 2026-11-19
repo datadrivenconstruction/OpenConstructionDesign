@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Legends: a view without model geometry. Rows are a sample (line style, fill, detail component, wall
 //! type) and a caption; any annotations can also be placed on the same view. The view goes on a sheet as a table.
 

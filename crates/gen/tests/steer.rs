@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Steering by edits: after an edit the free layout searches again only the zones the edit
 //! changed, gives the same building a cold build gives, and with the score is back within
 //! 300 ms. One test per binary: the zone store is shared by the threads of a test binary.

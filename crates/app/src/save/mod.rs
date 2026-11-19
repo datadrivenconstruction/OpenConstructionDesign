@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Saving to IFC: `file.save_ifc`, `file.save_ifc_as`, `data.export_ifc`. A named save on its own
 //! job slot, separate from Ctrl+S, which only ever writes `.ddc`. Default target is a copy,
 //! `<stem>-edited.ifc`; the imported file is replaced only after an explicit per-project choice.

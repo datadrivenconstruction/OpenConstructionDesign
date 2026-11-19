@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Create from parameters: a stub generator stands in for the real ones, and direct creation
 //! shows that an element of the plan can be named before it exists.
 

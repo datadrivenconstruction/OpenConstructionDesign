@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Gusset nodes: truss web members on a chord, and braces on a column, a beam or the corner
 //! of both. The gusset lies in the plane of the members, is welded to the host faces and
 //! takes each web member on a line of bolts along its axis. Members are set back from the

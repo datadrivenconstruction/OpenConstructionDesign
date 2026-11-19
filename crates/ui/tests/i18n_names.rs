@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Names of catalog keys and fragment files. Rules live in `data/i18n_names.json`:
 //! no work id (`id_pattern` on the first key segment and on file-name parts, `deep_id_pattern`
 //! on later key parts) and no product name (SHA-256 of lowercase words, from that file and from

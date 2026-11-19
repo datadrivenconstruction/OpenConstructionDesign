@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A model file opens as a new project built on a worker (section 3.2 of the open/save
 //! contract): the worker makes its own working file, reads and commits under bulk pragmas, builds
 //! the mesh cache, stores the import cache entry, and hands the finished model over. The current

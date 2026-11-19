@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! "Read 'X' as Walls": the card of the XLSX preview for a main sheet the user renamed. The
 //! workbook is never written; a click only sets this import's sheet alias and re-reads.
 use crate::tr_lang;

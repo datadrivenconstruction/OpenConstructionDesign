@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Frame-time gate on the adapter the app picks (`docs/design/PERF_3D.md`, «Measured»).
 //! Limits are about twice the numbers measured on the reference laptop GPU (GeForce MX250,
 //! DX12), so a regression of the kind fixed here (shader compiles on the first frame, a stalled

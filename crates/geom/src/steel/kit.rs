@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Builder state shared by the ten connections: parts, bolts, notes and the catalogue choices
 //! every detail makes the same way (bolt size, plate thickness under the ratio rule, fillet
 //! legs, welds of a member section onto a plate).

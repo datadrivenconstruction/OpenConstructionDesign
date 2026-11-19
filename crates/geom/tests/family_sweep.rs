@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Every shipped family builds across its declared parameter ranges: the span of the default
 //! and the type values of each numeric parameter (min, max, mid, every type value, seeded
 //! random values), one parameter at a time, at every level of detail. A required part (not a

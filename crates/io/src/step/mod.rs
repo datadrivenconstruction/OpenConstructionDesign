@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! STEP AP203/AP214 reader (docs/design/IO_FORMATS.md): own Part 21 parser; B-rep faces
 //! tessellated in parameter space, faceted B-reps and shell models; assemblies through
 //! representation relationships with item transforms and mapped items; length units;

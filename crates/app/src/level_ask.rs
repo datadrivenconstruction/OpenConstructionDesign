@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Deleting a level that still holds elements: say how many, then offer to select them or move
 //! them to another level. Nothing is deleted until the user picks a target; move + delete is one undo.
 use std::cell::RefCell;

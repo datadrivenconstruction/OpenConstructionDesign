@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Trim and extend of drawing lines and arcs against picked boundaries (lines, arcs, circles,
 //! closed outlines). One click is one undo step ([`Step::geometry`]) and marks the drawing
 //! edited like the other modify tools. Nothing is written when nothing crosses.

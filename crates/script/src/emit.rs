@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! What a run builds: parts (keyed solids), the ops that make them, declared params,
 //! measures, constraints and the log. Turned into an envelope once the script ends.
 

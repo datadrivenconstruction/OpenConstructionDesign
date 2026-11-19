@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Read-back check of a freshly written book: the dry-run of the new file against the model
 //! it came from must find nothing to do. `mismatches` lists what the dry-run report holds
 //! besides the tolerated items; the first entry is the cell the caller names.

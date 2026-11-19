@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Stream filters: Flate (+ PNG/TIFF predictors), ASCIIHex, ASCII85, LZW.
 //! Each filter's output is capped at `limit` bytes (protection against "bombs").
 

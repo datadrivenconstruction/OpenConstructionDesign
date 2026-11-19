@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Analytical model + stored loads -> `ddc_fem::Frame` (design 1.6). Members are split into
 //! segments at their inner nodes (`m:<kind>:<id>#<k>`); only nodes used by members go to the
 //! solver, in ascending analytical order. Local axes: x from start to end, the model's section

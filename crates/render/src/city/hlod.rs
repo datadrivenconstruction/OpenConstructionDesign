@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Voxel proxies for hierarchical detail: geometry is voxelized conservatively (exact
 //! triangle-box overlap), enclosed empty space is filled from outside, and the exposed faces are
 //! merged into quads per label. Every proxy surface point lies within `error` metres of the

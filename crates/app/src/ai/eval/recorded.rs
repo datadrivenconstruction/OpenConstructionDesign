@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `--provider judge`: scores a result a live run already left (`<root>/<case id>/model.ddc` and `result.json`)
 //! with the case's oracles, without any provider: the recorded failures stay measurable.
 //! The run's per-step answers were not kept, only the tool names, so this is not a replay of

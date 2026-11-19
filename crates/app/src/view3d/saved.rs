@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Saved 3D views: viewport state ↔ the model's `View3dSpec` (camera, section box,
 //! fill, style, hidden elements, category rules, level view). Coordinates in the spec are
 //! model coordinates (z from the project zero); in the scene z is measured from the current level elevation.

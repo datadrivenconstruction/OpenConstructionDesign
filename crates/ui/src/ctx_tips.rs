@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Tips at the right moment: one short card after the first wall, the first selection and the
 //! first save. Each is offered once for good (the mark is stored when it appears), can be
 //! dismissed, and all of them can be turned off. The host feeds a [`Probe`] every frame.

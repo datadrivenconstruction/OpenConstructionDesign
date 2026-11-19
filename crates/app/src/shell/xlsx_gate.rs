@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Apply gate of the workbook preview: why Apply is off (a locale key, shown as the button
 //! tooltip and as one line under the footer) and the single tick that confirms deletions.
 //! Only the window reads it; what an apply writes is decided by `xlsx_win::apply_begin`.

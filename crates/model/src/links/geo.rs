@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! UI-free link geometry: slicing a mesh with a horizontal plane (plan lines) and intersections
 //! of host solids with link solids. Intersection: AABB with tolerance (broad phase, sweep along x), then
 //! triangle intersection (an edge of one x a triangle of the other) or containment (the center of the

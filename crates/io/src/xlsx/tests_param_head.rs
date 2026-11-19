@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A parameter whose name collides with a sheet column or another parameter reaches the book
 //! under its own header and reads back to itself; a column that fits several is refused.
 

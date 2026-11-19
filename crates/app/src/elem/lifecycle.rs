@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Life cycle of every element family, driven by the `FAMILIES` table alone. Per family and per
 //! capability the table claims: select in plan and 3D, edit every property row, move, copy, rotate,
 //! mirror, array, grip drag, delete, and a chained run of them. After each step:

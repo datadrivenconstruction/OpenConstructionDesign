@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! View templates: create from the current view, apply once to selected views, link and unlink.
 //! A linked view cannot change the fields controlled by its template.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Catalog lint: the chrome shows no text that bypasses the locale catalog.
 //! Source scan is textual (no parser): good enough to catch a new hardcoded label in review.
 use std::path::{Path, PathBuf};

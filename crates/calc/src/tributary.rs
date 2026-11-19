@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Area load distribution of a flat panel to its supporting edges (design 1.7), in the panel
 //! plane. Two-way: every point goes to the nearest supporting edge line (the 45 degree rule for
 //! rectangles; exact partition for convex outlines). One-way: strips along the span direction,

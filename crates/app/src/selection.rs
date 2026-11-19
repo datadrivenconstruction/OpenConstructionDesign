@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Plan selection: "window" box (left-to-right, fully inside only) and
 //! "crossing" box (right-to-left, any touch), Ctrl adds, Shift removes, Tab cycles
 //! candidates under the cursor ("2 of 3"), category filter with counters, "Select similar".

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The vertical skeleton: wet rooms stand over wet rooms, a storey under a wet storey carries
 //! the stack, and shafts and columns stand on their like below, on bars and stepped blocks.
 

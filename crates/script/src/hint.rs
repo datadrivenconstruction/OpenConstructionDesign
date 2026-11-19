@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Script errors as line, column, message and a hint the assistant can act on.
 
 use crate::{ErrorKind, LimitKind, ScriptError, STD_NAMES};

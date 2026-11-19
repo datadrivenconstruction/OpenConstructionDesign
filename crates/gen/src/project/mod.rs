@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Project from a brief: a typed building program the assistant fills, and a deterministic
 //! builder that turns it into storeys of walls, openings, rooms, slabs, stairs and a roof.
 //! The assistant never places geometry itself; the same spec always gives the same project.

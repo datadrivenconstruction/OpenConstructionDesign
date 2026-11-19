@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Abstract input of a tool session. Points are `Pointer`s (a ray and a work plane
 //! in model coordinates) from any view; time comes as `Tick` so delays replay deterministically.
 use super::pointer::Pointer;

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Half-edge B-rep stored in flat arrays (KERNEL.md §4).
 
 use std::collections::BTreeMap;

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Storeys of different heights: a tall level under normal ones. Elevations add up the heights
 //! below, every stair rises its own storey, and each storey's structure stands at its height.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Report texts are English templates; `{}` marks a substitution. The report stores the
 //! English text, which doubles as the key: the app finds the template among the locale
 //! entries `xl.msg.*` (see `crates/ui/data/i18n/<lang>/xl.json`) and renders it in the UI language.

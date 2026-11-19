@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Pure, seed-deterministic generators and family templates. No model access.
 //! Results are schematic starting points: valid geometry, not a checked design.
 

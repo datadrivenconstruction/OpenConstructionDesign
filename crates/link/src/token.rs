@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Where the project token lives: the OS key store, under `ddc-link/<erp host>/<project_id>`
 //! (contract §7). Never a file.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! City layer: a federation of many projects drawn through the chunk renderer. Per update it picks
 //! a cut through each project's proxy tree by screen-space error (frustum and hi-Z: hidden nodes
 //! are never refined), streams full unit content within one memory budget and composes a `Scene`

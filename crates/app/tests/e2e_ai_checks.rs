@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Check and fix: the rule is deterministic code, the model only picks what to fix.
 
 #[path = "e2e_ai_common/mod.rs"]

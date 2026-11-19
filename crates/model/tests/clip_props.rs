@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Clipboard and group properties: paste + undo restore the exact previous hash, repeated paste
 //! leaves no dangling references, and the integrity check is clean after every step.
 

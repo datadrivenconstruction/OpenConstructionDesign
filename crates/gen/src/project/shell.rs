@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Free-form envelope of a plate building (`design.shell`): a skin that swells and leans in
 //! waves round the outline, a roof that rises in a crown to a central opening and rolls with
 //! the eaves, both cut into patches of a size that can be made. The outline must be seen whole

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Project browser (TOOLS_UI §5): groups "Grids and reference planes", "Families"
 //! (Category → Family → Type), "Systems" (network kind → system → segments), "Rooms",
 //! tree search. Also the state of the browser windows and `register()` of their commands.

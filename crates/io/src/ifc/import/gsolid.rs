@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Generic solids written by this exporter (property set `DDC_GenericSolid`) come back as exact
 //! solid rows with their semantic IFC class. A product that does not fit (foreign units, no
 //! storey, a class no solid takes, a bad definition) is left to the other import paths.

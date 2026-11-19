@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Smart defaults: the last type and sizes per category (kept between launches) are filled in when
 //! a tool starts; a tool started in 3D or a section switches the view to the current level's plan.
 use crate::editor::Editor;

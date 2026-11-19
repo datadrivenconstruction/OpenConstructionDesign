@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Reading a brief: every problem is listed with its path, the allowed range and a fix, so the
 //! assistant can correct the spec in one more call.
 

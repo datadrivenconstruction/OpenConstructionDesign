@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The timber structure: a glulam post-and-beam frame by the span rules, CLT floor panels cut
 //! at the panel width, the concrete core kept, and the share of each material in the types.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Report images of a loaded project (`--file … --screenshot … --view`): the plan of the ground
 //! floor, a 3/4 view from the south-west and a vertical section through the long axis. Each is
 //! the view canvas alone, cropped out of the painted app at exactly the requested size.

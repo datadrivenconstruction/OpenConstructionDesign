@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Building-level inputs of the norm rules: the functional fire-hazard class and the building
 //! height (typed, or the span of the levels), plus the people on the busiest floor above the
 //! first. Stored as properties of `norm_project` row 0 (no schema change).

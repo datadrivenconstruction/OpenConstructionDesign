@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! ddc-app: demo plan (demo), UI (ui_kit), 3D viewport (viewport), plan (plan_view),
 //! the "Wall" tool: units (units), snaps (snap), state machine (wall_tool), editor (editor);
 //! the "Door/Window" tool (opening_tool); in-place masses and bodies (mass_tools); "File -> Import" via bridges (import);

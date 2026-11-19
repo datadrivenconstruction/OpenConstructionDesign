@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! User notes and hidden rows on the layer sheets stay with their own layer when layers are
 //! inserted, removed or reordered (layer_match.rs); what finds no layer is in the loss list.
 

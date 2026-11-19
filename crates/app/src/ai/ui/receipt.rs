@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The receipt an Apply leaves in the chat: what changed by category, the touched elements, and
 //! the two things a person wants next: see them (Show) and take exactly this apply back (Undo).
 

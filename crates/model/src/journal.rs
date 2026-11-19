@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Journal provenance (schema 40): every `op` row keeps who made it and, for an edit that came
 //! as an envelope, the forward ops next to the inverse SQL.
 //! Undo reads only `inv`, so rows written before step 40 (no actor, no src) undo as before.

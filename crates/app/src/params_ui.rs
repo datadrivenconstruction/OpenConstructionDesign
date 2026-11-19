@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Project parameters: manager window (create, edit, delete, shared-parameters file) and
 //! value rows in the selected element's properties. Edits are Ctrl+Z steps.
 

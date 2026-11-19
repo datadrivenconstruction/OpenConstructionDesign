@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! INSERT expansion: nested blocks, scale/rotation/mirror, MINSERT arrays, ATTRIB/ATTDEF text,
 //! extrusion (OCS) and BYBLOCK / layer 0 inheritance. The result is a flat list in world coordinates.
 

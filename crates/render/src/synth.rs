@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Synthetic model for benchmarks: towers with repeated bodies (instances), a small share of
 //! unique meshes, glass and occluder shells. The scene is deterministic: numbers from different
 //! runs are comparable. Goals and measurement order — `docs/design/PERF_3D.md`.

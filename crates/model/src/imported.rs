@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Imported elements: checked inserts for importers running inside a batch (members, roofs,
 //! ceilings), and the read/edit API for generic meshes and properties (`mesh`, `prop`, `ext_ref`).
 //! Mesh blobs: positions f64 LE xyz (world metres), indices u32 LE triangles.

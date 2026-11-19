@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! 3D viewport: input (orbit LMB, pan MMB/Shift, wheel zoom toward the cursor, F or double MMB:
 //! zoom to fit, click: select), orientation cube in the corner, drawing via a paint callback.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! VV "Visibility and Graphics" window of the current view: detail level, thin lines, categories, filters.
 //! Edits accumulate in a draft and are applied with one button (a single undo step); fields under a
 //! linked template are locked. Also hosts the filter rule editor and the project object styles window.

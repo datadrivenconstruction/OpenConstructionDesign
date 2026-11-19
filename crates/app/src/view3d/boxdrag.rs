@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Face handles of the section box on the canvas: six arrows at the face centres; dragging
 //! moves a face along its normal with live preview. One gesture is one undo step,
 //! Esc restores the box, a face never crosses the opposite one. Pure functions are separated from

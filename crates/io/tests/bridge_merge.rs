@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Re-import of an updated source as a 3-way merge (base = last import, local edits, new
 //! file): merge matrix (edit/edit, edit/delete, delete/edit, add/add), id stability, parameter
 //! round-trip, provenance, undo, delta exports with the source ids.

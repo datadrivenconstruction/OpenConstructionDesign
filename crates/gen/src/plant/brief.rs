@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The brief of a plant: its kind and duty from fields or from words in English or Russian
 //! ("boiler house 2 MW with 3 boilers", "pumping station 120 m3/h head 45 m", also in Russian); a storage
 //! tank's diameter, height and nozzles also from German or Spanish words.

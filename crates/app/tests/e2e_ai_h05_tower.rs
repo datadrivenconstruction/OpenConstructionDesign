@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! H05, the 40-storey office tower with core and fire strategy, through the chat the way a model
 //! is told to build it: the building_brief recipe from `help`, then generate_project with the
 //! brief's plate, lifts, sprinklers and curtain wall; Apply once, then every oracle of the case

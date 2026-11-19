@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Collapsible chrome as one system: the ribbon (full, tabs only, hidden), the options bar, the
 //! status bar, the side docks, the AI tab's work column and preview, and a clean screen that
 //! hides all of it but the canvas. The person's choices live in prefs; a fold for lack of room

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A big IFC file patched in place of a rewrite: thousands of property edits, moves, deletes and
 //! new walls, and afterwards every edit reads back, every untouched statement is byte for byte
 //! the one of the source, deleted walls are gone with their relations, the source file is never

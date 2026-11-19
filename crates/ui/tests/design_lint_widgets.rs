@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Feature code uses kit widgets, not raw egui ones. Raw widget calls are counted per file against
 //! design_lint_widgets_baseline.txt: a file may not exceed its entry, an unlisted file has none.
 //! Entries only go down; `DESIGN_LINT_BLESS=1` rewrites the file after a merge train. A raw call

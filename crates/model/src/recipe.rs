@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Live geometry recipes (schema 47): the script, its params, the hash of what it built and
 //! the stdlib version, with one link per created element under its stable part key. Writes go
 //! through the journal, so the recipe lands and leaves with the elements in one undo step.

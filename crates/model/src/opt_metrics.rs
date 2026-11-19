@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Metrics row of a design option: areas, volumes, counts, cost and findings, with explicit
 //! units. Computed on a materialised copy (never on the main model) and cached as JSON in
 //! `ai_option.metrics`. In an `alt.db` copy the option filter of `level_totals_in` and

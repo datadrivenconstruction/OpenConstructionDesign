@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `create` of doors, windows, rooms, slabs and columns (docs/design/AI_NATIVE.md, "Lowering").
 //!
 //! Each kind runs the model function the editor tools use (`add_opening_with`, `add_room`,

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Command contracts as data (`tests/contracts/commands.txt`, one row per registry command).
 //! The gate enumerates every palette command, ribbon button and menu path and names the ones
 //! without a row. A generator turns rows into named checks run headless on a small fixture;

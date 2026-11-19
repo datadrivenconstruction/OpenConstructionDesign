@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `plan_station` in one call: the levels below ground, the station's own types and one item
 //! with the box, slabs, wells, stairs, columns and rooms; Apply gives exactly the preview and
 //! the model holds what the station rules planned. A rule that cannot be met is refused by name.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! 3D measurement: a chain of points (with snaps); segment length, dx/dy/dz increments,
 //! chain total. Esc/right click resets.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Section fills by a clipping box (CPU, per mesh): a body crossing a box face
 //! is cut by its plane. The section segment of each triangle is directed along its normal
 //! (body on the left), so contours of closed shells run counter-clockwise and holes

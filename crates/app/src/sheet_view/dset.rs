@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Drawing set: what to put on the sheets, the sheet list it will make, and Apply as one undo
 //! step that tags rooms, doors and windows, lays the sheets out and fills the title blocks.
 //! A second run updates the same sheets.

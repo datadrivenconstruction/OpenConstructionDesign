@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! View adapters: a view supplies only its projection; the adapter turns a screen
 //! position into a `Pointer` and a model point back into the screen. Plan, 3D and section are
 //! three adapters of one trait, all in f64 model coordinates.

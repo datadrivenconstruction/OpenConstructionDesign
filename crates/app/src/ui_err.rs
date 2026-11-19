@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Human-readable status/toast texts: model and io error messages (English `Display`) become
 //! «what happened + what to do» from `err.*` keys, internal ids are dropped.
 

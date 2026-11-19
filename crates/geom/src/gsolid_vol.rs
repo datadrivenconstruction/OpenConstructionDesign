@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Volume of the intersection of a closed mesh with a convex polyhedron, and of two closed meshes,
 //! without building the boolean mesh. By the divergence theorem with apex point o:
 //! V(M ∩ C) = Σ_t V(cone o, t ∩ C) + Σ_i V(cone o, (plane i ∩ M) ∩ C), where the second term is

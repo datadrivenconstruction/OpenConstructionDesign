@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Formula cell (TOOLS_UI §4): `=`-prefixed text field, red frame and message on error,
 //! value preview otherwise. The caller validates (the expression engine lives in ddc-geom).
 use crate::sem::space;

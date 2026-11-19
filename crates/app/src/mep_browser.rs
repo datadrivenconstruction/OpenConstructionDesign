@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The "Systems" window: a list of systems with status, flow and sizes by run, fixtures and their
 //! connections, check findings in plain words. Edits go only through `run_op`.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Applies a merge inside one journal operation. Each changed row is snapshotted once before the
 //! edit; new rows are covered by the watermark, while part groups and restored rows with the
 //! same id get an explicit delete at the start of the inverse commands.

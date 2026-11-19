@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Window "Project schedules": define a multi-category schedule, see its rows, stage cell edits
 //! as a draft, read the preview, then Apply (one undo step) or Discard. Export and import go
 //! through XLSX; an imported book becomes a draft too.

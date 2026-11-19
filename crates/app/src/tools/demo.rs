@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Acceptance screenshot scenes of the model tools (`--tool-demo A1..A5`): model + scripted input.
 
 use super::{arm, Kind};

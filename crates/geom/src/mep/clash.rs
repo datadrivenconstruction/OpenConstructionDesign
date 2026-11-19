@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Clashes between MEP networks and structure: convex polyhedra, exact intersection volume
 //! (face clipping), BVH over bounding boxes. An obstacle body is a set of signed convex
 //! pieces (+ body, - hole inside it); the intersection volume is their sum.

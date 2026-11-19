@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Registry of 3D scene bodies: category to meshes plus pick targets. The scene base is `mep3d::scene`
 //! (architecture with stable numbers, networks per system, components as instances); everything
 //! else comes from [`SceneProvider`]s: roofs, ceilings, columns, beams, stairs,

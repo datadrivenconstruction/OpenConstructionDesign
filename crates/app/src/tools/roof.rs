@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Roof by footprint (RF): polyline sketch, each edge has a "defines slope" flag (Space
 //! toggles it on the last edge), Enter or a click on the first point finishes.
 

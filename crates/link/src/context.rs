@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `ddc-context/1` (`GET /projects/{id}/context`). Read-only types: none of them serializes,
 //! so the AI block cannot be written anywhere by accident (the contract keeps it in memory).
 

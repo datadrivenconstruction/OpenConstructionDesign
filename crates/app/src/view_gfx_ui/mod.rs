@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! View graphics in the application: cache of resolved graphics per view (`layer`), drawing of overrides
 //! and hatches, ribbon commands and windows: visibility and graphics (VV), templates, materials, object styles.
 

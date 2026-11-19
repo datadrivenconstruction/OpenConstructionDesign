@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Linked models (read-only): the "Links" window, background load/reload of .rvt/.ifc,
 //! placement and visibility (each edit is one undo operation), plan lines, 3D, snaps,
 //! clashes with the host. Link elements are not selectable and are not written to the host model.

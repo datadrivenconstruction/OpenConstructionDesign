@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! IFC export that keeps the source model's GlobalIds: elements imported from a .rvt (bridge
 //! SourceIds frame) or an IFC file come back under their original ids, so pro BIM tools can
 //! match the exported changes to the elements of the source project.

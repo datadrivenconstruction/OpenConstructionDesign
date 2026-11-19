@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Steel connections in the model: the gazebo gate (every node placed in one request), parts
 //! as solids that follow a section change, one undo step, issues for broken connections.
 

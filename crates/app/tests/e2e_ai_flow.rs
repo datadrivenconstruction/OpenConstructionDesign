@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The whole assistant workflow for each of the four capabilities, with a scripted model and no
 //! network: request, draft, preview, Apply, undo; Reject; edits of the draft; a model that
 //! changes meanwhile; broken or partial answers; invented elements; a very large plan; timeout,

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A book without a whole baseline: the hidden comparison sheet was dropped by a tool that
 //! re-saved the book, damaged, or never written (a hand-made book). No three-way compare is
 //! possible then: every differing cell counts as a book edit and a missing row cannot be told

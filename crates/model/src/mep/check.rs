@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! System check: graph from the source, accumulated flow per run, velocity and capacity with
 //! size selection, connectivity, drainage slope. The result is structured; message text is
 //! produced by the view from `key` and `args`. Limits and flows are guidelines: no codes are

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Undo stack for the "History" panel: a step label key by command kind, jumping to a step.
 use super::{Cmd, Editor};
 use crate::drawing::history::Step;

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Ribbon: tab strip (always visible) and a collapsible band of command buttons in titled groups
 //! (surface R). Button size, collapse priority, split variants and group launchers come from the
 //! commands json; geometry is the pure `ribbon_layout`. Commands the host has not implemented stay

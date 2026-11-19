@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! G15, the storage tank with nozzles, through the chat: `help` for the design_plant tool,
 //! `design_plant` with the case's brief, Apply once, then every oracle of the case on the
 //! applied model (tank, nozzles and manway, ring footings, storey), each count reported.

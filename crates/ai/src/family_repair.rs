@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The write, check, fix loop of `family_draft`: the model gets the report of the pipeline (codes,
 //! lines, hints) and only an excerpt of the lines around each finding, never the whole text again.
 //! The loop is bounded by `RepairPolicy`; what is not fixed is shown to the person with what to

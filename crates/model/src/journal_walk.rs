@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Journal walk behind the "Journal -> Replay" view: a copy of the model file on which operations
 //! are undone from newest to oldest; each step reports which rows the undone operation touched.
 //! Playback runs in the reverse order (from the first entry). The live model and its file are

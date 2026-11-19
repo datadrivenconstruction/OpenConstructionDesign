@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Seeded property tests for 3D mirror and array: a selection of plan kinds gives the same rows
 //! as the plan edit (`mirror_elements` / `copy_elements`), a selection with any other kind is
 //! refused whole with the reason in the status and no rows; hosted openings stay inside their

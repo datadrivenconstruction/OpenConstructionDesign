@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The AI assistant inside the editor: a worker thread works on its own copy of the model and
 //! never touches the live `Editor`; only Apply, on the UI thread, changes the person's model.
 

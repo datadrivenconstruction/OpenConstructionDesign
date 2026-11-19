@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Parametric components ("families") v0: named parameters (type/instance, formulas
 //! with units, dependency ordering, cycles are errors), reference planes, bodies built from primitives
 //! (extrude, revolve, sweep along a path, loft, cut), visibility by detail level and view,

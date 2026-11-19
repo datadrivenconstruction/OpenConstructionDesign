@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! View graphics (schema 35): level of detail, thin lines, visibility and per-category overrides
 //! (`view_gfx`, keyed by `ViewKey`), view templates (`view_template`), rule filters
 //! (`view_filter`), project object styles (`object_style`).

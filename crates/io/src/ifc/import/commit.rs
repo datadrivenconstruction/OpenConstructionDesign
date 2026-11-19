@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Plan → model rows. Elements with a GlobalId are linked in `ext_ref` (source = the project
 //! GlobalId); a re-import of the same project updates linked rows in place (undoable through
 //! snapshots) instead of adding duplicates.

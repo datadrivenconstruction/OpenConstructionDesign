@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! An eval case: a brief (one or more turns) and what the saved model must measure.
 //! Cases are TOML data in `crates/ai/evals/cases/`; the executor lives here because it needs
 //! the editor.

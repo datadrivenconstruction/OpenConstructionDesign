@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Model errors as `ddc_ops::Rejection` (stable code, expected/got, refs) for the op executor
 //! and AI agents. Paths here are relative to the op payload; the executor adds
 //! `/groups/{g}/ops/{o}` with `Rejection::in_op`.

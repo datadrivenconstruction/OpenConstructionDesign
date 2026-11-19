@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Component parameter editor: a table of Parameter · Type · Type/Instance ·
 //! Value · Formula, plus a "Type sizes" tab (columns are types). Formulas are checked by the same
 //! expression engine that builds families; an error shows a red cell, a cycle blocks OK.

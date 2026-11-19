@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Attachments in the chat: the Attach button, files dropped on the panel and images or file
 //! paths pasted into the composer become chips (name, size, pages) above the field. A chip
 //! opens a preview that shows exactly what the model may read, and can keep the file on this

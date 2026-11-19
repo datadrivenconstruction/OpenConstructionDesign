@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! One change language for every diff surface (AI plan card, AI viewport preview, XLSX import
 //! preview, version compare): a kind owns its colour token, its icon and its label key. The icon
 //! and the label always travel with the colour, so meaning never rests on colour alone.

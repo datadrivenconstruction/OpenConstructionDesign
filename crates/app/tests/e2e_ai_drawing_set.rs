@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `create_drawing_set`: the set is planned on the scratch copy, reaches the live model only on
 //! Apply, counts every element in its schedules, and a second run updates the same sheets.
 

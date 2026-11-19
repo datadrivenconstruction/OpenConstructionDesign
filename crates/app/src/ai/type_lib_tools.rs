@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Propose tools of the wall type library: `edit_wall_type` (one layer added, removed or
 //! resized) and `copy_types_from` (wall types of another project file). Both add a plan item;
 //! nothing reaches the model before Apply. Replies count the placed walls they resize.

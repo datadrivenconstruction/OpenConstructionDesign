@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The work plane in the views other than 3D: its trace on the plan level and on a section or
 //! elevation, dashed in the accent colour with the plane's name, and plan snaps along it
 //! (`snap_svc`). Only a plane the user set is shown; the default plane is the level itself.

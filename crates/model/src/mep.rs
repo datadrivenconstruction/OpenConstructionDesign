@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! MEP networks (schema 16): systems `mep_system` (type, color) and runs `mep_run` (network kind,
 //! section, material and DN, wall, insulation, lining, elbow radius, slope, axis points in
 //! world coordinates, end caps). A system's network is computed on the fly: nodes are coinciding

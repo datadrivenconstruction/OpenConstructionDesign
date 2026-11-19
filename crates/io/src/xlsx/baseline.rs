@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Export baseline: a hidden sheet with every exported value, in the model's units. Import
 //! compares each cell with it to tell a book edit from a model edit made after the export.
 //!

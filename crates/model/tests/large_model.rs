@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Large-model timing: 1M synthetic elements (walls, openings, slabs, columns).
 //! `cargo test --release -p ddc-model --test large_model -- --ignored --nocapture`
 //! Gates: open < 3 s, check_integrity < 5 s; prints peak working set (Windows).

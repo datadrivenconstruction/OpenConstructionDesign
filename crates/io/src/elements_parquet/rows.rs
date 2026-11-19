@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! One [`ElementRow`] per element, read from the model. Quantities are the values the schedules
 //! and the xlsx export read (`*_qty` tables, `ddc_geom::arc::axis_length`); nothing is measured
 //! a second time here except what a table does not hold (wall face areas, run lengths).

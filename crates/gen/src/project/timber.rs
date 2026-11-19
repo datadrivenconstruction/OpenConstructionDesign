@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Timber structure of a project (`design.structure` timber or timber_frame): a glulam
 //! post-and-beam frame joining the columns along both grid directions, sized by span, and the
 //! floor cut into cross-laminated panels whose joints fall at the panel width. A bearing-wall

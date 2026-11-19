@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The truss hall built as a hangar (scenario H16): the generator itself gives the roof
 //! cladding, the sliding door in the gable on its track beam, the crane runway on corbels and a
 //! two-storey annex of rooms; a plain hall stays the frame alone. Every member end meets another

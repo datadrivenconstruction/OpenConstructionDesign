@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! History window: undo steps top to bottom, undone ones dimmed; a click jumps to that step.
 use crate::shell::EditorApp;
 use crate::ui_kit as kit;

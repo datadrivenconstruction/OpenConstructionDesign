@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Selection sets: named element lists with a level, stored per project (`ux.json`);
 //! recalling one switches to the set's level and drops deleted elements.
 use crate::editor::{Editor, Sel};

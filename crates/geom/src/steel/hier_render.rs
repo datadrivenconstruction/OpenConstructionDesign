@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Drawing data of a hierarchical lattice: one mesh per prototype with its pieces as true
 //! cross-sections (angles, flats, rolled shapes; no boxes), a coarser level without the lacing,
 //! and the world placement of every prototype for instanced drawing.

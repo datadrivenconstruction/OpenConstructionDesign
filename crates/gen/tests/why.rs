@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Explanations name the rule, value and layer behind each decision; the critic and the brief
 //! check answer with rule changes inside the rules' ranges.
 

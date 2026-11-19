@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Productivity state kept between runs (`ux.json` in the settings folder): command usage,
 //! tips done, HUD / recent bar switches and, per project, last-used values per category
 //! («smart defaults») and saved selection sets.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Pure side of `render_plan` / `render_3d`: argument parsing, the pixel cap, the explicit scale
 //! and the legend. No GPU here; `render_off` draws what these types describe.
 

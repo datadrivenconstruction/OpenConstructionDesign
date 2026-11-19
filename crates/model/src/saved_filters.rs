@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Saved selection filters of the project: one `meta` row (JSON list of query texts, oldest
 //! first). Written as a journaled operation: a change is one undo step, counts as an unsaved
 //! edit and travels with the file, so a Save As copy edits its own list.

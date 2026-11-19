@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! View tools: show, isolate or color a target, and reset. They change what the screen shows,
 //! never the model, so they need no Apply: the worker resolves the target on its copy, exactly
 //! as `query_elements` does, and sends the view command to the UI thread (`view_state`), which

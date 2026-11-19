@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `ContentBlocks` wire format: `POST {base}/messages`, SSE of typed content blocks.
 //! The version header this format requires comes from `Profile::extra_headers`.
 

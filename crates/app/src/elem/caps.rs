@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Refusals before the first click: a transform reads the capabilities of the selection when a
 //! button is drawn or a tool starts, not after the user has already pointed at the canvas.
 use super::{of_sel, Cap, XfCaps};

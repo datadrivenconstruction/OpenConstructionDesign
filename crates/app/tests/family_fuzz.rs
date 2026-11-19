@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Matrix-driven fuzz over `FAMILIES`: random add, move, rotate, copy, delete, undo, redo per
 //! family. Invariants after every step: integrity clean, `foreign_key_check` clean, no NaN or
 //! infinity in any cell, hosted openings inside their wall, a refused action leaves the model

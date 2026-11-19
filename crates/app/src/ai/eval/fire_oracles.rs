@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `room_sep`: the fire separation of a tall building. A compartment (a floor) is not bigger
 //! than the rule allows, every boundary of the core (floor slabs above the first level, walls on
 //! the shaft edges, doors in them) carries a fire rating, and at least `stairs_min` stairs stand

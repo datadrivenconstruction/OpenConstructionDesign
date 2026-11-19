@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Find and replace text across the model: text notes, room names and numbers, the mark and
 //! comments of any element, and every text parameter value. A search is read-only; a replace is
 //! one `atomic` step (one undo). Pinned elements and locked parameter values

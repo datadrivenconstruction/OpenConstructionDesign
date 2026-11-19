@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `--gfx-bench FILE|synthetic:N [--gfx-csv OUT]`: frame times per visual style and level on a real
 //! GPU, against the budgets. Moving frames run at each level's full budgets, without the adaptive
 //! hold, so a pass means the level meets its target with no help from the controller.

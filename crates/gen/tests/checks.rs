@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Plan checks as rules: hand plans with known escape distances, and every rule passing on
 //! the defaults and failing when tightened, its finding naming the rule.
 

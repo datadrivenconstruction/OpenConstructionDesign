@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! What the views draw as the tool preview: the running session's primitives, else
 //! the wall draft of the old wall tool as bands with a temporary dimension, so 3D and section
 //! show the rubber band the plan shows.

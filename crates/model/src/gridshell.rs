@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Diagrids, gridshells and cable nets in the model: one journaled row per structure (host,
 //! pattern, member types, node size) with a node table (position, normal, host parameters,
 //! support) and a bar table (end nodes, role, continuous line). Members and nodes are built

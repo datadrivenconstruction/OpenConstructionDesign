@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Wall type editor: the layer table (function, material, thickness, priority) with add,
 //! remove, duplicate and reorder (drag or arrows), a live section with the total thickness,
 //! the face that placed walls keep, rename and "Duplicate type". OK writes one undo step.

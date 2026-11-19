@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Component body construction: mesh (visible bodies at the level of detail), exact volume
 //! (extrusion A·h, revolve via Pappus's theorem, transition via the prismatoid formula, sweep via the mesh
 //! corrected by the exact profile area), bounding box, plan lines.

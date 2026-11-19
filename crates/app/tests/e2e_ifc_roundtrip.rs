@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! End-to-end: IFC import → query selection → bulk edit → wall type replace → IFC export →
 //! re-import into a fresh model; counts, GlobalId links and edited values must survive.
 

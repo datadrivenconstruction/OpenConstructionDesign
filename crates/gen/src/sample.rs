@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Option sampling for `generate_options`: which parameter values each of up to [`MAX_OPTIONS`]
 //! options gets (grid, Latin hypercube or random, all seed-deterministic), and the pure
 //! generation of all options on a small thread pool. No model access.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The fit-out rules against the library, and fitted-out projects against the audit.
 
 use super::fit_audit::{audit, connections};

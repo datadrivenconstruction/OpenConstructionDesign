@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Text codes (`007`, `1.10`, `1E3`, `1,000`, 19-digit ids) that a spreadsheet turned into
 //! numbers: the cell now reads as a number whose canonical text differs from the model text only
 //! by that coercion. Such a cell must not overwrite the model text.

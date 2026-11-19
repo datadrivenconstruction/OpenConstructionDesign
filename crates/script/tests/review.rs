@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Correctness of what a script builds: booleans the model accepts, honest param bounds, a
 //! run-wide copy budget, and rerun plans that never ask the model for the impossible.
 

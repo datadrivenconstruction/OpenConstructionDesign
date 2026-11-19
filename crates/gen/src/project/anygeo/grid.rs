@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The structural grid of a plate. `grid.form` picks it; `auto` reads the ground outline: a
 //! curve that is most of the facade turns the grid about its centre (radial) or along it
 //! (edge), else two line families follow the longest straight facades, square when they are

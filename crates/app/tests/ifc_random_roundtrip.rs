@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Seeded round trip of the IFC patch save: random edits through `Editor::run_op`, save beside
 //! the source, reopen. The source stays byte for byte, kept elements keep their GlobalIds and
 //! edited values, deleted ones are gone, added ones are there, and untouched walls keep their

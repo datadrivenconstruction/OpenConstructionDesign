@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Project wall type library: types with their use counts, copy types (and their materials)
 //! from another project file with a confirmed conflict rule, purge unused types into the
 //! archive (never deleted, restorable) and swap the type of the selected walls.

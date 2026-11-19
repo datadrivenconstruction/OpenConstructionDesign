@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Palette arguments: Russian "wall 300 concrete", "door 900x2100", "wall 200 @Level 2". Leading words
 //! name the command; numbers (with optional unit, also as the next word: "300 cm"), the remaining
 //! words and `@level` are arguments. `@` takes the rest of the query (the host matches the longest

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Parameter lock: a locked value is kept by every batch path and by the value writer itself.
 
 use crate::{Edit, LayerSpec, Model, PVal, ParamSet, ParamSpec, ParamType, WallSpec};

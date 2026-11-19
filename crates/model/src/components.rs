@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Components (schema 15): families (`comp_family`, definition text of ddc_geom::component),
 //! types (`comp_type`, values `Key=value, …`), instances (`comp`) with a host: wall (x along the
 //! axis, y to the left of the axis, z from the wall base, rotation from the wall direction), slab (z from the top),

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Numbers kept as text in the model (parameter values, imported properties, schedule text
 //! cells) have one invariant form, independent of the UI language and of any thread's decimal
 //! mark: optional sign, digits, at most one `.`, optional exponent (`-1250.5`, `1.5e3`, `.5`).

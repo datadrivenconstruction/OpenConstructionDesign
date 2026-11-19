@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Folded chrome drawn as the whole app, headless, in both languages (explicit catalog) at
 //! 1280, 1440 and 1920 px: every surface folds by its command and by its key, the canvas takes
 //! the room, a folded dock leaves its rail, nothing leaves the window or is cut; and the

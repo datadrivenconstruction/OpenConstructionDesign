@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Mesh exchange in the editor (docs/design/IO_FORMATS.md): STL/OBJ (and, in builds with
 //! `dxf-export`, DXF) export of the whole model or the selection from the glTF export bodies,
 //! and reading glTF/STEP/STL/OBJ files on a worker for the open and import paths.

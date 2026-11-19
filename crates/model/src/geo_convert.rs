@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! One conversion between geometry kinds (mesh, parametric solid, native element) with a loss
 //! report: every receipt lists exactly what is dropped or approximated (`loss: [{what,
 //! measure}]`). A dry run executes the same code in a transaction that is rolled back, so its

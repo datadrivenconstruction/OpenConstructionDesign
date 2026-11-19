@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Commands and keys reference: a panel docked on the right (or a floating window) with one
 //! search over command names and shortcuts. A row runs its command; Enter runs the first hit.
 //! Search and ranking: `ddc_ui::cmdref`.

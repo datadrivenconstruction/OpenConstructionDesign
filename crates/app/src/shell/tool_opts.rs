@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Tool options row under the ribbon, built from the design-kit widgets only. `opt_groups` decides
 //! which groups a tool shows (fixed order, so nothing reflows when the tool changes); the field
 //! helpers keep the old semantics: model units, lower floor and upper limit per value.

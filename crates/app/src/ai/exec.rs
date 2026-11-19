@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Model steps and Apply: the same steps run on the scratch copy and, in one undo step, on the
 //! live model. The `expect` ids prove both ran the same way.
 

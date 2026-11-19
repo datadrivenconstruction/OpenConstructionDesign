@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Persistent link cache next to the host project: folder `<project>.links/`, one native project
 //! file per source content and importer (`<content hash>.<importer>.ddc`): the imported model
 //! plus the derived bodies and wall axes, so a reopen reads bodies instead of importing.

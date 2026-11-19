@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! QA: previously untested public items of ddc-geom.
 use ddc_geom::arc::{axis_length, edge_mid, ArcAxis};
 use ddc_geom::csg::{ftag, tag_op, Body, BoolOp};

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 use super::saved::{apply_spec, sel_from_key, sel_key, spec_of};
 use super::scene::{build, cat_index, fp, tag_category, Deco};
 use super::*;

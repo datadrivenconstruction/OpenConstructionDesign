@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! What a plan item read and wrote: the ground for checking only the touched items when the
 //! model changes under a plan, instead of calling the whole plan stale.
 //!

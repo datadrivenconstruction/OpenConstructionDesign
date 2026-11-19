@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The client against the in-process ERP (`ddc_link::mock`), which checks every request and
 //! answer against the contract schemas. The live run against a real ERP is card I1.
 

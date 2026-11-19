@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! An untouched book writes nothing: {metric, imperial} x {point, comma book mark} x {plain,
 //! professional book} x {numbers, every numeric cell saved as text} over the element sheets and
 //! the project parameter columns. Export, re-read, preview -> no change, apply -> no operation.

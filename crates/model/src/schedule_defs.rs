@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Schedule definitions of the project: one `meta` row holding the app's JSON text (the model
 //! keeps it opaque). Written as a journaled operation: a change is one undo step, counts as an
 //! unsaved edit and travels with the file.

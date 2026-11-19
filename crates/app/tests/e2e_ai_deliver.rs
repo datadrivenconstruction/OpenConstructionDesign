@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `deliver_project`: one call drafts the building and its drawing set on the scratch copy and
 //! names the files; one Apply writes the model and the sheets in one undo step, and the run that
 //! follows writes the PDF and the IFC next to each other.

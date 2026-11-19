@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! IFCZIP: a zip archive holding one `.ifc` file (stored or deflated). Only what the format
 //! needs: central directory lookup, local header, raw inflate; no ZIP64, no encryption.
 

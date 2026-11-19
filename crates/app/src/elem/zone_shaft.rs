@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Shaft and zone families: plan grips, geometry rows and the 3D body of a shaft.
 //!
 //! A shaft is an outline through levels; its cuts in slabs and roofs follow every write of the

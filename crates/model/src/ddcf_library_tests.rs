@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The built-in library under the `.ddcf` v2 format: every family upgrades to the same
 //! semantics, the canonical print is stable.
 

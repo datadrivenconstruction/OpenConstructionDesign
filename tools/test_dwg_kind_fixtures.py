@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 """Tests of tools/dwg_kind_fixtures.py. Run: python tools/test_dwg_kind_fixtures.py"""
 import sys
 import tempfile

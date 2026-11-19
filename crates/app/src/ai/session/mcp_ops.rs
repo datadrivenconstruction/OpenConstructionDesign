@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `ops_dry_run` and `ops_propose`: an external agent's envelope runs on a throwaway copy of the
 //! base snapshot, never on the live model or the chat's work copy. A proposal only waits on a
 //! card; it reaches the model when the person presses Apply, whatever the MCP policy says.

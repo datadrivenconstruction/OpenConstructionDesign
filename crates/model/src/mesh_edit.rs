@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Imported meshes to editable elements: recognition (wall, slab, roof, column, beam,
 //! extrusion solid) and conversion, editing the mesh itself (transform, plane trim and split,
 //! face removal, merge, cleanup), and mesh plan and section views.

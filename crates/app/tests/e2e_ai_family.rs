@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A family drafted from the chat: the handler of `family_draft` checks the text, hands it to the
 //! family editor as an event and leaves the project untouched; a refused text comes back as a
 //! report with excerpts, and the accepted retry reports the rounds it took.

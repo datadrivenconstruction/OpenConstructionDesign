@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Terrain from IFC: bodies of IfcSite and IfcGeographicElement (triangulated/polygonal face
 //! sets, faceted breps, shell/face based surface models, mapped items) placed by the local
 //! placement chain and scaled to metres. A solid body keeps its upward faces (the top surface).

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Automatic building services follow the regional switch `gen.mep_auto`: off by default for
 //! the US norm pack, on for the DE pack; routing by hand works everywhere.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! DXF ASCII reader. Accepts LF and CRLF.
 
 use super::entities::{is_structural, parse_all, Entity};

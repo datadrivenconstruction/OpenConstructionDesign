@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Workflow: clash run → fix with sleeve → re-run → status, through the editor
 //! (every edit is one `run_op` = one undo step, as the clash window does it).
 //! Clash statuses are check data outside the journal, so model comparisons skip `clash_item`.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `src_target`: where each export format saves in this project (path, over-source flag, settings,
 //! last result). Part of the project file, outside undo, and not an edit (`DERIVED` in the app).
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! H15, one more operating theatre on one floor of an applied hospital wing, through the chat:
 //! revise_project with `storey_rooms` places the room on that storey alone (every other storey
 //! is locked to what it is), keeping the element ids of the other levels, and the new room

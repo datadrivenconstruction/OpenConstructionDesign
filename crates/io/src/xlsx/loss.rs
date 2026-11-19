@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! What a re-export into an existing workbook would not carry over. The new book is written
 //! first; it is then compared with the old one, so only what really goes missing is listed:
 //! user cells (by column, rows without an id, user sheets) and package parts the writer does

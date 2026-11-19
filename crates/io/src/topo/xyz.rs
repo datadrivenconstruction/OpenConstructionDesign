@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Survey point files: CSV, TSV, semicolon (decimal comma) or whitespace columns (decimal point or
 //! decimal comma). A header row names the columns (x/y/z, e/n/z, easting/northing/elevation,
 //! p/id, d/code); without one the columns are x y z, or P N E Z [D] when the first column is text.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A standalone vertical storage tank: a flat-bottomed shell under a cone roof, flanged nozzles
 //! on the shell at different heights and directions and one on the roof, a manway near the
 //! bottom, a caged ladder up the shell and a ring foundation under it. Each nozzle and the

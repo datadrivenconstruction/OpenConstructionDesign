@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! 2D sketch solver: points, lines (point pairs), constraints. Levenberg–Marquardt with a
 //! minimum-norm step (an underdetermined system moves as little as possible), followed by a
 //! degrees-of-freedom analysis of the Jacobian at the solution: rank, free points (outside the row

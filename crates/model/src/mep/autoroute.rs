@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Network planning: a request names a system, a source (a port, a new riser, a run) and target
 //! connectors; the planner routes a tree on the 3D lattice of `route3d` against the structure
 //! (walls crossed with sleeves, slabs only vertically with holes, columns, beams, doors and

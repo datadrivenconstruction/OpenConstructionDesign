@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `measure{a, b, kind}`: distance, clearance, height above the floor, length, volume, on the
 //! scratch copy (the draft included). Every answer says where the number comes from:
 //! `exact` for kernel solids (mesh, path, quantities) and points, `bbox` for an estimate from

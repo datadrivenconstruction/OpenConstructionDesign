@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Spline wall axes (geometry plan W5): a planar NURBS axis, its offsets for the wall layers
 //! (true offset sampled, then refit by a cubic through the samples until it stays within a
 //! tolerance), the exact area of a layer by Gauss-Legendre and the layer's footprint ring.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Sections and elevations: view definitions in `view_def` (journal, undo), assembly of
 //! the model's prisms and output of the same `ViewPrim` primitives as the plan, in
 //! (s, z) coordinates: s is along the view line from `a`, z is the absolute level, m.

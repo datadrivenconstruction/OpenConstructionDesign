@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Edit panels for walls and curtain walls on the selected model element: state is read from
 //! `Editor`, each change after a frame is one `run_op` operation (one undo step), then the
 //! panel is re-read from the model. Ribbon commands are the `commands.d/t94.json` fragment.

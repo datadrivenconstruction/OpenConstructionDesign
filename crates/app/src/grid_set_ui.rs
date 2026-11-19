@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! "Grid set" dialog: two families of grid lines from a count, spacing and first label, an angle
 //! and an origin. One Create is one undo step; a label that already exists refuses it.
 

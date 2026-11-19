@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Norm checks: rules as data files, each with its source document and clause. The model is
 //! judged by code only: the same model and pack give the same findings in the same order. AI
 //! may explain a finding or draft a fix; it never decides that a rule is broken.

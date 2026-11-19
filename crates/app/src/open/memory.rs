@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Memory rules of a heavy job on a 16 GB machine: one job at a time (the open flow refuses a
 //! second), the bridge child under 70 % of physical memory (`RunOptions::memory_limit`), and
 //! when available memory falls under [`LOW`] during a job the mesh budget halves, the LOD build

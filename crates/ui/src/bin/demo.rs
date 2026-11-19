@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `ddc-ui-demo`: the shell around a dummy viewport, with theme/density/scale/language switches.
 use ddc_ui::notify::Level;
 use ddc_ui::{Density, Lang, Mode, Shell, Theme};

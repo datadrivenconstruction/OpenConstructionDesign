@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Placed drawings (underlays) kept in the project file. The app owns their live state and
 //! writes a snapshot here before every save; the geometry is an opaque compressed record.
 //! Outside the undo journal: underlay undo lives in the app session.

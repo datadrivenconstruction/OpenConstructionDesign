@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 # Downloads the fallback CJK fonts (Noto Sans SC and KR, SIL OFL 1.1, ~28 MB) into crates/io/assets/fonts/cjk/.
 # They are not stored in git because of their size; without them the CJK test is skipped and CJK in PDF is drawn as .notdef.
 $ErrorActionPreference = 'Stop'

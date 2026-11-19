@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Option recipes in the op language are frozen when the option is made, on the model the
 //! person sees: every `Filter` and `Set` target becomes the refs it matches there, and that
 //! envelope is what is stored, shown and applied. The recipe's base head pins that model, so

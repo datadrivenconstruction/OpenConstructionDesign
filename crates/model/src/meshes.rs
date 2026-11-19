@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Imported solids without a parametric model (`mesh`) and native imported rows:
 //! deletion is a single undo step; move/rotate/mirror of meshes are journaled as a transform
 //! (`MESH_XF`), not as a copy of the body. Reading solids and properties lives in `imported.rs`.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! MEP runs and devices of the element contract (E4): the registry rows that were missing
 //! (system, start elevation, slope, material for a run; elevation and rotation for a device)
 //! and the properties panel of a selected device. A run keeps its own section panel in

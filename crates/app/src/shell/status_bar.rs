@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Status bar: one strip in three divided zones. Left: recent commands, drawing aids (grid,
 //! snap, ortho) and the cursor in project units. Next to it, left-aligned: the step hint as keycap
 //! chips. Right: running task, view state (level while the option bar does not show it, style,

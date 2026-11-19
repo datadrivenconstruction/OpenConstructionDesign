@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Book rows that edit a type rather than one element: a type sheet row, or a layer row of a
 //! type. Every element of that type takes the change, so the preview counts them and Apply asks
 //! for a tick. The model table of the type is named, the count itself is the caller's.

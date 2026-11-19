@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! New geometry for the patch: the model goes through the exporter into a temp file, and the
 //! entities of changed elements are copied from it under fresh ids. The whole placement chain comes
 //! along, so an element's place in the world does not depend on the source's spatial placements.

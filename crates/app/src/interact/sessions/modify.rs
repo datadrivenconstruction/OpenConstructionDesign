@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The modify tools as one session: `ModTool` (move, copy, rotate, mirror, array,
 //! scale, offset, trim, extend, split, align) owns the input under `Scope::Moving`, in any view
 //! that gives a plan point. Pick-first and tool-first are the same session: with a selection

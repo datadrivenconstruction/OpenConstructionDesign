@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The one question card of the open flow, on the shared dialog scaffold (`ui_kit::Dialog`),
 //! small and non-modal, low on the window: Enter takes the default, Esc drops everything.
 use super::decide::{Ask, Door};

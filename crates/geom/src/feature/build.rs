@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Rebuild: nodes in timeline order up to the roll-back marker. A node's key hashes its op
 //! number, its definition, its resolved argument values and its inputs' keys; the [`Cache`]
 //! keeps outputs by key, so after an edit only nodes whose key changed are built again (the

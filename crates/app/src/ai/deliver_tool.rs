@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `deliver_project`: a building from a brief through to files in one call. It is
 //! `generate_project` and `create_drawing_set` on one card, plus the files written after the
 //! person's Apply; nothing here builds or exports on its own.

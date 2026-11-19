@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Attached files end to end: the scripted model lists the attachments, reads them and traces
 //! walls from a DXF plan into the draft; nothing reaches the model before Apply, and a file
 //! kept on the machine is neither listed nor readable.

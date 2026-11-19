@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Standpipes for the fire service: in a building over the rule's height, a riser in each stair
 //! core, standing in a corner clear of the flights, landings and doors on every storey, a
 //! landing valve beside it on every storey, an inlet at its foot where the fire service or the

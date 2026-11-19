@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! 3D providers of structural kinds of schema 26 (footings, slabs, bracing, trusses, beam systems)
 //! for the `edit3d::scene3d` registry: one provider per kind, the target is `Cat::Ext(code)` with the same
 //! codes as `Sel::Ext` (`editor::structx::code_of`), the tag is `editor::structx::tag_of`.

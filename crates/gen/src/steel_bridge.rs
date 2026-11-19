@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! What a footbridge needs besides its structure: guard rails on both deck edges, approach
 //! ramps or stairs with landings, every number a `steel.bridge.*` rule.
 

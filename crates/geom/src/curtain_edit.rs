@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Curtain wall editing on top of the `curtain` grid: add/remove a grid-line segment,
 //! pin a line (re-spacing does not move it), type of an individual panel (solid, glass,
 //! empty, door, window), panel merging (via removed segments), mullion type on each

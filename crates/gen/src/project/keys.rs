@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Stable element keys of a built project: a semantic path per element, derived from what the
 //! element is (storey, apartment, room kind, the rooms a wall separates) and never from a
 //! vector index or a coordinate that moves with a neighbour. The same spec gives the same keys;

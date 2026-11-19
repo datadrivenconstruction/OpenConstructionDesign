@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `ddc`: batch work on model files without the editor window.
 //!
 //! This layer only calls the io and model crates (open, count, export). When the typed command

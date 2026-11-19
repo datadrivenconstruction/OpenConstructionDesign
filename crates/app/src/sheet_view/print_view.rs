@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Print preview logic without drawing: the page is composed on a worker thread and applied only
 //! while its request is current; view math (fit, zoom about the cursor, pan limits); page
 //! stepping; mapping between dialog controls and `Print` options.

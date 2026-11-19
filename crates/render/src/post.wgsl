@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 // Fullscreen passes: depth-based ambient-light shading and frame output to the window.
 
 @group(1) @binding(0) var depth_tex: texture_depth_2d;

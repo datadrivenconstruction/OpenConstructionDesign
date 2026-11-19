@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Family editor: reference planes solved by a sketch, parameter-driven dimensions,
 //! equalities, alignments, angle parameters, text conditions, per-parameter solid visibility,
 //! insertion point and nested families. Extends the definition text:

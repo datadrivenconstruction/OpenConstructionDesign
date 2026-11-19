@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Shaft (SH): outline sketch, Enter; cuts floors/ceilings/roofs from bottom to top.
 
 use super::{ccw, tup, Active, Rec};

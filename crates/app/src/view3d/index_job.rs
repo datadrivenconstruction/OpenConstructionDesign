@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The picking index of a large scene is built off-frame, on a single thread. Until it is ready, the old index
 //! does not match the scene (`Index::matches`): hover stays silent, click and box select fall back to exact brute force.
 

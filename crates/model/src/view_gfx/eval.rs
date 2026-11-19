@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The result for drawing a view: rules are evaluated over sets (one query per value source),
 //! not per element, and the result is cached by the change journal. Editing an element recomputes
 //! only it and its openings; editing settings, types, properties and parameters recomputes the whole view.

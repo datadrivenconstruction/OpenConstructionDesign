@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Relative values in tool text ("+0.5 m", "-10%", "x1.2") for numeric parameters and sizes,
 //! and the elements an edit skipped with their reasons (shown on the plan card).
 

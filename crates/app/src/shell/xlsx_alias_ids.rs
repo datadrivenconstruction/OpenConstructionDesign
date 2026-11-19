@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Apply from a book read through a sheet alias: a re-export would put a fresh known sheet beside
 //! the user's renamed one, so the rows the Apply created or matched get their ids in place, in the
 //! user's own sheet. The new book is written beside it, read back, and moved over it only when

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The mechanical design as model content: a parametric family per kind of unit and port set,
 //! a sized type per unit with its ports where the design put them, the ducts and pipes cut at
 //! the units that sit inline on them, and which network each port joins.

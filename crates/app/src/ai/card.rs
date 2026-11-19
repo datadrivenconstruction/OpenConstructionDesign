@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Element cards and the budgeted model summary. Plain data in, deterministic text out: the same
 //! model gives the same text (prompt caching), and the text never passes its character budget.
 

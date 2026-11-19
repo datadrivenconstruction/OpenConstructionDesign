@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Typed solids in the app: creation (profile sketch on the level plane, second profile,
 //! revolve axis, path, profile holes; plane is the level's or a face's), selection and plan handles
 //! (vertices, move, depth/height/angle; Tab picks the next solid under the cursor), properties,

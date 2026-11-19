@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Headless acceptance run of ONE file: `ddc-app --accept FILE [--accept-out DIR]`.
 //!
 //! open -> count (native / mesh / skipped) -> probe that every mesh loads -> one real edit

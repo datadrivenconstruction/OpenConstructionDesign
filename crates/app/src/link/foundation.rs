@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The foundation a spec asks for (`ddc gen`): a raft under the footprint or strips under the
 //! bearing walls, written into the model after the project, each with its element key.
 

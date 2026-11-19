@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Freeform NURBS elements -> IfcBuildingElementProxy. An untrimmed open patch is written
 //! exactly: a shell as IfcAdvancedBrep (the two offset faces and four ruled sides, B-spline
 //! edges), a bare surface as IfcShellBasedSurfaceModel of one IfcAdvancedFace. Every element

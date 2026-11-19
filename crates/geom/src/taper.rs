@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Tapered insulation for a flat roof sloping toward drains. Thickness
 //! t(p) = t_min + i·d(p), where d is the water path length to a drain inside the outline (going around
 //! openings and reentrant corners): d(p) = min over nodes v visible from p (drains and non-convex

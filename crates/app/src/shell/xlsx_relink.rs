@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The linked workbook is kept per project in `meta`, so a reopened project still knows it, and
 //! a book that was renamed or moved is found again safely. "Synchronize" on a link whose file is
 //! gone opens a card (never the export offer): a book in the old folder (or one level below)

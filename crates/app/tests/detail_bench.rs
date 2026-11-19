@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Bench model for detailed element geometry: a storey of rooms with a door and a window in
 //! every wall, a stair with its railings and a guard. Per level of detail the 3D scene is
 //! composed and measured: time, triangles, shared opening prototypes; no door leaf, railing

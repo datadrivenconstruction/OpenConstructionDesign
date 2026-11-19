@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Freeform element: storage round trip (memory and file), control point edit with undo,
 //! refusals, shell quantities, ops lowering (create, edit, thicken, trim, convert, delete).
 

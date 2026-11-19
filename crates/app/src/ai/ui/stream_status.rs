@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! What the assistant is doing right now, as one status row. The panel records timestamps
 //! only; `stream_status` turns them into the row and the view just draws it.
 

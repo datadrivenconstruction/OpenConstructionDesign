@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Framing (schema 26): braces between column/beam points, trusses as a single element (members
 //! are built during regeneration), beam systems inside a contour (openings, reference edge,
 //! layout rules). Ends: a brace ends at the column face it leaves through, or at the bottom/top

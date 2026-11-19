@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Plan dimensions: linear (aligned/directional), chain, angular, arc length, radius.
 //! Geometry in model coordinates only; paper offsets and arrowheads are set by the sheet.
 

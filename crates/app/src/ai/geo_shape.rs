@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Tolerant reading of `create_geometry` operations. Models send lengths as plain numbers or
 //! "300 mm", points as `[x, y, z]` or "0 m, 0 m, 10 m", a form as a name with its fields beside
 //! it, a missing frame. All of these have one meaning, so they are turned into the strict wire

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Free placement. A straight spine corridor with rooms on both sides; its two ends may be
 //! closed by full-depth end rooms, so the corridor runs only between the outermost doors.
 //! Fixed parts (the core, pinned rooms) are placed first and the free runs of each side lie

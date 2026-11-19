@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Alignment tracking: the cursor lines up with a remote point (wall end, midpoint, face corner)
 //! it never touched. Points are kept sorted by X and by Y, so a query is a binary search plus
 //! a short scan, independent of the wall count.

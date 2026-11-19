@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! HUD at the cursor: key parameters of the selected elements of one category. For a multi-selection
 //! it shows the common value or a "mixed" placeholder; an edit (Enter) applies to all selected in one operation.
 use crate::editor::{Editor, Sel};

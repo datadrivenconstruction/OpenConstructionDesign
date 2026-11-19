@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! DXF of a [`MeshSet`]: plan cuts and vertical sections as LINEs, the bodies as `3DFACE`s,
 //! one layer per category (`<category>` for cut lines, `3D-<category>` for faces). Views sit
 //! side by side to the right of the model so they never overlap the 3D faces.

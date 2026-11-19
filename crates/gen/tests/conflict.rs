@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Twenty briefs that cannot be built: the conflict found is minimal (drop any member and the
 //! brief builds), keeps out demands that play no part, and comes with relaxations in range.
 

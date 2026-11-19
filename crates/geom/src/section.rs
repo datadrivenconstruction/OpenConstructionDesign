@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Sections and elevations: exact section of vertical prisms by the view plane and the
 //! visible edges of the projection (exact hidden-line removal for planar faces).
 //!

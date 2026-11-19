@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Typed refusals of materials, view templates and view filters: each names the field the user
 //! has to change, so the UI can localize it without showing internal text or ids.
 

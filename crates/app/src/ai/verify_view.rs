@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The verification view: how the assistant sees the result of its own work when the project
 //! has not allowed snapshots to leave the editor. Rule `egress.verify_view` of the project
 //! (`off`, `metrics` = the default, `image`): with `metrics` it gets measured facts of the

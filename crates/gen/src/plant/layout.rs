@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Rule-based layout: units in two rows facing a central aisle, each group together; spacing
 //! from the maintenance clearances and the room the pipe stubs need; a walkway clear of stairs
 //! and stubs; platforms with handrails and a ladder or stair where a valve is out of reach; the

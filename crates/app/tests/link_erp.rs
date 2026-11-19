@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The editor's linked session against the in-process ERP (`ddc-link` feature `mock-erp`), which
 //! answers like the ERP router and checks every request and response against `contract/`.
 //! The live ERP run is card I1.

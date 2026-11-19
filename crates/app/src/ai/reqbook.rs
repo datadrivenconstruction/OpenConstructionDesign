@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Information requirements between the workbook and the model: the words of a book in both
 //! languages, rows to stored rules, refusals as text, and the report as lines and sheets. The
 //! panel and the assistant's tools share it, so both read a book and count a report alike.

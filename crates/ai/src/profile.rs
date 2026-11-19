@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Connection profiles, stored in `<data_dir>/ai_profiles.json` without keys.
 
 use crate::egress::EgressGuard;

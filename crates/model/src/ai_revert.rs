@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Review and revert of AI batches. An AI batch is a journal operation named by a live `apply`
 //! audit record (`ai_audit.op_seq`, not undone), or one whose journal actor is an AI or an agent
 //! and that no such record names (an envelope applied without an audit). Reverting runs the batch's inverse commands

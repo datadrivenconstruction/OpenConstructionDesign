@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Offsets and facade bands of plan regions with holes. The mitered inset is the region minus
 //! a two-sided strip along every edge and a wedge at every reflex corner, so splits, holes and
 //! vanishing parts come out of one boolean step. The band behind each facade edge is that

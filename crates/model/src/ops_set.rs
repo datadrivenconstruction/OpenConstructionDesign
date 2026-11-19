@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `Set` on existing rows (docs/design/AI_NATIVE.md, "Set fields").
 //!
 //! Walls, columns, beams, slabs, openings and rooms are lowered to `bulk::Edit` and project

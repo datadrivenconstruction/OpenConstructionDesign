@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Typed access to the design tokens: semantic colours (`Sem`) and size scales. Feature code
 //! uses these names, never literals; tests keep them equal to docs/design/tokens.json and check
 //! every text/background pair against WCAG AA in both themes.

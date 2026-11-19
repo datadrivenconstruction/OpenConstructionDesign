@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! "Distribute along wall" (W2): the selected door/window is the template; N slots at equal pitch
 //! between end offsets, or at a fixed pitch. Live preview: free slots use the preview colour,
 //! conflicts (past the end, on another opening, overlap) are red until committed. Digits — N

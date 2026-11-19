@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The family tools' one contract, shared by the chat, the agent surface and tests: a family
 //! definition text is data. It is checked by the geom pipeline (`component::validate`), its
 //! nested families are resolved against the project, and only a text that passes becomes a

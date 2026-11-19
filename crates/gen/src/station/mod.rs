@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! An underground station built in an open box: the typology of a cut-and-cover station as
 //! rules, not as a template. Diaphragm walls hold the excavation; inside sit the base slab
 //! under the tracks, an island platform between two trackways, a concourse level above it and

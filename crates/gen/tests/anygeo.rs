@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Any geometry (R7): non-orthogonal grids, curved facades, stepped, terraced, twisted,
 //! winged and ring plans, roofs on any outline, and cores carried through every storey.
 //! Each free-form brief of the bench is valid, free of clashes, inside its area rule, fully

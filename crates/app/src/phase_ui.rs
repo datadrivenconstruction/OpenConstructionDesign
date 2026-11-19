@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Phases in the UI: labels of the standard phases, the view visibility layer (hidden / halftone /
 //! dashed demolished), plan overlay, the "Demolish" command and the "Phases" window.
 

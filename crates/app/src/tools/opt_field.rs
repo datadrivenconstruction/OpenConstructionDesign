@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Fields of the tool option bars on the design kit: length in project units, angle, percent,
 //! count, toggle, dropdown and a quiet button. Values stay in metres / degrees in the model; the
 //! parse, clamp and wrap rules are plain functions without UI state.

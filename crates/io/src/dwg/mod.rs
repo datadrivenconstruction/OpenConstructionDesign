@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Native .dwg reader (storage AC1012..AC1032, i.e. R13..R2018+). Produces the same
 //! [`DxfDocument`] the DXF reader builds, so underlay and drawing-to-model work unchanged.
 //! Spec: docs/specs/DWG.md. Unknown objects are skipped and counted; never panics.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Ramp: axis clicked bottom to top, Enter finishes. Length follows from rise and slope:
 //! the last axis segment is extended, a long flight is split by landings.
 

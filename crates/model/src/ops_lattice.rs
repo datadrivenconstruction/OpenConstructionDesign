@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Lowering of `geometry.gridshell` onto `gridshell.rs`: the host is drawn in absolute
 //! coordinates and stored from its level; member sections are catalogue names, found among
 //! the member types or added from the catalogue in the same envelope.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Information requirements: per category, a parameter that must be filled and hold a value of
 //! a given form (non-empty, one of a list, a range, a pattern, a unit). Rows arrive as text from
 //! a workbook or an assistant; stored, they are ordinary company rules in their own pack, so

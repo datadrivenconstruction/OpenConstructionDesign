@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! ddc-app: the editor (plan + "Wall", "Door/Window" tools + 3D).
 //! ddc-app [--safe-graphics] [--screenshot out.png [--scene empty|room|facade|curtain|panel|slab|section|levels|mass|mep] [--view plan|3d|section:N|elevation:S] [--size WxH] [--hover X,Y] [--scale F] [--layout N|id] [--first-run] [--settings-interface] [--settings-page N|library|ai|about...] [--start-screen] [--lang ru|en] [--job-demo] [--import-demo STATE[:ru|:en]] [--xlsx-preview] [--tool-demo A1..A5]
 //!   [--scene overlap|phases] [--phase-filter KEY] [--phases-win] [--params-win] [--schedule-demo] [--ribbon-tab ID] [--crop Y0,Y1] [--status-demo] [--recover-demo] [--autosave-settings] [--dwg-demo underlay|preview|result]

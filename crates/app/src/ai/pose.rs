@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Meaningful camera poses for `view_snapshot`: the agent names what to look at (a room, a
 //! level plan, a side of the compass) and gets the pose with the world-to-pixel matrix, so a
 //! picture ties back to model coordinates. Pure and deterministic: no GPU, no clock; the same

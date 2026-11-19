@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! One more platform on a built lattice tower: only the platform comes out, within a metre or
 //! two of its height, its corners on the tower's corner chords, with one deck to land as a slab.
 

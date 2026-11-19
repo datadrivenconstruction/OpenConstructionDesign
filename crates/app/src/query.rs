@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Project element search query (WORKFLOWS W12, W1). Examples (Russian keywords are accepted too):
 //! `doors width>900`, `walls type=Masonry 200 level=2`, `windows or doors L2`, `not rooms`,
 //! `... -> width=width+100`. Parse → expression (and/or/not, parentheses) → rows of all levels (SQL);

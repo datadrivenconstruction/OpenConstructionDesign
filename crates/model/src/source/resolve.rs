@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Resolving re-import conflicts (one model operation, one undo) and deleting
 //! an element with its cascade (wall -> openings, components, constraints; slab -> outline).
 //! All row snapshots go through [`Snapshots`]: a row is snapshotted once before its first change,

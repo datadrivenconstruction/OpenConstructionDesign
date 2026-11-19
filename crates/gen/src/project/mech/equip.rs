@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Equipment as parametric objects: casing, the sections inside it in air order, and ports
 //! with the medium, position, outward direction, size and flow each connection takes.
 

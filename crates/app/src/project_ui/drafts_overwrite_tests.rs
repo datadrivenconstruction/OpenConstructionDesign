@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Close -> Save -> a family draft that replaces project type values: the family window asks
 //! first, the project action waits for that answer. No answer loses a draft or a project edit,
 //! and nothing closes with unsaved work.

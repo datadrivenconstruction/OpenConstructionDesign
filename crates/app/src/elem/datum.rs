@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Stair, railing, grid and reference plane in the element contract (D2, D4): plan outlines for
 //! selection, the ends of a reference plane (its grips live in `grips.rs`), and the 3D bodies of
 //! the two datums, drawn as thin ribbons at the level so that they can be picked and moved.

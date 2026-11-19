@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Shafts, ceilings, slab openings (schema 14).
 //! A shaft is a vertical cutout by an outline over an elevation range: it is subtracted from the
 //! areas and volumes of slabs, ceilings, roofs (in plan, corrected for slope) and beams (by axis

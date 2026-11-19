@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Depth snapshot for occlusion culling: 8×8 tiles of the previous frame go to a readback buffer
 //! and are read without waiting for the GPU; the snapshot arrives 1–3 frames late (`perf::HiZ`).
 //! The pass is a separate command submission at the start of the frame: the frame encoder is

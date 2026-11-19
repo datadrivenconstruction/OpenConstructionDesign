@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Sheets: paper format, frame and title block per standard profile, viewports with views
 //! at scale. Line weights, text heights and sizes come from `data/drawing_standards.json`
 //! by profile (iso, gost) and view scale. Output is vector PDF (our own writer) and DXF.

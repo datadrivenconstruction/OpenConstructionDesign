@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Virtualized table: sortable headers, row states, numbers right-aligned with muted units,
 //! long cells elided with a tooltip. The body is one Tab stop; arrows report a move and the
 //! caller owns the selection.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Bodies on the active level picked and edited as one element each: imported meshes without a
 //! parametric model (`mesh` rows, "Imported <category>") and native columns, beams and
 //! ceilings. MEP runs are not bodies: `mep3d` draws them and selects them as `Sel::Mep`. Plan outline (convex hull of the projection) and z range for picking and drawing.

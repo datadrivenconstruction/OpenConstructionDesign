@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Isotropic remesh and repair for imported triangle meshes.
 //!
 //! `remesh` brings edge lengths close to a target (split, collapse, flip, tangential smoothing;

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Connections, project policy and the MCP policy. The key goes from a password field straight to
 //! the OS store; afterwards the form only knows whether one is stored. No `Debug` on this state.
 

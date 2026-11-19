@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Toast stack, bottom-right above the status bar; never takes focus.
 use crate::notify::{Level, Toasts};
 use crate::theme::{control, icon_size, layout, space, Role};

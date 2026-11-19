@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Quantities written as text with a unit: `"1200 mm"`, `"1.2m"`, `"30 deg"`. Scripts compute
 //! in metres and radians; nothing is implied by display settings.
 

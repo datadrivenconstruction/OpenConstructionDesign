@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Shells and faces to triangles. Each edge is sampled once and shared by both of its faces;
 //! loops are mapped to surface parameters (periodic unwrapping, seams, poles), triangulated
 //! with `triangulate_region` and, on curved surfaces, refined until chord and normal steps hold.

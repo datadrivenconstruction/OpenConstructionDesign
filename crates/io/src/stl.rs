@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! STL: binary writer (metres or millimetres), binary and text reader. The file has no units
 //! and no materials; the reader welds equal corners so a part comes back as an indexed mesh.
 

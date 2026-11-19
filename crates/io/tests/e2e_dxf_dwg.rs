@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! DXF/DWG at io level: write -> read keeps the entity count, import into a model is one
 //! undo step that returns every table (journal included) to the empty start.
 //! Corpus files (`--ignored`): env `DDC_E2E_DWG` / `DDC_E2E_DXF`.

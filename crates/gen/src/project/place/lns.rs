@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Neighbourhood rebuild: take a few items out of their runs and put them back by the exact
 //! search; keep the result only when it costs less. The choices come from a fixed seed, so
 //! the rebuild is as deterministic as the search.

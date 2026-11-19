@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Data-driven cable rules (table in `data/cable_rules.json`): breaker and section sizing,
 //! cable length by laying method, and the cable log. Deterministic; every finding cites a
 //! rule id.

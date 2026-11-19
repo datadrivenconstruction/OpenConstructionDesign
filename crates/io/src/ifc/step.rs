@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! STEP physical file writer: sequential ids (deterministic), value formatting, GlobalIds, self-check.
 
 use std::fmt::Write as _;

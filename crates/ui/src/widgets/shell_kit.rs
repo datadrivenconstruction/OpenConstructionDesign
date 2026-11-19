@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Small building blocks of the window chrome: the one primary button, quiet destructive
 //! button, elided text, progress bar, action row and drop frame.
 use super::{icon_name, paint_state};

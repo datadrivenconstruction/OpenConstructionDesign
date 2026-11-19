@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Frames → native model rows inside the caller's batch transaction (one undo).
 //! Stable guids go to `ext_ref`, namespaced by source (bridge name + input file identity): a guid
 //! is unique per (source, guid); the same guid from another file is another element. A guid seen before is compared and updated in place when its

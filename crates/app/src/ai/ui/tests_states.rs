@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Every state of the assistant panel drawn headless at the narrowest panel width, in both
 //! languages and both themes, with an explicit catalog (the global language is never touched).
 //! A frame may not write the model, may not emit an action on its own, shows at most one primary

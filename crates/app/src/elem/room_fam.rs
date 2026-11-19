@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Room and room separator families: plan grips, the separator's length row and the 3D drawing
 //! of both. A room whose boundary was sketched shows a grip on every boundary vertex; a room
 //! closed by walls shows one grip at its room point. Dragging never touches a wall. Every drag

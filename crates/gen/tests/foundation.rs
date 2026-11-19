@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The foundation a spec asks for: a raft with the footprint's area, strips under the bearing
 //! walls, keys in the contract grammar, and errors that name the field.
 

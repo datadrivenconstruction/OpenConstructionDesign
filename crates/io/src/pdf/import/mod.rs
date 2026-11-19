@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Vector PDF import: own file parser, page →
 //! 2D entities in sheet mm → model at the chosen scale in one undoable operation.
 //! Order:`PdfFile::parse` → `page(i)` → `entities` → `import_page` / `propose_walls`.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Empty state of the XLSX preview: the book matches the model, so there is no table. One
 //! compact card says what Export and Sync do and when the book was last synced; the window
 //! is then narrower and as tall as its content. Pure decisions plus one painter, no model access.

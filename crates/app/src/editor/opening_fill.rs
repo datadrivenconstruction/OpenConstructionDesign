@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! 3D fill of a plain door/window opening, built from the opening's type and the project's detail
 //! rules: a door's lining, casings, threshold, panelled or glazed leaves and hardware; a window's
 //! frame, mullions and transom, sashes, glazing, sill and board. One prototype per type and size.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Test plans for plan reading: walls with openings drawn the way a plan sheet shows them
 //! (walls filled or outlined, a door as leaf and quarter swing, a window as a glass line on the
 //! axis), as a picture or as a vector sheet, and the score of a read against the truth:

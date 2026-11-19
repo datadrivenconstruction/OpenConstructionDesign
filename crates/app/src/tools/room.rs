@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Room: a click inside a closed wall loop creates it with `add_room`; an open region is refused.
 
 use std::sync::Arc;

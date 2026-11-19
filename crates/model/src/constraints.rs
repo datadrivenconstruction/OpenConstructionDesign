@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Edit constraints: length/distance lock, equal pitch (EQ), alignment, ∥, ⊥ between
 //! walls; alignment/lock of a wall to a grid axis; level-pitch lock and wall top bound to a level.
 //! Stored in `constraint_rule` (schema 17). Editing a wall axis or grid axis calls

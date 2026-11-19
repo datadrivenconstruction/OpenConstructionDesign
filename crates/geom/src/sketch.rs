@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Boundary sketch (slab, roof, ceiling, shaft, opening): curves are a line segment, an arc, an
 //! elliptical arc, a spline (cubic B-spline with clamped ends). Curves may be drawn in any
 //! order; `Sketch::validate` stitches them into loops by their endpoints, checks closedness and

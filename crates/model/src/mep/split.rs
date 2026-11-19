@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Inserting a transition into a run: the run is cut at a point of its axis, the part after the
 //! cut gets another size and the network puts a transition where the two parts meet. One journal
 //! record; a cut the network cannot fit a fitting into is rolled back whole.

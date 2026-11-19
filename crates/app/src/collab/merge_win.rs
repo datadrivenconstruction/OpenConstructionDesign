@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Merge window: file choice, background preparation, preview with counters, per-conflict choice,
 //! apply as one undo step. A file with no shared history is simply refused.
 

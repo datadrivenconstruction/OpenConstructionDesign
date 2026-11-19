@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Component types: one type object per component type, of the subtype that matches the
 //! occurrence class (IfcFurnitureType for IfcFurniture, ...), with its representation map, the
 //! `DDC_ComponentType` property set of resolved type values and IfcRelDefinesByType to every

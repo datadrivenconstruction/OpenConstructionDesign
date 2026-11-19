@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Exact search. End rooms first, in the order of the corridor they leave (the bound: no
 //! leftover can make a plan cheaper than its corridor); for each pair every remaining item
 //! goes into a run by depth-first branch-and-bound on the leftover cost, symmetric runs tried

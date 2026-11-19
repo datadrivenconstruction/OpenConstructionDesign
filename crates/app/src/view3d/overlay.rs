@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! 3D overlays over the viewport: view bar (style, projection, saved views, graphics),
 //! numeric section-box bounds, walk-mode hint, temporary-categories badge,
 //! category visibility/transparency window, orbit pivot marker.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Locks: parts of a project the user pinned, kept whole through any regeneration. A lock
 //! targets a rule, a storey, a room or a zone of a storey, and keeps either its geometry or its
 //! program (kinds and areas). It carries a seal taken from the build it was set on, so a later

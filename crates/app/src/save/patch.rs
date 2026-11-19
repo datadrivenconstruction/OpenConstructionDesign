@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The patch writer in the save pipeline. Any doubt of `ddc_io::ifc::patch`, including a finished
 //! patch that fails its read-back, makes this a full rewrite, and the report says which and why.
 //! A rewrite never takes the source's place: over the source, a doubt ends in a copy beside it.

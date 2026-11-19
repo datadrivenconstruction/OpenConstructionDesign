@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Text input with a muted unit suffix, numeric field with locale decimals, dropdown.
 //! Enter, Tab and leaving the field commit an edit, an untouched field commits nothing; Esc
 //! restores the text it had on focus.

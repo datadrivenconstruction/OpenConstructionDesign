@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Worker threads for cooking projects and loading units. The frame thread replaces the waiting
 //! list every update (highest rank first); jobs already running are not queued twice. Results come
 //! back over a channel and are taken without waiting.

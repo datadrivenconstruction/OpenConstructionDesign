@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Everything in the panel that can be decided without a frame: which state it is in, how an
 //! error reads, how a plan is counted. The tests pin these without a window.
 

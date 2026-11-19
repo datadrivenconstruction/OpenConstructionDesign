@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Dimensions as model objects (`dim`): references to wall faces/axes and opening edges; geometry
 //! is recomputed after every edit (`dim_geo`, derived). A reference to a deleted element makes
 //! an "orphan": the dimension keeps its last known geometry and the `orphan` flag.

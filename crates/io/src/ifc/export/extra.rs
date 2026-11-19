@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Columns, beams, roofs, ceilings and imported meshes -> IfcColumn / IfcBeam / IfcRoof /
 //! IfcCovering(.CEILING.) / IfcBuildingElementProxy. Members, roofs and meshes carry a
 //! triangulated body; a ceiling is a plan profile swept down from its top face. The exact model

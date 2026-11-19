@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Component library in one window: sources (built-in, in project, my library) and
 //! categories on the left, cards with thumbnails (offscreen render, cached by family hash) in the centre,
 //! the selection on the right: type sizes, parameters with values, format readiness. Double click

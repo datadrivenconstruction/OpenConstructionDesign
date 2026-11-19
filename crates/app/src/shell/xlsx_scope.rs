@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Scope card of the XLSX export: what goes into the book (whole model, active level,
 //! selection) and which categories. The result is an `xlsx::Scope` named in the book.
 use std::path::{Path, PathBuf};

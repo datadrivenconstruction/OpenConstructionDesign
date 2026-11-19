@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Door/Window tool without UI: cursor over a wall -> snapped position along the axis,
 //! checks (outside the wall, above the wall, overlap), plan symbol.
 

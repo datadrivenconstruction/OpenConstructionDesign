@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Locale rule: no Cyrillic in production `.rs` code (comments and test/fixture files excepted);
 //! the strings moved to `i18n/{en,ru}/edit_panels.json` exist in both languages.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Natural-argument normaliser of `create_geometry`: a model writes `"2.1 m"`, `[0, 0, 3]`,
 //! `{"x": "1 m", ...}` or leaves out an unambiguous `kind`; the strict wire types of
 //! `ops/src/geo.rs` take `{v, unit}` and `{x, y, z, unit}`. The pass is driven by the JSON

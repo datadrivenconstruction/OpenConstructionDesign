@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Window: rebated frame, mullions and a transom of T section, opening sashes with their own
 //! glazing, fixed glazing in the frame, glazing beads and handles at fine detail, an outside
 //! sill with a drip and an inside board. Outside is −y; the placement may mirror it.

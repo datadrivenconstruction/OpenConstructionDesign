@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Merged cells on import: data merges fill the covered cells, a merge down the id column is
 //! reported and blocks deletes, a header merged across columns stops the import.
 

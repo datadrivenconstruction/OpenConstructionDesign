@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Material card section for imported meshes: gives the selected meshes this material, or all
 //! meshes of the first one's category. The realistic style shows the material's texture on them.
 //! Every change is one undo step through `run`.

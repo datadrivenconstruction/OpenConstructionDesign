@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Assembly, one factorization for all load cases, recovery, diagrams, combinations, envelopes.
 //! Equations are numbered node by node in RCM order, then DOF 0..6; fixed DOFs are dropped.
 

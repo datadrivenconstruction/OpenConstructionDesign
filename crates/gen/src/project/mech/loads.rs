@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Room heating and cooling loads at the design conditions of the rules (a country pack sets
 //! the climate and the envelope through their norm keys). Heating: transmission through the
 //! exterior walls, windows, roof and ground floor plus infiltration. Cooling, sensible:

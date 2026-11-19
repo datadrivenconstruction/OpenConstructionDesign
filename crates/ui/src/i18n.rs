@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! String catalogs by key (en source, ru full coverage), CLDR plural forms for en/ru.
 //! Base files `data/i18n/{ui,commands}.<lang>.json` plus fragments `data/i18n/<lang>/*.json`.
 use serde_json::Value;

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Self-critique loop: build the spec, render snapshots, let a critic score them and answer
 //! with a merge patch on the spec, rebuild, and keep the best round. Rendering and the critic
 //! are traits, so the app plugs in its viewport and a model while tests use plain code.

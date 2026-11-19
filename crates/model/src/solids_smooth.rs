@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! JSON of a smooth sweep path (`"smooth"` next to `"path"` in a sweep form): segments, frame,
 //! roll and the twist/scale laws. The polyline `"path"` stays as its plan trace for old readers.
 

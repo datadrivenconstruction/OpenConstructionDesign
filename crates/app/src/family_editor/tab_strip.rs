@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Section tabs of the family editor: full labels in up to two rows, short labels when that is not
 //! enough, and the rest behind a "More" menu. A label is never elided; the selected tab is
 //! always visible.

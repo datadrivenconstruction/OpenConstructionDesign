@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Import of an edited workbook: parse → validate all cells → one model operation.
 //! Any rejection = nothing applied; the report lists all rejections at once.
 

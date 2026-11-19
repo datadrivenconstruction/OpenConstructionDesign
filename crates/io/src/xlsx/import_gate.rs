@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Progress/cancel hook of the import: asked at the start of each sheet and every `GATE_ROWS`
 //! rows, always before the model is touched, so a stop leaves the model as it was.
 use super::export::Hook;

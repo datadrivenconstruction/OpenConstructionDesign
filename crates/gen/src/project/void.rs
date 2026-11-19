@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Clashes between everything that runs through the ceiling void: pipes, conduits, cable
 //! trays, sprinkler mains and air ducts, and the columns, shafts, terminals and plant they
 //! pass. Round pieces are capsules and rectangular ones oriented boxes, tested exactly; two

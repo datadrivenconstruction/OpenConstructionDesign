@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Bridge between a DXF document and the model's 2D tables. Import is one undoable operation (`Model::batch`).
 //! Angles: DXF degrees, model radians. A circle is stored as a full 0..2π arc and written back
 //! as CIRCLE. The model does not store Z or vertex widths; line colour/type/weight on an object are stored in columns; MTEXT is stored as d_text with mtext_width.

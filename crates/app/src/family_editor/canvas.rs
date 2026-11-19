@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Plan sketch: x/y reference planes (free ones in the accent color, under-constrained ones with a
 //! warning), reference lines, dimensions and EQ, body outlines, the insertion point. A plane is
 //! dragged with the mouse (a free one gets a new initial position, the sketch is re-solved);

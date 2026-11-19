@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Reinforcement and the analytical model in the views: `edit3d::scene3d` 3D providers (bar bodies
 //! per set, analytical axes as tubes) and the plan layer (bars below the cut plane are lines,
 //! bars crossing it are dots; analytical axes are dashed). Providers declare tables and, using

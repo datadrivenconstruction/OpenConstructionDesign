@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Executor for `ddc-ops` envelopes (docs/design/AI_NATIVE.md section 2, "Lowering").
 //!
 //! `apply_envelope` lowers every op to an existing model function inside `Model::atomic`: the

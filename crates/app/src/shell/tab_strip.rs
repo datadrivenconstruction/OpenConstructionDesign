@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Pure layout and close-set rules of the view tab strip (drawing lives in `panels::view_tabs`).
 
 use super::EditorApp;

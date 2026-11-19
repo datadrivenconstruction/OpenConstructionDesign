@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Tensor-product NURBS surface.
 
 use super::{basis_funs, binom, check_knots, check_points, ders_basis, find_span, NurbsError, H};

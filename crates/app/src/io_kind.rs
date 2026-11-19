@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Cause of a failed file write, enough for plain words in any language: from a typed io error,
 //! or from the text of one that already became a `String` on its way out of a worker.
 

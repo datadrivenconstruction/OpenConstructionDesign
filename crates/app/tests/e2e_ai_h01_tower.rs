@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! H01 and H11 (the same tower asked in Russian), the 300 m lattice tower, through the chat the way a model is told to build it: the
 //! recipe from `help`, the steel_frame generator (legs, bracing, platforms with levels and
 //! decks, stairs, lifts), then connect_members at every node; Apply once, then every oracle

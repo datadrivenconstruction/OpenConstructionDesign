@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The only place that talks to the native file dialogs. Builder methods mirror the dialog crate;
 //! the terminal calls return `None` (or `false`) without touching the OS while the screenshot
 //! flag is set, so an offscreen run can never block on a picker. A build without the `gui`

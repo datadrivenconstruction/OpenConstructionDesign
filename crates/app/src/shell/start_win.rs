@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Start screen: recent projects, new from a start template, open, sample, drop import and
 //! what is new. Also the window-wide file drop: overlay while hovering, routing on release.
 use super::project_seam::{self, RecentProject};

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Roof edge detail: copings on parapet tops, half-round eaves gutters, rain heads and
 //! downpipes with offsets, shoes and wall brackets; downpipes spaced by the drainage rule.
 

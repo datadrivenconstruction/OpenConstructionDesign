@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A design option merge reaches the live model only as a plan card: the worker compiles it on
 //! the copy of the live model and the person's Apply writes it, as one undo step.
 

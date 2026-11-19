@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Fire protection of whole buildings: every occupied room of a tower covered by heads of its
 //! hazard class, standpipes with a landing valve on every storey, and each fire rule changing
 //! the design it governs.

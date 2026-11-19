@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Boolean operations on closed polyhedra (forms, in-place bodies).
 //!
 //! A body is a set of convex planar faces with tags (`tag` is a stable face name used for

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Wall type library: layer function and priority (`wall_layer_flag`), whole-type edits that
 //! keep placed walls aligned on the core or the exterior face, duplicate and rename, an archive
 //! of unused types (moved, never deleted) and copying types with their materials from another

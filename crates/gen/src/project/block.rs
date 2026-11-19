@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A block of buildings on given plots. The shared site rules (set-backs to streets and to
 //! neighbours, spacing, sun and fire access, the floor-area target and the programs) turn every
 //! plot into one brief; the briefs are built in parallel by the same builder and gates as a

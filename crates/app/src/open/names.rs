@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! One wording rule and one default-name rule for saving.
 //! "Save" writes the project file. Everything else is "Save copy as <format>" and is named
 //! `<project name>-edited.<ext>`, whatever the format or what the copy holds.

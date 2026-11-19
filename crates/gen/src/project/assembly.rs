@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Layered build-ups of walls, slabs and roofs. The catalogue (`data/assemblies.json`) holds
 //! materials and build-ups as data; the rules of each use pick one: the exterior wall, roof and
 //! ground slab size their insulation to the U-value rule, the party wall and the floor between

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Schedule import flow: the book is read on a worker ("Reading workbook..." with Cancel), once,
 //! and only its key sheet and this schedule's sheet; the UI thread plans it and shows the
 //! preview. A book saved again after the preview is read anew before anything is applied.

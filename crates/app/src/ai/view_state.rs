@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The screen state the AI view tools change, on the UI thread. Nothing here touches the model:
 //! selection, temporary isolation (`isolate::Vis`), plan zoom, 3D camera and a color override
 //! layered on the view graphics. The view from before the first change is kept, and Reset view

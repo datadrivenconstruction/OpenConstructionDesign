@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Seeded fuzz of by-key row matching in the XLSX import: random books built from a 300-room
 //! fixture (blank ids, duplicate and renamed keys, deleted rows, random Accept/Reject/pending
 //! decisions) are driven through preview, apply, delete_missing and undo. A failure names the seed.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Performance bench, one JSON line per run (`docs/design/PERF_3D.md`, «Measured»):
 //! `ddc-app --synthetic N | --bench FILE|synthetic:N [--frames N] [--size WxH] [--bench-window]
 //! [--bench-jsonl OUT]`. Headless: offscreen frames waited on the GPU, no readback. Window: the

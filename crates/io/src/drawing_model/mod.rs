@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Drawing to model: an underlay (`Underlay`) from a DXF or a PDF page →
 //! proposals for walls, openings and rooms (`propose*`) → accepted in one operation (`accept_proposals`).
 //! Units are model metres; a proposal id is a hash of the rounded geometry, so it is stable between runs.

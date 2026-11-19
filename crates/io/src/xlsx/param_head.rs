@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Header of a parameter column. `units::norm` drops brackets and case, so two parameters, or a
 //! parameter and a format column, can share one normalised header. The later one is exported as
 //! `Name (#id)`, optionally followed by the unit, and the id binds it on read. Every other header

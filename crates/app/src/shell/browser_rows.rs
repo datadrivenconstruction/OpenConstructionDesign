@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Row commands of the project browser (`browser.row_open`, `browser.row_rename`,
 //! `browser.row_delete`). They act on the current row of the views and levels sections: the one
 //! last clicked, focused or opened for its menu (`TreeUx::row`). The row keys Enter and Del of a

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Random edit sequences on a big model: after every operation the lists a scoped reload built
 //! equal the lists of a fresh full reload. A failure prints the seed, the step and the operation.
 

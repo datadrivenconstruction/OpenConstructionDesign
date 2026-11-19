@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Search over commands and their keys for the reference panel: label, id and keys, ranked by
 //! the palette scorer; typing a key code or chord puts its command first.
 use crate::fuzzy;

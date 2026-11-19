@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Two project files from one base, edited differently: the editor merges the colleague's file
 //! (conflict choice, one undo step, redo) and compares versions. The merge window runs this
 //! same sequence (`merge_lineage`, `prepare_merge`, `merge_preview`, `merge_apply` inside

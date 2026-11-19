@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The penalty of a built project, broken down by goal rule. Each `goal.*` rule measures one
 //! quality on the built storeys, compares it with the rule's value, and costs
 //! `weight x miss` in its tier, the miss normalised to 0..=1. Projects compare tier by tier,

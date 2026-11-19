@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Re-exporting a book that carries a user layout is a fixed point: with an unchanged model the
 //! second and third re-export write identical sheet XML and report no loss; one model edit then
 //! changes only the cells of that element.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The assistant's tool steps in the dialog: one quiet card per run with an icon, the name and
 //! the duration of every step, and a readable reason when one failed. The card only shows what
 //! happened; nothing in it runs a tool or applies anything.

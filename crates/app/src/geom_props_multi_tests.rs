@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Multi-selection properties: shared values, varying values, one undo step, refusals.
 
 use super::tests::{fixture, square, Fx};

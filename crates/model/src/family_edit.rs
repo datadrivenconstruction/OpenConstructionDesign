@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Family editor (schema 29): `fam_doc` drafts (definition text, link to the project family),
 //! load/reload into the project as one operation that refreshes instances, type catalog (CSV),
 //! and `comp_thumb` thumbnails: a derived cache keyed by the definition hash (not journaled).

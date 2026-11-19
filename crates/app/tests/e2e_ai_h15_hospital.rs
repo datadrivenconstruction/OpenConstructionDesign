@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! H15 on H02 through the chat: the hospital wing is built and applied, then a partition splits a
 //! third-floor ward and a new operating theatre is placed in the far part, with terminals and its
 //! own supply and extract air routed from a shaft; the edited model meets every oracle of the

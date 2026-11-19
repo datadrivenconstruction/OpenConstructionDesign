@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Design variants that differ on purpose. The free rules of a brief (massing form, grid span,
 //! band depth, facade system: those the brief and the locks leave open) span a candidate pool;
 //! each candidate is built, gated and scored, and the best ones are picked greedily under a

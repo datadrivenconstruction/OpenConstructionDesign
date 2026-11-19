@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! WCAG floors for all seven looks in both themes: text 4.5:1, graphics and focus 3:1,
 //! disabled text 3:1 drawn flat; the AI accent stays apart from the canvas preview.
 use ddc_ui::looks::{contrast_failures, pair_ratio, patches, presets};

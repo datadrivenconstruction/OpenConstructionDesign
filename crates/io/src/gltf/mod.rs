@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! glTF 2.0 binary (.glb) export. Own writer, no dependencies beyond `serde_json`.
 //!
 //! The model is Z-up in metres; glTF is Y-up. One root node carries the -90° turn about X, so

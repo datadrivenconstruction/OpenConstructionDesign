@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Undo for underlay edits. Underlays live in the session, not in the model, so a step makes no
 //! model operation: it stores the other side of the change, and undo and redo swap that with
 //! the live state. The editor's stack keeps the order with model edits; `Editor` cannot reach

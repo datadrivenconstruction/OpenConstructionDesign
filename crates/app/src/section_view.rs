@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Section/elevation view (2D, model s-z coordinates): section fill by material class,
 //! projection and "beyond the plane" lines by line-weight tokens, levels with elevations, grids, height chain;
 //! zoom/pan; element selection is shared with plan, 3D and the table. View marks on the plan: `plan_marks`.

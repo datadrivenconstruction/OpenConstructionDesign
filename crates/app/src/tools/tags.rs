@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Tags as elements (W9): TG — tag by click (door/window → wall → room under the cursor),
 //! head dragging, Delete removes the tag under the cursor; TA — "Tag all" with category
 //! selection and a counter of new tags; NU — click numbering (number +1 per click, each

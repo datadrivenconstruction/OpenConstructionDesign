@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Derived typed solids: quantities and meshes (cached by definition content), subtraction of
 //! the union of voids from hosts. The deduction starts from the host's original quantities (`solid_base`), so
 //! repeating regeneration without rebuilding the host (an invalid slab) accumulates nothing.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Blocking HTTP transport for streaming chat. A reader thread owns the socket, so a
 //! stalled server can never hold up cancellation: the caller polls a channel every 50 ms
 //! and on stop simply drops the receiver.

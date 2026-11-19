@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Saved measurements in the editor: the feature under the cursor (wall face, mass face by its
 //! history tag, slab side, room) as a model `Anchor`, the tool's picks, and the quick-measure
 //! lens. The lens only evaluates (`Model::eval_measure_spec`); it never writes the journal.

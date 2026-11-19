@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Unit of a survey import: the picker, where its default comes from (file header or a guess by
 //! the extent, never silent) and the resulting extent in project units before Import.
 

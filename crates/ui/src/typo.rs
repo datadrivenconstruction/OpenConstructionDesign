@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Type system (docs/design/TYPOGRAPHY.md): every piece of UI text has a role; a role fixes
 //! size, line height, weight, tracking, colour token and case. Values mirror `font.scale` in
 //! tokens.json (checked by `roles_match_tokens`). All digits are tabular (baked into the font).

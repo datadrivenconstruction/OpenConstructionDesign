@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Geometry contract of the Properties panel, drawn headless through `EditorApp::props` inside
 //! the real side panel, at its minimum and default width, in both languages (explicit catalog
 //! and fonts, the global UI language is never touched).

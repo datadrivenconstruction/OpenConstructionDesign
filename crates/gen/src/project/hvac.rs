@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Mechanical ventilation of a project. Each room gets the air its kind and size ask for:
 //! habitable rooms a supply diffuser, wet rooms and kitchens an extract grille (rooms of
 //! non-residential buildings both, balanced). Mains run in the corridor ceiling void, supply

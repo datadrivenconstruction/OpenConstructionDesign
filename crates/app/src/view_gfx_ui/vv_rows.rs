@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Row model of the visibility and graphics tables: column sets, the name and tooltip of every
 //! toggle, and the draft edits a row makes. No drawing here, so the rules are testable.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A failed project save: the cause in plain words, Save as and Retry, the system text under
 //! Details. The edits stay in memory and the project stays unsaved; the file on disk is only
 //! ever replaced whole (temporary file, then rename), so a failure leaves it as it was.

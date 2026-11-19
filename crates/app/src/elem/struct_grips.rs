@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Plan grips of the foundation and framing families: footings, strip footings, rafts, braces,
 //! trusses, beam systems and ramps. One drag is one spec update, so one undo step. Elements that
 //! follow a host (column, wall, member) show no grips: the host moves them.

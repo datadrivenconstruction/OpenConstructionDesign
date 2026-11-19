@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Large synthetic model: a grid of wall-bounded rooms with network segments in each cell.
 //! Prints: scene build, operation -> ready scene (partial rebuild), splitting into chunks
 //! and how many chunks would be uploaded to the GPU, index build, ray picking, box selection.

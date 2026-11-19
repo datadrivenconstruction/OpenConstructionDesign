@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Detailed bodies for the built-in 3D providers, at the 3D view's level of detail: railings with
 //! round handrails, posts and balusters; tread nosings; true member sections where the exact
 //! joined body is too costly; roof edges (parapet copings, gutters, rain heads and downpipes).

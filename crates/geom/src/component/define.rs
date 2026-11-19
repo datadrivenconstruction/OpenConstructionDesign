@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Typed family definition for programmatic authoring (an assistant or a script): parameters
 //! with units and ranges, reference planes, constraints, forms from profiles. `define` lowers it
 //! to the family text, parses it, builds every type and runs the flex check with the test

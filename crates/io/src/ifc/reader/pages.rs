@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! ISO 8859 code pages 2..=9 for the STEP `\S\c` escape (the byte `c + 128` read in the page
 //! chosen by the last `\PA\`..`\PI\`). Page 1 is Latin-1 and needs no table. Tables cover
 //! 0xA0..=0xFF; U+FFFD marks an unassigned position.

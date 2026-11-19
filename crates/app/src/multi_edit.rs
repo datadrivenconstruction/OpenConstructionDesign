@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Edits of many selected elements at once (multi panel, paste parameters, quick HUD, query,
 //! AI): the same opening checks as one element, one undo step and exact counts in one line.
 use crate::editor::Editor;

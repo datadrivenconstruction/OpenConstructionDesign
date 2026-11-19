@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Curved faces of advanced breps on spheres, tori, swept surfaces (revolution, linear extrusion)
 //! and B-spline surfaces (plain and rational):
 //! the bounded region is triangulated in the surface parameters and refined until chords stay

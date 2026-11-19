@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! MEP networks: cross-sections (circle, rectangle, flat oval), pipe catalogs
 //! (DN/NPS, outer and inner diameter per material), system types with colors, polyline routing
 //! with elbows (radius by size), node fittings (tee, cross, reducer,

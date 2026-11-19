@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! 3-way re-import within an import batch (one undo). The importer reports each
 //! element field (mine is current, theirs is from the new file); the decision compares with the base.
 //! Non-conflicting changes are applied, conflicts are written to `src_conflict` (mine stays),

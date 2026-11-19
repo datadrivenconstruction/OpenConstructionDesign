@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Spline walls in `ddc-ops` envelopes. A spline wall is created as a `wall` with the field
 //! `through` (plan points between `a` and `b`) and is addressed afterwards by any of its
 //! pieces (`wall:N`): `set`, `set_type`, `delete` and `transform` act on the whole spline wall.

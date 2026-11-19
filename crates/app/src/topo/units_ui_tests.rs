@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Survey import units: every unit scales, the file's unit is the default, a mm survey is
 //! suggested as mm, the extent in project units before Import, Import is one undo step.
 //! Languages are passed explicitly; the global UI language is never switched.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Direct modeling steps on masses (docs/MODEL3.md): region push/pull to targets, edge-set
 //! blends, draft. Each step is one undo step and survives the JSON history.
 

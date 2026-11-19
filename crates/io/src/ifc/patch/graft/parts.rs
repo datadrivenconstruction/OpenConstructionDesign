@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! An edited whole with aggregated parts (stairs and ramps). The whole takes the ordinary edit;
 //! parts are matched to the export by GlobalId. A part whose lines say what the export says keeps
 //! them byte for byte; a changed one gets its line replaced under its id; a new one is appended;

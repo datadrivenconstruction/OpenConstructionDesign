@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Multi-category schedule stored in the project: categories, columns (parameters or formulas),
 //! filters, sort, groups and totals. [`build`] lays the categories into one table; formula
 //! columns see the columns before them and may aggregate (`sum`, `avg`, `count`, `total`).

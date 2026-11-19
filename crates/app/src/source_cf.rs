@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Conflict list of the linked-sources window: a table on the kit tokens with a two-way
 //! Mine | File segmented control per row. Pure pick bookkeeping lives here so it is testable
 //! without a window.

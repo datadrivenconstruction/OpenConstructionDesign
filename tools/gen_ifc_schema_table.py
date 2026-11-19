@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: AGPL-3.0-only
+# SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 """Generates crates/io/src/ifc/schema_table.rs from the EXPRESS schemas of buildingSMART.
 
     python tools/gen_ifc_schema_table.py IFC2X3_TC1.exp IFC4_ADD2_TC1.exp IFC4X3_ADD2.exp \

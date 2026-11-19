@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Analytical benchmarks B1-B13 (docs/design/STRUCTURAL_ANALYSIS.md 7.1), end to end: a model
 //! is built with the editor API, keyed overrides set supports, releases, offsets and sections,
 //! loads are stored rows, and the numbers come from `ddc_calc::run`. Euler-Bernoulli members

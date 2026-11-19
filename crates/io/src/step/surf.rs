@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Face surfaces: plane, cylinder, cone, sphere, torus and B-spline (rational too), with the
 //! parameterisation of ISO 10303-42 so that `Su x Sv` is the surface normal; projection of
 //! points to parameters, periods and degenerate (pole) sides.

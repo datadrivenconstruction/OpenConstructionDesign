@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The delivery on real models: sheets in one undo step, then PDF and IFC written by the
 //! existing jobs; cancel, a failure with its next step, retry.
 

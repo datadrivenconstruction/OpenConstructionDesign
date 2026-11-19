@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Drawing set planner: from the model to a `DsetPlan` of floor plans per level, two sections
 //! (through the stair and across the main span), four elevations, room, door and window
 //! schedules split across sheets, and the sheet list on the first sheet. Views and schedule

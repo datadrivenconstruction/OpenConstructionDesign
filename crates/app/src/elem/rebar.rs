@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Rebar sets and analytical members of the element contract (E6): plan outlines for picking,
 //! the properties panel (layout, bar type, measured quantities; axis offsets and releases), and
 //! the delete items. Both families are hosted: they never move on their own, their reasons say so.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Freeform blocks: parametric surfaces (`surf.*`), gridshells over any surface, hypar
 //! umbrellas, form-found membranes and perforated screens.
 

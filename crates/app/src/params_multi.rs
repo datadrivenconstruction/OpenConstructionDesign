@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Project parameters of a multi-selection: the parameters of the active category with the
 //! shared value or `<varies>`; one edit writes every selected element in one undo step. A mixed
 //! value is never written unless its field is edited.

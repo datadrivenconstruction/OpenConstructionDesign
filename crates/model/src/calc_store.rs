@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Structural analysis storage, schema step 44 (docs/design/STRUCTURAL_ANALYSIS.md, 1.4).
 //! Intent is content: analytical overrides, load cases, loads, combinations and settings; every
 //! edit is one undo step and compare, merge and the content hash see it. Runs (`calc_run`,

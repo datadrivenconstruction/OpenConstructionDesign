@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Progress and cancel shared by a background reader and the UI thread: lock-free counters,
 //! a cancel flag (also handed to the bridge as `RunOptions::cancel`), the current stage as an
 //! i18n key and the share of the whole job the stage covers.

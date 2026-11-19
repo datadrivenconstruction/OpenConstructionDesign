@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `ddc publish`: a `.ddc` project becomes a `.ddcrev` revision package (contract `ddc-erp-link/1`).
 //!
 //! Steps, each timed in the report: open, geometry (bodies of the scene regrouped per element),

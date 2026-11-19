@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Roof and edge commands: roof presets, vault, roof attach, fascia board, gutter,
 //! soffit, skylight, slab edge, wall molding/cornice/rustication, wedge to drains.
 //! Each action is one `Editor::run_op` operation (one undo step). Sizes come from the session

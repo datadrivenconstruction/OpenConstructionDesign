@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The foundation of a built project: what the spec asked for, placed under the ground floor.
 //! Raft: one slab whose outline is the ground slab's. Strip: one strip under each exterior or
 //! party wall of the ground floor, named by that wall. Keys follow the key scheme of the project

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A room line with `count` inside an apartment is built that many times.
 
 use ddc_gen::project::{build_project, check_project, parse_spec, GProject};

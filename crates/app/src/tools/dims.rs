@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Dimensions (TOOLS_UI §1 "Annotations"): DI — linear chain (click walls: nearest end, axis
 //! or face by the click side; Tab — axis/face; click in empty space — line position, whole
 //! chain in one operation), DA — angular (two walls), DR — radial (arc wall).

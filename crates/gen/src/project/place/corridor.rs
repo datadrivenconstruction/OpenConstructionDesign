@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The plan as rectangles: the spine between the end rooms, each run laid along x from its
 //! start (a host's full-depth part, its back part behind the front strip, the small rooms in
 //! the strip at the spine), the leftover as a grown room or a spare one. Fixed parts are the

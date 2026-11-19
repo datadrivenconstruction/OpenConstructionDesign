@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Neutral triangle exchange (docs/design/IO_FORMATS.md): every mesh writer (STL, OBJ, DXF)
 //! takes a [`MeshSet`], every mesh reader (glTF, STEP, STL, OBJ) returns one, and
 //! [`import_into`] is the only way such a set enters the model.

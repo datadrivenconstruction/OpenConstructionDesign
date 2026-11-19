@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Component (CM) / equipment (ME): any family — from the project (loaded, modified,
 //! programmatic, imported), the built-in library or the user's folder; click =
 //! insert, Space = rotate 90°. The host follows the family's base: wall — nearest wall,

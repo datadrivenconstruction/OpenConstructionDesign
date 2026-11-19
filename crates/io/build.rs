@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 // `ddc_dwg` is set when the native .dwg reader module is present, so the app can hide
 // .dwg from file dialogs in builds without it.
 fn main() {

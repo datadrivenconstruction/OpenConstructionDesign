@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Sheets in a window: the sheet canvas (format, title block, view viewports and scaled schedules),
 //! dragging with alignment guides, scale selection, the active viewport with cropping,
 //! the "Sheets" section of the browser, sheet sets, printing a set to PDF (single or per sheet) and DXF.

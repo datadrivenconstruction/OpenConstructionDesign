@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Feature history of a parametric mass: named parameters with formula cells, the feature
 //! list with reorder, suppress, roll-back marker and argument edits. Every change is one
 //! model edit (one undo step); a refused one leaves the mass as it was and says why.

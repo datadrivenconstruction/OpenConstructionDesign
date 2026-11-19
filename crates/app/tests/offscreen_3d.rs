@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Offscreen 3D frames (`--screenshot --view 3d`, the assistant's 3D renders) on the adapter the
 //! app would pick, with the graphics API validation layer on where the system provides one.
 //! A multisampled resolve into a never-cleared target is undefined on DX12 and corrupted the

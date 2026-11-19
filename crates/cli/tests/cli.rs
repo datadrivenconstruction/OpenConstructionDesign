@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Runs the `ddc` binary on a small project built here and on its IFC export.
 
 use std::path::{Path, PathBuf};

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Audit item 1 (P0): no surface shows a command id or a catalog key in place of a label.
 //!
 //! Two checks, both languages, explicit catalogs (the global language is never touched):

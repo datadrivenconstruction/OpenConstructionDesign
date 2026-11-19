@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Builds the bundled content pack from downloaded CC0 sources.
 //! `cargo run -p ddc-io --example content_pack -- <raw dir> <out dir>`
 //! raw dir: `manifest_raw.json` (id, name, category, hosting?, licence...) and `dl/<id>/<id>.gltf`;

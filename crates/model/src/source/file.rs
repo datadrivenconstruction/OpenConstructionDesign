@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Source file memory (schema 39): content hash, stat, relative path, "ignore this version",
 //! our own last write, and the `src_target` table of saved exports (written on save).
 //!

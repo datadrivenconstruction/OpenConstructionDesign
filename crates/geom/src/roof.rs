@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Roofs. From an outline, a weighted straight skeleton (each edge is a plane with its own
 //! slope; an edge without slope is a vertical gable): the wavefront moves edges inward with edge-collapse
 //! and split events (a reflex vertex hits an edge). Simultaneous events

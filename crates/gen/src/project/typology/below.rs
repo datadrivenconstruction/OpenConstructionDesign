@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Levels below ground from a typology: the stairs, lifts and the through corridor of the
 //! ground floor run down every level as in any basement; the rest of each level, the rectangles
 //! the box leaves free, is handed to the spaces the model puts on that level, largest space to

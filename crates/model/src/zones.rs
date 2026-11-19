@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Zones (schema 32): named groups of rooms (fire compartment, climate zone, etc.).
 //! A room belongs to at most one zone; deleting a room removes it from its zone, and deleting
 //! the last room deletes the zone too.

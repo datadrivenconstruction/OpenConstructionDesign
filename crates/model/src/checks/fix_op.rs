@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A fix as plain data: a small envelope of serialisable ops. Until the shared op crate lands,
 //! each `FixOp` maps one-to-one onto what `apply_check_fix` already runs:
 //! `Delete` -> `Fix::Delete`; `SetOpening`/`SetParam`/`NewParam` -> `Edit::{Opening, ParamValue,

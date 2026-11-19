@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Stored (imported) properties of the selected bodies in the Properties panel: grouped by set,
 //! every row edited in place, a multi-selection shows the keys all elements share and writes them
 //! all in one undo step. Edits land in `prop`, so the source diff carries them as `p:Key` fields

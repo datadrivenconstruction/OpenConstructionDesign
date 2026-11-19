@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 // Scene: sun shadows from the depth map, ambient-occlusion shading from the shading frame,
 // outline from the depth jump, crease edges as lines, glass with ordered blending.
 

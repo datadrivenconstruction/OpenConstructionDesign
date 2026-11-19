@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Stable part names: text round trip, resolution to geometry, stale refs give reasons.
 
 use ddc_ops::parts::FACE_LOCAL_BITS;

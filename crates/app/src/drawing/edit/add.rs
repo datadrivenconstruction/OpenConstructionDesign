@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Draw-mode shapes beyond lines: text, circles and arcs added to the selected drawing on its
 //! current layer. Each is one undo step ([`Step::geometry`]) and reaches the DXF export through
 //! [`Drawings::export_into`] like [`Drawings::add_path`].

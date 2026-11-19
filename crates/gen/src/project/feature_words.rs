@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Brief words in several languages for the features the brief check judges, read from
 //! `data/feature_words.json`: "Lüftung", the Russian word for ventilation and "通风" all say `hvac`.
 

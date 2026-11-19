@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Keyboard shortcut sheet: a centred card (`?` or Help > Shortcut reference) built from the
 //! command registry and the effective bindings, so rebinding shows at once. Sections by
 //! context, type-to-filter, Esc or a click outside closes, "Customize" opens the key editor.

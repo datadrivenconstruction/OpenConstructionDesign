@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Lowering of `geometry.*` ops (docs/design/AI_NATIVE.md section 4) onto the typed geometry
 //! requests of the model: extrusions (`solids`, `mass`), sweeps and lofts (`geo_req`), linked
 //! booleans and voids (`mass_bool`), kind conversion (`geo_convert`). A form, profile or path

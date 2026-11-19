@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Columns, beams and roofs in views. A level plan at a cut height: the cut is the section
 //! outline (Cut), below it is the edge projection (Projection), above it is dashed over the cut
 //! plane (Overhead; for a roof above the cut plane: its eaves, ridges, edges). A section along

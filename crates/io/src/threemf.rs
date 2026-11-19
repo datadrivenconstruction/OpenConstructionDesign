@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! 3MF writer (core specification 2015/02, docs/IO4.md): one mesh object per part, base
 //! materials for colours, model unit from the options, every part checked for being
 //! watertight and outward oriented before it is written.

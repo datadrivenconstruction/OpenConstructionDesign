@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Content stream interpreter: graphics state, paths, text, XObject forms,
 //! marked OCG content. Output coordinates are sheet mm (base matrix in `Gs::ctm`).
 

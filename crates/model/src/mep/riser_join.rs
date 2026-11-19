@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A new riser meets the risers of its system already there: one storey's riser stands on the
 //! one below (end to end, on its axis) instead of overlapping it, and a riser that already passes
 //! the level is tapped instead of doubled. Without this every storey after the first, and every

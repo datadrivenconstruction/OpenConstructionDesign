@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Headless tests of the widget kit: every widget draws in both themes and densities, keyboard
 //! rules hold, button and row states stay readable.
 use super::button::{colors, Visual};

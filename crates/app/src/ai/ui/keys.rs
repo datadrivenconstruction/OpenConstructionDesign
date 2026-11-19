@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Keys and tokens in the connection form. A credential pasted into the headers box is caught
 //! while it is typed and moved to the key field with one click; key fields are masked by
 //! default with show and copy; the token limits are locale number fields with presets.

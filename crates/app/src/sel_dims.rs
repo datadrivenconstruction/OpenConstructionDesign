@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Temporary dimensions of a selected wall: the clear distance from its axis to the nearest
 //! parallel wall on each side. Click the value to type an exact distance (the wall moves), click
 //! the lock to keep that distance as a constraint (`LockDist`). Shown while no grip is in use.

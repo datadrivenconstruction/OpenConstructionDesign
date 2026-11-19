@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Foreign type objects (IfcTypeProduct with representation maps) → families. A product whose
 //! body is one mapped item of its type's map, placed upright and unscaled, becomes an instance
 //! of a family made from that map: mesh bodies per style, the type's property sets as text

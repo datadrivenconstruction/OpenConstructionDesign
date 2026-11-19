@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! "Add to this project" without a UI stall: the worker imports into a copy of the model file
 //! ([`stage`]); the UI thread attaches the copy and applies it, new rows and the rows the
 //! import changed, as one transaction ([`Editor::add_staged`]), then reloads. A job that is

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Prints the generator benchmark table and what got worse than the pinned scoreboard:
 //! `cargo run -p ddc-gen --example gen_bench [-- brief_name ...]`.
 

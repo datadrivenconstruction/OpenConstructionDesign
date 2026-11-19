@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Chat tools over family definition texts: `family_read`, `family_validate` (reads) and
 //! `family_draft` (writes only a draft for the family editor, never the model or its journal).
 //! The contract and its refusals live in `ddc_ai::family_draft`; this file lends it the project.

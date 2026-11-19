@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Recognition beyond walls: axes (long lines on axis layers, names from tags), columns (small
 //! closed rectangles and circles), rooms from closed outlines on area layers and
 //! openings from block inserts via "block → family" rules.

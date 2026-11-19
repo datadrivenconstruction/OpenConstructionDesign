@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Columns beyond the sheet format: project parameters, stages, user columns.
 //! Export writes them after the format columns (user columns and sheets from the previous workbook —
 //! by row id); import turns them into edits, and unknown ones into parameter proposals.

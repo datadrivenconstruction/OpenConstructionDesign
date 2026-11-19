@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `mgr.workplane`: the "Work plane" window. Shows where 3D points are placed now and sets the
 //! plane on a level with an offset, on a reference plane, on a picked face or through three
 //! points. The plane is view state: no model edit, no undo step.

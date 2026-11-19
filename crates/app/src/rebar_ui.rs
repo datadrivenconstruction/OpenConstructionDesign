@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Commands and windows for reinforcement and the analytical model: a bar set for the selected hosts
 //! (longitudinal, stirrups, meshes, cover), a bending schedule with CSV export, deletion,
 //! analytics display, its warnings, element supports/offsets, and JSON export.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Brief against built: the facts a reviewer counts (storeys, area, rooms by kind) and, for
 //! every feature the brief named, whether the project has it. A feature the spec could have
 //! but does not gets a merge patch for revise_project; one the builder cannot make is named

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Data for the shared type picker: rows, subtitle and texts of the wall type fields.
 use crate::editor::WallType;
 use crate::units::{display_length_lang, Units};

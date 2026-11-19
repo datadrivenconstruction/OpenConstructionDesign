@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The chat tools `run_script` and `rerun_recipe`: a geometry script runs in the sandbox of
 //! `ddc-script` and its ops envelope becomes one plan item, checked, previewed and diffed like
 //! any other. Apply writes the elements and the recipe (script, params, hash) in one step; a

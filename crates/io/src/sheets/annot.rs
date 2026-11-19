@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Text width from the built-in PDF font metrics, rendering of model dimension objects
 //! and label layout (room tags, dimension texts) without overlaps.
 

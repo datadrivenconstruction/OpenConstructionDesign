@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! 3D views and navigation: the view cube (faces, edges, corners, drag, home), orbit around
 //! the selection or the point under the cursor, smooth transitions, perspective/ortho, walk
 //! and fly (WASD), the section box (handles, numbers, to selection, to level) with section

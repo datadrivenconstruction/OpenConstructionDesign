@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! One pick query for hover, click, measure and the context menu. The query reads the
 //! editor and never changes the selection; hover highlights exactly what a click would take.
 //! The status bar category filter and the "select pinned" toggle narrow it, and items hidden

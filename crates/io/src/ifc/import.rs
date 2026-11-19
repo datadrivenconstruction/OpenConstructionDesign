@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! IFC import (IFC2X3, IFC4, IFC4X1..IFC4X3, IFCZIP): storeys → levels, walls → wall types +
 //! walls, openings, slabs, roofs, ceilings, columns/beams, curtain walls, rooms, grids; every
 //! other product with geometry → an editable mesh. Element data → `prop`, GlobalId → `ext_ref`.

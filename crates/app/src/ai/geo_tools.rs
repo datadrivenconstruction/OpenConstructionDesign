@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The chat tools `define_family` and `create_geometry`: the structured family JSON of
 //! `model/src/family_define.rs` and the geometry ops of `ops/src/geo.rs`, as plan items. Both
 //! are drafts: a family lands with `status draft` and nothing reaches the live model before the

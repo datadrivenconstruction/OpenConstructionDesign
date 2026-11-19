@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Columns and beams drawn with their true section (I, channel, angle, tee, round, rectangular
 //! and circular hollow) where the exact joined body is too costly: a straight bar, round parts
 //! with as many sides as the level of detail asks for, hollow sections open at the ends.

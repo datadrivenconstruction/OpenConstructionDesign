@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `Set` on type rows: `wtype:N`, `stype:N`, `mtype:N` (docs/design/AI_NATIVE.md, "Set fields").
 //!
 //! The own field is `name` (unique within its table). Type parameters go through

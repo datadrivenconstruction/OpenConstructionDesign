@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Byte-level view of a STEP file: statements with the bytes before them, kept exactly as read, so
 //! a patched file differs from its source only where a statement was replaced, removed or added.
 

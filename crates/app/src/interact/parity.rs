@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Parity gate of views: one script replayed through the plan, the 3D view and a
 //! section must leave the same journal, byte for byte. A fresh editor per view; the script's
 //! model points reach the session as screen positions of that view (`script::run_in`).

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Glue between typed solids and 3D edits (`edit3d`: scene and handle providers, work plane).
 //! Wired in as `solid_edit3d` (`lib.rs`), `install()` runs from `edit3d::register`. The logic
 //! and its tests live in `solid_scene`.

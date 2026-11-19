@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! What a write did, in numbers the agent can check: the receipt of a changeset, derived from
 //! the card's diff, the quantity deltas and the new issues, never from what the agent asked for.
 

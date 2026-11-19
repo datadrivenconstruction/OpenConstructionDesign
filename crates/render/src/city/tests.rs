@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 use super::cook::{cook, Kid};
 use super::gen::{city_projects, totals, Building, CityProject, CitySpec, Kind, Protos};
 use super::hlod::{opaque_tag, tri_box, unit_chain, Grid, Label, Source};

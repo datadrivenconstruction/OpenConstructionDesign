@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Ids of new rows written into the book in place: only the id cells of those rows change, and
 //! the hidden baseline gets an id-only block naming them (so a row deleted later deletes its
 //! element); every other part of the file is copied byte for byte. Used when a full re-export

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The browser build has no OS clock: `std::time::Instant::now()` / `SystemTime::now()` panic on
 //! wasm32. Crates that go into the editor take the clock from `web_time` (std on desktop).
 //! Test files are exempt: they never run in the browser.

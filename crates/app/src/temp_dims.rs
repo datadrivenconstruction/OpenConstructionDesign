@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Temporary dimensions for modeling tools: from a support to a point, and segment length.
 //! Supports are grid axes, reference planes and wall axes. Entering a value moves the point along the dimension.
 

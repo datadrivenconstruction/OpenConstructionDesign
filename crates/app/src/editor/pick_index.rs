@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Bounding-box index for plan picking, cached by (level, revision) like the snap index.
 //! Generic over the item kind: the owner supplies one box per item (position = item index) and
 //! runs its exact test only on the candidates, so the answer equals a full scan.

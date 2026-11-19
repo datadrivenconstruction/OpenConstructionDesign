@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Columns of one sheet that carry the same field (a copied column). Which one stands left must
 //! not decide what applies: equal cells apply once, a row where they differ keeps the model value
 //! and is refused by name. A column that names the row cannot be left out cell by cell, so a

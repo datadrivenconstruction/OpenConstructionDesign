@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Railing detail: round handrail mitred along the path, posts with base plates, a bottom rail
 //! and round balusters. Coarse keeps posts and the handrail only; balusters appear from medium.
 

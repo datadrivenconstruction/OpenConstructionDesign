@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Three-step card shown once on the sample project: select a wall, change a property, then
 //! take it through XLSX (edit, preview, Apply). Skippable; once finished or dismissed it never
 //! comes back (`Prefs::first_card_done`). The step logic is plain data so it is testable.

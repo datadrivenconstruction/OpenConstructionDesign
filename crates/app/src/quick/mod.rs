@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Quick work (fewer clicks): a palette with arguments (e.g. wall 300 concrete), repeat of the last
 //! command (Enter / right click), a recent-commands panel, custom keys with conflicts and import/export,
 //! a per-category context menu, a selection-properties HUD showing "mixed" values, connected-wall selection,

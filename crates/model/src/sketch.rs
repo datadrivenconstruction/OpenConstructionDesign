@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Outline sketches, slab shape, wall profile on the elevation, and wall bottom/top attachment.
 //! Tables (schema 17, additive, created by name with `CREATE TABLE IF NOT EXISTS`):
 //! `sketch` holds the host's sketch curves (slab|roof|ceiling|shaft|opening), `slab_shape` the

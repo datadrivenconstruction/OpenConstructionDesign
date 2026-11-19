@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Test-only access to non-English fixture strings kept in a data file.
 use std::collections::HashMap;
 use std::sync::OnceLock;

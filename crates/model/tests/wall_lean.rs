@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Leaning and tapered walls in the model: quantities against the analytic solids, a door cut
 //! normal to the surface, file round trip, undo, refusal where the lean cannot hold.
 

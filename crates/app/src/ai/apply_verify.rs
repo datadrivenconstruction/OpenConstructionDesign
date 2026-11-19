@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Apply writes exactly the draft the person saw. After the step is written, and before it is
 //! announced, the live model is diffed with the draft's base copy the same way the plan card was
 //! (`diff_from` + `group_diff`, compared through `plan::fingerprint`). Any difference takes the

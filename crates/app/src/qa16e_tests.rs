@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Model-shape and annotation tool texts come from the catalog, in both languages.
 //! No test here changes the global UI language: every site is rendered with an explicit one.
 

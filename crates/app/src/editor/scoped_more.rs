@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Scoped reload after an edit without wall rows (`run_op`, undo, redo): openings, slabs and
 //! rooms. Openings are patched by id when no wall row changed, the host is on this level and no
 //! form join cuts the host (its plan section would change); slab rows reload the curtain wall

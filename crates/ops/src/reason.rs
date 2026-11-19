@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Rejections a model can act on (docs/design/AI_NATIVE.md section 2): a closed, stable code,
 //! a JSON pointer to the offending field, what was expected and what was got, and the refs
 //! involved. People read the translated `hint_key` (`ops.reason.<code>`); models read `code`.

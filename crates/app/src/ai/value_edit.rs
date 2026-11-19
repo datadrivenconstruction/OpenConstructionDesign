@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Correcting one drafted value on the card without asking the model again. Text is read the
 //! way the properties panel reads it; a valid edit changes the draft only, never the model.
 

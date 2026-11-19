@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Form oracles on hand-built kernels: a twisted and a straight tower, a hyperboloid and a
 //! cylinder, a dome, a sphere and a drum, a stepped pyramid and a tapered tower.
 

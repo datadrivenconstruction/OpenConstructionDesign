@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Wall editing panel: joints in plan (icon on a node: click cycles the type, "forbid"
 //! breaks the joint), layer cleanup by priority, composite wall elevation with profiles and openings,
 //! temporary opening dimensions (to ends, sill, head) with value entry, vertical structure.

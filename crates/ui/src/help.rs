@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Built-in help: Markdown-lite topics `data/help/<lang>/<id>.md` (heading `# `, `@tags`,
 //! `@context`, `@commands`, `@see` lines, sections `## steps|keys|tips`), search, context-sensitive
 //! F1 topic, "What's new" (`data/help/whats_new.<lang>.md`).

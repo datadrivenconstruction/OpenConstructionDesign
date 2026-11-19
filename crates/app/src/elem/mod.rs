@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The element contract (`docs/design/ELEMENT_CONTRACT.md`): one row per family, plain data and
 //! fn pointers. C0 lists today's families as legacy rows and changes no behaviour; nothing reads
 //! this table outside its tests until a family migrates, except the XLSX sheets (`sheets`).

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `ddc-script`: geometry scripts in a sandbox (docs/design/AI_GEOMETRY_PLAN.md, g2).
 //!
 //! A script plus its params gives one ops envelope, the same wire MCP agents send, so the

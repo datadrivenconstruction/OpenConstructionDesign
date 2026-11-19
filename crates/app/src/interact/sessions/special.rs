@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The special plan modes as one session: section box, boundary sketch, slab shape
 //! edit, roof edges, text and annotations, topography, solids and masses own the input from the
 //! arm to the finish or Esc that leaves them. Bridge: each mode keeps its

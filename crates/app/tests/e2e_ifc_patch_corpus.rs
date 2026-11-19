@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! End-to-end: IFC patch through the edit paths on real files. For each IFC of `DDC_E2E_IFC`
 //! (a file, a folder or a path list) and for the synthetic fixture: open the file, edit a text and
 //! a length property (`imported_props::set_all`), move a wall, change a wall height, delete a

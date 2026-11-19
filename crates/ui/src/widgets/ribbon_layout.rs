@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Ribbon geometry and keyboard state as pure functions: button sizes, three-high stacks,
 //! balanced two-line labels, adaptive collapse (large, medium, small, then one drop-down per
 //! group), split-button memory and key tips. No egui context, no fonts: callers pass widths.

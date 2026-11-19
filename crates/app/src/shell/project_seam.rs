@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The only place the start screen and file drops touch the project-file API
 //! (`recent_projects`, `open_project`, `new_project`). Everything else goes through here.
 use super::EditorApp;

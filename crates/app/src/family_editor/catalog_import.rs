@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Type catalog import of the family editor: a plan read with the per-file number rule, a
 //! preview of what changes, then Apply as one undo step. Nothing is written before Apply.
 

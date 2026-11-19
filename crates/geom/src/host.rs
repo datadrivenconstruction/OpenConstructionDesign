@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Host surfaces of surface-hosted structures (diagrid, gridshell, cable net): a parametric
 //! surface trait and the analytic hosts plane, cylinder, sphere, hyperbolic paraboloid, torus
 //! patch and paraboloid of revolution with exact derivatives. A freeform surface element hosts a grid by implementing

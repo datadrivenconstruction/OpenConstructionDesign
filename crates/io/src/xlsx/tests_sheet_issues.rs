@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A sheet that is missing, renamed, cleared, left with only its header or unreadable: the report
 //! names it with the reason, its elements stay and the other sheets still apply.
 

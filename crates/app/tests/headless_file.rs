@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `ddc-app --file`: argument parsing, counts of a real IFC file, exit code on errors,
 //! underlay entity count, save + reopen, workbook dry run.
 

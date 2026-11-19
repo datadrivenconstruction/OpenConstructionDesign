@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A picture or the first page of a PDF the person attaches for comparison. It is downscaled
 //! to a small image and kept on the worker; `get_reference` hands it to the model.
 

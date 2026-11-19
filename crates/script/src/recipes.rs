@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Worked scripts for freeform structures, one per block family, and a short reference of
 //! the blocks. Shown to the assistant by the `script_recipes` tool.
 

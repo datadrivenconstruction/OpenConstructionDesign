@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Mapper side of the 3-way re-import (ddc_model::source::Merge): every field of a matched row
 //! is decided against the last import's base; only `Take` fields are written. Rows deleted here
 //! stay deleted unless the source changed them (conflict). Names of unique-named rows (levels,

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Clipboard and pinning registry for the tables of other modules. Each entry acts only when
 //! its table exists in the model; otherwise it is silent. A new element table goes here or into
 //! `EXCLUDED`, else the test `every_table_is_registered_or_excluded` fails.

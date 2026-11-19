@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Cell limits: over-long text and non-finite numbers are written safely on export, and a cut
 //! cell read back is never applied over the full model value.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Scenarios over every showcase project (tests/showcase): each passes the model check, builds
 //! the same twice, saves and reopens to the same content and the same bytes, and undoes back to
 //! a fresh model. The XLSX and editor scenarios live in ddc-io and ddc-app.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! "Replace all doors on floor 3 with EI30", in the two shapes a model has: doors in walls take a
 //! parameter, placed door families take another type.
 

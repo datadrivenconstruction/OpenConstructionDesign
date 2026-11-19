@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A follow-up message revises the open draft: what changed since the person last looked, which
 //! check marks carry over, and whether Apply may target the revision on show.
 

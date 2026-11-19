@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Proof of a written book before it replaces the old one: the new file is read back with
 //! the own reader and dry-run against the model it was written from. Anything the dry-run
 //! would do (a change, a refusal, a missing or extra row or sheet) refuses the replace; the

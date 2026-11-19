@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Handlers of the modify, level and room commands: they check the arguments, add one plan item
 //! (`modify_plan`) and answer what it created. Lengths are metres, angles degrees
 //! counter-clockwise.

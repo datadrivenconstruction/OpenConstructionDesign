@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Every-command invariants: each registry command (`Registry::builtin()`) and each handler the
 //! app registers (`register_command`) runs headless on a realistic project with no selection,
 //! one wall, a mixed selection, and on an empty project. Per run, on a fresh app and thread:

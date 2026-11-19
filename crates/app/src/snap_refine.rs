@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Snap refinements while drawing and dragging:
 //! the touch point of the rubber band beats a farther vertex, a dragged item never snaps to
 //! itself, the capture radius is a user setting in screen pixels, inference hints are shown only

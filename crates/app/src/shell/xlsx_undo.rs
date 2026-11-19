@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Undo button of the XLSX Apply toast: it takes back that Apply and nothing else.
 //! A plain `edit.undo` would take back whatever edit came later while the toast was up.
 use crate::editor::Editor;

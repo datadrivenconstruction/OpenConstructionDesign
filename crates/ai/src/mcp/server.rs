@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Own server on `TcpListener`: one request per connection, loopback only, every check before any
 //! work. Runs only because the person turned it on: nothing here starts by itself.
 

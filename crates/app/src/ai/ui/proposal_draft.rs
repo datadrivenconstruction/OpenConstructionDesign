@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! What an agent proposal would do, read from its dry run: element rows with human names, counts
 //! by kind and the live elements it touches. Read only: the card and the view outline use it,
 //! the model changes only through the card's Apply.

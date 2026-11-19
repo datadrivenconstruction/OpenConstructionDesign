@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The room programme as data (`gen_program.v1`): what is built, independent of how. Each
 //! space line names a kind, an area range, a count, the floor it belongs on, the light,
 //! headroom and access it needs and the kinds it wants beside it. The builder reads the

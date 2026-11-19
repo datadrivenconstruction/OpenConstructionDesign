@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Structure, schema 26: footings, braces, trusses, framing systems.
 //! Common: DDL, the derived `struct_qty` (an element part is a whole footing, a truss
 //! or system member), material densities and a schedule with mass.

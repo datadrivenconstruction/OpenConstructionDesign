@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Script values: vectors, rigid transforms, profiles, paths, forms and handles of created
 //! parts. Lengths are metres, angles radians.
 

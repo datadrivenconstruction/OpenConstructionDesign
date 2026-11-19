@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `--links-bench N [--links-elems E]`: N linked projects of E walls each. Cold: parallel import
 //! into the link cache. Warm: parallel cache reads, host scene plus link groups, renderer setup
 //! and first frames on this GPU. Then host edits with the links loaded: time and link rebuilds.

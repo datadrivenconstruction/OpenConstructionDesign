@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The Import window as one designed sequence in one frame: pick, progress with stages, calm
 //! result. File row, body zone and footer keep their size and place in every state.
 use super::{drawing_win, tasks_ui, EditorApp};

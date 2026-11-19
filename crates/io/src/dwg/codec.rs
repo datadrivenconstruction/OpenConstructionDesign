@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Page decompression: the 2004-family back-reference codec and the 2007 codec with its
 //! permuted literal runs; 2007 Reed-Solomon de-interleave (spec: docs/specs/DWG.md §3).
 //! All output is bounded by `limit`; malformed input returns `Err`.

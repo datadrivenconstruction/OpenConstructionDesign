@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Check kinds of country packs that read the plan as a whole: `formula` (2R+T), `ratio`
 //! (window/floor, circulation share), `adjacency`, `stack` (wet rooms over wet rooms),
 //! `distance` (travel to an exit through doors) and `programme` (rooms against the pack's

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Outline sketch mode (floor, roof, ceiling, shaft, opening) with no UI dependencies in
 //! the logic: chained segments, three-point arc, ellipse (center, axis, second semi-axis), spline
 //! (points, Enter), wall selection with offset, slope arrow, "defines slope" on roof edges.

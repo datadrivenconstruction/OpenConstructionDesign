@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Edit tools for opened drawings: change the text of a picked text, move picked primitives to an
 //! existing or new layer, draw lines and polylines into a drawing with snaps. Each edit is one
 //! undo step ([`Step::geometry`]), marks the drawing edited, and reaches the DXF export through

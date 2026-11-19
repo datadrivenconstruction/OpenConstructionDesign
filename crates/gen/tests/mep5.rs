@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The raised electrical level and the exact duct, pipe and tray clash search agree.
 use ddc_gen::project::{build_project, parse_spec, void_check};
 use serde_json::json;

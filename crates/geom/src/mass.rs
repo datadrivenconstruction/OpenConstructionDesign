@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Free-form modelling shapes: extrusion, revolve, sweep along a 2D/3D path, loft
 //! between sections, sweep with transition; face push-pull, chamfers, fillets, shell,
 //! face offset, face splitting, sections by storeys and by vertical planes.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Merged cells of a sheet. A spreadsheet stores a merged value only in the top-left cell;
 //! the covered cells read as empty. A merge down a data column fills its value down that
 //! column; the other columns a merge covers are "not given" (the model value is kept, and the

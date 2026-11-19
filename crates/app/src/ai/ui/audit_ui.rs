@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The changes journal window: who changed what, at what price, and the way back. A row whose
 //! step is still in the undo log selects and frames the elements it touched; Revert of an older
 //! step asks first and names how many elements change; the model is only read until the yes.

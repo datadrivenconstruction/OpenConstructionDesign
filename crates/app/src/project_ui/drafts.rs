@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Draft editors whose edits stay outside the model until applied: family tabs, the open line
 //! pattern or hatch entry, the view range line styles, the view graphics window (view, filter,
 //! object styles), the material card, the type dialog, the parameter editor and the project

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Bounding volume hierarchy over triangles: candidate pairs by closed box overlap (exact,
 //! boxes are min/max of input coordinates) and segment queries for ray parity.
 

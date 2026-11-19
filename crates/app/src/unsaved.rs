@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The "unsaved changes" question shared by the library and style windows: Apply / Discard /
 //! Cancel, Cancel is the default and Esc. The rule is the same as in the type dialog; the draft
 //! is kept until the question is answered.

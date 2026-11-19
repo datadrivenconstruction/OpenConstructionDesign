@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Design options: named sets of alternatives (schema 38). An element belongs to at most one
 //! option; elements outside options are the main model. A view shows the selected option of each
 //! set, by default the set's primary option. Accepting an option moves its elements into the

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Tables on a sheet: schedules, revisions, the sheet list, legends. Column width is capped, text
 //! wraps by words, row height follows its number of text lines. A schedule is split into
 //! equal-width columns with the header repeated within the sheet; what does not fit is counted and

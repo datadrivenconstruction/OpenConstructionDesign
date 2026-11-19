@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Roof family of the element contract (D1): plan outline for selection, the move grip, and the
 //! non-table part of the properties panel: live measured geometry and the shape fields that
 //! depend on the roof form (edge slopes, break, depth, rise).

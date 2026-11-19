@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The effect texts of [`super::why::Why`] as keyed templates with named `{slots}`. The English
 //! template fills `effect` for the tool reply; the UI renders `gen.why.e.<key>` from its own
 //! catalog with the same slots, so a reason reads in the UI language, not in English.

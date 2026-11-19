@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Modifier operations a `Modify` feature runs on its input body. The timeline knows them only
 //! through [`FeatureOp`]: new kernel operations (edge blends, draft, ...) become features by
 //! adding one implementation to [`standard_ops`], with no change to the timeline or storage.

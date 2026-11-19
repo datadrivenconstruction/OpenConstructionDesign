@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Frozen element sets: a query result keeps its ids, so a bulk edit names `s3` instead of
 //! carrying 100k ids through the context, and later model changes cannot shift its pages.
 

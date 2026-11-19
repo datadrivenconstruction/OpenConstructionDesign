@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Holes a script could use to hang, crash or leak run-to-run differences: each one is a
 //! plain error with a line and a message, never a dead process.
 

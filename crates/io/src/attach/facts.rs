@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Project requirements read out of attached files: site size, storeys, rooms with areas,
 //! limits and the norms a brief names. Every fact keeps where it came from (file, page,
 //! region), so the person can check it before anything is built. A room is a label, a number

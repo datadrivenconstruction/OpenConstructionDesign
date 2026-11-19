@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The duct network read back from the ventilation as a tree per system from the unit port
 //! to every terminal: each run classed (plant, riser, main, branch), its velocity against
 //! the cap of its class, its friction, every fitting with its loss coefficient (elbows by

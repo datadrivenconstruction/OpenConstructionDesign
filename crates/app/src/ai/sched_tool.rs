@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `create_schedule`: the assistant lays a schedule out (columns, groups, sort, filters) and
 //! the person opens it as a real schedule view, or saves it to XLSX, from the chat card. The
 //! model is not touched: only the view's own state changes, and only when the person asks.

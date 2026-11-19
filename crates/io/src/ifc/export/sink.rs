@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Streaming export: entity lines go to an `io::Write` as they are made, so the file's size is not
 //! held in memory, and the first write error stops the job. Also what was and was not exported.
 

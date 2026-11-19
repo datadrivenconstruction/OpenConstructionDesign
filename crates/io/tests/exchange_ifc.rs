@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Exchange safety, IFC: every element family is exported, validated, read back and compared
 //! (count, type, key properties, positions, materials), or it is listed here with the reason it
 //! is not. A family that silently stops round-tripping fails with its name and the probe.

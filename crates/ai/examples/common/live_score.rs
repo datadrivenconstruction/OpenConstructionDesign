@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Objective scoring of live generation runs and the HTML report, shared by the generator
 //! matrix (ddc-ai example) and the full-tool runner (ddc-app e2e_ai_live).
 //!

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Pens: named line weights in mm on paper, one column per drawing scale. The same table feeds the
 //! screen and the sheet output, so what is seen is what is printed. Cut and projection lines have
 //! separate styles; halftone lightens a line towards the background.

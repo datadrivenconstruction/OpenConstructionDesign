@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Upgrades of older wire versions, applied to the JSON tree before the strict parse, so an
 //! old envelope reads as the current version with the meaning it had when it was written.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Sketch shapes for loop tools: every shape on every element kind.
 
 use super::loop_shapes::{set_shape, SketchShape};

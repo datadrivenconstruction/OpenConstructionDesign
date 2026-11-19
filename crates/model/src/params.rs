@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Project parameters: the definition (`pparam`: name, quantity type, instance/type, unit, group,
 //! shared-parameter guid), category binding (`pparam_cat`), values (`pparam_val`, keyed by the
 //! row's table and its id; for type parameters, the type table). Length/area/volume are in SI.

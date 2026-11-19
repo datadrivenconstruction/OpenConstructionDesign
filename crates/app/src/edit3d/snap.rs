@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! 3D snaps: vertices, edge midpoints, edge intersections, axis intersections, edges,
 //! axis lines on the work plane, the face under the cursor, the work-plane point (grid step).
 //! Candidates within the cursor radius are ordered by kind priority and on-screen distance;

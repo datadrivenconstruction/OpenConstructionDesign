@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Realism critic (docs/design/AI_GEOMETRY_PLAN.md section 3.4): code, not a prompt. A bent
 //! straight profile, axes that miss a node, slivers, thick plates, bolt distances, rebar cover,
 //! stairs, doors and windows, parts hanging in the air. The rules run on `Input`, plain data in

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A new stair in the IFC patch: the stair, its flights and landings appended as products with one
 //! aggregation, the stair alone contained in its storey, railings as their own elements, every
 //! source line byte for byte. Nested parts still refuse. An edited stair or ramp keeps the lines of

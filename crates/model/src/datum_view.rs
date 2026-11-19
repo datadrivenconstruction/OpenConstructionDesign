@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Per-view extents and tags of grids and levels (`datum_extent`, schema 18).
 //! Grid: model (3D) endpoints and tags live in `grid`; a view row is a 2D override for that view.
 //! Level: model extents along the section and tags are a row with view '' (no row means defaults);

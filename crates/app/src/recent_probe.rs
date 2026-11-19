@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Recent projects: what is on disk, found out off the UI thread.
 //!
 //! A recent file may sit on a share or a drive that is switched off; asking the disk for it can

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `ctx.wall.profile` ("Edit profile"): the elevation outline of one wall. The outline is a
 //! polygon in the wall's own frame (along the axis from its start, height above its base): drag
 //! its points on the preview or type them, start from a rectangle, gable or slope. Apply writes

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Distribution along a wall: N openings or wall-hosted components at equal pitch between
 //! end margins, or at a fixed pitch. A linked distribution is a rule in `constraint_rule`
 //! (kind `dist` is equal pitch, value = margin; `dist_step` has value = pitch, the margin is taken

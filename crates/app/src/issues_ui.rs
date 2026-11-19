@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Issues: a list with a status filter, a detail pane (status, priority, comments, go to the
 //! saved view), the "new issue" dialog with a screenshot, and BCF import and export.
 //! Issue tables sit outside the undo journal, so nothing here is an undo step.

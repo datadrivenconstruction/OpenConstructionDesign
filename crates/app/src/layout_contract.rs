@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Layout contract of the tool dialogs, drawn headless at the class size of the dialog in both
 //! languages (explicit catalog, the global language is never touched).
 //!

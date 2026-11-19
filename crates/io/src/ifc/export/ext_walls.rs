@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Wall exterior flag: a wall is external when a point just off one face, at the middle of
 //! the axis, lies outside every closed wall region of its level. An explicit
 //! `Pset_WallCommon.IsExternal` property of the model wins over the computed value.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Looks and the setup wizard drawn as the whole app, headless, in both languages at 1280, 1440
 //! and 1920 points: every preset lands in the theme; nothing leaves the window, no control
 //! text is cut, no two buttons overlap and every form row keeps its line (the uipol1 row

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Straight segments from a one-pixel skeleton: a (theta, rho) vote, peaks in vote order, the
 //! pixels near each peak line split into gap-free runs, each run fitted by total least squares.
 //! Then near-orthogonal segments are snapped to the dominant direction and collinear pieces

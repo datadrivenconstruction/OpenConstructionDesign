@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Graphics modes in the app: the level from prefs, `Auto` from adapter facts and a cached probe,
 //! the motion controller, the working view's style in the project, palette commands, the style
 //! switcher button and the status note. Contract: docs/design/GRAPHICS_MODES.md.

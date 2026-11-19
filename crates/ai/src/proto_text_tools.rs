@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `JsonInText`: tool calling for models that have none. Schemas go in the system message,
 //! the model answers with a fenced `tool` block, and the wrapper turns that back into the
 //! same `StreamEvent`s, so nothing above it knows the difference.

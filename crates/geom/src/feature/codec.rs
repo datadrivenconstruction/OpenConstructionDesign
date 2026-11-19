@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Flat storage form of sketch rules: a kind name and a list of numbers (point indices as
 //! numbers, then values), so a store can keep them without knowing the solver types.
 

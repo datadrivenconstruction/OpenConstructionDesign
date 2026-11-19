@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Free placement (`layout.strategy` free / auto): the same brief gives the same building,
 //! every floor passes the gates, the corridor runs only between the end rooms, pinned rooms
 //! stay where they are and the rest is placed round them, a lock-breaking change is worked

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Sessions of tool groups moved off the views: modify —
 //! `ModTool` under `Scope::Moving`; grip — a grip, view-mark or opening drag under `Scope::GripDrag`;
 //! arch — wall, curtain wall, door/window/opening and the `tools::Kind` tools; section — the

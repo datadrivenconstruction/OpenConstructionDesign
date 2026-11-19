@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Smooth 3D sweep paths: lines, arcs in any plane, helices, interpolating splines and NURBS,
 //! framed by rotation-minimizing frames (double reflection) or by a fixed reference direction,
 //! with roll, twist and scale laws over relative arc length. Sampling is adaptive (chord and

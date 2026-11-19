@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Labels that follow the cursor on a canvas (typed input, reading chip, tool label, snap name,
 //! hover tip). One pure layout fn places them as a stack beside the cursor, flipped inward near
 //! the canvas edges, so they never overlap each other and are never clipped.

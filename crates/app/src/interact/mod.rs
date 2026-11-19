@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Interaction spine: one answer to "what is happening now".
 //! scope — `Scope`, `ToolId`, `Target` · input — abstract `Input` · session — `ToolSession`,
 //! `Cx`, `Step` · preview — `Prim`s in model coordinates, drawn by every view · hotset / overlay — pure functions of the scope (`SCOPE_TABLE`) ·

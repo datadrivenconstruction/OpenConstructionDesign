@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Company logo: checks, downscale and PNG round trip of the picture a user adds. Pixels are
 //! 8-bit RGBA with straight alpha; transparency is kept. The file picker (PNG, JPEG) turns
 //! its decoded pixels into a `Logo` here, so every format ends in the same stored form.

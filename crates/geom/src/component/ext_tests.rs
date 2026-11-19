@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Family editor tests: plane sketch, formulas and conditions, visibility, insertion point,
 //! nested parts, validation mode.
 

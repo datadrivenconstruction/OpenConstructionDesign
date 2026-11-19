@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Optional `ValueSources` sheet: one row per parameter value whose source is recorded, with
 //! its Source and Verified columns. Written only when `Style.sources` is on. Import never
 //! reads it, so a book's round trip is the same with or without the sheet; an old copy of it

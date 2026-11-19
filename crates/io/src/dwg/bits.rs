@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Bounded MSB-first bit reader with the compact field encodings of the format
 //! (spec: docs/specs/DWG.md §2). Every read is bounds-checked and returns `Err` past the end.
 

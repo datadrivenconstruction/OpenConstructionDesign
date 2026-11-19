@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Structural validator for IFC files (our own code, no external schema engine): references,
 //! required attributes of the families the exporter writes, spatial structure, openings,
 //! types, materials, property sets, units, placement chains and GlobalIds. It checks what a

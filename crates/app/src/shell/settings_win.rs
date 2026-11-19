@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Settings window: global options, by page, with search over every page. Changes apply
 //! at once and are saved when the window has changed something. One project value sits on the
 //! AI page: the open project's design depth, written to the model as an undo step.

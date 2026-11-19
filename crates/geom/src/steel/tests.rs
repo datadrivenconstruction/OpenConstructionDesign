@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The ten connections on fixture members: each builds, meshes, keeps the catalogue rules and
 //! has no clashing bolts; skewed members and a changed section give an adapted detail.
 

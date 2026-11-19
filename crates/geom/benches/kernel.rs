@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Benchmarks of the KERNEL.md §7 budgets. Prints a "measured / budget" table.
 //! `DDC_BENCH_QUICK=1` prints only the table, without criterion. Full run if the 1/10 scale takes longer than 0.5 s: `DDC_BENCH_FULL=1`.
 

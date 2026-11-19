@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Parametric family from a description: a closed set of templates, so no free text reaches the
 //! definition. The name carries the sizes and the variant, so loading never replaces a family.
 

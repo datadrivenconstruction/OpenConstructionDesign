@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! What each part is (role and section, for the element name) and where it is (bounds and
 //! member axis), and `audit(...)`: the structure-wide checks a script runs before it ends
 //! (members meeting at nodes, no duplicates, no members crossing away from a node, every

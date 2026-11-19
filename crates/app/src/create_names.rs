@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Names the program writes into a document when it creates sheets, sheet sets, title block
 //! fields, revisions and demo levels. They come from the catalog of the interface language at
 //! the moment of creation; names already stored in a document are never renamed.

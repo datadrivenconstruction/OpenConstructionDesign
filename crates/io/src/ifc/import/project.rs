@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Project information from IFCPROJECT (Name, Phase, the `DDC_ProjectInfo` property set) and
 //! the postal address of IFCSITE / IFCBUILDING; applied to the model's project info.
 

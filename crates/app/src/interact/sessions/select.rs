@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Input with no tool session: selection. The select-mode hooks keep the order the
 //! editor always asked them in: section-box cursor, text and solid drags started from a
 //! selection, the press that grabs a grip (the drag itself is a `GripSession`), then the

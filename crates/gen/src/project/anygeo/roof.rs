@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The roof check: every roof of the project is built by the weighted straight skeleton the
 //! model uses (hip, gable and shed are edge slopes of one ring, flat is the drainage fall on
 //! every edge), so a footprint whose roof would not close is seen at generation time.

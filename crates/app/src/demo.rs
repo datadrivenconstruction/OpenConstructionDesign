@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Demo plan: a grid of rooms from multilayer walls: geom, then layer solids, then scene meshes.
 
 use ddc_geom::layered::{join, layer_footprints, layer_quantities, layer_solids, Layer, Strip};

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Rebar: bar shapes (shape code + dimensions A, B, C), bends and standard hooks, bend radius
 //! by diameter, axis length with hooks, mass per meter; stirrup layouts along a path
 //! (count, maximum/exact spacing, denser spacing at the ends), mesh bars over a contour with cover,

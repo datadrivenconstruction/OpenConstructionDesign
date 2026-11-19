@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Generic solids (schema 23): extrusion, blend, revolve, sweep, sweep with blend; void variants
 //! cut volume out of walls, slabs, roofs and other solids.
 //! `solid.def` is the JSON of the solid kind (profiles are rings `[x, y, bulge]`), `solid.plane`

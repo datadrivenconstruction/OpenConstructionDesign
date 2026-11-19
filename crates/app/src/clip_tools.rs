@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Clipboard, match properties, join, pin and groups: commands and the paste ghost.
 //! The snapshot lives in the process and in the system clipboard, so it survives a project switch
 //! and reaches another app instance. Each action is one `run_op`.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Version comparison: per-table counters (shared table with the restore window) and a diff window
 //! with an element list; a click shows the element, highlighted in the plan and in 3D (the same
 //! markers as clashes). The other version is a project file or a revision package; elements pair by

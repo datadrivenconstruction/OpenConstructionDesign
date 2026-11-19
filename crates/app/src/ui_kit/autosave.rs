@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Autosave settings: one section for the settings page and the autosave window.
 //! Numbers are kit number fields with a muted unit; the host decides how a row is laid out.
 

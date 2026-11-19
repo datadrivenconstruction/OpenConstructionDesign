@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Schedule toolbar on the design kit: category tabs with counts, icon buttons with tooltips,
 //! kit menus (columns, groups, formulas, export), phase dropdown and the "N of M shown" chip.
 //! What the bar offers in each state is a pure function (`toolbar_items`, `visible_tabs`), so it is

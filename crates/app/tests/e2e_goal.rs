@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The owner goal end to end: an assistant (scripted, no network) builds a project from a
 //! brief, revises it, makes the drawing set; every step is one Apply and one undo step; the
 //! result goes out as PDF, DXF, IFC4 and IFC2x3, and every

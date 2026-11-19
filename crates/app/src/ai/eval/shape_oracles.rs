@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Oracles for what makes a hard case that case: a tower that reaches its height, is braced and
 //! hangs together; a plant whose pipes join nozzles; a data hall with contained aisles; a shell
 //! that curves both ways.

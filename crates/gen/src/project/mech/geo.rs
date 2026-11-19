@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Boxes, points and the structure the services keep clear of: columns, slabs and beams.
 
 use super::super::{svc, GProject};

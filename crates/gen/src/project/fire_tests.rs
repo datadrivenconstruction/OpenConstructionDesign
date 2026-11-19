@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Unit tests of the hazard classes, the head grid kept off the columns and the coverage test.
 
 use super::fire_check::*;

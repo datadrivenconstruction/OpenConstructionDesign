@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Lowering of `Op::Pattern` and `Op::Family` (AI_NATIVE.md sections 4.4, 4.5) onto the
 //! model's array and family calls. Child of `ops_apply`, so it shares `Run`, `Fail` and refs.
 

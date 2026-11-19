@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Workflow: masses → floors from mass → elements by face → edit the mass (hosted elements
 //! follow) → undo all → model equals the fresh project. Every edit is one `run_op`.
 

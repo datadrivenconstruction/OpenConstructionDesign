@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Grids and beams by picking drawing lines (the same pick mode as walls, `Mode::PickLine`).
 //! Grid: a click on a line makes a grid exactly between its ends, named after the series
 //! (letters for horizontal, numbers for vertical); `Tab` before the click takes every parallel

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! 3D work plane: level (a horizontal at an elevation), element face, reference plane
 //! (a vertical through a line), picked face. Basis (u, v, n): u, v lie in the plane, n is the normal.
 //! The plane grid and model axis lines on it serve drawing and snaps.

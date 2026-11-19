@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Phase timings for benches and timing tests: off until [`enable`], then every [`span`] adds
 //! its wall time and one call to its phase, process-wide; [`take`] reads and clears them.
 //! Off, a span costs one atomic load.

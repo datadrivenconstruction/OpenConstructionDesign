@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Level ramps (IfcRamp from IfcRampFlight and IfcSlab LANDING via IfcRelAggregates) and zones
 //! (IfcZone with spaces via IfcRelAssignsToGroup). A ramp that cannot be built is skipped
 //! with a warning.

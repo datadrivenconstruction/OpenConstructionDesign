@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Guard on load: a stored number that is not finite (infinity; NaN is stored as NULL by the
 //! database) refuses the whole file and names the table and row.
 

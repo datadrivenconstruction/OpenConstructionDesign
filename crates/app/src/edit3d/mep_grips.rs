@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Network-run grips in the shared 3D grip system: axis vertices (`Role3::Ext(k)`, Ctrl for
 //! vertical) and whole-run move (`Role3::Ext(MOVE)`). The result is `mep3d::dragged` (an f64 shift
 //! added to the previous points) as one `update_mep_run` operation; copy-by-move uses the gizmo (Alt).

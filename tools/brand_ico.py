@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 """Pack data/brand/png/design-appicon-*.png into design-appicon.ico (PNG-compressed entries)."""
 import struct, pathlib
 d = pathlib.Path(__file__).resolve().parent.parent / "crates/app/data/brand"

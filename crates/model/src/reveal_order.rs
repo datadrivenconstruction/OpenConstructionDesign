@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Construction order for the "as built" reveal: edits (added, deleted, changed) are arranged
 //! into batches: foundations, columns, slabs, walls, beams and trusses, stairs, roof, openings,
 //! networks, components; within a batch by level elevation, then by bottom, then by number.

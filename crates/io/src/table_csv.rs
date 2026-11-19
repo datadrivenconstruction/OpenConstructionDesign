@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Every element as one CSV row: `category,id,level,global_id`, then the row's own columns and
 //! its properties, one column each. Geometry blobs are left out; empty cell = no value.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `DDC_Parameters` property set (written by the exporter from project parameter values) goes
 //! back onto the project parameter of the same name and type instead of the generic `prop` table.
 //! A missing parameter is created, bound to the element's category; a parameter of another type

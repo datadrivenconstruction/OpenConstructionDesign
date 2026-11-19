@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Creation directly in 3D on the work plane: wall (as a chain), slab (outline; Enter or a
 //! click on the first point closes it), column (a point), beam (two ends; on a vertical
 //! plane it is sloped). Walls, slabs and columns work only on a horizontal plane:

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Structural system of a project (`design.structure`): the wall, floor, roof and column types
 //! each system builds with, read from `data/structure.json`. Geometry is the same for every
 //! system; only the type names and their layers change.

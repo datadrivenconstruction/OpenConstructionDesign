@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! STEP (ISO 10303-21, AP203/AP214/AP242) B-rep solids → meshes. The geometric entities share
 //! their meaning with the IFC ones, minus the leading name: the file is rewritten under IFC names
 //! and tessellated by the IFC geometry reader (planes, cylinders, lines, circles, ellipses,

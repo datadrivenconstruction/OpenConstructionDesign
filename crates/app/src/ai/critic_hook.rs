@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! After a draft step the realism critic runs on the scratch copy. Its findings go back to the
 //! model as tasks (at most `MAX_CYCLES` per turn), and, when the project allows snapshots,
 //! small views of the draft go along so the model can look at what it built.

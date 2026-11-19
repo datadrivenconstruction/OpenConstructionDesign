@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Tags as elements: a tag of a door/window/room/wall/component is a `dim` row with kind
 //! `tag`, refs `H <k> <id>` (k: w o r c), (dx, dy) is the head offset from the host point, side 1 means
 //! with a leader. The position is computed on read from the current host, so the tag follows it.

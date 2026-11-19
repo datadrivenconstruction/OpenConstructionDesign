@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Site trees: species come from the library's Tree family by the rule `site.tree_mix`;
 //! neighbours differ in species and turn.
 

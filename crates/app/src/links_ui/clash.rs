@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Clashes of host elements with link elements (a standalone simple check; the general
 //! clash tool is separate). Host bodies are the 3D meshes of all levels (like `scene_all`),
 //! built from a model copy in a background thread together with the `ddc_model::links::clash` check;

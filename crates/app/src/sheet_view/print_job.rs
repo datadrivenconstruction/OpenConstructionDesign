@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Batch printing as a job: assembly runs one sheet per frame (it needs `&Editor`), files and
 //! compression run on a worker thread. The queue between them is short, so at most a couple of
 //! sheets are held in memory. A failed sheet does not stop the batch; a file appears whole or not at all.

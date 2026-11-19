@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Phase dates for calendar display: `prop(kind='phase', ref=id, key='dates')` =
 //! `{"start":"YYYY-MM-DD","end":"YYYY-MM-DD"}`. The schema is unchanged; a write is a single
 //! reversible operation. Dates are parsed here (ISO, Gregorian calendar), with no new dependencies.

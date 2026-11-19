@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 """Generate crates/ui/data/commands.json + ru command labels from docs/design/SHELL_AND_COMMANDS.md §5.
 usage: python tools/gen_commands.py   (EN labels live in EN below; RU comes from the doc)"""
 import json, pathlib, re

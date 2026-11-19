@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Stair detail over the flight bodies: a nosing on every tread, standing `nosing` past the
 //! riser below, rounded at fine detail; the flight, landing and stringer bodies stay as built.
 

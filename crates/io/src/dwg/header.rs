@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Header variables (only the ones the document needs) and the class table
 //! (spec: docs/specs/DWG.md §4–5).
 

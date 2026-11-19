@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The 60 most used commands' icons and the 12 tools that keep a caption in the compact ribbon.
 //! Both lists are data for tests and the ribbon; the drawings live in docs/design/icons_v4.
 

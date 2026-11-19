@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Card, badge, progress and the designed non-content states: empty, loading, error.
 use super::button::Button;
 use super::text::paint_in;

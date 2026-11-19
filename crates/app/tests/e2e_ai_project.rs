@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Project from a brief end to end: a scripted model fills the spec, the builder drafts the
 //! building, Apply writes it in one undo step, and the result exports to IFC.
 

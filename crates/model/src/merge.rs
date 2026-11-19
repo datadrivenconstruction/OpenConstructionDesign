@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Merge with a peer's file: three-way comparison of this model and the peer's copy against a common base.
 //! The base is the peer's file rolled back through the journal to the last common entry (or to the
 //! previous merge point), so the base file and the peer file always share one id space. Checks: the

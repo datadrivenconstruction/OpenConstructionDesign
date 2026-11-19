@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Profiles, the key store and the gate in front of the first request. A provider is built once
 //! per session with its egress guard, so a consent or profile change means a new session.
 

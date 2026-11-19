@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Stable element keys (card E1): the same brief gives the same keys, and a change in one
 //! place leaves the keys elsewhere alone.
 

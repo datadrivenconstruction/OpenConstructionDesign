@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Properties of a multi-selection: the rows every selected element has, one value or "varies",
 //! one edit sets them all in one compound op (one undo step). Rows only some elements have are
 //! hidden and counted; rows that cannot be read say why.

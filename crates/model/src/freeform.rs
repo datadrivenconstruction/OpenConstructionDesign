@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Freeform surfaces (geometry plan W3): a NURBS patch as a model element. Table `freeform`
 //! stores degrees, clamped knots, the control net and weights (JSON, z above the level),
 //! shell thickness and side, trim loops in normalized (u, v) and how the patch was made.

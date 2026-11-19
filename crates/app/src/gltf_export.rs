@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Whole model -> glTF: every level, absolute heights, materials by category, element ids and
 //! properties in node extras, repeated bodies as shared meshes. Built level by level from the
 //! model, not from the viewport scene: that one identifies only the active level and carries

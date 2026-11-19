@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Steel connection texts: type and part names, the analysis status and the bolt, weld and
 //! plate schedules as titled tables of text, in an explicit language.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Merging a design option into the live model, whole or by parts. The option's plan items are
 //! intents: a merge copies the picked ones plus their dependency closure into a new plan card,
 //! which `plan::replay` compiles against the copy of the live model. Only the person's Apply of

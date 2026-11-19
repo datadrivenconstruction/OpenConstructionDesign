@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `ChatCompletions` wire format: `POST {base}/chat/completions`, SSE of `choices[0].delta`.
 
 use crate::http::{stream_error, StreamDecoder, Wire};

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Header strip and footer plan of the XLSX window: what book this is, how it is linked,
 //! when it was last exported or synced, whether the model moved since, and which single
 //! action is primary. The decisions are pure functions; `strip` only draws them.

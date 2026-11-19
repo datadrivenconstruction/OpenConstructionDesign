@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A tiling of rectangular rooms becomes walls, doors and windows. Coordinates are whole
 //! millimetres, so both sides of a wall agree exactly and walls never overlap.
 

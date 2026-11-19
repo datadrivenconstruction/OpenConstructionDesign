@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Material look and physics from the file: surface colour (IfcMaterialDefinitionRepresentation
 //! -> IfcStyledItem -> IfcSurfaceStyle -> rendering) and the IfcMaterialProperties values
 //! MassDensity, ThermalConductivity, SpecificHeatCapacity (SI). They fill NEW material rows only.

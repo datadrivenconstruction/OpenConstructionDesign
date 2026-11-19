@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Empty-state card of the plan view: why a level shows nothing and the one step that fixes it.
 //! The whole-model-empty case keeps the start hint; this card covers the rest (keys
 //! `empty.plan_<what>.*`, same card widget as the 3D view).

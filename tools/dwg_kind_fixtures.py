@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: AGPL-3.0-only
+# SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 """Pick, per entity kind, the smallest corpus DWG that contains it (read-only).
 
 usage: python tools/dwg_kind_fixtures.py --list corpus/dwg.txt [--out crates/io/tests/data/dwg_kinds.tsv]

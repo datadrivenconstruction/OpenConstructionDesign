@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The 3D view scene on top of the base one (built by `prepare_3d`): the same `Arc` meshes (GPU chunks and
 //! the picking index recognise them), minus elements hidden by the open saved view, plus
 //! section-box cut fills in the material colour. Category visibility and transparency are

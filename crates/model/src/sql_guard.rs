@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! SQL text that comes from a file (the op log's inverses, a staged copy's schema) is the file
 //! author's choice: it runs only as one statement of an allowed kind. `ATTACH` or `VACUUM INTO`
 //! after a `;` would write any file on disk.

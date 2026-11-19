@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Live measurement of the assistant on hard briefs: the real provider, every tool, many steps,
 //! the plan applied and the project saved, scored objectively against each task's `expect`.
 //!

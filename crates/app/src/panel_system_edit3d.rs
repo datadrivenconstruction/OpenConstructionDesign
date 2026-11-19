@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Curtain systems on freeform surfaces in 3D: per system one glass part (panel prisms) and
 //! one mullion part, both picking the system. The parts follow the host: they are rebuilt
 //! from the host surface whenever the system or its host changes.

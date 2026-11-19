@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The whole selection for the 3D view: scene element ranges of every selected item, merged,
 //! and rebuilt only when the selection or the model changes (a large selection must not cost
 //! a lookup per item every frame).

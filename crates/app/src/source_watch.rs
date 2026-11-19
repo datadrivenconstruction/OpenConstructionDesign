@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Source file watch: at project open and on window focus (at most every 5 s) the files the
 //! project was imported from are looked at. Stat only; a file whose size or time differ is hashed
 //! on a worker. Same hash: the stat is refreshed silently. A moved file with the same hash is

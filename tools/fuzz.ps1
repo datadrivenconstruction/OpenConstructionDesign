@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 # Mutation fuzz of every untrusted-input reader (ignored tests). Prints FUZZ lines and failures.
 # usage: pwsh tools/fuzz.ps1 [-Minutes N] [-Seed S]
 # Failing inputs are saved to %TEMP%\ddc-fuzz-fail-<target>-<n>.bin; add them as regression tests.

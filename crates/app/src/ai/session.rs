@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! One assistant session: `Core` on the worker thread owns the scratch `Editor`; `UiSession` on the
 //! UI thread is the only place that ever changes the live model, and only through `exec::apply`.
 

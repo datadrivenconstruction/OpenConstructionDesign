@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Every G case against a scripted build: where a recipe, the generator or a short script can
 //! answer the brief, a scripted model runs it through the real session, the plan is applied and
 //! the case's own oracles judge it. The rest wait for a recipe on another branch or a live model.

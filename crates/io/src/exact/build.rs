@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Bodies from our solid types: extrusion and revolution of bulge profiles with exact faces,
 //! any triangle mesh as a planar polyhedron (forms without an exact mapping).
 

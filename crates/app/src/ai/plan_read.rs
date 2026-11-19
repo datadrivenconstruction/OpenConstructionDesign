@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `plan_from_image` (plan g9): walls, doors, windows and room labels drafted from an attached
 //! plan picture or PDF page. The geometry is the deterministic read of `ddc_io::plan_image`
 //! (a picture) or of the page's vector lines (a PDF); a model that sees may add only room

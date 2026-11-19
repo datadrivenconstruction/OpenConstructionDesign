@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Procedural plants: forms, levels of detail, seeds, the built-in species table.
 
 use ddc_geom::component::{Built, Family, Lod};

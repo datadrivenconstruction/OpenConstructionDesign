@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Plan items in the op language: `lower_plan` turns checked plan items into one
 //! `ddc_ops::Envelope` (one item = one group, plan slots stay slots as `Ref::New`), `lift` turns
 //! such an envelope back into plan items. The plan path (scratch copy, diff, replay) is unchanged;

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `diff.json` (`ddc-diff/1`): this revision's rows against the parent's, keyed by `element_key`.
 
 use std::collections::{BTreeMap, BTreeSet};

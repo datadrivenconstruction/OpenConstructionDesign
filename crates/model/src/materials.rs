@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Project materials (schema 35): the `material` entity — name, color, hatch, density, thermal
 //! properties. Element rows reference a material by name (the `material` column): names are unique,
 //! renames cascade, deleting a material in use is refused, replacing one moves the references.

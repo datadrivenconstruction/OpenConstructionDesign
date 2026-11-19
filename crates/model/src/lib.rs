@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The model in SQLite. Module map:
 //! schema — DDL, format version, migrations · integrity — reference checks, reference-row deletion · ops — operation journal and undo · elements — elements/parameters ·
 //! walls — wall types and instances, volumes via ddc-geom · slabs — floors (sloped top) ·

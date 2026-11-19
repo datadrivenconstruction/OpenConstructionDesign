@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Generic `Edit::Delete` for wall, opening and slab: create, delete, undo, redo (the same edit
 //! applied again) and save/reload, per kind.
 

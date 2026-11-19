@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Session preview in model coordinates: a session lists abstract primitives, every
 //! view turns them into its own picture through its adapter — plan footprints, 3D volumes,
 //! section cuts. No session draws; `overlay::paint_preview` maps the result to the canvas.

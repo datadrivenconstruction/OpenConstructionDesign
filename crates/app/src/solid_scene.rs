@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Typed solids for 3D, independent of the scene engine: parts (a solid or a translucent void
 //! ghost), depth/height/angle handles, a work plane on a face. Glue with the 3D scene and
 //! handle providers lives in `solid_scene_edit3d.rs` (module `solid_edit3d`, installed in `edit3d::register`).

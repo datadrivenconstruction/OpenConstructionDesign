@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Seeded property test of the XLSX round trip: random edits of editable cells are listed
 //! by the preview, applied to the model and survive a re-export; read-only edits are refused.
 

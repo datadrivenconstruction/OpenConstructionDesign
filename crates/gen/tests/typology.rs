@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Data-driven typologies: each shipped definition builds a valid project whose loads are read
 //! from the rooms that were built, the rules steer the loads, and the four older typologies
 //! stay as they were.

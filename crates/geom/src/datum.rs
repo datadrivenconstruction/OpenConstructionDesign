@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Grids and reference planes in plan: straight or arc (a, b, bulge = tan(angle/4)), intersections
 //! for snapping, automatic name numbering (1, 2, ... / A ... Z, AA ...).
 

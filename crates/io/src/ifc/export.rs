@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Model walls -> IFC4X3_ADD2. Walls are placed in their own frame (origin = axis start,
 //! x along the axis, y to the left), so the layer-set usage direction is the local +Y.
 

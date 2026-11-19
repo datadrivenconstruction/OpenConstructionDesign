@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The assistant's side panel. Frames draw from state and push `Action`s; the actions run after the
 //! draw with the whole app in hand, so no widget ever holds the model across a change.
 

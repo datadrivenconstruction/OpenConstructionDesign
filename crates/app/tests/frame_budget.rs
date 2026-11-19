@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Idle frames cost nothing: with the model unchanged, a whole window frame (properties panel,
 //! project browser, workbook window, AI panel, status bar) runs no SQL statement, and a hover
 //! over the same spot runs none either. Statements are counted by the model's `test-hooks`

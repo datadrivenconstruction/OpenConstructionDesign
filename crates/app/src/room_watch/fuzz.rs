@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Randomised wall and separator edits against the room note: every room an edit opens is named,
 //! no unchanged room is named, undo and redo leave no stale note. A failing seed is printed.
 

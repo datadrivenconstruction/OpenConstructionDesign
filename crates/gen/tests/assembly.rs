@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Layered build-ups: every wall, slab and roof of the bench has one, the plan geometry takes
 //! its thickness, the U-values of the envelope meet each climate's pack and the sound index of
 //! party walls and floors the rule, and a rule the catalogue cannot meet is reported.

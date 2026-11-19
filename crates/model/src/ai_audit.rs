@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! AI action log and project settings (schema 31). Kept outside the undo journal, like `clash_item`:
 //! `changes_since` does not see them, otherwise auditing would rebuild the scene and make a plan stale.
 //! Event kinds: turn, snapshot, tool_write, plan, apply, reject, cancel, mcp_connect, mcp_policy.

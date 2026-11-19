@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Area schedule by the measurement standard of a norm pack: the rooms of every storey grouped
 //! by use and counted the way the country counts (`net` room areas, `usable` use zones,
 //! `gross_internal` inside the outer walls, `gross` to the outside of the outer walls), with

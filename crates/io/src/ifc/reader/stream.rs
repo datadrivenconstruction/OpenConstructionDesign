@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Streaming STEP open for big files: the file is read in fixed chunks and split into
 //! statements (`;` outside strings, binaries and comments, state carried across chunk
 //! borders); each statement is validated by the same parser as [`StepFile::parse`], only a

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Contract: every place that keeps an editable draft outside the model is registered in
 //! `drafts.rs`, so Close, New and Open ask about it. Source-level: the scan finds files that
 //! declare a `thread_local!` and name a draft or dirty flag, then checks each against the lists

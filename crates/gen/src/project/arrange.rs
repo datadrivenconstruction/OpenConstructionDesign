@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A planar arrangement of segments: every crossing and touch becomes a vertex, faces are
 //! traced with the region on their left. Faces take labels from a probe point; regions are
 //! label unions traced on shared vertices, so neighbouring rooms agree exactly, and walls are

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Checks of a composed drawing set, for tests and for the reply to the person: every view and
 //! schedule inside its sheet frame and clear of the title block and of each other, and no tag
 //! text on top of another tag or any other text of a view (dimensions, axes, levels, titles).

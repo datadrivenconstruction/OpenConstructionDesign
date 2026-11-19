@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The single tool registry: model schemas, permissions and the external agent surface
 //! are all built from this table. Execution lives behind `convo::ToolHost`.
 

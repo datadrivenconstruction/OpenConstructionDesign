@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! View panes (`view.panes`): the view area as one to four panes (side by side, stacked, one
 //! big and two, four), each showing a level plan, a 3D view or a section/elevation of the model.
 //! Plans of several levels and up to four 3D views (each with its own camera, style, section box

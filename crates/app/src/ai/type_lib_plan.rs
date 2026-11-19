@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! AI plan items of the wall type library: change one layer of a wall type, copy wall types
 //! from another project file. Each compiles, on the copy, into one `TypeLibStep` with every
 //! value resolved, so Apply replays exactly what the preview showed.

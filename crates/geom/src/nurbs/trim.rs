@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Trimmed tessellation: loops in normalized parameters ([0, 1] over each domain) cut the
 //! surface. The adaptive grid of [`tessellate`] supplies interior vertices; loop vertices,
 //! densified to the grid step, become constrained edges of the own constrained Delaunay

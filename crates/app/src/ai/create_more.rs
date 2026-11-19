@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The wider create path of the assistant: shafts, grid lines and steel connections through
 //! `create_elements`; a type table as its category (`wall_type`, `member_type`, ...) makes
 //! types; an item's type named under its table word; levels named, or planned earlier in the

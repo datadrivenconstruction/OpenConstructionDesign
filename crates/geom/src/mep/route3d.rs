@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Auto-routing of networks on a 3D lattice. A* over axis-aligned moves: a turn costs extra and
 //! needs a straight long enough for two elbows (one next to a port), walls are crossed at a cost
 //! (the caller cuts a sleeve), slabs only vertically, hard obstacles never; horizontal metres

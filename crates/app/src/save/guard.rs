@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! "Empty over full": a model with no content never replaces a file that holds some. A stale
 //! path or an emptied model must not wipe a real project; "Save as" to a new name stays allowed.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Stairs: straight / L / U-shaped flights, the riser/tread rule (2R + T ∈ [0.60, 0.65] m),
 //! landings, stringers; path-following railings with posts, balusters and a handrail.
 //!

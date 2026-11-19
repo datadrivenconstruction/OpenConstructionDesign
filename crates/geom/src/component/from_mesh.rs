@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Family from imported meshes (the import wizard's result): one `mesh` body per material, an
 //! optional simplified medium level, a box at coarse, a plan outline, Width/Depth/Height that
 //! stretch the meshes, and for doors and windows a wall opening with a sill.

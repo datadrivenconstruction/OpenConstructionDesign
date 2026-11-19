@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! UI-free 3D navigation: camera poses and smooth transitions between them, orbit around a pivot
 //! (selection or the point under the cursor), view cube (faces, edges, corners — 26 directions),
 //! walk/fly (WASD) with speed scaled to the model size.

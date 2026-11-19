@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Reading chip at the cursor while drawing: length, absolute angle and the turn relative to the
 //! previous segment. Pure numbers and text; the plan view only places the plate.
 

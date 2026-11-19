@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Curtain systems on freeform hosts: storage, quantities of a cylinder facade, following a
 //! host edit, deletion with the host and undo, trims, refusals, ops lowering.
 

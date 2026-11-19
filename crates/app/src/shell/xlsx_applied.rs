@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Cells an Apply took from each linked book this session. An Apply that does not rewrite the
 //! whole book (ids written in place under a renamed sheet, a skipped, failed or cancelled
 //! re-export) leaves the book's baseline at the export; its next read compares with these

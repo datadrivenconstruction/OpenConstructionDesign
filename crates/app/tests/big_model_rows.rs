@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! 50k-element timing rows, all ignored: run by tools/bench.ps1 in release.
 //! Budgets: open 50k file 3000 ms; XLSX export 15000 ms; XLSX import preview 15000 ms;
 //! IFC save 20000 ms; one edit of 1000 elements 1500 ms. DDC_BUDGET_SCALE multiplies every

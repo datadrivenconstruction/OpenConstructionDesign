@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Curtain-wall editor on the elevation: click a grid segment to remove/restore it, a panel to
 //! select it (Shift adds to the selection), "Merge" joins the selected adjacent panels,
 //! panel and mullion types per segment from lists, the lock on a line pins/unpins it,

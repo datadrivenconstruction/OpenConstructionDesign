@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Element modification: move, copy, rotate, mirror, arrays, offset, trim/extend, split, align.
 //! Each call is one transaction and one undo step; on error the state is unchanged. Openings and
 //! panels follow their host via `along`/indices, dimensions that reference elements stay

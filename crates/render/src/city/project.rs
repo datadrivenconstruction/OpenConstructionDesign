@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A project in the city: any model source with an f64 origin and spatial units that load on
 //! demand. Content comes in project-local coordinates and element ids; `place` moves it next to
 //! the federation anchor and onto the global element range of the project.

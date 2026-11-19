@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Free-form mesh body of a family (`mesh <name> data(...)`): imported or converted geometry.
 //!
 //! Stored inline in the family text so a family stays one self-contained record. Encoding:

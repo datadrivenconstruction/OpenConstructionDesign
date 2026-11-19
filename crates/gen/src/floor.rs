@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Typical floor: a rectangle with a central corridor, apartments on both sides, a stair and
 //! service core in the south block. Internal walls stagger so no wall crossing has four arms.
 

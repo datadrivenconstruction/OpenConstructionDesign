@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The Apply gate keys a preview on the model's content, not on the revision: an equal revision
 //! over other content never lets a stale report write, and a reload never makes one stale.
 use std::path::{Path, PathBuf};

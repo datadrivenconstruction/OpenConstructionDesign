@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Seeded books with locked, refused, conflicting, new and deleted rows: an honest Apply
 //! passes the check; a batch changed between the plan and the write (test hook) is taken
 //! back whole and the message names the first difference. A failure names its seed.

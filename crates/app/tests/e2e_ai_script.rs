@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The chat builds geometry with a sandboxed script: a draft item until Apply, one undo step,
 //! a recipe stored with the elements, and a rerun with new params that touches only the
 //! recipe's own elements. The gate: a steel sphere of about 4500 parts in release.

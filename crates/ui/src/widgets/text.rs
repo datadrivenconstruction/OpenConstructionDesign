@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Single-line text that never overflows: elided with «…», full text in a tooltip.
 use egui::text::{LayoutJob, TextWrapping};
 use egui::{Align, Color32, FontId, Galley, Rect, Response, Sense, TextFormat, Ui};

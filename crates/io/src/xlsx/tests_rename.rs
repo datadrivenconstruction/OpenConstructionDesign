@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Name swaps and rename cycles of levels and wall types apply in one step; a real name clash
 //! and an unreadable id are reported per row and never delete anything.
 

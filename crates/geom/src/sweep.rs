@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Profile sweeps along edges: fascia board, gutter, slab edge, wall cornice/molding,
 //! rustication (subtracted from the wall). The profile is a closed polyline with bulge in local coordinates (x outward from the path,
 //! y up). The path is a plan polyline with arcs (bulge) and elevations; the profile is plumb (the profile

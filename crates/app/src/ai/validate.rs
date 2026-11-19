@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! What the scratch model looks like with the plan on it, against the base: new problems only,
 //! so an old model full of warnings still gets an honest verdict for this change.
 

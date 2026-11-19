@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Underlay drawings (.dxf): placement on a level, layers (visibility, freeze, color, halftone),
 //! plan rendering, snaps, tracing a line with a wall, and "drawing to BIM" recognition with
 //! preview and acceptance as a single operation.

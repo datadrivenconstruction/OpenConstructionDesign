@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Plan (orthogonal top view): grid, walls, openings, draft with joins, snaps, labels.
 //! Thin egui layer: translates input into `wall_tool::Event` and draws the `Editor` state.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The skin of a built project: the facade system re-glazes the bays of every outer wall,
 //! fins, mullions and panels stand off the wall face, balconies and loggias hang off habitable
 //! rooms, a canopy marks each entrance, and the site gets paving and trees. All of it is

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Display text of TEXT and MTEXT values: control codes removed, special characters decoded.
 
 /// `%%c` → Ø, `%%d` → °, `%%p` → ±, `%%%` → %, `%%nnn` → character nnn; `%%u`/`%%o`/`%%k`

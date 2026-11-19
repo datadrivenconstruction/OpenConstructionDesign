@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Guard rails by rule: both sides of every stair, the flat roof deck behind a low parapet, none
 //! when the rule is off; a pitched roof gets no deck guard.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The built-in family library passes the validation pipeline without errors.
 
 use ddc_geom::component::validate::{validate, Limits, Severity};

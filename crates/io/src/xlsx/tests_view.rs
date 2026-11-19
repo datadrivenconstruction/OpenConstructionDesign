@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Re-export keeps how the user arranged the app's sheets (sheet_view.rs): row order, hidden
 //! rows and columns, widths; filters and sort state it cannot keep are listed as losses.
 

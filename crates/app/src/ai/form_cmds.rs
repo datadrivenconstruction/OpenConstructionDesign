@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Handlers of `measure_save`, `edit_mass` and `mass_to_family`: the saved measurements of the
 //! measure tools, one history step of the Forms tab (`mass_tools.rs`) and the history panel's
 //! timeline to family (`elem/history.rs`). Each adds one plan item (`modify_plan`); faces and

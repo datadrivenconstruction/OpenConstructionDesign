@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Grids (schema 14): straight and arc, bubbles at the ends, auto-numbered names, visibility by
 //! level range; reference planes. Snapping: grid intersections, points on grids and planes.
 //! If the model has grids, sections and plans show them instead of the supplied ones (auto-grids from walls).

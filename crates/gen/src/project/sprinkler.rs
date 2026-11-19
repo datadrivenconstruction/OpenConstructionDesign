@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Fire protection of the finished building: the sprinkler system (heads by the coverage rule,
 //! branches, mains, risers, zone pumps, all sized for the flow they carry), the fans that
 //! pressurise the stairs of a tall building, and the car

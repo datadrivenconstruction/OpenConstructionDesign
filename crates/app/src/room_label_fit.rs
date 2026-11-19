@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Room tags of the plan: fit the text into the room, cache the layout per zoom bucket.
 //!
 //! `fit_room_label` is pure (text measuring is injected). Priority of the lines: name, then

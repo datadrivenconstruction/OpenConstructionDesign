@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Feedback channels (ONBOARDING_FEEDBACK §3.1) and the toast queue: ≤3 visible, rest «+N»,
 //! identical toasts merge with a counter, 4 s (6 s with action), paused while hovered;
 //! every toast is also kept in the notification center.

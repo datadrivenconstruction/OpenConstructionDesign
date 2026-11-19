@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Seeded random edit sequences on one drawing: offset (either side), join with a tolerance,
 //! explode, move to layer, undo and redo, with the DXF export checked after every step. A
 //! failure names the seed and the step: replay with `run(seed, steps, Want::ALL)`.

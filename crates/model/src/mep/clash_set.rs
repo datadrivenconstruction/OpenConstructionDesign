@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Clashes between sets A × B: selection by category/level/list, hard and clearance clashes,
 //! statuses kept between runs (the `clash_item` table is created on first use and the schema
 //! version does not change; statuses are check data and are not written to the edit journal),

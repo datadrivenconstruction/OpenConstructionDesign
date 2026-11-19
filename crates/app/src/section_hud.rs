@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Section and elevation canvas: the bottom HUD (shared with the plan view) and the designed
 //! empty cards. Decisions are pure; painting reuses `plan_hud`.
 use crate::plan_hud::{self, Hud, HudIn};

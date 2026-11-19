@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Schedules ("model + table" interface): rows per category from model quantities,
 //! sorting, filtering, totals, TSV and .xlsx; cell edits go through editor commands (Ctrl+Z).
 

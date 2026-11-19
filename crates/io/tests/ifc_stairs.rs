@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Stairs, ramps and railings through IFC: classes, parts, exact return, fitted foreign stairs,
 //! and a warning (never silence) for what cannot be written or read natively.
 

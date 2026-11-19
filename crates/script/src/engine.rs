@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The sandboxed interpreter: string, table and math libraries only (no files, network,
 //! clock, random numbers, code loading or address-revealing text), a heap limit, and a hook
 //! counting executed lines and checking CPU time. Errors map to script line and column.

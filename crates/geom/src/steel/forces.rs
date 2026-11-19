@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Hook for structural results (sa12). Connections are geometry and schedule items only: no
 //! strength or capacity calculation is done here, so every node reads "not checked by
 //! analysis" until a certified analysis supplies results.

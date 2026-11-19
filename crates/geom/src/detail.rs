@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Detailed parametric geometry of building elements (LOD 350–400): doors, windows, railings,
 //! stair nosings, member sections, roof edges. Each builder takes a type's parameters and the
 //! rule values ([`rules::DetailRules`]) and returns closed shells grouped by material, at three

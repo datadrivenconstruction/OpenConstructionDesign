@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `Scope` — what the editor is doing now. One value, owned by `Interaction`;
 //! hot set and overlays derive from it. `from_legacy` reads the old flags until 72–76 move them.
 use crate::editor::Editor;

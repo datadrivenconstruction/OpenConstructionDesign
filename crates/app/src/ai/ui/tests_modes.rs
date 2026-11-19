@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! AI tabs on the real engine and the whole app: switching, one conversation for the tabs and
 //! the quick panel, Apply and Undo from each tab, and the layout of every tab and state.
 

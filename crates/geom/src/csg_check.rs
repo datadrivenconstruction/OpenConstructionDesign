@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Checked booleans for typed requests: both operands must be closed solids, and an empty or
 //! non-manifold result is refused with a reason instead of being returned as a silent mesh.
 

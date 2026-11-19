@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Booleans on closed triangle meshes for large curved bodies (tessellated freeform, spheres,
 //! cylinders): cost grows with the number of touching triangle pairs, not with the product
 //! of face counts as in the planar BSP path (`csg`, kept for small planar bodies).

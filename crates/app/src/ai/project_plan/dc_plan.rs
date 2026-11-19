@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The data centre fit-out of a project in the model: its units as library components slot
 //! by slot, then its chilled water pipes and cable trays as one network build with the
 //! cooling units' and chillers' connectors linked. Kept as they are while nothing they depend

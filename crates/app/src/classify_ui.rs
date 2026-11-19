@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `data.classify` ("Classifications"): assigns a classification code to the selected elements
 //! or to every element of their categories. A system is a text project parameter named
 //! `Classification.<system>` (the name the IFC import gives classification references), bound

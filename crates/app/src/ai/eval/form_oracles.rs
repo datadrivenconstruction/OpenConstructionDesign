@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Oracles for whether a free form reads as its shape, not only as a count of parts: a twisted
 //! tower turns every storey by its angle, a hyperboloid narrows to a waist above its base and
 //! flares again, a dome or a geodesic sphere keeps its nodes on one sphere of the asked radius,

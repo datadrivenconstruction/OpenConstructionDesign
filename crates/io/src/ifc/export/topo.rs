@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Site and terrain -> IFC: one IfcGeographicElement (.TERRAIN.) per toposolid with a
 //! triangulated body per material piece, building pads as IfcSlab (.BASESLAB.), all contained
 //! in the site; true north on the model context, reference latitude/longitude/elevation on IfcSite.

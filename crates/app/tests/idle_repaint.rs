@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! An idle window asks for no frames: once the 3D picture has settled (no refinement left, or
 //! refinement stuck past its bound) and nothing moves, a whole window frame requests no repaint.
 //! Same harness as `frame_budget.rs`: headless frames of the full window, no graphics device.

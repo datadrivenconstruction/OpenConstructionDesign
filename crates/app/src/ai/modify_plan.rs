@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Plan items of the ribbon's modify, level, room and footing tools: move, copy, rotate, mirror,
 //! scale, array, offset, split, pin, flip, join, levels, rooms in every closed region and
 //! footings under columns. Each resolves on the copy and calls the very function the

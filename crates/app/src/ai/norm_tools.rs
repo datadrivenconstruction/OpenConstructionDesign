@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `norms_lookup`, `norms_check`, `norms_programme`: read-only access to the country norm
 //! packs. The pack is the project's stored choice, else the nearest to the language and
 //! region the assistant passes. Numbers not verified against their source come back marked.

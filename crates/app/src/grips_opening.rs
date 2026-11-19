@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Plan grips and flips for a placed door or window: slide along its wall, flip hand, flip facing.
 
 use crate::editor::{Editor, OpFn, Sel};

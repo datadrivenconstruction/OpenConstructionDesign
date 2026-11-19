@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `ddc gen`: the brief of the contract examples becomes a model; every brief field is used,
 //! reported as unused, or reported as derived, and a brief with unconfirmed values is refused.
 #![cfg(feature = "link")]

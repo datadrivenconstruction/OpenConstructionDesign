@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Draft preview contract of the two AI cards: the plan card (the assistant's own draft) and the
 //! proposal card (an agent's `ops_propose`). Both show the same draft of the same change and
 //! must keep the same promises, so every test runs a table of card kind x language:

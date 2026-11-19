@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The delete column is read by one parser (`units::delete_word`) at every call site:
 //! main sheets (walls, rooms), family sheets and the extra-parameter pass.
 

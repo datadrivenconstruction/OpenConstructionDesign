@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Move/rotate gizmo: X/Y/Z axis arrows, XY/XZ/YZ plane squares, rotation rings
 //! about the axes. Constant size in pixels. Dragging yields an [`Xform`] with a step
 //! (length is the grid step, angle 5°, Shift 15°); a snap point is projected onto the constraint;

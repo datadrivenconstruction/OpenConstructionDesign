@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Both placement types are reachable from the crate root under distinct names.
 
 use ddc_model::{PatternPlacement, Placement};

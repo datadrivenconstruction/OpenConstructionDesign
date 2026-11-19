@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Named work planes of the project: one `meta` row (JSON list). A plane is a point and two
 //! directions in model coordinates (z is the absolute elevation), so it keeps its place when
 //! levels move. Written as a journaled operation: a change is one undo step and travels with

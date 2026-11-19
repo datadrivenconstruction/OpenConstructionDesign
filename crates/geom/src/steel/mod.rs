@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Steel connections (g5): an own catalogue of bolts, welds, plates and spacing rules, and ten
 //! parametric connections that turn joined members into plates, stiffeners, bolts and welds as
 //! real solids. A connection is a function of its members and parameters: change a section and

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Issues (BCF topics) kept in the project file: title, status, priority, assignee, text,
 //! comments, linked elements, a camera and an optional snapshot (schema 44, additive).
 //! Outside the undo journal like `clash_item`: the rows are a review log, not model content, so

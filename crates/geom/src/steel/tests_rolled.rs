@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Rolled section properties: closed forms by hand, cross-checks between the two derivations,
 //! a few well-known published values, and integrity of every table row.
 

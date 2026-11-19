@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Properties panel frame shared by every element kind: one header, a strip of key figures
 //! (read-only), then captioned groups of editable rows. Code that holds only a `Ui` uses these;
 //! theme and icons come from the context.

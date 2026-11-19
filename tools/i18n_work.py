@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: AGPL-3.0-only
+# SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 """Per-locale translation bookkeeping for crates/ui/data/i18n.
 
 English is the source: data/i18n/ui.en.json, commands.en.json and en/*.json.

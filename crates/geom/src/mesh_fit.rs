@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Recognition of an imported mesh as a native element ("convert to native").
 //!
 //! The body is searched for as a prism: the axis is the normal of a pair of opposing planar faces (or the vertical), all

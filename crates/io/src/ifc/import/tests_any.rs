@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Hand-written fixtures: every product with geometry imports (natively or as a mesh), its
 //! data lands in `prop`, re-import updates by GlobalId.
 

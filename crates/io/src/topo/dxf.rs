@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Terrain from a drawing: contours (LWPOLYLINE at elevation 38, 2D POLYLINE at its elevation),
 //! 3D polylines and lines with z as breaklines; 3DFACE corners, POINT, polyface/polygon mesh
 //! vertices and block insertion points (survey point symbols) as points. Blocks are not expanded.

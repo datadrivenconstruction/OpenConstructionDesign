@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: AGPL-3.0-only
+# SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 """Writes crates/ui/src/rtl_table.rs: Arabic contextual forms from the Unicode Character Database
 (decompositions <isolated>/<final>/<initial>/<medial> of U+FB50..FDFF and U+FE70..FEFC, via Python's
 unicodedata). Rerun after a Python/Unicode upgrade: python tools/gen_arabic_shaping.py"""

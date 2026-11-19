@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Floor and structural slab: outline by clicks, click inside a wall loop, wall selection,
 //! sketch. Writing — type by name, slab, slope: all in one undo step.
 

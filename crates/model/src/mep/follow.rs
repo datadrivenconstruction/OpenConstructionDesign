@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Connections that follow an edit. A connection is geometric: a run end lies on a device
 //! connector, or on another run. When a device moves or turns, or a run is lifted, the ends that
 //! touched the old place move to the new one in the same journal record; an end that cannot

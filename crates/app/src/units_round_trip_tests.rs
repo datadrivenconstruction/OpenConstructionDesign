@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Every number the UI puts into an editable field reads back through the matching parser
 //! to the same value (within the precision shown), in both decimal marks and both unit systems.
 //! No test changes the global UI language: marks and languages are always passed explicitly.

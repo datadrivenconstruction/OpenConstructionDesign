@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Footings (schema 26): pad footings under columns (rectangular/round, stepped),
 //! strip footings under walls (along the wall axis, arcs; L/T/X joints as for walls via
 //! `walls::join_tolerant` within groups of equal bottom height and depth that are connected by

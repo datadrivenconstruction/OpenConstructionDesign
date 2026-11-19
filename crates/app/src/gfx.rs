@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Graphics backend choice: env override → probe in preference order (Windows: DX12, Vulkan, GL),
 //! `--safe-graphics` → software adapter. Result is logged to `<data dir>/logs/startup.log`.
 #[cfg(feature = "gui")]

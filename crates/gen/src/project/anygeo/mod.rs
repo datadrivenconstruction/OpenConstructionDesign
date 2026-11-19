@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Any geometry on a plate building (R7). The structural grid follows the form: rotated or
 //! skewed lines, rays and rings about a centre, or stations along a curved facade; columns
 //! stand where every storey leaves them free, so they carry through. Curved facade runs are

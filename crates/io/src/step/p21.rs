@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! ISO 10303-21 exchange structure: header and data sections, simple and complex entity
 //! instances and their parameters parsed into a [`Store`]; strings decoded from their control
 //! directives. Errors name the entity, the byte offset and the line.

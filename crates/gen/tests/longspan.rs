@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The steel frame generator's long spans: an 80 m truss hall, a 90 m arch bridge and a stadium
 //! cantilever ring, each standing on its own columns; a ring without a back-span is refused.
 

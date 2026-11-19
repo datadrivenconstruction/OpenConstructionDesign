@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Workbook report texts in the UI language. `ddc-io` reports English template texts;
 //! the translations live in `crates/ui/data/i18n/<lang>/xl.json` (keys `xl.*`).
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Free names: the one rule for picking a name nobody uses yet.
 
 /// `base` when free, else the first free `numbered(k)` for k = 2, 3, ... `taken` says whether a

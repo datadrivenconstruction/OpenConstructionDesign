@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! City-scale benchmark with budgets (`docs/CITY1.md`):
 //! `cargo run --release -p ddc-render --example city_bench -- [S|M|L] [frames] [budget_mb]`.
 //! Prints one line per camera path and a JSON summary; exits with 1 when a budget fails.

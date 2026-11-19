@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Repeated meshes: a mesh in world coordinates is split into a local shape (centred, turned
 //! about Z so that its first off-axis vertex lies on +X) and a placement (turn + shift).
 //! Copies of one type placed by translation and rotation about Z get the same local shape

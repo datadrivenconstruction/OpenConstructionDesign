@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A typology as data (`gen_typology.v1`): which spaces a kind of building has and how many,
 //! what each needs (air changes, cooling, power, water, clear height, a structural load), how
 //! the zones of the building sit against each other, what the exits must carry, whether and how

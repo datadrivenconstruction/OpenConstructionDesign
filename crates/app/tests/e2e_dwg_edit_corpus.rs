@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Drawing edit round trip on real files: open a .dwg/.dxf, move lines, edit a text, move
 //! primitives to a new layer, delete some, export to DXF, read the file back and compare with
 //! the export of the unedited drawing. Undo of every edit returns the drawing to its read state.

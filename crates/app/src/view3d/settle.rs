@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! When the 3D view asks for a frame with no input. Refinement that the next frame continues by
 //! itself (quality coming back after motion, uploads held by the frame budget, the motion
 //! ladder) gets timed frames, for a bounded stretch after the last input, data change or

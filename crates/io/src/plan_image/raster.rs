@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Pixel side of plan reading: grey image -> ink mask -> one-pixel skeleton. Thick ink
 //! (filled walls) keeps only its outline, thin strokes are thinned to their centre line, so a
 //! poche wall and an outlined wall both end up as two edge lines.

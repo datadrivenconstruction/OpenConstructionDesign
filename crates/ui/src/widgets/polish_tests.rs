@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Rules of the visual system, computed from the tokens: surface steps, text contrast, one
 //! accent, distinct states, equal control heights, one radius per control class.
 use super::button::{colors, Variant, Visual};

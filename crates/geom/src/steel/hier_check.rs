@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Preliminary member check of a hierarchical lattice. NOT a design calculation: the tower
 //! lattice is solved as a rigid-jointed frame (latticed members as their chord groups) under
 //! self weight, a floor load on the platform beams and a uniform wind pressure; chord forces

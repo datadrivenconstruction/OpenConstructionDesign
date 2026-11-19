@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! How the user arranged the app's own sheets in the old book, carried by a re-export: the row
 //! order, hidden rows and columns, column widths and row heights. Columns are matched by their
 //! normalised header (through the Keys row when the book has one), rows by element id (by type

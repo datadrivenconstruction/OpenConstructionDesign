@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! View cube in the 3D corner: faces, edges and corners (26 directions) with the zone under the
 //! cursor highlighted; a click smoothly moves to the view from that side and "zooms to fit"; dragging
 //! the cube rotates the camera; the house icon is the home view (right click: set current / reset).

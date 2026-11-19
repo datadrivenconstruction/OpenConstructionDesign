@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! H01 (the 300 m lattice tower) through the tools the recipe names, with a scripted model in
 //! place of the chat: every model oracle of the case must pass on what the tools build.
 

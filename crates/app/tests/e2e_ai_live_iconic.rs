@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Twenty landmark structures the assistant builds with script blocks: briefs (en, ru), the
 //! recipe a good answer adapts, and acceptance read back from the applied model (parts by
 //! role, overall size, realism errors 0). Scripted replays run the recipes through the real

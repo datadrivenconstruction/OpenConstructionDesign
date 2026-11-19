@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Hazard classes of the sprinkler design, the head grid kept off the columns, and the check of
 //! a finished fire protection design: every protected room covered by heads of its class, no
 //! head further from its neighbour than the class spacing nor serving more than the class area,

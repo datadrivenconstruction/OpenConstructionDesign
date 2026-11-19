@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Host under the pointer: the element the ray meets first, so a hosted family
 //! (door, window, opening) is placed by the face it was clicked on in 3D or in a section, and
 //! by the wall axis in plan. Straight walls as boxes in f64; arc walls keep the plan route.

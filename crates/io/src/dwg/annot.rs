@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Annotation and opaque entity bodies: LEADER (45), MULTILEADER, IMAGE / WIPEOUT and
 //! IMAGEDEF (class records), REGION / 3DSOLID / BODY (37–39). Spec: docs/specs/DWG.md §8.
 //! Each decoder returns `Err` on an inconsistency; the caller keeps the record as skipped.

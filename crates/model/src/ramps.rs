@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Ramps (schema 32). A ramp is defined by a plan axis, a bottom level and a top (a level with an
 //! offset, or a height above the bottom), slope, width and landing rules. Flights, landings,
 //! solids and quantities are computed by `ddc_geom::ramp`; there are no derived tables.

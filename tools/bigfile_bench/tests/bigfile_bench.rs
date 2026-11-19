@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Big-file timings over the local corpus (ignored by default; files live outside the repo):
 //! `cargo test -p bigfile-bench --release -- --ignored --nocapture`.
 //! `DDC_BIG_N` files per format (3), `DDC_BIG_FILE` one file, `DDC_BENCH_DDC` model files

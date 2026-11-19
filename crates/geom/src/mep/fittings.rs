@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Pressure loss of duct fittings, water flow in pipes, and fan and pump power.
 //! Duct fittings: smooth round elbows by bend radius and angle, diverging and converging tees
 //! (Idelchik form), contractions and conical expansions. Pipes: Darcy-Weisbach with the

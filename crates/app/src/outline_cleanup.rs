@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! «Clean up outline» for a floor, ceiling or shaft saved with a spike (a near-collinear back
 //! turn, refused in new outlines): a preview shows the outline before and after, Apply writes
 //! it as one undo step. Opened only by the command, never on its own and never on project open.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Import sources: provenance panel (file, version, date, kinds), parameters of the selected
 //! element with a "changed here" mark and the diff against the last import, re-import of an
 //! updated file (3-way merge), conflict dialog, export of local changes

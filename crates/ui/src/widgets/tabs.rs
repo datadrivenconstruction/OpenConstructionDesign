@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Tab bar with an underline indicator, like the ribbon tabs. Left/Right move between tabs.
 use super::text::paint_in;
 use crate::theme::{control, space, stroke, Role};

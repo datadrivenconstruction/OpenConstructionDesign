@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Hint card: the keys of the current step and the values they use. The host builds
 //! the rows from one table; this widget knows nothing about the editor. Colours come from the
 //! egui style the tokens already set, so the card follows light/dark and density.

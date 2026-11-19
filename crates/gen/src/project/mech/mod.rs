@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Mechanical design over the ventilation: room heating and cooling loads, the system the
 //! rules choose, the units as parametric objects with ports, the duct network with its
 //! fittings and the pressure of every path, the fans on the critical path, the water side to

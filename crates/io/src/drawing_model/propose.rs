@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Underlay proposals: walls (ddc-geom recognition + noise filters), openings (wall gaps),
 //! rooms (labels inside closed regions). Everything is deterministic, with no writes to the model.
 

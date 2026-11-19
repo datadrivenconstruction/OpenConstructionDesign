@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Finishes schedule: per room the floor, wall and ceiling finish and the areas they cover.
 //! A finish comes from the room's own parameters (`FinishFloor`, `FinishWalls`,
 //! `FinishCeiling`) when the project has them, else from a norm-pack assembly with

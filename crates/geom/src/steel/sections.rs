@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Section table (`data/steel/sections.csv`): standard rolled and hollow shapes by designation,
 //! plus parametric built-up plate girders. Lengths in metres.
 

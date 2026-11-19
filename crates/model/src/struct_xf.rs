@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Plan transforms of footings, rafts, braces, trusses and beam systems, the helper behind the
 //! matching `Target`s. Elements that follow a host (column, wall, member) refuse to move alone:
 //! regeneration would put them back.

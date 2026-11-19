@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! OpenConstruction brand: window icon, product mark and the family block. Marks come from the
 //! logo kit in `data/brand` and are rasterized from the SVGs.
 

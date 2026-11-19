@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The published schema is derived from the types and pinned on disk; drift fails here.
 //! Refresh after an intended change: `DDC_BLESS_SCHEMA=1 cargo test -p ddc-ops --test schema`.
 

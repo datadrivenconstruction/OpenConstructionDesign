@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Menus are built from kit rows (`menu_item`, `menu_item_icon`, `menu_sub`, `menu_divider`), not
 //! from raw egui. Per file this counts raw entry points (`.menu_button(`, `egui::menu::`) and, inside
 //! the closure of a `.menu_button(` or `.context_menu(`, raw rows (`.button(`, `.separator()`,

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Underlay: lines, arcs, texts, fills and block inserts in metres with a layer name and pen
 //! (colour, weight, dashes), from a DXF or a PDF page.
 

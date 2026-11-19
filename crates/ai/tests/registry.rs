@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The command registry: a stable schema, en/ru text for every command, coded errors only.
 //! After an intended change, first raise the version of every command whose input or result
 //! contract changed (descriptions are text, not contract), then refresh the snapshot:

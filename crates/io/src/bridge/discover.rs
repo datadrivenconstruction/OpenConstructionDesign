@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Installed bridges and the trust root. A bridge is a signed package (docs/plugins/BRIDGE_PROTOCOL.md §1):
 //! `<bridges dir>/<name>/bridge.json` lists every file with its SHA-256, `bridge.json.minisig` signs it.
 //! Keys come only from [`OFFICIAL_KEYS`] compiled in and from the developer list the user confirmed

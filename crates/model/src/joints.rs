@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Assembly joints between component instances (table `asm_joint`, schema step 53).
 //!
 //! A joint ties a frame on instance `a` to a frame on instance `b` (or on the ground). Frames

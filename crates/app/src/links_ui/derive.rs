@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Link-derived data in host coordinates: plan lines (a section at the cut height), snaps.
 //! Pure functions: the input is link elements (link world) and its placement. 3D is `source`.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Model export to .xlsx: frozen header, autofilter, non-editable columns shown grey.
 
 use std::collections::HashMap;

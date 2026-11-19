@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A `tools::Kind` tool (column … zone) as a session that owns its `Active` state:
 //! armed by `tools::arm`, it ends when its step leaves the tool or the mode changes.
 use crate::editor::Editor;

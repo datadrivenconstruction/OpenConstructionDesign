@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Plan outlines from a project database: the thumbnail of every card (walls, slab outlines and
 //! the world boxes of imported meshes, so a mesh-only model has a picture too) and the early
 //! view of a build in progress, read on a helper thread through a second read-only connection

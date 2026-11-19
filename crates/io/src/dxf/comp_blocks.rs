@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Components as drawing blocks: one block per family type (one more per instance-value variant
 //! that changes the plan symbol) with the type's plan lines in component coordinates and hidden
 //! attribute definitions (element id, family, type, category, IFC class, every parameter,

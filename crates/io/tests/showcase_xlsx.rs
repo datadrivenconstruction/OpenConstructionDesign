@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! XLSX round trips over every showcase project (ddc-model tests/showcase): an untouched book,
 //! metric and imperial, imports with no change at all; one number edited per sheet kind is
 //! exactly one change, applies, survives a re-export and undoes to the state before it.

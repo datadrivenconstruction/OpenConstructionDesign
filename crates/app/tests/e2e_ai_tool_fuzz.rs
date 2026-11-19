@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Every assistant tool, over the agent wire and in the chat, with hostile arguments: wrong
 //! types, missing and extra fields, huge strings, extreme numbers, unknown ids, deep nesting.
 //! Seeded, no network. Whatever is sent, the live model stays as it was until the person's Apply,

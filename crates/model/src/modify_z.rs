@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Copies that also rise: a typical floor copied up by whole storeys is one operation and one
 //! undo step. Solids, masses and terrains lift as a whole; level-hosted elements move to the
 //! level at the new elevation when there is one, else keep their level and gain the offset.

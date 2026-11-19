@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A rerun with new params as edits of the recipe's own elements, matched by part key:
 //! unchanged parts stay, changed extrusions are reshaped in place (same id), other changed
 //! forms are replaced, new keys are created and vanished keys deleted. Nothing outside the

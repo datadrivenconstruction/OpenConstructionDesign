@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The architecture group as one session: door/window/opening placing (`opening_mode`) and wall / curtain wall
 //! drawing own the input under `Scope::Drafting`/`Placing` from the arm to the commit or Esc
 //! that leaves the tool. The wall session (`Arch::Wall`) carries its drawing kind; the editor

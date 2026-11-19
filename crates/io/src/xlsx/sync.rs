@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Live link to a workbook: a file stamp (modification time + size) and polling no more often than `POLL`.
 //! When the workbook changes, the window rebuilds the preview without the wizard.
 

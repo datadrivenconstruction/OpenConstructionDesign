@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Boundary edges linked to walls: an outline edge of a slab, roof, ceiling or shaft picked
 //! from a wall face or axis keeps a link and is re-derived whenever its wall moves.
 //! Table (created by name, no schema step): `boundary_link(host_kind, host, edge, wall, face,

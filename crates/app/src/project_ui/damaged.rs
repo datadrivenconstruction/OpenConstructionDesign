@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A project file that cannot be read is no dead end: the copies kept for it are offered with
 //! their dates, the newest usable one first. The damaged file is only read, never written.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Right-click context menu: commands for the category of the current (or empty) selection,
 //! the last command repeated first. A right-click never changes the selection: the items under
 //! the cursor are listed on top, and choosing one selects it with the menu kept open.

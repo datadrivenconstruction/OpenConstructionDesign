@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Fillet / corner of two picked drawing lines. Radius 0 trims or extends both lines to their
 //! intersection; a positive radius also adds a tangent arc on the first line's layer. The sides
 //! the user clicked are kept. The whole operation is one undo step ([`Step::geometry`]).

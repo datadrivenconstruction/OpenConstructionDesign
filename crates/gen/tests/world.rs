@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Every country pack builds the small house and the apartment block of the bench with its own
 //! numbers: the pack's norms reach the rule set, and the built project has no hard failure.
 

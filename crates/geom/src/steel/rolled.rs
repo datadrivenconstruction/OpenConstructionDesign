@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Rolled steel sections from dimension tables: IPE, HEA, HEB, HEM, UPN (EN 10365), UB, UC
 //! (BS 4-1), the parallel-flange I-beams of GOST 57837 and W shapes (ASTM A6). The files in
 //! `data/steel/` hold nominal dimensions only; every property is computed here from them,

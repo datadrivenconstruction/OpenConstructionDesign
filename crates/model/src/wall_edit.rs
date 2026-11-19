@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Editing walls and curtain walls (additive, no format version change): tables are created on
 //! first access if absent (`ensure`); old files read as "no edits".
 //! `wall_join` is the joint type/ban at a wall end · `stack_type`/`stack_part` are stacked walls

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `elements.parquet` of a revision package (contract `ddc-elements/1`, card E2).
 //!
 //! `rows` reads one row per element out of the model (quantities from the same `*_qty` tables

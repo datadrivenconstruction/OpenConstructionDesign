@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Tags of a drawing set's plan clear of every other text and mark on the sheet: dimension
 //! figures, room areas and numbers, axis bubbles, level marks, section heads and view titles,
 //! each with its real paper frame. The model places tags at 1:100 among walls only; here the

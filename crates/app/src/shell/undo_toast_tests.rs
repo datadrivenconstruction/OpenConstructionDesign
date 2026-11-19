@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Toasts offer Undo or Redo only for the exact history entry they report (audit item 9).
 use super::EditorApp;
 use crate::editor::{Editor, Sel};

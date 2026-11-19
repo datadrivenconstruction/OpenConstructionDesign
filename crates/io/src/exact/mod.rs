@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Exact boundary representation for exchange (docs/IO4.md): analytic and NURBS faces bounded
 //! by loops of exact edges, and an assembly of placed parts. Metres; placements right-handed.
 

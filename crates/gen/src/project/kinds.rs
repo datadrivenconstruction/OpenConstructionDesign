@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Room words beyond the built-in kinds (foyer, gallery, atrium, ...), read from
 //! `data/room_kinds.json`: each builds as a base kind and brings its name and its rules.
 

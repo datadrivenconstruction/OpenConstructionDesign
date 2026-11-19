@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 use super::facts::{from_extracted, norms_in, rooms_of_table, FactKind};
 use super::*;
 use crate::ru_fixtures::ru;

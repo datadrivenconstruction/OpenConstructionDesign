@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! lattice_tower_300 at full detail drawn as instanced prototypes:
 //! `cargo run --release -p ddc-render --example lattice_bench -- [levels] [frames]`.
 //! Prints generation time, mesh preparation time, counts and the frame times.

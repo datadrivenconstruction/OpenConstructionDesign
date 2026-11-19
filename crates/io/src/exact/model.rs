@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A model as an exact exchange document: typed solids from their forms, freeform patches as
 //! NURBS faces (a shell as two offset faces and ruled sides), every other element from its
 //! display mesh as a polyhedron; one assembly node per level.

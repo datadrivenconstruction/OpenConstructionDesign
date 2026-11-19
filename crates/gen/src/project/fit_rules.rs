@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Fit-out rules: library items with their plan bodies and free space, sets of items, kitchen
 //! runs and the rule sets of the rooms. They are data (`data/furnish_rules.json`); a brief may
 //! patch them with a `furnish` object.

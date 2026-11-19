@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Screenshot mode helpers: native OS dialogs are never opened (a picker returns `None` and the
 //! in-app window is shown instead), and `--press <command-id>` runs a command before capture
 //! within a frame budget, so an offscreen capture can never hang.

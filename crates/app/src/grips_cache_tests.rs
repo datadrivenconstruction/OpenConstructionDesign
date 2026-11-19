@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Grip cache: a hit while nothing changed, a miss after every change that can move grips, and
 //! the cached list always equal to the uncached one.
 

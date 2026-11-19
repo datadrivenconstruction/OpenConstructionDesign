@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Crash-safe small settings files: atomic write with a `.bak` of the previous good
 //! file, and a load that falls back to the backup and keeps unreadable files aside.
 use std::io::Write;

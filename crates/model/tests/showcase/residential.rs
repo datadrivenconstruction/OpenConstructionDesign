@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Residential: a 12 x 9 m house on two levels with Cyrillic names and values throughout and
 //! names at the length limits; a curtain wall in the south facade; library families with an
 //! added type, instance values and wall, floor and free hosting; phases (existing walls, one

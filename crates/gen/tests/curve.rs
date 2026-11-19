@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Curved facades: a plain bar's long facades bow out as one arc wall each.
 
 use ddc_gen::project::{brief, build_project, check_project, merge_patch, parse_spec, GProject, ProjectSpec};

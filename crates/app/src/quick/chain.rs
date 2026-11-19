@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Selection of connected walls: the whole connected network (ends and T-junctions) and the chain up to a fork.
 //! Pure functions over axes (segments and arcs); `segs` collects them from the editor, [`Index`] is a
 //! grid of bounding boxes: traversal is ~O(N log N) instead of checking all pairs.

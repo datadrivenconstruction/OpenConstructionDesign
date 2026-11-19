@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Linear static 3D frame finite elements: pure, no dependency on the model, app or ui crates.
 //!
 //! Conventions (one item each):

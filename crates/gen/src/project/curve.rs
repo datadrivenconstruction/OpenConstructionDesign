@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Curved long facades: the south or north facade of a bar follows a circular arc through
 //! its corners as one arc wall (split only where the wall role changes). Walls into the facade
 //! run out to the arc, openings keep their place by arc length, rooms and the slab on it take

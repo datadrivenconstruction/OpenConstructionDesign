@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Keeps the project lock alive: a heartbeat every [`HEARTBEAT`] on its own thread (contract §8).
 //! A lost lock is reported, never re-taken behind the user's back.
 

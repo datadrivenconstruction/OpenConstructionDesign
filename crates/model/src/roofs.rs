@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Roofs (schema 13): from an outline with a slope per edge (hip, gable, shed, mansard) or by
 //! extruding a profile; layers are a slab type (thickness along the slope normal).
 //! `roof_qty` is derived: the true area and volume of each layer (area × thickness).

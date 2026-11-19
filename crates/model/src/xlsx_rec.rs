@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Records of the book rows an XLSX Apply created (`prop`, kind [`KIND`], ref 0; the app's
 //! `xlsx_links` writes them inside the Apply step). Key `book|sheet|fingerprint|row` (older:
 //! `book|sheet|row`), value the element id (older: `id@seq:hash`). An operation that deletes

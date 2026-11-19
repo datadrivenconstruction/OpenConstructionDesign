@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Ceiling (CG): auto — click inside a closed wall loop; otherwise sketch the outline.
 
 use super::{ensure_slab_type, tup, Active, Rec};

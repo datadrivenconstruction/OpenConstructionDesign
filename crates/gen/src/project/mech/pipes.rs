@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Chilled and heating water from the roof plant to every coil: a header per medium on the
 //! roof, a riser per facade bundle at the west end through sleeves in the slabs, a lane per
 //! storey along the facade in the ceiling void (radiators: at the floor along the wall), and

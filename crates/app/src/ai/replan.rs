@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Partial replan. Items a live edit conflicts with leave the plan with their conflict and their
 //! intent; the agent drafts them again and the new items take the same places. The other items
 //! stay as compiled: nothing they read changed, so nothing about them is recompiled.

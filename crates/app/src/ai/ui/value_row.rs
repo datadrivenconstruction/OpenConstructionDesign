@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Values of a drafted item, editable on the card: a wrong word or number is corrected without
 //! asking the model again. Text is read like the properties panel reads it. A valid value goes
 //! to the session as a draft edit (the card comes back recompiled, Apply waits for it); refused

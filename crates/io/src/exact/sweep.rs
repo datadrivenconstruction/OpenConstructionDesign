@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Exact bodies of the swept forms: sweep and swept blend along a path of lines and arcs, blend
 //! between two profiles. Straight path pieces give ruled faces (planes where flat), planar arcs
 //! surfaces of revolution, helical arcs and blends along arcs B-spline faces fitted to the exact

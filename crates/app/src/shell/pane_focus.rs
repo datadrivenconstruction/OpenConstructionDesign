@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! F6 / Shift+F6: keyboard focus cycles over the visible panes (browser, canvas, properties,
 //! chat). Each pane draws one focusable landmark; the request lands on it and the shared focus
 //! ring (`widgets::focus_ring`) shows where the focus is.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Comparison of two file versions: per-table counters (restore dialog), a list of changed
 //! elements with their plan location (compare dialog), a content hash.
 

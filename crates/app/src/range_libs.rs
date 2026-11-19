@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Editor of the line pattern and hatch libraries of the project. The built-in entries are read
 //! only (copy one to start from it); a user entry may share a built-in name and then replaces it.
 //! Save and Delete are one model operation each, so one undo step.

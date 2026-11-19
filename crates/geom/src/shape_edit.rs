@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Slab shape editing: dz offsets of contour vertices, added points and split
 //! lines (dz at the ends, linear along). The top is a piecewise-linear surface on a
 //! conforming Delaunay triangulation: contour edges and split lines are forced to be edges

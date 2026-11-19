@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A renamed or moved linked book stays linked; another project's book is never offered or
 //! linked; nothing is linked without the user's pick.
 use super::*;

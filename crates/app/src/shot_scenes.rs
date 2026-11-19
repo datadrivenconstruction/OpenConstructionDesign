@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Acceptance screenshot scenes (`--scene all3d|topo|struct|roof_edges|solids|ifc`): one scene per line.
 
 use ddc_geom::footing::Step;

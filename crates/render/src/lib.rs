@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! ddc-render: wgpu viewport renderer (scene, chunks with culling and instancing, camera, picking,
 //! offscreen). No UI dependencies.
 

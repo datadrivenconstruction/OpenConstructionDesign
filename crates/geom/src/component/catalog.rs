@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Type catalog: a "type × type parameters" table, CSV exchange. Header: `Type`, then
 //! `Name (unit)` such as `Width (mm)`, `Angle (deg)`, `Area (m2)`; a length without a unit uses the
 //! project unit (with a warning), anything else without a unit is SI or text. Delimiter `,`, `;` or

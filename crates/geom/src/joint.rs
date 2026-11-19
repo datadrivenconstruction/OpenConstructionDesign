@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Joints between rigid parts of an assembly: rigid, revolute, slider, cylindrical, ball, with
 //! limits on the rotation and the slide. A joint ties frame `fa` on part `a` to frame `fb` on
 //! part `b` (or on the ground, then `fb` is in world coordinates); frames are in part

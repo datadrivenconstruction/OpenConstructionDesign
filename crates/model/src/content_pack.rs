@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Bundled content pack (`data/content`): families converted from public-domain models and
 //! material swatches, each listed with its licence in `LICENCES.json`.
 

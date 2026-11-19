@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Frame counters over the 3D view (command `view.perf_stats`): the renderer publishes them in
 //! `ddc_render::perf`; the overlay only displays them.
 

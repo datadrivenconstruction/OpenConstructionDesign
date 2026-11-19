@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! View commands of the shell:
 //! - `view.tabs`: the view tab strip stays on top even with only the plan and 3D open;
 //! - `view.tile`: plan beside 3D (or beside the open section) in any layout;

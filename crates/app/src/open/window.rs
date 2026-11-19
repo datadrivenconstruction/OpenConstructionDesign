@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! "Switch to that window": a project locked by another process of this application is shown
 //! by bringing that process's window forward, instead of only saying it is open elsewhere.
 use std::path::Path;

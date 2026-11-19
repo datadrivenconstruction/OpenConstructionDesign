@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Component library sources: the built-in families, the project's families (loaded from the
 //! library, edited, program-defined, imported) and the user's folder of family files
 //! (`*.ddcf`, families split by a `---` line). Each entry carries its definition text (what

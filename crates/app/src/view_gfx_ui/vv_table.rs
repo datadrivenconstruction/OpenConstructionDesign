@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Frame of the visibility and graphics tables: a header that stays above the scrolling rows,
 //! with its columns on the same left edges as the rows, and the note of a template-locked tab.
 //!

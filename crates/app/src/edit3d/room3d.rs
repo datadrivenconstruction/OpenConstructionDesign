@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Drawn 3D bodies of rooms and room separators. A room is a thin translucent pad over its
 //! boundary with a post at its room point whose height is a fraction of the room height; the
 //! full volume stays a pick-only body (`scene3d::rooms`). A separator is a low bar on its line.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Shared by the electrical and the water services: the cited norm table, the connectors and
 //! footprints of the families they work with, room frames, and the check of a finished
 //! design against the rules the model applies when the runs are written (fittings fit, every

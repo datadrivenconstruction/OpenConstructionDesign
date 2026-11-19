@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 use super::ddcf::{self, check, fmt, upgrade, Meta, Version};
 use super::Family;
 use proptest::prelude::*;

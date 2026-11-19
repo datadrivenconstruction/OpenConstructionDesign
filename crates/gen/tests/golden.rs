@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Fifteen projects pinned by a hash of everything the builder made, so moving the rules from
 //! code into the rule set changes no project. Re-pin with `DDC_GOLDEN_UPDATE=1` only when a
 //! change of result is intended.

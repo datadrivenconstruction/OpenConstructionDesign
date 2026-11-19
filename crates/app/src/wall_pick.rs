@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Walls by picking drawing lines: a click near a visible drawing line of the level makes a
 //! wall on it. Location: axis on the line, or face on the line toward the cursor (`F`).
 //! `Tab` before the click takes the connected chain (ends within [`JOIN`]). One pick is one

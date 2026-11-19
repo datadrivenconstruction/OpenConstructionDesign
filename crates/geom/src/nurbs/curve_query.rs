@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Point queries on a [`Curve`] for snapping (geometry plan W10): nearest point, feet of the
 //! perpendiculars from a point, tangent points from a point (planar curves), arc length and
 //! the parameter at a fraction of it. Roots are bracketed on a dense sample of every knot

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `ddc-ai-eval run [--tier hard|edit|smoke] [--case ID,ID] [--provider replay|live|judge]
 //! [--judge-root DIR] [--scores FILE] [--budget-usd N] [--record DIR] [--profile FILE] [--jobs N] [--out DIR] [--ledger FILE]
 //! [--replay-root DIR] [--recorded-only] [--gate]`

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The free-form envelope of a project (`design.shell`) as geometry ops: a freeform surface per
 //! patch, glazed in panels on the skin and layered as a roof shell on the roof, steel ribs along
 //! the patch edges, and a diagrid dome over the central opening. Rows land in the project's

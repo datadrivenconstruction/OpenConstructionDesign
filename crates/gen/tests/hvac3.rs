@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Hospital air by care class, and the service fixtures of storeys and basements in the slot
 //! blocks `storey_block` gives them.
 

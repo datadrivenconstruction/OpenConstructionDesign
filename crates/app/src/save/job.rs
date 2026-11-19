@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The save pipeline of contract section 6.4, free of UI so each failure can be tested. The target
 //! is only ever touched by one atomic rename, after the new file is complete, synced and checked:
 //! a crash, a full disk or an error anywhere before that rename leaves the old file as it was.

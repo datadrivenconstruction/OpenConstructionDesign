@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Phases: an ordered list `phase` (seq); on an element, the creation and demolition phases
 //! (`elem_phase`; no row means created in the first phase, not demolished); on a view, the phase
 //! and filter (`view_phase`). A new element gets the current phase (`meta.phase_current`) in the

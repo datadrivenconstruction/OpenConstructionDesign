@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Rows of one sheet that repeat an element id: a row copied in the spreadsheet. Copying a row
 //! to make a similar element is the usual habit, so the import never lets the first row win:
 //! rows still holding the exported values are ignored, exactly one edited row is the edit

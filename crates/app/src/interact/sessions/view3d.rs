@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The 3D view's tools under the common scope: box select, measure, 3D creation,
 //! work-plane picks, 3D mirror/array, 3D grip and gizmo drags. Bridge (until 86–89): the 3D
 //! view keeps its tool and drag, computes the scope they mean each frame and hands it here

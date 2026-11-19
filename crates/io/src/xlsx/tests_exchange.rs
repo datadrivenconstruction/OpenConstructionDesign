@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Exchange safety, XLSX: one edited cell per column type changes the model exactly there and
 //! nowhere else; every kind of bad workbook gives its documented result; one undo restores the
 //! whole model. The model is compared table by table (every row, every column), not by a few

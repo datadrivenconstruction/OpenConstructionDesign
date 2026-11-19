@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Components in DXF: one block per type (plus one per plan-changing variant) with hidden
 //! attribute definitions, one INSERT per instance on its category layer with filled attributes.
 //! Written, read back and expanded, the inserts land on the model's own plan symbols.

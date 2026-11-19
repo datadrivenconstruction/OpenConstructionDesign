@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Exact NURBS shapes behind scene bodies, for curve and surface snaps and the tangent work
 //! plane. Providers (freeform elements and others) register here; the 3D view collects the
 //! shapes when its bodies are rebuilt. Coordinates are the scene's (z from the active level).

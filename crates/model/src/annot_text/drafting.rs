@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Drafting views: named 2D canvases with their own scale that hold annotation only (detail
 //! lines, regions, clouds, text, spots, detail components). Model elements are never drawn there.
 //! Create, rename, rescale, duplicate and delete are one journal operation each.

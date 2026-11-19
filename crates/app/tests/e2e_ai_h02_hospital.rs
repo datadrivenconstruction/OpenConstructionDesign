@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! H02, the four-floor hospital wing with full ventilation, through the chat: `generate_project`
 //! with the hospital typology and `route_mep` for supply, return and exhaust air, Apply once, then every oracle of the case on the applied model.
 

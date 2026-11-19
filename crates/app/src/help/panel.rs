@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Help window (F1): topic search on the left, the topic on the right (what it is, steps, keys, tips);
 //! topic commands are buttons that run the command; links to other topics.
 use crate::ui_kit as kit;

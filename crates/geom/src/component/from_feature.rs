@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A component definition from a feature timeline: the timeline's parameters become the
 //! family's parameters (plain values as instance parameters, formulas as formulas), the
 //! timeline is the family's body. Instances with other values build other bodies.

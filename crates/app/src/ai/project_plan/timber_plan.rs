@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The glulam post-and-beam frame of a timber project in the model: one beam between each
 //! pair of neighbouring columns, its type found or made by section name. Kept as it is while
 //! nothing it depends on changed, like the data centre; an edited beam is left alone.

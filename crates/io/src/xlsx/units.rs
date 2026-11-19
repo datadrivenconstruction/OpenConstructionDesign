@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Units from the header: `[mm]`, `[m]`, `[ft]`, `[in]`, `[m2]`, `[ft2]`, `[m3]`, `[ft3]`...
 //! A length cell may hold `3500 mm`, `3.5 m`, `10'-6"`, `10' 6 1/2"`, `6"`, `12 ft`.
 //! Text numbers: see [`number`]; a value that may mean two numbers is never guessed.

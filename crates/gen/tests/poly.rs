@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Buildings on any footprint: every shape passes the gates, rooms tile each plate without
 //! overlap, every room is reached through doors, and a change on one floor keeps the others.
 

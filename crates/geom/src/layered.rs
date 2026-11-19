@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Layered strips (walls) and their 2D joins (KERNEL.md §5, stage K1).
 //!
 //! Joins are solved in plan: at each node the wall ends are trimmed along the line between

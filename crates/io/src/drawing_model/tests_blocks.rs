@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Blocks that must not be lost or restyled on DXF export: a moved INSERT with a tilted
 //! extrusion, and the layers that block definitions use.
 

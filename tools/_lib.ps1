@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: AGPL-3.0-only
+# SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 # Shared helpers for fuzz/corpus/bench scripts (dot-source). Windows PowerShell 5.1 and pwsh.
 $script:Root = Split-Path -Parent $PSScriptRoot
 $script:Cargo = Join-Path $env:USERPROFILE ".cargo\bin\cargo.exe"

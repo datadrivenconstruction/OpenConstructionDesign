@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Rules that compare two values of one element (`Compare`) and rules whose bounds depend on
 //! other values of the element (`Cases`): the corridor width by the people it serves, a room
 //! height by the room's purpose. A missing input is a note, never a verdict.

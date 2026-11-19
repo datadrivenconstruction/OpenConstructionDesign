@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Geometry rows of the foundation and framing families: footings, strip footings, rafts,
 //! braces, trusses, beam systems and ramps. They join `geom_props::rows()`, so the panel, the
 //! every-row test and the XLSX sheets read them like any other row.

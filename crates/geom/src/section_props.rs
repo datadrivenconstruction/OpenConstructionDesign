@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Cross-section properties of members for structural analysis.
 //!
 //! Section plane (y, z) as in `member::Shape`: y across (left of the member direction), z up,

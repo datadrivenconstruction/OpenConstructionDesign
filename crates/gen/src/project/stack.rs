@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Vertical skeleton: what runs through the storeys is decided once for the whole building,
 //! before any storey is laid out. The core, the lift shaft and the column grid come from the
 //! one frame every storey of a bar shares (`build.rs`); the wet stack comes from here. Wet

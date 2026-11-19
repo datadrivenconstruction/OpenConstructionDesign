@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `create_drawing_set`: one plan item that tags the model and lays out the whole drawing set.
 //! It compiles on the scratch copy at once, so the reply lists the sheets as they will be.
 use super::fmt::{self, Out};

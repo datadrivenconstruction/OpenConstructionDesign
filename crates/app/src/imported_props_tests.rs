@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Imported property editing: one undo step per edit (one or many elements), `<varies>` rows,
 //! every row listed, new properties reach the IFC patch, bad numbers write nothing.
 

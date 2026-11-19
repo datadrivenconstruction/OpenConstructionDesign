@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Frame templates: the `lattice_tower_300` benchmark (four curved lattice legs merging into
 //! one shaft, three platforms, base arches), a guyed triangular mast, a portal frame shed and a
 //! multi-storey braced frame.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! H07 through the tool path: the data centre brief goes to generate_project, Apply writes it in
 //! one undo step, and every oracle of the H07 case holds on the applied model.
 

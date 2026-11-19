@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Columns and beams: section types, instances, joints and deductions (schema 13).
 //! Beam joints (in regeneration, not in the journal): an end at a column is cut at the column face; a shared
 //! end of two beams is a mitre (or butt: one runs to the side face of the other, the other is extended);

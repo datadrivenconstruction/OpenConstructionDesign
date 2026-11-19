@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! AI assistant core: providers, wire protocols, conversation loop, tool catalog, key storage.
 //! No UI, no model access: tool execution lives behind `convo::ToolHost`.
 

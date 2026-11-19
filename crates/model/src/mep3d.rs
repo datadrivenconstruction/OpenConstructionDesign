@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Network bodies by part for 3D: run and fittings by outer wall, insulation and lining as
 //! separate shells (the view draws them semi-transparent); section/elevation primitives.
 //! The network is computed per system so the view rebuilds only the systems an edit touched.

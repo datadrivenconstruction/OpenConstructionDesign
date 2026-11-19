@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! One door for opening: Ctrl+O, `file.import` (Ctrl+I), drop, command line, double click,
 //! recent and folders all call [`request`]. The rules are the pure [`decide::decide`]; this
 //! module runs the plan one step at a time on the existing paths (`project_ui` for projects,

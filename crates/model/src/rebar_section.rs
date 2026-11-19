@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Rebar in section views: a bar crossing the section plane is a filled circle, and the bars of
 //! those sets that run through the view band are lines. Elevations show no rebar: it sits inside
 //! the concrete.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! XLSX delta of local changes against an imported source: one row per changed field (edits),
 //! one row per deleted or added element. Rows carry the source unique id and the IFC GlobalId
 //! so pro BIM tools can apply the changes to the source project; references to levels, types

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Textures of materials in the realistic 3D style. Reads the texture slots from the model,
 //! hands the images to the renderer (`ddc_render::texture::publish`) and tells the scene builders
 //! which texture layer a face takes. The renderer reads the layer from the face tag; styles other

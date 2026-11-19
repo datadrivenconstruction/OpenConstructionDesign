@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! What a save did: `SaveReport` (kept in `src_target.last_report`), the one-line result strip and
 //! the report window. A dedicated panel can take over the window; the data stays.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Recorded model answers: `<root>/<case id>/steps.json`, one file per case.
 
 use ddc_ai::fake::Recording;

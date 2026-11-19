@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! One rule for a curtain panel: it never deletes or moves its wall. Delete, Move, Rotate, Mirror
 //! and Array refuse on a panel and offer "Select wall" instead.
 

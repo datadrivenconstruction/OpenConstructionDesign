@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! AI design options stored as recipes (`ai_option`), never as model copies. A recipe is
 //! `(base_head, envelope, seed, params)`: replaying it on the same base gives the same rows, so
 //! scratch copies are a cache. The table is outside undo like `ai_audit`: writing a recipe never

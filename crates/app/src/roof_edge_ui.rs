@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Roof-edge windows: command parameters (before create/arm, kept per session),
 //! properties of an existing profile/lantern/soffit/wedge, the level's element list and the
 //! profile section editor. Values are in display units (`units`); the model stores metres.

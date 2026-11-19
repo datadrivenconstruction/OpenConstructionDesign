@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Structural core layer of layered types: where the data has no explicit flag, it is the thickest
 //! layer that is not insulation (material conductivity below the project threshold
 //! `insulation_lambda`, default 0.1). A roof ends with a finish at the bottom: the underside of

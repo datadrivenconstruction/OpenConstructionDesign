@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Spline walls: one IfcWall per `wall_spline` row, not one per arc piece of its chain. The axis
 //! is the exact curve (IfcBSplineCurveWithKnots, rational when weighted), the body one
 //! extrusion per layer from the true offsets of the axis, the quantities the model's exact

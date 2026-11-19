@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Sloped slab top: the plane `z = z(p0) + gx·(x − x0) + gy·(y − y0)`.
 //! Thickness is measured vertically, so volume = plan area × thickness (a shear preserves volume).
 

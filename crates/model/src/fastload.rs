@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Bulk load of a big import: one transaction (the usual batch, one undo step), cached
 //! prepared statements, and for its duration `synchronous=OFF`, a large page cache, temp in
 //! memory and no WAL auto-checkpoint; every pragma is restored afterwards, also on error.

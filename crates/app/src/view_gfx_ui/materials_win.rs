@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Materials browser: searchable list, material card, replace a material across the whole model.
 //! Edits accumulate in a draft and are applied with one button (one undo step).
 

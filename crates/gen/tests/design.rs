@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Spec v2 design intent: every massing builds valid, non-overlapping geometry that passes the
 //! gates, a v1 brief still reads and builds as before, the example briefs build, and the
 //! self-critique loop runs offline.

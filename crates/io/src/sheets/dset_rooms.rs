@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Room numbers on a typical floor plan. One plan stands for several floors, and a room's
 //! number may change from floor to floor (201, 301, ...). Numbers made of a per-floor prefix
 //! and a part every floor shares show only that part (".01") with a note on the sheet that

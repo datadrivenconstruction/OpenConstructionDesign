@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Door swings from the skeleton pixels no straight segment took: each 8-connected group is
 //! fitted with a circle; a group on a circle of door radius over roughly a quarter turn is a
 //! swing. A straight segment from the centre to an arc end is its leaf and is snapped onto it,

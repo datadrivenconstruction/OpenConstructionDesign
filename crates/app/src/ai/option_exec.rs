@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The user's Apply of an AI design option: the recipe's envelope goes through the model
 //! executor inside `Editor::run_op`, so the option and its accepted mark are one undo step
 //! (undo returns the option to draft). The run itself is `ops_exec::apply_option`; this maps

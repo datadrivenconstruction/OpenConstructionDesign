@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Roofs and slabs on freeform surfaces -> IfcRoof (.FREEFORM.) / IfcSlab (.FLOOR.). An
 //! untrimmed open patch without openings is written as an exact IfcAdvancedBrep of the
 //! whole stack; every element also gets one closed triangulated set per layer ('Body' or

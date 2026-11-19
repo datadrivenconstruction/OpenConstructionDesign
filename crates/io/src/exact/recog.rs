@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! An imported body as our own solid types where it maps: a prism -> extrusion, a coaxial body
 //! of revolution -> revolve, a planar polyhedron -> mesh, NURBS sheets -> NURBS surfaces.
 

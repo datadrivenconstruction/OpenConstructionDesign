@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Match type (MA): pick a source wall, slab, column or beam, then every click on a target of the
 //! same category gives it the source type and nothing else. A window drag applies to every hit in
 //! one step (the plan feeds `selection::in_box` hits to `apply`). Pinned and curtain targets and other categories are refused with a reason.

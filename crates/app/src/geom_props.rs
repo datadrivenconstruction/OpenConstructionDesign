@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Geometric properties of elements: one registry row per editable value. A row writes one
 //! model op through `Editor::run_op`, so plan, 3D and undo follow the normal path. Tests fail
 //! when a spec field is neither a row nor listed in `ELSEWHERE`.

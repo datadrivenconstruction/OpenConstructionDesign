@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Explainable refusals: tool errors become `ddc_model::refusal::Refusal`
 //! with a stable code, an i18n message and fixes that name a command; one click on a fix runs
 //! that command with the fix arguments. The type is shared with the AI tool catalogue; this

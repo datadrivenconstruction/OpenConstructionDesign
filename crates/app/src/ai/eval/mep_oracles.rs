@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Network oracles: is what the model drew one connected system, or a heap of segments.
 //! Runs touch where an end lies within 0.15 m of another run of the same system; a component
 //! with a port (pump, unit, terminal) also joins the runs that end at it.

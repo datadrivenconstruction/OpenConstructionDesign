@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Internal dimensions of a plan's implicit chains: the openings of walls that do not stand on
 //! the building's extent (partitions, set-back walls) measured along the wall, and the clear
 //! size of every room along two chords. They carry `chain >= INNER_CHAIN`: the sheet draws them

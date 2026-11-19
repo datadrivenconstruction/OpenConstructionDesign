@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The context line of the AI panel as chips: view, level and the selection with its categories.
 //! Every chip can be left out of what the next turn tells the model. Hovering the selection chip
 //! lights those elements up in the views, a click frames them. Nothing here writes the model.

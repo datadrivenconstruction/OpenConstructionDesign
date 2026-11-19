@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Schedule <-> XLSX round trip. The export puts the element Id in a leading column; the import
 //! reads the sheet back, matches rows by that Id and columns by the header labels of the current
 //! table, and writes the changed cells through [`extra::write_cells`]: one op, one undo step.

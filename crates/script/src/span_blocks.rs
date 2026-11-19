@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Long-span blocks: bridges (girder, truss, tied arch, cable-stayed) with abutments, piers,
 //! bearings, ramps and railings; stadium roofs (cantilever trusses, back stays, rings, a
 //! seating bowl); hangar space frames (deep double-layer grid, runway beams, gate leaves).

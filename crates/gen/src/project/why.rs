@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Why the building came out as it did: each decision names the rule, its value, the layer it
 //! came from and the effect measured on the built project. The reply of generate/revise shows
 //! the first few, `explain(ref)` the whole list of one part. Rule changes proposed by the

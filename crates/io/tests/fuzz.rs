@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Mutation fuzz of the untrusted-input readers. Ignored: run through `tools/fuzz.ps1`
 //! (or `DDC_FUZZ_SECS=10 cargo test --release -p ddc-io --test fuzz -- --ignored --nocapture`).
 //! Seeds come from our own exporters; a failing input is saved to the temp dir.

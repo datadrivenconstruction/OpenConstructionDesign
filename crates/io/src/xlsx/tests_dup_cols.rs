@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A copied column never decides silently what applies: equal copies apply once, a row where they
 //! differ keeps the model value and is refused by name, a copy is never a new parameter and is
 //! named by the loss check of a re-export.

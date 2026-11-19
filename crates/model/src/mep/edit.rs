@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Run property edits: elevation, slope, pipe material, duct shape. Pure functions that return a
 //! new `RunSpec` for `update_mep_run`. Stored points already carry the slope, so every result has
 //! `slope = 0`: otherwise the write would apply the slope a second time.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Grips on the one picked drawing primitive: line ends, closed polyline vertices, arc ends and
 //! middle, circle quadrants, the text insert point. A drag snaps like the drawing tool and takes
 //! a typed length; nothing changes until the drop, which is one undo step. Ctrl-drag on a

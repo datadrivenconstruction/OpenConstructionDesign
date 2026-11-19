@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `generate_project` and `revise_project`: the assistant fills a building program, the
 //! builder makes the model. A revision is a merge patch on the stored spec, rebuilt in place.
 

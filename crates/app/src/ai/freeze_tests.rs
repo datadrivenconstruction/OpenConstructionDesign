@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 use super::*;
 use crate::ai::lower::{lower_op, lower_op_in};
 use crate::ai::plan::{PlanOp, Targets as PlanTargets};

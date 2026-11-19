@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! View annotations in the app: commands, placement (each one `run_op`), selection and grips, in-place
 //! text editing, the parameters panel, drawing on plan and section. Screen and sheet use the same
 //! model strokes (`Anno::strokes`), so label size depends only on the view scale.

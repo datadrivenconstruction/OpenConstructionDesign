@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Layer rows have no id of their own: the layer sheets key them by (type, position), so after a
 //! layer is inserted, removed or moved the old book's keys name other layers. This matches the
 //! old book's layer rows (its Baseline) to the current ones per type by content, so the user's

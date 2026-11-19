@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `file.deliver`: one window for the whole way from a brief to files. Review (a brief for the
 //! assistant, or the model as it is: the drawing set and the files), then the run with its
 //! progress and Cancel, then the result with Open and Show in folder. The window may be hidden

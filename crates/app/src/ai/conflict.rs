@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A change of the live model during a plan marks only the items it touches: an item is hit when
 //! a changed row is one it read or wrote, or lies in a table it read by predicate. Items built on
 //! a hit item follow it. The rest replays as it was; a replay whose result moved without a hit is

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Rows of the project browser context menus: kit `menu_item` with the key hint taken from the
 //! command registry, destructive rows in danger ink after a divider.
 use ddc_ui::widgets::{menu_item, menu_item_icon, MenuTone};

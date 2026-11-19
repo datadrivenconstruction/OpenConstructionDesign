@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The run job (design 1.4-1.6, 7.2): build the input, refuse blocking issues, solve, check
 //! equilibrium per case, store the run with its input hash and result blobs. The input blob is
 //! the canonical JSON of the solver input; its SHA-256 (with the solver identity) is the input

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! ddc-solver — geometric constraints on plan points.
 //! Method: damped Gauss–Newton with a minimum-norm step — for an underdetermined system
 //! as few points as possible move (an edit "touches nothing extra").

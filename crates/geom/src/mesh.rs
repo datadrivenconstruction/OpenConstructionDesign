@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Triangulation of planar solids: a watertight mesh on the shared vertices of the solid.
 //!
 //! A face is projected onto a plane along the dominant normal axis, holes are stitched to

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `query_spatial`: read-only spatial questions over element bounds of the scratch copy.
 //! Lengths are metres. Hits are ordered by distance, then id, then category, and cut to
 //! `limit`; the reply says how many more exist, so a model never pays for the whole model.

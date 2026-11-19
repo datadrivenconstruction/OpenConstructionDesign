@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Drawing set command: the dialog's options, Apply as one undo step, words in both languages.
 use super::dset::{build_drawing_set, marks_to_assign, plan_drawing_set, DsetDialog};
 use super::*;

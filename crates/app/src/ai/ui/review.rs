@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Reviewing a draft without the mouse: which key does what on the plan card, and how a verdict
 //! turns into check marks. Pure, so the key table is tested without a window. Nothing here writes
 //! the model: `Apply` is only a request that goes through the one Apply path.

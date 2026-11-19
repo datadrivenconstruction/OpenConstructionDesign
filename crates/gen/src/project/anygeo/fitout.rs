@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Fit-out of rooms of any outline. A room on a turned, skewed or radial grid is fitted in
 //! the grid's local frame: the storey is turned so the grid axis at the room is plan +x, the
 //! room gives its usable rectangle (`usable_rect` inside the faces of its walls, its sides

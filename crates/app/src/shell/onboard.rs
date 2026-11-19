@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! First-run setup: five short steps (focus, look, icons, menu and density, summary), each
 //! skippable, every choice live on the app behind and saved at once. The focus builds the
 //! workspace: panel layout of each work mode, ribbon tab order, the view a project opens in and

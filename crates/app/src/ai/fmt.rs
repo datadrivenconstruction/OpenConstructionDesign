@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Tool replies: compact ordered JSON, with every string from the model sanitized on the way out.
 //! The data boundary is here so that no handler can forget it.
 

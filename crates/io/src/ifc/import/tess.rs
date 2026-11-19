@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Tessellation of IFC geometry into triangle meshes (in the frame of the item): extrusions of any
 //! profile, revolutions, sweeps, faceted/advanced breps, face sets, surface models, mapped items,
 //! CSG primitives, half-space clipping. Curves keep arcs exact until sampled (7.5° steps).

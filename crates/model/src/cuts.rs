@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Host cut-outs and wall top/bottom from profiles and attachments.
 //! `host_opening` is a sketch-based opening in a slab, roof or ceiling (the outline lives in `sketch` as
 //! host `host_opening`; `opening` there is a wall opening). Shafts and openings are subtracted from the host

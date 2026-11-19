@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Axis chain of a plan's implicit dimensions: axis to axis along each side of the extent, set
 //! between the opening chain and the overall size, which moves out one tier. With three or more
 //! axes the first-to-last axis size stands outside the bays, the overall size outside that.

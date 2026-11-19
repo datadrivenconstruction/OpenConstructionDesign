@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Single validation pipeline for family definition text (including AI-written text): parsing,
 //! formulas, sketch via the solver, every catalog type, check mode (flex), kernel bodies, budgets.
 //! No code is executed: the text is data only. The report holds stable codes (`CODES`) and 1-based

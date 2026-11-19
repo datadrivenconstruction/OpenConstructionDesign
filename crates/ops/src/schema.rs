@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! JSON schema of the wire, derived from the Rust types (never written by hand).
 //!
 //! `document()` is pinned as `docs/schema/ops.v1.json`; a test fails when the types and the

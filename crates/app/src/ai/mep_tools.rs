@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Building services tools: fixtures and devices from the library, networks routed by intent
 //! (the AI names source, targets and system; the router builds), power from a panel with
 //! circuits, and the panel schedule. Ids are the draft's: what one item placed, the next routes.

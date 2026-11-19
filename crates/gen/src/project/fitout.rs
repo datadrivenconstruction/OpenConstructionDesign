@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Appliances of a dwelling. The fit-out rules place them (the kitchen run takes the cooker,
 //! dishwasher and fridge, the bath or kitchen the washing machine); here a dwelling whose
 //! rooms left the washing machine out gets one where a free spot against a plain wall

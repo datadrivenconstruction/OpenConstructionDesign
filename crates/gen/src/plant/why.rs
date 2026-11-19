@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Why the plant came out as it did: each decision names its `plant.*` rule and the numbers it
 //! gave. The UI renders `gen.why.e.<key>` with the same slots in its own language.
 

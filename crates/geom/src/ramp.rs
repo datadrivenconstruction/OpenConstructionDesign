@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Ramp: polyline axis, slope and rise. Layout follows the axis: inclined runs no longer than
 //! `max_run`, intermediate landings between them, and a corner landing at every axis bend.
 //! The rise is always reached: the last segment is extended and any excess axis length is dropped.

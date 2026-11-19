@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The requirements workbook: a template to fill in, reading it back with the sheet, row and
 //! column of every refused cell, and the check report as a workbook (summary plus one sheet per
 //! category). Words of the book (headers, categories, rule kinds, yes/no) come from the caller,

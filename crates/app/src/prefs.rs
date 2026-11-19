@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! User settings persisted between runs: properties width, area/volume precision.
 //! File `prefs.txt` in `data_dir()` holds `key=value` lines; malformed lines are skipped.
 use crate::units::{self, AREA_DECIMALS, VOLUME_DECIMALS};

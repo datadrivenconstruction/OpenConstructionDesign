@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Exact predicates: an f64 fast path with an error bound (Shewchuk),
 //! falling back to an exact sum of products of the original coordinates when uncertain.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Uniform cell grid over triangle bounding boxes: finds the triangle under a point and
 //! segment candidates in O(1) per cell.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! rm4: a room in every closed region of the level, one undo step, with a report.
 
 use super::room::{place_all, AutoReport};

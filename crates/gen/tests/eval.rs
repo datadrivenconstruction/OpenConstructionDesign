@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! AI build evaluation suite: twelve typical briefs, the spec a scripted model hands to
 //! `generate_project`, built by the same deterministic code, scored on eight metrics and four
 //! depth levels. Headless, no network, no keys. The scored report goes to

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Drawn chrome of the family editor window: document tabs, the open menu, labelled header
 //! pickers. Built on the kit widgets and theme tokens only.
 

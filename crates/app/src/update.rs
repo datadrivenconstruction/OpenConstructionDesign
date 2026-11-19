@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Notify-only update check. One GET to our own endpoint carrying three facts (version, OS and
 //! architecture, install kind). It never downloads or installs anything and has no telemetry:
 //! the answer is a version, a date, a summary and a release page the user opens on request.

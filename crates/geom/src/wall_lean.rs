@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Leaning and tapered straight walls (W5, docs GEOM_PRO_PLAN "wall/lean1").
 //!
 //! Wall frame: axis `a`, direction `d`, left normal `n`, offset `s` along `n`, height `z` above

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Footprints of any shape: a polygon with straight and arc edges, a named template, or a
 //! plot outline set back inward; optional convex courtyards; per-floor set-back, offset,
 //! rotation, twist and taper. Arcs become chords within the asked tolerance.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Whole-book XLSX round trip with seeded random edits: export the full model (levels, wall
 //! types and layers, slab types and layers, 200 walls with openings, rooms, slabs, curtain walls,
 //! column and beam family sheets), edit cells of every editable sheet in the exported book, read

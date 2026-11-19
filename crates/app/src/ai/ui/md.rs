@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Model answers as formatted text: a small, safe Markdown subset (headings, bold/italic, inline
 //! code, bullet and numbered lists with nesting, quotes, fenced code, pipe tables, links).
 //! Nothing is executed or opened: HTML stays text, a link only shows its address and copies it on

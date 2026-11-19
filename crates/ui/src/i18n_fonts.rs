@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Fallback fonts for scripts DDC Sans does not cover (Noto, SIL OFL 1.1; assets/fonts/i18n/, built by
 //! tools/build_i18n_fonts.py). They join egui's font lists only while the interface language needs
 //! them, so a Latin or Cyrillic session carries just the symbol, math, block and emoji faces.

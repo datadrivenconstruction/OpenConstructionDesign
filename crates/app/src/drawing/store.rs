@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Placed drawings in the project file. The list lives in the session (undo included); before
 //! every save it is written to the model's `underlay` table and the written file is checked
 //! for it, and every open or new model loads the list back. A stored drawing that cannot be

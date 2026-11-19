@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Direct-edit grips for all element kinds (plan; levels use section coordinates).
 //! Flow: [`grips`] -> drag with [`snap`] -> [`compute`] yields a new spec (nothing written,
 //! it is also the live preview [`outline`]) -> [`apply`] writes it as one model operation.

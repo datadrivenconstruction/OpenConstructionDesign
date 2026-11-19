@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A book that fails the read-back check, or a check that is stopped, leaves nothing new on
 //! the disk (also on the path after Apply) and the old book byte for byte; the check reports
 //! progress that never goes back and ends at done. The UI language is never switched here.

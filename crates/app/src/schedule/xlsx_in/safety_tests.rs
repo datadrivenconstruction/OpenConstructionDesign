@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Data safety of the schedule import: error cells, formulas without a result and formula
 //! results never change the model; rows without Id are named; a full round trip loses nothing.
 

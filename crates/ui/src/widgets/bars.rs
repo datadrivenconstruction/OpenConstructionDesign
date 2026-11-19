@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Context (options) bar, command line echo and status bar (SHELL_AND_COMMANDS §6.4–6.5).
 use crate::{Catalog, Theme};
 use egui::{RichText, Ui};

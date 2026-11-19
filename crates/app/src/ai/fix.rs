@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! One-click fix of a check finding, without a plan: one journal row, one undo step.
 
 use crate::editor::{Editor, OpFn};

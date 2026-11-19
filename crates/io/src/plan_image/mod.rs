@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Plan from a picture (plan g9): a raster plan image -> lines and door swings -> the same wall,
 //! opening and room proposals a vector drawing gets (`drawing_model::propose`). No learned
 //! model: ink by Otsu threshold, filled walls kept as outlines and thin strokes thinned

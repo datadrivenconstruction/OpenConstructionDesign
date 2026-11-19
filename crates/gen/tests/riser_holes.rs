@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Service risers stay inside every slab they pass through: the live office tower and the
 //! wet-wall apartment block that failed with "slab hole is outside the slab".
 

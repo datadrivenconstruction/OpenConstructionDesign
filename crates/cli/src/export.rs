@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Writers. Every write goes to a sibling temporary file and is renamed into place, and
 //! nothing is ever written over an input file.
 

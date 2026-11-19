@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Meaningful references to snap points: `"wall:12/mid"` names a feature of an element and
 //! resolves to the exact 3D point, for scripts and the AI strip (INTERACTIONS §1).
 //! Walls only for now: the tables the snap hits carry refs for.

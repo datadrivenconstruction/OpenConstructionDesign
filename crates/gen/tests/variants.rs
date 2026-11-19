@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Variants: seed-deterministic, the best never worse than one plain run, chosen far apart,
 //! and the rules the brief or the user fixed are left alone.
 

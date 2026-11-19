@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! HTTP surface of the ERP module `design` (contract §8): version header on every call,
 //! bearer token, the ERP error convention `{"detail": ...}` mapped to [`LinkError`].
 

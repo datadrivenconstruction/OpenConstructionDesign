@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Mesh simplification for levels of detail: quadric edge collapse (sum of squared distances
 //! to the planes of the original faces, unweighted, so `sqrt(cost)` bounds the distance of
 //! a new vertex to every original plane it absorbed). Coincident vertices are welded first;

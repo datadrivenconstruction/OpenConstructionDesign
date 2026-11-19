@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The server external agents connect to: Streamable HTTP on loopback, a stdio bridge, the same
 //! tool registry as the chat. The live model is reachable only through the editor's worker.
 

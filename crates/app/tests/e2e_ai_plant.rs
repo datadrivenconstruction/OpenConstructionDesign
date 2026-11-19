@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A boiler house from a brief end to end: the assistant drafts it, Apply writes units with
 //! their nozzle connectors, the items on the nozzles, pipes with fittings, supports and steel
 //! in one undo step, every connector joined; the same plant designed again changes nothing.

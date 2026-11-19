@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Mirror and uniform scale of the picked drawing primitives. A drawing as a whole cannot hold
 //! a mirror in its offset and rotation, so both tools work on a pick only. Each call is one
 //! undo step ([`Step::geometry`]) and marks the drawing edited.

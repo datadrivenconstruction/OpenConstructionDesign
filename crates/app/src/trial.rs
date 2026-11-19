@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Ghost preview before commit for ordinary tools. While a tool holds a valid input, the edit it
 //! would make runs as a model trial (`Model::trial`, always rolled back) once the input has been
 //! still for `SETTLE` seconds. The result is a ghost of the changed walls and slabs, or a refusal

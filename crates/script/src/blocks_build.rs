@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Structural blocks: towers, arches and vaults, helical stairs and ramps, facade fins.
 //! Bridges, stadium roofs and space frames are in `span_blocks`. Every node is computed once
 //! and shared by the members meeting there.

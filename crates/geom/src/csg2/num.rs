@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Filtered exact arithmetic over implicit points.
 //!
 //! A point is either an input vertex or the crossing of an input segment `p-q` with the zero

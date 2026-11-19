@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Line patterns drawn in mm on paper: dashes, gaps, dots, zigzag and wave runs. The library is
 //! our own; users add patterns next to the built-in ones. A pattern whose period is too small to
 //! read on screen draws as a solid line instead of a grey smear.

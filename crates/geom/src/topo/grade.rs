@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Building pad: a contour at a given elevation, slopes out to the terrain (the zero-work line),
 //! cut/fill volumes and the graded surface; smoothing of elevations inside the contour.
 //!

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Cut wall bodies of a level, kept by their full geometric input: the storeys of a typical
 //! floor give the same walls, openings and level-relative cutters, so their join and cut run
 //! once. The key is the exact input text (floats print round-trip), never a lossy hash.

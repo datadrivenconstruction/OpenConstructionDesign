@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Incremental server-sent-events parser. Lines are split on bytes, so a multi-byte
 //! character cut by a network chunk boundary survives.
 

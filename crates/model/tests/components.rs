@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Components: library, quantities, hosts, modification, scene with shared meshes.
 
 use std::f64::consts::{FRAC_PI_2, PI};

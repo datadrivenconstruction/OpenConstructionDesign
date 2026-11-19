@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Selective revert of an older undo step. The undo log is a stack, so an older step can be taken
 //! back alone only when nothing newer touched the rows it touched. Both sides are measured, not
 //! parsed: the inverse commands of the step and of every newer step are run in a transaction that

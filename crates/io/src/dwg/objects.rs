@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Object map, object framing, common entity/object data, table records and entity bodies
 //! (spec: docs/specs/DWG.md §6–8). Decoders return `Err` on any inconsistency; the caller
 //! counts the object as failed and continues.

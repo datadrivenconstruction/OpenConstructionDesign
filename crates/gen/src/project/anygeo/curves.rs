@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Curved facade runs. A plate outline keeps its arcs and splines as chords within the arc
 //! tolerance; the exterior walls along such a run are one curved wall. A run is a stretch of
 //! the facade whose every bend is gentle; it is an arc when all its points lie on one circle,

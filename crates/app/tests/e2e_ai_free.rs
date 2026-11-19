@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The free-form museum briefs (H06 English, H13 Chinese) end to end through the tool path: the
 //! assistant drafts the project, Apply writes it in one step, and every oracle of the eval case
 //! reads the model the way the judge does.

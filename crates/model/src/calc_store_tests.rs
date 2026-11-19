@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Schema step 44: structural analysis intent (undoable, validated) and runs (outside undo,
 //! retention to an archive, never deleted).
 

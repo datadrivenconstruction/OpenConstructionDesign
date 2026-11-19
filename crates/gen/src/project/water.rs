@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Cold and hot water and drainage: a riser cluster (stack, cold and hot riser) boxed into a
 //! corner of each wet room and shared by the wet rooms stacked over it; supply mains in wall
 //! chases low along the walls, a rise in the wall to each connector; drains in the void under

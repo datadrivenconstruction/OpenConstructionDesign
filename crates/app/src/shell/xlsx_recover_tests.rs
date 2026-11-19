@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! An export cut off between moving the old book aside and putting the new one in place: the
 //! leftovers are found, nothing is moved without the user, and no path loses a file.
 use super::*;

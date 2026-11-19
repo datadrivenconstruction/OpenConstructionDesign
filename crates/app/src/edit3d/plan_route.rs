@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! 3D creation on the level plane by the plan tools: the 3D view is only a way to
 //! point. Its pointer (`View3dAdapter`) and keys go to `Editor::input`, the same route as the
 //! plan, so a wall, floor, column or beam drawn in 3D is the record drawn in plan. Raised and

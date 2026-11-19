@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Edge cases of a hand-edited book: sorted rows, pasted duplicates, formulas, comma text,
 //! missing key sheet or id column, odd text, all rows removed.
 

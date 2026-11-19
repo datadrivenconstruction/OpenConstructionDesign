@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Level edge cases: refused edits leave the model untouched, undo/redo restores level state.
 
 use ddc_model::{ConstraintKind, ConstraintSpec, Error, LayerSpec, Model, WallSpec};

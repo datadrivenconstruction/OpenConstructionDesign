@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Hatch families: parallel line sets with angle, origin, per-line shift, spacing and dashes.
 //! A pattern is one or more families. Drafting patterns keep their spacing in mm on paper (the
 //! result scales with the view scale); model patterns keep it in metres and follow the object.

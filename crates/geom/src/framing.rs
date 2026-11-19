@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Member framing: trusses (Pratt/Howe/Warren web, parallel or pitched chords)
 //! and beam-system layout within a boundary. A truss yields `member::Member` members with ends:
 //! chords are mitered at nodes, web members end on the chord faces; nodes lie on axes (chord centroids).

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Compact binary form of an [`Underlay`] for the project file: layer names interned, the
 //! whole record deflated. Round trip is exact (f64 bits kept).
 

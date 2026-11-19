@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Window size and position: the first start fits 90 % of the work area, later starts restore
 //! the last geometry clamped to the visible desktop. Pure rules here; the file is `window.txt`.
 

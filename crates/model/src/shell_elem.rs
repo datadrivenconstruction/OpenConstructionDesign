@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Roofs and slabs on freeform surfaces (geometry plan W9). Table `shell_elem` keeps the
 //! reference surface (a copy of the host patch, z above the level), the host trim, a layer
 //! stack offset along the surface normal, the side the stack grows to and plan openings.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Imports run as one model step: one undo takes the whole import back, redo restores it, and an
 //! import failing part-way leaves the model content (hash) and the undo stack as they were.
 use super::*;

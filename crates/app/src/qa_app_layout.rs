@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Every command, run on the shell drawn headless at 1280x720 and 1920x1080 in both languages:
 //! whatever it opens, no control leaves the screen sideways (below it only inside a scroll
 //! area) and no label is elided that the idle shell did not already elide. Explicit catalogs and fonts; the global language is never touched.

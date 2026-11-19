@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Hint table: the keys of the current step and the values they use, from one table.
 //! The card, the AI answer «what can I do now» and the tests read `hint_rows`/`value_rows`/
 //! `describe`; a session lists its own `hints()`, the old tools are described by `TABLE`

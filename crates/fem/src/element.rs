@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! 12-DOF frame element: local axes, stiffness (Euler-Bernoulli or Timoshenko), end releases
 //! by static condensation, rigid offsets, and exact equivalent loads via exact shape functions.
 

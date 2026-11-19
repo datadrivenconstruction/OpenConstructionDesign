@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Structural kinds of schema 26 in the editor: selection `Sel::Ext(code, id)` (code = `STRUCT_BASE` + the
 //! kind index in `STRUCT_KINDS`), plan outlines (click, box and Tab picking), deletion as one undo
 //! step, level 3D (one mesh per tag). Helpers live here too, the 3D adapter (`edit3d/struct3d.rs`).

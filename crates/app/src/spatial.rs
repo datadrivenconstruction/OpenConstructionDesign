@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Spatial index over element bounds (BVH, median split along the longest axis):
 //! ray picking (exact triangles only in leaves along the ray path), box select, nearby elements
 //! for snapping, visible plan area. A 50k-element scene builds in milliseconds;

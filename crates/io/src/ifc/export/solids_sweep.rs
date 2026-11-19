@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Exact IFC bodies of smooth sweeps. A centred circle or tube profile -> IfcSweptDiskSolid
 //! (twist and roll do not change it); a profile whose placement against the directrix keeps
 //! one reference direction (fixed frame, or the rotation-minimizing frame of a planar path)

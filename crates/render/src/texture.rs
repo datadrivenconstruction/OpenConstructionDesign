@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Image textures of the realistic style: projection math, own procedural images, mip chains and
 //! the hand-off from the model side to the renderer. No GPU code here (`texture_gpu`).
 //!

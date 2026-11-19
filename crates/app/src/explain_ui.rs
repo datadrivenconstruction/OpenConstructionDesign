@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `mod.explain` ("Explain element"): a window that says, in plain sentences, why the selected
 //! element looks and behaves the way it does: what it is, where it sits, what holds its top and
 //! base, how its ends join, which rules and openings it carries, whether it is pinned, grouped,

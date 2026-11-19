@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Streamed multi-page PDF: a page is compressed and written to the file at once, only object
 //! offsets and the character set stay in memory. The font is built up on the fly: CIDs are issued on a glyph's
 //! first appearance and never change, so pages already written stay valid; the font subset,

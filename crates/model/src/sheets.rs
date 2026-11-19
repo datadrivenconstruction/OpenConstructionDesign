@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Sheets (WORKFLOWS W3): a sheet has a number, name, format, orientation, title-block profile, its fields,
 //! revisions; a viewport is a level plan or section/elevation (`view_def`) at scale 1:N, centred on the
 //! sheet (mm), with a crop in view coordinates (m); schedules on a sheet; sheet sets; ordering and

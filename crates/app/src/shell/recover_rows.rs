@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Pure parts of the recovery window: relative time, row picking, danger confirmation.
 //! No drawing and no global state, so every rule here is covered by plain unit tests.
 use ddc_model::SnapInfo;

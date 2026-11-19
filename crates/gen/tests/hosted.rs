@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Wall-hosted fixtures and openings stand on their own walls in the final project: the briefs of
 //! the live runs that failed to apply (a villa on a slope, a U-shaped mixed-use block) and their
 //! neighbours build without a hosted piece past its wall's end.

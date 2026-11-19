@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Saved 3D views with no new schema step: a `view_def` row with kind = 'view3d'
 //! (ax, ay, bx, by, depth are the plan extents of the clipping box and its height; far_clip means the box
 //! is on) and the view description as JSON in `prop` (kind = 'view3d', ref = id, key = 'spec'):

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Workflow: XLSX export → edit cells → preview → apply → undo/redo, through the editor.
 //! Edited books are written with `export_table` (one sheet per file), the only writer the
 //! app crate can reach; each book is applied as its own `apply_xlsx` = one undo step.

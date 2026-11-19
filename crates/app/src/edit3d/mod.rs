@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Direct editing in 3D: selection of all categories with hover highlight, grips per
 //! category ([`grips`]; providers from other modules plug in via [`grips::Provider`]),
 //! the move/rotate gizmo ([`gizmo`]), snaps ([`snap`]), work planes

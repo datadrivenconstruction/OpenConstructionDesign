@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Pointer icons of the navigation drags: 3D orbit and pan, view cube faces and the family
 //! canvas (reference planes, pan). Pure tables; callers set the icon only when one is returned.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Any language in, the same pipeline out. Briefs in many scripts (right-to-left, CJK, Indic,
 //! Thai, emoji, mixed) go through every path that reads the person's text without a panic; the
 //! model is offered the same tools whatever the language; the same structured tool arguments

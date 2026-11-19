@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Whether the editor is busy with input: a tool (including structural (`model_tool`), terrain, roof edges,
 //! bodies), a drag, number entry, sketch and mass modes.
 //! Space/Enter quick commands fire only when it is not busy.

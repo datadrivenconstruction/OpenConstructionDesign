@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Scene: element meshes (element, layer) → flat GPU vertices and bounds for picking.
 
 use bytemuck::{Pod, Zeroable};

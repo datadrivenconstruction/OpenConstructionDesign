@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! IFC4 entities -> IFC2X3: attribute lists cut to the older schema, an owner history on every
 //! rooted entity, generic flow classes for MEP, tessellated bodies as faceted breps, indexed
 //! curves as polylines (arcs sampled), boundary conditions as stiffness numbers. What an

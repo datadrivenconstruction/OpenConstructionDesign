@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! AI-access wording: one noun ("AI agent") and matching en/ru key sets.
 //! Reads the JSON files directly; never touches the global UI language.
 use std::collections::BTreeMap;

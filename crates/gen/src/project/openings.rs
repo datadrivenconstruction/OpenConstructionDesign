@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Typed openings. The layout makes every door and window a hole with a size; this pass, run
 //! once on the finished project, gives each one a type of the catalogue (`data/opening_types.json`),
 //! a mark, a leaf swing and its ratings. Every choice comes from a rule of the `opening` group:

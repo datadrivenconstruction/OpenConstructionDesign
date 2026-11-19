@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Issue: title-block cell editing from the sheet, a revision on several sheets at once. Project fields are edited
 //! only in the project info window; here is this sheet's value on top of them.
 

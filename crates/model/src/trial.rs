@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Trial runs: an edit applied inside a transaction that is always rolled back, so a tool can
 //! show the result and any refusal before the user commits. The file, the operation journal and
 //! the change journal never see a trial; caches built inside it are dropped, the live ones kept.

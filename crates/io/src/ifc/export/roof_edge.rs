@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Level roof edges: fascia board and soffit — coverings, gutter — a pipe segment,
 //! slab edge — a proxy, moulding/cornice — a moulding covering, tapered insulation — an insulation
 //! covering, a lantern — a lantern window in a roof opening (IfcOpeningElement, RelVoids/RelFills).

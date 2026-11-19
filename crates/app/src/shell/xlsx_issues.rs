@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Issue cards of the XLSX preview: skipped rows, conflicts, missing and look-alike sheets and
 //! a mass deletion, one compact card per kind. `issue_cards` is pure; `show` only paints and
 //! reports a click. A click never changes the model: it picks a preview choice or opens the

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Wall editing: the joint type at each end (butt / mitre / square), joint suppression,
 //! walls composite along their height, profiles along a wall (a projection adds a body, a groove cuts
 //! from the layers), the vertical structure of a type (layer spans by height, assigning a layer to a span,

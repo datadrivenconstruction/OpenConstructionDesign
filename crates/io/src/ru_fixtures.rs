@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Russian-language test fixtures, read from `tests/data/ru_fixtures.tsv` (`key<TAB>text`).
 //! In the text, `\n` stands for a newline and `\t` for a tab.
 

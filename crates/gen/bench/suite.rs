@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Regression benchmark of the project generator: the briefs of `data/bench/*.json`, each built
 //! by `build_project` and measured on the built model only, never on what the generator says
 //! about itself. Shared by `tests/bench.rs` (the gate against `bench/baseline.json`) and

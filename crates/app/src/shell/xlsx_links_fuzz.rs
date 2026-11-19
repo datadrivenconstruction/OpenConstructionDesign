@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Random Apply / undo / redo / reopen / re-export against a linked book that holds new rows
 //! (no id) on Walls, Rooms and Levels. The record of created rows must keep a second Apply of
 //! the same book from creating anything, whatever happened to the model in between. Rows are

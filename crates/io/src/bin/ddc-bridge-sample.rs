@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Reference bridge: ignores the input content and streams a synthetic two-storey project
 //! (millimetres) through protocol v1. `--fault <mode>` produces broken streams for host tests;
 //! `--walls N` adds N free-standing walls for streaming tests; `--fault edit` changes the source

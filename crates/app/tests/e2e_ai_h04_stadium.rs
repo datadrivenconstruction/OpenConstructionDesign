@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! H04, the 40,000-seat stadium, through the chat: the cantilever truss ring from the
 //! steel_frame generator, then the bowl as levels, tier slabs, curved walls and stairs from
 //! `create_elements`; Apply once, then every oracle of the case on the applied model.

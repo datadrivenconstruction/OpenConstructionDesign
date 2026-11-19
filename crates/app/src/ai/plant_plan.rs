@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A process plant from a brief as one plan item: units, stack items, supports, steel and flues
 //! as components of their families, the pipes as one network build with the connectors
 //! joined, a storage tank's ring foundation as strip footings. Apply stores the brief and the element of every key in the model (`prop`, kind

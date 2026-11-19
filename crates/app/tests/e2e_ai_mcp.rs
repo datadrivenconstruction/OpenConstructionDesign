@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! An agent on its own thread, the real server on loopback, the real session and live model here.
 //! The main thread stands in for the UI: it pumps until the agent's steps are done.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The wider create path: in one turn, before any Apply, the assistant plans levels below
 //! ground, makes its own wall and member types through `create_elements`, and draws walls,
 //! columns, a shaft and a grid line on the planned levels by name, the types by name or

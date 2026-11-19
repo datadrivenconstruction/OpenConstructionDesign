@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The underground station: the defaults give the deep box of a cut-and-cover station that
 //! the hard metro scenario asks for, every part follows its rule, the parts never clash, a rule
 //! that cannot be met is refused with the rules to change, and the builder holds no number

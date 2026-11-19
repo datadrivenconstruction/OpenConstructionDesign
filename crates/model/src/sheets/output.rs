@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Sheet issue (schema 36): splitting a schedule into columns, view numbers on a sheet and "view -> sheet"
 //! references, a revision on several sheets at once, reading project fields for the stamp, legend data.
 

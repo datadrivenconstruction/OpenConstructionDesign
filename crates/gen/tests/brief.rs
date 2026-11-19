@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Brief against built: contradictions resolved with a note, typology templates that build and
 //! pass the gates, and the generate, check, repair loop settling within its rounds.
 

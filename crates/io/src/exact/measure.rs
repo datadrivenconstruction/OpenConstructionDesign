@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Volume of a closed body from its faces (divergence theorem): planar faces through their
 //! boundary, B-spline faces over their whole parameter domain. Other surface kinds are left to
 //! `recognize`, which maps them back to our forms.

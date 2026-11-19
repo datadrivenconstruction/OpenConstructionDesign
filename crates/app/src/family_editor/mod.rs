@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Family editor (schema 29): separate tabbed documents in their own window. The definition text is
 //! the source of truth (`FamDoc`, its own undo history), a reference-plane sketch with dragging,
 //! parameters, a type catalog, constraints, visibility, nesting, value checks (flex).

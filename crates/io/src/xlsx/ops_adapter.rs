@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Adapter from the XLSX bulk `Edit` vocabulary to the shared wire `Envelope`.
 //!
 //! Additive and pure: it never touches the model or the import path. An XLSX batch

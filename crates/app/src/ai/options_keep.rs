@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Where design option recipes live and what happens to their branch copies. Recipes are rows of an
 //! `ai_option` table (outside undo).
 //! Branch copies `opt-<id>.db` are a cache next to the recipes. A copy leaves its folder only

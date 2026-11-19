@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Rule-based wall tops under any roof: touch the roof underside, do not pierce it, and follow
 //! roof edits and undo.
 

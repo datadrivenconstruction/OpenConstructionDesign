@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Levels: the active level, create/edit/delete (undo/redo), the lower-level underlay,
 //! current-level rooms for plan picking, and the 3D scene of all levels.
 

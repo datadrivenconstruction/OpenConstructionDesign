@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Whitespace and line-ending noise in text cells (outer spaces, NBSP, CRLF vs LF) is never an
 //! edit nor "model is newer"; a book without a baseline never renames on such noise.
 

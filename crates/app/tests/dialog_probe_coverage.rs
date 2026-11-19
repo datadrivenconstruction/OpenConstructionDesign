@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Meta test: every top-level window or dialog of the app is either probed by the layout contract
 //! (`src/layout_contract.rs`) or listed in `EXEMPT` with a reason.
 //!

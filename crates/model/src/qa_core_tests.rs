@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! QA: items without a direct test: text codecs, small tables,
 //! base element API, undo round trips, plus parse paths fed hostile text.
 

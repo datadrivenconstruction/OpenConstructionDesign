@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! 3D editing geometry without UI state: screen to world (`Cam`), ray vs plane/line/segment,
 //! meters per pixel, rounding steps, segment vs screen rectangle.
 

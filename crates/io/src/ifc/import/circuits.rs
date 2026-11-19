@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Electrical circuits read back from IFC: IfcDistributionCircuit with `DDC_Circuit`, the device
 //! list `DDC_CircuitDevices` and the explicit loads `DDC_CircuitLoads` (keys `<GlobalId>/<connector>`
 //! of the component products). A circuit whose panel or devices do not resolve is skipped with a

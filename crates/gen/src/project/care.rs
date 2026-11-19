@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Air of hospital rooms by care class: operating theatres at positive pressure, airborne
 //! isolation rooms at negative pressure, and clinical wards with a floor of air changes. The
 //! class is a room tag, never a word of the room's name; every number is a rule.

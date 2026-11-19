@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! What the person sees of an external agent: the changes waiting for them and the live journal.
 //! Everything here is decided without a window, so the tests pin it.
 

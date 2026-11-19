@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Schedule cell edits of category columns (wall, opening, curtain, panel, slab, room), staged
 //! against the current model so a pasted block applies as ONE model op (one undo step).
 

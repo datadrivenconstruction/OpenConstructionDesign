@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 use ddc_model::*;
 fn run(f: impl Fn(&mut WallSpec, i64)) -> (i64, i64, i64) {
     let mut m = Model::open(":memory:").unwrap();

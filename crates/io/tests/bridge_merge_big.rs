@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Re-opening a changed big source: the 3-way merge at 2k, 20k and 100k walls. Exact report
 //! counts, stable ids, local edits kept, edit/delete conflicts listed, one undo step that
 //! restores the whole table content, and an unchanged re-import that changes nothing.

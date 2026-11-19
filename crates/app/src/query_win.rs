@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Query window (`data.query`, QY): the filter language of the palette in a window of its own.
 //! The text is read live: an error in plain words, or the count and a summary by category.
 //! Without `->` the primary action selects the result (the level follows when all of it is on

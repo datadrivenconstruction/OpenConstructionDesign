@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Command arguments from the palette: Russian-language queries such as "wall 300 concrete", "door 900x2100", "column 3000 @Level 2"
 //! (wall 300 concrete, door 900x2100, column 3000 @Level 2).
 //! Numbers and words apply to the tool that was just launched; `@level` switches the level first.

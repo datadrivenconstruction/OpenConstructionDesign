@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Preview guard for a workbook without its baseline (`Report::no_base`): the hidden comparison
 //! sheet was dropped by a tool that re-saved the book, damaged, or never written. Every differing
 //! cell then replaces the model value, so the preview shows a warning card and Apply waits for an

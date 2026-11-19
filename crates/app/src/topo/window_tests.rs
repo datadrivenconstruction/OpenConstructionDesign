@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Site and topography windows: unit display, import gating, states, kit-only widgets.
 //! Languages are passed explicitly; the global UI language is never switched.
 

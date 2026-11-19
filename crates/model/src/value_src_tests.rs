@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Value provenance: the schema step, records through save and reopen, verify as one undo
 //! step, a later write dropping the record, and `find_missing`.
 

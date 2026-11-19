@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Generator regression benchmark: the briefs of `data/bench`, measured on the built model by
 //! `bench/suite.rs`. Fails when a metric of any brief worsens beyond its tolerance against
 //! `bench/baseline.json`. Re-pin with `DDC_BENCH_UPDATE=1` only when a change of result is

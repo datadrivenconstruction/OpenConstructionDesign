@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `query_relations` and `query_topology`: read-only relation questions over the scratch copy.
 //! Lengths are metres. Rows are ordered by category, then id, then a tag, and cut to `limit`;
 //! the reply says how many more exist, so a model never pays for the whole model.

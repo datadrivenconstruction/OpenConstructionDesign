@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The "First steps" tutorial: 7 lessons; a step counts by editor state (wall count,
 //! active tool, view), the step's button is highlighted on the ribbon. Progress is in the settings file,
 //! and the tutorial can be closed and resumed from the same step.

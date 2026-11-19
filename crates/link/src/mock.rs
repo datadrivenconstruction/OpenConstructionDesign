@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! An ERP that speaks contract `ddc-erp-link/1` over real HTTP on 127.0.0.1, for tests only
 //! (feature `mock-erp`). It follows the module router of the ERP (`erp-module/design/router.py`):
 //! version header and 426, single-use codes (410), project-scoped `ddcl_` tokens (401), lock with

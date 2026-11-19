@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Build id for the About page: short commit and commit date, from the environment when the
 //! builder sets them, else from git. Absent values leave the page showing `dev`.
 //! `DDC_BUILD` = `<short commit>[+dirty], <build day>` names a non-release build in logs and UI;

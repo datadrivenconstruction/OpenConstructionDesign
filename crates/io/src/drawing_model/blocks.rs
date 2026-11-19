@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Block definitions and top-level INSERTs of a drawing file, kept through edits so the DXF
 //! export writes blocks back. An INSERT whose expanded primitives are all still in the underlay,
 //! untouched, is written as an INSERT of its definition (scale, rotation, array, ATTRIBs) moved

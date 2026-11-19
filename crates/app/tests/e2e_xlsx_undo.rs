@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Undo of an XLSX Apply is total: every model table before the Apply equals the model after
 //! Undo and after Redo + Undo (created and deleted rows, family type changes, schedule book rows,
 //! locked parameters, pending links), and the record of the rows the Apply created in the book

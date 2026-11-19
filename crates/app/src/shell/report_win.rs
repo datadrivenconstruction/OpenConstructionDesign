@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Problem report: a form (what happened / expected / steps) and a local bundle with the text,
 //! build and system facts, a window screenshot and the last crash record. The model is attached
 //! only on an explicit tick, user paths are masked unless ticked; nothing is ever sent.

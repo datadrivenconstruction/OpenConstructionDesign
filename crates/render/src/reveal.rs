@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Construction-sequence reveal: a deterministic per-element timeline (appear, disappear,
 //! shift, tint) and its upload to the GPU.
 //!

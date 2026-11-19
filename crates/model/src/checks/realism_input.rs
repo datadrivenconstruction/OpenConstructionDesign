@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Fills the realism critic's `Input` from the model: solids (members, plates, bolts), rebar
 //! sets, stairs and what carries them. A solid says what it is in its material text:
 //! `S355;bent=cold`, `S355;ecc`, `S355;plate`, `S355;bolt=M20;hole=22` (mm). Tags after the

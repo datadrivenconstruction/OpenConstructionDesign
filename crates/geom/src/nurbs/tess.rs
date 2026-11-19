@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Deterministic adaptive tessellation by chord and angle tolerance, thickening into a
 //! closed mesh, and booleans on the tessellation (with the loss stated).
 //!

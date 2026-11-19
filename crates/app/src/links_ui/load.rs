@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Background link load: .ifc by import into a separate model, .rvt via a bridge (like "Import"),
 //! then element bodies by level (the same meshes the host 3D builds) and wall axes for snaps.
 //! All in its own thread: the UI thread receives ready data in [`LoadJob::poll`]. With the cache (`cache`)

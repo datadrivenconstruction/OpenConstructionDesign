@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Edit-path status texts: both locales carry the same keys, English renders without Cyrillic
 //! and the touched sources keep no Cyrillic outside comments and test modules.
 use std::collections::BTreeSet;

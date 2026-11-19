@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Element warnings: icon in properties, marker on the plan, a 4 s toast
 //! for new ones, a list window grouped by type with "Show" and CSV export; a blocking
 //! model error is a modal window. The "Model" block in properties shows per-level totals.

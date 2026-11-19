@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Patterns beyond the linear and radial arrays: along a curve, on a planar face, and equal
 //! gaps between two reference walls. Placement data is computed by pure functions (the same
 //! data drives the preview and the edit), the edits run as one `modify` operation.

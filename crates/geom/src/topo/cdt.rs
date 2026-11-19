@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Constrained Delaunay triangulation: points are inserted into a super-triangle with Lawson flips;
 //! constraint edges are inserted by walking along the segment and flipping crossed edges (Sloan);
 //! two crossing constraints are split at a Steiner point on the edge. All decisions use exact predicates.

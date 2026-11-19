@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Type picker: closed field like a dropdown, popup with search, a muted detail per row,
 //! keyboard navigation and an "Edit type…" footer entry.
 use crate::theme::{control, space, ControlSize, Role};

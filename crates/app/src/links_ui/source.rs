@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Render source of one linked project, separate from the host scene: shapes in their own f32
 //! frame around f64 anchors in the link's world, repeated bodies instanced, unique bodies batched
 //! by cell. Built once per load off the UI thread; placing it (link position, host level) only

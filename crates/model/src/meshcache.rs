@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Derived cache of imported meshes (schema 24): `mesh_proto` holds one local shape per set
 //! of identical `mesh` rows (copies of one type placed by shift and turn about Z) with up to
 //! two coarser levels of detail; `mesh_geo` holds, per `mesh` row, its prototype, placement

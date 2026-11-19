@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Command registry: `data/commands.json` plus fragments `data/commands.d/*.json`
 //! (same schema, merged in file-name order), shortcuts, two-letter mnemonic input by key.
 use serde::Deserialize;

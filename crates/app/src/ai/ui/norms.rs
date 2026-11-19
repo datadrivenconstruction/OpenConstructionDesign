@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Norm checks on the Checks tab: rules are data with a cited clause, the model is judged by
 //! code, and the assistant only explains a finding or drafts a fix when asked. Each row names the
 //! rule, its document and clause, the measured and required values; a click selects and frames

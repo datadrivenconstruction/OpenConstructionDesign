@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 use super::lattice::{self, Frame, JointKind, MemRole, Pattern, Secs};
 use super::rivet::{self, RivetGroup, RivetRule};
 use super::sections;

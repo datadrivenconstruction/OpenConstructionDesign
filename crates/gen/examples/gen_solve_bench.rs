@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Circulation score and steer timing per task, one JSON line each, then a summary line:
 //! `cargo run --release -p ddc-gen --example gen_solve_bench [-- task ...]`.
 //! Tasks: the twelve eval briefs (`tests/eval.rs`) and the bench briefs (`data/bench`).

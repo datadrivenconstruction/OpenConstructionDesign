@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Unified canvas language (plan and 3D, both themes): overlay palette from tokens and primitives
 //! with a constant size in screen pixels: handles, snap glyphs, dimension labels and lines,
 //! selection box, tool ghost, material hatches, axis marks, AI preview. Values and meaning:

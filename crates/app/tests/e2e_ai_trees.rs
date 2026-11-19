@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Site trees through the tool path: generate_project plants the library's Tree species, the
 //! climate words of the brief pick the mix, and the trees differ in species and size.
 

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Load expansion (design 1.7, P1 frame-only): stored loads of one case -> solver loads.
 //! - point: on a member at station `x` (value `x` or a station key `m:..@x`), or on a node;
 //! - line: trapezoidal `q1` at `x1` to `q2` at `x2` over the member stations;

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Client of the ERP link, contract `ddc-erp-link/1` (§7 link file, §8 HTTP surface).
 //!
 //! `.ddclink` file → one-time code → project token (OS key store only) → context, lock, revisions.

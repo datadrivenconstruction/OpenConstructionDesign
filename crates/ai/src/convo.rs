@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The conversation loop: budget, stream, validate arguments, call the host, repeat.
 //! Every tool call in the history always gets a result, even when the turn is cut short:
 //! the next request would otherwise be rejected as malformed.

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! One more storey on top of a built tower: every storey and basement already there keeps its
 //! slot block, so a revision keeps their element references, and the new storey takes a block
 //! no element of the old model held.

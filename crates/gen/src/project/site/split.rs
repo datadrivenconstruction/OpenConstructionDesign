@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Split levels on a steep site. The building parts on wall lines across the slope, one cut
 //! per wing, and every face of the plan downhill of a cut stands half a storey lower; a wing
 //! without a cut stands whole on the level its neighbours give it. Flights in the corridors

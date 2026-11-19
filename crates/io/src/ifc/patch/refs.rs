@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! What a file holds and how its entities point at each other: a one-pass index, targeted probes,
 //! and the cut: which statements go or change when elements are deleted.
 

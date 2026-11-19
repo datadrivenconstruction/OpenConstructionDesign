@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! BCF 2.1 and 3.0 (buildingSMART) issue exchange: a zip of `bcf.version` and one folder per
 //! topic with `markup.bcf`, `viewpoint.bcfv` and `snapshot.png`. Export writes the XML by hand;
 //! import reads it with a small tolerant reader and matches linked components to model elements

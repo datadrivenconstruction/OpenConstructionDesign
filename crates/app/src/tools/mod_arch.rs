@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Model tools (TOOLS_UI §1): column, beam, roof, ceiling, stair, railing, shaft, grid,
 //! reference plane, component, networks (runs, fixtures, connections).
 //! State machine Idle → Picking(n) → Preview → Commit; writing goes through `Editor::apply_ext` (one undo step).

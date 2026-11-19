@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Option bar of the modify tools (Move, Copy, Rotate, Array, Offset) and the temporary isolate
 //! banner, built from the design-kit widgets and tokens only. `opts_of` decides which options a
 //! tool shows; `check_dist` / `clamp_count` are the validation rules, free of any UI state.

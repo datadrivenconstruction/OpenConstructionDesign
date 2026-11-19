@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Splits the faces of a layered slab, ceiling or roof mesh by layer, so each layer can take its
 //! own texture: the top face shows the top layer, the bottom face the bottom layer and the edges
 //! show the layers as bands. Bands need horizontal layer joints, so they are made only on a flat

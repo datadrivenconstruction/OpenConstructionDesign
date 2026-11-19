@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Property panel rows: «label — value — unit» on columns shared by the whole panel, numbers
 //! right-aligned, units muted, long text elided with a tooltip.
 use super::text::paint_in;

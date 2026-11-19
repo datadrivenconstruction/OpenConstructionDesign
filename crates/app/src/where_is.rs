@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `app.where_is` ("Where is..."): type a concept in your own words ("schedule", "hatch",
 //! "layers") and the window names our command, says where it lives on the ribbon and its keys,
 //! runs it or shows its button with a ring. Matches the command names in both languages and a

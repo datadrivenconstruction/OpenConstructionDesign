@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Code pages for legacy DXF/DWG files ($DWGCODEPAGE = ANSI_125x). Single-byte pages use the upper
 //! half 0x80..=0xFF (bytes undefined in a page map to the C1 control of the same value); indexes
 //! 8..=11 are the double-byte pages ANSI_932/936/949/950, decoded with `encoding_rs`.

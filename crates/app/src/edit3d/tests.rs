@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! 3D grip to model operation; one action is one editor undo step; selection synchronization.
 
 use super::grips::{grips_of, opening_row, type_thickness, wall_spec, Grip3, Role3};

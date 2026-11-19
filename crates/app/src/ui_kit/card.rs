@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Fixed-size building blocks of the import windows: a window's state changes what is inside
 //! these blocks and never their size, so nothing jumps between pick, progress and result.
 use super::dialog::elided_weak;

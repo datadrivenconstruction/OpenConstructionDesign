@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Why the typology made the building as it did: the air its rooms get, the loads they put on
 //! the services, the zones that sit together, the levels below ground and their walls, and what
 //! it hands to the plant module. Each reason names the rule behind it, as every other reason of

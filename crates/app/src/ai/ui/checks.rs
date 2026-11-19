@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The Checks tab: run the model's rules, go to a finding, ask the assistant to fix it.
 
 use super::kit::{self, space, Button, Tone};

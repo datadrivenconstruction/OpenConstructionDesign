@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Curtain systems on freeform hosts -> IfcCurtainWall aggregating one IfcPlate
 //! (.CURTAIN_PANEL.) per kept panel and one IfcMember (.MULLION.) per grid edge. Each part is
 //! a closed triangulated prism in storey coordinates; the plate's ObjectType names its panel

@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Sheet `Measures`: the saved measurements of the project, one row each (id, view, kind,
 //! value, unit, state, reason). Values come from the model's own evaluator, in SI with the unit
 //! named per row. A measurement with no number shows its state and reason, never a zero. Only a

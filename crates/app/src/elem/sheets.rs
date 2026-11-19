@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! XLSX sheets of the element table: every family with a `sheet` and no bespoke sheet code in
 //! `ddc-io` gets one sheet, with one column per geometry row of the family.
 

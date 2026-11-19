@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Every table the model can build is readable by the read tools: describe_category answers for
 //! type tables and for shafts, grids and steel connections, and get_element reads rows that the
 //! query layer has no row for.

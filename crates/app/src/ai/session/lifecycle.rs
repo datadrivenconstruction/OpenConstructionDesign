@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! End of a session: the worker is cancelled and joined with a bounded wait, and snapshot
 //! copies of in-memory projects (`ddc-ai-snap-<pid>-<n>.db`) never outlive their session.
 

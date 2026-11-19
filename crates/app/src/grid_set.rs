@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A set of grid lines from a count, spacing, angle, origin and labelling: two families of lines
 //! in a frame turned by `angle` about `origin`. Pure geometry; the callers write the lines
 //! (the assistant through a plan item, the command window as one undo step).

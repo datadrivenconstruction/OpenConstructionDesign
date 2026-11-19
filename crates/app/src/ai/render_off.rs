@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Offscreen renders for `render_plan` and `render_3d`: the real app UI is painted headless on a
 //! private copy of the scratch model (`shot::frame`), then the canvas is cropped out. Nothing
 //! reaches the person's screen or the live model.
