@@ -1,0 +1,73 @@
+name: release
+on:
+  push:
+    tags: ['v*']
+permissions:
+  contents: write
+env:
+  CARGO_TERM_COLOR: never
+  CARGO_INCREMENTAL: "0"
+  RUST_TOOLCHAIN: "1.95.0"
+
+jobs:
+  create:
+    name: create release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: draft notes and release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+        run: |
+          pre=""
+          notes="Release $TAG."
+          case "$TAG" in
+            *-*) pre="--prerelease"
+                 notes="Test build $TAG for trying the editor. Not every automated test passes yet; please report problems you find." ;;
+          esac
+          printf '%s\n\nDownloads: Windows (zip) and Linux (tar.gz) builds of the editor (ddc-app) and the command line tool (ddc).\n' "$notes" > notes.md
+          gh release create "$TAG" $pre --title "OpenConstructionDesign $TAG" --notes-file notes.md --generate-notes
+
+  build:
+    name: build ${{ matrix.os }}
+    needs: create
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - name: toolchain
+        shell: bash
+        run: |
+          rustup toolchain install "$RUST_TOOLCHAIN" --profile minimal
+          rustup default "$RUST_TOOLCHAIN"
+      - name: system libraries
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libxkbcommon-dev libwayland-dev libx11-dev libxcursor-dev libxrandr-dev libxi-dev libgl1-mesa-dev libfontconfig1-dev
+      - name: build
+        shell: bash
+        run: cargo build --release --locked -p ddc-app -p ddc-cli
+      - name: package and upload
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+        run: |
+          name="OpenConstructionDesign-$TAG"
+          mkdir -p "pkg/$name"
+          cp LICENSE NOTICE README.md THIRD_PARTY_LICENSES.txt "pkg/$name/"
+          if [ "$RUNNER_OS" = "Windows" ]; then
+            cp target/release/ddc-app.exe target/release/ddc.exe "pkg/$name/"
+            (cd pkg && 7z a -tzip "$name-windows-x64.zip" "$name" > /dev/null)
+            asset="pkg/$name-windows-x64.zip"
+          else
+            cp target/release/ddc-app target/release/ddc "pkg/$name/"
+            tar -C pkg -czf "pkg/$name-linux-x64.tar.gz" "$name"
+            asset="pkg/$name-linux-x64.tar.gz"
+          fi
+          gh release upload "$TAG" "$asset" --clobber
