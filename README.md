@@ -2,7 +2,8 @@
 
 # OpenConstructionDesign
 
-**A free, open-source CAD-BIM editor for the desktop, written in Rust.**
+**A free, open-source CAD-BIM editor with its own AI assistant, a link to cost estimation, and a
+browser build on the way.**
 
 [![CI](https://github.com/datadrivenconstruction/OpenConstructionDesign/actions/workflows/ci.yml/badge.svg)](https://github.com/datadrivenconstruction/OpenConstructionDesign/actions/workflows/ci.yml)
 [![Licence: AGPL-3.0](https://img.shields.io/badge/licence-AGPL--3.0-blue.svg)](LICENSE)
@@ -10,20 +11,78 @@
 [![Rust](https://img.shields.io/badge/rust-1.89%2B-informational.svg)](docs/BUILDING.md)
 
 <p align="center">
-  <img src="docs/images/hero-office-tower.png" alt="15-storey office tower in the 3D view with the project browser" width="49%">
-  <img src="docs/images/3d-dark-theme.png" alt="The same editor in the dark theme" width="49%">
+  <img src="docs/images/lattice-tower-dark.png" alt="The editor in the dark theme with a generated 60 m steel lattice transmission tower in 3D; a cross-arm beam is selected and its properties are shown on the right" width="100%">
 </p>
 
 OpenConstructionDesign combines CAD precision with BIM data in one editor. It has its own
-geometry kernel and its own file decoders, reads and writes IFC, keeps the whole model and its
-change history in a single SQLite file, and runs on your machine. The built-in AI assistant
-works with the provider you choose, including a local server, and never changes your model
-until you press Apply.
+geometry kernel and file decoders, reads and writes IFC, and keeps the whole model and its
+change history in a single SQLite file on your machine.
+
+**Website:** <!-- website URL: pending --> coming soon.
 
 > **Status: 0.9.0 preview.** The editor is usable, but the project file format, the APIs and
-> the interface can still change between releases, and parts of the test suite are still being
-> fixed (see CI). Keep the original of every model you open and do not use the editor as the
-> only copy of production data. See [Limits of 0.9.0](#limits-of-090).
+> the interface can still change between releases. Keep the original of every model you open
+> and do not use the editor as the only copy of production data. See [Limits of 0.9.0](#limits-of-090).
+
+## 1. An AI assistant that builds and checks models
+
+Describe a building, a plant or a structure in words. The assistant plans on a scratch copy
+of the model with the same tools you use, runs the model checks on its draft, and shows a plan
+card, a 3D preview and a diff. Nothing reaches your model until you press **Apply**, and an
+applied plan is one undo step.
+
+- Generators for whole projects: houses, offices, hospitals, plants, lattice towers,
+  free-form massing, with furniture, services, site and drawing sets.
+- Bring your own provider: any compatible HTTP chat interface, or a server on your own
+  machine. Keys stay in the OS key store; a local-only mode keeps every request on your
+  network.
+- A built-in MCP server lets external AI clients use the same tools under the same Apply rule.
+
+The transmission tower in the gallery was generated this way, from one request.
+
+## 2. Quantities that flow into cost estimation
+
+The model is data first: every element carries its parameters and quantities, and they leave
+the editor in forms an estimating or ERP system can read.
+
+<p align="center">
+  <img src="docs/images/erp-link.svg" alt="Diagram: the editor publishes a revision package with element rows and quantities; the ERP turns it into a cost estimate, a schedule and procurement; a project brief from the ERP generates a model in the editor" width="100%">
+</p>
+
+Schedules and quantity take-off come straight from the model. The XLSX round trip exports
+parameters, lets you edit them in any spreadsheet, and imports them back as one undo step with
+a per-cell report.
+
+- **ERP link** (build feature `link`): `ddc gen --brief` turns a project brief from the ERP
+  into a model; `ddc publish` sends a model back as a revision package with element rows
+  (`elements.parquet`), quantities, a diff against the parent revision, sheets, IFC and 3D
+  geometry. The ERP prices the quantities; the editor never invents a cost.
+- Linked sessions open from a `.ddclink` file; the project token lives only in the OS key
+  store.
+
+<!-- placeholder for the owner: docs/images/erp-cost-table.png - the ERP cost view filled from a published revision (shot on the ERP side). -->
+
+## 3. In the browser, nothing to install
+
+The same editor is being built for the browser (WebAssembly, WebGL2): open a project from the
+ERP or a link, look at it, ask the assistant, and save a draft revision, with nothing to
+install. The browser build is in preview and is not part of this repository yet; the desktop
+editor below is the released one.
+
+<!-- placeholder for the owner: docs/images/browser-editor.png - the editor running in a browser tab (shot on the machine with the browser build). -->
+
+## Gallery
+
+Rendered by the editor itself; no third-party models.
+
+| | |
+|---|---|
+| ![60 m steel lattice transmission tower with three cross-arms, a cross-arm beam selected with its properties](docs/images/lattice-tower.png) | ![Fifteen-storey generated office block with windows on every facade and trees on its plot](docs/images/hero-office-tower.png) |
+| Transmission tower generated by the assistant: 2,235 elements. | Office block, 15 levels: 306 walls, 251 doors, 205 windows. |
+| ![Forty-storey generated residential tower in 3D](docs/images/tower-40-storeys.png) | ![Building section with grid bubbles, level markers, a dimension and cut walls with windows](docs/images/section.png) |
+| Tower, 41 levels: 1,841 walls, 80,312 m2 of floor area. | Section with grids, level markers and a dimension. |
+| ![Floor plan of an upper level with hatched walls and a tagged bedroom selected with its properties](docs/images/plan-level2.png) | ![Two-storey model in the dark theme with a bedroom selected and its area and perimeter shown](docs/images/3d-dark-theme.png) |
+| Plan with wall hatch and a room tag (22.04 m2). | Dark theme, room selected: area, perimeter, number. |
 
 ## Features
 
@@ -42,7 +101,7 @@ until you press Apply.
 
 **Structure and MEP**
 - Beams, columns, braces, structural walls and floors, footings, foundation slabs, and
-  reinforcement that follows its host.
+  reinforcement that follows its host; steel connections with plates and bolts.
 - Ducts, pipes, cable trays and conduits with fittings derived from the network; system
   checks and route proposals.
 
@@ -57,30 +116,13 @@ until you press Apply.
 **Scripting and automation**
 - JSON edit scripts with preview, and recording of actions into a script.
 - Sandboxed Lua geometry scripts (no files, network, clock or randomness).
-- The headless `ddc` command-line tool (`open`, `info`, `batch`, `run`).
-
-**AI assistant**
-- Describe a change in words. The assistant plans on a scratch copy of the model and shows a
-  plan card, a preview and a diff. An applied plan is one undo step.
-- Bring your own provider (a compatible HTTP chat interface or a local server). Keys go to the
-  OS key store; a local-only mode keeps requests on your computer and local network.
-- A built-in MCP server lets external agents use the same tools under the same Apply rule.
+- The headless `ddc` command-line tool (`open`, `info`, `batch`, `run`; `gen` and `publish`
+  with the ERP link).
 
 **Spreadsheets**
 - Round-trip element parameters through XLSX; an import is one undo step with a per-cell
   report.
 - Query elements and open them as an editable table.
-
-## Screenshots
-
-Generated by the editor itself (projects built by the assistant and built-in demo scenes; no
-third-party models).
-
-| | |
-|---|---|
-| ![Two-storey model in 3D with the properties panel](docs/images/3d-two-storeys.png) | ![Plan of Level 2 with room tag and hatched walls](docs/images/plan-level2.png) |
-| ![Vertical section with level markers and dimensions](docs/images/section.png) | ![Curtain wall with mullions and glazing panels](docs/images/curtain-wall-3d.png) |
-| ![40-storey tower with core, facade and openings in 3D](docs/images/tower-40-storeys.png) | ![Dark theme variant of the 3D view](docs/images/3d-dark-theme.png) |
 
 ## Install
 
@@ -127,7 +169,7 @@ ddc run project.ddc tower.lua --out tower.ddc --param height="40 m"
 | Windows 10/11, x86_64 | Supported; primary development platform; installer provided. |
 | Linux | Library crates and the headless `ddc` CLI (built and tested in CI). The editor window is not supported yet. |
 | macOS | Code paths exist; not regularly built or tested. |
-| Browser (wasm32) | Not available in this repository. |
+| Browser (wasm32) | Preview; the browser build is not part of this repository yet. |
 
 Details: [docs/BUILDING.md](docs/BUILDING.md).
 
