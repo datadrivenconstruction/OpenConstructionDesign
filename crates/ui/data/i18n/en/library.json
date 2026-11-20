@@ -51,5 +51,6 @@
  "library.ifc.tank": "Tank",
  "library.ifc.transport": "Transport element",
  "library.ifc.valve": "Valve",
- "library.ifc.waste_terminal": "Waste terminal"
+ "library.ifc.waste_terminal": "Waste terminal",
+ "library.ifc.medical": "Medical device"
 }

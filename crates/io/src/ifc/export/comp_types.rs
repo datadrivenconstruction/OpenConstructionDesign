@@ -51,6 +51,13 @@ pub fn type_class(occurrence: &str) -> Option<(&'static str, bool)> {
         "IFCLAMP" => ("IFCLAMPTYPE", false),
         "IFCELECTRICAPPLIANCE" => ("IFCELECTRICAPPLIANCETYPE", false),
         "IFCMEDICALDEVICE" => ("IFCMEDICALDEVICETYPE", false),
+        "IFCTRANSPORTELEMENT" => ("IFCTRANSPORTELEMENTTYPE", false),
+        "IFCPUMP" => ("IFCPUMPTYPE", false),
+        "IFCVALVE" => ("IFCVALVETYPE", false),
+        "IFCTANK" => ("IFCTANKTYPE", false),
+        "IFCHEATEXCHANGER" => ("IFCHEATEXCHANGERTYPE", false),
+        "IFCCOLUMN" => ("IFCCOLUMNTYPE", false),
+        "IFCBEAM" => ("IFCBEAMTYPE", false),
         "IFCSTAIR" => ("IFCSTAIRTYPE", false),
         "IFCPIPEFITTING" => ("IFCPIPEFITTINGTYPE", false),
         "IFCDUCTFITTING" => ("IFCDUCTFITTINGTYPE", false),
@@ -222,6 +229,7 @@ mod tests {
             assert!(type_class(&f.ifc.0).is_some(), "{}: {}", f.name, f.ifc.0);
         }
         assert_eq!(type_class("IfcFurniture"), Some(("IFCFURNITURETYPE", true)));
+        assert_eq!(type_class("IfcTransportElement"), Some(("IFCTRANSPORTELEMENTTYPE", false)));
         assert_eq!(type_class("IfcUnknownThing"), None);
     }
 

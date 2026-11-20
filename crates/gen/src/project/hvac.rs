@@ -245,11 +245,14 @@ pub fn air_ports(f: &GFixture) -> Vec<(&'static str, (f64, f64, f64))> {
 /// Each appliance with an air outlet (a cooker hood) ducted to the extract terminal of its
 /// room: it tees into the terminal's own branch where a level straight of the branch has room
 /// for the tee, so the terminal's neck stays a plain connector; up from the outlet to that
-/// straight's level, then across to it. Without such room it joins the neck.
+/// straight's level, then across to it, and the branch is split there as the mains are at
+/// their taps. Without such room it joins the neck.
 fn duct_outlets(p: &mut GProject) {
     use ddc_geom::math::{v3, V3};
     let mut ducts = vec![];
     let mut links = vec![];
+    // (branch duct, segment, tee point)
+    let mut cuts: Vec<(usize, usize, V3)> = vec![];
     for (k, st) in p.storeys.iter().enumerate() {
         let fx = &st.layout.fixtures;
         for (i, f) in fx.iter().enumerate() {
@@ -263,11 +266,13 @@ fn duct_outlets(p: &mut GProject) {
                 let Some(q) = neck else { continue };
                 // the terminal's own branch tells the air the room extracts
                 let z = st.elevation + q.2;
-                let branch = p
+                let bi = p
                     .hvac
                     .ducts
                     .iter()
-                    .find(|d| d.points.last().is_some_and(|e| (e.0 - q.0).hypot(e.1 - q.1) < svc::EPS && (e.2 - z).abs() < svc::EPS));
+                    .position(|d| d.points.last().is_some_and(|e| (e.0 - q.0).hypot(e.1 - q.1) < svc::EPS && (e.2 - z).abs() < svc::EPS))
+                    .filter(|b| !cuts.iter().any(|c| c.0 == *b));
+                let branch = bi.map(|b| &p.hvac.ducts[b]);
                 let flow = branch.map_or(0.0, |d| d.flow);
                 let sec = svc::duct_section((size, 0.0));
                 let r = |u| mep::default_bend_radius(&sec, u);
@@ -280,18 +285,20 @@ fn duct_outlets(p: &mut GProject) {
                     let m = mep::junction_leg(&bs).max(rb) + mep::junction_leg(&bs) + leg;
                     let pts: Vec<V3> = d.points.iter().map(|e| v3(e.0, e.1, e.2)).collect();
                     pts.windows(2)
-                        .filter(|w| (w[1].z - w[0].z).abs() < svc::EPS && (w[1] - w[0]).len() > 2.0 * m)
-                        .map(|w| {
+                        .enumerate()
+                        .filter(|(_, w)| (w[1].z - w[0].z).abs() < svc::EPS && (w[1] - w[0]).len() > 2.0 * m)
+                        .map(|(si, w)| {
                             let dir = (w[1] - w[0]).normalized();
                             let u = (from - w[0]).dot(dir);
                             let j = w[0] + dir * u.clamp(m, (w[1] - w[0]).len() - m);
-                            (j, dir, u - (j - w[0]).dot(dir))
+                            (j, dir, u - (j - w[0]).dot(dir), si)
                         })
                         .min_by(|a, b| (a.0 - from).len().total_cmp(&(b.0 - from).len()))
                 });
                 let mut pts: Vec<V3> = match tee {
                     // up to the straight's level, along it into its window, then square across
-                    Some((j, dir, off)) => {
+                    Some((j, dir, off, si)) => {
+                        cuts.push((bi.expect("a tee is on a branch"), si, j));
                         let up = v3(from.x, from.y, j.z);
                         vec![from, up, up - dir * off, j]
                     }
@@ -312,6 +319,18 @@ fn duct_outlets(p: &mut GProject) {
                 links.push(GAirLink { storey: k, fixture: i, connector: name, sys: AirSys::Extract, net: 0 });
             }
         }
+    }
+    // each tee splits its branch: the part up to the tee and the part on to the terminal
+    cuts.sort_by(|a, b| b.0.cmp(&a.0));
+    for (bi, si, j) in cuts {
+        let d = p.hvac.ducts[bi].clone();
+        let jt = (j.x, j.y, j.z);
+        let mut head: Vec<(f64, f64, f64)> = d.points[..=si].to_vec();
+        head.push(jt);
+        let mut tail = vec![jt];
+        tail.extend_from_slice(&d.points[si + 1..]);
+        p.hvac.ducts[bi].points = head;
+        p.hvac.ducts.insert(bi + 1, GDuct { points: tail, ..d });
     }
     p.hvac.ducts.extend(ducts);
     p.hvac.links.extend(links);

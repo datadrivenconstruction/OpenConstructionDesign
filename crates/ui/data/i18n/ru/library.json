@@ -51,5 +51,6 @@
  "library.ifc.tank": "Емкость",
  "library.ifc.transport": "Подъёмник",
  "library.ifc.valve": "Запорная арматура",
- "library.ifc.waste_terminal": "Сливной прибор"
+ "library.ifc.waste_terminal": "Сливной прибор",
+ "library.ifc.medical": "Медицинское оборудование"
 }

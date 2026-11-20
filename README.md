@@ -114,6 +114,50 @@ Transmission tower, 220 kV, built with the assistant's tools: 2,235 elements.
 
 </td>
 </tr>
+<tr>
+<td width="50%">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/stadium-dark.png">
+  <img src="docs/images/stadium-light.png" alt="Oval stadium bowl with precast terraces, a ring of columns and a roof canopy; one terrace unit selected with its volume" width="100%">
+</picture>
+
+Stadium bowl with roof canopy: 2,215 elements.
+
+</td>
+<td width="50%">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/gridshell-dark.png">
+  <img src="docs/images/gridshell-light.png" alt="Timber gridshell roof with glazed ends over a concrete base; a glulam lath selected with its properties" width="100%">
+</picture>
+
+Timber gridshell roof: 1,219 elements.
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/plant-dark.png">
+  <img src="docs/images/plant-light.png" alt="Process plant with two storage tanks, a pipe rack, process columns and a flare stack; a tank shell selected" width="100%">
+</picture>
+
+Process plant with tanks, pipe rack and flare: 2,048 elements.
+
+</td>
+<td width="50%">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/hall-dark.png">
+  <img src="docs/images/hall-light.png" alt="Steel portal frame logistics hall with purlins and wall cladding; a rafter selected with its length" width="100%">
+</picture>
+
+Logistics hall, steel portal frames: 394 elements.
+
+</td>
+</tr>
 </table>
 
 | | |

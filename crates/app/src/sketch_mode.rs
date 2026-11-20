@@ -1171,7 +1171,7 @@ mod tests {
 
     #[test]
     fn draw_closed_rectangle_with_line_chain_then_finish_is_one_undo() {
-        let mut ed = Editor::new_in_memory().unwrap();
+        let mut ed = Editor::new_as_app().unwrap();
         let st = ed
             .model
             .add_slab_type(
@@ -1224,7 +1224,7 @@ mod tests {
 
     #[test]
     fn pick_walls_with_offset_and_cancel_leaves_model_untouched() {
-        let mut ed = Editor::new_in_memory().unwrap();
+        let mut ed = Editor::new_as_app().unwrap();
         let walls = [
             (1, v2(0.0, 0.0), v2(6.0, 0.0)),
             (2, v2(6.0, 0.0), v2(6.0, 4.0)),
@@ -1325,7 +1325,7 @@ mod tests {
 
     #[test]
     fn finish_button_records_a_drawn_outline() {
-        let mut ed = Editor::new_in_memory().unwrap();
+        let mut ed = Editor::new_as_app().unwrap();
         let lvl = ed.level;
         begin_slab(
             &mut ed,

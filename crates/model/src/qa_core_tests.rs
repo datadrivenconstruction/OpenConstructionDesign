@@ -514,3 +514,26 @@ fn value_rule_kind() {
         assert_eq!(r.kind(), k);
     }
 }
+
+#[test]
+fn deleting_a_wall_takes_its_xlsx_record_and_undo_brings_it_back() {
+    use crate::xlsx_rec::KIND;
+    let mut m = Model::open(":memory:").unwrap();
+    let level = m.add_level("L1", 0.0).unwrap();
+    let wall_type = m
+        .add_wall_type("t", &[crate::LayerSpec { material: "m".into(), thickness: 0.2 }])
+        .unwrap();
+    let wall = m
+        .add_wall(&crate::WallSpec { a: (0.0, 0.0), b: (2.0, 0.0), level, base_offset: 0.0, height: 3.0, wall_type, offset0: None })
+        .unwrap();
+    let key = "C:/b/book.xlsx|Walls|fp|3";
+    m.set_prop(KIND, 0, key, Some((rusqlite::types::Value::Text(wall.to_string()), ""))).unwrap();
+    let count = |m: &Model| -> i64 {
+        m.sql().query_row("SELECT count(*) FROM prop WHERE kind=?1", [KIND], |r| r.get(0)).unwrap()
+    };
+    assert_eq!(count(&m), 1);
+    m.delete_walls(&[wall]).unwrap();
+    assert_eq!(count(&m), 0, "the record goes with its element, in the same step");
+    m.undo().unwrap();
+    assert_eq!(count(&m), 1, "undo restores both");
+}

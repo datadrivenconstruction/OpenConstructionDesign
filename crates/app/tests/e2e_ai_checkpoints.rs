@@ -93,20 +93,26 @@ fn since_only_new() {
     let r = results(
         &mut ed,
         vec![
+            tool("run_checks", json!({})),
+            tool("run_checks", json!({"rules": ["test.narrow_door"]})),
             tool("mark_checkpoint", json!({"name": "before"})),
             narrow_door_at(wall, 6.0),
             tool("run_checks", json!({"rules": ["test.narrow_door"], "since": "before"})),
             tool("run_checks", json!({"rules": ["test.narrow_door"]})),
         ],
     );
-    assert_eq!(r.len(), 4, "{r:?}");
+    assert_eq!(r.len(), 6, "{r:?}");
     assert!(r.iter().all(|x| !x.1), "{r:?}");
-    assert_eq!(r[0].0["findings"], 1, "the old narrow door stood at the mark: {}", r[0].0);
-    assert!(r[0].0["token"].as_str().is_some_and(|t| t.starts_with("c:")));
-    assert_eq!(r[2].0["total"], 1, "only the new door: {}", r[2].0);
-    assert_eq!(r[2].0["baseline"], "ledger");
-    assert_eq!(r[2].0["resolved"], json!([]));
-    assert_eq!(r[3].0["total"], 2, "the full run still lists both");
+    assert_eq!(r[1].0["total"], 1, "the old narrow door stood at the mark: {}", r[1].0);
+    // the mark keeps every finding of every rule then (built-in rules may see the door too)
+    let all = &r[0].0["total"];
+    assert!(all.as_u64().is_some_and(|n| n >= 1), "{}", r[0].0);
+    assert_eq!(&r[2].0["findings"], all, "the mark holds the whole run: {}", r[2].0);
+    assert!(r[2].0["token"].as_str().is_some_and(|t| t.starts_with("c:")));
+    assert_eq!(r[4].0["total"], 1, "only the new door: {}", r[4].0);
+    assert_eq!(r[4].0["baseline"], "ledger");
+    assert_eq!(r[4].0["resolved"], json!([]));
+    assert_eq!(r[5].0["total"], 2, "the full run still lists both");
 }
 
 #[test]

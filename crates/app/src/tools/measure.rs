@@ -32,6 +32,7 @@ pub struct DriveEdit {
     fresh: bool,
 }
 
+#[derive(Debug)]
 pub enum MeasureOut {
     Nothing,
     Done,
@@ -120,7 +121,7 @@ impl MeasureTool {
             })
             .min_by(|x, y| x.0.total_cmp(&y.0));
         let Some((_, id, v, at)) = best else { return false };
-        self.edit = Some(DriveEdit { id, text: crate::units::display_length(v, ed.tool.units), at, fresh: true });
+        self.edit = Some(DriveEdit { id, text: crate::units::format_length(v, ed.tool.units), at, fresh: true });
         true
     }
 
@@ -324,8 +325,9 @@ mod tests {
             o => panic!("{o:?}"),
         };
         let want = v0 + 0.5;
-        let txt = crate::units::display_length(want, ed.tool.units);
-        assert!(matches!(drive_text(&mut ed, id, &txt, MeasureSide::B), MeasureOut::Done));
+        let txt = crate::units::format_length(want, ed.tool.units);
+        let out = drive_text(&mut ed, id, &txt, MeasureSide::B);
+        assert!(matches!(out, MeasureOut::Done), "{out:?}");
         assert_eq!(ed.model.journal_len().unwrap(), before + 1, "one record");
         let now = match ed.model.measure_value(id).unwrap() {
             MeasureValue::Ok(x) => x,
@@ -358,7 +360,7 @@ mod tests {
         };
         let d = ed.model.add_measure(&spec).unwrap();
         let before = ed.model.journal_len().unwrap();
-        let txt = crate::units::display_length(5.0, ed.tool.units);
+        let txt = crate::units::format_length(5.0, ed.tool.units);
         assert!(matches!(drive_text(&mut ed, d, &txt, MeasureSide::B), MeasureOut::Refused(_)));
         assert_eq!(ed.model.journal_len().unwrap(), before, "nothing written");
     }
@@ -394,7 +396,7 @@ mod tests {
         let mut tool = MeasureTool::new(crate::edit3d::measure_saved::Mode::Clear);
         tool.cursor = at_label(&ed, id);
         assert!(tool.open_edit(&ed, 0.25));
-        tool.edit.as_mut().unwrap().text = crate::units::display_length(v0 + 0.4, ed.tool.units);
+        tool.edit.as_mut().unwrap().text = crate::units::format_length(v0 + 0.4, ed.tool.units);
         let ctx = egui::Context::default();
         let mut raw = egui::RawInput::default();
         raw.events.push(egui::Event::Key {
@@ -411,7 +413,7 @@ mod tests {
                 out = tool.edit_ui(ui, &mut ed, &to_s);
             });
         });
-        assert!(matches!(out, MeasureOut::Done), "field Enter drives");
+        assert!(matches!(out, MeasureOut::Done), "field Enter drives: {out:?}");
         assert!(tool.edit.is_none());
         match ed.model.measure_value(id).unwrap() {
             MeasureValue::Ok(x) => assert!((x - (v0 + 0.4)).abs() < 1e-3, "{x}"),

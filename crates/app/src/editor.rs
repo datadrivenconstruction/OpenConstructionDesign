@@ -364,6 +364,15 @@ impl Editor {
         Self::seeded(Model::open(":memory:")?)
     }
 
+    /// The editor as the app starts it: in Select (`EditorApp::new` does the same). The bare
+    /// `new_in_memory` keeps the wall tool armed; tests of app behaviour start from this.
+    #[cfg(test)]
+    pub(crate) fn new_as_app() -> Result<Self, ddc_model::Error> {
+        let mut e = Self::new_in_memory()?;
+        e.set_mode(Mode::Select);
+        Ok(e)
+    }
+
     /// Default level and wall types of a new project, named in the UI language of the moment;
     /// returns the level. Also used by the open worker, which builds a project before any
     /// editor sees it. Stored names are never renamed afterwards.
@@ -1982,7 +1991,9 @@ impl Editor {
     pub fn esc_leaves_tool(&self) -> bool {
         // an armed pick set is cancelled first (line_pick), the next Esc leaves the tool
         let armed = self.wall_mode() == Mode::PickLine && self.tool.lp.pick_chain;
-        self.tool_armed() && self.wall_idle() && !armed
+        // a model tool with points placed steps back one point first
+        let placing = self.model_tool().is_some_and(|t| !t.pts.is_empty());
+        self.tool_armed() && self.wall_idle() && !armed && !placing
     }
 
     pub fn set_mode(&mut self, m: Mode) {
@@ -2004,6 +2015,8 @@ impl Editor {
         self.tool.set_mode(m);
         if m != Mode::Select {
             self.selection.clear();
+            // a drawing tool replaces the pending roof-edge pick (it would win the scope)
+            crate::roof_edge_tools::reset();
         }
         crate::interact::Interaction::refresh(self);
     }

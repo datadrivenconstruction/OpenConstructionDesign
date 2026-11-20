@@ -11,6 +11,7 @@ use web_time::Instant;
 
 use ddc_io::xlsx;
 
+#[derive(Debug)]
 pub enum Outcome {
     Done,
     /// The book was locked: a refreshed copy was written beside it.

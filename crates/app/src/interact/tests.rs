@@ -10,10 +10,15 @@ use ddc_geom::{v2, V2};
 use ddc_model::refusal::{Refusal, RefusalCode};
 use ddc_ui::i18n::Lang;
 
-/// The editor as the app opens it: in Select (6e94564ba); the bare editor starts in the wall tool.
+/// The editor as the app opens it: in Select; the bare editor starts in the wall tool.
 fn editor() -> Editor {
-    let mut ed = Editor::new_in_memory().unwrap();
-    ed.set_mode(Mode::Select);
+    Editor::new_as_app().unwrap()
+}
+
+/// The editor with the wall session running (the wall tool armed).
+fn wall_editor() -> Editor {
+    let mut ed = editor();
+    ed.set_mode(Mode::Polyline);
     ed
 }
 
@@ -55,6 +60,8 @@ fn arm(ed: &mut Editor, k: u64) {
         3 => {
             ed.set_mode(Mode::Polyline);
             ed.tool.curtain = true;
+            // the app refreshes the interaction every frame
+            Interaction::refresh(ed);
         }
         4 => ed.start_opening(crate::opening_tool::OpeningType::door()),
         5 => ed.start_opening(crate::opening_tool::OpeningType::window()),
@@ -1418,6 +1425,7 @@ fn wall_session_carries_its_kind() {
 fn session_chain_draws_without_the_wall_mode() {
     use crate::wall_tool::{Chain, Rig};
     let mut t = Rig::new();
+    t.set_mode(Mode::Select);
     assert_eq!(t.mode, Mode::Select);
     let a = v2(0.0, 0.0);
     t.track_chain(v2(4.0, 0.0), Chain::of(&[a], 0.0, false));
@@ -1434,7 +1442,7 @@ fn session_chain_draws_without_the_wall_mode() {
 /// through their sessions and leave the wall's own mode at `Select`.
 #[test]
 fn tool_armed_is_the_session() {
-    let mut ed = editor();
+    let mut ed = wall_editor();
     assert!(ed.tool_armed() && sessions::arch::running(&ed), "opens with the wall session");
     let arms: [(&str, fn(&mut Editor)); 3] = [
         ("text", |ed| crate::annot_text::arm(ed, crate::annot_text::Kind::Text, Lang::En)),
@@ -1473,7 +1481,7 @@ fn engine_takes_the_draft() {
 /// out for its input), a new mode clears it, the session's end drops it.
 #[test]
 fn wall_session_owns_the_draft() {
-    let mut ed = editor();
+    let mut ed = wall_editor();
     ed.handle(Event::Click(v2(0.0, 0.0)));
     ed.handle(Event::Click(v2(4.0, 0.0)));
     let s = ed.ix.get::<sessions::arch::ArchSession>().expect("the wall session");

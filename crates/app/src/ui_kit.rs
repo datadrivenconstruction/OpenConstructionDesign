@@ -453,6 +453,23 @@ pub(crate) fn scroll_viewport_id() -> egui::Id {
     egui::Id::new("ddc.kit.scroll_viewport")
 }
 
+/// The viewport of a sideways scrolling area this pass (a wide table): the layout contract lets
+/// text run past its left and right edges, since scrolling brings it into view.
+pub fn mark_hscroll_viewport(ctx: &egui::Context, viewport: egui::Rect) {
+    #[cfg(test)]
+    ctx.data_mut(|d| {
+        d.get_temp_mut_or_default::<Vec<egui::Rect>>(hscroll_viewport_id()).push(viewport)
+    });
+    #[cfg(not(test))]
+    let _ = (ctx, viewport);
+}
+
+/// Where the sideways scroll viewports of the pass are kept for the layout contract.
+#[cfg(test)]
+pub(crate) fn hscroll_viewport_id() -> egui::Id {
+    egui::Id::new("ddc.kit.hscroll_viewport")
+}
+
 /// Empty panel state from `empty.<what>.{title,hint,action}` via the shared widget; true when
 /// the action button was clicked.
 pub fn empty_state(ui: &mut egui::Ui, what: &str) -> bool {

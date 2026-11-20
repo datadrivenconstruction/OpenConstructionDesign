@@ -111,12 +111,7 @@ pub fn see_hover(t: &Topic) -> &str {
 fn chip(ui: &mut egui::Ui, th: &Theme, p: &ChipParts) -> bool {
     let ctx = ui.ctx().clone();
     // the kit button shrinks to the rest of the row; its whole width makes the row wrap instead
-    let text = ui
-        .painter()
-        .layout_no_wrap(p.label.clone(), th.font(Role::Label), th.c("text.primary"))
-        .size()
-        .x;
-    let whole = text + theme::icon_size::SM + space::XS + 2.0 * space::SM;
+    let whole = Button::secondary(&p.label).small().icon_width(ui, th);
     // the button sits in its own scope, which never wraps: the row breaks here when the chip
     // and its keycaps would run past the room, or the window grows to the unbroken row
     let keys_w = if p.enabled && !p.keys.is_empty() {

@@ -3154,6 +3154,8 @@ mod tests {
         let t = m.add_wall_type("ext", &layers).unwrap();
         let pts = [(0.0, 0.0), (4.0, 2.0), (8.0, -1.0), (12.0, 1.0)];
         let mut s = ddc_model::SplineWallSpec::through(lv, t, &pts, 3.0).unwrap();
+        // a 2 cm fit, as callers set: at the 1 mm default this S axis folds into arcs under 0.8 m
+        s.tol = 0.02;
         if rational {
             let (x, y) = (v3(1.0, 0.0, 0.0), v3(0.0, 1.0, 0.0));
             s.axis = Curve::arc(v3(0.0, 0.0, 0.0), x, y, 5.0, 0.0, 1.5).unwrap();

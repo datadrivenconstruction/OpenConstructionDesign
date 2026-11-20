@@ -63,7 +63,17 @@ pub fn icon_button(
     let ic = Rect::from_center_size(rect.center(), Vec2::splat(d.icon));
     icons.paint(ui, &icon_name(icon, on), th.icon_px(), ic, icon_ink(ui, th, on));
     let (title, keys) = split_tip(tip);
+    icon_button_info(ui, &resp, title);
     rich_tooltip(resp, th, title, "", keys)
+}
+
+/// An icon button is a named button for assistive technology and the layout checks: its tip
+/// title is its name. Without a tip the caller names it.
+fn icon_button_info(ui: &Ui, resp: &egui::Response, title: &str) {
+    if !title.is_empty() {
+        let enabled = ui.is_enabled();
+        resp.widget_info(|| egui::WidgetInfo::labeled(egui::WidgetType::Button, enabled, title));
+    }
 }
 
 /// Icon colour of a button in `ui` (ICONS_V4.md roles): accent when on, ink otherwise. A
@@ -92,6 +102,7 @@ pub fn icon_button_danger(
     let ic = Rect::from_center_size(rect.center(), Vec2::splat(d.icon));
     icons.paint(ui, icon, th.icon_px(), ic, col);
     let (title, keys) = split_tip(tip);
+    icon_button_info(ui, &resp, title);
     rich_tooltip(resp, th, title, "", keys)
 }
 

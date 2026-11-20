@@ -301,6 +301,8 @@ pub struct EditorApp {
     /// Active workspace id (`classic`..`data`); switching changes nothing else.
     pub layout: String,
     layout_prev: Option<String>,
+    /// Plan centre and scale left behind per split shape, put back on return.
+    plan_by_shape: Vec<(String, ddc_geom::V2, f64)>,
     /// Settings page: 0 general, 1 interface.
     pub settings_page: u8,
     /// Show the first-run chooser even without a prefs file (screenshots).
@@ -540,6 +542,7 @@ impl EditorApp {
             discrete_gpu: discrete_gpu(rs),
             layout: "classic".into(),
             layout_prev: None,
+            plan_by_shape: Vec::new(),
             settings_page: 0,
             force_chooser: false,
         };
@@ -1676,9 +1679,19 @@ impl EditorApp {
         let shape = |a: &Self| std::mem::discriminant(&a.workspace().views);
         let before = shape(self);
         self.layout_prev = Some(std::mem::replace(&mut self.layout, id.to_string()));
-        // another split gives the plan another pane: frame the model again so nothing is cut off
+        // another split: the plan view of each shape is kept and put back; a shape not seen yet
+        // keeps the current view
         if shape(self) != before {
-            self.plan.fit(&self.ed);
+            let key = |d: std::mem::Discriminant<_>| format!("{d:?}");
+            let (old, new) = (key(before), key(shape(self)));
+            let cur = (self.plan.center, self.plan.scale);
+            match self.plan_by_shape.iter_mut().find(|e| e.0 == old) {
+                Some(e) => (e.1, e.2) = cur,
+                None => self.plan_by_shape.push((old, cur.0, cur.1)),
+            }
+            if let Some(e) = self.plan_by_shape.iter().find(|e| e.0 == new) {
+                (self.plan.center, self.plan.scale) = (e.1, e.2);
+            }
         }
         self.sh.palette.open = false;
         if self.prefs.layout != id {

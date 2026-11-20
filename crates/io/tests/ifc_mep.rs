@@ -286,7 +286,7 @@ fn routed_air_system_exports_flows_sizes_and_equipment() {
     r.insulation = 0.025;
     r.plenum = Some((2.7, 3.4));
     let p = m.mep_plan_net(&r).unwrap();
-    assert!(p.metrics.failed.is_empty());
+    assert!(p.metrics.failed.is_empty(), "{:?}", p.metrics.failed);
     m.mep_build(&p.build).unwrap();
 
     let t = export_ifc(&m).unwrap();

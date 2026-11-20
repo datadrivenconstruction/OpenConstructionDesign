@@ -74,6 +74,8 @@ pub(crate) struct Probe {
     pub user: Vec<String>,
     /// Viewports of the kit scroll areas (`ui_kit::mark_scroll_viewport`) the frame drew.
     pub scrolls: Vec<egui::Rect>,
+    /// Viewports of sideways scrolling areas (`ui_kit::mark_hscroll_viewport`).
+    pub hscrolls: Vec<egui::Rect>,
 }
 
 /// One painted galley of the last frame.
@@ -244,6 +246,7 @@ pub(crate) fn pass_on(
         };
         ctx.data_mut(|d| d.remove::<Vec<String>>(crate::ui_kit::user_text_id()));
         ctx.data_mut(|d| d.remove::<Vec<egui::Rect>>(crate::ui_kit::scroll_viewport_id()));
+        ctx.data_mut(|d| d.remove::<Vec<egui::Rect>>(crate::ui_kit::hscroll_viewport_id()));
         let out = ctx.run(raw, |ctx| {
             let _ = th.apply(ctx);
             frame(ctx);
@@ -255,6 +258,9 @@ pub(crate) fn pass_on(
             .unwrap_or_default();
         seen.scrolls = ctx
             .data(|d| d.get_temp::<Vec<egui::Rect>>(crate::ui_kit::scroll_viewport_id()))
+            .unwrap_or_default();
+        seen.hscrolls = ctx
+            .data(|d| d.get_temp::<Vec<egui::Rect>>(crate::ui_kit::hscroll_viewport_id()))
             .unwrap_or_default();
         seen.inner = egui::AreaState::load(ctx, id).map(|a| {
             let r = a.rect();
@@ -527,7 +533,16 @@ pub(crate) fn row_faults(p: &Probe, all_text: bool) -> Vec<String> {
             field && f.rect.expand(1.0).contains(c)
         });
         let drawn = p.canvas.iter().any(|v| v.contains(c) && l.view.contains_rect(v.shrink(1.0)));
-        typed || drawn
+        // a wide table scrolls sideways: text cut at the side of its viewport scrolls into view
+        // (the clip less egui's margin is what lines up with the viewport)
+        let (v, k) = (l.view, l.clip);
+        let wide = p.hscrolls.iter().any(|h| {
+            let within = k.top() >= h.top() - 1.0 && k.bottom() <= h.bottom() + 1.0;
+            let at_left = l.rect.left() < v.left() - 1.0 && (k.left() - h.left()).abs() <= 1.0;
+            let at_right = l.rect.right() > v.right() + 1.0 && (k.right() - h.right()).abs() <= 1.0;
+            within && (at_left || at_right)
+        });
+        typed || drawn || wide
     };
     for l in &p.lines {
         let number = ddc_ui::widgets::form::is_numeric_text(&l.text);
@@ -2028,6 +2043,33 @@ fn nested_clip_hides_a_row_only_when_it_scrolls() {
     assert!(!cut(&p), "a row scrolled out of a recorded viewport was reported");
 }
 
+/// A number cut at the side of its clip is a fault, unless the clip is the side of a recorded
+/// sideways scrolling viewport; a vertical-only viewport does not excuse it, nor does a cut
+/// on the side the viewport does not end on.
+#[test]
+fn number_cut_sideways_is_excused_only_by_a_sideways_scroll() {
+    let r = |x0: f32, y0: f32, x1: f32, y1: f32| egui::Rect::from_min_max((x0, y0).into(), (x1, y1).into());
+    let view = r(100.0, 50.0, 400.0, 200.0);
+    let line = |x0: f32, x1: f32| Line {
+        text: "12.00".into(),
+        rect: r(x0, 60.0, x1, 76.0),
+        rows: 1,
+        clip: view,
+        view,
+        mid: 68.0,
+        top: None,
+    };
+    let cut = |p: &Probe| row_faults(p, false).iter().any(|v| v.contains("cut sideways"));
+    let mut p = Probe { lines: vec![line(380.0, 420.0)], ..Probe::default() };
+    assert!(cut(&p), "a number past the clip was not reported");
+    p.scrolls = vec![view];
+    assert!(cut(&p), "a vertical viewport excused a sideways cut");
+    p.hscrolls = vec![r(100.0, 40.0, 400.0, 210.0)];
+    assert!(!cut(&p), "a number at the side of a wide table was reported");
+    p.hscrolls = vec![r(100.0, 40.0, 500.0, 210.0)];
+    assert!(cut(&p), "a cut short of the viewport side was excused");
+}
+
 #[test]
 fn project_parameters_en() {
     project_parameters(false);
@@ -2860,7 +2902,8 @@ fn data_window(lang: Lang, which: &str) {
     let key = if which == "info" { "data_export.info" } else { "data_export.purge" };
     let mut app = app_neutral(lang);
     crate::data_ui::open_for_layout(&mut app, which);
-    let p = probe_id(egui::Id::new(format!("ddc.{key}")), |ctx| {
+    let win = if which == "info" { "ddc.f7.info" } else { "ddc.f7.purge" };
+    let p = probe_id(egui::Id::new(win), |ctx| {
         crate::data_ui::frame(&mut app, ctx)
     });
     let tag = format!("{key} {which} {lang:?}");
@@ -2881,6 +2924,7 @@ fn data_window(lang: Lang, which: &str) {
         ctl_top: vec![],
         user: vec![],
         scrolls: vec![],
+        hscrolls: vec![],
     };
     assert_language(&tag, &chrome, lang);
     // footer: the quiet way out is always there, named in the dialog's language
@@ -4017,8 +4061,12 @@ fn ribbon_collapsed_menus(lang: Lang) {
                 let _ = pass_on(&ctx, &mut dth, id, screen, vec![down], &mut frame);
                 let _ = pass_on(&ctx, &mut dth, id, screen, vec![up], &mut frame);
                 let open = pass_on(&ctx, &mut dth, id, screen, vec![], &mut frame);
+                // the menu opens under the collapsed button, which spans the band without the
+                // title strip: its rows start below the button, every ribbon control above it
+                let below = head.rect.bottom();
+                assert!(below <= band_end + EPS, "{tag}: group button {:?} below the band", head.rect);
                 let rows: Vec<&Control> =
-                    open.controls.iter().filter(|c| c.rect.top() >= band_end).collect();
+                    open.controls.iter().filter(|c| c.rect.top() >= below - EPS).collect();
                 for l in &want {
                     assert!(
                         // the row name is the label, then " (keys)" or " - reason" as its suffix
@@ -4045,10 +4093,13 @@ fn ribbon_collapsed_menus(lang: Lang) {
                 }
                 let _ = pass_on(&ctx, &mut dth, id, screen, vec![key(egui::Key::Escape)], &mut frame);
                 let shut = pass_on(&ctx, &mut dth, id, screen, vec![], &mut frame);
-                assert!(
-                    !shut.controls.iter().any(|c| c.rect.top() >= band_end),
-                    "{tag}: Esc left the menu open"
-                );
+                let left: Vec<_> = shut
+                    .controls
+                    .iter()
+                    .filter(|c| c.rect.top() >= below - EPS)
+                    .map(|c| (&c.label, c.rect))
+                    .collect();
+                assert!(left.is_empty(), "{tag}: Esc left the menu open: head {:?}, {left:?}", head.rect);
                 clicked += 1;
             }
         }

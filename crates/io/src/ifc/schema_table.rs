@@ -2792,6 +2792,14 @@ pub(super) const CLASSES: &[(&str, [Option<&str>; 3])] = &[
         Some("s;?r;?s;?s;?s;?l(r);?l(r);?s;?s;e=CHOPPER|COMBINED|CURRENT|FREQUENCY|INVERTE\
             R|NOTDEFINED|RECTIFIER|USERDEFINED|VOLTAGE"),
     ]),
+    ("IFCTRANSPORTELEMENT", [
+        Some("s;r;?s;?s;?s;?r;?r;?s;?e=ELEVATOR|ESCALATOR|MOVINGWALKWAY|NOTDEFINED|USERDEF\
+            INED;?n;?u"),
+        Some("s;?r;?s;?s;?s;?r;?r;?s;?e=CRANEWAY|ELEVATOR|ESCALATOR|LIFTINGGEAR|MOVINGWALK\
+            WAY|NOTDEFINED|USERDEFINED"),
+        Some("s;?r;?s;?s;?s;?r;?r;?s;?e=CRANEWAY|ELEVATOR|ESCALATOR|HAULINGGEAR|LIFTINGGEA\
+            R|MOVINGWALKWAY|NOTDEFINED|USERDEFINED"),
+    ]),
     ("IFCTRANSPORTELEMENTTYPE", [
         Some("s;r;?s;?s;?s;?l(r);?l(r);?s;?s;e=ELEVATOR|ESCALATOR|MOVINGWALKWAY|NOTDEFINED\
             |USERDEFINED"),

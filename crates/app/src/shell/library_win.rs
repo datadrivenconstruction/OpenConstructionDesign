@@ -169,6 +169,7 @@ pub fn ifc_label(cat: &Catalog, class: &str) -> String {
         "IfcTransportElement" => "library.ifc.transport",
         "IfcValve" => "library.ifc.valve",
         "IfcWasteTerminal" => "library.ifc.waste_terminal",
+        "IfcMedicalDevice" => "library.ifc.medical",
         other => return other.to_string(),
     };
     cat.t(key)

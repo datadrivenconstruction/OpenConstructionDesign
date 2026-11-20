@@ -660,7 +660,8 @@ fn header(ui: &mut egui::Ui, th: &ddc_ui::Theme, i: usize, head: Rect, many: boo
         |ui| {
             ui.set_clip_rect(head);
             ui.spacing_mut().item_spacing.x = space::XS;
-            let glyphs = 2.0 * (th.d().control + space::XS);
+            // two icon buttons (control + 4 square each) and the gaps before and between them
+            let glyphs = 2.0 * (th.d().control + 4.0) + 2.0 * space::XS;
             let w = (inner.width() - glyphs).clamp(th.d().control, 240.0);
             let refs: Vec<&str> = labels.iter().map(|s| s.as_str()).collect();
             let mut sel = srcs.iter().position(|s| *s == cur).unwrap_or(srcs.len());

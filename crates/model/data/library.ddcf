@@ -1466,7 +1466,7 @@ ifc IfcGeographicElement NOTDEFINED
 param Length length type 3000mm
 param Width length type 600mm
 param Height length type 1200mm
-param Scale number type 1
+param Scale number instance 1
 param Leaves material type "Foliage Green"
 type "Clipped 1200" Height=1200mm
 type "Low 600" Height=600mm, Width=500mm
@@ -1513,7 +1513,7 @@ param Trunk length type 30mm
 param Clear length type 100mm
 param Leaf number type 1
 param Seed int type 1
-param Scale number type 1
+param Scale number instance 1
 param Bark material type "Bark Brown"
 param Leaves material type "Foliage Green"
 type "Round 1" Form=0, Height=1100mm, Crown=1300mm, Seed=11
@@ -1983,7 +1983,7 @@ connector Inlet pipe sprinkler at(0, 0, Stem) dir(0, 0, 1) size(15mm)
 family Fire Pump
 category equipment
 host floor
-ifc IfcPump PUMP
+ifc IfcPump ENDSUCTION
 param Length length type 1600mm
 param Width length type 700mm
 param Height length type 800mm

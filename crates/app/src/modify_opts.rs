@@ -576,7 +576,7 @@ mod tests {
         let from = src.find("fn options(").expect("options");
         let to = src.find("fn filter_window(").expect("filter_window");
         let bar = &src[from..to];
-        let at = src.find("ux48f banner").expect("banner");
+        let at = src.find("// banner: view frame").expect("banner");
         let banner = &src[at..from];
         for part in [bar, banner] {
             for bad in &RAW[..6] {

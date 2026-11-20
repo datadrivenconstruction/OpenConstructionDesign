@@ -6,6 +6,7 @@ use ddc_ui::i18n::Lang;
 
 /// Leading words of built-in type names, longest first: «Three gang 9 in», «Floor 650».
 const TYPE_WORDS: &[&str] = &[
+    "Quick connect",
     "Wall-hung",
     "Three gang",
     "Two gang",
@@ -121,8 +122,13 @@ mod tests {
         }
         for f in ddc_model::library().unwrap() {
             for t in &f.types {
+                // an imperial variant carries its unit: "FC-32in"
                 let first = t.name.split(' ').next().unwrap_or("");
-                let plain = first.chars().next().is_some_and(|c| c.is_ascii_digit())
+                let first = first.strip_suffix("in").filter(|s| s.ends_with(|c: char| c.is_ascii_digit())).unwrap_or(first);
+                // a standard's acronym ("DISS") is a code like a size, not a word
+                let acronym = first.len() >= 2 && first.chars().all(|c| c.is_ascii_uppercase());
+                let plain = acronym
+                    || first.chars().next().is_some_and(|c| c.is_ascii_digit())
                     || first.starts_with(|c: char| c.is_ascii_uppercase())
                         && first.chars().any(|c| c.is_ascii_digit())
                         && first.chars().skip(1).all(|c| c.is_ascii_uppercase() || c.is_ascii_digit() || c == '.' || c == '-');

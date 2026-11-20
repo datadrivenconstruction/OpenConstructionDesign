@@ -1,4 +1,5 @@
 {
+ "fam.name.insulator_string": "Insulator String",
  "gen.group.steel": "Steel lattice",
  "gen.rule.steel.bridge.crowd_load.desc": "Uniform crowd load on a footbridge deck for the sag estimate.",
  "gen.rule.steel.bridge.crowd_load.title": "Crowd load",

@@ -3,7 +3,6 @@
  "fam.name.glulam_beam": "Glulam Beam",
  "fam.name.glulam_column": "Glulam Column",
  "gen.group.timber": "Timber structure",
- "gen.group.structure": "Structure",
  "gen.rule.timber.beam_span_max.desc": "Longest span of a glulam beam between two columns.",
  "gen.rule.timber.beam_span_max.title": "Beam span limit",
  "gen.rule.timber.panel_w.desc": "Widest cross-laminated floor panel; a joint between each.",

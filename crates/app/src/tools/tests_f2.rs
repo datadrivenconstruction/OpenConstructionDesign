@@ -159,7 +159,7 @@ fn struct_slab_uses_own_types() {
 
 #[test]
 fn floor_escape_steps_back_one_point() {
-    let mut e = ed();
+    let mut e = Editor::new_as_app().unwrap();
     arm(&mut e, Kind::Floor, Lang::En);
     click(&mut e, 0.0, 0.0);
     click(&mut e, 5.0, 0.0);

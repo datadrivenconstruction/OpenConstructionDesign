@@ -1254,3 +1254,29 @@ fn a_label_longer_than_the_line_wraps_instead_of_an_ellipsis() {
     assert!(text.contains(long), "{text:?}");
     assert!(!text.contains('\u{2026}'), "{text:?}");
 }
+
+/// An icon button with a tip is a button named by the tip title (keys left out), plain,
+/// danger and glyph alike; a disabled one stays in the tree as a disabled button.
+#[test]
+fn icon_buttons_are_named_buttons() {
+    let (ctx, th) = ready(Mode::Light, Density::Compact);
+    ctx.enable_accesskit();
+    let mut icons = crate::icons::IconCache::default();
+    let mut out = None;
+    for _ in 0..2 {
+        out = Some(ctx.run(Default::default(), |c| {
+            egui::CentralPanel::default().show(c, |ui| {
+                icon_button(ui, &mut icons, &th, "close", false, "Close  \u{b7}  Esc");
+                icon_button_danger(ui, &mut icons, &th, "close", "Remove");
+                glyph_button(ui, "tile", false, "Split");
+            });
+        }));
+    }
+    let nodes = out.unwrap().platform_output.accesskit_update.expect("tree").nodes;
+    for name in ["Close", "Remove", "Split"] {
+        let n = nodes.iter().find(|(_, n)| n.label() == Some(name));
+        let n = n.unwrap_or_else(|| panic!("no node named {name}")).1.clone();
+        assert_eq!(n.role(), egui::accesskit::Role::Button, "{name}");
+        assert_eq!(n.is_disabled(), name == "Split", "{name}");
+    }
+}

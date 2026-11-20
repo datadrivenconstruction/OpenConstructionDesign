@@ -739,6 +739,18 @@ pub fn window(ctx: &egui::Context, ed: &mut Editor, ru: bool) {
 fn dates_section(ui: &mut egui::Ui, th: &ddc_ui::Theme, st: &mut WinState, ed: &mut Editor, phases: &[Phase], ru: bool) {
     let tr = |k: &'static str| crate::tr_str(ru, k);
     kit::section_title(ui, tr("phui.dates"));
+    // the kit width is the frame: the hint needs its own width plus the field padding
+    let ink = egui::Color32::PLACEHOLDER;
+    let hint_w = ui.painter().layout_no_wrap("YYYY-MM-DD".into(), th.font(Role::Body), ink).size().x;
+    let field_w = (hint_w + 2.0 * th.d().pad_x).ceil().max(92.0);
+    // one name column as wide as the longest name that fits beside both fields: the fields align
+    let gap = ui.spacing().item_spacing.x;
+    let widest = phases
+        .iter()
+        .map(|p| ui.painter().layout_no_wrap(label(p, ru), th.font(Role::Body), ink).size().x)
+        .fold(0.0_f32, f32::max);
+    let room = ui.available_width() - 2.0 * (field_w + gap) - gap;
+    let name_w = widest.ceil().min(room.max(th.d().control * 4.0));
     for p in phases {
         let id = p.id;
         let shown = ed.model.phase_dates(id).ok().flatten();
@@ -747,12 +759,8 @@ fn dates_section(ui: &mut egui::Ui, th: &ddc_ui::Theme, st: &mut WinState, ed: &
         });
         let mut done = false;
         let name = label(p, ru);
-        // the kit width is the frame: the hint needs its own width plus the field padding
-        let ink = egui::Color32::PLACEHOLDER;
-        let hint_w = ui.painter().layout_no_wrap("YYYY-MM-DD".into(), th.font(Role::Body), ink).size().x;
-        let field_w = (hint_w + 2.0 * th.d().pad_x).ceil().max(92.0);
         widgets::form::inline(ui, th, |ui| {
-            widgets::form::label(ui, th, &name, th.d().control * 4.0);
+            kit::fixed_cell(ui, name_w, |ui| widgets::form::label(ui, th, &name, name_w));
             for (k, t) in [&mut buf.0, &mut buf.1].into_iter().enumerate() {
                 let o = TextField::new(t)
                     .labelled_by(egui::Id::new(("phui.dates.lbl", id, k)), &name)

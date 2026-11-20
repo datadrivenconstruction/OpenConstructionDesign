@@ -265,6 +265,70 @@ fn component_types_with_property_sets_and_classification_round_trip() {
     assert!(line_of(&old, "IFCCLASSIFICATIONREFERENCE").iter().all(|l| l.ends_with(");") && l.matches(',').count() == 3));
 }
 
+/// Library families of lift, pump, valve, tank, heat exchanger, column and beam classes go with
+/// type objects of their own class and valid predefined types. The lift is valid in IFC2X3 too,
+/// which has no LIFTINGGEAR: its type there is NOTDEFINED.
+#[test]
+fn equipment_and_lift_families_export_their_own_types() {
+    let mut m = Model::open(":memory:").unwrap();
+    let lv = m.add_level("L1", 0.0).unwrap();
+    let cases = [
+        ("Fire Pump", "IFCPUMPTYPE"),
+        ("Centrifugal Pump", "IFCPUMPTYPE"),
+        ("Gate Valve", "IFCVALVETYPE"),
+        ("Pressure Vessel", "IFCTANKTYPE"),
+        ("Heat Exchanger", "IFCHEATEXCHANGERTYPE"),
+        ("Glulam Column", "IFCCOLUMNTYPE"),
+        ("Glulam Beam", "IFCBEAMTYPE"),
+    ];
+    let mut specs = vec![];
+    for (k, (fam, _)) in cases.iter().enumerate() {
+        let f = m.load_library_family(fam).unwrap();
+        specs.push(CompSpec::at(lv, m.comp_types(f).unwrap()[0].0, 3.0 * k as f64, 5.0));
+    }
+    m.add_components(&specs).unwrap();
+    let text = export_ifc(&m).unwrap();
+    let rep = ddc_io::ifc::validate_ifc(text.as_bytes());
+    assert!(rep.is_clean(), "{:?}", rep.errors);
+    for ty in ["IFCVALVETYPE", "IFCTANKTYPE", "IFCHEATEXCHANGERTYPE", "IFCCOLUMNTYPE", "IFCBEAMTYPE"] {
+        assert_eq!(line_of(&text, ty).len(), 1, "{ty}");
+    }
+    assert_eq!(line_of(&text, "IFCPUMPTYPE").len(), 2);
+    assert_eq!(count(&text, "IFCBUILDINGELEMENTPROXYTYPE"), 0);
+    assert_eq!(count(&text, "IFCRELDEFINESBYTYPE"), cases.len());
+
+    let mut m = Model::open(":memory:").unwrap();
+    let lv = m.add_level("L1", 0.0).unwrap();
+    let f = m.load_library_family("Platform Lift").unwrap();
+    let t = m.comp_types(f).unwrap()[0].0;
+    m.add_components(&[CompSpec::at(lv, t, 1.0, 1.0)]).unwrap();
+    let text = export_ifc(&m).unwrap();
+    let rep = ddc_io::ifc::validate_ifc(text.as_bytes());
+    assert!(rep.is_clean(), "{:?}", rep.errors);
+    let ty = line_of(&text, "IFCTRANSPORTELEMENTTYPE");
+    assert_eq!(ty.len(), 1, "{ty:?}");
+    assert!(ty[0].ends_with(",.LIFTINGGEAR.);"), "{ty:?}");
+    assert_eq!(count(&text, "IFCBUILDINGELEMENTPROXYTYPE"), 0);
+    assert_eq!(count(&text, "IFCRELDEFINESBYTYPE"), 1);
+    let (old, _) = ddc_io::ifc::export_ifc_with(
+        &m,
+        &ddc_io::ifc::IfcOptions {
+            schema: ddc_io::ifc::IfcSchema::Ifc2x3,
+            timestamp: Some("2026-01-01T00:00:00".into()),
+            ..Default::default()
+        },
+    )
+    .unwrap();
+    let rep = ddc_io::ifc::validate_ifc(old.as_bytes());
+    assert!(rep.is_clean(), "{:?}", rep.errors);
+    let ty = line_of(&old, "IFCTRANSPORTELEMENTTYPE");
+    assert_eq!(ty.len(), 1, "{ty:?}");
+    assert!(ty[0].ends_with(",.NOTDEFINED.);"), "{ty:?}");
+    let occ = line_of(&old, "IFCTRANSPORTELEMENT");
+    assert_eq!(occ.len(), 1, "{occ:?}");
+    assert!(occ[0].ends_with(",.NOTDEFINED.,$,$);"), "{occ:?}");
+}
+
 /// The planting set is read from the family's own `plant` solid, whatever its parameters are called.
 #[test]
 fn a_plant_family_exports_its_planting_values_by_any_parameter_names() {

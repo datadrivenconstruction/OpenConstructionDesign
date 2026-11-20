@@ -356,19 +356,37 @@ fn strip_ui(
         .order(ddc_ui::z::Z::Canvas.order())
         .show(ctx, |ui| {
             crate::ui_kit::banner::banner(ui, &th, Tone::Warning, |ui| {
-                ui.set_width(width - 2.0 * space::MD);
-                let text = match item {
-                    Item::Changed { .. } => cat.tf("src.watch.changed", &[("name", name)]),
-                    Item::Missing => cat.tf("src.watch.missing", &[("name", name)]),
-                };
-                ui.horizontal(|ui| {
-                    // the first widget lands at the far right: close glyph, then the primary
-                    ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
-                        if list.iter().any(|(k, _)| *k == "src.watch.dismiss")
-                            && widgets::close_button(ui, &cat.t("src.watch.dismiss")).clicked()
-                        {
+                // the banner's margins and its icon come on top of this width
+                let inner = width - 4.0 * space::MD - ddc_ui::theme::icon_size::SM as f32;
+                // the banner lays its icon and content side by side: the rows stack in one column
+                ui.vertical(|ui| {
+                    ui.set_width(inner);
+                    ui.set_max_width(inner);
+                    let text = match item {
+                        Item::Changed { .. } => cat.tf("src.watch.changed", &[("name", name)]),
+                        Item::Missing => cat.tf("src.watch.missing", &[("name", name)]),
+                    };
+                    // the text row (close glyph at the far right), then the actions wrap under it:
+                    // three long labels do not fit one row of a narrow window
+                    ui.horizontal(|ui| {
+                        // the label gets a fixed cell so a long name is elided, never widening the strip
+                        let closable = list.iter().any(|(k, _)| *k == "src.watch.dismiss");
+                        let gap = ui.spacing().item_spacing.x;
+                        let close_w = if closable { th.d().control + gap } else { 0.0 };
+                        let label_w = (inner - close_w).max(0.0);
+                        ui.allocate_ui_with_layout(
+                            egui::vec2(label_w, th.d().control),
+                            egui::Layout::left_to_right(egui::Align::Center),
+                            |ui| {
+                                ui.set_max_width(label_w);
+                                widgets::elided_label(ui, &text, th.font(Role::Body), th.sem().text_primary);
+                            },
+                        );
+                        if closable && widgets::close_button(ui, &cat.t("src.watch.dismiss")).clicked() {
                             act = act_for("src.watch.dismiss", source, item);
                         }
+                    });
+                    ui.horizontal_wrapped(|ui| {
                         for (key, tone) in list.iter().filter(|(k, _)| *k != "src.watch.dismiss") {
                             let label = cat.t(key);
                             let r = if *tone == Tone::Accent {
@@ -381,17 +399,14 @@ fn strip_ui(
                                 act = act_for(key, source, item);
                             }
                         }
-                        ui.with_layout(egui::Layout::left_to_right(egui::Align::Center), |ui| {
-                            widgets::elided_label(ui, &text, th.font(Role::Body), th.sem().text_primary);
-                        });
                     });
+                    if more > 0 {
+                        ui.label(
+                            th.rich(Role::Caption, &cat.tf("src.watch.more", &[("n", &more.to_string())]))
+                                .color(th.sem().text_secondary),
+                        );
+                    }
                 });
-                if more > 0 {
-                    ui.label(
-                        th.rich(Role::Caption, &cat.tf("src.watch.more", &[("n", &more.to_string())]))
-                            .color(th.sem().text_secondary),
-                    );
-                }
             });
         });
     act

@@ -697,6 +697,13 @@ fn body(ui: &mut egui::Ui, c: &Catalog, th: &Theme, st: &mut State, acts: &mut V
     );
     ui.add_space(space::XS);
     ui.columns(2, |cols| {
+        // a vertical scroll area clips to its parent's sides: each column keeps to its own,
+        // so neither list nor detail paints into the other
+        for col in cols.iter_mut() {
+            let r = col.max_rect();
+            let clip = col.clip_rect();
+            col.shrink_clip_rect(egui::Rect::from_x_y_ranges(r.x_range(), clip.y_range()));
+        }
         list(&mut cols[0], c, th, st, want, acts);
         detail(&mut cols[1], c, th, st, acts);
     });

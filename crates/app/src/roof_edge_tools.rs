@@ -891,7 +891,7 @@ pub(crate) mod tests {
 
     #[test]
     fn pending_dropped_on_level_tool_undo_and_missing_target() {
-        let mut ed = Editor::new_in_memory().unwrap();
+        let mut ed = Editor::new_as_app().unwrap();
         let l = ed.level;
         set(Pending::Skylight, l + 1000);
         assert!(!handle(&mut ed, Event::Click(v2(0.0, 0.0))), "other level");

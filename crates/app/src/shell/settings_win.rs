@@ -673,13 +673,12 @@ fn language(app: &mut EditorApp, ui: &mut egui::Ui, f: &mut Form, out: &mut Vec<
         // "auto" plus all 45 locales, each named in its own language
         let mut names = vec![c.t("settings.lang.auto")];
         names.extend(Lang::ALL.iter().map(|l| l.native_name().to_string()));
-        let refs: Vec<&str> = names.iter().map(String::as_str).collect();
         let mut sel = Lang::ALL
             .iter()
             .position(|l| l.code() == p.lang)
             .map_or(0, |i| i + 1);
         let was = sel;
-        widgets::field::dropdown(ui, th, "settings.lang.pick", &mut sel, &refs, None);
+        drop_down(ui, th, "settings.lang.pick", &c.t(LANG.0), &mut sel, &names);
         if sel != was {
             p.lang = match sel {
                 0 => "auto".to_string(),

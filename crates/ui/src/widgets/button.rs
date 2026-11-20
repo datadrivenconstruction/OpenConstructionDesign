@@ -178,6 +178,9 @@ impl<'a> IconButton<'a> {
     }
 }
 
+/// Room a leading icon takes in a text button: the glyph and its gap to the label.
+const ICON_W: f32 = icon_size::SM + space::SM;
+
 pub struct Button<'a> {
     label: &'a str,
     variant: Variant,
@@ -255,6 +258,12 @@ impl<'a> Button<'a> {
         (text_w + 2.0 * pad).max(self.min_w)
     }
 
+    /// Width of the button with a leading icon, as `show_icon` paints it.
+    pub fn icon_width(&self, ui: &Ui, th: &Theme) -> f32 {
+        let (text_w, pad) = self.text_w(ui, th);
+        (text_w + ICON_W + 2.0 * pad).max(self.min_w)
+    }
+
     /// The label's width on one line and the side padding.
     fn text_w(&self, ui: &Ui, th: &Theme) -> (f32, f32) {
         let font = th.font(Role::Label);
@@ -272,16 +281,9 @@ impl<'a> Button<'a> {
     /// For a caller that draws the button inside a child Ui (a disabled scope): the child starts
     /// a fresh row and cannot move its parent on, so the parent breaks the row first.
     pub fn break_row(&self, ui: &mut Ui, th: &Theme, icon: bool) {
-        let small = self.size == ControlSize::Small;
-        let font = th.font(if small { Role::Label } else { Role::Body });
-        let pad = if small { space::SM } else { space::MD };
-        let text_w = ui
-            .painter()
-            .layout_no_wrap(self.label.to_owned(), font, th.sem().text_primary)
-            .size()
-            .x;
-        let icon_w = if icon { icon_size::SM + space::XS } else { 0.0 };
-        self.break_row_for(ui, text_w + icon_w + 2.0 * pad);
+        // measured as paint measures it, or a row keeps a button that then runs past its end
+        let want = if icon { self.icon_width(ui, th) } else { self.width(ui, th) };
+        self.break_row_for(ui, want);
     }
 
     /// A button that does not fit the rest of a wrapping row's line goes to the next line
@@ -309,11 +311,7 @@ impl<'a> Button<'a> {
         let font = th.font(Role::Label);
         let h = th.control_h(self.size);
         let (text_w, pad) = self.text_w(ui, th);
-        let icon_w = if icon.is_some() {
-            icon_size::SM + space::SM
-        } else {
-            0.0
-        };
+        let icon_w = if icon.is_some() { ICON_W } else { 0.0 };
         let want = text_w + icon_w + 2.0 * pad;
         // a wrapping row hands a button that does not fit the rest of the line to the next one
         // instead of squeezing it
@@ -534,5 +532,42 @@ mod tests {
         let s = sem(false);
         assert!(colors(s, Variant::Danger, Visual::Rest).fill != colors(s, Variant::Primary, Visual::Rest).fill);
         assert_eq!(colors(s, Variant::DangerText, Visual::Rest).fill, Color32::TRANSPARENT);
+    }
+
+    /// An icon button paints exactly `icon_width` wide, and `break_row` (the caller drawing it
+    /// in a disabled scope) moves it to the next line when the rest of the row is a little short.
+    #[test]
+    fn icon_button_width_is_what_the_row_measures() {
+        let mut th = Theme::new(Mode::Light, Density::Compact);
+        let ctx = egui::Context::default();
+        let _ = crate::theme::install_fonts(&ctx);
+        let mut icons = IconCache::default();
+        let (mut want, mut got, mut edge) = (0.0, Rect::NOTHING, 0.0);
+        for _ in 0..2 {
+            let _ = ctx.run(egui::RawInput::default(), |ctx| {
+                let _ = th.apply(ctx);
+                egui::CentralPanel::default().show(ctx, |ui| {
+                    let b = Button::secondary("Go to view").small();
+                    want = b.icon_width(ui, &th);
+                    // the row is one pixel too short for the button after a filler
+                    let row = 60.0 + ui.spacing().item_spacing.x + want - 1.0;
+                    ui.allocate_ui(Vec2::new(row, 200.0), |ui| {
+                        ui.set_max_width(row);
+                        ui.horizontal_wrapped(|ui| {
+                            ui.allocate_exact_size(Vec2::new(60.0, 20.0), Sense::hover());
+                            edge = ui.max_rect().right();
+                            b.break_row(ui, &th, true);
+                            let b = Button::secondary("Go to view").small();
+                            got = ui
+                                .add_enabled_ui(false, |ui| b.show_icon(ui, &th, &mut icons, "view"))
+                                .inner
+                                .rect;
+                        });
+                    });
+                });
+            });
+        }
+        assert!((got.width() - want).abs() < 0.01, "painted {} measured {want}", got.width());
+        assert!(got.right() <= edge + 0.01, "button {got:?} runs past the row end {edge}");
     }
 }

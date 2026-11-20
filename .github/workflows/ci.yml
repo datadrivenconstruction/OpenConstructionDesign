@@ -145,7 +145,7 @@ jobs:
       - name: clippy
         shell: bash
         run: |
-          cargo clippy --workspace --all-targets --locked --keep-going --message-format=short 2> clippy.txt || { grep -E '^[^ ]+: error|^error' clippy.txt | head -n 200; exit 1; }
+          cargo clippy --workspace --all-targets --locked --keep-going --color never --message-format=short 2> clippy.txt || { grep -E '^[^ ]+: error|^error' clippy.txt | head -n 200; exit 1; }
           {
             echo "### clippy warnings (not blocking yet)"
             echo '```'

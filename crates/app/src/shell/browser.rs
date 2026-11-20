@@ -490,11 +490,7 @@ pub fn families(m: &Model, c: &Catalog) -> Vec<Node> {
                 )
             })
             .collect();
-        let label = if ru {
-            library_win::category_ru(&cat)
-        } else {
-            cat.clone()
-        };
+        let label = library_win::category_label(c, &cat);
         let f = node(name, "", Act::Comp(fid, 0), or_empty(c, kids));
         match cats.iter_mut().find(|n| n.label == label) {
             Some(n) => n.kids.push(f),
@@ -1986,6 +1982,32 @@ mod tests {
         assert_eq!(s[0].label, crate::app2_fx::fx("br_ventilation"));
         assert_eq!(s[0].kids[0].label, "S1");
         assert_eq!(s[0].kids[0].kids[0].label, crate::app2_fx::fx("br_duct_d400"));
+    }
+
+    /// A category heading is the localised label, never the stored id (`air_terminal`, `door`).
+    #[test]
+    fn family_category_headings_are_never_raw_ids() {
+        let mut ed = crate::editor::Editor::new_in_memory().unwrap();
+        let mut seen = std::collections::BTreeSet::new();
+        for f in ddc_model::library().unwrap() {
+            if seen.insert(f.category.name()) {
+                ed.model.load_library_family(&f.name).unwrap();
+            }
+        }
+        assert!(seen.len() >= 5, "the library spans several categories: {seen:?}");
+        for lang in [Lang::En, Lang::Ru] {
+            let c = Catalog::new(lang);
+            // the system-family headings (walls, floors, ...) are what an empty project lists
+            let bare = crate::editor::Editor::new_in_memory().unwrap();
+            let sys: Vec<String> = families(&bare.model, &c).into_iter().map(|n| n.label).collect();
+            for n in families(&ed.model, &c) {
+                if sys.contains(&n.label) || n.kids.is_empty() {
+                    continue;
+                }
+                let raw = n.label.contains('_') || n.label.chars().all(|ch| ch.is_ascii_lowercase());
+                assert!(!raw, "{lang:?}: heading {:?} is a raw category id", n.label);
+            }
+        }
     }
 
     #[test]

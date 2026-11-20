@@ -377,7 +377,18 @@ mod tests {
     fn the_tool_description_shows_the_shapes_the_parser_reads() {
         let d = ddc_ai::catalog::find("create_geometry").unwrap().input.to_owned();
         let text = (d)().to_json().to_string();
-        assert!(text.contains("extrude") && text.contains("[x, y, z]"), "{text}");
+        // the schema names the forms and points to the long text; the point syntax is in help
+        assert!(text.contains("extrude") && text.contains("help field_notes"), "{text}");
+        let mut loaded = std::collections::BTreeSet::new();
+        let notes = ddc_ai::toolset::meta_call(
+            ddc_ai::toolset::HELP,
+            Some(&json!({"topic": "field_notes"})),
+            ddc_ai::Mode::Propose,
+            true,
+            &mut loaded,
+        )
+        .text;
+        assert!(notes.contains("[x, y, z]") && notes.contains("extrude"), "{notes}");
     }
 
     #[test]

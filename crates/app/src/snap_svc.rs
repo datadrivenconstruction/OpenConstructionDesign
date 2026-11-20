@@ -557,6 +557,10 @@ mod tests {
         let on_arc = |a: f64| v2(22.0 + 2.0 * a.cos(), 2.0 * a.sin());
         let plane = Some((v2(-5.0, -3.0), v2(20.0, -3.0)));
         let (c, a) = (v2(22.0, 0.0), 4.2);
+        // a tangent point away from the thirds and the quadrant, which rank above it
+        let th = PI + 5.0 * PI / 12.0;
+        let tan_at = on_arc(th);
+        let tan_from = tan_at + v2(-th.sin(), th.cos()) * 3.0;
         let rows: Vec<(&str, SnapKind, V2, Option<V2>, f64, Option<(V2, V2)>, V2)> = vec![
             ("endpoint e", SnapKind::Endpoint, v2(4.05, 0.03), None, 0.0, None, v2(4.0, 0.0)),
             ("endpoint s", SnapKind::Endpoint, v2(-0.04, 0.0), None, 0.0, None, v2(0.0, 0.0)),
@@ -575,7 +579,7 @@ mod tests {
             ("arc centre", SnapKind::Center, v2(22.03, 0.02), None, 0.0, None, c),
             ("arc third", SnapKind::Param, on_arc(PI + PI / 3.0) + v2(0.02, -0.01), None, 0.0, None, on_arc(PI + PI / 3.0)),
             ("arc quadrant", SnapKind::Quadrant, v2(22.02, -2.03), None, 0.0, None, v2(22.0, -2.0)),
-            ("arc tangent", SnapKind::Tangent, v2(23.02, -1.75), Some(v2(26.0, 0.0)), 0.0, None, v2(23.0, -(3f64.sqrt()))),
+            ("arc tangent", SnapKind::Tangent, tan_at + v2(0.02, 0.02), Some(tan_from), 0.0, None, tan_at),
             ("extension", SnapKind::Extension, v2(6.5, 0.05), None, 0.0, None, v2(6.5, 0.0)),
             ("extension start", SnapKind::Extension, v2(-3.0, -0.05), None, 0.0, None, v2(-3.0, 0.0)),
             ("parallel", SnapKind::Parallel, v2(8.382, 13.824), Some(v2(6.0, 12.0)), 0.0, None, v2(6.0 + 3.0 * 0.8, 12.0 + 3.0 * 0.6)),
@@ -685,8 +689,9 @@ mod tests {
         assert!(near(n.p, v2(24.0, 21.1)), "{n:?}");
         // perpendicular from a point left of the patch onto its far edge (off the edge's middle,
         // which outranks it on the same point)
-        let l = ed.snap_list(v2(24.04, 22.0), Some(v2(10.0, 22.0)), 0.15, None);
-        assert!(l.iter().any(|s| s.kind == SnapKind::Perpendicular && near(s.p, v2(24.0, 22.0))), "{l:?}");
+        // (y = 22.5: the edge's thirds at 21 and 22 rank above it)
+        let l = ed.snap_list(v2(24.04, 22.5), Some(v2(10.0, 22.5)), 0.15, None);
+        assert!(l.iter().any(|s| s.kind == SnapKind::Perpendicular && near(s.p, v2(24.0, 22.5))), "{l:?}");
     }
 
     #[test]

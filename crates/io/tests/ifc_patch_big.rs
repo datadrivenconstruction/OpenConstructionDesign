@@ -443,9 +443,19 @@ fn patch_it(p: Prep) -> Big {
     }
 }
 
+/// The tests of this file run in parallel: the timed patch must not share the machine with the
+/// cancel test's own 20 000 wall build and patch, so each holds this lock through both.
+fn heavy() -> std::sync::MutexGuard<'static, ()> {
+    static L: std::sync::Mutex<()> = std::sync::Mutex::new(());
+    L.lock().unwrap_or_else(|e| e.into_inner())
+}
+
 fn big() -> &'static Big {
     static B: OnceLock<Big> = OnceLock::new();
-    B.get_or_init(|| patch_it(prepare("shared", WALLS)))
+    B.get_or_init(|| {
+        let _one = heavy();
+        patch_it(prepare("shared", WALLS))
+    })
 }
 
 /// The output opened as a fresh model.
@@ -657,6 +667,7 @@ fn patch_big_untouched_bytes_identical() {
 
 #[test]
 fn patch_big_cancel_leaves_nothing() {
+    let _one = heavy();
     let p = prepare("cancel", WALLS);
     let ctl = Progress::new();
     let reached = Arc::new(AtomicBool::new(false));

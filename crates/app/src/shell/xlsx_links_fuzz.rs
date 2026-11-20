@@ -136,7 +136,7 @@ impl World {
     /// The re-export that follows an Apply: the created rows get their ids.
     fn reexport(&mut self) {
         let o = xlsx_job::export_sync(&self.ed.model, &self.book, xlsx::Units::Metric, "en");
-        assert!(matches!(o, Outcome::Done), "re-export failed");
+        assert!(matches!(o, Outcome::Done), "re-export failed: {o:?}");
         let mut pv = XlsxPreview::linked(&self.book, false);
         let tail = ApplyTail { created: 0, ..Default::default() };
         apply_finish(self.ed.content_snap(), &mut self.ed.model, &mut pv, &tail, &Outcome::Done);

@@ -778,6 +778,7 @@ impl View {
                 }
             });
         self.hview = (hout.state.offset.x, hout.inner_rect.width());
+        crate::ui_kit::mark_hscroll_viewport(ui.ctx(), hout.inner_rect);
         self.visible = vis;
         if let Some(Editing::Text(_, _, _, first)) = self.editing.as_mut() {
             *first = false;

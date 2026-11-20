@@ -1,4 +1,5 @@
 {
+ "fam.name.insulator_string": "Гирлянда изоляторов",
  "gen.group.steel": "Стальная решётка",
  "gen.rule.steel.bridge.crowd_load.desc": "Равномерная нагрузка толпы на настил моста для оценки прогиба.",
  "gen.rule.steel.bridge.crowd_load.title": "Толпа",

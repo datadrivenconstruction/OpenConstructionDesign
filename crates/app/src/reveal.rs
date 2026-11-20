@@ -611,14 +611,16 @@ pub fn controls(a: &mut crate::shell::EditorApp, ctx: &egui::Context) {
     if a.reveal_job.is_some() {
         ctx.request_repaint();
         let (th, cat) = (&a.sh.theme, &a.sh.cat);
-        let stop = egui::Window::new(cat.t("collab_diff.reveal.journal_busy"))
-            .id(egui::Id::new("ddc_reveal_job"))
-            .anchor(egui::Align2::CENTER_BOTTOM, [0.0, -24.0])
-            .collapsible(false)
-            .resizable(false)
-            .show(ctx, |ui| ddc_ui::widgets::Button::quiet(&cat.t("collab_diff.reveal.close")).show(ui, th).clicked())
-            .and_then(|r| r.inner)
-            .unwrap_or(false);
+        let stop = crate::ui_kit::Dialog::hud(
+            "reveal_job",
+            cat.t("collab_diff.reveal.journal_busy"),
+            egui::Align2::CENTER_BOTTOM,
+            [0.0, -24.0],
+        )
+        .id(egui::Id::new("ddc_reveal_job"))
+        .show(ctx, |ui| ddc_ui::widgets::Button::quiet(&cat.t("collab_diff.reveal.close")).show(ui, th).clicked())
+        .and_then(|r| r.inner)
+        .unwrap_or(false);
         if stop {
             if let Some(j) = a.reveal_job.take() {
                 j.cancel.store(true, std::sync::atomic::Ordering::Relaxed);
@@ -631,11 +633,10 @@ pub fn controls(a: &mut crate::shell::EditorApp, ctx: &egui::Context) {
     }
     let (th, cat) = (&a.sh.theme, &a.sh.cat);
     let mut close = false;
-    egui::Window::new(cat.t("collab_diff.reveal.title"))
+    // the player row (buttons, frame slider, date) needs a tool width, not a HUD's
+    crate::ui_kit::Dialog::hud("reveal", cat.t("collab_diff.reveal.title"), egui::Align2::CENTER_BOTTOM, [0.0, -24.0])
         .id(egui::Id::new("ddc_reveal"))
-        .anchor(egui::Align2::CENTER_BOTTOM, [0.0, -24.0])
-        .collapsible(false)
-        .resizable(false)
+        .size([ddc_ui::theme::layout::DIALOG_TOOL, 0.0])
         .show(ctx, |ui| {
             ui.horizontal(|ui| {
                 use ddc_ui::widgets::Button;

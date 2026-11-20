@@ -32,6 +32,16 @@ fn r2(v: f64) -> f64 {
     (v * 100.0).round() / 100.0
 }
 
+/// A settle that happened reads as at least 0.01 ms: rounding a fast settle to 0 would say
+/// the view never settled.
+fn settle_out(ms: f64) -> f64 {
+    if ms > 0.0 {
+        r2(ms).max(0.01)
+    } else {
+        0.0
+    }
+}
+
 /// Sorted percentile `q` (0..=100) of `ms`; 0 for none.
 pub fn percentile(ms: &mut [f64], q: usize) -> f64 {
     if ms.is_empty() {
@@ -219,7 +229,7 @@ impl WinBench {
         let p95 = percentile(&mut ms, 95);
         let extra = json!({
             "adapter": self.adapter, "first_frame_ms": r2(self.first_ms),
-            "cold_first_frame_ms": r2(self.cold_ms), "settle_ms": r2(self.settle_ms),
+            "cold_first_frame_ms": r2(self.cold_ms), "settle_ms": settle_out(self.settle_ms),
             "moving": {"frames": n, "avg_ms": r2(avg), "p50_ms": r2(p50), "p95_ms": r2(p95)},
             "peak_memory_bytes": crate::headless_file::peak_memory(),
         });
@@ -233,6 +243,14 @@ impl WinBench {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn a_fast_settle_is_not_reported_as_none() {
+        assert_eq!(settle_out(0.0), 0.0);
+        assert_eq!(settle_out(f64::MIN_POSITIVE), 0.01);
+        assert_eq!(settle_out(0.004), 0.01);
+        assert_eq!(settle_out(12.25), 12.25);
+    }
 
     #[test]
     fn percentile_picks_inside_the_samples() {

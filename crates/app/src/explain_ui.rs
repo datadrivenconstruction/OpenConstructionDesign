@@ -172,12 +172,15 @@ fn rules_section(ui: &mut egui::Ui, ed: &mut Editor, cat: &Catalog) {
     for r in ddc_model::ROOF_RULES.iter() {
         let mut v = ed.model.roof_rule(r.key);
         let was = v;
-        ui.label(cat.t(&format!("why.rt_{}", r.key)));
+        let name = cat.t(&format!("why.rt_{}", r.key));
+        let name_id = ui.label(name.as_str()).id;
         let mut reset = false;
         let th = ddc_ui::theme::of(ui.ctx());
         let committed = ui
             .horizontal(|ui| {
                 let out = ddc_ui::widgets::NumberField::new(("why.rt", r.key), &mut v, ddc_ui::widgets::NumberFormat::for_lang(cat.lang))
+                    .labelled_by(name_id, &name)
+                    .width(ddc_ui::theme::layout::PROP_VALUE)
                     .decimals(3)
                     .step(0.01)
                     .range(r.min, r.max)

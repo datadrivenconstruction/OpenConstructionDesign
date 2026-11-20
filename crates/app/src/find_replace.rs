@@ -510,7 +510,12 @@ fn form(ui: &mut egui::Ui, c: &Catalog, ed: &Editor, st: &mut FindUi, goto: &mut
     }
     ui.horizontal(|ui| {
         // value column, no empty caption
+        // the same label-to-field gap as the form rows, whatever the item spacing is
+        let gap = ui.spacing().item_spacing.x;
+        ui.spacing_mut().item_spacing.x = 0.0;
         fixed_cell(ui, ROW_LABEL_W, |_| {});
+        ui.add_space(space::SM);
+        ui.spacing_mut().item_spacing.x = gap;
         ddc_ui::widgets::checkbox(ui, &th, &mut st.match_case, &c.t("find_replace.match_case"));
         ui.add_space(space::MD);
         ddc_ui::widgets::checkbox(ui, &th, &mut st.whole_word, &c.t("find_replace.whole_word"));
@@ -1100,14 +1105,17 @@ mod tests {
         texts
     }
 
-    fn esc() -> egui::Event {
-        egui::Event::Key {
-            key: egui::Key::Escape,
-            physical_key: None,
-            pressed: true,
-            repeat: false,
-            modifiers: egui::Modifiers::NONE,
-        }
+    /// Press and release, or egui reports the next press as a repeat.
+    fn esc() -> Vec<egui::Event> {
+        [true, false]
+            .map(|pressed| egui::Event::Key {
+                key: egui::Key::Escape,
+                physical_key: None,
+                pressed,
+                repeat: false,
+                modifiers: egui::Modifiers::NONE,
+            })
+            .to_vec()
     }
 
     fn quiet_frames(a: &mut EditorApp, ctx: &egui::Context, t: &mut f64) {
@@ -1129,26 +1137,26 @@ mod tests {
             ST.with(|s| s.borrow_mut().focus = true);
             quiet_frames(&mut a, &ctx, &mut t);
             assert!(state().0, "{lang:?} open");
-            pass(&mut a, &ctx, t + 0.05, vec![esc()]);
+            pass(&mut a, &ctx, t + 0.05, esc());
             let (open, query) = ST.with(|s| (s.borrow().open, s.borrow().query.clone()));
             assert!(open && query.is_empty(), "{lang:?} first Esc clears: {open} {query:?}");
             t += 0.1;
             quiet_frames(&mut a, &ctx, &mut t);
-            pass(&mut a, &ctx, t + 0.05, vec![esc()]);
+            pass(&mut a, &ctx, t + 0.05, esc());
             assert!(!state().0, "{lang:?} second Esc closes");
 
             // empty query: one Esc closes
             open_for_layout(false, "", "");
             ST.with(|s| s.borrow_mut().focus = true);
             quiet_frames(&mut a, &ctx, &mut t);
-            pass(&mut a, &ctx, t + 0.05, vec![esc()]);
+            pass(&mut a, &ctx, t + 0.05, esc());
             assert!(!state().0, "{lang:?} empty query: Esc closes");
 
             // text but no focus in the field: Esc closes and the text stays
             open_for_layout(false, "Office", "");
             quiet_frames(&mut a, &ctx, &mut t);
             ctx.memory_mut(|m| m.surrender_focus(egui::Id::new("fnd1.query")));
-            pass(&mut a, &ctx, t + 0.05, vec![esc()]);
+            pass(&mut a, &ctx, t + 0.05, esc());
             assert!(!state().0, "{lang:?} unfocused field: Esc closes");
             reset();
         }

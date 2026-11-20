@@ -479,10 +479,11 @@ impl Model {
         } else {
             inv
         };
+        // XLSX created-row records of deleted elements: same entry, so undo keeps the pairing;
+        // before `settle`, which empties the row journal this reads
+        let inv = crate::xlsx_rec::prune(&tx, rec_mark, inv)?;
         // the cascade of phases/parameters of deleted rows and the phase of new elements, in the same entry
         let inv = crate::phases::settle(&tx, inv)?;
-        // XLSX created-row records of deleted elements: same entry, so undo keeps the pairing
-        let inv = crate::xlsx_rec::prune(&tx, rec_mark, inv)?;
         drop(passes);
         // regeneration overrides (fallback geometry behind hosts) are undone first
         let held = crate::derives(kind)

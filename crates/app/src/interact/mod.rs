@@ -260,6 +260,8 @@ impl Interaction {
             ed.ix.esc_run = 0;
         }
         let run = ed.ix.esc_run;
+        // an Esc that steps a model tool back one point is not part of a reset run
+        let stepping = esc && ed.model_tool().is_some_and(|t| !t.pts.is_empty());
         // arming begins the bridge (`refresh`); this catches flags written outside a command
         sessions::special::adopt(ed);
         sessions::arch::adopt(ed);
@@ -275,7 +277,7 @@ impl Interaction {
             // an Esc that left its tool still counts: the begin/end it caused do not restart the run
             ed.ix.esc_run = run;
         }
-        if ed.ix.esc_run >= 2 && ed.ix.scope != Scope::Idle {
+        if ed.ix.esc_run >= 2 && ed.ix.scope != Scope::Idle && !stepping {
             // the old flags only when no session owns the scope; a grip bridge drops its drag
             // (the architecture and special-mode bridges keep their tools in those flags)
             // (as does a model tool: its drawing mode is the wall tool's flag)

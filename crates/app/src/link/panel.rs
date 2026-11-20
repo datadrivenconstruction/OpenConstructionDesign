@@ -333,7 +333,7 @@ fn consent_window(a: &mut EditorApp, ctx: &egui::Context) {
     let c = &a.sh.cat;
     let th = ddc_ui::theme::of(ctx);
     let (mut yes, mut no) = (false, false);
-    let r = egui::Modal::new(egui::Id::new("erp.consent")).show(ctx, |ui| {
+    let r = crate::ui_kit::modal_dialog("erp.consent", ctx, |ui| {
         ui.set_width(440.0);
         ui.heading(c.t("erp.consent.title"));
         ui.add_space(ddc_ui::sem::space::SM);
@@ -436,13 +436,10 @@ fn panel(a: &mut EditorApp, ctx: &egui::Context) {
         (s.ctx.project.name.clone(), rev, lock_line(a, s), blocked, s.lock() == LockView::Lost)
     });
     let mut message = std::mem::take(&mut a.erp.message);
-    egui::Window::new(title)
+    crate::ui_kit::Dialog::hud("erp.panel", title, egui::Align2::RIGHT_TOP, egui::vec2(-12.0, 96.0))
         .id(egui::Id::new("erp.panel"))
-        .anchor(egui::Align2::RIGHT_TOP, egui::vec2(-12.0, 96.0))
-        .resizable(false)
         .collapsible(true)
         .open(&mut open)
-        .default_width(300.0)
         .show(ctx, |ui| {
             let c = &a.sh.cat;
             if let Some((name, rev, (lv, lt), blocked, lost)) = &linked {

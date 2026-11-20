@@ -194,7 +194,8 @@ pub fn read_plan(
         skeleton_px,
         segments: segs.len(),
         arcs: swings.len(),
-        angle_deg: dom.to_degrees(),
+        // the pixel rows run down: a drawing turned by +a in the model leans by -a in the image
+        angle_deg: (-dom.to_degrees()).rem_euclid(90.0),
         leftover_px: m.skel.iter().filter(|&&v| v).count(),
     };
     Ok(PlanRead { underlay: u, proposals, px_per_m: k, height_px: h, stats })

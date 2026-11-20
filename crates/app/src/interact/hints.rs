@@ -234,8 +234,9 @@ impl Interaction {
     pub fn hints(&self, ed: &Editor) -> Vec<Hint> {
         let cx = self.cx(ed);
         let all: Vec<Hint> = match &self.session {
-            Some(s) => s.hints().to_vec(),
-            None => for_scope(&self.scope).to_vec(),
+            // a session that names no hints of its own (the wall bridge) shows its scope's rows
+            Some(s) if !s.hints().is_empty() => s.hints().to_vec(),
+            _ => for_scope(&self.scope).to_vec(),
         };
         all.into_iter().filter(|h| h.applies(&cx)).collect()
     }
@@ -428,7 +429,7 @@ mod tests {
 
     #[test]
     fn help_topic_and_palette_rows_follow_the_table() {
-        let mut ed = Editor::new_in_memory().unwrap();
+        let mut ed = Editor::new_as_app().unwrap();
         assert!(help_topic(&ed).is_none() && palette_rows(&ed).is_empty());
         let rep = run(&mut ed, &parse("tool(WA) → scope=Drafting
 ").unwrap());
@@ -441,7 +442,7 @@ mod tests {
 
     #[test]
     fn describe_is_data_for_the_ai() {
-        let mut ed = Editor::new_in_memory().unwrap();
+        let mut ed = Editor::new_as_app().unwrap();
         let rep = run(&mut ed, &parse("tool(WA) → scope=Drafting\n").unwrap());
         assert!(rep.ok(), "{:?}", rep.failures);
         let d = ed.ix.describe(&ed);

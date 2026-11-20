@@ -3,7 +3,6 @@
  "fam.name.glulam_beam": "Балка из клеёного бруса",
  "fam.name.glulam_column": "Колонна из клеёного бруса",
  "gen.group.timber": "Деревянный каркас",
- "gen.group.structure": "Конструкция",
  "gen.rule.timber.beam_span_max.desc": "Наибольший пролёт балки из клеёного бруса между колоннами.",
  "gen.rule.timber.beam_span_max.title": "Предельный пролёт балки",
  "gen.rule.timber.panel_w.desc": "Наибольшая ширина панели перекрытия из CLT; между панелями шов.",

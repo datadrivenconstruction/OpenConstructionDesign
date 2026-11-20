@@ -96,6 +96,8 @@ fn component_type(class: &str) -> bool {
             | "IFCLAMPTYPE"
             | "IFCELECTRICAPPLIANCETYPE"
             | "IFCMEDICALDEVICETYPE"
+            | "IFCTRANSPORTELEMENTTYPE"
+            | "IFCTANKTYPE"
             // the other component types (air terminal box, covering, member, railing, slab,
             // fittings) keep the IFC4 layout in IFC2X3
             | "IFCGEOGRAPHICELEMENTTYPE"
@@ -719,6 +721,15 @@ fn convert(
             a[4] = Value::Str(format!("IfcShadingDevice{pre}"));
             a.push(Value::Null);
             name = "IFCBUILDINGELEMENTPROXY";
+        }
+        // IFC2X3: OperationType of the older enumeration, then the two capacities
+        "IFCTRANSPORTELEMENT" => {
+            let op = match a.get(8) {
+                Some(Value::Enum(p)) if matches!(p.as_str(), "ELEVATOR" | "ESCALATOR" | "MOVINGWALKWAY" | "USERDEFINED") => p.clone(),
+                _ => "NOTDEFINED".into(),
+            };
+            a.truncate(8);
+            a.extend([Value::Enum(op), Value::Null, Value::Null]);
         }
         "IFCMECHANICALFASTENER" => a.truncate(10),
         // IFC4 types IFC2X3 lacks

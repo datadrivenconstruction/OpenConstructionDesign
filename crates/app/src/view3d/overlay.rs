@@ -390,7 +390,7 @@ fn view_row(
         egui::Align::Min,
     );
     if cut {
-        resp.on_hover_text(name)
+        crate::ui_kit::user_text_tip(resp, name, name)
     } else {
         resp
     }
@@ -566,7 +566,10 @@ pub(crate) fn panel_probe(
                         let dark = v.dark;
                         frame(dark).show(ui, |ui| box_panel(&mut v, ui, &scene, 0.0));
                     }
-                    PanelKind::Views => views_body(&mut v, ui, &t),
+                    // in the menu frame the view's drop-down gives it
+                    PanelKind::Views => {
+                        egui::Frame::menu(ui.style()).show(ui, |ui| views_body(&mut v, ui, &t));
+                    }
                     PanelKind::Graphics => vg_panel(&mut v, ui),
                 }
             });
@@ -575,6 +578,17 @@ pub(crate) fn panel_probe(
     // the box is a bare area on a plate, not a window: its room is the plate less its margin
     if kind == PanelKind::Box {
         last.inner = egui::AreaState::load(&ctx, id).map(|a| a.rect().shrink(space::XS));
+    }
+    // the views list is a menu: its room is the menu frame less the menu margin
+    if kind == PanelKind::Views {
+        let m = ctx.style().spacing.menu_margin;
+        last.inner = egui::AreaState::load(&ctx, id).map(|a| {
+            let r = a.rect();
+            egui::Rect::from_min_max(
+                r.min + egui::vec2(f32::from(m.left), f32::from(m.top)),
+                r.max - egui::vec2(f32::from(m.right), f32::from(m.bottom)),
+            )
+        });
     }
     last
 }

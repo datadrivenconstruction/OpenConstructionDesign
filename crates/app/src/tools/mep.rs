@@ -481,7 +481,12 @@ pub fn run_system(
 /// The system label; in a wrapping row it starts a new line together with its fixed-width
 /// dropdown when the line has no room for both.
 fn system_label(ui: &mut egui::Ui, text: String) {
-    let need = control::DROPDOWN_W + SWATCH_PX + ddc_ui::theme::space::XS;
+    field_label(ui, text, control::DROPDOWN_W + SWATCH_PX + ddc_ui::theme::space::XS);
+}
+
+/// A label with a field `need` wide after it: in a wrapping row both start a new line when
+/// the rest of the line has no room for them.
+fn field_label(ui: &mut egui::Ui, text: String, need: f32) {
     let g = egui::WidgetText::from(text.as_str()).into_galley(
         ui,
         Some(egui::TextWrapMode::Extend),
@@ -489,7 +494,9 @@ fn system_label(ui: &mut egui::Ui, text: String) {
         egui::TextStyle::Body,
     );
     let row = g.size().x + 2.0 * ui.spacing().item_spacing.x + need;
-    if ui.layout().main_wrap && ui.available_width() < row {
+    // a wrapping Ui reports the whole line as available; what is left is before the wrap
+    let started = ui.cursor().min.x > ui.max_rect().left() + 0.5;
+    if ui.layout().main_wrap && started && ui.available_rect_before_wrap().width() < row {
         ui.end_row();
     }
     ui.label(text);
@@ -547,7 +554,7 @@ fn size_dropdown(
 /// Pipe material and DN from the catalog of that material.
 pub fn pipe_options(ui: &mut egui::Ui, cat: &Catalog, o: &mut Opts, units: Units) {
     let cur = material(o);
-    ui.label(cat.t("mep.material"));
+    field_label(ui, cat.t("mep.material"), control::DROPDOWN_W);
     let labels: Vec<String> = PipeMaterial::ALL
         .iter()
         .map(|m| cat.t(&format!("mep.mat.{}", m.name())))
@@ -559,7 +566,7 @@ pub fn pipe_options(ui: &mut egui::Ui, cat: &Catalog, o: &mut Opts, units: Units
         o.pipe_mat = sel as u8;
         o.dn = ddc_model::nearest_dn(PipeMaterial::ALL[sel], o.dn).unwrap_or(o.dn);
     }
-    ui.label(cat.t("mep_units.dn"));
+    field_label(ui, cat.t("mep_units.dn"), control::DROPDOWN_W * 0.6);
     let dns: Vec<u32> = material(o).sizes().iter().map(|s| s.dn).collect();
     size_dropdown(ui, cat, units, "tool_dn", &mut o.dn, &dns);
 }

@@ -709,7 +709,7 @@ mod tests {
 
     #[test]
     fn refused_elevation_then_escape_leaves_the_model_untouched() {
-        let mut ed = Editor::new_in_memory().unwrap();
+        let mut ed = Editor::new_as_app().unwrap();
         let st = ed
             .model
             .add_slab_type(
@@ -773,7 +773,7 @@ mod tests {
 
     #[test]
     fn drain_then_finish_is_one_undo_with_exact_volume() {
-        let mut ed = Editor::new_in_memory().unwrap();
+        let mut ed = Editor::new_as_app().unwrap();
         let st = ed
             .model
             .add_slab_type(
