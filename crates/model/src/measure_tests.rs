@@ -6,6 +6,40 @@ use crate::measure::{Anchor, MeasureKind, MeasureSpec, MeasureState, Pin, Reason
 use crate::views::tests::room_6x4;
 use crate::{DimRef, Form, MassSpec, Model, ViewKey};
 
+/// Time of the workload in `machine_scale`, debug build, on the machine where the budgets
+/// below were set, ms (measured with the other tests running, 134 to 164).
+const REF_DEBUG_MS: f64 = 150.0;
+
+/// How much slower this machine is than the one the budgets were set on, never below 1: the
+/// same SQLite workload the measurements lean on, timed here (best of three).
+fn machine_scale() -> f64 {
+    let run = || {
+        let c = rusqlite::Connection::open_in_memory().unwrap();
+        c.execute_batch("CREATE TABLE t(a INTEGER PRIMARY KEY, b REAL, c INTEGER); CREATE INDEX tc ON t(c);").unwrap();
+        let t = std::time::Instant::now();
+        c.execute_batch("BEGIN").unwrap();
+        {
+            let mut st = c.prepare("INSERT INTO t(b, c) VALUES (?1, ?2)").unwrap();
+            for i in 0..20_000i64 {
+                st.execute(rusqlite::params![i as f64 * 0.5, i % 97]).unwrap();
+            }
+        }
+        c.execute_batch("COMMIT").unwrap();
+        let mut q = c.prepare("SELECT sum(b) FROM t WHERE c = ?1").unwrap();
+        for k in 0..97i64 {
+            let _: f64 = q.query_row([k], |r| r.get(0)).unwrap();
+        }
+        t.elapsed().as_secs_f64() * 1e3
+    };
+    if !cfg!(debug_assertions) {
+        // release budgets have no reference measured yet: they stay as set
+        return 1.0;
+    }
+    let ms = (0..3).map(|_| run()).fold(f64::INFINITY, f64::min);
+    eprintln!("machine baseline {ms:.1} ms, reference {REF_DEBUG_MS:.1} ms");
+    (ms / REF_DEBUG_MS).max(1.0)
+}
+
 fn walls(m: &Model, lv: i64) -> Vec<i64> {
     let mut st = m
         .sql()
@@ -391,8 +425,9 @@ fn measure_refresh_budget_many_measures() {
         .filter(|i| (ok(i.value) - 3.0).abs() > 1e-6)
         .count();
     assert_eq!(touched, 100, "the moved wall belongs to two neighbours' 50 each");
-    // budgets are for release; a debug build gets ten times as much
-    let k: u128 = if cfg!(debug_assertions) { 10 } else { 1 };
+    // budgets are for release; a debug build gets ten times as much, a slower machine its
+    // measured share more
+    let k = (if cfg!(debug_assertions) { 10.0 } else { 1.0 } * machine_scale()).ceil() as u128;
     assert!(dt.as_millis() < 50 * k, "edit with refresh took {dt:?}");
     // the refresh alone: the moved wall's measurements, nothing else
     let one: std::collections::BTreeSet<i64> = [ids[100]].into();
@@ -593,7 +628,7 @@ fn drive_budget_200_linked_walls() {
     assert!((axis_y(&m, w[100]) - 300.0).abs() < 1e-9, "the fixed support stays");
     assert!((axis_y(&m, w[101]) - 303.5).abs() < 1e-5);
     assert!((axis_y(&m, w[199]) - 597.5).abs() < 1e-5, "the walls beyond keep their gaps");
-    let k: u128 = if cfg!(debug_assertions) { 20 } else { 1 };
+    let k = (if cfg!(debug_assertions) { 20.0 } else { 1.0 } * machine_scale()).ceil() as u128;
     assert!(dt.as_millis() < 30 * k, "drive of 200 linked walls took {dt:?}");
 }
 

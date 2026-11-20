@@ -1,4 +1,3 @@
 # <path glob>	<term digest or *>	<justification>
 crates/model/src/value_src.rs	faba1e00af8e6c89837f711eeb6f67c0d1bdb573c63abcdcdb2fbf7ab5ad2295	Legacy stored source-kind value read from saved project files (format identifier)
 crates/ops/src/lib.rs	faba1e00af8e6c89837f711eeb6f67c0d1bdb573c63abcdcdb2fbf7ab5ad2295	Legacy serde wire name of the spreadsheet actor in saved journals (format identifier)
-crates/model/src/value_src_tests.rs	faba1e00af8e6c89837f711eeb6f67c0d1bdb573c63abcdcdb2fbf7ab5ad2295	Test of the legacy stored source-kind value (format identifier)

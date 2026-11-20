@@ -756,6 +756,8 @@ fn fixture_underlay_has_every_feature() {
     let d = u.inserts.iter().find(|i| i.name == "DOOR_900").unwrap();
     assert!((d.size.0 - 0.9).abs() < 1e-9 && (d.size.1 - 0.9).abs() < 1e-9);
     // full circles: 6 bubbles + round column
+    // a threshold just under a full turn, not TAU itself
+    #[allow(clippy::approx_constant)]
     let full = u.arcs.iter().filter(|a| a.a1 - a.a0 > 6.28).count();
     assert_eq!(full, 7);
     // pens: walls 0.5 mm, grid dashed (1.2 m dash), door green

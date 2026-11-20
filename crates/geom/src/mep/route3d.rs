@@ -239,6 +239,18 @@ pub struct Rules {
     pub bounds: (V2, V2),
     /// Expanded states per path before giving up.
     pub max_states: usize,
+    /// Per target (by index): the run of its own size on the straight leaving its port, where
+    /// it is not the trunk's. Empty or None: the trunk's clearance and tangent.
+    pub ends: Vec<Option<EndRun>>,
+}
+
+/// The run at a target's port: the target's own size, not the trunk's.
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub struct EndRun {
+    /// Half its envelope plus the gap, m.
+    pub clearance: f64,
+    /// Shortest straight next to the port before an elbow, m.
+    pub tangent: f64,
 }
 
 impl Rules {
@@ -263,6 +275,7 @@ impl Rules {
             layers,
             bounds,
             max_states: 400_000,
+            ends: vec![],
         }
     }
 }
@@ -365,6 +378,14 @@ struct Lattice {
 }
 
 impl Lattice {
+    /// Coordinates of the lines along axis `k` (0 x, 1 y, 2 z).
+    fn line(&self, k: usize) -> &[f64] {
+        match k {
+            0 => &self.xs,
+            1 => &self.ys,
+            _ => &self.zs,
+        }
+    }
     fn find(v: &[f64], x: f64) -> Option<usize> {
         let i = v.partition_point(|a| *a < x - 1e-4);
         (i < v.len() && (v[i] - x).abs() <= 1e-4).then_some(i)
@@ -476,10 +497,14 @@ struct Search<'a> {
     ix: &'a Index,
     rules: &'a Rules,
     lat: Lattice,
-    edges: HashMap<(u32, u8), Option<EdgeInfo>>,
+    /// By (node, axis, clearance bits).
+    edges: HashMap<(u32, u8, u64), Option<EdgeInfo>>,
     inside: HashMap<u32, Vec<i64>>,
     near: Vec<u32>,
     others: RoutedIndex,
+    /// Port straights of the targets not routed yet (target, port, escape, clearance): an
+    /// earlier branch keeps clear of them; a target's own leaves the list as it is routed.
+    pending: Vec<(usize, V3, V3, f64)>,
 }
 
 #[derive(PartialEq)]
@@ -565,12 +590,28 @@ impl<'a> Search<'a> {
             inside: HashMap::new(),
             near: vec![],
             others,
+            pending: vec![],
             stale: 0,
         }
     }
 
-    fn hits(&mut self, a: V3, b: V3) -> Vec<(u32, f64)> {
-        let c = self.rules.clearance;
+    /// Adds a line along axis `k` at `c`; node numbers change, so the caches by node go.
+    fn add_line(&mut self, k: usize, c: f64) {
+        let v = match k {
+            0 => &mut self.lat.xs,
+            1 => &mut self.lat.ys,
+            _ => &mut self.lat.zs,
+        };
+        if Lattice::find(v, c).is_some() {
+            return;
+        }
+        let i = v.partition_point(|a| *a < c);
+        v.insert(i, c);
+        self.edges.clear();
+        self.inside.clear();
+    }
+
+    fn hits(&mut self, a: V3, b: V3, c: f64) -> Vec<(u32, f64)> {
         let (lo, hi) = (v2(a.x.min(b.x), a.y.min(b.y)), v2(a.x.max(b.x), a.y.max(b.y)));
         let mut near = std::mem::take(&mut self.near);
         self.ix.near(lo, hi, c, &mut near);
@@ -595,7 +636,7 @@ impl<'a> Search<'a> {
         }
         let p = self.lat.at(n);
         let v: Vec<i64> = self
-            .hits(p, p)
+            .hits(p, p, self.rules.clearance)
             .into_iter()
             .map(|(id, _)| &self.ix.obstacles[id as usize])
             .filter(|o| o.pass == Pass::Wall)
@@ -605,8 +646,8 @@ impl<'a> Search<'a> {
         v
     }
 
-    fn edge(&mut self, n: u32, d: u8) -> Option<EdgeInfo> {
-        let k = (n.min(self.lat.step(n, d)?), d / 2);
+    fn edge(&mut self, n: u32, d: u8, c: f64) -> Option<EdgeInfo> {
+        let k = (n.min(self.lat.step(n, d)?), d / 2, c.to_bits());
         if let Some(e) = self.edges.get(&k) {
             return e.clone();
         }
@@ -616,7 +657,7 @@ impl<'a> Search<'a> {
             walls: vec![],
             slabs: vec![],
         });
-        for (id, _) in self.hits(a, b) {
+        for (id, _) in self.hits(a, b, c) {
             let o = &self.ix.obstacles[id as usize];
             match (o.pass, &mut info) {
                 (_, None) => break,
@@ -631,8 +672,12 @@ impl<'a> Search<'a> {
     }
 
     /// `touch`: a join point the edge may end on (it arrives perpendicular there).
-    fn free_of_others(&self, a: V3, b: V3, touch: Option<V3>) -> bool {
-        self.others.clear(a, b, self.rules.clearance, touch)
+    fn free_of_others(&self, a: V3, b: V3, touch: Option<V3>, c: f64) -> bool {
+        self.others.clear(a, b, c, touch)
+            && self
+                .pending
+                .iter()
+                .all(|&(_, p, q, pc)| seg_seg_dist(a, b, p, q) >= c + pc - EPS)
     }
 
     fn cost(&mut self, n: u32, d: u8, info: &EdgeInfo) -> f64 {
@@ -669,19 +714,26 @@ impl<'a> Search<'a> {
     }
 
     /// A* from `start` (leaving along `start_dir` when it is an axis) to the goal; returns the
-    /// lattice points of the path.
+    /// lattice points of the path. `end`: the straight leaving the port is the target's own run.
     fn path(
         &mut self,
         start: V3,
         start_dir: Option<u8>,
         start_acc: f64,
         goal: &Goal<'_>,
+        end: Option<EndRun>,
     ) -> Option<Vec<V3>> {
         let r = self.rules;
         let n0 = self.lat.node(start)?;
         let quarter = (r.min_leg / 4.0).max(1e-6);
         let qof = |acc: f64| ((acc / quarter + 1e-6).floor() as u8).min(4);
-        let tq = ((r.tangent / quarter) - 1e-6).ceil().max(0.0) as u8;
+        // an own-size port straight already made by the escape needs nothing more; quarters of
+        // the trunk's leg would round it away
+        let tq = match end {
+            Some(e) if start_acc + 1e-9 >= e.tangent => 0,
+            Some(e) => ((e.tangent / quarter) - 1e-6).ceil().max(0.0) as u8,
+            None => ((r.tangent / quarter) - 1e-6).ceil().max(0.0) as u8,
+        };
         let teeq = ((r.tee_leg / quarter) - 1e-6).ceil().max(0.0) as u8;
         let h = |p: V3| -> f64 {
             let (lo, hi) = goal.bbox;
@@ -730,20 +782,21 @@ impl<'a> Search<'a> {
                 let Some(m) = self.lat.step(n, nd) else {
                     continue;
                 };
-                let Some(info) = self.edge(n, nd) else {
+                let nfirst = if turn || d == NONE { first && d == NONE } else { first };
+                let cl = match end {
+                    Some(e) if nfirst => e.clearance,
+                    _ => r.clearance,
+                };
+                let Some(info) = self.edge(n, nd, cl) else {
                     continue;
                 };
                 let (a, b) = (self.lat.at(n), self.lat.at(m));
                 let touch = goal.joins.get(&m).filter(|ax| **ax != nd / 2).map(|_| b);
-                if !self.free_of_others(a, b, touch) {
+                if !self.free_of_others(a, b, touch, cl) {
                     continue;
                 }
                 let l = (b - a).len();
-                let (nq, nfirst) = if turn || d == NONE {
-                    (qof(l), first && d == NONE)
-                } else {
-                    (qof(q as f64 * quarter + l), first)
-                };
+                let nq = if turn || d == NONE { qof(l) } else { qof(q as f64 * quarter + l) };
                 let mut c = self.cost(n, nd, &info);
                 if turn {
                     c += r.bend_cost;
@@ -823,12 +876,30 @@ impl Goal<'_> {
     }
 }
 
+/// Coordinate `k` (0 x, 1 y, 2 z) of a point.
+fn comp(p: V3, k: usize) -> f64 {
+    match k {
+        0 => p.x,
+        1 => p.y,
+        _ => p.z,
+    }
+}
+
+/// The point with coordinate `k` set to `c`.
+fn with(p: V3, k: usize, c: f64) -> V3 {
+    match k {
+        0 => v3(c, p.y, p.z),
+        1 => v3(p.x, c, p.z),
+        _ => v3(p.x, p.y, c),
+    }
+}
+
 /// Escape point of a terminal: along its direction by the tangent (or itself).
-fn escape(t: &Terminal, r: &Rules) -> (V3, Option<u8>, f64) {
+fn escape(t: &Terminal, r: &Rules, end: Option<EndRun>) -> (V3, Option<u8>, f64) {
     match t.dir {
         Some(d) if d.len() > 1e-9 => {
             let d = d.normalized();
-            let l = r.tangent * 1.05;
+            let l = end.map_or(r.tangent, |e| e.tangent) * 1.05;
             (t.at + d * l, axis_of(d), l)
         }
         _ => (t.at, None, r.min_leg),
@@ -844,15 +915,16 @@ pub fn route_tree(
     targets: &[Terminal],
     others: &mut RoutedIndex,
 ) -> Tree {
+    let end_of = |i: usize| rules.ends.get(i).copied().flatten();
     let mut extra: Vec<V3> = vec![];
-    for t in targets {
+    for (i, t) in targets.iter().enumerate() {
         extra.push(t.at);
-        extra.push(escape(t, rules).0);
+        extra.push(escape(t, rules, end_of(i)).0);
     }
     match source {
         Source::Terminal(t) => {
             extra.push(t.at);
-            extra.push(escape(t, rules).0);
+            extra.push(escape(t, rules, None).0);
         }
         Source::Lines(l) => {
             for (a, b) in l {
@@ -867,14 +939,44 @@ pub fn route_tree(
         }
     }
     let mut s = Search::new(ix, rules, &extra, std::mem::take(others));
+    s.pending = targets
+        .iter()
+        .enumerate()
+        .filter(|(_, t)| t.dir.is_some())
+        .map(|(i, t)| {
+            let c = end_of(i).map_or(rules.clearance, |e| e.clearance);
+            (i, t.at, escape(t, rules, end_of(i)).0, c)
+        })
+        .collect();
     let mut tree = Tree::default();
     // tree straight parts: (a, b, branch or None for the source)
     let mut segs: Vec<(V3, V3, Option<usize>)> = vec![];
     if let Source::Lines(l) = source {
         segs.extend(l.iter().map(|&(a, b)| (a, b, None)));
     }
-    // joins are at least `gap` apart; a grid of that cell answers "any close?" in O(1)
-    let gap = rules.min_leg.max(rules.tee_leg * 2.0);
+    // a tee keeps a leg from either end of the straight it is on and from the next tee: the
+    // branch's own straight (`tee_leg`) is off the main, so two tees need not hold two of it;
+    // a grid of that cell answers "any close?" in O(1)
+    let gap = rules.min_leg.max(rules.tee_leg);
+    let edge = gap;
+    // a port's straight (its escape) carries what sits on the port: no tee lands on it
+    let mut port_runs: Vec<(V3, f64)> = targets
+        .iter()
+        .enumerate()
+        .filter(|(_, t)| t.dir.is_some())
+        .map(|(i, t)| (t.at, escape(t, rules, end_of(i)).2))
+        .collect();
+    if let Source::Terminal(st) = source {
+        if st.dir.is_some() {
+            port_runs.push((st.at, escape(st, rules, None).2));
+        }
+    }
+    let margin = |p: V3| {
+        port_runs
+            .iter()
+            .filter(|(q, _)| (p - *q).len() < 1e-9)
+            .fold(edge, |m, &(_, l)| m.max(l))
+    };
     let mut joined = PointGrid::new(gap);
     let mut left: Vec<usize> = (0..targets.len()).collect();
     // distance of each target to the tree, kept up to date as segments are added: the tree only
@@ -897,8 +999,35 @@ pub fn route_tree(
             .min_by(|a, b| near[*a.1].total_cmp(&near[*b.1]).then(a.1.cmp(b.1)))
             .expect("left is not empty");
         left.remove(pos);
+        s.pending.retain(|p| p.0 != ti);
         let t = targets[ti];
-        let (e, edir, eacc) = escape(&t, rules);
+        let (e, edir, eacc) = escape(&t, rules, end_of(ti));
+        // a straight long enough for a tee whose middle holds no lattice line gets one, at the
+        // point of the middle nearest the target: the regular lines fall where the bounds put them
+        let mut lines: Vec<(usize, f64)> = vec![];
+        for &(a, b, _) in &segs {
+            let Some(axis) = axis_of(b - a) else {
+                continue;
+            };
+            let k = (axis / 2) as usize;
+            let len = (b - a).len();
+            let (m0, m1) = (margin(a), margin(b));
+            if len < m0 + m1 {
+                continue;
+            }
+            let dir = (b - a).normalized();
+            let (u0, u1) = (comp(a + dir * m0, k), comp(b - dir * m1, k));
+            let (lo, hi) = (u0.min(u1), u0.max(u1));
+            let open = |c: f64| !joined.any_within(with(a, k, c), gap - 1e-6);
+            let has = s.lat.line(k).iter().any(|&c| c >= lo - 1e-6 && c <= hi + 1e-6 && open(c));
+            let c = comp(e, k).clamp(lo, hi);
+            if !has && open(c) {
+                lines.push((k, c));
+            }
+        }
+        for (k, c) in lines {
+            s.add_line(k, c);
+        }
         let mut joins: Joins = HashMap::new();
         let mut seg_of: HashMap<u32, (V3, V3)> = HashMap::new();
         let mut lo = v3(f64::INFINITY, f64::INFINITY, f64::INFINITY);
@@ -908,15 +1037,12 @@ pub fn route_tree(
                 continue;
             };
             let len = (b - a).len();
+            let (m0, m1) = (margin(a), margin(b));
             let dir = (b - a).normalized();
             let mut nodes = vec![];
             let along = |p: V3| (p - a).dot(dir);
             // lattice nodes on the segment
-            let coords: Vec<f64> = match axis / 2 {
-                0 => s.lat.xs.clone(),
-                1 => s.lat.ys.clone(),
-                _ => s.lat.zs.clone(),
-            };
+            let coords: Vec<f64> = s.lat.line((axis / 2) as usize).to_vec();
             for c in coords {
                 let p = match axis / 2 {
                     0 => v3(c, a.y, a.z),
@@ -924,7 +1050,7 @@ pub fn route_tree(
                     _ => v3(a.x, a.y, c),
                 };
                 let u = along(p);
-                if u < gap - 1e-6 || u > len - gap + 1e-6 {
+                if u < m0 - 1e-6 || u > len - m1 + 1e-6 {
                     continue;
                 }
                 if joined.any_within(p, gap - 1e-6) {
@@ -944,7 +1070,7 @@ pub fn route_tree(
         let empty = HashMap::new();
         let goal = match (source, segs.is_empty()) {
             (Source::Terminal(st), true) => {
-                let (se, sdir, _) = escape(st, rules);
+                let (se, sdir, _) = escape(st, rules, None);
                 let Some(n) = s.lat.node(se) else {
                     tree.failed.push(ti);
                     continue;
@@ -965,7 +1091,7 @@ pub fn route_tree(
             tree.failed.push(ti);
             continue;
         }
-        let Some(mut pts) = s.path(e, edir, eacc, &goal) else {
+        let Some(mut pts) = s.path(e, edir, eacc, &goal, end_of(ti)) else {
             tree.failed.push(ti);
             continue;
         };

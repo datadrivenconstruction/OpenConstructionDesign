@@ -297,3 +297,113 @@ fn unreachable_targets_are_counted_exactly() {
     assert_eq!(failed, sealed);
     assert_eq!(tree.branches.len(), 180);
 }
+
+/// A main whose tee room holds no regular lattice line still takes a branch: a line is added
+/// in that room, at the point nearest the target.
+#[test]
+fn a_branch_tees_into_a_main_between_the_regular_lines() {
+    let mut r = Rules::new(0.05, 1.2, vec![3.0], (v2(-1.0, -1.0), v2(7.0, 4.0)));
+    r.zone = (3.0, 3.0);
+    // regular x lines -1, 0.2, 1.4, 2.6, ...: none in the main's tee room x 1.7..2.3
+    let src = Source::Lines(vec![(v3(0.5, 0.0, 3.0), v3(3.5, 0.0, 3.0))]);
+    let t = [port(5.0, 2.0, 2.0, v3(0.0, 0.0, 1.0))];
+    let tree = route_tree(&Index::new(vec![]), &r, &src, &t, &mut RoutedIndex::default());
+    assert!(tree.failed.is_empty(), "{:?}", tree.failed);
+    let p = &tree.branches[0].points;
+    let end = *p.last().unwrap();
+    assert!(end.y.abs() < 1e-6 && (end.z - 3.0).abs() < 1e-6, "{p:?}");
+    assert!(end.x > 1.7 - 1e-6 && end.x < 2.3 + 1e-6, "{p:?}");
+    assert!(legs_ok(p, &r), "{p:?}");
+}
+
+/// Units on a header at a pitch under two branch straights (but over a leg) each tee straight
+/// in: the branch straight is off the main, so it does not space the tees.
+#[test]
+fn branches_at_a_tight_pitch_tee_straight_into_the_main() {
+    let mut r = Rules::new(0.05, 1.0, vec![3.0], (v2(-1.0, -3.0), v2(7.0, 4.0)));
+    r.tee_leg = 0.55;
+    let src = Source::Lines(vec![(v3(0.0, 0.0, 3.0), v3(6.0, 0.0, 3.0))]);
+    let t = [port(2.0, 2.0, 3.0, v3(0.0, -1.0, 0.0)), port(3.05, 2.0, 3.0, v3(0.0, -1.0, 0.0))];
+    let tree = route_tree(&Index::new(vec![]), &r, &src, &t, &mut RoutedIndex::default());
+    assert!(tree.failed.is_empty(), "{:?}", tree.failed);
+    for b in &tree.branches {
+        let p = clean(&b.points);
+        assert_eq!(p.len(), 2, "{p:?}");
+        assert!((p[1].x - t[b.target].at.x).abs() < 1e-9 && p[1].y.abs() < 1e-9, "{p:?}");
+    }
+}
+
+/// A port's straight carries what sits on the port: a later branch never tees into it, even
+/// where a tee leg would fit.
+#[test]
+fn no_branch_tees_into_a_port_straight() {
+    // a tangent as long as the leg, as a unit's valve stack makes it
+    let mut r = Rules::new(0.05, 1.5, vec![3.0], (v2(-1.0, -1.0), v2(8.0, 8.0)));
+    r.tangent = 1.5;
+    let src = Source::Terminal(port(0.0, 0.0, 3.0, v3(1.0, 0.0, 0.0)));
+    // the first branch runs straight along y 0; the second comes down at x 1.55, inside the
+    // source's 1.575 m straight but past a leg
+    let t = [port(6.0, 0.0, 3.0, v3(-1.0, 0.0, 0.0)), port(1.55, 7.0, 3.0, v3(0.0, -1.0, 0.0))];
+    let tree = route_tree(&Index::new(vec![]), &r, &src, &t, &mut RoutedIndex::default());
+    assert!(tree.failed.is_empty(), "{:?}", tree.failed);
+    let esc = 1.5 * 1.05;
+    for b in tree.branches.iter().filter(|b| b.parent.is_some()) {
+        for q in [v3(0.0, 0.0, 3.0), t[0].at] {
+            assert!((b.join - q).len() + 1e-9 >= esc, "join {:?} on the straight of {q:?}", b.join);
+        }
+    }
+}
+
+/// A unit whose long port straight rises under the path of a nearer unit's branch: that branch,
+/// routed first, keeps clear of the straight still to come, so both are routed (a pump's
+/// suction under the header of the pump beside it).
+#[test]
+fn an_earlier_branch_keeps_clear_of_a_port_straight_still_to_come() {
+    let mut r = Rules::new(0.1, 1.5, vec![3.0], (v2(-1.0, -1.0), v2(11.0, 4.0)));
+    let short = EndRun { clearance: 0.1, tangent: 0.3 };
+    let long = EndRun { clearance: 0.1, tangent: 1.5 };
+    r.ends = vec![Some(short), Some(long)];
+    let src = Source::Lines(vec![(v3(0.0, 0.0, 3.0), v3(10.0, 0.0, 3.0))]);
+    // A, 2.0 m from the main, comes straight down x 5; B, 2.016 m away, rises at (5, 1) to
+    // z 2.825, 0.175 m under A's path where the two need 0.2
+    let t = [port(5.0, 2.0, 3.0, v3(0.0, -1.0, 0.0)), port(5.0, 1.0, 1.25, v3(0.0, 0.0, 1.0))];
+    let tree = route_tree(&Index::new(vec![]), &r, &src, &t, &mut RoutedIndex::default());
+    assert!(tree.failed.is_empty(), "{:?}", tree.failed);
+    let stub = |j: usize| {
+        let e = r.ends[j].unwrap();
+        (t[j].at, t[j].at + t[j].dir.unwrap() * e.tangent * 1.05, e.clearance)
+    };
+    for b in &tree.branches {
+        for j in (0..t.len()).filter(|&j| j != b.target) {
+            let (p, q, c) = stub(j);
+            for w in b.points.windows(2) {
+                let d = seg_seg_dist(w[0], w[1], p, q);
+                let at = (b.target, &b.points);
+                assert!(d + 1e-9 >= c + 0.1, "branch {at:?} {d} m from the straight of {j}");
+            }
+        }
+    }
+}
+
+#[test]
+fn a_port_just_under_the_layer_keeps_its_elbow_tangent() {
+    // a terminal 0.03 m under the layer, facing up: rising only to the layer leaves no room for
+    // the elbow, so the branch either leaves the port by the full tangent or fails
+    let layer = 2.2;
+    let mut r = Rules::new(0.15, 0.5, vec![layer], (v2(0.0, 0.0), v2(10.0, 8.0)));
+    r.zone = (layer - 0.01, layer + 0.01);
+    r.tangent = 0.2274;
+    let end = EndRun { clearance: 0.15, tangent: 0.2274 };
+    r.ends = vec![Some(end)];
+    let src = Source::Lines(vec![(v3(5.6115, 2.4, layer), v3(5.6115, 7.0, layer))]);
+    let t = [port(6.948, 1.65, 2.17, v3(0.0, 0.0, 1.0))];
+    let tree = route_tree(&Index::new(vec![]), &r, &src, &t, &mut RoutedIndex::default());
+    for b in &tree.branches {
+        let p = &b.points;
+        let first = (p[1] - p[0]).len();
+        assert!(first + 1e-9 >= end.tangent, "port leg {first} under the tangent {}: {p:?}", end.tangent);
+        for w in p.windows(2).skip(1) {
+            assert!((w[1] - w[0]).len() > 1e-9, "{p:?}");
+        }
+    }
+}

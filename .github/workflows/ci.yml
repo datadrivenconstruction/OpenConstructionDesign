@@ -28,16 +28,48 @@ jobs:
       - run: python tools/spdx_headers.py
 
   test:
-    name: test ${{ matrix.crate }} (${{ matrix.os }})
+    name: test ${{ matrix.unit.crate }}${{ matrix.unit.shard && format(' {0}', matrix.unit.shard) || '' }} (${{ matrix.os }})
     runs-on: ${{ matrix.os }}
     timeout-minutes: 120
     strategy:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest]
-        crate: [ddc-bridge-proto, ddc-model, ddc-geom, ddc-solver, ddc-io, ddc-render, ddc-app,
-                ddc-ui, ddc-ai, ddc-ops, ddc-gen, ddc-fem, ddc-calc, ddc-cli, ddc-script, ddc-link,
-                bigfile-bench]
+        # The slow crates run in shards; tools/ci_shard.py splits them by test target and
+        # lib test-name filter so that the shards together run exactly what `cargo test` runs.
+        unit:
+          - {crate: ddc-bridge-proto}
+          - {crate: ddc-model}
+          - {crate: ddc-geom}
+          - {crate: ddc-solver}
+          - {crate: ddc-io}
+          - {crate: ddc-render}
+          - {crate: ddc-ui}
+          - {crate: ddc-ai}
+          - {crate: ddc-ops}
+          - {crate: ddc-fem}
+          - {crate: ddc-calc}
+          - {crate: ddc-cli}
+          - {crate: ddc-script}
+          - {crate: ddc-link}
+          - {crate: bigfile-bench}
+          - {crate: ddc-app, shard: 1/10}
+          - {crate: ddc-app, shard: 2/10}
+          - {crate: ddc-app, shard: 3/10}
+          - {crate: ddc-app, shard: 4/10}
+          - {crate: ddc-app, shard: 5/10}
+          - {crate: ddc-app, shard: 6/10}
+          - {crate: ddc-app, shard: 7/10}
+          - {crate: ddc-app, shard: 8/10}
+          - {crate: ddc-app, shard: 9/10}
+          - {crate: ddc-app, shard: 10/10}
+          - {crate: ddc-gen, shard: 1/7}
+          - {crate: ddc-gen, shard: 2/7}
+          - {crate: ddc-gen, shard: 3/7}
+          - {crate: ddc-gen, shard: 4/7}
+          - {crate: ddc-gen, shard: 5/7}
+          - {crate: ddc-gen, shard: 6/7}
+          - {crate: ddc-gen, shard: 7/7}
     steps:
       - uses: actions/checkout@v4
       - name: toolchain
@@ -50,14 +82,31 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends libxkbcommon-dev libwayland-dev libx11-dev libxcursor-dev libxrandr-dev libxi-dev libgl1-mesa-dev libfontconfig1-dev
+      - uses: actions/setup-python@v5
+        if: matrix.unit.shard
+        with:
+          python-version: "3.12"
+      # One dependency cache per crate and OS, shared by its shards and written by one of them;
+      # also written when tests fail, so a red crate does not rebuild its dependencies every run.
       - uses: Swatinem/rust-cache@v2
         with:
-          shared-key: test-${{ matrix.os }}-${{ matrix.crate }}
-          save-if: ${{ github.ref == 'refs/heads/main' }}
+          shared-key: test-${{ matrix.os }}-${{ matrix.unit.crate }}
+          cache-on-failure: true
+          save-if: ${{ github.ref == 'refs/heads/main' && (!matrix.unit.shard || startsWith(matrix.unit.shard, '1/')) }}
       - name: build
-        run: cargo build -p ${{ matrix.crate }} --all-targets --locked
+        if: ${{ !matrix.unit.shard }}
+        run: cargo build -p ${{ matrix.unit.crate }} --all-targets --locked
       - name: test
-        run: cargo test -p ${{ matrix.crate }} --locked --no-fail-fast
+        if: ${{ !matrix.unit.shard }}
+        run: cargo test -p ${{ matrix.unit.crate }} --locked --no-fail-fast
+      - name: build shard
+        if: matrix.unit.shard
+        shell: bash
+        run: python tools/ci_shard.py build ${{ matrix.unit.crate }} ${{ matrix.unit.shard }}
+      - name: test shard
+        if: matrix.unit.shard
+        shell: bash
+        run: python tools/ci_shard.py run ${{ matrix.unit.crate }} ${{ matrix.unit.shard }}
 
   fmt:
     name: fmt (advisory)
@@ -96,7 +145,7 @@ jobs:
       - name: clippy
         shell: bash
         run: |
-          cargo clippy --workspace --all-targets --locked --message-format=short 2> clippy.txt || { tail -n 80 clippy.txt; exit 1; }
+          cargo clippy --workspace --all-targets --locked --keep-going --message-format=short 2> clippy.txt || { grep -E '^[^ ]+: error|^error' clippy.txt | head -n 200; exit 1; }
           {
             echo "### clippy warnings (not blocking yet)"
             echo '```'

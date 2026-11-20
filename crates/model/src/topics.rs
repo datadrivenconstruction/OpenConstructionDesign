@@ -1002,6 +1002,8 @@ mod tests {
 
     #[test]
     fn orbit_viewpoint_round_trips() {
+        // 1.5707963 is a pitch just short of straight down, not FRAC_PI_2
+        #[allow(clippy::approx_constant)]
         let cases = [(-2.2, 0.6, false), (0.4, -0.3, true), (1.0, 1.5707963, false)];
         for (yaw, pitch, ortho) in cases {
             let o = Orbit {

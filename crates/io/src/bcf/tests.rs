@@ -93,7 +93,7 @@ fn full_topic(wall: i64) -> Topic {
     ];
     t.viewpoint = Some(Viewpoint {
         eye: [10.5, -3.25, 4.0],
-        dir: [-0.5, 0.5, -0.7071067811865476],
+        dir: [-0.5, 0.5, -std::f64::consts::FRAC_1_SQRT_2],
         up: [0.0, 0.0, 1.0],
         ortho: false,
         fov: 60.0,

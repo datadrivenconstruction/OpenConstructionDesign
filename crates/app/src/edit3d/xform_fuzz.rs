@@ -76,6 +76,8 @@ impl Fx {
         let (mut walls, mut openings, mut cols) = (vec![], vec![], vec![]);
         for _ in 0..2 + r.below(3) {
             let a = (r.range(-10.0, 10.0), r.range(-10.0, 10.0));
+            // 6.28 keeps the seeded draws (and printed failing seeds) as they were; not TAU
+            #[allow(clippy::approx_constant)]
             let (ang, len) = (r.range(0.0, 6.28), r.range(4.0, 8.0));
             let b = (a.0 + len * ang.cos(), a.1 + len * ang.sin());
             let w = ed
@@ -254,12 +256,14 @@ fn refused(ed: &Editor) -> bool {
 
 fn mirror_line(r: &mut Rng) -> (Vec3, Vec3) {
     let (x, y) = (r.range(-8.0, 8.0) as f32, r.range(-8.0, 8.0) as f32);
+    #[allow(clippy::approx_constant)] // seeded draw range, kept as is; not TAU
     let (ang, len) = (r.range(0.0, 6.28), r.range(1.0, 5.0));
     let q = (x + (len * ang.cos()) as f32, y + (len * ang.sin()) as f32);
     (Vec3::new(x, y, 0.0), Vec3::new(q.0, q.1, 0.0))
 }
 
 fn array_step(r: &mut Rng) -> (Vec3, u32) {
+    #[allow(clippy::approx_constant)] // seeded draw range, kept as is; not TAU
     let (ang, len) = (r.range(0.0, 6.28), r.range(0.8, 3.0));
     let step = Vec3::new((len * ang.cos()) as f32, (len * ang.sin()) as f32, 0.0);
     (step, 2 + r.below(5) as u32)

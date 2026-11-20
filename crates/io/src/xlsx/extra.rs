@@ -2419,7 +2419,10 @@ mod tests {
         let _p = units::DecGuard::set(Some(units::Dec::Point));
         assert_eq!(lossless_number("15.03"), Some(15.03), "soft day.month: the column decides");
         assert_eq!(lossless_number("01.10"), None, "leading zero code stays text");
-        assert_eq!(lossless_number("3.14"), Some(3.14));
+        // sample cell text, not PI
+        #[allow(clippy::approx_constant)]
+        let sample = Some(3.14);
+        assert_eq!(lossless_number("3.14"), sample);
         assert_eq!(lossless_number("12.50"), Some(12.5), "trailing fraction zero is a price");
         assert!(soft_date("1.05") && soft_date("20.12") && soft_date("15.03"));
         assert!(!soft_date("13.4") && !soft_date("2.50") && !soft_date("01.10"));

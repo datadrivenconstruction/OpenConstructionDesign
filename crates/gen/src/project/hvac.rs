@@ -243,8 +243,11 @@ pub fn air_ports(f: &GFixture) -> Vec<(&'static str, (f64, f64, f64))> {
 }
 
 /// Each appliance with an air outlet (a cooker hood) ducted to the extract terminal of its
-/// room: up from the outlet to the terminal's neck level, then across to the neck.
+/// room: it tees into the terminal's own branch where a level straight of the branch has room
+/// for the tee, so the terminal's neck stays a plain connector; up from the outlet to that
+/// straight's level, then across to it. Without such room it joins the neck.
 fn duct_outlets(p: &mut GProject) {
+    use ddc_geom::math::{v3, V3};
     let mut ducts = vec![];
     let mut links = vec![];
     for (k, st) in p.storeys.iter().enumerate() {
@@ -260,19 +263,48 @@ fn duct_outlets(p: &mut GProject) {
                 let Some(q) = neck else { continue };
                 // the terminal's own branch tells the air the room extracts
                 let z = st.elevation + q.2;
-                let flow = p
+                let branch = p
                     .hvac
                     .ducts
                     .iter()
-                    .find(|d| d.points.last().is_some_and(|e| (e.0 - q.0).hypot(e.1 - q.1) < svc::EPS && (e.2 - z).abs() < svc::EPS))
-                    .map_or(0.0, |d| d.flow);
-                let mut points = vec![(at.0, at.1, st.elevation + at.2), (at.0, at.1, z), (q.0, at.1, z), (q.0, q.1, z)];
-                points.dedup_by(|a, b| (a.0 - b.0).hypot(a.1 - b.1).hypot(a.2 - b.2) < svc::EPS);
+                    .find(|d| d.points.last().is_some_and(|e| (e.0 - q.0).hypot(e.1 - q.1) < svc::EPS && (e.2 - z).abs() < svc::EPS));
+                let flow = branch.map_or(0.0, |d| d.flow);
+                let sec = svc::duct_section((size, 0.0));
+                let r = |u| mep::default_bend_radius(&sec, u);
+                let leg = mep::junction_leg(&sec);
+                let from = v3(at.0, at.1, st.elevation + at.2);
+                // the level straight of the branch whose tee window lies nearest the outlet
+                let tee = branch.and_then(|d| {
+                    let bs = svc::duct_section(d.size);
+                    let rb = d.bend.unwrap_or_else(|| mep::default_bend_radius(&bs, false).max(mep::default_bend_radius(&bs, true)));
+                    let m = mep::junction_leg(&bs).max(rb) + mep::junction_leg(&bs) + leg;
+                    let pts: Vec<V3> = d.points.iter().map(|e| v3(e.0, e.1, e.2)).collect();
+                    pts.windows(2)
+                        .filter(|w| (w[1].z - w[0].z).abs() < svc::EPS && (w[1] - w[0]).len() > 2.0 * m)
+                        .map(|w| {
+                            let dir = (w[1] - w[0]).normalized();
+                            let u = (from - w[0]).dot(dir);
+                            let j = w[0] + dir * u.clamp(m, (w[1] - w[0]).len() - m);
+                            (j, dir, u - (j - w[0]).dot(dir))
+                        })
+                        .min_by(|a, b| (a.0 - from).len().total_cmp(&(b.0 - from).len()))
+                });
+                let mut pts: Vec<V3> = match tee {
+                    // up to the straight's level, along it into its window, then square across
+                    Some((j, dir, off)) => {
+                        let up = v3(from.x, from.y, j.z);
+                        vec![from, up, up - dir * off, j]
+                    }
+                    None => vec![from, v3(at.0, at.1, z), v3(q.0, at.1, z), v3(q.0, q.1, z)],
+                };
+                pts.dedup_by(|a, b| (*a - *b).len() < svc::EPS);
+                let end = if tee.is_some() { leg } else { 0.0 };
+                mep::fit_bends(&mut pts, &r, (0.0, end));
                 ducts.push(GDuct {
-                net: 0,
+                    net: 0,
                     sys: AirSys::Extract,
                     storey: k,
-                    points,
+                    points: pts.iter().map(|q| (q.x, q.y, q.z)).collect(),
                     size: (size, 0.0),
                     flow,
                     bend: None,
@@ -2102,3 +2134,4 @@ fn design(
         count,
     }))
 }
+

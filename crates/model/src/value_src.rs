@@ -33,6 +33,9 @@ pub const PROMPT_MAX: usize = 200;
 /// (table of the row, row id, parameter name), as `LockKey`.
 pub type CellKey = (String, i64, String);
 
+/// Stored name of the spreadsheet kind in files written before the rename to "xlsx".
+pub(crate) const LEGACY_SPREADSHEET_KIND: &str = "excel";
+
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum SrcKind {
     User,
@@ -66,8 +69,7 @@ impl SrcKind {
 
     /// A kind this build does not know (a newer file) reads as `None`, never fails.
     pub fn parse(s: &str) -> Option<SrcKind> {
-        // "excel": the stored name of files written before the rename
-        let s = if s == "excel" { "xlsx" } else { s };
+        let s = if s == LEGACY_SPREADSHEET_KIND { "xlsx" } else { s };
         SrcKind::ALL.into_iter().find(|k| k.as_str() == s)
     }
 

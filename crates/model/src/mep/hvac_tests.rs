@@ -97,6 +97,55 @@ fn four_terminals_size_the_main_for_their_sum() {
     assert!((c.total - 800.0).abs() < 1e-6, "{}", c.total);
 }
 
+/// A D315 main under the slab serves D160 diffusers: each port's own run leaves it straight up
+/// at the neck size of the family type and reduces from the bigger run at the fitting it joins.
+#[test]
+fn terminal_branches_take_the_neck_size_and_reduce_at_the_main() {
+    use ddc_geom::math::v3;
+    use ddc_geom::mep::FittingKind;
+    let (mut m, l, ahu, d) = office();
+    let p = m.mep_plan_net(&req(l, ahu, &d)).unwrap();
+    assert!(p.metrics.failed.is_empty(), "{:?}", p.metrics.failed);
+    m.mep_build(&p.build).unwrap();
+    let sa = m.mep_systems().unwrap()[0].id;
+    let runs: Vec<(i64, RunSpec)> = m
+        .mep_runs(Some(sa))
+        .unwrap()
+        .into_iter()
+        .map(|id| (id, read_run(m.sql(), id).unwrap()))
+        .collect();
+    let main = runs.iter().map(|(_, r)| round_d(&r.section)).fold(0.0, f64::max);
+    assert!((main - 0.315).abs() < 1e-9, "{main}");
+    let size = |id: i64| runs.iter().find(|x| x.0 == id).map_or(0.0, |x| round_d(&x.1.section));
+    let net = m.mep_network(Some(sa)).unwrap();
+    for c in &d {
+        let ports = m.component_ports(Some(*c)).unwrap();
+        let port = ports.into_iter().find(|p| p.name == "Air").unwrap();
+        let at = v3(port.at.0, port.at.1, port.at.2);
+        let (id, run) = runs
+            .iter()
+            .find(|(_, r)| {
+                let q = r.pts();
+                (q[0] - at).len() < 1e-6 || (q[q.len() - 1] - at).len() < 1e-6
+            })
+            .expect("a run at the port");
+        assert!((round_d(&run.section) - port.size).abs() < 1e-9, "{:?}", run.section);
+        let q = run.pts();
+        let (a, b) = if (q[0] - at).len() < 1e-6 {
+            (q[0], q[1])
+        } else {
+            (q[q.len() - 1], q[q.len() - 2])
+        };
+        assert!(b.z > a.z + 1e-6 && (b.x - a.x).abs() < 1e-6 && (b.y - a.y).abs() < 1e-6);
+        let reduced = net.fittings.iter().any(|f| {
+            matches!(f.kind, FittingKind::Tee | FittingKind::Cross | FittingKind::Transition)
+                && f.runs.contains(id)
+                && f.runs.iter().any(|r| size(*r) > port.size + 1e-9)
+        });
+        assert!(reduced, "no reduction from the main at the branch of {c}");
+    }
+}
+
 #[test]
 fn horizontal_runs_stay_in_the_plenum_with_insulation() {
     let (m, l, ahu, d) = office();

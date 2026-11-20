@@ -168,10 +168,20 @@ fn since_after_undo() {
 fn since_budget_10k_walls() {
     let mut ed = Editor::new_in_memory().unwrap();
     let level = ed.level;
-    let mut wall = 0;
-    for i in 0..10_000 {
-        wall = add_wall(&mut ed, level, (0.0, i as f64 * 1.5), (4.0, i as f64 * 1.5));
-    }
+    // One batch and one reload: a reload per wall made the setup quadratic.
+    let specs: Vec<ddc_model::WallSpec> = (0..10_000)
+        .map(|i| ddc_model::WallSpec {
+            a: (0.0, i as f64 * 1.5),
+            b: (4.0, i as f64 * 1.5),
+            level,
+            base_offset: 0.0,
+            height: 3.0,
+            wall_type: ed.types[0].id,
+            offset0: None,
+        })
+        .collect();
+    let wall = *ed.model.add_walls(&specs).unwrap().last().unwrap();
+    ed.reload().unwrap();
     let full = std::time::Instant::now();
     let r = results(
         &mut ed,

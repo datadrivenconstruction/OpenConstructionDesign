@@ -381,12 +381,15 @@ fn route_all(t: &Topo, lay: &Lay, tiers: &[f64]) -> Raw {
     raw
 }
 
+/// Steepest drift off a stub's direction still taken as the same straight: a drain's fall tilts it.
+const STUB_SLOPE: f64 = 0.1;
+
 /// Splits `p` (from a face along `dir`) so the stub to `reach` is its own segment.
 fn split_stub(a: V3, b: V3, dir: V3, reach: f64) -> Vec<(V3, V3)> {
     let d = b - a;
     let along = d.dot(dir);
-    if along > reach + EPS && (d - dir * along).len() < EPS {
-        let m = a + dir * reach;
+    if along > reach + EPS && (d - dir * along).len() <= STUB_SLOPE * along + EPS {
+        let m = a + d * (reach / along);
         vec![(a, m), (m, b)]
     } else {
         vec![(a, b)]
@@ -635,5 +638,24 @@ fn supports(p: &mut Piping, lay: &Lay) {
             }
             p.supports.push(Support { kind, line: s.line, at, dn: s.dn, env: s.env });
         }
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn a_stub_on_a_falling_drain_is_split_at_its_reach() {
+        // the root straight of a drain after its fall: 1.92 m long, 19 mm lower at the face
+        let face = v3(13.8175, 1.35, -0.607);
+        let far = v3(11.9009, 1.35, -0.5879);
+        let parts = split_stub(face, far, v3(-1.0, 0.0, 0.0), 0.25326);
+        assert_eq!(parts.len(), 2, "{parts:?}");
+        assert!((parts[0].0 - face).len() < EPS && (parts[1].1 - far).len() < EPS);
+        assert!(((parts[0].1 - face).x.abs() - 0.25326).abs() < 1e-9, "{parts:?}");
+        // a level straight splits the same way, a turn does not
+        assert_eq!(split_stub(face, v3(11.9, 1.35, -0.607), v3(-1.0, 0.0, 0.0), 0.25326).len(), 2);
+        assert_eq!(split_stub(face, v3(13.8175, 3.0, -0.607), v3(-1.0, 0.0, 0.0), 0.25326).len(), 1);
     }
 }

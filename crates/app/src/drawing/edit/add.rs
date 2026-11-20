@@ -516,7 +516,8 @@ mod tests {
     fn sweep_unchanged_after_normalise() {
         let (_ed, mut ds) = setup();
         // quarter ccw starting below the axis, then the same ends clockwise (three quarters)
-        ds.add_arc(v2(0.0, -1.0), v2(0.7071067811865476, -0.7071067811865476), v2(1.0, 0.0))
+        let h = std::f64::consts::FRAC_1_SQRT_2;
+        ds.add_arc(v2(0.0, -1.0), v2(h, -h), v2(1.0, 0.0))
             .unwrap();
         let a = ds.list[0].u.arcs.last().unwrap();
         assert!(near(a.a1 - a.a0, std::f64::consts::FRAC_PI_2), "sweep {}", a.a1 - a.a0);

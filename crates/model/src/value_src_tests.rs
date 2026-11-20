@@ -133,7 +133,7 @@ fn an_old_file_with_the_previous_spreadsheet_kind_still_loads() {
         let (mut m, w, _) = model_at(ps);
         m.apply_edits(&[fire(w[0], "EI30")]).unwrap();
         m.record_value_src(&[("wall", w[0], "Fire")], &ValueSrc::new(SrcKind::Xlsx, T0)).unwrap();
-        m.db.execute("UPDATE value_src SET kind='excel'", []).unwrap();
+        m.db.execute("UPDATE value_src SET kind=?1", [super::LEGACY_SPREADSHEET_KIND]).unwrap();
         w[0]
     };
     let m = Model::open(ps).unwrap();

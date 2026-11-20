@@ -15,8 +15,8 @@ fn spec(v: J) -> ProjectSpec {
 }
 
 fn built(v: J) -> (ProjectSpec, GProject) {
-    let s = spec(v);
-    let p = build_project(&s).unwrap_or_else(|e| panic!("{e}"));
+    let s = spec(v.clone());
+    let p = build_project(&s).unwrap_or_else(|e| panic!("{v}: {e}"));
     let g = check_project(&s, &p);
     assert!(g.passed(), "{:?}", g.failures);
     (s, p)
@@ -616,8 +616,21 @@ fn ducts_are_long_enough_for_their_bends() {
         briefs.push(json!({"typology": "school", "floors": 3,
             "design": {"massing": m, "facade": "panels", "rhythm": 2.4}}));
     }
+    // a two-storey house with every service off: its hood still ducts to the kitchen extract
+    briefs.push(json!({"typology": "house", "name": "Garden House", "floors": 2, "floor_height": 3.0,
+        "rooms": [{"kind": "living", "area": 32}, {"kind": "dining", "area": 14},
+        {"kind": "kitchen", "area": 14}, {"kind": "bedroom", "area": 15, "count": 3},
+        {"kind": "bath", "area": 6, "count": 2}, {"kind": "wc", "area": 2.5}, {"kind": "storage", "area": 4}],
+        "roof": {"kind": "hip", "slope": 30, "overhang": 0.6}, "origin": [14, 10],
+        "site": {"plot": [[0, 0], [40, 0], [40, 30], [0, 30]], "terrain": {"slope": 0.06, "downhill": [0, 1]}},
+        "design": {"terrace": true, "trees": 8},
+        "services": {"electrical": false, "water": false, "appliances": false}}));
     for b in briefs {
         let (_, p) = built(b.clone());
+        assert!(!p.storeys.is_empty(), "{b}: no plan");
+        if b["name"] == "Garden House" {
+            assert!(!p.hvac.ducts.is_empty(), "{b}: no ducts");
+        }
         for (i, d) in p.hvac.ducts.iter().enumerate() {
             let shape = if d.size.1 > 0.0 {
                 Shape::Rect { w: d.size.0, h: d.size.1 }
@@ -635,6 +648,59 @@ fn ducts_are_long_enough_for_their_bends() {
             assert!(r.is_ok(), "{b}: duct {i} {:?} {:?}: {:?}", d.sys, d.points, r.err());
         }
     }
+}
+
+/// The README briefs with every service off (the car park's typology is not on this branch) build a plan, and every run they generate (ducts,
+/// pipes, conduits) bends in the model once the model fits its legs (`RunSpec::fit_bends`).
+#[test]
+fn readme_briefs_with_services_off_give_runs_the_model_can_bend() {
+    use ddc_geom::math::v3;
+    use ddc_geom::mep::{route, Domain, Section, Shape};
+    use ddc_model::RunSpec;
+    let off = json!({"electrical": false, "water": false, "appliances": false});
+    let briefs = [
+        json!({"typology": "house", "name": "Garden House", "floors": 2, "floor_height": 3.0,
+            "rooms": [{"kind": "living", "area": 32}, {"kind": "dining", "area": 14},
+            {"kind": "kitchen", "area": 14}, {"kind": "bedroom", "area": 15, "count": 3},
+            {"kind": "bath", "area": 6, "count": 2}, {"kind": "wc", "area": 2.5}, {"kind": "storage", "area": 4}],
+            "roof": {"kind": "hip", "slope": 30, "overhang": 0.6}, "origin": [14, 10],
+            "site": {"plot": [[0, 0], [40, 0], [40, 30], [0, 30]], "terrain": {"slope": 0.06, "downhill": [0, 1]}},
+            "design": {"terrace": true, "trees": 8}, "services": off}),
+        json!({"typology": "apartment_section", "floors": 5, "services": off}),
+        // the twisted ellipse office is left out: its layout fails on this branch before any duct
+        json!({"typology": "hospital_wing", "floors": 4, "services": off}),
+    ];
+    let mut bad = vec![];
+    for b in briefs {
+        let s = spec(b.clone());
+        let p = build_project(&s).unwrap_or_else(|e| panic!("{b}: {e}"));
+        assert!(!p.storeys.is_empty() && p.storeys.iter().any(|st| !st.layout.walls.is_empty()), "{b}: empty plan");
+        // and the networks build with the fittings at every junction
+        bad.extend(ddc_gen::project::duct_faults(&p).into_iter().map(|f| format!("{}: {f}", s.typology_name())));
+        let mut runs: Vec<RunSpec> = vec![];
+        for d in &p.hvac.ducts {
+            let shape = if d.size.1 > 0.0 { Shape::Rect { w: d.size.0, h: d.size.1 } } else { Shape::Round { d: d.size.0 } };
+            let mut sec = Section::new(Domain::Duct, shape);
+            sec.wall = 0.0008;
+            let mut r = RunSpec::new(0, 0, sec, d.points.clone());
+            r.bend = d.bend;
+            runs.push(r);
+        }
+        for g in p.services.water.iter().chain(&p.services.elec) {
+            let mut r = RunSpec::new(0, 0, g.section.clone(), g.points.clone());
+            r.bend = g.bend;
+            runs.push(r);
+        }
+        for (i, mut r) in runs.into_iter().enumerate() {
+            r.fit_bends();
+            let pts: Vec<_> = r.points.iter().map(|q| v3(q.0, q.1, q.2)).collect();
+            if let Err(e) = route(&pts, &|u| r.radius(u), (0.0, 0.0)) {
+                bad.push(format!("{}: run {i} {:?}: {e}", s.typology_name(), r.points));
+            }
+        }
+    }
+    assert!(bad.is_empty(), "{}", bad.join("
+"));
 }
 
 /// Every duct of every building type routes in the model as one network per air system: each

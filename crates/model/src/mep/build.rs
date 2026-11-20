@@ -110,9 +110,15 @@ impl Model {
             let specs: Vec<RunSpec> = b
                 .runs
                 .iter()
-                .map(|(r, s)| RunSpec {
-                    system: id_of(*r),
-                    ..s.clone()
+                .map(|(r, s)| {
+                    // a planned run from any producer: a leg too short for its elbows gives
+                    // its corner to the next leg instead of failing the build
+                    let mut s = RunSpec {
+                        system: id_of(*r),
+                        ..s.clone()
+                    };
+                    s.fit_bends();
+                    s
                 })
                 .collect();
             for s in &specs {

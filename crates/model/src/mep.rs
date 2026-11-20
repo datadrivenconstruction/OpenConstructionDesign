@@ -90,7 +90,8 @@ impl RunSpec {
             p
         }
     }
-    fn radius(&self, normal_along_up: bool) -> f64 {
+    /// Elbow radius on the axis: the run's own, its catalogue pipe's, else the section default.
+    pub fn radius(&self, normal_along_up: bool) -> f64 {
         if let Some(r) = self.bend {
             return r;
         }
@@ -100,6 +101,16 @@ impl RunSpec {
             }
         }
         mep::default_bend_radius(&self.section, normal_along_up)
+    }
+    /// Drops the corner of any leg too short for its elbows (see `mep::fit_bends`); a run
+    /// whose elbows fit keeps its points exactly.
+    pub fn fit_bends(&mut self) {
+        let mut p: Vec<V3> = self.points.iter().map(|&(x, y, z)| v3(x, y, z)).collect();
+        let n = p.len();
+        mep::fit_bends(&mut p, &|u| self.radius(u), (0.0, 0.0));
+        if p.len() != n {
+            self.points = p.into_iter().map(p3).collect();
+        }
     }
     /// Shortest segment that fits an elbow, m.
     pub fn min_leg(&self) -> f64 {
@@ -1068,9 +1079,19 @@ impl Model {
             let pieces = mep::route(&e.pts, &|u| s.radius(u), (e.trim[0], e.trim[1]))
                 .map_err(|x| {
                     let len: f64 = e.pts.windows(2).map(|w| (w[1] - w[0]).len()).sum();
+                    let pts: Vec<String> = e
+                        .pts
+                        .iter()
+                        .map(|p| format!("({:.4}, {:.4}, {:.4})", p.x, p.y, p.z))
+                        .collect();
                     Error::Geom(format!(
-                        "run {}: {x} (axis {len:.3} m, end trims {:.3} and {:.3} m)",
-                        e.run, e.trim[0], e.trim[1]
+                        "run {}: {x} (axis {len:.3} m, end trims {:.3} and {:.3} m, radius {:.3} m, \
+                         points {})",
+                        e.run,
+                        e.trim[0],
+                        e.trim[1],
+                        s.radius(false),
+                        pts.join(" ")
                     ))
                 })?;
             for p in pieces {
@@ -1572,3 +1593,5 @@ mod follow_tests;
 mod autoroute_tests;
 #[cfg(test)]
 mod hvac_tests;
+#[cfg(test)]
+mod build_tests;

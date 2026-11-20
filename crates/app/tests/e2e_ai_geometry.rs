@@ -67,7 +67,7 @@ fn placed() -> Vec<Script> {
             json!({"title": "Three toilets", "cat": "comp", "items": [
                 {"type": "comp_type:n1", "at": [0, 0, 0]},
                 {"type": "comp_type:n1", "at": [4, 0, 0]},
-                {"type": "comp_type:n1", "at": [8, 0, 0], "rotation": 1.5707963267948966}
+                {"type": "comp_type:n1", "at": [8, 0, 0], "rotation": std::f64::consts::FRAC_PI_2}
             ]}),
         ),
     ]

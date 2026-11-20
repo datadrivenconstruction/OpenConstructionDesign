@@ -188,7 +188,7 @@ fn world(g: &Glb, node: &Value, v: [f32; 3]) -> [f32; 3] {
     });
     let m = [v[0] + t[0], v[1] + t[1], v[2] + t[2]];
     let root = &arr(&g.json, "nodes")[0];
-    assert!((root["rotation"][0].as_f64().unwrap() + 0.7071067811865476).abs() < 1e-9);
+    assert!((root["rotation"][0].as_f64().unwrap() + std::f64::consts::FRAC_1_SQRT_2).abs() < 1e-9);
     [m[0], m[2], -m[1]]
 }
 

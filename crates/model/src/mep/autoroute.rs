@@ -12,7 +12,7 @@ use std::collections::HashMap;
 use ddc_geom::math::{v2, v3, V2, V3};
 use ddc_geom::mep::clash;
 use ddc_geom::mep::route3d::{
-    self, Index, Obstacle, Pass, Routed, RoutedIndex, Rules, Source, Terminal, Tree,
+    self, EndRun, Index, Obstacle, Pass, Routed, RoutedIndex, Rules, Source, Terminal, Tree,
 };
 use ddc_geom::mep::{Domain, PipeMaterial, Section, Shape, SystemKind};
 
@@ -221,6 +221,9 @@ struct Site {
     others: Vec<Routed>,
     /// Risers by system name: in the model and planned so far.
     stacks: Vec<Stack>,
+    /// Riser points the requests of this plan ask for (system name, level, plan point, half
+    /// size): other systems route clear of them before those risers are laid.
+    reserved: Vec<(String, i64, V2, f64)>,
     levels: Vec<(i64, f64)>,
     ports: HashMap<(i64, String), WorldPort>,
     axes: (Vec<f64>, Vec<f64>),
@@ -456,6 +459,13 @@ fn size_for(req: &NetReq, l: Load) -> Result<(Section, Option<PipeMaterial>, Opt
             Ok((Section::new(Domain::Conduit, Shape::Round { d: d.max(l.port) }), None, None))
         }
     }
+}
+
+/// Shortest straight into a tee: the fitting sets the branch back by the main's junction leg,
+/// and the branch's elbow takes its tangent after that (a trunk-size branch at most).
+pub(super) fn tee_leg(level: i64, sec: (Section, Option<PipeMaterial>, Option<u32>)) -> f64 {
+    let s = spec_of(level, sec, &[]);
+    ddc_geom::mep::junction_leg(&sec.0) + s.radius(false).max(s.radius(true))
 }
 
 fn spec_of(level: i64, sec: (Section, Option<PipeMaterial>, Option<u32>), pts: &[V3]) -> RunSpec {
@@ -698,6 +708,7 @@ impl Model {
             slabs,
             others,
             stacks,
+            reserved: vec![],
             levels,
             ports,
             axes,
@@ -729,6 +740,18 @@ impl Model {
 
     fn plan_site(&self, reqs: &[NetReq], mut site: Site) -> Result<Planned, Error> {
         let mut out = Planned::default();
+        // every riser asked for is known before any system routes: an earlier system's branches
+        // must not take the point a later one rises at
+        for req in reqs {
+            if let RouteFrom::Riser { x, y } = &req.from {
+                if let Ok((_, loads)) = self.terminals(&site, req) {
+                    let total = loads.iter().fold(Load::default(), |a, l| a.plus(*l));
+                    if let Ok(trunk) = size_for(req, total) {
+                        site.reserved.push((req.name.clone(), req.level, v2(*x, *y), half(&trunk.0)));
+                    }
+                }
+            }
+        }
         for req in reqs {
             let (b, m) = self.plan_one(&mut site, req)?;
             out.build.append(b);
@@ -737,6 +760,38 @@ impl Model {
         }
         finish(&site, &mut out);
         Ok(out)
+    }
+
+    /// The request's terminals (port point and direction) and what each carries.
+    fn terminals(&self, site: &Site, req: &NetReq) -> Result<(Vec<Terminal>, Vec<Load>), Error> {
+        let (mut targets, mut loads) = (vec![], vec![]);
+        for (comp, conn) in &req.to {
+            let p = site
+                .ports
+                .get(&(*comp, conn.clone()))
+                .ok_or_else(|| {
+                    Error::Invalid(format!("component {comp} has no connector {conn}"))
+                })?;
+            if !req.kind.domains().contains(&p.domain) && !(super::manual::same_net(
+                p.domain,
+                domain_of(req.kind),
+            )) {
+                return invalid(format!("mep.err.wrong_system {comp} {conn}"));
+            }
+            let d = pv(p.dir);
+            targets.push(Terminal {
+                at: pv(p.at),
+                dir: (d.len() > 1e-9).then(|| d.normalized()),
+            });
+            let flow = self.mep_port_flow(*comp, conn)?;
+            loads.push(Load {
+                flow,
+                peak: flow,
+                port: p.size,
+                count: 1,
+            });
+        }
+        Ok((targets, loads))
     }
 
     fn plan_one(&self, site: &mut Site, req: &NetReq) -> Result<(MepBuild, RouteMetrics), Error> {
@@ -767,39 +822,31 @@ impl Model {
         };
         let floor_under = below(req.level, zl - 0.25);
         // targets and what each carries
-        let mut targets = vec![];
-        let mut loads = vec![];
-        for (comp, conn) in &req.to {
-            let p = site
-                .ports
-                .get(&(*comp, conn.clone()))
-                .ok_or_else(|| {
-                    Error::Invalid(format!("component {comp} has no connector {conn}"))
-                })?;
-            if !req.kind.domains().contains(&p.domain) && !(super::manual::same_net(
-                p.domain,
-                domain_of(req.kind),
-            )) {
-                return invalid(format!("mep.err.wrong_system {comp} {conn}"));
-            }
-            let d = pv(p.dir);
-            targets.push(Terminal {
-                at: pv(p.at),
-                dir: (d.len() > 1e-9).then(|| d.normalized()),
-            });
-            let flow = self.mep_port_flow(*comp, conn)?;
-            loads.push(Load {
-                flow,
-                peak: flow,
-                port: p.size,
-                count: 1,
-            });
-        }
+        let (targets, loads) = self.terminals(site, req)?;
         let total = loads.iter().fold(Load::default(), |a, l| a.plus(*l));
         let trunk = size_for(req, total)?;
         let r_max = half(&trunk.0);
-        let min_leg = spec_of(req.level, trunk, &[]).min_leg().max(0.2);
+        let tee = tee_leg(req.level, trunk);
+        // a rectangular section bends with the larger radius about one of its axes
+        let ts = spec_of(req.level, trunk, &[]);
+        let r_trunk = ts.radius(false).max(ts.radius(true));
+        let min_leg = ts.min_leg().max(0.2).max(2.0 * r_trunk).max(tee);
         let clearance = r_max + GAP;
+        // the straight from each target's port is its own run (sized by its own load, at least
+        // its connector), so it is searched at that size; the trunk's size never reaches the port
+        let end_runs = loads
+            .iter()
+            .map(|l| {
+                let own = size_for(req, *l)?;
+                let os = spec_of(req.level, own, &[]);
+                let bend = os.radius(false).max(os.radius(true));
+                Ok(Some(EndRun {
+                    clearance: (half(&own.0) + GAP).min(clearance),
+                    // the elbow off the port only needs its own tangent, but all of it
+                    tangent: bend,
+                }))
+            })
+            .collect::<Result<Vec<_>, Error>>()?;
         let gravity = req.kind == SystemKind::Sanitary;
         let top = if gravity {
             floor_under - clearance
@@ -852,7 +899,16 @@ impl Model {
         let mut joints: (Option<V3>, Option<V3>) = (None, None);
         let table = route_table();
         let ix = Index::new(site.obstacles.clone());
-        let base_others = RoutedIndex::new(site.others.clone());
+        let mut base_others = RoutedIndex::new(site.others.clone());
+        for (name, level, at, r) in &site.reserved {
+            if *level == req.level && *name != req.name {
+                base_others.push(Routed {
+                    a: v3(at.x, at.y, floor_under - 0.5),
+                    b: v3(at.x, at.y, ceiling + 0.5),
+                    clearance: *r,
+                });
+            }
+        }
         for _attempt in 0..3 {
             let (source, ris, ends) = match &req.from {
                 RouteFrom::Port { comp, connector } => {
@@ -895,7 +951,10 @@ impl Model {
                 }
             };
             let mut rules = Rules::new(clearance, min_leg, vec![layer], (site.lo, site.hi));
+            rules.tee_leg = rules.tee_leg.max(tee);
+            rules.tangent = rules.tangent.max(r_trunk);
             rules.zone = (layer - 0.01, layer + 0.01);
+            rules.ends = end_runs.clone();
             rules.axes = site.axes.clone();
             rules.max_states = table.max_states;
             let v = table.variants.get(req.variant).unwrap_or(&table.variants[0]);

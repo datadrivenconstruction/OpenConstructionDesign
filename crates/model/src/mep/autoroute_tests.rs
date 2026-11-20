@@ -520,3 +520,24 @@ fn route_table_has_one_cost_row_per_variant() {
     let v: serde_json::Value = serde_json::from_str(t).unwrap();
     assert_eq!(v["variants"].as_array().unwrap().len(), VARIANTS);
 }
+
+/// Every pipe size of every material: the straight into a tee holds the fitting's junction
+/// leg and the branch elbow's tangent, so no run built from a plan comes out short at a tee.
+#[test]
+fn a_tee_leg_holds_the_junction_leg_and_the_elbow_for_every_size() {
+    use ddc_geom::mep::{junction_leg, PipeMaterial};
+    for m in PipeMaterial::ALL {
+        for x in m.sizes() {
+            let mut sec = Section::new(Domain::Pipe, Shape::Round { d: x.od });
+            sec.wall = x.wall;
+            let need = junction_leg(&sec) + m.bend_radius(&x);
+            let got = super::autoroute::tee_leg(0, (sec, Some(m), Some(x.dn)));
+            assert!(got + 1e-9 >= need, "{m:?} DN{}: {got} < {need}", x.dn);
+        }
+    }
+    for d in [0.1, 0.16, 0.315, 0.63] {
+        let sec = Section::new(Domain::Duct, Shape::Round { d });
+        let got = super::autoroute::tee_leg(0, (sec, None, None));
+        assert!(got + 1e-9 >= d + 1.5 * d, "D{d}: {got}");
+    }
+}

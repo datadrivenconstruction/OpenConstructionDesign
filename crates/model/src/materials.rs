@@ -168,7 +168,8 @@ fn plant_color(name: &str) -> Option<u32> {
         "Foliage White Shade" => 0xB8_B2_A2,
         "Foliage Olive Shade" => 0x58_66_44,
         "Lawn Grass" => 0x6C_9A_46,
-        "Planting Soil" => 0x5A_44_32,
+        // ungrouped: a trailing "_32" reads as an i32 suffix
+        "Planting Soil" => 0x5A4432,
         _ => return None,
     })
 }

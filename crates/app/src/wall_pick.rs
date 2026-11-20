@@ -275,13 +275,16 @@ pub fn chain(segs: &[(V2, V2)], seed: usize) -> (Vec<(V2, V2)>, bool, usize) {
         fwd.push((last.1, far));
     }
     let mut back: Vec<(V2, V2)> = vec![];
-    while !closed {
-        let first = back.last().copied().unwrap_or((a0, b0));
-        let Some((i, far)) = next(segs, &grid, first.0, &used, first) else {
-            break;
-        };
-        used[i] = true;
-        back.push((far, first.0));
+    // an open chain also grows back from the seed; each step uses up one line, so it ends
+    if !closed {
+        loop {
+            let first = back.last().copied().unwrap_or((a0, b0));
+            let Some((i, far)) = next(segs, &grid, first.0, &used, first) else {
+                break;
+            };
+            used[i] = true;
+            back.push((far, first.0));
+        }
     }
     let at = back.len();
     back.reverse();

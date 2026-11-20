@@ -693,6 +693,38 @@ pub fn route(
     Ok(out)
 }
 
+/// Drops the corner of every leg too short for the elbows at its ends and the `trim` its two
+/// ends give to fittings, so the next leg takes its offset; the end points stay. A run that
+/// already bends is left as it is.
+pub fn fit_bends(points: &mut Vec<V3>, radius: &dyn Fn(bool) -> f64, trim: (f64, f64)) {
+    loop {
+        // the corners `route` bends: no repeated point, no straight-through vertex
+        let mut p: Vec<V3> = vec![];
+        for &q in points.iter() {
+            if p.last().is_none_or(|l: &V3| (q - *l).len() > 1e-9) {
+                p.push(q);
+            }
+        }
+        let mut k = 1;
+        while k + 1 < p.len() {
+            let (a, b) = ((p[k] - p[k - 1]).normalized(), (p[k + 1] - p[k]).normalized());
+            if a.cross(b).len() < 1e-9 && a.dot(b) > 0.0 {
+                p.remove(k);
+            } else {
+                k += 1;
+            }
+        }
+        let n = p.len();
+        match route(&p, radius, trim) {
+            Err(RouteError::TooShort { at }) if n > 2 => {
+                p.remove(if at == 0 { 1 } else if at + 2 == n { n - 2 } else { at + 1 });
+                *points = p;
+            }
+            _ => return,
+        }
+    }
+}
+
 /// Points sloped by `pct` (%) downward along the route from the first point: each link drops by
 /// pct/100 × its plan length; a link steeper than 45° (a joint with a different elevation) keeps its own drop.
 pub fn apply_slope(pts: &[V3], pct: f64) -> Vec<V3> {
