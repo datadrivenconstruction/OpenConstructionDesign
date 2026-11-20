@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
-//! Wording lint over every en/ru catalog string (UX_AUDIT 2.11, docs/design/GLOSSARY.md).
+//! Wording lint over every en/ru catalog string (rules in docs/design/GLOSSARY.md).
 //! Reads the JSON data directly and never touches the UI language. Vocabulary (forbidden
 //! variants, capitals allowed inside a label) is parsed from the glossary section marked by
 //! `wording-lint` comments; whether a command ends in the ellipsis comes from `"dialog": true`

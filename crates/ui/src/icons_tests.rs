@@ -596,3 +596,16 @@ fn tint_roles_follow_the_theme() {
     let dark = crate::Theme::new(crate::theme::Mode::Dark, crate::theme::Density::Compact);
     assert_ne!(tint(&light, Tint::Rest), tint(&dark, Tint::Rest));
 }
+
+/// Embedded icons are LF on every checkout: `.gitattributes` pins `*.svg`, so a CRLF checkout
+/// cannot break the byte-level layer split (`duotone_splits_into_ink_and_accent`).
+#[test]
+fn embedded_icons_are_lf_on_every_checkout() {
+    let attrs = std::fs::read_to_string(concat!(env!("CARGO_MANIFEST_DIR"), "/../../.gitattributes")).unwrap();
+    let pinned = attrs.lines().any(|l| l.split_whitespace().eq(["*.svg", "text", "eol=lf"]));
+    assert!(pinned, ".gitattributes must pin *.svg to LF");
+    let sets = [crate::fragments::ICONS_V4, crate::fragments::ICONS_RIBBON, crate::fragments::ICONS_PICK];
+    let cr: Vec<&str> =
+        sets.iter().flat_map(|s| s.iter()).filter(|(_, svg)| svg.contains('\r')).map(|(n, _)| *n).collect();
+    assert!(cr.is_empty(), "{} embedded svg with CR, first: {:?}", cr.len(), cr.first());
+}

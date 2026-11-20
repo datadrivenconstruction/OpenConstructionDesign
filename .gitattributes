@@ -1,3 +1,5 @@
 *.rs text eol=lf
+# embedded icons are matched byte for byte; a CRLF checkout breaks the layer split
+*.svg text eol=lf
 
 crates/model/data/gltf/** -text
