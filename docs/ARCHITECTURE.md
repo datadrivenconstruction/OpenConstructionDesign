@@ -1,8 +1,8 @@
 # Architecture
 
 OpenConstructionDesign is a CAD-BIM editor: a Cargo workspace of focused crates. The model lives in SQLite,
-geometry is computed by an in-house kernel, and every change — from a mouse gesture, a
-spreadsheet, a script, the AI assistant or an external agent — reaches the model as a journaled
+geometry is computed by an in-house kernel, and every change (from a mouse gesture, a
+spreadsheet, a script, the AI assistant or an MCP client) reaches the model as a journaled
 operation.
 
 ## Crates
@@ -13,7 +13,7 @@ Each crate's `lib.rs` opens with a module map; read it before the code.
 |---|---|---|
 | `crates/model` | `ddc-model` | The model in SQLite: schema and migrations, elements and types (walls, slabs, roofs, stairs, curtain walls, structure, rebar, MEP, rooms, annotations, views, sheets, phases, options), the operation journal and undo, integrity and rule checks, merge, version comparison, the AI dry-run copies. |
 | `crates/geom` | `ddc-geom` | Geometry kernel: exact predicates, polygons, profiles, B-rep solids, CSG, sweeps, NURBS, meshes and repair, sketch constraint solver, sections, stairs, roofs, framing, rebar shapes, form finding. No dependency on the model. |
-| `crates/solver` | `ddc-solver` | Geometric constraints on plan points (distance, fix, parallel, perpendicular, collinear, equal spacing). Damped Gauss–Newton with a minimum-norm step, so edits move as few points as possible; unsatisfied constraints are reported as a conflict. |
+| `crates/solver` | `ddc-solver` | Geometric constraints on plan points (distance, fix, parallel, perpendicular, collinear, equal spacing). Damped Gauss-Newton with a minimum-norm step, so edits move as few points as possible; unsatisfied constraints are reported as a conflict. |
 | `crates/ops` | `ddc-ops` | The single serialisable edit language: versioned `Envelope` of groups of `Op`s, stable references, explicit units. Wire types only; JSON schema in `docs/schema/ops.v1.json`. |
 | `crates/io` | `ddc-io` | Import and export: IFC (STEP reader/writer), `.dwg` and `.dxf` readers, PDF and SVG writers, XLSX round-trip, BCF, glTF, STEP, STL, OBJ, 3MF, terrain sources, revision packages, and the host for external bridge processes. |
 | `crates/bridge-proto` | `ddc-bridge-proto` | Dependency-free codec of the bridge protocol: framed, versioned, neutral building data on a bridge process's stdout. |
@@ -100,13 +100,13 @@ The assistant never edits the live model. The contract:
 Safety limits: large envelopes need explicit confirmation and very large ones are refused;
 outbound requests pass an egress policy (local addresses always allowed, any other host only
 after per-project consent, or never in local-only mode); API keys are stored only in the OS
-credential store or in process memory and cannot be printed or serialised. External agents
+credential store or in process memory and cannot be printed or serialised. External MCP clients
 connect through the MCP server (loopback HTTP or stdio) and use the same tool catalog; their
 writes wait in a draft for the same Apply.
 
 ## Scripting
 
-Two script forms produce the same thing — an ops envelope:
+Two script forms produce the same thing, an ops envelope:
 
 - **Edit scripts (JSON).** An envelope file: title and groups of operations. The Scripts
   window adds, previews (dry run on a scratch copy) and runs them; a run is one undo step
@@ -133,7 +133,7 @@ Two script forms produce the same thing — an ops envelope:
   limits and treats the stream as untrusted.
 - **Edit language.** Tools outside the editor can write envelopes against
   `docs/schema/ops.v1.json` and run them as scripts or through MCP.
-- **MCP.** External agents use the editor's tool catalog under the same plan/Apply rules.
+- **MCP.** External clients use the editor's tool catalog under the same plan/Apply rules.
 - **Data packs.** Drawing standards (line weights, text heights, title blocks) and check rules
   are data, not code.
 - **Commands and translations.** Commands and UI strings are JSON fragments embedded at build

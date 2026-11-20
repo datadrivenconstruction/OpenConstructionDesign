@@ -46,7 +46,7 @@ the stream as untrusted, and maps it into native elements in one undoable operat
 
 **Rationale.** No linking between code under different licences; a crash or hang of the
 bridge never takes down the editor or changes the model; independent release cycles; a stable
-byte protocol instead of an unstable binary interface. The cost — copying data through a pipe —
+byte protocol instead of an unstable binary interface. The cost, copying data through a pipe,
 is not a bottleneck.
 
 ## 6. Desktop first, WebAssembly-compatible core
@@ -75,7 +75,7 @@ sweeps, exact predicates, booleans for walls, openings and slabs, sections,
 with NURBS and STEP support built in-house. Only permissively licensed dependencies are
 allowed.
 
-**Rationale.** Control over speed and robustness on large models, one kernel for desktop and
+**Rationale.** Control over speed and stability on large models, one kernel for desktop and
 WebAssembly, and a licence-clean dependency tree.
 
 ## 9. 2D and 3D in one document
@@ -108,7 +108,7 @@ reproducible and explainable.
 
 ## 12. One serialisable edit language
 
-**Decision.** UI tools, spreadsheet import, scripts, the AI assistant and external agents
+**Decision.** UI tools, spreadsheet import, scripts, the AI assistant and external MCP clients
 produce the same typed, versioned edit envelope. References are stable identifiers, every
 quantity names its unit, unknown fields are rejected, and older versions are upgraded before
 use. One envelope is one journal entry and one undo step.

@@ -117,14 +117,14 @@ command palette (**Ctrl+K**). **F1** opens help. Press **Esc** twice to leave an
    see the model as it is before the change.
 5. An applied proposal is one undo step and is marked as an AI change in the history.
 
-External agents can connect through the built-in MCP server; their changes wait for the same
+External MCP clients can connect through the built-in MCP server; their changes wait for the same
 Apply.
 
 ## Scripting
 
 - **Manage → Scripts and nodes** manages edit scripts (JSON). **Preview** shows what a
   script would create, change and delete; **Run** applies it as one undo step.
-- **Manage → Record actions to script**: start, edit, stop — the recorded edits become a
+- **Manage → Record actions to script**: start, edit, stop. The recorded edits become a
   reusable script.
 - Geometry scripts in Lua run in a sandbox, either through the assistant or from the command
   line:

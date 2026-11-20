@@ -28,4 +28,4 @@ service of its own.
 
 - Ask for one change at a time and read the diff before Apply.
 - Results depend on the model you choose; larger models handle multi-step requests better.
-- An MCP server lets external agents use the same tools, with the same preview and Apply gate.
+- An MCP server lets external clients use the same tools, with the same preview and Apply gate.

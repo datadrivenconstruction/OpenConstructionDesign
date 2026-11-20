@@ -54,8 +54,8 @@ By participating you agree to follow the [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Tests
 
-- **Every rule is a test.** Behaviour that the code promises — a geometric invariant, a
-  format rule, a UI contract, a limit — has a test that fails if the promise breaks.
+- **Every rule is a test.** Behaviour that the code promises (a geometric invariant, a
+  format rule, a UI contract, a limit) has a test that fails if the promise breaks.
 - **Every fixed bug gets a regression test** that fails before the fix.
 - Run the tests of the crate you changed, for example `cargo test -q -p ddc-model` or
   `pwsh tools/check.ps1 model` (format, tests and clippy in one command; a test name can

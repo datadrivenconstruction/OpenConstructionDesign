@@ -22,7 +22,7 @@ Manifest (UTF-8 JSON, at most 1 MiB):
  "files": [{"path": "x.exe", "sha256": "<64 lower-case hex>", "size": 123456},
            {"path": "helper.dll", "sha256": "<64 lower-case hex>", "size": 4096}]}
 ```
-- `name`: 1–64 of `[A-Za-z0-9._-]`. `version`: 1–4 dot-separated numbers. `formats`: no dot,
+- `name`: 1-64 of `[A-Za-z0-9._-]`. `version`: 1-4 dot-separated numbers. `formats`: no dot,
   compared lower case. `exe` must be one of `files`.
 - `files`: every file of the package, bare names only (no folders, no `..`, no device names),
   unique ignoring case, at most 256 files, each at most 1 GiB, total at most 2 GiB. Any other
@@ -77,7 +77,7 @@ All integers little-endian. Primitive encodings:
 | `opt<T>` | u8 0 (absent) / 1 + T |
 | `bool` | u8 0/1 (other values rejected) |
 | `p2` | f64 x, f64 y |
-| `guid` | `str`, 1–256 bytes, stable across exports of the same source element |
+| `guid` | `str`, 1-256 bytes, stable across exports of the same source element |
 | `value` | u8 tag + 0: bool · 1: i64 · 2: f64 · 3: str |
 
 Compatibility: within major version 1, fields are only appended at the end of a payload, and
@@ -108,10 +108,10 @@ coordinates are x, y; elevations are z.
 | 9 | Properties | vec<{guid owner, str key, value, str unit ("" = none)}> |
 | 10 | Warnings | vec<{str code, str message, opt<guid> element}> |
 | 11 | End | u64 elements (total sent; host checks), u64 warnings |
-| 12 | WallTops | vec<{guid wall, vec<p2> (along, height)}> — top edge of a straight wall |
-| 13 | SlabSlopes | vec<{guid slab, p2 point, p2 gradient (dz/dx, dz/dy)}> — before the slab's Elements frame; the slab's offset is its top at `point` (minor ≥ 2) |
+| 12 | WallTops | vec<{guid wall, vec<p2> (along, height)}>: top edge of a straight wall |
+| 13 | SlabSlopes | vec<{guid slab, p2 point, p2 gradient (dz/dx, dz/dy)}>: before the slab's Elements frame; the slab's offset is its top at `point` (minor ≥ 2) |
 | 14 | CurtainWalls | vec<{guid, guid level, str name, curve axis, f64 base_offset, f64 height, vec<f64> u, vec<f64> v, section interior, section border, vec<panel>}> (minor ≥ 2) |
-| 28 | Prisms | vec<{guid, guid level, str name, str category, str material, f64[3] o, f64[3] x, f64[3] y, vec<p2> outline, f64 depth}> — one closed extrusion: `outline` in the plane of orthonormal `x`, `y` about the world point `o`, along `x × y` over `depth`; empty `material` = none named |
+| 28 | Prisms | vec<{guid, guid level, str name, str category, str material, f64[3] o, f64[3] x, f64[3] y, vec<p2> outline, f64 depth}>: one closed extrusion; `outline` in the plane of orthonormal `x`, `y` about the world point `o`, along `x × y` over `depth`; empty `material` = none named |
 
 Minor version: the host passes `--minor N` (absent = 0). Frames 13 and 14 are sent only when
 N ≥ 2, frame 28 only when N ≥ 6; an older host gets the same elements as generic meshes.
@@ -125,8 +125,8 @@ without a panel is glazed.
 ### type (u8 kind + fields)
 | kind | | fields |
 |---|---|---|
-| 0 | wall type | guid, str name, vec<{guid material, f64 thickness}> — layers from the left face (looking from axis start to end) to the right |
-| 1 | slab type | guid, str name, vec<layer> — top to bottom |
+| 0 | wall type | guid, str name, vec<{guid material, f64 thickness}>: layers from the left face (looking from axis start to end) to the right |
+| 1 | slab type | guid, str name, vec<layer>: top to bottom |
 | 2 | family type | guid, str category ("door", "window", any neutral word), str name, vec<{str key, value}> |
 
 ### element (u8 kind + fields)

@@ -1,6 +1,6 @@
 # Contributor License Agreement (CLA)
 
-**Version 2.0 — Effective April 2026**
+**Version 2.0, effective April 2026**
 
 ## OpenConstructionDesign Individual Contributor License Agreement
 
@@ -90,9 +90,9 @@ Contributions on its behalf.
 
 ### 5a. Waiver of Moral Rights
 
-To the extent permitted by applicable law, you waive — and
+To the extent permitted by applicable law, you waive, and
 agree not to assert against the Project Owner or downstream
-licensees — any moral rights you hold in the Contribution
+licensees, any moral rights you hold in the Contribution
 (including the right of attribution and the right to object to
 modification). For jurisdictions in which such rights cannot be
 waived, you grant the Project Owner a perpetual, irrevocable

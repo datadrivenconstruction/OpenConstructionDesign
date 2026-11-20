@@ -1,4 +1,9 @@
-<p align="center"><img src="crates/app/data/brand/design-lockup-light.svg" alt="OpenConstructionDesign" height="56"></p>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="crates/app/data/brand/design-lockup-dark.svg">
+    <img src="crates/app/data/brand/design-lockup-light.svg" alt="OpenConstructionDesign" height="56">
+  </picture>
+</p>
 
 # OpenConstructionDesign
 
@@ -18,7 +23,13 @@ OpenConstructionDesign combines CAD precision with BIM data in one editor. It ha
 geometry kernel and file decoders, reads and writes IFC, and keeps the whole model and its
 change history in a single SQLite file on your machine.
 
-**Website:** <!-- website URL: pending --> coming soon.
+OpenConstructionDesign is part of the OpenConstruction family:
+
+| Product | What it does | Links |
+|---|---|---|
+| **OpenConstructionDesign** | CAD-BIM editor with an AI assistant (this repository) | Website: coming soon <!-- website URL: pending --> |
+| **OpenConstructionERP** | Cost estimation, scheduling and procurement from model quantities | [openconstructionerp.com](https://openconstructionerp.com) · [GitHub](https://github.com/datadrivenconstruction/OpenConstructionERP) |
+| **OpenConstructionAcademy** | Courses and guides on data-driven construction | [openconstructionacademy.com](https://openconstructionacademy.com) |
 
 > **Status: 0.9.0 preview.** The editor is usable, but the project file format, the APIs and
 > the interface can still change between releases. Keep the original of every model you open
@@ -38,12 +49,13 @@ applied plan is one undo step.
   network.
 - A built-in MCP server lets external AI clients use the same tools under the same Apply rule.
 
-The transmission tower in the gallery was generated this way, from one request.
+The transmission tower in the gallery was built with the same tools the assistant uses.
 
 ## 2. Quantities that flow into cost estimation
 
 The model is data first: every element carries its parameters and quantities, and they leave
-the editor in forms an estimating or ERP system can read.
+the editor in forms an estimating or ERP system can read, including
+[OpenConstructionERP](https://openconstructionerp.com).
 
 <p align="center">
   <img src="docs/images/erp-link.svg" alt="Diagram: the editor publishes a revision package with element rows and quantities; the ERP turns it into a cost estimate, a schedule and procurement; a project brief from the ERP generates a model in the editor" width="100%">
