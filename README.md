@@ -16,7 +16,10 @@ browser build on the way.**
 [![Rust](https://img.shields.io/badge/rust-1.89%2B-informational.svg)](docs/BUILDING.md)
 
 <p align="center">
-  <img src="docs/images/lattice-tower-dark.png" alt="The editor in the dark theme with a 60 m steel lattice transmission tower in 3D; a cross-arm beam is selected and its properties are shown on the right" width="100%">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/school-dark.png">
+  <img src="docs/images/school-light.png" alt="The editor with a two-storey school on its landscaped plot in 3D; an exterior wall is selected and its type, length, height, area and volume are shown on the right" width="100%">
+</picture>
 </p>
 
 OpenConstructionDesign combines CAD precision with BIM data in one editor. It has its own
@@ -85,16 +88,40 @@ editor below is the released one.
 
 ## Gallery
 
-Rendered by the editor itself; no third-party models.
+Rendered by the editor itself; no third-party models. Each image follows your GitHub theme
+(light or dark).
+
+<table>
+<tr>
+<td width="50%">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/school-dark.png">
+  <img src="docs/images/school-light.png" alt="Two-storey school with trees, hedges and paths on its plot; an exterior wall selected with its properties" width="100%">
+</picture>
+
+School, 2 storeys: 1,348 elements, landscaped plot.
+
+</td>
+<td width="50%">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/lattice-tower-dark.png">
+  <img src="docs/images/lattice-tower.png" alt="60 m steel lattice transmission tower with three cross-arms; a cross-arm beam is selected with its properties" width="100%">
+</picture>
+
+Transmission tower, 220 kV, built with the assistant's tools: 2,235 elements.
+
+</td>
+</tr>
+</table>
 
 | | |
 |---|---|
-| ![60 m steel lattice transmission tower with three cross-arms, a cross-arm beam selected with its properties](docs/images/lattice-tower.png) | ![Fifteen-storey generated office block with windows on every facade and trees on its plot](docs/images/hero-office-tower.png) |
-| Transmission tower built with the assistant's tools: 2,235 elements. | Office block, 15 levels: 306 walls, 251 doors, 205 windows. |
-| ![Forty-storey generated residential tower in 3D](docs/images/tower-40-storeys.png) | ![Building section with grid bubbles, level markers, a dimension and cut walls with windows](docs/images/section.png) |
-| Tower, 41 levels: 1,841 walls, 80,312 m2 of floor area. | Section with grids, level markers and a dimension. |
-| ![Floor plan of an upper level with hatched walls and a tagged bedroom selected with its properties](docs/images/plan-level2.png) | ![Two-storey model in the dark theme with a bedroom selected and its area and perimeter shown](docs/images/3d-dark-theme.png) |
-| Plan with wall hatch and a room tag (22.04 m2). | Dark theme, room selected: area, perimeter, number. |
+| ![Fifteen-storey office block with windows on every facade and trees on its plot](docs/images/hero-office-tower.png) | ![Forty-storey residential tower in 3D](docs/images/tower-40-storeys.png) |
+| Office block, 15 levels: 306 walls, 251 doors, 205 windows. | Tower, 41 levels: 1,841 walls, 80,312 m2 of floor area. |
+| ![Building section with grid bubbles, level markers, a dimension and cut walls with windows](docs/images/section.png) | ![Floor plan of an upper level with hatched walls and a tagged bedroom selected with its properties](docs/images/plan-level2.png) |
+| Section with grids, level markers and a dimension. | Plan with wall hatch and a room tag (22.04 m2). |
 
 ## Features
 
