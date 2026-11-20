@@ -454,7 +454,9 @@ fn face_references_survive_ten_parameter_changes() {
             start: s("0"),
         })
         .unwrap();
-    // the top is pushed up: its sides are new faces named by keys (top, neighbour side)
+    // the top is pushed up: sides get keys (top, neighbour side), but every side here is flush
+    // with the extrusion's side, so it continues that face (contract in the mass::push_pull doc:
+    // "a side flush with a neighbouring face continues it"; tested in tests/mass.rs)
     let pp = t
         .add("", Kind::Modify {
             op: s("push_pull"),
@@ -468,10 +470,14 @@ fn face_references_survive_ten_parameter_changes() {
     assert!(t.adopt_keys(&r));
     let keys = t.node(pp).unwrap().keys.clone();
     assert_eq!(keys.len(), 4);
-    let east = faces_facing(r.body.as_ref().unwrap(), pp, [1.0, 0.0, 0.0]);
-    let north = faces_facing(r.body.as_ref().unwrap(), pp, [0.0, 1.0, 0.0]);
+    let east = faces_facing(r.body.as_ref().unwrap(), e, [1.0, 0.0, 0.0]);
+    let north = faces_facing(r.body.as_ref().unwrap(), e, [0.0, 1.0, 0.0]);
     assert_eq!((east.len(), north.len()), (1, 1));
-    // the chamfer refers to the pushed top and the new east side
+    let pp_sides = |b: &crate::csg::Body| {
+        faces_facing(b, pp, [1.0, 0.0, 0.0]).len() + faces_facing(b, pp, [0.0, 1.0, 0.0]).len()
+    };
+    assert_eq!(pp_sides(r.body.as_ref().unwrap()), 0);
+    // the chamfer refers to the pushed top and the full-height east side
     let ch = t
         .add("", Kind::Modify {
             op: s("chamfer"),
@@ -492,8 +498,9 @@ fn face_references_survive_ten_parameter_changes() {
         assert_eq!(t.node(pp).unwrap().keys, keys, "step {i}: keys stay");
         let b = r.body.as_ref().unwrap();
         // the referenced faces are still the east side and the top, the chamfer between them
-        assert_eq!(faces_facing(b, pp, [1.0, 0.0, 0.0]), east, "step {i}");
-        assert_eq!(faces_facing(b, pp, [0.0, 1.0, 0.0]), north, "step {i}");
+        assert_eq!(faces_facing(b, e, [1.0, 0.0, 0.0]), east, "step {i}");
+        assert_eq!(faces_facing(b, e, [0.0, 1.0, 0.0]), north, "step {i}");
+        assert_eq!(pp_sides(b), 0, "step {i}");
         assert_eq!(faces_facing(b, ch, [diag, 0.0, diag]).len(), 1, "step {i}");
         let (w, d, h) = (2.0 + 0.3 * f, 1.0 + 0.1 * (i % 3) as f64, 1.0 + 0.2 + 0.1 * f);
         near(b.volume(), w * d * h - 0.005 * d);

@@ -32,11 +32,18 @@ use crate::mesh::Mesh;
 use crate::predicates::orient3d;
 use bvh::Bvh;
 use num::{orient2, sgn, Lin, Store, P};
-use tri2::Tri2;
+use tri2::{SplitError, Tri2};
 
-/// Faces (both operands) from which `csg_check::checked_boolean` and the freeform booleans
-/// switch from the BSP path to this one.
-pub const MIN_FACES: usize = 2_000;
+/// Face pairs (faces of a times faces of b) from which `csg_check::checked_boolean` and the
+/// freeform booleans switch from the BSP path to this one.
+pub const MESH_PAIRS: usize = 4_096;
+
+/// The BSP path clips every face of one operand against the other's tree, so its work and its
+/// float splits grow with the product of the face counts, not their sum: a faceted ring of 1024
+/// faces cut by a 6-face bar is a large pair, two 40-face blocks are not.
+pub fn prefers_mesh(faces_a: usize, faces_b: usize) -> bool {
+    faces_a.saturating_mul(faces_b) >= MESH_PAIRS
+}
 
 /// What the mesh path keeps and drops (for receipts).
 pub const NOTE: &str =
@@ -52,6 +59,9 @@ pub enum MeshBoolError {
     Degenerate { which: char, tri: usize },
     /// Intersections could not be arranged in a triangle: an operand intersects itself.
     SelfIntersecting { which: char },
+    /// A triangle could not be split for another reason: `why` is "outside" (a point off the
+    /// triangle) or "coincident" (two different points at one place).
+    Split { which: char, tri: usize, why: &'static str },
     /// The assembled result is not closed (reported, never returned as a solid).
     OpenResult,
 }
@@ -68,6 +78,9 @@ impl std::fmt::Display for MeshBoolError {
             }
             MeshBoolError::SelfIntersecting { which } => {
                 write!(f, "operand {which} intersects itself")
+            }
+            MeshBoolError::Split { which, tri, why } => {
+                write!(f, "operand {which}: triangle #{tri} could not be split ({why})")
             }
             MeshBoolError::OpenResult => f.write_str("result is not closed"),
         }
@@ -89,6 +102,9 @@ impl MeshBoolError {
             }
             MeshBoolError::SelfIntersecting { .. } => {
                 "mesh boolean refused (operand intersects itself), planar BSP used; measure: faces"
+            }
+            MeshBoolError::Split { .. } => {
+                "mesh boolean refused (triangle split failed), planar BSP used; measure: faces"
             }
             MeshBoolError::OpenResult => {
                 "mesh boolean refused (result not closed), planar BSP used; measure: faces"
@@ -471,8 +487,12 @@ impl Ctx {
         if self.pts[t].is_empty() && self.segs[t].is_empty() {
             return Ok((vec![g], vec![]));
         }
-        let which = if t < self.na { 'a' } else { 'b' };
-        let bad = |_| MeshBoolError::SelfIntersecting { which };
+        let (which, tri) = if t < self.na { ('a', t) } else { ('b', t - self.na) };
+        let bad = |e: SplitError| match e {
+            SplitError::Crossing => MeshBoolError::SelfIntersecting { which },
+            SplitError::Outside => MeshBoolError::Split { which, tri, why: "outside" },
+            SplitError::Coincident => MeshBoolError::Split { which, tri, why: "coincident" },
+        };
         let c = if self.ccw[t] { g } else { [g[0], g[2], g[1]] };
         let mut tr = Tri2::new(&self.st, self.axis[t], c);
         for &p in &self.pts[t] {
@@ -714,7 +734,12 @@ pub fn mesh_boolean(a: &Mesh, b: &Mesh, op: BoolOp, tol: Tol) -> Result<MeshBool
         let other = if s == 0 { (&bvh_b, na) } else { (&bvh_a, 0) };
         ctx.stats.patches += classify(&ctx, &mut frags[s], &fixed[s], other);
     }
-    let out = assemble(&ctx, &frags, op);
+    let mut out = assemble(&ctx, &frags, op);
+    // planar faces come back as fragments of every earlier split; refilled from their boundary
+    // loops they hold boundary + 2 * holes - 2 triangles, so repeated cuts stay linear
+    let all = vec![true; out.positions.len()];
+    crate::face_fill::refill_flat_faces(&mut out, &all, 0);
+    flip_caps(&mut out, tol.length);
     if !out.is_watertight() {
         return Err(MeshBoolError::OpenResult);
     }
@@ -840,6 +865,129 @@ fn assemble(ctx: &Ctx, frags: &[Vec<Frag>; 2], op: BoolOp) -> Mesh {
         }
     }
     m
+}
+
+/// Height of a triangle over its longest edge, and that edge's index.
+fn needle_height(m: &Mesh, t: [u32; 3]) -> (f64, usize) {
+    let p = t.map(|i| m.positions[i as usize]);
+    let k = (0..3)
+        .max_by(|&i, &j| {
+            let li = (p[(i + 1) % 3] - p[i]).len();
+            let lj = (p[(j + 1) % 3] - p[j]).len();
+            li.total_cmp(&lj)
+        })
+        .unwrap_or(0);
+    let e = (p[(k + 1) % 3] - p[k]).len();
+    let h = (p[1] - p[0]).cross(p[2] - p[0]).len() / e.max(1e-300);
+    (h, k)
+}
+
+/// Rounded split points can leave caps: a vertex within `tol` of the opposite long edge, so the
+/// triangle has almost no height and may fold over its neighbour, and the next boolean rejects
+/// that operand as self-intersecting. Flipping the long edge with the neighbour across it
+/// removes the cap; both new triangles lie in the neighbour's plane up to the cap height.
+fn flip_caps(m: &mut Mesh, tol: f64) {
+    for _ in 0..8 {
+        let collapsed = collapse_short_edges(m, tol);
+        let mut by_edge: HashMap<(u32, u32), usize> = HashMap::with_capacity(m.triangles.len() * 3);
+        for (i, t) in m.triangles.iter().enumerate() {
+            for k in 0..3 {
+                by_edge.insert((t[k], t[(k + 1) % 3]), i);
+            }
+        }
+        let mut touched = vec![false; m.triangles.len()];
+        let mut drop = vec![false; m.triangles.len()];
+        let mut flips = 0;
+        for i in 0..m.triangles.len() {
+            if touched[i] {
+                continue;
+            }
+            let t = m.triangles[i];
+            let (h, k) = needle_height(m, t);
+            if !(h < tol) {
+                continue;
+            }
+            let (a, b, c) = (t[k], t[(k + 1) % 3], t[(k + 2) % 3]);
+            let Some(&u) = by_edge.get(&(b, a)) else {
+                continue;
+            };
+            if touched[u] || u == i {
+                continue;
+            }
+            let tu = m.triangles[u];
+            let d = tu[(0..3).find(|&j| tu[j] != a && tu[j] != b).unwrap_or(0)];
+            if d == c {
+                // (a, b, c) and (b, a, c): the pair uses each of its edges once each way and
+                // closes on itself, so dropping both keeps the rest watertight
+                drop[i] = true;
+                drop[u] = true;
+                touched[i] = true;
+                touched[u] = true;
+                flips += 1;
+                continue;
+            }
+            if by_edge.contains_key(&(c, d)) || by_edge.contains_key(&(d, c)) {
+                continue;
+            }
+            let (n1, n2) = ([a, d, c], [d, b, c]);
+            if needle_height(m, n1).0 < tol || needle_height(m, n2).0 < tol {
+                continue;
+            }
+            m.triangles[i] = n1;
+            m.triangles[u] = n2;
+            m.face_of[i] = m.face_of[u];
+            touched[i] = true;
+            touched[u] = true;
+            flips += 1;
+        }
+        if drop.iter().any(|x| *x) {
+            let keep = |i: &usize| !drop[*i];
+            m.triangles = (0..drop.len()).filter(keep).map(|i| m.triangles[i]).collect();
+            m.face_of = (0..drop.len()).filter(keep).map(|i| m.face_of[i]).collect();
+        }
+        if flips == 0 && !collapsed {
+            return;
+        }
+    }
+}
+
+/// Two split points can be built along different exact paths and round to coordinates 1e-15
+/// apart, so they stay separate vertices joined by an edge far below `tol`. Collapsing that
+/// edge merges them; the two triangles on it degenerate and go, and each one's other two
+/// neighbours pair up with each other, so a closed mesh stays closed.
+fn collapse_short_edges(m: &mut Mesh, tol: f64) -> bool {
+    let mut to: Vec<u32> = (0..m.positions.len() as u32).collect();
+    fn root(to: &mut [u32], mut x: u32) -> u32 {
+        while to[x as usize] != x {
+            x = to[x as usize];
+        }
+        x
+    }
+    let mut any = false;
+    for t in &m.triangles {
+        for k in 0..3 {
+            let (a, b) = (root(&mut to, t[k]), root(&mut to, t[(k + 1) % 3]));
+            if a != b && (m.positions[a as usize] - m.positions[b as usize]).len() < tol {
+                to[a.max(b) as usize] = a.min(b);
+                any = true;
+            }
+        }
+    }
+    if !any {
+        return false;
+    }
+    let mut tris = Vec::with_capacity(m.triangles.len());
+    let mut faces = Vec::with_capacity(m.triangles.len());
+    for (t, f) in m.triangles.iter().zip(&m.face_of) {
+        let r = t.map(|i| root(&mut to, i));
+        if r[0] != r[1] && r[1] != r[2] && r[0] != r[2] {
+            tris.push(r);
+            faces.push(*f);
+        }
+    }
+    m.triangles = tris;
+    m.face_of = faces;
+    true
 }
 
 /// Body boolean through the mesh path: polygons are fanned (tags kept), the result is turned

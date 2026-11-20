@@ -181,22 +181,35 @@ proptest! {
     fn ddcf_fmt_random_edits(
         ops in prop::collection::vec((0u8..6, any::<u32>(), any::<u32>()), 0..16)
     ) {
-        let g = golden();
-        let lines: Vec<String> = g.lines().map(str::to_string).collect();
-        let (h, e) = (8, lines.iter().position(|l| l == "begin").unwrap());
-        let mut body = lines[h..e].to_vec();
-        for (op, a, b) in ops {
-            edit(&mut body, op, a, b);
-        }
-        let text = [&lines[..h], &body[..], &lines[e..]].concat().join("\n");
-        let f = check(&text).map_err(|e| TestCaseError::fail(format!("{e}\n{text}")))?;
-        let c = fmt(&text).unwrap();
-        prop_assert_eq!(check(&c).unwrap(), f, "{}", c);
-        prop_assert_eq!(fmt(&c).unwrap(), c.clone());
-        for l in c.lines() {
-            prop_assert!(!l.trim().is_empty() && l == l.trim(), "{:?}", l);
-        }
-        prop_assert_eq!(upgrade(&c).unwrap(), c);
+        random_edits_hold(ops)?;
+    }
+}
+
+fn random_edits_hold(ops: Vec<(u8, u32, u32)>) -> Result<(), TestCaseError> {
+    let g = golden();
+    let lines: Vec<String> = g.lines().map(str::to_string).collect();
+    let (h, e) = (8, lines.iter().position(|l| l == "begin").unwrap());
+    let mut body = lines[h..e].to_vec();
+    for (op, a, b) in ops {
+        edit(&mut body, op, a, b);
+    }
+    let text = [&lines[..h], &body[..], &lines[e..]].concat().join("\n");
+    let f = check(&text).map_err(|e| TestCaseError::fail(format!("{e}\n{text}")))?;
+    let c = fmt(&text).unwrap();
+    prop_assert_eq!(check(&c).unwrap(), f, "{}", c);
+    prop_assert_eq!(fmt(&c).unwrap(), c.clone());
+    for l in c.lines() {
+        prop_assert!(!l.trim().is_empty() && l == l.trim(), "{:?}", l);
+    }
+    prop_assert_eq!(upgrade(&c).unwrap(), c);
+    Ok(())
+}
+
+/// Cases proptest shrank to on the candidate and on this branch: one widened gap in a line.
+#[test]
+fn ddcf_fmt_pinned_random_edits() {
+    for ops in [vec![(0, 812609328, 0)], vec![(0, 1904636406, 0)]] {
+        random_edits_hold(ops.clone()).unwrap_or_else(|e| panic!("{ops:?}: {e}"));
     }
 }
 

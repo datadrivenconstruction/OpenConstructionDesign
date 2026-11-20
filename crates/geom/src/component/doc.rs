@@ -362,9 +362,11 @@ impl FamDoc {
             name: name.into(),
             msg: "no such reference plane".into(),
         })?;
-        let w: Vec<&str> = s.text.splitn(4, char::is_whitespace).collect();
-        let ax = w.get(2).copied().unwrap_or("x");
-        let rest = w.get(3).copied().unwrap_or("").trim();
+        let (_, r1) = super::split1(&s.text);
+        let (_, r2) = super::split1(r1);
+        let (ax, rest) = super::split1(r2);
+        let ax = if ax.is_empty() { "x" } else { ax };
+        let rest = rest.trim();
         if rest.starts_with('~') {
             return self.replace_stmt(&s, &format!("ref {name} {ax} ~ {}", mm(v)));
         }

@@ -156,7 +156,9 @@ pub fn build(kind: PlateKind, o: V3, e1: V3, e2: V3, t: f64, ends: &[End]) -> (P
                 // two members along one line on one side of the node: the later group goes past
                 // the earlier one
                 if j < i {
-                    s = s.max(starts[j] + reach[j] + clear);
+                    // the lines are only nearly parallel: a rivet of j off its axis by up to
+                    // across/2 leans toward i by that times sin, so the gap grows by it
+                    s = s.max(starts[j] + reach[j] + clear + across[j] / 2.0 * sin);
                 }
                 continue;
             }

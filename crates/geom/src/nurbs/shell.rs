@@ -90,24 +90,37 @@ impl Surface {
                 }
             }
         }
-        for _ in 0..50 {
+        // Damped Gauss-Newton: plain Newton where the plan Jacobian is regular, a smaller step
+        // at poles and vertical tangent planes, where it is singular.
+        for _ in 0..100 {
             let d = self.derivs(u, v, 1);
             let (fx, fy) = (d[0][0].x - x, d[0][0].y - y);
-            if (fx * fx + fy * fy).sqrt() <= 1e-13 {
+            let here = (fx * fx + fy * fy).sqrt();
+            if here <= 1e-13 {
                 break;
             }
             let (a, b, c, e) = (d[1][0].x, d[0][1].x, d[1][0].y, d[0][1].y);
-            let det = a * e - b * c;
-            if !(det.abs() > 1e-300) {
-                break; // vertical tangent plane: keep the grid point
+            let (h11, h12, h22) = (a * a + c * c, a * b + c * e, b * b + e * e);
+            let (g1, g2) = (a * fx + c * fy, b * fx + e * fy);
+            let scale = (h11 + h22).max(1e-300);
+            let mut moved = false;
+            for mu in [0.0, 1e-12, 1e-9, 1e-6, 1e-3, 1e-1, 10.0] {
+                let (m11, m22) = (h11 + mu * scale, h22 + mu * scale);
+                let det = m11 * m22 - h12 * h12;
+                if !(det.abs() > 1e-300) {
+                    continue;
+                }
+                let du = (m22 * g1 - h12 * g2) / det;
+                let dv = (m11 * g2 - h12 * g1) / det;
+                let (nu, nv) = ((u - du).clamp(u0, u1), (v - dv).clamp(v0, v1));
+                if gap(self.point(nu, nv)) < here {
+                    (u, v, moved) = (nu, nv, true);
+                    break;
+                }
             }
-            let du = (e * fx - b * fy) / det;
-            let dv = (a * fy - c * fx) / det;
-            let (nu, nv) = ((u - du).clamp(u0, u1), (v - dv).clamp(v0, v1));
-            if (nu - u).abs() + (nv - v).abs() < 1e-15 {
+            if !moved {
                 break;
             }
-            (u, v) = (nu, nv);
         }
         (gap(self.point(u, v)) <= tol).then_some([u, v])
     }

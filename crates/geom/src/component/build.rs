@@ -159,12 +159,13 @@ fn prof(p: &Profile, r: &Resolved, lod: Lod, what: &str) -> Result<Prof, FamilyE
             if pts.len() > 2 && (pts[0] - pts[pts.len() - 1]).len() < 1e-12 {
                 pts.pop();
             }
+            // Crossing first: a bow tie has zero signed area but is a crossing, not a flat outline.
+            if pts.len() >= 3 && !simple(&pts) {
+                return Err(gerr(what, "profile crosses itself"));
+            }
             let a = poly::area(&pts);
             if pts.len() < 3 || a.abs() < 1e-12 {
                 return Err(gerr(what, "profile has no area"));
-            }
-            if !simple(&pts) {
-                return Err(gerr(what, "profile crosses itself"));
             }
             if a < 0.0 {
                 pts.reverse();
@@ -730,9 +731,10 @@ impl Family {
                 if !s.void && s.vis & PLAN != 0 && s.vis & lod.bit() != 0 {
                     plan.extend(outline);
                 }
+                // the material belongs to the definition, so an empty organ keeps it
                 parts.push(Part {
                     name: s.name.clone(),
-                    material: String::new(),
+                    material: s.material.as_ref().map(|m| r.material_name(m)).unwrap_or_default(),
                     volume: 0.0,
                     void: s.void,
                     visible: false,
@@ -745,12 +747,7 @@ impl Family {
                 open.push((parts.len(), m.pos.clone(), m.tris.clone()));
             }
             // shade, light and streak organs are tone skins over the crown and bark: no volume of their own
-            let tone = !s.void
-                && v == 0.0
-                && matches!(
-                    s.shape,
-                    Shape::Plant { organ: plant::Organ::Shade | plant::Organ::Light | plant::Organ::Streak, .. }
-                );
+            let tone = !s.void && v == 0.0 && matches!(s.shape, Shape::Plant { organ, .. } if organ.is_tone());
             if !v.is_finite() || (v <= 0.0 && !surface_only && !tone) {
                 return Err(gerr(&s.name, "solid has no volume"));
             }

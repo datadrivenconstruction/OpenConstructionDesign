@@ -510,6 +510,7 @@ param Power number type 200
 param Finish material type "Steel White"
 type "Single" Width=80mm, Power=200
 type "Double" Width=150mm, Power=400
+type "2.75x4.5in" Width=2.75in, Height=4.5in, Power=180
 extrude Plate poly(-Width / 2 + 4mm, 0mm, Width / 2 - 4mm, 0mm, Width / 2, 4mm, Width / 2, Depth - 6mm, Width / 2 - 4mm, Depth - 4mm, -Width / 2 + 4mm, Depth - 4mm, -Width / 2, Depth - 6mm, -Width / 2, 4mm) z(0mm, Height) mat(Finish) show(3d, elev)
 sweep Face circle(0, 0, 22mm) path(0, Depth - 4mm, Height / 2, 0, Depth, Height / 2) mat(Finish) show(3d, elev)
 symbol rect(-Width / 2, 0mm, Width / 2, 60mm)
@@ -528,7 +529,8 @@ param Finish material type "Steel White"
 type "DISS" Port=15mm
 type "Quick connect" Width=140mm, Height=140mm, Port=22mm
 type "Wide 6 in" Width=6in, Height=6in, Port=1in
-extrude Plate rect(-Width / 2, 0mm, Width / 2, Depth) z(0mm, Height) mat(Finish) show(3d, elev)
+extrude Plate poly(-Width / 2 + 4mm, 0mm, Width / 2 - 4mm, 0mm, Width / 2, 4mm, Width / 2, Depth - 8mm, Width / 2 - 4mm, Depth - 4mm, -Width / 2 + 4mm, Depth - 4mm, -Width / 2, Depth - 8mm, -Width / 2, 4mm) z(0mm, Height) mat(Finish) show(3d, elev)
+extrude Socket rect(-Port, Depth - 4mm, Port, Depth) z(Height / 2 - Port, Height / 2 + Port) mat(Finish) show(3d, elev)
 symbol rect(-Width / 2, 0mm, Width / 2, Depth)
 symbol line(-Width / 2, 0mm, Width / 2, Depth) show(medium, fine)
 connector Gas pipe medical_gas at(0, 0, Height / 2) dir(0, -1, 0) size(Port)
@@ -1240,7 +1242,8 @@ ifc IfcGeographicElement NOTDEFINED
 # Season is when the type stands in leaf: 0 summer 1 autumn 2 winter (bare) 3 spring, 4 all
 # year (evergreens); a deciduous species has one type per season with the same seed.
 # Scale (instance value) sizes the whole tree; the generator jitters it per tree. MinClear floors
-# the clear trunk under the crown (the generator sets it from site.tree_min_clear).
+# the clear trunk under the crown (the generator sets it from site.tree_min_clear). The clear
+# trunk never exceeds 0.9 of the height, so a short tree or a long Clear still builds.
 param Form int type 0
 param Height length type 8000mm
 param Crown length type 4000mm
@@ -1270,8 +1273,8 @@ type "Elm A" Form=6, Height=17000mm, Crown=12000mm, Trunk=600mm, Clear=4000mm, L
 type "Elm B" Form=6, Height=15300mm, Crown=12960mm, Trunk=552mm, Clear=3800mm, Leaf=1, Seed=170, Group=0, Weight=1, Bark="Bark Grey", Streak="Bark Grey Streak"
 type "Spruce A" Form=2, Height=20000mm, Crown=6000mm, Trunk=500mm, Clear=1200mm, Leaf=1, Seed=177, Group=1, Weight=1, Leaves="Foliage Conifer", Season=4, Bark="Bark Red", Inner="Foliage Conifer Shade", Light="Foliage Conifer Light", Streak="Bark Red Streak"
 type "Spruce B" Form=2, Height=18000mm, Crown=6480mm, Trunk=460mm, Clear=1140mm, Leaf=1, Seed=184, Group=1, Weight=1, Leaves="Foliage Conifer", Season=4, Bark="Bark Red", Inner="Foliage Conifer Shade", Light="Foliage Conifer Light", Streak="Bark Red Streak"
-type "Fir A" Form=2, Height=14000mm, Crown=5000mm, Trunk=400mm, Clear=1000mm, Leaf=1, Seed=191, Group=1, Weight=1, Leaves="Foliage Conifer", Season=4, Bark="Bark Red", Inner="Foliage Conifer Shade", Light="Foliage Conifer Light", Streak="Bark Red Streak"
-type "Fir B" Form=2, Height=12600mm, Crown=5400mm, Trunk=368mm, Clear=950mm, Leaf=1, Seed=198, Group=1, Weight=1, Leaves="Foliage Conifer", Season=4, Bark="Bark Red", Inner="Foliage Conifer Shade", Light="Foliage Conifer Light", Streak="Bark Red Streak"
+type "Fir A" Form=2, Height=15500mm, Crown=5000mm, Trunk=400mm, Clear=1000mm, Leaf=1, Seed=191, Group=1, Weight=1, Leaves="Foliage Conifer", Season=4, Bark="Bark Red", Inner="Foliage Conifer Shade", Light="Foliage Conifer Light", Streak="Bark Red Streak"
+type "Fir B" Form=2, Height=13950mm, Crown=5400mm, Trunk=368mm, Clear=950mm, Leaf=1, Seed=198, Group=1, Weight=1, Leaves="Foliage Conifer", Season=4, Bark="Bark Red", Inner="Foliage Conifer Shade", Light="Foliage Conifer Light", Streak="Bark Red Streak"
 type "Poplar A" Form=3, Height=22000mm, Crown=4500mm, Trunk=500mm, Clear=2500mm, Leaf=1, Seed=205, Group=2, Weight=1, Bark="Bark Grey", Streak="Bark Grey Streak"
 type "Poplar B" Form=3, Height=19800mm, Crown=4860mm, Trunk=460mm, Clear=2375mm, Leaf=1, Seed=212, Group=2, Weight=1, Bark="Bark Grey", Streak="Bark Grey Streak"
 type "Cypress A" Form=3, Height=12000mm, Crown=2600mm, Trunk=300mm, Clear=600mm, Leaf=1, Seed=219, Group=2, Weight=1, Leaves="Foliage Conifer", Season=4, Inner="Foliage Conifer Shade", Light="Foliage Conifer Light"
@@ -1282,28 +1285,28 @@ type "Birch A" Form=4, Height=10000mm, Crown=6000mm, Trunk=300mm, Clear=1500mm, 
 type "Birch B" Form=4, Height=9000mm, Crown=6480mm, Trunk=276mm, Clear=1425mm, Leaf=1, Seed=254, Group=3, Weight=1, Bark="Bark Birch", Streak="Bark Birch Streak"
 type "Date Palm A" Form=5, Height=12000mm, Crown=6000mm, Trunk=450mm, Clear=8000mm, Leaf=1, Seed=261, Group=4, Weight=1, Season=4, Bark="Bark Palm", Streak="Bark Palm Streak"
 type "Date Palm B" Form=5, Height=10800mm, Crown=6480mm, Trunk=414mm, Clear=7600mm, Leaf=1, Seed=268, Group=4, Weight=1, Season=4, Bark="Bark Palm", Streak="Bark Palm Streak"
-type "Fan Palm A" Form=5, Height=7000mm, Crown=4500mm, Trunk=350mm, Clear=5000mm, Leaf=1, Seed=275, Group=4, Weight=1, Season=4, Bark="Bark Palm", Streak="Bark Palm Streak"
-type "Fan Palm B" Form=5, Height=6300mm, Crown=4860mm, Trunk=322mm, Clear=4750mm, Leaf=1, Seed=282, Group=4, Weight=1, Season=4, Bark="Bark Palm", Streak="Bark Palm Streak"
+type "Fan Palm A" Form=5, Height=7500mm, Crown=4500mm, Trunk=350mm, Clear=5000mm, Leaf=1, Seed=275, Group=4, Weight=1, Season=4, Bark="Bark Palm", Streak="Bark Palm Streak"
+type "Fan Palm B" Form=5, Height=6750mm, Crown=4860mm, Trunk=322mm, Clear=4750mm, Leaf=1, Seed=282, Group=4, Weight=1, Season=4, Bark="Bark Palm", Streak="Bark Palm Streak"
 type "Cherry A" Form=1, Height=6000mm, Crown=5000mm, Trunk=250mm, Clear=1400mm, Leaf=1, Seed=289, Group=5, Weight=1, Bark="Bark Cherry", Streak="Bark Cherry Streak"
 type "Cherry B" Form=1, Height=5400mm, Crown=5400mm, Trunk=230mm, Clear=1330mm, Leaf=1, Seed=296, Group=5, Weight=1, Bark="Bark Cherry", Streak="Bark Cherry Streak"
 type "Hawthorn A" Form=0, Height=5000mm, Crown=4000mm, Trunk=200mm, Clear=1000mm, Leaf=1, Seed=303, Group=5, Weight=1, Bark="Bark Grey", Streak="Bark Grey Streak"
 type "Hawthorn B" Form=0, Height=4500mm, Crown=4320mm, Trunk=184mm, Clear=950mm, Leaf=1, Seed=310, Group=5, Weight=1, Bark="Bark Grey", Streak="Bark Grey Streak"
 type "Shrub A" Form=0, Height=1500mm, Crown=1800mm, Trunk=50mm, Clear=100mm, Leaf=1, Seed=317, Group=5, Weight=1
 type "Shrub B" Form=0, Height=1350mm, Crown=1940mm, Trunk=46mm, Clear=95mm, Leaf=1, Seed=324, Group=5, Weight=1
-type "Acacia A" Form=7, Height=10000mm, Crown=12000mm, Trunk=450mm, Clear=4500mm, Leaf=1, Seed=331, Group=6, Weight=1, Bark="Bark Dark", Streak="Bark Dark Streak"
-type "Acacia B" Form=7, Height=9000mm, Crown=12960mm, Trunk=414mm, Clear=4275mm, Leaf=1, Seed=338, Group=6, Weight=1, Bark="Bark Dark", Streak="Bark Dark Streak"
-type "Stone Pine A" Form=7, Height=14000mm, Crown=10000mm, Trunk=500mm, Clear=7000mm, Leaf=1, Seed=345, Group=6, Weight=1, Leaves="Foliage Conifer", Season=4, Bark="Bark Red", Inner="Foliage Conifer Shade", Light="Foliage Conifer Light", Streak="Bark Red Streak"
-type "Stone Pine B" Form=7, Height=12600mm, Crown=10800mm, Trunk=460mm, Clear=6650mm, Leaf=1, Seed=352, Group=6, Weight=1, Leaves="Foliage Conifer", Season=4, Bark="Bark Red", Inner="Foliage Conifer Shade", Light="Foliage Conifer Light", Streak="Bark Red Streak"
-type "Chestnut A" Form=0, Height=18000mm, Crown=14000mm, Trunk=700mm, Clear=3500mm, Leaf=1, Seed=401, Group=0, Weight=1, Bark="Bark Dark", Streak="Bark Dark Streak"
-type "Chestnut B" Form=0, Height=16200mm, Crown=15120mm, Trunk=644mm, Clear=3325mm, Leaf=1, Seed=408, Group=0, Weight=1, Bark="Bark Dark", Streak="Bark Dark Streak"
+type "Acacia A" Form=7, Height=10500mm, Crown=12000mm, Trunk=450mm, Clear=4500mm, Leaf=1, Seed=331, Group=6, Weight=1, Bark="Bark Dark", Streak="Bark Dark Streak"
+type "Acacia B" Form=7, Height=9450mm, Crown=12960mm, Trunk=414mm, Clear=4275mm, Leaf=1, Seed=338, Group=6, Weight=1, Bark="Bark Dark", Streak="Bark Dark Streak"
+type "Stone Pine A" Form=7, Height=13000mm, Crown=10000mm, Trunk=500mm, Clear=7000mm, Leaf=1, Seed=345, Group=6, Weight=1, Leaves="Foliage Conifer", Season=4, Bark="Bark Red", Inner="Foliage Conifer Shade", Light="Foliage Conifer Light", Streak="Bark Red Streak"
+type "Stone Pine B" Form=7, Height=11700mm, Crown=10800mm, Trunk=460mm, Clear=6650mm, Leaf=1, Seed=352, Group=6, Weight=1, Leaves="Foliage Conifer", Season=4, Bark="Bark Red", Inner="Foliage Conifer Shade", Light="Foliage Conifer Light", Streak="Bark Red Streak"
+type "Chestnut A" Form=0, Height=17500mm, Crown=14000mm, Trunk=700mm, Clear=3500mm, Leaf=1, Seed=401, Group=0, Weight=1, Bark="Bark Dark", Streak="Bark Dark Streak"
+type "Chestnut B" Form=0, Height=15750mm, Crown=15120mm, Trunk=644mm, Clear=3325mm, Leaf=1, Seed=408, Group=0, Weight=1, Bark="Bark Dark", Streak="Bark Dark Streak"
 type "Ash A" Form=1, Height=20000mm, Crown=9000mm, Trunk=550mm, Clear=4500mm, Leaf=1, Seed=415, Group=0, Weight=1, Bark="Bark Dark", Streak="Bark Dark Streak"
 type "Ash B" Form=1, Height=18000mm, Crown=9720mm, Trunk=506mm, Clear=4275mm, Leaf=1, Seed=422, Group=0, Weight=1, Bark="Bark Dark", Streak="Bark Dark Streak"
 type "Hornbeam A" Form=3, Height=15000mm, Crown=5000mm, Trunk=380mm, Clear=2000mm, Leaf=1, Seed=429, Group=2, Weight=1, Bark="Bark Grey", Streak="Bark Grey Streak"
 type "Hornbeam B" Form=3, Height=13500mm, Crown=5400mm, Trunk=350mm, Clear=1900mm, Leaf=1, Seed=436, Group=2, Weight=1, Bark="Bark Grey", Streak="Bark Grey Streak"
 type "Scots Pine A" Form=6, Height=22000mm, Crown=9000mm, Trunk=500mm, Clear=9000mm, Leaf=1, Seed=443, Group=1, Weight=1, Leaves="Foliage Conifer", Season=4, Bark="Bark Red", Inner="Foliage Conifer Shade", Light="Foliage Conifer Light", Streak="Bark Red Streak"
 type "Scots Pine B" Form=6, Height=19800mm, Crown=9720mm, Trunk=460mm, Clear=8550mm, Leaf=1, Seed=450, Group=1, Weight=1, Leaves="Foliage Conifer", Season=4, Bark="Bark Red", Inner="Foliage Conifer Shade", Light="Foliage Conifer Light", Streak="Bark Red Streak"
-type "Olive A" Form=7, Height=6000mm, Crown=6500mm, Trunk=350mm, Clear=1200mm, Leaf=1, Seed=457, Group=6, Weight=1, Leaves="Foliage Olive", Season=4, Bark="Bark Grey", Inner="Foliage Olive Shade", Light="Foliage Olive Light", Streak="Bark Grey Streak"
-type "Olive B" Form=7, Height=5400mm, Crown=7020mm, Trunk=322mm, Clear=1140mm, Leaf=1, Seed=464, Group=6, Weight=1, Leaves="Foliage Olive", Season=4, Bark="Bark Grey", Inner="Foliage Olive Shade", Light="Foliage Olive Light", Streak="Bark Grey Streak"
+type "Olive A" Form=7, Height=6500mm, Crown=6500mm, Trunk=350mm, Clear=1200mm, Leaf=1, Seed=457, Group=6, Weight=1, Leaves="Foliage Olive", Season=4, Bark="Bark Grey", Inner="Foliage Olive Shade", Light="Foliage Olive Light", Streak="Bark Grey Streak"
+type "Olive B" Form=7, Height=5850mm, Crown=7020mm, Trunk=322mm, Clear=1140mm, Leaf=1, Seed=464, Group=6, Weight=1, Leaves="Foliage Olive", Season=4, Bark="Bark Grey", Inner="Foliage Olive Shade", Light="Foliage Olive Light", Streak="Bark Grey Streak"
 type "Magnolia A" Form=1, Height=7000mm, Crown=5500mm, Trunk=250mm, Clear=1000mm, Leaf=1, Seed=471, Group=5, Weight=1, Bark="Bark Grey", Streak="Bark Grey Streak"
 type "Magnolia B" Form=1, Height=6300mm, Crown=5940mm, Trunk=230mm, Clear=950mm, Leaf=1, Seed=478, Group=5, Weight=1, Bark="Bark Grey", Streak="Bark Grey Streak"
 type "Rowan A" Form=0, Height=8000mm, Crown=5500mm, Trunk=250mm, Clear=1500mm, Leaf=1, Seed=485, Group=5, Weight=1, Bark="Bark Grey", Streak="Bark Grey Streak"
@@ -1376,18 +1379,18 @@ type "Shrub A Spring" Form=0, Height=1500mm, Crown=1800mm, Trunk=50mm, Clear=100
 type "Shrub B Autumn" Form=0, Height=1350mm, Crown=1940mm, Trunk=46mm, Clear=95mm, Leaf=1, Seed=324, Group=5, Weight=1, Season=1, Leaves="Foliage Red", Inner="Foliage Red Shade", Light="Foliage Red Light"
 type "Shrub B Bare" Form=0, Height=1350mm, Crown=1940mm, Trunk=46mm, Clear=95mm, Leaf=0, Seed=324, Group=5, Weight=1, Season=2
 type "Shrub B Spring" Form=0, Height=1350mm, Crown=1940mm, Trunk=46mm, Clear=95mm, Leaf=0.75, Seed=324, Group=5, Weight=1, Season=3, Leaves="Foliage Spring", Inner="Foliage Spring Shade", Light="Foliage Spring Light"
-type "Acacia A Autumn" Form=7, Height=10000mm, Crown=12000mm, Trunk=450mm, Clear=4500mm, Leaf=1, Seed=331, Group=6, Weight=1, Season=1, Leaves="Foliage Gold", Bark="Bark Dark", Inner="Foliage Gold Shade", Light="Foliage Gold Light", Streak="Bark Dark Streak"
-type "Acacia A Bare" Form=7, Height=10000mm, Crown=12000mm, Trunk=450mm, Clear=4500mm, Leaf=0, Seed=331, Group=6, Weight=1, Season=2, Bark="Bark Dark", Streak="Bark Dark Streak"
-type "Acacia A Spring" Form=7, Height=10000mm, Crown=12000mm, Trunk=450mm, Clear=4500mm, Leaf=0.75, Seed=331, Group=6, Weight=1, Season=3, Leaves="Foliage Spring", Bark="Bark Dark", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Streak="Bark Dark Streak"
-type "Acacia B Autumn" Form=7, Height=9000mm, Crown=12960mm, Trunk=414mm, Clear=4275mm, Leaf=1, Seed=338, Group=6, Weight=1, Season=1, Leaves="Foliage Gold", Bark="Bark Dark", Inner="Foliage Gold Shade", Light="Foliage Gold Light", Streak="Bark Dark Streak"
-type "Acacia B Bare" Form=7, Height=9000mm, Crown=12960mm, Trunk=414mm, Clear=4275mm, Leaf=0, Seed=338, Group=6, Weight=1, Season=2, Bark="Bark Dark", Streak="Bark Dark Streak"
-type "Acacia B Spring" Form=7, Height=9000mm, Crown=12960mm, Trunk=414mm, Clear=4275mm, Leaf=0.75, Seed=338, Group=6, Weight=1, Season=3, Leaves="Foliage Spring", Bark="Bark Dark", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Streak="Bark Dark Streak"
-type "Chestnut A Autumn" Form=0, Height=18000mm, Crown=14000mm, Trunk=700mm, Clear=3500mm, Leaf=1, Seed=401, Group=0, Weight=1, Season=1, Leaves="Foliage Autumn", Bark="Bark Dark", Inner="Foliage Autumn Shade", Light="Foliage Autumn Light", Streak="Bark Dark Streak"
-type "Chestnut A Bare" Form=0, Height=18000mm, Crown=14000mm, Trunk=700mm, Clear=3500mm, Leaf=0, Seed=401, Group=0, Weight=1, Season=2, Bark="Bark Dark", Streak="Bark Dark Streak"
-type "Chestnut A Spring" Form=0, Height=18000mm, Crown=14000mm, Trunk=700mm, Clear=3500mm, Leaf=0.75, Seed=401, Group=0, Weight=1, Season=3, Leaves="Foliage Spring", Bark="Bark Dark", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Streak="Bark Dark Streak"
-type "Chestnut B Autumn" Form=0, Height=16200mm, Crown=15120mm, Trunk=644mm, Clear=3325mm, Leaf=1, Seed=408, Group=0, Weight=1, Season=1, Leaves="Foliage Autumn", Bark="Bark Dark", Inner="Foliage Autumn Shade", Light="Foliage Autumn Light", Streak="Bark Dark Streak"
-type "Chestnut B Bare" Form=0, Height=16200mm, Crown=15120mm, Trunk=644mm, Clear=3325mm, Leaf=0, Seed=408, Group=0, Weight=1, Season=2, Bark="Bark Dark", Streak="Bark Dark Streak"
-type "Chestnut B Spring" Form=0, Height=16200mm, Crown=15120mm, Trunk=644mm, Clear=3325mm, Leaf=0.75, Seed=408, Group=0, Weight=1, Season=3, Leaves="Foliage Spring", Bark="Bark Dark", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Streak="Bark Dark Streak"
+type "Acacia A Autumn" Form=7, Height=10500mm, Crown=12000mm, Trunk=450mm, Clear=4500mm, Leaf=1, Seed=331, Group=6, Weight=1, Season=1, Leaves="Foliage Gold", Bark="Bark Dark", Inner="Foliage Gold Shade", Light="Foliage Gold Light", Streak="Bark Dark Streak"
+type "Acacia A Bare" Form=7, Height=10500mm, Crown=12000mm, Trunk=450mm, Clear=4500mm, Leaf=0, Seed=331, Group=6, Weight=1, Season=2, Bark="Bark Dark", Streak="Bark Dark Streak"
+type "Acacia A Spring" Form=7, Height=10500mm, Crown=12000mm, Trunk=450mm, Clear=4500mm, Leaf=0.75, Seed=331, Group=6, Weight=1, Season=3, Leaves="Foliage Spring", Bark="Bark Dark", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Streak="Bark Dark Streak"
+type "Acacia B Autumn" Form=7, Height=9450mm, Crown=12960mm, Trunk=414mm, Clear=4275mm, Leaf=1, Seed=338, Group=6, Weight=1, Season=1, Leaves="Foliage Gold", Bark="Bark Dark", Inner="Foliage Gold Shade", Light="Foliage Gold Light", Streak="Bark Dark Streak"
+type "Acacia B Bare" Form=7, Height=9450mm, Crown=12960mm, Trunk=414mm, Clear=4275mm, Leaf=0, Seed=338, Group=6, Weight=1, Season=2, Bark="Bark Dark", Streak="Bark Dark Streak"
+type "Acacia B Spring" Form=7, Height=9450mm, Crown=12960mm, Trunk=414mm, Clear=4275mm, Leaf=0.75, Seed=338, Group=6, Weight=1, Season=3, Leaves="Foliage Spring", Bark="Bark Dark", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Streak="Bark Dark Streak"
+type "Chestnut A Autumn" Form=0, Height=17500mm, Crown=14000mm, Trunk=700mm, Clear=3500mm, Leaf=1, Seed=401, Group=0, Weight=1, Season=1, Leaves="Foliage Autumn", Bark="Bark Dark", Inner="Foliage Autumn Shade", Light="Foliage Autumn Light", Streak="Bark Dark Streak"
+type "Chestnut A Bare" Form=0, Height=17500mm, Crown=14000mm, Trunk=700mm, Clear=3500mm, Leaf=0, Seed=401, Group=0, Weight=1, Season=2, Bark="Bark Dark", Streak="Bark Dark Streak"
+type "Chestnut A Spring" Form=0, Height=17500mm, Crown=14000mm, Trunk=700mm, Clear=3500mm, Leaf=0.75, Seed=401, Group=0, Weight=1, Season=3, Leaves="Foliage Spring", Bark="Bark Dark", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Streak="Bark Dark Streak"
+type "Chestnut B Autumn" Form=0, Height=15750mm, Crown=15120mm, Trunk=644mm, Clear=3325mm, Leaf=1, Seed=408, Group=0, Weight=1, Season=1, Leaves="Foliage Autumn", Bark="Bark Dark", Inner="Foliage Autumn Shade", Light="Foliage Autumn Light", Streak="Bark Dark Streak"
+type "Chestnut B Bare" Form=0, Height=15750mm, Crown=15120mm, Trunk=644mm, Clear=3325mm, Leaf=0, Seed=408, Group=0, Weight=1, Season=2, Bark="Bark Dark", Streak="Bark Dark Streak"
+type "Chestnut B Spring" Form=0, Height=15750mm, Crown=15120mm, Trunk=644mm, Clear=3325mm, Leaf=0.75, Seed=408, Group=0, Weight=1, Season=3, Leaves="Foliage Spring", Bark="Bark Dark", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Streak="Bark Dark Streak"
 type "Ash A Autumn" Form=1, Height=20000mm, Crown=9000mm, Trunk=550mm, Clear=4500mm, Leaf=1, Seed=415, Group=0, Weight=1, Season=1, Leaves="Foliage Gold", Bark="Bark Dark", Inner="Foliage Gold Shade", Light="Foliage Gold Light", Streak="Bark Dark Streak"
 type "Ash A Bare" Form=1, Height=20000mm, Crown=9000mm, Trunk=550mm, Clear=4500mm, Leaf=0, Seed=415, Group=0, Weight=1, Season=2, Bark="Bark Dark", Streak="Bark Dark Streak"
 type "Ash A Spring" Form=1, Height=20000mm, Crown=9000mm, Trunk=550mm, Clear=4500mm, Leaf=0.75, Seed=415, Group=0, Weight=1, Season=3, Leaves="Foliage Spring", Bark="Bark Dark", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Streak="Bark Dark Streak"
@@ -1419,11 +1422,11 @@ type "Oak Bare" Form=0, Height=14000mm, Crown=11000mm, Trunk=600mm, Clear=3500mm
 type "Linden Bare" Form=1, Height=16000mm, Crown=8500mm, Trunk=500mm, Clear=3000mm, Leaf=0, Seed=387, Group=0, Weight=0
 type "Cherry Blossom" Form=1, Height=6000mm, Crown=5000mm, Trunk=250mm, Clear=1400mm, Leaf=1, Seed=394, Group=5, Weight=0, Leaves="Foliage Blossom", Bark="Bark Cherry", Inner="Foliage Blossom Shade", Light="Foliage Blossom Light", Streak="Bark Cherry Streak"
 type "H300in" Height=300in, Crown=150in, Weight=0
-plant Stem part(wood) form(Form) height(Height * Scale) crown(Crown * Scale) trunk(Trunk * Scale) clear(max(Clear * Scale, MinClear)) leaf(Leaf) seed(Seed) mat(Bark) show(plan, 3d, elev)
-plant Crown part(foliage) form(Form) height(Height * Scale) crown(Crown * Scale) trunk(Trunk * Scale) clear(max(Clear * Scale, MinClear)) leaf(Leaf) seed(Seed) mat(Leaves) show(plan, 3d, elev)
-plant Shade part(shade) form(Form) height(Height * Scale) crown(Crown * Scale) trunk(Trunk * Scale) clear(max(Clear * Scale, MinClear)) leaf(Leaf) seed(Seed) mat(Inner) show(3d, elev)
-plant Light part(light) form(Form) height(Height * Scale) crown(Crown * Scale) trunk(Trunk * Scale) clear(max(Clear * Scale, MinClear)) leaf(Leaf) seed(Seed) mat(Light) show(3d, elev)
-plant Streak part(streak) form(Form) height(Height * Scale) crown(Crown * Scale) trunk(Trunk * Scale) clear(max(Clear * Scale, MinClear)) leaf(Leaf) seed(Seed) mat(Streak) show(3d, elev)
+plant Stem part(wood) form(Form) height(Height * Scale) crown(Crown * Scale) trunk(Trunk * Scale) clear(min(max(Clear * Scale, MinClear), Height * Scale * 0.9)) leaf(Leaf) seed(Seed) mat(Bark) show(plan, 3d, elev)
+plant Crown part(foliage) form(Form) height(Height * Scale) crown(Crown * Scale) trunk(Trunk * Scale) clear(min(max(Clear * Scale, MinClear), Height * Scale * 0.9)) leaf(Leaf) seed(Seed) mat(Leaves) show(plan, 3d, elev)
+plant Shade part(shade) form(Form) height(Height * Scale) crown(Crown * Scale) trunk(Trunk * Scale) clear(min(max(Clear * Scale, MinClear), Height * Scale * 0.9)) leaf(Leaf) seed(Seed) mat(Inner) show(3d, elev)
+plant Light part(light) form(Form) height(Height * Scale) crown(Crown * Scale) trunk(Trunk * Scale) clear(min(max(Clear * Scale, MinClear), Height * Scale * 0.9)) leaf(Leaf) seed(Seed) mat(Light) show(3d, elev)
+plant Streak part(streak) form(Form) height(Height * Scale) crown(Crown * Scale) trunk(Trunk * Scale) clear(min(max(Clear * Scale, MinClear), Height * Scale * 0.9)) leaf(Leaf) seed(Seed) mat(Streak) show(3d, elev)
 ---
 family Planter
 category planting
@@ -1469,6 +1472,7 @@ type "Clipped 1200" Height=1200mm
 type "Low 600" Height=600mm, Width=500mm
 type "Tall 1800" Height=1800mm, Width=800mm
 type "Conifer 2000" Height=2000mm, Width=800mm, Leaves="Foliage Conifer"
+type "120x24x48in" Length=120in, Width=24in, Height=48in
 extrude Base0 rect((-Length / 2 + Length * 0 / 6), -(Width * Scale * (1 + 0.06 * cos(Scale * 61 + 0 * 1.9))) / 2, (-Length / 2 + Length * 1 / 6), (Width * Scale * (1 + 0.06 * cos(Scale * 61 + 0 * 1.9))) / 2) z(0mm, 0.75 * (Height * Scale * (1 + 0.08 * sin(Scale * 97 + 0 * 2.3)))) mat(Leaves) show(3d, elev)
 extrude Top0 rect((-Length / 2 + Length * 0 / 6), -0.4 * (Width * Scale * (1 + 0.06 * cos(Scale * 61 + 0 * 1.9))), (-Length / 2 + Length * 1 / 6), 0.4 * (Width * Scale * (1 + 0.06 * cos(Scale * 61 + 0 * 1.9)))) z(0.75 * (Height * Scale * (1 + 0.08 * sin(Scale * 97 + 0 * 2.3))), (Height * Scale * (1 + 0.08 * sin(Scale * 97 + 0 * 2.3)))) mat(Leaves) show(3d, elev)
 extrude Base1 rect((-Length / 2 + Length * 1 / 6), -(Width * Scale * (1 + 0.06 * cos(Scale * 61 + 1 * 1.9))) / 2, (-Length / 2 + Length * 2 / 6), (Width * Scale * (1 + 0.06 * cos(Scale * 61 + 1 * 1.9))) / 2) z(0mm, 0.75 * (Height * Scale * (1 + 0.08 * sin(Scale * 97 + 1 * 2.3)))) mat(Leaves) show(3d, elev)
@@ -1519,6 +1523,7 @@ type "Spreading 1" Form=7, Height=800mm, Crown=1800mm, Seed=14
 type "Spreading 2" Form=7, Height=1000mm, Crown=2200mm, Seed=15, Leaves="Foliage Olive"
 type "Vase 1" Form=6, Height=1800mm, Crown=1500mm, Clear=200mm, Seed=16
 type "Lilac" Form=1, Height=2200mm, Crown=1800mm, Clear=250mm, Seed=17, Leaves="Foliage Spring"
+type "Round 48in" Form=0, Height=48in, Crown=54in, Seed=18
 plant Stem part(wood) form(Form) height(Height * Scale) crown(Crown * Scale) trunk(Trunk * Scale) clear(Clear * Scale) leaf(Leaf) seed(Seed + round(Scale * 100)) mat(Bark) show(plan, 3d, elev)
 plant Crown part(foliage) form(Form) height(Height * Scale) crown(Crown * Scale) trunk(Trunk * Scale) clear(Clear * Scale) leaf(Leaf) seed(Seed + round(Scale * 100)) mat(Leaves) show(plan, 3d, elev)
 ---
@@ -1530,9 +1535,15 @@ ifc IfcGeographicElement NOTDEFINED
 param Size length type 6000mm
 param Thick length type 20mm
 param Cover material type "Lawn Grass"
+param Edge material type "Steel Grey"
 type "Lawn" Size=6000mm
 type "Bed" Size=1500mm, Thick=60mm, Cover="Planting Soil"
+type "240in" Size=240in, Thick=0.75in
 extrude Body rect(-Size / 2 + 5mm, -Size / 2 + 5mm, Size / 2 - 5mm, Size / 2 - 5mm) z(0, Thick) mat(Cover) show(3d, elev)
+extrude EdgeF rect(-Size / 2, -Size / 2, Size / 2, -Size / 2 + 5mm) z(0, Thick) mat(Edge) show(3d, elev)
+extrude EdgeB rect(-Size / 2, Size / 2 - 5mm, Size / 2, Size / 2) z(0, Thick) mat(Edge) show(3d, elev)
+extrude EdgeL rect(-Size / 2, -Size / 2 + 5mm, -Size / 2 + 5mm, Size / 2 - 5mm) z(0, Thick) mat(Edge) show(3d, elev)
+extrude EdgeR rect(Size / 2 - 5mm, -Size / 2 + 5mm, Size / 2, Size / 2 - 5mm) z(0, Thick) mat(Edge) show(3d, elev)
 symbol rect(-Size / 2, -Size / 2, Size / 2, Size / 2)
 ---
 family Glass Rail
@@ -1980,7 +1991,9 @@ param Port length type 100mm
 param Casing material type "Steel White"
 type "Booster" Length=1600mm
 type "Booster 63in" Length=63in, Width=28in, Height=31in, Port=4in
-extrude Body rect(-Length / 2, -Width / 2, Length / 2, Width / 2) z(0mm, Height) mat(Casing) show(3d, elev)
+extrude Body rect(-Length / 2, -Width / 2, Length / 2, Width / 2) z(0mm, 150mm) mat(Casing) show(3d, elev)
+extrude Pump circle(-Length / 4, 0, Width / 2 - 50mm) z(150mm, Height) mat(Casing) show(3d, elev)
+extrude Motor rect(0mm, -Width / 2 + 100mm, Length / 2 - 50mm, Width / 2 - 100mm) z(150mm, Height - 100mm) mat(Casing) show(3d, elev)
 symbol rect(-Length / 2, -Width / 2, Length / 2, Width / 2)
 symbol line(-Length / 2, -Width / 2, Length / 2, Width / 2) show(medium, fine)
 connector Inlet pipe sprinkler at(-Length / 2, 0, Height / 2) dir(-1, 0, 0) size(Port)
@@ -1996,7 +2009,8 @@ param Height length type 1000mm
 param Casing material type "Steel White"
 type "Stair fan" Length=1200mm
 type "Stair fan 47in" Length=47in, Width=35in, Height=39in
-extrude Body rect(-Length / 2, -Width / 2, Length / 2, Width / 2) z(0mm, Height) mat(Casing) show(3d, elev)
+extrude Body rect(-Length / 2, -Width / 2, Length / 2, Width / 2) z(0mm, Height - 50mm) mat(Casing) show(3d, elev)
+extrude Inlet circle(0, 0, Width / 2 - 100mm) z(Height - 50mm, Height) mat(Casing) show(3d, elev)
 symbol rect(-Length / 2, -Width / 2, Length / 2, Width / 2)
 symbol line(-Length / 2, -Width / 2, Length / 2, Width / 2) show(medium, fine)
 ---
@@ -2132,7 +2146,9 @@ type "slow" Width=600mm, Depth=400mm, Height=500mm
 type "medium" Width=800mm, Depth=500mm, Height=600mm
 type "fast" Width=1000mm, Depth=700mm, Height=800mm
 type "medium 31x20in" Width=31.5in, Depth=19.7in, Height=23.6in
-extrude Body rect(-Width / 2, -Depth / 2, Width / 2, Depth / 2) z(0mm, Height) mat(Casing) show(3d, elev)
+extrude Body rect(-Width / 2, -Depth / 2, Width / 2, Depth / 2) z(0mm, 100mm) mat(Casing) show(3d, elev)
+extrude Motor circle(-Width / 4, 0, Depth / 2 - 50mm) z(100mm, Height) mat(Casing) show(3d, elev)
+extrude Sheave circle(Width / 4, 0, Depth / 2 - 30mm) z(100mm, Height) mat(Casing) show(3d, elev)
 symbol rect(-Width / 2, -Depth / 2, Width / 2, Depth / 2)
 symbol line(-Width / 2, -Depth / 2, Width / 2, Depth / 2) show(medium, fine)
 ---
@@ -2263,6 +2279,7 @@ type "Battery 40 kWh" Energy=40, Width=800mm
 type "Battery 80 kWh" Energy=80, Width=1200mm
 type "W32in" Width=32in
 extrude Body rect(Left, Front, Right, Back) z(0, Height) mat(Casing) show(3d, elev)
+extrude Handle rect(Right - 80mm, Front - 20mm, Right - 60mm, Front) z(Height / 2 - 150mm, Height / 2 + 150mm) mat(Casing) show(3d, elev)
 symbol rect(Left, Front, Right, Back)
 symbol line(Left, Front + 100mm, Right, Front + 100mm) show(medium, fine)
 ---
@@ -2301,7 +2318,9 @@ param Port length type 65mm
 param Finish material type "Steel White"
 type "DN65" Port=65mm
 type "2.5in" Body=10in, Size=6.3in, Port=2.5in
-extrude Body rect(0mm, -Size / 2, Body, Size / 2) z(0mm, Size) mat(Finish) show(3d, elev)
+extrude Body rect(0mm, -Size / 2, Body, Size / 2) z(0mm, Size * 0.6) mat(Finish) show(3d, elev)
+extrude Stem circle(Body / 2, 0, 10mm) z(Size * 0.6, Size - 20mm) mat(Finish) show(3d, elev)
+extrude Wheel circle(Body / 2, 0, Size / 2) z(Size - 20mm, Size) mat(Finish) show(3d, elev)
 symbol rect(0mm, -Size / 2, Body, Size / 2)
 symbol line(0mm, 0mm, Body, 0mm) show(medium, fine)
 connector Inlet pipe sprinkler at(0mm, 0mm, Size / 2) dir(-1, 0, 0) size(Port)
@@ -2316,7 +2335,8 @@ param Port length type 100mm
 param Finish material type "Steel White"
 type "DN100" Port=100mm
 type "4in" Size=10in, Height=20in, Port=4in
-extrude Body rect(-Size / 2, -Size / 2, Size / 2, Size / 2) z(0mm, Height) mat(Finish) show(3d, elev)
+extrude Body rect(-Size / 2, -Size / 2, Size / 2, Size / 2) z(0mm, Height - 100mm) mat(Finish) show(3d, elev)
+extrude Head circle(0, 0, Port) z(Height - 100mm, Height) mat(Finish) show(3d, elev)
 symbol rect(-Size / 2, -Size / 2, Size / 2, Size / 2)
 symbol line(-Size / 2, -Size / 2, Size / 2, Size / 2) show(medium, fine)
 connector Outlet pipe sprinkler at(0mm, 0mm, Height) dir(0, 0, 1) size(Port)
@@ -2580,6 +2600,7 @@ param Cap length type 300mm
 param Ceramic material type "Porcelain"
 param Metal material type "Steel Grey"
 type "String" Core=200mm
+type "8in core" Core=8in, Cap=12in
 extrude Cap rect(-Cap / 2, -Cap / 2, Cap / 2, Cap / 2) z(-Cap, 0mm) mat(Metal) show(3d, elev)
 extrude Stack rect(-Core / 2, -Core / 2, Core / 2, Core / 2) z(-Length, -Cap) mat(Ceramic) show(3d, elev)
 symbol rect(-Cap / 2, -Cap / 2, Cap / 2, Cap / 2)

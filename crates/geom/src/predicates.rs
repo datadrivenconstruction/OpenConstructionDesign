@@ -45,23 +45,31 @@ fn two_sum(a: f64, b: f64) -> (f64, f64) {
     (s, (a - (s - bb)) + (b - bb))
 }
 
-/// Sign-exact sum: a two_sum cascade (Ogita–Rump–Oishi vector sum, repeated until convergence).
-fn exact_sum(mut v: Vec<f64>) -> f64 {
-    for _ in 0..v.len() {
-        let mut changed = false;
-        for i in 1..v.len() {
-            let (s, e) = two_sum(v[i], v[i - 1]);
-            changed |= e != v[i - 1];
-            v[i] = s;
-            v[i - 1] = e;
+/// Sign-exact sum: each term grows a nonoverlapping expansion (Shewchuk's grow-expansion with
+/// zero elimination), O(terms x components) instead of repeated full cascades.
+fn exact_sum(v: Vec<f64>) -> f64 {
+    let mut h: Vec<f64> = Vec::with_capacity(16);
+    for b in v {
+        let mut q = b;
+        let mut k = 0;
+        for i in 0..h.len() {
+            let (s, e) = two_sum(q, h[i]);
+            q = s;
+            if e != 0.0 {
+                h[k] = e;
+                k += 1;
+            }
         }
-        if !changed {
-            break;
+        h.truncate(k);
+        if q != 0.0 {
+            h.push(q);
         }
     }
-    // After convergence the terms do not overlap; the leading one determines the sign.
-    let (top, rest) = v.split_last().expect("non-empty");
-    *top + rest.iter().sum::<f64>()
+    // Increasing, nonoverlapping components: the largest one determines the sign.
+    match h.split_last() {
+        Some((top, rest)) => *top + rest.iter().sum::<f64>(),
+        None => 0.0,
+    }
 }
 
 fn exact_orient2d(a: V2, b: V2, c: V2) -> f64 {
@@ -138,6 +146,12 @@ pub fn orient3d(a: V3, b: V3, c: V3, d: V3) -> f64 {
         + ad.z.abs() * ((bd.x * cd.y).abs() + (bd.y * cd.x).abs());
     if det.abs() > (7.0 + 56.0 * f64::EPSILON) * f64::EPSILON * perm {
         return det;
+    }
+    // Two equal points are two equal rows of the 4x4 determinant: exactly zero. Neighbouring
+    // triangles of one mesh hit this all the time; the bound above cannot (it is 0 vs 0).
+    let same = |p: V3, q: V3| p.x == q.x && p.y == q.y && p.z == q.z;
+    if same(a, d) || same(b, d) || same(c, d) || same(a, b) || same(b, c) || same(a, c) {
+        return 0.0;
     }
     exact_orient3d(a, b, c, d)
 }

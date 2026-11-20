@@ -306,8 +306,19 @@ impl Body {
     }
 
     pub fn boolean(&self, other: &Body, op: BoolOp, tol: Tol) -> Body {
-        let out = boolean(self, other, op, tol.length);
-        out.welded(tol.length)
+        let (out, odd) = boolean(self, other, op, tol.length).welded_counted(tol.length);
+        // the planar path splits in floats: where small faces meet at a grazing angle a split
+        // point can land just over tol off its edge and leave an open sliver; the exact mesh
+        // path then gives the result, checked like the operands. The weld's own edge count
+        // flags such a result, so a clean one costs no extra pass.
+        if odd && out.validate(tol).is_err() && self.validate(tol).is_ok() && other.validate(tol).is_ok() {
+            if let Ok(m) = crate::csg2::boolean_bodies(self, other, op, tol) {
+                if m.validate(tol).is_ok() {
+                    return m;
+                }
+            }
+        }
+        out
     }
 
     pub fn union(&self, o: &Body, tol: Tol) -> Body {
@@ -323,6 +334,16 @@ impl Body {
     /// Welding: vertices closer than the tolerance merge, points on edges are inserted (T-junctions),
     /// degenerate faces are discarded.
     pub fn welded(&self, tol: f64) -> Body {
+        self.weld(tol, false).0
+    }
+
+    /// [`Body::welded`], and whether some welded edge is not used exactly once each way (an
+    /// open or non-manifold result; edge-touching shows here too).
+    fn welded_counted(&self, tol: f64) -> (Body, bool) {
+        self.weld(tol, true)
+    }
+
+    fn weld(&self, tol: f64, count: bool) -> (Body, bool) {
         let mut w = Welder::new(tol.max(1e-12));
         let rings: Vec<(Vec<u32>, &Poly)> = self
             .polys
@@ -339,12 +360,17 @@ impl Body {
             .collect();
         let grid = w.edge_grid();
         let mut polys = Vec::with_capacity(rings.len());
+        let mut edges: Vec<(u32, u32, bool)> = Vec::new();
         for (r, p) in rings {
             let mut ids = Vec::with_capacity(r.len());
             for i in 0..r.len() {
                 let (a, b) = (r[i], r[(i + 1) % r.len()]);
                 ids.push(a);
                 ids.extend(grid.on_edge(&w.pts, a, b, w.tol));
+            }
+            unspike(&mut ids);
+            if ids.len() < 3 {
+                continue;
             }
             let pts: Vec<V3> = ids.iter().map(|&i| w.pts[i as usize]).collect();
             if let Some(mut q) = Poly::new(pts, p.tag) {
@@ -353,9 +379,32 @@ impl Body {
                     q.plane = p.plane;
                 }
                 polys.push(q);
+                if count {
+                    for i in 0..ids.len() {
+                        let (a, b) = (ids[i], ids[(i + 1) % ids.len()]);
+                        edges.push((a.min(b), a.max(b), a < b));
+                    }
+                }
             }
         }
-        Body { polys }
+        edges.sort_unstable();
+        let mut odd = false;
+        let mut i = 0;
+        while i < edges.len() && !odd {
+            let mut j = i;
+            let (mut fwd, mut rev) = (0, 0);
+            while j < edges.len() && (edges[j].0, edges[j].1) == (edges[i].0, edges[i].1) {
+                if edges[j].2 {
+                    fwd += 1;
+                } else {
+                    rev += 1;
+                }
+                j += 1;
+            }
+            odd = fwd != 1 || rev != 1;
+            i = j;
+        }
+        (Body { polys }, odd)
     }
 
     fn finite(&self) -> bool {
@@ -662,6 +711,34 @@ impl Welder {
 
     fn edge_grid(&self) -> EdgeGrid {
         EdgeGrid::new(&self.pts)
+    }
+}
+
+/// Removes repeated and folded-back vertices from a welded ring (`.. x, y, x ..` -> `.. x ..`).
+/// A sliver whose apex lies within the weld tolerance of its base gets that apex inserted on
+/// the base as a T-junction and folds onto itself; the fold has no area and would use its
+/// edges twice in each direction.
+fn unspike(r: &mut Vec<u32>) {
+    loop {
+        r.dedup();
+        while r.len() > 1 && r.first() == r.last() {
+            r.pop();
+        }
+        let n = r.len();
+        if n < 3 {
+            return;
+        }
+        let Some(i) = (0..n).find(|&i| r[(i + n - 1) % n] == r[(i + 1) % n]) else {
+            return;
+        };
+        // drop the spike tip and the repeated vertex after it
+        let j = (i + 1) % n;
+        if j > i {
+            r.drain(i..=j);
+        } else {
+            r.truncate(i);
+            r.remove(0);
+        }
     }
 }
 
@@ -1060,4 +1137,37 @@ fn boolean(a: &Body, b: &Body, op: BoolOp, tol: f64) -> Body {
         }
     }
     Body { polys }
+}
+
+#[cfg(test)]
+mod budget_tests {
+    use super::*;
+    use crate::mass::{cuboid, cylinder};
+    use crate::math::v2;
+
+    /// The result check in `Body::boolean` (an edge count in the weld; validate and the mesh
+    /// path only for a flagged result) costs at most 15% over the bare boolean and weld,
+    /// measured in one process on a slab cut by 40 holes one at a time.
+    #[test]
+    #[ignore = "budget: cargo test --release -p ddc-geom budget_boolean_validate -- --ignored"]
+    fn budget_boolean_validate_overhead() {
+        let t = Tol::default();
+        let mut b = cuboid(v3(0., 0., 0.), v3(8., 5., 0.3));
+        let (mut bare, mut full) = (0.0, 0.0);
+        for k in 0..40 {
+            let c = cylinder(v2(0.5 + (k % 8) as f64, 0.5 + (k / 8) as f64), 0.3, -0.1, 0.5, 24);
+            let t0 = web_time::Instant::now();
+            let plain = boolean(&b, &c, BoolOp::Subtract, t.length).welded(t.length);
+            let t1 = web_time::Instant::now();
+            let out = b.boolean(&c, BoolOp::Subtract, t);
+            let t2 = web_time::Instant::now();
+            assert_eq!(out, plain, "cut {k}: a clean result is the planar one");
+            bare += (t1 - t0).as_secs_f64();
+            full += (t2 - t1).as_secs_f64();
+            b = out;
+        }
+        let share = full / bare - 1.0;
+        eprintln!("bare {:.1} ms, checked {:.1} ms, {:+.1}%", bare * 1e3, full * 1e3, share * 100.0);
+        assert!(share <= 0.15, "the check adds {:.1}%", share * 100.0);
+    }
 }

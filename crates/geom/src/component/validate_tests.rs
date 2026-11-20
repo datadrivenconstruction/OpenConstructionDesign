@@ -220,3 +220,19 @@ fn validate_budget_300_lines_40_bodies_20_types() {
     let cap = if cfg!(debug_assertions) { 3000 } else { 150 };
     assert!(ms <= cap, "{ms} ms");
 }
+
+/// Tone skins (shade, light, streak) carry no volume by kind, and a bare type grows no crown:
+/// neither is a zero-volume body.
+#[test]
+fn validate_tone_skins_are_not_zero_volume_bodies() {
+    let organ = |name: &str, part: &str| {
+        format!("plant {name} part({part}) form(0) height(8000mm) crown(5000mm) trunk(300mm) clear(2000mm) leaf(Leaf) seed(5)\n")
+    };
+    let mut t = String::from("family T\ncategory planting\nhost floor\nparam Leaf number type 1\n");
+    for (n, p) in [("Stem", "wood"), ("Crown", "foliage"), ("Shade", "shade"), ("Light", "light"), ("Streak", "streak")] {
+        t.push_str(&organ(n, p));
+    }
+    t.push_str("type \"Full\" Leaf=1\ntype \"Bare\" Leaf=0\n");
+    let r = validate(&t, &lim());
+    assert!(r.ok && r.find("zero_volume").is_none(), "{r:?}");
+}

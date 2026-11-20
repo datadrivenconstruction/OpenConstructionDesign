@@ -742,6 +742,15 @@ fn vis(a: &str) -> Result<Vis, String> {
     Ok(v)
 }
 
+/// First field and the rest: runs of blanks between fields are one separator.
+fn split1(s: &str) -> (&str, &str) {
+    let s = s.trim_start();
+    match s.split_once(char::is_whitespace) {
+        Some((a, b)) => (a, b.trim_start()),
+        None => (s, ""),
+    }
+}
+
 fn axis(s: &str) -> Result<Axis, String> {
     match s.trim() {
         "x" => Ok(Axis::X),
@@ -861,16 +870,16 @@ impl Family {
                     let (name, r) = rest.split_once(char::is_whitespace).ok_or_else(|| {
                         pe("param <name> <kind> <type|instance> [value | = formula]".into())
                     })?;
-                    let mut w = r.trim().splitn(3, char::is_whitespace);
-                    let kind = w.next().unwrap_or("");
+                    let (kind, r2) = split1(r);
                     let kind =
                         Kind::parse(kind).ok_or_else(|| pe(format!("unknown kind '{kind}'")))?;
-                    let instance = match w.next().unwrap_or("") {
+                    let (scope, r3) = split1(r2);
+                    let instance = match scope {
                         "type" => false,
                         "instance" => true,
                         o => return Err(pe(format!("scope must be type or instance, got '{o}'"))),
                     };
-                    let tail = w.next().unwrap_or("").trim();
+                    let tail = r3.trim();
                     let (formula, default) = if let Some(fx) = tail.strip_prefix('=') {
                         if kind.is_text() {
                             let t = ext::TextF::parse(fx.trim()).map_err(pe)?;
@@ -901,8 +910,10 @@ impl Family {
                     });
                 }
                 "ref" => {
-                    let w: Vec<&str> = rest.splitn(3, char::is_whitespace).collect();
-                    if w.len() < 3 {
+                    let (n0, r1) = split1(rest);
+                    let (n1, r2) = split1(r1);
+                    let w = [n0, n1, r2];
+                    if w.iter().any(|s| s.is_empty()) {
                         return Err(pe("ref <name> x|y|z [=] <expr>".into()));
                     }
                     let at = w[2].trim();

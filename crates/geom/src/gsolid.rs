@@ -776,6 +776,17 @@ fn loft(
     caps: Option<(Vec<[usize; 3]>, Vec<[usize; 3]>)>,
     closed: bool,
 ) -> Mesh {
+    loft_split(rings, caps, closed, false)
+}
+
+/// `alternate`: flip the quad diagonal every other band. Under a twist each band's quads are
+/// warped the same way, so one fixed diagonal biases the volume to first order in the step.
+fn loft_split(
+    rings: &[Vec<Vec<V3>>],
+    caps: Option<(Vec<[usize; 3]>, Vec<[usize; 3]>)>,
+    closed: bool,
+    alternate: bool,
+) -> Mesh {
     let mut m = Mesh::default();
     let k = rings.len();
     let sizes: Vec<usize> = rings[0].iter().map(|r| r.len()).collect();
@@ -795,8 +806,13 @@ fn loft(
                 let j = (i + 1) % n;
                 let (bi, bj) = (idx(s, off + i), idx(s, off + j));
                 let (ti, tj) = (idx(s1, off + i), idx(s1, off + j));
-                m.triangles.push([bi, bj, tj]);
-                m.triangles.push([bi, tj, ti]);
+                if alternate && s % 2 == 1 {
+                    m.triangles.push([bi, bj, ti]);
+                    m.triangles.push([bj, tj, ti]);
+                } else {
+                    m.triangles.push([bi, bj, tj]);
+                    m.triangles.push([bi, tj, ti]);
+                }
             }
             off += n;
         }
@@ -1083,7 +1099,7 @@ pub fn mesh(f: &Form, fr: &Frame, sag: f64) -> Result<Mesh, FormError> {
                 })
                 .collect();
             let c = cap(&o, &hs);
-            loft(&rings, Some((c.clone(), c)), sts.closed)
+            loft_split(&rings, Some((c.clone(), c)), sts.closed, !sm.twist.is_const())
         }
         Form::Sweep { profile, path } => {
             let (o, hs) = oriented(profile, sag);

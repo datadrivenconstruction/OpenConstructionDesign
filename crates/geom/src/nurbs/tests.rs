@@ -343,8 +343,8 @@ fn large_freeform_boolean_takes_the_mesh_path() {
         .unwrap()
         .surface;
     let wall = thicken(&wall, 0.1, &tol).unwrap();
-    let n = dome.mesh.triangles.len() + wall.mesh.triangles.len();
-    assert!(n >= crate::csg2::MIN_FACES, "{n}");
+    let (na, nb) = (dome.mesh.triangles.len(), wall.mesh.triangles.len());
+    assert!(crate::csg2::prefers_mesh(na, nb), "{na} x {nb}");
     let direct =
         crate::csg2::mesh_boolean(&dome.mesh, &wall.mesh, BoolOp::Subtract, Tol::default());
     assert!(direct.is_ok(), "{:?}", direct.err());
@@ -409,7 +409,8 @@ fn loft_through_reproduces_curves_at_the_given_parameters() {
 #[test]
 fn loft_through_gives_neighbours_one_edge_where_loft_does_not() {
     // two patches over the same column of points, each with other points elsewhere
-    let col = |x: f64, z: f64, y: f64| v3(x, y * z * 0.1, z);
+    // y grows with z squared: with a term linear in z every column has the same chord shares
+    let col = |x: f64, z: f64, y: f64| v3(x, y * z * z * 0.1, z);
     let patch = |x0: f64, x1: f64, bend: f64| -> Vec<Curve> {
         [0.0, 1.0, 2.5, 3.0]
             .iter()

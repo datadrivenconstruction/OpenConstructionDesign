@@ -469,8 +469,10 @@ fn pipeline(run: &mut Run, text: &str) {
             ));
         }
         for p in b.parts.iter().filter(|p| !p.void && p.volume <= 1e-12) {
-            let is_mesh = f.solids.iter().any(|s| s.name == p.name && matches!(s.shape, Shape::Mesh { .. }));
-            if !is_mesh {
+            // a surface mesh has no volume by kind; a grown plant organ without volume is already
+            // a build error, so a plant part here is a tone skin or an organ that grows nothing
+            let skin = f.solids.iter().any(|s| s.name == p.name && matches!(s.shape, Shape::Mesh { .. } | Shape::Plant { .. }));
+            if !skin {
                 let mut l = run.lines_named(&SOLID_HEADS, &p.name);
                 l.extend(tline.iter().copied());
                 run.err(finding(

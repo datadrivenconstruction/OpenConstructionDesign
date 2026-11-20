@@ -48,12 +48,15 @@ fn every_form_grows_within_its_size_at_every_level() {
             assert!(wide > 0.45 * crown && wide < 1.45 * crown, "{form} {lod:?}: width {wide} of {crown}");
             assert!(b.volume > 0.0 && b.surface > 0.0, "{form} {lod:?}");
             assert!(b.parts.iter().filter(|p| p.visible).count() == 2, "{form} {lod:?}: stem and crown");
-            assert!(b.plan.len() >= 12 + 20, "{form} {lod:?}: plan {}", b.plan.len());
+            // the trunk ring (8 edges coarse, 12 finer) and at least 20 edges of crown symbol
+            let ring = if lod == Lod::Coarse { 8 } else { 12 };
+            assert!(b.plan.len() >= ring + 20, "{form} {lod:?}: plan {}", b.plan.len());
             tris.push(b.mesh.triangles.len());
         }
         assert!(tris[0] < tris[1] && tris[1] < tris[2], "{form}: {tris:?}");
-        // 2000 trees stay interactive: a few hundred triangles each at the default level
-        assert!(tris[0] <= 120 && tris[1] <= 700 && tris[2] <= 3600, "{form}: {tris:?}");
+        // 2000 trees stay interactive: a few hundred triangles each at the default level; coarse is
+        // the crowd budget, crown lumps <= 120 plus a stub trunk <= 40 (see the thousand-tree test)
+        assert!(tris[0] <= 160 && tris[1] <= 700 && tris[2] <= 3600, "{form}: {tris:?}");
     }
 }
 
@@ -181,10 +184,11 @@ fn the_plan_symbol_is_species_specific_at_every_level() {
     // trunk circle first, then the symbol of the crown
     let lens = |form: &str, h, crown, clear| -> Vec<usize> {
         let src = text(form, 5, 1.0, h, crown, clear);
-        [Lod::Coarse, Lod::Medium, Lod::Fine].iter().map(|l| build(&src, *l).plan.len() - 12).collect()
+        // the trunk circle has 8 edges at the coarse level, 12 at the finer ones
+        [Lod::Coarse, Lod::Medium, Lod::Fine].iter().map(|l| build(&src, *l).plan.len() - if *l == Lod::Coarse { 8 } else { 12 }).collect()
     };
     // deciduous: scalloped outline (lobes x segments) and branch spokes
-    assert_eq!(lens("round", 12.0, 9.0, 3.0), vec![30 + 6, 56 + 27, 90 + 39]);
+    assert_eq!(lens("round", 12.0, 9.0, 3.0), vec![24 + 6, 56 + 27, 90 + 39]);
     // conifer: star of 2k edges and k rays
     assert_eq!(lens("conical", 18.0, 6.0, 1.5), vec![21, 27, 33]);
     // palm: four edges per frond
@@ -269,7 +273,9 @@ fn a_species_in_every_season_is_the_same_tree_with_other_leaf() {
         let colour = |b: &Built| b.parts.iter().find(|p| p.name == "Crown").map(|p| p.material.clone());
         assert_ne!(colour(&summer), colour(&autumn), "{sp}: autumn leaf colour");
         assert_ne!(colour(&autumn), colour(&spring), "{sp}: spring leaf colour");
-        assert_eq!(bare.parts.iter().filter(|p| p.visible).count(), 1, "{sp}: winter is bare");
+        // winter is bare: no leaf part shows; the wood and its bark streaks stay (see the streak test)
+        let shown: Vec<&str> = bare.parts.iter().filter(|p| p.visible).map(|p| p.name.as_str()).collect();
+        assert_eq!(shown, ["Stem", "Streak"], "{sp}: winter is bare");
         // young leaf is thinner than summer's
         assert!(spring.mesh.triangles.len() <= summer.mesh.triangles.len(), "{sp}");
         assert!(bare.mesh.triangles.len() < summer.mesh.triangles.len(), "{sp}");
@@ -324,6 +330,11 @@ fn every_organ_is_a_closed_mesh_with_outward_normals_at_every_level() {
             for organ in [Organ::Wood, Organ::Foliage, Organ::Shade, Organ::Light, Organ::Streak] {
                 for lod in [Lod::Coarse, Lod::Medium, Lod::Fine] {
                     let g = grow(&spec, organ, lod);
+                    // a tone organ a level or form leaves out is empty: no mesh to close
+                    // (its absence is asserted by the inner crown and lit lobe tests)
+                    if g.tris.is_empty() && matches!(organ, Organ::Shade | Organ::Light | Organ::Streak) {
+                        continue;
+                    }
                     let (tris, vol) = weld(&g);
                     // closed: each directed edge has its opposite, so no hole and no flipped face
                     let mut edges: std::collections::HashMap<(usize, usize), i32> = Default::default();
@@ -447,7 +458,16 @@ fn lit_lobes_are_the_outer_and_top_ones_and_streaks_stay_on_the_clear_trunk() {
         assert!(n(Organ::Streak, Lod::Fine) > n(Organ::Streak, Lod::Medium) && n(Organ::Streak, Lod::Medium) > 0, "{form}");
         let (st, wd) = (grow(&spec, Organ::Streak, Lod::Fine), grow(&spec, Organ::Wood, Lod::Fine));
         assert!(top(&st) <= top(&wd), "{form}: a streak above the trunk");
-        assert!(wide(&st) <= 0.4, "{form}: a streak {} m off the axis", wide(&st));
+        // measured from the trunk's own axis: a palm trunk leans by design
+        let off = st
+            .pos
+            .iter()
+            .map(|p| {
+                let a = ddc_geom::component::plant::trunk_axis(&spec, p.z);
+                (p.x - a.x).hypot(p.y - a.y)
+            })
+            .fold(0.0, f64::max);
+        assert!(off <= 0.4, "{form}: a streak {off} m off the axis");
     }
     // a bare tree has no lit lobes but keeps its bark streaks
     let bare = Spec { form: Form::from_name("round").unwrap(), height: 12.0, crown: 9.0, trunk: 0.4, clear: 3.0, leaf: 0.0, seed: 3 };
@@ -535,7 +555,15 @@ fn a_hedge_is_trimmed_with_an_irregular_top_and_a_scalloped_plan() {
     let mut tops: Vec<i64> = vec![];
     for k in 0..6 {
         let x = -1.5 + 0.5 * k as f64 + 0.25;
-        let z = b.mesh.positions.iter().filter(|p| (p.x - x).abs() < 0.24).map(|p| p.z).fold(0.0, f64::max);
+        // a cut's corners lie on its ends, shared in x with the neighbour: pick its faces by centroid
+        let p = &b.mesh.positions;
+        let z = b
+            .mesh
+            .triangles
+            .iter()
+            .filter(|t| ((p[t[0] as usize].x + p[t[1] as usize].x + p[t[2] as usize].x) / 3.0 - x).abs() < 0.24)
+            .flat_map(|t| t.iter().map(|&i| p[i as usize].z))
+            .fold(0.0, f64::max);
         tops.push((z * 1e4).round() as i64);
     }
     tops.sort();

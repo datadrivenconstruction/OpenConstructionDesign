@@ -388,6 +388,16 @@ fn arch(f: &mut Frame, p: &TowerParams, face: usize) {
             f.add(chords[0].1[i], chords[1].1[i], secs.strut, MemRole::Strut, v3(0.0, 0.0, 1.0));
         }
     }
+    // Wind bracing between the two planes on both chords: struts alone leave the arch to carry
+    // the face wind out of its plane by strut bending (a Vierendeel).
+    for i in 0..n {
+        let (s, e) = if i % 2 == 0 { (0, 1) } else { (1, 0) };
+        let pairs = [(&chords[s].0, &chords[e].0, &chords[0].0, &chords[1].0), (&chords[s].1, &chords[e].1, &chords[0].1, &chords[1].1)];
+        for (from, to, c0, c1) in pairs {
+            let nrm = (c0[i + 1] - c0[i]).cross(c1[i] - c0[i]);
+            f.add(from[i], to[i + 1], secs.strut, MemRole::PlanBrace, nrm);
+        }
+    }
 }
 
 /// Portal-frame shed: `bays` frames at `spacing`, `span`, eaves `height`, roof `pitch_deg`,

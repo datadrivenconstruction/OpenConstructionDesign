@@ -164,9 +164,17 @@ impl Surface {
         let (u0, u1) = self.domain_u();
         let (v0, v1) = self.domain_v();
         let (uc, vc) = (0.5 * (u0 + u1), 0.5 * (v0 + v1));
+        // At a pole the collapsed partial is rounding noise (~1 ulp of the coordinates), not
+        // zero; noise x Sv passes the angle test and gives a sideways normal. A partial that
+        // spans less than 1e-9 of the surface size over the whole domain counts as collapsed.
+        let floor = 1e-9 * self.scale();
+        let (su, sv) = (u1 - u0, v1 - v0);
         for f in [0.0, 1e-7, 1e-5, 1e-3] {
             let d = self.derivs(u + (uc - u) * f, v + (vc - v) * f, 1);
             let (a, b) = (d[1][0], d[0][1]);
+            if !(a.len() * su > floor && b.len() * sv > floor) {
+                continue;
+            }
             let n = a.cross(b);
             let l = n.len();
             if l.is_finite() && l > 0.0 && l > 1e-12 * a.len() * b.len() {

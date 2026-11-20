@@ -157,7 +157,7 @@ fn samples(xs: &[f64]) -> Vec<f64> {
     out
 }
 
-/// Piecewise linear map from common parameters to the curve's own (normalized) ones.
+/// Monotone cubic map from common parameters to the curve's own (normalized) ones.
 fn mapper(xs: &[f64], own: &[f64]) -> impl Fn(f64) -> f64 {
     let mut a = vec![(0.0, 0.0)];
     for (&x, &o) in xs.iter().zip(own) {
@@ -172,14 +172,45 @@ fn mapper(xs: &[f64], own: &[f64]) -> impl Fn(f64) -> f64 {
     if a[a.len() - 1].0 < 1.0 - EPS {
         a.push((1.0, 1.0));
     }
-    move |u: f64| {
-        let k = (1..a.len()).find(|&k| u <= a[k].0).unwrap_or(a.len() - 1);
-        let ((x0, y0), (x1, y1)) = (a[k - 1], a[k]);
-        if x1 - x0 <= EPS {
-            y1
-        } else {
-            y0 + (y1 - y0) * (u - x0) / (x1 - x0)
+    // Monotone cubic Hermite (Fritsch-Carlson): no slope jump at the crossings, so the rows
+    // sampled through the map stay smooth and a cubic through the samples follows them.
+    let n = a.len();
+    let sec: Vec<f64> = (1..n)
+        .map(|k| {
+            let dx = a[k].0 - a[k - 1].0;
+            if dx <= EPS {
+                0.0
+            } else {
+                (a[k].1 - a[k - 1].1) / dx
+            }
+        })
+        .collect();
+    let mut m = vec![0.0; n];
+    for k in 1..n.saturating_sub(1) {
+        let (s0, s1) = (sec[k - 1], sec[k]);
+        if s0 * s1 > 0.0 {
+            let (h0, h1) = (a[k].0 - a[k - 1].0, a[k + 1].0 - a[k].0);
+            let (w0, w1) = (2.0 * h1 + h0, h1 + 2.0 * h0);
+            m[k] = (w0 + w1) / (w0 / s0 + w1 / s1);
         }
+    }
+    if n >= 2 {
+        m[0] = sec[0];
+        m[n - 1] = sec[n - 2];
+    }
+    move |u: f64| {
+        let k = (1..n).find(|&k| u <= a[k].0).unwrap_or(n - 1);
+        let ((x0, y0), (x1, y1)) = (a[k - 1], a[k]);
+        let h = x1 - x0;
+        if h <= EPS {
+            return y1;
+        }
+        let t = ((u - x0) / h).clamp(0.0, 1.0);
+        let (t2, t3) = (t * t, t * t * t);
+        (2.0 * t3 - 3.0 * t2 + 1.0) * y0
+            + (t3 - 2.0 * t2 + t) * h * m[k - 1]
+            + (-2.0 * t3 + 3.0 * t2) * y1
+            + (t3 - t2) * h * m[k]
     }
 }
 

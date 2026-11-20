@@ -9,7 +9,7 @@
 //! The link table is created by schema step 42 ([`migrate`], additive), on open of any older file.
 
 use ddc_geom::csg::{Body, BoolOp};
-use ddc_geom::csg2::MIN_FACES;
+use ddc_geom::csg2::prefers_mesh;
 use ddc_geom::csg_check::{checked_boolean_noted, BoolReason};
 use rusqlite::{params, Connection};
 
@@ -208,7 +208,7 @@ impl Model {
         for l in links(&self.db, "result>=?1", i64::MIN)? {
             let (sa, sb) = (read(&self.db, l.a)?, read(&self.db, l.b)?);
             let (wa, wb) = (world(&self.db, &sa)?, world(&self.db, &sb)?);
-            if wa.polys.len() + wb.polys.len() < MIN_FACES {
+            if !prefers_mesh(wa.polys.len(), wb.polys.len()) {
                 continue;
             }
             let lines = match checked_boolean_noted(&wa, &wb, l.op, TOL) {

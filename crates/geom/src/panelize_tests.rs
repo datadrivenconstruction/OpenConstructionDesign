@@ -171,9 +171,17 @@ fn warped_quads_are_classified_and_planarized() {
     assert!((b - before).abs() < 1e-15);
     assert!(a < 0.2 * b, "{b} -> {a}");
     // pulled to the surface: still better, and the nodes stay close to it
-    let (b2, a2) = p.planarize(&s, 100, 0.2);
+    let stick = 0.2;
+    assert!(p.off_surface(&s) < 1e-9, "nodes start on the surface");
+    let (b2, a2) = p.planarize(&s, 100, stick);
     assert!(a2 < b2, "{b2} -> {a2}");
-    assert!(p.off_surface(&s) < before, "{}", p.off_surface(&s));
+    // distance bound (m): a quad's plane projection moves a node by at most half its
+    // planarity h, so at the fixed point d = (1 - stick) * |mean - foot| <= (1 - stick) * (h/2 + d),
+    // i.e. d <= (1 - stick) / stick * h / 2 with h the larger planarity seen
+    let bound = (1.0 - stick) / stick * b2.max(a2) / 2.0;
+    assert!(p.off_surface(&s) <= bound, "{} over {bound}", p.off_surface(&s));
+    // and far closer than the free relaxation, which drifts without the pull
+    assert!(p.off_surface(&s) < 0.5 * free.off_surface(&s), "{} vs free {}", p.off_surface(&s), free.off_surface(&s));
     // boundary nodes keep their boundary parameter
     let w = p.cols + 1;
     for j in 0..=p.rows {

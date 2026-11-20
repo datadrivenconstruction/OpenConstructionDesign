@@ -82,6 +82,11 @@ impl Organ {
             _ => None,
         }
     }
+
+    /// A tone skin over the crown or bark: drawn, with no volume of its own.
+    pub fn is_tone(self) -> bool {
+        matches!(self, Organ::Shade | Organ::Light | Organ::Streak)
+    }
 }
 
 #[derive(Clone, Copy, Debug, PartialEq)]
@@ -234,6 +239,20 @@ fn tube(m: &mut Soup, path: &[V3], rad: &[f64], sides: usize, close_base: bool) 
         for j in 0..sides {
             m.t(c, rings[0][(j + 1) % sides], rings[0][j]);
         }
+    }
+}
+
+/// A branch: a tube whose base ring is capped flat (sides - 2 triangles, no centre vertex), so
+/// the wood stays a closed mesh where the branch sinks into its parent.
+fn branch(m: &mut Soup, path: &[V3], rad: &[f64], sides: usize) {
+    let b0 = m.pos.len() as u32;
+    let t0 = m.tris.len();
+    tube(m, path, rad, sides, false);
+    if m.tris.len() == t0 {
+        return;
+    }
+    for j in 1..sides as u32 - 1 {
+        m.t(b0, b0 + j + 1, b0 + j);
     }
 }
 
@@ -487,7 +506,8 @@ fn symbol(form: Form, discs: &[(f64, f64, f64)], floor: f64, crown_r: f64, seed:
         }
         _ => {
             let (lobes, seg) = match lod {
-                Lod::Coarse => (10, 3),
+                // coarse: 8 lobes, so outline, spokes and an 8-sided trunk ring stay within 40 segments
+                Lod::Coarse => (8, 3),
                 Lod::Medium => (14, 4),
                 Lod::Fine => (18, 5),
             };
@@ -796,7 +816,7 @@ fn wood_tips(s: &Spec, lk: &Look, lod: Lod) -> (Soup, Vec<V3>) {
             let fb = ((c.z - 0.35 * dh) / top_z).clamp(fs, fe);
             let (p0, rb) = (tr.at(fb), tr.r(fb) * 0.6);
             let mid = p0 + (c - p0) * 0.5 + v3(0.0, 0.0, 0.1 * dh);
-            tube(&mut m, &[p0, mid, c], &[rb, rb * 0.55, rb * 0.2], bsides, false);
+            branch(&mut m, &[p0, mid, c], &[rb, rb * 0.55, rb * 0.2], bsides);
             joints.extend([p0, mid, c]);
             tips.push(c);
         }
@@ -804,7 +824,7 @@ fn wood_tips(s: &Spec, lk: &Look, lod: Lod) -> (Soup, Vec<V3>) {
             let from = joints.iter().copied().min_by(|a, b| (*a - l.c).len().total_cmp(&(*b - l.c).len())).unwrap_or(l.c);
             let mid = from + (l.c - from) * 0.5 + v3(0.0, 0.0, 0.05 * (l.c - from).len());
             let rb = tr.r(fe) * 0.25;
-            tube(&mut m, &[from, mid, l.c], &[rb, rb * 0.6, rb * 0.25], 4, false);
+            branch(&mut m, &[from, mid, l.c], &[rb, rb * 0.6, rb * 0.25], 4);
             tips.push(l.c);
         }
         return (m, tips);
@@ -824,7 +844,7 @@ fn wood_tips(s: &Spec, lk: &Look, lod: Lod) -> (Soup, Vec<V3>) {
             p0 + v3(d.0 * reach * 0.5, d.1 * reach * 0.5, rise * 0.55),
             p0 + v3(d.0 * reach, d.1 * reach, rise - droop),
         ];
-        tube(&mut m, &pts, &[rb, rb * 0.55, rb * 0.2], bsides, false);
+        branch(&mut m, &pts, &[rb, rb * 0.55, rb * 0.2], bsides);
         if lod == Lod::Fine {
             let twigs = if bare { 3 } else { 2 };
             for k in 0..twigs {
@@ -835,7 +855,7 @@ fn wood_tips(s: &Spec, lk: &Look, lod: Lod) -> (Soup, Vec<V3>) {
                     q + v3(a2.cos() * l * 0.5, a2.sin() * l * 0.5, l * 0.25),
                     q + v3(a2.cos() * l, a2.sin() * l, l * 0.3 - droop * 0.2),
                 ];
-                tube(&mut m, &tw, &[rb * 0.4, rb * 0.25, rb * 0.1], 4, false);
+                branch(&mut m, &tw, &[rb * 0.4, rb * 0.25, rb * 0.1], 4);
             }
         }
     }
@@ -889,8 +909,10 @@ fn lobes_of(s: &Spec, lk: &Look, lod: Lod, cl: &[Cl]) -> (Option<Lobe>, Vec<Lobe
             // foliage share thins the crown here too: fewer lumps, a slimmer spindle
             let (z0, z1, rr) = (s.clear, s.height, s.crown / 2.0);
             let lumps = ((4.0 * s.leaf).round() as usize).clamp(1, 4);
+            // an icosahedron reaches 0.85 of its radius along z: centred at 0.54 of the crown
+            // depth, the core spans 0.15..0.93 of it, so the crown reaches its top at every form
             let core = Lobe {
-                c: v3(lk.lean.x, lk.lean.y, 0.5 * (z0 + z1)),
+                c: v3(lk.lean.x, lk.lean.y, z0 + 0.54 * (z1 - z0)),
                 rx: 0.42 * rr * prof(s.form, 0.5).max(0.35) * s.leaf.max(0.5),
                 rz: 0.46 * (z1 - z0),
                 sub: 0,
@@ -992,6 +1014,13 @@ fn shade(s: &Spec, lk: &Look, lod: Lod) -> Soup {
     m
 }
 
+/// Plan position of the (leaning) trunk axis at height `z`; the trunk ends at its top.
+pub fn trunk_axis(s: &Spec, z: f64) -> V2 {
+    let (tr, top_z, _) = trunk_of(s, &Look::of(s));
+    let p = tr.at((z / top_z.max(1e-9)).clamp(0.0, 1.0));
+    v2(p.x, p.y)
+}
+
 /// One organ of the tree at a level of detail.
 pub fn grow(s: &Spec, organ: Organ, lod: Lod) -> Grown {
     let lk = Look::of(s);
@@ -999,7 +1028,8 @@ pub fn grow(s: &Spec, organ: Organ, lod: Lod) -> Grown {
         Organ::Wood => {
             let m = wood(s, &lk, lod);
             let volume = m.volume();
-            Grown { pos: m.pos, tris: m.tris, volume, plan: circle_lines(s.trunk / 2.0, 12) }
+            let ring = if lod == Lod::Coarse { 8 } else { 12 };
+            Grown { pos: m.pos, tris: m.tris, volume, plan: circle_lines(s.trunk / 2.0, ring) }
         }
         Organ::Light => {
             let m = light(s, &lk, lod);

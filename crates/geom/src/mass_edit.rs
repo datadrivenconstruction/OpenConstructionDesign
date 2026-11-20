@@ -101,13 +101,6 @@ fn region_ring(pl: &Plane, region: &[V3], tol: Tol) -> R<Vec<V3>> {
     if r.len() < 3 {
         return Err(bad);
     }
-    let a = ring_normal(&r).dot(pl.n);
-    if a.abs() * 0.5 <= tol.length * tol.length {
-        return Err(bad);
-    }
-    if a < 0.0 {
-        r.reverse();
-    }
     let (u, w) = basis(pl.n);
     let p: Vec<V2> = r.iter().map(|q| v2(q.dot(u), q.dot(w))).collect();
     let k = p.len();
@@ -120,6 +113,13 @@ fn region_ring(pl: &Plane, region: &[V3], tol: Tol) -> R<Vec<V3>> {
                 return Err(MassError::BadParam("region loop crosses itself"));
             }
         }
+    }
+    let a = ring_normal(&r).dot(pl.n);
+    if a.abs() * 0.5 <= tol.length * tol.length {
+        return Err(bad);
+    }
+    if a < 0.0 {
+        r.reverse();
     }
     Ok(r)
 }
@@ -520,10 +520,23 @@ fn plan(b: &Body, base: &[Sel], kind: BlendKind, tol: f64) -> Result<Plan, PlanE
         if !(s.hi - s.lo > tol * 10.0) || s.lo < -tol || s.hi > s.len + tol {
             return Err(PlanErr::Size);
         }
+        // At a free end (no mitre, no vertex blend) the faces that meet there trim the strip, so
+        // the tangent line may run off the face within two set-backs of the end.
+        let span = s.hi - s.lo;
+        let margin = (2.0 * s.set).min(0.2 * span);
+        let free_lo = s.c_lo.is_none() && !s.mitre[0];
+        let free_hi = s.c_hi.is_none() && !s.mitre[1];
         for k in 0..2 {
             let f = s.f[k];
             for frac in [0.02, 0.25, 0.5, 0.75, 0.98] {
-                let p = s.a + s.t * (s.lo + (s.hi - s.lo) * frac) + s.u[k] * s.set;
+                let mut x = s.lo + span * frac;
+                if frac < 0.1 && free_lo {
+                    x = x.max(s.lo + margin);
+                }
+                if frac > 0.9 && free_hi {
+                    x = x.min(s.hi - margin);
+                }
+                let p = s.a + s.t * x + s.u[k] * s.set;
                 if !b
                     .polys
                     .iter()

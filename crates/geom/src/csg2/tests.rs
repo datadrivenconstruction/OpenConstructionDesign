@@ -348,11 +348,143 @@ fn sphere_50k_minus_cylinder_within_budget() {
     let secs = t.elapsed().as_secs_f64();
     // budget: 1 s optimised, 20 s in the unoptimised test profile
     let budget = if cfg!(debug_assertions) { 20.0 } else { 1.0 };
-    eprintln!("sphere 50k - cylinder: {secs:.3} s, {:?}", r.stats);
+    // the output passes (planar refill, short edges, caps) again on a result of the same size:
+    // their share of the boolean, under whatever load the run has
+    let mut again = r.mesh.clone();
+    let t1 = std::time::Instant::now();
+    let all = vec![true; again.positions.len()];
+    crate::face_fill::refill_flat_faces(&mut again, &all, 0);
+    flip_caps(&mut again, TOL.length);
+    let post = t1.elapsed().as_secs_f64();
+    eprintln!("sphere 50k - cylinder: {secs:.3} s (output passes {post:.3} s, {:.1}%), {:?}", 100.0 * post / secs, r.stats);
     assert!(r.mesh.is_watertight());
     let i = run(&s, &c, BoolOp::Intersect).volume();
     assert!((r.mesh.volume() + i - s.volume()).abs() < 1e-9);
     // exact solid: 4/3 pi (1 - (1 - 0.4^2)^1.5) = 0.964 for a centred axis
     assert!(i > 0.85 && i < 1.1, "{i}");
     assert!(secs < budget, "{secs} s over {budget} s");
+}
+
+/// 56 holes cut one by one: planar faces are refilled after each cut, so the triangle count and
+/// the work per cut stay linear in the holes (counts, not wall time, which varies with load).
+#[test]
+fn repeated_cuts_stay_linear_and_free_of_caps() {
+    let mut m = boxm(v3(0., 0., 0.), v3(8., 8., 0.3));
+    let (mut tris, mut pairs) = (vec![], vec![]);
+    for i in 0..7 {
+        for j in 0..8 {
+            let c = cyl(0.5 + i as f64, 0.5 + j as f64, 0.3, -0.1, 0.4, 24);
+            let r = mesh_boolean(&m, &c, BoolOp::Subtract, TOL).unwrap_or_else(|e| panic!("cut {i} {j}: {e}"));
+            m = r.mesh;
+            assert!(m.is_watertight());
+            let caps: Vec<String> = m
+                .triangles
+                .iter()
+                .filter(|t| needle_height(&m, **t).0 < TOL.length)
+                .take(3)
+                .map(|t| cap_report(&m, *t))
+                .collect();
+            assert!(caps.is_empty(), "cut {i} {j}: caps\n{}", caps.join("\n"));
+            tris.push(m.triangles.len());
+            pairs.push(r.stats.pairs);
+        }
+    }
+    let holes = tris.len();
+    // a hole: 48 wall triangles and a 24-gon in the top and the bottom (about 26 each), plus
+    // the points where face triangles meet its rim; 300 per hole leaves room for those
+    assert!(tris[holes - 1] <= 12 + 300 * holes, "{} triangles for {holes} holes", tris[holes - 1]);
+    // linear: twice the holes, about twice the triangles (quadratic growth gives four times)
+    let half = tris[holes / 2 - 1];
+    assert!(tris[holes - 1] as f64 <= 2.5 * half as f64, "{half} -> {}", tris[holes - 1]);
+    // the work per cut does not grow with the holes already there
+    let early = *pairs[..8].iter().max().unwrap();
+    let late = *pairs[holes - 8..].iter().max().unwrap();
+    assert!(late <= 3 * early, "pairs per cut {early} -> {late}");
+}
+
+/// A cap, its height and the triangles across each of its edges (for failure messages).
+fn cap_report(m: &Mesh, t: [u32; 3]) -> String {
+    let (h, k) = needle_height(m, t);
+    let mut s = format!("cap {t:?} h {h:e} long edge {k} pts {:?}", t.map(|i| m.positions[i as usize]));
+    for e in 0..3 {
+        let (a, b) = (t[e], t[(e + 1) % 3]);
+        let across: Vec<String> = m
+            .triangles
+            .iter()
+            .enumerate()
+            .filter(|(_, u)| (0..3).any(|q| u[q] == b && u[(q + 1) % 3] == a))
+            .map(|(i, u)| format!("#{i} {u:?} h {:e} face {}", needle_height(m, *u).0, m.face_of[i]))
+            .collect();
+        s += &format!("\n  edge {a}-{b}: {across:?}");
+    }
+    s
+}
+
+#[test]
+fn results_carry_no_caps_and_stay_valid_operands() {
+    // three neighbouring holes leave a rounded split point within 1e-16 of a long top-face edge;
+    // that cap folded over its neighbour and the fourth cut refused the slab as self-intersecting
+    let mut m = boxm(v3(0., 0., 0.), v3(8., 8., 0.3));
+    for j in 0..4 {
+        let c = cyl(0.5, 0.5 + j as f64, 0.3, -0.1, 0.4, 24);
+        m = run(&m, &c, BoolOp::Subtract);
+        let caps: Vec<String> = m
+            .triangles
+            .iter()
+            .filter(|t| needle_height(&m, **t).0 < TOL.length)
+            .take(3)
+            .map(|t| cap_report(&m, *t))
+            .collect();
+        assert!(caps.is_empty(), "cut {j}: caps\n{}", caps.join("\n"));
+    }
+}
+
+#[test]
+fn routing_follows_the_face_pair_count_not_the_sum() {
+    use crate::csg_check::{routed_boolean, BoolPath};
+    use crate::mass::{cuboid, revolve_ids};
+    use crate::math::v2;
+    let t = Tol { length: 1e-7, angle: 1e-9 };
+    // a faceted ring of 256 segments (1024 faces, under any sum threshold of 2000) and a bar
+    let prof = [v2(0.5, 0.0), v2(1.0, 0.0), v2(1.0, 1.0), v2(0.5, 1.0)];
+    let ring = revolve_ids(&prof, &[], TAU, 256).unwrap();
+    let bar = cuboid(v3(-2.0, -0.2, 0.2), v3(2.0, 0.2, 0.8));
+    assert!(ring.polys.len() + bar.polys.len() < 2_000);
+    let (out, path, notes) = routed_boolean(&ring, &bar, BoolOp::Subtract, t);
+    assert_eq!(path, BoolPath::Mesh, "{notes:?}");
+    out.validate(t).unwrap();
+    // two blocks: few pairs, the planar path
+    let b2 = cuboid(v3(0.5, 0.5, 0.5), v3(3., 3., 3.));
+    assert_eq!(routed_boolean(&bar, &b2, BoolOp::Union, t).1, BoolPath::Planar);
+    assert!(prefers_mesh(1024, 6) && !prefers_mesh(40, 40) && prefers_mesh(64, 64));
+}
+
+#[test]
+fn a_cap_is_flipped_into_its_neighbour() {
+    // square a b e d split along a-b with c on that edge up to 1e-15: cap (a, b, c) on top
+    let mut m = Mesh::default();
+    m.positions = vec![v3(0., 0., 0.), v3(1., 0., 0.), v3(0.4, 1e-15, 0.), v3(0.5, -1., 0.)];
+    m.triangles = vec![[0, 1, 2], [1, 0, 3]];
+    m.face_of = vec![1, 2];
+    flip_caps(&mut m, 1e-9);
+    assert_eq!(m.triangles, vec![[0, 3, 2], [3, 1, 2]]);
+    assert_eq!(m.face_of, vec![2, 2]);
+    assert!(m.triangles.iter().all(|t| needle_height(&m, *t).0 >= 1e-9));
+    // a split point 1e-15 from a corner: the edge between them collapses and its two slivers go
+    let mut m = Mesh::default();
+    m.positions = vec![v3(0., 0., 0.), v3(1., 0., 0.), v3(0., 1., 0.), v3(0., 0., 1.), v3(1e-15, 0., 0.)];
+    m.triangles = vec![[4, 2, 1], [0, 2, 4], [0, 4, 3], [4, 1, 3], [1, 2, 3], [2, 0, 3]];
+    m.face_of = vec![1, 1, 2, 2, 3, 4];
+    assert!(m.is_watertight());
+    flip_caps(&mut m, 1e-9);
+    assert_eq!(m.triangles, vec![[0, 2, 1], [0, 1, 3], [1, 2, 3], [2, 0, 3]]);
+    assert_eq!(m.face_of, vec![1, 2, 3, 4]);
+    assert!(m.is_watertight());
+    // a mirrored pair of caps closes on itself and goes
+    let mut m = Mesh::default();
+    m.positions = vec![v3(0., 0., 0.), v3(1., 0., 0.), v3(0.4, 1e-15, 0.)];
+    m.triangles = vec![[0, 1, 2], [1, 0, 2]];
+    m.face_of = vec![1, 1];
+    flip_caps(&mut m, 1e-9);
+    assert!(m.triangles.is_empty() && m.face_of.is_empty());
 }

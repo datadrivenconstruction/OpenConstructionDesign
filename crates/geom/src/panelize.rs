@@ -20,6 +20,18 @@ use crate::nurbs::Surface;
 pub const ARC_SAMPLES: usize = 512;
 /// Most panels along one direction.
 pub const MAX_DIV: usize = 500;
+/// Over-relaxation of the planarisation step (1 = plain mean of the quad projections).
+/// The mean step is Jacobi on the plane-distance energy with the node's quad count as the
+/// diagonal. Each quad's centring projection has norm 1, so the eigenvalues of the
+/// preconditioned Hessian lie in (0, 1], and the checkerboard twist reaches 1. Stability
+/// therefore needs w < 2. The optimal w is 2 / (1 + l_min). The smoothest twist mode across
+/// `n` panels gives l_min >= sin^2(pi / 2n) (twist is a product of two such factors). Using
+/// that larger value keeps w below the optimum, so it stays stable (6 panels: 1.87).
+fn relax(cols: usize, rows: usize) -> f64 {
+    let n = cols.max(rows).max(1) as f64;
+    let l_min = (std::f64::consts::PI / (2.0 * n)).sin().powi(2);
+    2.0 / (1.0 + l_min)
+}
 
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum Spacing {
@@ -417,6 +429,7 @@ impl Panels {
             .map(|p| [p.nodes[0], p.nodes[1], p.nodes[2], p.nodes[3]])
             .collect();
         let w = self.cols + 1;
+        let omega = relax(self.cols, self.rows);
         for _ in 0..iters {
             let mut sum = vec![V3::default(); self.nodes.len()];
             let mut cnt = vec![0usize; self.nodes.len()];
@@ -437,14 +450,19 @@ impl Panels {
                 if cnt[id] == 0 {
                     continue;
                 }
-                let free = sum[id] * (1.0 / cnt[id] as f64);
+                let mean = sum[id] * (1.0 / cnt[id] as f64);
                 let (i, j) = (id % w, id / w);
                 let fix_u = i == 0 || i == self.cols;
                 let fix_v = j == 0 || j == self.rows;
-                let t = foot(s, free, self.uv[id], fix_u, fix_v, (u0, u1), (v0, v1));
+                let t = foot(s, mean, self.uv[id], fix_u, fix_v, (u0, u1), (v0, v1));
                 let on = s.point(t[0], t[1]);
                 self.uv[id] = t;
-                self.nodes[id] = free + (on - free) * stick;
+                // plain step: mean of the projections pulled toward the surface by `stick`. The
+                // over-relaxation scales the whole step, so the fixed point (and the distance
+                // kept from the surface) is that of the plain iteration; the pull is a convex
+                // blend with a projection, so the (0, 1] spectrum and w < 2 still hold
+                let target = mean + (on - mean) * stick;
+                self.nodes[id] = self.nodes[id] + (target - self.nodes[id]) * omega;
             }
         }
         self.measure();

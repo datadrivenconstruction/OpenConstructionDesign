@@ -64,7 +64,7 @@ pub enum BoolPath {
 /// general one. A mesh refusal is stated as a [`Loss`], never silent.
 pub fn routed_boolean(a: &Body, b: &Body, op: BoolOp, tol: Tol) -> (Body, BoolPath, Vec<Loss>) {
     let faces = a.polys.len() + b.polys.len();
-    if faces < crate::csg2::MIN_FACES {
+    if !crate::csg2::prefers_mesh(a.polys.len(), b.polys.len()) {
         return (a.boolean(b, op, tol), BoolPath::Planar, vec![]);
     }
     match crate::csg2::boolean_bodies(a, b, op, tol) {
@@ -201,7 +201,7 @@ mod tests {
             }
         }
         let b = Body::from_mesh(&s, 20);
-        assert!(a.polys.len() + b.polys.len() >= crate::csg2::MIN_FACES);
+        assert!(crate::csg2::prefers_mesh(a.polys.len(), b.polys.len()));
         let (out, notes) = checked_boolean_noted(&a, &b, BoolOp::Subtract, TOL).unwrap();
         assert_eq!(out, a);
         assert_eq!(notes.len(), 1, "{notes:?}");

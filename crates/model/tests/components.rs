@@ -56,6 +56,33 @@ fn ctype(m: &mut Model, family: &str, ty: &str) -> i64 {
     m.comp_type_id(f, ty).unwrap().unwrap()
 }
 
+/// A digit, optional blanks, then `in`, `ft` or `"` not followed by a letter.
+fn imperial_name(s: &str) -> bool {
+    let c: Vec<char> = s.chars().collect();
+    (0..c.len()).any(|i| {
+        if !c[i].is_ascii_digit() {
+            return false;
+        }
+        let mut j = i + 1;
+        while j < c.len() && c[j] == ' ' {
+            j += 1;
+        }
+        let rest: String = c[j..].iter().collect();
+        let unit = ["in", "ft", "\""].into_iter().find(|u| rest.starts_with(u));
+        unit.is_some_and(|u| !rest[u.len()..].starts_with(|x: char| x.is_ascii_alphabetic()))
+    })
+}
+
+#[test]
+fn imperial_names_are_units_not_spelling() {
+    for s in ["60x30in", "Wide 6 in", "120in", "Queen 60x80in", "2.75x4.5in", "8ft", "36\""] {
+        assert!(imperial_name(s), "{s}");
+    }
+    for s in ["String", "Single", "Spreading 1", "Lilac", "Round 1", "4 inlets"] {
+        assert!(!imperial_name(s), "{s}");
+    }
+}
+
 #[test]
 fn library_families_build_at_every_detail_level() {
     let lib = library().unwrap();
@@ -81,15 +108,16 @@ fn library_families_build_at_every_detail_level() {
     ] {
         assert!(names.contains(&n), "{n}");
     }
+    // at least one type sized in inches or feet (a number then in, ft or ", as in "60x30in" or
+    // "Wide 6 in"; "String" or "Lilac" are words); every family without one is named at once
+    let metric_only: Vec<&str> = lib
+        .iter()
+        .filter(|f| f.name != "Generic Box" && !f.types.iter().any(|t| imperial_name(&t.name)))
+        .map(|f| f.name.as_str())
+        .collect();
+    assert!(metric_only.is_empty(), "no imperial type: {metric_only:?}");
     for f in &lib {
         assert!(f.types.len() >= 2 || f.name == "Generic Box", "{}", f.name);
-        // at least one type in inches
-        let imperial = f.types.iter().any(|t| t.name.contains("in"));
-        assert!(
-            imperial || f.name == "Generic Box",
-            "{} has no imperial type",
-            f.name
-        );
         for t in &f.types {
             let r = f.resolve(&t.values, &[]).unwrap();
             for lod in [Lod::Coarse, Lod::Medium, Lod::Fine] {
@@ -477,7 +505,8 @@ fn a_tree_scene_carries_lighter_levels_and_part_materials() {
     let tris: Vec<usize> = lv.iter().map(|l| l.0.triangles.len()).collect();
     assert!(tris[0] < full && tris[1] < tris[0], "{full} {tris:?}");
     assert!(lv[0].2 < lv[1].2, "the coarser the larger the error");
-    assert!(sc.materials[k].iter().any(|x| x == "Bark Brown") && sc.materials[k].iter().any(|x| x == "Foliage Green"));
+    // Oak A declares its own bark (Bark Dark); its leaves keep the family default
+    assert!(sc.materials[k].iter().any(|x| x == "Bark Dark") && sc.materials[k].iter().any(|x| x == "Foliage Green"), "{:?}", sc.materials[k]);
     for l in lv {
         assert!(l.1.iter().any(|x| x == "Foliage Green"));
     }
@@ -580,7 +609,11 @@ fn a_tree_shows_in_sections_and_elevations_by_its_mesh() {
     let Fx { mut m, level, .. } = fx();
     let t = ctype(&mut m, "Tree", "Oak A");
     let id = m.add_component(&CompSpec::at(level, t, 20.0, 20.0)).unwrap();
-    let top = m.component_built(id, Lod::Medium).unwrap().2.bbox[1].z;
+    // the views cut world-space bodies: the built (local) top lifted by the placement, whose
+    // bottom the quantities give in world coordinates (the level elevation)
+    let built = m.component_built(id, Lod::Medium).unwrap().2.bbox;
+    let lift = m.component_quantities(id).unwrap().bbox[0].2 - built[0].z;
+    let top = built[1].z + lift;
     let spec = |kind| SectionSpec { kind, name: "T".into(), a: (10.0, 20.0), b: (30.0, 20.0), depth: 30.0, far_clip: false };
     let cut = m.section_view(&spec(ViewKind::Section), &[]).unwrap();
     let hi = cut

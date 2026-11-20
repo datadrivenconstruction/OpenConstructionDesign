@@ -496,7 +496,7 @@ pub fn boolean_on_tessellation(a: &Thick, b: &Thick, op: BoolOp, tol: Tol) -> (M
         face_of: vec![tag; m.triangles.len()],
         ..m.clone()
     };
-    let big = a.mesh.triangles.len() + b.mesh.triangles.len() >= crate::csg2::MIN_FACES;
+    let big = crate::csg2::prefers_mesh(a.mesh.triangles.len(), b.mesh.triangles.len());
     let fast = big
         .then(|| crate::csg2::mesh_boolean(&tagged(&a.mesh, 1), &tagged(&b.mesh, 2), op, tol));
     let mut losses = vec![];

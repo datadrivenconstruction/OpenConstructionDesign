@@ -148,7 +148,19 @@ fn boundary_loops(tris: &[[u32; 3]]) -> Option<Vec<Vec<u32>>> {
 /// Fills again every planar face (by `face_of`) that has a vertex flagged in `touched`; drops
 /// positions from index `from` on that no triangle uses any more (earlier ones keep their index).
 /// Faces that are not planar or do not fill stay as they are. Returns the faces filled again.
+/// The caller vouches that each face is flat: interior vertices off the outline (spikes left
+/// by a cut) are dropped, which is the point.
 pub fn refill_faces(mesh: &mut Mesh, touched: &[bool], from: usize) -> usize {
+    refill(mesh, touched, from, false)
+}
+
+/// As `refill_faces` for faces that may be curved (a tessellated surface under one face id):
+/// a face is filled again only when every vertex of it lies in its outline's plane.
+pub fn refill_flat_faces(mesh: &mut Mesh, touched: &[bool], from: usize) -> usize {
+    refill(mesh, touched, from, true)
+}
+
+fn refill(mesh: &mut Mesh, touched: &[bool], from: usize, check: bool) -> usize {
     if mesh.face_of.len() != mesh.triangles.len() {
         return 0;
     }
@@ -159,14 +171,19 @@ pub fn refill_faces(mesh: &mut Mesh, touched: &[bool], from: usize) -> usize {
     let hit = |i: &u32| touched.get(*i as usize).copied().unwrap_or(false);
     let mut fresh = HashMap::<u32, Vec<[u32; 3]>>::new();
     for (f, ts) in &by_face {
-        if !ts.iter().flatten().any(hit) {
+        // a sound triangle fills back to itself; a lone spike triangle is for the cut to drop
+        if (check && ts.len() < 2) || !ts.iter().flatten().any(hit) {
             continue;
         }
         let Some(loops) = boundary_loops(ts) else {
             continue;
         };
         if let Some(t) = fill_loops(&mesh.positions, &loops) {
-            fresh.insert(*f, t);
+            // a curved face whose boundary happens to be planar (a sphere cap cut by one
+            // plane) passes the loop check; every vertex of the face must lie in that plane
+            if !check || face_in_plane(&mesh.positions, ts, &loops) {
+                fresh.insert(*f, t);
+            }
         }
     }
     if fresh.is_empty() {
@@ -191,6 +208,26 @@ pub fn refill_faces(mesh: &mut Mesh, touched: &[bool], from: usize) -> usize {
     }
     compact(mesh, from);
     fresh.len()
+}
+
+/// Every vertex of `ts` within the loop-planarity tolerance of the plane of `loops`.
+fn face_in_plane(pos: &[V3], ts: &[[u32; 3]], loops: &[Vec<u32>]) -> bool {
+    let n = loops.iter().fold(V3::default(), |a, l| a + newell(pos, l));
+    let len = n.len();
+    if !(len > 0.0 && len.is_finite()) || loops[0].is_empty() {
+        return false;
+    }
+    let nh = n * (1.0 / len);
+    let p0 = pos[loops[0][0] as usize];
+    let ext = ts
+        .iter()
+        .flatten()
+        .map(|&i| (pos[i as usize] - p0).len())
+        .fold(0.0, f64::max)
+        .max(1.0);
+    ts.iter()
+        .flatten()
+        .all(|&i| (pos[i as usize] - p0).dot(nh).abs() <= 1e-7 * ext)
 }
 
 /// Removes positions from `from` on that no triangle refers to, keeping the order of the rest.

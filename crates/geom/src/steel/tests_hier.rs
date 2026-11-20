@@ -277,3 +277,14 @@ fn branches_lie_inside_the_box_and_bracing_ends_on_their_axes() {
     }
     assert!(boxes > 0, "no latticed box with laced branches");
 }
+
+#[test]
+fn nearly_collinear_two_line_groups_keep_the_pitch() {
+    // two members on one side of a node, 0.84 mrad apart (under the collinear cut of 1e-3),
+    // ten fasteners each in two lines: the later group's off-axis rivets lean toward the first
+    let a = 8.4e-4f64;
+    let end = |u| plate::End { u, start: 0.68, n: 10, t_ply: 0.01, grip: 0.02 };
+    let ends = [end(v3(1.0, 0.0, 0.0)), end(v3(a.cos(), -a.sin(), 0.0))];
+    let (p, _) = plate::build(PlateKind::Gusset, v3(0.0, 0.0, 0.0), v3(1.0, 0.0, 0.0), v3(0.0, 1.0, 0.0), 0.01, &ends);
+    assert!(plate::check(&p).is_empty(), "{:?}", plate::check(&p));
+}
