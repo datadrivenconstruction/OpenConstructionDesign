@@ -534,6 +534,8 @@ impl Ctx {
     }
 }
 
+// arbitrary skew ray directions; 0.7071 is a sample value, not 1/sqrt(2)
+#[allow(clippy::approx_constant)]
 const DIRS: [(f64, f64, f64); 7] = [
     (0.5773, 0.6011, 0.5528),
     (-0.3127, 0.8411, 0.4413),

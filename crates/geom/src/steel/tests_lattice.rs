@@ -219,7 +219,9 @@ fn tower_sections_come_from_the_sizing_rule_and_carry_their_force() {
     let base = f.members.iter().find(|m| m.role == MemRole::Chord && f.nodes[m.a as usize].z.min(f.nodes[m.b as usize].z) < 1e-9).unwrap();
     assert_eq!(f.sections[base.sec as usize], tower_size::size_at(&tp(), r, 0.8).chord);
     // a wider ladder top or a twice-given rule is refused
-    let txt = include_str!("../../data/steel/tower_sizing.csv");
+    // a checkout may give the data file CRLF line ends; the edits below match on LF
+    let lf = include_str!("../../data/steel/tower_sizing.csv").replace("\r\n", "\n");
+    let txt = lf.as_str();
     assert!(Ladders::parse(&txt.replace("ladder,chord,L 150x150x15\n", "ladder,chord,L 150x150x15\nladder,chord,L 60x60x6\n")).is_err());
     assert!(Ladders::parse(&format!("{txt}rule,wind_kpa,1\n")).is_err());
     assert!(Ladders::parse(&txt.replace("ladder,strut,L 60x60x6", "ladder,strut,L 61x61x6")).is_err());

@@ -319,6 +319,8 @@ fn principal_axes_are_rotation_invariant() {
     assert!(da < 1e-9 || PI - da < 1e-9);
     // compact rectangle: J barely depends on the grid orientation
     let (r, _) = rings(&Shape::Rect { b: 0.3, h: 0.5 });
+    // any off-grid angle; 0.5236 is a sample, not pi/6
+    #[allow(clippy::approx_constant)]
     let j = polygon_with(&rot(&r, 0.5236), &[], 60, 6.0).j;
     near!(j, rect_torsion(0.3, 0.5), 0.03);
     // a quarter turn maps the grid onto itself: shear centre turns exactly
