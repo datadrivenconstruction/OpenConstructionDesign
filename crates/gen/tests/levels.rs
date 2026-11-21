@@ -149,7 +149,7 @@ fn walls_curtains_and_columns_stand_at_their_own_level_height() {
 #[test]
 fn horizontal_runs_and_risers_follow_the_levels() {
     let (_, p) = built(&json!({"typology": "office", "floors": 3, "storey_heights": [14.0, 4.0, 4.0],
-                               "floor_height": 4.0, "services": {"on": true}}));
+                               "floor_height": 4.0, "services": true}));
     let top = p.roof.elevation;
     assert!((top - 22.0).abs() < 1e-9);
     // every run lies inside the building and a level-bound run inside its own level's band
