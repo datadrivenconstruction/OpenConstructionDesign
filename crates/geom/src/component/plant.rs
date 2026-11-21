@@ -178,6 +178,11 @@ impl Soup {
     fn t(&mut self, a: u32, b: u32, c: u32) {
         self.tris.push([a, b, c]);
     }
+    fn append(&mut self, o: Soup) {
+        let base = self.pos.len() as u32;
+        self.pos.extend(o.pos);
+        self.tris.extend(o.tris.into_iter().map(|t| [t[0] + base, t[1] + base, t[2] + base]));
+    }
     fn volume(&self) -> f64 {
         let mut s = 0.0;
         for t in &self.tris {
@@ -253,6 +258,223 @@ fn branch(m: &mut Soup, path: &[V3], rad: &[f64], sides: usize) {
     }
     for j in 1..sides as u32 - 1 {
         m.t(b0, b0 + j + 1, b0 + j);
+    }
+}
+
+/// Trees get the full skeleton and leaf patches; shrubs, which are placed by the hundred, keep the
+/// light build.
+fn rich(s: &Spec) -> bool {
+    s.height >= 4.0 && s.crown >= 2.5
+}
+
+/// A leaf patch: a flat rhombic bipyramid (8 triangles, closed) lying on `n`.
+fn leaf_patch(m: &mut Soup, c: V3, n: V3, sz: f64, roll: f64) {
+    let refv = if n.z.abs() > 0.9 { v3(1.0, 0.0, 0.0) } else { v3(0.0, 0.0, 1.0) };
+    let u0 = n.cross(refv).normalized();
+    let w0 = n.cross(u0);
+    let u = u0 * roll.cos() + w0 * roll.sin();
+    let w = n.cross(u);
+    let th = sz * 0.18;
+    let ring = [m.v(c + u * sz), m.v(c + w * (sz * 0.75)), m.v(c - u * sz), m.v(c - w * (sz * 0.75))];
+    let (top, bot) = (m.v(c + n * th), m.v(c - n * (th * 0.7)));
+    for i in 0..4 {
+        let j = (i + 1) % 4;
+        m.t(ring[i], ring[j], top);
+        m.t(ring[j], ring[i], bot);
+    }
+}
+
+/// Does the ray from `o` along `d` hit the ellipsoid lobe `l`?
+fn ray_hits(l: &Lobe, o: V3, d: V3) -> bool {
+    let (p, q) = (v3((o.x - l.c.x) / l.rx, (o.y - l.c.y) / l.rx, (o.z - l.c.z) / l.rz), v3(d.x / l.rx, d.y / l.rx, d.z / l.rz));
+    let (a, b, c) = (q.dot(q), p.dot(q), p.dot(p) - 1.0);
+    let disc = b * b - a * c;
+    disc > 0.0 && (-b + disc.sqrt()) / a > 0.0
+}
+
+/// How open to the sky and the air a patch is, 0..1: the share of a fixed fan of rays about its
+/// normal that no other lobe blocks, and less on the underside of the crown. This is the
+/// ambient occlusion of the leaf mass, kept as the tone of the patch (shade, leaf, light).
+fn exposure(lobes: &[Lobe], skip: usize, p: V3, n: V3) -> f64 {
+    let refv = if n.z.abs() > 0.9 { v3(1.0, 0.0, 0.0) } else { v3(0.0, 0.0, 1.0) };
+    let u = n.cross(refv).normalized();
+    let w = n.cross(u);
+    let mut open = 0.0;
+    const FAN: usize = 8;
+    for k in 0..FAN {
+        let a = TAU * k as f64 / FAN as f64;
+        let tilt: f64 = if k % 2 == 0 { 0.5 } else { 0.9 };
+        let d = (n * tilt.cos() + (u * a.cos() + w * a.sin()) * tilt.sin()).normalized();
+        let o = p + n * 0.05;
+        if !lobes.iter().enumerate().any(|(q, l)| q != skip && ray_hits(l, o, d)) {
+            open += 1.0;
+        }
+    }
+    (open / FAN as f64) * (0.55 + 0.45 * (n.z * 0.5 + 0.5))
+}
+
+/// Leaf patches standing on the outside of the lobes, in the places other lobes do not cover:
+/// the foliage shows leaf-sized pieces at its edge instead of the smooth blobs. They come in
+/// three tones by exposure: [shade, leaf, light].
+fn patches(s: &Spec, lod: Lod, lobes: &[Lobe]) -> [Soup; 3] {
+    let mut out = [Soup::default(), Soup::default(), Soup::default()];
+    let per = if lod == Lod::Fine { PATCHES_FINE } else { PATCHES_MEDIUM };
+    let mut r = Rng::new(s.seed, 5);
+    for (j, l) in lobes.iter().enumerate() {
+        let off = r.r(0.0, TAU);
+        let tries = per * 2;
+        let mut made = 0;
+        for i in 0..tries {
+            if made >= per {
+                break;
+            }
+            let zc = 1.0 - 2.0 * (i as f64 + 0.5) / tries as f64;
+            let rho = (1.0 - zc * zc).sqrt();
+            let a = off + i as f64 * 2.399_963;
+            let d = v3(rho * a.cos(), rho * a.sin(), zc);
+            let k = r.r(0.97, 1.06);
+            let roll = r.r(0.0, TAU);
+            let sz = (l.rx * r.r(0.17, 0.26)).max(0.05);
+            let p = l.c + v3(d.x * l.rx * k, d.y * l.rx * k, d.z * l.rz * k);
+            let buried = lobes.iter().enumerate().any(|(q, o)| {
+                q != j && ((p.x - o.c.x) / o.rx).powi(2) + ((p.y - o.c.y) / o.rx).powi(2) + ((p.z - o.c.z) / o.rz).powi(2) < 0.7
+            });
+            if buried {
+                continue;
+            }
+            made += 1;
+            let n = v3(d.x / l.rx, d.y / l.rx, d.z / l.rz).normalized();
+            let ao = exposure(lobes, j, p, n);
+            let tier = if ao < PATCH_SHADE { 0 } else if ao > PATCH_LIGHT && n.z > 0.15 { 2 } else { 1 };
+            leaf_patch(&mut out[tier], p, n, sz, roll);
+        }
+    }
+    out
+}
+
+const PATCH_SHADE: f64 = 0.45;
+const PATCH_LIGHT: f64 = 0.8;
+
+/// The patch tones of a tree at a level: empty for shrubs, conifers, palms, bare crowns and the
+/// coarse level.
+fn patch_tones(s: &Spec, lk: &Look, lod: Lod) -> [Soup; 3] {
+    if !rich(s) || lod == Lod::Coarse || s.leaf < 0.05 || matches!(s.form, Form::Conical | Form::Palm) {
+        return Default::default();
+    }
+    let cl = clusters(s, lk);
+    patches(s, lod, &lobes_of(s, lk, lod, &cl).1)
+}
+
+const PATCHES_FINE: usize = 11;
+const PATCHES_MEDIUM: usize = 6;
+
+/// Where a limb may grow: inside the crown's reach and under the tree's top.
+struct Env {
+    axis: V2,
+    reach: f64,
+    top: f64,
+    floor: f64,
+}
+
+/// A limb of the skeleton: a curved branch from `p0` to `end` that carries side branches
+/// (Weber-Penn: a few per limb, turned about it by the golden angle, shorter and thinner each
+/// level). Fine goes one level deeper than medium. Every path point goes to `joints`, every
+/// free end to `tips`.
+fn limb(m: &mut Soup, joints: &mut Vec<V3>, tips: &mut Vec<V3>, r: &mut Rng, env: &Env, lod: Lod, level: u32, p0: V3, end: V3, r0: f64, droop: f64) {
+    let fine = lod == Lod::Fine;
+    let (segs, sides) = match (level, fine) {
+        (0, true) => (6, 8),
+        (0, false) => (3, 6),
+        (1, true) => (4, 5),
+        (1, false) => (2, 4),
+        (_, true) => (3, 4),
+        _ => (2, 4),
+    };
+    let d = end - p0;
+    let len = d.len();
+    if len < 1e-6 {
+        return;
+    }
+    let dir = d * (1.0 / len);
+    let side = {
+        let q = dir.cross(v3(0.0, 0.0, 1.0));
+        if q.len() < 1e-6 { v3(1.0, 0.0, 0.0) } else { q.normalized() }
+    };
+    let bow = r.r(-0.12, 0.12) * len;
+    let lift = (0.10 - 0.03 * level as f64) * len;
+    let (mut path, mut rad) = (vec![], vec![]);
+    for i in 0..=segs {
+        let u = i as f64 / segs as f64;
+        let w = (PI * u).sin();
+        path.push(p0 + d * u + side * (bow * w) + v3(0.0, 0.0, lift * w - droop * len * u * u));
+        rad.push(r0 * (1.0 - 0.75 * u));
+    }
+    branch(m, &path, &rad, sides);
+    joints.extend(path.iter().copied());
+    let deepest = if fine { 2 } else { 1 };
+    let kids = match (level, fine) {
+        (0, true) => 3,
+        (0, false) => 2,
+        (1, true) => 1,
+        _ => 0,
+    };
+    if level >= deepest || kids == 0 {
+        tips.push(path[segs]);
+        return;
+    }
+    for k in 0..kids {
+        let u = 0.3 + 0.55 * (k as f64 + r.f() * 0.7) / kids as f64;
+        let i = ((u * segs as f64).round() as usize).clamp(1, segs - 1);
+        let t = (path[i + 1] - path[i - 1]).normalized();
+        let b1 = t.cross(v3(0.0, 0.0, 1.0)).normalized();
+        let b1 = if b1.len() < 0.5 { v3(1.0, 0.0, 0.0) } else { b1 };
+        let b2 = t.cross(b1);
+        let az = k as f64 * 2.399_963 + r.r(0.0, 1.5);
+        let ang = r.r(0.75, 1.1);
+        let mut cd = t * ang.cos() + (b1 * az.cos() + b2 * az.sin()) * ang.sin();
+        cd.z = cd.z * 0.7 + 0.2;
+        let cd = cd.normalized();
+        let mut cl = len * (0.62 - 0.3 * u) * r.r(0.75, 1.0);
+        let mut e = path[i] + cd * cl;
+        for _ in 0..4 {
+            let off = v2(e.x - env.axis.x, e.y - env.axis.y).len();
+            if off <= env.reach && e.z <= env.top * 0.97 {
+                break;
+            }
+            cl *= 0.72;
+            e = path[i] + cd * cl;
+        }
+        e.z = e.z.max(env.floor);
+        limb(m, joints, tips, r, env, lod, level + 1, path[i], e, rad[i] * 0.55, 0.1);
+    }
+}
+
+/// Whorls of drooping boughs round a conifer's stem: the boughs are the branches.
+fn boughs(m: &mut Soup, s: &Spec, lk: &Look, lod: Lod) {
+    let (whorls, per, segs) = if lod == Lod::Fine { (18, 11, 4) } else { (10, 7, 3) };
+    let mut r = Rng::new(s.seed, 12);
+    let (z0, z1, rr) = (s.clear, s.height, s.crown / 2.0);
+    let depth = z1 - z0;
+    for i in 0..whorls {
+        let t = (i as f64 + 0.5) / whorls as f64 * 0.9;
+        let zb = z0 + depth * t;
+        let rad = rr * prof(Form::Conical, t + 0.04) * lk.modul(i as f64 * 1.7);
+        let off = r.r(0.0, TAU);
+        let (cx, cy) = (lk.lean.x * (zb / s.height), lk.lean.y * (zb / s.height));
+        let n = ((per as f64) * (0.45 + 0.55 * (1.0 - t))).round().max(3.0) as usize;
+        for j in 0..n {
+            let a = off + TAU * j as f64 / n as f64 + r.r(-0.25, 0.25);
+            let len = rad * r.r(0.8, 1.02);
+            let sag = r.r(0.25, 0.45);
+            let w = (len * 0.16).max(0.05);
+            let (mut path, mut rd) = (vec![], vec![]);
+            for k in 0..=segs {
+                let u = k as f64 / segs as f64;
+                path.push(v3(cx + len * u * a.cos(), cy + len * u * a.sin(), zb + len * (0.12 * u - sag * u * u)));
+                rd.push((w * (0.2 + 0.8 * (PI * u).sin())).max(0.02));
+            }
+            tube(m, &path, &rd, 4, true);
+        }
     }
 }
 
@@ -653,6 +875,9 @@ fn conifer(s: &Spec, lk: &Look, lod: Lod) -> (Soup, Vec<(f64, f64, f64)>) {
         }
         discs.push((cx, cy, rad * 0.93));
     }
+    if rich(s) && lod != Lod::Coarse {
+        boughs(&mut m, s, lk, lod);
+    }
     (m, discs)
 }
 
@@ -790,6 +1015,8 @@ fn light(s: &Spec, lk: &Look, lod: Lod) -> Soup {
             _ => {}
         }
     }
+    let [_, _, lit] = patch_tones(s, lk, lod);
+    m.append(lit);
     m
 }
 
@@ -806,9 +1033,12 @@ fn wood(s: &Spec, lk: &Look, lod: Lod) -> Soup {
 fn wood_tips(s: &Spec, lk: &Look, lod: Lod) -> (Soup, Vec<V3>) {
     let mut m = Soup::default();
     let mut tips: Vec<V3> = vec![];
+    let big = rich(s);
     let (rings, sides) = match lod {
         Lod::Coarse => (3, 5),
+        Lod::Medium if big => (8, 10),
         Lod::Medium => (5, 8),
+        Lod::Fine if big => (14, 12),
         Lod::Fine => (8, 12),
     };
     let palm = s.form == Form::Palm;
@@ -827,7 +1057,12 @@ fn wood_tips(s: &Spec, lk: &Look, lod: Lod) -> (Soup, Vec<V3>) {
     let cl = clusters(s, lk);
     let (_, lobes) = lobes_of(s, lk, lod, &cl);
     let bare = s.leaf < 0.2;
-    let mut nb = if lod == Lod::Fine { 7 } else { 4 };
+    let mut nb = match (lod, big) {
+        (Lod::Fine, true) => 7,
+        (Lod::Fine, false) => 7,
+        (_, true) => 5,
+        _ => 4,
+    };
     if bare {
         nb = nb * 2 - 1;
     }
@@ -835,6 +1070,33 @@ fn wood_tips(s: &Spec, lk: &Look, lod: Lod) -> (Soup, Vec<V3>) {
     let (fs, fe) = ((s.clear / top_z * 0.85).min(0.9), 0.92);
     let rr = s.crown / 2.0;
     let depth = s.height - s.clear;
+    let env = Env {
+        axis: lk.lean,
+        reach: rr * 0.92,
+        top: s.height,
+        floor: s.clear + 0.1,
+    };
+    if !lobes.is_empty() && big {
+        let bn = nb.min(lobes.len());
+        let mains: Vec<usize> = (0..bn).map(|i| i * lobes.len() / bn).collect();
+        let mut joints: Vec<V3> = vec![];
+        for &i in &mains {
+            let c = lobes[i].c;
+            let dh = (c.x - tr.at(0.5).x).hypot(c.y - tr.at(0.5).y);
+            let fb = ((c.z - 0.35 * dh) / top_z).clamp(fs, fe);
+            let (p0, rb) = (tr.at(fb), tr.r(fb) * 0.6);
+            limb(&mut m, &mut joints, &mut tips, &mut r, &env, lod, 0, p0, c, rb, 0.0);
+            tips.push(c);
+        }
+        for (_, l) in lobes.iter().enumerate().filter(|(i, _)| !mains.contains(i)) {
+            let from = joints.iter().copied().min_by(|a, b| (*a - l.c).len().total_cmp(&(*b - l.c).len())).unwrap_or(l.c);
+            let rb = tr.r(fe) * 0.25;
+            let mut sink = vec![];
+            limb(&mut m, &mut sink, &mut tips, &mut r, &env, lod, 2, from, l.c, rb, 0.0);
+            tips.push(l.c);
+        }
+        return (m, tips);
+    }
     if !lobes.is_empty() {
         // every lobe is reached: the main branches end in lobes spread over the crown, the
         // others are twigs from the nearest point of a main branch
@@ -875,6 +1137,11 @@ fn wood_tips(s: &Spec, lk: &Look, lod: Lod) -> (Soup, Vec<V3>) {
             p0 + v3(d.0 * reach * 0.5, d.1 * reach * 0.5, rise * 0.55),
             p0 + v3(d.0 * reach, d.1 * reach, rise - droop),
         ];
+        if big {
+            let mut sink = vec![];
+            limb(&mut m, &mut sink, &mut tips, &mut r, &env, lod, 0, pts[0], pts[2], rb, droop / reach.max(0.1));
+            continue;
+        }
         branch(&mut m, &pts, &[rb, rb * 0.55, rb * 0.2], bsides);
         if lod == Lod::Fine {
             let twigs = if bare { 3 } else { 2 };
@@ -1029,6 +1296,8 @@ fn foliage(s: &Spec, lk: &Look, lod: Lod) -> (Soup, Vec<(f64, f64, f64)>) {
     for l in core.iter().chain(&lobes) {
         blob(&mut m, l.c, l.rx, l.rz, l.sub, lk.bump ^ l.k as u64, l.amp);
     }
+    let [_, leaf, _] = patch_tones(s, lk, lod);
+    m.append(leaf);
     (m, discs)
 }
 
@@ -1042,6 +1311,8 @@ fn shade(s: &Spec, lk: &Look, lod: Lod) -> Soup {
     let core = 0.45 * rr * prof(s.form, 0.5).max(0.35) * s.leaf.max(0.5);
     let sub = if lod == Lod::Fine { 1 } else { 0 };
     blob(&mut m, v3(lk.lean.x, lk.lean.y, 0.5 * (z0 + z1)), core, 0.4 * (z1 - z0), sub, lk.bump, 0.1);
+    let [dark, _, _] = patch_tones(s, lk, lod);
+    m.append(dark);
     m
 }
 
