@@ -7,6 +7,8 @@ use crate::{GLayout, GRoom, GWall};
 
 const EPS: f64 = 1e-6;
 const MIN_WALL: f64 = 0.2;
+/// Common area of two rooms, m2, below which they only touch.
+const OVERLAP_AREA: f64 = 1e-3;
 /// Least distance of an opening from either end of its wall, m.
 pub(crate) const OPEN_END: f64 = 0.15;
 /// Least clear gap between two openings on one wall, m.
@@ -376,7 +378,13 @@ fn rooms_overlap(a: &GRoom, b: &GRoom) -> bool {
         return false;
     }
     let c = ((x0 + x1) / 2.0, (y0 + y1) / 2.0);
-    inside(&a.polygon, c) && inside(&b.polygon, c)
+    if !(inside(&a.polygon, c) && inside(&b.polygon, c)) {
+        return false;
+    }
+    // the probe may sit on a shared wall of two slanted rooms: measure the common area
+    use ddc_geom::{poly, v2};
+    let ring = |r: &[P]| -> Vec<ddc_geom::V2> { r.iter().map(|p| v2(p.0, p.1)).collect() };
+    poly::overlap_area(&ring(&a.polygon), &poly::convex_pieces(&ring(&b.polygon))).abs() > OVERLAP_AREA
 }
 
 fn check_rings(l: &GLayout) -> Result<(), String> {

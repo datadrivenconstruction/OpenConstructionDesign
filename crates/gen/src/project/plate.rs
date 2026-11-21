@@ -22,6 +22,13 @@ use ddc_geom::{v2, V2};
 
 /// Clearance of a cut from a corner and from another cut of the same loop.
 const MARGIN: f64 = 0.3;
+/// Wall a room keeps on each side of a corner of the band: a window or a door with clearances.
+const CORNER_RUN: f64 = 1.6;
+/// A turn of the outline sharper than this is a corner, gentler ones are facets of a curve.
+const CURVE_TURN: f64 = 0.5;
+/// How far a chord of an inner band line may stand off the facets of a curve.
+const CHORD_SAG: f64 = 0.15;
+const THIN_TOL: f64 = 1e-3;
 /// Narrowest room along the facade at full band depth.
 const MIN_ROOM_W: f64 = 2.0;
 /// Spare facade shorter than this grows the room before it.
@@ -36,6 +43,7 @@ const STORE_AREA: f64 = 10.0;
 const WIN_CLEAR: f64 = 0.3;
 const WIN_GAP: f64 = 0.6;
 const MAX_WIN_W: f64 = 3.0;
+const NARROW_CLEAR: f64 = 0.2;
 const DOOR_CLEAR: f64 = 0.15;
 
 fn infeasible(s: impl Into<String>) -> GenError {
@@ -326,11 +334,20 @@ struct Lp<'a> {
 impl<'a> Lp<'a> {
     fn new(rb: &'a RingBand, d: f64, df: f64) -> Lp<'a> {
         let depth = [(0.0, d), (0.0, df), (df, d)];
+        let n = rb.edges.len();
+        let corner = |i: usize| {
+            let (p, q) = (rb.edges[(i + n - 1) % n].u, rb.edges[i].u);
+            cross(p, q).atan2(dot(p, q)).abs() > CURVE_TURN
+        };
         let spans = depth.map(|(h0, h1)| {
             let mut v = vec![];
-            for (e, st) in rb.edges.iter().zip(&rb.start) {
-                for (a, b) in e.full(h0, h1) {
-                    let (a, b) = (a + MARGIN, b - MARGIN);
+            for (i, (e, st)) in rb.edges.iter().zip(&rb.start).enumerate() {
+                let pieces = e.full(h0, h1);
+                let last = pieces.len().saturating_sub(1);
+                for (j, (a, b)) in pieces.into_iter().enumerate() {
+                    // a room wrapping a corner keeps a run of wall past it for its door or window
+                    let m = |at: usize, on: bool| if on && corner(at) { CORNER_RUN } else { MARGIN };
+                    let (a, b) = (a + m(i, j == 0), b - m((i + 1) % n, j == last));
                     if b >= a {
                         v.push((st + a, st + b));
                     }
@@ -520,7 +537,7 @@ impl Planner<'_> {
                 end
             } else {
                 match lp.next_ok(Strip::Full, cur + left * i as f64 / n as f64, &[]) {
-                    Some(b) if end - b >= SPARE_MIN / 2.0 && b - a >= SPARE_MIN / 2.0 => b,
+                    Some(b) if end - b >= SPARE_MIN && b - a >= SPARE_MIN => b,
                     _ => continue,
                 }
             };
@@ -706,7 +723,7 @@ impl Planner<'_> {
         if let Some(r) = first {
             let e = lp.solve(Strip::Back, cur, r.area, stop)?.max(cur + 1.25);
             let ok = lp.next_ok(Strip::Back, e, &cuts)?;
-            out.push((r.kind, r.name.clone(), Some(r.area), cur, ok, ok > e + 1e-6));
+            out.push((r.kind, r.name.clone(), Some(r.area), cur, ok, lp.area(Strip::Back, cur, ok) > r.area * 1.0001));
             cuts.push(ok);
             h0 = ok;
         }
@@ -715,7 +732,7 @@ impl Planner<'_> {
         if let Some(r) = second {
             let s = lp.solve_back(Strip::Back, stop, r.area, h0)?.min(stop - 1.25);
             let ok = lp.prev_ok(Strip::Back, s, &cuts)?;
-            tail = Some((r.kind, r.name.clone(), Some(r.area), ok, stop, ok < s - 1e-6));
+            tail = Some((r.kind, r.name.clone(), Some(r.area), ok, stop, lp.area(Strip::Back, ok, stop) > r.area * 1.0001));
             h1 = ok;
         }
         if h1 - h0 < 1.5 {
@@ -969,6 +986,86 @@ impl Floor<'_> {
     }
 }
 
+/// The region with each run of gentle facets (a curve's polygon) replaced by chords off it by
+/// at most `CHORD_SAG`, through `fixed` points on its rings: a room between two cuts then has
+/// one straight wall to the corridor, long enough for its door.
+fn chorded(r: &Region, fixed: &[P]) -> Region {
+    Region { outer: chord_ring(&r.outer, fixed), holes: r.holes.iter().map(|h| chord_ring(h, fixed)).collect() }
+}
+
+fn chord_ring(r0: &[P], fixed: &[P]) -> Vec<P> {
+    let n0 = r0.len();
+    if n0 < 4 {
+        return r0.to_vec();
+    }
+    let turn = |r: &[P], i: usize| {
+        let n = r.len();
+        let (p, q) = (sub(r[i], r[(i + n - 1) % n]), sub(r[(i + 1) % n], r[i]));
+        cross(p, q).atan2(dot(p, q)).abs()
+    };
+    // the fixed points on the ring become vertices, kept with the corners
+    let mut r: Vec<P> = vec![];
+    let mut keep: Vec<usize> = vec![];
+    for i in 0..n0 {
+        let (a, b) = (r0[i], r0[(i + 1) % n0]);
+        if turn(r0, i) > CURVE_TURN {
+            keep.push(r.len());
+        }
+        r.push(a);
+        let mut on: Vec<(f64, P)> = fixed
+            .iter()
+            .filter(|&&q| crate::check::dist_to_seg(q, a, b) < 1e-6)
+            .map(|&q| (dist(a, q), q))
+            .collect();
+        on.sort_by(|x, y| x.0.total_cmp(&y.0));
+        for (t, q) in on {
+            if t < 1e-6 {
+                if !keep.contains(&(r.len() - 1)) {
+                    keep.push(r.len() - 1);
+                }
+            } else if dist(q, b) > 1e-6 && dist(q, r[r.len() - 1]) > 1e-6 {
+                keep.push(r.len());
+                r.push(q);
+            }
+        }
+    }
+    let n = r.len();
+    if keep.len() < 2 {
+        // a smooth loop: anchor it at a vertex and the one farthest from it
+        let k0 = keep.first().copied().unwrap_or(0);
+        let far = (0..n).max_by(|&a, &b| dist(r[k0], r[a]).total_cmp(&dist(r[k0], r[b]))).unwrap_or((k0 + n / 2) % n);
+        keep = vec![k0.min(far), k0.max(far)];
+    }
+    let mut out = vec![];
+    for (j, &a) in keep.iter().enumerate() {
+        let b = keep[(j + 1) % keep.len()];
+        let run: Vec<P> = (0..=(b + n - a - 1) % n + 1).map(|k| r[(a + k) % n]).collect();
+        let mut part = vec![run[0]];
+        douglas(&run, &mut part);
+        part.pop();
+        out.extend(part);
+    }
+    if out.len() < 3 || (footprint::signed_area(&out).abs() - footprint::signed_area(&r).abs()).abs() > 0.05 * footprint::signed_area(&r).abs() {
+        return r0.to_vec();
+    }
+    out
+}
+
+/// Douglas-Peucker on an open run: pushes the kept points after the first, the last included.
+fn douglas(run: &[P], out: &mut Vec<P>) {
+    let (a, b) = (run[0], run[run.len() - 1]);
+    let far = (1..run.len().saturating_sub(1))
+        .map(|k| (k, crate::check::dist_to_seg(run[k], a, b)))
+        .max_by(|x, y| x.1.total_cmp(&y.1));
+    match far {
+        Some((k, dv)) if dv > CHORD_SAG => {
+            douglas(&run[..=k], out);
+            douglas(&run[k..], out);
+        }
+        _ => out.push(b),
+    }
+}
+
 fn ring_segs(r: &[P], out: &mut Vec<(P, P)>) {
     let n = r.len();
     for i in 0..n {
@@ -1179,7 +1276,15 @@ fn windows(l: &mut GLayout, cs: &[Chain], x: Lab, area: f64, win: WinSize) -> bo
             glazed += ww * win.h;
         }
     }
-    glazed > 0.0
+    if glazed > 0.0 {
+        return true;
+    }
+    // facets of a curve too short for a standard window: one narrow window on the longest
+    let Some(c) = cs.iter().filter(|c| c.has(Some(x), None)).max_by(|a, b| a.len().total_cmp(&b.len())) else {
+        return false;
+    };
+    let ww = ((c.len() - 2.0 * NARROW_CLEAR).min(0.9) / 0.05).floor() * 0.05;
+    ww >= 0.6 - 1e-9 && put(l, c, c.len() / 2.0, ww, false, win).is_some()
 }
 
 /// A point well inside a room outline, for its label.
@@ -1217,6 +1322,26 @@ fn halves(r: &Region, o: P, dir: P) -> Vec<Region> {
         }
     }
     out
+}
+
+/// The pieces of `r` a disc of radius `w` sweeps (inset, then outset), each kept only when it
+/// stays inside `r`.
+fn opened(r: &Region, w: f64) -> Vec<Region> {
+    let near = |q: P| {
+        crate::check::inside(&r.outer, q) || {
+            let n = r.outer.len();
+            (0..n).any(|i| crate::check::dist_to_seg(q, r.outer[i], r.outer[(i + 1) % n]) < 1e-6)
+        }
+    };
+    offset::inset(r, w)
+        .iter()
+        .filter(|z| z.holes.is_empty())
+        .filter_map(|z| {
+            let o = offset::outset(z, w);
+            let o = footprint::clean(&o.outer, true)?;
+            Some(Region { outer: if o.iter().all(|&q| near(q)) { o } else { r.outer.clone() }, holes: vec![] })
+        })
+        .collect()
 }
 
 /// Outline of the union of two rings: the hole the pair cuts from a large square.
@@ -1276,7 +1401,8 @@ fn storey(sh: &Shared, k: usize, region: &Region, slab: Vec<P>, next_apt: &mut u
     let (d, df, c) = (sh.d, sh.df, spec.corridor);
     let fl = k + 1;
     let id = offset::inset(region, d);
-    if id.len() != 1 || offset::inset(region, d + c / 2.0).is_empty() {
+    // a plate exactly two bands and a corridor deep holds them
+    if id.len() != 1 || offset::inset(region, d + c / 2.0 - THIN_TOL).is_empty() {
         return Err(infeasible(format!(
             "floor {fl}: the plate is too thin for two {d} m room bands and a {c} m corridor: \
              keep it at least {:.1} m across everywhere, or lower band_depth",
@@ -1313,37 +1439,15 @@ fn storey(sh: &Shared, k: usize, region: &Region, slab: Vec<P>, next_apt: &mut u
             if !holes.is_empty() {
                 continue;
             }
-            let r = Region { outer: outer.clone(), holes: vec![] };
-            if footprint::region_area(&r) < STORE_AREA || offset::inset(&r, STORE_W / 2.0).is_empty() {
-                continue;
+            // slivers thinner than a store, left where the core nearly meets the corridor line,
+            // stay corridor instead of making walls a few centimetres long
+            for r in opened(&Region { outer, holes: vec![] }, STORE_W / 2.0) {
+                if footprint::region_area(&r) < STORE_AREA {
+                    continue;
+                }
+                let u = plan.add(public(RoomKind::Storage, names::kind_name(RoomKind::Storage, spec.ru).to_string(), None));
+                stores.push((chord_ring(&r.outer, &[]), u));
             }
-            let u = plan.add(public(RoomKind::Storage, names::kind_name(RoomKind::Storage, spec.ru).to_string(), None));
-            stores.push((outer, u));
-        }
-    }
-    // the lines of every zone
-    let mut segs: Vec<(P, P)> = vec![];
-    for r in std::iter::once(&region.outer).chain(&region.holes) {
-        ring_segs(r, &mut segs);
-    }
-    for z in &id {
-        for r in std::iter::once(&z.outer).chain(&z.holes) {
-            ring_segs(r, &mut segs);
-        }
-    }
-    let ifront = if plan.zones.iter().any(|z| z.strip != Strip::Full) {
-        offset::inset(region, df)
-    } else {
-        vec![]
-    };
-    for z in &ifront {
-        for r in std::iter::once(&z.outer).chain(&z.holes) {
-            ring_segs(r, &mut segs);
-        }
-    }
-    for rb in &rbs {
-        for e in &rb.edges {
-            ring_segs(&e.face, &mut segs);
         }
     }
     let mut cuts: Vec<(usize, f64, f64, f64)> = vec![];
@@ -1363,6 +1467,42 @@ fn storey(sh: &Shared, k: usize, region: &Region, slab: Vec<P>, next_apt: &mut u
                 }
                 None => cuts.push((z.ring, t, h0, h1)),
             }
+        }
+    }
+    // the inner band lines run straight between the cuts that meet them
+    let at_depth = |h: f64| -> Vec<P> {
+        cuts.iter()
+            .filter(|c| c.2 <= h + 1e-9 && c.3 >= h - 1e-9)
+            .map(|&(ring, t, _, _)| {
+                let (e, s) = rbs[ring].locate(t);
+                rbs[ring].edges[e].at(s, h)
+            })
+            .collect()
+    };
+    let id: Vec<Region> = id.iter().map(|z| chorded(z, &at_depth(d))).collect();
+    // the lines of every zone
+    let mut segs: Vec<(P, P)> = vec![];
+    for r in std::iter::once(&region.outer).chain(&region.holes) {
+        ring_segs(r, &mut segs);
+    }
+    for z in &id {
+        for r in std::iter::once(&z.outer).chain(&z.holes) {
+            ring_segs(r, &mut segs);
+        }
+    }
+    let ifront = if plan.zones.iter().any(|z| z.strip != Strip::Full) {
+        offset::inset(region, df).iter().map(|z| chorded(z, &at_depth(df))).collect()
+    } else {
+        vec![]
+    };
+    for z in &ifront {
+        for r in std::iter::once(&z.outer).chain(&z.holes) {
+            ring_segs(r, &mut segs);
+        }
+    }
+    for rb in &rbs {
+        for e in &rb.edges {
+            ring_segs(&e.face, &mut segs);
         }
     }
     for &(ring, t, h0, h1) in &cuts {
