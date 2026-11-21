@@ -1104,8 +1104,9 @@ impl Core {
             Ok(()) => {
                 // the UI hears of the turn before the copy, so it never reads as idle between
                 // auto_text marks the items prompted: asked mid-turn, the turn's end would skip them
-                let now = !between && self.last_mode.is_some();
-                if let Some(text) = now.then(|| super::replan::auto_text(self)).flatten() {
+                // before any turn the items are still marked, so the first turn's end does not replan them
+                let text = (!between).then(|| super::replan::auto_text(self)).flatten();
+                if let Some(text) = text.filter(|_| self.last_mode.is_some()) {
                     self.send(FromWorker::AutoTurn);
                     let view = self.view.clone();
                     let mode = super::replan::AUTO_MODE;
