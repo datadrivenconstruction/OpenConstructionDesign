@@ -1344,7 +1344,7 @@ fn read_design(rd: &mut Rd, v: &J, floors: u32) -> Design {
     }
 }
 
-const SERVICES_KEYS: [&str; 5] = ["electrical", "water", "appliances", "boards", "hvac"];
+const SERVICES_KEYS: [&str; 7] = ["electrical", "water", "appliances", "boards", "hvac", "wires", "traces"];
 
 /// Services: `true` alone switches every system on; an object picks them.
 fn read_services(rd: &mut Rd, v: &J) -> super::Services {
@@ -1359,11 +1359,13 @@ fn read_services(rd: &mut Rd, v: &J) -> super::Services {
                 appliances: true,
                 boards: Boards::Unit,
                 hvac: None,
+                wires: true,
+                traces: false,
             }
         }
         J::Object(o) => rd.keys("services", o, &SERVICES_KEYS),
         _ => {
-            rd.bad("services", "true, or {electrical?, water?, appliances?, boards?, hvac?}");
+            rd.bad("services", "true, or {electrical?, water?, appliances?, boards?, hvac?, wires?, traces?}");
             return Services::default();
         }
     }
@@ -1378,6 +1380,8 @@ fn read_services(rd: &mut Rd, v: &J) -> super::Services {
             J::Null => None,
             _ => Some(flag(rd, "services.hvac", &sv["hvac"], true)),
         },
+        wires: flag(rd, "services.wires", &sv["wires"], electrical),
+        traces: flag(rd, "services.traces", &sv["traces"], false),
     }
 }
 

@@ -5,7 +5,7 @@
 //! circulation rooms and a conduit ring in the ceiling void of every other room, fed across a
 //! shared wall from its parent room in a tree from the board. Luminaires by the lumen method
 //! hang from rows of conduit off the ring; sockets, switches and appliances take a drop down
-//! the wall from it. Circuits per board by use, sized by the app from load and route length.
+//! the wall from it. The circuits of the boards are formed and sized in `circuits`.
 
 use std::collections::{HashMap, VecDeque};
 
@@ -13,7 +13,7 @@ use ddc_geom::math::{v3, V3};
 
 use super::rules::rule;
 use super::svc::{self, norms, Ring, Room, Space, SvcPort, EPS};
-use super::{Boards, CircuitUse, GCircuit, GProject, GRun, GSvcLink, PRole, ProjectSpec, RoomKind, RoomTags, SvcSys, Typology};
+use super::{Boards, CircuitUse, GProject, GRun, GSvcLink, PRole, ProjectSpec, RoomKind, RoomTags, SvcSys, Typology};
 use crate::GFixture;
 
 /// Ring of conduit this far inside the walls, m: clear of air terminal necks kept 0.4 m out.
@@ -819,7 +819,7 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
     // board fixture indices: (storey, index)
     let mut board_fx: Vec<(usize, usize)> = vec![];
     // per storey, per room: board key and devices (storey, fixture, connector, use, load, room)
-    let mut served: Vec<(usize, usize, CircuitUse, f64, usize, usize, &'static str)> = vec![];
+    let mut served: Vec<super::circuits::Served> = vec![];
     let mut unit_boards: HashMap<(usize, u32), (usize, usize)> = HashMap::new();
     let n_fx: Vec<usize> = p.storeys.iter().map(|s| s.layout.fixtures.len()).collect();
     // the riser stands this far along the spine from the board, m; never closer than the tee the
@@ -1430,7 +1430,7 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
     p.services.elec = runs;
     p.services.issues = dropped;
     p.services.links.extend(links);
-    p.services.circuits = circuits(spec, p, &floor_board_fx(&board_fx, n_st), &unit_boards, &served);
+    super::circuits::design(spec, p, &floor_board_fx(&board_fx, n_st), &unit_boards, &served);
     p.metrics.push(("power_unserved_rooms", unserved as f64));
     p.metrics.push(("lux_short_rooms", lux_short as f64));
     unserved
@@ -1651,192 +1651,4 @@ fn owner_of(b: &Built, ri: usize, pl: &Plan, room: &Room) -> Option<Item> {
         return None;
     }
     nearest_item(pl, room, &[(end, String::new())])
-}
-
-/// Circuits per board: lighting and general sockets packed up to the breaker, a worktop and
-/// a wet circuit per room, one per appliance, and a feeder to every sub-board.
-fn circuits(
-    spec: &ProjectSpec,
-    p: &GProject,
-    floor: &[Option<(usize, usize)>],
-    units: &HashMap<(usize, u32), (usize, usize)>,
-    served: &[(usize, usize, CircuitUse, f64, usize, usize, &'static str)],
-) -> Vec<GCircuit> {
-    let ru = spec.ru;
-    let word = |u: CircuitUse| {
-        let key = match u {
-            CircuitUse::Lighting => "lighting",
-            CircuitUse::Sockets => "sockets",
-            CircuitUse::Worktop => "worktop",
-            CircuitUse::Wet => "wet",
-            CircuitUse::Appliance => "appliance",
-            CircuitUse::Feeder => "feeder",
-            CircuitUse::Emergency => "emergency",
-            CircuitUse::Essential => "essential",
-        };
-        svc::text(&["circuits", key], ru)
-    };
-    let lengths = route_lengths(p);
-    let mut out: Vec<GCircuit> = vec![];
-    // board of a device: the unit board of its apartment, else its floor board
-    let rooms: Vec<Vec<Room>> = p.storeys.iter().map(svc::rooms).collect();
-    let board_of = |k: usize, room_idx: usize| -> Option<(usize, usize)> {
-        let owner = rooms[k].iter().find(|r| r.idx == room_idx).map(|r| r.owner);
-        if let Some(PRole::Apartment(a)) = owner {
-            if let Some(b) = units.get(&(k, a)) {
-                return Some(*b);
-            }
-        }
-        floor[k]
-    };
-    let mut groups: HashMap<((usize, usize), u8, usize), Vec<(usize, usize, f64)>> = HashMap::new();
-    let mut keys: Vec<((usize, usize), u8, usize)> = vec![];
-    // appliance circuits key on the fixture, told apart per storey by this stride
-    let stride = KEY_STRIDE;
-    for &(k, fx, use_, load, _, room_idx, _) in served {
-        let Some(b) = board_of(k, room_idx) else { continue };
-        let (code, per_room) = match use_ {
-            CircuitUse::Lighting => (0u8, usize::MAX),
-            CircuitUse::Sockets => (1, usize::MAX),
-            CircuitUse::Worktop => (2, room_idx),
-            CircuitUse::Wet => (3, usize::MAX),
-            CircuitUse::Appliance => (4, fx + stride * k),
-            CircuitUse::Feeder => (5, fx),
-            CircuitUse::Emergency => (6, usize::MAX),
-            CircuitUse::Essential => (7, usize::MAX),
-        };
-        let key = (b, code, per_room);
-        if !groups.contains_key(&key) {
-            keys.push(key);
-        }
-        groups.entry(key).or_default().push((k, fx, load));
-    }
-    let (a_light, a_other) = (rule("services.elec.breaker_light"), rule("services.elec.breaker_other"));
-    let limit = |code: u8| match code {
-        0 | 6 => a_light * volts(),
-        _ => a_other * volts(),
-    };
-    let mut count: HashMap<((usize, usize), u8), usize> = HashMap::new();
-    for key in keys {
-        let devs = &groups[&key];
-        let use_ = [
-            CircuitUse::Lighting,
-            CircuitUse::Sockets,
-            CircuitUse::Worktop,
-            CircuitUse::Wet,
-            CircuitUse::Appliance,
-            CircuitUse::Feeder,
-            CircuitUse::Emergency,
-            CircuitUse::Essential,
-        ][key.1 as usize];
-        // pack by the breaker
-        let mut packs: Vec<Vec<(usize, usize, f64)>> = vec![];
-        for d in devs {
-            match packs.last_mut() {
-                Some(pk) if key.1 != 4 && pk.iter().map(|x| x.2).sum::<f64>() + d.2 <= limit(key.1) => pk.push(*d),
-                _ => packs.push(vec![*d]),
-            }
-        }
-        for pk in packs {
-            let c = count.entry((key.0, key.1)).or_insert(0);
-            *c += 1;
-            let code = ["L", "S", "K", "W", "A", "F", "E", "N"][key.1 as usize];
-            let load: f64 = pk.iter().map(|x| x.2).sum();
-            let length = pk.iter().map(|x| lengths.get(&(key.0, (x.0, x.1))).copied().unwrap_or(0.0)).fold(0.0, f64::max);
-            let name = if key.1 == 4 {
-                let f = &p.storeys[pk[0].0].layout.fixtures[pk[0].1];
-                format!("{code}{} {}", c, f.family)
-            } else {
-                format!("{code}{} {}", c, word(use_))
-            };
-            out.push(GCircuit {
-                board: key.0,
-                name,
-                use_,
-                devices: pk.iter().map(|x| (x.0, x.1, if use_ == CircuitUse::Feeder { "Main" } else { "Power" })).collect(),
-                load,
-                length,
-            });
-        }
-    }
-    // feeders: the main board to each floor board, a floor board to each unit board
-    let main = floor.first().copied().flatten();
-    let sub_load = |b: (usize, usize)| -> f64 {
-        served.iter().filter(|s| board_of(s.0, s.5) == Some(b)).map(|s| s.3).sum()
-    };
-    let mut feeders: Vec<((usize, usize), (usize, usize))> = vec![];
-    if let Some(m) = main {
-        for f in floor.iter().skip(1).flatten() {
-            feeders.push((m, *f));
-        }
-    }
-    for (&(k, _), &u) in units {
-        if let Some(f) = floor[k] {
-            feeders.push((f, u));
-        }
-    }
-    feeders.sort();
-    for (n, (from, to)) in feeders.into_iter().enumerate() {
-        let mut load = sub_load(to);
-        // a floor board also carries its unit boards
-        for (&(k, _), &u) in units {
-            if floor[k] == Some(to) {
-                load += sub_load(u);
-            }
-        }
-        out.push(GCircuit {
-            board: from,
-            name: format!("F{} {}", n + 1, word(CircuitUse::Feeder)),
-            use_: CircuitUse::Feeder,
-            devices: vec![(to.0, to.1, "Main")],
-            load,
-            length: lengths.get(&(from, to)).copied().unwrap_or(0.0),
-        });
-    }
-    out
-}
-
-/// Route length along the power runs from every board connector to every connector, m.
-fn route_lengths(p: &GProject) -> HashMap<((usize, usize), (usize, usize)), f64> {
-    let s = &p.services;
-    let runs: Vec<&GRun> = s.elec.iter().collect();
-    let mut out = HashMap::new();
-    if runs.is_empty() {
-        return out;
-    }
-    let net = svc::network(&runs);
-    let mut adj: Vec<Vec<(usize, f64)>> = vec![vec![]; net.nodes.len()];
-    for (_, pts, nd, _) in &net.edges {
-        let l = svc::len(pts);
-        adj[nd[0]].push((nd[1], l));
-        adj[nd[1]].push((nd[0], l));
-    }
-    let node_of = |q: (f64, f64, f64)| net.nodes.iter().position(|n| (*n - v3(q.0, q.1, q.2)).len() < 5e-3);
-    let ports: Vec<((usize, usize), usize)> = s
-        .links
-        .iter()
-        .filter(|l| l.sys == SvcSys::Power)
-        .filter_map(|l| svc::port_world(p, l.storey, l.fixture, l.connector).and_then(|c| node_of(c.at)).map(|n| ((l.storey, l.fixture), n)))
-        .collect();
-    let boards: Vec<((usize, usize), usize)> = ports.iter().copied().filter(|(f, _)| p.storeys[f.0].layout.fixtures[f.1].family == "Distribution Board").collect();
-    for (b, bn) in boards {
-        // tree: one path to each node
-        let mut dist = vec![f64::INFINITY; net.nodes.len()];
-        dist[bn] = 0.0;
-        let mut st = vec![bn];
-        while let Some(u) = st.pop() {
-            for &(w, l) in &adj[u] {
-                if dist[w].is_infinite() {
-                    dist[w] = dist[u] + l;
-                    st.push(w);
-                }
-            }
-        }
-        for (f, n) in &ports {
-            if dist[*n].is_finite() {
-                out.insert((b, *f), dist[*n]);
-            }
-        }
-    }
-    out
 }

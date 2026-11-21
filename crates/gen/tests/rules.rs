@@ -223,6 +223,10 @@ const EXCEPTIONS: &[(&str, &str, &str)] = &[
     ("svc.rs", "8", "length of SHAFTS"),
     ("elec.rs", "6", "circuit code table index"),
     ("elec.rs", "7", "circuit code table index"),
+    ("circuits.rs", "100.0", "percent, const PCT"),
+    ("circuits.rs", "8", "length of USES and CODES"),
+    ("circuits.rs", "1e-6", "float tolerance"),
+    ("circuits.rs", "5e-3", "float tolerance"),
     ("hvac.rs", "7", "length of REFUSALS"),
     ("sprinkler.rs", "4.0", "circle area pi d2/4"),
     ("mech/ducts.rs", "1e-12", "float tolerance of a parallel or empty segment"),
@@ -281,7 +285,7 @@ fn literals(src: &str) -> Vec<(usize, String)> {
     out
 }
 
-const SOURCES: [(&str, &str); 24] = [
+const SOURCES: [(&str, &str); 25] = [
     ("build.rs", include_str!("../src/project/build.rs")),
     ("block.rs", include_str!("../src/project/block.rs")),
     ("tile.rs", include_str!("../src/project/tile.rs")),
@@ -293,6 +297,7 @@ const SOURCES: [(&str, &str); 24] = [
     ("svc.rs", include_str!("../src/project/svc.rs")),
     ("water.rs", include_str!("../src/project/water.rs")),
     ("elec.rs", include_str!("../src/project/elec.rs")),
+    ("circuits.rs", include_str!("../src/project/circuits.rs")),
     ("hvac.rs", include_str!("../src/project/hvac.rs")),
     ("sprinkler.rs", include_str!("../src/project/sprinkler.rs")),
     ("mech/geo.rs", include_str!("../src/project/mech/geo.rs")),
