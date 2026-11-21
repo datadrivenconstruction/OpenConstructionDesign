@@ -377,7 +377,7 @@ fn build_all(ed: &mut Editor, name: &str) -> Result<Export, String> {
     let cat = crate::view3d::sel_category(ed, Sel::Comp(0));
     let mut by: Vec<Vec<([f32; 16], Value)>> = vec![vec![]; cs.meshes.len()];
     for i in &cs.instances {
-        let r = i.placement.matrix();
+        let r = i.matrix();
         let f = |k: usize| r[k] as f32;
         let place = [
             f(0),

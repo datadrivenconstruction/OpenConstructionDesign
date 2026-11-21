@@ -1335,7 +1335,12 @@ impl EditorApp {
         let prev =
             crate::mass_tools::preview_rev(&self.ed).wrapping_add(crate::ai::preview::rev() << 32);
         self.ed.big.lang = Some(self.sh.cat.lang);
+        // the realistic style draws plants at fine detail: switching it rebuilds the components
+        let fine = self.view.nav.style == ddc_render::VisualStyle::Realistic;
+        let restyled = self.ed.big.plants_fine != fine;
+        self.ed.big.plants_fine = fine;
         let full = self.scene_rev != self.ed.revision
+            || restyled
             || self.scene_vis != vkey
             || self.clash.dirty3d
             || self.host_base.is_none();

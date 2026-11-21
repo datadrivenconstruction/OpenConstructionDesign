@@ -205,6 +205,26 @@ pub struct CompInstance {
     pub ctype: i64,
     pub mesh: usize,
     pub placement: Placement,
+    /// Uniform size of the shared mesh at this placement: a plant's `Scale`, 1 for the rest.
+    pub scale: f64,
+}
+
+impl CompInstance {
+    /// 3x4 matrix, row-major, with the instance scale: world = M·(x, y, z, 1).
+    pub fn matrix(&self) -> [f64; 12] {
+        let mut m = self.placement.matrix();
+        for r in 0..3 {
+            for c in 0..3 {
+                m[r * 4 + c] *= self.scale;
+            }
+        }
+        m
+    }
+
+    pub fn apply(&self, p: (f64, f64, f64)) -> (f64, f64, f64) {
+        let s = self.scale;
+        self.placement.apply((p.0 * s, p.1 * s, p.2 * s))
+    }
 }
 
 const PLANT_LOD: &str = include_str!("../data/plant_lod.json");
@@ -272,6 +292,37 @@ pub fn plant_level(lod: Lod, plants: usize, last: u8, kind: Crowd) -> (Lod, u8) 
         _ => lod,
     };
     (out, rank)
+}
+
+/// Name of the instance parameter that sizes a whole plant.
+const PLANT_SCALE: &str = "Scale";
+
+/// Instance values of a plant built at unit size, and the size it is placed at: `Scale` goes to
+/// the placement and every instance length is divided by it, so trees of one type share a mesh.
+/// Plant bodies are drawn in lengths times `Scale`, which makes the two the same tree.
+pub fn plant_unit_values(
+    f: &Family,
+    iv: &[(String, ddc_geom::component::Value)],
+) -> (Vec<(String, ddc_geom::component::Value)>, f64) {
+    use ddc_geom::component::{Kind, Value};
+    let s = match iv.iter().find(|(k, _)| k == PLANT_SCALE) {
+        Some((_, Value::Num(s))) if s.is_finite() && *s > 1e-6 => *s,
+        _ => return (iv.to_vec(), 1.0),
+    };
+    if !is_plant(f) || !f.param(PLANT_SCALE).is_some_and(|p| p.instance) {
+        return (iv.to_vec(), 1.0);
+    }
+    let out = iv
+        .iter()
+        .map(|(k, v)| match v {
+            _ if k == PLANT_SCALE => (k.clone(), Value::Num(1.0)),
+            Value::Num(x) if f.param(k).is_some_and(|p| p.kind == Kind::Length) => {
+                (k.clone(), Value::Num(x / s))
+            }
+            _ => (k.clone(), v.clone()),
+        })
+        .collect();
+    (out, s)
 }
 
 /// Plants among the placed instances: types whose family grows a plant, by instance.
@@ -1309,8 +1360,19 @@ impl Model {
 
     /// Scene: shared meshes (one per family and value set) and instance placements.
     pub fn component_scene(&self, lod: Lod, level: Option<i64>) -> Result<CompScene, Error> {
+        self.component_scene_plants(lod, lod, level)
+    }
+
+    /// Scene with plants asked at `plant_lod` (still coarsened in a crowd) and the rest at `lod`.
+    /// A plant's `Scale` goes into its placement, so plants of one type share one mesh.
+    pub fn component_scene_plants(
+        &self,
+        lod: Lod,
+        plant_lod: Lod,
+        level: Option<i64>,
+    ) -> Result<CompScene, Error> {
         let mut cache = Cache::default();
-        let mut by_vals: HashMap<(i64, String), Option<usize>> = HashMap::new();
+        let mut by_vals: HashMap<(i64, String), Option<(usize, f64)>> = HashMap::new();
         let mut by_key: HashMap<(i64, String), usize> = HashMap::new();
         let mut scene = CompScene::default();
         let rows: Vec<(i64, i64, String, i64, Placement)> = {
@@ -1338,14 +1400,22 @@ impl Model {
             v
         };
         let plants = plant_count(&mut cache, &self.db, rows.iter().map(|r| r.1));
-        let (crowd, rank) = plant_level(lod, plants, self.plant_rank[0].load(Ordering::Relaxed), Crowd::Scene);
+        let (crowd, rank) = plant_level(plant_lod, plants, self.plant_rank[0].load(Ordering::Relaxed), Crowd::Scene);
         self.plant_rank[0].store(rank, Ordering::Relaxed);
         for (id, ctype, vals, family, placement) in rows {
             let vk = (ctype, vals);
             let mesh = match by_vals.get(&vk) {
                 Some(m) => *m,
                 None => {
-                    let m = match cache.resolve(&self.db, ctype, &vk.1)? {
+                    let (f, _) = cache.ctype(&self.db, ctype)?;
+                    let (unit, scale) = match f.assignments(&vk.1) {
+                        Ok(iv) => {
+                            let (u, s) = plant_unit_values(&f, &iv);
+                            (f.assignments_text(&u), s)
+                        }
+                        Err(_) => (vk.1.clone(), 1.0),
+                    };
+                    let m = match cache.resolve(&self.db, ctype, &unit)? {
                         Some(r) => {
                             let key = (family, ddc_geom::component::cache_key(&r));
                             match by_key.get(&key) {
@@ -1368,17 +1438,19 @@ impl Model {
                         }
                         None => None,
                     };
+                    let m = m.map(|m| (m, scale));
                     by_vals.insert(vk, m);
                     m
                 }
             };
-            if let Some(mesh) = mesh {
+            if let Some((mesh, scale)) = mesh {
                 scene.instances.push(CompInstance {
                     id,
                     family,
                     ctype,
                     mesh,
                     placement,
+                    scale,
                 });
             }
         }
@@ -1471,7 +1543,7 @@ impl Model {
                 .positions
                 .iter()
                 .map(|p| {
-                    let q = i.placement.apply((p.x, p.y, p.z));
+                    let q = i.apply((p.x, p.y, p.z));
                     ddc_geom::v3(q.0, q.1, q.2)
                 })
                 .collect();

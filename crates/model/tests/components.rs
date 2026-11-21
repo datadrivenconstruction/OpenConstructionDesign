@@ -637,3 +637,52 @@ fn a_tree_shows_in_sections_and_elevations_by_its_mesh() {
     assert!(edges.len() > 20, "silhouette edges: {}", edges.len());
     assert!(edges.iter().cloned().fold(f64::MIN, f64::max) > 0.8 * top);
 }
+
+/// Trees of one type at different sizes share one mesh: the size goes into the placement, and
+/// the placed unit mesh is the tree built at full values (an active clear-trunk floor included).
+#[test]
+fn trees_of_one_type_share_a_mesh_and_carry_their_scale() {
+    let Fx { mut m, level, .. } = fx();
+    let t = ctype(&mut m, "Tree", "Linden A");
+    let at = |x: f64, s: f64, floor: f64| {
+        let mut c = CompSpec::at(level, t, x, 0.0);
+        c.values = vec![
+            ("Scale".into(), ParamValue::Num(s)),
+            ("MinClear".into(), ParamValue::Num(floor)),
+        ];
+        c
+    };
+    let specs = [
+        at(0.0, 0.8, 0.0),
+        at(20.0, 1.0, 0.0),
+        at(40.0, 1.17, 0.0),
+        at(60.0, 0.9, 6.0),
+    ];
+    let ids: Vec<i64> = specs.iter().map(|s| m.add_component(s).unwrap()).collect();
+    let sc = m.component_scene(Lod::Medium, None).unwrap();
+    assert_eq!(sc.instances.len(), 4);
+    let meshes: std::collections::HashSet<usize> = sc.instances.iter().map(|i| i.mesh).collect();
+    // the clear-trunk floor of the last tree changes its shape, the sizes alone do not
+    assert_eq!(
+        meshes.len(),
+        2,
+        "{:?}",
+        sc.instances
+            .iter()
+            .map(|i| (i.mesh, i.scale))
+            .collect::<Vec<_>>()
+    );
+    for (i, id) in sc.instances.iter().zip(&ids) {
+        let full = m.component_built(*id, Lod::Medium).unwrap().2.bbox;
+        let unit = sc.meshes[i.mesh]
+            .positions
+            .iter()
+            .fold([f64::MAX, f64::MIN], |b, p| [b[0].min(p.z), b[1].max(p.z)]);
+        near(unit[1] * i.scale, full[1].z, 1e-6);
+        let ext = sc.meshes[i.mesh]
+            .positions
+            .iter()
+            .fold(f64::MIN, |b, p| b.max(p.x));
+        near(ext * i.scale, full[1].x, 1e-6);
+    }
+}
