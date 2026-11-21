@@ -112,7 +112,7 @@ fn vs_light(v: VIn) -> VOut {
 // when the camera moves)
 fn lat3(p: vec3<f32>) -> f32 {
     let c = vec3<i32>(floor(p));
-    return f32(mix32(u32(c.x) * 0x9e3779b1u ^ mix32(u32(c.y) * 0x85ebca6bu ^ mix32(u32(c.z) * 0xc2b2ae35u)))) / 4294967295.0;
+    return f32(mix32(u32(c.x) * 0x9e3779b1u ^ u32(c.y) * 0x85ebca6bu ^ u32(c.z) * 0xc2b2ae35u)) / 4294967295.0;
 }
 fn vnoise(p: vec3<f32>) -> f32 {
     let f = fract(p);
@@ -133,7 +133,7 @@ fn leaf_cut(world: vec3<f32>, sn: vec3<f32>, px_m: f32) -> bool {
     if (fade <= 0.0) { return false; }
     let e = normalize(u.eye.xyz - world);
     let edge = 1.0 - abs(dot(normalize(sn), e));
-    let n = 0.5 * vnoise(world * 1.7) + 0.5 * vnoise(world * 4.6 + vec3<f32>(7.3, 1.9, 4.1));
+    let n = vnoise(world * 3.1 + vec3<f32>(7.3, 1.9, 4.1));
     let gaps = smoothstep(0.30, 0.0, vnoise(world * 1.3 + vec3<f32>(3.1, 8.7, 2.2)));
     let t = (0.30 + 0.80 * smoothstep(0.25, 0.95, edge) + 0.30 * gaps) * fade;
     return n < t;
