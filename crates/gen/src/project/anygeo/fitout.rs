@@ -145,7 +145,13 @@ pub(super) fn fit_out(spec: &ProjectSpec, g: &Grid, p: &mut GProject) -> Result<
     let (mut done, mut all) = (0, 0);
     for s in &mut p.storeys {
         let l = &s.layout;
-        let mut fixtures: Vec<GFixture> = vec![];
+        // what stands outside every room (fins, canopies, trees, balconies) is not fit-out
+        let mut fixtures: Vec<GFixture> = l
+            .fixtures
+            .iter()
+            .filter(|x| !l.rooms.iter().any(|r| crate::check::inside(&r.polygon, x.at)))
+            .cloned()
+            .collect();
         let mut fits: Vec<RoomFit> = vec![];
         for (i, (gr, pr)) in l.rooms.iter().zip(&s.rooms).enumerate() {
             if !measured(pr.kind) || pr.asked.is_none() {
