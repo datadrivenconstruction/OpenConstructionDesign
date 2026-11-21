@@ -145,6 +145,8 @@ mod tests {
             load_type: "office".into(),
             conductor: crate::Conductor::Cu,
             x0_estimated: false,
+            rcd: String::new(),
+            cable_type: String::new(),
             laying: "conduit_wall".into(),
             ambient_c: 30.0,
             grouped: 1,

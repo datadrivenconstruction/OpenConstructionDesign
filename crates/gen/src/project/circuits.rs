@@ -89,6 +89,10 @@ pub(crate) fn breaker_name(poles: u32, breaker: f64) -> String {
     }
 }
 
+pub(crate) fn rcd_name(r: &GRcd) -> String {
+    format!("RCD{} {}P {}A {}mA A", r.number, r.poles, num(r.rating), num(r.ma))
+}
+
 /// Current-carrying capacity of a section, A: two loaded conductors single phase, three in
 /// three phases.
 pub(crate) fn iz(section: f64, poles: u32) -> Option<f64> {
@@ -649,7 +653,7 @@ pub fn schedule_csv(p: &GProject) -> String {
         let mut rows: Vec<&GCircuit> = sv.circuits.iter().filter(|c| c.board == b.at).collect();
         rows.sort_by_key(|c| c.number);
         for c in rows {
-            let rcd = c.rcd.and_then(|n| b.rcds.iter().find(|r| r.number == n)).map_or(String::new(), |r| format!("RCD{} {}P {}A {}mA", r.number, r.poles, num(r.rating), num(r.ma)));
+            let rcd = c.rcd.and_then(|n| b.rcds.iter().find(|r| r.number == n)).map_or(String::new(), GRcd::label);
             s += &format!(
                 "{};{};{};{:?};{};{};{};{};{:.0};{:.0};{:.1};{:.2};{:.2}\n",
                 b.label,

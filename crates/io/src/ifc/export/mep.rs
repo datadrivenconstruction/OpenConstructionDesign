@@ -525,34 +525,38 @@ pub(super) fn circuits(
             &[r(ent), list(&[building])],
         );
         let panel_guid = c.g.get("comp", sp.panel).trim_matches('\'').to_string();
+        let rep = model.circuit_report(&circ).map_err(e)?;
         let sys = sp
             .system
             .and_then(|i| systems.get(&i))
             .map_or("", String::as_str);
-        pset(
-            c,
-            "circ-pset",
-            circ.id,
-            "DDC_Circuit",
-            ent,
-            vec![
-                ("Number", label(&sp.number.to_string())),
-                ("Kind", label(sp.kind.name())),
-                ("Voltage", num(sp.voltage)),
-                ("Poles", label(&sp.poles.to_string())),
-                ("Breaker", num(sp.breaker)),
-                ("Cable", num(sp.cable)),
-                ("MaxDrop", num(sp.max_drop)),
-                ("CosPhi", num(sp.cos_phi)),
-                ("Laying", label(&sp.laying)),
-                ("AmbientC", num(sp.ambient_c)),
-                ("Conductor", label(sp.conductor.name())),
-                ("LoadType", label(&sp.load_type)),
-                ("Grouped", label(&sp.grouped.to_string())),
-                ("PanelGuid", label(&panel_guid)),
-                ("System", label(sys)),
-            ],
-        );
+        let mut fields = vec![
+            ("Number", label(&sp.number.to_string())),
+            ("Kind", label(sp.kind.name())),
+            ("Voltage", num(sp.voltage)),
+            ("Poles", label(&sp.poles.to_string())),
+            ("Breaker", num(sp.breaker)),
+            ("Cable", num(sp.cable)),
+            ("MaxDrop", num(sp.max_drop)),
+            ("CosPhi", num(sp.cos_phi)),
+            ("Laying", label(&sp.laying)),
+            ("AmbientC", num(sp.ambient_c)),
+            ("Conductor", label(sp.conductor.name())),
+            ("LoadType", label(&sp.load_type)),
+            ("Grouped", label(&sp.grouped.to_string())),
+            ("PanelGuid", label(&panel_guid)),
+            ("System", label(sys)),
+            ("RouteLength", num(rep.length)),
+            ("DesignLoad", num(rep.load)),
+            ("VoltageDrop", num(rep.drop)),
+            ("PointCount", label(&rep.devices.to_string())),
+        ];
+        for (k, v) in [("Rcd", &sp.rcd), ("CableType", &sp.cable_type)] {
+            if !v.is_empty() {
+                fields.push((k, label(v)));
+            }
+        }
+        pset(c, "circ-pset", circ.id, "DDC_Circuit", ent, fields);
         let mut keys: Vec<(String, String)> = vec![];
         let mut loads: Vec<(String, f64)> = vec![];
         for (i, d) in devs.iter().enumerate() {

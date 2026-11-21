@@ -470,6 +470,8 @@ pub struct PCircuit {
     pub grouped: u32,
     pub conductor: ddc_model::Conductor,
     pub load_type: String,
+    pub rcd: String,
+    pub cable_type: String,
     pub devices: Vec<(usize, String, Option<f64>)>,
 }
 

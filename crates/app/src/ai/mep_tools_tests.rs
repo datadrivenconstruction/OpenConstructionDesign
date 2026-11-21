@@ -24,6 +24,8 @@ fn sched() -> PanelSchedule {
         load_type: "office".into(),
         conductor: ddc_model::Conductor::Cu,
         x0_estimated: number == 1,
+        rcd: String::new(),
+        cable_type: String::new(),
         laying: "conduit_wall".into(),
         ambient_c: 30.0,
         grouped: 1,

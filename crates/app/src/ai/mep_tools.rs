@@ -382,6 +382,7 @@ fn schedule_json(s: &PanelSchedule) -> Vec<J> {
                 "rule_notes": r.rules.iter().filter_map(|f| f.note.clone()).collect::<Vec<_>>(),
                 "x0_estimated": r.x0_estimated,
                 "load_type": r.load_type, "conductor": r.conductor.name(),
+                "rcd": r.rcd, "cable_type": r.cable_type,
             })
         })
         .collect()

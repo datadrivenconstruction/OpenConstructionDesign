@@ -1894,14 +1894,29 @@ fn sync_services(
             .collect::<Result<Vec<_>, PlanError>>()?;
         let mut spec = CircuitSpec::new(comp(cx, c.board.0, c.board.1)?, kind, devices);
         spec.name = c.name.clone();
+        spec.number = c.number;
+        if c.poles == 3 {
+            spec.poles = 3;
+            spec.voltage = 400.0;
+        }
         let sized = ddc_model::auto_size(standard, &spec, c.load, c.length).ok_or_else(|| {
             PlanError(format!(
                 "circuit {} of {:.0} W over {:.0} m has no cable in the table",
                 c.name, c.load, c.length
             ))
         })?;
-        spec.breaker = sized.breaker;
-        spec.cable = sized.section;
+        // the generator's protection and cable stand unless the model's standard asks for more
+        spec.breaker = c.breaker.max(sized.breaker);
+        spec.cable = c.section.max(sized.section);
+        if spec.cable == c.section {
+            spec.cable_type = c.cable();
+        }
+        if let Some(n) = c.rcd {
+            let board = sv.boards.iter().find(|b| b.at == c.board);
+            if let Some(r) = board.and_then(|b| b.rcds.iter().find(|r| r.number == n)) {
+                spec.rcd = r.label();
+            }
+        }
         build.circuits.push((Some(SysRef::New(0)), spec));
     }
     sync_mep(cx, out, sy, [slots::ELEC, slots::CIRCUITS], build)?;

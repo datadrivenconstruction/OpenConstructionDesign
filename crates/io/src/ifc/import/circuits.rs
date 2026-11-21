@@ -148,6 +148,8 @@ pub(super) fn read(
             grouped,
             conductor,
             load_type,
+            rcd: kv.get("Rcd").cloned().unwrap_or_default(),
+            cable_type: kv.get("CableType").cloned().unwrap_or_default(),
             devices,
         });
     }
@@ -209,8 +211,8 @@ pub(super) fn apply(
         }
         db.execute(
             "INSERT INTO elec_circuit(panel,number,name,kind,system,voltage,poles,breaker,cable,\
-             max_drop,cos_phi,laying,ambient_c,grouped,conductor,load_type) \
-             VALUES (?1,?2,?3,?4,?5,?6,?7,?8,?9,?10,?11,?12,?13,?14,?15,?16)",
+             max_drop,cos_phi,laying,ambient_c,grouped,conductor,load_type,rcd,cable_type) \
+             VALUES (?1,?2,?3,?4,?5,?6,?7,?8,?9,?10,?11,?12,?13,?14,?15,?16,?17,?18)",
             params![
                 panel,
                 number,
@@ -227,7 +229,9 @@ pub(super) fn apply(
                 c.ambient_c,
                 c.grouped,
                 c.conductor.name(),
-                c.load_type
+                c.load_type,
+                c.rcd,
+                c.cable_type
             ],
         )?;
         let id = db.last_insert_rowid();
