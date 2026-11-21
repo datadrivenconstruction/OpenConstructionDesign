@@ -54,9 +54,9 @@ fn every_form_grows_within_its_size_at_every_level() {
             tris.push(b.mesh.triangles.len());
         }
         assert!(tris[0] < tris[1] && tris[1] < tris[2], "{form}: {tris:?}");
-        // 2000 trees stay interactive: a few hundred triangles each at the default level; coarse is
-        // the crowd budget, crown lumps <= 120 plus a stub trunk <= 40 (see the thousand-tree test)
-        assert!(tris[0] <= 160 && tris[1] <= 700 && tris[2] <= 3600, "{form}: {tris:?}");
+        // coarse is the crowd budget, crown lumps <= 120 plus a stub trunk <= 40 (see the
+        // thousand-tree test); medium and fine are the near budgets of a full-size tree
+        assert!(tris[0] <= 160 && tris[1] <= 2500 && tris[2] <= 10_000, "{form}: {tris:?}");
     }
 }
 
@@ -147,7 +147,7 @@ fn the_species_table_builds_every_type_and_covers_every_form() {
         for lod in [Lod::Coarse, Lod::Medium, Lod::Fine] {
             let b = f.build(&r, lod).unwrap_or_else(|e| panic!("{} {lod:?}: {e}", t.name));
             // wood, leaves and the tone solids (inner crown, lit lobes, streaks) together
-            assert!(b.mesh.triangles.len() <= 4600, "{} {lod:?}: {}", t.name, b.mesh.triangles.len());
+            assert!(b.mesh.triangles.len() <= 10_000, "{} {lod:?}: {}", t.name, b.mesh.triangles.len());
             assert!(b.volume > 0.0, "{}", t.name);
             // every tree has foliage unless the type is bare
             let shown = b.parts.iter().filter(|p| p.visible).count();
@@ -630,9 +630,9 @@ fn shrubs_of_one_type_differ_by_scale_and_are_clustered_not_boxes() {
 
 /// A park of 500 trees, the eight forms in equal shares, stays inside the render budget: a
 /// chunk holds 400 000 triangles (`CHUNK_TRIS`). Everywhere coarse is a small fraction of it,
-/// everywhere medium fits one chunk, and the way the renderer mixes the levels by distance (a
+/// everywhere medium fits two chunks, and the way the renderer mixes the levels by distance (a
 /// tenth of the trees near and full, three tenths medium, the rest coarse; beyond that boxes)
-/// fits one chunk and weighs under a third of a park drawn full everywhere.
+/// fits two chunks and weighs under a third of a park drawn full everywhere.
 #[test]
 fn a_park_of_500_trees_stays_inside_the_triangle_budget_at_every_level() {
     const CHUNK_TRIS: usize = 400_000;
@@ -647,10 +647,40 @@ fn a_park_of_500_trees_stays_inside_the_triangle_budget_at_every_level() {
     let each = |k: usize| per_form.iter().map(|t| t[k]).sum::<usize>() * trees / per_form.len();
     let (coarse, medium, fine) = (each(0), each(1), each(2));
     assert!(coarse * 4 <= CHUNK_TRIS, "coarse park {coarse}");
-    assert!(medium <= CHUNK_TRIS, "medium park {medium}");
+    assert!(medium <= 2 * CHUNK_TRIS, "medium park {medium}");
     assert!(coarse < medium && medium < fine, "{coarse} {medium} {fine}");
     let mixed = fine / 10 + medium * 3 / 10 + coarse * 6 / 10;
-    assert!(mixed <= CHUNK_TRIS, "mixed park {mixed}");
+    assert!(mixed <= 2 * CHUNK_TRIS, "mixed park {mixed}");
     assert!(mixed * 3 <= fine, "mixed {mixed} against full {fine}");
 }
 
+
+/// Trees of the species table in full leaf are built in detail near the eye: fine 6..10k
+/// triangles, medium 1.5..2.5k; coarse stays the crowd mesh.
+#[test]
+fn near_trees_reach_their_triangle_budgets() {
+    use ddc_geom::component::Value;
+    let f = tree_family();
+    let num = |t: &ddc_geom::component::FamilyType, k: &str| match t.values.iter().find(|(n, _)| n == k) {
+        Some((_, Value::Num(v))) => *v,
+        _ => 0.0,
+    };
+    let (mut fine, mut medium, mut n) = ((usize::MAX, 0), (usize::MAX, 0), 0);
+    for t in &f.types {
+        // palms and small trees keep the light build; a bare tree has no leaf patches
+        if num(t, "Leaf") < 0.99 || num(t, "Form") == 5.0 || num(t, "Height") < 6.0 || num(t, "Crown") < 3.0 {
+            continue;
+        }
+        let c = tree(&f, &t.name, Lod::Coarse).mesh.triangles.len();
+        let m = tree(&f, &t.name, Lod::Medium).mesh.triangles.len();
+        let x = tree(&f, &t.name, Lod::Fine).mesh.triangles.len();
+        assert!(c <= 160, "{} coarse {c}", t.name);
+        eprintln!("{}: {x}/{m}/{c}", t.name);
+        fine = (fine.0.min(x), fine.1.max(x));
+        medium = (medium.0.min(m), medium.1.max(m));
+        n += 1;
+    }
+    assert!(n > 20, "{n} trees");
+    assert!(fine.0 >= 6000 && fine.1 <= 10_000, "fine {fine:?}");
+    assert!(medium.0 >= 1500 && medium.1 <= 2500, "medium {medium:?}");
+}
