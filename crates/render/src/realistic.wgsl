@@ -97,7 +97,14 @@ fn foliage(base0: vec3<f32>, n: vec3<f32>, v: vec3<f32>, l: vec3<f32>, world: ve
     let h1 = f32(seed & 0xFFFFu) / 65535.0;
     let h2 = f32(seed >> 16u) / 65535.0;
     let hue = mix(vec3<f32>(0.90, 1.0, 1.06), vec3<f32>(1.10, 1.03, 0.80), h1);
-    let base = base0 * hue * (0.84 + 0.30 * h2);
+    // a cluster of leaves of its own tone: hue and value drift over the crown
+    let cl = vnoise(world * 1.9 + vec3<f32>(f32(seed & 255u), 0.0, 0.0));
+    let cl2 = vnoise(world * 0.8 + vec3<f32>(0.0, f32((seed >> 8u) & 255u), 5.0));
+    let drift = mix(vec3<f32>(0.86, 0.97, 1.08), vec3<f32>(1.14, 1.04, 0.78), cl2);
+    var base = base0 * hue * drift * (0.70 + 0.26 * h2 + 0.30 * cl) * (0.66 + 0.5 * smoothstep(0.25, 0.7, vnoise(world * 3.3 + vec3<f32>(1.7, 9.1, 3.3))));
+    // less saturated greens
+    let grey = vec3<f32>(dot(base, vec3<f32>(0.3, 0.59, 0.11)));
+    base = mix(base, grey, 0.28);
     let ndl = dot(n, l);
     let wrap = clamp((ndl + 0.5) / 1.5, 0.0, 1.0);
     let shadow = sun_light(world, n);
@@ -136,7 +143,11 @@ fn fs_real(i: VOut) -> @location(0) vec4<f32> {
     let tag = base_tag(i.tag);
     let v = normalize(to_eye);
     if ((i.tag & 0xF0000000u) == 0x50000000u) {
-        let leaves = foliage(palette(tag), normalize(i.snrm), v, normalize(-u.light_dir.xyz), i.world, i.clip.xy, i.seed);
+        if (leaf_cut(i.world, i.snrm, length(dp_x) + length(dp_y))) { discard; }
+        // the inside of the crown seen through its holes: turned normal, darker
+        let back = dot(normalize(i.nrm), to_eye) < 0.0;
+        let sn = select(normalize(i.snrm), -normalize(i.snrm), back);
+        let leaves = foliage(palette(tag), sn, v, normalize(-u.light_dir.xyz), i.world, i.clip.xy, i.seed) * select(1.0, 0.55, back);
         return vec4<f32>(mark(leaves, n, to_eye, selected, hovered, i.elem), 1.0);
     }
     let dist = eye_len(i.world);
