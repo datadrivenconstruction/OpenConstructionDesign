@@ -1025,7 +1025,7 @@ impl Model {
                         );
                     }
                 }
-                k @ (3 | 4) => {
+                k @ 3.. => {
                     let ds: Vec<V3> = a.iter().map(|&(e, end)| depart(&edges[e], end)).collect();
                     // the main line is the most opposed pair
                     let mut best = (0, 1, 2.0);
@@ -1059,6 +1059,7 @@ impl Model {
                         net.fitting_pieces.push((edges[e].run, piece, s));
                         ms.push(mep::sweep(s.envelope(), &piece.samples(8), 24));
                     }
+                    // more legs than four (a riser through a crossing) still meet in one cross
                     let kind = if k == 3 {
                         FittingKind::Tee
                     } else {
@@ -1068,7 +1069,7 @@ impl Model {
                 }
                 k => {
                     return Err(Error::Geom(format!(
-                        "node at {:?}: {k} branches, at most 4 supported",
+                        "node at {:?}: {k} branches",
                         p3(at)
                     )))
                 }

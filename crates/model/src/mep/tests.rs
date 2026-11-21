@@ -176,6 +176,20 @@ fn tee_connectivity_caps_and_open_ends() {
         (net.count(FittingKind::Tee), net.count(FittingKind::Cross)),
         (0, 1)
     );
+    // five legs: a riser up through the crossing
+    m.add_mep_run(
+        &RunSpec::pipe(
+            s,
+            l,
+            PipeMaterial::Copper,
+            15,
+            vec![(5.0, 0.0, 1.0), (5.0, 0.0, 4.0)],
+        )
+        .unwrap(),
+    )
+    .unwrap();
+    let net = m.mep_network(Some(s)).unwrap();
+    assert_eq!(net.count(FittingKind::Cross), 1);
 }
 
 #[test]
