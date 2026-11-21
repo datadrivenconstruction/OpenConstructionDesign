@@ -1293,8 +1293,8 @@ type "Cherry A" Form=1, Height=6000mm, Crown=5000mm, Trunk=250mm, Clear=1400mm, 
 type "Cherry B" Form=1, Height=5400mm, Crown=5400mm, Trunk=230mm, Clear=1330mm, Leaf=1, Seed=296, Group=5, Weight=1, Bark="Bark Cherry", Streak="Bark Cherry Streak", Botanical="Prunus avium"
 type "Hawthorn A" Form=0, Height=5000mm, Crown=4000mm, Trunk=200mm, Clear=1000mm, Leaf=1, Seed=303, Group=5, Weight=1, Bark="Bark Grey", Streak="Bark Grey Streak", Botanical="Crataegus monogyna"
 type "Hawthorn B" Form=0, Height=4500mm, Crown=4320mm, Trunk=184mm, Clear=950mm, Leaf=1, Seed=310, Group=5, Weight=1, Bark="Bark Grey", Streak="Bark Grey Streak", Botanical="Crataegus monogyna"
-type "Shrub A" Form=0, Height=1500mm, Crown=1800mm, Trunk=50mm, Clear=100mm, Leaf=1, Seed=317, Group=5, Weight=1
-type "Shrub B" Form=0, Height=1350mm, Crown=1940mm, Trunk=46mm, Clear=95mm, Leaf=1, Seed=324, Group=5, Weight=1
+type "Shrub A" Form=0, Height=1500mm, Crown=1800mm, Trunk=50mm, Clear=100mm, Leaf=1, Seed=317, Group=5, Weight=1, Botanical="Spiraea x vanhouttei"
+type "Shrub B" Form=0, Height=1350mm, Crown=1940mm, Trunk=46mm, Clear=95mm, Leaf=1, Seed=324, Group=5, Weight=1, Botanical="Spiraea x vanhouttei"
 type "Acacia A" Form=7, Height=10500mm, Crown=12000mm, Trunk=450mm, Clear=4500mm, Leaf=1, Seed=331, Group=6, Weight=1, Bark="Bark Dark", Streak="Bark Dark Streak", Botanical="Vachellia tortilis"
 type "Acacia B" Form=7, Height=9450mm, Crown=12960mm, Trunk=414mm, Clear=4275mm, Leaf=1, Seed=338, Group=6, Weight=1, Bark="Bark Dark", Streak="Bark Dark Streak", Botanical="Vachellia tortilis"
 type "Stone Pine A" Form=7, Height=13000mm, Crown=10000mm, Trunk=500mm, Clear=7000mm, Leaf=1, Seed=345, Group=6, Weight=1, Leaves="Foliage Conifer", Season=4, Bark="Bark Red", Inner="Foliage Conifer Shade", Light="Foliage Conifer Light", Streak="Bark Red Streak", Botanical="Pinus pinea"
@@ -1375,12 +1375,12 @@ type "Hawthorn A Spring" Form=0, Height=5000mm, Crown=4000mm, Trunk=200mm, Clear
 type "Hawthorn B Autumn" Form=0, Height=4500mm, Crown=4320mm, Trunk=184mm, Clear=950mm, Leaf=1, Seed=310, Group=5, Weight=1, Season=1, Leaves="Foliage Red", Bark="Bark Grey", Inner="Foliage Red Shade", Light="Foliage Red Light", Streak="Bark Grey Streak", Botanical="Crataegus monogyna"
 type "Hawthorn B Bare" Form=0, Height=4500mm, Crown=4320mm, Trunk=184mm, Clear=950mm, Leaf=0, Seed=310, Group=5, Weight=1, Season=2, Bark="Bark Grey", Streak="Bark Grey Streak", Botanical="Crataegus monogyna"
 type "Hawthorn B Spring" Form=0, Height=4500mm, Crown=4320mm, Trunk=184mm, Clear=950mm, Leaf=1, Seed=310, Group=5, Weight=1, Season=3, Leaves="Foliage White", Bark="Bark Grey", Inner="Foliage White Shade", Light="Foliage White Light", Streak="Bark Grey Streak", Botanical="Crataegus monogyna"
-type "Shrub A Autumn" Form=0, Height=1500mm, Crown=1800mm, Trunk=50mm, Clear=100mm, Leaf=1, Seed=317, Group=5, Weight=1, Season=1, Leaves="Foliage Red", Inner="Foliage Red Shade", Light="Foliage Red Light"
-type "Shrub A Bare" Form=0, Height=1500mm, Crown=1800mm, Trunk=50mm, Clear=100mm, Leaf=0, Seed=317, Group=5, Weight=1, Season=2
-type "Shrub A Spring" Form=0, Height=1500mm, Crown=1800mm, Trunk=50mm, Clear=100mm, Leaf=0.75, Seed=317, Group=5, Weight=1, Season=3, Leaves="Foliage Spring", Inner="Foliage Spring Shade", Light="Foliage Spring Light"
-type "Shrub B Autumn" Form=0, Height=1350mm, Crown=1940mm, Trunk=46mm, Clear=95mm, Leaf=1, Seed=324, Group=5, Weight=1, Season=1, Leaves="Foliage Red", Inner="Foliage Red Shade", Light="Foliage Red Light"
-type "Shrub B Bare" Form=0, Height=1350mm, Crown=1940mm, Trunk=46mm, Clear=95mm, Leaf=0, Seed=324, Group=5, Weight=1, Season=2
-type "Shrub B Spring" Form=0, Height=1350mm, Crown=1940mm, Trunk=46mm, Clear=95mm, Leaf=0.75, Seed=324, Group=5, Weight=1, Season=3, Leaves="Foliage Spring", Inner="Foliage Spring Shade", Light="Foliage Spring Light"
+type "Shrub A Autumn" Form=0, Height=1500mm, Crown=1800mm, Trunk=50mm, Clear=100mm, Leaf=1, Seed=317, Group=5, Weight=1, Season=1, Leaves="Foliage Red", Inner="Foliage Red Shade", Light="Foliage Red Light", Botanical="Spiraea x vanhouttei"
+type "Shrub A Bare" Form=0, Height=1500mm, Crown=1800mm, Trunk=50mm, Clear=100mm, Leaf=0, Seed=317, Group=5, Weight=1, Season=2, Botanical="Spiraea x vanhouttei"
+type "Shrub A Spring" Form=0, Height=1500mm, Crown=1800mm, Trunk=50mm, Clear=100mm, Leaf=0.75, Seed=317, Group=5, Weight=1, Season=3, Leaves="Foliage Spring", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Botanical="Spiraea x vanhouttei"
+type "Shrub B Autumn" Form=0, Height=1350mm, Crown=1940mm, Trunk=46mm, Clear=95mm, Leaf=1, Seed=324, Group=5, Weight=1, Season=1, Leaves="Foliage Red", Inner="Foliage Red Shade", Light="Foliage Red Light", Botanical="Spiraea x vanhouttei"
+type "Shrub B Bare" Form=0, Height=1350mm, Crown=1940mm, Trunk=46mm, Clear=95mm, Leaf=0, Seed=324, Group=5, Weight=1, Season=2, Botanical="Spiraea x vanhouttei"
+type "Shrub B Spring" Form=0, Height=1350mm, Crown=1940mm, Trunk=46mm, Clear=95mm, Leaf=0.75, Seed=324, Group=5, Weight=1, Season=3, Leaves="Foliage Spring", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Botanical="Spiraea x vanhouttei"
 type "Acacia A Autumn" Form=7, Height=10500mm, Crown=12000mm, Trunk=450mm, Clear=4500mm, Leaf=1, Seed=331, Group=6, Weight=1, Season=1, Leaves="Foliage Gold", Bark="Bark Dark", Inner="Foliage Gold Shade", Light="Foliage Gold Light", Streak="Bark Dark Streak", Botanical="Vachellia tortilis"
 type "Acacia A Bare" Form=7, Height=10500mm, Crown=12000mm, Trunk=450mm, Clear=4500mm, Leaf=0, Seed=331, Group=6, Weight=1, Season=2, Bark="Bark Dark", Streak="Bark Dark Streak", Botanical="Vachellia tortilis"
 type "Acacia A Spring" Form=7, Height=10500mm, Crown=12000mm, Trunk=450mm, Clear=4500mm, Leaf=0.75, Seed=331, Group=6, Weight=1, Season=3, Leaves="Foliage Spring", Bark="Bark Dark", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Streak="Bark Dark Streak", Botanical="Vachellia tortilis"
@@ -1419,6 +1419,22 @@ type "Rowan B Bare" Form=0, Height=7200mm, Crown=5940mm, Trunk=230mm, Clear=1425
 type "Rowan B Spring" Form=0, Height=7200mm, Crown=5940mm, Trunk=230mm, Clear=1425mm, Leaf=1, Seed=492, Group=5, Weight=1, Season=3, Leaves="Foliage White", Bark="Bark Grey", Inner="Foliage White Shade", Light="Foliage White Light", Streak="Bark Grey Streak", Botanical="Sorbus aucuparia"
 type "Small" Form=0, Height=6000mm, Crown=3500mm, Trunk=300mm, Clear=1800mm, Leaf=1, Seed=359, Group=5, Weight=0
 type "Large" Form=0, Height=9000mm, Crown=5000mm, Trunk=400mm, Clear=2500mm, Leaf=1, Seed=366, Group=0, Weight=0
+type "Field Maple A" Form=0, Height=10000mm, Crown=7500mm, Trunk=350mm, Clear=2200mm, Leaf=1, Seed=513, Group=5, Weight=1, Botanical="Acer campestre"
+type "Field Maple A Autumn" Form=0, Height=10000mm, Crown=7500mm, Trunk=350mm, Clear=2200mm, Leaf=1, Seed=513, Group=5, Weight=1, Season=1, Leaves="Foliage Gold", Inner="Foliage Gold Shade", Light="Foliage Gold Light", Botanical="Acer campestre"
+type "Field Maple A Bare" Form=0, Height=10000mm, Crown=7500mm, Trunk=350mm, Clear=2200mm, Leaf=0, Seed=513, Group=5, Weight=1, Season=2, Botanical="Acer campestre"
+type "Field Maple A Spring" Form=0, Height=10000mm, Crown=7500mm, Trunk=350mm, Clear=2200mm, Leaf=0.75, Seed=513, Group=5, Weight=1, Season=3, Leaves="Foliage Spring", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Botanical="Acer campestre"
+type "Field Maple B" Form=1, Height=8500mm, Crown=6200mm, Trunk=300mm, Clear=2000mm, Leaf=1, Seed=520, Group=5, Weight=1, Botanical="Acer campestre"
+type "Field Maple B Autumn" Form=1, Height=8500mm, Crown=6200mm, Trunk=300mm, Clear=2000mm, Leaf=1, Seed=520, Group=5, Weight=1, Season=1, Leaves="Foliage Gold", Inner="Foliage Gold Shade", Light="Foliage Gold Light", Botanical="Acer campestre"
+type "Field Maple B Bare" Form=1, Height=8500mm, Crown=6200mm, Trunk=300mm, Clear=2000mm, Leaf=0, Seed=520, Group=5, Weight=1, Season=2, Botanical="Acer campestre"
+type "Field Maple B Spring" Form=1, Height=8500mm, Crown=6200mm, Trunk=300mm, Clear=2000mm, Leaf=0.75, Seed=520, Group=5, Weight=1, Season=3, Leaves="Foliage Spring", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Botanical="Acer campestre"
+type "Columnar Oak A" Form=3, Height=16000mm, Crown=4500mm, Trunk=450mm, Clear=2000mm, Leaf=1, Seed=527, Group=2, Weight=1, Bark="Bark Dark", Streak="Bark Dark Streak", Botanical="Quercus robur 'Fastigiata'"
+type "Columnar Oak A Autumn" Form=3, Height=16000mm, Crown=4500mm, Trunk=450mm, Clear=2000mm, Leaf=1, Seed=527, Group=2, Weight=1, Season=1, Leaves="Foliage Autumn", Inner="Foliage Autumn Shade", Light="Foliage Autumn Light", Bark="Bark Dark", Streak="Bark Dark Streak", Botanical="Quercus robur 'Fastigiata'"
+type "Columnar Oak A Bare" Form=3, Height=16000mm, Crown=4500mm, Trunk=450mm, Clear=2000mm, Leaf=0, Seed=527, Group=2, Weight=1, Season=2, Bark="Bark Dark", Streak="Bark Dark Streak", Botanical="Quercus robur 'Fastigiata'"
+type "Columnar Oak A Spring" Form=3, Height=16000mm, Crown=4500mm, Trunk=450mm, Clear=2000mm, Leaf=0.75, Seed=527, Group=2, Weight=1, Season=3, Leaves="Foliage Spring", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Bark="Bark Dark", Streak="Bark Dark Streak", Botanical="Quercus robur 'Fastigiata'"
+type "Columnar Oak B" Form=3, Height=14000mm, Crown=4000mm, Trunk=400mm, Clear=1800mm, Leaf=1, Seed=534, Group=2, Weight=1, Bark="Bark Dark", Streak="Bark Dark Streak", Botanical="Quercus robur 'Fastigiata'"
+type "Columnar Oak B Autumn" Form=3, Height=14000mm, Crown=4000mm, Trunk=400mm, Clear=1800mm, Leaf=1, Seed=534, Group=2, Weight=1, Season=1, Leaves="Foliage Autumn", Inner="Foliage Autumn Shade", Light="Foliage Autumn Light", Bark="Bark Dark", Streak="Bark Dark Streak", Botanical="Quercus robur 'Fastigiata'"
+type "Columnar Oak B Bare" Form=3, Height=14000mm, Crown=4000mm, Trunk=400mm, Clear=1800mm, Leaf=0, Seed=534, Group=2, Weight=1, Season=2, Bark="Bark Dark", Streak="Bark Dark Streak", Botanical="Quercus robur 'Fastigiata'"
+type "Columnar Oak B Spring" Form=3, Height=14000mm, Crown=4000mm, Trunk=400mm, Clear=1800mm, Leaf=0.75, Seed=534, Group=2, Weight=1, Season=3, Leaves="Foliage Spring", Inner="Foliage Spring Shade", Light="Foliage Spring Light", Bark="Bark Dark", Streak="Bark Dark Streak", Botanical="Quercus robur 'Fastigiata'"
 type "Maple Autumn" Form=0, Height=11000mm, Crown=8000mm, Trunk=400mm, Clear=2500mm, Leaf=1, Seed=373, Group=0, Weight=0, Leaves="Foliage Autumn", Inner="Foliage Autumn Shade", Light="Foliage Autumn Light", Botanical="Acer platanoides"
 type "Oak Bare" Form=0, Height=14000mm, Crown=11000mm, Trunk=600mm, Clear=3500mm, Leaf=0, Seed=380, Group=0, Weight=0, Bark="Bark Dark", Streak="Bark Dark Streak", Botanical="Quercus robur"
 type "Linden Bare" Form=1, Height=16000mm, Crown=8500mm, Trunk=500mm, Clear=3000mm, Leaf=0, Seed=387, Group=0, Weight=0, Botanical="Tilia cordata"
@@ -1465,15 +1481,20 @@ ifc IfcGeographicElement VEGETATION
 # One clipped length of a hedge, laid end to end along a boundary; Height is the clipped height.
 # Six cuts along the length, each with its own top height and width (seeded by Scale, which the
 # generator jitters per length), a trimmed shoulder under a narrower top, and a scalloped plan edge.
+# Botanical is the species' scientific name, exported with the plant.
 param Length length type 3000mm
 param Width length type 600mm
 param Height length type 1200mm
 param Scale number instance 1
 param Leaves material type "Foliage Green"
+param Botanical text type ""
 type "Clipped 1200" Height=1200mm
 type "Low 600" Height=600mm, Width=500mm
 type "Tall 1800" Height=1800mm, Width=800mm
 type "Conifer 2000" Height=2000mm, Width=800mm, Leaves="Foliage Conifer"
+type "Hornbeam 1500" Height=1500mm, Width=700mm, Botanical="Carpinus betulus"
+type "Privet 1200" Height=1200mm, Width=500mm, Botanical="Ligustrum vulgare"
+type "Yew 1500" Height=1500mm, Width=800mm, Leaves="Foliage Conifer", Botanical="Taxus baccata"
 type "120x24x48in" Length=120in, Width=24in, Height=48in
 extrude Base0 rect((-Length / 2 + Length * 0 / 6), -(Width * Scale * (1 + 0.06 * cos(Scale * 61 + 0 * 1.9))) / 2, (-Length / 2 + Length * 1 / 6), (Width * Scale * (1 + 0.06 * cos(Scale * 61 + 0 * 1.9))) / 2) z(0mm, 0.75 * (Height * Scale * (1 + 0.08 * sin(Scale * 97 + 0 * 2.3)))) mat(Leaves) show(3d, elev)
 extrude Top0 rect((-Length / 2 + Length * 0 / 6), -0.4 * (Width * Scale * (1 + 0.06 * cos(Scale * 61 + 0 * 1.9))), (-Length / 2 + Length * 1 / 6), 0.4 * (Width * Scale * (1 + 0.06 * cos(Scale * 61 + 0 * 1.9)))) z(0.75 * (Height * Scale * (1 + 0.08 * sin(Scale * 97 + 0 * 2.3))), (Height * Scale * (1 + 0.08 * sin(Scale * 97 + 0 * 2.3)))) mat(Leaves) show(3d, elev)
