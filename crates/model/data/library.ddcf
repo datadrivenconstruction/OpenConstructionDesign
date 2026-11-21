@@ -1499,6 +1499,8 @@ symbol arc((-Length / 2 + Length * 11 / 12), Width * Scale / 2, Length / 12, 0de
 symbol arc((-Length / 2 + Length * 11 / 12), -Width * Scale / 2, Length / 12, 180deg, 360deg)
 symbol line(-Length / 2, -Width * Scale / 2, -Length / 2, Width * Scale / 2)
 symbol line(Length / 2, -Width * Scale / 2, Length / 2, Width * Scale / 2)
+symbol line(-Length / 2, 0.4 * Width * Scale, Length / 2, 0.4 * Width * Scale)
+symbol line(-Length / 2, -0.4 * Width * Scale, Length / 2, -0.4 * Width * Scale)
 ---
 family Shrub
 category planting
