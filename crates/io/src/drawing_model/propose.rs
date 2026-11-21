@@ -117,13 +117,14 @@ fn lex_less(a: V2, b: V2) -> bool {
     (q(b.x), q(b.y), b.x, b.y) < (q(a.x), q(a.y), a.x, a.y)
 }
 
-/// The type with the nearest thickness; the second result is ambiguity.
+/// The type with the nearest thickness; the second result is ambiguity. Of equally near types
+/// the newest wins: a type made for the project, not the default seeded before it.
 fn match_type(types: &[WallTypeInfo], w: f64, tol: f64) -> (Option<i64>, Option<f64>, bool) {
     let mut d: Vec<(f64, i64)> = types
         .iter()
         .map(|t| ((t.thickness - w).abs(), t.id))
         .collect();
-    d.sort_by(|x, y| x.0.total_cmp(&y.0).then(x.1.cmp(&y.1)));
+    d.sort_by(|x, y| x.0.total_cmp(&y.0).then(y.1.cmp(&x.1)));
     match d.as_slice() {
         [] => (None, None, false),
         [b] => (Some(b.1), Some(b.0), b.0 > tol),
@@ -207,8 +208,10 @@ fn mark_runs(offs: &[(f64, usize)], opt: &ProposeOptions, mask: &mut [bool]) {
 }
 
 /// Closed shapes (all line ends connected) entirely within a `max` m square are furniture, columns,
-/// symbols, not walls: walls form a large network or have free ends.
-fn closed_symbols(lines: &[(V2, V2)], max: f64) -> Vec<bool> {
+/// symbols, not walls: walls form a large network or have free ends. A shape that a line from
+/// outside it crosses is no free symbol either: a wall piece drawn as its own rectangle runs into
+/// the wall it meets (one touching a face, as a cabinet does, stays a symbol).
+pub(super) fn closed_symbols(lines: &[(V2, V2)], max: f64) -> Vec<bool> {
     let n = lines.len();
     let key = |p: V2| ((p.x * 1000.0).round() as i64, (p.y * 1000.0).round() as i64);
     let mut ids: HashMap<(i64, i64), usize> = HashMap::new();
@@ -257,13 +260,39 @@ fn closed_symbols(lines: &[(V2, V2)], max: f64) -> Vec<bool> {
             ];
         }
     }
-    (0..n)
-        .map(|i| {
-            let r = find(&mut parent, ends[i][0]);
-            let (closed, bb) = comp[&r];
-            closed && bb[2] - bb[0] <= max && bb[3] - bb[1] <= max
-        })
-        .collect()
+    let root: Vec<usize> = (0..n).map(|i| find(&mut parent, ends[i][0])).collect();
+    let small = |r: usize| {
+        let (closed, bb) = comp[&r];
+        closed && bb[2] - bb[0] <= max && bb[3] - bb[1] <= max
+    };
+    let mut members: HashMap<usize, Vec<usize>> = HashMap::new();
+    for i in 0..n {
+        if small(root[i]) {
+            members.entry(root[i]).or_default().push(i);
+        }
+    }
+    let mut crossed: HashMap<usize, bool> = HashMap::new();
+    for (&r, own) in &members {
+        let bb = comp[&r].1;
+        let hit = (0..n).any(|j| {
+            let (c, d) = lines[j];
+            if root[j] == r || c.x.max(d.x) < bb[0] || c.x.min(d.x) > bb[2] || c.y.max(d.y) < bb[1] || c.y.min(d.y) > bb[3] {
+                return false;
+            }
+            own.iter().any(|&k| crosses(lines[k], (c, d)))
+        });
+        crossed.insert(r, hit);
+    }
+    (0..n).map(|i| small(root[i]) && !crossed[&root[i]]).collect()
+}
+
+/// The segments cross at a point inside both (not at an end, not along a shared line).
+fn crosses((a, b): (V2, V2), (c, d): (V2, V2)) -> bool {
+    let (u, v) = (b - a, d - c);
+    let eps = 1e-9 * (u.len() * v.len()).max(1e-12);
+    let (o1, o2) = (u.cross(c - a), u.cross(d - a));
+    let (o3, o4) = (v.cross(a - c), v.cross(b - c));
+    ((o1 > eps && o2 < -eps) || (o1 < -eps && o2 > eps)) && ((o3 > eps && o4 < -eps) || (o3 < -eps && o4 > eps))
 }
 
 fn is_dim_number(t: &str) -> bool {

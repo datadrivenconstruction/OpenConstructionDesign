@@ -71,6 +71,7 @@ pub fn stage_of(table: &str) -> Stage {
 const PLACE: &[&str] = &["ax", "ay", "bx", "by", "x", "y", "az", "bz", "z", "base_offset"];
 
 fn num(s: &Option<&str>) -> Option<f64> {
+    // num-lint: a stored order value, invariant form
     s.as_ref()?.trim().parse::<f64>().ok().filter(|v| v.is_finite())
 }
 

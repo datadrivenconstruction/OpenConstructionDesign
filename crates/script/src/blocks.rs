@@ -301,6 +301,7 @@ pub(crate) fn prof_text(s: &str) -> Result<Profile, String> {
     let (kind, dims) = t.split_once(' ').unwrap_or((t, ""));
     let nums: Vec<f64> = dims
         .split(['x', 'X', '*'])
+        // num-lint: script source numbers, invariant form
         .map(|x| x.trim().parse::<f64>())
         .collect::<Result<Vec<_>, _>>()
         .unwrap_or_default();

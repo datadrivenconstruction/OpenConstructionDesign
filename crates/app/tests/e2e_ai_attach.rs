@@ -61,8 +61,9 @@ fn walls_are_traced_from_a_dxf_underlay_and_applied() {
     assert_eq!(parsed(&results[1].0)["kind"], json!("dxf"));
 
     let traced = parsed(&results[2].0);
-    let created = traced["created"].as_array().unwrap_or_else(|| panic!("{traced}"));
-    assert_eq!(created.len(), 5, "4 outer walls and a partition: {traced}");
+    // `created` names refs as runs ("wall:n1..n5"); the count is in `changes`.
+    assert!(traced["created"].as_array().is_some_and(|a| !a.is_empty()), "{traced}");
+    assert_eq!(traced["changes"]["created"], json!(5), "4 outer walls and a partition: {traced}");
     assert_eq!(count(&ed.model, "wall"), 0, "nothing reaches the live model before Apply");
 
     apply_and_check(&mut s, &mut ed);

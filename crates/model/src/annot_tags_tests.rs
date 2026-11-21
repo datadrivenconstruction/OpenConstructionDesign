@@ -70,6 +70,53 @@ fn tag_follows_wall_move_and_cascades_on_host_delete() {
     m.assert_integrity();
 }
 
+/// The forecast of a wall deletion names exactly the tags the delete removes and the
+/// dimensions it orphans, each with the wall it goes with.
+#[test]
+fn annotations_of_deleted_match_what_the_delete_does() {
+    let (mut m, lv) = room_6x4(&[("Brick", 0.2)]);
+    let walls = ids(&m, "SELECT id FROM wall ORDER BY id");
+    let door = ids(&m, "SELECT id FROM opening WHERE kind='door'")[0];
+    let host = ids(&m, &format!("SELECT wall FROM opening WHERE id={door}"))[0];
+    let other = *walls.iter().find(|w| **w != host).unwrap();
+    let tdoor = m.tag_element(lv, TagHost::Opening(door), false).unwrap();
+    let thost = m.tag_element(lv, TagHost::Wall(host), false).unwrap();
+    let tother = m.tag_element(lv, TagHost::Wall(other), false).unwrap();
+    let dim = |a: DimRef, b: DimRef| DimSpec {
+        level: lv,
+        kind: DimKind::Linear,
+        refs: vec![a, b],
+        dir: (0.0, 0.0),
+        side: 1.0,
+        offset: 0.5,
+        tier: -1,
+        auto: false,
+    };
+    let ds = m
+        .add_dims(&[
+            dim(DimRef::OpeningEdge { opening: door, edge: 0, face: 0 }, DimRef::Point((9.0, 9.0))),
+            dim(DimRef::AxisEnd { wall: other, end: 0 }, DimRef::AxisEnd { wall: other, end: 1 }),
+        ])
+        .unwrap();
+    let w = ("wall".to_string(), host);
+    let mut want = vec![
+        AnnotLoss { id: tdoor, tag: true, owner: w.clone() },
+        AnnotLoss { id: thost, tag: true, owner: w.clone() },
+        AnnotLoss { id: ds[0], tag: false, owner: w },
+    ];
+    want.sort_by_key(|a| a.id);
+    assert_eq!(m.annotations_of_deleted(&[("wall", host)]).unwrap(), want);
+    assert!(m.annotations_of_deleted(&[("slab", 999)]).unwrap().is_empty());
+
+    m.delete_wall(host).unwrap();
+    let tags: Vec<i64> = m.tags(lv).unwrap().iter().map(|t| t.id).collect();
+    assert_eq!(tags, vec![tother]);
+    let orphans: Vec<(i64, bool)> = m.dims(lv).unwrap().iter().map(|d| (d.id, d.orphan)).collect();
+    assert_eq!(orphans, vec![(ds[0], true), (ds[1], false)]);
+    m.undo().unwrap();
+    m.assert_integrity();
+}
+
 #[test]
 fn tag_all_places_without_overlap_one_undo_and_skips_tagged() {
     let (mut m, lv) = room_6x4(&[("Brick", 0.2)]);

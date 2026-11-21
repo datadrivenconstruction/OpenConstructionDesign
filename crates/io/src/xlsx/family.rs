@@ -1190,6 +1190,7 @@ pub fn import_xlsx_families_keyed(
     let mut rep = import_xlsx_keyed(model, path, dry, dec)?;
     // a book without baseline deletes nothing, family rows included
     read(model, path, fams, opts.delete_missing && !rep.no_base, &mut rep)?;
+    super::import::note_annotations(model, &mut rep, fams);
     // the model changes from here: a stop is no longer safe
     super::import_gate::off();
     if !opts.apply || rep.blocking() > 0 {

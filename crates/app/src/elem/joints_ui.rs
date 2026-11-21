@@ -75,7 +75,7 @@ pub fn parse_limits(s: &str, angle: bool, u: Units) -> Option<Option<(f64, f64)>
     let (lo, hi) = s.split_once("..")?;
     let one = |t: &str| -> Option<f64> {
         if angle {
-            t.trim().parse::<f64>().ok().map(f64::to_radians)
+            ddc_ui::numparse::parse(t.trim(), ui_decimal_mark()).ok().map(f64::to_radians)
         } else {
             // a slide limit may lie below the joint origin: signed, unlike a length field
             parse_typed_signed(t.trim(), u, ui_decimal_mark()).ok()

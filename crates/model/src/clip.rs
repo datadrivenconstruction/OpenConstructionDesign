@@ -1451,6 +1451,17 @@ pub(crate) fn snapshot_except(
     if known.is_empty() {
         return invalid("copy: these elements cannot be copied");
     }
+    // a root whose row is gone (deleted, undone) is no element: it never becomes a root
+    let mut live = Vec::with_capacity(known.len());
+    for (k, id) in known {
+        if row_exists(db, k, id)? {
+            live.push((k, id));
+        }
+    }
+    let known = live;
+    if known.is_empty() {
+        return invalid("copy: the selected elements no longer exist");
+    }
     // a spline wall is copied whole: its row and every piece of its arc chain
     let mut all = known.clone();
     for &(k, id) in &known {

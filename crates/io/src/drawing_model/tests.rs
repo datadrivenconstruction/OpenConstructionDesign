@@ -280,6 +280,17 @@ fn noise_makes_no_false_walls() {
 }
 
 #[test]
+fn of_two_equally_thick_types_the_newest_is_taken_and_flagged() {
+    let base = types()[0].clone();
+    let twin = WallTypeInfo { id: base.id + 10, name: "Project twin".into(), thickness: base.thickness };
+    let p = propose(&underlay_dxf(&room()), &[base, twin.clone()], &ProposeOptions::default(), &Memory::default());
+    assert!(!p.walls.is_empty());
+    assert!(p.walls.iter().all(|w| w.wall_type == Some(twin.id)), "{:?}", p.walls.iter().map(|w| w.wall_type).collect::<Vec<_>>());
+    let flagged = p.report.ambiguous.iter().filter(|a| a.reason.starts_with("wall type")).count();
+    assert_eq!(flagged, p.walls.len(), "a tie is still told");
+}
+
+#[test]
 fn type_ambiguity_is_reported() {
     let mut t = types();
     t[0].thickness = 0.26;
@@ -1642,4 +1653,24 @@ fn mtext_zero_height_uses_style_height() {
     let d = zero_height_text_doc(Some("Plan"), vec![style_named("Plan", 0.3)], true);
     let u = Underlay::from_dxf(&d, 1.0);
     assert!((u.texts[0].height - 0.3).abs() < 1e-9, "{}", u.texts[0].height);
+}
+
+/// A pier drawn as its own small rectangle that runs into the wall it meets is a wall piece; a
+/// cabinet of that size against a wall face, or standing free, is a symbol.
+#[test]
+fn a_small_rectangle_running_into_a_wall_is_no_symbol() {
+    use ddc_geom::v2;
+    let rect = |x0: f64, y0: f64, x1: f64, y1: f64| {
+        let (a, b, c, d) = (v2(x0, y0), v2(x1, y0), v2(x1, y1), v2(x0, y1));
+        vec![(a, b), (b, c), (c, d), (d, a)]
+    };
+    // a 0.3 m wall along x = 0..0.3 from y = -5 to 5, drawn as two faces
+    let mut lines = vec![(v2(0.0, -5.0), v2(0.0, 5.0)), (v2(0.3, -5.0), v2(0.3, 5.0))];
+    lines.extend(rect(0.15, 1.0, 0.72, 1.2)); // pier, its end inside the wall
+    lines.extend(rect(0.3, -2.0, 0.8, -1.5)); // cabinet against the face
+    lines.extend(rect(2.0, 0.0, 2.5, 0.5)); // free-standing
+    let sym = propose::closed_symbols(&lines, 0.6);
+    assert_eq!(&sym[..2], &[false, false]);
+    assert!(sym[2..6].iter().all(|s| !s), "pier {sym:?}");
+    assert!(sym[6..14].iter().all(|&s| s), "cabinet and free {sym:?}");
 }

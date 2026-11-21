@@ -496,7 +496,8 @@ fn field_label(ui: &mut egui::Ui, text: String, need: f32) {
     let row = g.size().x + 2.0 * ui.spacing().item_spacing.x + need;
     // a wrapping Ui reports the whole line as available; what is left is before the wrap
     let started = ui.cursor().min.x > ui.max_rect().left() + 0.5;
-    if ui.layout().main_wrap && started && ui.available_rect_before_wrap().width() < row {
+    let room = ui.available_rect_before_wrap();
+    if ui.layout().main_wrap && started && room.max.x - room.min.x < row {
         ui.end_row();
     }
     ui.label(text);

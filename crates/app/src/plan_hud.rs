@@ -62,8 +62,10 @@ pub fn axis_cross(rect: Rect, o: Pos2, full: bool) -> AxisCross {
     if !rect.contains(o) {
         return AxisCross::default();
     }
-    let cx = |v: f32| v.clamp(inner.left(), inner.right());
-    let cy = |v: f32| v.clamp(inner.top(), inner.bottom());
+    // a canvas narrower than its two edges keeps the cross at its middle, not an inverted range
+    let c = rect.center();
+    let cx = |v: f32| v.clamp(inner.left().min(c.x), inner.right().max(c.x));
+    let cy = |v: f32| v.clamp(inner.top().min(c.y), inner.bottom().max(c.y));
     let x = Axis {
         a: Pos2::new(cx(o.x - AXIS_TAIL_PX), o.y),
         b: Pos2::new(cx(o.x + AXIS_ARM_PX), o.y),
@@ -305,6 +307,17 @@ mod tests {
             }
         }
         assert_eq!(axis_cross(r, r.right_bottom() + Vec2::splat(5.0), false), AxisCross::default());
+    }
+
+    #[test]
+    fn a_canvas_smaller_than_its_edges_still_draws_the_cross_inside() {
+        for (w, h) in [(20.0, 500.0), (800.0, 20.0), (4.0, 4.0)] {
+            let r = canvas(w, h);
+            let c = axis_cross(r, r.center(), false);
+            for ax in [c.x.unwrap(), c.y.unwrap()] {
+                assert!(r.contains(ax.a) && r.contains(ax.b), "{w}x{h}: {ax:?}");
+            }
+        }
     }
 
     #[test]

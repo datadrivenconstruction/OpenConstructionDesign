@@ -254,6 +254,7 @@ impl Cond {
         let v = value.map(str::trim).filter(|v| !v.is_empty())?;
         let low = v.to_lowercase();
         let listed = |l: &[String]| l.iter().any(|w| w.trim().to_lowercase() == low);
+        // num-lint: rule value text of a check; either decimal mark is read
         let num = || v.replace(',', ".").parse::<f64>().ok();
         match self {
             Cond::Eq(_, want) => Some(low == want.trim().to_lowercase()),

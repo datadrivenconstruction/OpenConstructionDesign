@@ -1863,23 +1863,47 @@ pub(crate) fn regenerate(
     db: &Connection,
     only: Option<&std::collections::BTreeSet<i64>>,
 ) -> Result<Vec<RegenLevel>, Error> {
-    if only.is_none() {
-        db.execute("DELETE FROM wall_qty", [])?;
+    // only rows that differ are written: an unchanged quantity is not an edit of its wall
+    // (a full regeneration would otherwise mark every wall of the model as changed)
+    type Row = (String, u64, u64);
+    let mut old: std::collections::HashMap<(i64, i64), Row> = Default::default();
+    {
+        let mut st = db.prepare_cached(
+            "SELECT q.wall, q.pos, q.material, q.plan_area, q.volume, w.level FROM wall_qty q \
+             LEFT JOIN wall w ON w.id = q.wall",
+        )?;
+        let rows = st.query_map([], |r| {
+            Ok((
+                (r.get::<_, i64>(0)?, r.get::<_, i64>(1)?),
+                (r.get::<_, String>(2)?, r.get::<_, f64>(3)?.to_bits(), r.get::<_, f64>(4)?.to_bits()),
+                r.get::<_, Option<i64>>(5)?,
+            ))
+        })?;
+        for row in rows {
+            let (k, v, level) = row?;
+            // with `only`, rows of other levels stay as they are
+            if only.is_none_or(|s| level.is_some_and(|l| s.contains(&l))) {
+                old.insert(k, v);
+            }
+        }
     }
     let mut ins = db.prepare_cached("INSERT INTO wall_qty VALUES (?1,?2,?3,?4,?5)")?;
+    let mut del = db.prepare_cached("DELETE FROM wall_qty WHERE wall=?1 AND pos=?2")?;
     let mut out = vec![];
     for (level, elevation) in levels(db)? {
         if only.is_some_and(|s| !s.contains(&level)) {
             continue;
         }
-        if only.is_some() {
-            db.execute(
-                "DELETE FROM wall_qty WHERE wall IN (SELECT id FROM wall WHERE level=?1)",
-                [level],
-            )?;
-        }
         let lw = level_walls(db, level, elevation)?;
         for (wall, k, mat, area, vol) in &lw.rows {
+            let new = (mat.clone(), area.to_bits(), vol.to_bits());
+            match old.remove(&(*wall, *k)) {
+                Some(o) if o == new => continue,
+                Some(_) => {
+                    del.execute(params![wall, k])?;
+                }
+                None => {}
+            }
             ins.execute(params![wall, k, mat, area, vol])?;
         }
         out.push(RegenLevel {
@@ -1888,6 +1912,10 @@ pub(crate) fn regenerate(
             pieces: lw.pieces,
             overlaps: !lw.overlaps.is_empty(),
         });
+    }
+    // rows no wall produces any more
+    for (wall, k) in old.into_keys() {
+        del.execute(params![wall, k])?;
     }
     Ok(out)
 }

@@ -24,6 +24,7 @@ fn bare(v: &J, path: &str, plain: &Plain) -> Result<(), String> {
             "{path}: a bare number has no unit; write \"500mm\", \"2.1m\", \"90deg\" \
              or a parameter formula"
         )),
+        // num-lint: only detects a bare number in a model's argument
         J::String(s) if s.trim().parse::<f64>().is_ok_and(|x| x != 0.0) => Err(format!(
             "{path}: \"{}\" has no unit; write it with mm, m, deg or as a formula",
             s.trim()

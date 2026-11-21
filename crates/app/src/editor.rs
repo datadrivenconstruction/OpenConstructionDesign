@@ -795,12 +795,11 @@ impl Editor {
 
     /// The "Door/Window" tool with type `ty`.
     pub fn start_opening(&mut self, ty: OpeningType) {
-        crate::topo::reset(&mut self.topo);
         crate::interact::sessions::section::stop(self);
         crate::interact::sessions::model_tool::stop(self);
-        self.tool.set_mode(Mode::Select);
-        self.tool.curtain = false;
-        self.drag = None;
+        // the resets of any tool switch: an armed text, solid or topo tool would keep the input
+        self.set_mode(Mode::Select);
+        crate::roof_edge_tools::reset();
         self.otool.ty = ty;
         self.otool.reset();
         self.opening_mode = true;

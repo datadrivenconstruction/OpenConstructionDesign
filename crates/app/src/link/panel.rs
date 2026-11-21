@@ -510,6 +510,13 @@ fn assoc_due(done: &mut bool, link_on: bool) -> bool {
     go
 }
 
+/// The consent card for one waiting model, drawn alone for the layout contract.
+#[cfg(test)]
+pub(crate) fn consent_layout_probe(a: &mut EditorApp) -> crate::layout_contract::Probe {
+    a.erp.consent = vec![PathBuf::from("C:/projects/Tower.ddc")];
+    crate::layout_contract::probe_id(egui::Id::new(("ddc.modal", "erp.consent")), |ctx| consent_window(a, ctx))
+}
+
 pub fn frame(a: &mut EditorApp, ctx: &egui::Context) {
     // only with a settings file: screenshots and tests never touch the OS registration
     if a.prefs.path.is_some() && !crate::open::assoc_busy(a) && assoc_due(&mut a.erp.assoc_done, a.prefs.erp_link) {

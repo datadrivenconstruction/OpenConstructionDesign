@@ -275,6 +275,7 @@ impl Lexer<'_> {
 }
 
 fn num(s: &str) -> Option<f64> {
+    // num-lint: test script text, invariant form
     s.trim().parse::<f64>().ok().filter(|v| v.is_finite())
 }
 

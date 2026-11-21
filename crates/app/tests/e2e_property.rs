@@ -1078,11 +1078,22 @@ fn quantity_problems(m: &Model) -> Vec<String> {
             let ring_area = q.rings.first().map_or(0.0, |o| {
                 shoelace(o) - q.rings.iter().skip(1).map(|h| shoelace(h)).sum::<f64>()
             });
+            // the area is exact along arc walls, the rings are their chords (sag CHORD_SAG): a
+            // room on the hollow side of an arc exceeds its rings by at most perimeter x sag
+            let arcs: i64 = m
+                .sql()
+                .query_row(
+                    "SELECT count(*) FROM wall WHERE bulge <> 0 AND level=(SELECT level FROM room WHERE id=?1)",
+                    [id],
+                    |r| r.get(0),
+                )
+                .unwrap_or(0);
+            let chords = if arcs > 0 { q.perimeter * ddc_geom::arc::CHORD_SAG } else { 0.0 };
             let ok = q.area.is_finite()
                 && q.perimeter.is_finite()
                 && q.volume.is_finite()
                 && q.area >= -1e-9
-                && q.area <= ring_area.max(0.0) * (1.0 + 1e-6) + 1e-6;
+                && q.area <= ring_area.max(0.0) * (1.0 + 1e-6) + 1e-6 + chords;
             if !ok {
                 out.push(format!(
                     "room {id}: area {} but rings give {ring_area}",
@@ -1118,10 +1129,55 @@ fn quantity_problems(m: &Model) -> Vec<String> {
     out
 }
 
+const ABOVE_TOP: &str = "opening above wall top";
+
+/// Openings whose head rises above the lowest top of their straight profiled wall across the
+/// opening: the model allows them (only the part under the top is cut) and must report each one.
+fn openings_above_top(m: &Model) -> std::collections::BTreeSet<i64> {
+    let Ok(mut st) = m.sql().prepare(
+        "SELECT o.id, o.along, o.width, o.sill, o.height, w.top_profile FROM opening o \
+         JOIN wall w ON w.id = o.wall WHERE w.top_profile IS NOT NULL AND w.bulge = 0",
+    ) else {
+        return Default::default();
+    };
+    let rows = st.query_map([], |r| {
+        Ok((r.get::<_, i64>(0)?, [r.get::<_, f64>(1)?, r.get(2)?, r.get(3)?, r.get(4)?], r.get::<_, String>(5)?))
+    });
+    let mut out = std::collections::BTreeSet::new();
+    for (id, [along, width, sill, height], text) in rows.into_iter().flatten().flatten() {
+        let Some(top) = ddc_model::parse_top_profile(&text) else {
+            continue;
+        };
+        if sill + height > ddc_geom::top::min_height(&top, along, along + width) + 1e-9 {
+            out.insert(id);
+        }
+    }
+    out
+}
+
+/// Integrity issues as `(table, id, problem)` that fail the oracle: any issue except an opening
+/// above the top that `above` names, and every opening of `above` the report misses.
+fn integrity_problems(iss: &[(String, i64, String)], above: &std::collections::BTreeSet<i64>) -> Vec<String> {
+    let flagged = |(t, id, p): &(String, i64, String)| t == "opening" && p.starts_with(ABOVE_TOP) && above.contains(id);
+    let mut out: Vec<String> = iss.iter().filter(|i| !flagged(i)).map(|i| format!("{i:?}")).collect();
+    for id in above {
+        if !iss.iter().any(|i| flagged(i) && i.1 == *id) {
+            out.push(format!("opening {id} is above its wall top but not reported"));
+        }
+    }
+    out
+}
+
 fn check_model(m: &Model) -> Result<(), String> {
-    let iss = m.check_integrity().map_err(|e| format!("check_integrity: {e}"))?;
-    if !iss.is_empty() {
-        return Err(format!("integrity issues {iss:?}"));
+    let iss: Vec<(String, i64, String)> = m
+        .check_integrity()
+        .map_err(|e| format!("check_integrity: {e}"))?
+        .into_iter()
+        .map(|i| (i.table, i.id, i.problem))
+        .collect();
+    let bad = integrity_problems(&iss, &openings_above_top(m));
+    if !bad.is_empty() {
+        return Err(format!("integrity issues {bad:?}"));
     }
     let fk = fk_violations(m);
     if !fk.is_empty() {
@@ -1578,6 +1634,19 @@ fn env_num(name: &str, default: u64) -> u64 {
 }
 
 // ---------------------------------------------------------------- tests
+
+/// An opening above its wall top passes only while the report names it; any other issue fails.
+#[test]
+fn an_unreported_opening_above_the_top_fails_the_oracle() {
+    let above: std::collections::BTreeSet<i64> = [7].into();
+    let flag = |id: i64| ("opening".to_string(), id, format!("{ABOVE_TOP} (2.100 > 0.062): only the part under the top is cut"));
+    assert!(integrity_problems(&[flag(7)], &above).is_empty());
+    assert_eq!(integrity_problems(&[], &above).len(), 1, "unreported opening passed");
+    assert_eq!(integrity_problems(&[flag(8)], &above).len(), 2, "a wrong opening reported");
+    assert_eq!(integrity_problems(&[flag(7)], &Default::default()).len(), 1, "a false report passed");
+    let other = ("wall".to_string(), 3, "zero length".to_string());
+    assert_eq!(integrity_problems(&[flag(7), other], &above).len(), 1);
+}
 
 #[test]
 fn e2e_property_fixture_has_every_kind() {

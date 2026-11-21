@@ -69,11 +69,13 @@ impl PlanRead {
     }
 }
 
-/// Proposal settings for a picture: tolerances of a pixel, piers down to 0.4 m, and only
-/// small closed figures (fixtures) dropped as symbols.
+/// Proposal settings for a picture: tolerances of a pixel, piers down to 0.4 m less two pixels
+/// (a face end lands on a pixel, so a 0.41 m pier can read 0.39), and only small closed figures
+/// (fixtures) dropped as symbols.
 pub fn raster_options(px_per_m: f64) -> ProposeOptions {
     let mut o = vector_options();
     let px = 1.0 / px_per_m;
+    o.walls.min_length = (o.walls.min_length - 2.0 * px).max(0.5 * o.walls.min_length);
     o.walls.tol = o.walls.tol.max(px);
     o.walls.angle_tol = o.walls.angle_tol.max(0.01);
     o.walls.min_thickness = o.walls.min_thickness.max(3.5 * px).min(o.walls.max_thickness);
@@ -162,18 +164,22 @@ pub fn read_plan(
     let skeleton_px = m.skel.iter().filter(|&&v| v).count();
 
     // long lines first, then swings from what is left, then the short lines
-    let mut segs = lines::segments(w, h, &mut m.skel, (0.45 * k).max(10.0));
+    let mut segs = lines::segments(w, h, &mut m.skel, (0.45 * k).max(10.0), true);
     let (dmin, dmax) = (po.door_width.0 * 0.8, po.door_width.1 * 1.15);
     let mut swings = arcs::arcs(w, h, &m.skel, (dmin * k, dmax * k));
     for a in &swings {
         clear_arc(a, &mut m.skel, w, h);
     }
-    segs.extend(lines::segments(w, h, &mut m.skel, (0.3 * k).max(8.0)));
+    segs.extend(lines::segments(w, h, &mut m.skel, (0.3 * k).max(8.0), false));
     for s in &mut segs {
         onto_edge(s, &m.thick, w, h);
     }
     let dom = lines::orthogonalize(&mut segs, 1.5);
+    lines::close_corners(&mut segs, 3.0);
     arcs::snap_leaves(&mut swings, &mut segs);
+    // a leaf closed onto its face, then snapped to the swing centre, leaves a 1-2 px stub that
+    // reads as a dimension tick; the passes take nothing under 8 px, so only snaps leave these
+    segs.retain(|s| s.len() >= 3.0);
 
     let hf = h as f64;
     let pt = |p: (f64, f64)| (p.0 / k, (hf - p.1) / k);

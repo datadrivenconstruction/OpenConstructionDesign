@@ -366,6 +366,8 @@ fn exercise(id: &str, sc: Scenario) -> Vec<String> {
     let dump0 = ec::dump_data(&a.ed.model);
     let steps0 = a.ed.undo_len();
     let said0 = (a.sh.toasts.history.len(), a.ed.status.clone());
+    // a command that acts may clear the selection (Hide does): the refusal is about the one before
+    let none_selected = a.ed.selection.is_empty();
 
     a.run(id);
     frame(&mut a, &ctx, &mut t);
@@ -378,7 +380,7 @@ fn exercise(id: &str, sc: Scenario) -> Vec<String> {
     let changed = !swapped && m.content_hash().unwrap() != h0;
     let steps = a.ed.undo_len();
     let opened: Vec<&String> = wins1.difference(&wins0).collect();
-    if UX68D.contains(&id) && a.ed.selection.is_empty() && sc != Scenario::Empty {
+    if UX68D.contains(&id) && none_selected && sc != Scenario::Empty {
         let said = (a.sh.toasts.history.len(), a.ed.status.clone());
         if said.0 == said0.0 && said.1 == said0.1 {
             bad.push(format!("{tag}: nothing selected, refused without a word (ux68d)"));

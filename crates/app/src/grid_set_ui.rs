@@ -50,9 +50,12 @@ thread_local! {
 }
 
 pub fn register(app: &mut crate::shell::EditorApp) {
-    app.register_command("arch.grid_set", |_| {
-        WIN.with(|w| w.borrow_mut().open = true);
-    });
+    app.register_command("arch.grid_set", |_| open());
+}
+
+/// Opens the window; it draws from the next frame on.
+pub fn open() {
+    WIN.with(|w| w.borrow_mut().open = true);
 }
 
 fn number(s: &str) -> Option<f64> {

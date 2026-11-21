@@ -419,18 +419,27 @@ fn xlsx_edit_tags_follow_dims_update() {
     same_fp(&fp_tags(m, l), &fp_tags(&twin.model, l), "tags vs twin");
     same_fp(&fp_dims(m, l), &fp_dims(&twin.model, l), "dims vs twin");
 
-    // the room is untouched, so is its tag; notes and detail line are untouched
-    let room_tag = |m: &Model| {
-        let t: Vec<_> = m
-            .tags(l)
-            .unwrap()
+    // the room row is untouched, so is its tag: same place, number and name. Its area is
+    // measured from the walls, and the moved wall 2 no longer meets wall 3, so the area is
+    // whatever the same walls give on the twin
+    let room_tags = |m: &Model| -> Vec<ddc_model::Tag> {
+        m.tags(l).unwrap().into_iter().filter(|t| t.cat == TagCat::Room).collect()
+    };
+    let no_area = |m: &Model| {
+        let t: Vec<_> = room_tags(m)
             .into_iter()
-            .filter(|t| t.cat == TagCat::Room)
+            .map(|mut t| {
+                t.text.area = None;
+                t
+            })
             .collect();
         split_nums(&format!("{t:?}"))
     };
     let before = annotated();
-    same_fp(&room_tag(m), &room_tag(&before.model), "room tag");
+    assert_eq!(room_tags(m).len(), 1);
+    same_fp(&no_area(m), &no_area(&before.model), "room tag");
+    let area = |m: &Model| room_tags(m)[0].text.area;
+    assert_eq!(area(m), area(&twin.model), "room tag area vs twin");
     same_fp(&fp_notes(m, l), &notes0, "notes");
     assert_ne!(fp_tags(m, l).1, tags0.1, "tags did move");
 }
@@ -587,23 +596,31 @@ fn save_reopen_keeps_annotations() {
         same_fp(&fp_dims(&r, l), &dims, "dims");
         same_fp(&fp_notes(&r, l), &notes, "notes");
 
-        // the text and the positions, read back one by one
+        // the text and the positions, read back one by one (annos come in draw order, text
+        // last, so each is picked by its shape)
         let annos = r.annos(AnnoView::Plan(l)).unwrap();
-        match &annos[0].shape {
-            AnnoShape::Text(n) => {
-                assert_eq!(n.text, "Slab edge");
-                assert!(near2(n.pos, (1.0, 3.0)));
-            }
-            s => panic!("first note is not text: {s:?}"),
-        }
-        match &annos[1].shape {
-            AnnoShape::Line { pts, closed } => {
-                assert!(!closed);
-                assert_eq!(pts.len(), 2);
-                assert!(near2(pts[0], (1.0, 1.0)) && near2(pts[1], (2.5, 1.5)));
-            }
-            s => panic!("second note is not a line: {s:?}"),
-        }
+        let texts: Vec<_> = annos
+            .iter()
+            .filter_map(|a| match &a.shape {
+                AnnoShape::Text(n) => Some(n),
+                _ => None,
+            })
+            .collect();
+        assert_eq!(texts.len(), 1, "{annos:?}");
+        assert_eq!(texts[0].text, "Slab edge");
+        assert!(near2(texts[0].pos, (1.0, 3.0)));
+        let lines: Vec<_> = annos
+            .iter()
+            .filter_map(|a| match &a.shape {
+                AnnoShape::Line { pts, closed } => Some((pts, *closed)),
+                _ => None,
+            })
+            .collect();
+        assert_eq!(lines.len(), 1, "{annos:?}");
+        let (pts, closed) = lines[0];
+        assert!(!closed);
+        assert_eq!(pts.len(), 2);
+        assert!(near2(pts[0], (1.0, 1.0)) && near2(pts[1], (2.5, 1.5)));
         let room = r
             .tags(l)
             .unwrap()

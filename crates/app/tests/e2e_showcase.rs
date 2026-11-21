@@ -29,12 +29,30 @@ fn counts(m: &Model) -> Vec<(&'static str, i64)> {
 }
 
 fn load(name: &str, m: Model) -> Result<Editor, String> {
-    let want = counts(&m);
+    let mut want = counts(&m);
+    // the editor places and shows everything on an active level: a model without levels gets
+    // the one seed level at 0 a new project starts with, and nothing else
+    let levelless = want[0] == ("level", 0);
+    if levelless {
+        want[0].1 = 1;
+    }
     let mut ed = Editor::new_in_memory().map_err(|e| e.to_string())?;
     ed.replace_model(m).map_err(|e| format!("load: {e}"))?;
     let got = counts(&ed.model);
     if got != want {
         return Err(format!("{name} in the editor: {got:?}, built {want:?}"));
+    }
+    let levels = ed.model.level_list().map_err(|e| e.to_string())?;
+    if levelless && (levels.len() != 1 || levels[0].0 != ed.level || levels[0].2 != 0.0) {
+        return Err(format!("{name}: seed level {levels:?}, active {}", ed.level));
+    }
+    // the load is no edit: nothing to undo, and loading again writes nothing more
+    if ed.can_undo() {
+        return Err(format!("{name}: the load left an undo step"));
+    }
+    ed.reload().map_err(|e| format!("reload: {e}"))?;
+    if counts(&ed.model) != want {
+        return Err(format!("{name}: a second load changed {:?}", counts(&ed.model)));
     }
     valid(&ed.model, "in the editor")?;
     Ok(ed)

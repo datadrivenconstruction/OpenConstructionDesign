@@ -215,7 +215,9 @@ fn replay(id: &str) {
     assert_eq!(results.len(), 3, "{results:?}");
     assert!(results.iter().all(|r| !r.1), "{id}: {results:?}");
     let list = parsed(&results[0].0);
-    assert_eq!(list["recipes"].as_array().map(Vec::len), Some(22), "{list}");
+    // The tool lists the whole recipe table, no more and no less.
+    assert_eq!(list["recipes"].as_array().map(Vec::len), Some(ddc_script::recipes::RECIPES.len()), "{list}");
+    assert!(ddc_script::recipes::RECIPES.len() >= 22, "recipes only grow");
     assert!(list["blocks"].as_str().is_some_and(|b| b.contains("surface_grid{")));
     let one = parsed(&results[1].0);
     assert_eq!(one["script"].as_str(), Some(script));

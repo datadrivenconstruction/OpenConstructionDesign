@@ -586,8 +586,21 @@ fn place(
     if from == dest && dest.exists() {
         // the new book is compared with the old one: what it would drop is asked about first;
         // cells of rows gone from the model are not counted there, `lost` covers them
-        let given = opts.apply.as_ref().map_or(0, |t| t.created + t.matched);
-        let losses = xlsx::reexport_losses(dest, &part, &crate::elem::sheets::families(), given);
+        let fams = crate::elem::sheets::families();
+        let (created, matched) = opts.apply.as_ref().map_or((0, 0), |t| (t.created, t.matched));
+        let mut losses = xlsx::reexport_losses(dest, &part, &fams, created + matched);
+        // rows an earlier Apply created (a plain export, or after a restart) are numbered by
+        // this export too; only rows the records claim by fingerprint count, a new typed row
+        // without a record is still a loss
+        if losses.as_ref().is_ok_and(|l| !l.is_empty()) {
+            if let Ok(made) = super::xlsx_export_verify::made_rows(model, dest) {
+                // this Apply's created rows are among the recorded ones: not counted twice
+                let rest = created.saturating_sub(made.values().sum());
+                if !made.is_empty() {
+                    losses = xlsx::reexport_losses_made(dest, &part, &fams, rest + matched, &made);
+                }
+            }
+        }
         let refused = match &losses {
             Ok(l) => xlsx::refusal(l, &opts.accept_losses),
             Err(e) => Some(e.clone()),

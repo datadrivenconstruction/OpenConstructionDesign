@@ -47,6 +47,8 @@ const ELSEWHERE: &[(&str, &str)] = &[
     ("design_plant", "e2e_ai_plant"),
     ("plan_station", "e2e_ai_station"),
     ("replan_items", "e2e_ai_readset: needs items of an earlier chat turn"),
+    ("underlay_trace", "e2e_ai_attach: needs an attached drawing of the chat"),
+    ("plan_from_image", "e2e_ai_scenarios: needs an attached picture of the chat"),
 ];
 
 struct Case {

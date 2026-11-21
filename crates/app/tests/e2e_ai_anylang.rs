@@ -189,6 +189,20 @@ fn the_same_tool_args_give_the_same_project_in_every_language() {
     }
 }
 
+/// A reason the UI catalog can render has the same English template in the tool reply.
+#[test]
+fn every_reason_of_the_catalog_has_its_english_template() {
+    let en = Catalog::new(Lang::En);
+    let mut n = 0;
+    for (k, v) in en.table(Lang::En) {
+        let Some(key) = k.strip_prefix("gen.why.e.") else { continue };
+        n += 1;
+        let t = ddc_gen::project::why_text::any_template(key);
+        assert_eq!(t, v.as_str(), "{key}: the catalog and the tool reply read differently");
+    }
+    assert!(n >= 20, "{n} reasons in the catalog");
+}
+
 /// Reasons are keyed: every one renders in every UI language without leaking the key, English
 /// reads exactly as the tool reply, Russian is translated with the same values.
 #[test]

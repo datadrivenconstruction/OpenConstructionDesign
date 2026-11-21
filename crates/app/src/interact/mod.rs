@@ -273,6 +273,10 @@ impl Interaction {
             }
             ed.ix.scope = Scope::from_legacy(ed);
         }
+        if matches!(i, Input::Move(_)) {
+            // a rest is timed from the move that reached the point, not from the next clock tick
+            ed.tool.tick(ed.ix.now_ms);
+        }
         if esc && ed.ix.session.is_none() {
             // an Esc that left its tool still counts: the begin/end it caused do not restart the run
             ed.ix.esc_run = run;

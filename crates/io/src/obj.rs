@@ -108,6 +108,7 @@ pub fn parse_mtl(text: &str) -> Vec<(String, [f32; 4])> {
     let mut out: Vec<(String, [f32; 4])> = vec![];
     for line in text.lines() {
         let mut it = line.split_whitespace();
+        // num-lint: OBJ file numbers, invariant form by the file format
         let num = |s: Option<&str>| s.and_then(|x| x.parse::<f32>().ok()).filter(|x| x.is_finite());
         match it.next() {
             Some("newmtl") => out.push((it.collect::<Vec<_>>().join(" "), [0.8, 0.8, 0.8, 1.0])),

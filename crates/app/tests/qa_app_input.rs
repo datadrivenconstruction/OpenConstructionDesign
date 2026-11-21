@@ -61,12 +61,7 @@ fn every_command_has_a_label_in_en_and_ru() {
 
 /// Registered commands whose tool is not built yet (stage M): the shell keeps them off the
 /// ribbon and the palette. The list only shrinks: wire a command, then delete it here.
-const UNWIRED: &[&str] = &[
-    "view.tabs", "view.tile", "mgr.import_pdf", "mgr.workplane", "mgr.scripts", "mgr.record",
-    "data.query", "data.classify", "ctx.wall.profile", "ctx.mep.fitting", "mod.explain",
-    "view.sync_sel", "app.where_is", "view.goto",
-    "view.section_here", "browser.row_open", "browser.row_rename", "browser.row_delete",
-];
+const UNWIRED: &[&str] = &[];
 
 #[test]
 fn every_command_is_handled_or_listed_as_unwired_and_disabled() {

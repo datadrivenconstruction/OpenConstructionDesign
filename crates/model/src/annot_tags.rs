@@ -1090,6 +1090,73 @@ fn wall_specs(db: &Connection, level: i64, walls: &[i64]) -> Result<Vec<DimSpec>
     Ok(out)
 }
 
+/// An annotation a deletion takes along (`tag`: the tag is removed) or orphans (a dimension).
+#[derive(Clone, Debug, PartialEq, Eq)]
+pub struct AnnotLoss {
+    pub id: i64,
+    pub tag: bool,
+    /// The deleted element (table, id) it goes with: for a tag of a door in a deleted wall, the wall.
+    pub owner: (String, i64),
+}
+
+impl Model {
+    /// Annotations a deletion of `items` (table, id) touches, as the delete itself does it: a wall
+    /// takes its openings and hosted components, a slab its hosted components; tags of every row
+    /// that goes are removed, dimensions measuring a wall or opening that goes become orphans.
+    /// Each annotation once, in id order.
+    pub fn annotations_of_deleted(&self, items: &[(&str, i64)]) -> Result<Vec<AnnotLoss>, Error> {
+        // (table, id) of every row that goes -> the item it goes with
+        let mut gone: BTreeMap<(String, i64), (String, i64)> = BTreeMap::new();
+        for &(t, id) in items {
+            gone.insert((t.to_string(), id), (t.to_string(), id));
+        }
+        let hosted = [
+            ("wall", "SELECT id FROM opening WHERE wall=?1", "opening"),
+            ("wall", "SELECT id FROM comp WHERE host_wall=?1", "comp"),
+            ("slab", "SELECT id FROM comp WHERE host_slab=?1", "comp"),
+        ];
+        for &(t, id) in items {
+            for (host, sql, table) in hosted {
+                if t != host {
+                    continue;
+                }
+                let mut st = self.db.prepare_cached(sql)?;
+                let ids: Vec<i64> = st.query_map([id], |r| r.get(0))?.collect::<Result<_, _>>()?;
+                for h in ids {
+                    gone.entry((table.to_string(), h)).or_insert_with(|| (t.to_string(), id));
+                }
+            }
+        }
+        let owner = |table: &str, id: i64| gone.get(&(table.to_string(), id)).cloned();
+        let mut out = vec![];
+        for (id, s) in tag_rows(&self.db, None)? {
+            if let Some(o) = owner(s.host.table(), s.host.id()) {
+                out.push(AnnotLoss { id, tag: true, owner: o });
+            }
+        }
+        let mut st = self.db.prepare("SELECT id, refs FROM dim WHERE kind<>'tag' ORDER BY id")?;
+        let dims: Vec<(i64, String)> =
+            st.query_map([], |r| Ok((r.get(0)?, r.get(1)?)))?.collect::<Result<_, _>>()?;
+        for (id, refs) in dims {
+            let hit = refs.split(';').filter_map(super::parse_ref).find_map(|r| match r {
+                DimRef::WallEnd { wall, .. }
+                | DimRef::AxisEnd { wall, .. }
+                | DimRef::AxisLine { wall }
+                | DimRef::ArcFace { wall, .. }
+                | DimRef::WallLevel { wall, .. }
+                | DimRef::GridAt { wall, .. } => owner("wall", wall),
+                DimRef::OpeningEdge { opening, .. } => owner("opening", opening),
+                DimRef::Point(_) => None,
+            });
+            if let Some(o) = hit {
+                out.push(AnnotLoss { id, tag: false, owner: o });
+            }
+        }
+        out.sort_by_key(|a| a.id);
+        Ok(out)
+    }
+}
+
 #[path = "annot_tags_bins.rs"]
 mod bins;
 

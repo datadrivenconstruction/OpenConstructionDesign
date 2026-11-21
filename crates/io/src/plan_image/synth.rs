@@ -83,7 +83,10 @@ impl Piece {
     fn has(&self, p: P) -> bool {
         let r = sub(p, self.a);
         let (t, s) = (r.0 * self.d.0 + r.1 * self.d.1, r.0 * self.n.0 + r.1 * self.n.1);
-        t >= self.t0 && t < self.t1 && s >= -self.hw && s < self.hw
+        // A face on a pixel centre rounds to either side; one shared nudge keeps the
+        // half-open count, so a 0.1 m wall is 5 px at 50 px/m wherever it sits.
+        const E: f64 = 1e-9;
+        t >= self.t0 - E && t < self.t1 - E && s >= -self.hw - E && s < self.hw - E
     }
 }
 

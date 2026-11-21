@@ -46,9 +46,11 @@ pub fn tags_of(material: &str) -> (String, Tags) {
             "ecc" => t.ecc = true,
             "plate" => t.plate = true,
             "bolt" => {
+                // num-lint: bolt and hole sizes in a stored spec this module writes
                 let d = v.trim_start_matches(['M', 'm']).parse::<f64>().ok();
                 t.bolt = Some(d.map(|d| d / 1000.0));
             }
+            // num-lint: bolt and hole sizes in a stored spec this module writes
             "hole" => t.hole = v.parse::<f64>().ok().map(|d| d / 1000.0),
             _ => {}
         }

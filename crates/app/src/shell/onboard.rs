@@ -244,7 +244,7 @@ impl EditorApp {
         self.prefs.save();
     }
 
-    pub(super) fn onboarding_window(&mut self, ctx: &egui::Context) {
+    pub(crate) fn onboarding_window(&mut self, ctx: &egui::Context) {
         if !self.chrome.onboard.open {
             return;
         }

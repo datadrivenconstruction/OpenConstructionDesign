@@ -51,6 +51,7 @@ pub fn parse(text: &str) -> Result<RivetCatalog, String> {
             continue;
         }
         let c: Vec<&str> = l.split(',').map(str::trim).collect();
+        // num-lint: bundled rivets.csv, invariant form
         let num = |s: &str| s.parse::<f64>().map_err(|_| format!("rivets.csv:{}: bad number '{s}'", n + 1));
         if in_rules {
             if c.len() != 2 {

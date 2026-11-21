@@ -10,7 +10,6 @@ use crate::shell::EditorApp;
 use crate::wall_tool::Event;
 use ddc_model::refusal::{Fix, Refusal, RefusalCode};
 use ddc_ui::Catalog;
-use std::cell::RefCell;
 
 /// Fix commands this module registers; every `Fix.command` built here is one of them.
 pub const FIX_COMMANDS: &[&str] = &["arch.door.set_width", "wall.extend"];
@@ -139,22 +138,28 @@ pub fn fix_label(f: &Fix, cat: &Catalog) -> String {
     cat.tf(f.label_key, &args)
 }
 
-thread_local! {
-    /// Arguments of the fix being run; commands take none, so they read them here.
-    static ARGS: RefCell<Vec<(String, String)>> = const { RefCell::new(Vec::new()) };
-}
-
-fn arg(k: &str) -> Option<f64> {
-    ARGS.with(|a| a.borrow().iter().find(|(key, _)| key == k).and_then(|(_, v)| v.parse().ok()))
-}
-
 /// Run a fix: its command with the fix arguments. False if the command did nothing.
+/// The commands in `FIX_COMMANDS` take arguments, so they run here and stay out of the
+/// command registry (a palette entry without arguments would do nothing); any other fix
+/// command is a registry command.
 pub fn run_fix(app: &mut EditorApp, f: &Fix) -> bool {
-    ARGS.with(|a| *a.borrow_mut() = f.args.clone());
     app.ed.ix.dismiss_offer();
-    let ok = app.run(f.command);
-    ARGS.with(|a| a.borrow_mut().clear());
-    ok
+    // num-lint: fix arguments are numbers this module wrote with format!, not user text
+    let arg = |k: &str| f.args.iter().find(|(key, _)| key == k).and_then(|(_, v)| v.parse::<f64>().ok());
+    match f.command {
+        "arch.door.set_width" => {
+            let w = arg("w");
+            app.run_as(f.command, |app| w.is_some_and(|w| set_opening_width(&mut app.ed, w)))
+        }
+        "wall.extend" => {
+            let (id, len) = (arg("wall"), arg("len"));
+            app.run_as(f.command, |app| match (id, len) {
+                (Some(id), Some(len)) => extend_wall(&mut app.ed, id as i64, len),
+                _ => false,
+            })
+        }
+        other => app.run(other),
+    }
 }
 
 /// Set the width of the opening being placed (mm) and place it where the cursor is: one operation.
@@ -175,19 +180,6 @@ pub fn extend_wall(ed: &mut Editor, id: i64, len_mm: f64) -> bool {
     }
     ed.edit_wall(id, Some(len_mm / 1000.0), None, None);
     true
-}
-
-pub fn register(app: &mut EditorApp) {
-    app.register_command("arch.door.set_width", |app| {
-        if let Some(w) = arg("w") {
-            set_opening_width(&mut app.ed, w);
-        }
-    });
-    app.register_command("wall.extend", |app| {
-        if let (Some(id), Some(len)) = (arg("wall"), arg("len")) {
-            extend_wall(&mut app.ed, id as i64, len);
-        }
-    });
 }
 
 #[cfg(test)]
@@ -266,11 +258,23 @@ mod tests {
     }
 
     #[test]
-    fn fix_commands_are_registered() {
-        let app = EditorApp::new(Editor::new_in_memory().unwrap(), None, "test".into());
+    fn fix_commands_run_with_their_arguments_outside_the_registry() {
+        let mut app = EditorApp::new(Editor::new_in_memory().unwrap(), None, "test".into());
         for c in FIX_COMMANDS {
-            assert!(app.handlers.contains_key(*c), "{c} is not registered");
+            assert!(!app.handlers.contains_key(*c), "{c} is a handler without arguments");
+            assert!(app.sh.reg.get(c).is_none(), "{c} is in the command registry");
         }
+        app.ed.commit_walls(vec![(ddc_geom::v2(0.0, 0.0), ddc_geom::v2(0.6, 0.0))]);
+        let w = app.ed.walls.last().expect("a wall").id;
+        let fix = |args: &[(&str, &str)]| Fix {
+            label_key: "ix.fix.wall_extend",
+            command: "wall.extend",
+            args: args.iter().map(|(k, v)| (k.to_string(), v.to_string())).collect(),
+        };
+        assert!(!run_fix(&mut app, &fix(&[("wall", &w.to_string())])), "no length, no change");
+        assert!(run_fix(&mut app, &fix(&[("wall", &w.to_string()), ("len", "1100")])));
+        let len = app.ed.walls.iter().find(|x| x.id == w).map(|x| (x.b - x.a).len()).unwrap();
+        assert!((len - 1.1).abs() < 1e-6, "{len}");
         let r = place_refusal(&PlaceError::Outside { len: 0.6, from: 0.0, to: 0.9 }, Some(3));
         assert_eq!(r.code, RefusalCode::OpeningWiderThanWall);
         assert_eq!(r.fixes.len(), 2);

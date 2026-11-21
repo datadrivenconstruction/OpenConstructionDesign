@@ -1106,6 +1106,7 @@ impl<'a> Row<'a> {
             return false;
         };
         self.skip(rep, "id", format!("row already created as {id}, export the workbook again"));
+        *rep.made_rows.entry(self.tab.name.to_string()).or_default() += 1;
         true
     }
 
@@ -1905,6 +1906,60 @@ fn missing(
         }
     }
     rep.note_deletions(sheet, deleted, total);
+}
+
+/// Column of a report row about a tag a deletion removes, or a dimension it orphans.
+pub(crate) const ANNOT_TAG: &str = "tag";
+pub(crate) const ANNOT_DIM: &str = "dimension";
+
+/// Lists, one row each, the tags the planned deletions remove and the dimensions they orphan
+/// (`fams`: family sheets whose deleted rows count too). Rebuilds the list on every call.
+pub(crate) fn note_annotations(model: &Model, rep: &mut Report, fams: &[super::family::FamilySheet]) {
+    let note = |i: &Ignored| i.row == 0 && i.col == 0 && (i.column == ANNOT_TAG || i.column == ANNOT_DIM);
+    rep.ignored.retain(|i| !note(i));
+    let mut items: Vec<(&str, i64)> = rep.edits.iter().filter_map(Edit::deletes).collect();
+    for c in rep.changes.iter().filter(|c| c.kind() == "deleted") {
+        if let (Some(f), Some(id)) = (fams.iter().find(|f| f.sheet == c.sheet), c.id) {
+            items.push((f.table, id));
+        }
+    }
+    if items.is_empty() {
+        return;
+    }
+    let lost = match model.annotations_of_deleted(&items) {
+        Ok(v) => v,
+        Err(e) => {
+            rep.warnings.push(Rejection {
+                sheet: "(model)".into(),
+                row: 0,
+                col: 0,
+                column: String::new(),
+                reason: format!("cannot check annotations of deleted elements: {e}"),
+            });
+            return;
+        }
+    };
+    for a in lost {
+        let (table, owner) = (a.owner.0.as_str(), a.owner.1);
+        let sheet = super::extra::sheet_of_kind(table)
+            .or_else(|| fams.iter().find(|f| f.table == table).map(|f| f.sheet))
+            .unwrap_or("(model)");
+        let (column, reason) = if a.tag {
+            (ANNOT_TAG, format!("tag {} is removed with {table} {owner}", a.id))
+        } else {
+            (ANNOT_DIM, format!("dimension {} loses {table} {owner} and keeps its last shape", a.id))
+        };
+        rep.ignored.push(Ignored {
+            sheet: sheet.into(),
+            row: 0,
+            col: 0,
+            column: column.into(),
+            id: Some(owner),
+            old: String::new(),
+            new: String::new(),
+            reason,
+        });
+    }
 }
 
 struct RoomRow {
@@ -3440,10 +3495,11 @@ pub fn import_xlsx_keyed(
                 cur.map(|c| level_names[&c.level].as_str()),
                 cur.and_then(|c| levels.get(&c.level)).map(|l| l.0.as_str()),
             );
-            let tname = row.text(
+            let tname = row.text_alias(
                 rep,
                 "type",
                 cur.map(|c| type_name.get(&c.stype).copied().unwrap_or("")),
+                cur.and_then(|c| old_names.get(&c.stype)).map(String::as_str),
             );
             let offset = row.num_keep(rep, "offset", cur.map(|c| c.offset), Some(0.0));
             let cur_rings = id.and_then(|i| rings.get(&i));
@@ -3875,6 +3931,7 @@ pub fn import_xlsx_keyed(
             });
         }
     }
+    note_annotations(model, &mut report, &[]);
     if report.blocking() > 0 || !opts.apply {
         return Ok(report);
     }

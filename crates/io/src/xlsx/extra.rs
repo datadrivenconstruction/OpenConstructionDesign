@@ -682,6 +682,7 @@ fn cached_result(d: Option<&Data>) -> Option<String> {
         Data::DateTime(t) => Some(t.as_f64().to_string()),
         Data::Error(e) => Some(e.to_string()).filter(|t| WRITER_ERRORS.contains(&t.as_str())),
         Data::String(s) => {
+            // num-lint: only tells a typed number cell from text
             let typed = s.parse::<f64>().is_ok()
                 || matches!(s.as_str(), "TRUE" | "FALSE")
                 || s.starts_with('#');

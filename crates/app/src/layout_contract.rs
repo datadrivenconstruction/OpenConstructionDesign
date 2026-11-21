@@ -4093,10 +4093,14 @@ fn ribbon_collapsed_menus(lang: Lang) {
                 }
                 let _ = pass_on(&ctx, &mut dth, id, screen, vec![key(egui::Key::Escape)], &mut frame);
                 let shut = pass_on(&ctx, &mut dth, id, screen, vec![], &mut frame);
+                // the ribbon's own controls on the title strip were there before the menu opened
+                let before = |c: &Control| {
+                    p.controls.iter().any(|b| b.label == c.label && (b.rect.min - c.rect.min).length() <= EPS)
+                };
                 let left: Vec<_> = shut
                     .controls
                     .iter()
-                    .filter(|c| c.rect.top() >= below - EPS)
+                    .filter(|c| c.rect.top() >= below - EPS && !before(c))
                     .map(|c| (&c.label, c.rect))
                     .collect();
                 assert!(left.is_empty(), "{tag}: Esc left the menu open: head {:?}, {left:?}", head.rect);
@@ -5958,6 +5962,53 @@ fn schedule_reading_ru() {
     schedule_reading(Lang::Ru);
 }
 
+/// Windows drawn alone in both languages: the grid set, the preview of an attached file, the
+/// link consent, the missing-workbook card in its cases and every step of the first-start wizard.
+fn small_windows(lang: Lang) {
+    let ru = lang == Lang::Ru;
+    let mut probes: Vec<(String, Probe)> = vec![];
+    crate::with_test_lang(ru, || {
+        let mut ed = Editor::new_in_memory().unwrap();
+        crate::grid_set_ui::open();
+        let p = probe("grid_set", |ctx| crate::grid_set_ui::window(ctx, &mut ed, ru));
+        probes.push(("grid set".into(), p));
+        probes.push(("attached file preview".into(), crate::ai::ui::attach_ui::layout_probe(lang)));
+        for (found, left) in [(0, false), (1, false), (3, false), (1, true)] {
+            let p = crate::shell::xlsx_relink::layout_probe(ru, found, left);
+            probes.push((format!("workbook card found={found} left={left}"), p));
+        }
+        // the ERP link is an optional feature: its consent window exists only with it
+        #[cfg(feature = "link")]
+        {
+            let mut app = app_neutral(lang);
+            probes.push(("link consent".into(), crate::link::panel::consent_layout_probe(&mut app)));
+        }
+        let mut app = app_neutral(lang);
+        app.open_onboarding(0);
+        for step in 0..crate::shell::onboard::STEPS {
+            app.chrome.onboard.step = step;
+            let p = probe_on(modal_id("onboard"), (1280.0, 720.0), |ctx| app.onboarding_window(ctx));
+            probes.push((format!("wizard step {step}"), p));
+        }
+    });
+    for (what, p) in &probes {
+        let tag = format!("{what} {lang:?}");
+        assert!(p.inner.is_some(), "{tag}: the window was not drawn");
+        assert_contract(&tag, p, false);
+        assert_language(&tag, p, lang);
+    }
+}
+
+#[test]
+fn small_windows_en() {
+    small_windows(Lang::En);
+}
+
+#[test]
+fn small_windows_ru() {
+    small_windows(Lang::Ru);
+}
+
 /// Multi-selection of two walls with a project parameter that differs: the block title, the
 /// parameter row and `<varies>` show whole at the panel widths, the row stays editable.
 fn multi_params(lang: Lang) {
@@ -6005,11 +6056,16 @@ en_ru!(multi_params, multi_params_en, multi_params_ru);
 /// and the two-letter import mnemonic shows as two keycaps.
 fn welcome_card(lang: Lang) {
     let id = egui::Id::new("ddc.welcome");
-    let long = "C:\\Users\\someone\\AppData\\Local\\Temp\\projects\\a-very-long-folder-name\\\
-                another-long-folder\\deeper\\still-deeper\\Tower.ddc";
+    // paths as this system writes them: a backslash separates folders on one system only
+    let sep = std::path::MAIN_SEPARATOR_STR;
+    let long = [
+        "C:", "Users", "someone", "AppData", "Local", "Temp", "projects", "a-very-long-folder-name",
+        "another-long-folder", "deeper", "still-deeper", "Tower.ddc",
+    ]
+    .join(sep);
     for screen in [(1024.0, 768.0), (1280.0, 800.0)] {
         let mut app = app_in(lang);
-        app.prefs.recent = vec![long.to_string(), "C:\\p\\Short.ifc".to_string()];
+        app.prefs.recent = vec![long.clone(), ["C:", "p", "Short.ifc"].join(sep)];
         let (ctx, mut th) = driven_ctx();
         let mut frame = |ctx: &egui::Context| {
             let area = ctx.screen_rect();

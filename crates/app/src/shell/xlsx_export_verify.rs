@@ -131,6 +131,19 @@ fn dry(
     xlsx::import_xlsx_families_hooked(model, part, o, &fams, &take, &dec, hook)
 }
 
+/// Id-less rows of the book at `dest` that the project's records show an earlier Apply already
+/// created (matched by fingerprint, as an import matches them): a re-export writes their ids.
+pub fn made_rows(
+    model: &ddc_model::Model,
+    dest: &Path,
+) -> Result<std::collections::BTreeMap<String, usize>, String> {
+    if super::xlsx_links::load(model, dest).is_empty() {
+        return Ok(Default::default());
+    }
+    let mut h = handle(model)?;
+    Ok(dry(h.get(), dest, dest, None)?.made_rows)
+}
+
 /// Every difference of the book at `part` from `model`, first one first; Err when the check
 /// could not run. `kept` and `notes` are the export's kept conflict cells and cut cells.
 pub fn differences(

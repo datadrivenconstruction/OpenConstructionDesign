@@ -71,6 +71,13 @@ const PROBED_VIA: &[(&str, &str)] = &[
     ("mcp.settings", "mcp_bridge::layout_probe("),
     ("ai.audit", "audit_ui::{layout_probe"),
     ("ai.panel", "tests_states::layout_probe("),
+    ("type_properties", "type_dialog::{layout_probe"),
+    ("wall_type_library", "tl::layout_probe("),
+    ("wall_type_swap", "tl::Case::Swap"),
+    ("sched_import.reading", "Id::new(\"sch3_reading\")"),
+    ("ddc.ai.att.preview", "attach_ui::layout_probe("),
+    ("erp.consent", "panel::consent_layout_probe("),
+    ("xlsx_relink", "xlsx_relink::layout_probe("),
 ];
 
 const CTORS: [&str; 3] = ["Dialog::new(", "Window::new(", "modal_dialog("];

@@ -15,6 +15,14 @@ use ddc_render::{TAG_DOOR, TAG_GLASS};
 use std::time::Instant;
 
 const CELL: f64 = 6.0;
+
+/// The prototype counter of the detail cache is one per process: tests that compose scenes
+/// run one at a time, so a count holds only this test's builds.
+static SERIAL: std::sync::Mutex<()> = std::sync::Mutex::new(());
+
+fn serial() -> std::sync::MutexGuard<'static, ()> {
+    SERIAL.lock().unwrap_or_else(|e| e.into_inner())
+}
 const K: usize = 6;
 
 fn bench() -> (Editor, usize, usize) {
@@ -58,6 +66,7 @@ fn set_lod(ed: &mut Editor, d: DetailLevel) {
 
 #[test]
 fn detailed_storey_composes_within_budget_at_every_level_of_detail() {
+    let _one = serial();
     let (mut ed, walls, openings) = bench();
     let mut last = 0usize;
     let mut rows = vec![];
@@ -83,9 +92,20 @@ fn detailed_storey_composes_within_budget_at_every_level_of_detail() {
         let budget = walls * (2 * DOOR_BUDGET.at(lod) + 2 * WINDOW_BUDGET.at(lod)) + 400_000;
         assert!(tris <= budget, "{d:?}: {tris} > {budget}");
         assert!(door_tris > 0);
-        // no door leaf and no glazing is a single block per element
-        for m in sc.meshes.iter().filter(|m| m.tag == TAG_DOOR) {
-            assert!(m.positions.len() > 8, "{d:?}: a door leaf of {} vertices", m.positions.len());
+        let leaves: Vec<usize> = sc.meshes.iter().filter(|m| m.tag == TAG_DOOR).map(|m| m.positions.len()).collect();
+        if lod == ddc_geom::detail::Lod::Coarse {
+            // Coarse draws each leaf as one block by design (the door fill test: lining, leaf,
+            // threshold): one block per leaf, two for a double door, one mesh per door
+            let doors = ed.openings.iter().filter(|o| o.kind == ddc_app::opening_tool::Kind::Door).count();
+            let doubles = ed.openings.iter().filter(|o| o.kind == ddc_app::opening_tool::Kind::Door && o.width >= ed.detail.door_double_from).count();
+            assert_eq!(leaves.len(), doors, "Coarse: one leaf mesh per door");
+            assert!(leaves.iter().all(|&n| n == 8 || n == 16), "Coarse: leaves are blocks {leaves:?}");
+            assert_eq!(leaves.iter().filter(|&&n| n == 16).count(), doubles, "Coarse: two blocks per double door");
+        } else {
+            // no door leaf is a single block per element
+            for &n in &leaves {
+                assert!(n > 8, "{d:?}: a door leaf of {n} vertices");
+            }
         }
         assert!(sc.meshes.iter().any(|m| m.tag == TAG_GLASS));
         assert!(ms < 20_000.0, "{d:?}: {ms:.0} ms");
@@ -95,6 +115,7 @@ fn detailed_storey_composes_within_budget_at_every_level_of_detail() {
 
 #[test]
 fn railings_and_stairs_are_not_blocks() {
+    let _one = serial();
     let (mut ed, _, _) = bench();
     set_lod(&mut ed, DetailLevel::Medium);
     let (sc, targets) = scene3d::compose(&mut ed);
@@ -118,6 +139,7 @@ fn railings_and_stairs_are_not_blocks() {
 #[test]
 #[ignore = "heavy: cargo test -p ddc-app --test detail_bench -- --ignored t01"]
 fn t01_tower_scene_composes_within_budget() {
+    let _one = serial();
     let g = ddc_gen::registry().iter().find(|g| g.id() == "steel_frame").unwrap();
     let p = serde_json::json!({"kind": "lattice_tower_300", "pattern": "x", "tower_height": 300, "base_width": 125,
         "platform_1": 57, "platform_2": 115, "platform_3": 276, "detail": 3});

@@ -66,6 +66,7 @@ fn main() {
         std::process::exit(2);
     }
     let jobs = arg(&args, "--jobs").and_then(|j| j.parse().ok()).unwrap_or(1usize);
+    // num-lint: command-line flag, invariant form
     let budget = arg(&args, "--budget-usd").and_then(|j| j.parse::<f64>().ok());
     let record = arg(&args, "--record").map(PathBuf::from);
     let out = arg(&args, "--out").map(PathBuf::from).or_else(|| Some(std::env::temp_dir().join("ddc_ai_eval_out")));

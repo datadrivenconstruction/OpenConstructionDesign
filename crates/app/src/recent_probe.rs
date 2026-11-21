@@ -540,8 +540,13 @@ mod tests {
     #[test]
     fn places_split_by_share_and_first_folder() {
         let p = |s: &str| place_of(Path::new(s));
-        assert_eq!(p("Z:/share/a.ddc"), p("Z:/share/b/c.ddc"));
-        assert_ne!(p("Z:/share/a.ddc"), p("Z:/other/a.ddc"));
+        // a drive letter is a path prefix only where drives exist; a root folder is one everywhere
+        let roots: &[&str] = if cfg!(windows) { &["/", "Z:/"] } else { &["/"] };
+        for r in roots {
+            assert_eq!(p(&format!("{r}share/a.ddc")), p(&format!("{r}share/b/c.ddc")), "{r}");
+            assert_ne!(p(&format!("{r}share/a.ddc")), p(&format!("{r}other/a.ddc")), "{r}");
+        }
+        assert_eq!(p("/mnt/share/a.ddc"), PathBuf::from("/mnt"));
         assert_eq!(p("a.ddc"), PathBuf::from("a.ddc"));
     }
 

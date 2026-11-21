@@ -220,6 +220,11 @@ impl Edit {
             _ => return None,
         })
     }
+
+    /// (table, id) of the row this edit deletes; None for any other edit.
+    pub fn deletes(&self) -> Option<(&'static str, i64)> {
+        self.target().filter(|t| t.2).map(|t| (t.0, t.1))
+    }
 }
 
 fn snap(

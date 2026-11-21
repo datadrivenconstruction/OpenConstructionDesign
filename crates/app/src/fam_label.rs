@@ -4,26 +4,29 @@
 //! the model and commands use it); only what the person reads is translated.
 use ddc_ui::i18n::Lang;
 
-/// Leading words of built-in type names, longest first: «Three gang 9 in», «Floor 650».
-const TYPE_WORDS: &[&str] = &[
-    "Quick connect",
-    "Wall-hung",
-    "Three gang",
-    "Two gang",
-    "One gang",
-    "Compact",
-    "Accessible",
-    "Standard",
-    "Double",
-    "Single",
-    "Round",
-    "Sedan",
-    "Queen",
-    "Floor",
-    "Large",
-    "Small",
-    "Box",
-];
+/// Most words a type word spans: «Three gang», «Date Palm».
+const MAX_SPAN: usize = 2;
+
+/// Catalog key of a type word, when the catalog has one: «Oak», «Date Palm», «slow».
+fn word_key(words: &[&str]) -> Option<String> {
+    let key = format!("fam.type.{}", slug(&words.join(" ")));
+    (crate::catalog().t_in(Lang::En, &key) != key).then_some(key)
+}
+
+/// Type name split into its words, each with the catalog key of the word it starts, longest
+/// first; sizes, codes and units have none.
+fn type_words(name: &str) -> Vec<(String, Option<String>)> {
+    let w: Vec<&str> = name.split(' ').collect();
+    let mut out = vec![];
+    let mut i = 0;
+    while i < w.len() {
+        let hit = (1..=MAX_SPAN.min(w.len() - i)).rev().find_map(|n| word_key(&w[i..i + n]).map(|k| (n, k)));
+        let n = hit.as_ref().map_or(1, |h| h.0);
+        out.push((w[i..i + n].join(" "), hit.map(|h| h.1)));
+        i += n;
+    }
+    out
+}
 
 fn slug(s: &str) -> String {
     s.chars()
@@ -42,20 +45,15 @@ pub fn family(lang: Lang, name: &str) -> String {
     }
 }
 
-/// Type name in `lang`: the leading word is translated, sizes stay (for Russian, "Floor 650" becomes the Russian "Floor" word plus 650).
+/// Type name in `lang`: every known word is translated, sizes and codes stay (for Russian,
+/// «Oak A Autumn» becomes the Russian words for oak and autumn around the A).
 pub fn type_name(lang: Lang, name: &str) -> String {
-    for w in TYPE_WORDS {
-        let Some(rest) = name.strip_prefix(w) else {
-            continue;
-        };
-        if !(rest.is_empty() || rest.starts_with(' ')) {
-            continue;
-        }
-        let key = format!("fam.type.{}", slug(w));
-        let s = crate::catalog().t_in(lang, &key);
-        return if s == key { name.to_owned() } else { format!("{s}{rest}") };
-    }
-    name.to_owned()
+    let cat = crate::catalog();
+    let words: Vec<String> = type_words(name)
+        .into_iter()
+        .map(|(w, k)| k.map_or(w, |k| cat.t_in(lang, &k)))
+        .collect();
+    words.join(" ")
 }
 
 /// Built-in material name in `lang` (`mat.<id>`); an own material keeps its name as typed.
@@ -109,6 +107,44 @@ mod tests {
         assert_eq!(type_name(Lang::Ru, "Floors"), "Floors");
     }
 
+    /// A word that reads the same in every language: a size («6», «400x600», «32in»), a unit
+    /// («kW», «in»), a standard's acronym («DISS») or a variant letter («A»).
+    fn size_or_code(w: &str) -> bool {
+        const UNITS: [&str; 10] = ["in", "ft", "m", "mm", "l", "kg", "t", "kW", "kWh", "kVA"];
+        let w = w.strip_suffix("in").filter(|s| s.ends_with(|c: char| c.is_ascii_digit())).unwrap_or(w);
+        // a one-letter mark before a size is a code too: t200 is a thickness of 200
+        let marked = w.len() > 1
+            && w.starts_with(|c: char| c.is_ascii_lowercase())
+            && w[1..].starts_with(|c: char| c.is_ascii_digit());
+        UNITS.contains(&w)
+            || marked
+            || w.chars().next().is_some_and(|c| c.is_ascii_digit())
+            || w.chars().all(|c| c.is_ascii_uppercase())
+            || w.starts_with(|c: char| c.is_ascii_uppercase())
+                && w.chars().any(|c| c.is_ascii_digit())
+                && w.chars().skip(1).all(|c| c.is_ascii_uppercase() || c.is_ascii_digit() || c == '.' || c == '-')
+    }
+
+    #[test]
+    fn size_or_code_tells_sizes_from_words() {
+        for w in ["6", "400x600", "32in", "kW", "DISS", "A", "H3.6", "H130in", "FC-32in", "l", "m", "t200", "t8in"] {
+            assert!(size_or_code(w), "{w}");
+        }
+        for w in ["Wide", "Oak", "slow", "Lift130in", "core", "fan", "span"] {
+            assert!(!size_or_code(w), "{w}");
+        }
+    }
+
+    #[test]
+    fn every_word_of_a_type_name_is_translated() {
+        assert_eq!(type_name(Lang::En, "Oak A Autumn"), "Oak A Autumn");
+        let ru = type_name(Lang::Ru, "Oak A Autumn");
+        assert!(ru.contains(" A ") && !ru.contains("Oak") && !ru.contains("Autumn"), "{ru}");
+        // a two-word word is one word: «Stair fan», not «Stair» plus «fan»
+        assert_eq!(type_words("Stair fan 47in").len(), 2);
+        assert_eq!(type_words("Date Palm B")[0].0, "Date Palm");
+    }
+
     #[test]
     fn every_built_in_family_and_type_word_is_translated() {
         for f in ddc_model::library().unwrap() {
@@ -116,27 +152,15 @@ mod tests {
             assert_ne!(ru, f.name, "family {} has no ru name", f.name);
             for t in &f.types {
                 let ru = type_name(Lang::Ru, &t.name);
-                let word = TYPE_WORDS.iter().any(|w| t.name.starts_with(w));
+                let word = type_words(&t.name).iter().any(|w| w.1.is_some());
                 assert!(!word || ru != t.name, "type {} not translated", t.name);
             }
         }
         for f in ddc_model::library().unwrap() {
             for t in &f.types {
-                // an imperial variant carries its unit: "FC-32in"
-                let first = t.name.split(' ').next().unwrap_or("");
-                let first = first.strip_suffix("in").filter(|s| s.ends_with(|c: char| c.is_ascii_digit())).unwrap_or(first);
-                // a standard's acronym ("DISS") is a code like a size, not a word
-                let acronym = first.len() >= 2 && first.chars().all(|c| c.is_ascii_uppercase());
-                let plain = acronym
-                    || first.chars().next().is_some_and(|c| c.is_ascii_digit())
-                    || first.starts_with(|c: char| c.is_ascii_uppercase())
-                        && first.chars().any(|c| c.is_ascii_digit())
-                        && first.chars().skip(1).all(|c| c.is_ascii_uppercase() || c.is_ascii_digit() || c == '.' || c == '-');
-                assert!(
-                    plain || TYPE_WORDS.iter().any(|w| t.name.starts_with(w)),
-                    "type {} is neither a size nor a known word",
-                    t.name
-                );
+                for (w, key) in type_words(&t.name) {
+                    assert!(key.is_some() || size_or_code(&w), "type {}: {w} is neither a size, a code nor a known word", t.name);
+                }
             }
         }
     }

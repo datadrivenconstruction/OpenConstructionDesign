@@ -224,6 +224,54 @@ fn first_import_records_base_and_provenance() {
     );
 }
 
+/// A project parameter value set on an imported element after the import is a local edit:
+/// the save to the source file sees it as a `UPARAM_FIELD` field.
+#[test]
+fn project_param_value_after_import_is_a_local_edit() {
+    use crate::{ParamSet, ParamSpec, ParamType, PVal};
+    let (mut m, w) = model();
+    import(&mut m, w, &[("height", json!(3.0))], Policy::default(), true);
+    assert!(!m.is_edited("wall", w).unwrap());
+    let p = m
+        .add_param(&ParamSpec {
+            name: "Mark".into(),
+            ptype: ParamType::Text,
+            per_type: false,
+            unit: String::new(),
+            group: String::new(),
+            guid: None,
+            categories: vec!["wall".into()],
+        })
+        .unwrap();
+    assert!(!m.is_edited("wall", w).unwrap(), "a parameter without a value edits nothing");
+    m.set_param_values(&[ParamSet { param: p, kind: "wall".into(), id: w, value: Some(PVal::Text("W-01".into())) }])
+        .unwrap();
+    let d = m.element_diff("wall", w).unwrap();
+    let f = format!("{UPARAM_FIELD}Mark");
+    assert_eq!(d.len(), 1, "{d:?}");
+    assert_eq!((d[0].field.as_str(), &d[0].base, &d[0].mine), (f.as_str(), &J::Null, &json!("W-01")));
+    let ch = m.local_changes(SRC, false).unwrap();
+    assert_eq!(ch.len(), 1);
+    assert!(ch[0].fields.iter().any(|x| x.field == f), "{:?}", ch[0].fields);
+    m.set_param_values(&[ParamSet { param: p, kind: "wall".into(), id: w, value: None }]).unwrap();
+    assert!(!m.is_edited("wall", w).unwrap(), "the value removed again: no edit left");
+}
+
+#[test]
+fn element_by_guid_finds_tableless_spatial_links() {
+    let (m, w) = model();
+    for (g, k) in [("gp", "project"), ("gs", "site"), ("gb", "building")] {
+        m.db.execute(
+            "INSERT INTO ext_ref(source,guid,kind,ref) VALUES (?1,?2,?3,0)",
+            params![SRC, g, k],
+        )
+        .unwrap();
+        assert_eq!(m.element_by_guid(SRC, g).unwrap(), Some((k.into(), 0)));
+    }
+    assert_eq!(m.element_by_guid(SRC, "g1").unwrap(), Some(("wall".into(), w)));
+    assert_eq!(m.element_by_guid(SRC, "nope").unwrap(), None);
+}
+
 #[test]
 fn reimport_takes_upstream_keeps_local_and_lists_conflicts() {
     let (mut m, w) = model();

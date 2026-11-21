@@ -19,8 +19,9 @@ use std::collections::{BTreeMap, BTreeSet, HashSet};
 /// Tables the scoped wall reload follows; others go to `scoped_more::FOLLOWED_MORE` or take
 /// the full reload. `room_qty`: a wall edit regenerates the rooms of its level, and
 /// `reload_rest` reloads rooms and tags whole, so a level with a room keeps the scoped path.
+/// `join_cache`: the model's own cache of join volume ratios, read by no editor list.
 pub(super) const FOLLOWED: &[&str] =
-    &["wall", "wall_qty", "room_qty", "dim_geo", "prop", "pparam_val"];
+    &["wall", "wall_qty", "room_qty", "dim_geo", "prop", "pparam_val", "join_cache"];
 
 /// Margin of a wall box, far above the join tolerance: every wall that can share a join node or
 /// a T-join with an edited wall touches its padded box.

@@ -19,6 +19,7 @@ pub fn options_of(a: &J) -> Result<(DsetOptions, bool), String> {
         J::Null => None,
         v => Some(
             v.as_str()
+                // num-lint: a model's JSON argument, not typed by a person
                 .and_then(|s| s.parse::<f64>().ok())
                 .or_else(|| v.as_f64())
                 .filter(|s| *s >= 1.0 && *s <= 1000.0)

@@ -95,6 +95,18 @@ pub fn reexport_losses(
     fams: &[super::family::FamilySheet],
     id_given: usize,
 ) -> Result<Vec<String>, String> {
+    reexport_losses_made(old, new, fams, id_given, &BTreeMap::new())
+}
+
+/// [`reexport_losses`] where `made` names, per sheet, id-less rows of `old` an earlier Apply
+/// created (`Report::made_rows`): they are numbered on their own sheet, never counted for another.
+pub fn reexport_losses_made(
+    old: &Path,
+    new: &Path,
+    fams: &[super::family::FamilySheet],
+    id_given: usize,
+    made: &BTreeMap<String, usize>,
+) -> Result<Vec<String>, String> {
     if !old.exists() {
         return Ok(vec![]);
     }
@@ -149,6 +161,7 @@ pub fn reexport_losses(
     for (sheet, n) in &ka.counts.idless {
         let m = kb.counts.idless.iter().find(|c| &c.0 == sheet).map_or(0, |c| c.1);
         let mut lost = n.saturating_sub(m);
+        lost = lost.saturating_sub(made.get(sheet).copied().unwrap_or(0));
         let take = lost.min(spare);
         lost -= take;
         spare -= take;

@@ -289,6 +289,42 @@ fn mirroring_the_roof_retrims_and_undo_restores() {
     assert_eq!(f.m.wall_top_profile(walls[0]).unwrap().unwrap(), low);
 }
 
+fn rows(m: &Model, table: &str) -> Vec<String> {
+    // a set: derived rows are rewritten by undo, their storage order is not part of the model
+    let mut st = m.sql().prepare(&format!("SELECT * FROM {table}")).unwrap();
+    let n = st.column_count();
+    let mut out: Vec<String> = st
+        .query_map([], |r| (0..n).map(|i| r.get::<_, rusqlite::types::Value>(i)).collect::<Result<Vec<_>, _>>())
+        .unwrap()
+        .map(|r| format!("{:?}", r.unwrap()))
+        .collect();
+    out.sort();
+    out
+}
+
+/// A copy under a roof is trimmed in the same step; undo of a copy, an array or a rotated copy
+/// removes the new walls (the trim's snapshot of a new wall must not bring it back).
+#[test]
+fn undo_of_copies_under_a_roof_restores_the_exact_rows() {
+    let mut f = fix();
+    let walls = f.box_walls(10.0, 6.0, 4.0);
+    f.roof(shed_over_the_box(), 0.0);
+    let t = [crate::Target::Wall(walls[0])];
+    let ops: [(&str, Box<dyn Fn(&mut Model)>); 3] = [
+        ("copy", Box::new(move |m: &mut Model| drop(m.copy_elements(&t, &[(0.0, 1.0)]).unwrap()))),
+        ("array", Box::new(move |m: &mut Model| drop(m.array_linear(&t, 2, crate::Spacing::Step((0.0, 1.5))).unwrap()))),
+        ("rotate", Box::new(move |m: &mut Model| drop(m.rotate_elements(&t, (5.0, 3.0), 0.3, true).unwrap()))),
+    ];
+    for (what, op) in ops {
+        let before: Vec<_> = ["wall", "wall_qty"].map(|t| rows(&f.m, t)).into();
+        op(&mut f.m);
+        assert!(rows(&f.m, "wall").len() > before[0].len(), "{what}: no copy");
+        f.m.undo().unwrap();
+        let after: Vec<_> = ["wall", "wall_qty"].map(|t| rows(&f.m, t)).into();
+        assert_eq!(after, before, "{what}: undo left rows");
+    }
+}
+
 /// Moving walls that no roof reaches leaves every top alone (the retrim is skipped).
 #[test]
 fn moving_walls_far_from_the_roof_keeps_their_flat_tops() {

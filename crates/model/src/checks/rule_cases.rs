@@ -26,6 +26,7 @@ fn column(m: &Model, cat: &Cat, r: &RuleDef, w: &Within, param: &str) -> Result<
 }
 
 fn number(v: Option<&String>) -> Option<f64> {
+    // num-lint: stored rule case values, invariant form
     v?.trim().parse::<f64>().ok().filter(|x| x.is_finite())
 }
 
@@ -210,6 +211,7 @@ pub(super) fn people_upper_floor(m: &Model) -> Result<Option<i64>, Error> {
     let sql = format!("SELECT id, val FROM ({inner}) ORDER BY id");
     let counts: BTreeMap<i64, i64> = violators(m, &sql)?
         .into_iter()
+        // num-lint: stored rule case values, invariant form
         .filter_map(|(id, v)| Some((id, v?.trim().parse::<f64>().ok()? as i64)))
         .collect();
     if counts.is_empty() {

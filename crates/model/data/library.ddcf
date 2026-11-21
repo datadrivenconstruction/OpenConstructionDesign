@@ -1451,7 +1451,7 @@ type "H5.1" Lift=5350mm
 type "H5.4" Lift=5650mm
 type "H5.7" Lift=5950mm
 type "H6.0" Lift=6250mm
-type "Lift130in" Lift=130in
+type "H130in" Lift=130in
 extrude Body rect(-Length / 2, -Width / 2, Length / 2, Width / 2) z(Lift, Lift + Box) mat(Timber) show(3d, elev)
 extrude Shrub rect(-Length / 2 + 100mm, -Width / 2 + 100mm, Length / 2 - 100mm, Width / 2 - 100mm) z(Lift + Box, Lift + Box + 600mm) mat(Leaves) show(3d, elev)
 symbol rect(-Length / 2, -Width / 2, Length / 2, Width / 2)

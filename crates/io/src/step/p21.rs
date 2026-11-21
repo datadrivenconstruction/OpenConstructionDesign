@@ -565,6 +565,7 @@ impl Parser<'_> {
                 return Ok(P::Int(i));
             }
         }
+        // num-lint: STEP real literal, invariant form by the file format
         match t.parse::<f64>() {
             Ok(x) if x.is_finite() => Ok(P::Real(x)),
             _ => {

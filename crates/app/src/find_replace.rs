@@ -510,12 +510,10 @@ fn form(ui: &mut egui::Ui, c: &Catalog, ed: &Editor, st: &mut FindUi, goto: &mut
     }
     ui.horizontal(|ui| {
         // value column, no empty caption
-        // the same label-to-field gap as the form rows, whatever the item spacing is
+        // the same label-to-field gap as the form rows, whatever the item spacing is: the
+        // empty cell takes the gap the item spacing adds after it
         let gap = ui.spacing().item_spacing.x;
-        ui.spacing_mut().item_spacing.x = 0.0;
-        fixed_cell(ui, ROW_LABEL_W, |_| {});
-        ui.add_space(space::SM);
-        ui.spacing_mut().item_spacing.x = gap;
+        fixed_cell(ui, ROW_LABEL_W + space::SM - gap, |_| {});
         ddc_ui::widgets::checkbox(ui, &th, &mut st.match_case, &c.t("find_replace.match_case"));
         ui.add_space(space::MD);
         ddc_ui::widgets::checkbox(ui, &th, &mut st.whole_word, &c.t("find_replace.whole_word"));

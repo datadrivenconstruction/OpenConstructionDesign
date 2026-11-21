@@ -1,4 +1,6 @@
 {
+  "cmd.mep.circuits": "Circuits",
+  "cmd.mep.circuits.desc": "Opens the circuit editor: circuits of every panel, their loads, cable sizes and rule checks.",
   "ce.title": "Circuits",
   "ce.open": "Circuits",
   "ce.empty": "No circuits yet",

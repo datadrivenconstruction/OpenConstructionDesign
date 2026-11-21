@@ -920,11 +920,24 @@ impl Plan {
         let mut rows: Vec<usize> = (1..self.n(sheet)).collect();
         self.shuffle(&mut rows);
         rows.sort_by_key(|&r| !self.row_used(sheet, r));
-        for r in rows {
+        for r in rows.iter().copied() {
             let key = (sheet.to_string(), r, c);
             if self.used_cell(&key) || self.reserved.contains(&(sheet.to_string(), r)) {
                 continue;
             }
+            let v = bad(&self.cur_cell(sheet, r, c));
+            self.put_book(sheet, r, c, v);
+            self.bad_cell.insert(key);
+            return;
+        }
+        // a short sheet (Layers: one row per seeded layer) can have every cell of the column
+        // taken by valid edits: one of them gives its cell up, the rest of its row stays edited
+        for r in rows {
+            let key = (sheet.to_string(), r, c);
+            if !self.valid.contains_key(&key) {
+                continue;
+            }
+            self.valid.remove(&key);
             let v = bad(&self.cur_cell(sheet, r, c));
             self.put_book(sheet, r, c, v);
             self.bad_cell.insert(key);

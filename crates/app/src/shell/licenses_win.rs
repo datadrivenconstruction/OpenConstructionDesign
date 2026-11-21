@@ -432,7 +432,9 @@ mod tests {
         FULL.with(|f| f.set(false));
         let mut seen = vec![];
         out.shapes.iter().for_each(|s| texts(&s.shape, &mut seen));
-        assert!(seen.iter().any(|(t, _)| t.contains("third-party licences")), "{seen:?}");
+        // the file's own heading, whatever tree generated it
+        let head = full_texts().lines().map(str::trim).find(|l| !l.is_empty()).expect("a heading");
+        assert!(seen.iter().any(|(t, _)| t.contains(head)), "{head:?} not drawn: {seen:?}");
     }
 
     #[test]

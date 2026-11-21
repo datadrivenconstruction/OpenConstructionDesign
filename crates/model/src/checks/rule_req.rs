@@ -321,15 +321,18 @@ fn num_unit(s: &str) -> Option<(f64, String)> {
         .char_indices()
         .find(|(i, c)| !in_number(*i, *c))
         .map_or(t.len(), |(i, _)| i);
+    // num-lint: requirement text from a rule file; either decimal mark is read
     let x = t[..end].replace(',', ".").parse::<f64>().ok()?;
     x.is_finite().then(|| (x, t[end..].trim().to_string()))
 }
 
 fn bound(s: &str) -> Option<f64> {
+    // num-lint: requirement text from a rule file; either decimal mark is read
     let t = s.trim().replace(',', ".");
     if t.is_empty() {
         return None;
     }
+    // num-lint: requirement text from a rule file; either decimal mark is read
     t.parse::<f64>().ok().filter(|x| x.is_finite())
 }
 

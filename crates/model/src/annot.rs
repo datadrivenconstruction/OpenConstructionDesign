@@ -1106,7 +1106,7 @@ mod chain;
 #[path = "annot_tags.rs"]
 mod tags;
 pub(crate) use tags::{cascade, issues as tag_issues};
-pub use tags::{next_mark, tag_size, Tag, TagCat, TagHost, TagSpec, TagText};
+pub use tags::{next_mark, tag_size, AnnotLoss, Tag, TagCat, TagHost, TagSpec, TagText};
 
 #[cfg(test)]
 #[path = "annot_tests.rs"]

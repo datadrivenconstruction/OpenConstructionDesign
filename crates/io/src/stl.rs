@@ -170,6 +170,7 @@ pub fn read_bytes(
                     cur = Some((w, 0));
                 }
                 Some("vertex") => {
+                    // num-lint: ASCII STL numbers, invariant form by the file format
                     let v: Vec<f64> = it.map(|x| x.parse::<f64>()).collect::<Result<_, _>>().map_err(|_| {
                         format!("{name}: line {}: bad vertex `{}`", ln + 1, line.trim())
                     })?;

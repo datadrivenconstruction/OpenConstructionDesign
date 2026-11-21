@@ -282,8 +282,8 @@ pub use measure::{
     Reason as MeasureReason, Value as MeasureValue,
 };
 pub use annot::{
-    next_mark, tag_size, Annot, DimGeom, DimKind, DimRef, DimSpec, Tag, TagCat, TagHost, TagSpec,
-    TagText,
+    next_mark, tag_size, Annot, AnnotLoss, DimGeom, DimKind, DimRef, DimSpec, Tag, TagCat, TagHost,
+    TagSpec, TagText,
 };
 pub use annot_text::{
     dash_segments, stroke_hit, strokes_bbox, Anno, AnnoCtx, AnnoShape, AnnoStroke, AnnoView,

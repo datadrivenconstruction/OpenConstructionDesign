@@ -158,6 +158,18 @@ Logistics hall, steel portal frames: 394 elements.
 
 </td>
 </tr>
+<tr>
+<td colspan="2" align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/bridge-dark.png">
+  <img src="docs/images/bridge-light.png" alt="Cable-stayed bridge with two portal pylons and fans of stay cables over a steel deck; one stay cable selected with its length" width="50%">
+</picture>
+
+Cable-stayed bridge with two pylons: 802 elements.
+
+</td>
+</tr>
 </table>
 
 | | |

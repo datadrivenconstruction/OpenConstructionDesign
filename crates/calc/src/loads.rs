@@ -209,6 +209,7 @@ fn one(a: &Analytical, inp: &CalcInput, l: &Load, resolver: Option<Resolver>, ex
     };
     for t in targets(l, resolver, &mut ex.issues) {
         let (mk, sx) = match t.split_once('@') {
+            // num-lint: a stored key this module writes, invariant form
             Some((m, x)) if t.starts_with("m:") => (m.to_string(), x.parse::<f64>().ok()),
             _ => (t.clone(), None),
         };

@@ -7,6 +7,8 @@
 /// `(key, English template)`; the UI catalog's `gen.why.e.<key>` in `en` is the same text.
 pub const EN: &[(&str, &str)] = &[
     ("depth_band", "footprint depth {d} m = depth.band {band} x 2 + corridor.width {corr}"),
+    ("width_asked", "footprint {w} x {d} m: the width asked"),
+    ("width_fit", "footprint {w} x {d} m: the width the rooms and the core need along the facade"),
     ("corridor", "corridor {w} m wide on every storey"),
     ("corridor_fp", "corridor {w} m wide; footprint {x} x {y} m"),
     ("floors", "{n} storeys of {h} m: {top} m to the roof"),
@@ -154,6 +156,16 @@ pub fn template(key: &str) -> Option<&'static str> {
     EN.iter().find(|(k, _)| *k == key).map(|(_, t)| *t)
 }
 
+/// Every English reason table of the generators: projects, data centres, plants, stations.
+pub fn tables() -> [&'static [(&'static str, &'static str)]; 4] {
+    [EN, super::dc::why::EN, crate::plant::why::EN, crate::station::why::EN]
+}
+
+/// The English template of a reason of any generator.
+pub fn any_template(key: &str) -> Option<&'static str> {
+    tables().into_iter().flatten().find(|(k, _)| *k == key).map(|(_, t)| *t)
+}
+
 /// `{name}` slots replaced by their values.
 pub fn fill(template: &str, args: &[(&'static str, String)]) -> String {
     let mut s = template.to_string();
@@ -171,6 +183,17 @@ pub fn effect(key: &str, args: &[(&'static str, String)]) -> String {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn a_reason_key_means_one_template_across_every_generator() {
+        let mut seen = std::collections::BTreeSet::new();
+        for (k, t) in tables().into_iter().flatten() {
+            assert!(seen.insert(*k), "{k} is a reason of two generators");
+            assert_eq!(any_template(k), Some(*t), "{k}");
+        }
+        assert_eq!(any_template("dc_battery"), crate::project::dc::why::template("dc_battery"));
+        assert_eq!(any_template("no_such_reason"), None);
+    }
 
     #[test]
     fn keys_are_unique_and_every_slot_is_named_once() {

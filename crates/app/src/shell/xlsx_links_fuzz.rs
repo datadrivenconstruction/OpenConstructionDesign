@@ -133,9 +133,22 @@ impl World {
         XlsxPreview::load(&mut self.ed.model, &self.book, false).unwrap().report.counts().added
     }
 
-    /// The re-export that follows an Apply: the created rows get their ids.
+    /// A plain re-export: the rows an Apply created get their ids. While the book holds new rows
+    /// no Apply made (before the first one, or after its undo) the re-export is refused and the
+    /// book stays byte for byte: what the user typed is never dropped.
     fn reexport(&mut self) {
+        let fresh = self.preview_added();
+        let before = std::fs::read(&self.book).unwrap();
         let o = xlsx_job::export_sync(&self.ed.model, &self.book, xlsx::Units::Metric, "en");
+        if fresh > 0 {
+            let Outcome::Failed(e) = &o else {
+                panic!("re-export over {fresh} rows no Apply made: {o:?}");
+            };
+            let items = xlsx::loss_items(e).unwrap_or_else(|| panic!("not a loss question: {e}"));
+            assert!(items.iter().all(|i| i.contains("rows without an id")), "{items:?}");
+            assert_eq!(std::fs::read(&self.book).unwrap(), before, "a refused re-export wrote the book");
+            return;
+        }
         assert!(matches!(o, Outcome::Done), "re-export failed: {o:?}");
         let mut pv = XlsxPreview::linked(&self.book, false);
         let tail = ApplyTail { created: 0, ..Default::default() };
@@ -261,6 +274,39 @@ fn links_fuzz_undo_then_apply_once() {
         assert_eq!(counts(&w.ed.model), lim, "seed {seed}: and not twice");
         w.done();
     }
+}
+
+/// A plain export (no Apply tail, as after a restart) numbers the rows an earlier Apply created;
+/// a row typed after that Apply has no record and still refuses the re-export.
+#[test]
+fn plain_reexport_numbers_created_rows_and_keeps_typed_ones() {
+    let mut w = world("plain", 1, [0, 0, 0]);
+    let lim = limit(&w);
+    w.apply().unwrap();
+    assert_eq!(counts(&w.ed.model), lim);
+    let book = w.book.clone();
+    let typed = w.dir.join("typed.xlsx");
+    let from = first_id(&w.ed.model, "wall");
+    let caps = super::super::xlsx_style::style("en").captions;
+    let tweaks = [(caps["ax"].as_str(), C::Num(50.0)), (caps["bx"].as_str(), C::Num(52.0))];
+    xlsx::clone_row_as_new(&book, &typed, "Walls", from, &tweaks).unwrap();
+    let applied = std::fs::read(&book).unwrap();
+    std::fs::copy(&typed, &book).unwrap();
+    let before = std::fs::read(&book).unwrap();
+    let o = xlsx_job::export_sync(&w.ed.model, &book, xlsx::Units::Metric, "en");
+    let Outcome::Failed(e) = &o else { panic!("the typed row was dropped: {o:?}") };
+    let items = xlsx::loss_items(e).unwrap_or_else(|| panic!("not a loss question: {e}"));
+    assert_eq!(items, vec!["1 rows without an id on sheet 'Walls'".to_string()]);
+    assert_eq!(std::fs::read(&book).unwrap(), before);
+    // without the typed row the created rows alone are no loss: the export numbers them
+    std::fs::write(&book, applied).unwrap();
+    let o = xlsx_job::export_sync(&w.ed.model, &book, xlsx::Units::Metric, "en");
+    assert!(matches!(o, Outcome::Done), "{o:?}");
+    let pv = XlsxPreview::load(&mut w.ed.model, &book, false).unwrap();
+    assert_eq!(pv.report.counts().added, 0);
+    assert!(pv.report.made_rows.is_empty(), "every row has its id: {:?}", pv.report.made_rows);
+    assert_eq!(counts(&w.ed.model), lim);
+    w.done();
 }
 
 #[test]

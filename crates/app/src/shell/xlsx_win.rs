@@ -3983,15 +3983,20 @@ mod tests {
         super::super::xlsx_no_base::confirm(&mut pv);
         assert_eq!(pv.report.pending_matches(), 0);
         let ops = op_count(&ed);
+        let hand_made = std::fs::read(&p).unwrap();
         let r = apply_preview(&mut ed, &mut pv, xlsx::Units::Metric, Lang::En);
         assert_eq!(r, Ok(Applied::Done { reexported: true }));
         assert_eq!((op_count(&ed), room_count(&ed)), (ops + 1, 1));
         assert_eq!(room_name(&ed, id), "Lobby");
+        // a book this app did not make is never replaced: the refreshed book is a copy beside
+        // it, linked from now on, and the original keeps its bytes
+        assert_ne!(pv.path, p);
+        assert_eq!(std::fs::read(&p).unwrap(), hand_made);
         ed.undo();
         assert_eq!((room_name(&ed, id).as_str(), room_count(&ed)), ("Hall", 1));
-        // the book got the id back: reading it again proposes nothing
-        let again = XlsxPreview::load(&mut ed.model, &p, false).unwrap();
-        assert!(again.report.matches.is_empty());
+        // the linked book got the id: reading it again proposes nothing
+        let again = XlsxPreview::load(&mut ed.model, &pv.path, false).unwrap();
+        assert!(again.report.matches.is_empty(), "{:?}", again.report.matches);
     }
 
     #[test]

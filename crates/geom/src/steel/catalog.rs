@@ -176,6 +176,7 @@ impl<'a> Table<'a> {
 
 fn num(s: &str) -> Result<f64, String> {
     s.trim()
+        // num-lint: bundled catalog file, invariant form
         .parse::<f64>()
         .ok()
         .filter(|x| x.is_finite())

@@ -326,6 +326,46 @@ fn slab_type_rename_and_dup_refused() {
     assert_eq!((type_name(&m, deck), type_name(&m, roofing)), ("deck".into(), "roofing".into()));
 }
 
+/// One book renames a type and moves a slab of it to another type: the slab cell is the user's
+/// edit against the model's own name, no conflict with the rename.
+#[test]
+fn slab_type_rename_and_slab_retype_in_one_book() {
+    let Fx {
+        mut m,
+        floor,
+        deck,
+        slab,
+        ..
+    } = fixture();
+    let p = export(&m, "st_ren_retype_src");
+    let q = tmp("st_ren_retype_dst");
+    edit(&p, &q, |sh, g| {
+        if sh == SLAB_TYPES {
+            let r = row_of(g, "id", floor, None);
+            set(g, r, "name", s("ST1"));
+        }
+        if sh == SLABS {
+            let r = row_of(g, "id", slab, None);
+            set(g, r, "type", s("deck"));
+        }
+    });
+    let rep = import_xlsx(&mut m, &q).unwrap();
+    assert!(rep.applied && rep.blocking() == 0, "{rep:?}");
+    assert!(rep.conflicts.is_empty(), "{:?}", rep.conflicts);
+    assert!(rep.rejected.is_empty(), "{:?}", rep.rejected);
+    assert!(
+        rep.changes.iter().any(|c| c.sheet == SLABS && c.column == "type" && c.new == "deck"),
+        "{:?}",
+        rep.changes
+    );
+    assert_eq!(type_name(&m, floor), "ST1");
+    let st: i64 = m
+        .sql()
+        .query_row("SELECT stype FROM slab WHERE id=?1", [slab], |r| r.get(0))
+        .unwrap();
+    assert_eq!(st, deck);
+}
+
 #[test]
 fn slab_layer_create_refused_with_reason() {
     let Fx { mut m, floor, .. } = fixture();

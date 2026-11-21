@@ -101,6 +101,7 @@ fn exact_stair(pl: &mut Plan, storey: Option<usize>, kv: &Kv) -> Result<PStair, 
         Some("l") => Shape::L { left, first },
         Some("u") => Shape::U { left, first, gap },
         Some("spiral") => {
+            // num-lint: an IFC property value, invariant form by the file format
             let num = |k: &str| kv.get(k).and_then(|v| v.parse::<f64>().ok()).ok_or(bad);
             Shape::Spiral {
                 radius: num("Radius")?,
@@ -331,6 +332,7 @@ fn parse_points(t: &str, dim: usize) -> Option<Vec<Vec<f64>>> {
         .map(|p| {
             let v: Option<Vec<f64>> = p
                 .split(',')
+                // num-lint: an IFC property value, invariant form by the file format
                 .map(|x| x.parse::<f64>().ok().filter(|v| v.is_finite()))
                 .collect();
             v.filter(|v| v.len() == dim)

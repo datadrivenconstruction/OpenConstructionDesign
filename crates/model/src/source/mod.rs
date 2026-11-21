@@ -891,6 +891,8 @@ impl Model {
         // a door or window filler is linked as `opening_fill` but lives on its opening row
         let r = r.map(|(k, id)| if k == "opening_fill" { ("opening".to_string(), id) } else { (k, id) });
         match r {
+            // project, site and building have no table: their link alone is the element
+            Some((k, id)) if matches!(k.as_str(), "project" | "site" | "building") => Ok(Some((k, id))),
             Some((k, id)) if current_fields(&self.db, &k, id, &Vec::<String>::new())?.is_some() => {
                 Ok(Some((k, id)))
             }
@@ -1321,13 +1323,37 @@ fn added_props<'b>(
     kind: &str,
     id: i64,
 ) -> Result<impl Iterator<Item = FieldDiff> + 'b, Error> {
-    let props = props_of(db, kind, id)?;
-    Ok(props.into_iter().filter_map(move |(k, (v, _))| {
-        let f = format!("p:{k}");
+    let mut vals: Vec<(String, J)> = props_of(db, kind, id)?
+        .into_iter()
+        .map(|(k, (v, _))| (format!("p:{k}"), v))
+        .collect();
+    // project parameter values set here: they travel as `UPARAM_FIELD` fields (a save writes them)
+    for (name, v) in uparam_values(db, kind, id)? {
+        let f = format!("{UPARAM_FIELD}{name}");
+        if !vals.iter().any(|(k, _)| *k == f) {
+            vals.push((f, v));
+        }
+    }
+    Ok(vals.into_iter().filter_map(move |(f, v)| {
         base.get(&f).is_none().then_some(FieldDiff {
             field: f,
             base: J::Null,
             mine: v,
         })
     }))
+}
+
+/// Project parameter values stored on row (kind, id): (parameter name, value).
+fn uparam_values(db: &Connection, kind: &str, id: i64) -> Result<Vec<(String, J)>, Error> {
+    let mut st = db.prepare_cached(
+        "SELECT p.name, v.value FROM pparam_val v JOIN pparam p ON p.id=v.param \
+         WHERE v.kind=?1 AND v.ref=?2 AND v.value IS NOT NULL AND v.value<>'' ORDER BY p.name",
+    )?;
+    let rows = st.query_map(params![kind, id], |r| Ok((r.get::<_, String>(0)?, r.get::<_, Sql>(1)?)))?;
+    let mut out = vec![];
+    for r in rows {
+        let (n, v) = r?;
+        out.push((n, enc(&v)));
+    }
+    Ok(out)
 }

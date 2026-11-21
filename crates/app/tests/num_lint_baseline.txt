@@ -14,7 +14,6 @@ crates/geom/src/component/expr.rs 1
 crates/geom/src/component/kernel.rs 1
 crates/geom/src/mep.rs 1
 crates/geom/src/sweep.rs 1
-crates/io/src/bin/ddc-writer-sample.rs 1
 crates/io/src/drawing_model/blocks.rs 1
 crates/io/src/drawing_model/extra.rs 1
 crates/io/src/drawing_model/source.rs 2
@@ -35,7 +34,6 @@ crates/io/src/ifc/patch/types.rs 2
 crates/io/src/ifc/reader.rs 1
 crates/io/src/pdf/import/lexer.rs 1
 crates/io/src/sheets/table.rs 1
-crates/io/src/source_write/verify.rs 1
 crates/io/src/topo/dxf.rs 1
 crates/io/src/xlsx/sheet_view.rs 1
 crates/model/src/checks/rule_def.rs 2

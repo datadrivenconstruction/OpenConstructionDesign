@@ -409,8 +409,15 @@ fn headless_model_export_refuses_drawing_and_source_formats() {
     let rep = temp_file("dxfexp.json");
     for ext in ["dxf", "dwg", "rvt"] {
         let out = temp_file(&format!("refused_out.{ext}"));
-        let (code, r) = run_args(&["--file", p(&ifc), "--report-json", p(&rep), "--export", p(&out)]);
-        assert_ne!(code, 0, "{ext}: {r}");
+        let v = argv(&["--file", p(&ifc), "--report-json", p(&rep), "--export", p(&out)]);
+        // refused when the flags are read, or by the run when a build can read but not write it
+        match hf::parse(&v) {
+            Err(e) => assert!(e.contains(&format!(".{ext}")), "{ext}: {e}"),
+            Ok(a) => {
+                let (code, r) = report_of(&a.expect("--file given"));
+                assert_ne!(code, 0, "{ext}: {r}");
+            }
+        }
         assert!(!out.exists(), "{ext}: nothing written");
     }
 }
@@ -457,7 +464,9 @@ fn headless_ifc_export_keeps_the_input_schema() {
     assert_eq!(code, 0);
     assert_eq!(file_schema(&d), "IFC4X3_ADD2");
     assert!(hf::parse(&argv(&["--file", "m.ifc", "--ifc-schema", "IFC5"])).is_err());
-    assert!(hf::parse(&argv(&["--file", "m.ifc", "--export", "m.step"])).is_err());
+    // a format nothing writes is refused before the model opens; STEP is a solid export
+    assert!(hf::parse(&argv(&["--file", "m.ifc", "--export", "m.rvt"])).is_err());
+    assert!(hf::parse(&argv(&["--file", "m.ifc", "--export", "m.step"])).is_ok());
 }
 
 #[test]

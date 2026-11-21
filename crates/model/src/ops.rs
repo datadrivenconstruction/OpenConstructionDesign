@@ -111,14 +111,34 @@ impl Snapshots {
 
     /// Inverse of a rewrite of rows the batch already changed: it undoes before the snapshots.
     pub(crate) fn push_first(&mut self, inv: Inv) {
+        let inv = self.without_new_rows(inv);
         let cur = std::mem::take(&mut self.0);
         self.0 = inv.then(cur);
     }
 
     /// Adds ready-made inverse commands (cascading deletes inside a batch).
     pub(crate) fn push(&mut self, inv: Inv) {
+        let inv = self.without_new_rows(inv);
         let cur = std::mem::take(&mut self.0);
         self.0 = cur.then(inv);
+    }
+
+    /// Drops the restores of rows above a batch watermark from a ready-made inverse, as `save`
+    /// does: undo deletes those rows first, and a restore after it would bring them back.
+    fn without_new_rows(&self, mut inv: Inv) -> Inv {
+        inv.0.retain(|(sql, args)| {
+            let Some(rest) = sql.strip_prefix("INSERT OR REPLACE INTO ") else {
+                return true;
+            };
+            let Some((table, cols)) = rest.split_once('(') else {
+                return true;
+            };
+            match (self.2.get(table), cols.starts_with("rowid,"), args.first()) {
+                (Some(&max), true, Some(Value::Integer(r))) => *r <= max,
+                _ => true,
+            }
+        });
+        inv
     }
 
     /// An empty snapshot set for a single operation outside a batch (each row is snapshotted once).

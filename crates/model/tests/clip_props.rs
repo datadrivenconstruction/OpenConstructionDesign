@@ -1640,3 +1640,29 @@ fn clip_images_stay_within_the_clipboard_budget() {
     let bare = mats.rows.iter().filter(|r| r[at] == Value::Null).count();
     assert_eq!(bare, 1);
 }
+
+/// A deleted element is no copy root: copying only it is refused, with others it is left out.
+#[test]
+fn a_deleted_element_is_not_copied() {
+    let (mut m, b) = base();
+    let roof = |m: &mut Model, x: f64| {
+        m.add_roof(&RoofSpec {
+            level: b.l1,
+            slab_type: b.st,
+            offset: 0.0,
+            overhang: 0.25,
+            fascia: 0.2,
+            kind: RoofKind::Footprint {
+                ring: square(x, 0.0, 6.0),
+                slopes: vec![Some(30.0), None, Some(30.0), None],
+                mansard: None,
+            },
+        })
+        .unwrap()
+    };
+    let (gone, kept) = (roof(&mut m, 0.0), roof(&mut m, 20.0));
+    m.delete_roof(gone).unwrap();
+    assert!(m.clip_copy(&[("roof", gone)]).is_err(), "a copy of a deleted roof");
+    let clip = m.clip_copy(&[("roof", gone), ("roof", kept)]).unwrap();
+    assert_eq!(clip.roots, vec![("roof".to_string(), kept)]);
+}

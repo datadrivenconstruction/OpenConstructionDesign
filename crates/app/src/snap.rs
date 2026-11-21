@@ -530,7 +530,9 @@ pub fn underlay_candidates(segs: &[(V2, V2)], cursor: V2, r: f64) -> Vec<Snap> {
     out
 }
 
-/// Merge datum snaps into the `candidates` list (rank, then distance; Free goes last).
+/// Merge datum snaps into the `candidates` list (rank, then distance; Free goes last). On the
+/// same point a guide with a source (extension, tracking, step) names it before a bare alignment,
+/// whatever was merged first.
 pub fn merge(base: &mut Vec<Snap>, extra: Vec<Snap>, cursor: V2) {
     let free = base.pop();
     base.extend(extra);
@@ -542,8 +544,12 @@ pub fn merge(base: &mut Vec<Snap>, extra: Vec<Snap>, cursor: V2) {
     });
     let mut res: Vec<Snap> = vec![];
     for s in base.drain(..) {
-        if !res.iter().any(|q| (q.p - s.p).len() < 1e-9) {
-            res.push(s);
+        match res.iter_mut().find(|q| (q.p - s.p).len() < 1e-9) {
+            None => res.push(s),
+            Some(q) if q.kind.is_align() && !s.kind.is_align() && q.kind.rank() == s.kind.rank() => {
+                q.kind = s.kind;
+            }
+            Some(_) => {}
         }
     }
     *base = res;
@@ -726,5 +732,21 @@ mod tests {
         }];
         let c = candidates(&ctx(&w, Some(v2(1.0, 1.0))), v2(f64::NAN, 1.0));
         assert_eq!(c.last().unwrap().kind, SnapKind::Free);
+    }
+
+    /// An alignment merged first does not hide the extension or tracking guide on its point.
+    #[test]
+    fn a_guide_beats_a_bare_alignment_on_the_same_point() {
+        let cursor = v2(8.0, 0.05);
+        let free = Snap { p: cursor, kind: SnapKind::Free };
+        for guide in [SnapKind::Extension, SnapKind::Tracking(Guide::X)] {
+            let mut list = vec![free];
+            // the alignment a hair closer: two projections of one point differ in the last bits
+            merge(&mut list, vec![Snap { p: v2(8.0, 1e-12), kind: SnapKind::AlignY }], cursor);
+            merge(&mut list, vec![Snap { p: v2(8.0, 0.0), kind: guide }], cursor);
+            assert_eq!(list[0].kind, guide, "{list:?}");
+            assert_eq!(list.len(), 2, "{list:?}");
+            assert_eq!(list.last().unwrap().kind, SnapKind::Free);
+        }
     }
 }

@@ -319,6 +319,24 @@ pub fn clipboard_image() -> Option<(u32, u32, Vec<u8>)> {
     None
 }
 
+/// The preview of a read table drawn alone, for the layout contract.
+#[cfg(test)]
+pub(crate) fn layout_probe(lang: ddc_ui::Lang) -> crate::layout_contract::Probe {
+    let cat = ddc_ui::Catalog::new(lang);
+    let ed = crate::editor::Editor::new_in_memory().unwrap();
+    let mut st = PanelUi::default();
+    let id = st.attach.next_id();
+    let body = b"Room;Area\nHall;20\nOffice;14\n".to_vec();
+    st.attach.add(attach::from_bytes("programme.csv", body, id).unwrap()).unwrap();
+    st.attach.preview = Some(id);
+    let mut th = ddc_ui::Theme::new(ddc_ui::Mode::Dark, ddc_ui::Density::Compact);
+    crate::layout_contract::probe("ddc.ai.att.preview", |ctx| {
+        let _ = th.apply(ctx);
+        let cx = Cx { th: &th, cat: &cat, ed: &ed, view3d: false, palette_open: false };
+        preview(ctx, &mut st, &cx, "localhost", &mut Vec::new());
+    })
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;

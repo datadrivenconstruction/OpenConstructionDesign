@@ -51,6 +51,7 @@ pub(super) fn read(
         let (d_breaker, d_cable) = kind.defaults();
         let num = |k: &str, d: f64| {
             kv.get(k)
+                // num-lint: an IFC property value, invariant form by the file format
                 .and_then(|v| v.trim().parse::<f64>().ok())
                 .filter(|v| v.is_finite() && *v > 0.0)
                 .unwrap_or(d)
@@ -75,6 +76,7 @@ pub(super) fn read(
             .unwrap_or(ddc_model::Conductor::Cu);
         let cos_phi = kv
             .get("CosPhi")
+            // num-lint: an IFC property value, invariant form by the file format
             .and_then(|v| v.trim().parse::<f64>().ok())
             .filter(|v| *v > 0.0 && *v <= 1.0)
             .or_else(|| rules.cos_phi_of(&load_type))
@@ -86,6 +88,7 @@ pub(super) fn read(
             .unwrap_or_else(|| "conduit_wall".to_string());
         let ambient_c = kv
             .get("AmbientC")
+            // num-lint: an IFC property value, invariant form by the file format
             .and_then(|v| v.trim().parse::<f64>().ok())
             .filter(|v| v.is_finite() && (-40.0..=100.0).contains(v))
             .unwrap_or_else(|| rules.ambient_ref_c());
@@ -109,6 +112,7 @@ pub(super) fn read(
             match by_guid.get(guid) {
                 Some(&comp) => {
                     // only a finite load of zero or more is a load; anything else is dropped
+                    // num-lint: an IFC property value, invariant form by the file format
                     let load = loads.get(&key).and_then(|l| l.trim().parse::<f64>().ok());
                     let load = match load {
                         Some(l) if !(l.is_finite() && l >= 0.0) => {

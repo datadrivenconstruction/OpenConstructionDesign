@@ -829,6 +829,30 @@ fn arch_tools_have_no_legacy_branch() {
     assert!(ed.model_tool().is_none() && !ed.opening_mode && ed.section_tool().is_none());
 }
 
+/// A door armed while a dimension chain is still armed takes the input: the chain is cancelled,
+/// the door session places.
+#[test]
+fn door_after_an_armed_dimension_chain_places() {
+    let src = "walls=[(0,0)-(6,0)]\ntool(ann.dim_chain) click(3,0)\n\
+               tool(DR) move(3.02,0.03) → scope=Placing hint=\"arch.door.place\"";
+    let mut ed = editor();
+    let r = script::run(&mut ed, &script::parse(src).unwrap());
+    assert!(r.ok(), "{:?}", r.failures);
+    assert_eq!(ed.ix.session_id(), Some(ToolId("arch.door")));
+}
+
+/// A rest counts from the move onto the point: one clock tick 300 ms later captures it.
+#[test]
+fn a_rest_is_timed_from_the_move() {
+    let mut ed = editor();
+    ed.commit_walls(vec![(v2(0.0, 0.0), v2(6.0, 0.0))]);
+    assert!(script::arm(&mut ed, "WA"));
+    Interaction::update(&mut ed, Input::Tick(1000));
+    Interaction::update(&mut ed, Input::Move(v2(6.0, 0.0).into()));
+    Interaction::update(&mut ed, Input::Tick(1300));
+    assert_eq!(ed.tool.snap_state.acquired_points(), vec![v2(6.0, 0.0)]);
+}
+
 #[test]
 fn nested_session_esc_returns_to_parent() {
     let mut ed = editor();

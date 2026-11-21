@@ -1207,6 +1207,9 @@ impl Core {
         if !catalog::allowed(spec, cx.mode, images) {
             return CmdError::new(ErrorCode::NotAllowed, "not_allowed").outcome();
         }
+        if let Err(e) = catalog::validate(spec, args) {
+            return CmdError::from_text(&e).outcome();
+        }
         let Some(run) = handler(name) else {
             return CmdError::from_text("unknown tool").outcome();
         };

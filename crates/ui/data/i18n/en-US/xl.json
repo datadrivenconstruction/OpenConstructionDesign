@@ -182,5 +182,8 @@
  "xl.msg.book_could_not_be_read_its_own_columns_would_be_lost_close_it_in_a_spreadsheet_app_and_retry": "book could not be read, its own columns would be lost; close it in a spreadsheet app and retry",
  "xl.msg.type_x_layer_x": "type {} layer {}",
  "xl.msg.x_x_no_longer_exists_its_own_columns_cells_were_dropped": "{}: {} no longer exists, its own columns' cells were dropped",
- "xl.msg.delsafe_type_param_on_elements": "parameter '{}' is a type parameter; edit it on the types sheet, not applied"
+ "xl.msg.delsafe_type_param_on_elements": "parameter '{}' is a type parameter; edit it on the types sheet, not applied",
+ "xl.msg.tag_x_is_removed_with_x_x": "tag {} is removed with {} {}",
+ "xl.msg.dimension_x_loses_x_x_and_keeps_its_last_shape": "dimension {} loses {} {} and keeps its last shape",
+ "xl.msg.cannot_check_annotations_of_deleted_elements_x": "cannot check annotations of deleted elements: {}"
 }

@@ -374,11 +374,13 @@ fn row_of(m: &Model, key: &str, guid: &str) -> i64 {
         .1
 }
 
-/// Whether some property of the element holds this value.
+/// Whether some property or project parameter value of the element holds this value (the
+/// importer maps the file's project parameter set back to project parameters, not to `prop`).
 fn has_value(m: &Model, kind: &str, id: i64, v: &str) -> bool {
     m.sql()
         .query_row(
-            "SELECT count(*) FROM prop WHERE kind=?1 AND ref=?2 AND value=?3",
+            "SELECT (SELECT count(*) FROM prop WHERE kind=?1 AND ref=?2 AND value=?3) \
+             + (SELECT count(*) FROM pparam_val WHERE kind=?1 AND ref=?2 AND value=?3)",
             rusqlite::params![kind, id, v],
             |r| r.get::<_, i64>(0),
         )

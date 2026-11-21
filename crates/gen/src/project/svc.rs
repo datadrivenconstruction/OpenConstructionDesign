@@ -1052,6 +1052,7 @@ pub(crate) fn obstacles_with(p: &GProject, ducts: bool) -> Vec<([f64; 6], &'stat
         }
     }
     for f in &p.hvac.plant {
+        // num-lint: a built-in type name like 800x600, invariant form
         let dims: Vec<f64> = f.ty.split('x').filter_map(|v| v.trim().parse::<f64>().ok()).collect();
         let (l, w) = match dims.as_slice() {
             [l, w, ..] => (l / 1000.0, w / 1000.0),

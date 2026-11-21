@@ -41,7 +41,7 @@ pub use export::{
 };
 pub use export::{export_xlsx_families, export_xlsx_families_from};
 pub use extra::{dropped_sheets, lost_user_cells, take_lost_cells, LostCells, PHASE_CREATED, PHASE_DEMOLISHED};
-pub use loss::{loss_items, reexport_losses, refusal, LOSS_PREFIX, LOSS_SEP};
+pub use loss::{loss_items, reexport_losses, reexport_losses_made, refusal, LOSS_PREFIX, LOSS_SEP};
 pub use family::{
     apply_props, split_pinned_props, import_xlsx_families, import_xlsx_families_hooked, import_xlsx_families_keyed, import_xlsx_families_take, import_xlsx_families_take_keyed, patch_cell, sheet_ids, FamDim,
     FamilyCol, FamilySheet,
@@ -465,6 +465,9 @@ pub struct Report {
     pub model_newer: usize,
     /// (sheet, row) of each row this report creates -> its fingerprint (see `Take::made`).
     pub fingerprints: std::collections::HashMap<(String, u32), String>,
+    /// Per sheet: id-less rows an earlier Apply already created (`Take::made`); a re-export
+    /// numbers them.
+    pub made_rows: std::collections::BTreeMap<String, usize>,
     /// Per sheet: how many elements "delete missing" removes (see `is_mass_delete`).
     pub deletions: Vec<SheetDeletion>,
     /// The book has no whole baseline (dropped, damaged or never written): every differing cell

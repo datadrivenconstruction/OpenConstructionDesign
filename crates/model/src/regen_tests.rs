@@ -389,6 +389,25 @@ fn unrelated_ops_keep_index() {
     assert!(f2 > f1);
 }
 
+/// A full regeneration writes only the quantities that change: the walls it did not alter keep
+/// their rows out of the change set (the editor reloads by that set).
+#[test]
+fn full_regeneration_leaves_unchanged_quantities_alone() {
+    let (mut m, b) = base();
+    let w = m.add_wall(&WallSpec { a: (0.0, 0.0), b: (5.0, 0.0), level: b.lv[0], base_offset: 0.0, height: 3.0, wall_type: b.wt, offset0: None }).unwrap();
+    for i in 0..10 {
+        let y = 10.0 + 3.0 * i as f64;
+        m.add_wall(&WallSpec { a: (0.0, y), b: (5.0, y), level: b.lv[0], base_offset: 0.0, height: 3.0, wall_type: b.wt, offset0: None }).unwrap();
+    }
+    let lay = LayerSpec { material: "Brick".into(), thickness: 0.3 };
+    let t = m.add_wall_type("W2", &[lay]).unwrap();
+    let (head, (_, f0)) = (m.change_head(), stats());
+    m.set_wall_type(w, t).unwrap();
+    assert!(stats().1 > f0, "a wall type change regenerates in full");
+    let n = m.changes_since(head).rows.get("wall_qty").map_or(0, |s| s.len());
+    assert!(n <= 3, "{n} quantity rows changed, only the edited wall's may");
+}
+
 /// Wall neighbourhood equals full regeneration: a grid of thick and thin walls (corners, T joints,
 /// 3+ way joints with fillers), columns at joints, rooms in cells; only neighbouring walls are edited.
 #[test]

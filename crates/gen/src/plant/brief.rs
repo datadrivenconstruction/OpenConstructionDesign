@@ -134,6 +134,7 @@ fn number_at(chars: &[char], i: usize) -> Option<(f64, usize)> {
         j += 1;
     }
     let s = s.trim_end_matches('.');
+    // num-lint: brief text; the caller split digits and one decimal mark
     s.parse::<f64>().ok().map(|x| (x, j))
 }
 
@@ -301,6 +302,7 @@ impl Brief {
         let height_words = word_set(&HEIGHT_WORDS, "height");
         for (i, &w) in words.iter().enumerate() {
             let digits: String = w.chars().take_while(|c| c.is_ascii_digit() || *c == '.' || *c == ',').collect();
+            // num-lint: brief text in any language; either decimal mark is read
             let Ok(x) = digits.replace(',', ".").parse::<f64>() else { continue };
             let glued = &w[digits.len()..];
             let (unit, mut j) = if glued.is_empty() { (words.get(i + 1).copied().unwrap_or(""), i + 2) } else { (glued, i + 1) };

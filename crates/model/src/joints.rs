@@ -102,6 +102,7 @@ fn frame_text(f: &JFrame) -> String {
 fn frame_parse(s: &str) -> Result<JFrame, Error> {
     let v: Vec<f64> = s
         .split_whitespace()
+        // num-lint: a joint frame stored by this module, invariant form
         .map(|x| x.parse::<f64>())
         .collect::<Result<_, _>>()
         .map_err(|_| Error::Invalid(format!("joint frame: {s}")))?;

@@ -306,6 +306,7 @@ pub fn scale_of(page: &PageDrawing, segs: &[([f64; 2], [f64; 2])], index: usize)
         if s.is_empty() || !s.chars().all(|c| c.is_ascii_digit()) {
             continue;
         }
+        // num-lint: digits cut from a document by the scanner, invariant form
         let Ok(v) = s.parse::<f64>() else { continue };
         if !(100.0..=200_000.0).contains(&v) {
             continue;

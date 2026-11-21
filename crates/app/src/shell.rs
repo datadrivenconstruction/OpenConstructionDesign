@@ -91,7 +91,6 @@ pub type Handler = fn(&mut EditorApp);
 /// `register()` of tool modules; called once from [`EditorApp::new`].
 pub const REGISTER: &[fn(&mut EditorApp)] = &[
     crate::gfx_ui::register,
-    crate::refusals::register,
     status_bar::register,
     crate::ai::mcp_bridge::register,
     crate::ai::register,
@@ -710,8 +709,14 @@ impl EditorApp {
     }
 
     pub fn run(&mut self, id: &str) -> bool {
+        self.run_as(id, |app| app.run_cmd(id))
+    }
+
+    /// Runs `act` as the command `id` would run: the scope follows and the entry it wrote is
+    /// offered for Undo. For actions that take arguments and so are not registry handlers.
+    pub(crate) fn run_as(&mut self, id: &str, act: impl FnOnce(&mut Self) -> bool) -> bool {
         let pushes = self.ed.pushes;
-        let ok = self.run_cmd(id);
+        let ok = act(self);
         // the command may have armed a tool: the scope (and the lit command) follows now
         crate::interact::Interaction::refresh(&mut self.ed);
         self.reveal_tool_tab(id);

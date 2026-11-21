@@ -104,11 +104,13 @@ fn quantity(s: &str) -> Option<(f64, String)> {
     let t = s.trim().trim_matches(|c| c == '(' || c == ')');
     let cut = t.find(|c: char| c.is_alphabetic() || c == '°' || c == '\'' || c == '"')?;
     let (n, u) = t.split_at(cut);
+    // num-lint: a model's argument text; either decimal mark is read
     let v = n.trim().replace(',', ".").parse::<f64>().ok()?;
     Some((v, unit_alias(u)))
 }
 
 fn number(v: &J) -> Option<f64> {
+    // num-lint: a model's argument text; either decimal mark is read
     v.as_f64().or_else(|| v.as_str().and_then(|s| s.trim().replace(',', ".").parse().ok()))
 }
 
@@ -119,6 +121,7 @@ fn component(v: &J) -> Option<(f64, Option<String>)> {
         J::Number(n) => Some((n.as_f64()?, None)),
         J::String(s) => match quantity(s) {
             Some((x, u)) => Some((x, Some(u))),
+            // num-lint: a model's argument text; either decimal mark is read
             None => Some((s.trim().replace(',', ".").parse().ok()?, None)),
         },
         J::Object(o) => {
@@ -168,6 +171,7 @@ fn list_of(s: &str) -> Option<(Vec<f64>, Option<String>)> {
         .split(sep)
         .map(str::trim)
         .filter(|x| !x.is_empty())
+        // num-lint: a model's argument text after the unit split
         .map(|x| x.parse::<f64>().ok())
         .collect::<Option<Vec<_>>>()?;
     Some((v, unit))

@@ -485,6 +485,23 @@ fn found_text(found: &[PathBuf], ru: bool) -> String {
     }
 }
 
+/// The card drawn alone with `found` candidates, and an interrupted save when `left`, for the
+/// layout contract.
+#[cfg(test)]
+pub(crate) fn layout_probe(ru: bool, found: usize, left: bool) -> crate::layout_contract::Probe {
+    let old = PathBuf::from("C:/data/Rooms.xlsx");
+    let found = (1..=found).map(|i| PathBuf::from(format!("C:/data/copy {i}/Rooms.xlsx"))).collect();
+    let m = Missing { old: old.clone(), found };
+    let left = left.then(|| Leftover {
+        dest: old,
+        part: Some(PathBuf::from("C:/data/Rooms.xlsx.part")),
+        bak: Some(PathBuf::from("C:/data/Rooms.xlsx.bak")),
+    });
+    crate::layout_contract::probe_id(egui::Id::new("xlsx_relink"), |ctx| {
+        let _ = card(ctx, &m, left.as_ref(), ru, false);
+    })
+}
+
 /// The card: one candidate is the primary action; several are equal choices, none preselected.
 fn card(ctx: &egui::Context, m: &Missing, left: Option<&Leftover>, ru: bool, busy: bool) -> Option<Click> {
     use ddc_ui::theme::{layout, space};

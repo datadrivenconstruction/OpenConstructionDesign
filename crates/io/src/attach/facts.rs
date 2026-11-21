@@ -231,6 +231,7 @@ pub fn numbers(s: &str) -> Vec<(f64, usize, usize)> {
             }
             i += 1;
         }
+        // num-lint: digits the scanner cut from a document, invariant form
         if let Ok(v) = txt.parse::<f64>() {
             out.push((v, start, i));
         }
