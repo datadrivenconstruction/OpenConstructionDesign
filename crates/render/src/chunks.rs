@@ -374,8 +374,61 @@ pub(crate) fn set_cat(v: &mut [Vertex], cat: u8) {
     }
 }
 
-/// Flat triangle vertices (face normal), like `Scene::vertices`.
+/// Share of the outward direction mixed into a foliage normal: the leaf mass reads as one round
+/// crown instead of the facets of its lumps.
+pub const FOLIAGE_BEND: f32 = 0.8;
+
+/// Vertex normals of a foliage mesh: area-weighted smooth normals bent outward from the crown's
+/// core, a point (round crown) or a segment (long hedge) inside its bounds.
+pub fn foliage_normals(m: &SceneMesh) -> Vec<Vec3> {
+    // corners are matched by place, not index: a triangle soup smooths as well as a shared mesh
+    let key = |p: &[f32; 3]| p.map(|c| (c * 1.0e4).round() as i64);
+    let mut acc: HashMap<[i64; 3], Vec3> = HashMap::new();
+    let mut b = Aabb::EMPTY;
+    m.positions.iter().for_each(|p| b.grow(Vec3::from(*p)));
+    for t in &m.triangles {
+        let p = t.map(|i| Vec3::from(m.positions[i as usize]));
+        let n = (p[1] - p[0]).cross(p[2] - p[0]);
+        for i in t {
+            *acc.entry(key(&m.positions[*i as usize])).or_default() += n;
+        }
+    }
+    if b.is_empty() {
+        return vec![Vec3::Z; m.positions.len()];
+    }
+    let half = (b.max - b.min) * 0.5;
+    let r = half.min_element();
+    let (lo, hi) = (b.min + Vec3::splat(r), b.max - Vec3::splat(r));
+    m.positions
+        .iter()
+        .map(|q| {
+            let n = acc.get(&key(q)).copied().unwrap_or(Vec3::ZERO);
+            let p = Vec3::from(*q);
+            let out = (p - p.clamp(lo, hi.max(lo))).normalize_or_zero();
+            let s = n.normalize_or_zero();
+            let s = if s == Vec3::ZERO { out } else { s };
+            (s + out * FOLIAGE_BEND).normalize_or(s)
+        })
+        .collect()
+}
+
+/// Flat triangle vertices (face normal), like `Scene::vertices`; foliage carries its smooth
+/// vertex normals instead (`foliage_normals`).
 pub fn tri_vertices(m: &SceneMesh, out: &mut Vec<Vertex>) {
+    if crate::scene::is_foliage(m.tag) {
+        let ns = foliage_normals(m);
+        for t in &m.triangles {
+            for i in t {
+                out.push(Vertex {
+                    pos: m.positions[*i as usize],
+                    normal: ns[*i as usize].into(),
+                    element: m.element,
+                    tag: m.tag,
+                });
+            }
+        }
+        return;
+    }
     for t in &m.triangles {
         let p = t.map(|i| Vec3::from(m.positions[i as usize]));
         let n = (p[1] - p[0]).cross(p[2] - p[0]).normalize_or_zero();
@@ -397,6 +450,9 @@ pub fn crease_vertices(m: &SceneMesh, out: &mut Vec<Vertex>) {
         let q = (p * 1.0e4).round();
         (q.x as i64, q.y as i64, q.z as i64)
     };
+    if crate::scene::is_foliage(m.tag) {
+        return;
+    }
     let mut edges: HashMap<(K, K), (Vec3, Vec3, Vec<Vec3>)> = HashMap::new();
     for t in &m.triangles {
         let p = t.map(|i| Vec3::from(m.positions[i as usize]));

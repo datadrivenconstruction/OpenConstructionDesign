@@ -299,7 +299,28 @@ impl Welder {
         Some(id)
     }
 
+    /// Foliage: every corner keeps its own (smooth) normal, so the leaf mass shades round.
+    fn smooth_tri(&mut self, t: &[Vertex]) {
+        self.room(3);
+        let mut ids = [0u32; 3];
+        for (k, x) in t.iter().enumerate().take(3) {
+            let key = self.key(x);
+            let n = oct(Vec3::from(x.normal));
+            ids[k] = match self.with_normal(&key, n) {
+                Some(id) => id,
+                None => self.add(key, Some(n)),
+            };
+        }
+        let base = self.base as u32;
+        for k in 0..3 {
+            self.idx.push(ids[k] - base);
+        }
+    }
+
     fn tri(&mut self, t: &[Vertex]) {
+        if crate::scene::is_foliage(t[0].tag) {
+            return self.smooth_tri(t);
+        }
         self.room(3);
         let n = oct(Vec3::from(t[0].normal));
         let keys = [self.key(&t[0]), self.key(&t[1]), self.key(&t[2])];
@@ -682,5 +703,81 @@ mod tests {
         for (t, (p, _)) in got.iter().enumerate() {
             assert!((p[0] - Vec3::from(v[t * 3].pos)).length() <= 2.0 * deq.max_error());
         }
+    }
+
+    /// An octahedron as a triangle soup (no shared indices), elongated like a hedge when `long`.
+    fn soup_blob(tag: u32, long: f32) -> SceneMesh {
+        let ax = [Vec3::X * long, -Vec3::X * long, Vec3::Y, -Vec3::Y, Vec3::Z, -Vec3::Z];
+        let mut positions: Vec<[f32; 3]> = vec![];
+        let mut triangles = vec![];
+        for (a, b) in [(0, 2), (2, 1), (1, 3), (3, 0)] {
+            for c in [4, 5] {
+                let t = if c == 4 { [ax[a], ax[b], ax[c]] } else { [ax[b], ax[a], ax[c]] };
+                let k = positions.len() as u32;
+                positions.extend(t.map(|p| <[f32; 3]>::from(p + Vec3::new(5.0, 3.0, 2.0))));
+                triangles.push([k, k + 1, k + 2]);
+            }
+        }
+        SceneMesh { element: 7, tag, positions, triangles }
+    }
+
+    /// Foliage corners at one place share one smooth normal, pointing away from the crown core;
+    /// any other mesh keeps one flat face normal per triangle.
+    #[test]
+    fn foliage_shades_smooth_and_bent_outward_the_rest_stays_flat() {
+        let leaves = crate::scene::tag_foliage([60, 120, 50]);
+        let m = soup_blob(leaves, 1.0);
+        let mut v = vec![];
+        tri_vertices(&m, &mut v);
+        let centre = Vec3::new(5.0, 3.0, 2.0);
+        for x in &v {
+            let n = Vec3::from(x.normal);
+            let out = (Vec3::from(x.pos) - centre).normalize();
+            assert!((n.length() - 1.0).abs() < 1e-5);
+            // the tip of the octahedron: the smooth normal is the axis itself, no facet tilt
+            assert!(n.dot(out) > 0.999, "{n} at {:?}", x.pos);
+        }
+        let mut flat = vec![];
+        tri_vertices(&soup_blob(crate::scene::tag_rgb([60, 120, 50], false), 1.0), &mut flat);
+        for t in flat.chunks_exact(3) {
+            assert!(t.iter().all(|x| x.normal == t[0].normal));
+            assert!(Vec3::from(t[0].normal).dot((Vec3::from(t[0].pos) - centre).normalize()) < 0.8);
+        }
+        // a long crown (hedge) bends round its axis, not towards one centre point
+        let mut hedge = vec![];
+        tri_vertices(&soup_blob(leaves, 4.0), &mut hedge);
+        let top = hedge.iter().find(|x| (x.pos[2] - 3.0).abs() < 1e-5).unwrap();
+        assert!(Vec3::from(top.normal).z > 0.999, "{:?}", top.normal);
+    }
+
+    /// The packed foliage stream keeps every corner's own normal, for both provoking conventions.
+    #[test]
+    fn packed_foliage_keeps_corner_normals() {
+        let m = soup_blob(crate::scene::tag_foliage([60, 120, 50]), 1.3);
+        let mut v = vec![];
+        tri_vertices(&m, &mut v);
+        let deq = Deq::of(&bounds(&v));
+        for last in [false, true] {
+            let s = pack_tris(&v, deq, false, last);
+            assert_eq!(s.count() as usize, v.len());
+            for k in 0..s.count() {
+                let g = s.v[s.vertex_of(k) as usize];
+                let p = deq.pos(unpack_q(g.q));
+                let want = v.iter().find(|x| (Vec3::from(x.pos) - p).length() < 1e-3).unwrap();
+                assert!(angle_deg(unoct(g.n), Vec3::from(want.normal)) < 0.05, "corner {k}");
+            }
+            // one vertex per place: the six tips, not 24 corners
+            assert_eq!(s.v.len(), 6);
+        }
+    }
+
+    /// No crease lines on a leaf mass; the same shape as a solid has them.
+    #[test]
+    fn foliage_has_no_crease_lines() {
+        let mut l = vec![];
+        crease_vertices(&soup_blob(crate::scene::tag_foliage([60, 120, 50]), 1.0), &mut l);
+        assert!(l.is_empty());
+        crease_vertices(&soup_blob(crate::scene::tag_rgb([60, 120, 50], false), 1.0), &mut l);
+        assert!(!l.is_empty());
     }
 }

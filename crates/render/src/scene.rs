@@ -254,12 +254,17 @@ impl Scene {
         (self.triangle_count() - glass) * 3
     }
 
-    /// Unshared vertices with a flat normal: wall faces stay crisp.
+    /// Unshared vertices with a flat normal: wall faces stay crisp (foliage: smooth, see
+    /// `chunks::foliage_normals`).
     /// Opaque meshes first, then glass (drawn in a second pass with blending).
     pub fn vertices(&self) -> Vec<Vertex> {
         let mut out = Vec::with_capacity(self.triangle_count() * 3);
         let opaque = self.meshes.iter().filter(|m| !is_translucent(m.tag));
         for m in opaque.chain(self.meshes.iter().filter(|m| is_translucent(m.tag))) {
+            if is_foliage(m.tag) {
+                crate::chunks::tri_vertices(m, &mut out);
+                continue;
+            }
             for t in &m.triangles {
                 let p = t.map(|i| Vec3::from(m.positions[i as usize]));
                 let n = (p[1] - p[0]).cross(p[2] - p[0]).normalize_or_zero();
