@@ -989,9 +989,11 @@ fn read_footprint(rd: &mut Rd, v: &J, d: &Defaults) -> Footprint {
             dp
         }
     };
+    // a footprint shape is lined with bands of the asked depth all round it
+    let banded = super::footprint::asks_plate(fp) && !v["band_depth"].is_null();
     if let Some(dp) = depth {
         // the outline is the firmer wish: the band depth follows it, and the reply says so
-        if !v["band_depth"].is_null() {
+        if !v["band_depth"].is_null() && !banded {
             rd.notes.push(format!(
                 "footprint.depth {dp} m and band_depth were both given: the footprint wins, \
                  band_depth is derived from it"
@@ -1005,7 +1007,7 @@ fn read_footprint(rd: &mut Rd, v: &J, d: &Defaults) -> Footprint {
         );
         // deeper than two bands: one band of rooms on the south facade, an open bay behind
         let deep = dp - band_depth - corridor;
-        if dp < lo - 1e-9 || deep > HALL_MAX + 1e-9 {
+        if dp < lo - 1e-9 || (deep > HALL_MAX + 1e-9 && !banded) {
             let msg = format!(
                 "{dp} m is out of range: between {lo:.1} m and {:.1} m with a {corridor} m \
                  corridor (room bands {}-{} m deep; past {hi:.1} m the north band is an open \
@@ -1017,6 +1019,8 @@ fn read_footprint(rd: &mut Rd, v: &J, d: &Defaults) -> Footprint {
             rd.bad(DEPTH.path, msg);
         } else if dp > hi + 1e-9 {
             hall_depth = Some(deep);
+        } else if banded {
+            band_depth = band_depth.min((dp - corridor) / 2.0);
         } else {
             band_depth = (dp - corridor) / 2.0;
         }

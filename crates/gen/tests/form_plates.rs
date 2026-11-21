@@ -36,6 +36,17 @@ fn rooms_along_a_curve_have_straight_corridor_walls() {
 }
 
 #[test]
+fn a_shape_two_bands_deep_holds_them_and_keeps_the_asked_band() {
+    let v = |rules: J| json!({"typology": "office", "floors": 2, "footprint": {"shape": "rectangle", "width": 40, "depth": 16}, "roof": {"kind": "barrel"}, "rules": rules});
+    let s = parse_spec(&v(json!({}))).unwrap();
+    assert!((s.band_depth - 7.1).abs() < 1e-9, "{}", s.band_depth);
+    built(&v(json!({})));
+    let s = parse_spec(&v(json!({"depth.band": 6.0}))).unwrap();
+    assert!((s.band_depth - 6.0).abs() < 1e-9, "the asked band: {}", s.band_depth);
+    built(&v(json!({"depth.band": 6.0})));
+}
+
+#[test]
 fn winged_apartments_build() {
     let arm = |b: [f64; 2]| json!({"from": [0, 0], "to": b, "width": 15});
     built(&json!({"typology": "apartment_section", "floors": 2,
