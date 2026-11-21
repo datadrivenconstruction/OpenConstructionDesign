@@ -27,7 +27,18 @@ struct VOut {
     @location(1) @interpolate(flat) nrm: vec3<f32>,
     @location(2) @interpolate(flat) elem: u32,
     @location(3) @interpolate(flat) tag: u32,
+    // per-placement hash of the element and the placement origin: tone variation of foliage
+    @location(4) @interpolate(flat) seed: u32,
 };
+
+// 32-bit avalanche (xorshift-multiply, public-domain constants): integer maths, equal on every GPU
+fn mix32(x: u32) -> u32 {
+    var h = x ^ (x >> 16u);
+    h = h * 0x7feb352du;
+    h = h ^ (h >> 15u);
+    h = h * 0x846ca68bu;
+    return h ^ (h >> 16u);
+}
 
 fn vpos(q: vec4<u32>) -> vec3<f32> {
     let lo = vec3<u32>(q.w & 31u, (q.w >> 5u) & 31u, (q.w >> 10u) & 31u);
@@ -67,6 +78,8 @@ fn xform(v: VIn) -> VOut {
     o.nrm = normalize(cof * unoct(v.oct)) * select(1.0, -1.0, det < 0.0);
     o.elem = e;
     o.tag = v.tag;
+    let at = bitcast<vec3<u32>>(v.m3.xyz);
+    o.seed = mix32(e * 0x9e3779b1u ^ mix32(at.x ^ mix32(at.y ^ mix32(at.z))));
     // hidden category: vertex outside the clip volume - the whole triangle is discarded
     if (vertex_hidden(v.tag)) { o.clip = vec4<f32>(0.0, 0.0, -1.0, 1.0); }
     return o;
@@ -101,6 +114,7 @@ fn vs_ground(@builtin(vertex_index) k: u32) -> VOut {
     o.nrm = vec3<f32>(0.0, 0.0, 1.0);
     o.elem = 0xFFFFFFFEu;
     o.tag = 0u;
+    o.seed = 0u;
     return o;
 }
 
