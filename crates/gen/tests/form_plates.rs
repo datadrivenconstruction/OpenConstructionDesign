@@ -66,3 +66,12 @@ fn winged_apartments_build() {
     built(&json!({"typology": "apartment_section", "floors": 2,
         "footprint": {"wings": [arm([0.0, 30.0]), arm([-25.981, -15.0]), arm([25.981, -15.0])]}}));
 }
+
+#[test]
+fn a_stair_head_on_a_pitched_roof_has_a_flat_cover_type() {
+    use ddc_gen::project::assembly::{roof_use, uses_of};
+    let p = built(&json!({"typology": "office", "floors": 6, "footprint": {"shape": "triangle", "width": 48, "depth": 42},
+        "roof": {"kind": "shed", "slope": 8}}));
+    assert!(!p.fire.stair_heads.is_empty(), "the stairs reach the roof");
+    assert!(uses_of(&p).contains(&roof_use(0.0)), "{:?}", uses_of(&p));
+}
