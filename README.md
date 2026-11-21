@@ -16,11 +16,10 @@ browser build on the way.**
 [![Rust](https://img.shields.io/badge/rust-1.89%2B-informational.svg)](docs/BUILDING.md)
 
 <p align="center">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/images/school-dark.png">
-  <img src="docs/images/school-light.png" alt="The editor with a two-storey school on its landscaped plot in 3D; an exterior wall is selected and its type, length, height, area and volume are shown on the right" width="100%">
-</picture>
+  <img src="docs/images/hero.webp" alt="Round Tower, an 11-storey glazed cylinder with a roof plant deck on a landscaped plot, generated and rendered by the editor" width="100%">
 </p>
+
+<p align="center"><sub>Round Tower: 11 storeys, 11,159 m&sup2; GFA, 275 rooms, generated in 2.4 s.</sub></p>
 
 OpenConstructionDesign combines CAD precision with BIM data in one editor. It has its own
 geometry kernel and file decoders, reads and writes IFC, and keeps the whole model and its
@@ -51,8 +50,6 @@ applied plan is one undo step.
   machine. Keys stay in the OS key store; a local-only mode keeps every request on your
   network.
 - A built-in MCP server lets external AI clients use the same tools under the same Apply rule.
-
-The transmission tower in the gallery was built with the same tools the assistant uses.
 
 ## 2. Quantities that flow into cost estimation
 
@@ -86,98 +83,77 @@ editor below is the released one.
 
 <!-- placeholder for the owner: docs/images/browser-editor.png - the editor running in a browser tab (shot on the machine with the browser build). -->
 
-## Gallery
+## Generated from a brief
 
-Rendered by the editor itself; no third-party models. Each image follows your GitHub theme
-(light or dark).
+Free-form massing, laid out into rooms, doors, windows and stairs by the generators. The
+models below were produced from short briefs and rendered by the editor itself; no
+third-party models.
+
+<p align="center">
+  <img src="docs/images/geometry-collage.webp" alt="Six generated buildings on landscaped plots: Round Tower, Twisted Tower, Shell Pavilion, Stepped Block, Ring Court and Wedge Office" width="100%">
+</p>
+
+Round Tower (11 storeys, 11,159 m&sup2; GFA, 275 rooms, 2.4 s), Twisted Tower (11 storeys,
+9,900 m&sup2;, 242 rooms, 1.0 s), Shell Pavilion (4 storeys, 1,374 m&sup2;, 58 rooms, 26.1 s),
+Stepped Block (8 storeys, 10,692 m&sup2;, 194 rooms, 0.6 s), Ring Court (5 storeys,
+15,680 m&sup2;, 372 rooms, 0.8 s), Wedge Office (6 storeys, 6,048 m&sup2;, 138 rooms, 0.5 s).
+Times are model generation only. Trees and plants are stylised site dressing, not planting
+design.
+
+### Building services
+
+Each grid steps from the architecture through a ghosted shell to the service systems, drawn
+as 3D networks inside the building. Systems differ per project; not every project has every
+discipline yet.
 
 <table>
 <tr>
 <td width="50%">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/images/school-dark.png">
-  <img src="docs/images/school-light.png" alt="Two-storey school with trees, hedges and paths on its plot; an exterior wall selected with its properties" width="100%">
-</picture>
+<img src="docs/images/school-layers.webp" alt="School in four steps: architecture, ventilation, water, drainage and heating, all services together" width="100%">
 
-School, 2 storeys: 1,348 elements, landscaped plot.
+School, 3 storeys, 2,592 m&sup2; GFA, 65 rooms: ventilation, then water, drainage and heating.
 
 </td>
 <td width="50%">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/images/lattice-tower-dark.png">
-  <img src="docs/images/lattice-tower.png" alt="60 m steel lattice transmission tower with three cross-arms; a cross-arm beam is selected with its properties" width="100%">
-</picture>
+<img src="docs/images/clinic-layers.webp" alt="Clinic in four steps: architecture, cold and hot water, drainage and fixtures, all services together" width="100%">
 
-Transmission tower, 220 kV, built with the assistant's tools: 2,235 elements.
+Clinic, 4 storeys, 6,400 m&sup2; GFA, 194 rooms: cold and hot water, drainage and fixtures.
+Water and drainage only; no ventilation yet.
 
 </td>
 </tr>
 <tr>
 <td width="50%">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/images/stadium-dark.png">
-  <img src="docs/images/stadium-light.png" alt="Oval stadium bowl with precast terraces, a ring of columns and a roof canopy; one terrace unit selected with its volume" width="100%">
-</picture>
+<img src="docs/images/housing-layers.webp" alt="Housing block in four steps: architecture, supply air, supply and extract air, air with fixtures and appliances" width="100%">
 
-Stadium bowl with roof canopy: 2,215 elements.
+Housing block, 6 storeys, 516 rooms: supply and extract air, fixtures and appliances.
 
 </td>
 <td width="50%">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/images/gridshell-dark.png">
-  <img src="docs/images/gridshell-light.png" alt="Timber gridshell roof with glazed ends over a concrete base; a glulam lath selected with its properties" width="100%">
-</picture>
+<img src="docs/images/data-centre-layers.webp" alt="Data centre in four steps: architecture, chilled water and racks, power, all services together" width="100%">
 
-Timber gridshell roof: 1,219 elements.
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/images/plant-dark.png">
-  <img src="docs/images/plant-light.png" alt="Process plant with two storage tanks, a pipe rack, process columns and a flare stack; a tank shell selected" width="100%">
-</picture>
-
-Process plant with tanks, pipe rack and flare: 2,048 elements.
-
-</td>
-<td width="50%">
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/images/hall-dark.png">
-  <img src="docs/images/hall-light.png" alt="Steel portal frame logistics hall with purlins and wall cladding; a rafter selected with its length" width="100%">
-</picture>
-
-Logistics hall, steel portal frames: 394 elements.
-
-</td>
-</tr>
-<tr>
-<td colspan="2" align="center">
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/images/bridge-dark.png">
-  <img src="docs/images/bridge-light.png" alt="Cable-stayed bridge with two portal pylons and fans of stay cables over a steel deck; one stay cable selected with its length" width="50%">
-</picture>
-
-Cable-stayed bridge with two pylons: 802 elements.
+Data centre, 1 storey, 2,231 m&sup2; GFA, 18 rooms: chilled water with racks, then power.
 
 </td>
 </tr>
 </table>
 
-| | |
-|---|---|
-| ![Fifteen-storey office block with windows on every facade and trees on its plot](docs/images/hero-office-tower.png) | ![Forty-storey residential tower in 3D](docs/images/tower-40-storeys.png) |
-| Office block, 15 levels: 306 walls, 251 doors, 205 windows. | Tower, 41 levels: 1,841 walls, 80,312 m2 of floor area. |
-| ![Building section with grid bubbles, level markers, a dimension and cut walls with windows](docs/images/section.png) | ![Floor plan of an upper level with hatched walls and a tagged bedroom selected with its properties](docs/images/plan-level2.png) |
-| Section with grids, level markers and a dimension. | Plan with wall hatch and a room tag (22.04 m2). |
+### Plans
+
+Ground-floor plans of the same generated models, with room names, areas, furniture and
+hatched walls.
+
+<table>
+<tr>
+<td width="33%"><img src="docs/images/ring-court-plan.webp" alt="Ground floor plan of Ring Court: a square ring of open-plan rooms around an open courtyard" width="100%"><br>Ring Court</td>
+<td width="33%"><img src="docs/images/stepped-block-plan.webp" alt="Ground floor plan of Stepped Block: rooms around a central stair and lift core, rotated on the plot" width="100%"><br>Stepped Block</td>
+<td width="33%"><img src="docs/images/wedge-office-plan.webp" alt="Ground floor plan of Wedge Office: a triangular floor with offices and open space around a core" width="100%"><br>Wedge Office</td>
+</tr>
+</table>
 
 ## Features
 
