@@ -17,6 +17,8 @@ pub mod critique;
 mod curve;
 pub mod dc;
 mod elec;
+mod circuits;
+pub use circuits::{schedule_csv, voltage_drop};
 pub mod lift;
 mod sprinkler;
 #[cfg(test)]
@@ -525,6 +527,10 @@ pub struct Services {
     pub boards: Boards,
     /// Mechanical ventilation: not set builds it as the typology asks, `false` leaves it out.
     pub hvac: Option<bool>,
+    /// Circuit lines on the plans: home runs to the boards and the wiring between devices.
+    pub wires: bool,
+    /// A cable trace in 3D along the carriers from each board to its circuits' first device.
+    pub traces: bool,
 }
 
 impl ProjectSpec {
@@ -972,7 +978,8 @@ pub enum CircuitUse {
 }
 
 /// A circuit of a board: its devices by connector, the connected load and the cable route
-/// length from the board to the farthest device along the trays and conduits.
+/// length from the board to the farthest device along the trays and conduits; its protection,
+/// cable and voltage drop as sized by the generator.
 #[derive(Clone, Debug, PartialEq)]
 pub struct GCircuit {
     /// The board: storey and fixture index.
@@ -982,8 +989,83 @@ pub struct GCircuit {
     pub devices: Vec<(usize, usize, &'static str)>,
     /// W.
     pub load: f64,
-    /// m.
+    /// m, with the cable left at both ends for termination.
     pub length: f64,
+    /// Way on the board, from 1.
+    pub number: u32,
+    /// Miniature circuit breaker rating, A, characteristic B.
+    pub breaker: f64,
+    /// 1: single phase at the mains voltage; 3: three phase.
+    pub poles: u32,
+    /// Conductor cross-section, mm2, and core count of the cable (L N PE, or 3L N PE).
+    pub section: f64,
+    pub cores: u32,
+    /// Residual current device group of the board, from 1; `None`: no RCD.
+    pub rcd: Option<u32>,
+    /// Points counted against the limit of the circuit: luminaires, or socket outlets.
+    pub points: usize,
+    /// Design load after diversity, W.
+    pub demand: f64,
+    /// Voltage drop to the farthest device, %: over this circuit, and from the main board.
+    pub drop: f64,
+    pub drop_total: f64,
+}
+
+impl GCircuit {
+    /// Cable designation, as NYM-J 3x1.5.
+    pub fn cable(&self) -> String {
+        circuits::cable_name(self.cores, self.section)
+    }
+    /// Protective device, as B16 or 3xB16.
+    pub fn protection(&self) -> String {
+        circuits::breaker_name(self.poles, self.breaker)
+    }
+}
+
+/// A residual current device on a board guarding a group of its circuits.
+#[derive(Clone, Debug, PartialEq)]
+pub struct GRcd {
+    pub number: u32,
+    /// 2 or 4.
+    pub poles: u32,
+    /// Rated residual current, mA.
+    pub ma: f64,
+    /// Rated current, A.
+    pub rating: f64,
+}
+
+/// A distribution board: its label, the board feeding it and its residual current devices.
+#[derive(Clone, Debug, PartialEq)]
+pub struct GBoard {
+    pub at: (usize, usize),
+    pub label: String,
+    pub parent: Option<(usize, usize)>,
+    pub rcds: Vec<GRcd>,
+}
+
+/// A circuit line on a storey plan: wiring between two devices of a circuit, or the home run
+/// from its first device towards the board, ending in an arrow with the circuit label.
+#[derive(Clone, Debug, PartialEq)]
+pub struct GWire {
+    pub storey: usize,
+    /// Index in `GServices::circuits`.
+    pub circuit: usize,
+    /// Plan points, m.
+    pub points: Vec<(f64, f64)>,
+    pub home: bool,
+    /// Conductor ticks across the line: on home runs.
+    pub ticks: u32,
+    /// Board and circuit, as DB1 / F3: on home runs.
+    pub label: String,
+}
+
+/// A cable in 3D along the carriers from a board to the first device of a circuit.
+#[derive(Clone, Debug, PartialEq)]
+pub struct GTrace {
+    pub circuit: usize,
+    pub storey: usize,
+    /// Axis points, z above the project base, m.
+    pub points: Vec<(f64, f64, f64)>,
 }
 
 /// Electrical and water services: runs by system, connector links and circuits.
@@ -993,6 +1075,11 @@ pub struct GServices {
     pub water: Vec<GRun>,
     pub links: Vec<GSvcLink>,
     pub circuits: Vec<GCircuit>,
+    pub boards: Vec<GBoard>,
+    /// Circuit lines on the plans, when the brief asks for them.
+    pub wires: Vec<GWire>,
+    /// Cable traces in 3D, when the brief asks for them.
+    pub traces: Vec<GTrace>,
     /// What the design left out and why: a device unpowered, a row unlit, a room unserved.
     pub issues: Vec<String>,
     /// System names in `SvcSys::ALL` order (power, cold, hot, sanitary), with services on or off.
