@@ -136,7 +136,7 @@ fn fs_real(i: VOut) -> @location(0) vec4<f32> {
     let tag = base_tag(i.tag);
     let v = normalize(to_eye);
     if ((i.tag & 0xF0000000u) == 0x50000000u) {
-        let leaves = foliage(palette(tag), n, v, normalize(-u.light_dir.xyz), i.world, i.clip.xy, i.seed);
+        let leaves = foliage(palette(tag), normalize(i.snrm), v, normalize(-u.light_dir.xyz), i.world, i.clip.xy, i.seed);
         return vec4<f32>(mark(leaves, n, to_eye, selected, hovered, i.elem), 1.0);
     }
     let dist = eye_len(i.world);

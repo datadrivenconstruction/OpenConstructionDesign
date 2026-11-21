@@ -29,6 +29,8 @@ struct VOut {
     @location(3) @interpolate(flat) tag: u32,
     // per-placement hash of the element and the placement origin: tone variation of foliage
     @location(4) @interpolate(flat) seed: u32,
+    // interpolated vertex normal: smooth only where the vertices carry smooth normals (foliage)
+    @location(5) snrm: vec3<f32>,
 };
 
 // 32-bit avalanche (xorshift-multiply, public-domain constants): integer maths, equal on every GPU
@@ -76,6 +78,7 @@ fn xform(v: VIn) -> VOut {
     let cof = mat3x3<f32>(cross(b, c), cross(c, a), cross(a, b));
     // the row carries the packing step (~1e-5): the adjugate is small, the length is restored here
     o.nrm = normalize(cof * unoct(v.oct)) * select(1.0, -1.0, det < 0.0);
+    o.snrm = o.nrm;
     o.elem = e;
     o.tag = v.tag;
     let at = bitcast<vec3<u32>>(v.m3.xyz);
@@ -115,6 +118,7 @@ fn vs_ground(@builtin(vertex_index) k: u32) -> VOut {
     o.elem = 0xFFFFFFFEu;
     o.tag = 0u;
     o.seed = 0u;
+    o.snrm = o.nrm;
     return o;
 }
 
