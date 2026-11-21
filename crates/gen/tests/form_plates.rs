@@ -83,3 +83,12 @@ fn fins_stand_on_a_free_plate() {
     let fins: usize = p.storeys.iter().map(|s| s.layout.fixtures.iter().filter(|f| f.family == "Facade Fin").count()).sum();
     assert!(fins > 0, "no fins");
 }
+
+#[test]
+fn a_terrace_steps_a_side_of_a_turned_block() {
+    let p = built(&json!({"typology": "office", "floors": 4, "footprint": {"shape": "rectangle", "width": 48, "depth": 36, "rotation": 25},
+        "rules": {"massing.step_every": 2, "massing.step_setback": 3, "massing.step_mode": "terrace"}}));
+    let area = |k: usize| p.storeys[k].layout.rooms.iter().map(|r| shoelace(&r.polygon)).sum::<f64>();
+    // the step takes a whole side of the turned block, not a corner of it
+    assert!(area(2) < area(0) - 100.0, "{} {}", area(0), area(2));
+}

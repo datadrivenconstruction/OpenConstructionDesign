@@ -40,6 +40,8 @@ pub struct Plate {
     pub taper: f64,
     /// Turning point of every rotation: the centroid of the base plate.
     pub pivot: P,
+    /// Degrees the footprint was turned; terrace steps face their side of the turned plate.
+    pub rotation: f64,
     /// What the brief gave: polygon, plot or the template name.
     pub source: String,
 }
@@ -314,6 +316,7 @@ pub fn read(v: &J, floors: u32, issues: &mut Vec<(String, String)>) -> Option<Pl
         twist,
         taper,
         pivot,
+        rotation: rot,
         source,
     })
 }
@@ -623,7 +626,7 @@ impl Plate {
         let step = steps as f64 * super::rules::rule("massing.step_setback");
         let terrace = super::rules::rule("massing.step_mode").round() as usize == 1;
         if steps > 0 && terrace {
-            let dir = rot((1.0, 0.0), super::rules::rule("massing.step_dir"), (0.0, 0.0));
+            let dir = rot((1.0, 0.0), super::rules::rule("massing.step_dir") + self.rotation, (0.0, 0.0));
             let far = r.outer.iter().map(|p| p.0 * dir.0 + p.1 * dir.1).fold(f64::MIN, f64::max);
             r = super::anygeo::shape::clip_half(&r, dir, far - step)
                 .ok_or_else(|| format!("floor {}: terrace steps of {step:.2} m leave nothing", k + 1))?;
