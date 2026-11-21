@@ -411,6 +411,8 @@ pub struct FrameFx {
     pub tol_px: f32,
     pub moving_scale: f32,
     pub draw_distance: f32,
+    /// Sway of foliage, m at 10 m above the base; 0 — still (headless and report shots).
+    pub wind: f32,
 }
 
 impl FrameFx {
@@ -441,6 +443,7 @@ impl FrameFx {
             tol_px: d.tol_px,
             moving_scale: d.moving_scale,
             draw_distance: 0.0,
+            wind: 0.0,
         }
     }
 
@@ -482,8 +485,12 @@ pub fn frame_fx(style: VisualStyle, b: &Budgets, r: &Rung, lim: &Limits, moving:
         tol_px: b.tol_px,
         moving_scale: b.moving_scale,
         draw_distance: b.draw_distance,
+        wind: 0.0,
     }
 }
+
+/// Sway of the crowns in the window, m at 10 m above the base.
+pub const WIND_SWAY: f32 = 0.06;
 
 /// What failures left available. Starts open; only ever narrows for a device's lifetime.
 #[derive(Clone, Copy, Debug, PartialEq)]

@@ -240,8 +240,9 @@ mod tests {
         let size = std::mem::size_of::<FrameUniforms>();
         assert_eq!(size % 16, 0);
         // the new field is last, as in the shader struct
-        assert_eq!(std::mem::offset_of!(FrameUniforms, sel_n), size - 16);
-        assert_eq!(std::mem::offset_of!(FrameUniforms, fx), size - 32);
+        assert_eq!(std::mem::offset_of!(FrameUniforms, wind), size - 16);
+        assert_eq!(std::mem::offset_of!(FrameUniforms, sel_n), size - 32);
+        assert_eq!(std::mem::offset_of!(FrameUniforms, fx), size - 48);
     }
 
     #[test]

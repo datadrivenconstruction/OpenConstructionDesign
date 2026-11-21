@@ -68,6 +68,8 @@ pub struct FrameUniforms {
     /// Whole selection (`selset`): x ranges in the selection texture (0: `sel.xy` alone
     /// decides), y texels per row, z set generation, w reserved. Set by `Renderer::prepare`.
     pub sel_n: [u32; 4],
+    /// x: sway of foliage, m at 10 m (0 — still), y: time, s. Set by `Renderer::prepare`.
+    pub wind: [f32; 4],
 }
 
 /// Category number in the vertex tag (bits 24–27; 0 — no category).
@@ -77,6 +79,12 @@ pub const CAT_MASK: u32 = 0x0F00_0000;
 /// Vertex tag with category number `cat` (0…15).
 pub fn with_cat(tag: u32, cat: u8) -> u32 {
     (tag & !CAT_MASK) | (u32::from(cat & 15) << CAT_SHIFT)
+}
+
+/// Seconds since the first call, wrapped to keep the sine's argument small.
+fn wind_time() -> f32 {
+    static T0: std::sync::OnceLock<web_time::Instant> = std::sync::OnceLock::new();
+    (T0.get_or_init(web_time::Instant::now).elapsed().as_secs_f32()) % 600.0
 }
 
 impl FrameUniforms {
@@ -104,6 +112,7 @@ impl FrameUniforms {
             cats: [[1.0; 4]; 4],
             fx: [1.0, 1.0, 0.0, 1.0],
             sel_n: [0, crate::selset::ROW, 0, 0],
+            wind: [0.0; 4],
         }
     }
     /// Whole selection as a merged set: two or more ranges replace `sel.xy` by their bounds
@@ -1435,6 +1444,7 @@ impl Renderer {
         let effects = u.params[1] > 0.5;
         u.params[2] = if effects { fx.ao.code() } else { 0.0 };
         u.params[3] = f32::from(u8::from(effects && fx.shadow_px > 0));
+        u.wind = if fx.wind > 0.0 { [fx.wind, wind_time(), 0.0, 0.0] } else { [0.0; 4] };
         u.fx = [
             f32::from(u8::from(fx.edges)),
             f32::from(u8::from(fx.contour)),

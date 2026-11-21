@@ -59,13 +59,22 @@ fn unoct(e: vec2<f32>) -> vec3<f32> {
 // instance: in w of the first columns - element id (low 16 bits + 1, high bits)
 fn xform(v: VIn) -> VOut {
     let m = mat4x4<f32>(vec4<f32>(v.m0.xyz, 0.0), vec4<f32>(v.m1.xyz, 0.0), vec4<f32>(v.m2.xyz, 0.0), v.m3);
-    var w = m * vec4<f32>(vpos(v.q), 1.0);
+    let lp = vpos(v.q);
+    var w = m * vec4<f32>(lp, 1.0);
     var e = v.elem;
     if (v.m0.w > 0.5) {
         e = (u32(v.m0.w + 0.5) - 1u) | (u32(v.m1.w + 0.5) << 16u);
     }
     // show-as-built: the element's offset moves the vertex (shadows follow)
     w = vec4<f32>(w.xyz + anim_off(e), w.w);
+    // wind: crowns sway about their base, more the higher the vertex, each tree in its own phase
+    if (u.wind.x > 0.0 && (v.tag & 0xF0000000u) == 0x50000000u) {
+        let at0 = bitcast<vec3<u32>>(v.m3.xyz);
+        let ph = f32(mix32(at0.x ^ mix32(at0.y)) & 1023u) * 0.00614;
+        let hh = clamp(lp.z * 0.1, 0.0, 2.0);
+        let k = u.wind.x * hh * hh;
+        w = vec4<f32>(w.x + k * sin(u.wind.y * 1.3 + ph), w.y + k * 0.6 * sin(u.wind.y * 1.7 + ph * 1.9), w.z, w.w);
+    }
     var o: VOut;
     o.clip = u.view_proj * w;
     o.world = w.xyz;

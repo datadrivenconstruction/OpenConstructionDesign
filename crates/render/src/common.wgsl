@@ -17,6 +17,7 @@ struct U {
     cats: array<vec4<f32>, 4>, // coverage of categories 0..15 (tag bits 24-27)
     fx: vec4<f32>,          // x: edges of unselected chunks, y: silhouette, w: surface detail
     sel_n: vec4<u32>,       // x: ranges in sel_tex (0: sel.xy alone), y: texels per row, z: generation
+    wind: vec4<f32>,        // x: foliage sway, m at 10 m (0: still), y: time, s
 };
 @group(0) @binding(0) var<uniform> u: U;
 // whole selection: sorted merged [start, end) element ranges, one per texel, rows of sel_n.y
