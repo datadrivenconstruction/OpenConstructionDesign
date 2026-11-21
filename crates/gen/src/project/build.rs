@@ -1386,7 +1386,22 @@ fn shared_parts(spec: &ProjectSpec, f: &Frame, fit: Option<&StairFit>, ds: Mm, p
 /// A core plan first; a given width too narrow for it takes the narrow plan, whose stair
 /// lies in the middle strip, before the brief is refused with the core plan's reason.
 pub fn build_project(spec: &ProjectSpec) -> Result<GProject, GenError> {
-    let mut p = super::assembly::with_structure(spec.design.structure, super::assembly::project_rating(spec), || super::rules::scoped(&spec.rules, || build_ruled(spec)))?;
+    let run = |s: &ProjectSpec| super::assembly::with_structure(s.design.structure, super::assembly::project_rating(s), || super::rules::scoped(&s.rules, || build_ruled(s)));
+    let mut r = run(spec);
+    // a plate too small for the whole bank round its core takes one car fewer at a time
+    let mut cars = if spec.plate.is_some() && r.is_err() { super::rules::scoped(&spec.rules, || lift_plan(spec).cars) } else { 0 };
+    while cars > 1 {
+        cars -= 1;
+        let mut s = spec.clone();
+        if s.rules.set(super::rules::Layer::Brief, "core.lift_bank_max", f64::from(cars)).is_err() {
+            break;
+        }
+        if let Ok(p) = run(&s) {
+            r = Ok(p);
+            break;
+        }
+    }
+    let mut p = r?;
     names::localize(&mut p, spec.lang);
     Ok(p)
 }
