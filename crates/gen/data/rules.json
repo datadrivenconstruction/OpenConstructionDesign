@@ -590,6 +590,7 @@
     {"id": "services.hvac.row_pitch_min", "group": "services", "unit": "m", "min": 0.3, "max": 5.0, "default": 1.2, "why": "Least spacing of terminals in a row fed by one branch across a room, so their throws do not overlap"},
     {"id": "services.hvac.straddle_wall", "group": "services", "unit": "m", "min": 0.0, "max": 0.5, "default": 0.3, "why": "Thickest partition a duct shaft may take in when it spans two service rooms"},
     {"id": "services.hvac.zone_split_weight", "group": "services", "unit": "ratio", "min": 0.0, "max": 20.0, "default": 1.0, "why": "Metres a zone cut moves off its equal share to spare one metre of a room it would split"},
+    {"id": "services.hvac.shut_weight", "group": "services", "unit": "factor", "min": 0.0, "max": 1000.0, "default": 30.0, "why": "Weight of each terminal a shaft position would leave without a tap when ranking shaft positions"},
     {"id": "services.hvac.top_gap", "group": "services", "unit": "m", "min": 0.0, "max": 0.2, "default": 0.05, "why": "Gap between the top of a main and the slab soffit"},
     {"id": "services.hvac.layer_gap", "group": "services", "unit": "m", "min": 0.0, "max": 0.3, "default": 0.08, "why": "Gap between the supply and the extract main layer"},
     {"id": "services.hvac.drop_gap", "group": "services", "unit": "m", "min": 0.0, "max": 0.2, "default": 0.03, "why": "Gap between a drop elbow and the terminal neck"},

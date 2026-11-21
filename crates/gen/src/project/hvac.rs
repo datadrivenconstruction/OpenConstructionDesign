@@ -1014,7 +1014,25 @@ impl Ctx<'_> {
         let b = bbox(&self.p.roof.ring);
         let centre = ((x - (b.0 + b.2) / 2.0).abs() + (yr - (b.1 + b.3) / 2.0).abs()) / fw;
         // a clear corner beats one that displaces furniture
-        let score = pref as f64 * dn.pref_weight + centre + clear.len() as f64 + straddles as f64 * dn.pref_weight;
+        // terminals of rooms on the shaft's side whose whole window the shaft's taps exclusion
+        // takes: they would go unserved
+        let pad = rule("services.hvac.shaft_excl");
+        let (wl, wh) = self.win.unwrap_or((f64::MIN, f64::MAX));
+        let shut: usize = self
+            .floors
+            .iter()
+            .flatten()
+            .flat_map(|f| f.rooms.iter())
+            .filter(|r| r.side == side)
+            .filter(|r| {
+                let lo = (r.r.0 + dn.wall_keep).max(wl);
+                let hi = (r.r.2 - dn.wall_keep).min(wh);
+                hi >= lo && lo > ring.0 - pad - 1e-9 && hi < ring.2 + pad + 1e-9
+            })
+            .map(|r| r.q.iter().filter(|q| **q > 0.0).count())
+            .sum();
+        let score = pref as f64 * dn.pref_weight + centre + clear.len() as f64 + straddles as f64 * dn.pref_weight
+            + shut as f64 * rule("services.hvac.shut_weight");
         Ok((
             score,
             Shaft {
@@ -1613,14 +1631,16 @@ fn zoned(
     let need = |q: f64, cap: f64| if cap > 0.0 { (q / cap).ceil() as usize } else { 1 };
     let zone_cap = rule("services.hvac.zone_cap").min(units().iter().map(|u| u.cap).fold(0.0, f64::max));
     let n_min = need(grand, zone_cap).max(need(floor_max, main_cap)).max(1);
-    let n_max = (rule("services.hvac.zones_max") as usize).max(n_min);
+    // a finer split only narrows the zones round the same shafts
+    let n_max = (rule("services.hvac.zones_max") as usize).min(n_min + 3).max(n_min);
+    let demand: f64 = [0, 1].map(|s| floors.iter().flatten().map(|f| f.total[s]).sum::<f64>()).iter().sum();
     // rooms by their centre along the corridor, with the air they move
     let mut along: Vec<(f64, f64)> =
         floors.iter().flatten().flat_map(|f| f.rooms.iter().map(|r| ((r.r.0 + r.r.2) / 2.0, r.q[0].max(r.q[1])))).collect();
     along.sort_by(|a, b| a.0.total_cmp(&b.0));
     let rects: Vec<Rect> = floors.iter().flatten().flat_map(|f| f.rooms.iter().map(|r| r.r)).collect();
     let (x0, x1) = floors.iter().flatten().flat_map(|f| f.rooms.iter().map(|r| (r.r.0, r.r.2))).fold((f64::MAX, f64::MIN), |a, c| (a.0.min(c.0), a.1.max(c.1)));
-    let mut best: Option<(usize, GProject, f64)> = None;
+    let mut best: Option<(f64, GProject, f64)> = None;
     for n in n_min..=n_max {
         // cuts at equal lengths of the corridor, moved to the nearby wall line that splits
         // the fewest rooms on any storey: a split room keeps a sliver of its zone for terminals
@@ -1651,44 +1671,58 @@ fn zoned(
             break;
         }
         cuts.push(f64::MAX);
-        // a zone that finds no shaft (a stretch of lobbies and stairs) joins its neighbour
-        let (q, span, bad, whole, zone_why) = loop {
-            let mut q = p.clone();
-            let (mut span, mut bad, mut failed) = (0.0f64, 0usize, None);
-            let mut zone_why = vec![];
+        // a zone that finds no shaft (a stretch of lobbies and stairs) joins its neighbour; the
+        // zones before it stand as placed
+        let mut done: Vec<(GProject, f64, f64, bool)> = vec![];
+        let mut zone_why = vec![];
+        let mut whole = true;
+        while done.len() + 1 < cuts.len() {
+            let i = done.len();
             let m = cuts.len() - 1;
-            for i in 0..m {
-                let win = (m > 1).then(|| (cuts[i], cuts[i + 1]));
-                let pass = Pass { tags, net: i as u8, plant_ix: q.hvac.plant.len(), win, ..Pass::all() };
-                let Some(d) = best_design(spec, &q, &pass, &mut zone_why)? else {
-                    failed = Some(i);
+            let q = done.last().map_or(p, |z| &z.0);
+            let win = (m > 1).then(|| (cuts[i], cuts[i + 1]));
+            let pass = Pass { tags, net: i as u8, plant_ix: q.hvac.plant.len(), win, ..Pass::all() };
+            match best_design(spec, q, &pass, &mut zone_why)? {
+                Some(d) => {
+                    let ok = sound(&d);
+                    // what the zone falls short by: air of the terminals it lost, and its
+                    // imbalance past the limit
+                    let [ps, pe] = d.placed;
+                    let off = ((ps - pe).abs() - rule("services.hvac.balance_max") * ps.max(pe)).max(0.0);
+                    let (span, short) = (d.span, off);
+                    let mut q = q.clone();
+                    place_design(&mut q, d)?;
+                    done.push((q, span, short, ok));
+                }
+                None if m == 1 => {
+                    whole = false;
                     break;
-                };
-                if !sound(&d) {
-                    bad += 1 + unserved(&d) as usize + d.fast;
                 }
-                span = span.max(d.span);
-                place_design(&mut q, d)?;
-            }
-            match failed {
-                None => break (q, span, bad, true, zone_why),
-                Some(_) if m == 1 => break (q, span, bad, false, zone_why),
-                Some(i) => {
-                    cuts.remove(if i + 1 < m { i + 1 } else { i });
+                None if i + 1 < m => {
+                    cuts.remove(i + 1);
+                }
+                None => {
+                    cuts.remove(i);
+                    done.pop();
                 }
             }
-        };
-        if !whole {
+        }
+        if !whole || done.is_empty() {
             if n == n_min {
                 why.extend(zone_why);
             }
             continue;
         }
-        if bad == 0 {
+        let span = done.iter().map(|z| z.1).fold(0.0, f64::max);
+        let sound_all = done.iter().all(|z| z.3);
+        let (q, _, _, _) = done.last().expect("a zone").clone();
+        if sound_all {
             return Ok(Some((q, span)));
         }
-        if best.as_ref().is_none_or(|b| bad < b.0) {
-            best = Some((bad, q, span));
+        let placed = q.hvac.flow.0 + q.hvac.flow.1;
+        let score = (demand - placed).max(0.0) + done.iter().map(|z| z.2).sum::<f64>();
+        if best.as_ref().is_none_or(|b| score < b.0) {
+            best = Some((score, q, span));
         }
     }
     Ok(best.map(|b| (b.1, b.2)))
@@ -1746,6 +1780,8 @@ fn place_design(p: &mut GProject, mut d: Design) -> Result<(), GenError> {
         p.hvac.ducts.extend(d.hvac.ducts);
         p.hvac.links.extend(d.hvac.links);
         p.hvac.nets.push(d.hvac.names);
+        p.hvac.flow.0 += d.hvac.flow.0;
+        p.hvac.flow.1 += d.hvac.flow.1;
     }
     Ok(())
 }
@@ -1881,6 +1917,11 @@ fn design(
     let h_max = cx.h_max();
     let spacing = tee * node_trim(&dn, &[main_widest(&dn, cx.floors_max(0).max(cx.floors_max(1)), h_max)])
         + tap_extra;
+    // taps along a main stand no closer than its two tees' legs: as many branches fit a window
+    let pitch = |k: usize, s: usize| {
+        let t = cx.floors[k].as_ref().map_or(0.0, |f| f.total[s]);
+        spacing.max(2.0 * tee_leg(main_widest(&dn, t, h_max)) + dn.margin)
+    };
     // terminals first: their branch sizes set the layers
     let mut wants: Vec<Want> = vec![];
     let mut skipped = 0usize;
@@ -1912,7 +1953,7 @@ fn design(
                     st.layout.fixtures.iter().any(|fx| !super::svc::air_outlets(fx).is_empty() && super::svc::inside(fx.at, &[sv.r.0, sv.r.1, sv.r.2, sv.r.3]))
                 };
                 let ny = if hood { 1 } else { total.min(1 + (depth.max(0.0) / row).floor() as usize).max(1) };
-                let fit = 1 + ((hi - lo) / spacing).floor() as usize;
+                let fit = 1 + ((hi - lo) / pitch(k, s)).floor() as usize;
                 let n = total.div_ceil(ny).clamp(1, fit);
                 let qt = up5(q / (n * ny) as f64);
                 let term = term_for(s, qt);
@@ -2052,6 +2093,7 @@ fn design(
     // terminal positions across the corridor, kept clear of the main for the tee and drop
     let ym = sh.ym;
     let mut dropped = vec![];
+    let (mut lost_depth, mut lost_shaft) = (0usize, 0usize);
     for (i, w) in wants.iter_mut().enumerate() {
         let f = cx.floors[w.floor].as_ref().expect("a served floor");
         let sv_far = f
@@ -2073,6 +2115,7 @@ fn design(
             let lo = near.min(far) + dn.wall_keep;
             let hi = near.max(far) - dn.wall_keep;
             if y < lo - 1e-9 || y > hi + 1e-9 {
+                lost_depth += 1;
                 dropped.push(i);
             } else if w.ny > 1 {
                 // the row from the first drop to the far wall, as many as its pitch allows
@@ -2108,7 +2151,7 @@ fn design(
             .filter(|&j| !dropped.contains(&j) && !absorbed.contains(&j))
             .filter(|&j| (wants[j].floor, wants[j].sys, wants[j].side, wants[j].lo, wants[j].hi) == key)
             .collect();
-        let fit = 1 + ((w.hi - w.lo) / spacing).floor() as usize;
+        let fit = 1 + ((w.hi - w.lo) / pitch(w.floor, w.sys)).floor() as usize;
         group.retain(|&j| !wants[j].hood);
         if group.len() <= fit {
             continue;
@@ -2251,8 +2294,39 @@ fn design(
                 .fold(0.0, f64::max);
             let floor = tee_leg(main) + tee_leg(main).max(end) + dn.margin;
             let lost = place(&wants, &order, &mut taps, sp, floor, &blocked);
+            let shut: Vec<usize> = lost.iter().copied().filter(|&i| blocked(&wants[i], wants[i].x)).collect();
+            lost_shaft += lost.iter().filter(|i| shut.contains(i)).count();
             dropped.extend(lost);
             floor_taps[k][s] = taps;
+        }
+    }
+    // a room the shaft stands in front of takes its air off the riser itself: a spur out of the
+    // shaft into the room, one per riser and storey (the node holds a cross at most)
+    let mut spurs: Vec<(usize, usize, usize, f64)> = vec![];
+    for s in (0..2).filter(|&s| sh.legs[s].is_none()) {
+        for k in 0..cx.floors.len() {
+            let Some(f) = cx.floors[k].as_ref() else { continue };
+            let xr = sh.xr[s];
+            let reach = if sh.side > 0.0 { sh.ring.3 } else { sh.ring.1 };
+            let pick = dropped
+                .iter()
+                .copied()
+                .filter(|&i| wants[i].floor == k && wants[i].sys == s && wants[i].side == sh.side && wants[i].drops.len() == 1)
+                .filter_map(|i| {
+                    let w = &wants[i];
+                    let r = f.rooms.iter().find(|r| r.room == w.room)?;
+                    let y = reach + sh.side * (dn.wall_keep + w.term.neck_d);
+                    let far = r.far - sh.side * dn.wall_keep;
+                    let room_x = xr > r.r.0 + dn.wall_keep && xr < r.r.2 - dn.wall_keep;
+                    let long = (y - sh.yr).abs() >= tee_leg((cx.riser_d[s], 0.0)) + dn.drop_bend * w.d + dn.margin;
+                    (room_x && long && (far - y) * sh.side >= 0.0).then_some((i, y))
+                })
+                .max_by(|a, b| wants[a.0].q.total_cmp(&wants[b.0].q));
+            if let Some((i, y)) = pick {
+                spurs.push((k, s, i, y));
+                dropped.retain(|&j| j != i);
+                lost_shaft = lost_shaft.saturating_sub(1);
+            }
         }
     }
     // the network
@@ -2388,8 +2462,33 @@ fn design(
             }
         }
     }
+    for &(k, s, i, y) in &spurs {
+        let f = cx.floors[k].as_ref().expect("a served floor");
+        let w = &wants[i];
+        let both = f.rooms.iter().find(|r| r.room == w.room).is_some_and(|r| r.q[0] > 0.0 && r.q[1] > 0.0);
+        let face = if both { cx.face[0].min(cx.face[1]) } else { cx.face[s] };
+        let xr = sh.xr[s];
+        let z = cx.p.storeys[k].elevation + cx.zm[s] + cx.lift(k);
+        fixtures[k].push(GFixture { scale: 1.0, min_clear: 0.0, family: w.term.fam, ty: w.term.ty, at: (xr, y), rotation: 0.0, wall: None, z: face + cx.lift(k) });
+        let gone = sh.clear.iter().filter(|c| c.0 == k).count();
+        let idx = cx.p.storeys[k].layout.fixtures.len() - gone + fixtures[k].len() - 1;
+        links.push(GAirLink { storey: k, fixture: idx, connector: "Air", sys: SYS[s], net: pass.net });
+        terminals += 1;
+        ducts.push(GDuct {
+            net: pass.net,
+            sys: SYS[s],
+            storey: k,
+            points: vec![(xr, sh.yr, z), (xr, y, z), (xr, y, f.elev + face + w.term.neck_h)],
+            size: (w.d, 0.0),
+            flow: w.q,
+            bend: Some(dn.drop_bend * w.d),
+        });
+    }
     // risers: from the lowest served storey up to the plant, carrying what the taps deliver
-    let fq: Vec<[f64; 2]> = floor_taps.iter().map(|t| [0, 1].map(|s| t[s].iter().filter(|t| t.want.is_some()).map(|t| t.q).sum())).collect();
+    let mut fq: Vec<[f64; 2]> = floor_taps.iter().map(|t| [0, 1].map(|s| t[s].iter().filter(|t| t.want.is_some()).map(|t| t.q).sum())).collect();
+    for &(k, s, i, _) in &spurs {
+        fq[k][s] += wants[i].q;
+    }
     let placed = [0, 1].map(|s| fq.iter().map(|q| q[s]).sum::<f64>());
     let roof = cx.p.roof.elevation;
     let unit = sh.unit;
@@ -2397,7 +2496,7 @@ fn design(
     let pz = roof + dn.plinth + unit.h;
     for s in 0..2 {
         let served: Vec<usize> = (0..cx.floors.len())
-            .filter(|&k| floor_taps[k][s].iter().any(|t| t.want.is_some()))
+            .filter(|&k| fq[k][s] > 0.0)
             .collect();
         let Some(&k0) = served.first() else { continue };
         let xr = sh.xr[s];
@@ -2487,6 +2586,10 @@ fn design(
             ("hvac_units", 1.0),
             ("hvac_furniture_moved", sh.clear.len() as f64),
             ("hvac_fast_ducts", fast as f64),
+            ("hvac_lost_window", skipped as f64),
+            ("hvac_lost_depth", lost_depth as f64),
+            ("hvac_lost_shaft", lost_shaft as f64),
+            ("hvac_lost_spacing", dropped.len().saturating_sub(lost_depth + lost_shaft) as f64),
         ]
     };
     Ok(Some(Design {
