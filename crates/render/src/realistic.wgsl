@@ -90,6 +90,34 @@ fn surface(tag: u32, uv: vec2<f32>) -> vec2<f32> {
     }
 }
 
+// Foliage: a soft mass of leaves. Wrapped diffuse (light reaches past the terminator), no sun
+// highlight (roughness 0.9), light through the leaves when the crown is seen against the sun,
+// and a tone of its own per placement (hue towards yellow-green or blue-green, value).
+fn foliage(base0: vec3<f32>, n: vec3<f32>, v: vec3<f32>, l: vec3<f32>, world: vec3<f32>, px: vec2<f32>, seed: u32) -> vec3<f32> {
+    let h1 = f32(seed & 0xFFFFu) / 65535.0;
+    let h2 = f32(seed >> 16u) / 65535.0;
+    let hue = mix(vec3<f32>(0.90, 1.0, 1.06), vec3<f32>(1.10, 1.03, 0.80), h1);
+    let base = base0 * hue * (0.84 + 0.30 * h2);
+    let ndl = dot(n, l);
+    let wrap = clamp((ndl + 0.5) / 1.5, 0.0, 1.0);
+    let shadow = sun_light(world, n);
+    var ao = ambient_occ(px);
+    if (u.params.z < 0.5) { ao = mix(0.8, 1.0, smoothstep(0.0, 0.9, world.z - u.view.w)); }
+    let sky = vec3<f32>(0.80, 0.88, 1.0);
+    let bounce = vec3<f32>(0.42, 0.39, 0.35);
+    let hemi = mix(bounce, sky, n.z * 0.5 + 0.5);
+    let sun_c = vec3<f32>(1.0, 0.95, 0.86) * 1.15;
+    var c = base * (hemi * 0.62 * ao + sun_c * wrap * shadow * 0.85);
+    // translucency: the side away from the sun glows when the eye looks towards the sun
+    let against = pow(clamp(dot(v, -l), 0.0, 1.0), 3.0);
+    let through = clamp(0.35 - ndl, 0.0, 1.0);
+    c += base * vec3<f32>(0.85, 1.0, 0.45) * against * through * mix(0.35, 1.0, shadow) * 0.9;
+    // only a faint sky sheen at grazing angles (rough)
+    let fres = pow(1.0 - clamp(dot(n, v), 0.0, 1.0), 5.0);
+    c = mix(c, mix(bounce, sky, 0.7) * ao, fres * 0.1 * 0.5);
+    return c * (2.51 * c + vec3<f32>(0.03)) / (c * (2.43 * c + vec3<f32>(0.59)) + vec3<f32>(0.14));
+}
+
 @fragment
 fn fs_real(i: VOut) -> @location(0) vec4<f32> {
     // derivatives first, in uniform control flow; sampling below uses explicit gradients
@@ -107,6 +135,10 @@ fn fs_real(i: VOut) -> @location(0) vec4<f32> {
     }
     let tag = base_tag(i.tag);
     let v = normalize(to_eye);
+    if ((i.tag & 0xF0000000u) == 0x50000000u) {
+        let leaves = foliage(palette(tag), n, v, normalize(-u.light_dir.xyz), i.world, i.clip.xy, i.seed);
+        return vec4<f32>(mark(leaves, n, to_eye, selected, hovered, i.elem), 1.0);
+    }
     let dist = eye_len(i.world);
     // fades with distance: a pattern finer than a pixel would only shimmer
     let detail = u.fx.w * (1.0 - smoothstep(25.0, 120.0, dist));

@@ -43,8 +43,8 @@ pub use renderer::{FrameUniforms, Quality};
 #[cfg(feature = "gpu")]
 pub use renderer::{init_resolve_target, Renderer, Targets};
 pub use scene::{
-    is_translucent, tag_rgb, Aabb, Scene, SceneMesh, Vertex, NO_SELECTION, TAG_DOOR, TAG_GLASS,
-    TAG_MULLION, TAG_PANEL, TAG_RGB, TAG_SLAB, TAG_TRANSLUCENT, TAG_WINDOW,
+    is_foliage, is_translucent, tag_foliage, tag_rgb, Aabb, Scene, SceneMesh, Vertex, NO_SELECTION, TAG_DOOR,
+    TAG_FOLIAGE, TAG_GLASS, TAG_MULLION, TAG_PANEL, TAG_RGB, TAG_SLAB, TAG_TRANSLUCENT, TAG_WINDOW,
 };
 #[cfg(feature = "gpu")]
 pub use wgpu;

@@ -30,6 +30,19 @@ pub fn tag_rgb(rgb: [u8; 3], translucent: bool) -> u32 {
     TAG_RGB | c | if translucent { TAG_TRANSLUCENT } else { 0 }
 }
 
+/// Foliage: a colour tag (`TAG_RGB`) with this bit is leaves, lit as a soft translucent mass in
+/// the realistic style. The bit alone is the section fill (`style::TAG_CAP`), so it never comes
+/// without `TAG_RGB` here.
+pub const TAG_FOLIAGE: u32 = 0x1000_0000;
+
+pub fn tag_foliage(rgb: [u8; 3]) -> u32 {
+    tag_rgb(rgb, false) | TAG_FOLIAGE
+}
+
+pub fn is_foliage(tag: u32) -> bool {
+    tag & 0xF000_0000 == TAG_RGB | TAG_FOLIAGE
+}
+
 /// The face is drawn with blending (glass, semi-transparent shells).
 pub fn is_translucent(tag: u32) -> bool {
     tag == TAG_GLASS || tag & 0xE000_0000 == TAG_RGB | TAG_TRANSLUCENT
@@ -388,5 +401,36 @@ mod edge_tests {
         }]);
         assert_eq!(s.edge_vertices().len(), 24);
         assert!(s.grid_vertices().len() > 40);
+    }
+}
+
+#[cfg(test)]
+mod foliage_tests {
+    use super::*;
+
+    /// A foliage tag keeps its colour, is opaque, takes no texture layer and is not a section fill.
+    #[test]
+    fn foliage_tag_is_an_opaque_colour_tag_of_its_own() {
+        let t = tag_foliage([0x54, 0x80, 0x3A]);
+        assert!(is_foliage(t));
+        assert_eq!(t & 0x00FF_FFFF, 0x0054_803A);
+        assert!(!is_translucent(t));
+        assert!(!crate::style::is_cap(t));
+        assert!(!crate::texture::takes_layer(t));
+        assert!(!is_foliage(tag_rgb([0x54, 0x80, 0x3A], false)));
+        assert!(!is_foliage(crate::style::cap_tag([0x54, 0x80, 0x3A])));
+        // the category bits the renderer adds do not change what it is
+        assert!(is_foliage(crate::renderer::with_cat(t, 5)));
+    }
+
+    /// The realistic style lights foliage on its own path: wrapped, translucent, no sun highlight.
+    #[test]
+    fn realistic_foliage_has_no_specular_highlight() {
+        let src = include_str!("realistic.wgsl");
+        let f = &src[src.find("fn foliage(").unwrap()..src.find("@fragment").unwrap()];
+        assert!(f.contains("wrap") && f.contains("against"), "wrapped diffuse and backlight");
+        assert!(!f.contains("dot(n, h)"), "no sun highlight");
+        assert!(src.contains("0x50000000u") && src.contains("i.seed"));
+        assert!(include_str!("mesh.wgsl").contains("o.seed = mix32("));
     }
 }

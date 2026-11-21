@@ -45,3 +45,19 @@ fn realistic_plants_are_fine_and_one_mesh_per_type() {
         "{sizes:?}"
     );
 }
+
+/// Leaves are tagged as foliage (their own lighting in the realistic style), the trunk is not.
+#[test]
+fn leaves_are_foliage_and_wood_is_not() {
+    let mut ed = Editor::new_in_memory().unwrap();
+    let level = ed.level;
+    let f = ed.model.load_library_family("Tree").unwrap();
+    let t = ed.model.comp_type_id(f, "Linden A").unwrap().unwrap();
+    ed.model.add_component(&CompSpec::at(level, t, 0.0, 0.0)).unwrap();
+    ed.big.plants_fine = true;
+    let sc = scene(&mut ed);
+    let tags: Vec<u32> = sc.instanced.iter().filter(|g| g.key >> 40 != 0).map(|g| g.proto.tag).collect();
+    assert!(tags.iter().any(|t| ddc_render::is_foliage(*t)), "{tags:x?}");
+    assert!(tags.iter().any(|t| !ddc_render::is_foliage(*t)), "the trunk keeps a plain colour: {tags:x?}");
+    assert!(ddc_app::mep3d::is_foliage_material("Foliage Green") && !ddc_app::mep3d::is_foliage_material("Bark Brown"));
+}

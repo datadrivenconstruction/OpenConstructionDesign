@@ -714,17 +714,22 @@ fn comp_rgb(m: &Model, material: &str, cache: &mut HashMap<String, [u8; 3]>) -> 
 
 /// One scene mesh per display colour of the parts of a component body.
 fn comp_meshes(mesh: &ddc_geom::mesh::Mesh, mats: &[String], rgb_of: &mut dyn FnMut(&str) -> [u8; 3]) -> Vec<SceneMesh> {
-    let mut by: std::collections::BTreeMap<[u8; 3], Vec<usize>> = Default::default();
+    let mut by: std::collections::BTreeMap<u32, Vec<usize>> = Default::default();
     for i in 0..mesh.triangles.len() {
         let part = mesh.face_of.get(i).copied().unwrap_or(0) as usize;
-        by.entry(mats.get(part).map_or(COMP_RGB, |m| rgb_of(m))).or_default().push(i);
+        let tag = match mats.get(part) {
+            Some(m) if is_foliage_material(m) => ddc_render::tag_foliage(rgb_of(m)),
+            Some(m) => tag_rgb(rgb_of(m), false),
+            None => tag_rgb(COMP_RGB, false),
+        };
+        by.entry(tag).or_default().push(i);
     }
     if by.len() <= 1 {
-        let rgb = by.keys().next().copied().unwrap_or(COMP_RGB);
-        return vec![to_scene(mesh, 0, tag_rgb(rgb, false), 0.0)];
+        let tag = by.keys().next().copied().unwrap_or(tag_rgb(COMP_RGB, false));
+        return vec![to_scene(mesh, 0, tag, 0.0)];
     }
     by.into_iter()
-        .map(|(rgb, tris)| {
+        .map(|(tag, tris)| {
             let mut map: HashMap<u32, u32> = HashMap::new();
             let (mut positions, mut triangles) = (vec![], vec![]);
             for i in tris {
@@ -744,9 +749,14 @@ fn comp_meshes(mesh: &ddc_geom::mesh::Mesh, mats: &[String], rgb_of: &mut dyn Fn
                 }
                 triangles.push(o);
             }
-            SceneMesh { element: 0, tag: tag_rgb(rgb, false), positions, triangles }
+            SceneMesh { element: 0, tag, positions, triangles }
         })
         .collect()
+}
+
+/// Leaves of a plant or a hedge: the library's planting materials named `Foliage ...`.
+pub fn is_foliage_material(name: &str) -> bool {
+    name.starts_with("Foliage")
 }
 
 /// Run section fill color in a section view ("mep#rrggbb" is the system color, lighter).
