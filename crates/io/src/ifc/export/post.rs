@@ -595,15 +595,26 @@ const IFC4X3_LAST: [&str; 3] = [
     "IFCCARTESIANPOINTLIST3D",
 ];
 
+/// Geographic element classes and the index of the attribute that names a user-defined kind
+/// (ObjectType of the occurrence, ElementType of the type).
+const IFC4X3_ENUM: [(&str, usize); 2] = [("IFCGEOGRAPHICELEMENT", 4), ("IFCGEOGRAPHICELEMENTTYPE", 8)];
+
 /// The builders write the IFC4X3 shape. The entities of [`IFC4X3_LAST`] are written again
-/// without their last attribute.
+/// without their last attribute; IFC4 has no VEGETATION geographic element, so a plant is
+/// USERDEFINED and names itself `Vegetation`.
 fn ifc4_data(f: &StepFile, data: &str, out: &mut String) {
     let mut by = f.by_class();
     let cut: HashSet<u32> = IFC4X3_LAST
         .iter()
         .flat_map(|c| by.remove(c).unwrap_or_default())
         .collect();
-    if cut.is_empty() {
+    let veg = |v: Option<&Value>| matches!(v, Some(Value::Enum(e)) if e == "VEGETATION");
+    let named: HashMap<u32, usize> = IFC4X3_ENUM
+        .iter()
+        .flat_map(|&(c, k)| by.remove(c).unwrap_or_default().into_iter().map(move |id| (id, k)))
+        .filter(|(id, _)| veg(f.args(*id).last()))
+        .collect();
+    if cut.is_empty() && named.is_empty() {
         out.push_str(data);
         return;
     }
@@ -612,13 +623,25 @@ fn ifc4_data(f: &StepFile, data: &str, out: &mut String) {
             .strip_prefix('#')
             .and_then(|r| r.split_once('='))
             .and_then(|(n, _)| n.parse::<u32>().ok())
-            .filter(|id| cut.contains(id));
+            .filter(|id| cut.contains(id) || named.contains_key(id));
         match id {
             Some(id) => {
-                let a = f.args(id);
-                let kept = &a[..a.len().saturating_sub(1)];
+                let mut a = f.args(id).to_vec();
+                match named.get(&id) {
+                    Some(&k) => {
+                        if let Some(x) = a.get_mut(k) {
+                            *x = Value::Str("Vegetation".into());
+                        }
+                        if let Some(x) = a.last_mut() {
+                            *x = Value::Enum("USERDEFINED".into());
+                        }
+                    }
+                    None => {
+                        a.pop();
+                    }
+                }
                 let class = f.type_of(id).unwrap_or_default();
-                out.push_str(&ifc2x3::line(id, class, kept));
+                out.push_str(&ifc2x3::line(id, class, &a));
                 out.push('\n');
             }
             None => out.push_str(l),

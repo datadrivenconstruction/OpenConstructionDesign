@@ -1385,10 +1385,11 @@ fn components(
             .map_err(|e| e.to_string())?;
         let key = (w.ctype, w.vals.clone());
         let plant = fam.solids.iter().any(|s| matches!(s.shape, ddc_geom::component::Shape::Plant { .. }));
-        // a plant is exported at its full detail: the model of a site keeps its trees
+        // a plant is exported at the detail the views draw it from afar (a few hundred
+        // triangles): a site of hundreds of trees stays a file a viewer opens
         if plant && !maps.contains_key(&key) {
             built = model
-                .component_built(w.id, ddc_model::Lod::Fine)
+                .component_built(w.id, ddc_model::Lod::Coarse)
                 .map_err(|e| e.to_string())?
                 .2;
         }
@@ -1526,13 +1527,23 @@ fn components(
         if plant {
             // what a landscape take-off asks of a tree
             let mut pl: Vec<(&str, String)> = vec![("Species", label(&w.tname))];
+            if let Some(b) = res.texts.get("Botanical").filter(|b| !b.trim().is_empty()) {
+                pl.push(("BotanicalName", label(b.trim())));
+            }
             if let Some(p) = ddc_geom::component::plant_of(&fam, &res) {
                 pl.push(("Form", label(p.form.name())));
-                for (name, v) in [("Height", p.height), ("CrownWidth", p.crown), ("TrunkDiameter", p.trunk), ("ClearTrunkHeight", p.clear)] {
+                for (name, v) in [("Height", p.height), ("CrownDiameter", p.crown), ("TrunkDiameter", p.trunk), ("ClearHeight", p.clear)] {
                     pl.push((name, format!("IFCLENGTHMEASURE({})", real(v))));
                 }
                 pl.push(("FoliageFullness", format!("IFCREAL({})", real(p.leaf))));
                 pl.push(("GrowthSeed", format!("IFCINTEGER({})", p.seed as i64)));
+            }
+            // the library's Season codes: when the type stands in leaf
+            let season = res.nums.get("Season").map(|q| q.v.round() as i64).and_then(|k| {
+                ["summer", "autumn", "winter", "spring", "evergreen"].get(usize::try_from(k).ok()?).copied()
+            });
+            if let Some(sn) = season {
+                pl.push(("Season", label(sn)));
             }
             for s in fam.solids.iter().filter(|s| matches!(s.shape, ddc_geom::component::Shape::Plant { .. })) {
                 if let Some(m) = &s.material {
@@ -1551,7 +1562,7 @@ fn components(
                 .into_iter()
                 .map(|(k, v)| c.s.add("IFCPROPERTYSINGLEVALUE", &[text(k), s(NONE), v, s(NONE)]))
                 .collect();
-            let pset = c.rooted("IFCPROPERTYSET", "comp-plant-pset", w.id, "DDC_Planting", &[list(&ps)]);
+            let pset = c.rooted("IFCPROPERTYSET", "comp-plant-pset", w.id, "DDC_Vegetation", &[list(&ps)]);
             c.rel("IFCRELDEFINESBYPROPERTIES", "comp-plant-rel", w.id, &[list(&[ent]), r(pset)]);
         }
         let t = types.entry(w.ctype).or_default();
