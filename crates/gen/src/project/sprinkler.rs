@@ -61,6 +61,36 @@ fn pressurise(p: &mut GProject, top: f64) {
     }
 }
 
+/// The riser line nearest `a` (risers at `xs`, shifted with it) that runs through the slab of
+/// every storey clear of its holes and shafts: a turned core's well may cover the spot beside it.
+fn riser_spot(p: &GProject, a: P2, xs: &[f64]) -> P2 {
+    const GAP: f64 = 0.3;
+    let near = |r: &[P2], q: P2| {
+        let b = bbox(r);
+        q.0 > b[0] - GAP && q.0 < b[2] + GAP && q.1 > b[1] - GAP && q.1 < b[3] + GAP
+    };
+    let clear = |q: P2| {
+        p.storeys.iter().all(|s| {
+            let l = &s.layout;
+            xs.iter().all(|x| {
+                let r = (q.0 + x - xs[0], q.1);
+                (l.slab.is_empty() || inside(&l.slab, r))
+                    && !l.slab_holes.iter().any(|h| near(h, r))
+                    && !l.shafts.iter().any(|h| near(&h.ring, r))
+            })
+        })
+    };
+    let a0 = (xs[0], a.1);
+    if clear(a0) {
+        return a0;
+    }
+    (1..=80)
+        .flat_map(|k| (0..16).map(move |j| (0.25 * k as f64, std::f64::consts::TAU * j as f64 / 16.0)))
+        .map(|(r, t)| (a0.0 + r * t.cos(), a0.1 + r * t.sin()))
+        .find(|&q| clear(q))
+        .unwrap_or(a0)
+}
+
 pub(super) fn bbox(r: &[P2]) -> [f64; 4] {
     r.iter().fold([f64::MAX, f64::MAX, f64::MIN, f64::MIN], |b, q| {
         [b[0].min(q.0), b[1].min(q.1), b[2].max(q.0), b[3].max(q.1)]
@@ -194,6 +224,8 @@ fn sprinklers(p: &mut GProject) {
     let sep = rule("fire.head_spacing");
     let xs: Vec<f64> = (0..count).map(|i| anchor.0 + sep * i as f64).filter(|x| *x < plate[2]).collect();
     let xs = if xs.is_empty() { vec![anchor.0] } else { xs };
+    let anchor = riser_spot(p, anchor, &xs);
+    let xs: Vec<f64> = xs.iter().map(|x| x - xs[0] + anchor.0).collect();
     p.fire.risers = xs.iter().map(|x| (*x, anchor.1)).collect();
     let zone_h = rule("fire.zone_height");
     let zone_of = |k: usize| (p.storeys[k].elevation / zone_h).floor() as usize;
