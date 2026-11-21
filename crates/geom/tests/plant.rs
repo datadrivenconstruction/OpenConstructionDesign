@@ -684,3 +684,29 @@ fn near_trees_reach_their_triangle_budgets() {
     assert!(fine.0 >= 6000 && fine.1 <= 10_000, "fine {fine:?}");
     assert!(medium.0 >= 1500 && medium.1 <= 2500, "medium {medium:?}");
 }
+
+/// The far picture of a tree is a few cards and a stub of trunk: lighter than the coarse level,
+/// inside the tree's height and width, a crown-less stub for a bare tree.
+#[test]
+fn the_far_picture_is_a_few_cards_inside_the_tree() {
+    use ddc_geom::component::plant::{grow, impostor, Form, Organ, Spec};
+    for (form, h, crown, clear) in FORMS {
+        let spec = Spec { form: Form::from_name(form).unwrap(), height: h, crown, trunk: 0.4, clear, leaf: 1.0, seed: 4 };
+        let (wood, leaves) = impostor(&spec);
+        let n = wood.tris.len() + leaves.tris.len();
+        let coarse = grow(&spec, Organ::Wood, Lod::Coarse).tris.len() + grow(&spec, Organ::Foliage, Lod::Coarse).tris.len();
+        assert!(n > 0 && n < coarse && n <= 100, "{form}: {n} against coarse {coarse}");
+        let all = wood.pos.iter().chain(&leaves.pos);
+        let (mut top, mut wide) = (f64::MIN, 0.0f64);
+        for p in all {
+            assert!(p.x.is_finite() && p.y.is_finite() && p.z.is_finite(), "{form}");
+            top = top.max(p.z);
+            wide = wide.max(p.x.hypot(p.y));
+        }
+        assert!(top <= h + 0.05 && wide <= 0.75 * crown, "{form}: top {top} reach {wide}");
+        assert!(!leaves.tris.is_empty() && leaves.tris.iter().flatten().all(|&i| (i as usize) < leaves.pos.len()), "{form}");
+    }
+    let bare = Spec { form: Form::Round, height: 12.0, crown: 9.0, trunk: 0.4, clear: 3.0, leaf: 0.0, seed: 4 };
+    let (wood, leaves) = impostor(&bare);
+    assert!(!wood.tris.is_empty() && leaves.tris.is_empty());
+}

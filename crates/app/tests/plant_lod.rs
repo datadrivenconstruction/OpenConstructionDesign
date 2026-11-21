@@ -61,3 +61,32 @@ fn leaves_are_foliage_and_wood_is_not() {
     assert!(tags.iter().any(|t| !ddc_render::is_foliage(*t)), "the trunk keeps a plain colour: {tags:x?}");
     assert!(ddc_app::mep3d::is_foliage_material("Foliage Green") && !ddc_app::mep3d::is_foliage_material("Bark Brown"));
 }
+
+/// A tree's ladder ends in a far picture of a few cards; its levels are chosen by the size on
+/// screen, and the tone skins, which the coarse levels leave out, keep their place in the ladder.
+#[test]
+fn a_tree_ends_in_a_far_picture_and_its_levels_follow_the_screen_size() {
+    let mut ed = Editor::new_in_memory().unwrap();
+    let level = ed.level;
+    let f = ed.model.load_library_family("Tree").unwrap();
+    let t = ed.model.comp_type_id(f, "Oak A").unwrap().unwrap();
+    ed.model.add_component(&CompSpec::at(level, t, 0.0, 0.0)).unwrap();
+    ed.big.plants_fine = true;
+    let sc = scene(&mut ed);
+    let groups: Vec<_> = sc.instanced.iter().filter(|g| g.key >> 40 != 0).collect();
+    assert!(groups.len() >= 4, "wood, leaves and the tone skins: {}", groups.len());
+    let mut far_tris = vec![];
+    for g in &groups {
+        assert_eq!(g.lods.len(), 3, "medium, coarse, far picture");
+        assert_eq!(g.screen.len(), 4);
+        assert!(g.screen.windows(2).all(|w| w[0] > w[1]) && g.screen[3] == 0.0, "{:?}", g.screen);
+        assert!(g.lods.windows(2).all(|w| w[0].1 < w[1].1), "errors grow down the ladder");
+        far_tris.push((g.proto.triangles.len(), g.lods[1].0.triangles.len(), g.lods[2].0.triangles.len()));
+    }
+    // the leaf group: far picture is the lightest real level; wood has one too
+    let leaves = far_tris.iter().max_by_key(|t| t.0).unwrap();
+    assert!(leaves.2 > 1 && leaves.2 < leaves.1 && leaves.1 < leaves.0, "{far_tris:?}");
+    // a skin the coarse level omits is a single degenerate triangle there and in the far picture
+    assert!(far_tris.iter().any(|t| t.1 == 1 && t.2 == 1), "{far_tris:?}");
+    assert!(far_tris.iter().map(|t| t.2).sum::<usize>() < 130, "{far_tris:?}");
+}

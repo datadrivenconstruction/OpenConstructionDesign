@@ -682,16 +682,35 @@ fn comp_groups(
         for (g, proto) in groups.into_iter().enumerate() {
             let tag = proto.tag;
             // coarser pictures of a plant, one per colour group
+            // a colour group a coarser picture does not have (the tone skins) keeps its place in
+            // the ladder as one degenerate triangle, so the levels line up across the groups
             let levels: Vec<(Arc<SceneMesh>, f32)> = lods
                 .iter()
                 .zip(&cs.lods[k])
-                .filter_map(|(ms, l)| ms.iter().find(|x| x.tag == tag).cloned().map(|x| (Arc::new(x), (l.2 * big_scale[k]) as f32)))
+                .map(|(ms, l)| {
+                    let x = ms.iter().find(|x| x.tag == tag).cloned().unwrap_or_else(|| SceneMesh {
+                        element: proto.element,
+                        tag,
+                        positions: vec![[0.0; 3]; 3],
+                        triangles: vec![[0, 1, 2]],
+                    });
+                    (Arc::new(x), (l.2 * big_scale[k]) as f32)
+                })
                 .collect();
+            let screen = if levels.is_empty() { vec![] } else { plant_screen(levels.len() + 1) };
             let key = (fam[k] as u64) << 40 | (k as u64) << 8 | g as u64;
-            out.push(Instanced::new(key, Arc::new(proto), v.clone()).with_lods(levels));
+            out.push(Instanced::new(key, Arc::new(proto), v.clone()).with_lods(levels).with_screen(screen));
         }
     }
     out
+}
+
+/// Size on screen, in pixels of the plant's bounding box, from which each level of a plant is drawn:
+/// fine, medium, coarse, the far picture. A ladder starting at a coarser level keeps the tail.
+const PLANT_SCREEN: [f32; 4] = [120.0, 50.0, 20.0, 0.0];
+
+pub fn plant_screen(levels: usize) -> Vec<f32> {
+    PLANT_SCREEN[PLANT_SCREEN.len().saturating_sub(levels)..].to_vec()
 }
 
 /// Display colour of a component material: the colour of its row in the material table (a

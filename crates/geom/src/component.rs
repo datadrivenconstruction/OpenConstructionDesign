@@ -65,7 +65,7 @@ mod validate_tests;
 use std::collections::{BTreeMap, HashMap};
 use std::fmt;
 
-pub use build::{plant_of, Built, Lod, Part};
+pub use build::{plant_of, plant_part, Built, Lod, Part};
 use expr::{Dim, Expr, ANGLE, AREA, LENGTH, NUMBER, Q, VOLUME};
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]

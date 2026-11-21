@@ -310,6 +310,14 @@ pub fn plant_of(f: &Family, r: &Resolved) -> Option<plant::Spec> {
     })
 }
 
+/// Index in `Built::parts` of the first solid of a plant family that grows `organ`.
+pub fn plant_part(f: &Family, r: &Resolved, organ: plant::Organ) -> Option<usize> {
+    f.solids
+        .iter()
+        .filter(|s| !r.hidden.contains(&s.name))
+        .position(|s| matches!(s.shape, Shape::Plant { organ: o, .. } if o == organ))
+}
+
 fn shape(
     sh: &Shape,
     r: &Resolved,

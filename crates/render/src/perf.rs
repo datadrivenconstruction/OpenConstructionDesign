@@ -647,6 +647,12 @@ pub fn pick_level(errors: &[f32], px_per_m: f32, tol_px: f32) -> usize {
     k
 }
 
+/// The level a placement of `px` pixels is drawn at: the first whose least size it reaches, the
+/// last when it reaches none.
+pub fn screen_level(least: &[f32], px: f32) -> usize {
+    least.iter().position(|&l| px >= l).unwrap_or(least.len().saturating_sub(1))
+}
+
 /// Pixels per metre at the box point nearest the eye: a long chunk next to the camera must not
 /// count as distant by its average size. Constant in orthographic projection.
 pub fn px_per_m_near(vp: &Mat4, b: &Aabb, eye: Vec3, px: (f32, f32)) -> f32 {
@@ -831,6 +837,17 @@ pub(crate) fn wake() {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn a_plant_drops_a_level_as_it_shrinks_on_the_screen() {
+        let least = [120.0, 50.0, 20.0, 0.0];
+        let at = |px| screen_level(&least, px);
+        assert_eq!((at(f32::INFINITY), at(300.0), at(120.0)), (0, 0, 0));
+        assert_eq!((at(119.0), at(50.0), at(49.0), at(20.0), at(19.0), at(0.5)), (1, 1, 2, 2, 3, 3));
+        // a ladder of two levels still ends on its last
+        assert_eq!(screen_level(&[30.0, 0.0], 1.0), 1);
+        assert_eq!(screen_level(&[], 1.0), 0);
+    }
 
     #[test]
     fn a_thousand_mixed_trees_fit_the_budget_and_the_near_ones_stay_fine() {
