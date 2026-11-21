@@ -395,8 +395,8 @@ fn every_power_link_ends_a_run_at_its_connector() {
 }
 
 #[test]
-fn every_room_of_a_house_and_an_office_is_powered() {
-    for (t, f) in [("house", 2), ("office", 4)] {
+fn every_room_of_every_typology_is_powered() {
+    for (t, f) in [("house", 2), ("office", 4), ("school", 3), ("apartment_section", 3), ("apartment_section", 5)] {
         let p = build_project(&parse_spec(&json!({"typology": t, "floors": f, "services": true})).unwrap()).unwrap();
         let rooms: Vec<&String> = p.services.issues.iter().filter(|i| i.contains("unpowered:") && !i.contains("device")).collect();
         assert_eq!(metric(&p, "power_unserved_rooms"), 0.0, "{t}: {rooms:?}");

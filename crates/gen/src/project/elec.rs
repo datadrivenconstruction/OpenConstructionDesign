@@ -795,6 +795,8 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
     let fps: Vec<Vec<svc::R>> = p.storeys.iter().map(|s| footprints(&s.layout.fixtures)).collect();
     let stacks = floor_boards(p, &rooms, &fps);
     let ducts: Vec<[f64; 6]> = svc::obstacles(p).into_iter().filter(|o| matches!(o.1, "duct" | "air terminal neck")).map(|o| o.0).collect();
+    // a unit board stands on no wall a shaft covers
+    let shafts: Vec<[f64; 6]> = svc::obstacles(p).into_iter().filter(|o| o.1.starts_with("shaft")).map(|o| o.0).collect();
     let zc: Vec<f64> = (0..n_st)
         .map(|k| {
             // layers on: the tray stands in its own band, whatever the ceiling does
@@ -958,8 +960,18 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                             continue;
                         }
                         let child_spine = circulation(rv.kind);
-                        let (alo, ahi) = if spine[u].is_some() { (spine_margin, a.len - spine_margin) } else { (d_ring() + spacing(), a.len - d_ring() - spacing()) };
+                        // a ring tee keeps its leg and the corner elbow from the ring's corner
+                        let a_end = co[u] + ring_corner_leg(k, 0.0);
+                        let (alo, ahi) = if spine[u].is_some() { (spine_margin, a.len - spine_margin) } else { (a_end, a.len - a_end) };
                         let (blo, bhi) = if child_spine { (spine_margin, b.len - spine_margin) } else { (d_ring() + spacing(), b.len - d_ring() - spacing()) };
+                        // a wall too short for the ring's margins takes its feed where a ring nearer the
+                        // walls can tee it, else at its middle
+                        let near = d_spine() + ring_corner_leg(k, 0.0);
+                        let (blo, bhi) = match (bhi < blo, b.len - near < near) {
+                            (false, _) => (blo, bhi),
+                            (true, false) => (near, b.len - near),
+                            (true, true) => (b.len / 2.0, b.len / 2.0),
+                        };
                         // candidates from the middle of the overlap outward
                         let w0 = a.at(alo, 0.0);
                         let w1 = a.at(ahi, 0.0);
@@ -1010,6 +1022,10 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                     seen[v] = true;
                     if circulation(rv.kind) {
                         (spine[v], co[v]) = (Some(f.cj), d_spine());
+                    } else {
+                        // the ring of a narrow room comes nearer its walls so the feed tee keeps its legs
+                        let (len, leg) = (rv.sides[f.cj].len, ring_corner_leg(k, 0.0));
+                        co[v] = (f.cs - leg).min(len - f.cs - leg).min(d_ring()).max(d_spine());
                     }
                     taken[u].push((f.pj, f.ps));
                     taken[v].push((f.cj, f.cs));
@@ -1039,7 +1055,8 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                 let mut s = ub_margin;
                 while s < sd.len - ub_margin {
                     let b = svc::bbox(&[sd.at(s - ub_before, 0.0), sd.at(s + ub_after, ub_depth)]);
-                    if sd.half > 0.0 && sd.free(s - ub_clear, s + ub_clear, 0.0, 0.0, ub_top) && !fps[k].iter().any(|f| svc::hit(f, &b, 0.0)) && !taken[v].iter().any(|t| t.0 == j && (t.1 - s).abs() < spacing()) {
+                    let shafted = shafts.iter().any(|o| o[0] < b[2] && o[3] > b[0] && o[1] < b[3] && o[4] > b[1]);
+                    if sd.half > 0.0 && !shafted && sd.free(s - ub_clear, s + ub_clear, 0.0, 0.0, ub_top) && !fps[k].iter().any(|f| svc::hit(f, &b, 0.0)) && !taken[v].iter().any(|t| t.0 == j && (t.1 - s).abs() < spacing()) {
                         unit_at[v] = Some(s);
                         taken[v].push((j, s));
                         break;
@@ -1067,6 +1084,7 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
             let Some(mut pl) = plans[v].clone() else { continue };
             let (pl0, told) = (pl.clone(), dropped.len());
             let (mut shift, mut split): (usize, usize) = (0, 0);
+            let co_v0 = co[v];
             // every carrier variant tried: back on the usual one, items at the end of a blocked
             // stretch go one by one
             let mut trim = false;
@@ -1123,8 +1141,13 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                     b.runs.push(r);
                 }
                 if let (Some(s), Some(j)) = (unit_at[v], spine[v]) {
-                    let w = rs[v].sides[j].at(s, co[v]);
-                    b.runs.push(svc::conduit_run(k, board_drop, vec![v3(w.0, w.1, z), v3(w.0, w.1, e + board_z() + board_top)]));
+                    // a spine stepped off its wall reaches back to the board on the wall
+                    let (a, w) = (rs[v].sides[j].at(s, co[v]), rs[v].sides[j].at(s, d_spine()));
+                    let mut pts = vec![v3(a.0, a.1, z), v3(w.0, w.1, z), v3(w.0, w.1, e + board_z() + board_top)];
+                    if co[v] <= d_spine() + EPS {
+                        pts.remove(1);
+                    }
+                    b.runs.push(svc::conduit_run(k, board_drop, pts));
                 }
                 // route faults found alone: drop the device or row nearest to each
                 let mut pseudo: Vec<V3> = b.ports.iter().map(|x| v3(x.1.at.0, x.1.at.1, x.1.at.2)).collect();
@@ -1164,7 +1187,7 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                     }
                 }
                 if let (Some(s), Some(j)) = (unit_at[v], spine[v]) {
-                    let w = rs[v].sides[j].at(s, co[v]);
+                    let w = rs[v].sides[j].at(s, d_spine());
                     pseudo.push(v3(w.0, w.1, e + board_z() + board_top));
                 }
                 let mut check: Vec<&GRun> = b.runs.iter().collect();
@@ -1224,8 +1247,10 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                         return true;
                     }
                     *split = 0;
-                    // a spine steps off its wall only, the board room's never: the riser stands on it
-                    while v != board_room && *shift < co_tries {
+                    // a spine steps off its wall only, up to the far one; the board room's never: the
+                    // riser stands on it
+                    let far = spine[v].map(|j| dims(&rs[v], j).1 - d_spine());
+                    while v != board_room && far.map_or(*shift < co_tries, |f| d_spine() + co_step * (*shift + 1) as f64 <= f) {
                         *shift += 1;
                         let n = (*shift).div_ceil(2) as f64;
                         let d = match spine[v] {
@@ -1273,7 +1298,7 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                         dropped.truncate(told);
                     }
                     None if !trim => {
-                        (trim, co[v], split) = (true, if spine[v].is_some() { d_spine() } else { d_ring() }, 0);
+                        (trim, co[v], split) = (true, co_v0, 0);
                         (pl, attempt) = (pl0.clone(), 0);
                         dropped.truncate(told);
                     }
@@ -1368,9 +1393,7 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
         }
         for v in 0..rs.len() {
             if !seen[v] && wired(rs[v].kind) {
-                if cut.contains(&v) {
-                    dropped.push(format!("storey {k} room {} {:?} unpowered: no feed into it fits", rs[v].idx, rs[v].kind));
-                }
+                dropped.push(format!("storey {k} room {} {:?} unpowered: no feed into it fits", rs[v].idx, rs[v].kind));
                 unserved += 1;
             }
         }
