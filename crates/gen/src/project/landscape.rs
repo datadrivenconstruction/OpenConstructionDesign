@@ -147,11 +147,19 @@ pub struct Land {
     pub hedge: Vec<(P, f64, &'static str)>,
     pub beds: Vec<P>,
     pub shrubs: Vec<(P, &'static str)>,
+    /// Shrubs lining the paths to the street.
+    pub edge: Vec<(P, &'static str)>,
+    /// Places of the tree rows along the paths, whether planted or not.
+    pub lanes: Vec<P>,
     pub lawn: Vec<P>,
     /// Places for the trees of the rows along the street and the paths.
     pub rows: Vec<P>,
     /// The plot, as the corners of its box turned back to the world, counter-clockwise.
     pub plot: Vec<P>,
+    /// Distance from the building where the beds end: no shrub under a tree comes closer.
+    pub inner: f64,
+    /// Fixtures the site still has room for.
+    pub room: usize,
 }
 
 impl Land {
@@ -160,6 +168,47 @@ impl Land {
         to_outline(l, p) >= self.setback
             && !built_on(l, p)
             && self.paths.iter().all(|t| dist(*t, p) >= self.path_tile / 2.0 + self.path_clear)
+    }
+
+    /// Shrubs under the crowns of free-standing `trees` (place, crown radius): on a share of the
+    /// trees one to a few at the crown's edge, clear of every trunk in `all`, the building, the
+    /// paths and the other shrubs, inside the hedge.
+    pub fn under(&self, l: &GLayout, trees: &[(P, f64)], all: &[(P, f64)], seed: u64) -> Vec<GFixture> {
+        let types = list(&["under", "types"]);
+        // the beds rule switches every shrub
+        if types.is_empty() || self.plot.is_empty() || self.beds.is_empty() {
+            return vec![];
+        }
+        let (share, most) = (num(&["under", "share"]), (num(&["under", "most"]) as usize).max(1));
+        let limit = num(&["caps", "under"]).min(self.room as f64) as usize;
+        let mut taken: Vec<P> = self.shrubs.iter().chain(&self.edge).map(|s| s.0).collect();
+        let mut out = vec![];
+        for (k, (t, r)) in trees.iter().enumerate() {
+            let u = |j: u64| super::trees::unit(seed ^ 0x0DE5, k as u64 * 16 + j);
+            if u(0) > share {
+                continue;
+            }
+            let n = 1 + ((u(1) * most as f64) as usize).min(most - 1);
+            let a0 = u(2) * std::f64::consts::TAU;
+            let ty = types[(u(3) * types.len() as f64) as usize % types.len()];
+            for j in 0..n as u64 {
+                // the group keeps to one side of the trunk
+                let a = a0 + (j as f64 - 0.5 * (n - 1) as f64) * (0.7 + 0.4 * u(4 + j));
+                let d = r * (0.55 + 0.3 * u(8 + j));
+                let p = (t.0 + d * a.cos(), t.1 + d * a.sin());
+                let ok = all.iter().all(|(q, _)| dist(*q, p) >= UNDER_TRUNK)
+                    && !built_on(l, p)
+                    && to_outline(l, p) >= self.inner
+                    && self.paths.iter().all(|q| dist(*q, p) >= self.path_tile / 2.0 + SHRUB_PATH)
+                    && taken.iter().all(|q| dist(*q, p) >= SHRUB_GAP)
+                    && inside_by(&self.plot, p, PLOT_INSET);
+                if ok && out.len() < limit {
+                    taken.push(p);
+                    out.push(shrub(p, ty, 1000 + out.len()));
+                }
+            }
+        }
+        out
     }
 
     pub fn fixtures(&self) -> Vec<GFixture> {
@@ -176,14 +225,37 @@ impl Land {
         };
         out.extend(self.hedge.iter().enumerate().map(|(k, (p, a, ty))| sized(on("Hedge", ty, *p, *a), k, jitter * 0.25)));
         out.extend(self.beds.iter().map(|p| on("Lawn", bed, *p, 0.0)));
-        // a shrub takes any turn: the lumps of its crown are not round
-        out.extend(self.shrubs.iter().enumerate().map(|(k, (p, ty))| {
-            let turn = f64::from(super::trees::scale(0xB05C, k + (p.0 * 7.0 + p.1 * 13.0).abs() as usize, 1.0)) * std::f64::consts::PI;
-            sized(on("Shrub", ty, *p, turn), k, jitter)
-        }));
+        out.extend(self.shrubs.iter().enumerate().map(|(k, (p, ty))| shrub(*p, ty, k)));
+        out.extend(self.edge.iter().enumerate().map(|(k, (p, ty))| shrub(*p, ty, 500 + k)));
         out.extend(self.lawn.iter().map(|p| on("Lawn", lawn, *p, 0.0)));
         out
     }
+}
+
+/// A shrub of type `ty` at `p`, the `k`th of its kind: any turn (the lumps of its crown are not
+/// round) and a size seeded by the place, as much as the trees differ.
+fn shrub(p: P, ty: &'static str, k: usize) -> GFixture {
+    let turn = super::trees::scale(0xB05C, k + (p.0 * 7.0 + p.1 * 13.0).abs() as usize, 1.0) * std::f64::consts::PI;
+    let seed = [p.0, p.1].iter().fold(0x5EEDu64, |a, v| a.rotate_left(21) ^ (v * 1000.0).round() as i64 as u64);
+    let scale = super::trees::scale(seed, k, rule("site.tree_size_jitter"));
+    GFixture { scale, min_clear: 0.0, family: "Shrub", ty, at: p, rotation: turn, wall: None, z: 0.0 }
+}
+
+/// Least distance of two shrubs, m.
+const SHRUB_GAP: f64 = 1.3;
+/// Least distance of a shrub from the edge of a path tile, m.
+const SHRUB_PATH: f64 = 0.5;
+/// Least distance of a shrub under a tree from any trunk, m.
+const UNDER_TRUNK: f64 = 1.2;
+/// Least distance of a shrub from the plot boundary, m: it stays inside the hedge.
+const PLOT_INSET: f64 = 1.0;
+
+fn list(path: &[&str]) -> Vec<&'static str> {
+    let mut v = data();
+    for k in path {
+        v = &v[*k];
+    }
+    v.as_array().map_or(vec![], |a| a.iter().filter_map(|x| x.as_str()).collect())
 }
 
 /// The tree ring offset with and without the landscape.
@@ -365,10 +437,25 @@ pub fn lay(
         }
     }
 
-    // beds in the cells just outside the paving, a shrub on every few of them
+    // place round the ring (m along it) of a local point: drifts run along the building
+    let along = |q: P| {
+        let d = [q.0 - rlo.0, rhi.0 - q.0, q.1 - rlo.1, rhi.1 - q.1];
+        let e = (0..4).min_by(|a, b| d[*a].total_cmp(&d[*b])).unwrap_or(0);
+        let on = match e {
+            0 => (rlo.0, q.1.clamp(rlo.1, rhi.1)),
+            1 => (rhi.0, q.1.clamp(rlo.1, rhi.1)),
+            2 => (q.0.clamp(rlo.0, rhi.0), rlo.1),
+            _ => (q.0.clamp(rlo.0, rhi.0), rhi.1),
+        };
+        ring_t(on)
+    };
+    // beds in the cells just outside the paving; shrubs in drifts of one species along them,
+    // a drift left open now and then, each shrub off the centre of its cell
     if cfg.bed > 0.0 {
-        let shrubs = data()["shrubs"].as_array().map_or(&[][..], Vec::as_slice);
-        let stride = num(&["bed", "shrub_stride"]) as i64;
+        let shrubs = list(&["shrubs"]);
+        let (drift, dense, open) = (num(&["bed", "drift"]), num(&["bed", "shrub_density"]), num(&["bed", "open_drifts"]));
+        let pick = |d: i64| (super::trees::unit(0xD21F7, d as u64) * shrubs.len() as f64) as usize % shrubs.len().max(1);
+        let kind = |d: i64| if pick(d) == pick(d - 1) { (pick(d) + 1) % shrubs.len().max(1) } else { pick(d) };
         let reach = band + pad + (cfg.bed + clear) .div_euclid(pad).mul_add(pad, 2.0 * pad);
         let (nx, ny) = (((hi.0 - lo.0 + 2.0 * reach) / pad) as i64, ((hi.1 - lo.1 + 2.0 * reach) / pad) as i64);
         let (mut beds, mut sh) = (vec![], vec![]);
@@ -380,9 +467,11 @@ pub fn lay(
                     continue;
                 }
                 beds.push(p);
-                if !shrubs.is_empty() && (i + 2 * j).rem_euclid(stride.max(1)) == 0 {
-                    let ty = shrubs[((i * 7 + j * 3).rem_euclid(shrubs.len() as i64)) as usize].as_str().unwrap_or_default();
-                    sh.push((p, ty));
+                let d = (along(fwd(p)) / drift).floor() as i64;
+                let u = |k: u64| super::trees::unit(0xBED5 ^ (i as u64) << 20 ^ (j as u64), k);
+                if !shrubs.is_empty() && super::trees::unit(0x0BE7, d as u64) >= open && u(0) < dense {
+                    let s = 0.25 * pad;
+                    sh.push(((p.0 + s * (2.0 * u(1) - 1.0), p.1 + s * (2.0 * u(2) - 1.0)), shrubs[kind(d)]));
                 }
             }
         }
@@ -432,25 +521,73 @@ pub fn lay(
             }
         }
     }
+    // the places of a row along each path: planted by the rule, kept free of other trees always,
+    // so an entrance keeps its approach and switching the rows on only adds trees
+    let side = reach + (cfg.path_rows as f64 - 1.0) * pad / 2.0 + pad / 2.0;
+    let mut seen: Vec<f64> = vec![];
+    for g in &legs {
+        if seen.iter().any(|s| (s - g).abs() < 1e-6) {
+            continue;
+        }
+        seen.push(*g);
+        let mut y = rlo.1 - cfg.row_gap / 2.0;
+        while y > plo.1 + num(&["row_inset"]) {
+            land.lanes.push(back((g - side, y)));
+            land.lanes.push(back((g + side, y)));
+            y -= cfg.row_gap;
+        }
+    }
     if cfg.rows.1 {
-        let side = reach + (cfg.path_rows as f64 - 1.0) * pad / 2.0 + pad / 2.0;
+        rows.extend(land.lanes.iter().copied());
+    }
+    rows.truncate(cap("row"));
+    land.rows = rows.into_iter().filter(|p| land.tree_ok(l, *p) && inside_plot(&land.plot, *p)).collect();
+
+    // shrubs lining both sides of each path to the street, in drifts of one species
+    let kinds = list(&["edge", "types"]);
+    if cfg.bed > 0.0 && !kinds.is_empty() {
+        let (step, gap, run) = (num(&["edge", "step"]), num(&["edge", "offset"]), num(&["edge", "drift"]) as usize);
+        let side = pad * cfg.path_rows as f64 / 2.0 + gap;
+        let mut edge = vec![];
         let mut seen: Vec<f64> = vec![];
         for g in &legs {
             if seen.iter().any(|s| (s - g).abs() < 1e-6) {
                 continue;
             }
             seen.push(*g);
-            let mut y = rlo.1 - cfg.row_gap / 2.0;
-            while y > plo.1 + num(&["row_inset"]) {
-                rows.push(back((g - side, y)));
-                rows.push(back((g + side, y)));
-                y -= cfg.row_gap;
+            for (si, sgn) in [-1.0, 1.0].into_iter().enumerate() {
+                let lane = (seen.len() * 2 + si) as u64;
+                let mut y = rlo.1 - pad;
+                let mut k = 0usize;
+                while y > street_y + 1.5 {
+                    let u = |j: u64| super::trees::unit(0xED6E ^ lane << 32, k as u64 * 4 + j);
+                    let w = back((g + sgn * (side + 0.3 * u(0)), y - 0.5 * u(1)));
+                    let ty = kinds[(k / run.max(1) + lane as usize) % kinds.len()];
+                    let ok = !built_on(l, w)
+                        && paths.iter().all(|t| dist(*t, w) >= pad / 2.0 + SHRUB_PATH)
+                        && land.rows.iter().all(|r| dist(*r, w) >= SHRUB_GAP + 0.3)
+                        && inside_by(&land.plot, w, PLOT_INSET);
+                    if ok {
+                        edge.push((w, ty));
+                    }
+                    y -= step;
+                    k += 1;
+                }
             }
         }
+        if edge.len() <= cap("edge").min(room) {
+            room -= edge.len();
+            land.edge = edge;
+        }
     }
-    rows.truncate(cap("row"));
-    land.rows = rows.into_iter().filter(|p| land.tree_ok(l, *p) && inside_plot(&land.plot, *p)).collect();
+    land.inner = band + clear + cfg.bed;
+    land.room = room;
     Ok(land)
+}
+
+/// `p` inside the plot and at least `inset` m from its boundary.
+fn inside_by(plot: &[P], p: P, inset: f64) -> bool {
+    inside(plot, p) && (0..plot.len()).all(|i| dist_to_seg(p, plot[i], plot[(i + 1) % plot.len()]) >= inset)
 }
 
 fn text_angle(k: u8) -> f64 {

@@ -69,7 +69,7 @@ fn the_landscape_data_names_library_types_of_the_sizes_it_assumes() {
     for (_, ty) in d["hedge"]["types"].as_object().unwrap() {
         assert!(has("Hedge", ty.as_str().unwrap()), "{ty}");
     }
-    for ty in d["shrubs"].as_array().unwrap() {
+    for ty in d["shrubs"].as_array().unwrap().iter().chain(d["edge"]["types"].as_array().unwrap()).chain(d["under"]["types"].as_array().unwrap()) {
         assert!(has("Shrub", ty.as_str().unwrap()), "{ty}");
     }
     assert!(has("Lawn", d["lawn"]["type"].as_str().unwrap()) && has("Lawn", d["bed"]["type"].as_str().unwrap()));
@@ -99,8 +99,16 @@ fn a_site_gets_hedge_beds_shrubs_lawn_and_paths_off_the_building() {
             assert!(!inside(&l.slab, *q), "{what} stands on the building at {q:?}");
         }
     }
-    // every shrub stands in a bed, and the beds, lawn and paths do not overlap
-    assert!(shrubs.iter().all(|s| beds.iter().any(|b| dist(*s, *b) < 1e-9)));
+    // every shrub stands in a bed (off its centre), lines a path or grows under a tree; none on a path
+    let trees = at(&p, "Tree", None);
+    for s in &shrubs {
+        let bed = beds.iter().any(|b| (s.0 - b.0).abs() <= 0.375 + 1e-9 && (s.1 - b.1).abs() <= 0.375 + 1e-9);
+        let lining = path.iter().any(|t| dist(*s, *t) <= 3.0);
+        let under = trees.iter().any(|t| dist(*s, *t) <= 6.0);
+        assert!(bed || lining || under, "a shrub alone at {s:?}");
+        assert!(bed || path.iter().all(|t| dist(*s, *t) >= 0.75 + 0.5 - 1e-9), "a shrub on a path at {s:?}");
+    }
+    // the beds, lawn and paths do not overlap
     for b in &beds {
         assert!(path.iter().all(|t| (t.0 - b.0).abs() >= 1.5 - 1e-9 || (t.1 - b.1).abs() >= 1.5 - 1e-9), "bed on a path at {b:?}");
     }
@@ -271,4 +279,38 @@ fn hedge_lengths_and_shrubs_differ_in_size_by_seed() {
     let q = site(json!({}), 4);
     let again: Vec<f64> = fixtures(&q, "Hedge", None).iter().map(|f| f.scale).collect();
     assert_eq!(hedge, again, "a site keeps its plants");
+}
+
+/// Shrubs as a planting plan has them: drifts of one species in the beds, a line of shrubs along
+/// the paths to the street, a few under the free-standing crowns, none against a trunk.
+#[test]
+fn shrubs_grow_in_drifts_line_the_paths_and_stand_under_trees() {
+    let p = site(json!({}), 10);
+    let beds = at(&p, "Lawn", Some("Bed"));
+    let path = at(&p, "Paving Slab", Some("Path"));
+    let trees = fixtures(&p, "Tree", None);
+    let shrubs = fixtures(&p, "Shrub", None);
+    let in_bed = |s: P| beds.iter().any(|b| (s.0 - b.0).abs() <= 0.375 + 1e-9 && (s.1 - b.1).abs() <= 0.375 + 1e-9);
+    let bed: Vec<_> = shrubs.iter().filter(|f| in_bed(f.at)).collect();
+    assert!(bed.len() >= 8, "{}", bed.len());
+    // drifts: most bed shrubs have a neighbour of their own species
+    let alike = bed
+        .iter()
+        .filter(|a| bed.iter().any(|b| !std::ptr::eq(**a, *b) && dist(a.at, b.at) < 2.4 && a.ty == b.ty))
+        .count();
+    assert!(alike * 2 >= bed.len(), "{alike} of {} bed shrubs beside their own kind", bed.len());
+    // off the cell centres: not a grid
+    assert!(bed.iter().any(|f| beds.iter().all(|b| dist(f.at, *b) > 0.05)));
+    let free: Vec<_> = shrubs.iter().filter(|f| !in_bed(f.at)).collect();
+    let lining = free.iter().filter(|f| path.iter().any(|t| dist(f.at, *t) <= 3.0)).count();
+    assert!(lining >= 4, "{lining} shrubs along the paths");
+    let crown = |t: &GFixture| ddc_gen::project::tree_dims(t.ty).unwrap().1 * t.scale / 2.0;
+    let under = free.iter().filter(|f| trees.iter().any(|t| dist(f.at, t.at) <= crown(t))).count();
+    assert!(under >= 2, "{under} shrubs under the trees");
+    for s in &shrubs {
+        assert!(trees.iter().all(|t| dist(s.at, t.at) >= 1.0), "a shrub against a trunk at {:?}", s.at);
+    }
+    for (i, a) in free.iter().enumerate() {
+        assert!(shrubs.iter().all(|b| std::ptr::eq(**a, *b) || dist(a.at, b.at) >= 1.3 - 1e-9), "shrubs crowd at {:?} ({i})", a.at);
+    }
 }
