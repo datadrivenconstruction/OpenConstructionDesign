@@ -707,6 +707,10 @@ pub fn uses_of(p: &GProject) -> Vec<Use> {
             out.push(roof_use(r.slope));
         }
     }
+    // a stair head on a pitched roof is covered flat
+    if !p.fire.stair_heads.is_empty() {
+        out.push(roof_use(0.0));
+    }
     out.sort();
     out.dedup();
     out
