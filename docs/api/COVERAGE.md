@@ -3,14 +3,14 @@
 Generated from `crates/ai/data/ui_coverage.tsv` by `crates/ai/tests/ui_coverage.rs`;
 edit the table, then run that test with `DDC_BLESS_COVERAGE=1`.
 
-554 commands: 125 with an API tool, 303 UI-only, 126 model edits without an API form yet.
+555 commands: 125 with an API tool, 304 UI-only, 126 model edits without an API form yet.
 
 | Kind | Meaning | Commands |
 |---|---|---|
 | api | an API tool does the same | 125 |
 | view | UI-only: changes the view or the display, not the model | 105 |
 | nav | UI-only: moves around the project: views, levels, tabs | 34 |
-| dialog | UI-only: opens a window; its edits are their own commands | 83 |
+| dialog | UI-only: opens a window; its edits are their own commands | 84 |
 | select | UI-only: changes the selection, which the API names by reference instead | 14 |
 | file | UI-only: opens, saves or exchanges files on the person's disk | 25 |
 | session | UI-only: drives the editor session: tool state, undo, chat, panels | 39 |
@@ -265,6 +265,7 @@ edit the table, then run that test with `DDC_BLESS_COVERAGE=1`.
 | `mass.wall_by_face` | gap | `m.wall_by_face` | mass tool; pick then commit |
 | `mep.browser` | dialog |  | MEP browser window |
 | `mep.check_system` | dialog |  | system check window |
+| `mep.circuits` | dialog |  | circuit editor window |
 | `mep.conduit` | api | `create_elements:mep` | draw conduit run |
 | `mep.connect` | gap | `m.mep_attach/mep_connect_end` | connect run end |
 | `mep.device` | gap | `m.mep_place` | place device on run |

@@ -220,6 +220,7 @@ mass.void	api	ops_propose:geometry.void	mass tool; pick then commit
 mass.wall_by_face	gap	m.wall_by_face	mass tool; pick then commit
 mep.browser	dialog	-	MEP browser window
 mep.check_system	dialog	-	system check window
+mep.circuits	dialog	-	circuit editor window
 mep.conduit	api	create_elements:mep	draw conduit run
 mep.connect	gap	m.mep_attach/mep_connect_end	connect run end
 mep.device	gap	m.mep_place	place device on run

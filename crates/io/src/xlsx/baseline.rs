@@ -392,28 +392,37 @@ pub(crate) fn with_take<T>(take: &Take, f: impl FnOnce() -> T) -> T {
 pub(crate) fn made(sheet: &str, row: u32, fp: &str, legacy: &str) -> Option<i64> {
     TAKE.with(|t| {
         let mut t = t.borrow_mut();
-        let free = |t: &Take, f: &str, h: u32| !t.claimed.contains(&(sheet.to_string(), f.to_string(), h));
-        let mut found = None;
-        for (i, f) in [fp, legacy, ""].into_iter().enumerate() {
-            if i == 1 && (f == fp || f.is_empty()) {
-                continue;
-            }
-            let list = t.made.get(&(sheet.to_string(), f.to_string())).cloned().unwrap_or_default();
-            let hit = if f.is_empty() {
-                // before fingerprints only the row number identified a record
-                list.iter().find(|h| h.0 == row && free(&*t, f, h.0))
-            } else {
-                list.iter().find(|h| h.0 == row && free(&*t, f, h.0)).or_else(|| list.iter().find(|h| free(&*t, f, h.0)))
-            };
-            if let Some(h) = hit {
-                found = Some((f.to_string(), *h));
-                break;
-            }
-        }
-        let (f, h) = found?;
+        let (f, h) = made_lookup(&t, sheet, row, fp, legacy)?;
         t.claimed.insert((sheet.to_string(), f, h.0));
         Some(h.1)
     })
+}
+
+/// Whether [`made`] would find a record for this row, without claiming it.
+pub(crate) fn is_made(sheet: &str, row: u32, fp: &str, legacy: &str) -> bool {
+    TAKE.with(|t| made_lookup(&t.borrow(), sheet, row, fp, legacy).is_some())
+}
+
+fn made_lookup(t: &Take, sheet: &str, row: u32, fp: &str, legacy: &str) -> Option<(String, (u32, i64))> {
+    let free = |t: &Take, f: &str, h: u32| !t.claimed.contains(&(sheet.to_string(), f.to_string(), h));
+    let mut found = None;
+    for (i, f) in [fp, legacy, ""].into_iter().enumerate() {
+        if i == 1 && (f == fp || f.is_empty()) {
+            continue;
+        }
+        let list = t.made.get(&(sheet.to_string(), f.to_string())).cloned().unwrap_or_default();
+        let hit = if f.is_empty() {
+            // before fingerprints only the row number identified a record
+            list.iter().find(|h| h.0 == row && free(t, f, h.0))
+        } else {
+            list.iter().find(|h| h.0 == row && free(t, f, h.0)).or_else(|| list.iter().find(|h| free(t, f, h.0)))
+        };
+        if let Some(h) = hit {
+            found = Some((f.to_string(), *h));
+            break;
+        }
+    }
+    found
 }
 
 pub(crate) fn taken(sheet: &str, row: u32, col: u32) -> bool {

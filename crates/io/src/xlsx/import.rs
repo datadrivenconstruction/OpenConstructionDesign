@@ -1110,6 +1110,11 @@ impl<'a> Row<'a> {
         true
     }
 
+    /// [`Self::made`] without claiming the record: a created row is not offered as a key match.
+    fn is_made(&self) -> bool {
+        super::baseline::is_made(self.tab.name, self.r, &self.fingerprint(), &self.fingerprint_legacy())
+    }
+
     /// Hash of the cells that say which element the row is (name, type, level, position),
     /// not of the ones a later edit may change (sizes).
     fn fingerprint(&self) -> String {
@@ -3224,7 +3229,8 @@ pub fn import_xlsx_keyed(
             let marks = (rep.changes.len(), edits.len());
             let mut km: Option<(i64, String)> = None;
             let rejected = dec.reject.contains(&(tab.name.to_string(), *r));
-            if id.is_none() && !del {
+            // the room an earlier Apply created from this row has its key: the record wins
+            if id.is_none() && !del && !row.is_made() {
                 let by = row
                     .key_text("number")
                     .map(|k| (true, k))
@@ -3618,7 +3624,7 @@ pub fn import_xlsx_keyed(
             let marks = (rep.changes.len(), edits.len());
             let mut km: Option<(i64, String)> = None;
             let rejected = dec.reject.contains(&(tab.name.to_string(), *r));
-            if id.is_none() && !del {
+            if id.is_none() && !del && !row.is_made() {
                 if let Some(key) = row.key_text("name") {
                     let nk = norm_key(&key);
                     let hits: Vec<i64> = curtains
