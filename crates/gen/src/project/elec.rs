@@ -44,6 +44,20 @@ fn lum_drop_min() -> f64 {
         + EPS
 }
 /// Cable tray: width and height, m.
+/// The cable level of storey `k`: `z`, else the lowest level above it whose band meets no duct
+/// main of the storey and still fits under the slab; `z` when none does.
+fn over_ducts(p: &GProject, ducts: &[[f64; 6]], k: usize, z: f64) -> f64 {
+    let st = &p.storeys[k];
+    let (half, top) = (tray().1 / 2.0 + svc::gap(), st.elevation + st.height - svc::slab());
+    // the level only steps over the mains that lie along the void; a riser or a drop is a post
+    // the runs go round
+    let lies = |d: &[f64; 6]| (d[3] - d[0]).max(d[4] - d[1]) > d[5] - d[2];
+    let here: Vec<&[f64; 6]> = ducts.iter().filter(|d| d[2] > st.elevation && d[5] < top + EPS && lies(d)).collect();
+    let free = |c: f64| !here.iter().any(|d| d[2] < c + half - EPS && d[5] > c - half + EPS);
+    let mut cs: Vec<f64> = here.iter().map(|d| d[5] + half).filter(|c| *c > z && *c + half <= top + EPS).collect();
+    cs.sort_by(f64::total_cmp);
+    std::iter::once(z).chain(cs).find(|c| free(*c)).unwrap_or(z)
+}
 fn tray() -> (f64, f64) {
     (rule("services.elec.tray_w"), rule("services.elec.tray_h"))
 }
@@ -268,16 +282,17 @@ fn plan(spec: &ProjectSpec, p: &GProject, k: usize, room: &Room, f_rel: f64, fps
         }
         for c in svc::svc_ports(f).into_iter().filter(|c| c.sys == SvcSys::Power) {
             let q = (c.at.0, c.at.1);
-            // the nearest usable wall within the reach water connectors are served from
+            // the nearest usable wall within the reach water connectors are served from; a
+            // connector behind the wall face is the next room's
             let reach = rule("services.water.port_reach");
             let wall = usable
                 .iter()
                 .copied()
                 .filter(|&j| {
                     let sd = &room.sides[j];
-                    sd.d_of(q).abs() < reach && sd.s_of(q) > 0.0 && sd.s_of(q) < sd.len
+                    sd.d_of(q) > -EPS && sd.d_of(q) < reach && sd.s_of(q) > 0.0 && sd.s_of(q) < sd.len
                 })
-                .min_by(|&x, &y| room.sides[x].d_of(q).abs().total_cmp(&room.sides[y].d_of(q).abs()));
+                .min_by(|&x, &y| room.sides[x].d_of(q).total_cmp(&room.sides[y].d_of(q)));
             if let Some(j) = wall {
                 let s = room.sides[j].s_of(q);
                 devs.push(Dev {
@@ -609,12 +624,14 @@ fn build_room(
     z: f64,
     zf: f64,
     e: f64,
+    dr: f64,
+    open: Option<f64>,
 ) -> Built {
     let room = &pl.room;
     let mut runs = vec![];
     let mut ports = vec![];
     let total: f64 = tees.iter().map(|t| t.load).sum();
-    let carrier = |at: f64| carrier_xy(room, spine, at);
+    let carrier = |at: f64| carrier_xy(room, spine, at, dr);
     // the upstream point: the feed (the first tee), else the riser or the board
     let p_at = tees.iter().find(|t| matches!(t.kind, TeeKind::Riser)).or_else(|| tees.iter().find(|t| matches!(t.kind, TeeKind::Board))).map(|t| t.at);
     let origin = match (feed_from, p_at) {
@@ -630,7 +647,7 @@ fn build_room(
     // two arms from the origin: tees on each side by distance
     let per = match spine {
         Some(_) => f64::INFINITY,
-        None => Ring::new(room, d_ring()).per(),
+        None => Ring::new(room, dr).per(),
     };
     let mut arms: [Vec<(f64, &Tee)>; 2] = [vec![], vec![]];
     for t in tees.iter().skip(usize::from(feed_from.is_some())) {
@@ -641,7 +658,7 @@ fn build_room(
             ((t.at - origin).abs(), usize::from(t.at < origin))
         } else {
             let df = (t.at - origin).rem_euclid(per);
-            if df <= per / 2.0 {
+            if df <= open.unwrap_or(per / 2.0) {
                 (df, 0)
             } else {
                 (per - df, 1)
@@ -649,11 +666,11 @@ fn build_room(
         };
         arms[side].push((d, t));
     }
-    let ring = Ring::new(room, d_ring());
+    let ring = Ring::new(room, dr);
     let pos = |d: f64, side: usize| if side == 0 { origin + d } else { origin - d };
     let path = |a: f64, b: f64| -> Vec<V3> {
         let pts = match spine {
-            Some(j) => vec![room.sides[j].at(a, d_spine()), room.sides[j].at(b, d_spine())],
+            Some(j) => vec![room.sides[j].at(a, dr), room.sides[j].at(b, dr)],
             None => ring.path(a, b),
         };
         pts.into_iter().map(|q| v3(q.0, q.1, z)).collect()
@@ -777,13 +794,15 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
     let rooms: Vec<Vec<Room>> = p.storeys.iter().map(svc::rooms).collect();
     let fps: Vec<Vec<svc::R>> = p.storeys.iter().map(|s| footprints(&s.layout.fixtures)).collect();
     let stacks = floor_boards(p, &rooms, &fps);
+    let ducts: Vec<[f64; 6]> = svc::obstacles(p).into_iter().filter(|o| matches!(o.1, "duct" | "air terminal neck")).map(|o| o.0).collect();
     let zc: Vec<f64> = (0..n_st)
         .map(|k| {
             // layers on: the tray stands in its own band, whatever the ceiling does
             // depth capped at void - min drop: the ring keeps room for the luminaire drops
-            let z = svc::layer(p.storeys[k].height, "tray")
-                .map_or_else(|| svc::ceiling(p, k) + over(), |z| z.max(svc::ceiling(p, k) + lum_drop_min()));
-            p.storeys[k].elevation + z
+            match svc::layer(p.storeys[k].height, "tray") {
+                Some(z) => p.storeys[k].elevation + z.max(svc::ceiling(p, k) + lum_drop_min()),
+                None => over_ducts(p, &ducts, k, p.storeys[k].elevation + svc::ceiling(p, k) + over()),
+            }
         })
         .collect();
     let mut space = Space::new(p);
@@ -801,8 +820,13 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
     let mut served: Vec<(usize, usize, CircuitUse, f64, usize, usize, &'static str)> = vec![];
     let mut unit_boards: HashMap<(usize, u32), (usize, usize)> = HashMap::new();
     let n_fx: Vec<usize> = p.storeys.iter().map(|s| s.layout.fixtures.len()).collect();
-    // the riser stands this far along the spine from the board, m
-    let riser_off = rule("services.elec.riser_off");
+    // the riser stands this far along the spine from the board, m; never closer than the tee the
+    // riser makes on an upper floor and the conduit bending down into the board
+    let riser_off = {
+        let (t, d) = (svc::tray_run(0, tray().0, tray().1, vec![]), svc::conduit_run(0, rule("services.elec.board_drop"), vec![]));
+        let need = ddc_geom::mep::junction_leg(&t.section) + svc::bend_max(&d) + ddc_geom::mep::transition_length(&d.section, &t.section);
+        rule("services.elec.riser_off").max(need)
+    };
     // the riser first: it must fit through every storey; the first board stretch it fits beside
     let riser_at = |floor: &[Board]| {
         let b = floor[0];
@@ -847,7 +871,17 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
         p.metrics.push(("power_unserved_rooms", all as f64));
         return all;
     };
-    for k in 0..n_st {
+    // a storey whose child room fails after its parent was built is built again: the failed feed
+    // spots are barred, past `retries` the failed rooms are left out, so no arm ends in the air
+    let retries = rule("services.elec.floor_retries") as usize;
+    let mut k = 0;
+    // barred feeds of this storey (child room, parent side, spot in mm), rooms left out, tries
+    let mut barred: Vec<(usize, usize, i64)> = vec![];
+    let mut cut: Vec<usize> = vec![];
+    let mut tries_k = 0;
+    while k < n_st {
+        let undo = (space.mark(), runs.len(), dropped.len(), links.len(), served.len(), board_fx.len(), unserved, lux_short);
+        let mut failed: Vec<(usize, Feed)> = vec![];
         let st = &p.storeys[k];
         let e = st.elevation;
         let f_rel = svc::ceiling(p, k);
@@ -859,6 +893,10 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
         // spines: the board side for the board room; others decided by their feed
         let mut spine: Vec<Option<usize>> = vec![None; rs.len()];
         spine[board_room] = Some(fb.j);
+        // ring offset per room: a ring that meets a shaft, a duct or an air terminal steps off
+        let mut co: Vec<f64> = vec![d_ring(); rs.len()];
+        co[board_room] = d_spine();
+        let (co_step, co_tries) = (rule("services.elec.ring_shift"), rule("services.elec.ring_tries") as usize);
         // tree by breadth from the board room; a feed square across a shared wall
         let mut feed: Vec<Option<Feed>> = vec![None; rs.len()];
         let mut seen = vec![false; rs.len()];
@@ -889,7 +927,7 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
             order.push(u);
             let ru = &rs[u];
             for v in 0..rs.len() {
-                if seen[v] {
+                if seen[v] || cut.contains(&v) {
                     continue;
                 }
                 let rv = &rs[v];
@@ -952,7 +990,16 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                                 None => ps_side,
                             };
                             let pj_c = spine[u].unwrap_or(pj);
-                            if !crowded(ru, spine[u], &taken[u], pj_c, ps) {
+                            if barred.contains(&(v, pj_c, ddc_geom::to_mm(ps))) {
+                                continue;
+                            }
+                            // the feed across the wall clear of shafts, ducts and pipes
+                            let from = carrier_xy(ru, spine[u], carrier_at(ru, spine[u], pj_c, ps, co[u]), co[u]);
+                            let v_spine = circulation(rv.kind).then_some(cj);
+                            let dv = if v_spine.is_some() { d_spine() } else { co[v] };
+                            let to = carrier_xy(rv, v_spine, carrier_at(rv, v_spine, cj, cs, dv), dv);
+                            let probe = run_for(k, 0.0, vec![v3(from.0, from.1, z), v3(to.0, to.1, z)]);
+                            if !crowded(ru, spine[u], &taken[u], pj_c, ps) && space.fits(&probe, svc::gap()) {
                                 found = Some(Feed { parent: u, pj: pj_c, ps, cj, cs });
                                 break 'pair;
                             }
@@ -962,7 +1009,7 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                 if let Some(f) = found {
                     seen[v] = true;
                     if circulation(rv.kind) {
-                        spine[v] = Some(f.cj);
+                        (spine[v], co[v]) = (Some(f.cj), d_spine());
                     }
                     taken[u].push((f.pj, f.ps));
                     taken[v].push((f.cj, f.cs));
@@ -1018,26 +1065,31 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                 continue;
             }
             let Some(mut pl) = plans[v].clone() else { continue };
-            let child_tees: Vec<Tee> = order
-                .iter()
-                .filter_map(|&c| feed[c].filter(|f| f.parent == v).map(|f| (c, f)))
-                .map(|(c, f)| Tee { at: carrier_at(&rs[v], spine[v], f.pj, f.ps), load: sub[c], kind: TeeKind::Child })
-                .collect();
+            let (pl0, told) = (pl.clone(), dropped.len());
+            let (mut shift, mut split): (usize, usize) = (0, 0);
+            // every carrier variant tried: back on the usual one, items at the end of a blocked
+            // stretch go one by one
+            let mut trim = false;
             let mut attempt = 0;
             let built = loop {
                 attempt += 1;
+                let child_tees: Vec<Tee> = order
+                    .iter()
+                    .filter_map(|&c| feed[c].filter(|f| f.parent == v).map(|f| (c, f)))
+                    .map(|(c, f)| Tee { at: carrier_at(&rs[v], spine[v], f.pj, f.ps, co[v]), load: sub[c], kind: TeeKind::Child })
+                    .collect();
                 let corner_leg = ring_corner_leg(k, pl.load() + child_tees.iter().map(|t| t.load).sum::<f64>());
                 let mut tees: Vec<Tee> = vec![];
                 let feed_from = feed[v].map(|f| {
                     let pr = &rs[f.parent];
                     let q = match spine[f.parent] {
-                        Some(sj) => pr.sides[sj].at(f.ps, d_spine()),
-                        None => pr.sides[f.pj].at(f.ps, d_ring()),
+                        Some(sj) => pr.sides[sj].at(f.ps, co[f.parent]),
+                        None => pr.sides[f.pj].at(f.ps, co[f.parent]),
                     };
                     v3(q.0, q.1, z)
                 });
                 if let Some(f) = feed[v] {
-                    tees.push(Tee { at: carrier_at(&rs[v], spine[v], f.cj, f.cs), load: 0.0, kind: TeeKind::Feed });
+                    tees.push(Tee { at: carrier_at(&rs[v], spine[v], f.cj, f.cs, co[v]), load: 0.0, kind: TeeKind::Feed });
                 }
                 if v == board_room {
                     if n_st > 1 {
@@ -1051,15 +1103,17 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                 for (i, d) in pl.devs.iter().enumerate() {
                     let at = match spine[v] {
                         Some(sj) => rs[v].sides[sj].s_of(rs[v].sides[d.j].at(d.s, d.off)),
-                        None => carrier_at(&rs[v], None, d.j, ring_tee(&rs[v], d, corner_leg)),
+                        None => carrier_at(&rs[v], None, d.j, ring_tee(&rs[v], d, corner_leg, co[v]), co[v]),
                     };
                     tees.push(Tee { at, load: d.load, kind: TeeKind::Dev(i) });
                 }
                 for (i, c) in pl.cols.iter().enumerate() {
-                    tees.push(Tee { at: carrier_at(&rs[v], spine[v], c.j, c.s), load: c.ds.len() as f64 * c.ty.2, kind: TeeKind::Col(i) });
+                    tees.push(Tee { at: carrier_at(&rs[v], spine[v], c.j, c.s, co[v]), load: c.ds.len() as f64 * c.ty.2, kind: TeeKind::Col(i) });
                 }
                 tees.extend(child_tees.iter().cloned());
-                let mut b = build_room(k, &pl, spine[v], &tees, feed_from, z, zf, e);
+                let opens = if spine[v].is_none() { ring_opens(&rs[v], co[v], &tees) } else { vec![] };
+                let open = split.checked_sub(1).and_then(|i| opens.get(i).copied());
+                let mut b = build_room(k, &pl, spine[v], &tees, feed_from, z, zf, e, co[v], open);
                 // board drops and the riser hang on the board room's spine
                 if v == board_room {
                     let sd = &rs[v].sides[fb.j];
@@ -1069,7 +1123,7 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                     b.runs.push(r);
                 }
                 if let (Some(s), Some(j)) = (unit_at[v], spine[v]) {
-                    let w = rs[v].sides[j].at(s, d_spine());
+                    let w = rs[v].sides[j].at(s, co[v]);
                     b.runs.push(svc::conduit_run(k, board_drop, vec![v3(w.0, w.1, z), v3(w.0, w.1, e + board_z() + board_top)]));
                 }
                 // route faults found alone: drop the device or row nearest to each
@@ -1081,8 +1135,8 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                 // where they tee on here, so they stand in, open at the child's carrier
                 let mut stubs: Vec<GRun> = vec![];
                 for (c, f) in order.iter().filter_map(|&c| feed[c].filter(|f| f.parent == v).map(|f| (c, f))) {
-                    let from = carrier_xy(&rs[v], spine[v], carrier_at(&rs[v], spine[v], f.pj, f.ps));
-                    let to = carrier_xy(&rs[c], spine[c], carrier_at(&rs[c], spine[c], f.cj, f.cs));
+                    let from = carrier_xy(&rs[v], spine[v], carrier_at(&rs[v], spine[v], f.pj, f.ps, co[v]), co[v]);
+                    let to = carrier_xy(&rs[c], spine[c], carrier_at(&rs[c], spine[c], f.cj, f.cs, co[c]), co[c]);
                     stubs.push(run_for(k, sub[c], vec![v3(from.0, from.1, z), v3(to.0, to.1, z)]));
                     pseudo.push(v3(to.0, to.1, z));
                 }
@@ -1110,7 +1164,7 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                     }
                 }
                 if let (Some(s), Some(j)) = (unit_at[v], spine[v]) {
-                    let w = rs[v].sides[j].at(s, d_spine());
+                    let w = rs[v].sides[j].at(s, co[v]);
                     pseudo.push(v3(w.0, w.1, e + board_z() + board_top));
                 }
                 let mut check: Vec<&GRun> = b.runs.iter().collect();
@@ -1158,7 +1212,39 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                     }
                     continue;
                 }
+                // a ring given up is tried open elsewhere, then at the next offsets, from the full
+                // plan again: the usual offset plus one step, less one step, plus two steps, ...
+                let n_opens = opens.len();
+                let reshift = |(shift, split): (&mut usize, &mut usize), co: &mut [f64], trim: bool| {
+                    if trim {
+                        return false;
+                    }
+                    if *split < n_opens {
+                        *split += 1;
+                        return true;
+                    }
+                    *split = 0;
+                    // a spine steps off its wall only, the board room's never: the riser stands on it
+                    while v != board_room && *shift < co_tries {
+                        *shift += 1;
+                        let n = (*shift).div_ceil(2) as f64;
+                        let d = match spine[v] {
+                            Some(_) => d_spine() + co_step * *shift as f64,
+                            None => d_ring() + co_step * if *shift % 2 == 1 { n } else { -n },
+                        };
+                        if d > EPS {
+                            co[v] = d;
+                            return true;
+                        }
+                    }
+                    false
+                };
                 if !faults.is_empty() {
+                    if reshift((&mut shift, &mut split), &mut co, trim) {
+                        (pl, attempt) = (pl0.clone(), 0);
+                        dropped.truncate(told);
+                        continue;
+                    }
                     break None;
                 }
                 // clashes: drop what does not fit, else give the room up
@@ -1168,7 +1254,10 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                 }
                 space.rollback(m);
                 let culprit = b.runs.iter().position(|r| !space.fits(r, svc::gap()));
-                let item = culprit.and_then(|ri| owner_of(&b, ri, &pl, &rs[v]));
+                let item = culprit.and_then(|ri| owner_of(&b, ri, &pl, &rs[v])).or_else(|| {
+                    let q = culprit.filter(|_| trim).and_then(|ri| b.runs[ri].points.last().copied())?;
+                    nearest_item(&pl, &rs[v], &[(v3(q.0, q.1, q.2), String::new())])
+                });
                 if let Some(it) = item.filter(|_| attempt < attempts) {
                     dropped.push(left_out(k, &rs[v], &pl, it, "no room clear of other services"));
                 }
@@ -1179,10 +1268,22 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                     Some(Item::Col(i)) => {
                         pl.cols.remove(i);
                     }
+                    None if reshift((&mut shift, &mut split), &mut co, trim) => {
+                        (pl, attempt) = (pl0.clone(), 0);
+                        dropped.truncate(told);
+                    }
+                    None if !trim => {
+                        (trim, co[v], split) = (true, if spine[v].is_some() { d_spine() } else { d_ring() }, 0);
+                        (pl, attempt) = (pl0.clone(), 0);
+                        dropped.truncate(told);
+                    }
                     None => break None,
                 }
             };
             let Some(b) = built else {
+                if let Some(f) = feed[v] {
+                    failed.push((v, f));
+                }
                 dropped.push(format!("storey {k} room {} {:?} unpowered: its network does not fit", rs[v].idx, rs[v].kind));
                 unserved += 1;
                 continue;
@@ -1267,9 +1368,34 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
         }
         for v in 0..rs.len() {
             if !seen[v] && wired(rs[v].kind) {
+                if cut.contains(&v) {
+                    dropped.push(format!("storey {k} room {} {:?} unpowered: no feed into it fits", rs[v].idx, rs[v].kind));
+                }
                 unserved += 1;
             }
         }
+        if !failed.is_empty() {
+            space.rollback(undo.0);
+            runs.truncate(undo.1);
+            dropped.truncate(undo.2);
+            links.truncate(undo.3);
+            served.truncate(undo.4);
+            board_fx.truncate(undo.5);
+            (unserved, lux_short) = (undo.6, undo.7);
+            add[k].clear();
+            unit_boards.retain(|key, _| key.0 != k);
+            tries_k += 1;
+            for (v, f) in failed {
+                if tries_k > retries {
+                    cut.push(v);
+                } else {
+                    barred.push((v, f.pj, ddc_geom::to_mm(f.ps)));
+                }
+            }
+            continue;
+        }
+        (barred, cut, tries_k) = (vec![], vec![], 0);
+        k += 1;
     }
     drop(space);
     // a core shaft cuts the slabs itself
@@ -1296,19 +1422,19 @@ fn floor_board_fx(boards: &[(usize, usize)], n_st: usize) -> Vec<Option<(usize, 
 /// turn down within the ring's distance from the wall, so its drop meets the wall slantwise.
 /// The tee keeps `leg` from the ring's corners on its side, so the stretch to the corner holds
 /// the tee and the elbow; a device nearer the corner is reached by a slanted drop.
-fn ring_tee(room: &Room, d: &Dev, leg: f64) -> f64 {
+fn ring_tee(room: &Room, d: &Dev, leg: f64, dr: f64) -> f64 {
     let len = room.sides[d.j].len;
     let s = if d.load <= w20() {
         d.s
     } else {
         let shift = rule("services.elec.ring_tee_shift");
-        if d.s + shift <= len - d_ring() - rule("services.elec.ring_tee_slack") {
+        if d.s + shift <= len - dr - rule("services.elec.ring_tee_slack") {
             d.s + shift
         } else {
             d.s - shift
         }
     };
-    let (lo, hi) = (d_ring() + leg, len - d_ring() - leg);
+    let (lo, hi) = (dr + leg, len - dr - leg);
     if hi < lo {
         len / 2.0
     } else {
@@ -1323,10 +1449,10 @@ fn ring_corner_leg(k: usize, load: f64) -> f64 {
     ddc_geom::mep::junction_leg(&r.section) + svc::bend_max(&r)
 }
 
-fn carrier_at(room: &Room, spine: Option<usize>, j: usize, s: f64) -> f64 {
+fn carrier_at(room: &Room, spine: Option<usize>, j: usize, s: f64, dr: f64) -> f64 {
     match spine {
         Some(sj) => room.sides[sj].s_of(room.sides[j].at(s, 0.0)),
-        None => Ring::new(room, d_ring()).u(j, s),
+        None => Ring::new(room, dr).u(j, s),
     }
 }
 
@@ -1421,6 +1547,21 @@ fn left_out(k: usize, room: &Room, pl: &Plan, item: Item, why: &str) -> String {
     format!("storey {k} room {} {:?}: {what}: {why}", room.idx, room.kind)
 }
 
+/// Where else a ring may stand open, as the farthest a tee may be along the first arm: before
+/// every tee, between each two and after the last, so a run that meets an obstacle can go the
+/// other way round. The first tee is the feed the arms start from.
+fn ring_opens(room: &Room, dr: f64, tees: &[Tee]) -> Vec<f64> {
+    let Some(origin) = tees.first().map(|t| t.at) else { return vec![] };
+    let per = Ring::new(room, dr).per();
+    let mut df: Vec<f64> = tees[1..].iter().map(|t| (t.at - origin).rem_euclid(per)).collect();
+    df.sort_by(f64::total_cmp);
+    df.dedup_by(|a, b| (*a - *b).abs() < EPS);
+    let mut out = vec![f64::NEG_INFINITY];
+    out.extend(df.windows(2).map(|w| (w[0] + w[1]) / 2.0).filter(|g| (g - per / 2.0).abs() > EPS));
+    out.push(f64::INFINITY);
+    out
+}
+
 /// Whether point `q` lies on the run's axis.
 fn passes(r: &GRun, q: V3) -> bool {
     r.points.windows(2).any(|w| {
@@ -1431,10 +1572,10 @@ fn passes(r: &GRun, q: V3) -> bool {
     })
 }
 
-fn carrier_xy(room: &Room, spine: Option<usize>, at: f64) -> (f64, f64) {
+fn carrier_xy(room: &Room, spine: Option<usize>, at: f64, dr: f64) -> (f64, f64) {
     match spine {
-        Some(sj) => room.sides[sj].at(at, d_spine()),
-        None => Ring::new(room, d_ring()).at(at),
+        Some(sj) => room.sides[sj].at(at, dr),
+        None => Ring::new(room, dr).at(at),
     }
 }
 
