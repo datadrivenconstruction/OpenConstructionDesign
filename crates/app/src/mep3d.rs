@@ -12,7 +12,7 @@ use crate::editor::levels::OTHER_LEVEL;
 use crate::editor::{Editor, OpFn, Sel};
 use crate::ui_kit;
 use ddc_geom::{v2, V2};
-use ddc_model::{MepDomain, MepPart, MepShape, Model, PipeMaterial, RunInfo, RunSpec};
+use ddc_model::{Lod, MepDomain, MepPart, MepShape, Model, PipeMaterial, RunInfo, RunSpec};
 use ddc_render::glam::{Mat4, Vec3, Vec4};
 use ddc_render::scene::mesh_box;
 use ddc_render::{tag_rgb, Aabb, Inst, Instanced, Scene, SceneMesh};
@@ -159,6 +159,10 @@ pub struct Big {
     pub timing: Timing,
     /// Meshes the scene draws as cache instances (`edit3d::mesh_inst`): the provider skips them.
     pub instanced_meshes: std::collections::HashSet<i64>,
+    /// Plants at fine detail (the realistic style; set by the shell).
+    pub plants_fine: bool,
+    /// Plant detail the components were last built with.
+    comp_plants: Option<Lod>,
 }
 
 impl Big {
@@ -517,15 +521,19 @@ pub fn scene(ed: &mut Editor) -> Scene {
     tm.mep_ms = ms(t);
 
     let t = Instant::now();
+    let plants = plant_lod(&ed.model, big.plants_fine);
     if fresh
+        || big.comp_plants != Some(plants)
         || COMP_TABLES.iter().any(|t| ch.touched(t))
         || ch.touched("view_gfx")
         || ch.touched("view_template")
     {
+        big.comp_plants = Some(plants);
         big.comps = comp_groups(
             &ed.model,
             ed.level,
             ed.elevation,
+            plants,
             &mut big.cslots,
             &mut big.comp_at,
         );
@@ -606,17 +614,28 @@ fn ms(t: Instant) -> f64 {
     t.elapsed().as_secs_f64() * 1e3
 }
 
+/// Plant detail of the 3D scene: fine in the realistic style (far plants still drop to their
+/// coarser pictures by distance), the view's level otherwise.
+pub fn plant_lod(m: &Model, fine: bool) -> Lod {
+    if fine {
+        Lod::Fine
+    } else {
+        crate::view_gfx_ui::lod_3d(m)
+    }
+}
+
 /// Level components: a group per shared mesh, placements are matrices with elevation from the level.
 fn comp_groups(
     m: &Model,
     level: i64,
     dz: f64,
+    plants: Lod,
     slots: &mut Slots,
     at: &mut HashMap<i64, V2>,
 ) -> Vec<Instanced> {
     at.clear();
     // every level is drawn, as walls and runs are; only the current level's components are picked
-    let Ok(cs) = m.component_scene(crate::view_gfx_ui::lod_3d(m), None) else {
+    let Ok(cs) = m.component_scene_plants(crate::view_gfx_ui::lod_3d(m), plants, None) else {
         return vec![];
     };
     let here: HashSet<i64> = m
@@ -626,8 +645,13 @@ fn comp_groups(
         .unwrap_or_default();
     let mut by: Vec<Vec<Inst>> = vec![vec![]; cs.meshes.len()];
     let mut fam: Vec<i64> = vec![0; cs.meshes.len()];
+    // the coarser pictures' errors are for the unit mesh: the largest placement sizes them
+    let mut big_scale: Vec<f64> = vec![1.0; cs.meshes.len()];
     for i in &cs.instances {
-        let r = i.placement.matrix();
+        if let Some(s) = big_scale.get_mut(i.mesh) {
+            *s = s.max(i.scale);
+        }
+        let r = i.matrix();
         let f = |k: usize| r[k] as f32;
         let mtx = Mat4::from_cols(
             Vec4::new(f(0), f(4), f(8), 0.0),
@@ -661,7 +685,7 @@ fn comp_groups(
             let levels: Vec<(Arc<SceneMesh>, f32)> = lods
                 .iter()
                 .zip(&cs.lods[k])
-                .filter_map(|(ms, l)| ms.iter().find(|x| x.tag == tag).cloned().map(|x| (Arc::new(x), l.2 as f32)))
+                .filter_map(|(ms, l)| ms.iter().find(|x| x.tag == tag).cloned().map(|x| (Arc::new(x), (l.2 * big_scale[k]) as f32)))
                 .collect();
             let key = (fam[k] as u64) << 40 | (k as u64) << 8 | g as u64;
             out.push(Instanced::new(key, Arc::new(proto), v.clone()).with_lods(levels));
