@@ -267,18 +267,18 @@ fn rich(s: &Spec) -> bool {
     s.height >= 4.0 && s.crown >= 2.5
 }
 
-/// A leaf patch: a flat rhombic bipyramid (8 triangles, closed) lying on `n`.
+/// A leaf patch: a flat triangular bipyramid (6 triangles, closed) lying on `n`.
 fn leaf_patch(m: &mut Soup, c: V3, n: V3, sz: f64, roll: f64) {
     let refv = if n.z.abs() > 0.9 { v3(1.0, 0.0, 0.0) } else { v3(0.0, 0.0, 1.0) };
     let u0 = n.cross(refv).normalized();
     let w0 = n.cross(u0);
     let u = u0 * roll.cos() + w0 * roll.sin();
     let w = n.cross(u);
-    let th = sz * 0.18;
-    let ring = [m.v(c + u * sz), m.v(c + w * (sz * 0.75)), m.v(c - u * sz), m.v(c - w * (sz * 0.75))];
+    let th = sz * 0.16;
+    let ring = [m.v(c + u * sz), m.v(c - u * (sz * 0.5) + w * (sz * 0.65)), m.v(c - u * (sz * 0.5) - w * (sz * 0.65))];
     let (top, bot) = (m.v(c + n * th), m.v(c - n * (th * 0.7)));
-    for i in 0..4 {
-        let j = (i + 1) % 4;
+    for i in 0..3 {
+        let j = (i + 1) % 3;
         m.t(ring[i], ring[j], top);
         m.t(ring[j], ring[i], bot);
     }
@@ -334,7 +334,8 @@ fn patches(s: &Spec, lod: Lod, lobes: &[Lobe]) -> [Soup; 3] {
             let d = v3(rho * a.cos(), rho * a.sin(), zc);
             let k = r.r(0.97, 1.06);
             let roll = r.r(0.0, TAU);
-            let sz = (l.rx * r.r(0.17, 0.26)).max(0.05);
+            let sz = (l.rx * r.r(0.08, 0.13)).max(0.04);
+            let tilt = (r.f() - 0.5, r.f() - 0.5, r.f() - 0.5);
             let p = l.c + v3(d.x * l.rx * k, d.y * l.rx * k, d.z * l.rz * k);
             let buried = lobes.iter().enumerate().any(|(q, o)| {
                 q != j && ((p.x - o.c.x) / o.rx).powi(2) + ((p.y - o.c.y) / o.rx).powi(2) + ((p.z - o.c.z) / o.rz).powi(2) < 0.7
@@ -346,14 +347,15 @@ fn patches(s: &Spec, lod: Lod, lobes: &[Lobe]) -> [Soup; 3] {
             let n = v3(d.x / l.rx, d.y / l.rx, d.z / l.rz).normalized();
             let ao = exposure(lobes, j, p, n);
             let tier = if ao < PATCH_SHADE { 0 } else if ao > PATCH_LIGHT && n.z > 0.15 { 2 } else { 1 };
+            let n = (n + v3(tilt.0, tilt.1, tilt.2) * 0.9).normalized();
             leaf_patch(&mut out[tier], p, n, sz, roll);
         }
     }
     out
 }
 
-const PATCH_SHADE: f64 = 0.45;
-const PATCH_LIGHT: f64 = 0.8;
+const PATCH_SHADE: f64 = 0.35;
+const PATCH_LIGHT: f64 = 0.88;
 
 /// The patch tones of a tree at a level: empty for shrubs, conifers, palms, bare crowns and the
 /// coarse level.
@@ -365,8 +367,8 @@ fn patch_tones(s: &Spec, lk: &Look, lod: Lod) -> [Soup; 3] {
     patches(s, lod, &lobes_of(s, lk, lod, &cl).1)
 }
 
-const PATCHES_FINE: usize = 11;
-const PATCHES_MEDIUM: usize = 6;
+const PATCHES_FINE: usize = 17;
+const PATCHES_MEDIUM: usize = 8;
 
 /// Where a limb may grow: inside the crown's reach and under the tree's top.
 struct Env {
@@ -1321,6 +1323,64 @@ pub fn trunk_axis(s: &Spec, z: f64) -> V2 {
     let (tr, top_z, _) = trunk_of(s, &Look::of(s));
     let p = tr.at((z / top_z.max(1e-9)).clamp(0.0, 1.0));
     v2(p.x, p.y)
+}
+
+/// A far picture of a tree: two crossed cards and a flat disc cut to the crown outline, and a
+/// stub trunk; under a hundred triangles. Returns the wood and the crown.
+pub fn impostor(s: &Spec) -> (Grown, Grown) {
+    let lk = Look::of(s);
+    let mut wood = Soup::default();
+    let mut crown = Soup::default();
+    let (tr, top_z, _) = trunk_of(s, &lk);
+    let up = if s.form == Form::Palm { 1.0 } else { (s.clear / top_z).clamp(0.2, 1.0) };
+    let (path, rad): (Vec<V3>, Vec<f64>) = (0..3).map(|i| (tr.at(up * i as f64 / 2.0), tr.r(up * i as f64 / 2.0))).unzip();
+    tube(&mut wood, &path, &rad, 4, true);
+    if s.leaf >= 0.05 {
+        let (z0, z1, rr) = (s.clear, s.height, s.crown / 2.0);
+        let depth = z1 - z0;
+        let mut r = Rng::new(s.seed, 13);
+        let turn = r.r(0.0, PI);
+        let w = |t: f64, th: f64| match s.form {
+            Form::Palm => rr * 0.9,
+            _ => rr * prof(s.form, t) * lk.modul(th) * 0.9,
+        };
+        let bands = 5;
+        for card in 0..2 {
+            let th = turn + card as f64 * PI / 2.0;
+            let (c, sn) = (th.cos(), th.sin());
+            let mut ring = vec![];
+            for k in 0..=bands {
+                let t = k as f64 / bands as f64;
+                let z = if s.form == Form::Palm { z1 - 0.12 * s.crown * (1.0 - t) } else { z0 + t * depth };
+                let (wl, wr) = (w(t, th + PI), w(t, th));
+                ring.push((
+                    crown.v(v3(lk.lean.x - c * wl, lk.lean.y - sn * wl, z)),
+                    crown.v(v3(lk.lean.x + c * wr, lk.lean.y + sn * wr, z)),
+                ));
+            }
+            for k in 0..bands {
+                let (a, b) = (ring[k], ring[k + 1]);
+                crown.t(a.0, a.1, b.1);
+                crown.t(a.0, b.1, b.0);
+            }
+        }
+        // the disc at the crown's widest
+        let zm = if s.form == Form::Palm { z1 - 0.06 * s.crown } else { z0 + 0.5 * depth };
+        let ctr = crown.v(v3(lk.lean.x, lk.lean.y, zm));
+        let n = 8;
+        let rim: Vec<u32> = (0..n)
+            .map(|k| {
+                let a = turn + TAU * k as f64 / n as f64;
+                let rho = w(0.5, a);
+                crown.v(v3(lk.lean.x + rho * a.cos(), lk.lean.y + rho * a.sin(), zm))
+            })
+            .collect();
+        for k in 0..n {
+            crown.t(ctr, rim[k], rim[(k + 1) % n]);
+        }
+    }
+    let g = |m: Soup| Grown { volume: 0.0, pos: m.pos, tris: m.tris, plan: vec![] };
+    (g(wood), g(crown))
 }
 
 /// One organ of the tree at a level of detail.

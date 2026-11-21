@@ -334,8 +334,9 @@ fn plant_count(cache: &mut Cache, db: &Connection, ctypes: impl Iterator<Item = 
     by.into_iter().filter(|(c, _)| cache.ctype(db, *c).is_ok_and(|(f, _)| is_plant(&f))).map(|(_, n)| n).sum()
 }
 
-/// Coarser levels of a plant: the same tree with fewer, larger pieces. The error is a share of
-/// the crown width, what the lathed envelope and the clusters can differ by.
+/// Coarser levels of a plant: the same tree with fewer, larger pieces, and last a far picture of
+/// crossed cards (`plant::impostor`). The error is a share of the crown width, what the lathed
+/// envelope and the clusters can differ by.
 fn coarser(
     f: &Family,
     r: &ddc_geom::component::Resolved,
@@ -351,15 +352,45 @@ fn coarser(
         Lod::Medium => &[(Lod::Coarse, 0.08)],
         Lod::Coarse => &[],
     };
-    levels
+    let mut out: Vec<_> = levels
         .iter()
         .filter_map(|(l, e)| {
             let b = f.build(r, *l).ok()?;
             let mats = b.parts.iter().map(|p| p.material.clone()).collect();
             Some((Arc::new(b.mesh), mats, e * crown.max(1.0)))
         })
-        .collect()
+        .collect();
+    out.extend(impostor_of(f, r, full, crown));
+    out
 }
+
+/// The far picture of a plant, its parts numbered as in the full body: wood and crown only.
+fn impostor_of(
+    f: &Family,
+    r: &ddc_geom::component::Resolved,
+    full: &ddc_geom::component::Built,
+    crown: f64,
+) -> Option<(Arc<Mesh>, Vec<String>, f64)> {
+    use ddc_geom::component::plant::{impostor, Organ};
+    let spec = ddc_geom::component::plant_of(f, r)?;
+    let wood = ddc_geom::component::plant_part(f, r, Organ::Wood)?;
+    let leaves = ddc_geom::component::plant_part(f, r, Organ::Foliage)?;
+    let (w, c) = impostor(&spec);
+    let mut m = Mesh::default();
+    for (g, part) in [(w, wood), (c, leaves)] {
+        let base = m.positions.len() as u32;
+        m.positions.extend(g.pos);
+        for t in g.tris {
+            m.triangles.push(t.map(|i| i + base));
+            m.face_of.push(part as u32);
+        }
+    }
+    let mats = full.parts.iter().map(|p| p.material.clone()).collect();
+    Some((Arc::new(m), mats, IMPOSTOR_ERROR * crown.max(1.0)))
+}
+
+/// What the far picture can differ from the crown by, as a share of its width.
+pub const IMPOSTOR_ERROR: f64 = 0.16;
 
 /// Component scene: each mesh is built once per (family, values).
 #[derive(Clone, Debug, Default)]

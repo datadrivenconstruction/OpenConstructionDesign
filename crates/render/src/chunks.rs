@@ -51,6 +51,9 @@ pub struct Instanced {
     pub lods: Vec<(Arc<SceneMesh>, f32)>,
     /// `proto` — not the exact mesh but an approximation with this error, m (the exact one is not read yet).
     pub approx: f32,
+    /// Plants: per level (exact first) the least size in pixels of the mesh's bounding box at
+    /// which the level is drawn, falling; the last is 0. Empty: the level follows the error.
+    pub screen: Vec<f32>,
     /// Own render source (a linked project): never baked into cell chunks shared with other
     /// groups, so an edit elsewhere never rebuilds its vertices.
     pub own: bool,
@@ -116,6 +119,7 @@ impl Instanced {
             local,
             lods: vec![],
             approx: 0.0,
+            screen: vec![],
             own: false,
             placed: PlacedCache::default(),
         }
@@ -131,6 +135,11 @@ impl Instanced {
     }
     pub fn with_lods(mut self, lods: Vec<(Arc<SceneMesh>, f32)>) -> Self {
         self.lods = lods;
+        self
+    }
+    /// Levels by the size on screen ([`Instanced::screen`]), also in a small scene.
+    pub fn with_screen(mut self, px: Vec<f32>) -> Self {
+        self.screen = px;
         self
     }
     /// The same placements, already shared: the group is not recomputed when neighbours are edited.
@@ -798,6 +807,8 @@ struct Proto {
     levels: Vec<Arc<SceneMesh>>,
     /// Level errors, m (excluding the box).
     errors: Vec<f32>,
+    /// Screen sizes of the levels ([`Instanced::screen`]); empty — by error.
+    screen: Vec<f32>,
     box_level: usize,
     diag: f32,
     cat: u8,
@@ -846,6 +857,7 @@ impl Proto {
             known: vec![None; levels.len()],
             levels,
             errors,
+            screen: g.screen.clone(),
             box_level,
             diag,
             cat,
@@ -2110,7 +2122,7 @@ impl Chunks {
                     let Some(p) = self.protos.get(proto) else {
                         continue;
                     };
-                    let per_m = if big || p.errors[0] > 0.0 {
+                    let per_m = if big || p.errors[0] > 0.0 || !p.screen.is_empty() {
                         perf::px_per_m_near(&vp, &c.bounds, eye, pxf)
                     } else {
                         f32::INFINITY
@@ -2118,7 +2130,11 @@ impl Chunks {
                     if !lean && perf::is_coarse(p.errors[0], per_m, &cfg) {
                         coarse.insert(*group);
                     }
-                    let detail = if !big || is_hot {
+                    let detail = if is_hot {
+                        Detail::Level(0)
+                    } else if !p.screen.is_empty() {
+                        Detail::Level(perf::screen_level(&p.screen, per_m * p.diag))
+                    } else if !big {
                         Detail::Level(0)
                     } else {
                         perf::inst_detail(per_m, p.diag, &p.errors, c.glass, lean, moving, &cfg)
