@@ -346,13 +346,13 @@ fn a_plant_family_exports_its_planting_values_by_any_parameter_names() {
     m.add_components(&[CompSpec::at(lv, t, 1.0, 1.0)]).unwrap();
     let text = export_ifc(&m).unwrap();
     assert!(ddc_io::ifc::validate_ifc(text.as_bytes()).is_clean());
-    assert_eq!(text.matches("'DDC_Planting'").count(), 1);
+    assert_eq!(text.matches("'DDC_Vegetation'").count(), 1);
     for p in [
         "IFCPROPERTYSINGLEVALUE('Form',$,IFCLABEL('columnar'),$)",
         "IFCPROPERTYSINGLEVALUE('Height',$,IFCLENGTHMEASURE(9.),$)",
-        "IFCPROPERTYSINGLEVALUE('CrownWidth',$,IFCLENGTHMEASURE(3.),$)",
+        "IFCPROPERTYSINGLEVALUE('CrownDiameter',$,IFCLENGTHMEASURE(3.),$)",
         "IFCPROPERTYSINGLEVALUE('TrunkDiameter',$,IFCLENGTHMEASURE(0.25),$)",
-        "IFCPROPERTYSINGLEVALUE('ClearTrunkHeight',$,IFCLENGTHMEASURE(1.5),$)",
+        "IFCPROPERTYSINGLEVALUE('ClearHeight',$,IFCLENGTHMEASURE(1.5),$)",
         "IFCPROPERTYSINGLEVALUE('FoliageFullness',$,IFCREAL(0.6),$)",
         "IFCPROPERTYSINGLEVALUE('GrowthSeed',$,IFCINTEGER(42),$)",
         "IFCPROPERTYSINGLEVALUE('BarkMaterial',$,IFCLABEL('Bark Brown'),$)",
@@ -360,4 +360,43 @@ fn a_plant_family_exports_its_planting_values_by_any_parameter_names() {
     ] {
         assert!(text.contains(p), "missing {p}");
     }
+}
+
+/// A library tree is vegetation: IFC4X3 names it so, IFC4 has no such kind and takes a
+/// user-defined `Vegetation`, IFC2X3 a proxy; the set carries the botanical name and the season,
+/// and the body is the far view of the tree, a few hundred triangles.
+#[test]
+fn a_tree_exports_as_vegetation_with_its_botanical_name_and_a_light_body() {
+    let mut m = Model::open(":memory:").unwrap();
+    let lv = m.add_level("L1", 0.0).unwrap();
+    let f = m.load_library_family("Tree").unwrap();
+    let t = m.comp_type_id(f, "Oak A Autumn").unwrap().unwrap();
+    m.add_components(&[CompSpec::at(lv, t, 1.0, 1.0)]).unwrap();
+    let with = |schema| {
+        let opts = ddc_io::ifc::IfcOptions { schema, timestamp: Some("2026-01-01T00:00:00".into()), ..Default::default() };
+        let (text, _) = ddc_io::ifc::export_ifc_with(&m, &opts).unwrap();
+        let rep = ddc_io::ifc::validate_ifc(text.as_bytes());
+        assert!(rep.is_clean(), "{schema:?}: {:?}", rep.errors);
+        text
+    };
+    let x3 = with(ddc_io::ifc::IfcSchema::Ifc4x3);
+    let occ = line_of(&x3, "IFCGEOGRAPHICELEMENT");
+    assert!(occ.len() == 1 && occ[0].ends_with(",.VEGETATION.);"), "{occ:?}");
+    let ty = line_of(&x3, "IFCGEOGRAPHICELEMENTTYPE");
+    assert!(ty.len() == 1 && ty[0].ends_with(",.VEGETATION.);"), "{ty:?}");
+    let x4 = with(ddc_io::ifc::IfcSchema::Ifc4);
+    let occ = line_of(&x4, "IFCGEOGRAPHICELEMENT");
+    assert!(occ.len() == 1 && occ[0].contains("'Vegetation'") && occ[0].ends_with(",.USERDEFINED.);"), "{occ:?}");
+    let ty = line_of(&x4, "IFCGEOGRAPHICELEMENTTYPE");
+    assert!(ty.len() == 1 && ty[0].ends_with(",'Vegetation',.USERDEFINED.);"), "{ty:?}");
+    assert_eq!(x4.matches(".VEGETATION.").count(), 0);
+    assert_eq!(x4.matches("'DDC_Vegetation'").count(), 1);
+    for p in ["('BotanicalName',$,IFCLABEL('Quercus robur'),$)", "('Season',$,IFCLABEL('autumn'),$)", "('CrownDiameter',$,IFCLENGTHMEASURE("] {
+        assert!(x4.contains(p), "missing {p}");
+    }
+    // the far view: one face set of a few hundred triangles
+    let tris: usize = line_of(&x4, "IFCTRIANGULATEDFACESET").iter().map(|l| l.matches("),(").count() + 1).sum();
+    assert!((40..=400).contains(&tris), "{tris}");
+    let x2 = with(ddc_io::ifc::IfcSchema::Ifc2x3);
+    assert_eq!(x2.matches(".VEGETATION.").count() + x2.matches("=IFCGEOGRAPHICELEMENT").count(), 0);
 }
