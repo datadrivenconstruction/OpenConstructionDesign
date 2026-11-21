@@ -75,3 +75,11 @@ fn a_stair_head_on_a_pitched_roof_has_a_flat_cover_type() {
     assert!(!p.fire.stair_heads.is_empty(), "the stairs reach the roof");
     assert!(uses_of(&p).contains(&roof_use(0.0)), "{:?}", uses_of(&p));
 }
+
+#[test]
+fn fins_stand_on_a_free_plate() {
+    let p = built(&json!({"typology": "office", "floors": 2, "footprint": {"shape": "triangle", "width": 48, "depth": 42},
+        "design": {"facade": "fins"}}));
+    let fins: usize = p.storeys.iter().map(|s| s.layout.fixtures.iter().filter(|f| f.family == "Facade Fin").count()).sum();
+    assert!(fins > 0, "no fins");
+}
