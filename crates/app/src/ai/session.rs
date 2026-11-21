@@ -1103,13 +1103,13 @@ impl Core {
         match self.sync(source, head, changes) {
             Ok(()) => {
                 // the UI hears of the turn before the copy, so it never reads as idle between
-                if let Some(text) = super::replan::auto_text(self).filter(|_| !between) {
-                    if self.last_mode.is_some() {
-                        self.send(FromWorker::AutoTurn);
-                        let view = self.view.clone();
-                        let mode = super::replan::AUTO_MODE;
-                        self.deferred.push_front(ToWorker::Turn { text, view, mode });
-                    }
+                // auto_text marks the items prompted: asked mid-turn, the turn's end would skip them
+                let now = !between && self.last_mode.is_some();
+                if let Some(text) = now.then(|| super::replan::auto_text(self)).flatten() {
+                    self.send(FromWorker::AutoTurn);
+                    let view = self.view.clone();
+                    let mode = super::replan::AUTO_MODE;
+                    self.deferred.push_front(ToWorker::Turn { text, view, mode });
                 }
                 self.send(FromWorker::Synced { head });
                 self.publish_shown();

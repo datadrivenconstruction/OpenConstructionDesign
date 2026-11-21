@@ -295,6 +295,81 @@ fn an_edit_during_a_turn_starts_the_replan_after_it() {
     assert!(p.items[0].conflict.is_none() && !p.blocked());
 }
 
+/// Holds one `stream` call until the test lets it go: the turn is surely running meanwhile.
+struct Held {
+    inner: std::sync::Arc<ddc_ai::fake::ScriptedProvider>,
+    at: usize,
+    calls: std::sync::atomic::AtomicUsize,
+    reached: std::sync::Mutex<std::sync::mpsc::Sender<()>>,
+    go: std::sync::Mutex<std::sync::mpsc::Receiver<()>>,
+}
+
+impl ddc_ai::Provider for Held {
+    fn stream(
+        &self,
+        req: &ddc_ai::ChatRequest<'_>,
+        sink: &mut dyn FnMut(ddc_ai::StreamEvent) -> ddc_ai::Flow,
+    ) -> Result<(), ddc_ai::ProviderError> {
+        if self.calls.fetch_add(1, std::sync::atomic::Ordering::SeqCst) == self.at {
+            let _ = self.reached.lock().unwrap().send(());
+            let _ = self.go.lock().unwrap().recv_timeout(WAIT);
+        }
+        ddc_ai::Provider::stream(&*self.inner, req, sink)
+    }
+    fn list_models(&self) -> Result<Vec<String>, ddc_ai::ProviderError> {
+        ddc_ai::Provider::list_models(&*self.inner)
+    }
+}
+
+/// The same edit taken in between two tool calls of the turn (`drain_inbox`), whatever the
+/// timing of the machine: the replan turn still starts once that turn ends.
+#[test]
+fn an_edit_drained_mid_turn_starts_the_replan_after_it() {
+    use std::sync::mpsc;
+    use std::time::{Duration, Instant};
+    let mut ed = ddc_app::editor::Editor::new_in_memory().unwrap();
+    let l2 = add_level(&mut ed, "L2", 3.0);
+    let w2 = add_wall(&mut ed, l2, (0.0, 0.0), (10.0, 0.0));
+    let doors: Vec<i64> = [2.0, 6.0].iter().map(|x| add_door(&mut ed, w2, *x)).collect();
+    let mut turns = script(vec![doors_wider()]);
+    turns.extend(script(vec![tool("get_plan", json!({})), tool("get_plan", json!({}))]));
+    turns.extend(script(vec![tool("replan_items", json!({"items": [1]})), doors_wider()]));
+    let provider = ddc_ai::fake::ScriptedProvider::new(turns);
+    let (reached_tx, reached) = mpsc::channel();
+    let (go, go_rx) = mpsc::channel();
+    let mut c = cfg(provider.clone());
+    // calls 0-1 are the first turn; call 3 follows the first get_plan of the second
+    c.provider = std::sync::Arc::new(Held {
+        inner: provider.clone(),
+        at: 3,
+        calls: Default::default(),
+        reached: std::sync::Mutex::new(reached_tx),
+        go: std::sync::Mutex::new(go_rx),
+    });
+    c.auto_replan = true;
+    let mut s = start(&mut ed, c);
+    turn(&mut s, &mut ed, "go", ddc_ai::Mode::Propose);
+
+    let view = view_of(&ed);
+    s.send_turn(&ed, "look".to_string(), view, ddc_ai::Mode::Propose).unwrap();
+    reached.recv_timeout(WAIT).expect("the second turn reached its held call");
+    ed.model.delete_opening(doors[0]).unwrap();
+    ed.reload().unwrap();
+    // past the sync gap the edit is surely sent; the held turn has not taken it yet
+    let until = Instant::now() + Duration::from_millis(800);
+    while Instant::now() < until {
+        s.pump_core(&mut ed);
+        std::thread::sleep(Duration::from_millis(2));
+    }
+    go.send(()).unwrap();
+    assert!(s.wait_idle(&mut ed, WAIT));
+    assert_eq!(provider.remaining(), 0, "the replan turn ran");
+    assert_eq!(replan_reply(&provider).len(), 1);
+    let p = plan_of(&s);
+    assert_eq!(p.items.iter().map(|i| i.id).collect::<Vec<_>>(), vec![2]);
+    assert!(p.items[0].conflict.is_none() && !p.blocked());
+}
+
 /// The person's last turn was a read-only question: the replan turn still only drafts, with
 /// the draft tools, and Apply stays theirs.
 #[test]
