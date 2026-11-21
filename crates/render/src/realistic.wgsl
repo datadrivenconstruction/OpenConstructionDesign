@@ -99,8 +99,7 @@ fn foliage(base0: vec3<f32>, n: vec3<f32>, v: vec3<f32>, l: vec3<f32>, world: ve
     let hue = mix(vec3<f32>(0.90, 1.0, 1.06), vec3<f32>(1.10, 1.03, 0.80), h1);
     // a cluster of leaves of its own tone: hue and value drift over the crown
     let cl = vnoise(world * 1.9 + vec3<f32>(f32(seed & 255u), 0.0, 0.0));
-    let cl2 = vnoise(world * 0.8 + vec3<f32>(0.0, f32((seed >> 8u) & 255u), 5.0));
-    let drift = mix(vec3<f32>(0.86, 0.97, 1.08), vec3<f32>(1.14, 1.04, 0.78), cl2);
+    let drift = mix(vec3<f32>(0.86, 0.97, 1.08), vec3<f32>(1.14, 1.04, 0.78), smoothstep(0.2, 0.8, cl));
     var base = base0 * hue * drift * (0.70 + 0.26 * h2 + 0.30 * cl) * (0.66 + 0.5 * smoothstep(0.25, 0.7, vnoise(world * 3.3 + vec3<f32>(1.7, 9.1, 3.3))));
     // less saturated greens
     let grey = vec3<f32>(dot(base, vec3<f32>(0.3, 0.59, 0.11)));
