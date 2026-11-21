@@ -1,5 +1,6 @@
 {
-  "hedge": {"types": {"clipped": "Clipped 1200", "low": "Low 600", "tall": "Tall 1800", "conifer": "Conifer 2000"},
+  "hedge": {"types": {"clipped": "Clipped 1200", "low": "Low 600", "tall": "Tall 1800", "conifer": "Conifer 2000",
+                      "hornbeam": "Hornbeam 1500", "privet": "Privet 1200", "yew": "Yew 1500"},
             "length": 3.0, "inset": 0.4},
   "lawn": {"type": "Lawn", "tile": 6.0},
   "bed": {"type": "Bed", "tile": 1.5, "drift": 6.0, "shrub_density": 0.8, "open_drifts": 0.5},

@@ -301,7 +301,7 @@
  "gen.rule.site.street_side.title": "Street side",
  "gen.rule.site.plot_margin.desc": "Free ground between the paving and the plot boundary where the hedge stands.",
  "gen.rule.site.plot_margin.title": "Plot margin",
- "gen.rule.site.hedge.desc": "The hedge along the plot boundary: none, clipped, low, tall or conifer.",
+ "gen.rule.site.hedge.desc": "The hedge along the plot boundary: none, clipped, low, tall, conifer, or of hornbeam, privet or yew.",
  "gen.rule.site.hedge.title": "Hedge",
  "gen.rule.site.bed_width.desc": "Width of the planting bed with shrubs outside the paving; zero leaves no bed.",
  "gen.rule.site.bed_width.title": "Bed width",

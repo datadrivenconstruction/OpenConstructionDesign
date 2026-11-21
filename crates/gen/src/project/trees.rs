@@ -142,11 +142,31 @@ pub fn species_mask(text: &str) -> u32 {
     mask
 }
 
-/// Whether the brief asks for a hedge.
+/// Whether the brief asks for a hedge: a hedge word begins a word of the text or ends a compound
+/// ("Hainbuchenhecke").
 pub fn wants_hedge(text: &str) -> bool {
     let v: serde_json::Value = serde_json::from_str(MIXES).unwrap_or_default();
     let w = words(text);
-    v["hedge_words"].as_array().map_or(&[][..], Vec::as_slice).iter().filter_map(|x| x.as_str()).any(|k| w.iter().any(|x| x.starts_with(k)))
+    v["hedge_words"].as_array().map_or(&[][..], Vec::as_slice).iter().filter_map(|x| x.as_str()).any(|k| w.iter().any(|x| hedge_word(x, k)))
+}
+
+fn hedge_word(word: &str, stem: &str) -> bool {
+    word.starts_with(stem) || word.ends_with(stem) || word.ends_with(&format!("{stem}n"))
+}
+
+/// The `site.hedge` option of the hedge species a brief names ("a hornbeam hedge", "Eibenhecke"),
+/// if it asks for a hedge at all.
+pub fn hedge_kind(text: &str) -> Option<&'static str> {
+    if !wants_hedge(text) {
+        return None;
+    }
+    let v: serde_json::Value = serde_json::from_str(MIXES).unwrap_or_default();
+    let w = words(text);
+    let kinds = v["hedge_species"].as_object()?;
+    let (kind, _) = kinds.iter().find(|(_, stems)| {
+        stems.as_array().map_or(&[][..], Vec::as_slice).iter().filter_map(|s| s.as_str()).any(|s| w.iter().any(|x| x.starts_with(s)))
+    })?;
+    ["hornbeam", "privet", "yew"].into_iter().find(|k| *k == kind.as_str())
 }
 
 /// The side a brief puts the hedge on, and the text without the compass word it used (so that
@@ -155,7 +175,7 @@ pub fn wants_hedge(text: &str) -> bool {
 pub fn hedge_edge(text: &str) -> Option<(&'static str, String)> {
     let v: serde_json::Value = serde_json::from_str(MIXES).unwrap_or_default();
     let w = words(text);
-    let hedge = |x: &String| v["hedge_words"].as_array().map_or(&[][..], Vec::as_slice).iter().filter_map(|k| k.as_str()).any(|k| x.starts_with(k));
+    let hedge = |x: &String| v["hedge_words"].as_array().map_or(&[][..], Vec::as_slice).iter().filter_map(|k| k.as_str()).any(|k| hedge_word(x, k));
     let at = w.iter().position(hedge)?;
     let (lo, hi) = (at.saturating_sub(3), (at + 6).min(w.len()));
     for i in lo..hi {

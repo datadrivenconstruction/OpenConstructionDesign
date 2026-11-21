@@ -449,7 +449,8 @@ pub fn parse_spec_with(v: &J, pg: Option<&Programme>) -> Result<ProjectSpec, Spe
             want.push(("site.tree_species", J::from(mask)));
         }
         if super::trees::wants_hedge(&brief) {
-            want.push(("site.hedge", J::String("clipped".into())));
+            let kind = super::trees::hedge_kind(&brief).unwrap_or("clipped");
+            want.push(("site.hedge", J::String(kind.into())));
         }
         // a rules value that is not an object is left for the parser to refuse
         if ruled["rules"].is_null() {

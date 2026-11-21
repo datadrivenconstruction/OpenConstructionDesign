@@ -23,7 +23,9 @@
     {"name": "Larch", "words": ["larch", "лиственниц", "lärche"]},
     {"name": "Chestnut", "words": ["chestnut", "каштан", "kastanie"]},
     {"name": "Cherry", "words": ["cherry", "вишн", "kirsche"]},
-    {"name": "Elm", "words": ["elm", "вяз", "ulme"]}
+    {"name": "Elm", "words": ["elm", "вяз", "ulme"]},
+    {"name": "Field Maple", "words": ["feldahorn"]},
+    {"name": "Columnar Oak", "words": ["säuleneiche", "saeuleneiche"]}
   ],
   "edges": {
     "street": ["street", "road", "улиц", "дорог", "straße", "strasse"],
@@ -33,6 +35,7 @@
     "west": ["west", "западн", "запад"]
   },
   "hedge_words": ["hedge", "изгород", "hecke"],
+  "hedge_species": {"hornbeam": ["hornbeam", "hainbuche", "граб"], "privet": ["privet", "liguster", "бирючин"], "yew": ["yew", "eibe", "тис"]},
   "climates": {
     "note": "Words of site.climate, any case: a word ending in * is a prefix (inflected forms); a Chinese word is found anywhere in the text. Tried in the order tropical, arid, conifer.",
     "tropical": ["tropical", "tropics", "jungle", "equatorial", "palm", "palms", "beach", "island",

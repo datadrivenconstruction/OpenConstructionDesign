@@ -301,7 +301,7 @@
  "gen.rule.site.street_side.title": "Сторона улицы",
  "gen.rule.site.plot_margin.desc": "Свободная земля между мощением и границей участка, где стоит изгородь.",
  "gen.rule.site.plot_margin.title": "Отступ участка",
- "gen.rule.site.hedge.desc": "Изгородь по границе участка: нет, стриженая, низкая, высокая или хвойная.",
+ "gen.rule.site.hedge.desc": "Изгородь по границе участка: нет, стриженая, низкая, высокая, хвойная или из граба, бирючины или тиса.",
  "gen.rule.site.hedge.title": "Живая изгородь",
  "gen.rule.site.bed_width.desc": "Ширина клумбы с кустами за мощением; ноль — без клумбы.",
  "gen.rule.site.bed_width.title": "Ширина клумбы",

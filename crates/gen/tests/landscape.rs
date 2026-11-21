@@ -314,3 +314,40 @@ fn shrubs_grow_in_drifts_line_the_paths_and_stand_under_trees() {
         assert!(shrubs.iter().all(|b| std::ptr::eq(**a, *b) || dist(a.at, b.at) >= 1.3 - 1e-9), "shrubs crowd at {:?} ({i})", a.at);
     }
 }
+
+/// A brief that names the hedge species gets that hedge (English, German compound, Russian);
+/// one naming field maples and columnar oaks plants only them; every tree a site may plant and
+/// every hedge species carries its botanical name.
+#[test]
+fn a_brief_names_the_hedge_and_tree_species_and_the_library_names_them_botanically() {
+    let build = |brief: &str| {
+        let v = json!({"typology": "office", "floors": 3, "design": {"trees": 10, "paving": 3.0}, "site": {"brief": brief}});
+        build_project(&parse_spec(&v).unwrap_or_else(|e| panic!("{e}"))).unwrap_or_else(|e| panic!("{e}"))
+    };
+    for (brief, ty) in [
+        ("a park with a hornbeam hedge", "Hornbeam 1500"),
+        ("Garten mit Eibenhecke", "Yew 1500"),
+        ("живая изгородь из бирючины", "Privet 1200"),
+        ("a park with a hedge", "Clipped 1200"),
+    ] {
+        let p = build(brief);
+        let h = fixtures(&p, "Hedge", None);
+        assert!(!h.is_empty() && h.iter().all(|f| f.ty == ty), "{brief}: {:?}", h.iter().map(|f| &f.ty).collect::<Vec<_>>());
+    }
+    let p = build("ein Platz mit Feldahorn und Säuleneichen");
+    let names: Vec<&str> = fixtures(&p, "Tree", None).iter().map(|f| f.ty).collect();
+    assert!(names.iter().any(|t| t.starts_with("Field Maple ")) && names.iter().any(|t| t.starts_with("Columnar Oak ")), "{names:?}");
+    assert!(names.iter().all(|t| t.starts_with("Field Maple ") || t.starts_with("Columnar Oak ")), "{names:?}");
+    let family = |fam: &str| LIB.split("\n---").find(|s| s.lines().any(|l| l.trim() == format!("family {fam}"))).unwrap();
+    for l in family("Tree").lines().filter(|l| l.starts_with("type ") && l.contains("Weight=1")) {
+        assert!(l.contains("Botanical=\""), "{l}");
+    }
+    for (ty, bot) in [("Hornbeam 1500", "Carpinus betulus"), ("Privet 1200", "Ligustrum vulgare"), ("Yew 1500", "Taxus baccata")] {
+        assert!(family("Hedge").lines().any(|l| l.starts_with(&format!("type \"{ty}\"")) && l.contains(&format!("Botanical=\"{bot}\""))), "{ty}");
+    }
+    for (sp, bot) in [("Field Maple", "Acer campestre"), ("Columnar Oak", "Quercus robur 'Fastigiata'")] {
+        let ls: Vec<&str> = family("Tree").lines().filter(|l| l.starts_with(&format!("type \"{sp} "))).collect();
+        assert_eq!(ls.len(), 8, "{sp}: two of each season");
+        assert!(ls.iter().all(|l| l.contains(&format!("Botanical=\"{bot}\""))), "{sp}");
+    }
+}

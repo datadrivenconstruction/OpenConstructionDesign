@@ -57,7 +57,7 @@ fn a_plain_brief_plants_a_mixed_wood_of_library_species() {
 
 #[test]
 fn north_and_mountain_words_plant_conifers() {
-    let ok = ["Spruce", "Fir", "Poplar", "Cypress", "Hornbeam", "Scots", "Larch"];
+    let ok = ["Spruce", "Fir", "Poplar", "Cypress", "Hornbeam", "Columnar Oak", "Scots", "Larch"];
     for c in ["a northern lodge", "Mountain village"] {
         let t = planted(Some(c), json!({}));
         assert!(t.len() >= 6 && t.iter().all(|n| ok.iter().any(|o| n.starts_with(o))), "{c}: {t:?}");
@@ -214,7 +214,7 @@ fn a_named_edge_and_the_climate_fallback_come_from_the_brief() {
     let top = n.hedge.iter().map(|h| h.1).fold(f64::MIN, f64::max);
     assert!(n.hedge.iter().all(|h| (h.1 - top).abs() < 0.6), "{:?}", n.hedge);
     // no species words: the climate's mix plants the trees
-    let ok = ["Spruce", "Fir", "Poplar", "Cypress", "Hornbeam", "Scots", "Larch"];
+    let ok = ["Spruce", "Fir", "Poplar", "Cypress", "Hornbeam", "Columnar Oak", "Scots", "Larch"];
     assert!(n.trees.iter().any(|t| !ok.iter().any(|o| t.0.starts_with(o))), "{:?}", n.trees.iter().map(|t| &t.0).collect::<Vec<_>>());
     let m = landscape("a mountain park");
     assert!(m.trees.len() >= 6 && m.trees.iter().all(|t| ok.iter().any(|o| t.0.starts_with(o))), "{:?}", m.trees.iter().map(|t| &t.0).collect::<Vec<_>>());

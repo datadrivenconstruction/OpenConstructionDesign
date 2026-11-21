@@ -54,10 +54,10 @@ fn the_mix_rule_picks_the_groups() {
     let palm = |m: &str| trees(&site(Some(m), 16)).iter().any(|x| x.0.contains("Palm"));
     assert!(!palm("conifer") && !palm("mixed") && !palm("broadleaf"));
     let arid = trees(&site(Some("arid"), 16));
-    let ok = ["Poplar", "Cypress", "Hornbeam", "Date Palm", "Fan Palm", "Acacia", "Olive", "Stone Pine"];
+    let ok = ["Poplar", "Cypress", "Hornbeam", "Columnar Oak", "Date Palm", "Fan Palm", "Acacia", "Olive", "Stone Pine"];
     assert!(arid.iter().all(|x| ok.iter().any(|n| x.0.starts_with(n))), "{arid:?}");
     let conifer = trees(&site(Some("conifer"), 8));
-    assert!(conifer.iter().all(|x| ["Spruce", "Fir", "Poplar", "Cypress", "Hornbeam", "Scots Pine", "Larch"].iter().any(|n| x.0.starts_with(n))), "{conifer:?}");
+    assert!(conifer.iter().all(|x| ["Spruce", "Fir", "Poplar", "Cypress", "Hornbeam", "Columnar Oak", "Scots Pine", "Larch"].iter().any(|n| x.0.starts_with(n))), "{conifer:?}");
 }
 
 #[test]
