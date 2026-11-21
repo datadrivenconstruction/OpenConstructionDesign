@@ -393,3 +393,26 @@ fn every_power_link_ends_a_run_at_its_connector() {
     assert!(n > 0, "no power link");
     assert!(bad.is_empty(), "{} connectors without a run end: {bad:?}", bad.len());
 }
+
+#[test]
+fn every_room_of_a_house_and_an_office_is_powered() {
+    for (t, f) in [("house", 2), ("office", 4)] {
+        let p = build_project(&parse_spec(&json!({"typology": t, "floors": f, "services": true})).unwrap()).unwrap();
+        let rooms: Vec<&String> = p.services.issues.iter().filter(|i| i.contains("unpowered:") && !i.contains("device")).collect();
+        assert_eq!(metric(&p, "power_unserved_rooms"), 0.0, "{t}: {rooms:?}");
+    }
+}
+
+#[test]
+fn the_corridor_of_an_apartment_section_powers_every_floor() {
+    for f in [3, 5] {
+        let p = build_project(&parse_spec(&json!({"typology": "apartment_section", "floors": f, "services": true})).unwrap()).unwrap();
+        let boards: Vec<&String> = p.services.issues.iter().filter(|i| i.contains("Corridor unpowered")).collect();
+        assert!(boards.is_empty(), "{f} floors: {boards:?}");
+        let errs: Vec<String> = services_errors(&p).into_iter().filter(|e| e.starts_with("Power")).collect();
+        assert!(errs.is_empty(), "{f} floors: {errs:?}");
+        for k in 0..p.storeys.len() {
+            assert!(p.services.circuits.iter().any(|c| c.board.0 == k), "{f} floors: storey {k} has no circuit");
+        }
+    }
+}
