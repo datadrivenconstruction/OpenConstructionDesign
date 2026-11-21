@@ -60,6 +60,9 @@ fn plate_area(spec: &ProjectSpec) -> f64 {
     }
 }
 
+/// Most lift shafts in the core of a free-form plate.
+const PLATE_BANK: u32 = 4;
+
 /// The lift cars of the core: the brief's count, or, from `core.lift_traffic_from` storeys,
 /// the cars the passenger traffic needs in the busiest period. The building is cut into
 /// zones of `core.lift_zone_height`; a zone's cars make one round trip of the travel to its
@@ -71,10 +74,15 @@ pub(super) fn lift_plan(spec: &ProjectSpec) -> super::GLifts {
     if !spec.lift {
         return super::GLifts::default();
     }
-    let bank = rule("core.lift_bank_max") as u32;
+    let mut bank = rule("core.lift_bank_max") as u32;
+    if spec.plate.is_some() {
+        // a free plate's core stands in the middle: a longer bank leaves the floor round it ragged
+        bank = bank.min(PLATE_BANK);
+    }
     if let Some(n) = spec.lifts {
-        // the brief reader refuses a count above the bank, so the bank never cuts it
-        return super::GLifts { cars: n.min(bank), wanted: n, ..none };
+        // the brief reader refuses a count above the bank; only a plate's shorter bank cuts it
+        let issues = (n > bank).then(|| format!("the plate's core holds {bank} of the {n} cars asked")).into_iter().collect();
+        return super::GLifts { cars: n.min(bank), wanted: n, issues, ..none };
     }
     let (floors, area) = (f64::from(spec.floors), plate_area(spec));
     if spec.floors < rule("core.lift_traffic_from") as u32 || area <= 0.0 {

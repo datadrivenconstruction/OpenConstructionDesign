@@ -42,6 +42,14 @@ fn a_round_core_with_lift_and_sprinklers() {
 }
 
 #[test]
+fn a_tall_plate_holds_its_lift_bank() {
+    let p = built(&json!({"typology": "office", "floors": 12, "lift": true, "footprint": {"shape": "circle", "width": 40}}));
+    let lifts = |k: usize| p.storeys[k].layout.shafts.iter().filter(|s| s.kind == ddc_gen::ShaftKind::Lift).count();
+    assert!(p.lifts.cars > 1, "a tall office has a bank: {}", p.lifts.cars);
+    assert!((0..p.storeys.len()).all(|k| lifts(k) == p.lifts.cars as usize));
+}
+
+#[test]
 fn a_shape_two_bands_deep_holds_them_and_keeps_the_asked_band() {
     let v = |rules: J| json!({"typology": "office", "floors": 2, "footprint": {"shape": "rectangle", "width": 40, "depth": 16}, "roof": {"kind": "barrel"}, "rules": rules});
     let s = parse_spec(&v(json!({}))).unwrap();

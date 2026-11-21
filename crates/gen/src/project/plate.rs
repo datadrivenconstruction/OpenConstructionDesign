@@ -8,7 +8,7 @@
 //! neighbouring rooms share exact vertices and every room edge lies on a wall.
 
 use super::arrange::{Arrangement, P};
-use super::build::{fit_stair, lift_inset, lift_room, lift_shaft, stair_def};
+use super::build::{fit_stair, lift_inset, lift_plan, lift_room, lift_shaft, stair_def};
 use super::footprint::{self, Region};
 use super::nav::area;
 use super::offset::{self, RingBand};
@@ -107,7 +107,8 @@ struct Core {
     hole: Vec<P>,
     /// The second stair of a separated pair, and its slab hole: the core's last cell.
     stair2: Option<(GStair, Vec<P>)>,
-    shaft: Option<Vec<P>>,
+    /// The lift bank, its shafts a wall apart.
+    shafts: Vec<Vec<P>>,
     /// Loop positions on the outer ring when the core stands in the band.
     band: Option<(f64, f64)>,
     /// The second stair at the plate perimeter when the pair in the core would stand too close.
@@ -128,8 +129,12 @@ fn core_at(spec: &ProjectSpec, f: Frame, d: f64, pair: bool) -> Result<Core, Gen
     let (fit, wmm) = fit_stair(spec, mm(d))?;
     let sw = (wmm as f64 / 1000.0).max(2.0);
     let mut cells = vec![(0.0, sw, RoomKind::Stair)];
+    let cars = if spec.lift { lift_plan(spec).cars.max(1) } else { 0 };
+    let (sx, sy) = lift_shaft(spec);
+    let pitch = sx + rule("core.lift_wall");
+    let lw = lift_room() as f64 / 1000.0 + pitch * f64::from(cars.max(1) - 1);
     if spec.lift {
-        cells.push((sw, sw + lift_room() as f64 / 1000.0, RoomKind::Lift));
+        cells.push((sw, sw + lw, RoomKind::Lift));
     }
     let (bw, bd) = (fit.hi.0 - fit.lo.0, fit.hi.1 - fit.lo.1);
     let first_w = cells.last().map_or(sw, |c| c.1);
@@ -142,11 +147,11 @@ fn core_at(spec: &ProjectSpec, f: Frame, d: f64, pair: bool) -> Result<Core, Gen
         (target.1 - 0.05).max(0.0),
         (target.1 + bd + 0.05).min(d),
     );
-    let shaft = spec.lift.then(|| {
-        let (sx, sy) = lift_shaft(spec);
-        let x0 = sw + (lift_room() as f64 / 1000.0 - sx) / 2.0;
-        f.rect(x0, x0 + sx, lift_inset(), lift_inset() + sy)
-    });
+    let x0 = sw + (lw - sx - pitch * f64::from(cars.max(1) - 1)) / 2.0;
+    let shafts = (0..cars).map(|i| {
+        let x = x0 + pitch * f64::from(i);
+        f.rect(x, x + sx, lift_inset(), lift_inset() + sy)
+    }).collect();
     // a separated pair: a second stair room at the far end of the core, the lifts between
     let stair2 = pair.then(|| {
         cells.push((first_w, first_w + sw, RoomKind::Stair));
@@ -161,7 +166,7 @@ fn core_at(spec: &ProjectSpec, f: Frame, d: f64, pair: bool) -> Result<Core, Gen
         (s2, h2)
     });
     let w = cells.last().map_or(sw, |c| c.1);
-    Ok(Core { f, w, d, cells, stair, hole, stair2, shaft, band: None, end: None })
+    Ok(Core { f, w, d, cells, stair, hole, stair2, shafts, band: None, end: None })
 }
 
 /// Whether the core of a plate of `plate_area` m2 takes a separated pair of stairs, by
@@ -1732,7 +1737,7 @@ fn finish(
             l.stairs.extend(c.stair2.iter().map(|s| own(&s.0)));
             l.stairs.extend(c.end.iter().map(|e| own(&e.stair)));
         }
-        if let Some(s) = &c.shaft {
+        for s in &c.shafts {
             l.shafts.push(GShaft::new(s.clone(), crate::ShaftKind::Lift));
         }
     }
