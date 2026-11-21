@@ -27,6 +27,15 @@ const MAX_PADS: usize = 900;
 const TREE_SPACING: f64 = 4.0;
 /// Least size of a tree squeezed by its neighbours, as a share of its type.
 const MIN_FIT: f64 = 0.4;
+/// A tree's place: point, type, turn, free-standing (under-planted), crown width it is spaced for.
+type Spot = (P, &'static str, f64, bool, f64);
+/// Room a group tree keeps from a row's place, in crown widths: the crowns stay apart at the
+/// largest size jitter.
+const ROW_ROOM: f64 = 1.2;
+/// Trees drawn from a mix to see all its types: more than any mix has.
+const POOL_PROBE: usize = 400;
+/// Most a ring tree stands outward of the ring, m: the ring does not read as a ruled line.
+const RING_SWAY: f64 = 1.2;
 
 /// The tallest storey-high type that still fits under `h`.
 pub(super) fn height_ty(h: f64) -> &'static str {
@@ -433,12 +442,24 @@ fn site(l: &mut GLayout, band: f64, trees: u32, courtyard: Option<&[P]>) -> Resu
         .collect();
     let cfg = super::landscape::Cfg::read();
     let land = super::landscape::lay(l, band, clear, PAD, &doors, pads.len(), trees, &cfg)?;
-    let mut spots: Vec<P> = vec![];
+    // species and turn per tree from the library's Tree family and the site's tree mix; the
+    // seed is the plot box, so a site keeps its trees and another site gets other ones
+    let seed = [lo.0, lo.1, hi.0, hi.1].iter().fold(0u64, |a, v| a.rotate_left(17) ^ (v * 1000.0).round() as i64 as u64);
+    let mut spots: Vec<Spot> = vec![];
     if trees > 0 {
         let (in_court, out) = match courtyard {
             Some(_) => (trees / 3, trees - trees / 3),
             None => (0, trees),
         };
+        let total = (out + in_court) as usize + land.rows.len();
+        let picks = super::trees::sequence(&super::trees::mix_name(), &super::trees::season_name(), seed, total);
+        if picks.len() < total {
+            return Err(GenError::Infeasible(format!(
+                "the tree mix `{}` in the season `{}` has no plantable type in the library family Tree",
+                super::trees::mix_name(),
+                super::trees::season_name()
+            )));
+        }
         let off = land.tree_off;
         let ring = [
             (lo.0 - off, lo.1 - off),
@@ -447,44 +468,80 @@ fn site(l: &mut GLayout, band: f64, trees: u32, courtyard: Option<&[P]>) -> Resu
             (lo.0 - off, hi.1 + off),
         ];
         let perim = 2.0 * (hi.0 - lo.0 + hi.1 - lo.1 + 4.0 * off);
-        // three candidates per tree round the ring; entrances stay open
-        let cands = (out * 3).max(1);
-        for k in 0..cands {
-            if spots.len() as u32 >= out {
-                break;
-            }
-            let s = perim * ((k * 3) % cands) as f64 / cands as f64
-                + perim * ((k * 3) / cands) as f64 / (3 * cands) as f64;
-            let mut rest = s;
-            let mut p = ring[0];
+        // point `s` m round the ring, `o` m outward of it
+        let at_ring = |s: f64, o: f64| -> P {
+            let mut rest = s.rem_euclid(perim);
             for e in 0..4 {
                 let (a, b) = (ring[e], ring[(e + 1) % 4]);
                 let el = len(sub(b, a));
-                if rest <= el {
-                    p = (a.0 + (b.0 - a.0) * rest / el, a.1 + (b.1 - a.1) * rest / el);
-                    break;
+                if rest <= el || e == 3 {
+                    let u = ((b.0 - a.0) / el, (b.1 - a.1) / el);
+                    return (a.0 + u.0 * rest + u.1 * o, a.1 + u.1 * rest - u.0 * o);
                 }
                 rest -= el;
             }
-            let near_door = doors.iter().any(|d| len(sub(*d, p)) < off + 2.0);
-            let crowded = spots.iter().any(|q| len(sub(*q, p)) < TREE_SPACING);
-            if !near_door && !crowded && land.tree_ok(l, p) {
-                spots.push(p);
+            ring[0]
+        };
+        // the ring trees in groups, each place spaced for the widest crown it takes in any season,
+        // so the site keeps its places and its number of trees all year; entrances stay open
+        let crown = |ty: &str| super::trees::dims(ty).map_or(4.0, |d| d.1);
+        let seasons: Vec<Vec<(&'static str, f64)>> = super::trees::season_names()
+            .iter()
+            .map(|se| super::trees::sequence(&super::trees::mix_name(), se, seed, total))
+            .collect();
+        let nominal: Vec<f64> = (0..total)
+            .map(|k| seasons.iter().filter_map(|v| v.get(k)).map(|t| crown(t.0)).fold(crown(picks[k].0), f64::max))
+            .collect();
+        // the widest crown of the mix in any season: a row's place keeps its room for any of them
+        let widest = seasons.iter().flatten().map(|t| crown(t.0)).fold(
+            super::trees::season_names()
+                .iter()
+                .flat_map(|se| super::trees::sequence(&super::trees::mix_name(), se, seed, POOL_PROBE))
+                .map(|t| crown(t.0))
+                .fold(0.0, f64::max),
+            f64::max,
+        );
+        let mut picks = picks.into_iter().zip(nominal);
+        let mine: Vec<((&'static str, f64), f64)> = picks.by_ref().take(out as usize).collect();
+        let crowns: Vec<f64> = mine.iter().map(|m| m.1).collect();
+        // a tree stands its spacing and, round the corners of the ring too, a crown's width from the others
+        let apart = |spots: &[Spot], p: P, c: f64| {
+            spots.iter().all(|q| len(sub(q.0, p)) >= TREE_SPACING.max(0.5 * (q.4 + c) * super::trees::GROUP_STEP))
+        };
+        let places = super::trees::grouped(seed, &crowns, perim)
+            .unwrap_or_else(|| (0..mine.len()).map(|k| perim * k as f64 / mine.len().max(1) as f64).collect());
+        for (k, (((ty, turn), c), s)) in mine.into_iter().zip(places).enumerate() {
+            // a little outward of the ring, and a step along it when the place is taken
+            let o = RING_SWAY * super::trees::unit(seed ^ 0x0FF5, k as u64);
+            let free = |p: P| {
+                doors.iter().all(|d| len(sub(*d, p)) >= off + 2.0)
+                    && land.lanes.iter().chain(&land.rows).all(|q| len(sub(*q, p)) >= TREE_SPACING.max(0.5 * (c + widest) * ROW_ROOM))
+                    && apart(&spots, p, c)
+                    && land.tree_ok(l, p)
+            };
+            let p = [0.0, 1.0, -1.0, 2.0, -2.0, 3.0, -3.0]
+                .into_iter()
+                .flat_map(|n| [at_ring(s + n, o), at_ring(s + n, 0.0)])
+                .find(|p| free(*p));
+            if let Some(p) = p {
+                spots.push((p, ty, turn, true, c));
             }
         }
-        // rows along the street and the paths: kept clear of the ring trees and each other
+        // rows along the street and the paths: ruled, the group trees keep clear of their places
         for p in &land.rows {
-            if spots.iter().all(|q| len(sub(*q, *p)) >= TREE_SPACING) {
-                spots.push(*p);
+            let Some(((ty, turn), c)) = picks.next() else { break };
+            if spots.iter().all(|q| len(sub(q.0, *p)) >= TREE_SPACING) {
+                spots.push((*p, ty, turn, false, c));
             }
         }
-        if let Some(c) = courtyard {
-            let (clo, chi) = bbox(c);
+        if let Some(cy) = courtyard {
+            let (clo, chi) = bbox(cy);
             let ctr = ((clo.0 + chi.0) / 2.0, (clo.1 + chi.1) / 2.0);
             let r = ((chi.0 - clo.0).min(chi.1 - clo.1) / 2.0 - 3.0).max(0.0);
             for i in 0..in_court {
+                let Some(((ty, turn), c)) = picks.next() else { break };
                 let a = std::f64::consts::TAU * f64::from(i) / f64::from(in_court.max(1));
-                spots.push((ctr.0 + r * a.cos() * 0.6, ctr.1 + r * a.sin() * 0.6));
+                spots.push(((ctr.0 + r * a.cos() * 0.6, ctr.1 + r * a.sin() * 0.6), ty, turn, false, c));
             }
         }
     }
@@ -499,38 +556,40 @@ fn site(l: &mut GLayout, band: f64, trees: u32, courtyard: Option<&[P]>) -> Resu
             z: 0.0,
         });
     }
-    // species and turn per tree from the library's Tree family and the site's tree mix; the
-    // seed is the plot box, so a site keeps its trees and another site gets other ones
-    let seed = [lo.0, lo.1, hi.0, hi.1].iter().fold(0u64, |a, v| a.rotate_left(17) ^ (v * 1000.0).round() as i64 as u64);
-    let picks = super::trees::sequence(&super::trees::mix_name(), &super::trees::season_name(), seed, spots.len());
-    if picks.len() < spots.len() {
-        return Err(GenError::Infeasible(format!(
-            "the tree mix `{}` in the season `{}` has no plantable type in the library family Tree",
-            super::trees::mix_name(),
-            super::trees::season_name()
-        )));
-    }
     let jitter = super::rules::rule("site.tree_size_jitter");
     let floor = super::rules::rule("site.tree_min_clear");
     let eaves = super::rules::rule("site.tree_building_clear") + super::rules::rule("massing.roof_overhang");
     // placed trees: plan point and crown radius, so that no two crowns meet
     let mut placed: Vec<(P, f64)> = vec![];
-    for (k, ((ty, rotation), p)) in picks.into_iter().zip(spots).enumerate() {
+    let mut free: Vec<(P, f64)> = vec![];
+    // the ruled rows first: where a crown of the groups meets one of a row, the group tree gives way
+    let mut spots: Vec<(usize, Spot)> = spots.into_iter().enumerate().collect();
+    spots.sort_by_key(|(_, s)| s.3);
+    for (k, (p, ty, rotation, alone, _)) in spots {
         let (height, crown, _) = super::trees::dims(ty).unwrap_or((8.0, 4.0, 2.5));
-        let mut scale = super::trees::scale(seed, k, jitter);
-        for (q, rq) in &placed {
-            scale = scale.min(2.0 * (len(sub(*q, p)) - rq) / crown);
-        }
+        let fit = |c: f64, others: &[(P, f64)]| {
+            let mut s = super::trees::scale(seed, k, jitter);
+            for (q, rq) in others {
+                s = s.min(2.0 * (len(sub(*q, p)) - rq) / c);
+            }
+            s
+        };
         // nor any crown the building: its walls and the eaves of its roof
-        scale = scale.min(2.0 * (to_outline(l, p) - eaves) / crown);
+        let wall = 2.0 * (to_outline(l, p) - eaves) / crown;
+        let scale = fit(crown, &placed).min(wall);
         // a crown squeezed below this share of its type is no tree of that species: leave the spot
         if scale < MIN_FIT {
             continue;
         }
         placed.push((p, 0.5 * crown * scale));
+        if alone {
+            free.push((p, 0.5 * crown * scale));
+        }
         let min_clear = floor.min(0.4 * height * scale);
         l.fixtures.push(GFixture { scale, min_clear, family: "Tree", ty, at: p, rotation, wall: None, z: 0.0 });
     }
+    // shrubs under the free-standing crowns, clear of the trunks
+    l.fixtures.extend(land.under(l, &free, &placed, seed));
     Ok(())
 }
 

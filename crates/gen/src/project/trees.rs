@@ -176,6 +176,78 @@ fn species_names(mask: u32) -> Vec<String> {
     v["species"].as_array().map_or(&[][..], Vec::as_slice).iter().enumerate().filter(|(i, _)| mask & (1 << i) != 0).filter_map(|(_, s)| s["name"].as_str().map(String::from)).collect()
 }
 
+/// Seeded unit number in (0, 1): placement jitter that a site keeps.
+pub fn unit(seed: u64, k: u64) -> f64 {
+    hash(seed, k)
+}
+
+/// Species of a library type: the name without its variant letter and its season.
+pub fn species_of(ty: &str) -> &str {
+    let mut s = ty;
+    for tail in [" Autumn", " Bare", " Spring"] {
+        s = s.strip_suffix(tail).unwrap_or(s);
+    }
+    match s.rsplit_once(' ') {
+        Some((head, v)) if v.len() == 1 => head,
+        _ => s,
+    }
+}
+
+/// Places of trees round a closed ring of length `perim` (m along it), one per crown width in
+/// `crowns`: groups of one to three whose crowns nearly touch, the groups apart by uneven gaps,
+/// as trees are planted in a park. `None` when the groups do not fit the ring.
+pub fn grouped(seed: u64, crowns: &[f64], perim: f64) -> Option<Vec<f64>> {
+    let n = crowns.len();
+    if n == 0 {
+        return Some(vec![]);
+    }
+    let (mut sizes, mut left, mut g) = (vec![], n, 0u64);
+    while left > 0 {
+        let h = hash(seed ^ 0x6A0C, g);
+        let s = if h < 0.3 { 1 } else if h < 0.65 { 2 } else { 3 };
+        sizes.push(s.min(left));
+        left -= s.min(left);
+        g += 1;
+    }
+    let m = sizes.len();
+    let first: Vec<usize> = sizes.iter().scan(0, |a, s| { let f = *a; *a += s; Some(f) }).collect();
+    // inside a group the crowns stand side by side, a little apart
+    let step = |i: usize| 0.5 * (crowns[i - 1] + crowns[i]) * GROUP_STEP;
+    let mut inner = 0.0;
+    for gi in 0..m {
+        for k in 1..sizes[gi] {
+            inner += step(first[gi] + k);
+        }
+    }
+    // between groups at least half again the crowns, the rest of the ring shared unevenly
+    let base: Vec<f64> = (0..m)
+        .map(|gi| 0.5 * (crowns[first[gi] + sizes[gi] - 1] + crowns[first[(gi + 1) % m]]) * GROUP_GAP)
+        .collect();
+    let spare = perim - inner - base.iter().sum::<f64>();
+    if spare < 0.0 {
+        return None;
+    }
+    let w: Vec<f64> = (0..m).map(|gi| 0.3 + hash(seed ^ 0x6A9, gi as u64)).collect();
+    let ws: f64 = w.iter().sum();
+    let mut t = perim * hash(seed ^ 0x57A27, 0);
+    let mut out = Vec::with_capacity(n);
+    for gi in 0..m {
+        for k in 0..sizes[gi] {
+            if k > 0 {
+                t += step(first[gi] + k);
+            }
+            out.push(t.rem_euclid(perim));
+        }
+        t += base[gi] + spare * w[gi] / ws;
+    }
+    Some(out)
+}
+
+/// Distance of neighbours in a group, in crown widths: the crowns all but touch.
+pub const GROUP_STEP: f64 = 1.05;
+/// Least distance of neighbouring groups, in crown widths.
+pub const GROUP_GAP: f64 = 1.6;
+
 /// Size factor of tree `k` of a site: 1 +- `jitter`, seeded, so a site keeps its trees.
 pub fn scale(seed: u64, k: usize, jitter: f64) -> f64 {
     1.0 + jitter * (2.0 * hash(seed ^ 0x5CA1E, k as u64) - 1.0)
@@ -190,7 +262,8 @@ fn hash(a: u64, b: u64) -> f64 {
 }
 
 /// `n` trees of the mix in a season as (library type, turn in radians): the types of the season
-/// and the evergreens. A mix or season without a type gives none.
+/// and the evergreens; one species never follows itself while the mix has another. A mix or
+/// season without a type gives none.
 pub fn sequence(mix: &str, season: &str, seed: u64, n: usize) -> Vec<(&'static str, f64)> {
     let ok = groups(mix);
     let (code, any) = season_codes(season);
@@ -211,7 +284,7 @@ pub fn sequence(mix: &str, season: &str, seed: u64, n: usize) -> Vec<(&'static s
     if pool.is_empty() {
         return vec![];
     }
-    let mut out = Vec::with_capacity(n);
+    let mut out: Vec<(&'static str, f64)> = Vec::with_capacity(n);
     let mut round = 0u64;
     while out.len() < n {
         // weighted draw without replacement: the smaller -ln(u) / weight, the earlier
@@ -220,7 +293,26 @@ pub fn sequence(mix: &str, season: &str, seed: u64, n: usize) -> Vec<(&'static s
             let key = -hash(seed.wrapping_add(round), k as u64).ln() / s.weight;
             order.insert(key.to_bits(), s);
         }
-        for s in order.values() {
+        // the draw in order, each time the first type of another species than the last one; a
+        // type left over goes where neither neighbour is of its species
+        let mut left: Vec<&Species> = order.into_values().collect();
+        let mut list: Vec<&Species> = Vec::with_capacity(left.len());
+        let mut prev = out.last().map(|(t, _)| species_of(t));
+        while !left.is_empty() {
+            let j = left.iter().position(|s| Some(species_of(s.name)) != prev).unwrap_or(0);
+            let s = left.remove(j);
+            let sp = species_of(s.name);
+            if Some(sp) == prev {
+                let at = (1..list.len()).find(|&i| species_of(list[i - 1].name) != sp && species_of(list[i].name) != sp);
+                if let Some(i) = at {
+                    list.insert(i, s);
+                    continue;
+                }
+            }
+            list.push(s);
+            prev = Some(sp);
+        }
+        for s in list {
             if out.len() < n {
                 let turn = hash(seed ^ 0x5EED, out.len() as u64) * std::f64::consts::TAU;
                 out.push((s.name, turn));
@@ -234,6 +326,48 @@ pub fn sequence(mix: &str, season: &str, seed: u64, n: usize) -> Vec<(&'static s
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn one_species_never_follows_itself() {
+        for mix in mix_names() {
+            for seed in [1u64, 77, 4242] {
+                let s = sequence(&mix, "summer", seed, 60);
+                let pool: std::collections::BTreeSet<_> = s.iter().map(|x| species_of(x.0)).collect();
+                if pool.len() < 2 {
+                    continue;
+                }
+                for w in s.windows(2) {
+                    assert_ne!(species_of(w[0].0), species_of(w[1].0), "{mix} {seed}: {:?}", s.iter().map(|x| x.0).collect::<Vec<_>>());
+                }
+            }
+        }
+        assert_eq!(species_of("Oak A Autumn"), "Oak");
+        assert_eq!(species_of("Scots Pine B"), "Scots Pine");
+        assert_eq!(species_of("Lilac"), "Lilac");
+    }
+
+    /// Groups: neighbours in a group stand a crown apart, the gaps between groups are wider and
+    /// uneven, every place lies on the ring and the seed keeps them.
+    #[test]
+    fn ring_trees_stand_in_groups_with_uneven_gaps() {
+        let crowns: Vec<f64> = (0..12).map(|k| 4.0 + (k % 4) as f64 * 1.5).collect();
+        let perim = 260.0;
+        let t = grouped(9, &crowns, perim).unwrap();
+        assert_eq!(t, grouped(9, &crowns, perim).unwrap());
+        assert_ne!(t, grouped(10, &crowns, perim).unwrap());
+        assert!(t.iter().all(|x| (0.0..perim).contains(x)));
+        let gaps: Vec<f64> = (0..t.len()).map(|i| (t[(i + 1) % t.len()] - t[i]).rem_euclid(perim)).collect();
+        let tight = gaps.iter().zip(0..).filter(|(g, i)| **g < 0.5 * (crowns[*i] + crowns[(*i + 1) % 12]) * 1.2).count();
+        assert!(tight >= 3, "groups: {gaps:?}");
+        for (i, g) in gaps.iter().enumerate() {
+            assert!(*g + 1e-9 >= 0.5 * (crowns[i] + crowns[(i + 1) % 12]) * GROUP_STEP, "crowns meet: {gaps:?}");
+        }
+        let wide: Vec<f64> = gaps.iter().copied().filter(|g| *g > 8.0).collect();
+        let mean = wide.iter().sum::<f64>() / wide.len() as f64;
+        let sd = (wide.iter().map(|g| (g - mean).powi(2)).sum::<f64>() / wide.len() as f64).sqrt();
+        assert!(sd / mean > 0.15, "even gaps: {wide:?}");
+        assert!(grouped(9, &crowns, 40.0).is_none());
+    }
 
     #[test]
     fn climate_words_work_in_five_languages() {

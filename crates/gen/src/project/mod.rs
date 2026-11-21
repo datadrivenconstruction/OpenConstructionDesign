@@ -75,6 +75,7 @@ mod svc;
 mod tile;
 mod trees;
 pub use trees::dims as tree_dims;
+pub use trees::species_of;
 pub mod typology;
 mod water;
 pub mod why;

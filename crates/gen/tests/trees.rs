@@ -69,7 +69,10 @@ fn the_season_rule_dresses_the_trees_and_keeps_the_evergreens() {
     assert!(tagged(&winter, " Bare") && !tagged(&winter, " Autumn"), "{winter:?}");
     assert!(tagged(&spring, " Spring"), "{spring:?}");
     // the same site has the same number of trees in every season
-    assert!(summer.len() == autumn.len() && autumn.len() == winter.len() && winter.len() == spring.len());
+    assert!(summer.len() == autumn.len() && autumn.len() == winter.len() && winter.len() == spring.len(), "{summer:?}
+{autumn:?}
+{winter:?}
+{spring:?}");
 }
 
 fn scales(rules: serde_json::Value) -> Vec<f64> {
@@ -152,4 +155,22 @@ fn crowns_keep_clear_of_the_walls_and_the_eaves() {
             assert!(d + 1e-6 >= r + clear + 0.5, "{} at {:?}: crown {r:.2} m, {d:.2} m from the building", f.ty, f.at);
         }
     }
+}
+
+/// The ring trees stand in groups with open ground between: the distances to the nearest
+/// neighbour spread, unlike a ruled row, and no species follows itself round the ring.
+#[test]
+fn trees_stand_in_groups_not_in_a_ruled_ring() {
+    let t = planted(json!({"site.tree_rows": "none"}), 12);
+    assert!(t.len() >= 8, "{}", t.len());
+    let near: Vec<f64> = t
+        .iter()
+        .map(|a| t.iter().filter(|b| !std::ptr::eq(a, *b)).map(|b| (a.at.0 - b.at.0).hypot(a.at.1 - b.at.1)).fold(f64::MAX, f64::min))
+        .collect();
+    let mean = near.iter().sum::<f64>() / near.len() as f64;
+    let sd = (near.iter().map(|d| (d - mean).powi(2)).sum::<f64>() / near.len() as f64).sqrt();
+    assert!(sd / mean > 0.1, "nearest neighbours {near:?}");
+    // a tree left out where it did not fit may bring two of a species together, once at most
+    let twins = t.windows(2).filter(|w| ddc_gen::project::species_of(w[0].ty) == ddc_gen::project::species_of(w[1].ty)).count();
+    assert!(twins <= 1, "{:?}", t.iter().map(|f| f.ty).collect::<Vec<_>>());
 }
