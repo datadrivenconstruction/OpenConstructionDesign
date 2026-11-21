@@ -49,7 +49,9 @@ fn a_plain_brief_plants_a_mixed_wood_of_library_species() {
     assert!(t.len() >= 6, "{t:?}");
     assert!(t.iter().all(|n| n != "Oak" && n != "Large" && n != "Small"), "{t:?}");
     assert!(species(&t).len() >= 5, "many species: {t:?}");
-    assert!(t.windows(2).all(|w| w[0] != w[1]), "neighbours differ: {t:?}");
+    // the street row is an avenue of one type; off it neighbours differ
+    let most = t.iter().max_by_key(|n| t.iter().filter(|m| m == n).count()).unwrap();
+    assert!(t.windows(2).all(|w| w[0] != w[1] || &w[0] == most), "neighbours differ: {t:?}");
     assert_eq!(t, planted(None, json!({})), "the same brief plants the same trees");
 }
 

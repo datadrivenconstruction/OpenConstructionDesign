@@ -176,6 +176,12 @@ fn species_names(mask: u32) -> Vec<String> {
     v["species"].as_array().map_or(&[][..], Vec::as_slice).iter().enumerate().filter(|(i, _)| mask & (1 << i) != 0).filter_map(|(_, s)| s["name"].as_str().map(String::from)).collect()
 }
 
+/// FNV-1a of a type's name without its season: the same key for a species' type in any season.
+fn name_key(ty: &str) -> u64 {
+    let base = [" Autumn", " Bare", " Spring"].iter().fold(ty, |s, t| s.strip_suffix(t).unwrap_or(s));
+    base.bytes().fold(0xcbf2_9ce4_8422_2325u64, |h, b| (h ^ b as u64).wrapping_mul(0x0100_0000_01b3))
+}
+
 /// Seeded unit number in (0, 1): placement jitter that a site keeps.
 pub fn unit(seed: u64, k: u64) -> f64 {
     hash(seed, k)
@@ -287,10 +293,11 @@ pub fn sequence(mix: &str, season: &str, seed: u64, n: usize) -> Vec<(&'static s
     let mut out: Vec<(&'static str, f64)> = Vec::with_capacity(n);
     let mut round = 0u64;
     while out.len() < n {
-        // weighted draw without replacement: the smaller -ln(u) / weight, the earlier
+        // weighted draw without replacement: the smaller -ln(u) / weight, the earlier; u is drawn
+        // by the type's name without its season, so every season draws the same trees
         let mut order: BTreeMap<u64, &Species> = BTreeMap::new();
-        for (k, s) in pool.iter().enumerate() {
-            let key = -hash(seed.wrapping_add(round), k as u64).ln() / s.weight;
+        for s in &pool {
+            let key = -hash(seed.wrapping_add(round), name_key(s.name)).ln() / s.weight;
             order.insert(key.to_bits(), s);
         }
         // the draw in order, each time the first type of another species than the last one; a
