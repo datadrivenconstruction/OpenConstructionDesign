@@ -187,10 +187,11 @@ fn the_plan_symbol_is_species_specific_at_every_level() {
         // the trunk circle has 8 edges at the coarse level, 12 at the finer ones
         [Lod::Coarse, Lod::Medium, Lod::Fine].iter().map(|l| build(&src, *l).plan.len() - if *l == Lod::Coarse { 8 } else { 12 }).collect()
     };
-    // deciduous: scalloped outline (lobes x segments) and branch spokes
-    assert_eq!(lens("round", 12.0, 9.0, 3.0), vec![24 + 6, 56 + 27, 90 + 39]);
-    // conifer: star of 2k edges and k rays
-    assert_eq!(lens("conical", 18.0, 6.0, 1.5), vec![21, 27, 33]);
+    // deciduous: scalloped outline (lobes x segments), branch spokes; finer, the inner edge on every
+    // other lobe and the trunk dot (9 lines)
+    assert_eq!(lens("round", 12.0, 9.0, 3.0), vec![24 + 6, 56 + 27 + 7 * 3 + 9, 90 + 39 + 9 * 4 + 9]);
+    // conifer: star of 2k edges and k rays, finer with the trunk dot
+    assert_eq!(lens("conical", 18.0, 6.0, 1.5), vec![21, 27 + 9, 33 + 9]);
     // palm: four edges per frond
     assert_eq!(lens("palm", 11.0, 5.5, 7.0), vec![24, 32, 40]);
 }
@@ -215,6 +216,40 @@ fn a_deciduous_plan_is_scalloped() {
     // the joints between lobes sit lower than their middles
     let (lo, hi) = ring.iter().fold((f64::MAX, 0.0f64), |a, r| (a.0.min(*r), a.1.max(*r)));
     assert!(lo < 0.9 * hi, "{lo}..{hi}");
+}
+
+/// The lobes of a broadleaf outline differ in depth, as a hand draws them, and a dot inside the
+/// trunk circle marks the stem above the coarse level.
+#[test]
+fn the_broadleaf_outline_has_uneven_lobes_and_a_trunk_dot() {
+    for seed in [3, 8, 21] {
+        let b = build(&text("round", seed, 1.0, 12.0, 9.0, 3.0), Lod::Fine);
+        let ring = radii(&b.plan[12..12 + 90]);
+        let dips: Vec<f64> = ring
+            .chunks(5)
+            .map(|c| {
+                let (lo, hi) = c.iter().fold((f64::MAX, 0.0f64), |a, r| (a.0.min(*r), a.1.max(*r)));
+                1.0 - lo / hi
+            })
+            .collect();
+        let (lo, hi) = dips.iter().fold((f64::MAX, 0.0f64), |a, d| (a.0.min(*d), a.1.max(*d)));
+        assert!(hi - lo > 0.08, "seed {seed}: lobe depths {lo:.3}..{hi:.3}");
+    }
+    // the trunk is 0.4 m: its circle at 0.2 m, the dot inside it
+    for (form, h, crown, clear) in [("round", 12.0, 9.0, 3.0), ("conical", 18.0, 6.0, 1.5)] {
+        let dot = |lod| build(&text(form, 5, 1.0, h, crown, clear), lod).plan.iter().filter(|(a, b)| a.len() < 0.12 && b.len() < 0.12).count();
+        assert_eq!(dot(Lod::Coarse), 0, "{form}");
+        assert_eq!(dot(Lod::Fine), 9, "{form}");
+    }
+}
+
+/// The hedge plan shows its clipped top as a band along the length, inside the scalloped edges.
+#[test]
+fn a_hedge_plan_is_a_band() {
+    let f = library_family("Hedge");
+    let b = grown(&f, "Clipped 1200", 1.0, Lod::Fine);
+    let band = b.plan.iter().filter(|(a, e)| (a.y - e.y).abs() < 1e-9 && (a.x - e.x).abs() > 2.9 && (a.y.abs() - 0.24).abs() < 1e-6).count();
+    assert_eq!(band, 2, "{:?}", &b.plan[b.plan.len() - 4..]);
 }
 
 #[test]

@@ -200,7 +200,7 @@ fn a_conifer_brief_draws_stars_in_plan() {
     assert!(!s.trees.is_empty());
     assert!(s.trees.iter().all(|t| t.0.starts_with("Spruce ")), "{:?}", s.trees.iter().map(|t| &t.0).collect::<Vec<_>>());
     for t in &s.trees {
-        assert_eq!(symbol_lines(&t.0), 33, "{}: a star of 22 edges and 11 rays", t.0);
+        assert_eq!(symbol_lines(&t.0), 33 + 9, "{}: a star of 22 edges, 11 rays and the trunk dot", t.0);
     }
 }
 
@@ -211,9 +211,9 @@ fn a_named_edge_and_the_climate_fallback_come_from_the_brief() {
     assert!(n.hedge.len() >= 3);
     let top = n.hedge.iter().map(|h| h.1).fold(f64::MIN, f64::max);
     assert!(n.hedge.iter().all(|h| (h.1 - top).abs() < 0.6), "{:?}", n.hedge);
-    assert!(n.trees.iter().all(|t| !t.0.starts_with("Spruce") && !t.0.starts_with("Fir")), "{:?}", n.trees.iter().map(|t| &t.0).collect::<Vec<_>>());
     // no species words: the climate's mix plants the trees
     let ok = ["Spruce", "Fir", "Poplar", "Cypress", "Hornbeam", "Scots", "Larch"];
+    assert!(n.trees.iter().any(|t| !ok.iter().any(|o| t.0.starts_with(o))), "{:?}", n.trees.iter().map(|t| &t.0).collect::<Vec<_>>());
     let m = landscape("a mountain park");
     assert!(m.trees.len() >= 6 && m.trees.iter().all(|t| ok.iter().any(|o| t.0.starts_with(o))), "{:?}", m.trees.iter().map(|t| &t.0).collect::<Vec<_>>());
     // no hedge word, no hedge edge: the default hedge runs round the plot

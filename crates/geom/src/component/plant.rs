@@ -456,10 +456,11 @@ fn reach(discs: &[(f64, f64, f64)], floor: f64, th: f64) -> f64 {
 }
 
 /// Plan symbol of the crown by species: a conifer is a star (tips on the crown edge, rays from
-/// the trunk to them), a palm a rosette of fronds, any other tree a scalloped crown outline
-/// with branch spokes. The radius of every shape follows the crown's own reach, so the symbol
-/// is as large as the (scaled) crown; a palm has no crown discs along its fronds, so it takes the
-/// crown radius itself.
+/// the trunk to them), a palm a rosette of fronds, any other tree a crown outline of lobes, each
+/// its own reach and depth as drawn by hand, with branch spokes and, finer, a broken inner edge
+/// of the leaf mass. The radius of every shape follows the crown's own reach, so the symbol is
+/// as large as the (scaled) crown; a palm has no crown discs along its fronds, so it takes the
+/// crown radius itself. Above the coarse level a dot marks the trunk of a broadleaf or conifer.
 fn symbol(form: Form, discs: &[(f64, f64, f64)], floor: f64, crown_r: f64, seed: u64, lod: Lod) -> Vec<(V2, V2)> {
     let mut r = Rng::new(seed, 11);
     let off = r.r(0.0, TAU);
@@ -484,6 +485,9 @@ fn symbol(form: Form, discs: &[(f64, f64, f64)], floor: f64, crown_r: f64, seed:
             }
             let mut star = close(&pts);
             star.extend(out);
+            if lod != Lod::Coarse {
+                star.extend(trunk_dot(floor));
+            }
             star
         }
         Form::Palm => {
@@ -512,16 +516,27 @@ fn symbol(form: Form, discs: &[(f64, f64, f64)], floor: f64, crown_r: f64, seed:
                 Lod::Fine => (18, 5),
             };
             let n = lobes * seg;
+            // every lobe its own reach and depth: a crown drawn by hand, not a cog wheel
+            let lobe: Vec<(f64, f64)> = (0..lobes).map(|_| (r.r(LOBE_REACH.0, LOBE_REACH.1), r.r(LOBE_DIP.0, LOBE_DIP.1))).collect();
             let pts: Vec<V2> = (0..n)
                 .map(|j| {
                     let th = off + TAU * j as f64 / n as f64;
                     let t = (j % seg) as f64 / seg as f64;
+                    let (amp, dip) = lobe[j / seg];
                     // a lobe is a bump: full radius at its middle, pinched at the joints
-                    at(th, reach(discs, floor, th) * (0.84 + 0.16 * (PI * (t + 0.5 / seg as f64)).sin()))
+                    at(th, reach(discs, floor, th) * amp * (1.0 - dip + dip * (PI * (t + 0.5 / seg as f64)).sin()))
                 })
                 .collect();
             let mut out = close(&pts);
             out.extend(spokes(discs, floor, seed, lod));
+            if lod != Lod::Coarse {
+                // the inner edge of the leaf mass on every other lobe, as a pen breaks it
+                for i in (0..lobes).step_by(2) {
+                    let k = i * seg;
+                    out.extend((k..k + seg - 1).map(|j| (pts[j] * INNER_EDGE, pts[j + 1] * INNER_EDGE)));
+                }
+                out.extend(trunk_dot(floor));
+            }
             out
         }
     }
@@ -567,6 +582,22 @@ fn spokes(discs: &[(f64, f64, f64)], floor: f64, seed: u64, lod: Lod) -> Vec<(V2
             }
         }
     }
+    out
+}
+
+/// Reach of a lobe of the broadleaf plan outline, as a share of the crown's reach.
+const LOBE_REACH: (f64, f64) = (0.9, 1.04);
+/// Depth of the pinch between two lobes, as a share of the reach.
+const LOBE_DIP: (f64, f64) = (0.1, 0.24);
+/// Inner edge of the leaf mass, as a share of the outline.
+const INNER_EDGE: f64 = 0.8;
+
+/// A dot inside the trunk circle: a small hexagon and its three diameters, drawn as lines.
+fn trunk_dot(floor: f64) -> Vec<(V2, V2)> {
+    let d = 0.55 * floor;
+    let p = |k: usize| v2(d * (TAU * k as f64 / 6.0).cos(), d * (TAU * k as f64 / 6.0).sin());
+    let mut out: Vec<(V2, V2)> = (0..6).map(|k| (p(k), p((k + 1) % 6))).collect();
+    out.extend((0..3).map(|k| (p(k), p(k + 3))));
     out
 }
 
