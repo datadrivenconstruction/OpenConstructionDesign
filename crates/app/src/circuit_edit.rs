@@ -71,6 +71,10 @@ impl Draft {
             let (v, f) = (self.loads[k], self.fam[k]);
             d.load = ((v - f).abs() > 1e-9).then_some(v);
         }
+        // a designation names the old section or core count
+        if s.cable != self.orig.cable || s.poles != self.orig.poles {
+            s.cable_type.clear();
+        }
         s
     }
 

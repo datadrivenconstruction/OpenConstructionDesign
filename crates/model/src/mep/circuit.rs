@@ -24,7 +24,8 @@ const DDL: &str = "CREATE TABLE IF NOT EXISTS elec_circuit(id INTEGER PRIMARY KE
  cable REAL NOT NULL, max_drop REAL NOT NULL, cos_phi REAL NOT NULL DEFAULT 0,
  laying TEXT NOT NULL DEFAULT 'conduit_wall', ambient_c REAL NOT NULL DEFAULT 30,
  grouped INTEGER NOT NULL DEFAULT 1, conductor TEXT NOT NULL DEFAULT 'cu',
- load_type TEXT NOT NULL DEFAULT '', UNIQUE(panel, number));
+ load_type TEXT NOT NULL DEFAULT '', rcd TEXT NOT NULL DEFAULT '',
+ cable_type TEXT NOT NULL DEFAULT '', UNIQUE(panel, number));
 CREATE TABLE IF NOT EXISTS elec_circuit_dev(id INTEGER PRIMARY KEY, circuit INTEGER NOT NULL,
  comp INTEGER NOT NULL, connector TEXT NOT NULL, load REAL, UNIQUE(comp, connector));
 CREATE INDEX IF NOT EXISTS elec_circuit_dev_circuit ON elec_circuit_dev(circuit);";
@@ -48,6 +49,12 @@ pub(crate) fn migrate(db: &Connection) -> Result<(), Error> {
         db.execute_batch(
             "ALTER TABLE elec_circuit ADD COLUMN conductor TEXT NOT NULL DEFAULT 'cu';
              ALTER TABLE elec_circuit ADD COLUMN load_type TEXT NOT NULL DEFAULT '';",
+        )?;
+    }
+    if !has_col(db, "elec_circuit", "rcd")? {
+        db.execute_batch(
+            "ALTER TABLE elec_circuit ADD COLUMN rcd TEXT NOT NULL DEFAULT '';
+             ALTER TABLE elec_circuit ADD COLUMN cable_type TEXT NOT NULL DEFAULT '';",
         )?;
     }
     Ok(())
@@ -117,6 +124,10 @@ pub struct CircuitSpec {
     pub ambient_c: f64,
     /// Circuits laid bunched together with this one, itself included.
     pub grouped: u32,
+    /// Residual current device in front of the breaker, as RCD1 4P 40A 30mA; empty: none.
+    pub rcd: String,
+    /// Cable designation, as NYM-J 3x2.5; empty: by the cross-section alone.
+    pub cable_type: String,
     pub devices: Vec<CircuitDevice>,
 }
 
@@ -141,6 +152,8 @@ impl CircuitSpec {
             laying: "conduit_wall".into(),
             ambient_c: rules.ambient_ref_c(),
             grouped: 1,
+            rcd: String::new(),
+            cable_type: String::new(),
             devices,
         }
     }
@@ -215,6 +228,8 @@ pub struct CircuitReport {
     pub conductor: Conductor,
     /// The reactance of the section is an estimate (the standard has no value for it).
     pub x0_estimated: bool,
+    pub rcd: String,
+    pub cable_type: String,
 }
 
 /// A panel schedule: one row per circuit and the totals.
@@ -348,6 +363,8 @@ fn spec_of(r: &rusqlite::Row) -> rusqlite::Result<(i64, CircuitSpec)> {
                     t
                 }
             },
+            rcd: r.get(17)?,
+            cable_type: r.get(18)?,
             devices: vec![],
         },
     ))
@@ -355,7 +372,7 @@ fn spec_of(r: &rusqlite::Row) -> rusqlite::Result<(i64, CircuitSpec)> {
 
 const COLS: &str =
     "id,panel,number,name,kind,system,voltage,poles,breaker,cable,max_drop,cos_phi,laying,\
-     ambient_c,grouped,conductor,load_type";
+     ambient_c,grouped,conductor,load_type,rcd,cable_type";
 
 fn devices_of(db: &Connection, id: i64) -> Result<Vec<CircuitDevice>, Error> {
     let mut st = db.prepare_cached(
@@ -437,8 +454,8 @@ fn insert_checked(db: &Connection, s: &CircuitSpec) -> Result<(i64, Inv), Error>
     };
     db.execute(
         "INSERT INTO elec_circuit(panel,number,name,kind,system,voltage,poles,breaker,cable,\
-         max_drop,cos_phi,laying,ambient_c,grouped,conductor,load_type) \
-         VALUES (?1,?2,?3,?4,?5,?6,?7,?8,?9,?10,?11,?12,?13,?14,?15,?16)",
+         max_drop,cos_phi,laying,ambient_c,grouped,conductor,load_type,rcd,cable_type) \
+         VALUES (?1,?2,?3,?4,?5,?6,?7,?8,?9,?10,?11,?12,?13,?14,?15,?16,?17,?18)",
         params![
             s.panel,
             number,
@@ -455,7 +472,9 @@ fn insert_checked(db: &Connection, s: &CircuitSpec) -> Result<(i64, Inv), Error>
             s.ambient_c,
             s.grouped,
             s.conductor.name(),
-            s.load_type
+            s.load_type,
+            s.rcd,
+            s.cable_type
         ],
     )?;
     let id = db.last_insert_rowid();
@@ -595,7 +614,7 @@ impl Model {
             let n = db.execute(
                 "UPDATE elec_circuit SET name=?1,kind=?2,voltage=?3,poles=?4,breaker=?5,cable=?6,\
                  max_drop=?7,cos_phi=?8,laying=?9,ambient_c=?10,grouped=?11,conductor=?12,\
-                 load_type=?13 WHERE id=?14",
+                 load_type=?13,rcd=?14,cable_type=?15 WHERE id=?16",
                 params![
                     s.name.trim(),
                     s.kind.name(),
@@ -610,6 +629,8 @@ impl Model {
                     s.grouped,
                     s.conductor.name(),
                     s.load_type,
+                    s.rcd,
+                    s.cable_type,
                     id
                 ],
             )?;
@@ -777,6 +798,8 @@ impl Model {
             load_type: s.load_type.clone(),
             conductor: s.conductor,
             x0_estimated: rules.x0(s.conductor, s.cable).1,
+            rcd: s.rcd.clone(),
+            cable_type: s.cable_type.clone(),
         };
         if current > s.breaker + 1e-9 {
             out.issues.push(CircuitIssue::Overload {
@@ -931,6 +954,8 @@ mod tests {
             load_type: "office".into(),
             conductor: Conductor::Cu,
             x0_estimated: false,
+            rcd: String::new(),
+            cable_type: String::new(),
         }
     }
 

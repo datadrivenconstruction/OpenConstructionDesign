@@ -1034,6 +1034,13 @@ pub struct GRcd {
     pub rating: f64,
 }
 
+impl GRcd {
+    /// As RCD1 4P 40A 30mA A (type A).
+    pub fn label(&self) -> String {
+        circuits::rcd_name(self)
+    }
+}
+
 /// A distribution board: its label, the board feeding it and its residual current devices.
 #[derive(Clone, Debug, PartialEq)]
 pub struct GBoard {
