@@ -365,3 +365,31 @@ fn services_follow_origin() {
     // errors only: what the design leaves out is info, told the same at either origin
     assert!(services_errors(&q).is_empty(), "{:?}", services_errors(&q));
 }
+
+#[test]
+fn the_board_room_of_a_house_is_powered_with_its_child_rooms() {
+    let p = build_project(&parse_spec(&json!({"typology": "house", "floors": 2, "services": true})).unwrap()).unwrap();
+    assert!(!p.services.circuits.is_empty(), "no circuit: {:?}", p.services.issues);
+    let board_rooms: Vec<&String> = p.services.issues.iter().filter(|i| i.contains("room 0 Corridor unpowered")).collect();
+    assert!(board_rooms.is_empty(), "{board_rooms:?}");
+}
+
+#[test]
+fn every_power_link_ends_a_run_at_its_connector() {
+    let p = build_project(&parse_spec(&json!({"typology": "house", "floors": 2, "services": true})).unwrap()).unwrap();
+    let ends: Vec<(f64, f64, f64)> = p.services.elec.iter().flat_map(|r| [r.points[0], *r.points.last().unwrap()]).collect();
+    let mut n = 0;
+    let mut bad = vec![];
+    for l in p.services.links.iter().filter(|l| l.sys == SvcSys::Power) {
+        let st = &p.storeys[l.storey];
+        let f = &st.layout.fixtures[l.fixture];
+        let Some(c) = svc_ports(f).into_iter().find(|c| c.name == l.connector) else { continue };
+        let q = (c.at.0, c.at.1, st.elevation + c.at.2);
+        n += 1;
+        if !ends.iter().any(|e| (e.0 - q.0).hypot(e.1 - q.1).hypot(e.2 - q.2) < 1e-6) {
+            bad.push(format!("st{} {} {} at {q:?}", l.storey, f.family, f.ty));
+        }
+    }
+    assert!(n > 0, "no power link");
+    assert!(bad.is_empty(), "{} connectors without a run end: {bad:?}", bad.len());
+}

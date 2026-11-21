@@ -153,6 +153,8 @@ struct Dev {
     use_: CircuitUse,
     /// An appliance placed before: its fixture index.
     existing: Option<usize>,
+    /// Its connector this far into the room from the wall face, m; a new device sits on the face.
+    off: f64,
 }
 
 /// A row of luminaires square to side `j` at `s`, at `ds` into the room.
@@ -287,6 +289,7 @@ fn plan(spec: &ProjectSpec, p: &GProject, k: usize, room: &Room, f_rel: f64, fps
                     load: c.flow,
                     use_: CircuitUse::Appliance,
                     existing: Some(i),
+                    off: room.sides[j].d_of(q),
                 });
             }
         }
@@ -323,7 +326,7 @@ fn plan(spec: &ProjectSpec, p: &GProject, k: usize, room: &Room, f_rel: f64, fps
                         .map(|d| s0 + d)
                         .find(|&s| wall_ok(room, j, s, zs, top, fps, false) && !occupied(&devs, &cols, j, s));
                     if let Some(s) = ok {
-                        devs.push(Dev { fam: "Socket Outlet", ty: sock.0, j, s, z: zs, load: sock.1, use_: CircuitUse::Sockets, existing: None });
+                        devs.push(Dev { fam: "Socket Outlet", ty: sock.0, j, s, z: zs, load: sock.1, use_: CircuitUse::Sockets, existing: None, off: 0.0 });
                         if one {
                             break 'sides;
                         }
@@ -356,7 +359,7 @@ fn plan(spec: &ProjectSpec, p: &GProject, k: usize, room: &Room, f_rel: f64, fps
                     let s = a + (b - a) * (i as f64 + 0.5) / cnt as f64;
                     let near_sink = sinks.iter().any(|q| (sd.s_of(*q) - s).abs() < sink_along && sd.d_of(*q) < sink_across);
                     if !near_sink && wall_ok(room, j, s, zw, top, fps, true) && !occupied(&devs, &cols, j, s) {
-                        devs.push(Dev { fam: "Socket Outlet", ty: "Double", j, s, z: zw, load: w_double, use_: CircuitUse::Worktop, existing: None });
+                        devs.push(Dev { fam: "Socket Outlet", ty: "Double", j, s, z: zw, load: w_double, use_: CircuitUse::Worktop, existing: None, off: 0.0 });
                     }
                 }
             }
@@ -386,7 +389,7 @@ fn plan(spec: &ProjectSpec, p: &GProject, k: usize, room: &Room, f_rel: f64, fps
                     let q = sd.at(s, 0.0);
                     let zone2 = wet.iter().any(|w| svc::hit(&svc::grow(w, n.zone2()), &[q.0, q.1, q.0, q.1], 0.0));
                     if !zone2 && ds.abs() <= n.basin_reach() && wall_ok(room, j, s, zw, top, fps, false) && !occupied(&devs, &cols, j, s) {
-                        devs.push(Dev { fam: "Socket Outlet", ty: "Single", j, s, z: zw, load: w_single, use_: CircuitUse::Wet, existing: None });
+                        devs.push(Dev { fam: "Socket Outlet", ty: "Single", j, s, z: zw, load: w_single, use_: CircuitUse::Wet, existing: None, off: 0.0 });
                         break 'basin;
                     }
                 }
@@ -483,7 +486,7 @@ fn plan(spec: &ProjectSpec, p: &GProject, k: usize, room: &Room, f_rel: f64, fps
             for g in sd.gaps.iter().filter(|g| g.door) {
                 for s in [g.s1 + beside, g.s0 - beside] {
                     if wall_ok(room, j, s, zsw, top, fps, false) && !occupied(&devs, &cols, j, s) {
-                        devs.push(Dev { fam: "Light Switch", ty: "One gang", j, s, z: zsw, load: 0.0, use_: CircuitUse::Lighting, existing: None });
+                        devs.push(Dev { fam: "Light Switch", ty: "One gang", j, s, z: zsw, load: 0.0, use_: CircuitUse::Lighting, existing: None, off: 0.0 });
                         break 'door;
                     }
                 }
@@ -726,7 +729,7 @@ fn build_room(
             TeeKind::Dev(i) => {
                 let d = &pl.devs[i];
                 let sd = &room.sides[d.j];
-                let w = sd.at(d.s, 0.0);
+                let w = sd.at(d.s, d.off);
                 let pz = e + d.z + if d.existing.is_some() { rule("services.elec.appliance_drop") } else { rule("services.elec.plate_drop") };
                 let pts = vec![v3(a.0, a.1, z), v3(w.0, w.1, z), v3(w.0, w.1, pz)];
                 runs.push(run_for(k, d.load, pts));
@@ -1007,6 +1010,8 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
         }
         // build in tree order; a room that does not fit loses its subtree
         let mut ok = vec![false; rs.len()];
+        // each built room's runs: a child's check takes the parent's carrier where its feed tees on
+        let mut room_runs: Vec<Vec<GRun>> = vec![vec![]; rs.len()];
         for &v in &order {
             if feed[v].is_some_and(|f| !ok[f.parent]) {
                 unserved += 1;
@@ -1045,7 +1050,7 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                 }
                 for (i, d) in pl.devs.iter().enumerate() {
                     let at = match spine[v] {
-                        Some(sj) => rs[v].sides[sj].s_of(rs[v].sides[d.j].at(d.s, 0.0)),
+                        Some(sj) => rs[v].sides[sj].s_of(rs[v].sides[d.j].at(d.s, d.off)),
                         None => carrier_at(&rs[v], None, d.j, ring_tee(&rs[v], d, corner_leg)),
                     };
                     tees.push(Tee { at, load: d.load, kind: TeeKind::Dev(i) });
@@ -1071,6 +1076,25 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                 let mut pseudo: Vec<V3> = b.ports.iter().map(|x| v3(x.1.at.0, x.1.at.1, x.1.at.2)).collect();
                 if let Some(f) = feed_from {
                     pseudo.push(f);
+                }
+                // the children's feeds are built with the children; their starts take the fittings
+                // where they tee on here, so they stand in, open at the child's carrier
+                let mut stubs: Vec<GRun> = vec![];
+                for (c, f) in order.iter().filter_map(|&c| feed[c].filter(|f| f.parent == v).map(|f| (c, f))) {
+                    let from = carrier_xy(&rs[v], spine[v], carrier_at(&rs[v], spine[v], f.pj, f.ps));
+                    let to = carrier_xy(&rs[c], spine[c], carrier_at(&rs[c], spine[c], f.cj, f.cs));
+                    stubs.push(run_for(k, sub[c], vec![v3(from.0, from.1, z), v3(to.0, to.1, z)]));
+                    pseudo.push(v3(to.0, to.1, z));
+                }
+                // the parent's carrier where the feed tees on, open at its other ends
+                let parent_here: Vec<GRun> = feed_from
+                    .zip(feed[v])
+                    .map(|(q, f)| room_runs[f.parent].iter().filter(|r| passes(r, q)).cloned().collect())
+                    .unwrap_or_default();
+                for r in &parent_here {
+                    for e in [r.points.first(), r.points.last()].into_iter().flatten() {
+                        pseudo.push(v3(e.0, e.1, e.2));
+                    }
                 }
                 if v == board_room {
                     let w = rs[v].sides[fb.j].at(fb.s, d_spine());
@@ -1117,6 +1141,8 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                     vec![]
                 };
                 check.extend(riser_here.iter());
+                check.extend(stubs.iter());
+                check.extend(parent_here.iter());
                 let faults = svc::net_faults_at(&check, &pseudo);
                 let bad = if faults.is_empty() { None } else { nearest_item(&pl, &rs[v], &faults) };
                 if let Some(item) = bad.filter(|_| attempt < attempts) {
@@ -1176,6 +1202,7 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                     lux_short += 1;
                 }
             }
+            room_runs[v] = b.runs.clone();
             runs.extend(b.runs);
             // fixtures and links
             let room = &pl.room;
@@ -1320,7 +1347,7 @@ fn hang(room: &Room, pl: &Plan, spine: Option<usize>, kind: TeeKind, k: usize) -
     let (w, run, far_tee) = match kind {
         TeeKind::Dev(i) => {
             let d = &pl.devs[i];
-            (room.sides[d.j].at(d.s, 0.0), run_for(k, d.load, vec![]), false)
+            (room.sides[d.j].at(d.s, d.off), run_for(k, d.load, vec![]), false)
         }
         TeeKind::Col(i) => {
             let c = &pl.cols[i];
@@ -1392,6 +1419,16 @@ fn left_out(k: usize, room: &Room, pl: &Plan, item: Item, why: &str) -> String {
         Item::Col(i) => format!("luminaire row of {} unlit", pl.cols[i].ds.len()),
     };
     format!("storey {k} room {} {:?}: {what}: {why}", room.idx, room.kind)
+}
+
+/// Whether point `q` lies on the run's axis.
+fn passes(r: &GRun, q: V3) -> bool {
+    r.points.windows(2).any(|w| {
+        let (a, b) = (v3(w[0].0, w[0].1, w[0].2), v3(w[1].0, w[1].1, w[1].2));
+        let ab = b - a;
+        let t = if ab.len() < EPS { 0.0 } else { ((q - a).dot(ab) / ab.dot(ab)).clamp(0.0, 1.0) };
+        (a + ab * t - q).len() < EPS
+    })
 }
 
 fn carrier_xy(room: &Room, spine: Option<usize>, at: f64) -> (f64, f64) {
