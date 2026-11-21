@@ -101,13 +101,9 @@ impl GfxState {
             self.lowered_at = Some(Instant::now());
         }
         // limits are applied by the renderer, the only one that knows what failed
-        Some(graphics::frame_fx(
-            style,
-            self.adaptive.budgets(),
-            &rung,
-            &Limits::default(),
-            moving,
-        ))
+        let mut fx = graphics::frame_fx(style, self.adaptive.budgets(), &rung, &Limits::default(), moving);
+        fx.wind = graphics::WIND_SWAY;
+        Some(fx)
     }
 
     /// A later frame must come even with no input: quality is below full or motion just ended.
@@ -607,6 +603,22 @@ mod tests {
         assert!(g.needs_repaint());
         g.frame(16.0, false, VisualStyle::Shaded);
         assert!(!g.needs_repaint());
+    }
+
+    #[test]
+    fn the_wind_blows_in_the_window_and_not_in_headless_frames() {
+        use ddc_render::{graphics::FrameFx, Quality};
+        for q in [Quality::Off, Quality::Medium, Quality::High] {
+            assert_eq!(FrameFx::from_quality(q).wind, 0.0);
+        }
+        let mut g = GfxState::default();
+        g.ready = true;
+        g.apply_level(PerfLevel::Balanced);
+        let fx = g.frame(16.0, false, VisualStyle::Realistic).unwrap();
+        assert!(fx.wind > 0.0 && fx.wind < 0.2, "{}", fx.wind);
+        let rung = g.adaptive.frame(16.0, false);
+        let bench = graphics::frame_fx(VisualStyle::Realistic, g.adaptive.budgets(), &rung, &Limits::default(), false);
+        assert_eq!(bench.wind, 0.0);
     }
 
     #[test]
