@@ -108,9 +108,44 @@ fn vs_light(v: VIn) -> VOut {
 }
 
 // depth without colour (shadow map and pre-pass): clip box only
+// lattice noise in 0..1: the leaf clusters of a crown, in world space (a crown keeps its holes
+// when the camera moves)
+fn lat3(p: vec3<f32>) -> f32 {
+    let c = vec3<i32>(floor(p));
+    return f32(mix32(u32(c.x) * 0x9e3779b1u ^ mix32(u32(c.y) * 0x85ebca6bu ^ mix32(u32(c.z) * 0xc2b2ae35u)))) / 4294967295.0;
+}
+fn vnoise(p: vec3<f32>) -> f32 {
+    let f = fract(p);
+    let s = f * f * (3.0 - 2.0 * f);
+    let b = vec3<f32>(floor(p));
+    let x00 = mix(lat3(b), lat3(b + vec3<f32>(1.0, 0.0, 0.0)), s.x);
+    let x10 = mix(lat3(b + vec3<f32>(0.0, 1.0, 0.0)), lat3(b + vec3<f32>(1.0, 1.0, 0.0)), s.x);
+    let x01 = mix(lat3(b + vec3<f32>(0.0, 0.0, 1.0)), lat3(b + vec3<f32>(1.0, 0.0, 1.0)), s.x);
+    let x11 = mix(lat3(b + vec3<f32>(0.0, 1.0, 1.0)), lat3(b + vec3<f32>(1.0, 1.0, 1.0)), s.x);
+    return mix(mix(x00, x10, s.y), mix(x01, x11, s.y), s.z);
+}
+
+// Foliage cut-out: the smooth crown solid is eaten into leaf clusters, more where the surface
+// turns from the eye (the edge of the crown), so the silhouette breaks up and the branches and
+// sky show through. Fades out when a cluster is smaller than a few pixels.
+fn leaf_cut(world: vec3<f32>, sn: vec3<f32>, px_m: f32) -> bool {
+    let fade = 1.0 - smoothstep(0.06, 0.16, px_m);
+    if (fade <= 0.0) { return false; }
+    let e = normalize(u.eye.xyz - world);
+    let edge = 1.0 - abs(dot(normalize(sn), e));
+    let n = 0.5 * vnoise(world * 1.7) + 0.5 * vnoise(world * 4.6 + vec3<f32>(7.3, 1.9, 4.1));
+    let gaps = smoothstep(0.30, 0.0, vnoise(world * 1.3 + vec3<f32>(3.1, 8.7, 2.2)));
+    let t = (0.30 + 0.80 * smoothstep(0.25, 0.95, edge) + 0.30 * gaps) * fade;
+    return n < t;
+}
+
+fn is_leaf(tag: u32) -> bool { return (tag & 0xF0000000u) == 0x50000000u; }
+
 @fragment
 fn fs_clip(i: VOut) {
+    let px = length(dpdx(i.world)) + length(dpdy(i.world));
     if (clipped(i.world) || face_dropped(i.tag, i.clip.xy, i.elem)) { discard; }
+    if (is_leaf(i.tag) && leaf_cut(i.world, i.snrm, px)) { discard; }
 }
 
 // Ground: a large quad that receives sun shadow; colour is a darkening over the background.
