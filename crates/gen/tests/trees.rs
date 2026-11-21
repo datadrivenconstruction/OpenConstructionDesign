@@ -34,10 +34,16 @@ fn trees(p: &GProject) -> Vec<(&'static str, f64)> {
 fn trees_are_of_many_species_and_turned_differently() {
     let t = trees(&site(None, 12));
     assert!(t.len() >= 6, "{t:?}");
-    // a species repeats only once the mix is used up, so the first dozen are all different
-    let first: Vec<_> = t.iter().take(12).map(|x| x.0).collect();
-    let kinds: std::collections::BTreeSet<_> = first.iter().collect();
-    assert_eq!(kinds.len(), first.len(), "{t:?}");
+    // the street row is an avenue of one species; off it a species repeats only once the mix is
+    // used up, so the first dozen are all different
+    let mut count: std::collections::BTreeMap<&str, usize> = std::collections::BTreeMap::new();
+    for x in &t {
+        *count.entry(x.0).or_default() += 1;
+    }
+    let avenue = count.iter().max_by_key(|c| *c.1).map(|c| *c.0).unwrap();
+    let rest: Vec<_> = t.iter().filter(|x| x.0 != avenue).take(12).map(|x| x.0).collect();
+    let kinds: std::collections::BTreeSet<_> = rest.iter().collect();
+    assert!(count[avenue] >= 3 && kinds.len() == rest.len() && rest.len() >= 5, "{t:?}");
     let turns: std::collections::BTreeSet<u64> = t.iter().map(|x| x.1.to_bits()).collect();
     assert_eq!(turns.len(), t.len());
     assert!(t.iter().all(|x| x.0 != "Large" && x.0 != "Small"));
@@ -173,4 +179,22 @@ fn trees_stand_in_groups_not_in_a_ruled_ring() {
     // a tree left out where it did not fit may bring two of a species together, once at most
     let twins = t.windows(2).filter(|w| ddc_gen::project::species_of(w[0].ty) == ddc_gen::project::species_of(w[1].ty)).count();
     assert!(twins <= 1, "{:?}", t.iter().map(|f| f.ty).collect::<Vec<_>>());
+}
+
+/// A street row is planted of one species whose crown fits the spacing, so no row tree is
+/// shrunk to fit; the season keeps the species.
+#[test]
+fn a_street_row_is_an_avenue_of_one_species_that_fits_its_spacing() {
+    for season in ["summer", "winter"] {
+        let t = planted(json!({"site.tree_size_jitter": 0.0, "site.tree_season": season}), 14);
+        let mut rows: std::collections::BTreeMap<i64, Vec<&ddc_gen::GFixture>> = std::collections::BTreeMap::new();
+        for f in &t {
+            rows.entry((f.at.1 * 100.0).round() as i64).or_default().push(f);
+        }
+        let (_, row) = rows.iter().max_by_key(|r| r.1.len()).unwrap();
+        assert!(row.len() >= 4, "{season}: {:?}", t.iter().map(|f| (f.ty, f.at)).collect::<Vec<_>>());
+        let sp = ddc_gen::project::species_of(row[0].ty);
+        assert!(row.iter().all(|f| ddc_gen::project::species_of(f.ty) == sp), "{season}: {:?}", row.iter().map(|f| f.ty).collect::<Vec<_>>());
+        assert!(t.iter().all(|f| f.scale == 1.0), "{season}: {:?}", t.iter().map(|f| (f.ty, f.scale)).collect::<Vec<_>>());
+    }
 }

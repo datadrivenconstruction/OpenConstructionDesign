@@ -528,10 +528,16 @@ fn site(l: &mut GLayout, band: f64, trees: u32, courtyard: Option<&[P]>) -> Resu
             }
         }
         // rows along the street and the paths: ruled, the group trees keep clear of their places
-        for p in &land.rows {
-            let Some(((ty, turn), c)) = picks.next() else { break };
+        // a row is of one species whose crown fits its spacing (the first such of its draws, by
+        // the widest crown of any season, or else the narrowest), as an avenue is planted
+        let row: Vec<_> = picks.by_ref().take(land.rows.len()).collect();
+        let step = land.rows.windows(2).map(|w| len(sub(w[1], w[0]))).filter(|d| *d > 1e-6).fold(f64::MAX, f64::min);
+        let narrowest = row.iter().min_by(|a, b| a.1.total_cmp(&b.1));
+        let avenue = row.iter().find(|x| x.1 <= step).or(narrowest).map(|x| (x.0 .0, x.1));
+        for (p, ((_, turn), _)) in land.rows.iter().zip(&row) {
+            let Some((ty, c)) = avenue else { break };
             if spots.iter().all(|q| len(sub(q.0, *p)) >= TREE_SPACING) {
-                spots.push((*p, ty, turn, false, c));
+                spots.push((*p, ty, *turn, false, c));
             }
         }
         if let Some(cy) = courtyard {
