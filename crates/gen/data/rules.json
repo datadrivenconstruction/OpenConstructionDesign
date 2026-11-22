@@ -1336,6 +1336,7 @@
     {"id": "plant.route.step", "group": "plant", "unit": "m", "min": 0.1, "max": 1, "default": 0.3, "why": "Grid step of the pipe routing. Design choice."},
     {"id": "plant.route.bend_cost", "group": "plant", "unit": "m", "min": 0, "max": 5, "default": 1.5, "why": "Pipe metres one elbow is worth to the router. Design choice."},
     {"id": "plant.route.max_tiers", "group": "plant", "unit": "count", "min": 1, "max": 6, "default": 4, "int": true, "why": "The router adds tiers up to this many until every line fits. Design choice."},
+    {"id": "plant.route.max_states", "group": "plant", "unit": "count", "min": 10000, "max": 4000000, "default": 400000, "int": true, "why": "Search budget of one pipe path; past it the end is reported unrouted. Design choice."},
     {"id": "plant.hall.module", "group": "plant", "unit": "m", "min": 0.3, "max": 6, "default": 1.5, "why": "Hall length and width round up to this module. Design choice."},
     {"id": "plant.hall.roof_clear", "group": "plant", "unit": "m", "min": 0.1, "max": 1.5, "default": 0.4, "why": "Gap from the highest pipe to the roof structure. Design choice."},
     {"id": "plant.drain.cover", "group": "plant", "unit": "m", "min": 0.1, "max": 1, "default": 0.3, "why": "Depth of the drain layer below the floor. Design choice."},

@@ -215,6 +215,8 @@
  "gen.rule.plant.rack.z_out.title": "Outdoor rack height",
  "gen.rule.plant.route.bend_cost.desc": "Pipe metres one elbow is worth to the router.",
  "gen.rule.plant.route.bend_cost.title": "Elbow cost",
+ "gen.rule.plant.route.max_states.desc": "Search budget of one pipe path; past it the end is reported unrouted.",
+ "gen.rule.plant.route.max_states.title": "Routing search budget",
  "gen.rule.plant.route.max_tiers.desc": "The router adds tiers up to this many until every line fits.",
  "gen.rule.plant.route.max_tiers.title": "Most rack tiers",
  "gen.rule.plant.route.step.desc": "Grid step of the pipe routing.",

@@ -363,6 +363,7 @@ fn route_all(t: &Topo, lay: &Lay, tiers: &[f64]) -> Raw {
             rules.zone = (suction[0], suction[suction.len() - 1]);
         }
         rules.step = rule("plant.route.step");
+        rules.max_states = rule("plant.route.max_states") as usize;
         rules.tangent = g.tangent;
         rules.tee_leg = (TEE_K * g.tangent).min(g.min_leg);
         rules.bend_cost = rule("plant.route.bend_cost");
@@ -382,7 +383,42 @@ fn route_all(t: &Topo, lay: &Lay, tiers: &[f64]) -> Raw {
             })
             .collect();
         let mut ri = RoutedIndex::new(others);
+        let t0 = std::time::Instant::now();
+        let keep = ri.clone();
         let mut tree = r3::route_tree(&ix, &rules, &src, &targets, &mut ri);
+        // a short header to the nearest end can shut the others out: try the farthest first
+        if !tree.failed.is_empty() && targets.len() > 1 {
+            let mut far = rules.clone();
+            far.far_first = true;
+            let mut ri2 = keep;
+            let t2 = r3::route_tree(&ix, &far, &src, &targets, &mut ri2);
+            if t2.failed.len() < tree.failed.len() {
+                tree = t2;
+            }
+        }
+        if std::env::var("PLANT_T").is_ok() {
+            eprintln!("PLANT_T {} tiers {} targets {} failed {} {:.1}s", l.number(), tiers.len(), targets.len(), tree.failed.len(), t0.elapsed().as_secs_f64());
+            if !tree.failed.is_empty() {
+                eprintln!("  root {}.{} at {:?} dir {:?} layers {:?} clear {:.2} min_leg {:.2} tan {:.2}", t.eqs[l.root.eq].tag, t.eqs[l.root.eq].nozzles[l.root.nz].name, sa, sd, layers, g.clear, g.min_leg, g.tangent);
+                for (j, e) in l.ends.iter().enumerate() {
+                    if let Some(d) = targets[j].dir {
+                        let (a, b) = (targets[j].at, targets[j].at + d * (g.reach() + g.min_leg));
+                        let c = g.clear + 0.1;
+                        for o in base.iter().chain(fronts.iter().map(|f| &f.1)) {
+                            let (x0, x1) = o.ring.iter().fold((f64::MAX, f64::MIN), |m, p| (m.0.min(p.x), m.1.max(p.x)));
+                            let (y0, y1) = o.ring.iter().fold((f64::MAX, f64::MIN), |m, p| (m.0.min(p.y), m.1.max(p.y)));
+                            if x0 - c < a.x.max(b.x) && x1 + c > a.x.min(b.x) && y0 - c < a.y.max(b.y) && y1 + c > a.y.min(b.y) && o.z0 - c < a.z.max(b.z) && o.z1 + c > a.z.min(b.z) {
+                                eprintln!("    near tag {} x {:.2}..{:.2} y {:.2}..{:.2} z {:.2}..{:.2}", o.tag, x0, x1, y0, y1, o.z0, o.z1);
+                            }
+                        }
+                    }
+                    eprintln!("  end {}.{} at {:?} dir {:?} failed {}", t.eqs[e.eq].tag, t.eqs[e.eq].nozzles[e.nz].name, targets[j].at, targets[j].dir, tree.failed.contains(&j));
+                }
+                for b in &tree.branches {
+                    eprintln!("  br {:?}", b.points.iter().map(|p| format!("({:.2},{:.2},{:.2})", p.x, p.y, p.z)).collect::<Vec<_>>());
+                }
+            }
+        }
         if drain {
             let zd = h.drain_z;
             let on: Vec<Vec<bool>> = tree.branches.iter().map(|b| b.points.iter().map(|p| (p.z - zd).abs() < ON).collect()).collect();

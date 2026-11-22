@@ -709,7 +709,7 @@ fn platform(e: &Equip, t: &Topo, p: &LocalPlatform, tag: &str, steel: &mut Vec<S
         .filter(|n| n.dir.z.abs() < 0.5 && n.at.z < deck)
         .map(|n| {
             let g = route::geo(&t.lines[n.line], &t.eqs);
-            (n.at, n.at + n.dir * (g.reach() + g.clear), g.clear)
+            (n.at, n.at + n.dir * (g.reach() + g.min_leg + g.clear), g.clear)
         })
         .collect();
     // deck corners: the access end is the one the access direction points at
@@ -738,7 +738,7 @@ fn platform(e: &Equip, t: &Topo, p: &LocalPlatform, tag: &str, steel: &mut Vec<S
         for j in 0..=m {
             let q0 = a + (b - a) * (j as f64 / m as f64);
             // a post steps along its edge, staying on it, off the stubs that pass under the deck
-            let clear = |q: V3| stubs.iter().all(|(s0, s1, c)| seg_seg_dist(z(q, 0.0), z(q, deck), *s0, *s1) >= c + STEEL_R + POST_GAP);
+            let clear = |q: V3| stubs.iter().all(|(s0, s1, c)| seg_seg_dist(z(q, 0.0), z(q, deck), *s0, *s1) >= 2.0 * c + STEEL_R + POST_GAP);
             let q = (0..=(2.0 * l / POST_GAP) as usize)
                 .map(|k| k.div_ceil(2) as f64 * POST_GAP * if k % 2 == 0 { 1.0 } else { -1.0 })
                 .map(|d| q0 + along * d)

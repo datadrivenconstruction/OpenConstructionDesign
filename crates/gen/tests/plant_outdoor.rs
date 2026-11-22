@@ -59,6 +59,15 @@ fn probe() {
             }
         }
         if std::env::var("PROBE_EQ").is_ok() {
+            for q in &p.platforms {
+                println!("  plat {} deck {:.2} lo ({:.1},{:.1}) hi ({:.1},{:.1}) access {:?} {:?}", q.serves, q.deck, q.lo.x, q.lo.y, q.hi.x, q.hi.y, (q.access.lo, q.access.hi), q.extra.iter().map(|a| (a.lo, a.hi)).collect::<Vec<_>>());
+            }
+            for e in p.equipment.iter().filter(|e| e.tag == "P-104" || e.tag == "P-106") {
+                for n in &e.nozzles {
+                    let (a, d) = e.nozzle_world(e.nozzles.iter().position(|m| m.name == n.name).unwrap());
+                    println!("  nz {}.{} at ({:.2},{:.2},{:.2}) dir ({:.0},{:.0},{:.0})", e.tag, n.name, a.x, a.y, a.z, d.x, d.y, d.z);
+                }
+            }
             for e in &p.equipment {
                 let (lo, hi) = e.extent();
                 println!("  {} {:?} {} at ({:.1},{:.1},{:.1}) rot {} size ({:.1},{:.1},{:.1}) row {:?}", e.tag, e.kind, e.role, e.at.x, e.at.y, e.at.z, e.rot, hi.x - lo.x, hi.y - lo.y, hi.z - lo.z, e.row);

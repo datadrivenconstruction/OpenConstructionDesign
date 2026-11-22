@@ -394,6 +394,8 @@ fn vessel(f: &mut F, e: &mut Equip, lines: &[Line]) {
     }
     // side nozzles by side and level, spread along the shell or stacked if crowded
     let reach = rule("plant.access.reach");
+    // side nozzles placed so far: spot, nozzle, height and offset along the shell
+    let mut placed: Vec<(Spot, usize, f64, f64)> = vec![];
     for spot in [Spot::Left, Spot::Right, Spot::Back] {
         for level in [Level::Low, Level::Mid, Level::High] {
             let ks: Vec<usize> = (0..e.nozzles.len())
@@ -426,6 +428,14 @@ fn vessel(f: &mut F, e: &mut Equip, lines: &[Line]) {
                 if rise > 0.0 {
                     zz = zz.min(reach - rise).max(za + m);
                 }
+                // two levels brought down to one stack up rather than share a spot
+                while let Some(&(_, o, oz, _)) = placed
+                    .iter()
+                    .find(|&&(sp, o, oz, ot)| sp == spot && (ot - t).abs() + 1e-6 < pitch(e, o, k, lines) && (oz - zz).abs() + 1e-6 < pitch(e, o, k, lines))
+                {
+                    zz = oz + pitch(e, o, k, lines);
+                }
+                placed.push((spot, k, zz, t));
                 let along = (rs * rs - t * t).max(0.0).sqrt();
                 let (root, face, dir) = match spot {
                     Spot::Left => (v3(-along, t, zz), v3(-rs - z.proj, t, zz), v3(-1.0, 0.0, 0.0)),

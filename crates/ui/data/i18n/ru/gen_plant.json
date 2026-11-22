@@ -215,6 +215,8 @@
  "gen.rule.plant.rack.z_out.title": "Высота наружной эстакады",
  "gen.rule.plant.route.bend_cost.desc": "Сколько метров трубы стоит один отвод при трассировке.",
  "gen.rule.plant.route.bend_cost.title": "Цена отвода",
+ "gen.rule.plant.route.max_states.desc": "Бюджет поиска одного пути трубы; сверх него конец считается непроложенным.",
+ "gen.rule.plant.route.max_states.title": "Бюджет поиска трассы",
  "gen.rule.plant.route.max_tiers.desc": "Трассировщик добавляет ярусы до этого числа, пока не пройдут все линии.",
  "gen.rule.plant.route.max_tiers.title": "Наибольшее число ярусов",
  "gen.rule.plant.route.step.desc": "Шаг сетки трассировки труб.",

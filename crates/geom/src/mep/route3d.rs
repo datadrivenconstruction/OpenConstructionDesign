@@ -233,6 +233,8 @@ pub struct Rules {
     pub axes: (Vec<f64>, Vec<f64>),
     /// Factor (<= 1) on metres along an attractive line.
     pub axis_gain: f64,
+    /// The first branch goes to the farthest target, so a header runs past the nearer ones.
+    pub far_first: bool,
     /// z of horizontal travel.
     pub layers: Vec<f64>,
     /// Plan bounds of the lattice.
@@ -272,6 +274,7 @@ impl Rules {
             off_zone: 4.0,
             axes: (vec![], vec![]),
             axis_gain: 1.0,
+            far_first: false,
             layers,
             bounds,
             max_states: 400_000,
@@ -505,9 +508,6 @@ struct Search<'a> {
     /// Port straights of the targets not routed yet (target, port, escape, clearance): an
     /// earlier branch keeps clear of them; a target's own leaves the list as it is routed.
     pending: Vec<(usize, V3, V3, f64)>,
-    last_exp: usize,
-    last_box: (V3, V3),
-    last_zs: Vec<i64>,
 }
 
 #[derive(PartialEq)]
@@ -594,9 +594,6 @@ impl<'a> Search<'a> {
             near: vec![],
             others,
             pending: vec![],
-            last_exp: 0,
-            last_box: (v3(1e9, 1e9, 1e9), v3(-1e9, -1e9, -1e9)),
-            last_zs: vec![],
             stale: 0,
         }
     }
@@ -730,9 +727,6 @@ impl<'a> Search<'a> {
         end: Option<EndRun>,
     ) -> Option<Vec<V3>> {
         let r = self.rules;
-        self.last_exp = 0;
-        self.last_box = (v3(1e9, 1e9, 1e9), v3(-1e9, -1e9, -1e9));
-        self.last_zs.clear();
         let n0 = self.lat.node(start)?;
         let quarter = (r.min_leg / 4.0).max(1e-6);
         let qof = |acc: f64| ((acc / quarter + 1e-6).floor() as u8).min(4);
@@ -778,8 +772,6 @@ impl<'a> Search<'a> {
                 return Some(pts);
             }
             expanded += 1;
-            self.last_exp = expanded;
-            { let p = self.lat.at(n); let (lo, hi) = &mut self.last_box; *lo = v3(lo.x.min(p.x), lo.y.min(p.y), lo.z.min(p.z)); *hi = v3(hi.x.max(p.x), hi.y.max(p.y), hi.z.max(p.z)); if std::env::var("R3ZS").is_ok() { self.last_zs.push((p.z * 100.0).round() as i64); } }
             if expanded > r.max_states {
                 return None;
             }
@@ -800,10 +792,8 @@ impl<'a> Search<'a> {
                     _ => r.clearance,
                 };
                 let Some(info) = self.edge(n, nd, cl) else {
-                    if expanded == 1 && std::env::var("R3DBG").is_ok() { let (a, b) = (self.lat.at(n), self.lat.at(m)); let hs: Vec<_> = self.hits(a, b, cl).iter().map(|h| (self.ix.obstacles[h.0 as usize].tag, self.ix.obstacles[h.0 as usize].pass)).collect(); eprintln!("R3DBG first {nd} {a:?}->{b:?} blocked {hs:?}"); }
                     continue;
                 };
-                if expanded == 1 && std::env::var("R3DBG").is_ok() { let (a, b) = (self.lat.at(n), self.lat.at(m)); eprintln!("R3DBG first {nd} {a:?}->{b:?} free_others {} turn {turn} q {q} tq {tq}", self.free_of_others(a, b, None, cl)); }
                 let (a, b) = (self.lat.at(n), self.lat.at(m));
                 let touch = goal.joins.get(&m).filter(|ax| **ax != nd / 2).map(|_| b);
                 if !self.free_of_others(a, b, touch, cl) {
@@ -1012,10 +1002,14 @@ pub fn route_tree(
         .collect();
     while !left.is_empty() {
         // nearest target to the tree first (to the source while the tree is empty)
+        let far = rules.far_first && left.len() == targets.len();
         let (pos, &ti) = left
             .iter()
             .enumerate()
-            .min_by(|a, b| near[*a.1].total_cmp(&near[*b.1]).then(a.1.cmp(b.1)))
+            .min_by(|a, b| {
+                let o = near[*a.1].total_cmp(&near[*b.1]);
+                if far { o.reverse() } else { o }.then(a.1.cmp(b.1))
+            })
             .expect("left is not empty");
         left.remove(pos);
         s.pending.retain(|p| p.0 != ti);
@@ -1111,11 +1105,6 @@ pub fn route_tree(
             continue;
         }
         let Some(mut pts) = s.path(e, edir, eacc, &goal, end_of(ti)) else {
-            if std::env::var("R3DBG").is_ok() {
-                let hs: Vec<_> = s.hits(t.at, e, rules.clearance).iter().map(|h| s.ix.obstacles[h.0 as usize].tag).collect();
-                let src_e = match source { Source::Terminal(st) => { let (se, _, _) = escape(st, rules, None); let h2: Vec<_> = s.hits(st.at, se, rules.clearance).iter().map(|h| s.ix.obstacles[h.0 as usize].tag).collect(); format!("src {:?} esc {:?} hits {:?} oth {}", st.at, se, h2, s.others.clear(st.at, se, rules.clearance, None)) }, _ => "lines".into() };
-                eprintln!("R3DBG fail t {:?} e {:?} node {:?} hits {:?} oth {} segs {} joins {} exp {} box {:?} zs {:?} lat_z {:?} | {}", t.at, e, s.lat.node(e).is_some(), hs, s.others.clear(t.at, e, rules.clearance, None), segs.len(), joins.len(), s.last_exp, s.last_box, { let mut z = s.last_zs.clone(); z.sort(); z.dedup(); z }, s.lat.line(2), src_e);
-            }
             tree.failed.push(ti);
             continue;
         };
