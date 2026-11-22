@@ -2479,7 +2479,7 @@ fn design(
                     } else if let Some(x) = dr.x {
                         x
                     } else {
-                        let stub = node_trim(&dn, &[(dj, 0.0), (dr.d, 0.0)]) + dn.drop_bend * dr.d + dn.margin;
+                        let stub = node_trim(&dn, &[(dj, 0.0), (dr.d, 0.0)]).max(tee_leg((dj, 0.0))) + dn.drop_bend * dr.d + dn.margin;
                         let mid = f.rooms.iter().find(|r| r.room == dr.room).map_or(t.x, |r| (r.r.0 + r.r.2) / 2.0);
                         if mid >= t.x { t.x + stub } else { t.x - stub }
                     };
@@ -2747,7 +2747,7 @@ fn branch_plan(cx: &Ctx, sh: &Shaft, wants: &[Want], taps: &[Tap], k: usize, s: 
                 continue;
             }
             let xd = dr.x.unwrap_or_else(|| {
-                let stub = node_trim(dn, &[(w.d, 0.0), (dr.d, 0.0)]) + dn.drop_bend * dr.d + dn.margin;
+                let stub = node_trim(dn, &[(w.d, 0.0), (dr.d, 0.0)]).max(tee_leg((w.d, 0.0))) + dn.drop_bend * dr.d + dn.margin;
                 let mid = f.rooms.iter().find(|r| r.room == dr.room).map_or(t.x, |r| (r.r.0 + r.r.2) / 2.0);
                 if mid >= t.x { t.x + stub } else { t.x - stub }
             });
@@ -2825,6 +2825,8 @@ fn borrow(cx: &Ctx, sh: &Shaft, wants: &mut [Want], floor_taps: &mut [[Vec<Tap>;
                     let Some(rj) = f.rooms.iter().find(|r| r.room == wj.room) else { continue };
                     let Some(last) = wj.drops.last().map(|d| d.y) else { continue };
                     let d_new = round(&dn, wj.q + wi.q, dn.v_branch).max(wj.d);
+                    // a stub off the branch holds the tee it leaves by and the elbow into its drop
+                    let stub_min = node_trim(&dn, &[(d_new, 0.0), (dd, 0.0)]).max(tee_leg((d_new, 0.0)).max(tee_leg((dd, 0.0)))) + dn.drop_bend * dd + dn.margin;
                     // on its line: drops off the branch where it crosses the room, or the branch
                     // runs on into a room beyond its own
                     let need = node_trim(&dn, &[main_widest(&dn, f.total[s], h_max), (d_new, 0.0)]) + dn.drop_bend * d_new + dn.margin;
@@ -2847,7 +2849,7 @@ fn borrow(cx: &Ctx, sh: &Shaft, wants: &mut [Want], floor_taps: &mut [[Vec<Tap>;
                                 continue;
                             }
                             let far = ys.iter().copied().fold(last, |a, y| if (y - ym) * wi.side > (a - ym) * wi.side { y } else { a });
-                            let stub = node_trim(&dn, &[(d_new, 0.0), (dd, 0.0)]) + dn.drop_bend * dd + dn.margin;
+                            let stub = stub_min;
                             let xd = if mid >= t.x { t.x + stub } else { t.x - stub };
                             // the branch's new end stands on its line, the other drops off it
                             let at = |y: f64| if (y - far).abs() < 1e-9 && (far - last).abs() > 1e-9 { t.x } else { xd };
@@ -2870,8 +2872,15 @@ fn borrow(cx: &Ctx, sh: &Shaft, wants: &mut [Want], floor_taps: &mut [[Vec<Tap>;
                     let mut ys: Vec<f64> = std::iter::once(ym + wi.side * need).chain(wj.drops.iter().map(|d| d.y)).collect();
                     ys.sort_by(|a, b| ((a - ym) * wi.side).total_cmp(&((b - ym) * wi.side)));
                     let sep = node_trim(&dn, &[(d_new, 0.0), (dd, 0.0)]) + dn.drop_bend * dd + dn.margin;
+                    // the partition the stub passes takes a fire damper: clear of the tee
+                    // behind it and of the elbow ahead
+                    let wall = if t.x < ri.r.0 { ri.r.0 } else { ri.r.2 };
+                    let dl = rule("mep.hvac.damper_len");
+                    if (wall - t.x).abs() < tee_leg((d_new, 0.0)) + dl + dn.margin {
+                        continue;
+                    }
                     for &xi in &xis {
-                        if (t.x - xi).abs() > reach || (t.x - xi).abs() < 1e-6 {
+                        if (t.x - xi).abs() > reach || (t.x - xi).abs() < stub_min || (xi - wall).abs() < dl + dn.drop_bend * dd + dn.margin {
                             continue;
                         }
                         let mut gaps: Vec<f64> = vec![];

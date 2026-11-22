@@ -619,7 +619,7 @@ fn place_boxes(p: &GProject, air: &mut Air, solids: &[Solid]) {
                 continue;
             }
             let l = dist(a, b);
-            let u0 = straight * s.d + s.l / 2.0;
+            let u0 = (straight * s.d).max(tee_leg_at(air, k, a) + 0.02) + s.l / 2.0;
             let u1 = l - after - s.l / 2.0;
             let d = unit(a, b);
             let rot = d.1.atan2(d.0);
@@ -739,7 +739,9 @@ fn dampers(p: &GProject, air: &mut Air) {
         if takeoff && (r.sys == AirSys::Extract || rule("mep.hvac.volume_damper_supply") >= 1.0) {
             let (a, b) = (r.points[0], r.points[1]);
             let l = dist(a, b);
-            let u = rule("mep.hvac.damper_off").min(l / 2.0);
+            // clear of the tee the branch leaves its main by, as the model cuts it
+            let leg = tee_leg_at(air, r.storey, a);
+            let u = rule("mep.hvac.damper_off").max(leg + dl).min(l / 2.0);
             let d = unit(a, b);
             air.dampers.push(make(Kind::VolumeDamper, (a.0 + d.0 * u, a.1 + d.1 * u, a.2), d));
         }
@@ -747,6 +749,19 @@ fn dampers(p: &GProject, air: &mut Air) {
     for (i, d) in air.dampers.iter_mut().enumerate() {
         d.tag = format!("{}{}", d.kind.tag(), i + 1);
     }
+}
+
+/// The leg the model cuts at a tee at `at`: the envelope of the widest run meeting there.
+fn tee_leg_at(air: &Air, storey: usize, at: P3) -> f64 {
+    air.runs
+        .iter()
+        .filter(|q| q.storey == storey && q.points.iter().any(|&c| dist(c, at) < 1e-3))
+        .map(|q| {
+            let mut s = super::super::svc::duct_section(q.size);
+            s.insulation = q.insulation;
+            ddc_geom::mep::junction_leg(&s)
+        })
+        .fold(0.0, f64::max)
 }
 
 fn overflow(p: &GProject, air: &mut Air) {
