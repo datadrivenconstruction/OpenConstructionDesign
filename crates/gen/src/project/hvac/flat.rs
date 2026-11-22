@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A heat-recovery unit in each flat instead of the central system: the unit hangs under the
 //! slab of the flat's storage room or hall, a manifold over each port feeds one duct to each
 //! terminal of the flat, and its outdoor and exhaust ducts run to the flat's own facade.
