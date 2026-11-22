@@ -501,10 +501,10 @@ fn a_tree_scene_carries_lighter_levels_and_part_materials() {
     let k = sc.instances[0].mesh;
     let full = sc.meshes[k].triangles.len();
     let lv = &sc.lods[k];
-    assert_eq!(lv.len(), 2, "medium and coarse below the fine body");
+    assert_eq!(lv.len(), 3, "medium, coarse and the far picture below the fine body");
     let tris: Vec<usize> = lv.iter().map(|l| l.0.triangles.len()).collect();
-    assert!(tris[0] < full && tris[1] < tris[0], "{full} {tris:?}");
-    assert!(lv[0].2 < lv[1].2, "the coarser the larger the error");
+    assert!(tris[0] < full && tris[1] < tris[0] && tris[2] < tris[1], "{full} {tris:?}");
+    assert!(lv[0].2 < lv[1].2 && lv[1].2 < lv[2].2, "the coarser the larger the error");
     // Oak A declares its own bark (Bark Dark); its leaves keep the family default
     assert!(sc.materials[k].iter().any(|x| x == "Bark Dark") && sc.materials[k].iter().any(|x| x == "Foliage Green"), "{:?}", sc.materials[k]);
     for l in lv {
@@ -590,12 +590,12 @@ fn seven_hundred_trees_are_coarse_in_the_plan_and_fine_with_levels_in_the_scene(
         .map(|k| CompSpec::at(level, few, (k % 30) as f64 * 8.0, (k / 30) as f64 * 8.0))
         .collect();
     m.add_components(&specs).unwrap();
-    // scene: the full mesh with two coarser levels for the distance, each lighter than the last
+    // scene: the full mesh with two coarser levels and the far picture, each lighter than the last
     let sc = m.component_scene(Lod::Fine, None).unwrap();
     assert_eq!(sc.instances.len(), 700);
     assert_eq!(sc.meshes[0].triangles.len(), fine_tris);
     let tris: Vec<usize> = sc.lods[0].iter().map(|l| l.0.triangles.len()).collect();
-    assert!(tris.len() == 2 && tris[0] < fine_tris && tris[1] < tris[0], "{fine_tris} {tris:?}");
+    assert!(tris.len() == 3 && tris[0] < fine_tris && tris[1] < tris[0] && tris[2] < tris[1], "{fine_tris} {tris:?}");
     // plan: coarse symbols
     let plan = m.components_plan(level, Lod::Fine).unwrap().len();
     assert!(plan <= 700 * 40 && plan * 2 < 700 * fine_plan, "plan {plan} segments vs {fine_plan} per fine tree");
