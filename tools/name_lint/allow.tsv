@@ -1,3 +1,10 @@
 # <path glob>	<term digest or *>	<justification>
 crates/model/src/value_src.rs	faba1e00af8e6c89837f711eeb6f67c0d1bdb573c63abcdcdb2fbf7ab5ad2295	Legacy stored source-kind value read from saved project files (format identifier)
 crates/ops/src/lib.rs	faba1e00af8e6c89837f711eeb6f67c0d1bdb573c63abcdcdb2fbf7ab5ad2295	Legacy serde wire name of the spreadsheet actor in saved journals (format identifier)
+README.md	76e3c7bfe641ea125c0c2e1c5f89349e17b352ed128d528de2443794e7acf870	Owner-authored README names the AI clients and model providers the editor works with
+README.md	7d3194f79e645c42e4396dda38be04766810ec6a00d00aced3ffc2a0a1f1a9ef	Owner-authored README names the AI clients and model providers the editor works with
+README.md	c70eca6b0f88f44d81a41311647e50fda1ac454ec04ffd442b0eb4743a993131	Owner-authored README names the AI clients and model providers the editor works with
+README.md	5d72436256ada53828b51895a94bb8489e9f1ac4fe937a8024ef1594e7045ff6	Owner-authored README names the AI clients and model providers the editor works with
+README.md	920510199770f4d65cb8aaa2cd12bdb2b8c37f5b3907c50a734a0e3409da2823	Owner-authored README names the AI clients and model providers the editor works with
+README.md	6f7ac1823da81d2e52d1a1549ee69c85bbf8bb56d06682849e7c09da2785ce3b	Owner-authored README names the AI clients and model providers the editor works with
+README.md	c857d09db23e6822e3600bc06ad8d58f92ed62bc8efd81c753f77048662cb97d	Owner-authored README names the AI clients and model providers the editor works with
