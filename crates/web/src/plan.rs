@@ -16,6 +16,8 @@ pub struct Plan {
     pub scale: f32,
     pub centre: (f64, f64),
     fitted: bool,
+    /// View size at the last fit; a resize (panels, phone rotation) fits again.
+    fit_size: Vec2,
 }
 
 impl Plan {
@@ -37,6 +39,7 @@ impl Plan {
             scale: 10.0,
             centre: ((v.bbox[0] + v.bbox[2]) * 0.5, (v.bbox[1] + v.bbox[3]) * 0.5),
             fitted: false,
+            fit_size: Vec2::ZERO,
         })
     }
 
@@ -46,6 +49,7 @@ impl Plan {
         self.scale = (r.width() / w).min(r.height() / h) * 0.9;
         self.centre = ((self.bbox[0] + self.bbox[2]) * 0.5, (self.bbox[1] + self.bbox[3]) * 0.5);
         self.fitted = true;
+        self.fit_size = r.size();
     }
 
     pub fn refit(&mut self) {
@@ -71,7 +75,7 @@ impl Plan {
     /// Draws the plan; returns the element clicked, if any.
     pub fn ui(&mut self, ui: &mut egui::Ui, sel: Option<(&str, i64)>, dark: bool) -> Option<Option<(String, i64)>> {
         let (rect, resp) = ui.allocate_exact_size(ui.available_size(), egui::Sense::click_and_drag());
-        if !self.fitted {
+        if !self.fitted || (rect.size() - self.fit_size).length() > 1.0 {
             self.fit(rect);
         }
         if resp.dragged() {
@@ -145,7 +149,7 @@ impl Plan {
         }
         for pr in &self.prims {
             if let ViewPrim::RoomTag { room, pos, name, number, area, .. } = pr {
-                if self.scale < 4.0 {
+                if self.scale < 6.0 {
                     continue;
                 }
                 let c = if is_sel("room", *room) { sel_c } else { ink };

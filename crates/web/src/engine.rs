@@ -17,6 +17,8 @@ pub struct Item {
     pub name: String,
     pub cat: String,
     pub level: Option<i64>,
+    /// Building system the element serves (HVAC, water, drainage, electrical, fire).
+    pub group: Option<&'static str>,
     pub first: u32,
     pub count: u32,
     pub lo: [f32; 3],
@@ -68,7 +70,12 @@ pub fn open(name: &str, bytes: &[u8]) -> Result<Project, String> {
 
 fn srgb(c: [f32; 4]) -> [u8; 4] {
     use ddc_io::meshx::linear_to_srgb8 as s;
-    [s(c[0]), s(c[1]), s(c[2]), (c[3].clamp(0.0, 1.0) * 255.0) as u8]
+    [
+        s(c[0]),
+        s(c[1]),
+        s(c[2]),
+        (c[3].clamp(0.0, 1.0) * 255.0) as u8,
+    ]
 }
 
 struct Raw {
@@ -78,21 +85,29 @@ struct Raw {
     cat: String,
     level: Option<i64>,
     rgba: [u8; 4],
+    /// Colour of each triangle when the parts differ (empty: `rgba` for all).
+    tri_rgba: Vec<[u8; 4]>,
+    group: Option<&'static str>,
     pos: Vec<[f64; 3]>,
     tris: Vec<[u32; 3]>,
 }
 
 fn level_of(m: &Model, table: &str, id: i64) -> Option<i64> {
     m.sql()
-        .query_row(&format!("SELECT level FROM {table} WHERE id=?1"), [id], |r| {
-            r.get::<_, Option<i64>>(0)
-        })
+        .query_row(
+            &format!("SELECT level FROM {table} WHERE id=?1"),
+            [id],
+            |r| r.get::<_, Option<i64>>(0),
+        )
         .ok()
         .flatten()
 }
 
 fn ids(m: &Model, table: &str) -> Vec<i64> {
-    let Ok(mut st) = m.sql().prepare(&format!("SELECT id FROM {table} ORDER BY id")) else {
+    let Ok(mut st) = m
+        .sql()
+        .prepare(&format!("SELECT id FROM {table} ORDER BY id"))
+    else {
         return vec![];
     };
     st.query_map([], |r| r.get(0))
@@ -100,7 +115,14 @@ fn ids(m: &Model, table: &str) -> Vec<i64> {
         .unwrap_or_default()
 }
 
-fn push_meshes(out: &mut Vec<Raw>, m: &Model, table: &str, cat: &str, id: i64, ms: &[ddc_geom::mesh::Mesh]) {
+fn push_meshes(
+    out: &mut Vec<Raw>,
+    m: &Model,
+    table: &str,
+    cat: &str,
+    id: i64,
+    ms: &[ddc_geom::mesh::Mesh],
+) {
     let mut pos = vec![];
     let mut tris = vec![];
     for mesh in ms {
@@ -118,88 +140,201 @@ fn push_meshes(out: &mut Vec<Raw>, m: &Model, table: &str, cat: &str, id: i64, m
         cat: cat.into(),
         level: level_of(m, table, id),
         rgba: srgb(ddc_io::meshx::category_rgba(cat)),
+        tri_rgba: vec![],
+        group: None,
         pos,
         tris,
     });
+}
+
+/// Tessellation in steps, so a page can show progress between them.
+pub struct Tess {
+    raw: Vec<Raw>,
+    warns: Vec<String>,
+    next: usize,
+}
+
+impl Tess {
+    pub const STEPS: [&'static str; 4] = [
+        "walls, floors, roofs and MEP",
+        "stairs and railings",
+        "components",
+        "doors, windows and site",
+    ];
+
+    pub fn new() -> Self {
+        Tess {
+            raw: vec![],
+            warns: vec![],
+            next: 0,
+        }
+    }
+
+    /// Index of the step `step` runs next.
+    pub fn next(&self) -> usize {
+        self.next
+    }
+
+    /// Runs the next step; the scene once the last one is done.
+    pub fn step(&mut self, m: &Model) -> Option<(Scene, Vec<String>)> {
+        let (raw, warns) = (&mut self.raw, &mut self.warns);
+        self.next += 1;
+        match self.next - 1 {
+            0 => {
+                match ddc_io::meshx::MeshSet::from_model(m) {
+                    Ok((set, w)) => {
+                        // the stair/railing/component note is about this exporter; they are added below
+                        warns.extend(
+                            w.into_iter()
+                                .filter(|s| !s.contains("tessellated only by the editor")),
+                        );
+                        let runs = mep_runs(m);
+                        for p in set.parts {
+                            let (table, id) = match p.key.split_once(':') {
+                                Some((t, i)) => (t.to_string(), i.parse().unwrap_or(0)),
+                                None => (p.key.clone(), 0),
+                            };
+                            let mut rgba = p
+                                .material
+                                .and_then(|k| set.materials.get(k))
+                                .map_or([200, 200, 200, 255], |mt| srgb(mt.rgba));
+                            let (mut name, mut cat, mut group) = (p.name, p.category, None);
+                            if let Some((domain, kind)) =
+                                runs.get(&id).filter(|_| table == "mep_run")
+                            {
+                                let (g, c) = system_style(kind.as_deref());
+                                rgba = c;
+                                group = g;
+                                cat = cap(domain);
+                                name = format!(
+                                    "{} {id}",
+                                    kind.as_deref().unwrap_or(domain).replace('_', " ")
+                                );
+                            }
+                            let level = level_of(m, &table, id);
+                            raw.push(Raw {
+                                table,
+                                id,
+                                name,
+                                cat,
+                                level,
+                                rgba,
+                                tri_rgba: vec![],
+                                group,
+                                pos: p.positions,
+                                tris: p.triangles,
+                            });
+                        }
+                    }
+                    Err(e) => warns.push(e),
+                }
+            }
+            1 => {
+                for id in ids(m, "stair") {
+                    if let Ok(ms) = m.stair_meshes(id) {
+                        push_meshes(raw, m, "stair", "stair", id, &ms);
+                    }
+                }
+                for id in ids(m, "railing") {
+                    if let Ok(ms) = m.railing_meshes(id) {
+                        push_meshes(raw, m, "railing", "railing", id, &ms);
+                    }
+                }
+            }
+            2 => {
+                match m.component_scene(ddc_geom::component::Lod::Coarse, None) {
+                    Ok(cs) => {
+                        let fam: HashMap<i64, String> =
+                            m.families().unwrap_or_default().into_iter().collect();
+                        let mut mats: HashMap<String, Option<[u8; 4]>> = HashMap::new();
+                        // per mesh, not per instance: thousands of placements share a few dozen bodies
+                        let tri_cols: Vec<Vec<Option<[u8; 4]>>> = cs
+                            .meshes
+                            .iter()
+                            .zip(&cs.materials)
+                            .map(|(mesh, parts)| {
+                                mesh.face_of
+                                    .iter()
+                                    .map(|&f| {
+                                        let name = parts.get(f as usize)?;
+                                        *mats
+                                            .entry(name.clone())
+                                            .or_insert_with(|| material_rgba(m, name))
+                                    })
+                                    .collect()
+                            })
+                            .collect();
+                        for inst in &cs.instances {
+                            let mesh = &cs.meshes[inst.mesh];
+                            let pos = mesh
+                                .positions
+                                .iter()
+                                .map(|v| {
+                                    let (x, y, z) = inst.placement.apply((v.x, v.y, v.z));
+                                    [x, y, z]
+                                })
+                                .collect();
+                            let fname = fam
+                                .get(&inst.family)
+                                .cloned()
+                                .unwrap_or_else(|| "component".into());
+                            let rgba = comp_rgba(&fname);
+                            let cols = tri_cols.get(inst.mesh).map_or(&[][..], |c| &c[..]);
+                            let tri_rgba = if cols.len() == mesh.triangles.len()
+                                && cols.iter().any(Option::is_some)
+                            {
+                                cols.iter().map(|c| c.unwrap_or(rgba)).collect()
+                            } else {
+                                vec![]
+                            };
+                            raw.push(Raw {
+                                table: "comp".into(),
+                                id: inst.id,
+                                name: format!("{fname} {}", inst.id),
+                                group: family_group(&fname),
+                                cat: fname,
+                                level: level_of(m, "comp", inst.id),
+                                rgba,
+                                tri_rgba,
+                                pos,
+                                tris: mesh.triangles.clone(),
+                            });
+                        }
+                    }
+                    Err(e) => warns.push(format!("components: {e}")),
+                }
+            }
+            3 => {
+                openings(m, raw);
+                ground(m, raw);
+            }
+            _ => {}
+        }
+        (self.next == Self::STEPS.len()).then(|| {
+            let mut raw = std::mem::take(&mut self.raw);
+            // grouped by level so a level can be hidden with one draw range
+            raw.sort_by_key(|r| (r.level.unwrap_or(i64::MAX), r.table.clone(), r.id));
+            (flatten(raw), std::mem::take(&mut self.warns))
+        })
+    }
+}
+
+impl Default for Tess {
+    fn default() -> Self {
+        Self::new()
+    }
 }
 
 /// Every element body the engine tessellates without the editor: walls, slabs, roofs, columns,
 /// beams, curtain walls, masses, ceilings, MEP runs, imported meshes, stairs, railings and
 /// library components (doors, windows, furniture, fixtures).
 pub fn tessellate(m: &Model) -> (Scene, Vec<String>) {
-    let mut raw: Vec<Raw> = vec![];
-    let mut warns = vec![];
-    match ddc_io::meshx::MeshSet::from_model(m) {
-        Ok((set, w)) => {
-            // the stair/railing/component note is about this exporter; they are added below
-            warns.extend(w.into_iter().filter(|s| !s.contains("tessellated only by the editor")));
-            for p in set.parts {
-                let (table, id) = match p.key.split_once(':') {
-                    Some((t, i)) => (t.to_string(), i.parse().unwrap_or(0)),
-                    None => (p.key.clone(), 0),
-                };
-                let rgba = p
-                    .material
-                    .and_then(|k| set.materials.get(k))
-                    .map_or([200, 200, 200, 255], |mt| srgb(mt.rgba));
-                let level = level_of(m, &table, id);
-                raw.push(Raw {
-                    table,
-                    id,
-                    name: p.name,
-                    cat: p.category,
-                    level,
-                    rgba,
-                    pos: p.positions,
-                    tris: p.triangles,
-                });
-            }
-        }
-        Err(e) => warns.push(e),
-    }
-    for id in ids(m, "stair") {
-        if let Ok(ms) = m.stair_meshes(id) {
-            push_meshes(&mut raw, m, "stair", "stair", id, &ms);
+    let mut t = Tess::new();
+    loop {
+        if let Some(r) = t.step(m) {
+            return r;
         }
     }
-    for id in ids(m, "railing") {
-        if let Ok(ms) = m.railing_meshes(id) {
-            push_meshes(&mut raw, m, "railing", "railing", id, &ms);
-        }
-    }
-    match m.component_scene(ddc_geom::component::Lod::Coarse, None) {
-        Ok(cs) => {
-            let fam: HashMap<i64, String> = m.families().unwrap_or_default().into_iter().collect();
-            for inst in &cs.instances {
-                let mesh = &cs.meshes[inst.mesh];
-                let pos = mesh
-                    .positions
-                    .iter()
-                    .map(|v| {
-                        let (x, y, z) = inst.placement.apply((v.x, v.y, v.z));
-                        [x, y, z]
-                    })
-                    .collect();
-                let fname = fam.get(&inst.family).cloned().unwrap_or_else(|| "component".into());
-                let rgba = comp_rgba(&fname);
-                raw.push(Raw {
-                    table: "comp".into(),
-                    id: inst.id,
-                    name: format!("{fname} {}", inst.id),
-                    cat: fname,
-                    level: level_of(m, "comp", inst.id),
-                    rgba,
-                    pos,
-                    tris: mesh.triangles.clone(),
-                });
-            }
-        }
-        Err(e) => warns.push(format!("components: {e}")),
-    }
-    openings(m, &mut raw);
-    // grouped by level so a level can be hidden with one draw range
-    raw.sort_by_key(|r| (r.level.unwrap_or(i64::MAX), r.table.clone(), r.id));
-    (flatten(raw), warns)
 }
 
 /// Doors and windows as panels through their host wall. The editor cuts the wall and builds the
@@ -235,7 +370,9 @@ fn openings(m: &Model, raw: &mut Vec<Raw>) {
         })
         .unwrap_or_default();
     for (id, wall, along, width, sill, height, kind, [ax, ay, bx, by], bulge) in rows {
-        let Some(&wi) = walls.get(&wall) else { continue };
+        let Some(&wi) = walls.get(&wall) else {
+            continue;
+        };
         let len = ((bx - ax).powi(2) + (by - ay).powi(2)).sqrt();
         if kind == "void" || bulge != 0.0 || len < 1e-6 || width <= 0.0 || height <= 0.0 {
             continue;
@@ -255,7 +392,8 @@ fn openings(m: &Model, raw: &mut Vec<Raw>) {
             continue;
         }
         let (lo, hi) = (lo - 0.01, hi + 0.01);
-        let at = |s: f64, d: f64, z: f64| [ax + u[0] * s + n[0] * d, ay + u[1] * s + n[1] * d, z0 + z];
+        let at =
+            |s: f64, d: f64, z: f64| [ax + u[0] * s + n[0] * d, ay + u[1] * s + n[1] * d, z0 + z];
         let (s0, s1, z1, z2) = (along, along + width, sill, sill + height);
         let pos = vec![
             at(s0, lo, z1),
@@ -268,8 +406,18 @@ fn openings(m: &Model, raw: &mut Vec<Raw>) {
             at(s0, hi, z2),
         ];
         let tris = vec![
-            [0, 1, 5], [0, 5, 4], [1, 2, 6], [1, 6, 5], [2, 3, 7], [2, 7, 6],
-            [3, 0, 4], [3, 4, 7], [4, 5, 6], [4, 6, 7], [0, 3, 2], [0, 2, 1],
+            [0, 1, 5],
+            [0, 5, 4],
+            [1, 2, 6],
+            [1, 6, 5],
+            [2, 3, 7],
+            [2, 7, 6],
+            [3, 0, 4],
+            [3, 4, 7],
+            [4, 5, 6],
+            [4, 6, 7],
+            [0, 3, 2],
+            [0, 2, 1],
         ];
         let door = kind == "door";
         raw.push(Raw {
@@ -278,22 +426,163 @@ fn openings(m: &Model, raw: &mut Vec<Raw>) {
             name: format!("{kind} {id}"),
             cat: if door { "door".into() } else { "window".into() },
             level: w.level,
-            rgba: if door { [150, 108, 72, 255] } else { [120, 170, 210, 255] },
+            rgba: if door {
+                [150, 108, 72, 255]
+            } else {
+                [120, 170, 210, 255]
+            },
+            tri_rgba: vec![],
+            group: None,
             pos,
             tris,
         });
     }
 }
 
+/// Table name of the ground plane item: drawn and hidden like the rest, never picked.
+pub const GROUND: &str = "ground";
+
+/// A plane under the site at the lowest level, a fifth wider than the model on every side.
+fn ground(m: &Model, raw: &mut Vec<Raw>) {
+    let (mut lo, mut hi) = ([f64::MAX; 2], [f64::MIN; 2]);
+    for r in raw.iter() {
+        for p in &r.pos {
+            for k in 0..2 {
+                lo[k] = lo[k].min(p[k]);
+                hi[k] = hi[k].max(p[k]);
+            }
+        }
+    }
+    if lo[0] > hi[0] {
+        return;
+    }
+    let pad = ((hi[0] - lo[0]).max(hi[1] - lo[1]) * 0.2).max(5.0);
+    let z = m
+        .level_list()
+        .ok()
+        .and_then(|l| l.iter().map(|x| x.2).min_by(f64::total_cmp))
+        .unwrap_or(0.0)
+        - 0.03;
+    let (x0, y0, x1, y1) = (lo[0] - pad, lo[1] - pad, hi[0] + pad, hi[1] + pad);
+    raw.push(Raw {
+        table: GROUND.into(),
+        id: 0,
+        name: "Ground".into(),
+        cat: "Ground".into(),
+        level: None,
+        rgba: [92, 104, 84, 255],
+        tri_rgba: vec![],
+        group: None,
+        pos: vec![[x0, y0, z], [x1, y0, z], [x1, y1, z], [x0, y1, z]],
+        tris: vec![[0, 1, 2], [0, 2, 3]],
+    });
+}
+
+/// MEP runs: (domain, system kind) by id.
+fn mep_runs(m: &Model) -> HashMap<i64, (String, Option<String>)> {
+    let sql =
+        "SELECT r.id, r.domain, s.kind FROM mep_run r LEFT JOIN mep_system s ON s.id=r.system";
+    m.sql()
+        .prepare(sql)
+        .and_then(|mut st| {
+            st.query_map([], |r| Ok((r.get(0)?, (r.get(1)?, r.get(2)?))))?
+                .collect()
+        })
+        .unwrap_or_default()
+}
+
+/// Systems the viewer shows and hides as a whole.
+pub const GROUPS: [&str; 5] = ["HVAC", "Water", "Drainage", "Electrical", "Fire"];
+
+/// Group and colour of an MEP system kind (`ddc_geom::mep::SystemKind::name`).
+fn system_style(kind: Option<&str>) -> (Option<&'static str>, [u8; 4]) {
+    let (g, c) = match kind.unwrap_or("") {
+        "supply_air" => ("HVAC", [60, 130, 220]),
+        "return_air" | "exhaust_air" => ("HVAC", [235, 140, 50]),
+        "heating" => ("HVAC", [210, 70, 60]),
+        "cold_water" | "hot_water" | "chilled_water" | "medical_gas" => ("Water", [60, 200, 220]),
+        "sanitary" => ("Drainage", [135, 95, 55]),
+        "power" => ("Electrical", [235, 205, 50]),
+        "sprinkler" => ("Fire", [220, 50, 50]),
+        _ => ("HVAC", [150, 160, 175]),
+    };
+    (Some(g), [c[0], c[1], c[2], 255])
+}
+
+/// System group of a library family by its name.
+fn family_group(family: &str) -> Option<&'static str> {
+    let f = family.to_ascii_lowercase();
+    let has = |k: &[&str]| k.iter().any(|k| f.contains(k));
+    if has(&["air handling", "diffuser", "grille", "radiator", "fan coil"]) {
+        Some("HVAC")
+    } else if has(&["floor drain", "gully", "manhole"]) {
+        Some("Drainage")
+    } else if has(&["sprinkler", "extinguisher", "hydrant", "fire alarm"]) {
+        Some("Fire")
+    } else if has(&[
+        "panel board",
+        "switchboard",
+        "socket",
+        "luminaire",
+        "light fitting",
+    ]) {
+        Some("Electrical")
+    } else {
+        None
+    }
+}
+
+fn cap(s: &str) -> String {
+    let mut c = s.chars();
+    c.next()
+        .map_or(String::new(), |f| f.to_uppercase().chain(c).collect())
+}
+
+/// Colour of a component part's material: the project's or the library's, else one read from
+/// the name (glass, planting, timber, paving, metal).
+fn material_rgba(m: &Model, name: &str) -> Option<[u8; 4]> {
+    if let Some(c) = m.material(name).ok().and_then(|x| x.spec.color) {
+        return Some([(c >> 16) as u8, (c >> 8) as u8, c as u8, 255]);
+    }
+    let n = name.to_ascii_lowercase();
+    let has = |k: &[&str]| k.iter().any(|k| n.contains(k));
+    let c = if has(&["glass", "mirror", "glaz"]) {
+        [140, 185, 215]
+    } else if has(&["foliage", "grass", "lawn", "leaf", "hedge", "moss"]) {
+        [92, 140, 66]
+    } else if has(&["bark", "trunk"]) {
+        [105, 78, 55]
+    } else if has(&["soil", "mulch"]) {
+        [90, 68, 50]
+    } else if has(&["oak", "walnut", "timber", "wood", "larch", "veneer"]) {
+        [160, 118, 78]
+    } else if has(&["paving", "asphalt", "tarmac", "gravel", "concrete", "stone"]) {
+        [150, 150, 148]
+    } else if has(&["steel", "alumin", "chrome", "metal"]) {
+        [165, 170, 176]
+    } else {
+        return None;
+    };
+    Some([c[0], c[1], c[2], 255])
+}
+
 fn comp_rgba(family: &str) -> [u8; 4] {
     let f = family.to_ascii_lowercase();
-    if f.contains("window") || f.contains("glaz") {
-        [150, 190, 220, 255]
-    } else if f.contains("door") {
-        [176, 132, 92, 255]
+    let has = |k: &[&str]| k.iter().any(|k| f.contains(k));
+    let c = if has(&["window", "glaz"]) {
+        [150, 190, 220]
+    } else if has(&["door"]) {
+        [176, 132, 92]
+    } else if has(&[
+        "lawn", "hedge", "planter", "tree", "shrub", "plant", "grass",
+    ]) {
+        [92, 140, 66]
+    } else if has(&["paving", "road", "kerb", "curb", "path"]) {
+        [150, 150, 148]
     } else {
-        [196, 188, 172, 255]
-    }
+        [196, 188, 172]
+    };
+    [c[0], c[1], c[2], 255]
 }
 
 fn flatten(raw: Vec<Raw>) -> Scene {
@@ -306,7 +595,8 @@ fn flatten(raw: Vec<Raw>) -> Scene {
         let first = s.pos.len() as u32;
         let mut lo = [f32::MAX; 3];
         let mut hi = [f32::MIN; 3];
-        for t in &r.tris {
+        for (ti, t) in r.tris.iter().enumerate() {
+            let rgba = r.tri_rgba.get(ti).copied().unwrap_or(r.rgba);
             let Some(p) = t
                 .iter()
                 .map(|&k| r.pos.get(k as usize).map(|v| v.map(|c| c as f32)))
@@ -322,14 +612,15 @@ fn flatten(raw: Vec<Raw>) -> Scene {
                 }
                 s.pos.push(v);
                 s.nrm.push(n);
-                s.col.push(r.rgba);
+                s.col.push(rgba);
             }
         }
         let count = s.pos.len() as u32 - first;
         if count == 0 {
             continue;
         }
-        for k in 0..3 {
+        // the ground plane is padded around the model; the fit is to the model
+        for k in (0..3).filter(|_| r.table != GROUND) {
             s.lo[k] = s.lo[k].min(lo[k]);
             s.hi[k] = s.hi[k].max(hi[k]);
         }
@@ -339,6 +630,7 @@ fn flatten(raw: Vec<Raw>) -> Scene {
             name: r.name,
             cat: r.cat,
             level: r.level,
+            group: r.group,
             first,
             count,
             lo,
@@ -357,7 +649,11 @@ fn sub(a: [f32; 3], b: [f32; 3]) -> [f32; 3] {
 }
 
 fn cross(a: [f32; 3], b: [f32; 3]) -> [f32; 3] {
-    [a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0]]
+    [
+        a[1] * b[2] - a[2] * b[1],
+        a[2] * b[0] - a[0] * b[2],
+        a[0] * b[1] - a[1] * b[0],
+    ]
 }
 
 fn dot(a: [f32; 3], b: [f32; 3]) -> f32 {
@@ -442,7 +738,9 @@ impl Scene {
     }
 
     pub fn find(&self, table: &str, id: i64) -> Option<usize> {
-        self.items.iter().position(|it| it.table == table && it.id == id)
+        self.items
+            .iter()
+            .position(|it| it.table == table && it.id == id)
     }
 
     pub fn triangles(&self) -> usize {
@@ -455,7 +753,9 @@ fn text(v: &Value) -> Option<String> {
         Value::Null => None,
         Value::Integer(i) => Some(i.to_string()),
         Value::Real(f) => Some(format!("{}", (f * 1e6).round() / 1e6)),
-        Value::Text(s) if s.chars().count() > 300 => Some(format!("{}…", s.chars().take(300).collect::<String>())),
+        Value::Text(s) if s.chars().count() > 300 => {
+            Some(format!("{}…", s.chars().take(300).collect::<String>()))
+        }
         Value::Text(s) => Some(s.clone()),
         Value::Blob(b) => Some(format!("<{} bytes>", b.len())),
     }
@@ -466,8 +766,21 @@ pub fn properties(p: &Project, table: &str, id: i64) -> Vec<(String, String)> {
     let mut out = vec![];
     let db = p.model.sql();
     let known = [
-        "wall", "slab", "roof", "col", "beam", "curtain_wall", "mass", "ceiling", "mep_run", "mesh",
-        "stair", "railing", "comp", "room", "opening",
+        "wall",
+        "slab",
+        "roof",
+        "col",
+        "beam",
+        "curtain_wall",
+        "mass",
+        "ceiling",
+        "mep_run",
+        "mesh",
+        "stair",
+        "railing",
+        "comp",
+        "room",
+        "opening",
     ];
     if !known.contains(&table) {
         return out;
@@ -475,7 +788,9 @@ pub fn properties(p: &Project, table: &str, id: i64) -> Vec<(String, String)> {
     if let Ok(mut st) = db.prepare(&format!("SELECT * FROM {table} WHERE id=?1")) {
         let names: Vec<String> = st.column_names().map(|s| s.to_string()).collect();
         let row = st.query_row([id], |r| {
-            (0..names.len()).map(|k| r.get::<_, Value>(k)).collect::<Result<Vec<_>, _>>()
+            (0..names.len())
+                .map(|k| r.get::<_, Value>(k))
+                .collect::<Result<Vec<_>, _>>()
         });
         if let Ok(vals) = row {
             for (n, v) in names.iter().zip(&vals) {
@@ -503,7 +818,11 @@ pub fn properties(p: &Project, table: &str, id: i64) -> Vec<(String, String)> {
     }
     for (k, v, unit) in p.model.props(table, id).unwrap_or_default() {
         if let Some(t) = text(&v) {
-            let t = if unit.is_empty() { t } else { format!("{t} {unit}") };
+            let t = if unit.is_empty() {
+                t
+            } else {
+                format!("{t} {unit}")
+            };
             out.push((k, t));
         }
     }
@@ -526,14 +845,20 @@ fn catalog() -> &'static HashMap<String, String> {
 
 /// Every built-in and project rule over the whole model, errors first.
 pub fn audit(p: &Project, limit: usize) -> Result<Vec<AuditRow>, String> {
-    let found = checks::run_all(&p.model, None, &CheckScope::All, limit).map_err(|e| e.to_string())?;
+    let found =
+        checks::run_all(&p.model, None, &CheckScope::All, limit).map_err(|e| e.to_string())?;
     Ok(found
         .into_iter()
         .map(|f| {
-            let mut s = catalog().get(f.msg_key).cloned().unwrap_or_else(|| f.msg_key.to_string());
+            let mut s = catalog()
+                .get(f.msg_key)
+                .cloned()
+                .unwrap_or_else(|| f.msg_key.to_string());
             // some texts number their arguments ({0}, {1}) where the rule names them
             for (i, (k, v)) in f.args.iter().enumerate() {
-                s = s.replace(&format!("{{{k}}}"), v).replace(&format!("{{{i}}}"), v);
+                s = s
+                    .replace(&format!("{{{k}}}"), v)
+                    .replace(&format!("{{{i}}}"), v);
             }
             if let Some(ms) = f.measure {
                 let unit = match ms.unit {
@@ -541,7 +866,10 @@ pub fn audit(p: &Project, limit: usize) -> Result<Vec<AuditRow>, String> {
                     "m3" => "m³",
                     u => u,
                 };
-                s = format!("{s} (measured {:.3} {unit}, limit {:.3} {unit})", ms.value, ms.limit);
+                s = format!(
+                    "{s} (measured {:.3} {unit}, limit {:.3} {unit})",
+                    ms.value, ms.limit
+                );
             }
             AuditRow {
                 severity: f.severity,
