@@ -129,6 +129,8 @@ fn fs_real(i: VOut) -> @location(0) vec4<f32> {
     // derivatives first, in uniform control flow; sampling below uses explicit gradients
     let dp_x = dpdx(i.world);
     let dp_y = dpdy(i.world);
+    let duv_x = dpdx(i.uv);
+    let duv_y = dpdy(i.uv);
     if (i.tag >= 0x80000000u || clipped(i.world) || face_dropped(i.tag, i.clip.xy, i.elem)) { discard; }
     let selected = is_selected(i.elem);
     let hovered = is_hovered(i.elem);
@@ -141,6 +143,12 @@ fn fs_real(i: VOut) -> @location(0) vec4<f32> {
     }
     let tag = base_tag(i.tag);
     let v = normalize(to_eye);
+    if (is_card(i.tag)) {
+        let tx = card_texel(i.uv, duv_x, duv_y, i.tag);
+        if (tx.x < 0.5) { discard; }
+        let leaves = foliage(palette(tag) * card_tone(i.tag, tx.y), normalize(i.snrm), v, normalize(-u.light_dir.xyz), i.world, i.clip.xy, i.seed);
+        return vec4<f32>(mark(leaves, n, to_eye, selected, hovered, i.elem), 1.0);
+    }
     if ((i.tag & 0xF0000000u) == 0x50000000u) {
         if (leaf_cut(i.world, i.snrm, length(dp_x) + length(dp_y))) { discard; }
         // the inside of the crown seen through its holes: turned normal, darker

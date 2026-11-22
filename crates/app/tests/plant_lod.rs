@@ -90,3 +90,33 @@ fn a_tree_ends_in_a_far_picture_and_its_levels_follow_the_screen_size() {
     assert!(far_tris.iter().any(|t| t.1 == 1 && t.2 == 1), "{far_tris:?}");
     assert!(far_tris.iter().map(|t| t.2).sum::<usize>() < 130, "{far_tris:?}");
 }
+
+/// The crown of a near tree is leaf cards cut out by a picture of leaves (or needles), in its
+/// shade, leaf and light tones; the coarse level and the far picture stay solid.
+#[test]
+fn near_crowns_are_leaf_cards_and_far_ones_solid() {
+    use ddc_render::chunks::{leaf_cards, tri_vertices};
+    for (ty, needle) in [("Oak A", false), ("Spruce A", true)] {
+        let mut ed = Editor::new_in_memory().unwrap();
+        let level = ed.level;
+        let f = ed.model.load_library_family("Tree").unwrap();
+        let t = ed.model.comp_type_id(f, ty).unwrap().unwrap();
+        ed.model.add_component(&CompSpec::at(level, t, 0.0, 0.0)).unwrap();
+        ed.big.plants_fine = true;
+        let sc = scene(&mut ed);
+        let mut cards = 0;
+        for g in sc.instanced.iter().filter(|g| g.key >> 40 != 0 && ddc_render::is_foliage(g.proto.tag)) {
+            let Some(q) = leaf_cards(&g.proto) else { continue };
+            cards += 1;
+            assert!(q.iter().all(|c| c.1 == needle), "{ty}: needle sprays on conifers only");
+            assert!(leaf_cards(&g.lods[0].0).is_some(), "{ty}: medium is cards too");
+            assert!(g.lods[1..].iter().all(|l| leaf_cards(&l.0).is_none()), "{ty}: coarse and far stay solid");
+            let mut v = vec![];
+            tri_vertices(&g.proto, &mut v);
+            assert!(v.iter().all(|x| ddc_render::is_card(x.tag)), "{ty}: every corner is cut out by the picture");
+            let corners: std::collections::BTreeSet<u32> = v.iter().map(|x| x.tag & 6).collect();
+            assert_eq!(corners.len(), 4, "{ty}: the four corners of the picture");
+        }
+        assert!(cards >= 2, "{ty}: leaf and light tones are cards, {cards}");
+    }
+}

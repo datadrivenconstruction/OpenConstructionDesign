@@ -17,6 +17,7 @@ pub mod chunks;
 pub mod headless;
 #[cfg(feature = "gpu")]
 pub mod hiz;
+pub mod leaves;
 pub mod perf;
 pub mod pick;
 pub mod renderer;
@@ -43,7 +44,7 @@ pub use renderer::{FrameUniforms, Quality};
 #[cfg(feature = "gpu")]
 pub use renderer::{init_resolve_target, Renderer, Targets};
 pub use scene::{
-    is_foliage, is_translucent, tag_foliage, tag_rgb, Aabb, Scene, SceneMesh, Vertex, NO_SELECTION, TAG_DOOR,
+    is_card, is_foliage, is_translucent, tag_foliage, tag_rgb, Aabb, Scene, SceneMesh, Vertex, NO_SELECTION, TAG_DOOR,
     TAG_FOLIAGE, TAG_GLASS, TAG_MULLION, TAG_PANEL, TAG_RGB, TAG_SLAB, TAG_TRANSLUCENT, TAG_WINDOW,
 };
 #[cfg(feature = "gpu")]
