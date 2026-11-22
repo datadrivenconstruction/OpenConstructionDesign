@@ -66,9 +66,6 @@ struct Dn {
     plant_layer_gap: f64,
     lift_step: f64,
     roof_clear: f64,
-    tall_storey: f64,
-    h_max_tall: f64,
-    h_max_low: f64,
     /// Unit port offset from its centre, as a fraction of its length.
     port_frac: f64,
     /// Main lane offset from the corridor axis, as a fraction of the corridor width.
@@ -113,9 +110,6 @@ impl Dn {
             plant_layer_gap: rule("services.hvac.plant_layer_gap"),
             lift_step: rule("services.hvac.lift_step"),
             roof_clear: rule("services.hvac.roof_clear"),
-            tall_storey: rule("services.hvac.tall_storey"),
-            h_max_tall: rule("services.hvac.h_max_tall"),
-            h_max_low: rule("services.hvac.h_max_low"),
             port_frac: rule("services.hvac.port_frac"),
             lane_frac: rule("services.hvac.lane_frac"),
         }
@@ -494,6 +488,8 @@ fn pick_unit(q: f64) -> Unit {
 #[derive(Clone, Copy)]
 struct Drop {
     y: f64,
+    /// A drop that joined from a neighbouring room stands at this x, on a stub off the branch.
+    x: Option<f64>,
     q: f64,
     term: Term,
     d: f64,
@@ -1292,11 +1288,7 @@ impl Ctx<'_> {
     }
 
     fn h_max(&self) -> f64 {
-        if self.p.storeys.first().is_some_and(|s| s.height >= self.k.tall_storey) {
-            self.k.h_max_tall
-        } else {
-            self.k.h_max_low
-        }
+        floors_h_max(self.p)
     }
 
     fn floors_max(&self, s: usize) -> f64 {
@@ -1588,7 +1580,10 @@ fn finish(p: &mut GProject) -> Result<(), GenError> {
 
 /// Tallest main section the storeys allow, as `Ctx::h_max` reads it.
 fn floors_h_max(p: &GProject) -> f64 {
-    if p.storeys.first().is_some_and(|s| s.height >= rule("services.hvac.tall_storey")) {
+    let h = p.storeys.first().map_or(0.0, |s| s.height);
+    if h >= rule("services.hvac.deep_storey") {
+        rule("services.hvac.h_max_deep")
+    } else if h >= rule("services.hvac.tall_storey") {
         rule("services.hvac.h_max_tall")
     } else {
         rule("services.hvac.h_max_low")
@@ -1646,7 +1641,10 @@ fn zoned(
         // the fewest rooms on any storey: a split room keeps a sliver of its zone for terminals
         let mut cuts = vec![f64::MIN];
         for i in 1..n {
-            let ideal = x0 + (x1 - x0) * i as f64 / n as f64;
+            // equal shares of the air, not of the corridor: dense rooms get the shorter zones
+            let share = along.iter().map(|a| a.1).sum::<f64>() * i as f64 / n as f64;
+            let mut run = 0.0;
+            let ideal = along.iter().find(|a| { run += a.1; run >= share }).map_or(x0 + (x1 - x0) * i as f64 / n as f64, |a| a.0);
             let prev = *cuts.last().expect("a cut");
             let cost = |c: f64| {
                 let split: f64 = rects
@@ -1685,8 +1683,8 @@ fn zoned(
             match best_design(spec, q, &pass, &mut zone_why)? {
                 Some(d) => {
                     let ok = sound(&d);
-                    // what the zone falls short by: air of the terminals it lost, and its
-                    // imbalance past the limit
+                    // what the zone falls short by: air of the terminals it lost, its
+                    // imbalance past the limit and its ducts over their velocity cap
                     let [ps, pe] = d.placed;
                     let off = ((ps - pe).abs() - rule("services.hvac.balance_max") * ps.max(pe)).max(0.0);
                     let (span, short) = (d.span, off);
@@ -2136,7 +2134,7 @@ fn design(
             }
         }
         w.y = y;
-        w.drops = ys.into_iter().map(|y| Drop { y, q: w.qt, term: w.term, d: w.dd, room: w.room }).collect();
+        w.drops = ys.into_iter().map(|y| Drop { y, x: None, q: w.qt, term: w.term, d: w.dd, room: w.room }).collect();
     }
     // rooms stacked away from the corridor in one window, more than its taps fit: one branch
     // runs out through the near rooms and drops into each in turn
@@ -2285,12 +2283,13 @@ fn design(
             let mut taps = std::mem::take(&mut floor_taps[k][s]);
             // a split floor's mains are narrower than one main for the floor: so are the tees
             let sp = spacing.min(tee * node_trim(&dn, &[main_widest(&dn, sh.lq[s], h_max)]) + tap_extra);
-            // a main end is an elbow and reducer into the last drop: that may take more
+            // a main end is an elbow and reducer into the last drop: that may take more; the
+            // main has stepped down to that branch's own air by then
             let main = main_widest(&dn, sh.lq[s], h_max);
             let end = wants
                 .iter()
                 .filter(|w| w.sys == s)
-                .map(|w| dn.drop_bend * w.d + mep::transition_length(&svc::duct_section(main), &svc::duct_section((w.d, 0.0))))
+                .map(|w| dn.drop_bend * w.d + mep::transition_length(&svc::duct_section(main_size(&dn, w.q, h_max)), &svc::duct_section((w.d, 0.0))))
                 .fold(0.0, f64::max);
             let floor = tee_leg(main) + tee_leg(main).max(end) + dn.margin;
             let lost = place(&wants, &order, &mut taps, sp, floor, &blocked);
@@ -2329,6 +2328,7 @@ fn design(
             }
         }
     }
+    borrow(&cx, &sh, &mut wants, &mut floor_taps, &mut dropped, h_max);
     // the network
     let n = cx.p.storeys.len();
     let mut ducts: Vec<GDuct> = vec![];
@@ -2362,6 +2362,8 @@ fn design(
                     // a drop before the branch end stands off it, towards the middle of its room
                     let xd = if last {
                         t.x
+                    } else if let Some(x) = dr.x {
+                        x
                     } else {
                         let stub = node_trim(&dn, &[(dj, 0.0), (dr.d, 0.0)]) + dn.drop_bend * dr.d + dn.margin;
                         let mid = f.rooms.iter().find(|r| r.room == dr.room).map_or(t.x, |r| (r.r.0 + r.r.2) / 2.0);
@@ -2610,6 +2612,130 @@ fn design(
         fast,
         placed,
     }))
+}
+
+/// Plan of one system's branches on a storey: runs across the corridor and stubs, and the
+/// points where drops go down, as the network cuts them near enough for keeping others clear.
+type Seg = ((f64, f64), (f64, f64));
+fn branch_plan(cx: &Ctx, sh: &Shaft, wants: &[Want], taps: &[Tap], k: usize, s: usize) -> (Vec<Seg>, Vec<(f64, f64, f64)>) {
+    let dn = &cx.k;
+    let (mut segs, mut pts) = (vec![], vec![]);
+    let Some(f) = cx.floors[k].as_ref() else { return (segs, pts) };
+    let ym = sh.ym[s] + cx.shift(k);
+    for t in taps {
+        let Some(i) = t.want else { continue };
+        let w = &wants[i];
+        let Some(last) = w.drops.last() else { continue };
+        segs.push(((t.x, ym), (t.x, last.y)));
+        for (j, dr) in w.drops.iter().enumerate() {
+            if j + 1 == w.drops.len() {
+                pts.push((t.x, dr.y, dr.d));
+                continue;
+            }
+            let xd = dr.x.unwrap_or_else(|| {
+                let stub = node_trim(dn, &[(w.d, 0.0), (dr.d, 0.0)]) + dn.drop_bend * dr.d + dn.margin;
+                let mid = f.rooms.iter().find(|r| r.room == dr.room).map_or(t.x, |r| (r.r.0 + r.r.2) / 2.0);
+                if mid >= t.x { t.x + stub } else { t.x - stub }
+            });
+            segs.push(((t.x, dr.y), (xd, dr.y)));
+            pts.push((xd, dr.y, dr.d));
+        }
+    }
+    (segs, pts)
+}
+
+/// A terminal whose room found no tap of its own joins a neighbouring branch of its system on
+/// that side: a stub off the branch, between two of its drops, runs through the partition into
+/// the room. Extract first, then supply, each clear of the other's runs and drops.
+fn borrow(cx: &Ctx, sh: &Shaft, wants: &mut [Want], floor_taps: &mut [[Vec<Tap>; 2]], dropped: &mut Vec<usize>, h_max: f64) {
+    let dn = cx.k;
+    let reach = rule("services.hvac.borrow_reach");
+    let clear = rule("services.hvac.branch_clear");
+    let pad = rule("services.hvac.shaft_excl");
+    for s in [1, 0] {
+        for k in 0..cx.floors.len() {
+            let Some(f) = cx.floors[k].as_ref() else { continue };
+            let lost: Vec<usize> = dropped.iter().copied().filter(|&i| wants[i].floor == k && wants[i].sys == s && !wants[i].hood).collect();
+            for i in lost {
+                let wi = wants[i].clone();
+                let Some(ri) = f.rooms.iter().find(|r| r.room == wi.room) else { continue };
+                let (own_segs, own_pts) = branch_plan(cx, sh, wants, &floor_taps[k][s], k, s);
+                let (oth_segs, oth_pts) = branch_plan(cx, sh, wants, &floor_taps[k][1 - s], k, 1 - s);
+                let ym = sh.ym[s] + cx.shift(k);
+                let xi = wi.x.clamp(wi.lo, wi.hi);
+                let in_ring = |x: f64, y: f64, r: f64| x > sh.ring.0 - pad - r && x < sh.ring.2 + pad + r && y > sh.ring.1 - pad - r && y < sh.ring.3 + pad + r;
+                // per branch, the gaps between its stations where one of the room's drops fits
+                let mut best: Option<(f64, usize, Vec<f64>)> = None;
+                for t in &floor_taps[k][s] {
+                    let Some(j) = t.want else { continue };
+                    let wj = &wants[j];
+                    if wj.side != wi.side || wj.hood || (t.x - xi).abs() > reach || (t.x - xi).abs() < 1e-6 {
+                        continue;
+                    }
+                    let Some(rj) = f.rooms.iter().find(|r| r.room == wj.room) else { continue };
+                    let lo = ri.near.min(ri.far).max(rj.near.min(rj.far)) + dn.wall_keep;
+                    let hi = ri.near.max(ri.far).min(rj.near.max(rj.far)) - dn.wall_keep;
+                    let d_new = round(&dn, wj.q + wi.q, dn.v_branch).max(wj.d);
+                    let need = node_trim(&dn, &[main_widest(&dn, f.total[s], h_max), (d_new, 0.0)]) + dn.drop_bend * d_new + dn.margin;
+                    let mut ys: Vec<f64> = std::iter::once(ym + wi.side * need).chain(wj.drops.iter().map(|d| d.y)).collect();
+                    ys.sort_by(|a, b| ((a - ym) * wi.side).total_cmp(&((b - ym) * wi.side)));
+                    let mine = |q: &Seg| (q.0 .0 - t.x).abs() < 1e-6 && (q.1 .0 - t.x).abs() < 1e-6;
+                    let mut free: Vec<f64> = vec![];
+                    for g in ys.windows(2) {
+                        let dd = wi.drops.iter().map(|d| d.d).fold(0.0, f64::max);
+                        let sep = node_trim(&dn, &[(d_new, 0.0), (dd, 0.0)]) + dn.drop_bend * dd + dn.margin;
+                        let y = (g[0] + g[1]) / 2.0;
+                        if (g[1] - g[0]).abs() < 2.0 * sep || y < lo - 1e-9 || y > hi + 1e-9 || in_ring(xi, y, dd / 2.0) {
+                            continue;
+                        }
+                        let r = dd / 2.0 + clear;
+                        let (a, b) = ((t.x, y), (xi, y));
+                        let (x0, x1) = (a.0.min(b.0), a.0.max(b.0));
+                        // the stub crosses no other run of its layer; a supply drop passes no
+                        // extract run, an extract stub no supply drop
+                        let hit_own = own_segs.iter().filter(|q| !mine(q)).any(|q| {
+                            let (lx, hx) = (q.0 .0.min(q.1 .0), q.0 .0.max(q.1 .0));
+                            let (ly, hy) = (q.0 .1.min(q.1 .1), q.0 .1.max(q.1 .1));
+                            lx - r < x1 && hx + r > x0 && ly - r < y && hy + r > y
+                        }) || own_pts.iter().any(|p| (p.0 - t.x).abs() > 1e-6 && (p.1 - y).abs() < r + p.2 / 2.0 && p.0 > x0 - r && p.0 < x1 + r);
+                        let hit_oth = if s == 0 {
+                            oth_segs.iter().any(|q| seg_dist(b, q.0, q.1) < r + h_max)
+                        } else {
+                            oth_pts.iter().any(|p| seg_dist((p.0, p.1), a, b) < r + p.2 / 2.0)
+                        };
+                        if !hit_own && !hit_oth {
+                            free.push(y);
+                        }
+                    }
+                    if free.len() < wi.drops.len() {
+                        continue;
+                    }
+                    // the room's drops in the gaps nearest their own rows
+                    let mut picks = vec![];
+                    for dr in &wi.drops {
+                        let Some(y) = free.iter().copied().filter(|y| !picks.contains(y)).min_by(|a, b| (a - dr.y).abs().total_cmp(&(b - dr.y).abs())) else { break };
+                        picks.push(y);
+                    }
+                    let cost = (t.x - xi).abs() + picks.iter().zip(&wi.drops).map(|(y, d)| (y - d.y).abs()).sum::<f64>();
+                    if best.as_ref().is_none_or(|b| cost < b.0) {
+                        best = Some((cost, j, picks));
+                    }
+                }
+                let Some((_, j, picks)) = best else { continue };
+                let wj = &mut wants[j];
+                for (dr, y) in wi.drops.iter().zip(picks) {
+                    wj.drops.push(Drop { y, x: Some(xi), ..*dr });
+                }
+                wj.drops.sort_by(|a, b| (a.y - ym).abs().total_cmp(&(b.y - ym).abs()));
+                wj.q += wi.q;
+                wj.d = round(&dn, wj.q, dn.v_branch).max(wj.d);
+                if let Some(t) = floor_taps[k][s].iter_mut().find(|t| t.want == Some(j)) {
+                    t.q += wi.q;
+                }
+                dropped.retain(|&d| d != i);
+            }
+        }
+    }
 }
 
 /// Least distance between two drops along a branch of diameter `d`: a tee each, a straight

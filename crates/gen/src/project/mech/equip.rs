@@ -46,6 +46,7 @@ pub enum Kind {
     Pump,
     FireDamper,
     VolumeDamper,
+    Silencer,
 }
 
 impl Kind {
@@ -62,6 +63,7 @@ impl Kind {
             Kind::Pump => "pump",
             Kind::FireDamper => "fire_damper",
             Kind::VolumeDamper => "volume_damper",
+            Kind::Silencer => "duct_silencer",
         }
     }
 
@@ -79,6 +81,7 @@ impl Kind {
             Kind::Pump => "P",
             Kind::FireDamper => "FD",
             Kind::VolumeDamper => "VD",
+            Kind::Silencer => "SD",
         }
     }
 }

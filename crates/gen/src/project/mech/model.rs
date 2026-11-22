@@ -100,6 +100,7 @@ fn title(k: Kind) -> &'static str {
         Kind::Pump => "Pump",
         Kind::FireDamper => "Fire Damper",
         Kind::VolumeDamper => "Volume Damper",
+        Kind::Silencer => "Duct Silencer",
     }
 }
 
@@ -116,6 +117,7 @@ fn ifc(k: Kind) -> &'static str {
         Kind::Pump => "IfcPump CIRCULATOR",
         Kind::FireDamper => "IfcDamper FIREDAMPER",
         Kind::VolumeDamper => "IfcDamper BALANCINGDAMPER",
+        Kind::Silencer => "IfcDuctSilencer RECTANGULAR",
     }
 }
 
