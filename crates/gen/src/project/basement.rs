@@ -257,6 +257,32 @@ fn plan(spec: &ProjectSpec, p: &GProject) -> Result<Plan, GenError> {
         }
         keep.push((r, pr.kind));
     }
+    // strips too shallow to park on either side of a corridor: the parking's own aisle is the
+    // way to the stair, so the corridor shrinks to the landing before its stairs and lifts and
+    // the parking takes the whole depth
+    let parks = |keep: &[(R, RoomKind)]| {
+        let rects: Vec<R> = keep.iter().map(|k| k.0).collect();
+        free_rects(&rects, w, d).iter().any(|r| (r.2 - r.0).min(r.3 - r.1) >= park_min())
+    };
+    let cores: Vec<R> = keep.iter().filter(|k| k.1 != RoomKind::Corridor).map(|k| k.0).collect();
+    let open: Vec<(R, RoomKind)> = keep
+        .iter()
+        .filter_map(|&(r, k)| {
+            if k != RoomKind::Corridor {
+                return Some((r, k));
+            }
+            let along_x = r.2 - r.0 >= r.3 - r.1;
+            let touch = |c: &R| if along_x { c.0 < r.2 && c.2 > r.0 && (c.3 == r.1 || c.1 == r.3) } else { c.1 < r.3 && c.3 > r.1 && (c.2 == r.0 || c.0 == r.2) };
+            let span = cores.iter().filter(|c| touch(c)).fold(None, |s: Option<(Mm, Mm)>, c| {
+                let (a, b) = if along_x { (c.0.max(r.0), c.2.min(r.2)) } else { (c.1.max(r.1), c.3.min(r.3)) };
+                Some(s.map_or((a, b), |s| (s.0.min(a), s.1.max(b))))
+            })?;
+            Some((if along_x { (span.0, r.1, span.1, r.3) } else { (r.0, span.0, r.2, span.1) }, k))
+        })
+        .collect();
+    if !plated && !parks(&keep) && parks(&open) && open.iter().any(|k| k.1 == RoomKind::Corridor) {
+        keep = open;
+    }
     let rects: Vec<R> = keep.iter().map(|k| k.0).collect();
     let mut cells: Vec<Cell> = keep.iter().map(|k| cell(k.0, k.1, spec.ru)).collect();
     for r in free_rects(&rects, w, d) {
@@ -277,10 +303,11 @@ fn plan(spec: &ProjectSpec, p: &GProject) -> Result<Plan, GenError> {
     }
     let mut holes = vec![];
     for st in &g.layout.stairs {
-        let (a, b) = stair_box(st)?;
+        // the stair's layout stands in the plan already (origin and turn applied)
+        let (lo, hi) = stair_box(st)?;
         let e = hole_clear();
-        let (x0, y0) = (st.origin.0 + a.0 - e, st.origin.1 + a.1 - e);
-        let (x1, y1) = (st.origin.0 + b.0 + e, st.origin.1 + b.1 + e);
+        let (x0, y0) = (lo.0 - e, lo.1 - e);
+        let (x1, y1) = (hi.0 + e, hi.1 + e);
         let c = ((x0 + x1) / 2.0 - o.0, (y0 + y1) / 2.0 - o.1);
         let room = keep.iter().find(|k| {
             k.1 == RoomKind::Stair && m(k.0 .0) <= c.0 && c.0 <= m(k.0 .2) && m(k.0 .1) <= c.1 && c.1 <= m(k.0 .3)
@@ -294,6 +321,12 @@ fn plan(spec: &ProjectSpec, p: &GProject) -> Result<Plan, GenError> {
             ),
             None => (x0, y0, x1, y1),
         };
+        // the clearance round a stair at the facade stops short of the slab edge by as much
+        let (x0, y0) = (x0.max(o.0 + e), y0.max(o.1 + e));
+        let (x1, y1) = (x1.min(o.0 + m(w) - e), y1.min(o.1 + m(d) - e));
+        if x1 - x0 < e || y1 - y0 < e {
+            return Err(infeasible("basement: a stair of the ground floor stands outside the basement box; use basements 0"));
+        }
         holes.push(crate::layout::rect(x0, y0, x1, y1));
     }
     Ok(Plan {
@@ -346,7 +379,7 @@ fn storey(
             keep: vec![],
         })
         .collect();
-    let (fixtures, fit) = super::furnish::furnish(&l, &rooms, h, spec.typology, rules);
+    let (fixtures, fit) = super::furnish::furnish(&l, &rooms, h, spec.typology, rules, &mut Default::default());
     l.fixtures = fixtures;
     shift(&mut l, pl.o);
     if b + 1 < n {
@@ -446,5 +479,20 @@ mod tests {
         // west and east of the stair, west and east of the lift
         assert_eq!(free.len(), 4, "{free:?}");
         assert!(free.contains(&(12400, 8000, 30000, 14000)));
+    }
+
+    /// The stair layout stands in the plan already: every stair far from the origin gets its
+    /// hole through the ground slab round its own flights.
+    #[test]
+    fn a_stair_hole_lies_round_its_stair_wherever_it_stands() {
+        let s = super::super::parse_spec(&serde_json::json!({"typology": "hospital_wing", "floors": 4, "basements": 1})).unwrap();
+        let p = super::super::build_project(&s).unwrap_or_else(|e| panic!("{e}"));
+        let g = &p.storeys[0].layout;
+        assert!(g.stairs.iter().any(|st| st.origin.0 > 50.0), "a stair far along the wing");
+        for st in &g.stairs {
+            let (lo, hi) = stair_box(st).unwrap();
+            let c = ((lo.0 + hi.0) / 2.0, (lo.1 + hi.1) / 2.0);
+            assert!(g.slab_holes.iter().any(|h| crate::check::inside(h, c)), "no hole round the stair at {c:?}");
+        }
     }
 }

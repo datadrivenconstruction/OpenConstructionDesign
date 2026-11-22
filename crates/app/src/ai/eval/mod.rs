@@ -9,6 +9,7 @@ pub mod fire_oracles;
 pub mod form_oracles;
 pub mod geom_oracles;
 pub mod design_oracles;
+pub mod material_oracles;
 pub mod mep_oracles;
 pub mod metrics;
 pub mod oracle;

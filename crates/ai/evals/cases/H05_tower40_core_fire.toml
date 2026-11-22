@@ -111,3 +111,5 @@ new_max = 0
 kind = "room_sep"
 area_max = 2500.0
 stairs_min = 2.0
+[[oracle.geom]]
+kind = "materials"

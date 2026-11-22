@@ -277,6 +277,10 @@ impl GSplit {
         if r.edges.is_empty() {
             return vec![];
         }
+        // a piece on its own eave line keeps it: a level cut leaves the part on the same plane
+        if r.eave.is_some() {
+            return vec![None; ring.len()];
+        }
         let (n, m) = (ring.len(), r.ring.len());
         let mut out = Vec::with_capacity(n);
         for i in 0..n {

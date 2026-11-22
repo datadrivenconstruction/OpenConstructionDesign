@@ -299,6 +299,10 @@ pub fn skin(rings: &[Vec<V3>], caps: bool, side: &dyn Fn(usize, usize) -> u32) -
     let mut polys = vec![];
     let k = rings[0].len();
     for s in 0..rings.len() - 1 {
+        // stopped: an open skin, which the fallible caller reports as cancelled
+        if crate::cancel::requested() {
+            return Body { polys };
+        }
         let (r0, r1) = (&rings[s], &rings[s + 1]);
         for j in 0..k {
             let (a, b, c, d) = (r0[j], r0[(j + 1) % k], r1[(j + 1) % k], r1[j]);

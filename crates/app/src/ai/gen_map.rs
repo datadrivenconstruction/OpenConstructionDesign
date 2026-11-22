@@ -501,6 +501,7 @@ pub fn compile_hall(
         slope: None,
         edges: vec![],
         vault: None,
+        eave: None,
     };
     compile_create(cx, slot0, &[roof], out)?;
     let mut slot = slot0 + 1;

@@ -467,6 +467,8 @@ fn sprinklers(p: &mut GProject) {
         p.fire.runs.push(r);
     }
     svc::add_holes(p, &holes);
+    let mut rs: Vec<&mut super::GRun> = p.fire.runs.iter_mut().map(|r| &mut r.run).collect();
+    svc::spread_nodes(&mut rs);
     let ports = ports(p);
     let refs: Vec<&super::GRun> = p.fire.runs.iter().map(|r| &r.run).collect();
     let faults = svc::net_faults(&refs, &ports);

@@ -713,20 +713,17 @@ pub fn plant_screen(levels: usize) -> Vec<f32> {
     PLANT_SCREEN[PLANT_SCREEN.len().saturating_sub(levels)..].to_vec()
 }
 
-/// Display colour of a component material: the colour of its row in the material table (a
-/// planting material has a default one); the common component grey when it has none.
+/// Display colour of a component material: its row colour over its library look (equipment
+/// steel, planting foliage, ...); the common component grey only when it names neither.
 fn comp_rgb(m: &Model, material: &str, cache: &mut HashMap<String, [u8; 3]>) -> [u8; 3] {
     if let Some(c) = cache.get(material) {
         return *c;
     }
-    let rgb = if material.is_empty() {
-        COMP_RGB
-    } else {
-        m.material(material)
-            .ok()
-            .and_then(|x| x.spec.color)
-            .map_or(COMP_RGB, |c| [(c >> 16) as u8, (c >> 8) as u8, c as u8])
-    };
+    let rgb = m
+        .material_look(material)
+        .ok()
+        .flatten()
+        .map_or(COMP_RGB, |r| [(r.rgb >> 16) as u8, (r.rgb >> 8) as u8, r.rgb as u8]);
     cache.insert(material.to_string(), rgb);
     rgb
 }
@@ -1562,6 +1559,18 @@ mod tests {
         assert!(ed.big.timing.arch_reused);
         assert!(!ed.big.outlines(Sel::Mep(main)).is_empty());
         assert!(crate::selection::all(&ed).contains(&Sel::Mep(main)));
+    }
+
+    #[test]
+    fn a_component_material_without_a_row_colour_takes_its_library_look() {
+        let m = Model::open(":memory:").unwrap();
+        let mut cache = HashMap::new();
+        for name in ["Galvanised steel", "Hedge", "Oak", "Copper pipe"] {
+            assert_ne!(comp_rgb(&m, name, &mut cache), COMP_RGB, "{name}");
+        }
+        assert_ne!(comp_rgb(&m, "Hedge", &mut cache), comp_rgb(&m, "Galvanised steel", &mut cache));
+        assert_eq!(comp_rgb(&m, "", &mut cache), COMP_RGB);
+        assert_eq!(comp_rgb(&m, "XYZ", &mut cache), COMP_RGB, "no look, the common tone");
     }
 
     #[test]

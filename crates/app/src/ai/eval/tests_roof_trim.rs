@@ -186,3 +186,62 @@ fn walls_around_a_free_form_shell_added_by_ops_are_trimmed_to_it() {
     };
     assert_eq!(reach(&ed, &walls, "museum shell", &z), walls.len());
 }
+
+/// An L-shaped hip roof opened round a head whose corner sits on the valley: every piece reaches
+/// the model as a roof that builds, the corner piece on its own eave line as one plane at the
+/// roof's slope.
+#[test]
+fn an_l_hip_opened_at_a_valley_corner_reaches_the_model_piece_by_piece() {
+    use crate::ai::plan::NewElem;
+    let r = ddc_gen::project::PRoof {
+        name: "Roof".into(),
+        elevation: 0.0,
+        ring: vec![(0.0, 0.0), (20.0, 0.0), (20.0, 8.0), (8.0, 8.0), (8.0, 20.0), (0.0, 20.0)],
+        slope: 30.0,
+        overhang: 0.0,
+        edges: vec![],
+        vault: None,
+        lift: 0.0,
+        eave: None,
+    };
+    let head = [(6.0, 3.0), (10.0, 3.0), (10.0, 6.0), (6.0, 6.0)];
+    let parts = ddc_gen::project::fire::plane_pieces(&r, &head).expect("the roof opens");
+    assert!(parts.iter().any(|q| q.eave.is_some()), "the valley corner hangs on its own eave line");
+    let mut ed = editor();
+    super::tests::sql(&ed, "INSERT INTO slab_type(id, name) VALUES(901, 'Roof')");
+    let items: Vec<NewElem> = parts
+        .iter()
+        .map(|q| NewElem::Roof {
+            level: ed.level,
+            stype: None,
+            offset: q.lift,
+            overhang: q.overhang,
+            ring: q.ring.clone(),
+            slope: Some(q.slope),
+            edges: q.edges.clone(),
+            vault: None,
+            eave: q.eave,
+        })
+        .collect();
+    let op = PlanOp::Create { slot0: 0, items };
+    let mut slots = std::collections::HashMap::new();
+    let sets = crate::ai::sets::Sets::default();
+    let mut cx =
+        CompileCx { ed: &mut ed, slots: &mut slots, sets: &sets, gens: &[], rules: &[], declared: Default::default(), skips: vec![] };
+    compile_one(&mut cx, &op).map_err(|e| e.0).unwrap();
+    let ids: Vec<i64> =
+        ed.model.sql().prepare("SELECT id FROM roof").unwrap().query_map([], |r| r.get(0)).unwrap().map(Result::unwrap).collect();
+    assert_eq!(ids.len(), parts.len(), "every piece is a roof in the model");
+    let tan = 30f64.to_radians().tan();
+    for (id, q) in ids.iter().zip(&parts) {
+        let g = ed.model.roof_geometry(*id).unwrap_or_else(|e| panic!("piece {:?} does not build: {e:?}", q.ring));
+        let Some((a, b)) = q.eave else { continue };
+        let n = q.ring.len() as f64;
+        let c = q.ring.iter().fold((0.0, 0.0), |s, p| (s.0 + p.0 / n, s.1 + p.1 / n));
+        let len = (b.0 - a.0).hypot(b.1 - a.1);
+        let up = (-(b.1 - a.1) / len, (b.0 - a.0) / len);
+        let (z0, z1) = (g.top_at(v2(c.0, c.1)), g.top_at(v2(c.0 + 0.05 * up.0, c.1 + 0.05 * up.1)));
+        let (z0, z1) = (z0.expect("the piece covers its centroid"), z1.expect("and a step uphill of it"));
+        assert!((z1 - z0 - 0.05 * tan).abs() < 1e-6, "piece {:?} rises {} over 5 cm, not {}", q.ring, z1 - z0, 0.05 * tan);
+    }
+}

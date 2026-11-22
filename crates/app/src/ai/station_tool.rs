@@ -280,6 +280,7 @@ fn plan_station(c: &mut Core, a: &J, cx: &CallCx<'_>) -> Result<Done, String> {
             slope: None,
             edges: vec![],
             vault: Some(RoofVault { a: at(v.a), b: at(v.b), profile: v.profile.clone(), depth: v.depth }),
+            eave: None,
         });
     }
     for (i, r) in s.rooms.iter().enumerate() {

@@ -136,8 +136,22 @@ fn theme(ui: &egui::Ui) -> std::sync::Arc<Theme> {
     ddc_ui::theme::of(ui.ctx())
 }
 
+/// The caption in its own font on the line of the field text beside it: egui centres boxes, and
+/// the box of the smaller caption font reads off the field's line.
 fn caption(ui: &mut egui::Ui, th: &Theme, text: &str) -> egui::Response {
-    widgets::elided_label(ui, text, th.font(Role::Label), th.sem().text_secondary)
+    let col = th.sem().text_secondary;
+    let g = widgets::elide(ui, text, th.font(Role::Label), col, ui.available_width());
+    let line = ui.painter().layout_no_wrap("x".into(), th.font(Role::Body), col);
+    let off = |g: &egui::Galley| crate::ui_kit::x_mid(g) - g.size().y / 2.0;
+    let dy = off(&line) - off(&g);
+    let cut = g.elided;
+    let (r, resp) = ui.allocate_exact_size(g.size(), egui::Sense::hover());
+    ui.painter().galley(r.min + egui::vec2(0.0, dy), g, col);
+    if cut {
+        resp.on_hover_text(text)
+    } else {
+        resp
+    }
 }
 
 /// Length in metres, shown and typed in project units. Enter or leaving the field commits; text

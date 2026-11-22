@@ -77,7 +77,7 @@ fn check_walls(walls: &[GWall]) -> Result<(), String> {
             return Err(format!("wall {i} has a bad arc"));
         }
         if w.length() < MIN_WALL {
-            return Err(format!("wall {i} is too short"));
+            return Err(format!("wall {i} is too short ({:.3} m from {:?} to {:?})", w.length(), w.a, w.b));
         }
     }
     for i in 0..walls.len() {
@@ -362,29 +362,77 @@ fn check_rooms(l: &GLayout) -> Result<(), String> {
     }
     for i in 0..l.rooms.len() {
         for j in i + 1..l.rooms.len() {
-            if rooms_overlap(&l.rooms[i], &l.rooms[j]) {
-                return Err(format!("rooms {i} and {j} overlap"));
+            if let Some(c) = rooms_overlap(&l.rooms[i], &l.rooms[j]) {
+                return Err(format!("rooms {i} ({}) and {j} ({}) overlap at ({:.3}, {:.3})", l.rooms[i].name, l.rooms[j].name, c.0, c.1));
             }
         }
     }
     Ok(())
 }
 
-fn rooms_overlap(a: &GRoom, b: &GRoom) -> bool {
-    let ((alo, ahi), (blo, bhi)) = (bbox(&a.polygon), bbox(&b.polygon));
+/// `p` lies inside ring `r` and off its outline: a point on a shared wall is in neither room.
+fn strictly_inside(r: &[P], p: P) -> bool {
+    let n = r.len();
+    inside(r, p) && (0..n).all(|k| dist_to_seg(p, r[k], r[(k + 1) % n]) > EPS)
+}
+
+/// Centroids of the fan triangles of ring `r` from its first corner.
+fn fan_centroids(r: &[P]) -> impl Iterator<Item = P> + '_ {
+    (1..r.len().saturating_sub(1)).map(move |i| ((r[0].0 + r[i].0 + r[i + 1].0) / 3.0, (r[0].1 + r[i].1 + r[i + 1].1) / 3.0))
+}
+
+fn rooms_overlap(a: &GRoom, b: &GRoom) -> Option<P> {
+    // a probe inside both may still sit on a shared slanted wall: the common area decides
+    use ddc_geom::{poly, v2};
+    let ring = |r: &[P]| -> Vec<ddc_geom::V2> { r.iter().map(|p| v2(p.0, p.1)).collect() };
+    rings_overlap(&a.polygon, &b.polygon, &[a.point, b.point])
+        .filter(|_| poly::overlap_area(&ring(&a.polygon), &poly::convex_pieces(&ring(&b.polygon))).abs() > OVERLAP_AREA)
+}
+
+/// A point inside both rings and off both outlines. Probes: the middle of the common box and
+/// that middle nudged each way (a slanted shared side may run through it, and a point on the
+/// side is in neither ring), the `extra` points and the fan centroids of both outlines; then
+/// a corner of one inside the other, then crossing outlines. Rings that only touch, at any
+/// angle, do not overlap.
+fn rings_overlap(ra: &[P], rb: &[P], extra: &[P]) -> Option<P> {
+    const NUDGE: f64 = 1e-3;
+    let ((alo, ahi), (blo, bhi)) = (bbox(ra), bbox(rb));
     let (x0, x1) = (alo.0.max(blo.0), ahi.0.min(bhi.0));
     let (y0, y1) = (alo.1.max(blo.1), ahi.1.min(bhi.1));
     if x1 - x0 <= EPS || y1 - y0 <= EPS {
-        return false;
+        return None;
     }
     let c = ((x0 + x1) / 2.0, (y0 + y1) / 2.0);
-    if !(inside(&a.polygon, c) && inside(&b.polygon, c)) {
-        return false;
+    let nudged = [(0.0, 0.0), (NUDGE, 0.0), (-NUDGE, 0.0), (0.0, NUDGE), (0.0, -NUDGE)].map(|d| (c.0 + d.0, c.1 + d.1));
+    let probe = nudged
+        .into_iter()
+        .chain(extra.iter().copied())
+        .chain(fan_centroids(ra))
+        .chain(fan_centroids(rb))
+        .find(|&p| strictly_inside(ra, p) && strictly_inside(rb, p));
+    if probe.is_some() {
+        return probe;
     }
-    // the probe may sit on a shared wall of two slanted rooms: measure the common area
-    use ddc_geom::{poly, v2};
-    let ring = |r: &[P]| -> Vec<ddc_geom::V2> { r.iter().map(|p| v2(p.0, p.1)).collect() };
-    poly::overlap_area(&ring(&a.polygon), &poly::convex_pieces(&ring(&b.polygon))).abs() > OVERLAP_AREA
+    // a concave room or a thin wedge the probes miss: a corner of one strictly inside the
+    // other, or two outlines crossing (touching and collinear runs are not a crossing)
+    if let Some(&p) = ra.iter().find(|&&p| strictly_inside(rb, p)).or_else(|| rb.iter().find(|&&p| strictly_inside(ra, p))) {
+        return Some(p);
+    }
+    let (na, nb) = (ra.len(), rb.len());
+    (0..na).find_map(|i| (0..nb).find_map(|j| cross_point(ra[i], ra[(i + 1) % na], rb[j], rb[(j + 1) % nb])))
+}
+
+/// Where segments `p0-p1` and `q0-q1` cross with each end clear of the other's line by more
+/// than `EPS`; touching or collinear segments do not cross.
+fn cross_point(p0: P, p1: P, q0: P, q1: P) -> Option<P> {
+    let side = |a: P, b: P, x: P| cross(sub(b, a), sub(x, a)) / len(sub(b, a)).max(1e-12);
+    let apart = |s: f64, t: f64| (s > EPS && t < -EPS) || (s < -EPS && t > EPS);
+    let (s0, s1) = (side(q0, q1, p0), side(q0, q1, p1));
+    if !(apart(s0, s1) && apart(side(p0, p1, q0), side(p0, p1, q1))) {
+        return None;
+    }
+    let t = s0 / (s0 - s1);
+    Some((p0.0 + (p1.0 - p0.0) * t, p0.1 + (p1.1 - p0.1) * t))
 }
 
 fn check_rings(l: &GLayout) -> Result<(), String> {
@@ -402,12 +450,11 @@ fn check_rings(l: &GLayout) -> Result<(), String> {
             return Err(format!("slab hole {i} is outside the slab"));
         }
     }
+    // holes turned with a curved or slanted plate may share a box without sharing area
     for i in 0..l.slab_holes.len() {
-        let (a, b) = bbox(&l.slab_holes[i]);
         for j in i + 1..l.slab_holes.len() {
-            let (c, d) = bbox(&l.slab_holes[j]);
-            if a.0 < d.0 && c.0 < b.0 && a.1 < d.1 && c.1 < b.1 {
-                return Err(format!("slab holes {i} and {j} overlap"));
+            if let Some(c) = rings_overlap(&l.slab_holes[i], &l.slab_holes[j], &[]) {
+                return Err(format!("slab holes {i} and {j} overlap at ({:.3}, {:.3})", c.0, c.1));
             }
         }
     }
@@ -450,4 +497,66 @@ pub fn validate_layout(l: &GLayout) -> Result<(), String> {
     check_rooms(l)?;
     check_rings(l)?;
     check_others(l)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    fn room(polygon: Vec<P>) -> GRoom {
+        let n = polygon.len() as f64;
+        let point = (polygon.iter().map(|p| p.0).sum::<f64>() / n, polygon.iter().map(|p| p.1).sum::<f64>() / n);
+        GRoom { name: "r".into(), apartment: None, point, polygon }
+    }
+
+    /// Mirror rooms on a slanted shared wall: the middle of their common box lies on the wall,
+    /// where rounding may count it inside both; they still do not overlap. A room drawn twice
+    /// or shifted into its neighbour does.
+    #[test]
+    fn rooms_on_a_slanted_wall_meet_without_overlap() {
+        for deg in [0.0f64, 17.0, 30.0, 45.0, 61.0, 77.7] {
+            let (s, c) = deg.to_radians().sin_cos();
+            let rot = |p: P| (12.3 + p.0 * c - p.1 * s, 4.7 + p.0 * s + p.1 * c);
+            let a = room([(0.0, 0.0), (7.3, 7.3), (7.3, 0.0)].map(rot).to_vec());
+            let b = room([(0.0, 0.0), (0.0, 7.3), (7.3, 7.3)].map(rot).to_vec());
+            assert!(rooms_overlap(&a, &b).is_none(), "{deg}: neighbours on one wall");
+            let box_ = room([(0.0, 0.0), (4.0, 0.0), (4.0, 3.0), (0.0, 3.0)].map(rot).to_vec());
+            let twin = room(box_.polygon.iter().rev().copied().collect());
+            assert!(rooms_overlap(&box_, &twin).is_some(), "{deg}: a room drawn twice");
+        }
+        let a = room(vec![(0.0, 0.0), (7.3, 7.3), (7.3, 0.0)]);
+        let into = room(vec![(0.3, 0.0), (0.3, 7.3), (7.6, 7.3)]);
+        assert!(rooms_overlap(&a, &into).is_some(), "shifted into the neighbour");
+        // the middle of the common box on the triangle's long side: the overlap is still found
+        let tri = room(vec![(0.0, 0.0), (2.0, 0.0), (0.0, 2.0)]);
+        let sq = room(vec![(0.0, 0.0), (2.0, 0.0), (2.0, 2.0), (0.0, 2.0)]);
+        assert!(rooms_overlap(&tri, &sq).is_some(), "a triangle inside a square");
+        // a concave room: the probes fall in its notch, a corner of the other lies inside it
+        let ell = room(vec![(0.0, 0.0), (10.0, 0.0), (10.0, 2.0), (2.0, 2.0), (2.0, 10.0), (0.0, 10.0)]);
+        let rect = room(vec![(1.5, 1.5), (9.0, 1.5), (9.0, 9.0), (1.5, 9.0)]);
+        assert!(rooms_overlap(&ell, &rect).is_some(), "a rectangle over the corner of an L");
+        // a thin wedge over a slanted side: only the crossing outlines show it
+        let big = room(vec![(0.0, 0.0), (10.0, 0.0), (0.0, 10.0)]);
+        let wedge = room(vec![(9.95, 0.0), (10.5, 0.0), (10.5, 0.5)]);
+        assert!(rooms_overlap(&big, &wedge).is_some(), "a thin wedge over a slanted side");
+    }
+
+    /// Slab holes of a core turned with a round plate share a box, not area.
+    #[test]
+    fn turned_slab_holes_side_by_side_do_not_overlap() {
+        let (s, c) = 30f64.to_radians().sin_cos();
+        let rot = |p: P| (p.0 * c - p.1 * s, p.0 * s + p.1 * c);
+        let lift = [(0.0, 0.0), (2.4, 0.0), (2.4, 2.6), (0.0, 2.6)].map(rot).to_vec();
+        let stair = [(2.4, 0.0), (5.4, 0.0), (5.4, 6.0), (2.4, 6.0)].map(rot).to_vec();
+        let apart = [(2.7, 0.0), (5.4, 0.0), (5.4, 6.0), (2.7, 6.0)].map(rot).to_vec();
+        let over = [(2.0, 0.0), (5.4, 0.0), (5.4, 6.0), (2.0, 6.0)].map(rot).to_vec();
+        assert!(rings_overlap(&lift, &stair, &[]).is_none(), "holes on one side");
+        assert!(rings_overlap(&lift, &apart, &[]).is_none(), "holes a gap apart");
+        assert!(rings_overlap(&lift, &over, &[]).is_some(), "holes into each other");
+        let mut l = GLayout::default();
+        l.slab_holes = vec![lift, stair];
+        assert!(check_rings(&l).is_ok(), "{:?}", check_rings(&l));
+        l.slab_holes.push(over);
+        assert!(check_rings(&l).unwrap_err().contains("overlap"));
+    }
 }

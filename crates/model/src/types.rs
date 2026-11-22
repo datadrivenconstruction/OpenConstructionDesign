@@ -112,7 +112,7 @@ pub(crate) fn write_slab_type(
     for (pos, l) in layers.iter().enumerate() {
         db.execute(
             "INSERT INTO slab_type_layer VALUES (?1,?2,?3,?4)",
-            params![id, pos as i64, l.material.trim(), l.thickness],
+            params![id, pos as i64, crate::material_look::assign("slab", &l.material, ""), l.thickness],
         )?;
     }
     Ok(())
@@ -196,7 +196,7 @@ impl Model {
             for (pos, l) in layers.iter().enumerate() {
                 db.execute(
                     "INSERT INTO wall_type_layer VALUES (?1,?2,?3,?4)",
-                    params![id, pos as i64, l.material.trim(), l.thickness],
+                    params![id, pos as i64, crate::material_look::assign("wall", &l.material, ""), l.thickness],
                 )?;
             }
             Ok(((), id, inv))

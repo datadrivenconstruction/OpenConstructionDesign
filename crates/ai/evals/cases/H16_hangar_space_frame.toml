@@ -61,3 +61,5 @@ tol = 0.1
 [[oracle.geom]]
 kind = "supports_connected"
 min = 4.0
+[[oracle.geom]]
+kind = "materials"

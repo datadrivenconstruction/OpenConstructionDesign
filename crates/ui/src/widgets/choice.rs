@@ -21,19 +21,22 @@ pub const SLIDER_TRACK_H: f32 = 4.0;
 pub const SLIDER_THUMB: f32 = 16.0;
 pub const SLIDER_THUMB_HOT: f32 = 18.0;
 
+/// Width a checkbox with `label` takes when nothing cuts it: box, gap and the whole label.
+pub fn checkbox_width(ui: &Ui, th: &Theme, label: &str) -> f32 {
+    full_width(ui, th, control::CHECK, label)
+}
+
+fn full_width(ui: &Ui, th: &Theme, mark_w: f32, label: &str) -> f32 {
+    if label.is_empty() {
+        return mark_w;
+    }
+    let g = ui.painter().layout_no_wrap(label.to_owned(), th.font(Role::Body), th.sem().text_primary);
+    mark_w + space::SM + g.size().x
+}
+
 fn allocate(ui: &mut Ui, th: &Theme, mark_w: f32, label: &str) -> (Rect, Rect, Response, bool) {
-    let font = th.font(Role::Body);
-    let text_w = if label.is_empty() {
-        0.0
-    } else {
-        ui.painter()
-            .layout_no_wrap(label.to_owned(), font, th.sem().text_primary)
-            .size()
-            .x
-    };
     let gap = if label.is_empty() { 0.0 } else { space::SM };
-    let w = (mark_w + gap + text_w).min(ui.available_width().max(mark_w));
-    let _ = th;
+    let w = full_width(ui, th, mark_w, label).min(ui.available_width().max(mark_w));
     let (rect, resp) = ui.allocate_exact_size(Vec2::new(w, ROW_H), Sense::click());
     let text = Rect::from_min_max(
         egui::pos2((rect.left() + mark_w + gap).min(rect.right()), rect.top()),

@@ -3,7 +3,10 @@
 //! Textures of materials in the realistic 3D style. Reads the texture slots from the model,
 //! hands the images to the renderer (`ddc_render::texture::publish`) and tells the scene builders
 //! which texture layer a face takes. The renderer reads the layer from the face tag; styles other
-//! than realistic ignore it. Images are PNG or JPEG. Without any slot nothing is decoded, published or queried per element.
+//! than realistic ignore it. Images are PNG or JPEG. A material without a slot takes its library
+//! look (`ddc_model::material_look`): a built-in texture tinted to the look colour, one layer per
+//! look, so many material names share few layers. Images are made only once a realistic view is
+//! on screen; the element query runs once per model revision.
 
 use std::cell::RefCell;
 use std::collections::{HashMap, HashSet};
@@ -22,6 +25,8 @@ const MAX_SIDE: u32 = 8192;
 pub struct Layers {
     elem: HashMap<(&'static str, i64), u8>,
     wall: HashMap<(i64, usize), u8>,
+    /// Wall type layers drawn with their library look (finishes keep their shaded colour).
+    wall_look: HashMap<(i64, usize), u8>,
     /// Layer stacks of slabs, ceilings and roofs, top first: thickness and texture layer.
     stack: HashMap<(&'static str, i64), Vec<(f32, Option<u8>)>>,
     /// Wall types with at least one textured layer.
@@ -30,7 +35,15 @@ pub struct Layers {
 
 impl Layers {
     pub fn is_empty(&self) -> bool {
-        self.elem.is_empty() && self.wall.is_empty() && self.stack.is_empty()
+        self.elem.is_empty() && self.wall.is_empty() && self.wall_look.is_empty() && self.stack.is_empty()
+    }
+
+    /// Tag of a wall type layer drawn with its library look; the plain layer number without one.
+    pub fn wall_look(&self, wall_type: i64, layer: usize) -> u32 {
+        match self.wall_look.get(&(wall_type, layer)) {
+            Some(&l) => texture::with_layer(layer as u32, l),
+            None => layer as u32,
+        }
     }
 
     /// Whether any layer of walls of this type has a texture (such walls get an anchor).
@@ -93,8 +106,60 @@ struct Published {
 
 struct Cached {
     rev: u64,
+    /// Keys of the slots: a slot edit does not bump the revision of the cache key alone.
     keys: Vec<String>,
     layers: Rc<Layers>,
+    srcs: Rc<Vec<Src>>,
+    all_keys: Rc<Vec<String>>,
+}
+
+/// A library look as a texture layer.
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub struct LookTex {
+    pub texture: &'static str,
+    pub rgb: [u8; 3],
+    pub tile_m: f32,
+    pub roughness: f32,
+    pub metallic: f32,
+}
+
+impl LookTex {
+    pub fn of(r: &ddc_model::material_look::Resolved) -> LookTex {
+        let c = r.rgb;
+        LookTex {
+            texture: r.look.texture,
+            rgb: [(c >> 16) as u8, (c >> 8) as u8, c as u8],
+            tile_m: r.look.tile_m,
+            roughness: r.roughness,
+            metallic: r.metallic,
+        }
+    }
+
+    fn key(&self) -> String {
+        let [r, g, b] = self.rgb;
+        format!("look|{}|{r:02x}{g:02x}{b:02x}|{}|{}|{}", self.texture, self.tile_m, self.roughness, self.metallic)
+    }
+
+    fn layer(&self) -> Option<TexLayer> {
+        TexLayer::look(self.texture, self.rgb, self.tile_m, self.roughness, self.metallic)
+    }
+
+    fn placeholder(&self) -> TexLayer {
+        TexLayer {
+            rgba: vec![],
+            scale_m: texture::clamp_scale(self.tile_m),
+            rotation_deg: 0.0,
+            roughness: self.roughness,
+            metallic: self.metallic,
+        }
+    }
+}
+
+/// Where the image of a layer comes from.
+#[derive(Clone)]
+enum Src {
+    Slot(MaterialTextureRow),
+    Look(LookTex),
 }
 
 thread_local! {
@@ -231,16 +296,30 @@ fn placeholder(r: &MaterialTextureRow) -> TexLayer {
         scale_m: texture::clamp_scale(r.tex.scale_m as f32),
         rotation_deg: r.tex.rotation_deg as f32,
         roughness: 0.7,
+        metallic: 0.0,
     }
 }
 
-/// Gives the renderer the layers of the slots, decoded only once a realistic view asked for them.
-/// A slot whose image cannot be read stays a grey layer, so the layer numbers in face tags hold.
-fn publish_set(
-    ed: &Editor,
-    slots: &[(MaterialTextureRow, String)],
-    keys: &[String],
-) -> bool {
+/// The tinted image of a look, cached by its key.
+fn look_layer(t: &LookTex, key: &str) -> Option<TexLayer> {
+    if let Some(hit) = IMAGES.with(|c| c.borrow().get(key).cloned()) {
+        return hit;
+    }
+    let layer = t.layer();
+    IMAGES.with(|c| {
+        let mut c = c.borrow_mut();
+        if c.len() > 4 * MAX_LAYERS {
+            c.clear();
+        }
+        c.insert(key.to_string(), layer.clone());
+    });
+    layer
+}
+
+/// Gives the renderer the layers of the slots and looks, made only once a realistic view asked
+/// for them. A slot whose image cannot be read stays a grey layer, so the layer numbers in face
+/// tags hold.
+fn publish_set(ed: &Editor, srcs: &[Src], keys: &[String]) -> bool {
     let decoded = texture::wanted();
     let same = PUBLISHED.with(|p| {
         let p = p.borrow();
@@ -251,7 +330,18 @@ fn publish_set(
     }
     let mut set = TextureSet::default();
     let mut files = vec![];
-    for ((r, _), key) in slots.iter().zip(keys) {
+    for (src, key) in srcs.iter().zip(keys) {
+        let r = match src {
+            Src::Slot(r) => r,
+            Src::Look(t) => {
+                set.layers.push(if decoded {
+                    look_layer(t, key).unwrap_or_else(|| t.placeholder())
+                } else {
+                    t.placeholder()
+                });
+                continue;
+            }
+        };
         if let TextureSource::File(path) = &r.tex.source {
             files.push((path.clone(), file_stamp(path)));
         }
@@ -304,7 +394,7 @@ pub fn sync(ed: &Editor) -> bool {
     true
 }
 
-/// Texture layers for the current model. Cheap without slots: one small query.
+/// Texture layers for the current model: one query per model revision, then cached.
 pub fn layers(ed: &Editor) -> Rc<Layers> {
     // no blobs here: this runs several times per scene build
     let slots: Vec<_> = ed
@@ -314,47 +404,94 @@ pub fn layers(ed: &Editor) -> Rc<Layers> {
         .into_iter()
         .take(MAX_LAYERS)
         .collect();
-    if slots.is_empty() {
-        if PUBLISHED.with(|p| !p.borrow().keys.is_empty()) {
-            texture::publish(TextureSet::default());
-            PUBLISHED.with(|p| *p.borrow_mut() = Published::default());
-        }
-        return Rc::new(Layers::default());
-    }
     let keys: Vec<String> = slots.iter().map(|(r, s)| row_key(r, s)).collect();
-    publish_set(ed, &slots, &keys);
     let hit = CACHE.with(|c| {
         c.borrow()
             .as_ref()
             .filter(|c| c.rev == ed.revision && c.keys == keys)
-            .map(|c| c.layers.clone())
+            .map(|c| (c.layers.clone(), c.srcs.clone(), c.all_keys.clone()))
     });
-    if let Some(l) = hit {
+    if let Some((l, srcs, all)) = hit {
+        publish(ed, &srcs, &all);
         return l;
     }
-    // layer numbers are slot positions, whether or not the image is decoded yet
+    // slot layers first, by slot position, whether or not the image is decoded yet
     let by_name: HashMap<&str, u8> = slots
         .iter()
         .enumerate()
         .map(|(i, (r, _))| (r.material.as_str(), i as u8))
         .collect();
-    let mut out = Layers::default();
-    for (table, id, material) in ed.model.element_materials().unwrap_or_default() {
-        if let (Some(&l), Some(table)) = (by_name.get(material.as_str()), static_table(&table)) {
-            out.elem.insert((table, id), l);
+    let elems = ed.model.element_materials().unwrap_or_default();
+    let walls = ed.model.all_wall_layer_materials().unwrap_or_default();
+    // then one layer per look, the most used first, while the table has room
+    let mut resolved: HashMap<String, Option<LookTex>> = HashMap::new();
+    let mut look = |name: &str| -> Option<LookTex> {
+        if let Some(t) = resolved.get(name) {
+            return *t;
+        }
+        let t = ed.model.material_look(name).ok().flatten().map(|r| LookTex::of(&r));
+        resolved.insert(name.to_string(), t);
+        t
+    };
+    let mut uses: HashMap<String, (LookTex, usize)> = HashMap::new();
+    let mut elem_look: Vec<((&'static str, i64), String)> = vec![];
+    for (table, id, material) in &elems {
+        let Some(table) = static_table(table) else { continue };
+        if let Some(&l) = by_name.get(material.as_str()) {
+            elem_look.push(((table, *id), format!("#{l}")));
+        } else if let Some(t) = look(material) {
+            let k = t.key();
+            uses.entry(k.clone()).or_insert((t, 0)).1 += 1;
+            elem_look.push(((table, *id), k));
         }
     }
+    let mut wall_look: Vec<((i64, usize), String, bool)> = vec![];
     let mut rank: HashMap<i64, usize> = HashMap::new();
-    for (wtype, material) in ed.model.all_wall_layer_materials().unwrap_or_default() {
-        let n = rank.entry(wtype).or_insert(0);
+    for (wtype, material) in &walls {
+        let n = rank.entry(*wtype).or_insert(0);
         if let Some(&l) = by_name.get(material.as_str()) {
-            out.wall.insert((wtype, *n), l);
-            out.wall_types.insert(wtype);
+            wall_look.push(((*wtype, *n), format!("#{l}"), true));
+        } else if crate::editor::opening_fill::finish_rgb(material).is_none() {
+            // finishes keep their colour in every style; structural layers take the look
+            if let Some(t) = look(material) {
+                let k = t.key();
+                uses.entry(k.clone()).or_insert((t, 0)).1 += 1;
+                wall_look.push(((*wtype, *n), k, false));
+            }
         }
         *n += 1;
     }
+    let mut order: Vec<(String, LookTex, usize)> = uses.into_iter().map(|(k, (t, n))| (k, t, n)).collect();
+    order.sort_by(|a, b| b.2.cmp(&a.2).then_with(|| a.0.cmp(&b.0)));
+    order.truncate(MAX_LAYERS - slots.len());
+    let mut srcs: Vec<Src> = slots.iter().map(|(r, _)| Src::Slot(r.clone())).collect();
+    let mut all = keys.clone();
+    let mut index: HashMap<String, u8> = (0..slots.len()).map(|i| (format!("#{i}"), i as u8)).collect();
+    for (k, t, _) in order {
+        index.insert(k.clone(), srcs.len() as u8);
+        srcs.push(Src::Look(t));
+        all.push(k);
+    }
+    let mut out = Layers::default();
+    for (at, k) in elem_look {
+        if let Some(&l) = index.get(&k) {
+            out.elem.insert(at, l);
+        }
+    }
+    for (at, k, slot) in wall_look {
+        if let Some(&l) = index.get(&k) {
+            if slot {
+                out.wall.insert(at, l);
+                out.wall_types.insert(at.0);
+            } else {
+                out.wall_look.insert(at, l);
+            }
+        }
+    }
+    // stacks split by slot textures only; a look textures the element whole
     let mut stacks: HashMap<(&'static str, i64), Vec<(f32, Option<u8>)>> = HashMap::new();
-    for (table, id, material, thickness) in ed.model.typed_layers().unwrap_or_default() {
+    let typed = if slots.is_empty() { vec![] } else { ed.model.typed_layers().unwrap_or_default() };
+    for (table, id, material, thickness) in typed {
         if let Some(table) = static_table(&table) {
             stacks
                 .entry((table, id))
@@ -368,21 +505,44 @@ pub fn layers(ed: &Editor) -> Rc<Layers> {
         .filter(|(_, v)| v.len() > 1 && v.iter().any(|l| l.1.is_some()))
         .collect();
     let out = Rc::new(out);
+    let (srcs, all) = (Rc::new(srcs), Rc::new(all));
+    publish(ed, &srcs, &all);
     CACHE.with(|c| {
         *c.borrow_mut() = Some(Cached {
             rev: ed.revision,
             keys,
             layers: out.clone(),
+            srcs,
+            all_keys: all,
         })
     });
     out
 }
 
-fn static_table(t: &str) -> Option<&'static str> {
+/// Publishes the layers, or an empty set once none is left.
+fn publish(ed: &Editor, srcs: &[Src], keys: &[String]) {
+    if srcs.is_empty() {
+        if PUBLISHED.with(|p| !p.borrow().keys.is_empty()) {
+            texture::publish(TextureSet::default());
+            PUBLISHED.with(|p| *p.borrow_mut() = Published::default());
+        }
+        return;
+    }
+    publish_set(ed, srcs, keys);
+}
+
+/// Table of an element row that can carry a material: the drawn tables and every table of the
+/// material check.
+pub(crate) fn static_table(t: &str) -> Option<&'static str> {
     ["wall", "slab", "ceiling", "roof", "col", "beam", "stair", "railing", "mep_run", "mesh"]
         .into_iter()
+        .chain(ddc_model::material_look::CHECKED.iter().map(|c| c.0))
         .find(|k| *k == t)
 }
+
+#[cfg(test)]
+#[path = "mat_look_tests.rs"]
+mod look_tests;
 
 #[cfg(test)]
 mod tests {

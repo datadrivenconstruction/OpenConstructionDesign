@@ -1608,6 +1608,8 @@ mod tests {
                 ("ui", "tests_states.rs") => 1,
                 // the stacking-order test opens one plain window to check it against an overlay
                 ("src", "z.rs") => 1,
+                // the cover self-test of the layout probe stands one plain window for a dialog
+                ("src", "layout_contract.rs") => 1,
                 _ => 0,
             }
         }

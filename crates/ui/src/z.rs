@@ -80,6 +80,12 @@ pub fn canvas(ctx: &Context, layer: LayerId) {
     });
 }
 
+/// An area `id` in `z` that covers what is under it (the palette, a popover): opaque from its
+/// first frame, as dialogs are; a cover fading in lets the text under it read through.
+pub fn cover(id: Id, z: Z) -> Area {
+    Area::new(id).order(z.order()).fade_in(false)
+}
+
 /// The middle-order area `id` shown this pass is a window: it stays above the canvas.
 pub fn window(ctx: &Context, id: Id) {
     let pass = ctx.cumulative_pass_nr();

@@ -107,7 +107,8 @@ impl SystemKind {
             SystemKind::HotWater => [255, 0, 0],
             SystemKind::Sanitary => [128, 96, 0],
             SystemKind::Heating => [192, 0, 0],
-            SystemKind::ChilledWater => [0, 96, 160],
+            // darker than supply air so the two blues read apart
+            SystemKind::ChilledWater => [0, 64, 112],
             SystemKind::Sprinkler => [255, 64, 64],
             SystemKind::Power => [0, 160, 0],
             SystemKind::MedicalGas => [0, 176, 120],

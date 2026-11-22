@@ -6,6 +6,8 @@ pub mod analytical;
 pub mod axes;
 pub mod arc;
 pub mod brep;
+/// Cooperative cancellation of long kernel work.
+pub mod cancel;
 pub mod component;
 pub mod csg;
 pub mod csg_check;

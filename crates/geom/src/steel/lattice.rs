@@ -141,6 +141,8 @@ pub struct Frame {
     pub insulators: Vec<InsulatorString>,
     /// The rising chords carry the frame down to the ground (tower legs): columns, not bracing.
     pub chords_are_columns: bool,
+    /// Deck openings [`Frame::fit_decks`] cut back to the floor, and those it dropped.
+    pub deck_openings: (usize, usize),
 }
 
 /// A square floor centred on the frame axis: top at `z`, half-width `half`, an open centre of
@@ -151,6 +153,75 @@ pub struct Deck {
     pub half: f64,
     pub open: f64,
     pub holes: Vec<[f64; 4]>,
+}
+
+/// Floor kept between an opening and the deck's edge or open centre, m.
+const DECK_EDGE: f64 = 0.05;
+/// Narrowest opening worth cutting, m: anything less is no way through.
+const DECK_MIN_OPENING: f64 = 0.3;
+
+impl Deck {
+    /// Fits the openings to the floor that is there: each is cut back to the deck's edge and
+    /// clear of the open centre (the largest part left); one wholly over the open centre needs
+    /// no hole, and one with no room left is dropped. Openings that overlap or come closer than
+    /// the edge strip become one opening round both (a floor between them would be a sliver),
+    /// fitted again. Returns (cut back or merged, dropped).
+    pub fn fit_holes(&mut self) -> (usize, usize) {
+        let (mut cut, mut dropped) = self.fit_each();
+        loop {
+            let near = |a: &[f64; 4], b: &[f64; 4]| {
+                a[0] < b[2] + DECK_EDGE && b[0] < a[2] + DECK_EDGE && a[1] < b[3] + DECK_EDGE && b[1] < a[3] + DECK_EDGE
+            };
+            let n = self.holes.len();
+            let Some((i, j)) = (0..n).flat_map(|i| (i + 1..n).map(move |j| (i, j))).find(|&(i, j)| near(&self.holes[i], &self.holes[j])) else {
+                break;
+            };
+            let (a, b) = (self.holes[i], self.holes.remove(j));
+            self.holes[i] = [a[0].min(b[0]), a[1].min(b[1]), a[2].max(b[2]), a[3].max(b[3])];
+            cut += 1;
+            let (c, k) = self.fit_each();
+            cut += c;
+            dropped += k;
+        }
+        (cut, dropped)
+    }
+
+    /// One pass of [`Deck::fit_holes`] over each opening on its own.
+    fn fit_each(&mut self) -> (usize, usize) {
+        let (mut cut, mut dropped) = (0, 0);
+        let lim = self.half - DECK_EDGE;
+        let o = if self.open > 0.0 { self.open + DECK_EDGE } else { 0.0 };
+        let ok = |r: &[f64; 4]| r[2] - r[0] >= DECK_MIN_OPENING && r[3] - r[1] >= DECK_MIN_OPENING;
+        let area = |r: &[f64; 4]| (r[2] - r[0]).max(0.0) * (r[3] - r[1]).max(0.0);
+        let mut out = vec![];
+        for h in &self.holes {
+            if self.open > 0.0 && h.iter().all(|v| v.abs() <= self.open) {
+                dropped += 1;
+                continue;
+            }
+            let mut r = [h[0].max(-lim), h[1].max(-lim), h[2].min(lim), h[3].min(lim)];
+            if o > 0.0 && r[0] < o && r[2] > -o && r[1] < o && r[3] > -o {
+                // the part of the box off the open centre: four disjoint strips, keep the largest
+                let strips = [
+                    [r[0].max(o), r[1], r[2], r[3]],
+                    [r[0], r[1], r[2].min(-o), r[3]],
+                    [r[0].max(-o), r[1].max(o), r[2].min(o), r[3]],
+                    [r[0].max(-o), r[1], r[2].min(o), r[3].min(-o)],
+                ];
+                r = strips.into_iter().fold([0.0; 4], |m, s| if area(&s) > area(&m) { s } else { m });
+            }
+            if !ok(&r) {
+                dropped += 1;
+                continue;
+            }
+            if r != *h {
+                cut += 1;
+            }
+            out.push(r);
+        }
+        self.holes = out;
+        (cut, dropped)
+    }
 }
 
 /// A two-flight (U) stair from `z0` to `z1`: plan box (x0, y0, x1, y1), rising along +x or -x.
@@ -214,6 +285,15 @@ pub fn lerp(a: V3, b: V3, t: f64) -> V3 {
 impl Frame {
     pub fn new() -> Frame {
         Frame::default()
+    }
+
+    /// Fits every deck's openings to its floor ([`Deck::fit_holes`]), counting what changed.
+    pub fn fit_decks(&mut self) {
+        for d in &mut self.decks {
+            let (c, k) = d.fit_holes();
+            self.deck_openings.0 += c;
+            self.deck_openings.1 += k;
+        }
     }
 
     pub fn node(&mut self, p: V3) -> u32 {

@@ -787,6 +787,84 @@ pub(crate) fn network(runs: &[&GRun]) -> Net {
     Net { edges, nodes, arms }
 }
 
+/// A node with more arms than one fitting holds (`services.node_arms`) becomes a chain of
+/// fittings along its through run: each extra run that ends there steps back from the node,
+/// runs `services.tap_pitch` along the through run and taps it there with its own tee.
+pub(crate) fn spread_nodes(runs: &mut [&mut GRun]) {
+    let cap = rule("services.node_arms") as usize;
+    for _ in 0..4 {
+        let refs: Vec<&GRun> = runs.iter().map(|r| &**r).collect();
+        if refs.is_empty() {
+            return;
+        }
+        let net = network(&refs);
+        let mut edits: Vec<(usize, usize, [V3; 3])> = vec![];
+        let mut used: Vec<V3> = vec![];
+        for (n, a) in net.arms.iter().enumerate() {
+            if a.len() <= cap {
+                continue;
+            }
+            let at = net.nodes[n];
+            let ds: Vec<V3> = a.iter().map(|&(e, end)| depart(&net.edges[e].1, end)).collect();
+            let first = |k: usize| {
+                let p = &net.edges[a[k].0].1;
+                if a[k].1 == 0 { (p[1] - p[0]).len() } else { (p[p.len() - 2] - p[p.len() - 1]).len() }
+            };
+            let mut through = (0, 1, 2.0);
+            for i in 0..a.len() {
+                for j in i + 1..a.len() {
+                    if ds[i].dot(ds[j]) < through.2 {
+                        through = (i, j, ds[i].dot(ds[j]));
+                    }
+                }
+            }
+            let leg = mep::junction_leg(&refs[net.edges[a[through.0].0].0].section);
+            let s = rule("services.tap_pitch").max(2.5 * leg);
+            // the runs that end at the node and leave it across the through run may move
+            let own_end = |k: usize| net.edges[a[k].0].3[a[k].1] as usize == a[k].1;
+            let mut free: Vec<usize> = (0..a.len())
+                .filter(|&k| k != through.0 && k != through.1 && own_end(k) && ds[k].dot(ds[through.0]).abs() < 0.5 && first(k) > 2.0 * s)
+                .collect();
+            free.sort_by(|x, y| first(*y).total_cmp(&first(*x)).then(x.cmp(y)));
+            let mut steps = [0usize; 2];
+            for k in free.into_iter().take(a.len() - cap) {
+                // alternate the two sides of the through run, each step a pitch further out
+                let side = usize::from(steps[0] > steps[1]);
+                let arm = if side == 0 { through.0 } else { through.1 };
+                let off = s * (steps[side] + 1) as f64;
+                if first(arm) < off + s {
+                    continue;
+                }
+                let t = ds[arm];
+                let tap = at + t * off;
+                if used.iter().chain(net.nodes.iter()).any(|q| (*q - tap).len() < s / 2.0) {
+                    continue;
+                }
+                steps[side] += 1;
+                used.push(tap);
+                let back = at + ds[k] * s;
+                edits.push((net.edges[a[k].0].0, a[k].1, [back, back + t * off, tap]));
+            }
+        }
+        if edits.is_empty() {
+            return;
+        }
+        for (ri, end, [back, mid, tap]) in edits {
+            let p = &mut runs[ri].points;
+            let q = |v: V3| (v.x, v.y, v.z);
+            if end == 0 {
+                p[0] = q(back);
+                p.insert(0, q(mid));
+                p.insert(0, q(tap));
+            } else {
+                let last = p.len() - 1;
+                p[last] = q(back);
+                p.extend([q(mid), q(tap)]);
+            }
+        }
+    }
+}
+
 fn depart(p: &[V3], end: usize) -> V3 {
     if end == 0 {
         (p[1] - p[0]).normalized()
@@ -1667,5 +1745,31 @@ mod layer_tests {
             }
         });
         assert_eq!(depth_water(0.1), None, "layers off: no table");
+    }
+
+    #[test]
+    fn a_node_of_five_arms_becomes_a_chain_of_fittings() {
+        let run = |a: V3, b: V3| {
+            let mut r = pipe_run(SvcSys::Fire, 0, PipeMaterial::Steel, 25, vec![a, b]);
+            r.caps = (true, true);
+            r
+        };
+        let o = v3(0.0, 0.0, 3.0);
+        let mut runs = vec![
+            run(v3(-5.0, 0.0, 3.0), v3(5.0, 0.0, 3.0)),
+            run(o, v3(0.0, 4.0, 3.0)),
+            run(o, v3(0.0, -4.0, 3.0)),
+            run(v3(0.0, 0.0, 0.0), o),
+        ];
+        let crowded = |runs: &[GRun]| {
+            let refs: Vec<&GRun> = runs.iter().collect();
+            net_faults(&refs, &[]).into_iter().filter(|f| f.contains("branches at")).count()
+        };
+        assert_eq!(crowded(&runs), 1);
+        let mut rs: Vec<&mut GRun> = runs.iter_mut().collect();
+        spread_nodes(&mut rs);
+        assert_eq!(crowded(&runs), 0);
+        let net = network(&runs.iter().collect::<Vec<_>>());
+        assert!(net.arms.iter().all(|a| a.len() <= rule("services.node_arms") as usize));
     }
 }

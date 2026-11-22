@@ -36,6 +36,13 @@ thread_local! {
     static DEADLINE: Cell<Option<Instant>> = const { Cell::new(None) };
     /// The longest zone search of this thread, ms.
     static SLOWEST: Cell<f64> = const { Cell::new(0.0) };
+    /// Zone searches this thread stopped by the clock, not the node budget.
+    static CAPPED: Cell<usize> = const { Cell::new(0) };
+}
+
+/// Zone searches of this thread the wall-time safety cap stopped, since it started.
+pub(crate) fn capped() -> usize {
+    CAPPED.with(Cell::get)
 }
 
 /// The longest zone search of this thread since the last call, ms; starts the next count.
@@ -60,6 +67,12 @@ pub(crate) fn solve(p: &Problem) -> Option<Plan> {
     let cap = (p.ms > 0.0).then(|| t + Duration::from_secs_f64(p.ms / 1000.0));
     let was = DEADLINE.with(|d| d.replace(cap));
     let plan = search::solve(p);
+    // the node budget decides the plan; the clock is only a safety stop, and a stop by it is
+    // told, since that plan depends on the machine
+    if late() {
+        CAPPED.with(|c| c.set(c.get() + 1));
+        eprintln!("layout: a zone search hit the {} ms safety cap (layout.search_ms) before its node budget", p.ms);
+    }
     DEADLINE.with(|d| d.set(was));
     let ms = t.elapsed().as_secs_f64() * 1000.0;
     SLOWEST.with(|s| s.set(s.get().max(ms)));

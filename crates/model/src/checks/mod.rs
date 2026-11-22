@@ -172,6 +172,9 @@ fn run_with(
 ) -> Result<Vec<Finding>, Error> {
     let mut out = vec![];
     for r in rules {
+        if ddc_geom::cancel::requested() {
+            return Err(Error::Cancelled);
+        }
         if ids.is_none_or(|l| l.contains(&r.id())) {
             r.run(m, scope, &mut out)?;
         }

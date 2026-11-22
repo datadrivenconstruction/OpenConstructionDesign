@@ -52,6 +52,8 @@ struct Plan {
     va: f64,
     vb: f64,
     slots: Vec<Slot>,
+    /// Racks the cooling units that fit on the unit walls carry, spares kept.
+    cool: usize,
 }
 
 impl Plan {
@@ -79,7 +81,7 @@ fn facing(f: (f64, f64)) -> f64 {
     f.0.atan2(-f.1)
 }
 
-fn plan_hall(p: &GProject, h: &DcRoom, rack: &Lib, cd: f64) -> Plan {
+fn plan_hall(p: &GProject, h: &DcRoom, rack: &Lib, crahs: &[Lib], cd: f64) -> Plan {
     let c = h.room.clear;
     let cols = columns(p, h.storey);
     let (cold, hot, end) = (rule("dc.cold_aisle"), rule("dc.hot_aisle"), rule("dc.row_end"));
@@ -89,7 +91,7 @@ fn plan_hall(p: &GProject, h: &DcRoom, rack: &Lib, cd: f64) -> Plan {
     let mut best: Option<(bool, usize, Plan)> = None;
     for along_x in [true, false] {
         let (ua, ub, va, vb) = if along_x { (c[0], c[2], c[1], c[3]) } else { (c[1], c[3], c[0], c[2]) };
-        let mut plan = Plan { along_x, ua, ub, va, vb, slots: vec![] };
+        let mut plan = Plan { along_x, ua, ub, va, vb, slots: vec![], cool: 0 };
         let mut us = vec![];
         let mut x = ua + ue;
         while x + rw <= ub - ue + EPS {
@@ -102,7 +104,7 @@ fn plan_hall(p: &GProject, h: &DcRoom, rack: &Lib, cd: f64) -> Plan {
         let mut v = va + end;
         let mut row = 0;
         while v + rd * 2.0 + cold <= vb - end + EPS {
-            for (axis, front) in [(v + rd / 2.0, 1.0), (v + rd * 1.5 + cold, -1.0)] {
+            for (axis, front) in [(v + rd / 2.0, 1.0), (v + rd + cold + rd / 2.0, -1.0)] {
                 for &u in &us {
                     let at = plan.xy(u, axis);
                     let f = plan.xy(0.0, front);
@@ -116,17 +118,20 @@ fn plan_hall(p: &GProject, h: &DcRoom, rack: &Lib, cd: f64) -> Plan {
             v += rd * 2.0 + cold + hot;
         }
         let ok = plan.span() / 2.0 <= rule("dc.crah_throw") + EPS;
+        plan.cool = cooled(h, &plan, crahs, &cols);
+        // racks seated are those the cooling carries
+        let seat = plan.slots.len().min(plan.cool);
         let better = match &best {
             None => true,
             // the throw decides only between orientations that both seat racks
-            Some((bok, bn, _)) if *bn > 0 && !plan.slots.is_empty() => (ok, plan.slots.len()) > (*bok, *bn),
-            Some((_, bn, _)) => plan.slots.len() > *bn,
+            Some((bok, bn, _)) if *bn > 0 && seat > 0 => (ok, seat) > (*bok, *bn),
+            Some((_, bn, _)) => seat > *bn,
         };
         if better {
-            best = Some((ok, plan.slots.len(), plan));
+            best = Some((ok, seat, plan));
         }
     }
-    best.map(|b| b.2).unwrap_or(Plan { along_x: true, ua: c[0], ub: c[2], va: c[1], vb: c[3], slots: vec![] })
+    best.map(|b| b.2).unwrap_or(Plan { along_x: true, ua: c[0], ub: c[2], va: c[1], vb: c[3], slots: vec![], cool: 0 })
 }
 
 /// `asked` racks shared over the halls by what each holds; 0 fills them.
@@ -151,8 +156,9 @@ pub(crate) fn lay_halls(p: &GProject, halls: &[DcRoom], dc: &mut GDc, w: &mut Wh
         return vec![];
     }
     let cd = crahs.iter().map(|c| c.d()).fold(0.0, f64::max);
-    let plans: Vec<Plan> = halls.iter().map(|h| plan_hall(p, h, &rack, cd)).collect();
-    let caps: Vec<usize> = plans.iter().map(|q| q.slots.len()).collect();
+    let plans: Vec<Plan> = halls.iter().map(|h| plan_hall(p, h, &rack, &crahs, cd)).collect();
+    // a hall holds the racks it seats and its unit walls cool
+    let caps: Vec<usize> = plans.iter().map(|q| q.slots.len().min(q.cool)).collect();
     let asked = count_rule("dc.racks");
     let want = share(asked, &caps);
     let fit: usize = caps.iter().sum();
@@ -174,6 +180,42 @@ pub(crate) fn lay_halls(p: &GProject, halls: &[DcRoom], dc: &mut GDc, w: &mut Wh
     out
 }
 
+/// The two unit walls of a hall (paths A and B), each with the stretch of its `s` the units
+/// take: the rows' span less the row ends.
+fn unit_walls<'a>(h: &'a DcRoom, plan: &Plan) -> [(&'a Side, (f64, f64)); 2] {
+    let sides = &h.room.sides;
+    let walls: [&Side; 2] = if plan.along_x { [&sides[3], &sides[1]] } else { [&sides[0], &sides[2]] };
+    let end = rule("dc.row_end");
+    // the side's s runs along v whatever u the point has
+    walls.map(|side| {
+        let (a, b) = (side.s_of(plan.xy(plan.ua, plan.va + end)), side.s_of(plan.xy(plan.ua, plan.vb - end)));
+        (side, (a.min(b), a.max(b)))
+    })
+}
+
+/// Most units of `l` set evenly along `side` within `r`.
+fn wall_max(side: &Side, l: &Lib, r: (f64, f64), cols: &[svc_box::R]) -> usize {
+    let top = ((r.1 - r.0) / (l.w() + rule("dc.unit_gap") - EPS)).floor().max(0.0) as usize;
+    (1..=top).rev().find(|&k| place_even(side, k, l, r.0, r.1, cols).is_some()).unwrap_or(0)
+}
+
+/// Racks the cooling units that fit on the hall's unit walls carry with the spares kept, the
+/// best over the unit types.
+fn cooled(h: &DcRoom, plan: &Plan, crahs: &[Lib], cols: &[svc_box::R]) -> usize {
+    let per = rule("dc.rack_kw") * (1.0 + rule("dc.cooling_margin"));
+    let spare = count_rule("dc.crah_spare");
+    let walls = unit_walls(h, plan);
+    crahs
+        .iter()
+        .filter(|l| l.cap > 0.0)
+        .map(|l| {
+            let fit: usize = walls.iter().map(|(side, r)| wall_max(side, l, *r, cols)).sum();
+            (fit.saturating_sub(spare) as f64 * l.cap / per + EPS).floor() as usize
+        })
+        .max()
+        .unwrap_or(0)
+}
+
 /// Even spacing of `n` units with their backs on `side` between `s_lo` and `s_hi`, each
 /// moved within its share to clear doors and columns; `None` when one does not fit.
 fn place_even(side: &Side, n: usize, l: &Lib, s_lo: f64, s_hi: f64, cols: &[svc_box::R]) -> Option<Vec<f64>> {
@@ -185,7 +227,7 @@ fn place_even(side: &Side, n: usize, l: &Lib, s_lo: f64, s_hi: f64, cols: &[svc_
     if pitch < l.w() + gap - EPS {
         return None;
     }
-    let step = l.w() / 4.0;
+    let step = l.w() * rule("dc.unit_step");
     let lim = (pitch - l.w()) / 2.0;
     let ok = |x: f64| {
         let fp = footprint(l, side.at(x, l.hi.y), side.back_rot(), gap);
@@ -291,17 +333,12 @@ fn lay_hall(p: &GProject, h: &DcRoom, plan: &Plan, n: usize, rack: &Lib, crahs: 
         return laid;
     }
     // cooling units: walls at u = ua (path A) and u = ub (path B)
-    let sides = &h.room.sides;
-    let walls: [&Side; 2] = if plan.along_x { [&sides[3], &sides[1]] } else { [&sides[0], &sides[2]] };
+    let uw = unit_walls(h, plan);
+    let walls: [&Side; 2] = [uw[0].0, uw[1].0];
     let end = rule("dc.row_end");
-    // the side's s runs along v whatever u the point has
-    let s_range = |side: &Side| {
-        let (a, b) = (side.s_of(plan.xy(plan.ua, plan.va + end)), side.s_of(plan.xy(plan.ua, plan.vb - end)));
-        (a.min(b), a.max(b))
-    };
     let spare = count_rule("dc.crah_spare");
     let mut cands: Vec<&Lib> = crahs.iter().filter(|l| l.cap > 0.0).collect();
-    let need_of = |l: &Lib| (heat / l.cap).ceil() as usize + spare;
+    let need_of = |l: &Lib| (heat / l.cap - EPS).ceil().max(0.0) as usize + spare;
     cands.sort_by(|a, b| {
         let (na, nb) = (need_of(a), need_of(b));
         (na as f64 * a.cap).total_cmp(&(nb as f64 * b.cap)).then(na.cmp(&nb))
@@ -309,9 +346,13 @@ fn lay_hall(p: &GProject, h: &DcRoom, plan: &Plan, n: usize, rack: &Lib, crahs: 
     let mut chosen: Option<(&Lib, [Vec<f64>; 2])> = None;
     for l in &cands {
         let total = need_of(l);
-        let n1 = total.div_ceil(2);
-        let r1 = s_range(walls[0]);
-        let r2 = s_range(walls[1]);
+        let (r1, r2) = (uw[0].1, uw[1].1);
+        let (k1, k2) = (wall_max(walls[0], l, r1, &cols), wall_max(walls[1], l, r2, &cols));
+        if k1 + k2 < total {
+            continue;
+        }
+        // half on each wall, the rest on the wall with room for it
+        let n1 = total.div_ceil(2).min(k1).max(total.saturating_sub(k2));
         if let (Some(a), Some(b)) = (place_even(walls[0], n1, l, r1.0, r1.1, &cols), place_even(walls[1], total - n1, l, r2.0, r2.1, &cols)) {
             chosen = Some((l, [a, b]));
             break;
@@ -324,8 +365,7 @@ fn lay_hall(p: &GProject, h: &DcRoom, plan: &Plan, n: usize, rack: &Lib, crahs: 
             let Some(l) = cands.iter().max_by(|a, b| a.cap.total_cmp(&b.cap)).copied() else { return laid };
             let total = need_of(l);
             let mut got: [Vec<f64>; 2] = [vec![], vec![]];
-            for (i, side) in walls.iter().enumerate() {
-                let r = s_range(side);
+            for (i, (side, r)) in uw.iter().enumerate() {
                 let mut k = total.div_ceil(2);
                 while k > 0 {
                     if let Some(v) = place_even(side, k, l, r.0, r.1, &cols) {

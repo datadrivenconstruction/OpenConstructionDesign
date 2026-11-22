@@ -385,7 +385,7 @@ pub fn dim(ui: &mut egui::Ui, t: &Tokens, text: impl Into<String>) {
 
 /// Distance from a galley's top to the middle of its lower-case letters (baseline less 3/8 of
 /// the ascent): where the eye reads the line, unlike the box egui centres.
-fn x_mid(g: &egui::Galley) -> f32 {
+pub(crate) fn x_mid(g: &egui::Galley) -> f32 {
     let Some(row) = g.rows.first() else { return g.size().y / 2.0 };
     match row.row.glyphs.iter().find(|x| !x.chr.is_whitespace()) {
         Some(gl) => row.pos.y + gl.pos.y - 0.375 * gl.font_ascent,
@@ -462,6 +462,21 @@ pub fn mark_hscroll_viewport(ctx: &egui::Context, viewport: egui::Rect) {
     });
     #[cfg(not(test))]
     let _ = (ctx, viewport);
+}
+
+/// One row of controls in `ui` (a bar over a view), on the row's centre line: what does not
+/// fit scrolls sideways, as on the tool option bar, instead of running past the view.
+pub fn bar_row<R>(ui: &mut egui::Ui, salt: &str, add: impl FnOnce(&mut egui::Ui) -> R) -> R {
+    let out = egui::ScrollArea::horizontal()
+        .id_salt(salt)
+        // the full bar height, so the row stays on the bar's centre line
+        .auto_shrink([true, false])
+        .scroll_bar_visibility(egui::scroll_area::ScrollBarVisibility::VisibleWhenNeeded)
+        .show(ui, |ui| {
+            ui.with_layout(egui::Layout::left_to_right(egui::Align::Center), add).inner
+        });
+    mark_hscroll_viewport(ui.ctx(), out.inner_rect);
+    out.inner
 }
 
 /// Where the sideways scroll viewports of the pass are kept for the layout contract.

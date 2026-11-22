@@ -225,9 +225,8 @@ impl Palette {
             enter.then(|| rows.get(self.sel).map(key_of)).flatten()
         };
         let d = th.d();
-        egui::Area::new(egui::Id::new("ddc.palette"))
+        crate::z::cover(egui::Id::new("ddc.palette"), crate::z::Z::Menu)
             .anchor(Align2::CENTER_TOP, Vec2::new(0.0, TOP))
-            .order(egui::Order::Foreground)
             .show(ctx, |ui| {
                 // dark levels 2-3 carry a 1 px outline: their shadow does not show
                 let outline = th.elevation_outline(3).unwrap_or(egui::Stroke::NONE);
@@ -410,6 +409,37 @@ mod tests {
             w = c.memory(|m| m.area_rect(egui::Id::new("ddc.palette"))).map_or(0.0, |r| r.width());
         });
         assert_eq!(w, WIDTH, "frame = content + 2 x pad");
+    }
+
+    /// The palette covers the window: on the frame it opens, its fill is opaque, so no text
+    /// under it reads through (a fading area is see-through for its first frames).
+    #[test]
+    fn palette_is_opaque_on_the_frame_it_opens() {
+        use crate::theme::{Density, Mode};
+        let ctx = crate::theme::headless_ctx();
+        let th = Theme::new(Mode::Dark, Density::Comfortable);
+        let (cat, reg) = (Catalog::new(crate::Lang::En), Registry::builtin());
+        let (mut icons, mut p) = (IconCache::default(), Palette::default());
+        p.open = true;
+        fn opaque_over(s: &egui::Shape, area: egui::Rect) -> bool {
+            match s {
+                egui::Shape::Rect(r) => r.fill.a() == 255 && r.rect.expand(1.0).contains_rect(area),
+                egui::Shape::Vec(v) => v.iter().any(|x| opaque_over(x, area)),
+                _ => false,
+            }
+        }
+        // the first pass of a new area only sizes it and paints nothing
+        for pass in 0..3 {
+            let out = ctx.run(Default::default(), |c| {
+                p.show(c, &th, &cat, &reg, &mut icons);
+            });
+            if pass == 0 {
+                continue;
+            }
+            let area = ctx.memory(|m| m.area_rect(egui::Id::new("ddc.palette"))).expect("shown");
+            let opaque = out.shapes.iter().any(|c| opaque_over(&c.shape, area.shrink(2.0)));
+            assert!(opaque, "pass {pass}: no opaque fill over the palette {area:?}");
+        }
     }
 
     #[test]

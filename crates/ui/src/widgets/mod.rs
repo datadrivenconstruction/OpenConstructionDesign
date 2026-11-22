@@ -29,7 +29,8 @@ mod polish_tests;
 
 pub use button::{Button, Variant};
 pub use choice::{
-    checkbox, checkbox_error, checkbox_mixed, radio, radio_group, slider, toggle, toggle_bare,
+    checkbox, checkbox_error, checkbox_mixed, checkbox_width, radio, radio_group, slider, toggle,
+    toggle_bare,
 };
 pub use field::{
     dropdown, dropdown_h, dropdown_marked, dropdown_shown, NumberField, NumberFormat, TextField,

@@ -115,7 +115,7 @@ fn footprint(st: &Stair) -> (f64, f64) {
         .flights
         .iter()
         .map(|f| f.ring(st.tread))
-        .chain(st.landings.iter().map(|l| l.ring.clone()));
+        .chain(st.landings.iter().chain(&st.winders).map(|l| l.ring.clone()));
     for r in rings {
         for p in r {
             lo = (lo.0.min(p.x), lo.1.min(p.y));
@@ -198,7 +198,7 @@ mod tests {
             &json!({"shape": "spiral", "width": 1.2, "height": 3.0, "max_riser": 0.18}),
             0,
         );
-        assert!(ok.is_ok());
+        assert!(ok.is_ok(), "{:?}", ok.as_ref().err());
         let narrow = StairFlight.build(
             &json!({"shape": "spiral", "width": 0.8, "height": 3.0, "max_riser": 0.15}),
             0,

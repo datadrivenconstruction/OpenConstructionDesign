@@ -8,7 +8,7 @@ all of them:
   with identical content and bytes, undo of everything back to a fresh model;
 - `crates/io/tests/showcase_xlsx.rs`: an untouched book (metric, imperial) is no change, one
   number edit per sheet kind applies, re-exports clean and undoes;
-- `crates/app/tests/e2e_showcase.rs`: loading into the editor, the family book, an XLSX edit
+- `crates/app/tests/app_e2e_c/e2e_showcase.rs`: loading into the editor, the family book, an XLSX edit
   undone in one step.
 
 The io and app tests include this folder with

@@ -369,9 +369,15 @@ pub fn lay(
         };
         centres.push((e, n));
         let s = (e.0, rlo.1);
-        let (te, ts) = (ring_t(e), s.0 - rlo.0);
-        let fwd_len = (ts - te).rem_euclid(per);
-        let (len, sign) = if fwd_len <= per / 2.0 { (fwd_len, 1.0) } else { (per - fwd_len, -1.0) };
+        let te = ring_t(e);
+        let way = |ts: f64| {
+            let fwd_len = (ts - te).rem_euclid(per);
+            if fwd_len <= per / 2.0 { (fwd_len, 1.0) } else { (per - fwd_len, -1.0) }
+        };
+        // a door joins the nearest way to the street already laid when that is nearer than
+        // its own: one leg serves every door round that stretch of the ring
+        let joined = legs.iter().map(|&x| way(x - rlo.0)).filter(|j| j.0 < way(s.0 - rlo.0).0).min_by(|a, b| a.0.total_cmp(&b.0));
+        let (len, sign) = joined.unwrap_or_else(|| way(s.0 - rlo.0));
         let steps = (len / pad).ceil() as usize;
         for i in 1..=steps {
             let t = te + sign * len * i as f64 / steps as f64;
@@ -379,6 +385,9 @@ pub fn lay(
             let v = sub(b, a);
             let axis = if v.0.abs() >= v.1.abs() { (v.0.signum(), 0.0) } else { (0.0, v.1.signum()) };
             centres.push((ring_pt(t), axis));
+        }
+        if joined.is_some() {
+            continue;
         }
         let mut y = rlo.1 - pad;
         while y > street_y {
@@ -399,7 +408,8 @@ pub fn lay(
             }
         }
     }
-    if land.paths.len() > cap("path").min(room) {
+    // the way out is not trimmed like a planting: only the storey's free fixture slots bound it
+    if land.paths.len() > room {
         return Err(GenError::Infeasible(format!(
             "the paths to the street need {} tiles; lower `site.path_width` or the number of entrances",
             land.paths.len()

@@ -16,6 +16,9 @@ licensed under AGPL-3.0, including:
 - steel tables (`crates/geom/data/steel/*.csv`)
 - building-rule packs (`crates/model/data/norms/**`)
 - geometry scripts (`crates/script/data/**`), test fixtures, golden files and evaluation data
+- material looks and textures: the class table in `crates/model/src/material_look.rs` and the
+  built-in textures, which the renderer draws procedurally in code (`crates/render/src/texture.rs`);
+  no image files, no scanned or downloaded textures
 
 The project name, logos and brand files in `crates/app/data/brand/` are trademarks of the copyright holder named in COPYRIGHT.
 The AGPL licence covers the files, not the right to use the marks; see TRADEMARKS.md.

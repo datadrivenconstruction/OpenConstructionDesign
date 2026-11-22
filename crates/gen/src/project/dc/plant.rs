@@ -51,7 +51,7 @@ impl<'a> Packer<'a> {
             sides.truncate(1);
         }
         let mut out = vec![];
-        let step = l.w() / 4.0;
+        let step = l.w() * rule("dc.unit_step");
         for side in sides {
             let mut x = gap + l.w() / 2.0;
             while out.len() < n && x + l.w() / 2.0 + gap <= side.len + EPS {

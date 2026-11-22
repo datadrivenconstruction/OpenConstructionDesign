@@ -49,3 +49,5 @@ kind = "timber_share"
 walls_min = 0.4
 slabs_min = 0.8
 frame_min = 0.8
+[[oracle.geom]]
+kind = "materials"

@@ -3,7 +3,7 @@ resolver = "2"
 members = ["crates/bridge-proto", "crates/model", "crates/geom", "crates/solver", "crates/io", "crates/render", "crates/app", "crates/ui", "crates/ai", "crates/ops", "crates/gen", "crates/fem", "crates/calc", "crates/cli", "crates/script", "crates/link", "tools/bigfile_bench"]
 
 [workspace.package]
-version = "0.9.0"
+version = "1.0.0"
 edition = "2021"
 license = "AGPL-3.0-only"
 publish = false

@@ -261,6 +261,37 @@ pub fn create_terrain(c: &mut Core, a: &J, cx: &CallCx<'_>) -> Result<Done, Stri
     add_op(c, a, cx, PlanOp::Tool(ToolAct::Terrain(spec)))
 }
 
+/// `set_material`: the look of a project material by name (a new name becomes a material).
+pub fn set_material(c: &mut Core, a: &J, cx: &CallCx<'_>) -> Result<Done, String> {
+    let name = name_arg(a, "name")?.ok_or_else(|| bad("name", "needs a material name"))?;
+    let name = super::materials::canon(&super::materials::names(&c.ed.model), &name);
+    let look = a["look"].as_str().map(|s| s.trim().to_ascii_lowercase());
+    let color = match &a["color"] {
+        J::Null => None,
+        v => Some(
+            v.as_str()
+                .and_then(|s| s.trim().strip_prefix('#'))
+                .filter(|h| h.len() == 6)
+                .and_then(|h| u32::from_str_radix(h, 16).ok())
+                .ok_or_else(|| bad("color", "needs #RRGGBB"))?,
+        ),
+    };
+    let texture = match a["texture"].as_str() {
+        None => None,
+        Some(k) => {
+            let tile = match &a["tile"] {
+                J::Null => None,
+                _ => Some(number(a, "tile", "metres")?).filter(|t| *t > 0.0),
+            };
+            Some((k.trim().to_ascii_lowercase(), tile))
+        }
+    };
+    if look.is_none() && color.is_none() && texture.is_none() {
+        return Err(bad("look", "give look, color or texture"));
+    }
+    add_op(c, a, cx, PlanOp::Tool(ToolAct::SetMaterial { name, look, color, texture }))
+}
+
 pub fn move_elements(c: &mut Core, a: &J, cx: &CallCx<'_>) -> Result<Done, String> {
     let by = match numbers(&a["by"]).as_deref() {
         Some([x, y]) => (*x, *y, 0.0),

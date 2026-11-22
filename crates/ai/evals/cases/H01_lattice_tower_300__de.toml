@@ -94,3 +94,5 @@ kind = "bracing"
 bands = 6.0
 share_min = 0.5
 diagonals_min = 40.0
+[[oracle.geom]]
+kind = "materials"

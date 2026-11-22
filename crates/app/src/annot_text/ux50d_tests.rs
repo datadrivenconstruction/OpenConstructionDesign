@@ -130,6 +130,6 @@ fn bar_inputs_are_named_and_rows_share_one_height() {
     let s = bar_src();
     assert!(s.contains(".labelled_by(lr.id, &label)"));
     assert!(s.contains("WidgetInfo::labeled"));
-    assert!(s.contains("row_style(ui, &th)"));
+    assert!(s.contains("row_style(ui, th)"));
     assert!(s.contains("th.d().control"));
 }

@@ -135,6 +135,7 @@ fn every_elem() -> Vec<NewElem> {
             slope: Some(30.0),
             edges: vec![Some(30.0), None, Some(30.0), None],
             vault: None,
+            eave: None,
         },
         NewElem::Roof {
             level: 2,
@@ -150,6 +151,7 @@ fn every_elem() -> Vec<NewElem> {
                 profile: vec![(0.0, 0.0), (1.0, 2.0), (4.0, 3.0), (7.0, 2.0), (8.0, 0.0)],
                 depth: 10.0,
             }),
+            eave: None,
         },
         NewElem::Stair {
             level: 1,

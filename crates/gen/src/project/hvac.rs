@@ -18,6 +18,8 @@ use ddc_geom::mep::duct_sizing::{
 };
 use std::f64::consts::PI;
 
+mod flat;
+
 /// The design numbers the layout reads on its hot paths, read once per design from the rules.
 #[derive(Clone, Copy, Debug)]
 struct Dn {
@@ -66,9 +68,6 @@ struct Dn {
     plant_layer_gap: f64,
     lift_step: f64,
     roof_clear: f64,
-    tall_storey: f64,
-    h_max_tall: f64,
-    h_max_low: f64,
     /// Unit port offset from its centre, as a fraction of its length.
     port_frac: f64,
     /// Main lane offset from the corridor axis, as a fraction of the corridor width.
@@ -76,12 +75,14 @@ struct Dn {
 }
 
 impl Dn {
-    fn read() -> Dn {
+    /// Housing takes the lower velocity caps of its quieter rooms.
+    fn read(res: bool) -> Dn {
+        let v = |id: &str| rule(&format!("services.hvac.{id}{}", if res { "_res" } else { "" }));
         Dn {
             friction: rule("services.hvac.friction"),
-            v_main: rule("services.hvac.v_main"),
-            v_branch: rule("services.hvac.v_branch"),
-            v_riser: rule("services.hvac.v_riser"),
+            v_main: v("v_main"),
+            v_branch: v("v_branch"),
+            v_riser: v("v_riser"),
             top_gap: rule("services.hvac.top_gap"),
             layer_gap: rule("services.hvac.layer_gap"),
             drop_gap: rule("services.hvac.drop_gap"),
@@ -111,9 +112,6 @@ impl Dn {
             plant_layer_gap: rule("services.hvac.plant_layer_gap"),
             lift_step: rule("services.hvac.lift_step"),
             roof_clear: rule("services.hvac.roof_clear"),
-            tall_storey: rule("services.hvac.tall_storey"),
-            h_max_tall: rule("services.hvac.h_max_tall"),
-            h_max_low: rule("services.hvac.h_max_low"),
             port_frac: rule("services.hvac.port_frac"),
             lane_frac: rule("services.hvac.lane_frac"),
         }
@@ -178,7 +176,7 @@ struct Unit {
 }
 
 const UNIT_FAMILY: &str = "Air Handling Unit";
-fn units() -> [Unit; 3] {
+fn units() -> [Unit; 4] {
     [
         Unit {
             ty: "900x600",
@@ -200,6 +198,13 @@ fn units() -> [Unit; 3] {
             w: rule("services.hvac.unit_l_w"),
             h: rule("services.hvac.unit_l_h"),
             cap: rule("services.hvac.unit_l_cap"),
+        },
+        Unit {
+            ty: "6000x2200",
+            l: rule("services.hvac.unit_x_l"),
+            w: rule("services.hvac.unit_x_w"),
+            h: rule("services.hvac.unit_x_h"),
+            cap: rule("services.hvac.unit_x_cap"),
         },
     ]
 }
@@ -307,16 +312,18 @@ fn duct_outlets(p: &mut GProject) {
                 pts.dedup_by(|a, b| (*a - *b).len() < svc::EPS);
                 let end = if tee.is_some() { leg } else { 0.0 };
                 mep::fit_bends(&mut pts, &r, (0.0, end));
+                let net = branch.map_or(0, |d| d.net);
                 ducts.push(GDuct {
-                    net: 0,
+                    net,
                     sys: AirSys::Extract,
                     storey: k,
                     points: pts.iter().map(|q| (q.x, q.y, q.z)).collect(),
-                    size: (size, 0.0),
-                    flow,
+                    // a reducer at the outlet: never wider than the branch it tees into
+                    size: (if tee.is_some() { size.min(branch.map_or(size, |d| de(d.size))) } else { size }, 0.0),
+                    flow: if tee.is_some() { hood_q(flow) } else { flow },
                     bend: None,
                 });
-                links.push(GAirLink { storey: k, fixture: i, connector: name, sys: AirSys::Extract, net: 0 });
+                links.push(GAirLink { storey: k, fixture: i, connector: name, sys: AirSys::Extract, net });
             }
         }
     }
@@ -330,10 +337,17 @@ fn duct_outlets(p: &mut GProject) {
         let mut tail = vec![jt];
         tail.extend_from_slice(&d.points[si + 1..]);
         p.hvac.ducts[bi].points = head;
-        p.hvac.ducts.insert(bi + 1, GDuct { points: tail, ..d });
+        // past the tee the grille draws what the hood does not
+        let flow = d.flow - hood_q(d.flow);
+        p.hvac.ducts.insert(bi + 1, GDuct { points: tail, flow, ..d });
     }
     p.hvac.ducts.extend(ducts);
     p.hvac.links.extend(links);
+}
+
+/// Air of a kitchen's extract its cooker hood draws, of `q` through the room's branch.
+fn hood_q(q: f64) -> f64 {
+    up5(q * rule("services.hvac.hood_share")).min(q)
 }
 
 fn residential(t: Typology) -> bool {
@@ -476,10 +490,22 @@ fn tee_leg(s: (f64, f64)) -> f64 {
 /// The smallest unit that carries `q`, else the largest.
 fn pick_unit(q: f64) -> Unit {
     let us = units();
-    *us.iter().find(|u| q <= u.cap).unwrap_or(&us[2])
+    *us.iter().find(|u| q <= u.cap).unwrap_or(&us[us.len() - 1])
 }
 
 /// A room the ventilation serves.
+/// One terminal on a branch: its centre across the corridor, air, type, neck diameter and room.
+#[derive(Clone, Copy)]
+struct Drop {
+    y: f64,
+    /// A drop that joined from a neighbouring room stands at this x, on a stub off the branch.
+    x: Option<f64>,
+    q: f64,
+    term: Term,
+    d: f64,
+    room: usize,
+}
+
 struct Served {
     room: usize,
     r: Rect,
@@ -499,6 +525,7 @@ struct Floor {
 }
 
 /// A terminal before its tap is placed.
+#[derive(Clone)]
 struct Want {
     floor: usize,
     room: usize,
@@ -507,12 +534,22 @@ struct Want {
     x: f64,
     lo: f64,
     hi: f64,
-    /// Terminal centre across the corridor and its distance from the corridor axis.
+    /// First terminal centre across the corridor and its distance from the main: for a supply
+    /// branch the nearest drop, for an extract branch the farthest reach.
     y: f64,
     dist: f64,
+    /// Air of the branch, of each of its terminals, and how many terminals it feeds.
     q: f64,
+    qt: f64,
+    ny: usize,
+    /// Terminals along the branch, nearest the main first.
+    drops: Vec<Drop>,
     term: Term,
+    /// The room has a hood outlet that tees into this branch.
+    hood: bool,
+    /// Branch and terminal drop diameters.
     d: f64,
+    dd: f64,
 }
 
 /// A tap on a main: position, side, flow, and the terminal it feeds (`None` for the riser).
@@ -611,11 +648,13 @@ struct Pass {
     net: u8,
     /// Index of its unit in the plant list.
     plant_ix: usize,
+    /// Stretch of the corridor this zone takes: rooms by their centre, taps and shaft inside.
+    win: Option<(f64, f64)>,
 }
 
 impl Pass {
     fn all() -> Pass {
-        Pass { tags: super::RoomTags::default(), dedicated: false, drop: 0.0, net: 0, plant_ix: 0 }
+        Pass { tags: super::RoomTags::default(), dedicated: false, drop: 0.0, net: 0, plant_ix: 0, win: None }
     }
 
     fn skips(&self, tags: super::RoomTags) -> bool {
@@ -645,6 +684,10 @@ struct Ctx<'a> {
     taken: Vec<Rect>,
     /// Duct shafts already standing, with the side of the corridor they are on.
     rings: Vec<(Rect, f64)>,
+    /// The zone's stretch less the gap to the next zone: its taps, shaft and mains stay inside.
+    win: Option<(f64, f64)>,
+    /// The zone's own stretch, uncut: the shaft beside the corridor may reach up to its ends.
+    zone: Option<(f64, f64)>,
 }
 
 /// Reasons a shaft position is refused, as the metrics name them.
@@ -662,7 +705,7 @@ const ON_HEAD: usize = 6;
 
 /// Rooms that may hold the shaft, best first; work rooms are the last resort (a chase in a
 /// corner) when no service room is wide enough.
-const SHAFT_ROOMS: [RoomKind; 11] = [
+const SHAFT_ROOMS: [RoomKind; 16] = [
     RoomKind::Technical,
     RoomKind::Storage,
     RoomKind::Hall,
@@ -674,6 +717,11 @@ const SHAFT_ROOMS: [RoomKind; 11] = [
     RoomKind::Meeting,
     RoomKind::Classroom,
     RoomKind::Lab,
+    RoomKind::Ward,
+    RoomKind::Workshop,
+    RoomKind::Retail,
+    RoomKind::Dining,
+    RoomKind::Gym,
 ];
 
 impl Ctx<'_> {
@@ -701,6 +749,33 @@ impl Ctx<'_> {
     /// mains of a tall block need metres between the corridor and the riser. Only the mains
     /// get better with depth, so any other refusal ends the search; each position counts
     /// once in the refusal metrics.
+    /// The least preferred of the host rooms a ring spans across their partitions on one
+    /// storey: every room it overlaps a host, each as deep as the ring, the gaps walls.
+    fn straddle(&self, st: &super::PStorey, ring: Rect) -> Option<usize> {
+        let wall = rule("services.hvac.straddle_wall");
+        let mut spans = vec![];
+        for (i, (pr, gr)) in st.rooms.iter().zip(&st.layout.rooms).enumerate() {
+            let b = bbox(&gr.polygon);
+            if b.0 >= ring.2 - 1e-6 || b.2 <= ring.0 + 1e-6 || b.1 >= ring.3 - 1e-6 || b.3 <= ring.1 + 1e-6 {
+                continue;
+            }
+            if !SHAFT_ROOMS.contains(&pr.kind) || b.1 > ring.1 + 1e-6 || b.3 < ring.3 - 1e-6 {
+                return None;
+            }
+            spans.push((b.0, b.2, i));
+        }
+        spans.sort_by(|a, b| a.0.total_cmp(&b.0));
+        let mut reach = ring.0;
+        for &(x0, x1, _) in &spans {
+            if x0 > reach + wall {
+                return None;
+            }
+            reach = reach.max(x1);
+        }
+        (spans.len() > 1 && reach >= ring.2 - 1e-6).then_some(())?;
+        spans.into_iter().map(|s| s.2).max_by_key(|&i| SHAFT_ROOMS.iter().position(|k| *k == st.rooms[i].kind))
+    }
+
     fn try_shaft(&self, side: f64, x: f64, fixed: Option<Rect>) -> Option<(f64, Shaft)> {
         // a stepped block can hang the shaft off any storey's corridor: off the podium's it
         // may land outside the tower, off the tower's it clears the podium mains
@@ -798,6 +873,7 @@ impl Ctx<'_> {
         let (y0, y1) = (ring.1, ring.3);
         let yr = (y0 + y1) / 2.0;
         let mut pref = 0usize;
+        let mut straddles = 0usize;
         let mut clear = vec![];
         for (k, st) in self.p.storeys.iter().enumerate() {
             let l = &st.layout;
@@ -805,8 +881,16 @@ impl Ctx<'_> {
                 let host = st.rooms.iter().zip(&l.rooms).position(|(pr, gr)| {
                     SHAFT_ROOMS.contains(&pr.kind) && inside(ring, bbox(&gr.polygon))
                 });
-                let Some(host) = host else {
-                    return Err(0);
+                // or across a partition between two hosts: the shaft wall takes that stretch of it
+                let host = match host {
+                    Some(h) => h,
+                    None => {
+                        let Some(h) = self.straddle(st, ring) else {
+                            return Err(0);
+                        };
+                        straddles += 1;
+                        h
+                    }
                 };
                 pref = pref.max(SHAFT_ROOMS.iter().position(|k| *k == st.rooms[host].kind).ok_or(0usize)?);
             }
@@ -925,13 +1009,36 @@ impl Ctx<'_> {
         if ring.0 < ox + m || ring.2 > ox + fw - m {
             return Err(4);
         }
+        if let (Some((wl, wh)), Some((zl, zh))) = (self.win, self.zone) {
+            if ring.0 < zl || ring.2 > zh || legs.iter().flatten().any(|&xa| xa < wl || xa > wh) {
+                return Err(4);
+            }
+        }
         let y_at = yr - side * delta;
         let top = self.p.storeys.last().map_or(0.0, |s| s.elevation) - self.p.roof.elevation;
         let pl = self.plant(xr, yr, y_at, side, jog, unit, self.zm.map(|z| top + z))?;
         let b = bbox(&self.p.roof.ring);
         let centre = ((x - (b.0 + b.2) / 2.0).abs() + (yr - (b.1 + b.3) / 2.0).abs()) / fw;
         // a clear corner beats one that displaces furniture
-        let score = pref as f64 * dn.pref_weight + centre + clear.len() as f64;
+        // terminals of rooms on the shaft's side whose whole window the shaft's taps exclusion
+        // takes: they would go unserved
+        let pad = rule("services.hvac.shaft_excl");
+        let (wl, wh) = self.win.unwrap_or((f64::MIN, f64::MAX));
+        let shut: usize = self
+            .floors
+            .iter()
+            .flatten()
+            .flat_map(|f| f.rooms.iter())
+            .filter(|r| r.side == side)
+            .filter(|r| {
+                let lo = (r.r.0 + dn.wall_keep).max(wl);
+                let hi = (r.r.2 - dn.wall_keep).min(wh);
+                hi >= lo && lo > ring.0 - pad - 1e-9 && hi < ring.2 + pad + 1e-9
+            })
+            .map(|r| r.q.iter().filter(|q| **q > 0.0).count())
+            .sum();
+        let score = pref as f64 * dn.pref_weight + centre + clear.len() as f64 + straddles as f64 * dn.pref_weight
+            + shut as f64 * rule("services.hvac.shut_weight");
         Ok((
             score,
             Shaft {
@@ -1136,7 +1243,7 @@ impl Ctx<'_> {
         let (fw, fd) = self.p.footprint;
         let dn = &self.k;
         let m = dn.roof_edge;
-        let ub =(at.0 - u.l / 2.0, at.1 - u.w / 2.0, at.0 + u.l / 2.0, at.1 + u.w / 2.0);
+        let ub = plant_rect(u, at, rot, &[], 0.0);
         if ub.0 < ox + m || ub.2 > ox + fw - m || ub.1 < oy + m || ub.3 > oy + fd - m {
             return Err(4);
         }
@@ -1191,11 +1298,7 @@ impl Ctx<'_> {
     }
 
     fn h_max(&self) -> f64 {
-        if self.p.storeys.first().is_some_and(|s| s.height >= self.k.tall_storey) {
-            self.k.h_max_tall
-        } else {
-            self.k.h_max_low
-        }
+        floors_h_max(self.p)
     }
 
     fn floors_max(&self, s: usize) -> f64 {
@@ -1208,16 +1311,65 @@ impl Ctx<'_> {
 
     /// Plant ducts above the roof level: supply and extract layers.
     fn plant_z(&self, u: Unit) -> (f64, f64) {
-        let dn = &self.k;
-        let pz = dn.plinth + u.h;
-        let (ds, de) = (self.riser_d[0], self.riser_d[1]);
-        let z1 = pz + dn.bend * ds + dn.margin + dn.plant_gap;
-        let mut z2 = pz + dn.bend * de + dn.margin + dn.plant_gap;
-        if self.has[0] {
-            z2 = z2.max(z1 + ds / 2.0 + de / 2.0 + dn.plant_layer_gap);
-        }
-        (z1, z2)
+        plant_z_of(&self.k, u, self.riser_d, self.has)
     }
+}
+
+/// Heights above the roof level of the plant duct layers over unit `u`, risers of diameters
+/// `d`: the supply layer, then the extract layer over it when both systems run.
+fn plant_z_of(dn: &Dn, u: Unit, d: [f64; 2], has: [bool; 2]) -> (f64, f64) {
+    let pz = dn.plinth + u.h;
+    let (ds, de) = (d[0], d[1]);
+    let z1 = pz + dn.bend * ds + dn.margin + dn.plant_gap;
+    let mut z2 = pz + dn.bend * de + dn.margin + dn.plant_gap;
+    if has[0] {
+        z2 = z2.max(z1 + ds / 2.0 + de / 2.0 + dn.plant_layer_gap);
+    }
+    (z1, z2)
+}
+
+/// Plan rectangle of unit `u` at `at` turned by `rot`, and the connection legs from the
+/// riser heads `risers` to it: the zone the plant ducts run in above the roof.
+fn plant_rect(u: Unit, at: (f64, f64), rot: f64, risers: &[(f64, f64)], r: f64) -> Rect {
+    let (c, s) = (rot.cos().abs(), rot.sin().abs());
+    let (hx, hy) = ((u.l * c + u.w * s) / 2.0, (u.l * s + u.w * c) / 2.0);
+    risers.iter().fold((at.0 - hx, at.1 - hy, at.0 + hx, at.1 + hy), |b, p| {
+        (b.0.min(p.0 - r), b.1.min(p.1 - r), b.2.max(p.0 + r), b.3.max(p.1 + r))
+    })
+}
+
+/// The roof equipment of a flat roof: per rooftop unit, its plan footprint grown to the
+/// points where its plant ducts rise through the roof, and the top of the plant duct layers
+/// (`plant_z_of`, absolute). A riser leaving the top storey for its unit stays in this zone.
+pub(crate) fn roof_plant_zones(p: &GProject) -> Vec<(Rect, f64)> {
+    // only the velocity caps differ for housing; the plant heights read here do not
+    let dn = Dn::read(false);
+    let roof = p.roof.elevation;
+    // where each system's plant ducts cross the roof level, and their widest section
+    let mut risers: Vec<(f64, f64)> = vec![];
+    let mut d = [0.0f64; 2];
+    let mut has = [false; 2];
+    for g in &p.hvac.ducts {
+        let cross = g.points.windows(2).find(|w| (w[0].2 - roof) * (w[1].2 - roof) <= 0.0 && w[0].2.max(w[1].2) > roof + 1e-6);
+        if let Some(w) = cross {
+            risers.push((w[0].0, w[0].1));
+            if let Some(s) = SYS.iter().position(|x| *x == g.sys) {
+                d[s] = d[s].max(g.size.0.max(g.size.1));
+                has[s] = true;
+            }
+        }
+    }
+    let r = d[0].max(d[1]) / 2.0;
+    p.hvac
+        .plant
+        .iter()
+        .filter_map(|f| {
+            let u = units().into_iter().find(|u| u.ty == f.ty)?;
+            let (z1, z2) = plant_z_of(&dn, u, d, has);
+            let top = if has[1] { z2 + d[1] / 2.0 } else { z1 + d[0] / 2.0 };
+            Some((plant_rect(u, f.at, f.rotation, &risers, r), roof + top.max(dn.plinth + u.h)))
+        })
+        .collect()
 }
 
 /// Places taps on one main; `fixed` are the riser tap and taps of another system to keep
@@ -1349,6 +1501,10 @@ struct Design {
     metrics: Vec<(&'static str, f64)>,
     /// Shaft positions that were possible.
     count: usize,
+    /// Ducts over their velocity cap: the zone carries too much air for one shaft.
+    fast: usize,
+    /// Air the placed terminals deliver: supply, extract.
+    placed: [f64; 2],
 }
 
 /// Plan the units and plant ducts on the roof take, with the clearance round them.
@@ -1442,34 +1598,197 @@ pub(crate) fn ventilate(spec: &ProjectSpec, p: &mut GProject) -> Result<(), GenE
     if !spec.mep_auto || spec.services.hvac == Some(false) {
         return Ok(());
     }
+    if residential(spec.typology) && rule("services.hvac.housing_units") >= 1.0 && flat::per_flat(spec, p)? {
+        return finish(p);
+    }
     let tags = dedicated_tags();
     let mut why = vec![];
     if !tags.is_empty() && has_tagged(spec, p, tags) {
-        // the general system without the tagged rooms, then their own system under it; when the
-        // second one has no room, one system serves all, as without the rule
-        let general = Pass { tags, ..Pass::all() };
-        if let Some(d) = best_design(spec, p, &general, &mut Vec::new())? {
-            let mut q = p.clone();
-            let span = d.span;
-            place_design(&mut q, d)?;
-            let own = Pass { tags, dedicated: true, drop: span, net: 1, plant_ix: q.hvac.plant.len() };
+        // the general zones without the tagged rooms, then their own system under them; when
+        // the second one has no room, the zones serve all, as without the rule
+        if let Some((mut q, span)) = zoned(spec, p, tags, &mut Vec::new())? {
+            let own = Pass { tags, dedicated: true, drop: span, net: q.hvac.nets.len() as u8 + 1, plant_ix: q.hvac.plant.len(), win: None };
             if let Some(dd) = best_design(spec, &q, &own, &mut Vec::new())?.filter(|dd| unserved(dd) == 0.0) {
                 place_design(&mut q, dd)?;
-                duct_outlets(&mut q);
-                check_ducts(&q)?;
+                finish(&mut q)?;
                 *p = q;
                 return Ok(());
             }
         }
     }
-    let Some(d) = best_design(spec, p, &Pass::all(), &mut why)? else {
+    let Some((mut q, _)) = zoned(spec, p, super::RoomTags::default(), &mut why)? else {
         p.metrics.push(("hvac_unserved", 1.0));
         p.metrics.extend(why);
         return Ok(());
     };
-    place_design(p, d)?;
+    finish(&mut q)?;
+    *p = q;
+    Ok(())
+}
+
+fn finish(p: &mut GProject) -> Result<(), GenError> {
     duct_outlets(p);
+    monotonic(p);
+    // the zones report one sum per metric
+    let mut out: Vec<(&'static str, f64)> = vec![];
+    for (k, v) in p.metrics.drain(..) {
+        match out.iter_mut().find(|m| m.0 == k && k.starts_with("hvac_")) {
+            Some(m) => m.1 += v,
+            None => out.push((k, v)),
+        }
+    }
+    p.metrics = out;
     check_ducts(p)
+}
+
+/// Tallest main section the storeys allow, as `Ctx::h_max` reads it.
+fn floors_h_max(p: &GProject) -> f64 {
+    let h = p.storeys.first().map_or(0.0, |s| s.height);
+    if h >= rule("services.hvac.deep_storey") {
+        rule("services.hvac.h_max_deep")
+    } else if h >= rule("services.hvac.tall_storey") {
+        rule("services.hvac.h_max_tall")
+    } else {
+        rule("services.hvac.h_max_low")
+    }
+}
+
+/// Whether a zone's design is one to build: every terminal placed, every duct within its
+/// velocity cap, supply and extract balanced.
+fn sound(d: &Design) -> bool {
+    let [s, e] = d.placed;
+    let cap = units().iter().map(|u| u.cap).fold(0.0, f64::max);
+    unserved(d) == 0.0 && d.fast == 0 && s.max(e) <= cap + 1e-6 && (s - e).abs() <= rule("services.hvac.balance_max") * s.max(e)
+}
+
+/// The general system split into zones along the corridor, as few as carry the air within the
+/// unit, riser and main limits: each zone its own shaft, unit and network. Returns the project
+/// with them and the depth they take under the slab; `None` when no split serves every zone.
+fn zoned(
+    spec: &ProjectSpec,
+    p: &GProject,
+    tags: super::RoomTags,
+    why: &mut Vec<(&'static str, f64)>,
+) -> Result<Option<(GProject, f64)>, GenError> {
+    let all = Pass { tags, ..Pass::all() };
+    let floors = served(spec, p, &all);
+    let dn = Dn::read(residential(spec.typology));
+    let h_max = floors_h_max(p);
+    let big = |f: &Floor| f.total[0].max(f.total[1]);
+    let grand = [0, 1].map(|s| floors.iter().flatten().map(|f| f.total[s]).sum::<f64>()).into_iter().fold(0.0, f64::max);
+    let floor_max = floors.iter().flatten().map(big).fold(0.0, f64::max);
+    // a floor splits at its riser into two mains at most
+    let main_cap = {
+        let (mut lo, mut hi) = (0.0, floor_max.max(1.0));
+        for _ in 0..40 {
+            let m = (lo + hi) / 2.0;
+            if main_fits(&dn, m, h_max) { lo = m } else { hi = m }
+        }
+        2.0 * lo
+    };
+    let need = |q: f64, cap: f64| if cap > 0.0 { (q / cap).ceil() as usize } else { 1 };
+    // a zone carries no more than its unit and the largest riser at its velocity cap
+    let riser_cap = dn.v_riser * 3600.0 * PI / 4.0 * (f64::from(ROUND_MM[ROUND_MM.len() - 1]) / 1000.0).powi(2);
+    let zone_cap = rule("services.hvac.zone_cap").min(units().iter().map(|u| u.cap).fold(0.0, f64::max)).min(riser_cap);
+    let n_min = need(grand, zone_cap).max(need(floor_max, main_cap)).max(1);
+    // a finer split only narrows the zones round the same shafts
+    let n_max = (rule("services.hvac.zones_max") as usize).min(n_min + 3).max(n_min);
+    let demand: f64 = [0, 1].map(|s| floors.iter().flatten().map(|f| f.total[s]).sum::<f64>()).iter().sum();
+    // rooms by their centre along the corridor, with the air they move
+    let mut along: Vec<(f64, f64)> =
+        floors.iter().flatten().flat_map(|f| f.rooms.iter().map(|r| ((r.r.0 + r.r.2) / 2.0, r.q[0].max(r.q[1])))).collect();
+    along.sort_by(|a, b| a.0.total_cmp(&b.0));
+    let rects: Vec<Rect> = floors.iter().flatten().flat_map(|f| f.rooms.iter().map(|r| r.r)).collect();
+    let (x0, x1) = floors.iter().flatten().flat_map(|f| f.rooms.iter().map(|r| (r.r.0, r.r.2))).fold((f64::MAX, f64::MIN), |a, c| (a.0.min(c.0), a.1.max(c.1)));
+    let mut best: Option<(f64, GProject, f64)> = None;
+    for n in n_min..=n_max {
+        // cuts at equal lengths of the corridor, moved to the nearby wall line that splits
+        // the fewest rooms on any storey: a split room keeps a sliver of its zone for terminals
+        let mut cuts = vec![f64::MIN];
+        for i in 1..n {
+            // equal shares of the air, not of the corridor: dense rooms get the shorter zones
+            let share = along.iter().map(|a| a.1).sum::<f64>() * i as f64 / n as f64;
+            let mut run = 0.0;
+            let ideal = along.iter().find(|a| { run += a.1; run >= share }).map_or(x0 + (x1 - x0) * i as f64 / n as f64, |a| a.0);
+            let prev = *cuts.last().expect("a cut");
+            let cost = |c: f64| {
+                let split: f64 = rects
+                    .iter()
+                    .filter(|r| r.0 < c - 1e-6 && r.2 > c + 1e-6)
+                    .map(|r| (c - r.0).min(r.2 - c))
+                    .sum();
+                (c - ideal).abs() + rule("services.hvac.zone_split_weight") * split
+            };
+            let pick = rects
+                .iter()
+                .flat_map(|r| [r.0, r.2])
+                .chain(along.windows(2).map(|w| (w[0].0 + w[1].0) / 2.0))
+                .filter(|&c| (c - ideal).abs() <= (x1 - x0) / n as f64 / 3.0)
+                .filter(|&c| along.iter().any(|a| a.0 > prev && a.0 < c) && along.iter().any(|a| a.0 > c))
+                .min_by(|a, b| cost(*a).total_cmp(&cost(*b)));
+            if let Some(c) = pick {
+                cuts.push(c);
+            }
+        }
+        if cuts.len() < n {
+            break;
+        }
+        cuts.push(f64::MAX);
+        // a zone that finds no shaft (a stretch of lobbies and stairs) joins its neighbour; the
+        // zones before it stand as placed
+        let mut done: Vec<(GProject, f64, f64, bool)> = vec![];
+        let mut zone_why = vec![];
+        let mut whole = true;
+        while done.len() + 1 < cuts.len() {
+            let i = done.len();
+            let m = cuts.len() - 1;
+            let q = done.last().map_or(p, |z| &z.0);
+            let win = (m > 1).then(|| (cuts[i], cuts[i + 1]));
+            let pass = Pass { tags, net: i as u8, plant_ix: q.hvac.plant.len(), win, ..Pass::all() };
+            match best_design(spec, q, &pass, &mut zone_why)? {
+                Some(d) => {
+                    let ok = sound(&d);
+                    // what the zone falls short by: air of the terminals it lost, its
+                    // imbalance past the limit and its ducts over their velocity cap
+                    let [ps, pe] = d.placed;
+                    let off = ((ps - pe).abs() - rule("services.hvac.balance_max") * ps.max(pe)).max(0.0);
+                    let (span, short) = (d.span, off);
+                    let mut q = q.clone();
+                    place_design(&mut q, d)?;
+                    done.push((q, span, short, ok));
+                }
+                None if m == 1 => {
+                    whole = false;
+                    break;
+                }
+                None if i + 1 < m => {
+                    cuts.remove(i + 1);
+                }
+                None => {
+                    cuts.remove(i);
+                    done.pop();
+                }
+            }
+        }
+        if !whole || done.is_empty() {
+            if n == n_min {
+                why.extend(zone_why);
+            }
+            continue;
+        }
+        let span = done.iter().map(|z| z.1).fold(0.0, f64::max);
+        let sound_all = done.iter().all(|z| z.3);
+        let (q, _, _, _) = done.last().expect("a zone").clone();
+        if sound_all {
+            return Ok(Some((q, span)));
+        }
+        let placed = q.hvac.flow.0 + q.hvac.flow.1;
+        let score = (demand - placed).max(0.0) + done.iter().map(|z| z.2).sum::<f64>();
+        if best.as_ref().is_none_or(|b| score < b.0) {
+            best = Some((score, q, span));
+        }
+    }
+    Ok(best.map(|b| (b.1, b.2)))
 }
 
 /// Tags of the rooms the rules give their own outdoor air system.
@@ -1524,8 +1843,108 @@ fn place_design(p: &mut GProject, mut d: Design) -> Result<(), GenError> {
         p.hvac.ducts.extend(d.hvac.ducts);
         p.hvac.links.extend(d.hvac.links);
         p.hvac.nets.push(d.hvac.names);
+        p.hvac.flow.0 += d.hvac.flow.0;
+        p.hvac.flow.1 += d.hvac.flow.1;
     }
     Ok(())
+}
+
+/// Equivalent diameter of a section: round as is, rectangular of equal friction (EN 1505).
+fn de(s: (f64, f64)) -> f64 {
+    if s.1 > 0.0 {
+        1.30 * (s.0 * s.1).powf(0.625) / (s.0 + s.1).powf(0.25)
+    } else {
+        s.0
+    }
+}
+
+/// The least catalogue section of the same shape, no smaller than `s`, whose equivalent
+/// diameter reaches `need`; a rectangle stays within `h_max` and the aspect limit.
+fn cover(s: (f64, f64), need: f64, h_max: f64) -> (f64, f64) {
+    if s.1 <= 0.0 {
+        let d = ROUND_MM.iter().map(|&mm| f64::from(mm) / 1000.0).find(|&d| d + 1e-9 >= s.0 && d + 1e-9 >= need);
+        return (d.unwrap_or(s.0.max(need)), 0.0);
+    }
+    let steps = ddc_geom::mep::duct_sizing::RECT_STEPS;
+    let mut best: Option<(f64, (f64, f64))> = None;
+    for &h in steps.iter().filter(|&&h| h + 1e-9 >= s.1 && h <= h_max.max(s.1) + 1e-9) {
+        for &w in steps.iter().filter(|&&w| w + 1e-9 >= h.max(s.0) && w <= h * MAX_ASPECT + 1e-9) {
+            if de((w, h)) + 1e-9 < need {
+                continue;
+            }
+            let key = w * h + (w / h) * 1e-6;
+            if best.is_none_or(|b| key < b.0) {
+                best = Some((key, (w, h)));
+            }
+        }
+    }
+    best.map_or(s, |b| b.1)
+}
+
+/// Sections never grow away from the unit: walking each system's tree from its leaves, a run
+/// takes at least the section of the largest run it feeds, tee branches included.
+fn monotonic(p: &mut GProject) {
+    let n = p.storeys.len();
+    let roof = p.roof.elevation;
+    let h_max = floors_h_max(p);
+    let key = |q: (f64, f64, f64)| ((q.0 * 1000.0).round() as i64, (q.1 * 1000.0).round() as i64, (q.2 * 1000.0).round() as i64);
+    let mut systems: Vec<(AirSys, u8)> = p.hvac.ducts.iter().map(|d| (d.sys, d.net)).collect();
+    systems.sort_by_key(|s| (s.0 == AirSys::Extract, s.1));
+    systems.dedup();
+    for (sys, net) in systems {
+        let Some(l) = p.hvac.links.iter().find(|l| l.storey == n && l.net == net && l.sys == sys) else { continue };
+        let Some(unit) = p.hvac.plant.get(l.fixture) else { continue };
+        let Some((_, q)) = air_ports(unit).into_iter().find(|c| c.0 == l.connector) else { continue };
+        let mut ends: std::collections::HashMap<_, Vec<(usize, usize)>> = Default::default();
+        for (i, d) in p.hvac.ducts.iter().enumerate().filter(|(_, d)| d.sys == sys && d.net == net) {
+            ends.entry(key(d.points[0])).or_default().push((i, 0));
+            ends.entry(key(*d.points.last().expect("a run has points"))).or_default().push((i, 1));
+        }
+        // breadth first from the unit port: the order, and each run's feeding run
+        let mut order: Vec<(usize, Option<usize>)> = vec![];
+        let mut seen = std::collections::HashSet::new();
+        let mut queue = vec![(key((q.0, q.1, roof + q.2)), None)];
+        let mut at = 0;
+        while at < queue.len() {
+            let (node, parent) = queue[at];
+            at += 1;
+            for &(d, e) in ends.get(&node).map_or(&[][..], |v| v.as_slice()) {
+                if !seen.insert(d) {
+                    continue;
+                }
+                order.push((d, parent));
+                let pts = &p.hvac.ducts[d].points;
+                queue.push((key(if e == 0 { *pts.last().expect("points") } else { pts[0] }), Some(d)));
+            }
+        }
+        for &(d, parent) in order.iter().rev() {
+            let Some(pi) = parent else { continue };
+            let need = de(p.hvac.ducts[d].size);
+            let ps = p.hvac.ducts[pi].size;
+            if de(ps) + 1e-9 < need {
+                let grown = cover(ps, need, h_max);
+                // a run too short for the wider section's elbows keeps its own
+                let pd = &p.hvac.ducts[pi];
+                if bends_fit(&pd.points, grown, pd.bend) || !bends_fit(&pd.points, ps, pd.bend) {
+                    p.hvac.ducts[pi].size = grown;
+                }
+            }
+        }
+    }
+}
+
+/// Whether each straight of a run holds the elbows at its ends, and a junction leg at each end.
+fn bends_fit(pts: &[(f64, f64, f64)], size: (f64, f64), bend: Option<f64>) -> bool {
+    let sec = svc::duct_section(size);
+    let r = bend.unwrap_or_else(|| mep::default_bend_radius(&sec, false).max(mep::default_bend_radius(&sec, true)));
+    let leg = mep::junction_leg(&sec);
+    let m = pts.len().saturating_sub(1);
+    (0..m).all(|i| {
+        let (a, b) = (pts[i], pts[i + 1]);
+        let l = ((b.0 - a.0).powi(2) + (b.1 - a.1).powi(2) + (b.2 - a.2).powi(2)).sqrt();
+        let need = [i > 0, i + 1 < m].iter().filter(|&&x| x).count() as f64 * r + [i == 0, i + 1 == m].iter().filter(|&&x| x).count() as f64 * leg;
+        l + 1e-6 >= need
+    })
 }
 
 fn check_ducts(p: &GProject) -> Result<(), GenError> {
@@ -1539,15 +1958,9 @@ fn check_ducts(p: &GProject) -> Result<(), GenError> {
     Ok(())
 }
 
-/// The `rank`-th best shaft position; `None` when there are fewer.
-fn design(
-    spec: &ProjectSpec,
-    p: &GProject,
-    pass: &Pass,
-    rank: usize,
-    tee: f64,
-    why: &mut Vec<(&'static str, f64)>,
-) -> Result<Option<Design>, GenError> {
+/// The rooms of each storey the pass serves, with their air; `None` for a storey without a
+/// corridor. A zone takes the rooms whose centre lies in its stretch.
+fn served(spec: &ProjectSpec, p: &GProject, pass: &Pass) -> Vec<Option<Floor>> {
     let res = residential(spec.typology);
     let mut floors = vec![];
     let air = super::mech::AirPlan::new(spec, p);
@@ -1569,7 +1982,7 @@ fn design(
             let r = bbox(&gr.polygon);
             let area = (r.2 - r.0) * (r.3 - r.1);
             let tags = spec.room_tags.of(pr.kind, &gr.name);
-            if pass.skips(tags) {
+            if pass.skips(tags) || pass.win.is_some_and(|w| !((r.0 + r.2) / 2.0 >= w.0 && (r.0 + r.2) / 2.0 < w.1)) {
                 continue;
             }
             let (qs, qe) = spec
@@ -1600,13 +2013,48 @@ fn design(
             total,
         }));
     }
+    balance(&mut floors, pass.dedicated);
+    floors
+}
+
+/// Raises the smaller of a zone's supply and extract to the larger, spread over the rooms that
+/// have it, so the unit moves as much air in as out; a dedicated system keeps its rooms'
+/// pressure but within the cascade limit.
+fn balance(floors: &mut [Option<Floor>], dedicated: bool) {
+    let tot = [0, 1].map(|s| floors.iter().flatten().map(|f| f.total[s]).sum::<f64>());
+    let big = tot[0].max(tot[1]);
+    let small = if tot[0] < tot[1] { 0 } else { 1 };
+    let want = if dedicated { big * (1.0 - rule("services.hvac.cascade_max")) } else { big };
+    if tot[small] <= 0.0 || tot[small] >= want - 1e-9 {
+        return;
+    }
+    let k = want / tot[small];
+    for f in floors.iter_mut().flatten() {
+        for r in &mut f.rooms {
+            r.q[small] = up5(r.q[small] * k);
+        }
+        f.total[small] = f.rooms.iter().map(|r| r.q[small]).sum();
+    }
+}
+
+/// The `rank`-th best shaft position; `None` when there are fewer.
+fn design(
+    spec: &ProjectSpec,
+    p: &GProject,
+    pass: &Pass,
+    rank: usize,
+    tee: f64,
+    why: &mut Vec<(&'static str, f64)>,
+) -> Result<Option<Design>, GenError> {
+    let res = residential(spec.typology);
+    let floors = served(spec, p, pass);
     let grand = [0, 1].map(|s| floors.iter().flatten().map(|f| f.total[s]).sum::<f64>());
     let has = grand.map(|g| g > 0.0);
-    if pass.dedicated && !has[0] && !has[1] {
+    if (pass.dedicated || pass.win.is_some()) && !has[0] && !has[1] {
         return Ok(None);
     }
     let pitched = (spec.roof == RoofKind::Pitched).then_some(p.roof.slope);
-    let dn = Dn::read();
+    let dn = Dn::read(res);
     let mut cx = Ctx {
         p,
         floors,
@@ -1623,13 +2071,21 @@ fn design(
         unit_t: pick_unit(grand[0].max(grand[1])),
         taken: roof_taken(p),
         rings: vec![],
+        win: pass.win.map(|w| (w.0 + rule("services.hvac.zone_gap"), w.1 - rule("services.hvac.zone_gap"))),
+        zone: pass.win,
     };
     let tap_extra = rule("services.hvac.tap_extra");
     let h_max = cx.h_max();
     let spacing = tee * node_trim(&dn, &[main_widest(&dn, cx.floors_max(0).max(cx.floors_max(1)), h_max)])
         + tap_extra;
+    // taps along a main stand no closer than its two tees' legs: as many branches fit a window
+    let pitch = |k: usize, s: usize| {
+        let t = cx.floors[k].as_ref().map_or(0.0, |f| f.total[s]);
+        spacing.max(2.0 * tee_leg(main_widest(&dn, t, h_max)) + dn.margin)
+    };
     // terminals first: their branch sizes set the layers
     let mut wants: Vec<Want> = vec![];
+    let mut skipped = 0usize;
     for (k, f) in cx.floors.iter().enumerate() {
         let Some(f) = f else { continue };
         for sv in &f.rooms {
@@ -1639,16 +2095,31 @@ fn design(
                 if q <= 0.0 {
                     continue;
                 }
-                let lo = (sv.r.0 + dn.wall_keep).max(f.corr.0 + dn.corr_end);
-                let hi = (sv.r.2 - dn.wall_keep).min(f.corr.2 - dn.corr_end);
+                let (wl, wh) = cx.win.unwrap_or((f64::MIN, f64::MAX));
+                let lo = (sv.r.0 + dn.wall_keep).max(f.corr.0 + dn.corr_end).max(wl);
+                let hi = (sv.r.2 - dn.wall_keep).min(f.corr.2 - dn.corr_end).min(wh);
                 if hi < lo {
+                    skipped += 1;
                     continue;
                 }
-                let fit = 1 + ((hi - lo) / spacing).floor() as usize;
-                let n = ((q / terms(s)[1].cap).ceil() as usize).clamp(1, fit);
-                let qt = up5(q / n as f64);
+                // terminals spread along each branch across the room first: one take-off feeds
+                // a row of them, so a deep room does not crowd the main with taps
+                let total = ((q / terms(s)[1].cap).ceil() as usize).max(1);
+                let depth = (sv.far - sv.near).abs() - 2.0 * dn.wall_keep;
+                let d0 = round(&dn, q, dn.v_branch);
+                let row = row_pitch(&dn, d0);
+                // a hood's outlet tees into the room's one extract branch
+                let hood = s == 1 && {
+                    let st = &cx.p.storeys[k];
+                    st.layout.fixtures.iter().any(|fx| !super::svc::air_outlets(fx).is_empty() && super::svc::inside(fx.at, &[sv.r.0, sv.r.1, sv.r.2, sv.r.3]))
+                };
+                let ny = if hood { 1 } else { total.min(1 + (depth.max(0.0) / row).floor() as usize).max(1) };
+                let fit = 1 + ((hi - lo) / pitch(k, s)).floor() as usize;
+                let n = total.div_ceil(ny).clamp(1, fit);
+                let qt = up5(q / (n * ny) as f64);
                 let term = term_for(s, qt);
-                let d = round(&dn, qt, dn.v_branch).max(term.neck_d);
+                let dd = round(&dn, qt, dn.v_branch).max(term.neck_d);
+                let d = round(&dn, qt * ny as f64, dn.v_branch).max(dd);
                 let frac = match (both, s) {
                     (false, _) => 0.5,
                     (true, 0) => rule("services.hvac.frac_supply_both"),
@@ -1671,9 +2142,14 @@ fn design(
                         hi,
                         y,
                         dist: 0.0,
-                        q: qt,
+                        q: qt * ny as f64,
+                        qt,
+                        ny,
+                        drops: vec![],
+                        hood,
                         term,
                         d,
+                        dd,
                     });
                 }
             }
@@ -1697,6 +2173,10 @@ fn design(
             wants[j].x = lo + (hi - lo) * k as f64 / (m - 1) as f64;
         }
     }
+    // the terminals round their flows up: the risers and the unit carry what they deliver
+    cx.grand = [0, 1].map(|s| wants.iter().filter(|w| w.sys == s).map(|w| w.q).sum::<f64>());
+    cx.riser_d = cx.grand.map(|g| if g > 0.0 { round(&dn, g, dn.v_riser) } else { 0.0 });
+    cx.unit_t = pick_unit(cx.grand[0].max(cx.grand[1]));
     let dmax = [0, 1].map(|s| {
         wants
             .iter()
@@ -1739,7 +2219,9 @@ fn design(
     let scan = rule("services.hvac.shaft_scan");
     if let Some(c) = cx.corridor() {
         // the building's own duct bays, on every storey alike, take the risers first
-        let bays = core_bays(p, crate::ShaftKind::Duct);
+        let (wl, wh) = cx.zone.unwrap_or((f64::MIN, f64::MAX));
+        let mut bays = core_bays(p, crate::ShaftKind::Duct);
+        bays.retain(|r| r.0 >= wl && r.2 <= wh);
         for r in &bays {
             let side = if (r.1 + r.3) / 2.0 > (c.1 + c.3) / 2.0 { 1.0 } else { -1.0 };
             found.extend(cx.try_shaft(side, r.0, Some(*r)));
@@ -1749,8 +2231,8 @@ fn design(
                 why.push(("hvac_core_bay_unfit", bays.len() as f64));
             }
             for side in [1.0, -1.0] {
-                let mut x = c.0 + 0.5;
-                while x <= c.2 - 0.5 {
+                let mut x = c.0.max(wl) + 0.5;
+                while x <= c.2.min(wh) - 0.5 {
                     found.extend(cx.try_shaft(side, x, None));
                     x += scan;
                 }
@@ -1772,6 +2254,7 @@ fn design(
     // terminal positions across the corridor, kept clear of the main for the tee and drop
     let ym = sh.ym;
     let mut dropped = vec![];
+    let (mut lost_depth, mut lost_shaft) = (0usize, 0usize);
     for (i, w) in wants.iter_mut().enumerate() {
         let f = cx.floors[w.floor].as_ref().expect("a served floor");
         let sv_far = f
@@ -1788,15 +2271,74 @@ fn design(
         if (y - ymw) * w.side < need {
             y = min_y;
         }
+        let mut ys = vec![y];
         if let Some((near, far)) = sv_far {
             let lo = near.min(far) + dn.wall_keep;
             let hi = near.max(far) - dn.wall_keep;
             if y < lo - 1e-9 || y > hi + 1e-9 {
+                lost_depth += 1;
                 dropped.push(i);
+            } else if w.ny > 1 {
+                // the row from the first drop to the far wall, as many as its pitch allows
+                let last = far - w.side * dn.wall_keep;
+                let fit = 1 + ((last - y) * w.side / row_pitch(&dn, w.d)).max(0.0).floor() as usize;
+                let m = w.ny.min(fit);
+                if m > 1 {
+                    ys = (0..m).map(|j| y + (last - y) * j as f64 / (m - 1) as f64).collect();
+                }
+                if m != w.ny {
+                    w.qt = up5(w.q / m as f64);
+                    w.q = w.qt * m as f64;
+                    w.term = term_for(w.sys, w.qt);
+                    w.dd = round(&dn, w.qt, dn.v_branch).max(w.term.neck_d);
+                    w.d = round(&dn, w.q, dn.v_branch).max(w.dd);
+                    w.ny = m;
+                }
             }
         }
         w.y = y;
-        w.dist = (y - ymw).abs();
+        w.drops = ys.into_iter().map(|y| Drop { y, x: None, q: w.qt, term: w.term, d: w.dd, room: w.room }).collect();
+    }
+    // rooms stacked away from the corridor in one window, more than its taps fit: one branch
+    // runs out through the near rooms and drops into each in turn
+    let mut absorbed: Vec<usize> = vec![];
+    for i in 0..wants.len() {
+        if dropped.contains(&i) || absorbed.contains(&i) {
+            continue;
+        }
+        let w = wants[i].clone();
+        let key = (w.floor, w.sys, w.side, w.lo, w.hi);
+        let mut group: Vec<usize> = (i..wants.len())
+            .filter(|&j| !dropped.contains(&j) && !absorbed.contains(&j))
+            .filter(|&j| (wants[j].floor, wants[j].sys, wants[j].side, wants[j].lo, wants[j].hi) == key)
+            .collect();
+        let fit = 1 + ((w.hi - w.lo) / pitch(w.floor, w.sys)).floor() as usize;
+        group.retain(|&j| !wants[j].hood);
+        if group.len() <= fit {
+            continue;
+        }
+        let ymw = ym[w.sys] + cx.shift(w.floor);
+        group.sort_by(|a, b| (wants[*a].y - ymw).abs().total_cmp(&(wants[*b].y - ymw).abs()));
+        for c in 0..fit {
+            let chain: Vec<usize> = group.iter().copied().skip(c).step_by(fit).collect();
+            let head = chain[0];
+            let mut drops: Vec<Drop> = chain.iter().flat_map(|&j| wants[j].drops.clone()).collect();
+            drops.sort_by(|a, b| (a.y - ymw).abs().total_cmp(&(b.y - ymw).abs()));
+            let q: f64 = drops.iter().map(|d| d.q).sum();
+            let x = if fit == 1 { (w.lo + w.hi) / 2.0 } else { w.lo + (w.hi - w.lo) * c as f64 / (fit - 1) as f64 };
+            let h = &mut wants[head];
+            h.q = q;
+            h.d = round(&dn, q, dn.v_branch).max(drops.iter().map(|d| d.d).fold(0.0, f64::max));
+            h.y = drops[0].y;
+            h.x = x;
+            h.drops = drops;
+            absorbed.extend(chain.into_iter().skip(1));
+        }
+    }
+    for w in &mut wants {
+        let ymw = ym[w.sys] + cx.shift(w.floor);
+        let reach = w.drops.iter().map(|d| (d.y - ymw).abs());
+        w.dist = if w.sys == 0 { reach.fold(f64::MAX, f64::min) } else { reach.fold(0.0, f64::max) };
     }
     // taps: extract first, then supply clear of extract branches it would cross
     let excl_pad = rule("services.hvac.shaft_excl");
@@ -1856,7 +2398,7 @@ fn design(
     for s in [1, 0] {
         for k in 0..cx.floors.len() {
             let mut order: Vec<usize> = (0..wants.len())
-                .filter(|&i| wants[i].floor == k && wants[i].sys == s && !dropped.contains(&i))
+                .filter(|&i| wants[i].floor == k && wants[i].sys == s && !dropped.contains(&i) && !absorbed.contains(&i))
                 .collect();
             // narrow windows first: they cannot move out of the way of a wide one
             order.sort_by(|a, b| {
@@ -1904,19 +2446,52 @@ fn design(
             let mut taps = std::mem::take(&mut floor_taps[k][s]);
             // a split floor's mains are narrower than one main for the floor: so are the tees
             let sp = spacing.min(tee * node_trim(&dn, &[main_widest(&dn, sh.lq[s], h_max)]) + tap_extra);
-            // a main end is an elbow and reducer into the last drop: that may take more
+            // a main end is an elbow and reducer into the last drop: that may take more; the
+            // main has stepped down to that branch's own air by then
             let main = main_widest(&dn, sh.lq[s], h_max);
             let end = wants
                 .iter()
                 .filter(|w| w.sys == s)
-                .map(|w| dn.drop_bend * w.d + mep::transition_length(&svc::duct_section(main), &svc::duct_section((w.d, 0.0))))
+                .map(|w| dn.drop_bend * w.d + mep::transition_length(&svc::duct_section(main_size(&dn, w.q, h_max)), &svc::duct_section((w.d, 0.0))))
                 .fold(0.0, f64::max);
             let floor = tee_leg(main) + tee_leg(main).max(end) + dn.margin;
             let lost = place(&wants, &order, &mut taps, sp, floor, &blocked);
+            let shut: Vec<usize> = lost.iter().copied().filter(|&i| blocked(&wants[i], wants[i].x)).collect();
+            lost_shaft += lost.iter().filter(|i| shut.contains(i)).count();
             dropped.extend(lost);
             floor_taps[k][s] = taps;
         }
     }
+    // a room the shaft stands in front of takes its air off the riser itself: a spur out of the
+    // shaft into the room, one per riser and storey (the node holds a cross at most)
+    let mut spurs: Vec<(usize, usize, usize, f64)> = vec![];
+    for s in (0..2).filter(|&s| sh.legs[s].is_none()) {
+        for k in 0..cx.floors.len() {
+            let Some(f) = cx.floors[k].as_ref() else { continue };
+            let xr = sh.xr[s];
+            let reach = if sh.side > 0.0 { sh.ring.3 } else { sh.ring.1 };
+            let pick = dropped
+                .iter()
+                .copied()
+                .filter(|&i| wants[i].floor == k && wants[i].sys == s && wants[i].side == sh.side && wants[i].drops.len() == 1)
+                .filter_map(|i| {
+                    let w = &wants[i];
+                    let r = f.rooms.iter().find(|r| r.room == w.room)?;
+                    let y = reach + sh.side * (dn.wall_keep + w.term.neck_d);
+                    let far = r.far - sh.side * dn.wall_keep;
+                    let room_x = xr > r.r.0 + dn.wall_keep && xr < r.r.2 - dn.wall_keep;
+                    let long = (y - sh.yr).abs() >= tee_leg((cx.riser_d[s], 0.0)) + dn.drop_bend * w.d + dn.margin;
+                    (room_x && long && (far - y) * sh.side >= 0.0).then_some((i, y))
+                })
+                .max_by(|a, b| wants[a.0].q.total_cmp(&wants[b.0].q));
+            if let Some((i, y)) = pick {
+                spurs.push((k, s, i, y));
+                dropped.retain(|&j| j != i);
+                lost_shaft = lost_shaft.saturating_sub(1);
+            }
+        }
+    }
+    borrow(&cx, &sh, &mut wants, &mut floor_taps, &mut dropped, h_max);
     // the network
     let n = cx.p.storeys.len();
     let mut ducts: Vec<GDuct> = vec![];
@@ -1936,52 +2511,71 @@ fn design(
             for t in taps {
                 let Some(i) = t.want else { continue };
                 let w = &wants[i];
-                let room_both = cx.floors[k]
-                    .as_ref()
-                    .and_then(|f| {
-                        f.rooms
-                            .iter()
-                            .find(|r| r.room == w.room)
-                    })
-                    .is_some_and(|r| r.q[0] > 0.0 && r.q[1] > 0.0);
-                let face = if room_both {
-                    cx.face[0].min(cx.face[1])
-                } else {
-                    cx.face[s]
-                };
-                let fx = GFixture { scale: 1.0, min_clear: 0.0,
-                    family: w.term.fam,
-                    ty: w.term.ty,
-                    at: (t.x, w.y),
-                    rotation: 0.0,
-                    wall: None,
-                    z: face + cx.lift(k),
-                };
-                fixtures[k].push(fx);
                 // the displaced furniture leaves before the terminals are appended
                 let gone = sh.clear.iter().filter(|c| c.0 == k).count();
-                let idx = cx.p.storeys[k].layout.fixtures.len() - gone + fixtures[k].len() - 1;
-                links.push(GAirLink {
-                    storey: k,
-                    fixture: idx,
-                    connector: "Air",
-                    sys: SYS[s],
-                    net: pass.net,
-                });
-                terminals += 1;
-                ducts.push(GDuct {
-                net: pass.net,
-                    sys: SYS[s],
-                    storey: k,
-                    points: vec![
-                        (t.x, y, z),
-                        (t.x, w.y, z),
-                        (t.x, w.y, f.elev + face + w.term.neck_h),
-                    ],
-                    size: (w.d, 0.0),
-                    flow: w.q,
-                    bend: Some(dn.drop_bend * w.d),
-                });
+                let m = w.drops.len();
+                let mut from = y;
+                for (j, dr) in w.drops.iter().enumerate() {
+                    let room_both = f.rooms.iter().find(|r| r.room == dr.room).is_some_and(|r| r.q[0] > 0.0 && r.q[1] > 0.0);
+                    let face = if room_both { cx.face[0].min(cx.face[1]) } else { cx.face[s] };
+                    let neck = f.elev + face + dr.term.neck_h;
+                    let last = j + 1 == m;
+                    let q: f64 = w.drops[j..].iter().map(|d| d.q).sum();
+                    let dj = if j == 0 { w.d } else if last { dr.d } else { round(&dn, q, dn.v_branch).max(dr.d) };
+                    // a drop before the branch end stands off it, towards the middle of its room
+                    let xd = if last {
+                        t.x
+                    } else if let Some(x) = dr.x {
+                        x
+                    } else {
+                        let stub = node_trim(&dn, &[(dj, 0.0), (dr.d, 0.0)]).max(tee_leg((dj, 0.0))) + dn.drop_bend * dr.d + dn.margin;
+                        let mid = f.rooms.iter().find(|r| r.room == dr.room).map_or(t.x, |r| (r.r.0 + r.r.2) / 2.0);
+                        if mid >= t.x { t.x + stub } else { t.x - stub }
+                    };
+                    fixtures[k].push(GFixture { scale: 1.0, min_clear: 0.0,
+                        family: dr.term.fam,
+                        ty: dr.term.ty,
+                        at: (xd, dr.y),
+                        rotation: 0.0,
+                        wall: None,
+                        z: face + cx.lift(k),
+                    });
+                    let idx = cx.p.storeys[k].layout.fixtures.len() - gone + fixtures[k].len() - 1;
+                    links.push(GAirLink {
+                        storey: k,
+                        fixture: idx,
+                        connector: "Air",
+                        sys: SYS[s],
+                        net: pass.net,
+                    });
+                    terminals += 1;
+                    let mut points = vec![(t.x, from, z), (t.x, dr.y, z)];
+                    if last {
+                        points.push((t.x, dr.y, neck));
+                    }
+                    ducts.push(GDuct {
+                        net: pass.net,
+                        sys: SYS[s],
+                        storey: k,
+                        points,
+                        size: (dj, 0.0),
+                        flow: q,
+                        bend: last.then_some(dn.drop_bend * dj),
+                    });
+                    if !last {
+                        // a side stub off the branch tee, then the elbow down to the neck
+                        ducts.push(GDuct {
+                            net: pass.net,
+                            sys: SYS[s],
+                            storey: k,
+                            points: vec![(t.x, dr.y, z), (xd, dr.y, z), (xd, dr.y, neck)],
+                            size: (dr.d, 0.0),
+                            flow: dr.q,
+                            bend: Some(dn.drop_bend * dr.d),
+                        });
+                    }
+                    from = dr.y;
+                }
             }
             // main segments between tap positions, each carrying what lies beyond its feed:
             // the riser, or for a split floor the far branch's end for the taps past it
@@ -2015,11 +2609,7 @@ fn design(
                         bend: None,
                     });
                 }
-                let q: f64 = if leg.is_none() {
-                    f.total[s]
-                } else {
-                    g.iter().map(|t| t.q).sum()
-                };
+                let q: f64 = g.iter().map(|t| t.q).sum();
                 let mut points = vec![(xr, sh.yr, z)];
                 if group {
                     points.push((feed, sh.yr, z));
@@ -2037,23 +2627,48 @@ fn design(
             }
         }
     }
-    // risers: from the lowest served storey up to the plant
+    for &(k, s, i, y) in &spurs {
+        let f = cx.floors[k].as_ref().expect("a served floor");
+        let w = &wants[i];
+        let both = f.rooms.iter().find(|r| r.room == w.room).is_some_and(|r| r.q[0] > 0.0 && r.q[1] > 0.0);
+        let face = if both { cx.face[0].min(cx.face[1]) } else { cx.face[s] };
+        let xr = sh.xr[s];
+        let z = cx.p.storeys[k].elevation + cx.zm[s] + cx.lift(k);
+        fixtures[k].push(GFixture { scale: 1.0, min_clear: 0.0, family: w.term.fam, ty: w.term.ty, at: (xr, y), rotation: 0.0, wall: None, z: face + cx.lift(k) });
+        let gone = sh.clear.iter().filter(|c| c.0 == k).count();
+        let idx = cx.p.storeys[k].layout.fixtures.len() - gone + fixtures[k].len() - 1;
+        links.push(GAirLink { storey: k, fixture: idx, connector: "Air", sys: SYS[s], net: pass.net });
+        terminals += 1;
+        ducts.push(GDuct {
+            net: pass.net,
+            sys: SYS[s],
+            storey: k,
+            points: vec![(xr, sh.yr, z), (xr, y, z), (xr, y, f.elev + face + w.term.neck_h)],
+            size: (w.d, 0.0),
+            flow: w.q,
+            bend: Some(dn.drop_bend * w.d),
+        });
+    }
+    // risers: from the lowest served storey up to the plant, carrying what the taps deliver
+    let mut fq: Vec<[f64; 2]> = floor_taps.iter().map(|t| [0, 1].map(|s| t[s].iter().filter(|t| t.want.is_some()).map(|t| t.q).sum())).collect();
+    for &(k, s, i, _) in &spurs {
+        fq[k][s] += wants[i].q;
+    }
+    let placed = [0, 1].map(|s| fq.iter().map(|q| q[s]).sum::<f64>());
     let roof = cx.p.roof.elevation;
     let unit = sh.unit;
     let (z1, z2) = cx.plant_z(unit);
     let pz = roof + dn.plinth + unit.h;
     for s in 0..2 {
         let served: Vec<usize> = (0..cx.floors.len())
-            .filter(|&k| floor_taps[k][s].iter().any(|t| t.want.is_some()))
+            .filter(|&k| fq[k][s] > 0.0)
             .collect();
         let Some(&k0) = served.first() else { continue };
         let xr = sh.xr[s];
         let node = |k: usize| cx.p.storeys[k].elevation + cx.zm[s] + cx.lift(k);
         let mut below = 0.0;
         for k in k0..n - 1 {
-            if served.contains(&k) {
-                below += cx.floors[k].as_ref().map_or(0.0, |f| f.total[s]);
-            }
+            below += fq[k][s];
             ducts.push(GDuct {
                 net: pass.net,
                 sys: SYS[s],
@@ -2064,7 +2679,7 @@ fn design(
                 bend: None,
             });
         }
-        let all = cx.grand[s];
+        let all = placed[s];
         let ztop = node(n - 1);
         // up the riser, a jog along the shaft when the port is not above it, over to the unit
         let zl = roof + if s == 0 { z1 } else { z2 };
@@ -2111,6 +2726,7 @@ fn design(
     };
     let ring = crate::layout::rect(sh.ring.0, sh.ring.1, sh.ring.2, sh.ring.3);
     let metres: f64 = ducts.iter().map(|d| len(&d.points)).sum();
+    let fast = ducts.iter().filter(|d| velocity(d.flow, duct_area(d.size)) > cap_of(&dn, d, n) + 0.05).count();
     let no = pass.net + 1;
     let names = if spec.ru {
         (format!("\u{41f}{no}"), format!("\u{412}{no}"))
@@ -2119,21 +2735,26 @@ fn design(
     };
     let metrics = if pass.dedicated {
         vec![
-            ("hvac_dedicated_supply_m3h", cx.grand[0]),
-            ("hvac_dedicated_extract_m3h", cx.grand[1]),
+            ("hvac_dedicated_supply_m3h", placed[0]),
+            ("hvac_dedicated_extract_m3h", placed[1]),
             ("hvac_dedicated_terminals", terminals as f64),
-            ("hvac_dedicated_unserved", dropped.len() as f64),
+            ("hvac_dedicated_unserved", (dropped.len() + skipped) as f64),
             ("hvac_dedicated_duct_m", (metres * 10.0).round() / 10.0),
         ]
     } else {
         vec![
-            ("hvac_supply_m3h", cx.grand[0]),
-            ("hvac_extract_m3h", cx.grand[1]),
+            ("hvac_supply_m3h", placed[0]),
+            ("hvac_extract_m3h", placed[1]),
             ("hvac_terminals", terminals as f64),
-            ("hvac_unserved", dropped.len() as f64),
+            ("hvac_unserved", (dropped.len() + skipped) as f64),
             ("hvac_duct_m", (metres * 10.0).round() / 10.0),
             ("hvac_units", 1.0),
             ("hvac_furniture_moved", sh.clear.len() as f64),
+            ("hvac_fast_ducts", fast as f64),
+            ("hvac_lost_window", skipped as f64),
+            ("hvac_lost_depth", lost_depth as f64),
+            ("hvac_lost_shaft", lost_shaft as f64),
+            ("hvac_lost_spacing", dropped.len().saturating_sub(lost_depth + lost_shaft) as f64),
         ]
     };
     Ok(Some(Design {
@@ -2147,10 +2768,245 @@ fn design(
             links,
             names,
             nets: vec![],
-            flow: (cx.grand[0], cx.grand[1]),
+            flow: (placed[0], placed[1]),
         },
         metrics,
         count,
+        fast,
+        placed,
     }))
+}
+
+/// Plan of one system's branches on a storey: runs across the corridor and stubs, and the
+/// points where drops go down, as the network cuts them near enough for keeping others clear.
+type Seg = ((f64, f64), (f64, f64));
+fn branch_plan(cx: &Ctx, sh: &Shaft, wants: &[Want], taps: &[Tap], k: usize, s: usize) -> (Vec<Seg>, Vec<(f64, f64, f64)>) {
+    let dn = &cx.k;
+    let (mut segs, mut pts) = (vec![], vec![]);
+    let Some(f) = cx.floors[k].as_ref() else { return (segs, pts) };
+    let ym = sh.ym[s] + cx.shift(k);
+    for t in taps {
+        let Some(i) = t.want else { continue };
+        let w = &wants[i];
+        let Some(last) = w.drops.last() else { continue };
+        segs.push(((t.x, ym), (t.x, last.y)));
+        for (j, dr) in w.drops.iter().enumerate() {
+            if j + 1 == w.drops.len() {
+                pts.push((t.x, dr.y, dr.d));
+                continue;
+            }
+            let xd = dr.x.unwrap_or_else(|| {
+                let stub = node_trim(dn, &[(w.d, 0.0), (dr.d, 0.0)]).max(tee_leg((w.d, 0.0))) + dn.drop_bend * dr.d + dn.margin;
+                let mid = f.rooms.iter().find(|r| r.room == dr.room).map_or(t.x, |r| (r.r.0 + r.r.2) / 2.0);
+                if mid >= t.x { t.x + stub } else { t.x - stub }
+            });
+            segs.push(((t.x, dr.y), (xd, dr.y)));
+            pts.push((xd, dr.y, dr.d));
+        }
+    }
+    (segs, pts)
+}
+
+/// A terminal whose room found no tap of its own joins a neighbouring branch of its system on
+/// that side: a stub off the branch, between two of its drops, runs through the partition into
+/// the room; or, for a room beyond the branch's own on its line, the branch runs on into it.
+/// Extract first, then supply, each clear of the other's runs and drops.
+fn borrow(cx: &Ctx, sh: &Shaft, wants: &mut [Want], floor_taps: &mut [[Vec<Tap>; 2]], dropped: &mut Vec<usize>, h_max: f64) {
+    let dn = cx.k;
+    let reach = rule("services.hvac.borrow_reach");
+    let clear = rule("services.hvac.branch_clear");
+    let pad = rule("services.hvac.shaft_excl");
+    let step = rule("services.hvac.borrow_step");
+    for s in [1, 0] {
+        for k in 0..cx.floors.len() {
+            let Some(f) = cx.floors[k].as_ref() else { continue };
+            let lost: Vec<usize> = dropped.iter().copied().filter(|&i| wants[i].floor == k && wants[i].sys == s && !wants[i].hood).collect();
+            for i in lost {
+                let wi = wants[i].clone();
+                let Some(ri) = f.rooms.iter().find(|r| r.room == wi.room) else { continue };
+                let (own_segs, own_pts) = branch_plan(cx, sh, wants, &floor_taps[k][s], k, s);
+                let (oth_segs, oth_pts) = branch_plan(cx, sh, wants, &floor_taps[k][1 - s], k, 1 - s);
+                // a supply drop passes the extract layer clear of its widest branch
+                let oth_d = floor_taps[k][1 - s].iter().filter_map(|t| t.want).map(|j| wants[j].d).fold(0.0, f64::max);
+                let ym = sh.ym[s] + cx.shift(k);
+                let dd = wi.drops.iter().map(|d| d.d).fold(0.0, f64::max);
+                let r = dd / 2.0 + clear;
+                let in_ring = |x: f64, y: f64, r: f64| x > sh.ring.0 - pad - r && x < sh.ring.2 + pad + r && y > sh.ring.1 - pad - r && y < sh.ring.3 + pad + r;
+                let (ilo, ihi) = (ri.near.min(ri.far) + dn.wall_keep, ri.near.max(ri.far) - dn.wall_keep);
+                // where along the main the room's terminals may stand
+                let mut xis = vec![wi.x.clamp(wi.lo, wi.hi)];
+                let mut x = wi.lo;
+                while x < wi.hi {
+                    xis.push(x);
+                    x += step;
+                }
+                xis.push(wi.hi);
+                // a run of this layer from `a` to `b` meets no other run of it, and no drop of the
+                // other system passes it; a supply drop at `b` keeps clear of the extract runs
+                let mine = |q: &Seg, tx: f64| (q.0 .0 - tx).abs() < 1e-6 && (q.1 .0 - tx).abs() < 1e-6;
+                let free = |a: (f64, f64), b: (f64, f64), tx: f64| {
+                    let (x0, x1) = (a.0.min(b.0), a.0.max(b.0));
+                    let (y0, y1) = (a.1.min(b.1), a.1.max(b.1));
+                    let own = own_segs.iter().filter(|q| !mine(q, tx)).any(|q| {
+                        let (lx, hx) = (q.0 .0.min(q.1 .0), q.0 .0.max(q.1 .0));
+                        let (ly, hy) = (q.0 .1.min(q.1 .1), q.0 .1.max(q.1 .1));
+                        lx - r < x1 && hx + r > x0 && ly - r < y1 && hy + r > y0
+                    }) || own_pts.iter().any(|p| {
+                        let m = r + p.2 / 2.0;
+                        (p.0 - tx).abs() > 1e-6 && p.1 > y0 - m && p.1 < y1 + m && p.0 > x0 - m && p.0 < x1 + m
+                    });
+                    let oth = if s == 0 {
+                        oth_segs.iter().any(|q| seg_dist(b, q.0, q.1) < r + oth_d / 2.0)
+                    } else {
+                        oth_pts.iter().any(|p| seg_dist((p.0, p.1), a, b) < r + p.2 / 2.0)
+                    };
+                    let ring = x1 > sh.ring.0 - pad - r && x0 < sh.ring.2 + pad + r && y1 > sh.ring.1 - pad - r && y0 < sh.ring.3 + pad + r;
+                    !own && !oth && !ring
+                };
+                // (cost, branch, drops as y and x, whether the branch runs on to them)
+                let mut best: Option<(f64, usize, Vec<(f64, f64)>, bool)> = None;
+                for t in &floor_taps[k][s] {
+                    let Some(j) = t.want else { continue };
+                    let wj = &wants[j];
+                    if wj.side != wi.side || wj.hood || (t.x - wi.x).abs() > reach + (wi.hi - wi.lo) {
+                        continue;
+                    }
+                    let Some(rj) = f.rooms.iter().find(|r| r.room == wj.room) else { continue };
+                    let Some(last) = wj.drops.last().map(|d| d.y) else { continue };
+                    let d_new = round(&dn, wj.q + wi.q, dn.v_branch).max(wj.d);
+                    // a stub off the branch holds the tee it leaves by and the elbow into its drop
+                    let stub_min = node_trim(&dn, &[(d_new, 0.0), (dd, 0.0)]).max(tee_leg((d_new, 0.0)).max(tee_leg((dd, 0.0)))) + dn.drop_bend * dd + dn.margin;
+                    // on its line: drops off the branch where it crosses the room, or the branch
+                    // runs on into a room beyond its own
+                    let need = node_trim(&dn, &[main_widest(&dn, f.total[s], h_max), (d_new, 0.0)]) + dn.drop_bend * d_new + dn.margin;
+                    if t.x >= wi.lo - 1e-9 && t.x <= wi.hi + 1e-9 {
+                        let pitch = row_pitch(&dn, d_new);
+                        let first = ilo.max(ihi.min(ym + wi.side * need));
+                        let (a0, a1) = if wi.side > 0.0 { (first.max(ilo), ihi) } else { (ilo, first.min(ihi)) };
+                        let mid = (ri.r.0 + ri.r.2) / 2.0;
+                        for m in (1..=wi.drops.len()).rev() {
+                            if wi.q / m as f64 > terms(s)[1].cap + 1e-9 {
+                                break;
+                            }
+                            let ys: Vec<f64> = if m == wi.drops.len() {
+                                wi.drops.iter().map(|d| d.y).collect()
+                            } else {
+                                (0..m).map(|j| a0 + (a1 - a0) * (j as f64 + 0.5) / m as f64).collect()
+                            };
+                            let ok_y = ys.iter().all(|&y| y >= ilo - 1e-9 && y <= ihi + 1e-9 && (y - ym) * wi.side >= need - 1e-9 && wj.drops.iter().all(|d| (d.y - y).abs() >= pitch - 1e-9));
+                            if !ok_y {
+                                continue;
+                            }
+                            let far = ys.iter().copied().fold(last, |a, y| if (y - ym) * wi.side > (a - ym) * wi.side { y } else { a });
+                            let stub = stub_min;
+                            let xd = if mid >= t.x { t.x + stub } else { t.x - stub };
+                            // the branch's new end stands on its line, the other drops off it
+                            let at = |y: f64| if (y - far).abs() < 1e-9 && (far - last).abs() > 1e-9 { t.x } else { xd };
+                            let runs_on = (far - last).abs() < 1e-9 || free((t.x, last), (t.x, far), t.x);
+                            if runs_on && ys.iter().all(|&y| free((t.x, y), (at(y), y), t.x) && free((at(y), y), (at(y), y), t.x)) {
+                                let cost = (far - last).abs() + (wi.drops.len() - m) as f64;
+                                if best.as_ref().is_none_or(|b| cost < b.0) {
+                                    best = Some((cost, j, ys.iter().map(|&y| (y, at(y))).collect(), true));
+                                }
+                                break;
+                            }
+                        }
+                    }
+                    // a stub through the partition between two of its stations
+                    let lo = ilo.max(rj.near.min(rj.far) + dn.wall_keep);
+                    let hi = ihi.min(rj.near.max(rj.far) - dn.wall_keep);
+                    if hi < lo {
+                        continue;
+                    }
+                    let mut ys: Vec<f64> = std::iter::once(ym + wi.side * need).chain(wj.drops.iter().map(|d| d.y)).collect();
+                    ys.sort_by(|a, b| ((a - ym) * wi.side).total_cmp(&((b - ym) * wi.side)));
+                    let sep = node_trim(&dn, &[(d_new, 0.0), (dd, 0.0)]) + dn.drop_bend * dd + dn.margin;
+                    // the partition the stub passes takes a fire damper: clear of the tee
+                    // behind it and of the elbow ahead
+                    let wall = if t.x < ri.r.0 { ri.r.0 } else { ri.r.2 };
+                    let dl = rule("mep.hvac.damper_len");
+                    if (wall - t.x).abs() < tee_leg((d_new, 0.0)) + dl + dn.margin {
+                        continue;
+                    }
+                    for &xi in &xis {
+                        if (t.x - xi).abs() > reach || (t.x - xi).abs() < stub_min || (xi - wall).abs() < dl + dn.drop_bend * dd + dn.margin {
+                            continue;
+                        }
+                        let mut gaps: Vec<f64> = vec![];
+                        for g in ys.windows(2) {
+                            let y = (g[0] + g[1]) / 2.0;
+                            if (g[1] - g[0]).abs() < 2.0 * sep || y < lo - 1e-9 || y > hi + 1e-9 || in_ring(xi, y, dd / 2.0) {
+                                continue;
+                            }
+                            if free((t.x, y), (xi, y), t.x) {
+                                gaps.push(y);
+                            }
+                        }
+                        // as many of the room's drops as there are gaps, the room's air shared
+                        let m = gaps.len().min(wi.drops.len());
+                        if m == 0 || wi.q / m as f64 > terms(s)[1].cap + 1e-9 {
+                            continue;
+                        }
+                        // the room's drops in the gaps nearest their own rows
+                        let mut picks: Vec<(f64, f64)> = vec![];
+                        for dr in wi.drops.iter().take(m) {
+                            let Some(y) = gaps.iter().copied().filter(|y| !picks.iter().any(|p| p.0 == *y)).min_by(|a, b| (a - dr.y).abs().total_cmp(&(b - dr.y).abs())) else { break };
+                            picks.push((y, xi));
+                        }
+                        let cost = (t.x - xi).abs() + picks.iter().zip(&wi.drops).map(|(p, d)| (p.0 - d.y).abs()).sum::<f64>() + (wi.drops.len() - m) as f64;
+                        if best.as_ref().is_none_or(|b| cost < b.0) {
+                            best = Some((cost, j, picks, false));
+                        }
+                    }
+                }
+                let Some((_, j, picks, on)) = best else { continue };
+                let wj = &mut wants[j];
+                let q = up5(wi.q / picks.len() as f64);
+                let term = term_for(s, q);
+                let d = round(&dn, q, dn.v_branch).max(term.neck_d);
+                let far = picks.iter().map(|p| p.0).fold(f64::NAN, |a, y| if a.is_nan() || (y - ym) * wi.side > (a - ym) * wi.side { y } else { a });
+                let end = wj.drops.last().map_or(true, |l| (far - ym) * wi.side > (l.y - ym) * wi.side + 1e-9);
+                for (y, x) in picks.iter().copied() {
+                    // on the line, the branch's new end stands on it, the other drops off it
+                    let x = if on && end && (y - far).abs() < 1e-9 { None } else { Some(x) };
+                    wj.drops.push(Drop { y, x, q, term, d, room: wi.room });
+                }
+                wj.drops.sort_by(|a, b| (a.y - ym).abs().total_cmp(&(b.y - ym).abs()));
+                let added = q * picks.len() as f64;
+                wj.q += added;
+                wj.d = round(&dn, wj.q, dn.v_branch).max(wj.d);
+                if let Some(t) = floor_taps[k][s].iter_mut().find(|t| t.want == Some(j)) {
+                    t.q += added;
+                }
+                dropped.retain(|&d| d != i);
+            }
+        }
+    }
+}
+
+/// Least distance between two drops along a branch of diameter `d`: a tee each, a straight
+/// between them.
+fn row_pitch(dn: &Dn, d: f64) -> f64 {
+    2.0 * tee_leg((d, 0.0)) + dn.drop_bend * d + dn.margin + rule("services.hvac.row_pitch_min")
+}
+
+fn duct_area(s: (f64, f64)) -> f64 {
+    if s.1 > 0.0 {
+        s.0 * s.1
+    } else {
+        PI * s.0 * s.0 / 4.0
+    }
+}
+
+/// The velocity cap of a duct by its place: a drop to a terminal, a riser or plant run, a main.
+fn cap_of(dn: &Dn, d: &GDuct, n: usize) -> f64 {
+    let vertical = d.points.windows(2).all(|w| (w[0].0 - w[1].0).abs() < 1e-6 && (w[0].1 - w[1].1).abs() < 1e-6);
+    if d.bend.is_some() {
+        dn.v_branch
+    } else if vertical || d.storey >= n {
+        dn.v_riser
+    } else {
+        dn.v_main
+    }
 }
 

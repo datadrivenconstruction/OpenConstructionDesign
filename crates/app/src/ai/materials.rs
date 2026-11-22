@@ -171,12 +171,32 @@ pub fn rows(m: &Model) -> Vec<J> {
                 .material_usage(&x.spec.name)
                 .map(|u| u.iter().map(|(_, n)| n).sum())
                 .unwrap_or(0);
+            let look = ddc_model::material_look::resolve(&x.spec.name, x.spec.color);
             json!({
                 "name": x.spec.name,
                 "color": x.spec.color.map(|c| format!("#{c:06x}")),
                 "hatch": x.spec.hatch,
                 "density": x.spec.density.map(super::fmt::num),
                 "used": used,
+                "look": look.map(|r| r.look.key),
+            })
+        })
+        .collect()
+}
+
+/// The material look library: the classes a name resolves to by its words, with colour,
+/// built-in texture, roughness and metallic.
+pub fn library() -> Vec<J> {
+    ddc_model::material_look::LOOKS
+        .iter()
+        .map(|l| {
+            json!({
+                "look": l.key,
+                "name": l.name,
+                "color": format!("#{:06x}", l.rgb),
+                "texture": l.texture,
+                "roughness": l.roughness,
+                "metallic": l.metallic,
             })
         })
         .collect()

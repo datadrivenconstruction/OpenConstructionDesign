@@ -105,9 +105,23 @@ pub struct TexLayer {
     pub scale_m: f32,
     pub rotation_deg: f32,
     pub roughness: f32,
+    /// 0 is a dielectric, 1 a bare metal; the shader reads it in steps of 1/8.
+    pub metallic: f32,
 }
 
 impl TexLayer {
+    /// A material look: built-in texture `key` tinted to `rgb` (sRGB), with its tile size,
+    /// roughness and metallic.
+    pub fn look(key: &str, rgb: [u8; 3], scale_m: f32, roughness: f32, metallic: f32) -> Option<TexLayer> {
+        Some(TexLayer {
+            rgba: tinted(key, rgb)?,
+            scale_m: clamp_scale(scale_m),
+            rotation_deg: 0.0,
+            roughness: roughness.clamp(0.0, 1.0),
+            metallic: if metallic.is_finite() { metallic.clamp(0.0, 1.0) } else { 0.0 },
+        })
+    }
+
     /// Any image size is fitted to the layer size.
     pub fn from_image(
         w: u32,
@@ -123,6 +137,7 @@ impl TexLayer {
             scale_m: clamp_scale(scale_m),
             rotation_deg: if rotation_deg.is_finite() { rotation_deg } else { 0.0 },
             roughness: roughness.clamp(0.0, 1.0),
+            metallic: 0.0,
         })
     }
 
@@ -134,6 +149,7 @@ impl TexLayer {
             scale_m: clamp_scale(scale_m.unwrap_or(tile)),
             rotation_deg: if rotation_deg.is_finite() { rotation_deg } else { 0.0 },
             roughness: rough,
+            metallic: 0.0,
         })
     }
 }
@@ -145,15 +161,51 @@ pub struct TextureSet {
 }
 
 impl TextureSet {
-    /// Shader table: 1/scale, cos, sin, roughness. Unused rows are zero.
+    /// Shader table: 1/scale, cos, sin, surface. Unused rows are zero. The surface packs
+    /// roughness (0..1) and metallic in eighths: roughness + 2 * eighths (`tex_surface` in
+    /// realistic.wgsl), so the table keeps its size.
     pub fn params(&self) -> [[f32; 4]; MAX_LAYERS] {
         let mut out = [[0.0; 4]; MAX_LAYERS];
         for (o, l) in out.iter_mut().zip(&self.layers) {
             let (s, c) = l.rotation_deg.to_radians().sin_cos();
-            *o = [1.0 / clamp_scale(l.scale_m), c, s, l.roughness];
+            *o = [1.0 / clamp_scale(l.scale_m), c, s, pack_surface(l.roughness, l.metallic)];
         }
         out
     }
+}
+
+/// Roughness and metallic in one float: roughness + 2 * round(metallic * 8).
+pub fn pack_surface(roughness: f32, metallic: f32) -> f32 {
+    let r = if roughness.is_finite() { roughness.clamp(0.0, 1.0) } else { 0.7 };
+    let m = if metallic.is_finite() { (metallic.clamp(0.0, 1.0) * 8.0).round() } else { 0.0 };
+    r + 2.0 * m
+}
+
+/// Inverse of [`pack_surface`]: (roughness, metallic).
+pub fn unpack_surface(w: f32) -> (f32, f32) {
+    let m = (w * 0.5).floor();
+    (w - 2.0 * m, m / 8.0)
+}
+
+/// A built-in texture recoloured so its mean colour is `rgb` (sRGB); the pattern keeps its
+/// light and dark in proportion. Averaged and scaled in linear light.
+pub fn tinted(key: &str, rgb: [u8; 3]) -> Option<Vec<u8>> {
+    let mut img = generate(key)?;
+    let t = lut();
+    let n = (img.len() / 4) as f32;
+    let mut mean = [0.0f32; 3];
+    for p in img.chunks_exact(4) {
+        for c in 0..3 {
+            mean[c] += t[p[c] as usize];
+        }
+    }
+    let gain: Vec<f32> = (0..3).map(|c| t[rgb[c] as usize] / (mean[c] / n).max(1e-4)).collect();
+    for p in img.chunks_exact_mut(4) {
+        for c in 0..3 {
+            p[c] = lin_to_srgb(t[p[c] as usize] * gain[c]);
+        }
+    }
+    Some(img)
 }
 
 // ---- hand-off to the renderer ----
@@ -664,6 +716,48 @@ mod tests {
         assert!(current(rev).is_none());
         publish(TextureSet::default());
         assert!(current(rev).is_some());
+    }
+
+    #[test]
+    fn surface_packs_roughness_and_metallic_apart() {
+        for r in [0.0f32, 0.05, 0.5, 0.95, 1.0] {
+            for m in [0.0f32, 0.125, 0.5, 1.0] {
+                let (r2, m2) = unpack_surface(pack_surface(r, m));
+                assert!((r2 - r).abs() < 1e-5 && (m2 - m).abs() < 1e-5, "{r} {m} -> {r2} {m2}");
+            }
+        }
+        // a dielectric keeps the old table value: roughness alone
+        assert_eq!(pack_surface(0.85, 0.0), 0.85);
+        assert_eq!(unpack_surface(pack_surface(f32::NAN, f32::NAN)), (0.7, 0.0));
+    }
+
+    #[test]
+    fn tinted_textures_take_the_look_colour_and_keep_the_pattern() {
+        let mean = |img: &[u8]| {
+            let t = lut();
+            let mut s = [0.0f32; 3];
+            for p in img.chunks_exact(4) {
+                for c in 0..3 {
+                    s[c] += t[p[c] as usize];
+                }
+            }
+            let n = (img.len() / 4) as f32;
+            s.map(|v| lin_to_srgb(v / n))
+        };
+        for (key, rgb) in [("concrete", [0x3E, 0x40, 0x44]), ("brick", [0xA8, 0x5C, 0x46]), ("metal", [0x8A, 0x90, 0x97])] {
+            let img = tinted(key, rgb).unwrap();
+            let m = mean(&img);
+            for c in 0..3 {
+                assert!((m[c] as i32 - rgb[c] as i32).abs() <= 6, "{key}: {m:?} vs {rgb:?}");
+            }
+            let first = &img[..3];
+            assert!(img.chunks_exact(4).any(|p| &p[..3] != first), "{key} keeps a pattern");
+        }
+        assert!(tinted("nope", [1, 2, 3]).is_none());
+        let l = TexLayer::look("wood", [0xB0, 0x7A, 0x45], 0.8, 0.6, 1.0).unwrap();
+        let set = TextureSet { layers: vec![l] };
+        let (r, m) = unpack_surface(set.params()[0][3]);
+        assert!((r - 0.6).abs() < 1e-4 && m == 1.0, "{r} {m}");
     }
 
     #[test]

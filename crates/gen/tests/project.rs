@@ -71,8 +71,11 @@ fn nine_storey_section_builds_within_two_seconds() {
         p.storeys.iter().all(|s| s.layout.shafts.len() == 2),
         "a lift and the ventilation shaft on 9 floors"
     );
-    // every floor but the top carries a stair up, every floor but the ground a stair hole
-    assert_eq!(count(&p, "stairs"), 8);
+    // every floor carries a stair up, the top one on to the roof (`fire.stair_to_roof` from
+    // `fire.tall_storeys`); with that rule off the top has none. Every floor but the ground a hole
+    assert_eq!(count(&p, "stairs"), 9);
+    let (_, off) = built(json!({"typology": "apartment_section", "floors": 9, "rules": {"fire.stair_to_roof": false}}));
+    assert_eq!(count(&off, "stairs"), 8);
     assert!(p.storeys[0].layout.slab_holes.is_empty());
     assert!(p.storeys[1..]
         .iter()
@@ -113,9 +116,11 @@ fn same_spec_same_project_and_more_floors_keep_the_lower_ones() {
     let (_, b) = built(v.clone());
     assert_eq!(a, b, "the builder is deterministic");
     let mut w = v;
-    merge_patch(&mut w, &json!({"floors": 12}));
+    // 10 floors keep the top under `egress.two_stairs_above_height` (28 m); past it every
+    // storey takes a second stair, so the lower floors rightly change
+    merge_patch(&mut w, &json!({"floors": 10}));
     let (_, c) = built(w);
-    assert_eq!(c.storeys.len(), 12);
+    assert_eq!(c.storeys.len(), 10);
     // floors 1-8 are unchanged, so their slots and therefore their references stay
     for k in 0..8 {
         assert_eq!(a.storeys[k], c.storeys[k], "floor {}", k + 1);
@@ -275,8 +280,11 @@ fn one_floor_has_no_stair_and_forty_floors_reach_the_roof() {
         t.elapsed().as_secs_f64() * 1000.0
     );
     assert_eq!(p.storeys.len(), 40);
-    assert_eq!(count(&p, "stairs"), 39);
+    // a high-rise has two stairs on every storey, and they run on to the roof
+    assert_eq!(count(&p, "stairs"), 80);
     assert!((p.roof.elevation - 40.0 * s.floor_height).abs() < 1e-6);
+    let (_, off) = built(json!({"typology": "apartment_section", "floors": 40, "rules": {"fire.stair_to_roof": false}}));
+    assert_eq!(count(&off, "stairs"), 78);
     let e = parse_spec(&json!({"typology": "apartment_section", "floors": 201})).unwrap_err();
     assert!(e.to_string().contains("floors"), "{e}");
 }
@@ -760,17 +768,63 @@ fn a_family_house_has_its_garage_a_gable_roof_and_takes_a_basement() {
     assert!(kinds.contains(&RoomKind::Parking), "{kinds:?}");
 }
 
+/// Rooms asked for one storey go to that storey only:
+/// (a) every room the brief orders for it appears on it;
+/// (b) every other room it gains that is not a filler is a declared derivative of an ordered
+///     room: an operating theatre comes with its scrub anteroom (`room.anteroom_depth`);
+/// (c) every other storey keeps its rooms exactly: names, kinds and areas;
+/// (d) fillers (the programme's spare room and storage) may change in number on that storey,
+///     but its rooms cover the same floor area as before.
 #[test]
 fn storey_rooms_add_rooms_to_that_storey_only() {
     let theatre = json!({"name": "Operating theatre", "kind": "technical", "area": 48, "tags": ["operating"]});
     let base = json!({"typology": "hospital_wing", "floors": 4});
-    let (_, p0) = built(base.clone());
+    let (s0, p0) = built(base.clone());
     let mut more = base.clone();
     more["storey_rooms"] = json!({"2": [theatre]});
     let (s, p1) = built(more);
     assert_eq!(s.floor_rooms(2).len(), spec(base.clone()).floor_rooms(2).len() + 1);
     assert_eq!(s.floor_rooms(1).len(), spec(base).floor_rooms(1).len());
-    assert_eq!(p1.storeys[2].rooms.len(), p0.storeys[2].rooms.len() + 1);
+    let area = |r: &[(f64, f64)]| {
+        let n = r.len();
+        (0..n).map(|i| r[i].0 * r[(i + 1) % n].1 - r[(i + 1) % n].0 * r[i].1).sum::<f64>().abs() / 2.0
+    };
+    let rooms = |p: &GProject, k: usize| -> Vec<(String, RoomKind, f64)> {
+        let st = &p.storeys[k];
+        let mut v: Vec<_> = st.layout.rooms.iter().zip(&st.rooms).map(|(g, r)| (g.name.clone(), r.kind, area(&g.polygon))).collect();
+        v.sort_by(|a, b| a.0.cmp(&b.0).then(a.2.total_cmp(&b.2)));
+        v
+    };
+    // (c) the other storeys exactly as they were
+    for k in [0, 1, 3] {
+        let (a, b) = (rooms(&p0, k), rooms(&p1, k));
+        assert_eq!(a.len(), b.len(), "storey {k}: {a:?} / {b:?}");
+        for (x, y) in a.iter().zip(&b) {
+            assert!(x.0 == y.0 && x.1 == y.1 && (x.2 - y.2).abs() < 1e-6, "storey {k}: {x:?} became {y:?}");
+        }
+    }
+    let spare = &s0.spare;
+    let filler = |r: &(String, RoomKind, f64)| r.1 == RoomKind::Storage || (r.1 == spare.kind && r.0 == spare.name.0);
+    let (before, after) = (rooms(&p0, 2), rooms(&p1, 2));
+    // (a) the ordered room is there
+    assert!(after.iter().any(|r| r.0 == "Operating theatre"), "{after:?}");
+    // (b) beyond the ordered room and fillers, only its declared derivative is new
+    let mut left: Vec<&(String, RoomKind, f64)> = before.iter().filter(|r| !filler(r)).collect();
+    let mut gained = vec![];
+    for r in after.iter().filter(|r| !filler(r)) {
+        match left.iter().position(|q| q.0 == r.0 && q.1 == r.1) {
+            Some(i) => {
+                left.remove(i);
+            }
+            None => gained.push(r.0.as_str()),
+        }
+    }
+    gained.sort_unstable();
+    assert_eq!(gained, ["Operating theatre", "Scrub anteroom"], "storey 2 gained {gained:?}");
+    assert!(left.is_empty(), "storey 2 lost {left:?}");
+    // (d) the storey's rooms cover the same floor area
+    let total = |v: &[(String, RoomKind, f64)]| v.iter().map(|r| r.2).sum::<f64>();
+    assert!((total(&before) - total(&after)).abs() < 0.1, "storey 2 covers {:.2} m2, was {:.2}", total(&after), total(&before));
     // a storey out of range is refused with its field
     let err = parse_spec(&json!({"typology": "hospital_wing", "floors": 4, "storey_rooms": {"9": []}})).err().map(|e| e.to_string());
     assert!(err.is_some_and(|e| e.contains("storey_rooms.9")));

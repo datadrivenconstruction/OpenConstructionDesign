@@ -2047,7 +2047,7 @@ fn selected_opts(
 }
 
 fn options_bar(ui: &mut egui::Ui, rect: Rect, ed: &mut Editor, t: &Tokens, view: AnnoView) {
-    let (kind, mut o, c, editing) = with(|s| {
+    let (kind, o, c, editing) = with(|s| {
         (
             s.draft.as_ref().map(|d| d.kind),
             s.opts.clone(),
@@ -2086,8 +2086,25 @@ fn options_bar(ui: &mut egui::Ui, rect: Rect, ed: &mut Editor, t: &Tokens, view:
             .max_rect(bar.shrink2(Vec2::new(t.spacing, t.spacing * 0.5)))
             .layout(egui::Layout::left_to_right(egui::Align::Center)),
     );
-    let ui = &mut cu;
-    crate::modify_opts::row_style(ui, &th);
+    crate::ui_kit::bar_row(&mut cu, "f4_opts_scroll", |ui| {
+        opts_row(ui, &th, &c, ed, view, kind, chosen, &its, &l, o)
+    });
+}
+
+#[allow(clippy::too_many_arguments)]
+fn opts_row(
+    ui: &mut egui::Ui,
+    th: &Theme,
+    c: &Catalog,
+    ed: &mut Editor,
+    view: AnnoView,
+    kind: Option<Kind>,
+    chosen: Option<&Item>,
+    its: &Items,
+    l: &Lists,
+    mut o: Opts,
+) {
+    crate::modify_opts::row_style(ui, th);
     let mut act = None;
     if let Some(k) = kind {
         let title = c.t(k.cmd());

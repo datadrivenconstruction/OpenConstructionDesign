@@ -98,3 +98,5 @@ kinds = "vessel|tank|reactor|column|drum|exchanger|boiler|condenser|reboiler:7;p
 kind = "pipe_nozzles"
 nozzle = "nozzle|flange"
 share_min = 0.9
+[[oracle.geom]]
+kind = "materials"

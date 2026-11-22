@@ -120,6 +120,23 @@ pub fn label_in(ui: &mut Ui, th: &Theme, rect: Rect, id: egui::Id, text: &str) -
     }
 }
 
+/// A form row's label in its column `rect`: one line on the row's centre line; a label wider
+/// than the column breaks over lines downwards, its first line on the centre line, so it reads
+/// whole. Returns its id and the rect it takes.
+fn column_label(ui: &mut Ui, th: &Theme, rect: Rect, id: egui::Id, text: &str) -> (egui::Id, Rect) {
+    let col = th.sem().text_secondary;
+    let font = th.font(Role::Body);
+    let one = ui.painter().layout_no_wrap(text.to_owned(), font.clone(), col);
+    if one.size().x <= rect.width() || rect.width() <= 0.0 {
+        return (label_in(ui, th, rect, id, text).id, rect);
+    }
+    let g = ui.painter().layout(text.to_owned(), font, col, rect.width());
+    let at = pos2(rect.left(), rect.center().y - one.size().y / 2.0);
+    let used = Rect::from_min_size(at, g.size()).union(rect);
+    ui.painter().galley(at, g, col);
+    (ui.interact(used, id, Sense::hover()).id, used)
+}
+
 /// One form row across the available width: the label in a column of `label_w`, the fields
 /// after it left to right, everything on the row's centre line. `add` gets the field area and
 /// the label's id (for `labelled_by`). Content taller than a row (a wrapped note) grows the
@@ -138,7 +155,7 @@ pub fn field_row<R>(
     let lw = label_w.min(w).max(0.0);
     let lrect = Rect::from_min_size(rect.min, vec2(lw, h));
     let id = ui.id().with(("ddc.form.label", text));
-    let lid = label_in(ui, th, lrect, id, text).id;
+    let (lid, shown) = column_label(ui, th, lrect, id, text);
     let left = (lrect.right() + space::SM).min(rect.right());
     let frect = Rect::from_min_max(pos2(left, rect.top()), rect.max);
     let mut child = ui.new_child(
@@ -149,7 +166,7 @@ pub fn field_row<R>(
     child.spacing_mut().interact_size.y = th.d().control;
     let out = add(&mut child, lid);
     // the row takes what it shows, so an auto-sized window does not grow to its limit
-    ui.advance_cursor_after_rect(lrect.union(child.min_rect()));
+    ui.advance_cursor_after_rect(shown.union(child.min_rect()));
     out
 }
 
@@ -225,6 +242,42 @@ mod tests {
         assert!(r.left() >= 120.0 + space::SM, "{r:?}");
         assert!((r.center().y - (top + row_h(&th) / 2.0)).abs() <= 0.5, "{r:?}");
         assert!(next >= top + row_h(&th), "{top} {next}");
+    }
+
+    #[test]
+    fn a_label_wider_than_its_column_breaks_over_lines_and_keeps_the_field_in_place() {
+        let th = Theme::new(Mode::Light, Density::Compact);
+        let ctx = crate::theme::headless_ctx();
+        let mut got = vec![];
+        let out = ctx.run(Default::default(), |c| {
+            egui::CentralPanel::default().show(c, |ui| {
+                for text in ["Offset", "Responsible department of the project"] {
+                    let top = ui.cursor().top();
+                    let r = field_row(ui, &th, text, 60.0, |ui, _| {
+                        let mut s = "0".to_string();
+                        super::super::TextField::new(&mut s).width(80.0).show(ui, &th).response.rect
+                    });
+                    got.push((top, r, ui.cursor().top()));
+                }
+            });
+        });
+        let texts: Vec<_> = out
+            .shapes
+            .iter()
+            .filter_map(|c| match &c.shape {
+                egui::Shape::Text(t) => Some(t.clone()),
+                _ => None,
+            })
+            .collect();
+        assert!(texts.iter().all(|t| !t.galley.elided), "a label was cut");
+        let long = texts.iter().find(|t| t.galley.text().starts_with("Responsible")).unwrap();
+        let short = texts.iter().find(|t| t.galley.text() == "Offset").unwrap();
+        assert!(long.galley.rows.len() > 1, "the long label stayed on one line");
+        let ((t0, short_f, _), (t1, long_f, next)) = (got[0], got[1]);
+        assert_eq!(short_f.left(), long_f.left(), "the field moved with the label");
+        // the first line sits where a one-line label would: on the field's centre line
+        assert!(((long.pos.y - t1) - (short.pos.y - t0)).abs() <= 0.5);
+        assert!(next >= long.pos.y + long.galley.size().y, "the next row overlaps the label");
     }
 
     #[test]

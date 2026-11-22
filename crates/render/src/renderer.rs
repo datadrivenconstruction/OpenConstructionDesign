@@ -68,7 +68,7 @@ pub struct FrameUniforms {
     /// Whole selection (`selset`): x ranges in the selection texture (0: `sel.xy` alone
     /// decides), y texels per row, z set generation, w reserved. Set by `Renderer::prepare`.
     pub sel_n: [u32; 4],
-    /// x: sway of foliage, m at 10 m (0 — still), y: time, s. Set by `Renderer::prepare`.
+    /// x: sway of foliage, m at 10 m (0 keeps it still), y: time, s. Set by `Renderer::prepare`.
     pub wind: [f32; 4],
 }
 

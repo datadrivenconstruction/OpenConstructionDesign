@@ -22,7 +22,7 @@ const LENGTH_FIELDS: [&str; 6] = ["width", "height", "sill", "length", "thicknes
 const DEFAULT_VARIANTS: u64 = 3;
 const STOREY: f64 = 3.0;
 
-pub const HANDLERS: [(&str, Handler); 48] = [
+pub const HANDLERS: [(&str, Handler); 49] = [
     ("define_family", define_family),
     ("create_geometry", create_geometry),
     ("run_script", super::script_tools::run_script),
@@ -46,6 +46,7 @@ pub const HANDLERS: [(&str, Handler); 48] = [
     ("place_rooms", super::modify_cmds::place_rooms),
     ("place_footings", super::modify_cmds::place_footings),
     ("create_terrain", super::modify_cmds::create_terrain),
+    ("set_material", super::modify_cmds::set_material),
     (ddc_ai::catalog::MEASURE_SAVE, super::form_cmds::measure_save),
     (ddc_ai::catalog::EDIT_MASS, super::form_cmds::edit_mass),
     (ddc_ai::catalog::MASS_TO_FAMILY, super::form_cmds::mass_to_family),
@@ -504,6 +505,7 @@ fn new_elem(c: &Core, cat: &str, o: &J) -> Result<NewElem, String> {
                 J::Null => None,
                 v => Some(super::lower::lift_vault(v)?),
             },
+            eave: None,
         },
         "stair" => {
             let top_level = level_of(c, o, "top_level", dl)?;

@@ -336,3 +336,43 @@ fn a_guyed_mast_is_a_triangular_lattice_held_by_three_guys_per_level() {
     assert!(f.members.iter().filter(|m| m.role == MemRole::Diagonal).count() >= 3 * 50);
     assert!(tower::guyed_mast(80.0, 1.2, 1.6, 0, 0.625, Pattern::Warren).is_err());
 }
+
+/// Every deck of a tower on a user outline (slim, narrowing to a 2.4 m half-width at the top, or
+/// with a first platform whose open centre takes most of it) is a valid slab as the model builds
+/// it: its openings lie on the floor, none over the open centre or past the edge.
+#[test]
+fn deck_openings_stay_on_the_floor_of_a_user_outline() {
+    use crate::profile::Profile;
+    use crate::{v2, Tol};
+    let p = tp();
+    let outlines = [
+        vec![(0.0, 40.0), (57.6, 22.0), (115.7, 10.0), (300.0, 2.4)],
+        vec![(0.0, 40.0), (57.6, 30.0), (115.7, 8.0), (300.0, 2.4)],
+        vec![(0.0, 30.0), (57.6, 16.0), (115.7, 6.0), (300.0, 2.4)],
+    ];
+    let mut built = 0;
+    for (o, pattern) in outlines.iter().flat_map(|o| [(o, Pattern::X), (o, Pattern::K)]) {
+        let t = TowerParams { profile: Some(o.clone()), pattern, ..p.clone() };
+        let Ok(f) = tower::lattice_tower_300(&t) else { continue };
+        built += 1;
+        for d in &f.decks {
+            let sq = |h: f64| vec![v2(-h, -h), v2(h, -h), v2(h, h), v2(-h, h)];
+            let mut holes: Vec<Vec<_>> = d.holes.iter().map(|b| vec![v2(b[0], b[1]), v2(b[2], b[1]), v2(b[2], b[3]), v2(b[0], b[3])]).collect();
+            if d.open > 0.0 {
+                holes.push(sq(d.open));
+            }
+            if let Err(e) = Profile::new(sq(d.half), holes, Tol::default()) {
+                panic!("{o:?} {pattern:?}: the deck at {} is no slab: {e:?} ({:?}, open {})", d.z, d.holes, d.open);
+            }
+        }
+    }
+    assert!(built > 0, "no user outline built a tower");
+    let mut d = lattice::Deck { z: 0.0, half: 5.0, open: 3.0, holes: vec![[-1.0, -1.0, 1.0, 1.0], [2.0, -1.0, 4.0, 1.0], [4.0, 4.0, 6.0, 6.0]] };
+    assert_eq!(d.fit_holes(), (2, 1), "one over the open centre, one across its edge, one past the deck's");
+    assert!(d.holes.iter().all(|h| h[0] >= 3.05 - 1e-9 || h[1] >= 3.05 - 1e-9));
+    assert!(d.holes.iter().all(|h| h.iter().all(|v| v.abs() <= 4.95 + 1e-9)));
+    // a stair and a lift opening overlapping after the cut become one opening round both
+    let mut d = lattice::Deck { z: 0.0, half: 5.0, open: 0.0, holes: vec![[1.0, 1.0, 3.0, 3.0], [2.5, 2.0, 4.0, 4.0], [-4.0, -4.0, -3.0, -3.0]] };
+    d.fit_holes();
+    assert_eq!(d.holes, vec![[1.0, 1.0, 4.0, 4.0], [-4.0, -4.0, -3.0, -3.0]]);
+}

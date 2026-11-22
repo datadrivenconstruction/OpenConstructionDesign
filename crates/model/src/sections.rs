@@ -470,6 +470,9 @@ impl Model {
             cut: is_cut,
         };
         let out = section::section_with_arcs(&sc.prisms, &sc.arcs, &fr);
+        if ddc_geom::cancel::requested() {
+            return Err(Error::Cancelled);
+        }
         let mut prims = vec![];
         let mut cut_el: Vec<(&'static str, i64)> = vec![];
         let mut bb = [
@@ -646,6 +649,9 @@ impl Model {
                 b: (s, z1 + ext),
                 bubbles: (false, true),
             });
+        }
+        if ddc_geom::cancel::requested() {
+            return Err(Error::Cancelled);
         }
         Ok(PlanView { prims, bbox: bb })
     }

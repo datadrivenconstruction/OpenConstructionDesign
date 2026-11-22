@@ -243,6 +243,8 @@ pub fn lattice_tower_300(p: &TowerParams) -> Result<Frame, String> {
         Deck { z: p2, half: wm, open: 0.0, holes: h2 },
         Deck { z: p3, half: p.w(p3), open: 0.0, holes: h3 },
     ];
+    // a slim or user outline can leave an opening over the open centre or past a deck's edge
+    f.fit_decks();
     f.chords_are_columns = true;
     Ok(f)
 }

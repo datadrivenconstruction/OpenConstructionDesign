@@ -200,7 +200,7 @@ fn write(db: &Connection, s: &StairSpec, id: Option<i64>) -> Result<i64, Error> 
             s.thickness,
             s.stringer.map(|v| v.0),
             s.stringer.map(|v| v.1),
-            s.material,
+            crate::material_look::assign("stair", &s.material, ""),
             spr,
             spc,
             spt
@@ -320,7 +320,7 @@ fn write_railing_as(db: &Connection, s: &RailingSpec, row: Option<i64>) -> Resul
             s.baluster,
             s.rail.0,
             s.rail.1,
-            s.material,
+            crate::material_look::assign("railing", &s.material, ""),
             row
         ],
     )?;
@@ -635,7 +635,7 @@ impl Model {
                     s.baluster,
                     s.rail.0,
                     s.rail.1,
-                    s.material
+                    crate::material_look::assign("railing", &s.material, "")
                 ],
             )?;
             if n == 0 {

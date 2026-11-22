@@ -576,7 +576,7 @@ impl Model {
                 params![
                     s.name,
                     s.thickness,
-                    s.material,
+                    crate::material_look::assign("toposolid", &s.material, &s.name),
                     ring_text(&s.boundary),
                     lines_text(&s.breaklines)
                 ],
@@ -606,7 +606,7 @@ impl Model {
                 params![
                     s.name,
                     s.thickness,
-                    s.material,
+                    crate::material_look::assign("toposolid", &s.material, &s.name),
                     ring_text(&s.boundary),
                     lines_text(&s.breaklines),
                     id
@@ -940,7 +940,7 @@ impl Model {
                     p.elevation,
                     p.slope,
                     p.thickness,
-                    p.material,
+                    crate::material_look::assign("topo_pad", &p.material, &p.name),
                     ring_text(&p.outline)
                 ],
             )?;
@@ -963,7 +963,7 @@ impl Model {
                     p.elevation,
                     p.slope,
                     p.thickness,
-                    p.material,
+                    crate::material_look::assign("topo_pad", &p.material, &p.name),
                     ring_text(&p.outline),
                     id
                 ],

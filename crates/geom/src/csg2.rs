@@ -655,6 +655,10 @@ fn crosses(p: [V3; 3], q: [V3; 3], k: u8) -> bool {
 fn self_crossing(ctx: &Ctx, bvh: &Bvh, base: usize) -> bool {
     let mut cand = Vec::new();
     for i in 0..bvh.boxes.len() {
+        // stopped: "no crossing", the caller checks the token right after
+        if i % 64 == 0 && crate::cancel::requested() {
+            return false;
+        }
         bvh.query(&bvh.boxes[i], &mut cand);
         let p = ctx.corners(base + i);
         for &j in &cand {
@@ -699,12 +703,19 @@ pub fn mesh_boolean(a: &Mesh, b: &Mesh, op: BoolOp, tol: Tol) -> Result<MeshBool
     let bvh_a = Bvh::new(boxes[..na].to_vec());
     let bvh_b = Bvh::new(boxes[na..].to_vec());
     for (which, bvh, base) in [('a', &bvh_a, 0), ('b', &bvh_b, na)] {
+        if crate::cancel::requested() {
+            return Err(MeshBoolError::OpenResult);
+        }
         if self_crossing(&ctx, bvh, base) {
             return Err(MeshBoolError::SelfIntersecting { which });
         }
     }
     let mut cand = Vec::new();
     for ia in 0..na {
+        // a stop gives no solid; the caller tells it from a real failure by `cancel::requested`
+        if ia % 64 == 0 && crate::cancel::requested() {
+            return Err(MeshBoolError::OpenResult);
+        }
         bvh_b.query(&boxes[ia], &mut cand);
         for &j in &cand {
             ctx.pair(ia, na + j as usize);
@@ -713,6 +724,9 @@ pub fn mesh_boolean(a: &Mesh, b: &Mesh, op: BoolOp, tol: Tol) -> Result<MeshBool
     let mut frags: [Vec<Frag>; 2] = [Vec::with_capacity(na), Vec::with_capacity(n - na)];
     let mut fixed: [HashSet<(u32, u32)>; 2] = Default::default();
     for t in 0..n {
+        if t % 64 == 0 && crate::cancel::requested() {
+            return Err(MeshBoolError::OpenResult);
+        }
         let s = usize::from(t >= na);
         let (fs, fx) = ctx.split(t)?;
         if fs.len() > 1 || !fx.is_empty() {
@@ -733,8 +747,14 @@ pub fn mesh_boolean(a: &Mesh, b: &Mesh, op: BoolOp, tol: Tol) -> Result<MeshBool
         }
     }
     for s in 0..2 {
+        if crate::cancel::requested() {
+            return Err(MeshBoolError::OpenResult);
+        }
         let other = if s == 0 { (&bvh_b, na) } else { (&bvh_a, 0) };
         ctx.stats.patches += classify(&ctx, &mut frags[s], &fixed[s], other);
+    }
+    if crate::cancel::requested() {
+        return Err(MeshBoolError::OpenResult);
     }
     let mut out = assemble(&ctx, &frags, op);
     // planar faces come back as fragments of every earlier split; refilled from their boundary

@@ -114,6 +114,15 @@ fn tall_asked(v: &J, l: &J) -> bool {
     texts.iter().any(|t| room.iter().any(|w| word_in(t, w)) && tall.iter().any(|w| word_in(t, w)))
 }
 
+/// A rule as the brief's own rules set it.
+fn rule_of(v: &J, id: &str) -> f64 {
+    let mut rs = RuleSet::new();
+    if !v["rules"].is_null() {
+        let _ = rs.apply_patch(Layer::Brief, &v["rules"]);
+    }
+    rs.get(id)
+}
+
 /// Whether the brief is of a table type and has no say over its rooms.
 pub(crate) fn asked(v: &J) -> bool {
     if ["rooms", "ground_rooms", "program", "apartments"].iter().any(|k| !v[*k].is_null()) {
@@ -251,7 +260,9 @@ pub(crate) fn fill(v: &J) -> Option<(J, Vec<String>)> {
         (_, _, Some(a)) => a,
         _ => t["floor_area"].as_f64().unwrap_or(2800.0),
     };
-    if let Some(o) = out["footprint"].as_object_mut() {
+    // `get_mut`, not `out["footprint"]`: indexing a JSON object for writing inserts the key,
+    // and a brief nothing changed in must compare equal to the one asked
+    if let Some(o) = out.get_mut("footprint").and_then(J::as_object_mut) {
         o.remove("area");
     }
     // a preset sizes its own plan unless the brief gave an area
@@ -277,7 +288,11 @@ pub(crate) fn fill(v: &J) -> Option<(J, Vec<String>)> {
         let floors = out["floors"].as_u64().unwrap_or(1);
         let floor = |which: &str| -> Vec<J> {
             let lines: Vec<&J> = t["lines"].as_array().into_iter().flatten().filter(|l| l["floor"] == which).collect();
-            let each = sized(&lines, area);
+            // the rooms keep `typology.net_share` of the floor at most: walls, corridor and
+            // core take the rest, so the outline always has room for the programme
+            let shares: f64 = lines.iter().map(|l| l["share"].as_f64().unwrap_or(0.0)).sum();
+            let net = rule_of(v, "typology.net_share");
+            let each = sized(&lines, area * if shares > net { net / shares } else { 1.0 });
             lines
                 .iter()
                 .zip(each)
@@ -650,6 +665,17 @@ mod tests {
         assert!(fill(&json!({"typology": "office", "name": "Office building"})).is_none());
     }
 
+    /// Filling never writes a key the brief did not have unless it gives it a value.
+    #[test]
+    fn a_filled_brief_gains_no_empty_keys() {
+        for v in [json!({"typology": "office", "name": "Office building"}), json!({"typology": "office", "name": "church"})] {
+            let Some((out, _)) = fill(&v) else { continue };
+            for (k, x) in out.as_object().unwrap() {
+                assert!(!x.is_null() || !v[k].is_null(), "{v}: {k} written as null");
+            }
+        }
+    }
+
     #[test]
     fn a_column_grows_with_the_storey_until_it_is_slender_enough() {
         use crate::project::build::column;
@@ -699,19 +725,80 @@ mod tests {
         }
     }
 
+    /// Whether a service point lies in the envelope of the storey it serves: between its floor
+    /// and ceiling, and on the top storey also in the roof void, up to the underside of the
+    /// roof solid over that plan point (the hip model the plant layout uses).
+    fn in_envelope(p: &crate::project::GProject, q: (f64, f64, f64)) -> bool {
+        let Some(top) = p.storeys.last() else { return false };
+        let base = p.storeys.first().map_or(0.0, |s| s.elevation);
+        if !q.2.is_finite() || q.2 < base - 1e-6 {
+            return false;
+        }
+        if q.2 <= top.elevation + top.height + 1e-6 {
+            return true;
+        }
+        let r = &p.roof;
+        if r.slope <= crate::project::FLAT_FALL_DEG + 1e-9 {
+            // a flat roof: only the roof equipment zone of a unit, the generator's own
+            return crate::project::hvac::roof_plant_zones(p)
+                .iter()
+                .any(|(b, z)| q.0 >= b.0 - 1e-6 && q.0 <= b.2 + 1e-6 && q.1 >= b.1 - 1e-6 && q.1 <= b.3 + 1e-6 && q.2 <= z + 1e-6);
+        }
+        let (xs, ys) = (r.ring.iter().map(|v| v.0), r.ring.iter().map(|v| v.1));
+        let b = (xs.clone().fold(f64::MAX, f64::min), ys.clone().fold(f64::MAX, f64::min), xs.fold(f64::MIN, f64::max), ys.fold(f64::MIN, f64::max));
+        let e = (q.0 - b.0).min(b.2 - q.0).min(q.1 - b.1).min(b.3 - q.1);
+        if e < 0.0 {
+            return false;
+        }
+        let a = r.slope.to_radians();
+        let under = r.elevation + r.lift + e * a.tan() - crate::project::roof_thickness(r.slope) / a.cos();
+        q.2 <= under + 1e-6
+    }
+
+    /// Ducts and fire runs of a 12 m hall stay in its envelope: inside the storey, or in the
+    /// roof void above the top storey up to the underside of the roof solid, never through it.
+    /// The roof void is part of the top storey's envelope (a unit may stand there under a
+    /// pitched roof); this is the rule as specified, not a looser bound. Over a flat roof a
+    /// riser to the rooftop unit is roof equipment: it may leave the storey only inside that
+    /// unit's footprint and connection legs, up to the top of the plant layers, the zone the
+    /// generator itself places the plant in (`hvac::roof_plant_zones`).
     #[test]
     fn a_twelve_metre_hall_keeps_its_ducts_and_standpipes_inside_the_storey() {
         let s = parse_spec(&json!({"typology": "office", "name": "church", "services": true})).unwrap_or_else(|e| panic!("{e:?}"));
-        let p = build_project(&s).unwrap_or_else(|e| panic!("{e}"));
+        let mut p = build_project(&s).unwrap_or_else(|e| panic!("{e}"));
         let h = p.storeys[0].height;
         assert_eq!(h, 12.0);
-        let ok = |z: f64| z.is_finite() && z >= -1e-6 && z <= h + 1e-6;
         for d in &p.hvac.ducts {
-            assert!(d.points.iter().all(|q| ok(q.2)), "duct leaves the storey: {:?}", d.points);
+            assert!(d.points.iter().all(|&q| in_envelope(&p, q)), "duct leaves the storey: {:?}", d.points);
         }
         for r in p.fire.runs.iter().chain(p.fire.standpipes.iter().flat_map(|s| s.runs.iter())) {
-            assert!(r.run.points.iter().all(|q| ok(q.2)), "fire run leaves the storey: {:?}", r.run.points);
+            assert!(r.run.points.iter().all(|&q| in_envelope(&p, q)), "fire run leaves the storey: {:?}", r.run.points);
         }
+        // over a flat roof a riser to the unit is roof equipment: inside the unit's footprint
+        // and connection legs, up to the top of the plant layers; anything past it fails
+        let zones = crate::project::hvac::roof_plant_zones(&p);
+        assert!(!zones.is_empty(), "the hall has a rooftop unit");
+        let (b, z) = zones[0];
+        let mid = ((b.0 + b.2) / 2.0, (b.1 + b.3) / 2.0);
+        assert!(in_envelope(&p, (mid.0, mid.1, z)), "the top of the plant layers is the unit's own");
+        assert!(!in_envelope(&p, (mid.0, mid.1, z + 0.05)), "a duct over the plant layers passes");
+        assert!(!in_envelope(&p, (b.2 + 0.05, mid.1, h + 0.5)), "a duct off the unit and its legs passes");
+        assert!(!in_envelope(&p, (mid.0, b.3 + 0.05, h + 0.5)), "a duct off the unit and its legs passes");
+        assert!(!in_envelope(&p, (b.2 + 0.05, mid.1, h + 1.0)), "a duct over a flat roof's storey passes");
+        // under a pitched roof the void is the top storey's: a duct pushed through the roof
+        // solid fails, a point below the floor too
+        let q = p.hvac.ducts.iter().flat_map(|d| d.points.iter()).copied().next().expect("the hall has ducts");
+        p.roof.slope = 30.0;
+        let r = &p.roof;
+        let (xs, ys) = (r.ring.iter().map(|v| v.0), r.ring.iter().map(|v| v.1));
+        let b = (xs.clone().fold(f64::MAX, f64::min), ys.clone().fold(f64::MAX, f64::min), xs.fold(f64::MIN, f64::max), ys.fold(f64::MIN, f64::max));
+        let e = (q.0 - b.0).min(b.2 - q.0).min(q.1 - b.1).min(b.3 - q.1).max(0.0);
+        let a = r.slope.to_radians();
+        // the underside of the solid passes, a point just into the solid does not
+        let under = r.elevation + r.lift + e * a.tan() - crate::project::roof_thickness(r.slope) / a.cos();
+        assert!(in_envelope(&p, (q.0, q.1, under.max(h))), "the roof void is the top storey's own");
+        assert!(!in_envelope(&p, (q.0, q.1, under.max(h) + 0.05)), "a duct pushed into the roof solid passes");
+        assert!(!in_envelope(&p, (q.0, q.1, -1.0)), "a duct under the floor passes");
     }
 
     #[test]
@@ -726,5 +813,27 @@ mod tests {
         for r in p.fire.standpipes.iter().flat_map(|s| s.runs.iter()) {
             assert!(r.run.points.iter().all(|q| q.2.is_finite() && q.2 >= -1e-6 && q.2 <= h + 1e-6), "{:?}", r.run.points);
         }
+    }
+
+    /// The filled rooms keep within `typology.net_share` of the outline, whatever the table's shares.
+    #[test]
+    fn a_filled_programme_keeps_within_the_net_share_of_its_outline() {
+        let s = parse_spec(&json!({"typology": "office", "name": "church"})).unwrap();
+        let (w, d) = (s.width.unwrap(), s.depth.unwrap());
+        let net = s.rules.get("typology.net_share");
+        assert!(total(&s.rooms) <= net * w * d * 1.01, "{} m2 of rooms on {w} x {d}", total(&s.rooms));
+    }
+
+    /// A room past what one band holds turns a given outline into the deep plan, the room in the bay.
+    #[test]
+    fn a_dominant_room_turns_the_plan_deep() {
+        let v = json!({"typology": "office", "floors": 1, "footprint": {"width": 36.0, "depth": 25.0},
+            "rooms": [{"kind": "hall", "area": 500, "count": 1}, {"kind": "office", "area": 20, "count": 2}]});
+        let s = parse_spec(&v).unwrap();
+        assert!(s.hall_depth.is_some(), "a 500 m2 hall in a 36 x 25 m plan takes the open bay");
+        build_project(&s).unwrap_or_else(|e| panic!("{e}"));
+        let small = parse_spec(&json!({"typology": "office", "floors": 1, "footprint": {"width": 36.0, "depth": 25.0},
+            "rooms": [{"kind": "office", "area": 60, "count": 6}]})).unwrap();
+        assert!(small.hall_depth.is_none());
     }
 }

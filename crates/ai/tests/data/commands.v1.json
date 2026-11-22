@@ -205,7 +205,7 @@
           }
         ]
       },
-      "summary": "Project materials: name, color, hatch, density and how many element rows use each. Use these exact names in layers and materials; an unknown name is flagged on the plan.",
+      "summary": "Project materials: name, color, hatch, density, how many element rows use each and the look (library class) each shows in 3D; then the look library (class, colour, texture, roughness, metallic) and how many elements have no look. Use these exact names in layers and materials; an unknown name is flagged on the plan. A name with a class word (steel S355, glulam GL24h, concrete C30/37, asphalt) shows that class; give every element such a material, never leave it empty.",
       "surface": "all",
       "text": "api.cmd.list_materials",
       "version": 1
@@ -12671,6 +12671,161 @@
       "summary": "Plan: a concrete pad footing 1.2 x 1.2 x 0.5 m under every column of a level that has none. None free: no_effect.",
       "surface": "all",
       "text": "api.cmd.place_footings",
+      "version": 1
+    },
+    {
+      "destructive": true,
+      "id": "set_material",
+      "input": {
+        "additionalProperties": false,
+        "properties": {
+          "color": {
+            "description": "Base colour #RRGGBB; overrides the class colour",
+            "maxLength": 7,
+            "type": "string"
+          },
+          "look": {
+            "description": "Library class from list_materials.library, e.g. steel, concrete, timber, glass, brick, render, grass",
+            "maxLength": 40,
+            "type": "string"
+          },
+          "name": {
+            "description": "Material name; a new name becomes a project material",
+            "maxLength": 80,
+            "type": "string"
+          },
+          "texture": {
+            "enum": [
+              "brick",
+              "concrete",
+              "wood",
+              "tile",
+              "metal",
+              "glass",
+              "grass"
+            ],
+            "type": "string"
+          },
+          "tile": {
+            "description": "Texture repeat in metres; default: the class tile",
+            "type": "number"
+          },
+          "title": {
+            "description": "Short plan item title, shown to the person",
+            "maxLength": 200,
+            "type": "string"
+          },
+          "why": {
+            "description": "Optional one-sentence reason for this change, shown in the history",
+            "maxLength": 300,
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "name"
+        ],
+        "type": "object"
+      },
+      "kind": "edit",
+      "read_only": false,
+      "result": {
+        "oneOf": [
+          {
+            "properties": {
+              "changes": {
+                "properties": {
+                  "changed": {
+                    "minimum": 0,
+                    "type": "integer"
+                  },
+                  "created": {
+                    "minimum": 0,
+                    "type": "integer"
+                  },
+                  "deleted": {
+                    "minimum": 0,
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "created",
+                  "changed",
+                  "deleted"
+                ],
+                "type": "object"
+              },
+              "created": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "item": {
+                "minimum": 1,
+                "type": "integer"
+              },
+              "skipped": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "untrusted": {
+                "const": "data"
+              }
+            },
+            "required": [
+              "untrusted",
+              "item",
+              "changes"
+            ],
+            "type": "object"
+          },
+          {
+            "properties": {
+              "code": {
+                "enum": [
+                  "unknown_command",
+                  "invalid_args",
+                  "not_allowed",
+                  "not_found",
+                  "no_effect",
+                  "conflict",
+                  "limit",
+                  "cancelled",
+                  "busy",
+                  "failed"
+                ]
+              },
+              "error": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              },
+              "refs": {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              "untrusted": {
+                "const": "data"
+              }
+            },
+            "required": [
+              "untrusted",
+              "error",
+              "code"
+            ],
+            "type": "object"
+          }
+        ]
+      },
+      "summary": "Plan: set how a material looks in 3D: a library class (look), a colour #RRGGBB and a built-in texture with its tile in metres. A new name becomes a project material. Assign it to elements by name in layers, create_geometry parts and fields. Already so: no_effect.",
+      "surface": "all",
+      "text": "api.cmd.set_material",
       "version": 1
     },
     {

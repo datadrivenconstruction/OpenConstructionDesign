@@ -306,7 +306,12 @@ impl Body {
     }
 
     pub fn boolean(&self, other: &Body, op: BoolOp, tol: Tol) -> Body {
-        let (out, odd) = boolean(self, other, op, tol.length).welded_counted(tol.length);
+        let raw = boolean(self, other, op, tol.length);
+        // stopped mid-way: a partial body the fallible caller drops, no repair passes on it
+        if crate::cancel::requested() {
+            return raw;
+        }
+        let (out, odd) = raw.welded_counted(tol.length);
         // the planar path splits in floats: where small faces meet at a grazing angle a split
         // point can land just over tol off its edge and leave an open sliver; the exact mesh
         // path then gives the result, checked like the operands. The weld's own edge count
@@ -973,6 +978,10 @@ impl Bsp {
     fn build(&mut self, root: usize, polys: Vec<Poly>) {
         let mut stack = vec![(root, polys)];
         while let Some((i, ps)) = stack.pop() {
+            // a stopped build leaves the tree partial: the caller checks `cancel::requested`
+            if crate::cancel::requested() {
+                return;
+            }
             if ps.is_empty() {
                 continue;
             }
@@ -1019,6 +1028,9 @@ impl Bsp {
         let mut out = vec![];
         let mut stack = vec![(0usize, polys)];
         while let Some((i, ps)) = stack.pop() {
+            if crate::cancel::requested() {
+                break;
+            }
             let node = &self.nodes[i];
             let Some(plane) = node.plane else {
                 out.extend(ps);

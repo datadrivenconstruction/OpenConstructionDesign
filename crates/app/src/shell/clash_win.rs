@@ -78,6 +78,7 @@ struct Job {
     /// Model revision at start: a result for a different model is not merged.
     rev: u64,
     test: String,
+    started: web_time::Instant,
 }
 
 pub struct ClashWin {
@@ -153,6 +154,31 @@ impl Default for ClashWin {
 }
 
 impl ClashWin {
+    /// The running check for the status bar; its window draws the details.
+    pub fn task_view(&self) -> Option<crate::jobs::JobView> {
+        let j = self.job.as_ref()?;
+        let (d, n) = (j.done.0.load(Relaxed) as u64, j.done.1.load(Relaxed) as u64);
+        Some(crate::jobs::JobView {
+            title: "clash.title",
+            stage: "clash.running",
+            stages: &["clash.running"],
+            fraction: if n > 0 { d as f32 / n as f32 } else { 0.0 },
+            indeterminate: n == 0,
+            elapsed: j.started.elapsed().as_secs_f64(),
+            counts: (d, n),
+            cancelling: j.cancel.load(Relaxed),
+            cancellable: true,
+            ..Default::default()
+        })
+    }
+
+    /// Stops the running check; its result is dropped when it arrives.
+    pub fn cancel_job(&mut self) {
+        if let Some(j) = &self.job {
+            j.cancel.store(true, Relaxed);
+        }
+    }
+
     /// Takes a text the user edited (it differs from the last absorbed one) into the metre
     /// truth; a text that does not parse leaves the truth as it was.
     fn absorb(&mut self, u: Units, mark: units::DecimalMark) {
@@ -480,6 +506,7 @@ impl EditorApp {
             cancel,
             rev: self.ed.revision,
             test,
+            started: web_time::Instant::now(),
         });
         w.msg.clear();
     }
@@ -837,12 +864,20 @@ impl EditorApp {
                             (t("clash.set_b"), &mut w.b)
                         };
                         ui.label(RichText::new(title).strong());
-                        // one grid shared by both sets: columns line up row by row
-                        let colw = ((ui.available_width() - ui.spacing().item_spacing.x * 2.0)
-                            / 3.0)
-                            .max(0.0);
+                        // one grid shared by both sets: columns line up row by row. Up to three
+                        // columns, as many as the widest name fits whole (larger type folds)
+                        let names: Vec<String> = std::iter::once(t("clash_list.all"))
+                            .chain(CLASH_CATS.iter().map(|k| t(&format!("clash.cat.{k}"))))
+                            .collect();
+                        let need = names
+                            .iter()
+                            .map(|n| widgets::checkbox_width(ui, th, n))
+                            .fold(0.0f32, f32::max);
+                        let (room, gap) = (ui.available_width(), ui.spacing().item_spacing.x);
+                        let ncol = (((room + gap) / (need + gap)).floor() as usize).clamp(1, 3);
+                        let colw = ((room - gap * (ncol - 1) as f32) / ncol as f32).max(0.0);
                         egui::Grid::new(("clash-cats", i))
-                            .num_columns(3)
+                            .num_columns(ncol)
                             .min_col_width(colw)
                             .show(ui, |ui| {
                                 let all = s.cats.iter().all(|c| *c);
@@ -853,7 +888,7 @@ impl EditorApp {
                                     th,
                                     &mut v,
                                     any && !all,
-                                    &t("clash_list.all"),
+                                    &names[0],
                                 )
                                 .changed()
                                 {
@@ -862,9 +897,9 @@ impl EditorApp {
                                 for (n, (k, on)) in
                                     CLASH_CATS.iter().zip(s.cats.iter_mut()).enumerate()
                                 {
-                                    widgets::checkbox(ui, th, on, &t(&format!("clash.cat.{k}")));
-                                    // "All" fills the first cell, so rows break after cells 2, 5, 8
-                                    if n % 3 == 1 {
+                                    widgets::checkbox(ui, th, on, &names[n + 1]);
+                                    // "All" fills the first cell: category n is cell n + 1
+                                    if (n + 2) % ncol == 0 {
                                         ui.end_row();
                                     }
                                 }
@@ -883,8 +918,9 @@ impl EditorApp {
                             {
                                 s.level = idx.checked_sub(1).and_then(|p| levels.get(p)).map(|l| l.0);
                             }
-                            widgets::checkbox(ui, th, &mut s.selected, &t("clash_list.only_selected"));
                         });
+                        // a line of its own: beside the level list larger type cut it
+                        widgets::checkbox(ui, th, &mut s.selected, &t("clash_list.only_selected"));
                     }
                 });
                 ui.add_space(th.d().gap);

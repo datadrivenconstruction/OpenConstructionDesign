@@ -16,6 +16,7 @@
   "api.cmd.join_elements": "Join, unjoin or switch geometry joins",
   "api.cmd.place_footings": "Place a footing under every column of a level",
   "api.cmd.create_terrain": "Create a terrain from survey points or a sloped plane",
+  "api.cmd.set_material": "Set how a material looks in 3D",
   "api.cmd.script_recipes": "Read the script building blocks and recipes of freeform structures",
   "api.cmd.generate_block": "Plan a block of buildings on plots with shared site rules",
   "api.cmd.measure_save": "Save a measurement into a view",

@@ -463,10 +463,15 @@ pub(crate) fn par_map<T: Sync, R: Send>(items: &[T], f: impl Fn(&T) -> R + Sync)
     }
     let chunk = items.len().div_ceil(n);
     let f = &f;
+    // workers see the caller's cancel token (it is per thread)
+    let tok = crate::cancel::current();
+    let tok = tok.as_ref();
     std::thread::scope(|sc| {
         let hs: Vec<_> = items
             .chunks(chunk)
-            .map(|c| sc.spawn(move || c.iter().map(f).collect::<Vec<R>>()))
+            .map(|c| {
+                sc.spawn(move || crate::cancel::adopt(tok, || c.iter().map(f).collect::<Vec<R>>()))
+            })
             .collect();
         // A worker-thread panic is a panic of f; a sequential pass would raise the same one.
         hs.into_iter()

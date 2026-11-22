@@ -272,6 +272,25 @@ fn cache_get(key: &str) -> Option<Body> {
     Some(b)
 }
 
+/// Frozen histories by the history they were frozen from (JSON), so a history frozen on a
+/// worker is not frozen again when the model operation writes it.
+static FROZEN_CACHE: std::sync::Mutex<Vec<(String, Form)>> = std::sync::Mutex::new(Vec::new());
+
+fn frozen_get(key: &str) -> Option<Form> {
+    let c = FROZEN_CACHE.lock().ok()?;
+    c.iter().find(|e| e.0 == key).map(|e| e.1.clone())
+}
+
+fn frozen_put(key: String, f: &Form) {
+    if let Ok(mut c) = FROZEN_CACHE.lock() {
+        c.retain(|e| e.0 != key);
+        if c.len() >= EVAL_CACHE_CAP {
+            c.remove(0);
+        }
+        c.push((key, f.clone()));
+    }
+}
+
 fn cache_put(key: String, b: &Body) {
     if let Ok(mut c) = EVAL_CACHE.lock() {
         c.retain(|e| e.0 != key);
@@ -305,15 +324,37 @@ impl Form {
     /// History with the numbers of new faces recorded (this is how it is saved: an edit lower in the
     /// history does not renumber faces above it).
     pub fn frozen(&self) -> Result<Form, Error> {
+        let key = self.to_json().to_string();
+        if let Some(f) = frozen_get(&key) {
+            // the solid of a cached history is still in the body cache (same capacity, used
+            // together); after an eviction `eval` recomputes it
+            return Ok(f);
+        }
         let mut f = self.clone();
         let b = f.eval_checked()?;
         cache_put(f.to_json().to_string(), &b);
+        frozen_put(key, &f);
         Ok(f)
+    }
+
+    /// What `add_mass` (`old` = `None`) and `update_mass` do to a new history before writing it:
+    /// inherit the face numbers of `old`, then freeze. Pure, so it can run on a worker under a
+    /// cancel token; the result warms the caches the model operation then reads.
+    pub fn prepared(&self, old: Option<&Form>) -> Result<Form, Error> {
+        let mut f = self.clone();
+        if let Some(o) = old {
+            f.inherit(o);
+        }
+        f.frozen()
     }
 
     fn eval_checked(&mut self) -> Result<Body, Error> {
         let mut next = 1;
         let b = self.eval_at(&mut next)?;
+        // any step may have left a kernel loop early: the result is not cached or returned
+        if ddc_geom::cancel::requested() {
+            return Err(Error::Cancelled);
+        }
         if b.is_empty() {
             return invalid("form is empty");
         }
@@ -489,7 +530,14 @@ impl Form {
     fn eval_at(&mut self, next: &mut u32) -> Result<Body, Error> {
         let kind = self.kind();
         let ge = move |e: gm::MassError| Error::Invalid(format!("{kind}: {e}"));
+        if ddc_geom::cancel::requested() {
+            return Err(Error::Cancelled);
+        }
         let prim = |b: Result<Body, gm::MassError>, next: &mut u32| -> Result<Body, Error> {
+            // a stopped kernel loop returns a partial body: never let it out
+            if ddc_geom::cancel::requested() {
+                return Err(Error::Cancelled);
+            }
             let op = *next;
             *next += 1;
             Ok(b.map_err(ge)?.tagged(op))
@@ -540,6 +588,9 @@ impl Form {
                 let b = b.eval_at(next)?;
                 *next += 1;
                 let (out, path, _) = ddc_geom::csg_check::routed_boolean(&a, &b, *op, TOL);
+                if ddc_geom::cancel::requested() {
+                    return Err(Error::Cancelled);
+                }
                 if path == ddc_geom::csg_check::BoolPath::Planar {
                     PLANAR_BOOLS.with(|c| c.set(c.get() + 1));
                 }
@@ -1115,10 +1166,7 @@ fn world(db: &Connection, s: &MassSpec) -> Result<Body, Error> {
 /// the solid is validated.
 fn prepare(db: &Connection, s: &MassSpec, old: Option<&Form>) -> Result<MassSpec, Error> {
     let mut s = s.clone();
-    if let Some(o) = old {
-        s.form.inherit(o);
-    }
-    s.form = s.form.frozen()?;
+    s.form = s.form.prepared(old)?;
     elev(db, s.level)?;
     Ok(s)
 }

@@ -47,6 +47,11 @@ const KERNEL_GRID: usize = 24;
 /// Pull of a panel corner back to the surface while planarising (the model's value).
 /// 0.25 left corners 0.0117 m off at 0.9 x 1.1 m panels; 0.3 trades gap for surface fit.
 const STICK: f64 = 0.3;
+/// Turn of the outline, degrees, past which a corner starts a sector of its own.
+const SHARP_TURN: f64 = 20.0;
+/// Least cosine of the lean of the blended normal off an edge's own normal: the stand-off
+/// grows by at most its inverse at a corner.
+const MITER_MIN: f64 = 0.5;
 /// Sample grid per patch for the curvature, the clearance and the seams.
 const CURV_GRID: usize = 5;
 const SAMPLE_GRID: usize = 7;
@@ -254,6 +259,13 @@ impl Ring {
         (lerp(self.pts[i], self.pts[j]), nn, self.kap[i] + (self.kap[j] - self.kap[i]) * t)
     }
 
+    /// Outward unit normal of the outline edge at arc length `s`.
+    fn edge_normal(&self, s: f64) -> P {
+        let n = self.pts.len();
+        let s = s.rem_euclid(self.len);
+        self.en[(self.cum.partition_point(|&c| c <= s).max(1) - 1).min(n - 1)]
+    }
+
     fn sees_all(&self, c: P) -> bool {
         let n = self.pts.len();
         (0..n).all(|i| cross(sub(self.pts[i], c), sub(self.pts[(i + 1) % n], c)) > 1e-9)
@@ -363,7 +375,8 @@ impl Form {
     /// Point of the skin; `back` moves it that far inwards, along the normal.
     fn skin(&self, s: f64, t: f64, back: f64) -> P3 {
         let (p, n, _) = self.ring.at(s);
-        let o = self.offset(s, t) - back;
+        // the stand-off is kept square to the slab edge: by a corner the blended normal leans
+        let o = self.offset(s, t) / dot(n, self.ring.edge_normal(s)).max(MITER_MIN) - back;
         [p.0 + n.0 * o, p.1 + n.1 * o, self.zg + t * (self.top(s) - self.zg)]
     }
     /// Plan point of the eaves: the outer edge of the roof.
@@ -398,6 +411,38 @@ fn plan(len: f64, r_mean: f64, r_in: f64) -> (usize, usize) {
         }
         w *= 1.25;
     }
+}
+
+/// Arc lengths where the `k` sectors start, and the end of the last. Every sharp corner of the
+/// outline starts a sector, so no patch bends round one (its cubic sections would cut inside
+/// the corner); the sectors between share out each span by length. Without sharp corners, or
+/// with more than `k`, the sectors are even from the east-most corner.
+fn sector_bounds(r: &Ring, k: usize) -> Vec<f64> {
+    let n = r.pts.len();
+    let even: Vec<f64> = (0..=k).map(|a| r.len * a as f64 / k as f64).collect();
+    let sharp: Vec<f64> = (0..n)
+        .filter(|&i| {
+            let (a, b) = (sub(r.pts[i], r.pts[(i + n - 1) % n]), sub(r.pts[(i + 1) % n], r.pts[i]));
+            cross(a, b).atan2(dot(a, b)).abs() > SHARP_TURN.to_radians()
+        })
+        .map(|i| r.cum[i])
+        .collect();
+    if sharp.is_empty() || sharp.len() > k {
+        return even;
+    }
+    let spans: Vec<f64> = (0..sharp.len()).map(|j| sharp.get(j + 1).copied().unwrap_or(sharp[0] + r.len) - sharp[j]).collect();
+    let w = r.len / k as f64;
+    let mut m: Vec<usize> = spans.iter().map(|s| ((s / w).floor() as usize).max(1)).collect();
+    if m.iter().sum::<usize>() > k {
+        return even;
+    }
+    while m.iter().sum::<usize>() < k {
+        let j = (0..m.len()).max_by(|&a, &b| (spans[a] / m[a] as f64).total_cmp(&(spans[b] / m[b] as f64))).unwrap_or(0);
+        m[j] += 1;
+    }
+    let mut out: Vec<f64> = sharp.iter().zip(&spans).zip(&m).flat_map(|((&s0, &sp), &mj)| (0..mj).map(move |q| s0 + sp * q as f64 / mj as f64)).collect();
+    out.push(sharp[0] + r.len);
+    out
 }
 
 fn sections(f: impl Fn(f64) -> P3, s0: f64, ds: f64) -> Vec<P3> {
@@ -608,10 +653,10 @@ pub fn envelope(outer: &[P], zg: f64, h: f64, plant: &[(P, f64)]) -> Result<GShe
         .map(|(xy, z)| zg + h + z + want - roof_z_at(&f, *xy))
         .fold(0.0, f64::max);
     f.z0 += lift;
-    let ds = f.ring.len / k as f64;
+    let bounds = sector_bounds(&f.ring, k);
     let mut skin = vec![];
     for a in 0..k {
-        let s0 = a as f64 * ds;
+        let (s0, ds) = (bounds[a], bounds[a + 1] - bounds[a]);
         let secs = (0..SKIN_ROWS)
             .map(|i| {
                 let t = i as f64 / (SKIN_ROWS - 1) as f64;
@@ -623,7 +668,7 @@ pub fn envelope(outer: &[P], zg: f64, h: f64, plant: &[(P, f64)]) -> Result<GShe
     let mut roof = vec![];
     for b in 0..m {
         for a in 0..k {
-            let s0 = a as f64 * ds;
+            let (s0, ds) = (bounds[a], bounds[a + 1] - bounds[a]);
             let secs = (0..ROOF_ROWS)
                 .map(|i| {
                     let rho = (b as f64 + i as f64 / (ROOF_ROWS - 1) as f64) / m as f64;
@@ -638,7 +683,7 @@ pub fn envelope(outer: &[P], zg: f64, h: f64, plant: &[(P, f64)]) -> Result<GShe
     let mut skin_ribs = vec![];
     let mut roof_ribs = vec![];
     for a in 0..k {
-        let s = a as f64 * ds;
+        let s = bounds[a];
         skin_ribs.push(
             (0..RIB_SKIN_POINTS).map(|i| f.skin(s, i as f64 / (RIB_SKIN_POINTS - 1) as f64, back)).collect(),
         );

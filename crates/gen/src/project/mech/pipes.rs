@@ -664,12 +664,13 @@ fn fittings(pipes: &mut [Pipe], hp: bool, out: &mut Vec<PFit>) {
         pipes[i].fittings = loss;
     }
     for pi in 0..pipes.len() {
-        let ks = kids[pi].clone();
-        if ks.is_empty() {
-            continue;
-        }
+        // a pipe cut down to one point has no direction to turn from or into
+        let ks: Vec<usize> = kids[pi].iter().copied().filter(|&c| pipes[c].points.len() >= 2).collect();
         let pr = pipes[pi].clone();
         let m = pr.points.len();
+        if ks.is_empty() || m < 2 {
+            continue;
+        }
         let din = unit(pr.points[m - 2], pr.points[m - 1]);
         let start = |c: &Pipe| unit(c.points[0], c.points[1]);
         let rho = water_rho(slot_t(pr.slot, hp));

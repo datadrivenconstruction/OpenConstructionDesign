@@ -73,6 +73,29 @@ fn surface_uv(p: vec3<f32>, n: vec3<f32>) -> vec2<f32> {
     return p.xz;
 }
 
+// the axis `surface_uv` takes as u (k = 0) or v (k = 1)
+fn surface_axis(n: vec3<f32>, k: u32) -> vec3<f32> {
+    let a = abs(n);
+    if (a.z >= a.x && a.z >= a.y) { return select(vec3<f32>(1.0, 0.0, 0.0), vec3<f32>(0.0, 1.0, 0.0), k == 1u); }
+    if (a.x >= a.y) { return select(vec3<f32>(0.0, 1.0, 0.0), vec3<f32>(0.0, 0.0, 1.0), k == 1u); }
+    return select(vec3<f32>(1.0, 0.0, 0.0), vec3<f32>(0.0, 0.0, 1.0), k == 1u);
+}
+
+// element frame vector back to world (inverse of to_frame)
+fn from_frame(v: vec3<f32>, f: Frame) -> vec3<f32> {
+    return vec3<f32>(f.c * v.x - f.s * v.y, f.s * v.x + f.c * v.y, v.z);
+}
+
+// table w: roughness + 2 * metallic eighths (`pack_surface` in texture.rs)
+fn tex_surface(w: f32) -> vec2<f32> {
+    let m = floor(w * 0.5);
+    return vec2<f32>(w - 2.0 * m, m / 8.0);
+}
+
+fn luma(c: vec3<f32>) -> f32 {
+    return dot(c, vec3<f32>(0.2126, 0.7152, 0.0722));
+}
+
 // x: brightness variation, y: roughness
 fn surface(tag: u32, uv: vec2<f32>) -> vec2<f32> {
     let fine = vnoise(uv * 24.0);
@@ -163,6 +186,7 @@ fn fs_real(i: VOut) -> @location(0) vec4<f32> {
     let s = surface(tag, surface_uv(i.world, n));
     let tone = mix(1.0, s.x, detail);
     var rough = s.y;
+    var metal = 0.0;
     var base = palette(tag) * tone;
     // image texture: world-metre box projection, flat colour when switched off
     let layer = tex_layer(i.tag);
@@ -186,7 +210,19 @@ fn fs_real(i: VOut) -> @location(0) vec4<f32> {
         let gx = rot * surface_uv(qx, nw) * par.x;
         let gy = rot * surface_uv(qy, nw) * par.x;
         base = textureSampleGrad(tex_arr, tex_smp, uv, k, gx, gy).rgb;
-        rough = par.w;
+        let sf = tex_surface(par.w);
+        rough = sf.x;
+        metal = sf.y;
+        // relief from the image: brightness slope one texel across, as a normal tilt along
+        // the projection axes; fades with distance like the other detail
+        let e = 1.0 / 256.0;
+        let h0 = luma(base);
+        let hu = luma(textureSampleGrad(tex_arr, tex_smp, uv + vec2<f32>(e, 0.0), k, gx, gy).rgb);
+        let hv = luma(textureSampleGrad(tex_arr, tex_smp, uv + vec2<f32>(0.0, e), k, gx, gy).rgb);
+        let g = transpose(rot) * vec2<f32>(hu - h0, hv - h0);
+        var tilt = g.x * surface_axis(nw, 0u) + g.y * surface_axis(nw, 1u);
+        if (fr.on) { tilt = from_frame(tilt, fr); }
+        n = normalize(n - tilt * 3.0 * detail);
     }
 
     let l = normalize(-u.light_dir.xyz);
@@ -197,16 +233,19 @@ fn fs_real(i: VOut) -> @location(0) vec4<f32> {
     let bounce = vec3<f32>(0.42, 0.39, 0.35);
     let hemi = mix(bounce, sky, n.z * 0.5 + 0.5);
     let sun_c = vec3<f32>(1.0, 0.95, 0.86) * 1.15;
-    var c = base * (hemi * 0.62 * ao + sun_c * sun);
+    // a metal has little diffuse light; its highlight and reflection take its own colour
+    var c = base * (hemi * 0.62 * ao + sun_c * sun) * (1.0 - 0.6 * metal);
 
     // highlight and Fresnel sky reflection, both by roughness
     let h = normalize(l + v);
     let power = mix(160.0, 12.0, rough);
-    c += sun_c * pow(max(dot(n, h), 0.0), power) * sun * (1.0 - rough) * 0.6;
+    let spec_c = mix(vec3<f32>(1.0), base * 1.6, metal);
+    c += sun_c * spec_c * pow(max(dot(n, h), 0.0), power) * sun * (1.0 - rough) * 0.6;
     let fres = pow(1.0 - clamp(dot(n, v), 0.0, 1.0), 5.0);
     let r = reflect(-v, n);
-    let refl = mix(bounce, sky, clamp(r.z * 0.5 + 0.5, 0.0, 1.0));
-    c = mix(c, refl * ao, (0.04 + 0.96 * fres) * (1.0 - rough) * 0.6);
+    let refl = mix(bounce, sky, clamp(r.z * 0.5 + 0.5, 0.0, 1.0)) * spec_c;
+    let f0 = mix(0.04, 0.6, metal);
+    c = mix(c, refl * ao, (f0 + (1.0 - f0) * fres) * (1.0 - rough) * 0.6);
     // filmic curve: keeps highlights from clipping (published ACES fit, Narkowicz 2015)
     c = c * (2.51 * c + vec3<f32>(0.03)) / (c * (2.43 * c + vec3<f32>(0.59)) + vec3<f32>(0.14));
     return vec4<f32>(mark(c, n, to_eye, selected, hovered, i.elem), 1.0);

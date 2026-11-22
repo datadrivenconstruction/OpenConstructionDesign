@@ -511,6 +511,8 @@ fn main() -> Result<(), String> {
                 let wake = cc.egui_ctx.clone();
                 ddc_render::perf::set_waker(move || wake.request_repaint());
                 let mut app = EditorApp::new(ed, Some(rs), d2);
+                // the interactive window runs heavy edits and view rebuilds on workers
+                app.ed.bg = true;
                 app.reveal_motion = reveal_motion;
                 app.prefs = ddc_app::prefs::Prefs::load();
                 app.ed.thin_pref = app.prefs.thin_lines;

@@ -724,6 +724,18 @@ fn place_footings() -> Schema {
     obj(vec![("title", title()), ("why", why()), ("level", level_ref())])
 }
 
+fn set_material() -> Schema {
+    obj(vec![
+        ("title", title()),
+        ("why", why()),
+        ("name", desc("Material name; a new name becomes a project material", str_max(80))),
+        ("look", opt(desc("Library class from list_materials.library, e.g. steel, concrete, timber, glass, brick, render, grass", str_max(40)))),
+        ("color", opt(desc("Base colour #RRGGBB; overrides the class colour", str_max(7)))),
+        ("texture", opt(enum_(&["brick", "concrete", "wood", "tile", "metal", "glass", "grass"]))),
+        ("tile", opt(desc("Texture repeat in metres; default: the class tile", num()))),
+    ])
+}
+
 fn create_terrain() -> Schema {
     let xy = || arr_max(num(), 2);
     obj(vec![
@@ -1831,7 +1843,7 @@ fn family_draft() -> Schema {
 static CATALOG: &[ToolSpec] = &[
     read("get_context", "Current view, level, units, selection, model totals and the generated projects with their specs.", no_args),
     read("list_levels", "All levels with ids and elevations.", no_args),
-    read("list_materials", "Project materials: name, color, hatch, density and how many element rows use each. Use these exact names in layers and materials; an unknown name is flagged on the plan.", no_args),
+    read("list_materials", "Project materials: name, color, hatch, density, how many element rows use each and the look (library class) each shows in 3D; then the look library (class, colour, texture, roughness, metallic) and how many elements have no look. Use these exact names in layers and materials; an unknown name is flagged on the plan. A name with a class word (steel S355, glulam GL24h, concrete C30/37, asphalt) shows that class; give every element such a material, never leave it empty.", no_args),
     read("list_types", "Types, optionally of one category.", category_only),
     read("list_params", "Parameters, optionally of one category.", category_only),
     read("describe_category", "Fields accepted when creating and editing elements of a category.", describe_category),
@@ -1938,6 +1950,7 @@ static CATALOG: &[ToolSpec] = &[
     propose("delete_level", "Plan: delete a level; the last level is refused.", delete_level).plan_item().with_effect(Effect::Overwrites),
     propose("place_rooms", "Plan: a room in every closed wall region of a level that has no room yet; numbers continue the level's sequence. None free: no_effect.", place_rooms).plan_item(),
     propose("place_footings", "Plan: a concrete pad footing 1.2 x 1.2 x 0.5 m under every column of a level that has none. None free: no_effect.", place_footings).plan_item(),
+    propose("set_material", "Plan: set how a material looks in 3D: a library class (look), a colour #RRGGBB and a built-in texture with its tile in metres. A new name becomes a project material. Assign it to elements by name in layers, create_geometry parts and fields. Already so: no_effect.", set_material).plan_item().with_effect(Effect::Overwrites),
     propose("create_terrain", "Plan: a terrain (toposolid) through survey points, or a plane over an outline at a height with a slope; the answer names it as toposolid:ID. generate_project with site.terrain \"model\" then sets the building on it.", create_terrain).plan_item().at_version(2),
     propose(MEASURE_SAVE, MEASURE_SAVE_HELP, measure_save).plan_item(),
     propose(EDIT_MASS, EDIT_MASS_HELP, edit_mass).plan_item().with_effect(Effect::Overwrites),
@@ -2273,6 +2286,8 @@ mod tests {
             "join_elements",
             "edit_level",
             "delete_level",
+            // a material change replaces the look of what is there
+            "set_material",
             // a mass edit replaces the mass's form
             "edit_mass",
         ];
@@ -2417,6 +2432,7 @@ mod tests {
             "place_rooms",
             "place_footings",
             "create_terrain",
+            "set_material",
             "measure_save",
             "edit_mass",
             "mass_to_family",
@@ -2517,6 +2533,8 @@ mod tests {
         ok("get_context", json!({}));
         ok("list_types", json!({}));
         ok("list_types", json!({ "cat": "door" }));
+        ok("set_material", json!({ "title": "Steel", "name": "steel S355", "look": "steel", "color": "#8a9097", "texture": "metal", "tile": 1.0 }));
+        bad("set_material", json!({ "title": "Steel", "name": "steel S355", "texture": "marble" }));
         ok(
             "query_elements",
             json!({ "filter": "door level=3", "limit": 50 }),
@@ -2807,8 +2825,8 @@ mod tests {
         let reads = catalog().iter().filter(|s| s.access == Access::Read).count();
         let names: HashSet<_> = catalog().iter().map(|s| s.name).collect();
         assert_eq!(names.len(), catalog().len(), "duplicate tool name");
-        assert_eq!((reads, catalog().len() - reads), (56, 62));
-        assert_eq!(catalog().len(), 118);
+        assert_eq!((reads, catalog().len() - reads), (56, 63));
+        assert_eq!(catalog().len(), 119);
     }
 
     #[test]

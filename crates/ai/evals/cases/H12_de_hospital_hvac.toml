@@ -105,3 +105,5 @@ new_max = 0
 [[oracle.geom]]
 kind = "terminals_fed"
 share_min = 0.95
+[[oracle.geom]]
+kind = "materials"

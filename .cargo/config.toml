@@ -2,8 +2,19 @@
 [target.x86_64-pc-windows-msvc]
 linker = "rust-lld.exe"
 
+# No debuginfo in dev/test: no PDB per test binary, so links are far smaller.
+# debug-assertions and overflow-checks stay on, so cfg!(debug_assertions) budgets are unchanged.
 [profile.dev]
-debug = "line-tables-only"
+debug = false
 
+# Dependencies change rarely; optimised once, they make every test run faster.
 [profile.dev.package."*"]
 debug = false
+opt-level = 2
+
+# Hot geometry and generator code; opt-level 1 keeps their rebuilds cheap.
+[profile.dev.package.ddc-geom]
+opt-level = 1
+
+[profile.dev.package.ddc-gen]
+opt-level = 1

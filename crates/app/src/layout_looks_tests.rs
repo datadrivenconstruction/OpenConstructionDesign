@@ -309,8 +309,12 @@ fn dialogs(lang: Lang) {
                     repeat: false,
                     modifiers: egui::Modifiers::NONE,
                 };
-                sh.pass(vec![esc(true), esc(false)]);
-                sh.settle();
+                // the first Esc leaves a focused field (the finder types at once), the second
+                // closes: an open window would be part of the next dialog's blank app
+                for _ in 0..2 {
+                    sh.pass(vec![esc(true), esc(false)]);
+                    sh.settle();
+                }
             }
         }
         all

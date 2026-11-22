@@ -328,6 +328,11 @@ pub struct Editor {
     pub topo: crate::topo::State,
     /// Structural outlines of the level (schema 26) for picking in plan.
     pub struct_fp: structx::StructFp,
+    /// The running heavy edit: computed on a worker, applied here as one undo step.
+    pub heavy: Option<crate::heavy::Heavy>,
+    /// Heavy edits run on a worker; off (browser build, assistant, headless tests) they run in
+    /// place through the same compute and apply code. The desktop shell turns it on.
+    pub bg: bool,
     undo: Vec<Cmd>,
     redo: Vec<Cmd>,
     /// Entry id of each `undo` / `redo` step, index for index: the `pushes` count that made it.
@@ -470,6 +475,8 @@ impl Editor {
             big: Default::default(),
             topo: Default::default(),
             struct_fp: Default::default(),
+            heavy: None,
+            bg: false,
             undo: vec![],
             redo: vec![],
             undo_ids: vec![],
@@ -2251,7 +2258,7 @@ impl Editor {
                 });
                 match f.get(l).copied().flatten() {
                     Some(c) => ddc_render::tag_rgb(c, false),
-                    None => t,
+                    None => texl.wall_look(wt, l),
                 }
             };
             // sloped/stepped top: the body's upper vertices sit on the polyline

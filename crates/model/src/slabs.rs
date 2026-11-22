@@ -276,7 +276,7 @@ impl Model {
             for (pos, l) in layers.iter().enumerate() {
                 db.execute(
                     "INSERT INTO slab_type_layer VALUES (?1,?2,?3,?4)",
-                    params![id, pos as i64, l.material, l.thickness],
+                    params![id, pos as i64, crate::material_look::assign("slab", &l.material, ""), l.thickness],
                 )?;
             }
             let inv = Inv::default()

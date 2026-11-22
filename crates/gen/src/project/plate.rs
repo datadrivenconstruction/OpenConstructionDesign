@@ -8,7 +8,7 @@
 //! neighbouring rooms share exact vertices and every room edge lies on a wall.
 
 use super::arrange::{Arrangement, P};
-use super::build::{fit_stair, lift_inset, lift_plan, lift_room, lift_shaft, stair_def};
+use super::build::{bank_room, bank_rows, facing_depth, fit_stair, lift_inset, lift_row_full, lift_shaft, stair_def};
 use super::footprint::{self, Region};
 use super::nav::area;
 use super::offset::{self, RingBand};
@@ -22,13 +22,17 @@ use ddc_geom::{v2, V2};
 
 /// Clearance of a cut from a corner and from another cut of the same loop.
 const MARGIN: f64 = 0.3;
+/// How far short of its closing depth an inset is probed: at exactly half a plate's width the
+/// offset is empty in floating point although the plate holds it, m.
+const CLOSE: f64 = 1e-3;
+/// Step by which the room bands of a thin plate narrow towards the rule's least depth, m.
+const NARROW_STEP: f64 = 0.1;
 /// Wall a room keeps on each side of a corner of the band: a window or a door with clearances.
 const CORNER_RUN: f64 = 1.6;
 /// A turn of the outline sharper than this is a corner, gentler ones are facets of a curve.
 const CURVE_TURN: f64 = 0.5;
 /// How far a chord of an inner band line may stand off the facets of a curve.
 const CHORD_SAG: f64 = 0.15;
-const THIN_TOL: f64 = 1e-3;
 /// Narrowest room along the facade at full band depth.
 const MIN_ROOM_W: f64 = 2.0;
 /// Spare facade shorter than this grows the room before it.
@@ -45,6 +49,23 @@ const WIN_GAP: f64 = 0.6;
 const MAX_WIN_W: f64 = 3.0;
 const NARROW_CLEAR: f64 = 0.2;
 const DOOR_CLEAR: f64 = 0.15;
+
+/// The door of a room of `kind`: its type's width, at least the clear passage the exit and
+/// access rules ask plus the leaf the frame takes off.
+fn door_width(kind: RoomKind) -> f64 {
+    let ty: f64 = match kind {
+        RoomKind::Bath | RoomKind::Wc => 0.8,
+        RoomKind::Stair | RoomKind::Lift => 1.0,
+        _ => 0.9,
+    };
+    let clear = rule("opening.clear_exit").max(rule("opening.clear_access"));
+    ty.max(clear + rule("opening.leaf_loss"))
+}
+
+/// Corridor run a room keeps for its door: the widest door of the plan and its jambs.
+fn door_run() -> f64 {
+    door_width(RoomKind::Stair).max(door_width(RoomKind::Office)) + 2.0 * DOOR_CLEAR
+}
 
 fn infeasible(s: impl Into<String>) -> GenError {
     GenError::Infeasible(s.into())
@@ -107,10 +128,14 @@ struct Core {
     hole: Vec<P>,
     /// The second stair of a separated pair, and its slab hole: the core's last cell.
     stair2: Option<(GStair, Vec<P>)>,
-    /// The lift bank, its shafts a wall apart.
+    /// The lift shafts of the bank, in one row or two facing rows.
     shafts: Vec<Vec<P>>,
     /// Loop positions on the outer ring when the core stands in the band.
     band: Option<(f64, f64)>,
+    /// In the band: the loop positions where each cell starts, then where the last ends.
+    seat: Vec<f64>,
+    /// In the band: how far the facade bows out behind the core's back, which stands on a chord.
+    sag: f64,
     /// The second stair at the plate perimeter when the pair in the core would stand too close.
     end: Option<End>,
 }
@@ -129,10 +154,9 @@ fn core_at(spec: &ProjectSpec, f: Frame, d: f64, pair: bool) -> Result<Core, Gen
     let (fit, wmm) = fit_stair(spec, mm(d))?;
     let sw = (wmm as f64 / 1000.0).max(2.0);
     let mut cells = vec![(0.0, sw, RoomKind::Stair)];
-    let cars = if spec.lift { lift_plan(spec).cars.max(1) } else { 0 };
-    let (sx, sy) = lift_shaft(spec);
-    let pitch = sx + rule("core.lift_wall");
-    let lw = lift_room() as f64 / 1000.0 + pitch * f64::from(cars.max(1) - 1);
+    // the bank as the bar plans it: one row, or two facing rows when the core is deep enough
+    let (row, places) = bank_rows(spec, mm(d));
+    let lw = bank_room(spec, mm(d), 0) as f64 / 1000.0;
     if spec.lift {
         cells.push((sw, sw + lw, RoomKind::Lift));
     }
@@ -147,11 +171,16 @@ fn core_at(spec: &ProjectSpec, f: Frame, d: f64, pair: bool) -> Result<Core, Gen
         (target.1 - 0.05).max(0.0),
         (target.1 + bd + 0.05).min(d),
     );
-    let x0 = sw + (lw - sx - pitch * f64::from(cars.max(1) - 1)) / 2.0;
-    let shafts = (0..cars).map(|i| {
-        let x = x0 + pitch * f64::from(i);
-        f.rect(x, x + sx, lift_inset(), lift_inset() + sy)
-    }).collect();
+    let (sx, sy) = lift_shaft(spec);
+    let pitch = sx + rule("core.lift_wall");
+    let x0 = sw + (lw - sx - pitch * f64::from(row - 1)) / 2.0;
+    let shafts = places
+        .iter()
+        .map(|&(i, far)| {
+            let (x, y) = (x0 + pitch * f64::from(i), if far { d - lift_inset() - sy } else { lift_inset() });
+            f.rect(x, x + sx, y, y + sy)
+        })
+        .collect();
     // a separated pair: a second stair room at the far end of the core, the lifts between
     let stair2 = pair.then(|| {
         cells.push((first_w, first_w + sw, RoomKind::Stair));
@@ -166,7 +195,7 @@ fn core_at(spec: &ProjectSpec, f: Frame, d: f64, pair: bool) -> Result<Core, Gen
         (s2, h2)
     });
     let w = cells.last().map_or(sw, |c| c.1);
-    Ok(Core { f, w, d, cells, stair, hole, stair2, shafts, band: None, end: None })
+    Ok(Core { f, w, d, cells, stair, hole, stair2, shafts, band: None, seat: vec![], sag: 0.0, end: None })
 }
 
 /// Whether the core of a plate of `plate_area` m2 takes a separated pair of stairs, by
@@ -302,6 +331,172 @@ fn central(base: &Region, zs: &[Vec<Region>], w: f64, d: f64, target: P) -> Opti
     Some(if reach(&back) < reach(&f) { back } else { f })
 }
 
+/// The core in the band of the outer ring `rb` of `base`, one placement for every facade: its
+/// back on a chord between two facade points, its depth the band's less the chord's sag, so the
+/// rectangle stays inside the band on a straight, faceted or curved facade alike. The band
+/// stretch it takes runs between cut positions round the rectangle. The flattest chord wins,
+/// then the one with the most cut room on both sides: on a straight facade, the middle of the
+/// longest side. `Ok(None)` when no chord holds the core.
+fn band_seat(spec: &ProjectSpec, base: &Region, rb: &RingBand, lp: &Lp, d: f64, pair: bool) -> Result<Option<Core>, GenError> {
+    let per = rb.perimeter;
+    let f0 = Frame { o: (0.0, 0.0), u: (1.0, 0.0) };
+    let w0 = core_at(spec, f0, d, pair)?.w;
+    let mut widths: Vec<(i64, Option<f64>)> = vec![];
+    let mut width = |de: f64| {
+        let k = mm(de);
+        if let Some(&(_, w)) = widths.iter().find(|x| x.0 == k) {
+            return w;
+        }
+        let w = core_at(spec, f0, de, pair).ok().map(|c| c.w);
+        widths.push((k, w));
+        w
+    };
+    let at = |t: f64| {
+        let (e, s) = rb.locate(t);
+        rb.edges[e].at(s, 0.0)
+    };
+    // the loop position past `t0` whose facade point is `w` away
+    let chord_end = |t0: f64, w: f64| -> Option<f64> {
+        let a = at(t0);
+        if dist(at(t0 + w), a) >= w - 1e-9 {
+            return Some(t0 + w);
+        }
+        let (mut lo, mut hi) = (t0 + w, t0 + w + 0.1);
+        while dist(at(hi), a) < w {
+            lo = hi;
+            hi += 0.1;
+            if hi > t0 + per / 2.0 {
+                return None;
+            }
+        }
+        for _ in 0..50 {
+            let m = (lo + hi) / 2.0;
+            if dist(at(m), a) < w {
+                lo = m;
+            } else {
+                hi = m;
+            }
+        }
+        Some(hi)
+    };
+    // how far the facade bows out behind the chord; None where it dips inside, off the plate
+    let sag_of = |t0: f64, t1: f64, f: &Frame| -> Option<f64> {
+        let mut sag: f64 = 0.0;
+        for (e, &st) in rb.edges.iter().zip(&rb.start) {
+            for k in [-1.0, 0.0, 1.0] {
+                let t = st + k * per;
+                if t > t0 + 1e-9 && t < t1 - 1e-9 {
+                    let y = f.local(e.a).1;
+                    if y > 1e-6 {
+                        return None;
+                    }
+                    sag = sag.max(-y);
+                }
+            }
+        }
+        Some(sag)
+    };
+    let spans = &lp.spans[0];
+    let span_of = |t: f64| spans.iter().copied().find(|(a, b)| t.rem_euclid(per) >= a - 1e-9 && t.rem_euclid(per) <= b + 1e-9);
+    let ring0 = std::slice::from_ref(rb);
+    let inner = offset::inset(base, d);
+    let mut starts: Vec<f64> = spans.iter().filter(|(a, b)| b - a >= w0).map(|(a, b)| (a + b - w0) / 2.0).collect();
+    let n = (per / 0.25).ceil() as usize;
+    starts.extend((0..n).map(|i| per * i as f64 / n as f64));
+    let mut best: Option<((i64, f64), Core)> = None;
+    for t0 in starts {
+        // the core's width at the depth its chord leaves, until the chord holds it
+        let mut w = w0;
+        let mut seat = None;
+        for _ in 0..4 {
+            let Some(t1) = chord_end(t0, w) else { break };
+            let (a, b) = (at(t0), at(t1));
+            let l = dist(a, b).max(1e-9);
+            let f = Frame { o: a, u: ((b.0 - a.0) / l, (b.1 - a.1) / l) };
+            let Some(sag) = sag_of(t0, t1, &f) else { break };
+            let de = if sag <= 1e-9 { d } else { ((d - sag) * 1000.0).floor() / 1000.0 };
+            let Some(wd) = width(de) else { break };
+            if wd <= w + 1e-9 {
+                seat = Some((f, sag, de));
+                break;
+            }
+            w = wd;
+        }
+        let Some((f, sag, de)) = seat else { continue };
+        let key_sag = (sag * 100.0).round() as i64;
+        if best.as_ref().is_some_and(|b| key_sag > b.0 .0) {
+            continue;
+        }
+        let mut core = core_at(spec, f, de, pair)?;
+        // every stair and lift cell opens on the corridor: the plate past its front, half a
+        // corridor beyond the band, is the corridor's side of the inset and not another band
+        // (a chord by a re-entrant corner faces the other wing's rooms)
+        let opens = core.cells.iter().filter(|c| matches!(c.2, RoomKind::Stair | RoomKind::Lift)).all(|c| {
+            let x = (c.0 + c.1) / 2.0;
+            let p = f.at(x, de + sag + spec.corridor / 2.0);
+            in_any(&inner, p)
+        });
+        if !opens {
+            continue;
+        }
+        // the rectangle inside the plate and the band, and the band stretch round it
+        let tc = t0 + core.w / 2.0;
+        let (mut ts0, mut ts1) = (t0, t0 + core.w);
+        let steps = |l: f64| ((l / 0.25).ceil() as usize).max(1);
+        let (nw, nd) = (steps(core.w), steps(de));
+        let mut pts: Vec<(P, bool)> = vec![];
+        for i in 0..=nw {
+            let x = (core.w * i as f64 / nw as f64).clamp(1e-3, core.w - 1e-3);
+            pts.push((f.at(x, 1e-3), false));
+            pts.push((f.at(x, de - 1e-3), true));
+        }
+        for j in 0..=nd {
+            let y = (de * j as f64 / nd as f64).clamp(1e-3, de - 1e-3);
+            pts.push((f.at(1e-3, y), false));
+            pts.push((f.at(core.w - 1e-3, y), false));
+        }
+        let mut ok = true;
+        for &(p, front) in &pts {
+            let Some((_, t)) = station(ring0, p).filter(|_| offset::contains(base, p) && !(front && in_any(&inner, p))) else {
+                ok = false;
+                break;
+            };
+            let t = t + per * ((tc - t) / per).round();
+            if t < ts0 - 1e-6 {
+                ts0 = t;
+            }
+            if t > ts1 + 1e-6 {
+                ts1 = t;
+            }
+        }
+        if !ok || ts1 - ts0 > core.w + 2.0 * d {
+            continue;
+        }
+        let (Some(s0), Some(s1)) = (lp.prev_ok(Strip::Full, ts0, &[]), lp.next_ok(Strip::Full, ts1, &[])) else { continue };
+        let (Some(a0), Some(a1)) = (span_of(s0), span_of(s1)) else { continue };
+        if ts0 - s0 > d || s1 - ts1 > d {
+            continue;
+        }
+        let room = (s0.rem_euclid(per) - a0.0).min(a1.1 - s1.rem_euclid(per));
+        if best.as_ref().is_some_and(|b| key_sag == b.0 .0 && room < b.0 .1) {
+            continue;
+        }
+        // where each inner cell wall meets the band, as a loop position
+        let mut seat = vec![s0];
+        for cl in &core.cells[1..] {
+            let p = f.at(cl.0, de / 2.0);
+            let t = station(ring0, p).map_or(t0 + cl.0, |(_, t)| t + per * ((tc - t) / per).round());
+            seat.push(if (t - (t0 + cl.0)).abs() < 1e-6 { t0 + cl.0 } else { t.clamp(s0, s1) });
+        }
+        seat.push(s1);
+        core.band = Some((s0, s1));
+        core.seat = seat;
+        core.sag = sag;
+        best = Some(((key_sag, room), core));
+    }
+    Ok(best.map(|b| b.1))
+}
+
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 enum Strip {
     Full,
@@ -346,12 +541,18 @@ impl<'a> Lp<'a> {
         };
         let spans = depth.map(|(h0, h1)| {
             let mut v = vec![];
+            // a room round a corner meets the corridor only past the corner's full depth: a
+            // cut there keeps a door's run (widest door and its jambs) on the corridor side,
+            // where the edge is long enough for a room as well; short facets keep the margin
+            let corr = h1 >= d - 1e-9;
+            let run = door_run();
             for (i, (e, st)) in rb.edges.iter().zip(&rb.start).enumerate() {
                 let pieces = e.full(h0, h1);
                 let last = pieces.len().saturating_sub(1);
                 for (j, (a, b)) in pieces.into_iter().enumerate() {
+                    let base = if corr && b - a >= 2.0 * run + MIN_ROOM_W { run } else { MARGIN };
                     // a room wrapping a corner keeps a run of wall past it for its door or window
-                    let m = |at: usize, on: bool| if on && corner(at) { CORNER_RUN } else { MARGIN };
+                    let m = |at: usize, on: bool| if on && corner(at) { base.max(CORNER_RUN) } else { base };
                     let (a, b) = (a + m(i, j == 0), b - m((i + 1) % n, j == last));
                     if b >= a {
                         v.push((st + a, st + b));
@@ -754,6 +955,40 @@ impl Planner<'_> {
         out.extend(tail);
         Some(out)
     }
+
+    /// `item` placed at the first cut past `cur` where it fits (an apartment that cannot start
+    /// at an inner corner starts past it); the stretch it skips becomes spare rooms, or the
+    /// last room grows over it, as at the loop end.
+    #[allow(clippy::too_many_arguments)]
+    fn skip_to(&mut self, lp: &mut Lp, ring: usize, cur: f64, end: f64, last: Option<usize>, item: &Item) -> Option<(f64, usize)> {
+        let ru = self.spec.ru;
+        let mut s = cur;
+        for _ in 0..200 {
+            s = lp.next_ok(Strip::Full, s + MARGIN, &[])?;
+            if s > end - MIN_ROOM_W {
+                return None;
+            }
+            if s - cur < SPARE_MIN && last.is_none() {
+                continue;
+            }
+            let placed = match item {
+                Item::Entrance => {
+                    let u = public(RoomKind::Lobby, names::kind_name(RoomKind::Lobby, ru).to_string(), None);
+                    self.full(lp, ring, s, end, u, Some(ENTRANCE_W))
+                }
+                Item::Room(r) => self.full(lp, ring, s, end, public(r.kind, r.name.clone(), Some(r.area)), None),
+                Item::Flat(a) => self.flat(lp, ring, s, end, a),
+            };
+            if let Some(p) = placed {
+                self.close(lp, ring, cur, s, last).ok()?;
+                if !lp.cuts.iter().any(|c| (c - s).abs() < 1e-9) {
+                    lp.cuts.push(s);
+                }
+                return Some(p);
+            }
+        }
+        None
+    }
 }
 
 fn self_cuts_back(zones: &[Zone], ring: usize, cur: f64, stop: f64) -> Vec<f64> {
@@ -768,6 +1003,36 @@ fn self_cuts_back(zones: &[Zone], ring: usize, cur: f64, stop: f64) -> Vec<f64> 
 fn loop_start(lp: &Lp) -> Option<f64> {
     let (i, _) = lp.rb.edges.iter().enumerate().max_by(|a, b| a.1.len.total_cmp(&b.1.len))?;
     lp.next_span(Strip::Full, lp.rb.start[i])
+}
+
+/// A corner zone goes to the room that fills it best. When the next room in the queue would
+/// end where no cut may go (round a corner, past a room's width of facade), the room of the
+/// queue that leaves the least area over its own takes the zone instead; the rest keep order.
+fn corner_fill(lp: &Lp, queue: &mut std::collections::VecDeque<Item>, cur: f64, end: f64) {
+    let fit = |r: &RoomReq| -> Option<(f64, f64)> {
+        let t = lp.solve(Strip::Full, cur, r.area, end)?.max(cur + MIN_ROOM_W);
+        let ok = lp.next_ok(Strip::Full, t, &[])?;
+        (ok <= end + 1e-9).then(|| (ok - t, lp.area(Strip::Full, cur, ok) - r.area))
+    };
+    let Some(Item::Room(r0)) = queue.front() else { return };
+    let Some((jump, w0)) = fit(r0) else { return };
+    if jump < MIN_ROOM_W {
+        return;
+    }
+    let best = queue
+        .iter()
+        .enumerate()
+        .skip(1)
+        .filter_map(|(i, it)| match it {
+            Item::Room(r) => fit(r).map(|f| (i, f.1)),
+            _ => None,
+        })
+        .min_by(|a, b| a.1.total_cmp(&b.1).then(a.0.cmp(&b.0)));
+    if let Some((i, _)) = best.filter(|b| b.1 < w0 - 1e-6) {
+        if let Some(it) = queue.remove(i) {
+            queue.push_front(it);
+        }
+    }
 }
 
 fn plan_floor(
@@ -800,15 +1065,17 @@ fn plan_floor(
     }
     let mut pl = Planner { spec, plan: FloorPlan::default(), next_apt };
     let mut lps: Vec<Lp> = rbs.iter().map(|rb| Lp::new(rb, d, df)).collect();
-    let mut queue = items.into_iter().peekable();
+    let mut queue: std::collections::VecDeque<Item> = items.into();
     let es = core.and_then(|c| c.end.as_ref());
+    let rings = lps.len();
     for (ring, lp) in lps.iter_mut().enumerate() {
         let (start, end) = match (ring, core.and_then(|c| c.band.map(|b| (c, b)))) {
             (0, Some((c, (t0, t1)))) => {
-                for &(x0, x1, kind) in &c.cells {
+                for (i, &(x0, x1, kind)) in c.cells.iter().enumerate() {
+                    let (a, b) = c.seat.get(i).zip(c.seat.get(i + 1)).map_or((t0 + x0, t0 + x1), |(a, b)| (*a, *b));
                     let r = pl.plan.add(public(kind, names::kind_name(kind, ru).to_string(), None));
-                    pl.plan.zones.push(Zone { room: r, ring: 0, t0: t0 + x0, t1: t0 + x1, strip: Strip::Full });
-                    lp.cuts.extend([t0 + x0, t0 + x1]);
+                    pl.plan.zones.push(Zone { room: r, ring: 0, t0: a, t1: b, strip: Strip::Full });
+                    lp.cuts.extend([a, b]);
                 }
                 (t1, t0 + lp.p())
             }
@@ -831,7 +1098,10 @@ fn plan_floor(
         let mut last: Option<usize> = None;
         let mut tucks: Vec<Unit> = vec![];
         loop {
-            let Some(item) = queue.peek() else { break };
+            if tucks.is_empty() {
+                corner_fill(lp, &mut queue, cur, end);
+            }
+            let Some(item) = queue.front() else { break };
             let placed = match item {
                 Item::Entrance => {
                     let u = public(RoomKind::Lobby, names::kind_name(RoomKind::Lobby, ru).to_string(), None);
@@ -842,7 +1112,7 @@ fn plan_floor(
                     let narrow = lp.solve(Strip::Full, cur, r.area, end).is_some_and(|t| t - cur < MIN_ROOM_W);
                     if narrow && df >= 2.5 && d - df >= 1.2 {
                         tucks.push(u);
-                        queue.next();
+                        queue.pop_front();
                         continue;
                     }
                     if tucks.is_empty() {
@@ -882,11 +1152,18 @@ fn plan_floor(
                     pl.flat(lp, ring, cur, end, &a)
                 }
             };
+            // on the last loop a stuck item would fail the floor: it takes the facade further on
+            let placed = match placed {
+                None if tucks.is_empty() && ring + 1 == rings => {
+                    queue.front().and_then(|it| pl.skip_to(lp, ring, cur, end, last, it))
+                }
+                p => p,
+            };
             match placed {
                 Some((e, z)) => {
                     cur = e;
                     last = Some(z);
-                    queue.next();
+                    queue.pop_front();
                 }
                 None => break,
             }
@@ -901,12 +1178,21 @@ fn plan_floor(
         }
         pl.close(lp, ring, cur, end, last)?;
     }
-    if queue.peek().is_some() {
-        let left = queue.count();
+    if let Some(first) = queue.front() {
+        // the why names the first item left and the floor area the bands still had for it
+        let first = match first {
+            Item::Entrance => "the entrance".to_string(),
+            Item::Room(r) => format!("{} of {:.1} m2", r.name, r.area),
+            Item::Flat(a) => format!("apartment {} of {} rooms", a.name, a.rooms.len()),
+        };
+        let used: f64 = pl.plan.zones.iter().map(|z| lps[z.ring].area(z.strip, z.t0, z.t1)).sum();
+        let bands: f64 = lps.iter().map(|lp| lp.area(Strip::Full, 0.0, lp.p())).sum();
+        let left = queue.len();
         let facade: f64 = rbs.iter().map(|r| r.perimeter).sum();
         return Err(infeasible(format!(
             "floor {}: {left} rooms or apartments of the program do not fit along {facade:.1} m of \
-             facade: enlarge the footprint, add floors or shrink the program",
+             facade (first left: {first}; the room bands hold {bands:.0} m2, {used:.0} m2 laid out): \
+             enlarge the footprint, add floors or shrink the program",
             k + 1
         )));
     }
@@ -947,6 +1233,8 @@ struct Floor<'a> {
     rbs: &'a [RingBand],
     plan: &'a FloorPlan,
     core: Option<(&'a Core, usize)>,
+    /// A core in the band: its cells are the plan's first rooms, walled across its chord.
+    seat: Option<&'a Core>,
     stores: Vec<(Vec<P>, usize)>,
     splits: Vec<(P, P)>,
 }
@@ -976,7 +1264,15 @@ impl Floor<'_> {
                         Strip::Back => back,
                     }
             });
-            return Some(z.map_or(Lab::Lost, |z| Lab::Room(z.room)));
+            // the cell walls of a band core stand square to its chord, not to the facade
+            let room = |z: &Zone| match self.seat {
+                Some(c) if z.room < c.cells.len() => {
+                    let x = c.f.local(p).0;
+                    c.cells.iter().position(|cl| x < cl.1).unwrap_or(c.cells.len() - 1)
+                }
+                _ => z.room,
+            };
+            return Some(z.map_or(Lab::Lost, |z| Lab::Room(room(z))));
         }
         if let Some((_, r)) = self.stores.iter().find(|(ring, _)| crate::check::inside(ring, p)) {
             return Some(Lab::Room(*r));
@@ -1207,21 +1503,24 @@ fn put(l: &mut GLayout, c: &Chain, center: f64, width: f64, door: bool, win: Win
         }
     }
     along = along.clamp(crate::check::OPEN_END, len - crate::check::OPEN_END - width);
-    // the clamp may have run it onto a neighbour: take the nearest free slot, or drop it
-    along = free_slot(l, wi, along, width)?;
+    // the clamp may have run it onto a neighbour: take the nearest free slot on the chain's own
+    // stretch of the wall (the wall may run on past other rooms), or drop it
+    let (ta, tb) = (dist(w.a, c.a), dist(w.a, c.b));
+    along = free_slot(l, wi, along, width, (ta.min(tb), ta.max(tb)))?;
     let (height, sill) = if door { (DOOR_H, 0.0) } else { (win.h, win.sill) };
     l.openings.push(GOpening { wall: wi, along, door, width, height, sill, ty: None });
     Some(())
 }
 
-/// The start nearest `along` where an opening `width` wide on wall `wi` keeps the end margin
-/// and the gap to every opening already there.
-fn free_slot(l: &GLayout, wi: usize, along: f64, width: f64) -> Option<f64> {
+/// The start nearest `along` where an opening `width` wide on wall `wi` stays within `span`
+/// (positions along the wall) and keeps the end margin and the gap to every opening there.
+fn free_slot(l: &GLayout, wi: usize, along: f64, width: f64, span: (f64, f64)) -> Option<f64> {
     use crate::check::{OPEN_END, OPEN_GAP};
-    let (lo, hi) = (OPEN_END, l.walls[wi].length() - OPEN_END - width);
+    let (lo, hi) = (span.0.max(0.0) + OPEN_END, span.1.min(l.walls[wi].length()) - OPEN_END - width);
     let near: Vec<(f64, f64)> = l.openings.iter().filter(|o| o.wall == wi).map(|o| (o.along, o.along + o.width)).collect();
     let ok = |t: f64| t >= lo - 1e-9 && t <= hi + 1e-9 && near.iter().all(|&(a, b)| t + width + OPEN_GAP <= a + 1e-9 || b + OPEN_GAP <= t + 1e-9);
-    std::iter::once(along)
+    [along, along.clamp(lo, hi.max(lo))]
+        .into_iter()
         .chain(near.iter().flat_map(|&(a, b)| [b + OPEN_GAP, a - OPEN_GAP - width]))
         .filter(|&t| ok(t))
         .min_by(|a, b| (a - along).abs().total_cmp(&(b - along).abs()))
@@ -1238,16 +1537,27 @@ fn door(
     front: &dyn Fn(&Chain) -> bool,
 ) -> bool {
     let fit = |c: &&Chain| c.len() >= 0.8 + 2.0 * DOOR_CLEAR;
-    let ok: Vec<&Chain> = cs.iter().filter(|c| ys.iter().any(|&y| c.has(x, y))).collect();
-    let best = ok
-        .iter()
-        .copied()
-        .max_by(|a, b| (front(a) && fit(a)).cmp(&(front(b) && fit(b))).then(a.len().total_cmp(&b.len())));
-    match best {
-        Some(c) if c.len() >= width + 2.0 * DOOR_CLEAR => put(l, c, c.len() / 2.0, width, true, win).is_some(),
-        Some(c) if c.len() >= 0.8 + 2.0 * DOOR_CLEAR => put(l, c, c.len() / 2.0, c.len() - 2.0 * DOOR_CLEAR - 0.05, true, win).is_some(),
-        _ => false,
+    let mut ok: Vec<&Chain> = cs.iter().filter(|c| ys.iter().any(|&y| c.has(x, y))).collect();
+    ok.sort_by(|a, b| (front(b) && fit(b)).cmp(&(front(a) && fit(a))).then(b.len().total_cmp(&a.len())));
+    // the best run may be full of openings already, or not one wall: the next run hosts it
+    let mut tried = false;
+    for c in ok {
+        if tried && !front(c) {
+            break;
+        }
+        tried = true;
+        let placed = if c.len() >= width + 2.0 * DOOR_CLEAR {
+            put(l, c, c.len() / 2.0, width, true, win)
+        } else if c.len() >= 0.8 + 2.0 * DOOR_CLEAR {
+            put(l, c, c.len() / 2.0, c.len() - 2.0 * DOOR_CLEAR - 0.05, true, win)
+        } else {
+            None
+        };
+        if placed.is_some() {
+            return true;
+        }
     }
+    false
 }
 
 /// Windows on the facade runs of a habitable room by the one-eighth daylight rule.
@@ -1273,12 +1583,13 @@ fn windows(l: &mut GLayout, cs: &[Chain], x: Lab, area: f64, win: WinSize) -> bo
             let wide = ((want - glazed) / (k as f64 * win.h) / 0.05).ceil() * 0.05;
             ww = wide.min((room / 0.05).floor() * 0.05).min(MAX_WIN_W).max(ww);
         }
+        // a window the wall cannot take (a mitre, a door already there) leaves the others: the
+        // next run makes up the glazing
         for t in 0..k {
             let center = len * (2 * t + 1) as f64 / (2 * k) as f64;
-            if put(l, c, center, ww, false, win).is_none() {
-                return false;
+            if put(l, c, center, ww, false, win).is_some() {
+                glazed += ww * win.h;
             }
-            glazed += ww * win.h;
         }
     }
     if glazed > 0.0 {
@@ -1401,13 +1712,39 @@ struct Shared<'a> {
     dirs: Vec<P>,
 }
 
+/// Whether `region` holds room bands `d` deep round its facades and a corridor `c` wide
+/// inside them, in one piece.
+fn two_bands(region: &Region, d: f64, c: f64) -> bool {
+    offset::inset(region, d).len() == 1 && !offset::inset(region, d + c / 2.0 - CLOSE).is_empty()
+}
+
+/// The band depth of a plate: the brief's, or for a plate too thin for two such bands and the
+/// corridor on some floor, bands narrowed step by step down to the rule's least depth. A ring
+/// of bands lines every facade, so a thinner plate has no single-loaded form here: it is refused.
+fn plate_band(spec: &ProjectSpec, regions: &[Region]) -> Result<f64, GenError> {
+    let (d0, c) = (spec.band_depth, spec.corridor);
+    let lo = super::rules::def("depth.band").map_or(3.0, |r| r.min);
+    let holds = |d: f64| regions.iter().all(|r| two_bands(r, d, c));
+    let mut d = d0;
+    while d >= lo - 1e-9 {
+        if holds(d) {
+            return Ok(d);
+        }
+        d = ((d - NARROW_STEP) * 100.0).round() / 100.0;
+    }
+    Err(infeasible(format!(
+        "the plate is too thin for two {d0} m room bands and a {c} m corridor, and for bands narrowed \
+         to {lo} m: keep it at least {:.1} m across everywhere",
+        2.0 * lo + c
+    )))
+}
+
 fn storey(sh: &Shared, k: usize, region: &Region, slab: Vec<P>, next_apt: &mut u32) -> Result<PStorey, GenError> {
     let spec = sh.spec;
     let (d, df, c) = (sh.d, sh.df, spec.corridor);
     let fl = k + 1;
     let id = offset::inset(region, d);
-    // a plate exactly two bands and a corridor deep holds them
-    if id.len() != 1 || offset::inset(region, d + c / 2.0 - THIN_TOL).is_empty() {
+    if !two_bands(region, d, c) {
         return Err(infeasible(format!(
             "floor {fl}: the plate is too thin for two {d} m room bands and a {c} m corridor: \
              keep it at least {:.1} m across everywhere, or lower band_depth",
@@ -1515,6 +1852,12 @@ fn storey(sh: &Shared, k: usize, region: &Region, slab: Vec<P>, next_apt: &mut u
         let eb = &rbs[ring].edges[e];
         segs.push((eb.at(s, h0), eb.at(s, h1)));
     }
+    // a band core on a bowed chord: its cell walls square to the chord, facade to band edge
+    if let Some(c) = core.filter(|c| c.band.is_some() && c.sag > 0.0) {
+        for cl in &c.cells[1..] {
+            segs.push((c.f.at(cl.0, -c.sag - 0.05), c.f.at(cl.0, d)));
+        }
+    }
     if let Some(c) = central {
         ring_segs(&c.f.rect(0.0, c.w, 0.0, c.d), &mut segs);
         for cl in &c.cells[1..] {
@@ -1543,7 +1886,8 @@ fn storey(sh: &Shared, k: usize, region: &Region, slab: Vec<P>, next_apt: &mut u
             all.push(line(o, dir));
         }
         let ar = Arrangement::new(&all);
-        let fl = Floor { region, id: id.clone(), ifront: ifront.clone(), rbs: &rbs, plan: &plan, core: central.map(|c| (c, core_first)), stores: stores.clone(), splits: splits.to_vec() };
+        let seat = core.filter(|c| c.band.is_some());
+        let fl = Floor { region, id: id.clone(), ifront: ifront.clone(), rbs: &rbs, plan: &plan, core: central.map(|c| (c, core_first)), seat, stores: stores.clone(), splits: splits.to_vec() };
         let labels = ar.label(|p| fl.cls(p));
         (ar, labels)
     };
@@ -1663,11 +2007,7 @@ fn finish(
     let asked_entrance = if units.iter().any(|u| lobby(u) && u.asked.is_none()) { None } else { units.iter().position(lobby) };
     for (i, u) in units.iter().enumerate() {
         let me = Some(Lab::Room(i));
-        let width = match u.kind {
-            RoomKind::Bath | RoomKind::Wc => 0.8,
-            RoomKind::Stair | RoomKind::Lift => 1.0,
-            _ => 0.9,
-        };
+        let width = door_width(u.kind);
         let to: Vec<Option<Lab>> = match u.owner {
             PRole::Apartment(a) if u.kind != RoomKind::Hall => match hall_of(a) {
                 Some(hh) => vec![Some(Lab::Room(hh))],
@@ -1675,18 +2015,42 @@ fn finish(
             },
             _ => corr_labs.clone(),
         };
-        // stair and lift open on the core front, clear of the flights
+        // stair and lift open on the core front, clear of the flights: in the band the front is
+        // the band's inner edge, at or past the core's depth behind a bowed chord
         let front = |ch: &Chain| match core {
             Some(c) if matches!(u.kind, RoomKind::Stair | RoomKind::Lift) => {
-                (c.f.local(ch.a).1 - c.d).abs() < 1e-6 && (c.f.local(ch.b).1 - c.d).abs() < 1e-6
+                let on = |q: P| {
+                    let y = c.f.local(q).1;
+                    (y - c.d).abs() < 1e-6 || (c.band.is_some() && y > c.d && y <= c.d + c.sag + 2e-3)
+                };
+                on(ch.a) && on(ch.b)
             }
             _ => true,
         };
-        if !door(&mut l, &cs, me, &to, width, win, &front) {
+        // a public room cut off from the corridor opens onto the lobby or hall beside it, one
+        // that itself reaches the corridor or, on the ground floor, the street
+        let reaches = |j: usize| cs.iter().any(|c| corr_labs.iter().any(|&y| c.has(Some(Lab::Room(j)), y)) || (k == 0 && c.has(Some(Lab::Room(j)), None)));
+        let via: Vec<Option<Lab>> = if u.owner == PRole::Public && !matches!(u.kind, RoomKind::Stair | RoomKind::Lift) {
+            units.iter().enumerate().filter(|(j, v)| *j != i && v.owner == PRole::Public && v.kind.circulation() && reaches(*j)).map(|(j, _)| Some(Lab::Room(j))).collect()
+        } else {
+            vec![]
+        };
+        if !door(&mut l, &cs, me, &to, width, win, &front) && (via.is_empty() || !door(&mut l, &cs, me, &via, width, win, &front)) {
+            // the why names the runs the room shares with its way out against what a door takes
+            let runs: Vec<String> = cs
+                .iter()
+                .filter(|c| to.iter().chain(&via).any(|&y| c.has(me, y)))
+                .map(|c| {
+                    let walled = if wall_of(&l.walls, c.a, c.b).is_some() { "" } else { " unwalled" };
+                    format!("{:.2}{}{}", c.len(), walled, if front(c) { "" } else { " off-front" })
+                })
+                .collect();
             return Err(infeasible(format!(
-                "floor {fl}: room {} has no wall long enough for a door to its {}",
+                "floor {fl}: room {} has no wall long enough for a door to its {} (shared runs [{}] m, a door takes {:.2} m)",
                 u.name,
-                if to == corr_labs { "corridor" } else { "hall" }
+                if to == corr_labs { "corridor" } else { "hall" },
+                runs.join(", "),
+                0.8 + 2.0 * DOOR_CLEAR
             )));
         }
         if k == 0 && u.kind == RoomKind::Lobby && u.asked.is_none() && !door(&mut l, &cs, me, &[None], 1.2, win, &|_| true) {
@@ -1810,6 +2174,7 @@ fn roofs(spec: &ProjectSpec, top: &Region, dirs: &[P]) -> Vec<PRoof> {
                 edges,
                 vault: None,
                 lift: 0.0,
+                eave: None,
             }
         })
         .collect()
@@ -1820,7 +2185,7 @@ pub(super) fn build(spec: &ProjectSpec) -> Result<GProject, GenError> {
     let plate = spec.plate.as_ref().ok_or_else(|| infeasible("no footprint polygon"))?;
     let n = spec.floors as usize;
     let regions: Vec<Region> = (0..n).map(|k| plate.at(k)).collect::<Result<_, _>>().map_err(infeasible)?;
-    let d = spec.band_depth;
+    let d = plate_band(spec, &regions)?;
     let c = spec.corridor;
     let df = if spec.typology == Typology::ApartmentSection {
         let s = (d - 3.0).min(2.4);
@@ -1877,40 +2242,41 @@ pub(super) fn build(spec: &ProjectSpec) -> Result<GProject, GenError> {
             }
             None => footprint::centroid(&base.outer),
         };
-        let probe = core_at(spec, f0, d, pair_in)?;
         let zs: Vec<Vec<Region>> = regions.iter().map(|r| offset::inset(r, d + c)).collect();
-        match central(base, &zs, probe.w, probe.d, target) {
-            Some(f) => {
-                let mut core = core_at(spec, f, d, pair_in)?;
+        // a bank past one row's cars asks the interior core for the depth of two facing rows
+        // and their lobby; one deep row where the interior has no room for it
+        let facing = if lift_row_full(spec) { facing_depth(spec) as f64 / 1000.0 } else { 0.0 };
+        let mut placed = None;
+        for dc in [facing, d].into_iter().filter(|&x| x >= d) {
+            let probe = core_at(spec, f0, dc, pair_in)?;
+            if let Some(f) = central(base, &zs, probe.w, probe.d, target) {
+                placed = Some((f, dc));
+                break;
+            }
+        }
+        match placed {
+            Some((f, dc)) => {
+                let mut core = core_at(spec, f, dc, pair_in)?;
                 core.end = end;
                 Some(core)
             }
             None if plate.uniform() => {
                 let probe = core_at(spec, f0, d, pair)?;
-                // the widest straight facade of the outer ring takes the core in its band
+                // the flattest stretch of the outer facade takes the core in its band
                 let rbs = offset::bands(base, d).map_err(infeasible)?;
                 let lp = Lp::new(&rbs[0], d, df);
-                let span = lp.spans[0]
-                    .iter()
-                    .copied()
-                    .filter(|(a, b)| b - a >= probe.w)
-                    .max_by(|x, y| (x.1 - x.0).total_cmp(&(y.1 - y.0)))
-                    .ok_or_else(|| {
-                        infeasible(format!(
-                            "no straight facade holds the {:.1} m core and the interior is too small for it: \
-                             give the plate a straight side of at least {:.1} m or more depth",
-                            probe.w,
-                            probe.w + 2.0 * MARGIN + d
-                        ))
-                    })?;
-                let t0 = (span.0 + span.1 - probe.w) / 2.0;
-                let (e, s) = rbs[0].locate(t0);
-                let eb = &rbs[0].edges[e];
-                let mut core = core_at(spec, Frame { o: eb.at(s, 0.0), u: eb.u }, d, pair)?;
-                core.band = Some((t0, t0 + core.w));
+                let core = band_seat(spec, base, &rbs[0], &lp, d, pair)?.ok_or_else(|| {
+                    infeasible(format!(
+                        "no stretch of facade holds the {:.1} m core and the interior is too small for it: \
+                         give the plate a straight or gently curved side of at least {:.1} m or more depth",
+                        probe.w,
+                        probe.w + 2.0 * MARGIN + d
+                    ))
+                })?;
                 Some(core)
             }
             None => {
+                let probe = core_at(spec, f0, d, pair_in)?;
                 return Err(infeasible(format!(
                     "the core ({:.1} x {:.1} m) fits no floor's interior: with per-floor turns, set-backs or \
                      offsets the plate needs at least {:.1} m across inside its room bands on every floor",
@@ -2603,9 +2969,61 @@ mod tests {
     /// An opening clamped onto its neighbour moves past it with the gap, or is dropped.
     #[test]
     fn an_opening_clamped_onto_a_neighbour_moves_off_it_or_is_dropped() {
-        let at = |len: f64, along: f64| free_slot(&wall_with_one(len), 0, along, 0.9).unwrap();
+        let at = |len: f64, along: f64| free_slot(&wall_with_one(len), 0, along, 0.9, (0.0, len)).unwrap();
         assert!((at(3.0, 0.5) - 1.15).abs() < 1e-9);
         assert!((at(3.0, 1.6) - 1.6).abs() < 1e-9);
-        assert_eq!(free_slot(&wall_with_one(2.0), 0, 0.95, 0.9), None);
+        assert_eq!(free_slot(&wall_with_one(2.0), 0, 0.95, 0.9, (0.0, 2.0)), None);
+    }
+
+    /// A wall running past several rooms: a room's opening stays on that room's stretch of it.
+    #[test]
+    fn an_opening_stays_on_its_rooms_stretch_of_a_long_wall() {
+        let l = wall_with_one(12.0);
+        let t = free_slot(&l, 0, 0.5, 0.9, (4.0, 6.0)).unwrap();
+        assert!(t >= 4.15 - 1e-9 && t + 0.9 <= 5.85 + 1e-9, "{t}");
+        assert_eq!(free_slot(&l, 0, 5.0, 0.9, (4.0, 5.0)), None, "a stretch too short for it");
+    }
+
+    /// A thin plate's corners take the rooms that fill them best: the 60 x 18 m hospital wing,
+    /// whose corners round a 2.4 m corridor end eat most of the facade, holds its whole
+    /// programme on every storey, with or without a basement, and each asked room is laid.
+    #[test]
+    fn corner_zones_take_the_rooms_that_fill_them_best() {
+        for b in [0, 1] {
+            let v = serde_json::json!({"typology": "hospital_wing", "floors": 4, "basements": b,
+                "footprint": {"shape": "rectangle", "width": 60, "depth": 18}});
+            let s = super::super::parse_spec(&v).unwrap_or_else(|e| panic!("{v}: {e}"));
+            let p = super::super::build_project(&s).unwrap_or_else(|e| panic!("{v}: {e}"));
+            for (k, st) in p.storeys.iter().enumerate() {
+                let mut want: Vec<String> = s.storey_rooms(k).iter().flat_map(|r| std::iter::repeat_n(r.name.clone(), r.count as usize)).collect();
+                let mut got: Vec<String> = st.rooms.iter().zip(&st.layout.rooms).filter(|(r, _)| r.asked.is_some()).map(|(_, g)| g.name.clone()).collect();
+                want.sort();
+                got.sort();
+                assert_eq!(got, want, "{v}: storey {k}");
+            }
+        }
+    }
+
+    /// The default bands of a plate fill its depth exactly with the corridor: the plate holds
+    /// them as they are, never refused at the exact fit.
+    #[test]
+    fn a_plain_bar_with_default_bands_builds_at_the_exact_fit() {
+        for (w, dp) in [(40.0, 12.0), (40.0, 16.0), (40.0, 18.0)] {
+            for shape in [Some("rectangle"), None] {
+                let mut fp = serde_json::json!({"width": w, "depth": dp});
+                if let Some(s) = shape {
+                    fp["shape"] = serde_json::json!(s);
+                }
+                let v = serde_json::json!({"typology": "office", "floors": 2, "footprint": fp});
+                let s = super::super::parse_spec(&v).unwrap_or_else(|e| panic!("{v}: {e}"));
+                if let Err(e) = super::super::build_project(&s) {
+                    panic!("{v} (bands {} m, corridor {} m): {e}", s.band_depth, s.corridor);
+                }
+                if s.plate.is_some() && s.hall_depth.is_none() {
+                    let regions = [s.plate.as_ref().unwrap().at(0).unwrap()];
+                    assert_eq!(plate_band(&s, &regions).unwrap(), s.band_depth, "{v}: bands kept at the exact fit");
+                }
+            }
+        }
     }
 }

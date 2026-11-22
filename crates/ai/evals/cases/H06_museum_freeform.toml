@@ -76,3 +76,5 @@ max = 0.0
 [[oracle.geom]]
 kind = "gaussian_curve"
 share_min = 0.3
+[[oracle.geom]]
+kind = "materials"

@@ -16,6 +16,8 @@ use std::collections::HashSet;
 const STEP: f64 = 0.05;
 /// A run may leave this much wall uncovered where no filler fits (a filler strip).
 const STRIP: f64 = 0.15;
+/// Spacing of the spots along the wet side a stack is tried at.
+const STACK_STEP: f64 = 0.25;
 
 /// A room as the tiler made it: axis-aligned, on wall centre lines. A room of any outline
 /// comes as its usable rectangle, with the door swings of the walls off that rectangle in
@@ -309,7 +311,21 @@ struct Cx<'g, 'a> {
     /// The dwelling the room belongs to, if any.
     dwelling: Option<u32>,
     typology: Typology,
+    /// Why spots were refused since the last reset: count per (reason of [`REFUSALS`], piece).
+    refused: std::cell::RefCell<std::collections::BTreeMap<(usize, Option<usize>), u32>>,
 }
+
+/// What can refuse a spot to a set, in the order [`Cx::plan`] checks it.
+const REFUSALS: [&str; 8] = [
+    "past the side's end",
+    "off the clear floor or on another body",
+    "its front space taken",
+    "a tall set before a window",
+    "a tall piece before a window strip",
+    "no wall face holds it",
+    "a piece's front band taken",
+    "a piece's side bands taken",
+];
 
 /// The dwelling of a room: its apartment, or the whole house.
 pub(crate) fn dwelling_of(owner: PRole, typology: Typology) -> Option<u32> {
@@ -352,30 +368,53 @@ impl Cx<'_, '_> {
             && !own.iter().any(|(b, raised)| !raised && hit(b, r))
     }
 
+    /// Counts one refused spot under reason `i` of [`REFUSALS`], for piece `item` of the set if
+    /// one piece refused it.
+    fn no(&self, i: usize, item: Option<usize>) -> Option<Plan> {
+        *self.refused.borrow_mut().entry((i, item)).or_insert(0) += 1;
+        None
+    }
+
+    /// The refusals counted since the last call, most frequent first, as "n [item:] reason".
+    fn take_refusals(&self) -> String {
+        let mut v: Vec<((usize, Option<usize>), u32)> = self.refused.take().into_iter().collect();
+        v.sort_by(|a, b| b.1.cmp(&a.1));
+        if v.is_empty() {
+            return "no side long enough to try".to_string();
+        }
+        v.iter()
+            .map(|((i, item), n)| match item {
+                Some(k) => format!("{n} {}: {}", self.rules.items[*k].id, REFUSALS[*i]),
+                None => format!("{n} {}", REFUSALS[*i]),
+            })
+            .collect::<Vec<_>>()
+            .join(", ")
+    }
+
     /// Set `set` against side `k` from `u0` along it and `v0` into the room, if it fits.
     fn plan(&self, k: usize, u0: f64, v0: f64, set: &Set, mirror: bool, front: f64) -> Option<Plan> {
         let g = self.g;
         let sd = g.sides[k];
         if u0 < -EPS || u0 + set.w > sd.len + EPS {
-            return None;
+            return self.no(0, None);
         }
         let zone = sd.band(u0, u0 + set.w, v0, v0 + set.d);
         let blocked = |r: &R| {
             self.st.taken.iter().chain(&self.st.raised).chain(&self.st.keep).chain(&g.doors).chain(&g.columns).any(|t| hit(t, r))
         };
         if !inside(&zone, &g.clear) || blocked(&zone) {
-            return None;
+            return self.no(1, None);
         }
         let mut plan = Plan { bodies: vec![], keeps: vec![zone], fx: vec![], side: k, fall: None };
         if front > 0.0 {
             let fr = sd.band(u0, u0 + set.w, v0 + set.d, v0 + set.d + front);
             if !self.free_floor(&fr, &[]) {
-                return None;
+                return self.no(2, None);
             }
             plan.keeps.push(fr);
         }
         if v0 < 1.0 && set.tall(self.rules) && g.windowed(k, u0, u0 + set.w) {
-            return None;
+            return self.no(3, None);
         }
         for p in &set.parts {
             let it = &self.rules.items[p.item];
@@ -383,10 +422,18 @@ impl Cx<'_, '_> {
             let (eu, ev) = face.extent(it.w, it.d);
             let pu = if mirror { set.w - p.at.0 - eu } else { p.at.0 };
             let body = sd.band(u0 + pu, u0 + pu + eu, v0 + p.at.1, v0 + p.at.1 + ev);
+            // a tall body keeps off the strip before every window of the room, not only those
+            // of its own side: at a corner it reaches into the next side's strip
+            if it.tall && g.before_windows().iter().any(|w| hit(w, &body)) {
+                return self.no(4, Some(p.item));
+            }
             let fv = sd.front(face);
             let (at, rotation) = fixture_at(it, body, fv);
             let wall = if it.org == Org::Wall {
-                Some(host_wall(g.l, at, fv, &body)?)
+                match host_wall(g.l, at, fv, &body) {
+                    Some(w) => Some(w),
+                    None => return self.no(5, Some(p.item)),
+                }
             } else {
                 None
             };
@@ -404,13 +451,13 @@ impl Cx<'_, '_> {
             let others: Vec<(R, bool)> = plan.bodies.iter().copied().filter(|(b, _)| !hit(b, &pl.body)).collect();
             if let Some(fb) = pl.front_band(it) {
                 if !self.free_floor(&fb, &others) {
-                    return None;
+                    return self.no(6, Some(*item));
                 }
                 plan.keeps.push(fb);
             }
             let free: Vec<R> = pl.side_bands(it).into_iter().filter(|b| self.free_floor(b, &others)).collect();
             if free.len() < it.side.2 as usize {
-                return None;
+                return self.no(7, Some(*item));
             }
             plan.keeps.extend(free);
         }
@@ -445,8 +492,19 @@ impl Cx<'_, '_> {
         }
     }
 
+    /// Branches past their rules once plan `p` stands too, from the stack that serves them best.
+    fn over_with(&self, p: &Plan) -> usize {
+        let fx = self.st.out.iter().zip(self.st.items.iter().map(|x| x.0)).chain(p.fx.iter().map(|(f, i)| (f, *i)));
+        stack_for(self.rules, self.g, &drained_of(self.rules, fx)).map_or(0, |s| s.1)
+    }
+
     /// One of the sets against one of the sides, first fit: from the start, or nearest the middle.
+    /// A drained set takes the first spot whose branch, and every branch before it, keeps
+    /// within the drain rules; with none, the spot that leaves the fewest past them.
     fn put(&mut self, what: &[usize], sides: &[usize], centred: bool) -> bool {
+        let rules = self.rules;
+        let drained = |si: usize| rules.sets[si].parts.iter().any(|p| rules.items[p.item].drain.is_some());
+        let mut fallback: Option<(Plan, usize)> = None;
         for &si in what {
             let set = &self.rules.sets[si];
             for &k in sides {
@@ -459,8 +517,11 @@ impl Cx<'_, '_> {
                 } else {
                     let n = ((len - set.w) / STEP).floor() as usize;
                     let mut ss: Vec<f64> = (0..=n).map(|i| i as f64 * STEP).collect();
-                    if centred {
-                        let mid = (len - set.w) / 2.0;
+                    // a drained set shares its wet side with the next drained piece: centred
+                    // while each end it leaves holds a set as wide, else the spare length stays
+                    // in one piece at an end
+                    let mid = (len - set.w) / 2.0;
+                    if centred && (!drained(si) || mid + EPS >= set.w) {
                         ss.push(mid);
                         ss.sort_by(|a, b| (a - mid).abs().total_cmp(&(b - mid).abs()));
                     }
@@ -468,13 +529,25 @@ impl Cx<'_, '_> {
                 };
                 for (s, mirror) in spots {
                     if let Some(p) = self.plan(k, s, 0.0, set, mirror, set.front) {
-                        self.commit(p);
-                        return true;
+                        let over = if drained(si) { self.over_with(&p) } else { 0 };
+                        if over == 0 {
+                            self.commit(p);
+                            return true;
+                        }
+                        if fallback.as_ref().is_none_or(|f| over < f.1) {
+                            fallback = Some((p, over));
+                        }
                     }
                 }
             }
         }
-        false
+        match fallback {
+            Some((p, _)) => {
+                self.commit(p);
+                true
+            }
+            None => false,
+        }
     }
 
     /// Runs the steps; returns what they asked for and did not get.
@@ -506,14 +579,17 @@ impl Cx<'_, '_> {
                 };
                 let ks = self.sides(sides);
                 let mut placed = 0;
+                self.refused.take();
                 while placed < target && self.put(what, &ks, *centred) {
+                    self.refused.take();
                     placed += 1;
                 }
                 if let (Some(a), true) = (dwelling, placed > 0) {
                     self.st.dwell.insert((a, key));
                 }
                 if placed < *need as usize {
-                    return vec![format!("{}: {placed} of {need}", name(self.rules, what[0]))];
+                    let why = self.take_refusals();
+                    return vec![format!("{}: {placed} of {need} (spots refused: {why})", name(self.rules, what[0]))];
                 }
                 vec![]
             }
@@ -549,16 +625,23 @@ impl Cx<'_, '_> {
                 let max = &max;
                 let st = &self.rules.sets[*set];
                 let mut placed = 0;
-                for k in self.sides(sides) {
+                self.refused.take();
+                // the named sides first; a room none of them holds a set on tries its others
+                let mut ks = self.sides(sides);
+                ks.extend(self.g.order(false).into_iter().filter(|k| !ks.contains(k)).collect::<Vec<_>>());
+                for k in ks {
                     let sd = self.g.sides[k];
                     let depth = self.g.depth(k);
-                    let cols = ((sd.len + EPS) / module.0).floor() as usize;
+                    // the module's spare room lies between sets: the last column and row need
+                    // only the set itself
+                    let cols = if sd.len + EPS < st.w { 0 } else { ((sd.len - st.w + EPS) / module.0).floor() as usize + 1 };
                     let nrows = if depth + EPS < start + st.d {
                         0
                     } else {
                         (((depth - start - st.d + EPS) / module.1).floor() as usize + 1).min(*rows as usize)
                     };
-                    let s0 = (sd.len - cols as f64 * module.0) / 2.0;
+                    let span = cols.saturating_sub(1) as f64 * module.0 + st.w;
+                    let s0 = (sd.len - span) / 2.0 - (module.0 - st.w) / 2.0;
                     for r in 0..nrows {
                         for c in 0..cols {
                             if placed >= *max as usize {
@@ -577,7 +660,8 @@ impl Cx<'_, '_> {
                     }
                 }
                 if placed < *need as usize {
-                    return vec![format!("{}: {placed} of {need} on the grid", name(self.rules, *set))];
+                    let why = self.take_refusals();
+                    return vec![format!("{}: {placed} of {need} on the grid (spots refused: {why})", name(self.rules, *set))];
                 }
                 vec![]
             }
@@ -1043,12 +1127,15 @@ impl Lay {
 }
 
 /// Fits out every room of a storey; `h` is the storey height. The fixtures come in room order.
+/// `dwell` holds the (dwelling, set) pairs placed once per dwelling: a dwelling spans storeys,
+/// so the caller carries it from one storey to the next.
 pub(crate) fn furnish(
     l: &GLayout,
     rooms: &[RoomIn<'_>],
     h: f64,
     typology: Typology,
     rules: &Rules,
+    dwell: &mut HashSet<(u32, usize)>,
 ) -> (Vec<GFixture>, Vec<RoomFit>) {
     let geos: Vec<Geo<'_>> = rooms.iter().map(|r| Geo::new(l, r, rooms, rules)).collect();
     let facts = |i: usize| {
@@ -1068,7 +1155,6 @@ pub(crate) fn furnish(
     let prio = |i: usize| rules.rooms.iter().find(|x| x.matches(&facts(i))).map_or(i64::MAX, |x| x.priority);
     let mut order: Vec<usize> = (0..rooms.len()).collect();
     order.sort_by_key(|&i| (prio(i), i));
-    let mut dwell: HashSet<(u32, usize)> = HashSet::new();
     let mut per_room: Vec<Vec<GFixture>> = vec![vec![]; rooms.len()];
     let mut fits = vec![];
     for i in order {
@@ -1090,7 +1176,7 @@ pub(crate) fn furnish(
                 triangle: None,
                 dwell: dwell.clone(),
             };
-            let mut cx = Cx { g, rules, st, dwelling: dwelling_of(rooms[i].owner, typology), typology };
+            let mut cx = Cx { g, rules, st, dwelling: dwelling_of(rooms[i].owner, typology), typology, refused: Default::default() };
             let unmet = cx.steps(&rule.steps);
             let better = best.as_ref().is_none_or(|b| unmet.len() < b.0.len());
             let done = unmet.is_empty();
@@ -1104,7 +1190,7 @@ pub(crate) fn furnish(
         let Some((unmet, rule, st)) = best else {
             continue;
         };
-        dwell = st.dwell.clone();
+        dwell.clone_from(&st.dwell);
         let mut fit = RoomFit { room: i, rule, issues: unmet, ..Default::default() };
         drains(rules, g, &st, &mut fit);
         per_room[i] = st.out;
@@ -1114,21 +1200,47 @@ pub(crate) fn furnish(
     (per_room.into_iter().flatten().collect(), fits)
 }
 
-/// The stack at the room corner nearest the drained pieces, each branch along the walls, and
-/// the floor falls; what goes past the rules becomes an issue.
+/// Drained pieces among `fx` (fixture, item): id, longest branch, body centre.
+fn drained_of<'r, 'f>(rules: &'r Rules, fx: impl Iterator<Item = (&'f GFixture, usize)>) -> Vec<(&'r str, f64, (f64, f64))> {
+    fx.filter_map(|(f, i)| {
+        let it = &rules.items[i];
+        let d = it.drain?;
+        let b = Placed::of(it, f).body;
+        Some((it.id.as_str(), d.max_run, ((b[0] + b[2]) / 2.0, (b[1] + b[3]) / 2.0)))
+    })
+    .collect()
+}
+
+/// The stack of the drained `pieces`: the room corner or wet-side spot with the fewest branches past
+/// the drain rules (length or drop), then the shortest longest branch; with that count.
+fn stack_for(rules: &Rules, g: &Geo<'_>, pieces: &[(&str, f64, (f64, f64))]) -> Option<((f64, f64), usize)> {
+    let dr = rules.drainage;
+    // the room's corners, and along its wet side, where a stack in the wall chase may stand
+    let mut corners: Vec<(f64, f64)> = vec![];
+    let wet = g.sides[g.wet[0]];
+    let along = (1..(wet.len / STACK_STEP).ceil() as usize).map(|i| wet.at(i as f64 * STACK_STEP, 0.0));
+    for p in g.wet.iter().flat_map(|&k| [g.sides[k].at(0.0, 0.0), g.sides[k].at(g.sides[k].len, 0.0)]).chain(along) {
+        if !corners.iter().any(|q| (q.0 - p.0).abs() < EPS && (q.1 - p.1).abs() < EPS) {
+            corners.push(p);
+        }
+    }
+    let run = |p: &(&str, f64, (f64, f64)), s: (f64, f64)| (p.2 .0 - s.0).abs() + (p.2 .1 - s.1).abs();
+    let mut best: Option<((f64, f64), usize, f64)> = None;
+    for s in corners {
+        let over = pieces.iter().filter(|p| run(p, s) > p.1 + EPS || run(p, s) * dr.fall > dr.max_drop + EPS).count();
+        let worst = pieces.iter().map(|p| run(p, s)).fold(0.0, f64::max);
+        if best.is_none_or(|b| over < b.1 || (over == b.1 && worst < b.2 - EPS)) {
+            best = Some((s, over, worst));
+        }
+    }
+    best.map(|b| (b.0, b.1))
+}
+
+/// The stack at the room corner that serves the drained pieces best, each branch along the
+/// walls, and the floor falls; what goes past the rules becomes an issue.
 fn drains(rules: &Rules, g: &Geo<'_>, st: &State, fit: &mut RoomFit) {
     let dr = rules.drainage;
-    let pieces: Vec<(&str, f64, (f64, f64))> = st
-        .out
-        .iter()
-        .zip(&st.items)
-        .filter_map(|(f, &(i, _))| {
-            let it = &rules.items[i];
-            let d = it.drain?;
-            let b = Placed::of(it, f).body;
-            Some((it.id.as_str(), d.max_run, ((b[0] + b[2]) / 2.0, (b[1] + b[3]) / 2.0)))
-        })
-        .collect();
+    let pieces = drained_of(rules, st.out.iter().zip(st.items.iter().map(|x| x.0)));
     for f in &st.falls {
         fit.falls.push(*f);
         if *f > dr.max_floor_drop + EPS {
@@ -1140,21 +1252,7 @@ fn drains(rules: &Rules, g: &Geo<'_>, st: &State, fit: &mut RoomFit) {
     if pieces.is_empty() {
         return;
     }
-    let mut corners = vec![];
-    for &k in &g.wet {
-        let sd = g.sides[k];
-        for p in [sd.at(0.0, 0.0), sd.at(sd.len, 0.0)] {
-            if !corners.iter().any(|q: &(f64, f64)| (q.0 - p.0).abs() < EPS && (q.1 - p.1).abs() < EPS) {
-                corners.push(p);
-            }
-        }
-    }
-    let worst = |s: (f64, f64)| pieces.iter().map(|p| (p.2 .0 - s.0).abs() + (p.2 .1 - s.1).abs()).fold(0.0, f64::max);
-    let stack = corners.iter().copied().fold(None, |b: Option<(f64, f64)>, p| match b {
-        Some(q) if worst(q) <= worst(p) + EPS => Some(q),
-        _ => Some(p),
-    });
-    let Some(s) = stack else {
+    let Some((s, _)) = stack_for(rules, g, &pieces) else {
         return;
     };
     fit.stack = Some(s);

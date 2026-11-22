@@ -1005,6 +1005,8 @@ impl Model {
     ) -> Result<i64, Error> {
         shape.check().map_err(Error::Invalid)?;
         let text = shape.text();
+        let material = crate::material_look::assign("member", material, name);
+        let material = material.as_str();
         self.op("member_type_add", |db| {
             db.execute(
                 "INSERT INTO member_type(name, shape, material) VALUES (?1,?2,?3)",

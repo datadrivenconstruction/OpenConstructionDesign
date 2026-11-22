@@ -117,6 +117,27 @@ fn every_brief_is_fitted_out_without_collisions_and_with_every_clearance() {
     }
 }
 
+/// The plan keeps each WC and bath a fixture zone clear of every door swing: no brief leaves
+/// one of them without its fixture.
+#[test]
+fn no_wc_or_bath_loses_its_fixture_to_the_doors() {
+    let mut briefs = briefs();
+    briefs.push(json!({"floors": 1, "typology": "house"}));
+    let mut bad = vec![];
+    for v in briefs {
+        let (_, p) = project(&v);
+        for (k, st) in p.storeys.iter().enumerate() {
+            for f in &st.fit {
+                let wet = st.rooms.get(f.room).is_some_and(|r| matches!(r.kind, super::RoomKind::Wc | super::RoomKind::Bath));
+                for e in f.issues.iter().filter(|e| wet && e.contains(" 0 of ")) {
+                    bad.push(format!("{v} floor {k} room {}: {e}", f.room));
+                }
+            }
+        }
+    }
+    assert!(bad.is_empty(), "{}", bad.join("\n"));
+}
+
 #[test]
 fn accessible_rooms_keep_a_turning_circle_and_drains_reach_the_stack() {
     let rules = rules_for(None).unwrap();
@@ -134,6 +155,37 @@ fn accessible_rooms_keep_a_turning_circle_and_drains_reach_the_stack() {
     let kitchen = fits.iter().find(|f| f.rule == "kitchen").unwrap();
     let legs = kitchen.triangle.unwrap_or_else(|| panic!("{kitchen:?}"));
     assert!(super::furnish::triangle_ok(&legs, (1.2, 2.7), (4.0, 7.9)), "{legs:?}");
+}
+
+/// A set the placer can stand: no piece's front space lies on another floor body of its set.
+#[test]
+fn no_set_faces_a_piece_into_its_own_neighbour() {
+    use super::fit_rules::Face;
+    let rules = rules_for(None).unwrap();
+    let floor = |i: usize| rules.items[i].on.is_empty() && !rules.items[i].raised;
+    let hit = |a: [f64; 4], b: [f64; 4]| a[0] < b[2] - 1e-9 && b[0] < a[2] - 1e-9 && a[1] < b[3] - 1e-9 && b[1] < a[3] - 1e-9;
+    let body = |p: &super::fit_rules::Part| {
+        let it = &rules.items[p.item];
+        let (eu, ev) = p.face.extent(it.w, it.d);
+        [p.at.0, p.at.1, p.at.0 + eu, p.at.1 + ev]
+    };
+    for s in &rules.sets {
+        for p in s.parts.iter().filter(|p| floor(p.item)) {
+            let (b, f) = (body(p), rules.items[p.item].front);
+            if f <= 0.0 {
+                continue;
+            }
+            let band = match p.face {
+                Face::In => [b[0], b[3], b[2], b[3] + f],
+                Face::Out => [b[0], b[1] - f, b[2], b[1]],
+                Face::Left => [b[0] - f, b[1], b[0], b[3]],
+                Face::Right => [b[2], b[1], b[2] + f, b[3]],
+            };
+            for q in s.parts.iter().filter(|q| floor(q.item) && !hit(body(q), b)) {
+                assert!(!hit(body(q), band), "{}: {} faces into {}", s.id, rules.items[p.item].id, rules.items[q.item].id);
+            }
+        }
+    }
 }
 
 #[test]

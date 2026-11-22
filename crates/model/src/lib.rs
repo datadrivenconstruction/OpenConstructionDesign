@@ -124,6 +124,9 @@ pub mod links;
 mod mass;
 pub mod mat_mech;
 mod material_texture;
+pub mod material_look;
+#[cfg(test)]
+mod material_look_tests;
 mod field_err;
 mod materials;
 mod mep;
@@ -609,6 +612,9 @@ pub enum Error {
     Stage(stage_err::StageErr),
     #[error("model file is damaged: {0}")]
     Corrupt(String),
+    /// The work was stopped by its cancel token (`ddc_geom::cancel`); nothing was written.
+    #[error("cancelled")]
+    Cancelled,
     #[error(transparent)]
     Io(#[from] std::io::Error),
 }

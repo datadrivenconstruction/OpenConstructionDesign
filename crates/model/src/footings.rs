@@ -295,7 +295,7 @@ fn insert_footing(db: &Connection, s: &FootingSpec, id: Option<i64>) -> Result<i
             s.round as i64,
             steps_text(&s.steps),
             s.top_offset,
-            s.material,
+            crate::material_look::assign("footing", &s.material, ""),
             frot
         ],
     )?;
@@ -319,7 +319,7 @@ fn insert_strip(db: &Connection, s: &StripFootingSpec, id: Option<i64>) -> Resul
             s.depth,
             s.ecc,
             s.top_offset,
-            s.material
+            crate::material_look::assign("footing", &s.material, "")
         ],
     )?;
     Ok(db.last_insert_rowid())
@@ -336,7 +336,7 @@ fn insert_raft(db: &Connection, s: &RaftSpec, id: Option<i64>) -> Result<i64, Er
             s.edge_width,
             s.edge_depth,
             s.top_offset,
-            s.material
+            crate::material_look::assign("raft", &s.material, "")
         ],
     )?;
     let rid = db.last_insert_rowid();

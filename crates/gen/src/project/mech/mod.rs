@@ -267,6 +267,9 @@ fn build(spec: &ProjectSpec, p: &GProject, beams: &[Beam]) -> Mech {
             let flow = if name == "Supply" { fs } else { fe };
             e.ports.push(Port { name, medium, at: (q.0, q.1, roof + q.2), dir: (0.0, 0.0, 1.0), size: 0.0, flow });
         }
+        // outdoor air in at one end, exhaust out at the other, as on the general unit
+        e.ports.push(Port { name: "Outdoor", medium: Medium::OutdoorAir, at: e.local(-l / 2.0, 0.0, deck_h / 2.0), dir: e.dir(-1.0, 0.0, 0.0), size: 0.0, flow: fs });
+        e.ports.push(Port { name: "Exhaust", medium: Medium::ExhaustAir, at: e.local(l / 2.0, 0.0, deck_h + deck_h / 2.0), dir: e.dir(1.0, 0.0, 0.0), size: 0.0, flow: fe.min(fs) });
         // water ports beside the coil sections, as on the general unit
         let mut u = -l / 2.0;
         let mut wports = [None; 4];

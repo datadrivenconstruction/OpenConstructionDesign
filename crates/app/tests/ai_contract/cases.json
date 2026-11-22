@@ -1009,6 +1009,22 @@
   "writes": true
  },
  {
+  "id": "set_material",
+  "base": "house",
+  "calls": [
+   {
+    "tool": "set_material",
+    "args": {
+     "title": "Steel",
+     "name": "steel S355",
+     "look": "steel",
+     "texture": "metal"
+    }
+   }
+  ],
+  "writes": true
+ },
+ {
   "id": "measure_save",
   "base": "walls",
   "calls": [

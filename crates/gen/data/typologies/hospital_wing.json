@@ -39,6 +39,8 @@
  "rules": {
   "egress.max_travel": 35,
   "mep.hvac.system": "auto",
+  "services.hvac.v_main": 5.0,
+  "services.hvac.v_riser": 6.0,
   "mep.hvac.dedicated_oa": "operating_isolation",
   "corridor.width": 2.4,
   "egress.protected_stairs": "smokeproof"

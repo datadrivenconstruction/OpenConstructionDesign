@@ -69,6 +69,8 @@ pub fn routed_boolean(a: &Body, b: &Body, op: BoolOp, tol: Tol) -> (Body, BoolPa
     }
     match crate::csg2::boolean_bodies(a, b, op, tol) {
         Ok(out) => (out, BoolPath::Mesh, vec![]),
+        // stopped: no planar fallback, the caller checks `cancel::requested` and drops it
+        Err(_) if crate::cancel::requested() => (Body::default(), BoolPath::Mesh, vec![]),
         Err(e) => {
             let note = Loss {
                 what: e.fallback_note(),
@@ -118,6 +120,24 @@ mod tests {
         length: 1e-7,
         angle: 1e-9,
     };
+
+    /// A stop inside the mesh path must not start the planar fallback (it ran on for minutes).
+    #[test]
+    fn cancel_stops_the_routed_boolean_without_a_planar_fallback() {
+        let a = crate::mass::cylinder(crate::math::v2(0.0, 0.0), 1.0, 0.0, 2.0, 128);
+        let b = crate::mass::cylinder(crate::math::v2(0.5, 0.0), 1.0, 0.5, 2.0, 128);
+        assert!(crate::csg2::prefers_mesh(a.polys.len(), b.polys.len()));
+        let t = crate::cancel::Token::new();
+        t.cancel();
+        let c0 = crate::cancel::checks();
+        let (out, path, loss) =
+            crate::cancel::scope(&t, || routed_boolean(&a, &b, BoolOp::Union, TOL));
+        assert_eq!(path, BoolPath::Mesh, "no fallback after a stop");
+        assert!(out.is_empty() && loss.is_empty());
+        assert!(crate::cancel::checks() - c0 <= 3, "stopped at the first check");
+        let (full, _, _) = routed_boolean(&a, &b, BoolOp::Union, TOL);
+        assert!(!full.is_empty(), "outside the scope the same call completes");
+    }
 
     fn bx(lo: (f64, f64, f64), hi: (f64, f64, f64)) -> Body {
         cuboid(v3(lo.0, lo.1, lo.2), v3(hi.0, hi.1, hi.2))

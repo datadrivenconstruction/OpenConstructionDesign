@@ -1406,6 +1406,11 @@ fn rise_at(r: &PRoof, q: P) -> f64 {
     if !super::assembly::pitched(r.slope) {
         return 0.0;
     }
+    if let Some((a, b)) = r.eave {
+        let len = dist(a, b).max(ON);
+        let d = ((b.0 - a.0) * (q.1 - a.1) - (b.1 - a.1) * (q.0 - a.0)) / len;
+        return d.max(0.0) * r.slope.to_radians().tan();
+    }
     let n = r.ring.len();
     let mut z = f64::INFINITY;
     for j in 0..n {
@@ -1494,7 +1499,7 @@ pub(super) fn open_roof(p: &mut GProject) {
                     pieces.push(piece.iter().map(|q| (q.x, q.y)).collect::<Vec<_>>());
                 }
             }
-            pieces.into_iter().map(|ring| if shaped { cut_piece(&r, ring) } else { PRoof { ring, edges: vec![], ..r.clone() } }).collect()
+            pieces.into_iter().map(|ring| if shaped { cut_piece(&r, ring) } else { PRoof { ring, edges: vec![], eave: None, ..r.clone() } }).collect()
         };
         let mut parts = parts.into_iter();
         let Some(first) = parts.next() else { continue };
@@ -1520,7 +1525,7 @@ fn cut_piece(r: &PRoof, ring: Vec<P>) -> PRoof {
                 .and_then(|k| if r.edges.is_empty() { Some(r.slope) } else { r.edges.get(k).copied().flatten() })
         })
         .collect();
-    PRoof { ring, edges, ..r.clone() }
+    PRoof { ring, edges, eave: None, ..r.clone() }
 }
 
 /// Smallest strip kept, m2: the area tolerance the cut tests cover the roof with.
@@ -1548,13 +1553,42 @@ fn minus(r: &[ddc_geom::V2], cut: &[ddc_geom::V2]) -> Option<Vec<Vec<ddc_geom::V
 /// eave (`lift` is that edge's height). A strip edge on the old outline keeps the overhang: it
 /// stands out by it on the same plane; the cuts stay put and the pieces carry none. `None` when
 /// the skeleton fails or a strip has no such edge.
-fn plane_pieces(r: &PRoof, head: &[P]) -> Option<Vec<PRoof>> {
+pub fn plane_pieces(r: &PRoof, head: &[(f64, f64)]) -> Option<Vec<PRoof>> {
     use ddc_geom::{poly, roof::Footprint, v2, V2};
     let n = r.ring.len();
     let slopes: Vec<Option<f64>> =
         (0..n).map(|j| if r.edges.is_empty() { Some(r.slope) } else { r.edges.get(j).copied().flatten() }).collect();
     let fp = Footprint { ring: r.ring.iter().map(|q| v2(q.0, q.1)).collect(), slopes, base_z: 0.0, overhang: 0.0, mansard: None };
     let roof = fp.build().ok()?;
+    // a head corner within the tolerance of a face's corner or edge (valley, hip, ridge, outline)
+    // lies on it, so the cut leaves no sliver along that line
+    let tol = ddc_geom::Tol::default().length;
+    let segs: Vec<(P, P)> = roof
+        .faces
+        .iter()
+        .filter(|f| f.sloped)
+        .flat_map(|f| {
+            let k = f.pts.len();
+            (0..k).map(move |i| ((f.pts[i].x, f.pts[i].y), (f.pts[(i + 1) % k].x, f.pts[(i + 1) % k].y)))
+        })
+        .collect();
+    let nearest = |q: P, c: &mut dyn Iterator<Item = P>| c.filter(|&x| dist(q, x) < tol).min_by(|x, y| dist(q, *x).total_cmp(&dist(q, *y)));
+    let snap = |q: P| {
+        nearest(q, &mut segs.iter().map(|s| s.0))
+            .or_else(|| {
+                nearest(
+                    q,
+                    &mut segs.iter().filter_map(|&(a, b)| {
+                        let l2 = (b.0 - a.0).powi(2) + (b.1 - a.1).powi(2);
+                        let t = (((q.0 - a.0) * (b.0 - a.0) + (q.1 - a.1) * (b.1 - a.1)) / l2).clamp(0.0, 1.0);
+                        (l2 > ON * ON).then(|| (a.0 + (b.0 - a.0) * t, a.1 + (b.1 - a.1) * t))
+                    }),
+                )
+            })
+            .unwrap_or(q)
+    };
+    let head: Vec<P> = head.iter().map(|&q| snap(q)).collect();
+    let head = &head[..];
     let head_ring: Vec<V2> = head.iter().map(|q| v2(q.0, q.1)).collect();
     let mut out = vec![];
     for f in roof.faces.iter().filter(|f| f.sloped) {
@@ -1599,15 +1633,32 @@ fn plane_pieces(r: &PRoof, head: &[P]) -> Option<Vec<PRoof>> {
         // the face less the head, holes counted out: a head inside the face is no failure
         let kept = poly_area_minus(&face, &head_ring)?;
         let hit = poly::area(&face).abs() - kept;
+        // a head monotone across the slope parts the band by its own left and right chains:
+        // each side piece then keeps the band's bottom edge, parallel to the eave
+        let chains = side_chains(&head.iter().map(|&q| uv(q)).collect::<Vec<_>>()).map(|(lc, rc)| {
+            let (l0, lk, r0, rk) = (lc[0], lc[lc.len() - 1], rc[0], rc[rc.len() - 1]);
+            let mut cut_r = vec![w(l0.0, -big), w(big, -big), w(big, big), w(lk.0, big)];
+            cut_r.extend(lc.iter().rev().map(|q| w(q.0, q.1)));
+            let mut cut_l = vec![w(-big, -big), w(r0.0, -big)];
+            cut_l.extend(rc.iter().map(|q| w(q.0, q.1)));
+            cut_l.extend([w(rk.0, big), w(-big, big)]);
+            (cut_r, cut_l)
+        });
         let strips: Vec<Vec<V2>> = if hit < SLIVER {
             vec![face.clone()]
         } else {
-            // below, above, then the band across the head's v-range in left, right and middle
-            // slices (the middle is the head's box, so cutting the head out leaves no hole)
+            // below, above, then the band across the head's v-range: left and right of the
+            // head's chains, or else left, right and middle slices (the middle is the head's
+            // box, so cutting the head out leaves no hole)
             let mut v = minus(&face, &above(vlo))?;
             v.extend(minus(&face, &below(vhi))?);
             for band in minus(&face, &above(vhi))? {
                 for m in minus(&band, &below(vlo))? {
+                    if let Some((cut_r, cut_l)) = &chains {
+                        v.extend(minus(&m, cut_r)?);
+                        v.extend(minus(&m, cut_l)?);
+                        continue;
+                    }
                     v.extend(minus(&m, &right_of(ulo))?);
                     v.extend(minus(&m, &left_of(uhi))?);
                     for a in minus(&m, &left_of(ulo))? {
@@ -1629,19 +1680,61 @@ fn plane_pieces(r: &PRoof, head: &[P]) -> Option<Vec<PRoof>> {
             let edges: Vec<Option<f64>> = (0..m)
                 .map(|e| ((uv(pts[e]).1 - vmin).abs() < 1e-5 && (uv(pts[(e + 1) % m]).1 - vmin).abs() < 1e-5).then_some(s))
                 .collect();
-            if edges.iter().all(|e| e.is_none()) {
-                return None;
-            }
             let outer: Vec<bool> = (0..m)
                 .map(|e| (0..n).any(|k| on_seg(pts[e], r.ring[k], r.ring[(k + 1) % n]) && on_seg(pts[(e + 1) % m], r.ring[k], r.ring[(k + 1) % n])))
                 .collect();
             let eave_out = (0..m).any(|e| edges[e].is_some() && outer[e]);
             let ring = offset_edges(&pts, &outer, r.overhang, 1.0);
+            if edges.iter().all(|e| e.is_none()) {
+                // the strip meets its eave line at a corner only (cut through a valley or hip
+                // corner): it hangs on that line, off its ring, and every edge is a gable
+                let low = ring.iter().copied().fold(ring[0], |m, q| if uv(q).1 < uv(m).1 { q } else { m });
+                let eave = Some((low, (low.0 + nn.1, low.1 - nn.0)));
+                let k = ring.len();
+                out.push(PRoof { ring, edges: vec![None; k], overhang: 0.0, slope: s, lift: r.lift + uv(low).1 * t, eave, ..r.clone() });
+                continue;
+            }
             let lift = r.lift + (vmin - if eave_out { r.overhang } else { 0.0 }) * t;
-            out.push(PRoof { ring, edges, overhang: 0.0, lift, ..r.clone() });
+            out.push(PRoof { ring, edges, overhang: 0.0, lift, eave: None, ..r.clone() });
         }
     }
     if out.is_empty() { None } else { Some(out) }
+}
+
+/// The left and right chains of the ring `hv` given in (u, v), each from its lowest corner to
+/// its highest; `None` when a chain turns back down (the ring is not monotone in v).
+fn side_chains(hv: &[P]) -> Option<(Vec<P>, Vec<P>)> {
+    let k = hv.len();
+    if k < 3 {
+        return None;
+    }
+    let mut r = hv.to_vec();
+    let a2: f64 = (0..k).map(|i| r[i].0 * r[(i + 1) % k].1 - r[(i + 1) % k].0 * r[i].1).sum();
+    if a2 < 0.0 {
+        r.reverse();
+    }
+    let vmin = r.iter().map(|q| q.1).fold(f64::INFINITY, f64::min);
+    let vmax = r.iter().map(|q| q.1).fold(f64::NEG_INFINITY, f64::max);
+    if vmax - vmin < ON {
+        return None;
+    }
+    // the corner at height `at` furthest along `sg` (-1 leftmost, 1 rightmost)
+    let ext = |at: f64, sg: f64| (0..k).filter(|&i| (r[i].1 - at).abs() < 1e-9).max_by(|&i, &j| (sg * r[i].0).total_cmp(&(sg * r[j].0)));
+    let (lo_l, lo_r, hi_l, hi_r) = (ext(vmin, -1.0)?, ext(vmin, 1.0)?, ext(vmax, -1.0)?, ext(vmax, 1.0)?);
+    // counter-clockwise: up the right chain, down the left one
+    let walk = |from: usize, to: usize| {
+        let (mut c, mut i) = (vec![r[from]], from);
+        while i != to {
+            i = (i + 1) % k;
+            c.push(r[i]);
+        }
+        c
+    };
+    let right = walk(lo_r, hi_r);
+    let mut left = walk(hi_l, lo_l);
+    left.reverse();
+    let up = |c: &[P]| c.windows(2).all(|p| p[1].1 >= p[0].1 - 1e-9);
+    (up(&left) && up(&right)).then_some((left, right))
 }
 
 fn on_seg(q: P, a: P, b: P) -> bool {
@@ -1680,7 +1773,7 @@ mod roof_cut_tests {
     use ddc_geom::{poly, roof::Footprint, v2};
 
     fn roof(ring: Vec<P>, edges: Vec<Option<f64>>, slope: f64, overhang: f64) -> PRoof {
-        PRoof { name: String::new(), elevation: 0.0, ring, slope, overhang, edges, vault: None, lift: 0.0 }
+        PRoof { name: String::new(), elevation: 0.0, ring, slope, overhang, edges, vault: None, lift: 0.0, eave: None }
     }
 
     /// The pieces of `r` cut by `head` tile the roof minus the head exactly, and each stands on the
@@ -1726,6 +1819,40 @@ mod roof_cut_tests {
         }
         let with = plane_pieces(&r, &[(2.0, 2.0), (5.0, 2.0), (5.0, 5.0), (2.0, 5.0)]).unwrap();
         assert!(with.iter().all(|q| q.overhang == 0.0 && q.edges.iter().any(|e| e.is_some())));
+    }
+
+    /// A head corner on the valley, or within the tolerance either side of it, opens the roof all
+    /// the same: the corner counts as on the line, the face's leftover corner hangs on its own
+    /// eave line off its ring, and no sliver is left along the valley.
+    #[test]
+    fn a_head_corner_at_a_valley_within_tolerance_opens_without_slivers() {
+        let ring = vec![(0.0, 0.0), (20.0, 0.0), (20.0, 8.0), (8.0, 8.0), (8.0, 20.0), (0.0, 20.0)];
+        let r = roof(ring.clone(), vec![], 30.0, 0.0);
+        let tol = ddc_geom::Tol::default().length;
+        let v = |q: &[P]| q.iter().map(|x| v2(x.0, x.1)).collect::<Vec<_>>();
+        let per = |q: &[P]| (0..q.len()).map(|i| dist(q[i], q[(i + 1) % q.len()])).sum::<f64>();
+        let surface = Footprint { ring: v(&ring), slopes: vec![Some(30.0); 6], base_z: 0.0, overhang: 0.0, mansard: None }.build().unwrap();
+        for off in [0.0, tol / 2.0, -tol / 2.0] {
+            // (6, 6) on the valley y = x, moved across it by `off`
+            let k = off / 2f64.sqrt();
+            let head = vec![(6.0, 3.0), (10.0, 3.0), (10.0, 6.0), (6.0 + k, 6.0 - k)];
+            let parts = plane_pieces(&r, &head).unwrap_or_else(|| panic!("the roof opens with the corner {off} m off the valley"));
+            let want = poly::area(&v(&ring)).abs() - poly::area(&v(&head)).abs();
+            let got: f64 = parts.iter().map(|q| poly::area(&v(&q.ring)).abs()).sum();
+            assert!((want - got).abs() <= tol * per(&head), "off {off}: the pieces cover {got} m2, the roof less the head is {want}");
+            assert!(parts.iter().any(|q| q.eave.is_some()), "off {off}: the valley corner hangs on its own eave line");
+            for q in &parts {
+                let a = poly::area(&v(&q.ring)).abs();
+                assert!(2.0 * a / per(&q.ring) > tol, "off {off}: a sliver piece {:?}", q.ring);
+                for x in samples(&q.ring) {
+                    if crate::check::inside(&head, x) || !crate::check::inside(&ring, x) {
+                        continue;
+                    }
+                    let want = surface.top_at(v2(x.0, x.1)).unwrap();
+                    assert!((q.lift + rise_at(q, x) - want).abs() < 1e-6, "off {off}: piece {:?} off the roof at {x:?}", q.ring);
+                }
+            }
+        }
     }
 
     /// A head wholly inside one face of a gable roof: left, right and middle pieces, no hole.

@@ -237,16 +237,21 @@ impl Rd {
                 }
             };
             let house = pg.is_some_and(|g| g.typology == Typology::House);
-            if kind == RoomKind::Hall && !inside_apartment && !house {
+            // index the value, not the map: a missing key reads as null
+            let area = self.num_at(&format!("{p}.area"), &r["area"], 0.0, &ROOM_AREA);
+            // outside a dwelling a hall is a public room (auditorium, nave, reading hall); a
+            // small one is the entrance hall the corridor already is
+            let public_min = super::rules::rule("room.min_area_public_hall");
+            if kind == RoomKind::Hall && !inside_apartment && !house && !r["area"].is_null() && area < public_min {
                 self.bad(
                     &format!("{p}.kind"),
-                    "a hall is only asked in a house or inside an apartment; the corridor is \
-                     built",
+                    format!(
+                        "a hall outside a house or an apartment is a public hall of at least {public_min} m2 \
+                         (room.min_area_public_hall); a smaller one is the corridor, which is built"
+                    ),
                 );
                 continue;
             }
-            // index the value, not the map: a missing key reads as null
-            let area = self.num_at(&format!("{p}.area"), &r["area"], 0.0, &ROOM_AREA);
             if r["area"].is_null() {
                 let msg = format!("required, m2 in {}", ROOM_AREA.range());
                 self.bad(&format!("{p}.area"), msg);
@@ -600,7 +605,7 @@ pub fn parse_spec_with(v: &J, pg: Option<&Programme>) -> Result<ProjectSpec, Spe
             rd.bad("storey_heights", why);
         }
     }
-    let fp = read_footprint(&mut rd, v, &d);
+    let mut fp = read_footprint(&mut rd, v, &d);
     let grid = rd.num(&v["grid"], GRID.default.unwrap_or(GRID.max), &GRID);
     let (mut stair_width, mut max_riser) = read_stair(&mut rd, v, &d);
     // a country riser limit lowers the default; a riser the brief names is its own choice
@@ -756,6 +761,11 @@ pub fn parse_spec_with(v: &J, pg: Option<&Programme>) -> Result<ProjectSpec, Spe
         return Err(SpecError(rd.issues));
     }
     let mut notes = rd.notes;
+    if plate.is_none() && apartments.is_empty() {
+        if let Some(n) = dominant_bay(&mut fp, &rooms, &ground_rooms, d.band, rules.get("layout.dominant_share")) {
+            notes.push(n);
+        }
+    }
     let template = tpl.as_deref().filter(|t| !Typology::NAMES.contains(&t.name.as_str()));
     if let Some(t) = template.filter(|t| !t.note().is_empty()) {
         notes.insert(0, t.note());
@@ -955,6 +965,27 @@ fn read_storey_heights(rd: &mut Rd, v: &J, floors: u32, floor_height: f64, tall_
         .collect();
     out.resize(floors as usize, floor_height);
     out
+}
+
+/// A room past `layout.dominant_share` of the floor, or past what one of the two bands holds
+/// along the width, cannot stand in a two-band plan: the plan turns deep, one band of the
+/// typology's depth on the south facade and the room in the open bay behind. The note says so.
+fn dominant_bay(fp: &mut Footprint, rooms: &[RoomReq], ground: &[RoomReq], band: f64, share: f64) -> Option<String> {
+    let (w, dp) = (fp.width?, fp.depth?);
+    if fp.hall_depth.is_some() {
+        return None;
+    }
+    let big = rooms.iter().chain(ground).map(|r| r.area).fold(0.0, f64::max);
+    let hall = dp - band - fp.corridor;
+    if (big <= share * w * dp && big <= w * fp.band_depth) || hall < band || hall > HALL_MAX {
+        return None;
+    }
+    fp.hall_depth = Some(hall);
+    fp.band_depth = band;
+    Some(format!(
+        "a {big:.0} m2 room takes more than one band holds: one {band} m band of rooms on the south facade, \
+         the room in a {hall:.1} m open bay behind (layout.dominant_share)"
+    ))
 }
 
 fn read_footprint(rd: &mut Rd, v: &J, d: &Defaults) -> Footprint {

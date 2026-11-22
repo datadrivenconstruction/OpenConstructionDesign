@@ -33,7 +33,24 @@ pub struct SectionView {
     pub level_tool_at: Option<i64>,
     /// What an empty card asks of the shell this frame; the shell takes it.
     pub act: Option<crate::section_hud::SvAct>,
+    /// Rebuild of the drawing on a worker; the stale drawing shows meanwhile.
+    regen: Option<Regen>,
+    /// (plan level, view) whose last rebuild in place took longer than [`SLOW_REGEN`].
+    slow: Option<(Option<i64>, i64)>,
+    /// A rebuild the user cancelled: not started again until the next edit or another view.
+    skip: Option<RegenKey>,
 }
+
+/// (level of a plan or none, view, editor revision).
+type RegenKey = (Option<i64>, i64, u64);
+
+struct Regen {
+    key: RegenKey,
+    job: crate::jobs::Job<Drawing>,
+}
+
+/// A rebuild in place slower than this moves to a worker next time, s.
+pub const SLOW_REGEN: f64 = 0.15;
 
 /// Material class for fill (index into `Tokens::mat`).
 pub fn mat_class(m: &str) -> usize {
@@ -179,6 +196,33 @@ fn seg_dist(p: Pos2, a: Pos2, b: Pos2) -> f32 {
 /// The view id `show` takes for a level plan: no section has it.
 pub const PLAN_ID: i64 = 0;
 
+/// The screen draws annotations from `annot_text::items`; otherwise a deep copy every frame.
+fn screen_drawing(mut d: Drawing) -> Drawing {
+    d.prims.retain(|p| !matches!(p, ViewPrim::Anno { .. }));
+    d
+}
+
+/// A view rebuild on a worker over an in-memory copy of the model (the connection stays on
+/// this thread); the input that needs the editor is read here.
+fn spawn_regen(ed: &Editor, pl: Option<i64>, id: i64) -> Option<crate::jobs::Job<Drawing>> {
+    let copy = ed.model.worker_copy().ok()?;
+    let input = match pl {
+        Some(level) => Ok((level, level_grids(ed, level))),
+        None => Err((ed.view_spec(id)?.clone(), ed.grid_axes())),
+    };
+    Some(crate::jobs::Job::spawn("job.title.view", move |c| {
+        c.phase("job.stage.kernel", 0.0, 1.0);
+        let m = copy.open().map_err(crate::heavy::err_text)?;
+        let d = match input {
+            Ok((level, grids)) => m
+                .plan_view_ranged(level, grids)
+                .map(crate::view_panes::plan_as_drawing),
+            Err((spec, grids)) => m.section_view(&spec, &grids),
+        };
+        d.map(screen_drawing).map_err(crate::heavy::err_text)
+    }))
+}
+
 /// Grid axes of the model as the plan of `level` shows them.
 fn level_grids(ed: &Editor, level: i64) -> Vec<ddc_model::GridAxis> {
     let axes = ed.model.plan_grid_axes(level).unwrap_or_default();
@@ -200,23 +244,69 @@ impl SectionView {
     /// The drawn drawing (cached by view and model revision).
     fn drawing(&mut self, ed: &Editor, id: i64) -> Option<&Drawing> {
         let pl = self.plan_level;
-        let fresh = matches!(&self.cache, Some((l, i, r, _)) if *l == pl && *i == id && *r == ed.revision);
+        let key: RegenKey = (pl, id, ed.revision);
+        let fresh = matches!(&self.cache, Some((l, i, r, _)) if (*l, *i, *r) == key);
         if !fresh {
-            let d = match pl {
-                Some(level) => ed
-                    .model
-                    .plan_view_ranged(level, level_grids(ed, level))
-                    .ok()
-                    .map(crate::view_panes::plan_as_drawing),
-                None => ed.draw_view(id),
-            };
-            // the screen draws annotations from `annot_text::items`; otherwise a deep copy every frame
-            self.cache = d.map(|mut d| {
-                d.prims.retain(|p| !matches!(p, ViewPrim::Anno { .. }));
-                (pl, id, ed.revision, d)
-            });
+            self.rebuild(ed, key);
         }
-        self.cache.as_ref().map(|c| &c.3)
+        // a stale drawing of the same view stands in while a worker rebuilds it
+        match &self.cache {
+            Some((l, i, _, d)) if (*l, *i) == (pl, id) => Some(d),
+            _ => None,
+        }
+    }
+
+    /// Brings the drawing to `key`: in place, or on a worker for a view that was slow
+    /// (latest wins: a new key drops the old rebuild).
+    fn rebuild(&mut self, ed: &Editor, key: RegenKey) {
+        if let Some(r) = &mut self.regen {
+            if r.key == key {
+                match r.job.poll() {
+                    crate::jobs::Poll::Running => return,
+                    crate::jobs::Poll::Done(d) => self.cache = Some((key.0, key.1, key.2, d)),
+                    // the stale drawing stays
+                    _ => {}
+                }
+                self.regen = None;
+                return;
+            }
+            r.job.cancel();
+            self.regen = None;
+        }
+        if self.skip == Some(key) {
+            return;
+        }
+        let (pl, id, _) = key;
+        if ed.bg && self.slow == Some((pl, id)) {
+            if let Some(job) = spawn_regen(ed, pl, id) {
+                self.regen = Some(Regen { key, job });
+                return;
+            }
+        }
+        let t0 = web_time::Instant::now();
+        let d = match pl {
+            Some(level) => ed
+                .model
+                .plan_view_ranged(level, level_grids(ed, level))
+                .ok()
+                .map(crate::view_panes::plan_as_drawing),
+            None => ed.draw_view(id),
+        };
+        self.slow = (t0.elapsed().as_secs_f64() > SLOW_REGEN).then_some((pl, id));
+        self.cache = d.map(|d| (pl, id, key.2, screen_drawing(d)));
+    }
+
+    /// The running rebuild for the status bar.
+    pub fn regen_view(&self) -> Option<crate::jobs::JobView> {
+        self.regen.as_ref().map(|r| r.job.view(&["job.stage.kernel"], None))
+    }
+
+    /// Stops the running rebuild; the drawing on screen stays until the next edit.
+    pub fn cancel_regen(&mut self) {
+        if let Some(r) = &self.regen {
+            r.job.cancel();
+            self.skip = Some(r.key);
+        }
     }
 
     /// Tags of `level`, read again after a model edit.

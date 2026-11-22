@@ -219,6 +219,7 @@ pub fn from_geom(g: &GeomO) -> Box<dyn Oracle> {
         .or_else(|| super::shape_oracles::build(g))
         .or_else(|| super::design_oracles::build(g))
         .or_else(|| super::form_oracles::build(g))
+        .or_else(|| super::material_oracles::build(g))
         .unwrap_or_else(|| Box::new(Broken(format!("geom {}", g.kind), format!("unknown oracle kind {}", g.kind))))
 }
 

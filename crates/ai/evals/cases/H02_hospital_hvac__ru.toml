@@ -111,3 +111,5 @@ max = 0.0
 kind = "sizes_typical"
 share_max = 0.25
 errors_max = 0.0
+[[oracle.geom]]
+kind = "materials"

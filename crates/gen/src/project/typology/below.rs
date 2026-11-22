@@ -85,33 +85,40 @@ pub(crate) fn level_cells(spec: &ProjectSpec, model: &Model, below: &Below, base
     for s in want {
         for _ in 0..s.count {
             if free.is_empty() {
-                // no free rectangle left: the largest room of this class is cut in two
-                let at = out
-                    .iter()
-                    .enumerate()
-                    .filter(|(_, c)| c.kind == s.kind && c.name == s.display(ru))
-                    .max_by_key(|(_, c)| size(&rect(c)))
-                    .map(|(i, _)| i)
-                    .ok_or_else(|| {
-                        infeasible(format!(
-                            "level below {}: no room left for '{}'; widen the footprint or lower its count",
-                            b + 1,
-                            s.name.0
-                        ))
-                    })?;
-                let (a, z) = halves(rect(&out[at]));
-                out[at] = cell(a, s, ru);
-                out.push(cell(z, s, ru));
+                halve_for(&mut out, s, ru, b)?;
                 continue;
             }
             let r = free.remove(0);
             out.push(cell(r, s, ru));
         }
     }
+    // the fill the level itself asks for gets a room even when the others took every rectangle
+    if free.is_empty() && own && fill.level == Level::Below(b as u32 + 1) && fill.count > 0 {
+        halve_for(&mut out, fill, ru, b)?;
+    }
     for r in free {
         out.push(cell(r, fill, ru));
     }
     Ok(out)
+}
+
+/// No free rectangle left on level `b`: the largest room of `s`'s class is cut in two, else the
+/// largest room the level holds gives up half of itself to `s`.
+fn halve_for(out: &mut Vec<Cell>, s: &TSpace, ru: bool, b: usize) -> Result<(), GenError> {
+    let largest = |same: bool| {
+        out.iter()
+            .enumerate()
+            .filter(|(_, c)| !core(c.kind) && (!same || (c.kind == s.kind && c.name == s.display(ru))))
+            .max_by_key(|(_, c)| size(&rect(c)))
+            .map(|(i, _)| i)
+    };
+    let at = largest(true).or_else(|| largest(false)).ok_or_else(|| {
+        infeasible(format!("level below {}: no room left for '{}'; widen the footprint or lower its count", b + 1, s.name.0))
+    })?;
+    let (a, z) = halves(rect(&out[at]));
+    (out[at].x0, out[at].y0, out[at].x1, out[at].y1) = a;
+    out.push(cell(z, s, ru));
+    Ok(())
 }
 
 /// The outside walls of a level below ground hold back the soil.

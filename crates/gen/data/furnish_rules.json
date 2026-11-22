@@ -121,7 +121,7 @@
     "ward_bay": {"w": 2.5, "d": 2.1, "front": "fit.ward_bed.front", "parts": [
       {"item": "ward_bed", "at": [0.75, 0.0]},
       {"item": "locker", "at": [0.2, 0.0]},
-      {"item": "armchair", "at": [1.7, 1.2], "front": "left"}
+      {"item": "armchair", "at": [1.7, 1.2], "front": "in"}
     ]},
     "sink_unit": {"w": 1.2, "d": 0.6, "parts": [
       {"item": "counter_1200", "at": [0.0, 0.0]},

@@ -230,6 +230,9 @@ pub enum NewElem {
         edges: Vec<Option<f64>>,
         /// The roof drawn as a vault over its ring instead of sloped by its edges.
         vault: Option<RoofVault>,
+        /// One plane rising at `slope` to the left of a->b, a line off the ring; every ring edge
+        /// is then a gable.
+        eave: Option<((f64, f64), (f64, f64))>,
     },
     Stair {
         level: i64,
@@ -1658,16 +1661,28 @@ pub(super) fn resolve_group(
                 slope,
                 edges,
                 vault,
+                eave,
             } => {
                 let slopes = if edges.len() == ring.len() { edges.clone() } else { vec![*slope; ring.len()] };
-                let kind = match vault {
-                    Some(v) => RoofKind::Extrusion {
+                let kind = match (vault, eave) {
+                    (Some(v), _) => RoofKind::Extrusion {
                         a: v.a,
                         b: v.b,
                         profile: v.profile.clone(),
                         depth: v.depth,
                     },
-                    None => RoofKind::Footprint {
+                    // a plane piece on its own eave line: one unit uphill (left of a->b) it rises
+                    // by the slope's tangent
+                    (None, Some((a, b))) => {
+                        let len = (b.0 - a.0).hypot(b.1 - a.1).max(1e-12);
+                        RoofKind::Arrow {
+                            ring: ring.clone(),
+                            tail: *a,
+                            head: (a.0 - (b.1 - a.1) / len, a.1 + (b.0 - a.0) / len),
+                            rise: slope.map_or(0.0, |s| s.to_radians().tan()),
+                        }
+                    }
+                    (None, None) => RoofKind::Footprint {
                         ring: ring.clone(),
                         slopes,
                         mansard: None,
@@ -1677,7 +1692,7 @@ pub(super) fn resolve_group(
                     level: *level,
                     slab_type: type_or_first(cx, stype, "slab_type")?,
                     offset: *offset,
-                    overhang: if vault.is_some() { 0.0 } else { *overhang },
+                    overhang: if vault.is_some() || eave.is_some() { 0.0 } else { *overhang },
                     fascia: 0.0,
                     kind,
                 }));

@@ -491,7 +491,7 @@ checksum = "2af50177e190e07a26ab74f8b1efbfe2ef87da2116221318cb1c2e82baf7de06"
 
 [[package]]
 name = "bigfile-bench"
-version = "0.9.0"
+version = "1.0.0"
 dependencies = [
  "ddc-io",
  "ddc-model",
@@ -1061,7 +1061,7 @@ checksum = "be1e0bca6c3637f992fc1cc7cbc52a78c1ef6db076dbf1059c4323d6a2048376"
 
 [[package]]
 name = "ddc-ai"
-version = "0.9.0"
+version = "1.0.0"
 dependencies = [
  "base64",
  "ddc-gen",
@@ -1081,7 +1081,7 @@ dependencies = [
 
 [[package]]
 name = "ddc-app"
-version = "0.9.0"
+version = "1.0.0"
 dependencies = [
  "arboard",
  "calamine",
@@ -1125,7 +1125,7 @@ version = "1.0.0"
 
 [[package]]
 name = "ddc-calc"
-version = "0.9.0"
+version = "1.0.0"
 dependencies = [
  "ddc-fem",
  "ddc-geom",
@@ -1136,7 +1136,7 @@ dependencies = [
 
 [[package]]
 name = "ddc-cli"
-version = "0.9.0"
+version = "1.0.0"
 dependencies = [
  "ddc-app",
  "ddc-geom",
@@ -1152,11 +1152,11 @@ dependencies = [
 
 [[package]]
 name = "ddc-fem"
-version = "0.9.0"
+version = "1.0.0"
 
 [[package]]
 name = "ddc-gen"
-version = "0.9.0"
+version = "1.0.0"
 dependencies = [
  "ddc-geom",
  "ddc-model",
@@ -1168,7 +1168,7 @@ dependencies = [
 
 [[package]]
 name = "ddc-geom"
-version = "0.9.0"
+version = "1.0.0"
 dependencies = [
  "base64",
  "criterion",
@@ -1182,7 +1182,7 @@ dependencies = [
 
 [[package]]
 name = "ddc-io"
-version = "0.9.0"
+version = "1.0.0"
 dependencies = [
  "base64",
  "bytes",
@@ -1214,7 +1214,7 @@ dependencies = [
 
 [[package]]
 name = "ddc-link"
-version = "0.9.0"
+version = "1.0.0"
 dependencies = [
  "ddc-io",
  "keyring",
@@ -1229,7 +1229,7 @@ dependencies = [
 
 [[package]]
 name = "ddc-model"
-version = "0.9.0"
+version = "1.0.0"
 dependencies = [
  "ddc-geom",
  "ddc-ops",
@@ -1246,7 +1246,7 @@ dependencies = [
 
 [[package]]
 name = "ddc-ops"
-version = "0.9.0"
+version = "1.0.0"
 dependencies = [
  "schemars",
  "serde",
@@ -1256,7 +1256,7 @@ dependencies = [
 
 [[package]]
 name = "ddc-render"
-version = "0.9.0"
+version = "1.0.0"
 dependencies = [
  "bytemuck",
  "ddc-geom",
@@ -1268,7 +1268,7 @@ dependencies = [
 
 [[package]]
 name = "ddc-script"
-version = "0.9.0"
+version = "1.0.0"
 dependencies = [
  "ddc-fem",
  "ddc-geom",
@@ -1282,11 +1282,11 @@ dependencies = [
 
 [[package]]
 name = "ddc-solver"
-version = "0.9.0"
+version = "1.0.0"
 
 [[package]]
 name = "ddc-ui"
-version = "0.9.0"
+version = "1.0.0"
 dependencies = [
  "eframe",
  "egui",

@@ -436,6 +436,7 @@ param Casing material type "Steel White"
 type "2000x1000" Length=2000mm
 type "3000x1400" Length=3000mm, Width=1400mm, Height=1800mm, PortD=630mm
 type "118x55 in" Length=3000mm, Width=1400mm, Height=1800mm, PortD=630mm
+type "6000x2200" Length=6000mm, Width=2200mm, Height=2200mm, PortD=1000mm
 type "900x600" Length=900mm, Width=600mm, Height=500mm, PortD=160mm
 extrude RailFront rect(-Length / 2, -Width / 2 + 20mm, Length / 2, -Width / 2 + 120mm) z(0mm, 100mm) mat(Casing) show(3d, elev)
 extrude RailBack rect(-Length / 2, Width / 2 - 100mm, Length / 2, Width / 2) z(0mm, 100mm) mat(Casing) show(3d, elev)

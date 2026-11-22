@@ -68,3 +68,5 @@ min = 20.0
 "IfcBeam" = 1
 "IfcMember" = 1
 "IfcSlab" = 1
+[[oracle.geom]]
+kind = "materials"

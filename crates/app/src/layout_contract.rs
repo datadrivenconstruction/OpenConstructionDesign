@@ -41,6 +41,9 @@ pub(crate) struct Control {
     pub rect: egui::Rect,
     /// The widget id as the accessibility tree names it; compares with the focused id.
     pub id: u64,
+    /// Its clip hides it whole (a row scrolled out of its list): it shows nothing and is
+    /// nobody's neighbour on screen.
+    pub clipped_out: bool,
 }
 
 /// What the last frame of a dialog drew.
@@ -94,6 +97,18 @@ pub(crate) struct Line {
     pub mid: f32,
     /// Top layer at the text's centre once the frame is done.
     pub top: Option<egui::LayerId>,
+    /// An opaque fill painted after it covers the text's centre (a dialog or popup over it, a
+    /// widget's background): nobody sees it.
+    pub hidden: bool,
+}
+
+/// Opaque filled rectangles of `shape` (a window, popup or widget background), within `clip`.
+fn opaque_fills(shape: &egui::Shape, clip: egui::Rect, out: &mut Vec<egui::Rect>) {
+    match shape {
+        egui::Shape::Rect(r) if r.fill.a() == 255 => out.push(r.rect.intersect(clip)),
+        egui::Shape::Vec(v) => v.iter().for_each(|s| opaque_fills(s, clip, out)),
+        _ => {}
+    }
 }
 
 /// Visual centre line of a galley's first row painted at `pos`: baseline less half the cap
@@ -117,6 +132,7 @@ fn lines(s: &egui::Shape, (clip, view): (egui::Rect, egui::Rect), out: &mut Vec<
             view,
             mid: text_mid(&t.galley, t.pos),
             top: None,
+            hidden: false,
         }),
         egui::Shape::Vec(v) => v.iter().for_each(|x| lines(x, (clip, view), out)),
         _ => {}
@@ -269,6 +285,15 @@ pub(crate) fn pass_on(
                 r.max - egui::vec2(f32::from(m.right), f32::from(m.bottom)),
             )
         });
+        // widgets whose interact rect (the rect within its clip) is empty, by accessibility id
+        let gone: std::collections::HashSet<u64> = ctx.viewport(|v| {
+            let w = &v.prev_pass.widgets;
+            w.layer_ids()
+                .flat_map(|l| w.get_layer(l))
+                .filter(|r| !r.interact_rect.is_positive())
+                .map(|r| r.id.value())
+                .collect()
+        });
         if let Some(update) = out.platform_output.accesskit_update {
             seen.dangling = dangling_labels(&update.nodes);
             for (node_id, node) in update.nodes {
@@ -287,23 +312,32 @@ pub(crate) fn pass_on(
                     continue;
                 }
                 let label = node.label().or_else(|| node.value()).unwrap_or("").to_string();
-                seen.controls.push(Control { role: node.role(), label, rect, id: node_id.0 });
+                let clipped_out = gone.contains(&node_id.0);
+                seen.controls.push(Control { role: node.role(), label, rect, id: node_id.0, clipped_out });
             }
         }
         // egui widens every clip by this margin; without it the clip is the viewport itself
         let margin = ctx.style().visuals.clip_rect_margin;
+        // opaque fills in paint order, each with the count of texts painted before it
+        let mut fills: Vec<(usize, egui::Rect)> = vec![];
         for c in &out.shapes {
+            let before = seen.lines.len();
             texts(&c.shape, &mut seen.elided);
             all_texts(&c.shape, &mut seen.text);
             spans(&c.shape, &mut seen.spans);
             lines(&c.shape, (c.clip_rect.shrink(margin), c.clip_rect), &mut seen.lines);
+            let mut f = vec![];
+            opaque_fills(&c.shape, c.clip_rect, &mut f);
+            fills.extend(f.into_iter().filter(|r| r.is_positive()).map(|r| (before, r)));
             seen.shapes.push(c.shape.clone());
             seen.clips.push((c.shape.visual_bounding_rect(), c.clip_rect.shrink(margin)));
         }
-        // what shows at a point is the top layer there: text of a window under a dialog or
-        // a popup is hidden by it and belongs to no row of the dialog
-        for l in &mut seen.lines {
-            l.top = ctx.layer_id_at(l.rect.center());
+        // the shapes come in paint order, layers included: a text under an opaque fill painted
+        // later (a dialog over a panel) does not show and belongs to no row there
+        for (i, l) in seen.lines.iter_mut().enumerate() {
+            let c = l.rect.center();
+            l.top = ctx.layer_id_at(c);
+            l.hidden = fills.iter().any(|(n, r)| *n > i && r.contains(c));
         }
         seen.ctl_top = seen.controls.iter().map(|c| ctx.layer_id_at(c.rect.center())).collect();
     }
@@ -457,18 +491,19 @@ pub(crate) fn row_faults(p: &Probe, all_text: bool) -> Vec<String> {
         let half = if l.rows == 1 { l.rect.height() / 2.0 } else { 6.0 };
         egui::Rect::from_x_y_ranges(l.rect.x_range(), (l.mid - half)..=(l.mid + half))
     };
-    let free: Vec<&Line> = p.lines.iter().filter(|l| !in_control(l.rect)).collect();
+    // text a higher layer covers is nobody's label: the eye sees the cover there
+    let free: Vec<&Line> = p.lines.iter().filter(|l| !l.hidden && !in_control(l.rect)).collect();
     for (i, c) in p.controls.iter().enumerate() {
         let r = c.rect;
         // only text shown on the control's own layer: a window under a dialog is hidden
         let top = p.ctl_top.get(i).copied().flatten();
-        let shown = |l: &Line| top.is_none() || l.top.is_none() || l.top == top;
+        let shown = |l: &Line| !l.hidden && (top.is_none() || l.top.is_none() || l.top == top);
         // one-line controls only: list rows and cards hold several lines of their own
         let field = matches!(c.role, Role::TextInput | Role::ComboBox | Role::SpinButton);
         // toggles and sliders of a form row; buttons hold icons over captions (ribbon
         // tiles) and steppers inside fields, so they are measured by their own contract
         let line_ctl = matches!(c.role, Role::CheckBox | Role::RadioButton | Role::Slider);
-        if !(field || line_ctl) || r.height() > MAX_ROW_H {
+        if !(field || line_ctl) || r.height() > MAX_ROW_H || c.clipped_out {
             continue;
         }
         let Some(clip) = control_clip(p, r) else { continue };
@@ -534,10 +569,12 @@ pub(crate) fn row_faults(p: &Probe, all_text: bool) -> Vec<String> {
         });
         let drawn = p.canvas.iter().any(|v| v.contains(c) && l.view.contains_rect(v.shrink(1.0)));
         // a wide table scrolls sideways: text cut at the side of its viewport scrolls into view
-        // (the clip less egui's margin is what lines up with the viewport)
+        // (the clip less egui's margin is what lines up with the viewport). egui clips a
+        // sideways area only at its sides, the clip keeps its parent's top and bottom (a totals
+        // row under the rows' own vertical scroll): the text itself lies within the viewport
         let (v, k) = (l.view, l.clip);
         let wide = p.hscrolls.iter().any(|h| {
-            let within = k.top() >= h.top() - 1.0 && k.bottom() <= h.bottom() + 1.0;
+            let within = l.rect.top() >= h.top() - 1.0 && l.rect.bottom() <= h.bottom() + 1.0;
             let at_left = l.rect.left() < v.left() - 1.0 && (k.left() - h.left()).abs() <= 1.0;
             let at_right = l.rect.right() > v.right() + 1.0 && (k.right() - h.right()).abs() <= 1.0;
             within && (at_left || at_right)
@@ -549,7 +586,7 @@ pub(crate) fn row_faults(p: &Probe, all_text: bool) -> Vec<String> {
         if l.rows > 1 && !l.text.contains('\n') && number {
             bad.push(format!("number {:?} breaks over {} lines", l.text, l.rows));
         }
-        if !(number || all_text) {
+        if !(number || all_text) || l.hidden {
             continue;
         }
         let v = l.view;
@@ -575,7 +612,10 @@ pub(crate) fn dump(tag: &str, p: &Probe, bad: &[String]) -> String {
         .map(|(_, r)| r.expand(4.0))
         .collect();
     let near = |r: egui::Rect| named.iter().any(|n| n.intersects(r));
-    let mut out = vec![format!("DUMP {tag} window {:?} screen {:?}", p.inner, p.screen)];
+    let mut out = vec![format!(
+        "DUMP {tag} window {:?} screen {:?} scrolls {:?} hscrolls {:?}",
+        p.inner, p.screen, p.scrolls, p.hscrolls
+    )];
     let (mut ctl, rest): (Vec<_>, Vec<_>) = p.controls.iter().partition(|c| near(c.rect));
     ctl.extend(rest.into_iter().take(20));
     for c in ctl.into_iter().take(80) {
@@ -585,7 +625,10 @@ pub(crate) fn dump(tag: &str, p: &Probe, bad: &[String]) -> String {
     lines.extend(rest.into_iter().take(20));
     for l in lines.into_iter().take(80) {
         let (t, r, rows, mid, clip) = (cut(&l.text), l.rect, l.rows, l.mid, l.clip);
-        out.push(format!("DUMP {tag} line {t:?} {r:?} rows {rows} mid {mid:.1} clip {clip:?}"));
+        let (view, hidden) = (l.view, l.hidden);
+        out.push(format!(
+            "DUMP {tag} line {t:?} {r:?} rows {rows} mid {mid:.1} clip {clip:?} view {view:?} hidden {hidden}"
+        ));
     }
     out.join("\n")
 }
@@ -2029,7 +2072,13 @@ fn nested_clip_hides_a_row_only_when_it_scrolls() {
     let r = |x0: f32, y0: f32, x1: f32, y1: f32| egui::Rect::from_min_max((x0, y0).into(), (x1, y1).into());
     let (win, body) = (r(0.0, 0.0, 300.0, 200.0), r(0.0, 40.0, 300.0, 150.0));
     let (a, b) = (r(10.0, 100.0, 100.0, 150.0), r(10.0, 150.0, 100.0, 210.0));
-    let ctl = |label: &str, rect, id| Control { role: accesskit::Role::Button, label: label.into(), rect, id };
+    let ctl = |label: &str, rect, id| Control {
+        role: accesskit::Role::Button,
+        label: label.into(),
+        rect,
+        id,
+        clipped_out: false,
+    };
     let mut p = Probe {
         inner: Some(win),
         controls: vec![ctl("A", a, 1), ctl("B", b, 2)],
@@ -2058,6 +2107,7 @@ fn number_cut_sideways_is_excused_only_by_a_sideways_scroll() {
         view,
         mid: 68.0,
         top: None,
+        hidden: false,
     };
     let cut = |p: &Probe| row_faults(p, false).iter().any(|v| v.contains("cut sideways"));
     let mut p = Probe { lines: vec![line(380.0, 420.0)], ..Probe::default() };
@@ -2068,6 +2118,14 @@ fn number_cut_sideways_is_excused_only_by_a_sideways_scroll() {
     assert!(!cut(&p), "a number at the side of a wide table was reported");
     p.hscrolls = vec![r(100.0, 40.0, 500.0, 210.0)];
     assert!(cut(&p), "a cut short of the viewport side was excused");
+    // a row under the rows' own vertical scroll keeps the parent's clip top and bottom
+    let tall = r(100.0, 0.0, 400.0, 300.0);
+    let low = |y: f32| Line { rect: r(380.0, y, 420.0, y + 16.0), clip: tall, view: tall, mid: y + 8.0, ..line(380.0, 420.0) };
+    p.hscrolls = vec![r(100.0, 40.0, 400.0, 210.0)];
+    p.lines = vec![low(190.0)];
+    assert!(!cut(&p), "a totals row at the side of a wide table was reported");
+    p.lines = vec![low(250.0)];
+    assert!(cut(&p), "a number below the wide table was excused");
 }
 
 #[test]
@@ -4038,8 +4096,14 @@ fn ribbon_collapsed_menus(lang: Lang) {
                     .map(|c| cat.t(&c.label_key()))
                     .collect();
                 let title = cat.t(&format!("rgroup.{g}"));
+                // a collapsed group is one button named by the group, its commands drawn nowhere
+                // else; a command named like its group (Source) is no head while the group is open
+                let named = |c: &Control, l: &String| {
+                    c.label == *l || c.label.starts_with(&format!("{l} (")) || c.label.starts_with(&format!("{l} - "))
+                };
                 let Some(head) = p.controls.iter().find(|c| {
-                    c.label == title && c.rect.top() >= k::TAB_H && want.len() >= 2
+                    let shown = p.controls.iter().any(|o| o.rect != c.rect && want.iter().any(|l| named(o, l)));
+                    c.label == title && c.rect.top() >= k::TAB_H && want.len() >= 2 && !shown
                 }) else {
                     continue;
                 };
@@ -6657,7 +6721,11 @@ fn app_form_rows(lang: Lang) {
             if !p.controls.iter().any(|c| c.role == accesskit::Role::TextInput) {
                 fails.push(format!("{tag}: no field on screen"));
             }
-            fails.extend(row_faults(&p, true).into_iter().map(|b| format!("{tag}: {b}")));
+            let bad = row_faults(&p, true);
+            if !bad.is_empty() {
+                eprintln!("{}", dump(&tag, &p, &bad));
+            }
+            fails.extend(bad.into_iter().map(|b| format!("{tag}: {b}")));
         }
         sh.app.ed.selection.clear();
         sh.settle();
@@ -6837,6 +6905,57 @@ fn row_faults_catch_a_label_off_its_field_line() {
     }
 }
 
+/// Text of the app under a dialog is not the text of the dialog's field it lies under: only
+/// the same text painted on the dialog's own layer is measured, and then it is a fault.
+#[test]
+fn row_faults_skip_text_a_dialog_covers() {
+    // (text on the dialog, alpha of the dialog's background): the text counts unless it lies
+    // under the dialog's opaque fill; a see-through fill hides nothing
+    for (on_dialog, alpha) in [(false, 255u8), (true, 255), (false, 0), (false, 160)] {
+        let filled = alpha == 255;
+        let mut s = String::new();
+        let p = probe("uipol1_cover_self_test", |ctx| {
+            let field = egui::Rect::from_min_size(egui::pos2(120.0, 120.0), egui::vec2(120.0, 24.0));
+            let th = ddc_ui::theme::of(ctx);
+            let (font, ink) = (th.font(ddc_ui::theme::Role::Body), th.c("text.primary"));
+            // 3 px above the middle: off its line, still inside the field
+            let at = |h: f32| egui::pos2(field.left() + 8.0, field.center().y - h / 2.0 - 3.0);
+            egui::CentralPanel::default().show(ctx, |ui| {
+                let g = ui.painter().layout_no_wrap("Below".into(), font.clone(), ink);
+                if !on_dialog {
+                    ui.painter().galley(at(g.size().y), g, ink);
+                }
+            });
+            egui::Window::new("cover")
+                .id(egui::Id::new(("ddc.dialog", "uipol1_cover_self_test")))
+                .title_bar(false)
+                .fixed_pos(egui::pos2(100.0, 100.0))
+                // as kit::Dialog: a window fading in is not yet opaque on the probe's last pass
+                .fade_in(false)
+                .frame(match alpha {
+                    0 => egui::Frame::NONE,
+                    a => {
+                        let f = ctx.style().visuals.window_fill;
+                        let fill = egui::Color32::from_rgba_unmultiplied(f.r(), f.g(), f.b(), a);
+                        egui::Frame::window(&ctx.style()).fill(fill)
+                    }
+                })
+                .show(ctx, |ui| {
+                    let edit = egui::TextEdit::singleline(&mut s).desired_width(field.width()).frame(filled);
+                    ui.put(field, edit);
+                    let g = ui.painter().layout_no_wrap("Below".into(), font.clone(), ink);
+                    if on_dialog {
+                        ui.painter().galley(at(g.size().y), g, ink);
+                    }
+                });
+        });
+        assert!(p.lines.iter().any(|l| l.text == "Below"), "the text was not painted");
+        let off = row_faults(&p, true).iter().any(|f| f.contains("off the middle"));
+        let want = on_dialog || !filled;
+        assert_eq!(off, want, "on the dialog {on_dialog}, fill alpha {alpha}: {:?}", row_faults(&p, true));
+    }
+}
+
 /// The loading window running, failed, done and cancelled, with a long file name and a long
 /// reason: it fits both screens, every control is named, in the probe's language.
 fn qa_load_window(lang: Lang) {
@@ -6982,7 +7101,11 @@ fn app_panes(lang: Lang) {
                     }
                 }
             }
-            fails.extend(row_faults(&p, false).into_iter().map(|b| format!("{tag}: {b}")));
+            let bad = row_faults(&p, false);
+            if !bad.is_empty() {
+                eprintln!("{}", dump(&tag, &p, &bad));
+            }
+            fails.extend(bad.into_iter().map(|b| format!("{tag}: {b}")));
             if max {
                 sh.app.panes.toggle_max();
             }
@@ -7093,7 +7216,17 @@ fn status_bar_clicks(lang: Lang) {
             assert_eq!(sb_bar(&ctx), bar, "{tag}: the bar moved or changed height");
             let pid = sb_id(salt).with("popup");
             let open = egui::Popup::is_id_open(&ctx, pid);
-            assert_eq!(open, menu && enabled, "{tag}: menu open state");
+            // what lies over the control when its click went nowhere
+            let over: Vec<String> = ctx
+                .memory(|m| m.layer_ids().collect::<Vec<_>>())
+                .into_iter()
+                .filter_map(|l| {
+                    let a = egui::AreaState::load(&ctx, l.id)?;
+                    a.rect().contains(r.center()).then(|| format!("{l:?} {:?}", a.rect()))
+                })
+                .collect();
+            let at = ctx.layer_id_at(r.center());
+            assert_eq!(open, menu && enabled, "{tag}: menu open state; top {at:?}, areas {over:?}");
             if open {
                 let pr = egui::AreaState::load(&ctx, pid).expect("menu area").rect();
                 assert!(win.contains_rect(pr), "{tag}: menu {pr:?} leaves the window");

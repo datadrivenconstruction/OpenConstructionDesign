@@ -44,6 +44,49 @@ fn prop(c: &mut Ctx, name: &str, measure: &str, v: f64) -> u32 {
 }
 
 impl Ctx {
+    /// Surface colour of material `id` through IfcMaterialDefinitionRepresentation.
+    fn style(&mut self, id: u32, name: &str, rgb: u32) {
+        let ch = |sh: u32| (f64::from((rgb >> sh) & 0xFF) / 255.0).clamp(0.0, 1.0);
+        let col = self.s.add(
+            "IFCCOLOURRGB",
+            &[s(NONE), real(ch(16)), real(ch(8)), real(ch(0))],
+        );
+        let render = self.s.add(
+            "IFCSURFACESTYLERENDERING",
+            &[
+                r(col),
+                real(transparency(name)),
+                s(NONE),
+                s(NONE),
+                s(NONE),
+                s(NONE),
+                s(NONE),
+                s(NONE),
+                ".NOTDEFINED.".into(),
+            ],
+        );
+        let style = self.s.add(
+            "IFCSURFACESTYLE",
+            &[text(name), ".BOTH.".into(), list(&[render])],
+        );
+        let item = self
+            .s
+            .add("IFCSTYLEDITEM", &[s(NONE), list(&[style]), s(NONE)]);
+        let rep = self.s.add(
+            "IFCSTYLEDREPRESENTATION",
+            &[
+                r(self.mat_ctx),
+                text("Style"),
+                text("Material"),
+                list(&[item]),
+            ],
+        );
+        self.s.add(
+            "IFCMATERIALDEFINITIONREPRESENTATION",
+            &[s(NONE), s(NONE), list(&[rep]), r(id)],
+        );
+    }
+
     /// The IfcMaterial named `name`, created with its style and property sets on first use.
     pub(super) fn material(&mut self, name: &str) -> u32 {
         if let Some(i) = self.mat_ent.get(name) {
@@ -51,53 +94,25 @@ impl Ctx {
         }
         let id = self.s.add("IFCMATERIAL", &[text(name), s(NONE), s(NONE)]);
         self.mat_ent.insert(name.to_string(), id);
+        // a name without a row colour still exports the colour its library look shows in 3D
+        let look = ddc_model::material_look::resolve(name, ddc_model::material_defaults(name).color).map(|l| l.rgb);
         let Some(spec) = self.mat_spec.get(name).cloned() else {
+            if let Some(rgb) = look {
+                self.style(id, name, rgb);
+            }
             return id;
         };
         let mut skipped = 0usize;
-        if spec.color.is_some_and(|c| c > 0xFF_FFFF) {
-            skipped += 1;
-        }
-        if let Some(rgb) = spec.color.filter(|c| *c <= 0xFF_FFFF) {
-            let ch = |sh: u32| (f64::from((rgb >> sh) & 0xFF) / 255.0).clamp(0.0, 1.0);
-            let col = self.s.add(
-                "IFCCOLOURRGB",
-                &[s(NONE), real(ch(16)), real(ch(8)), real(ch(0))],
-            );
-            let render = self.s.add(
-                "IFCSURFACESTYLERENDERING",
-                &[
-                    r(col),
-                    real(transparency(name)),
-                    s(NONE),
-                    s(NONE),
-                    s(NONE),
-                    s(NONE),
-                    s(NONE),
-                    s(NONE),
-                    ".NOTDEFINED.".into(),
-                ],
-            );
-            let style = self.s.add(
-                "IFCSURFACESTYLE",
-                &[text(name), ".BOTH.".into(), list(&[render])],
-            );
-            let item = self
-                .s
-                .add("IFCSTYLEDITEM", &[s(NONE), list(&[style]), s(NONE)]);
-            let rep = self.s.add(
-                "IFCSTYLEDREPRESENTATION",
-                &[
-                    r(self.mat_ctx),
-                    text("Style"),
-                    text("Material"),
-                    list(&[item]),
-                ],
-            );
-            self.s.add(
-                "IFCMATERIALDEFINITIONREPRESENTATION",
-                &[s(NONE), s(NONE), list(&[rep]), r(id)],
-            );
+        let rgb = match spec.color {
+            Some(c) if c <= 0xFF_FFFF => Some(c),
+            Some(_) => {
+                skipped += 1;
+                None
+            }
+            None => look,
+        };
+        if let Some(rgb) = rgb {
+            self.style(id, name, rgb);
         }
         let d = spec.density.filter(|v| valid(*v) || { skipped += 1; false });
         let k = spec.conductivity.filter(|v| valid(*v) || { skipped += 1; false });
@@ -203,6 +218,37 @@ mod tests {
         assert!(t.contains("IFCTHERMALCONDUCTIVITYMEASURE(0.5)"));
         assert!(t.contains("IFCSPECIFICHEATCAPACITYMEASURE(900.)"));
         assert_eq!(count(&t, "IFCMATERIALPROPERTIES"), 2);
+    }
+
+    #[test]
+    fn a_material_without_a_row_colour_exports_its_library_look_and_reimports_without_one() {
+        let name = "steel S355";
+        let mut m = Model::open(":memory:").unwrap();
+        let lv = m.add_level("L1", 0.0).unwrap();
+        let layer = LayerSpec { material: name.into(), thickness: 0.2 };
+        let wt = m.add_wall_type("zz", &[layer]).unwrap();
+        m.add_wall(&WallSpec { a: (0.0, 0.0), b: (4.0, 0.0), level: lv, base_offset: 0.0, height: 3.0, wall_type: wt, offset0: None })
+            .unwrap();
+        let row = m.material(name).unwrap().spec.color;
+        let want = m.material_look(name).unwrap().expect("steel has a look").rgb;
+        let t = export_ifc(&m).unwrap();
+        check_step(&t).unwrap();
+        assert_eq!(count(&t, "IFCSTYLEDITEM"), 1, "{t}");
+        assert_eq!(count(&t, "IFCCOLOURRGB"), 1);
+        let ch = |sh: u32| f64::from((want >> sh) & 0xFF) / 255.0;
+        let got = t.lines().find(|l| l.contains("=IFCCOLOURRGB(")).unwrap();
+        let nums: Vec<f64> = got
+            .split(|c: char| !(c.is_ascii_digit() || c == '.'))
+            .filter(|s| s.contains('.'))
+            .map(|s| s.parse().unwrap())
+            .collect();
+        assert_eq!(nums.len(), 3, "{got}");
+        for (n, sh) in nums.iter().zip([16, 8, 0]) {
+            assert!((n - ch(sh)).abs() < 1e-3, "{got} vs {want:06x}");
+        }
+        let mut dst = Model::open(":memory:").unwrap();
+        crate::ifc::import_ifc(&mut dst, t.as_bytes()).unwrap();
+        assert_eq!(dst.material(name).unwrap().spec.color, row, "the look colour does not become a row colour");
     }
 
     #[test]

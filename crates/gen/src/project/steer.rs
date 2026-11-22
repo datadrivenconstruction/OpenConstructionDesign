@@ -16,6 +16,12 @@ pub fn slowest_ms() -> f64 {
     super::place::slowest()
 }
 
+/// Zone searches of the calling thread the `layout.search_ms` safety cap stopped before their
+/// node budget, since it started: each such plan may differ on another machine.
+pub fn capped() -> usize {
+    super::place::capped()
+}
+
 /// Forgets every kept zone: the next build searches everything.
 pub fn forget() {
     super::place::forget()

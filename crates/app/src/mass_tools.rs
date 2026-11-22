@@ -521,6 +521,47 @@ fn commit(ed: &mut Editor, r: Rec) -> bool {
     }
 }
 
+/// `commit` as a heavy edit: the worker freezes each `(new history, old history)`
+/// exactly as `add_mass`/`update_mass` will, which fills the form caches; the frame loop then
+/// applies `r` (one undo step) without kernel work and runs `done`. False: nothing started.
+pub(crate) fn commit_heavy(
+    ed: &mut Editor,
+    r: Rec,
+    warm: Vec<(Form, Option<Form>)>,
+    done: impl FnOnce(&mut Editor) + 'static,
+) -> bool {
+    let err = tr(ed, "status.mass.error");
+    let err2 = err.clone();
+    ed.start_heavy(
+        "job.title.form",
+        false,
+        move |_| {
+            for (f, old) in &warm {
+                f.prepared(old.as_ref()).map_err(|e| match crate::heavy::err_text(e) {
+                    c if c == crate::jobs::CANCELLED => c,
+                    e => format!("{err}: {e}"),
+                })?;
+            }
+            Ok(())
+        },
+        move |ed, ()| {
+            ed.apply_ext(r).map_err(|e| format!("{err2}: {e}"))?;
+            ed.status = None;
+            done(ed);
+            Ok(())
+        },
+    )
+}
+
+/// The current history of `mass` and `f` applied to it, for `commit_heavy`.
+pub(crate) fn warm_edit(ed: &Editor, mass: i64, f: impl FnOnce(Box<Form>) -> Form) -> Vec<(Form, Option<Form>)> {
+    match ed.model.mass(mass) {
+        Ok(s) => vec![(f(Box::new(s.form.clone())), Some(s.form))],
+        // the operation reports the missing form itself
+        Err(_) => vec![],
+    }
+}
+
 /// A slab type for per-face elements: the first in the project or a new one (id, model operations).
 fn slab_type(m: &mut Model, name: &str) -> Result<(i64, usize), ddc_model::Error> {
     let id: Option<i64> = m
@@ -806,16 +847,16 @@ fn finish_plan(ed: &mut Editor) {
                 inplace: false,
                 form,
             };
-            if commit(
-                ed,
-                Rec::new("undo.mass.add", move |m| {
-                    m.add_mass(&spec)?;
-                    Ok(1)
-                }),
-            ) {
+            // extrude, revolve, sweep, loft: the kernel runs on a worker
+            let warm = vec![(spec.form.clone(), None)];
+            let r = Rec::new("undo.mass.add", move |m| {
+                m.add_mass(&spec)?;
+                Ok(1)
+            });
+            commit_heavy(ed, r, warm, |ed| {
                 ed.mass = None;
                 ed.set_mode(Mode::Select);
-            }
+            });
         }
         Err(k) => say(ed, k),
     }
@@ -1043,13 +1084,13 @@ fn edit_form(
     label: &'static str,
     f: impl Fn(Box<Form>) -> Form + 'static,
 ) {
+    // push-pull, fillet, chamfer, shell, offset: the new history is frozen on a worker
+    let warm = warm_edit(ed, mass, &f);
     let r = Rec::new(label, move |m| {
         m.edit_mass_form(mass, |b| f(b))?;
         Ok(1)
     });
-    if commit(ed, r) {
-        ed.mass = None;
-    }
+    commit_heavy(ed, r, warm, |ed| ed.mass = None);
 }
 
 fn next_material(m: Option<&str>) -> Option<&'static str> {
@@ -1416,13 +1457,20 @@ pub fn click_3d(ed: &mut Editor, el: Option<u32>) -> bool {
                         Cmd::Subtract => BoolOp::Subtract,
                         _ => BoolOp::Intersect,
                     };
-                    one(
-                        ed,
-                        rec1(
-                            "undo.mass.combine",
-                            Box::new(move |m: &mut Model| m.combine_masses(a, mass, op)),
-                        ),
+                    // the boolean runs on a worker; `combine_masses` gives `a` this history
+                    let warm = match ed.model.mass(mass) {
+                        Ok(sb) => warm_edit(ed, a, |fa| Form::Bool {
+                            op,
+                            a: fa,
+                            b: Box::new(sb.form),
+                        }),
+                        Err(_) => vec![],
+                    };
+                    let r = rec1(
+                        "undo.mass.combine",
+                        Box::new(move |m: &mut Model| m.combine_masses(a, mass, op)),
                     );
+                    commit_heavy(ed, r, warm, |ed| ed.mass = None);
                 }
                 Some(_) => {}
             }

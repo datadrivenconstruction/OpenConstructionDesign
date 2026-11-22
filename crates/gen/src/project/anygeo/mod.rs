@@ -70,14 +70,20 @@ pub(super) fn apply(spec: &ProjectSpec, p: &mut GProject) -> Result<(), GenError
         s.layout.columns = c;
     }
     let (fitted, people) = fitout::fit_out(spec, &g, p)?;
-    let curved: usize = p.storeys.iter().map(|s| curve_walls(&s.layout).len()).sum();
     let (ok, all) = usable::count(&g, p);
-    let roofs = roof::skeleton_ok(p);
     p.metrics.push(("fitted_rooms", if people == 0 { 100.0 } else { 100.0 * fitted as f64 / people as f64 }));
     p.metrics.push(("grid_form", g.form.index() as f64));
     p.metrics.push(("columns", ground as f64));
-    p.metrics.push(("curved_walls", curved as f64));
     p.metrics.push(("usable_rooms", if all == 0 { 100.0 } else { 100.0 * ok as f64 / all as f64 }));
-    p.metrics.push(("roof_skeleton", roofs as f64));
     Ok(())
+}
+
+/// The form measures every project has, whichever planner drew it (a plate, a bowed bar):
+/// its curved walls and the roofs whose skeleton closes.
+pub(super) fn form_measures(p: &mut GProject) {
+    let curved: usize = p.storeys.iter().map(|s| curve_walls(&s.layout).len()).sum();
+    let roofs = roof::skeleton_ok(p);
+    p.metrics.retain(|m| m.0 != "curved_walls" && m.0 != "roof_skeleton");
+    p.metrics.push(("curved_walls", curved as f64));
+    p.metrics.push(("roof_skeleton", roofs as f64));
 }

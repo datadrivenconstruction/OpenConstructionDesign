@@ -60,9 +60,6 @@ fn plate_area(spec: &ProjectSpec) -> f64 {
     }
 }
 
-/// Most lift shafts in the core of a free-form plate.
-const PLATE_BANK: u32 = 4;
-
 /// The lift cars of the core: the brief's count, or, from `core.lift_traffic_from` storeys,
 /// the cars the passenger traffic needs in the busiest period. The building is cut into
 /// zones of `core.lift_zone_height`; a zone's cars make one round trip of the travel to its
@@ -74,13 +71,11 @@ pub(super) fn lift_plan(spec: &ProjectSpec) -> super::GLifts {
     if !spec.lift {
         return super::GLifts::default();
     }
-    let mut bank = rule("core.lift_bank_max") as u32;
-    if spec.plate.is_some() {
-        // a free plate's core stands in the middle: a longer bank leaves the floor round it ragged
-        bank = bank.min(PLATE_BANK);
-    }
+    // a plate core stands the bank in two facing rows past `core.lift_row_max`; a plate too
+    // small for it lowers this bank in `build_project`, one car at a time
+    let bank = rule("core.lift_bank_max") as u32;
     if let Some(n) = spec.lifts {
-        // the brief reader refuses a count above the bank; only a plate's shorter bank cuts it
+        // the brief reader refuses a count above the bank; only a plate's lowered bank cuts it
         let issues = (n > bank).then(|| format!("the plate's core holds {bank} of the {n} cars asked")).into_iter().collect();
         return super::GLifts { cars: n.min(bank), wanted: n, issues, ..none };
     }
@@ -130,10 +125,47 @@ pub(super) fn lift_plan(spec: &ProjectSpec) -> super::GLifts {
     }
 }
 
-/// The room of the lift bank: one car's room, then a shaft and a wall for each further car.
-pub(super) fn lift_room_for(spec: &ProjectSpec) -> Mm {
-    let extra = i64::from(lift_plan(spec).cars.max(1) - 1) + i64::from(service_bays(spec));
+/// The room of the lift bank in a band `ds` deep: one car's room, then a shaft and a wall for
+/// each further car of the longer row and for each service bay.
+pub(super) fn lift_room_for(spec: &ProjectSpec, ds: Mm) -> Mm {
+    bank_room(spec, ds, service_bays(spec))
+}
+
+/// The lift room of the bank in a room `ds` deep with `bays` service bays beside it.
+pub(super) fn bank_room(spec: &ProjectSpec, ds: Mm, bays: u32) -> Mm {
+    let row = bank_rows(spec, ds).0;
+    let extra = i64::from(row - 1) + i64::from(bays);
     lift_room() + extra * (mm(lift_shaft(spec).0) + rule_mm("core.lift_wall"))
+}
+
+/// The bank in a lift room `ds` deep, for every core shape: the length of the longer row, and
+/// each car's place in its row and whether it stands in the far row, facing the first.
+pub(super) fn bank_rows(spec: &ProjectSpec, ds: Mm) -> (u32, Vec<(u32, bool)>) {
+    let cars = if spec.lift { lift_plan(spec).cars.max(1) } else { 0 };
+    let row = cars.max(1).div_ceil(if spec.lift { lift_rows(spec, ds) } else { 1 });
+    (row, (0..cars).map(|i| if i < row { (i, false) } else { (i - row, true) }).collect())
+}
+
+/// Whether the bank has more cars than one row takes (`core.lift_row_max`).
+pub(super) fn lift_row_full(spec: &ProjectSpec) -> bool {
+    spec.lift && lift_plan(spec).cars.max(1) > rule("core.lift_row_max") as u32
+}
+
+/// Band depth two facing rows need: each row's shaft off its wall, and the lobby between them
+/// `core.lift_lobby_facing` car depths deep.
+pub(super) fn facing_depth(spec: &ProjectSpec) -> Mm {
+    let car = super::lift::bank_class(super::lift::serve_height(spec)).car.1;
+    mm(2.0 * (lift_inset() + lift_shaft(spec).1) + rule("core.lift_lobby_facing") * car)
+}
+
+/// Rows of the lift bank in a band `ds` deep: two facing rows past one row's cars when the
+/// band holds them and their lobby, else one.
+pub(super) fn lift_rows(spec: &ProjectSpec, ds: Mm) -> u32 {
+    if lift_row_full(spec) && ds >= facing_depth(spec) {
+        2
+    } else {
+        1
+    }
 }
 
 /// Service shaft bays the typology asks for beside the lift bank; they stand in the lift room,
@@ -260,9 +292,18 @@ enum PlanKind {
     Deep,
 }
 
-/// Rooms of the deep bay: the open halls, and storage big enough to be a warehouse hall.
+/// Rooms of the deep bay: the open halls, and any room of `room.hall_area` or more that needs
+/// no window (a gallery, an atrium, a nave, a warehouse store) and is not a wet room.
 fn bay_room(r: &RoomReq) -> bool {
-    r.kind.open_hall() || (r.kind == RoomKind::Storage && r.area >= hall_area())
+    let dry = !matches!(r.kind, RoomKind::Bath | RoomKind::Wc);
+    r.kind.open_hall() || (!r.kind.habitable() && dry && r.area >= hall_area())
+}
+
+/// A room the open bay may take when the band runs out of length: dry, no daylight of its
+/// own needed, and not the way in.
+fn bay_fit(r: &RoomReq) -> bool {
+    use RoomKind::*;
+    !is_wet(r.kind) && (r.kind.open_hall() || !r.kind.habitable()) && !matches!(r.kind, Corridor | Stair | Lift | Lobby)
 }
 
 impl Unit {
@@ -333,7 +374,9 @@ fn stack(small: &[RoomReq], d: Mm, ru: bool) -> Unit {
     let mut pieces = vec![];
     let mut v = 0;
     for (i, r) in small.iter().enumerate() {
-        let last = i + 1 == small.len() && filler == 0.0;
+        // a store behind a WC or bath would be reached through it, its door swing over the
+        // fixture zone: the wet room takes the spare depth instead
+        let last = i + 1 == small.len() && (filler == 0.0 || is_wet(r.kind));
         let v1 = if last { d } else { v + mm(r.area / w) };
         pieces.push(Piece {
             u0: 0,
@@ -472,11 +515,40 @@ fn apartment_unit(a: &ApartmentReq, d: Mm, ru: bool) -> Result<Unit, GenError> {
         }
         hi = up;
     }
-    let him = mm(hi);
-    let df = dm - m(him);
     let mut facade = facade;
     // the largest room over the inner rooms of the left end, so it still meets the hall
     facade.sort_by(|x, y| y.area.total_cmp(&x.area));
+    // or the two largest at the two ends, the others over the hall between them
+    let mut ends = facade.clone();
+    if ends.len() > 2 {
+        let second = ends.remove(1);
+        ends.push(second);
+    }
+    // the inner zone deepens, its rooms narrowing, until every room with a window meets the
+    // hall over a door
+    let step = 0.05;
+    let tries = ((top - hi) / step).floor().max(0.0) as usize;
+    let first = apartment_lay(&facade, &inner, &hall_name, d, hi);
+    let lay = (0..=tries)
+        .flat_map(|i| [&facade, &ends].map(|f| (f, if i == tries { top } else { hi + step * i as f64 })))
+        .map(|(f, h)| apartment_lay(f, &inner, &hall_name, d, h))
+        .find(|l| l.2)
+        .unwrap_or(first);
+    let (pieces, len, _) = lay;
+    Ok(Unit {
+        len,
+        apartment: true,
+        wet: false,
+        hall: false,
+        pieces,
+    })
+}
+
+/// One apartment laid with inner depth `hi`: its pieces, its length, and whether every room
+/// with a window meets the hall over a door's run.
+fn apartment_lay(facade: &[&RoomReq], inner: &[&RoomReq], hall_name: &str, d: Mm, hi: f64) -> (Vec<Piece>, Mm, bool) {
+    let him = mm(hi);
+    let df = m(d) - m(him);
     let mut pieces = vec![];
     let mut u = 0;
     let n = facade.len();
@@ -494,7 +566,7 @@ fn apartment_unit(a: &ApartmentReq, d: Mm, ru: bool) -> Result<Unit, GenError> {
         });
         u = u1;
     }
-    let left = inner.len().div_ceil(2);
+    let (inner, left) = ends_split(inner, &pieces, hi);
     let mut u = 0;
     for r in &inner[..left] {
         let u1 = u + mm(r.area / hi);
@@ -514,16 +586,56 @@ fn apartment_unit(a: &ApartmentReq, d: Mm, ru: bool) -> Result<Unit, GenError> {
         v0: 0,
         v1: him,
         kind: RoomKind::Hall,
-        name: hall_name,
+        name: hall_name.to_string(),
         asked: None,
     });
-    Ok(Unit {
-        len,
-        apartment: true,
-        wet: false,
-        hall: false,
-        pieces,
-    })
+    let need = mm(rule("room.door")) + 2 * rule_mm("facade.edge_clear");
+    let (h0, h1) = (hall0, u);
+    // the hall's own entrance from the corridor is a door between owners, the wide one
+    let entry = mm(rule("room.door_wide")) + 2 * rule_mm("facade.edge_clear");
+    let ok = h1 - h0 >= entry && pieces.iter().filter(|p| p.v1 == d).all(|p| p.u1.min(h1) - p.u0.max(h0) >= need);
+    (pieces, len, ok)
+}
+
+/// The inner rooms of an apartment split between its two ends: under each end room they
+/// leave it a door's run (door and its edge clearances) onto the hall, so every room with a
+/// window reaches the hall. The most even split that does; half and half when none does.
+/// Gives the rooms left end first, right end next, and the number at the left.
+fn ends_split<'a>(inner: &[&'a RoomReq], facade: &[Piece], hi: f64) -> (Vec<&'a RoomReq>, usize) {
+    let half = (inner.to_vec(), inner.len().div_ceil(2));
+    let (Some(f0), Some(f1)) = (facade.first(), facade.last()) else { return half };
+    if inner.len() > 12 {
+        return half;
+    }
+    let need = mm(rule("room.door")) + 2 * rule_mm("facade.edge_clear");
+    let w: Vec<Mm> = inner.iter().map(|r| mm(r.area / hi)).collect();
+    let (hl, hr) = (w[..half.1].iter().sum::<Mm>(), w[half.1..].iter().sum::<Mm>());
+    if (hl == 0 || hl + need <= f0.u1 - f0.u0) && (hr == 0 || hr + need <= f1.u1 - f1.u0) {
+        return half;
+    }
+    let mut best: Option<(usize, Mm, u32)> = None;
+    for mask in 0..(1u32 << inner.len()) {
+        let (mut l, mut r) = (0, 0);
+        for (i, wi) in w.iter().enumerate() {
+            if mask >> i & 1 == 1 {
+                l += wi;
+            } else {
+                r += wi;
+            }
+        }
+        let fits = (l == 0 || l + need <= f0.u1 - f0.u0) && (r == 0 || r + need <= f1.u1 - f1.u0);
+        let nl = mask.count_ones() as usize;
+        let key = (nl.abs_diff(inner.len() - nl), (l - r).abs());
+        if fits && best.is_none_or(|b| key < (b.0, b.1)) {
+            best = Some((key.0, key.1, mask));
+        }
+    }
+    let Some((_, _, mask)) = best else { return half };
+    let pick = |side: u32| inner.iter().enumerate().filter(move |(i, _)| (mask >> i & 1) == side).map(|(_, r)| *r);
+    let mut out: Vec<&RoomReq> = pick(1).collect();
+    let n = out.len();
+    out.extend(pick(0));
+    (out, n)
 }
 
 fn inner_piece(r: &RoomReq, u0: Mm, u1: Mm, him: Mm) -> Piece {
@@ -685,7 +797,9 @@ fn fit_strip(spec: &ProjectSpec) -> Result<(StairFit, Mm, Mm), GenError> {
     best.ok_or_else(|| infeasible("no stair orientation"))
 }
 
-fn programs(spec: &ProjectSpec, d: Mm, plan: PlanKind) -> Result<Vec<Program>, GenError> {
+/// `dn`: depth of the open bay of a deep plan.
+/// `room`: the band length the footprint leaves beside the core of a deep plan.
+fn programs(spec: &ProjectSpec, d: Mm, plan: PlanKind, dn: Mm, room: Mm) -> Result<Vec<Program>, GenError> {
     let mut lists: Vec<Vec<Unit>> = vec![];
     if plan == PlanKind::Deep {
         if spec.typology == Typology::ApartmentSection {
@@ -694,10 +808,19 @@ fn programs(spec: &ProjectSpec, d: Mm, plan: PlanKind) -> Result<Vec<Program>, G
                  bands, so keep the depth within them",
             ));
         }
-        let dn = mm(spec.hall_depth.unwrap_or(0.0));
         for k in 0..spec.floors as usize {
-            let (bay, rest): (Vec<RoomReq>, Vec<RoomReq>) =
-                spec.storey_rooms(k).into_iter().partition(bay_room);
+            let (mut bay, mut rest): (Vec<RoomReq>, Vec<RoomReq>) =
+                expand(&spec.storey_rooms(k)).into_iter().map(|r| RoomReq { count: 1, ..r }).partition(bay_room);
+            // a band longer than the footprint hands its largest rooms that need no facade of
+            // their own to the bay, which has the length the band lacks
+            let long = |rest: &[RoomReq]| room_units(rest, d, spec).iter().map(|u| u.len).sum::<Mm>() > room;
+            while long(&rest) {
+                let Some(i) = (0..rest.len()).filter(|&i| bay_fit(&rest[i])).max_by(|&a, &b| rest[a].area.total_cmp(&rest[b].area))
+                else {
+                    break;
+                };
+                bay.push(rest.remove(i));
+            }
             let mut units = room_units(&rest, d, spec);
             for r in expand(&bay) {
                 let mut u = full_depth(&r, dn);
@@ -1147,6 +1270,25 @@ fn grids(f: &Frame, grid: f64, ru: bool) -> Vec<GGrid> {
     out
 }
 
+fn turned(p: &mut (f64, f64), q: u8, o: (f64, f64)) {
+    let (x, y) = *p;
+    let (x, y) = match q % 4 {
+        0 => (x, y),
+        1 => (-y, x),
+        2 => (-x, -y),
+        _ => (y, -x),
+    };
+    *p = (x + o.0, y + o.1);
+}
+
+/// Moves the plan points of a storey's fit-out records as [`place`] moves its layout.
+pub(super) fn place_fit(fit: &mut [super::RoomFit], quarter: u8, o: (f64, f64)) {
+    for f in fit {
+        f.stack.iter_mut().for_each(|p| turned(p, quarter, o));
+        f.turning.iter_mut().for_each(|(p, _)| turned(p, quarter, o));
+    }
+}
+
 pub(super) fn shift(l: &mut GLayout, o: (f64, f64)) {
     place(l, 0, o);
 }
@@ -1155,16 +1297,7 @@ pub(super) fn shift(l: &mut GLayout, o: (f64, f64)) {
 /// it by `o`. Every point and angle of every element goes along.
 pub(super) fn place(l: &mut GLayout, quarter: u8, o: (f64, f64)) {
     let q = quarter % 4;
-    let s = |p: &mut (f64, f64)| {
-        let (x, y) = *p;
-        let (x, y) = match q {
-            0 => (x, y),
-            1 => (-y, x),
-            2 => (-x, -y),
-            _ => (y, -x),
-        };
-        *p = (x + o.0, y + o.1);
-    };
+    let s = |p: &mut (f64, f64)| turned(p, q, o);
     let turn = f64::from(q) * std::f64::consts::FRAC_PI_2;
     for c in &mut l.columns {
         s(&mut c.at);
@@ -1279,8 +1412,8 @@ fn frame(
             core += spare;
         }
     }
-    let lift_w = if core >= lift_room_for(spec) + min_fill() {
-        lift_room_for(spec)
+    let lift_w = if core >= lift_room_for(spec, ds) + min_fill() {
+        lift_room_for(spec, ds)
     } else {
         core
     };
@@ -1346,34 +1479,29 @@ fn shared_parts(spec: &ProjectSpec, f: &Frame, fit: Option<&StairFit>, ds: Mm, p
         let y1 = (target.1 + bd + hole).min(ry1);
         (stair, crate::layout::rect(x0, y0, x1, y1))
     }).collect());
-    let cars = if spec.lift { lift_plan(spec).cars.max(1) } else { 0 };
-    let (sw, pitch) = (lift_shaft(spec).0, lift_shaft(spec).0 + rule("core.lift_wall"));
-    // the bank centred in the lift room, its shafts a wall apart
+    let (sw, sd, pitch) = (lift_shaft(spec).0, lift_shaft(spec).1, lift_shaft(spec).0 + rule("core.lift_wall"));
+    // the bank centred in the lift room, its shafts a wall apart; past one row's cars a second
+    // row stands at the far side of the room and faces the first across the lobby
     let nb = plan.len() as u32;
-    let span = sw + pitch * f64::from(cars.max(1) - 1 + nb);
-    let at = |i: u32| {
+    let (row, places) = bank_rows(spec, f.ds);
+    let span = sw + pitch * f64::from(row - 1 + nb);
+    let at = |i: u32, far: bool| {
         let (x0, y0) = match f.bay {
-            Some(s0) => (m(f.k0 + s0) + (m(f.k1 - f.k0 - s0) - span) / 2.0, lift_inset()),
-            None => (m(f.k0) + (m(f.lift_w) - span) / 2.0, m(f.ds + f.c) + lift_inset()),
+            // the lift room follows the stair on the south facade; the first row at its back
+            Some(s0) => (
+                m(f.k0 + s0) + (m(f.k1 - f.k0 - s0) - span) / 2.0,
+                if far { m(f.ds) - lift_inset() - sd } else { lift_inset() },
+            ),
+            None => (
+                m(f.k0) + (m(f.lift_w) - span) / 2.0,
+                if far { m(f.d) - lift_inset() - sd } else { m(f.ds + f.c) + lift_inset() },
+            ),
         };
         let x = x0 + pitch * f64::from(i);
-        crate::layout::rect(x, y0, x + sw, y0 + lift_shaft(spec).1)
+        crate::layout::rect(x, y0, x + sw, y0 + sd)
     };
-    let bays = (0..nb).map(|i| (at(cars.max(1) + i), plan[i as usize].clone())).collect();
-    let shafts = (0..cars)
-        .map(|i| {
-            let (x0, y0) = match f.bay {
-                // the lift room follows the stair on the south facade; the shaft at its back
-                Some(s0) => (
-                    m(f.k0 + s0) + (m(f.k1 - f.k0 - s0) - span) / 2.0,
-                    lift_inset(),
-                ),
-                None => (m(f.k0) + (m(f.lift_w) - span) / 2.0, m(f.ds + f.c) + lift_inset()),
-            };
-            let x = x0 + pitch * f64::from(i);
-            crate::layout::rect(x, y0, x + sw, y0 + lift_shaft(spec).1)
-        })
-        .collect();
+    let bays = (0..nb).map(|i| (at(row + i, false), plan[i as usize].clone())).collect();
+    let shafts = places.iter().map(|&(i, far)| at(i, far)).collect();
     Shared {
         stairs,
         shafts,
@@ -1448,7 +1576,9 @@ fn bar_or_free(spec: &ProjectSpec) -> Result<GProject, GenError> {
 fn build_ruled(spec: &ProjectSpec) -> Result<GProject, GenError> {
     let mut base = spec.clone();
     base.origin = (0.0, 0.0);
-    base.design = super::Design::default();
+    // the plan is drawn plain and the design applied after, but the structure is the plan's
+    // own: columns and wall assemblies are set while the storeys are drawn
+    base.design = super::Design { structure: spec.design.structure, ..super::Design::default() };
     let d = &spec.design;
     let mut p = if spec.pins.is_some() {
         super::plate::build_free(&base)?
@@ -1495,6 +1625,7 @@ fn build_ruled(spec: &ProjectSpec) -> Result<GProject, GenError> {
     if spec.plate.is_some() {
         super::anygeo::apply(spec, &mut p)?;
     }
+    super::anygeo::form_measures(&mut p);
     super::services(spec, &mut p);
     super::protect(spec, &mut p);
     super::coord::apply(spec, &mut p);
@@ -1502,7 +1633,68 @@ fn build_ruled(spec: &ProjectSpec) -> Result<GProject, GenError> {
     super::railings::apply(spec, &mut p)?;
     // after the guards, which follow the whole roof edge
     super::fire::open_roof(&mut p);
+    fit_slab_holes(&mut p);
     Ok(p)
+}
+
+/// A safety net, not a placement: every slab hole lies on its slab. One across the slab's edge
+/// notches the outline instead (the part past the edge is open air), one wholly off it is
+/// dropped; each is counted and named in the services issues (floor, hole, what it opens for),
+/// so the element that put it there can be fixed.
+fn fit_slab_holes(p: &mut GProject) {
+    use ddc_geom::{poly, v2};
+    let (mut notched, mut dropped) = (0.0, 0.0);
+    let mut log = vec![];
+    let levels = p.basements.iter_mut().enumerate().map(|(k, s)| (format!("basement {k}"), s));
+    let levels: Vec<(String, &mut PStorey)> = levels.chain(p.storeys.iter_mut().enumerate().map(|(k, s)| (format!("floor {k}"), s))).collect();
+    for (name, s) in levels {
+        let l = &mut s.layout;
+        if l.slab.len() < 3 {
+            continue;
+        }
+        let mut keep = vec![];
+        for (i, h) in std::mem::take(&mut l.slab_holes).into_iter().enumerate() {
+            if h.iter().all(|q| crate::check::inside(&l.slab, *q)) {
+                keep.push(h);
+                continue;
+            }
+            let v = |r: &[(f64, f64)]| r.iter().map(|q| v2(q.0, q.1)).collect::<Vec<_>>();
+            let n = h.len() as f64;
+            let c = h.iter().fold((0.0, 0.0), |a, q| (a.0 + q.0 / n, a.1 + q.1 / n));
+            let what = if let Some(sh) = l.shafts.iter().find(|sh| crate::check::inside(&h, ring_centre(&sh.ring)) || crate::check::inside(&sh.ring, c)) {
+                format!("{:?} shaft", sh.kind)
+            } else if l.stairs.iter().any(|st| crate::check::inside(&h, st.origin)) {
+                "a stair".to_string()
+            } else {
+                l.rooms.iter().find(|r| crate::check::inside(&r.polygon, c)).map_or("a riser or opening off every room".to_string(), |r| format!("a riser or opening in {}", r.name))
+            };
+            let off = poly::subtract(&[v(&h)], &[v(&l.slab)]).map(|x| poly::pieces_area(&x));
+            let on = poly::area(&v(&h)).abs() - off.unwrap_or(0.0);
+            let cut = poly::subtract(&[v(&l.slab)], &[v(&h)]);
+            let done = match cut {
+                Some(parts) if on > 1e-6 && parts.len() == 1 && parts[0].1.is_empty() => {
+                    l.slab = parts[0].0.iter().map(|q| (q.x, q.y)).collect();
+                    notched += 1.0;
+                    "notched into the slab's outline"
+                }
+                _ => {
+                    dropped += 1.0;
+                    "dropped"
+                }
+            };
+            log.push(format!("{name}: slab hole {i} for {what} at ({:.2}, {:.2}) is not wholly on the slab: {done}", c.0, c.1));
+        }
+        l.slab_holes = keep;
+    }
+    if notched + dropped > 0.0 {
+        p.metrics.extend([("slab_holes_notched", notched), ("slab_holes_dropped", dropped)]);
+        p.services.issues.extend(log);
+    }
+}
+
+fn ring_centre(r: &[(f64, f64)]) -> (f64, f64) {
+    let n = r.len().max(1) as f64;
+    r.iter().fold((0.0, 0.0), |a, q| (a.0 + q.0 / n, a.1 + q.1 / n))
 }
 
 /// One double-loaded bar at the origin, the plan kind chosen by the brief.
@@ -1583,6 +1775,23 @@ fn core_with_ends(spec: &ProjectSpec, vent: bool) -> Result<GProject, GenError> 
 fn build_plan(spec: &ProjectSpec, plan: PlanKind, vent: bool, ends: usize) -> Result<GProject, GenError> {
     let narrow = plan == PlanKind::Narrow;
     let (mut ds, mut c) = (mm(spec.band_depth), mm(spec.corridor));
+    let mut hall = mm(spec.hall_depth.unwrap_or(0.0));
+    // a bank past one row's cars faces a second row across its lobby: the lift band deepens to
+    // hold both where the footprint leaves it free (a derived depth, or the open bay behind)
+    if lift_row_full(spec) && !narrow {
+        let need = facing_depth(spec);
+        let most = super::rules::def("depth.band").map_or(12.0, |d| d.max);
+        if need > ds && need <= mm(most) {
+            match plan {
+                PlanKind::Deep if hall - (need - ds) >= need => {
+                    hall -= need - ds;
+                    ds = need;
+                }
+                PlanKind::Core if spec.depth.is_none() => ds = need,
+                _ => {}
+            }
+        }
+    }
     let mut strip = None;
     let mut end_room = 0;
     let (fit, mut core) = if narrow {
@@ -1603,12 +1812,12 @@ fn build_plan(spec: &ProjectSpec, plan: PlanKind, vent: bool, ends: usize) -> Re
     if plan == PlanKind::Deep {
         // stair and lift side by side in the south band
         let sw = if spec.has_stair() { core } else { 0 };
-        core = sw + if spec.lift { lift_room_for(spec) } else { 0 };
-        bay = Some((sw, mm(spec.hall_depth.unwrap_or(0.0))));
+        core = sw + if spec.lift { lift_room_for(spec, ds) } else { 0 };
+        bay = Some((sw, hall));
     } else if spec.lift && !narrow {
-        core = core.max(lift_room_for(spec));
+        core = core.max(lift_room_for(spec, ds));
     }
-    let progs = programs(spec, ds, plan)?;
+    let progs = programs(spec, ds, plan, hall, spec.width.map_or(Mm::MAX, |w| mm(w) - core))?;
     let end = |i: usize| if plan == PlanKind::Core && ends > i { end_room } else { 0 };
     let f = frame(spec, &progs, core, (ds, c), strip, bay, (end(0), end(1)))?;
     let have = match f.bay {
@@ -1642,8 +1851,9 @@ fn build_plan(spec: &ProjectSpec, plan: PlanKind, vent: bool, ends: usize) -> Re
     let rules = super::fit_rules::rules_for(spec.furnish.as_ref())
         .map_err(|e| infeasible(format!("fit-out rules: {}", e.join("; "))))?;
     let mut storeys = Vec::with_capacity(n);
+    let mut dwell = std::collections::HashSet::new();
     for (k, cells) in floors.into_iter().enumerate() {
-        storeys.push(storey(spec, &f, &sh, &cells, (k, cuts[k].as_slice()), digits, &rules)?);
+        storeys.push(storey(spec, &f, &sh, &cells, (k, cuts[k].as_slice()), digits, (&rules, &mut dwell))?);
     }
     let (w, d) = (m(f.w), m(f.d));
     let rooms: usize = storeys.iter().map(|s| s.rooms.len()).sum();
@@ -1691,7 +1901,7 @@ fn storey(
     cells: &[Cell],
     (k, cuts): (usize, &[Mm]),
     digits: usize,
-    rules: &super::fit_rules::Rules,
+    (rules, dwell): (&super::fit_rules::Rules, &mut std::collections::HashSet<(u32, usize)>),
 ) -> Result<PStorey, GenError> {
     let n = spec.floors as usize;
     let h = spec.storey_height(k);
@@ -1734,7 +1944,7 @@ fn storey(
             keep: vec![],
         })
         .collect();
-    let (fixtures, fit) = super::furnish::furnish(&l, &rooms, h, spec.typology, rules);
+    let (fixtures, fit) = super::furnish::furnish(&l, &rooms, h, spec.typology, rules, dwell);
     l.fixtures = fixtures;
     let caps = [
         (l.walls.len(), slots::OPENINGS - slots::WALLS, "walls"),
@@ -1788,5 +1998,37 @@ fn roof_of(spec: &ProjectSpec, w: f64, d: f64) -> PRoof {
         edges,
         vault: None,
         lift: 0.0,
+        eave: None,
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    /// Every room with a window of an apartment meets its hall over a door's run, and the hall
+    /// is wide enough for its own entrance from the corridor: in towers, sections and hotels.
+    #[test]
+    fn every_window_room_of_an_apartment_meets_its_hall_over_a_door() {
+        let need = mm(rule("room.door")) + 2 * rule_mm("facade.edge_clear");
+        let mut seen = 0;
+        for t in ["residential_tower", "apartment_section", "conference_hotel"] {
+            let s = super::super::parse_spec(&serde_json::json!({"typology": t})).unwrap_or_else(|e| panic!("{t}: {e}"));
+            for depth in [s.band_depth, s.band_depth + 1.5] {
+                let d = mm(depth);
+                for a in &s.apartments {
+                    let Ok(u) = apartment_unit(a, d, false) else { continue };
+                    let hall = u.pieces.iter().find(|p| p.kind == RoomKind::Hall).expect("a hall");
+                    let entry = mm(rule("room.door_wide")) + 2 * rule_mm("facade.edge_clear");
+                    assert!(hall.u1 - hall.u0 >= entry, "{t} {} at {depth} m: hall {} mm wide for its entrance", a.name, hall.u1 - hall.u0);
+                    for p in u.pieces.iter().filter(|p| p.v1 == d) {
+                        let run = p.u1.min(hall.u1) - p.u0.max(hall.u0);
+                        assert!(run >= need, "{t} {} at {depth} m: {} meets the hall over {run} mm", a.name, p.name);
+                        seen += 1;
+                    }
+                }
+            }
+        }
+        assert!(seen > 0, "no apartment was laid");
     }
 }

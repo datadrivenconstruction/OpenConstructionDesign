@@ -1,5 +1,57 @@
 # Changelog
 
+## 1.0.0
+
+### Generator
+- Free-form plates: apartment plates with curved facades and turned terraces; the core holds the whole lift bank.
+- Apartment layout: every window room keeps a door onto its hall; the inner zone deepens until each room is reached.
+- Natural planting: tree groups, shrub drifts, botanical species and plant symbols.
+- Near trees: leaf-card crowns, branched skeletons and screen-size detail levels.
+- Hospital wing, operating theatre block, secondary school and conference hotel briefs.
+- Structural system from the brief (concrete, timber, masonry); long spans on their own columns.
+- Footbridge ramps with landings, cable-stayed bridge pylons, lattice tower bracing, perforated screens and fins with fixings.
+- Data centre unit seating step is a rule (dc.unit_step).
+
+### Modelling
+- Material look library: tinted layers with roughness, metallic and bump; one assignment rule for 3D and IFC.
+- Mesh boolean operations are faster and more robust; Cancel stops them without a fallback.
+- Arc walls regenerate locally and take a top profile; walls under dormers and mono-pitch roofs.
+- Imperial types for the hedge, lawn and shrub families; scale is an instance parameter.
+- Norm packs state their completeness and list gaps against the reference pack.
+- Full regeneration writes only the wall quantities that change.
+
+### MEP
+- Balanced ventilation: zoned air systems, supply and extract balance, large air handling units.
+- Electrical in the generator: every room of the apartment section and the school is powered.
+- Electrical circuits: wiring on plans, cable routes in 3D and in IFC.
+- Water and drainage reach every fixture in all typologies.
+- Duct and pipe routing: tees between lattice lines, clear of port straights, elbows fitted to short legs.
+- Hood ducts tee into their extract branch; risers to rooftop units stay in the roof equipment zone.
+
+### Import and export
+- IFC: equipment, lift, column and beam families get their own type objects; a removed element takes its property sets.
+- XLSX: rows created by an earlier Apply are not key-matched to their own element; the import report lists annotations a deletion removes.
+- Plan image import: door jambs and swings keep faces whole; the reported drawing angle is in the model frame.
+- Parquet export moves to parquet 60.1.
+- Project parameter values set after an import are local edits.
+
+### AI assistant
+- Tool arguments are checked against the schema before a tool runs.
+- Write receipts and a guard against mass deletion; set_material tool and look library listing.
+- Edits made while a turn runs start their replan after the turn.
+- Refusals use one typed contract.
+
+### User interface
+- Heavy edits and view rebuilds run in the background; Esc cancels them.
+- Ribbon icon set with six pickable styles, new glyphs for STEP, 3MF, glTF, STL and OBJ export.
+- Layout fixes: long labels wrap, view bars scroll sideways, icon buttons are named for assistive technology.
+- README showcase with generated buildings.
+
+### Build
+- Faster build profile and merged test binaries.
+- Tagged release builds for Windows and Linux.
+- Dependency advisories cleared before release.
+
 ## 0.9.0 - first public release
 
 Pre-1.0: the project file format and the interface can still change between releases. Keep an

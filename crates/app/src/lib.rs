@@ -107,6 +107,7 @@ pub mod imported_props;
 pub mod isolate;
 pub mod line_pick;
 pub mod jobs;
+pub mod heavy;
 pub mod links_ui;
 pub mod mass_tools;
 pub mod layer_split;

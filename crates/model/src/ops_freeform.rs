@@ -162,7 +162,9 @@ pub(super) fn lower(m: &mut Model, run: &mut Run, g: &GeoOp) -> Result<(), Fail>
             let spec = FreeformSpec {
                 level,
                 name: name.clone().unwrap_or_else(|| "Freeform".into()),
-                material: material.clone().unwrap_or_default(),
+                material: material.clone().filter(|m| !m.trim().is_empty()).unwrap_or_else(|| {
+                    crate::material_look::default_material("freeform", name.as_deref().unwrap_or("")).into()
+                }),
                 surface: s,
                 thickness: thickness.map_or(0.0, |t| t.to_m()),
                 side: side.map_or(ShellSide::Normal, side_of),
@@ -242,7 +244,10 @@ pub(super) fn lower(m: &mut Model, run: &mut Run, g: &GeoOp) -> Result<(), Fail>
             let spec = PanelSystemSpec {
                 host: hid,
                 name: name.clone().unwrap_or_else(|| "Curtain system".into()),
-                material: material.clone().unwrap_or_default(),
+                // the frames: the panes are glass whatever the material
+                material: material.clone().filter(|m| !m.trim().is_empty()).unwrap_or_else(|| {
+                    crate::material_look::default_material("mullion", name.as_deref().unwrap_or("")).into()
+                }),
                 layout: PanelLayout { cols, rows, pattern, limits, planarize: planarize.unwrap_or(0) },
                 mullion: mullion.as_ref().map_or(DEFAULT_MULLION, |x| [x.width.to_m(), x.depth.to_m()]),
                 glass: glass.map_or(DEFAULT_GLASS, |g| g.to_m()),

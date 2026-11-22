@@ -101,6 +101,9 @@ pub enum ToolAct {
     MassEdit { mass: i64, args: MassEditArgs },
     /// A component family from the mass's feature timeline.
     TimelineFamily { mass: i64, name: Option<String> },
+    /// A material's look: library class (`material_look::LOOKS` key), colour 0xRRGGBB, built-in
+    /// texture with tile size in metres. `None` keeps what the material has.
+    SetMaterial { name: String, look: Option<String>, color: Option<u32>, texture: Option<(String, Option<f64>)> },
 }
 
 /// A resolved step: every value fixed on the copy, so Apply replays exactly the preview.
@@ -117,6 +120,8 @@ pub enum ToolStep {
     AddMeasure(MeasureSpec),
     MassForm { mass: i64, edit: FormEdit },
     TimelineFamily { mass: i64, name: String },
+    /// The material row as it will be written, and its texture slot when one is set.
+    SetMaterial { spec: ddc_model::MaterialSpec, texture: Option<ddc_model::MaterialTexture> },
 }
 
 /// The model target of a plan key; `None` for a category the modify tools do not change.
@@ -281,7 +286,63 @@ pub fn run(m: &mut Model, s: &ToolStep) -> Result<Made, Error> {
         ToolStep::TimelineFamily { mass, name } => {
             Ok(vec![("comp_family", crate::elem::history::to_family(m, *mass, name)?.0)])
         }
+        ToolStep::SetMaterial { spec, texture } => {
+            m.set_material(&spec.name, spec)?;
+            if let Some(t) = texture {
+                m.set_material_texture(&spec.name, Some((t.clone(), None)))?;
+            }
+            Ok(vec![])
+        }
     }
+}
+
+/// The material row a `SetMaterial` act writes: the current row (or a new one with class
+/// values) with the look's colour, then the given colour.
+fn material_step(
+    m: &ddc_model::Model,
+    name: &str,
+    look: Option<&str>,
+    color: Option<u32>,
+    texture: Option<&(String, Option<f64>)>,
+) -> Result<ToolStep, PlanError> {
+    use ddc_model::material_look::{look_by_key, look_of, LOOKS};
+    let cur = m.material(name)?;
+    let mut spec = cur.spec.clone();
+    spec.name = name.to_string();
+    let class = match look {
+        Some(k) => Some(look_by_key(k).ok_or_else(|| {
+            let keys: Vec<&str> = LOOKS.iter().map(|l| l.key).collect();
+            PlanError(format!("look `{k}` is not in the library: {}", keys.join(", ")))
+        })?),
+        None => None,
+    };
+    if let Some(l) = class {
+        spec.color = Some(l.rgb);
+    }
+    if let Some(c) = color {
+        spec.color = Some(c);
+    }
+    let texture = match texture {
+        Some((key, scale)) => {
+            if !ddc_model::BUILTIN_TEXTURES.contains(&key.as_str()) {
+                let why = format!("texture `{key}` is not built in: {}", ddc_model::BUILTIN_TEXTURES.join(", "));
+                return Err(PlanError(why));
+            }
+            let tile = scale.unwrap_or_else(|| class.or_else(|| look_of(name)).map_or(1.0, |l| l.tile_m as f64));
+            Some(ddc_model::MaterialTexture::builtin(key, tile))
+        }
+        None => None,
+    };
+    let unchanged = cur.id != 0 && spec == cur.spec && texture.is_none();
+    if unchanged {
+        let why = format!("nothing to change: material {name} already looks so");
+        return Err(PlanError(CmdError::wire(ErrorCode::NoEffect, why)));
+    }
+    if class.is_none() && spec.color.is_none() && texture.is_none() && look_of(name).is_none() {
+        let why = format!("material {name} names no library look: give look, color or texture");
+        return Err(PlanError(why));
+    }
+    Ok(ToolStep::SetMaterial { spec, texture })
 }
 
 fn step(cx: &mut CompileCx<'_>, s: ToolStep, out: &mut Vec<ModelStep>) -> Result<(), PlanError> {
@@ -443,6 +504,9 @@ pub fn compile_tool(
             };
             let name = crate::elem::history::family_name(m, &base)?;
             ToolStep::TimelineFamily { mass: *mass, name }
+        }
+        ToolAct::SetMaterial { name, look, color, texture } => {
+            material_step(&cx.ed.model, name, look.as_deref(), *color, texture.as_ref())?
         }
     };
     step(cx, s, out)

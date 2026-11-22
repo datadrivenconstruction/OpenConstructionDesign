@@ -544,7 +544,7 @@ impl Model {
         if name.trim().is_empty() {
             return invalid("system name is empty");
         }
-        let c = kind.color();
+        let c = crate::material_look::service_rgb(name, kind);
         let rgb = (c[0] as i64) << 16 | (c[1] as i64) << 8 | c[2] as i64;
         self.op("mep_system_add", |db| {
             db.execute(

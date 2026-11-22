@@ -368,7 +368,9 @@ fn build_all(params: &J, seed: u64) -> Result<Built, GenError> {
     let inf = |e: String| GenError::Infeasible(e);
     let pat = pattern(a.choice("pattern"));
     let rs = a.rules("rules")?;
-    // the ranges of the parameters hold the largest a rule may allow; each kind keeps to its own
+    // the ranges of the parameters hold the largest a rule may allow; each kind keeps to its own.
+    // A value in range but past the kind's rule is a stated refusal naming the rule, not a bad
+    // parameter: the brief's rules may move the limit
     let (max_span, max_bays, what) = if a.choice("kind") == "cantilever_ring" {
         (rs.get("steel.ring.max_span"), rs.get("steel.ring.max_bays"), "steel.ring")
     } else {
@@ -376,7 +378,7 @@ fn build_all(params: &J, seed: u64) -> Result<Built, GenError> {
     };
     for (name, v, max) in [("span", a.num("span"), max_span), ("width", a.num("width"), max_span), ("bays", a.num("bays"), max_bays)] {
         if v > max + 1e-9 && a.raw(name).is_number() {
-            return Err(params_bad(name, format!("{v} is over the {max} the rule {what}.max_{} allows for this kind", if name == "bays" { "bays" } else { "span" })));
+            return Err(inf(format!("{name} {v} is over the {max} the rule {what}.max_{} allows for this kind", if name == "bays" { "bays" } else { "span" })));
         }
     }
     if let Some(id) = a.raw("rules").as_object().and_then(|o| o.keys().find(|id| !id.starts_with("steel."))) {
@@ -486,6 +488,12 @@ fn build_all(params: &J, seed: u64) -> Result<Built, GenError> {
         }
     };
     let hall = hangar.map(|h| h.outfit(&mut f)).transpose()?;
+    // an opening is never cut past a deck's floor: cut back or dropped, and reported
+    f.fit_decks();
+    let (cut, dropped) = f.deck_openings;
+    if cut + dropped > 0 {
+        extra.0.extend([("deck_openings_cut_back", cut as f64), ("deck_openings_dropped", dropped as f64)]);
+    }
     let errs = f.validate();
     if !errs.is_empty() {
         return Err(GenError::Infeasible(errs.join("; ")));

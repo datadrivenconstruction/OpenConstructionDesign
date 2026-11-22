@@ -483,7 +483,7 @@ fn write_layers(db: &Connection, id: i64, layers: &[TypeLayer]) -> Result<(), Er
     for (pos, l) in layers.iter().enumerate() {
         db.execute(
             "INSERT INTO wall_type_layer(wtype, pos, material, thickness) VALUES (?1,?2,?3,?4)",
-            params![id, pos as i64, l.material.trim(), l.thickness],
+            params![id, pos as i64, crate::material_look::assign(l.function.key(), &l.material, ""), l.thickness],
         )?;
         db.execute(
             "INSERT OR REPLACE INTO wall_layer_flag(wtype, pos, core, priority, function) \

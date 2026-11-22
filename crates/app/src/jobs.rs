@@ -225,7 +225,9 @@ impl<T: Send + 'static> Job<T> {
         let spawned = spawn_guarded(
             &format!("job-{title}"),
             move || {
-                let _ = tx.send(work(&c));
+                // kernel loops see the job's cancel flag
+                let tok = c.token();
+                let _ = tx.send(ddc_geom::cancel::scope(&tok, || work(&c)));
             },
             move |msg| {
                 let _ = tx_panic.send(Err(msg));

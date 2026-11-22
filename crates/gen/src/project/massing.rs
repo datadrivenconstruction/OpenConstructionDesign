@@ -4,7 +4,7 @@
 //! round corner halls that join their corridor ends; a stepped block (set back, podium or
 //! cantilever) is two variants of the bar, one above the other, their stairs on one axis.
 
-use super::build::{build_bar, build_bar_one_stair, place};
+use super::build::{build_bar, build_bar_one_stair, place, place_fit};
 use super::design::Massing;
 use super::facade;
 use super::limits::BAND_DEPTH;
@@ -187,6 +187,7 @@ fn stepped(spec: &ProjectSpec, base: &ProjectSpec, k0: usize) -> Result<GProject
         } else {
             let mut s = upper.storeys[k].clone();
             place(&mut s.layout, 0, t);
+            place_fit(&mut s.fit, 0, t);
             s.layout.grids.clear();
             if k == k0 && !cant {
                 s.layout.slab = lower_ring.clone();
@@ -384,6 +385,11 @@ fn merge(into: &mut PStorey, part: PStorey, stairs: bool, grids: bool) {
     if grids {
         l.grids.append(&mut q.grids);
     }
+    let base = into.rooms.len();
+    into.fit.extend(part.fit.into_iter().map(|mut f| {
+        f.room += base;
+        f
+    }));
     into.rooms.extend(part.rooms);
 }
 
@@ -408,6 +414,7 @@ fn wings(spec: &ProjectSpec, base: &ProjectSpec) -> Result<GProject, GenError> {
                 }
             }
             place(&mut s.layout, part.quarter, part.at);
+            place_fit(&mut s.fit, part.quarter, part.at);
             renumber_apartments(&mut s, bar.apartments * i as u32);
             for r in &mut s.rooms {
                 r.number = format!("{}{}", letters[i], r.number);
@@ -421,6 +428,8 @@ fn wings(spec: &ProjectSpec, base: &ProjectSpec) -> Result<GProject, GenError> {
         let mut s = acc.expect("a block has its bar");
         for (j, c) in corners.iter().enumerate() {
             corner_hall(&mut s, *c, w, d, k, j, spec.ru);
+            let i = s.rooms.len() - 1;
+            fit_added(spec, &mut s, i);
         }
         s.layout.slab = outline.clone();
         if let Some(h) = &court {
@@ -428,9 +437,19 @@ fn wings(spec: &ProjectSpec, base: &ProjectSpec) -> Result<GProject, GenError> {
         }
         clear_grid_ends(&mut s.layout.grids, &outline, court.as_deref());
         let h = s.height;
+        // the fit-out already stands: a new window keeps clear of its tall pieces
+        let tall: Vec<[f64; 4]> = super::fit_rules::rules_for(spec.furnish.as_ref())
+            .map(|r| {
+                s.layout
+                    .fixtures
+                    .iter()
+                    .filter_map(|f| r.item_of(f).filter(|it| it.tall).map(|it| super::fit_rules::Placed::of(it, f).body))
+                    .collect()
+            })
+            .unwrap_or_default();
         for ri in 0..s.rooms.len() {
             if s.rooms[ri].kind.habitable() && !lit(&s.layout, ri) {
-                facade::relight(&mut s.layout, ri, h);
+                facade::relight(&mut s.layout, ri, h, &tall);
             }
         }
         storeys.push(s);
@@ -475,6 +494,10 @@ fn wings(spec: &ProjectSpec, base: &ProjectSpec) -> Result<GProject, GenError> {
     };
     for (i, part) in parts.iter().enumerate() {
         add_wing_hvac(&mut p.hvac, &bar.hvac, part.quarter, part.at, &offs[i], n);
+    }
+    // each wing repeats the bar's air system: its counts and flows add up
+    for m in p.metrics.iter_mut().filter(|m| m.0.starts_with("hvac_")) {
+        m.1 *= parts.len() as f64;
     }
     if p.hvac.ducts.len() > slots::DUCTS_MAX as usize {
         return Err(infeasible(format!(
@@ -547,6 +570,19 @@ fn add_wing_hvac(into: &mut GHvac, h: &GHvac, quarter: u8, at: P, off: &[usize],
     };
     let rot = f64::from(q) * std::f64::consts::FRAC_PI_2;
     let plant0 = into.plant.len();
+    // each wing is its own set of networks, numbered on from the wings before it
+    let per = 1 + h.nets.len();
+    let net0 = if into.plant.is_empty() { 0 } else { (into.nets.len() + 1) as u8 };
+    if net0 > 0 {
+        for k in 0..per {
+            let no = usize::from(net0) + k + 1;
+            let (a, b) = if k == 0 { &h.names } else { &h.nets[k - 1] };
+            into.nets.push((renumber(a, no), renumber(b, no)));
+        }
+    } else {
+        into.names.clone_from(&h.names);
+        into.nets.clone_from(&h.nets);
+    }
     into.plant.extend(h.plant.iter().map(|f| {
         let mut f = f.clone();
         f.at = turn(f.at.0, f.at.1);
@@ -559,15 +595,21 @@ fn add_wing_hvac(into: &mut GHvac, h: &GHvac, quarter: u8, at: P, off: &[usize],
             let (x, y) = turn(p.0, p.1);
             *p = (x, y, p.2);
         });
+        d.net += net0;
         d
     }));
     into.links.extend(h.links.iter().map(|l| {
         let mut l = l.clone();
         l.fixture += if l.storey >= n { plant0 } else { off[l.storey] };
+        l.net += net0;
         l
     }));
-    into.names.clone_from(&h.names);
     into.flow = (into.flow.0 + h.flow.0, into.flow.1 + h.flow.1);
+}
+
+/// A system name with its trailing number replaced by `no`.
+fn renumber(name: &str, no: usize) -> String {
+    format!("{}{no}", name.trim_end_matches(|c: char| c.is_ascii_digit()))
 }
 
 /// Whether room `ri` has a window on its outline.
@@ -581,6 +623,30 @@ fn lit(l: &GLayout, ri: usize) -> bool {
         let c = (w.a.0 + dx * t / wl, w.a.1 + dy * t / wl);
         (0..poly.len()).any(|i| dist_to_seg(c, poly[i], poly[(i + 1) % poly.len()]) < 1e-3)
     })
+}
+
+/// Fits out room `i`, added once the storey's own rooms were fitted, by the same rules.
+fn fit_added(spec: &ProjectSpec, s: &mut PStorey, i: usize) {
+    let Ok(rules) = super::fit_rules::rules_for(spec.furnish.as_ref()) else {
+        return;
+    };
+    let (lo, hi) = bbox(&s.layout.rooms[i].polygon);
+    let (kind, owner) = (s.rooms[i].kind, s.rooms[i].owner);
+    let name = s.layout.rooms[i].name.clone();
+    let room = super::furnish::RoomIn {
+        rect: [lo.0, lo.1, hi.0, hi.1],
+        kind,
+        owner,
+        name: &name,
+        tags: spec.room_tags.of(kind, &name),
+        keep: vec![],
+    };
+    let (fx, fit) = super::furnish::furnish(&s.layout, std::slice::from_ref(&room), s.height, spec.typology, &rules, &mut Default::default());
+    s.layout.fixtures.extend(fx);
+    s.fit.extend(fit.into_iter().map(|mut f| {
+        f.room = i;
+        f
+    }));
 }
 
 /// The hall in corner `c`: its two outer walls with a window each, the entrance on the ground.

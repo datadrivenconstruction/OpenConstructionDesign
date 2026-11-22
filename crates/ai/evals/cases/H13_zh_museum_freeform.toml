@@ -48,3 +48,5 @@ kind = "ifc_wellformed"
 [[oracle.geom]]
 kind = "gaussian_curve"
 share_min = 0.3
+[[oracle.geom]]
+kind = "materials"

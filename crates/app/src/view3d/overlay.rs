@@ -558,6 +558,11 @@ pub(crate) fn panel_probe(
     let mut last = Default::default();
     for _ in 0..4 {
         last = crate::layout_contract::pass(&ctx, &mut th, id, vec![], &mut |ctx| {
+            // the category window is a dialog of its own, as the view opens it
+            if kind == PanelKind::Graphics {
+                vg_window(ctx, &mut v, id, Pos2::new(40.0, 60.0));
+                return;
+            }
             egui::Area::new(id).fixed_pos(Pos2::new(40.0, 60.0)).show(ctx, |ui| {
                 let t = ddc_ui::theme::of(ui.ctx());
                 match kind {
@@ -570,7 +575,7 @@ pub(crate) fn panel_probe(
                     PanelKind::Views => {
                         egui::Frame::menu(ui.style()).show(ui, |ui| views_body(&mut v, ui, &t));
                     }
-                    PanelKind::Graphics => vg_panel(&mut v, ui),
+                    PanelKind::Graphics => {}
                 }
             });
         });

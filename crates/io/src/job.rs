@@ -70,6 +70,11 @@ impl Progress {
         self.cancel.clone()
     }
 
+    /// The same flag as a kernel cancel token (`ddc_geom::cancel::scope`).
+    pub fn token(&self) -> ddc_geom::cancel::Token {
+        ddc_geom::cancel::Token::from_flag(self.cancel.clone())
+    }
+
     /// New stage `key` covering `[lo, hi]` of the whole job; counters, unit and detail restart.
     pub fn phase(&self, key: &'static str, lo: f32, hi: f32) {
         self.note(self.fraction());

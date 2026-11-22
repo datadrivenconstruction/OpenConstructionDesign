@@ -52,3 +52,5 @@ min = 20.0
 [[oracle.geom]]
 kind = "supports_connected"
 min = 8.0
+[[oracle.geom]]
+kind = "materials"

@@ -79,3 +79,5 @@ errors_max = 0.0
 kind = "aisle_containment"
 aisles_min = 2.0
 containment_min = 1.0
+[[oracle.geom]]
+kind = "materials"

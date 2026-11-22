@@ -144,11 +144,44 @@ pub(super) fn add_window(l: &mut GLayout, wi: usize, (lo, hi): (f64, f64), width
 }
 
 /// Gives room `ri` a window on one of its outer bays; false when none has room for one.
-pub(super) fn relight(l: &mut GLayout, ri: usize, h: f64) -> bool {
+/// The window goes nearest the bay's middle where the strip before it (1 m into the room, as
+/// the fit-out keeps it) is clear of the `tall` bodies already standing; else in the middle.
+pub(super) fn relight(l: &mut GLayout, ri: usize, h: f64, tall: &[[f64; 4]]) -> bool {
     let mut cand: Vec<Bay> = bays(l).into_iter().filter(|b| b.room == Some(ri) && !b.door).collect();
     cand.sort_by(|a, b| (b.hi - b.lo).total_cmp(&(a.hi - a.lo)));
-    cand.iter()
-        .any(|b| add_window(l, b.wall, (b.lo, b.hi), 1.5, SILL, (h - 1.2).clamp(0.9, 1.5)))
+    let height = (h - 1.2).clamp(0.9, 1.5);
+    for b in &cand {
+        let w = 1.5f64.min(b.hi - b.lo - 2.0 * BAY_MARGIN);
+        if w < 0.6 {
+            continue;
+        }
+        let (first, last) = (b.lo + BAY_MARGIN, b.hi - BAY_MARGIN - w);
+        let mid = (first + last) / 2.0;
+        let mut at_: Vec<f64> = (0..=((last - first) / 0.05).floor() as usize).map(|i| first + i as f64 * 0.05).chain([mid]).collect();
+        at_.sort_by(|x, y| (x - mid).abs().total_cmp(&(y - mid).abs()));
+        for a in at_ {
+            if !before_tall(l, b, a, w, tall) && add_window(l, b.wall, (a - BAY_MARGIN, a + w + BAY_MARGIN), w, SILL, height) {
+                return true;
+            }
+        }
+    }
+    cand.iter().any(|b| add_window(l, b.wall, (b.lo, b.hi), 1.5, SILL, height))
+}
+
+/// Whether the strip 1 m into the room before a window of bay `b` from `a`, `w` wide, meets a
+/// body of `tall`.
+fn before_tall(l: &GLayout, b: &Bay, a: f64, w: f64, tall: &[[f64; 4]]) -> bool {
+    let wall = &l.walls[b.wall];
+    let half = wall.role.thickness() / 2.0;
+    let pts: Vec<P> = [a, a + w]
+        .iter()
+        .flat_map(|&t| {
+            let (m, n) = (at(wall, t), normal(wall, b.side, t));
+            [half, half + 1.0].map(|d| (m.0 - n.0 * d, m.1 - n.1 * d))
+        })
+        .collect();
+    let strip = pts.iter().fold([f64::MAX, f64::MAX, f64::MIN, f64::MIN], |r, p| [r[0].min(p.0), r[1].min(p.1), r[2].max(p.0), r[3].max(p.1)]);
+    tall.iter().any(|t| super::fit_rules::hit(t, &strip))
 }
 
 fn fixture(family: &'static str, ty: &'static str, p: P, n: P) -> GFixture {

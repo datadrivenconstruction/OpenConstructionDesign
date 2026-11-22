@@ -485,9 +485,15 @@ impl Model {
 
     /// Material name of every element that can show a texture: `(table, id, material)`. Walls,
     /// slabs, ceilings and roofs take the thickest layer of their type; columns and beams the
-    /// material of their type; stairs, railings and MEP runs their own text. Tables a file lacks
-    /// are skipped.
+    /// material of their type; stairs, railings and MEP runs their own text; the other tables of
+    /// `material_look::CHECKED` (solids, footings, braces, free forms...) theirs. Tables a file
+    /// lacks are skipped.
     pub fn element_materials(&self) -> Result<Vec<(String, i64, String)>, Error> {
+        const OWN: [&str; 8] = ["wall", "slab", "ceiling", "roof", "col", "beam", "stair", "railing"];
+        let more = crate::material_look::CHECKED
+            .iter()
+            .filter(|(t, _)| !OWN.contains(t))
+            .map(|(t, sql)| (*t, sql.to_string()));
         let queries = [
             ("wall", layered("wall", "wall_type_layer", "wtype", "wtype")),
             ("slab", layered("slab", "slab_type_layer", "stype", "stype")),
@@ -517,7 +523,7 @@ impl Model {
             ("mep_run", "SELECT id, material FROM mep_run".to_string()),
         ];
         let mut out = vec![];
-        for (table, sql) in queries {
+        for (table, sql) in queries.into_iter().chain(more) {
             let Ok(mut st) = self.db.prepare(&sql) else {
                 continue;
             };

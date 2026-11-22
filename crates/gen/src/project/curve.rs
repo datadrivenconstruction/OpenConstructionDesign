@@ -194,6 +194,10 @@ fn bend(l: &mut GLayout, b: Bow) -> Result<Vec<usize>, GenError> {
             o.along = walls[first + k].along((x, b.y(x))) - o.width / 2.0;
             o.wall = first + k;
         } else {
+            // a wall that runs out to the arc grows at its facade end: an opening measured
+            // from that end keeps its place in the plan, not its distance from the end
+            let (old, new) = (&l.walls[o.wall], &walls[map[&o.wall]]);
+            o.along = new.along(old.at(o.along));
             o.wall = map[&o.wall];
         }
     }
@@ -354,6 +358,16 @@ mod tests {
             assert!((c.0 - x).abs() < 1e-6, "{c:?}");
         }
         crate::check::validate_layout(&l).unwrap();
+    }
+
+    #[test]
+    fn a_door_in_a_wall_that_runs_out_to_the_arc_keeps_its_place() {
+        let mut l = bar();
+        l.openings.push(GOpening { wall: 5, along: 8.0, door: true, width: 0.9, height: 2.1, sill: 0.0, ty: None });
+        bend(&mut l, Bow { y0: 0.0, w: 40.0, s: 3.0, out: -1.0 }).unwrap();
+        let o = l.openings.last().unwrap();
+        let c = l.walls[o.wall].at(o.along + o.width / 2.0);
+        assert!((c.0 - 20.0).abs() < 1e-9 && (c.1 - 8.45).abs() < 1e-9, "{c:?}");
     }
 
     #[test]

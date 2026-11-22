@@ -722,6 +722,9 @@ pub struct PRoof {
     /// Height of the roof's lowest edge above the roof level, m: a piece of a parted pitched roof
     /// hangs on its own edge.
     pub lift: f64,
+    /// A plane piece whose eave line is off its ring (it touches it at a corner): the plane rises
+    /// at `slope` to the left of a->b, and every ring edge is a gable.
+    pub eave: Option<((f64, f64), (f64, f64))>,
 }
 
 /// A roof made by drawing a profile: the profile `(u, z)` stands over the segment `a`→`b`

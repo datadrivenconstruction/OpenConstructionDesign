@@ -425,7 +425,9 @@ fn sync_pipes(
         .ok_or_else(|| PlanError(format!("no level {}", op.level)))?;
     let mut build = MepBuild::default();
     for l in &p.lines {
-        build.systems.push((format!("{} {}", op.pid, l.number()), plant::system_kind(l.svc)));
+        // the service code in the name gives a kind-less service (fuel gas) its own colour
+        let name = format!("{} {} {}", op.pid, l.svc.code(), l.number());
+        build.systems.push((name, plant::system_kind(l.svc)));
     }
     for r in &p.kit.runs {
         let l = &p.lines[r.line];

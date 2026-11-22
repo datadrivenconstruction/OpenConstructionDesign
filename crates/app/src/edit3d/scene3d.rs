@@ -500,11 +500,7 @@ pub fn compose_with(ed: &mut Editor, c: &mut Cache) -> (Scene, Vec<Target>) {
                 };
                 let Some(tag) = tag else { continue };
                 // imported meshes take the material of the element or of its category
-                let table = t
-                    .grip_kind()
-                    .and_then(crate::view_gfx_ui::kind_table)
-                    .or_else(|| (t.cat == Cat::Mesh).then_some("mesh"))
-                    .filter(|_| !texl.is_empty());
+                let table = material_table(*t).filter(|_| !texl.is_empty());
                 if let Some(parts) = table.and_then(|tb| texl.split(tb, t.id, m, tag)) {
                     for p in parts {
                         boxes.push(mesh_box(&p));
@@ -536,11 +532,7 @@ pub fn compose_with(ed: &mut Editor, c: &mut Cache) -> (Scene, Vec<Target>) {
                 let t = q.target;
                 let tag = if *lv == cur { Some(q.tag) } else { gfx.part_tag(t, q.tag) };
                 let Some(tag) = tag else { continue };
-                let table = t
-                    .grip_kind()
-                    .and_then(crate::view_gfx_ui::kind_table)
-                    .or_else(|| (t.cat == Cat::Mesh).then_some("mesh"))
-                    .filter(|_| !texl.is_empty());
+                let table = material_table(t).filter(|_| !texl.is_empty());
                 let tag = match table {
                     Some(tb) => {
                         let p = q.plain();
@@ -594,6 +586,19 @@ pub fn compose_with(ed: &mut Editor, c: &mut Cache) -> (Scene, Vec<Target>) {
         Scene::from_parts(meshes, boxes).with_instanced(inst),
         c.targets.clone(),
     )
+}
+
+/// Table whose material a part shows: the element's own table (solids, footings, free forms and
+/// panel systems included), `mesh` for imported meshes.
+fn material_table(t: Target) -> Option<&'static str> {
+    let own = match t.cat {
+        Cat::Ext(c) if c == crate::scene_ids::EXT_FREEFORM => Some("freeform"),
+        Cat::Ext(c) if c == crate::scene_ids::EXT_PANEL_SYSTEM => Some("panel_system"),
+        Cat::Mesh => Some("mesh"),
+        _ => None,
+    };
+    own.or_else(|| t.grip_kind().and_then(crate::view_gfx_ui::kind_table))
+        .or_else(|| crate::elem::of_cat(t.cat).and_then(|f| crate::mat_tex::static_table(f.table)))
 }
 
 /// Target of a scene element from provider parts: Some(None) means a number from their range with no target.
@@ -1023,7 +1028,8 @@ mod tests {
         let other = |s: &Scene| {
             s.meshes
                 .iter()
-                .filter(|m| m.element == OTHER_LEVEL && m.tag == TAG_MEMBER)
+                // the material look adds a texture layer to the member tag
+                .filter(|m| m.element == OTHER_LEVEL && ddc_render::style::base_tag(m.tag) == TAG_MEMBER)
                 .map(|m| Arc::as_ptr(m) as usize)
                 .collect::<Vec<_>>()
         };

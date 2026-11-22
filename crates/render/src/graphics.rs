@@ -411,7 +411,7 @@ pub struct FrameFx {
     pub tol_px: f32,
     pub moving_scale: f32,
     pub draw_distance: f32,
-    /// Sway of foliage, m at 10 m above the base; 0 — still (headless and report shots).
+    /// Sway of foliage, m at 10 m above the base; 0 keeps it still (headless and report shots).
     pub wind: f32,
 }
 

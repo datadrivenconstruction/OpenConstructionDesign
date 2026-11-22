@@ -129,6 +129,14 @@ pub(super) fn read(f: &StepFile) -> Vec<PMaterial> {
     order
         .into_iter()
         .filter_map(|id| out.remove(&id))
+        .map(|mut m| {
+            // the colour the export wrote from the library look is no colour of the row
+            let shown = ddc_model::material_look::resolve(&m.name, ddc_model::material_defaults(&m.name).color);
+            if m.color.is_some() && m.color == shown.map(|l| l.rgb) {
+                m.color = None;
+            }
+            m
+        })
         .filter(|m| {
             (m.color.is_some()
                 || m.density.is_some()

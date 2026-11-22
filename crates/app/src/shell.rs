@@ -1105,6 +1105,7 @@ impl EditorApp {
         let overlay = self.sh.palette.open || self.quick.menu.is_some() || self.chrome.mode.open;
         ui_kit::keys_frame_begin(ctx, overlay);
         self.poll_import(ctx);
+        tasks_ui::frame(self, ctx, overlay);
         crate::bigfile::frame(self, ctx);
         self.handle_drops(ctx);
         if std::mem::take(&mut self.chrome.settings.reset_panels) {

@@ -12,7 +12,7 @@
 #[path = "../bench/suite.rs"]
 #[allow(dead_code)]
 mod suite;
-#[path = "../tests/eval.rs"]
+#[path = "../tests/gen_b/eval.rs"]
 #[allow(dead_code)]
 mod eval;
 

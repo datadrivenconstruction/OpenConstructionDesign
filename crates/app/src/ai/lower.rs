@@ -106,6 +106,7 @@ fn lower_tool(act: &ToolAct) -> Result<Vec<Op>, String> {
             return Err("footings under columns have no v1 form yet".into())
         }
         ToolAct::Terrain(_) => return Err("a terrain has no v1 form yet".into()),
+        ToolAct::SetMaterial { .. } => return Err("a material look has no v1 form yet".into()),
         ToolAct::Measure { .. } => return Err("a saved measurement has no v1 form yet".into()),
         ToolAct::MassEdit { .. } => return Err("a mass history step has no v1 form yet".into()),
         ToolAct::TimelineFamily { .. } => return Err("a timeline family has no v1 form yet".into()),
@@ -638,6 +639,7 @@ fn lower_elem(slot: u32, e: &NewElem) -> Result<Op, String> {
             slope,
             edges,
             vault,
+            eave,
         } => NewEl::Generic {
             cat: Cat::Roof,
             level: Some(level(*l)),
@@ -659,6 +661,9 @@ fn lower_elem(slot: u32, e: &NewElem) -> Result<Op, String> {
                     let pts: Vec<[f64; 2]> = vt.profile.iter().map(|p| [p.0, p.1]).collect();
                     let body = json!({"a": [vt.a.0, vt.a.1], "b": [vt.b.0, vt.b.1], "profile": pts, "depth": vt.depth});
                     v.push(plain("vault", body));
+                }
+                if let Some((a, b)) = eave {
+                    v.push(plain("eave", json!([[a.0, a.1], [b.0, b.1]])));
                 }
                 v
             },
@@ -1652,6 +1657,16 @@ fn lift_generic(
                 vault: match f.find("vault") {
                     None => None,
                     Some(v) => Some(lift_vault(&v.v)?),
+                },
+                eave: match f.find("eave") {
+                    None => None,
+                    Some(v) => {
+                        let pt = |i: usize| -> Option<(f64, f64)> {
+                            let p = v.v.get(i)?;
+                            Some((p.get(0)?.as_f64()?, p.get(1)?.as_f64()?))
+                        };
+                        Some(pt(0).zip(pt(1)).ok_or("field eave is two points [[x, y], [x, y]]")?)
+                    }
                 },
             }
         }

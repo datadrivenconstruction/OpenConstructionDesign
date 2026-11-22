@@ -9,9 +9,12 @@
 
 Targets come from `cargo metadata`, so a new test file is always picked up. The lib of a crate
 listed in LIB_GROUPS is cut by test-name filters; its rest unit skips the same strings, so the
-lib tests are split exactly. Units go to shards by measured minutes (largest first).
+lib tests are split exactly. Units go to shards by measured minutes (largest first). A test
+binary `tests/<dir>/main.rs` weighs the sum of its member files, which keep their own entries.
 """
 import json
+import os
+import re
 import subprocess
 import sys
 
@@ -92,11 +95,28 @@ def units(pkg):
     return list(dict.fromkeys(out))  # one examples unit however many examples
 
 
+def members(src):
+    """Module files of a `tests/<dir>/main.rs` binary; each must be declared there exactly once.
+    A `#[path]` module is a shared helper from outside the directory: neither a member nor weighed."""
+    if os.path.basename(src) != "main.rs":
+        return None
+    d = os.path.dirname(src)
+    with open(src, encoding="utf-8") as f:
+        mods = [m for p, m in re.findall(r"^(#\[path[^\n]*\n)?mod (\w+);", f.read(), re.M) if not p]
+    files = sorted(x[:-3] for x in os.listdir(d) if x.endswith(".rs") and x != "main.rs")
+    assert sorted(mods) == files, f"{src}: mod lines {sorted(mods)} differ from files {files}"
+    return mods
+
+
 def assign(pkg, n):
     crate, w = pkg["name"], WEIGHTS.get(pkg["name"], {})
+    default = DEFAULT_MIN.get(crate, 1.0)
+    groups = {t["name"]: m for t in pkg["targets"] if "test" in t["kind"]
+              for m in [members(t["src_path"])] if m}
     def weight(key):
-        return w.get(key, 0.2 if key in ("doc", "examples") or key.startswith("bin:")
-                     else DEFAULT_MIN.get(crate, 1.0))
+        if key in groups:
+            return sum(w.get(m, default) for m in groups[key])
+        return w.get(key, 0.2 if key in ("doc", "examples") or key.startswith("bin:") else default)
     shards = [[] for _ in range(n)]
     load = [0.0] * n
     for u in sorted(units(pkg), key=lambda u: (-weight(u[0]), u[0])):

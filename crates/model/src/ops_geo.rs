@@ -39,7 +39,10 @@ pub(super) fn lower(m: &mut Model, run: &mut Run, g: &GeoOp) -> Result<(), Fail>
             let meta = GeoMeta {
                 level: opt_level(m, run, level.as_ref())?,
                 name: name.clone().filter(|n| !n.trim().is_empty()).unwrap_or_else(|| "Solid".into()),
-                material: material.clone().unwrap_or_default(),
+                // a part without a material takes the one its name hints at, else the default
+                material: material.clone().filter(|m| !m.trim().is_empty()).unwrap_or_else(|| {
+                    crate::material_look::default_material("solid", name.as_deref().unwrap_or("")).into()
+                }),
                 void: false,
                 ifc,
             };

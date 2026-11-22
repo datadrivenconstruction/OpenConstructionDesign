@@ -156,6 +156,21 @@ pub struct Fitting {
     pub run: usize,
 }
 
+/// Air a room passes to or takes from its neighbours: the difference of its supply and
+/// extract, through the gap under its door or, when that is too small, a transfer grille.
+#[derive(Clone, Debug, PartialEq)]
+pub struct Overflow {
+    pub storey: usize,
+    pub room: usize,
+    /// m3/h, positive when the room has more supply than extract.
+    pub flow: f64,
+    /// The door opening, in the storey's openings, the air passes.
+    pub door: Option<usize>,
+    pub grille: bool,
+    /// Free area of the path, cm2.
+    pub area_cm2: f64,
+}
+
 /// The critical path of a system: pressure from the unit port to its farthest terminal.
 #[derive(Clone, Debug, Default, PartialEq)]
 pub struct Crit {
@@ -171,6 +186,8 @@ pub struct Air {
     pub fittings: Vec<Fitting>,
     pub boxes: Vec<Equip>,
     pub dampers: Vec<Equip>,
+    /// Rooms whose terminals move more air one way than the other, and the path it takes.
+    pub overflow: Vec<Overflow>,
     /// Supply, extract.
     pub critical: [Crit; 2],
     pub faults: Vec<String>,
@@ -356,6 +373,7 @@ pub fn analyse(p: &GProject, vav: bool, beams: &[Beam], solids: &[Solid]) -> Air
         place_boxes(p, &mut air, solids);
     }
     dampers(p, &mut air);
+    overflow(p, &mut air);
     paths(&mut air);
     air
 }
@@ -489,10 +507,10 @@ fn fittings(air: &mut Air) {
             let cr = &air.runs[c];
             let (z, dp, kind) = if straight.is_some() {
                 let (a1, a2, v1, v2) = if supply { (ac, cr.area(), vc, cr.v) } else { (cr.area(), ac, cr.v, vc) };
-                if (a1 - a2).abs() < 1e-9 {
+                if (pr.size.0 - cr.size.0).abs() + (pr.size.1 - cr.size.1).abs() < 1e-9 {
                     continue;
                 }
-                if a2 < a1 {
+                if a2 <= a1 {
                     let z = contraction_zeta(a1, a2, half);
                     (z, z * dynamic(v2), FitKind::Transition)
                 } else {
@@ -601,7 +619,7 @@ fn place_boxes(p: &GProject, air: &mut Air, solids: &[Solid]) {
                 continue;
             }
             let l = dist(a, b);
-            let u0 = straight * s.d + s.l / 2.0;
+            let u0 = (straight * s.d).max(tee_leg_at(air, k, a) + 0.02) + s.l / 2.0;
             let u1 = l - after - s.l / 2.0;
             let d = unit(a, b);
             let rot = d.1.atan2(d.0);
@@ -667,6 +685,9 @@ fn dampers(p: &GProject, air: &mut Air) {
     let n = p.storeys.len();
     let dl = rule("mep.hvac.damper_len");
     for r in &air.runs {
+        if r.class == Class::Plant {
+            silencer(r, &mut air.dampers);
+        }
         if r.storey >= n || r.class == Class::Riser {
             continue;
         }
@@ -678,18 +699,23 @@ fn dampers(p: &GProject, air: &mut Air) {
             e.net = r.net;
             e
         };
+        // the class of a fire damper: EI (ve, ho, i<->o) S of the element it closes
+        let fire = |at: P3, d: P3, minutes: f64| {
+            let mut e = make(Kind::FireDamper, at, d);
+            e.duty.push(("ei_min", minutes));
+            e
+        };
         if from_riser {
-            let ring = p.storeys[r.storey]
-                .layout
-                .shafts
-                .iter()
-                .filter(|s| s.kind == crate::ShaftKind::Duct)
-                .nth(usize::from(r.net))
-                .map(|s| s.ring.clone())
-                .unwrap_or_default();
-            if let Some(at) = leave_ring(&r.points, &ring) {
-                let d = unit(r.points[0], r.points[1]);
-                air.dampers.push(make(Kind::FireDamper, at, d));
+            // the shaft the run starts in; a run that starts on its face closes it there
+            let shafts: Vec<&[(f64, f64)]> = p.storeys[r.storey].layout.shafts.iter().filter(|s| s.kind == crate::ShaftKind::Duct).map(|s| s.ring.as_slice()).collect();
+            let a = (r.points[0].0, r.points[0].1);
+            let d = unit(r.points[0], r.points[1]);
+            let at = shafts.iter().find(|s| super::geo::inside(a, s)).and_then(|s| leave_ring(&r.points, s)).or_else(|| {
+                let face = shafts.iter().any(|s| (0..s.len()).any(|i| seg_dist2(a, s[i], s[(i + 1) % s.len()]) <= dl));
+                face.then(|| (r.points[0].0 + d.0 * dl / 2.0, r.points[0].1 + d.1 * dl / 2.0, r.points[0].2 + d.2 * dl / 2.0))
+            });
+            if let Some(at) = at {
+                air.dampers.push(fire(at, d, rule("mep.hvac.shaft_ei")));
             }
         }
         let rated = rule("mep.hvac.fire_damper_min");
@@ -703,7 +729,8 @@ fn dampers(p: &GProject, air: &mut Air) {
                     }
                     let near = air.dampers.iter().any(|q| q.storey == r.storey && q.kind == Kind::FireDamper && dist(q.at, at) < 2.0 * dl);
                     if !near {
-                        air.dampers.push(make(Kind::FireDamper, at, unit(w[0], w[1])));
+                        let minutes = wl.fire.map_or(rated, |f| f.minutes as f64);
+                        air.dampers.push(fire(at, unit(w[0], w[1]), minutes));
                     }
                 }
             }
@@ -712,7 +739,9 @@ fn dampers(p: &GProject, air: &mut Air) {
         if takeoff && (r.sys == AirSys::Extract || rule("mep.hvac.volume_damper_supply") >= 1.0) {
             let (a, b) = (r.points[0], r.points[1]);
             let l = dist(a, b);
-            let u = rule("mep.hvac.damper_off").min(l / 2.0);
+            // clear of the tee the branch leaves its main by, as the model cuts it
+            let leg = tee_leg_at(air, r.storey, a);
+            let u = rule("mep.hvac.damper_off").max(leg + dl).min(l / 2.0);
             let d = unit(a, b);
             air.dampers.push(make(Kind::VolumeDamper, (a.0 + d.0 * u, a.1 + d.1 * u, a.2), d));
         }
@@ -720,6 +749,77 @@ fn dampers(p: &GProject, air: &mut Air) {
     for (i, d) in air.dampers.iter_mut().enumerate() {
         d.tag = format!("{}{}", d.kind.tag(), i + 1);
     }
+}
+
+/// The leg the model cuts at a tee at `at`: the envelope of the widest run meeting there.
+fn tee_leg_at(air: &Air, storey: usize, at: P3) -> f64 {
+    air.runs
+        .iter()
+        .filter(|q| q.storey == storey && q.points.iter().any(|&c| dist(c, at) < 1e-3))
+        .map(|q| {
+            let mut s = super::super::svc::duct_section(q.size);
+            s.insulation = q.insulation;
+            ddc_geom::mep::junction_leg(&s)
+        })
+        .fold(0.0, f64::max)
+}
+
+fn overflow(p: &GProject, air: &mut Air) {
+    let mut by: std::collections::BTreeMap<(usize, usize), f64> = Default::default();
+    for t in &air.terms {
+        if let Some(r) = t.room {
+            *by.entry((t.storey, r)).or_default() += if t.sys == AirSys::Supply { t.flow } else { -t.flow };
+        }
+    }
+    let (per, cut, reach) = (rule("mep.hvac.overflow_cm2"), rule("mep.hvac.door_undercut"), rule("mep.hvac.door_reach"));
+    for ((k, room), q) in by {
+        if q.abs() <= 1.0 {
+            continue;
+        }
+        let l = &p.storeys[k].layout;
+        let ring = &l.rooms[room].polygon;
+        let on = |c: (f64, f64)| (0..ring.len()).any(|i| seg_dist2(c, ring[i], ring[(i + 1) % ring.len()]) <= reach);
+        let door = l
+            .openings
+            .iter()
+            .enumerate()
+            .filter(|(_, o)| o.door && on(l.walls[o.wall].at(o.along + o.width / 2.0)))
+            .max_by(|a, b| a.1.width.total_cmp(&b.1.width))
+            .map(|(i, _)| i);
+        let need = per * q.abs();
+        let gap = door.map_or(0.0, |i| l.openings[i].width * cut * 1e4);
+        let grille = gap < need;
+        air.overflow.push(Overflow { storey: k, room, flow: q, door, grille, area_cm2: if grille { need } else { gap } });
+    }
+}
+
+fn seg_dist2(c: (f64, f64), a: (f64, f64), b: (f64, f64)) -> f64 {
+    let d = (b.0 - a.0, b.1 - a.1);
+    let l2 = d.0 * d.0 + d.1 * d.1;
+    let t = if l2 < 1e-12 { 0.0 } else { (((c.0 - a.0) * d.0 + (c.1 - a.1) * d.1) / l2).clamp(0.0, 1.0) };
+    (c.0 - a.0 - d.0 * t).hypot(c.1 - a.1 - d.1 * t)
+}
+
+/// A silencer on a plant run next to the unit: after the supply fan, before the extract fan,
+/// on the first straight from the port long enough to hold it clear of the fittings.
+fn silencer(r: &Run, out: &mut Vec<Equip>) {
+    let sl = rule("mep.hvac.silencer_len");
+    let pad = rule("mep.hvac.silencer_pad");
+    let (w, h) = if r.size.1 > 0.0 { r.size } else { (r.size.0, r.size.0) };
+    let keep = rule("mep.hvac.silencer_keep") * w.max(h);
+    // the first straight with room for it and its calm lengths, else the longest one, centred
+    let segs: Vec<_> = r.points.windows(2).map(|s| (s[0], s[1], dist(s[0], s[1]))).collect();
+    let pick = segs.iter().find(|s| s.2 >= sl + 2.0 * keep).map(|s| (s.0, s.1, keep + sl / 2.0, sl));
+    let pick = pick.or_else(|| segs.iter().max_by(|a, b| a.2.total_cmp(&b.2)).filter(|s| s.2 > 1e-6).map(|s| (s.0, s.1, s.2 / 2.0, sl.min(s.2))));
+    let Some((a, b, u, sl)) = pick else { return };
+    let d = unit(a, b);
+    let c = (a.0 + d.0 * u, a.1 + d.1 * u, a.2 + d.2 * u);
+    // a vertical run holds it upright: its length along z
+    let (rot, size, base) = if d.2.abs() > 0.5 { (0.0, (w + 2.0 * pad, h + 2.0 * pad, sl), c.2 - sl / 2.0) } else { (d.1.atan2(d.0), (sl, w + 2.0 * pad, h + 2.0 * pad), c.2 - h / 2.0 - pad) };
+    let mut e = Equip::new(Kind::Silencer, r.storey, (c.0, c.1, base), rot, size);
+    e.duty = vec![("flow_m3h", r.flow), ("dp_pa", rule("mep.hvac.dp_duct_silencer"))];
+    e.net = r.net;
+    out.push(e);
 }
 
 /// Where the run segment `a`-`b` crosses the wall axis `c`-`d` in plan, at the run's height.

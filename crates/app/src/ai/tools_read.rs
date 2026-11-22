@@ -226,9 +226,14 @@ fn list_levels(c: &mut Core, _a: &J, _cx: &CallCx<'_>) -> Result<Done, String> {
 
 fn list_materials(c: &mut Core, _a: &J, _cx: &CallCx<'_>) -> Result<Done, String> {
     let items = super::materials::rows(&c.ed.model);
+    let gaps = c.ed.model.material_gaps().map(|g| g.len()).unwrap_or(0);
     let mut o = out(c);
     o.put("total", &json!(items.len()));
-    o.list("materials", &items);
+    o.put("elements_without_look", &json!(gaps));
+    // a long project list must not starve the library the assistant picks looks from
+    let half = o.left() / 2;
+    o.list_capped("materials", &items, half);
+    o.list("library", &super::materials::library());
     Ok(o.finish().into())
 }
 

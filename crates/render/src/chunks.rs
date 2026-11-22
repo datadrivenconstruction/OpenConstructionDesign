@@ -889,7 +889,7 @@ struct Proto {
     levels: Vec<Arc<SceneMesh>>,
     /// Level errors, m (excluding the box).
     errors: Vec<f32>,
-    /// Screen sizes of the levels ([`Instanced::screen`]); empty — by error.
+    /// Screen sizes of the levels ([`Instanced::screen`]); empty on error.
     screen: Vec<f32>,
     box_level: usize,
     diag: f32,

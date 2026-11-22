@@ -165,7 +165,7 @@ fn write(db: &Connection, s: &RampSpec, id: Option<i64>) -> Result<i64, Error> {
             s.landing,
             s.max_run,
             path_text(&s.path),
-            s.material
+            crate::material_look::assign("ramp", &s.material, "")
         ],
     )?;
     Ok(db.last_insert_rowid())

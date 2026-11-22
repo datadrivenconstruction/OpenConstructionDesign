@@ -190,7 +190,7 @@ fn inside(poly: &[P2], q: P2) -> bool {
 
 /// The side of the shaft that opens on the most free room: the lift lobby. A ring read from a
 /// rotated plate gives its door side the same way, so no axis is assumed.
-fn geom(rooms: &[crate::GRoom], bank: &[Vec<P2>], ring: &[P2]) -> Option<Geom> {
+fn geom(rooms: &[crate::GRoom], bank: &[Vec<P2>], ring: &[P2], env: P2) -> Option<Geom> {
     if ring.len() < 3 {
         return None;
     }
@@ -198,7 +198,7 @@ fn geom(rooms: &[crate::GRoom], bank: &[Vec<P2>], ring: &[P2]) -> Option<Geom> {
     let k = ring.len() as f64;
     let c = (ring.iter().map(|q| q.0).sum::<f64>() / k, ring.iter().map(|q| q.1).sum::<f64>() / k);
     let room = rooms.iter().find(|r| inside(&r.polygon, c));
-    let mut best: Option<(i32, P2, P2)> = None;
+    let mut best: Option<(bool, i32, P2)> = None;
     for i in 0..ring.len() {
         let (a, b) = (ring[i], ring[(i + 1) % ring.len()]);
         let len = (b.0 - a.0).hypot(b.1 - a.1);
@@ -220,17 +220,25 @@ fn geom(rooms: &[crate::GRoom], bank: &[Vec<P2>], ring: &[P2]) -> Option<Geom> {
                 })
                 .count() as i32
         });
-        if best.is_none_or(|b| free > b.0) {
-            best = Some((free, n, mid));
+        // a side the car fits behind wins over one it does not, once there is room before it:
+        // an end shaft has free room beside it too, and the car's own depth tells the door side
+        let fit = free > 0 && fits(&geom_of(ring, c, n), env);
+        if best.is_none_or(|b| (fit, free) > (b.0, b.1)) {
+            best = Some((fit, free, n));
         }
     }
-    let (_, n, _) = best?;
+    let (_, _, n) = best?;
+    Some(geom_of(ring, c, n))
+}
+
+/// The extents of `ring` along its door direction `n` and across it.
+fn geom_of(ring: &[P2], c: P2, n: P2) -> Geom {
     let u = (-n.1, n.0);
     let ext = |d: P2| {
         let v: Vec<f64> = ring.iter().map(|q| q.0 * d.0 + q.1 * d.1).collect();
         v.iter().cloned().fold(f64::MIN, f64::max) - v.iter().cloned().fold(f64::MAX, f64::min)
     };
-    Some(Geom { c, n, along: ext(n), across: ext(u) })
+    Geom { c, n, along: ext(n), across: ext(u) }
 }
 
 /// Turn of a family whose local +y is the door side, for a door facing `n`.
@@ -256,21 +264,25 @@ pub(super) fn rings(p: &GProject) -> Vec<Vec<P2>> {
 
 /// The door side and extents of each shaft of the bank, read on the ground storey where the lift
 /// room stands: every storey and basement above or below it keeps the same shafts.
-fn geoms(p: &GProject) -> Vec<Option<Geom>> {
+fn geoms(p: &GProject, env: P2) -> Vec<Option<Geom>> {
     let l = &p.storeys[0].layout;
     let rs = bank(l, p.lifts.cars as usize);
-    rs.iter().map(|r| geom(&l.rooms, &rs, r)).collect()
+    rs.iter().map(|r| geom(&l.rooms, &rs, r, env)).collect()
 }
 
 /// Every storey and basement holds the bank's shafts, and each holds the car of the bank's
-/// class with its clearances.
+/// class with its clearances. The class is read under the spec's own rules, as it was built.
 pub fn check(spec: &super::ProjectSpec, p: &GProject) -> Result<(), String> {
+    super::rules::scoped(&spec.rules, || check_ruled(spec, p))
+}
+
+fn check_ruled(spec: &super::ProjectSpec, p: &GProject) -> Result<(), String> {
     let cars = p.lifts.cars as usize;
     if cars == 0 || p.storeys.is_empty() {
         return Ok(());
     }
     let env = envelope(bank_class(serve_height(spec)));
-    for (i, g) in geoms(p).iter().enumerate() {
+    for (i, g) in geoms(p, env).iter().enumerate() {
         let g = g.as_ref().ok_or(format!("lift shaft {i} has no outline"))?;
         if !fits(g, env) {
             return Err(format!(
@@ -365,7 +377,7 @@ pub(super) fn furnish(spec: &super::ProjectSpec, p: &mut GProject) {
     if n0 != cars {
         issues.push(format!("the bank has {cars} cars, the ground storey {n0} lift shafts"));
     }
-    let mut gs = geoms(p);
+    let mut gs = geoms(p, env);
     for (i, g) in gs.iter_mut().enumerate() {
         match g {
             None => issues.push(format!("lift shaft {i} has no outline for its door")),

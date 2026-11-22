@@ -12,6 +12,8 @@ use eframe::egui;
 use std::collections::BTreeSet;
 
 const EPS: f32 = 0.5;
+/// One command's frames take seconds; past this it waits on something that never comes.
+const CMD_LIMIT: std::time::Duration = std::time::Duration::from_secs(120);
 /// Commands that cannot run headless (network, process-wide language swap).
 const SKIP: &[&str] = &["help.check_update", "set.lang"];
 
@@ -81,7 +83,16 @@ fn problems(lang: Lang, screen: (f32, f32), id: Option<&str>) -> BTreeSet<String
         if r.bottom() <= screen.1 + EPS {
             continue;
         }
-        match viewport_clip(&p, r) {
+        // a row its scroll culls paints nothing: it belongs to the scroll viewport above it
+        let culled = || {
+            p.scrolls
+                .iter()
+                .filter(|v| v.x_range().contains(r.center().x) && v.bottom() <= r.top() + EPS)
+                .max_by(|a, b| a.bottom().total_cmp(&b.bottom()))
+                .copied()
+        };
+        let clip = viewport_clip(&p, r).or_else(|| c.clipped_out.then(culled).flatten());
+        match clip {
             None => {
                 out.insert(format!(
                     "{:?} {:?} is below the screen outside a scroll area",
@@ -135,20 +146,28 @@ fn sweep(lang: Lang, screen: (f32, f32)) {
     let mut bad: Vec<String> = idle.iter().map(|s| format!("[idle] {s}")).collect();
     for id in &ids {
         let (id2, l) = (id.clone(), lang);
-        let h = crate::jobs::spawn_guarded_sized(
+        let (tx, rx) = std::sync::mpsc::channel();
+        crate::jobs::spawn_guarded_sized(
             &format!("qal:{id}"),
             Some(16 << 20),
-            move || problems(l, screen, Some(&id2)),
+            move || {
+                let _ = tx.send(problems(l, screen, Some(&id2)));
+            },
             |_| {},
         )
         .unwrap();
-        match h.join().map(|r| r.ok_or(())) {
-            Ok(Ok(set)) => {
+        // a command that never returns is named and the sweep goes on (its thread is left)
+        match rx.recv_timeout(CMD_LIMIT) {
+            Ok(set) => {
                 for s in set.difference(&idle) {
                     bad.push(format!("[{id}] {s}"));
                 }
             }
-            Ok(Err(())) | Err(_) => bad.push(format!("[{id}] panicked")),
+            Err(std::sync::mpsc::RecvTimeoutError::Timeout) => {
+                eprintln!("qa layout {lang:?} {screen:?}: [{id}] hung");
+                bad.push(format!("[{id}] hung over {} s", CMD_LIMIT.as_secs()));
+            }
+            Err(_) => bad.push(format!("[{id}] panicked")),
         }
     }
     eprintln!("qa layout {lang:?} {screen:?}: {} commands, idle {} notes", ids.len(), idle.len());

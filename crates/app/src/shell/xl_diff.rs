@@ -744,6 +744,7 @@ impl DiffState {
         let t = |k: &'static str| crate::tr_str(ru, k);
         let sec = th.c("text.secondary");
         let mut out = Out::default();
+        let top0 = ui.cursor().top();
         ui.horizontal(|ui| {
             let mut names: Vec<String> = vec![t("xlw.all_sheets").to_string()];
             names.extend(self.sheets.iter().map(|s| xl_text::sheet_name(s, cx.lang)));
@@ -800,10 +801,13 @@ impl DiffState {
         let mut sort = self.sort;
         let mut built = 0usize;
         let scroll = self.scroll_to.take();
+        // `max_height` is the room for all of this: the filter row and the head come off it
+        let above = ui.cursor().top() - top0 + ddc_ui::widgets::table::header_h(th.d().row);
+        // the room measured under the footer last frame beats the caller's estimate either way:
+        // a short tail leaves no band under the buttons, a tall one does not push them out
+        let room = if self.fill_h > 0.0 { self.fill_h } else { max_height - above };
         let res = Table::new("xl-diff-table", &cols, self.view.len())
-            // the room measured under the footer last frame beats the caller's estimate of
-            // what follows the table: a short tail leaves no band under the buttons
-            .max_height((max_height.max(self.fill_h) - strip).max(space::XXL))
+            .max_height((room - strip).max(space::XXL))
             .min_height(self.fill_h - strip)
             .scroll_to(scroll)
             .show(

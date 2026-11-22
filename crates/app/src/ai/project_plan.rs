@@ -2430,6 +2430,7 @@ pub fn compile(
                 profile: v.profile.clone(),
                 depth: v.depth,
             }),
+            eave: r.eave,
         },
         role: None,
         wall_rel: None,

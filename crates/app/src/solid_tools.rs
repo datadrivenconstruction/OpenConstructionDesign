@@ -1690,7 +1690,10 @@ fn options_bar(ui: &mut egui::Ui, rect: Rect, d: &mut Draft, t: &Tokens) {
             .max_rect(bar.shrink2(Vec2::new(10.0, 4.0)))
             .layout(egui::Layout::left_to_right(egui::Align::Center)),
     );
-    let ui = &mut cu;
+    crate::ui_kit::bar_row(&mut cu, "solid_opts_scroll", |ui| options_row(ui, d, t));
+}
+
+fn options_row(ui: &mut egui::Ui, d: &mut Draft, t: &Tokens) {
     ui.spacing_mut().item_spacing.x = 6.0;
     let m = d.cat.t("unit.m");
     let what = d.cat.t(&format!(

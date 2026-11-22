@@ -802,6 +802,10 @@ pub fn section_with_arcs(prisms: &[Prism], arcs: &[Vec<ArcVoid>], f: &Frame) -> 
     let per: Vec<(Vec<CutRegion>, Vec<Face>)> = par_map(
         &prisms.iter().enumerate().collect::<Vec<_>>(),
         |&(k, pr)| {
+            // stopped: the caller (`section_view`) checks the token and drops the drawing
+            if crate::cancel::requested() {
+                return (vec![], vec![]);
+            }
             let voids = cutouts(pr, arcs.get(k).map_or(&[][..], |a| &a[..]));
             let (mut lo, mut hi) = (f64::INFINITY, -f64::INFINITY);
             for r in &pr.rings {
@@ -851,6 +855,9 @@ pub fn section_with_arcs(prisms: &[Prism], arcs: &[Vec<ArcVoid>], f: &Frame) -> 
     for (c, fs) in per {
         cuts.extend(c);
         faces.extend(fs);
+    }
+    if crate::cancel::requested() {
+        return SectionOut { cuts: vec![], lines: vec![] };
     }
     let mut edges = vec![];
     for (i, fc) in faces.iter().enumerate() {

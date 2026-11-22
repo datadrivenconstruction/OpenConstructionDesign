@@ -113,12 +113,53 @@ pub enum PillAct {
     Retry(&'static str),
 }
 
-/// The running task, if any: a big-file job, else a module import.
+/// One kind of background task: its picture this frame and how to stop it.
+pub struct Source {
+    pub view: fn(&EditorApp) -> Option<JobView>,
+    pub cancel: fn(&mut EditorApp),
+}
+
+/// Every background task the status bar, the stage window and Esc know, first wins.
+/// A new kind of job is one more line here.
+pub const SOURCES: &[Source] = &[
+    Source {
+        view: |a| a.big.view(),
+        cancel: |a| a.big.cancel_job(),
+    },
+    Source {
+        view: crate::save::pill::view,
+        cancel: crate::save::cancel,
+    },
+    Source {
+        view: import_view,
+        cancel: |a| {
+            if let Some(j) = &a.import_job {
+                j.cancel.store(true, Ordering::Relaxed);
+            }
+        },
+    },
+    Source {
+        view: |a| a.ed.heavy_view(),
+        cancel: |a| a.ed.cancel_heavy(),
+    },
+    Source {
+        view: |a| a.sview.regen_view(),
+        cancel: |a| a.sview.cancel_regen(),
+    },
+    Source {
+        view: |a| a.clash.task_view(),
+        cancel: |a| a.clash.cancel_job(),
+    },
+];
+
+/// The running task, if any, in the order of [`SOURCES`].
 pub fn current(app: &EditorApp) -> Option<JobView> {
-    app.big
-        .view()
-        .or_else(|| crate::save::pill::view(app))
-        .or_else(|| import_view(app))
+    SOURCES.iter().find_map(|s| (s.view)(app))
+}
+
+/// Any background task runs.
+pub fn running(app: &EditorApp) -> bool {
+    current(app).is_some()
 }
 
 /// The running module import, which the Import window also draws.
@@ -150,14 +191,31 @@ pub fn import_view(app: &EditorApp) -> Option<JobView> {
     })
 }
 
+/// Cancels the task [`current`] shows.
 pub fn cancel(app: &mut EditorApp) {
-    if app.big.busy() {
-        app.big.cancel_job();
-    } else if crate::save::busy(app) {
-        crate::save::cancel(app);
-    } else if let Some(j) = &app.import_job {
-        j.cancel.store(true, Ordering::Relaxed);
+    if let Some(s) = SOURCES.iter().find(|s| (s.view)(app).is_some()) {
+        (s.cancel)(app);
     }
+}
+
+/// Per frame, before the panels: applies a finished heavy edit, and Esc cancels the running
+/// task unless a text field has focus or an overlay (palette, menu, mode window) takes keys.
+/// Returns whether Esc was taken.
+pub fn frame(app: &mut EditorApp, ctx: &egui::Context, overlay: bool) -> bool {
+    if app.ed.heavy.is_some() {
+        ctx.request_repaint_after(Duration::from_millis(50));
+        if app.ed.pump_heavy().is_some() {
+            ctx.request_repaint();
+        }
+    }
+    if !running(app) || overlay || ctx.memory(|m| m.focused().is_some()) {
+        return false;
+    }
+    let esc = ctx.input_mut(|i| i.consume_key(egui::Modifiers::NONE, egui::Key::Escape));
+    if esc {
+        cancel(app);
+    }
+    esc
 }
 
 fn percent(v: &JobView) -> String {
@@ -258,7 +316,11 @@ fn end_pill(
 /// Per frame: keeps the elapsed clock of the current task and draws the stage window.
 pub fn window(app: &mut EditorApp, ctx: &egui::Context) {
     app.chrome.tasks.window_h = 0.0;
-    let running = app.big.busy() || app.import_job.is_some();
+    // saving and the clash check draw their own progress; the rest get the stage window
+    let running = app.big.busy()
+        || app.import_job.is_some()
+        || app.ed.heavy.is_some()
+        || app.sview.regen_view().is_some();
     if !running {
         app.chrome.tasks.since = None;
         app.chrome.tasks.hidden = false;
