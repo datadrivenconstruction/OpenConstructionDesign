@@ -7,7 +7,7 @@
 use std::collections::HashMap;
 use std::sync::OnceLock;
 
-use ddc_gen::project::{build_project, parse_spec, schedule_csv, svc_ports, voltage_drop, CircuitUse, GCircuit, GProject, SvcSys};
+use ddc_gen::project::{build_project, design_current, parse_spec, schedule_csv, svc_ports, voltage_drop, CircuitUse, GCircuit, GProject, SvcSys};
 use serde_json::{json, Value};
 
 fn briefs() -> Vec<Value> {
@@ -39,23 +39,30 @@ fn iz(section: f64, poles: u32) -> f64 {
     if poles > 1 { r.2 } else { r.1 }
 }
 
+/// The figures per typology: boards, circuits, cable sections of the final circuits and of the
+/// feeders, worst drop, rooms and devices left without power.
 #[test]
 fn every_figure_summed() {
+    eprintln!("| typology | boards | circuits (final) | final sections | feeder sections | worst dU % | unserved rooms | devices left |");
     for (t, p) in projects() {
         let c = &p.services.circuits;
         let fin: Vec<&GCircuit> = c.iter().filter(|c| c.use_ != CircuitUse::Feeder).collect();
         let worst = fin.iter().map(|c| c.drop_total).fold(0.0, f64::max);
-        let metres: f64 = c.iter().map(|c| c.length).sum();
-        let mut cables: HashMap<String, usize> = HashMap::new();
-        for x in c {
-            *cables.entry(x.cable()).or_default() += 1;
-        }
-        let mut cables: Vec<_> = cables.into_iter().collect();
-        cables.sort();
-        eprintln!("== {t}: boards {} circuits {} (final {}) rcds {} cable {metres:.0} m worst drop {worst:.2} % {cables:?}", p.services.boards.len(), c.len(), fin.len(), p.services.boards.iter().map(|b| b.rcds.len()).sum::<usize>());
-        for i in &p.services.issues {
-            eprintln!("   {i}");
-        }
+        let hist = |feed: bool| {
+            let mut h: Vec<(String, usize)> = vec![];
+            let mut xs: Vec<f64> = c.iter().filter(|c| (c.use_ == CircuitUse::Feeder) == feed).map(|c| c.section).collect();
+            xs.sort_by(f64::total_cmp);
+            for x in xs {
+                match h.last_mut() {
+                    Some(l) if l.0 == x.to_string() => l.1 += 1,
+                    _ => h.push((x.to_string(), 1)),
+                }
+            }
+            h.iter().map(|(s, n)| format!("{s}:{n}")).collect::<Vec<_>>().join(" ")
+        };
+        let unserved = p.metrics.iter().find(|m| m.0 == "power_unserved_rooms").map_or(-1.0, |m| m.1);
+        let left = p.services.issues.iter().filter(|i| i.contains("unpowered") || i.contains("unlit")).count();
+        eprintln!("| {t} | {} | {} ({}) | {} | {} | {worst:.2} | {unserved} | {left} |", p.services.boards.len(), c.len(), fin.len(), hist(false), hist(true));
     }
 }
 
@@ -125,26 +132,29 @@ fn circuits_keep_their_points_and_load_limits() {
     }
 }
 
-/// Self-check 6: voltage drop from the main board to the last device within 3 %, each feeder
-/// within 0.5 %; the drop is the one of the length, current and section.
+/// Self-check 6: voltage drop at the design current, the diversified load of the circuit, within
+/// 3 % from the main board to the last device of a dwelling and 5 % from the origin elsewhere,
+/// each feeder within 0.5 %; the drop is the one of the length, current and section.
 #[test]
 fn voltage_drop_stays_within_the_budget() {
     // the ABB length table at 3 %, 230 V, 16 A: 1.5 mm2 17 m, 2.5 mm2 28 m
     assert!((voltage_drop(1, 17.0, 16.0, 1.5) - 3.0).abs() < 0.2, "{}", voltage_drop(1, 17.0, 16.0, 1.5));
     assert!((voltage_drop(1, 28.0, 16.0, 2.5) - 3.0).abs() < 0.2, "{}", voltage_drop(1, 28.0, 16.0, 2.5));
     assert!((voltage_drop(3, 34.0, 16.0, 1.5) - 3.0).abs() < 0.2, "{}", voltage_drop(3, 34.0, 16.0, 1.5));
+    assert!((design_current(1, 2300.0) - 10.0).abs() < 1e-9 && (design_current(3, 400.0 * 3f64.sqrt() * 10.0) - 10.0).abs() < 1e-9);
     for (t, p) in projects() {
         let sv = &p.services;
         let feeder_to = |b: (usize, usize)| sv.circuits.iter().find(|c| c.use_ == CircuitUse::Feeder && (c.devices[0].0, c.devices[0].1) == b);
+        let budget = if housing(t) { 3.0 } else { 5.0 };
         for c in &sv.circuits {
             assert!(c.length > 0.0, "{t}: {} has no route", c.name);
             if c.use_ == CircuitUse::Feeder {
                 assert!(c.drop <= 0.5 + 1e-9, "{t}: {} drops {:.2} %", c.name, c.drop);
             } else {
-                assert!(c.drop_total <= 3.0 + 1e-9, "{t}: {} drops {:.2} % over {:.1} m on {}", c.name, c.drop_total, c.length, c.cable());
-                let want = voltage_drop(c.poles, c.length, c.breaker, c.section);
-                assert!((c.drop - want).abs() < 1e-9, "{t}: {}", c.name);
+                assert!(c.drop_total <= budget + 1e-9, "{t}: {} drops {:.2} % over {:.1} m on {}", c.name, c.drop_total, c.length, c.cable());
             }
+            let want = voltage_drop(c.poles, c.length, design_current(c.poles, c.demand), c.section);
+            assert!((c.drop - want).abs() < 1e-9, "{t}: {} drop not at its design current", c.name);
             let up = feeder_to(c.board).map_or(0.0, |f| f.drop_total);
             assert!((c.drop_total - up - c.drop).abs() < 1e-9, "{t}: {} total drop does not add up", c.name);
         }
@@ -216,6 +226,38 @@ fn cables_are_sized_for_their_protection() {
         }
     }
     assert!(cookers > 0, "no cooker circuit");
+}
+
+/// The size rule: a section is the least that holds the breaker, stepped up only while the
+/// design current drops more than the budget left; so the school's final circuits stay on
+/// 1.5 mm2 for lighting and 2.5 mm2 for sockets, larger ones only on feeders and special loads.
+#[test]
+fn sections_step_up_only_for_the_drop() {
+    let sections = [1.5, 2.5, 4.0, 6.0, 10.0, 16.0, 25.0, 35.0, 50.0, 70.0, 95.0];
+    for (t, p) in projects() {
+        let sv = &p.services;
+        let feeder_to = |b: (usize, usize)| sv.circuits.iter().find(|c| c.use_ == CircuitUse::Feeder && (c.devices[0].0, c.devices[0].1) == b);
+        for c in &sv.circuits {
+            let feeder = c.use_ == CircuitUse::Feeder;
+            let light = matches!(c.use_, CircuitUse::Lighting | CircuitUse::Emergency);
+            let least = sections.iter().copied().find(|s| *s >= if light { 1.5 } else { 2.5 } && iz(*s, c.poles) >= c.breaker).unwrap();
+            assert!(c.section >= least, "{t}: {} {} below its breaker", c.name, c.cable());
+            if c.section > least {
+                let down = sections.iter().copied().filter(|s| *s < c.section).last().unwrap();
+                let up = feeder_to(c.board).map_or(0.0, |f| f.drop_total);
+                let left = if feeder { 0.5 } else if housing(t) { 3.0 - up } else { 5.0 - up };
+                let at_down = voltage_drop(c.poles, c.length, design_current(c.poles, c.demand), down);
+                assert!(at_down > left, "{t}: {} on {} where {down} mm2 drops {at_down:.2} % of {left:.2} %", c.name, c.cable());
+            }
+            if t == "school" && !feeder {
+                match c.use_ {
+                    CircuitUse::Lighting | CircuitUse::Emergency => assert_eq!(c.section, 1.5, "{t}: {} {:.1} m on {}", c.name, c.length, c.cable()),
+                    CircuitUse::Appliance => {}
+                    _ => assert_eq!(c.section, 2.5, "{t}: {} {:.1} m on {}", c.name, c.length, c.cable()),
+                }
+            }
+        }
+    }
 }
 
 /// Final circuits are named by the rooms they serve.

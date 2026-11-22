@@ -113,7 +113,7 @@ pub fn voltage_drop(poles: u32, length: f64, current: f64, section: f64) -> f64 
 }
 
 /// Design current, A, of `load` W.
-fn current(poles: u32, load: f64) -> f64 {
+pub fn design_current(poles: u32, load: f64) -> f64 {
     if poles > 1 {
         load / (3f64.sqrt() * rule("services.elec.voltage_ll"))
     } else {
@@ -490,14 +490,15 @@ pub(crate) fn design(spec: &ProjectSpec, p: &mut GProject, floor: &[Option<(usiz
     for i in order {
         let c = &mut out[i];
         let upstream = up.get(&c.board).copied().unwrap_or(0.0);
-        size(c, upstream);
+        let home = housing(spec.typology);
+        size(c, home, upstream);
         if c.use_ == CircuitUse::Feeder {
             let to = (c.devices[0].0, c.devices[0].1);
             up.insert(to, c.drop_total);
-            if c.drop > rule("services.elec.max_drop_feeder") + 1e-9 {
+            if c.drop > drop_limit(home, true, 0.0) + 1e-9 {
                 issues.push(format!("feeder {} drops {:.2} % over {:.0} m", c.name, c.drop, c.length));
             }
-        } else if c.drop_total > rule("services.elec.max_drop") + 1e-9 {
+        } else if c.drop > drop_limit(home, false, upstream) + 1e-9 {
             issues.push(format!("circuit {} drops {:.2} % over {:.0} m", c.name, c.drop_total, c.length));
         }
     }
@@ -520,10 +521,24 @@ pub(crate) fn design(spec: &ProjectSpec, p: &mut GProject, floor: &[Option<(usiz
     p.services.boards = boards;
 }
 
-/// Breaker, section and voltage drop of a circuit `upstream` % down from the main board: the
-/// breaker holds the design load, the cable the breaker, the section steps up for the drop.
-fn size(c: &mut GCircuit, upstream: f64) {
-    let ib = current(c.poles, c.demand);
+/// Highest drop, %, a final circuit may add `upstream` % down from the origin: in a dwelling 3 %
+/// from the meter to the last outlet (DIN 18015-1 5.2.1), elsewhere 5 % in all (DIN VDE 0100-520
+/// G.52); a feeder its own share.
+fn drop_limit(home: bool, feeder: bool, upstream: f64) -> f64 {
+    if feeder {
+        rule("services.elec.max_drop_feeder")
+    } else if home {
+        rule("services.elec.max_drop") - upstream
+    } else {
+        rule("services.elec.max_drop_total") - upstream
+    }
+}
+
+/// Breaker, section and voltage drop of a circuit `upstream` % down from the origin: the breaker
+/// holds the design current, the cable the breaker (Iz >= In, DIN VDE 0298-4 laying method C),
+/// the section steps up while the design current drops more than the limit allows.
+fn size(c: &mut GCircuit, home: bool, upstream: f64) {
+    let ib = design_current(c.poles, c.demand);
     let feeder = c.use_ == CircuitUse::Feeder;
     let light = matches!(c.use_, CircuitUse::Lighting | CircuitUse::Emergency);
     let base = if light { rule("services.elec.breaker_light") } else if feeder { rule("services.elec.feeder_min_a") } else { rule("services.elec.breaker_other") };
@@ -531,20 +546,15 @@ fn size(c: &mut GCircuit, upstream: f64) {
     let min = if light { rule("services.elec.section_light") } else { rule("services.elec.section_other") };
     c.section = section_holding(min, c.breaker, c.poles);
     c.cores = c.poles + 2;
-    // a final circuit may draw its breaker's current at the far end; a feeder carries its demand
-    let amps = if feeder { ib } else { c.breaker };
-    let (limit, cap) = if feeder {
-        (rule("services.elec.max_drop_feeder"), f64::INFINITY)
-    } else {
-        (rule("services.elec.max_drop") - upstream, rule("services.elec.section_max"))
-    };
-    c.drop = voltage_drop(c.poles, c.length, amps, c.section);
+    let limit = drop_limit(home, feeder, upstream);
+    let cap = if feeder { f64::INFINITY } else { rule("services.elec.section_max") };
+    c.drop = voltage_drop(c.poles, c.length, ib, c.section);
     while c.drop > limit + 1e-9 {
         match section_up(c.section).filter(|s| *s <= cap + 1e-9) {
             Some(s) => c.section = s,
             None => break,
         }
-        c.drop = voltage_drop(c.poles, c.length, amps, c.section);
+        c.drop = voltage_drop(c.poles, c.length, ib, c.section);
     }
     c.drop_total = upstream + c.drop;
 }

@@ -18,7 +18,7 @@ mod curve;
 pub mod dc;
 mod elec;
 mod circuits;
-pub use circuits::{schedule_csv, voltage_drop};
+pub use circuits::{design_current, schedule_csv, voltage_drop};
 pub mod lift;
 mod sprinkler;
 #[cfg(test)]
