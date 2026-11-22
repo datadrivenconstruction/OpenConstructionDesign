@@ -235,6 +235,8 @@ pub struct Rules {
     pub axis_gain: f64,
     /// The first branch goes to the farthest target, so a header runs past the nearer ones.
     pub far_first: bool,
+    /// Tees only on level runs: a branch joining a drop could not fall to it.
+    pub level_tees: bool,
     /// z of horizontal travel.
     pub layers: Vec<f64>,
     /// Plan bounds of the lattice.
@@ -275,6 +277,7 @@ impl Rules {
             axes: (vec![], vec![]),
             axis_gain: 1.0,
             far_first: false,
+            level_tees: false,
             layers,
             bounds,
             max_states: 400_000,
@@ -1022,6 +1025,9 @@ pub fn route_tree(
             let Some(axis) = axis_of(b - a) else {
                 continue;
             };
+            if rules.level_tees && axis / 2 == 2 {
+                continue;
+            }
             let k = (axis / 2) as usize;
             let len = (b - a).len();
             let (m0, m1) = (margin(a), margin(b));
@@ -1049,6 +1055,9 @@ pub fn route_tree(
             let Some(axis) = axis_of(b - a) else {
                 continue;
             };
+            if rules.level_tees && axis / 2 == 2 {
+                continue;
+            }
             let len = (b - a).len();
             let (m0, m1) = (margin(a), margin(b));
             let dir = (b - a).normalized();

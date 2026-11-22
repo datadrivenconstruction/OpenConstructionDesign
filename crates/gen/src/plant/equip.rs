@@ -268,10 +268,14 @@ fn spread(k: usize, a: f64) -> Vec<f64> {
 }
 
 /// Least distance between the axes of neighbouring parallel stubs of nozzles `a` and `b`.
+/// Spare between stubs side by side over the clearance of their pipes, m.
+const PITCH_SLACK: f64 = 0.02;
+
 fn pitch(e: &Equip, a: usize, b: usize, lines: &[Line]) -> f64 {
     let ea = route::env_of(&lines[e.nozzles[a].line]);
     let eb = route::env_of(&lines[e.nozzles[b].line]);
-    ea + eb + rule("plant.pipe.gap")
+    // a little over the router's clearance, so either pipe may run past the other
+    ea + eb + rule("plant.pipe.gap") + PITCH_SLACK
 }
 
 pub(super) fn shape(eqs: &mut [Equip], i: usize, lines: &[Line]) {

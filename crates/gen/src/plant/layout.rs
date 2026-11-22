@@ -320,7 +320,7 @@ fn need(e: &Equip, t: &Topo) -> Need {
             _ => hi.x,
         };
         let face = n.at.dot(n.dir);
-        hard[s] = f64::max(hard[s], (face - edge).max(0.0) + g.reach() + g.clear);
+        hard[s] = f64::max(hard[s], (face - edge).max(0.0) + g.reach() + g.min_leg + g.clear);
     }
     let reach = rule("plant.access.reach");
     let ops: Vec<V3> = equip::ops(e, &t.lines).into_iter().filter(|o| o.z > reach + 1e-9).collect();
