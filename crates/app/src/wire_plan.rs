@@ -25,6 +25,11 @@ const ARROW: (f32, f32) = (10.0, 4.0);
 const TICK: (f32, f32, f32) = (8.0, 4.0, 18.0);
 /// Label size, px.
 const LABEL_PX: f32 = 11.0;
+/// Label anchor from the device end of the home run and step along it per retry, px; the home
+/// runs of a panel meet there, so labels stay by their first devices.
+const LABEL_AT: (f32, f32) = (14.0, 16.0);
+/// Spots tried per label, along the line on either side, before it is left out.
+const LABEL_TRIES: usize = 6;
 
 /// Wiring of the level, rebuilt when the model or the level changes.
 #[derive(Default)]
@@ -73,6 +78,29 @@ pub fn ticks(a: Pos2, b: Pos2, n: u32) -> Vec<[Pos2; 2]> {
         .collect()
 }
 
+/// Top-left corners of labels of `size` px set beside the home runs `a`→`b`, near `a`: the first
+/// spot clear of the labels already set, else none.
+pub fn place_labels(runs: &[(Pos2, Pos2, egui::Vec2)]) -> Vec<Option<Pos2>> {
+    let mut set: Vec<egui::Rect> = vec![];
+    runs.iter()
+        .map(|&(a, b, size)| {
+            let d = b - a;
+            let len = d.length();
+            let u = if len > 1e-3 { d / len } else { egui::vec2(1.0, 0.0) };
+            let n = egui::vec2(-u.y, u.x);
+            let spot = (0..LABEL_TRIES * 2).find_map(|i| {
+                let along = (LABEL_AT.0 + (i / 2) as f32 * LABEL_AT.1).min(len.max(LABEL_AT.0));
+                let side = if i % 2 == 0 { 1.0 } else { -1.0 };
+                let q = a + u * along + n * side * (size.y * 0.5 + 2.0);
+                let r = egui::Rect::from_center_size(q + n * side * (size.x * 0.5 * n.x.abs()), size);
+                (!set.iter().any(|o| o.expand(1.0).intersects(r))).then_some(r)
+            })?;
+            set.push(spot);
+            Some(spot.min)
+        })
+        .collect()
+}
+
 pub fn paint_plan(
     painter: &egui::Painter,
     wires: &[CircuitWire],
@@ -107,14 +135,17 @@ pub fn paint_plan(
                 painter.line_segment(tk, st);
             }
         }
-        let mid = a + d * 0.5;
-        painter.text(
-            mid + egui::vec2(4.0, -4.0),
-            egui::Align2::LEFT_BOTTOM,
-            &w.label,
-            egui::FontId::proportional(LABEL_PX),
-            t.text,
-        );
+    }
+    let galleys: Vec<_> = wires
+        .iter()
+        .map(|w| painter.layout_no_wrap(w.label.clone(), egui::FontId::proportional(LABEL_PX), t.text))
+        .collect();
+    let runs: Vec<(Pos2, Pos2, egui::Vec2)> =
+        wires.iter().zip(&galleys).map(|(w, g)| (p(w.home[0]), p(w.home[1]), g.size())).collect();
+    for (at, g) in place_labels(&runs).into_iter().zip(galleys) {
+        if let Some(at) = at {
+            painter.galley(at, g, t.text);
+        }
     }
 }
 
@@ -131,6 +162,27 @@ mod tests {
             assert!(a.y.signum() != b.y.signum());
         }
         assert!(ticks(Pos2::new(0.0, 0.0), Pos2::new(0.0, 0.0), 3).is_empty());
+    }
+
+    #[test]
+    fn labels_never_overlap_and_stay_by_their_devices() {
+        let size = egui::vec2(90.0, 12.0);
+        // home runs of one panel: their far ends meet, their devices lie apart or together
+        let panel = Pos2::new(0.0, 0.0);
+        let mut runs: Vec<(Pos2, Pos2, egui::Vec2)> = (0..8).map(|i| (Pos2::new(200.0, -60.0 + 15.0 * i as f32), panel, size)).collect();
+        runs.extend((0..30).map(|_| (Pos2::new(-150.0, 40.0), panel, size)));
+        let at = place_labels(&runs);
+        let set: Vec<egui::Rect> = at.iter().flatten().map(|p| egui::Rect::from_min_size(*p, size)).collect();
+        for (i, a) in set.iter().enumerate() {
+            for b in &set[i + 1..] {
+                assert!(!a.intersects(*b), "{a:?} overlaps {b:?}");
+            }
+        }
+        assert!(at[..8].iter().all(Option::is_some), "spread labels all set");
+        assert!(at[8..].iter().any(Option::is_none), "a pile of labels is thinned");
+        for (r, (a, _, _)) in set.iter().zip(&runs) {
+            assert!(r.center().distance(*a) < 150.0, "label far from its device");
+        }
     }
 
     #[test]
