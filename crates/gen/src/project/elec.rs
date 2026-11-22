@@ -124,6 +124,18 @@ fn emergency_type(ty: &'static str) -> &'static str {
     }
 }
 
+/// The next spot of a sub-board after the one at `cur` failed: the nearest free one far enough
+/// from every spot tried, while tries are left; the failed spot is freed on its wall.
+fn next_zone_spot(spots: &[f64], tried: &mut Vec<f64>, taken: &mut Vec<(usize, f64)>, spine: Option<usize>, cur: Option<f64>) -> Option<f64> {
+    let (j, c) = (spine?, cur?);
+    tried.push(c);
+    taken.retain(|t| !(t.0 == j && (t.1 - c).abs() < EPS));
+    let gap = rule("services.elec.zone_spot_gap");
+    let next = spots.iter().copied().find(|s| tried.iter().all(|t| (t - s).abs() >= gap)).filter(|_| tried.len() <= rule("services.elec.zone_tries") as usize)?;
+    taken.push((j, next));
+    Some(next)
+}
+
 fn residential(t: Typology) -> bool {
     matches!(t, Typology::House | Typology::ApartmentSection)
 }
@@ -1070,6 +1082,9 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
         let mut zone_of: Vec<Option<usize>> = vec![None; rs.len()];
         let mut zone_host = vec![false; rs.len()];
         let mut hosted: HashMap<usize, (usize, usize)> = HashMap::new();
+        // a host room's free board spots by distance to its far room, and those already tried
+        let mut zone_spots: Vec<Vec<f64>> = vec![vec![]; rs.len()];
+        let mut zone_tried: Vec<Vec<f64>> = vec![vec![]; rs.len()];
         if spec.services.boards == Boards::Unit && !residential(spec.typology) {
             let reach = rule("services.elec.zone_reach");
             let (ub_margin, ub_step) = (rule("services.elec.unit_board_margin"), rule("services.elec.unit_board_step"));
@@ -1107,19 +1122,20 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                 }
                 let (Some(w), Some(j)) = (u.filter(|w| zone_at[*w].is_none()), u.and_then(|w| spine[w])) else { continue };
                 let (sd, m) = (&rs[w].sides[j], mid(&rs[v]));
-                let mut pick: Option<(f64, f64)> = None;
+                let mut spots: Vec<(f64, f64)> = vec![];
                 let mut s = ub_margin;
                 while s < sd.len - ub_margin {
                     let b = svc::bbox(&[sd.at(s - ub_before, 0.0), sd.at(s + ub_after, ub_depth)]);
                     let shafted = shafts.iter().any(|o| o[0] < b[2] && o[3] > b[0] && o[1] < b[3] && o[4] > b[1]);
                     if sd.half > 0.0 && !shafted && sd.free(s - ub_clear, s + ub_clear, 0.0, 0.0, ub_top) && !fps[k].iter().any(|f| svc::hit(f, &b, 0.0)) && !taken[w].iter().any(|t| t.0 == j && (t.1 - s).abs() < spacing()) {
-                        let dd = man(sd.at(s, 0.0), m);
-                        if pick.is_none_or(|p| dd < p.1) {
-                            pick = Some((s, dd));
-                        }
+                        spots.push((s, man(sd.at(s, 0.0), m)));
                     }
                     s += ub_step;
                 }
+                // nearest the far room first; the rest stand by in case the board does not fit there
+                spots.sort_by(|a, b| a.1.total_cmp(&b.1));
+                let pick = spots.first().copied();
+                zone_spots[w] = spots.iter().map(|x| x.0).collect();
                 if let Some((s, _)) = pick {
                     unit_at[w] = Some(s);
                     taken[w].push((j, s));
@@ -1336,9 +1352,11 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                         dropped.truncate(told);
                         continue;
                     }
-                    // a room that cannot also take its sub-board goes without; its rooms fall back
+                    // a room that cannot take its sub-board tries the next free spot, then goes
+                    // without it; its rooms fall back
                     if zone_host[v] {
-                        (zone_host[v], unit_at[v]) = (false, None);
+                        unit_at[v] = next_zone_spot(&zone_spots[v], &mut zone_tried[v], &mut taken[v], spine[v], unit_at[v]);
+                        zone_host[v] = unit_at[v].is_some();
                         (trim, co[v], split, shift) = (false, co_v0, 0, 0);
                         (pl, attempt) = (pl0.clone(), 0);
                         dropped.truncate(told);
@@ -1377,7 +1395,8 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                         dropped.truncate(told);
                     }
                     None if zone_host[v] => {
-                        (zone_host[v], unit_at[v]) = (false, None);
+                        unit_at[v] = next_zone_spot(&zone_spots[v], &mut zone_tried[v], &mut taken[v], spine[v], unit_at[v]);
+                        zone_host[v] = unit_at[v].is_some();
                         (trim, co[v], split, shift) = (false, co_v0, 0, 0);
                         (pl, attempt) = (pl0.clone(), 0);
                         dropped.truncate(told);
@@ -1440,7 +1459,26 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                 hosted.insert(z, (k, idx));
                 board_fx.push((k, idx));
             }
-            if let Some(b) = zone_of[v].and_then(|z| hosted.get(&z).copied()) {
+            // a room whose sub-board did not fit takes the nearest one built on its way to the
+            // floor board, if nearer than the floor board
+            let board_of = zone_of[v].and_then(|z| hosted.get(&z).copied()).or_else(|| {
+                zone_of[v]?;
+                let m = ((room.clear[0] + room.clear[2]) / 2.0, (room.clear[1] + room.clear[3]) / 2.0);
+                let man = |q: (f64, f64)| (q.0 - m.0).abs() + (q.1 - m.1).abs();
+                let mut best = (man(rs[board_room].sides[fb.j].at(fb.s, 0.0)), None);
+                let mut u = feed[v].as_ref().map(|f| f.parent);
+                while let Some(w) = u {
+                    if let (Some(b), Some(s), Some(j)) = (hosted.get(&w), unit_at[w], spine[w]) {
+                        let d = man(rs[w].sides[j].at(s, 0.0));
+                        if d < best.0 {
+                            best = (d, Some(*b));
+                        }
+                    }
+                    u = feed[w].as_ref().map(|f| f.parent);
+                }
+                best.1
+            });
+            if let Some(b) = board_of {
                 zone_boards.insert((k, room.idx), b);
             }
             let mut dev_idx: HashMap<usize, usize> = HashMap::new();
