@@ -351,7 +351,12 @@ pub(super) fn read(v: &J, rs: &RuleSet, issues: &mut Issues) -> SiteSpec {
     if let Some(o) = s.as_object() {
         for k in o.keys() {
             if !KEYS.contains(&k.as_str()) {
-                issues.push((format!("site.{k}"), format!("unknown field (known: {})", KEYS.join(", "))));
+                // a site rule written under `site`: name where it belongs
+                let msg = match super::rules::def(&format!("site.{k}")) {
+                    Some(d) => format!("unknown field; this is a rule: write `rules: {{\"site.{k}\": ...}}` ({})", d.takes()),
+                    None => format!("unknown field (known: {})", KEYS.join(", ")),
+                };
+                issues.push((format!("site.{k}"), msg));
             }
         }
     } else if !s.is_null() {

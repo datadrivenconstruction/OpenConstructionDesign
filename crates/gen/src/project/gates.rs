@@ -320,7 +320,12 @@ pub fn check_project(spec: &ProjectSpec, p: &GProject) -> Gates {
                 }
             }
         }
-        let want = asked_rooms(spec, k) * p.copies;
+        // a programme shared out between the wings asks each wing for its share
+        let shared = p.metrics.iter().find(|m| m.0 == "program_shared").filter(|_| spec.typology != Typology::ApartmentSection);
+        let want = match shared {
+            Some(&(_, n)) => spec.storey_rooms(k).iter().map(|r| r.count.div_ceil(n as u32)).sum::<u32>() * p.copies,
+            None => asked_rooms(spec, k) * p.copies,
+        };
         if met != want {
             let fix = room_fix(spec, l, met, want);
             g.failures.push(format!(

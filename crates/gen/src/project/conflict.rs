@@ -245,7 +245,11 @@ impl Search<'_> {
     fn relax(&mut self, id: &str, path: &[String]) -> Option<f64> {
         let d = rules::def(id)?;
         let raw = get(self.v, path);
-        let asked = d.parse_value(if raw.is_object() { &raw["value"] } else { raw })?;
+        let asked = match raw {
+            J::Null => d.default?,
+            J::Object(_) => d.parse_value(&raw["value"])?,
+            _ => d.parse_value(raw)?,
+        };
         let mut probes: Vec<f64> = vec![];
         if !d.options.is_empty() || d.flag {
             probes.extend((0..=d.max as usize).map(|i| i as f64));
@@ -302,5 +306,34 @@ pub fn find(v: &J) -> Option<Conflict> {
             }
         }
     }
+    // the defaults alone fail: offer the rules the refusal names, as `rules.<id>`
+    if fixes.is_empty() {
+        for (id, path) in named_rules(&error) {
+            if let Some(x) = s.relax(&id, &path) {
+                let value = rules::def(&id).map_or(json!(x), |r| r.value_json(x));
+                fixes.extend(RuleFix::keyed(&id, value, "fix_conflict", vec![]));
+            }
+        }
+    }
     Some(Conflict { error, set, labels, fixes, builds: s.builds })
+}
+
+/// Rules an error quotes in backticks, by id (`rules.<id>`) or by brief field, with the path
+/// to write each at.
+fn named_rules(error: &str) -> Vec<(String, Vec<String>)> {
+    let mut out: Vec<(String, Vec<String>)> = vec![];
+    for q in error.split('`').skip(1).step_by(2) {
+        let id = q.strip_prefix("rules.").unwrap_or(q);
+        let hit = match rules::def(id) {
+            Some(d) => Some((d.id.clone(), vec!["rules".to_string(), d.id.clone()])),
+            None => rules::defs()
+                .iter()
+                .find(|d| d.alias.as_deref() == Some(q))
+                .map(|d| (d.id.clone(), q.split('.').map(str::to_string).collect())),
+        };
+        if let Some(h) = hit.filter(|h| !out.iter().any(|x| x.0 == h.0)) {
+            out.push(h);
+        }
+    }
+    out
 }

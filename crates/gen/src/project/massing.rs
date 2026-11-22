@@ -394,9 +394,42 @@ fn merge(into: &mut PStorey, part: PStorey, stairs: bool, grids: bool) {
 }
 
 fn wings(spec: &ProjectSpec, base: &ProjectSpec) -> Result<GProject, GenError> {
-    let bar = build_bar(base)?;
-    let (w, d) = bar.footprint;
-    let (parts, corners, outline, court) = layout_of(spec.design.massing, w, d);
+    let mut bar = build_bar(base)?;
+    let mut cur = base.clone();
+    let (mut w, mut d) = bar.footprint;
+    let (mut parts, mut corners, mut outline, mut court) = layout_of(spec.design.massing, w, d);
+    // every wing repeats the bar's floor: a programme the wings together cannot hold in a
+    // storey's slots is shared out between them instead
+    let fx = |b: &GProject| b.storeys.iter().map(|s| s.layout.fixtures.len()).max().unwrap_or(0);
+    let most = |b: &GProject| b.storeys.iter().map(|s| s.layout.shafts.len()).max().unwrap_or(0);
+    let over = |b: &GProject, n: usize| fx(b) * n > slots::FIXTURES_MAX as usize || most(b) * n > MAX_SHAFTS;
+    if parts.len() > 1 && over(&bar, parts.len()) {
+        let n = parts.len() as u32;
+        let mut b = base.clone();
+        for r in b.rooms.iter_mut().chain(b.ground_rooms.iter_mut()).chain(b.storey_rooms.values_mut().flatten()) {
+            r.count = r.count.div_ceil(n);
+        }
+        if let Ok(q) = build_bar(&b) {
+            bar = q;
+            bar.metrics.push(("program_shared", f64::from(n)));
+            cur = b;
+            (w, d) = bar.footprint;
+            (parts, corners, outline, court) = layout_of(spec.design.massing, w, d);
+        }
+    }
+    // every wing repeats the bar's shafts: fewer service bays per wing keep the floor in its slots
+    let mut bays = super::build::service_bays(base);
+    while most(&bar) * parts.len() > MAX_SHAFTS && bays > 0 {
+        bays -= 1;
+        let id = base.model.as_ref().map(|m| format!("typology.{}.shafts", m.id)).unwrap_or_default();
+        let mut b = cur.clone();
+        if b.rules.set(super::rules::Layer::Brief, &id, f64::from(bays)).is_err() {
+            break;
+        }
+        bar = build_bar(&b)?;
+        (w, d) = bar.footprint;
+        (parts, corners, outline, court) = layout_of(spec.design.massing, w, d);
+    }
     let letters = ["", "B", "C", "D"];
     let n = bar.storeys.len();
     let mut storeys = Vec::with_capacity(n);

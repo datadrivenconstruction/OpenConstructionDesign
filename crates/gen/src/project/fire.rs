@@ -867,7 +867,7 @@ fn widen(l: &mut GLayout, i: usize, width: f64, clear: f64) {
         return;
     };
     let nw = width.min(b - a);
-    let along = (c - nw / 2.0).clamp(a, b - nw);
+    let along = (c - nw / 2.0).clamp(a, (b - nw).max(a));
     let x = &mut l.openings[i];
     x.width = nw;
     x.along = along;
