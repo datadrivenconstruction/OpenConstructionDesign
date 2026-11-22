@@ -383,7 +383,8 @@ fn pipeline(run: &mut Run, text: &str) {
     }
 
     run.stats.stage = "types";
-    let mut built: Vec<(String, Built)> = vec![];
+    // the flag: a plant crown of leaf cards, open quads by kind, so the body is not closed
+    let mut built: Vec<(String, Built, bool)> = vec![];
     let targets: Vec<(String, Vec<(String, Value)>)> = if f.types.is_empty() {
         vec![(String::new(), vec![])]
     } else {
@@ -403,8 +404,9 @@ fn pipeline(run: &mut Run, text: &str) {
                 continue;
             }
         };
+        let cards = super::plant_of(&f, &r).is_some_and(|s| super::plant::has_cards(&s, super::Lod::Medium));
         match f.build(&r, super::Lod::Medium) {
-            Ok(b) => built.push((name.clone(), b)),
+            Ok(b) => built.push((name.clone(), b, cards)),
             Err(e) => {
                 let mut fd = run.from_error(&e, "type_fails", &tline);
                 fd.msg = format!("type '{name}': {}", fd.msg);
@@ -456,10 +458,10 @@ fn pipeline(run: &mut Run, text: &str) {
 
     run.stats.stage = "kernel";
     let flat = f.solids.iter().any(|s| matches!(s.shape, Shape::Mesh { .. } | Shape::Feature { .. }));
-    for (name, b) in &built {
+    for (name, b, cards) in &built {
         let who = if name.is_empty() { String::new() } else { format!("type '{name}': ") };
         let tline = if name.is_empty() { vec![] } else { run.lines_named(&["type"], name) };
-        if !flat && !b.mesh.triangles.is_empty() && !b.mesh.is_watertight() {
+        if !flat && !cards && !b.mesh.triangles.is_empty() && !b.mesh.is_watertight() {
             run.err(finding(
                 "nonmanifold",
                 Severity::Error,
