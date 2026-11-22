@@ -30,26 +30,43 @@ fn seg_seg(a: P, b: P, c: P, d: P) -> f64 {
     seg_dist(a, c, d).min(seg_dist(b, c, d)).min(seg_dist(c, a, b)).min(seg_dist(d, a, b))
 }
 
-/// Plan routes from `a` to `b`: straight, then the two single-elbow ones.
-fn routes(a: P, b: P) -> [Vec<P>; 3] {
-    [vec![a, b], vec![a, (b.0, a.1), b], vec![a, (a.0, b.1), b]]
+/// Orthogonal plan routes from `a` to `b`, shortest first: the two single-elbow ones, then
+/// the two-elbow ones whose middle leg runs along one of `mids` (the hall's and corridor's
+/// centre lines), so a long run keeps to the circulation ceiling.
+fn routes(a: P, b: P, mids: &[P]) -> Vec<Vec<P>> {
+    let mut out: Vec<Vec<P>> = vec![vec![a, (b.0, a.1), b], vec![a, (a.0, b.1), b]];
+    for &m in mids {
+        out.push(vec![a, (m.0, a.1), (m.0, b.1), b]);
+        out.push(vec![a, (a.0, m.1), (b.0, m.1), b]);
+    }
+    for r in &mut out {
+        r.dedup_by(|x, y| (x.0 - y.0).abs() < 1e-6 && (x.1 - y.1).abs() < 1e-6);
+    }
+    let cost = |r: &Vec<P>| r.windows(2).map(|w| (w[1].0 - w[0].0).abs() + (w[1].1 - w[0].1).abs()).sum::<f64>() + 0.3 * r.len() as f64;
+    out.sort_by(|x, y| cost(x).total_cmp(&cost(y)));
+    out
 }
 
 fn in_flat(q: P, rings: &[&[P]]) -> bool {
     rings.iter().any(|r| crate::check::inside(r, q))
 }
 
-/// The first route from `a` to `b` that keeps inside the flat and clear of the level's runs;
-/// `None` when none does.
-fn route(lv: &Level, a: P, b: P, r: f64, clear: f64, rings: &[&[P]]) -> Option<Vec<P>> {
-    routes(a, b).into_iter().find(|pts| {
-        let inside = pts.windows(2).all(|w| (0..=10).all(|i| {
-            let t = i as f64 / 10.0;
-            in_flat((w[0].0 + (w[1].0 - w[0].0) * t, w[0].1 + (w[1].1 - w[0].1) * t), rings)
-        }));
-        let short = pts.windows(2).all(|w| ((w[1].0 - w[0].0).hypot(w[1].1 - w[0].1)) > 1e-6);
-        inside && short && pts.windows(2).all(|w| lv.free(w[0], w[1], r, clear, a))
-    })
+fn inside(pts: &[P], rings: &[&[P]]) -> bool {
+    pts.windows(2).all(|w| (0..=10).all(|i| {
+        let t = i as f64 / 10.0;
+        in_flat((w[0].0 + (w[1].0 - w[0].0) * t, w[0].1 + (w[1].1 - w[0].1) * t), rings)
+    }))
+}
+
+/// The shortest orthogonal route from `a` to `b` that keeps inside the flat and clear of the
+/// level's runs; else the shortest inside the flat, else the shortest, `false` for a crossing.
+fn route(lv: &Level, a: P, b: P, r: f64, clear: f64, rings: &[&[P]], mids: &[P]) -> (Vec<P>, bool) {
+    let all = routes(a, b, mids);
+    if let Some(pts) = all.iter().find(|pts| inside(pts, rings) && pts.windows(2).all(|w| lv.free(w[0], w[1], r, clear, a))) {
+        return (pts.clone(), true);
+    }
+    let pts = all.iter().find(|pts| inside(pts, rings)).unwrap_or(&all[0]);
+    (pts.clone(), false)
 }
 
 /// Rooms of one flat on one storey.
@@ -126,6 +143,15 @@ pub(super) fn per_flat(spec: &ProjectSpec, p: &mut GProject) -> Result<bool, Gen
             continue;
         };
         let hr = bbox(&st.layout.rooms[home].polygon);
+        let mids: Vec<P> = fl
+            .rooms
+            .iter()
+            .filter(|&&i| matches!(st.rooms[i].kind, RoomKind::Hall | RoomKind::Corridor) || i == home)
+            .map(|&i| {
+                let r = bbox(&st.layout.rooms[i].polygon);
+                ((r.0 + r.2) / 2.0, (r.1 + r.3) / 2.0)
+            })
+            .collect();
         let unit = pick_unit(tot[0].max(tot[1]));
         let rot = if hr.2 - hr.0 >= hr.3 - hr.1 { 0.0 } else { PI / 2.0 };
         let mut at = ((hr.0 + hr.2) / 2.0, (hr.1 + hr.3) / 2.0);
@@ -171,12 +197,8 @@ pub(super) fn per_flat(spec: &ProjectSpec, p: &mut GProject) -> Result<bool, Gen
                 }
                 let off = if rq[1 - s] > 0.0 { 0.25 * ((r.2 - r.0).max(r.3 - r.1) - 2.0 * dn.wall_keep).max(0.0) } else { 0.0 };
                 let c = if r.2 - r.0 >= r.3 - r.1 { (c.0 + if s == 0 { -off } else { off }, c.1) } else { (c.0, c.1 + if s == 0 { -off } else { off }) };
-                let Some(plan) = route(&lv[s], (hub.0, hub.1), c, dd / 2.0, clear, &rings).or_else(|| {
-                    crossings += 1;
-                    Some(routes((hub.0, hub.1), c)[0].clone())
-                }) else {
-                    continue;
-                };
+                let (plan, ok) = route(&lv[s], (hub.0, hub.1), c, dd / 2.0, clear, &rings, &mids);
+                crossings += usize::from(!ok);
                 for w in plan.windows(2) {
                     lv[s].segs.push((w[0], w[1], dd / 2.0));
                 }
@@ -222,10 +244,8 @@ pub(super) fn per_flat(spec: &ProjectSpec, p: &mut GProject) -> Result<bool, Gen
                 let sg = if s == 0 { 1.0 } else { -1.0 };
                 let o = (at.0 - sn * sg * unit.w / 4.0, at.1 + c * sg * unit.w / 4.0);
                 let e = (f.0 + u.0 * sg * gap / 2.0, f.1 + u.1 * sg * gap / 2.0);
-                let plan = route(&lv[s], o, e, dd / 2.0, clear, &rings).unwrap_or_else(|| {
-                    crossings += 1;
-                    vec![o, e]
-                });
+                let (plan, ok) = route(&lv[s], o, e, dd / 2.0, clear, &rings, &mids);
+                crossings += usize::from(!ok);
                 for w in plan.windows(2) {
                     lv[s].segs.push((w[0], w[1], dd / 2.0));
                 }
