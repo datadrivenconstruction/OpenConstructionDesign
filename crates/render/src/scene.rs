@@ -43,6 +43,21 @@ pub fn is_foliage(tag: u32) -> bool {
     tag & 0xF000_0000 == TAG_RGB | TAG_FOLIAGE
 }
 
+/// A leaf card (`chunks::leaf_cards`) keeps its own data in the low three bits of every colour
+/// channel of its foliage tag, the colour losing them: blue - card, the picture's corner u and v
+/// (per vertex); green - tone jitter 0..7; red - needle picture, then depth tone 0..3 (outside 3).
+pub const CARD: u32 = 1;
+pub const CARD_U: u32 = 2;
+pub const CARD_V: u32 = 4;
+pub const CARD_JITTER_SHIFT: u32 = 8;
+pub const CARD_NEEDLE: u32 = 0x1_0000;
+pub const CARD_AO_SHIFT: u32 = 17;
+pub const CARD_BITS: u32 = 0x07_0707;
+
+pub fn is_card(tag: u32) -> bool {
+    is_foliage(tag) && tag & CARD != 0
+}
+
 /// The face is drawn with blending (glass, semi-transparent shells).
 pub fn is_translucent(tag: u32) -> bool {
     tag == TAG_GLASS || tag & 0xE000_0000 == TAG_RGB | TAG_TRANSLUCENT

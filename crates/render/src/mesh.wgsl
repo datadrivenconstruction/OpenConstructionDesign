@@ -8,6 +8,9 @@
 @group(1) @binding(2) var lin_smp: sampler;
 @group(1) @binding(3) var shadow_tex: texture_depth_2d;
 @group(1) @binding(4) var shadow_smp: sampler_comparison;
+// leaf card pictures (`leaves.rs`): x coverage, y tone; broad-leaf layers 0..2, needles 3
+@group(0) @binding(3) var leaf_tex: texture_2d_array<f32>;
+@group(0) @binding(4) var leaf_smp: sampler;
 
 // packed vertex: 21 bits per axis (high 16 in x/y/z, low 5 in w); chunk origin and step are
 // in the placement row; normal is an octahedron, for a triangle taken from the provoking vertex (flat)
@@ -31,6 +34,8 @@ struct VOut {
     @location(4) @interpolate(flat) seed: u32,
     // interpolated vertex normal: smooth only where the vertices carry smooth normals (foliage)
     @location(5) snrm: vec3<f32>,
+    // leaf card: the picture's coordinates (the corner bits of the vertex tag); -1 elsewhere
+    @location(6) uv: vec2<f32>,
 };
 
 // 32-bit avalanche (xorshift-multiply, public-domain constants): integer maths, equal on every GPU
@@ -90,6 +95,8 @@ fn xform(v: VIn) -> VOut {
     o.snrm = o.nrm;
     o.elem = e;
     o.tag = v.tag;
+    o.uv = vec2<f32>(-1.0);
+    if (is_card(v.tag)) { o.uv = vec2<f32>(f32((v.tag >> 1u) & 1u), f32((v.tag >> 2u) & 1u)); }
     let at = bitcast<vec3<u32>>(v.m3.xyz);
     o.seed = mix32(e * 0x9e3779b1u ^ mix32(at.x ^ mix32(at.y ^ mix32(at.z))));
     // hidden category: vertex outside the clip volume - the whole triangle is discarded
@@ -140,12 +147,36 @@ fn leaf_cut(world: vec3<f32>, sn: vec3<f32>, px_m: f32) -> bool {
 }
 
 fn is_leaf(tag: u32) -> bool { return (tag & 0xF0000000u) == 0x50000000u; }
+fn is_card(tag: u32) -> bool { return is_leaf(tag) && (tag & 1u) != 0u; }
+
+// The picture of a leaf card at `uv` (x coverage, y tone): a needle spray or one of the
+// broad-leaf clusters by the card's jitter, mirrored on every other card.
+fn card_texel(uv: vec2<f32>, gx: vec2<f32>, gy: vec2<f32>, tag: u32) -> vec2<f32> {
+    let j = (tag >> 8u) & 7u;
+    var layer = i32(j % 3u);
+    if ((tag & 0x10000u) != 0u) { layer = 3; }
+    var q = uv;
+    if ((j & 4u) != 0u) { q.x = 1.0 - q.x; }
+    return textureSampleGrad(leaf_tex, leaf_smp, q, layer, gx, gy).xy;
+}
+
+// Brightness of a card's texel: the leaf's own tone, darker the deeper the card sits in the
+// crown (depth tone in the tag), a little up or down per card.
+fn card_tone(tag: u32, tone: f32) -> f32 {
+    let depth = f32((tag >> 17u) & 3u) / 3.0;
+    let jit = f32((tag >> 8u) & 7u) / 7.0;
+    return (0.35 + 0.75 * tone) * (0.6 + 0.4 * depth) * (0.9 + 0.2 * jit);
+}
 
 @fragment
 fn fs_clip(i: VOut) {
     let px = length(dpdx(i.world)) + length(dpdy(i.world));
+    let gx = dpdx(i.uv);
+    let gy = dpdy(i.uv);
     if (clipped(i.world) || face_dropped(i.tag, i.clip.xy, i.elem)) { discard; }
-    if (is_leaf(i.tag) && leaf_cut(i.world, i.snrm, px)) { discard; }
+    if (is_card(i.tag)) {
+        if (card_texel(i.uv, gx, gy, i.tag).x < 0.5) { discard; }
+    } else if (is_leaf(i.tag) && leaf_cut(i.world, i.snrm, px)) { discard; }
 }
 
 // Ground: a large quad that receives sun shadow; colour is a darkening over the background.
@@ -163,6 +194,7 @@ fn vs_ground(@builtin(vertex_index) k: u32) -> VOut {
     o.tag = 0u;
     o.seed = 0u;
     o.snrm = o.nrm;
+    o.uv = vec2<f32>(-1.0);
     return o;
 }
 
@@ -217,6 +249,8 @@ fn fs_ground(i: VOut) -> @location(0) vec4<f32> {
 // face tag without the category bits and, for plain tags, without the texture layer (bits 16-23)
 fn base_tag(t: u32) -> u32 {
     if ((t & 0xF0000000u) == 0u) { return t & 0xF000FFFFu; }
+    // a leaf card keeps its data in the low colour bits: the colour is their middle
+    if (is_card(t)) { return (t & 0xF0F8F8F8u) | 0x040404u; }
     return t & 0xF0FFFFFFu;
 }
 
@@ -274,6 +308,8 @@ fn mark(c0: vec3<f32>, n: vec3<f32>, to_eye: vec3<f32>, selected: bool, hovered:
 
 @fragment
 fn fs(i: VOut) -> @location(0) vec4<f32> {
+    let gx = dpdx(i.uv);
+    let gy = dpdy(i.uv);
     let selected = is_selected(i.elem);
     let hovered = is_hovered(i.elem);
     let dark = u.params.x;
@@ -308,9 +344,16 @@ fn fs(i: VOut) -> @location(0) vec4<f32> {
         }
     }
     if (clipped(i.world) || face_dropped(i.tag, i.clip.xy, i.elem)) { discard; }
+    var tone = 1.0;
+    if (is_card(i.tag)) {
+        let tx = card_texel(i.uv, gx, gy, i.tag);
+        if (tx.x < 0.5) { discard; }
+        tone = card_tone(i.tag, tx.y);
+    }
     var n = normalize(i.nrm);
+    if (is_card(i.tag)) { n = normalize(i.snrm); }
     let to_eye = u.eye.xyz - i.world;
-    if (dot(n, to_eye) < 0.0) { n = -n; }
+    if (dot(n, to_eye) < 0.0 && !is_card(i.tag)) { n = -n; }
     let l = normalize(-u.light_dir.xyz);
     if ((i.tag & 0xF0000000u) == 0x10000000u) {
         // section fill (poche): material colour from the tag, unlit
@@ -335,7 +378,7 @@ fn fs(i: VOut) -> @location(0) vec4<f32> {
     let sun = wrap * sun_light(i.world, n);
     let fill = max(dot(n, normalize(vec3<f32>(0.6, 0.8, 0.3))), 0.0) * 0.10;
     let amb = u.light_dir.w;
-    let base = palette(base_tag(i.tag));
+    let base = palette(base_tag(i.tag)) * tone;
     var ao = ambient_occ(i.clip.xy);
     if (u.params.z < 0.5) {
         // no effects: ground-contact shading approximation

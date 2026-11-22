@@ -421,10 +421,92 @@ pub fn foliage_normals(m: &SceneMesh) -> Vec<Vec3> {
         .collect()
 }
 
+/// Leaf cards of a near tree (`plant` cards): every two triangles are one quad, [a b c] [a c d]
+/// for a leaf picture or [a b d] [b c d] for a needle spray, and no corner belongs to two quads.
+/// Returns the corners a b c d of each quad (the picture's corners (0,0) (1,0) (1,1) (0,1)) and
+/// whether it is a needle spray; `None` for any other mesh.
+pub fn leaf_cards(m: &SceneMesh) -> Option<Vec<([u32; 4], bool)>> {
+    let t = &m.triangles;
+    if t.is_empty() || t.len() % 2 != 0 {
+        return None;
+    }
+    let mut used = vec![false; m.positions.len()];
+    let mut out = Vec::with_capacity(t.len() / 2);
+    for p in t.chunks_exact(2) {
+        let (x, y) = (p[0], p[1]);
+        let q = if x[0] == y[0] && x[2] == y[1] {
+            ([x[0], x[1], x[2], y[2]], false)
+        } else if x[1] == y[0] && x[2] == y[2] {
+            ([x[0], x[1], y[1], x[2]], true)
+        } else {
+            return None;
+        };
+        let c = q.0;
+        if (0..4).any(|i| (i + 1..4).any(|j| c[i] == c[j])) {
+            return None;
+        }
+        for i in c {
+            let u = used.get_mut(i as usize)?;
+            if *u {
+                return None;
+            }
+            *u = true;
+        }
+        out.push(q);
+    }
+    Some(out)
+}
+
+/// Share of the card's own facing in its normal; the rest points away from the crown's core, so
+/// the cards shade as one soft crown with a little life of their own.
+pub const CARD_FACE: f32 = 0.35;
+
+/// Vertices of leaf cards: per-corner picture coordinates, a tone jitter and a depth tone in
+/// the tag bits (`scene::CARD`), normals bent outward from the crown's core.
+fn card_vertices(m: &SceneMesh, cards: &[([u32; 4], bool)], out: &mut Vec<Vertex>) {
+    use crate::scene::{CARD, CARD_AO_SHIFT, CARD_BITS, CARD_JITTER_SHIFT, CARD_NEEDLE, CARD_U, CARD_V};
+    let mut b = Aabb::EMPTY;
+    m.positions.iter().for_each(|p| b.grow(Vec3::from(*p)));
+    let (mid, half) = ((b.min + b.max) * 0.5, ((b.max - b.min) * 0.5).max(Vec3::splat(1e-3)));
+    let r = half.min_element();
+    let (lo, hi) = (b.min + Vec3::splat(r), (b.max - Vec3::splat(r)).max(b.min + Vec3::splat(r)));
+    let outward = |p: Vec3| (p - p.clamp(lo, hi)).normalize_or(Vec3::Z);
+    let base = (m.tag & !CARD_BITS) | CARD;
+    for (q, needle) in cards {
+        let p = q.map(|i| Vec3::from(m.positions[i as usize]));
+        let c = (p[0] + p[1] + p[2] + p[3]) * 0.25;
+        let mut face = (p[1] - p[0]).cross(p[3] - p[0]).normalize_or_zero();
+        if face.dot(outward(c)) < 0.0 {
+            face = -face;
+        }
+        let key = c.to_array().map(|x| (x * 64.0).round() as i32 as u32);
+        let h = key[0].wrapping_mul(0x9E37_79B1) ^ key[1].wrapping_mul(0x85EB_CA6B) ^ key[2].wrapping_mul(0xC2B2_AE35);
+        let h = (h ^ (h >> 15)).wrapping_mul(0x2C1B_3C6D);
+        let jitter = (h >> 13) & 7;
+        let depth = ((c - mid) / half).length();
+        let ao = (((depth - 0.35) / 0.6 * 3.0).round().clamp(0.0, 3.0)) as u32;
+        let tag = base | jitter << CARD_JITTER_SHIFT | ao << CARD_AO_SHIFT | if *needle { CARD_NEEDLE } else { 0 };
+        let corner = [0, CARD_U, CARD_U | CARD_V, CARD_V];
+        let n = p.map(|x| (outward(x) + face * CARD_FACE).normalize_or(face));
+        let tri: [usize; 6] = if *needle { [0, 1, 3, 1, 2, 3] } else { [0, 1, 2, 0, 2, 3] };
+        for k in tri {
+            out.push(Vertex {
+                pos: p[k].into(),
+                normal: n[k].into(),
+                element: m.element,
+                tag: tag | corner[k],
+            });
+        }
+    }
+}
+
 /// Flat triangle vertices (face normal), like `Scene::vertices`; foliage carries its smooth
-/// vertex normals instead (`foliage_normals`).
+/// vertex normals instead (`foliage_normals`), leaf cards their picture corners (`card_vertices`).
 pub fn tri_vertices(m: &SceneMesh, out: &mut Vec<Vertex>) {
     if crate::scene::is_foliage(m.tag) {
+        if let Some(cards) = leaf_cards(m) {
+            return card_vertices(m, &cards, out);
+        }
         let ns = foliage_normals(m);
         for t in &m.triangles {
             for i in t {
@@ -432,7 +514,7 @@ pub fn tri_vertices(m: &SceneMesh, out: &mut Vec<Vertex>) {
                     pos: m.positions[*i as usize],
                     normal: ns[*i as usize].into(),
                     element: m.element,
-                    tag: m.tag,
+                    tag: m.tag & !crate::scene::CARD,
                 });
             }
         }
@@ -2836,6 +2918,35 @@ mod tests {
         assert!(
             screen_size(&vp, &b(Vec3::new(0., 900., 0.), 0.01), (800., 800.)).unwrap() < LOD_PX
         );
+    }
+
+    /// Quads of two triangles with corners of their own are leaf cards: every corner carries
+    /// the card bit and its picture corner, a needle spray its bit; a solid crown carries none,
+    /// whatever its colour.
+    #[test]
+    fn leaf_cards_carry_their_picture_corners_and_a_solid_crown_none() {
+        use crate::scene::{is_card, tag_foliage, CARD, CARD_NEEDLE, CARD_U, CARD_V};
+        let tag = tag_foliage([60, 120, 51]);
+        let quad = |o: f32| [[o, 0., 0.], [o + 1., 0., 0.], [o + 1., 0., 1.], [o, 0., 1.]];
+        let mut positions = quad(0.0).to_vec();
+        positions.extend(quad(2.0));
+        let m = SceneMesh { element: 1, tag, positions, triangles: vec![[0, 1, 2], [0, 2, 3], [4, 5, 7], [5, 6, 7]] };
+        let cards = leaf_cards(&m).expect("two cards");
+        assert_eq!(cards, vec![([0, 1, 2, 3], false), ([4, 5, 6, 7], true)]);
+        let mut v = vec![];
+        tri_vertices(&m, &mut v);
+        assert_eq!(v.len(), 12);
+        assert!(v.iter().all(|x| is_card(x.tag)));
+        assert!(v[..6].iter().all(|x| x.tag & CARD_NEEDLE == 0) && v[6..].iter().all(|x| x.tag & CARD_NEEDLE != 0));
+        let uv = |x: &Vertex| (x.tag & CARD_U != 0, x.tag & CARD_V != 0);
+        assert_eq!(uv(&v[0]), (false, false));
+        assert_eq!(uv(&v[2]), (true, true));
+        // shared corners are a solid: no card bits
+        let solid = SceneMesh { triangles: vec![[0, 1, 2], [0, 2, 3], [0, 3, 1], [1, 3, 2]], ..m.clone() };
+        assert!(leaf_cards(&solid).is_none());
+        let mut v = vec![];
+        tri_vertices(&solid, &mut v);
+        assert!(v.iter().all(|x| x.tag & CARD == 0 && crate::scene::is_foliage(x.tag)));
     }
 
     #[test]

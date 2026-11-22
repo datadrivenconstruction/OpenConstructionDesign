@@ -214,6 +214,7 @@ fn frame_group(
     uniforms: &wgpu::Buffer,
     sel: &wgpu::TextureView,
     anim: &wgpu::TextureView,
+    leaves: &crate::leaves::LeafGpu,
 ) -> wgpu::BindGroup {
     device.create_bind_group(&wgpu::BindGroupDescriptor {
         label: Some("ddc-frame"),
@@ -230,6 +231,14 @@ fn frame_group(
             wgpu::BindGroupEntry {
                 binding: 2,
                 resource: wgpu::BindingResource::TextureView(anim),
+            },
+            wgpu::BindGroupEntry {
+                binding: 3,
+                resource: wgpu::BindingResource::TextureView(&leaves.view),
+            },
+            wgpu::BindGroupEntry {
+                binding: 4,
+                resource: wgpu::BindingResource::Sampler(&leaves.sampler),
             },
         ],
     })
@@ -536,6 +545,8 @@ pub struct Renderer {
     sel: crate::selset::SelGpu,
     /// Show-as-built animation state (`reveal`); idle while no timeline is set.
     anim: crate::reveal::AnimGpu,
+    /// Leaf card pictures (`leaves`), uploaded with the first frame.
+    leaves: crate::leaves::LeafGpu,
     reveal_rev: u64,
     /// Meshes in chunks by cell: partial upload, culling, level of detail (`chunks`).
     pub chunks: crate::chunks::Chunks,
@@ -665,6 +676,16 @@ impl Renderer {
                     ty: tex(wgpu::TextureSampleType::Float { filterable: false }),
                     count: None,
                 },
+                // leaf card pictures: cut-out in the depth passes too
+                entry(
+                    3,
+                    wgpu::BindingType::Texture {
+                        sample_type: wgpu::TextureSampleType::Float { filterable: true },
+                        view_dimension: wgpu::TextureViewDimension::D2Array,
+                        multisampled: false,
+                    },
+                ),
+                entry(4, filt),
             ],
         );
         let main_bgl = bgl(
@@ -709,7 +730,8 @@ impl Renderer {
         let uniforms = uniform_buffer(device);
         let sel = crate::selset::SelGpu::new(device);
         let anim = crate::reveal::AnimGpu::new(device);
-        let bind_group = frame_group(device, &frame_bgl, &uniforms, &sel.view, &anim.view);
+        let leaves = crate::leaves::LeafGpu::new(device);
+        let bind_group = frame_group(device, &frame_bgl, &uniforms, &sel.view, &anim.view, &leaves);
         let pl = |groups: &[&wgpu::BindGroupLayout]| {
             device.create_pipeline_layout(&wgpu::PipelineLayoutDescriptor {
                 label: None,
@@ -869,6 +891,7 @@ impl Renderer {
             view: 0,
             parked: Default::default(),
             anim,
+            leaves,
             reveal_rev: 0,
             sel_epoch: 0,
             bg_epoch: 0,
@@ -891,6 +914,7 @@ impl Renderer {
                     &uniforms,
                     &self.sel.view,
                     &self.anim.view,
+                    &self.leaves,
                 );
                 ViewState {
                     frame: None,
@@ -937,7 +961,7 @@ impl Renderer {
 
     /// Group 0 of the current view from the current uniforms, selection and animation textures.
     fn frame_group_now(&self, device: &wgpu::Device) -> wgpu::BindGroup {
-        frame_group(device, &self.frame_bgl, &self.uniforms, &self.sel.view, &self.anim.view)
+        frame_group(device, &self.frame_bgl, &self.uniforms, &self.sel.view, &self.anim.view, &self.leaves)
     }
 
     /// One frame of the show-as-built animation (`Timeline::sample`, `sample_tint`); `None`
@@ -1358,6 +1382,7 @@ impl Renderer {
         if !self.health.usable {
             return;
         }
+        self.leaves.upload(queue);
         let q = u.quality();
         let full = (size.0.max(1), size.1.max(1));
         let asked = self.fx.unwrap_or_else(|| FrameFx::from_quality(q));
