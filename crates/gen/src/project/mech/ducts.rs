@@ -507,10 +507,10 @@ fn fittings(air: &mut Air) {
             let cr = &air.runs[c];
             let (z, dp, kind) = if straight.is_some() {
                 let (a1, a2, v1, v2) = if supply { (ac, cr.area(), vc, cr.v) } else { (cr.area(), ac, cr.v, vc) };
-                if (a1 - a2).abs() < 1e-9 {
+                if (pr.size.0 - cr.size.0).abs() + (pr.size.1 - cr.size.1).abs() < 1e-9 {
                     continue;
                 }
-                if a2 < a1 {
+                if a2 <= a1 {
                     let z = contraction_zeta(a1, a2, half);
                     (z, z * dynamic(v2), FitKind::Transition)
                 } else {
@@ -685,6 +685,9 @@ fn dampers(p: &GProject, air: &mut Air) {
     let n = p.storeys.len();
     let dl = rule("mep.hvac.damper_len");
     for r in &air.runs {
+        if r.class == Class::Plant {
+            silencer(r, &mut air.dampers);
+        }
         if r.storey >= n || r.class == Class::Riser {
             continue;
         }
@@ -702,20 +705,16 @@ fn dampers(p: &GProject, air: &mut Air) {
             e.duty.push(("ei_min", minutes));
             e
         };
-        if r.class == Class::Plant {
-            silencer(r, &mut air.dampers);
-        }
         if from_riser {
-            let ring = p.storeys[r.storey]
-                .layout
-                .shafts
-                .iter()
-                .filter(|s| s.kind == crate::ShaftKind::Duct)
-                .nth(usize::from(r.net))
-                .map(|s| s.ring.clone())
-                .unwrap_or_default();
-            if let Some(at) = leave_ring(&r.points, &ring) {
-                let d = unit(r.points[0], r.points[1]);
+            // the shaft the run starts in; a run that starts on its face closes it there
+            let shafts: Vec<&[(f64, f64)]> = p.storeys[r.storey].layout.shafts.iter().filter(|s| s.kind == crate::ShaftKind::Duct).map(|s| s.ring.as_slice()).collect();
+            let a = (r.points[0].0, r.points[0].1);
+            let d = unit(r.points[0], r.points[1]);
+            let at = shafts.iter().find(|s| super::geo::inside(a, s)).and_then(|s| leave_ring(&r.points, s)).or_else(|| {
+                let face = shafts.iter().any(|s| (0..s.len()).any(|i| seg_dist2(a, s[i], s[(i + 1) % s.len()]) <= dl));
+                face.then(|| (r.points[0].0 + d.0 * dl / 2.0, r.points[0].1 + d.1 * dl / 2.0, r.points[0].2 + d.2 * dl / 2.0))
+            });
+            if let Some(at) = at {
                 air.dampers.push(fire(at, d, rule("mep.hvac.shaft_ei")));
             }
         }
