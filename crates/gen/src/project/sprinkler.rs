@@ -64,10 +64,10 @@ fn pressurise(p: &mut GProject, top: f64) {
 /// The riser line nearest `a` (risers at `xs`, shifted with it) that runs through the slab of
 /// every storey clear of its holes and shafts: a turned core's well may cover the spot beside it.
 fn riser_spot(p: &GProject, a: P2, xs: &[f64]) -> P2 {
-    const GAP: f64 = 0.3;
+    let gap = rule("fire.riser_clear");
     let near = |r: &[P2], q: P2| {
         let b = bbox(r);
-        q.0 > b[0] - GAP && q.0 < b[2] + GAP && q.1 > b[1] - GAP && q.1 < b[3] + GAP
+        q.0 > b[0] - gap && q.0 < b[2] + gap && q.1 > b[1] - gap && q.1 < b[3] + gap
     };
     let clear = |q: P2| {
         p.storeys.iter().all(|s| {
@@ -84,8 +84,15 @@ fn riser_spot(p: &GProject, a: P2, xs: &[f64]) -> P2 {
     if clear(a0) {
         return a0;
     }
-    (1..=80)
-        .flat_map(|k| (0..16).map(move |j| (0.25 * k as f64, std::f64::consts::TAU * j as f64 / 16.0)))
+    // rings one step apart, points on a ring about one step apart along it
+    let step = rule("fire.riser_search_step");
+    let rings = (rule("fire.riser_search_reach") / step).ceil() as usize;
+    (1..=rings)
+        .flat_map(|k| {
+            let r = step * k as f64;
+            let n = (std::f64::consts::TAU * r / step).ceil() as usize;
+            (0..n).map(move |j| (r, std::f64::consts::TAU * j as f64 / n as f64))
+        })
         .map(|(r, t)| (a0.0 + r * t.cos(), a0.1 + r * t.sin()))
         .find(|&q| clear(q))
         .unwrap_or(a0)
