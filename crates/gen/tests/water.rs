@@ -82,6 +82,30 @@ fn water_networks_are_sound() {
     }
 }
 
+/// The slab holes of a storey neither overlap nor touch, so every slab keeps a valid boundary.
+#[test]
+fn slab_holes_stand_apart() {
+    for (t, p) in projects() {
+        for (k, st) in p.storeys.iter().enumerate() {
+            let bb: Vec<[f64; 4]> = st
+                .layout
+                .slab_holes
+                .iter()
+                .map(|h| {
+                    let (xs, ys) = (h.iter().map(|q| q.0), h.iter().map(|q| q.1));
+                    [xs.clone().fold(f64::MAX, f64::min), ys.clone().fold(f64::MAX, f64::min), xs.fold(f64::MIN, f64::max), ys.fold(f64::MIN, f64::max)]
+                })
+                .collect();
+            for (i, a) in bb.iter().enumerate() {
+                for b in &bb[i + 1..] {
+                    let meet = a[0] <= b[2] + 1e-6 && b[0] <= a[2] + 1e-6 && a[1] <= b[3] + 1e-6 && b[1] <= a[3] + 1e-6;
+                    assert!(!meet, "{t} storey {k}: slab holes {a:?} and {b:?} meet");
+                }
+            }
+        }
+    }
+}
+
 /// EN 12056-2 / DIN 1986-100: every sloping drain falls at least 1 %, and each run keeps
 /// one sense along its points (down the flow, or up a stack).
 #[test]
