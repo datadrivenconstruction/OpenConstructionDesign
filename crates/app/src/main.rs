@@ -5,6 +5,7 @@
 //!   [--scene overlap|phases] [--phase-filter KEY] [--phases-win] [--params-win] [--schedule-demo] [--ribbon-tab ID] [--crop Y0,Y1] [--status-demo] [--recover-demo] [--autosave-settings] [--dwg-demo underlay|preview|result]
 //!   [--sheet-demo canvas|active|print|props|sets]]
 //! Demo and benchmark: ddc-app [--rooms N | --walls N] [--continuous] [--frames N --headless-report]
+//! Scripted UI shots: ddc-app --ui-shot script.txt (steps in ui_shot.rs)
 //! Graphics modes: ddc-app --screenshot out.png --style KEY --gfx-level KEY; ddc-app --gfx-bench FILE|synthetic:N [--gfx-csv OUT] [--frames N] [--size WxH]
 //! Large-model benchmark: ddc-app --synthetic N [--synthetic-tris T] [--synthetic-quality off|medium|high] [--frames N] [--size WxH]
 //! Bench of any model: ddc-app --bench FILE|synthetic:N [--bench-window] [--bench-jsonl OUT] (see perf_bench.rs)
@@ -435,6 +436,19 @@ fn main() -> Result<(), String> {
         let n = n.parse().map_err(|_| format!("bad link count: {n}"))?;
         let e = after("--links-elems").and_then(|v| v.parse().ok()).unwrap_or(2000);
         return ddc_app::links_ui::bench::run(n, e, a.size);
+    }
+    // `--ui-shot script`: the whole UI offscreen, driven by a script (ui_shot.rs)
+    let argv: Vec<String> = std::env::args().collect();
+    if let Some(f) = argv.iter().position(|s| s == "--ui-shot").and_then(|i| argv.get(i + 1)) {
+        ddc_app::shot_press::set_screenshot_mode(true);
+        let (pick, desc, ..) = pick_backend(a.safe, &mut log)?;
+        let rs = ddc_app::shot::render_state(pick)?;
+        let text = std::fs::read_to_string(f).map_err(|e| format!("{f}: {e}"))?;
+        let base = std::path::Path::new(f).parent().unwrap_or(std::path::Path::new("."));
+        for p in ddc_app::ui_shot::run(&rs, desc, &text, base)? {
+            println!("ui-shot: {}", p.display());
+        }
+        return Ok(());
     }
     if let Some(out) = &a.screenshot {
         return screenshot(&a, out, &mut log);
