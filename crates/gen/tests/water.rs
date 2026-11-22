@@ -38,13 +38,6 @@ fn on(r: &GRun, q: (f64, f64, f64)) -> bool {
 #[test]
 fn every_fixture_is_on_supply_and_drain() {
     for (t, p) in projects() {
-        // known open ports: a WC too near its stack for a collector (apartment) and cold taps
-        // walled in by the drops of the room beside (school)
-        let most = match *t {
-            "apartment_section" => 4,
-            "school" => 15,
-            _ => 0,
-        };
         let mut open = vec![];
         for (k, st) in p.storeys.iter().enumerate() {
             for (i, f) in st.layout.fixtures.iter().enumerate() {
@@ -55,9 +48,9 @@ fn every_fixture_is_on_supply_and_drain() {
                 }
             }
         }
-        assert!(open.len() <= most, "{t}: {} open, {open:?}", open.len());
-        let unserved = p.metrics.iter().find(|m| m.0 == "water_unserved").map_or(f64::NAN, |m| m.1);
-        assert!(unserved <= most as f64, "{t}: water_unserved {unserved}");
+        assert!(open.is_empty(), "{t}: {} open, {open:?}", open.len());
+        let unserved = p.metrics.iter().find(|m| m.0 == "water_unserved").map(|m| m.1);
+        assert_eq!(unserved, Some(0.0), "{t}");
     }
 }
 
@@ -77,8 +70,7 @@ fn water_follows_the_origin() {
         let same = r.sys == s.sys
             && r.points.len() == s.points.len()
             && r.points.iter().zip(&s.points).all(|(u, v)| (u.0 + 100.0 - v.0).abs() < 1e-6 && (u.1 - 50.0 - v.1).abs() < 1e-6 && (u.2 - v.2).abs() < 1e-9);
-        assert!(same, "{:?} {:?}
- vs {:?}", r.sys, r.points, s.points);
+        assert!(same, "{:?} {:?} vs {:?}", r.sys, r.points, s.points);
     }
 }
 
@@ -129,6 +121,53 @@ fn drain_sizes_never_shrink_downstream() {
                 }
                 assert!(dn(a) <= dn(b), "{t}: DN{} drains into DN{} at {end:?}", dn(a), dn(b));
             }
+        }
+    }
+}
+
+/// DIN 1988-300: supply pipes narrow towards the fixtures, so a branch is never wider than
+/// the pipe it tees off.
+#[test]
+fn supply_branches_are_never_wider_than_their_pipe() {
+    for (t, p) in projects() {
+        for sys in [SvcSys::Cold, SvcSys::Hot] {
+            let runs: Vec<&GRun> = water(p, sys).collect();
+            let near = |a: (f64, f64, f64), b: (f64, f64, f64)| (a.0 - b.0).hypot(a.1 - b.1).hypot(a.2 - b.2) < 1e-3;
+            for a in &runs {
+                for q in [a.points[0], *a.points.last().unwrap()] {
+                    for b in runs.iter().filter(|b| !std::ptr::eq(**b, *a) && on(b, q)) {
+                        if near(b.points[0], q) || near(*b.points.last().unwrap(), q) {
+                            continue;
+                        }
+                        assert!(dn(a) <= dn(b), "{t}: {sys:?} DN{} branch off DN{} at {q:?}", dn(a), dn(b));
+                    }
+                }
+            }
+        }
+    }
+}
+
+/// DIN 1986-100: an unvented single connection pipe stays within 4 m at DN 50/70, and within
+/// 10 m for a WC at DN 100.
+#[test]
+fn drain_branches_stay_within_their_length() {
+    for (t, p) in projects() {
+        let mut starts = vec![];
+        for (k, st) in p.storeys.iter().enumerate() {
+            for f in &st.layout.fixtures {
+                for c in svc_ports(f).into_iter().filter(|c| c.sys == SvcSys::Sanitary) {
+                    starts.push((c.at.0, c.at.1, st.elevation + c.at.2, k));
+                }
+            }
+        }
+        for r in water(p, SvcSys::Sanitary) {
+            let s = r.points[0];
+            if !starts.iter().any(|q| q.3 == r.storey && (q.0 - s.0).hypot(q.1 - s.1).hypot(q.2 - s.2) < 1e-3) {
+                continue;
+            }
+            let len: f64 = r.points.windows(2).map(|w| (w[1].0 - w[0].0).hypot(w[1].1 - w[0].1).hypot(w[1].2 - w[0].2)).sum();
+            let most = if dn(r) >= 90 { 10.0 } else { 4.0 };
+            assert!(len <= most + 1e-9, "{t}: DN{} branch {len:.2} m from {s:?}", dn(r));
         }
     }
 }
