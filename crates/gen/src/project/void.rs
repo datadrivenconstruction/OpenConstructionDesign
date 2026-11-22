@@ -241,6 +241,31 @@ fn pieces(p: &GProject) -> Vec<Piece> {
 
 /// Every pair of pieces that cut into each other, with the depth.
 fn clashing(all: &[Piece]) -> Vec<(usize, usize, f64)> {
+    near(all, 0.0, &|_, _| 0.0)
+}
+
+/// A pair of pieces closer than the clearance asked for: labels, run ids (`None` for an
+/// obstacle) and how deep they cut in, m (more than the joint tolerance is a clash).
+pub(crate) struct Near {
+    pub a: (String, Option<usize>),
+    pub b: (String, Option<usize>),
+    pub depth: f64,
+}
+
+/// Pairs of pieces of the project closer than `clear(label, label)`, at most `pad`.
+pub(crate) fn near_pairs(p: &GProject, pad: f64, clear: &dyn Fn(&str, &str) -> f64) -> Vec<Near> {
+    let all = pieces(p);
+    near(&all, pad, clear)
+        .into_iter()
+        .map(|(i, j, depth)| Near {
+            a: (all[i].label.clone(), all[i].run.map(|r| r.0)),
+            b: (all[j].label.clone(), all[j].run.map(|r| r.0)),
+            depth,
+        })
+        .collect()
+}
+
+fn near(all: &[Piece], pad: f64, clear: &dyn Fn(&str, &str) -> f64) -> Vec<(usize, usize, f64)> {
     let mut order: Vec<usize> = (0..all.len()).collect();
     order.sort_by(|&i, &j| all[i].bounds[0].total_cmp(&all[j].bounds[0]));
     let mut out = vec![];
@@ -248,20 +273,20 @@ fn clashing(all: &[Piece]) -> Vec<(usize, usize, f64)> {
         let a = &all[i];
         for &j in &order[k + 1..] {
             let b = &all[j];
-            if b.bounds[0] > a.bounds[3] {
+            if b.bounds[0] > a.bounds[3] + pad {
                 break;
             }
             if a.run.is_none() && b.run.is_none() {
                 continue;
             }
-            if (1..3).any(|c| a.bounds[c] > b.bounds[c + 3] || b.bounds[c] > a.bounds[c + 3]) {
+            if (1..3).any(|c| a.bounds[c] > b.bounds[c + 3] + pad || b.bounds[c] > a.bounds[c + 3] + pad) {
                 continue;
             }
-            if a.bounds[5] < b.bounds[2] || b.bounds[5] < a.bounds[2] {
+            if a.bounds[5] + pad < b.bounds[2] || b.bounds[5] + pad < a.bounds[2] {
                 continue;
             }
             let d = depth(&a.body, &b.body);
-            if d > TOL && !joined(a, b) && !allowed(a, b) {
+            if d > TOL - clear(&a.label, &b.label) && !joined(a, b) && !allowed(a, b) {
                 out.push((i.min(j), i.max(j), d));
             }
         }

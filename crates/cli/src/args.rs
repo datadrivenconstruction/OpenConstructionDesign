@@ -41,6 +41,7 @@ pub fn parse(argv: &[OsString]) -> Result<Parsed, String> {
     let mut exports = vec![];
     let (mut out, mut level, mut allow_many) = (None, None, false);
     let (mut brief, mut force) = (None, false);
+    let mut metrics = None;
     let (mut sheets, mut ifc) = (false, false);
     let mut kv: Vec<(String, String)> = vec![];
     let mut params = vec![];
@@ -73,6 +74,7 @@ pub fn parse(argv: &[OsString]) -> Result<Parsed, String> {
             "--level" => level = Some(it.next().ok_or("--level needs a name")?.to_string_lossy().into_owned()),
             "--allow-many" => allow_many = true,
             "--brief" => brief = Some(PathBuf::from(it.next().ok_or("--brief needs a file")?)),
+            "--metrics" => metrics = Some(PathBuf::from(it.next().ok_or("--metrics needs a file")?)),
             "--force" => force = true,
             "--sheets" => sheets = true,
             "--ifc" => ifc = true,
@@ -150,11 +152,12 @@ pub fn parse(argv: &[OsString]) -> Result<Parsed, String> {
                     brief: brief.ok_or("gen: --brief <brief.json> is required")?,
                     out: out.ok_or("gen: --out <model.ddc> is required")?,
                     force,
+                    metrics,
                 })
             }
             #[cfg(not(feature = "link"))]
             {
-                let _ = (&brief, force);
+                let _ = (&brief, force, &metrics);
                 return Err("gen: this build has no ERP link (build with --features link)".into());
             }
         }

@@ -13,6 +13,7 @@ web-time.workspace = true
 ddc-geom = { path = "../geom" }
 serde_json.workspace = true
 thiserror.workspace = true
+sha2 = "0.10"
 
 [dev-dependencies]
 # country norm packs for the per-country generation test (tests/world.rs)

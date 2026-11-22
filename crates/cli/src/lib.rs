@@ -51,10 +51,11 @@ ddc <command> [options]     batch work on model files, no window, no GPU
       Run a geometry script on a private copy of the project and save the result to a NEW
       file (never the input). Script errors show line and column. Exit 0 saved, 2 failed.
 
-  ddc gen --brief <brief.json> --out <model.ddc> [--force]
+  ddc gen --brief <brief.json> --out <model.ddc> [--metrics <file.json>] [--force]
       (build with --features link) Generate a building from a ddc-brief/1 document and save it
       to a NEW .ddc. The log lists the brief fields the generator did not use and the values
-      it derived. Exit 0 saved, 2 nothing saved (bad brief, unconfirmed values, build refused).
+      it derived, and the routing metrics of the services ("mep"), which --metrics also writes
+      to a file. Exit 0 saved, 2 nothing saved (bad brief, unconfirmed values, build refused).
 
   ddc publish <file.ddc> --out <rev.ddcrev> [--parent <prev.ddcrev>] [--sheets] [--ifc] [--brief <brief.json>]
          [--depth D1..D5] [--name <text>] [--author <text>] [--message <text>] [--project-id <uuid>]
