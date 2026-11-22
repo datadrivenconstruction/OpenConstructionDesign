@@ -107,6 +107,8 @@ struct Cluster {
     hw: (f64, f64),
     rc: f64,
     rh: f64,
+    /// Stack centre in the frame.
+    s: (f64, f64),
     /// Storeys joined: storey, cold and hot flows of the room, discharge units, stack join z.
     joins: Vec<Join>,
     vent: f64,
@@ -132,25 +134,30 @@ impl Cluster {
         let (mc, dc) = svc::supply_pipe(cw_q.max(q_min));
         let (mh, dh) = svc::supply_pipe(hw_q.max(q_min));
         let (rc, rh) = (svc::od(mc, dc) / 2.0, svc::od(mh, dh) / 2.0);
-        let g = g();
-        let pad = rule("services.water.riser_pad");
-        let x0 = g + 2.0 * rs + g;
-        let cw = (x0 + rc, 2.0 * rc + pad);
-        let hw = (cw.0 + rc + g + rh, 2.0 * rh + pad);
-        Cluster {
+        let mut c = Cluster {
             f,
             stack_dn,
             rs,
-            cw,
-            hw,
+            cw: (0.0, 0.0),
+            hw: (0.0, 0.0),
             rc,
             rh,
+            s: (0.0, 0.0),
             joins: vec![],
             vent: 0.0,
-        }
+        };
+        c.set_stack((g() + rs, g() + rs));
+        c
+    }
+    /// Stands the stack at `s`, the risers in a row along u past it.
+    fn set_stack(&mut self, s: (f64, f64)) {
+        let (g, pad) = (g(), rule("services.water.riser_pad"));
+        self.s = s;
+        self.cw = (s.0 + self.rs + g + self.rc, 2.0 * self.rc + pad);
+        self.hw = (self.cw.0 + self.rc + g + self.rh, 2.0 * self.rh + pad);
     }
     fn stack(&self) -> (f64, f64) {
-        self.f.p(g() + self.rs, g() + self.rs)
+        self.f.p(self.s.0, self.s.1)
     }
     /// Radius of the widest vertical in the row.
     fn row(&self) -> f64 {
@@ -166,9 +173,9 @@ impl Cluster {
     fn bbox(&self, risers: bool) -> R {
         let g = g();
         let (u1, v1) = if risers {
-            (self.hw.0 + self.rh + g, (self.cw.1 + self.rc).max(self.hw.1 + self.rh).max(2.0 * self.rs + g) + g)
+            (self.hw.0 + self.rh + g, (self.cw.1 + self.rc).max(self.hw.1 + self.rh).max(self.s.1 + self.rs) + g)
         } else {
-            (2.0 * self.rs + 2.0 * g, 2.0 * self.rs + 2.0 * g)
+            (self.s.0 + self.rs + g, self.s.1 + self.rs + g)
         };
         svc::bbox(&[self.f.p(0.0, 0.0), self.f.p(u1, 0.0), self.f.p(u1, v1), self.f.p(0.0, v1)])
     }
@@ -554,7 +561,7 @@ fn drains_at(space: &mut Space<'_>, p: &GProject, k: usize, room: &Room, fx: &[u
         feet.iter().map(|f| f.dn).max().unwrap_or(rule("services.water.collector_dn") as u32)
     };
     let (oc, os) = (svc::od(pvc, dn_c), 2.0 * cl.rs);
-    let (sc, ss) = (n.slope(dn_c) / 100.0, (g() + cl.rs, g() + cl.rs));
+    let (sc, ss) = (n.slope(dn_c) / 100.0, cl.s);
     // what the fittings at a stretch end take from it; falls turn an elbow past a right angle
     let s_max = feet.iter().map(|f| n.slope(f.dn)).fold(n.slope(dn_c), f64::max) / 100.0;
     let tan_h = (std::f64::consts::FRAC_PI_4 + s_max.atan()).tan();
@@ -904,27 +911,48 @@ pub(crate) fn plumb(spec: &ProjectSpec, p: &mut GProject) -> usize {
                 lu += norms().lu(p.storeys[k].layout.fixtures[i].family);
             }
             // the clusters this room can join, then a new one in each corner
-            let mut cands: Vec<Option<usize>> = (0..clusters.len())
-                .filter(|&c| (0..4).any(|j| clusters[c].f.same(&corner(room, j))))
-                .map(Some)
-                .collect();
-            cands.extend([None, None, None, None]);
-            // a new stack goes into the corner nearest a riser shaft, when the storey has one
+            // a new stack goes into the corner nearest a riser shaft, when the storey has one; a
+            // floor WC outlet too near the stack's line to branch takes the stack in line with it
             let corners: Vec<(f64, f64)> = (0..4).map(|j| corner(room, j).o).collect();
             let order = shaft_order(&corners, &riser_shafts[k]);
+            let wc_outs: Vec<(f64, f64)> = fx
+                .iter()
+                .filter(|&&i| p.storeys[k].layout.fixtures[i].family == "WC")
+                .flat_map(|&i| svc::svc_ports(&p.storeys[k].layout.fixtures[i]))
+                .filter(|c| c.sys == SvcSys::Sanitary && c.dir.2 < -0.5)
+                .map(|c| (c.at.0, c.at.1))
+                .collect();
+            let mut cands: Vec<(Option<usize>, usize, Option<(usize, bool)>)> = (0..clusters.len())
+                .filter(|&c| (0..4).any(|j| clusters[c].f.same(&corner(room, j))))
+                .map(|c| (Some(c), 0, None))
+                .collect();
+            for j in 0..4 {
+                cands.push((None, order[j], None));
+                for w in 0..wc_outs.len() {
+                    cands.extend([(None, order[j], Some((w, true))), (None, order[j], Some((w, false)))]);
+                }
+            }
+            let stack_shift = rule("services.water.stack_shift");
             let mut best: Option<(usize, RoomDesign, Option<Cluster>, usize)> = None;
-            let mut corner_i = 0;
-            for cand in cands {
+            for (cand, cj, align) in cands {
                 let m = space.mark();
                 let mut fresh: Option<Cluster> = None;
                 let cl: &Cluster = match cand {
                     Some(c) => &clusters[c],
                     None => {
-                        let f = corner(room, order[corner_i]);
-                        corner_i += 1;
+                        let f = corner(room, cj);
                         let probe = Cluster::new(f, false, 0.0, 0.0);
-                        let (cw, hw, wc) = flows_at(p, &rooms, probe.f.p(g() + probe.rs, g() + probe.rs));
+                        let (cw, hw, wc) = flows_at(p, &rooms, probe.stack());
                         let mut c = Cluster::new(f, wc, cw, hw);
+                        if let Some((w, along_u)) = align {
+                            let q = c.f.uv(wc_outs[w]);
+                            let s = if along_u { (q.0, c.s.1) } else { (c.s.0, q.1) };
+                            let off = if along_u { s.0 - c.s.0 } else { s.1 - c.s.1 };
+                            if off <= 1e-9 || off > stack_shift {
+                                continue;
+                            }
+                            c.set_stack(s);
+                        }
                         c.vent = roof_top(p, c.stack()) + norms().vent_above_roof();
                         if !cluster_clear(p, &c, k) || !space.try_add(&verticals(&c, (e + cz_max, e + hz_max)), svc::gap()) {
                             space.rollback(m);
@@ -1092,26 +1120,64 @@ fn design_room_in(space: &mut Space<'_>, p: &GProject, k: usize, room: &Room, fx
     // last, the chases bridge the rises of the room behind a shared wall and the drops
     let none: Vec<Upright> = vec![];
     let ups = space.uprights();
-    let tries: Vec<_> = ways.iter().map(|w| (*w, &none)).chain(ways.iter().map(|w| (*w, &ups))).collect();
-    for ((dc, dh, zc, zh), ups) in tries {
-        let (cw_runs, cw_links, cw_q, _) = supply(p, k, room, fx, cl, SvcSys::Cold, dc, rc, zc, pk, ups);
-        let (hw_runs, hw_links, hw_q, _) = supply(p, k, room, fx, cl, SvcSys::Hot, dh, rh, zh, pk, ups);
+    let mut over = ways.clone();
+    // or both chases run over the rises ending in the walls, under the ceiling, and drop to the taps
+    let (e, ceil) = (st.elevation, svc::ceiling(p, k));
+    let reach = room.sides.iter().map(|sd| 2.0 * sd.half).fold(0.0, f64::max) + svc::gap();
+    let top = ups
+        .iter()
+        .filter(|u| u.1 < e + ceil && u.2 > e && u.2 < e + ceil && svc::inside(u.0, &svc::grow(&room.clear, reach)))
+        .map(|u| u.2 - e)
+        .fold(f64::MIN, f64::max);
+    if top > f64::MIN {
+        let zc = top + rule("services.water.bridge_clear") + rc;
+        let zh = zc + rc + rh + chase_gap;
+        if zh + rh + svc::gap() <= ceil {
+            over.extend([(c1, c2, zc, zh), (c2, c1, zc, zh)]);
+        }
+    }
+    let tries: Vec<_> = ways.iter().map(|w| (*w, &none)).chain(over.iter().map(|w| (*w, &ups))).collect();
+    let want = fx.iter().flat_map(|&i| svc::svc_ports(&st.layout.fixtures[i])).filter(|c| matches!(c.sys, SvcSys::Cold | SvcSys::Hot)).count();
+    // the first way serving every tap, else the one serving most
+    let mut part: Option<(usize, usize)> = None;
+    let mut take: Option<usize> = None;
+    for (i, ((dc, dh, zc, zh), ups)) in tries.iter().enumerate() {
+        let (cw_runs, cw_links, _, _) = supply(p, k, room, fx, cl, SvcSys::Cold, *dc, rc, *zc, pk, ups);
+        let (hw_runs, hw_links, _, _) = supply(p, k, room, fx, cl, SvcSys::Hot, *dh, rh, *zh, pk, ups);
         let mut sup: Vec<GRun> = cw_runs;
         sup.extend(hw_runs);
         if sup.is_empty() {
             break;
         }
+        let n = cw_links.len() + hw_links.len();
+        let m = space.mark();
         let ok = space.try_add(&sup, svc::gap());
-        if ok {
-            d.runs.extend(sup);
-            d.cw = cw_q;
-            d.hw = hw_q;
-            d.cz = zc;
-            d.hz = zh;
-            d.links.extend(cw_links.into_iter().map(|(f, c)| (f, c, SvcSys::Cold)));
-            d.links.extend(hw_links.into_iter().map(|(f, c)| (f, c, SvcSys::Hot)));
+        space.rollback(m);
+        if !ok {
+            continue;
+        }
+        if n == want {
+            take = Some(i);
             break;
         }
+        if part.is_none_or(|p| n > p.1) {
+            part = Some((i, n));
+        }
+    }
+    if let Some(i) = take.or(part.map(|p| p.0)) {
+        let ((dc, dh, zc, zh), ups) = tries[i];
+        let (cw_runs, cw_links, cw_q, _) = supply(p, k, room, fx, cl, SvcSys::Cold, dc, rc, zc, pk, ups);
+        let (hw_runs, hw_links, hw_q, _) = supply(p, k, room, fx, cl, SvcSys::Hot, dh, rh, zh, pk, ups);
+        let mut sup: Vec<GRun> = cw_runs;
+        sup.extend(hw_runs);
+        space.try_add(&sup, svc::gap());
+        d.runs.extend(sup);
+        d.cw = cw_q;
+        d.hw = hw_q;
+        d.cz = zc;
+        d.hz = zh;
+        d.links.extend(cw_links.into_iter().map(|(f, c)| (f, c, SvcSys::Cold)));
+        d.links.extend(hw_links.into_iter().map(|(f, c)| (f, c, SvcSys::Hot)));
     }
     if !drains_first {
         add_drains(space, p, k, room, fx, cl, &mut d);

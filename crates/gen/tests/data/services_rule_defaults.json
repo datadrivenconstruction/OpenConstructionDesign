@@ -53,6 +53,7 @@
  "services.water.waste_down": 0.9,
  "services.water.waste_off": 0.08,
  "services.water.waste_shift": 0.3,
+ "services.water.stack_shift": 0.15,
  "services.water.waste_clear": 0.02,
  "services.water.riser_wide": 0.05,
  "services.water.chase_shift": 0.15,
