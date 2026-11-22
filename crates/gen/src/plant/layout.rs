@@ -6,6 +6,7 @@
 //! terminal points on the east wall; the rack over the walkway; the hall around it all.
 
 use ddc_geom::math::{v3, V3};
+use ddc_geom::mep::route3d::seg_seg_dist;
 use serde_json::{json, Value as J};
 
 use crate::project::rules::rule;
@@ -17,7 +18,9 @@ use super::topo::Topo;
 use super::{box_at, p3, EqKind, Equip, Row, Spot};
 
 /// Thickness of a platform deck and of the outer walls, m.
-const DECK_T: f64 = 0.05;
+pub(super) const DECK_T: f64 = 0.05;
+/// Room between a platform post and a pipe stub, m.
+const POST_GAP: f64 = 0.05;
 pub(super) const WALL: f64 = 0.3;
 /// Depth of a ladder off the platform edge without and with a cage.
 const LADDER_D: f64 = 0.2;
@@ -324,9 +327,26 @@ fn need(e: &Equip, t: &Topo) -> Need {
     let mut plat = None;
     if !ops.is_empty() {
         let top = ops.iter().map(|o| o.z).fold(0.0, f64::max);
-        let deck = top - rule("plant.access.op_h");
+        let mut deck = top - rule("plant.access.op_h");
         let (gap, w) = (rule("plant.platform.gap"), rule("plant.platform.width"));
         let front = e.kind == EqKind::Exchanger;
+        // a side stub under the platform's rails lifts the deck over it
+        let rail = rule("plant.platform.handrail");
+        let side = if front { FRONT } else { RIGHT };
+        for _ in 0..e.nozzles.len() {
+            let lift = e
+                .nozzles
+                .iter()
+                .filter(|n| side_of(n.dir) == Some(side))
+                .map(|n| (n.at.z, route::geo(&t.lines[n.line], &t.eqs).clear))
+                .filter(|&(z, c)| z + c + 2.0 * STEEL_R + POST_GAP > deck - DECK_T && z - c - 2.0 * STEEL_R < deck + rail)
+                .map(|(z, c)| z + c + DECK_T + 2.0 * STEEL_R + POST_GAP)
+                .fold(deck, f64::max);
+            if lift <= deck {
+                break;
+            }
+            deck = lift;
+        }
         let (plo, phi, n, u) = if front {
             (v3(lo.x, lo.y - gap - w, deck - DECK_T), v3(hi.x, lo.y - gap, deck), v3(0.0, -1.0, 0.0), v3(1.0, 0.0, 0.0))
         } else {
@@ -511,6 +531,48 @@ pub(super) fn place(t: &mut Topo) -> Result<Lay, String> {
         y0 = y0.min(t.eqs[i].at.y - hi.y - wall_c.max(n.zone[BACK]).max(n.hard[BACK]));
     }
 
+    // the units beside the tank farm stand clear of its bund wall
+    let keep = WALL + wall_c;
+    for r in 0..2 {
+        for side in [false, true] {
+            let Some(b) = bund_of(t) else { break };
+            let is_tank = |i: &usize| b.tanks.contains(&t.eqs[*i].tag);
+            let (Some(first), Some(last)) = (rows[r].iter().position(is_tank), rows[r].iter().rposition(is_tank)) else { continue };
+            let x_of = |i: usize, hi: bool| {
+                let bs = t.eqs[i].body();
+                if hi { bs.iter().map(|b| b.1.x).fold(f64::NEG_INFINITY, f64::max) } else { bs.iter().map(|b| b.0.x).fold(f64::INFINITY, f64::min) }
+            };
+            let (need, from) = if side {
+                (rows[r][last + 1..].iter().map(|&i| b.hi.x + keep - x_of(i, false)).fold(0.0, f64::max), last + 1)
+            } else {
+                (rows[r][..first].iter().map(|&i| x_of(i, true) + keep - b.lo.x).fold(0.0, f64::max), first)
+            };
+            if need > 0.0 {
+                for &i in &rows[r][from..] {
+                    t.eqs[i].at.x += need;
+                }
+                ends[r] += need;
+            }
+        }
+    }
+
+    // and its wall keeps off the walkway: the row of the tanks steps back
+    if let Some(b) = bund_of(t) {
+        let north = rows[0].iter().any(|i| b.tanks.contains(&t.eqs[*i].tag));
+        let d = if north { walk.1 + keep - b.lo.y } else { b.hi.y + keep - walk.0 };
+        if d > 0.0 {
+            let r = if north { 0 } else { 1 };
+            for &i in &rows[r] {
+                t.eqs[i].at.y += if north { d } else { -d };
+            }
+            if north {
+                y1 += d;
+            } else {
+                y0 -= d;
+            }
+        }
+    }
+
     // terminals on the east wall, beside the walkway, stacked up if the wall is short
     let terms: Vec<usize> = (0..t.eqs.len()).filter(|&i| t.eqs[i].kind == EqKind::Terminal).collect();
     let tgeo: Vec<route::Geo> = terms.iter().map(|&i| route::geo(&t.lines[t.eqs[i].nozzles[0].line], &t.eqs)).collect();
@@ -571,7 +633,7 @@ pub(super) fn place(t: &mut Topo) -> Result<Lay, String> {
         let Some(p) = n.as_ref().and_then(|n| n.plat.as_ref()) else { continue };
         let e = &t.eqs[i];
         let tag = format!("PL-{}", platforms.len() + 1);
-        let pf = platform(e, p, &tag, &mut steel);
+        let pf = platform(e, t, p, &tag, &mut steel);
         tops = tops.max(pf.access.hi.z).max(pf.deck + rule("plant.platform.handrail"));
         platforms.push(pf);
     }
@@ -625,14 +687,15 @@ pub(super) fn place(t: &mut Topo) -> Result<Lay, String> {
             let bay = rule("plant.rack.bay");
             let n = ((x1 / bay).ceil() as usize).max(1);
             let pitch = x1 / n as f64;
-            Rack { xs: (0..n).map(|k| pitch * (k as f64 + 0.5)).collect(), y0: walk.0, y1: walk.1, drop: c + STEEL_R }
+            let inset = wall_c.min((walk.1 - walk.0) / 4.0);
+            Rack { xs: (0..n).map(|k| pitch * (k as f64 + 0.5)).collect(), y0: walk.0 + inset, y1: walk.1 - inset, drop: c + STEEL_R }
         }),
     })
 }
 
 /// The platform of a unit with posts, deck beams, handrails, knee rails and toe boards on its
 /// open sides, and its ladder (with a cage when tall) or stair at the access end.
-fn platform(e: &Equip, p: &LocalPlatform, tag: &str, steel: &mut Vec<Steel>) -> Platform {
+fn platform(e: &Equip, t: &Topo, p: &LocalPlatform, tag: &str, steel: &mut Vec<Steel>) -> Platform {
     let deck = p.deck;
     let (rail, knee, toe) = (rule("plant.platform.handrail"), rule("plant.platform.knee"), rule("plant.platform.toe"));
     let post = rule("plant.platform.post");
@@ -640,6 +703,15 @@ fn platform(e: &Equip, p: &LocalPlatform, tag: &str, steel: &mut Vec<Steel>) -> 
         steel.push(Steel { kind, a: e.world(a), b: e.world(b), of: tag.to_string(), line: None });
     };
     let z = |v: V3, z: f64| v3(v.x, v.y, z);
+    let stubs: Vec<(V3, V3, f64)> = e
+        .nozzles
+        .iter()
+        .filter(|n| n.dir.z.abs() < 0.5 && n.at.z < deck)
+        .map(|n| {
+            let g = route::geo(&t.lines[n.line], &t.eqs);
+            (n.at, n.at + n.dir * (g.reach() + g.clear), g.clear)
+        })
+        .collect();
     // deck corners: the access end is the one the access direction points at
     let (lo, hi) = (p.lo, p.hi);
     let corners = [v3(lo.x, lo.y, deck), v3(hi.x, lo.y, deck), v3(hi.x, hi.y, deck), v3(lo.x, hi.y, deck)];
@@ -662,8 +734,16 @@ fn platform(e: &Equip, p: &LocalPlatform, tag: &str, steel: &mut Vec<Steel>) -> 
         put(SteelKind::Toe, z(a, deck + toe), z(b, deck + toe));
         let l = (b - a).len();
         let m = ((l / post).ceil() as usize).max(1);
+        let along = (b - a) * (1.0 / l.max(1e-9));
         for j in 0..=m {
-            let q = a + (b - a) * (j as f64 / m as f64);
+            let q0 = a + (b - a) * (j as f64 / m as f64);
+            // a post steps along its edge, staying on it, off the stubs that pass under the deck
+            let clear = |q: V3| stubs.iter().all(|(s0, s1, c)| seg_seg_dist(z(q, 0.0), z(q, deck), *s0, *s1) >= c + STEEL_R + POST_GAP);
+            let q = (0..=(2.0 * l / POST_GAP) as usize)
+                .map(|k| k.div_ceil(2) as f64 * POST_GAP * if k % 2 == 0 { 1.0 } else { -1.0 })
+                .map(|d| q0 + along * d)
+                .find(|&q| (q - a).dot(along) >= -1e-9 && (q - a).dot(along) <= l + 1e-9 && clear(q))
+                .unwrap_or(q0);
             put(SteelKind::Post, z(q, 0.0), z(q, deck + rail));
         }
     }

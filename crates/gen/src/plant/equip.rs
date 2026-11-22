@@ -20,6 +20,8 @@ use super::{Clear, EqKind, Equip, Level, Line, Spot};
 /// its most height as a share of the legs (the bottom drain stays clear).
 const PIER_OUT: f64 = 0.1;
 const PIER_K: f64 = 0.6;
+/// Room kept round a vessel's axis under it for the bottom drain, m.
+const DRAIN_KEEP: f64 = 0.3;
 /// Neck of a nozzle beyond the flange radius, and how deep it sits into the shell, m.
 const NECK: f64 = 0.1;
 const EMBED: f64 = 0.02;
@@ -341,17 +343,14 @@ fn vessel(f: &mut F, e: &mut Equip, lines: &[Line]) {
     f.boxes.push((v3(-r, -r, legs), v3(r, r, ztop)));
     let leg = (LEG_K * d).max(LEG_MIN);
     let la = LEG_AT * r;
-    if tank {
-        // a flat-bottomed tank sits on a concrete ring plinth
-        f.cyl("Plinth", v3(0.0, 0.0, 0.0), v3(0.0, 0.0, legs), r + PIER_OUT, "Concrete", true);
-    } else {
-        let ph = rule("plant.found.h").min(PIER_K * z0);
-        for (sx, sy) in [(-1.0, -1.0), (1.0, -1.0), (1.0, 1.0), (-1.0, 1.0)] {
-            let c = v3(sx * la, sy * la, 0.0);
-            f.block("Leg", c - v3(leg / 2.0, leg / 2.0, 0.0), c + v3(leg / 2.0, leg / 2.0, z0), "Steel", true);
-            let w = leg / 2.0 + PIER_OUT;
-            f.block("Pier", c - v3(w, w, 0.0), c + v3(w, w, ph), "Concrete", true);
-        }
+    // each leg on a concrete pier; the bottom drain keeps its room between them
+    let ph = rule("plant.found.h").min(PIER_K * z0);
+    for (sx, sy) in [(-1.0, -1.0), (1.0, -1.0), (1.0, 1.0), (-1.0, 1.0)] {
+        let c = v3(sx * la, sy * la, 0.0);
+        f.block("Leg", c - v3(leg / 2.0, leg / 2.0, 0.0), c + v3(leg / 2.0, leg / 2.0, z0), "Steel", true);
+        // a small shell's piers keep off the bottom drain at its axis
+        let w = (leg / 2.0 + PIER_OUT).min(la - DRAIN_KEEP).max(leg / 2.0);
+        f.block("Pier", c - v3(w, w, 0.0), c + v3(w, w, ph), "Concrete", true);
     }
     let mut keep = 0.0;
     if !tank && d >= MANHOLE_FROM {

@@ -14,7 +14,7 @@ use ddc_geom::mep::route3d::{self as r3, Index, Obstacle, Pass, Routed, RoutedIn
 use crate::project::rules::rule;
 
 use super::equip;
-use super::layout::{Lay, STEEL_R, WALL};
+use super::layout::{Lay, SteelKind, DECK_T, STEEL_R, WALL};
 use super::size::{self, ItemKind};
 use super::topo::Topo;
 use super::{End, EqKind, Equip, Line, Spot, Svc};
@@ -32,6 +32,8 @@ const SHIFT: f64 = 0.05;
 const SHIFTS: usize = 8;
 /// Points closer than this are one point, m.
 const EPS: f64 = 1e-6;
+/// Room for pipes round an outdoor plot, m.
+const OUT_MARGIN: f64 = 2.0;
 const ON: f64 = 1e-4;
 
 /// Envelope radius of a piece of `dn` on line `l`: the pipe with its insulation, or a flange.
@@ -289,11 +291,17 @@ fn obstacles(t: &Topo, lay: &Lay, tiers: &[f64]) -> (Vec<Obstacle>, Vec<(usize, 
     }
     // platforms and access with their steel on the envelope
     let pad = v3(STEEL_R, STEEL_R, STEEL_R);
+    // a deck and its rails; below it only its posts, so a stub may leave a unit under its deck
+    let rail = rule("plant.platform.handrail");
     for p in &lay.platforms {
-        out.push(Obstacle::aabb(v3(p.lo.x, p.lo.y, 0.0) - pad, p.hi + pad, Pass::Block, -3));
+        out.push(Obstacle::aabb(v3(p.lo.x, p.lo.y, p.deck - DECK_T) - pad, v3(p.hi.x, p.hi.y, p.deck + rail) + pad, Pass::Block, -3));
         for a in std::iter::once(&p.access).chain(&p.extra) {
             out.push(Obstacle::aabb(a.lo - pad, a.hi + pad, Pass::Block, -3));
         }
+    }
+    for st in lay.steel.iter().filter(|st| st.kind == SteelKind::Post) {
+        let (lo, hi) = (v3(st.a.x.min(st.b.x), st.a.y.min(st.b.y), st.a.z.min(st.b.z)), v3(st.a.x.max(st.b.x), st.a.y.max(st.b.y), st.a.z.max(st.b.z)));
+        out.push(Obstacle::aabb(lo - pad, hi + pad, Pass::Block, -3));
     }
     for f in &lay.flues {
         let r = v3(f.d / 2.0, f.d / 2.0, 0.0);
@@ -312,7 +320,9 @@ fn obstacles(t: &Topo, lay: &Lay, tiers: &[f64]) -> (Vec<Obstacle>, Vec<(usize, 
 fn route_all(t: &Topo, lay: &Lay, tiers: &[f64]) -> Raw {
     let (base, fronts) = obstacles(t, lay, tiers);
     let h = &lay.hall;
-    let bounds = (v2(h.x0, h.y0), v2(h.x1, h.y1));
+    // outdoors the pipes may leave the plot outline behind the rows; the terminals stay at x1
+    let m = if t.outdoor { OUT_MARGIN } else { 0.0 };
+    let bounds = (v2(h.x0 - m, h.y0 - m), v2(h.x1, h.y1 + m));
     let geos: Vec<Geo> = t.lines.iter().map(|l| geo(l, &t.eqs)).collect();
     let mut order: Vec<usize> = (0..t.lines.len()).collect();
     order.sort_by_key(|&i| (t.lines[i].svc == Svc::Dr, std::cmp::Reverse(t.lines[i].dn), i));
@@ -331,7 +341,8 @@ fn route_all(t: &Topo, lay: &Lay, tiers: &[f64]) -> Raw {
             let ol = &t.lines[oj];
             for e in ol.all_ends() {
                 let (a, d) = face(&t.eqs, e);
-                others.push(Routed { a, b: a + d * geos[oj].reach(), clearance: geos[oj].clear });
+                // a port keeps its straight and a leg beyond it to turn in
+                others.push(Routed { a, b: a + d * (geos[oj].reach() + geos[oj].min_leg), clearance: geos[oj].clear });
             }
         }
         let drain = l.svc == Svc::Dr;
@@ -343,11 +354,14 @@ fn route_all(t: &Topo, lay: &Lay, tiers: &[f64]) -> Raw {
         let layers = if drain {
             vec![h.drain_z]
         } else if t.outdoor && !suction.is_empty() {
-            suction
+            suction.iter().chain(tiers).copied().collect()
         } else {
             tiers.to_vec()
         };
         let mut rules = Rules::new(g.clear, g.min_leg, layers.clone(), bounds);
+        if t.outdoor && !suction.is_empty() && !drain {
+            rules.zone = (suction[0], suction[suction.len() - 1]);
+        }
         rules.step = rule("plant.route.step");
         rules.tangent = g.tangent;
         rules.tee_leg = (TEE_K * g.tangent).min(g.min_leg);
@@ -664,22 +678,24 @@ fn supports(p: &mut Piping, lay: &Lay) {
         };
         for k in 0..m {
             let f0 = (k as f64 + 0.5) / m as f64;
-            let mut at = s.a + (s.b - s.a) * f0;
+            let mut at = Some(s.a + (s.b - s.a) * f0);
             if kind != SupportKind::Trench {
-                for j in 0..=SHIFTS {
-                    let f = f0 + SHIFT / m as f64 * j.div_ceil(2) as f64 * if j % 2 == 0 { 1.0 } else { -1.0 };
-                    let q = s.a + (s.b - s.a) * f.clamp(0.0, 1.0);
-                    let ok = if kind == SupportKind::Hanger {
-                        rod_clear(&segs, q.x, q.y, q.z + s.env, FAR, Some(s.line))
-                    } else {
-                        rod_clear(&segs, q.x, q.y, 0.0, q.z - s.env, Some(s.line))
-                    };
-                    if ok {
-                        at = q;
-                        break;
-                    }
-                }
+                // the nearest point of the run its rod or post reaches clear of the other pipes;
+                // a run crossed all along by others rests on its neighbours' supports
+                let step = SHIFT * 0.5 / m as f64;
+                at = (0..=(2.0 / step) as usize)
+                    .map(|j| f0 + step * j.div_ceil(2) as f64 * if j % 2 == 0 { 1.0 } else { -1.0 })
+                    .filter(|f| (0.0..=1.0).contains(f))
+                    .map(|f| s.a + (s.b - s.a) * f)
+                    .find(|q| {
+                        if kind == SupportKind::Hanger {
+                            rod_clear(&segs, q.x, q.y, q.z + s.env, FAR, Some(s.line))
+                        } else {
+                            rod_clear(&segs, q.x, q.y, 0.0, q.z - s.env, Some(s.line))
+                        }
+                    });
             }
+            let Some(at) = at else { continue };
             p.supports.push(Support { kind, line: s.line, at, dn: s.dn, env: s.env });
         }
     }

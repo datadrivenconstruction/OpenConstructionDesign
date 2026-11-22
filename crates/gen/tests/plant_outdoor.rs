@@ -51,6 +51,13 @@ fn probe() {
         for i in r.issues.iter().take(30) {
             println!("  {}: {}", i.check, i.what);
         }
+        if std::env::var("PROBE_OPS").is_ok() {
+            for i in p.piping.items.iter().filter(|i| i.item.operated() && i.op.z > 1.8) {
+                let e = &p.equipment[i.end.eq];
+                println!("  op {} {:?} on {}.{} op ({:.2},{:.2},{:.2}) dir ({:.0},{:.0},{:.0}) unit at ({:.1},{:.1}) decks {:?}", i.tag, i.item, e.tag, e.nozzles[i.end.nz].name, i.op.x, i.op.y, i.op.z, i.dir.x, i.dir.y, i.dir.z, e.at.x, e.at.y,
+                    p.platforms.iter().filter(|q| q.serves == e.tag).map(|q| q.deck).collect::<Vec<_>>());
+            }
+        }
         if std::env::var("PROBE_EQ").is_ok() {
             for e in &p.equipment {
                 let (lo, hi) = e.extent();
@@ -92,7 +99,7 @@ fn the_site_brief_with_default_rules_builds_a_network() {
     b["rules"] = json!({});
     let p = design(&b);
     let n = build_network(&p).unwrap_or_else(|e| panic!("{e}"));
-    assert!(n.open_ends.is_empty(), "{} open ends", n.open_ends.len());
+    assert_eq!(n.open_ends.len(), p.report.nozzles, "a free end at each nozzle, none elsewhere");
 }
 
 #[test]
@@ -103,7 +110,8 @@ fn every_plant_brief_pipes_every_nozzle_with_no_issue() {
         let what: Vec<String> = r.issues.iter().take(10).map(|i| format!("{}: {}", i.check, i.what)).collect();
         assert_eq!(r.connected, r.nozzles, "{name}: {what:?}");
         assert!(r.issues.is_empty(), "{name}: {} issues {what:?}", r.issues.len());
-        build_network(&p).unwrap_or_else(|e| panic!("{name}: {e}"));
+        let n = build_network(&p).unwrap_or_else(|e| panic!("{name}: {e}"));
+        assert_eq!(n.open_ends.len(), r.nozzles, "{name}: free ends");
     }
 }
 

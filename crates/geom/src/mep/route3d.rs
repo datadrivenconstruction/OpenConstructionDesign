@@ -800,8 +800,10 @@ impl<'a> Search<'a> {
                     _ => r.clearance,
                 };
                 let Some(info) = self.edge(n, nd, cl) else {
+                    if expanded == 1 && std::env::var("R3DBG").is_ok() { let (a, b) = (self.lat.at(n), self.lat.at(m)); let hs: Vec<_> = self.hits(a, b, cl).iter().map(|h| (self.ix.obstacles[h.0 as usize].tag, self.ix.obstacles[h.0 as usize].pass)).collect(); eprintln!("R3DBG first {nd} {a:?}->{b:?} blocked {hs:?}"); }
                     continue;
                 };
+                if expanded == 1 && std::env::var("R3DBG").is_ok() { let (a, b) = (self.lat.at(n), self.lat.at(m)); eprintln!("R3DBG first {nd} {a:?}->{b:?} free_others {} turn {turn} q {q} tq {tq}", self.free_of_others(a, b, None, cl)); }
                 let (a, b) = (self.lat.at(n), self.lat.at(m));
                 let touch = goal.joins.get(&m).filter(|ax| **ax != nd / 2).map(|_| b);
                 if !self.free_of_others(a, b, touch, cl) {
