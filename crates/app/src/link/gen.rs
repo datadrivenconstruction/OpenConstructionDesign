@@ -397,6 +397,8 @@ pub struct Report {
     pub counts: BTreeMap<String, i64>,
     /// What was built under the building (`kind`, `count`, `keys`, sizes); `None` when the brief has none.
     pub foundation: Option<Value>,
+    /// Routing metrics of the services, per system.
+    pub mep: Value,
 }
 
 /// Checks the brief, maps it, builds the project and saves it to `out` (a `.ddc`).
@@ -411,6 +413,7 @@ pub fn generate(brief: &Value, out: &Path) -> Result<Report, GenError> {
     let built = project_plan::build(&m.spec).map_err(GenError::Spec)?;
     let _: &ProjectSpec = &built.spec;
     let summary = project_plan::summary(&built);
+    let mep = ddc_gen::project::route_metrics(&built.project, built.spec.origin);
     let mut ed = Editor::new_in_memory().map_err(|e| GenError::Spec(e.to_string()))?;
     ed.reload().map_err(|e| GenError::Spec(e.to_string()))?;
     let op = PlanOp::Project(ProjectOp { input: m.spec.clone(), level: ed.level, slot0: 0, pid: "P1".into() });
@@ -443,5 +446,6 @@ pub fn generate(brief: &Value, out: &Path) -> Result<Report, GenError> {
         summary,
         counts,
         foundation,
+        mep,
     })
 }

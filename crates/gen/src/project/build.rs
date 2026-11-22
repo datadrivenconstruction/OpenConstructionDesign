@@ -1497,6 +1497,7 @@ fn build_ruled(spec: &ProjectSpec) -> Result<GProject, GenError> {
     }
     super::services(spec, &mut p);
     super::protect(spec, &mut p);
+    super::coord::apply(spec, &mut p);
     super::openings::apply(spec, &mut p);
     super::railings::apply(spec, &mut p)?;
     // after the guards, which follow the whole roof edge

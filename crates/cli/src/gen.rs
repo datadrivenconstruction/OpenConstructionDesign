@@ -2,6 +2,7 @@
 // SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `ddc gen --brief <brief.json> --out <model.ddc>`: generation with no window and no GPU.
 //! Built with the `link` feature only; the log names every brief field the generator did not use.
+//! `--metrics <file.json>` also writes the routing metrics of the services, per system.
 
 use std::path::{Path, PathBuf};
 use web_time::Instant;
@@ -16,12 +17,20 @@ pub struct GenArgs {
     pub brief: PathBuf,
     pub out: PathBuf,
     pub force: bool,
+    /// Where to write the routing metrics of the services.
+    pub metrics: Option<PathBuf>,
 }
 
 /// Returns (stdout text, exit code): 0 saved, 2 nothing saved. One file is written, never half.
 pub fn run(a: &GenArgs, json_out: bool, quiet: bool) -> (String, i32) {
     let t = Instant::now();
-    let r = execute(a, quiet);
+    let mut r = execute(a, quiet);
+    if let (Ok(rep), Some(path)) = (&r, &a.metrics) {
+        let text = serde_json::to_string_pretty(&rep.mep).unwrap_or_default();
+        if let Err(e) = std::fs::write(path, text) {
+            r = Err(("output", format!("cannot write {}: {e}", path.display()), None));
+        }
+    }
     let (code, mut log) = match &r {
         Ok(rep) => (EXIT_OK, report_json(rep)),
         Err((kind, msg, extra)) => {
@@ -92,6 +101,6 @@ fn load_ext(p: &Path) -> String {
 fn report_json(r: &ddc_app::link::gen::Report) -> Value {
     json!({
         "spec": r.spec, "mapped": r.mapped, "unsupported": r.unsupported, "derived": r.derived,
-        "project": r.summary, "counts": r.counts, "foundation": r.foundation,
+        "project": r.summary, "counts": r.counts, "foundation": r.foundation, "mep": r.mep,
     })
 }
