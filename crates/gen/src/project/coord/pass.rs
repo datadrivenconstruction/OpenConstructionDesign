@@ -11,11 +11,11 @@
 
 use std::collections::{BTreeMap, BTreeSet};
 
-use super::metrics::{bends, is_bend, level, min_seg, norm, short_segs, sub, turn};
-use super::segs::{lines, points_mut, void_id, Kind, Line, Src};
 use super::super::rules::rule;
 use super::super::svc;
 use super::super::GProject;
+use super::metrics::{bends, is_bend, level, min_seg, norm, short_segs, sub, turn};
+use super::segs::{lines, points_mut, void_id, Kind, Line, Src};
 
 type P3 = (f64, f64, f64);
 
@@ -36,13 +36,19 @@ fn end_cell(q: P3) -> (i64, i64) {
 fn dist_seg(p: P3, a: P3, b: P3) -> f64 {
     let d = sub(b, a);
     let l2 = d.0 * d.0 + d.1 * d.1 + d.2 * d.2;
-    let t = if l2 > 0.0 { ((p.0 - a.0) * d.0 + (p.1 - a.1) * d.1 + (p.2 - a.2) * d.2) / l2 } else { 0.0 };
+    let t = if l2 > 0.0 {
+        ((p.0 - a.0) * d.0 + (p.1 - a.1) * d.1 + (p.2 - a.2) * d.2) / l2
+    } else {
+        0.0
+    };
     let t = t.clamp(0.0, 1.0);
     norm(sub(p, (a.0 + d.0 * t, a.1 + d.1 * t, a.2 + d.2 * t)))
 }
 
 fn dist_poly(p: P3, q: &[P3]) -> f64 {
-    q.windows(2).map(|w| dist_seg(p, w[0], w[1])).fold(f64::INFINITY, f64::min)
+    q.windows(2)
+        .map(|w| dist_seg(p, w[0], w[1]))
+        .fold(f64::INFINITY, f64::min)
 }
 
 /// Systems whose run ends join: the power runs are one system.
@@ -66,7 +72,14 @@ fn seg_box(size: (f64, f64), a: P3, b: P3) -> [f64; 6] {
     } else {
         (w / 2.0, 0.0, h / 2.0)
     };
-    [a.0.min(b.0) - hx, a.1.min(b.1) - hy, a.2.min(b.2) - hz, a.0.max(b.0) + hx, a.1.max(b.1) + hy, a.2.max(b.2) + hz]
+    [
+        a.0.min(b.0) - hx,
+        a.1.min(b.1) - hy,
+        a.2.min(b.2) - hz,
+        a.0.max(b.0) + hx,
+        a.1.max(b.1) + hy,
+        a.2.max(b.2) + hz,
+    ]
 }
 
 fn overlap(a: &[f64; 6], b: &[f64; 6], gap: f64) -> bool {
@@ -112,7 +125,11 @@ impl World {
     fn new(p: &GProject) -> World {
         let ls = lines(p);
         let radius = ls.iter().map(|l| bend_radius(p, l)).collect();
-        let slabs = p.storeys.iter().map(|s| (s.elevation - svc::slab(), s.elevation)).collect();
+        let slabs = p
+            .storeys
+            .iter()
+            .map(|s| (s.elevation - svc::slab(), s.elevation))
+            .collect();
         let mut w = World {
             ls,
             segs: vec![],
@@ -244,7 +261,11 @@ impl World {
                         continue;
                     }
                     let near = |p: P3, a: P3, z: P3| dist_seg(p, a, z) < 2e-3;
-                    let joined = same && (near(a2, w[0], w[1]) || near(b2, w[0], w[1]) || near(w[0], a2, b2) || near(w[1], a2, b2));
+                    let joined = same
+                        && (near(a2, w[0], w[1])
+                            || near(b2, w[0], w[1])
+                            || near(w[0], a2, b2)
+                            || near(w[1], a2, b2));
                     if !joined {
                         *out.entry(Hit::Line(j)).or_default() += 1;
                     }
@@ -275,7 +296,8 @@ fn bend_radius(p: &GProject, l: &Line) -> f64 {
             let d = &p.hvac.ducts[i];
             d.bend.unwrap_or_else(|| {
                 let sec = svc::duct_section(d.size);
-                ddc_geom::mep::default_bend_radius(&sec, true).max(ddc_geom::mep::default_bend_radius(&sec, false))
+                ddc_geom::mep::default_bend_radius(&sec, true)
+                    .max(ddc_geom::mep::default_bend_radius(&sec, false))
             })
         }
     }
@@ -319,7 +341,10 @@ fn length(p: &[P3]) -> f64 {
 
 /// What the pass lowers, in order: bends and short straights, then length.
 fn score(q: &[P3], kind: Kind) -> (usize, i64) {
-    (bends(q) + 2 * short_segs(q, kind), (length(q) * 1e4).round() as i64)
+    (
+        bends(q) + 2 * short_segs(q, kind),
+        (length(q) * 1e4).round() as i64,
+    )
 }
 
 /// Whether a changed polyline may replace the line's own.
@@ -403,17 +428,29 @@ fn snap(w: &mut World, i: usize, origin: (f64, f64)) -> bool {
         if along_x == along_y {
             continue;
         }
-        let (c, o) = if along_x { (a.1, origin.1) } else { (a.0, origin.0) };
+        let (c, o) = if along_x {
+            (a.1, origin.1)
+        } else {
+            (a.0, origin.0)
+        };
         let t = o + ((c - o) / s).round() * s;
         if (t - c).abs() < 1e-6 {
             continue;
         }
         // a U-shaped stretch grows when it moves out: only Z-shaped ones or inward moves
-        let (u, v) = if along_x { (q[k - 2].1, q[k + 1].1) } else { (q[k - 2].0, q[k + 1].0) };
+        let (u, v) = if along_x {
+            (q[k - 2].1, q[k + 1].1)
+        } else {
+            (q[k - 2].0, q[k + 1].0)
+        };
         if (u - t).abs() + (t - v).abs() > (u - c).abs() + (c - v).abs() + 1e-9 {
             continue;
         }
-        let d = if along_x { (0.0, t - c, 0.0) } else { (t - c, 0.0, 0.0) };
+        let d = if along_x {
+            (0.0, t - c, 0.0)
+        } else {
+            (t - c, 0.0, 0.0)
+        };
         moved |= slide(w, i, k - 1, k, d);
     }
     moved
@@ -454,7 +491,13 @@ pub(super) fn slide(w: &mut World, i: usize, k: usize, m: usize, d: P3) -> bool 
         return false;
     }
     let chain = &p[k..=m];
-    let on = |e: P3| if chain.len() == 1 { norm(sub(e, chain[0])) < TOL } else { dist_poly(e, chain) < TOL };
+    let on = |e: P3| {
+        if chain.len() == 1 {
+            norm(sub(e, chain[0])) < TOL
+        } else {
+            dist_poly(e, chain) < TOL
+        }
+    };
     let g = group(&w.ls[i]).to_string();
     let mut movers: Vec<(usize, Vec<P3>)> = vec![(i, q)];
     let mut cand: BTreeSet<usize> = BTreeSet::new();
@@ -532,10 +575,18 @@ pub(super) fn slide(w: &mut World, i: usize, k: usize, m: usize, d: P3) -> bool 
 
 /// The changes of one sweep over the movable lines, in a fixed order.
 fn sweep(w: &mut World, origin: (f64, f64)) -> Vec<usize> {
-    let mut order: Vec<usize> = (0..w.ls.len()).filter(|&i| !w.ls[i].fixed() && w.ls[i].pts.len() >= 3).collect();
+    let mut order: Vec<usize> = (0..w.ls.len())
+        .filter(|&i| !w.ls[i].fixed() && w.ls[i].pts.len() >= 3)
+        .collect();
     let key = |l: &Line| {
         let f = l.pts[0];
-        (l.tier, l.key.clone(), l.storey, ((f.0 - origin.0) * 1e3).round() as i64, ((f.1 - origin.1) * 1e3).round() as i64)
+        (
+            l.tier,
+            l.key.clone(),
+            l.storey,
+            ((f.0 - origin.0) * 1e3).round() as i64,
+            ((f.1 - origin.1) * 1e3).round() as i64,
+        )
     };
     order.sort_by_key(|&i| (key(&w.ls[i]), i));
     let mut changed = vec![];
@@ -567,7 +618,10 @@ fn sweep(w: &mut World, origin: (f64, f64)) -> Vec<usize> {
 /// the counts of every services error, duct fault and clash.
 fn audit(p: &GProject, ls: &[Line]) -> (BTreeMap<Src, usize>, [usize; 3]) {
     let mut by: BTreeMap<Src, usize> = BTreeMap::new();
-    let ids: BTreeMap<usize, Src> = ls.iter().filter_map(|l| void_id(p, l.src).map(|v| (v, l.src))).collect();
+    let ids: BTreeMap<usize, Src> = ls
+        .iter()
+        .filter_map(|l| void_id(p, l.src).map(|v| (v, l.src)))
+        .collect();
     let mut hard = 0;
     for n in super::super::void::near_pairs(p, 0.0, &|_, _| 0.0) {
         if n.depth <= TOL {
@@ -586,20 +640,35 @@ fn audit(p: &GProject, ls: &[Line]) -> (BTreeMap<Src, usize>, [usize; 3]) {
         .iter()
         .enumerate()
         .map(|(i, r)| (Src::Water(i), r))
-        .chain(p.services.elec.iter().enumerate().map(|(i, r)| (Src::Elec(i), r)))
+        .chain(
+            p.services
+                .elec
+                .iter()
+                .enumerate()
+                .map(|(i, r)| (Src::Elec(i), r)),
+        )
         .collect();
     for sys in super::super::SvcSys::ALL {
-        let mine: Vec<&(Src, &super::super::GRun)> = all.iter().filter(|x| x.1.sys == sys).collect();
+        let mine: Vec<&(Src, &super::super::GRun)> =
+            all.iter().filter(|x| x.1.sys == sys).collect();
         let runs: Vec<&super::super::GRun> = mine.iter().map(|x| x.1).collect();
         for (_, f) in svc::net_faults_at(&runs, &[]) {
-            if let Some(k) = f.strip_prefix("run ").and_then(|r| r.split_once(' ')).and_then(|(n, _)| n.parse::<usize>().ok()) {
+            if let Some(k) = f
+                .strip_prefix("run ")
+                .and_then(|r| r.split_once(' '))
+                .and_then(|(n, _)| n.parse::<usize>().ok())
+            {
                 *by.entry(mine[k].0).or_default() += 1;
             }
         }
     }
     let ducts = svc::duct_faults(p);
     for f in &ducts {
-        if let Some(k) = f.split_once("duct ").and_then(|(_, r)| r.split_once(' ')).and_then(|(n, _)| n.parse::<usize>().ok()) {
+        if let Some(k) = f
+            .split_once("duct ")
+            .and_then(|(_, r)| r.split_once(' '))
+            .and_then(|(n, _)| n.parse::<usize>().ok())
+        {
             *by.entry(Src::Duct(k)).or_default() += 1;
         }
     }
@@ -630,8 +699,20 @@ fn gauge(p: &mut GProject, w: &World, origin: (f64, f64)) -> (u64, u64, u64, u64
     }
     let m = super::metrics::route_metrics(p, origin);
     let n = |k: &str| m["total"][k].as_u64().unwrap_or(0);
-    let sum = |k: &str| m[k].as_object().map_or(0, |o| o.values().filter_map(|v| v.as_u64().or_else(|| v["bends"].as_u64())).sum());
-    (n("hard_clashes"), n("soft_clashes"), sum("tier_violations"), sum("systems"), m["total"]["length_m"].as_f64().unwrap_or(0.0))
+    let sum = |k: &str| {
+        m[k].as_object().map_or(0, |o| {
+            o.values()
+                .filter_map(|v| v.as_u64().or_else(|| v["bends"].as_u64()))
+                .sum()
+        })
+    };
+    (
+        n("hard_clashes"),
+        n("soft_clashes"),
+        sum("tier_violations"),
+        sum("systems"),
+        m["total"]["length_m"].as_f64().unwrap_or(0.0),
+    )
 }
 
 pub(crate) fn run(p: &mut GProject, origin: (f64, f64)) {
@@ -671,7 +752,9 @@ pub(crate) fn run(p: &mut GProject, origin: (f64, f64)) {
     for i in 0..w.ls.len() {
         *points_mut(p, w.ls[i].src) = w.ls[i].pts.clone();
     }
-    let mut changed: BTreeSet<usize> = (0..w.ls.len()).filter(|&i| w.ls[i].pts != orig[i]).collect();
+    let mut changed: BTreeSet<usize> = (0..w.ls.len())
+        .filter(|&i| w.ls[i].pts != orig[i])
+        .collect();
     for &i in &changed {
         *points_mut(p, w.ls[i].src) = w.ls[i].pts.clone();
     }
@@ -679,13 +762,19 @@ pub(crate) fn run(p: &mut GProject, origin: (f64, f64)) {
     // fault takes the whole pass back
     for _ in 0..8 {
         let (by, n) = audit(p, &w.ls);
-        let worse = |i: usize| by.get(&w.ls[i].src).copied().unwrap_or(0) > base_by.get(&w.ls[i].src).copied().unwrap_or(0);
+        let worse = |i: usize| {
+            by.get(&w.ls[i].src).copied().unwrap_or(0)
+                > base_by.get(&w.ls[i].src).copied().unwrap_or(0)
+        };
         let bad: Vec<usize> = changed.iter().copied().filter(|&i| worse(i)).collect();
         if bad.is_empty() && (0..3).all(|k| n[k] <= base_n[k]) {
             return;
         }
-        let back: BTreeSet<usize> =
-            if bad.is_empty() { changed.iter().copied().collect() } else { bad.into_iter().flat_map(|i| bonded(&w, i)).collect() };
+        let back: BTreeSet<usize> = if bad.is_empty() {
+            changed.iter().copied().collect()
+        } else {
+            bad.into_iter().flat_map(|i| bonded(&w, i)).collect()
+        };
         for i in back {
             *points_mut(p, w.ls[i].src) = orig[i].clone();
             w.set(i, orig[i].clone());
@@ -706,7 +795,13 @@ mod tests {
 
     #[test]
     fn tidy_drops_straight_through_points() {
-        let q = tidy(vec![(0.0, 0.0, 0.0), (1.0, 0.0, 0.0), (2.0, 0.0, 0.0), (2.0, 1.0, 0.0), (2.0, 1.0, 0.0)]);
+        let q = tidy(vec![
+            (0.0, 0.0, 0.0),
+            (1.0, 0.0, 0.0),
+            (2.0, 0.0, 0.0),
+            (2.0, 1.0, 0.0),
+            (2.0, 1.0, 0.0),
+        ]);
         assert_eq!(q, vec![(0.0, 0.0, 0.0), (2.0, 0.0, 0.0), (2.0, 1.0, 0.0)]);
     }
 
@@ -721,7 +816,12 @@ mod tests {
 
     #[test]
     fn a_straight_too_short_for_its_two_elbows_does_not_fit() {
-        let q = [(0.0, 0.0, 0.0), (1.0, 0.0, 0.0), (1.0, 0.1, 0.0), (2.0, 0.1, 0.0)];
+        let q = [
+            (0.0, 0.0, 0.0),
+            (1.0, 0.0, 0.0),
+            (1.0, 0.1, 0.0),
+            (2.0, 0.1, 0.0),
+        ];
         assert!(!fits(&q, 0.1));
         assert!(fits(&q, 0.04));
     }

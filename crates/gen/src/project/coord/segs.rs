@@ -80,7 +80,15 @@ fn run_line(src: Src, r: &super::super::GRun) -> Line {
             (k.to_string(), t, Kind::Pipe)
         }
     };
-    Line { src, key, tier, kind, storey: r.storey, pts: r.points.clone(), size: (w, h) }
+    Line {
+        src,
+        key,
+        tier,
+        kind,
+        storey: r.storey,
+        pts: r.points.clone(),
+        size: (w, h),
+    }
 }
 
 /// Every run of the project in a fixed order: water, power, sprinkler, standpipes, ducts.
@@ -103,8 +111,20 @@ pub(crate) fn lines(p: &GProject) -> Vec<Line> {
         }
     }
     for (i, d) in p.hvac.ducts.iter().enumerate() {
-        let size = if d.size.1 > 0.0 { d.size } else { (d.size.0, d.size.0) };
-        out.push(Line { src: Src::Duct(i), key: duct_key(d.sys, d.net), tier: 1, kind: Kind::Duct, storey: d.storey, pts: d.points.clone(), size });
+        let size = if d.size.1 > 0.0 {
+            d.size
+        } else {
+            (d.size.0, d.size.0)
+        };
+        out.push(Line {
+            src: Src::Duct(i),
+            key: duct_key(d.sys, d.net),
+            tier: 1,
+            kind: Kind::Duct,
+            storey: d.storey,
+            pts: d.points.clone(),
+            size,
+        });
     }
     out
 }
@@ -123,7 +143,11 @@ pub(crate) fn points_mut(p: &mut GProject, src: Src) -> &mut Vec<(f64, f64, f64)
 /// Index of a line among the runs the void clash search numbers: water, power, sprinkler,
 /// ducts; standpipes are not in it.
 pub(crate) fn void_id(p: &GProject, src: Src) -> Option<usize> {
-    let (w, e, f) = (p.services.water.len(), p.services.elec.len(), p.fire.runs.len());
+    let (w, e, f) = (
+        p.services.water.len(),
+        p.services.elec.len(),
+        p.fire.runs.len(),
+    );
     match src {
         Src::Water(i) => Some(i),
         Src::Elec(i) => Some(w + i),

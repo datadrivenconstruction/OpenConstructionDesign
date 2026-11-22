@@ -11,9 +11,9 @@ use std::collections::BTreeMap;
 use serde_json::{json, Value as J};
 use sha2::{Digest, Sha256};
 
-use super::segs::{lines, Kind, Line};
 use super::super::rules::rule;
 use super::super::GProject;
+use super::segs::{lines, Kind, Line};
 
 type P3 = (f64, f64, f64);
 
@@ -68,7 +68,9 @@ fn length(p: &[P3]) -> f64 {
 
 /// Bends of a polyline.
 pub(crate) fn bends(p: &[P3]) -> usize {
-    p.windows(3).filter(|w| is_bend(turn(w[0], w[1], w[2]))).count()
+    p.windows(3)
+        .filter(|w| is_bend(turn(w[0], w[1], w[2])))
+        .count()
 }
 
 /// Level segments between two bends shorter than the least segment.
@@ -80,7 +82,9 @@ pub(crate) fn short_segs(p: &[P3], kind: Kind) -> usize {
     let m = min_seg(kind) - 1e-4;
     (1..n - 2)
         .filter(|&k| level(p[k], p[k + 1]) && norm(sub(p[k + 1], p[k])) < m)
-        .filter(|&k| is_bend(turn(p[k - 1], p[k], p[k + 1])) && is_bend(turn(p[k], p[k + 1], p[k + 2])))
+        .filter(|&k| {
+            is_bend(turn(p[k - 1], p[k], p[k + 1])) && is_bend(turn(p[k], p[k + 1], p[k + 2]))
+        })
         .count()
 }
 
@@ -97,7 +101,9 @@ fn dz_changes(p: &[P3]) -> usize {
     if n < 4 {
         return 0;
     }
-    (1..n - 2).filter(|&k| !level(p[k], p[k + 1]) && (p[k + 1].2 - p[k].2).abs() > 0.02).count()
+    (1..n - 2)
+        .filter(|&k| !level(p[k], p[k + 1]) && (p[k + 1].2 - p[k].2).abs() > 0.02)
+        .count()
 }
 
 /// Plan crossing of two level segments away from their ends: the point and the share along each.
@@ -126,7 +132,11 @@ pub(crate) fn level_segs(ls: &[Line]) -> Vec<Seg> {
     for (i, l) in ls.iter().enumerate() {
         for w in l.pts.windows(2) {
             if level(w[0], w[1]) && norm(sub(w[1], w[0])) > 1e-6 {
-                out.push(Seg { line: i, a: w[0], b: w[1] });
+                out.push(Seg {
+                    line: i,
+                    a: w[0],
+                    b: w[1],
+                });
             }
         }
     }
@@ -174,7 +184,10 @@ pub(crate) fn one_void(p: &GProject, (za, ha): (f64, f64), (zb, hb): (f64, f64))
     let (lo, hi) = if za <= zb { (za, zb) } else { (zb, za) };
     let gap = hi - lo - (ha + hb) / 2.0;
     gap <= rule("mep.coord.tier_band")
-        && !p.storeys.iter().any(|s| s.elevation - super::super::svc::slab() < hi && s.elevation > lo)
+        && !p
+            .storeys
+            .iter()
+            .any(|s| s.elevation - super::super::svc::slab() < hi && s.elevation > lo)
 }
 
 /// Clearance wanted between two labelled pieces of the void search, m.
@@ -224,17 +237,23 @@ pub fn route_metrics(p: &GProject, origin: (f64, f64)) -> J {
     let mut all_hash = vec![];
     for l in &ls {
         let a = by.entry(l.key.clone()).or_default();
-        let (Some(&f), Some(&e)) = (l.pts.first(), l.pts.last()) else { continue };
+        let (Some(&f), Some(&e)) = (l.pts.first(), l.pts.last()) else {
+            continue;
+        };
         a.runs += 1;
         a.segments += l.pts.len().saturating_sub(1);
         a.length += length(&l.pts);
         // routed length along the axes against the shortest such route between the ends
         let d = sub(e, f);
         a.manhattan += d.0.abs() + d.1.abs() + d.2.abs();
-        a.routed += l.pts.windows(2).map(|w| {
-            let s = sub(w[1], w[0]);
-            s.0.abs() + s.1.abs() + s.2.abs()
-        }).sum::<f64>();
+        a.routed += l
+            .pts
+            .windows(2)
+            .map(|w| {
+                let s = sub(w[1], w[0]);
+                s.0.abs() + s.1.abs() + s.2.abs()
+            })
+            .sum::<f64>();
         a.bends += bends(&l.pts);
         a.odd += odd_fittings(&l.pts);
         a.dz += dz_changes(&l.pts);
@@ -243,7 +262,10 @@ pub fn route_metrics(p: &GProject, origin: (f64, f64)) -> J {
             let q = |p: P3| (mm(p.0 - origin.0), mm(p.1 - origin.1), mm(p.2));
             let (x, y) = (q(w[0]), q(w[1]));
             let (x, y) = if x <= y { (x, y) } else { (y, x) };
-            let s = format!("{}|{}|{},{},{}|{},{},{}", l.key, l.storey, x.0, x.1, x.2, y.0, y.1, y.2);
+            let s = format!(
+                "{}|{}|{},{},{}|{},{},{}",
+                l.key, l.storey, x.0, x.1, x.2, y.0, y.1, y.2
+            );
             a.hash.push(s.clone());
             all_hash.push(s);
         }
@@ -258,21 +280,40 @@ pub fn route_metrics(p: &GProject, origin: (f64, f64)) -> J {
         }
         by.get_mut(&li.key).unwrap().crossings += 1;
         by.get_mut(&lj.key).unwrap().crossings += 1;
-        let (hi, lo) = if (li.tier, &li.key) <= (lj.tier, &lj.key) { ((li, zi), (lj, zj)) } else { ((lj, zj), (li, zi)) };
-        *cross_pairs.entry(format!("{}/{}", hi.0.key, lo.0.key)).or_default() += 1;
+        let (hi, lo) = if (li.tier, &li.key) <= (lj.tier, &lj.key) {
+            ((li, zi), (lj, zj))
+        } else {
+            ((lj, zj), (li, zi))
+        };
+        *cross_pairs
+            .entry(format!("{}/{}", hi.0.key, lo.0.key))
+            .or_default() += 1;
         // the system higher in the order runs above at a crossing
-        if hi.0.tier < lo.0.tier && hi.1 < lo.1 - 1e-3 && one_void(p, (hi.1, hi.0.size.1), (lo.1, lo.0.size.1)) {
+        if hi.0.tier < lo.0.tier
+            && hi.1 < lo.1 - 1e-3
+            && one_void(p, (hi.1, hi.0.size.1), (lo.1, lo.0.size.1))
+        {
             by.get_mut(&lo.0.key).unwrap().tier += 1;
-            *tier_pairs.entry(format!("{}/{}", hi.0.key, lo.0.key)).or_default() += 1;
+            *tier_pairs
+                .entry(format!("{}/{}", hi.0.key, lo.0.key))
+                .or_default() += 1;
         }
     }
-    let pad = [rule("mep.coord.clear_pipe"), rule("mep.coord.clear_duct"), rule("mep.coord.clear_elec_wet")]
-        .into_iter()
-        .fold(0.0, f64::max);
+    let pad = [
+        rule("mep.coord.clear_pipe"),
+        rule("mep.coord.clear_duct"),
+        rule("mep.coord.clear_elec_wet"),
+    ]
+    .into_iter()
+    .fold(0.0, f64::max);
     let mut hard: BTreeMap<String, usize> = BTreeMap::new();
     let mut soft: BTreeMap<String, usize> = BTreeMap::new();
     for n in super::super::void::near_pairs(p, pad, &clearance) {
-        let (x, y) = if n.a.0 <= n.b.0 { (&n.a.0, &n.b.0) } else { (&n.b.0, &n.a.0) };
+        let (x, y) = if n.a.0 <= n.b.0 {
+            (&n.a.0, &n.b.0)
+        } else {
+            (&n.b.0, &n.a.0)
+        };
         let key = format!("{x}/{y}");
         if n.depth > super::super::svc::TOL {
             *hard.entry(key).or_default() += 1;
@@ -287,7 +328,10 @@ pub fn route_metrics(p: &GProject, origin: (f64, f64)) -> J {
             h.update(s.as_bytes());
             h.update(b"\n");
         }
-        h.finalize().iter().map(|b| format!("{b:02x}")).collect::<String>()
+        h.finalize()
+            .iter()
+            .map(|b| format!("{b:02x}"))
+            .collect::<String>()
     };
     let r3 = |v: f64| (v * 1000.0).round() / 1000.0;
     let mut systems = serde_json::Map::new();
@@ -297,8 +341,16 @@ pub fn route_metrics(p: &GProject, origin: (f64, f64)) -> J {
         tm += a.manhattan;
         tr += a.routed;
         tb += a.bends;
-        let eff = if a.routed > 0.0 { a.manhattan / a.routed } else { 1.0 };
-        let b10 = if a.length > 0.0 { a.bends as f64 * 10.0 / a.length } else { 0.0 };
+        let eff = if a.routed > 0.0 {
+            a.manhattan / a.routed
+        } else {
+            1.0
+        };
+        let b10 = if a.length > 0.0 {
+            a.bends as f64 * 10.0 / a.length
+        } else {
+            0.0
+        };
         systems.insert(
             k.clone(),
             json!({
