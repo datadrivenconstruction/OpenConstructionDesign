@@ -196,9 +196,93 @@ pub fn tessellate(m: &Model) -> (Scene, Vec<String>) {
         }
         Err(e) => warns.push(format!("components: {e}")),
     }
+    openings(m, &mut raw);
     // grouped by level so a level can be hidden with one draw range
     raw.sort_by_key(|r| (r.level.unwrap_or(i64::MAX), r.table.clone(), r.id));
     (flatten(raw), warns)
+}
+
+/// Doors and windows as panels through their host wall. The editor cuts the wall and builds the
+/// frame and leaf; this viewer shows where they are, so they can be seen and picked.
+fn openings(m: &Model, raw: &mut Vec<Raw>) {
+    let walls: HashMap<i64, usize> = raw
+        .iter()
+        .enumerate()
+        .filter(|(_, r)| r.table == "wall")
+        .map(|(i, r)| (r.id, i))
+        .collect();
+    let sql = "SELECT o.id, o.wall, o.along, o.width, o.sill, o.height, o.kind, w.ax, w.ay, w.bx, w.by, w.bulge \
+               FROM opening o JOIN wall w ON w.id=o.wall ORDER BY o.id";
+    type Row = (i64, i64, f64, f64, f64, f64, String, [f64; 4], f64);
+    let rows: Vec<Row> = m
+        .sql()
+        .prepare(sql)
+        .and_then(|mut st| {
+            st.query_map([], |r| {
+                Ok((
+                    r.get(0)?,
+                    r.get(1)?,
+                    r.get(2)?,
+                    r.get(3)?,
+                    r.get(4)?,
+                    r.get(5)?,
+                    r.get(6)?,
+                    [r.get(7)?, r.get(8)?, r.get(9)?, r.get(10)?],
+                    r.get(11)?,
+                ))
+            })?
+            .collect()
+        })
+        .unwrap_or_default();
+    for (id, wall, along, width, sill, height, kind, [ax, ay, bx, by], bulge) in rows {
+        let Some(&wi) = walls.get(&wall) else { continue };
+        let len = ((bx - ax).powi(2) + (by - ay).powi(2)).sqrt();
+        if kind == "void" || bulge != 0.0 || len < 1e-6 || width <= 0.0 || height <= 0.0 {
+            continue;
+        }
+        let u = [(bx - ax) / len, (by - ay) / len];
+        let n = [-u[1], u[0]];
+        let w = &raw[wi];
+        // the wall body's faces across its axis and its base, from its own mesh
+        let (mut lo, mut hi, mut z0) = (f64::MAX, f64::MIN, f64::MAX);
+        for p in &w.pos {
+            let d = (p[0] - ax) * n[0] + (p[1] - ay) * n[1];
+            lo = lo.min(d);
+            hi = hi.max(d);
+            z0 = z0.min(p[2]);
+        }
+        if lo > hi {
+            continue;
+        }
+        let (lo, hi) = (lo - 0.01, hi + 0.01);
+        let at = |s: f64, d: f64, z: f64| [ax + u[0] * s + n[0] * d, ay + u[1] * s + n[1] * d, z0 + z];
+        let (s0, s1, z1, z2) = (along, along + width, sill, sill + height);
+        let pos = vec![
+            at(s0, lo, z1),
+            at(s1, lo, z1),
+            at(s1, hi, z1),
+            at(s0, hi, z1),
+            at(s0, lo, z2),
+            at(s1, lo, z2),
+            at(s1, hi, z2),
+            at(s0, hi, z2),
+        ];
+        let tris = vec![
+            [0, 1, 5], [0, 5, 4], [1, 2, 6], [1, 6, 5], [2, 3, 7], [2, 7, 6],
+            [3, 0, 4], [3, 4, 7], [4, 5, 6], [4, 6, 7], [0, 3, 2], [0, 2, 1],
+        ];
+        let door = kind == "door";
+        raw.push(Raw {
+            table: "opening".into(),
+            id,
+            name: format!("{kind} {id}"),
+            cat: if door { "door".into() } else { "window".into() },
+            level: w.level,
+            rgba: if door { [150, 108, 72, 255] } else { [120, 170, 210, 255] },
+            pos,
+            tris,
+        });
+    }
 }
 
 fn comp_rgba(family: &str) -> [u8; 4] {
@@ -447,8 +531,17 @@ pub fn audit(p: &Project, limit: usize) -> Result<Vec<AuditRow>, String> {
         .into_iter()
         .map(|f| {
             let mut s = catalog().get(f.msg_key).cloned().unwrap_or_else(|| f.msg_key.to_string());
-            for (k, v) in &f.args {
-                s = s.replace(&format!("{{{k}}}"), v);
+            // some texts number their arguments ({0}, {1}) where the rule names them
+            for (i, (k, v)) in f.args.iter().enumerate() {
+                s = s.replace(&format!("{{{k}}}"), v).replace(&format!("{{{i}}}"), v);
+            }
+            if let Some(ms) = f.measure {
+                let unit = match ms.unit {
+                    "m2" => "m²",
+                    "m3" => "m³",
+                    u => u,
+                };
+                s = format!("{s} (measured {:.3} {unit}, limit {:.3} {unit})", ms.value, ms.limit);
             }
             AuditRow {
                 severity: f.severity,

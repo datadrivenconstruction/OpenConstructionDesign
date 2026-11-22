@@ -10,7 +10,7 @@ use eframe::egui::{self, Color32, RichText};
 use eframe::glow;
 
 use crate::cam::Orbit;
-use crate::core::{self, AuditRow, Project, Scene};
+use crate::engine::{self, AuditRow, Project, Scene};
 use crate::gl::{Frame, Gpu};
 use crate::plan::Plan;
 use ddc_model::checks::Severity;
@@ -63,7 +63,7 @@ pub struct Viewer {
 impl Viewer {
     pub fn new(cc: &eframe::CreationContext<'_>) -> Self {
         CTX.with(|c| *c.borrow_mut() = Some(cc.egui_ctx.clone()));
-        cc.egui_ctx.set_visuals(egui::Visuals::dark());
+        cc.egui_ctx.set_theme(egui::Theme::Dark);
         Viewer {
             gl: cc.gl.clone().expect("the glow backend"),
             gpu: Arc::new(Mutex::new(None)),
@@ -97,7 +97,7 @@ impl Viewer {
         }
         self.scene = None;
         self.proj = None;
-        let p = match core::open(&name, &bytes) {
+        let p = match engine::open(&name, &bytes) {
             Ok(p) => p,
             Err(e) => {
                 self.status = format!("Could not open {name}: {e}");
@@ -105,7 +105,7 @@ impl Viewer {
                 return;
             }
         };
-        let (scene, mut warns) = core::tessellate(&p.model);
+        let (scene, mut warns) = engine::tessellate(&p.model);
         warns.splice(0..0, p.warnings.iter().cloned());
         self.origin = [0, 1, 2].map(|k| ((scene.lo[k] + scene.hi[k]) * 0.5).round());
         match Gpu::new(&self.gl, &scene, self.origin) {
@@ -135,7 +135,7 @@ impl Viewer {
 
     fn select(&mut self, s: Option<(String, i64)>) {
         self.props = match (&self.proj, &s) {
-            (Some(p), Some((t, id))) => core::properties(p, t, *id),
+            (Some(p), Some((t, id))) => engine::properties(p, t, *id),
             _ => vec![],
         };
         self.sel = s;
@@ -157,7 +157,7 @@ impl Viewer {
     fn run_audit(&mut self) {
         if let Some(p) = &self.proj {
             let t0 = web_time::Instant::now();
-            self.audit = Some(core::audit(p, 500));
+            self.audit = Some(engine::audit(p, 500));
             if let Some(Ok(a)) = &self.audit {
                 let e = a.iter().filter(|r| r.severity == Severity::Error).count();
                 let w = a.iter().filter(|r| r.severity == Severity::Warning).count();

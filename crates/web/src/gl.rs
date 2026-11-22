@@ -4,7 +4,7 @@
 
 use eframe::glow::{self, HasContext};
 
-use crate::core::Scene;
+use crate::engine::Scene;
 
 const VS: &str = r#"#version 300 es
 in vec3 a_pos;

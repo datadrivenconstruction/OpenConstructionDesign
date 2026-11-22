@@ -25,7 +25,7 @@ rm -f "$OUT/ddc_web.js" "$OUT/ddc_web_bg.wasm"
 "$BINDGEN" --target web --no-typescript --out-dir "$OUT" "$wasm"
 if [ -n "$OPT" ]; then
   "$OPT" -Oz --enable-bulk-memory --enable-nontrapping-float-to-int --enable-sign-ext \
-    --enable-mutable-globals --enable-reference-types --enable-multivalue \
+    --enable-mutable-globals --enable-reference-types --enable-multivalue --strip-debug --strip-producers \
     -o "$OUT/ddc_web_bg.opt.wasm" "$OUT/ddc_web_bg.wasm"
   mv -f "$OUT/ddc_web_bg.opt.wasm" "$OUT/ddc_web_bg.wasm"
 fi

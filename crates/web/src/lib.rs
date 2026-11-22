@@ -5,7 +5,7 @@
 //! picks elements, lists their properties and runs the model checks.
 
 pub mod cam;
-pub mod core;
+pub mod engine;
 pub mod plan;
 
 #[cfg(target_arch = "wasm32")]
