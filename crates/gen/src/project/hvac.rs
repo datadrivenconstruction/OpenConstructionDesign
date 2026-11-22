@@ -2403,10 +2403,12 @@ fn design(
             };
             let mut taps = std::mem::take(&mut floor_taps[k][s]);
             // a split floor's mains are narrower than one main for the floor: so are the tees
-            let sp = spacing.min(tee * node_trim(&dn, &[main_widest(&dn, sh.lq[s], h_max)]) + tap_extra);
+            // the smaller system is raised to the larger's air after placing: size for that
+            let lq = sh.lq[0].max(sh.lq[1]);
+            let sp = spacing.min(tee * node_trim(&dn, &[main_widest(&dn, lq, h_max)]) + tap_extra);
             // a main end is an elbow and reducer into the last drop: that may take more; the
             // main has stepped down to that branch's own air by then
-            let main = main_widest(&dn, sh.lq[s], h_max);
+            let main = main_widest(&dn, lq, h_max);
             let end = wants
                 .iter()
                 .filter(|w| w.sys == s)
