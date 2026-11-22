@@ -254,7 +254,7 @@ pub(crate) fn install(db: &mut rusqlite::Connection) -> rusqlite::Result<Arc<Mut
     let nanos = web_time::SystemTime::now()
         .duration_since(web_time::UNIX_EPOCH)
         .map_or(0, |d| d.as_nanos() as u64);
-    let id = nanos ^ (u64::from(std::process::id()) << 32) ^ base.rotate_left(17);
+    let id = nanos ^ (u64::from(process_id()) << 32) ^ base.rotate_left(17);
     let t = Arc::new(Mutex::new(Tracker {
         base,
         origin: base,
@@ -533,6 +533,14 @@ impl crate::Model {
             rows,
         }
     }
+}
+
+/// `std::process::id` panics on wasm32-unknown-unknown (the browser build has one process).
+fn process_id() -> u32 {
+    #[cfg(not(target_arch = "wasm32"))]
+    return std::process::id();
+    #[cfg(target_arch = "wasm32")]
+    0
 }
 
 #[cfg(test)]
