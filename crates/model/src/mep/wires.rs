@@ -16,8 +16,8 @@ const STEPS: usize = 8;
 /// Length of a home run whose panel stands on another level, m.
 const HOME_AWAY: f64 = 1.0;
 
-/// Radius a cable is drawn with in 3D, m: about a five-core NYM-J, seen from a room away.
-pub const CABLE_DRAWN_R: f64 = 0.01;
+/// Radius a cable is drawn with in 3D, m: thicker than a NYM-J so the route reads across a floor.
+pub const CABLE_DRAWN_R: f64 = 0.025;
 /// Sides of the drawn cable.
 const CABLE_SIDES: usize = 8;
 
