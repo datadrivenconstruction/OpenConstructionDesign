@@ -1509,8 +1509,10 @@ pub(crate) fn hole(x: f64, y: f64, d: f64) -> R {
     [x - h, y - h, x + h, y + h]
 }
 
-/// Merges overlapping holes until none overlap, and adds them to the storeys' slabs.
+/// Merges holes that overlap or stand closer than the annular gap until none do, and adds
+/// them to the storeys' slabs.
 pub(crate) fn add_holes(p: &mut GProject, holes: &[(usize, R)]) {
+    let near = rule("services.hole_gap");
     for k in 0..p.storeys.len() {
         let mut hs: Vec<R> = holes.iter().filter(|h| h.0 == k).map(|h| h.1).collect();
         if hs.is_empty() {
@@ -1520,7 +1522,7 @@ pub(crate) fn add_holes(p: &mut GProject, holes: &[(usize, R)]) {
             let mut merged = false;
             'outer: for i in 0..hs.len() {
                 for j in i + 1..hs.len() {
-                    if hit(&hs[i], &hs[j], 0.0) {
+                    if hit(&hs[i], &hs[j], near) {
                         let (a, b) = (hs[i], hs[j]);
                         hs[i] = [a[0].min(b[0]), a[1].min(b[1]), a[2].max(b[2]), a[3].max(b[3])];
                         hs.remove(j);
