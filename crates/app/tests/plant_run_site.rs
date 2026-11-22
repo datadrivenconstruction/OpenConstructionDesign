@@ -20,6 +20,9 @@ fn plant_run_folder_is_rebuilt_from_its_brief() {
     let p = plant::design(&brief).unwrap();
 
     let mut ed = Editor::new_in_memory().unwrap();
+    // the rack frames and platform steel take the project's first member type, as in a project
+    let hea = ddc_geom::member::Shape::I { h: 0.2, b: 0.2, tw: 0.0065, tf: 0.01 };
+    ed.model.add_member_type("HEA 200", &hea, "S355").unwrap();
     ed.reload().unwrap();
     let calls = vec![
         tool("load_tools", json!({"groups": ["plant"]})),
