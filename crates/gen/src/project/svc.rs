@@ -224,6 +224,15 @@ impl Norms {
     pub fn vent_above_roof(&self) -> f64 {
         self.f(&["drain", "vent_above_roof"])
     }
+    /// Peak flow of a supply pipe carrying design flows summing to `sum`, `max` the largest of
+    /// them, l/s (DIN 1988-300 simultaneity).
+    pub fn peak(&self, use_: &str, sum: f64, max: f64) -> f64 {
+        if sum <= self.f(&["supply", "peak_from"]) {
+            return sum;
+        }
+        let c = |i: usize| self.j["supply"]["peak"][use_][i].as_f64().unwrap_or_else(|| panic!("services_norms.json: no peak row {use_}"));
+        (c(0) * sum.powf(c(1)) - c(2)).clamp(max.min(sum), sum)
+    }
     pub fn lu(&self, fam: &str) -> f64 {
         self.j["supply"]["lu"][fam].as_f64().unwrap_or(0.0)
     }
@@ -1102,7 +1111,7 @@ pub fn services_check(p: &GProject) -> Vec<String> {
         }
         let ports: Vec<V3> = links.iter().map(|c| v3(c.at.0, c.at.1, c.at.2)).collect();
         out.extend(net_faults(&runs, &ports).into_iter().map(|f| format!("{sys:?}: {f}")));
-        check_flows(sys, &runs, &links, &mut out);
+        check_flows(sys, &runs, &links, &s.water_use, &mut out);
     }
     clashes(p, &all, &mut out);
     out.extend(s.issues.iter().map(|i| format!("Power: {INFO}{i}")));
@@ -1177,7 +1186,7 @@ pub fn duct_faults(p: &GProject) -> Vec<String> {
 }
 
 /// Approach, size, fall and load the way the model reports them.
-fn check_flows(sys: SvcSys, runs: &[&GRun], links: &[SvcPort], out: &mut Vec<String>) {
+fn check_flows(sys: SvcSys, runs: &[&GRun], links: &[SvcPort], use_: &str, out: &mut Vec<String>) {
     let net = network(runs);
     let n = net.nodes.len();
     let node_of = |p: (f64, f64, f64)| net.nodes.iter().position(|q| (*q - v3(p.0, p.1, p.2)).len() < PORT_TOL);
@@ -1248,11 +1257,15 @@ fn check_flows(sys: SvcSys, runs: &[&GRun], links: &[SvcPort], out: &mut Vec<Str
         }
     }
     let mut sum = load.clone();
+    let mut big = load.clone();
     let mut flow = vec![0.0; net.edges.len()];
+    let mut flow_big = vec![0.0f64; net.edges.len()];
     for &u in order.iter().rev() {
         if let Some((e, par)) = parent[u] {
             flow[e] = sum[u];
+            flow_big[e] = big[u];
             sum[par] += sum[u];
+            big[par] = big[par].max(big[u]);
             if sys == SvcSys::Sanitary {
                 let p = &net.edges[e].1;
                 let from_par = (p[0] - net.nodes[par]).len() < TOL;
@@ -1265,7 +1278,8 @@ fn check_flows(sys: SvcSys, runs: &[&GRun], links: &[SvcPort], out: &mut Vec<Str
     }
     let mut run_flow = vec![0.0f64; runs.len()];
     for (e, (ri, _, _, _)) in net.edges.iter().enumerate() {
-        run_flow[*ri] = run_flow[*ri].max(flow[e]);
+        let q = if use_.is_empty() || !matches!(sys, SvcSys::Cold | SvcSys::Hot) { flow[e] } else { norms().peak(use_, flow[e], flow_big[e]) };
+        run_flow[*ri] = run_flow[*ri].max(q);
     }
     let (volt, speed) = (rule("services.elec.voltage"), rule("services.cold_speed"));
     let (amp_small, amp_large, small_d) = (rule("services.conduit_small_a"), rule("services.conduit_large_a"), rule("services.conduit_small_d"));
@@ -1434,6 +1448,15 @@ impl<'a> Space<'a> {
             self.add(r);
         }
         true
+    }
+
+    /// The upright stretches in the space: plan point, bottom, top, half width.
+    pub fn uprights(&self) -> Vec<((f64, f64), f64, f64, f64)> {
+        self.segs
+            .iter()
+            .filter(|s| (s.1.x - s.2.x).abs() < 1e-9 && (s.1.y - s.2.y).abs() < 1e-9)
+            .map(|s| ((s.1.x, s.1.y), s.3[2], s.3[5], (s.3[3] - s.3[0]) / 2.0))
+            .collect()
     }
 
     /// Whether the run fits: clear of obstacles by `gap`, of other systems' runs by `gap`,
