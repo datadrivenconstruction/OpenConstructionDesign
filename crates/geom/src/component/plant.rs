@@ -370,6 +370,176 @@ fn patch_tones(s: &Spec, lk: &Look, lod: Lod) -> [Soup; 3] {
 const PATCHES_FINE: usize = 17;
 const PATCHES_MEDIUM: usize = 8;
 
+/// Near trees (fine and medium) wear leaf cards instead of a closed crown: shrubs, palms, bare
+/// crowns and the coarse level keep the solid build.
+pub fn has_cards(s: &Spec, lod: Lod) -> bool {
+    rich(s) && lod != Lod::Coarse && s.leaf >= 0.05 && s.form != Form::Palm
+}
+
+/// A leaf card: a quad on `p` facing `n`, its picture standing along `up`, half size `h` across
+/// and `hu` along. A broadleaf card is the triangles [c0 c1 c2] [c0 c2 c3], a needle card the
+/// other diagonal [c0 c1 c3] [c1 c2 c3]: the renderer reads the picture's corners and which
+/// picture from that order (c0 is its foot on the left).
+fn card(m: &mut Soup, p: V3, n: V3, up: V3, h: f64, hu: f64, needle: bool) {
+    let up = (up - n * up.dot(n)).normalized();
+    let side = up.cross(n);
+    let c0 = m.v(p - side * h - up * hu);
+    m.v(p + side * h - up * hu);
+    m.v(p + side * h + up * hu);
+    m.v(p - side * h + up * hu);
+    if needle {
+        m.t(c0, c0 + 1, c0 + 3);
+        m.t(c0 + 1, c0 + 2, c0 + 3);
+    } else {
+        m.t(c0, c0 + 1, c0 + 2);
+        m.t(c0, c0 + 2, c0 + 3);
+    }
+}
+
+/// A card's centre moved so its corners, `h` from it at most diagonally, stay above the ground,
+/// under the tree's top and inside its crown.
+fn fit(s: &Spec, p: V3, h: f64) -> V3 {
+    let e = h * 1.42;
+    let z = p.z.clamp((e + 0.05).min(s.height * 0.5), (s.height - e).max(s.height * 0.5));
+    let rr = (s.crown * 0.55 - e).max(0.1);
+    let q = v2(p.x, p.y);
+    let k = if q.len() > rr { rr / q.len() } else { 1.0 };
+    v3(p.x * k, p.y * k, z)
+}
+
+/// A unit vector off `n` by up to `k` radians in a random direction.
+fn tilt(r: &mut Rng, n: V3, k: f64) -> V3 {
+    let refv = if n.z.abs() > 0.9 { v3(1.0, 0.0, 0.0) } else { v3(0.0, 0.0, 1.0) };
+    let u = n.cross(refv).normalized();
+    let w = n.cross(u);
+    let (a, t) = (r.r(0.0, TAU), k * r.f().sqrt());
+    (n * t.cos() + (u * a.cos() + w * a.sin()) * t.sin()).normalized()
+}
+
+/// How deep `p` is in the lobe: 0 at the centre, 1 on the surface.
+fn lobe_depth(l: &Lobe, p: V3) -> f64 {
+    (((p.x - l.c.x) / l.rx).powi(2) + ((p.y - l.c.y) / l.rx).powi(2) + ((p.z - l.c.z) / l.rz).powi(2)).sqrt()
+}
+
+/// Leaf cards of a broadleaf crown, [shade, leaf, light] by how open each twig end is (the
+/// ambient occlusion of the leaf mass). Twigs run from inside every lobe out to its surface and
+/// carry a card on the way and a crossed pair at the end, the cards facing out and up, so the
+/// crown is clusters of leaves with sky and limbs between them.
+fn leaf_cards(s: &Spec, lod: Lod, lobes: &[Lobe]) -> [Soup; 3] {
+    let mut out = [Soup::default(), Soup::default(), Soup::default()];
+    let (twigs, size) = if lod == Lod::Fine { (TWIGS_FINE, CARD_FINE) } else { (TWIGS_MEDIUM, CARD_MEDIUM) };
+    let mut r = Rng::new(s.seed, 14);
+    // twig ends first: the tones split them by rank of openness, so every crown has its share of each
+    let mut ends: Vec<(Soup, f64)> = vec![];
+    let heart = lobes.iter().fold(V3::default(), |a, l| a + l.c) * (1.0 / lobes.len().max(1) as f64);
+    for (j, l) in lobes.iter().enumerate() {
+        let off = r.r(0.0, TAU);
+        let (gap_a, gap_z) = (r.r(0.0, TAU), r.r(0.0, TAU));
+        let away = (l.c - heart).normalized();
+        for i in 0..twigs {
+            let zc = 1.0 - 2.0 * (i as f64 + 0.5) / twigs as f64;
+            let rho = (1.0 - zc * zc).sqrt();
+            let a = off + i as f64 * 2.399_963;
+            let d = v3(rho * a.cos(), rho * a.sin(), zc);
+            let k = r.r(0.86, 1.04);
+            let tip = l.c + v3(d.x * l.rx * k, d.y * l.rx * k, d.z * l.rz * k);
+            let (base_k, roll, hk) = (r.r(0.35, 0.55), r.r(-0.7, 0.7), r.r(0.8, 1.2));
+            // under the skin of another lobe: seen only through the gaps, so fewer of them
+            let cover = lobes.iter().enumerate().filter(|(q, _)| *q != j).map(|(_, o)| lobe_depth(o, tip)).fold(f64::MAX, f64::min);
+            if cover < 0.5 || (cover < 0.85 && i % 4 != 0) {
+                continue;
+            }
+            // the side of a lobe turned to the trunk is mostly bare, and every lobe has a gap
+            // where the sky and the limbs show
+            if (d.dot(away) < -0.3 && i % 3 != 0) || (3.0 * a + gap_a).sin() * (2.5 * zc + gap_z).cos() > 0.55 {
+                continue;
+            }
+            let n = v3(d.x / l.rx, d.y / l.rx, d.z / l.rz).normalized();
+            // open to the sky, out of other lobes, and high: the lower crown sits in its own shade
+            let rise = ((tip.z - s.clear) / (s.height - s.clear).max(1e-6)).clamp(0.0, 1.0);
+            let out = (v2(tip.x - heart.x, tip.y - heart.y).len() / (s.crown / 2.0)).min(1.0);
+            let open = exposure(lobes, j, tip, n) * if cover < 0.85 { 0.5 } else { 1.0 } * (0.75 + 0.25 * n.z);
+            let ao = 0.5 * open + 0.3 * rise + 0.2 * out;
+            let mut twig = Soup::default();
+            let m = &mut twig;
+            let h = (l.rx * size * hk).clamp(0.2, 1.4);
+            let base = l.c + (tip - l.c) * base_k;
+            let ax = (tip - base).normalized();
+            // the picture grows out along the twig and up
+            let up0 = (ax * 0.6 + v3(0.0, 0.0, 0.5)).normalized();
+            let face = tilt(&mut r, (n + v3(0.0, 0.0, 0.35)).normalized(), 0.6);
+            let up = (up0 + face.cross(up0) * roll.tan()).normalized();
+            let mid = base + (tip - base) * 0.55;
+            card(m, fit(s, mid, h), face, up, h * 0.85, h * 0.85, false);
+            let end = fit(s, tip - ax * (h * 0.35), h);
+            card(m, end, face, up, h, h, false);
+            let across = (face.cross(up) * 0.85 + face * 0.5).normalized();
+            card(m, end + face * (h * 0.1), across, up, h * 0.9, h, false);
+            ends.push((twig, ao));
+        }
+    }
+    ends.sort_by(|a, b| a.1.total_cmp(&b.1));
+    let n = ends.len() as f64;
+    for (k, (m, _)) in ends.into_iter().enumerate() {
+        let q = k as f64 / n;
+        out[if q < CARD_SHADE { 0 } else if q >= CARD_LIGHT { 2 } else { 1 }].append(m);
+    }
+    out
+}
+
+/// Shares of the twig ends in shade and in leaf; the rest is lit.
+const CARD_SHADE: f64 = 0.3;
+/// Share of the radius a card-clad conifer's skirts keep as its dark heart.
+const CONIFER_CORE: f64 = 0.72;
+const CARD_LIGHT: f64 = 0.75;
+const TWIGS_FINE: usize = 90;
+const TWIGS_MEDIUM: usize = 40;
+/// Card half size as a share of the lobe radius.
+const CARD_FINE: f64 = 0.18;
+const CARD_MEDIUM: f64 = 0.3;
+
+/// Needle sprays along a conifer's boughs, [shade, leaf, light]: a crossed pair at every point of
+/// a bough past its root, lying along it, the flat one turned to the sky.
+fn needle_cards(s: &Spec, lk: &Look, lod: Lod) -> [Soup; 3] {
+    let mut out = [Soup::default(), Soup::default(), Soup::default()];
+    let mut r = Rng::new(s.seed, 15);
+    let rr = s.crown / 2.0;
+    for (t, path, _) in bough_paths(s, lk, lod) {
+        let n = path.len();
+        let len = (path[n - 1] - path[0]).len();
+        for k in 1..n {
+            let ax = (path[k] - path[k - 1]).normalized();
+            let u = k as f64 / (n - 1) as f64;
+            let outer = v2(path[k].x - lk.lean.x, path[k].y - lk.lean.y).len() / rr.max(1e-6);
+            let tier = if u < 0.5 && outer < 0.45 { 0 } else if t > 0.45 && u > 0.6 { 2 } else { 1 };
+            let m = &mut out[tier];
+            let hu = (len / (n - 1) as f64 * 0.75).max(0.12);
+            let h = (len * r.r(0.16, 0.22) * (1.1 - 0.4 * u)).max(0.1);
+            let p = fit(s, path[k] - ax * (hu * 0.3), h.max(hu));
+            let flat = tilt(&mut r, (v3(0.0, 0.0, 1.0) - ax * ax.z).normalized(), 0.35);
+            card(m, p, flat, ax, h, hu, true);
+            let side = ax.cross(flat).normalized();
+            card(m, p - flat * (h * 0.15), (side + flat * 0.3).normalized(), ax, h * 0.75, hu, true);
+            if lod == Lod::Fine && u > 0.3 {
+                // a second spray off the bough, turned about it
+                let f2 = tilt(&mut r, (flat + side * 0.8).normalized(), 0.3);
+                card(m, p + side * (h * 0.4), f2, ax, h * 0.8, hu * 0.9, true);
+                card(m, p - side * (h * 0.4), tilt(&mut r, (flat - side * 0.8).normalized(), 0.3), ax, h * 0.8, hu * 0.9, true);
+            }
+        }
+    }
+    out
+}
+
+/// The leaf cards of a tree at a level: [shade, leaf, light].
+fn card_tones(s: &Spec, lk: &Look, lod: Lod) -> [Soup; 3] {
+    if s.form == Form::Conical {
+        return needle_cards(s, lk, lod);
+    }
+    let cl = clusters(s, lk);
+    leaf_cards(s, lod, &lobes_of(s, lk, lod, &cl).1)
+}
+
 /// Where a limb may grow: inside the crown's reach and under the tree's top.
 struct Env {
     axis: V2,
@@ -453,10 +623,18 @@ fn limb(m: &mut Soup, joints: &mut Vec<V3>, tips: &mut Vec<V3>, r: &mut Rng, env
 
 /// Whorls of drooping boughs round a conifer's stem: the boughs are the branches.
 fn boughs(m: &mut Soup, s: &Spec, lk: &Look, lod: Lod) {
+    for (_, path, rd) in bough_paths(s, lk, lod) {
+        tube(m, &path, &rd, 4, true);
+    }
+}
+
+/// The boughs of a conifer: height share in the crown, path and radii.
+fn bough_paths(s: &Spec, lk: &Look, lod: Lod) -> Vec<(f64, Vec<V3>, Vec<f64>)> {
     let (whorls, per, segs) = if lod == Lod::Fine { (18, 11, 4) } else { (10, 7, 3) };
     let mut r = Rng::new(s.seed, 12);
     let (z0, z1, rr) = (s.clear, s.height, s.crown / 2.0);
     let depth = z1 - z0;
+    let mut out = vec![];
     for i in 0..whorls {
         let t = (i as f64 + 0.5) / whorls as f64 * 0.9;
         let zb = z0 + depth * t;
@@ -475,9 +653,10 @@ fn boughs(m: &mut Soup, s: &Spec, lk: &Look, lod: Lod) {
                 path.push(v3(cx + len * u * a.cos(), cy + len * u * a.sin(), zb + len * (0.12 * u - sag * u * u)));
                 rd.push((w * (0.2 + 0.8 * (PI * u).sin())).max(0.02));
             }
-            tube(m, &path, &rd, 4, true);
+            out.push((t, path, rd));
         }
     }
+    out
 }
 
 const ICO: [[f64; 3]; 12] = {
@@ -877,7 +1056,7 @@ fn conifer(s: &Spec, lk: &Look, lod: Lod) -> (Soup, Vec<(f64, f64, f64)>) {
         }
         discs.push((cx, cy, rad * 0.93));
     }
-    if rich(s) && lod != Lod::Coarse {
+    if rich(s) && lod != Lod::Coarse && !has_cards(s, lod) {
         boughs(&mut m, s, lk, lod);
     }
     (m, discs)
@@ -1001,6 +1180,10 @@ fn streak(s: &Spec, lk: &Look, lod: Lod) -> Soup {
 
 /// Outer and top lobes of the foliage, copied slightly larger so they cover the originals.
 fn light(s: &Spec, lk: &Look, lod: Lod) -> Soup {
+    if has_cards(s, lod) {
+        let [_, _, lit] = card_tones(s, lk, lod);
+        return lit;
+    }
     let mut m = Soup::default();
     if s.leaf < 0.05 || lod == Lod::Coarse || matches!(s.form, Form::Conical | Form::Palm) {
         return m;
@@ -1053,6 +1236,13 @@ fn wood_tips(s: &Spec, lk: &Look, lod: Lod) -> (Soup, Vec<V3>) {
         rad.push(tr.r(f));
     }
     tube(&mut m, &path, &rad, sides, true);
+    if conic && has_cards(s, lod) {
+        // the boughs under the needle sprays
+        for (_, path, rd) in bough_paths(s, lk, lod) {
+            let rd: Vec<f64> = rd.iter().map(|x| (x * 0.3).max(0.015)).collect();
+            branch(&mut m, &path, &rd, 3);
+        }
+    }
     if palm || conic || lod == Lod::Coarse {
         return (m, tips);
     }
@@ -1277,7 +1467,13 @@ fn foliage(s: &Spec, lk: &Look, lod: Lod) -> (Soup, Vec<(f64, f64, f64)>) {
         return (Soup::default(), vec![]);
     }
     if s.form == Form::Conical {
-        return conifer(s, lk, lod);
+        let (m, discs) = conifer(s, lk, lod);
+        if has_cards(s, lod) {
+            let [dark, mut leaf, _] = card_tones(s, lk, lod);
+            leaf.append(dark);
+            return (leaf, discs);
+        }
+        return (m, discs);
     }
     if s.form == Form::Palm {
         let top = Trunk {
@@ -1293,6 +1489,10 @@ fn foliage(s: &Spec, lk: &Look, lod: Lod) -> (Soup, Vec<(f64, f64, f64)>) {
     }
     let cl = clusters(s, lk);
     let discs: Vec<(f64, f64, f64)> = cl.iter().map(|c| (c.c.x, c.c.y, c.rx)).collect();
+    if has_cards(s, lod) {
+        let [_, leaf, _] = card_tones(s, lk, lod);
+        return (leaf, discs);
+    }
     let mut m = Soup::default();
     let (core, lobes) = lobes_of(s, lk, lod, &cl);
     for l in core.iter().chain(&lobes) {
@@ -1305,6 +1505,21 @@ fn foliage(s: &Spec, lk: &Look, lod: Lod) -> (Soup, Vec<(f64, f64, f64)>) {
 
 /// The inner crown of a broadleaf tree: one dark mass at the heart of the foliage.
 fn shade(s: &Spec, lk: &Look, lod: Lod) -> Soup {
+    if has_cards(s, lod) && s.form == Form::Conical {
+        // the dense heart of a spruce: its skirts drawn in, dark between the boughs (a solid, so
+        // apart from the cards, whose shade share goes with the leaf tone)
+        let (mut core, _) = conifer(s, lk, lod);
+        for p in &mut core.pos {
+            let f = p.z / s.height;
+            let (ax, ay) = (lk.lean.x * f, lk.lean.y * f);
+            *p = v3(ax + (p.x - ax) * CONIFER_CORE, ay + (p.y - ay) * CONIFER_CORE, p.z);
+        }
+        return core;
+    }
+    if has_cards(s, lod) {
+        let [dark, _, _] = card_tones(s, lk, lod);
+        return dark;
+    }
     let mut m = Soup::default();
     if s.leaf < 0.05 || lod == Lod::Coarse || matches!(s.form, Form::Conical | Form::Palm) {
         return m;
