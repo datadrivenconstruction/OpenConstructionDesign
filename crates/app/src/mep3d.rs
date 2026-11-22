@@ -59,7 +59,7 @@ const NON_ARCH: &[&str] = &[
 ];
 const COMP_TABLES: [&str; 4] = ["comp", "comp_qty", "comp_type", "comp_family"];
 /// Colour of the circuit cables in 3D: apart from the trays they lie in.
-const CABLE_RGB: [u8; 3] = [214, 64, 32];
+const CABLE_RGB: [u8; 3] = [230, 30, 30];
 
 /// Stable numbers: row id to slot.
 #[derive(Debug, Default)]
