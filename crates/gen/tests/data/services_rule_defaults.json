@@ -286,5 +286,6 @@
  "services.elec.section_max": 10.0,
  "services.elec.home_run": 1.0,
  "services.elec.wire_bow": 0.15,
- "services.elec.wire_steps": 8.0
+ "services.elec.wire_steps": 8.0,
+ "services.elec.zone_reach": 15.0
 }

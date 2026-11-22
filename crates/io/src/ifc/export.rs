@@ -1254,6 +1254,7 @@ fn run(model: &Model, step: Step) -> Result<(Step, guids::Guids), String> {
             &mut mep_out,
             &mut elems,
         )?;
+        mep::cables(&mut c, model, *lid, *elev, &g, &mut mep_out, &mut elems)?;
         mep::devices(&mut c, model, *elev, &g, &mut mep_out)?;
         structure::export(&mut c, &struct_bodies, *lid, *elev, &g, &mut elems)?;
         roof_edge::items(&mut c, model, *lid, *elev, &g, &mut elems)?;

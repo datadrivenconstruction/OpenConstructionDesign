@@ -57,6 +57,8 @@
  "view_gfx.cat.truss": "桁架",
  "view_gfx.cat.toposolid": "地形",
  "view_gfx.cat.grid": "轴网",
+ "view_gfx.cat.elec_circuit": "Circuit wiring",
+ "view_gfx.cat.elec_cable": "Circuit cables",
  "view_gfx.vv.title": "可见性与图形 — {view}",
  "view_gfx.vv.template_banner": "样板“{name}”控制:{fields}",
  "view_gfx.vv.detail": "详细程度",

@@ -57,6 +57,8 @@
  "view_gfx.cat.truss": "Ristikot",
  "view_gfx.cat.toposolid": "Maasto",
  "view_gfx.cat.grid": "Ruudukot",
+ "view_gfx.cat.elec_circuit": "Circuit wiring",
+ "view_gfx.cat.elec_cable": "Circuit cables",
  "view_gfx.vv.title": "Näkyvyys ja grafiikka — {view}",
  "view_gfx.vv.template_banner": "Mallin ”{name}” hallitsemat kentät: {fields}",
  "view_gfx.vv.detail": "Detaljitaso",

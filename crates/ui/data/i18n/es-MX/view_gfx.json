@@ -57,6 +57,8 @@
  "view_gfx.cat.truss": "Cerchas",
  "view_gfx.cat.toposolid": "Terreno",
  "view_gfx.cat.grid": "Ejes",
+ "view_gfx.cat.elec_circuit": "Circuit wiring",
+ "view_gfx.cat.elec_cable": "Circuit cables",
  "view_gfx.vv.title": "Visibilidad y gráficos — {view}",
  "view_gfx.vv.template_banner": "Controles de la plantilla “{name}”: {fields}",
  "view_gfx.vv.detail": "Nivel de detalle",

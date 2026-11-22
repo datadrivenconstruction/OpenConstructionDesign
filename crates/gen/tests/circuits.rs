@@ -325,3 +325,24 @@ fn traces_follow_the_carriers_from_the_board() {
         assert!(len <= c.length + 1e-6, "{} trace {len} m longer than the route {} m", c.name, c.length);
     }
 }
+
+/// services.elec.zone_reach: a school or office room far from its floor board is served from a
+/// sub-board fed by that floor board; housing keeps its unit boards and gets none.
+#[test]
+fn far_rooms_hang_on_a_sub_board_of_their_floor_board() {
+    for (t, p) in projects() {
+        let sv = &p.services;
+        let zones: Vec<_> = sv.boards.iter().filter(|b| b.label.starts_with("SDB")).collect();
+        if housing(t) {
+            assert!(zones.is_empty(), "{t}: housing gets no sub-board");
+            continue;
+        }
+        assert!(!zones.is_empty(), "{t}: a long floor gets a sub-board");
+        for z in &zones {
+            let parent = z.parent.unwrap_or_else(|| panic!("{t}: {} has no feed", z.label));
+            assert_eq!(parent.0, z.at.0, "{t}: {} is fed on its own storey", z.label);
+            assert!(sv.circuits.iter().any(|c| c.board == z.at && c.use_ != CircuitUse::Feeder), "{t}: {} serves a final circuit", z.label);
+            assert!(sv.circuits.iter().any(|c| c.board == parent && c.use_ == CircuitUse::Feeder && c.devices[0] == (z.at.0, z.at.1, "Main")), "{t}: {} has its feeder", z.label);
+        }
+    }
+}

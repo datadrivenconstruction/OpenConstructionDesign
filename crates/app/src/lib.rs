@@ -139,6 +139,7 @@ pub mod nav_cursor;
 pub mod plan_hud;
 pub mod plan_range;
 pub mod plan_view;
+pub mod wire_plan;
 pub mod room_label_fit;
 pub mod prefs;
 pub mod cmdline;

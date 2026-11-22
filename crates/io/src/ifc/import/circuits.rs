@@ -27,6 +27,21 @@ pub(super) fn read(
     };
     let by_guid: HashMap<String, usize> =
         comp_ent.iter().map(|(&e, &i)| (guid_of(e), i)).collect();
+    // cable pieces by the GlobalId of their circuit, in file order
+    let mut cables: HashMap<String, Vec<Vec<(f64, f64, f64)>>> = HashMap::new();
+    for (id, ty) in f.iter() {
+        if ty != "IFCCABLESEGMENT" && ty != "IFCFLOWSEGMENT" {
+            continue;
+        }
+        let Some(kv) = super::pset(f, props, id, "DDC_Cable") else {
+            continue;
+        };
+        let pts = kv.get("Points").and_then(|t| ddc_model::parse_points(t)).filter(|p| p.len() >= 2);
+        match (kv.get("CircuitGuid"), pts) {
+            (Some(g), Some(p)) => cables.entry(g.clone()).or_default().push(p),
+            _ => warnings.push(format!("cable {}: no circuit or axis, skipped", guid_of(id))),
+        }
+    }
     let mut out = vec![];
     for (id, ty) in f.iter() {
         if ty != "IFCDISTRIBUTIONCIRCUIT" {
@@ -151,6 +166,7 @@ pub(super) fn read(
             rcd: kv.get("Rcd").cloned().unwrap_or_default(),
             cable_type: kv.get("CableType").cloned().unwrap_or_default(),
             devices,
+            cables: cables.remove(&guid_of(id)).unwrap_or_default(),
         });
     }
     out
@@ -171,6 +187,16 @@ pub(super) fn apply(
     }
     snaps.watermark(db, "elec_circuit")?;
     snaps.watermark(db, "elec_circuit_dev")?;
+    snaps.watermark(db, "elec_cable")?;
+    let levels: Vec<(i64, f64)> = db
+        .prepare("SELECT id, elevation FROM level ORDER BY elevation")?
+        .query_map([], |r| Ok((r.get(0)?, r.get(1)?)))?
+        .collect::<Result<_, _>>()?;
+    // a piece belongs to the highest level at or below its lowest point
+    let level_of = |p: &[(f64, f64, f64)]| {
+        let z = p.iter().map(|q| q.2).fold(f64::INFINITY, f64::min);
+        levels.iter().rev().find(|l| l.1 <= z + 1e-6).or(levels.first()).map(|l| l.0)
+    };
     let mut stored = 0;
     for c in &pl.circuits {
         let panel = comp_ids[c.panel];
@@ -241,6 +267,14 @@ pub(super) fn apply(
                  VALUES (?1,?2,?3,?4)",
                 params![id, comp_ids[*comp], conn, load],
             )?;
+        }
+        for p in &c.cables {
+            if let Some(level) = level_of(p) {
+                db.execute(
+                    "INSERT INTO elec_cable(circuit,level,points) VALUES (?1,?2,?3)",
+                    params![id, level, ddc_model::points_text(p)],
+                )?;
+            }
         }
         stored += 1;
     }

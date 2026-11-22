@@ -38,7 +38,7 @@ pub(crate) fn migrate(db: &Connection) -> Result<(), Error> {
 }
 
 /// View categories: (key, table). A door and a window share one table, told apart by `opening.kind`.
-pub const GFX_CATEGORIES: [(&str, &str); 24] = [
+pub const GFX_CATEGORIES: [(&str, &str); 26] = [
     ("wall", "wall"),
     ("door", "opening"),
     ("window", "opening"),
@@ -63,6 +63,8 @@ pub const GFX_CATEGORIES: [(&str, &str); 24] = [
     ("truss", "truss"),
     ("toposolid", "toposolid"),
     ("grid", "grid"),
+    ("elec_circuit", "elec_circuit"),
+    ("elec_cable", "elec_cable"),
 ];
 
 /// A view's level of detail.

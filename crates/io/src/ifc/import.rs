@@ -473,6 +473,8 @@ pub struct PCircuit {
     pub rcd: String,
     pub cable_type: String,
     pub devices: Vec<(usize, String, Option<f64>)>,
+    /// Cable pieces from the IfcCableSegment grouped with it: axis points, z absolute.
+    pub cables: Vec<Vec<(f64, f64, f64)>>,
 }
 
 /// Network run from `DDC_MepRun`: exact section, catalog, slope, points and caps.
@@ -1441,7 +1443,7 @@ pub fn plan(f: &StepFile) -> Result<Plan, ImportError> {
                 f.leaf(*q).is_some_and(|pe| {
                     matches!(
                         Rd::at(&pe, 2).as_str(),
-                        Some("DDC_Component" | "DDC_MepRun" | "DDC_MepFitting" | "DDC_MepPort")
+                        Some("DDC_Component" | "DDC_MepRun" | "DDC_MepFitting" | "DDC_MepPort" | "DDC_Cable")
                     )
                 })
             })
@@ -2014,6 +2016,11 @@ pub fn plan(f: &StepFile) -> Result<Plan, ImportError> {
         if pset(f, &props, id, "DDC_MepFitting").is_some() {
             done.insert(id);
             fitting_ent.insert(id);
+            continue;
+        }
+        // a cable piece comes back with its circuit
+        if pset(f, &props, id, "DDC_Cable").is_some() {
+            done.insert(id);
             continue;
         }
         if let Some(kv) = pset(f, &props, id, "DDC_Component") {

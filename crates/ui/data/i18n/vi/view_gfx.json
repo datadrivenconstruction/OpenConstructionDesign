@@ -57,6 +57,8 @@
  "view_gfx.cat.truss": "Vì kèo",
  "view_gfx.cat.toposolid": "Địa hình",
  "view_gfx.cat.grid": "Lưới",
+ "view_gfx.cat.elec_circuit": "Circuit wiring",
+ "view_gfx.cat.elec_cable": "Circuit cables",
  "view_gfx.vv.title": "Hiển thị và đồ họa — {view}",
  "view_gfx.vv.template_banner": "Mẫu “{name}” điều khiển: {fields}",
  "view_gfx.vv.detail": "Mức chi tiết",
