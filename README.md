@@ -13,7 +13,7 @@ rooms, doors, stairs and services in the model; you review the draft and decide 
 
 [![CI](https://github.com/datadrivenconstruction/OpenConstructionDesign/actions/workflows/ci.yml/badge.svg)](https://github.com/datadrivenconstruction/OpenConstructionDesign/actions/workflows/ci.yml)
 [![Licence: AGPL-3.0](https://img.shields.io/badge/licence-AGPL--3.0-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-0.9.0--preview-orange.svg)](CHANGELOG.md)
+[![Release](https://img.shields.io/github/v/release/datadrivenconstruction/OpenConstructionDesign?include_prereleases&label=release)](https://github.com/datadrivenconstruction/OpenConstructionDesign/releases)
 [![Rust](https://img.shields.io/badge/rust-1.89%2B-informational.svg)](docs/BUILDING.md)
 
 <p align="center">
@@ -26,9 +26,9 @@ OpenConstructionDesign combines CAD precision with BIM data in one editor. It ha
 geometry kernel and file decoders, reads and writes IFC, and keeps the whole model and its
 change history in a single SQLite file on your machine.
 
-> **Status: 0.9.0 preview.** The editor is usable, but the project file format, the APIs and
+> **Status: 0.10 beta.** The editor is usable, but the project file format, the APIs and
 > the interface can still change between releases. Keep the original of every model you open
-> and do not use the editor as the only copy of production data. See [Limits of 0.9.0](#limits-of-090).
+> and do not use the editor as the only copy of production data. See [Current limits](#current-limits).
 
 ## Three ways to drive it
 
@@ -300,7 +300,7 @@ ddc run project.ddc tower.lua --out tower.ddc --param height="40 m"
 
 Details: [docs/BUILDING.md](docs/BUILDING.md).
 
-## Limits of 0.9.0
+## Current limits
 
 - The `.dwg` and `.dxf` decoders are independent implementations. They cover common
   building elements and geometry, not every feature of those formats. Compare imported models
