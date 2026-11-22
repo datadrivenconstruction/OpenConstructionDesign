@@ -47,6 +47,7 @@ fn drain_dn_min() -> u32 {
     rule("services.water.building_drain_dn") as u32
 }
 
+
 #[derive(Clone, Copy, Debug)]
 struct Frame {
     o: (f64, f64),
@@ -119,6 +120,8 @@ struct Join {
     du: f64,
     wc: bool,
     stack_z: Option<f64>,
+    cz: f64,
+    hz: f64,
 }
 
 impl Cluster {
@@ -206,12 +209,28 @@ fn roof_top(p: &GProject, q: (f64, f64)) -> f64 {
     best.unwrap_or(p.roof.elevation + super::roof_thickness(p.roof.slope))
 }
 
-fn k_factor(t: Typology) -> f64 {
-    let n = norms();
+/// The use class of a typology in the drainage and supply tables.
+fn use_of(t: Typology) -> &'static str {
     match t {
-        Typology::House | Typology::ApartmentSection => n.k("res"),
-        Typology::Office => n.k("office"),
-        Typology::School => n.k("public"),
+        Typology::House | Typology::ApartmentSection => "res",
+        Typology::Office => "office",
+        Typology::School => "public",
+    }
+}
+
+fn k_factor(t: Typology) -> f64 {
+    norms().k(use_of(t))
+}
+
+/// Peak flows of the supply pipes: the use class and the largest single cold and hot flow.
+struct Peak {
+    use_: &'static str,
+    max: (f64, f64),
+}
+
+impl Peak {
+    fn q(&self, sys: SvcSys, sum: f64) -> f64 {
+        norms().peak(self.use_, sum, if sys == SvcSys::Hot { self.max.1 } else { self.max.0 })
     }
 }
 
@@ -225,6 +244,9 @@ struct RoomDesign {
     du: f64,
     wc: bool,
     stack_z: Option<f64>,
+    /// Heights of the cold and hot chases above the floor.
+    cz: f64,
+    hz: f64,
     served: usize,
     ports: usize,
 }
@@ -240,6 +262,9 @@ struct Att {
     c: SvcPort,
 }
 
+/// An upright run already in the space: plan point, bottom, top, half width.
+type Upright = ((f64, f64), f64, f64, f64);
+
 /// Cold or hot supply of a room from the cluster's riser: the riser branch to the chase, the
 /// two chase arms, a rise to each connector. `None` when nothing could be joined.
 #[allow(clippy::too_many_arguments)]
@@ -252,10 +277,14 @@ fn supply(
     sys: SvcSys,
     depth: f64,
     main_r: f64,
+    zr: f64,
+    pk: &Peak,
+    ups: &[Upright],
 ) -> (Vec<GRun>, Vec<(usize, &'static str)>, f64, usize) {
     let st = &p.storeys[k];
     let e = st.elevation;
-    let z = e + if sys == SvcSys::Cold { z_cw() } else { z_hw() };
+    let z = e + zr;
+    let bridge_bend = svc::bend_of(PipeMaterial::Pp, svc::supply_pipe(0.0).1);
     let (thin_extra, thin_pad) = (rule("services.water.wall_extra"), rule("services.water.block_pad"));
     let (sill_margin, gap_pad) = (rule("services.water.sill_margin"), rule("services.water.gap_pad"));
     let (port_align, port_reach) = (rule("services.water.port_align"), rule("services.water.port_reach"));
@@ -270,24 +299,45 @@ fn supply(
     let Some(ci) = ci else { return (vec![], vec![], 0.0, 0) };
     let ru = if sys == SvcSys::Cold { cl.cw } else { cl.hw };
     let u0 = ring.u(ci, ru.0);
-    // blocked: openings low enough to cut the chase, walls too thin for it
-    let mut blocked: Vec<(f64, f64)> = vec![];
+    // blocked: openings low enough to cut the chase, walls too thin for it; the chase bridges
+    // an opening over its head when that stays under the slab
+    let z_top = e + st.height - svc::slab() - main_r - svc::gap();
+    let bridge_clear = rule("services.water.bridge_clear");
+    let mut blocked: Vec<(f64, f64, Option<f64>, bool)> = vec![];
     for (j, sd) in room.sides.iter().enumerate() {
         if 2.0 * sd.half < depth + main_r + thin_extra {
-            blocked.push((ring.u(j, -depth) - thin_pad, ring.u(j, sd.len + depth) + thin_pad));
+            blocked.push((ring.u(j, -depth) - thin_pad, ring.u(j, sd.len + depth) + thin_pad, None, false));
             continue;
         }
         for g in &sd.gaps {
             if g.sill < z - e + main_r + sill_margin {
-                blocked.push((ring.u(j, g.s0) - gap_pad, ring.u(j, g.s1) + gap_pad));
+                let over = Some(e + g.head + bridge_clear + main_r).filter(|zo| *zo <= z_top);
+                blocked.push((ring.u(j, g.s0) - gap_pad, ring.u(j, g.s1) + gap_pad, over, false));
             }
+        }
+        // the neighbour's rises in a shared wall: bridged like an opening
+        for &(xy, z0, z1, r) in ups {
+            let (s, pad) = (sd.s_of(xy), r + main_r + svc::gap());
+            if s < 0.0 || s > sd.len || (sd.d_of(xy) + depth).abs() >= pad || z1 < z - pad || z0 > z + pad {
+                continue;
+            }
+            // the leg over it holds its two bends
+            let (over, pad) = (Some(z1 + bridge_clear + main_r).filter(|zo| *zo <= z_top), pad + bridge_bend);
+            blocked.push((ring.u(j, s) - pad, ring.u(j, s) + pad, over, true));
         }
     }
     let fwd = |u: f64| (u - u0).rem_euclid(per);
-    let fwd_block = blocked.iter().map(|b| fwd(b.0)).fold(per, f64::min);
-    let bwd_block = blocked.iter().map(|b| per - fwd(b.1)).fold(per, f64::min);
+    let fwd_block = blocked.iter().filter(|b| b.2.is_none()).map(|b| fwd(b.0)).fold(per, f64::min);
+    let bwd_block = blocked.iter().filter(|b| b.2.is_none()).map(|b| per - fwd(b.1)).fold(per, f64::min);
+    // the bridges along each arm: from, to, height
+    let bridges: [Vec<(f64, f64, f64, bool)>; 2] = [
+        blocked.iter().filter_map(|b| b.2.map(|zo| (fwd(b.0), fwd(b.1), zo, b.3))).filter(|b| b.1 < fwd_block).collect(),
+        blocked.iter().filter_map(|b| b.2.map(|zo| (per - fwd(b.1), per - fwd(b.0), zo, b.3))).filter(|b| b.1 < bwd_block).collect(),
+    ];
+    // no tap over an opening, nor at a bridge's legs; over a rise it leaves at the bridge height
+    let bridged = |dir: usize, d: f64| bridges[dir].iter().any(|b| d > b.0 - tee_min && d < b.1 + tee_min && (!b.3 || (d - b.0).abs() < tee_min || (d - b.1).abs() < tee_min));
+    let z_at = |dir: usize, d: f64| bridges[dir].iter().find(|b| d > b.0 && d < b.1).map_or(z, |b| b.2);
     if blocked.iter().any(|b| fwd(b.0) > fwd(b.1)) {
-        // the branch lands in a blocked stretch
         return (vec![], vec![], 0.0, 0);
     }
     // per connector, every wall it can be fed from
@@ -331,10 +381,10 @@ fn supply(
         let mut o: Vec<(f64, usize, Att)> = vec![];
         for a in alts {
             let (df, db) = (fwd(a.u), per - fwd(a.u));
-            if df < fwd_block && df > arm_min {
+            if df < fwd_block && df > arm_min && !bridged(0, df) {
                 o.push((df, 0, *a));
             }
-            if db < bwd_block && db > arm_min {
+            if db < bwd_block && db > arm_min && !bridged(1, db) {
                 o.push((db, 1, *a));
             }
         }
@@ -363,21 +413,71 @@ fn supply(
         }
         let q: f64 = kept.iter().map(|a| a.1.c.flow).sum();
         flow += q;
-        let end = kept.last().unwrap().0;
-        let u1 = if dir == 0 { u0 + end } else { u0 - end };
-        let pts: Vec<V3> = ring.path(u0, u1).into_iter().map(|w| v3(w.0, w.1, z)).collect();
-        let (m, dn) = svc::supply_pipe(q.max(q_min));
+        let arm_d = |j: usize, s_t: f64| {
+            let d = fwd(ring.u(j, s_t));
+            if dir == 0 { d } else { per - d }
+        };
+        let reach = if dir == 0 { fwd_block } else { bwd_block };
+        // a waste of the fixture into the same wall crosses a rise: the rise stands off it
+        // along the wall, on the arm, and runs across to the tap above it
+        let taps: Vec<Option<f64>> = kept
+            .iter()
+            .map(|(_, a)| {
+                let sd = &room.sides[a.j];
+                let pz = e + a.c.at.2;
+                let (m, dn) = svc::supply_pipe(a.c.flow.max(q_min));
+                let ws = svc::svc_ports(&st.layout.fixtures[a.fx])
+                    .into_iter()
+                    .filter(|c| c.sys == SvcSys::Sanitary && c.dir.2 > -port_align && z.min(pz) < e + c.at.2 && e + c.at.2 < z.max(pz))
+                    .map(|c| (sd.s_of((c.at.0, c.at.1)), c.size))
+                    .find(|w| (w.0 - a.s).abs() < w.1 / 2.0 + svc::od(m, dn) / 2.0 + rule("services.water.waste_clear"))?;
+                let clear = (ws.1 / 2.0 + svc::od(m, dn) / 2.0 + rule("services.water.waste_clear")).max(2.0 * svc::bend_of(m, dn) + svc::gap());
+                [ws.0 - clear, ws.0 + clear]
+                    .into_iter()
+                    .filter(|s_t| *s_t > 0.0 && *s_t < sd.len && arm_d(a.j, *s_t) > arm_min && arm_d(a.j, *s_t) < reach && !bridged(dir, arm_d(a.j, *s_t)))
+                    .min_by(|x, y| arm_d(a.j, *x).total_cmp(&arm_d(a.j, *y)))
+            })
+            .collect();
+        let end = kept.iter().zip(&taps).map(|((d, a), t)| t.map_or(*d, |s| arm_d(a.j, s))).fold(0.0, f64::max);
+        let at = |d: f64| if dir == 0 { u0 + d } else { u0 - d };
+        let mut legs: Vec<(f64, f64, f64)> = vec![];
+        let mut cur = 0.0;
+        let mut over: Vec<&(f64, f64, f64, bool)> = bridges[dir].iter().filter(|b| b.0 < end).collect();
+        over.sort_by(|x, y| x.0.total_cmp(&y.0));
+        for b in over {
+            legs.push((cur, b.0, z));
+            legs.push((b.0, b.1.min(end), b.2));
+            cur = b.1.min(end);
+        }
+        if end > cur {
+            legs.push((cur, end, z));
+        }
+        let mut pts: Vec<V3> = vec![];
+        for (d0, d1, zl) in legs {
+            for w in ring.path(at(d0), at(d1)) {
+                let q = v3(w.0, w.1, zl);
+                if pts.last().is_none_or(|l: &V3| (l.x - q.x).abs() + (l.y - q.y).abs() + (l.z - q.z).abs() > 1e-9) {
+                    pts.push(q);
+                }
+            }
+        }
+        let (m, dn) = svc::supply_pipe(pk.q(sys, q).max(q_min));
         runs.push(svc::pipe_run(sys, k, m, dn, pts));
-        for (_, a) in kept {
+        for ((_, a), tap) in kept.into_iter().zip(taps) {
             let sd = &room.sides[a.j];
             let w = sd.at(a.s, -depth);
             let pz = e + a.c.at.2;
             let (m, dn) = svc::supply_pipe(a.c.flow.max(q_min));
+            let z = z_at(dir, tap.map_or(arm_d(a.j, a.s), |s_t| arm_d(a.j, s_t)));
             let mut pts = vec![v3(w.0, w.1, z), v3(w.0, w.1, pz), v3(a.c.at.0, a.c.at.1, pz)];
+            if let Some(s_t) = tap {
+                let t = sd.at(s_t, -depth);
+                pts = vec![v3(t.0, t.1, z), v3(t.0, t.1, pz), v3(w.0, w.1, pz), v3(a.c.at.0, a.c.at.1, pz)];
+            }
             if a.c.dir.2 < -port_align {
                 // an underside connector is entered from below: along under it, then up into it
                 let low = pz - svc::bend_of(m, dn) - svc::gap();
-                if low > z {
+                if low > z || z > pz {
                     pts = vec![v3(w.0, w.1, z), v3(w.0, w.1, low), v3(a.c.at.0, a.c.at.1, low), v3(a.c.at.0, a.c.at.1, pz)];
                 }
             }
@@ -388,10 +488,8 @@ fn supply(
     if runs.is_empty() {
         return (vec![], vec![], 0.0, ports);
     }
-    let r = if sys == SvcSys::Cold { cl.cw } else { cl.hw };
-    let from = cl.f.p(r.0, r.1);
-    let to = cl.f.p(r.0, -depth);
-    let (m, dn) = svc::supply_pipe(flow.max(q_min));
+    let (from, to) = (cl.f.p(ru.0, ru.1), cl.f.p(ru.0, -depth));
+    let (m, dn) = svc::supply_pipe(pk.q(sys, flow).max(q_min));
     runs.insert(0, svc::pipe_run(sys, k, m, dn, vec![v3(from.0, from.1, z), v3(to.0, to.1, z)]));
     runs.extend(branch_runs);
     (runs, links, flow, ports)
@@ -410,26 +508,30 @@ struct Foot {
 /// Drains of a room in the void under its slab: a collector along one axis of the corner frame
 /// turning into the stack, a branch from each foot square to it. Returns the runs, the stack
 /// join z and the links, trying collector lines until one fits.
-fn drains(
-    space: &mut Space<'_>,
-    p: &GProject,
-    k: usize,
-    room: &Room,
-    fx: &[usize],
-    cl: &Cluster,
-) -> Option<(Vec<GRun>, f64, Vec<(usize, &'static str)>, f64, bool)> {
+type Drains = (Vec<GRun>, f64, Vec<(usize, &'static str)>, f64, bool);
+
+fn drains(space: &mut Space<'_>, p: &GProject, k: usize, room: &Room, fx: &[usize], cl: &Cluster) -> Option<Drains> {
+    // a wall waste drops behind its connector; deeper in the wall when that one meets the chases
+    [rule("services.water.waste_off"), rule("services.water.waste_deep")]
+        .into_iter()
+        .find_map(|off| drains_at(space, p, k, room, fx, cl, off))
+}
+
+fn drains_at(space: &mut Space<'_>, p: &GProject, k: usize, room: &Room, fx: &[usize], cl: &Cluster, waste_off: f64) -> Option<Drains> {
     let st = &p.storeys[k];
     let e = st.elevation;
     let n = norms();
     let mut feet = vec![];
-    let (waste_down, waste_off) = (rule("services.water.waste_down"), rule("services.water.waste_off"));
+    let waste_down = rule("services.water.waste_down");
     for &i in fx {
         let f = &st.layout.fixtures[i];
         for c in svc::svc_ports(f).into_iter().filter(|c| c.sys == SvcSys::Sanitary) {
             let mut q = (c.at.0, c.at.1);
             if c.dir.2 > -waste_down {
-                // a waste into the wall: down inside it behind the connector
-                q = (q.0 + c.dir.0 * waste_off, q.1 + c.dir.1 * waste_off);
+                // a waste into the wall: down inside it behind the connector, within the wall
+                let wall = room.sides.iter().filter(|sd| sd.d_of(q).abs() < rule("services.water.port_reach")).map(|sd| 2.0 * sd.half).fold(0.0, f64::max);
+                let off = if waste_off + c.size / 2.0 <= wall { waste_off } else { rule("services.water.waste_off") };
+                q = (q.0 + c.dir.0 * off, q.1 + c.dir.1 * off);
             }
             let fam = f.family;
             feet.push(Foot {
@@ -474,99 +576,185 @@ fn drains(
     // the layer depth never takes the pipe below the void: the falls need the room above z_min
     let z_max = svc::depth_water(oc).map_or(z_max, |d| z_max.min(e - svc::slab() - d).max(z_min.min(z_max)));
     let (gap, join_min, step) = (svc::gap(), rule("services.water.join_gap"), rule("services.water.drain_step"));
+    let shift_max = rule("services.water.waste_shift");
     let (w, d) = (room.clear[2] - room.clear[0], room.clear[3] - room.clear[1]);
     let span = w.max(d) + 0.5;
+    let c = room.clear;
+    let room_uv: Vec<(f64, f64)> = [(c[0], c[1]), (c[2], c[1]), (c[2], c[3]), (c[0], c[3])].iter().map(|q| cl.f.uv(*q)).collect();
+    let dir_uv = |d: (f64, f64, f64)| cl.f.uv((cl.f.o.0 + d.0, cl.f.o.1 + d.1));
+    // tees apart by their legs; the far join ends the collector in a joint
+    let sp_tee = join_min.max(2.0 * tee_c + gap);
+    let sp_end = |dn: u32| join_min.max(tee_c + joint(dn, dn_c) + gap);
+    let jog_min = |dn: u32| 2.0 * elbow(dn) + gap;
     for swap in [false, true] {
         // collector along u at v = line (swap: along v at u = line)
-        let uv = |f: &Foot| if swap { (f.uv.1, f.uv.0) } else { f.uv };
+        let uv = |q: (f64, f64)| if swap { (q.1, q.0) } else { q };
         let s0 = if swap { ss.0 } else { ss.1 };
         let a_s = if swap { ss.1 } else { ss.0 };
         // the risers stand in a row along u from the stack: a collector along v first leaves
         // the stack along v past the row, then turns across to its line
-        let a_c = if swap {
+        let a_turn = if swap {
             ((cl.cw.1 + cl.rc).max(cl.hw.1 + cl.rh) + gap + oc / 2.0).max(a_s + stack_end + tc + gap)
         } else {
             a_s
         };
-        let ext = a_c - a_s;
-        let mut line = s0 + tc + if swap { tc } else { os.max(stack_end) } + gap;
-        while line < span {
-            let mut joins: Vec<(f64, &Foot)> = vec![];
+        let a_max = room_uv.iter().map(|q| uv(*q).0).fold(f64::MIN, f64::max) - g();
+        // along v the collector may also leave the stack straight, clear of the row beside it
+        let mut lines: Vec<f64> = if swap { vec![s0] } else { vec![] };
+        let mut l = s0 + tc + if swap { tc } else { os.max(stack_end) } + gap;
+        while l < span {
+            lines.push(l);
+            l += step;
+        }
+        for line in lines {
+            let straight = (line - s0).abs() < 1e-9;
+            let (a_c, ext) = if straight { (a_s, 0.0) } else { (a_turn, a_turn - a_s) };
+            let a_0 = if straight { a_s + stack_end } else { a_c + tc };
+            // per foot: its index, the plan point of its drop, the join along the collector
+            let mut plan: Vec<(usize, (f64, f64), f64)> = vec![];
+            let mut free: Vec<usize> = vec![];
             let mut ok = true;
-            for f in &feet {
-                let (a, b) = uv(f);
-                let need = elbow(f.dn) + oc.max(joint(f.dn, dn_c));
-                if (b - line).abs() < need || a < a_c + tc + tee_c + gap {
-                    ok = false;
-                    break;
+            for (i, f) in feet.iter().enumerate() {
+                let (a, b) = uv(f.uv);
+                if (b - line).abs() >= elbow(f.dn) + oc.max(joint(f.dn, dn_c)) - 1e-9 {
+                    free.push(i);
+                    continue;
                 }
-                joins.push((a, f));
+                // too near the line for a branch: a wall waste runs on along its outlet to drop
+                // straight into the collector
+                let (ca, cb) = uv(cl.f.uv((f.c.at.0, f.c.at.1)));
+                let (da, db) = uv(dir_uv(f.c.dir));
+                let at = if (b - line).abs() < 1e-9 {
+                    Some(a)
+                } else if f.c.dir.2 > -waste_down && db.abs() > waste_down {
+                    let t = (line - cb) / db;
+                    (t >= -1e-9 && t <= shift_max + 1e-9).then_some(ca + da * t)
+                } else {
+                    None
+                };
+                match at {
+                    Some(at) => plan.push((i, (at, line), at)),
+                    None => {
+                        ok = false;
+                        break;
+                    }
+                }
             }
-            joins.sort_by(|x, y| x.0.total_cmp(&y.0));
-            // the far join ends the collector in a joint; the others are tees on it
-            let n_j = joins.len();
-            let a_0 = a_c + tc;
-            ok &= n_j != 1 || joins[0].0 - a_0 >= joint(joins[0].1.dn, dn_c) + gap;
+            if !ok {
+                continue;
+            }
+            // the free feet, nearest the stack first, each at its own place along the line or
+            // jogged to the nearest one clear of the joins already set
+            let a_lo = a_0 + tee_c + gap;
+            free.sort_by(|x, y| uv(feet[*x].uv).0.total_cmp(&uv(feet[*y].uv).0));
+            for &i in &free {
+                let f = &feet[i];
+                let (a, b) = uv(f.uv);
+                let mut cands = vec![a, a_lo, a - jog_min(f.dn), a + jog_min(f.dn), a_lo.max(a + jog_min(f.dn))];
+                for p in &plan {
+                    cands.extend([p.2 - sp_tee, p.2 + sp_tee]);
+                }
+                let best = cands
+                    .into_iter()
+                    .filter(|x| *x >= a_lo - 1e-9 && *x <= a_max + 1e-9)
+                    .filter(|x| (x - a).abs() < 1e-9 || (x - a).abs() >= jog_min(f.dn) - 1e-9)
+                    .filter(|x| plan.iter().all(|p| (p.2 - x).abs() >= sp_tee - 1e-9))
+                    .min_by(|x, y| (x - a).abs().total_cmp(&(y - a).abs()).then(x.total_cmp(y)));
+                match best {
+                    Some(x) => plan.push((i, (a, b), x)),
+                    None => {
+                        ok = false;
+                        break;
+                    }
+                }
+            }
+            if !ok {
+                continue;
+            }
+            plan.sort_by(|x, y| x.2.total_cmp(&y.2));
+            // the far join is the collector's end: its joint takes more than a tee
+            let n_j = plan.len();
+            if n_j > 1 {
+                let (i, (a, _), x) = plan[n_j - 1];
+                let want = plan[n_j - 2].2 + sp_end(feet[i].dn);
+                if x < want && free.contains(&i) && (want - a).abs() >= jog_min(feet[i].dn) - 1e-9 && want <= a_max + 1e-9 {
+                    plan[n_j - 1].2 = want;
+                }
+            }
+            ok &= n_j != 1 || plan[0].2 - a_0 >= joint(feet[plan[0].0].dn, dn_c) + gap - 1e-9;
+            ok &= plan[0].2 >= a_lo - 1e-9;
             ok &= (1..n_j).all(|i| {
-                let end = if i + 1 == n_j { joint(joins[i].1.dn, dn_c) } else { tee_c };
-                joins[i].0 - joins[i - 1].0 >= join_min.max(tee_c + end + gap)
+                let end = if i + 1 == n_j { sp_end(feet[plan[i].0].dn) } else { sp_tee };
+                plan[i].2 - plan[i - 1].2 >= end - 1e-9
             });
-            if ok {
-                let to_xy = |a: f64, b: f64| if swap { cl.f.p(b, a) } else { cl.f.p(a, b) };
-                // rises from the stack: final leg, collector, branches
-                let leg0 = line - s0;
-                let mut rise_max: f64 = 0.0;
-                for (a, f) in &joins {
-                    let (_, b) = uv(f);
-                    let r = sc * (leg0 + (a - a_s)) + n.slope(f.dn) / 100.0 * (b - line).abs();
-                    rise_max = rise_max.max(r);
-                }
-                let z0 = z_max - rise_max;
-                if z0 >= z_min {
-                    let zc = |a: f64| z0 + sc * (leg0 + (a - a_s));
-                    let far = joins.last().unwrap().0;
-                    let mut pts = vec![(far, line), (a_c, line), (a_c, s0)];
-                    let mut zs = vec![zc(far), z0 + sc * (leg0 + ext), z0 + sc * ext];
-                    if ext > 0.0 {
-                        pts.push((a_s, s0));
-                        zs.push(z0);
-                    }
-                    let stack = cl.stack();
-                    let mut cpts: Vec<V3> = pts
-                        .iter()
-                        .zip(zs)
-                        .map(|(q, z)| {
-                            let xy = to_xy(q.0, q.1);
-                            v3(xy.0, xy.1, z)
-                        })
-                        .collect();
-                    let last = cpts.len() - 1;
-                    cpts[last] = v3(stack.0, stack.1, z0);
-                    let mut runs = vec![svc::pipe_run(SvcSys::Sanitary, k, pvc, dn_c, cpts)];
-                    let mut links = vec![];
-                    for (a, f) in &joins {
-                        let (_, b) = uv(f);
-                        let zj = zc(*a);
-                        let zf = zj + n.slope(f.dn) / 100.0 * (b - line).abs();
-                        let foot = cl.f.p(f.uv.0, f.uv.1);
-                        let join = to_xy(*a, line);
-                        let pz = f.c.at.2 + e;
-                        let mut pts = vec![v3(f.c.at.0, f.c.at.1, pz)];
-                        if (foot.0 - f.c.at.0).abs() > 1e-9 || (foot.1 - f.c.at.1).abs() > 1e-9 {
-                            pts.push(v3(foot.0, foot.1, pz));
-                        }
-                        pts.push(v3(foot.0, foot.1, zf));
-                        pts.push(v3(join.0, join.1, zj));
-                        runs.push(svc::pipe_run(SvcSys::Sanitary, k, pvc, f.dn, pts));
-                        links.push((f.fx, f.c.name));
-                    }
-                    if space.try_add(&runs, gap) {
-                        let du: f64 = feet.iter().map(|f| f.du).sum();
-                        return Some((runs, z0, links, du, feet.iter().any(|f| f.wc)));
-                    }
-                }
+            if !ok {
+                continue;
             }
-            line += step;
+            let to_xy = |a: f64, b: f64| if swap { cl.f.p(b, a) } else { cl.f.p(a, b) };
+            // rises from the stack: final leg, collector, branches
+            let leg0 = line - s0;
+            let sb = |dn: u32| n.slope(dn) / 100.0;
+            let run_b = |q: &(usize, (f64, f64), f64)| (q.1 .1 - line).abs() + (q.2 - q.1 .0).abs();
+            let rise_max = plan.iter().map(|q| sc * (leg0 + (q.2 - a_s)) + sb(feet[q.0].dn) * run_b(q)).fold(0.0, f64::max);
+            let z0 = z_max - rise_max;
+            if z0 < z_min {
+                continue;
+            }
+            let zc = |a: f64| z0 + sc * (leg0 + (a - a_s));
+            let far = plan.last().unwrap().2;
+            let (pts, zs) = if straight {
+                (vec![(far, line), (a_s, s0)], vec![zc(far), z0])
+            } else {
+                let mut pts = vec![(far, line), (a_c, line), (a_c, s0)];
+                let mut zs = vec![zc(far), z0 + sc * (leg0 + ext), z0 + sc * ext];
+                if ext > 0.0 {
+                    pts.push((a_s, s0));
+                    zs.push(z0);
+                }
+                (pts, zs)
+            };
+            let stack = cl.stack();
+            let mut cpts: Vec<V3> = pts
+                .iter()
+                .zip(zs)
+                .map(|(q, z)| {
+                    let xy = to_xy(q.0, q.1);
+                    v3(xy.0, xy.1, z)
+                })
+                .collect();
+            let last = cpts.len() - 1;
+            cpts[last] = v3(stack.0, stack.1, z0);
+            let mut runs = vec![svc::pipe_run(SvcSys::Sanitary, k, pvc, dn_c, cpts)];
+            let mut links = vec![];
+            for q in &plan {
+                let f = &feet[q.0];
+                let ((a, b), x) = (q.1, q.2);
+                let zj = zc(x);
+                let s = sb(f.dn);
+                let pz = f.c.at.2 + e;
+                let foot = to_xy(a, b);
+                let mut pts = vec![v3(f.c.at.0, f.c.at.1, pz)];
+                let stub = (foot.0 - f.c.at.0).hypot(foot.1 - f.c.at.1);
+                if stub > 1e-9 {
+                    // the outlet into the wall falls to the drop like any branch
+                    pts.push(v3(foot.0, foot.1, pz - s * stub));
+                }
+                if (b - line).abs() > 1e-9 {
+                    pts.push(v3(foot.0, foot.1, zj + s * run_b(q)));
+                    if (x - a).abs() > 1e-9 {
+                        let j = to_xy(x, b);
+                        pts.push(v3(j.0, j.1, zj + s * (b - line).abs()));
+                    }
+                }
+                let join = to_xy(x, line);
+                pts.push(v3(join.0, join.1, zj));
+                runs.push(svc::pipe_run(SvcSys::Sanitary, k, pvc, f.dn, pts));
+                links.push((f.fx, f.c.name));
+            }
+            if space.try_add(&runs, gap) {
+                let du: f64 = feet.iter().map(|f| f.du).sum();
+                return Some((runs, z0, links, du, feet.iter().any(|f| f.wc)));
+            }
         }
     }
     None
@@ -683,6 +871,26 @@ pub(crate) fn plumb(spec: &ProjectSpec, p: &mut GProject) -> usize {
         .map(|st| st.layout.shafts.iter().filter(|s| s.kind == crate::ShaftKind::Riser).map(|s| s.ring.clone()).collect())
         .collect();
     let mut space = Space::new(p);
+    let mut big = (0.0f64, 0.0f64);
+    for (k, list) in rooms.iter().enumerate() {
+        for c in list.iter().flat_map(|r| r.1.iter()).flat_map(|&i| svc::svc_ports(&p.storeys[k].layout.fixtures[i])) {
+            match c.sys {
+                SvcSys::Cold => big.0 = big.0.max(c.flow),
+                SvcSys::Hot => big.1 = big.1.max(c.flow),
+                _ => {}
+            }
+        }
+    }
+    let pk = Peak { use_: use_of(spec.typology), max: big };
+    // the provisional risers reach the highest chases a room may take
+    let wide = rule("services.water.riser_wide");
+    let z_max = |sys: SvcSys, z0: f64| {
+        (0..n_st)
+            .flat_map(|k| rooms[k].iter().map(move |r| (k, r)))
+            .filter_map(|(k, (_, fx))| high_chase(&p.storeys[k], fx, wide, wide, sys))
+            .fold(z0 + rule("services.water.chase_shift"), f64::max)
+    };
+    let (cz_max, hz_max) = (z_max(SvcSys::Cold, z_cw()), z_max(SvcSys::Cold, z_hw()).max(z_max(SvcSys::Hot, z_hw())) + 2.0 * wide + svc::gap());
     let mut clusters: Vec<Cluster> = vec![];
     let mut runs: Vec<GRun> = vec![];
     let mut links: Vec<GSvcLink> = vec![];
@@ -718,7 +926,7 @@ pub(crate) fn plumb(spec: &ProjectSpec, p: &mut GProject) -> usize {
                         let (cw, hw, wc) = flows_at(p, &rooms, probe.f.p(g() + probe.rs, g() + probe.rs));
                         let mut c = Cluster::new(f, wc, cw, hw);
                         c.vent = roof_top(p, c.stack()) + norms().vent_above_roof();
-                        if !cluster_clear(p, &c, k) || !space.try_add(&verticals(&c, (e + z_cw(), e + z_hw())), svc::gap()) {
+                        if !cluster_clear(p, &c, k) || !space.try_add(&verticals(&c, (e + cz_max, e + hz_max)), svc::gap()) {
                             space.rollback(m);
                             continue;
                         }
@@ -726,7 +934,7 @@ pub(crate) fn plumb(spec: &ProjectSpec, p: &mut GProject) -> usize {
                         fresh.as_ref().unwrap()
                     }
                 };
-                let d = design_room(&mut space, p, k, room, fx, cl);
+                let d = design_room(&mut space, p, k, room, fx, cl, &pk);
                 let score = d.served;
                 let keep = best.as_ref().is_none_or(|b| score > b.3);
                 space.rollback(m);
@@ -744,13 +952,13 @@ pub(crate) fn plumb(spec: &ProjectSpec, p: &mut GProject) -> usize {
             // redo the chosen design for real
             let ci = match fresh {
                 Some(c) => {
-                    space.try_add(&verticals(&c, (e + z_cw(), e + z_hw())), svc::gap());
+                    space.try_add(&verticals(&c, (e + cz_max, e + hz_max)), svc::gap());
                     clusters.push(c);
                     clusters.len() - 1
                 }
                 None => ci,
             };
-            let d = design_room(&mut space, p, k, room, fx, &clusters[ci]);
+            let d = design_room(&mut space, p, k, room, fx, &clusters[ci], &pk);
             unserved += total - d.served;
             if d.served == 0 {
                 continue;
@@ -762,6 +970,8 @@ pub(crate) fn plumb(spec: &ProjectSpec, p: &mut GProject) -> usize {
                 du: d.du,
                 wc: d.wc,
                 stack_z: d.stack_z,
+                cz: d.cz,
+                hz: d.hz,
             });
             runs.extend(d.runs);
             for (fx, c, sys) in d.links {
@@ -770,9 +980,15 @@ pub(crate) fn plumb(spec: &ProjectSpec, p: &mut GProject) -> usize {
         }
     }
     let used: Vec<&Cluster> = clusters.iter().filter(|c| !c.joins.is_empty()).collect();
+    // the provisional verticals of every tried cluster leave with a fresh space
+    drop(space);
+    let mut space = Space::new(p);
+    for r in &runs {
+        space.add(r);
+    }
     if !used.is_empty() {
         let kf = k_factor(spec.typology);
-        risers_and_mains(p, &mut space, &used, kf, &mut runs);
+        risers_and_mains(p, &mut space, &used, kf, &pk, &mut runs);
     }
     into_shaft(p, &mut space, &mut runs);
     // slab holes where a run crosses a slab upright
@@ -799,6 +1015,7 @@ pub(crate) fn plumb(spec: &ProjectSpec, p: &mut GProject) -> usize {
     svc::add_holes(p, &holes);
     p.services.water = runs;
     p.services.links.extend(links);
+    p.services.water_use = pk.use_.to_string();
     p.metrics.push(("water_loading_units", lu));
     unserved += unplaced;
     p.metrics.push(("water_ports_unplaced", unplaced as f64));
@@ -806,9 +1023,40 @@ pub(crate) fn plumb(spec: &ProjectSpec, p: &mut GProject) -> usize {
     unserved
 }
 
-fn design_room(space: &mut Space<'_>, p: &GProject, k: usize, room: &Room, fx: &[usize], cl: &Cluster) -> RoomDesign {
+/// Height above the floor of a hot chase over every supply connector of a room, when every hot
+/// one stands clear above the cold chase so the hot drops pass it.
+fn high_chase(st: &super::PStorey, fx: &[usize], rc: f64, rh: f64, high: SvcSys) -> Option<f64> {
+    let ports: Vec<SvcPort> = fx.iter().flat_map(|&i| svc::svc_ports(&st.layout.fixtures[i])).collect();
+    let pass = rc + rh + svc::gap();
+    let other = if high == SvcSys::Hot { z_cw() } else { z_hw() };
+    let top = ports.iter().filter(|c| matches!(c.sys, SvcSys::Cold | SvcSys::Hot)).map(|c| c.at.2).fold(f64::MIN, f64::max);
+    let low = ports.iter().filter(|c| c.sys == high).map(|c| c.at.2).fold(f64::MAX, f64::min);
+    let bend = svc::bend_of(PipeMaterial::Pp, svc::supply_pipe(0.0).1);
+    // the drop to the top connector holds its two bends
+    (low < f64::MAX && low - bend > other + pass).then_some(top + pass.max(2.0 * bend) + svc::gap())
+}
+
+fn design_room(space: &mut Space<'_>, p: &GProject, k: usize, room: &Room, fx: &[usize], cl: &Cluster, pk: &Peak) -> RoomDesign {
+    let total: usize = fx.iter().map(|&i| svc::svc_ports(&p.storeys[k].layout.fixtures[i]).iter().filter(|c| c.sys != SvcSys::Power).count()).sum();
+    let m = space.mark();
+    let d = design_room_in(space, p, k, room, fx, cl, pk, false);
+    if d.served >= total {
+        return d;
+    }
+    // the drains first, the chases then bridging their drops in the wall
+    space.rollback(m);
+    let d2 = design_room_in(space, p, k, room, fx, cl, pk, true);
+    if d2.served > d.served {
+        return d2;
+    }
+    space.rollback(m);
+    design_room_in(space, p, k, room, fx, cl, pk, false)
+}
+
+#[allow(clippy::too_many_arguments)]
+fn design_room_in(space: &mut Space<'_>, p: &GProject, k: usize, room: &Room, fx: &[usize], cl: &Cluster, pk: &Peak, drains_first: bool) -> RoomDesign {
     let st = &p.storeys[k];
-    let mut d = RoomDesign::default();
+    let mut d = RoomDesign { cz: z_cw(), hz: z_hw(), ..Default::default() };
     let (mut qc, mut qh) = (0.0, 0.0);
     for &i in fx {
         for c in svc::svc_ports(&st.layout.fixtures[i]) {
@@ -820,56 +1068,84 @@ fn design_room(space: &mut Space<'_>, p: &GProject, k: usize, room: &Room, fx: &
         }
     }
     let q_min = rule("services.water.flow_min");
-    let (mc, dc) = svc::supply_pipe(qc.max(q_min));
-    let (mh, dh) = svc::supply_pipe(qh.max(q_min));
+    let (mc, dc) = svc::supply_pipe(pk.q(SvcSys::Cold, qc).max(q_min));
+    let (mh, dh) = svc::supply_pipe(pk.q(SvcSys::Hot, qh).max(q_min));
     let (rc, rh) = (svc::od(mc, dc) / 2.0, svc::od(mh, dh) / 2.0);
     let chase_gap = rule("services.water.chase_gap");
     let c1 = (rc + chase_gap).max(rule("services.water.chase_min"));
     let c2 = c1 + rc + rh + chase_gap;
-    // back to back rooms share the wall their chases run in: when the cold-near-the-room order
-    // meets the neighbour's runs, the hot one nearer is tried
-    for (dc, dh) in [(c1, c2), (c2, c1)] {
-        let (cw_runs, cw_links, cw_q, _) = supply(p, k, room, fx, cl, SvcSys::Cold, dc, rc);
-        let (hw_runs, hw_links, hw_q, _) = supply(p, k, room, fx, cl, SvcSys::Hot, dh, rh);
+    // back to back rooms share a chase wall: the order, depth and height of the two chases
+    // are tried until they pass the neighbour's runs
+    let dz = rule("services.water.chase_shift");
+
+    let mut ways = vec![(c1, c2, z_cw(), z_hw()), (c2, c1, z_cw(), z_hw()), (c1, c2, z_cw() + dz, z_hw() + dz), (c2, c1, z_cw() + dz, z_hw() + dz)];
+    if let Some(hi) = high_chase(st, fx, rc, rh, SvcSys::Hot) {
+        ways.push((c1, c1, z_cw(), hi));
+    }
+    // back to back with the neighbour's taps in a thin wall: the cold chase passes over them
+    if let Some(hi) = high_chase(st, fx, rc, rh, SvcSys::Cold) {
+        ways.push((c1, c1, hi, z_hw()));
+    }
+    if drains_first {
+        add_drains(space, p, k, room, fx, cl, &mut d);
+    }
+    // last, the chases bridge the rises of the room behind a shared wall and the drops
+    let none: Vec<Upright> = vec![];
+    let ups = space.uprights();
+    let tries: Vec<_> = ways.iter().map(|w| (*w, &none)).chain(ways.iter().map(|w| (*w, &ups))).collect();
+    for ((dc, dh, zc, zh), ups) in tries {
+        let (cw_runs, cw_links, cw_q, _) = supply(p, k, room, fx, cl, SvcSys::Cold, dc, rc, zc, pk, ups);
+        let (hw_runs, hw_links, hw_q, _) = supply(p, k, room, fx, cl, SvcSys::Hot, dh, rh, zh, pk, ups);
         let mut sup: Vec<GRun> = cw_runs;
         sup.extend(hw_runs);
         if sup.is_empty() {
             break;
         }
-        if space.try_add(&sup, svc::gap()) {
-            d.runs = sup;
+        let ok = space.try_add(&sup, svc::gap());
+        if ok {
+            d.runs.extend(sup);
             d.cw = cw_q;
             d.hw = hw_q;
+            d.cz = zc;
+            d.hz = zh;
             d.links.extend(cw_links.into_iter().map(|(f, c)| (f, c, SvcSys::Cold)));
             d.links.extend(hw_links.into_iter().map(|(f, c)| (f, c, SvcSys::Hot)));
             break;
         }
     }
-    if let Some((runs, z0, links, du, wc)) = drains(space, p, k, room, fx, cl) {
+    if !drains_first {
+        add_drains(space, p, k, room, fx, cl, &mut d);
+    }
+    d.served = d.links.len();
+    d
+}
+
+fn add_drains(space: &mut Space<'_>, p: &GProject, k: usize, room: &Room, fx: &[usize], cl: &Cluster, d: &mut RoomDesign) {
+    let dr = drains(space, p, k, room, fx, cl);
+    if let Some((runs, z0, links, du, wc)) = dr {
         d.runs.extend(runs);
         d.stack_z = Some(z0);
         d.du = du;
         d.wc = wc;
         d.links.extend(links.into_iter().map(|(f, c)| (f, c, SvcSys::Sanitary)));
     }
-    d.served = d.links.len();
-    d
 }
 
 /// The verticals of every cluster sized storey by storey, and under the ground slab the cold
 /// and hot mains to a capped inlet and the building drain to a capped outlet.
-fn risers_and_mains(p: &GProject, space: &mut Space<'_>, used: &[&Cluster], kf: f64, runs: &mut Vec<GRun>) {
+fn risers_and_mains(p: &GProject, space: &mut Space<'_>, used: &[&Cluster], kf: f64, pk: &Peak, runs: &mut Vec<GRun>) {
     let mut cw_feet = vec![];
     let mut hw_feet = vec![];
     let mut drain_feet = vec![];
+    let n0 = runs.len();
     for cl in used {
         let e = |k: usize| p.storeys[k].elevation;
         let mut js = cl.joins.clone();
         js.sort_by_key(|j| j.k);
         // cold and hot risers: segments between the storeys they serve, sized by the flow above
         for (sys, xy, zrel, flow) in [
-            (SvcSys::Cold, cl.cw_xy(), z_cw(), &(|j: &Join| j.cw) as &dyn Fn(&Join) -> f64),
-            (SvcSys::Hot, cl.hw_xy(), z_hw(), &(|j: &Join| j.hw) as &dyn Fn(&Join) -> f64),
+            (SvcSys::Cold, cl.cw_xy(), &(|j: &Join| j.cz) as &dyn Fn(&Join) -> f64, &(|j: &Join| j.cw) as &dyn Fn(&Join) -> f64),
+            (SvcSys::Hot, cl.hw_xy(), &(|j: &Join| j.hz) as &dyn Fn(&Join) -> f64, &(|j: &Join| j.hw) as &dyn Fn(&Join) -> f64),
         ] {
             let served: Vec<&Join> = js.iter().filter(|j| flow(j) > 0.0).collect();
             if served.is_empty() {
@@ -879,8 +1155,8 @@ fn risers_and_mains(p: &GProject, space: &mut Space<'_>, used: &[&Cluster], kf: 
             let mut z0 = bottom;
             for (i, j) in served.iter().enumerate() {
                 let q: f64 = served[i..].iter().map(|x| flow(x)).sum();
-                let (m, dn) = svc::supply_pipe(q);
-                let z1 = e(j.k) + zrel;
+                let (m, dn) = svc::supply_pipe(pk.q(sys, q));
+                let z1 = e(j.k) + zrel(j);
                 runs.push(vertical(sys, j.k, m, dn, xy, z0, z1));
                 z0 = z1;
             }
@@ -916,12 +1192,22 @@ fn risers_and_mains(p: &GProject, space: &mut Space<'_>, used: &[&Cluster], kf: 
             runs.push(r);
         }
     }
+    for r in &runs[n0..] {
+        space.add(r);
+    }
+    // each stack reaches below its lowest join to the building drain, still to be laid
+    for cl in used {
+        if let Some(top) = cl.joins.iter().filter_map(|j| j.stack_z).reduce(f64::min) {
+            let z0 = under_drain() - rule("services.water.stack_drop");
+            space.add(&vertical(SvcSys::Sanitary, 0, PipeMaterial::Pvc, cl.stack_dn, cl.stack(), z0, top));
+        }
+    }
     let foot = svc::bbox(&p.storeys[0].layout.slab);
     for (sys, feet, z) in [
         (SvcSys::Cold, &cw_feet, under_cw()),
         (SvcSys::Hot, &hw_feet, under_hw()),
     ] {
-        if let Some(r) = comb(space, sys, feet, z, None, &foot) {
+        if let Some(r) = comb(space, sys, feet, z, None, &|q| pk.q(sys, q), &foot) {
             runs.extend(r);
         }
     }
@@ -930,7 +1216,7 @@ fn risers_and_mains(p: &GProject, space: &mut Space<'_>, used: &[&Cluster], kf: 
         .iter()
         .filter_map(|c| c.joins.iter().filter_map(|j| j.stack_z).reduce(f64::min))
         .collect();
-    if let Some(r) = comb(space, SvcSys::Sanitary, &drain_feet, under_drain(), Some(kf), &foot) {
+    if let Some(r) = comb(space, SvcSys::Sanitary, &drain_feet, under_drain(), Some(kf), &|q| q, &foot) {
         // join each stack bottom to its branch: the branch starts at (x, y, z_top); extend the
         // stack down from its lowest join to there
         for (cl, top) in used.iter().filter(|c| c.joins.iter().any(|j| j.stack_z.is_some())).zip(&tops) {
@@ -1037,6 +1323,7 @@ fn comb(
     feet: &[Feed],
     z: f64,
     fall: Option<f64>,
+    peak: &dyn Fn(f64) -> f64,
     foot: &R,
 ) -> Option<Vec<GRun>> {
     if feet.is_empty() {
@@ -1047,7 +1334,7 @@ fn comb(
     let total_du: f64 = feet.iter().map(|f| f.2).sum();
     let (mm, dm) = match fall {
         Some(kf) => (PipeMaterial::Pvc, svc::drain_dn(kf * total_du.sqrt(), drain_dn_min())),
-        None => svc::supply_pipe(total_q),
+        None => svc::supply_pipe(peak(total_q)),
     };
     let om = svc::od(mm, dm);
     let (gap, join_gap) = (svc::gap(), rule("services.water.main_join_gap"));
@@ -1056,15 +1343,19 @@ fn comb(
         let (lo, hi) = if along_x { (foot[1], foot[3]) } else { (foot[0], foot[2]) };
         let mut line = lo - 2.0;
         while line < hi + 2.0 {
+            // under the slab a jog may as well step out of the room, when into it meets a vertical
+            let mut flip = vec![1.0; feet.len()];
+            for _ in 0..3 {
             // (join on the main, foot index, jog off the foot)
             let mut joins: Vec<(f64, usize, f64)> = vec![];
             // per foot: the shortest step along the main off the foot and the nearest the foot
             // may stand to the main when it steps
             let mut steps: Vec<(f64, f64)> = vec![];
+            let mut jog0: Vec<f64> = vec![];
             let mut ok = true;
             for (i, f) in feet.iter().enumerate() {
                 let (a, b) = if along_x { (f.0 .0, f.0 .1) } else { (f.0 .1, f.0 .0) };
-                let (m, dn) = branch_pipe(sys, f, fall);
+                let (m, dn) = branch_pipe(f, fall, peak);
                 // the turn off the vertical: an elbow, and a reducer when the sizes differ
                 let bend = svc::bend_of(m, dn);
                 let off = match f.5 {
@@ -1082,7 +1373,8 @@ fn comb(
                     ok = false;
                     break;
                 }
-                joins.push((a + into_a.signum() * jog, i, jog));
+                joins.push((a + flip[i] * into_a.signum() * jog, i, jog));
+                jog0.push(jog);
                 steps.push(((off + bend + gap).max(f.4 + svc::od(m, dn) / 2.0 + gap), bend + om + gap));
             }
             joins.sort_by(|x, y| x.0.total_cmp(&y.0));
@@ -1091,7 +1383,7 @@ fn comb(
             // an end join turns the main into its branch: the elbow and the reducer there take
             // more of the main than a tee does
             let end_trim = |i: usize| {
-                let (m, dn) = branch_pipe(sys, &feet[i], fall);
+                let (m, dn) = branch_pipe(&feet[i], fall, peak);
                 let s = |m, dn| svc::pipe_run(sys, 0, m, dn, vec![]).section;
                 let red = if (m, dn) != (mm, dm) { mep::transition_length(&s(m, dn), &s(mm, dm)) } else { 0.0 };
                 svc::bend_of(mm, dm).max(svc::bend_of(m, dn)) + red
@@ -1119,10 +1411,16 @@ fn comb(
                     if (b_f - line).abs() < steps[i].1 {
                         break;
                     }
-                    let a_new = want.max(a_f + steps[i].0);
+                    // one whose step met a vertical steps back past the join before it
+                    let a_new = if flip[i] < 0.0 && jog0[i] == 0.0 {
+                        (joins[n - 1].0 - need_at(&joins, n)).min(a_f - steps[i].0)
+                    } else {
+                        want.max(a_f + steps[i].0)
+                    };
                     joins[n] = (a_new, i, (a_new - a_f).abs());
                 }
             }
+            joins.sort_by(|x, y| x.0.total_cmp(&y.0));
             if ok && !(1..n_j).all(|n| joins[n].0 - joins[n - 1].0 >= need_at(&joins, n) - 1e-9) {
                 ok = false;
             }
@@ -1140,7 +1438,7 @@ fn comb(
                 let mut rise: f64 = 0.0;
                 for (a, i, jog) in &joins {
                     let f = &feet[*i];
-                    let (_, dn) = branch_pipe(sys, f, fall);
+                    let (_, dn) = branch_pipe(f, fall, peak);
                     let b = if along_x { f.0 .1 } else { f.0 .0 };
                     let sb = if drain { norms().slope(dn) / 100.0 } else { 0.0 };
                     rise = rise.max(slope_m * (a - out).abs() + sb * ((b - line).abs() + jog));
@@ -1154,7 +1452,7 @@ fn comb(
                 let mut out_runs = vec![main];
                 for (a, i, jog) in &joins {
                     let f = &feet[*i];
-                    let (m, dn) = branch_pipe(sys, f, fall);
+                    let (m, dn) = branch_pipe(f, fall, peak);
                     let b = if along_x { f.0 .1 } else { f.0 .0 };
                     let sb = if drain { norms().slope(dn) / 100.0 } else { 0.0 };
                     let z_jog = zm(*a) + sb * (b - line).abs();
@@ -1171,6 +1469,21 @@ fn comb(
                 if space.try_add(&out_runs, gap) {
                     return Some(out_runs);
                 }
+                // a jog or a step meeting a vertical turns the other way
+                let stuck: Vec<usize> = (0..n_j)
+                    .filter(|&n| joins[n].2 > 0.0 && !space.fits(&out_runs[n + 1], gap))
+                    .map(|n| joins[n].1)
+                    .filter(|&i| flip[i] > 0.0)
+                    .collect();
+                if stuck.is_empty() {
+                    break;
+                }
+                for i in stuck {
+                    flip[i] = -1.0;
+                }
+            } else {
+                break;
+            }
             }
             line += 0.5;
         }
@@ -1178,10 +1491,10 @@ fn comb(
     None
 }
 
-fn branch_pipe(_sys: SvcSys, f: &Feed, fall: Option<f64>) -> (PipeMaterial, u32) {
+fn branch_pipe(f: &Feed, fall: Option<f64>, peak: &dyn Fn(f64) -> f64) -> (PipeMaterial, u32) {
     match fall {
         Some(kf) => (PipeMaterial::Pvc, svc::drain_dn(kf * f.2.sqrt(), drain_dn_min())),
-        None => svc::supply_pipe(f.1),
+        None => svc::supply_pipe(peak(f.1)),
     }
 }
 

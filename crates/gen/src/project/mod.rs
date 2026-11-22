@@ -997,6 +997,8 @@ pub struct GServices {
     pub issues: Vec<String>,
     /// System names in `SvcSys::ALL` order (power, cold, hot, sanitary), with services on or off.
     pub names: Vec<String>,
+    /// Use class the supply pipes are sized for at peak flow; empty sizes them for the sum.
+    pub water_use: String,
 }
 
 /// The two air systems of a project.

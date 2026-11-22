@@ -80,6 +80,10 @@
   "supply": {
     "lu": {"Washbasin": 1, "WC": 1, "Bathtub": 4, "Shower Tray": 2, "Sink": 2, "Washing Machine": 2, "Dishwasher": 2, "Urinal": 1},
     "lu_doc": "EN 806-3:2006 table 2 loading units; urinal: washbasin row",
+    "peak": {"res": [1.48, 0.19, 0.94], "office": [0.91, 0.31, 0.38], "public": [0.91, 0.31, 0.38]},
+    "peak_from": 0.2,
+    "peak_doc": "DIN 1988-300:2012 table 2 peak flow Vs = a (sum VR)^b - c in l/s, from a sum of 0.2 l/s: dwellings 1.48/0.19/0.94, administration buildings and schools 0.91/0.31/0.38; never below the largest single flow",
+    "peak_confidence": "unverified",
     "confidence": "secondary"
   },
   "fixtures": {
