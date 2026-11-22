@@ -505,6 +505,9 @@ struct Search<'a> {
     /// Port straights of the targets not routed yet (target, port, escape, clearance): an
     /// earlier branch keeps clear of them; a target's own leaves the list as it is routed.
     pending: Vec<(usize, V3, V3, f64)>,
+    last_exp: usize,
+    last_box: (V3, V3),
+    last_zs: Vec<i64>,
 }
 
 #[derive(PartialEq)]
@@ -591,6 +594,9 @@ impl<'a> Search<'a> {
             near: vec![],
             others,
             pending: vec![],
+            last_exp: 0,
+            last_box: (v3(1e9, 1e9, 1e9), v3(-1e9, -1e9, -1e9)),
+            last_zs: vec![],
             stale: 0,
         }
     }
@@ -724,6 +730,9 @@ impl<'a> Search<'a> {
         end: Option<EndRun>,
     ) -> Option<Vec<V3>> {
         let r = self.rules;
+        self.last_exp = 0;
+        self.last_box = (v3(1e9, 1e9, 1e9), v3(-1e9, -1e9, -1e9));
+        self.last_zs.clear();
         let n0 = self.lat.node(start)?;
         let quarter = (r.min_leg / 4.0).max(1e-6);
         let qof = |acc: f64| ((acc / quarter + 1e-6).floor() as u8).min(4);
@@ -732,6 +741,7 @@ impl<'a> Search<'a> {
         let tq = match end {
             Some(e) if start_acc + 1e-9 >= e.tangent => 0,
             Some(e) => ((e.tangent / quarter) - 1e-6).ceil().max(0.0) as u8,
+            None if start_acc + 1e-9 >= r.tangent => 0,
             None => ((r.tangent / quarter) - 1e-6).ceil().max(0.0) as u8,
         };
         let teeq = ((r.tee_leg / quarter) - 1e-6).ceil().max(0.0) as u8;
@@ -768,6 +778,8 @@ impl<'a> Search<'a> {
                 return Some(pts);
             }
             expanded += 1;
+            self.last_exp = expanded;
+            { let p = self.lat.at(n); let (lo, hi) = &mut self.last_box; *lo = v3(lo.x.min(p.x), lo.y.min(p.y), lo.z.min(p.z)); *hi = v3(hi.x.max(p.x), hi.y.max(p.y), hi.z.max(p.z)); if std::env::var("R3ZS").is_ok() { self.last_zs.push((p.z * 100.0).round() as i64); } }
             if expanded > r.max_states {
                 return None;
             }
@@ -867,7 +879,12 @@ struct Goal<'a> {
 impl Goal<'_> {
     fn reached(&self, n: u32, d: u8, q: u8, teeq: u8) -> bool {
         if let Some((t, arrive)) = self.node {
-            return n == t && arrive.is_none_or(|a| a == d) && (arrive.is_some() || q >= 2);
+            // on the port's axis, or turning there off a full leg: the escape is the port's straight
+            return n == t
+                && match arrive {
+                    Some(a) => d == a || (d != NONE && d != (a ^ 1) && q >= 4),
+                    None => q >= 2,
+                };
         }
         match self.joins.get(&n) {
             Some(&axis) => d != NONE && d / 2 != axis && q >= teeq,
@@ -1092,6 +1109,11 @@ pub fn route_tree(
             continue;
         }
         let Some(mut pts) = s.path(e, edir, eacc, &goal, end_of(ti)) else {
+            if std::env::var("R3DBG").is_ok() {
+                let hs: Vec<_> = s.hits(t.at, e, rules.clearance).iter().map(|h| s.ix.obstacles[h.0 as usize].tag).collect();
+                let src_e = match source { Source::Terminal(st) => { let (se, _, _) = escape(st, rules, None); let h2: Vec<_> = s.hits(st.at, se, rules.clearance).iter().map(|h| s.ix.obstacles[h.0 as usize].tag).collect(); format!("src {:?} esc {:?} hits {:?} oth {}", st.at, se, h2, s.others.clear(st.at, se, rules.clearance, None)) }, _ => "lines".into() };
+                eprintln!("R3DBG fail t {:?} e {:?} node {:?} hits {:?} oth {} segs {} joins {} exp {} box {:?} zs {:?} lat_z {:?} | {}", t.at, e, s.lat.node(e).is_some(), hs, s.others.clear(t.at, e, rules.clearance, None), segs.len(), joins.len(), s.last_exp, s.last_box, { let mut z = s.last_zs.clone(); z.sort(); z.dedup(); z }, s.lat.line(2), src_e);
+            }
             tree.failed.push(ti);
             continue;
         };

@@ -56,6 +56,8 @@ pub struct Topo {
     process: bool,
     /// Open air: the rack stands on portals.
     pub outdoor: bool,
+    /// Height of the rack the brief asks for, m.
+    pub rack_m: Option<f64>,
 }
 
 pub(super) fn of(b: &Brief) -> Result<Topo, String> {
@@ -67,6 +69,7 @@ pub(super) fn of(b: &Brief) -> Result<Topo, String> {
         drains: vec![],
         process: b.kind == Kind::ProcessLine,
         outdoor: b.outdoor,
+        rack_m: b.rack_m,
     };
     match b.kind {
         Kind::BoilerHouse => boiler_house(&mut t, b)?,

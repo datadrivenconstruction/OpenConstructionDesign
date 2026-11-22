@@ -77,7 +77,8 @@ pub(super) fn geo(l: &Line, eqs: &[Equip]) -> Geo {
         })
         .fold(0.0, f64::max);
     let tangent = (stack + bend).max(clear + bend);
-    Geo { env, clear, bend, tangent, min_leg: (2.0 * bend).max(tangent) }
+    // the stack sits on the port's own straight; any other leg needs room for its two elbows
+    Geo { env, clear, bend, tangent, min_leg: 2.0 * bend.max(clear) }
 }
 
 /// A straight piece of pipe.
@@ -246,7 +247,7 @@ fn face(eqs: &[Equip], e: End) -> (V3, V3) {
 }
 
 /// Everything every line keeps clear of, and the front zones by unit.
-fn obstacles(t: &Topo, lay: &Lay) -> (Vec<Obstacle>, Vec<(usize, Obstacle)>) {
+fn obstacles(t: &Topo, lay: &Lay, tiers: &[f64]) -> (Vec<Obstacle>, Vec<(usize, Obstacle)>) {
     let mut out = vec![];
     for (i, e) in t.eqs.iter().enumerate() {
         for (lo, hi) in e.body() {
@@ -260,8 +261,28 @@ fn obstacles(t: &Topo, lay: &Lay) -> (Vec<Obstacle>, Vec<(usize, Obstacle)>) {
         (v3(h.x0, h.y0 - WALL, -FAR), v3(h.x1, h.y0, FAR)),
         (v3(h.x0, h.y1, -FAR), v3(h.x1, h.y1 + WALL, FAR)),
     ];
-    for (lo, hi) in walls {
-        out.push(Obstacle::aabb(lo, hi, Pass::Block, -1));
+    if !t.outdoor {
+        for (lo, hi) in walls {
+            out.push(Obstacle::aabb(lo, hi, Pass::Block, -1));
+        }
+    }
+    // the posts and beams of an outdoor rack stand before any pipe
+    if let Some(r) = &lay.rack {
+        let beams = r.beams(tiers);
+        let top = beams.iter().copied().fold(0.0, f64::max);
+        for &x in &r.xs {
+            for y in [r.y0, r.y1] {
+                out.push(Obstacle::aabb(v3(x - STEEL_R, y - STEEL_R, 0.0), v3(x + STEEL_R, y + STEEL_R, top + STEEL_R), Pass::Block, -6));
+            }
+            for &zb in &beams {
+                out.push(Obstacle::aabb(v3(x - STEEL_R, r.y0, zb - STEEL_R), v3(x + STEEL_R, r.y1, zb + STEEL_R), Pass::Block, -6));
+            }
+        }
+        if let (Some(&x0), Some(&x1)) = (r.xs.first(), r.xs.last()) {
+            for y in [r.y0, r.y1] {
+                out.push(Obstacle::aabb(v3(x0, y - STEEL_R, top - STEEL_R), v3(x1, y + STEEL_R, top + STEEL_R), Pass::Block, -6));
+            }
+        }
     }
     for z in lay.zones.iter().filter(|z| z.kind == "walkway") {
         out.push(Obstacle::aabb(z.lo, z.hi, Pass::Block, -2));
@@ -289,7 +310,7 @@ fn obstacles(t: &Topo, lay: &Lay) -> (Vec<Obstacle>, Vec<(usize, Obstacle)>) {
 }
 
 fn route_all(t: &Topo, lay: &Lay, tiers: &[f64]) -> Raw {
-    let (base, fronts) = obstacles(t, lay);
+    let (base, fronts) = obstacles(t, lay, tiers);
     let h = &lay.hall;
     let bounds = (v2(h.x0, h.y0), v2(h.x1, h.y1));
     let geos: Vec<Geo> = t.lines.iter().map(|l| geo(l, &t.eqs)).collect();
@@ -314,11 +335,22 @@ fn route_all(t: &Topo, lay: &Lay, tiers: &[f64]) -> Raw {
             }
         }
         let drain = l.svc == Svc::Dr;
-        let layers = if drain { vec![h.drain_z] } else { tiers.to_vec() };
+        // a pump's suction stays low at its own level: short, level, no pocket over the rack
+        let mut suction: Vec<f64> =
+            ends.iter().filter(|e| t.eqs[e.eq].nozzles[e.nz].spot == Spot::Suction).map(|&e| face(&t.eqs, e).0.z).collect();
+        suction.sort_by(f64::total_cmp);
+        suction.dedup_by(|a, b| (*a - *b).abs() < ON);
+        let layers = if drain {
+            vec![h.drain_z]
+        } else if t.outdoor && !suction.is_empty() {
+            suction
+        } else {
+            tiers.to_vec()
+        };
         let mut rules = Rules::new(g.clear, g.min_leg, layers.clone(), bounds);
         rules.step = rule("plant.route.step");
         rules.tangent = g.tangent;
-        rules.tee_leg = TEE_K * g.tangent;
+        rules.tee_leg = (TEE_K * g.tangent).min(g.min_leg);
         rules.bend_cost = rule("plant.route.bend_cost");
         rules.axes = (vec![], vec![walk_mid]);
         rules.axis_gain = rule("plant.rack.lane_gain");
@@ -547,12 +579,24 @@ fn supports(p: &mut Piping, lay: &Lay) {
     let headroom = rule("plant.access.headroom");
     let tiers = p.tiers.clone();
     let on_tier = |z: f64| tiers.iter().any(|t| (t - z).abs() < ON);
-    let rack = |s: &Seg| !s.vertical() && on_tier(s.a.z) && (s.b - s.a).x.abs() > (s.b - s.a).y.abs() && s.stub.is_none();
+    let frame = lay.rack.as_ref();
+    let within = |y: f64| frame.is_none_or(|r| y > r.y0 + EPS && y < r.y1 - EPS);
+    let rack = |s: &Seg| !s.vertical() && on_tier(s.a.z) && (s.b - s.a).x.abs() > (s.b - s.a).y.abs() && s.stub.is_none() && within(s.a.y);
     let bay = p.segs.iter().filter(|s| rack(s)).map(|s| span(s.dn)).fold(rule("plant.rack.bay"), f64::min);
     p.bay = bay;
     let (x0, x1) = (lay.hall.x0, lay.hall.x1);
-    let n_bays = ((x1 - x0) / bay).floor() as usize;
+    let n_bays = if frame.is_some() { 0 } else { ((x1 - x0) / bay).floor() as usize };
     let segs = p.segs.clone();
+    // outdoors: a portal at every bay of the fixed frame carries the pipes that cross it
+    if let Some(r) = frame {
+        p.bay = r.xs.windows(2).map(|w| w[1] - w[0]).fold(rule("plant.rack.bay"), f64::min);
+        for &x in &r.xs {
+            for s in segs.iter().filter(|s| rack(s) && s.a.x.min(s.b.x) < x - EPS && s.a.x.max(s.b.x) > x + EPS) {
+                p.supports.push(Support { kind: SupportKind::Trapeze, line: s.line, at: v3(x, s.a.y, s.a.z), dn: s.dn, env: s.env });
+            }
+            p.trapezes.push(Trapeze { x, y0: r.y0, y1: r.y1, beams: r.beams(&tiers) });
+        }
+    }
     // trapezes: each bay line, shifted off any riser its rods or beams would hit
     for k in 0..n_bays {
         let base = x0 + bay * (k as f64 + 0.5);
@@ -613,7 +657,7 @@ fn supports(p: &mut Piping, lay: &Lay) {
         let z = s.a.z.max(s.b.z);
         let kind = if z < 0.0 {
             SupportKind::Trench
-        } else if z >= headroom {
+        } else if z >= headroom && frame.is_none() {
             SupportKind::Hanger
         } else {
             SupportKind::Stand

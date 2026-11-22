@@ -16,6 +16,10 @@ use super::route;
 use super::size::{self, ItemKind};
 use super::{Clear, EqKind, Equip, Level, Line, Spot};
 
+/// Concrete under a unit: how far a plinth or pier stands out past the steel it carries, m, and
+/// its most height as a share of the legs (the bottom drain stays clear).
+const PIER_OUT: f64 = 0.1;
+const PIER_K: f64 = 0.6;
 /// Neck of a nozzle beyond the flange radius, and how deep it sits into the shell, m.
 const NECK: f64 = 0.1;
 const EMBED: f64 = 0.02;
@@ -337,9 +341,17 @@ fn vessel(f: &mut F, e: &mut Equip, lines: &[Line]) {
     f.boxes.push((v3(-r, -r, legs), v3(r, r, ztop)));
     let leg = (LEG_K * d).max(LEG_MIN);
     let la = LEG_AT * r;
-    for (sx, sy) in [(-1.0, -1.0), (1.0, -1.0), (1.0, 1.0), (-1.0, 1.0)] {
-        let c = v3(sx * la, sy * la, 0.0);
-        f.block("Leg", c - v3(leg / 2.0, leg / 2.0, 0.0), c + v3(leg / 2.0, leg / 2.0, z0), "Steel", true);
+    if tank {
+        // a flat-bottomed tank sits on a concrete ring plinth
+        f.cyl("Plinth", v3(0.0, 0.0, 0.0), v3(0.0, 0.0, legs), r + PIER_OUT, "Concrete", true);
+    } else {
+        let ph = rule("plant.found.h").min(PIER_K * z0);
+        for (sx, sy) in [(-1.0, -1.0), (1.0, -1.0), (1.0, 1.0), (-1.0, 1.0)] {
+            let c = v3(sx * la, sy * la, 0.0);
+            f.block("Leg", c - v3(leg / 2.0, leg / 2.0, 0.0), c + v3(leg / 2.0, leg / 2.0, z0), "Steel", true);
+            let w = leg / 2.0 + PIER_OUT;
+            f.block("Pier", c - v3(w, w, 0.0), c + v3(w, w, ph), "Concrete", true);
+        }
     }
     let mut keep = 0.0;
     if !tank && d >= MANHOLE_FROM {
@@ -548,6 +560,9 @@ fn exchanger(f: &mut F, e: &mut Equip, lines: &[Line]) {
     for k in [-1.0, 1.0] {
         let x = x0 + lc + l / 2.0 + k * SADDLE_AT * l;
         f.block("Saddle", v3(x - SADDLE_W / 2.0, -SADDLE_Y * r, 0.0), v3(x + SADDLE_W / 2.0, SADDLE_Y * r, zc), "Steel", true);
+        let ph = rule("plant.found.h").min(PIER_K * rule("plant.vessel.legs"));
+        let (wx, wy) = (SADDLE_W / 2.0 + PIER_OUT, SADDLE_Y * r + PIER_OUT);
+        f.block("Pier", v3(x - wx, -wy, 0.0), v3(x + wx, wy, ph), "Concrete", true);
     }
     let y = -slot(r, 0.0);
     for k in 0..e.nozzles.len() {

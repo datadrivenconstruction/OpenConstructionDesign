@@ -366,6 +366,29 @@ fn check_spec(db: &Connection, s: &RunSpec) -> Result<(), Error> {
     Ok(())
 }
 
+/// An edge of a network between its node fittings. A leg too short for the elbows and the
+/// fittings at its ends gives its corner to the next leg; a straight still too short for the
+/// fittings at both ends lets them share it, so a short piece between fittings never fails.
+fn route_fitted(
+    pts: &[V3],
+    radius: &dyn Fn(bool) -> f64,
+    trim: (f64, f64),
+) -> Result<Vec<Piece>, mep::RouteError> {
+    match mep::route(pts, radius, trim) {
+        Err(mep::RouteError::TooShort { .. }) => {}
+        r => return r,
+    }
+    let mut p = pts.to_vec();
+    mep::fit_bends(&mut p, radius, trim);
+    match mep::route(&p, radius, trim) {
+        Err(mep::RouteError::TooShort { .. }) if p.len() == 2 => {}
+        r => return r,
+    }
+    let len = (p[1] - p[0]).len();
+    let k = len / (trim.0 + trim.1).max(1e-12) * (1.0 - 1e-9);
+    mep::route(&p, radius, (trim.0 * k, trim.1 * k))
+}
+
 fn write_run(db: &Connection, s: &RunSpec, id: Option<i64>) -> Result<i64, Error> {
     let (k, w, h) = shape_cols(s.section.shape);
     let pts: Vec<(f64, f64, f64)> = s.pts().into_iter().map(p3).collect();
@@ -1077,7 +1100,7 @@ impl Model {
         }
         for e in &edges {
             let s = &specs[e.spec];
-            let pieces = mep::route(&e.pts, &|u| s.radius(u), (e.trim[0], e.trim[1]))
+            let pieces = route_fitted(&e.pts, &|u| s.radius(u), (e.trim[0], e.trim[1]))
                 .map_err(|x| {
                     let len: f64 = e.pts.windows(2).map(|w| (w[1] - w[0]).len()).sum();
                     let pts: Vec<String> = e
