@@ -11,14 +11,18 @@ fn metric(p: &GProject, k: &str) -> f64 {
     p.metrics.iter().filter(|m| m.0 == k).map(|m| m.1).sum()
 }
 
-/// Air of the terminals each network feeds: the drops that end in a neck below the duct layer.
+/// Air of the terminals each network feeds: the drops that end in a neck below the duct layer,
+/// and the cooker hood ducts that rise from their outlet into a branch.
 fn terminal_air(p: &GProject) -> Vec<[f64; 2]> {
     let n = p.storeys.len();
     let nets = p.hvac.ducts.iter().map(|d| d.net as usize + 1).max().unwrap_or(0);
     let mut q = vec![[0.0; 2]; nets];
-    for d in p.hvac.ducts.iter().filter(|d| d.storey < n && d.bend.is_some()) {
+    for d in p.hvac.ducts.iter().filter(|d| d.storey < n && d.points.len() >= 2) {
         let e = d.points.len();
-        if e >= 2 && d.points[e - 1].2 < d.points[e - 2].2 - 1e-6 {
+        let drop = d.bend.is_some() && d.points[e - 1].2 < d.points[e - 2].2 - 1e-6;
+        let vertical = d.points.windows(2).all(|w| (w[0].0 - w[1].0).abs() < 1e-6 && (w[0].1 - w[1].1).abs() < 1e-6);
+        let hood = d.bend.is_none() && d.sys == AirSys::Extract && !vertical && d.points[1].2 > d.points[0].2 + 1e-6;
+        if drop || hood {
             q[d.net as usize][if d.sys == AirSys::Supply { 0 } else { 1 }] += d.flow;
         }
     }

@@ -180,16 +180,12 @@ fn velocities_friction_and_flows_stay_within_the_rules() {
 }
 
 #[test]
-#[ignore = "a school extract main steps from 300x200 up to 315 round"]
 fn sections_never_grow_away_from_the_unit() {
     for (name, _, _, m) in built() {
+        // along every run of every class, tee branches and the shaft exits included
         for r in &m.air.runs {
             let Some(q) = r.parent else { continue };
             let pr = &m.air.runs[q];
-            // along one main, one branch or one riser; a takeoff starts its own size
-            if pr.class != r.class {
-                continue;
-            }
             assert!(de(r.size) <= de(pr.size) + 1e-6, "{name}: {:?} {} run {} {:?} after {} {:?}", r.sys, r.class.name(), r.duct, r.size, pr.class.name(), pr.size);
         }
     }
@@ -230,4 +226,60 @@ fn unbalanced(m: &Mech) -> Vec<(usize, usize, f64)> {
         }
     }
     by.into_iter().filter(|(_, q)| q.abs() > 1.0).map(|((k, r), q)| (k, r, q.abs())).collect()
+}
+
+#[test]
+fn housing_takes_a_heat_recovery_unit_in_every_flat_on_request() {
+    let v = json!({"typology": "apartment_section", "floors": 4, "floor_height": 3.0, "services": true, "lift": true,
+        "footprint": {"width": 34.0, "depth": 12.0}, "roof": {"kind": "flat"},
+        "rules": {"mep.hvac.system": "auto", "services.hvac.housing_units": "per_flat"}});
+    let s = parse_spec(&v).unwrap();
+    let p = build_project(&s).unwrap();
+    let mut flats: Vec<(usize, u32)> = p.storeys.iter().enumerate().flat_map(|(k, st)| st.layout.rooms.iter().filter_map(move |r| r.apartment.map(|a| (k, a)))).collect();
+    flats.sort_unstable();
+    flats.dedup();
+    assert!(!flats.is_empty());
+    assert_eq!(p.hvac.plant.len(), flats.len(), "one unit a flat");
+    let metric = |k: &str| p.metrics.iter().find(|m| m.0 == k).map_or(-1.0, |m| m.1);
+    assert_eq!(metric("hvac_flat_no_facade"), 0.0, "every unit reaches its facade");
+    assert_eq!(metric("hvac_unserved"), 0.0);
+    let roof = p.roof.elevation;
+    let n = p.storeys.len();
+    for (i, u) in p.hvac.plant.iter().enumerate() {
+        // inside the storage room or hall of its flat, under that storey's slab
+        let z = roof + u.z;
+        let k = p.storeys.iter().position(|st| z > st.elevation && z < st.elevation + st.height).expect("a unit inside a storey");
+        let st = &p.storeys[k];
+        let room = st.layout.rooms.iter().zip(&st.rooms).find(|(r, _)| r.apartment.is_some() && inside(&r.polygon, u.at));
+        assert!(room.is_some_and(|(_, pr)| matches!(pr.kind, ddc_gen::project::RoomKind::Storage | ddc_gen::project::RoomKind::Hall)), "unit {i} is not in a storage room or hall");
+        // its own supply and extract, in balance, on that storey only
+        let net = p.hvac.links.iter().find(|l| l.storey == n && l.fixture == i).expect("a linked unit").net;
+        let q = [ddc_gen::project::AirSys::Supply, ddc_gen::project::AirSys::Extract].map(|s| p.hvac.links.iter().filter(|l| l.storey == n && l.fixture == i && l.sys == s).map(|_| p.hvac.ducts.iter().filter(|d| d.net == net && d.sys == s).map(|d| d.flow).fold(0.0, f64::max)).sum::<f64>());
+        assert!((q[0] - q[1]).abs() <= 0.1 * q[0].max(q[1]), "unit {i}: supply {} extract {}", q[0], q[1]);
+        assert!(p.hvac.ducts.iter().filter(|d| d.net == net).all(|d| d.storey == k), "unit {i}: a duct off its storey");
+    }
+    // the outdoor and exhaust ducts end on an outside wall
+    let oa = p.hvac.nets.len() as u8;
+    let ends: Vec<_> = p.hvac.ducts.iter().filter(|d| d.net == oa).collect();
+    assert_eq!(ends.len(), 2 * flats.len());
+    for d in ends {
+        let e = *d.points.last().unwrap();
+        let on = p.storeys[d.storey].layout.walls.iter().filter(|w| w.role == ddc_gen::WallRole::Exterior).any(|w| seg_dist(e, (w.a.0, w.a.1, e.2), (w.b.0, w.b.1, e.2)) < 0.05);
+        assert!(on, "a facade duct ends off the outside wall at {e:?}");
+    }
+    let m = mech::design(&s, &p).expect("the rules ask for the design");
+    let bad: Vec<_> = m.air.faults.iter().filter(|f| f.contains("carries") || f.contains("not reached") || f.contains("not connected") || f.contains("cap")).collect();
+    assert!(bad.is_empty(), "{} faults, first {:?}", bad.len(), bad.first());
+    assert!(m.air.terms.iter().all(|t| t.run.is_some()), "a terminal off the network");
+}
+
+fn inside(ring: &[(f64, f64)], q: (f64, f64)) -> bool {
+    let mut c = false;
+    for i in 0..ring.len() {
+        let (a, b) = (ring[i], ring[(i + 1) % ring.len()]);
+        if (a.1 > q.1) != (b.1 > q.1) && q.0 < a.0 + (q.1 - a.1) / (b.1 - a.1) * (b.0 - a.0) {
+            c = !c;
+        }
+    }
+    c
 }
