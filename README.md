@@ -12,9 +12,7 @@
 <p align="center">
   <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/releases"><img src="https://img.shields.io/github/v/release/datadrivenconstruction/OpenConstructionDesign?include_prereleases&label=release" alt="Release"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/licence-AGPL--3.0-blue.svg" alt="Licence: AGPL-3.0"></a>
-  <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/actions/workflows/ci.yml"><img src="https://github.com/datadrivenconstruction/OpenConstructionDesign/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <img src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20CLI-lightgrey.svg" alt="Platform: Windows, Linux CLI">
-  <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/releases"><img src="https://img.shields.io/github/downloads/datadrivenconstruction/OpenConstructionDesign/total?label=downloads" alt="Downloads"></a>
 </p>
 
 <p align="center">
