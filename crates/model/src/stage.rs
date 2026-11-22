@@ -805,7 +805,7 @@ fn clean_stale_in(dir: &Path, started: SystemTime, now: SystemTime, own_pid: u32
             if !meta.is_file() {
                 continue;
             }
-            let Ok(mtime) = meta.modified() else { continue };
+            let Some(mtime) = crate::file_time(&meta) else { continue };
             if mtime >= started {
                 continue;
             }

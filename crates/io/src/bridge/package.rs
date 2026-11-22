@@ -375,10 +375,16 @@ fn create_private_dir(p: &Path) -> std::io::Result<()> {
     Ok(())
 }
 
-#[cfg(not(windows))]
+#[cfg(unix)]
 fn create_private_dir(p: &Path) -> std::io::Result<()> {
     use std::os::unix::fs::DirBuilderExt;
     std::fs::DirBuilder::new().mode(0o700).create(p)
+}
+
+/// The browser build has no file system to stage bridges in.
+#[cfg(not(any(windows, unix)))]
+fn create_private_dir(p: &Path) -> std::io::Result<()> {
+    std::fs::create_dir(p)
 }
 
 /// Copies the listed files into a fresh private folder, locks and hashes the copies.

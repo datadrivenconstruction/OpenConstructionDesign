@@ -638,6 +638,18 @@ pub struct Model {
     pub(crate) serial: u64,
 }
 
+/// A file's modification time as a `web_time` value: the same type as std's on desktop, a
+/// different one on wasm32, where `Metadata::modified` still returns std's.
+pub fn file_time(m: &std::fs::Metadata) -> Option<web_time::SystemTime> {
+    #[cfg(not(target_arch = "wasm32"))]
+    return m.modified().ok();
+    #[cfg(target_arch = "wasm32")]
+    {
+        use web_time::web::SystemTimeExt;
+        m.modified().ok().map(web_time::SystemTime::from_std)
+    }
+}
+
 impl Model {
     pub fn open(path: &str) -> Result<Self, Error> {
         Self::open_with(path, true)
