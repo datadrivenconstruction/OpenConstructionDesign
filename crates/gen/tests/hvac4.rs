@@ -43,6 +43,8 @@ fn check(name: &str, v: J, strict: bool) -> GProject {
     }
     let placed = air.iter().fold([0.0; 2], |a, q| [a[0] + q[0], a[1] + q[1]]);
     assert!((p.hvac.flow.0 - placed[0]).abs() < 1.0 && (p.hvac.flow.1 - placed[1]).abs() < 1.0, "{name}: flow {:?} placed {placed:?}", p.hvac.flow);
+    let reported = [metric(&p, "hvac_supply_m3h"), metric(&p, "hvac_extract_m3h")];
+    assert!((reported[0] - placed[0]).abs() < 1.0 && (reported[1] - placed[1]).abs() < 1.0, "{name}: metrics {reported:?} placed {placed:?}");
     p
 }
 

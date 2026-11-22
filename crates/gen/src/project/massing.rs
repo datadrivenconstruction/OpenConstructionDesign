@@ -476,6 +476,10 @@ fn wings(spec: &ProjectSpec, base: &ProjectSpec) -> Result<GProject, GenError> {
     for (i, part) in parts.iter().enumerate() {
         add_wing_hvac(&mut p.hvac, &bar.hvac, part.quarter, part.at, &offs[i], n);
     }
+    // each wing repeats the bar's air system: its counts and flows add up
+    for m in p.metrics.iter_mut().filter(|m| m.0.starts_with("hvac_")) {
+        m.1 *= parts.len() as f64;
+    }
     if p.hvac.ducts.len() > slots::DUCTS_MAX as usize {
         return Err(infeasible(format!(
             "{} air ducts; at most {}: split the building",
@@ -547,6 +551,19 @@ fn add_wing_hvac(into: &mut GHvac, h: &GHvac, quarter: u8, at: P, off: &[usize],
     };
     let rot = f64::from(q) * std::f64::consts::FRAC_PI_2;
     let plant0 = into.plant.len();
+    // each wing is its own set of networks, numbered on from the wings before it
+    let per = 1 + h.nets.len();
+    let net0 = if into.plant.is_empty() { 0 } else { (into.nets.len() + 1) as u8 };
+    if net0 > 0 {
+        for k in 0..per {
+            let no = usize::from(net0) + k + 1;
+            let (a, b) = if k == 0 { &h.names } else { &h.nets[k - 1] };
+            into.nets.push((renumber(a, no), renumber(b, no)));
+        }
+    } else {
+        into.names.clone_from(&h.names);
+        into.nets.clone_from(&h.nets);
+    }
     into.plant.extend(h.plant.iter().map(|f| {
         let mut f = f.clone();
         f.at = turn(f.at.0, f.at.1);
@@ -559,15 +576,21 @@ fn add_wing_hvac(into: &mut GHvac, h: &GHvac, quarter: u8, at: P, off: &[usize],
             let (x, y) = turn(p.0, p.1);
             *p = (x, y, p.2);
         });
+        d.net += net0;
         d
     }));
     into.links.extend(h.links.iter().map(|l| {
         let mut l = l.clone();
         l.fixture += if l.storey >= n { plant0 } else { off[l.storey] };
+        l.net += net0;
         l
     }));
-    into.names.clone_from(&h.names);
     into.flow = (into.flow.0 + h.flow.0, into.flow.1 + h.flow.1);
+}
+
+/// A system name with its trailing number replaced by `no`.
+fn renumber(name: &str, no: usize) -> String {
+    format!("{}{no}", name.trim_end_matches(|c: char| c.is_ascii_digit()))
 }
 
 /// Whether room `ri` has a window on its outline.
