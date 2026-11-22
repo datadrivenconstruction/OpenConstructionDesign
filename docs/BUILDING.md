@@ -20,7 +20,7 @@ No system libraries are needed for SQLite or Lua: both are built from bundled so
 | Windows x86_64 | Supported; primary development and test platform. |
 | macOS | Platform code paths exist (graphics backend selection, key storage); not regularly built or tested. |
 | Linux | Library crates and the headless `ddc` CLI. The editor's window layer is configured without a Linux windowing backend (`x11`/`wayland`), so the GUI is not supported on Linux yet. API keys are kept in memory only (no OS key store integration). |
-| Browser (wasm32) | Not available in this repository. The model, geometry and solver crates avoid APIs that do not exist on wasm32. |
+| Browser (wasm32) | Viewer (`crates/web`): the model, geometry and io crates in WebAssembly with a WebGL2 view. Opens `.ddc` and IFC, 3D and level plans, properties, model checks; no editing yet. The full editor does not build for wasm32. |
 
 The renderer uses wgpu: Direct3D 12, Vulkan or OpenGL on Windows, Metal on macOS. `--safe-graphics`
 starts the editor with conservative graphics settings.
@@ -48,6 +48,21 @@ Binaries are written to `target/release/` (`ddc-app`, `ddc`). Settings, scripts 
 installed bridges live in the user configuration directory (`%APPDATA%\ddc-editor` on
 Windows, `$XDG_CONFIG_HOME/ddc-editor` or `~/.config/ddc-editor` elsewhere). `DDC_BRIDGE_DIR`
 overrides where bridge packages are looked up.
+
+## Browser viewer
+
+```sh
+rustup target add wasm32-unknown-unknown
+# SQLite is C: give a C compiler for wasm32 (clang + llvm-ar, or a zig cc wrapper)
+export CC_wasm32_unknown_unknown=clang AR_wasm32_unknown_unknown=llvm-ar
+# wasm-bindgen CLI of the version in Cargo.lock; wasm-opt (binaryen) is optional
+WASM_BINDGEN=wasm-bindgen WASM_OPT=wasm-opt sh tools/web_build.sh dist/web path/to/sample.ddc
+```
+
+`dist/web` is a static folder (`index.html`, `ddc_web.js`, `ddc_web_bg.wasm`) for any static host.
+`index.html?project=<url>` opens a project from a URL; the Open button and drag and drop open a
+local file, which stays in the browser. `python tools/web_smoke.py dist/web samples/<file>` runs a
+browser test with Microsoft Edge (Playwright).
 
 ## Tests
 

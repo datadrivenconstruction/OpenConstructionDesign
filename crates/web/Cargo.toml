@@ -1,0 +1,31 @@
+[package]
+name = "ddc-web"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Browser viewer of the free, open-source CAD-BIM editor: the model, geometry and io crates in WebAssembly (AGPL-3.0)"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+ddc-model = { path = "../model" }
+ddc-geom = { path = "../geom" }
+ddc-io = { path = "../io" }
+web-time.workspace = true
+rusqlite.workspace = true
+serde_json.workspace = true
+egui = { version = "0.32", default-features = false, features = ["default_fonts"] }
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+eframe = { version = "0.32", default-features = false, features = ["glow", "default_fonts"] }
+wasm-bindgen = "0.2.100"
+wasm-bindgen-futures = "0.4"
+web-sys = { version = "0.3", features = ["Window", "Document", "HtmlCanvasElement", "Location", "UrlSearchParams", "console"] }
+log = "0.4"
+
+[build-dependencies]
+serde_json.workspace = true

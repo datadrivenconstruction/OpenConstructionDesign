@@ -1,6 +1,6 @@
 [workspace]
 resolver = "2"
-members = ["crates/bridge-proto", "crates/model", "crates/geom", "crates/solver", "crates/io", "crates/render", "crates/app", "crates/ui", "crates/ai", "crates/ops", "crates/gen", "crates/fem", "crates/calc", "crates/cli", "crates/script", "crates/link", "tools/bigfile_bench"]
+members = ["crates/bridge-proto", "crates/model", "crates/geom", "crates/solver", "crates/io", "crates/render", "crates/app", "crates/ui", "crates/ai", "crates/ops", "crates/gen", "crates/fem", "crates/calc", "crates/cli", "crates/script", "crates/link", "crates/web", "tools/bigfile_bench"]
 
 [workspace.package]
 version = "0.9.0"
@@ -31,3 +31,10 @@ keyring = { version = "3", default-features = false, features = ["windows-native
 inherits = "release"
 overflow-checks = true
 debug-assertions = true
+
+# Browser build (tools/web_build.sh): size over speed, no LTO so it builds in modest memory.
+[profile.web]
+inherits = "release"
+opt-level = "s"
+debug = false
+strip = true
