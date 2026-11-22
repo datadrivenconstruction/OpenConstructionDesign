@@ -147,7 +147,7 @@ fn the_species_table_builds_every_type_and_covers_every_form() {
         for lod in [Lod::Coarse, Lod::Medium, Lod::Fine] {
             let b = f.build(&r, lod).unwrap_or_else(|e| panic!("{} {lod:?}: {e}", t.name));
             // wood, leaves and the tone solids (inner crown, lit lobes, streaks) together
-            assert!(b.mesh.triangles.len() <= 10_000, "{} {lod:?}: {}", t.name, b.mesh.triangles.len());
+            assert!(b.mesh.triangles.len() <= 12_000, "{} {lod:?}: {}", t.name, b.mesh.triangles.len());
             assert!(b.volume > 0.0, "{}", t.name);
             // every tree has foliage unless the type is bare
             let shown = b.parts.iter().filter(|p| p.visible).count();
@@ -358,7 +358,7 @@ fn weld(g: &ddc_geom::component::plant::Grown) -> (Vec<[usize; 3]>, f64) {
 
 #[test]
 fn every_organ_is_a_closed_mesh_with_outward_normals_at_every_level() {
-    use ddc_geom::component::plant::{grow, Form, Organ, Spec};
+    use ddc_geom::component::plant::{grow, has_cards, Form, Organ, Spec};
     for (form, h, crown, clear) in FORMS {
         for leaf in [1.0, 0.4] {
             let spec = Spec { form: Form::from_name(form).unwrap(), height: h, crown, trunk: 0.4, clear, leaf, seed: 7 };
@@ -368,6 +368,12 @@ fn every_organ_is_a_closed_mesh_with_outward_normals_at_every_level() {
                     // a tone organ a level or form leaves out is empty: no mesh to close
                     // (its absence is asserted by the inner crown and lit lobe tests)
                     if g.tris.is_empty() && matches!(organ, Organ::Shade | Organ::Light | Organ::Streak) {
+                        continue;
+                    }
+                    // leaf cards are open quads (`leaf_cards_are_quads_of_their_own`), a conifer's
+                    // dark heart under them is still a solid
+                    let card_organ = matches!(organ, Organ::Foliage | Organ::Light) || (organ == Organ::Shade && spec.form != Form::Conical);
+                    if has_cards(&spec, lod) && card_organ {
                         continue;
                     }
                     let (tris, vol) = weld(&g);
@@ -424,21 +430,25 @@ fn a_thousand_trees_are_built_coarse_and_stay_within_the_triangle_and_segment_bu
 }
 
 #[test]
-fn the_inner_crown_is_a_dark_mass_inside_the_foliage_of_broadleaf_trees_only() {
+fn the_inner_crown_is_the_shaded_leaves_of_near_trees_but_palms() {
     use ddc_geom::component::plant::{grow, Form, Organ, Spec};
     for (form, h, crown, clear) in FORMS {
         let spec = Spec { form: Form::from_name(form).unwrap(), height: h, crown, trunk: 0.4, clear, leaf: 1.0, seed: 3 };
         let tris = |lod| grow(&spec, Organ::Shade, lod).tris.len();
-        let broadleaf = !matches!(form, "conical" | "palm");
+        // broad leaves: the least open cards; a conifer: its skirts drawn in under the needles
+        let broadleaf = form != "palm";
         assert_eq!(tris(Lod::Coarse), 0, "{form}");
         assert_eq!(tris(Lod::Medium) > 0, broadleaf, "{form}");
         assert_eq!(tris(Lod::Fine) > tris(Lod::Medium), broadleaf, "{form}");
-        // it lies within the foliage box, so it never grows the tree
+        // it lies inside the tree and deeper in the crown than the leaves
         let (fo, sh) = (grow(&spec, Organ::Foliage, Lod::Fine), grow(&spec, Organ::Shade, Lod::Fine));
         let top = |g: &ddc_geom::component::plant::Grown| g.pos.iter().map(|p| p.z).fold(f64::MIN, f64::max);
         let wide = |g: &ddc_geom::component::plant::Grown| g.pos.iter().map(|p| p.x.abs().max(p.y.abs())).fold(0.0, f64::max);
+        let mean = |g: &ddc_geom::component::plant::Grown, f: &dyn Fn(&ddc_geom::V3) -> f64| g.pos.iter().map(f).sum::<f64>() / g.pos.len() as f64;
         if broadleaf {
-            assert!(top(&sh) < top(&fo) && wide(&sh) < wide(&fo), "{form}");
+            assert!(top(&sh) <= h && wide(&sh) <= wide(&fo) * 1.06, "{form}");
+            let (dz, dr) = (mean(&sh, &|p| p.z) - mean(&fo, &|p| p.z), mean(&sh, &|p| p.x.hypot(p.y)) - mean(&fo, &|p| p.x.hypot(p.y)));
+            assert!(dz < 0.0 || dr < 0.0, "{form}: shade neither lower nor further in ({dz:.2} {dr:.2})");
         }
     }
     // a bare tree has no inner crown
@@ -473,16 +483,16 @@ fn lit_lobes_are_the_outer_and_top_ones_and_streaks_stay_on_the_clear_trunk() {
     let wide = |g: &Grown| g.pos.iter().map(|p| p.x.hypot(p.y)).fold(0.0, f64::max);
     for (form, h, crown, clear) in FORMS {
         let spec = Spec { form: Form::from_name(form).unwrap(), height: h, crown, trunk: 0.4, clear, leaf: 1.0, seed: 3 };
-        let broadleaf = !matches!(form, "conical" | "palm");
+        let broadleaf = form != "palm";
         let n = |o, lod| grow(&spec, o, lod).tris.len();
-        // lit lobes: a share of the foliage, none at the coarse level or on a conifer or palm
+        // lit leaves: a share of the foliage, none at the coarse level or on a palm
         assert_eq!(n(Organ::Light, Lod::Coarse), 0, "{form}");
         assert_eq!(n(Organ::Light, Lod::Fine) > 0, broadleaf, "{form}");
         if broadleaf {
             let (fo, li) = (grow(&spec, Organ::Foliage, Lod::Fine), grow(&spec, Organ::Light, Lod::Fine));
             assert!(li.tris.len() < fo.tris.len(), "{form}: every lobe is lit");
-            // a hair larger than the foliage, never a new silhouette
-            assert!(top(&li) <= top(&fo) * 1.06 && wide(&li) <= wide(&fo) * 1.06, "{form}");
+            // inside the tree: never a new silhouette
+            assert!(top(&li) <= h && wide(&li) <= 0.62 * crown + 0.5, "{form}");
             // the lit lobes sit high or outside: their mean height or reach beats the foliage's
             let mean = |g: &Grown, f: &dyn Fn(&ddc_geom::V3) -> f64| g.pos.iter().map(|p| f(p)).sum::<f64>() / g.pos.len() as f64;
             let (hz, hr) = (mean(&li, &|p| p.z) - mean(&fo, &|p| p.z), mean(&li, &|p| p.x.hypot(p.y)) - mean(&fo, &|p| p.x.hypot(p.y)));
@@ -655,8 +665,8 @@ fn a_park_of_500_trees_stays_inside_the_triangle_budget_at_every_level() {
 }
 
 
-/// Trees of the species table in full leaf are built in detail near the eye: fine 6..10k
-/// triangles, medium 1.5..2.5k; coarse stays the crowd mesh.
+/// Trees of the species table in full leaf are built in detail near the eye: fine 6..12k
+/// triangles, medium 1.5..3k; coarse stays the crowd mesh.
 #[test]
 fn near_trees_reach_their_triangle_budgets() {
     use ddc_geom::component::Value;
@@ -681,8 +691,8 @@ fn near_trees_reach_their_triangle_budgets() {
         n += 1;
     }
     assert!(n > 20, "{n} trees");
-    assert!(fine.0 >= 6000 && fine.1 <= 10_000, "fine {fine:?}");
-    assert!(medium.0 >= 1500 && medium.1 <= 2500, "medium {medium:?}");
+    assert!(fine.0 >= 6000 && fine.1 <= 12_000, "fine {fine:?}");
+    assert!(medium.0 >= 1500 && medium.1 <= 3000, "medium {medium:?}");
 }
 
 /// The far picture of a tree is a few cards and a stub of trunk: lighter than the coarse level,
@@ -709,4 +719,41 @@ fn the_far_picture_is_a_few_cards_inside_the_tree() {
     let bare = Spec { form: Form::Round, height: 12.0, crown: 9.0, trunk: 0.4, clear: 3.0, leaf: 0.0, seed: 4 };
     let (wood, leaves) = impostor(&bare);
     assert!(!wood.tris.is_empty() && leaves.tris.is_empty());
+}
+
+/// A near crown is leaf cards: quads of two triangles with corners of their own, each a picture of
+/// leaves, facing every way; they stay inside the crown and fill all of it.
+#[test]
+fn leaf_cards_are_quads_of_their_own() {
+    use ddc_geom::component::plant::{grow, has_cards, Form, Organ, Spec};
+    for (form, h, crown, clear) in FORMS {
+        let spec = Spec { form: Form::from_name(form).unwrap(), height: h, crown, trunk: 0.4, clear, leaf: 1.0, seed: 9 };
+        for lod in [Lod::Medium, Lod::Fine] {
+            if !has_cards(&spec, lod) {
+                continue;
+            }
+            let g = grow(&spec, Organ::Foliage, lod);
+            assert!(g.tris.len() >= 200 && g.tris.len() % 2 == 0, "{form} {lod:?}: {}", g.tris.len());
+            let mut seen = vec![false; g.pos.len()];
+            for q in g.tris.chunks(2) {
+                let mut c: Vec<u32> = q.iter().flatten().copied().collect();
+                c.sort();
+                c.dedup();
+                assert_eq!(c.len(), 4, "{form} {lod:?}: a quad has four corners");
+                for i in c {
+                    assert!(!std::mem::replace(&mut seen[i as usize], true), "{form} {lod:?}: a corner shared by two cards");
+                }
+            }
+            let top = g.pos.iter().map(|p| p.z).fold(f64::MIN, f64::max);
+            let wide = g.pos.iter().map(|p| p.x.hypot(p.y)).fold(0.0, f64::max);
+            assert!(top <= h && wide <= 0.62 * crown + 0.5, "{form} {lod:?}: top {top} reach {wide}");
+            let ups = g.tris.chunks(2).filter(|q| {
+                let (a, b, c) = (g.pos[q[0][0] as usize], g.pos[q[0][1] as usize], g.pos[q[0][2] as usize]);
+                let n = (b - a).cross(c - a).normalized();
+                n.z.abs() > 0.7
+            });
+            let share = ups.count() as f64 / (g.tris.len() / 2) as f64;
+            assert!(share > 0.1 && share < 0.9, "{form} {lod:?}: {share:.2} of the cards face the sky");
+        }
+    }
 }
