@@ -1875,7 +1875,7 @@ fn sync_services(
         build.links.push((c, l.connector.to_string(), SysRef::New(0)));
     }
     let standard = cx.ed.model.elec_standard()?;
-    for c in &sv.circuits {
+    for (ci, c) in sv.circuits.iter().enumerate() {
         let kind = if matches!(c.use_, CircuitUse::Lighting | CircuitUse::Emergency) {
             CircuitKind::Lighting
         } else {
@@ -1915,6 +1915,12 @@ fn sync_services(
             let board = sv.boards.iter().find(|b| b.at == c.board);
             if let Some(r) = board.and_then(|b| b.rcds.iter().find(|r| r.number == n)) {
                 spec.rcd = r.label();
+            }
+        }
+        for t in sv.traces.iter().filter(|t| t.circuit == ci) {
+            if let Some(&level) = levels.get(t.storey) {
+                let points = t.points.iter().map(|q| (q.0, q.1, base + q.2)).collect();
+                spec.trace.push(ddc_model::CableTrace { level, points });
             }
         }
         build.circuits.push((Some(SysRef::New(0)), spec));

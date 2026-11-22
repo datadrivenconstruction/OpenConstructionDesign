@@ -24,6 +24,8 @@ pub(super) struct MepOut {
     /// Connected device ports waiting for their component's level.
     pub devices: Vec<DevicePort>,
     pub comp_ports: BTreeMap<(i64, String), u32>,
+    /// Exported cable pieces by circuit, filled by `cables`.
+    pub cables: BTreeMap<i64, Vec<u32>>,
 }
 
 /// A connected component port: a stored link or a port touching a network node.
@@ -413,6 +415,54 @@ pub(super) fn runs(
     Ok(())
 }
 
+/// Cable paths of the circuits on a level as IfcCableSegment, apart from the carrier network:
+/// no ports, grouped with their circuit; `DDC_Cable` keeps the axis for the way back.
+pub(super) fn cables(
+    c: &mut Ctx,
+    model: &Model,
+    level: i64,
+    elev: f64,
+    g: &Geo,
+    st: &mut MepOut,
+    elems: &mut Vec<u32>,
+) -> Result<(), String> {
+    let e = |x: ddc_model::Error| x.to_string();
+    let pieces = model.circuit_cables(Some(level)).map_err(e)?;
+    if pieces.is_empty() {
+        return Ok(());
+    }
+    let o = c.point3(0.0, 0.0, 0.0);
+    let ax = c.axis3(o, None);
+    let pl = c.placement(Some(g.storey_pl), ax);
+    for (k, (circuit, t)) in pieces.iter().enumerate() {
+        let key = *circuit * 1_000 + k as i64;
+        let pds = body(c, g, &ddc_model::cable_mesh(&t.points), elev);
+        let name = format!("{circuit}:{k}");
+        let ent = c.rooted(
+            "IFCCABLESEGMENT",
+            "cable",
+            key,
+            &name,
+            &[s(NONE), r(pl), r(pds), s(NONE), s(".CABLESEGMENT.")],
+        );
+        let guid = c.g.get("circuit", *circuit).trim_matches('\'').to_string();
+        pset(
+            c,
+            "cable-pset",
+            key,
+            "DDC_Cable",
+            ent,
+            vec![
+                ("CircuitGuid", format!("IFCLABEL({})", text(&guid))),
+                ("Points", format!("IFCTEXT({})", text(&points_text(&t.points)))),
+            ],
+        );
+        st.cables.entry(*circuit).or_default().push(ent);
+        elems.push(ent);
+    }
+    Ok(())
+}
+
 /// Systems as groups and port connections at shared run ends.
 pub(super) fn finish(
     c: &mut Ctx,
@@ -512,6 +562,7 @@ pub(super) fn circuits(
                 members.push(m);
             }
         }
+        members.extend(st.cables.get(&circ.id).into_iter().flatten().copied());
         c.rel(
             "IFCRELASSIGNSTOGROUP",
             "circ-group",

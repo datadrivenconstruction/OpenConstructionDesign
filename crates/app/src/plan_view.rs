@@ -63,6 +63,8 @@ pub struct PlanView {
     body_mesh: Option<(u64, Arc<egui::Mesh>)>,
     /// Off: every layer is painted shape by shape (reference for the cache tests).
     bake: bool,
+    /// Circuit wiring of the level (`wire_plan`).
+    wires: crate::wire_plan::WireCache,
 }
 
 /// Paints the cached mesh on a key hit and says whether the layer must be painted (`run`);
@@ -123,6 +125,7 @@ impl Default for PlanView {
             cull: Default::default(),
             wall_mesh: None,
             slab_mesh: None,
+            wires: Default::default(),
             body_mesh: None,
             bake: true,
         }
@@ -1381,6 +1384,8 @@ impl PlanView {
         // phase halftone: over elements, under handles, the draft and tools
         crate::phase_ui::paint_plan(&painter, ed, &self.b.vis.phase, &to_s, t);
         crate::range_layer::paint_plan(&painter, self.b.vis.range.as_deref(), &to_s, t);
+        let wires = self.wires.get(ed);
+        crate::wire_plan::paint_plan(&painter, &wires, &self.b.vis.gfx.paint.hidden_cats, &to_s, t);
         crate::wp_views::paint_plan(&painter, ed, rect, &to_s, &to_w, t);
         // order: layer elements, then labels, handles and the draft, so a label is never crossed by anything
         crate::tools::paint_layer(&painter, ed, t, &to_s);

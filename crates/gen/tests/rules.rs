@@ -183,7 +183,6 @@ const EXCEPTIONS: &[(&str, &str, &str)] = &[
     ("elec.rs", "5e-3", "float tolerance"),
     ("elec.rs", "5", "circuit code table index"),
     ("elec.rs", "100.0", "wall top above any storey, const WALL_TOP"),
-    ("elec.rs", "1000000", "circuit key stride, const KEY_STRIDE"),
     ("hvac.rs", "1e-6", "float tolerance"),
     ("hvac.rs", "12", "length of MOVABLE"),
     ("hvac.rs", "6", "length of REFUSALS"),

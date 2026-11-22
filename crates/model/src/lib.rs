@@ -413,7 +413,7 @@ pub use mep::{auto_size, preview_rules, CableSized, Feeder, SingleLine};
 pub use mep::{take_follow_problems, FollowGhost};
 pub use mep::{run_axis_length, NewSize as MepNewSize};
 pub use mep::{
-    Built as MepBuilt, Circuit, CircuitDevice, CircuitIssue, CircuitKind, CircuitReport,
+    cable_mesh, wire_bow, Built as MepBuilt, CABLE_DRAWN_R, CableTrace, Circuit, CircuitDevice, CircuitWire, CircuitIssue, CircuitKind, CircuitReport,
     CircuitSpec, MepBuild, NetReq, PanelSchedule, Planned as MepPlanned, RouteFrom, RouteMetrics,
     SysRef, VARIANTS as ROUTE_VARIANTS,
 };

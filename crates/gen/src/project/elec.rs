@@ -78,9 +78,6 @@ fn light_l() -> (&'static str, f64, f64, f64) {
 }
 /// Top of the wall stretch checked for openings: above any storey, so the whole height.
 const WALL_TOP: f64 = 100.0;
-/// Appliance circuit keys: fixture index plus storey times this, unique while a storey has
-/// fewer fixtures.
-const KEY_STRIDE: usize = 1_000_000;
 /// Mains voltage, V.
 fn volts() -> f64 {
     rule("services.elec.voltage")
@@ -821,6 +818,8 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
     // per storey, per room: board key and devices (storey, fixture, connector, use, load, room)
     let mut served: Vec<super::circuits::Served> = vec![];
     let mut unit_boards: HashMap<(usize, u32), (usize, usize)> = HashMap::new();
+    // sub-boards of a floor that reaches too far: (storey, room) to the board that feeds it
+    let mut zone_boards: HashMap<(usize, usize), (usize, usize)> = HashMap::new();
     let n_fx: Vec<usize> = p.storeys.iter().map(|s| s.layout.fixtures.len()).collect();
     // the riser stands this far along the spine from the board, m; never closer than the tee the
     // riser makes on an upper floor and the conduit bending down into the board
@@ -1065,6 +1064,73 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                 }
             }
         }
+        // a sub-board where a room lies beyond the reach of every board on its way to the floor
+        // board (plan distance, board to room centre); it hangs in the nearest circulation room
+        // on that way, at the spot nearest the far room, and each room takes the nearest board
+        let mut zone_of: Vec<Option<usize>> = vec![None; rs.len()];
+        let mut zone_host = vec![false; rs.len()];
+        let mut hosted: HashMap<usize, (usize, usize)> = HashMap::new();
+        if spec.services.boards == Boards::Unit && !residential(spec.typology) {
+            let reach = rule("services.elec.zone_reach");
+            let (ub_margin, ub_step) = (rule("services.elec.unit_board_margin"), rule("services.elec.unit_board_step"));
+            let (ub_before, ub_after, ub_depth) = (rule("services.elec.board_box_before"), rule("services.elec.unit_box_after"), rule("services.elec.board_box_depth"));
+            let (ub_clear, ub_top) = (rule("services.elec.unit_clear_half"), WALL_TOP);
+            let mid = |r: &Room| ((r.clear[0] + r.clear[2]) / 2.0, (r.clear[1] + r.clear[3]) / 2.0);
+            let man = |a: (f64, f64), b: (f64, f64)| (a.0 - b.0).abs() + (a.1 - b.1).abs();
+            let floor_at = rs[board_room].sides[fb.j].at(fb.s, 0.0);
+            let mut zone_at: Vec<Option<(f64, f64)>> = vec![None; rs.len()];
+            // the boards a room may draw from: the floor board and those of its feed ancestors
+            let nearest = |v: usize, zone_at: &[Option<(f64, f64)>]| {
+                let m = mid(&rs[v]);
+                let mut best = (man(floor_at, m), None);
+                let mut u = Some(v);
+                while let Some(w) = u {
+                    if let Some(q) = zone_at[w] {
+                        if man(q, m) < best.0 {
+                            best = (man(q, m), Some(w));
+                        }
+                    }
+                    u = feed[w].as_ref().map(|f| f.parent);
+                }
+                best
+            };
+            for &v in &order {
+                if nearest(v, &zone_at).0 <= reach {
+                    continue;
+                }
+                let mut u = Some(v);
+                while let Some(w) = u {
+                    if spine[w].is_some() && matches!(rs[w].kind, RoomKind::Corridor | RoomKind::Lobby | RoomKind::Hall) {
+                        break;
+                    }
+                    u = feed[w].as_ref().map(|f| f.parent);
+                }
+                let (Some(w), Some(j)) = (u.filter(|w| zone_at[*w].is_none()), u.and_then(|w| spine[w])) else { continue };
+                let (sd, m) = (&rs[w].sides[j], mid(&rs[v]));
+                let mut pick: Option<(f64, f64)> = None;
+                let mut s = ub_margin;
+                while s < sd.len - ub_margin {
+                    let b = svc::bbox(&[sd.at(s - ub_before, 0.0), sd.at(s + ub_after, ub_depth)]);
+                    let shafted = shafts.iter().any(|o| o[0] < b[2] && o[3] > b[0] && o[1] < b[3] && o[4] > b[1]);
+                    if sd.half > 0.0 && !shafted && sd.free(s - ub_clear, s + ub_clear, 0.0, 0.0, ub_top) && !fps[k].iter().any(|f| svc::hit(f, &b, 0.0)) && !taken[w].iter().any(|t| t.0 == j && (t.1 - s).abs() < spacing()) {
+                        let dd = man(sd.at(s, 0.0), m);
+                        if pick.is_none_or(|p| dd < p.1) {
+                            pick = Some((s, dd));
+                        }
+                    }
+                    s += ub_step;
+                }
+                if let Some((s, _)) = pick {
+                    unit_at[w] = Some(s);
+                    taken[w].push((j, s));
+                    zone_at[w] = Some(sd.at(s, 0.0));
+                    zone_host[w] = true;
+                }
+            }
+            for &v in &order {
+                zone_of[v] = nearest(v, &zone_at).1;
+            }
+        }
         // subtree loads, leaves first
         let mut sub: Vec<f64> = plans.iter().map(|p| p.as_ref().map_or(0.0, Plan::load)).collect();
         for &v in order.iter().rev() {
@@ -1270,6 +1336,14 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                         dropped.truncate(told);
                         continue;
                     }
+                    // a room that cannot also take its sub-board goes without; its rooms fall back
+                    if zone_host[v] {
+                        (zone_host[v], unit_at[v]) = (false, None);
+                        (trim, co[v], split, shift) = (false, co_v0, 0, 0);
+                        (pl, attempt) = (pl0.clone(), 0);
+                        dropped.truncate(told);
+                        continue;
+                    }
                     break None;
                 }
                 // clashes: drop what does not fit, else give the room up
@@ -1299,6 +1373,12 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                     }
                     None if !trim => {
                         (trim, co[v], split) = (true, co_v0, 0);
+                        (pl, attempt) = (pl0.clone(), 0);
+                        dropped.truncate(told);
+                    }
+                    None if zone_host[v] => {
+                        (zone_host[v], unit_at[v]) = (false, None);
+                        (trim, co[v], split, shift) = (false, co_v0, 0, 0);
                         (pl, attempt) = (pl0.clone(), 0);
                         dropped.truncate(told);
                     }
@@ -1350,6 +1430,18 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                 add[k].push(wall_fixture(&p.storeys[k].layout, sd, fb.s, "Distribution Board", if k == 0 { "400x600" } else { "Sub 400x600" }, board_z()));
                 links.push(GSvcLink { storey: k, fixture: idx, connector: "Main", sys: SvcSys::Power });
                 board_fx.push((k, idx));
+            }
+            // after the floor board: the first board on a storey is taken for it
+            if let (Some(s), Some(j), Some(z)) = (unit_at[v], spine[v], zone_host[v].then_some(v)) {
+                let sd = &room.sides[j];
+                let idx = n_fx[k] + add[k].len();
+                add[k].push(wall_fixture(&p.storeys[k].layout, sd, s, "Distribution Board", "Sub 400x600", board_z()));
+                links.push(GSvcLink { storey: k, fixture: idx, connector: "Main", sys: SvcSys::Power });
+                hosted.insert(z, (k, idx));
+                board_fx.push((k, idx));
+            }
+            if let Some(b) = zone_of[v].and_then(|z| hosted.get(&z).copied()) {
+                zone_boards.insert((k, room.idx), b);
             }
             let mut dev_idx: HashMap<usize, usize> = HashMap::new();
             let mut col_idx: HashMap<(usize, usize), (usize, bool)> = HashMap::new();
@@ -1407,6 +1499,7 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
             (unserved, lux_short) = (undo.6, undo.7);
             add[k].clear();
             unit_boards.retain(|key, _| key.0 != k);
+            zone_boards.retain(|key, _| key.0 != k);
             tries_k += 1;
             for (v, f) in failed {
                 if tries_k > retries {
@@ -1430,7 +1523,7 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
     p.services.elec = runs;
     p.services.issues = dropped;
     p.services.links.extend(links);
-    super::circuits::design(spec, p, &floor_board_fx(&board_fx, n_st), &unit_boards, &served);
+    super::circuits::design(spec, p, &floor_board_fx(&board_fx, n_st), &unit_boards, &zone_boards, &served);
     p.metrics.push(("power_unserved_rooms", unserved as f64));
     p.metrics.push(("lux_short_rooms", lux_short as f64));
     unserved

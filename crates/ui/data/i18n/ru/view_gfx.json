@@ -57,6 +57,8 @@
  "view_gfx.cat.truss": "Фермы",
  "view_gfx.cat.toposolid": "Рельеф",
  "view_gfx.cat.grid": "Оси",
+ "view_gfx.cat.elec_circuit": "Условная электропроводка",
+ "view_gfx.cat.elec_cable": "Кабели цепей",
  "view_gfx.vv.title": "Видимость и графика — {view}",
  "view_gfx.vv.template_banner": "Шаблон «{name}» управляет полями: {fields}",
  "view_gfx.vv.detail": "Детализация",

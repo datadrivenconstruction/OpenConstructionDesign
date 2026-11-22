@@ -343,7 +343,7 @@ fn room_names(p: &GProject, rooms: &[(usize, usize)]) -> String {
 }
 
 /// Designs the circuits of the boards: floor boards per storey, unit boards per apartment.
-pub(crate) fn design(spec: &ProjectSpec, p: &mut GProject, floor: &[Option<(usize, usize)>], units: &HashMap<(usize, u32), (usize, usize)>, served: &[Served]) {
+pub(crate) fn design(spec: &ProjectSpec, p: &mut GProject, floor: &[Option<(usize, usize)>], units: &HashMap<(usize, u32), (usize, usize)>, zones: &HashMap<(usize, usize), (usize, usize)>, served: &[Served]) {
     let ru = spec.ru;
     let routes = Routes::new(p);
     let rooms: Vec<Vec<Room>> = p.storeys.iter().map(svc::rooms).collect();
@@ -354,7 +354,7 @@ pub(crate) fn design(spec: &ProjectSpec, p: &mut GProject, floor: &[Option<(usiz
                 return Some(*b);
             }
         }
-        floor[k]
+        zones.get(&(k, room_idx)).copied().or(floor[k])
     };
     // boards: the main one, the floor boards it feeds, the unit boards they feed
     let main = floor.first().copied().flatten();
@@ -369,6 +369,13 @@ pub(crate) fn design(spec: &ProjectSpec, p: &mut GProject, floor: &[Option<(usiz
     unit_list.sort();
     for ((k, a), b) in unit_list {
         boards.push(GBoard { at: b, label: format!("{}{k}.{a}", svc::text(&["boards", "unit"], ru)), parent: floor[k], rcds: vec![] });
+    }
+    let mut zone_list: Vec<(usize, usize)> = zones.values().copied().collect();
+    zone_list.sort();
+    zone_list.dedup();
+    for (n, b) in zone_list.iter().enumerate() {
+        let nth = zone_list[..n].iter().filter(|z| z.0 == b.0).count() + 1;
+        boards.push(GBoard { at: *b, label: format!("{}{}.{nth}", svc::text(&["boards", "zone"], ru), b.0), parent: floor[b.0], rcds: vec![] });
     }
     // devices by board, use, and per room for a worktop, per fixture for an appliance
     let mut keys: Vec<((usize, usize), usize, (usize, usize))> = vec![];

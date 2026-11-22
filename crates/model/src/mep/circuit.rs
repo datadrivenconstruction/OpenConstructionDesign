@@ -28,7 +28,10 @@ const DDL: &str = "CREATE TABLE IF NOT EXISTS elec_circuit(id INTEGER PRIMARY KE
  cable_type TEXT NOT NULL DEFAULT '', UNIQUE(panel, number));
 CREATE TABLE IF NOT EXISTS elec_circuit_dev(id INTEGER PRIMARY KEY, circuit INTEGER NOT NULL,
  comp INTEGER NOT NULL, connector TEXT NOT NULL, load REAL, UNIQUE(comp, connector));
-CREATE INDEX IF NOT EXISTS elec_circuit_dev_circuit ON elec_circuit_dev(circuit);";
+CREATE INDEX IF NOT EXISTS elec_circuit_dev_circuit ON elec_circuit_dev(circuit);
+CREATE TABLE IF NOT EXISTS elec_cable(id INTEGER PRIMARY KEY, circuit INTEGER NOT NULL,
+ level INTEGER NOT NULL, points TEXT NOT NULL);
+CREATE INDEX IF NOT EXISTS elec_cable_circuit ON elec_cable(circuit);";
 
 pub(crate) fn migrate(db: &Connection) -> Result<(), Error> {
     db.execute_batch(DDL)?;
@@ -129,6 +132,15 @@ pub struct CircuitSpec {
     /// Cable designation, as NYM-J 3x2.5; empty: by the cross-section alone.
     pub cable_type: String,
     pub devices: Vec<CircuitDevice>,
+    /// Cable path drawn in 3D, piece by piece; apart from the carrier network it lies in.
+    pub trace: Vec<CableTrace>,
+}
+
+/// One piece of a circuit's cable path: its level and axis points, z absolute, m.
+#[derive(Clone, Debug, PartialEq)]
+pub struct CableTrace {
+    pub level: i64,
+    pub points: Vec<(f64, f64, f64)>,
 }
 
 impl CircuitSpec {
@@ -155,6 +167,7 @@ impl CircuitSpec {
             rcd: String::new(),
             cable_type: String::new(),
             devices,
+            trace: vec![],
         }
     }
 }
@@ -366,6 +379,7 @@ fn spec_of(r: &rusqlite::Row) -> rusqlite::Result<(i64, CircuitSpec)> {
             rcd: r.get(17)?,
             cable_type: r.get(18)?,
             devices: vec![],
+            trace: vec![],
         },
     ))
 }
@@ -386,6 +400,17 @@ fn devices_of(db: &Connection, id: i64) -> Result<Vec<CircuitDevice>, Error> {
         })
     })?;
     Ok(r.collect::<Result<_, _>>()?)
+}
+
+fn traces_of(db: &Connection, id: i64) -> Result<Vec<CableTrace>, Error> {
+    let mut st = db.prepare_cached("SELECT level,points FROM elec_cable WHERE circuit=?1 ORDER BY id")?;
+    let r = st.query_map([id], |r| Ok((r.get::<_, i64>(0)?, r.get::<_, String>(1)?)))?;
+    let mut out = vec![];
+    for x in r {
+        let (level, text) = x?;
+        out.push(CableTrace { level, points: super::parse_points(&text).unwrap_or_default() });
+    }
+    Ok(out)
 }
 
 /// Writes a circuit inside an operation; the inverse removes it.
@@ -425,6 +450,10 @@ fn check_spec(s: &CircuitSpec) -> Result<(), Error> {
     }
     if s.devices.iter().any(|d| d.load.is_some_and(|l| !(l.is_finite() && l >= 0.0))) {
         return invalid("circuit: a load must be a number not below zero");
+    }
+    let finite = |q: &(f64, f64, f64)| q.0.is_finite() && q.1.is_finite() && q.2.is_finite();
+    if s.trace.iter().any(|t| t.points.len() < 2 || !t.points.iter().all(finite)) {
+        return invalid("circuit: a cable piece needs two finite points or more");
     }
     Ok(())
 }
@@ -480,7 +509,14 @@ fn insert_checked(db: &Connection, s: &CircuitSpec) -> Result<(i64, Inv), Error>
     let id = db.last_insert_rowid();
     let mut inv = Inv::default()
         .delete("elec_circuit", "id", id)
-        .delete("elec_circuit_dev", "circuit", id);
+        .delete("elec_circuit_dev", "circuit", id)
+        .delete("elec_cable", "circuit", id);
+    for t in &s.trace {
+        db.execute(
+            "INSERT INTO elec_cable(circuit,level,points) VALUES (?1,?2,?3)",
+            params![id, t.level, super::points_text(&t.points)],
+        )?;
+    }
     for d in &s.devices {
         // a device moves to the new circuit: the old row comes back on undo
         if let Some(old) = db
@@ -514,8 +550,10 @@ pub(crate) fn prune(db: &Connection) -> Result<Inv, Error> {
     for id in gone {
         inv = inv
             .restore(db, "elec_circuit", "id", id)?
-            .restore(db, "elec_circuit_dev", "circuit", id)?;
+            .restore(db, "elec_circuit_dev", "circuit", id)?
+            .restore(db, "elec_cable", "circuit", id)?;
         db.execute("DELETE FROM elec_circuit_dev WHERE circuit=?1", [id])?;
+        db.execute("DELETE FROM elec_cable WHERE circuit=?1", [id])?;
         db.execute("DELETE FROM elec_circuit WHERE id=?1", [id])?;
     }
     let devs: Vec<i64> = db
@@ -696,8 +734,10 @@ impl Model {
         self.op("elec_circuit_delete", |db| {
             let inv = Inv::default()
                 .restore(db, "elec_circuit", "id", id)?
-                .restore(db, "elec_circuit_dev", "circuit", id)?;
+                .restore(db, "elec_circuit_dev", "circuit", id)?
+                .restore(db, "elec_cable", "circuit", id)?;
             db.execute("DELETE FROM elec_circuit_dev WHERE circuit=?1", [id])?;
+            db.execute("DELETE FROM elec_cable WHERE circuit=?1", [id])?;
             if db.execute("DELETE FROM elec_circuit WHERE id=?1", [id])? == 0 {
                 return invalid(format!("no circuit {id}"));
             }
@@ -718,6 +758,7 @@ impl Model {
         rows.into_iter()
             .map(|(id, mut spec)| {
                 spec.devices = devices_of(&self.db, id)?;
+                spec.trace = traces_of(&self.db, id)?;
                 Ok(Circuit { id, spec })
             })
             .collect()

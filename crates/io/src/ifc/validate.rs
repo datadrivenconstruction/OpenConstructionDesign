@@ -182,6 +182,7 @@ const ELEMENTS: &[&str] = &[
     "IFCDUCTFITTING",
     "IFCCABLECARRIERSEGMENT",
     "IFCCABLECARRIERFITTING",
+    "IFCCABLESEGMENT",
 ];
 
 /// Classes that may sit directly on the site.

@@ -57,6 +57,8 @@
  "view_gfx.cat.truss": "Fagværk",
  "view_gfx.cat.toposolid": "Terræn",
  "view_gfx.cat.grid": "Akser",
+ "view_gfx.cat.elec_circuit": "Circuit wiring",
+ "view_gfx.cat.elec_cable": "Circuit cables",
  "view_gfx.vv.title": "Synlighed og grafik — {view}",
  "view_gfx.vv.template_banner": "Skabelonen „{name}“ styrer: {fields}",
  "view_gfx.vv.detail": "Detaljeniveau",

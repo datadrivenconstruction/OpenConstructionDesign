@@ -1562,6 +1562,8 @@ pub use ddc_geom::mep::duct_sizing;
 mod build;
 mod cable;
 mod circuit;
+mod wires;
+pub use wires::{bow as wire_bow, cable_mesh, CircuitWire, CABLE_DRAWN_R};
 mod single_line;
 pub use single_line::{Feeder, SingleLine};
 pub use cable::{
@@ -1573,7 +1575,7 @@ pub use build::{Built, MepBuild, SysRef};
 pub(crate) use circuit::{migrate as migrate_circuits, prune as prune_circuits};
 pub use circuit::{
     auto_size, preview_rules, Circuit, CircuitDevice, CircuitIssue, CircuitKind, CircuitReport,
-    CircuitSpec, PanelSchedule,
+    CircuitSpec, CableTrace, PanelSchedule,
 };
 
 mod clash_set;

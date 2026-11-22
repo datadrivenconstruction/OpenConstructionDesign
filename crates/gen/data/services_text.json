@@ -18,6 +18,7 @@
   "boards": {
     "main": {"en": "MDB", "ru": "ГРЩ"},
     "floor": {"en": "DB", "ru": "ЩЭ"},
-    "unit": {"en": "DB", "ru": "ЩК"}
+    "unit": {"en": "DB", "ru": "ЩК"},
+    "zone": {"en": "SDB", "ru": "ЩР"}
   }
 }

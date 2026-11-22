@@ -142,6 +142,7 @@ pub(super) const EXCLUDED: &[(&str, &str)] = &[
     ("underlay", "placed drawings, written by the app before a save"),
     ("elec_circuit", "electrical circuits of a panel, rebuilt by the MEP tools"),
     ("elec_circuit_dev", "devices of a circuit, rebuilt by the MEP tools"),
+    ("elec_cable", "cable path of a circuit, rebuilt with it"),
     ("recipe", "a copied result is plain geometry; the script stays with the original"),
     ("recipe_part", "links of a recipe to what it built; not copied with an element"),
     ("steel_conn", "a connection is regenerated from its members; copies are plain solids"),

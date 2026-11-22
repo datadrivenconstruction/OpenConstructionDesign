@@ -570,6 +570,7 @@
     {"id": "services.elec.riser_off", "group": "services", "unit": "m", "min": 0.2, "max": 1.0, "default": 0.45, "why": "Riser offset along the spine from the board (design choice)."},
     {"id": "services.elec.spine_margin", "group": "services", "unit": "m", "min": 0.1, "max": 0.6, "default": 0.25, "why": "Feed margin from the ends of a spine wall (design choice)."},
     {"id": "services.elec.feed_step", "group": "services", "unit": "m", "min": 0.02, "max": 0.5, "default": 0.1, "why": "Step of candidate feed spots from the middle of a shared wall (design choice)."},
+    {"id": "services.elec.zone_reach", "group": "services", "unit": "m", "min": 10, "max": 50, "default": 15, "why": "Plan distance, board to room centre, past which a non-residential room gets a sub-board: the cable runs about twice that along the carriers, and B16 on 2.5 mm2 stays within 3 % drop to about 28 m (design choice)."},
     {"id": "services.elec.unit_board_margin", "group": "services", "unit": "m", "min": 0.1, "max": 0.8, "default": 0.35, "why": "Unit board margin from the ends of the hall wall (design choice)."},
     {"id": "services.elec.unit_board_step", "group": "services", "unit": "m", "min": 0.02, "max": 0.5, "default": 0.1, "why": "Step of unit board positions along the hall wall (design choice)."},
     {"id": "services.elec.unit_box_after", "group": "services", "unit": "m", "min": 0.1, "max": 0.6, "default": 0.25, "why": "Unit board footprint extent after its centre (design choice)."},

@@ -50,11 +50,16 @@ const NON_ARCH: &[&str] = &[
     "grid",
     "ref_plane",
     "constraint_rule",
+    "elec_circuit",
+    "elec_circuit_dev",
+    "elec_cable",
     // phase bookkeeping (u7) written by every op
     "ddc_dirty",
     "elem_phase",
 ];
 const COMP_TABLES: [&str; 4] = ["comp", "comp_qty", "comp_type", "comp_family"];
+/// Colour of the circuit cables in 3D: apart from the trays they lie in.
+const CABLE_RGB: [u8; 3] = [214, 64, 32];
 
 /// Stable numbers: row id to slot.
 #[derive(Debug, Default)]
@@ -139,6 +144,8 @@ pub struct Big {
     axes: HashMap<i64, Axis>,
     comps: Vec<Instanced>,
     comp_at: HashMap<i64, V2>,
+    /// Circuit cables (`elec_cable`), drawn unless the 3D view hides their category.
+    cables: (Vec<Arc<SceneMesh>>, Vec<Aabb>),
     runs: Slots,
     cslots: Slots,
     aslots: ArchSlots,
@@ -527,6 +534,12 @@ pub fn scene(ed: &mut Editor) -> Scene {
     }
     tm.comp_ms = ms(t);
 
+    if fresh
+        || ["elec_cable", "elec_circuit", "view_gfx", "view_template"].iter().any(|t| ch.touched(t))
+    {
+        big.cables = cable_meshes(&ed.model, ed.elevation);
+    }
+
     // the scene is made of shared meshes: pointers and bounds are copied, not vertices
     let mut systems: Vec<&i64> = big.mep.keys().collect();
     systems.sort_unstable();
@@ -534,6 +547,8 @@ pub fn scene(ed: &mut Editor) -> Scene {
     let (mut meshes, mut boxes) = (Vec::with_capacity(n), Vec::with_capacity(n));
     meshes.extend(big.arch.iter().cloned());
     boxes.extend_from_slice(&big.arch_boxes);
+    meshes.extend(big.cables.0.iter().cloned());
+    boxes.extend_from_slice(&big.cables.1);
     for s in systems {
         let (m, b) = &big.mep[s];
         meshes.extend(m.iter().cloned());
@@ -546,6 +561,24 @@ pub fn scene(ed: &mut Editor) -> Scene {
     big.timing = tm;
     ed.big = big;
     sc
+}
+
+/// Cable pieces of the circuits as scene bodies, not selectable; none when the 3D view hides
+/// the `elec_cable` category.
+pub fn cable_meshes(m: &Model, dz: f64) -> (Vec<Arc<SceneMesh>>, Vec<Aabb>) {
+    let hidden = m
+        .view_paint(ddc_model::ViewKey::ThreeD)
+        .is_ok_and(|p| p.hidden_cats.iter().any(|c| c == "elec_cable"));
+    if hidden {
+        return (vec![], vec![]);
+    }
+    let mut out = vec![];
+    for (_, t) in m.circuit_cables(None).unwrap_or_default() {
+        let mesh = ddc_model::cable_mesh(&t.points);
+        out.push(Arc::new(to_scene(&mesh, OTHER_LEVEL, tag_rgb(CABLE_RGB, false), dz)));
+    }
+    let boxes = out.iter().map(|m| mesh_box(m)).collect();
+    (out, boxes)
 }
 
 /// Since `since` only networks (and derived quantities) changed: the editor lists
