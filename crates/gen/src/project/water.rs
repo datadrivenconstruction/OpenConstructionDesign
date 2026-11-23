@@ -333,6 +333,18 @@ fn supply(
             blocked.push((ring.u(j, s) - pad, ring.u(j, s) + pad, over, true));
         }
     }
+    // bridges that overlap or meet are one bridge at the higher height: two would cross each other
+    blocked.sort_by(|a, b| a.0.total_cmp(&b.0));
+    let mut one: Vec<(f64, f64, Option<f64>, bool)> = vec![];
+    for b in blocked {
+        match one.last_mut() {
+            Some(l) if l.2.is_some() && b.2.is_some() && b.0 <= l.1 + bridge_bend => {
+                *l = (l.0, l.1.max(b.1), l.2.zip(b.2).map(|(x, y)| x.max(y)), l.3 && b.3);
+            }
+            _ => one.push(b),
+        }
+    }
+    let blocked = one;
     let fwd = |u: f64| (u - u0).rem_euclid(per);
     let fwd_block = blocked.iter().filter(|b| b.2.is_none()).map(|b| fwd(b.0)).fold(per, f64::min);
     let bwd_block = blocked.iter().filter(|b| b.2.is_none()).map(|b| per - fwd(b.1)).fold(per, f64::min);
