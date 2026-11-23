@@ -205,8 +205,6 @@ pub struct Edit3d {
     gen: u64,
     /// The 3D view rectangle from the last frame (Tab is captured only over it).
     rect: Option<Rect>,
-    /// Several candidates under the cursor: Tab cycles through them.
-    tab_cycle: bool,
     /// Active level elevation the user's work plane is tied to.
     plane_elev: f64,
     /// Mirror and Array tools.
@@ -384,8 +382,9 @@ pub fn pre_input(a: &mut EditorApp, ctx: &egui::Context) {
     let over = ctx
         .input(|i| i.pointer.hover_pos())
         .is_some_and(|p| e.rect.is_some_and(|r| r.contains(p)));
-    // Tab belongs to 3D only while it is busy or cycling candidates under the cursor
-    let tab = busy || (over && e.tab_cycle);
+    // Tab over the 3D view never reaches egui focus traversal: with a single candidate it
+    // would jump to the ribbon and the next Tab would cycle tabs instead of elements
+    let tab = busy || over;
     let mut keys = vec![];
     let mut clear_sel = false;
     ctx.input_mut(|i| {
@@ -709,7 +708,6 @@ impl Edit3d {
             None | Some(Drag3::Box { .. }) => crate::pick_rules::filter3(ed, ray_hits.clone()),
             _ => vec![],
         };
-        self.tab_cycle = hits.len() > 1;
         let hit = crate::pick_rules::choose(&hits, self.cycle);
         self.hover = hit.as_ref().map(|h| h.target);
         self.cursor_pt = hit
