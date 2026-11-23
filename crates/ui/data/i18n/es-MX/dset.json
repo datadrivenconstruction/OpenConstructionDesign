@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "Alzado sur",
  "dset.title.elevation_east": "Alzado este",
  "dset.title.elevation_west": "Alzado oeste",
- "dset.err.empty": "Ninguna planta tiene muros que dibujar",
+ "dset.err.empty": "Ninguna planta tiene elementos del modelo que dibujar: coloque elementos en una planta y vuelva a crear el juego",
  "dset.warn.typical_rooms": "Los números de sala de una planta tipo ya no siguen un patrón: reconstruya el juego de planos",
  "dset.note.room_numbers": "Número de sala = prefijo de planta + número en la planta, p. ej. {mark}: {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "Marcas asignadas por tipo: {n}",

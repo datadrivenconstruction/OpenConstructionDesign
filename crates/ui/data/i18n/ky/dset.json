@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "Түштүк фасады",
  "dset.title.elevation_east": "Чыгыш фасады",
  "dset.title.elevation_west": "Батыш фасады",
- "dset.err.empty": "Чийүүгө дубалы бар деңгээл жок",
+ "dset.err.empty": "Чийүүгө модель элементтери бар деңгээл жок: элементтерди деңгээлге жайгаштырып, топтомду кайра түзүңүз",
  "dset.warn.typical_rooms": "Типтүү кабаттагы бөлмө номерлери мындан ары бир эрежеге баш ийбейт: чийме топтомун кайра түзүңүз",
  "dset.note.room_numbers": "Бөлмө номери = кабат префикси + планда номер, мисалы {mark}: {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "Типтер боюнча белгилер: {n}",

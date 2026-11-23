@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "Sørfasade",
  "dset.title.elevation_east": "Østfasade",
  "dset.title.elevation_west": "Vestfasade",
- "dset.err.empty": "Ingen etasje har vegger å tegne",
+ "dset.err.empty": "Ingen etasje har modellelementer å tegne: plasser elementer på en etasje, og lag settet på nytt",
  "dset.warn.typical_rooms": "Romnumrene på en typisk etasje følger ikke lenger ett mønster: bygg tegningssettet på nytt",
  "dset.note.room_numbers": "Romnummer = etasjeprefiks + nummer i planen, f.eks. {mark}: {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "Merker tildelt etter type: {n}",

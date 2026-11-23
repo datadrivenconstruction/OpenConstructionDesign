@@ -483,7 +483,7 @@ fn deliver_project() -> Schema {
 fn dset_fields() -> Vec<(&'static str, Schema)> {
     let on = |d: &'static str| opt(desc(d, bool_()));
     vec![
-        ("plans", on("A floor plan sheet per level with walls; default true")),
+        ("plans", on("A floor plan sheet per level with any model elements; default true")),
         ("sections", on("Two sections, through the stair and across the main span; default true")),
         ("elevations", on("Four elevations with level marks; default true")),
         ("schedules", on("Room, door and window schedules; default true")),

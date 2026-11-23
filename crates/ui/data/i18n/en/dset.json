@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "South elevation",
  "dset.title.elevation_east": "East elevation",
  "dset.title.elevation_west": "West elevation",
- "dset.err.empty": "No level has walls to draw",
+ "dset.err.empty": "No level has model elements to draw: place elements on a level, then build the set again",
  "dset.warn.typical_rooms": "Room numbers of a typical floor no longer follow one pattern: rebuild the drawing set",
  "dset.note.room_numbers": "Room number = floor prefix + number on the plan, e.g. {mark}: {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "Marks assigned by type: {n}",

@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "نمای ارتفاعی جنوبی",
  "dset.title.elevation_east": "نمای ارتفاعی شرقی",
  "dset.title.elevation_west": "نمای ارتفاعی غربی",
- "dset.err.empty": "هیچ تراز دیواری برای رسم ندارد",
+ "dset.err.empty": "هیچ ترازی عنصر مدل برای رسم ندارد: عناصر را روی یک تراز قرار دهید و مجموعه را دوباره بسازید",
  "dset.warn.typical_rooms": "شماره اتاق‌های طبقه تیپ دیگر از یک الگو پیروی نمی‌کنند: مجموعه نقشه را دوباره بسازید",
  "dset.note.room_numbers": "شمارهٔ اتاق = پیشوند طبقه + شماره روی پلان، مثلاً {mark}: {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "نشانه‌های اختصاص‌یافته بر اساس نوع: {n}",

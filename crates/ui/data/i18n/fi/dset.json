@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "Eteläjulkisivu",
  "dset.title.elevation_east": "Itäjulkisivu",
  "dset.title.elevation_west": "Länsijulkisivu",
- "dset.err.empty": "Yhdelläkään tasolla ei ole seiniä piirrettäväksi",
+ "dset.err.empty": "Millään tasolla ei ole piirrettäviä mallin osia: sijoita osia tasolle ja luo sarja uudelleen",
  "dset.warn.typical_rooms": "Tyypillisen kerroksen huonenumerot eivät enää noudata yhtä kaavaa: rakenna piirustussarja uudelleen",
  "dset.note.room_numbers": "Huonenumero = kerroksen etuliite + numero pohjapiirroksessa, esim. {mark}: {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "Tyyppikohtaisia merkintöjä annettu: {n}",

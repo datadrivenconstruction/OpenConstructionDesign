@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "جنوبی ایلیویشن",
  "dset.title.elevation_east": "مشرقی ایلیویشن",
  "dset.title.elevation_west": "مغربی ایلیویشن",
- "dset.err.empty": "کسی سطح پر بنانے کے لیے دیواریں نہیں",
+ "dset.err.empty": "کسی سطح پر بنانے کے لیے ماڈل عناصر نہیں: عناصر کسی سطح پر رکھیں، پھر سیٹ دوبارہ بنائیں",
  "dset.warn.typical_rooms": "عام منزل کے کمروں کے نمبر اب ایک ہی ترتیب پر نہیں: ڈرائنگ سیٹ دوبارہ بنائیں",
  "dset.note.room_numbers": "کمرہ نمبر = منزل کا سابقہ + پلان پر نمبر، مثلاً {mark}: {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "قسم کے مطابق نشانات تفویض: {n}",

@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "Tampak selatan",
  "dset.title.elevation_east": "Tampak timur",
  "dset.title.elevation_west": "Tampak barat",
- "dset.err.empty": "Tidak ada level yang berisi dinding untuk digambar",
+ "dset.err.empty": "Tidak ada level yang berisi elemen model untuk digambar: tempatkan elemen pada level, lalu buat set lagi",
  "dset.warn.typical_rooms": "Nomor ruang pada lantai tipikal tidak lagi mengikuti satu pola: bangun ulang kumpulan gambar",
  "dset.note.room_numbers": "Nomor ruang = awalan lantai + nomor di denah, misalnya {mark}: {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "Penanda ditetapkan per tipe: {n}",

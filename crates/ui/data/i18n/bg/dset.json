@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "Южна фасада",
  "dset.title.elevation_east": "Източна фасада",
  "dset.title.elevation_west": "Западна фасада",
- "dset.err.empty": "Няма ниво със стени за чертане",
+ "dset.err.empty": "Няма ниво с елементи на модела за чертане: поставете елементи на ниво и създайте комплекта отново",
  "dset.warn.typical_rooms": "Номерата на помещенията на типичния етаж вече не следват един модел: пресъздайте комплекта чертежи",
  "dset.note.room_numbers": "Номер на помещение = префикс на етажа + номер в плана, напр. {mark}: {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "Маркировки, присвоени по тип: {n}",

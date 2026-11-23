@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "Södra fasaden",
  "dset.title.elevation_east": "Östra fasaden",
  "dset.title.elevation_west": "Västfasad",
- "dset.err.empty": "Ingen våning har väggar att rita",
+ "dset.err.empty": "Ingen våning har modellelement att rita: placera element på en våning och skapa uppsättningen igen",
  "dset.warn.typical_rooms": "Rumsnumren på en typisk våning följer inte längre ett mönster: bygg om ritningsuppsättningen",
  "dset.note.room_numbers": "Rumsnummer = våningsprefix + nummer i planen, t.ex. {mark}: {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "Märkningar tilldelade per typ: {n}",

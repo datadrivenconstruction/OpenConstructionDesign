@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "Lõunafassaad",
  "dset.title.elevation_east": "Idafassaad",
  "dset.title.elevation_west": "Läänevaade",
- "dset.err.empty": "Ühelgi korrusel pole seinu joonistamiseks",
+ "dset.err.empty": "Ühelgi korrusel pole joonistatavaid mudeli elemente: paigutage elemendid korrusele ja looge komplekt uuesti",
  "dset.warn.typical_rooms": "Tüüpkorruse ruuminumbrid ei järgi enam ühtset mustrit: koosta joonisekomplekt uuesti",
  "dset.note.room_numbers": "Ruumi number = korruse eesliide + number plaanil, nt {mark}: {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "Tüüpide järgi määratud märgised: {n}",

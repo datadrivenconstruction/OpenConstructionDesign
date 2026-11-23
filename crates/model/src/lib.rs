@@ -468,7 +468,7 @@ pub use rebar::{
 pub use roof_edge::{Body as EdgeBody, SkylightSpec, SweepHost, SweepSpec, TaperSpec};
 pub use roofs::{RoofKind, RoofQuantities, RoofSpec};
 pub use rooms::{region_holder, room_closers, Boundary, RoomQty, RoomSpec, SepSpec};
-pub use sections::{SectionSpec, ViewKind, COMPASS};
+pub use sections::{compass_elevations_around, SectionSpec, ViewKind, COMPASS};
 pub use shafts::{CeilingSpec, ShaftCut, ShaftSpec};
 pub use field_err::FieldErr;
 pub use stage_err::StageErr;

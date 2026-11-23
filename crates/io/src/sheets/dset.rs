@@ -699,7 +699,7 @@ pub fn plan_drawing_set(m: &Model, opt: &DsetOptions, ctx: &Ctx) -> Result<Plann
     let text = ctx.text;
     let mut warnings = vec![];
     let grids = m.grid_axes(None).map_err(me)?;
-    let (plans, bb) = level_plans(m)?;
+    let (plans, bb, body) = level_plans(m)?;
     if plans.is_empty() {
         return Err(SheetError(text("dset.err.empty")));
     }
@@ -709,7 +709,7 @@ pub fn plan_drawing_set(m: &Model, opt: &DsetOptions, ctx: &Ctx) -> Result<Plann
         vec![]
     };
     let elevs = if opt.elevations {
-        m.compass_elevation_specs(ELEVATION_OFF).map_err(me)?
+        ddc_model::compass_elevations_around(body, ELEVATION_OFF)
     } else {
         vec![]
     };
@@ -769,15 +769,18 @@ pub fn plan_drawing_set(m: &Model, opt: &DsetOptions, ctx: &Ctx) -> Result<Plann
     })
 }
 
-/// Plans of the levels with walls, in level order, and the extent of them all.
-fn level_plans(m: &Model) -> Result<(Vec<LevelPlan>, [f64; 4]), SheetError> {
+/// Plans of the levels that draw any model element (walls, forms, components, slabs...), in
+/// level order; the extent of the drawings, and of the elements alone, both with every
+/// element of the model.
+fn level_plans(m: &Model) -> Result<(Vec<LevelPlan>, [f64; 4], [f64; 4]), SheetError> {
     let mut plans = vec![];
-    let mut bb = [
+    let empty = [
         f64::INFINITY,
         f64::INFINITY,
         f64::NEG_INFINITY,
         f64::NEG_INFINITY,
     ];
+    let (mut bb, mut body) = (empty, empty);
     for (lv, name, z) in m.level_list().map_err(me)? {
         let vp = ViewportDef {
             sheet: 0,
@@ -791,14 +794,54 @@ fn level_plans(m: &Model) -> Result<(Vec<LevelPlan>, [f64; 4]), SheetError> {
             title: String::new(),
         };
         let d = view_drawing(m, &vp)?;
-        if !d.prims.iter().any(|p| matches!(p, ViewPrim::Cut { .. })) {
+        if !d.prims.iter().any(draws_element) {
             continue;
         }
         grow(&mut bb, [d.bbox[0], d.bbox[1]]);
         grow(&mut bb, [d.bbox[2], d.bbox[3]]);
+        for p in &d.prims {
+            element_points(p, &mut |q| grow(&mut body, [q.0, q.1]));
+        }
         plans.push((lv, name, z, d));
     }
-    Ok((plans, bb))
+    if let Some(all) = m.plan_bbox().map_err(me)? {
+        for b in [&mut bb, &mut body] {
+            grow(b, [all[0], all[1]]);
+            grow(b, [all[2], all[3]]);
+        }
+    }
+    if !body[0].is_finite() {
+        body = bb;
+    }
+    Ok((plans, bb, body))
+}
+
+/// Points of a model element's outline in plan; door leaves swing out of the body, so not them.
+fn element_points(p: &ViewPrim, f: &mut dyn FnMut((f64, f64))) {
+    match p {
+        ViewPrim::Cut { ring, .. } => ring.iter().for_each(|&q| f(q)),
+        ViewPrim::SectionCut { rings, .. } => rings.iter().for_each(|&q| f(q)),
+        ViewPrim::Edge { a, b, .. }
+        | ViewPrim::WindowLine { a, b, .. }
+        | ViewPrim::CurtainLine { a, b, .. } => {
+            f(*a);
+            f(*b);
+        }
+        _ => {}
+    }
+}
+
+/// A primitive of a model element, not an axis, level line, dimension or note.
+fn draws_element(p: &ViewPrim) -> bool {
+    matches!(
+        p,
+        ViewPrim::Cut { .. }
+            | ViewPrim::SectionCut { .. }
+            | ViewPrim::Edge { .. }
+            | ViewPrim::DoorLeaf { .. }
+            | ViewPrim::WindowLine { .. }
+            | ViewPrim::CurtainLine { .. }
+    )
 }
 
 /// Plan items with the levels each stands for: alike neighbours make one typical floor.

@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "南立面図",
  "dset.title.elevation_east": "東立面図",
  "dset.title.elevation_west": "西立面図",
- "dset.err.empty": "図面化できる壁のあるレベルがありません",
+ "dset.err.empty": "図面化できるモデル要素のあるレベルがありません: レベルに要素を配置してから、もう一度セットを作成してください",
  "dset.warn.typical_rooms": "標準階の部屋番号が一定の規則に従わなくなりました: 図面セットを再構築してください",
  "dset.note.room_numbers": "部屋番号 = 階プレフィックス + 平面上の番号。例 {mark}: {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "タイプごとに割り当てられたマーク: {n}",

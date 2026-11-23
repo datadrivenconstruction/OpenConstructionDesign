@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "Sydfacade",
  "dset.title.elevation_east": "Østfacade",
  "dset.title.elevation_west": "Vestfacade",
- "dset.err.empty": "Ingen etage har vægge at tegne",
+ "dset.err.empty": "Ingen etage har modelelementer at tegne: placer elementer på en etage, og opret sættet igen",
  "dset.warn.typical_rooms": "Rumnumrene på en typisk etage følger ikke længere ét mønster: genopbyg tegningssættet",
  "dset.note.room_numbers": "Rumnummer = etagepræfiks + nummer på planen, f.eks. {mark}: {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "Mærker tildelt efter type: {n}",
