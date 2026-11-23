@@ -93,6 +93,8 @@ pub(super) fn access_of(i: &Placed, lay: &Lay) -> Option<String> {
             up >= -TOL && up <= reach + TOL && plan <= rh + TOL
         })
         .map(|p| p.tag.clone())
+        // a handwheel above reach and off any deck is worked by a chain wheel from below
+        .or_else(|| (i.op.z <= rule("plant.access.chain") + TOL).then(|| "chain".into()))
 }
 
 pub(super) fn run(t: &Topo, lay: &Lay, p: &Piping) -> Report {

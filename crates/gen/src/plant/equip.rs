@@ -16,6 +16,12 @@ use super::route;
 use super::size::{self, ItemKind};
 use super::{Clear, EqKind, Equip, Level, Line, Spot};
 
+/// Concrete under a unit: how far a plinth or pier stands out past the steel it carries, m, and
+/// its most height as a share of the legs (the bottom drain stays clear).
+const PIER_OUT: f64 = 0.1;
+const PIER_K: f64 = 0.6;
+/// Room kept round a vessel's axis under it for the bottom drain, m.
+const DRAIN_KEEP: f64 = 0.3;
 /// Neck of a nozzle beyond the flange radius, and how deep it sits into the shell, m.
 const NECK: f64 = 0.1;
 const EMBED: f64 = 0.02;
@@ -262,10 +268,14 @@ fn spread(k: usize, a: f64) -> Vec<f64> {
 }
 
 /// Least distance between the axes of neighbouring parallel stubs of nozzles `a` and `b`.
+/// Spare between stubs side by side over the clearance of their pipes, m.
+const PITCH_SLACK: f64 = 0.02;
+
 fn pitch(e: &Equip, a: usize, b: usize, lines: &[Line]) -> f64 {
     let ea = route::env_of(&lines[e.nozzles[a].line]);
     let eb = route::env_of(&lines[e.nozzles[b].line]);
-    ea + eb + rule("plant.pipe.gap")
+    // a little over the router's clearance, so either pipe may run past the other
+    ea + eb + rule("plant.pipe.gap") + PITCH_SLACK
 }
 
 pub(super) fn shape(eqs: &mut [Equip], i: usize, lines: &[Line]) {
@@ -337,9 +347,14 @@ fn vessel(f: &mut F, e: &mut Equip, lines: &[Line]) {
     f.boxes.push((v3(-r, -r, legs), v3(r, r, ztop)));
     let leg = (LEG_K * d).max(LEG_MIN);
     let la = LEG_AT * r;
+    // each leg on a concrete pier; the bottom drain keeps its room between them
+    let ph = rule("plant.found.h").min(PIER_K * z0);
     for (sx, sy) in [(-1.0, -1.0), (1.0, -1.0), (1.0, 1.0), (-1.0, 1.0)] {
         let c = v3(sx * la, sy * la, 0.0);
         f.block("Leg", c - v3(leg / 2.0, leg / 2.0, 0.0), c + v3(leg / 2.0, leg / 2.0, z0), "Steel", true);
+        // a small shell's piers keep off the bottom drain at its axis
+        let w = (leg / 2.0 + PIER_OUT).min(la - DRAIN_KEEP).max(leg / 2.0);
+        f.block("Pier", c - v3(w, w, 0.0), c + v3(w, w, ph), "Concrete", true);
     }
     let mut keep = 0.0;
     if !tank && d >= MANHOLE_FROM {
@@ -383,6 +398,8 @@ fn vessel(f: &mut F, e: &mut Equip, lines: &[Line]) {
     }
     // side nozzles by side and level, spread along the shell or stacked if crowded
     let reach = rule("plant.access.reach");
+    // side nozzles placed so far: spot, nozzle, height and offset along the shell
+    let mut placed: Vec<(Spot, usize, f64, f64)> = vec![];
     for spot in [Spot::Left, Spot::Right, Spot::Back] {
         for level in [Level::Low, Level::Mid, Level::High] {
             let ks: Vec<usize> = (0..e.nozzles.len())
@@ -415,6 +432,14 @@ fn vessel(f: &mut F, e: &mut Equip, lines: &[Line]) {
                 if rise > 0.0 {
                     zz = zz.min(reach - rise).max(za + m);
                 }
+                // two levels brought down to one stack up rather than share a spot
+                while let Some(&(_, o, oz, _)) = placed
+                    .iter()
+                    .find(|&&(sp, o, oz, ot)| sp == spot && (ot - t).abs() + 1e-6 < pitch(e, o, k, lines) && (oz - zz).abs() + 1e-6 < pitch(e, o, k, lines))
+                {
+                    zz = oz + pitch(e, o, k, lines);
+                }
+                placed.push((spot, k, zz, t));
                 let along = (rs * rs - t * t).max(0.0).sqrt();
                 let (root, face, dir) = match spot {
                     Spot::Left => (v3(-along, t, zz), v3(-rs - z.proj, t, zz), v3(-1.0, 0.0, 0.0)),
@@ -548,6 +573,9 @@ fn exchanger(f: &mut F, e: &mut Equip, lines: &[Line]) {
     for k in [-1.0, 1.0] {
         let x = x0 + lc + l / 2.0 + k * SADDLE_AT * l;
         f.block("Saddle", v3(x - SADDLE_W / 2.0, -SADDLE_Y * r, 0.0), v3(x + SADDLE_W / 2.0, SADDLE_Y * r, zc), "Steel", true);
+        let ph = rule("plant.found.h").min(PIER_K * rule("plant.vessel.legs"));
+        let (wx, wy) = (SADDLE_W / 2.0 + PIER_OUT, SADDLE_Y * r + PIER_OUT);
+        f.block("Pier", v3(x - wx, -wy, 0.0), v3(x + wx, wy, ph), "Concrete", true);
     }
     let y = -slot(r, 0.0);
     for k in 0..e.nozzles.len() {

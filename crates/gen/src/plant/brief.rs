@@ -79,6 +79,8 @@ pub struct Brief {
     pub feed_tanks: usize,
     /// Open air: the rack stands on portal frames instead of hanging from a roof.
     pub outdoor: bool,
+    /// Height of the pipe rack the brief asks for, m.
+    pub rack_m: Option<f64>,
     /// A storage tank: diameter and shell height, m, and nozzles besides the manway.
     pub diameter_m: Option<f64>,
     pub height_m: Option<f64>,
@@ -178,6 +180,7 @@ impl Brief {
             distill: false,
             feed_tanks: 1,
             outdoor: false,
+            rack_m: None,
             diameter_m: None,
             height_m: None,
             nozzles: None,
@@ -205,6 +208,9 @@ impl Brief {
         }
         if let Some(x) = v.get("outdoor").and_then(J::as_bool) {
             b.outdoor = x;
+        }
+        if let Some(x) = num("rack_m") {
+            b.rack_m = Some(x);
         }
         if b.kind == Kind::StorageTank {
             b.scan_tank(&low);
@@ -256,6 +262,8 @@ impl Brief {
                 && (before.contains("head") || ru_list("head").iter().any(|h| before.contains(h.as_str())))
             {
                 self.head_m = Some(x);
+            } else if (w == "m" || w.starts_with("m ") || w == "m.") && before.contains("rack") && self.rack_m.is_none() {
+                self.rack_m = Some(x);
             } else if unit_words.iter().any(|u| w.starts_with(u)) && self.units.is_none() {
                 self.units = Some(x as usize);
             }
@@ -369,7 +377,7 @@ impl Brief {
     pub fn to_json(&self) -> J {
         json!({"kind": self.kind.name(), "duty_kw": self.duty_kw, "flow_m3h": self.flow_m3h,
                "head_m": self.head_m, "units": self.units, "distill": self.distill, "feed_tanks": self.feed_tanks,
-               "outdoor": self.outdoor, "diameter_m": self.diameter_m, "height_m": self.height_m,
+               "outdoor": self.outdoor, "rack_m": self.rack_m, "diameter_m": self.diameter_m, "height_m": self.height_m,
                "nozzles": self.nozzles, "text": self.text})
     }
 }
