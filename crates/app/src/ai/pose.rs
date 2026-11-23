@@ -12,8 +12,8 @@ use serde_json::{json, Value as J};
 
 /// The frame is the target's extent plus this share.
 pub const MARGIN: f64 = 0.05;
-pub const MAX_HIGHLIGHT: usize = 200;
-pub const MAX_LABELS: usize = 100;
+pub const MAX_HIGHLIGHT: usize = ddc_ai::limits::HIGHLIGHT.us();
+pub const MAX_LABELS: usize = ddc_ai::limits::LABELS.us();
 /// Share of the storey height where a room interior is cut.
 pub const ROOM_CUT: f64 = 0.65;
 pub const FOV_DEG: f64 = 45.0;
@@ -23,7 +23,7 @@ const ISO_PITCH_DEG: f64 = 35.264_389_682_754_654;
 const COMPASS_PITCH_DEG: f64 = 30.0;
 /// Storey height when no level lies above.
 const DEFAULT_STOREY: f64 = 3.0;
-const MAX_GAP: f64 = 50.0;
+const MAX_GAP: f64 = ddc_ai::limits::POSE_GAP.f();
 
 type V3 = [f64; 3];
 

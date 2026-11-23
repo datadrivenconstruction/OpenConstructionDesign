@@ -12,11 +12,11 @@ use egui::{RichText, Ui};
 use ddc_ui::theme::Role;
 
 /// Automatic resends per prompt.
-pub const MAX_TRIES: u32 = 3;
+pub const MAX_TRIES: u32 = ddc_ai::limits::RETRY_TRIES.u32v();
 /// Waits in seconds when the provider names none; index = resends already made.
 pub const BACKOFF_S: [u32; 3] = [2, 4, 8];
 /// A provider wait is kept within this many seconds.
-pub const WAIT_MAX_S: u32 = 120;
+pub const WAIT_MAX_S: u32 = ddc_ai::limits::RETRY_WAIT_UI.u32v();
 
 /// Failures that pass by themselves: busy, throttled or unreachable.
 pub const fn retryable(k: ErrKind) -> bool {

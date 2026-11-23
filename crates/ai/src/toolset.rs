@@ -180,8 +180,8 @@ pub fn wire(s: &ToolSpec) -> ToolSchema {
     let mut input = (s.input)().to_json();
     lean(&mut input, true);
     let description = match data().short.get(s.name) {
-        Some(t) => t.clone(),
-        None => compact(s.summary),
+        Some(t) => crate::limits::with_limits(s.name, t),
+        None => crate::limits::with_limits(s.name, &compact(s.summary)),
     };
     ToolSchema {
         name: s.name.to_string(),

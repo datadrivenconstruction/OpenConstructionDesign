@@ -201,7 +201,7 @@ pub fn take_fix(edits: &mut BTreeMap<String, Edit>, rule: &str, value: &J) -> Re
 }
 
 pub fn variants_of(brief: &J, seed: u64) -> Result<Vec<VarView>, String> {
-    let cfg = gen_rules::vary_cfg(brief, gen_rules::MAX_VARIANTS, seed, &[])?;
+    let cfg = gen_rules::vary_cfg(brief, gen_rules::max_variants(), seed, &[])?;
     let v = gen_rules::variants(brief, &cfg)?;
     Ok(v.chosen
         .iter()
@@ -810,7 +810,7 @@ mod tests {
     #[test]
     fn variants_sketch_their_footprint() {
         let v = variants_of(&office(), 1).unwrap();
-        assert!(!v.is_empty() && v.len() <= gen_rules::MAX_VARIANTS);
+        assert!(!v.is_empty() && v.len() <= gen_rules::max_variants());
         for x in &v {
             assert!(x.outlines[0].len() == 4 && x.penalty.is_finite());
         }

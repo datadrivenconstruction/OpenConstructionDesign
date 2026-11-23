@@ -12,9 +12,9 @@ use serde_json::json;
 use std::sync::Arc;
 
 /// Long side of the stored image: enough to compare shapes, cheap to send.
-pub const MAX_SIDE: u32 = 768;
+pub const MAX_SIDE: u32 = ddc_ai::limits::REFERENCE_SIDE.u32v();
 /// Files above this are refused before decoding.
-const MAX_BYTES: u64 = 20 * 1024 * 1024;
+const MAX_BYTES: u64 = ddc_ai::limits::REFERENCE_BYTES.n();
 
 pub fn get_reference(
     c: &mut Core,

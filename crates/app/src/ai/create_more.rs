@@ -20,7 +20,7 @@ use serde_json::{json, Value as J};
 const TYPE_KEYS: [&str; 4] = ["wall_type", "slab_type", "member_type", "comp_type"];
 
 /// Most types one `create_elements` call makes: each is its own plan item.
-pub const MAX_TYPES_PER_CALL: usize = 24;
+pub const MAX_TYPES_PER_CALL: usize = ddc_ai::limits::TYPES_PER_CALL.us();
 
 /// The item with `{"wall_type": "X"}` (or another table word) read as its `type`.
 pub(super) fn type_alias(o: &J) -> J {

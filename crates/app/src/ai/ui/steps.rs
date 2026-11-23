@@ -14,9 +14,9 @@ use ddc_ui::Theme;
 use egui::{self, Align, Color32, RichText, Sense, Ui, Vec2};
 
 /// Longest failure text kept for a step, in characters.
-const DETAIL_MAX: usize = 300;
+const DETAIL_MAX: usize = ddc_ai::limits::UI_DETAIL.us();
 /// Longest tool name accepted from a saved chat.
-const NAME_MAX: usize = 48;
+const NAME_MAX: usize = ddc_ai::limits::STEP_NAME.us();
 /// Most steps of one run kept in the saved chat.
 pub const SAVED_PER_RUN: usize = 16;
 

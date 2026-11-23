@@ -8,10 +8,10 @@ use std::borrow::Cow;
 
 /// Defaults for values the model fills in: nothing honest comes near them, and bulk
 /// edits go through frozen sets rather than long lists.
-const MAX_STR_CHARS: usize = 256 * 1024;
-const MAX_ITEMS: usize = 10_000;
-const MAX_MAP_KEYS: usize = 1000;
-const MAX_FIELD_NAME_SHOWN: usize = 64;
+const MAX_STR_CHARS: usize = crate::limits::SCHEMA_STR.us();
+const MAX_ITEMS: usize = crate::limits::SCHEMA_ITEMS.us();
+const MAX_MAP_KEYS: usize = crate::limits::SCHEMA_KEYS.us();
+const MAX_FIELD_NAME_SHOWN: usize = crate::limits::SCHEMA_FIELD_SHOWN.us();
 
 fn check_str(v: &J, path: &str, max: usize) -> Result<(), String> {
     let Some(s) = v.as_str() else {

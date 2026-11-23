@@ -6,15 +6,16 @@
 use serde_json::{json, Value as J};
 use std::collections::HashMap;
 
-/// A longer string is cut: names and values fit, a pasted instruction does not.
-pub const TEXT_MAX: usize = 120;
+/// A longer model string is cut, and marked: names and values fit, a pasted instruction does not.
+/// Text the model works from (definitions, references, scripts) goes through `put_text`.
+pub const TEXT_MAX: usize = ddc_ai::limits::TEXT_CLIP.us();
 /// Facet values shown per column.
 pub const FACET_TOP: usize = 8;
 /// The first field of every reply: what follows is data, not instructions.
 const MARK: &str = "\"untrusted\":\"data\"";
 /// `next`, `<k>_more` and the closing brace are written from here, so a full reply keeps its cursor.
 const TAIL_RESERVE: usize = 96;
-const ERROR_MAX: usize = 1000;
+const ERROR_MAX: usize = ddc_ai::limits::ERROR_CLIP.us();
 
 /// Control and bidi characters can hide text from the person reading the card.
 fn hidden(c: char) -> bool {
@@ -35,16 +36,20 @@ pub fn text(s: &str) -> String {
     clip(s, TEXT_MAX)
 }
 
+/// At most `max` characters; a cut is never silent: `…[+N chars cut]` says how much is gone.
 pub fn clip(s: &str, max: usize) -> String {
     let mut out = String::with_capacity(s.len().min(max * 2));
-    let mut n = 0;
+    let (mut n, mut rest) = (0, 0usize);
     for c in s.chars().filter(|c| !hidden(*c)) {
         if n == max {
-            out.push('…');
-            break;
+            rest += 1;
+            continue;
         }
         out.push(c);
         n += 1;
+    }
+    if rest > 0 {
+        out.push_str(&format!("…[+{rest} chars cut]"));
     }
     out
 }
@@ -258,6 +263,17 @@ impl Out {
         self
     }
 
+    /// Long text the model works from (a family definition, a reference): hidden characters go
+    /// and command-like text is counted, but nothing is cut; too large for the budget: `omitted`.
+    pub fn put_text(&mut self, k: &str, v: &str) -> &mut Self {
+        let clean = visible(v);
+        let f = u32::from(looks_like_command(&clean));
+        if self.raw(k, &J::String(clean).to_string()) {
+            self.flagged += f;
+        }
+        self
+    }
+
     /// A field written by this program (generator help, field lists): not cut to 120 chars.
     pub fn put_own(&mut self, k: &str, v: &J) -> &mut Self {
         self.raw(k, &v.to_string());
@@ -394,7 +410,18 @@ mod tests {
     fn text_strips_hidden_characters_and_cuts() {
         assert_eq!(text("a\u{202e}b\u{0}c\nd"), "abcd");
         let long = "\u{44f}".repeat(500);
-        assert_eq!(text(&long).chars().count(), TEXT_MAX + 1);
+        let cut = text(&long);
+        assert!(cut.starts_with(&"\u{44f}".repeat(TEXT_MAX)), "{cut}");
+        assert!(cut.ends_with("…[+380 chars cut]"), "{cut}");
+    }
+
+    #[test]
+    fn put_text_keeps_long_text_whole() {
+        let long = "line of a family definition;".repeat(40);
+        let mut o = Out::new(10_000);
+        o.put_text("text", &long);
+        let v: J = serde_json::from_str(&o.finish().text).unwrap();
+        assert_eq!(v["text"].as_str().unwrap(), long);
     }
 
     #[test]

@@ -12,10 +12,8 @@ use ddc_model::Boundary;
 use serde_json::{json, Value as J};
 use std::collections::BTreeMap;
 
-const DEFAULT_LIMIT: usize = 20;
-const MAX_LIMIT: usize = 100;
-const TOPO_LIMIT: usize = 50;
-const TOPO_MAX: usize = 200;
+const DEFAULT_LIMIT: usize = ddc_ai::limits::QUERY_DEFAULT.us();
+const TOPO_LIMIT: usize = ddc_ai::limits::TOPO_DEFAULT.us();
 /// Metres: two points closer than this are the same point.
 const TOL: f64 = 0.01;
 const RELS: [&str; 7] = [
@@ -283,6 +281,9 @@ pub struct RHit {
 pub struct Found {
     pub rel: &'static str,
     pub total: usize,
+    /// Rows skipped before `hits`; `note` says when the asked limit was lowered.
+    pub offset: usize,
+    pub note: Option<String>,
     pub hits: Vec<RHit>,
 }
 
@@ -412,12 +413,6 @@ fn parse_rel_ref(a: &J) -> Result<(&'static str, &'static str, i64), String> {
     Ok((rel, cat, id))
 }
 
-fn limit_of(a: &J, default: usize, max: usize) -> usize {
-    a["limit"]
-        .as_u64()
-        .map_or(default, |n| (n as usize).clamp(1, max))
-}
-
 /// Runs one relation question. `a.limit` (default 20, at most 100) cuts the rows; `total` counts all.
 pub fn run_relations(r: &Rel, a: &J) -> Result<Found, String> {
     let (rel, cat, id) = parse_rel_ref(a)?;
@@ -527,10 +522,10 @@ pub fn run_relations(r: &Rel, a: &J) -> Result<Found, String> {
             .then(x.id.cmp(&y.id))
             .then_with(|| x.tag.cmp(&y.tag))
     });
-    let limit = limit_of(a, DEFAULT_LIMIT, MAX_LIMIT);
+    let (limit, offset, note) = ddc_ai::limits::page_args(a, DEFAULT_LIMIT, &ddc_ai::limits::QUERY_PAGE);
     let total = hits.len();
-    hits.truncate(limit);
-    Ok(Found { rel, total, hits })
+    let hits = hits.into_iter().skip(offset).take(limit).collect();
+    Ok(Found { rel, total, offset, note, hits })
 }
 
 /// Both ends of the wall lie on the infinite line of the grid, and the two are parallel.
@@ -565,8 +560,17 @@ pub fn answer_relations(r: &Rel, a: &J, max_chars: usize) -> Result<Reply, Strin
     o.put("rel", &json!(f.rel));
     o.put("total", &json!(f.total));
     o.put("returned", &json!(rows.len()));
-    o.put("more", &json!(f.total - rows.len()));
-    o.list("rows", &rows);
+    o.put("more", &json!(f.total - f.offset.min(f.total) - rows.len()));
+    if f.offset > 0 || f.offset + rows.len() < f.total {
+        o.put_own("truncated", &ddc_ai::limits::truncated(f.offset, rows.len(), f.total));
+    }
+    if let Some(n) = &f.note {
+        o.put_own("limit_note", &json!(n));
+    }
+    let n = o.list("rows", &rows);
+    if n < rows.len() {
+        o.put_own("next", &json!({"offset": f.offset + n}));
+    }
     Ok(o.finish())
 }
 
@@ -635,8 +639,11 @@ pub fn topology(r: &Rel, level: i64) -> Topo {
 pub fn answer_topology(r: &Rel, a: &J, max_chars: usize) -> Result<Reply, String> {
     let level = a["level"].as_i64().ok_or("level must be a level id")?;
     let t = topology(r, level);
-    let limit = limit_of(a, TOPO_LIMIT, TOPO_MAX);
+    let (limit, _, note) = ddc_ai::limits::page_args(a, TOPO_LIMIT, &ddc_ai::limits::TOPO_PAGE);
     let mut o = fmt::Out::new(max_chars);
+    if let Some(n) = &note {
+        o.put_own("limit_note", &json!(n));
+    }
     o.put("units", &json!({"length": "m"}));
     o.put("level", &json!(t.level));
     o.put("walls", &json!(t.walls));

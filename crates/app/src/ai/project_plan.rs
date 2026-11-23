@@ -76,7 +76,7 @@ impl From<project::block::Built> for Built {
 static PRIMED: std::sync::Mutex<std::collections::VecDeque<(String, Built)>> =
     std::sync::Mutex::new(std::collections::VecDeque::new());
 /// Covers the largest block the tool takes; older ones are built again when compiled.
-const PRIMED_MAX: usize = 200;
+const PRIMED_MAX: usize = ddc_ai::limits::PRIMED.us();
 
 /// `b` is what [`build`] gives for `input`: the next build of the same text reads it.
 pub fn prime(input: &J, b: Built) {

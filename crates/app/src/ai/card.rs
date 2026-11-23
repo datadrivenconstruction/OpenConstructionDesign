@@ -7,12 +7,12 @@ use super::fmt::{self, Out, Reply};
 use serde_json::{json, Value as J};
 
 /// Hard limit of one card, in characters.
-pub const CARD_MAX: usize = 400;
+pub const CARD_MAX: usize = ddc_ai::limits::CARD_CHARS.us();
 /// Default budget of `model_summary`, in tokens.
 pub const SUMMARY_TOKENS: usize = 1500;
 const CHARS_PER_TOKEN: usize = 4;
 const SUMMARY_MIN_CHARS: usize = 300;
-const PART_MAX: usize = 80;
+const PART_MAX: usize = ddc_ai::limits::CARD_PART.us();
 const SEP: &str = " \u{b7} ";
 /// Room kept for the closing ` \u{b7} +NN more`.
 const CUT_RESERVE: usize = 12;

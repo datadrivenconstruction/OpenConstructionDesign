@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! After a draft step the realism critic runs on the scratch copy. Its findings go back to the
-//! model as tasks (at most `MAX_CYCLES` per turn), and, when the project allows snapshots,
+//! model as tasks (at most `max_cycles()` per turn), and, when the project allows snapshots,
 //! small views of the draft go along so the model can look at what it built.
 
 use super::render_off;
@@ -12,9 +12,12 @@ use ddc_model::checks::{realism, CheckScope, Finding};
 use ddc_ui::{Catalog, Lang};
 use std::sync::atomic::Ordering;
 
-pub const MAX_CYCLES: u8 = 3;
+/// Review cycles per turn (`limits::CRITIC_CYCLES`, a setting).
+pub fn max_cycles() -> u8 {
+    ddc_ai::limits::CRITIC_CYCLES.get().min(u64::from(u8::MAX)) as u8
+}
 /// Findings listed per cycle; the rest are counted.
-const MAX_LISTED: usize = 12;
+const MAX_LISTED: usize = ddc_ai::limits::CRITIC_LISTED.us();
 /// Tools after which the draft has changed shape.
 pub const DRAFT_TOOLS: [&str; 5] = [
     "create_geometry",
@@ -26,9 +29,9 @@ pub const DRAFT_TOOLS: [&str; 5] = [
 /// Low resolution on purpose: three views per step must stay cheap.
 const SNAP_PX: u32 = 384;
 
-/// One more refinement cycle is allowed while fewer than `MAX_CYCLES` have run this turn.
+/// One more refinement cycle is allowed while fewer than `max_cycles()` have run this turn.
 pub fn may_cycle(done: u8) -> bool {
-    done < MAX_CYCLES
+    done < max_cycles()
 }
 
 pub fn is_draft_tool(name: &str) -> bool {
@@ -59,9 +62,10 @@ pub fn critic_note(c: &mut Core) -> Option<String> {
     }
     if !may_cycle(c.critic_cycles) {
         return Some(format!(
-            "critic: {} findings remain after {MAX_CYCLES} refinement cycles; \
-             stop correcting and tell the user what is left",
-            list.len()
+            "critic: {} findings remain after {} refinement cycles (limit `critic_cycles`, \
+             adjustable in Settings > AI); stop correcting and tell the user what is left",
+            list.len(),
+            max_cycles()
         ));
     }
     c.critic_cycles += 1;
@@ -71,8 +75,9 @@ pub fn critic_note(c: &mut Core) -> Option<String> {
         lines.push(format!("- and {} more", list.len() - lines.len()));
     }
     Some(format!(
-        "critic cycle {}/{MAX_CYCLES}: fix these before you answer\n{}",
+        "critic cycle {}/{}: fix these before you answer\n{}",
         c.critic_cycles,
+        max_cycles(),
         lines.join("\n")
     ))
 }

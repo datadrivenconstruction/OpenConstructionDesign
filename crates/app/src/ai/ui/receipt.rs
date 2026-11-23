@@ -15,7 +15,7 @@ use egui::{self, RichText, Ui};
 use std::collections::{BTreeMap, HashSet};
 
 /// Touched elements kept per receipt (and per stored chat row).
-pub const IDS_CAP: usize = 500;
+pub const IDS_CAP: usize = ddc_ai::limits::RECEIPT_IDS.us();
 /// Categories named on the card; the rest fold into "+N more".
 pub const TOP_CATS: usize = 3;
 /// Tables whose rows are elements; types, parameters and settings are not counted.

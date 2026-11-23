@@ -10,7 +10,7 @@ use ddc_ai::mcp::tools as mcp_tools;
 use ddc_ops::{Actor, Envelope, WireError};
 
 /// More than this is a script's job, not one card.
-pub const MAX_OPS: usize = 5000;
+pub const MAX_OPS: usize = ddc_ai::limits::MCP_OPS.us();
 const KEPT_PROPOSALS: usize = 64;
 
 /// A problem the person or the agent can act on. `path` is a JSON pointer into the envelope.

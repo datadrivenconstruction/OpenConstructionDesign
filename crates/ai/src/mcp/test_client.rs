@@ -9,7 +9,7 @@ use std::net::TcpStream;
 use std::time::Duration;
 
 const VERSION: &str = "2026-07-28";
-const TIMEOUT: Duration = Duration::from_secs(300);
+const TIMEOUT: Duration = crate::limits::MCP_TEST_TIMEOUT.dur();
 
 #[derive(Debug)]
 pub struct Reply {

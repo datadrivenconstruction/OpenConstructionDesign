@@ -4,7 +4,7 @@
 //! character cut by a network chunk boundary survives.
 
 /// Longer than any honest event; past it a server is only filling our memory.
-pub(crate) const MAX_EVENT_BYTES: usize = 8 * 1024 * 1024;
+pub(crate) const MAX_EVENT_BYTES: usize = crate::limits::SSE_EVENT.us();
 
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub(crate) struct SseEvent {

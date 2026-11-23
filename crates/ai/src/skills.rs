@@ -6,7 +6,7 @@
 /// The scheme of every guide address.
 pub const URI_PREFIX: &str = "ddc://skills/";
 /// A guide longer than this costs the agent more context than it saves.
-pub const MAX_BYTES: usize = 6 * 1024;
+pub const MAX_BYTES: usize = crate::limits::SKILL_BYTES.us();
 pub const MIME: &str = "text/markdown";
 
 pub struct Skill {

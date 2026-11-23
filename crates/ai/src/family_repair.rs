@@ -36,7 +36,7 @@ impl Default for RepairPolicy {
 
 /// Lines of context around a finding.
 const AROUND: usize = 3;
-const MAX_FINDINGS_SHOWN: usize = 5;
+const MAX_FINDINGS_SHOWN: usize = crate::limits::REPAIR_SHOWN.us();
 
 #[derive(Clone, Debug, Default)]
 pub struct RepairState {

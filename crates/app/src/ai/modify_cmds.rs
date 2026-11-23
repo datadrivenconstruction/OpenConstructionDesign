@@ -13,8 +13,10 @@ use ddc_ai::registry::{CmdError, ErrorCode};
 use ddc_ai::CallCx;
 use serde_json::Value as J;
 
-/// Most copies one call may ask for; the array tool keeps the same cap.
-pub const MAX_COPIES: usize = 200;
+/// Most copies one call makes (`limits::COPIES`, a setting).
+pub fn max_copies() -> usize {
+    ddc_ai::limits::COPIES.get_us()
+}
 
 fn bad(path: &str, why: &str) -> String {
     format!("args.{path}: {why}")
@@ -52,8 +54,9 @@ fn flag(a: &J, k: &str, default: bool) -> Result<bool, String> {
 
 fn count(a: &J) -> Result<usize, String> {
     match a["count"].as_u64() {
-        Some(n) if (2..=MAX_COPIES as u64 + 1).contains(&n) => Ok(n as usize),
-        _ => Err(bad("count", &format!("needs a whole number 2..={}", MAX_COPIES + 1))),
+        Some(n) if (2..=max_copies() as u64 + 1).contains(&n) => Ok(n as usize),
+        Some(n) if n > max_copies() as u64 + 1 => Err(bad("count", &ddc_ai::limits::COPIES.refusal(format!("{} copies", n - 1)))),
+        _ => Err(bad("count", &format!("needs a whole number 2..={}", max_copies() + 1))),
     }
 }
 
@@ -171,8 +174,10 @@ pub fn place_footings(c: &mut Core, a: &J, cx: &CallCx<'_>) -> Result<Done, Stri
     add_op(c, a, cx, PlanOp::Tool(ToolAct::FootingsUnderColumns { level }))
 }
 
-/// Most survey points one call may carry.
-pub const MAX_TERRAIN_POINTS: usize = 5000;
+/// Most survey points one call may carry (`limits::TERRAIN_POINTS`, a setting).
+pub fn max_terrain_points() -> usize {
+    ddc_ai::limits::TERRAIN_POINTS.get_us()
+}
 
 fn ring_arg(a: &J, k: &str) -> Result<Vec<P2>, String> {
     match &a[k] {
@@ -200,8 +205,9 @@ fn terrain_points(a: &J, boundary: &[P2]) -> Result<Vec<(f64, f64, f64)>, String
                 .collect()
         });
         return match pts {
-            Some(p) if (3..=MAX_TERRAIN_POINTS).contains(&p.len()) => Ok(p),
-            _ => Err(bad("points", &format!("needs 3..={MAX_TERRAIN_POINTS} [x, y, z] points in metres"))),
+            Some(p) if (3..=max_terrain_points()).contains(&p.len()) => Ok(p),
+            Some(p) if p.len() > max_terrain_points() => Err(bad("points", &ddc_ai::limits::TERRAIN_POINTS.refusal(format!("{} points", p.len())))),
+            _ => Err(bad("points", &format!("needs 3..={} [x, y, z] points in metres", max_terrain_points()))),
         };
     }
     if boundary.is_empty() {
@@ -306,8 +312,11 @@ pub fn move_elements(c: &mut Core, a: &J, cx: &CallCx<'_>) -> Result<Done, Strin
 
 pub fn copy_elements(c: &mut Core, a: &J, cx: &CallCx<'_>) -> Result<Done, String> {
     let list = a["offsets"].as_array().ok_or_else(|| bad("offsets", "needs [[dx, dy], ...]"))?;
-    if list.is_empty() || list.len() > MAX_COPIES {
-        return Err(bad("offsets", &format!("needs 1..={MAX_COPIES} offsets")));
+    if list.len() > max_copies() {
+        return Err(bad("offsets", &ddc_ai::limits::COPIES.refusal(format!("{} offsets", list.len()))));
+    }
+    if list.is_empty() {
+        return Err(bad("offsets", "needs at least one offset"));
     }
     let mut by = Vec::with_capacity(list.len());
     for (i, o) in list.iter().enumerate() {

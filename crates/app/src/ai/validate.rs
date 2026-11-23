@@ -21,8 +21,8 @@ pub const LARGE_DELETE: usize = 50;
 /// (`DIFF_LIMIT`), so a larger plan could not be shown or verified.
 pub const REFUSED_PLAN: usize = 150_000;
 /// The highest the refusal limit can be set: just below the change list's size.
-pub const REFUSED_PLAN_MAX: usize = 199_999;
-const MAX_RULE_FINDINGS: usize = 200;
+pub const REFUSED_PLAN_MAX: usize = ddc_ai::limits::REFUSED_PLAN.us();
+const MAX_RULE_FINDINGS: usize = ddc_ai::limits::RULE_FINDINGS.us();
 /// Below this many deleted elements the shares do not apply: a 9-wall house loses a wall at 11 %,
 /// and a person's ordinary edits would all need "Allow large". The card names 50 for categories.
 pub const MASS_MIN: usize = 50;

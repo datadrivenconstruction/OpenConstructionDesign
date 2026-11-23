@@ -17,7 +17,7 @@ use std::sync::OnceLock;
 pub const REGISTRY_VERSION: u32 = 1;
 /// Prefix of the en/ru description keys: `api.cmd.<id>`.
 pub const TEXT_PREFIX: &str = "api.cmd.";
-pub const MAX_SHOWN_ID: usize = 64;
+pub const MAX_SHOWN_ID: usize = crate::limits::SHOWN_ID.us();
 
 pub use crate::catalog::{Answer, Effect, Kind};
 

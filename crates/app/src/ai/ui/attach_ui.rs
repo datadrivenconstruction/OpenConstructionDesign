@@ -42,12 +42,14 @@ impl AttachState {
             let old = self.files.remove(i);
             self.req.remove_file(&old.name);
         }
-        if self.files.len() >= attach::MAX_FILES {
-            return Err(format!("at most {} files", attach::MAX_FILES));
+        if self.files.len() >= attach::max_files() {
+            let n = self.files.len() + 1;
+            return Err(ddc_ai::limits::ATTACH_FILES.refusal(format!("{n} files")));
         }
         let total: u64 = self.files.iter().map(|f| f.size).sum::<u64>() + d.size;
-        if total > attach::MAX_TOTAL {
-            return Err(format!("at most {} MB in all", attach::MAX_TOTAL >> 20));
+        if total > attach::max_total() {
+            let mb = total.div_ceil(1 << 20);
+            return Err(ddc_ai::limits::ATTACH_TOTAL.refusal(format!("{mb} MB of attachments")));
         }
         self.req.add_file(&d);
         self.files.push(Arc::new(d));
@@ -390,7 +392,7 @@ mod tests {
     #[test]
     fn the_file_limit_holds() {
         let mut st = AttachState::default();
-        for i in 0..attach::MAX_FILES {
+        for i in 0..attach::max_files() {
             txt(&format!("{i}.txt"), "x", &mut st);
         }
         let id = st.next_id();
