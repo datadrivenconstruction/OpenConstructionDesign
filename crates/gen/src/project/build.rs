@@ -472,12 +472,10 @@ fn room_units(rooms: &[RoomReq], d: Mm, spec: &ProjectSpec) -> Vec<Unit> {
 /// inner depth grows until the facade is long enough for the inner rooms and a hall.
 fn apartment_unit(a: &ApartmentReq, d: Mm, ru: bool) -> Result<Unit, GenError> {
     let dm = m(d);
-    let facade: Vec<&RoomReq> = a
-        .rooms
-        .iter()
-        .filter(|r| !r.kind.inner() && r.kind != RoomKind::Hall)
-        .collect();
-    let inner: Vec<&RoomReq> = a.rooms.iter().filter(|r| r.kind.inner()).collect();
+    // a line with a count (two bedrooms) is that many rooms
+    let each = || a.rooms.iter().flat_map(|r| std::iter::repeat_n(r, r.count as usize));
+    let facade: Vec<&RoomReq> = each().filter(|r| !r.kind.inner() && r.kind != RoomKind::Hall).collect();
+    let inner: Vec<&RoomReq> = each().filter(|r| r.kind.inner()).collect();
     let hall_name = a
         .rooms
         .iter()
@@ -1084,6 +1082,16 @@ fn fill_spare(spec: &ProjectSpec, cells: &mut Vec<Cell>, (x, end): (Mm, Mm), nor
     let spare = end - x;
     let yn = f.ds + f.c;
     let (y0, y1) = if north { (yn, f.d) } else { (0, f.ds) };
+    // a sliver too short for a door widens the rooms that end at it instead
+    let door = mm(rule("room.door")) + 2 * rule_mm("facade.edge_clear");
+    let beside = |c: &Cell| c.x1 == x && c.y0 >= y0 && c.y1 <= y1;
+    if spare < door && cells.iter().any(beside) {
+        for c in cells.iter_mut().filter(|c| beside(c)) {
+            c.x1 = end;
+            c.grown |= c.asked.is_some();
+        }
+        return;
+    }
     let parks = spec
         .rooms
         .iter()
