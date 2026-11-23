@@ -10,13 +10,26 @@
 <p align="center">A free, open-source CAD-BIM editor that your AI can drive.</p>
 
 <p align="center">
-  <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/releases"><img src="https://img.shields.io/github/v/release/datadrivenconstruction/OpenConstructionDesign?include_prereleases&label=release" alt="Release"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/licence-AGPL--3.0-blue.svg" alt="Licence: AGPL-3.0"></a>
-  <img src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20CLI-lightgrey.svg" alt="Platform: Windows, Linux CLI">
+  <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/releases/latest"><img src="https://img.shields.io/github/v/release/datadrivenconstruction/OpenConstructionDesign?style=flat-square&label=release&color=3b6cf6" alt="Latest release"></a>
+  <img src="https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-0f172a?style=flat-square" alt="Platform: Windows 10/11 x64">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/licence-AGPL--3.0-3b6cf6?style=flat-square" alt="Licence: AGPL-3.0"></a>
+  <img src="https://img.shields.io/badge/rust-1.89%2B%20%C2%B7%20edition%202021-b7410e?style=flat-square" alt="Rust 1.89+, edition 2021">
+  <img src="https://img.shields.io/badge/IFC4-in%20%26%20out-2f855a?style=flat-square" alt="IFC4 in and out">
+  <a href="#mcp-server"><img src="https://img.shields.io/badge/MCP-compatible-6d4aff?style=flat-square" alt="MCP compatible"></a>
+  <a href="#erp-link-change-the-model-the-estimate-follows"><img src="https://img.shields.io/badge/ERP-ready-e8590c?style=flat-square" alt="ERP-ready"></a>
+  <br>
+  <a href="https://openconstructiondesign.com"><img src="https://img.shields.io/badge/website-openconstructiondesign.com-3b6cf6?style=flat-square" alt="Website"></a>
+  <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/commits/main"><img src="https://img.shields.io/github/last-commit/datadrivenconstruction/OpenConstructionDesign/main?style=flat-square" alt="Last commit"></a>
+  <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/stargazers"><img src="https://img.shields.io/github/stars/datadrivenconstruction/OpenConstructionDesign?style=flat-square" alt="Stars"></a>
+  <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/issues"><img src="https://img.shields.io/github/issues/datadrivenconstruction/OpenConstructionDesign?style=flat-square" alt="Open issues"></a>
+  <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/discussions"><img src="https://img.shields.io/github/discussions/datadrivenconstruction/OpenConstructionDesign?style=flat-square" alt="Discussions"></a>
+  <a href="#contributing"><img src="https://img.shields.io/badge/PRs-welcome-2f855a?style=flat-square" alt="PRs welcome"></a>
 </p>
 
 <p align="center">
-  <a href="#install">Install</a> ·
+  <a href="#download">Download</a> ·
+  <a href="#install-in-60-seconds">Install</a> ·
+  <a href="#erp-link-change-the-model-the-estimate-follows">ERP link</a> ·
   <a href="#quickstart">Quickstart</a> ·
   <a href="#what-you-can-build">Gallery</a> ·
   <a href="#the-editor">Editor</a> ·
@@ -34,6 +47,29 @@
   </picture>
 </p>
 
+<h2 id="download" align="center">Download</h2>
+
+<p align="center">
+  <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/releases/latest/download/OpenConstructionDesign-v1.0.0-windows-x64.zip">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="docs/images/download-dark.webp">
+      <img src="docs/images/download-light.webp" alt="Download for Windows (zip)" width="460">
+    </picture>
+  </a>
+</p>
+
+<p align="center">
+  <b>v1.0.0</b> · 62 MB zip · Windows 10/11 x64 · 8 GB RAM · DirectX 12, Vulkan or OpenGL · works offline
+</p>
+
+<p align="center">
+  <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/releases">All releases</a> ·
+  <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/releases/latest/download/OpenConstructionDesign-v1.0.0-linux-x64.tar.gz">Linux CLI (71 MB)</a> ·
+  <a href="https://openconstructiondesign.com">Website</a> ·
+  <a href="https://openconstructiondesign.com/app/">Browser viewer</a> ·
+  <a href="docs/USER_GUIDE.md">User guide</a>
+</p>
+
 OpenConstructionDesign is a CAD-BIM editor written in Rust, with its own geometry kernel and file
 readers. You describe a building in the built-in chat, over MCP or as a JSON brief; the editor
 produces real walls, rooms, doors, stairs and building services as a highlighted draft, and
@@ -42,34 +78,85 @@ or run a local model through Ollama. The model and its full change history live 
 file on your machine, and IFC goes in and out.
 
 > [!NOTE]
-> The latest release is **0.10.0 beta 1**. The project file format, the APIs and the interface
+> The latest release is **v1.0.0**. The project file format, the APIs and the interface
 > can still change between releases. Keep the original of every model you open and keep an IFC
 > export for long-term storage. See [Current limits](#current-limits).
 
-## Install
+## Install in 60 seconds
 
-| Platform | Download | Notes |
-|---|---|---|
-| Windows 10/11, x64 | `OpenConstructionDesign-v0.10.0-beta.1-windows-x64.zip` (61 MB) | Full editor, works offline, no account |
-| Linux x64 | `OpenConstructionDesign-v0.10.0-beta.1-linux-x64.tar.gz` (70 MB) | Headless `ddc` CLI only, no editor window yet |
-| macOS | none yet | Code paths exist but are not tested; [build from source](#build-from-source) |
-
-Get both files from [Releases](https://github.com/datadrivenconstruction/OpenConstructionDesign/releases).
-Unzip the Windows folder anywhere (nothing is installed in the system) and start `ddc-app.exe`.
-The build is not code-signed yet, so Windows SmartScreen may warn once: choose
-**More info → Run anyway**, and check the SHA-256 on the release page if you want to be sure.
+1. **Download** [`OpenConstructionDesign-v1.0.0-windows-x64.zip`](https://github.com/datadrivenconstruction/OpenConstructionDesign/releases/latest/download/OpenConstructionDesign-v1.0.0-windows-x64.zip) (62 MB).
+2. **Unzip anywhere and run `ddc-app.exe`.** Nothing is installed in the system and no account is
+   needed. The build is not code-signed yet, so Windows SmartScreen may warn once: choose
+   **More info → Run anyway**, and check the SHA-256 on the release page if you want to be sure.
+   If the window does not open or rendering is broken, start `ddc-app.exe --safe-graphics`.
+3. **Make something.** Open **Ask AI** in the ribbon and describe a change, open an IFC file, or
+   generate a whole building from the sample brief
+   [`brief.de-residential.json`](crates/io/contract/examples/brief.de-residential.json)
+   (see [Quickstart](#quickstart)).
 
 <details>
-<summary>System requirements (provisional)</summary>
+<summary>Linux: headless CLI</summary>
 
-| | |
-|---|---|
-| OS | Windows 10 or 11, x64; Linux x64 for the CLI |
-| Memory | 8 GB RAM recommended |
-| Graphics | DirectX 12, Vulkan or OpenGL |
-
-If the window does not open or rendering is broken, start with `ddc-app.exe --safe-graphics`.
+The Linux x64 archive
+[`OpenConstructionDesign-v1.0.0-linux-x64.tar.gz`](https://github.com/datadrivenconstruction/OpenConstructionDesign/releases/latest/download/OpenConstructionDesign-v1.0.0-linux-x64.tar.gz)
+(71 MB) holds the `ddc` command line tool only; there is no editor window on Linux yet. macOS has
+no build; code paths exist but are not tested.
 </details>
+
+<details>
+<summary>Build from source</summary>
+
+Needs Git, the MSVC build tools and Rust 1.89+ via [rustup](https://rustup.rs/); details in
+[Build from source](#build-from-source) and [docs/BUILDING.md](docs/BUILDING.md).
+
+```powershell
+git clone https://github.com/datadrivenconstruction/OpenConstructionDesign.git
+cd OpenConstructionDesign
+cargo build --release -p ddc-app -p ddc-cli
+cargo run --release -p ddc-app
+```
+</details>
+
+<details>
+<summary>CLI quick start: a building from a brief</summary>
+
+`ddc gen` is compiled in with the `link` feature (`cargo build --release -p ddc-cli --features link`).
+
+```sh
+ddc gen --brief crates/io/contract/examples/brief.de-residential.json --out housing.ddc
+ddc info housing.ddc
+ddc open housing.ddc --export ifc4 housing.ifc
+```
+</details>
+
+## ERP link: change the model, the estimate follows
+
+<p align="center">
+  <a href="https://openconstructiondesign.com/#erp">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="docs/images/erp-link-dark.webp">
+      <img src="docs/images/erp-link-light.webp" alt="Flow from an ERP project brief through ddc gen, the editor and ddc publish to an estimate in OpenConstructionERP, next to the estimate screen" width="100%">
+    </picture>
+  </a>
+</p>
+
+[OpenConstructionERP](https://github.com/datadrivenconstruction/OpenConstructionERP) is the open
+construction ERP from the same team. The editor hands it every element with a stable key, its
+quantities and its level.
+
+- **Brief in, model out.** An ERP project brief goes through `ddc gen --brief`; you review the
+  draft in the editor and press **Apply**.
+- **One revision package.** `ddc publish` writes `elements.parquet`, quantities, the diff to the
+  last revision, sheets and IFC4; the ERP matches keys and updates the estimate, 4D schedule and
+  procurement.
+- **Files or a live session.** Exchange packages as files (offline) or link a session through a
+  `.ddclink` file with the token in the OS key store. Code does the maths, not the AI. An ERP
+  edition with the editor built in is in preparation.
+
+[OpenConstructionERP on GitHub](https://github.com/datadrivenconstruction/OpenConstructionERP) ·
+[openconstructionerp.com](https://openconstructionerp.com) ·
+[ERP link on the website](https://openconstructiondesign.com/#erp) ·
+[Details below](#export-ifc4-and-the-erp-link)
 
 ## Quickstart
 
