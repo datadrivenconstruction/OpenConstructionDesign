@@ -2,6 +2,11 @@ name: release
 on:
   push:
     tags: ['v*']
+  # Rebuild assets of an existing release, e.g. targets: '["ubuntu-22.04"]'.
+  workflow_dispatch:
+    inputs:
+      tag: {description: 'existing release tag', required: true}
+      targets: {description: 'JSON list of runners', default: '["windows-latest", "ubuntu-22.04"]'}
 permissions:
   contents: write
 env:
@@ -12,6 +17,7 @@ env:
 jobs:
   create:
     name: create release
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -32,13 +38,19 @@ jobs:
   build:
     name: build ${{ matrix.os }}
     needs: create
+    if: ${{ !cancelled() && (needs.create.result == 'success' || github.event_name == 'workflow_dispatch') }}
     runs-on: ${{ matrix.os }}
+    env:
+      TAG: ${{ inputs.tag || github.ref_name }}
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest]
+        # Linux builds on the oldest supported runner: the binaries need the glibc they were linked against.
+        os: ${{ fromJSON(inputs.targets || '["windows-latest", "ubuntu-22.04"]') }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.TAG }}
       - name: toolchain
         shell: bash
         run: |
@@ -52,11 +64,22 @@ jobs:
       - name: build
         shell: bash
         run: cargo build --release --locked -p ddc-app -p ddc-cli
+      - name: smoke test
+        shell: bash
+        run: |
+          target/release/ddc --version
+          target/release/ddc-app --help > /dev/null
+          if [ "$RUNNER_OS" = "Linux" ]; then
+            for b in ddc ddc-app; do
+              v=$(objdump -T "target/release/$b" | grep -o 'GLIBC_2\.[0-9]*' | sort -t. -k2 -n -u | tail -1)
+              echo "$b needs $v"
+              [ "${v#GLIBC_2.}" -le 35 ] || { echo "$b needs $v, more than Ubuntu 22.04 has"; exit 1; }
+            done
+          fi
       - name: package and upload
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
-          TAG: ${{ github.ref_name }}
         run: |
           name="OpenConstructionDesign-$TAG"
           mkdir -p "pkg/$name"
