@@ -190,6 +190,7 @@ fn cell(r: R, kind: RoomKind, ru: bool) -> Cell {
         owner: PRole::Public,
         asked: None,
         grown: false,
+        lit: kind.habitable(),
     }
 }
 

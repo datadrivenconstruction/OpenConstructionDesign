@@ -918,6 +918,7 @@ fn cell(x0: Mm, y0: Mm, x1: Mm, y1: Mm, kind: RoomKind, name: &str, owner: PRole
         owner,
         asked: None,
         grown: false,
+        lit: kind.habitable(),
     }
 }
 
@@ -1035,6 +1036,7 @@ fn floor_cells(spec: &ProjectSpec, f: &Frame, p: &Program, next_apt: &mut u32) -
                     grown: pc.asked.is_some_and(|a| {
                         e > 0 || m(pc.u1 - pc.u0) * m(pc.v1 - pc.v0) > a * 1.01
                     }),
+                    lit: pc.kind.habitable(),
                 });
             }
             x += u.len + e;
