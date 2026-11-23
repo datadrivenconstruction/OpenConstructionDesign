@@ -533,6 +533,11 @@ struct Lp<'a> {
 
 impl<'a> Lp<'a> {
     fn new(rb: &'a RingBand, d: f64, df: f64) -> Lp<'a> {
+        Lp::with_runs(rb, d, df, 0)
+    }
+
+    /// `tight` 1 drops the corner runs, 2 the door runs too, for a facade too short for them.
+    fn with_runs(rb: &'a RingBand, d: f64, df: f64, tight: u8) -> Lp<'a> {
         let depth = [(0.0, d), (0.0, df), (df, d)];
         let n = rb.edges.len();
         let corner = |i: usize| {
@@ -550,9 +555,9 @@ impl<'a> Lp<'a> {
                 let pieces = e.full(h0, h1);
                 let last = pieces.len().saturating_sub(1);
                 for (j, (a, b)) in pieces.into_iter().enumerate() {
-                    let base = if corr && b - a >= 2.0 * run + MIN_ROOM_W { run } else { MARGIN };
+                    let base = if tight < 2 && corr && b - a >= 2.0 * run + MIN_ROOM_W { run } else { MARGIN };
                     // a room wrapping a corner keeps a run of wall past it for its door or window
-                    let m = |at: usize, on: bool| if on && corner(at) { base.max(CORNER_RUN) } else { base };
+                    let m = |at: usize, on: bool| if on && tight == 0 && corner(at) { base.max(CORNER_RUN) } else { base };
                     let (a, b) = (a + m(i, j == 0), b - m((i + 1) % n, j == last));
                     if b >= a {
                         v.push((st + a, st + b));
@@ -1035,7 +1040,8 @@ fn corner_fill(lp: &Lp, queue: &mut std::collections::VecDeque<Item>, cur: f64, 
     }
 }
 
-fn plan_floor(
+#[allow(clippy::too_many_arguments)]
+fn plan_floor_with(
     spec: &ProjectSpec,
     k: usize,
     rbs: &[RingBand],
@@ -1043,6 +1049,7 @@ fn plan_floor(
     df: f64,
     core: Option<&Core>,
     next_apt: &mut u32,
+    tight: u8,
 ) -> Result<FloorPlan, GenError> {
     let ru = spec.ru;
     let mut items: Vec<Item> = vec![];
@@ -1064,7 +1071,7 @@ fn plan_floor(
         }
     }
     let mut pl = Planner { spec, plan: FloorPlan::default(), next_apt };
-    let mut lps: Vec<Lp> = rbs.iter().map(|rb| Lp::new(rb, d, df)).collect();
+    let mut lps: Vec<Lp> = rbs.iter().map(|rb| Lp::with_runs(rb, d, df, tight)).collect();
     let mut queue: std::collections::VecDeque<Item> = items.into();
     let es = core.and_then(|c| c.end.as_ref());
     let rings = lps.len();
@@ -1739,7 +1746,20 @@ fn plate_band(spec: &ProjectSpec, regions: &[Region]) -> Result<f64, GenError> {
     )))
 }
 
+/// A storey with door and corner runs kept at every cut; a program too long for that facade
+/// takes the cuts at the bare margin before the storey is refused.
 fn storey(sh: &Shared, k: usize, region: &Region, slab: Vec<P>, next_apt: &mut u32) -> Result<PStorey, GenError> {
+    let first = *next_apt;
+    let mut r = storey_with(sh, k, region, slab.clone(), next_apt, 0);
+    for tight in 1..=2 {
+        let Err(e) = r else { break };
+        *next_apt = first;
+        r = storey_with(sh, k, region, slab.clone(), next_apt, tight).map_err(|_| e);
+    }
+    r
+}
+
+fn storey_with(sh: &Shared, k: usize, region: &Region, slab: Vec<P>, next_apt: &mut u32, tight: u8) -> Result<PStorey, GenError> {
     let spec = sh.spec;
     let (d, df, c) = (sh.d, sh.df, spec.corridor);
     let fl = k + 1;
@@ -1753,7 +1773,7 @@ fn storey(sh: &Shared, k: usize, region: &Region, slab: Vec<P>, next_apt: &mut u
     }
     let rbs = offset::bands(region, d).map_err(|e| infeasible(format!("floor {fl}: {e}")))?;
     let core = sh.core.filter(|_| spec.has_stair());
-    let mut plan = plan_floor(spec, k, &rbs, d, df, core, next_apt)?;
+    let mut plan = plan_floor_with(spec, k, &rbs, d, df, core, next_apt, tight)?;
     // the central core's cells
     let central = core.filter(|c| c.band.is_none());
     let core_first = plan.units.len();
