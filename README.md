@@ -171,23 +171,14 @@ All six pass `audit{strict = true}`. Nothing in the renders was edited by hand.
 
 Plan and 3D in one window. Whatever the AI drafts, you can open, edit and finish by hand.
 
-<p align="center">
-  <img src="docs/images/ui2-plan3d.webp" alt="A five-storey office generated from one brief: ground floor plan on the left, realistic 3D view on the right" width="100%">
-</p>
-<p align="center"><sub>An office generated from one brief: plan and 3D side by side, 372 rooms, 15,617 m² of floor.</sub></p>
-
 <table>
 <tr>
-<td width="50%"><img src="docs/images/sel-wall.webp" alt="Facade wall selected: Wall #14, Gen Exterior RC MW 300, 70,000 mm long, 3,600 mm high, 4 layers" width="100%"><br>Select a wall: type, length, height, layers and phases, editable in place.</td>
-<td width="50%"><img src="docs/images/sel-window.webp" alt="Window #98 in wall 14 selected: 3,400 by 3,000 mm, sill 100 mm, area 10.20 m²" width="100%"><br>Windows and doors carry their host, size, sill and area.</td>
+<td width="50%"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/editor-3d-props-dark.webp"><img src="docs/images/editor-3d-props-light.webp" alt="3D view of the six-storey housing block with flat 5.1 selected and its properties: area 16.27 m², perimeter 16,850 mm, height 3,000 mm, phases and project parameters" width="100%"></picture><br><sub>Select anything in 3D or on the plan; the Properties panel shows the real values and edits them in place.</sub></td>
+<td width="50%"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/editor-plan-rooms-dark.webp"><img src="docs/images/editor-plan-rooms-light.webp" alt="Level 2 plan of the housing block: numbered flats with names and areas, corridor, stair and lift, with water and ventilation runs" width="100%"></picture><br><sub>Rooms are named, numbered and measured, and follow every edit. Services run through the same model.</sub></td>
 </tr>
 <tr>
-<td><img src="docs/images/sel-room.webp" alt="Room 108 Meeting selected: 22.43 m², perimeter 19,300 mm, height 3,600 mm" width="100%"><br>Rooms are named, numbered and measured, and follow every edit.</td>
-<td><img src="docs/images/ui2-draw.webp" alt="Drawing new walls next to the office, with wall type and height set in the tool bar" width="100%"><br>Draw walls with the type and height set before you click.</td>
-</tr>
-<tr>
-<td><img src="docs/images/ui2-rooms.webp" alt="Ground floor with numbered rooms, names and areas, model totals in the side panel" width="100%"><br>Model totals in the side panel update with the model.</td>
-<td><img src="docs/images/sel-door.webp" alt="Door #14 in wall 85 selected: 900 by 2,100 mm" width="100%"><br>Every value in the panel is the real one from the project.</td>
+<td><picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/editor-draw-walls-dark.webp"><img src="docs/images/editor-draw-walls-light.webp" alt="Drawing a new wall: wall type and height in the tool bar, length and angle readout, horizontal and perpendicular snaps" width="100%"></picture><br><sub>Draw walls with the type and height set before you click; snaps show length, angle and alignment.</sub></td>
+<td><picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/editor-ai-generate-dark.webp"><img src="docs/images/editor-ai-generate-light.webp" alt="The Generate panel: a short brief, building type, storeys and floor height, with the steps Draft, Check and apply, Drawings, Files" width="100%"></picture><br><sub>The AI writes a draft from a brief. Nothing changes in the model until you press Apply.</sub></td>
 </tr>
 </table>
 
