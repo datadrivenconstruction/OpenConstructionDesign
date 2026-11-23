@@ -166,6 +166,7 @@ pub fn note_key(
     style: VisualStyle,
     lowered_age: Option<Duration>,
     low_tier_fresh: bool,
+    flat: bool,
 ) -> Option<(&'static str, NoteAct)> {
     if !health.usable {
         return Some(("gfx.note.unusable", NoteAct::SaferStart));
@@ -181,6 +182,10 @@ pub fn note_key(
     }
     if health.effects_failed && style.effects() {
         return Some(("gfx.note.effects", NoteAct::OpenSettings));
+    }
+    // the Speed level draws flat colours: say so for as long as the realistic style is on
+    if style == VisualStyle::Realistic && flat {
+        return Some(("gfx.note.flat", NoteAct::OpenSettings));
     }
     if level == PerfLevel::Auto {
         if lowered_age.is_some_and(|a| a < NOTE_FOR) {
@@ -204,6 +209,7 @@ pub fn status_note(a: &EditorApp, c: &ddc_ui::Catalog) -> Option<(String, String
         a.view.nav.style,
         g.lowered_age(),
         low,
+        g.ready && g.tier == Tier::Speed,
     )?;
     Some((c.t(key), c.t(&format!("{key}.tip")), act))
 }
@@ -556,7 +562,7 @@ mod tests {
         let h = Health::default();
         let s = VisualStyle::ShadedEdges;
         let fresh = Some(Duration::from_secs(1));
-        let k = |safe, h: &Health, l, st, age, low| note_key(safe, h, l, st, age, low).map(|n| n.0);
+        let k = |safe, h: &Health, l, st, age, low| note_key(safe, h, l, st, age, low, false).map(|n| n.0);
         assert_eq!(k(false, &h, PerfLevel::Auto, s, None, false), None);
         assert_eq!(
             k(false, &h, PerfLevel::Auto, s, fresh, false),
@@ -583,8 +589,13 @@ mod tests {
             ),
             Some("gfx.note.realistic")
         );
-        let (key, act) = note_key(true, &bad, PerfLevel::Auto, s, fresh, true).unwrap();
+        let (key, act) = note_key(true, &bad, PerfLevel::Auto, s, fresh, true, true).unwrap();
         assert_eq!((key, act), ("gfx.note.safe", NoteAct::NormalStart));
+        let real = VisualStyle::Realistic;
+        let flat = |l| note_key(false, &h, l, real, None, false, true).map(|n| n.0);
+        assert_eq!(flat(PerfLevel::Auto), Some("gfx.note.flat"));
+        assert_eq!(flat(PerfLevel::Speed), Some("gfx.note.flat"));
+        assert_eq!(note_key(false, &h, PerfLevel::Auto, s, None, false, true), None);
     }
 
     #[test]

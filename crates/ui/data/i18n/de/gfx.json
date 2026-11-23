@@ -45,6 +45,8 @@
  "gfx.note.lowered.tip": "Die Qualität kehrt zurück, sobald die Ansicht stillsteht. Klicken, um eine Stufe zu wählen.",
  "gfx.note.low_tier": "Auto hat für diese Grafikeinheit die höchste Geschwindigkeit gewählt",
  "gfx.note.low_tier.tip": "Klicken, um eine Stufe zu wählen.",
+ "gfx.note.flat": "Texturen sind aus: Die Stufe „Höchste Geschwindigkeit“ zeichnet flache Farben",
+ "gfx.note.flat.tip": "Materialien erscheinen im realistischen Stil auf den Stufen „Ausgewogen“ und „Höchste Qualität“. Klicken, um eine Stufe zu wählen.",
  "gfx.fatal.title": "OpenConstructionDesign kann seine Grafik nicht starten",
  "gfx.fatal.body": "Auf diesem Computer konnte keine Grafikeinheit genutzt werden, auch nicht die eingebaute Softwarelösung.\n\nGrund: {reason}\n\nWas zu tun ist:\n- den Grafiktreiber von der Herstellerseite aktualisieren und den Computer neu starten;\n- auf einem Remote-Desktop oder einer virtuellen Maschine dort die 3D-Beschleunigung einschalten;\n- wenn es weiter fehlschlägt, dieses Protokoll an den Support senden: {log}",
  "gfx.fatal.choose_safe": "Ja — mit sicherer Grafik starten.  Nein — Protokoll öffnen.  Abbrechen — schließen.",

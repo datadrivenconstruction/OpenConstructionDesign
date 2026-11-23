@@ -45,6 +45,8 @@
  "gfx.note.lowered.tip": "Chất lượng được khôi phục ngay khi góc nhìn dừng lại. Nhấp để chọn mức.",
  "gfx.note.low_tier": "Chế độ tự động đã chọn tốc độ tối đa cho card đồ họa này",
  "gfx.note.low_tier.tip": "Nhấp để chọn mức.",
+ "gfx.note.flat": "Texture đã tắt: mức “Tốc độ tối đa” vẽ màu phẳng",
+ "gfx.note.flat.tip": "Vật liệu hiển thị theo phong cách chân thực ở các mức “Cân bằng” và “Chất lượng tối đa”. Nhấp để chọn mức.",
  "gfx.fatal.title": "DDC Editor không thể khởi động đồ họa",
  "gfx.fatal.body": "Không thể dùng bộ tăng tốc đồ họa nào trên máy tính này, kể cả bộ phần mềm tích hợp.\n\nLý do: {reason}\n\nCần làm:\n- cập nhật driver đồ họa từ trang của nhà sản xuất rồi khởi động lại máy tính;\n- trên máy tính từ xa hoặc máy ảo, hãy bật tăng tốc 3D ở đó;\n- nếu vẫn lỗi, gửi nhật ký này cho bộ phận hỗ trợ: {log}",
  "gfx.fatal.choose_safe": "Có — khởi động với đồ họa an toàn.  Không — mở nhật ký.  Hủy — đóng.",

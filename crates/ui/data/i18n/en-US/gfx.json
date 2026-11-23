@@ -45,6 +45,8 @@
  "gfx.note.lowered.tip": "Quality returns as soon as the view stops. Click to choose a level.",
  "gfx.note.low_tier": "Auto chose maximum speed for this adapter",
  "gfx.note.low_tier.tip": "Click to choose a level.",
+ "gfx.note.flat": "Textures are off: the Maximum speed level draws flat colors",
+ "gfx.note.flat.tip": "Materials show in the realistic style at the Balanced and Maximum quality levels. Click to choose a level.",
  "gfx.fatal.title": "DDC Editor cannot start its graphics",
  "gfx.fatal.body": "No graphics adapter on this computer could be used, the built-in software one included.\n\nReason: {reason}\n\nWhat to do:\n- update the graphics driver from the manufacturer's site and restart the computer;\n- on a remote desktop or a virtual machine, turn on 3D acceleration there;\n- if it keeps failing, send this log to support: {log}",
  "gfx.fatal.choose_safe": "Yes — start with safe graphics.  No — open the log.  Cancel — close.",

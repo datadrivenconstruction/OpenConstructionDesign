@@ -45,6 +45,8 @@
  "gfx.note.lowered.tip": "Kualitas kembali begitu tampilan berhenti. Klik untuk memilih tingkatan.",
  "gfx.note.low_tier": "Otomatis memilih kecepatan maksimum untuk adaptor ini",
  "gfx.note.low_tier.tip": "Klik untuk memilih tingkatan.",
+ "gfx.note.flat": "Tekstur dimatikan: tingkatan “Kecepatan maksimum” menggambar warna datar",
+ "gfx.note.flat.tip": "Material tampil dengan gaya realistis pada tingkatan “Seimbang” dan “Kualitas maksimum”. Klik untuk memilih tingkatan.",
  "gfx.fatal.title": "DDC Editor tidak dapat memulai grafiknya",
  "gfx.fatal.body": "Tidak ada adaptor grafis di komputer ini yang dapat dipakai, termasuk yang perangkat lunak bawaan.\n\nAlasan: {reason}\n\nYang harus dilakukan:\n- perbarui driver grafis dari situs produsen dan mulai ulang komputer;\n- pada remote desktop atau mesin virtual, aktifkan akselerasi 3D di sana;\n- jika terus gagal, kirim log ini ke dukungan: {log}",
  "gfx.fatal.choose_safe": "Ya — mulai dengan grafik aman.  Tidak — buka log.  Batal — tutup.",

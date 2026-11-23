@@ -45,6 +45,8 @@
  "gfx.note.lowered.tip": "Babalik ang kalidad sa sandaling huminto ang view. I-click para pumili ng antas.",
  "gfx.note.low_tier": "Pinili ng Auto ang pinakamabilis para sa adapter na ito",
  "gfx.note.low_tier.tip": "I-click para pumili ng antas.",
+ "gfx.note.flat": "Naka-off ang mga texture: ang antas na “Pinakamabilis” ay gumuguhit ng flat na kulay",
+ "gfx.note.flat.tip": "Lumalabas ang mga materyales sa makatotohanang istilo sa mga antas na “Balanse” at “Pinakamataas na kalidad”. I-click para pumili ng antas.",
  "gfx.fatal.title": "Hindi masimulan ng DDC Editor ang graphics nito",
  "gfx.fatal.body": "Walang graphics adapter sa computer na ito ang magamit, kasama na ang built-in na software.\n\nDahilan: {reason}\n\nAno ang gagawin:\n- i-update ang graphics driver mula sa site ng manufacturer at i-restart ang computer;\n- sa remote desktop o virtual machine, i-on ang 3D acceleration doon;\n- kung patuloy na nabibigo, ipadala ang log na ito sa support: {log}",
  "gfx.fatal.choose_safe": "Oo — magsimula sa ligtas na graphics.  Hindi — buksan ang log.  Kanselahin — isara.",

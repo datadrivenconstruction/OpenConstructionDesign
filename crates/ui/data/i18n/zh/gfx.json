@@ -45,6 +45,8 @@
  "gfx.note.lowered.tip": "视图停止后质量会立即恢复。点击以选择级别。",
  "gfx.note.low_tier": "自动模式已为此显卡选择最高速度",
  "gfx.note.low_tier.tip": "点击以选择级别。",
+ "gfx.note.flat": "纹理已关闭：“最高速度”级别绘制纯色",
+ "gfx.note.flat.tip": "材质在“均衡”和“最高质量”级别以写实风格显示。点击以选择级别。",
  "gfx.fatal.title": "OpenConstructionDesign 无法启动图形功能",
  "gfx.fatal.body": "本机上没有任何可用的图形适配器（包括内置软件适配器）。\n\n原因：{reason}\n\n处理方法：\n- 从制造商网站更新显卡驱动程序，然后重新启动计算机；\n- 在远程桌面或虚拟机上，请启用其三维加速；\n- 如果仍然失败，请将此日志发送给技术支持：{log}",
  "gfx.fatal.choose_safe": "是 — 以安全图形模式启动。  否 — 打开日志。  取消 — 关闭。",

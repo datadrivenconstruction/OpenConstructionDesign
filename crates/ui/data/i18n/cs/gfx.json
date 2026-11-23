@@ -45,6 +45,8 @@
  "gfx.note.lowered.tip": "Kvalita se vrátí, jakmile se pohled zastaví. Klikněte pro výběr úrovně.",
  "gfx.note.low_tier": "Automatika zvolila maximální rychlost pro tento adaptér",
  "gfx.note.low_tier.tip": "Klikněte pro výběr úrovně.",
+ "gfx.note.flat": "Textury jsou vypnuté: úroveň „Maximální rychlost“ kreslí ploché barvy",
+ "gfx.note.flat.tip": "Materiály se v realistickém stylu zobrazují na úrovních „Vyvážený“ a „Maximální kvalita“. Klikněte pro výběr úrovně.",
  "gfx.fatal.title": "DDC Editor nemůže spustit grafiku",
  "gfx.fatal.body": "Na tomto počítači nelze použít žádný grafický adaptér, ani vestavěný softwarový.\n\nDůvod: {reason}\n\nCo dělat:\n- aktualizujte ovladač grafiky z webu výrobce a restartujte počítač;\n- na vzdálené ploše nebo virtuálním počítači zapněte tam 3D akceleraci;\n- pokud problém přetrvává, pošlete tento záznam podpoře: {log}",
  "gfx.fatal.choose_safe": "Ano — spustit s bezpečnou grafikou.  Ne — otevřít záznam.  Zrušit — zavřít.",

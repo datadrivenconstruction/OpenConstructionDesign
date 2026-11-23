@@ -45,6 +45,8 @@
  "gfx.note.lowered.tip": "La calidad vuelve en cuanto se detiene la vista. Haga clic para elegir un nivel.",
  "gfx.note.low_tier": "Automático eligió velocidad máxima para este adaptador",
  "gfx.note.low_tier.tip": "Haga clic para elegir un nivel.",
+ "gfx.note.flat": "Las texturas están desactivadas: el nivel «Velocidad máxima» dibuja colores planos",
+ "gfx.note.flat.tip": "Los materiales se muestran en estilo realista en los niveles «Equilibrado» y «Calidad máxima». Haga clic para elegir un nivel.",
  "gfx.fatal.title": "OpenConstructionDesign no puede iniciar sus gráficos",
  "gfx.fatal.body": "No se pudo usar ningún adaptador gráfico de este equipo, ni siquiera el de software integrado.\n\nMotivo: {reason}\n\nQué hacer:\n- actualice el controlador gráfico desde la web del fabricante y reinicie el equipo;\n- en un escritorio remoto o una máquina virtual, active allí la aceleración 3D;\n- si sigue fallando, envíe este registro al soporte: {log}",
  "gfx.fatal.choose_safe": "Sí: iniciar con gráficos seguros.  No: abrir el registro.  Cancelar: cerrar.",
