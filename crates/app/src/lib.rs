@@ -181,6 +181,8 @@ pub mod report_shot;
 pub mod shot;
 pub mod shot_press;
 pub mod shot_scenes;
+#[cfg(feature = "gui")]
+pub mod ui_shot;
 pub mod sketch_mode;
 pub mod snap;
 pub mod snap_core;

@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Offscreen UI frame → PNG: the same egui code and paint callbacks as the window, without one.
-#[cfg(not(feature = "gui"))]
-use crate::RenderState;
 #[cfg(feature = "gui")]
 use crate::gfx::{self, Pick};
+#[cfg(not(feature = "gui"))]
+use crate::RenderState;
 #[cfg(feature = "gui")]
 use eframe::egui_wgpu::{self, wgpu, RenderState};
 #[cfg(feature = "gui")]
@@ -78,9 +78,25 @@ pub fn frame(
 pub fn frame_ev(
     rs: &RenderState,
     ctx: &egui::Context,
+    size: (u32, u32),
+    scale: f32,
+    frames: usize,
+    events: impl FnMut(&egui::Context, usize) -> Vec<egui::Event>,
+    ui: impl FnMut(&egui::Context, usize),
+) -> Vec<u8> {
+    frame_ev_at(rs, ctx, size, scale, frames, 0.0, events, ui)
+}
+
+/// [`frame_ev`] with the input clock starting at `t0` seconds: passes of one context keep
+/// time moving forward, so separate clicks are not read as a double click.
+#[allow(clippy::too_many_arguments)]
+pub fn frame_ev_at(
+    rs: &RenderState,
+    ctx: &egui::Context,
     (w, h): (u32, u32),
     scale: f32,
     frames: usize,
+    t0: f64,
     mut events: impl FnMut(&egui::Context, usize) -> Vec<egui::Event>,
     mut ui: impl FnMut(&egui::Context, usize),
 ) -> Vec<u8> {
@@ -106,7 +122,7 @@ pub fn frame_ev(
                 egui::vec2(w as f32 / scale, h as f32 / scale),
             )),
             max_texture_side: Some(rs.device.limits().max_texture_dimension_2d as usize),
-            time: Some(i as f64 * 0.016),
+            time: Some(t0 + i as f64 * 0.016),
             events: events(ctx, i),
             ..Default::default()
         };
@@ -248,7 +264,11 @@ fn paint(
 pub fn ai_panel_w(argv: &[String]) -> Option<f32> {
     let i = argv.iter().position(|s| s == "--ai-panel-w")?;
     // num-lint: a command-line argument for scripts, never typed into the UI
-    let w = argv.get(i + 1)?.parse::<f32>().ok().filter(|w| w.is_finite())?;
+    let w = argv
+        .get(i + 1)?
+        .parse::<f32>()
+        .ok()
+        .filter(|w| w.is_finite())?;
     let (lo, hi) = crate::ai::ui::PANEL_W;
     Some(w.clamp(lo, hi))
 }
