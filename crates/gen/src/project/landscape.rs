@@ -343,7 +343,10 @@ pub fn lay(
     // (local centre, local axis the tile row runs along)
     let mut centres: Vec<(P, P)> = vec![];
     let mut legs: Vec<f64> = vec![];
+    let mut spans: Vec<(usize, usize)> = vec![];
+    let mut span_leg: Vec<Option<f64>> = vec![];
     for d in doors {
+        let start = centres.len();
         let probe = |dir: P| to_outline(l, (d.0 + dir.0 * 2.0 * pad, d.1 + dir.1 * 2.0 * pad));
         let Some(dir) = [(1.0, 0.0), (-1.0, 0.0), (0.0, 1.0), (0.0, -1.0)]
             .into_iter()
@@ -387,6 +390,8 @@ pub fn lay(
             centres.push((ring_pt(t), axis));
         }
         if joined.is_some() {
+            spans.push((start, centres.len()));
+            span_leg.push(None);
             continue;
         }
         let mut y = rlo.1 - pad;
@@ -396,24 +401,43 @@ pub fn lay(
         }
         centres.push(((s.0, street_y), (0.0, -1.0)));
         legs.push(s.0);
+        spans.push((start, centres.len()));
+        span_leg.push(Some(s.0));
     }
-    let rows = cfg.path_rows as f64;
-    for (q, axis) in &centres {
-        let perp = (-axis.1, axis.0);
-        for j in 0..cfg.path_rows {
-            let o = (j as f64 - (rows - 1.0) / 2.0) * pad;
-            let w = back((q.0 + perp.0 * o, q.1 + perp.1 * o));
-            if !built_on(l, w) && !land.paths.iter().any(|t| dist(*t, w) < pad * 0.55) {
-                land.paths.push(w);
+    // over the tile budget the paths narrow to one tile, then the longest walks are left out,
+    // down to none when the ground floor's fixture slots are full, as the beds and lawn do
+    let limit = cap("path").min(room);
+    let tiles = |rows: usize, span: (usize, usize), have: &[P]| {
+        let mut out: Vec<P> = vec![];
+        for (q, axis) in &centres[span.0..span.1] {
+            let perp = (-axis.1, axis.0);
+            for j in 0..rows {
+                let o = (j as f64 - (rows as f64 - 1.0) / 2.0) * pad;
+                let w = back((q.0 + perp.0 * o, q.1 + perp.1 * o));
+                if !built_on(l, w) && !have.iter().chain(&out).any(|t| dist(*t, w) < pad * 0.55) {
+                    out.push(w);
+                }
             }
         }
-    }
-    // the way out is not trimmed like a planting: only the storey's free fixture slots bound it
-    if land.paths.len() > room {
-        return Err(GenError::Infeasible(format!(
-            "the paths to the street need {} tiles; lower `site.path_width` or the number of entrances",
-            land.paths.len()
-        )));
+        out
+    };
+    let mut order: Vec<usize> = (0..spans.len()).collect();
+    order.sort_by_key(|&i| spans[i].1 - spans[i].0);
+    for rows in [cfg.path_rows, 1] {
+        let mut kept = vec![];
+        land.paths.clear();
+        for &i in &order {
+            let t = tiles(rows, spans[i], &land.paths);
+            if land.paths.len() + t.len() <= limit {
+                land.paths.extend(t);
+                kept.push(i);
+            }
+        }
+        if kept.len() == spans.len() || rows == 1 {
+            legs = kept.iter().filter_map(|&i| span_leg[i]).collect();
+            break;
+        }
+        land.paths.clear();
     }
     let mut room = room - land.paths.len();
     let paths = land.paths.clone();
