@@ -2805,6 +2805,15 @@ impl UiSession {
         }
     }
 
+    /// What a wait for idle is still waiting on, for a test that timed out.
+    pub fn idle_report(&self) -> String {
+        format!(
+            "busy={} sync_out={} acked={}/{} agent_active={} agent_acked={}/{} proposal_out={} plan={} stale={} alive={}",
+            self.busy, self.sync_out, self.acked, self.sent, self.agent_active(), self.agent_acked,
+            self.agent_sent, self.proposal_out.is_some(), self.plan.is_some(), self.stale, self.alive
+        )
+    }
+
     /// For tests and for shutting down: pumps until the worker has answered everything sent.
     pub fn wait_idle(&mut self, ed: &mut Editor, timeout: Duration) -> bool {
         let until = Instant::now() + timeout;
