@@ -22,7 +22,7 @@
  "empty.props.title": "Nincs kijelölve semmi",
  "empty.props.hint": "Kattints egy elemre a nézetben, hogy itt lásd a tulajdonságait és a típusát. A Ctrl+A a nézet összes elemét kijelöli.",
  "empty.totals.title": "A modellben még nincs elem",
- "empty.totals.hint": "Kezdj egy fallal: Építészet → Fal, vagy írd be: WA.",
+ "empty.totals.hint": "Kezdje el a modellezést: válasszon eszközt a szalagon, vagy írja le a projektet a „Vázolás” lapon.",
  "empty.sheets.title": "Még nincsenek tervlapok",
  "empty.sheets.hint": "Hozz létre tervlapot az alábbi gombbal, vagy a Szintek tervlapjaival, majd helyezz rá egy nézetet.",
  "empty.schedule.title": "A modellben nincs ehhez a kategóriához tartozó elem",

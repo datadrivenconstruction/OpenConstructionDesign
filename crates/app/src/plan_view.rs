@@ -2062,7 +2062,7 @@ pub(crate) fn region_fill(
     (!m.indices.is_empty()).then(|| egui::Shape::mesh(m))
 }
 
-/// The start-with-a-wall card shows only while the model has no element and no underlay.
+/// The start card shows only while the model has no element and no underlay.
 fn start_hint_shown(empty_model: bool, has_underlay: bool) -> bool {
     empty_model && !has_underlay
 }

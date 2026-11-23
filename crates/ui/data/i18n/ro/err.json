@@ -22,7 +22,7 @@
  "empty.props.title": "Nimic selectat",
  "empty.props.hint": "Faceți clic pe un element din vedere pentru a-i vedea aici proprietățile și tipul. Ctrl+A selectează tot din vedere.",
  "empty.totals.title": "Modelul nu are încă elemente",
- "empty.totals.hint": "Începeți cu un perete: Arhitectură → Perete sau tastați WA.",
+ "empty.totals.hint": "Începeți modelarea: alegeți un instrument din panglică sau descrieți proiectul în fila „Generează”.",
  "empty.sheets.title": "Nicio planșă încă",
  "empty.sheets.hint": "Creați o planșă cu butonul de mai jos sau cu Planșe pentru niveluri, apoi plasați o vedere pe ea.",
  "empty.schedule.title": "Modelul nu are elemente din această categorie",

@@ -22,7 +22,7 @@
  "empty.props.title": "Ei valintaa",
  "empty.props.hint": "Napsauta näkymän elementtiä, niin sen ominaisuudet ja tyyppi näkyvät tässä. Ctrl+A valitsee kaiken näkymässä.",
  "empty.totals.title": "Mallissa ei ole vielä elementtejä",
- "empty.totals.hint": "Aloita seinällä: Arkkitehtuuri → Seinä tai kirjoita WA.",
+ "empty.totals.hint": "Aloita mallinnus: valitse työkalu nauhasta tai kuvaile projekti Luo-välilehdellä.",
  "empty.sheets.title": "Ei vielä arkkeja",
  "empty.sheets.hint": "Luo arkki alla olevalla painikkeella tai Arkit-työkalulla tasoille ja sijoita sille näkymä.",
  "empty.schedule.title": "Mallissa ei ole tämän luokan elementtejä",

@@ -22,7 +22,7 @@
  "empty.props.title": "Chưa chọn gì",
  "empty.props.hint": "Nhấp vào một cấu kiện trong góc nhìn để xem thuộc tính và loại tại đây. Ctrl+A chọn tất cả trong góc nhìn.",
  "empty.totals.title": "Mô hình chưa có cấu kiện nào",
- "empty.totals.hint": "Bắt đầu với tường: Kiến trúc → Tường, hoặc gõ WA.",
+ "empty.totals.hint": "Bắt đầu mô hình hóa: chọn một công cụ trên ribbon hoặc mô tả dự án trong tab “Tạo”.",
  "empty.sheets.title": "Chưa có bản vẽ",
  "empty.sheets.hint": "Tạo bản vẽ bằng nút bên dưới hoặc bằng Bản vẽ cho cao độ, rồi đặt góc nhìn lên đó.",
  "empty.schedule.title": "Mô hình không có cấu kiện thuộc danh mục này",

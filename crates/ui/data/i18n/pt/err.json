@@ -22,7 +22,7 @@
  "empty.props.title": "Nada selecionado",
  "empty.props.hint": "Clique em um elemento na vista para ver aqui suas propriedades e tipo. Ctrl+A seleciona tudo na vista.",
  "empty.totals.title": "O modelo ainda não tem elementos",
- "empty.totals.hint": "Comece com uma parede: Arquitetura → Parede, ou digite WA.",
+ "empty.totals.hint": "Comece a modelar: escolha uma ferramenta na faixa de opções ou descreva o projeto na aba «Gerar».",
  "empty.sheets.title": "Ainda não há pranchas",
  "empty.sheets.hint": "Crie uma prancha com o botão abaixo ou com Pranchas por nível, depois posicione uma vista nela.",
  "empty.schedule.title": "O modelo não tem elementos desta categoria",

@@ -22,7 +22,7 @@
  "empty.props.title": "Midagi pole valitud",
  "empty.props.hint": "Klõpsa vaates elemendil, et näha siin selle omadusi ja tüüpi. Ctrl+A valib kõik vaates.",
  "empty.totals.title": "Mudelis pole veel elemente",
- "empty.totals.hint": "Alusta seinaga: Arhitektuur → Sein või kirjuta WA.",
+ "empty.totals.hint": "Alusta modelleerimist: vali lindilt tööriist või kirjelda projekti vahekaardil „Genereeri“.",
  "empty.sheets.title": "Lehti pole veel",
  "empty.sheets.hint": "Loo leht allolevast nupust või käsuga Lehed korruste jaoks ning paiguta sellele vaade.",
  "empty.schedule.title": "Mudelis pole selle kategooria elemente",

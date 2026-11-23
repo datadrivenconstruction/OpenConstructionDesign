@@ -22,7 +22,7 @@
  "empty.props.title": "Hech narsa tanlanmagan",
  "empty.props.hint": "Ko'rinishdagi elementni bosing, uning xususiyatlari va turi shu yerda chiqadi. Ctrl+A ko'rinishdagi hammasini tanlaydi.",
  "empty.totals.title": "Modelda hali elementlar yo'q",
- "empty.totals.hint": "Devordan boshlang: Arxitektura → Devor yoki WA yozing.",
+ "empty.totals.hint": "Modellashni boshlang: lentadan asbobni tanlang yoki loyihani «Yaratish» yorlig‘ida tasvirlang.",
  "empty.sheets.title": "Hali varaqlar yo'q",
  "empty.sheets.hint": "Quyidagi tugma bilan varaq yarating yoki qavatlar uchun Varaqlar bilan, so'ng unga ko'rinish joylashtiring.",
  "empty.schedule.title": "Modelda bu kategoriyadagi elementlar yo'q",

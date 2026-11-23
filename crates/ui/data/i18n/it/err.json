@@ -22,7 +22,7 @@
  "empty.props.title": "Nessuna selezione",
  "empty.props.hint": "Fai clic su un elemento nella vista per vederne qui le proprietà e il tipo. Ctrl+A seleziona tutto nella vista.",
  "empty.totals.title": "Il modello non ha ancora elementi",
- "empty.totals.hint": "Inizia con un muro: Architettura → Muro, oppure digita WA.",
+ "empty.totals.hint": "Inizia a modellare: scegli uno strumento sulla barra multifunzione o descrivi il progetto nella scheda «Genera».",
  "empty.sheets.title": "Nessuna tavola",
  "empty.sheets.hint": "Crea una tavola con il pulsante sotto o con Tavole per livelli, poi posiziona una vista su di essa.",
  "empty.schedule.title": "Il modello non ha elementi di questa categoria",

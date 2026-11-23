@@ -22,7 +22,7 @@
  "empty.props.title": "Nada seleccionado",
  "empty.props.hint": "Haga clic en un elemento de la vista para ver aquí sus propiedades y tipo. Ctrl+A selecciona todo en la vista.",
  "empty.totals.title": "El modelo aún no tiene elementos",
- "empty.totals.hint": "Empiece con un muro: Arquitectura → Muro, o escriba WA.",
+ "empty.totals.hint": "Empiece a modelar: elija una herramienta en la cinta o describa el proyecto en la pestaña «Generar».",
  "empty.sheets.title": "Aún no hay hojas",
  "empty.sheets.hint": "Cree una hoja con el botón inferior o con Hojas para niveles, y luego coloque una vista en ella.",
  "empty.schedule.title": "El modelo no tiene elementos de esta categoría",

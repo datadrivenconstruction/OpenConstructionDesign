@@ -22,7 +22,7 @@
  "empty.props.title": "Walang napili",
  "empty.props.hint": "I-click ang elemento sa view para makita rito ang properties at type nito. Ctrl+A para piliin ang lahat sa view.",
  "empty.totals.title": "Wala pang elemento ang model",
- "empty.totals.hint": "Magsimula sa wall: Architecture → Wall, o i-type ang WA.",
+ "empty.totals.hint": "Magsimulang mag-model: pumili ng tool sa ribbon o ilarawan ang proyekto sa tab na “Gumawa”.",
  "empty.sheets.title": "Wala pang sheet",
  "empty.sheets.hint": "Gumawa ng sheet gamit ang button sa ibaba o gamit ang Sheets para sa mga level, saka maglagay ng view dito.",
  "empty.schedule.title": "Walang elemento ng kategoryang ito ang model",
