@@ -269,16 +269,31 @@ All six pass `audit{strict = true}`. Nothing in the renders was edited by hand.
 
 Plan and 3D in one window. Whatever the AI proposes, you can open, edit and finish by hand.
 
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/editor-3d-props-dark.webp"><img src="docs/images/editor-3d-props-light.webp" alt="3D view of the six-storey housing block with flat 5.1 selected and its properties: area 16.27 m², perimeter 16,850 mm, height 3,000 mm, phases and project parameters" width="100%"></picture><br><sub>The six-storey housing block in the editor. Select anything in 3D or on the plan; the Properties panel shows the real values and edits them in place.</sub></p>
+
 <table>
 <tr>
-<td width="50%"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/editor-3d-props-dark.webp"><img src="docs/images/editor-3d-props-light.webp" alt="3D view of the six-storey housing block with flat 5.1 selected and its properties: area 16.27 m², perimeter 16,850 mm, height 3,000 mm, phases and project parameters" width="100%"></picture><br><sub>Select anything in 3D or on the plan; the Properties panel shows the real values and edits them in place.</sub></td>
-<td width="50%"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/editor-plan-rooms-dark.webp"><img src="docs/images/editor-plan-rooms-light.webp" alt="Level 2 plan of the housing block: numbered flats with names and areas, corridor, stair and lift, with water and ventilation runs" width="100%"></picture><br><sub>Rooms are named, numbered and measured, and follow every edit. Services run through the same model.</sub></td>
+<td width="50%"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/editor-plan-rooms-dark.webp"><img src="docs/images/editor-plan-rooms-light.webp" alt="Level 2 plan of the housing block: numbered flats with names and areas, corridor, stair and lift, with water and ventilation runs" width="100%"></picture><br><sub><b>Plans.</b> Rooms are named, numbered and measured, and follow every edit.</sub></td>
+<td width="50%"><img src="docs/images/editor-mep-services.webp" alt="Housing block in four layers: architecture, supply air, supply and extract air, fixtures and appliances" width="100%"><br><sub><b>MEP services.</b> Ducts, pipes and fixtures run through the same model, layer by layer.</sub></td>
 </tr>
 <tr>
-<td><picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/editor-draw-walls-dark.webp"><img src="docs/images/editor-draw-walls-light.webp" alt="Drawing a new wall: wall type and height in the tool bar, length and angle readout, horizontal and perpendicular snaps" width="100%"></picture><br><sub>Draw walls with the type and height set before you click; snaps show length, angle and alignment.</sub></td>
-<td><picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/editor-ai-generate-dark.webp"><img src="docs/images/editor-ai-generate-light.webp" alt="The Generate panel: a short brief, building type, storeys and floor height, with the steps Generate, Check and apply, Drawings, Files" width="100%"></picture><br><sub>The AI builds a preview from a brief. Nothing changes in the model until you press Apply.</sub></td>
+<td><picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/editor-ai-generate-dark.webp"><img src="docs/images/editor-ai-generate-light.webp" alt="The Generate panel: a short brief, building type, storeys and floor height, with the steps Generate, Check and apply, Drawings, Files" width="100%"></picture><br><sub><b>AI generate and review.</b> The AI builds a preview from a brief. Nothing changes until you press Apply.</sub></td>
+<td><img src="docs/images/editor-drawings.webp" alt="Generated floor plan sheet of the housing block with rooms, dimensions and services" width="100%"><br><sub><b>Drawings.</b> Plans, sections and sheets come out of the model and stay in sync.</sub></td>
 </tr>
 </table>
+
+**Scripted shapes**
+
+<table>
+<tr>
+<td width="25%"><a href="https://openconstructiondesign.com/#ai"><img src="docs/images/lua-twisted-diagrid-tower.webp" alt="Twisted diagrid tower" width="100%"></a></td>
+<td width="25%"><a href="https://openconstructiondesign.com/#ai"><img src="docs/images/lua-stadium-roof.webp" alt="Stadium roof of cantilever trusses" width="100%"></a></td>
+<td width="25%"><a href="https://openconstructiondesign.com/#ai"><img src="docs/images/lua-timber-gridshell.webp" alt="Timber gridshell dome" width="100%"></a></td>
+<td width="25%"><a href="https://openconstructiondesign.com/#ai"><img src="docs/images/lua-cable-stayed-footbridge.webp" alt="Cable-stayed footbridge" width="100%"></a></td>
+</tr>
+</table>
+
+<sub>Lua recipes that ship with the editor, rendered with default parameters. <a href="https://openconstructiondesign.com/#ai">More on the site</a>.</sub>
 
 <details>
 <summary>Full feature list</summary>
