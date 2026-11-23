@@ -90,6 +90,10 @@ fn bbox(poly: &[(f64, f64)]) -> ((f64, f64), (f64, f64)) {
 /// Rooms the spec asks on floor `k`, apartments counted room by room.
 fn asked_rooms(spec: &ProjectSpec, k: usize) -> u32 {
     if spec.typology == Typology::ApartmentSection {
+        // a periodic storey (a refuge floor) holds its own rooms in place of the flats
+        if let Some(rooms) = spec.periodic_at(k) {
+            return rooms.iter().map(|r| r.count).sum();
+        }
         return spec
             .apartments
             .iter()

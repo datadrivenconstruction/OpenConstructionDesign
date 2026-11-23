@@ -1051,7 +1051,11 @@ fn floor_cells(spec: &ProjectSpec, f: &Frame, p: &Program, next_apt: &mut u32) -
 /// take. Never a sliver: a short spare always spreads when anything may grow.
 fn spread(spec: &ProjectSpec, units: &[Unit], list: &[usize], spare: Mm) -> Vec<Mm> {
     let mut out = vec![0; list.len()];
-    let grow: Vec<usize> = (0..list.len()).filter(|&k| units[list[k]].grows()).collect();
+    let mut grow: Vec<usize> = (0..list.len()).filter(|&k| units[list[k]].grows()).collect();
+    // a sliver too short for a room of its own widens the units that may not grow (flats)
+    if grow.is_empty() && spare < min_unit() {
+        grow = (0..list.len()).collect();
+    }
     let total: Mm = grow.iter().map(|&k| units[list[k]].len).sum();
     if spare <= 0 || total == 0 {
         return out;
