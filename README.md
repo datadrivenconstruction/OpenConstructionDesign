@@ -50,7 +50,7 @@
 <h2 id="download" align="center">Download</h2>
 
 <p align="center">
-  <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/releases/latest/download/OpenConstructionDesign-v1.0.0-windows-x64.zip">
+  <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/releases/latest">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="docs/images/download-dark.webp">
       <img src="docs/images/download-light.webp" alt="Download for Windows (zip)" width="460">
@@ -64,7 +64,7 @@
 
 <p align="center">
   <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/releases">All releases</a> ·
-  <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/releases/latest/download/OpenConstructionDesign-v1.0.0-linux-x64.tar.gz">Linux CLI (71 MB)</a> ·
+  <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/releases/latest">Linux CLI (71 MB)</a> ·
   <a href="https://openconstructiondesign.com">Website</a> ·
   <a href="https://openconstructiondesign.com/app/">Browser viewer</a> ·
   <a href="docs/USER_GUIDE.md">User guide</a>
@@ -84,7 +84,7 @@ file on your machine, and IFC goes in and out.
 
 ## Install in 60 seconds
 
-1. **Download** [`OpenConstructionDesign-v1.0.0-windows-x64.zip`](https://github.com/datadrivenconstruction/OpenConstructionDesign/releases/latest/download/OpenConstructionDesign-v1.0.0-windows-x64.zip) (62 MB).
+1. **Download** [the Windows zip (`…-windows-x64.zip`)](https://github.com/datadrivenconstruction/OpenConstructionDesign/releases/latest) (62 MB).
 2. **Unzip anywhere and run `ddc-app.exe`.** Nothing is installed in the system and no account is
    needed. The build is not code-signed yet, so Windows SmartScreen may warn once: choose
    **More info → Run anyway**, and check the SHA-256 on the release page if you want to be sure.
@@ -98,7 +98,7 @@ file on your machine, and IFC goes in and out.
 <summary>Linux: headless CLI</summary>
 
 The Linux x64 archive
-[`OpenConstructionDesign-v1.0.0-linux-x64.tar.gz`](https://github.com/datadrivenconstruction/OpenConstructionDesign/releases/latest/download/OpenConstructionDesign-v1.0.0-linux-x64.tar.gz)
+[the Linux archive (`…-linux-x64.tar.gz`)](https://github.com/datadrivenconstruction/OpenConstructionDesign/releases/latest)
 (71 MB) holds the `ddc` command line tool only; there is no editor window on Linux yet. macOS has
 no build; code paths exist but are not tested.
 </details>
