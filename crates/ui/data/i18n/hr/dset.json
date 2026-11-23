@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "Južno pročelje",
  "dset.title.elevation_east": "Istočno pročelje",
  "dset.title.elevation_west": "Zapadno pročelje",
- "dset.err.empty": "Nijedna razina nema zidove za crtanje",
+ "dset.err.empty": "Nijedna razina nema elemente modela za crtanje: postavite elemente na razinu i ponovno izradite komplet",
  "dset.warn.typical_rooms": "Brojevi prostorija na tipičnoj etaži više ne slijede jedan obrazac: ponovno izradite skup crteža",
  "dset.note.room_numbers": "Broj prostorije = prefiks etaže + broj na tlocrtu, npr. {mark}: {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "Oznake dodijeljene po tipu: {n}",

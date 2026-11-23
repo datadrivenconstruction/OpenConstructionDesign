@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "দক্ষিণ এলিভেশন",
  "dset.title.elevation_east": "পূর্ব এলিভেশন",
  "dset.title.elevation_west": "পশ্চিম এলিভেশন",
- "dset.err.empty": "কোনো লেভেলে আঁকার মতো দেয়াল নেই",
+ "dset.err.empty": "কোনো লেভেলে আঁকার মতো মডেল উপাদান নেই: একটি লেভেলে উপাদান রাখুন, তারপর আবার সেট তৈরি করুন",
  "dset.warn.typical_rooms": "প্রচলিত তলার রুম নম্বরগুলো আর একই নিয়মে নেই: ড্রয়িং সেট পুনর্গঠন করুন",
  "dset.note.room_numbers": "রুম নম্বর = ফ্লোর প্রিফিক্স + প্ল্যানের নম্বর, যেমন {mark}: {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "টাইপ অনুযায়ী চিহ্ন বরাদ্দ: {n}",

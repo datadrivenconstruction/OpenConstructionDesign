@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "Güney cephesi",
  "dset.title.elevation_east": "Doğu cephesi",
  "dset.title.elevation_west": "Batı cephesi",
- "dset.err.empty": "Çizilecek duvarı olan seviye yok",
+ "dset.err.empty": "Çizilecek model öğesi olan seviye yok: öğeleri bir seviyeye yerleştirip seti yeniden oluşturun",
  "dset.warn.typical_rooms": "Tipik bir katın oda numaraları artık tek bir düzene uymuyor: çizim setini yeniden oluşturun",
  "dset.note.room_numbers": "Oda numarası = kat öneki + plandaki numara, örn. {mark}: {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "Tipe göre atanan işaretler: {n}",

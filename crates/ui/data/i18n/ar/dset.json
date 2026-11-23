@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "الواجهة الجنوبية",
  "dset.title.elevation_east": "الواجهة الشرقية",
  "dset.title.elevation_west": "الواجهة الغربية",
- "dset.err.empty": "لا يوجد مستوى به جدران للرسم",
+ "dset.err.empty": "لا يوجد مستوى به عناصر نموذج للرسم: ضع العناصر على مستوى ثم أنشئ المجموعة من جديد",
  "dset.warn.typical_rooms": "أرقام غرف الطابق النموذجي لم تعد تتبع نمطاً واحداً: أعد بناء مجموعة الرسومات",
  "dset.note.room_numbers": "رقم الغرفة = بادئة الطابق + الرقم في المخطط، مثال {mark}: {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "العلامات المعيّنة حسب النوع: {n}",

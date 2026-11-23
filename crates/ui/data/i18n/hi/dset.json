@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "दक्षिणी एलिवेशन",
  "dset.title.elevation_east": "पूर्वी एलिवेशन",
  "dset.title.elevation_west": "पश्चिम एलिवेशन",
- "dset.err.empty": "किसी तल पर बनाने योग्य दीवारें नहीं हैं",
+ "dset.err.empty": "किसी तल पर बनाने योग्य मॉडल तत्व नहीं हैं: किसी तल पर तत्व रखें, फिर सेट दोबारा बनाएँ",
  "dset.warn.typical_rooms": "सामान्य मंज़िल की कक्ष संख्याएँ अब एक पैटर्न का पालन नहीं करतीं: ड्रॉइंग सेट दोबारा बनाएँ",
  "dset.note.room_numbers": "कमरा नंबर = मंज़िल उपसर्ग + प्लान पर नंबर, जैसे {mark}: {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "प्रकार के अनुसार चिह्न लगाए गए: {n}",

@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "Mặt đứng hướng Nam",
  "dset.title.elevation_east": "Mặt đứng hướng Đông",
  "dset.title.elevation_west": "Mặt đứng phía tây",
- "dset.err.empty": "Không có cao độ nào có tường để vẽ",
+ "dset.err.empty": "Không có cao độ nào có phần tử mô hình để vẽ: đặt phần tử lên một cao độ rồi tạo lại bộ bản vẽ",
  "dset.warn.typical_rooms": "Số phòng của tầng điển hình không còn theo một quy tắc: hãy dựng lại bộ bản vẽ",
  "dset.note.room_numbers": "Số phòng = tiền tố tầng + số trên mặt bằng, ví dụ {mark}: {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "Đã gán ký hiệu theo loại: {n}",

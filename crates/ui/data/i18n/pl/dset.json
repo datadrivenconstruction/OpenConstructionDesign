@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "Elewacja południowa",
  "dset.title.elevation_east": "Elewacja wschodnia",
  "dset.title.elevation_west": "Elewacja zachodnia",
- "dset.err.empty": "Żaden poziom nie ma ścian do narysowania",
+ "dset.err.empty": "Żaden poziom nie ma elementów modelu do narysowania: umieść elementy na poziomie i utwórz komplet ponownie",
  "dset.warn.typical_rooms": "Numery pomieszczeń typowej kondygnacji nie mają już jednego schematu: odbuduj zestaw rysunków",
  "dset.note.room_numbers": "Numer pomieszczenia = prefiks kondygnacji + numer z rzutu, np. {mark}: {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "Oznaczenia przypisane wg typu: {n}",

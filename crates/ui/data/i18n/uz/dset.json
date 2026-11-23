@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "Janubiy fasad",
  "dset.title.elevation_east": "Sharq fasadi",
  "dset.title.elevation_west": "G'arbiy fasad",
- "dset.err.empty": "Chizish uchun devorli qavat yo'q",
+ "dset.err.empty": "Chizish uchun model elementlari bor qavat yo'q: elementlarni qavatga joylang va to'plamni qayta yarating",
  "dset.warn.typical_rooms": "Tipik qavatning xona raqamlari endi bitta qolipga bo'ysunmaydi: chizmalar to'plamini qayta yarating",
  "dset.note.room_numbers": "Xona raqami = qavat prefiksi + plandagi raqam, masalan {mark}: {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "Turlar bo'yicha belgilar berildi: {n}",

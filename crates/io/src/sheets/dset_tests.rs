@@ -920,3 +920,68 @@ fn drawing_set_has_every_storey_section_elevation_and_the_new_schedules() {
     assert_eq!(rows.get("areas"), Some(&areas.rows.len()), "{rows:?}");
     assert_eq!(rows.get("finishes"), Some(&fin.rows.len()), "{rows:?}");
 }
+
+fn form(m: &mut Model, lv: i64, r: [f64; 4], z: (f64, f64)) {
+    use ddc_geom::v2;
+    use ddc_model::{SolidForm, SolidFrame, SolidSection, SolidSpec};
+    let ring = vec![v2(r[0], r[1]), v2(r[2], r[1]), v2(r[2], r[3]), v2(r[0], r[3])];
+    m.add_solid(&SolidSpec {
+        level: lv,
+        name: "form".into(),
+        void: false,
+        material: "stone".into(),
+        ifc: None,
+        frame: SolidFrame::default(),
+        form: SolidForm::Extrusion { profile: SolidSection::polygon(ring), start: z.0, end: z.1 },
+    })
+    .unwrap();
+}
+
+#[test]
+fn a_model_of_forms_alone_gets_plan_sections_and_elevations() {
+    // a bridge-like model: piers, a deck and parapets, one level, no walls or rooms
+    let mut m = Model::open(":memory:").unwrap();
+    let lv = m.add_level("Level 1", 0.0).unwrap();
+    for x in [0.0, 14.0, 28.0] {
+        form(&mut m, lv, [x, 0.0, x + 2.0, 6.0], (0.0, 4.0));
+    }
+    form(&mut m, lv, [0.0, 0.0, 30.0, 6.0], (4.0, 5.0));
+    for y in [0.0, 5.7] {
+        form(&mut m, lv, [0.0, y, 30.0, y + 0.3], (5.0, 6.1));
+    }
+    let cat = catalog("en");
+    let text = |k: &str| cat.get(k).cloned().unwrap_or_else(|| k.to_string());
+    let sched = |_: &str| None;
+    let ctx = ctx_for(&text, &sched);
+    let p = plan_drawing_set(&m, &DsetOptions::default(), &ctx).unwrap();
+    let vps: Vec<&ddc_model::DsetViewport> =
+        p.plan.sheets.iter().flat_map(|s| &s.viewports).collect();
+    assert!(vps.iter().any(|v| v.view == DsetRef::Plan { level: lv, cut: ddc_model::DEFAULT_CUT }));
+    let kinds: Vec<ddc_model::ViewKind> = vps
+        .iter()
+        .filter_map(|v| match v.view {
+            DsetRef::Def(k) => Some(p.plan.views[k].kind),
+            _ => None,
+        })
+        .collect();
+    assert!(kinds.contains(&ddc_model::ViewKind::Section), "{kinds:?}");
+    assert!(kinds.contains(&ddc_model::ViewKind::Elevation), "{kinds:?}");
+    // the views span the whole model, not a wall extent
+    for s in p.plan.views.iter().filter(|s| s.kind == ddc_model::ViewKind::Elevation) {
+        let len = ((s.b.0 - s.a.0).powi(2) + (s.b.1 - s.a.1).powi(2)).sqrt();
+        assert!(len >= 6.0, "{} spans {len}", s.name);
+    }
+    let a = m.apply_drawing_set(&p.plan).unwrap();
+    assert!(!a.sheets.is_empty());
+}
+
+#[test]
+fn a_model_with_nothing_to_draw_says_what_to_add() {
+    let mut m = Model::open(":memory:").unwrap();
+    m.add_level("Level 1", 0.0).unwrap();
+    let cat = catalog("en");
+    let text = |k: &str| cat.get(k).cloned().unwrap_or_else(|| k.to_string());
+    let sched = |_: &str| None;
+    let e = plan_drawing_set(&m, &DsetOptions::default(), &ctx_for(&text, &sched)).unwrap_err();
+    assert!(e.0.contains("place elements on a level"), "{}", e.0);
+}

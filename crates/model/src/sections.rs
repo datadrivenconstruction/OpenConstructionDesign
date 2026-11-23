@@ -260,33 +260,40 @@ impl Model {
     /// The four compass elevations around the plan extent with `margin`, named by `COMPASS`;
     /// nothing is stored. Empty for a model with nothing in plan.
     pub fn compass_elevation_specs(&self, margin: f64) -> Result<Vec<SectionSpec>, Error> {
-        let Some(bb) = self.plan_bbox()? else {
-            return Ok(vec![]);
-        };
-        let m = margin.max(0.0);
-        let (x0, y0, x1, y1) = (bb[0] - m, bb[1] - m, bb[2] + m, bb[3] + m);
-        let depth = (x1 - x0).max(y1 - y0) + m;
-        // The view looks left of a→b: north faces south, south faces north, east faces west, west faces east.
-        let lines = [
-            ((x1, y1), (x0, y1)),
-            ((x0, y0), (x1, y0)),
-            ((x1, y0), (x1, y1)),
-            ((x0, y1), (x0, y0)),
-        ];
-        Ok(COMPASS
-            .iter()
-            .zip(lines)
-            .map(|(n, (a, b))| SectionSpec {
-                kind: ViewKind::Elevation,
-                name: n.to_string(),
-                a,
-                b,
-                depth,
-                far_clip: false,
-            })
-            .collect())
+        Ok(match self.plan_bbox()? {
+            Some(bb) => compass_elevations_around(bb, margin),
+            None => vec![],
+        })
     }
+}
 
+/// The four compass elevations around the plan extent `bb` [x0, y0, x1, y1] with `margin`.
+pub fn compass_elevations_around(bb: [f64; 4], margin: f64) -> Vec<SectionSpec> {
+    let m = margin.max(0.0);
+    let (x0, y0, x1, y1) = (bb[0] - m, bb[1] - m, bb[2] + m, bb[3] + m);
+    let depth = (x1 - x0).max(y1 - y0) + m;
+    // The view looks left of a→b: north faces south, south faces north, east faces west, west faces east.
+    let lines = [
+        ((x1, y1), (x0, y1)),
+        ((x0, y0), (x1, y0)),
+        ((x1, y0), (x1, y1)),
+        ((x0, y1), (x0, y0)),
+    ];
+    COMPASS
+        .iter()
+        .zip(lines)
+        .map(|(n, (a, b))| SectionSpec {
+            kind: ViewKind::Elevation,
+            name: n.to_string(),
+            a,
+            b,
+            depth,
+            far_clip: false,
+        })
+        .collect()
+}
+
+impl Model {
     /// Full plan extent: the outlines of all scene solids (wall thickness, arcs, slabs, mullions).
     pub fn plan_bbox(&self) -> Result<Option<[f64; 4]>, Error> {
         let sc = self.scene()?;

@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "Alçado Sul",
  "dset.title.elevation_east": "Alçado Este",
  "dset.title.elevation_west": "Alçado Oeste",
- "dset.err.empty": "Nenhum nível tem paredes para desenhar",
+ "dset.err.empty": "Nenhum nível tem elementos do modelo para desenhar: coloque elementos em um nível e crie o conjunto novamente",
  "dset.warn.typical_rooms": "Os números dos espaços de um piso tipo deixaram de seguir um padrão: recrie o conjunto de desenhos",
  "dset.note.room_numbers": "Número do espaço = prefixo do piso + número na planta, por exemplo {mark}: {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "Marcas atribuídas por tipo: {n}",

@@ -13716,7 +13716,7 @@
             "type": "string"
           },
           "plans": {
-            "description": "A floor plan sheet per level with walls; default true",
+            "description": "A floor plan sheet per level with any model elements; default true",
             "type": "boolean"
           },
           "scale": {
@@ -13862,7 +13862,7 @@
                     "type": "string"
                   },
                   "plans": {
-                    "description": "A floor plan sheet per level with walls; default true",
+                    "description": "A floor plan sheet per level with any model elements; default true",
                     "type": "boolean"
                   },
                   "scale": {

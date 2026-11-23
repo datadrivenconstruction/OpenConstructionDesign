@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "Южный фасад",
  "dset.title.elevation_east": "Восточный фасад",
  "dset.title.elevation_west": "Западный фасад",
- "dset.err.empty": "Ни на одном уровне нет стен для чертежа",
+ "dset.err.empty": "Ни на одном уровне нет элементов модели для чертежа: разместите элементы на уровне и создайте комплект снова",
  "dset.warn.typical_rooms": "Номера помещений типового этажа больше не следуют одному правилу: пересоберите комплект",
  "dset.note.room_numbers": "Номер помещения = префикс этажа + номер на плане, напр. {mark}: {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "Присвоено марок по типам: {n}",

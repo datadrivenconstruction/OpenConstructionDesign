@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "남측 입면",
  "dset.title.elevation_east": "동측 입면",
  "dset.title.elevation_west": "서측 입면",
- "dset.err.empty": "그릴 벽이 있는 레벨이 없습니다",
+ "dset.err.empty": "그릴 모델 요소가 있는 레벨이 없습니다: 레벨에 요소를 배치한 뒤 세트를 다시 만드세요",
  "dset.warn.typical_rooms": "기준층의 방 번호가 더 이상 하나의 규칙을 따르지 않습니다: 도면 세트를 다시 만드세요",
  "dset.note.room_numbers": "실 번호 = 층 접두사 + 평면상 번호, 예: {mark}: {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "유형별 표시 지정: {n}",

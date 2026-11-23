@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "Prospetto sud",
  "dset.title.elevation_east": "Prospetto est",
  "dset.title.elevation_west": "Prospetto ovest",
- "dset.err.empty": "Nessun livello ha muri da disegnare",
+ "dset.err.empty": "Nessun livello ha elementi del modello da disegnare: posiziona elementi su un livello e ricrea il set",
  "dset.warn.typical_rooms": "I numeri dei locali di un piano tipo non seguono più uno schema: ricostruisci il set di disegni",
  "dset.note.room_numbers": "Numero locale = prefisso piano + numero in pianta, es. {mark}: {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "Contrassegni assegnati per tipo: {n}",

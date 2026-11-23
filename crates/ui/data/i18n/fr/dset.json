@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "Élévation sud",
  "dset.title.elevation_east": "Élévation est",
  "dset.title.elevation_west": "Élévation ouest",
- "dset.err.empty": "Aucun niveau ne contient de murs à dessiner",
+ "dset.err.empty": "Aucun niveau ne contient d'éléments du modèle à dessiner : placez des éléments sur un niveau, puis recréez le jeu",
  "dset.warn.typical_rooms": "Les numéros de pièces de l'étage courant ne suivent plus un même schéma : reconstruisez le jeu de plans",
  "dset.note.room_numbers": "Numéro de pièce = préfixe d'étage + numéro sur le plan, p. ex. {mark} : {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "Repères attribués par type : {n}",

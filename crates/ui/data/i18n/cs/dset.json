@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "Jižní pohled",
  "dset.title.elevation_east": "Východní pohled",
  "dset.title.elevation_west": "Západní pohled",
- "dset.err.empty": "Žádné podlaží nemá stěny k vykreslení",
+ "dset.err.empty": "Žádné podlaží nemá prvky modelu k vykreslení: umístěte prvky do podlaží a sadu vytvořte znovu",
  "dset.warn.typical_rooms": "Čísla místností typického podlaží už nemají jednotný vzor: sestavte znovu sadu výkresů",
  "dset.note.room_numbers": "Číslo místnosti = předpona podlaží + číslo v půdorysu, např. {mark}: {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "Přiřazená označení podle typu: {n}",

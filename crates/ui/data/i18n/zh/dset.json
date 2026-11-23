@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "南立面",
  "dset.title.elevation_east": "东立面",
  "dset.title.elevation_west": "西立面",
- "dset.err.empty": "没有标高包含可绘制的墙",
+ "dset.err.empty": "没有标高包含可绘制的模型元素：请将元素放到某个标高上，然后重新生成图纸集",
  "dset.warn.typical_rooms": "标准层的房间编号不再遵循同一规则：请重建图纸集",
  "dset.note.room_numbers": "房间编号 = 楼层前缀 + 平面上的编号，例如 {mark}：{first}（{level_first}）… {last}（{level_last}）",
  "dset.marks_assigned": "按类型分配的标记：{n}",

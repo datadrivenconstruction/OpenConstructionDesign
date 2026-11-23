@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "รูปด้านทิศใต้",
  "dset.title.elevation_east": "รูปด้านทิศตะวันออก",
  "dset.title.elevation_west": "รูปด้านทิศตะวันตก",
- "dset.err.empty": "ไม่มีระดับที่มีผนังให้วาด",
+ "dset.err.empty": "ไม่มีระดับที่มีองค์ประกอบโมเดลให้วาด: วางองค์ประกอบบนระดับ แล้วสร้างชุดอีกครั้ง",
  "dset.warn.typical_rooms": "หมายเลขห้องของชั้นทั่วไปไม่เป็นรูปแบบเดียวกันอีกต่อไป: สร้างชุดแบบใหม่",
  "dset.note.room_numbers": "หมายเลขห้อง = คำนำหน้าชั้น + หมายเลขบนแปลน เช่น {mark}: {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "กำหนดเครื่องหมายตามประเภทแล้ว: {n}",

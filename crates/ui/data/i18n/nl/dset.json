@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "Zuidelijk aanzicht",
  "dset.title.elevation_east": "Oostelijk aanzicht",
  "dset.title.elevation_west": "Westelijk aanzicht",
- "dset.err.empty": "Geen enkele verdieping heeft wanden om te tekenen",
+ "dset.err.empty": "Geen enkele verdieping heeft modelelementen om te tekenen: plaats elementen op een verdieping en maak de set opnieuw",
  "dset.warn.typical_rooms": "De ruimtenummers van een typische verdieping volgen niet langer een patroon: bouw de tekenset opnieuw op",
  "dset.note.room_numbers": "Ruimtenummer = verdiepingsprefix + nummer op de plattegrond, bijv. {mark}: {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "Markeringen toegewezen per type: {n}",

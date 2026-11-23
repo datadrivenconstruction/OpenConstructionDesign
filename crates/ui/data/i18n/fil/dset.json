@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "Elevasyon sa timog",
  "dset.title.elevation_east": "Elevasyon sa silangan",
  "dset.title.elevation_west": "Elevation sa kanluran",
- "dset.err.empty": "Walang antas na may pader na iguguhit",
+ "dset.err.empty": "Walang antas na may elemento ng modelo na iguguhit: maglagay ng mga elemento sa isang antas, saka buuin muli ang set",
  "dset.warn.typical_rooms": "Hindi na sumusunod sa iisang pattern ang mga numero ng silid sa tipikal na palapag: buuin muli ang drawing set",
  "dset.note.room_numbers": "Numero ng kuwarto = prefix ng palapag + numero sa plan, halimbawa {mark}: {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "Mga marka na itinalaga ayon sa type: {n}",

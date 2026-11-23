@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "Déli homlokzat",
  "dset.title.elevation_east": "Keleti homlokzat",
  "dset.title.elevation_west": "Nyugati homlokzat",
- "dset.err.empty": "Egyik szinten sincsenek rajzolható falak",
+ "dset.err.empty": "Egyik szinten sincsenek rajzolható modellelemek: helyezzen elemeket egy szintre, majd készítse el újra a készletet",
  "dset.warn.typical_rooms": "A tipikus emelet helyiségszámai már nem követnek egy mintát: építse újra a rajzkészletet",
  "dset.note.room_numbers": "Helyiségszám = emeleti előtag + alaprajzi szám, pl. {mark}: {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "Típus szerint kiosztott jelölések: {n}",

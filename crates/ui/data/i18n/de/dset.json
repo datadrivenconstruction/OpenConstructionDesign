@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "Südansicht",
  "dset.title.elevation_east": "Ostansicht",
  "dset.title.elevation_west": "Westansicht",
- "dset.err.empty": "Kein Geschoss hat Wände zum Zeichnen",
+ "dset.err.empty": "Kein Geschoss hat Modellelemente zum Zeichnen: Elemente auf ein Geschoss setzen und den Satz neu erstellen",
  "dset.warn.typical_rooms": "Die Raumnummern eines Regelgeschosses folgen nicht mehr einem Muster: Plansatz neu erstellen",
  "dset.note.room_numbers": "Raumnummer = Geschosspräfix + Nummer im Grundriss, z. B. {mark}: {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "Kennzeichen je Typ vergeben: {n}",

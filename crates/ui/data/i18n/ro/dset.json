@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "Elevația de sud",
  "dset.title.elevation_east": "Elevația de est",
  "dset.title.elevation_west": "Elevația de vest",
- "dset.err.empty": "Niciun nivel nu are pereți de desenat",
+ "dset.err.empty": "Niciun nivel nu are elemente de model de desenat: plasați elemente pe un nivel, apoi creați din nou setul",
  "dset.warn.typical_rooms": "Numerele camerelor de la un etaj tip nu mai urmează un singur model: reconstruiți setul de desene",
  "dset.note.room_numbers": "Numărul încăperii = prefixul etajului + numărul din plan, de ex. {mark}: {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "Marcaje atribuite pe tip: {n}",

@@ -15,7 +15,7 @@
  "dset.title.elevation_south": "Өмнөд фасад",
  "dset.title.elevation_east": "Зүүн фасад",
  "dset.title.elevation_west": "Баруун фасад",
- "dset.err.empty": "Аль ч түвшинд зурах хана алга",
+ "dset.err.empty": "Аль ч түвшинд зурах загварын элемент алга: элементүүдийг түвшинд байрлуулаад багцыг дахин үүсгэнэ үү",
  "dset.warn.typical_rooms": "Ердийн давхрын өрөөний дугаарууд нэг загвараар байхаа больсон: зургийн багцыг дахин бүтээнэ үү",
  "dset.note.room_numbers": "Өрөөний дугаар = давхрын угтвар + планы дугаар, жнь. {mark}: {first} ({level_first}) … {last} ({level_last})",
  "dset.marks_assigned": "Төрлөөр оноогдсон тэмдэг: {n}",
