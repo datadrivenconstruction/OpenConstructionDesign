@@ -11,12 +11,15 @@
 
 <p align="center">
   <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/releases/latest"><img src="https://img.shields.io/github/v/release/datadrivenconstruction/OpenConstructionDesign?style=flat-square&label=release&color=3b6cf6" alt="Latest release"></a>
-  <img src="https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-0f172a?style=flat-square" alt="Platform: Windows 10/11 x64">
+  <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/releases"><img src="https://img.shields.io/github/downloads/datadrivenconstruction/OpenConstructionDesign/total?style=flat-square&label=downloads&color=2f855a" alt="Downloads"></a>
+  <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/datadrivenconstruction/OpenConstructionDesign/ci.yml?branch=main&style=flat-square&label=CI" alt="CI status"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/licence-AGPL--3.0-3b6cf6?style=flat-square" alt="Licence: AGPL-3.0"></a>
-  <img src="https://img.shields.io/badge/rust-1.89%2B%20%C2%B7%20edition%202021-b7410e?style=flat-square" alt="Rust 1.89+, edition 2021">
-  <img src="https://img.shields.io/badge/IFC4-in%20%26%20out-2f855a?style=flat-square" alt="IFC4 in and out">
+  <img src="https://img.shields.io/badge/platform-Windows%20%C2%B7%20Linux%20CLI%20%C2%B7%20Browser-0f172a?style=flat-square" alt="Platforms: Windows, Linux CLI, browser">
+  <img src="https://img.shields.io/badge/rust-1.89%2B-b7410e?style=flat-square&logo=rust&logoColor=white" alt="Rust 1.89+">
+  <img src="https://img.shields.io/badge/IFC-2X3%20%C2%B7%204%20%C2%B7%204.3-2f855a?style=flat-square" alt="IFC 2X3, 4 and 4.3">
   <a href="#mcp-server"><img src="https://img.shields.io/badge/MCP-compatible-6d4aff?style=flat-square" alt="MCP compatible"></a>
-  <a href="#erp-link-change-the-model-the-estimate-follows"><img src="https://img.shields.io/badge/ERP-ready-e8590c?style=flat-square" alt="ERP-ready"></a>
+  <a href="#erp-link-change-the-model-the-estimate-follows"><img src="https://img.shields.io/badge/ERP-estimate%20follows%20the%20model-e8590c?style=flat-square" alt="ERP link"></a>
+  <img src="https://img.shields.io/badge/works-offline-0f172a?style=flat-square" alt="Works offline">
   <br>
   <a href="https://openconstructiondesign.com"><img src="https://img.shields.io/badge/website-openconstructiondesign.com-3b6cf6?style=flat-square" alt="Website"></a>
   <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/commits/main"><img src="https://img.shields.io/github/last-commit/datadrivenconstruction/OpenConstructionDesign/main?style=flat-square" alt="Last commit"></a>
@@ -59,20 +62,25 @@
 </p>
 
 <p align="center">
-  <b>v1.0.0</b> · 62 MB zip · Windows 10/11 x64 · 8 GB RAM · DirectX 12, Vulkan or OpenGL · works offline
+  <b>v1.0.0</b> · 62 MB · Windows 10/11 x64 · 8 GB RAM · works offline · no account
 </p>
+
+| Platform | Get it | Notes |
+|---|---|---|
+| **Windows 10/11 x64** | [**Download the zip**](https://github.com/datadrivenconstruction/OpenConstructionDesign/releases/latest) | Full editor. Unzip and run `ddc-app.exe`. |
+| **Browser** | [**Open the viewer**](https://openconstructiondesign.com/app/) | Nothing to install. |
+| **Linux x64** | [CLI archive](https://github.com/datadrivenconstruction/OpenConstructionDesign/releases/latest) (71 MB) | Headless `ddc` tool; no editor window yet. |
+| **macOS** | [Build from source](#build-from-source) | No release build; untested. |
 
 <p align="center">
   <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/releases">All releases</a> ·
-  <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/releases/latest">Linux CLI (71 MB)</a> ·
   <a href="https://openconstructiondesign.com">Website</a> ·
-  <a href="https://openconstructiondesign.com/app/">Browser viewer</a> ·
   <a href="docs/USER_GUIDE.md">User guide</a>
 </p>
 
 OpenConstructionDesign is a CAD-BIM editor written in Rust, with its own geometry kernel and file
 readers. You describe a building in the built-in chat, over MCP or as a JSON brief; the editor
-produces real walls, rooms, doors, stairs and building services as a highlighted draft, and
+produces real walls, rooms, doors, stairs and building services as a highlighted preview, and
 nothing changes in your model until you press **Apply**. Bring a cloud model with your own key,
 or run a local model through Ollama. The model and its full change history live in one SQLite
 file on your machine, and IFC goes in and out.
@@ -93,15 +101,6 @@ file on your machine, and IFC goes in and out.
    generate a whole building from the sample brief
    [`brief.de-residential.json`](crates/io/contract/examples/brief.de-residential.json)
    (see [Quickstart](#quickstart)).
-
-<details>
-<summary>Linux: headless CLI</summary>
-
-The Linux x64 archive
-[the Linux archive (`…-linux-x64.tar.gz`)](https://github.com/datadrivenconstruction/OpenConstructionDesign/releases/latest)
-(71 MB) holds the `ddc` command line tool only; there is no editor window on Linux yet. macOS has
-no build; code paths exist but are not tested.
-</details>
 
 <details>
 <summary>Build from source</summary>
@@ -140,12 +139,24 @@ ddc open housing.ddc --export ifc4 housing.ifc
   </a>
 </p>
 
+<table>
+<tr>
+<td width="62%" valign="top"><a href="https://openconstructiondesign.com/#erp"><img src="docs/images/erp-estimate.webp" alt="OpenConstructionERP estimate built from the housing block model: grand total EUR 3,560,405.95 over seven positions" width="100%"></a></td>
+<td width="38%" valign="top">
+<h3>&euro;3,560,405.95</h3>
+<b>Estimate of the 6-storey housing block, priced straight from the model.</b><br><br>
+7 positions · 6,730 elements · 7 levels · quantities from the model, rates from the DE_BERLIN cost database.<br><br>
+Move a wall, add a floor or change a type in the editor, publish, and the quantities, the estimate, the 4D schedule and procurement in <a href="https://github.com/datadrivenconstruction/OpenConstructionERP">OpenConstructionERP</a> update with it.
+</td>
+</tr>
+</table>
+
 [OpenConstructionERP](https://github.com/datadrivenconstruction/OpenConstructionERP) is the open
 construction ERP from the same team. The editor hands it every element with a stable key, its
 quantities and its level.
 
 - **Brief in, model out.** An ERP project brief goes through `ddc gen --brief`; you review the
-  draft in the editor and press **Apply**.
+  preview in the editor and press **Apply**.
 - **One revision package.** `ddc publish` writes `elements.parquet`, quantities, the diff to the
   last revision, sheets and IFC4; the ERP matches keys and updates the estimate, 4D schedule and
   procurement.
@@ -165,7 +176,7 @@ quantities and its level.
    a key for a cloud provider. The key stays in the Windows credential store.
 3. Describe a change in plain words, for example
    *"Add a 2-storey extension on the east side, 12 × 8 m, joined to the corridor on both levels."*
-4. Review the highlighted draft in plan and 3D, untick items or change values, then press
+4. Review the highlighted preview in plan and 3D, untick items or change values, then press
    **Apply**. The whole plan is one undo step. Then keep editing by hand.
 
 ### A whole building from a brief
@@ -256,7 +267,7 @@ All six pass `audit{strict = true}`. Nothing in the renders was edited by hand.
 
 ## The editor
 
-Plan and 3D in one window. Whatever the AI drafts, you can open, edit and finish by hand.
+Plan and 3D in one window. Whatever the AI proposes, you can open, edit and finish by hand.
 
 <table>
 <tr>
@@ -265,7 +276,7 @@ Plan and 3D in one window. Whatever the AI drafts, you can open, edit and finish
 </tr>
 <tr>
 <td><picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/editor-draw-walls-dark.webp"><img src="docs/images/editor-draw-walls-light.webp" alt="Drawing a new wall: wall type and height in the tool bar, length and angle readout, horizontal and perpendicular snaps" width="100%"></picture><br><sub>Draw walls with the type and height set before you click; snaps show length, angle and alignment.</sub></td>
-<td><picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/editor-ai-generate-dark.webp"><img src="docs/images/editor-ai-generate-light.webp" alt="The Generate panel: a short brief, building type, storeys and floor height, with the steps Draft, Check and apply, Drawings, Files" width="100%"></picture><br><sub>The AI writes a draft from a brief. Nothing changes in the model until you press Apply.</sub></td>
+<td><picture><source media="(prefers-color-scheme: dark)" srcset="docs/images/editor-ai-generate-dark.webp"><img src="docs/images/editor-ai-generate-light.webp" alt="The Generate panel: a short brief, building type, storeys and floor height, with the steps Generate, Check and apply, Drawings, Files" width="100%"></picture><br><sub>The AI builds a preview from a brief. Nothing changes in the model until you press Apply.</sub></td>
 </tr>
 </table>
 
@@ -330,8 +341,8 @@ Design depth (D1 to D5) is set per discipline: architecture, structure, MEP, doc
 </table>
 
 > [!IMPORTANT]
-> **Draft, then Apply.** The AI plans on a scratch copy, runs the model checks on its draft and
-> shows it highlighted under a *Draft preview, model unchanged* banner, with the quantities it
+> **Preview, then Apply.** The AI plans on a scratch copy, runs the model checks on its result and
+> shows it highlighted under a *Preview, model unchanged* banner, with the quantities it
 > adds. Nothing reaches your model until you press **Apply**; an applied plan is one undo step.
 
 ### MCP server
@@ -343,8 +354,8 @@ config with a fresh token; revoke the token with one click.
 |---|---|
 | `get_context` | Project, levels and the current selection |
 | `query_elements` | Find walls, rooms, doors by any parameter |
-| `create_elements` | Add elements into the draft |
-| `run_checks` | Run the audit on the draft |
+| `create_elements` | Add elements into the preview |
+| `run_checks` | Run the audit on the preview |
 | `request_apply` | Ask the user to press Apply |
 
 <details>
@@ -396,9 +407,9 @@ steps from the architecture through a ghosted shell to the service systems.
 </table>
 
 <details>
-<summary>Process plant (draft generator)</summary>
+<summary>Process plant</summary>
 
-<img src="docs/images/mep-process-plant.webp" alt="Process plant draft: storage tanks in a bund, a jacketed reactor, a distillation column, pumps and heat exchangers on a steel pipe rack" width="100%">
+<img src="docs/images/mep-process-plant.webp" alt="Process plant: storage tanks in a bund, a jacketed reactor, a distillation column, pumps and heat exchangers on a steel pipe rack" width="100%">
 
 Process plant, 90 m³/h, from one brief: 29 units, 285 pipe runs, 978 m of pipe, 245 supports.
 46 of 69 nozzles are connected so far; the plant check lists every open line.
@@ -433,7 +444,7 @@ The housing block above, exported to IFC4 and opened in [OpenConstructionERP](ht
 </tr>
 <tr>
 <td><img src="docs/images/erp-rules.webp" alt="Dry run of seven quantity rules: 2,060 matched elements and 7 bill positions" width="100%"><br>A dry run of 7 quantity rules matches 2,060 elements and shows the 7 bill positions it would create.</td>
-<td><img src="docs/images/erp-estimate.webp" alt="Estimate with seven positions from the model, such as 2,698.30 m³ of concrete walls" width="100%"><br>The estimate: seven positions with quantities from the model. Unit rates are typed in as an example.</td>
+<td><img src="docs/images/erp-estimate.webp" alt="Estimate with seven positions from the model, such as 2,698.30 m³ of concrete walls" width="100%"><br>The estimate: seven positions with quantities from the model. Total EUR 3,560,405.95; unit rates are typed in as an example.</td>
 </tr>
 </table>
 
