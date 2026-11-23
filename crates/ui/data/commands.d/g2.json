@@ -104,6 +104,48 @@
     "priority": 6
   },
   {
+    "id": "e3d.duct",
+    "icon": "duct",
+    "mnemonic": null,
+    "shortcuts": [],
+    "tab": "modify",
+    "surfaces": [
+      "R"
+    ],
+    "stage": "M3",
+    "group": "edit3d",
+    "repeatable": true,
+    "priority": 6
+  },
+  {
+    "id": "e3d.pipe",
+    "icon": "pipe",
+    "mnemonic": null,
+    "shortcuts": [],
+    "tab": "modify",
+    "surfaces": [
+      "R"
+    ],
+    "stage": "M3",
+    "group": "edit3d",
+    "repeatable": true,
+    "priority": 6
+  },
+  {
+    "id": "e3d.tray",
+    "icon": "tray",
+    "mnemonic": null,
+    "shortcuts": [],
+    "tab": "modify",
+    "surfaces": [
+      "R"
+    ],
+    "stage": "M3",
+    "group": "edit3d",
+    "repeatable": true,
+    "priority": 6
+  },
+  {
     "id": "e3d.wp_level",
     "icon": "wp-level",
     "mnemonic": null,

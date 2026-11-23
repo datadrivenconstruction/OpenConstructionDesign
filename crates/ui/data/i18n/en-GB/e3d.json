@@ -73,5 +73,14 @@
  "e3d.snap.iso": "Surface iso-curve",
  "e3d.snap.param": "Curve midpoint and thirds",
  "e3d.snap.surface": "Surface point",
- "e3d.snap.curve": "Nearest on curve"
+ "e3d.snap.curve": "Nearest on curve",
+ "cmd.e3d.duct": "Duct in 3D",
+ "cmd.e3d.pipe": "Pipe in 3D",
+ "cmd.e3d.tray": "Cable tray in 3D",
+ "e3d.hint.mep": "Click points on the run plane · type +/- value for a riser · Ctrl — vertical · Shift — orthogonal · click a connector or run to connect · Enter ends · Esc exits",
+ "e3d.mep.elev": "Elevation",
+ "e3d.mep.port": "Connector",
+ "e3d.mep.end": "Run end",
+ "e3d.mep.on_run": "On run (tee)",
+ "e3d.err.mep_points": "a run needs at least two points"
 }

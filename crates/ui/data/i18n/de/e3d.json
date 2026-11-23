@@ -73,5 +73,14 @@
  "e3d.snap.perp": "Senkrecht",
  "e3d.snap.curve": "Nächster Punkt auf Kurve",
  "e3d.snap.iso": "Flächen-Isokurve",
- "e3d.snap.surface": "Flächenpunkt"
+ "e3d.snap.surface": "Flächenpunkt",
+ "cmd.e3d.duct": "Luftkanal in 3D",
+ "cmd.e3d.pipe": "Rohr in 3D",
+ "cmd.e3d.tray": "Kabeltrasse in 3D",
+ "e3d.hint.mep": "Punkte auf der Trassenebene klicken · +/- Wert für Steigleitung eingeben · Strg — vertikal · Umschalt — orthogonal · Anschluss oder Trasse anklicken zum Verbinden · Enter beendet · Esc beendet das Werkzeug",
+ "e3d.mep.elev": "Höhe",
+ "e3d.mep.port": "Anschluss",
+ "e3d.mep.end": "Trassenende",
+ "e3d.mep.on_run": "Auf Trasse (T-Stück)",
+ "e3d.err.mep_points": "eine Trasse braucht mindestens zwei Punkte"
 }

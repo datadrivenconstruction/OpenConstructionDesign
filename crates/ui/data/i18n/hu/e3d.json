@@ -73,5 +73,14 @@
  "e3d.snap.iso": "Felületi izogörbe",
  "e3d.snap.param": "Görbe felezőpontja és harmadolópontjai",
  "e3d.snap.surface": "Felületi pont",
- "e3d.snap.curve": "Legközelebbi pont a görbén"
+ "e3d.snap.curve": "Legközelebbi pont a görbén",
+ "cmd.e3d.duct": "Légcsatorna 3D-ben",
+ "cmd.e3d.pipe": "Cső 3D-ben",
+ "cmd.e3d.tray": "Kábeltálca 3D-ben",
+ "e3d.hint.mep": "Kattintson pontokat a nyomvonal síkján · írjon +/- értéket felszállóhoz · Ctrl — függőleges · Shift — merőleges · kattintson csatlakozóra vagy nyomvonalra a csatlakozáshoz · Enter befejezi · Esc kilép",
+ "e3d.mep.elev": "Magasság",
+ "e3d.mep.port": "Csatlakozó",
+ "e3d.mep.end": "Nyomvonal vége",
+ "e3d.mep.on_run": "Nyomvonalon (T-idom)",
+ "e3d.err.mep_points": "a nyomvonalhoz legalább két pont kell"
 }

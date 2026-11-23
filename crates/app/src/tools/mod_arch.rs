@@ -34,7 +34,7 @@ mod level;
 mod loop_shapes;
 pub mod measure;
 #[path = "mep.rs"]
-mod mep;
+pub(crate) mod mep;
 #[path = "mep_color.rs"]
 mod mep_color;
 pub(crate) mod opt_field;

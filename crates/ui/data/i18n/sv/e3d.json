@@ -73,5 +73,14 @@
  "e3d.snap.iso": "Ytans isokurva",
  "e3d.snap.param": "Kurvans mittpunkt och tredjedelar",
  "e3d.snap.surface": "Ytpunkt",
- "e3d.snap.curve": "Närmaste punkt på kurva"
+ "e3d.snap.curve": "Närmaste punkt på kurva",
+ "cmd.e3d.duct": "Ventilationskanal i 3D",
+ "cmd.e3d.pipe": "Rör i 3D",
+ "cmd.e3d.tray": "Kabelstege i 3D",
+ "e3d.hint.mep": "Klicka punkter på ledningsplanet · skriv +/- värde för stigarledning · Ctrl — vertikalt · Skift — ortogonalt · klicka på en anslutning eller ledning för att ansluta · Enter avslutar · Esc avslutar verktyget",
+ "e3d.mep.elev": "Höjd",
+ "e3d.mep.port": "Anslutning",
+ "e3d.mep.end": "Ledningsände",
+ "e3d.mep.on_run": "På ledning (T-rör)",
+ "e3d.err.mep_points": "en ledning behöver minst två punkter"
 }

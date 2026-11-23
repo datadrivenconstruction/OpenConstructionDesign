@@ -73,5 +73,14 @@
  "e3d.snap.iso": "Yüzey izo-eğrisi",
  "e3d.snap.param": "Eğri orta noktası ve üçte birleri",
  "e3d.snap.surface": "Yüzey noktası",
- "e3d.snap.curve": "Eğri üzerinde en yakın nokta"
+ "e3d.snap.curve": "Eğri üzerinde en yakın nokta",
+ "cmd.e3d.duct": "3B kanal",
+ "cmd.e3d.pipe": "3B boru",
+ "cmd.e3d.tray": "3B kablo tavası",
+ "e3d.hint.mep": "Hat düzleminde noktalara tıklayın · kolon için +/- değer yazın · Ctrl — dikey · Shift — dik açılı · bağlamak için bir bağlantıya veya hatta tıklayın · Enter bitirir · Esc çıkar",
+ "e3d.mep.elev": "Kot",
+ "e3d.mep.port": "Bağlantı",
+ "e3d.mep.end": "Hat ucu",
+ "e3d.mep.on_run": "Hat üzerinde (T parçası)",
+ "e3d.err.mep_points": "bir hat en az iki nokta gerektirir"
 }
