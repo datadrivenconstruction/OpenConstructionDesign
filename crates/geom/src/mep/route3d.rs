@@ -233,6 +233,10 @@ pub struct Rules {
     pub axes: (Vec<f64>, Vec<f64>),
     /// Factor (<= 1) on metres along an attractive line.
     pub axis_gain: f64,
+    /// The first branch goes to the farthest target, so a header runs past the nearer ones.
+    pub far_first: bool,
+    /// Tees only on level runs: a branch joining a drop could not fall to it.
+    pub level_tees: bool,
     /// z of horizontal travel.
     pub layers: Vec<f64>,
     /// Plan bounds of the lattice.
@@ -272,6 +276,8 @@ impl Rules {
             off_zone: 4.0,
             axes: (vec![], vec![]),
             axis_gain: 1.0,
+            far_first: false,
+            level_tees: false,
             layers,
             bounds,
             max_states: 400_000,
@@ -732,6 +738,7 @@ impl<'a> Search<'a> {
         let tq = match end {
             Some(e) if start_acc + 1e-9 >= e.tangent => 0,
             Some(e) => ((e.tangent / quarter) - 1e-6).ceil().max(0.0) as u8,
+            None if start_acc + 1e-9 >= r.tangent => 0,
             None => ((r.tangent / quarter) - 1e-6).ceil().max(0.0) as u8,
         };
         let teeq = ((r.tee_leg / quarter) - 1e-6).ceil().max(0.0) as u8;
@@ -867,7 +874,12 @@ struct Goal<'a> {
 impl Goal<'_> {
     fn reached(&self, n: u32, d: u8, q: u8, teeq: u8) -> bool {
         if let Some((t, arrive)) = self.node {
-            return n == t && arrive.is_none_or(|a| a == d) && (arrive.is_some() || q >= 2);
+            // on the port's axis, or turning there off a full leg: the escape is the port's straight
+            return n == t
+                && match arrive {
+                    Some(a) => d == a || (d != NONE && d != (a ^ 1) && q >= 4),
+                    None => q >= 2,
+                };
         }
         match self.joins.get(&n) {
             Some(&axis) => d != NONE && d / 2 != axis && q >= teeq,
@@ -993,10 +1005,14 @@ pub fn route_tree(
         .collect();
     while !left.is_empty() {
         // nearest target to the tree first (to the source while the tree is empty)
+        let far = rules.far_first && left.len() == targets.len();
         let (pos, &ti) = left
             .iter()
             .enumerate()
-            .min_by(|a, b| near[*a.1].total_cmp(&near[*b.1]).then(a.1.cmp(b.1)))
+            .min_by(|a, b| {
+                let o = near[*a.1].total_cmp(&near[*b.1]);
+                if far { o.reverse() } else { o }.then(a.1.cmp(b.1))
+            })
             .expect("left is not empty");
         left.remove(pos);
         s.pending.retain(|p| p.0 != ti);
@@ -1009,6 +1025,9 @@ pub fn route_tree(
             let Some(axis) = axis_of(b - a) else {
                 continue;
             };
+            if rules.level_tees && axis / 2 == 2 {
+                continue;
+            }
             let k = (axis / 2) as usize;
             let len = (b - a).len();
             let (m0, m1) = (margin(a), margin(b));
@@ -1036,6 +1055,9 @@ pub fn route_tree(
             let Some(axis) = axis_of(b - a) else {
                 continue;
             };
+            if rules.level_tees && axis / 2 == 2 {
+                continue;
+            }
             let len = (b - a).len();
             let (m0, m1) = (margin(a), margin(b));
             let dir = (b - a).normalized();
