@@ -3,8 +3,9 @@
 //! Direct editing in 3D: selection of all categories with hover highlight, grips per
 //! category ([`grips`]; providers from other modules plug in via [`grips::Provider`]),
 //! the move/rotate gizmo ([`gizmo`]), snaps ([`snap`]), work planes
-//! ([`plane`]), creation of walls/slabs/columns/beams on a plane ([`create`]), window/crossing
-//! selection box, measurement ([`measure`]), temporary dimensions with value entry.
+//! ([`plane`]), creation of walls/slabs/columns/beams/roofs on a plane ([`create`]), attach and
+//! join/cut by picking ([`host3d`]), window/crossing selection box, measurement ([`measure`]),
+//! temporary dimensions with value entry.
 //! One action is one undo step: a grip uses `run_op`, a compound move uses `apply_ext`.
 
 pub mod create;
@@ -13,6 +14,7 @@ pub mod detail3d;
 pub mod exact;
 pub mod gizmo;
 pub mod grips;
+pub mod host3d;
 pub mod math;
 pub mod measure;
 pub mod measure_saved;
@@ -33,6 +35,8 @@ pub mod wp_win;
 mod zone_shaft3d;
 #[cfg(test)]
 mod tests;
+#[cfg(test)]
+mod tests_roof_host;
 pub mod xform;
 #[cfg(test)]
 mod xform_fuzz;
@@ -93,6 +97,8 @@ pub enum Tool {
     Array,
     /// Duct, pipe or cable tray run (`mep_draw`).
     Mep(mep_draw::Kind),
+    /// Attach walls, join/unjoin/cut geometry by picking elements.
+    Host(host3d::Op),
 }
 
 impl Tool {
@@ -105,6 +111,8 @@ impl Tool {
             Tool::Create(create::Kind::Floor) => "floor",
             Tool::Create(create::Kind::Column) => "column",
             Tool::Create(create::Kind::Beam) => "beam",
+            Tool::Create(create::Kind::Roof) => "roof",
+            Tool::Host(op) => op.key(),
             Tool::Face => "face",
             Tool::Pick3 => "pick",
             Tool::Mirror => "mirror",
@@ -114,7 +122,7 @@ impl Tool {
     }
 
     fn snaps(self) -> bool {
-        !matches!(self, Tool::Select | Tool::Box | Tool::Face)
+        !matches!(self, Tool::Select | Tool::Box | Tool::Face | Tool::Host(_))
     }
 
     /// Command the ribbon lights for the tool (resolved id: `mod.measure` aliases
@@ -128,6 +136,8 @@ impl Tool {
             Tool::Create(create::Kind::Floor) => "e3d.floor",
             Tool::Create(create::Kind::Column) => "e3d.column",
             Tool::Create(create::Kind::Beam) => "e3d.beam",
+            Tool::Create(create::Kind::Roof) => "e3d.roof",
+            Tool::Host(op) => op.command(),
             Tool::Face => "e3d.wp_face",
             Tool::Pick3 => "e3d.wp_pick",
             Tool::Mirror => "mod.mirror",
@@ -221,6 +231,8 @@ pub struct Edit3d {
     /// position of the last move sent to it.
     plan_tool: Option<create::Kind>,
     plan_last: Option<[f32; 2]>,
+    /// Picks of the attach and join/cut tools.
+    host: host3d::State,
 }
 
 impl Edit3d {
@@ -250,6 +262,8 @@ impl Edit3d {
             || self.tool == Tool::Array
             || self.create.as_ref().is_some_and(|c| !c.pts.is_empty())
             || matches!(self.tool, Tool::Mep(_))
+            // the routed plan tool reads typed lengths and Space (roof edge slope)
+            || self.plan_tool.is_some()
     }
 
     /// The user's work plane in model coordinates; `None` while it is the active level.
@@ -284,6 +298,12 @@ impl Edit3d {
         self.pick3.clear();
         self.ma.clear();
         self.mep.set_tool(t);
+        match t {
+            Tool::Host(op) => self.host.start(op, &self.sel),
+            _ => {
+                self.host.clear();
+            }
+        }
         self.create = match t {
             Tool::Create(k) => Some(create::Create::new(k)),
             _ => None,
@@ -310,7 +330,7 @@ impl Edit3d {
                 tool: ToolId(k.command()),
                 step: if self.mep.pts.is_empty() { "first" } else { "next" },
             },
-            (None, Tool::Face | Tool::Pick3) => Scope::Pointing,
+            (None, Tool::Face | Tool::Pick3 | Tool::Host(_)) => Scope::Pointing,
             (None, Tool::Mirror) => Scope::Moving { op: ModOp::Mirror },
             (None, Tool::Array) => Scope::Moving { op: ModOp::Array },
             (None, Tool::Select) if !self.measure.pts.is_empty() => Scope::Measuring,
@@ -490,6 +510,15 @@ pub fn adapter(
         z0,
         plane.to_model(z0),
     )
+}
+
+/// A plan tool picking outline walls (roof, floor) takes the wall face under the ray, not the
+/// plane point behind it: the pointer gets that wall as its host (`Pointer::plan` → its axis).
+pub(crate) fn wall_pick_pointer(ed: &Editor, mut p: crate::interact::Pointer) -> crate::interact::Pointer {
+    if crate::interact::sessions::model_tool::get(ed).is_some_and(|a| a.opts.walls) {
+        p.host = crate::interact::host::wall_hit(ed, &p.ray);
+    }
+    p
 }
 
 fn parse_value(s: &str, angle: bool, ed: &Editor) -> Option<f32> {
@@ -1284,8 +1313,10 @@ impl Edit3d {
             }
             Tool::Create(_) if self.plan_tool.is_some() => {
                 if let Some(p) = self.pointer {
+                    let p = wall_pick_pointer(ed, p);
                     plan_route::pointer(ed, p, &mut self.plan_last, click);
                 }
+                crate::tools::options_3d(ui, rect, ed, view.dark);
             }
             Tool::Create(_) => {
                 let wp = self.plane;
@@ -1397,6 +1428,36 @@ impl Edit3d {
                 }
                 paint::polyline(&painter, &cam, &l, Stroke::new(1.5, ov.preview));
             }
+            Tool::Host(op) => {
+                let t = if click && pending {
+                    exact_target(ed, bodies, scene, ray.as_ref(), &exact, self.cycle)
+                } else {
+                    hit.as_ref().map(|h| h.target)
+                };
+                for p in self.host.picked() {
+                    if let Some(i) = bodies.of(p) {
+                        let f = pick::box_edges(&bodies.list[i].aabb);
+                        paint::edges(&painter, &cam, &f.edges, Stroke::new(2.0, accent), |v| v);
+                    }
+                }
+                // live validation: what a click does here, or why it is refused
+                if let (Some(p), Some(t)) = (pointer, t) {
+                    let (txt, warn) = match self.host.check(op, t) {
+                        Ok(_) => (self.t(&format!("e3d.cat.{}", t.cat.key())), None),
+                        Err(k) => (self.t(k), Some(ov.warning)),
+                    };
+                    paint::label(&painter, p + Vec2::new(24.0, 24.0), &txt, fg, bg, warn);
+                }
+                if let (true, Some(t)) = (click, t) {
+                    let mut st = std::mem::take(&mut self.host);
+                    let r = st.click(ed, op, t);
+                    self.host = st;
+                    ed.status = Some(match r {
+                        Ok(k) => self.t(k),
+                        Err(e) => self.err(&e),
+                    });
+                }
+            }
             _ => {}
         }
 
@@ -1436,7 +1497,8 @@ impl Edit3d {
         if self.tool != Tool::Select || self.gizmo {
             paint::note(
                 &painter,
-                rect.left_top() + Vec2::new(12.0, 12.0),
+                // under the routed plan tool's option bar
+                rect.left_top() + Vec2::new(12.0, if self.plan_tool.is_some() { 12.0 + crate::tools::BAR_H } else { 12.0 }),
                 &hint,
                 fg,
                 bg,
@@ -1479,7 +1541,7 @@ impl Edit3d {
             self.mep.clear();
             return;
         }
-        if self.ma.clear_points() {
+        if self.ma.clear_points() || self.host.clear() {
             return;
         }
         self.set_tool(Tool::Select);
@@ -1764,10 +1826,16 @@ pub fn register(a: &mut EditorApp) {
     });
     a.register_command("e3d.beam", |a| open(a, Tool::Create(create::Kind::Beam)));
     mep_draw::register(a);
+    a.register_command("e3d.roof", |a| open(a, Tool::Create(create::Kind::Roof)));
+    a.register_command("e3d.attach_top", |a| open(a, Tool::Host(host3d::Op::AttachTop)));
+    a.register_command("e3d.attach_base", |a| open(a, Tool::Host(host3d::Op::AttachBase)));
+    a.register_command("e3d.join", |a| open(a, Tool::Host(host3d::Op::Join)));
+    a.register_command("e3d.unjoin", |a| open(a, Tool::Host(host3d::Op::Unjoin)));
+    a.register_command("e3d.cut", |a| open(a, Tool::Host(host3d::Op::Cut)));
 }
 
 /// Module command ids (for data checks).
-pub const COMMANDS: [&str; 22] = [
+pub const COMMANDS: [&str; 28] = [
     "e3d.gizmo",
     "e3d.box",
     "e3d.measure",
@@ -1790,4 +1858,10 @@ pub const COMMANDS: [&str; 22] = [
     "e3d.duct",
     "e3d.pipe",
     "e3d.tray",
+    "e3d.roof",
+    "e3d.attach_top",
+    "e3d.attach_base",
+    "e3d.join",
+    "e3d.unjoin",
+    "e3d.cut",
 ];

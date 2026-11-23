@@ -42,6 +42,11 @@ the active level plane and the keys, through `Editor::input`, as in plan; no per
 **Section plane**: `view3d::section_plane` — a section box with five faces outside the model and one
 face (the plane) inside; only its grip is drawn. Picking, snaps and undo come with the box.
 
+**Roof, attach, join/cut**: `e3d.roof` arms the plan roof tool through `plan_route` (footprint
+sketch or picked walls, Space flips an edge's slope; its option bar is drawn over the 3D view;
+picked walls come from the face under the ray, `wall_pick_pointer`). `host3d` attaches wall
+top/base to a roof or floor and joins, unjoins or cuts two picked elements: one `run_op` each.
+
 Labels: `e3d.cat.<Cat::key()>` (`Ext` → `other`) in `ui/data/i18n/{ru,en}/<fragment>.json`.
 
 **MEP runs**: `mep_draw` (commands `e3d.duct`, `e3d.pipe`, `e3d.tray`). Points chain at the run

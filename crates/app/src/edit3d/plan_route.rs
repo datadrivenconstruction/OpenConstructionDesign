@@ -19,6 +19,8 @@ pub fn hotkey(k: Kind) -> &'static str {
         Kind::Floor => "SB",
         Kind::Column => "CL",
         Kind::Beam => "BM",
+        // no two-letter alias in `script::arm`: the command id arms the tool
+        Kind::Roof => "arch.roof",
     }
 }
 

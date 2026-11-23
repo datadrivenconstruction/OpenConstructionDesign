@@ -683,6 +683,12 @@ fn every_command_has_strings() {
         Tool::Create(create::Kind::Column),
         Tool::Create(create::Kind::Beam),
         Tool::Mep(mep_draw::Kind::Duct),
+        Tool::Create(create::Kind::Roof),
+        Tool::Host(host3d::Op::AttachTop),
+        Tool::Host(host3d::Op::AttachBase),
+        Tool::Host(host3d::Op::Join),
+        Tool::Host(host3d::Op::Unjoin),
+        Tool::Host(host3d::Op::Cut),
     ] {
         let k = format!("e3d.hint.{}", t.key());
         assert_ne!(tr(false, &k), k);
@@ -695,6 +701,7 @@ fn every_command_has_strings() {
         include_str!("xform.rs"),
         include_str!("mirror_array.rs"),
         include_str!("mep_draw.rs"),
+        include_str!("host3d.rs"),
     ];
     for s in src {
         for k in s
@@ -808,6 +815,9 @@ fn tools_report_active_command_until_esc() {
         ("e3d.duct", "e3d.duct"),
         ("e3d.pipe", "e3d.pipe"),
         ("e3d.tray", "e3d.tray"),
+        ("e3d.roof", "e3d.roof"),
+        ("e3d.attach_top", "e3d.attach_top"),
+        ("e3d.join", "e3d.join"),
         ("e3d.wp_face", "e3d.wp_face"),
         ("e3d.wp_pick", "e3d.wp_pick"),
     ];

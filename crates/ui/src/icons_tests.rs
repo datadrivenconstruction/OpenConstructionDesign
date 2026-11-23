@@ -152,6 +152,12 @@ const SAME_TOOL: &[(&str, &str)] = &[
     ("mass.sweep", "arch.solid_sweep"),
     ("mass.swept_blend", "arch.solid_swept_blend"),
     ("arch.section", "view.section"),
+    ("e3d.roof", "arch.roof"),
+    ("e3d.attach_top", "ctx.wall.attach"),
+    ("e3d.attach_base", "ctx.wall.attach"),
+    ("e3d.join", "mod.join"),
+    ("e3d.unjoin", "mod.unjoin"),
+    ("e3d.cut", "mass.cut"),
     ("view.section_box_fit", "view.section_box"),
     ("ctx.mep.fitting", "mep.fitting"),
     // the Data tab repeats the File menu entries

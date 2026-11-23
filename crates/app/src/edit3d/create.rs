@@ -18,6 +18,8 @@ pub enum Kind {
     Floor,
     Column,
     Beam,
+    /// Footprint roof: sketched by the plan roof tool on the level plane (`plan_route`).
+    Roof,
 }
 
 /// New element: the slab/profile type is resolved at write time.
@@ -109,6 +111,8 @@ impl Create {
     /// Click at point `p` (already on the work plane).
     pub fn click(&mut self, c: &Ctx, wp: &WorkPlane, p: Vec3) -> Result<Step, Error> {
         match self.kind {
+            // reaches here only off the level plane: the footprint sketch is the plan tool's
+            Kind::Roof => Err(bad("e3d.err.roof_level")),
             Kind::Column => {
                 let (level, z) = c.on(flat(wp)?);
                 Ok(Step::Done(New::Column(ColumnSpec {
@@ -187,6 +191,9 @@ impl Create {
 
     /// Enter: close the slab outline.
     pub fn finish(&mut self, c: &Ctx, wp: &WorkPlane) -> Result<Step, Error> {
+        if self.kind == Kind::Roof {
+            return Err(bad("e3d.err.roof_level"));
+        }
         if self.kind != Kind::Floor {
             self.pts.clear();
             return Ok(Step::More);
