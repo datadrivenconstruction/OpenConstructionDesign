@@ -73,5 +73,14 @@
  "e3d.snap.iso": "Oppervlakte-isocurve",
  "e3d.snap.param": "Middelpunt en derden van kromme",
  "e3d.snap.surface": "Oppervlaktepunt",
- "e3d.snap.curve": "Dichtstbijzijnde punt op kromme"
+ "e3d.snap.curve": "Dichtstbijzijnde punt op kromme",
+ "cmd.e3d.duct": "Luchtkanaal in 3D",
+ "cmd.e3d.pipe": "Leiding in 3D",
+ "cmd.e3d.tray": "Kabelgoot in 3D",
+ "e3d.hint.mep": "Klik punten op het leidingvlak · typ +/- waarde voor een stijgleiding · Ctrl — verticaal · Shift — orthogonaal · klik een aansluiting of leiding om te verbinden · Enter beëindigt · Esc sluit af",
+ "e3d.mep.elev": "Hoogte",
+ "e3d.mep.port": "Aansluiting",
+ "e3d.mep.end": "Leidingeinde",
+ "e3d.mep.on_run": "Op leiding (T-stuk)",
+ "e3d.err.mep_points": "een leiding heeft minstens twee punten nodig"
 }

@@ -73,5 +73,14 @@
  "e3d.snap.iso": "Iso-kurba ng ibabaw",
  "e3d.snap.param": "Midpoint at mga ikatlong bahagi ng kurba",
  "e3d.snap.surface": "Punto sa ibabaw",
- "e3d.snap.curve": "Pinakamalapit sa kurba"
+ "e3d.snap.curve": "Pinakamalapit sa kurba",
+ "cmd.e3d.duct": "Duct sa 3D",
+ "cmd.e3d.pipe": "Tubo sa 3D",
+ "cmd.e3d.tray": "Cable tray sa 3D",
+ "e3d.hint.mep": "I-click ang mga punto sa plane ng run · mag-type ng +/- na halaga para sa riser · Ctrl — patayo · Shift — ortogonal · i-click ang connector o run para ikabit · Enter tapos · Esc labas",
+ "e3d.mep.elev": "Elebasyon",
+ "e3d.mep.port": "Connector",
+ "e3d.mep.end": "Dulo ng run",
+ "e3d.mep.on_run": "Sa run (tee)",
+ "e3d.err.mep_points": "kailangan ng run ng hindi bababa sa dalawang punto"
 }
