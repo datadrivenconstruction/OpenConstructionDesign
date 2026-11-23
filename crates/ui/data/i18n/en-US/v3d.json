@@ -10,6 +10,7 @@
  "cmd.view.style_xray": "Visual style — X-ray",
  "cmd.view.vg_3d": "Category visibility in 3D",
  "cmd.view.section_box_fit": "Fit section box to selection",
+ "cmd.view.section_plane": "Temporary section plane",
  "cmd.view.section_caps": "Cut fills",
  "cmd.view.level_3d": "Level 3D view",
  "cmd.view.save_3d": "Save 3D view",

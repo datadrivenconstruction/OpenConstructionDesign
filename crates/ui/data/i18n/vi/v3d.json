@@ -10,6 +10,7 @@
  "cmd.view.style_xray": "Kiểu hiển thị — X-ray",
  "cmd.view.vg_3d": "Hiển thị danh mục trong 3D",
  "cmd.view.section_box_fit": "Khớp hộp mặt cắt với vùng chọn",
+ "cmd.view.section_plane": "Mặt phẳng cắt tạm thời",
  "cmd.view.section_caps": "Tô kín mặt cắt",
  "cmd.view.level_3d": "Góc nhìn 3D theo tầng",
  "cmd.view.save_3d": "Lưu góc nhìn 3D",

@@ -43,6 +43,7 @@
  "cmd.view.style_xray.desc": "3D visuaalne stiil: läbipaistvad tahud, mis näitavad sisemisi elemente.",
  "cmd.view.vg_3d.desc": "Kategooriate nähtavus ja värv 3D-vaates. Märgi kategooriad, mida näidata.",
  "cmd.view.section_box_fit.desc": "Lülitab sisse lõikekasti valitud elementide ümber. Lohista kasti tahke, et neid liigutada.",
+ "cmd.view.section_plane.desc": "Lõikab 3D-vaate kaamera poole suunatud tasandiga läbi valiku või mudeli. Liigutamiseks lohista noolt; väljalülitamiseks käivita uuesti.",
  "cmd.view.section_caps.desc": "Lülitab lõikekasti tahkude täite sisse või välja.",
  "cmd.view.level_3d.desc": "Avab praeguse korruse 3D-vaate, mille kõrgusel on lõikekast.",
  "cmd.view.save_3d.desc": "Salvestab praeguse 3D-vaate koos kaamera, lõikekasti ja stiiliga. Sisesta vaate nimi.",

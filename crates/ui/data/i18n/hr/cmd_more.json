@@ -8,6 +8,7 @@
  "cmd.view.hide_cat_3d.short": "Sakrij kategoriju",
  "cmd.view.isolate_cat_3d.short": "Izoliraj kategoriju",
  "cmd.view.section_box_fit.short": "Prilagodi odabiru",
+ "cmd.view.section_plane.short": "Ravnina presjeka",
  "cmd.arch.void_swept_blend.short": "Profilirano stapanje",
  "cmd.e3d.wp_face.short": "S plohe",
  "cmd.e3d.wp_level.short": "S razine",

@@ -10,6 +10,7 @@
  "cmd.view.style_xray": "视觉样式 — X 射线",
  "cmd.view.vg_3d": "三维中的类别可见性",
  "cmd.view.section_box_fit": "将剖切框贴合至所选构件",
+ "cmd.view.section_plane": "临时剖切平面",
  "cmd.view.section_caps": "剖面填充",
  "cmd.view.level_3d": "标高三维视图",
  "cmd.view.save_3d": "保存三维视图",

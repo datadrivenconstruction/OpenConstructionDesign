@@ -35,4 +35,11 @@ when the 3D view is active. Families come from `elem::Family.xf` (reason keys on
 plan target map; the model does the work in one op (`mirror_elements`, `array_linear`,
 `array_radial`). Ghost = `Xform::point` over the selected bodies.
 
+**Plan tools in 3D**: `plan_route`. Any plan tool armed while the 3D view is idle (`live`: the
+editor scope is drafting, placing or moving and not the 3D bridge session) gets the 3D pointer on
+the active level plane and the keys, through `Editor::input`, as in plan; no per-tool list.
+
+**Section plane**: `view3d::section_plane` — a section box with five faces outside the model and one
+face (the plane) inside; only its grip is drawn. Picking, snaps and undo come with the box.
+
 Labels: `e3d.cat.<Cat::key()>` (`Ext` → `other`) in `ui/data/i18n/{ru,en}/<fragment>.json`.

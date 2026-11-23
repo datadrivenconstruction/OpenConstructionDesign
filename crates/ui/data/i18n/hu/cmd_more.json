@@ -8,6 +8,7 @@
  "cmd.view.hide_cat_3d.short": "Kategória elrejtése",
  "cmd.view.isolate_cat_3d.short": "Kategória izolálása",
  "cmd.view.section_box_fit.short": "Illesztés a kijelöléshez",
+ "cmd.view.section_plane.short": "Metszősík",
  "cmd.arch.void_swept_blend.short": "Söpört átmenet",
  "cmd.e3d.wp_face.short": "Felületről",
  "cmd.e3d.wp_level.short": "Szintből",

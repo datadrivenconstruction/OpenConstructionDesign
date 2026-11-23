@@ -43,6 +43,7 @@
  "cmd.view.style_xray.desc": "Stil vizual 3D: fețe translucide care arată elementele din interior.",
  "cmd.view.vg_3d.desc": "Vizibilitatea și culoarea categoriilor în vederea 3D. Bifați categoriile de afișat.",
  "cmd.view.section_box_fit.desc": "Activează o cutie de secțiune în jurul elementelor selectate. Trageți fețele cutiei pentru a le muta.",
+ "cmd.view.section_plane.desc": "Taie vederea 3D cu un plan orientat spre cameră prin selecție sau model. Trageți săgeata pentru a-l muta; rulați din nou pentru a-l opri.",
  "cmd.view.section_caps.desc": "Activează sau dezactivează umplerea tăieturii pe fețele cutiei de secțiune.",
  "cmd.view.level_3d.desc": "Deschide o vedere 3D a nivelului curent, cu o cutie de secțiune pe înălțimea sa.",
  "cmd.view.save_3d.desc": "Salvează vederea 3D curentă cu cameră, cutie de secțiune și stil. Introduceți un nume pentru vedere.",

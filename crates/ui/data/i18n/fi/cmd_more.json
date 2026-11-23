@@ -8,6 +8,7 @@
  "cmd.view.hide_cat_3d.short": "Piilota luokka",
  "cmd.view.isolate_cat_3d.short": "Eristä luokka",
  "cmd.view.section_box_fit.short": "Sovita valintaan",
+ "cmd.view.section_plane.short": "Leikkaustaso",
  "cmd.arch.void_swept_blend.short": "Profiilisekoitus",
  "cmd.e3d.wp_face.short": "Pinnasta",
  "cmd.e3d.wp_level.short": "Tasosta",

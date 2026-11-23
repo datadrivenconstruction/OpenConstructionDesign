@@ -19,6 +19,7 @@
  "cmd.data.src_reimport.short": "Импортировать снова",
  "cmd.data.merge_file.short": "Слить с файлом…",
  "cmd.view.section_box_fit.short": "Вписать в выбор",
+ "cmd.view.section_plane.short": "Секущая плоскость",
  "cmd.view.drawing_set.short": "Комплект чертежей",
  "cmd.data.export_ifc.short": "IFC…",
  "cmd.mgr.purge.short": "Очистить…",

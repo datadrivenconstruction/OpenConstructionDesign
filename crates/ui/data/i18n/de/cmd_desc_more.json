@@ -43,6 +43,7 @@
  "cmd.view.style_xray.desc": "3D-Darstellung: transparente Flächen, die innenliegende Elemente sichtbar machen.",
  "cmd.view.vg_3d.desc": "Sichtbarkeit und Farbe der Kategorien in der 3D-Ansicht. Die anzuzeigenden Kategorien ankreuzen.",
  "cmd.view.section_box_fit.desc": "Schaltet eine Schnittbox um die gewählten Elemente ein. Die Flächen der Box ziehen, um sie zu verschieben.",
+ "cmd.view.section_plane.desc": "Schneidet die 3D-Ansicht mit einer Ebene zur Kamera durch die Auswahl oder das Modell. Den Pfeil ziehen, um sie zu verschieben; erneut ausführen zum Ausschalten.",
  "cmd.view.section_caps.desc": "Schaltet die Füllung der Schnittflächen an der Schnittbox ein oder aus.",
  "cmd.view.level_3d.desc": "Öffnet eine 3D-Ansicht des aktuellen Geschosses mit einer Schnittbox über seine Höhe.",
  "cmd.view.save_3d.desc": "Speichert die aktuelle 3D-Ansicht mit Kamera, Schnittbox und Darstellung. Einen Ansichtsnamen eingeben.",

@@ -10,6 +10,7 @@
  "cmd.view.style_xray": "Харагдацын хэв маяг — рентген",
  "cmd.view.vg_3d": "3D-д ангиллын харагдах байдал",
  "cmd.view.section_box_fit": "Хэсгийн хайрцгийг сонголтод тохируулах",
+ "cmd.view.section_plane": "Түр зуурын огтлолын хавтгай",
  "cmd.view.section_caps": "Таслалтыг дүүргэх",
  "cmd.view.level_3d": "3D түвшний харагдац",
  "cmd.view.save_3d": "3D харагдацыг хадгалах",

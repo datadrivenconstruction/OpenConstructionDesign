@@ -10,6 +10,7 @@
  "cmd.view.style_xray": "ভিজ্যুয়াল স্টাইল — X-ray",
  "cmd.view.vg_3d": "3D-তে বিভাগ দৃশ্যমানতা",
  "cmd.view.section_box_fit": "সেকশন বক্স নির্বাচনে মানানসই করুন",
+ "cmd.view.section_plane": "অস্থায়ী সেকশন প্লেন",
  "cmd.view.section_caps": "কাটা অংশ ভরাট",
  "cmd.view.level_3d": "লেভেল 3D ভিউ",
  "cmd.view.save_3d": "3D ভিউ সংরক্ষণ",

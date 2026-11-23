@@ -43,6 +43,7 @@
  "cmd.view.style_xray.desc": "Style visuel 3D : faces translucides qui révèlent les éléments intérieurs.",
  "cmd.view.vg_3d.desc": "Visibilité et couleur des catégories dans la vue 3D. Cochez les catégories à afficher.",
  "cmd.view.section_box_fit.desc": "Active une boîte de coupe autour des éléments sélectionnés. Faites glisser les faces de la boîte pour les déplacer.",
+ "cmd.view.section_plane.desc": "Coupe la vue 3D par un plan face à la caméra passant par la sélection ou le modèle. Faites glisser sa flèche pour le déplacer ; relancez pour le désactiver.",
  "cmd.view.section_caps.desc": "Active ou désactive le remplissage de coupe sur les faces de la boîte de coupe.",
  "cmd.view.level_3d.desc": "Ouvre une vue 3D du niveau courant avec une boîte de coupe sur sa hauteur.",
  "cmd.view.save_3d.desc": "Enregistre la vue 3D courante avec la caméra, la boîte de coupe et le style. Saisissez un nom de vue.",

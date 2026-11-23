@@ -41,6 +41,8 @@ pub struct Viewport {
     pub frame_ms: f32,
     /// Section box: everything outside it is hidden; faces move with handles.
     pub section_box: Option<Aabb>,
+    /// Temporary section plane: the box it is made of (`view3d::section_plane`).
+    pub section_plane: Option<crate::view3d::section_plane::Cut>,
     /// Gesture and undo log of the section box face handles (`view3d::boxdrag`).
     pub boxed: crate::view3d::boxdrag::BoxEditor,
     /// LMB drag is handed to the tool (push-pull): offset per gesture, release.
@@ -114,6 +116,7 @@ impl Viewport {
             gfx: Default::default(),
             frame_ms: 0.0,
             section_box: None,
+            section_plane: None,
             boxed: Default::default(),
             capture: false,
             grab: None,
@@ -138,6 +141,7 @@ impl Viewport {
         v.camera = self.camera.clone();
         v.nav.style = self.nav.style;
         v.section_box = self.section_box;
+        v.section_plane = self.section_plane;
         v.fitted = self.fitted;
         v.slot = slot;
         v
@@ -483,9 +487,12 @@ impl Viewport {
             )
         };
         let line = Stroke::new(1.2, accent.gamma_multiply(0.8));
+        // a section plane draws its own face only
+        let plane = crate::view3d::section_plane::active(self);
+        let on_plane = |i: usize| plane.is_none_or(|f| (((i >> f.axis) & 1) == 1) == f.hi);
         for i in 0..8usize {
             for bit in [1usize, 2, 4] {
-                if i & bit != 0 {
+                if i & bit != 0 || !on_plane(i) || !on_plane(i | bit) {
                     continue;
                 }
                 let a = self.to_screen(rect, aspect, corner(i));
@@ -496,6 +503,9 @@ impl Viewport {
             }
         }
         for (q, axis, hi) in Self::box_handles(b) {
+            if plane.is_some_and(|f| f.axis != axis || f.hi != hi) {
+                continue;
+            }
             let Some(c) = self.to_screen(rect, aspect, q) else {
                 continue;
             };

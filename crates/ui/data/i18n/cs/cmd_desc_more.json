@@ -43,6 +43,7 @@
  "cmd.view.style_xray.desc": "Vizuální styl 3D: průsvitné plochy, které odhalí vnitřní prvky.",
  "cmd.view.vg_3d.desc": "Viditelnost kategorií a barvy ve 3D pohledu. Zaškrtněte kategorie k zobrazení.",
  "cmd.view.section_box_fit.desc": "Zapne řezový box kolem vybraných prvků. Přetažením stěn boxu je posunete.",
+ "cmd.view.section_plane.desc": "Ořízne 3D pohled rovinou natočenou ke kameře přes výběr nebo model. Tažením šipky ji posunete; dalším spuštěním ji vypnete.",
  "cmd.view.section_caps.desc": "Zapne nebo vypne výplň řezu na stěnách řezového boxu.",
  "cmd.view.level_3d.desc": "Otevře 3D pohled aktuálního podlaží s řezovým boxem přes jeho výšku.",
  "cmd.view.save_3d.desc": "Uloží aktuální 3D pohled s kamerou, řezovým boxem a stylem. Zadejte název pohledu.",

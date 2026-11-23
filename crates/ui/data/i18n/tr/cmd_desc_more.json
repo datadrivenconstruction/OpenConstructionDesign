@@ -43,6 +43,7 @@
  "cmd.view.style_xray.desc": "3D görsel stil: iç öğeleri ortaya çıkaran yarı saydam yüzeyler.",
  "cmd.view.vg_3d.desc": "3D görünümde kategori görünürlüğü ve rengi. Gösterilecek kategorileri işaretleyin.",
  "cmd.view.section_box_fit.desc": "Seçili öğelerin etrafında bir kesit kutusu açar. Hareket ettirmek için kutu yüzlerini sürükleyin.",
+ "cmd.view.section_plane.desc": "3B görünümü seçimden veya modelden geçen, kameraya bakan bir düzlemle keser. Taşımak için okunu sürükleyin; kapatmak için yeniden çalıştırın.",
  "cmd.view.section_caps.desc": "Kesit kutusu yüzlerindeki kesim dolgusunu açar veya kapatır.",
  "cmd.view.level_3d.desc": "Geçerli katın, yüksekliği boyunca kesit kutusu olan bir 3D görünümünü açar.",
  "cmd.view.save_3d.desc": "Geçerli 3D görünümü kamera, kesit kutusu ve stille kaydeder. Bir görünüm adı girin.",

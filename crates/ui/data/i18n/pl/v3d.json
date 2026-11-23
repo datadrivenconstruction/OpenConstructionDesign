@@ -10,6 +10,7 @@
  "cmd.view.style_xray": "Styl wizualny — rentgen",
  "cmd.view.vg_3d": "Widoczność kategorii w 3D",
  "cmd.view.section_box_fit": "Dopasuj pudło przekroju do zaznaczenia",
+ "cmd.view.section_plane": "Tymczasowa płaszczyzna przekroju",
  "cmd.view.section_caps": "Wypełnij przekroje",
  "cmd.view.level_3d": "Widok 3D poziomu",
  "cmd.view.save_3d": "Zapisz widok 3D",

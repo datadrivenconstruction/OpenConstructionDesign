@@ -43,6 +43,7 @@
  "cmd.view.style_xray.desc": "3D-visningsstil: genomskinliga ytor som visar inre element.",
  "cmd.view.vg_3d.desc": "Kategoriers synlighet och färg i 3D-vyn. Bocka i kategorierna som ska visas.",
  "cmd.view.section_box_fit.desc": "Slår på en sektionslåda runt de markerade elementen. Dra lådans ytor för att flytta dem.",
+ "cmd.view.section_plane.desc": "Skär 3D-vyn med ett plan mot kameran genom markeringen eller modellen. Dra pilen för att flytta det; kör igen för att stänga av.",
  "cmd.view.section_caps.desc": "Slår på eller av snittfyllningen på sektionslådans ytor.",
  "cmd.view.level_3d.desc": "Öppnar en 3D-vy för aktuell våning med en sektionslåda över dess höjd.",
  "cmd.view.save_3d.desc": "Sparar aktuell 3D-vy med kamera, sektionslåda och stil. Ange ett vynamn.",

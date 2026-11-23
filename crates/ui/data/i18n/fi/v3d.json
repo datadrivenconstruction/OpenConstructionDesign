@@ -10,6 +10,7 @@
  "cmd.view.style_xray": "Visuaalinen tyyli — röntgen",
  "cmd.view.vg_3d": "Luokkien näkyvyys 3D:ssä",
  "cmd.view.section_box_fit": "Sovita leikkauslaatikko valintaan",
+ "cmd.view.section_plane": "Väliaikainen leikkaustaso",
  "cmd.view.section_caps": "Täytä leikkaukset",
  "cmd.view.level_3d": "Tason 3D-näkymä",
  "cmd.view.save_3d": "Tallenna 3D-näkymä",

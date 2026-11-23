@@ -8,6 +8,7 @@
  "cmd.view.hide_cat_3d.short": "Sembunyikan kategori",
  "cmd.view.isolate_cat_3d.short": "Isolasi kategori",
  "cmd.view.section_box_fit.short": "Sesuaikan ke pilihan",
+ "cmd.view.section_plane.short": "Bidang potong",
  "cmd.arch.void_swept_blend.short": "Blend sapuan",
  "cmd.e3d.wp_face.short": "Dari sisi",
  "cmd.e3d.wp_level.short": "Dari level",

@@ -43,6 +43,7 @@
  "cmd.view.style_xray.desc": "Kiểu hiển thị 3D: mặt mờ đục để lộ các cấu kiện bên trong.",
  "cmd.view.vg_3d.desc": "Khả kiến và màu theo danh mục trong góc nhìn 3D. Đánh dấu các danh mục cần hiển thị.",
  "cmd.view.section_box_fit.desc": "Bật hộp cắt quanh các cấu kiện đã chọn. Kéo các mặt hộp để di chuyển chúng.",
+ "cmd.view.section_plane.desc": "Cắt khung nhìn 3D bằng một mặt phẳng hướng về camera qua vùng chọn hoặc mô hình. Kéo mũi tên để di chuyển; chạy lại để tắt.",
  "cmd.view.section_caps.desc": "Bật hoặc tắt phần tô lấp mặt cắt trên các mặt hộp cắt.",
  "cmd.view.level_3d.desc": "Mở góc nhìn 3D của cao độ hiện tại với hộp cắt theo chiều cao của nó.",
  "cmd.view.save_3d.desc": "Lưu góc nhìn 3D hiện tại với camera, hộp cắt và kiểu hiển thị. Nhập tên góc nhìn.",

@@ -8,6 +8,7 @@
  "cmd.view.hide_cat_3d.short": "پنهان کردن دسته",
  "cmd.view.isolate_cat_3d.short": "جدا کردن دسته",
  "cmd.view.section_box_fit.short": "برازش با انتخاب",
+ "cmd.view.section_plane.short": "صفحهٔ برش",
  "cmd.arch.void_swept_blend.short": "ترکیب جاروبی",
  "cmd.e3d.wp_face.short": "از وجه",
  "cmd.e3d.wp_level.short": "از تراز",

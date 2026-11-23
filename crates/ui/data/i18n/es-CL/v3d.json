@@ -10,6 +10,7 @@
  "cmd.view.style_xray": "Estilo visual: rayos X",
  "cmd.view.vg_3d": "Visibilidad de categorías en 3D",
  "cmd.view.section_box_fit": "Ajustar caja de sección a la selección",
+ "cmd.view.section_plane": "Plano de sección temporal",
  "cmd.view.section_caps": "Rellenar cortes",
  "cmd.view.level_3d": "Vista 3D de nivel",
  "cmd.view.save_3d": "Guardar vista 3D",

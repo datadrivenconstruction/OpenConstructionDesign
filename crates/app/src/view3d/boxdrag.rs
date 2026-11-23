@@ -88,6 +88,14 @@ pub fn handle_positions(cam: &OrbitCamera, rect: Rect, aspect: f32, b: &Aabb) ->
     out
 }
 
+/// Handles the view offers: a section plane (`section_plane`) drags its one face only.
+pub fn offered(v: &Viewport, mut handles: Vec<HandlePos>) -> Vec<HandlePos> {
+    if let Some(f) = super::section_plane::active(v) {
+        handles.retain(|h| h.face == f);
+    }
+    handles
+}
+
 /// Nearest handle within `radius` px of the cursor.
 pub fn hit_test(handles: &[HandlePos], pos: Pos2, radius: f32) -> Option<Face> {
     handles
@@ -270,8 +278,9 @@ pub fn gizmo(v: &mut Viewport, ui: &mut egui::Ui, rect: Rect, aspect: f32, scene
         }
     }
     let b = v.section_box.unwrap_or(b0);
-    let handles = handle_positions(&v.camera, rect, aspect, &b);
-    let shift = ui.input(|i| i.modifiers.shift);
+    let handles = offered(v, handle_positions(&v.camera, rect, aspect, &b));
+    // a plane has no opposite face to keep the size with
+    let shift = ui.input(|i| i.modifiers.shift) && super::section_plane::active(v).is_none();
     let tip = v.nav.t("v3d.box.handle.tip").to_owned();
     let mut busy = false;
     let mut hover = None;
