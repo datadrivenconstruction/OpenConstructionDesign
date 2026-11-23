@@ -22,7 +22,7 @@
  "empty.props.title": "Ništa nije odabrano",
  "empty.props.hint": "Kliknite element u pogledu da vidite njegova svojstva i tip. Ctrl+A odabire sve u pogledu.",
  "empty.totals.title": "Model još nema elemenata",
- "empty.totals.hint": "Počnite zidom: Arhitektura → Zid ili upišite WA.",
+ "empty.totals.hint": "Počnite modelirati: odaberite alat na vrpci ili opišite projekt na kartici „Generiraj”.",
  "empty.sheets.title": "Još nema listova",
  "empty.sheets.hint": "Izradite list gumbom ispod ili naredbom Listovi za razine, zatim na njega postavite pogled.",
  "empty.schedule.title": "Model nema elemenata ove kategorije",

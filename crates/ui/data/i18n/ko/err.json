@@ -22,7 +22,7 @@
  "empty.props.title": "선택된 항목 없음",
  "empty.props.hint": "뷰에서 요소를 클릭하면 여기에 속성과 유형이 표시됩니다. Ctrl+A는 뷰의 모든 항목을 선택합니다.",
  "empty.totals.title": "모델에 아직 요소가 없습니다",
- "empty.totals.hint": "벽부터 시작하십시오: 건축 → 벽, 또는 WA 입력.",
+ "empty.totals.hint": "모델링을 시작하세요: 리본에서 도구를 선택하거나 '생성' 탭에서 프로젝트를 설명하세요.",
  "empty.sheets.title": "시트가 아직 없습니다",
  "empty.sheets.hint": "아래 버튼으로 시트를 만들거나 레벨용 시트 도구를 사용한 뒤 시트에 뷰를 배치하십시오.",
  "empty.schedule.title": "모델에 이 범주의 요소가 없습니다",

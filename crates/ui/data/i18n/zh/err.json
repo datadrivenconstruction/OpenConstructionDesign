@@ -22,7 +22,7 @@
  "empty.props.title": "未选择任何内容",
  "empty.props.hint": "点击视图中的元素，即可在此查看其属性和类型。Ctrl+A 选择视图中的全部内容。",
  "empty.totals.title": "模型中尚无元素",
- "empty.totals.hint": "从墙开始：建筑 → 墙，或输入 WA。",
+ "empty.totals.hint": "开始建模：在功能区选择工具，或在“生成”选项卡中描述项目。",
  "empty.sheets.title": "尚无图纸",
  "empty.sheets.hint": "使用下方按钮或“标高图纸”创建图纸，然后在其上放置视图。",
  "empty.schedule.title": "模型中没有此类别的元素",

@@ -22,7 +22,7 @@
  "empty.props.title": "Nothing selected",
  "empty.props.hint": "Click an element in the view to see its properties and type here. Ctrl+A selects everything in the view.",
  "empty.totals.title": "The model has no elements yet",
- "empty.totals.hint": "Start with a wall: Architecture → Wall, or type WA.",
+ "empty.totals.hint": "Start modeling: pick a tool on the ribbon or describe the project in the Generate tab.",
  "empty.sheets.title": "No sheets yet",
  "empty.sheets.hint": "Create a sheet with the button below or with Sheets for levels, then place a view on it.",
  "empty.schedule.title": "The model has no elements of this category",

@@ -22,7 +22,7 @@
  "empty.props.title": "Niets geselecteerd",
  "empty.props.hint": "Klik in de weergave op een element om hier de eigenschappen en het type te zien. Ctrl+A selecteert alles in de weergave.",
  "empty.totals.title": "Het model heeft nog geen elementen",
- "empty.totals.hint": "Begin met een wand: Architectuur → Wand, of typ WA.",
+ "empty.totals.hint": "Begin met modelleren: kies een gereedschap op het lint of beschrijf het project op het tabblad ‘Genereren’.",
  "empty.sheets.title": "Nog geen bladen",
  "empty.sheets.hint": "Maak een blad met de knop hieronder of met Bladen voor verdiepingen, en plaats daarop een weergave.",
  "empty.schedule.title": "Het model heeft geen elementen van deze categorie",

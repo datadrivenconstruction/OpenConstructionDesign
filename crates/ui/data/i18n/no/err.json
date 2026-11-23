@@ -22,7 +22,7 @@
  "empty.props.title": "Ingenting er valgt",
  "empty.props.hint": "Klikk et element i visningen for å se egenskapene og typen her. Ctrl+A velger alt i visningen.",
  "empty.totals.title": "Modellen har ingen elementer ennå",
- "empty.totals.hint": "Start med en vegg: Arkitektur → Vegg, eller skriv WA.",
+ "empty.totals.hint": "Begynn å modellere: velg et verktøy på båndet eller beskriv prosjektet i fanen «Generer».",
  "empty.sheets.title": "Ingen ark ennå",
  "empty.sheets.hint": "Lag et ark med knappen under, eller med Ark for etasjer, og plasser deretter en visning på det.",
  "empty.schedule.title": "Modellen har ingen elementer i denne kategorien",

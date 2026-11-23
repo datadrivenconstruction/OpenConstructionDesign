@@ -22,7 +22,7 @@
  "empty.props.title": "Intet valgt",
  "empty.props.hint": "Klik på et element i visningen for at se dets egenskaber og type her. Ctrl+A vælger alt i visningen.",
  "empty.totals.title": "Modellen har endnu ingen elementer",
- "empty.totals.hint": "Start med en væg: Arkitektur → Væg, eller skriv WA.",
+ "empty.totals.hint": "Begynd at modellere: vælg et værktøj på båndet, eller beskriv projektet på fanen “Generér”.",
  "empty.sheets.title": "Ingen ark endnu",
  "empty.sheets.hint": "Opret et ark med knappen nedenfor, eller med Ark for etager, og placér derefter en visning på det.",
  "empty.schedule.title": "Modellen har ingen elementer i denne kategori",
