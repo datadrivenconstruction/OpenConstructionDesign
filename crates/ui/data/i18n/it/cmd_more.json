@@ -8,6 +8,7 @@
  "cmd.view.hide_cat_3d.short": "Nascondi categoria",
  "cmd.view.isolate_cat_3d.short": "Isola categoria",
  "cmd.view.section_box_fit.short": "Adatta alla selezione",
+ "cmd.view.section_plane.short": "Piano di sezione",
  "cmd.arch.void_swept_blend.short": "Raccordo per profilo",
  "cmd.e3d.wp_face.short": "Da faccia",
  "cmd.e3d.wp_level.short": "Da livello",

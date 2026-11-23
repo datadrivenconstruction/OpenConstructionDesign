@@ -43,6 +43,7 @@
  "cmd.view.style_xray.desc": "3D visual style: translucent faces that reveal inner elements.",
  "cmd.view.vg_3d.desc": "Category visibility and colour in the 3D view. Tick the categories to show.",
  "cmd.view.section_box_fit.desc": "Turns on a section box around the selected elements. Drag the box faces to move them.",
+ "cmd.view.section_plane.desc": "Cuts the 3D view with a plane facing the camera through the selection or the model. Drag its arrow to move it; run again to turn it off.",
  "cmd.view.section_caps.desc": "Turns the cut fill on the section box faces on or off.",
  "cmd.view.level_3d.desc": "Opens a 3D view of the current level with a section box over its height.",
  "cmd.view.save_3d.desc": "Saves the current 3D view with camera, section box and style. Enter a view name.",

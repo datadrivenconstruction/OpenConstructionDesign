@@ -8,6 +8,7 @@
  "cmd.view.hide_cat_3d.short": "Hide category",
  "cmd.view.isolate_cat_3d.short": "Isolate category",
  "cmd.view.section_box_fit.short": "Fit to selection",
+ "cmd.view.section_plane.short": "Section plane",
  "cmd.arch.void_swept_blend.short": "Swept blend",
  "cmd.e3d.wp_face.short": "From face",
  "cmd.e3d.wp_level.short": "From level",

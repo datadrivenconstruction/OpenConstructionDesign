@@ -8,6 +8,7 @@
  "cmd.view.hide_cat_3d.short": "Toifani yashirish",
  "cmd.view.isolate_cat_3d.short": "Toifani ajratish",
  "cmd.view.section_box_fit.short": "Tanlovga moslash",
+ "cmd.view.section_plane.short": "Kesim tekisligi",
  "cmd.arch.void_swept_blend.short": "Yo'naltirilgan o'tish",
  "cmd.e3d.wp_face.short": "Yuzadan",
  "cmd.e3d.wp_level.short": "Qavatdan",

@@ -8,6 +8,7 @@
  "cmd.view.hide_cat_3d.short": "Dölj kategori",
  "cmd.view.isolate_cat_3d.short": "Isolera kategori",
  "cmd.view.section_box_fit.short": "Anpassa till markering",
+ "cmd.view.section_plane.short": "Snittplan",
  "cmd.arch.void_swept_blend.short": "Svepande övergång",
  "cmd.e3d.wp_face.short": "Från yta",
  "cmd.e3d.wp_level.short": "Från våning",

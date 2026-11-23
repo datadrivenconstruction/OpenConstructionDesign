@@ -43,6 +43,7 @@
  "cmd.view.style_xray.desc": "3D visual style: translucent na face na nagpapakita ng mga panloob na elemento.",
  "cmd.view.vg_3d.desc": "Visibility at kulay ng kategorya sa 3D view. Lagyan ng tsek ang mga kategoryang ipapakita.",
  "cmd.view.section_box_fit.desc": "Ino-on ang section box sa paligid ng napiling elemento. I-drag ang mga face ng box para ilipat ang mga ito.",
+ "cmd.view.section_plane.desc": "Hinihiwa ang 3D view ng isang plane na nakaharap sa camera sa gitna ng pinili o ng modelo. Hilahin ang arrow nito para ilipat; patakbuhin muli para patayin.",
  "cmd.view.section_caps.desc": "Ino-on o off ang cut fill sa mga face ng section box.",
  "cmd.view.level_3d.desc": "Nagbubukas ng 3D view ng kasalukuyang level na may section box sa taas nito.",
  "cmd.view.save_3d.desc": "Sine-save ang kasalukuyang 3D view kasama ang camera, section box at style. Maglagay ng pangalan ng view.",

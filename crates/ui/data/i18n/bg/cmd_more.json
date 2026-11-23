@@ -8,6 +8,7 @@
  "cmd.view.hide_cat_3d.short": "Скрий категорията",
  "cmd.view.isolate_cat_3d.short": "Изолирай категорията",
  "cmd.view.section_box_fit.short": "Побери по избора",
+ "cmd.view.section_plane.short": "Равнина на разреза",
  "cmd.arch.void_swept_blend.short": "Изтеглен преход",
  "cmd.e3d.wp_face.short": "От повърхност",
  "cmd.e3d.wp_level.short": "От ниво",

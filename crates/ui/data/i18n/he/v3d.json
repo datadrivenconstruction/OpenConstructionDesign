@@ -10,6 +10,7 @@
  "cmd.view.style_xray": "סגנון תצוגה — קרני X",
  "cmd.view.vg_3d": "נראות קטגוריות בתלת-ממד",
  "cmd.view.section_box_fit": "התאמת תיבת חתך לבחירה",
+ "cmd.view.section_plane": "מישור חתך זמני",
  "cmd.view.section_caps": "מילוי חתכים",
  "cmd.view.level_3d": "מבט תלת-ממדי של מפלס",
  "cmd.view.save_3d": "שמירת מבט תלת-ממדי",

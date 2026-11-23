@@ -43,6 +43,7 @@
  "cmd.view.style_xray.desc": "3D vizual uslub: ichki elementlarni ko'rsatuvchi yarim shaffof yuzalar.",
  "cmd.view.vg_3d.desc": "3D ko'rinishda kategoriyalarning ko'rinuvchanligi va rangi. Ko'rsatiladigan kategoriyalarni belgilang.",
  "cmd.view.section_box_fit.desc": "Tanlangan elementlar atrofida kesim qutisini yoqadi. Qutining yuzlarini surib siljiting.",
+ "cmd.view.section_plane.desc": "3D ko‘rinishni tanlov yoki model orqali kameraga qaragan tekislik bilan kesadi. Siljitish uchun strelkani torting; o‘chirish uchun qayta ishga tushiring.",
  "cmd.view.section_caps.desc": "Kesim qutisi yuzlaridagi kesim to'ldirishini yoqadi yoki o'chiradi.",
  "cmd.view.level_3d.desc": "Joriy qavatning 3D ko'rinishini balandligi bo'ylab kesim qutisi bilan ochadi.",
  "cmd.view.save_3d.desc": "Joriy 3D ko'rinishni kamera, kesim qutisi va uslub bilan saqlaydi. Ko'rinish nomini kiriting.",

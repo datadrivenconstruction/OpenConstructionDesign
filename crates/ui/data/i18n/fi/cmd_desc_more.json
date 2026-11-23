@@ -43,6 +43,7 @@
  "cmd.view.style_xray.desc": "3D-näkymän tyyli: läpikuultavat pinnat, jotka paljastavat sisäiset elementit.",
  "cmd.view.vg_3d.desc": "Luokkien näkyvyys ja värit 3D-näkymässä. Ruksaa näytettävät luokat.",
  "cmd.view.section_box_fit.desc": "Kytkee leikkauslaatikon päälle valittujen elementtien ympärille. Vedä laatikon pintoja siirtääksesi niitä.",
+ "cmd.view.section_plane.desc": "Leikkaa 3D-näkymän kameraa kohti olevalla tasolla valinnan tai mallin läpi. Siirrä vetämällä nuolta; poista käytöstä suorittamalla uudelleen.",
  "cmd.view.section_caps.desc": "Kytkee leikkauslaatikon pintojen leikkaustäytön päälle tai pois.",
  "cmd.view.level_3d.desc": "Avaa nykyisen tason 3D-näkymän, jossa on leikkauslaatikko tason korkeudelle.",
  "cmd.view.save_3d.desc": "Tallentaa nykyisen 3D-näkymän kameran, leikkauslaatikon ja tyylin kanssa. Anna näkymälle nimi.",

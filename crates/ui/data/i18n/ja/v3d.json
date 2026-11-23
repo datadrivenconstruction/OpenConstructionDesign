@@ -10,6 +10,7 @@
  "cmd.view.style_xray": "ビジュアルスタイル — X 線",
  "cmd.view.vg_3d": "3D のカテゴリ表示",
  "cmd.view.section_box_fit": "断面ボックスを選択に合わせる",
+ "cmd.view.section_plane": "一時断面",
  "cmd.view.section_caps": "切断面を塗りつぶす",
  "cmd.view.level_3d": "レベルの 3D ビュー",
  "cmd.view.save_3d": "3D ビューを保存",

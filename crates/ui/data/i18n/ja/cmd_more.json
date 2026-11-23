@@ -8,6 +8,7 @@
  "cmd.view.hide_cat_3d.short": "カテゴリを非表示",
  "cmd.view.isolate_cat_3d.short": "カテゴリを分離",
  "cmd.view.section_box_fit.short": "選択に合わせる",
+ "cmd.view.section_plane.short": "断面",
  "cmd.arch.void_swept_blend.short": "スイープブレンド",
  "cmd.e3d.wp_face.short": "面から",
  "cmd.e3d.wp_level.short": "レベルから",

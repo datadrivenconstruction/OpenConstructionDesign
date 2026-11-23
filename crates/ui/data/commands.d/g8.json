@@ -149,6 +149,19 @@
   "priority": 6
  },
  {
+  "id": "view.section_plane",
+  "icon": "section",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "R"
+  ],
+  "stage": "M1",
+  "group": "graphics",
+  "priority": 6
+ },
+ {
   "id": "view.section_caps",
   "icon": "section-caps",
   "mnemonic": null,

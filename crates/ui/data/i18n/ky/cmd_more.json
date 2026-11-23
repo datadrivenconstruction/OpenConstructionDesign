@@ -8,6 +8,7 @@
  "cmd.view.hide_cat_3d.short": "Категорияны жашыруу",
  "cmd.view.isolate_cat_3d.short": "Категорияны бөлүү",
  "cmd.view.section_box_fit.short": "Тандоого ылайыктоо",
+ "cmd.view.section_plane.short": "Кесим тегиздиги",
  "cmd.arch.void_swept_blend.short": "Жолго сүрүлгөн аралашма",
  "cmd.e3d.wp_face.short": "Беттен",
  "cmd.e3d.wp_level.short": "Кабаттан",

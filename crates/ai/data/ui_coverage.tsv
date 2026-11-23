@@ -430,6 +430,7 @@ view.schedule	nav	-	switch to data layout
 view.section	gap	section	draw section view
 view.section_box	view	-	toggle 3D section box
 view.section_box_fit	view	-	fit section box
+view.section_plane	view	-	toggle temporary 3D section plane
 view.section_caps	view	-	toggle section caps
 view.section_here	nav	-	no handler found
 view.sheet	dialog	-	opens new sheet dialog

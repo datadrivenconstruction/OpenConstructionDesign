@@ -43,6 +43,7 @@
  "cmd.view.style_xray.desc": "3D-visningsstil: gjennomskinnelige flater som viser indre elementer.",
  "cmd.view.vg_3d.desc": "Kategoriers synlighet og farge i 3D-visningen. Kryss av kategoriene som skal vises.",
  "cmd.view.section_box_fit.desc": "Slår på en snittboks rundt de valgte elementene. Dra boksflatene for å flytte dem.",
+ "cmd.view.section_plane.desc": "Skjærer 3D-visningen med et plan mot kameraet gjennom utvalget eller modellen. Dra pilen for å flytte det; kjør igjen for å slå det av.",
  "cmd.view.section_caps.desc": "Slår utfyllingen av snitt på snittboksens flater av eller på.",
  "cmd.view.level_3d.desc": "Åpner en 3D-visning av gjeldende etasje med en snittboks over høyden.",
  "cmd.view.save_3d.desc": "Lagrer gjeldende 3D-visning med kamera, snittboks og stil. Skriv inn et visningsnavn.",

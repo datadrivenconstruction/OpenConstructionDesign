@@ -8,6 +8,7 @@
  "cmd.view.hide_cat_3d.short": "Kategoriyi gizle",
  "cmd.view.isolate_cat_3d.short": "Kategoriyi izole et",
  "cmd.view.section_box_fit.short": "Seçime sığdır",
+ "cmd.view.section_plane.short": "Kesit düzlemi",
  "cmd.arch.void_swept_blend.short": "Süpürme geçişi",
  "cmd.e3d.wp_face.short": "Yüzeyden",
  "cmd.e3d.wp_level.short": "Kottan",

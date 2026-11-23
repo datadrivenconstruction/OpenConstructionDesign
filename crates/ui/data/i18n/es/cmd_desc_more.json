@@ -43,6 +43,7 @@
  "cmd.view.style_xray.desc": "Estilo visual 3D: caras translúcidas que muestran los elementos interiores.",
  "cmd.view.vg_3d.desc": "Visibilidad y color de categorías en la vista 3D. Marque las categorías que quiera mostrar.",
  "cmd.view.section_box_fit.desc": "Activa una caja de sección alrededor de los elementos seleccionados. Arrastre las caras de la caja para moverlas.",
+ "cmd.view.section_plane.desc": "Corta la vista 3D con un plano orientado a la cámara a través de la selección o del modelo. Arrastre su flecha para moverlo; ejecútelo de nuevo para quitarlo.",
  "cmd.view.section_caps.desc": "Activa o desactiva el relleno de corte en las caras de la caja de sección.",
  "cmd.view.level_3d.desc": "Abre una vista 3D del nivel actual con una caja de sección sobre su altura.",
  "cmd.view.save_3d.desc": "Guarda la vista 3D actual con cámara, caja de sección y estilo. Introduzca un nombre de vista.",

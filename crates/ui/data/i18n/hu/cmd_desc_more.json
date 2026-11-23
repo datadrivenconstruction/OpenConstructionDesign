@@ -43,6 +43,7 @@
  "cmd.view.style_xray.desc": "3D vizuális stílus: áttetsző felületek, amelyek megmutatják a belső elemeket.",
  "cmd.view.vg_3d.desc": "Kategóriák láthatósága és színe a 3D nézetben. Jelöld be a megjelenítendő kategóriákat.",
  "cmd.view.section_box_fit.desc": "Bekapcsolja a metszetdobozt a kijelölt elemek körül. A doboz lapjait húzva mozgathatod.",
+ "cmd.view.section_plane.desc": "A 3D nézetet a kamera felé néző síkkal metszi a kijelölésen vagy a modellen át. A nyíl húzásával mozgatható; újra futtatva kikapcsol.",
  "cmd.view.section_caps.desc": "Be- vagy kikapcsolja a metszetdoboz lapjainak kitöltését.",
  "cmd.view.level_3d.desc": "Megnyitja az aktuális szint 3D nézetét, a magasságán átnyúló metszetdobozzal.",
  "cmd.view.save_3d.desc": "Elmenti az aktuális 3D nézetet kamerával, metszetdobozzal és stílussal. Adj meg nézetnevet.",

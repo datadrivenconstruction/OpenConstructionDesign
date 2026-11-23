@@ -43,6 +43,7 @@
  "cmd.view.style_xray.desc": "3D-visuele stijl: doorschijnende vlakken die binnenliggende elementen tonen.",
  "cmd.view.vg_3d.desc": "Zichtbaarheid en kleur van categorieën in de 3D-weergave. Vink de categorieën aan die u wilt tonen.",
  "cmd.view.section_box_fit.desc": "Zet een doorsnedekader aan rond de geselecteerde elementen. Sleep de vlakken van het kader om ze te verplaatsen.",
+ "cmd.view.section_plane.desc": "Snijdt de 3D-weergave met een vlak naar de camera door de selectie of het model. Sleep de pijl om het te verplaatsen; voer opnieuw uit om het uit te zetten.",
  "cmd.view.section_caps.desc": "Zet de opvulling van de snede op de vlakken van het doorsnedekader aan of uit.",
  "cmd.view.level_3d.desc": "Opent een 3D-weergave van de huidige verdieping met een doorsnedekader over de hoogte.",
  "cmd.view.save_3d.desc": "Slaat de huidige 3D-weergave op met camera, doorsnedekader en stijl. Voer een weergavenaam in.",

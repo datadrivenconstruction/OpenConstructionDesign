@@ -8,6 +8,7 @@
  "cmd.view.hide_cat_3d.short": "ซ่อนหมวด",
  "cmd.view.isolate_cat_3d.short": "แยกหมวด",
  "cmd.view.section_box_fit.short": "พอดีกับที่เลือก",
+ "cmd.view.section_plane.short": "ระนาบตัด",
  "cmd.arch.void_swept_blend.short": "การผสมแบบกวาด",
  "cmd.e3d.wp_face.short": "จากผิว",
  "cmd.e3d.wp_level.short": "จากระดับ",

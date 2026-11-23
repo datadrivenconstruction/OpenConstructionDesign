@@ -8,6 +8,7 @@
  "cmd.view.hide_cat_3d.short": "Сховати категорію",
  "cmd.view.isolate_cat_3d.short": "Ізолювати категорію",
  "cmd.view.section_box_fit.short": "За вибіркою",
+ "cmd.view.section_plane.short": "Січна площина",
  "cmd.arch.void_swept_blend.short": "Заокруглення по траєкторії",
  "cmd.e3d.wp_face.short": "З грані",
  "cmd.e3d.wp_level.short": "З рівня",
