@@ -89,7 +89,7 @@ pub(crate) use mep::size_label as mep_size_label;
 pub(crate) use mep_color::{missing_label as mep_missing_label, swatch_color as mep_swatch_color, system_dropdown_w as mep_system_dropdown_w, system_items as mep_system_items, Mark as MepMark, SysRow as MepSysRow};
 pub use layer::Layer;
 pub use level::{overlay as level_overlay, place as level_place};
-pub use ui::{paint, paint_layer};
+pub use ui::{options_3d, paint, paint_layer, BAR_H};
 
 use crate::editor::Editor;
 use crate::shell::EditorApp;

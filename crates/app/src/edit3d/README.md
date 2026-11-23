@@ -35,4 +35,9 @@ when the 3D view is active. Families come from `elem::Family.xf` (reason keys on
 plan target map; the model does the work in one op (`mirror_elements`, `array_linear`,
 `array_radial`). Ghost = `Xform::point` over the selected bodies.
 
+**Roof, attach, join/cut**: `e3d.roof` arms the plan roof tool through `plan_route` (footprint
+sketch or picked walls, Space flips an edge's slope; its option bar is drawn over the 3D view;
+picked walls come from the face under the ray, `wall_pick_pointer`). `host3d` attaches wall
+top/base to a roof or floor and joins, unjoins or cuts two picked elements: one `run_op` each.
+
 Labels: `e3d.cat.<Cat::key()>` (`Ext` → `other`) in `ui/data/i18n/{ru,en}/<fragment>.json`.
