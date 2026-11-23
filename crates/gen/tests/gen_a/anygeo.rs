@@ -53,7 +53,20 @@ fn corner_rooms_of_a_square_plate_keep_a_door_to_the_corridor() {
                     });
                     on(w.a) && on(w.b)
                 };
-                let doors = l.openings.iter().filter(|o| o.door && touches(&l.walls[o.wall])).count();
+                // a wall may run past the room: the door's own place must lie on the room's outline
+                let at = |o: &ddc_gen::GOpening| {
+                    let w = &l.walls[o.wall];
+                    let (dx, dy) = (w.b.0 - w.a.0, w.b.1 - w.a.1);
+                    let len = (dx * dx + dy * dy).sqrt().max(1e-12);
+                    (w.a.0 + dx * o.along / len, w.a.1 + dy * o.along / len)
+                };
+                let on_room = |q: (f64, f64)| (0..n).any(|j| {
+                    let (a, b) = (r.polygon[j], r.polygon[(j + 1) % n]);
+                    let (ux, uy) = (b.0 - a.0, b.1 - a.1);
+                    let t = (((q.0 - a.0) * ux + (q.1 - a.1) * uy) / (ux * ux + uy * uy).max(1e-12)).clamp(0.0, 1.0);
+                    ((a.0 + ux * t - q.0).powi(2) + (a.1 + uy * t - q.1).powi(2)).sqrt() < 1e-6
+                });
+                let doors = l.openings.iter().filter(|o| o.door && (touches(&l.walls[o.wall]) || on_room(at(o)))).count();
                 assert!(doors > 0, "side {side}, storey {k}: room {} has no door", s.rooms.get(i).map_or("corridor".to_string(), |x| x.number.clone()));
             }
         }

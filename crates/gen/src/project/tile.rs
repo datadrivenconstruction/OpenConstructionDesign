@@ -44,6 +44,8 @@ pub(crate) struct Cell {
     pub owner: PRole,
     pub asked: Option<f64>,
     pub grown: bool,
+    /// Needs daylight: a window on the facade, else the plan is refused.
+    pub lit: bool,
 }
 
 impl Cell {
@@ -477,7 +479,7 @@ fn doors(cells: &[Cell], op: &Opener<'_>, l: &mut GLayout) -> Result<(), GenErro
 /// Windows on the facade edges of a habitable room, longest edge first, until one eighth of
 /// the floor area is glazed or the facade is used up.
 fn windows(c: &Cell, w: Mm, d: Mm, op: &Opener<'_>, l: &mut GLayout) -> Result<(), GenError> {
-    if !c.kind.habitable() {
+    if !c.lit {
         return Ok(());
     }
     let win = op.win;

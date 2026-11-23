@@ -6,6 +6,7 @@
 //! largest rectangle. What no space asks for becomes the level's fill. The outside walls of the
 //! levels hold back the soil.
 
+use super::super::program::Light;
 use super::super::names;
 use super::super::tile::{m, Cell, Mm};
 use super::super::{PRole, ProjectSpec, RoomKind};
@@ -41,6 +42,7 @@ fn cell(r: R, s: &TSpace, ru: bool) -> Cell {
         owner: PRole::Public,
         asked: None,
         grown: false,
+        lit: !matches!(s.light, Light::None),
     }
 }
 
