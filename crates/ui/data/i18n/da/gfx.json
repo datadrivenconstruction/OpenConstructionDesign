@@ -45,6 +45,8 @@
  "gfx.note.lowered.tip": "Kvaliteten vender tilbage, så snart visningen stopper. Klik for at vælge et niveau.",
  "gfx.note.low_tier": "Auto valgte maksimal hastighed for denne adapter",
  "gfx.note.low_tier.tip": "Klik for at vælge et niveau.",
+ "gfx.note.flat": "Teksturer er slået fra: niveauet “Maksimal hastighed” tegner flade farver",
+ "gfx.note.flat.tip": "Materialer vises i den realistiske stil på niveauerne “Afbalanceret” og “Maksimal kvalitet”. Klik for at vælge et niveau.",
  "gfx.fatal.title": "DDC Editor kan ikke starte sin grafik",
  "gfx.fatal.body": "Ingen grafikadapter på denne computer kunne bruges, heller ikke den indbyggede softwareadapter.\n\nÅrsag: {reason}\n\nSådan gør du:\n- opdatér grafikdriveren fra producentens websted og genstart computeren;\n- på et fjernskrivebord eller en virtuel maskine skal 3D-acceleration slås til dér;\n- hvis det bliver ved med at fejle, send denne log til support: {log}",
  "gfx.fatal.choose_safe": "Ja — start med sikker grafik.  Nej — åbn loggen.  Annuller — luk.",

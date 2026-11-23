@@ -45,6 +45,8 @@
  "gfx.note.lowered.tip": "Laatu palautuu heti, kun näkymä pysähtyy. Napsauta valitaksesi tason.",
  "gfx.note.low_tier": "Automaattinen valitsi tälle näytönohjaimelle suurimman nopeuden",
  "gfx.note.low_tier.tip": "Napsauta valitaksesi tason.",
+ "gfx.note.flat": "Tekstuurit ovat pois päältä: taso ”Suurin nopeus” piirtää tasaisia värejä",
+ "gfx.note.flat.tip": "Materiaalit näkyvät realistisella tyylillä tasoilla ”Tasapainoinen” ja ”Suurin laatu”. Napsauta valitaksesi tason.",
  "gfx.fatal.title": "DDC Editor ei voi käynnistää grafiikkaansa",
  "gfx.fatal.body": "Tällä tietokoneella ei voitu käyttää yhtäkään näytönohjainta, ei edes sisäänrakennettua ohjelmistoversiota.\n\nSyy: {reason}\n\nMitä tehdä:\n- päivitä näytönohjaimen ajuri valmistajan sivuilta ja käynnistä tietokone uudelleen;\n- etätyöpöydällä tai virtuaalikoneessa ota 3D-kiihdytys käyttöön siellä;\n- jos virhe toistuu, lähetä tämä loki tukeen: {log}",
  "gfx.fatal.choose_safe": "Kyllä — käynnistä turvallisella grafiikalla.  Ei — avaa loki.  Peruuta — sulje.",

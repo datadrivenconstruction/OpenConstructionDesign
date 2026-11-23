@@ -45,6 +45,8 @@
  "gfx.note.lowered.tip": "Jakość wraca, gdy widok się zatrzyma. Kliknij, aby wybrać poziom.",
  "gfx.note.low_tier": "Automatyczny wybrał maksymalną szybkość dla tego adaptera",
  "gfx.note.low_tier.tip": "Kliknij, aby wybrać poziom.",
+ "gfx.note.flat": "Tekstury są wyłączone: poziom „Maksymalna szybkość” rysuje jednolite kolory",
+ "gfx.note.flat.tip": "Materiały są pokazywane w stylu realistycznym na poziomach „Zrównoważona” i „Maksymalna jakość”. Kliknij, aby wybrać poziom.",
  "gfx.fatal.title": "DDC Editor nie może uruchomić grafiki",
  "gfx.fatal.body": "Żadnego adaptera graficznego w tym komputerze nie dało się użyć, także wbudowanego programowego.\n\nPowód: {reason}\n\nCo zrobić:\n- zaktualizuj sterownik karty graficznej ze strony producenta i uruchom komputer ponownie;\n- na pulpicie zdalnym lub w maszynie wirtualnej włącz tam przyspieszenie 3D;\n- jeśli nadal nie działa, wyślij ten dziennik do pomocy technicznej: {log}",
  "gfx.fatal.choose_safe": "Tak — uruchom z bezpieczną grafiką.  Nie — otwórz dziennik.  Anuluj — zamknij.",

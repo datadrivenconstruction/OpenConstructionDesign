@@ -23,3 +23,5 @@ gpu = ["dep:wgpu", "dep:pollster"]
 [dev-dependencies]
 # lattice_bench example: the detailed lattice tower as instanced prototypes
 ddc-geom = { path = "../geom" }
+# shader tests: the realistic module is common + mesh + realistic glued into one source
+naga = { version = "25.0.1", features = ["wgsl-in"] }

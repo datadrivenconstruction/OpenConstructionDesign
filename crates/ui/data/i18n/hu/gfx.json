@@ -45,6 +45,8 @@
  "gfx.note.lowered.tip": "A minőség visszaáll, amint a nézet megáll. Kattintson a szint kiválasztásához.",
  "gfx.note.low_tier": "Az automatikus mód maximális sebességet választott ehhez az adapterhez",
  "gfx.note.low_tier.tip": "Kattintson a szint kiválasztásához.",
+ "gfx.note.flat": "A textúrák ki vannak kapcsolva: a „Maximális sebesség” szint egyszínű felületeket rajzol",
+ "gfx.note.flat.tip": "Az anyagok a „Kiegyensúlyozott” és a „Maximális minőség” szinten valósághű stílusban jelennek meg. Kattintson a szint kiválasztásához.",
  "gfx.fatal.title": "A DDC Editor nem tudja elindítani a grafikáját",
  "gfx.fatal.body": "A számítógépen egyik grafikus adapter sem használható, a beépített szoftveres sem.\n\nOk: {reason}\n\nTeendők:\n- frissítse a grafikus illesztőprogramot a gyártó oldaláról, majd indítsa újra a számítógépet;\n- távoli asztalnál vagy virtuális gépen kapcsolja be ott a 3D-gyorsítást;\n- ha továbbra is hibázik, küldje el ezt a naplót a támogatásnak: {log}",
  "gfx.fatal.choose_safe": "Igen — indítás biztonságos grafikával.  Nem — napló megnyitása.  Mégse — bezárás.",
